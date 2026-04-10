@@ -606,13 +606,17 @@ function computeScenarios(titles){
         return;
       }
       const g=groups[idx];
+      let placed=false;
       for(const s of g.screens){
         if(!chosen.some(c=>screensConflict(c,s))){
           chosen.push({...s,_title:g.title});backtrack(idx+1,chosen);chosen.pop();
+          placed=true;
           if(allScenarios.length>=8) return;
         }
       }
-      backtrack(idx+1,chosen);
+      // Only skip this film if it's NOT prioritized
+      // Prioritized films must be included — if no slot found, this branch fails
+      if(!g.priority) backtrack(idx+1,chosen);
     }
     backtrack(0,[]);
   }
