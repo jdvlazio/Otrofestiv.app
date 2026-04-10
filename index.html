@@ -530,37 +530,69 @@ function isScreeningBlocked(s){
   const sMin=toMin(s.time);
   return av.blocks.some(b=>sMin>=toMin(b.from)&&sMin<toMin(b.to));
 }
+function shuffle(arr){
+  const a=[...arr];
+  for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}
+  return a;
+}
+
 function computeScenarios(titles){
   const pending=titles.filter(t=>!watched.has(t));
-  const groups=pending.map(t=>{
+  const baseGroups=pending.map(t=>{
     const screens=FILMS.filter(f=>f.title===t&&!isScreeningBlocked(f));
     return{title:t,screens};
   }).filter(g=>g.screens.length>0);
 
-  if(!groups.length) return[];
+  if(!baseGroups.length) return[];
+
+  const seenKeys=new Set();
+  const allScenarios=[];
   let bestScore=-1;
-  const allScenarios=[];const seenKeys=new Set();
-  function backtrack(idx,chosen){
-    if(allScenarios.length>=8) return;
-    if(idx===groups.length){
-      if(chosen.length>=bestScore){
-        if(chosen.length>bestScore){bestScore=chosen.length;allScenarios.length=0;seenKeys.clear();}
-        const key=chosen.map(s=>s._title+'@'+s.day+s.time).sort().join('|');
-        if(!seenKeys.has(key)){seenKeys.add(key);allScenarios.push(chosen.map(c=>({...c})));}
+
+  function runBacktrack(groups){
+    function backtrack(idx,chosen){
+      if(allScenarios.length>=8) return;
+      if(idx===groups.length){
+        if(chosen.length>=bestScore){
+          if(chosen.length>bestScore){
+            bestScore=chosen.length;
+            allScenarios.length=0;
+            seenKeys.clear();
+          }
+          const key=chosen.map(s=>s._title+'@'+s.day+s.time).sort().join('|');
+          if(!seenKeys.has(key)){
+            seenKeys.add(key);
+            allScenarios.push(chosen.map(c=>({...c})));
+          }
+        }
+        return;
       }
-      return;
-    }
-    const g=groups[idx];
-    for(const s of g.screens){
-      if(!chosen.some(c=>screensConflict(c,s))){
-        chosen.push({...s,_title:g.title});backtrack(idx+1,chosen);chosen.pop();
-        if(allScenarios.length>=8) return;
+      const g=groups[idx];
+      for(const s of g.screens){
+        if(!chosen.some(c=>screensConflict(c,s))){
+          chosen.push({...s,_title:g.title});
+          backtrack(idx+1,chosen);
+          chosen.pop();
+          if(allScenarios.length>=8) return;
+        }
       }
+      backtrack(idx+1,chosen);
     }
-    backtrack(idx+1,chosen);
+    backtrack(0,[]);
   }
-  backtrack(0,[]);
-  allScenarios.forEach(sc=>sc.sort((a,b)=>a.day_order!==b.day_order?a.day_order-b.day_order:toMin(a.time)-toMin(b.time)));
+
+  // ── A: MRV — least options first (most constrained film evaluated first) ──
+  const mrvGroups=[...baseGroups].sort((a,b)=>a.screens.length-b.screens.length);
+  runBacktrack(mrvGroups);
+
+  // ── B: Random restarts with shuffled order ──
+  for(let attempt=0;attempt<25&&allScenarios.length<8;attempt++){
+    runBacktrack(shuffle(baseGroups));
+  }
+
+  allScenarios.forEach(sc=>sc.sort((a,b)=>
+    a.day_order!==b.day_order?a.day_order-b.day_order:toMin(a.time)-toMin(b.time)));
+
   return allScenarios.map(sc=>{
     const included=new Set(sc.map(s=>s._title));
     return{schedule:sc,excluded:pending.filter(t=>!included.has(t))};
