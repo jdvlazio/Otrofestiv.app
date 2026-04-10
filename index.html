@@ -664,30 +664,55 @@ function computeScenarios(titles){
 
 // ── SUGGESTIONS after saved agenda ──
 function getSuggestions(){
-  if(!savedAgenda||!savedAgenda.schedule.length) return[];
+  if(!savedAgenda||!savedAgenda.schedule.length) return{};
   const saved=savedAgenda.schedule.filter(s=>!screeningPassed(s));
-  const suggestions=[];
   const seen=new Set([...watchlist]);
+  const byDay={};
 
-  for(let i=0;i<saved.length-1;i++){
-    const a=saved[i],b=saved[i+1];
-    if(a.day!==b.day) continue;
-    const gapStart=toMin(a.time)+parseDur(a.duration)+10;
-    const gapEnd=toMin(b.time)-10;
-    const gapMins=gapEnd-gapStart;
-    if(gapMins<30) continue;
-    // Find films that fit in this gap
+  // Build saved schedule grouped by day
+  const savedByDay={};
+  saved.forEach(s=>{
+    if(!savedByDay[s.day]) savedByDay[s.day]=[];
+    savedByDay[s.day].push(s);
+  });
+
+  // All festival days
+  const festivalDays=['Martes','Miércoles','Jueves','Viernes','Sábado','Domingo'];
+
+  festivalDays.forEach(day=>{
+    const dayFilms=savedByDay[day]||[];
+    const slots=[]; // [{start, end}]
+
+    if(dayFilms.length===0){
+      // Whole day free
+      slots.push({start:0, end:24*60});
+    } else {
+      // Before first film
+      const first=dayFilms[0];
+      slots.push({start:0, end:toMin(first.time)-10});
+      // Between films
+      for(let i=0;i<dayFilms.length-1;i++){
+        const a=dayFilms[i],b=dayFilms[i+1];
+        slots.push({start:toMin(a.time)+parseDur(a.duration)+10, end:toMin(b.time)-10});
+      }
+      // After last film
+      const last=dayFilms[dayFilms.length-1];
+      slots.push({start:toMin(last.time)+parseDur(last.duration)+10, end:23*60});
+    }
+
     FILMS.forEach(f=>{
-      if(seen.has(f.title)||f.is_cortos||screeningPassed(f)) return;
-      if(f.day!==a.day) return;
-      const fStart=toMin(f.time),fEnd=fStart+parseDur(f.duration);
-      if(fStart>=gapStart&&fEnd<=gapEnd+10){
+      if(seen.has(f.title)||f.is_cortos||screeningPassed(f)||f.day!==day) return;
+      const fStart=toMin(f.time), fEnd=fStart+parseDur(f.duration);
+      const fits=slots.some(s=>fEnd-fStart>=25&&fStart>=s.start&&fEnd<=s.end+10);
+      if(fits){
         seen.add(f.title);
-        suggestions.push({...f,_gapDay:a.day,_gapStart:gapStart,_gapEnd:gapEnd});
+        if(!byDay[day]) byDay[day]=[];
+        byDay[day].push(f);
       }
     });
-  }
-  return suggestions.slice(0,5);
+  });
+
+  return byDay;
 }
 
 // ── RENDER FILM LIST ──
@@ -809,21 +834,25 @@ function renderSavedAgendaHTML(){
     });
   });
 
-  // Suggestions
-  const suggestions=getSuggestions();
-  if(suggestions.length){
-    html+=`<div style="margin-top:12px;font-size:10px;color:var(--gray);text-transform:uppercase;letter-spacing:1px;font-weight:600;margin-bottom:6px">💡 Caben en tus huecos</div>`;
-    html+=suggestions.map(f=>{
-      const vc2=vcfg(f.venue),sl=sala(f.venue);
-      return`<div class="suggestion-item">
-        <div class="suggestion-time">${f.time}</div>
-        <div class="suggestion-info">
-          <div class="suggestion-title">${f.title}</div>
-          <div class="suggestion-meta">${vc2.ico} ${vc2.short}${sl?' · '+sl:''} · ${f.duration}</div>
-        </div>
-        <button class="suggestion-add" onclick="addFromSearch('${f.title.replace(/'/g,"\'")}')">＋ Añadir</button>
-      </div>`;
-    }).join('');
+  // Suggestions grouped by day
+  const suggsByDay=getSuggestions();
+  const suggDays=Object.keys(suggsByDay).filter(d=>suggsByDay[d].length>0);
+  if(suggDays.length){
+    html+=`<div style="margin-top:16px;font-size:10px;color:var(--gray);text-transform:uppercase;letter-spacing:1px;font-weight:600;margin-bottom:6px">💡 Caben en tus huecos</div>`;
+    suggDays.forEach(day=>{
+      html+=`<div style="font-size:10px;color:var(--orange);font-weight:700;letter-spacing:.5px;text-transform:uppercase;margin:8px 0 4px;padding-left:2px">${day}</div>`;
+      html+=suggsByDay[day].slice(0,4).map(f=>{
+        const vc2=vcfg(f.venue),sl=sala(f.venue);
+        return`<div class="suggestion-item">
+          <div class="suggestion-time">${f.time}</div>
+          <div class="suggestion-info">
+            <div class="suggestion-title">${f.title}</div>
+            <div class="suggestion-meta">${vc2.ico} ${vc2.short}${sl?' · '+sl:''} · ${f.duration}</div>
+          </div>
+          <button class="suggestion-add" onclick="addFromSearch('${f.title.replace(/'/g,"\'")}')">＋ Añadir</button>
+        </div>`;
+      }).join('');
+    });
   }
 
   html+='</div>';
