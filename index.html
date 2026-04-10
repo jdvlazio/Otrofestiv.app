@@ -571,7 +571,6 @@ function shuffle(arr){
   return a;
 }
 function computeScenarios(titles){
-  // Only consider future screenings
   const pending=titles.filter(t=>!watched.has(t));
   const baseGroups=pending.map(t=>{
     const screens=FILMS.filter(f=>f.title===t&&!isScreeningBlocked(f)&&!screeningPassed(f));
@@ -580,8 +579,9 @@ function computeScenarios(titles){
   if(!baseGroups.length) return[];
 
   const seenKeys=new Set();const allScenarios=[];let bestScore=-1;
+  let incompatiblePriorities=false;
 
-  function runBacktrack(groups){
+  function runBacktrack(groups,enforcePriority){
     function backtrack(idx,chosen){
       if(allScenarios.length>=8) return;
       if(idx===groups.length){
@@ -601,31 +601,37 @@ function computeScenarios(titles){
           if(allScenarios.length>=8) return;
         }
       }
-      // Only skip if NOT prioritized
-      if(!g.priority) backtrack(idx+1,chosen);
+      if(!enforcePriority||!g.priority) backtrack(idx+1,chosen);
     }
     backtrack(0,[]);
   }
 
-  // Phase 1: MRV — prioritized first, then fewest options
   const sorted=[...baseGroups].sort((a,b)=>{
     if(a.priority&&!b.priority) return -1;
     if(!a.priority&&b.priority) return 1;
     return a.screens.length-b.screens.length;
   });
-  runBacktrack(sorted);
 
-  // Phase 2: random restarts for diversity
-  for(let i=0;i<30&&allScenarios.length<8;i++) runBacktrack(shuffle(baseGroups));
+  // Phase 1: enforce all priorities
+  runBacktrack(sorted,true);
+  for(let i=0;i<20&&allScenarios.length<8;i++) runBacktrack(shuffle(baseGroups),true);
+
+  // Phase 2: if priorities impossible together, fall back without enforcement
+  if(!allScenarios.length&&prioritized.size>0){
+    incompatiblePriorities=true;
+    bestScore=-1;seenKeys.clear();
+    runBacktrack(sorted,false);
+    for(let i=0;i<20&&allScenarios.length<8;i++) runBacktrack(shuffle(baseGroups),false);
+  }
+
+  // Phase 3: fill remaining slots without priority constraints
+  for(let i=0;i<15&&allScenarios.length<8;i++) runBacktrack(shuffle(baseGroups),false);
 
   allScenarios.forEach(sc=>sc.sort((a,b)=>a.day_order!==b.day_order?a.day_order-b.day_order:toMin(a.time)-toMin(b.time)));
 
   return allScenarios.map(sc=>{
     const included=new Set(sc.map(s=>s._title));
-    // Excluded = pending but not in this scenario
-    // Distinguish: truly impossible vs just not in this scenario
-    const excl=pending.filter(t=>!included.has(t));
-    return{schedule:sc,excluded:excl};
+    return{schedule:sc,excluded:pending.filter(t=>!included.has(t)),incompatiblePriorities};
   });
 }
 
@@ -824,6 +830,7 @@ function buildResultHTML(scenarios){
     <div class="ag-summary-text">
       Puedes ver <span class="ok"><b>${ok}</b></span> de <b>${total}</b> pendientes con funciones futuras.
       ${bad?`<span class="conflict-label"> · <b>${bad}</b> no entra${bad!==1?'n':''} en este escenario.</span>`:''}
+      ${sc.incompatiblePriorities?`<div style="margin-top:6px;font-size:11px;color:#e5a020">⚠️ Algunas películas priorizadas se solapan entre sí — los escenarios se calcularon sin forzar todas las prioridades.</div>`:''}
     </div>
     ${n>1?`<div class="ag-nav">
       <button class="ag-nav-btn" onclick="changeScenario(-1)" ${currentIdx===0?'disabled':''}>← Anterior</button>
