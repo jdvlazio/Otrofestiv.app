@@ -583,26 +583,50 @@ function computeScenarios(titles){
   }).filter(g=>g.screens.length>0);
   if(!baseGroups.length) return[];
 
-  const seenKeys=new Set();const allScenarios=[];let bestScore=-1;
+  // ── PHASE 0: Find TRUE maximum with exhaustive branch-and-bound ──
+  // Pruning: if chosen + remaining groups can't beat best, stop early
+  function findTrueMax(groups){
+    let best=0;
+    function bb(idx,chosen){
+      // Pruning: even taking all remaining can't beat best
+      if(chosen.length+(groups.length-idx)<=best) return;
+      if(idx===groups.length){if(chosen.length>best)best=chosen.length;return;}
+      const g=groups[idx];
+      for(const s of g.screens){
+        if(!chosen.some(c=>screensConflict(c,s))){
+          chosen.push(s);bb(idx+1,chosen);chosen.pop();
+        }
+      }
+      bb(idx+1,chosen); // skip this film
+    }
+    bb(0,[]);
+    return best;
+  }
+
+  // Sort MRV: fewest options first (best pruning)
+  const mrvGroups=[...baseGroups].sort((a,b)=>a.screens.length-b.screens.length);
+  const trueMax=findTrueMax(mrvGroups);
+
+  // ── PHASE 1: Collect up to 8 diverse scenarios AT the true maximum ──
+  const seenKeys=new Set();const allScenarios=[];
   let incompatiblePriorities=false;
 
-  function runBacktrack(groups,enforcePriority){
+  function collectScenarios(groups,enforcePriority){
     function backtrack(idx,chosen){
       if(allScenarios.length>=8) return;
+      // Pruning: can't reach trueMax from here
+      if(chosen.length+(groups.length-idx)<trueMax) return;
       if(idx===groups.length){
-        if(chosen.length>=bestScore){
-          if(chosen.length>bestScore){bestScore=chosen.length;allScenarios.length=0;seenKeys.clear();}
+        if(chosen.length===trueMax){
           const key=chosen.map(s=>s._title+'@'+s.day+s.time).sort().join('|');
           if(!seenKeys.has(key)){seenKeys.add(key);allScenarios.push(chosen.map(c=>({...c})));}
         }
         return;
       }
       const g=groups[idx];
-      let placed=false;
       for(const s of g.screens){
         if(!chosen.some(c=>screensConflict(c,s))){
           chosen.push({...s,_title:g.title});backtrack(idx+1,chosen);chosen.pop();
-          placed=true;
           if(allScenarios.length>=8) return;
         }
       }
@@ -611,26 +635,24 @@ function computeScenarios(titles){
     backtrack(0,[]);
   }
 
-  const sorted=[...baseGroups].sort((a,b)=>{
+  // Try with priorities enforced first (prioritized films appear in scenarios)
+  const prioritySorted=[...baseGroups].sort((a,b)=>{
     if(a.priority&&!b.priority) return -1;
     if(!a.priority&&b.priority) return 1;
     return a.screens.length-b.screens.length;
   });
+  collectScenarios(prioritySorted,true);
+  for(let i=0;i<15&&allScenarios.length<8;i++) collectScenarios(shuffle(baseGroups),true);
 
-  // Phase 1: enforce all priorities
-  runBacktrack(sorted,true);
-  for(let i=0;i<20&&allScenarios.length<8;i++) runBacktrack(shuffle(baseGroups),true);
-
-  // Phase 2: if priorities impossible together, fall back without enforcement
+  // If priorities are mutually incompatible with true max, relax them
   if(!allScenarios.length&&prioritized.size>0){
     incompatiblePriorities=true;
-    bestScore=-1;seenKeys.clear();
-    runBacktrack(sorted,false);
-    for(let i=0;i<20&&allScenarios.length<8;i++) runBacktrack(shuffle(baseGroups),false);
+    collectScenarios(prioritySorted,false);
+    for(let i=0;i<15&&allScenarios.length<8;i++) collectScenarios(shuffle(baseGroups),false);
   }
 
-  // Phase 3: fill remaining slots without priority constraints
-  for(let i=0;i<15&&allScenarios.length<8;i++) runBacktrack(shuffle(baseGroups),false);
+  // Fill remaining with random diversity
+  for(let i=0;i<20&&allScenarios.length<8;i++) collectScenarios(shuffle(baseGroups),false);
 
   allScenarios.forEach(sc=>sc.sort((a,b)=>a.day_order!==b.day_order?a.day_order-b.day_order:toMin(a.time)-toMin(b.time)));
 
