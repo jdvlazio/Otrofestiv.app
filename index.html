@@ -40,7 +40,7 @@ body{background:var(--bg);color:var(--white);font-family:"DM Sans",sans-serif;mi
 .dtab.on{color:var(--orange);border-bottom-color:var(--orange)}
 .dtab.on .dtab-cnt{background:var(--orange);color:#fff;font-weight:600}
 
-/* FILTER BARS */
+/* FILTER + WATCHLIST BARS */
 .fbar-wrap{overflow-x:auto;scrollbar-width:none;border-bottom:1px solid var(--bdr);-webkit-overflow-scrolling:touch}
 .fbar-wrap::-webkit-scrollbar{display:none}
 .fbar{display:flex;gap:7px;padding:9px 18px;width:max-content;min-width:100%;align-items:center}
@@ -48,8 +48,6 @@ body{background:var(--bg);color:var(--white);font-family:"DM Sans",sans-serif;mi
 .fbtn{padding:6px 13px;border-radius:20px;border:1px solid var(--bdr);background:none;color:var(--gray);font-size:12px;cursor:pointer;font-family:"DM Sans",sans-serif;transition:all .15s;white-space:nowrap;flex-shrink:0;min-height:34px}
 .fbtn:active{opacity:.7}
 .fbtn.on{border-color:var(--orange);color:var(--orange);background:rgba(232,90,30,.08)}
-
-/* WATCHLIST BAR */
 .wtab-bar{overflow-x:auto;scrollbar-width:none;border-bottom:1px solid var(--bdr);-webkit-overflow-scrolling:touch}
 .wtab-bar-inner{display:flex;gap:7px;padding:9px 18px;align-items:center}
 .wtab-lbl{font-size:11px;color:var(--gray2);text-transform:uppercase;letter-spacing:1px;white-space:nowrap;flex-shrink:0;min-width:58px;font-weight:500}
@@ -73,31 +71,25 @@ body{background:var(--bg);color:var(--white);font-family:"DM Sans",sans-serif;mi
   transition:opacity .2s,border-color .2s,box-shadow .2s}
 .card:nth-child(odd){background:var(--card-a)}
 .card:nth-child(even){background:var(--card-b)}
-@media(hover:hover){
-  .card:not(.conflict):hover{transform:translateY(-2px);
-    box-shadow:0 8px 24px rgba(0,0,0,.6);border-color:rgba(232,90,30,.35)}
-}
+@media(hover:hover){.card:not(.conflict):hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.6);border-color:rgba(232,90,30,.35)}}
 .card:active{opacity:.85}
 .card.program{background:var(--card-p)!important;border-color:var(--bdr-l);border-left:3px solid rgba(232,90,30,.3)}
-.card.selected{border-color:var(--orange)!important;
-  box-shadow:0 0 0 2px var(--orange),0 8px 28px rgba(232,90,30,.2)!important}
+.card.selected{border-color:var(--orange)!important;box-shadow:0 0 0 2px var(--orange),0 8px 28px rgba(232,90,30,.2)!important}
 .card.conflict{opacity:.22;filter:grayscale(.8);cursor:default;pointer-events:none}
-.card.conflict::after{content:'';position:absolute;inset:0;
-  background:repeating-linear-gradient(-45deg,transparent,transparent 6px,rgba(0,0,0,.15) 6px,rgba(0,0,0,.15) 7px);
-  border-radius:var(--r);pointer-events:none}
+.card.conflict::after{content:'';position:absolute;inset:0;background:repeating-linear-gradient(-45deg,transparent,transparent 6px,rgba(0,0,0,.15) 6px,rgba(0,0,0,.15) 7px);border-radius:var(--r);pointer-events:none}
 .card.apertura{border-color:rgba(232,90,30,.55);box-shadow:0 0 16px rgba(232,90,30,.1)}
-.card.in-wl{border-color:rgba(232,90,30,.35)}
-.card.in-watched{border-color:rgba(58,170,110,.35)}
+.card.in-wl{border-color:rgba(232,90,30,.4)}
+.card.in-watched{border-color:rgba(58,170,110,.4)}
 
 /* Card action buttons */
-.card-actions{position:absolute;top:9px;right:11px;display:flex;gap:4px;z-index:2}
-.action-btn{background:none;border:none;cursor:pointer;font-size:17px;
-  line-height:1;padding:2px 3px;color:var(--gray2);
-  transition:color .15s,transform .1s}
+.card-actions{position:absolute;top:9px;right:10px;display:flex;gap:3px;z-index:2}
+.action-btn{background:rgba(0,0,0,.3);border:none;cursor:pointer;font-size:15px;
+  line-height:1;padding:4px 5px;color:var(--gray2);border-radius:6px;
+  transition:color .15s,background .15s}
 .action-btn:active{transform:scale(.85)}
 .action-btn.wl-on{color:var(--orange)}
 .action-btn.w-on{color:var(--green)}
-.apertura-badge{position:absolute;top:9px;right:11px;font-size:9px;
+.apertura-badge{position:absolute;top:9px;right:72px;font-size:9px;
   background:var(--orange);color:#fff;font-weight:700;letter-spacing:1px;
   padding:2px 6px;border-radius:8px;font-family:"Bebas Neue",sans-serif;z-index:2}
 
@@ -105,7 +97,7 @@ body{background:var(--bg);color:var(--white);font-family:"DM Sans",sans-serif;mi
 .c-body{padding:16px 16px 14px;display:flex;flex-direction:column;gap:14px}
 .c-film{display:flex;flex-direction:column;gap:6px}
 .c-time{font-family:"Bebas Neue",sans-serif;font-size:28px;color:var(--orange);letter-spacing:2px;line-height:1}
-.c-title{font-size:16px;font-weight:600;color:var(--white);line-height:1.35;padding-right:52px}
+.c-title{font-size:16px;font-weight:600;color:var(--white);line-height:1.35;padding-right:60px}
 .c-title-en{font-size:11.5px;color:var(--gray);font-style:italic;line-height:1.35;margin-top:1px}
 .c-flags{font-size:20px;line-height:1;margin-top:2px}
 .c-div{height:1px;background:var(--bdr-l)}
@@ -142,122 +134,142 @@ body{background:var(--bg);color:var(--white);font-family:"DM Sans",sans-serif;mi
 .empty span{font-size:44px;display:block;margin-bottom:10px}
 
 /* ── WATCHLIST VIEW ── */
-.wl-view{padding:16px 18px 60px;display:none}
+.wl-view{padding:14px 16px 60px;display:none}
 .wl-view.visible{display:block}
 
-/* Availability accordion */
-.av-block{margin-bottom:20px}
-.av-block-title{font-family:"Bebas Neue",sans-serif;font-size:20px;color:var(--white);letter-spacing:.5px;margin-bottom:10px}
+/* Section headers */
+.wl-section{margin-bottom:20px}
+.wl-section-title{font-family:"Bebas Neue",sans-serif;font-size:19px;color:var(--white);
+  letter-spacing:.5px;margin-bottom:10px;padding-bottom:7px;
+  border-bottom:1px solid var(--bdr)}
+
+/* ── ZONE 1: MY FILMS ── */
+.wl-search-wrap{position:relative;margin-bottom:10px}
+.wl-search{width:100%;background:var(--card-a);border:1px solid var(--bdr);
+  border-radius:var(--r);color:var(--white);font-size:14px;padding:11px 14px 11px 38px;
+  font-family:"DM Sans",sans-serif;transition:border-color .15s}
+.wl-search::placeholder{color:var(--gray2)}
+.wl-search:focus{outline:none;border-color:var(--orange)}
+.wl-search-ico{position:absolute;left:12px;top:50%;transform:translateY(-50%);
+  font-size:16px;color:var(--gray2);pointer-events:none}
+.wl-search-results{background:var(--card-b);border:1px solid var(--bdr);
+  border-radius:var(--r);margin-top:4px;overflow:hidden;display:none}
+.wl-search-results.open{display:block}
+.wl-sr-item{display:flex;align-items:center;justify-content:space-between;
+  gap:10px;padding:10px 14px;cursor:pointer;border-bottom:1px solid var(--bdr-l);
+  transition:background .12s}
+.wl-sr-item:last-child{border-bottom:none}
+.wl-sr-item:hover{background:var(--card-a)}
+.wl-sr-title{font-size:13px;color:var(--white);font-weight:500;flex:1;min-width:0}
+.wl-sr-meta{font-size:10px;color:var(--gray);white-space:nowrap}
+.wl-sr-add{background:none;border:1px solid var(--bdr);border-radius:20px;
+  color:var(--gray);font-size:11px;padding:3px 9px;cursor:pointer;
+  font-family:"DM Sans",sans-serif;transition:all .15s;white-space:nowrap;flex-shrink:0}
+.wl-sr-add:hover{border-color:var(--orange);color:var(--orange)}
+.wl-sr-add.added{border-color:var(--orange);color:var(--orange);background:rgba(232,90,30,.08)}
+.wl-sr-empty{padding:14px;text-align:center;font-size:12px;color:var(--gray)}
+
+/* Film list items */
+.wl-film-item{display:flex;align-items:center;gap:10px;padding:9px 12px;
+  background:var(--card-a);border:1px solid var(--bdr);border-radius:8px;
+  margin-bottom:6px}
+.wl-film-item.watched-item{background:var(--card-p);border-color:var(--bdr-l);opacity:.75}
+.wl-fi-flags{font-size:15px;flex-shrink:0}
+.wl-fi-info{flex:1;min-width:0}
+.wl-fi-title{font-size:13px;font-weight:600;color:var(--white);line-height:1.3}
+.wl-fi-meta{font-size:10.5px;color:var(--gray);margin-top:2px}
+.wl-fi-actions{display:flex;align-items:center;gap:4px;flex-shrink:0}
+.wl-fi-btn{background:none;border:1px solid var(--bdr);border-radius:6px;
+  cursor:pointer;font-size:14px;padding:4px 7px;color:var(--gray2);
+  transition:all .15s;line-height:1}
+.wl-fi-btn:hover{border-color:var(--orange);color:var(--orange)}
+.wl-fi-btn.w-on{color:var(--green);border-color:rgba(58,170,110,.4)}
+.wl-fi-btn.del{font-size:12px}
+.wl-fi-btn.del:hover{border-color:#e05050;color:#e05050}
+
+/* ── ZONE 2: AVAILABILITY ── */
 .av-day{border:1px solid var(--bdr);border-radius:var(--r);margin-bottom:6px;overflow:hidden}
 .av-day-header{display:flex;align-items:center;justify-content:space-between;
-  padding:12px 14px;cursor:pointer;background:var(--card-a);user-select:none}
+  padding:11px 14px;cursor:pointer;background:var(--card-a);user-select:none}
 .av-day-header:hover{background:var(--card-b)}
 .av-day-left{display:flex;align-items:center;gap:8px}
 .av-arrow{font-size:10px;color:var(--gray);transition:transform .2s;display:inline-block}
 .av-arrow.open{transform:rotate(90deg)}
 .av-day-name{font-size:13px;font-weight:500;color:var(--white)}
 .av-summary{font-size:11px;color:var(--gray)}
-.av-day-body{padding:14px;background:var(--card-p);border-top:1px solid var(--bdr-l)}
-
-/* Block list */
-.av-blocks-list{display:flex;flex-direction:column;gap:6px;margin-bottom:10px}
+.av-summary.has-blocks{color:var(--orange)}
+.av-day-body{padding:12px 14px;background:var(--card-p);border-top:1px solid var(--bdr-l)}
+.av-blocks-list{display:flex;flex-direction:column;gap:5px;margin-bottom:10px}
 .av-block-pill{display:flex;align-items:center;justify-content:space-between;
   background:rgba(232,90,30,.08);border:1px solid rgba(232,90,30,.25);
-  border-radius:8px;padding:7px 10px}
-.av-block-pill-text{font-size:12px;color:var(--white);font-weight:500}
+  border-radius:7px;padding:6px 10px}
+.av-block-text{font-size:12px;color:var(--white);font-weight:500}
 .av-block-remove{background:none;border:none;cursor:pointer;color:var(--gray2);
-  font-size:15px;padding:0 2px;transition:color .15s;line-height:1}
+  font-size:14px;padding:0 2px;transition:color .15s;line-height:1}
 .av-block-remove:hover{color:#e05050}
-
-/* Add block form */
-.av-add-form{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
-.av-time-input{background:var(--surf);border:1px solid var(--bdr);border-radius:8px;
-  color:var(--white);font-size:13px;padding:7px 10px;
-  font-family:"DM Sans",sans-serif;width:100px;cursor:pointer}
+.av-add-form{display:flex;align-items:center;gap:7px;flex-wrap:wrap;margin-bottom:8px}
+.av-time-input{background:var(--surf);border:1px solid var(--bdr);border-radius:7px;
+  color:var(--white);font-size:13px;padding:6px 9px;
+  font-family:"DM Sans",sans-serif;width:95px;cursor:pointer}
 .av-time-input:focus{outline:none;border-color:var(--orange)}
 .av-sep{font-size:12px;color:var(--gray)}
 .av-add-btn{background:rgba(232,90,30,.1);border:1px solid rgba(232,90,30,.3);
-  border-radius:8px;color:var(--orange);font-size:12px;font-weight:600;
-  padding:7px 12px;cursor:pointer;font-family:"DM Sans",sans-serif;
-  transition:all .15s;white-space:nowrap}
+  border-radius:7px;color:var(--orange);font-size:12px;font-weight:600;
+  padding:6px 11px;cursor:pointer;font-family:"DM Sans",sans-serif;transition:all .15s}
 .av-add-btn:hover{background:rgba(232,90,30,.2)}
-.av-add-btn:active{opacity:.7}
-
-/* Calc button */
-.av-calc-btn{width:100%;margin-top:12px;padding:13px;border-radius:var(--r);
+.av-day-block-btn{width:100%;background:none;border:1px solid var(--bdr);
+  border-radius:7px;color:var(--gray);font-size:12px;padding:6px;
+  cursor:pointer;font-family:"DM Sans",sans-serif;transition:all .15s}
+.av-day-block-btn:hover{border-color:#e05050;color:#e05050}
+.av-day-block-btn.blocked{border-color:rgba(224,80,80,.4);color:#e05050;
+  background:rgba(224,80,80,.08)}
+.av-calc-btn{width:100%;margin-top:10px;padding:13px;border-radius:var(--r);
   background:var(--orange);border:none;color:#fff;font-size:14px;font-weight:600;
   cursor:pointer;font-family:"DM Sans",sans-serif;letter-spacing:.3px;transition:opacity .15s}
 .av-calc-btn:hover{opacity:.88}
 .av-calc-btn:active{opacity:.7}
 
-/* Results */
-.wl-calc-prompt{text-align:center;padding:30px 20px;color:var(--gray);font-size:13px;line-height:1.6}
+/* ── ZONE 3: RESULTS ── */
+.wl-calc-prompt{text-align:center;padding:28px 20px;color:var(--gray);font-size:13px;line-height:1.6;background:var(--card-a);border:1px solid var(--bdr);border-radius:var(--r)}
 .wl-calc-prompt strong{color:var(--orange)}
-.wl-summary{background:var(--card-a);border:1px solid var(--bdr);border-radius:var(--r);padding:16px;margin-bottom:16px}
-.wl-summary-title{font-family:"Bebas Neue",sans-serif;font-size:22px;color:var(--white);letter-spacing:.5px;margin-bottom:6px}
+.wl-summary{background:var(--card-a);border:1px solid var(--bdr);border-radius:var(--r);padding:14px;margin-bottom:14px}
+.wl-summary-title{font-family:"Bebas Neue",sans-serif;font-size:20px;color:var(--white);letter-spacing:.5px;margin-bottom:5px}
 .wl-summary-text{font-size:13px;color:var(--gray);line-height:1.6}
 .wl-summary-text b{color:var(--white)}
-.ok{color:var(--orange)}
-.conflict-label{color:#e05050}
-.wl-nav{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:10px}
-.wl-nav-btn{background:none;border:1px solid var(--bdr);color:var(--gray);
-  border-radius:20px;padding:5px 14px;font-size:12px;cursor:pointer;
-  font-family:"DM Sans",sans-serif;transition:all .15s}
+.ok{color:var(--orange)}.conflict-label{color:#e05050}
+.wl-nav{display:flex;align-items:center;justify-content:center;gap:12px;margin-top:10px}
+.wl-nav-btn{background:none;border:1px solid var(--bdr);color:var(--gray);border-radius:20px;padding:5px 13px;font-size:12px;cursor:pointer;font-family:"DM Sans",sans-serif;transition:all .15s}
 .wl-nav-btn:hover:not(:disabled){border-color:var(--orange);color:var(--orange)}
 .wl-nav-btn:disabled{opacity:.3;cursor:default}
 .wl-nav-pos{font-size:11px;color:var(--gray)}
-.wl-conflicts{background:#1a1212;border:1px solid #3a2020;border-radius:var(--r);padding:14px;margin-bottom:16px}
-.wl-conflicts-title{font-size:11px;color:#e05050;text-transform:uppercase;letter-spacing:1px;font-weight:600;margin-bottom:10px}
-.wl-conflict-item{font-size:12px;color:#aaa;line-height:1.5;padding:5px 0;border-bottom:1px solid rgba(255,255,255,.05)}
+.wl-conflicts{background:#1a1212;border:1px solid #3a2020;border-radius:var(--r);padding:12px;margin-bottom:14px}
+.wl-conflicts-title{font-size:10px;color:#e05050;text-transform:uppercase;letter-spacing:1px;font-weight:600;margin-bottom:8px}
+.wl-conflict-item{font-size:12px;color:#aaa;line-height:1.5;padding:4px 0;border-bottom:1px solid rgba(255,255,255,.05)}
 .wl-conflict-item:last-child{border-bottom:none}
 .wl-conflict-item strong{color:var(--white)}
-.wl-day{margin-bottom:20px}
-.wl-day-label{font-family:"Bebas Neue",sans-serif;font-size:20px;color:var(--gray);letter-spacing:1px;margin-bottom:8px;padding-bottom:6px;border-bottom:1px solid var(--bdr)}
-.wl-day-label span{color:var(--orange);margin-right:6px}
+.wl-day-label{font-family:"Bebas Neue",sans-serif;font-size:18px;color:var(--gray);letter-spacing:1px;margin:14px 0 7px;padding-bottom:5px;border-bottom:1px solid var(--bdr)}
+.wl-day-label span{color:var(--orange);margin-right:5px}
 .wl-card{background:var(--card-a);border:1px solid var(--bdr);border-radius:var(--r);
-  padding:12px 14px;margin-bottom:8px;display:flex;align-items:center;gap:12px}
-.wl-time{font-family:"Bebas Neue",sans-serif;font-size:24px;color:var(--orange);
-  letter-spacing:1.5px;line-height:1;flex-shrink:0;min-width:52px}
+  padding:11px 13px;margin-bottom:7px;display:flex;align-items:center;gap:10px}
+.wl-time{font-family:"Bebas Neue",sans-serif;font-size:22px;color:var(--orange);letter-spacing:1.5px;line-height:1;flex-shrink:0;min-width:50px}
 .wl-info{flex:1;min-width:0}
 .wl-title{font-size:13px;font-weight:600;color:var(--white);line-height:1.3}
-.wl-venue{font-size:11px;color:var(--gray);margin-top:3px}
+.wl-venue{font-size:11px;color:var(--gray);margin-top:2px}
 .wl-alts{font-size:10px;color:var(--orange);margin-left:4px;font-weight:500}
-.wl-flags{font-size:15px;flex-shrink:0}
-.wl-remove{background:none;border:none;cursor:pointer;color:var(--gray2);
-  font-size:17px;flex-shrink:0;padding:2px;transition:color .15s;line-height:1}
-.wl-remove:hover{color:#e05050}
-
-/* Watched section */
-.wl-watched-section{margin-top:24px}
-.wl-watched-toggle{display:flex;align-items:center;justify-content:space-between;
-  padding:12px 14px;background:var(--card-a);border:1px solid var(--bdr);
-  border-radius:var(--r);cursor:pointer;user-select:none}
-.wl-watched-toggle:hover{background:var(--card-b)}
-.wl-watched-title{font-size:13px;font-weight:600;color:var(--green)}
-.wl-watched-body{display:none;margin-top:6px}
-.wl-watched-body.open{display:block}
-.wl-watched-card{background:var(--card-p);border:1px solid var(--bdr-l);
-  border-radius:var(--r);padding:10px 14px;margin-bottom:6px;
-  display:flex;align-items:center;gap:10px;opacity:.7}
-.wl-watched-check{font-size:16px;color:var(--green);flex-shrink:0}
-.wl-watched-info{flex:1;min-width:0}
-.wl-watched-title-film{font-size:12px;font-weight:500;color:var(--white)}
-.wl-watched-meta{font-size:10px;color:var(--gray);margin-top:2px}
-.wl-watched-undo{background:none;border:none;cursor:pointer;color:var(--gray2);
-  font-size:12px;flex-shrink:0;padding:2px;transition:color .15s}
-.wl-watched-undo:hover{color:var(--orange)}
-
-.wl-empty{text-align:center;padding:60px 20px;color:var(--gray)}
-.wl-empty span{font-size:44px;display:block;margin-bottom:10px}
+.wl-flags{font-size:14px;flex-shrink:0}
+.wl-card-actions{display:flex;gap:4px;flex-shrink:0}
+.wl-card-btn{background:none;border:1px solid var(--bdr);border-radius:6px;cursor:pointer;font-size:13px;padding:4px 6px;color:var(--gray2);transition:all .15s;line-height:1}
+.wl-card-btn:hover{border-color:var(--orange);color:var(--orange)}
+.wl-card-btn.w-mark:hover{border-color:var(--green);color:var(--green)}
+.wl-empty{text-align:center;padding:40px 20px;color:var(--gray)}
+.wl-empty span{font-size:40px;display:block;margin-bottom:10px}
 .wl-empty p{font-size:13px;line-height:1.6}
 </style>
 </head>
 <body>
 <div class="hdr">
-  <img class="hdr-logo"
-    src="https://ficcifestival.com/sites/default/files/2026-02/logo-ficci65_2.png"
-    onerror="this.style.display='none';document.getElementById('hdr-fallback').style.display='block'"
-    alt="FICCI 65">
+  <img class="hdr-logo" src="https://ficcifestival.com/sites/default/files/2026-02/logo-ficci65_2.png"
+    onerror="this.style.display='none';document.getElementById('hdr-fallback').style.display='block'" alt="FICCI 65">
   <div class="hdr-fallback" id="hdr-fallback">FICCI <em>65</em></div>
   <div class="hdr-dates">14 – 19 Abril 2026 · Cartagena de Indias</div>
   <div class="hdr-line"></div>
@@ -289,8 +301,6 @@ const VENUES={
   'Auditorio nido':     {ico:'🪺',short:'Auditorio nido'},
   'Plaza Proclamación': {ico:'🌟',short:'Plaza Proclamación'},
   'C. Convenciones':    {ico:'🏟️',short:'C. de Convenciones'},
-  'AECID':              {ico:'🏛️',short:'AECID'},
-  'UNIBAC':             {ico:'📚',short:'UNIBAC'},
 };
 function vcfg(v){
   if(v.includes('Teatro Adolfo'))  return VENUES['Teatro Adolfo Mejía'];
@@ -298,17 +308,13 @@ function vcfg(v){
   if(v.includes('Caribe Plaza'))   return VENUES['CC Caribe Plaza'];
   if(/nido/i.test(v))              return VENUES['Auditorio nido'];
   if(v.includes('Proclamación'))   return VENUES['Plaza Proclamación'];
-  if(v.includes('Convenciones')||v.includes('Banderas')) return VENUES['C. Convenciones'];
-  if(/aecid/i.test(v))             return VENUES['AECID'];
-  if(/unibac|sal.n/i.test(v))      return VENUES['UNIBAC'];
-  return VENUES['Teatro Adolfo Mejía'];
+  return VENUES['C. Convenciones'];
 }
 function sala(v){const m=v.match(/Sala\s*(\d+)/);return m?'Sala '+m[1]:'';}
 function toMin(t){const[h,m]=t.split(':').map(Number);return h*60+m;}
 function parseDur(d){const m=d&&d.replace('~','').match(/(\d+)/);return m?parseInt(m[1]):90;}
 function minToStr(m){
-  const h=Math.floor(((m%1440)+1440)%1440/60);
-  const mn=((m%1440)+1440)%1440%60;
+  const h=Math.floor(((m%1440)+1440)%1440/60),mn=((m%1440)+1440)%1440%60;
   return`${String(h).padStart(2,'0')}:${String(mn).padStart(2,'0')}`;
 }
 function screensConflict(a,b){
@@ -319,161 +325,172 @@ function screensConflict(a,b){
 }
 
 // ── STATE ──
-let watchlist=new Set();  // titles in watchlist
-let watched=new Set();    // titles already watched
+let watchlist=new Set();
+let watched=new Set();
+const DAY_KEYS=['Martes','Miércoles','Jueves','Viernes','Sábado','Domingo'];
+let availability={Martes:{blocks:[]},Miércoles:{blocks:[]},Jueves:{blocks:[]},Viernes:{blocks:[]},Sábado:{blocks:[]},Domingo:{blocks:[]}};
 
 function loadState(){
   try{
-    const wl=localStorage.getItem('ficci65_wl');
-    if(wl) watchlist=new Set(JSON.parse(wl));
-    const wt=localStorage.getItem('ficci65_watched');
-    if(wt) watched=new Set(JSON.parse(wt));
-    const av=localStorage.getItem('ficci65_av2');
-    if(av) Object.assign(availability,JSON.parse(av));
+    const wl=localStorage.getItem('ficci65_wl'); if(wl) watchlist=new Set(JSON.parse(wl));
+    const wt=localStorage.getItem('ficci65_watched'); if(wt) watched=new Set(JSON.parse(wt));
+    const av=localStorage.getItem('ficci65_av3'); if(av){const p=JSON.parse(av);DAY_KEYS.forEach(d=>{if(p[d]) availability[d]=p[d];});}
   }catch(e){}
 }
 function saveWL(){try{localStorage.setItem('ficci65_wl',JSON.stringify([...watchlist]));}catch(e){}}
 function saveWatched(){try{localStorage.setItem('ficci65_watched',JSON.stringify([...watched]));}catch(e){}}
-function saveAV(){try{localStorage.setItem('ficci65_av2',JSON.stringify(availability));}catch(e){}}
+function saveAV(){try{localStorage.setItem('ficci65_av3',JSON.stringify(availability));}catch(e){}}
 
-// Pending = in watchlist but NOT watched
-function pendingCount(){return [...watchlist].filter(t=>!watched.has(t)).length;}
-
+function pendingCount(){return[...watchlist].filter(t=>!watched.has(t)).length;}
 function updateWLTab(){
-  const el=document.getElementById('wl-cnt');
-  if(el) el.textContent=pendingCount();
-  const tab=document.getElementById('wtab');
-  if(tab) tab.classList.toggle('on',activeView==='watchlist');
+  const el=document.getElementById('wl-cnt');if(el) el.textContent=pendingCount();
+  const tab=document.getElementById('wtab');if(tab) tab.classList.toggle('on',activeView==='watchlist');
 }
 
-// Toggle watchlist (♡)
 function toggleWL(title,e){
   if(e) e.stopPropagation();
-  if(watchlist.has(title)) watchlist.delete(title);
+  if(watchlist.has(title)){watchlist.delete(title);watched.delete(title);}
   else{watchlist.add(title);watched.delete(title);}
-  saveWL();saveWatched();
-  updateCardState(title);
-  updateWLTab();
+  saveWL();saveWatched();updateCardState(title);updateWLTab();
   if(activeView==='watchlist'){cachedResult=null;renderWatchlist();}
 }
-
-// Toggle watched (✓) — works independently of watchlist
 function toggleWatched(title,e){
   if(e) e.stopPropagation();
-  if(watched.has(title)){
-    watched.delete(title);
-  } else {
-    watched.add(title);
-    // Don't remove from watchlist — keep for reference
-  }
-  saveWatched();
-  updateCardState(title);
-  updateWLTab();
+  if(watched.has(title)) watched.delete(title);
+  else{watched.add(title);}
+  saveWatched();updateCardState(title);updateWLTab();
   if(activeView==='watchlist'){cachedResult=null;renderWatchlist();}
 }
-
 function updateCardState(title){
-  const inWL=watchlist.has(title);
-  const inW=watched.has(title);
+  const inWL=watchlist.has(title),inW=watched.has(title);
   document.querySelectorAll(`.card[data-title="${CSS.escape(title)}"]`).forEach(card=>{
     card.classList.toggle('in-wl',inWL&&!inW);
     card.classList.toggle('in-watched',inW);
     const wlBtn=card.querySelector('.wl-btn');
     const wBtn=card.querySelector('.w-btn');
     if(wlBtn){wlBtn.textContent=inWL?'♥':'♡';wlBtn.classList.toggle('wl-on',inWL);}
-    if(wBtn){wBtn.classList.toggle('w-on',inW);}
+    if(wBtn) wBtn.classList.toggle('w-on',inW);
   });
 }
 
-// ── AVAILABILITY ──
-const DAY_KEYS=['Martes','Miércoles','Jueves','Viernes','Sábado','Domingo'];
-const DAY_LABELS_LONG={Martes:'Martes 14',Miércoles:'Miércoles 15',Jueves:'Jueves 16',Viernes:'Viernes 17',Sábado:'Sábado 18',Domingo:'Domingo 19'};
-const DAY_LABELS_SHORT={Martes:'MAR 14',Miércoles:'MIÉ 15',Jueves:'JUE 16',Viernes:'VIE 17',Sábado:'SÁB 18',Domingo:'DOM 19'};
+// ── FUZZY SEARCH ──
+function fuzzyMatch(query,title){
+  const q=query.toLowerCase(),t=title.toLowerCase();
+  if(t.includes(q)) return{match:true,score:100+q.length};
+  let qi=0;
+  for(let i=0;i<t.length&&qi<q.length;i++) if(t[i]===q[qi]) qi++;
+  if(qi===q.length) return{match:true,score:qi};
+  return{match:false,score:0};
+}
+function searchFilms(query){
+  if(!query||query.length<2) return[];
+  const seen=new Set();
+  return FILMS
+    .filter(f=>!f.is_cortos)
+    .map(f=>{
+      const r1=fuzzyMatch(query,f.title);
+      const r2=f.title_en?fuzzyMatch(query,f.title_en):{match:false,score:0};
+      return{...f,score:Math.max(r1.score,r2.score),match:r1.match||r2.match};
+    })
+    .filter(f=>f.match)
+    .filter(f=>{if(seen.has(f.title)) return false;seen.add(f.title);return true;})
+    .sort((a,b)=>b.score-a.score)
+    .slice(0,8);
+}
 
-let availability={
-  Martes:   {blocks:[]},
-  Miércoles:{blocks:[]},
-  Jueves:   {blocks:[]},
-  Viernes:  {blocks:[]},
-  Sábado:   {blocks:[]},
-  Domingo:  {blocks:[]},
-};
-
-function isScreeningBlocked(s){
-  const av=availability[s.day];
-  if(!av) return false;
-  const sMin=toMin(s.time);
-  const eMin=sMin+parseDur(s.duration);
-  for(const b of av.blocks){
-    const bS=toMin(b.from),bE=toMin(b.to);
-    // Blocked if screening starts during a blocked range
-    if(sMin>=bS&&sMin<bE) return true;
+function onSearchInput(){
+  const q=document.getElementById('wl-search-input').value.trim();
+  const res=document.getElementById('wl-search-results');
+  if(!q||q.length<2){res.classList.remove('open');return;}
+  const films=searchFilms(q);
+  if(!films.length){
+    res.innerHTML='<div class="wl-sr-empty">Sin resultados</div>';
+    res.classList.add('open');return;
   }
-  return false;
+  res.innerHTML=films.map(f=>{
+    const inWL=watchlist.has(f.title);
+    const inW=watched.has(f.title);
+    const status=inW?'✓ Vista':inWL?'♥ En lista':'';
+    return`<div class="wl-sr-item">
+      <div>
+        <div class="wl-sr-title">${f.title}</div>
+        <div class="wl-sr-meta">${f.flags||''} ${f.duration||''} ${status?'· <span style="color:var(--orange)">'+status+'</span>':''}</div>
+      </div>
+      <button class="wl-sr-add${inWL?' added':''}" onclick="addFromSearch('${f.title.replace(/'/g,"\'")}')">
+        ${inWL?'✓ Añadida':'＋ Añadir'}
+      </button>
+    </div>`;
+  }).join('');
+  res.classList.add('open');
+}
+function addFromSearch(title){
+  if(!watchlist.has(title)){
+    watchlist.add(title);watched.delete(title);
+    saveWL();saveWatched();updateCardState(title);updateWLTab();
+  }
+  // Re-render search results to show updated state
+  onSearchInput();
+  // Re-render film list
+  const listEl=document.getElementById('wl-film-list');
+  if(listEl) listEl.innerHTML=renderFilmListHTML();
+}
+function closeSearch(){
+  setTimeout(()=>{
+    const res=document.getElementById('wl-search-results');
+    if(res) res.classList.remove('open');
+  },200);
+}
+
+// ── AVAILABILITY ──
+const DAY_LONG={Martes:'Martes 14',Miércoles:'Miércoles 15',Jueves:'Jueves 16',Viernes:'Viernes 17',Sábado:'Sábado 18',Domingo:'Domingo 19'};
+const DAY_SHORT={Martes:'MAR 14',Miércoles:'MIÉ 15',Jueves:'JUE 16',Viernes:'VIE 17',Sábado:'SÁB 18',Domingo:'DOM 19'};
+
+function isFullDayBlocked(day){
+  const av=availability[day];
+  if(!av.blocks.length) return false;
+  // Full day = single block covering 00:00-23:59
+  return av.blocks.some(b=>toMin(b.from)<=toMin('09:00')&&toMin(b.to)>=toMin('23:00'));
+}
+
+function toggleFullDay(day){
+  if(isFullDayBlocked(day)){
+    availability[day].blocks=[];
+  } else {
+    availability[day].blocks=[{from:'00:00',to:'23:59'}];
+  }
+  saveAV();renderAvDay(day);updateAvSummary(day);
 }
 
 function avSummary(day){
   const av=availability[day];
-  if(!av.blocks.length) return 'Todo el día disponible';
+  if(!av.blocks.length) return'Todo el día disponible';
+  if(isFullDayBlocked(day)) return'Día excluido';
   return`${av.blocks.length} bloque${av.blocks.length!==1?'s':''} bloqueado${av.blocks.length!==1?'s':''}`;
+}
+function updateAvSummary(day){
+  const el=document.getElementById(`av-summary-${day}`);
+  if(!el) return;
+  const s=avSummary(day);
+  el.textContent=s;
+  el.className='av-summary'+(availability[day].blocks.length?' has-blocks':'');
 }
 
 function addBlock(day){
-  const fromEl=document.getElementById(`av-from-${day}`);
-  const toEl=document.getElementById(`av-to-${day}`);
-  if(!fromEl||!toEl) return;
-  const from=fromEl.value;
-  const to=toEl.value;
-  if(!from||!to||toMin(from)>=toMin(to)){
-    alert('Hora de inicio debe ser menor que hora de fin');return;
-  }
-  // Check overlap with existing blocks
+  const f=document.getElementById(`av-from-${day}`).value;
+  const t=document.getElementById(`av-to-${day}`).value;
+  if(!f||!t){alert('Selecciona hora de inicio y fin');return;}
+  if(toMin(f)>=toMin(t)){alert('La hora de inicio debe ser menor que la de fin');return;}
   const av=availability[day];
-  const newS=toMin(from),newE=toMin(to);
-  for(const b of av.blocks){
-    if(newS<toMin(b.to)&&newE>toMin(b.from)){
-      alert('Este bloque se solapa con uno existente');return;
-    }
+  if(av.blocks.some(b=>toMin(f)<toMin(b.to)&&toMin(t)>toMin(b.from))){
+    alert('Este bloque se solapa con uno existente');return;
   }
-  av.blocks.push({from,to});
+  av.blocks.push({from:f,to:t});
   av.blocks.sort((a,b)=>toMin(a.from)-toMin(b.from));
-  saveAV();
-  // Re-render just the day body
-  renderAvDay(day);
-  updateAvSummary(day);
+  saveAV();renderAvDay(day);updateAvSummary(day);
 }
-
 function removeBlock(day,idx){
-  availability[day].blocks.splice(idx,1);
-  saveAV();
-  renderAvDay(day);
-  updateAvSummary(day);
+  availability[day].blocks.splice(idx,1);saveAV();renderAvDay(day);updateAvSummary(day);
 }
-
-function updateAvSummary(day){
-  const el=document.getElementById(`av-summary-${day}`);
-  if(el) el.textContent=avSummary(day);
-}
-
-function renderAvDay(day){
-  const body=document.getElementById(`av-body-${day}`);
-  if(!body) return;
-  const av=availability[day];
-  const blocksHtml=av.blocks.length?`<div class="av-blocks-list">${
-    av.blocks.map((b,i)=>`<div class="av-block-pill">
-      <span class="av-block-pill-text">🚫 ${b.from} – ${b.to}</span>
-      <button class="av-block-remove" onclick="removeBlock('${day}',${i})">×</button>
-    </div>`).join('')
-  }</div>`:'';
-  body.innerHTML=`${blocksHtml}
-    <div class="av-add-form">
-      <input type="time" id="av-from-${day}" class="av-time-input" value="12:00" min="09:00" max="23:00">
-      <span class="av-sep">→</span>
-      <input type="time" id="av-to-${day}" class="av-time-input" value="14:00" min="09:00" max="23:00">
-      <button class="av-add-btn" onclick="addBlock('${day}')">＋ Bloquear</button>
-    </div>`;
-}
-
 function toggleAvDay(day){
   const body=document.getElementById(`av-body-${day}`);
   const arrow=document.getElementById(`av-arrow-${day}`);
@@ -482,171 +499,133 @@ function toggleAvDay(day){
   body.style.display=open?'none':'block';
   arrow.classList.toggle('open',!open);
 }
+function renderAvDay(day){
+  const body=document.getElementById(`av-body-${day}`);
+  if(!body) return;
+  const av=availability[day];
+  const fullBlocked=isFullDayBlocked(day);
+  const blocksHtml=av.blocks.filter(b=>!(toMin(b.from)<=0&&toMin(b.to)>=toMin('23:59'))).length>0
+    ?`<div class="av-blocks-list">${av.blocks.filter(b=>!(toMin(b.from)<=0&&toMin(b.to)>=toMin('23:59'))).map((b,i)=>
+        `<div class="av-block-pill">
+          <span class="av-block-text">🚫 ${b.from} – ${b.to}</span>
+          <button class="av-block-remove" onclick="removeBlock('${day}',${availability[day].blocks.indexOf(b)})">×</button>
+        </div>`).join('')}</div>`:
+      (fullBlocked?`<div class="av-blocks-list"><div class="av-block-pill"><span class="av-block-text">🚫 Día completo bloqueado</span></div></div>`:'');
+  body.innerHTML=`${blocksHtml}
+    <div class="av-add-form">
+      <input type="time" id="av-from-${day}" class="av-time-input" value="12:00">
+      <span class="av-sep">→</span>
+      <input type="time" id="av-to-${day}" class="av-time-input" value="14:00">
+      <button class="av-add-btn" onclick="addBlock('${day}')">＋ Bloquear</button>
+    </div>
+    <button class="av-day-block-btn${fullBlocked?' blocked':''}" onclick="toggleFullDay('${day}')">
+      ${fullBlocked?'↩ Liberar día completo':'🚫 Bloquear día completo'}
+    </button>`;
+}
 
 // ── ALGORITHM ──
+function isScreeningBlocked(s){
+  const av=availability[s.day];
+  if(!av) return false;
+  const sMin=toMin(s.time);
+  return av.blocks.some(b=>sMin>=toMin(b.from)&&sMin<toMin(b.to));
+}
 function computeScenarios(titles){
-  // Only pending (watchlist minus watched)
   const pending=titles.filter(t=>!watched.has(t));
-
   const groups=pending.map(t=>{
     const screens=FILMS.filter(f=>f.title===t&&!isScreeningBlocked(f));
     return{title:t,screens};
   }).filter(g=>g.screens.length>0);
 
-  const impossible=pending.filter(t=>!groups.find(g=>g.title===t));
-
   if(!groups.length) return[];
-
   let bestScore=-1;
-  const allScenarios=[];
-  const seenKeys=new Set();
-
+  const allScenarios=[];const seenKeys=new Set();
   function backtrack(idx,chosen){
     if(allScenarios.length>=8) return;
     if(idx===groups.length){
       if(chosen.length>=bestScore){
-        if(chosen.length>bestScore){
-          bestScore=chosen.length;
-          allScenarios.length=0;
-          seenKeys.clear();
-        }
+        if(chosen.length>bestScore){bestScore=chosen.length;allScenarios.length=0;seenKeys.clear();}
         const key=chosen.map(s=>s._title+'@'+s.day+s.time).sort().join('|');
-        if(!seenKeys.has(key)){
-          seenKeys.add(key);
-          allScenarios.push(chosen.map(c=>({...c})));
-        }
+        if(!seenKeys.has(key)){seenKeys.add(key);allScenarios.push(chosen.map(c=>({...c})));}
       }
       return;
     }
     const g=groups[idx];
     for(const s of g.screens){
       if(!chosen.some(c=>screensConflict(c,s))){
-        chosen.push({...s,_title:g.title});
-        backtrack(idx+1,chosen);
-        chosen.pop();
+        chosen.push({...s,_title:g.title});backtrack(idx+1,chosen);chosen.pop();
         if(allScenarios.length>=8) return;
       }
     }
     backtrack(idx+1,chosen);
   }
-
   backtrack(0,[]);
-
-  allScenarios.forEach(sc=>sc.sort((a,b)=>
-    a.day_order!==b.day_order?a.day_order-b.day_order:toMin(a.time)-toMin(b.time)));
-
+  allScenarios.forEach(sc=>sc.sort((a,b)=>a.day_order!==b.day_order?a.day_order-b.day_order:toMin(a.time)-toMin(b.time)));
   return allScenarios.map(sc=>{
     const included=new Set(sc.map(s=>s._title));
-    const excl=pending.filter(t=>!included.has(t));
-    return{schedule:sc,excluded:excl,impossible};
+    return{schedule:sc,excluded:pending.filter(t=>!included.has(t))};
   });
 }
 
 // ── RENDER WATCHLIST ──
 let cachedResult=null;
-let watchedOpen=false;
 
-function renderWatchlist(){
-  const view=document.getElementById('wl-view');
-  const titles=[...watchlist];
-  const pending=titles.filter(t=>!watched.has(t));
+function renderFilmListHTML(){
+  const pending=[...watchlist].filter(t=>!watched.has(t));
   const watchedList=[...watched];
-
-  // Availability accordion
-  let avHtml=`<div class="av-block">
-    <div class="av-block-title">Mis disponibilidades</div>
-    ${DAY_KEYS.map(day=>`
-      <div class="av-day">
-        <div class="av-day-header" onclick="toggleAvDay('${day}')">
-          <div class="av-day-left">
-            <span class="av-arrow" id="av-arrow-${day}">▶</span>
-            <span class="av-day-name">${DAY_LABELS_LONG[day]}</span>
-          </div>
-          <span class="av-summary" id="av-summary-${day}">${avSummary(day)}</span>
+  let html='';
+  if(pending.length){
+    html+=pending.map(t=>{
+      const f=FILMS.find(fi=>fi.title===t);
+      const flags=f?f.flags||'🎬':'🎬';
+      const dur=f?f.duration||'':'';
+      const sec=f?f.section||'':'';
+      return`<div class="wl-film-item">
+        <div class="wl-fi-flags">${flags}</div>
+        <div class="wl-fi-info">
+          <div class="wl-fi-title">${t}</div>
+          <div class="wl-fi-meta">${sec}${dur?' · '+dur:''}</div>
         </div>
-        <div class="av-day-body" id="av-body-${day}" style="display:none"></div>
-      </div>`).join('')}
-    <button class="av-calc-btn" onclick="runCalc()">Calcular escenarios</button>
-  </div>`;
-
-  // Empty state
-  if(!pending.length&&!watchedList.length){
-    view.innerHTML=avHtml+`<div class="wl-empty"><span>♡</span>
-      <p>Aún no has marcado ninguna película.<br>Toca el corazón en cualquier tarjeta para añadirla.</p></div>`;
-    DAY_KEYS.forEach(d=>renderAvDay(d));
-    return;
+        <div class="wl-fi-actions">
+          <button class="wl-fi-btn w-mark" onclick="toggleWatched('${t.replace(/'/g,"\'")}',event)" title="Marcar como vista">✓</button>
+          <button class="wl-fi-btn del" onclick="toggleWL('${t.replace(/'/g,"\'")}',event)" title="Quitar de watchlist">✕</button>
+        </div>
+      </div>`;
+    }).join('');
   }
-
-  if(!pending.length){
-    view.innerHTML=avHtml+`<div class="wl-empty"><span>✓</span>
-      <p>¡Ya viste todo lo que tenías pendiente!</p></div>`+renderWatchedSection(watchedList);
-    DAY_KEYS.forEach(d=>renderAvDay(d));
-    return;
+  if(watchedList.length){
+    html+=`<div style="margin-top:${pending.length?'10px':'0'};font-size:11px;color:var(--green);font-weight:600;letter-spacing:.5px;margin-bottom:6px">✓ YA VISTAS</div>`;
+    html+=watchedList.map(t=>{
+      const f=FILMS.find(fi=>fi.title===t);
+      const flags=f?f.flags||'🎬':'🎬';
+      return`<div class="wl-film-item watched-item">
+        <div class="wl-fi-flags">${flags}</div>
+        <div class="wl-fi-info">
+          <div class="wl-fi-title">${t}</div>
+          <div class="wl-fi-meta" style="color:var(--green)">Vista ✓</div>
+        </div>
+        <div class="wl-fi-actions">
+          <button class="wl-fi-btn del" onclick="toggleWatched('${t.replace(/'/g,"\'")}',event)" title="Desmarcar">↩</button>
+          <button class="wl-fi-btn del" onclick="toggleWL('${t.replace(/'/g,"\'")}',event)" title="Quitar de watchlist">✕</button>
+        </div>
+      </div>`;
+    }).join('');
   }
-
-  let resultHtml='';
-  if(cachedResult){
-    resultHtml=buildResultHtml(cachedResult);
-  } else {
-    resultHtml=`<div class="wl-calc-prompt">
-      Configura tus disponibilidades y toca <strong>Calcular escenarios</strong></div>`;
-  }
-
-  view.innerHTML=avHtml+resultHtml+renderWatchedSection(watchedList);
-  DAY_KEYS.forEach(d=>renderAvDay(d));
-
-  // Restore watched section state
-  const wb=document.querySelector('.wl-watched-body');
-  if(wb&&watchedOpen) wb.classList.add('open');
+  return html||`<div class="wl-empty" style="padding:20px"><p>Usa el buscador para añadir películas.</p></div>`;
 }
 
-function renderWatchedSection(watchedList){
-  if(!watchedList.length) return'';
-  return`<div class="wl-watched-section">
-    <div class="wl-watched-toggle" onclick="toggleWatchedSection()">
-      <span class="wl-watched-title">✓ Ya vistas (${watchedList.length})</span>
-      <span style="color:var(--gray);font-size:11px">${watchedOpen?'▲':'▼'}</span>
-    </div>
-    <div class="wl-watched-body${watchedOpen?' open':''}">
-      ${watchedList.map(t=>{
-        const f=FILMS.find(fi=>fi.title===t);
-        return`<div class="wl-watched-card">
-          <span class="wl-watched-check">✓</span>
-          <div class="wl-watched-info">
-            <div class="wl-watched-title-film">${t}</div>
-            ${f?`<div class="wl-watched-meta">${f.flags||''} ${f.duration||''}</div>`:''}
-          </div>
-          <button class="wl-watched-undo" onclick="toggleWatched('${t.replace(/'/g,"\'")}',event)" title="Desmarcar">↩</button>
-        </div>`;
-      }).join('')}
-    </div>
-  </div>`;
-}
-
-function toggleWatchedSection(){
-  watchedOpen=!watchedOpen;
-  const wb=document.querySelector('.wl-watched-body');
-  const arrow=document.querySelector('.wl-watched-toggle span:last-child');
-  if(wb) wb.classList.toggle('open',watchedOpen);
-  if(arrow) arrow.textContent=watchedOpen?'▲':'▼';
-}
-
-function buildResultHtml(scenarios){
-  if(!scenarios||!scenarios.length){
+function buildResultHTML(scenarios){
+  if(!scenarios||!scenarios.length)
     return`<div class="wl-calc-prompt">No hay combinaciones posibles con estas disponibilidades. Ajusta los bloques e intenta de nuevo.</div>`;
-  }
   const{currentIdx}=cachedResult;
-  const sc=scenarios[currentIdx];
-  const n=scenarios.length;
+  const sc=scenarios[currentIdx],n=scenarios.length;
   const total=[...watchlist].filter(t=>!watched.has(t)).length;
-  const ok=sc.schedule.length;
-  const bad=sc.excluded.length;
-
+  const ok=sc.schedule.length,bad=sc.excluded.length;
   let html=`<div class="wl-summary">
     <div class="wl-summary-title">Escenario ${currentIdx+1} de ${n}</div>
     <div class="wl-summary-text">
-      Puedes ver <span class="ok"><b>${ok}</b></span> de <b>${total}</b> películas pendientes.
-      ${bad>0?`<span class="conflict-label"> · <b>${bad}</b> sin solución posible.</span>`:''}
+      Puedes ver <span class="ok"><b>${ok}</b></span> de <b>${total}</b> pendientes.
+      ${bad?`<span class="conflict-label"> · <b>${bad}</b> sin solución.</span>`:''}
     </div>
     ${n>1?`<div class="wl-nav">
       <button class="wl-nav-btn" onclick="changeScenario(-1)" ${currentIdx===0?'disabled':''}>← Anterior</button>
@@ -654,42 +633,35 @@ function buildResultHtml(scenarios){
       <button class="wl-nav-btn" onclick="changeScenario(1)" ${currentIdx===n-1?'disabled':''}>Siguiente →</button>
     </div>`:''}
   </div>`;
-
   if(sc.excluded.length){
-    html+=`<div class="wl-conflicts">
-      <div class="wl-conflicts-title">⚠ Sin combinación posible</div>
+    html+=`<div class="wl-conflicts"><div class="wl-conflicts-title">⚠ Sin combinación posible</div>
       ${sc.excluded.map(t=>{
         const screens=FILMS.filter(f=>f.title===t&&!isScreeningBlocked(f));
         const opts=screens.length?screens.map(s=>`${s.day} ${s.time}`).join(' · '):'Sin funciones en tu disponibilidad';
-        return`<div class="wl-conflict-item"><strong>${t}</strong><br>
-          <span style="color:var(--gray2);font-size:11px">${opts}</span></div>`;
-      }).join('')}
-    </div>`;
+        return`<div class="wl-conflict-item"><strong>${t}</strong><br><span style="color:var(--gray2);font-size:11px">${opts}</span></div>`;
+      }).join('')}</div>`;
   }
-
   const byDay={};
   sc.schedule.forEach(s=>{if(!byDay[s.day])byDay[s.day]=[];byDay[s.day].push(s);});
   DAY_KEYS.forEach(day=>{
-    const films=byDay[day];
-    if(!films||!films.length) return;
-    html+=`<div class="wl-day">
-      <div class="wl-day-label"><span>${DAY_LABELS_SHORT[day]}</span>${films.length} película${films.length!==1?'s':''}</div>
-      ${films.map(s=>{
-        const vc2=vcfg(s.venue);const sl=sala(s.venue);
-        const alts=FILMS.filter(f=>f.title===s._title&&!isScreeningBlocked(f)&&!(f.day===s.day&&f.time===s.time));
-        return`<div class="wl-card">
-          <div class="wl-time">${s.time}</div>
-          <div class="wl-info">
-            <div class="wl-title">${s._title}</div>
-            <div class="wl-venue">${vc2.ico} ${vc2.short}${sl?' · '+sl:''}
-              ${alts.length?`<span class="wl-alts">${alts.length} alt.</span>`:''}
-            </div>
-          </div>
-          <div class="wl-flags">${s.flags||'🎬'}</div>
-          <button class="wl-remove" onclick="toggleWatched('${s._title.replace(/'/g,"\'")}',event)" title="Marcar como vista">✓</button>
-        </div>`;
-      }).join('')}
-    </div>`;
+    const films=byDay[day];if(!films||!films.length) return;
+    html+=`<div class="wl-day-label"><span>${DAY_SHORT[day]}</span>${films.length} película${films.length!==1?'s':''}</div>`;
+    html+=films.map(s=>{
+      const vc2=vcfg(s.venue),sl=sala(s.venue);
+      const alts=FILMS.filter(f=>f.title===s._title&&!isScreeningBlocked(f)&&!(f.day===s.day&&f.time===s.time));
+      return`<div class="wl-card">
+        <div class="wl-time">${s.time}</div>
+        <div class="wl-info">
+          <div class="wl-title">${s._title}</div>
+          <div class="wl-venue">${vc2.ico} ${vc2.short}${sl?' · '+sl:''}${alts.length?`<span class="wl-alts">${alts.length} alt.</span>`:''}</div>
+        </div>
+        <div class="wl-flags">${s.flags||'🎬'}</div>
+        <div class="wl-card-actions">
+          <button class="wl-card-btn w-mark" onclick="toggleWatched('${s._title.replace(/'/g,"\'")}',event)" title="Marcar como vista">✓</button>
+          <button class="wl-card-btn" onclick="toggleWL('${s._title.replace(/'/g,"\'")}',event)" title="Quitar">✕</button>
+        </div>
+      </div>`;
+    }).join('');
   });
   return html;
 }
@@ -697,44 +669,72 @@ function buildResultHtml(scenarios){
 function runCalc(){
   const scenarios=computeScenarios([...watchlist]);
   cachedResult={scenarios,currentIdx:0};
-  const view=document.getElementById('wl-view');
-  // Replace result area only
-  const avBlock=view.querySelector('.av-block');
-  const resultDiv=view.querySelector('.wl-result')||view.querySelector('.wl-calc-prompt');
-  const watchedSec=view.querySelector('.wl-watched-section');
-  const resultEl=document.createElement('div');
-  resultEl.className='wl-result';
-  resultEl.innerHTML=buildResultHtml(scenarios);
-  if(resultDiv) resultDiv.replaceWith(resultEl);
-  else{
-    if(watchedSec) view.insertBefore(resultEl,watchedSec);
-    else view.appendChild(resultEl);
-  }
+  const res=document.getElementById('wl-result');
+  if(res) res.innerHTML=buildResultHTML(scenarios);
 }
-
 function changeScenario(dir){
   if(!cachedResult) return;
   const n=cachedResult.scenarios.length;
   cachedResult.currentIdx=Math.max(0,Math.min(n-1,cachedResult.currentIdx+dir));
-  const res=document.querySelector('.wl-result');
-  if(res) res.innerHTML=buildResultHtml(cachedResult.scenarios);
+  const res=document.getElementById('wl-result');
+  if(res) res.innerHTML=buildResultHTML(cachedResult.scenarios);
 }
 
-// ── VIEW STATE ──
-let activeView='day';
-const DAYS=[
-  {k:'Martes',d:14,lbl:'MAR'},{k:'Miércoles',d:15,lbl:'MIÉ'},
-  {k:'Jueves',d:16,lbl:'JUE'},{k:'Viernes',d:17,lbl:'VIE'},
-  {k:'Sábado',d:18,lbl:'SÁB'},{k:'Domingo',d:19,lbl:'DOM'},
-];
-let activeDay='Martes',activeVenue='all',activeSec='all',selectedIdx=null;
+function renderWatchlist(){
+  const view=document.getElementById('wl-view');
+  const hasAny=watchlist.size>0||watched.size>0;
+
+  const resultContent=cachedResult
+    ?buildResultHTML(cachedResult.scenarios)
+    :`<div class="wl-calc-prompt">Configura tus disponibilidades y toca <strong>Calcular escenarios</strong>.</div>`;
+
+  view.innerHTML=`
+    <!-- ZONE 1: MY FILMS -->
+    <div class="wl-section">
+      <div class="wl-section-title">Mis películas</div>
+      <div class="wl-search-wrap">
+        <span class="wl-search-ico">🔍</span>
+        <input type="text" id="wl-search-input" class="wl-search"
+          placeholder="Buscar y añadir película…"
+          oninput="onSearchInput()" onblur="closeSearch()" autocomplete="off">
+        <div id="wl-search-results" class="wl-search-results"></div>
+      </div>
+      <div id="wl-film-list">${renderFilmListHTML()}</div>
+    </div>
+
+    <!-- ZONE 2: AVAILABILITY -->
+    <div class="wl-section">
+      <div class="wl-section-title">Mis disponibilidades</div>
+      ${DAY_KEYS.map(day=>`
+        <div class="av-day">
+          <div class="av-day-header" onclick="toggleAvDay('${day}')">
+            <div class="av-day-left">
+              <span class="av-arrow" id="av-arrow-${day}">▶</span>
+              <span class="av-day-name">${DAY_LONG[day]}</span>
+            </div>
+            <span class="av-summary${availability[day].blocks.length?' has-blocks':''}" id="av-summary-${day}">${avSummary(day)}</span>
+          </div>
+          <div class="av-day-body" id="av-body-${day}" style="display:none"></div>
+        </div>`).join('')}
+      <button class="av-calc-btn" onclick="runCalc()">Calcular escenarios</button>
+    </div>
+
+    <!-- ZONE 3: RESULTS -->
+    <div class="wl-section">
+      <div class="wl-section-title">Escenarios</div>
+      <div id="wl-result">${resultContent}</div>
+    </div>`;
+
+  DAY_KEYS.forEach(d=>renderAvDay(d));
+}
+
+// ── CALENDAR VIEW ──
+let activeView='day',activeDay='Martes',activeVenue='all',activeSec='all',selectedIdx=null;
 
 function showDayView(){
   activeView='day';
   document.getElementById('filter-bars').style.display='';
-  document.getElementById('hint').style.display='';
-  document.getElementById('cnt').style.display='';
-  document.getElementById('grid').style.display='';
+  ['hint','cnt','grid'].forEach(id=>{const el=document.getElementById(id);if(el)el.style.display='';});
   document.getElementById('wl-view').classList.remove('visible');
   document.getElementById('wtab').classList.remove('on');
   document.querySelectorAll('.dtab').forEach(t=>t.classList.toggle('on',t.dataset.day===activeDay));
@@ -742,61 +742,44 @@ function showDayView(){
 function showWLView(){
   activeView='watchlist';
   document.getElementById('filter-bars').style.display='none';
-  document.getElementById('hint').style.display='none';
-  document.getElementById('cnt').style.display='none';
-  document.getElementById('grid').style.display='none';
+  ['hint','cnt','grid'].forEach(id=>{const el=document.getElementById(id);if(el)el.style.display='none';});
   document.getElementById('wl-view').classList.add('visible');
   document.getElementById('wtab').classList.add('on');
   document.querySelectorAll('.dtab').forEach(t=>t.classList.remove('on'));
   renderWatchlist();
 }
 
-// Build day tabs
 const dtabs=document.getElementById('dtabs');
+const DAYS=[{k:'Martes',d:14,lbl:'MAR'},{k:'Miércoles',d:15,lbl:'MIÉ'},{k:'Jueves',d:16,lbl:'JUE'},{k:'Viernes',d:17,lbl:'VIE'},{k:'Sábado',d:18,lbl:'SÁB'},{k:'Domingo',d:19,lbl:'DOM'}];
 DAYS.forEach(day=>{
   const cnt=FILMS.filter(f=>f.day===day.k).length;
   const btn=document.createElement('button');
   btn.className='dtab'+(day.k===activeDay?' on':'');
   btn.dataset.day=day.k;
-  btn.innerHTML=`<span class="dtab-name">${day.lbl} ${day.d}</span>
-    <span class="dtab-date">${day.k}</span>
-    <span class="dtab-cnt">${cnt}</span>`;
-  btn.onclick=()=>{
-    activeDay=day.k;activeVenue='all';activeSec='all';selectedIdx=null;
-    showDayView();render();
-  };
+  btn.innerHTML=`<span class="dtab-name">${day.lbl} ${day.d}</span><span class="dtab-date">${day.k}</span><span class="dtab-cnt">${cnt}</span>`;
+  btn.onclick=()=>{activeDay=day.k;activeVenue='all';activeSec='all';selectedIdx=null;showDayView();render();};
   dtabs.appendChild(btn);
 });
 
 function addFbtn(bar,label,val,activeVal,fn){
-  const b=document.createElement('button');
-  b.className='fbtn'+(activeVal===val?' on':'');
-  b.textContent=label;b.onclick=fn;bar.appendChild(b);
+  const b=document.createElement('button');b.className='fbtn'+(activeVal===val?' on':'');b.textContent=label;b.onclick=fn;bar.appendChild(b);
 }
 function renderVbar(){
-  const bar=document.getElementById('vbar');
-  bar.querySelectorAll('.fbtn').forEach(b=>b.remove());
+  const bar=document.getElementById('vbar');bar.querySelectorAll('.fbtn').forEach(b=>b.remove());
   const vs=[...new Set(FILMS.filter(f=>f.day===activeDay).map(f=>vcfg(f.venue).short))];
   addFbtn(bar,'Todas','all',activeVenue,()=>{activeVenue='all';selectedIdx=null;setHint(null);render();});
   vs.forEach(vk=>{
-    const cfg=Object.values(VENUES).find(c=>c.short===vk)||VENUES['Teatro Adolfo Mejía'];
-    addFbtn(bar,`${cfg.ico} ${vk}`,vk,activeVenue,()=>{
-      activeVenue=activeVenue===vk?'all':vk;selectedIdx=null;setHint(null);render();
-    });
+    const cfg=Object.values(VENUES).find(c=>c.short===vk)||VENUES['C. Convenciones'];
+    addFbtn(bar,`${cfg.ico} ${vk}`,vk,activeVenue,()=>{activeVenue=activeVenue===vk?'all':vk;selectedIdx=null;setHint(null);render();});
   });
 }
 function renderSbar(){
-  const bar=document.getElementById('sbar');
-  bar.querySelectorAll('.fbtn').forEach(b=>b.remove());
+  const bar=document.getElementById('sbar');bar.querySelectorAll('.fbtn').forEach(b=>b.remove());
   let dayF=FILMS.filter(f=>f.day===activeDay);
   if(activeVenue!=='all') dayF=dayF.filter(f=>vcfg(f.venue).short===activeVenue);
   const secs=[...new Set(dayF.map(f=>f.section))].sort();
   addFbtn(bar,'Todas','all',activeSec,()=>{activeSec='all';selectedIdx=null;setHint(null);render();});
-  secs.forEach(sec=>{
-    addFbtn(bar,sec,sec,activeSec,()=>{
-      activeSec=activeSec===sec?'all':sec;selectedIdx=null;setHint(null);render();
-    });
-  });
+  secs.forEach(sec=>{addFbtn(bar,sec,sec,activeSec,()=>{activeSec=activeSec===sec?'all':sec;selectedIdx=null;setHint(null);render();});});
 }
 function setHint(film){
   const el=document.getElementById('hint');
@@ -806,8 +789,7 @@ function setHint(film){
   el.classList.add('active');
 }
 function onCardClick(idx,vis){
-  if(selectedIdx===idx){selectedIdx=null;setHint(null);}
-  else{selectedIdx=idx;setHint(vis[idx]);}
+  if(selectedIdx===idx){selectedIdx=null;setHint(null);}else{selectedIdx=idx;setHint(vis[idx]);}
   applyStates(vis);
 }
 function applyStates(vis){
@@ -828,10 +810,8 @@ function toggleExpand(el,e){
   const listEl=card.querySelector('.c-film-list,.c-title-pills');
   const arrow=el.querySelector('.c-expand-arrow');
   if(!listEl) return;
-  listEl.classList.toggle('visible');
-  arrow.classList.toggle('open');
-  el.querySelector('span:first-child').textContent=
-    listEl.classList.contains('visible')?'Ocultar programa':'Ver programa';
+  listEl.classList.toggle('visible');arrow.classList.toggle('open');
+  el.querySelector('span:first-child').textContent=listEl.classList.contains('visible')?'Ocultar programa':'Ver programa';
 }
 
 function render(){
@@ -839,57 +819,36 @@ function render(){
   renderVbar();renderSbar();
   let films=FILMS.filter(f=>f.day===activeDay);
   if(activeVenue!=='all') films=films.filter(f=>vcfg(f.venue).short===activeVenue);
-  if(activeSec!=='all')   films=films.filter(f=>f.section===activeSec);
+  if(activeSec!=='all') films=films.filter(f=>f.section===activeSec);
   document.getElementById('cnt').innerHTML=`<b>${films.length}</b> función${films.length!==1?'es':''}`;
   const grid=document.getElementById('grid');
   if(!films.length){grid.innerHTML='<div class="empty"><span>🎞️</span>Sin funciones para este filtro.</div>';return;}
 
   grid.innerHTML=films.map((f,i)=>{
     const vc=vcfg(f.venue),sl=sala(f.venue);
-    const isAp=f.section==='🎬 Apertura';
-    const isMid=f.section==='🌙 Medianoche';
-    const isProg=f.is_cortos;
+    const isAp=f.section==='🎬 Apertura',isMid=f.section==='🌙 Medianoche',isProg=f.is_cortos;
     const flags=f.flags||'🎬';
     const tEn=!isProg&&f.title_en&&f.title_en!==f.title&&!f.title_en.includes('·')?f.title_en:'';
     const secActive=activeSec===f.section?' active-sec':'';
-    const inWL=watchlist.has(f.title);
-    const inW=watched.has(f.title);
-
-    // Film list for programs
+    const inWL=watchlist.has(f.title),inW=watched.has(f.title);
     let filmBlock='';
     if(isProg){
       const list=f.film_list||[];
       if(list.length){
-        filmBlock=`<div class="c-film-list">${
-          list.map((item,n)=>`<div class="c-film-item">
-            <div class="c-film-num">${n+1}</div>
-            <div class="c-film-info">
-              <div class="c-film-title">${item.title}</div>
-              <div class="c-film-meta">${item.country}</div>
-            </div>
-            <div class="c-film-dur">${item.duration}</div>
-          </div>`).join('')
-        }</div>`;
+        filmBlock=`<div class="c-film-list">${list.map((item,n)=>`<div class="c-film-item"><div class="c-film-num">${n+1}</div><div class="c-film-info"><div class="c-film-title">${item.title}</div><div class="c-film-meta">${item.country}</div></div><div class="c-film-dur">${item.duration}</div></div>`).join('')}</div>`;
       } else {
         const titles=(f.title_en||'').split('·').map(t=>t.trim()).filter(Boolean);
         if(titles.length) filmBlock=`<div class="c-title-pills">${titles.map(t=>`<span class="c-title-pill">${t}</span>`).join('')}</div>`;
       }
     }
-
-    const expandBtn=isProg&&filmBlock
-      ?`<div class="c-expand" onclick="toggleExpand(this,event)"><span>Ver programa</span><span class="c-expand-arrow">▼</span></div>`:'';
-
-    // Action buttons — all cards get ♡ and ✓ (apertura badge moves left of them)
-    const safeTitle=f.title.replace(/"/g,'&quot;').replace(/'/g,"\'");
+    const expandBtn=isProg&&filmBlock?`<div class="c-expand" onclick="toggleExpand(this,event)"><span>Ver programa</span><span class="c-expand-arrow">▼</span></div>`:'';
+    const safe=f.title.replace(/"/g,'&quot;').replace(/'/g,"\'");
     const actBtns=`<div class="card-actions">
-      <button class="action-btn wl-btn${inWL?' wl-on':''}" onclick="toggleWL('${safeTitle}',event)">${inWL?'♥':'♡'}</button>
-      <button class="action-btn w-btn${inW?' w-on':''}" onclick="toggleWatched('${safeTitle}',event)" title="Ya vista">✓</button>
+      <button class="action-btn wl-btn${inWL?' wl-on':''}" onclick="toggleWL('${safe}',event)">${inWL?'♥':'♡'}</button>
+      <button class="action-btn w-btn${inW?' w-on':''}" onclick="toggleWatched('${safe}',event)" title="Ya vista">✓</button>
     </div>`;
-
-    const apBadge=isAp?'<div class="apertura-badge" style="right:70px">✦ APERTURA</div>':'';
-
+    const apBadge=isAp?'<div class="apertura-badge">✦ APERTURA</div>':'';
     const lbPill=isProg?'':`<a class="c-lb" href="https://letterboxd.com/search/films/${encodeURIComponent(f.title)}/" target="_blank" rel="noopener" onclick="event.stopPropagation()">${LB_SVG}<span class="c-lb-text">Letterboxd</span></a>`;
-
     return`<div class="card${isAp?' apertura':isProg?' program':''}${inWL&&!inW?' in-wl':inW?' in-watched':''}" data-idx="${i}" data-title="${f.title.replace(/"/g,'&quot;')}">
       ${apBadge}${actBtns}
       <div class="c-body">
@@ -900,10 +859,7 @@ function render(){
           <div class="c-flags">${flags}</div>
         </div>
         <div class="c-div"></div>
-        <div class="c-venue">
-          <div class="c-venue-name">${vc.ico} ${vc.short}</div>
-          ${sl?`<div class="c-venue-sub">${sl}</div>`:''}
-        </div>
+        <div class="c-venue"><div class="c-venue-name">${vc.ico} ${vc.short}</div>${sl?`<div class="c-venue-sub">${sl}</div>`:''}</div>
         ${expandBtn}${filmBlock}
       </div>
       <div class="c-foot">
@@ -919,11 +875,10 @@ function render(){
 
   document.querySelectorAll('.card').forEach(card=>{
     card.addEventListener('click',e=>{
-      if(e.target.closest('.c-expand')||e.target.closest('.c-lb')||e.target.closest('.card-actions')) return;
+      if(e.target.closest('.card-actions')||e.target.closest('.c-expand')||e.target.closest('.c-lb')) return;
       if(e.target.closest('.c-sec')){
         const sec=e.target.closest('.c-sec').dataset.sec;
-        activeSec=activeSec===sec?'all':sec;
-        selectedIdx=null;setHint(null);render();return;
+        activeSec=activeSec===sec?'all':sec;selectedIdx=null;setHint(null);render();return;
       }
       onCardClick(parseInt(card.dataset.idx),films);
     });
@@ -931,10 +886,7 @@ function render(){
   if(selectedIdx!==null&&selectedIdx<films.length) applyStates(films);
 }
 
-// Init
-loadState();
-updateWLTab();
-render();
+loadState();updateWLTab();render();
 </script>
 </body>
 </html>
