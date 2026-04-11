@@ -30,6 +30,31 @@ body{background:var(--bg);color:var(--white);font-family:"DM Sans",sans-serif;mi
 .dtab:hover{color:var(--white)}
 .dtab.on{color:var(--orange);border-bottom-color:var(--orange)}
 .dtab.past{opacity:.35}
+/* ── Main Navigation (Paso 1) ── */
+.main-nav{display:flex;border-bottom:1px solid var(--bdr);background:var(--surf)}
+.main-nav-tab{flex:1;background:none;border:none;border-bottom:2px solid transparent;margin-bottom:-1px;padding:10px 6px 11px;cursor:pointer;color:var(--gray2);font-family:"DM Sans",sans-serif;font-size:12px;font-weight:600;letter-spacing:.3px;text-align:center;transition:color .15s,border-color .15s;display:flex;flex-direction:column;align-items:center;gap:3px}
+.main-nav-tab:active{opacity:.7}
+.main-nav-tab.on{color:var(--orange);border-bottom-color:var(--orange)}
+.main-nav-tab:hover:not(.on){color:var(--white)}
+.main-nav-ico{font-size:16px;line-height:1}
+.main-nav-lbl{font-size:10px;letter-spacing:.5px;text-transform:uppercase}
+/* ── Filter Dropdowns (Paso 4) ── */
+.fdr-row{display:flex;gap:0;padding:0 6px;border-bottom:1px solid var(--bdr)}
+.fdr-row::-webkit-scrollbar{display:none}
+.fdr-wrap{position:relative}
+.fdr-btn{flex-shrink:0;background:none;border:none;border-bottom:2px solid transparent;margin-bottom:-1px;padding:5px 12px 7px;cursor:pointer;color:var(--gray2);font-family:"DM Sans",sans-serif;font-size:12px;font-weight:500;display:inline-flex;align-items:center;gap:5px;transition:color .15s,border-color .15s;white-space:nowrap;min-height:32px}
+.fdr-btn:hover{color:var(--white)}
+.fdr-btn.active{border-bottom-color:var(--orange);color:var(--white)}
+.fdr-arrow{font-size:9px;transition:transform .2s;flex-shrink:0}
+.fdr-arrow.open{transform:rotate(180deg)}
+.fdr-label{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.fdr-panel{display:none;position:absolute;top:calc(100% + 6px);left:0;background:var(--surf);border:1px solid var(--bdr);border-radius:var(--r);z-index:200;min-width:190px;max-height:60vh;overflow-y:auto;box-shadow:0 8px 24px rgba(0,0,0,.55)}
+.fdr-panel.open{display:block}
+.fdr-opt{display:block;width:100%;background:none;border:none;border-bottom:1px solid var(--bdr-l);text-align:left;padding:9px 14px;font-size:12px;font-weight:500;color:var(--gray);cursor:pointer;font-family:"DM Sans",sans-serif;transition:background .1s,color .1s;white-space:nowrap}
+.fdr-opt:last-child{border-bottom:none}
+.fdr-opt:hover{background:var(--card-b);color:var(--white)}
+.fdr-opt.on{color:var(--orange);background:rgba(232,90,30,.07)}
+.fdr-cnt{color:var(--gray2);font-size:11px;margin-left:4px}
 .fbar-wrap{overflow-x:auto;scrollbar-width:none;border-bottom:1px solid var(--bdr);-webkit-overflow-scrolling:touch}
 .fbar-wrap::-webkit-scrollbar{display:none}
 .fbar{display:flex;gap:0;padding:0 14px;width:max-content;min-width:100%;align-items:center}
@@ -334,16 +359,39 @@ body{background:var(--bg);color:var(--white);font-family:"DM Sans",sans-serif;mi
   <div class="hdr-dates">14 – 19 Abril 2026 · Cartagena de Indias</div>
   <div class="hdr-line"></div>
 </div>
+<div class="main-nav" id="main-nav">
+  <button class="main-nav-tab on" id="mnav-cartelera" onclick="switchMainNav('mnav-cartelera');showDayView();render()">
+    <span class="main-nav-ico">⊞</span>
+    <span class="main-nav-lbl">Cartelera</span>
+  </button>
+  <button class="main-nav-tab" id="mnav-lista" onclick="switchMainNav('mnav-lista');showAgView()">
+    <span class="main-nav-ico">♡</span>
+    <span class="main-nav-lbl">Mi Lista</span>
+  </button>
+  <button class="main-nav-tab" id="mnav-planner" onclick="switchMainNav('mnav-planner');showAgView()">
+    <span class="main-nav-ico">★</span>
+    <span class="main-nav-lbl">Planner</span>
+  </button>
+</div>
 <div class="nav-tabs" id="dtabs"></div>
 <div id="filter-bars">
-  <div class="fbar-wrap"><div class="fbar" id="vbar"><span class="fbar-lbl">📍 Sede</span></div></div>
-  <div class="fbar-wrap"><div class="fbar" id="sbar"><span class="fbar-lbl">🎞️ Sección</span></div></div>
-  <div class="agbar"><div class="agbar-inner">
-    <span class="agbar-lbl">🗓️ Mi agenda</span>
-    <button class="agbar-btn" id="agtab" onclick="activeView==='agenda'?(showDayView(),render()):showAgView()">
-      Ver mi selección <span class="agbar-cnt" id="ag-cnt">0</span>
-    </button>
-  </div></div>
+  <div class="fdr-row">
+    <div class="fdr-wrap">
+      <button class="fdr-btn" id="vdr-btn" onclick="toggleDropdown('vdr')">
+        <span class="fdr-label" id="vdr-label">◎ Sede</span>
+        <span class="fdr-arrow" id="vdr-arrow">▾</span>
+      </button>
+      <div class="fdr-panel" id="vdr-panel"></div>
+    </div>
+    <div class="fdr-wrap">
+      <button class="fdr-btn" id="sdr-btn" onclick="toggleDropdown('sdr')">
+        <span class="fdr-label" id="sdr-label">≡ Sección</span>
+        <span class="fdr-arrow" id="sdr-arrow">▾</span>
+      </button>
+      <div class="fdr-panel" id="sdr-panel"></div>
+    </div>
+  </div>
+  <button id="agtab" style="display:none"><span id="ag-cnt">0</span></button>
 </div>
 <div class="hint" id="hint">Toca una película para ver qué otras se solapan</div>
 <div class="cnt-line" id="cnt"></div>
@@ -1171,59 +1219,68 @@ function updatePrioCounter(){
 }
 function renderAgenda(){
   const view=document.getElementById('ag-view');
-  const pending=[...watchlist].filter(t=>!watched.has(t)&&FILMS.some(f=>f.title===t&&!screeningPassed(f)));
-  const resultContent=cachedResult
-    ?buildResultHTML(cachedResult.scenarios)
-    :`<div class="ag-calc-prompt">Configura tus disponibilidad y toca <strong>Calcular escenarios</strong>.</div>`;
-
-  view.innerHTML=`
-    ${renderSavedAgendaHTML()}
-    <div class="ag-section">
-      <div class="ag-section-title">Mis películas</div>
-      <div class="ag-search-wrap">
-        <span class="ag-search-ico">🔍</span>
-        <input type="text" id="ag-search-input" class="ag-search"
-          placeholder="Buscar y añadir película o programa…"
-          oninput="onSearchInput()" onblur="closeSearch()" autocomplete="off">
-        <div id="ag-search-results" class="ag-search-results"></div>
-      </div>
-      <div id="ag-film-list">${renderFilmListHTML()}</div>
-    </div>
-    <div class="ag-section">
-      <div class="ag-section-title">Mi disponibilidad</div>
-      ${DAY_KEYS.map(day=>{
-        const passed=dayFullyPassed(day);
-        return`<div class="av-day" style="${passed?'opacity:.4;pointer-events:none':''}">
-          <div class="av-day-header" onclick="toggleAvDay('${day}')">
-            <div class="av-day-left">
-              <span class="av-arrow" id="av-arrow-${day}">▶</span>
-              <span class="av-day-name">${DAY_LONG[day]}${passed?' ✓':''}</span>
+  if(activeMNav==='mnav-lista'){
+    view.innerHTML=`
+      <div class="ag-section">
+        <div class="ag-section-title">Mis películas</div>
+        <div class="ag-search-wrap">
+          <span class="ag-search-ico">🔍</span>
+          <input type="text" id="ag-search-input" class="ag-search"
+            placeholder="Buscar y añadir película o programa…"
+            oninput="onSearchInput()" onblur="closeSearch()" autocomplete="off">
+          <div id="ag-search-results" class="ag-search-results"></div>
+        </div>
+        <div id="ag-film-list">${renderFilmListHTML()}</div>
+      </div>`;
+  } else {
+    const pending=[...watchlist].filter(t=>!watched.has(t)&&FILMS.some(f=>f.title===t&&!screeningPassed(f)));
+    const resultContent=cachedResult
+      ?buildResultHTML(cachedResult.scenarios)
+      :`<div class="ag-calc-prompt">Configura tu disponibilidad y toca <strong>Calcular escenarios</strong>.</div>`;
+    view.innerHTML=`
+      ${renderSavedAgendaHTML()}
+      <div class="ag-section">
+        <div class="ag-section-title">Mi disponibilidad</div>
+        ${DAY_KEYS.map(day=>{
+          const passed=dayFullyPassed(day);
+          return`<div class="av-day" style="${passed?'opacity:.4;pointer-events:none':''}">
+            <div class="av-day-header" onclick="toggleAvDay('${day}')">
+              <div class="av-day-left">
+                <span class="av-arrow" id="av-arrow-${day}">▶</span>
+                <span class="av-day-name">${DAY_LONG[day]}${passed?' ✓':''}</span>
+              </div>
+              <span class="av-summary${availability[day].blocks.length?' has-blocks':''}" id="av-summary-${day}">${passed?'Día pasado':avSummary(day)}</span>
             </div>
-            <span class="av-summary${availability[day].blocks.length?' has-blocks':''}" id="av-summary-${day}">${passed?'Día pasado':avSummary(day)}</span>
-          </div>
-          <div class="av-day-body" id="av-body-${day}" style="display:none"></div>
-        </div>`;
-      }).join('')}
-      ${prioritized.size>0?`<div class="prio-reminder">
-        <div class="prio-reminder-title">★ Prioridades activas</div>
-        <div>${[...prioritized].map(t=>`<span class="prio-pill" data-prio-title="${t.replace(/"/g,'&quot;')}" onclick="event.stopPropagation();togglePriority(this.dataset.prioTitle)">★ ${t.length>22?t.slice(0,20)+'…':t} <span class="prio-pill-rm">✕</span></span>`).join('')}</div>
-      </div>`:''}
-      <button class="av-calc-btn" onclick="runCalc()" ${!pending.length?'disabled':''}>
-        Calcular escenarios${!pending.length?' (sin pendientes)':''}
-      </button>
-    </div>
-    <div class="ag-section">
-      <div class="ag-section-title">Escenarios</div>
-      <div id="ag-result">${resultContent}</div>
-    </div>`;
-
-  DAY_KEYS.forEach(d=>{if(!dayFullyPassed(d)) renderAvDay(d);});
+            <div class="av-day-body" id="av-body-${day}" style="display:none"></div>
+          </div>`;
+        }).join('')}
+        ${prioritized.size>0?`<div class="prio-reminder">
+          <div class="prio-reminder-title">★ Prioridades activas</div>
+          <div>${[...prioritized].map(t=>`<span class="prio-pill" data-prio-title="${t.replace(/"/g,'&quot;')}" onclick="event.stopPropagation();togglePriority(this.dataset.prioTitle)">★ ${t.length>22?t.slice(0,20)+'…':t} <span class="prio-pill-rm">✕</span></span>`).join('')}</div>
+        </div>`:''}
+        <button class="av-calc-btn" onclick="runCalc()" ${!pending.length?'disabled':''}>
+          Calcular escenarios${!pending.length?' (sin pendientes)':''}
+        </button>
+      </div>
+      <div class="ag-section">
+        <div class="ag-section-title">Escenarios</div>
+        <div id="ag-result">${resultContent}</div>
+      </div>`;
+    DAY_KEYS.forEach(d=>{if(!dayFullyPassed(d)) renderAvDay(d);});
+  }
 }
 
 // ── CALENDAR VIEW ──
-let activeView='day',activeDay='Martes',activeVenue='all',activeSec='all',selectedIdx=null;
+let activeView='day',activeDay='Martes',activeVenue='all',activeSec='all',selectedIdx=null,activeMNav='mnav-cartelera';
+function switchMainNav(id){
+  activeMNav=id;
+  document.querySelectorAll('.main-nav-tab').forEach(t=>t.classList.remove('on'));
+  const el=document.getElementById(id);if(el) el.classList.add('on');
+}
 function showDayView(){
   activeView='day';
+  switchMainNav('mnav-cartelera');
+  document.getElementById('dtabs').style.display='';
   document.getElementById('filter-bars').style.display='';
   ['hint','cnt','grid'].forEach(id=>{const el=document.getElementById(id);if(el) el.style.display='';});
   document.getElementById('ag-view').classList.remove('visible');
@@ -1232,6 +1289,7 @@ function showDayView(){
 }
 function showAgView(){
   activeView='agenda';
+  document.getElementById('dtabs').style.display='none';
   document.getElementById('filter-bars').style.display='none';
   ['hint','cnt','grid'].forEach(id=>{const el=document.getElementById(id);if(el) el.style.display='none';});
   document.getElementById('ag-view').classList.add('visible');
@@ -1255,28 +1313,65 @@ DAYS.forEach(day=>{
 function addFbtn(bar,label,val,activeVal,fn){
   const b=document.createElement('button');b.className='fbtn'+(activeVal===val?' on':'');b.innerHTML=label;b.onclick=fn;bar.appendChild(b);
 }
+function toggleDropdown(id){
+  const panel=document.getElementById(id+'-panel');
+  const arrow=document.getElementById(id+'-arrow');
+  const isOpen=panel.classList.contains('open');
+  closeDropdowns();
+  if(!isOpen){panel.classList.add('open');if(arrow) arrow.classList.add('open');}
+}
+function closeDropdowns(){
+  document.querySelectorAll('.fdr-panel').forEach(p=>p.classList.remove('open'));
+  document.querySelectorAll('.fdr-arrow').forEach(a=>a.classList.remove('open'));
+}
 function renderVbar(){
-  const bar=document.getElementById('vbar');bar.querySelectorAll('.fbtn').forEach(b=>b.remove());
+  const panel=document.getElementById('vdr-panel');
+  const trigBtn=document.getElementById('vdr-btn');
+  const lbl=document.getElementById('vdr-label');
+  if(!panel) return;
+  panel.innerHTML='';
   const dayFilms=FILMS.filter(f=>f.day===activeDay);
   const vs=[...new Set(dayFilms.map(f=>vcfg(f.venue).short))];
-  const total=dayFilms.length;
-  addFbtn(bar,`Todas <span class="fbtn-cnt">${total}</span>`,'all',activeVenue,()=>{activeVenue='all';selectedIdx=null;setHint(null);render();});
+  const mkOpt=(html,isOn,cb)=>{
+    const b=document.createElement('button');
+    b.className='fdr-opt'+(isOn?' on':'');
+    b.innerHTML=html;
+    b.onclick=e=>{e.stopPropagation();cb();};
+    panel.appendChild(b);
+  };
+  mkOpt(`Todas las sedes <span class="fdr-cnt">${dayFilms.length}</span>`,activeVenue==='all',()=>{activeVenue='all';selectedIdx=null;setHint(null);closeDropdowns();render();});
   vs.forEach(vk=>{
     const cfg=Object.values(VENUES).find(c=>c.short===vk)||VENUES['C. Convenciones'];
     const cnt=dayFilms.filter(f=>vcfg(f.venue).short===vk).length;
-    addFbtn(bar,`${cfg.ico} ${vk} <span class="fbtn-cnt">${cnt}</span>`,vk,activeVenue,()=>{activeVenue=activeVenue===vk?'all':vk;selectedIdx=null;setHint(null);render();});
+    mkOpt(`${cfg.ico} ${vk} <span class="fdr-cnt">${cnt}</span>`,activeVenue===vk,()=>{activeVenue=activeVenue===vk?'all':vk;selectedIdx=null;setHint(null);closeDropdowns();render();});
   });
+  if(lbl) lbl.textContent=activeVenue==='all'?'◎ Sede':'◎ '+activeVenue;
+  if(trigBtn) trigBtn.classList.toggle('active',activeVenue!=='all');
 }
 function renderSbar(){
-  const bar=document.getElementById('sbar');bar.querySelectorAll('.fbtn').forEach(b=>b.remove());
+  const panel=document.getElementById('sdr-panel');
+  const trigBtn=document.getElementById('sdr-btn');
+  const lbl=document.getElementById('sdr-label');
+  if(!panel) return;
+  panel.innerHTML='';
   let dayF=FILMS.filter(f=>f.day===activeDay);
   if(activeVenue!=='all') dayF=dayF.filter(f=>vcfg(f.venue).short===activeVenue);
   const secs=[...new Set(dayF.map(f=>f.section))].sort();
-  addFbtn(bar,`Todas <span class="fbtn-cnt">${dayF.length}</span>`,'all',activeSec,()=>{activeSec='all';selectedIdx=null;setHint(null);render();});
+  const mkOpt=(html,isOn,cb)=>{
+    const b=document.createElement('button');
+    b.className='fdr-opt'+(isOn?' on':'');
+    b.innerHTML=html;
+    b.onclick=e=>{e.stopPropagation();cb();};
+    panel.appendChild(b);
+  };
+  mkOpt(`Todas las secciones <span class="fdr-cnt">${dayF.length}</span>`,activeSec==='all',()=>{activeSec='all';selectedIdx=null;setHint(null);closeDropdowns();render();});
   secs.forEach(sec=>{
     const cnt=dayF.filter(f=>f.section===sec).length;
-    addFbtn(bar,`${sec} <span class="fbtn-cnt">${cnt}</span>`,sec,activeSec,()=>{activeSec=activeSec===sec?'all':sec;selectedIdx=null;setHint(null);render();});
+    mkOpt(`${sec} <span class="fdr-cnt">${cnt}</span>`,activeSec===sec,()=>{activeSec=activeSec===sec?'all':sec;selectedIdx=null;setHint(null);closeDropdowns();render();});
   });
+  const shortSec=activeSec==='all'?'≡ Sección':'≡ '+(activeSec.length>18?activeSec.slice(0,16)+'…':activeSec);
+  if(lbl) lbl.textContent=shortSec;
+  if(trigBtn) trigBtn.classList.toggle('active',activeSec!=='all');
 }
 function setHint(film){
   const el=document.getElementById('hint');
@@ -1406,6 +1501,7 @@ function render(){
 }
 
 loadState();updateAgTab();render();
+document.addEventListener('click',e=>{if(!e.target.closest('.fdr-wrap')) closeDropdowns();});
 </script>
 </body>
 </html>
