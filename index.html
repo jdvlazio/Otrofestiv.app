@@ -70,6 +70,11 @@ body{background:var(--bg);color:var(--white);font-family:"DM Sans",sans-serif;mi
 .action-btn:active{transform:scale(.85)}
 .action-btn.wl-on{color:var(--orange)}
 .action-btn.w-on{color:var(--green)}
+.action-btn.prio-btn{font-size:13px}
+.action-btn.prio-on{color:var(--orange)}
+.ag-fi-prio-badge{position:absolute;top:5px;left:5px;font-size:11px;color:var(--orange);background:rgba(0,0,0,.6);border-radius:4px;padding:1px 4px;font-weight:700;pointer-events:none;z-index:3}
+.prio-toast{position:fixed;bottom:80px;left:50%;transform:translateX(-50%);background:#2a2a2a;border:1px solid #444;color:var(--white);font-size:12px;padding:8px 16px;border-radius:8px;z-index:9999;transition:opacity .4s;max-width:320px;text-align:center;pointer-events:none}
+.prio-toast.warn{border-color:rgba(229,160,32,.6);color:#e5a020}
 .apertura-badge{position:absolute;top:9px;right:74px;font-size:9px;background:var(--orange);color:#fff;font-weight:700;letter-spacing:1px;padding:2px 6px;border-radius:8px;font-family:"Bebas Neue",sans-serif;z-index:2}
 .past-badge{position:absolute;top:9px;left:10px;font-size:9px;color:var(--gray2);font-weight:600;letter-spacing:.5px;z-index:2}
 .c-body{padding:18px 16px 16px;display:flex;flex-direction:column;gap:16px}
@@ -412,6 +417,7 @@ function normalize(str){
 let watchlist=new Set();
 let watched=new Set();
 let prioritized=new Set();
+const PRIO_LIMIT=3;
 let savedAgenda=null;
 const DAY_KEYS=['Martes','Miércoles','Jueves','Viernes','Sábado','Domingo'];
 let availability={Martes:{blocks:[]},Miércoles:{blocks:[]},Jueves:{blocks:[]},Viernes:{blocks:[]},Sábado:{blocks:[]},Domingo:{blocks:[]}};
@@ -422,12 +428,14 @@ function loadState(){
     const wt=localStorage.getItem('ficci65_watched'); if(wt) watched=new Set(JSON.parse(wt));
     const av=localStorage.getItem('ficci65_av3'); if(av){const p=JSON.parse(av);DAY_KEYS.forEach(d=>{if(p[d]) availability[d]=p[d];});}
     const sa=localStorage.getItem('ficci65_saved'); if(sa) savedAgenda=JSON.parse(sa);
+    const pr=localStorage.getItem('ficci65_prio'); if(pr) prioritized=new Set(JSON.parse(pr));
   }catch(e){}
 }
 function saveWL(){try{localStorage.setItem('ficci65_wl',JSON.stringify([...watchlist]));}catch(e){}}
 function saveWatched(){try{localStorage.setItem('ficci65_watched',JSON.stringify([...watched]));}catch(e){}}
 function saveAV(){try{localStorage.setItem('ficci65_av3',JSON.stringify(availability));}catch(e){}}
 function saveSavedAgenda(){try{localStorage.setItem('ficci65_saved',JSON.stringify(savedAgenda));}catch(e){}}
+function savePrio(){try{localStorage.setItem('ficci65_prio',JSON.stringify([...prioritized]));}catch(e){}}
 
 function pendingCount(){return[...watchlist].filter(t=>!watched.has(t)&&!screeningPassed({day:'x',time:'00:00'})).length;}
 function updateAgTab(){
@@ -954,6 +962,14 @@ function buildResultHTML(scenarios){
       <span class="ag-nav-pos">${currentIdx+1} / ${n}</span>
       <button class="ag-nav-btn" onclick="changeScenario(1)" ${currentIdx===n-1?'disabled':''}>Siguiente →</button>
     </div>`:''}
+    ${(()=>{if(currentIdx===0||n<=1) return '';
+      const prev=scenarios[currentIdx-1].schedule;
+      const curr=sc.schedule;
+      const prevMap=new Map(prev.map(s=>[s._title,s]));
+      const diffs=curr.filter(s=>{const p=prevMap.get(s._title);return p&&(p.day!==s.day||p.time!==s.time);})
+        .map(s=>{const p=prevMap.get(s._title);return s._title.split(' ').slice(0,3).join(' ')+'… '+p.time+'→'+s.time;});
+      return diffs.length?`<div style="font-size:10px;color:var(--gray);margin-top:4px;padding:4px 8px;background:rgba(255,255,255,.03);border-radius:5px">vs anterior: ${diffs.join(' · ')}</div>`:'';
+    })()}
     <button class="ag-save-btn" onclick="saveCurrentScenario()">📌 Guardar esta agenda</button>
   </div>`;
 
@@ -963,13 +979,18 @@ function buildResultHTML(scenarios){
         const screens=FILMS.filter(f=>f.title===t&&!isScreeningBlocked(f)&&!screeningPassed(f));
         const opts=screens.length?screens.map(s=>`${s.day} ${s.time}`).join(' · '):'Sin funciones futuras disponibles';
         const isPrio=prioritized.has(t);
+        const prioCount=prioritized.size;
+        const atLimit=!isPrio&&prioCount>=PRIO_LIMIT;
+        const prioLabel=isPrio?'✕ Sin prioridad':atLimit?`★ ${PRIO_LIMIT}/${PRIO_LIMIT}`:'⭐ Priorizar';
+        const prioAction=isPrio?`togglePriority('${t.replace(/'/g,"\'")}')`:atLimit?`showToast('Máximo ${PRIO_LIMIT} prioridades activas','warn')`:`togglePriority('${t.replace(/'/g,"\'")}')`;
         return`<div class="ag-conflict-item">
           <div class="ag-conflict-info">
+            ${isPrio?'<span style="color:var(--orange);font-size:10px;font-weight:700">★ PRIORIDAD · </span>':''}
             <strong>${t}</strong><br>
             <span style="color:var(--gray2);font-size:11px">${opts}</span>
           </div>
-          <button class="ag-prioritize-btn${isPrio?' active':''}" onclick="togglePriority('${t.replace(/'/g,"\'")}')">
-            ${isPrio?'✕ Sin prioridad':'⭐ Priorizar'}
+          <button class="ag-prioritize-btn${isPrio?' active':''}${atLimit?' disabled':''}" onclick="${prioAction}">
+            ${prioLabel}
           </button>
         </div>`;
       }).join('')}
@@ -1004,10 +1025,25 @@ function buildResultHTML(scenarios){
   return html;
 }
 
-function togglePriority(title){
-  if(prioritized.has(title)) prioritized.delete(title);
-  else prioritized.add(title);
-  runCalc();
+function togglePriority(title,cost){
+  if(prioritized.has(title)){
+    prioritized.delete(title);
+    savePrio();runCalc();
+  } else {
+    if(prioritized.size>=PRIO_LIMIT){
+      showToast(`Máximo ${PRIO_LIMIT} prioridades activas. Quita una para cambiar.`,'warn');return;
+    }
+    prioritized.add(title);
+    savePrio();
+    if(cost&&cost>0) showToast(`⭐ Prioridad activada · Tu máximo baja de ${cost+watchlist.size-prioritized.size+1} a ${cost} películas`,'info');
+    runCalc();
+  }
+}
+function showToast(msg,type='info'){
+  let t=document.getElementById('prio-toast');
+  if(!t){t=document.createElement('div');t.id='prio-toast';document.body.appendChild(t);}
+  t.className='prio-toast '+type;t.textContent=msg;t.style.opacity='1';
+  clearTimeout(t._to);t._to=setTimeout(()=>{t.style.opacity='0';},3000);
 }
 function saveCurrentScenario(){
   if(!cachedResult||!cachedResult.scenarios.length) return;
@@ -1029,6 +1065,11 @@ function changeScenario(dir){
   if(res) res.innerHTML=buildResultHTML(cachedResult.scenarios);
 }
 
+function updatePrioCounter(){
+  const el=document.getElementById('prio-counter');
+  if(!el) return;
+  el.textContent=prioritized.size>0?`⭐ ${prioritized.size}/${PRIO_LIMIT}`:'';
+}
 function renderAgenda(){
   const view=document.getElementById('ag-view');
   const pending=[...watchlist].filter(t=>!watched.has(t)&&FILMS.some(f=>f.title===t&&!screeningPassed(f)));
@@ -1186,9 +1227,12 @@ function render(){
     }
     const expandBtn=isProg&&filmBlock?`<div class="c-expand" onclick="toggleExpand(this,event)"><span>Ver programa</span><span class="c-expand-arrow">▼</span></div>`:'';
     const safe=f.title.replace(/"/g,'&quot;').replace(/'/g,"\'");
+    const inPrio=prioritized.has(f.title);
+    const prioBtn=!isProg?`<button class="action-btn prio-btn${inPrio?' prio-on':''}" onclick="togglePriority('${safe}')" title="${inPrio?'Quitar prioridad':'Priorizar'}">★</button>`:'';
     const actBtns=`<div class="card-actions">
       <button class="action-btn wl-btn${inWL?' wl-on':''}" onclick="toggleWL('${safe}',event)" title="${inWL?'Quitar de Mi agenda':'Añadir a Mi agenda'}">${inWL?'♥':'♡'}</button>
       <button class="action-btn w-btn${inW?' w-on':''}" onclick="toggleWatched('${safe}',event)" title="${inW?'Marcar como pendiente':'Marcar como vista'}">✓</button>
+      ${prioBtn}
     </div>`;
     const apBadge=isAp?'<div class="apertura-badge">✦ APERTURA</div>':'';
     const pastBadge=passed?'<div class="past-badge">ya pasó</div>':'';
