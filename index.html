@@ -21,9 +21,11 @@ body{background:var(--bg);color:var(--white);font-family:"DM Sans",sans-serif;mi
 .hdr-fallback em{color:var(--orange);font-style:normal}
 .hdr-dates{font-size:12px;color:var(--gray);letter-spacing:2px;text-transform:uppercase;margin-top:7px}
 .hdr-line{height:1px;background:var(--bdr);margin-top:14px}
-.nav-tabs{display:flex;overflow-x:auto;gap:0;padding:8px 6px 0;scrollbar-width:none;border-bottom:1px solid var(--bdr);margin-top:4px;-webkit-overflow-scrolling:touch}
+.nav-row{display:flex;align-items:stretch;border-bottom:1px solid var(--bdr);margin-top:4px}
+.nav-tabs{display:flex;flex:1;justify-content:space-evenly;gap:0;padding:0;scrollbar-width:none}
 .nav-tabs::-webkit-scrollbar{display:none}
-.dtab{flex-shrink:0;background:none;border:none;border-bottom:2px solid transparent;margin-bottom:-1px;padding:6px 10px 8px;cursor:pointer;color:var(--gray2);font-family:"DM Sans",sans-serif;transition:color .15s,border-color .15s;text-align:center;min-width:56px}
+.fdr-filters{display:flex;align-items:center;border-left:1px solid var(--bdr);flex-shrink:0}
+.dtab{flex-shrink:0;background:none;border:none;border-bottom:2px solid transparent;margin-bottom:-1px;padding:6px 10px 8px;cursor:pointer;color:var(--gray2);font-family:"DM Sans",sans-serif;transition:color .15s,border-color .15s;text-align:center}
 .dtab-name{font-size:22px;font-weight:600;display:block;line-height:1;letter-spacing:-.3px;font-family:"Bebas Neue",sans-serif}
 .dtab-date{font-size:9.5px;font-weight:500;display:block;margin-top:3px;letter-spacing:.8px;text-transform:uppercase;opacity:.7}
 .dtab-cnt{display:none}
@@ -42,10 +44,10 @@ body{background:var(--bg);color:var(--white);font-family:"DM Sans",sans-serif;mi
 .fdr-row{display:flex;gap:0;padding:0 6px;border-bottom:1px solid var(--bdr)}
 .fdr-row::-webkit-scrollbar{display:none}
 .fdr-wrap{position:relative}
-.fdr-btn{flex-shrink:0;background:none;border:none;border-bottom:2px solid transparent;margin-bottom:-1px;padding:5px 12px 7px;cursor:pointer;color:var(--gray2);font-family:"DM Sans",sans-serif;font-size:12px;font-weight:500;display:inline-flex;align-items:center;gap:5px;transition:color .15s,border-color .15s;white-space:nowrap;min-height:32px}
+.fdr-btn{flex-shrink:0;background:none;border:none;border-bottom:2px solid transparent;margin-bottom:-1px;padding:5px 12px 7px;cursor:pointer;color:var(--gray2);font-family:"Bebas Neue",sans-serif;font-size:17px;letter-spacing:.5px;display:inline-flex;align-items:center;gap:5px;transition:color .15s,border-color .15s;white-space:nowrap;min-height:36px}
 .fdr-btn:hover{color:var(--white)}
-.fdr-btn.active{border-bottom-color:var(--orange);color:var(--white)}
-.fdr-arrow{font-size:9px;transition:transform .2s;flex-shrink:0}
+.fdr-btn.active{border-bottom-color:var(--orange);color:var(--orange)}
+.fdr-arrow{font-size:11px;transition:transform .2s;flex-shrink:0;font-family:"DM Sans",sans-serif}
 .fdr-arrow.open{transform:rotate(180deg)}
 .fdr-label{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .fdr-panel{display:none;position:absolute;top:calc(100% + 6px);left:0;background:var(--surf);border:1px solid var(--bdr);border-radius:var(--r);z-index:200;min-width:190px;max-height:60vh;overflow-y:auto;box-shadow:0 8px 24px rgba(0,0,0,.55)}
@@ -54,6 +56,7 @@ body{background:var(--bg);color:var(--white);font-family:"DM Sans",sans-serif;mi
 .fdr-opt:last-child{border-bottom:none}
 .fdr-opt:hover{background:var(--card-b);color:var(--white)}
 .fdr-opt.on{color:var(--orange);background:rgba(232,90,30,.07)}
+.fdr-filters .fdr-panel{left:auto;right:0}
 .fdr-cnt{color:var(--gray2);font-size:11px;margin-left:4px}
 .fbar-wrap{overflow-x:auto;scrollbar-width:none;border-bottom:1px solid var(--bdr);-webkit-overflow-scrolling:touch}
 .fbar-wrap::-webkit-scrollbar{display:none}
@@ -151,6 +154,8 @@ body{background:var(--bg);color:var(--white);font-family:"DM Sans",sans-serif;mi
 .c-film-title{font-size:12.5px;color:#ccc;line-height:1.35;font-weight:500}
 .c-film-meta{font-size:11px;color:var(--gray2);margin-top:2px}
 .c-film-dur{font-size:11px;color:var(--gray2);flex-shrink:0;white-space:nowrap;padding-top:1px}
+.c-film-lb{display:flex;align-items:center;flex-shrink:0;opacity:.45;transition:opacity .15s;line-height:1}
+.c-film-lb:hover{opacity:1}
 .c-title-pills{display:none;border-top:1px solid var(--bdr-l);padding-top:8px;margin-top:2px;flex-wrap:wrap;gap:4px}
 .c-title-pills.visible{display:flex}
 .c-title-pill{font-size:11px;color:var(--gray2);background:rgba(255,255,255,.04);border-radius:5px;padding:3px 7px}
@@ -319,7 +324,8 @@ body{background:var(--bg);color:var(--white);font-family:"DM Sans",sans-serif;mi
 /* Letterboxd-style item poster */
 .lb-poster{width:40px;height:60px;object-fit:cover;border-radius:5px;flex-shrink:0;display:block;background:#1a1a1a}
 .lb-poster-ph{width:40px;height:60px;border-radius:5px;flex-shrink:0;background:#1e1e1e;display:flex;align-items:center;justify-content:center;font-size:14px;opacity:.3}
-.ag-empty{text-align:center;padding:40px 20px;color:var(--gray)}
+.ag-list-sep{height:1px;background:var(--bdr);margin:14px 0}
+.ag-section-lbl{font-size:10px;color:var(--gray2);text-transform:uppercase;letter-spacing:1px;font-weight:600;margin-bottom:8px}
 .ag-empty span{font-size:40px;display:block;margin-bottom:10px}
 .ag-empty p{font-size:13px;line-height:1.6}
 
@@ -373,24 +379,26 @@ body{background:var(--bg);color:var(--white);font-family:"DM Sans",sans-serif;mi
     <span class="main-nav-lbl">Planner</span>
   </button>
 </div>
-<div class="nav-tabs" id="dtabs"></div>
-<div id="filter-bars">
-  <div class="fdr-row">
+<div class="nav-row" id="nav-row">
+  <div class="nav-tabs" id="dtabs"></div>
+  <div class="fdr-filters">
     <div class="fdr-wrap">
       <button class="fdr-btn" id="vdr-btn" onclick="toggleDropdown('vdr')">
-        <span class="fdr-label" id="vdr-label">◎ Sede</span>
+        <span class="fdr-label" id="vdr-label">Lugar</span>
         <span class="fdr-arrow" id="vdr-arrow">▾</span>
       </button>
       <div class="fdr-panel" id="vdr-panel"></div>
     </div>
     <div class="fdr-wrap">
       <button class="fdr-btn" id="sdr-btn" onclick="toggleDropdown('sdr')">
-        <span class="fdr-label" id="sdr-label">≡ Sección</span>
+        <span class="fdr-label" id="sdr-label">Categoría</span>
         <span class="fdr-arrow" id="sdr-arrow">▾</span>
       </button>
       <div class="fdr-panel" id="sdr-panel"></div>
     </div>
   </div>
+</div>
+<div id="filter-bars">
   <button id="agtab" style="display:none"><span id="ag-cnt">0</span></button>
 </div>
 <div class="hint" id="hint">Toca una película para ver qué otras se solapan</div>
@@ -878,36 +886,45 @@ function renderPrioStrip(){
 }
 function renderFilmListHTML(){
   const allPending=[...watchlist].filter(t=>!watched.has(t));
-  // C — Prioritized films first
-  const pending=[...allPending].sort((a,b)=>{const pa=prioritized.has(a),pb=prioritized.has(b);return pa===pb?0:pa?-1:1;});
+  const prioList=allPending.filter(t=>prioritized.has(t));
+  const nonPrioList=allPending.filter(t=>!prioritized.has(t));
   const watchedList=[...watched];
-  let html=renderPrioStrip();
-  if(pending.length){
-    html+='<div class="ag-film-grid">';
-    html+=pending.map(t=>{
-      const f=FILMS.find(fi=>fi.title===t);
-      const hasFuture=FILMS.some(fi=>fi.title===t&&!screeningPassed(fi));
-      const posterSrcFl=f?(CUSTOM_POSTERS[t]||(POSTERS[t]?TMDB_IMG+POSTERS[t]:null)):null;
-      const posterHtmlFl=posterSrcFl?`<img class="ag-fi-poster" src="${posterSrcFl}" loading="lazy" onerror="this.className='ag-fi-poster-ph';this.innerHTML='🎬'" alt="">`:`<div class="ag-fi-poster-ph">🎬</div>`;
-      const isPrioFl=prioritized.has(t);
-      return`<div class="ag-film-item${!hasFuture?' watched-item':''}">
-        ${posterHtmlFl}
-        <div class="ag-fi-overlay"></div>
-        ${isPrioFl?'<div class="ag-fi-prio-badge">★</div>':''}
-        <div class="ag-fi-actions">
-          <button class="ag-fi-btn prio-fi-btn${isPrioFl?' prio-on':''}" onclick="togglePriority('${t.replace(/'/g,"\'")}');event.stopPropagation()" title="${isPrioFl?'Quitar prioridad':'Priorizar'}">★</button>
-          <button class="ag-fi-btn w-mark${watched.has(t)?' w-on':''}" onclick="toggleWatched('${t.replace(/'/g,"\'")}',event)" title="Marcar como vista">✓</button>
-          <button class="ag-fi-btn del" onclick="toggleWL('${t.replace(/'/g,"\'")}',event)" title="Quitar">✕</button>
-        </div>
-        <div class="ag-fi-bottom">
-          <div class="ag-fi-flags">${f?f.flags||'🎬':'🎬'}</div>
-          <div class="ag-fi-title">${t}</div>
-        </div>
-      </div>`;
-    }).join('');
+
+  const mkItem=(t)=>{
+    const f=FILMS.find(fi=>fi.title===t);
+    const hasFuture=FILMS.some(fi=>fi.title===t&&!screeningPassed(fi));
+    const posterSrc=f?(CUSTOM_POSTERS[t]||(POSTERS[t]?TMDB_IMG+POSTERS[t]:null)):null;
+    const posterHtml=posterSrc?`<img class="ag-fi-poster" src="${posterSrc}" loading="lazy" onerror="this.className='ag-fi-poster-ph';this.innerHTML='🎬'" alt="">`:`<div class="ag-fi-poster-ph">🎬</div>`;
+    const isPrio=prioritized.has(t);
+    return`<div class="ag-film-item${!hasFuture?' watched-item':''}">
+      ${posterHtml}
+      <div class="ag-fi-overlay"></div>
+      <div class="ag-fi-actions">
+        <button class="ag-fi-btn prio-fi-btn${isPrio?' prio-on':''}" onclick="togglePriority('${t.replace(/'/g,"\'")}');event.stopPropagation()" title="${isPrio?'Quitar prioridad':'Priorizar'}">★</button>
+        <button class="ag-fi-btn w-mark${watched.has(t)?' w-on':''}" onclick="toggleWatched('${t.replace(/'/g,"\'")}',event)" title="Marcar como vista">✓</button>
+        <button class="ag-fi-btn del" onclick="toggleWL('${t.replace(/'/g,"\'")}',event)" title="Quitar">✕</button>
+      </div>
+      <div class="ag-fi-bottom">
+        <div class="ag-fi-flags">${f?f.flags||'🎬':'🎬'}</div>
+        <div class="ag-fi-title">${t}</div>
+      </div>
+    </div>`;
+  };
+
+  let html='';
+  if(prioList.length){
+    html+=`<div class="prio-strip-title" style="margin-bottom:8px">★ Prioridades ${prioList.length}/${PRIO_LIMIT}</div>`;
+    html+=`<div class="ag-film-grid">${prioList.map(t=>mkItem(t)).join('')}</div>`;
+  }
+  if(nonPrioList.length){
+    if(prioList.length) html+=`<div class="ag-list-sep"></div>`;
+    html+=`<div class="ag-film-grid">${nonPrioList.map(t=>mkItem(t)).join('')}</div>`;
+  }
+  if(!allPending.length&&!watchedList.length){
+    return`<div class="ag-empty" style="padding:20px"><p>Usa el buscador para añadir películas.</p></div>`;
   }
   if(watchedList.length){
-    html+=`<div style="margin-top:${pending.length?'10px':'0'};font-size:11px;color:var(--green);font-weight:600;letter-spacing:.5px;margin-bottom:6px">✓ YA VISTAS</div>`;
+    html+=`<div style="margin-top:${allPending.length?'10px':'0'};font-size:11px;color:var(--green);font-weight:600;letter-spacing:.5px;margin-bottom:6px">✓ YA VISTAS</div>`;
     html+=watchedList.map(t=>{
       const f=FILMS.find(fi=>fi.title===t);
       return`<div class="ag-watched-item">
@@ -1176,15 +1193,17 @@ function togglePriority(title,cost){
   if(prioritized.has(title)){
     prioritized.delete(title);
     savePrio();updateCardState(title);updateAgTab();runCalc();
+    showToast('Prioridad eliminada','info');
   } else {
     if(prioritized.size>=PRIO_LIMIT){
       showToast(`Máximo ${PRIO_LIMIT} prioridades activas. Quita una para cambiar.`,'warn');return;
     }
     prioritized.add(title);
     savePrio();updateCardState(title);updateAgTab();
-    if(cost&&cost>0) showToast(`⭐ Prioridad activada · Tu máximo baja de ${cost+watchlist.size-prioritized.size+1} a ${cost} películas`,'info');
+    showToast(`★ Prioridad activada · ${prioritized.size}/${PRIO_LIMIT}`,'info');
     runCalc();
   }
+  if(activeView==='agenda') renderAgenda();
 }
 function showToast(msg,type='info'){
   let t=document.getElementById('prio-toast');
@@ -1280,7 +1299,7 @@ function switchMainNav(id){
 function showDayView(){
   activeView='day';
   switchMainNav('mnav-cartelera');
-  document.getElementById('dtabs').style.display='';
+  document.getElementById('nav-row').style.display='';
   document.getElementById('filter-bars').style.display='';
   ['hint','cnt','grid'].forEach(id=>{const el=document.getElementById(id);if(el) el.style.display='';});
   document.getElementById('ag-view').classList.remove('visible');
@@ -1289,7 +1308,7 @@ function showDayView(){
 }
 function showAgView(){
   activeView='agenda';
-  document.getElementById('dtabs').style.display='none';
+  document.getElementById('nav-row').style.display='none';
   document.getElementById('filter-bars').style.display='none';
   ['hint','cnt','grid'].forEach(id=>{const el=document.getElementById(id);if(el) el.style.display='none';});
   document.getElementById('ag-view').classList.add('visible');
@@ -1339,13 +1358,13 @@ function renderVbar(){
     b.onclick=e=>{e.stopPropagation();cb();};
     panel.appendChild(b);
   };
-  mkOpt(`Todas las sedes <span class="fdr-cnt">${dayFilms.length}</span>`,activeVenue==='all',()=>{activeVenue='all';selectedIdx=null;setHint(null);closeDropdowns();render();});
+  mkOpt(`Todos los lugares <span class="fdr-cnt">${dayFilms.length}</span>`,activeVenue==='all',()=>{activeVenue='all';selectedIdx=null;setHint(null);closeDropdowns();render();});
   vs.forEach(vk=>{
     const cfg=Object.values(VENUES).find(c=>c.short===vk)||VENUES['C. Convenciones'];
     const cnt=dayFilms.filter(f=>vcfg(f.venue).short===vk).length;
     mkOpt(`${cfg.ico} ${vk} <span class="fdr-cnt">${cnt}</span>`,activeVenue===vk,()=>{activeVenue=activeVenue===vk?'all':vk;selectedIdx=null;setHint(null);closeDropdowns();render();});
   });
-  if(lbl) lbl.textContent=activeVenue==='all'?'◎ Sede':'◎ '+activeVenue;
+  if(lbl) lbl.textContent=activeVenue==='all'?'Lugar':activeVenue;
   if(trigBtn) trigBtn.classList.toggle('active',activeVenue!=='all');
 }
 function renderSbar(){
@@ -1364,12 +1383,12 @@ function renderSbar(){
     b.onclick=e=>{e.stopPropagation();cb();};
     panel.appendChild(b);
   };
-  mkOpt(`Todas las secciones <span class="fdr-cnt">${dayF.length}</span>`,activeSec==='all',()=>{activeSec='all';selectedIdx=null;setHint(null);closeDropdowns();render();});
+  mkOpt(`Todas las categorías <span class="fdr-cnt">${dayF.length}</span>`,activeSec==='all',()=>{activeSec='all';selectedIdx=null;setHint(null);closeDropdowns();render();});
   secs.forEach(sec=>{
     const cnt=dayF.filter(f=>f.section===sec).length;
     mkOpt(`${sec} <span class="fdr-cnt">${cnt}</span>`,activeSec===sec,()=>{activeSec=activeSec===sec?'all':sec;selectedIdx=null;setHint(null);closeDropdowns();render();});
   });
-  const shortSec=activeSec==='all'?'≡ Sección':'≡ '+(activeSec.length>18?activeSec.slice(0,16)+'…':activeSec);
+  const shortSec=activeSec==='all'?'Categoría':(activeSec.length>18?activeSec.slice(0,16)+'…':activeSec);
   if(lbl) lbl.textContent=shortSec;
   if(trigBtn) trigBtn.classList.toggle('active',activeSec!=='all');
 }
@@ -1444,13 +1463,13 @@ function render(){
     let filmBlock='';
     if(isProg){
       const list=f.film_list||[];
-      if(list.length) filmBlock=`<div class="c-film-list">${list.map((item,n)=>{const thumb=SHORT_IMGS[item.title];const thumbHtml=thumb?`<img src="${thumb}" class="c-film-thumb" loading="lazy" onerror="this.style.display='none'" alt="">`:'<div class="c-film-thumb-ph"></div>';return`<div class="c-film-item">${thumbHtml}<div class="c-film-num">${n+1}</div><div class="c-film-info"><div class="c-film-title">${item.title}</div><div class="c-film-meta">${item.country}</div></div><div class="c-film-dur">${item.duration}</div></div>`}).join('')}</div>`;
+      if(list.length) filmBlock=`<div class="c-film-list">${list.map((item,n)=>{const thumb=SHORT_IMGS[item.title];const thumbHtml=thumb?`<img src="${thumb}" class="c-film-thumb" loading="lazy" onerror="this.style.display='none'" alt="">`:'<div class="c-film-thumb-ph"></div>';return`<div class="c-film-item">${thumbHtml}<div class="c-film-num">${n+1}</div><div class="c-film-info"><div class="c-film-title">${item.title}</div><div class="c-film-meta">${item.country}</div></div><div class="c-film-dur">${item.duration}</div><a class="c-film-lb" href="https://letterboxd.com/search/films/${encodeURIComponent(item.title)}/" target="_blank" rel="noopener" onclick="event.stopPropagation()">${LB_SVG}</a></div>`}).join('')}</div>`;
       else{const titles=(f.title_en||'').split('·').map(t=>t.trim()).filter(Boolean);if(titles.length) filmBlock=`<div class="c-title-pills">${titles.map(t=>`<span class="c-title-pill">${t}</span>`).join('')}</div>`;}
     }
     const expandBtn=isProg&&filmBlock?`<div class="c-expand" onclick="toggleExpand(this,event)"><span>Ver programa</span><span class="c-expand-arrow">▼</span></div>`:'';
     const safe=f.title.replace(/"/g,'&quot;').replace(/'/g,"\'");
     const inPrio=prioritized.has(f.title);
-    const prioBtn=!isProg?`<button class="action-btn prio-btn${inPrio?' prio-on':''}" onclick="togglePriority('${safe}')" title="${inPrio?'Quitar prioridad':'Priorizar'}">★</button>`:'';
+    const prioBtn=`<button class="action-btn prio-btn${inPrio?' prio-on':''}" onclick="togglePriority('${safe}')" title="${inPrio?'Quitar prioridad':'Priorizar'}">★</button>`;
     const actBtns=`<div class="card-actions">
       <button class="action-btn wl-btn${inWL?' wl-on':''}" onclick="toggleWL('${safe}',event)" title="${inWL?'Quitar de Mi agenda':'Añadir a Mi agenda'}">${inWL?'♥':'♡'}</button>
       <button class="action-btn w-btn${inW?' w-on':''}" onclick="toggleWatched('${safe}',event)" title="${inW?'Marcar como pendiente':'Marcar como vista'}">✓</button>
