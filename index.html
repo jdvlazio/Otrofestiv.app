@@ -600,41 +600,64 @@ function computeScenarios(titles){
   }).filter(g=>g.screens.length>0);
   if(!baseGroups.length) return[];
 
-  // ── PHASE 0: Find TRUE maximum with exhaustive branch-and-bound ──
-  // Pruning: if chosen + remaining groups can't beat best, stop early
-  function findTrueMax(groups){
+  // ── Find max achievable for a given set of groups (with or without priority constraint) ──
+  function findMax(groups, mustIncludeAll){
+    // mustIncludeAll: if true, ALL groups marked priority must appear in result
     let best=0;
     function bb(idx,chosen){
-      // Pruning: even taking all remaining can't beat best
-      if(chosen.length+(groups.length-idx)<=best) return;
-      if(idx===groups.length){if(chosen.length>best)best=chosen.length;return;}
+      const remaining=groups.length-idx;
+      if(chosen.length+remaining<=best) return;
+      if(idx===groups.length){
+        if(!mustIncludeAll){
+          if(chosen.length>best) best=chosen.length;
+        } else {
+          // Only count if all priority groups are represented
+          const chosenTitles=new Set(chosen.map(s=>s._title));
+          const allPrioritiesIn=groups.every(g=>!g.priority||chosenTitles.has(g.title));
+          if(allPrioritiesIn&&chosen.length>best) best=chosen.length;
+        }
+        return;
+      }
       const g=groups[idx];
       for(const s of g.screens){
         if(!chosen.some(c=>screensConflict(c,s))){
-          chosen.push(s);bb(idx+1,chosen);chosen.pop();
+          chosen.push({...s,_title:g.title});bb(idx+1,chosen);chosen.pop();
         }
       }
-      bb(idx+1,chosen); // skip this film
+      // Can skip non-priority films; must attempt to include priority films
+      if(!g.priority) bb(idx+1,chosen);
+      else if(mustIncludeAll){
+        // For priority films in mustInclude mode: still try skipping
+        // but only if we've already explored including — the loop above did that
+        // We allow skipping even priority films to find max (they might all conflict)
+        bb(idx+1,chosen);
+      }
     }
     bb(0,[]);
     return best;
   }
 
-  // Sort MRV: fewest options first (best pruning)
   const mrvGroups=[...baseGroups].sort((a,b)=>a.screens.length-b.screens.length);
-  const trueMax=findTrueMax(mrvGroups);
+  const trueMax=findMax(mrvGroups,false);
+  const hasPriorities=baseGroups.some(g=>g.priority);
+  // Max achievable while GUARANTEEING all priorities appear
+  const maxWithPriorities=hasPriorities?findMax(mrvGroups,true):trueMax;
+  const priorityCost=trueMax-maxWithPriorities; // how many films you "lose" for the priority
 
-  // ── PHASE 1: Collect up to 8 diverse scenarios AT the true maximum ──
   const seenKeys=new Set();const allScenarios=[];
   let incompatiblePriorities=false;
 
-  function collectScenarios(groups,enforcePriority){
+  function collectAt(groups,targetCount,enforcePriority){
     function backtrack(idx,chosen){
       if(allScenarios.length>=8) return;
-      // Pruning: can't reach trueMax from here
-      if(chosen.length+(groups.length-idx)<trueMax) return;
+      if(chosen.length+(groups.length-idx)<targetCount) return;
       if(idx===groups.length){
-        if(chosen.length===trueMax){
+        if(chosen.length===targetCount){
+          if(enforcePriority){
+            // Verify all priorities are in this scenario
+            const ct=new Set(chosen.map(s=>s._title));
+            if(!groups.every(g=>!g.priority||ct.has(g.title))) return;
+          }
           const key=chosen.map(s=>s._title+'@'+s.day+s.time).sort().join('|');
           if(!seenKeys.has(key)){seenKeys.add(key);allScenarios.push(chosen.map(c=>({...c})));}
         }
@@ -652,30 +675,40 @@ function computeScenarios(titles){
     backtrack(0,[]);
   }
 
-  // Try with priorities enforced first (prioritized films appear in scenarios)
   const prioritySorted=[...baseGroups].sort((a,b)=>{
     if(a.priority&&!b.priority) return -1;
     if(!a.priority&&b.priority) return 1;
     return a.screens.length-b.screens.length;
   });
-  collectScenarios(prioritySorted,true);
-  for(let i=0;i<15&&allScenarios.length<8;i++) collectScenarios(shuffle(baseGroups),true);
 
-  // If priorities are mutually incompatible with true max, relax them
-  if(!allScenarios.length&&prioritized.size>0){
-    incompatiblePriorities=true;
-    collectScenarios(prioritySorted,false);
-    for(let i=0;i<15&&allScenarios.length<8;i++) collectScenarios(shuffle(baseGroups),false);
+  // Phase 1: scenarios WITH priorities at their correct (possibly lower) max
+  if(hasPriorities&&maxWithPriorities>0){
+    collectAt(prioritySorted,maxWithPriorities,true);
+    for(let i=0;i<20&&allScenarios.length<8;i++) collectAt(shuffle(baseGroups),maxWithPriorities,true);
   }
 
-  // Fill remaining with random diversity
-  for(let i=0;i<20&&allScenarios.length<8;i++) collectScenarios(shuffle(baseGroups),false);
+  // Phase 2: if still no scenarios (priorities all conflict with each other), fall back
+  if(!allScenarios.length&&hasPriorities){
+    incompatiblePriorities=true;
+    collectAt(prioritySorted,trueMax,false);
+    for(let i=0;i<20&&allScenarios.length<8;i++) collectAt(shuffle(baseGroups),trueMax,false);
+  }
+
+  // Phase 3: fill remaining with no-priority scenarios at trueMax for diversity
+  for(let i=0;i<20&&allScenarios.length<8;i++) collectAt(shuffle(baseGroups),trueMax,false);
 
   allScenarios.forEach(sc=>sc.sort((a,b)=>a.day_order!==b.day_order?a.day_order-b.day_order:toMin(a.time)-toMin(b.time)));
 
   return allScenarios.map(sc=>{
     const included=new Set(sc.map(s=>s._title));
-    return{schedule:sc,excluded:pending.filter(t=>!included.has(t)),incompatiblePriorities};
+    return{
+      schedule:sc,
+      excluded:pending.filter(t=>!included.has(t)),
+      incompatiblePriorities,
+      trueMax,
+      maxWithPriorities,
+      priorityCost
+    };
   });
 }
 
@@ -904,7 +937,8 @@ function buildResultHTML(scenarios){
     <div class="ag-summary-text">
       Puedes ver <span class="ok"><b>${ok}</b></span> de <b>${total}</b> pendientes con funciones futuras.
       ${bad?`<span class="conflict-label"> · <b>${bad}</b> no entra${bad!==1?'n':''} en este escenario.</span>`:''}
-      ${sc.incompatiblePriorities?`<div style="margin-top:6px;font-size:11px;color:#e5a020">⚠️ Algunas películas priorizadas se solapan entre sí — los escenarios se calcularon sin forzar todas las prioridades.</div>`:''}
+      ${sc.priorityCost>0?`<div style="margin-top:6px;font-size:11px;color:#e5a020">⭐ Prioridad activa · Máximo con prioridad: <b>${sc.maxWithPriorities}</b> películas (sin prioridad llegarías a <b>${sc.trueMax}</b>)</div>`:''}
+      ${sc.incompatiblePriorities?`<div style="margin-top:6px;font-size:11px;color:#e05050">⚠️ Las películas priorizadas se solapan entre sí — escenarios calculados sin forzar prioridades.</div>`:''}
     </div>
     ${n>1?`<div class="ag-nav">
       <button class="ag-nav-btn" onclick="changeScenario(-1)" ${currentIdx===0?'disabled':''}>← Anterior</button>
