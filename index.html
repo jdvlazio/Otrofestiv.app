@@ -76,15 +76,13 @@ body{background:var(--bg);color:var(--white);font-family:"DM Sans",sans-serif;mi
 .hint.active{color:var(--orange)}
 .cnt-line{padding:2px 18px 6px;font-size:11px;color:var(--gray)}
 .cnt-line b{color:var(--white)}
-.grid{padding:10px 12px 60px;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:10px;overflow:visible}
-.card{border:1px solid var(--bdr);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;position:relative;cursor:pointer;transition:opacity .2s,border-color .2s,box-shadow .2s}
+.grid{padding:10px 12px 60px;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:10px;overflow:visible;grid-auto-rows:minmax(210px,auto)}
+.card{border:1px solid var(--bdr);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;position:relative;cursor:pointer;transition:opacity .2s,border-color .2s,box-shadow .2s;align-self:stretch}
 .card:nth-child(odd){background:var(--card-a)}
 .card:nth-child(even){background:var(--card-b)}
 @media(hover:hover){.card:not(.conflict):hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.6);border-color:rgba(232,90,30,.35)}}
 .card:active{opacity:.85}
-.card.program{background:#1C2028!important;border-color:var(--bdr-l);border-left:3px solid rgba(255,255,255,.3);
-  box-shadow:3px 3px 0 1px #232830,6px 6px 0 1px #1e2228;
-  margin-right:7px;margin-bottom:7px}
+.card.program{background:#1C2028!important}
 .card.selected{border-color:var(--orange)!important;box-shadow:0 0 0 2px var(--orange),0 8px 28px rgba(232,90,30,.2)!important}
 .card.conflict{opacity:.22;filter:grayscale(.8);cursor:default;pointer-events:none}
 .card.conflict::after{content:'';position:absolute;inset:0;background:repeating-linear-gradient(-45deg,transparent,transparent 6px,rgba(0,0,0,.15) 6px,rgba(0,0,0,.15) 7px);border-radius:var(--r);pointer-events:none}
@@ -104,49 +102,53 @@ body{background:var(--bg);color:var(--white);font-family:"DM Sans",sans-serif;mi
 .prio-toast.warn{border-color:rgba(229,160,32,.6);color:#e5a020}
 .apertura-badge{display:inline-block;font-size:9px;background:var(--orange);color:#fff;font-weight:700;letter-spacing:1px;padding:2px 6px;border-radius:8px;font-family:"Bebas Neue",sans-serif;margin-right:5px;vertical-align:middle;flex-shrink:0}
 .past-badge{position:absolute;bottom:8px;right:10px;font-size:9px;color:var(--gray2);font-weight:600;letter-spacing:.5px;z-index:2;background:rgba(0,0,0,.5);padding:1px 5px;border-radius:5px}
-.c-body{padding:18px 16px 16px;display:flex;flex-direction:column;gap:16px}
-.c-body.has-poster{flex-direction:row;gap:0;padding:0}
-/* Poster: fixed 90x135, rounded, internal margin */
-.c-poster{flex-shrink:0;width:104px;padding:14px 12px 14px 14px}.c-poster img{width:78px;height:117px;object-fit:cover;display:block;border-radius:8px}
-.c-poster-none{width:90px;height:135px;background:#1a1a1a;border-radius:8px;
-  display:flex;align-items:center;justify-content:center;font-size:24px;opacity:.2}
+/* Card body: always flex-row — poster col + content col */
+.c-body{display:flex;flex-direction:row;gap:0;padding:0;flex:1;overflow:hidden}
+.c-divider{height:1px;background:var(--bdr);flex-shrink:0}
+/* Poster column: always 104px wide, hidden when empty */
+.c-poster{flex-shrink:0;width:104px;padding:14px 12px 14px 14px}
+.c-poster img{width:78px;height:117px;object-fit:cover;display:block;border-radius:8px}
+.c-poster.empty{visibility:hidden}
+.c-poster-none{width:78px;height:117px;border-radius:8px}
 .c-collage{width:78px;height:117px;display:grid;gap:2px;border-radius:8px;overflow:hidden}
 .c-collage.two{grid-template-columns:1fr 1fr}
 .c-collage.three{grid-template-columns:1fr 1fr 1fr}
 .c-collage img{width:100%;height:100%;object-fit:cover;display:block}
-/* Content: fills space, padding from top, elements stack naturally */
-.c-content{flex:1;min-width:0;padding:16px 16px 16px 14px;
-  display:flex;flex-direction:column;gap:0}
-.c-content .c-film{gap:7px}
-.c-content .c-venue{margin-top:auto;padding-top:12px}
-.c-film{display:flex;flex-direction:column;gap:8px}
-.c-time{font-family:"Bebas Neue",sans-serif;font-size:28px;color:var(--orange);letter-spacing:2px;line-height:1}
-.c-title{font-size:16px;font-weight:600;color:var(--white);line-height:1.4;padding-right:60px}
-.card.program .c-title{font-size:14px;font-weight:600}
-.card.program .c-time{font-size:24px}
-.card.program .c-title-en{font-size:10px}
-.card.program .c-flags{font-size:16px}
-.card.program .c-venue-name{font-size:12px}
-/* In poster cards: smaller size, no padding-right (actions are top-right, not overlapping content) */
-.has-poster .c-title{font-size:13px;line-height:1.35;padding-right:0}
-.has-poster .c-title-en{font-size:10px}
-.has-poster .c-flags{font-size:16px}
-.has-poster .c-time{font-size:24px}
-.has-poster .c-venue-name{font-size:12px}
-.has-poster .c-venue-sub{font-size:10.5px}
-.c-title-en{font-size:11.5px;color:var(--gray);font-style:italic;line-height:1.35;margin-top:1px}
-.c-flags{font-size:20px;line-height:1;margin-top:2px}
-.c-div{height:1px;background:var(--bdr-l)}
-.card.program .c-div{margin:6px 0}
-.has-poster .c-div{margin:8px 0 6px}
-.c-venue{display:flex;flex-direction:column;gap:5px}
-.c-venue-name{font-size:13px;font-weight:500;color:#aaa}
-.c-venue-sub{font-size:11px;color:var(--gray2)}
+/* Content column: 6 fixed rows + 1fr spacer, fills full c-body height */
+.c-content{
+  flex:1;min-width:0;
+  padding:12px 12px 0 0;
+  display:grid;
+  grid-template-rows:
+    34px  /* row 1: time */
+    38px  /* row 2: title */
+    18px  /* row 3: subtitle */
+    20px  /* row 4: duration */
+    24px  /* row 5: flags */
+    24px  /* row 6: venue */
+    1fr;  /* row 7: spacer — absorbs extra height invisibly */
+  gap:0;
+  overflow:hidden
+}
+/* Row slots — overflow hidden, never auto-expand */
+.c-slot-time  {height:34px;overflow:hidden;display:flex;align-items:center}
+.c-slot-title {height:38px;overflow:hidden;display:flex;align-items:flex-start;padding-top:2px}
+.c-slot-sub   {height:18px;overflow:hidden;display:flex;align-items:center}
+.c-slot-dur   {height:20px;overflow:hidden;display:flex;align-items:center}
+.c-slot-flags {height:24px;overflow:hidden;display:flex;align-items:center}
+.c-slot-venue {height:24px;overflow:hidden;display:flex;align-items:center}
+/* Typography */
+.c-time{font-family:"Bebas Neue",sans-serif;font-size:26px;color:var(--orange);letter-spacing:2px;line-height:1}
+.c-title{font-size:13px;font-weight:600;color:var(--white);line-height:1.3;padding-right:52px;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.c-title-en{font-size:10.5px;color:var(--gray);font-style:italic;line-height:1;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.c-flags{font-size:16px;line-height:1}
+.c-dur-long{color:var(--orange);font-size:10px;font-weight:600}
+.c-venue-name{font-size:12px;font-weight:500;color:#aaa;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
 .c-expand{display:flex;align-items:center;gap:5px;font-size:10px;color:var(--gray);cursor:pointer;user-select:none;transition:color .15s;font-weight:600;letter-spacing:.2px;white-space:nowrap}
 .c-expand:hover{color:var(--orange)}
 .c-expand-arrow{font-size:10px;transition:transform .2s;display:inline-block}
 .c-expand-arrow.open{transform:rotate(180deg)}
-.c-film-list{display:none;border-top:1px solid var(--bdr-l);padding-top:10px;margin-top:2px}
+.c-film-list{display:none;border-top:1px solid var(--bdr-l);padding:8px 14px 8px 118px}
 .c-film-list.visible{display:block}
 .c-film-item{display:flex;align-items:center;gap:8px;padding:5px 0;border-bottom:1px solid rgba(255,255,255,.04)}
 .c-film-item:last-child{border-bottom:none}
@@ -164,9 +166,10 @@ body{background:var(--bg);color:var(--white);font-family:"DM Sans",sans-serif;mi
 .c-title-pills{display:none;border-top:1px solid var(--bdr-l);padding-top:8px;margin-top:2px;flex-wrap:wrap;gap:4px}
 .c-title-pills.visible{display:flex}
 .c-title-pill{font-size:11px;color:var(--gray2);background:rgba(255,255,255,.04);border-radius:5px;padding:3px 7px}
-.c-foot{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:9px 14px;border-top:1px solid var(--bdr);background:rgba(0,0,0,.15);flex-wrap:nowrap}
-/* foot-l: never wraps, section truncates */
-.c-foot-l{display:flex;align-items:center;gap:6px;min-width:0;flex:1;overflow:hidden;flex-wrap:nowrap}
+.c-foot{display:flex;flex-direction:row;align-items:center;gap:0;padding:0 14px;background:rgba(0,0,0,.15);height:38px;flex-shrink:0;overflow:hidden}
+.c-foot-left{display:flex;align-items:center;gap:6px;min-width:0;overflow:hidden;flex-shrink:1}
+.c-foot-space{flex:1;min-width:8px}
+.c-foot-right{display:flex;align-items:center;gap:6px;flex-shrink:0;white-space:nowrap}/* foot-l: never wraps, section truncates */
 .c-sec{font-size:10px;padding:3px 8px;border-radius:20px;background:var(--surf);border:1px solid var(--bdr);color:var(--gray);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;cursor:pointer;transition:border-color .15s,color .15s;flex-shrink:1;min-width:0;max-width:150px}
 /* LB pill never shrinks off line */
 .c-lb{flex-shrink:0!important}
@@ -1477,7 +1480,6 @@ function render(){
     const flags=f.flags||'🎬';
     const tEn=!isProg&&f.title_en&&f.title_en!==f.title&&!f.title_en.includes('·')?f.title_en:'';
     const durMin=f.duration?parseInt(f.duration):0;
-    const durLong=!isProg&&durMin>150?`<span class='dur-long'>⏱ ${Math.floor(durMin/60)}h ${durMin%60}min</span>`:'';
     const secActive=activeSec===f.section?' active-sec':'';
     const inWL=watchlist.has(f.title),inW=watched.has(f.title);
     let filmBlock='';
@@ -1518,29 +1520,35 @@ function render(){
       // Drop suffix if it has no number — e.g. "Prog. de Cortos", "Prog. Cortometrajes"
       if(progSuffix&&!/\d/.test(progSuffix)) progSuffix='';
     }
-    return`<div class="card${isAp?' apertura':isProg?' program':''}${inWL&&!inW?' in-wl':inW?' in-watched':''}${passed?' past-card':''}" data-idx="${i}" data-title="${f.title.replace(/"/g,'&quot;')}">
+    const durLongHtml=durMin>150?`<span class="c-dur-long">⏱ ${Math.floor(durMin/60)}h ${durMin%60}min</span>`:'';
+    const zoneHtml=`
+      <div class="c-slot-time"><div class="c-time" style="${passed?'color:var(--gray2)':''}">${f.time}</div></div>
+      <div class="c-slot-title"><div class="c-title">${displayTitle}${isMid?' 🌙':''}</div></div>
+      <div class="c-slot-sub"><div class="c-title-en">${tEn||''}</div></div>
+      <div class="c-slot-dur">${durLongHtml}</div>
+      <div class="c-slot-flags"><div class="c-flags">${flags}</div></div>
+      <div class="c-slot-venue"><div class="c-venue-name">${vc.ico} ${vc.short}${sl?`<span style="color:var(--gray2);margin:0 5px">|</span><span style="color:var(--gray2);font-weight:400">${sl}</span>`:''}</div></div>
+      <div class="c-slot-space"></div>`;
+    const posterCol=posterHtml
+      ?posterHtml
+      :`<div class="c-poster empty"><div class="c-poster-none"></div></div>`;
+    return`<div class="card${isAp?' apertura':isProg?' program':''}${hasPoster?' has-poster':''}${inWL&&!inW?' in-wl':inW?' in-watched':''}${passed?' past-card':''}" data-idx="${i}" data-title="${f.title.replace(/"/g,'&quot;')}">
       ${pastBadge}${nowBadge}${actBtns}
-      <div class="c-body${hasPoster?' has-poster':''}">
-        ${posterHtml}
-        <div${hasPoster?' class="c-content"':''}>
-        <div class="c-film">
-          <div class="c-time" style="${passed?'color:var(--gray2)':''}">${f.time}</div>
-          <div class="c-title">${displayTitle}${isMid?' 🌙':''}</div>
-          ${tEn?`<div class="c-title-en">${tEn}</div>`:''}
-          ${durLong?`<div style="margin-top:2px">${durLong}</div>`:''}
-          <div class="c-flags">${flags}</div>
-        </div>
-        <div class="c-div"></div>
-        <div class="c-venue"><div class="c-venue-name">${vc.ico} ${vc.short}${sl?`<span style="color:var(--gray2);margin:0 5px">|</span><span style="color:var(--gray2);font-weight:400">${sl}</span>`:''}</div></div>
-        ${filmBlock}
-        </div>
+      <div class="c-body">
+        ${posterCol}<div class="c-content">${zoneHtml}</div>
       </div>
+      ${filmBlock}
+      <div class="c-divider"></div>
       <div class="c-foot">
-        <div class="c-foot-l">
+        <div class="c-foot-left">
           ${apBadge}${isProg&&expandBtn?expandBtn:`<span class="c-sec${secActive}" data-sec="${f.section.replace(/"/g,'&quot;')}">${f.section}</span>`}
           ${lbPill}
         </div>
-        <span class="c-dur">${progSuffix?`<span style="color:var(--gray2);margin-right:6px">${progSuffix}</span>`:''}🕐 ${f.duration}</span>
+        <div class="c-foot-space"></div>
+        <div class="c-foot-right">
+          ${progSuffix?`<span class="c-dur" style="color:var(--gray2)">${progSuffix}</span>`:''}
+          <span class="c-dur">🕐 ${f.duration}</span>
+        </div>
       </div>
     </div>`;
   }).join('');
