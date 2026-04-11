@@ -65,7 +65,7 @@ body{background:var(--bg);color:var(--white);font-family:"DM Sans",sans-serif;mi
 .card.in-wl{border-color:rgba(232,90,30,.4)}
 .card.in-watched{border-color:rgba(58,170,110,.4)}
 .card.past-card{opacity:.5}
-.card-actions{position:absolute;top:9px;right:10px;display:flex;gap:3px;z-index:2}
+.card-actions{position:absolute;top:9px;right:10px;display:flex;gap:3px;z-index:4}
 .action-btn{background:rgba(0,0,0,.35);border:none;cursor:pointer;font-size:15px;line-height:1;padding:4px 6px;color:var(--gray2);border-radius:6px;transition:color .15s,background .15s}
 .action-btn:active{transform:scale(.85)}
 .action-btn.wl-on{color:var(--orange)}
@@ -75,8 +75,8 @@ body{background:var(--bg);color:var(--white);font-family:"DM Sans",sans-serif;mi
 .ag-fi-prio-badge{position:absolute;top:5px;left:5px;font-size:11px;color:var(--orange);background:rgba(0,0,0,.6);border-radius:4px;padding:1px 4px;font-weight:700;pointer-events:none;z-index:3}
 .prio-toast{position:fixed;bottom:80px;left:50%;transform:translateX(-50%);background:#2a2a2a;border:1px solid #444;color:var(--white);font-size:12px;padding:8px 16px;border-radius:8px;z-index:9999;transition:opacity .4s;max-width:320px;text-align:center;pointer-events:none}
 .prio-toast.warn{border-color:rgba(229,160,32,.6);color:#e5a020}
-.apertura-badge{position:absolute;top:9px;right:74px;font-size:9px;background:var(--orange);color:#fff;font-weight:700;letter-spacing:1px;padding:2px 6px;border-radius:8px;font-family:"Bebas Neue",sans-serif;z-index:2}
-.past-badge{position:absolute;top:9px;left:10px;font-size:9px;color:var(--gray2);font-weight:600;letter-spacing:.5px;z-index:2}
+.apertura-badge{position:absolute;top:9px;left:10px;font-size:9px;background:var(--orange);color:#fff;font-weight:700;letter-spacing:1px;padding:2px 6px;border-radius:8px;font-family:"Bebas Neue",sans-serif;z-index:2}
+.past-badge{position:absolute;bottom:8px;right:10px;font-size:9px;color:var(--gray2);font-weight:600;letter-spacing:.5px;z-index:2;background:rgba(0,0,0,.5);padding:1px 5px;border-radius:5px}
 .c-body{padding:18px 16px 16px;display:flex;flex-direction:column;gap:16px}
 .c-body.has-poster{flex-direction:row;gap:0;padding:0}
 /* Poster: fixed 90x135, rounded, internal margin */
@@ -314,7 +314,7 @@ body{background:var(--bg);color:var(--white);font-family:"DM Sans",sans-serif;mi
 /* ── Now showing pulse (3) ── */
 .now-pulse{display:inline-block;width:7px;height:7px;background:#e05050;border-radius:50%;margin-right:4px;animation:pulse-red 1.4s ease infinite;flex-shrink:0}
 @keyframes pulse-red{0%,100%{box-shadow:0 0 0 0 rgba(224,80,80,.5)}60%{box-shadow:0 0 0 5px rgba(224,80,80,0)}}
-.now-label{font-size:9px;color:#e05050;font-weight:700;letter-spacing:.5px;display:flex;align-items:center;margin-bottom:2px}
+.now-label{position:absolute;bottom:8px;left:8px;font-size:9px;color:#e05050;font-weight:700;letter-spacing:.5px;display:flex;align-items:center;gap:3px;background:rgba(0,0,0,.6);padding:2px 6px;border-radius:8px;z-index:3}
 /* ── Long film duration highlight (2) ── */
 .dur-long{color:var(--orange);font-size:10px;font-weight:600}
 /* ── Progress bar (6) ── */
@@ -817,7 +817,7 @@ function renderPrioStrip(){
     const short=t.length>18?t.slice(0,16)+'…':t;
     return`<div class="prio-chip">
       ${img}
-      <button class="prio-chip-rm" onclick="togglePriority('${t.replace(/'/g,"\'")}');event.stopPropagation()" title="Quitar prioridad">✕</button>
+      <button class="prio-chip-rm" data-prio-title="${t.replace(/"/g,'&quot;')}" onclick="event.stopPropagation();togglePriority(this.dataset.prioTitle)" title="Quitar prioridad">✕</button>
       <div class="prio-chip-title">${short}</div>
     </div>`;
   }).join('');
@@ -1195,7 +1195,7 @@ function renderAgenda(){
       }).join('')}
       ${prioritized.size>0?`<div class="prio-reminder">
         <div class="prio-reminder-title">★ Prioridades activas</div>
-        <div>${[...prioritized].map(t=>`<span class="prio-pill" onclick="togglePriority('${t.replace(/'/g,"\'")}')">★ ${t.length>22?t.slice(0,20)+'…':t} <span class="prio-pill-rm">✕</span></span>`).join('')}</div>
+        <div>${[...prioritized].map(t=>`<span class="prio-pill" data-prio-title="${t.replace(/"/g,'&quot;')}" onclick="event.stopPropagation();togglePriority(this.dataset.prioTitle)">★ ${t.length>22?t.slice(0,20)+'…':t} <span class="prio-pill-rm">✕</span></span>`).join('')}</div>
       </div>`:''}
       <button class="av-calc-btn" onclick="runCalc()" \${!pending.length?'disabled':''}>
         Calcular escenarios\${!pending.length?' (sin pendientes)':''}
@@ -1347,7 +1347,7 @@ function render(){
     const apBadge=isAp?'<div class="apertura-badge">✦ APERTURA</div>':'';
     const nowBadge=isNowShowing(f)?'<div class="now-label"><span class="now-pulse"></span>AHORA</div>':'';
     const pastBadge=passed?'<div class="past-badge">ya pasó</div>':'';
-    const lbPill=isProg?'':`${durLong}<a class="c-lb" href="https://letterboxd.com/search/films/${encodeURIComponent(f.title)}/" target="_blank" rel="noopener" onclick="event.stopPropagation()">${LB_SVG}<span class="c-lb-text">Letterboxd</span></a>`;
+    const lbPill=isProg?'':`<a class="c-lb" href="https://letterboxd.com/search/films/${encodeURIComponent(f.title)}/" target="_blank" rel="noopener" onclick="event.stopPropagation()">${LB_SVG}<span class="c-lb-text">Letterboxd</span></a>`;
     const posterSrc=!isProg?(CUSTOM_POSTERS[f.title]||(POSTERS[f.title]?TMDB_IMG+POSTERS[f.title]:null)):null;
     // Programs: no poster in collapsed state — thumbnails only shown on expand
     const posterHtml=posterSrc?`<div class="c-poster"><img src="${posterSrc}" alt="" loading="lazy" onerror="this.parentElement.innerHTML='<div class=c-poster-none><span>🎬</span></div>'"></div>`:'';
@@ -1361,6 +1361,7 @@ function render(){
           <div class="c-time" style="${passed?'color:var(--gray2)':''}">${f.time}</div>
           <div class="c-title">${f.title}${isMid?' 🌙':''}</div>
           ${tEn?`<div class="c-title-en">${tEn}</div>`:''}
+          ${durLong?`<div style="margin-top:2px">${durLong}</div>`:''}
           <div class="c-flags">${flags}</div>
         </div>
         <div class="c-div"></div>
