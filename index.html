@@ -199,7 +199,7 @@ body{background:var(--bg);color:var(--white);font-family:"DM Sans",sans-serif;mi
 .ag-sr-empty{padding:14px;text-align:center;font-size:12px;color:var(--gray)}
 /* Film list */
 /* Film grid — poster cards */
-.ag-film-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:8px}
+.ag-film-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(110px,130px));gap:8px;margin-bottom:8px;justify-content:start}
 .ag-film-item{position:relative;border-radius:8px;overflow:hidden;background:var(--card-a);border:1px solid var(--bdr);cursor:default}
 .ag-film-item.watched-item{opacity:.55}
 .ag-fi-poster{width:100%;aspect-ratio:2/3;object-fit:cover;display:block;background:#1a1a1a}
