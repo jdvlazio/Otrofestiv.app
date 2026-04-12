@@ -199,14 +199,18 @@ body{background:var(--bg);color:var(--white);font-family:"DM Sans",sans-serif;mi
 /* Mi Plan calendar */
 .mplan-wrap{border:1px solid var(--bdr-l);border-radius:var(--r);overflow:hidden;margin-bottom:14px}
 /* ── Week calendar (Festiv layout · Calendly spacing) ── */
-.mplan-wk-outer{overflow:auto;max-height:540px}
+.mplan-wk-outer{overflow:hidden}
 .mplan-wk-outer::-webkit-scrollbar{width:3px;height:3px}
 .mplan-wk-outer::-webkit-scrollbar-thumb{background:var(--bdr)}
-.mplan-wk-inner{display:flex;min-width:480px}
+.mplan-wk-inner{display:flex}
 .mplan-wk-axis{width:44px;flex-shrink:0;position:relative;border-right:1px solid var(--bdr)}
 .mplan-wk-htick{position:absolute;right:6px;font-size:10px;color:var(--gray2);transform:translateY(-50%);white-space:nowrap;line-height:1}
 .mplan-wk-cols{flex:1;display:flex;min-width:0}
-.mplan-wk-col{flex:1;position:relative;border-right:1px solid var(--bdr-l);cursor:pointer;min-width:72px;transition:background .15s}
+.mplan-wk-col{flex:1;position:relative;border-right:1px solid var(--bdr-l);cursor:pointer;min-width:0;transition:background .15s}
+.mplan-nav{display:flex;align-items:center;justify-content:space-between;padding:8px 14px;border-bottom:1px solid var(--bdr)}
+.mplan-nav-btn{background:none;border:1px solid var(--bdr);border-radius:var(--r);color:var(--white);font-size:18px;width:36px;height:36px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .15s}
+.mplan-nav-btn:active{background:var(--card-b)}
+.mplan-nav-lbl{font-family:"Bebas Neue",sans-serif;font-size:18px;letter-spacing:.5px;color:var(--white)}
 .mplan-wk-col:last-child{border-right:none}
 .mplan-wk-col:hover{background:rgba(255,255,255,.015)}
 .mplan-wk-col.wk-active{background:rgba(232,90,30,.03)}
@@ -643,6 +647,7 @@ let savedAgenda=null;
 let lastRemovedSlots=[]; // tracks up to 5 recently removed films
 const MAX_REMEMBERED_SLOTS=5;
 let activeMiPlanDay=null;
+let miPlanViewStart=0; // 0-4, step 1, shows 2 days
 // ─────────────────────────────────────────────────────────────────────────────
 // ⚠️  FIX CRÍTICO — NO REMOVER (Apr 2026)
 // availability debe inicializarse aquí con los 6 días del festival.
@@ -673,6 +678,13 @@ function mplanBlockType(s){
 
 function selectMiPlanDay(idx){
   activeMiPlanDay=idx;
+  // Keep viewStart so selected day stays visible
+  if(idx<miPlanViewStart||idx>=miPlanViewStart+2) miPlanViewStart=Math.min(idx,DAY_KEYS.length-2);
+  renderAgenda();
+}
+function miPlanNav(dir){
+  miPlanViewStart=Math.max(0,Math.min(DAY_KEYS.length-2,miPlanViewStart+dir));
+  if(activeMiPlanDay<miPlanViewStart||activeMiPlanDay>=miPlanViewStart+2) activeMiPlanDay=miPlanViewStart;
   renderAgenda();
 }
 
@@ -695,9 +707,6 @@ function renderMiPlanCalendar(){
   const TOTAL=(EH-SH)*PPH;
   function toPx(min){return(min-SH*60)/60*PPH;}
 
-  const dayShort=['MAR','MIÉ','JUE','VIE','SÁB','DOM'];
-  const dayNums=[14,15,16,17,18,19];
-
   // ── Time axis labels (every hour, on the left) ──
   const axisHtml=Array.from({length:EH-SH+1},(_,k)=>{
     const h=SH+k;
@@ -706,8 +715,22 @@ function renderMiPlanCalendar(){
     return`<div class="mplan-wk-htick" style="top:${top.toFixed(0)}px">${lbl}</div>`;
   }).join('');
 
-  // ── 6 day columns ──
-  const colsHtml=DAY_KEYS.map((day,i)=>{
+  // ── Navigation header ──
+  const vs=miPlanViewStart;
+  const ve=vs+1; // show days vs and ve (2 days)
+  const dayShortAll=['MAR','MIÉ','JUE','VIE','SÁB','DOM'];
+  const dayNumsAll=[14,15,16,17,18,19];
+  const lbl1=`${dayShortAll[vs]} ${dayNumsAll[vs]}`;
+  const lbl2=`${dayShortAll[ve]} ${dayNumsAll[ve]}`;
+  const navHtml=`<div class="mplan-nav">
+    <button class="mplan-nav-btn" onclick="miPlanNav(-1)" ${vs===0?'disabled style="opacity:.3"':''}>◀</button>
+    <div class="mplan-nav-lbl">${lbl1} &nbsp;·&nbsp; ${lbl2}</div>
+    <button class="mplan-nav-btn" onclick="miPlanNav(1)" ${ve>=DAY_KEYS.length-1?'disabled style="opacity:.3"':''}>▶</button>
+  </div>`;
+
+  // ── 2 day columns ──
+  const colsHtml=[vs,ve].map((i)=>{
+    const day=DAY_KEYS[i];
     const dayFilms=schedule.filter(s=>s.day===day).sort((a,b)=>toMin(a.time)-toMin(b.time));
     const isPastDay=nowDayIdx>=0&&i<nowDayIdx;
     const isToday=i===nowDayIdx;
@@ -752,8 +775,8 @@ function renderMiPlanCalendar(){
     const colClass=['mplan-wk-col',isToday?'wk-today':'',isActive?'wk-active':''].filter(Boolean).join(' ');
     return`<div class="${colClass}" style="height:${PHDR+TOTAL}px" onclick="selectMiPlanDay(${i})">
       <div class="mplan-wk-col-hdr">
-        <div class="mplan-wk-col-day">${dayShort[i]}</div>
-        <div class="mplan-wk-col-date${dayFilms.length?' wk-has':''}">${dayNums[i]}</div>
+        <div class="mplan-wk-col-day">${dayShortAll[i]}</div>
+        <div class="mplan-wk-col-date${dayFilms.length?' wk-has':''}">${dayNumsAll[i]}</div>
         ${dayFilms.length?'<div class="mplan-wk-col-dot"></div>':''}
       </div>
       ${gridHtml}${nowHtml}${blocksHtml}
@@ -802,7 +825,7 @@ function renderMiPlanCalendar(){
   }
   listHtml+='</div>';
 
-  return`<div class="mplan-wrap">
+  return navHtml+`<div class="mplan-wrap">
     <div class="mplan-wk-outer">
       <div class="mplan-wk-inner" style="height:${PHDR+TOTAL}px">
         <div class="mplan-wk-axis" style="height:${PHDR+TOTAL}px">${axisHtml}</div>
