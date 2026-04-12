@@ -1603,75 +1603,38 @@ function buildResultHTML(scenarios){
   const sc=scenarios[currentIdx],n=scenarios.length;
   const pending=[...watchlist].filter(t=>!watched.has(t)&&FILMS.some(f=>f.title===t&&!screeningPassed(f)));
   const total=pending.length,ok=sc.schedule.length,bad=sc.excluded.length;
+  const isOptimo=currentIdx===0;
 
-  let html=`<div class="ag-summary">
-    <div class="ag-summary-title">Escenario ${currentIdx+1} de ${n}</div>
-    <div class="ag-summary-text">
-      Puedes ver <span class="ok"><b>${ok}</b></span> de <b>${total}</b> pendientes con funciones futuras.
-      ${bad?`<span class="conflict-label"> · <b>${bad}</b> no entra${bad!==1?'n':''} en este escenario.</span>`:''}
-      ${sc.priorityCost>0?`<div style="margin-top:6px;font-size:11px;color:#e5a020">⭐ Prioridad activa · Máximo con prioridad: <b>${sc.maxWithPriorities}</b> películas (sin prioridad llegarías a <b>${sc.trueMax}</b>)</div>`:''}
-      ${sc.incompatiblePriorities?`<div style="margin-top:6px;font-size:11px;color:#e05050">⚠️ Las películas priorizadas se solapan entre sí — escenarios calculados sin forzar prioridades.</div>`:''}
-    </div>
-    ${n>1?`<div class="ag-nav">
-      <button class="ag-nav-btn" onclick="changeScenario(-1)" ${currentIdx===0?'disabled':''}>‹ Anterior</button>
-      <span class="ag-nav-pos">${currentIdx+1} / ${n}</span>
-      <button class="ag-nav-btn" onclick="changeScenario(1)" ${currentIdx===n-1?'disabled':''}>Siguiente ›</button>
-    </div>`:''}
-    ${(()=>{if(currentIdx===0||n<=1) return '';
-      const prev=scenarios[currentIdx-1].schedule;
-      const curr=sc.schedule;
-      const prevMap=new Map(prev.map(s=>[s._title,s]));
-      const diffs=curr.filter(s=>{const p=prevMap.get(s._title);return p&&(p.day!==s.day||p.time!==s.time);})
-        .map(s=>{const p=prevMap.get(s._title);return s._title.split(' ').slice(0,3).join(' ')+'… '+p.time+'→'+s.time;});
-      return diffs.length?`<div style="font-size:10px;color:var(--gray);margin-top:4px;padding:4px 8px;background:rgba(255,255,255,.03);border-radius:5px">vs anterior: ${diffs.join(' · ')}</div>`:'';
-    })()}
-    <button class="ag-save-btn" onclick="saveCurrentScenario()">◆ Elegir Plan</button>
-  </div>`;
+  // ── Header: Plan óptimo vs Variación ──
+  const planLabel=isOptimo?'◆ Plan óptimo':`Variación ${currentIdx}`;
 
-  if(sc.excluded.length){
-    html+=`<div class="ag-conflicts"><div class="ag-conflicts-title">↩ No incluidas en este escenario</div>
-      ${sc.excluded.map(t=>{
-        const screens=FILMS.filter(f=>f.title===t&&!isScreeningBlocked(f)&&!screeningPassed(f));
-        // Mejora 4: swap — para cada función de la excluida, qué películas desplazaría
-        const swapOptions=screens.map(s=>{
-          const displaced=sc.schedule.filter(chosen=>screensConflict(chosen,s)).map(c=>c._title);
-          return{screen:s,displaced};
-        }).filter(o=>o.displaced.length>=1&&o.displaced.length<=2);
-        const trulyfits=screens.some(s=>!sc.schedule.some(chosen=>screensConflict(chosen,s)));
-        let fitsHtml='';
-        if(swapOptions.length){
-          fitsHtml=`<div style="margin-top:5px;font-size:10px">
-            <span style="color:var(--gray2);display:block;margin-bottom:3px">Cabe si desplazas:</span>
-            <div style="display:flex;flex-wrap:wrap;gap:4px">
-              ${swapOptions.map(o=>o.displaced.map(d=>`<button data-ex="${encodeURIComponent(t)}" data-day="${o.screen.day}" data-time="${o.screen.time}" data-dis="${encodeURIComponent(d)}" onclick="swapFilm(decodeURIComponent(this.dataset.ex),this.dataset.day,this.dataset.time,decodeURIComponent(this.dataset.dis));event.stopPropagation()" style="background:rgba(232,90,30,.12);border:1px solid rgba(232,90,30,.35);color:var(--orange);font-size:10px;padding:3px 8px;border-radius:5px;cursor:pointer;line-height:1.3">⇄ ${d.length>20?d.slice(0,18)+'…':d}</button>`).join('')).join('')}
-            </div>
-          </div>`;
-        } else if(screens.length){
-          fitsHtml=`<div style="margin-top:3px;font-size:10px;color:var(--gray2)">Solapa con funciones de este escenario</div>`;
-        } else {
-          fitsHtml=`<div style="margin-top:3px;font-size:10px;color:var(--gray2)">Sin funciones futuras disponibles</div>`;
-        }
-        const isPrio=prioritized.has(t);
-        const prioCount=prioritized.size;
-        const atLimit=!isPrio&&prioCount>=PRIO_LIMIT;
-        const prioLabel=isPrio?'✕ Sin prioridad':atLimit?`★ ${PRIO_LIMIT}/${PRIO_LIMIT}`:'⭐ Priorizar';
-        const prioAction=isPrio?`togglePriority('${t.replace(/'/g,"\'")}')`:atLimit?`showToast('Máximo ${PRIO_LIMIT} prioridades activas','warn')`:`togglePriority('${t.replace(/'/g,"\'")}')`;
-        {const _ic2=FILMS.find(f=>f.title===t)?.is_cortos;const _ep=getPosterSrc(t,_ic2);
-        const _eph=_ep?`<img class="lb-poster" src="${_ep}" loading="lazy" onerror="this.outerHTML='<div class=lb-poster-ph>🎬</div>'" alt="">`:'<div class="lb-poster-ph">🎬</div>';
-        return`<div class="ag-conflict-item">
-          ${_eph}
-          <div class="ag-conflict-info">
-            ${isPrio?'<span style="color:var(--orange);font-size:10px;font-weight:700">★ PRIORIDAD · </span>':''}
-            <strong>${(()=>{const{displayTitle,progSuffix}=parseProgramTitle(t);return displayTitle+(progSuffix?` <span style="color:var(--orange);font-size:10px;font-weight:700">${progSuffix}</span>`:'');})()}</strong>
-            ${fitsHtml}          </div>
-          <button class="ag-prioritize-btn${isPrio?' active':''}${atLimit?' disabled':''}" onclick="${prioAction}">
-            ${prioLabel}
-          </button>
-        </div>`;}
-      }).join('')}
+  // ── Navigation ──
+  let navHtml='';
+  if(n>1){
+    const prevLabel=currentIdx<=1?'◆ Plan óptimo':`Variación ${currentIdx-1}`;
+    const nextLabel=currentIdx===0?'Variación 1':`Variación ${currentIdx+1}`;
+    navHtml=`<div class="ag-nav" style="margin-top:8px">
+      <button class="ag-nav-btn" onclick="changeScenario(-1)" ${currentIdx===0?'disabled':''}>‹ ${prevLabel}</button>
+      <button class="ag-nav-btn" onclick="changeScenario(1)" ${currentIdx===n-1?'disabled':''}>${nextLabel} ›</button>
     </div>`;
   }
 
+  let html=`<div class="ag-summary">
+    <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap">
+      <div>
+        <div class="ag-summary-title" style="font-size:${isOptimo?'15px':'13px'};color:${isOptimo?'var(--white)':'var(--gray)'}">${planLabel}</div>
+        <div class="ag-summary-text" style="margin-top:3px">
+          <span class="ok"><b>${ok}</b></span> de <b>${total}</b> películas
+          ${bad?`<span class="conflict-label"> · <b>${bad}</b> con ajustes</span>`:''}
+        </div>
+        ${sc.incompatiblePriorities?`<div style="margin-top:5px;font-size:11px;color:#e05050">Las prioridades se solapan entre sí — plan calculado sin forzarlas.</div>`:''}
+      </div>
+      <button class="ag-save-btn" onclick="saveCurrentScenario()" style="flex-shrink:0">◆ Elegir Plan</button>
+    </div>
+    ${navHtml}
+  </div>`;
+
+  // ── Film list by day ──
   const byDay={};
   sc.schedule.forEach(s=>{if(!byDay[s.day])byDay[s.day]=[];byDay[s.day].push(s);});
   DAY_KEYS.forEach(day=>{
@@ -1682,6 +1645,52 @@ function buildResultHTML(scenarios){
       html+=mkAgendaRow(s,'scenario');
     });
   });
+
+  // ── Con ajustes ──
+  if(sc.excluded.length){
+    html+=`<div class="ag-conflicts">
+      <div class="ag-conflicts-title" style="color:var(--gray);font-size:10px;letter-spacing:.8px">CON AJUSTES · ${sc.excluded.length} película${sc.excluded.length!==1?'s':''}</div>
+      ${sc.excluded.map(t=>{
+        const screens=FILMS.filter(f=>f.title===t&&!isScreeningBlocked(f)&&!screeningPassed(f));
+        const swapOptions=screens.map(s=>{
+          const displaced=sc.schedule.filter(chosen=>screensConflict(chosen,s)).map(c=>c._title);
+          return{screen:s,displaced};
+        }).filter(o=>o.displaced.length>=1&&o.displaced.length<=2);
+        let fitsHtml='';
+        if(swapOptions.length){
+          fitsHtml=`<div style="margin-top:5px;font-size:10px">
+            <span style="color:var(--gray2);display:block;margin-bottom:3px">Incluirla desplaza:</span>
+            <div style="display:flex;flex-wrap:wrap;gap:4px">
+              ${swapOptions.map(o=>o.displaced.map(d=>`<button data-ex="${encodeURIComponent(t)}" data-day="${o.screen.day}" data-time="${o.screen.time}" data-dis="${encodeURIComponent(d)}" onclick="swapFilm(decodeURIComponent(this.dataset.ex),this.dataset.day,this.dataset.time,decodeURIComponent(this.dataset.dis));event.stopPropagation()" style="background:rgba(232,90,30,.1);border:1px solid rgba(232,90,30,.3);color:var(--orange);font-size:10px;padding:3px 8px;border-radius:5px;cursor:pointer;line-height:1.3">⇄ ${d.length>20?d.slice(0,18)+'…':d}</button>`).join('')).join('')}
+            </div>
+          </div>`;
+        } else if(screens.length){
+          fitsHtml=`<div style="margin-top:3px;font-size:10px;color:var(--gray2)">Solapa con todas las funciones de este plan</div>`;
+        } else {
+          fitsHtml=`<div style="margin-top:3px;font-size:10px;color:var(--gray2)">Sin funciones futuras disponibles</div>`;
+        }
+        const isPrio=prioritized.has(t);
+        const atLimit=!isPrio&&prioritized.size>=PRIO_LIMIT;
+        const prioLabel=isPrio?'✕ Sin prioridad':atLimit?`★ ${PRIO_LIMIT}/${PRIO_LIMIT}`:'⭐ Priorizar';
+        const prioAction=isPrio?`togglePriority('${t.replace(/'/g,"\\'")}')`:atLimit?`showToast('Máximo ${PRIO_LIMIT} prioridades activas','warn')`:`togglePriority('${t.replace(/'/g,"\\'")}')`;
+        const _ic2=FILMS.find(f=>f.title===t)?.is_cortos;
+        const _ep=getPosterSrc(t,_ic2);
+        const _eph=_ep?`<img class="lb-poster" src="${_ep}" loading="lazy" onerror="this.outerHTML='<div class=lb-poster-ph>🎬</div>'" alt="">`:'<div class="lb-poster-ph">🎬</div>';
+        return`<div class="ag-conflict-item">
+          ${_eph}
+          <div class="ag-conflict-info">
+            ${isPrio?'<span style="color:var(--orange);font-size:10px;font-weight:700">★ PRIORIDAD · </span>':''}
+            <strong>${(()=>{const{displayTitle,progSuffix}=parseProgramTitle(t);return displayTitle+(progSuffix?` <span style="color:var(--orange);font-size:10px;font-weight:700">${progSuffix}</span>`:'');})()}</strong>
+            ${fitsHtml}
+          </div>
+          <button class="ag-prioritize-btn${isPrio?' active':''}${atLimit?' disabled':''}" onclick="${prioAction}">
+            ${prioLabel}
+          </button>
+        </div>`;
+      }).join('')}
+    </div>`;
+  }
+
   return html;
 }
 
