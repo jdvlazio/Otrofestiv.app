@@ -463,6 +463,17 @@ body{background:var(--bg);color:var(--white);font-family:"DM Sans",sans-serif;mi
 </style>
 </head>
 <body>
+<script>
+(function(){
+  var V='ficci65_appv', CURRENT='6';
+  var stored=localStorage.getItem(V);
+  if(stored!==CURRENT){
+    localStorage.setItem(V,CURRENT);
+    var url=location.href.split('?')[0]+'?v='+CURRENT;
+    location.replace(url);
+  }
+})();
+</script>
 <div class="hdr">
   <img class="hdr-logo" src="https://ficcifestival.com/sites/default/files/2026-02/logo-ficci65_2.png"
     onerror="this.style.display='none';document.getElementById('hdr-fallback').style.display='block'" alt="FICCI 65">
