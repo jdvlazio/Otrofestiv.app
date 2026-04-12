@@ -537,6 +537,7 @@ let watched=new Set();
 let prioritized=new Set();
 const PRIO_LIMIT=3;
 let savedAgenda=null;
+let lastRemovedSlot=null; // slot reservado tras quitar una película de la agenda
 const DAY_KEYS=['Martes','Miércoles','Jueves','Viernes','Sábado','Domingo'];
 let availability={Martes:{blocks:[]},Miércoles:{blocks:[]},Jueves:{blocks:[]},Viernes:{blocks:[]},Sábado:{blocks:[]},Domingo:{blocks:[]}};
 
@@ -673,11 +674,14 @@ function addFromSearch(title){
 function removeFromAgenda(title){
   if(!savedAgenda) return;
   if(!confirm(`Quitar "${title.length>40?title.slice(0,38)+'…':title}" de tu agenda guardada?`)) return;
+  // Guardar el slot exacto antes de borrar
+  const removed=savedAgenda.schedule.find(s=>s._title===title);
+  if(removed) lastRemovedSlot={...removed};
   savedAgenda.schedule=savedAgenda.schedule.filter(s=>s._title!==title);
   if(!savedAgenda.schedule.length) savedAgenda=null;
   saveSavedAgenda();
   renderAgenda();
-  showToast('✕ Quitada de la agenda','info');
+  showToast('✕ Quitada — aparece en sugerencias para restaurar','info');
 }
 function addSuggestion(title,day,time){
   // 1. Add to watchlist if not already there
@@ -693,7 +697,9 @@ function addSuggestion(title,day,time){
       saveSavedAgenda();
     }
   }
-  // 3. Re-render saved agenda section (suggestions will disappear automatically)
+  // 3. Si es la película del slot reservado, liberar el slot
+  if(lastRemovedSlot&&lastRemovedSlot._title===title) lastRemovedSlot=null;
+  // 4. Re-render
   renderAgenda();
 }
 function closeSearch(){setTimeout(()=>{const r=document.getElementById('ag-search-results');if(r) r.classList.remove('open');},200);}
@@ -960,11 +966,23 @@ function getSuggestions(){
   const saved=savedAgenda.schedule.filter(s=>!screeningPassed(s));
   if(!saved.length) return{};
 
-  // Excluir: ya en agenda, ya vistas, ya en watchlist (las conoces)
-  // Sugerir: cualquier película del festival que quepa en un hueco
   const savedTitles=new Set(saved.map(s=>s._title));
   const byDay={};
-  const seenTitles=new Set([...savedTitles,...watched,...watchlist]);
+
+  // ── Slot reservado: prioridad absoluta — aparece primero, misma hora ──
+  if(lastRemovedSlot&&!savedTitles.has(lastRemovedSlot._title)&&!screeningPassed(lastRemovedSlot)){
+    const rs=lastRemovedSlot;
+    const day=rs.day;
+    if(!byDay[day]) byDay[day]=[];
+    byDay[day].unshift({...rs,gapCtx:'← Restaurar al mismo horario',_isRestored:true});
+  }
+
+  // Excluir siempre: ya en agenda o ya vistas
+  const hardExclude=new Set([...savedTitles,...watched]);
+  // Para descubrimiento (Bloque 1): también excluir watchlist (ya las conoces)
+  const seenDiscover=new Set([...hardExclude,...watchlist]);
+  // Para recuperación (Bloque 2): solo excluir hardExclude
+  const seenRecovery=new Set([...hardExclude]);
 
   DAY_KEYS.forEach(day=>{
     const dayItems=saved.filter(s=>s.day===day).sort((a,b)=>toMin(a.time)-toMin(b.time));
@@ -991,27 +1009,28 @@ function getSuggestions(){
       if(lastEnd<22*60)
         slots.push({start:lastEnd,end:23*60,ctx:`Después de ${(last._title||'').split(' ').slice(0,3).join(' ')}…`});
     }
-    if(!slots.length) return;
 
-    // Escanear TODAS las películas del festival que quepan en algún hueco
-    FILMS.forEach(f=>{
-      if(seenTitles.has(f.title)||f.is_cortos||screeningPassed(f)||f.day!==day||isScreeningBlocked(f)) return;
-      const fStart=toMin(f.time),fEnd=fStart+parseDur(f.duration);
-      const slot=slots.find(sl=>fStart>=sl.start&&fEnd<=sl.end&&fEnd-fStart>=20);
-      if(slot){
-        seenTitles.add(f.title);
-        if(!byDay[day]) byDay[day]=[];
-        byDay[day].push({...f,gapCtx:slot.ctx});
-      }
-    });
+    // Bloque 1 — Descubrimiento: películas del festival que quepan en huecos
+    if(slots.length){
+      FILMS.forEach(f=>{
+        if(seenDiscover.has(f.title)||f.is_cortos||screeningPassed(f)||f.day!==day||isScreeningBlocked(f)) return;
+        const fStart=toMin(f.time),fEnd=fStart+parseDur(f.duration);
+        const slot=slots.find(sl=>fStart>=sl.start&&fEnd<=sl.end&&fEnd-fStart>=20);
+        if(slot){
+          seenDiscover.add(f.title);seenRecovery.add(f.title);
+          if(!byDay[day]) byDay[day]=[];
+          byDay[day].push({...f,gapCtx:slot.ctx});
+        }
+      });
+    }
 
-    // Añadir al final: watchlist films removed from agenda that fit (no conflict)
-    [...watchlist].filter(t=>!savedTitles.has(t)&&!watched.has(t)).forEach(t=>{
+    // Bloque 2 — Recuperación: watchlist no en agenda, sin conflicto con lo guardado
+    [...watchlist].filter(t=>!seenRecovery.has(t)).forEach(t=>{
       FILMS.filter(f=>f.title===t&&f.day===day&&!screeningPassed(f)&&!isScreeningBlocked(f)).forEach(f=>{
-        if(seenTitles.has(f.title)) return;
+        if(seenRecovery.has(f.title)) return;
         const noConflict=!saved.some(s=>screensConflict(s,f));
         if(noConflict){
-          seenTitles.add(f.title);
+          seenRecovery.add(f.title);seenDiscover.add(f.title);
           if(!byDay[day]) byDay[day]=[];
           byDay[day].push({...f,gapCtx:'De tu lista — sin conflicto'});
         }
@@ -1022,16 +1041,35 @@ function getSuggestions(){
 }
 
 // ── RENDER FILM LIST ──
+// Utility: extraer displayTitle y progSuffix de cualquier título de programa
+function parseProgramTitle(t){
+  let displayTitle=t, progSuffix='';
+  const f=FILMS.find(fi=>fi.title===t);
+  if(f?.is_cortos){
+    if(t.startsWith('Prog.')){
+      const m=t.match(/^(Prog\.[^—–]+)\s*[—–]\s*(.+)$/);
+      if(m){displayTitle=m[2].trim();progSuffix=m[1].trim();}
+    } else {
+      const m=t.match(/^(.+?)\s*[—–]\s*(Prog\..*)$/);
+      if(m){displayTitle=m[1];progSuffix=m[2];}
+    }
+    if(progSuffix&&!/\d/.test(progSuffix)) progSuffix='';
+  }
+  return{displayTitle,progSuffix};
+}
+
 function renderPrioStrip(){
   if(!prioritized.size) return'';
   const chips=[...prioritized].map(t=>{
-    const p=getPosterSrc(t,FILMS.find(f=>f.title===t)?.is_cortos);
-    const img=p?`<img class="prio-chip-poster" src="${p}" loading="lazy" style="${FILMS.find(f=>f.title===t)?.is_cortos?'object-fit:contain;background:#111':''}" onerror="this.outerHTML='<div class=prio-chip-ph>★</div>'" alt="">`:'<div class="prio-chip-ph">★</div>';
-    const short=t.length>18?t.slice(0,16)+'…':t;
+    const f=FILMS.find(fi=>fi.title===t);
+    const p=getPosterSrc(t,f?.is_cortos);
+    const img=p?`<img class="prio-chip-poster" src="${p}" loading="lazy" style="${f?.is_cortos?'object-fit:contain;background:#111':''}" onerror="this.outerHTML='<div class=prio-chip-ph>★</div>'" alt="">`:'<div class="prio-chip-ph">★</div>';
+    const{displayTitle,progSuffix}=parseProgramTitle(t);
+    const short=displayTitle.length>16?displayTitle.slice(0,14)+'…':displayTitle;
     return`<div class="prio-chip">
       ${img}
       <button class="prio-chip-rm" data-prio-title="${t.replace(/"/g,'&quot;')}" onclick="event.stopPropagation();togglePriority(this.dataset.prioTitle)" title="Quitar prioridad">✕</button>
-      <div class="prio-chip-title">${short}</div>
+      <div class="prio-chip-title">${short}${progSuffix?`<span style="color:var(--orange);display:block;font-size:8px;margin-top:1px">${progSuffix}</span>`:''}</div>
     </div>`;
   }).join('');
   return`<div class="prio-strip">
@@ -1209,7 +1247,7 @@ function renderSavedAgendaHTML(){
 
   // Suggestions grouped by day
   const suggsByDay=getSuggestions();
-  const suggDays=Object.keys(suggsByDay).filter(d=>suggsByDay[d].length>0);
+  const suggDays=DAY_KEYS.filter(d=>suggsByDay[d]&&suggsByDay[d].length>0);
   if(suggDays.length){
     html+=`<div style="margin-top:16px;font-size:10px;color:var(--gray);text-transform:uppercase;letter-spacing:1px;font-weight:600;margin-bottom:6px">💡 Entran en tu plan</div>`;
     suggDays.forEach(day=>{
@@ -1226,7 +1264,7 @@ function renderSavedAgendaHTML(){
             <div class="suggestion-meta">${f.flags||''} ${f.section||''} · ${vc2.ico} ${vc2.short}${sl?' · '+sl:''} · ${f.duration}</div>
             ${f.gapCtx?`<div style="font-size:9px;color:var(--gray);margin-top:2px;font-style:italic">${f.gapCtx}</div>`:''}
           </div>
-          <button class="suggestion-add" onclick="addSuggestion('${f.title.replace(/'/g,"\'")}','${f.day}','${f.time}')">＋ Añadir</button>
+          <button class="suggestion-add" onclick="addSuggestion('${f.title.replace(/'/g,"\'")}','${f.day}','${f.time}')" style="${f._isRestored?'border-color:var(--orange);color:var(--orange);background:rgba(232,90,30,.1)':''}">\n            ${f._isRestored?'← Restaurar':'＋ Añadir'}\n          </button>
         </div>`;}
       }).join('');
     });
@@ -1340,7 +1378,7 @@ function buildResultHTML(scenarios){
           ${_eph}
           <div class="ag-conflict-info">
             ${isPrio?'<span style="color:var(--orange);font-size:10px;font-weight:700">★ PRIORIDAD · </span>':''}
-            <strong>${t}</strong><br>
+            <strong>${(()=>{const{displayTitle,progSuffix}=parseProgramTitle(t);return displayTitle+(progSuffix?` <span style="color:var(--orange);font-size:10px;font-weight:700">${progSuffix}</span>`:'');})()}</strong><br>
             <s${fitsHtml}          </div>
           <button class="ag-prioritize-btn${isPrio?' active':''}${atLimit?' disabled':''}" onclick="${prioAction}">
             ${prioLabel}
@@ -1519,7 +1557,11 @@ function renderAgenda(){
         }).join('')}
         ${prioritized.size>0?`<div class="prio-reminder">
           <div class="prio-reminder-title">★ Prioridades activas</div>
-          <div>${[...prioritized].map(t=>`<span class="prio-pill" data-prio-title="${t.replace(/"/g,'&quot;')}" onclick="event.stopPropagation();togglePriority(this.dataset.prioTitle)">★ ${t.length>22?t.slice(0,20)+'…':t} <span class="prio-pill-rm">✕</span></span>`).join('')}</div>
+          <div>${[...prioritized].map(t=>{
+            const{displayTitle,progSuffix}=parseProgramTitle(t);
+            const label=displayTitle.length>20?displayTitle.slice(0,18)+'…':displayTitle;
+            return`<span class="prio-pill" data-prio-title="${t.replace(/"/g,'&quot;')}" onclick="event.stopPropagation();togglePriority(this.dataset.prioTitle)">★ ${label}${progSuffix?` <span style="color:var(--orange);font-size:9px">${progSuffix}</span>`:''} <span class="prio-pill-rm">✕</span></span>`;
+          }).join('')}</div>
         </div>`:''}
         <button class="av-calc-btn" onclick="runCalc()" ${!pending.length?'disabled':''}>
           Calcular escenarios${!pending.length?' (sin pendientes)':''}
