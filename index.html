@@ -2228,5 +2228,11 @@ function render(){
 loadState();updateAgTab();render();
 document.addEventListener('click',e=>{if(!e.target.closest('.fdr-wrap')) closeDropdowns();});
 </script>
+<script>
+if('serviceWorker' in navigator){
+  navigator.serviceWorker.register('/FICCI_2026/sw.js')
+    .catch(function(err){console.warn('SW error:',err)});
+}
+</script>
 </body>
 </html>
