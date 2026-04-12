@@ -215,14 +215,18 @@ body{background:var(--bg);color:var(--white);font-family:"DM Sans",sans-serif;mi
 .saved-check:hover{border-color:var(--orange);color:var(--orange)}
 .travel-warn{font-size:10px;color:#e5a020;display:flex;align-items:center;gap:4px;padding:3px 8px;background:rgba(229,160,32,.07);border-radius:5px;margin:2px 0}
 /* Suggestions */
-.suggestion-item{display:flex;align-items:center;gap:10px;padding:8px 10px;background:rgba(255,255,255,.03);border:1px solid var(--bdr-l);border-radius:8px;margin-bottom:5px;opacity:.8}
+.suggestion-wrap{background:rgba(229,160,32,.06);border:1px solid rgba(229,160,32,.25);border-radius:var(--r);padding:10px 12px;margin-top:16px}
+.suggestion-header{font-size:10px;font-weight:700;color:#e5a020;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px;display:flex;align-items:center;gap:5px}
+.suggestion-day-lbl{font-size:10px;color:#e5a020;font-weight:700;letter-spacing:.5px;text-transform:uppercase;margin:8px 0 4px;padding-left:2px}
+.suggestion-item{display:flex;align-items:center;gap:10px;padding:7px 0;border-bottom:1px solid rgba(229,160,32,.1);opacity:.9}
+.suggestion-item:last-child{border-bottom:none}
 .suggestion-item:hover{opacity:1}
-.suggestion-time{font-family:"Bebas Neue",sans-serif;font-size:16px;color:var(--gray);letter-spacing:1px;flex-shrink:0;min-width:46px}
+.suggestion-time{font-family:"Bebas Neue",sans-serif;font-size:16px;color:#e5a020;letter-spacing:1px;flex-shrink:0;min-width:46px}
 .suggestion-info{flex:1;min-width:0}
-.suggestion-title{font-size:12px;color:var(--gray);font-weight:500}
+.suggestion-title{font-size:12px;color:var(--white);font-weight:500}
 .suggestion-meta{font-size:10px;color:var(--gray2);margin-top:1px}
-.suggestion-add{background:none;border:1px solid var(--gray2);border-radius:20px;color:var(--gray2);font-size:10px;padding:2px 8px;cursor:pointer;font-family:"DM Sans",sans-serif;transition:all .15s;white-space:nowrap;flex-shrink:0}
-.suggestion-add:hover{border-color:var(--orange);color:var(--orange)}
+.suggestion-add{background:none;border:1px solid rgba(229,160,32,.4);border-radius:20px;color:#e5a020;font-size:10px;padding:2px 8px;cursor:pointer;font-family:"DM Sans",sans-serif;transition:all .15s;white-space:nowrap;flex-shrink:0}
+.suggestion-add:hover{background:rgba(229,160,32,.15);border-color:#e5a020}
 /* Search */
 .ag-search-wrap{position:relative;margin-bottom:10px}
 .ag-search{width:100%;background:var(--card-a);border:1px solid var(--bdr);border-radius:var(--r);color:var(--white);font-size:14px;padding:11px 14px 11px 38px;font-family:"DM Sans",sans-serif;transition:border-color .15s}
@@ -538,6 +542,7 @@ let prioritized=new Set();
 const PRIO_LIMIT=3;
 let savedAgenda=null;
 let lastRemovedSlot=null; // slot reservado tras quitar una película de la agenda
+let lastRemovedInSession=false; // true solo en la sesión activa, false tras refresh
 const DAY_KEYS=['Martes','Miércoles','Jueves','Viernes','Sábado','Domingo'];
 let availability={Martes:{blocks:[]},Miércoles:{blocks:[]},Jueves:{blocks:[]},Viernes:{blocks:[]},Sábado:{blocks:[]},Domingo:{blocks:[]}};
 
@@ -548,6 +553,8 @@ function loadState(){
     const av=localStorage.getItem('ficci65_av3'); if(av){const p=JSON.parse(av);DAY_KEYS.forEach(d=>{if(p[d]) availability[d]=p[d];});}
     const sa=localStorage.getItem('ficci65_saved'); if(sa) savedAgenda=JSON.parse(sa);
     const pr=localStorage.getItem('ficci65_prio'); if(pr) prioritized=new Set(JSON.parse(pr));
+    // Restore reserved slot — persists across refresh, button shows "＋ Añadir" (not "← Restaurar")
+    const rs=localStorage.getItem('ficci65_lastslot'); if(rs) lastRemovedSlot=JSON.parse(rs);
   }catch(e){}
 }
 function saveWL(){try{localStorage.setItem('ficci65_wl',JSON.stringify([...watchlist]));}catch(e){}}
@@ -555,6 +562,7 @@ function saveWatched(){try{localStorage.setItem('ficci65_watched',JSON.stringify
 function saveAV(){try{localStorage.setItem('ficci65_av3',JSON.stringify(availability));}catch(e){}}
 function saveSavedAgenda(){try{localStorage.setItem('ficci65_saved',JSON.stringify(savedAgenda));}catch(e){}}
 function savePrio(){try{localStorage.setItem('ficci65_prio',JSON.stringify([...prioritized]));}catch(e){}}
+function saveLastSlot(){try{if(lastRemovedSlot)localStorage.setItem('ficci65_lastslot',JSON.stringify(lastRemovedSlot));else localStorage.removeItem('ficci65_lastslot');}catch(e){}}
 
 function pendingCount(){return[...watchlist].filter(t=>!watched.has(t)&&!screeningPassed({day:'x',time:'00:00'})).length;}
 function updateAgTab(){
@@ -676,7 +684,8 @@ function removeFromAgenda(title){
   if(!confirm(`Quitar "${title.length>40?title.slice(0,38)+'…':title}" de tu agenda guardada?`)) return;
   // Guardar el slot exacto antes de borrar
   const removed=savedAgenda.schedule.find(s=>s._title===title);
-  if(removed) lastRemovedSlot={...removed};
+  if(removed){lastRemovedSlot={...removed};lastRemovedInSession=true;}
+  saveLastSlot();
   savedAgenda.schedule=savedAgenda.schedule.filter(s=>s._title!==title);
   if(!savedAgenda.schedule.length) savedAgenda=null;
   saveSavedAgenda();
@@ -698,7 +707,7 @@ function addSuggestion(title,day,time){
     }
   }
   // 3. Si es la película del slot reservado, liberar el slot
-  if(lastRemovedSlot&&lastRemovedSlot._title===title) lastRemovedSlot=null;
+  if(lastRemovedSlot&&lastRemovedSlot._title===title){lastRemovedSlot=null;saveLastSlot();}
   // 4. Re-render
   renderAgenda();
 }
@@ -979,7 +988,7 @@ function getSuggestions(){
     const rs=lastRemovedSlot;
     const day=rs.day;
     if(!byDay[day]) byDay[day]=[];
-    byDay[day].unshift({...rs,gapCtx:'← Restaurar al mismo horario',_isRestored:true});
+    byDay[day].unshift({...rs,gapCtx:lastRemovedInSession?'← Restaurar al mismo horario':'Slot reservado — mismo horario',_isRestored:lastRemovedInSession});
   }
 
   // Excluir siempre: ya en agenda o ya vistas
@@ -1164,7 +1173,6 @@ function renderSavedAgendaHTML(){
   const byDay={};
   futureItems.forEach(s=>{if(!byDay[s.day])byDay[s.day]=[];byDay[s.day].push(s);});
 
-  // Progress bar
   const festDays=['Martes','Miércoles','Jueves','Viernes','Sábado','Domingo'];
   const today=new Date().toISOString().slice(0,10);
   const dayIdx=festDays.findIndex(d=>FESTIVAL_DATES[d]===today);
@@ -1175,6 +1183,7 @@ function renderSavedAgendaHTML(){
     <div class="festival-progress-text"><span>Día <b>${currentDayNum}</b> de 6</span><span style="color:var(--orange)">✓ ${viewedCount} ${viewedCount===1?'vista':'vistas'}</span></div>
     <div class="festival-progress-bar"><div class="festival-progress-fill" style="width:${progressPct}%"></div></div>
   </div>`:'';
+
   let html=`<div class="saved-agenda">
     ${progressBar}
     <div class="saved-agenda-header">
@@ -1182,7 +1191,6 @@ function renderSavedAgendaHTML(){
       <button class="saved-agenda-clear" onclick="exportICS()" style="color:var(--orange)">📅 .ics</button> <button class="saved-agenda-clear" onclick="clearSavedAgenda()">✕ Borrar</button>
     </div>`;
 
-  // Archive (past + watched)
   if(archive.length){
     const archByDay={};
     archive.forEach(s=>{if(!archByDay[s.day])archByDay[s.day]=[];archByDay[s.day].push(s);});
@@ -1195,26 +1203,24 @@ function renderSavedAgendaHTML(){
         <div class="saved-day-lbl">${DAY_SHORT[day]}</div>
         ${archByDay[day].map(s=>{
           const vc2=vcfg(s.venue),sl=sala(s.venue);
-          const isDone=watched.has(s._title);
           return`<div class="saved-item done">
             <div class="saved-time">${s.time}</div>
             <div class="saved-info">
               <div class="saved-title">${s._title}</div>
               <div class="saved-venue">${vc2.ico} ${vc2.short}${sl?' · '+sl:''}</div>
             </div>
-            <button class="saved-check done" onclick="toggleWatched('${s._title.replace(/'/g,"\'")}',event)" title="Desmarcar">↩</button>
+            <button class="saved-check done" data-wt="${(s._title||'').replace(/"/g,'&quot;')}" onclick="toggleWatched(this.dataset.wt,event)" title="Desmarcar">↩</button>
           </div>`;
         }).join('')}`).join('')}
     </div>`;
   }
 
-  // Today
   if(todayItems.length){
     html+=`<div class="today-banner">HOY — Funciones pendientes</div>`;
     todayItems.forEach((s,i)=>{
       if(i>0){const warn=travelWarn(todayItems[i-1],s);if(warn) html+=`<div class="travel-warn">${warn}</div>`;}
       const vc2=vcfg(s.venue),sl=sala(s.venue);
-      {const t=s._title||'';const _ic=FILMS.find(f=>f.title===t)?.is_cortos;const _p=getPosterSrc(t,_ic);
+      const t=s._title||'';const _ic=FILMS.find(f=>f.title===t)?.is_cortos;const _p=getPosterSrc(t,_ic);
       const _ph=_p?`<img class="lb-poster" src="${_p}" loading="lazy" onerror="this.outerHTML='<div class=lb-poster-ph>🎬</div>'" alt="">`:'<div class="lb-poster-ph">🎬</div>';
       html+=`<div class="saved-item" data-title="${(s._title||'').replace(/"/g,'&quot;')}">
         ${_ph}
@@ -1223,19 +1229,18 @@ function renderSavedAgendaHTML(){
           <div class="saved-title">${s._title}</div>
           <div class="saved-venue">${vc2.ico} ${vc2.short}${sl?' · '+sl:''}${s.duration?' · '+s.duration:''}</div>
         </div>
-        <button class="saved-check" onclick="toggleWatched('${(s._title||'').replace(/'/g,"\'")}',event)">○</button>
-          <button data-rmtitle="${(s._title||'').replace(/"/g,'&quot;')}" onclick="removeFromAgenda(this.dataset.rmtitle)" style="background:rgba(224,80,80,.08);border:1px solid rgba(224,80,80,.25);border-radius:5px;color:#e05050;font-size:10px;padding:2px 6px;cursor:pointer;margin-top:3px" title="Quitar de agenda">✕</button>
-      </div>`;}
+        <button class="saved-check" data-wt="${(s._title||'').replace(/"/g,'&quot;')}" onclick="toggleWatched(this.dataset.wt,event)">○</button>
+        <button class="ag-fi-btn del" data-rmt="${(s._title||'').replace(/"/g,'&quot;')}" onclick="removeFromAgenda(this.dataset.rmt);event.stopPropagation()" title="Quitar de agenda">✕</button>
+      </div>`;
     });
   }
 
-  // Future days
   DAY_KEYS.filter(d=>byDay[d]).forEach(day=>{
     html+=`<div class="saved-day-lbl">${DAY_SHORT[day]}</div>`;
     byDay[day].forEach((s,i)=>{
       if(i>0){const warn=travelWarn(byDay[day][i-1],s);if(warn) html+=`<div class="travel-warn">${warn}</div>`;}
       const vc2=vcfg(s.venue),sl=sala(s.venue);
-      {const t=s._title||'';const _ic=FILMS.find(f=>f.title===t)?.is_cortos;const _p=getPosterSrc(t,_ic);
+      const t=s._title||'';const _ic=FILMS.find(f=>f.title===t)?.is_cortos;const _p=getPosterSrc(t,_ic);
       const _ph=_p?`<img class="lb-poster" src="${_p}" loading="lazy" onerror="this.outerHTML='<div class=lb-poster-ph>🎬</div>'" alt="">`:'<div class="lb-poster-ph">🎬</div>';
       html+=`<div class="saved-item" data-title="${(s._title||'').replace(/"/g,'&quot;')}">
         ${_ph}
@@ -1244,22 +1249,22 @@ function renderSavedAgendaHTML(){
           <div class="saved-title">${s._title}</div>
           <div class="saved-venue">${vc2.ico} ${vc2.short}${sl?' · '+sl:''}${s.duration?' · '+s.duration:''}</div>
         </div>
-        <button class="saved-check" onclick="toggleWatched('${(s._title||'').replace(/'/g,"\'")}',event)">○</button>
-          <button data-rmtitle="${(s._title||'').replace(/"/g,'&quot;')}" onclick="removeFromAgenda(this.dataset.rmtitle)" style="background:rgba(224,80,80,.08);border:1px solid rgba(224,80,80,.25);border-radius:5px;color:#e05050;font-size:10px;padding:2px 6px;cursor:pointer;margin-top:3px" title="Quitar de agenda">✕</button>
-      </div>`;}
+        <button class="saved-check" data-wt="${(s._title||'').replace(/"/g,'&quot;')}" onclick="toggleWatched(this.dataset.wt,event)">○</button>
+        <button class="ag-fi-btn del" data-rmt="${(s._title||'').replace(/"/g,'&quot;')}" onclick="removeFromAgenda(this.dataset.rmt);event.stopPropagation()" title="Quitar de agenda">✕</button>
+      </div>`;
     });
   });
 
-  // Suggestions grouped by day
   const suggsByDay=getSuggestions();
   const suggDays=DAY_KEYS.filter(d=>suggsByDay[d]&&suggsByDay[d].length>0);
   if(suggDays.length){
-    html+=`<div style="margin-top:16px;font-size:10px;color:var(--gray);text-transform:uppercase;letter-spacing:1px;font-weight:600;margin-bottom:6px">💡 Entran en tu plan</div>`;
+    html+=`<div class="suggestion-wrap">
+      <div class="suggestion-header">💡 Entran en tu plan</div>`;
     suggDays.forEach(day=>{
-      html+=`<div style="font-size:10px;color:var(--orange);font-weight:700;letter-spacing:.5px;text-transform:uppercase;margin:8px 0 4px;padding-left:2px">${day}</div>`;
+      html+=`<div class="suggestion-day-lbl">${day}</div>`;
       html+=suggsByDay[day].slice(0,4).map(f=>{
         const vc2=vcfg(f.venue),sl=sala(f.venue);
-        {const _sp=CUSTOM_POSTERS[f.title]||(POSTERS[f.title]?TMDB_IMG+POSTERS[f.title]:null);
+        const _sp=CUSTOM_POSTERS[f.title]||(POSTERS[f.title]?TMDB_IMG+POSTERS[f.title]:null);
         const _sph=_sp?`<img class="lb-poster" src="${_sp}" loading="lazy" onerror="this.outerHTML='<div class=lb-poster-ph>🎬</div>'" alt="">`:'<div class="lb-poster-ph">🎬</div>';
         return`<div class="suggestion-item">
           ${_sph}
@@ -1269,16 +1274,18 @@ function renderSavedAgendaHTML(){
             <div class="suggestion-meta">${f.flags||''} ${f.section||''} · ${vc2.ico} ${vc2.short}${sl?' · '+sl:''} · ${f.duration}</div>
             ${f.gapCtx?`<div style="font-size:9px;color:var(--gray);margin-top:2px;font-style:italic">${f.gapCtx}</div>`:''}
           </div>
-          <button class="suggestion-add" onclick="addSuggestion('${f.title.replace(/'/g,"\'")}','${f.day}','${f.time}')" style="${f._isRestored?'border-color:var(--orange);color:var(--orange);background:rgba(232,90,30,.1)':''}">\n            ${f._isRestored?'← Restaurar':'＋ Añadir'}\n          </button>
-        </div>`;}
+          <button class="suggestion-add" onclick="addSuggestion('${f.title.replace(/'/g,"\\'")}','${f.day}','${f.time}')" style="${f._isRestored?'border-color:var(--orange);color:var(--orange);background:rgba(232,90,30,.1)':''}">
+            ${f._isRestored?'← Restaurar':'＋ Añadir'}
+          </button>
+        </div>`;
       }).join('');
     });
+    html+='</div>'; // close suggestion-wrap
   }
 
   html+='</div>';
   return html;
 }
-
 let archiveOpen=false;
 function toggleArchive(){
   archiveOpen=!archiveOpen;
