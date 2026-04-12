@@ -470,9 +470,9 @@ body{background:var(--bg);color:var(--white);font-family:"DM Sans",sans-serif;mi
     <span class="main-nav-ico">⊞</span>
     <span class="main-nav-lbl">Cartelera</span>
   </button>
-  <button class="main-nav-tab" id="mnav-lista" onclick="switchMainNav('mnav-lista');showAgView()">
+  <button class="main-nav-tab" id="mnav-seleccion" onclick="switchMainNav('mnav-seleccion');showAgView()">
     <span class="main-nav-ico">◆</span>
-    <span class="main-nav-lbl">Mi Agenda</span>
+    <span class="main-nav-lbl">Selección</span>
   </button>
   <button class="main-nav-tab" id="mnav-planner" onclick="switchMainNav('mnav-planner');showAgView()">
     <span class="main-nav-ico">★</span>
@@ -824,7 +824,7 @@ function toggleWL(title,e){
   if(watchlist.has(title)){
     // If film is in saved agenda, ask first
     if(savedAgenda&&savedAgenda.schedule.some(s=>s._title===title)){
-      const confirmed=confirm(`"${title.length>40?title.slice(0,38)+'…':title}" está en tu agenda guardada.\n\n¿Quitar de Mi Lista y de la agenda?`);
+      const confirmed=confirm(`"${title.length>40?title.slice(0,38)+'…':title}" está en tu Plan.\n\n¿Quitar también del Plan al quitarla de Selección?`);
       if(!confirmed) return; // user cancelled — touch nothing
       // Remove from saved agenda too
       savedAgenda.schedule=savedAgenda.schedule.filter(s=>s._title!==title);
@@ -863,7 +863,7 @@ function updateCardState(title){
     const wlBtn=card.querySelector('.wl-btn');
     const wBtn=card.querySelector('.w-btn');
     const prioBtn=card.querySelector('.prio-btn');
-    if(wlBtn){wlBtn.textContent=inWL?'♥':'♡';wlBtn.classList.toggle('wl-on',inWL);wlBtn.title=inWL?'Quitar de Mi agenda':'Añadir a Mi agenda';}
+    if(wlBtn){wlBtn.textContent=inWL?'♥':'♡';wlBtn.classList.toggle('wl-on',inWL);wlBtn.title=inWL?'Quitar de Selección':'Añadir a Selección';}
     if(wBtn){wBtn.classList.toggle('w-on',inW);wBtn.title=inW?'Marcar como pendiente':'Marcar como vista';}
     if(prioBtn){prioBtn.classList.toggle('prio-on',inPrio);prioBtn.title=inPrio?'Quitar prioridad':'Priorizar';}
   });
@@ -1773,11 +1773,11 @@ function saveCurrentScenario(){
   savedAgenda={schedule:[...cachedResult.scenarios[cachedResult.currentIdx].schedule]};
   saveSavedAgenda();
   // Saltar a Mi Agenda — un solo render
-  switchMainNav('mnav-lista');
+  switchMainNav('mnav-seleccion');
   showAgView(); // showAgView llama renderAgenda(), no llamar de nuevo
   const agView=document.getElementById('ag-view');
   if(agView) agView.scrollTop=0;
-  showToast('◆ Plan elegido — lo ves en Mi Agenda','info');
+  showToast('◆ Plan elegido — lo ves en Selección','info');
 }
 function runCalc(){
   cachedResult=null;
@@ -1807,7 +1807,7 @@ function updatePrioCounter(){
 }
 function renderAgenda(){
   const view=document.getElementById('ag-view');
-  if(activeMNav==='mnav-lista'){
+  if(activeMNav==='mnav-seleccion'){
     // ── Mi Agenda: películas + buscador + agenda guardada ──
     view.innerHTML=`
       <div class="ag-section">
@@ -1829,7 +1829,7 @@ function renderAgenda(){
       ?buildResultHTML(cachedResult.scenarios)
       :pending.length
         ?`<div class="ag-calc-prompt">Configura tu disponibilidad y toca <strong>Calcular Escenarios</strong>.</div>`
-        :`<div class="ag-calc-prompt">Añade películas en <strong>Mi Agenda</strong> para poder calcular escenarios.</div>`;
+        :`<div class="ag-calc-prompt">Añade películas en <strong>Selección</strong> para poder calcular escenarios.</div>`;
     view.innerHTML=`
       <div class="ag-section">
         <div class="ag-search-wrap">
@@ -2047,7 +2047,7 @@ function render(){
     const inPrio=prioritized.has(f.title);
     const prioBtn=`<button class="action-btn prio-btn${inPrio?' prio-on':''}" onclick="togglePriority('${safe}')" title="${inPrio?'Quitar prioridad':'Priorizar'}">★</button>`;
     const actBtns=`<div class="card-actions">
-      <button class="action-btn wl-btn${inWL?' wl-on':''}" onclick="toggleWL('${safe}',event)" title="${inWL?'Quitar de Mi agenda':'Añadir a Mi agenda'}">${inWL?'♥':'♡'}</button>
+      <button class="action-btn wl-btn${inWL?' wl-on':''}" onclick="toggleWL('${safe}',event)" title="${inWL?'Quitar de Selección':'Añadir a Selección'}">${inWL?'♥':'♡'}</button>
       <button class="action-btn w-btn${inW?' w-on':''}" onclick="toggleWatched('${safe}',event)" title="${inW?'Marcar como pendiente':'Marcar como vista'}">✓</button>
       ${prioBtn}
     </div>`;
