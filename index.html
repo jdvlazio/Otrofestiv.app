@@ -184,8 +184,8 @@ body{background:var(--bg);color:var(--white);font-family:"DM Sans",sans-serif;mi
 .empty{grid-column:1/-1;text-align:center;padding:60px 20px;color:var(--gray)}
 .empty span{font-size:44px;display:block;margin-bottom:10px}
 /* AGENDA VIEW */
-.ag-view{padding:14px 20px 60px;display:none}
-.ag-view.visible{display:block}
+.ag-view{padding-top:14px;padding-left:20px;padding-right:20px;padding-bottom:60px;display:none}
+.ag-view.visible{display:block;overflow-x:hidden}
 .ag-section{margin-bottom:20px}
 .ag-section-title{font-size:10px;font-weight:700;color:var(--orange);letter-spacing:1px;text-transform:uppercase;margin-bottom:10px;display:flex;align-items:center;gap:6px}
 /* Saved agenda */
@@ -304,7 +304,7 @@ body{background:var(--bg);color:var(--white);font-family:"DM Sans",sans-serif;mi
 .suggestion-add:hover{border-color:var(--orange);color:var(--orange)}
 /* Search */
 .ag-search-wrap{position:relative;margin-bottom:10px}
-.ag-search{width:100%;background:var(--card-a);border:1px solid var(--bdr);border-radius:var(--r);color:var(--white);font-size:14px;padding:11px 14px 11px 38px;font-family:"DM Sans",sans-serif;transition:border-color .15s}
+.ag-search{width:100%;max-width:100%;box-sizing:border-box;background:var(--card-a);border:1px solid var(--bdr);border-radius:var(--r);color:var(--white);font-size:14px;padding:11px 14px 11px 38px;font-family:"DM Sans",sans-serif;transition:border-color .15s;-webkit-appearance:none}
 .ag-search::placeholder{color:var(--gray2)}
 .ag-search:focus{outline:none;border-color:var(--orange)}
 .ag-search-ico{position:absolute;left:12px;top:50%;transform:translateY(-50%);font-size:16px;color:var(--gray2);pointer-events:none}
@@ -453,7 +453,7 @@ body{background:var(--bg);color:var(--white);font-family:"DM Sans",sans-serif;mi
   .main-nav-tab{border-bottom:none;border-top:2px solid transparent;margin-bottom:0;margin-top:-1px;padding:8px 4px;height:52px}
   .main-nav-tab.on{border-bottom-color:transparent;border-top-color:var(--orange)}
   .grid{padding-bottom:calc(80px + env(safe-area-inset-bottom))}
-  .ag-view{padding:14px 20px calc(80px + env(safe-area-inset-bottom))}
+  .ag-view{padding-top:14px;padding-left:20px;padding-right:20px;padding-bottom:calc(80px + env(safe-area-inset-bottom))}
   .prio-toast{bottom:calc(80px + env(safe-area-inset-bottom) + 10px)}
   .ag-film-grid{grid-template-columns:repeat(4,1fr);gap:6px}
 }
@@ -1437,7 +1437,7 @@ function renderFilmListHTML(){
   if(!allPending.length&&!watchedList.length){
     return`<div style="margin-top:8px;padding:20px 16px;border:1px solid var(--bdr-l);border-radius:var(--r);text-align:center">
       <div class="prio-strip-title" style="justify-content:center;margin-bottom:10px">♥︎ Selección</div>
-      <div style="font-size:12px;color:var(--gray);line-height:1.6;text-align:center">
+      <div style="font-size:12px;color:var(--gray);line-height:1.6;text-align:center;max-width:240px;margin-left:auto;margin-right:auto;text-wrap:balance">
         Aún no tienes películas guardadas.<br>Usa el buscador para añadir títulos.
       </div>
     </div>`;
@@ -1458,7 +1458,7 @@ function renderFilmListHTML(){
   }
   return html||`<div style="margin-top:8px;padding:20px 16px;border:1px solid var(--bdr-l);border-radius:var(--r);text-align:center">
       <div class="prio-strip-title" style="justify-content:center;margin-bottom:10px">♥︎ Selección</div>
-      <div style="font-size:12px;color:var(--gray);line-height:1.6;text-align:center">
+      <div style="font-size:12px;color:var(--gray);line-height:1.6;text-align:center;max-width:240px;margin-left:auto;margin-right:auto;text-wrap:balance">
         Aún no tienes películas guardadas.<br>Usa el buscador para añadir títulos.
       </div>
     </div>`;
@@ -1511,7 +1511,7 @@ function _renderSavedAgendaHTML(){
   if(!savedAgenda||!savedAgenda.schedule.length) return`
     <div style="margin-top:16px;padding:20px 16px;border:1px solid var(--bdr-l);border-radius:var(--r);text-align:center">
       <div class="prio-strip-title" style="justify-content:center;margin-bottom:10px">◆ Mi Plan</div>
-      <div style="font-size:12px;color:var(--gray);line-height:1.6;margin-bottom:14px;text-align:center">
+      <div style="font-size:12px;color:var(--gray);line-height:1.6;margin-bottom:14px;text-align:center;max-width:260px;margin-left:auto;margin-right:auto;text-wrap:balance">
         Aún no tienes un plan guardado.<br>Ve a <strong style="color:var(--white)">Planear</strong>, calcula un escenario y toca <strong style="color:var(--white)">◆ Elegir Plan</strong>.
       </div>
       <button onclick="switchMainNav('mnav-planner');showAgView()" style="background:none;border:1px solid var(--bdr);border-radius:20px;color:var(--gray);font-size:11px;padding:5px 14px;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .15s" onmouseover="this.style.borderColor='var(--orange)';this.style.color='var(--orange)'" onmouseout="this.style.borderColor='var(--bdr)';this.style.color='var(--gray)'">Ir a Planear →</button>
