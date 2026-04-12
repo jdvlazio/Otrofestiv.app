@@ -33,11 +33,11 @@ body{background:var(--bg);color:var(--white);font-family:"DM Sans",sans-serif;mi
 .dtab.past{opacity:.35}
 /* ── Main Navigation (Paso 1) ── */
 .main-nav{display:flex;border-bottom:1px solid var(--bdr);background:var(--surf)}
-.main-nav-tab{flex:1;background:none;border:none;border-bottom:2px solid transparent;margin-bottom:-1px;padding:10px 6px 11px;cursor:pointer;color:var(--gray2);font-family:"DM Sans",sans-serif;font-size:12px;font-weight:600;letter-spacing:.3px;text-align:center;transition:color .15s,border-color .15s;display:flex;flex-direction:column;align-items:center;gap:3px}
+.main-nav-tab{flex:1;background:none;border:none;border-bottom:2px solid transparent;margin-bottom:-1px;padding:8px 4px 9px;cursor:pointer;color:var(--gray2);font-family:"DM Sans",sans-serif;font-size:12px;font-weight:600;letter-spacing:.3px;text-align:center;transition:color .15s,border-color .15s;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;height:52px;box-sizing:border-box}
 .main-nav-tab:active{opacity:.7}
 .main-nav-tab.on{color:var(--orange);border-bottom-color:var(--orange)}
 .main-nav-tab:hover:not(.on){color:var(--white)}
-.main-nav-ico{font-size:16px;line-height:1}
+.main-nav-ico{font-size:15px;line-height:1;height:20px;display:flex;align-items:center;justify-content:center}
 .main-nav-lbl{font-size:10px;letter-spacing:.5px;text-transform:uppercase}
 /* ── Filter Dropdowns (Paso 4) ── */
 .fdr-row{display:flex;gap:0;padding:0 6px;border-bottom:1px solid var(--bdr)}
@@ -449,7 +449,7 @@ body{background:var(--bg);color:var(--white);font-family:"DM Sans",sans-serif;mi
 /* ── Responsive Nav ── */
 @media(max-width:768px){
   .main-nav{position:fixed;bottom:0;left:0;right:0;top:auto;border-top:1px solid var(--bdr);border-bottom:none;z-index:1000;padding-bottom:env(safe-area-inset-bottom)}
-  .main-nav-tab{border-bottom:none;border-top:2px solid transparent;margin-bottom:0;margin-top:-1px;padding:10px 6px 12px}
+  .main-nav-tab{border-bottom:none;border-top:2px solid transparent;margin-bottom:0;margin-top:-1px;padding:8px 4px;height:52px}
   .main-nav-tab.on{border-bottom-color:transparent;border-top-color:var(--orange)}
   .grid{padding-bottom:calc(80px + env(safe-area-inset-bottom))}
   .ag-view{padding:14px 16px calc(80px + env(safe-area-inset-bottom))}
@@ -467,7 +467,7 @@ body{background:var(--bg);color:var(--white);font-family:"DM Sans",sans-serif;mi
 </div>
 <div class="main-nav" id="main-nav">
   <button class="main-nav-tab on" id="mnav-cartelera" onclick="switchMainNav('mnav-cartelera');showDayView();render()">
-    <span class="main-nav-ico">⊞</span>
+    <span class="main-nav-ico">▤</span>
     <span class="main-nav-lbl">Cartelera</span>
   </button>
   <button class="main-nav-tab" id="mnav-seleccion" onclick="switchMainNav('mnav-seleccion');showAgView()">
@@ -621,8 +621,8 @@ let watched=new Set();
 let prioritized=new Set();
 const PRIO_LIMIT=3;
 let savedAgenda=null;
-let lastRemovedSlot=null;
-let lastRemovedInSession=false;
+let lastRemovedSlots=[]; // tracks up to 5 recently removed films
+const MAX_REMEMBERED_SLOTS=5;
 let activeMiPlanDay=null;
 // ─────────────────────────────────────────────────────────────────────────────
 // ⚠️  FIX CRÍTICO — NO REMOVER (Apr 2026)
@@ -803,7 +803,7 @@ function loadState(){
     const sa=localStorage.getItem('ficci65_saved'); if(sa) savedAgenda=JSON.parse(sa);
     const pr=localStorage.getItem('ficci65_prio'); if(pr) prioritized=new Set(JSON.parse(pr));
     // Restore reserved slot — persists across refresh, button shows "＋ Añadir" (not "← Restaurar")
-    const rs=localStorage.getItem('ficci65_lastslot'); if(rs) lastRemovedSlot=JSON.parse(rs);
+    const rs=localStorage.getItem('ficci65_lastslot');if(rs){try{const p=JSON.parse(rs);lastRemovedSlots=Array.isArray(p)?p:(p?[p]:[]);}catch(e){}}
   }catch(e){}
 }
 function saveWL(){try{localStorage.setItem('ficci65_wl',JSON.stringify([...watchlist]));}catch(e){}}
@@ -811,7 +811,7 @@ function saveWatched(){try{localStorage.setItem('ficci65_watched',JSON.stringify
 function saveAV(){try{localStorage.setItem('ficci65_av3',JSON.stringify(availability));}catch(e){}}
 function saveSavedAgenda(){try{localStorage.setItem('ficci65_saved',JSON.stringify(savedAgenda));}catch(e){}}
 function savePrio(){try{localStorage.setItem('ficci65_prio',JSON.stringify([...prioritized]));}catch(e){}}
-function saveLastSlot(){try{if(lastRemovedSlot)localStorage.setItem('ficci65_lastslot',JSON.stringify(lastRemovedSlot));else localStorage.removeItem('ficci65_lastslot');}catch(e){}}
+function saveLastSlot(){try{localStorage.setItem('ficci65_lastslot',JSON.stringify(lastRemovedSlots));}catch(e){}}
 
 function updateAgTab(){
   // Count: in watchlist, not watched, and has future screenings
@@ -922,16 +922,20 @@ function addFromSearch(title){
 }
 function removeFromAgenda(title){
   if(!savedAgenda) return;
-  if(!confirm(`Quitar "${title.length>40?title.slice(0,38)+'…':title}" de tu agenda guardada?`)) return;
+  if(!confirm(`Quitar "${title.length>40?title.slice(0,38)+'…':title}" de tu Plan?`)) return;
   // Guardar el slot exacto antes de borrar
   const removed=savedAgenda.schedule.find(s=>s._title===title);
-  if(removed){lastRemovedSlot={...removed};lastRemovedInSession=true;}
-  saveLastSlot();
+  if(removed){
+    lastRemovedSlots=lastRemovedSlots.filter(r=>r._title!==removed._title);
+    lastRemovedSlots.unshift({...removed,_isRestored:true});
+    if(lastRemovedSlots.length>MAX_REMEMBERED_SLOTS) lastRemovedSlots.length=MAX_REMEMBERED_SLOTS;
+    saveLastSlot();
+  }
   savedAgenda.schedule=savedAgenda.schedule.filter(s=>s._title!==title);
   if(!savedAgenda.schedule.length) savedAgenda=null;
   saveSavedAgenda();
   renderAgenda();
-  showToast('✕ Quitada — aparece en sugerencias para restaurar','info');
+  showToast('Quitada de Mi Plan','info');
 }
 function addSuggestion(title,day,time){
   // 1. Add to watchlist if not already there
@@ -942,13 +946,21 @@ function addSuggestion(title,day,time){
     if(!savedAgenda) savedAgenda={schedule:[]};
     // Avoid duplicates
     if(!savedAgenda.schedule.some(s=>s._title===title)){
+      // ⚠️ Validar conflicto antes de añadir
+      const conflict=savedAgenda.schedule.find(s=>screensConflict(s,screen));
+      if(conflict){
+        const cname=(conflict._title||'').split(' ').slice(0,3).join(' ');
+        showToast(`Conflicto con: ${cname}…`,'warn');
+        return;
+      }
       savedAgenda.schedule.push({...screen,_title:title});
       savedAgenda.schedule.sort((a,b)=>a.day_order!==b.day_order?a.day_order-b.day_order:toMin(a.time)-toMin(b.time));
       saveSavedAgenda();
     }
   }
-  // 3. Si es la película del slot reservado, liberar el slot
-  if(lastRemovedSlot&&lastRemovedSlot._title===title){lastRemovedSlot=null;saveLastSlot();}
+  // 3. Quitar de lista de restaurables
+  lastRemovedSlots=lastRemovedSlots.filter(r=>r._title!==title);
+  saveLastSlot();
   // 4. Re-render
   renderAgenda();
 }
@@ -969,7 +981,7 @@ function isFullDayBlocked(day){return availability[day].blocks.some(b=>toMin(b.f
 function toggleFullDay(day){
   if(isFullDayBlocked(day)) availability[day].blocks=[];
   else{availability[day].blocks=[{from:'00:00',to:'23:59'}];avAddOpen[day]=false;}
-  saveAV();renderAvDay(day);
+  cachedResult=null;saveAV();renderAvDay(day);invalidateCalcResult();
 }
 function addBlock(day){
   const f=document.getElementById(`av-from-${day}`).value;
@@ -977,14 +989,14 @@ function addBlock(day){
   if(!f||!t){showToast('Selecciona hora de inicio y fin','warn');return;}
   if(toMin(f)>=toMin(t)){showToast('La hora de inicio debe ser menor que la de fin','warn');return;}
   const av=availability[day];
-  if(av.blocks.some(b=>toMin(f)<toMin(b.to)&&toMin(t)>toMin(b.from))){showToast('Este bloque se solapa con uno existente','warn');return;}
+  if(av.blocks.some(b=>toMin(f)<toMin(b.to)&&toMin(t)>toMin(b.from))){showToast('Este horario se solapa con uno existente','warn');return;}
   av.blocks.push({from:f,to:t});av.blocks.sort((a,b)=>toMin(a.from)-toMin(b.from));
   avAddOpen[day]=false;
-  saveAV();renderAvDay(day);
+  cachedResult=null;saveAV();renderAvDay(day);invalidateCalcResult();
 }
 function removeBlock(day,fromVal,toVal){
   availability[day].blocks=availability[day].blocks.filter(b=>!(b.from===fromVal&&b.to===toVal));
-  saveAV();renderAvDay(day);
+  cachedResult=null;saveAV();renderAvDay(day);invalidateCalcResult();
 }
 function renderAvDay(day){
   const row=document.getElementById(`av-row-${day}`);if(!row) return;
@@ -1034,7 +1046,9 @@ function renderAvDay(day){
 
 function isScreeningBlocked(s){
   const av=availability[s.day];if(!av) return false;
-  return av.blocks.some(b=>toMin(s.time)>=toMin(b.from)&&toMin(s.time)<toMin(b.to));
+  const sStart=toMin(s.time),sEnd=sStart+parseDur(s.duration);
+  // Chequeo de solapamiento completo: excluye funciones que ocurran durante el bloque
+  return av.blocks.some(b=>sStart<toMin(b.to)&&sEnd>toMin(b.from));
 }
 
 // ── ALGORITHM — exhaustive max + MRV + random restarts ──
@@ -1248,14 +1262,6 @@ function getSuggestions(){
   const savedTitles=new Set(saved.map(s=>s._title));
   const byDay={};
 
-  // ── Slot reservado: prioridad absoluta — aparece primero, misma hora ──
-  if(lastRemovedSlot&&!savedTitles.has(lastRemovedSlot._title)&&!screeningPassed(lastRemovedSlot)){
-    const rs=lastRemovedSlot;
-    const day=rs.day;
-    if(!byDay[day]) byDay[day]=[];
-    byDay[day].unshift({...rs,gapCtx:lastRemovedInSession?'← Restaurar al mismo horario':'Slot reservado — mismo horario',_isRestored:lastRemovedInSession});
-  }
-
   // Excluir siempre: ya en agenda o ya vistas
   const hardExclude=new Set([...savedTitles,...watched]);
   // Para descubrimiento (Bloque 1): también excluir watchlist (ya las conoces)
@@ -1263,13 +1269,29 @@ function getSuggestions(){
   // Para recuperación (Bloque 2): solo excluir hardExclude
   const seenRecovery=new Set([...hardExclude]);
 
+  // ── Slots reservados: todas las películas recientemente quitadas ──
+  // Solo muestra "← Restaurar" si el slot original está libre (sin conflicto)
+  // Si el slot está ocupado, la película cae a Bloque 2 para buscar slot alternativo
+  const currentSaved=savedAgenda?savedAgenda.schedule:[];
+  lastRemovedSlots.forEach(rs=>{
+    if(savedTitles.has(rs._title)||screeningPassed(rs)) return;
+    const slotFree=!currentSaved.some(s=>screensConflict(s,rs));
+    if(!slotFree) return; // slot ocupado — cae a Bloque 2
+    const day=rs.day;
+    if(!byDay[day]) byDay[day]=[];
+    byDay[day].push({...rs,gapCtx:'← Restaurar al mismo horario',_isRestored:true});
+    hardExclude.add(rs._title);
+    seenDiscover.add(rs._title);
+    seenRecovery.add(rs._title);
+  });
+
   DAY_KEYS.forEach(day=>{
     const dayItems=saved.filter(s=>s.day===day).sort((a,b)=>toMin(a.time)-toMin(b.time));
 
     // Calcular huecos del día
     const slots=[];
     if(dayItems.length===0){
-      slots.push({start:0,end:23*60,ctx:'Día libre en tu agenda'});
+      slots.push({start:0,end:23*60,ctx:'Día libre en tu Plan'});
     } else {
       // Antes de la primera
       if(toMin(dayItems[0].time)>60)
@@ -1303,18 +1325,27 @@ function getSuggestions(){
       });
     }
 
-    // Bloque 2 — Recuperación: watchlist no en agenda, sin conflicto con lo guardado
+    // Bloque 2 — Recuperación: watchlist no en agenda
+    // Mismo criterio de hueco que Bloque 1 (sin buffer adicional)
+    // garantiza que una película recién quitada reaparezca si su slot está libre
     [...watchlist].filter(t=>!seenRecovery.has(t)).forEach(t=>{
       FILMS.filter(f=>f.title===t&&f.day===day&&!screeningPassed(f)&&!isScreeningBlocked(f)).forEach(f=>{
         if(seenRecovery.has(f.title)) return;
-        const noConflict=!saved.some(s=>screensConflict(s,f));
-        if(noConflict){
+        const fStart=toMin(f.time),fEnd=fStart+parseDur(f.duration);
+        const fitsInSlot=slots.length
+          ?slots.some(sl=>fStart>=sl.start&&fEnd<=sl.end&&fEnd-fStart>=20)
+          :!saved.some(s=>s.day===day&&toMin(s.time)<fEnd&&fStart<toMin(s.time)+parseDur(s.duration));
+        if(fitsInSlot){
           seenRecovery.add(f.title);seenDiscover.add(f.title);
           if(!byDay[day]) byDay[day]=[];
-          byDay[day].push({...f,gapCtx:'De tu lista — sin conflicto'});
+          byDay[day].push({...f,gapCtx:'De tu lista'});
         }
       });
     });
+  });
+  // ── Ordenar cronológicamente dentro de cada día ──
+  Object.keys(byDay).forEach(d=>{
+    byDay[d].sort((a,b)=>toMin(a.time)-toMin(b.time));
   });
   return byDay;
 }
@@ -1394,14 +1425,14 @@ function renderFilmListHTML(){
   }
   if(nonPrioList.length){
     if(prioList.length) html+=`<div class="ag-list-sep"></div>`;
-    html+=`<div class="prio-strip-title" style="margin-bottom:8px">♥ Selección ${nonPrioList.length}</div>`;
+    html+=`<div class="prio-strip-title" style="margin-bottom:8px">♥︎ Selección ${nonPrioList.length}</div>`;
     html+=`<div class="ag-film-grid">${nonPrioList.map(t=>mkItem(t)).join('')}</div>`;
   }
   if(!allPending.length&&!watchedList.length){
     return`<div style="margin-top:8px;padding:20px 16px;border:1px solid var(--bdr-l);border-radius:var(--r);text-align:center">
-      <div class="prio-strip-title" style="justify-content:center;margin-bottom:10px">♥ Selección</div>
+      <div class="prio-strip-title" style="justify-content:center;margin-bottom:10px">♥︎ Selección</div>
       <div style="font-size:12px;color:var(--gray);line-height:1.6">
-        Aún no tienes películas guardadas.<br>Usa el buscador para añadir títulos a tu lista.
+        Aún no tienes películas guardadas.<br>Usa el buscador para añadir títulos.
       </div>
     </div>`;
   }
@@ -1420,9 +1451,9 @@ function renderFilmListHTML(){
     }).join('');
   }
   return html||`<div style="margin-top:8px;padding:20px 16px;border:1px solid var(--bdr-l);border-radius:var(--r);text-align:center">
-      <div class="prio-strip-title" style="justify-content:center;margin-bottom:10px">♥ Selección</div>
+      <div class="prio-strip-title" style="justify-content:center;margin-bottom:10px">♥︎ Selección</div>
       <div style="font-size:12px;color:var(--gray);line-height:1.6">
-        Aún no tienes películas guardadas.<br>Usa el buscador para añadir títulos a tu lista.
+        Aún no tienes películas guardadas.<br>Usa el buscador para añadir títulos.
       </div>
     </div>`;
 }
@@ -1580,7 +1611,7 @@ function toggleArchive(){
 
 
 function exportICS(){
-  if(!savedAgenda||!savedAgenda.schedule.length){showToast('No hay agenda guardada','warn');return;}
+  if(!savedAgenda||!savedAgenda.schedule.length){showToast('No tienes un Plan guardado','warn');return;}
   const pad=n=>String(n).padStart(2,'0');
   const fmt=dt=>`${dt.getFullYear()}${pad(dt.getMonth()+1)}${pad(dt.getDate())}T${pad(dt.getHours())}${pad(dt.getMinutes())}00`;
   const lines=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//FICCI65//ES','CALSCALE:GREGORIAN','METHOD:PUBLISH'];
@@ -1707,6 +1738,11 @@ function buildResultHTML(scenarios){
 
 function togglePriority(title,cost){
   if(prioritized.has(title)){
+    // Si estamos en Planear, confirmar antes de quitar
+    if(activeMNav==='mnav-planner'){
+      const short=title.length>40?title.slice(0,38)+'…':title;
+      if(!confirm(`¿Quitar "★ ${short}" de tus prioridades?\n\nPodrás cambiarla en Selección.`)) return;
+    }
     prioritized.delete(title);
     savePrio();updateCardState(title);updateAgTab();runCalc();
     showToast('Prioridad eliminada','info');
@@ -1776,18 +1812,35 @@ function saveCurrentScenario(){
   if(agView) agView.scrollTop=0;
   showToast('◆ Plan elegido — lo ves en Mi Plan','info');
 }
+function invalidateCalcResult(){
+  // Called when availability changes — resets result prompt
+  if(!document.getElementById('ag-result')) return;
+  const res=document.getElementById('ag-result');
+  const pending=[...watchlist].filter(t=>!watched.has(t)&&FILMS.some(f=>f.title===t&&!screeningPassed(f)));
+  res.innerHTML=pending.length
+    ?`<div class="ag-calc-prompt">Configura tu disponibilidad y toca <strong>Calcular Escenarios</strong>.</div>`
+    :`<div class="ag-calc-prompt">Añade películas en <strong>Selección</strong> para poder calcular escenarios.</div>`;
+}
 function runCalc(){
   cachedResult=null;
-  try{
-    const scenarios=computeScenarios([...watchlist]);
-    cachedResult={scenarios,currentIdx:0};
-    const res=document.getElementById('ag-result');
-    if(res) res.innerHTML=buildResultHTML(scenarios);
-  }catch(err){
-    const res=document.getElementById('ag-result');
-    if(res) res.innerHTML=`<div class="ag-calc-prompt" style="color:#e05050"><strong>Error al calcular:</strong><br><code style="font-size:10px">${err.message}</code></div>`;
-    console.error('runCalc error:',err);
-  }
+  const btn=document.querySelector('.av-calc-btn');
+  const res=document.getElementById('ag-result');
+  // ── Loading state: mostrar siempre aunque el resultado sea idéntico ──
+  if(btn){btn.disabled=true;btn.textContent='Calculando…';}
+  if(res) res.innerHTML=`<div class="ag-calc-prompt" style="opacity:.6">◌ Calculando escenarios…</div>`;
+  // Defer computation to allow browser to paint loading state first
+  setTimeout(()=>{
+    try{
+      const scenarios=computeScenarios([...watchlist]);
+      cachedResult={scenarios,currentIdx:0};
+      if(res) res.innerHTML=buildResultHTML(scenarios);
+    }catch(err){
+      if(res) res.innerHTML=`<div class="ag-calc-prompt" style="color:#e05050"><strong>Error al calcular:</strong><br><code style="font-size:10px">${err.message}</code></div>`;
+      console.error('runCalc error:',err);
+    }finally{
+      if(btn){btn.disabled=false;btn.textContent='Calcular Escenarios';}
+    }
+  },80);
 }
 function changeScenario(dir){
   if(!cachedResult) return;
@@ -1965,7 +2018,7 @@ function setHint(film){
   const el=document.getElementById('hint');
   if(!film){el.textContent='';el.classList.remove('active');el.style.padding='0 18px';return;}
   const end=toMin(film.time)+parseDur(film.duration)+10;
-  el.textContent=`⏱ Bloque: ${minToStr(toMin(film.time)-10)} – ${minToStr(end)} · Toca de nuevo para deseleccionar`;
+  el.textContent=`⏱ Horario: ${minToStr(toMin(film.time)-10)} – ${minToStr(end)} · Toca de nuevo para deseleccionar`;
   el.style.padding='8px 18px';
   el.classList.add('active');
 }
