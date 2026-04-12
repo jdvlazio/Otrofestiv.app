@@ -879,14 +879,19 @@ function computeScenarios(titles){
   const seenKeys=new Set();const allScenarios=[];
   let incompatiblePriorities=false;
 
+  // Límite de nodos por llamada: garantiza comportamiento idéntico en web y mobile
+  // Sin este límite, mobile puede abortar por stack overflow antes de encontrar 8 escenarios
+  const MAX_NODES_PER_CALL=80000;
+
   function collectAt(groups,targetCount,enforcePriority){
+    let nodes=0;
     function backtrack(idx,chosen){
       if(allScenarios.length>=8) return;
+      if(++nodes>MAX_NODES_PER_CALL) return; // mismo límite en todos los dispositivos
       if(chosen.length+(groups.length-idx)<targetCount) return;
       if(idx===groups.length){
         if(chosen.length===targetCount){
           if(enforcePriority){
-            // Verify all priorities are in this scenario
             const ct=new Set(chosen.map(s=>s._title));
             if(!groups.every(g=>!g.priority||ct.has(g.title))) return;
           }
@@ -1356,14 +1361,14 @@ function buildResultHTML(scenarios){
         const trulyfits=screens.some(s=>!sc.schedule.some(chosen=>screensConflict(chosen,s)));
         let fitsHtml='';
         if(swapOptions.length){
-          fitsHtml=swapOptions.map(o=>`<div style="margin-top:5px;font-size:10px">
-            <span style="color:var(--gray2);display:block;margin-bottom:3px">${o.screen.day} ${o.screen.time} — desplaza:</span>
+          fitsHtml=`<div style="margin-top:5px;font-size:10px">
+            <span style="color:var(--gray2);display:block;margin-bottom:3px">Cabe si desplazas:</span>
             <div style="display:flex;flex-wrap:wrap;gap:4px">
-              ${o.displaced.map(d=>`<button data-ex="${encodeURIComponent(t)}" data-day="${o.screen.day}" data-time="${o.screen.time}" data-dis="${encodeURIComponent(d)}" onclick="swapFilm(decodeURIComponent(this.dataset.ex),this.dataset.day,this.dataset.time,decodeURIComponent(this.dataset.dis));event.stopPropagation()" style="background:rgba(232,90,30,.12);border:1px solid rgba(232,90,30,.35);color:var(--orange);font-size:10px;padding:3px 8px;border-radius:5px;cursor:pointer;line-height:1.3">⇄ ${d.length>20?d.slice(0,18)+'…':d}</button>`).join('')}
+              ${swapOptions.map(o=>o.displaced.map(d=>`<button data-ex="${encodeURIComponent(t)}" data-day="${o.screen.day}" data-time="${o.screen.time}" data-dis="${encodeURIComponent(d)}" onclick="swapFilm(decodeURIComponent(this.dataset.ex),this.dataset.day,this.dataset.time,decodeURIComponent(this.dataset.dis));event.stopPropagation()" style="background:rgba(232,90,30,.12);border:1px solid rgba(232,90,30,.35);color:var(--orange);font-size:10px;padding:3px 8px;border-radius:5px;cursor:pointer;line-height:1.3">⇄ ${d.length>20?d.slice(0,18)+'…':d}</button>`).join('')).join('')}
             </div>
-          </div>`).join('');
+          </div>`;
         } else if(screens.length){
-          fitsHtml=`<div style="margin-top:3px;font-size:10px;color:var(--gray2)">✗ Todas sus funciones solapan en este escenario</div>`;
+          fitsHtml=`<div style="margin-top:3px;font-size:10px;color:var(--gray2)">Solapa con funciones de este escenario</div>`;
         } else {
           fitsHtml=`<div style="margin-top:3px;font-size:10px;color:var(--gray2)">Sin funciones futuras disponibles</div>`;
         }
@@ -1378,8 +1383,8 @@ function buildResultHTML(scenarios){
           ${_eph}
           <div class="ag-conflict-info">
             ${isPrio?'<span style="color:var(--orange);font-size:10px;font-weight:700">★ PRIORIDAD · </span>':''}
-            <strong>${(()=>{const{displayTitle,progSuffix}=parseProgramTitle(t);return displayTitle+(progSuffix?` <span style="color:var(--orange);font-size:10px;font-weight:700">${progSuffix}</span>`:'');})()}</strong><br>
-            <s${fitsHtml}          </div>
+            <strong>${(()=>{const{displayTitle,progSuffix}=parseProgramTitle(t);return displayTitle+(progSuffix?` <span style="color:var(--orange);font-size:10px;font-weight:700">${progSuffix}</span>`:'');})()}</strong>
+            ${fitsHtml}          </div>
           <button class="ag-prioritize-btn${isPrio?' active':''}${atLimit?' disabled':''}" onclick="${prioAction}">
             ${prioLabel}
           </button>
@@ -1479,11 +1484,9 @@ function saveCurrentScenario(){
   if(!cachedResult||!cachedResult.scenarios.length) return;
   savedAgenda={schedule:[...cachedResult.scenarios[cachedResult.currentIdx].schedule]};
   saveSavedAgenda();
-  // Saltar a Mi Agenda con transición visual
+  // Saltar a Mi Agenda — un solo render
   switchMainNav('mnav-lista');
-  showAgView();
-  renderAgenda();
-  // Scroll al top y pulso visual en la pestaña
+  showAgView(); // showAgView llama renderAgenda(), no llamar de nuevo
   const agView=document.getElementById('ag-view');
   if(agView) agView.scrollTop=0;
   showToast('📌 Agenda guardada — la ves en Mi Agenda','info');
@@ -1492,6 +1495,8 @@ function runCalc(){
   cachedResult=null;
   const scenarios=computeScenarios([...watchlist]);
   cachedResult={scenarios,currentIdx:0};
+  // Un solo camino de render: actualizar ag-result directamente
+  // No llamar renderAgenda() completo para no re-renderizar todo el Planner
   const res=document.getElementById('ag-result');
   if(res) res.innerHTML=buildResultHTML(scenarios);
 }
