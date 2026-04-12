@@ -389,7 +389,7 @@ body{background:var(--bg);color:var(--white);font-family:"DM Sans",sans-serif;mi
   </button>
   <button class="main-nav-tab" id="mnav-lista" onclick="switchMainNav('mnav-lista');showAgView()">
     <span class="main-nav-ico">♡</span>
-    <span class="main-nav-lbl">Mi Lista</span>
+    <span class="main-nav-lbl">Mi Agenda</span>
   </button>
   <button class="main-nav-tab" id="mnav-planner" onclick="switchMainNav('mnav-planner');showAgView()">
     <span class="main-nav-ico">★</span>
@@ -568,7 +568,19 @@ function updateAgTab(){
 
 function toggleWL(title,e){
   if(e) e.stopPropagation();
-  if(watchlist.has(title)){watchlist.delete(title);watched.delete(title);prioritized.delete(title);}
+  if(watchlist.has(title)){
+    // If film is in saved agenda, ask first
+    if(savedAgenda&&savedAgenda.schedule.some(s=>s._title===title)){
+      const confirmed=confirm(`"${title.length>40?title.slice(0,38)+'…':title}" está en tu agenda guardada.\n\n¿Quitar de Mi Lista y de la agenda?`);
+      if(!confirmed) return; // user cancelled — touch nothing
+      // Remove from saved agenda too
+      savedAgenda.schedule=savedAgenda.schedule.filter(s=>s._title!==title);
+      if(!savedAgenda.schedule.length) savedAgenda=null;
+      saveSavedAgenda();
+    }
+    // Now safe to remove from watchlist
+    watchlist.delete(title);watched.delete(title);prioritized.delete(title);
+  }
   else{
     watchlist.add(title);watched.delete(title);
     // Check conflicts with existing watchlist
@@ -658,6 +670,23 @@ function addFromSearch(title){
   onSearchInput();
   const listEl=document.getElementById('ag-film-list');if(listEl) listEl.innerHTML=renderFilmListHTML();
 }
+function addSuggestion(title,day,time){
+  // 1. Add to watchlist if not already there
+  if(!watchlist.has(title)){watchlist.add(title);watched.delete(title);saveWL();saveWatched();updateCardState(title);updateAgTab();}
+  // 2. Add specific screening to saved agenda
+  const screen=FILMS.find(f=>f.title===title&&f.day===day&&f.time===time);
+  if(screen){
+    if(!savedAgenda) savedAgenda={schedule:[]};
+    // Avoid duplicates
+    if(!savedAgenda.schedule.some(s=>s._title===title)){
+      savedAgenda.schedule.push({...screen,_title:title});
+      savedAgenda.schedule.sort((a,b)=>a.day_order!==b.day_order?a.day_order-b.day_order:toMin(a.time)-toMin(b.time));
+      saveSavedAgenda();
+    }
+  }
+  // 3. Re-render saved agenda section (suggestions will disappear automatically)
+  renderAgenda();
+}
 function closeSearch(){setTimeout(()=>{const r=document.getElementById('ag-search-results');if(r) r.classList.remove('open');},200);}
 
 // ── AVAILABILITY ──
@@ -733,17 +762,73 @@ function shuffle(arr){
   for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}
   return a;
 }
+
+// ── Mejora 1: Scoring por película ──
+// Pondera cuánto vale incluir una película según rareza, sección y duración
+function scoreFilm(title, screens, isPriority, allTitles){
+  let score=0;
+  // Prioridad explícita: peso máximo
+  if(isPriority) score+=100;
+  // Unicidad: menos funciones = más difícil de ver = mayor peso
+  const n=screens.length;
+  if(n===1) score+=40;
+  else if(n===2) score+=20;
+  else score+=5;
+  // Sección única: si es la única película de su sección en la watchlist
+  const mySection=screens[0]?.section||'';
+  const siblingsInSection=allTitles.filter(t=>{
+    if(t===title) return false;
+    return FILMS.some(f=>f.title===t&&f.section===mySection);
+  });
+  if(siblingsInSection.length===0) score+=15;
+  // Duración larga: película de >150 min es un compromiso grande, priorizar
+  const dur=parseInt(screens[0]?.duration)||0;
+  if(dur>150) score+=10;
+  return score;
+}
+
+// ── Mejora 2: Interval Scheduling — ordenar funciones por conflictos mínimos + fin temprano ──
+// Para cada película con múltiples funciones, prioriza la que:
+// 1. Conflicta con menos otras funciones de la watchlist (menos bloqueos)
+// 2. Termina más temprano (earliest-finish-time: principio clásico de interval scheduling)
+function sortScreensByStrategy(screens, allGroups){
+  // Precalcular todas las funciones de todas las otras películas
+  const allOtherScreenings=allGroups.flatMap(g=>g.screens);
+  return [...screens].sort((a,b)=>{
+    // Contar cuántas funciones ajenas conflictan con cada opción
+    const conflA=allOtherScreenings.filter(s=>s!==a&&screensConflict(a,s)).length;
+    const conflB=allOtherScreenings.filter(s=>s!==b&&screensConflict(b,s)).length;
+    if(conflA!==conflB) return conflA-conflB; // menos conflictos primero
+    // Si empatan, earliest finish time (termina antes = deja más espacio)
+    const endA=toMin(a.time)+parseDur(a.duration);
+    const endB=toMin(b.time)+parseDur(b.duration);
+    return endA-endB;
+  });
+}
+
 function computeScenarios(titles){
   const pending=titles.filter(t=>!watched.has(t));
+  const allPendingTitles=pending; // for section uniqueness check
   const baseGroups=pending.map(t=>{
     const screens=FILMS.filter(f=>f.title===t&&!isScreeningBlocked(f)&&!screeningPassed(f));
-    return{title:t,screens,priority:prioritized.has(t)};
+    const isPrio=prioritized.has(t);
+    const sc=scoreFilm(t,screens,isPrio,allPendingTitles);
+    return{title:t,screens,priority:isPrio,score:sc};
   }).filter(g=>g.screens.length>0);
   if(!baseGroups.length) return[];
 
-  // ── Find max achievable for a given set of groups (with or without priority constraint) ──
+  // Aplicar Mejora 2: ordenar las funciones de cada película por estrategia
+  baseGroups.forEach(g=>{
+    if(g.screens.length>1) g.screens=sortScreensByStrategy(g.screens,baseGroups);
+  });
+
+  // MRV + Score: restaurado (DP con grupos requiere formulación diferente)
+  const mrvGroups=[...baseGroups].sort((a,b)=>{
+    if(b.score!==a.score) return b.score-a.score;
+    return a.screens.length-b.screens.length;
+  });
+
   function findMax(groups, mustIncludeAll){
-    // mustIncludeAll: if true, ALL groups marked priority must appear in result
     let best=0;
     function bb(idx,chosen){
       const remaining=groups.length-idx;
@@ -752,7 +837,6 @@ function computeScenarios(titles){
         if(!mustIncludeAll){
           if(chosen.length>best) best=chosen.length;
         } else {
-          // Only count if all priority groups are represented
           const chosenTitles=new Set(chosen.map(s=>s._title));
           const allPrioritiesIn=groups.every(g=>!g.priority||chosenTitles.has(g.title));
           if(allPrioritiesIn&&chosen.length>best) best=chosen.length;
@@ -765,25 +849,17 @@ function computeScenarios(titles){
           chosen.push({...s,_title:g.title});bb(idx+1,chosen);chosen.pop();
         }
       }
-      // Can skip non-priority films; must attempt to include priority films
       if(!g.priority) bb(idx+1,chosen);
-      else if(mustIncludeAll){
-        // For priority films in mustInclude mode: still try skipping
-        // but only if we've already explored including — the loop above did that
-        // We allow skipping even priority films to find max (they might all conflict)
-        bb(idx+1,chosen);
-      }
+      else bb(idx+1,chosen);
     }
     bb(0,[]);
     return best;
   }
 
-  const mrvGroups=[...baseGroups].sort((a,b)=>a.screens.length-b.screens.length);
   const trueMax=findMax(mrvGroups,false);
   const hasPriorities=baseGroups.some(g=>g.priority);
-  // Max achievable while GUARANTEEING all priorities appear
   const maxWithPriorities=hasPriorities?findMax(mrvGroups,true):trueMax;
-  const priorityCost=trueMax-maxWithPriorities; // how many films you "lose" for the priority
+  const priorityCost=trueMax-maxWithPriorities;
 
   const seenKeys=new Set();const allScenarios=[];
   let incompatiblePriorities=false;
@@ -840,6 +916,20 @@ function computeScenarios(titles){
 
   allScenarios.forEach(sc=>sc.sort((a,b)=>a.day_order!==b.day_order?a.day_order-b.day_order:toMin(a.time)-toMin(b.time)));
 
+  // ── Mejora 3: Balanceo por día ──
+  // Calcular desviación estándar de películas por día — menor = más balanceado
+  function dayBalance(sc){
+    const counts={};
+    sc.forEach(s=>{counts[s.day]=(counts[s.day]||0)+1;});
+    const vals=Object.values(counts);
+    if(vals.length<=1) return 0;
+    const mean=vals.reduce((a,b)=>a+b,0)/vals.length;
+    const variance=vals.reduce((a,v)=>a+Math.pow(v-mean,2),0)/vals.length;
+    return Math.sqrt(variance); // 0 = perfectamente balanceado
+  }
+  // Ordenar: primero los más balanceados (menor desviación estándar)
+  allScenarios.sort((a,b)=>dayBalance(a)-dayBalance(b));
+
   return allScenarios.map(sc=>{
     const included=new Set(sc.map(s=>s._title));
     return{
@@ -848,7 +938,8 @@ function computeScenarios(titles){
       incompatiblePriorities,
       trueMax,
       maxWithPriorities,
-      priorityCost
+      priorityCost,
+      dayBalance:Math.round(dayBalance(sc)*10)/10
     };
   });
 }
@@ -922,6 +1013,18 @@ function renderFilmListHTML(){
     const posterSrc=f?getPosterSrc(t,f.is_cortos):null;
     const posterHtml=posterSrc?`<img class="ag-fi-poster" src="${posterSrc}" loading="lazy" style="${f?.is_cortos?'object-fit:contain;background:#111':''}" onerror="this.className='ag-fi-poster-ph';this.innerHTML='🎬'" alt="">`:`<div class="ag-fi-poster-ph">🎬</div>`;
     const isPrio=prioritized.has(t);
+    // Extraer displayTitle y progSuffix para programas
+    let displayTitle=t, progSuffix='';
+    if(f?.is_cortos){
+      if(t.startsWith('Prog.')){
+        const m=t.match(/^(Prog\.[^\u2014\u2013]+)\s*[\u2014\u2013]\s*(.+)$/);
+        if(m){displayTitle=m[2].trim();progSuffix=m[1].trim();}
+      } else {
+        const m=t.match(/^(.+?)\s*[\u2014\u2013]\s*(Prog\..*)$/);
+        if(m){displayTitle=m[1];progSuffix=m[2];}
+      }
+      if(progSuffix&&!/\d/.test(progSuffix)) progSuffix='';
+    }
     return`<div class="ag-film-item${!hasFuture?' watched-item':''}">
       ${posterHtml}
       <div class="ag-fi-overlay"></div>
@@ -932,7 +1035,8 @@ function renderFilmListHTML(){
       </div>
       <div class="ag-fi-bottom">
         <div class="ag-fi-flags">${f?f.flags||'🎬':'🎬'}</div>
-        <div class="ag-fi-title">${t}</div>
+        <div class="ag-fi-title">${displayTitle}</div>
+        ${progSuffix?`<div style="font-size:9px;color:var(--orange);font-weight:700;margin-top:1px;line-height:1">${progSuffix}</div>`:''}
       </div>
     </div>`;
   };
@@ -1081,7 +1185,7 @@ function renderSavedAgendaHTML(){
             <div class="suggestion-meta">${f.flags||''} ${f.section||''} · ${vc2.ico} ${vc2.short}${sl?' · '+sl:''} · ${f.duration}</div>
             ${f.gapCtx?`<div style="font-size:9px;color:var(--gray);margin-top:2px;font-style:italic">${f.gapCtx}</div>`:''}
           </div>
-          <button class="suggestion-add" onclick="addFromSearch('${f.title.replace(/'/g,"\'")}')">＋ Añadir</button>
+          <button class="suggestion-add" onclick="addSuggestion('${f.title.replace(/'/g,"\'")}','${f.day}','${f.time}')">＋ Añadir</button>
         </div>`;}
       }).join('');
     });
@@ -1165,7 +1269,23 @@ function buildResultHTML(scenarios){
     html+=`<div class="ag-conflicts"><div class="ag-conflicts-title">↩ No incluidas en este escenario</div>
       ${sc.excluded.map(t=>{
         const screens=FILMS.filter(f=>f.title===t&&!isScreeningBlocked(f)&&!screeningPassed(f));
-        const opts=screens.length?screens.map(s=>`${s.day} ${s.time}`).join(' · '):'Sin funciones futuras disponibles';
+        // Mejora 4: swap — para cada función de la excluida, qué películas desplazaría
+        const swapOptions=screens.map(s=>{
+          const displaced=sc.schedule.filter(chosen=>screensConflict(chosen,s)).map(c=>c._title);
+          return{screen:s,displaced};
+        }).filter(o=>o.displaced.length>=1&&o.displaced.length<=2);
+        const trulyfits=screens.some(s=>!sc.schedule.some(chosen=>screensConflict(chosen,s)));
+        let fitsHtml='';
+        if(swapOptions.length){
+          fitsHtml=swapOptions.map(o=>`<div style="margin-top:4px;font-size:10px">
+            <span style="color:var(--gray2)">${o.screen.day} ${o.screen.time} — desplaza a:</span>
+            ${o.displaced.map(d=>`<button onclick="swapFilm('${t.replace(/'/g,"\\'")}','${o.screen.day}','${o.screen.time}','${d.replace(/'/g,"\\'")}');event.stopPropagation()" style="margin-left:4px;background:rgba(232,90,30,.12);border:1px solid rgba(232,90,30,.35);color:var(--orange);font-size:10px;padding:2px 7px;border-radius:5px;cursor:pointer">⇄ ${d.length>22?d.slice(0,20)+'…':d}</button>`).join('')}
+          </div>`).join('');
+        } else if(screens.length){
+          fitsHtml=`<div style="margin-top:3px;font-size:10px;color:var(--gray2)">✗ Todas sus funciones solapan en este escenario</div>`;
+        } else {
+          fitsHtml=`<div style="margin-top:3px;font-size:10px;color:var(--gray2)">Sin funciones futuras disponibles</div>`;
+        }
         const isPrio=prioritized.has(t);
         const prioCount=prioritized.size;
         const atLimit=!isPrio&&prioCount>=PRIO_LIMIT;
@@ -1178,8 +1298,7 @@ function buildResultHTML(scenarios){
           <div class="ag-conflict-info">
             ${isPrio?'<span style="color:var(--orange);font-size:10px;font-weight:700">★ PRIORIDAD · </span>':''}
             <strong>${t}</strong><br>
-            <span style="color:var(--gray2);font-size:11px">${opts}</span>
-          </div>
+            <s${fitsHtml}          </div>
           <button class="ag-prioritize-btn${isPrio?' active':''}${atLimit?' disabled':''}" onclick="${prioAction}">
             ${prioLabel}
           </button>
@@ -1238,10 +1357,55 @@ function showToast(msg,type='info'){
   t.className='prio-toast '+type;t.textContent=msg;t.style.opacity='1';
   clearTimeout(t._to);t._to=setTimeout(()=>{t.style.opacity='0';},3000);
 }
+function swapFilm(excludedTitle, screenDay, screenTime, displacedTitle){
+  if(!cachedResult) return;
+  const sc=cachedResult.scenarios[cachedResult.currentIdx];
+  const newScreen=FILMS.find(f=>f.title===excludedTitle&&f.day===screenDay&&f.time===screenTime);
+  if(!newScreen) return;
+
+  // Build the resulting schedule after the swap
+  const newSchedule=[...sc.schedule.filter(s=>s._title!==displacedTitle),{...newScreen,_title:excludedTitle}];
+  newSchedule.sort((a,b)=>a.day_order!==b.day_order?a.day_order-b.day_order:toMin(a.time)-toMin(b.time));
+  const newKey=newSchedule.map(s=>s._title+'@'+s.day+s.time).sort().join('|');
+
+  // Check if this exact schedule already exists in one of the calculated scenarios
+  const existingIdx=cachedResult.scenarios.findIndex(s=>{
+    const k=s.schedule.map(x=>x._title+'@'+x.day+x.time).sort().join('|');
+    return k===newKey;
+  });
+
+  if(existingIdx>=0){
+    // Jump to the existing scenario
+    cachedResult.currentIdx=existingIdx;
+    showToast(`Escenario ${existingIdx+1} — ya existía esta combinación`,'info');
+  } else {
+    // Create a new custom scenario
+    const pending=[...watchlist].filter(t=>!watched.has(t)&&FILMS.some(f=>f.title===t&&!screeningPassed(f)));
+    const included=new Set(newSchedule.map(s=>s._title));
+    cachedResult.scenarios.push({
+      ...sc,
+      schedule:newSchedule,
+      excluded:pending.filter(t=>!included.has(t))
+    });
+    cachedResult.currentIdx=cachedResult.scenarios.length-1;
+    showToast(`Escenario ${cachedResult.currentIdx+1} — intercambio personalizado`,'info');
+  }
+
+  const res=document.getElementById('ag-result');
+  if(res) res.innerHTML=buildResultHTML(cachedResult.scenarios);
+}
 function saveCurrentScenario(){
   if(!cachedResult||!cachedResult.scenarios.length) return;
   savedAgenda={schedule:[...cachedResult.scenarios[cachedResult.currentIdx].schedule]};
-  saveSavedAgenda();renderAgenda();
+  saveSavedAgenda();
+  // Saltar a Mi Agenda con transición visual
+  switchMainNav('mnav-lista');
+  showAgView();
+  renderAgenda();
+  // Scroll al top y pulso visual en la pestaña
+  const agView=document.getElementById('ag-view');
+  if(agView) agView.scrollTop=0;
+  showToast('📌 Agenda guardada — la ves en Mi Agenda','info');
 }
 function runCalc(){
   cachedResult=null;
@@ -1266,6 +1430,7 @@ function updatePrioCounter(){
 function renderAgenda(){
   const view=document.getElementById('ag-view');
   if(activeMNav==='mnav-lista'){
+    // ── Mi Agenda: películas + buscador + agenda guardada ──
     view.innerHTML=`
       <div class="ag-section">
         <div class="ag-section-title">Mis películas</div>
@@ -1277,16 +1442,25 @@ function renderAgenda(){
           <div id="ag-search-results" class="ag-search-results"></div>
         </div>
         <div id="ag-film-list">${renderFilmListHTML()}</div>
-      </div>`;
+      </div>
+      ${renderSavedAgendaHTML()}`;
   } else {
+    // ── Planner: prio strip compacto + disponibilidad + escenarios ──
     const pending=[...watchlist].filter(t=>!watched.has(t)&&FILMS.some(f=>f.title===t&&!screeningPassed(f)));
     const resultContent=cachedResult
       ?buildResultHTML(cachedResult.scenarios)
       :`<div class="ag-calc-prompt">Configura tu disponibilidad y toca <strong>Calcular escenarios</strong>.</div>`;
     view.innerHTML=`
-      ${renderSavedAgendaHTML()}
       <div class="ag-section">
-        <div class="ag-section-title">Mi disponibilidad</div>
+        <div class="ag-search-wrap">
+          <span class="ag-search-ico">🔍</span>
+          <input type="text" id="ag-search-input" class="ag-search"
+            placeholder="Buscar y añadir película o programa…"
+            oninput="onSearchInput()" onblur="closeSearch()" autocomplete="off">
+          <div id="ag-search-results" class="ag-search-results"></div>
+        </div>
+        ${renderPrioStrip()}
+        <div class="ag-section-title" style="margin-top:16px">Mi disponibilidad</div>
         ${DAY_KEYS.map(day=>{
           const passed=dayFullyPassed(day);
           return`<div class="av-day" style="${passed?'opacity:.4;pointer-events:none':''}">
