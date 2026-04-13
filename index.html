@@ -102,7 +102,16 @@ body{background:var(--bg);color:var(--white);font-family:"DM Sans",sans-serif;mi
 .action-btn.prio-btn{font-size:13px}
 .action-btn.prio-on{color:var(--orange)}
 .ag-fi-prio-badge{position:absolute;top:5px;left:5px;font-size:11px;color:var(--orange);background:rgba(0,0,0,.6);border-radius:4px;padding:1px 4px;font-weight:700;pointer-events:none;z-index:3}
-.prio-toast{position:fixed;bottom:80px;left:50%;transform:translateX(-50%);background:#2a2a2a;border:1px solid #444;color:var(--white);font-size:12px;padding:8px 16px;border-radius:8px;z-index:9999;transition:opacity .4s;max-width:320px;text-align:center;pointer-events:none}
+.conflict-modal{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.7);z-index:9999;display:flex;align-items:center;justify-content:center;padding:20px}
+.conflict-modal-box{background:#1e1e1e;border:1px solid rgba(232,90,30,.4);border-radius:14px;max-width:320px;width:100%;overflow:hidden}
+.conflict-modal-hdr{padding:14px 16px;background:rgba(232,90,30,.1);border-bottom:1px solid rgba(232,90,30,.25);font-size:13px;font-weight:600;color:var(--orange)}
+.conflict-modal-body{padding:12px 16px;font-size:12px;color:var(--gray);line-height:1.6}
+.conflict-modal-body b{color:var(--white)}
+.conflict-modal-btns{display:flex;gap:8px;padding:12px 16px;border-top:1px solid var(--bdr-l)}
+.conflict-modal-btn{flex:1;padding:9px;border-radius:8px;border:none;font-family:"DM Sans",sans-serif;font-size:12px;font-weight:600;cursor:pointer;touch-action:manipulation}
+.conflict-modal-btn.cancel{background:var(--card-b);color:var(--gray)}
+.conflict-modal-btn.confirm{background:var(--orange);color:#fff}
+.prio-toast{position:fixed;top:70px;left:50%;transform:translateX(-50%);background:#2a2a2a;border:1px solid #444;color:var(--white);font-size:12px;padding:10px 18px;border-radius:8px;z-index:9999;transition:opacity .4s;max-width:320px;width:calc(100% - 32px);text-align:center;pointer-events:none;line-height:1.5}
 .prio-toast.warn{border-color:rgba(229,160,32,.6);color:#e5a020}
 .apertura-badge{display:inline-block;font-size:9px;background:var(--orange);color:#fff;font-weight:700;letter-spacing:1px;padding:2px 6px;border-radius:8px;font-family:"Bebas Neue",sans-serif;margin-right:5px;vertical-align:middle;flex-shrink:0}
 .past-badge{position:absolute;bottom:8px;right:10px;font-size:9px;color:var(--gray2);font-weight:600;letter-spacing:.5px;z-index:2;background:rgba(0,0,0,.5);padding:1px 5px;border-radius:5px}
@@ -294,6 +303,64 @@ body{background:var(--bg);color:var(--white);font-family:"DM Sans",sans-serif;mi
 .archive-body.open{display:block}
 /* Today section */
 .today-banner{background:rgba(232,90,30,.1);border:1px solid rgba(232,90,30,.3);border-radius:8px;padding:7px 12px;margin-bottom:8px;font-size:11px;color:var(--orange);font-weight:600;letter-spacing:.5px}
+.sim-panel{background:#1a1a2e;border:1px solid #444;border-radius:8px;padding:8px 12px;margin-bottom:10px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.sim-panel label{font-size:10px;color:#888;white-space:nowrap}
+.sim-panel input[type=range]{flex:1;min-width:120px;accent-color:var(--orange)}
+.sim-panel span{font-size:10px;color:var(--orange);min-width:110px;font-family:monospace}
+.sim-panel button{background:none;border:1px solid #444;border-radius:6px;color:#888;font-size:10px;padding:3px 8px;cursor:pointer;font-family:"DM Sans",sans-serif}
+.ctx-banner{background:var(--card-a);border:1px solid var(--bdr);border-radius:var(--r);margin-bottom:12px;overflow:hidden}
+.ctx-banner.ctx-now{border-color:rgba(232,90,30,.5);background:rgba(232,90,30,.05)}
+.ctx-banner.ctx-soon{border-color:rgba(229,160,32,.4);background:rgba(229,160,32,.04)}
+.ctx-banner-top{display:flex;align-items:center;gap:10px;padding:10px 14px}
+.ctx-ico{font-size:20px;flex-shrink:0}
+.ctx-info{flex:1;min-width:0}
+.ctx-label{font-size:10px;font-weight:700;color:var(--orange);letter-spacing:.3px}
+.ctx-banner.ctx-soon .ctx-label{color:#e5a020}
+.ctx-title{font-size:13px;font-weight:600;color:var(--white);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ctx-venue{font-size:10px;color:var(--gray);margin-top:1px}
+.ctx-dismiss{background:none;border:1px solid var(--bdr);border-radius:20px;color:var(--gray);font-size:10px;padding:5px 10px;cursor:pointer;font-family:"DM Sans",sans-serif;white-space:nowrap;flex-shrink:0;touch-action:manipulation}
+.ctx-dismiss:active{border-color:var(--green);color:var(--green)}
+.ctx-action{display:flex;align-items:center;justify-content:space-between;padding:8px 14px 10px;border-top:1px solid var(--bdr-l)}
+.ctx-q{font-size:11px;color:var(--gray)}
+.ctx-btn{background:var(--orange);border:none;border-radius:20px;color:#fff;font-size:11px;font-weight:600;padding:6px 14px;cursor:pointer;font-family:"DM Sans",sans-serif;touch-action:manipulation}
+.next-film-strip{background:rgba(232,90,30,.08);border:1px solid rgba(232,90,30,.3);border-radius:var(--r);padding:10px 14px;margin-bottom:12px;display:flex;align-items:center;gap:10px}
+.next-film-ico{font-size:18px;flex-shrink:0}
+.next-film-info{flex:1;min-width:0}
+.next-film-countdown{font-size:13px;font-weight:700;color:var(--orange);line-height:1}
+.next-film-title{font-size:11px;color:var(--white);margin-top:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.next-film-venue{font-size:10px;color:var(--gray);margin-top:1px}
+.next-film-strip.now{background:rgba(232,90,30,.15);border-color:var(--orange)}
+.film-alts{background:var(--card-b);border-top:1px solid var(--bdr-l);border-radius:0 0 var(--r) var(--r);overflow:hidden}
+.film-switch{background:none;border:1px solid var(--bdr);border-radius:6px;color:var(--white);font-size:12px;padding:3px 9px;cursor:pointer;font-family:"DM Sans",sans-serif;touch-action:manipulation;transition:all .15s;flex-shrink:0;opacity:.7}
+.film-switch:active{border-color:var(--orange);color:var(--orange)}
+.film-switch.open{border-color:var(--orange);color:var(--orange);background:rgba(232,90,30,.08)}
+.checkin-opt{display:flex;align-items:center;gap:10px;padding:9px 14px;border-bottom:1px solid var(--bdr-l);cursor:pointer;transition:background .15s;touch-action:manipulation}
+.checkin-opt:active{background:var(--card-b)}
+.checkin-opt-info{flex:1;min-width:0}
+.checkin-opt-time{font-size:10px;color:var(--orange);font-weight:600}
+.checkin-opt-title{font-size:12px;color:var(--white);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.checkin-opt-venue{font-size:10px;color:var(--gray);margin-top:1px}
+.checkin-opt-add{font-size:18px;color:var(--orange);flex-shrink:0;padding:0 4px}
+.checkin-result{background:var(--card-a);border:1px solid var(--bdr);border-radius:var(--r);margin-bottom:12px;overflow:hidden}
+.checkin-result-msg{padding:10px 14px;font-size:12px;color:var(--gray);line-height:1.5}
+.checkin-result-msg b{color:var(--white)}
+.checkin-result-btns{display:flex;gap:8px;padding:8px 14px 12px}
+.checkin-result-btn{flex:1;padding:8px;border-radius:8px;border:none;font-family:"DM Sans",sans-serif;font-size:12px;font-weight:600;cursor:pointer;touch-action:manipulation;transition:opacity .15s}
+.checkin-result-btn.primary{background:var(--orange);color:#fff}
+.checkin-result-btn.secondary{background:var(--card-b);color:var(--gray)}
+.checkin-wrap{background:var(--card-a);border:1px solid var(--bdr);border-radius:var(--r);margin-bottom:12px;overflow:hidden}
+.checkin-hdr{padding:9px 14px;background:rgba(232,90,30,.07);border-bottom:1px solid var(--bdr-l);font-size:10px;font-weight:700;color:var(--orange);letter-spacing:.8px;text-transform:uppercase}
+.checkin-item{display:flex;align-items:center;gap:10px;padding:9px 14px;border-bottom:1px solid var(--bdr-l)}
+.checkin-item:last-child{border-bottom:none}
+.checkin-info{flex:1;min-width:0}
+.checkin-title{font-size:12px;font-weight:600;color:var(--white);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.checkin-time{font-size:10px;color:var(--gray);margin-top:1px}
+.checkin-btns{display:flex;gap:6px;flex-shrink:0}
+.checkin-btn{padding:5px 10px;border-radius:20px;border:1px solid var(--bdr);background:none;font-family:"DM Sans",sans-serif;font-size:11px;font-weight:600;cursor:pointer;touch-action:manipulation;white-space:nowrap;transition:all .15s}
+.checkin-btn.yes{color:var(--green);border-color:rgba(58,170,110,.4)}
+.checkin-btn.yes:active{background:rgba(58,170,110,.15)}
+.checkin-btn.no{color:var(--gray)}
+.checkin-btn.no:active{background:var(--card-b)}
 /* Saved items */
 .saved-day-lbl{font-size:10px;color:var(--gray2);text-transform:uppercase;letter-spacing:1px;font-weight:600;margin:8px 0 4px}
 .saved-item{display:flex;align-items:center;gap:8px;padding:7px 0;border-bottom:1px solid var(--bdr-l)}
@@ -472,7 +539,7 @@ body{background:var(--bg);color:var(--white);font-family:"DM Sans",sans-serif;mi
   .main-nav-tab.on{border-bottom-color:transparent;border-top-color:var(--orange)}
   .grid{padding-bottom:calc(80px + env(safe-area-inset-bottom))}
   .ag-view{padding-top:14px;padding-left:20px;padding-right:20px;padding-bottom:calc(80px + env(safe-area-inset-bottom))}
-  .prio-toast{bottom:calc(80px + env(safe-area-inset-bottom) + 10px)}
+  .prio-toast{top:calc(60px + env(safe-area-inset-top) + 4px)}
   .ag-film-grid{grid-template-columns:repeat(4,1fr);gap:6px}
 }
 </style>
@@ -572,7 +639,7 @@ function screeningPassed(s){
   if(!dateStr) return false;
   const screeningTime=new Date(`${dateStr}T${s.time}:00`);
   screeningTime.setMinutes(screeningTime.getMinutes()+10); // 10 min grace
-  return new Date()>screeningTime;
+  return simNow()>screeningTime;
 }
 function dayFullyPassed(day){
   const dateStr=FESTIVAL_DATES[day];
@@ -583,11 +650,11 @@ function dayFullyPassed(day){
   const lastTime=dayFilms.reduce((max,f)=>f.time>max?f.time:max,'00:00');
   const lastScreen=new Date(`${dateStr}T${lastTime}:00`);
   lastScreen.setMinutes(lastScreen.getMinutes()+10);
-  return new Date()>lastScreen;
+  return simNow()>lastScreen;
 }
 function isNowShowing(f){
   const dateStr=FESTIVAL_DATES[f.day];if(!dateStr) return false;
-  const now=new Date();
+  const now=simNow();
   const start=new Date(`${dateStr}T${f.time}:00`);
   const dur=f.duration?parseInt(f.duration):90;
   const end=new Date(start.getTime()+dur*60000);
@@ -596,7 +663,7 @@ function isNowShowing(f){
 function isToday(day){
   const dateStr=FESTIVAL_DATES[day];
   if(!dateStr) return false;
-  const today=new Date().toISOString().slice(0,10);
+  const today=simTodayStr();
   return dateStr===today;
 }
 
@@ -660,6 +727,10 @@ let savedAgenda=null;
 let lastRemovedSlots=[]; // tracks up to 5 recently removed films
 const MAX_REMEMBERED_SLOTS=5;
 let activeMiPlanDay=null;
+// ── Simulation clock (dev tool) ──
+let _simTime=null; // null = real time
+function simNow(){return _simTime?new Date(_simTime):new Date();}
+function simTodayStr(){return simNow().toISOString().slice(0,10);}
 let miPlanViewStart=0; // 0-4, step 1, shows 2 days
 // ─────────────────────────────────────────────────────────────────────────────
 // ⚠️  FIX CRÍTICO — NO REMOVER (Apr 2026)
@@ -691,9 +762,13 @@ function mplanBlockType(s){
 
 function selectMiPlanDay(idx){
   activeMiPlanDay=idx;
-  // Keep viewStart so selected day stays visible
   if(idx<miPlanViewStart||idx>=miPlanViewStart+2) miPlanViewStart=Math.min(idx,DAY_KEYS.length-2);
   renderAgenda();
+  // Scroll to detail section below calendar
+  setTimeout(()=>{
+    const detail=document.getElementById('mplan-detail');
+    if(detail) detail.scrollIntoView({behavior:'smooth',block:'start'});
+  },80);
 }
 function miPlanNav(dir){
   miPlanViewStart=Math.max(0,Math.min(DAY_KEYS.length-2,miPlanViewStart+dir));
@@ -704,9 +779,9 @@ function miPlanNav(dir){
 function renderMiPlanCalendar(){
   if(!savedAgenda||!savedAgenda.schedule.length) return'';
   const schedule=savedAgenda.schedule;
-  const todayStr=new Date().toISOString().slice(0,10);
+  const todayStr=simTodayStr();
   const nowDayIdx=DAY_KEYS.findIndex(d=>FESTIVAL_DATES[d]===todayStr);
-  const nowMin=new Date().getHours()*60+new Date().getMinutes();
+  const nowMin=simNow().getHours()*60+simNow().getMinutes();
   if(activeMiPlanDay===null){
     const firstDayWithFilm=DAY_KEYS.findIndex(d=>schedule.some(s=>s.day===d));
     activeMiPlanDay=nowDayIdx>=0?nowDayIdx:Math.max(0,firstDayWithFilm);
@@ -804,7 +879,7 @@ function renderMiPlanCalendar(){
   const dayFilms=schedule.filter(s=>s.day===activeKey).sort((a,b)=>toMin(a.time)-toMin(b.time));
   const isPastDay=nowDayIdx>=0&&activeMiPlanDay<nowDayIdx;
 
-  let listHtml=`<div class="mplan-list"><div class="mplan-list-hdr">${DAY_LONG[activeKey]||activeKey}</div>`;
+  let listHtml=`<div class="mplan-list" id="mplan-detail"><div class="mplan-list-hdr">${DAY_LONG[activeKey]||activeKey}</div>`;
   if(!dayFilms.length){
     listHtml+=`<div class="mplan-empty">D\u00eda libre \u2014 sin funciones planificadas</div>`;
   } else {
@@ -832,11 +907,12 @@ function renderMiPlanCalendar(){
         <div style="display:flex;flex-direction:column;align-items:flex-end;gap:4px;flex-shrink:0">
           <div class="mplan-dur">${s.duration||''}</div>
           <div style="display:flex;gap:4px">
+            ${!isPast?`<button class="film-switch${_expandedFilm===(s._title||'')+(s.day||'')+(s.time||'')?' open':''}" onclick="toggleFilmAlternatives('${(s._title||'')+(s.day||'')+(s.time||'')}','${safeT}','${s.day||''}','${s.time||''}');event.stopPropagation()" title="Ver alternativas">⇄</button>`:''}
             <button class="ag-fi-btn${watched.has(s._title)?' w-on':''}" data-wt="${safeT}" onclick="toggleWatched(this.dataset.wt,event)" title="${watched.has(s._title)?'Desmarcar':'Marcar como vista'}">${watched.has(s._title)?'\u21a9':'\u2713'}</button>
             <button class="ag-fi-btn del" data-rmt="${safeT}" onclick="removeFromAgenda(this.dataset.rmt);event.stopPropagation()" title="Quitar">\u2715</button>
           </div>
         </div>
-      </div>`;
+      </div>${_expandedFilm===(s._title||'')+(s.day||'')+(s.time||'')?`<div class="film-alts">${renderFilmAlternatives(s._title,s.day,s.time)}</div>`:''}`;
     });
   }
   listHtml+='</div>';
@@ -1039,10 +1115,68 @@ const DAY_LONG={Martes:'Martes 14',Miércoles:'Miércoles 15',Jueves:'Jueves 16'
 const DAY_SHORT={Martes:'MAR 14',Miércoles:'MIÉ 15',Jueves:'JUE 16',Viernes:'VIE 17',Sábado:'SÁB 18',Domingo:'DOM 19'};
 let avAddOpen={};
 function isFullDayBlocked(day){return availability[day].blocks.some(b=>toMin(b.from)<=0&&toMin(b.to)>=toMin('23:59'));}
+function checkPlanConflictsWithBlock(day, fromStr, toStr){
+  if(!savedAgenda||!savedAgenda.schedule.length) return[];
+  const bFrom=toMin(fromStr), bTo=toMin(toStr);
+  return savedAgenda.schedule.filter(s=>{
+    if(s.day!==day) return false;
+    const sStart=toMin(s.time), sEnd=sStart+parseDur(s.duration);
+    return sStart<bTo&&sEnd>bFrom;
+  });
+}
+function _removePlanItem(title){
+  if(!savedAgenda) return;
+  const removed=savedAgenda.schedule.find(s=>s._title===title);
+  if(removed){
+    lastRemovedSlots=lastRemovedSlots.filter(r=>r._title!==removed._title);
+    lastRemovedSlots.unshift({...removed,_isRestored:true});
+    if(lastRemovedSlots.length>MAX_REMEMBERED_SLOTS) lastRemovedSlots.length=MAX_REMEMBERED_SLOTS;
+    saveLastSlot();
+  }
+  savedAgenda.schedule=savedAgenda.schedule.filter(s=>s._title!==title);
+  if(!savedAgenda.schedule.length) savedAgenda=null;
+  saveSavedAgenda();
+}
+function showConflictModal(conflicts, onConfirm){
+  const existing=document.getElementById('conflict-modal');if(existing) existing.remove();
+  const names=conflicts.map(s=>{
+    const{displayTitle}=parseProgramTitle(s._title||'');
+    return`<b>${s.time} ${displayTitle.length>30?displayTitle.slice(0,28)+'…':displayTitle}</b>`;
+  }).join('<br>');
+  const modal=document.createElement('div');
+  modal.id='conflict-modal';modal.className='conflict-modal';
+  modal.innerHTML=`<div class="conflict-modal-box">
+    <div class="conflict-modal-hdr">⚠ Conflicto con tu plan</div>
+    <div class="conflict-modal-body">
+      Este horario choca con:<br>${names}<br><br>
+      ¿Continuar y quitar ${conflicts.length===1?'esa función':'esas funciones'} del plan?
+    </div>
+    <div class="conflict-modal-btns">
+      <button class="conflict-modal-btn cancel" id="conflict-cancel">Cancelar</button>
+      <button class="conflict-modal-btn confirm" id="conflict-ok">Quitar y continuar</button>
+    </div>
+  </div>`;
+  document.body.appendChild(modal);
+  document.getElementById('conflict-cancel').onclick=()=>modal.remove();
+  document.getElementById('conflict-ok').onclick=()=>{
+    modal.remove();
+    onConfirm();
+  };
+}
 function toggleFullDay(day){
-  if(isFullDayBlocked(day)) availability[day].blocks=[];
-  else{availability[day].blocks=[{from:'00:00',to:'23:59'}];avAddOpen[day]=false;}
-  cachedResult=null;saveAV();renderAvDay(day);invalidateCalcResult();
+  if(isFullDayBlocked(day)){
+    availability[day].blocks=[];
+    cachedResult=null;saveAV();renderAvDay(day);invalidateCalcResult();
+    return;
+  }
+  const _conflicts=checkPlanConflictsWithBlock(day,'00:00','23:59');
+  const _doBlock=()=>{
+    _conflicts.forEach(s=>_removePlanItem(s._title));
+    availability[day].blocks=[{from:'00:00',to:'23:59'}];avAddOpen[day]=false;
+    cachedResult=null;saveAV();renderAvDay(day);invalidateCalcResult();
+  };
+  if(_conflicts.length) setTimeout(()=>showConflictModal(_conflicts,_doBlock),50);
+  else _doBlock();
 }
 function addBlock(day){
   const f=document.getElementById(`av-from-${day}`).value;
@@ -1051,9 +1185,15 @@ function addBlock(day){
   if(toMin(f)>=toMin(t)){showToast('La hora de inicio debe ser menor que la de fin','warn');return;}
   const av=availability[day];
   if(av.blocks.some(b=>toMin(f)<toMin(b.to)&&toMin(t)>toMin(b.from))){showToast('Este horario se solapa con uno existente','warn');return;}
-  av.blocks.push({from:f,to:t});av.blocks.sort((a,b)=>toMin(a.from)-toMin(b.from));
-  avAddOpen[day]=false;
-  cachedResult=null;saveAV();renderAvDay(day);invalidateCalcResult();
+  const _blockConflicts=checkPlanConflictsWithBlock(day,f,t);
+  const _doAdd=()=>{
+    _blockConflicts.forEach(s=>_removePlanItem(s._title));
+    av.blocks.push({from:f,to:t});av.blocks.sort((a,b)=>toMin(a.from)-toMin(b.from));
+    avAddOpen[day]=false;
+    cachedResult=null;saveAV();renderAvDay(day);invalidateCalcResult();
+  };
+  if(_blockConflicts.length) setTimeout(()=>showConflictModal(_blockConflicts,_doAdd),50);
+  else _doAdd();
 }
 function removeBlock(day,fromVal,toVal){
   availability[day].blocks=availability[day].blocks.filter(b=>!(b.from===fromVal&&b.to===toVal));
@@ -1534,9 +1674,15 @@ function mkAgendaRow(s, mode='saved'){
   const isDone=watched.has(t);
   const alts=mode==='scenario'?FILMS.filter(fi=>fi.title===t&&!isScreeningBlocked(fi)&&!screeningPassed(fi)&&!(fi.day===s.day&&fi.time===s.time)):[];
   const altBadge=alts.length?`<span class="ag-alts">${alts.length} alt.</span>`:'';
+  const filmKey=(s._title||'')+(s.day||'')+(s.time||'');
+  const isExpanded=_expandedFilm===filmKey;
   const actionBtn=mode==='saved'
     ?`<button class="ag-fi-btn del" data-rmt="${safeT}" onclick="removeFromAgenda(this.dataset.rmt);event.stopPropagation()" title="Quitar de agenda">✕</button>`
     :`<button class="ag-fi-btn del" data-wlt="${safeT}" onclick="toggleWL(this.dataset.wlt,event)" title="Quitar">✕</button>`;
+  const switchBtn=mode==='saved'&&!isDone
+    ?`<button class="film-switch${isExpanded?' open':''}" onclick="toggleFilmAlternatives('${filmKey}','${safeT}','${s.day||''}','${s.time||''}');event.stopPropagation()" title="Ver alternativas">⇄</button>`
+    :'';
+  const altsHtml=isExpanded&&mode==='saved'?renderFilmAlternatives(t,s.day,s.time):'';
   return`<div class="saved-item${isDone?' done':''}">
     ${_ph}
     <div class="saved-time">${s.time}</div>
@@ -1545,8 +1691,8 @@ function mkAgendaRow(s, mode='saved'){
       <div class="saved-venue">${vc2.ico} ${vc2.short}${sl?' · '+sl:''}${s.duration?' · '+s.duration:''}${altBadge}</div>
     </div>
     <button class="saved-check${isDone?' done':''}" data-wt="${safeT}" onclick="toggleWatched(this.dataset.wt,event)" title="${isDone?'Desmarcar':'Marcar como vista'}">${isDone?'↩':'✓'}</button>
-    ${actionBtn}
-  </div>`;
+    ${switchBtn}${actionBtn}
+  </div>${altsHtml?`<div class="film-alts">${altsHtml}</div>`:''}`;
 }
 
 function renderSavedAgendaHTML(){
@@ -1562,6 +1708,250 @@ function renderSavedAgendaHTML(){
       <code style="font-size:10px;opacity:.8">${err.message}</code>
     </div>`;
   }
+}
+function checkinLaVi(title){
+  if(!watched.has(title)){watched.add(title);saveWatched();updateCardState(title);updateAgTab();}
+  renderAgenda();
+}
+const _SIM_START=new Date('2026-04-14T09:00:00');
+const _SIM_END=new Date('2026-04-20T02:00:00');
+const _SIM_TOTAL=(_SIM_END-_SIM_START)/60000;
+function renderSimPanel(){
+  const cur=_simTime?new Date(_simTime):null;
+  const label=cur?cur.toLocaleString('es',{weekday:'short',day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'}):'Tiempo real';
+  const pct=cur?Math.round(Math.max(0,Math.min(_SIM_TOTAL,(cur-_SIM_START)/60000))/_SIM_TOTAL*1000):0;
+  return`<div class="sim-panel">
+    <label>🔧 Simular</label>
+    <input type="range" id="sim-slider" min="0" max="1000" value="${pct}"
+      oninput="updateSimLabel(this.value)" onchange="applySimTime(this.value)">
+    <span id="sim-label">${label}</span>
+    <button onclick="applySimTime(null)">Real</button>
+  </div>`;
+}
+function updateSimLabel(val){
+  const d=new Date(_SIM_START.getTime()+Math.round(val/1000*_SIM_TOTAL)*60000);
+  const el=document.getElementById('sim-label');
+  if(el) el.textContent=d.toLocaleString('es',{weekday:'short',day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'});
+}
+function applySimTime(val){
+  if(val===null){
+    _simTime=null;
+    const sl=document.getElementById('sim-slider');if(sl) sl.value=0;
+    const lb=document.getElementById('sim-label');if(lb) lb.textContent='Tiempo real';
+  } else {
+    _simTime=new Date(_SIM_START.getTime()+Math.round(val/1000*_SIM_TOTAL)*60000).toISOString();
+  }
+  _expandedFilm='';
+  activeMiPlanDay=null;
+  renderAgenda();
+}
+let _expandedFilm=''; // key: title+day+time — which film has alternatives open
+
+function renderNextStrip(schedule){
+  if(!schedule||!schedule.length) return'';
+  const now=simNow();
+  const upcoming=schedule
+    .filter(s=>!watched.has(s._title))
+    .map(s=>{
+      const dateStr=FESTIVAL_DATES[s.day];if(!dateStr) return null;
+      const start=new Date(`${dateStr}T${s.time}:00`);
+      const dur=parseDur(s.duration);
+      const end=new Date(start.getTime()+dur*60000);
+      return{...s,start,end,startMin:toMin(s.time),endMin:toMin(s.time)+dur};
+    })
+    .filter(Boolean)
+    .sort((a,b)=>a.start-b.start);
+  const nowMs=now.getTime();
+  const nowMin=now.getHours()*60+now.getMinutes();
+  const inProg=upcoming.find(s=>s.start<=now&&s.end>now);
+  const next=upcoming.find(s=>s.start>now);
+  const item=inProg||next;
+  if(!item) return'';
+  const{displayTitle}=parseProgramTitle(item._title||'');
+  const short=displayTitle.length>30?displayTitle.slice(0,28)+'…':displayTitle;
+  const vc2=vcfg(item.venue),sl=sala(item.venue);
+  let label,ico;
+  if(inProg){
+    const leftMin=item.endMin-nowMin;
+    label=`En curso · termina en ${leftMin} min`;ico='▶';
+  } else {
+    const mins=Math.ceil((item.start-now)/60000);
+    label=mins<60?`En ${mins} min`:`En ${Math.floor(mins/60)}h${mins%60?` ${mins%60}min`:''}`;ico='⏱';
+  }
+  return`<div class="next-film-strip${inProg?' now':''}">
+    <div class="next-film-ico">${ico}</div>
+    <div class="next-film-info">
+      <div class="next-film-countdown">${label}</div>
+      <div class="next-film-title">${short}</div>
+      <div class="next-film-venue">${vc2.ico} ${vc2.short}${sl?' · '+sl:''}</div>
+    </div>
+  </div>`;
+}
+
+function renderUnconfirmed(schedule){
+  const now=simNow();
+  const past=schedule.filter(s=>{
+    if(watched.has(s._title)) return false;
+    const dateStr=FESTIVAL_DATES[s.day];if(!dateStr) return false;
+    const end=new Date(`${dateStr}T${s.time}:00`);
+    end.setMinutes(end.getMinutes()+parseDur(s.duration));
+    return end<now;
+  }).sort((a,b)=>{
+    const da=new Date(`${FESTIVAL_DATES[a.day]}T${a.time}:00`);
+    const db=new Date(`${FESTIVAL_DATES[b.day]}T${b.time}:00`);
+    return db-da;
+  });
+  if(!past.length) return'';
+  const nowMin=now.getHours()*60+now.getMinutes();
+  const todayStr=simTodayStr();
+  const todayKey=DAY_KEYS.find(d=>FESTIVAL_DATES[d]===todayStr);
+  const latest=past[0];const older=past.slice(1);
+  const{displayTitle}=parseProgramTitle(latest._title||'');
+  const short=displayTitle.length>28?displayTitle.slice(0,26)+'…':displayTitle;
+  const endMs=new Date(`${FESTIVAL_DATES[latest.day]}T${latest.time}:00`).getTime()+parseDur(latest.duration)*60000;
+  const minsAgo=Math.round((now.getTime()-endMs)/60000);
+  const timeDesc=minsAgo<120?`Terminó hace ${minsAgo} min`:`${latest.day} · ${latest.time}`;
+  const safeLast=latest._title.replace(/'/g,"\'");
+  const olderHtml=older.length?`
+    <div id="ctx-older" style="display:none">
+      ${older.map(s=>{
+        const{displayTitle:dt}=parseProgramTitle(s._title||'');
+        const sh=dt.length>26?dt.slice(0,24)+'…':dt;
+        const st=s._title.replace(/'/g,"\'");
+        return`<div class="checkin-item">
+          <div class="checkin-info"><div class="checkin-title">${sh}</div><div class="checkin-time">${s.day} · ${s.time}</div></div>
+          <div class="checkin-btns"><button class="checkin-btn yes" onclick="checkinLaVi('${st}')">Sí</button><button class="checkin-btn no" onclick="checkinNoLaVi('${st}')">No</button></div>
+        </div>`;
+      }).join('')}
+    </div>
+    <div style="padding:4px 14px 8px">
+      <button style="background:none;border:none;color:var(--gray);font-size:10px;cursor:pointer;font-family:'DM Sans',sans-serif"
+        onclick="const el=document.getElementById('ctx-older');el.style.display=el.style.display==='none'?'block':'none'">
+        + ${older.length} anterior${older.length>1?'es':''} sin confirmar
+      </button>
+    </div>`:'';
+  return`<div class="checkin-wrap">
+    <div class="checkin-hdr">Funciones sin confirmar</div>
+    <div class="checkin-item">
+      <div class="checkin-info"><div class="checkin-title">${short}</div><div class="checkin-time">${timeDesc}</div></div>
+      <div class="checkin-btns">
+        <button class="checkin-btn yes" onclick="checkinLaVi('${safeLast}')">Sí</button>
+        <button class="checkin-btn no" onclick="checkinNoLaVi('${safeLast}')">No</button>
+      </div>
+    </div>${olderHtml}
+  </div>`;
+}
+
+function toggleFilmAlternatives(key,title,day,time){
+  if(_expandedFilm===key){_expandedFilm='';renderAgenda();return;}
+  _expandedFilm=key;
+  renderAgenda();
+}
+
+function renderFilmAlternatives(title,day,time){
+  const now=simNow();
+  const nowMin=now.getHours()*60+now.getMinutes();
+  const fStart=toMin(time),fEnd=fStart+parseDur((FILMS.find(f=>f.title===title&&f.day===day&&f.time===time)||{}).duration||'90');
+  // Gap: from film start (or now if already started) until next plan item after this film
+  const gapStart=Math.max(nowMin,fStart);
+  const planAfter=savedAgenda?savedAgenda.schedule
+    .filter(s=>!(s._title===title&&s.day===day&&s.time===time))
+    .filter(s=>s.day===day&&toMin(s.time)>=fEnd)
+    .sort((a,b)=>toMin(a.time)-toMin(b.time)):[];
+  const gapEnd=planAfter.length?toMin(planAfter[0].time)-5:25*60;
+  const safeT=title.replace(/'/g,"\'");
+  const optsHtml=renderGapOptions(gapStart,gapEnd,day,safeT);
+  const hasOpts=optsHtml&&!optsHtml.includes('No hay funciones');
+  return`<div class="film-alts">
+    ${hasOpts?optsHtml:`<div style="padding:10px 14px;font-size:11px;color:var(--gray)">No hay alternativas disponibles para este horario.</div>`}
+    <div style="padding:4px 14px 10px">
+      <button class="checkin-result-btn secondary" style="width:100%;font-size:11px" onclick="_expandedFilm='';renderAgenda()">Cerrar</button>
+    </div>
+  </div>`;
+}
+
+function confirmFreeGap(title){
+  _removePlanItem(title);
+  _expandedFilm='';
+  showToast('Hueco libre en tu plan','info');
+  renderAgenda();
+}
+
+function confirmReplace(removedTitle,newTitle,day,time){
+  const{displayTitle:dt}=parseProgramTitle(newTitle);
+  const shortNew=dt.length>22?dt.slice(0,20)+'…':dt;
+  const{displayTitle:dr}=parseProgramTitle(removedTitle||'');
+  const shortRem=dr.length>22?dr.slice(0,20)+'…':dr;
+  const existing=document.getElementById('conflict-modal');if(existing) existing.remove();
+  const modal=document.createElement('div');
+  modal.id='conflict-modal';modal.className='conflict-modal';
+  modal.innerHTML=`<div class="conflict-modal-box">
+    <div class="conflict-modal-hdr">${removedTitle?'¿Reemplazar función?':'¿Añadir al plan?'}</div>
+    <div class="conflict-modal-body">${removedTitle?`Quitar <b>${shortRem}</b> y añadir`:'Añadir'} <b>${shortNew}</b> a tu plan.</div>
+    <div class="conflict-modal-btns">
+      <button class="conflict-modal-btn cancel" onclick="document.getElementById('conflict-modal').remove()">Cancelar</button>
+      <button class="conflict-modal-btn confirm" id="replace-ok">Sí${removedTitle?', reemplazar':', añadir'}</button>
+    </div>
+  </div>`;
+  document.body.appendChild(modal);
+  setTimeout(()=>{
+    const btn=document.getElementById('replace-ok');
+    if(btn) btn.onclick=()=>{
+      modal.remove();
+      if(removedTitle) _removePlanItem(removedTitle);
+      const screen=FILMS.find(f=>f.title===newTitle&&f.day===day&&f.time===time);
+      if(screen){
+        if(!savedAgenda) savedAgenda={schedule:[]};
+        if(!watchlist.has(newTitle)){watchlist.add(newTitle);saveWL();}
+        savedAgenda.schedule=savedAgenda.schedule.filter(s=>s._title!==newTitle);
+        savedAgenda.schedule.push({...screen,_title:newTitle});
+        savedAgenda.schedule.sort((a,b)=>DAY_KEYS.indexOf(a.day)-DAY_KEYS.indexOf(b.day)||toMin(a.time)-toMin(b.time));
+        saveSavedAgenda();
+      }
+      _expandedFilm='';
+      showToast(removedTitle?`Reemplazada por ${shortNew}`:`${shortNew} añadida al plan`,'info');
+      renderAgenda();
+    };
+  },50);
+}
+
+function renderGapOptions(gapStartMin,gapEndMin,todayKey,removedTitle){
+  removedTitle=removedTitle||'';
+  const plannedTitles=new Set(savedAgenda?savedAgenda.schedule.map(s=>s._title):[]);
+  const now=simNow();const nowMin=now.getHours()*60+now.getMinutes();
+  const MIN_REMAINING=20;
+  const safeRem=removedTitle.replace(/'/g,"\'");
+  const opts=FILMS.filter(f=>{
+    if(f.day!==todayKey) return false;
+    if(isScreeningBlocked(f)) return false;
+    if(plannedTitles.has(f.title)&&f.title!==removedTitle) return false;
+    if(f.title===removedTitle) return false;
+    if(watched.has(f.title)) return false;
+    const fStart=toMin(f.time),fEnd=fStart+parseDur(f.duration);
+    const inProgress=fStart<nowMin&&fEnd>nowMin;
+    if(inProgress) return (fEnd-nowMin)>=MIN_REMAINING&&fEnd<=gapEndMin;
+    return fStart>=gapStartMin&&fEnd<=gapEndMin;
+  }).sort((a,b)=>{
+    const aStart=toMin(a.time),bStart=toMin(b.time);
+    const aFuture=aStart>=nowMin,bFuture=bStart>=nowMin;
+    if(aFuture&&!bFuture) return -1;
+    if(!aFuture&&bFuture) return 1;
+    if(aFuture&&bFuture) return aStart-bStart;
+    return(bStart+parseDur(b.duration))-(aStart+parseDur(a.duration));
+  }).slice(0,4);
+  if(!opts.length) return`<div style="padding:8px 14px 4px;font-size:11px;color:var(--gray)">No hay funciones disponibles para este hueco.</div>`;
+  return opts.map(f=>{
+    const vc2=vcfg(f.venue);const{displayTitle}=parseProgramTitle(f.title);
+    const short=displayTitle.length>26?displayTitle.slice(0,24)+'…':displayTitle;
+    const safeT=f.title.replace(/'/g,"\'");
+    const fStart=toMin(f.time);const inProg=fStart<nowMin;
+    const minsIn=inProg?nowMin-fStart:0;
+    const badge=inProg?`<span style="font-size:9px;color:var(--green);font-weight:700;display:block;margin-bottom:2px">EN CURSO · entró hace ${minsIn} min</span>`:'';
+    return`<div class="checkin-opt" onclick="confirmReplace('${safeRem}','${safeT}','${f.day}','${f.time}')">
+      <div class="checkin-opt-info">${badge}<div class="checkin-opt-time">${f.time} · ${f.duration}</div><div class="checkin-opt-title">${short}</div><div class="checkin-opt-venue">${vc2.ico} ${vc2.short}</div></div>
+      <div class="checkin-opt-add">＋</div>
+    </div>`;
+  }).join('');
 }
 function _renderSavedAgendaHTML(){
   if(!savedAgenda||!savedAgenda.schedule.length) return`
@@ -1581,7 +1971,7 @@ function _renderSavedAgendaHTML(){
   futureItems.forEach(s=>{if(!byDay[s.day])byDay[s.day]=[];byDay[s.day].push(s);});
 
   const festDays=['Martes','Miércoles','Jueves','Viernes','Sábado','Domingo'];
-  const today=new Date().toISOString().slice(0,10);
+  const today=simTodayStr();
   const dayIdx=festDays.findIndex(d=>FESTIVAL_DATES[d]===today);
   const currentDayNum=dayIdx>=0?dayIdx+1:null;
   const viewedCount=[...watched].length;
@@ -1624,6 +2014,10 @@ function _renderSavedAgendaHTML(){
         }).join('')}`).join('')}
     </div>`;
   }
+
+  html+=renderSimPanel();
+  html+=renderNextStrip(all);
+  html+=renderUnconfirmed(all);
 
   if(todayItems.length){
     html+=`<div class="today-banner">Hoy — Funciones pendientes</div>`;
@@ -1824,7 +2218,7 @@ function showToast(msg,type='info'){
   let t=document.getElementById('prio-toast');
   if(!t){t=document.createElement('div');t.id='prio-toast';document.body.appendChild(t);}
   t.className='prio-toast '+type;t.textContent=msg;t.style.opacity='1';
-  clearTimeout(t._to);t._to=setTimeout(()=>{t.style.opacity='0';},3000);
+  clearTimeout(t._to);t._to=setTimeout(()=>{t.style.opacity='0';},5000);
 }
 function swapFilm(excludedTitle, screenDay, screenTime, displacedTitle){
   if(!cachedResult) return;
