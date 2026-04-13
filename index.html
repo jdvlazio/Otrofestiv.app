@@ -253,6 +253,7 @@ body{background:var(--bg);color:var(--white);font-family:"DM Sans",sans-serif;mi
 .mplan-wk-block.mp-priority{background:rgba(232,90,30,.17);border-left-color:var(--orange)}
 .mplan-wk-block.mp-program{background:rgba(232,90,30,.06);border-left-color:rgba(232,90,30,.4)}
 .mplan-wk-block.mp-past{filter:saturate(.2);opacity:.3}
+.mplan-wk-block.mp-active{outline:2px solid var(--orange);outline-offset:-2px;opacity:1}
 .mplan-wk-block.mp-now{opacity:.9}
 .mplan-wk-badge{font-size:9px;color:var(--orange);line-height:1;margin-bottom:2px}
 .mplan-wk-time{font-size:9px;color:var(--gray);line-height:1;margin-bottom:3px}
@@ -280,7 +281,17 @@ body{background:var(--bg);color:var(--white);font-family:"DM Sans",sans-serif;mi
 /* List */
 .mplan-list{border-top:1px solid var(--bdr-l)}
 .mplan-list-hdr{font-size:9px;font-weight:700;color:var(--orange);letter-spacing:.8px;text-transform:uppercase;padding:7px 12px;border-bottom:1px solid var(--bdr-l);background:var(--surf)}
-.mplan-row{display:flex;align-items:center;gap:10px;padding:8px 12px;border-bottom:1px solid var(--bdr-l)}
+.mplan-row{display:flex;align-items:center;gap:10px;padding:8px 12px;border-bottom:1px solid var(--bdr-l);transition:background .2s}
+.mplan-row.active{background:rgba(232,90,30,.07);border-left:2px solid var(--orange);padding-left:10px}
+.mplan-prog-list{display:none;border-top:1px solid var(--bdr-l);padding:8px 12px}
+.mplan-prog-list.open{display:block}
+.mplan-prog-item{display:flex;align-items:center;gap:8px;padding:5px 0;border-bottom:1px solid var(--bdr-l)}
+.mplan-prog-item:last-child{border-bottom:none}
+.mplan-prog-num{font-size:10px;color:var(--gray2);min-width:16px;text-align:right;flex-shrink:0}
+.mplan-prog-title{font-size:11px;color:var(--white);flex:1;min-width:0}
+.mplan-prog-dur{font-size:10px;color:var(--gray);flex-shrink:0}
+.mplan-prog-toggle{background:none;border:none;color:var(--gray);font-size:10px;cursor:pointer;font-family:"DM Sans",sans-serif;padding:0;display:flex;align-items:center;gap:3px;touch-action:manipulation}
+.mplan-prog-toggle:active{color:var(--orange)}
 .mplan-row:last-child{border-bottom:none}
 .mplan-tc{flex-shrink:0;min-width:50px}
 .mplan-t1{font-family:"Bebas Neue",sans-serif;font-size:18px;color:var(--orange);line-height:1}
@@ -847,12 +858,14 @@ function renderMiPlanCalendar(){
       const isPast=isPastDay||(isToday&&fMin+dur<nowMin);
       const isNow=isToday&&fMin<=nowMin&&fMin+dur>nowMin;
       const type=mplanBlockType(s);
-      const stateClass=isPast?' mp-past':isNow?' mp-now':'';
+      const filmKey=(s._title||'')+s.time;
+      const isActive=filmKey===_activeMiPlanFilm;
+      const stateClass=isPast?' mp-past':isNow?' mp-now':isActive?' mp-active':'';
       const{displayTitle}=parseProgramTitle(s._title||'');
       const isPrio=type==='mp-priority';
       const showVenue=blockH>44;
       const vc2=vcfg(s.venue);
-      return`<div class="mplan-wk-block ${type}${stateClass}" style="top:${top.toFixed(0)}px;height:${blockH.toFixed(0)}px" onclick="selectMiPlanDay(${i});event.stopPropagation()" title="${(s._title||'').replace(/"/g,'&quot;')}">
+      return`<div class="mplan-wk-block ${type}${stateClass}" style="top:${top.toFixed(0)}px;height:${blockH.toFixed(0)}px" data-fkey="${(s._title||'')}${s.time}" onclick="setActivePlanFilm(this);selectMiPlanDay(${i});event.stopPropagation()" title="${(s._title||'').replace(/"/g,'&quot;')}">
         ${isPrio?'<div class="mplan-wk-badge">★</div>':''}
         <div class="mplan-wk-time">${s.time}</div>
         <div class="mplan-wk-title">${displayTitle}</div>
@@ -895,14 +908,17 @@ function renderMiPlanCalendar(){
         const tw=travelWarn(prev,s);
         if(tw) listHtml+=`<div class="mplan-warn-row">${tw}</div>`;
       }
-      listHtml+=`<div class="mplan-row">
+      const _rowKey=(s._title||'')+s.time;
+      const _safeRowKey=_rowKey.replace(/"/g,'&quot;');
+      listHtml+=`<div class="mplan-row${_rowKey===_activeMiPlanFilm?' active':''}" style="cursor:pointer" data-rkey="${_safeRowKey}" onclick="selectFromDetail(this)">
         <div class="mplan-tc">
           <div class="mplan-t1${isPast?' mp-past':''}">${s.time}</div>
           <div class="mplan-t2">${mplanEndStr(s.time,dur)}${isNow?` <span style="color:var(--orange);font-weight:600">en curso</span>`:''}</div>
         </div>
         <div class="mplan-ri">
-          <div class="mplan-rtitle">${s._title||''}</div>
+          <div class="mplan-rtitle">${prioritized.has(s._title)?'<span style="color:var(--orange);font-size:10px;margin-right:4px">★</span>':''} ${s._title||''}</div>
           <div class="mplan-rvenue">${vcfg(s.venue).ico} ${vcfg(s.venue).short}${sala(s.venue)?' \u00b7 '+sala(s.venue):''}</div>
+          ${(()=>{const _mf=FILMS.find(fi=>fi.title===s._title&&fi.day===s.day&&fi.time===s.time);if(!_mf||!_mf.is_cortos||!_mf.film_list||!_mf.film_list.length) return'';return`<button class="mplan-prog-toggle" onclick="toggleMplanProg(this,event)">▸ Ver programa</button>`;})()}
         </div>
         <div style="display:flex;flex-direction:column;align-items:flex-end;gap:4px;flex-shrink:0">
           <div class="mplan-dur">${s.duration||''}</div>
@@ -912,7 +928,7 @@ function renderMiPlanCalendar(){
             <button class="ag-fi-btn del" data-rmt="${safeT}" onclick="removeFromAgenda(this.dataset.rmt);event.stopPropagation()" title="Quitar">\u2715</button>
           </div>
         </div>
-      </div>${_expandedFilm===(s._title||'')+(s.day||'')+(s.time||'')?`<div class="film-alts">${renderFilmAlternatives(s._title,s.day,s.time)}</div>`:''}`;
+      </div>${_expandedFilm===(s._title||'')+(s.day||'')+(s.time||'')?`<div class="film-alts">${renderFilmAlternatives(s._title,s.day,s.time)}</div>`:''}${(()=>{const _mf=FILMS.find(fi=>fi.title===s._title&&fi.day===s.day&&fi.time===s.time);if(!_mf||!_mf.is_cortos||!_mf.film_list||!_mf.film_list.length) return'';return`<div class="mplan-prog-list">${_mf.film_list.map((item,n)=>`<div class="mplan-prog-item"><div class="mplan-prog-num">${n+1}</div><div class="mplan-prog-title">${item.title}</div><div class="mplan-prog-dur">${item.duration}</div></div>`).join('')}</div>`;})()}`;
     });
   }
   listHtml+='</div>';
@@ -1647,7 +1663,6 @@ function renderFilmListHTML(){
         <div class="ag-wi-title">${t}</div>
         <div class="ag-wi-actions">
           <button class="ag-fi-btn" data-wt="${t.replace(/"/g,'&quot;')}" onclick="toggleWatched(this.dataset.wt,event)" title="Desmarcar">↩</button>
-          <button class="ag-fi-btn del" data-wlt="${t.replace(/"/g,'&quot;')}" onclick="toggleWL(this.dataset.wlt,event)" title="Quitar">✕</button>
         </div>
       </div>`;
     }).join('');
@@ -1713,6 +1728,10 @@ function checkinLaVi(title){
   if(!watched.has(title)){watched.add(title);saveWatched();updateCardState(title);updateAgTab();}
   renderAgenda();
 }
+function checkinNoLaVi(title){
+  _removePlanItem(title);
+  renderAgenda();
+}
 const _SIM_START=new Date('2026-04-14T09:00:00');
 const _SIM_END=new Date('2026-04-20T02:00:00');
 const _SIM_TOTAL=(_SIM_END-_SIM_START)/60000;
@@ -1742,10 +1761,30 @@ function applySimTime(val){
     _simTime=new Date(_SIM_START.getTime()+Math.round(val/1000*_SIM_TOTAL)*60000).toISOString();
   }
   _expandedFilm='';
+  _activeMiPlanFilm='';
   activeMiPlanDay=null;
   renderAgenda();
 }
 let _expandedFilm=''; // key: title+day+time — which film has alternatives open
+let _activeMiPlanFilm=''; // key: title+time — highlighted from calendar click
+function toggleMplanProg(btn,e){
+  e.stopPropagation();
+  const row=btn.closest('.mplan-ri');
+  const list=btn.closest('.mplan-row')?.nextElementSibling;
+  if(!list||!list.classList.contains('mplan-prog-list')) return;
+  const open=list.classList.toggle('open');
+  btn.textContent=(open?'▾ ':'▸ ')+'Ver programa';
+}
+function setActivePlanFilm(el){_activeMiPlanFilm=el.dataset.fkey||'';}
+function selectFromDetail(el){
+  _activeMiPlanFilm=el.dataset.rkey||'';
+  // Scroll to the matching calendar block
+  setTimeout(()=>{
+    const block=document.querySelector(`.mplan-wk-block[data-fkey="${CSS.escape(_activeMiPlanFilm)}"]`);
+    if(block) block.scrollIntoView({behavior:'smooth',block:'center'});
+  },50);
+  renderAgenda();
+}
 
 function renderNextStrip(schedule){
   if(!schedule||!schedule.length) return'';
@@ -1849,25 +1888,83 @@ function toggleFilmAlternatives(key,title,day,time){
 }
 
 function renderFilmAlternatives(title,day,time){
-  const now=simNow();
-  const nowMin=now.getHours()*60+now.getMinutes();
-  const fStart=toMin(time),fEnd=fStart+parseDur((FILMS.find(f=>f.title===title&&f.day===day&&f.time===time)||{}).duration||'90');
-  // Gap: from film start (or now if already started) until next plan item after this film
-  const gapStart=Math.max(nowMin,fStart);
-  const planAfter=savedAgenda?savedAgenda.schedule
-    .filter(s=>!(s._title===title&&s.day===day&&s.time===time))
-    .filter(s=>s.day===day&&toMin(s.time)>=fEnd)
-    .sort((a,b)=>toMin(a.time)-toMin(b.time)):[];
-  const gapEnd=planAfter.length?toMin(planAfter[0].time)-5:25*60;
+  const fStart=toMin(time);
   const safeT=title.replace(/'/g,"\'");
-  const optsHtml=renderGapOptions(gapStart,gapEnd,day,safeT);
-  const hasOpts=optsHtml&&!optsHtml.includes('No hay funciones');
+  const plannedTitles=new Set(savedAgenda?savedAgenda.schedule.map(s=>s._title):[]);
+  // ±15 min window — direct competition in the same slot
+  const WINDOW=15;
+  const opts=FILMS.filter(f=>{
+    if(f.day!==day) return false;
+    if(f.title===title) return false;
+    if(plannedTitles.has(f.title)) return false;
+    if(watched.has(f.title)) return false;
+    if(isScreeningBlocked(f)) return false;
+    return Math.abs(toMin(f.time)-fStart)<=WINDOW;
+  }).sort((a,b)=>toMin(a.time)-toMin(b.time));
+
+  const optsHtml=opts.map(f=>{
+    const vc2=vcfg(f.venue);
+    const{displayTitle}=parseProgramTitle(f.title);
+    const short=displayTitle.length>28?displayTitle.slice(0,26)+'…':displayTitle;
+    const safeTNew=f.title.replace(/'/g,"\'");
+    return`<div class="checkin-opt" onclick="confirmReplace('${safeT}','${safeTNew}','${f.day}','${f.time}')">
+      <div class="checkin-opt-info">
+        <div class="checkin-opt-time">${f.time} · ${f.duration}</div>
+        <div class="checkin-opt-title">${short}</div>
+        <div class="checkin-opt-venue">${vc2.ico} ${vc2.short}</div>
+      </div>
+      <div class="checkin-opt-add">＋</div>
+    </div>`;
+  }).join('');
+
   return`<div class="film-alts">
-    ${hasOpts?optsHtml:`<div style="padding:10px 14px;font-size:11px;color:var(--gray)">No hay alternativas disponibles para este horario.</div>`}
+    ${optsHtml||`<div style="padding:10px 14px;font-size:11px;color:var(--gray)">No hay alternativas en este horario — revisa Sugerencias.</div>`}
     <div style="padding:4px 14px 10px">
       <button class="checkin-result-btn secondary" style="width:100%;font-size:11px" onclick="_expandedFilm='';renderAgenda()">Cerrar</button>
     </div>
   </div>`;
+}
+
+function confirmReplaceWithNext(removedTitle,nextTitle,newTitle,day,time){
+  const{displayTitle:dn}=parseProgramTitle(nextTitle);
+  const{displayTitle:dt}=parseProgramTitle(newTitle);
+  const shortNext=dn.length>22?dn.slice(0,20)+'…':dn;
+  const shortNew=dt.length>22?dt.slice(0,20)+'…':dt;
+  const{displayTitle:dr}=parseProgramTitle(removedTitle);
+  const shortRem=dr.length>22?dr.slice(0,20)+'…':dr;
+  const existing=document.getElementById('conflict-modal');if(existing) existing.remove();
+  const modal=document.createElement('div');
+  modal.id='conflict-modal';modal.className='conflict-modal';
+  modal.innerHTML=`<div class="conflict-modal-box">
+    <div class="conflict-modal-hdr">⚠ Se cancela la siguiente</div>
+    <div class="conflict-modal-body">Reemplazar <b>${shortRem}</b> por <b>${shortNew}</b> y cancelar <b>${shortNext}</b> del plan.</div>
+    <div class="conflict-modal-btns">
+      <button class="conflict-modal-btn cancel" onclick="document.getElementById('conflict-modal').remove()">Cancelar</button>
+      <button class="conflict-modal-btn confirm" id="replace-next-ok">Confirmar</button>
+    </div>
+  </div>`;
+  document.body.appendChild(modal);
+  setTimeout(()=>{
+    const btn=document.getElementById('replace-next-ok');
+    if(btn) btn.onclick=()=>{
+      modal.remove();
+      _removePlanItem(removedTitle);
+      _removePlanItem(nextTitle);
+      const screen=FILMS.find(f=>f.title===newTitle&&f.day===day&&f.time===time);
+      if(screen){
+        if(!savedAgenda) savedAgenda={schedule:[]};
+        if(!watchlist.has(newTitle)){watchlist.add(newTitle);saveWL();}
+        savedAgenda.schedule=savedAgenda.schedule.filter(s=>s._title!==newTitle);
+        savedAgenda.schedule.push({...screen,_title:newTitle});
+        savedAgenda.schedule.sort((a,b)=>DAY_KEYS.indexOf(a.day)-DAY_KEYS.indexOf(b.day)||toMin(a.time)-toMin(b.time));
+        saveSavedAgenda();
+      }
+      _expandedFilm='';
+      const{displayTitle:dNew}=parseProgramTitle(newTitle);
+      showToast(`Reemplazada · ${dNew.length>25?dNew.slice(0,23)+'…':dNew}`,'info');
+      renderAgenda();
+    };
+  },50);
 }
 
 function confirmFreeGap(title){
@@ -1919,6 +2016,9 @@ function renderGapOptions(gapStartMin,gapEndMin,todayKey,removedTitle){
   removedTitle=removedTitle||'';
   const plannedTitles=new Set(savedAgenda?savedAgenda.schedule.map(s=>s._title):[]);
   const now=simNow();const nowMin=now.getHours()*60+now.getMinutes();
+  // Only apply in-progress logic if todayKey matches the actual current festival day
+  const realTodayKey=DAY_KEYS.find(d=>FESTIVAL_DATES[d]===simTodayStr());
+  const isLiveDay=realTodayKey===todayKey;
   const MIN_REMAINING=20;
   const safeRem=removedTitle.replace(/'/g,"\'");
   const opts=FILMS.filter(f=>{
@@ -1928,12 +2028,12 @@ function renderGapOptions(gapStartMin,gapEndMin,todayKey,removedTitle){
     if(f.title===removedTitle) return false;
     if(watched.has(f.title)) return false;
     const fStart=toMin(f.time),fEnd=fStart+parseDur(f.duration);
-    const inProgress=fStart<nowMin&&fEnd>nowMin;
+    const inProgress=isLiveDay&&fStart<nowMin&&fEnd>nowMin;
     if(inProgress) return (fEnd-nowMin)>=MIN_REMAINING&&fEnd<=gapEndMin;
     return fStart>=gapStartMin&&fEnd<=gapEndMin;
   }).sort((a,b)=>{
     const aStart=toMin(a.time),bStart=toMin(b.time);
-    const aFuture=aStart>=nowMin,bFuture=bStart>=nowMin;
+    const aFuture=!isLiveDay||aStart>=nowMin,bFuture=!isLiveDay||bStart>=nowMin;
     if(aFuture&&!bFuture) return -1;
     if(!aFuture&&bFuture) return 1;
     if(aFuture&&bFuture) return aStart-bStart;
@@ -1944,7 +2044,7 @@ function renderGapOptions(gapStartMin,gapEndMin,todayKey,removedTitle){
     const vc2=vcfg(f.venue);const{displayTitle}=parseProgramTitle(f.title);
     const short=displayTitle.length>26?displayTitle.slice(0,24)+'…':displayTitle;
     const safeT=f.title.replace(/'/g,"\'");
-    const fStart=toMin(f.time);const inProg=fStart<nowMin;
+    const fStart=toMin(f.time);const inProg=isLiveDay&&fStart<nowMin;
     const minsIn=inProg?nowMin-fStart:0;
     const badge=inProg?`<span style="font-size:9px;color:var(--green);font-weight:700;display:block;margin-bottom:2px">EN CURSO · entró hace ${minsIn} min</span>`:'';
     return`<div class="checkin-opt" onclick="confirmReplace('${safeRem}','${safeT}','${f.day}','${f.time}')">
@@ -2034,7 +2134,7 @@ function _renderSavedAgendaHTML(){
       html+=`<div class="suggestion-day-lbl">${day}</div>`;
       html+=suggsByDay[day].slice(0,4).map(f=>{
         const vc2=vcfg(f.venue),sl=sala(f.venue);
-        const _sp=getPosterSrc(f.title,false);
+        const _sp=getPosterSrc(f.title,f.is_cortos||false);
         const _sph=_sp?`<img class="lb-poster" src="${_sp}" loading="lazy" onerror="this.outerHTML='<div class=lb-poster-ph>🎬</div>'" alt="">`:'<div class="lb-poster-ph">🎬</div>';
         return`<div class="suggestion-item">
           ${_sph}
