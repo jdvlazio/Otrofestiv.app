@@ -3886,36 +3886,6 @@ function closeFestivalSheet(){
 
 
 
-<script>
-(function(){
-  var btn = document.getElementById('scroll-top-btn');
-  if(!btn) return;
-
-  // Sentinel: div de 400px en el top del body.
-  // Cuando sale del viewport → usuario scrolleó 400px → mostrar botón.
-  var sentinel = document.createElement('div');
-  sentinel.setAttribute('aria-hidden','true');
-  sentinel.style.cssText = 'position:absolute;top:0;left:0;width:1px;height:400px;pointer-events:none;visibility:hidden;';
-  document.body.insertBefore(sentinel, document.body.firstChild);
-
-  var io = new IntersectionObserver(function(entries){
-    if(!entries[0].isIntersecting){
-      btn.classList.add('visible');
-    } else {
-      btn.classList.remove('visible');
-    }
-  }, {threshold: 0});
-
-  io.observe(sentinel);
-})();
-
-function scrollToTop(){
-  window.scrollTo({top:0, behavior:'smooth'});
-  document.documentElement.scrollTop = 0;
-  document.body.scrollTop = 0;
-  document.getElementById('scroll-top-btn')?.classList.remove('visible');
-}
-</script>
 <button id="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Volver arriba">↑</button>
 </body>
 </html>
