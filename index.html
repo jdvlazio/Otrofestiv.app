@@ -3912,29 +3912,70 @@ function closeFestivalSheet(){
 
 <button id="scroll-top-btn" onclick="scrollToTop()" aria-label="Volver arriba" title="Volver arriba">↑</button>
 
+
 <script>
-/* ── Scroll to top — lógica inteligente ──────────────────────
-   Aparece: usuario ha scrolleado >300px Y está subiendo.
-   Desaparece: al llegar al top o al volver a bajar.
+/* ── Scroll to top — implementación robusta ───────────────────
+   El contenedor scroll real es #ag-view (showAgView usa scrollTop).
+   Escucha ambos: ag-view Y window (fallback cross-browser).
+   Aparece: scroll > 300px Y scrolleando hacia arriba.
 ────────────────────────────────────────────────────────────── */
 (function(){
   const btn = document.getElementById('scroll-top-btn');
   if(!btn) return;
-  let lastY=0, ticking=false;
-  function updateBtn(){
-    const y=window.scrollY||document.documentElement.scrollTop;
-    if(y<lastY && y>300) btn.classList.add('visible');
-    else btn.classList.remove('visible');
-    lastY=y; ticking=false;
+
+  let lastY  = 0;
+  let ticking = false;
+
+  function getScrollY(){
+    // ag-view es el contenedor real en mobile
+    const av = document.getElementById('ag-view');
+    if(av && av.scrollTop > 0) return av.scrollTop;
+    return window.scrollY || window.pageYOffset || document.documentElement.scrollTop || 0;
   }
-  window.addEventListener('scroll',function(){
-    if(!ticking){requestAnimationFrame(updateBtn);ticking=true;}
-  },{passive:true});
+
+  function updateBtn(){
+    const y = getScrollY();
+    if(y < lastY && y > 300){
+      btn.classList.add('visible');
+    } else {
+      btn.classList.remove('visible');
+    }
+    lastY  = y;
+    ticking = false;
+  }
+
+  function onScroll(){
+    if(!ticking){
+      requestAnimationFrame(updateBtn);
+      ticking = true;
+    }
+  }
+
+  // Escuchar en ambos contenedores
+  window.addEventListener('scroll', onScroll, {passive:true});
+  document.addEventListener('scroll', onScroll, {passive:true});
+
+  // Esperar a que ag-view exista y adjuntar listener
+  function attachAgView(){
+    const av = document.getElementById('ag-view');
+    if(av){
+      av.addEventListener('scroll', onScroll, {passive:true});
+    }
+  }
+  // ag-view existe en DOM desde carga — adjuntar inmediatamente y también
+  // re-adjuntar por si acaso tras renderAgenda
+  attachAgView();
+  document.addEventListener('DOMContentLoaded', attachAgView);
 })();
+
 function scrollToTop(){
-  window.scrollTo({top:0,behavior:'smooth'});
-  const v=document.getElementById('ag-view');
-  if(v) v.scrollTo({top:0,behavior:'smooth'});
+  const av = document.getElementById('ag-view');
+  if(av && av.scrollTop > 0){
+    av.scrollTo({top:0, behavior:'smooth'});
+  } else {
+    window.scrollTo({top:0, behavior:'smooth'});
+  }
+  document.getElementById('scroll-top-btn')?.classList.remove('visible');
 }
 </script>
 </body>
