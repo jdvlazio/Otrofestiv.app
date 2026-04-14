@@ -1,26 +1,22 @@
 {
-  "name": "Otrofestiv — FICCI 65",
+  "name": "Otrofestiv",
   "short_name": "Otrofestiv",
-  "description": "Tu app para planear el FICCI 65 en Cartagena",
-  "start_url": "/FICCI_2026/",
-  "scope": "/FICCI_2026/",
+  "description": "Tu agenda para el FICCI 65 — Cartagena, 14–19 abril 2026",
+  "start_url": "/",
+  "scope": "/",
   "display": "standalone",
-  "orientation": "portrait",
   "background_color": "#0A0A0A",
   "theme_color": "#0A0A0A",
-  "lang": "es",
   "icons": [
     {
-      "src": "/FICCI_2026/icon-192.png",
+      "src": "/icon-192.png",
       "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "any maskable"
+      "type": "image/png"
     },
     {
-      "src": "/FICCI_2026/icon-512.png",
+      "src": "/icon-512.png",
       "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "any maskable"
+      "type": "image/png"
     }
   ]
 }

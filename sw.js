@@ -1,13 +1,15 @@
-// FICCI 65 — Service Worker
-// Cache strategy: Cache First para assets estáticos, Network First para HTML
+// Otrofestiv — Service Worker
+// Cache strategy: Network First para HTML, Cache First para assets
 
-const CACHE_NAME = 'otrofestiv-v1';
+const CACHE_NAME = 'otrofestiv-v2';
 const STATIC_ASSETS = [
-  '/FICCI_2026/',
-  '/FICCI_2026/index.html',
+  '/',
+  '/index.html',
+  '/manifest.json',
+  '/icon-192.png',
+  '/icon-512.png',
 ];
 
-// Instalar y pre-cachear assets esenciales
 self.addEventListener('install', event => {
   event.waitUntil(
     caches.open(CACHE_NAME)
@@ -16,7 +18,6 @@ self.addEventListener('install', event => {
   );
 });
 
-// Activar y limpiar caches viejos
 self.addEventListener('activate', event => {
   event.waitUntil(
     caches.keys()
@@ -29,15 +30,13 @@ self.addEventListener('activate', event => {
   );
 });
 
-// Fetch: Network First para HTML (siempre fresco), Cache First para el resto
 self.addEventListener('fetch', event => {
   const { request } = event;
   const url = new URL(request.url);
 
-  // Solo interceptar requests del mismo origen
   if (url.origin !== location.origin) return;
 
-  // HTML → Network First (actualiza la app cuando hay conexión)
+  // HTML → Network First (app siempre actualizada)
   if (request.destination === 'document') {
     event.respondWith(
       fetch(request)
@@ -51,7 +50,7 @@ self.addEventListener('fetch', event => {
     return;
   }
 
-  // Resto → Cache First
+  // Assets → Cache First
   event.respondWith(
     caches.match(request)
       .then(cached => cached || fetch(request))
