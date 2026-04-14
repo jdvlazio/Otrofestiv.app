@@ -1107,6 +1107,57 @@ body{background:var(--bg);color:var(--white);font-family:var(--font),'Plus Jakar
   letter-spacing:.02em;
 }
 
+/* ── Scroll to top — mobile only ──────────────────────────────
+   Aparece cuando el usuario scrollea hacia ARRIBA habiendo
+   pasado 300px. Desaparece al llegar al top o al dejar de
+   scrollear hacia arriba.
+   Solo visible en mobile (max-width:768px).
+   Posición: encima del nav fijo, bottom-right.
+   Tamaño: 44px × 44px (WCAG touch target mínimo).
+────────────────────────────────────────────────────────────── */
+#scroll-top-btn{
+  position:fixed;
+  bottom:calc(var(--mn-h) + 52px + env(safe-area-inset-bottom));
+  right:var(--sp-4);
+  width:44px;
+  height:44px;
+  border-radius:var(--r-pill);
+  background:var(--surf-2);
+  border:1px solid var(--bdr);
+  color:var(--gray);
+  font-size:18px;
+  line-height:1;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  z-index:998;
+  opacity:0;
+  visibility:hidden;
+  transform:translateY(8px);
+  transition:
+    opacity var(--tr-base),
+    visibility var(--tr-base),
+    transform var(--tr-base),
+    color var(--tr-base),
+    background var(--tr-base);
+  font-family:var(--font);
+  box-shadow:0 2px 12px var(--overlay-20);
+}
+#scroll-top-btn.visible{
+  opacity:1;
+  visibility:visible;
+  transform:translateY(0);
+}
+#scroll-top-btn:active{
+  background:var(--amber-10);
+  color:var(--orange);
+  border-color:var(--amber-40);
+}
+@media(min-width:768px){
+  #scroll-top-btn{display:none}
+}
+
 </style>
 </head>
 <body>
@@ -3858,5 +3909,33 @@ function closeFestivalSheet(){
     </div>
   </div>
 </div>
+
+<button id="scroll-top-btn" onclick="scrollToTop()" aria-label="Volver arriba" title="Volver arriba">↑</button>
+
+<script>
+/* ── Scroll to top — lógica inteligente ──────────────────────
+   Aparece: usuario ha scrolleado >300px Y está subiendo.
+   Desaparece: al llegar al top o al volver a bajar.
+────────────────────────────────────────────────────────────── */
+(function(){
+  const btn = document.getElementById('scroll-top-btn');
+  if(!btn) return;
+  let lastY=0, ticking=false;
+  function updateBtn(){
+    const y=window.scrollY||document.documentElement.scrollTop;
+    if(y<lastY && y>300) btn.classList.add('visible');
+    else btn.classList.remove('visible');
+    lastY=y; ticking=false;
+  }
+  window.addEventListener('scroll',function(){
+    if(!ticking){requestAnimationFrame(updateBtn);ticking=true;}
+  },{passive:true});
+})();
+function scrollToTop(){
+  window.scrollTo({top:0,behavior:'smooth'});
+  const v=document.getElementById('ag-view');
+  if(v) v.scrollTo({top:0,behavior:'smooth'});
+}
+</script>
 </body>
 </html>
