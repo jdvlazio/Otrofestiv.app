@@ -3923,37 +3923,35 @@ function closeFestivalSheet(){
 
 
 
+
 <script>
-/* ── Scroll to top ─────────────────────────────────────────────
-   Aparece: scroll > 400px (hacia abajo o arriba).
-   Desaparece: al volver al top (< 100px).
-   Escucha window Y document (cross-browser, cross-container).
-────────────────────────────────────────────────────────────── */
 (function(){
   var btn = document.getElementById('scroll-top-btn');
   if(!btn) return;
 
-  function check(){
-    var y = window.scrollY
-         || window.pageYOffset
-         || document.documentElement.scrollTop
-         || document.body.scrollTop
-         || 0;
-    if(y > 400){
+  // Sentinel: div de 400px en el top del body.
+  // Cuando sale del viewport → usuario scrolleó 400px → mostrar botón.
+  var sentinel = document.createElement('div');
+  sentinel.setAttribute('aria-hidden','true');
+  sentinel.style.cssText = 'position:absolute;top:0;left:0;width:1px;height:400px;pointer-events:none;visibility:hidden;';
+  document.body.insertBefore(sentinel, document.body.firstChild);
+
+  var io = new IntersectionObserver(function(entries){
+    if(!entries[0].isIntersecting){
       btn.classList.add('visible');
     } else {
       btn.classList.remove('visible');
     }
-  }
+  }, {threshold: 0});
 
-  window.addEventListener('scroll',   check, {passive:true});
-  document.addEventListener('scroll', check, {passive:true});
+  io.observe(sentinel);
 })();
 
 function scrollToTop(){
   window.scrollTo({top:0, behavior:'smooth'});
-  document.getElementById('scroll-top-btn')
-    ?.classList.remove('visible');
+  document.documentElement.scrollTop = 0;
+  document.body.scrollTop = 0;
+  document.getElementById('scroll-top-btn')?.classList.remove('visible');
 }
 </script>
 </body>
