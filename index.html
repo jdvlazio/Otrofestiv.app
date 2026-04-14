@@ -3,16 +3,33 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<link rel="manifest" href="/FICCI_2026/manifest.json">
+<link rel="manifest" href="/manifest.json">
 <meta name="theme-color" content="#0A0A0A">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Otrofestiv">
-<link rel="apple-touch-icon" href="/FICCI_2026/icon-192.png">
+<link rel="apple-touch-icon" href="/icon-192.png">
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
 <title>Otrofestiv — FICCI 65</title>
+<meta name="description" content="Tu agenda personal para el FICCI 65. Cartagena, 14–19 abril 2026. Explora la programación, planea tu semana y guarda tu plan.">
+<link rel="canonical" href="https://otrofestiv.app">
+<!-- Open Graph -->
+<meta property="og:type"        content="website">
+<meta property="og:url"         content="https://otrofestiv.app">
+<meta property="og:title"       content="Otrofestiv — FICCI 65">
+<meta property="og:description" content="Tu agenda personal para el FICCI 65. Cartagena, 14–19 abril 2026.">
+<meta property="og:image"       content="https://otrofestiv.app/icon-512.png">
+<meta property="og:locale"      content="es_CO">
+<!-- Twitter / X -->
+<meta name="twitter:card"        content="summary">
+<meta name="twitter:title"       content="Otrofestiv — FICCI 65">
+<meta name="twitter:description" content="Tu agenda personal para el FICCI 65. Cartagena, 14–19 abril 2026.">
+<meta name="twitter:image"       content="https://otrofestiv.app/icon-512.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://image.tmdb.org">
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 
@@ -2388,7 +2405,7 @@ function renderSavedAgendaHTML(){
   // Este wrapper aísla el fallo y muestra el error en pantalla en lugar de silencio.
   try{ return _renderSavedAgendaHTML(); }
   catch(err){
-    console.error('renderSavedAgendaHTML error:',err);
+    /* renderSavedAgendaHTML error — silent in production */
     return`<div style="margin:16px;padding:16px;border:1px solid #e05050;border-radius:var(--r);font-size:11px;color:var(--red)">
       <strong>Error al cargar Mi Plan:</strong><br>
       <code style="font-size:9px;opacity:.8">${err.message}</code>
@@ -2892,98 +2909,182 @@ document.addEventListener('click',function(e){
 });
 
 function shareAsImage(){
-  if(!window.html2canvas){
-    showToast('Capturador no disponible aún, intenta en unos segundos','warn');
-    return;
+  if(!savedAgenda||!savedAgenda.schedule||!savedAgenda.schedule.length){
+    showToast('No tienes un plan guardado','warn'); return;
   }
-  _captureAndShare();
-}
-/* ── Compartir como imagen ─────────────────────────────────────────
-   Problemas del enfoque anterior:
-   1. a.click() en contexto async → bloqueado por iOS Safari y algunos Android
-   2. <a> no estaba en el DOM → click ignorado en Webkit
-   3. toBlob falla silenciosamente con imágenes CORS → sin feedback
-   4. Selector .mplan-wrap capturaba solo el calendario, no todo Mi Plan
-
-   Solución:
-   - Capturar ag-view (contenedor completo de Mi Plan)
-   - Usar dataURL directo (más confiable que blob URL en async)
-   - Appendear <a> al DOM antes del click, limpiar después
-   - _downloadDataUrl() separado y reutilizable
-   - Share nativo como primer intento, download como fallback robusto
-──────────────────────────────────────────────────────────────── */
-function _downloadDataUrl(dataUrl,filename){
-  const a=document.createElement('a');
-  a.href=dataUrl;
-  a.download=filename;
-  a.style.cssText='position:fixed;top:-999px;left:-999px';
-  document.body.appendChild(a);
-  a.click();
-  setTimeout(()=>{
-    document.body.removeChild(a);
-    showToast('Imagen descargada ✓','info');
-  },150);
+  let canvas,dataUrl;
+  try{
+    canvas=_buildAgendaCanvas();
+    dataUrl=canvas.toDataURL('image/png');
+    if(!dataUrl||dataUrl==='data:,') throw new Error('canvas vacío');
+  }catch(e){
+    /* shareAsImage error — silent in production */
+    showToast('Error al generar imagen','err'); return;
+  }
+  _showImageModal(dataUrl,canvas);
 }
 
-function _captureAndShare(){
-  const el=document.getElementById('ag-view');
-  if(!el||!el.innerHTML.trim()){showToast('No hay plan para capturar','err');return;}
-  showToast('Generando imagen…','info');
-  const isSafari=/^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-  const isIOS=/iPad|iPhone|iPod/.test(navigator.userAgent);
-  html2canvas(el,{
-    backgroundColor:'#0A0A0A',
-    scale:Math.min(window.devicePixelRatio||2,3),
-    useCORS:true,
-    allowTaint:false,
-    logging:false,
-    removeContainer:true
-  }).then(canvas=>{
-    const dataUrl=canvas.toDataURL('image/png');
-    if(!dataUrl||dataUrl==='data:,'){
-      showToast('Error al generar imagen','err');return;
-    }
-    if(isIOS||isSafari){
-      // Safari/iOS: abrir en pestaña nueva — mantén presionado para guardar
-      const w=window.open('','_blank');
-      if(w){
-        w.document.write('<html><head><meta name="viewport" content="width=device-width"></head>'
-          +'<body style="margin:0;background:#000"><img src="'+dataUrl
-          +'" style="max-width:100%;display:block"></body></html>');
-        w.document.close();
-        showToast('Mantén presionada la imagen para guardar','info');
-        return;
-      }
-    }
-    // Chrome/Android: Web Share API → download
-    try{
-      canvas.toBlob(blob=>{
-        if(blob&&navigator.share&&navigator.canShare){
-          const file=new File([blob],'otrofestiv-miplan.png',{type:'image/png'});
-          if(navigator.canShare({files:[file]})){
-            navigator.share({files:[file],title:'Mi Plan FICCI 65'})
-              .then(()=>showToast('Compartido ✓','info'))
-              .catch(()=>_downloadDataUrl(dataUrl,'otrofestiv-miplan.png'));
-            return;
-          }
-        }
-        _downloadDataUrl(dataUrl,'otrofestiv-miplan.png');
-      },'image/png');
-    }catch(e){
-      _downloadDataUrl(dataUrl,'otrofestiv-miplan.png');
-    }
-  }).catch(err=>{
-    console.error('Captura fallida:',err);
-    showToast('Error al generar imagen','err');
+function _buildAgendaCanvas(){
+  const DPR=Math.min(window.devicePixelRatio||2,3);
+  const DAYS=['Martes','Miércoles','Jueves','Viernes','Sábado','Domingo'];
+  const DS=['MAR','MIÉ','JUE','VIE','SÁB','DOM'];
+  const DN=['14','15','16','17','18','19'];
+  const byDay={};
+  DAYS.forEach(d=>{byDay[d]=[];});
+  (savedAgenda.schedule||[]).forEach(s=>{if(byDay[s.day])byDay[s.day].push(s);});
+  DAYS.forEach(d=>{byDay[d].sort((a,b)=>a.time.localeCompare(b.time));});
+  const active=DAYS.filter(d=>byDay[d].length>0);
+  const nC=active.length||1;
+  const cleanDur=s=>(s.duration||'').replace(/\s*min\s*min/i,'min').trim();
+  const PAD=24,HDR=72,COL_HDR=46,CW=190,CGAP=10,CARD_PAD=12,CARD_R=8,CARD_GAP=8;
+  const FONT_T=12,LINE_T=16,MAX_TL=3,CARD_MIN=90;
+  const cv0=document.createElement('canvas');
+  const c0=cv0.getContext('2d');
+  c0.font=`600 ${FONT_T}px system-ui,-apple-system,sans-serif`;
+  const cHts={};
+  active.forEach(day=>{
+    cHts[day]=byDay[day].map(s=>{
+      const tl=_measureLines(c0,s._title||'',CW-CARD_PAD*2-6,MAX_TL);
+      return Math.max(CARD_PAD+18+4+tl*LINE_T+4+14+CARD_PAD,CARD_MIN);
+    });
   });
+  const maxColH=active.reduce((mx,day)=>{
+    const h=cHts[day].reduce((s,h)=>s+h+CARD_GAP,0)-CARD_GAP;
+    return Math.max(mx,h);
+  },0);
+  const W=PAD*2+nC*CW+(nC-1)*CGAP;
+  const H=HDR+PAD+COL_HDR+CARD_GAP+maxColH+PAD*2;
+  const cv=document.createElement('canvas');
+  cv.width=W*DPR;cv.height=H*DPR;
+  const c=cv.getContext('2d');
+  c.scale(DPR,DPR);
+  c.fillStyle='#0A0A0A';c.fillRect(0,0,W,H);
+  c.fillStyle='#D4900A';c.fillRect(0,0,W,HDR);
+  c.fillStyle='#0A0A0A';
+  c.font='700 20px system-ui,-apple-system,sans-serif';
+  c.textBaseline='alphabetic';
+  c.fillText('Mi Plan · FICCI 65',PAD,HDR/2+2);
+  c.fillStyle='rgba(0,0,0,0.5)';
+  c.font='400 11px system-ui,-apple-system,sans-serif';
+  c.fillText('Otrofestiv — '+active.length+' día'+(active.length!==1?'s':''),PAD,HDR/2+18);
+  active.forEach((day,ci)=>{
+    const x=PAD+ci*(CW+CGAP);
+    const di=DAYS.indexOf(day);
+    const films=byDay[day];
+    const hy=HDR+PAD;
+    c.fillStyle='rgba(212,144,10,0.12)';_rr(c,x,hy,CW,COL_HDR,8);c.fill();
+    c.fillStyle='rgba(212,144,10,0.5)';c.fillRect(x,hy+COL_HDR-1,CW,1);
+    c.fillStyle='#D4900A';
+    c.font='700 9px system-ui,-apple-system,sans-serif';
+    c.textBaseline='top';c.fillText(DS[di],x+12,hy+9);
+    c.fillStyle='#FFFFFF';
+    c.font='700 20px system-ui,-apple-system,sans-serif';
+    c.fillText(DN[di],x+12,hy+20);
+    let cardY=hy+COL_HDR+CARD_GAP;
+    films.forEach((s,fi)=>{
+      const ch=cHts[day][fi];
+      const prio=prioritized&&prioritized.has&&prioritized.has(s._title);
+      const dur=cleanDur(s);
+      c.fillStyle=prio?'rgba(212,144,10,0.18)':'rgba(255,255,255,0.06)';
+      _rr(c,x,cardY,CW,ch,CARD_R);c.fill();
+      c.fillStyle=prio?'#D4900A':'rgba(212,144,10,0.35)';
+      _rr(c,x,cardY,4,ch,CARD_R);c.fill();
+      const tx=x+CARD_PAD+6;let ty=cardY+CARD_PAD;
+      c.fillStyle='#D4900A';
+      c.font='700 14px system-ui,-apple-system,sans-serif';
+      c.textBaseline='top';c.fillText(s.time,tx,ty);
+      if(dur){const hw=c.measureText(s.time).width;c.fillStyle='#666';c.font='400 10px system-ui,-apple-system,sans-serif';c.fillText(' · '+dur,tx+hw,ty+2);}
+      ty+=22;
+      c.fillStyle='#FFF';c.font=`600 ${FONT_T}px system-ui,-apple-system,sans-serif`;
+      ty=_drawWrapped(c,s._title||'',tx,ty,CW-CARD_PAD*2-6,LINE_T,MAX_TL);
+      if(s.venue){const v=s.venue.length>30?s.venue.slice(0,28)+'…':s.venue;c.fillStyle='#5A5A5A';c.font='400 10px system-ui,-apple-system,sans-serif';c.textBaseline='top';c.fillText(v,tx,cardY+ch-CARD_PAD-11);}
+      cardY+=ch+CARD_GAP;
+    });
+  });
+  c.fillStyle='rgba(212,144,10,0.2)';c.fillRect(0,H-1,W,1);
+  return cv;
 }
 
+function _measureLines(c,text,maxW,maxLines){
+  const words=text.split(' ');let line='',lines=1;
+  for(let i=0;i<words.length;i++){
+    const t=line?line+' '+words[i]:words[i];
+    if(c.measureText(t).width>maxW&&line){if(lines>=maxLines)return maxLines;lines++;line=words[i];}
+    else{line=t;}
+  }
+  return lines;
+}
 
-/* ── Targeted re-renders ── */
-function _rerenderMiPlan(){
-  if(activeMNav!=='mnav-miplan'){renderAgenda();return;}
-  const v=document.getElementById('ag-view');
-  if(v){v.innerHTML=renderSavedAgendaHTML();v.scrollTop=0;}
+function _drawWrapped(c,text,x,y,maxW,lh,maxLines){
+  c.textBaseline='top';
+  const words=text.split(' ');let line='',ln=0;
+  for(let i=0;i<words.length;i++){
+    const t=line?line+' '+words[i]:words[i];
+    if(c.measureText(t).width>maxW&&line){
+      if(ln>=maxLines-1){c.fillText(line+'…',x,y+ln*lh);return y+ln*lh+lh;}
+      c.fillText(line,x,y+ln*lh);line=words[i];ln++;
+    }else{line=t;}
+  }
+  if(line)c.fillText(line,x,y+ln*lh);
+  return y+ln*lh+lh;
+}
+
+function _rr(c,x,y,w,h,r){
+  r=Math.min(r,w/2,h/2);
+  c.beginPath();c.moveTo(x+r,y);c.lineTo(x+w-r,y);c.quadraticCurveTo(x+w,y,x+w,y+r);
+  c.lineTo(x+w,y+h-r);c.quadraticCurveTo(x+w,y+h,x+w-r,y+h);
+  c.lineTo(x+r,y+h);c.quadraticCurveTo(x,y+h,x,y+h-r);
+  c.lineTo(x,y+r);c.quadraticCurveTo(x,y,x+r,y);c.closePath();
+}
+
+function _showImageModal(dataUrl,canvas){
+  const prev=document.getElementById('img-share-modal');if(prev)prev.remove();
+  const isIOS=/iPad|iPhone|iPod/.test(navigator.userAgent);
+  const ov=document.createElement('div');
+  ov.id='img-share-modal';
+  ov.style.cssText='position:fixed;inset:0;background:rgba(0,0,0,.92);z-index:9999;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px;box-sizing:border-box;gap:14px';
+  const hint=document.createElement('p');
+  hint.style.cssText='color:#666;font-size:12px;font-family:system-ui;text-align:center;margin:0;line-height:1.6';
+  hint.textContent=isIOS?'Mantén presionada la imagen → Añadir a Fotos':'Toca Descargar para guardar';
+  ov.appendChild(hint);
+  const img=document.createElement('img');
+  img.src=dataUrl;
+  img.style.cssText='max-width:100%;max-height:62vh;border-radius:10px;display:block;box-shadow:0 8px 32px rgba(0,0,0,.7)';
+  ov.appendChild(img);
+  const row=document.createElement('div');
+  row.style.cssText='display:flex;gap:10px;width:100%;max-width:320px';
+  if(!isIOS){
+    const btnDl=document.createElement('button');
+    btnDl.textContent='⬇ Descargar';
+    btnDl.style.cssText='flex:1;padding:13px;background:#D4900A;color:#000;border:none;border-radius:8px;font-size:14px;font-family:system-ui;font-weight:700;cursor:pointer';
+    btnDl.onclick=function(){
+      if(navigator.share&&navigator.canShare){
+        canvas.toBlob(blob=>{
+          if(!blob){_dlDirect(dataUrl);return;}
+          const file=new File([blob],'otrofestiv-miplan.png',{type:'image/png'});
+          if(navigator.canShare({files:[file]})){navigator.share({files:[file]}).then(()=>{ov.remove();showToast('Compartido ✓','info');}).catch(()=>_dlDirect(dataUrl));}
+          else{_dlDirect(dataUrl);}
+        },'image/png');
+      }else{_dlDirect(dataUrl);}
+    };
+    row.appendChild(btnDl);
+  }
+  const btnX=document.createElement('button');
+  btnX.textContent='Cerrar';
+  btnX.style.cssText=(isIOS?'flex:1;':'')+'padding:13px 18px;background:rgba(255,255,255,0.08);color:#aaa;border:none;border-radius:8px;font-size:14px;font-family:system-ui;cursor:pointer';
+  btnX.onclick=()=>ov.remove();
+  row.appendChild(btnX);
+  ov.appendChild(row);
+  ov.addEventListener('click',e=>{if(e.target===ov)ov.remove();});
+  document.body.appendChild(ov);
+}
+
+function _dlDirect(dataUrl){
+  const a=document.createElement('a');
+  a.href=dataUrl;a.download='otrofestiv-miplan.png';
+  a.style.cssText='position:fixed;top:-999px;left:-999px;opacity:0';
+  document.body.appendChild(a);a.click();
+  setTimeout(()=>{document.body.removeChild(a);showToast('Imagen guardada ✓','info');},200);
 }
 function exportICS(){
   if(!savedAgenda||!savedAgenda.schedule.length){showToast('No tienes un Plan guardado','warn');return;}
@@ -3255,7 +3356,7 @@ function runCalc(){
       if(res) res.innerHTML=buildResultHTML(scenarios);
     }catch(err){
       if(res) res.innerHTML=`<div class="ag-calc-prompt" style="color:var(--red)"><strong>Error al calcular:</strong><br><code style="font-size:9px">${err.message}</code></div>`;
-      console.error('runCalc error:',err);
+      /* runCalc error — silent in production */
     }finally{
       if(btn){btn.disabled=false;btn.textContent='CALCULAR ESCENARIOS';}
     }
@@ -3592,8 +3693,8 @@ document.addEventListener('click',e=>{if(!e.target.closest('.fdr-wrap')) closeDr
 </script>
 <script>
 if('serviceWorker' in navigator){
-  navigator.serviceWorker.register('/FICCI_2026/sw.js')
-    .catch(function(err){console.warn('SW error:',err)});
+  navigator.serviceWorker.register('/sw.js')
+    .catch(function(){});
 }
 
 function openFestivalSheet(){
