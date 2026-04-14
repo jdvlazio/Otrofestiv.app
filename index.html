@@ -128,6 +128,7 @@
   --t-md: 16px;
   --t-lg: 20px;
   --t-display: 30px;
+  --t-wordmark-d: 20px;  /* wordmark en desktop */
   --flag-size: var(--t-base); /* 13px — tamaño único de flags/emojis de país */
 
   /* ── Tipografía — pesos ── */
@@ -908,40 +909,75 @@ body{background:var(--bg);color:var(--white);font-family:var(--font),'Plus Jakar
 
 
   /* ══════════════════════════════════════════════════════
-     TOPBAR — sticky, full-width band, dos filas:
-       Fila 1: wordmark "Otrofestiv"       (~48px)
-       Fila 2: franja festival "FICCI 65"  (~34px)
-       Total:                               ~82px  → var(--tb-h)
-     Los tabs van en su propio row DEBAJO.
+     TOPBAR DESKTOP — DOS FILAS CON JERARQUÍA CLARA
+     ──────────────────────────────────────────────────
+     Fila 1 · LOGO:     44px · wordmark 28px  ← PRIMARIO
+     Fila 2 · FESTIVAL: 24px · texto 11px     ← secundario
+     Total:             68px → var(--tb-h)
+     ──────────────────────────────────────────────────
+     El logo nunca comparte fila con el festival.
+     La fila del festival es visualmente subordinada:
+     altura 24px (vs 44px del logo), texto pequeño,
+     color muy atenuado, sin background propio.
   ═══════════════════════════════════════════════════════ */
-  :root{--tb-h:82px;--mn-h:44px}
+  :root{--tb-h:68px;--mn-h:44px}
 
   .topbar{
     position:sticky;top:0;z-index:200;
     background:var(--surf);
+    border-bottom:1px solid var(--bdr);
   }
 
-  /* Fila 1 — wordmark */
+  /* ── Fila 1: LOGO — presencia de marca ── */
   .hdr{
-    display:flex;align-items:center;
-    height:48px;
+    display:flex;
+    align-items:center;
+    height:44px;
     padding:0 max(var(--sp-5),calc((100vw - 960px) / 2));
-    background:none;border:none;
+    background:none;
+    border:none;
   }
-  .hdr-wordmark{font-size:var(--t-lg);line-height:1}
+  .hdr-wordmark{
+    font-size:28px;
+    line-height:1;
+  }
 
-  /* Fila 2 — festival: franja full-width con borde superior */
+  /* ── Fila 2: FESTIVAL — contexto compacto y subordinado ── */
   .hdr-fest-bar{
-    display:flex;align-items:center;justify-content:space-between;
-    height:34px;
-    max-width:960px;margin:0 auto;
+    display:flex;
+    align-items:center;
+    height:24px;
+    max-width:960px;
+    margin:0 auto;
     padding:0 var(--sp-5);
     border-top:1px solid var(--bdr-l);
-    border-bottom:1px solid var(--bdr);
-    background:transparent;cursor:pointer;
+    border-bottom:none;
+    background:transparent;
+    cursor:pointer;
+    justify-content:flex-start;
+    gap:var(--sp-2);
   }
-  .hdr-fest-bar:hover{background:var(--surf-2)}
-  .hdr-fest-dates{display:inline} /* visible en desktop */
+  .hdr-fest-bar:hover{background:var(--overlay-10)}
+
+  /* En desktop, el dot es más pequeño y todo es más sutil */
+  .hdr-fest-bar .hdr-fest-dot{
+    width:4px;height:4px;opacity:.6;
+  }
+  .hdr-fest-bar .hdr-fest-name{
+    font-size:10px;
+    letter-spacing:.1em;
+    color:var(--white-45);
+  }
+  .hdr-fest-bar .hdr-fest-dates{
+    display:inline;
+    font-size:10px;
+    color:var(--white-30);
+  }
+  .hdr-fest-bar .hdr-fest-chev{
+    font-size:9px;
+    margin-left:auto;
+    color:var(--white-30);
+  }
 
   /* ══════════════════════════════════════════════════════
      MAIN NAV — own row, sticky just below topbar
