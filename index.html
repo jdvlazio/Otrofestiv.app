@@ -10,20 +10,20 @@
 <meta name="apple-mobile-web-app-title" content="Otrofestiv">
 <link rel="apple-touch-icon" href="/icon-192.png">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
-<title>Otrofestiv — FICCI 65</title>
-<meta name="description" content="Tu agenda personal para el FICCI 65. Cartagena, 14–19 abril 2026. Explora la programación, planea tu semana y guarda tu plan.">
+<title>Otrofestiv — Tú decides el festival</title>
+<meta name="description" content="Tú decides el festival. Tu agenda personal para el FICCI 65, Cartagena, 14–19 abril 2026.">
 <link rel="canonical" href="https://otrofestiv.app">
 <!-- Open Graph -->
 <meta property="og:type"        content="website">
 <meta property="og:url"         content="https://otrofestiv.app">
-<meta property="og:title"       content="Otrofestiv — FICCI 65">
-<meta property="og:description" content="Tu agenda personal para el FICCI 65. Cartagena, 14–19 abril 2026.">
+<meta property="og:title"       content="Otrofestiv — Tú decides el festival">
+<meta property="og:description" content="Tú decides el festival. Planea, prioriza y saca el máximo de cada festival.">
 <meta property="og:image"       content="https://otrofestiv.app/icon-512.png">
 <meta property="og:locale"      content="es_CO">
 <!-- Twitter / X -->
 <meta name="twitter:card"        content="summary">
-<meta name="twitter:title"       content="Otrofestiv — FICCI 65">
-<meta name="twitter:description" content="Tu agenda personal para el FICCI 65. Cartagena, 14–19 abril 2026.">
+<meta name="twitter:title"       content="Otrofestiv — Tú decides el festival">
+<meta name="twitter:description" content="Tú decides el festival. Planea, prioriza y saca el máximo de cada festival.">
 <meta name="twitter:image"       content="https://otrofestiv.app/icon-512.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1028,9 +1028,47 @@ body{background:var(--bg);color:var(--white);font-family:var(--font);min-height:
     scroll-behavior: auto !important;
   }
 }
+
+/* ── Splash — primer encuentro ── */
+#otrofestiv-splash{
+  position:fixed;inset:0;background:var(--bg);
+  display:flex;flex-direction:column;
+  align-items:center;justify-content:center;
+  z-index:99999;gap:var(--sp-3);
+  padding:var(--sp-6);text-align:center;
+  transition:opacity .5s ease, visibility .5s ease;
+}
+#otrofestiv-splash.fade-out{opacity:0;visibility:hidden;pointer-events:none}
+.splash-word{
+  font-family:var(--font);font-size:var(--t-display);
+  font-weight:var(--w-display);color:var(--white);
+  line-height:1.1;letter-spacing:-.02em;
+}
+.splash-word span{color:var(--orange)}
+.splash-sub{
+  font-family:var(--font);font-size:var(--t-sm);
+  color:var(--gray);letter-spacing:.04em;
+  text-transform:uppercase;font-weight:var(--w-semi);
+  margin-top:var(--sp-2);
+}
+.splash-hint{
+  font-family:var(--font);font-size:var(--t-xs);
+  color:var(--gray2);margin-top:var(--sp-5);
+  letter-spacing:.02em;
+}
+
 </style>
 </head>
 <body>
+<div id="otrofestiv-splash" onclick="dismissSplash()" role="dialog" aria-label="Bienvenida" aria-modal="true">
+  <div>
+    <div class="splash-word">Más de lo que</div>
+    <div class="splash-word">crees <span>posible.</span></div>
+  </div>
+  <div class="splash-sub">Otrofestiv</div>
+  <div class="splash-hint">Toca para continuar</div>
+</div>
+
 <script>
 (function(){
   var V='ficci65_appv', CURRENT='202604141330';
@@ -2765,7 +2803,7 @@ function renderGapOptions(gapStartMin,gapEndMin,todayKey,removedTitle){
   }).join('');
 }
 function _renderSavedAgendaHTML(){
-  if(!savedAgenda||!savedAgenda.schedule.length) return emptyState(ICONS.calendar,'Sin plan guardado.','En Planear, calcula un escenario. Luego elige el tuyo.');
+  if(!savedAgenda||!savedAgenda.schedule.length) return emptyState(ICONS.calendar,'Más de lo que crees posible.','En Planear, calcula un escenario. Luego elige el tuyo.');
   const all=savedAgenda.schedule;
   const planTitles=new Set(all.map(s=>s._title));
   const archive=all.filter(s=>screeningPassed(s)||watched.has(s._title));
@@ -3696,6 +3734,30 @@ function render(){
   });
   if(selectedIdx!==null&&selectedIdx<films.length) applyStates(films);
 }
+
+
+/* ── Splash de primer encuentro ──────────────────────────────────
+   Solo se muestra si no hay datos previos del usuario.
+   Auto-dismiss en 2.5s o al tocar.
+────────────────────────────────────────────────────────────────── */
+function dismissSplash(){
+  const s=document.getElementById('otrofestiv-splash');
+  if(s){s.classList.add('fade-out');setTimeout(()=>s.remove(),520);}
+}
+(function(){
+  const SPLASH_KEY='otrofestiv-welcomed';
+  // Solo mostrar si nunca ha guardado estado (primera vez real)
+  const hasData = localStorage.getItem('ficci65_wl') ||
+                  localStorage.getItem('ficci65_saved') ||
+                  localStorage.getItem(SPLASH_KEY);
+  if(hasData){
+    const s=document.getElementById('otrofestiv-splash');
+    if(s) s.remove();
+  } else {
+    localStorage.setItem(SPLASH_KEY,'1');
+    setTimeout(dismissSplash, 2500);
+  }
+})();
 
 loadState();updateAgTab();render();
 // html2canvas eliminado — Canvas API puro
