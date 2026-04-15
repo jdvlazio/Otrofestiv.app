@@ -1583,7 +1583,7 @@ function screensConflict(a,b){
   const bS=toMin(b.time), bE=bS+parseDur(b.duration);
   // Gap requerido: tiempo de viaje entre sedes + 5min margen (mínimo 10min)
   const travel=(a.venue&&b.venue)?travelMins(a.venue,b.venue):0;
-  const minGap=Math.max(10, travel+5);
+  const minGap=Math.max(FESTIVAL_BUFFER, travel+FESTIVAL_BUFFER);
   if(aE<=bS) return (bS-aE)<minGap; // a antes que b
   if(bE<=aS) return (aS-bE)<minGap; // b antes que a
   return true; // solapamiento directo
@@ -1620,6 +1620,7 @@ let watchlist=new Set();
 let watched=new Set();
 let prioritized=new Set();
 const PRIO_LIMIT=5;
+const FESTIVAL_BUFFER=15; // min entre funciones: salida sala + intro siguiente
 let savedAgenda=null;
 let lastRemovedSlots=[]; // tracks up to 5 recently removed films
 const MAX_REMEMBERED_SLOTS=5;
