@@ -1301,11 +1301,10 @@ function getPosterSrc(title, isCortos){
 // 2 · SISTEMA DE ÍCONOS
 //     LB_SVG (Letterboxd), ICONS (Lucide)
 // ═══════════════════════════════════════════════════════════════
-/* ── Letterboxd slugs — fuente: lista oficial FICCI 65 ──────────
-   https://letterboxd.com/ficcifestival/list/ficci-65/
-   Extraídos directamente — NO inferidos ni adivinados.
-   URL: https://letterboxd.com/film/{slug}/
-   Universal link: abre la app en iOS/Android si está instalada.
+/* ── Letterboxd slugs — FUENTE ÚNICA: lista oficial FICCI 65 ───
+   https://letterboxd.com/ficcifestival/list/ficci-65/detail/
+   Extraídos directamente del DOM con Claude in Chrome.
+   Sin inferencias. Sin suposiciones.
    Replicable: extraer desde la lista oficial del festival en LB.
 ──────────────────────────────────────────────────────────────── */
 const LB_SLUGS={
@@ -1320,7 +1319,7 @@ const LB_SLUGS={
   "Agua fría":"agua-fria-2025",
   "Ah, Liberty!":"ah-liberty",
   "Ako počúvať fontány":"how-to-listen-to-fountains",
-  "Alborada en Cartagena":"alborada-en-cartagena",
+  "Alborada en Cartagena":"alborada-en-cartagena-el-secreto-de-las-esmeraldas",
   "Anoche conquisté Tebas":"last-night-i-conquered-the-city-of-thebes",
   "AnyMart":"anymart",
   "Apotnojushi La casa del viento":"apotnojushi-la-casa-del-viento",
@@ -1347,7 +1346,7 @@ const LB_SLUGS={
   "Eigenheim":"eigenheim",
   "Ein Unfall":"an-accident-2026",
   "El cuento de Antonia":"el-cuento-de-antonia",
-  "El dependiente":"the-dependent-1969",
+  "El dependiente":"the-dependent",
   "El hogar fue sepultado en esa tierra":"our-home-was-buried-in-a-land-we-could-never",
   "El lugar más pequeño":"the-tiniest-place",
   "El mundo al revés":"the-world-upside-down",
@@ -1393,6 +1392,7 @@ const LB_SLUGS={
   "Les Voyageurs":"the-travelers",
   "Lolita en Honda":"lolita-en-honda",
   "Look Then Below":"look-then-below",
+  "Los caifanes":"the-outsiders-1967",
   "Los nadadores":"the-swimmers-2024",
   "Los peces no se ahogan":"fish-dont-drown",
   "Luna Rossa":"luna-rossa",
@@ -1423,7 +1423,7 @@ const LB_SLUGS={
   "Puntos de fuga":"vanishing-points-2025",
   "Put Your Soul on Your Hand and Walk":"put-your-soul-on-your-hand-and-walk",
   "Queen at Sea":"queen-at-sea",
-  "Queimada":"burn-2025",
+  "Queimada":"burn",
   "Quem se Move":"those-who-move",
   "Riochiquito":"riochiquito",
   "Risa y la cabina del viento":"risa-and-the-wind-phone",
@@ -1440,17 +1440,20 @@ const LB_SLUGS={
   "Sonali":"sonali",
   "Staatsschutz":"prosecution",
   "Suite intercontinental":"suite-intercontinental",
+  "Taxi Moto":"taxi-moto",
   "The Chronology of Water":"the-chronology-of-water",
   "The Loneliest Man in Town":"the-loneliest-man-in-town-2026",
   "The Masked Monkeys":"the-masked-monkeys",
+  "The Shape of Things":"the-shape-of-things-2023",
   "The Sky Trembles and the Earth Is Afraid":"the-sky-trembles-and-the-earth-is-afraid-and-the-two-eyes-are-not-brothers",
+  "Things":"things-2024",
   "This Is My Land":"this-is-my-land",
   "Todas las manos que solté":"all-the-hands-ive-let-go",
   "Trizas":"shards-2026",
   "Trưa Lịm":"midday-slumber",
   "Tu mañana será mi canto":"your-tomorrow-will-be-my-song",
   "Two Years at Sea":"two-years-at-sea",
-  "Tóc, Giấy và Nước…":"hair-paper-water-2024",
+  "Tóc, Giấy và Nước…":"hair-paper-water",
   "Una escritura en apariencias":"una-escritura-en-apariencias",
   "Urth":"urth",
   "Venezia Diorama":"venezia-diorama",
