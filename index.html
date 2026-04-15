@@ -847,6 +847,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:20px;fo
 }
 @media(max-width:768px){
   .mplan-nav{display:flex}
+  .ag-film-grid{grid-template-columns:repeat(2,1fr);gap:var(--sp-2)}
   .main-nav{position:fixed;bottom:0;left:0;right:0;top:auto;border-top:1px solid var(--bdr);border-bottom:none;z-index:1000;padding-bottom:env(safe-area-inset-bottom)}
   .main-nav-tab{border-bottom:none;border-top:2px solid transparent;margin-bottom:0;margin-top:-1px;padding:var(--sp-2) var(--sp-1);height:52px}
   .main-nav-tab.on{border-bottom-color:transparent;border-top-color:var(--orange)}
@@ -1152,6 +1153,18 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:20px;fo
   .main-nav {
     padding-bottom: max(env(safe-area-inset-bottom), 0px);
   }
+}
+/* ── Touch devices: tap-to-reveal pattern ───────────────────────
+   En dispositivos touch (mobile), los botones empiezan ocultos.
+   Un tap en el item revela acciones. Segundo tap ejecuta acción.
+   El overlay (gradiente) es siempre visible — ayuda a leer el título.
+   Replicable: solo depende de clases, no de datos del festival.
+────────────────────────────────────────────────────────────────── */
+@media(hover:none){
+  .ag-fi-actions{opacity:0;pointer-events:none;transition:opacity .2s ease}
+  .ag-film-item.ag-active .ag-fi-actions{opacity:1;pointer-events:all}
+  .ag-fi-overlay{opacity:1}
+  .ag-fi-bottom{opacity:1}
 }
 
 </style>
@@ -2466,7 +2479,6 @@ function renderFilmListHTML(){
       <div class="ag-fi-overlay"></div>
       <div class="ag-fi-actions">
         <button class="ag-fi-btn prio-fi-btn${isPrio?' prio-on':''}" data-pt="${safeT}" onclick="togglePriority(this.dataset.pt);event.stopPropagation()" title="${isPrio?'Quitar prioridad':'Priorizar'}">${ICONS.star}</button>
-        <button class="ag-fi-btn w-mark${watched.has(t)?' w-on':''}" data-wt="${safeT}" onclick="toggleWatched(this.dataset.wt,event)" title="Marcar como vista">${ICONS.check}</button>
         <button class="ag-fi-btn del" data-wlt="${safeT}" onclick="toggleWL(this.dataset.wlt,event)" title="Quitar">${ICONS.x}</button>
       </div>
       <div class="ag-fi-bottom">
@@ -3896,6 +3908,23 @@ function dismissSplash(){
 })();
 
 loadState();updateAgTab();render();
+/* ── Tap-to-reveal en Selección mobile ──────────────────────────
+   Toca el poster → revela botones (ag-active).
+   Toca fuera o toca un botón → cierra. */
+document.addEventListener('click', function(e){
+  const item = e.target.closest('.ag-film-item');
+  const activeItems = document.querySelectorAll('.ag-film-item.ag-active');
+  if(item){
+    const isActive = item.classList.contains('ag-active');
+    activeItems.forEach(el => el.classList.remove('ag-active'));
+    if(!isActive && !e.target.closest('.ag-fi-btn')){
+      item.classList.add('ag-active');
+    }
+  } else {
+    activeItems.forEach(el => el.classList.remove('ag-active'));
+  }
+});
+
 /* ── Re-render automático cada 60s ───────────────────────────
    Actualiza estados temporales (AHORA, Ya pasó, días pasados)
    sin depender de que el usuario navegue entre tabs.
