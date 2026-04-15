@@ -1518,6 +1518,8 @@ function renderMiPlanCalendar(){
   if(activeMiPlanDay===null){
     const firstDayWithFilm=DAY_KEYS.findIndex(d=>schedule.some(s=>s.day===d));
     activeMiPlanDay=nowDayIdx>=0?nowDayIdx:Math.max(0,firstDayWithFilm);
+    // Alinear viewport con el día activo — replicable en futuros festivales
+    miPlanViewStart=Math.max(0,Math.min(activeMiPlanDay,DAY_KEYS.length-2));
   }
 
   // ── Layout constants ──
@@ -3634,6 +3636,7 @@ function renderAgenda(){
 // ── CALENDAR VIEW ──
 let activeView='day',activeDay='Martes',activeVenue='all',activeSec='all',selectedIdx=null,activeMNav='mnav-cartelera';
 function switchMainNav(id){
+  if(id==='mnav-miplan') activeMiPlanDay=null; // recalcula día actual al entrar
   activeMNav=id;
   document.querySelectorAll('.main-nav-tab').forEach(t=>t.classList.remove('on'));
   const el=document.getElementById(id);if(el) el.classList.add('on');
