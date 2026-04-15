@@ -1155,16 +1155,18 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:20px;fo
   }
 }
 /* ── Touch devices: tap-to-reveal pattern ───────────────────────
-   En dispositivos touch (mobile), los botones empiezan ocultos.
-   Un tap en el item revela acciones. Segundo tap ejecuta acción.
-   El overlay (gradiente) es siempre visible — ayuda a leer el título.
+   Estado reposo: poster limpio, sin overlay, título ni botones.
+   Tap → revela TODO (overlay + título/banderas + botones) a la vez.
+   Equivalente exacto del hover desktop pero en touch.
    Replicable: solo depende de clases, no de datos del festival.
 ────────────────────────────────────────────────────────────────── */
 @media(hover:none){
+  .ag-fi-overlay,
+  .ag-fi-bottom,
   .ag-fi-actions{opacity:0;pointer-events:none;transition:opacity .2s ease}
+  .ag-film-item.ag-active .ag-fi-overlay,
+  .ag-film-item.ag-active .ag-fi-bottom,
   .ag-film-item.ag-active .ag-fi-actions{opacity:1;pointer-events:all}
-  .ag-fi-overlay{opacity:1}
-  .ag-fi-bottom{opacity:1}
 }
 
 </style>
