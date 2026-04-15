@@ -4224,7 +4224,19 @@ function _startTickLoop(){
 const _msToNextMin=(60-new Date().getSeconds())*1000;
 setTimeout(function(){ _startTickLoop(); _startTickLoop.call(); }, _msToNextMin);
 // Mientras tanto, tick inmediato para estado inicial correcto
-updateAgTab();; // cada 60 segundos
+updateAgTab();
+
+// ── Reactivar al volver al primer plano ──────────────────────
+// iOS/Android suspenden setInterval cuando la app va a background.
+// visibilitychange fuerza re-render inmediato al volver,
+// sin esperar al próximo tick del loop.
+document.addEventListener('visibilitychange', function(){
+  if(document.visibilityState!=='visible') return;
+  if(activeMNav==='mnav-miplan'&&activeView==='agenda') renderAgenda();
+  else if(activeMNav==='mnav-planner'&&activeView==='agenda') renderAgenda();
+  else if(activeView==='day') render();
+  updateAgTab();
+});; // cada 60 segundos
 
 // html2canvas eliminado — Canvas API puro
 document.addEventListener('click',e=>{if(!e.target.closest('.fdr-wrap')) closeDropdowns();});
