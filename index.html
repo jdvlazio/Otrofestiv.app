@@ -2062,13 +2062,27 @@ function addSuggestion(title,day,time){
     if(!savedAgenda) savedAgenda={schedule:[]};
     // Avoid duplicates
     if(!savedAgenda.schedule.some(s=>s._title===title)){
-      // No se re-valida conflicto aquí: getSuggestions ya garantizó que la función
-      // cabe en el hueco (los slots ya incluyen el buffer ±10). screensConflict
-      // añadiría ±10 adicional sobre ambos lados → falso positivo sistemático
-      // en funciones que empiezan exactamente en el borde del slot.
+      // ── Re-validación en tiempo real ─────────────────────────────
+      // getSuggestions verificó el hueco al renderizar, pero el plan
+      // pudo haber cambiado desde entonces (otra sugerencia añadida
+      // en la misma sesión). Revalidamos contra el estado actual.
+      const realConflict=savedAgenda.schedule.find(s=>s.day===day&&screensConflict(s,screen));
+      if(realConflict){
+        const{displayTitle:ct}=parseProgramTitle(realConflict._title);
+        showToast(`Conflicto con ${ct.length>22?ct.slice(0,20)+'…':ct} — revisa el horario`,'warn');
+        renderAgenda();
+        return;
+      }
       savedAgenda.schedule.push({...screen,_title:title});
       savedAgenda.schedule.sort((a,b)=>a.day_order!==b.day_order?a.day_order-b.day_order:toMin(a.time)-toMin(b.time));
       saveSavedAgenda();
+      // ── Toast informativo con día y hora ─────────────────────────
+      // Informa exactamente dónde quedó la película para que el
+      // usuario sepa si coincide con lo que esperaba.
+      const{displayTitle:dt}=parseProgramTitle(title);
+      const shortT=dt.length>20?dt.slice(0,18)+'…':dt;
+      const dayShort=DAY_KEYS.indexOf(day)>=0?['MAR','MIÉ','JUE','VIE','SÁB','DOM'][DAY_KEYS.indexOf(day)]:'';
+      showToast(`${ICONS.calendar} ${shortT} · ${dayShort} · ${time}`,'info');
     }
   }
   // 3. Quitar de lista de restaurables
