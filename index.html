@@ -607,6 +607,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:20px;fo
 .av-plus-btn{background:none;border:1px solid var(--bdr);border-radius:var(--r-md);color:var(--gray);font-size:var(--t-sm);padding:var(--sp-2) var(--sp-3);cursor:pointer;font-family:var(--font);transition:color var(--tr-base),border-color var(--tr-base);white-space:nowrap}
 .av-plus-btn:hover{border-color:var(--orange);color:var(--orange)}
 .av-full-btn{background:none;border:1px solid var(--bdr);border-radius:var(--r-md);color:var(--gray);font-size:var(--t-sm);padding:var(--sp-2) var(--sp-3);cursor:pointer;font-family:var(--font);transition:color var(--tr-base),border-color var(--tr-base);white-space:nowrap}
+.av-full-btn:not(.active)::first-letter{color:var(--red);opacity:.6}
 .av-full-btn:hover{border-color:var(--red);color:var(--red)}
 .av-full-btn.active{border-color:var(--red-08);color:var(--red);background:var(--red-06)}
 
@@ -2274,7 +2275,7 @@ function renderAvDay(day){
       <div class="av-row-btns" style="margin-top:${pillsHtml||addOpen?'6px':'0'}">
         ${!fullBlocked&&!addOpen?`<button class="av-plus-btn" onclick="avAddOpen['${day}']=true;renderAvDay('${day}')">${ICONS.plus} No disponible</button>`:''}
         ${!addOpen?`<button class="av-full-btn${fullBlocked?' active':''}" onclick="toggleFullDay('${day}')">
-          ${fullBlocked?'← Liberar día':'Todo el día'}
+          ${fullBlocked?'← Liberar día':'╳ Todo el día'}
         </button>`:''}
       </div>
     </div>`;
