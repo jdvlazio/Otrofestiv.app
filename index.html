@@ -2069,7 +2069,7 @@ function renderAvDay(day){
       <button class="av-plus-btn" onclick="avAddOpen['${day}']=false;renderAvDay('${day}')">${ICONS.x}</button>
     </div>`:'';
 
-  row.className=`av-row${fullBlocked?' av-full':''}`;
+  const isPast=dayFullyPassed(day);row.className=`av-row${isPast?' av-past':''}${fullBlocked?' av-full':''}`;
   row.innerHTML=`
     <div class="av-row-lbl">
       <div class="av-row-dayname">${DAY_ABBR[day]}</div>
