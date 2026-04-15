@@ -1301,6 +1301,98 @@ function getPosterSrc(title, isCortos){
 // 2 · SISTEMA DE ÍCONOS
 //     LB_SVG (Letterboxd), ICONS (Lucide)
 // ═══════════════════════════════════════════════════════════════
+/* ── Letterboxd slugs — URLs directas por película ─────────────
+   Mapeo título → slug de Letterboxd para links directos.
+   URL: https://letterboxd.com/film/{slug}/
+   En iOS con app instalada: abre directamente en la app (universal link).
+   Fallback: búsqueda por título si no hay slug mapeado.
+   Replicable: actualizar este objeto para cada edición del festival.
+──────────────────────────────────────────────────────────────── */
+const LB_SLUGS={
+  "Feito Pipa":"gugus-world",
+  "Queimada":"burn-1969",
+  "O Riso e a Faca":"i-only-rest-in-the-storm",
+  "Vetre, pričaj sa mnom":"wind-talk-to-me",
+  "Geu Jayeoni Nege Mworago Hani":"what-does-that-nature-say-to-you",
+  "Las almas ni los ojos":"las-almas-ni-los-ojos",
+  "Lolita en Honda":"lolita-en-honda",
+  "A Fabulosa Máquina do Tempo":"the-fabulous-time-machine",
+  "Die papierene Brücke":"the-paper-bridge",
+  "Si no ardemos, cómo iluminar la noche":"if-we-dont-burn-how-do-we-light-up-the-night",
+  "Iván & Hadoum":"ivan-hadoum",
+  "Manual para invocar fantasmas":"manual-para-invocar-fantasmas",
+  "Las corrientes":"the-currents",
+  "Una escritura en apariencias":"una-escritura-en-apariencias",
+  "Kaye":"kaye",
+  "Esa otra selva blanca":"that-other-white-jungle",
+  "Chicas tristes":"sad-girlz",
+  "Frío metal":"cold-metal",
+  "Aro berria":"aro-berria",
+  "Bosque arriba en la montaña":"forest-up-in-the-mountain",
+  "Puntos de fuga":"vanishing-points",
+  "Isabel":"isabel-2024",
+  "Tóc, Giấy và Nước…":"hair-paper-water",
+  "Queen at Sea":"queen-at-sea",
+  "Piedras preciosas":"gemstones-2025",
+  "Blue Heron":"blue-heron",
+  "Jóhanna af örk":"joan-of-arc-2025",
+  "Rodrigo D. No futuro":"rodrigo-d-no-future",
+  "Khmeli Potoli":"dry-leaf",
+  "Se Eu Fosse Vivo… Vivia":"if-i-were-alive",
+  "Anoche conquisté Tebas":"last-night-i-conquered-the-city-of-thebes",
+  "El príncipe de Nanawa":"the-prince-of-nanawa",
+  "Risa y la cabina del viento":"risa-and-the-wind-phone",
+  "El valor de la palabra":"el-valor-de-la-palabra",
+  "Dao":"dao",
+  "Historias del buen valle":"good-valley-stories",
+  "Two Years at Sea":"two-years-at-sea",
+  "El tren fluvial":"the-river-train",
+  "Duhuldeki Deney":"soul-of-the-foot",
+  "Staatsschutz":"prosecution",
+  "Crocodile":"crocodile-2025",
+  "Señoritas":"senoritas",
+  "Mare's Nest":"mares-nest",
+  "Doggerland":"doggerland",
+  "The Loneliest Man in Town":"the-loneliest-man-in-town",
+  "Lust":"lust-2024",
+  "El hogar fue sepultado en esa tierra":"our-home-was-buried-in-a-land-we-could-never-find",
+  "Waldheims Walzer":"the-waldheim-waltz",
+  "La noche está marchándose ya":"the-night-is-fading-away",
+  "Nuit Obscure - Ain't I a Child?":"obscure-night-aint-i-a-child",
+  "El mundo al revés":"the-world-upside-down",
+  "Nuestra tierra":"our-land-2024",
+  "Los nadadores":"the-swimmers-2024",
+  "Wax & Gold":"wax-gold",
+  "Alborada en Cartagena":"alborada-en-cartagena",
+  "El dependiente":"the-dependent-1969",
+  "El pagador de promesas":"the-given-word",
+  "Planas, testimonio de un etnocidio":"plains-testimony-of-an-ethnocide",
+  "Campesinos":"campesinos",
+  "A la salida nos vemos":"a-la-salida-nos-vemos",
+  "El lugar más pequeño":"the-tiniest-place",
+  "The Sky Trembles and the Earth Is Afraid":"the-sky-trembles-and-the-earth-is-afraid-and-the-two-eyes-are-not-brothers",
+  "Ghost Strata":"ghost-strata",
+  "Ah, Liberty!":"ah-liberty",
+  "Slow Action":"slow-action",
+  "Look Then Below":"look-then-below",
+  "Origin of the Species":"origin-of-the-species",
+  "A World Rattled of Habit":"a-world-rattled-of-habit",
+  "The Chronology of Water":"the-chronology-of-water",
+  "Maspalomas":"maspalomas",
+  "AnyMart":"anymart",
+  "Matapanki":"matapanki",
+  "Les Voyageurs":"the-travelers",
+  "Dracula":"dracula-1931",
+  "Pequenas Criaturas":"little-creatures",
+  "This Is My Land":"this-is-my-land",
+  "Urth":"urth"
+};
+function lbUrl(title){
+  const slug=LB_SLUGS[title];
+  return slug
+    ?`https://letterboxd.com/film/${slug}/`
+    :`https://letterboxd.com/search/films/${encodeURIComponent(title)}/`;
+}
 const LB_SVG=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="13" height="13" style="display:block;flex-shrink:0"><rect width="64" height="64" rx="9" fill="#2C3440"/><circle cx="21" cy="32" r="12" fill="#00B020" opacity=".9"/><circle cx="32" cy="32" r="12" fill="#3CBEDB" opacity=".85"/><circle cx="43" cy="32" r="12" fill="#FF8000" opacity=".9"/></svg>`;
 
 /* ── Lucide Icons — sistema de íconos Otrofestiv ── */
@@ -3824,7 +3916,7 @@ function render(){
     let filmBlock='';
     if(isProg){
       const list=f.film_list||[];
-      if(list.length) filmBlock=`<div class="c-film-list">${list.map((item,n)=>{const thumb=getPosterSrc(item.title,item.is_cortos!==false);const thumbHtml=thumb?`<img src="${thumb}" class="c-film-thumb" loading="lazy" onerror="this.outerHTML='<div class=c-film-thumb-ph>🎬</div>'" alt="">`:'<div class="c-film-thumb-ph">🎬</div>';return`<div class="c-film-item">${thumbHtml}<div class="c-film-num">${n+1}</div><div class="c-film-info"><div class="c-film-title">${item.title}</div><div class="c-film-meta">${item.country}${item.duration?" · "+item.duration:""}</div></div><a class="c-film-lb" href="https://letterboxd.com/search/films/${encodeURIComponent(item.title)}/" target="_blank" rel="noopener" onclick="event.stopPropagation()">${LB_SVG}</a></div>`;}).join('')}</div>`;
+      if(list.length) filmBlock=`<div class="c-film-list">${list.map((item,n)=>{const thumb=getPosterSrc(item.title,item.is_cortos!==false);const thumbHtml=thumb?`<img src="${thumb}" class="c-film-thumb" loading="lazy" onerror="this.outerHTML='<div class=c-film-thumb-ph>🎬</div>'" alt="">`:'<div class="c-film-thumb-ph">🎬</div>';return`<div class="c-film-item">${thumbHtml}<div class="c-film-num">${n+1}</div><div class="c-film-info"><div class="c-film-title">${item.title}</div><div class="c-film-meta">${item.country}${item.duration?" · "+item.duration:""}</div></div><a class="c-film-lb" href="${lbUrl(item.title)}" target="_blank" rel="noopener" onclick="event.stopPropagation()">${LB_SVG}</a></div>`;}).join('')}</div>`;
       else{const titles=(f.title_en||'').split('·').map(t=>t.trim()).filter(Boolean);if(titles.length) filmBlock=`<div class="c-title-pills">${titles.map(t=>`<span class="c-title-pill">${t}</span>`).join('')}</div>`;}
     }
     const expandBtn=isProg&&filmBlock?`<div class="c-expand" onclick="toggleExpand(this,event)"><span>Ver programa</span><span class="c-expand-arrow">▼</span></div>`:'';
@@ -3839,7 +3931,7 @@ function render(){
     const apBadge=isAp?'<div class="apertura-badge">✦ APERTURA</div>':'';
     const nowBadge=isNowShowing(f)?'<div class="now-label"><span class="now-pulse"></span>AHORA</div>':'';
     const pastBadge=(passed&&!isNowShowing(f))?'<div class="past-badge">Ya pasó</div>':'';
-    const lbPill=isProg?'':`<a class="c-lb" href="https://letterboxd.com/search/films/${encodeURIComponent(f.title)}/" target="_blank" rel="noopener" onclick="event.stopPropagation()">${LB_SVG}<span class="c-lb-text">Letterboxd</span></a>`;
+    const lbPill=isProg?'':`<a class="c-lb" href="${lbUrl(f.title)}" target="_blank" rel="noopener" onclick="event.stopPropagation()">${LB_SVG}<span class="c-lb-text">Letterboxd</span></a>`;
     // Poster: films use getPosterSrc; programs use official FICCI 65 festival poster
     const FICCI_POSTER='https://ficcifestival.com/sites/default/files/2026-02/logo-ficci65_2.png';
     let posterSrc=null, posterHtml='';
