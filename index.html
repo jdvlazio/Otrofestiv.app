@@ -3802,7 +3802,7 @@ function render(){
     </div>`;
     const apBadge=isAp?'<div class="apertura-badge">✦ APERTURA</div>':'';
     const nowBadge=isNowShowing(f)?'<div class="now-label"><span class="now-pulse"></span>AHORA</div>':'';
-    const pastBadge=passed?'<div class="past-badge">ya pasó</div>':'';
+    const pastBadge=(passed&&!isNowShowing(f))?'<div class="past-badge">Ya pasó</div>':'';
     const lbPill=isProg?'':`<a class="c-lb" href="https://letterboxd.com/search/films/${encodeURIComponent(f.title)}/" target="_blank" rel="noopener" onclick="event.stopPropagation()">${LB_SVG}<span class="c-lb-text">Letterboxd</span></a>`;
     // Poster: films use getPosterSrc; programs use official FICCI 65 festival poster
     const FICCI_POSTER='https://ficcifestival.com/sites/default/files/2026-02/logo-ficci65_2.png';
