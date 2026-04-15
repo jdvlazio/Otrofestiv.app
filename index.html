@@ -1871,6 +1871,12 @@ function loadState(){
     const wt=localStorage.getItem('ficci65_watched'); if(wt) watched=new Set(JSON.parse(wt));
     const av=localStorage.getItem('ficci65_av3'); if(av){const p=JSON.parse(av);DAY_KEYS.forEach(d=>{if(p[d]) availability[d]=p[d];});}
     const sa=localStorage.getItem('ficci65_saved'); if(sa) savedAgenda=JSON.parse(sa);
+    // Normalizar venues viejos (ej: 'CC Bocagrande' → 'Plaza Bocagrande')
+    if(savedAgenda&&savedAgenda.schedule){
+      savedAgenda.schedule.forEach(s=>{
+        if(s.venue) s.venue=s.venue.replace(/CC Bocagrande/g,'Plaza Bocagrande');
+      });
+    }
     const pr=localStorage.getItem('ficci65_prio'); if(pr) prioritized=new Set(JSON.parse(pr));
     // Heal: garantiza que todo lo que está en prioritized esté en watchlist
     prioritized.forEach(t=>{if(!watchlist.has(t)){watchlist.add(t);}});
@@ -3440,7 +3446,7 @@ function _buildAgendaCanvas(){
       ty+=22;
       c.fillStyle='#FFF';c.font=`600 ${FONT_T}px system-ui,-apple-system,sans-serif`;
       ty=_drawWrapped(c,s._title||'',tx,ty,CW-CARD_PAD*2-6,LINE_T,MAX_TL);
-      if(s.venue){const v=s.venue.length>30?s.venue.slice(0,28)+'…':s.venue;c.fillStyle='#5A5A5A';c.font='400 10px system-ui,-apple-system,sans-serif';c.textBaseline='top';c.fillText(v,tx,cardY+ch-CARD_PAD-11);}
+      if(s.venue){const _vc=vcfg(s.venue);const _vraw=_vc.short||s.venue;const v=_vraw.length>30?_vraw.slice(0,28)+'…':_vraw;c.fillStyle='#5A5A5A';c.font='400 10px system-ui,-apple-system,sans-serif';c.textBaseline='top';c.fillText(v,tx,cardY+ch-CARD_PAD-11);}
       cardY+=ch+CARD_GAP;
     });
   });
