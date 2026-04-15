@@ -347,7 +347,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:20px;fo
 
 /* ── Badges ── */
 .apertura-badge{display:inline-block;font-size:var(--t-xs);background:var(--orange);color:var(--white);font-weight:var(--w-bold);letter-spacing:1px;padding:2px var(--sp-2);border-radius:var(--r-md);font-family:var(--font);margin-right:var(--sp-2);vertical-align:middle;flex-shrink:0}
-.past-badge{position:absolute;bottom:8px;right:10px;font-size:var(--t-xs);color:var(--gray2);font-weight:var(--w-semi);letter-spacing:.5px;z-index:2;background:var(--overlay-50);padding:1px var(--sp-2);border-radius:var(--r-sm)}
+.past-badge{display:inline-flex;align-items:center;font-size:var(--t-xs);color:var(--gray2);font-weight:var(--w-semi);letter-spacing:.03em}
 .ag-fi-prio-badge{position:absolute;top:5px;left:5px;font-size:var(--t-sm);color:var(--orange);background:var(--overlay-60);border-radius:var(--r-sm);padding:1px var(--sp-1);font-weight:var(--w-bold);pointer-events:none;z-index:3}
 
 /* ── Poster ── */
@@ -429,7 +429,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:20px;fo
 /* ── Pulse "en curso" ── */
 .now-pulse{display:inline-block;width:7px;height:7px;background:var(--green);border-radius:50%;margin-right:var(--sp-1);animation:pulse-green 1.4s ease infinite;flex-shrink:0}
 @keyframes pulse-green{0%,100%{box-shadow:0 0 0 0 var(--green-20)}60%{box-shadow:0 0 0 5px var(--green-00)}}
-.now-label{position:absolute;bottom:8px;left:8px;font-size:var(--t-xs);color:var(--green);font-weight:var(--w-bold);letter-spacing:.5px;display:flex;align-items:center;gap:var(--sp-1);background:var(--overlay-60);padding:2px var(--sp-2);border-radius:var(--r-md);z-index:3}
+.now-label{display:inline-flex;align-items:center;gap:4px;font-size:var(--t-xs);color:var(--green);font-weight:var(--w-bold);letter-spacing:.05em}
 
 /* ── Utilidades ── */
 
@@ -3829,7 +3829,7 @@ function render(){
       ?posterHtml
       :`<div class="c-poster empty"><div class="c-poster-none"></div></div>`;
     return`<div class="card${isAp?' apertura':isProg?' program':''}${hasPoster?' has-poster':''}${inWL&&!inW?' in-wl':inW?' in-watched':''}${passed?' past-card':''}" data-idx="${i}" data-title="${f.title.replace(/"/g,'&quot;')}">
-      ${pastBadge}${nowBadge}${actBtns}
+      ${actBtns}
       <div class="c-body">
         ${posterCol}<div class="c-content">${zoneHtml}</div>
       </div>
@@ -3842,7 +3842,7 @@ function render(){
         </div>
         <div class="c-foot-space"></div>
         <div class="c-foot-right">
-          ${progSuffix?`<span class="c-dur" style="color:var(--gray2)">${progSuffix}</span>`:''} 
+          ${nowBadge}${pastBadge}${progSuffix?`<span class="c-dur" style="color:var(--gray2)">${progSuffix}</span>`:''}
         </div>
       </div>
     </div>`;
