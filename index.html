@@ -1422,16 +1422,12 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:20px;fo
 <div class="hint" id="hint"></div>
 <!-- Hint de modo Cartelera — primer uso. Escalable por festival. -->
 <div class="cartelera-mode-hint" id="cartelera-mode-hint" style="display:none">
-  <span>Explora por día · Añade con ♥ a Mi Lista · El algoritmo planea tu ruta</span>
+  <span>Explora por día · Añade con ♥ a Mi Lista · El algoritmo arma tu plan</span>
   <button class="cartelera-mode-hint-close"
     onclick="localStorage.setItem(FESTIVAL_STORAGE_KEY+'cartelera_hint_seen','1');this.parentElement.style.display='none'"
     aria-label="Cerrar">×</button>
 </div>
-<div id="flow-hint" style="display:none;padding:10px 18px 8px;font-size:var(--t-sm);color:var(--gray);border-bottom:1px solid var(--bdr-l);line-height:1.5">
-  <span style="color:var(--amber)">♥</span> Añade películas a Mi Lista
-  · <span style="color:var(--orange)">★</span> Márcalas como prioridad
-  · <span style="color:var(--white-60)">◉</span> Genera tu plan en Planear
-</div>
+
 
 <div class="cnt-line" id="cnt"></div>
 <div class="grid" id="grid"></div>
@@ -4437,9 +4433,7 @@ function render(){
   });
   if(selectedIdx!==null&&selectedIdx<films.length) applyStates(films);
 
-  // ── Hint de flujo Mi Lista (primer uso) ─────────────────────
-  const _flowHint=document.getElementById('flow-hint');
-  if(_flowHint) _flowHint.style.display=watchlist.size===0&&activeVenue==='all'&&activeSec==='all'?'':'none';
+
 
   // ── Hint de modo Cartelera (primer uso) ──────────────────────
   // Explica el flujo en una línea: Explora → Añade → El algoritmo planea.
