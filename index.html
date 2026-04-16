@@ -678,11 +678,16 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:20px;fo
 .ag-summary-text b{color:var(--white)}
 .ag-save-btn{width:100%;margin-top:var(--sp-3);padding:var(--sp-3);border-radius:var(--r-md);background:var(--green-12);border:1px solid var(--green-35);color:var(--green);font-size:var(--t-sm);font-weight:var(--w-display);letter-spacing:.1em;text-transform:uppercase;cursor:pointer;font-family:var(--font);transition:background var(--tr-base)}
 .ag-save-btn:hover{background:var(--green-20)}
-.ag-nav{display:flex;align-items:center;justify-content:center;gap:var(--sp-3);margin-top:var(--sp-3)}
-.ag-nav-btn{background:none;border:1px solid var(--bdr);color:var(--gray);border-radius:var(--r-pill);padding:var(--sp-2) var(--sp-4);font-size:var(--t-sm);cursor:pointer;font-family:var(--font);transition:color var(--tr-base),border-color var(--tr-base)}
-.ag-nav-btn:hover:not(:disabled){border-color:var(--orange);color:var(--orange)}
-.ag-nav-btn:disabled{opacity:.3;cursor:default}
-.ag-nav-pos{font-size:var(--t-sm);color:var(--gray)}
+.ag-nav{display:flex;align-items:center;justify-content:center;gap:6px;margin-top:var(--sp-3);flex-wrap:wrap}
+/* ── Dot navigation para opciones de plan ─────────────────────────
+   Un botón por opción, activo destacado con fondo ámbar.
+   El usuario ve cuántas hay y en cuál está de un vistazo.
+   Escalable: generado dinámicamente desde scenarios.length */
+.ag-nav-dot{width:32px;height:32px;border-radius:50%;border:1px solid var(--bdr);background:none;color:var(--gray);font-size:var(--t-xs);font-weight:var(--w-bold);cursor:pointer;transition:all var(--tr-base);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.ag-nav-dot:hover:not(.active){border-color:var(--orange);color:var(--orange)}
+.ag-nav-dot.active{background:var(--amber-10);border-color:var(--orange);color:var(--orange)}
+.ag-nav-dot.active-star{background:var(--amber-10);border-color:var(--orange);color:var(--orange);font-size:10px}
+.ag-nav-pos{display:none}
 .ag-conflicts{background:var(--surf);border:1px solid #3a2020;border-radius:var(--r);padding:var(--sp-3);margin-bottom:var(--sp-4)}
 .ag-conflicts-title{font-size:var(--t-xs);color:var(--yellow);text-transform:uppercase;letter-spacing:1px;font-weight:var(--w-semi);margin-bottom:var(--sp-2)}
 .ag-conflict-item{display:flex;align-items:flex-start;justify-content:space-between;gap:var(--sp-2);font-size:var(--t-sm);color:var(--gray);line-height:1.5;padding:var(--sp-2) 0;border-bottom:1px solid var(--white-05)}
@@ -3704,10 +3709,16 @@ function buildResultHTML(scenarios){
   if(n>1){
     const prevLabel=currentIdx<=1?`${ICONS.calendar} Plan óptimo`:`Variación ${currentIdx-1}`;
     const nextLabel=currentIdx===0?'Variación 1':`Variación ${currentIdx+1}`;
-    navHtml=`<div class="ag-nav" style="margin-top:8px">
-      <button class="ag-nav-btn" onclick="changeScenario(-1)" ${currentIdx===0?'disabled':''}>‹ ${prevLabel}</button>
-      <button class="ag-nav-btn" onclick="changeScenario(1)" ${currentIdx===n-1?'disabled':''}>${nextLabel} ›</button>
-    </div>`;
+    // Dots: un botón por opción, activo destacado
+    // Escalable: generado desde scenarios.length sin hardcodear
+    const dots=scenarios.map((_,di)=>{
+      const isActive=di===currentIdx;
+      const isOptimoDot=di===0;
+      const cls=isActive?(isOptimoDot?'ag-nav-dot active-star active':'ag-nav-dot active'):'ag-nav-dot';
+      const label=isOptimoDot?'★':(di).toString();
+      return`<button class="${cls}" onclick="jumpToScenario(${di})" title="${isOptimoDot?'Plan óptimo':'Opción '+di}">${label}</button>`;
+    }).join('');
+    navHtml=`<div class="ag-nav" style="margin-top:8px">${dots}</div>`;
   }
 
   const saveBtnHtml=`<button class="ag-save-btn" onclick="saveCurrentScenario()">${ICONS.calendar} Elegir este plan</button>`;
@@ -3932,7 +3943,7 @@ function runCalc(){
   const res=document.getElementById('ag-result');
   // ── Loading state: mostrar siempre aunque el resultado sea idéntico ──
   if(btn){btn.disabled=true;btn.textContent='Calculando…';}
-  if(res) res.innerHTML=`<div class="ag-calc-prompt" style="opacity:.6">◌ Calculando escenarios…</div>`;
+  if(res) res.innerHTML=`<div class="ag-calc-prompt" style="opacity:.6">◌ Calculando opciones…</div>`;
   // Defer computation to allow browser to paint loading state first
   setTimeout(()=>{
     try{
@@ -3953,6 +3964,11 @@ function changeScenario(dir){
   cachedResult.currentIdx=Math.max(0,Math.min(n-1,cachedResult.currentIdx+dir));
   const res=document.getElementById('ag-result');
   if(res) res.innerHTML=buildResultHTML(cachedResult.scenarios);
+}
+function jumpToScenario(idx){
+  if(!cachedResult) return;
+  cachedResult.currentIdx=Math.max(0,Math.min(cachedResult.scenarios.length-1,idx));
+  renderAgenda();
 }
 
 function updatePrioCounter(){
@@ -4017,7 +4033,7 @@ function renderAgenda(){
         </button>
       </div>
       <div class="ag-section">
-        <div class="ag-section-title">${ICONS.switch} Escenarios</div>
+        <div class="ag-section-title">${ICONS.switch} Opciones</div>
         <div id="ag-result">${resultContent}</div>
       </div>`;
     DAY_KEYS.forEach(d=>renderAvDay(d));
