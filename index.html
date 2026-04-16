@@ -4112,7 +4112,7 @@ function renderAgenda(){
     view.innerHTML=_progressHtmlPlan+renderSavedAgendaHTML();
   } else {
     // ── Planear: stepper de progreso + prio strip + disponibilidad + opciones ──
-    const _progressHtml=(!savedAgenda||!savedAgenda.schedule||!savedAgenda.schedule.length)?renderFlowProgress('seleccion'):'';
+    const _progressHtml=(!savedAgenda||!savedAgenda.schedule||!savedAgenda.schedule.length)?renderFlowProgress('planner'):'';
     // El indicador desaparece cuando hay plan guardado
     const pending=[...watchlist].filter(t=>!watched.has(t)&&FILMS.some(f=>f.title===t&&!screeningPassed(f)));
     const resultContent=cachedResult
@@ -4164,8 +4164,10 @@ function showDayView(){
   document.getElementById('nav-row').classList.remove('hidden');
   document.getElementById('filter-row').classList.remove('hidden');
   document.getElementById('filter-bars').style.display='';
-  ['hint','cnt','grid'].forEach(id=>{const el=document.getElementById(id);if(el) el.style.display='';});
-  document.getElementById('ag-view').classList.remove('visible');
+  ['hint','cnt','grid','cartelera-stepper','cartelera-cta'].forEach(id=>{const el=document.getElementById(id);if(el) el.style.display='';});
+  const _av=document.getElementById('ag-view');
+  _av.classList.remove('visible');
+  _av.style.display='none';
   document.getElementById('agtab').classList.remove('on');
   document.querySelectorAll('.dtab').forEach(t=>t.classList.toggle('on',t.dataset.day===activeDay));
 }
@@ -4174,8 +4176,9 @@ function showAgView(){
   document.getElementById('nav-row').classList.add('hidden');
   document.getElementById('filter-row').classList.add('hidden');
   document.getElementById('filter-bars').style.display='none';
-  ['hint','cnt','grid'].forEach(id=>{const el=document.getElementById(id);if(el) el.style.display='none';});
+  ['hint','cnt','grid','cartelera-stepper','cartelera-cta'].forEach(id=>{const el=document.getElementById(id);if(el) el.style.display='none';});
   const _av=document.getElementById('ag-view');
+  _av.style.display='';
   _av.classList.add('visible');
   _av.scrollTop=0;
   document.getElementById('agtab').classList.add('on');
