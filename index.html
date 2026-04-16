@@ -1323,6 +1323,14 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:20px;fo
   flex-shrink:0;margin:0 2px;
 }
 
+
+/* ── Cartelera: micro-CTA entrada al flujo ─────────────────────────
+   Corazón ámbar + texto. Misma jerarquía que el stepper.
+   Desaparece al añadir primera película. */
+.cartelera-cta{display:flex;align-items:flex-start;gap:var(--sp-2);padding:10px var(--sp-4);border-bottom:1px solid var(--bdr-l)}
+.cartelera-cta-heart{font-size:var(--t-lg);color:var(--amber);flex-shrink:0;line-height:1.2}
+.cartelera-cta-text{font-size:var(--t-sm);color:var(--gray);line-height:1.5}
+.cartelera-cta-text b{color:var(--white-60);font-weight:var(--w-semi)}
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebApplication","name":"Otrofestiv","description":"Tu agenda personal para festivales de cine. Planea, prioriza y saca el máximo de cada festival.","url":"https://otrofestiv.app","applicationCategory":"EntertainmentApplication","operatingSystem":"iOS, Android, Web","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
@@ -1395,10 +1403,13 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:20px;fo
   <button id="agtab" style="display:none"><span id="ag-cnt">0</span></button>
 </div>
 <div class="hint" id="hint"></div>
-
-
-
-
+<div id="cartelera-stepper" style="display:none"></div>
+<div id="cartelera-cta" style="display:none">
+  <div class="cartelera-cta">
+    <span class="cartelera-cta-heart">♥</span>
+    <span class="cartelera-cta-text">Toca <b>♥</b> en cualquier película para añadirla a <b>Mi Lista</b></span>
+  </div>
+</div>
 <div class="cnt-line" id="cnt"></div>
 <div class="grid" id="grid"></div>
 <div class="ag-view" id="ag-view"></div>
@@ -4407,6 +4418,31 @@ function render(){
 
 
 
+
+
+  // ── Cartelera: stepper + micro-CTA de entrada al flujo ─────────────
+  if(activeView==='day'){
+    const _cStepper=document.getElementById('cartelera-stepper');
+    const _cCta=document.getElementById('cartelera-cta');
+    const _hasPlan=savedAgenda&&savedAgenda.schedule&&savedAgenda.schedule.length>0;
+    if(_cStepper){
+      _cStepper.style.display=_hasPlan?'none':'';
+      if(!_hasPlan) _cStepper.innerHTML=renderFlowProgress();
+    }
+    if(_cCta) _cCta.style.display=watchlist.size>0?'none':'';
+  }
+
+
+  // ── Cartelera: stepper + micro-CTA ─────────────────────────────
+  // Stepper: mismo renderFlowProgress() que los demás tabs.
+  // Micro-CTA: ♥ ámbar + texto. Desaparece al añadir primera película.
+  if(activeView==='day'){
+    const _cStepper=document.getElementById('cartelera-stepper');
+    const _cCta=document.getElementById('cartelera-cta');
+    const _hasPlan=savedAgenda&&savedAgenda.schedule&&savedAgenda.schedule.length>0;
+    if(_cStepper){_cStepper.style.display=_hasPlan?'none':'';if(!_hasPlan)_cStepper.innerHTML=renderFlowProgress();}
+    if(_cCta)_cCta.style.display=watchlist.size>0?'none':'';
+  }
 }
 
 
