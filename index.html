@@ -669,7 +669,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:20px;fo
 .av-calc-btn:hover{opacity:.88}
 .av-calc-btn:disabled{opacity:.35;cursor:default}
 
-/* Resultados / Escenarios */
+/* Resultados / Opciones */
 .ag-calc-prompt{text-align:center;padding:var(--sp-5) var(--sp-5);color:var(--gray);font-size:var(--t-sm);line-height:1.6;background:var(--card-a);border:1px solid var(--bdr);border-radius:var(--r)}
 .ag-calc-prompt strong{color:var(--orange);font-size:var(--t-sm);font-weight:var(--w-bold);letter-spacing:.06em}
 .ag-summary{background:var(--card-a);border:1px solid var(--bdr);border-radius:var(--r);padding:var(--sp-4);margin-bottom:var(--sp-4)}
@@ -2510,8 +2510,8 @@ function computeScenarios(titles){
   // ⚠️  FIX CRÍTICO — NO REMOVER (Apr 2026)
   // MAX_NODES_PER_CALL debe aplicarse a AMBAS funciones: findMax/bb y collectAt
   // Sin este límite en findMax, el motor JS de mobile corta la recursión antes
-  // que desktop → trueMax diferente entre dispositivos → escenarios inconsistentes
-  // (ej: desktop muestra 8 películas por escenario, mobile solo 2)
+  // que desktop → trueMax diferente entre dispositivos → opciones inconsistentes
+  // (ej: desktop muestra 8 películas por opción, mobile solo 2)
   // Valor 80000: suficiente para watchlists de hasta ~25 películas en mobile.
   // DEBE declararse ANTES de findMax — const tiene zona muerta temporal (TDZ).
   // ─────────────────────────────────────────────────────────────────────────
@@ -2866,7 +2866,7 @@ function removeFilmFromScenario(title,e){
   const short=title.length>36?title.slice(0,34)+'…':title;
   showActionModal(
     `${ICONS.x} Quitar de Mi Lista`,
-    `<b>${short}</b><br><br>Se quitará de Mi Lista y los escenarios se recalcularán.`,
+    `<b>${short}</b><br><br>Se quitará de Mi Lista y las opciones se recalcularán.`,
     'Quitar',
     ()=>{
       watchlist.delete(title);
@@ -3856,7 +3856,7 @@ function swapFilm(excludedTitle, screenDay, screenTime, displacedTitle){
   if(res) res.innerHTML=buildResultHTML(cachedResult.scenarios);
 }
 // ── POST-SELECTION SQUEEZE ──
-// Tras elegir un escenario, intenta insertar películas excluidas de la watchlist
+// Tras elegir una opción, intenta insertar películas excluidas de la watchlist
 // que quepan en los huecos reales del plan elegido (usando screensConflict ±10 min).
 // Puede superar trueMax porque ese era el máximo dentro del árbol explorado,
 // no el máximo real del calendario.
@@ -3899,7 +3899,7 @@ function saveCurrentScenario(){
     const n=savedAgenda.schedule.length;
     showActionModal(
       `${ICONS.calendar} Reemplazar plan`,
-      `Ya tienes un plan con <b>${n} película${n!==1?'s':''}</b>.<br><br>¿Reemplazarlo con este nuevo escenario? Tu plan actual se perderá.`,
+      `Ya tienes un plan con <b>${n} película${n!==1?'s':''}</b>.<br><br>¿Reemplazarlo con esta nueva opción? Tu plan actual se perderá.`,
       'Sí, reemplazar',
       _doSave,
       'Conservar mi plan actual'
@@ -3914,8 +3914,8 @@ function invalidateCalcResult(){
   const res=document.getElementById('ag-result');
   const pending=[...watchlist].filter(t=>!watched.has(t)&&FILMS.some(f=>f.title===t&&!screeningPassed(f)));
   res.innerHTML=pending.length
-    ?`<div class="ag-calc-prompt">Configura tu disponibilidad<br>y toca <strong>CALCULAR ESCENARIOS</strong>.</div>`
-    :`<div class="ag-calc-prompt">Añade películas en <strong>Mi Lista</strong> para poder calcular escenarios.</div>`;
+    ?`<div class="ag-calc-prompt">Configura tu disponibilidad<br>y toca <strong>CALCULAR OPCIONES</strong>.</div>`
+    :`<div class="ag-calc-prompt">Añade películas en <strong>Mi Lista</strong> para poder calcular opciones.</div>`;
 }
 function runCalc(){
   cachedResult=null;
@@ -3937,7 +3937,7 @@ function runCalc(){
       if(res) res.innerHTML=`<div class="ag-calc-prompt" style="color:var(--red)"><strong>Error al calcular:</strong><br><code style="font-size:var(--t-xs)">${err.message}</code></div>`;
       /* runCalc error — silent in production */
     }finally{
-      if(btn){btn.disabled=false;btn.textContent='CALCULAR ESCENARIOS';}
+      if(btn){btn.disabled=false;btn.textContent='CALCULAR OPCIONES';}
     }
   },80);
 }
@@ -3986,13 +3986,13 @@ function renderAgenda(){
     // ── Mi Plan: calendario + sugerencias ──
     view.innerHTML=renderSavedAgendaHTML();
   } else {
-    // ── Planear: prio strip compacto + disponibilidad + escenarios ──
+    // ── Planear: prio strip compacto + disponibilidad + opciones ──
     const pending=[...watchlist].filter(t=>!watched.has(t)&&FILMS.some(f=>f.title===t&&!screeningPassed(f)));
     const resultContent=cachedResult
       ?buildResultHTML(cachedResult.scenarios)
       :pending.length
-        ?`<div class="ag-calc-prompt">Configura tu disponibilidad<br>y toca <strong>CALCULAR ESCENARIOS</strong>.</div>`
-        :`<div class="ag-calc-prompt">Añade películas en <strong>Mi Lista</strong> para poder calcular escenarios.</div>`;
+        ?`<div class="ag-calc-prompt">Configura tu disponibilidad<br>y toca <strong>CALCULAR OPCIONES</strong>.</div>`
+        :`<div class="ag-calc-prompt">Añade películas en <strong>Mi Lista</strong> para poder calcular opciones.</div>`;
     view.innerHTML=`
       <div class="ag-section">
         <div class="ag-search-wrap">
@@ -4012,7 +4012,7 @@ function renderAgenda(){
           }).join('')}
         </div>
         <button class="av-calc-btn" onclick="runCalc()" ${!pending.length?'disabled':''}>
-          CALCULAR ESCENARIOS${!pending.length?' (sin pendientes)':''}
+          CALCULAR OPCIONES${!pending.length?' (sin pendientes)':''}
         </button>
       </div>
       <div class="ag-section">
