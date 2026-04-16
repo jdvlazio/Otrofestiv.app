@@ -586,7 +586,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:20px;fo
 .c-dur{font-size:var(--t-sm);color:var(--gray);white-space:nowrap;flex-shrink:0}
 .prog-badge{font-size:var(--t-sm);color:var(--gray2);font-weight:var(--w-semi);letter-spacing:.4px;white-space:nowrap}
 
-/* ── SELECCIÓN ── */
+/* ── MI LISTA ── */
 .ag-section{margin-bottom:var(--sp-5)}
 .ag-section-title{font-size:var(--t-xs);font-weight:var(--w-bold);color:var(--amber-60);letter-spacing:1px;text-transform:uppercase;margin-bottom:var(--sp-3);display:flex;align-items:center;gap:var(--sp-2)}
 .ag-film-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(110px,130px));gap:var(--sp-2);margin-bottom:var(--sp-2);justify-content:start}
@@ -1211,6 +1211,27 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:20px;fo
   .fdr-btn{padding:6px 14px;color:var(--gray2)}
   .fdr-btn.active{color:var(--orange)}
 }
+/* ── CTA Planear — conecta Selección con Planear ─────────────────
+   Visible solo cuando hay películas en la lista pero sin plan.
+   Escalable: depende de watchlist y savedAgenda, no del festival. */
+.sel-plan-cta{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:var(--sp-3);
+  margin:var(--sp-4) 0 var(--sp-2);
+  padding:var(--sp-3) var(--sp-4);
+  background:var(--amber-08);
+  border:1px solid var(--amber-20);
+  border-radius:var(--r);
+  cursor:pointer;
+  -webkit-tap-highlight-color:transparent;
+  transition:background var(--tr-base);
+}
+.sel-plan-cta:active{background:var(--amber-10)}
+.sel-plan-cta-text{font-size:var(--t-sm);color:var(--white-60);line-height:1.4}
+.sel-plan-cta-text b{color:var(--white);font-weight:var(--w-semi)}
+.sel-plan-cta-arrow{color:var(--amber);font-size:var(--t-lg);flex-shrink:0;line-height:1}
 
 </style>
 <script type="application/ld+json">
@@ -1248,7 +1269,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:20px;fo
   </button>
   <button class="main-nav-tab" id="mnav-seleccion" onclick="switchMainNav('mnav-seleccion');showAgView()">
     <span class="main-nav-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></span>
-    <span class="main-nav-lbl">SELECCIÓN</span>
+    <span class="main-nav-lbl">MI LISTA</span>
   </button>
   <button class="main-nav-tab" id="mnav-planner" onclick="switchMainNav('mnav-planner');showAgView()">
     <span class="main-nav-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="21" x2="4" y2="14"/><line x1="4" y1="10" x2="4" y2="3"/><line x1="12" y1="21" x2="12" y2="12"/><line x1="12" y1="8" x2="12" y2="3"/><line x1="20" y1="21" x2="20" y2="16"/><line x1="20" y1="12" x2="20" y2="3"/><line x1="1" y1="14" x2="7" y2="14"/><line x1="9" y1="8" x2="15" y2="8"/><line x1="17" y1="16" x2="23" y2="16"/></svg></span>
@@ -1285,7 +1306,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:20px;fo
 </div>
 <div class="hint" id="hint"></div>
 <div id="flow-hint" style="display:none;padding:10px 18px 8px;font-size:var(--t-sm);color:var(--gray);border-bottom:1px solid var(--bdr-l);line-height:1.5">
-  <span style="color:var(--amber)">♥</span> Añade películas a tu Selección
+  <span style="color:var(--amber)">♥</span> Añade películas a Mi Lista
   · <span style="color:var(--orange)">★</span> Márcalas como prioridad
   · <span style="color:var(--white-60)">◉</span> Genera tu plan en Planear
 </div>
@@ -1961,7 +1982,7 @@ function updateAgTab(){
 
 
 // ═══════════════════════════════════════════════════════════════
-// 8 · EVENT HANDLERS — SELECCIÓN
+// 8 · EVENT HANDLERS — MI LISTA
 //     toggleWL, toggleWatched, addFromSearch, removeFromAgenda
 // ═══════════════════════════════════════════════════════════════
 function toggleWL(title,e){
@@ -1985,7 +2006,7 @@ function toggleWL(title,e){
   }
   else{
     watchlist.add(title);watched.delete(title);
-    showToast(`${ICONS.heart} Añadida a Selección`,'info');
+    showToast(`${ICONS.heart} Añadida a Mi Lista`,'info');
   }
   saveState('wl','watched');updateCardState(title);updateAgTab();
   if(activeView==='agenda'){cachedResult=null;renderAgenda();}
@@ -2021,7 +2042,7 @@ function updateCardState(title){
     const wlBtn=card.querySelector('.wl-btn');
     const wBtn=card.querySelector('.w-btn');
     const prioBtn=card.querySelector('.prio-btn');
-    if(wlBtn){wlBtn.innerHTML=inWL?ICONS.heartFill:ICONS.heart;wlBtn.classList.toggle('wl-on',inWL);wlBtn.title=inWL?'Quitar de Selección':'Añadir a Selección';}
+    if(wlBtn){wlBtn.innerHTML=inWL?ICONS.heartFill:ICONS.heart;wlBtn.classList.toggle('wl-on',inWL);wlBtn.title=inWL?'Quitar de Mi Lista':'Añadir a Mi Lista';}
     if(wBtn){wBtn.classList.toggle('w-on',inW);wBtn.title=inW?'Marcar como pendiente':'Marcar como vista';}
     if(prioBtn){prioBtn.classList.toggle('prio-on',inPrio);prioBtn.title=inPrio?'Quitar prioridad':'Priorizar';}
   });
@@ -3896,11 +3917,19 @@ function renderAgenda(){
         <div class="ag-search-wrap">
           <span class="ag-search-ico">${ICONS.search}</span>
           <input type="text" id="ag-search-input" class="ag-search"
-            placeholder="Buscar y añadir película o programa…"
+            placeholder="Buscar y añadir a Mi Lista…"
             oninput="onSearchInput()" onblur="closeSearch()" autocomplete="off">
           <div id="ag-search-results" class="ag-search-results"></div>
         </div>
         <div id="ag-film-list">${renderFilmListHTML()}</div>
+        ${watchlist.size>0&&(!savedAgenda||!savedAgenda.schedule||!savedAgenda.schedule.length)?`
+        <div class="sel-plan-cta" onclick="switchMainNav('mnav-planner');showAgView()">
+          <div class="sel-plan-cta-text">
+            <b>${watchlist.size} película${watchlist.size!==1?'s':''} en tu lista</b><br>
+            Genera tu plan en Planear
+          </div>
+          <span class="sel-plan-cta-arrow">→</span>
+        </div>`:''}
       </div>`;
   } else if(activeMNav==='mnav-miplan'){
     // ── Mi Plan: calendario + sugerencias ──
@@ -3918,7 +3947,7 @@ function renderAgenda(){
         <div class="ag-search-wrap">
           <span class="ag-search-ico">${ICONS.search}</span>
           <input type="text" id="ag-search-input" class="ag-search"
-            placeholder="Buscar y añadir película o programa…"
+            placeholder="Buscar y añadir a Mi Lista…"
             oninput="onSearchInput()" onblur="closeSearch()" autocomplete="off">
           <div id="ag-search-results" class="ag-search-results"></div>
         </div>
@@ -4145,7 +4174,7 @@ function render(){
     const inPrio=prioritized.has(f.title);
     const prioBtn=`<button class="action-btn prio-btn${inPrio?' prio-on':''}" onclick="togglePriority('${safe}')" title="${inPrio?'Quitar prioridad':'Priorizar'}">${ICONS.star}</button>`;
     const actBtns=`<div class="card-actions">
-      <button class="action-btn wl-btn${inWL?' wl-on':''}" onclick="toggleWL('${safe}',event)" title="${inWL?'Quitar de Selección':'Añadir a Selección'}">${inWL?ICONS.heartFill:ICONS.heart}</button>
+      <button class="action-btn wl-btn${inWL?' wl-on':''}" onclick="toggleWL('${safe}',event)" title="${inWL?'Quitar de Mi Lista':'Añadir a Mi Lista'}">${inWL?ICONS.heartFill:ICONS.heart}</button>
       <button class="action-btn w-btn${inW?' w-on':''}" onclick="toggleWatched('${safe}',event)" title="${inW?'Marcar como pendiente':'Marcar como vista'}">${ICONS.check}</button>
       ${prioBtn}
     </div>`;
