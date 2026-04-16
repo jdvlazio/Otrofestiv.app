@@ -48,8 +48,8 @@
   --bg: #0A0A0A;
   --surf: #141414;
   --surf-2: #1A1A1A;
-  --card-a: #141414;
-  --card-b: #1A1A1A;
+  --card-a: #1E1E1E;
+  --card-b: #232323;
   --card-p: #141414;
   /* ── Bordes — dos niveles semánticos ──
      --bdr:   #2A2A2A  chrome estructural: nav, headers, UI interactiva
@@ -221,13 +221,13 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:20px;fo
    Vive dentro de .hdr (padding:var(--sp-5)).
    margin negativo cancela ese padding → barra full-width.
    padding propio var(--sp-5) → contenido alineado con el wordmark. */
-.hdr-fest-bar{display:flex;align-items:center;justify-content:space-between;background:var(--surf);border-top:1px solid var(--bdr-l);border-bottom:1px solid var(--bdr-l);padding:var(--sp-2) var(--sp-5);cursor:pointer;-webkit-tap-highlight-color:transparent}
+.hdr-fest-bar{display:flex;align-items:center;justify-content:space-between;background:var(--surf-2);border-top:1px solid var(--bdr);border-bottom:1px solid var(--bdr);padding:var(--sp-2) var(--sp-5);cursor:pointer;-webkit-tap-highlight-color:transparent}
 .hdr-fest-bar:active{background:var(--surf-2)}
 .hdr-fest-left{display:flex;align-items:center;gap:var(--sp-2)}
 .hdr-fest-dot{width:5px;height:5px;border-radius:50%;background:var(--amber);flex-shrink:0}
-.hdr-fest-name{font-size:var(--t-xs);font-weight:var(--w-bold);letter-spacing:.08em;text-transform:uppercase;color:var(--white-60)}
-.hdr-fest-dates{font-size:var(--t-xs);font-weight:var(--w-semi);letter-spacing:.05em;text-transform:uppercase;color:var(--white-30)}
-.hdr-fest-chev{font-size:var(--t-xs);color:var(--white-45);line-height:1;margin-left:var(--sp-1)}
+.hdr-fest-name{font-size:var(--t-xs);font-weight:var(--w-bold);letter-spacing:.08em;text-transform:uppercase;color:var(--white)}
+.hdr-fest-dates{font-size:var(--t-xs);font-weight:var(--w-semi);letter-spacing:.05em;text-transform:uppercase;color:var(--white-60)}
+.hdr-fest-chev{font-size:var(--t-xs);color:var(--white-60);line-height:1;margin-left:var(--sp-1)}
 
 /* Nav row (tabs de días en Planear) */
 .nav-row{display:flex;align-items:stretch;border-bottom:1px solid var(--bdr);margin-top:var(--sp-1)}
@@ -282,7 +282,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:20px;fo
 .fdr-wrap{position:relative}
 .fdr-btn{flex-shrink:0;background:none;border:none;border-bottom:2px solid transparent;margin-bottom:-1px;padding:var(--sp-2) var(--sp-2) var(--sp-2);cursor:pointer;color:var(--gray2);font-family:var(--font);font-size:var(--t-xs);font-weight:var(--w-bold);letter-spacing:.07em;text-transform:uppercase;display:inline-flex;align-items:center;gap:var(--sp-1);transition:color var(--tr-base),border-color var(--tr-base);white-space:nowrap;min-height:36px}
 .fdr-btn:hover{color:var(--white)}
-.fdr-btn.active{border-bottom-color:var(--orange);color:var(--orange)}
+.fdr-btn.active{border-bottom-color:var(--orange);color:var(--orange)}.fdr-btn.active .fdr-arrow{color:var(--orange)}.fdr-btn:not(.active) .fdr-label::after{content:" ▾";font-size:9px;opacity:.4;letter-spacing:0}
 .fdr-arrow{font-size:var(--t-sm);transition:transform var(--tr-smooth);flex-shrink:0;font-family:var(--font)}
 .fdr-arrow.open{transform:rotate(180deg)}
 .fdr-label{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
@@ -1171,6 +1171,28 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:20px;fo
   .ag-film-item.ag-active .ag-fi-bottom,
   .ag-film-item.ag-active .ag-fi-actions{opacity:1;pointer-events:all}
 }
+/* ── Filtros como pills en mobile (touch devices) ───────────────
+   En desktop: estilo tab con underline activo (hover disponible).
+   En mobile: pills con borde visible → el usuario sabe que son tappables.
+   El estado activo cambia a naranja, igual que el tab desktop. */
+@media(hover:none){
+  .fdr-row{gap:var(--sp-2);padding:var(--sp-2) var(--sp-3)}
+  .fdr-btn{
+    border:1px solid var(--bdr);
+    border-radius:var(--r-pill);
+    border-bottom:1px solid var(--bdr);
+    margin-bottom:0;
+    padding:5px 12px;
+    color:var(--gray);
+    background:var(--card-a);
+  }
+  .fdr-btn.active{
+    border-color:var(--orange);
+    background:var(--amber-08);
+    color:var(--orange);
+    border-bottom-color:var(--orange);
+  }
+}
 
 </style>
 <script type="application/ld+json">
@@ -1225,14 +1247,14 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:20px;fo
 <div class="filter-row" id="filter-row">
   <div class="fdr-filters">
     <div class="fdr-wrap">
-      <button class="fdr-btn" id="vdr-btn" onclick="toggleDropdown('vdr')">
+      <button class="fdr-btn" id="vdr-btn" onclick="toggleDropdown('vdr')" title="Filtrar por sede">
         <span class="fdr-label" id="vdr-label">Lugar</span>
         <span class="fdr-arrow" id="vdr-arrow"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
       </button>
       <div class="fdr-panel" id="vdr-panel"></div>
     </div>
     <div class="fdr-wrap">
-      <button class="fdr-btn" id="sdr-btn" onclick="toggleDropdown('sdr')">
+      <button class="fdr-btn" id="sdr-btn" onclick="toggleDropdown('sdr')" title="Filtrar por sección">
         <span class="fdr-label" id="sdr-label">Categoría</span>
         <span class="fdr-arrow" id="sdr-arrow"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
       </button>
