@@ -1,7 +1,7 @@
 // Otrofestiv — Service Worker
 // Cache strategy: Network First para HTML, Cache First para assets
 
-const CACHE_NAME = 'otrofestiv-v7';
+const CACHE_NAME = 'otrofestiv-v8';
 const STATIC_ASSETS = [
   '/',
   '/index.html',
@@ -62,8 +62,11 @@ self.addEventListener('fetch', event => {
 
   // HTML → Network First, fallback a caché, fallback a offline page
   if (request.destination === 'document') {
+    // cache: 'no-store' bypasses HTTP cache headers from GitHub Pages
+    // ensuring we always get the latest HTML without needing a SW bump
+    const freshRequest = new Request(request, { cache: 'no-store' });
     event.respondWith(
-      fetch(request)
+      fetch(freshRequest)
         .then(response => {
           const clone = response.clone();
           caches.open(CACHE_NAME).then(cache => cache.put(request, clone));
