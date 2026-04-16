@@ -2457,7 +2457,7 @@ function addBlock(day){
   if(!f||!t){showToast('Selecciona hora de inicio y fin','warn');return;}
   if(toMin(f)>=toMin(t)){showToast('La hora de inicio debe ser menor que la de fin','warn');return;}
   const av=availability[day];
-  if(av.blocks.some(b=>toMin(f)<toMin(b.to)&&toMin(t)>toMin(b.from))){showToast('Este horario se solapa con uno existente','warn');return;}
+  if(av.blocks.some(b=>toMin(f)<toMin(b.to)&&toMin(t)>toMin(b.from))){showToast('Este horario coincide con otro bloque','warn');return;}
   const _blockConflicts=checkPlanConflictsWithBlock(day,f,t);
   const _doAdd=()=>{
     _blockConflicts.forEach(s=>_removePlanItem(s._title));
@@ -2926,7 +2926,7 @@ function renderFilmListHTML(){
       <div style="font-size:28px;margin-bottom:12px">${ICONS.heart}</div>
       <div style="font-weight:var(--w-bold);color:var(--white);margin-bottom:8px">Tu lista está vacía</div>
       <div style="font-size:var(--t-sm);color:var(--gray);line-height:1.6;margin-bottom:20px;max-width:260px;margin-left:auto;margin-right:auto">
-        Añade lo que quieres ver. El algoritmo armará tu agenda sin solapamientos.
+        Tu ruta por el festival, sin complicaciones.
       </div>
       <button onclick="switchMainNav('mnav-cartelera');showDayView()" style="background:var(--amber-10);border:1px solid var(--amber-30);color:var(--amber);font-family:var(--font);font-size:var(--t-sm);font-weight:var(--w-bold);padding:10px 20px;border-radius:var(--r-pill);cursor:pointer">
         Explorar Cartelera →
@@ -4614,11 +4614,12 @@ function closeFestivalSheet(){
 <div id="welcome-overlay" class="welcome-overlay" style="display:none" role="dialog" aria-modal="true">
   <div class="welcome-sheet">
     <div class="welcome-wordmark">Otro<span>festiv</span></div>
-    <div class="welcome-title">Tu agenda de cine,<br>sin solapamientos.</div>
+    <div class="welcome-title">El festival<br>es nuestro.</div>
     <div class="welcome-sub">
-      <b>Añade</b> lo que quieres ver en Cartelera.<br>
-      <b>El algoritmo</b> arma tu agenda sin conflictos de horario.<br>
-      <b>Tú eliges</b> entre las opciones generadas.
+      Tu ruta por el festival, sin complicaciones.<br><br>
+      <b>Añade</b> películas a Mi Lista.<br>
+      <b>Marca</b> tus prioridades.<br>
+      <b>Nosotros</b> armamos el camino.
     </div>
     <button class="welcome-cta" onclick="dismissWelcome()">Empezar →</button>
   </div>

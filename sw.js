@@ -1,7 +1,7 @@
 // Otrofestiv — Service Worker
 // Cache strategy: Network First para HTML, Cache First para assets
 
-const CACHE_NAME = 'otrofestiv-v5';
+const CACHE_NAME = 'otrofestiv-v6';
 const STATIC_ASSETS = [
   '/',
   '/index.html',
