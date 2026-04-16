@@ -3750,48 +3750,23 @@ function buildResultHTML(scenarios){
     });
   });
 
-  // ── Con ajustes ──
+  // ── Películas no incluidas — info sin intercambio ──────────────
+  // Los ajustes se hacen en Mi Plan después de elegir la opción base.
+  // Flujo: Planear = elegir base → Mi Plan = ajustar fino.
+  // Escalable: no depende de lógica de swap — solo muestra qué falta.
   if(sc.excluded.length){
-    html+=`<div class="ag-conflicts">
-      <div class="ag-conflicts-title" style="color:var(--yellow);font-size:var(--t-xs);letter-spacing:.8px">CON AJUSTES · ${sc.excluded.length} película${sc.excluded.length!==1?'s':''}</div>
-      ${sc.excluded.map(t=>{
-        const screens=FILMS.filter(f=>f.title===t&&!isScreeningBlocked(f)&&!screeningPassed(f));
-        const swapOptions=screens.map(s=>{
-          const displaced=sc.schedule.filter(chosen=>screensConflict(chosen,s)).map(c=>c._title);
-          return{screen:s,displaced};
-        }).filter(o=>o.displaced.length>=1&&o.displaced.length<=2);
-        let fitsHtml='';
-        if(swapOptions.length){
-          fitsHtml=`<div style="margin-top:5px;font-size:var(--t-xs)">
-            <span style="color:var(--gray2);display:block;margin-bottom:3px">Incluirla desplaza:</span>
-            <div style="display:flex;flex-wrap:wrap;gap:4px">
-              ${swapOptions.map(o=>o.displaced.map(d=>`<button data-ex="${encodeURIComponent(t)}" data-day="${o.screen.day}" data-time="${o.screen.time}" data-dis="${encodeURIComponent(d)}" onclick="swapFilm(decodeURIComponent(this.dataset.ex),this.dataset.day,this.dataset.time,decodeURIComponent(this.dataset.dis));event.stopPropagation()" style="background:var(--amber-10);border:1px solid var(--amber-30);color:var(--orange);font-size:var(--t-xs);padding:3px 8px;border-radius:5px;cursor:pointer;line-height:1.3">${ICONS.switch} ${d.length>20?d.slice(0,18)+'…':d}</button>`).join('')).join('')}
-            </div>
-          </div>`;
-        } else if(screens.length){
-          fitsHtml=`<div style="margin-top:3px;font-size:var(--t-xs);color:var(--gray2)">Solapa con todas las funciones de este plan</div>`;
-        } else {
-          fitsHtml=`<div style="margin-top:3px;font-size:var(--t-xs);color:var(--gray2)">Sin funciones futuras disponibles</div>`;
-        }
-        const isPrio=prioritized.has(t);
-        const atLimit=!isPrio&&prioritized.size>=PRIO_LIMIT;
-        const prioLabel=isPrio?`${ICONS.x} Sin prioridad`:atLimit?`${ICONS.star} ${PRIO_LIMIT}/${PRIO_LIMIT}`:`${ICONS.star} Priorizar`;
-        const prioAction=isPrio?`togglePriority('${t.replace(/'/g,"\\'")}')`:atLimit?`showToast('Máximo ${PRIO_LIMIT} prioridades activas','warn')`:`togglePriority('${t.replace(/'/g,"\\'")}')`;
-        const _ic2=FILMS.find(f=>f.title===t)?.is_cortos;
-        const _ep=getPosterSrc(t,_ic2);
-        const _eph=_ep?`<img class="lb-poster" src="${_ep}" loading="lazy" onerror="this.outerHTML='<div class=lb-poster-ph>🎬</div>'" alt="">`:'<div class="lb-poster-ph">🎬</div>';
-        return`<div class="ag-conflict-item">
-          ${_eph}
-          <div class="ag-conflict-info">
-            ${isPrio?`<span style="color:var(--orange);font-size:var(--t-xs);font-weight:var(--w-bold)">${ICONS.star} PRIORIDAD · </span>`:''}
-            <strong>${(()=>{const{displayTitle,progSuffix}=parseProgramTitle(t);return displayTitle+(progSuffix?` <span style="color:var(--orange);font-size:var(--t-xs);font-weight:var(--w-bold)">${progSuffix}</span>`:'');})()}</strong>
-            ${fitsHtml}
-          </div>
-          <button class="ag-prioritize-btn${isPrio?' active':''}${atLimit?' disabled':''}" onclick="${prioAction}">
-            ${prioLabel}
-          </button>
-        </div>`;
-      }).join('')}
+    const excNames=sc.excluded.map(t=>{
+      const{displayTitle}=parseProgramTitle(t);
+      return`<span style="color:var(--gray2)">${displayTitle.length>22?displayTitle.slice(0,20)+'…':displayTitle}</span>`;
+    }).join('<span style="color:var(--gray3)"> · </span>');
+    html+=`<div class="ag-conflicts" style="padding:10px 14px 8px">
+      <div class="ag-conflicts-title" style="color:var(--gray2);font-size:var(--t-xs);letter-spacing:.8px;margin-bottom:4px">
+        NO INCLUIDAS · ${sc.excluded.length} película${sc.excluded.length!==1?'s':''}
+      </div>
+      <div style="font-size:var(--t-sm);line-height:1.5">${excNames}</div>
+      <div style="margin-top:6px;font-size:var(--t-xs);color:var(--gray2)">
+        Elige esta opción y ajusta en Mi Plan →
+      </div>
     </div>`;
   }
 
