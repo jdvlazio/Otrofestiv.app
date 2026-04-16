@@ -4058,36 +4058,35 @@ function updatePrioCounter(){
   if(!el) return;
   el.textContent=prioritized.size>0?`⭐ ${prioritized.size}/${PRIO_LIMIT}`:'';
 }
-function renderFlowProgress(){
-  // 3 pasos no bloqueantes — basados en estado real
-  // Escalable: watchlist.size y savedAgenda funcionan en cualquier festival
-  const hasList=watchlist.size>0;
+function renderFlowProgress(activeTab){
+  // activeTab: qué tab está activo ahora ('cartelera'|'seleccion'|'planner'|'miplan')
+  // Paso activo = tab actual. ✓ solo cuando hay plan guardado.
+  // Escalable: misma lógica para cualquier festival.
   const hasPlan=savedAgenda&&savedAgenda.schedule&&savedAgenda.schedule.length>0;
-  const step=hasPlan?3:hasList?2:1;
+  const tabStep={'cartelera':0,'seleccion':1,'planner':2,'miplan':3};
+  const currentStep=tabStep[activeTab]||1;
 
-  const mkStep=(n,label,icon)=>{
-    const isDone=n<step, isActive=n===step;
+  const mkStep=(n,label)=>{
+    const isDone=hasPlan&&n<3;  // ✓ solo cuando plan guardado
+    const isActive=n===currentStep;
     const cls=`flow-step${isDone?' done':isActive?' active':''}`;
     const dotContent=isDone?'✓':n.toString();
-    return`<div class="${cls}">
-      <div class="flow-step-dot">${dotContent}</div>
-      <span>${label}</span>
-    </div>`;
+    return`<div class="${cls}"><div class="flow-step-dot">${dotContent}</div><span>${label}</span></div>`;
   };
 
   return`<div class="flow-progress">
-    ${mkStep(1,'Mi Lista','')}
+    ${mkStep(1,'Mi Lista')}
     <div class="flow-step-sep"></div>
-    ${mkStep(2,'Planear','')}
+    ${mkStep(2,'Planear')}
     <div class="flow-step-sep"></div>
-    ${mkStep(3,'Mi Plan','')}
+    ${mkStep(3,'Mi Plan')}
   </div>`;
 }
 function renderAgenda(){
   const view=document.getElementById('ag-view');
   if(activeMNav==='mnav-seleccion'){
     // ── Mi Lista: buscador + lista de películas ──
-    const _progressHtml=(!savedAgenda||!savedAgenda.schedule||!savedAgenda.schedule.length)?renderFlowProgress():'';
+    const _progressHtml=(!savedAgenda||!savedAgenda.schedule||!savedAgenda.schedule.length)?renderFlowProgress('seleccion'):'';
     view.innerHTML=`${_progressHtml}
       <div class="ag-section">
         <div class="ag-search-wrap">
@@ -4109,11 +4108,11 @@ function renderAgenda(){
       </div>`;
   } else if(activeMNav==='mnav-miplan'){
     // ── Mi Plan: stepper de progreso + calendario + sugerencias ──
-    const _progressHtmlPlan=(!savedAgenda||!savedAgenda.schedule||!savedAgenda.schedule.length)?renderFlowProgress():'';
+    const _progressHtmlPlan=(!savedAgenda||!savedAgenda.schedule||!savedAgenda.schedule.length)?renderFlowProgress('miplan'):'';
     view.innerHTML=_progressHtmlPlan+renderSavedAgendaHTML();
   } else {
     // ── Planear: stepper de progreso + prio strip + disponibilidad + opciones ──
-    const _progressHtml=(!savedAgenda||!savedAgenda.schedule||!savedAgenda.schedule.length)?renderFlowProgress():'';
+    const _progressHtml=(!savedAgenda||!savedAgenda.schedule||!savedAgenda.schedule.length)?renderFlowProgress('seleccion'):'';
     // El indicador desaparece cuando hay plan guardado
     const pending=[...watchlist].filter(t=>!watched.has(t)&&FILMS.some(f=>f.title===t&&!screeningPassed(f)));
     const resultContent=cachedResult
@@ -4427,7 +4426,7 @@ function render(){
     const _hasPlan=savedAgenda&&savedAgenda.schedule&&savedAgenda.schedule.length>0;
     if(_cStepper){
       _cStepper.style.display=_hasPlan?'none':'';
-      if(!_hasPlan) _cStepper.innerHTML=renderFlowProgress();
+      if(!_hasPlan) _cStepper.innerHTML=renderFlowProgress('cartelera');
     }
     if(_cCta) _cCta.style.display=watchlist.size>0?'none':'';
   }
@@ -4440,7 +4439,7 @@ function render(){
     const _cStepper=document.getElementById('cartelera-stepper');
     const _cCta=document.getElementById('cartelera-cta');
     const _hasPlan=savedAgenda&&savedAgenda.schedule&&savedAgenda.schedule.length>0;
-    if(_cStepper){_cStepper.style.display=_hasPlan?'none':'';if(!_hasPlan)_cStepper.innerHTML=renderFlowProgress();}
+    if(_cStepper){_cStepper.style.display=_hasPlan?'none':'';if(!_hasPlan)_cStepper.innerHTML=renderFlowProgress('cartelera');}
     if(_cCta)_cCta.style.display=watchlist.size>0?'none':'';
   }
 }
@@ -4553,8 +4552,11 @@ updateAgTab();render();
 </script>
 <script>
 if('serviceWorker' in navigator){
-  navigator.serviceWorker.register('/sw.js')
-    .catch(function(){});
+  navigator.serviceWorker.register('/sw.js').catch(function(){});
+  // Recargar cuando el SW notifique actualización (iOS fix)
+  navigator.serviceWorker.addEventListener('message', e => {
+    if(e.data && e.data.type==='SW_UPDATED') location.reload();
+  });
 }
 
 function openFestivalSheet(){

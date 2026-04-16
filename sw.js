@@ -1,20 +1,20 @@
 // Otrofestiv — Service Worker
 // Cache strategy: Network First para HTML, Cache First para assets
 
-const CACHE_NAME = 'otrofestiv-v8';
+const CACHE_NAME = 'otrofestiv-v9';
 const STATIC_ASSETS = [
-  '/',
-  '/index.html',
   '/manifest.json',
   '/icon-192.png',
   '/icon-512.png',
 ];
+// index.html y / NO se pre-cachean — el fetch handler los sirve
+// siempre frescos desde red. Pre-cachearlos bloqueaba las actualizaciones.
 
 self.addEventListener('install', event => {
+  // skipWaiting() inmediato — no encadenado — garantiza activación en iOS
+  self.skipWaiting();
   event.waitUntil(
-    caches.open(CACHE_NAME)
-      .then(cache => cache.addAll(STATIC_ASSETS))
-      .then(() => self.skipWaiting())
+    caches.open(CACHE_NAME).then(cache => cache.addAll(STATIC_ASSETS))
   );
 });
 
@@ -27,10 +27,15 @@ self.addEventListener('activate', event => {
           .map(key => caches.delete(key))
       ))
       .then(() => self.clients.claim())
+      .then(() => {
+        // Notificar a todos los clientes para que recarguen
+        return self.clients.matchAll({type:'window'}).then(clients => {
+          clients.forEach(client => client.postMessage({type:'SW_UPDATED'}));
+        });
+      })
   );
 });
 
-// Página offline de fallback — se muestra cuando no hay caché ni red
 const OFFLINE_HTML = `<!DOCTYPE html>
 <html lang="es">
 <head>
@@ -60,10 +65,8 @@ self.addEventListener('fetch', event => {
 
   if (url.origin !== location.origin) return;
 
-  // HTML → Network First, fallback a caché, fallback a offline page
+  // HTML → siempre desde red, nunca desde caché
   if (request.destination === 'document') {
-    // cache: 'no-store' bypasses HTTP cache headers from GitHub Pages
-    // ensuring we always get the latest HTML without needing a SW bump
     const freshRequest = new Request(request, { cache: 'no-store' });
     event.respondWith(
       fetch(freshRequest)
@@ -83,9 +86,8 @@ self.addEventListener('fetch', event => {
     return;
   }
 
-  // Assets → Cache First, fallback a red
+  // Assets → Cache First
   event.respondWith(
-    caches.match(request)
-      .then(cached => cached || fetch(request))
+    caches.match(request).then(cached => cached || fetch(request))
   );
 });
