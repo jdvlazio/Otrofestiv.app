@@ -1161,28 +1161,66 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:20px;fo
   position:fixed;inset:0;background:var(--bg);
   display:flex;flex-direction:column;
   align-items:center;justify-content:center;
-  z-index:99999;gap:var(--sp-3);
-  padding:var(--sp-6);text-align:center;
+  z-index:99999;padding:32px;text-align:center;
   transition:opacity .5s ease, visibility .5s ease;
 }
 #otrofestiv-splash.fade-out{opacity:0;visibility:hidden;pointer-events:none}
-.splash-word{
-  font-family:var(--font);font-size:var(--t-display);
-  font-weight:var(--w-display);color:var(--white);
-  line-height:1.1;letter-spacing:-.02em;
+.splash-wordmark{
+  font-size:11px;letter-spacing:3px;color:var(--gray);
+  text-transform:uppercase;font-weight:var(--w-semi);margin-bottom:36px;
 }
-.splash-word span{color:var(--orange)}
-.splash-sub{
-  font-family:var(--font);font-size:var(--t-sm);
-  color:var(--gray);letter-spacing:.04em;
-  text-transform:uppercase;font-weight:var(--w-semi);
-  margin-top:var(--sp-2);
+.splash-wordmark span{color:var(--amber)}
+.splash-tagline{text-align:center;margin-bottom:44px}
+.splash-tagline-line{
+  font-size:28px;font-weight:var(--w-display);
+  color:var(--white);line-height:1.15;letter-spacing:-.02em;
 }
-.splash-hint{
-  font-family:var(--font);font-size:var(--t-xs);
-  color:var(--gray2);margin-top:var(--sp-5);
-  letter-spacing:.02em;
+.splash-tagline-line span{color:var(--orange)}
+.splash-fest-label{
+  font-size:10px;color:var(--gray);letter-spacing:1.2px;
+  text-transform:uppercase;margin-bottom:8px;
 }
+.splash-selector{
+  width:100%;max-width:300px;position:relative;margin-bottom:10px;
+}
+.splash-sel-btn{
+  width:100%;background:var(--surf);border:1px solid var(--bdr);
+  border-radius:12px;padding:14px 16px;cursor:pointer;
+  display:flex;align-items:center;justify-content:space-between;
+  font-family:var(--font);transition:border-color .2s;
+}
+.splash-sel-btn.open{border-color:var(--amber-30)}
+.splash-sel-name{font-size:15px;font-weight:var(--w-bold);color:var(--white);text-align:left}
+.splash-sel-meta{font-size:11px;color:var(--gray2);margin-top:2px;text-align:left}
+.splash-sel-chev{font-size:12px;color:var(--gray);transition:transform .2s,color .2s}
+.splash-sel-btn.open .splash-sel-chev{transform:rotate(180deg);color:var(--amber)}
+.splash-dropdown{
+  position:absolute;top:calc(100% + 6px);left:0;right:0;
+  background:#1C1C1C;border:1px solid var(--bdr);border-radius:12px;
+  overflow:hidden;z-index:10;
+  box-shadow:0 16px 40px rgba(0,0,0,.6);
+}
+.splash-drop-item{
+  width:100%;background:none;border:none;border-bottom:1px solid var(--bdr);
+  padding:12px 16px;cursor:pointer;font-family:var(--font);
+  display:flex;align-items:center;justify-content:space-between;
+  transition:background .15s;text-align:left;
+}
+.splash-drop-item:last-child{border-bottom:none}
+.splash-drop-item.selected{background:var(--amber-10)}
+.splash-drop-item.inactive{opacity:.35;cursor:default}
+.splash-drop-item-name{font-size:13px;font-weight:var(--w-bold);color:var(--white)}
+.splash-drop-item.selected .splash-drop-item-name{color:var(--amber)}
+.splash-drop-item-meta{font-size:11px;color:var(--gray2);margin-top:1px}
+.splash-drop-item-badge{font-size:9px;color:var(--gray);letter-spacing:.8px}
+.splash-enter-btn{
+  width:100%;max-width:300px;
+  background:var(--amber-10);border:1px solid var(--amber-30);
+  color:var(--amber);font-family:var(--font);font-size:13px;
+  font-weight:var(--w-bold);padding:14px 0;border-radius:12px;
+  cursor:pointer;letter-spacing:.3px;
+}
+.splash-enter-btn:active{opacity:.8}
 
 
 
@@ -1362,13 +1400,37 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:20px;fo
 </script>
 </head>
 <body>
-<div id="otrofestiv-splash" onclick="dismissSplash()" role="dialog" aria-label="Bienvenida" aria-modal="true">
-  <div>
-    <div class="splash-word">Más de lo que</div>
-    <div class="splash-word">crees <span>posible.</span></div>
+<div id="otrofestiv-splash" role="dialog" aria-label="Bienvenida" aria-modal="true">
+  <div class="splash-wordmark">OTRO<span>FESTIV</span></div>
+  <div class="splash-tagline">
+    <div class="splash-tagline-line">Más de lo que</div>
+    <div class="splash-tagline-line" style="color:var(--white)">crees <span>posible.</span></div>
   </div>
-  <div class="splash-sub">Otrofestiv</div>
-  <div class="splash-hint">Toca para continuar</div>
+  <div class="splash-selector">
+    <div class="splash-fest-label">¿A qué festival vas?</div>
+    <button class="splash-sel-btn" id="splash-sel-btn" onclick="toggleSplashDropdown()" aria-haspopup="listbox">
+      <div>
+        <div class="splash-sel-name" id="splash-sel-name">FICCI 65</div>
+        <div class="splash-sel-meta" id="splash-sel-meta">Cartagena · 14–19 ABR 2026</div>
+      </div>
+      <div class="splash-sel-chev">▾</div>
+    </button>
+    <div class="splash-dropdown" id="splash-dropdown" style="display:none" role="listbox">
+      <button class="splash-drop-item selected" role="option" aria-selected="true" onclick="selectSplashFest('FICCI 65','Cartagena · 14–19 ABR 2026')">
+        <div><div class="splash-drop-item-name">FICCI 65</div><div class="splash-drop-item-meta">Cartagena · 14–19 ABR 2026</div></div>
+        <div style="font-size:12px;color:var(--amber)">✓</div>
+      </button>
+      <button class="splash-drop-item inactive" role="option" aria-selected="false" aria-disabled="true">
+        <div><div class="splash-drop-item-name">FICCI 66</div><div class="splash-drop-item-meta">Cartagena · Próximamente</div></div>
+        <div class="splash-drop-item-badge">PRONTO</div>
+      </button>
+      <button class="splash-drop-item inactive" role="option" aria-selected="false" aria-disabled="true">
+        <div><div class="splash-drop-item-name">Bogoshorts</div><div class="splash-drop-item-meta">Bogotá · Próximamente</div></div>
+        <div class="splash-drop-item-badge">PRONTO</div>
+      </button>
+    </div>
+  </div>
+  <button class="splash-enter-btn" onclick="dismissSplash()">Entrar →</button>
 </div>
 
 
@@ -1822,7 +1884,7 @@ const FESTIVAL_STORAGE_KEY='ficci65_';
 // ── Reset agresivo de caché — independiente del SW ────────────────
 // Cada deploy cambia BUILD_VERSION. Al cargar, si localStorage tiene
 // una versión anterior → location.reload(true) fuerza descarga limpia.
-const BUILD_VERSION='202604180005';
+const BUILD_VERSION='202604180227';
 (function(){
   const _vk='otrofestiv_build';
   const _stored=localStorage.getItem(_vk);
@@ -4586,22 +4648,39 @@ function render(){
    Solo se muestra si no hay datos previos del usuario.
    Auto-dismiss en 2.5s o al tocar.
 ────────────────────────────────────────────────────────────────── */
+function toggleSplashDropdown(){
+  const dd=document.getElementById('splash-dropdown');
+  const btn=document.getElementById('splash-sel-btn');
+  if(!dd||!btn) return;
+  const open=dd.style.display==='none';
+  dd.style.display=open?'block':'none';
+  btn.classList.toggle('open',open);
+}
+function selectSplashFest(name,meta){
+  const n=document.getElementById('splash-sel-name');
+  const m=document.getElementById('splash-sel-meta');
+  if(n) n.textContent=name;
+  if(m) m.textContent=meta;
+  const dd=document.getElementById('splash-dropdown');
+  const btn=document.getElementById('splash-sel-btn');
+  if(dd) dd.style.display='none';
+  if(btn) btn.classList.remove('open');
+}
 function dismissSplash(){
   const s=document.getElementById('otrofestiv-splash');
   if(s){s.classList.add('fade-out');setTimeout(()=>s.remove(),520);}
 }
 (function(){
   const SPLASH_KEY='otrofestiv-welcomed';
-  // Solo mostrar si nunca ha guardado estado (primera vez real)
-  const hasData = localStorage.getItem('ficci65_wl') ||
-                  localStorage.getItem('ficci65_saved') ||
-                  localStorage.getItem(SPLASH_KEY);
+  const hasData=localStorage.getItem('ficci65_wl')||
+                localStorage.getItem('ficci65_saved')||
+                localStorage.getItem(SPLASH_KEY);
   if(hasData){
     const s=document.getElementById('otrofestiv-splash');
     if(s) s.remove();
   } else {
     localStorage.setItem(SPLASH_KEY,'1');
-    setTimeout(dismissSplash, 2500);
+    // Sin auto-dismiss — el usuario elige festival y toca Entrar
   }
 })();
 
