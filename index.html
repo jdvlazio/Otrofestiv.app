@@ -2037,7 +2037,7 @@ const FESTIVAL_STORAGE_KEY='ficci65_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202604182022';
+const BUILD_VERSION='202604182026';
 (function(){
   const _vk='otrofestiv_build';
   const _sk='otrofestiv_reloaded';
@@ -2305,7 +2305,7 @@ function renderMiPlanCalendar(){
           <div style="display:flex;gap:4px">
             ${!isPast?`<button class="film-switch${_expandedFilm===(s._title||'')+(s.day||'')+(s.time||'')?' open':''}" onclick="toggleFilmAlternatives('${(s._title||'')+(s.day||'')+(s.time||'')}','${safeT}','${s.day||''}','${s.time||''}');event.stopPropagation()">Cambiar</button>`:''}
             <button class="ag-fi-btn${watched.has(s._title)?' w-on':''}" data-wt="${safeT}" onclick="toggleWatched(this.dataset.wt,event)" title="${watched.has(s._title)?'Desmarcar':'Marcar como vista'}">${watched.has(s._title)?'No vista':ICONS.check+' Vista'}</button>
-            <button class="ag-fi-btn del" data-rmt="${safeT}" onclick="removeFromAgenda(this.dataset.rmt);event.stopPropagation()" title="Quitar">\u2715</button>
+            <button class="ag-fi-btn del" data-rmt="${safeT}" onclick="removeFromAgenda(this.dataset.rmt);event.stopPropagation()" style="display:inline-flex;align-items:center;gap:5px">${ICONS.x} Quitar</button>
           </div>
         </div>
       </div>${_expandedFilm===(s._title||'')+(s.day||'')+(s.time||'')?`<div class="film-alts">${renderFilmAlternatives(s._title,s.day,s.time)}</div>`:''}${(()=>{const _mf=FILMS.find(fi=>fi.title===s._title&&fi.day===s.day&&fi.time===s.time);if(!_mf||!_mf.is_cortos||!_mf.film_list||!_mf.film_list.length) return'';return`<div class="mplan-prog-list">${_mf.film_list.map((item,n)=>{const _mt=getPosterSrc(item.title,item.is_cortos!==false);const _mth=_mt?`<img src="${_mt}" class="c-film-thumb" loading="lazy" onerror="this.outerHTML='<div class=c-film-thumb-ph>🎬</div>'" alt="">`:'<div class="c-film-thumb-ph">🎬</div>';return`<div class="mplan-prog-item">${_mth}<div class="mplan-prog-num">${n+1}</div><div class="mplan-prog-title">${item.title}</div><div class="mplan-prog-dur">${item.duration}</div></div>`;}).join('')}</div>`;})()}`;
@@ -2523,8 +2523,8 @@ function onSearchInput(){
         <div class="ag-sr-title">${f.title}</div>
         <div class="ag-sr-meta">${f.flags||''} ${f.duration||''}${f.is_cortos?' · Programa':''}${inWL?' · <span style="color:var(--orange)">${ICONS.heartFill}</span>':''}</div>
       </div>
-      <button class="ag-sr-add${inWL?' added':''}" data-title="${f.title.replace(/"/g,'&quot;')}" onclick="addFromSearch(this.dataset.title)">
-        ${inWL?`${ICONS.check} Añadida`:`${ICONS.plus} Añadir`}
+      <button class="ag-sr-add${inWL?' added':''}" data-title="${f.title.replace(/"/g,'&quot;')}" onclick="addFromSearch(this.dataset.title)" style="display:inline-flex;align-items:center;gap:5px">
+        ${inWL?`${ICONS.check} En Mi Lista`:`${ICONS.plus} Añadir`}
       </button>
     </div>`;
   }).join('');
@@ -3187,8 +3187,7 @@ function renderFilmListHTML(){
       ${posterHtml}
       <div class="ag-fi-overlay"></div>
       <div class="ag-fi-actions">
-        <button class="ag-fi-btn prio-fi-btn${isPrio?' prio-on':''}" data-pt="${safeT}" onclick="togglePriority(this.dataset.pt);event.stopPropagation()" title="${isPrio?'Quitar prioridad':'Priorizar'}">${ICONS.star}</button>
-        <button class="ag-fi-btn del" data-wlt="${safeT}" onclick="toggleWL(this.dataset.wlt,event);event.stopPropagation()" title="Quitar">${ICONS.x} Quitar</button>
+        <button class="ag-fi-btn prio-fi-btn${isPrio?' prio-on':''}" data-pt="${safeT}" onclick="togglePriority(this.dataset.pt);event.stopPropagation()" style="display:inline-flex;align-items:center;gap:5px">${isPrio?ICONS.starFill+' Priorizada':ICONS.star+' Priorizar'}</button>
       </div>
       <div class="ag-fi-bottom">
         <div class="ag-fi-flags">${f?f.flags||'🌐':'🌐'}</div>
@@ -3305,8 +3304,8 @@ function mkAgendaRow(s, mode='saved'){
   const filmKey=(s._title||'')+(s.day||'')+(s.time||'');
   const isExpanded=_expandedFilm===filmKey;
   const actionBtn=mode==='saved'
-    ?`<button class="ag-fi-btn del" data-rmt="${safeT}" onclick="removeFromAgenda(this.dataset.rmt);event.stopPropagation()" title="Quitar de agenda">${ICONS.x}</button>`
-    :`<button class="ag-fi-btn del" data-rfs="${safeT}" onclick="removeFilmFromScenario(this.dataset.rfs,event)" title="Quitar de Mi Lista">${ICONS.x}</button>`;
+    ?`<button class="ag-fi-btn del" data-rmt="${safeT}" onclick="removeFromAgenda(this.dataset.rmt);event.stopPropagation()" style="display:inline-flex;align-items:center;gap:5px">${ICONS.x} Quitar</button>`
+    :`<button class="ag-fi-btn del" data-rfs="${safeT}" onclick="removeFilmFromScenario(this.dataset.rfs,event)" style="display:inline-flex;align-items:center;gap:5px">${ICONS.x} Quitar</button>`;
   const switchBtn=mode==='saved'&&!isDone
     ?`<button class="film-switch${isExpanded?' open':''}" onclick="toggleFilmAlternatives('${filmKey}','${safeT}','${s.day||''}','${s.time||''}');event.stopPropagation()">Cambiar</button>`
     :'';
@@ -3524,7 +3523,7 @@ function renderUnconfirmed(schedule){
         const st=s._title.replace(/'/g,"\'");
         return`<div class="checkin-item">
           <div class="checkin-info"><div class="checkin-title">${sh}</div><div class="checkin-time">${s.day} · ${s.time}</div></div>
-          <div class="checkin-btns"><button class="checkin-btn yes" onclick="checkinLaVi('${st}')">Sí</button><button class="checkin-btn no" onclick="checkinNoLaVi('${st}')">No</button></div>
+          <div class="checkin-btns"><button class="checkin-btn yes" onclick="checkinLaVi('${st}')" style="display:inline-flex;align-items:center;gap:5px">${ICONS.check} Vista</button><button class="checkin-btn no" onclick="checkinNoLaVi('${st}')">Luego</button></div>
         </div>`;
       }).join('')}
     </div>
@@ -3539,8 +3538,8 @@ function renderUnconfirmed(schedule){
     <div class="checkin-item">
       <div class="checkin-info"><div class="checkin-title">${short}</div><div class="checkin-time">${timeDesc}</div></div>
       <div class="checkin-btns">
-        <button class="checkin-btn yes" onclick="checkinLaVi('${safeLast}')">Sí</button>
-        <button class="checkin-btn no" onclick="checkinNoLaVi('${safeLast}')">No</button>
+        <button class="checkin-btn yes" onclick="checkinLaVi('${safeLast}')" style="display:inline-flex;align-items:center;gap:5px">${ICONS.check} Vista</button>
+        <button class="checkin-btn no" onclick="checkinNoLaVi('${safeLast}')">Luego</button>
       </div>
     </div>${olderHtml}
   </div>`;
