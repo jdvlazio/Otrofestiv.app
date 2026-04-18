@@ -549,6 +549,30 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:20px;fo
 .c-dur-long{color:var(--yellow);font-size:var(--t-sm);font-weight:var(--w-semi)}
 .c-venue-name{font-size:var(--t-base);font-weight:var(--w-regular);color:var(--gray);overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
 .c-expand{display:flex;align-items:center;gap:var(--sp-2);font-size:var(--t-sm);color:var(--gray);cursor:pointer;user-select:none;transition:color var(--tr-base);font-weight:var(--w-semi);letter-spacing:.2px;white-space:nowrap}
+/* ── Toggle Por Horario / Por Película ── */
+.carta-mode-toggle{display:flex;gap:4px;padding:8px 12px;border-bottom:1px solid var(--bdr)}
+.carta-mode-btn{flex:1;background:none;border:1px solid var(--bdr);border-radius:var(--r-pill);color:var(--gray);font-family:var(--font);font-size:var(--t-xs);font-weight:var(--w-semi);padding:6px 0;cursor:pointer;transition:all var(--tr-base);letter-spacing:.3px}
+.carta-mode-btn.active{background:var(--amber-10);border-color:var(--amber-30);color:var(--amber)}
+/* ── Grid Por Película ── */
+.pelicula-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(110px,130px));gap:var(--sp-2);padding:12px;justify-content:start}
+.pelicula-card{border-radius:var(--r-md);overflow:hidden;background:var(--card-a);border:1px solid var(--bdr);cursor:pointer;transition:border-color var(--tr-base)}
+.pelicula-card.in-wl{border-color:var(--amber-30)}
+.pelicula-card.expanded{border-color:var(--orange)}
+.pelicula-poster{width:100%;aspect-ratio:2/3;object-fit:cover;display:block;background:var(--surf-2)}
+.pelicula-poster-ph{width:100%;aspect-ratio:2/3;background:var(--surf-2);display:flex;align-items:center;justify-content:center;font-size:24px;opacity:.3}
+.pelicula-label{padding:6px 8px 8px}
+.pelicula-title{font-size:var(--t-xs);font-weight:var(--w-semi);color:var(--white);line-height:1.3;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.pelicula-flags{font-size:10px;color:var(--gray2);margin-top:2px}
+/* ── Expansión inline de funciones ── */
+.pelicula-expand{background:var(--surf);border-top:1px solid var(--bdr-l);padding:10px 10px 12px}
+.pelicula-screening{display:flex;align-items:center;gap:8px;padding:6px 0;border-bottom:1px solid var(--bdr)}
+.pelicula-screening:last-of-type{border-bottom:none}
+.pelicula-day{font-size:10px;font-weight:700;color:var(--amber);letter-spacing:.8px;text-transform:uppercase;width:28px;flex-shrink:0}
+.pelicula-time{font-size:13px;font-weight:700;color:var(--white);flex-shrink:0;width:38px}
+.pelicula-venue{font-size:11px;color:var(--gray2);flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pelicula-wl-btn{background:var(--amber-10);border:1px solid var(--amber-30);border-radius:var(--r-pill);color:var(--amber);font-family:var(--font);font-size:var(--t-xs);font-weight:var(--w-bold);padding:8px 0;cursor:pointer;width:100%;margin-top:8px;transition:background var(--tr-base)}
+.pelicula-wl-btn:active{background:var(--amber-20)}
+.pelicula-wl-btn.in-wl{background:rgba(39,174,96,.1);border-color:rgba(39,174,96,.3);color:var(--green)}
 .c-expand:hover{color:var(--orange)}
 .c-expand-arrow{font-size:var(--t-sm);transition:transform var(--tr-smooth);display:inline-block}
 .c-expand-arrow.open{transform:rotate(180deg)}
@@ -1465,6 +1489,10 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:20px;fo
     <span class="main-nav-lbl">MI PLAN</span>
   </button>
 </div>
+<div class="carta-mode-toggle" id="carta-mode-toggle">
+  <button class="carta-mode-btn active" id="btn-modo-horario" onclick="setCartelaMode('horario')">Por Horario</button>
+  <button class="carta-mode-btn" id="btn-modo-pelicula" onclick="setCartelaMode('pelicula')">Por Película</button>
+</div>
 <div class="nav-row" id="nav-row">
   <div class="nav-tabs" id="dtabs"></div>
 </div>
@@ -1884,7 +1912,7 @@ const FESTIVAL_STORAGE_KEY='ficci65_';
 // ── Reset agresivo de caché — independiente del SW ────────────────
 // Cada deploy cambia BUILD_VERSION. Al cargar, si localStorage tiene
 // una versión anterior → location.reload(true) fuerza descarga limpia.
-const BUILD_VERSION='202604180516';
+const BUILD_VERSION='202604180854';
 (function(){
   const _vk='otrofestiv_build';
   const _stored=localStorage.getItem(_vk);
@@ -4341,6 +4369,8 @@ function renderAgenda(){
 
 // ── CALENDAR VIEW ──
 let activeView='day',activeDay='Martes',activeVenue='all',activeSec='all',selectedIdx=null,activeMNav='mnav-cartelera';
+let cartelaMode='horario'; // 'horario' | 'pelicula'
+let expandedPelicula=''; // título expandido en vista Por Película
 function switchMainNav(id){
   if(id==='mnav-miplan') activeMiPlanDay=null; // recalcula día actual al entrar
   activeMNav=id;
@@ -4350,8 +4380,9 @@ function switchMainNav(id){
 function showDayView(){
   activeView='day';
   switchMainNav('mnav-cartelera');
-  document.getElementById('nav-row').classList.remove('hidden');
-  document.getElementById('filter-row').classList.remove('hidden');
+  const toggle=document.getElementById('carta-mode-toggle');if(toggle) toggle.style.display='';
+  if(cartelaMode==='horario'){document.getElementById('nav-row').classList.remove('hidden');document.getElementById('filter-row').classList.remove('hidden');}
+  else{document.getElementById('nav-row').classList.add('hidden');}
   document.getElementById('filter-bars').style.display='';
   ['hint','cnt','grid','cartelera-stepper','cartelera-cta'].forEach(id=>{const el=document.getElementById(id);if(el) el.style.display='';});
   const _av=document.getElementById('ag-view');
@@ -4362,6 +4393,7 @@ function showDayView(){
 }
 function showAgView(){
   activeView='agenda';
+  const _toggle=document.getElementById('carta-mode-toggle');if(_toggle) _toggle.style.display='none';
   document.getElementById('nav-row').classList.add('hidden');
   document.getElementById('filter-row').classList.add('hidden');
   document.getElementById('filter-bars').style.display='none';
@@ -4510,8 +4542,108 @@ function restoreExpand(){
   });
 }
 
+function setCartelaMode(mode){
+  cartelaMode=mode;
+  expandedPelicula='';
+  const bH=document.getElementById('btn-modo-horario');
+  const bP=document.getElementById('btn-modo-pelicula');
+  if(bH) bH.classList.toggle('active',mode==='horario');
+  if(bP) bP.classList.toggle('active',mode==='pelicula');
+  const navRow=document.getElementById('nav-row');
+  const filterRow=document.getElementById('filter-row');
+  if(navRow) navRow.classList.toggle('hidden',mode==='pelicula');
+  if(filterRow){
+    // En modo pelicula: solo mostrar filtro de sección, ocultar sede
+    const vdrWrap=document.getElementById('vdr-btn')?.closest('.fdr-wrap');
+    if(vdrWrap) vdrWrap.style.display=mode==='pelicula'?'none':'';
+  }
+  render();
+}
+
+function togglePeliculaExpand(title){
+  expandedPelicula=expandedPelicula===title?'':title;
+  renderPeliculaView();
+}
+
+function renderPeliculaView(){
+  const grid=document.getElementById('grid');
+  const cntEl=document.getElementById('cnt');
+  if(!grid) return;
+
+  // Agrupar por título único
+  const titleMap={};
+  FILMS.forEach(f=>{
+    if(!titleMap[f.title]) titleMap[f.title]={film:f,screenings:[]};
+    titleMap[f.title].screenings.push(f);
+  });
+
+  // Aplicar filtro de sección si está activo
+  let entries=Object.values(titleMap);
+  if(activeSec!=='all') entries=entries.filter(e=>e.film.section===activeSec);
+
+  // Ordenar: con funciones futuras primero, luego alfabético
+  entries.sort((a,b)=>{
+    const aFut=a.screenings.some(s=>!screeningPassed(s));
+    const bFut=b.screenings.some(s=>!screeningPassed(s));
+    if(aFut!==bFut) return aFut?-1:1;
+    return a.film.title.localeCompare(b.film.title,'es');
+  });
+
+  cntEl.innerHTML=`<b>${entries.length}</b> película${entries.length!==1?'s':''}`;
+
+  const DAY_ABB=['MAR','MIÉ','JUE','VIE','SÁB','DOM'];
+
+  grid.innerHTML=`<div class="pelicula-grid">${entries.map(({film:f,screenings})=>{
+    const inWL=watchlist.has(f.title);
+    const inW=watched.has(f.title);
+    const allPast=screenings.every(s=>screeningPassed(s));
+    const posterSrc=f.is_cortos?'https://ficcifestival.com/sites/default/files/2026-02/logo-ficci65_2.png':getPosterSrc(f.title,false);
+    const posterHtml=posterSrc
+      ?`<img class="pelicula-poster" src="${posterSrc}" loading="lazy" style="${f.is_cortos?'object-fit:contain;background:#111':''}${allPast?';opacity:.45':''}" onerror="this.outerHTML='<div class=pelicula-poster-ph>🎬</div>'" alt="">`
+      :`<div class="pelicula-poster-ph"${allPast?' style="opacity:.45"':''}>🎬</div>`;
+    const safeT=f.title.replace(/'/g,"\'");
+    const isExpanded=expandedPelicula===f.title;
+    const{displayTitle}=parseProgramTitle(f.title);
+
+    // Expansión inline con funciones
+    let expandHtml='';
+    if(isExpanded){
+      const future=screenings.filter(s=>!screeningPassed(s)).sort((a,b)=>a.day_order-b.day_order||toMin(a.time)-toMin(b.time));
+      const past=screenings.filter(s=>screeningPassed(s)).sort((a,b)=>a.day_order-b.day_order);
+      const allScreenings=[...future,...past];
+      const rows=allScreenings.map(s=>{
+        const dayAbb=DAY_ABB[DAY_KEYS.indexOf(s.day)]||s.day.slice(0,3).toUpperCase();
+        const vc=vcfg(s.venue),sl=sala(s.venue);
+        const venueShort=vc.short+(sl?' · '+sl:'');
+        const isPast=screeningPassed(s);
+        return`<div class="pelicula-screening"${isPast?' style="opacity:.4"':''}>
+          <span class="pelicula-day">${dayAbb}</span>
+          <span class="pelicula-time">${s.time}</span>
+          <span class="pelicula-venue">${ICONS.pin} ${venueShort}</span>
+        </div>`;
+      }).join('');
+      const wlLabel=inWL?`${ICONS.heartFill} En Mi Lista`:`${ICONS.heart} Añadir a Mi Lista`;
+      expandHtml=`<div class="pelicula-expand">
+        <div style="font-size:var(--t-xs);color:var(--gray2);margin-bottom:6px">${f.duration}${f.section?' · '+f.section.replace(/^[^ ]+ /,'').slice(0,28):''}</div>
+        ${rows}
+        ${!inW?`<button class="pelicula-wl-btn${inWL?' in-wl':''}" onclick="event.stopPropagation();toggleWL('${safeT}',event);expandedPelicula='${safeT}';renderPeliculaView()">${wlLabel}</button>`:`<div style="font-size:var(--t-xs);color:var(--green);text-align:center;margin-top:8px">${ICONS.check} Ya vista</div>`}
+      </div>`;
+    }
+
+    return`<div class="pelicula-card${inWL?' in-wl':''}${isExpanded?' expanded':''}" onclick="togglePeliculaExpand('${safeT}')">
+      ${posterHtml}
+      <div class="pelicula-label">
+        <div class="pelicula-title">${displayTitle}</div>
+        <div class="pelicula-flags">${f.flags||'🌐'}</div>
+      </div>
+      ${expandHtml}
+    </div>`;
+  }).join('')}</div>`;
+}
+
 function render(){
   if(activeView==='agenda') return;
+  if(cartelaMode==='pelicula'){renderSbar();renderPeliculaView();return;}
   renderVbar();renderSbar();
   let films=FILMS.filter(f=>f.day===activeDay);
   if(activeVenue!=='all') films=films.filter(f=>vcfg(f.venue).short===activeVenue);
