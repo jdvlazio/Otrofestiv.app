@@ -1502,7 +1502,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:20px;fo
       </button>
     </div>
   </div>
-  <button class="splash-enter-btn" onclick="dismissSplash()">Entrar →</button>
+  <button class="splash-enter-btn" onclick="dismissSplash()">Entrar</button>
 </div>
 
 
@@ -1898,6 +1898,8 @@ const VENUES={
   'Unibac':             {short:'Unibac'},
   'AECID':              {short:'AECID'},
 };
+
+/* ── VENUES: configuración, salas, tiempos de viaje ─────────────────── */
 function vcfg(v){
   if(v.includes('Teatro Adolfo'))  return VENUES['Teatro Adolfo Mejía'];
   if(v.includes('Bocagrande'))     return VENUES['Plaza Bocagrande'];
@@ -1910,12 +1912,15 @@ function vcfg(v){
   return VENUES['C. Convenciones'];
 }
 function sala(v){const m=v.match(/Sala\s*(\d+)/)||v.match(/Sal[oó]n\s*(\d+)/i);return m?'Sala '+m[1]:'';}
+/* ── UTILS: tiempo, fecha, duración ─────────────────────────────────── */
 function toMin(t){const[h,m]=t.split(':').map(Number);return h*60+m;}
 function parseDur(d){const m=d&&d.replace('~','').match(/(\d+)/);return m?parseInt(m[1]):90;}
 function minToStr(m){
   const h=Math.floor(((m%1440)+1440)%1440/60),mn=((m%1440)+1440)%1440%60;
   return`${String(h).padStart(2,'0')}:${String(mn).padStart(2,'0')}`;
 }
+
+/* ── CONFLICTS: detección de solapamientos entre funciones ──────────── */
 function screensConflict(a,b){
   if(a.day!==b.day) return false;
   const aS=toMin(a.time), aE=aS+parseDur(a.duration);
@@ -1966,7 +1971,7 @@ const FESTIVAL_STORAGE_KEY='ficci65_';
 // ── Reset agresivo de caché — independiente del SW ────────────────
 // Cada deploy cambia BUILD_VERSION. Al cargar, si localStorage tiene
 // una versión anterior → location.reload(true) fuerza descarga limpia.
-const BUILD_VERSION='202604181821';
+const BUILD_VERSION='202604181824';
 (function(){
   const _vk='otrofestiv_build';
   const _stored=localStorage.getItem(_vk);
@@ -2255,6 +2260,8 @@ function renderMiPlanCalendar(){
 // 7 · PERSISTENCIA
 //     loadState, saveWL, saveWatched, saveAV, saveSavedAgenda
 // ═══════════════════════════════════════════════════════════════
+
+/* ── STATE: persistencia en localStorage ────────────────────────────── */
 function loadState(){
   try{
     const wl=localStorage.getItem('ficci65_wl'); if(wl) watchlist=new Set(JSON.parse(wl));
@@ -2332,6 +2339,8 @@ function updateAgTab(){
 // 8 · EVENT HANDLERS — MI LISTA
 //     toggleWL, toggleWatched, addFromSearch, removeFromAgenda
 // ═══════════════════════════════════════════════════════════════
+
+/* ── ACTIONS: watchlist, prioridades, vistas, retraso ───────────────── */
 function toggleWL(title,e){
   if(e) e.stopPropagation();
   if(watchlist.has(title)){
@@ -2701,7 +2710,7 @@ function renderAvDay(day){
       <div class="av-row-btns" style="margin-top:${pillsHtml||addOpen?'6px':'0'}">
         ${!fullBlocked&&!addOpen?`<button class="av-plus-btn" onclick="avAddOpen['${day}']=true;renderAvDay('${day}')">${ICONS.plus} No disponible</button>`:''}
         ${!addOpen?`<button class="av-full-btn${fullBlocked?' active':''}" onclick="toggleFullDay('${day}')">
-          ${fullBlocked?'← Liberar día':'╳ Todo el día'}
+          ${fullBlocked?'Liberar día':'Todo el día'}
         </button>`:''}
       </div>
     </div>`;
@@ -2776,6 +2785,8 @@ function sortScreensByStrategy(screens, allGroups){
 // 10 · LÓGICA DE NEGOCIO
 //      computeScenarios (MRV+backtracking), getSuggestions
 // ═══════════════════════════════════════════════════════════════
+
+/* ── ALGO: backtracking MRV + escenarios óptimos ────────────────────── */
 function computeScenarios(titles){
   const pending=titles.filter(t=>!watched.has(t));
   const allPendingTitles=pending; // for section uniqueness check
@@ -2954,7 +2965,7 @@ function getSuggestions(){
     if(!slotFree) return; // slot ocupado — cae a Bloque 2
     const day=rs.day;
     if(!byDay[day]) byDay[day]=[];
-    byDay[day].push({...rs,gapCtx:'← Restaurar al mismo horario',_isRestored:true});
+    byDay[day].push({...rs,gapCtx:'Restaurar al mismo horario',_isRestored:true});
     hardExclude.add(rs._title);
     seenDiscover.add(rs._title);
     seenRecovery.add(rs._title);
@@ -3055,7 +3066,7 @@ function renderPrioStrip(){
         Marca hasta ${PRIO_LIMIT} películas como ★ en Mi Lista para que el algoritmo las incluya primero.
       </div>
       <button onclick="switchMainNav('mnav-seleccion');showAgView()" style="background:var(--amber-10);border:1px solid var(--amber-30);color:var(--amber);font-family:var(--font);font-size:var(--t-sm);padding:8px 16px;border-radius:var(--r-pill);cursor:pointer">
-        Ir a Mi Lista →
+        Ir a Mi Lista
       </button>
     </div>`;
   const chips=[...prioritized].map(t=>{
@@ -3076,6 +3087,8 @@ function renderPrioStrip(){
     <div class="prio-strip-row">${chips}</div>
   </div>`;
 }
+
+/* ── RENDER — MI LISTA ──────────────────────────────────────────────── */
 function renderFilmListHTML(){
   const prioList=[...prioritized].filter(t=>!watched.has(t));
   const nonPrioList=[...watchlist].filter(t=>!watched.has(t)&&!prioritized.has(t));
@@ -3126,7 +3139,7 @@ function renderFilmListHTML(){
         Tu plan para el festival, sin complicaciones.
       </div>
       <button onclick="switchMainNav('mnav-cartelera');showDayView()" style="background:var(--amber-10);border:1px solid var(--amber-30);color:var(--amber);font-family:var(--font);font-size:var(--t-sm);font-weight:var(--w-bold);padding:10px 20px;border-radius:var(--r-pill);cursor:pointer">
-        Explorar Cartelera →
+        Explorar Cartelera
       </button>
     </div>`;
   }
@@ -3234,6 +3247,8 @@ function mkAgendaRow(s, mode='saved'){
   </div>${_progList}${altsHtml?`<div class="film-alts">${altsHtml}</div>`:''}`;
 }
 
+
+/* ── RENDER — MI PLAN / AGENDA ──────────────────────────────────────── */
 function renderSavedAgendaHTML(){
   // ⚠️ FIX CRÍTICO — NO REMOVER (Apr 2026)
   // try/catch permanente: un error en renderMiPlanCalendar u otras subfunciones
@@ -3638,7 +3653,7 @@ function _renderSavedAgendaHTML(){
         Añade películas a Mi Lista y genera opciones en Planear. El algoritmo hace el resto.
       </div>
       <button onclick="switchMainNav('mnav-planner');showAgView()" style="background:var(--amber-10);border:1px solid var(--amber-30);color:var(--amber);font-family:var(--font);font-size:var(--t-sm);font-weight:var(--w-bold);padding:10px 20px;border-radius:var(--r-pill);cursor:pointer">
-        Ir a Planear →
+        Ir a Planear
       </button>
     </div>`;
   const all=savedAgenda.schedule;
@@ -3807,6 +3822,8 @@ document.addEventListener('click',function(e){
   if(wrap&&!wrap.contains(e.target)) closeShareMenu();
 });
 
+
+/* ── SHARE/EXPORT: imagen, ICS ──────────────────────────────────────── */
 function shareAsImage(){
   if(!savedAgenda||!savedAgenda.schedule||!savedAgenda.schedule.length){
     showToast('No tienes un plan guardado','warn'); return;
@@ -4002,7 +4019,7 @@ function _showImageModal(dataUrl,canvas){
   ov.style.cssText='position:fixed;inset:0;background:rgba(0,0,0,.92);z-index:9999;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px;box-sizing:border-box;gap:14px';
   const hint=document.createElement('p');
   hint.style.cssText='color:#666;font-size:12px;font-family:system-ui;text-align:center;margin:0;line-height:1.6';
-  hint.textContent=isIOS?'Mantén presionada la imagen → Añadir a Fotos':'Toca Descargar para guardar';
+  hint.textContent=isIOS?'Mantén presionada la imagen — Añadir a Fotos':'Toca Descargar para guardar';
   ov.appendChild(hint);
   const img=document.createElement('img');
   img.src=dataUrl;
@@ -4064,7 +4081,7 @@ function exportICS(){
   lines.push('END:VCALENDAR');
   const blob=new Blob([lines.join('\r\n')],{type:'text/calendar'});
   const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='FICCI65_agenda.ics';a.click();
-  showToast('📅 Calendario exportado','info');
+  showToast('Calendario exportado','info');
 }
 function clearSavedAgenda(){
   showDestructiveModal(`${ICONS.alert} Borrar plan`,
@@ -4439,6 +4456,8 @@ function renderAgenda(){
 let activeView='day',activeDay='Martes',activeVenue='all',activeSec='all',selectedIdx=null,activeMNav='mnav-cartelera';
 let cartelaMode='pelicula'; // 'horario' | 'pelicula'
 let expandedPelicula=''; // título expandido en vista Por Película
+
+/* ── NAV: navegación principal entre tabs ────────────────────────────── */
 function switchMainNav(id){
   if(id==='mnav-miplan') activeMiPlanDay=null; // recalcula día actual al entrar
   activeMNav=id;
@@ -4503,6 +4522,8 @@ function closeDropdowns(){
   document.querySelectorAll('.fdr-panel').forEach(p=>p.classList.remove('open'));
   document.querySelectorAll('.fdr-arrow').forEach(a=>a.classList.remove('open'));
 }
+
+/* ── RENDER — CARTELERA: filtros, grid horario, grid película ────────── */
 function renderVbar(){
   const panel=document.getElementById('vdr-panel');
   const trigBtn=document.getElementById('vdr-btn');
@@ -4649,6 +4670,8 @@ function togglePelPrio(title){
   btn.innerHTML=(inPrio?ICONS.starFill:ICONS.star)+(inPrio?' En Prioridades':` Priorizar · ${prioritized.size}/${PRIO_LIMIT}`);
   btn.className='pel-sheet-prio-btn'+(inPrio?' prio-on':'');
 }
+
+/* ── BOTTOM SHEET: apertura, cierre, acciones ───────────────────────── */
 function togglePelWL(title,e){
   toggleWL(title,e);
   const btn=document.getElementById('pel-wl-btn');
