@@ -2037,7 +2037,7 @@ const FESTIVAL_STORAGE_KEY='ficci65_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202604182026';
+const BUILD_VERSION='202604182028';
 (function(){
   const _vk='otrofestiv_build';
   const _sk='otrofestiv_reloaded';
@@ -2446,10 +2446,12 @@ function toggleWL(title,e){
 function toggleWatched(title,e){
   if(e) e.stopPropagation();
   if(watched.has(title)){
-    // Ya está marcada → desmarcar directamente
+    // Quitar de vistas — si no está en Mi Lista, devolverla ahí
     watched.delete(title);
-    saveWatched();updateCardState(title);updateAgTab();
-    if(activeView==='agenda'){cachedResult=null;renderAgenda();}
+    if(!watchlist.has(title)) watchlist.add(title);
+    saveState('wl','watched');updateCardState(title);updateAgTab();
+    const listEl=document.getElementById('ag-film-list');
+    if(listEl) listEl.innerHTML=renderFilmListHTML();
   } else {
     // Confirmar antes de marcar como vista
     const short=title.length>36?title.slice(0,34)+'…':title;
