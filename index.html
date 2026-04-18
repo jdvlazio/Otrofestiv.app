@@ -146,7 +146,6 @@
   /* ── Fuente ── */
   --font: 'Plus Jakarta Sans', sans-serif;
 
-
   /* ── Amber — opacidades extendidas ── */
   --amber-35: rgba(245,158,11,.35);
   --amber-40: rgba(245,158,11,.4);
@@ -184,8 +183,6 @@
   --green-35:         rgba(58,170,110,.35);
 }
 
-
-
 /* ── Fallback font calibrado — reduce FOUT en primera carga ──
    size-adjust: ajusta las métricas del fallback para que ocupe
    el mismo espacio que Plus Jakarta Sans → sin reflow al swap.
@@ -206,7 +203,6 @@
 html,body{-webkit-text-size-adjust:100%;text-size-adjust:100%}
 html{-webkit-tap-highlight-color:transparent}
 body{background:var(--bg);color:var(--white);font-family:var(--font),'Plus Jakarta Sans Fallback',system-ui,sans-serif;min-height:100vh}
-
 
 /* ════════════════════════════════════════════════════════
    3 · LAYOUT
@@ -276,7 +272,6 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:20px;fo
 .cnt-line{padding:6px var(--sp-5) 4px;font-size:var(--t-sm);color:var(--gray)}
 .cnt-line b{color:var(--white)}
 
-
 /* ════════════════════════════════════════════════════════
    4 · COMPONENTES
    Elementos reutilizables en múltiples vistas.
@@ -335,7 +330,6 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:20px;fo
 .ag-sr-add:hover{border-color:var(--orange);color:var(--orange)}
 .ag-sr-add.added{border-color:var(--orange);color:var(--orange);background:var(--amber-08)}
 
-
 /* ── Modal de conflictos ── */
 .conflict-modal{position:fixed;top:0;left:0;right:0;bottom:0;background:var(--overlay-70);z-index:9999;display:flex;align-items:center;justify-content:center;padding:var(--sp-5)}
 .conflict-modal-box{background:var(--surf-2);border:1px solid var(--amber-40);border-radius:var(--r);max-width:320px;width:100%;overflow:hidden}
@@ -354,7 +348,6 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:20px;fo
 /* ── Badges ── */
 .apertura-badge{display:inline-block;font-size:var(--t-xs);background:var(--orange);color:var(--white);font-weight:var(--w-bold);letter-spacing:1px;padding:2px var(--sp-2);border-radius:var(--r-md);font-family:var(--font);margin-right:var(--sp-2);vertical-align:middle;flex-shrink:0}
 .past-badge{display:inline-flex;align-items:center;font-size:var(--t-xs);color:var(--gray2);font-weight:var(--w-semi);letter-spacing:.03em}
-.ag-fi-prio-badge{position:absolute;top:5px;left:5px;font-size:var(--t-sm);color:var(--orange);background:var(--overlay-60);border-radius:var(--r-sm);padding:1px var(--sp-1);font-weight:var(--w-bold);pointer-events:none;z-index:3}
 
 /* ── Poster ── */
 .lb-poster{width:var(--poster-xs-w);height:var(--poster-xs-h);object-fit:cover;border-radius:var(--r-sm);flex-shrink:0;display:block;background:var(--surf-2)}
@@ -460,7 +453,6 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:20px;fo
 .dur-long{color:var(--yellow);font-size:var(--t-sm);font-weight:var(--w-semi)}
 .travel-warn{font-size:var(--t-sm);color:var(--gray);display:flex;align-items:center;gap:var(--sp-1);padding:var(--sp-1) var(--sp-2);background:var(--amber-06);border:1px solid var(--bdr-l);border-radius:var(--r-sm);margin:2px 0}
 
-
 /* ════════════════════════════════════════════════════════
    5 · VISTAS
    Estilos específicos de cada tab.
@@ -538,7 +530,6 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:20px;fo
 /* Card tipografía */
 .c-title{font-size:var(--t-base);font-weight:var(--w-semi);color:var(--white);line-height:1.3;padding-right:var(--sp-7);overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
 .c-title-en{font-size:var(--t-sm);color:var(--gray);font-style:italic;line-height:1;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
-.c-dur-long{color:var(--yellow);font-size:var(--t-sm);font-weight:var(--w-semi)}
 .c-venue-name{font-size:var(--t-base);font-weight:var(--w-regular);color:var(--gray);overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
 .c-expand{display:flex;align-items:center;gap:var(--sp-2);font-size:var(--t-sm);color:var(--gray);cursor:pointer;user-select:none;transition:color var(--tr-base);font-weight:var(--w-semi);letter-spacing:.2px;white-space:nowrap}
 /* ── Toggle Por Horario / Por Película — mismo sistema que fdr-btn ── */
@@ -567,12 +558,10 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:20px;fo
 .poster-past-badge{position:absolute;top:5px;left:5px;background:rgba(0,0,0,.6);color:var(--gray2);font-size:8px;font-weight:700;padding:2px 4px;border-radius:3px;line-height:1.4}
 /* ── Vista horario compacta — grid 2 columnas ── */
 
-
 .pelicula-poster{width:100%;aspect-ratio:2/3;object-fit:cover;display:block;background:var(--surf-2)}
 .pelicula-poster-ph{width:100%;aspect-ratio:2/3;background:var(--surf-2);display:flex;align-items:center;justify-content:center;font-size:24px;opacity:.3}
 
 /* ── Franja de acciones en tarjetas ── */
-
 
 /* ── Expansión inline de funciones ── */
 .pelicula-day{font-size:10px;font-weight:700;color:var(--amber);letter-spacing:.8px;text-transform:uppercase;width:28px;flex-shrink:0}
@@ -642,9 +631,6 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:20px;fo
 .c-title-pill{font-size:var(--t-sm);color:var(--gray2);background:var(--amber-06);border-radius:var(--r-sm);padding:var(--sp-1) var(--sp-2)}
 
 /* Card footer */
-.c-foot-left{display:flex;align-items:center;gap:var(--sp-2);min-width:0;overflow:hidden;flex-shrink:1}
-.c-foot-space{flex:1;min-width:8px}
-.c-foot-right{display:flex;align-items:center;gap:var(--sp-2);flex-shrink:0;white-space:nowrap}
 .c-sec{font-size:var(--t-sm);padding:var(--sp-1) var(--sp-2);border-radius:var(--r-pill);background:var(--surf);border:1px solid var(--bdr);color:var(--gray);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;cursor:pointer;transition:border-color var(--tr-base),color var(--tr-base);flex-shrink:1;min-width:0;max-width:150px}
 .c-lb{flex-shrink:0!important}
 .c-sec:hover{border-color:var(--orange);color:var(--orange)}
@@ -757,14 +743,10 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:20px;fo
 .ag-nav-dot.active-star{background:var(--amber-10);border-color:var(--orange);color:var(--orange);font-size:10px}
 .ag-nav-pos{display:none}
 .ag-conflicts{background:var(--surf);border:1px solid #3a2020;border-radius:var(--r);padding:var(--sp-3);margin-bottom:var(--sp-4)}
-.ag-conflicts-title{font-size:var(--t-xs);color:var(--yellow);text-transform:uppercase;letter-spacing:1px;font-weight:var(--w-semi);margin-bottom:var(--sp-2)}
 .ag-conflict-item{display:flex;align-items:flex-start;justify-content:space-between;gap:var(--sp-2);font-size:var(--t-sm);color:var(--gray);line-height:1.5;padding:var(--sp-2) 0;border-bottom:1px solid var(--white-05)}
 .ag-conflict-item:last-child{border-bottom:none}
 .ag-conflict-info{flex:1;min-width:0}
 .ag-conflict-item strong{color:var(--white)}
-.ag-prioritize-btn{background:none;border:1px solid #555;border-radius:var(--r-pill);color:var(--gray);font-size:var(--t-sm);padding:var(--sp-2) var(--sp-3);cursor:pointer;white-space:nowrap;font-family:var(--font);transition:background var(--tr-base),color var(--tr-base);flex-shrink:0}
-.ag-prioritize-btn:hover{border-color:var(--orange);color:var(--orange)}
-.ag-prioritize-btn.active{border-color:var(--orange);color:var(--orange);background:var(--amber-10)}
 .ag-day-label{font-family:var(--font);display:flex;align-items:flex-end;gap:var(--sp-2);margin:var(--sp-5) 0 var(--sp-2);padding-bottom:var(--sp-2);border-bottom:1px solid var(--bdr-l)}
 .ag-day-name{display:flex;flex-direction:column;align-items:flex-start;gap:1px}
 .ag-day-cnt{font-size:var(--t-sm);font-weight:400;color:var(--gray);letter-spacing:.02em;text-transform:none}
@@ -973,7 +955,6 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:20px;fo
 .festival-progress-bar{height:3px;background:var(--gray2);border-radius:2px;overflow:hidden}
 .festival-progress-fill{height:100%;background:var(--orange);border-radius:2px;transition:width var(--tr-smooth)}
 
-
 /* ════════════════════════════════════════════════════════
    6 · RESPONSIVE
 ════════════════════════════════════════════════════════ */
@@ -1004,7 +985,6 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:20px;fo
   
   
 }
-
 
 /* ── FESTIVAL BOTTOM SHEET ── */
 .fs-overlay{position:fixed;inset:0;background:var(--overlay-60);z-index:2000;opacity:0;transition:opacity var(--tr-smooth);pointer-events:none}
@@ -1059,8 +1039,6 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:20px;fo
   .ag-film-item:hover .ag-fi-overlay,
   .ag-film-item:hover .ag-fi-bottom,
   .ag-film-item:hover .ag-fi-actions{opacity:1}
-
-
 
   /* ══════════════════════════════════════════════════════
      TOPBAR DESKTOP — DOS FILAS CON JERARQUÍA CLARA
@@ -1196,7 +1174,6 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:20px;fo
   .hint{max-width:960px;margin-left:auto;margin-right:auto;padding-left:var(--sp-5);padding-right:var(--sp-5)}
   .cnt-line{max-width:960px;margin-left:auto;margin-right:auto;padding-left:var(--sp-5);padding-right:var(--sp-5)}
 
-
   /* Toast: top-right of the 960px band */
   .prio-toast{
     top:12px;left:auto;
@@ -1290,9 +1267,6 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:20px;fo
   cursor:pointer;letter-spacing:.3px;
 }
 .splash-enter-btn:active{opacity:.8}
-
-
-
 
 /* ── Volver arriba — mobile only ─── */
 #back-top{
@@ -1455,7 +1429,6 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:20px;fo
   width:16px;height:1px;background:var(--bdr);
   flex-shrink:0;margin:0 2px;
 }
-
 
 /* ── Cartelera: micro-CTA entrada al flujo ─────────────────────────
    Corazón ámbar + texto. Misma jerarquía que el stepper.
@@ -2038,7 +2011,7 @@ const FESTIVAL_STORAGE_KEY='ficci65_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202604182031';
+const BUILD_VERSION='202604182034';
 (function(){
   const _vk='otrofestiv_build';
   const _sk='otrofestiv_reloaded';
@@ -2320,7 +2293,6 @@ function renderMiPlanCalendar(){
     ${listHtml}
   </div>`;
 }
-
 
 
 // ═══════════════════════════════════════════════════════════════
@@ -3592,54 +3564,6 @@ function renderFilmAlternatives(title,day,time){
   </div>`;
 }
 
-function confirmReplaceWithNext(removedTitle,nextTitle,newTitle,day,time){
-  const{displayTitle:dn}=parseProgramTitle(nextTitle);
-  const{displayTitle:dt}=parseProgramTitle(newTitle);
-  const shortNext=dn.length>22?dn.slice(0,20)+'…':dn;
-  const shortNew=dt.length>22?dt.slice(0,20)+'…':dt;
-  const{displayTitle:dr}=parseProgramTitle(removedTitle);
-  const shortRem=dr.length>22?dr.slice(0,20)+'…':dr;
-  const existing=document.getElementById('conflict-modal');if(existing) existing.remove();
-  const modal=document.createElement('div');
-  modal.id='conflict-modal';modal.className='conflict-modal';
-  modal.innerHTML=`<div class="conflict-modal-box">
-    <div class="conflict-modal-hdr">${ICONS.alert} Se cancela la siguiente</div>
-    <div class="conflict-modal-body">Reemplazar <b>${shortRem}</b> por <b>${shortNew}</b> y cancelar <b>${shortNext}</b> del plan.</div>
-    <div class="conflict-modal-btns">
-      <button class="conflict-modal-btn cancel" onclick="document.getElementById('conflict-modal').remove()">Cancelar</button>
-      <button class="conflict-modal-btn confirm" id="replace-next-ok">Confirmar</button>
-    </div>
-  </div>`;
-  document.body.appendChild(modal);
-  setTimeout(()=>{
-    const btn=document.getElementById('replace-next-ok');
-    if(btn) btn.onclick=()=>{
-      modal.remove();
-      _removePlanItem(removedTitle);
-      _removePlanItem(nextTitle);
-      const screen=FILMS.find(f=>f.title===newTitle&&f.day===day&&f.time===time);
-      if(screen){
-        if(!savedAgenda) savedAgenda={schedule:[]};
-        if(!watchlist.has(newTitle)){watchlist.add(newTitle);saveWL();}
-        savedAgenda.schedule=savedAgenda.schedule.filter(s=>s._title!==newTitle);
-        savedAgenda.schedule.push({...screen,_title:newTitle});
-        savedAgenda.schedule.sort((a,b)=>DAY_KEYS.indexOf(a.day)-DAY_KEYS.indexOf(b.day)||toMin(a.time)-toMin(b.time));
-        saveSavedAgenda();
-      }
-      _expandedFilm='';
-      const{displayTitle:dNew}=parseProgramTitle(newTitle);
-      showToast(`Reemplazada · ${dNew.length>25?dNew.slice(0,23)+'…':dNew}`,'info');
-      renderAgenda();
-    };
-  },50);
-}
-
-function confirmFreeGap(title){
-  _removePlanItem(title);
-  _expandedFilm='';
-  showToast('Hueco libre en tu plan','info');
-  renderAgenda();
-}
 
 function confirmReplace(removedTitle,newTitle,day,time){
   const{displayTitle:dt}=parseProgramTitle(newTitle);
@@ -3808,7 +3732,7 @@ function _renderSavedAgendaHTML(){
               <div class="saved-title">${s._title}</div>
               <div class="saved-venue">${ICONS.pin} ${vc2.short}${sl?' · '+sl:''}</div>
             </div>
-            <button class="saved-check done" data-wt="${(s._title||'').replace(/"/g,'&quot;')}" onclick="toggleWatched(this.dataset.wt,event)" title="Desmarcar">No vista</button>
+            <button class="saved-check done" data-wt="${(s._title||'').replace(/"/g,'&quot;')}" onclick="toggleWatched(this.dataset.wt,event)" >No vista</button>
           </div>`;
         }).join('')}`).join(''):''}
       ${watchedOutsidePlan.length?`
@@ -3823,7 +3747,7 @@ function _renderSavedAgendaHTML(){
               <div class="saved-title">${f.title}</div>
               <div class="saved-venue">${ICONS.clock} ${f.duration||'—'}</div>
             </div>
-            <button class="saved-check done" data-wt="${(f.title||'').replace(/"/g,'&quot;')}" onclick="toggleWatched(this.dataset.wt,event)" title="Desmarcar">No vista</button>
+            <button class="saved-check done" data-wt="${(f.title||'').replace(/"/g,'&quot;')}" onclick="toggleWatched(this.dataset.wt,event)" >No vista</button>
           </div>`;
         }).join('')}`:''}
     </div>`;
@@ -4293,45 +4217,7 @@ function showToast(msg,type='info',duration=2800){
   t.className='prio-toast '+type;t.innerHTML=msg;t.style.opacity='1';
   clearTimeout(t._to);t._to=setTimeout(()=>{t.style.opacity='0';},duration);
 }
-function swapFilm(excludedTitle, screenDay, screenTime, displacedTitle){
-  if(!cachedResult) return;
-  const sc=cachedResult.scenarios[cachedResult.currentIdx];
-  const newScreen=FILMS.find(f=>f.title===excludedTitle&&f.day===screenDay&&f.time===screenTime);
-  if(!newScreen) return;
 
-  // Build the resulting schedule after the swap
-  const newSchedule=[...sc.schedule.filter(s=>s._title!==displacedTitle),{...newScreen,_title:excludedTitle}];
-  newSchedule.sort((a,b)=>a.day_order!==b.day_order?a.day_order-b.day_order:toMin(a.time)-toMin(b.time));
-  const newKey=newSchedule.map(s=>s._title+'@'+s.day+s.time).sort().join('|');
-
-  // Check if this exact schedule already exists in one of the calculated scenarios
-  const existingIdx=cachedResult.scenarios.findIndex(s=>{
-    const k=s.schedule.map(x=>x._title+'@'+x.day+x.time).sort().join('|');
-    return k===newKey;
-  });
-
-  if(existingIdx>=0){
-    // Jump to the existing scenario
-    cachedResult.currentIdx=existingIdx;
-    const lbl=existingIdx===0?`${ICONS.calendar} Plan óptimo`:`Variación ${existingIdx}`;
-    showToast(`${lbl} — ya tenías esta combinación`,'info');
-  } else {
-    // Create a new custom scenario
-    const pending=[...watchlist].filter(t=>!watched.has(t)&&FILMS.some(f=>f.title===t&&!screeningPassed(f)));
-    const included=new Set(newSchedule.map(s=>s._title));
-    cachedResult.scenarios.push({
-      ...sc,
-      schedule:newSchedule,
-      excluded:pending.filter(t=>!included.has(t)),
-      _custom:true  // marcada como personalizada — no generada por el algoritmo
-    });
-    cachedResult.currentIdx=cachedResult.scenarios.length-1;
-    showToast(`Opción personalizada — intercambio aplicado`,'info');
-  }
-
-  const res=document.getElementById('ag-result');
-  if(res) res.innerHTML=buildResultHTML(cachedResult.scenarios);
-}
 // ── POST-SELECTION SQUEEZE ──
 // Tras elegir una opción, intenta insertar películas excluidas de la watchlist
 // que quepan en los huecos reales del plan elegido (usando screensConflict ±10 min).
@@ -4418,24 +4304,14 @@ function runCalc(){
     }
   },80);
 }
-function changeScenario(dir){
-  if(!cachedResult) return;
-  const n=cachedResult.scenarios.length;
-  cachedResult.currentIdx=Math.max(0,Math.min(n-1,cachedResult.currentIdx+dir));
-  const res=document.getElementById('ag-result');
-  if(res) res.innerHTML=buildResultHTML(cachedResult.scenarios);
-}
+
 function jumpToScenario(idx){
   if(!cachedResult) return;
   cachedResult.currentIdx=Math.max(0,Math.min(cachedResult.scenarios.length-1,idx));
   renderAgenda();
 }
 
-function updatePrioCounter(){
-  const el=document.getElementById('prio-counter');
-  if(!el) return;
-  el.textContent=prioritized.size>0?`⭐ ${prioritized.size}/${PRIO_LIMIT}`:'';
-}
+
 function renderFlowProgress(activeTab){
   // activeTab: qué tab está activo ahora ('cartelera'|'seleccion'|'planner'|'miplan')
   // Paso activo = tab actual. ✓ solo cuando hay plan guardado.
@@ -4584,9 +4460,7 @@ DAYS.forEach(day=>{
   dtabs.appendChild(btn);
 });
 
-function addFbtn(bar,label,val,activeVal,fn){
-  const b=document.createElement('button');b.className='fbtn'+(activeVal===val?' on':'');b.innerHTML=label;b.onclick=fn;bar.appendChild(b);
-}
+
 function toggleDropdown(id){
   const panel=document.getElementById(id+'-panel');
   const arrow=document.getElementById(id+'-arrow');
@@ -4665,11 +4539,7 @@ function setHint(film){
   el.style.padding='8px 18px';
   el.classList.add('active');
 }
-function onCardClick(idx,vis){
-  if(selectedIdx===idx){selectedIdx=null;setHint(null);}else{selectedIdx=idx;setHint(vis[idx]);}
 
-  applyStates(vis);
-}
 function applyStates(vis){
   document.querySelectorAll('.card').forEach((card,i)=>{
     card.classList.remove('selected','conflict');
@@ -4784,9 +4654,7 @@ function starsDisplay(rating,size){
   return html;
 }
 
-function renderAgendaOrRender(){
-  if(activeView==='agenda') renderAgenda(); else render();
-}
+
 function togglePelPrio(title){
   togglePriority(title);
   const btn=document.getElementById('pel-prio-btn');
@@ -4958,10 +4826,6 @@ function setCartelaMode(mode){
   render();
 }
 
-function togglePeliculaExpand(title){
-  expandedPelicula=expandedPelicula===title?'':title;
-  renderPeliculaView();
-}
 
 function renderPeliculaView(){
   const grid=document.getElementById('grid');
@@ -5050,11 +4914,6 @@ function render(){
       ${inWL?`<div class="poster-wl-dot">${ICONS.heartFill}</div>`:''}
     </div>`;
   }).join('')+'</div>';
-
-
-
-
-
 
 
   // ── Cartelera: stepper + micro-CTA de entrada al flujo ─────────────
