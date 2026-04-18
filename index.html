@@ -2009,7 +2009,7 @@ const FESTIVAL_STORAGE_KEY='ficci65_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202604181926';
+const BUILD_VERSION='202604181933';
 (function(){
   const _vk='otrofestiv_build';
   const _sk='otrofestiv_reloaded';
@@ -2259,7 +2259,8 @@ function renderMiPlanCalendar(){
       const _rowKey=(s._title||'')+s.time;
       const _safeRowKey=_rowKey.replace(/"/g,'&quot;');
       const _mp=getPosterSrc(s._title,s.is_cortos||false);
-      const _mph=_mp?`<img class="lb-poster" src="${_mp}" loading="lazy" onerror="this.outerHTML='<div class=lb-poster-ph>🎬</div>'" alt="">`:'<div class="lb-poster-ph">🎬</div>';
+      const _safeMpT=(s._title||"").replace(/'/g,"\'");
+      const _mph=_mp?`<img class="lb-poster" src="${_mp}" loading="lazy" style="cursor:pointer" onclick="event.stopPropagation();openPelSheet('${_safeMpT}')" onerror="this.outerHTML='<div class=lb-poster-ph>🎬</div>'" alt="">`:'<div class="lb-poster-ph">🎬</div>';
       listHtml+=`<div class="mplan-row${_rowKey===_activeMiPlanFilm?' active':''}" style="cursor:pointer" data-rkey="${_safeRowKey}" onclick="selectFromDetail(this)">
         ${_mph}
         <div class="mplan-tc">
@@ -3257,8 +3258,9 @@ function removeFilmFromScenario(title,e){
 function mkAgendaRow(s, mode='saved'){
   const t=s._title||'';
   const f=FILMS.find(fi=>fi.title===t);
-  const _p=getPosterSrc(t,f?.is_cortos);
-  const _ph=_p?`<img class="lb-poster" src="${_p}" loading="lazy" onerror="this.outerHTML='<div class=lb-poster-ph>🎬</div>'" alt="">`:'<div class="lb-poster-ph">🎬</div>';
+  const _p=getPosterSrc(t,f?.is_cortos)||( f?.is_cortos?makeProgramPoster(t):null);
+  const _safePT=t.replace(/'/g,"\\'");
+  const _ph=_p?`<img class="lb-poster" src="${_p}" loading="lazy" style="cursor:pointer" onclick="event.stopPropagation();openPelSheet('${_safePT}')" onerror="this.style.opacity=0" alt="">`:'<div class="lb-poster-ph">🎬</div>';
   const vc2=vcfg(s.venue),sl=sala(s.venue);
   const safeT=(s._title||'').replace(/"/g,'&quot;');
   const isDone=watched.has(t);
@@ -3765,7 +3767,8 @@ function _renderSavedAgendaHTML(){
         ${archByDay[day].map(s=>{
           const vc2=vcfg(s.venue),sl=sala(s.venue);
           const _ap=getPosterSrc(s._title,s.is_cortos||false);
-          const _aph=_ap?`<img class="lb-poster" src="${_ap}" loading="lazy" onerror="this.outerHTML='<div class=lb-poster-ph>🎬</div>'" alt="">`:'<div class="lb-poster-ph">🎬</div>';
+          const _safeMpT2=(s._title||"").replace(/'/g,"\'");
+          const _aph=_ap?`<img class="lb-poster" src="${_ap}" loading="lazy" style="cursor:pointer" onclick="event.stopPropagation();openPelSheet('${_safeMpT2}')" onerror="this.outerHTML='<div class=lb-poster-ph>🎬</div>'" alt="">`:'<div class="lb-poster-ph">🎬</div>';
           return`<div class="saved-item done">
             ${_aph}
             <div class="saved-time">${s.time}</div>
