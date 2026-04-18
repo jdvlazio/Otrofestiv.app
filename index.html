@@ -617,6 +617,8 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:20px;fo
 .pel-sheet-wl-btn{background:var(--amber-10);border:1px solid var(--amber-30);border-radius:var(--r-pill);color:var(--amber);font-family:var(--font);font-size:14px;font-weight:700;padding:14px 0;cursor:pointer;width:100%;margin-top:16px;transition:background var(--tr-base)}
 .pel-sheet-wl-btn:active{background:var(--amber-20)}
 .pel-sheet-wl-btn.in-wl{background:rgba(39,174,96,.1);border-color:rgba(39,174,96,.3);color:var(--green)}
+.pel-sheet-prio-btn{background:none;border:1px solid var(--bdr);border-radius:var(--r-pill);color:var(--gray2);font-family:var(--font);font-size:13px;font-weight:700;padding:10px 0;cursor:pointer;width:100%;margin-top:8px;transition:all var(--tr-base)}
+.pel-sheet-prio-btn.prio-on{background:var(--amber-10);border-color:var(--amber-30);color:var(--amber)}
 .pel-sheet-corto-item{display:flex;align-items:baseline;gap:8px;padding:5px 0;border-bottom:1px solid var(--bdr)}
 .pel-sheet-corto-item:last-child{border-bottom:none}
 .c-expand:hover{color:var(--orange)}
@@ -1964,7 +1966,7 @@ const FESTIVAL_STORAGE_KEY='ficci65_';
 // ── Reset agresivo de caché — independiente del SW ────────────────
 // Cada deploy cambia BUILD_VERSION. Al cargar, si localStorage tiene
 // una versión anterior → location.reload(true) fuerza descarga limpia.
-const BUILD_VERSION='202604181802';
+const BUILD_VERSION='202604181806';
 (function(){
   const _vk='otrofestiv_build';
   const _stored=localStorage.getItem(_vk);
@@ -4639,6 +4641,14 @@ function updateHorarioPrioBtn(title){
 function renderAgendaOrRender(){
   if(activeView==='agenda') renderAgenda(); else render();
 }
+function togglePelPrio(title){
+  togglePriority(title);
+  const btn=document.getElementById('pel-prio-btn');
+  if(!btn) return;
+  const inPrio=prioritized.has(title);
+  btn.innerHTML=(inPrio?ICONS.starFill:ICONS.star)+(inPrio?' En Prioridades':` Priorizar · ${prioritized.size}/${PRIO_LIMIT}`);
+  btn.className='pel-sheet-prio-btn'+(inPrio?' prio-on':'');
+}
 function togglePelWL(title,e){
   toggleWL(title,e);
   const btn=document.getElementById('pel-wl-btn');
@@ -4655,7 +4665,7 @@ function openPelSheet(title){
   })()).find(e=>e.film.title===title);
   if(!entry) return;
   const{film:f,screenings}=entry;
-  const inWL=watchlist.has(f.title),inW=watched.has(f.title);
+  const inWL=watchlist.has(f.title),inW=watched.has(f.title),inPrio=prioritized.has(f.title);
   const posterSrc=f.is_cortos?'https://ficcifestival.com/sites/default/files/2026-02/logo-ficci65_2.png':getPosterSrc(f.title,false);
   const posterHtml=posterSrc
     ?`<img class="pel-sheet-poster" src="${posterSrc}" loading="lazy" style="${f.is_cortos?'object-fit:contain;background:#111':''}" onerror="this.outerHTML='<div class=pel-sheet-poster-ph>🎬</div>'" alt="">`
@@ -4716,7 +4726,8 @@ function openPelSheet(title){
     <div class="pel-sheet-section-lbl">Sinopsis</div>
     <div class="pel-sheet-synopsis">Sinopsis disponible próximamente.</div>
     ${cortosHtml}
-    ${!inW?`<button id="pel-wl-btn" class="pel-sheet-wl-btn${inWL?' in-wl':''}" onclick="togglePelWL('${safeT}',event)">${wlLabel}</button>`
+    ${!inW?`<button id="pel-wl-btn" class="pel-sheet-wl-btn${inWL?' in-wl':''}" onclick="togglePelWL('${safeT}',event)">${wlLabel}</button>
+      <button id="pel-prio-btn" class="pel-sheet-prio-btn${inPrio?' prio-on':''}" onclick="togglePelPrio('${safeT}')">${inPrio?ICONS.starFill:ICONS.star} ${inPrio?'En Prioridades':`Priorizar · ${prioritized.size}/${PRIO_LIMIT}`}</button>`
     :`<div style="text-align:center;color:var(--green);padding:14px 0;font-weight:700">${ICONS.check} Ya vista</div>`}
   `;
   document.getElementById('pel-overlay').classList.add('open');
