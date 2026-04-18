@@ -560,7 +560,6 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:20px;fo
 .poster-time{position:absolute;bottom:0;left:0;right:0;padding:20px 7px 6px;background:linear-gradient(to top,rgba(0,0,0,.85) 0%,rgba(0,0,0,0) 100%);font-size:15px;font-weight:800;color:var(--amber);line-height:1;letter-spacing:-.3px}
 /* Indicador ♥ en lista */
 .poster-wl-dot{position:absolute;bottom:5px;right:5px;font-size:13px;line-height:1;filter:drop-shadow(0 1px 2px rgba(0,0,0,.8))}
-.poster-unica{position:absolute;top:5px;right:5px;background:rgba(10,10,10,.75);backdrop-filter:blur(4px);border:1px solid rgba(248,213,140,.25);border-radius:3px;font-size:8px;font-weight:700;color:rgba(248,213,140,.85);letter-spacing:.5px;padding:2px 4px;line-height:1.4}
 /* Badge CORTOS */
 .poster-prog-badge{position:absolute;top:5px;left:5px;background:rgba(10,10,10,.75);backdrop-filter:blur(4px);border:1px solid rgba(255,255,255,.12);border-radius:3px;font-size:8px;font-weight:800;color:var(--orange);letter-spacing:.5px;padding:2px 4px;line-height:1.4}
 /* Badge AHORA / Ya pasó */
@@ -2010,7 +2009,7 @@ const FESTIVAL_STORAGE_KEY='ficci65_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202604181924';
+const BUILD_VERSION='202604181926';
 (function(){
   const _vk='otrofestiv_build';
   const _sk='otrofestiv_reloaded';
@@ -4713,6 +4712,8 @@ function openPelSheet(title){
     :`<div class="pel-sheet-poster-ph">🎬</div>`;
   const{displayTitle}=parseProgramTitle(f.title);
   const secLabel=f.section?f.section.replace(/^[^ ]+ /,''):'';
+  const totalFn=FILMS.filter(fi=>fi.title===f.title).length;
+  const unica=totalFn===1;
   const DAY_ABB=['MAR','MIÉ','JUE','VIE','SÁB','DOM'];
   const future=screenings.filter(s=>!screeningPassed(s)).sort((a,b)=>a.day_order-b.day_order||toMin(a.time)-toMin(b.time));
   const past=screenings.filter(s=>screeningPassed(s));
@@ -4757,6 +4758,7 @@ function openPelSheet(title){
         <div class="pel-sheet-flags">${f.flags||'🌐'}</div>
         <div class="pel-sheet-dur">${ICONS.clock} ${f.duration}</div>
         <div class="pel-sheet-sec">${secLabel}</div>
+        ${unica?`<div style="font-size:11px;color:rgba(248,213,140,.7);font-weight:600;margin-top:3px;letter-spacing:.3px">Única función</div>`:''}
         ${f.is_cortos&&f.film_list?.length?`<div style="font-size:11px;color:var(--orange);margin-top:2px">CORTOS · ${f.film_list.length} films</div>`:''}
       </div>
     </div>
@@ -4883,14 +4885,12 @@ function renderPeliculaView(){
     const{displayTitle}=parseProgramTitle(f.title);
     const progBadge=f.is_cortos&&f.film_list?.length
       ?`<div class="poster-prog-badge">CORTOS · ${f.film_list.length}</div>`:'';
-    const unicaBadge=screenings.length===1?`<div class="poster-unica">ÚNICA</div>`:'';
     const posterImg=posterSrc
       ?`<img src="${posterSrc}" loading="lazy" style="width:100%;height:100%;object-fit:cover${allPast?';opacity:.45':''};display:block" onerror="this.style.opacity=0" alt="">`
       :``;
     return`<div class="poster-card${inWL?' in-wl':''}${inW?' in-watched':''}" onclick="openPelSheet('${safeT}')">
       ${posterImg}
       ${progBadge}
-      ${unicaBadge}
       ${inWL?`<div class="poster-wl-dot">${ICONS.heartFill}</div>`:''}
     </div>`;
   }).join('')}</div>`;
@@ -4926,13 +4926,10 @@ function render(){
     const progBadge=isProg&&f.film_list?.length?`<div class="poster-prog-badge">CORTOS · ${f.film_list.length}</div>`:'';
     const nowBadge=isNow?`<div class="poster-now">AHORA</div>`:'';
     const pastBadge=passed&&!isNow?`<div class="poster-past-badge">Pasó</div>`:'';
-    const totalScreenings=FILMS.filter(fi=>fi.title===f.title).length;
-    const unicaBadge=totalScreenings===1?`<div class="poster-unica">ÚNICA</div>`:'';
     return`<div class="poster-card${inWL&&!inW?' in-wl':''}${inW?' in-watched':''}${passed?' past-card':''}" onclick="openPelSheet('${safeT}')">
       ${posterImg}
       <div class="poster-time">${f.time}</div>
       ${nowBadge||pastBadge||progBadge}
-      ${unicaBadge}
       ${inWL?`<div class="poster-wl-dot">${ICONS.heartFill}</div>`:''}
     </div>`;
   }).join('')+'</div>';
