@@ -2037,7 +2037,7 @@ const FESTIVAL_STORAGE_KEY='ficci65_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202604182010';
+const BUILD_VERSION='202604182013';
 (function(){
   const _vk='otrofestiv_build';
   const _sk='otrofestiv_reloaded';
@@ -4796,7 +4796,7 @@ function togglePelPrio(title){
   const btn=document.getElementById('pel-prio-btn');
   if(!btn) return;
   const inPrio=prioritized.has(title);
-  btn.innerHTML=(inPrio?ICONS.starFill:ICONS.star)+(inPrio?' En Prioridades':` Priorizar · ${prioritized.size}/${PRIO_LIMIT}`);
+  btn.innerHTML=(inPrio?ICONS.starFill:ICONS.star)+(inPrio?' Priorizada':' Priorizar');
   btn.className='pel-sheet-prio-btn'+(inPrio?' prio-on':'');
 }
 
@@ -4806,7 +4806,7 @@ function togglePelWL(title,e){
   const btn=document.getElementById('pel-wl-btn');
   if(!btn) return;
   const inWL=watchlist.has(title);
-  btn.innerHTML=inWL?`${ICONS.heartFill} En Mi Lista`:`${ICONS.heart} Añadir a Mi Lista`;
+  btn.innerHTML=inWL?`${ICONS.heartFill} En Mi Lista`:`${ICONS.heart} Mi Lista`;
   btn.className='pel-sheet-wl-btn'+(inWL?' in-wl':'');
 }
 function openPelSheet(title){
@@ -4860,7 +4860,7 @@ function openPelSheet(title){
       <div class="pel-sheet-section-lbl">Programa · ${f.film_list.length} cortos</div>
       ${cortoItems}`;
   }
-  const wlLabel=inWL?`${ICONS.heartFill} En Mi Lista`:`${ICONS.heart} Añadir a Mi Lista`;
+  const wlLabel=inWL?`${ICONS.heartFill} En Mi Lista`:`${ICONS.heart} Mi Lista`;
   const safeT=f.title.replace(/'/g,"\'");
   document.getElementById('pel-sheet-inner').innerHTML=`
     <div class="pel-sheet-header">
@@ -4883,7 +4883,7 @@ function openPelSheet(title){
     ${cortosHtml}
     ${!f.is_cortos?`<a class="c-lb" href="${lbUrl(f.title)}" target="_blank" rel="noopener" style="display:inline-flex;margin-top:14px;margin-bottom:2px">${LB_SVG}<span class="c-lb-text">Ver en Letterboxd</span></a>`:''}
     ${!inW?`<button id="pel-wl-btn" class="pel-sheet-wl-btn${inWL?' in-wl':''}" onclick="togglePelWL('${safeT}',event)">${wlLabel}</button>
-      <button id="pel-prio-btn" class="pel-sheet-prio-btn${inPrio?' prio-on':''}" onclick="togglePelPrio('${safeT}')">${inPrio?ICONS.starFill:ICONS.star} ${inPrio?'En Prioridades':`Priorizar · ${prioritized.size}/${PRIO_LIMIT}`}</button>`
+      <button id="pel-prio-btn" class="pel-sheet-prio-btn${inPrio?' prio-on':''}" onclick="togglePelPrio('${safeT}')">${inPrio?ICONS.starFill:ICONS.star} ${inPrio?'Priorizada':'Priorizar'}</button>`
     :`<div style="margin-top:16px">
         <div style="display:flex;align-items:center;justify-content:center;gap:8px;padding:10px 0;border-radius:var(--r-pill);background:rgba(39,174,96,.08);border:1px solid rgba(39,174,96,.2);margin-bottom:8px">
           ${ICONS.check}
