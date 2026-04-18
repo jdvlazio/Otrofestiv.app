@@ -1575,58 +1575,56 @@ const FICCI_POSTER_URL='https://ficcifestival.com/sites/default/files/2026-02/lo
 
 /* ── POSTER GENERATIVO — identidad Otrofestiv para programas ────────── */
 function makeProgramPoster(title){
+  // Patrón fijo — un solo estándar para todos los programas.
   // "Cortos Iberoamérica — Prog. 1" → mainLabel + subLabel
   const dashIdx=title.indexOf('—');
   const mainLabel=(dashIdx>-1?title.slice(0,dashIdx):title).trim();
   const subLabel=dashIdx>-1?title.slice(dashIdx+1).trim():'';
 
-  // Auto-escalar: calcular font-size para que el texto más largo quepa en 160px
-  // SVG viewBox = 120×180 (ratio 2:3 simplificado)
+  // CONSTANTES FIJAS — no cambian por título
   const VW=120, VH=180;
-  const words=mainLabel.split(/\s+/);
-  const maxWordLen=Math.max(...words.map(w=>w.length));
-  // fontSize: ~7px por char en ancho, limitado entre 14 y 26
-  const fontSize=Math.min(26,Math.max(14,Math.floor(155/maxWordLen)));
-  const lineH=Math.round(fontSize*1.25);
-  const maxChars=Math.max(6,Math.floor(145/fontSize));
+  const FONT_SIZE=17;       // siempre 17px
+  const LINE_H=22;          // siempre 22px de interlineado
+  const MAX_CHARS=11;       // máx 11 chars por línea — ajustado al título más largo
+  const SUB_SIZE=10;        // subtítulo siempre 10px
 
-  // Partir en líneas
+  // Partir en líneas de máx MAX_CHARS (sin tocar el font-size)
+  const words=mainLabel.split(/\s+/);
   const lines=[];let cur='';
   for(const w of words){
-    if(cur&&(cur+' '+w).length>maxChars){lines.push(cur);cur=w;}
+    if(cur&&(cur+' '+w).length>MAX_CHARS){lines.push(cur);cur=w;}
     else cur=cur?cur+' '+w:w;
   }
   if(cur) lines.push(cur);
 
-  // Posición vertical — centrar el bloque de texto
-  const blockH=lines.length*lineH+(subLabel?lineH*0.9:0);
-  let startY=Math.round((VH-blockH)/2)+fontSize*0.85;
+  // Centrar verticalmente el bloque de texto
+  const blockH=lines.length*LINE_H+(subLabel?LINE_H*0.9:0);
+  const startY=Math.round((VH-26-blockH)/2)+FONT_SIZE*0.88;
 
   const textLines=lines.map((l,i)=>
-    `<text x="${VW/2}" y="${Math.round(startY+i*lineH)}"
+    `<text x="${VW/2}" y="${Math.round(startY+i*LINE_H)}"
       text-anchor="middle"
       font-family="-apple-system,BlinkMacSystemFont,sans-serif"
-      font-size="${fontSize}" font-weight="800" fill="#F0EBE0">${l}</text>`
+      font-size="${FONT_SIZE}" font-weight="800" fill="#F0EBE0">${l}</text>`
   ).join('');
 
-  const subY=Math.round(startY+lines.length*lineH+2);
+  const subY=Math.round(startY+lines.length*LINE_H+4);
   const subText=subLabel
     ?`<text x="${VW/2}" y="${subY}" text-anchor="middle"
         font-family="-apple-system,BlinkMacSystemFont,sans-serif"
-        font-size="${Math.max(8,fontSize-8)}" font-weight="600" fill="#C8963E" letter-spacing="0.5">${subLabel}</text>`
+        font-size="${SUB_SIZE}" font-weight="600" fill="#C8963E" letter-spacing="0.5">${subLabel}</text>`
     :'';
 
-  const footY=VH-8;
   const svg=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${VW} ${VH}">
     <rect width="${VW}" height="${VH}" fill="#0D0D0D"/>
     <rect x="0" y="0" width="3" height="${VH}" fill="#C8963E"/>
     <rect x="0" y="${VH-22}" width="${VW}" height="1" fill="#222018"/>
     ${textLines}
     ${subText}
-    <text x="${VW/2}" y="${footY-6}" text-anchor="middle"
+    <text x="${VW/2}" y="${VH-9}" text-anchor="middle"
       font-family="-apple-system,BlinkMacSystemFont,sans-serif"
       font-size="7" font-weight="500" fill="#443C34" letter-spacing="1.5">FICCI 65</text>
-    <text x="${VW/2}" y="${footY}" text-anchor="middle"
+    <text x="${VW/2}" y="${VH-2}" text-anchor="middle"
       font-family="-apple-system,BlinkMacSystemFont,sans-serif"
       font-size="5.5" font-weight="400" fill="#2E2820" letter-spacing="1">OTROFESTIV</text>
   </svg>`;
@@ -2011,7 +2009,7 @@ const FESTIVAL_STORAGE_KEY='ficci65_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202604181859';
+const BUILD_VERSION='202604181904';
 (function(){
   const _vk='otrofestiv_build';
   const _sk='otrofestiv_reloaded';
