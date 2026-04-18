@@ -1583,10 +1583,10 @@ function makeProgramPoster(title){
 
   // CONSTANTES FIJAS — no cambian por título
   const VW=120, VH=180;
-  const FONT_SIZE=17;       // siempre 17px
-  const LINE_H=22;          // siempre 22px de interlineado
-  const MAX_CHARS=11;       // máx 11 chars por línea — ajustado al título más largo
-  const SUB_SIZE=10;        // subtítulo siempre 10px
+  const FONT_SIZE=12;       // siempre 12px (-30%)
+  const LINE_H=15;          // siempre 15px de interlineado
+  const MAX_CHARS=14;       // máx 14 chars por línea — más chars caben a font menor
+  const SUB_SIZE=9;         // subtítulo siempre 9px (-10%)
 
   // Partir en líneas de máx MAX_CHARS (sin tocar el font-size)
   const words=mainLabel.split(/\s+/);
@@ -2009,7 +2009,7 @@ const FESTIVAL_STORAGE_KEY='ficci65_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202604181904';
+const BUILD_VERSION='202604181907';
 (function(){
   const _vk='otrofestiv_build';
   const _sk='otrofestiv_reloaded';
