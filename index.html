@@ -2008,18 +2008,23 @@ const PRIO_LIMIT=5;
    Garantiza que cada edición empiece limpia sin datos residuales. */
 const FESTIVAL_STORAGE_KEY='ficci65_';
 // ── Reset agresivo de caché — independiente del SW ────────────────
-// Cada deploy cambia BUILD_VERSION. Al cargar, si localStorage tiene
-// una versión anterior → location.reload(true) fuerza descarga limpia.
+// BUILD_VERSION: cambia en cada deploy.
+// Al cargar, compara con localStorage. Si difiere → reload duro.
+// sessionStorage evita loops infinitos dentro de la misma sesión.
 const BUILD_VERSION='202604181859';
 (function(){
   const _vk='otrofestiv_build';
+  const _sk='otrofestiv_reloaded';
   const _stored=localStorage.getItem(_vk);
-  if(_stored&&_stored!==BUILD_VERSION){
+  const _reloaded=sessionStorage.getItem(_sk);
+  if(_stored && _stored!==BUILD_VERSION && !_reloaded){
+    sessionStorage.setItem(_sk,'1');
     localStorage.setItem(_vk,BUILD_VERSION);
-    location.reload(true);  // hard reload: ignora caché del browser
+    location.reload(true);
     return;
   }
-  if(!_stored) localStorage.setItem(_vk,BUILD_VERSION);
+  sessionStorage.removeItem(_sk);
+  localStorage.setItem(_vk,BUILD_VERSION);
 })();
 
 /* ── GLOSARIO DE TÉRMINOS USER-FACING ────────────────────────────
@@ -4874,17 +4879,13 @@ function renderPeliculaView(){
     const inWL=watchlist.has(f.title);
     const inW=watched.has(f.title);
     const allPast=screenings.every(s=>screeningPassed(s));
-    const posterSrc=f.is_cortos?'https://ficcifestival.com/sites/default/files/2026-02/logo-ficci65_2.png':getPosterSrc(f.title,false);
-    const posterHtml=posterSrc
-      ?`<img class="pelicula-poster" src="${posterSrc}" loading="lazy" style="object-fit:cover${allPast?';opacity:.45':''}" onerror="this.outerHTML='<div class=pelicula-poster-ph>🎬</div>'" alt="">`
-      :`<div class="pelicula-poster-ph"${allPast?' style="opacity:.45"':''}>🎬</div>`;
+    const posterSrc=f.is_cortos?makeProgramPoster(f.title):(getPosterSrc(f.title,false)||null);
     const safeT=f.title.replace(/'/g,"\'");
     const{displayTitle}=parseProgramTitle(f.title);
-
     const progBadge=f.is_cortos&&f.film_list?.length
       ?`<div class="pelicula-prog-badge">CORTOS · ${f.film_list.length}</div>`:'';
     const posterImg=posterSrc
-      ?`<img src="${posterSrc}" loading="lazy" style="${f.is_cortos?'object-fit:contain;background:#111':''}" onerror="this.style.opacity=0" alt="">`
+      ?`<img src="${posterSrc}" loading="lazy" style="width:100%;height:100%;object-fit:cover${allPast?';opacity:.45':''};display:block" onerror="this.style.opacity=0" alt="">`
       :``;
     return`<div class="poster-card${inWL?' in-wl':''}${inW?' in-watched':''}" onclick="openPelSheet('${safeT}')">
       ${posterImg}
