@@ -1961,7 +1961,7 @@ const FESTIVAL_STORAGE_KEY='ficci65_';
 // ── Reset agresivo de caché — independiente del SW ────────────────
 // Cada deploy cambia BUILD_VERSION. Al cargar, si localStorage tiene
 // una versión anterior → location.reload(true) fuerza descarga limpia.
-const BUILD_VERSION='202604180937';
+const BUILD_VERSION='202604180941';
 (function(){
   const _vk='otrofestiv_build';
   const _stored=localStorage.getItem(_vk);
@@ -4174,6 +4174,7 @@ function togglePriority(title,cost){
     runCalc();
   }
   if(activeView==='agenda') renderAgenda();
+  else if(activeView==='day') render();
 }
 function showToast(msg,type='info',duration=2800){
   let t=document.getElementById('prio-toast');
@@ -4655,13 +4656,22 @@ function openPelSheet(title){
   // Lista de cortos si es programa
   let cortosHtml='';
   if(f.is_cortos&&f.film_list?.length){
+    const cortoItems=f.film_list.map(item=>{
+      const thumb=getPosterSrc(item.title,true);
+      const thumbHtml=thumb
+        ?`<img src="${thumb}" loading="lazy" style="width:36px;height:54px;object-fit:cover;border-radius:4px;flex-shrink:0" onerror="this.outerHTML='<div style=\"width:36px;height:54px;border-radius:4px;background:var(--surf-2);display:flex;align-items:center;justify-content:center;font-size:14px\">🎬</div>'" alt="">`
+        :`<div style="width:36px;height:54px;border-radius:4px;background:var(--surf-2);display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0">🎬</div>`;
+      return`<div class="pel-sheet-corto-item" style="align-items:center;gap:10px;padding:6px 0">
+        ${thumbHtml}
+        <div style="flex:1;min-width:0">
+          <div style="font-size:12px;color:var(--white);line-height:1.3;margin-bottom:2px">${item.title}</div>
+          <div style="font-size:11px;color:var(--gray2)">${item.duration}</div>
+        </div>
+      </div>`;
+    }).join('');
     cortosHtml=`<div class="pel-sheet-divider"></div>
       <div class="pel-sheet-section-lbl">Programa · ${f.film_list.length} cortos</div>
-      ${f.film_list.map((item,n)=>`<div class="pel-sheet-corto-item">
-        <span style="font-size:11px;color:var(--gray);width:16px;flex-shrink:0">${n+1}</span>
-        <span style="font-size:12px;color:var(--white);flex:1;line-height:1.3">${item.title}</span>
-        <span style="font-size:11px;color:var(--gray2)">${item.duration}</span>
-      </div>`).join('')}`;
+      ${cortoItems}`;
   }
   const wlLabel=inWL?`${ICONS.heartFill} En Mi Lista`:`${ICONS.heart} Añadir a Mi Lista`;
   const safeT=f.title.replace(/'/g,"\'");
