@@ -434,9 +434,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:20px;fo
 .prio-pill-rm{color:var(--orange);font-size:var(--t-xs);margin-left:2px}
 
 /* ── Pulse "en curso" ── */
-.now-pulse{display:inline-block;width:7px;height:7px;background:var(--green);border-radius:50%;margin-right:var(--sp-1);animation:pulse-green 1.4s ease infinite;flex-shrink:0}
 @keyframes pulse-green{0%,100%{box-shadow:0 0 0 0 var(--green-20)}60%{box-shadow:0 0 0 5px var(--green-00)}}
-.now-label{display:inline-flex;align-items:center;gap:4px;font-size:var(--t-xs);color:var(--green);font-weight:var(--w-bold);letter-spacing:.05em}
 
 /* ── Utilidades ── */
 
@@ -526,13 +524,9 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:20px;fo
 .action-btn.prio-on{color:var(--orange)}
 
 /* Card body — layout de poster + contenido */
-.c-body{display:flex;flex-direction:row;gap:0;padding:0;flex:1;overflow:hidden}
-.c-divider{height:1px;background:var(--bdr);flex-shrink:0}
-.c-poster{flex-shrink:0;width:calc(var(--poster-lg-w) + 26px);padding:var(--sp-4) var(--sp-3) var(--sp-4) var(--sp-4)}
 .c-poster img{width:var(--poster-lg-w);height:var(--poster-lg-h);object-fit:cover;display:block;border-radius:var(--r-md)}
 .c-poster.empty{visibility:visible}
 .c-poster-none{width:var(--poster-lg-w);height:var(--poster-lg-h);border-radius:var(--r-md);background:var(--surf-2);display:flex;align-items:center;justify-content:center;font-size:var(--t-lg);opacity:.3;flex-shrink:0}
-.c-content{flex:1;min-width:0;padding:var(--sp-3) var(--sp-3) 0 0;display:grid;grid-template-rows:34px 38px 24px 18px 18px 1fr;gap:0;overflow:hidden}
 .c-slot-time{height:34px;overflow:hidden;display:flex;align-items:center}
 .c-slot-title{height:38px;overflow:hidden;display:flex;align-items:flex-start;padding-top:2px}
 .c-slot-flags{height:24px;overflow:hidden;display:flex;align-items:center}
@@ -542,10 +536,8 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:20px;fo
 .c-meta-ico svg{flex-shrink:0;opacity:.7}
 
 /* Card tipografía */
-.c-time{font-family:var(--font);font-size:var(--t-md);font-weight:var(--w-bold);color:var(--orange);letter-spacing:.06em;line-height:1;text-transform:uppercase}
 .c-title{font-size:var(--t-base);font-weight:var(--w-semi);color:var(--white);line-height:1.3;padding-right:var(--sp-7);overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
 .c-title-en{font-size:var(--t-sm);color:var(--gray);font-style:italic;line-height:1;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
-.c-flags{font-size:var(--flag-size);line-height:1}
 .c-dur-long{color:var(--yellow);font-size:var(--t-sm);font-weight:var(--w-semi)}
 .c-venue-name{font-size:var(--t-base);font-weight:var(--w-regular);color:var(--gray);overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
 .c-expand{display:flex;align-items:center;gap:var(--sp-2);font-size:var(--t-sm);color:var(--gray);cursor:pointer;user-select:none;transition:color var(--tr-base);font-weight:var(--w-semi);letter-spacing:.2px;white-space:nowrap}
@@ -573,12 +565,8 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:20px;fo
 /* Badge AHORA / Ya pasó */
 .poster-now{position:absolute;top:5px;left:5px;background:var(--green);color:#000;font-size:8px;font-weight:800;letter-spacing:.5px;padding:2px 5px;border-radius:3px;line-height:1.4}
 .poster-past-badge{position:absolute;top:5px;left:5px;background:rgba(0,0,0,.6);color:var(--gray2);font-size:8px;font-weight:700;padding:2px 4px;border-radius:3px;line-height:1.4}
-.pelicula-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--sp-2);padding:12px}
 /* ── Vista horario compacta — grid 2 columnas ── */
 
-.horario-wl-dot{position:absolute;bottom:46px;right:6px;font-size:14px;line-height:1}
-.horario-now{position:absolute;top:6px;left:6px;background:var(--green);color:#000;font-size:9px;font-weight:800;letter-spacing:.6px;padding:2px 6px;border-radius:3px}
-.horario-past{position:absolute;top:6px;left:6px;background:rgba(0,0,0,.6);color:var(--gray2);font-size:9px;font-weight:700;padding:2px 5px;border-radius:3px}
 
 .pelicula-poster{width:100%;aspect-ratio:2/3;object-fit:cover;display:block;background:var(--surf-2)}
 .pelicula-poster-ph{width:100%;aspect-ratio:2/3;background:var(--surf-2);display:flex;align-items:center;justify-content:center;font-size:24px;opacity:.3}
@@ -631,19 +619,12 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:20px;fo
 .c-film-thumb-ph{width:var(--poster-xs-w);height:var(--poster-xs-h);border-radius:var(--r-sm);flex-shrink:0;background:var(--surf-2);display:flex;align-items:center;justify-content:center;font-size:var(--t-sm);opacity:.3}
 .c-film-item{display:flex;align-items:flex-start;gap:var(--sp-3);padding:var(--sp-3) 0;border-bottom:1px solid var(--amber-06)}
 .c-film-item:last-child{border-bottom:none}
-.c-film-num{font-family:var(--font);font-size:var(--t-sm);font-weight:var(--w-semi);color:var(--gray2);flex-shrink:0;line-height:1;min-width:16px;padding-top:1px}
-.c-film-info{flex:1;min-width:0}
-.c-film-title{font-size:var(--t-base);color:var(--gray);line-height:1.4;font-weight:var(--w-semi)}
-.c-film-meta{font-size:var(--t-sm);color:var(--gray2);margin-top:var(--sp-1)}
-.c-film-dur{font-size:var(--t-sm);color:var(--gray2);flex-shrink:0;white-space:nowrap;padding-top:1px}
-.c-film-lb{display:flex;align-items:center;flex-shrink:0;opacity:.45;transition:opacity var(--tr-base);line-height:1;align-self:flex-start;margin-top:2px}
 .c-film-lb:hover{opacity:1}
 .c-title-pills{display:none;border-top:1px solid var(--bdr-l);padding-top:var(--sp-2);margin-top:2px;flex-wrap:wrap;gap:var(--sp-1)}
 .c-title-pills.visible{display:flex}
 .c-title-pill{font-size:var(--t-sm);color:var(--gray2);background:var(--amber-06);border-radius:var(--r-sm);padding:var(--sp-1) var(--sp-2)}
 
 /* Card footer */
-.c-foot{display:flex;flex-direction:row;align-items:center;gap:0;padding:0 var(--sp-4);background:var(--overlay-15);height:38px;flex-shrink:0;overflow:hidden}
 .c-foot-left{display:flex;align-items:center;gap:var(--sp-2);min-width:0;overflow:hidden;flex-shrink:1}
 .c-foot-space{flex:1;min-width:8px}
 .c-foot-right{display:flex;align-items:center;gap:var(--sp-2);flex-shrink:0;white-space:nowrap}
@@ -654,7 +635,6 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:20px;fo
 .c-lb{display:inline-flex;align-items:center;gap:var(--sp-1);background:var(--surf-2);border:1px solid var(--bdr);border-radius:var(--r-pill);padding:var(--sp-1) var(--sp-2) var(--sp-1) var(--sp-2);cursor:pointer;transition:border-color var(--tr-base),transform var(--tr-base);line-height:1;flex-shrink:0;text-decoration:none}
 .c-lb:hover{border-color:var(--gray);transform:scale(1.04)}
 .c-lb-text{font-size:var(--t-sm);font-weight:var(--w-semi);color:var(--gray);letter-spacing:.2px;white-space:nowrap}
-.c-dur{font-size:var(--t-sm);color:var(--gray);white-space:nowrap;flex-shrink:0}
 .prog-badge{font-size:var(--t-sm);color:var(--gray2);font-weight:var(--w-semi);letter-spacing:.4px;white-space:nowrap}
 
 /* ── MI LISTA ── */
@@ -919,7 +899,6 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:20px;fo
 .delay-lbl{font-size:11px;color:var(--gray2);flex-shrink:0}
 .delay-btn{background:var(--surf-2);border:1px solid var(--bdr);color:var(--white);font-size:11px;font-weight:600;font-family:var(--font);padding:4px 9px;border-radius:var(--r-pill);cursor:pointer;flex-shrink:0}
 .delay-btn:active{background:var(--amber-10);border-color:var(--amber-30)}
-.delay-active{background:var(--amber-10);border-color:var(--amber-30);color:var(--amber)}
 .delay-clear{background:none;border:none;color:var(--gray);font-size:11px;cursor:pointer;font-family:var(--font);padding:2px 4px;flex-shrink:0}
 .delay-warn{background:rgba(192,57,43,0.08);border-top:1px solid rgba(192,57,43,0.2);padding:8px 12px;font-size:11px;color:#E57373;line-height:1.45;display:flex;gap:6px;align-items:flex-start}
 .delay-warn-ico{flex-shrink:0;margin-top:1px}
@@ -1970,7 +1949,7 @@ const FESTIVAL_STORAGE_KEY='ficci65_';
 // ── Reset agresivo de caché — independiente del SW ────────────────
 // Cada deploy cambia BUILD_VERSION. Al cargar, si localStorage tiene
 // una versión anterior → location.reload(true) fuerza descarga limpia.
-const BUILD_VERSION='202604181833';
+const BUILD_VERSION='202604181842';
 (function(){
   const _vk='otrofestiv_build';
   const _stored=localStorage.getItem(_vk);
@@ -4605,30 +4584,6 @@ function applyStates(vis){
     }
   });
 }
-const expandedProgs=new Set(JSON.parse(sessionStorage.getItem('ficci65_exp')||'[]'));
-function toggleExpand(el,e){
-  e.stopPropagation();
-  const card=el.closest('.card');
-  const listEl=card.querySelector('.c-film-list,.c-title-pills');
-  const arrow=el.querySelector('.c-expand-arrow');
-  if(!listEl) return;
-  listEl.classList.toggle('visible');arrow.classList.toggle('open');
-  const open=listEl.classList.contains('visible');
-  el.querySelector('span:first-child').textContent=open?'Ocultar programa':'Ver programa';
-  const title=card.dataset.title;
-  if(title){if(open) expandedProgs.add(title);else expandedProgs.delete(title);}
-  try{sessionStorage.setItem('ficci65_exp',JSON.stringify([...expandedProgs]));}catch(er){}
-}
-function restoreExpand(){
-  if(!expandedProgs.size) return;
-  document.querySelectorAll('.card.program[data-title]').forEach(card=>{
-    if(!expandedProgs.has(card.dataset.title)) return;
-    const listEl=card.querySelector('.c-film-list,.c-title-pills');
-    const arrow=card.querySelector('.c-expand-arrow');
-    const lbl=card.querySelector('.c-expand span:first-child');
-    if(listEl){listEl.classList.add('visible');if(arrow) arrow.classList.add('open');if(lbl) lbl.textContent='Ocultar programa';}
-  });
-}
 
 // ── Orden oficial FICCI 65 (Letterboxd) ── largometrajes primero, cortos al final
 const SECTION_ORDER_LF=[
@@ -4886,7 +4841,6 @@ function render(){
   let films=FILMS.filter(f=>f.day===activeDay);
   if(activeVenue!=='all') films=films.filter(f=>vcfg(f.venue).short===activeVenue);
   if(activeSec!=='all') films=films.filter(f=>f.section===activeSec);
-  restoreExpand();
   const cntEl=document.getElementById('cnt');
   if(activeVenue!=='all'||activeSec!=='all'){
     cntEl.innerHTML=`<b>${films.length}</b> función${films.length!==1?'es':''}`;
