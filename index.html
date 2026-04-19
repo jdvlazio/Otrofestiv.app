@@ -581,7 +581,8 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:20px;fo
 /* ── Expansión inline de funciones ── */
 .pelicula-day{font-size:10px;font-weight:700;color:var(--amber);letter-spacing:.8px;text-transform:uppercase;width:28px;flex-shrink:0}
 .pelicula-time{font-size:14px;font-weight:700;color:var(--white);flex-shrink:0;width:42px}
-.pelicula-venue{font-size:12px;color:var(--gray2);flex:1;min-width:0}
+.pelicula-venue{font-size:12px;color:var(--gray2);flex:1;min-width:0;cursor:pointer;transition:color .15s}
+.pelicula-venue:active{color:var(--amber)}
 /* ── Bottom Sheet ── */
 .pel-sheet-overlay{position:fixed;inset:0;background:rgba(0,0,0,.65);z-index:9000;opacity:0;transition:opacity .25s;pointer-events:none}
 .pel-sheet-overlay.open{opacity:1;pointer-events:all}
@@ -2272,7 +2273,7 @@ const FESTIVAL_STORAGE_KEY='ficci65_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202604192240';
+const BUILD_VERSION='202604192242';
 (function(){
   const _vk='otrofestiv_build';
   const _sk='otrofestiv_reloaded';
@@ -5420,6 +5421,22 @@ function togglePelWL(title,e){
     setTimeout(()=>openWLAdd(title),150);
   }
 }
+function filterByVenue(venue){
+  closePelSheet();
+  activeVenue=venue;
+  activeSec='all';
+  selectedIdx=null;
+  setCartelaMode('pelicula');
+  switchMainNav('mnav-cartelera');
+  showDayView();
+  // Actualizar label del dropdown de Lugar
+  const lbl=document.getElementById('vdr-label');
+  const btn=document.getElementById('vdr-btn');
+  if(lbl) lbl.textContent=venue.length>14?venue.slice(0,12)+'…':venue;
+  if(btn) btn.classList.add('active');
+  render();
+}
+
 function filterBySection(section){
   // Navegar a Cartelera · Por Película con esa sección activa
   closePelSheet();
@@ -5466,7 +5483,7 @@ function openPelSheet(title){
     return`<div class="pel-sheet-screening"${isPast?' style="opacity:.4"':''}>
       <span class="pelicula-day">${dayAbb}</span>
       <span class="pelicula-time">${s.time}</span>
-      <span class="pelicula-venue">${ICONS.pin} ${vc.short}${sl?' · '+sl:''}</span>
+      <span class="pelicula-venue" data-venue="${vc.short.replace(/"/g,'&quot;')}" onclick="filterByVenue(this.dataset.venue)">${ICONS.pin} ${vc.short}${sl?' · '+sl:''} <span style="opacity:.4;font-size:9px">›</span></span>
     </div>`;
   }).join('');
   // Lista de cortos si es programa
