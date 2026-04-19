@@ -599,7 +599,9 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:20px;fo
 .pel-sheet-title{font-size:16px;font-weight:800;color:var(--white);line-height:1.25}
 .pel-sheet-flags{font-size:13px;color:var(--gray2)}
 .pel-sheet-dur{font-size:12px;color:var(--gray2)}
-.pel-sheet-sec{font-size:11px;color:var(--orange);font-weight:600;margin-top:2px}
+.pel-sheet-sec{font-size:11px;color:var(--orange);font-weight:600;margin-top:2px;cursor:pointer;display:inline-flex;align-items:center;gap:3px;transition:opacity .15s}
+.pel-sheet-sec:active{opacity:.6}
+.pel-sheet-sec-arrow{opacity:.5;font-size:10px}
 .pel-sheet-divider{height:1px;background:var(--bdr);margin:14px 0}
 .pel-sheet-section-lbl{font-size:10px;letter-spacing:1.2px;color:var(--gray);text-transform:uppercase;font-weight:700;margin-bottom:10px}
 .pel-sheet-screening{display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid var(--bdr)}
@@ -2270,7 +2272,7 @@ const FESTIVAL_STORAGE_KEY='ficci65_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202604192237';
+const BUILD_VERSION='202604192240';
 (function(){
   const _vk='otrofestiv_build';
   const _sk='otrofestiv_reloaded';
@@ -5418,6 +5420,24 @@ function togglePelWL(title,e){
     setTimeout(()=>openWLAdd(title),150);
   }
 }
+function filterBySection(section){
+  // Navegar a Cartelera · Por Película con esa sección activa
+  closePelSheet();
+  activeSec=section;
+  activeVenue='all';
+  selectedIdx=null;
+  setCartelaMode('pelicula');
+  switchMainNav('mnav-cartelera');
+  showDayView();
+  // Actualizar label del dropdown
+  const lbl=document.getElementById('sdr-label');
+  const arr=document.getElementById('sdr-arrow');
+  const btn=document.getElementById('sdr-btn');
+  if(lbl){const short=section.replace(/^[^ ]+ /,'');lbl.textContent=short.length>16?short.slice(0,14)+'…':short;}
+  if(btn) btn.classList.add('active');
+  render();
+}
+
 function openPelSheet(title){
   const entry=Object.values((()=>{
     const m={};
@@ -5480,7 +5500,7 @@ function openPelSheet(title){
         <div class="pel-sheet-title">${displayTitle}</div>
         <div class="pel-sheet-flags">${f.flags||'🌐'}</div>
         <div class="pel-sheet-dur">${ICONS.clock} ${f.duration}</div>
-        <div class="pel-sheet-sec">${secLabel}</div>
+        ${f.section?`<div class="pel-sheet-sec" onclick="filterBySection('${f.section.replace(/'/g,'\\'')}')">${secLabel} <span class="pel-sheet-sec-arrow">›</span></div>`:''}
         ${unica?`<div style="font-size:11px;color:rgba(248,213,140,.7);font-weight:600;margin-top:3px;letter-spacing:.3px">Única función</div>`:''}
         ${f.is_cortos&&f.film_list?.length?`<div style="font-size:11px;color:var(--orange);margin-top:2px">CORTOS · ${f.film_list.length} films</div>`:''}
       </div>
