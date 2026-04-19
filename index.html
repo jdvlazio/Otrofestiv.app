@@ -270,6 +270,21 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:20px;fo
   font-weight:var(--w-semi);
 }
 .cnt-line{padding:6px var(--sp-5) 4px;font-size:var(--t-sm);color:var(--gray)}
+.carta-search-wrap{position:relative;padding:8px 12px 0}
+.carta-search{width:100%;background:var(--surf-2);border:1px solid var(--bdr);border-radius:var(--r-pill);color:var(--white);font-family:var(--font);font-size:var(--t-sm);padding:8px 12px 8px 34px;outline:none;box-sizing:border-box;transition:border-color var(--tr-base)}
+.carta-search:focus{border-color:var(--amber-30)}
+.carta-search-ico{position:absolute;left:22px;top:50%;transform:translateY(-50%);color:var(--gray2);display:flex;align-items:center;pointer-events:none}
+.carta-search-clear{position:absolute;right:22px;top:50%;transform:translateY(-50%);background:none;border:none;color:var(--gray2);cursor:pointer;display:none;align-items:center;padding:4px}
+.carta-search-clear.visible{display:flex}
+.carta-search-results{position:absolute;top:calc(100% + 4px);left:12px;right:12px;background:var(--surf);border:1px solid var(--bdr);border-radius:var(--r);z-index:200;max-height:300px;overflow-y:auto;display:none;box-shadow:0 8px 24px rgba(0,0,0,.4)}
+.carta-search-results.open{display:block}
+.carta-sr-item{display:flex;align-items:center;gap:10px;padding:10px 14px;border-bottom:1px solid var(--bdr-l);cursor:pointer;transition:background var(--tr-base)}
+.carta-sr-item:last-child{border-bottom:none}
+.carta-sr-item:active{background:var(--surf-2)}
+.carta-sr-poster{width:28px;height:42px;object-fit:cover;border-radius:3px;flex-shrink:0;background:var(--surf-2)}
+.carta-sr-info{flex:1;min-width:0}
+.carta-sr-title{font-size:var(--t-sm);font-weight:var(--w-semi);color:var(--white);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.carta-sr-meta{font-size:11px;color:var(--gray2);margin-top:1px}
 .cnt-line b{color:var(--white)}
 
 /* ════════════════════════════════════════════════════════
@@ -1535,6 +1550,12 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:20px;fo
 <div class="nav-row" id="nav-row">
   <div class="nav-tabs" id="dtabs"></div>
 </div>
+<div class="carta-search-wrap" id="carta-search-wrap">
+  <span class="carta-search-ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
+  <input type="text" id="carta-search-input" class="carta-search" placeholder="Buscar película…" oninput="onCartaSearch()" autocomplete="off" autocorrect="off">
+  <button class="carta-search-clear" id="carta-search-clear" onclick="clearCartaSearch()"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+  <div id="carta-search-results" class="carta-search-results"></div>
+</div>
 <div class="filter-row" id="filter-row">
   <div class="fdr-filters">
     <div class="fdr-wrap">
@@ -2021,7 +2042,7 @@ const FESTIVAL_STORAGE_KEY='ficci65_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202604191521';
+const BUILD_VERSION='202604192017';
 (function(){
   const _vk='otrofestiv_build';
   const _sk='otrofestiv_reloaded';
@@ -4431,6 +4452,61 @@ function renderAgenda(){
 let activeView='day',activeDay='Martes',activeVenue='all',activeSec='all',selectedIdx=null,activeMNav='mnav-cartelera';
 let cartelaMode='pelicula'; // 'horario' | 'pelicula'
 let expandedPelicula=''; // título expandido en vista Por Película
+
+/* ── BÚSQUEDA EN CARTELERA ── */
+function onCartaSearch(){
+  const inp=document.getElementById('carta-search-input');
+  const res=document.getElementById('carta-search-results');
+  const clr=document.getElementById('carta-search-clear');
+  if(!inp||!res) return;
+  const q=inp.value.trim().toLowerCase();
+  if(clr) clr.classList.toggle('visible', q.length>0);
+  if(!q){res.classList.remove('open');res.innerHTML='';return;}
+
+  // Buscar en títulos únicos (displayTitle + title original)
+  const titleMap={};
+  FILMS.forEach(f=>{if(!titleMap[f.title]) titleMap[f.title]=f;});
+  const matches=Object.values(titleMap).filter(f=>{
+    const{displayTitle}=parseProgramTitle(f.title);
+    return displayTitle.toLowerCase().includes(q)||f.title.toLowerCase().includes(q);
+  }).slice(0,8);
+
+  if(!matches.length){
+    res.innerHTML='<div style="padding:14px;text-align:center;color:var(--gray);font-size:13px">Sin resultados</div>';
+    res.classList.add('open');
+    return;
+  }
+
+  res.innerHTML=matches.map(f=>{
+    const{displayTitle,progSuffix}=parseProgramTitle(f.title);
+    const poster=f.is_cortos?makeProgramPoster(f.title):(getPosterSrc(f.title,false)||'');
+    const safeT=f.title.replace(/'/g,"\'");
+    const inWL=watchlist.has(f.title);
+    return`<div class="carta-sr-item" onclick="clearCartaSearch();openPelSheet('${safeT}')">
+      ${poster?`<img class="carta-sr-poster" src="${poster}" onerror="this.style.opacity=0" alt="">`:'<div class="carta-sr-poster"></div>'}
+      <div class="carta-sr-info">
+        <div class="carta-sr-title">${displayTitle}${progSuffix?` <span style="color:var(--orange);font-size:10px">${progSuffix}</span>`:''}</div>
+        <div class="carta-sr-meta">${f.duration||''}${f.section?' · '+f.section.replace(/^[^ ]+ /,''):''}${inWL?' · <span style="color:var(--amber)">♥</span>':''}</div>
+      </div>
+    </div>`;
+  }).join('');
+  res.classList.add('open');
+}
+
+function clearCartaSearch(){
+  const inp=document.getElementById('carta-search-input');
+  const res=document.getElementById('carta-search-results');
+  const clr=document.getElementById('carta-search-clear');
+  if(inp) inp.value='';
+  if(res){res.classList.remove('open');res.innerHTML='';}
+  if(clr) clr.classList.remove('visible');
+}
+
+// Cerrar al tocar fuera
+document.addEventListener('click',e=>{
+  const wrap=document.getElementById('carta-search-wrap');
+  if(wrap&&!wrap.contains(e.target)) clearCartaSearch();
+});
 
 /* ── NAV: navegación principal entre tabs ────────────────────────────── */
 function switchMainNav(id){
