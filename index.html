@@ -2017,7 +2017,7 @@ const FESTIVAL_STORAGE_KEY='ficci65_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202604182130';
+const BUILD_VERSION='202604190942';
 (function(){
   const _vk='otrofestiv_build';
   const _sk='otrofestiv_reloaded';
@@ -2276,7 +2276,7 @@ function renderMiPlanCalendar(){
           <div class="mplan-t2">${mplanEndStr(s.time,dur)}${isNow?` <span style="color:var(--green);font-weight:var(--w-semi)">en curso</span>`:''}</div>
         </div>
         <div class="mplan-ri">
-          <div class="mplan-rtitle">${prioritized.has(s._title)?`<span style="color:var(--orange);margin-right:4px">${ICONS.starFill}</span>`:''} ${s._title||''}</div>
+          <div class="mplan-rtitle">${prioritized.has(s._title)?`<span style="color:var(--orange);margin-right:4px">${ICONS.starFill}</span>`:''} ${(()=>{const{displayTitle:_dt,progSuffix:_ps}=parseProgramTitle(s._title||'');return _dt+(_ps?`<span style="color:var(--orange);font-size:11px;font-weight:700;margin-left:4px">${_ps}</span>`:'')})()} </div>
           <div class="mplan-rvenue">${ICONS.pin} ${vcfg(s.venue).short}${sala(s.venue)?' \u00b7 '+sala(s.venue):''}</div>
           ${(()=>{const _mf=FILMS.find(fi=>fi.title===s._title&&fi.day===s.day&&fi.time===s.time);if(!_mf||!_mf.is_cortos||!_mf.film_list||!_mf.film_list.length) return'';return`<button class="mplan-prog-toggle" onclick="toggleMplanProg(this,event)" style="display:inline-flex;align-items:center;gap:5px">${ICONS.chevronR} Programa</button>`;})()}
         </div>
@@ -3300,7 +3300,7 @@ function mkAgendaRow(s, mode='saved'){
     ${_ph}
     <div class="saved-time">${s.time}</div>
     <div class="saved-info">
-      <div class="saved-title">${t}</div>
+      <div class="saved-title">${displayTitle}${progSuffix?`<span style="color:var(--orange);font-size:11px;font-weight:700;margin-left:5px">${progSuffix}</span>`:''}</div>
       <div class="saved-venue">${ICONS.pin} ${vc2.short}${sl?' · '+sl:''}${s.duration?' · '+s.duration:''}${altBadge}</div>
       ${_progBtn}
     </div>
