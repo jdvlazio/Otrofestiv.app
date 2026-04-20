@@ -1084,6 +1084,37 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:20px;fo
 
 /* Progress festival */
 .festival-progress{padding:var(--sp-3) var(--sp-3);background:var(--amber-06);border-radius:var(--r-md);margin-bottom:var(--sp-3)}
+/* ── Header contextual de Mi Plan ── */
+.ctx-header{padding:14px 16px 12px;border-bottom:1px solid var(--bdr);background:var(--surf)}
+.ctx-eyebrow{font-size:10px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;display:flex;align-items:center;gap:5px;margin-bottom:6px}
+.ctx-main-title{font-size:17px;font-weight:800;color:var(--white);letter-spacing:-.2px;line-height:1.2;margin-bottom:3px}
+.ctx-sub{font-size:13px;color:var(--gray)}
+.ctx-prio-row{display:flex;gap:8px;margin-top:12px}
+.ctx-prio-chip{display:flex;align-items:center;gap:8px;flex:1;min-width:0;background:var(--surf-2);border:1px solid var(--amber-30);border-radius:10px;padding:8px 10px}
+.ctx-prio-thumb{width:24px;height:36px;border-radius:3px;flex-shrink:0;object-fit:cover;background:var(--surf-3)}
+.ctx-prio-name{font-size:11px;font-weight:700;color:var(--white);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ctx-prio-when{font-size:10px;color:var(--amber);margin-top:1px}
+.ctx-next-card{display:flex;align-items:center;gap:12px;background:var(--surf-2);border:1px solid var(--amber-30);border-radius:12px;padding:11px 12px;margin-top:10px}
+.ctx-next-poster{width:36px;height:54px;border-radius:5px;flex-shrink:0;object-fit:cover;background:var(--surf-3)}
+.ctx-next-title{font-size:14px;font-weight:700;color:var(--white);letter-spacing:-.1px;margin-bottom:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ctx-next-detail{font-size:11px;color:var(--gray);margin-bottom:7px}
+.ctx-next-badge{display:inline-flex;align-items:center;gap:4px;background:var(--amber);color:#000;border-radius:20px;padding:3px 10px;font-size:11px;font-weight:800}
+.ctx-gap-bar{display:flex;align-items:center;gap:6px;margin:10px 0 10px}
+.ctx-gap-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.ctx-gap-line{flex:1;height:2px;background:var(--bdr);border-radius:1px;position:relative;overflow:hidden}
+.ctx-gap-fill{position:absolute;left:0;top:0;bottom:0;background:var(--green);border-radius:1px}
+.ctx-gap-label-row{display:flex;justify-content:space-between;margin-top:3px}
+.ctx-gap-label{font-size:9px;color:var(--gray)}
+.ctx-suggest-card{display:flex;align-items:center;gap:10px;background:var(--surf-2);border:1px solid var(--green-30);border-radius:10px;padding:10px 12px}
+.ctx-suggest-badge{background:var(--green-10);border:1px solid var(--green-30);border-radius:6px;padding:4px 8px;font-size:11px;font-weight:800;color:var(--green);flex-shrink:0;text-align:center;line-height:1.3;min-width:46px}
+.ctx-suggest-title{font-size:13px;font-weight:700;color:var(--white);margin-bottom:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ctx-suggest-venue{font-size:11px;color:var(--gray)}
+.ctx-suggest-info{flex:1;min-width:0}
+.ctx-eve-films{display:flex;flex-direction:column;gap:5px;margin-top:10px}
+.ctx-eve-film{display:flex;align-items:center;gap:10px;background:var(--surf-2);border-radius:8px;border:1px solid var(--bdr);padding:8px 12px}
+.ctx-eve-film-title{flex:1;font-size:12px;font-weight:600;color:var(--white);min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ctx-eve-stars{font-size:12px;color:var(--amber);flex-shrink:0;letter-spacing:1px}
+.ctx-eve-rate{background:none;border:1px solid var(--bdr);border-radius:20px;color:var(--gray);font-size:10px;font-weight:600;font-family:var(--font);padding:3px 8px;cursor:pointer;flex-shrink:0;white-space:nowrap}
 .festival-progress-text{font-size:var(--t-sm);color:var(--gray2);margin-bottom:var(--sp-2);display:flex;justify-content:space-between}
 .festival-progress-bar{height:3px;background:var(--gray2);border-radius:2px;overflow:hidden}
 .festival-progress-fill{height:100%;background:var(--orange);border-radius:2px;transition:width var(--tr-smooth)}
@@ -2273,7 +2304,7 @@ const FESTIVAL_STORAGE_KEY='ficci65_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202604200028';
+const BUILD_VERSION='202604200040';
 (function(){
   const _vk='otrofestiv_build';
   const _sk='otrofestiv_reloaded';
@@ -3927,6 +3958,226 @@ function renderGapOptions(gapStartMin,gapEndMin,todayKey,removedTitle){
     </div>`;
   }).join('');
 }
+// ─────────────────────────────────────────────────────────────
+// HEADER CONTEXTUAL DE MI PLAN
+// Responde: ¿Qué hago ahora? Cambia según el momento del festival.
+// ─────────────────────────────────────────────────────────────
+function _getFestivalPhase(){
+  const FESTIVAL_START=new Date('2026-04-14T09:00:00');
+  const now=simNow();
+  if(festivalEnded()) return null;
+  if(!savedAgenda||!savedAgenda.schedule||!savedAgenda.schedule.length) return null;
+
+  // BEFORE: antes de que arranque el festival
+  if(now<FESTIVAL_START){
+    const msDiff=FESTIVAL_START-now;
+    const daysDiff=Math.ceil(msDiff/86400000);
+    return{phase:'before',daysDiff};
+  }
+
+  const todayStr=simTodayStr();
+  const todayDay=DAY_KEYS.find(d=>FESTIVAL_DATES[d]===todayStr);
+  if(!todayDay) return null;
+
+  const todayScreenings=savedAgenda.schedule
+    .filter(s=>s.day===todayDay)
+    .sort((a,b)=>toMin(a.time)-toMin(b.time));
+  if(!todayScreenings.length) return null;
+
+  const nowMin=now.getHours()*60+now.getMinutes();
+
+  // Clasificar funciones de hoy
+  const done=todayScreenings.filter(s=>{
+    const dur=parseInt(s.duration)||90;
+    return toMin(s.time)+dur<=nowMin;
+  });
+  const active=todayScreenings.filter(s=>{
+    const dur=parseInt(s.duration)||90;
+    const start=toMin(s.time);
+    return start<=nowMin&&start+dur>nowMin;
+  });
+  const future=todayScreenings.filter(s=>toMin(s.time)>nowMin);
+
+  // Todas las del día terminaron → EVENING
+  if(!active.length&&!future.length){
+    const todayWatched=todayScreenings.filter(s=>watched.has(s._title)||screeningPassed(s));
+    return{phase:'evening',todayScreenings,todayWatched};
+  }
+
+  const next=active.length?active[0]:future[0];
+  const nextStartMin=toMin(next.time);
+  const minsUntil=Math.max(0,nextStartMin-nowMin);
+  const lastDone=done[done.length-1];
+
+  // BETWEEN: hay hueco de más de 45 min entre función terminada y la próxima
+  if(lastDone&&!active.length&&minsUntil>45){
+    const lastDoneDur=parseInt(lastDone.duration)||90;
+    const gapFromMin=toMin(lastDone.time)+lastDoneDur;
+    const gapToMin=nextStartMin;
+    const gapMin=gapToMin-gapFromMin;
+    // Buscar sugerencia que quepa en el hueco
+    const gapSuggestion=FILMS.filter(f=>{
+      if(f.day!==todayDay) return false;
+      if(watched.has(f.title)) return false;
+      if(savedAgenda.schedule.some(s=>s._title===f.title)) return false;
+      if(screeningPassed(f)) return false;
+      const fStart=toMin(f.time);
+      const fEnd=fStart+(parseInt(f.duration)||90);
+      return fStart>=gapFromMin&&fEnd<=gapToMin+10;
+    })[0]||null;
+    return{phase:'between',next,lastDone,gapMin,gapFromMin,gapToMin,gapSuggestion,minsUntil};
+  }
+
+  // NEXT: próxima función en ≤ 45 min, o función en curso
+  return{phase:'next',next,minsUntil,isNow:active.length>0};
+}
+
+function renderContextualHeader(){
+  const ph=_getFestivalPhase();
+  if(!ph) return '';
+  const DAY_A={Martes:'MAR',Miércoles:'MIÉ',Jueves:'JUE',Viernes:'VIE',Sábado:'SÁB',Domingo:'DOM'};
+
+  // ── BEFORE ─────────────────────────────────────────────────
+  if(ph.phase==='before'){
+    const label=ph.daysDiff===1?'mañana':`en ${ph.daysDiff} días`;
+    const prios=[...prioritized]
+      .map(t=>{
+        const f=FILMS.filter(fi=>fi.title===t&&!screeningPassed(fi))
+          .sort((a,b)=>a.day_order-b.day_order||toMin(a.time)-toMin(b.time))[0];
+        return f?{t,f}:null;
+      })
+      .filter(Boolean)
+      .slice(0,2);
+    const prioHtml=prios.map(({t,f})=>{
+      const{displayTitle:dt}=parseProgramTitle(t);
+      const short=dt.length>18?dt.slice(0,16)+'…':dt;
+      const src=f.is_cortos?makeProgramPoster(t):(getPosterSrc(t,false)||'');
+      return`<div class="ctx-prio-chip">
+        ${src?`<img class="ctx-prio-thumb" src="${src}" onerror="this.style.opacity=0" alt="">`:
+              `<div class="ctx-prio-thumb"></div>`}
+        <div style="flex:1;min-width:0">
+          <div class="ctx-prio-name">${short}</div>
+          <div class="ctx-prio-when">${DAY_A[f.day]||''} · ${f.time}</div>
+        </div>
+      </div>`;
+    }).join('');
+    return`<div class="ctx-header">
+      <div class="ctx-eyebrow" style="color:var(--amber-60)">
+        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        FICCI 65
+      </div>
+      <div class="ctx-main-title">El festival empieza ${label}</div>
+      <div class="ctx-sub">Cartagena · 14–19 de abril</div>
+      ${prioHtml?`<div class="ctx-prio-row">${prioHtml}</div>`:''}
+    </div>`;
+  }
+
+  // ── NEXT ────────────────────────────────────────────────────
+  if(ph.phase==='next'){
+    const{next,minsUntil,isNow}=ph;
+    const{displayTitle:dt}=parseProgramTitle(next._title||'');
+    const vc=vcfg(next.venue);
+    const src=next.is_cortos?makeProgramPoster(next._title||''):(getPosterSrc(next._title||'',false)||'');
+    const badge=isNow
+      ?`<span class="ctx-next-badge" style="background:var(--green);color:#fff">Ahora</span>`
+      :`<span class="ctx-next-badge">En ${minsUntil} min</span>`;
+    const eyebrowLabel=isNow?'En pantalla ahora':'Próxima función';
+    return`<div class="ctx-header">
+      <div class="ctx-eyebrow" style="color:var(--amber-60)">
+        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        ${eyebrowLabel}
+      </div>
+      <div class="ctx-next-card">
+        ${src?`<img class="ctx-next-poster" src="${src}" onerror="this.style.opacity=0" alt="">`:
+              `<div class="ctx-next-poster"></div>`}
+        <div style="flex:1;min-width:0">
+          <div class="ctx-next-title">${dt}</div>
+          <div class="ctx-next-detail">${next.time} · ${vc.short}</div>
+          ${badge}
+        </div>
+      </div>
+    </div>`;
+  }
+
+  // ── BETWEEN ─────────────────────────────────────────────────
+  if(ph.phase==='between'){
+    const{gapMin,gapFromMin,gapToMin,gapSuggestion,next}=ph;
+    const h=Math.floor(gapMin/60),m=gapMin%60;
+    const gapLabel=h>0?(m>0?`${h}h ${m}min`:`${h}h`):`${m} min`;
+    const fromStr=`${String(Math.floor(gapFromMin/60)).padStart(2,'0')}:${String(gapFromMin%60).padStart(2,'0')}`;
+    const toStr=`${String(Math.floor(gapToMin/60)).padStart(2,'0')}:${String(gapToMin%60).padStart(2,'0')}`;
+    const now=simNow();
+    const nowMin=now.getHours()*60+now.getMinutes();
+    const fillPct=gapMin>0?Math.min(100,Math.round((nowMin-gapFromMin)/gapMin*100)):0;
+    const suggest=gapSuggestion?(()=>{
+      const{displayTitle:dt}=parseProgramTitle(gapSuggestion.title);
+      const vc2=vcfg(gapSuggestion.venue);
+      const dur=parseInt(gapSuggestion.duration)||90;
+      const safeT=gapSuggestion.title.replace(/'/g,"\'");
+      return`<div style="font-size:11px;color:var(--gray);margin-bottom:6px">Cabe en tu hueco</div>
+        <div class="ctx-suggest-card" onclick="openPelSheet('${safeT}')" style="cursor:pointer">
+          <div class="ctx-suggest-badge">${gapSuggestion.time}<br>${dur}m</div>
+          <div class="ctx-suggest-info">
+            <div class="ctx-suggest-title">${dt.length>26?dt.slice(0,24)+'…':dt}</div>
+            <div class="ctx-suggest-venue">${vc2.short}</div>
+          </div>
+        </div>`;
+    })():`<div style="font-size:12px;color:var(--gray)">Sin funciones disponibles en este tramo.</div>`;
+    return`<div class="ctx-header">
+      <div class="ctx-eyebrow" style="color:rgba(58,170,110,.7)">
+        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        Tiempo libre
+      </div>
+      <div class="ctx-main-title">${gapLabel} hasta tu próxima función</div>
+      <div class="ctx-gap-bar">
+        <div class="ctx-gap-dot" style="background:var(--green)"></div>
+        <div class="ctx-gap-line"><div class="ctx-gap-fill" style="width:${fillPct}%"></div></div>
+        <div class="ctx-gap-dot" style="background:var(--amber)"></div>
+      </div>
+      <div class="ctx-gap-label-row">
+        <span class="ctx-gap-label" style="color:var(--green)">${fromStr}</span>
+        <span class="ctx-gap-label">${toStr} · ${(()=>{const{displayTitle:dt}=parseProgramTitle(next._title||'');return dt.length>18?dt.slice(0,16)+'…':dt;})()} </span>
+      </div>
+      <div style="margin-top:12px">${suggest}</div>
+    </div>`;
+  }
+
+  // ── EVENING ─────────────────────────────────────────────────
+  if(ph.phase==='evening'){
+    const{todayScreenings}=ph;
+    const pendingRating=todayScreenings.filter(s=>watched.has(s._title)&&!filmRatings[s._title]);
+    const rated=todayScreenings.filter(s=>watched.has(s._title)&&filmRatings[s._title]);
+    const total=todayScreenings.filter(s=>watched.has(s._title)).length;
+    if(!total) return '';
+    const starsStr=n=>'★'.repeat(Math.round(n));
+    const filmRows=todayScreenings.filter(s=>watched.has(s._title)).map(s=>{
+      const{displayTitle:dt}=parseProgramTitle(s._title||'');
+      const short=dt.length>22?dt.slice(0,20)+'…':dt;
+      const r=filmRatings[s._title];
+      const safeT=(s._title||'').replace(/'/g,"\'");
+      const ratingEl=r
+        ?`<div class="ctx-eve-stars">${starsStr(r)}</div>`
+        :`<button class="ctx-eve-rate" onclick="openPostViewRating('${safeT}','${s.day||''}','${s.time||''}','${(s.venue||'').replace(/'/g,"\'")}','${s.duration||''}')">Calificar</button>`;
+      return`<div class="ctx-eve-film">
+        <div class="ctx-eve-film-title">${short}</div>
+        ${ratingEl}
+      </div>`;
+    }).join('');
+    const dayName=DAY_A[todayScreenings[0]?.day]||'Hoy';
+    return`<div class="ctx-header">
+      <div class="ctx-eyebrow" style="color:var(--gray)">
+        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        Tu ${dayName.toLowerCase()} en FICCI 65
+      </div>
+      <div class="ctx-main-title">${total} película${total!==1?'s':''} ${total===1?'vista':'vistas'} hoy</div>
+      ${pendingRating.length?`<div class="ctx-sub">${pendingRating.length===1?'Una pendiente de calificar.':'Podés calificarlas ahora.'}</div>`:''}
+      <div class="ctx-eve-films">${filmRows}</div>
+    </div>`;
+  }
+
+  return '';
+}
+
 function _renderSavedAgendaHTML(){
   if(!savedAgenda||!savedAgenda.schedule.length) return `<div style="text-align:center;padding:32px 20px">
       <div style="font-size:28px;margin-bottom:12px">${ICONS.calendar}</div>
@@ -3964,7 +4215,9 @@ function _renderSavedAgendaHTML(){
     <div class="festival-progress-bar"><div class="festival-progress-fill" style="width:${progressPct}%"></div></div>
   </div>`:'';
 
+  const _ctxHeader=renderContextualHeader();
   let html=`<div class="saved-agenda">
+    ${_ctxHeader}
     ${progressBar}
     <div class="saved-agenda-header">
       <div class="prio-strip-title" style="margin-bottom:0">${ICONS.calendar} Mi Plan</div>
