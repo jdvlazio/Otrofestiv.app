@@ -2427,7 +2427,7 @@ const FESTIVAL_STORAGE_KEY='ficci65_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202604201650';
+const BUILD_VERSION='202604201654';
 (function(){
   const _vk='otrofestiv_build';
   const _sk='otrofestiv_reloaded';
@@ -4819,7 +4819,7 @@ function _dlDirect(dataUrl){
   setTimeout(()=>{document.body.removeChild(a);showToast('Imagen guardada ✓','info');},200);
 }
 function exportICS(){
-  if(!savedAgenda||!savedAgenda.schedule.length){showToast('No tienes un Plan guardado','warn');return;}
+  if(!savedAgenda||!savedAgenda.schedule.length){showToast('No tienes un plan guardado','warn');return;}
   const pad=n=>String(n).padStart(2,'0');
   const fmt=dt=>`${dt.getFullYear()}${pad(dt.getMonth()+1)}${pad(dt.getDate())}T${pad(dt.getHours())}${pad(dt.getMinutes())}00`;
   const lines=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//FICCI65//ES','CALSCALE:GREGORIAN','METHOD:PUBLISH'];
@@ -6122,7 +6122,7 @@ function openPelSheet(title){
         <div class="pel-sheet-dur">${ICONS.clock} ${f.duration}</div>
         ${f.section?`<div class="pel-sheet-sec" data-sec="${f.section.replace(/"/g,'&quot;')}" onclick="filterBySection(this.dataset.sec)">${secLabel} <span class="pel-sheet-sec-arrow">›</span></div>`:''}
         ${unica?`<div style="font-size:var(--t-sm);color:rgba(248,213,140,.7);font-weight:600;margin-top:3px;letter-spacing:.3px">Única función</div>`:''}
-        ${f.is_cortos&&f.film_list?.length?`<div style="font-size:var(--t-sm);color:var(--orange);margin-top:2px">CORTOS · ${f.film_list.length} films</div>`:''}
+        ${f.is_cortos&&f.film_list?.length?`<div style="font-size:var(--t-sm);color:var(--orange);margin-top:2px">${f.film_list.length} corto${f.film_list.length!==1?'s':''}</div>`:''}
       </div>
     </div>
     <div class="pel-sheet-divider"></div>
