@@ -2406,7 +2406,7 @@ const FESTIVAL_STORAGE_KEY='ficci65_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202604201357';
+const BUILD_VERSION='202604201404';
 (function(){
   const _vk='otrofestiv_build';
   const _sk='otrofestiv_reloaded';
@@ -5507,13 +5507,32 @@ function onCartaSearch(){
   if(clr) clr.classList.toggle('visible', q.length>0);
   if(!q){res.classList.remove('open');res.innerHTML='';return;}
 
-  // Buscar en títulos únicos (displayTitle + title original)
+  // Buscar en títulos únicos (programas + cortos individuales en film_list)
   const titleMap={};
   FILMS.forEach(f=>{if(!titleMap[f.title]) titleMap[f.title]=f;});
-  const matches=Object.values(titleMap).filter(f=>{
+  const progMatches=Object.values(titleMap).filter(f=>{
     const{displayTitle}=parseProgramTitle(f.title);
     return displayTitle.toLowerCase().includes(q)||f.title.toLowerCase().includes(q);
-  }).slice(0,8);
+  });
+  // Buscar también en cortos individuales dentro de film_list
+  const cortoMatches=[];
+  FILMS.filter(f=>f.is_cortos&&f.film_list?.length).forEach(prog=>{
+    prog.film_list.forEach(item=>{
+      if(item.title.toLowerCase().includes(q)){
+        // Crear pseudo-entrada para el corto individual
+        cortoMatches.push({
+          _isCortoItem:true, _prog:prog,
+          title:item.title, country:item.country, duration:item.duration,
+          flags:countryToFlags(item.country||''), section:prog.section,
+          is_cortos:false
+        });
+      }
+    });
+  });
+  // Combinar — programas primero, cortos individuales después
+  const allMatches=[...progMatches,...cortoMatches];
+  const seen=new Set();
+  const matches=allMatches.filter(f=>{if(seen.has(f.title))return false;seen.add(f.title);return true;}).slice(0,10);
 
   if(!matches.length){
     res.innerHTML='<div style="padding:14px;text-align:center;color:var(--gray);font-size:13px">Sin resultados</div>';
@@ -5523,10 +5542,15 @@ function onCartaSearch(){
 
   res.innerHTML=matches.map(f=>{
     const{displayTitle,progSuffix}=parseProgramTitle(f.title);
-    const poster=f.is_cortos?makeProgramPoster(f.title):(getPosterSrc(f.title,false)||'');
+    const poster=f._isCortoItem?(getPosterSrc(f.title,false)||makeProgramPoster(f.title)):(f.is_cortos?makeProgramPoster(f.title):(getPosterSrc(f.title,false)||''));
     const safeT=f.title.replace(/'/g,"\'");
+    const safeC=(f.country||'').replace(/'/g,"\'");
+    const safeD=(f.duration||'').replace(/'/g,"\'");
+    const safeS=(f.section||'').replace(/'/g,"\'");
+    const safeF=(f.flags||'🌍').replace(/'/g,"\'");
     const inWL=watchlist.has(f.title);
-    return`<div class="carta-sr-item" onclick="clearCartaSearch();openPelSheet('${safeT}')">
+    const onclick=f._isCortoItem?`clearCartaSearch();openCortoSheet('${safeT}','${safeC}','${safeD}','${safeS}','${safeF}')`:`clearCartaSearch();openPelSheet('${safeT}')`;
+    return`<div class="carta-sr-item" onclick="${onclick}">
       ${poster?`<img class="carta-sr-poster" src="${poster}" onerror="this.style.opacity=0" alt="">`:'<div class="carta-sr-poster"></div>'}
       <div class="carta-sr-info">
         <div class="carta-sr-title">${displayTitle}${progSuffix?` <span style="color:var(--orange);font-size:10px">${progSuffix}</span>`:''}</div>
@@ -6140,6 +6164,7 @@ function openCortoSheet(title, country, duration, section, flags){
         ${secShort?`<div class="pel-sheet-sec">${secShort}</div>`:''}
         ${country?`<div style="font-size:11px;color:var(--gray);margin-top:3px">${country}</div>`:''}
         <div style="font-size:11px;color:var(--orange);margin-top:3px;font-weight:600">Cortometraje</div>
+        ${(()=>{const prog=FILMS.find(p=>p.is_cortos&&p.film_list?.some(c=>c.title===title));if(!prog)return'';const safeP=prog.title.replace(/'/g,"\'");const{displayTitle:dp}=parseProgramTitle(prog.title);return`<div style="font-size:10px;color:var(--gray2);margin-top:4px;cursor:pointer;text-decoration:underline;text-underline-offset:2px" onclick="closePelSheet();setTimeout(()=>openPelSheet('${safeP}'),50)">Parte de ${dp} ›</div>`;})()}
       </div>
     </div>
     <div class="pel-sheet-divider"></div>
