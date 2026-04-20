@@ -502,7 +502,6 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 ════════════════════════════════════════════════════════ */
 
 /* ── CARTELERA ── */
-.programa-view{display:block}
 .grid{padding:var(--sp-3) var(--sp-3) 60px;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:var(--sp-3);overflow:visible;grid-auto-rows:minmax(210px,auto)}
 
 /* Card */
@@ -1278,31 +1277,33 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 
 @media(min-width:768px){
 
-  /* ── VARIABLES DESKTOP ── */
+  /* ── VARIABLES ── */
   :root{
-    --content-w: 960px;            /* ancho máximo del contenido         */
-    --content-pad: var(--sp-5);    /* padding horizontal del contenido   */
-    --tb-h: 44px;                  /* altura del topbar                  */
-    --mn-h: 44px;                  /* altura del main-nav                */
-    --sticky-top-carta: calc(var(--tb-h) + var(--mn-h));
-    --sticky-top-chips: calc(var(--tb-h) + var(--mn-h) + 40px);
-    --poster-lg-w: 112px;
-    --poster-lg-h: 168px;
+    --content-w:960px;
+    --content-pad:var(--sp-5);
+    --tb-h:44px;
+    --mn-h:44px;
+    --sticky-top-carta:calc(var(--tb-h) + var(--mn-h));
+    --sticky-top-chips:calc(var(--tb-h) + var(--mn-h) + 40px);
+    --poster-lg-w:112px;
+    --poster-lg-h:168px;
   }
 
-  /* ── TOPBAR — sticky, fondo full-width, contenido centrado ── */
+  html{scrollbar-gutter:stable}
+
+  /* ── TOPBAR — sticky, bg full-width ── */
   .topbar{
     position:sticky;top:0;z-index:200;
     background:var(--surf);border-bottom:1px solid var(--bdr);
   }
+
+  /* Contenido del topbar centrado a 960px */
   .hdr{
     height:var(--tb-h);
     max-width:var(--content-w);
     margin:0 auto;
     padding:0 var(--content-pad);
   }
-
-  /* ── FESTIVAL BAR — dentro del topbar, centrada ── */
   .hdr-fest-bar{
     max-width:var(--content-w);
     margin:0 auto;
@@ -1313,7 +1314,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
   }
   .hdr-fest-bar:hover{background:transparent}
 
-  /* ── MAIN NAV — sticky bajo el topbar, full-width bg, contenido centrado ── */
+  /* ── MAIN NAV — sticky, bg full-width, tabs centrados ── */
   .main-nav{
     position:sticky !important;
     top:var(--tb-h) !important;
@@ -1321,18 +1322,17 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
     left:auto !important;
     right:auto !important;
     z-index:199;
-    width:100%;
-    max-width:100%;
     border-top:none !important;
     border-bottom:1px solid var(--bdr) !important;
-    padding:0 max(var(--content-pad),calc((100vw - var(--content-w)) / 2)) !important;
+    padding:0 !important;
     background:var(--surf);
     display:flex;
-    justify-content:flex-start;
+    justify-content:center;
+    padding-bottom:0 !important;
   }
   .main-nav-tab{
     flex:1 !important;
-    max-width:140px !important;
+    max-width:160px !important;
     height:var(--mn-h) !important;
     flex-direction:row !important;
     gap:var(--sp-2) !important;
@@ -1341,9 +1341,8 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
     border-top:none !important;
     margin-bottom:-1px !important;
     margin-top:0 !important;
-    font-size:var(--t-sm) !important;
-    letter-spacing:.02em;
     justify-content:center !important;
+    font-size:var(--t-sm) !important;
   }
   .main-nav-tab.on{
     border-bottom-color:var(--orange) !important;
@@ -1353,98 +1352,106 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
   .main-nav-ico svg{width:14px;height:14px}
   .main-nav-lbl{font-size:var(--t-sm)}
 
-  /* ── SUB-NAV ROWS — centrados ── */
+  /* ── MIXIN CENTRADO — aplicado a cada elemento individualmente ── */
+  /* Todos los elementos de Programa y contenido general */
+  .carta-search-wrap,
+  .programa-mode-bar,
+  .programa-chips,
+  .programa-active-filter,
+  .nav-row,
+  .filter-row,
+  .hint,
+  .cnt-line,
+  .grid,
+  .ag-view,
+  #cartelera-stepper,
+  #cartelera-cta{
+    max-width:var(--content-w);
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+  /* ── BUSCADOR DE PROGRAMA ── */
+  .carta-search-wrap{
+    padding-left:var(--content-pad);
+    padding-right:var(--content-pad);
+    margin-top:var(--sp-2);
+  }
+
+  /* ── MODE BAR Y CHIPS — padding consistente ── */
+  .programa-mode-bar{
+    padding-left:var(--content-pad);
+    padding-right:var(--content-pad);
+  }
+  .programa-chips{
+    padding-left:var(--content-pad);
+    padding-right:var(--content-pad);
+  }
+  .programa-active-filter{
+    padding-left:var(--content-pad);
+    padding-right:var(--content-pad);
+  }
+
+  /* ── NAV-ROW Y FILTER-ROW — sticky bajo el nav ── */
   .nav-row{
-    position:sticky;top:var(--sticky-top-carta);z-index:198;
+    position:sticky;
+    top:var(--sticky-top-carta);
+    z-index:198;
     background:var(--bg);
-    max-width:var(--content-w);width:100%;
-    margin-left:auto;margin-right:auto;
+    width:100%;
+    padding-left:var(--content-pad);
+    padding-right:var(--content-pad);
   }
   .filter-row{
-    position:sticky;top:var(--sticky-top-carta);z-index:197;
+    position:sticky;
+    top:var(--sticky-top-carta);
+    z-index:197;
     background:var(--bg);
-    max-width:var(--content-w);width:100%;
-    margin-left:auto;margin-right:auto;
+    width:100%;
+    padding-left:var(--content-pad);
+    padding-right:var(--content-pad);
   }
-  /* programa-mode-bar y chips: centrado via .programa-view wrapper */
 
-  /* ── CONTENIDO PRINCIPAL — centrado a 960px ── */
+  /* ── CONTENIDO PRINCIPAL ── */
+  .hint{padding-left:var(--content-pad);padding-right:var(--content-pad)}
+  .cnt-line{padding-left:var(--content-pad);padding-right:var(--content-pad)}
+  #cartelera-cta{padding-left:var(--content-pad);padding-right:var(--content-pad)}
 
-  /* Programa: wrapper único que contiene search, mode-bar, chips, grid, etc */
-  .programa-view{
-    max-width:var(--content-w);
-    margin:0 auto;
-    padding:0 var(--content-pad);
-  }
-  /* Los hijos del wrapper no necesitan max-width ni margen propio */
-  .programa-view .carta-search-wrap{
-    margin-left:0;margin-right:0;
-  }
-  .programa-view .programa-mode-bar,
-  .programa-view .programa-chips,
-  .programa-view .filter-row{
-    padding-left:0;padding-right:0;
-    margin-left:calc(-1 * var(--content-pad));
-    margin-right:calc(-1 * var(--content-pad));
-    width:calc(100% + 2 * var(--content-pad));
-  }
-  .programa-view .cartelera-cta{
-    margin-left:calc(-1 * var(--content-pad));
-    margin-right:calc(-1 * var(--content-pad));
-    width:calc(100% + 2 * var(--content-pad));
-  }
   .grid{
-    padding-left:0;padding-right:0;
-    padding-bottom:var(--sp-6);
-    grid-template-columns:repeat(auto-fill,minmax(min(100%,280px),1fr));
-  }
-  .ag-view{
-    max-width:var(--content-w);
-    margin-left:auto;margin-right:auto;
     padding-left:var(--content-pad);
     padding-right:var(--content-pad);
     padding-bottom:var(--sp-6);
     padding-top:var(--sp-3);
-  }
-  .hint{
-    max-width:var(--content-w);
-    margin-left:auto;margin-right:auto;
-    padding-left:var(--content-pad);
-    padding-right:var(--content-pad);
-  }
-  .cnt-line{
-    max-width:var(--content-w);
-    margin-left:auto;margin-right:auto;
-    padding-left:var(--content-pad);
-    padding-right:var(--content-pad);
+    grid-template-columns:repeat(auto-fill,minmax(min(100%,260px),1fr));
   }
 
-  /* ── GRIDS EN DESKTOP — más columnas ── */
-  .ag-film-grid{
-    grid-template-columns:repeat(6,1fr) !important;
-  }
-  .poster-grid{
-    grid-template-columns:repeat(6,1fr);
+  .ag-view{
+    padding-left:var(--content-pad);
+    padding-right:var(--content-pad);
+    padding-top:var(--sp-3);
+    padding-bottom:var(--sp-6);
   }
 
-  /* ── INTERESES — hover overlay (no touch) ── */
-  .ag-fi-overlay,.ag-fi-bottom,.ag-fi-actions{
-    opacity:0;transition:opacity var(--tr-base);
-  }
+  /* ── GRIDS EN DESKTOP ── */
+  .ag-film-grid{grid-template-columns:repeat(6,1fr) !important}
+  .poster-grid{grid-template-columns:repeat(6,1fr)}
+
+  /* ── INTERESES — hover reveal ── */
+  .ag-fi-overlay,.ag-fi-bottom,.ag-fi-actions{opacity:0;transition:opacity var(--tr-base)}
   .ag-film-item.ag-prog .ag-fi-overlay,
   .ag-film-item.ag-prog .ag-fi-bottom{opacity:1}
   .ag-film-item:hover .ag-fi-overlay,
   .ag-film-item:hover .ag-fi-bottom,
   .ag-film-item:hover .ag-fi-actions{opacity:1}
 
-  /* ── CARDS DE PROGRAMA — hover state ── */
+  /* ── CARDS DE PROGRAMA — hover ── */
   .card:hover:not(.conflict){
     transform:translateY(-2px);
     box-shadow:0 8px 24px var(--overlay-60);
     border-color:var(--amber-35);
   }
 
-  /* ── AG-FI-BTN — más padding en desktop ── */
+  /* ── BOTONES DE ACCIÓN EN INTERESES ── */
   .ag-fi-actions{gap:var(--sp-1)}
   .ag-fi-btn{padding:var(--sp-1) var(--sp-2)}
 
@@ -1458,8 +1465,21 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
     max-width:300px;
   }
 
-  /* ── SCROLLBAR ── */
-  html{scrollbar-gutter:stable}
+  /* ── SPLASH SELECTOR — centrado, ancho cómodo ── */
+  #otrofestiv-splash{padding:var(--sp-6) var(--sp-7)}
+  .splash-tagline{max-width:560px}
+  .splash-selector{max-width:400px}
+
+  /* ── WELCOME OVERLAY — modal centrado ── */
+  .welcome-overlay{align-items:center;justify-content:center}
+  .welcome-sheet{
+    border-radius:var(--r);
+    border-top:none;
+    border:1px solid var(--bdr);
+    padding:var(--sp-6) var(--sp-5);
+    box-shadow:0 24px 80px rgba(0,0,0,.6);
+    max-width:420px;
+  }
 }
 /* Touch devices — overlay always visible regardless of screen width */
 @media (hover: none) {
@@ -1941,7 +1961,6 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
   <div class="pel-sheet-topbar"><div class="pel-sheet-handle"></div><button class="pel-sheet-close" onclick="closePelSheet()"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button></div>
   <div class="pel-sheet-inner" id="pel-sheet-inner"></div>
 </div>
-<div class="programa-view" id="programa-view">
 <div class="carta-search-wrap" id="carta-search-wrap">
   <div class="carta-search-field">
     <span class="carta-search-ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
@@ -2012,7 +2031,6 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 </div>
 <div class="cnt-line" id="cnt"></div>
 <div class="grid" id="grid"></div>
-</div><!-- /programa-view -->
 <div class="ag-view" id="ag-view"></div>
 
 <script>
@@ -2469,7 +2487,7 @@ const FESTIVAL_STORAGE_KEY='ficci65_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202604202113';
+const BUILD_VERSION='202604202119';
 (function(){
   const _vk='otrofestiv_build';
   const _sk='otrofestiv_reloaded';
