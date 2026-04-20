@@ -563,6 +563,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:20px;fo
 /* Chips de categoría (solo Explorar) */
 .programa-chips{display:flex;gap:6px;padding:8px 12px;overflow-x:auto;scrollbar-width:none;flex-shrink:0;border-bottom:1px solid var(--bdr-l);background:var(--surf);position:sticky;top:var(--sticky-top-chips);z-index:119}
 .programa-chips::-webkit-scrollbar{display:none}
+.programa-chips{-webkit-overflow-scrolling:touch}
 .programa-chips.hidden{display:none}
 .pchip{flex-shrink:0;font-size:11px;font-weight:700;color:var(--gray);background:none;border:1px solid var(--bdr);border-radius:20px;padding:5px 12px;cursor:pointer;font-family:var(--font);white-space:nowrap;transition:all .15s}
 .pchip.on{background:var(--amber-10);border-color:var(--amber-30);color:var(--amber)}
@@ -2387,7 +2388,7 @@ const FESTIVAL_STORAGE_KEY='ficci65_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202604201255';
+const BUILD_VERSION='202604201309';
 (function(){
   const _vk='otrofestiv_build';
   const _sk='otrofestiv_reloaded';
@@ -2797,6 +2798,10 @@ function toggleWL(title,e){
   }
   saveState('wl','watched');updateCardState(title);updateAgTab();
   if(activeView==='agenda'){cachedResult=null;renderAgenda();}
+  else if(activeView==='day'&&activeMNav==='mnav-cartelera'){
+    // Re-renderizar el grid de Programa para reflejar el cambio de ♥
+    _renderProgramaContent();
+  }
 }
 function toggleWatched(title,e){
   if(e) e.stopPropagation();
@@ -4156,17 +4161,22 @@ function renderContextualHeader(){
             </div>`}
       </div>`;
     }).join('');
-    const subMsg=pendingRatings>0
-      ?`${pendingRatings} película${pendingRatings!==1?'s':''} por calificar`
-      :`¡Gracias por estar en el FICCI!`;
+    const subMsg=totalWatched===0
+      ?'Explorá el programa del próximo festival'
+      :pendingRatings>0
+        ?`${pendingRatings} película${pendingRatings!==1?'s':''} por calificar`
+        :'¡Gracias por estar en el FICCI!';
+    const mainTitle=totalWatched===0
+      ?'FICCI 65 ha terminado'
+      :`Viste ${totalWatched} película${totalWatched!==1?'s':''}`;
     return`<div class="ctx-header" style="background:linear-gradient(180deg,rgba(245,158,11,.06) 0%,transparent 100%)">
       <div class="ctx-eyebrow" style="color:var(--amber-60)">
         <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
         FICCI 65 · 14–19 ABR 2026
       </div>
-      <div class="ctx-main-title">Viste ${totalWatched} película${totalWatched!==1?'s':''}</div>
+      <div class="ctx-main-title">${mainTitle}</div>
       <div class="ctx-sub" style="margin-bottom:${totalWatched?'12px':'0'}">${subMsg}</div>
-      ${totalWatched?`<div style="display:flex;gap:8px;overflow-x:auto;padding-bottom:2px;scrollbar-width:none">${watchedFilms}</div>`:''}
+      ${totalWatched?`<div style="display:flex;gap:8px;overflow-x:auto;padding-bottom:2px;scrollbar-width:none;-webkit-overflow-scrolling:touch">${watchedFilms}</div>`:''}
     </div>`;
   }
 
@@ -6348,7 +6358,7 @@ function renderPeliculaView(){
     const posterImg=posterSrc
       ?`<img src="${posterSrc}" loading="lazy" style="width:100%;height:100%;object-fit:cover${allPast?';opacity:.45':''};display:block" onerror="this.style.opacity=0" alt="">`
       :``;
-    return`<div class="poster-card${inWL?' in-wl':''}${inW?' in-watched':''}" onclick="openPelSheet('${safeT}')">
+    return`<div class="poster-card${inWL?' in-wl':''}${inW?' in-watched':''}" data-title="${f.title.replace(/"/g,'&quot;')}" onclick="openPelSheet('${safeT}')">
       ${posterImg}
       ${progBadge}
       ${inWL?`<div class="poster-wl-dot">${ICONS.heartFill}</div>`:''}
