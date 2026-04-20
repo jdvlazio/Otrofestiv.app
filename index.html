@@ -124,6 +124,8 @@
   --poster-xs-h: 60px;
   --poster-md-w: 72px;   /* chip standalone: Prio strip                    */
   --poster-md-h: 108px;
+  --poster-lg-w: 96px;   /* sheet de película/corto                         */
+  --poster-lg-h: 144px;
   --poster-lg-w: 96px;   /* card descubrimiento: Cartelera                 */
   --poster-lg-h: 144px;
 
@@ -605,6 +607,9 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:20px;fo
  * Ratio 2:3 → 177px alto. Estándar one-sheet cinematográfico.          */
 .poster-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding:10px}
 .poster-card{position:relative;border-radius:6px;overflow:hidden;cursor:pointer;background:var(--surf-2);aspect-ratio:2/3;display:block}
+.ended-poster .ended-poster-footer{position:absolute;bottom:0;left:0;right:0;padding:16px 6px 6px;background:linear-gradient(to top,rgba(0,0,0,.8),transparent);display:flex;flex-direction:column;gap:2px;align-items:center}
+.ended-poster-title{font-size:9px;color:rgba(255,255,255,.8);text-align:center;line-height:1.2;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;max-width:100%}
+.ended-rate-btn{background:rgba(0,0,0,.6);border:1px solid rgba(255,255,255,.2);border-radius:var(--r-pill);color:var(--white);font-size:9px;font-weight:var(--w-bold);font-family:var(--font);padding:2px 6px;cursor:pointer}
 .poster-card img{width:100%;height:100%;object-fit:cover;display:block}
 .poster-card.in-wl{outline:2px solid var(--amber-30);outline-offset:-2px}
 .poster-card.in-watched{opacity:.45}
@@ -641,6 +646,8 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:20px;fo
 .pel-sheet-close{position:absolute;right:12px;top:6px;background:var(--surf-2);border:none;color:var(--gray2);width:28px;height:28px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:16px;line-height:1}
 .pel-sheet-close:active{background:var(--bdr)}
 .pel-sheet-inner{padding:14px 16px 32px}
+.pel-sheet-poster{width:var(--poster-lg-w);height:var(--poster-lg-h);object-fit:cover;border-radius:var(--r-md);flex-shrink:0;display:block;background:var(--surf-2)}
+.pel-sheet-poster-ph{width:var(--poster-lg-w);height:var(--poster-lg-h);border-radius:var(--r-md);background:var(--surf-2);flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:32px}
 .pel-sheet-header{display:flex;gap:14px;margin-bottom:16px}
 .pel-sheet-poster{width:90px;height:135px;border-radius:8px;object-fit:cover;flex-shrink:0;background:var(--surf-2)}
 .pel-sheet-poster-ph{width:90px;height:135px;border-radius:8px;background:var(--surf-2);display:flex;align-items:center;justify-content:center;font-size:32px;flex-shrink:0}
@@ -2406,7 +2413,7 @@ const FESTIVAL_STORAGE_KEY='ficci65_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202604201507';
+const BUILD_VERSION='202604201510';
 (function(){
   const _vk='otrofestiv_build';
   const _sk='otrofestiv_reloaded';
@@ -4187,12 +4194,14 @@ function renderContextualHeader(){
       const safeT=t.replace(/'/g,"\'");
       const stars=r?'★'.repeat(Math.round(r)):'';
       // Posters grandes, plena opacidad — pensado para screenshot
-      return`<div style="cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:6px" onclick="openPelSheet('${safeT}')">
-        ${src?`<img src="${src}" style="width:100%;aspect-ratio:2/3;object-fit:cover;border-radius:10px;display:block;box-shadow:0 4px 16px rgba(0,0,0,.6)" onerror="this.style.display='none'" alt="">`
-             :`<div style="width:100%;aspect-ratio:2/3;border-radius:10px;background:var(--surf-3);display:flex;align-items:center;justify-content:center;font-size:28px">🎬</div>`}
-        ${r?`<div style="font-size:12px;color:var(--amber);letter-spacing:1px;text-align:center">${stars}</div>`
-           :f?.is_cortos?'':`<button onclick="event.stopPropagation();openPostViewRating('${safeT}','','','','')" style="background:var(--surf-2);border:1px solid var(--bdr);border-radius:20px;color:var(--gray);font-size:10px;font-weight:700;font-family:var(--font);padding:3px 8px;cursor:pointer">★</button>`}
-        <div style="font-size:10px;color:var(--gray2);text-align:center;line-height:1.3;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${dt}</div>
+      // Usar poster-card existente — mismo patrón que Hoy/Mañana
+      return`<div class="poster-card ended-poster" onclick="openPelSheet('${safeT}')">
+        ${src?`<img src="${src}" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block" onerror="this.style.opacity=0" alt="">`:``}
+        <div class="ended-poster-footer">
+          ${r?`<div style="font-size:var(--t-xs);color:var(--amber);letter-spacing:1px">${stars}</div>`
+             :f?.is_cortos?`<div></div>`:`<button class="ended-rate-btn" onclick="event.stopPropagation();openPostViewRating('${safeT}','','','','')">★</button>`}
+          <div class="ended-poster-title">${dt}</div>
+        </div>
       </div>`;
     }).join('');
     const subMsg=totalWatched===0
@@ -4211,7 +4220,7 @@ function renderContextualHeader(){
       </div>
       <div class="ctx-main-title">${mainTitle}</div>
       <div class="ctx-sub" style="margin-bottom:${totalWatched?'12px':'0'}">${subMsg}</div>
-      ${totalWatched?`<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;padding:4px 0 8px">${watchedFilms}</div>`:''}
+      ${totalWatched?`<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding:4px 0 8px">${watchedFilms}</div>`:''}
     </div>`;
   }
 
@@ -6020,7 +6029,7 @@ function openPelSheet(title){
   const inWL=watchlist.has(f.title),inW=watched.has(f.title),inPrio=prioritized.has(f.title);
   const posterSrc=f.is_cortos?makeProgramPoster(f.title):getPosterSrc(f.title,false);
   const posterHtml=posterSrc
-    ?`<img class="pel-sheet-poster" src="${posterSrc}" loading="lazy" style="object-fit:cover" onerror="this.outerHTML='<div class=pel-sheet-poster-ph>🎬</div>'" alt="">`
+    ?`<img class="pel-sheet-poster" src="${posterSrc}" loading="lazy" onerror="this.outerHTML='<div class=pel-sheet-poster-ph>🎬</div>'" alt="">`
     :`<div class="pel-sheet-poster-ph">🎬</div>`;
   const{displayTitle}=parseProgramTitle(f.title);
   const secLabel=f.section?f.section.replace(/^[^ ]+ /,''):'';
@@ -6045,7 +6054,7 @@ function openPelSheet(title){
   if(f.is_cortos&&f.film_list?.length){
     const cortoItems=f.film_list.map((item,n)=>{
       const thumb=getPosterSrc(item.title,false)||makeProgramPoster(item.title);
-      const thumbHtml=`<img src="${thumb}" loading="lazy" style="width:40px;height:60px;object-fit:cover;border-radius:5px;flex-shrink:0" onerror="this.style.opacity=0" alt="">`;
+      const thumbHtml=`<img src="${thumb}" loading="lazy" class="lb-poster" onerror="this.style.opacity=0" alt="">`;
       const r=filmRatings[item.title]||0;
       const safeCorto=item.title.replace(/'/g,"\'");
       const safeCountry=(item.country||'').replace(/'/g,"\'");
@@ -6210,8 +6219,8 @@ function openCortoSheet(title, country, duration, section, flags){
   const displayFlags=(!flags||flags==='🌍'||flags==='🎬'||flags==='⏳'||flags==='🌊'||flags==='🌎'||flags==='✊'||flags==='🪶'||flags==='🏆'||flags==='⭐'||flags==='🎨'||flags==='🏛️')?countryToFlags(country):flags;
   const posterSrc=getPosterSrc(title,false)||makeProgramPoster(title);
   const posterHtml=posterSrc
-    ?`<img src="${posterSrc}" loading="lazy" style="width:96px;height:144px;object-fit:cover;border-radius:var(--r-md);flex-shrink:0" onerror="this.style.opacity=0" alt="">`
-    :`<div style="width:96px;height:144px;border-radius:var(--r-md);background:var(--surf-2);flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:32px">🎬</div>`;
+    ?`<img class="pel-sheet-poster" src="${posterSrc}" loading="lazy" onerror="this.style.opacity=0" alt="">`
+    :`<div class="pel-sheet-poster-ph">🎬</div>`;
   const r=filmRatings[title]||0;
   const secShort=(section||'').replace(/^[^ ]+ /,'');
   const lbLink=LB_SLUGS[title]?`<a class="c-lb" href="${lbUrl(title)}" target="_blank" rel="noopener" style="display:inline-flex;margin-top:14px;margin-bottom:2px">${LB_SVG}<span class="c-lb-text">Letterboxd</span></a>`:'';
