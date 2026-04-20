@@ -2406,7 +2406,7 @@ const FESTIVAL_STORAGE_KEY='ficci65_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202604201423';
+const BUILD_VERSION='202604201429';
 (function(){
   const _vk='otrofestiv_build';
   const _sk='otrofestiv_reloaded';
@@ -3537,7 +3537,7 @@ function renderPrioStrip(){
     const img=p?`<img class="prio-chip-poster" src="${p}" loading="lazy" style="object-fit:cover;cursor:pointer" onclick="event.stopPropagation();openPelSheet('${_safeChipT}')" onerror="this.outerHTML='<div class=prio-chip-ph>🎬</div>'" alt="">`:`<div class="prio-chip-ph">${ICONS.star}</div>`;
     const{displayTitle,progSuffix}=parseProgramTitle(t);
     const short=displayTitle.length>16?displayTitle.slice(0,14)+'…':displayTitle;
-    const allPast=!FILMS.some(f=>f.title===t&&!screeningPassed(f));
+    const allPast=!festivalEnded()&&!FILMS.some(f=>f.title===t&&!screeningPassed(f));
     return`<div class="prio-chip${allPast?' past':''}">
       ${img}
       <button class="prio-chip-rm" data-prio-title="${t.replace(/"/g,'&quot;')}" onclick="event.stopPropagation();togglePriority(this.dataset.prioTitle)" title="Quitar prioridad">${ICONS.x}</button>
@@ -6111,6 +6111,10 @@ window.addEventListener('popstate',function(e){
 function _pushSheetState(){
   try{history.pushState({sheet:true},'','');}catch(e){}
 }
+// ESC cierra el sheet activo (útil en desktop/tablet)
+document.addEventListener('keydown',function(e){
+  if(e.key==='Escape') _closeTopSheet();
+});
 (function(){
   let _startY=0,_dragging=false;
   document.addEventListener('DOMContentLoaded',()=>{});
@@ -6429,10 +6433,16 @@ function _updateProgramaActiveFilter(){
 function renderProgramaChips(){
   const el=document.getElementById('programa-chips');
   if(!el) return;
-  el.innerHTML=PROGRAMA_CHIPS.map(chip=>`
-    <div class="pchip${chip.id===programaChip?' on':''}" data-chip="${chip.id}"
-         onclick="setProgramaChip('${chip.id}')">${chip.label}</div>
-  `).join('');
+  // Contar películas únicas por chip
+  const titleSet={};
+  FILMS.forEach(f=>{if(!titleSet[f.title])titleSet[f.title]=f;});
+  const allFilms=Object.values(titleSet);
+  el.innerHTML=PROGRAMA_CHIPS.map(chip=>{
+    const count=chip.match?allFilms.filter(f=>chip.match(f.section||'')).length:allFilms.length;
+    const label=chip.id==='all'?chip.label:`${chip.label}<span style="font-size:9px;opacity:.6;margin-left:3px">${count}</span>`;
+    return`<div class="pchip${chip.id===programaChip?' on':''}" data-chip="${chip.id}"
+         onclick="setProgramaChip('${chip.id}')">${label}</div>`;
+  }).join('');
 }
 
 function renderProgramaList(){
