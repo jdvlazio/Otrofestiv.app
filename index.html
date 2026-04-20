@@ -2378,7 +2378,7 @@ const FESTIVAL_STORAGE_KEY='ficci65_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202604200232';
+const BUILD_VERSION='202604200233';
 (function(){
   const _vk='otrofestiv_build';
   const _sk='otrofestiv_reloaded';
@@ -5356,6 +5356,7 @@ let cartelaMode='pelicula'; // 'horario' | 'pelicula' (interno)
 let programaSubMode='explorar'; // 'explorar' | 'hoy' | 'manana'
 let programaViewMode='grid';    // 'grid' | 'list'
 let programaChip='all';         // chip activo en Explorar
+let _programaChipMatchFn=null;  // función de match activa para filtrar
 
 // Definición de chips de categoría — agrupan las secciones reales de FICCI
 const PROGRAMA_CHIPS=[
@@ -5363,7 +5364,7 @@ const PROGRAMA_CHIPS=[
   {id:'colombia', label:'🇨🇴 Colombia',    match:s=>s.includes('Colombia')},
   {id:'ibero',    label:'🌎 Iberoamérica', match:s=>s.includes('Iberoamérica')},
   {id:'inter',    label:'🌍 Internacional', match:s=>s.includes('Internacional')},
-  {id:'spaces',   label:'⏳ (s)paces',     match:s=>s.includes('spaces')},
+  {id:'spaces',   label:'⏳ (s)paces',     match:s=>s.includes('paces')},
   {id:'afro',     label:'✊ Afro',          match:s=>s.includes('Afro')},
   {id:'indigena', label:'🪶 Indígena',      match:s=>s.includes('Indígena')},
   {id:'barrios',  label:'🏆 Barrios',       match:s=>s.includes('Barrios')},
@@ -5998,7 +5999,7 @@ function setProgramaMode(mode){
   programaSubMode=mode;
   // Reset filtros al cambiar modo
   activeSec='all';activeVenue='all';selectedIdx=null;
-  programaChip='all';
+  programaChip='all';_programaChipMatchFn=null;
   _updateProgramaActiveFilter();
   initProgramaModeBar();
   _renderProgramaContent();
@@ -6017,13 +6018,13 @@ function setProgramaChip(chipId){
   document.querySelectorAll('.pchip').forEach(el=>{
     el.classList.toggle('on',el.dataset.chip===chipId);
   });
-  // Aplicar sección correspondiente al filtro existente
+  // Guardar la función de match — soporta múltiples secciones
   const chip=PROGRAMA_CHIPS.find(c=>c.id===chipId);
   if(chip&&chip.match){
-    // Buscar la sección real que coincide
-    const matchedSec=SECTION_ORDER_LF.find(s=>chip.match(s))||'all';
-    activeSec=matchedSec;
+    _programaChipMatchFn=chip.match;
+    activeSec='_chip_'; // señal de que el filtro lo maneja el chip
   } else {
+    _programaChipMatchFn=null;
     activeSec='all';
   }
   _updateProgramaActiveFilter();
@@ -6031,6 +6032,7 @@ function setProgramaChip(chipId){
 }
 
 function clearProgramaChip(){
+  _programaChipMatchFn=null;
   setProgramaChip('all');
 }
 
@@ -6150,7 +6152,11 @@ function _renderExploreLista(){
   const titleMap={};
   FILMS.forEach(f=>{if(!titleMap[f.title])titleMap[f.title]={film:f,screenings:[]};titleMap[f.title].screenings.push(f);});
   let entries=Object.values(titleMap);
-  if(activeSec!=='all') entries=entries.filter(e=>e.film.section===activeSec);
+  if(activeSec==='_chip_'&&_programaChipMatchFn){
+    entries=entries.filter(e=>_programaChipMatchFn(e.film.section||''));
+  } else if(activeSec!=='all'){
+    entries=entries.filter(e=>e.film.section===activeSec);
+  }
   const secIdxLF=s=>{const i=SECTION_ORDER_LF.indexOf(s);return i>=0?i:98;};
   entries.sort((a,b)=>{
     if(a.film.is_cortos!==b.film.is_cortos) return a.film.is_cortos?1:-1;
@@ -6214,7 +6220,11 @@ function renderPeliculaView(){
 
   // Aplicar filtro de sección si está activo
   let entries=Object.values(titleMap);
-  if(activeSec!=='all') entries=entries.filter(e=>e.film.section===activeSec);
+  if(activeSec==='_chip_'&&_programaChipMatchFn){
+    entries=entries.filter(e=>_programaChipMatchFn(e.film.section||''));
+  } else if(activeSec!=='all'){
+    entries=entries.filter(e=>e.film.section===activeSec);
+  }
 
   // Orden oficial FICCI 65 según Letterboxd: largometrajes primero, cortos al final
   const secIdxLF=s=>{const i=SECTION_ORDER_LF.indexOf(s);return i>=0?i:98;};
