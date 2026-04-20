@@ -2406,7 +2406,7 @@ const FESTIVAL_STORAGE_KEY='ficci65_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202604201429';
+const BUILD_VERSION='202604201436';
 (function(){
   const _vk='otrofestiv_build';
   const _sk='otrofestiv_reloaded';
@@ -5500,10 +5500,10 @@ const PROGRAMA_CHIPS=[
   {id:'rivers',   label:'🎖️ Ben Rivers',    match:s=>s.includes('Rivers')},
   {id:'retro',    label:'📽️ Retrospectiva', match:s=>s.includes('Retrospectiva')},
   {id:'midnight', label:'🌙 Medianoche',    match:s=>s.includes('Medianoche')},
-  {id:'españa',   label:'🇪🇸 España',       match:s=>s.includes('España')},
-  {id:'suiza',    label:'🇨🇭 Suiza',         match:s=>s.includes('Suiza')},
-  {id:'argentina',label:'🇦🇷 Argentina',     match:s=>s.includes('Argentina')},
-  {id:'brasil',   label:'🇧🇷 Brasil',        match:s=>s.includes('Brasil')},
+  {id:'españa',   label:'🇪🇸 Muestra España',  match:s=>s.includes('España')},
+  {id:'suiza',    label:'🇨🇭 Muestra Suiza',   match:s=>s.includes('Suiza')},
+  {id:'argentina',label:'🇦🇷 Muestra Argentina',match:s=>s.includes('Argentina')},
+  {id:'brasil',   label:'🇧🇷 Casa Brasil',      match:s=>s.includes('Brasil')},
   {id:'especial', label:'⭐ Especiales',     match:s=>s.includes('Especiales')||s.includes('Animación')||s.includes('Indias')},
 ];
 let expandedPelicula=''; // título expandido en vista Por Película
