@@ -283,7 +283,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:20px;fo
 .app-search-results{position:absolute;top:calc(100% + 4px);left:16px;right:16px;background:var(--surf);border:1px solid var(--bdr);border-radius:var(--r);z-index:200;max-height:300px;overflow-y:auto;display:none;box-shadow:0 8px 24px rgba(0,0,0,.4)}
 .app-search-results.open{display:block}
 /* Alias legacy — mantener IDs pero usar estilos unificados */
-.carta-search-wrap{position:relative;padding:var(--sp-2) var(--sp-4) 0}
+.carta-search-wrap{position:relative;margin:var(--sp-2) var(--sp-4) 0}
 .ag-search-wrap{position:relative;padding:0 0 var(--sp-2)}
 .carta-search,.ag-search{width:100%;background:var(--surf-2);border:1px solid var(--bdr);border-radius:var(--r-pill);color:var(--white);font-family:var(--font);font-size:var(--t-sm);padding:9px 36px 9px 32px;outline:none;box-sizing:border-box;transition:border-color var(--tr-base);-webkit-appearance:none}
 .carta-search::placeholder,.ag-search::placeholder{color:var(--gray2)}
@@ -2420,7 +2420,7 @@ const FESTIVAL_STORAGE_KEY='ficci65_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202604201547';
+const BUILD_VERSION='202604201549';
 (function(){
   const _vk='otrofestiv_build';
   const _sk='otrofestiv_reloaded';
