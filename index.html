@@ -1417,12 +1417,22 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
   .cnt-line{padding-left:var(--content-pad);padding-right:var(--content-pad)}
   #cartelera-cta{padding-left:var(--content-pad);padding-right:var(--content-pad)}
 
+  /* #grid en explorar: contiene un .poster-grid → display:block */
   .grid{
     padding-left:var(--content-pad);
     padding-right:var(--content-pad);
     padding-bottom:var(--sp-6);
     padding-top:var(--sp-3);
     grid-template-columns:repeat(auto-fill,minmax(min(100%,260px),1fr));
+  }
+  /* Cuando #grid tiene un .poster-grid directo, el #grid no debe ser grid */
+  .grid:has(> .poster-grid){
+    display:block;
+  }
+  /* El poster-grid dentro del grid ocupa todo el ancho del padre */
+  .grid > .poster-grid{
+    width:100%;
+    grid-template-columns:repeat(6,1fr);
   }
 
   .ag-view{
@@ -2487,7 +2497,7 @@ const FESTIVAL_STORAGE_KEY='ficci65_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202604202129';
+const BUILD_VERSION='202604202135';
 (function(){
   const _vk='otrofestiv_build';
   const _sk='otrofestiv_reloaded';
