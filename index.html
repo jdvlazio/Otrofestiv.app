@@ -1667,11 +1667,11 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:20px;fo
 <div class="main-nav" id="main-nav" role="navigation" aria-label="Navegación principal">
   <button class="main-nav-tab on" id="mnav-cartelera" onclick="{const _ts=simTodayStr();const _ni=DAY_KEYS.findIndex(d=>FESTIVAL_DATES[d]===_ts);activeDay=_ni>=0?DAY_KEYS[_ni]:DAY_KEYS[0];switchMainNav('mnav-cartelera');showDayView();render();}">
     <span class="main-nav-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="2.18"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="2" y1="7" x2="7" y2="7"/><line x1="2" y1="17" x2="7" y2="17"/><line x1="17" y1="17" x2="22" y2="17"/><line x1="17" y1="7" x2="22" y2="7"/></svg></span>
-    <span class="main-nav-lbl">CARTELERA</span>
+    <span class="main-nav-lbl">PROGRAMA</span>
   </button>
   <button class="main-nav-tab" id="mnav-seleccion" onclick="switchMainNav('mnav-seleccion');showAgView()">
     <span class="main-nav-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></span>
-    <span class="main-nav-lbl">MI LISTA</span>
+    <span class="main-nav-lbl">INTERESES</span>
   </button>
   <button class="main-nav-tab" id="mnav-planner" onclick="switchMainNav('mnav-planner');showAgView()">
     <span class="main-nav-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="21" x2="4" y2="14"/><line x1="4" y1="10" x2="4" y2="3"/><line x1="12" y1="21" x2="12" y2="12"/><line x1="12" y1="8" x2="12" y2="3"/><line x1="20" y1="21" x2="20" y2="16"/><line x1="20" y1="12" x2="20" y2="3"/><line x1="1" y1="14" x2="7" y2="14"/><line x1="9" y1="8" x2="15" y2="8"/><line x1="17" y1="16" x2="23" y2="16"/></svg></span>
@@ -1760,7 +1760,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:20px;fo
       </div>
     </div>
     <div style="flex:1;min-width:0">
-      <div class="wl-add-status"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>En Mi Lista</div>
+      <div class="wl-add-status"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>En Intereses</div>
       <div class="wl-add-title" id="wl-add-title"></div>
       <div class="wl-add-meta" id="wl-add-meta"></div>
     </div>
@@ -1854,7 +1854,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:20px;fo
 <div id="cartelera-stepper" style="display:none"></div>
 <div id="cartelera-cta" style="display:none">
   <div class="cartelera-cta">
-    <span class="cartelera-cta-text">Toca <span style="color:var(--amber)">♥</span> en cualquier película para añadirla a <b>Mi Lista</b></span>
+    <span class="cartelera-cta-text">Toca <span style="color:var(--amber)">♥</span> en cualquier película para añadirla a <b>Intereses</b></span>
   </div>
 </div>
 <div class="cnt-line" id="cnt"></div>
@@ -2315,7 +2315,7 @@ const FESTIVAL_STORAGE_KEY='ficci65_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202604200055';
+const BUILD_VERSION='202604200221';
 (function(){
   const _vk='otrofestiv_build';
   const _sk='otrofestiv_reloaded';
@@ -2700,7 +2700,7 @@ function toggleWL(title,e){
   if(watchlist.has(title)){
     // If film is in saved agenda, ask first
     if(savedAgenda&&savedAgenda.schedule.some(s=>s._title===title)){
-      showActionModal(`${ICONS.x} Quitar de Mi Lista`,
+      showActionModal(`${ICONS.x} Quitar de Intereses`,
         `<b>${title.length>36?title.slice(0,34)+'…':title}</b> está en tu plan.<br><br>¿Quitarla también del plan guardado?`,
         'Sí, quitar de todo',()=>{
           savedAgenda.schedule=savedAgenda.schedule.filter(s=>s._title!==title);
@@ -2713,14 +2713,14 @@ function toggleWL(title,e){
     }
     // Now safe to remove from watchlist
     watchlist.delete(title);watched.delete(title);prioritized.delete(title);
-    showToast('Quitada de Mi Lista','info');
+    showToast('Quitada de Intereses','info');
   }
   else{
     watchlist.add(title);watched.delete(title);
     if(activeMNav==='mnav-cartelera'||activeMNav==='mnav-seleccion'){
       openWLAdd(title);
     } else {
-      showToast(`${ICONS.heartFill} En Mi Lista`,'info');
+      showToast(`${ICONS.heartFill} En Intereses`,'info');
     }
   }
   saveState('wl','watched');updateCardState(title);updateAgTab();
@@ -2729,7 +2729,7 @@ function toggleWL(title,e){
 function toggleWatched(title,e){
   if(e) e.stopPropagation();
   if(watched.has(title)){
-    // Quitar de vistas — si no está en Mi Lista, devolverla ahí
+    // Quitar de vistas — si no está en Intereses, devolverla ahí
     watched.delete(title);
     if(!watchlist.has(title)) watchlist.add(title);
     saveState('wl','watched');updateCardState(title);updateAgTab();
@@ -2741,7 +2741,7 @@ function toggleWatched(title,e){
     const short=title.length>36?title.slice(0,34)+'…':title;
     showActionModal(
       `${ICONS.check} ¿Ya viste esta película?`,
-      `<b>${short}</b><br><br>Se moverá a <b>Ya vistas</b> en Mi Lista.`,
+      `<b>${short}</b><br><br>Se moverá a <b>Ya vistas</b> en Intereses.`,
       'Sí, ya la vi',
       ()=>{
         watched.add(title);
@@ -2761,7 +2761,7 @@ function updateCardState(title){
     const wlBtn=card.querySelector('.wl-btn');
     const wBtn=card.querySelector('.w-btn');
     const prioBtn=card.querySelector('.prio-btn');
-    if(wlBtn){wlBtn.innerHTML=inWL?ICONS.heartFill:ICONS.heart;wlBtn.classList.toggle('wl-on',inWL);wlBtn.title=inWL?'Quitar de Mi Lista':'Añadir a Mi Lista';}
+    if(wlBtn){wlBtn.innerHTML=inWL?ICONS.heartFill:ICONS.heart;wlBtn.classList.toggle('wl-on',inWL);wlBtn.title=inWL?'Quitar de Intereses':'Añadir a Intereses';}
     if(wBtn){wBtn.classList.toggle('w-on',inW);wBtn.title=inW?'Marcar como pendiente':'Marcar como vista';}
     if(prioBtn){prioBtn.classList.toggle('prio-on',inPrio);prioBtn.title=inPrio?'Quitar prioridad':'Priorizar';}
   });
@@ -2810,7 +2810,7 @@ function onSearchInput(){
         <div class="ag-sr-meta">${f.flags||''} ${f.duration||''}${f.is_cortos?' · Programa':''}${inWL?' · <span style="color:var(--orange)">${ICONS.heartFill}</span>':''}</div>
       </div>
       <button class="ag-sr-add${inWL?' added':''}" data-title="${f.title.replace(/"/g,'&quot;')}" onclick="addFromSearch(this.dataset.title)" style="display:inline-flex;align-items:center;gap:5px">
-        ${inWL?`${ICONS.check} En Mi Lista`:`${ICONS.plus} Añadir`}
+        ${inWL?`${ICONS.check} En Intereses`:`${ICONS.plus} Añadir`}
       </button>
     </div>`;
   }).join('');
@@ -3424,10 +3424,10 @@ function renderPrioStrip(){
       <div style="font-size:24px;margin-bottom:10px">${ICONS.star}</div>
       <div style="font-weight:var(--w-bold);color:var(--white);margin-bottom:6px">Sin prioridades aún</div>
       <div style="font-size:var(--t-sm);color:var(--gray);line-height:1.6;margin-bottom:16px">
-        Marca hasta ${PRIO_LIMIT} películas como ★ en Mi Lista para que el algoritmo las incluya primero.
+        Marca hasta ${PRIO_LIMIT} películas como ★ en Intereses para que el algoritmo las incluya primero.
       </div>
       <button onclick="switchMainNav('mnav-seleccion');showAgView()" style="background:var(--amber-10);border:1px solid var(--amber-30);color:var(--amber);font-family:var(--font);font-size:var(--t-sm);padding:8px 16px;border-radius:var(--r-pill);cursor:pointer">
-        Ir a Mi Lista
+        Ir a Intereses
       </button>
     </div>`;
   const chips=[...prioritized].map(t=>{
@@ -3510,12 +3510,12 @@ function renderFilmListHTML(){
   }
   if(nonPrioList.length){
     if(prioList.length) html+=`<div class="ag-list-sep"></div>`;
-    html+=`<div class="prio-strip-title" style="margin-bottom:8px">${ICONS.heart} Mi Lista ${nonPrioList.length}</div>`;
+    html+=`<div class="prio-strip-title" style="margin-bottom:8px">${ICONS.heart} Intereses ${nonPrioList.length}</div>`;
     html+=`<div class="ag-film-grid">${nonPrioList.map(t=>mkItem(t)).join('')}</div>`;
   }
   if(!allPending.length&&!watchedList.length){
     return`<div style="margin-top:8px;padding:20px 16px;border:1px solid var(--bdr-l);border-radius:var(--r);text-align:center">
-      <div class="prio-strip-title" style="justify-content:center;margin-bottom:10px">${ICONS.heart} Mi Lista</div>
+      <div class="prio-strip-title" style="justify-content:center;margin-bottom:10px">${ICONS.heart} Intereses</div>
       <div style="font-size:var(--t-base);color:var(--gray);line-height:1.6;text-align:center;max-width:240px;margin-left:auto;margin-right:auto;text-wrap:balance">
         Aún no tienes películas guardadas.<br>Usa el buscador para añadir títulos.
       </div>
@@ -3545,7 +3545,7 @@ function renderFilmListHTML(){
     }).join('')}</div>`;
   }
   return html||`<div style="margin-top:8px;padding:20px 16px;border:1px solid var(--bdr-l);border-radius:var(--r);text-align:center">
-      <div class="prio-strip-title" style="justify-content:center;margin-bottom:10px">${ICONS.heart} Mi Lista</div>
+      <div class="prio-strip-title" style="justify-content:center;margin-bottom:10px">${ICONS.heart} Intereses</div>
       <div style="font-size:var(--t-base);color:var(--gray);line-height:1.6;text-align:center;max-width:240px;margin-left:auto;margin-right:auto;text-wrap:balance">
         Aún no tienes películas guardadas.<br>Usa el buscador para añadir títulos.
       </div>
@@ -3560,8 +3560,8 @@ function removeFilmFromScenario(title,e){
   if(e) e.stopPropagation();
   const short=title.length>36?title.slice(0,34)+'…':title;
   showActionModal(
-    `${ICONS.x} Quitar de Mi Lista`,
-    `<b>${short}</b><br><br>Se quitará de Mi Lista y las opciones se recalcularán.`,
+    `${ICONS.x} Quitar de Intereses`,
+    `<b>${short}</b><br><br>Se quitará de Intereses y las opciones se recalcularán.`,
     'Quitar',
     ()=>{
       watchlist.delete(title);
@@ -3569,7 +3569,7 @@ function removeFilmFromScenario(title,e){
       watched.delete(title);
       saveState('wl','prio','watched');
       updateAgTab();
-      showToast('Quitada de Mi Lista','info');
+      showToast('Quitada de Intereses','info');
       runCalc(); // recalcula directamente, no borra la vista
     }
   );
@@ -4161,7 +4161,7 @@ function renderContextualHeader(){
     const total=todayScreenings.filter(s=>watched.has(s._title)).length;
     if(!total) return '';
     const starsStr=n=>'★'.repeat(Math.round(n));
-    // Posters tappables — igual que en Mi Lista, consistente con el resto de la app
+    // Posters tappables — igual que en Intereses, consistente con el resto de la app
     const filmRows=todayScreenings.filter(s=>watched.has(s._title)).map(s=>{
       const{displayTitle:dt}=parseProgramTitle(s._title||'');
       const f=FILMS.find(fi=>fi.title===s._title);
@@ -4199,7 +4199,7 @@ function _renderSavedAgendaHTML(){
       <div style="font-size:28px;margin-bottom:12px">${ICONS.calendar}</div>
       <div style="font-weight:var(--w-bold);color:var(--white);margin-bottom:8px">Tu plan aparecerá aquí</div>
       <div style="font-size:var(--t-sm);color:var(--gray);line-height:1.6;margin-bottom:20px;max-width:260px;margin-left:auto;margin-right:auto">
-        Añade películas a Mi Lista y genera opciones en Planear. El algoritmo hace el resto.
+        Añade películas a Intereses y genera opciones en Planear. El algoritmo hace el resto.
       </div>
       <button onclick="switchMainNav('mnav-planner');showAgView()" style="background:var(--amber-10);border:1px solid var(--amber-30);color:var(--amber);font-family:var(--font);font-size:var(--t-sm);font-weight:var(--w-bold);padding:10px 20px;border-radius:var(--r-pill);cursor:pointer">
         Ir a Planear
@@ -4385,7 +4385,7 @@ function shareAsImage(){
   const notInWL=savedAgenda.schedule.filter(s=>!watchlist.has(s._title));
   if(notInWL.length){
     const names=notInWL.map(s=>s._title.length>20?s._title.slice(0,18)+'…':s._title).join(', ');
-    issues.push(`${notInWL.length} película${notInWL.length>1?'s':''} ya no están en Mi Lista: ${names}`);
+    issues.push(`${notInWL.length} película${notInWL.length>1?'s':''} ya no están en Intereses: ${names}`);
   }
 
   // 2. Conflictos internos entre funciones del plan
@@ -4734,7 +4734,7 @@ function togglePriority(title,cost){
     if(activeMNav==='mnav-planner'){
       const short=title.length>40?title.slice(0,38)+'…':title;
       showActionModal(`${ICONS.star} Quitar prioridad`,
-        `<b>${short}</b><br><br>Sigue en Mi Lista, deja de ser prioritaria.`,
+        `<b>${short}</b><br><br>Sigue en Intereses, deja de ser prioritaria.`,
         'Quitar prioridad',()=>{
           prioritized.delete(title);savePrio();updateCardState(title);updateAgTab();runCalc();
           showToast(`${ICONS.star} Prioridad quitada`,'info');
@@ -5160,7 +5160,7 @@ function invalidateCalcResult(){
   const pending=[...watchlist].filter(t=>!watched.has(t)&&FILMS.some(f=>f.title===t&&!screeningPassed(f)));
   res.innerHTML=pending.length
     ?`<div class="ag-calc-prompt">Configura tu disponibilidad<br>y toca <strong>CALCULAR OPCIONES</strong>.</div>`
-    :`<div class="ag-calc-prompt">Añade películas en <strong>Mi Lista</strong> para poder calcular opciones.</div>`;
+    :`<div class="ag-calc-prompt">Añade películas en <strong>Intereses</strong> para poder calcular opciones.</div>`;
 }
 function runCalc(){
   cachedResult=null;
@@ -5211,7 +5211,7 @@ function renderFlowProgress(activeTab){
   };
 
   return`<div class="flow-progress">
-    ${mkStep(1,'Mi Lista')}
+    ${mkStep(1,'Intereses')}
     <div class="flow-step-sep"></div>
     ${mkStep(2,'Planear')}
     <div class="flow-step-sep"></div>
@@ -5228,7 +5228,7 @@ function renderAgenda(){
         <div class="ag-search-wrap">
           <span class="ag-search-ico">${ICONS.search}</span>
           <input type="text" id="ag-search-input" class="ag-search"
-            placeholder="Buscar y añadir a Mi Lista…"
+            placeholder="Buscar y añadir a Intereses…"
             oninput="onSearchInput()" onblur="closeSearch()" autocomplete="off">
           <div id="ag-search-results" class="ag-search-results"></div>
         </div>
@@ -5256,13 +5256,13 @@ function renderAgenda(){
       ?buildResultHTML(cachedResult.scenarios)
       :pending.length
         ?`<div class="ag-calc-prompt">Configura tu disponibilidad<br>y toca <strong>CALCULAR OPCIONES</strong>.</div>`
-        :`<div class="ag-calc-prompt">Añade películas en <strong>Mi Lista</strong> para poder calcular opciones.</div>`;
+        :`<div class="ag-calc-prompt">Añade películas en <strong>Intereses</strong> para poder calcular opciones.</div>`;
     view.innerHTML=`${_progressHtml}
       <div class="ag-section">
         <div class="ag-search-wrap">
           <span class="ag-search-ico">${ICONS.search}</span>
           <input type="text" id="ag-search-input" class="ag-search"
-            placeholder="Buscar y añadir a Mi Lista…"
+            placeholder="Buscar y añadir a Intereses…"
             oninput="onSearchInput()" onblur="closeSearch()" autocomplete="off">
           <div id="ag-search-results" class="ag-search-results"></div>
         </div>
@@ -5678,7 +5678,7 @@ function togglePelWL(title,e){
   const btn=document.getElementById('pel-wl-btn');
   if(!btn) return;
   const inWL=watchlist.has(title);
-  btn.innerHTML=(inWL?ICONS.heartFill:ICONS.heart)+' '+(inWL?'En Mi Lista':'Mi Lista');
+  btn.innerHTML=(inWL?ICONS.heartFill:ICONS.heart)+' '+(inWL?'En Intereses':'Intereses');
   btn.className='pel-sheet-action-btn'+(inWL?' act-on':'');
   if(inWL&&(activeMNav==='mnav-cartelera'||activeMNav==='mnav-seleccion')){
     closePelSheet();
@@ -5770,7 +5770,7 @@ function openPelSheet(title){
       <div class="pel-sheet-section-lbl">Programa · ${f.film_list.length} cortos</div>
       ${cortoItems}`;
   }
-  const wlLabel=inWL?`${ICONS.heartFill} En Mi Lista`:`${ICONS.heart} Mi Lista`;
+  const wlLabel=inWL?`${ICONS.heartFill} En Intereses`:`${ICONS.heart} Intereses`;
   const safeT=f.title.replace(/'/g,"\'");
   const _inPlan=savedAgenda&&savedAgenda.schedule.some(s=>s._title===f.title);
   const _planEntry=_inPlan?savedAgenda.schedule.find(s=>s._title===f.title):null;
@@ -5800,7 +5800,7 @@ function openPelSheet(title){
         <button onclick="closePelSheet();setTimeout(()=>openRatingSheet('${safeT}'),100)" style="flex:1;background:none;border:1px solid var(--bdr);border-radius:var(--r-pill);color:var(--gray2);font-family:var(--font);font-size:13px;font-weight:700;padding:10px 0;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:5px">${ICONS.star} ${filmRatings['${safeT}']?'Cambiar':'Calificar'}</button>
       </div>`
     :`<div style="display:flex;gap:6px;margin-top:12px">
-        <button id="pel-wl-btn" class="pel-sheet-action-btn${inWL?' act-on':''}" onclick="togglePelWL('${safeT}',event)" style="display:inline-flex;align-items:center;justify-content:center;gap:5px">${inWL?ICONS.heartFill:ICONS.heart} ${inWL?'En Mi Lista':'Mi Lista'}</button>
+        <button id="pel-wl-btn" class="pel-sheet-action-btn${inWL?' act-on':''}" onclick="togglePelWL('${safeT}',event)" style="display:inline-flex;align-items:center;justify-content:center;gap:5px">${inWL?ICONS.heartFill:ICONS.heart} ${inWL?'En Intereses':'Intereses'}</button>
         <button id="pel-prio-btn" class="pel-sheet-action-btn${inPrio?' act-prio':''}" onclick="togglePelPrio('${safeT}')" style="display:inline-flex;align-items:center;justify-content:center;gap:5px">${inPrio?ICONS.starFill:ICONS.star} ${inPrio?'Priorizada':'Priorizar'}</button>
         <button id="pel-vista-btn" class="pel-sheet-action-btn" onclick="toggleWatched('${safeT}',event)" style="display:inline-flex;align-items:center;justify-content:center;gap:5px">${ICONS.check} Vista</button>
       </div>`}
@@ -6033,7 +6033,7 @@ loadState();{const _ts=simTodayStr();const _ni=DAY_KEYS.findIndex(d=>FESTIVAL_DA
 // Aplicar modo inicial al DOM antes del primer render
 (()=>{if(cartelaMode==='pelicula'){const nr=document.getElementById('nav-row');if(nr)nr.classList.add('hidden');const bP=document.getElementById('btn-modo-pelicula');if(bP)bP.classList.add('active');const bH=document.getElementById('btn-modo-horario');if(bH)bH.classList.remove('active');}})();
 updateAgTab();render();
-/* ── Tap-to-reveal en Mi Lista mobile ──────────────────────────
+/* ── Tap-to-reveal en Intereses mobile ──────────────────────────
    Toca el poster → revela botones (ag-active).
    Toca fuera o toca un botón → cierra. */
 document.addEventListener('click', function(e){
@@ -6205,7 +6205,7 @@ function closeFestivalSheet(){
     <div class="welcome-wordmark">Otro<span>festiv</span></div>
     <div class="welcome-title">Tú decides<br>el festival.</div>
     <div class="welcome-sub">
-      <b>Añade</b> lo que quieres ver a Mi Lista.<br>
+      <b>Añade</b> lo que quieres ver a Intereses.<br>
       <b>Prioriza</b> lo que no te puedes perder.<br>
       <b>Elige</b> tu plan y disfruta.
     </div>
