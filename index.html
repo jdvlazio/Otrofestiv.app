@@ -2406,7 +2406,7 @@ const FESTIVAL_STORAGE_KEY='ficci65_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202604201500';
+const BUILD_VERSION='202604201502';
 (function(){
   const _vk='otrofestiv_build';
   const _sk='otrofestiv_reloaded';
@@ -5414,7 +5414,7 @@ function renderAgenda(){
   const view=document.getElementById('ag-view');
   if(activeMNav==='mnav-seleccion'){
     // ── Mi Lista: buscador + lista de películas ──
-    const _progressHtml=(!savedAgenda||!savedAgenda.schedule||!savedAgenda.schedule.length)?renderFlowProgress('seleccion'):'';
+    const _progressHtml=(!festivalEnded()&&(!savedAgenda||!savedAgenda.schedule||!savedAgenda.schedule.length))?renderFlowProgress('seleccion'):'';
     view.innerHTML=`${_progressHtml}
       <div class="ag-section">
         <div class="ag-search-wrap">
@@ -5436,12 +5436,12 @@ function renderAgenda(){
       </div>`;
   } else if(activeMNav==='mnav-miplan'){
     // ── Mi Plan: stepper de progreso + calendario + sugerencias ──
-    const _progressHtmlPlan=(!savedAgenda||!savedAgenda.schedule||!savedAgenda.schedule.length)?renderFlowProgress('miplan'):'';
+    const _progressHtmlPlan=(!festivalEnded()&&(!savedAgenda||!savedAgenda.schedule||!savedAgenda.schedule.length))?renderFlowProgress('miplan'):'';
     view.innerHTML=_progressHtmlPlan+renderSavedAgendaHTML();
     _updateShareBtn();
   } else {
     // ── Planear: stepper de progreso + prio strip + disponibilidad + opciones ──
-    const _progressHtml=(!savedAgenda||!savedAgenda.schedule||!savedAgenda.schedule.length)?renderFlowProgress('planner'):'';
+    const _progressHtml=(!festivalEnded()&&(!savedAgenda||!savedAgenda.schedule||!savedAgenda.schedule.length))?renderFlowProgress('planner'):'';
     // El indicador desaparece cuando hay plan guardado
     const pending=[...watchlist].filter(t=>!watched.has(t)&&FILMS.some(f=>f.title===t&&!screeningPassed(f)));
     const resultContent=cachedResult
