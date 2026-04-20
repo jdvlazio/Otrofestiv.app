@@ -411,9 +411,9 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:20px;fo
 .suggestion-item:hover{opacity:1}
 .suggestion-time{font-family:var(--font);font-size:var(--t-md);color:var(--orange);letter-spacing:.5px;flex-shrink:0;min-width:46px}
 .suggestion-info{flex:1;min-width:0}
-.suggestion-title{font-size:var(--t-base);color:var(--white);font-weight:var(--w-semi)}
-.suggestion-meta{font-size:var(--t-sm);color:var(--gray2);margin-top:2px}.suggestion-meta-ico{display:flex;align-items:center;gap:var(--sp-1);font-size:var(--t-sm);color:var(--gray2);margin-top:2px}.suggestion-meta-ico svg{flex-shrink:0;opacity:.7}
-.suggestion-add{background:none;border:1px solid var(--bdr);border-radius:var(--r-pill);color:var(--gray);font-size:var(--t-sm);padding:2px var(--sp-2);cursor:pointer;font-family:var(--font);transition:background var(--tr-base),color var(--tr-base);white-space:nowrap;flex-shrink:0;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+.suggestion-title{font-size:var(--t-base);color:var(--white);font-weight:var(--w-semi);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.suggestion-meta{font-size:var(--t-sm);color:var(--gray2);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.suggestion-meta-ico{display:flex;align-items:center;gap:var(--sp-1);font-size:var(--t-sm);color:var(--gray2);margin-top:2px}.suggestion-meta-ico svg{flex-shrink:0;opacity:.7}
+.suggestion-add{background:none;border:1px solid var(--bdr);border-radius:var(--r-pill);color:var(--gray);font-size:var(--t-sm);padding:4px var(--sp-2);cursor:pointer;font-family:var(--font);transition:background var(--tr-base),color var(--tr-base);white-space:nowrap;flex-shrink:0;touch-action:manipulation;-webkit-tap-highlight-color:transparent;min-width:76px;text-align:center;display:inline-flex;align-items:center;justify-content:center;gap:3px}
 .suggestion-add:hover{border-color:var(--orange);color:var(--orange)}
 
 /* ── Tira próxima función ── */
@@ -2402,7 +2402,7 @@ const FESTIVAL_STORAGE_KEY='ficci65_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202604201319';
+const BUILD_VERSION='202604201323';
 (function(){
   const _vk='otrofestiv_build';
   const _sk='otrofestiv_reloaded';
@@ -4478,11 +4478,11 @@ function _renderSavedAgendaHTML(){
           ${_sph}
           <div class="suggestion-time">${f.time}</div>
           <div class="suggestion-info">
-            <div class="suggestion-title">${f.title}</div>
+            <div class="suggestion-title">${(()=>{const{displayTitle:_dt}=parseProgramTitle(f.title);return _dt;})()}</div>
             <div class="suggestion-meta">${f.section||''}</div>
             <div class="suggestion-meta-ico">${ICONS.clock} ${f.duration}</div>
             <div class="suggestion-meta-ico">${ICONS.pin} ${vc2.short}${sl?' · '+sl:''}</div>
-            ${f.gapCtx?`<div style="font-size:var(--t-xs);color:var(--gray);margin-top:2px;font-style:italic">${f.gapCtx}</div>`:''}
+            ${f.gapCtx?`<div style="font-size:var(--t-xs);color:var(--gray);margin-top:2px;font-style:italic">${f.gapCtx.length>35?f.gapCtx.slice(0,33)+'…':f.gapCtx}</div>`:''}
           </div>
           <button class="suggestion-add" onclick="addSuggestion('${f.title.replace(/'/g,"\\'")}','${f.day}','${f.time}')" style="${f._isRestored?'border-color:var(--orange);color:var(--orange);background:var(--amber-10)':''}">
             ${f._isRestored?`${ICONS.undo} Restaurar`:`${ICONS.plus} Añadir`}
