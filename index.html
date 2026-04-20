@@ -2487,13 +2487,15 @@ const FESTIVAL_STORAGE_KEY='ficci65_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202604202119';
+const BUILD_VERSION='202604202129';
 (function(){
   const _vk='otrofestiv_build';
   const _sk='otrofestiv_reloaded';
   const _stored=localStorage.getItem(_vk);
   const _reloaded=sessionStorage.getItem(_sk);
-  if(_stored && _stored!==BUILD_VERSION && !_reloaded){
+  // Solo recargar si el usuario ya pasó el splash de bienvenida
+  const _splashSeen=localStorage.getItem('otrofestiv-welcomed');
+  if(_stored && _stored!==BUILD_VERSION && !_reloaded && _splashSeen){
     sessionStorage.setItem(_sk,'1');
     localStorage.setItem(_vk,BUILD_VERSION);
     location.reload(true);
