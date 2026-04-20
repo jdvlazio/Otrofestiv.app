@@ -1319,15 +1319,23 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
     display:block;
   }
 
-  /* Fila 1 — wordmark (hereda flex-wrap del base, solo ajusto padding y altura) */
+  /* Fila 1 — wordmark con aire vertical */
   .hdr{
-    padding:0 var(--content-pad);
+    padding:var(--sp-3) var(--content-pad);
     min-height:var(--tb-h);
   }
   .hdr-wordmark{font-size:var(--t-lg)}
 
-  /* Fila 2 — fest-bar: HEREDA el comportamiento mobile (width:100%, border-top/bottom, etc.)
-     Solo ajusto el hover en desktop */
+  /* Fila 2 — fest-bar: extiende sus bordes hasta los lados del marco
+     mediante margen negativo que cancela el padding del .hdr.
+     Su padding propio = content-pad → contenido alineado con el wordmark
+     en el mismo eje vertical del marco. */
+  .hdr-fest-bar{
+    margin-left:calc(-1 * var(--content-pad));
+    margin-right:calc(-1 * var(--content-pad));
+    width:calc(100% + 2 * var(--content-pad));
+    padding:var(--sp-3) var(--content-pad);
+  }
   .hdr-fest-bar:hover{border-color:var(--amber-30)}
 
   /* Fila 3 — nav: revertir el fixed-bottom de mobile a fila estática del topbar */
@@ -2493,7 +2501,7 @@ const FESTIVAL_STORAGE_KEY='ficci65_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202604202326';
+const BUILD_VERSION='202604202341';
 (function(){
   const _vk='otrofestiv_build';
   const _sk='otrofestiv_reloaded';
