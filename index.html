@@ -1281,155 +1281,127 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
     --content-w:960px;
     --content-pad:var(--sp-5);
     --tb-h:44px;
+    --fest-h:42px;
     --nav-h:44px;
-    --sticky-top-carta:calc(var(--tb-h) + var(--nav-h));
-    --sticky-top-chips:calc(var(--tb-h) + var(--nav-h) + 42px);
+    --tb-total:calc(var(--tb-h) + var(--fest-h) + var(--nav-h));
+    --sticky-top-carta:var(--tb-total);
+    --sticky-top-chips:calc(var(--tb-total) + 42px);
     --poster-lg-w:112px;
     --poster-lg-h:168px;
   }
 
-  html{scrollbar-gutter:stable}
+  /* ══════════════════════════════════════════════
+     MARCO — body es el contenedor de 960px.
+     Líneas verticales grises marcan el eje.
+     Todo hijo queda dentro automáticamente.
+  ══════════════════════════════════════════════ */
+  html{background:#000;scrollbar-gutter:stable}
+  body{
+    max-width:var(--content-w);
+    margin:0 auto;
+    border-left:1px solid var(--bdr);
+    border-right:1px solid var(--bdr);
+    min-height:100vh;
+    box-sizing:border-box;
+    background:var(--bg);
+  }
 
   /* ══════════════════════════════════════════════
-     TOPBAR — dos filas con jerarquía clara
-     Fila 1 (44px): Marca — logo + festival pill
-     Fila 2 (44px): Nav  — tabs de sección
-     Las dos filas comparten el mismo eje de 960px
+     TOPBAR — 3 filas apiladas verticalmente,
+     idéntico a mobile pero dentro del marco 960px.
+     Fila 1: wordmark      (var(--tb-h))
+     Fila 2: fest-bar      (var(--fest-h))
+     Fila 3: main-nav tabs (var(--nav-h))
   ══════════════════════════════════════════════ */
   .topbar{
     position:sticky;top:0;z-index:200;
     background:var(--surf);
-    border-bottom:1px solid var(--bdr);
     display:block;
   }
 
-  /* Fila 1 — identidad: logo + festival pill */
+  /* Fila 1 — wordmark (hereda flex-wrap del base, solo ajusto padding y altura) */
   .hdr{
-    display:flex;align-items:center;flex-wrap:nowrap;
-    max-width:var(--content-w);
-    height:var(--tb-h);
-    margin:0 auto;
     padding:0 var(--content-pad);
-    min-height:auto;
-    border-bottom:1px solid var(--bdr-l);
+    min-height:var(--tb-h);
   }
+  .hdr-wordmark{font-size:var(--t-lg)}
 
-  .hdr-wordmark{
-    font-size:var(--t-lg);
-    flex:none;
-    margin-right:var(--sp-4);
-  }
+  /* Fila 2 — fest-bar: HEREDA el comportamiento mobile (width:100%, border-top/bottom, etc.)
+     Solo ajusto el hover en desktop */
+  .hdr-fest-bar:hover{border-color:var(--amber-30)}
 
-  /* Festival pill — inline junto al logo, empuja nav a la derecha */
-  .hdr-fest-bar{
-    display:inline-flex;
-    align-items:center;
-    gap:var(--sp-2);
-    padding:0 var(--sp-3);
-    background:var(--surf-2);
-    border:1px solid var(--bdr);
-    border-radius:var(--r-pill);
-    height:26px;
-    flex-shrink:0;
-    flex-basis:auto;
-    width:auto;
-    cursor:pointer;
-  }
-  .hdr-fest-bar:hover{border-color:var(--bdr-hover,var(--amber-30))}
-
-  /* Fila 2 — navegación: tabs sticky debajo de la marca */
+  /* Fila 3 — nav: revertir el fixed-bottom de mobile a fila estática del topbar */
   .main-nav{
-    position:sticky !important;
-    top:var(--tb-h) !important;
-    bottom:auto !important;
-    left:auto !important;
-    right:auto !important;
-    z-index:199;
-    display:flex !important;
+    position:static;
+    display:flex;
     justify-content:center;
-    border-top:none !important;
-    border-bottom:1px solid var(--bdr) !important;
-    padding:0 !important;
-    padding-bottom:0 !important;
     background:var(--surf);
+    border-bottom:1px solid var(--bdr);
+    border-top:none;
+    padding:0;
+    padding-bottom:0;
     height:var(--nav-h);
   }
-
-  /* Tabs centrados en el área de 960px */
   .main-nav-tab{
-    flex:none !important;
-    width:auto !important;
-    height:var(--nav-h) !important;
-    flex-direction:row !important;
-    gap:var(--sp-1) !important;
-    padding:0 var(--sp-4) !important;
-    border-bottom:2px solid transparent !important;
-    border-top:none !important;
-    margin-bottom:-1px !important;
-    margin-top:0 !important;
-    font-size:var(--t-sm) !important;
-    color:var(--gray2) !important;
+    flex:none;
+    width:auto;
+    height:var(--nav-h);
+    flex-direction:row;
+    gap:var(--sp-1);
+    padding:0 var(--sp-4);
+    border-bottom:2px solid transparent;
+    border-top:none;
+    margin-bottom:-1px;
+    margin-top:0;
+    font-size:var(--t-sm);
+    color:var(--gray2);
     white-space:nowrap;
-    justify-content:center !important;
-    align-items:center !important;
+    justify-content:center;
+    align-items:center;
+    transition:color .15s ease,border-color .15s ease;
   }
   .main-nav-tab.on{
-    border-bottom-color:var(--orange) !important;
-    color:var(--white) !important;
-    border-top-color:transparent !important;
+    border-bottom-color:var(--orange);
+    color:var(--white);
+    border-top-color:transparent;
   }
-  .main-nav-tab:hover:not(.on){color:var(--white) !important}
+  .main-nav-tab:hover:not(.on){color:var(--white)}
+  .main-nav-tab:hover{cursor:pointer}
   .main-nav-ico svg{width:14px;height:14px}
   .main-nav-lbl{font-size:var(--t-sm)}
 
   /* ══════════════════════════════════════════════
-     CONTENIDO — centrado a 960px, sticky correcto
+     CONTENIDO — body ya limita a 960px.
+     Solo queda padding horizontal interno.
   ══════════════════════════════════════════════ */
-  .nav-row{
-    position:sticky;top:var(--sticky-top-carta);z-index:198;
-    background:var(--bg);
-    max-width:var(--content-w);width:100%;
-    margin-left:auto;margin-right:auto;
-    padding-left:var(--content-pad);padding-right:var(--content-pad);
-  }
+  .nav-row,
   .filter-row{
-    position:sticky;top:var(--sticky-top-carta);z-index:197;
+    position:sticky;
+    top:var(--tb-total);
+    z-index:198;
     background:var(--bg);
-    max-width:var(--content-w);width:100%;
-    margin-left:auto;margin-right:auto;
-    padding-left:var(--content-pad);padding-right:var(--content-pad);
+    padding-left:var(--content-pad);
+    padding-right:var(--content-pad);
   }
 
   .carta-search-wrap,
   .programa-mode-bar,
   .programa-active-filter,
-  .hint,.cnt-line,.grid,.ag-view,
+  .hint,.cnt-line,
   #cartelera-stepper,#cartelera-cta{
-    max-width:var(--content-w);
-    margin-left:auto;margin-right:auto;
-  }
-
-  .carta-search-wrap{
-    padding-left:var(--content-pad);padding-right:var(--content-pad);
-    margin-top:var(--sp-2);
-  }
-  .programa-mode-bar{padding-left:var(--content-pad);padding-right:var(--content-pad)}
-  .programa-active-filter{padding-left:var(--content-pad);padding-right:var(--content-pad)}
-  .hint{padding-left:var(--content-pad);padding-right:var(--content-pad)}
-  .cnt-line{padding-left:var(--content-pad);padding-right:var(--content-pad)}
-  #cartelera-cta{padding-left:var(--content-pad);padding-right:var(--content-pad)}
-
-  /* ── Chips — fade en el borde derecho ── */
-  .programa-chips{
-    max-width:var(--content-w);
-    margin-left:auto;margin-right:auto;
     padding-left:var(--content-pad);
-    /* Sin padding-right — el fade lo reemplaza visualmente */
-    padding-right:0;
-    /* Degradado que cubre los últimos 80px */
-    -webkit-mask-image:linear-gradient(to right,black calc(100% - 80px),transparent 100%);
-    mask-image:linear-gradient(to right,black calc(100% - 80px),transparent 100%);
+    padding-right:var(--content-pad);
   }
+  .carta-search-wrap{margin-top:var(--sp-2)}
+
+  /* ── Chips — scroll natural sin mask (el marco del body reemplaza el cue visual) ── */
+  .programa-chips{
+    padding-left:var(--content-pad);
+    padding-right:var(--content-pad);
+    overflow-x:auto;
+    scrollbar-width:none;
+  }
+  .programa-chips::-webkit-scrollbar{display:none}
 
   .grid{
     padding-left:var(--content-pad);padding-right:var(--content-pad);
@@ -1440,12 +1412,11 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
   .grid > .poster-grid{width:100%;grid-template-columns:repeat(6,1fr)}
 
   .ag-view{
-    max-width:var(--content-w);margin-left:auto;margin-right:auto;
     padding-left:var(--content-pad);padding-right:var(--content-pad);
     padding-top:var(--sp-3);padding-bottom:var(--sp-6);
   }
 
-  /* Grids — regla única: 6 cols en desktop, 4 en mobile (consistente en todos los tabs) */
+  /* Grids — 6 cols uniformes en desktop */
   .ag-film-grid{grid-template-columns:repeat(6,1fr) !important}
   .poster-grid{grid-template-columns:repeat(6,1fr)}
   .pg-miplan{grid-template-columns:repeat(6,1fr)}
@@ -1476,13 +1447,10 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
   /* WL button visible en hover (no en touch) */
   .wl-btn:not(.wl-on){opacity:0;transition:opacity .15s}
   .poster-card:hover .wl-btn{opacity:1}
-  /* Si ya está en lista, siempre visible */
   .wl-btn.wl-on{opacity:1 !important}
 
   /* Buscador — focus ring más visible en desktop */
-  .carta-search:focus,.ag-search:focus{
-    outline:none;
-  }
+  .carta-search:focus,.ag-search:focus{outline:none}
   .carta-search-field:focus-within,
   .ag-search-field:focus-within{
     border-color:var(--amber-30);
@@ -1492,16 +1460,12 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
   .ag-fi-actions{gap:var(--sp-1)}
   .ag-fi-btn{padding:var(--sp-1) var(--sp-2)}
 
-  /* Toast */
+  /* Toast — pegado al borde derecho del marco de 960px */
   .prio-toast{
     top:var(--sp-3);left:auto;
     right:max(var(--sp-4),calc(50vw - 464px));
     transform:none;width:auto;max-width:300px;
   }
-
-  /* Nav tabs — transición suave */
-  .main-nav-tab{transition:color .15s ease,border-color .15s ease}
-  .main-nav-tab:hover{cursor:pointer}
 
   /* Cursor pointer en elementos clickeables */
   .poster-card,.hdr-fest-bar,.pchip,.fdr-btn{cursor:pointer}
@@ -2529,7 +2493,7 @@ const FESTIVAL_STORAGE_KEY='ficci65_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202604202246';
+const BUILD_VERSION='202604202326';
 (function(){
   const _vk='otrofestiv_build';
   const _sk='otrofestiv_reloaded';
