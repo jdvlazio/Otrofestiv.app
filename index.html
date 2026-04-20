@@ -2419,7 +2419,7 @@ const FESTIVAL_STORAGE_KEY='ficci65_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202604201531';
+const BUILD_VERSION='202604201534';
 (function(){
   const _vk='otrofestiv_build';
   const _sk='otrofestiv_reloaded';
@@ -5944,10 +5944,17 @@ function closeRatingSheet(){
   // Re-render para reflejar el nuevo rating
   const listEl=document.getElementById('ag-film-list');
   if(listEl) listEl.innerHTML=renderFilmListHTML();
-  // Actualizar Mi Plan si está activo (ENDED header con estrellas)
+  // Actualizar Mi Plan si está activo
   if(activeMNav==='mnav-miplan') renderAgenda();
-  // Actualizar Intereses si el grid está visible
+  // Actualizar Intereses
   if(activeMNav==='mnav-seleccion') updateAgTab();
+  // Actualizar el rating visible en el sheet si está abierto
+  const _pelSheet=document.getElementById('pel-sheet');
+  if(_pelSheet&&_pelSheet.classList.contains('open')){
+    // Actualizar estrellas en el sheet actual (si el título coincide)
+    const _rStars=_pelSheet.querySelector('.pel-sheet-rating-stars');
+    if(_rStars&&_currentRating>0) _rStars.textContent='★'.repeat(Math.round(_currentRating));
+  }
 }
 
 function starsDisplay(rating,size){
@@ -6727,28 +6734,14 @@ return`<div class="poster-card${inWL&&!inW?' in-wl':''}${inW&&!_fe?' in-watched'
   }).join('')+'</div>';
 
 
-  // ── Cartelera: stepper + micro-CTA de entrada al flujo ─────────────
+  // ── Cartelera: stepper + micro-CTA ──────────────────────────────
   if(activeView==='day'){
     const _cStepper=document.getElementById('cartelera-stepper');
     const _cCta=document.getElementById('cartelera-cta');
     const _hasPlan=savedAgenda&&savedAgenda.schedule&&savedAgenda.schedule.length>0;
-    if(_cStepper){
-      _cStepper.style.display=_hasPlan?'none':'';
-      if(!_hasPlan) _cStepper.innerHTML=renderFlowProgress('cartelera');
-    }
-    if(_cCta) _cCta.style.display=watchlist.size>0?'none':'';
-  }
-
-
-  // ── Cartelera: stepper + micro-CTA ─────────────────────────────
-  // Stepper: mismo renderFlowProgress() que los demás tabs.
-  // Micro-CTA: ♥ ámbar + texto. Desaparece al añadir primera película.
-  if(activeView==='day'){
-    const _cStepper=document.getElementById('cartelera-stepper');
-    const _cCta=document.getElementById('cartelera-cta');
-    const _hasPlan=savedAgenda&&savedAgenda.schedule&&savedAgenda.schedule.length>0;
-    if(_cStepper){_cStepper.style.display=_hasPlan?'none':'';if(!_hasPlan)_cStepper.innerHTML=renderFlowProgress('cartelera');}
-    if(_cCta)_cCta.style.display=watchlist.size>0?'none':'';
+    const _showStep=!festivalEnded()&&!_hasPlan;
+    if(_cStepper){_cStepper.style.display=_showStep?'':'none';if(_showStep)_cStepper.innerHTML=renderFlowProgress('cartelera');}
+    if(_cCta)_cCta.style.display=(!festivalEnded()&&watchlist.size===0)?'':'none';
   }
 }
 
