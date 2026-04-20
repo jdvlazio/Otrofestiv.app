@@ -293,12 +293,13 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:20px;fo
 .carta-search-results,.ag-search-results{position:absolute;top:calc(100% + 4px);left:16px;right:16px;background:var(--surf);border:1px solid var(--bdr);border-radius:var(--r);z-index:200;max-height:300px;overflow-y:auto;display:none;box-shadow:0 8px 24px rgba(0,0,0,.4)}
 .carta-search-results.open,.ag-search-results.open{display:block}
 .carta-sr-item{display:flex;align-items:center;gap:10px;padding:10px 14px;border-bottom:1px solid var(--bdr-l);cursor:pointer;transition:background var(--tr-base)}
+.carta-sr-item:active,.ag-sr-item:active{background:var(--surf-2)}
 .carta-sr-item:last-child{border-bottom:none}
 .carta-sr-item:active{background:var(--surf-2)}
-.carta-sr-poster{width:28px;height:42px;object-fit:cover;border-radius:3px;flex-shrink:0;background:var(--surf-2)}
+.carta-sr-poster{width:var(--poster-xs-w);height:var(--poster-xs-h);object-fit:cover;border-radius:var(--r-sm);flex-shrink:0;background:var(--surf-2)}
 .carta-sr-info{flex:1;min-width:0}
 .carta-sr-title{font-size:var(--t-sm);font-weight:var(--w-semi);color:var(--white);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.carta-sr-meta{font-size:11px;color:var(--gray2);margin-top:1px}
+.carta-sr-meta{font-size:var(--t-xs);color:var(--gray2);margin-top:1px}
 .cnt-line b{color:var(--white)}
 
 /* ════════════════════════════════════════════════════════
@@ -344,11 +345,11 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:20px;fo
 
 /* ── Búsqueda ── */
 
-.ag-sr-item{display:flex;align-items:center;justify-content:space-between;gap:var(--sp-3);padding:var(--sp-3) var(--sp-4);border-bottom:1px solid var(--bdr-l)}
+.ag-sr-item{display:flex;align-items:center;gap:10px;padding:10px 14px;border-bottom:1px solid var(--bdr-l);cursor:pointer;transition:background var(--tr-base)}
 .ag-sr-item:last-child{border-bottom:none}
 .ag-sr-item:hover{background:var(--card-a)}
-.ag-sr-title{font-size:var(--t-base);color:var(--white);font-weight:var(--w-semi);flex:1;min-width:0}
-.ag-sr-meta{font-size:var(--t-sm);color:var(--gray)}
+.ag-sr-title{font-size:var(--t-sm);font-weight:var(--w-semi);color:var(--white);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;flex:1;min-width:0}
+.ag-sr-meta{font-size:var(--t-xs);color:var(--gray2);margin-top:1px}
 .ag-sr-add{background:none;border:1px solid var(--bdr);border-radius:var(--r-pill);color:var(--gray);font-size:var(--t-sm);padding:var(--sp-1) var(--sp-3);cursor:pointer;font-family:var(--font);transition:color var(--tr-base);white-space:nowrap;flex-shrink:0}
 .ag-sr-add:hover{border-color:var(--orange);color:var(--orange)}
 .ag-sr-add.added{border-color:var(--orange);color:var(--orange);background:var(--amber-08)}
@@ -2418,7 +2419,7 @@ const FESTIVAL_STORAGE_KEY='ficci65_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202604201528';
+const BUILD_VERSION='202604201531';
 (function(){
   const _vk='otrofestiv_build';
   const _sk='otrofestiv_reloaded';
