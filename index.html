@@ -2378,7 +2378,7 @@ const FESTIVAL_STORAGE_KEY='ficci65_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202604200230';
+const BUILD_VERSION='202604200232';
 (function(){
   const _vk='otrofestiv_build';
   const _sk='otrofestiv_reloaded';
@@ -6106,7 +6106,7 @@ function renderProgramaList(){
           <div class="plist-meta">${vc.short}${sala(f.venue)?' · '+sala(f.venue):''} · ${f.duration||'~90'} min</div>
           <div class="plist-sec">${f.section||''}</div>
         </div>
-        <div class="plist-heart${inWL?'':' empty'}" onclick="event.stopPropagation();toggleWL('${safeT}',this)">${inWL?ICONS.heartFill:ICONS.heart}</div>
+        <div class="plist-heart${inWL?'':' empty'}" onclick="event.stopPropagation();_toggleWLFromList('${safeT}',this)">${inWL?ICONS.heartFill:ICONS.heart}</div>
       </div>`;
     }).join('')}
   `).join('');
@@ -6173,19 +6173,23 @@ function _renderExploreLista(){
         <div class="plist-meta">${f.duration||'~90'} min · ${days}</div>
         <div class="plist-sec">${f.section||''}</div>
       </div>
-      <div class="plist-heart${inWL?'':' empty'}" onclick="event.stopPropagation();toggleWL('${safeT}',this)">${inWL?ICONS.heartFill:ICONS.heart}</div>
+      <div class="plist-heart${inWL?'':' empty'}" onclick="event.stopPropagation();_toggleWLFromList('${safeT}',this)">${inWL?ICONS.heartFill:ICONS.heart}</div>
     </div>`;
   }).join('');
 }
 
-function toggleWL(title,btn){
-  if(watchlist.has(title)){
-    removeFromWL(title);
-    if(btn){btn.innerHTML=ICONS.heart;btn.classList.add('empty');}
-  } else {
-    addToWL(title);
-    if(btn){btn.innerHTML=ICONS.heartFill;btn.classList.remove('empty');}
-  }
+function _toggleWLFromList(title,btn){
+  // Wrapper para el ♥ en la lista de Programa — usa el toggleWL existente
+  const wasIn=watchlist.has(title);
+  toggleWL(title,{stopPropagation:()=>{}});
+  // Actualizar el botón visualmente después del toggle
+  setTimeout(()=>{
+    const isIn=watchlist.has(title);
+    if(btn){
+      btn.innerHTML=isIn?ICONS.heartFill:ICONS.heart;
+      btn.classList.toggle('empty',!isIn);
+    }
+  },50);
 }
 
 function setCartelaMode(mode){
