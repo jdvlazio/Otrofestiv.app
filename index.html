@@ -1850,6 +1850,12 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:20px;fo
   <div class="pel-sheet-topbar"><div class="pel-sheet-handle"></div><button class="pel-sheet-close" onclick="closePelSheet()"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button></div>
   <div class="pel-sheet-inner" id="pel-sheet-inner"></div>
 </div>
+<div class="carta-search-wrap" id="carta-search-wrap">
+  <span class="carta-search-ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
+  <input type="text" id="carta-search-input" class="carta-search" placeholder="Buscar película…" oninput="onCartaSearch()" autocomplete="off" autocorrect="off">
+  <button class="carta-search-clear" id="carta-search-clear" onclick="clearCartaSearch()"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+  <div id="carta-search-results" class="carta-search-results"></div>
+</div>
 <!-- ── Programa: barra de modos Explorar/Hoy/Mañana ── -->
 <div class="programa-mode-bar" id="programa-mode-bar" style="display:none">
   <button class="pmode-tab on" id="pmode-explorar" onclick="setProgramaMode('explorar')">Explorar</button>
@@ -1886,12 +1892,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:20px;fo
 <div class="nav-row" id="nav-row">
   <div class="nav-tabs" id="dtabs"></div>
 </div>
-<div class="carta-search-wrap" id="carta-search-wrap">
-  <span class="carta-search-ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
-  <input type="text" id="carta-search-input" class="carta-search" placeholder="Buscar película…" oninput="onCartaSearch()" autocomplete="off" autocorrect="off">
-  <button class="carta-search-clear" id="carta-search-clear" onclick="clearCartaSearch()"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
-  <div id="carta-search-results" class="carta-search-results"></div>
-</div>
+
 <div class="filter-row" id="filter-row">
   <div class="fdr-filters">
     <div class="fdr-wrap">
@@ -2378,7 +2379,7 @@ const FESTIVAL_STORAGE_KEY='ficci65_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202604200238';
+const BUILD_VERSION='202604200241';
 (function(){
   const _vk='otrofestiv_build';
   const _sk='otrofestiv_reloaded';
@@ -5440,7 +5441,8 @@ function switchMainNav(id){
 function showDayView(){
   activeView='day';
   switchMainNav('mnav-cartelera');
-  // Mostrar nueva mode bar
+  // Mostrar buscador y mode bar
+  const _csw2=document.getElementById('carta-search-wrap');if(_csw2) _csw2.style.display='';
   const modeBar=document.getElementById('programa-mode-bar');
   if(modeBar) modeBar.style.display='';
   // Ocultar toggle legacy
@@ -5464,6 +5466,7 @@ function showAgView(){
   const _chips=document.getElementById('programa-chips');if(_chips) _chips.classList.add('hidden');
   const _paf=document.getElementById('programa-active-filter');if(_paf) _paf.classList.remove('visible');
   const _lista=document.getElementById('programa-list');if(_lista) _lista.classList.remove('visible');
+  const _csw=document.getElementById('carta-search-wrap');if(_csw) _csw.style.display='none';
   document.getElementById('nav-row').classList.add('hidden');
   document.getElementById('filter-row').classList.add('hidden');
   document.getElementById('filter-bars').style.display='none';
@@ -5535,9 +5538,14 @@ function renderSbar(){
   const lbl=document.getElementById('sdr-label');
   if(!panel) return;
   panel.innerHTML='';
-  let dayF=FILMS.filter(f=>f.day===activeDay);
+  // En Explorar: mostrar todas las secciones. En Hoy/Mañana: filtrar por día
+  const isExplorar=programaSubMode==='explorar';
+  let dayF=isExplorar?FILMS:FILMS.filter(f=>f.day===activeDay);
   if(activeVenue!=='all') dayF=dayF.filter(f=>vcfg(f.venue).short===activeVenue);
   const secs=[...new Set(dayF.map(f=>f.section))].sort();
+  // Siempre mostrar 'Categoría' cuando el filtro viene de chip
+  if(lbl) lbl.textContent=activeSec==='all'||activeSec==='_chip_'?'Categoría':(activeSec.length>18?activeSec.slice(0,16)+'…':activeSec);
+  if(trigBtn) trigBtn.classList.toggle('active',activeSec!=='all'&&activeSec!=='_chip_');
   const mkOpt=(html,isOn,cb)=>{
     const b=document.createElement('button');
     b.className='fdr-opt'+(isOn?' on':'');
@@ -5550,9 +5558,7 @@ function renderSbar(){
     const cnt=dayF.filter(f=>f.section===sec).length;
     mkOpt(`${sec} <span class="fdr-cnt">${cnt}</span>`,activeSec===sec,()=>{activeSec=activeSec===sec?'all':sec;selectedIdx=null;setHint(null);closeDropdowns();render();});
   });
-  const shortSec=activeSec==='all'||activeSec==='_chip_'?'Categoría':(activeSec.length>18?activeSec.slice(0,16)+'…':activeSec);
-  if(lbl) lbl.textContent=shortSec;
-  if(trigBtn) trigBtn.classList.toggle('active',activeSec!=='all'&&activeSec!=='_chip_');
+  // label y active ya seteados al principio
 }
 function setHint(film){
   const el=document.getElementById('hint');
