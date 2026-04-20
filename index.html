@@ -2402,7 +2402,7 @@ const FESTIVAL_STORAGE_KEY='ficci65_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202604201332';
+const BUILD_VERSION='202604201336';
 (function(){
   const _vk='otrofestiv_build';
   const _sk='otrofestiv_reloaded';
@@ -2843,7 +2843,8 @@ function toggleWatched(title,e){
         if(activeView==='agenda') renderAgenda();
         if(activeMNav==='mnav-miplan') renderAgenda();
         showToast('Movida a Ya vistas','info');
-        setTimeout(()=>openRatingSheet(title),350);
+        // Los programas de cortos no tienen calificación general
+        if(!FILMS.find(fi=>fi.title===title)?.is_cortos) setTimeout(()=>openRatingSheet(title),350);
       }
     );
   }
@@ -3735,7 +3736,9 @@ function checkinLaVi(title){
     watched.add(title);saveWatched();updateCardState(title);updateAgTab();
     renderAgenda();
     const s=savedAgenda&&savedAgenda.schedule.find(e=>e._title===title);
-    setTimeout(()=>openPostViewRating(title, s?.day, s?.time, s?.venue, s?.duration), 250);
+    // Los programas de cortos no tienen calificación general
+  const _isCortos=FILMS.find(fi=>fi.title===title)?.is_cortos;
+  if(!_isCortos) setTimeout(()=>openPostViewRating(title, s?.day, s?.time, s?.venue, s?.duration), 250);
   } else {
     renderAgenda();
   }
@@ -4170,13 +4173,12 @@ function renderContextualHeader(){
       const src=f?.is_cortos?makeProgramPoster(t):(getPosterSrc(t,false)||'');
       const safeT=t.replace(/'/g,"\'");
       const stars=r?'★'.repeat(Math.round(r)):'';
-      return`<div style="position:relative;flex-shrink:0;cursor:pointer" onclick="openPelSheet('${safeT}')">
-        ${src?`<img src="${src}" style="width:60px;height:90px;object-fit:cover;border-radius:8px;display:block" onerror="this.style.opacity=0" alt="">`
-             :`<div style="width:60px;height:90px;border-radius:8px;background:var(--surf-3)"></div>`}
-        ${r?`<div style="position:absolute;bottom:3px;left:0;right:0;text-align:center;font-size:8px;color:var(--amber);text-shadow:0 1px 3px rgba(0,0,0,.9)">${stars}</div>`
-           :`<div style="position:absolute;bottom:3px;left:0;right:0;text-align:center">
-              <button onclick="event.stopPropagation();openPostViewRating('${safeT}','','','','')" style="background:rgba(0,0,0,.7);border:1px solid rgba(255,255,255,.2);border-radius:20px;color:var(--white);font-size:8px;font-weight:700;font-family:var(--font);padding:2px 5px;cursor:pointer">★</button>
-            </div>`}
+      // Posters grandes, plena opacidad — pensado para screenshot
+      return`<div style="position:relative;flex-shrink:0;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:5px;width:80px" onclick="openPelSheet('${safeT}')">
+        ${src?`<img src="${src}" style="width:80px;height:120px;object-fit:cover;border-radius:10px;display:block;box-shadow:0 4px 12px rgba(0,0,0,.5)" onerror="this.style.display='none'" alt="">`
+             :`<div style="width:80px;height:120px;border-radius:10px;background:var(--surf-3);display:flex;align-items:center;justify-content:center;font-size:24px">🎬</div>`}
+        ${r?`<div style="font-size:11px;color:var(--amber);letter-spacing:1px;text-align:center">${stars}</div>`
+           :f?.is_cortos?'':`<button onclick="event.stopPropagation();openPostViewRating('${safeT}','','','','')" style="background:var(--surf-2);border:1px solid var(--bdr);border-radius:20px;color:var(--gray);font-size:10px;font-weight:700;font-family:var(--font);padding:3px 8px;cursor:pointer">★</button>`}
       </div>`;
     }).join('');
     const subMsg=totalWatched===0
@@ -4324,7 +4326,7 @@ function renderContextualHeader(){
           ?`<img src="${src}" style="width:72px;height:108px;object-fit:cover;border-radius:8px;display:block" onerror="this.style.opacity=0" alt="">`
           :`<div style="width:72px;height:108px;border-radius:8px;background:var(--surf-3);display:flex;align-items:center;justify-content:center;font-size:20px">🎬</div>`}
         ${r?`<div style="position:absolute;bottom:4px;left:0;right:0;text-align:center;font-size:9px;color:var(--amber);letter-spacing:1px;text-shadow:0 1px 3px rgba(0,0,0,.8)">${stars}</div>`:''}
-        ${!r?`<div style="position:absolute;bottom:4px;left:0;right:0;text-align:center">
+        ${(!r&&!f?.is_cortos)?`<div style="position:absolute;bottom:4px;left:0;right:0;text-align:center">
           <button onclick="event.stopPropagation();openPostViewRating('${safeT}','${s.day||''}','${s.time||''}','${(s.venue||'').replace(/'/g,"\'")}','${s.duration||''}')" style="background:rgba(0,0,0,.7);border:1px solid rgba(255,255,255,.15);border-radius:20px;color:var(--white);font-size:9px;font-weight:700;font-family:var(--font);padding:2px 6px;cursor:pointer">★</button>
         </div>`:''}
       </div>`;
@@ -4467,6 +4469,8 @@ function _renderSavedAgendaHTML(){
     html+=renderMiPlanCalendar();
   }
 
+  // Sugerencias solo durante el festival
+  if(!festivalEnded()){
   const suggsByDay=getSuggestions();
   const suggDays=DAY_KEYS.filter(d=>suggsByDay[d]&&suggsByDay[d].length>0);
   html+=`<div class="suggestion-wrap">
@@ -4499,6 +4503,7 @@ function _renderSavedAgendaHTML(){
     html+=emptyState(ICONS.search,'Tu plan está bien cubierto.','Tu agenda está bien cubierta. No hay más funciones que quepan.');
   }
   html+='</div>'; // close suggestion-wrap
+  } // end !festivalEnded
 
   html+='</div>';
   return html;
