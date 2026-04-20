@@ -1277,89 +1277,133 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 
 @media(min-width:768px){
 
-  /* ── VARIABLES ── */
   :root{
     --content-w:960px;
     --content-pad:var(--sp-5);
-    --tb-h:44px;
-    --mn-h:44px;
-    --sticky-top-carta:calc(var(--tb-h) + var(--mn-h));
-    --sticky-top-chips:calc(var(--tb-h) + var(--mn-h) + 40px);
+    --tb-h:52px;
+    --sticky-top-carta:var(--tb-h);
+    --sticky-top-chips:calc(var(--tb-h) + 40px);
     --poster-lg-w:112px;
     --poster-lg-h:168px;
   }
 
   html{scrollbar-gutter:stable}
 
-  /* ── TOPBAR — sticky, bg full-width ── */
+  /* ══════════════════════════════════════════════════
+     TOPBAR DESKTOP — una sola fila unificada
+     Logo izquierda · Tabs centro-derecha · Actions derecha
+     Todo en el mismo eje del área de contenido (960px)
+  ══════════════════════════════════════════════════ */
   .topbar{
     position:sticky;top:0;z-index:200;
     background:var(--surf);border-bottom:1px solid var(--bdr);
-  }
-
-  /* Contenido del topbar centrado a 960px */
-  .hdr{
+    display:flex;align-items:stretch;
+    justify-content:center;
     height:var(--tb-h);
-    max-width:var(--content-w);
-    margin:0 auto;
-    padding:0 var(--content-pad);
   }
-  .hdr-fest-bar{
-    max-width:var(--content-w);
-    margin:0 auto;
-    padding:var(--sp-2) var(--content-pad);
-    background:transparent;
-    border:none;
-    height:auto;
-  }
-  .hdr-fest-bar:hover{background:transparent}
 
-  /* ── MAIN NAV — sticky, bg full-width, tabs centrados ── */
+  /* Contenedor interno centrado — logo + nav + acciones en una fila */
+  .hdr{
+    display:flex;align-items:center;
+    width:100%;max-width:var(--content-w);
+    height:var(--tb-h);
+    padding:0 var(--content-pad);
+    gap:var(--sp-5);
+    /* Anula el padding del topbar en mobile */
+  }
+
+  .hdr-wordmark{
+    font-size:var(--t-lg);
+    flex-shrink:0;
+    margin-right:var(--sp-3);
+  }
+
+  /* Festival bar: inline junto al logo, no debajo */
+  .hdr-fest-bar{
+    display:flex;align-items:center;
+    gap:var(--sp-2);
+    padding:0 var(--sp-3);
+    background:var(--surf-2);
+    border:1px solid var(--bdr);
+    border-radius:var(--r-pill);
+    height:28px;
+    flex-shrink:0;
+    cursor:pointer;
+    margin-right:auto;
+  }
+  .hdr-fest-bar:hover{background:var(--surf-3,var(--bdr))}
+
+  /* Nav: ocupa el espacio restante del .hdr, se comporta como flex inline */
   .main-nav{
-    position:sticky !important;
-    top:var(--tb-h) !important;
+    /* Reset mobile */
+    position:static !important;
+    top:auto !important;
     bottom:auto !important;
     left:auto !important;
     right:auto !important;
-    z-index:199;
-    border-top:none !important;
-    border-bottom:1px solid var(--bdr) !important;
+    border:none !important;
     padding:0 !important;
-    background:var(--surf);
-    display:flex;
-    justify-content:center;
-    padding-bottom:0 !important;
+    background:transparent;
+    z-index:auto;
+    /* Flex inline dentro del .hdr */
+    display:flex !important;
+    align-items:stretch;
+    height:100%;
+    flex:1;
+    justify-content:flex-end;
+    margin-left:auto;
   }
   .main-nav-tab{
-    flex:1 !important;
-    max-width:160px !important;
-    height:var(--mn-h) !important;
+    flex:none !important;
+    width:auto !important;
+    height:100% !important;
     flex-direction:row !important;
-    gap:var(--sp-2) !important;
-    padding:0 var(--sp-3) !important;
+    gap:var(--sp-1) !important;
+    padding:0 var(--sp-4) !important;
     border-bottom:2px solid transparent !important;
     border-top:none !important;
-    margin-bottom:-1px !important;
+    margin-bottom:0 !important;
     margin-top:0 !important;
-    justify-content:center !important;
     font-size:var(--t-sm) !important;
+    color:var(--gray2) !important;
+    white-space:nowrap;
+    justify-content:center !important;
+    align-items:center !important;
   }
   .main-nav-tab.on{
     border-bottom-color:var(--orange) !important;
-    border-top-color:transparent !important;
     color:var(--white) !important;
+    border-top-color:transparent !important;
   }
+  .main-nav-tab:hover:not(.on){color:var(--white) !important}
   .main-nav-ico svg{width:14px;height:14px}
   .main-nav-lbl{font-size:var(--t-sm)}
 
-  /* ── MIXIN CENTRADO — aplicado a cada elemento individualmente ── */
-  /* Todos los elementos de Programa y contenido general */
+  /* El main-nav VIVE DENTRO del .hdr — debe moverse al HTML */
+  /* Por ahora: ocultar el main-nav original y simular via CSS */
+
+  /* ══════════════════════════════════════════════════
+     CONTENIDO — centrado a 960px, sin nav-row separado
+  ══════════════════════════════════════════════════ */
+  .nav-row{
+    position:sticky;top:var(--tb-h);z-index:198;
+    background:var(--bg);
+    max-width:var(--content-w);width:100%;
+    margin-left:auto;margin-right:auto;
+    padding-left:var(--content-pad);padding-right:var(--content-pad);
+  }
+  .filter-row{
+    position:sticky;top:var(--tb-h);z-index:197;
+    background:var(--bg);
+    max-width:var(--content-w);width:100%;
+    margin-left:auto;margin-right:auto;
+    padding-left:var(--content-pad);padding-right:var(--content-pad);
+  }
+
   .carta-search-wrap,
   .programa-mode-bar,
   .programa-chips,
   .programa-active-filter,
-  .nav-row,
-  .filter-row,
   .hint,
   .cnt-line,
   .grid,
@@ -1371,120 +1415,63 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
     margin-right:auto;
   }
 
-  /* ── BUSCADOR DE PROGRAMA ── */
-  .carta-search-wrap{
-    padding-left:var(--content-pad);
-    padding-right:var(--content-pad);
-    margin-top:var(--sp-2);
-  }
-
-  /* ── MODE BAR Y CHIPS — padding consistente ── */
-  .programa-mode-bar{
-    padding-left:var(--content-pad);
-    padding-right:var(--content-pad);
-  }
-  .programa-chips{
-    padding-left:var(--content-pad);
-    padding-right:var(--content-pad);
-  }
-  .programa-active-filter{
-    padding-left:var(--content-pad);
-    padding-right:var(--content-pad);
-  }
-
-  /* ── NAV-ROW Y FILTER-ROW — sticky bajo el nav ── */
-  .nav-row{
-    position:sticky;
-    top:var(--sticky-top-carta);
-    z-index:198;
-    background:var(--bg);
-    width:100%;
-    padding-left:var(--content-pad);
-    padding-right:var(--content-pad);
-  }
-  .filter-row{
-    position:sticky;
-    top:var(--sticky-top-carta);
-    z-index:197;
-    background:var(--bg);
-    width:100%;
-    padding-left:var(--content-pad);
-    padding-right:var(--content-pad);
-  }
-
-  /* ── CONTENIDO PRINCIPAL ── */
+  .carta-search-wrap{padding-left:var(--content-pad);padding-right:var(--content-pad);margin-top:var(--sp-2)}
+  .programa-mode-bar{padding-left:var(--content-pad);padding-right:var(--content-pad)}
+  .programa-chips{padding-left:var(--content-pad);padding-right:var(--content-pad)}
+  .programa-active-filter{padding-left:var(--content-pad);padding-right:var(--content-pad)}
   .hint{padding-left:var(--content-pad);padding-right:var(--content-pad)}
   .cnt-line{padding-left:var(--content-pad);padding-right:var(--content-pad)}
   #cartelera-cta{padding-left:var(--content-pad);padding-right:var(--content-pad)}
 
-  /* #grid en explorar: contiene un .poster-grid → display:block */
   .grid{
-    padding-left:var(--content-pad);
-    padding-right:var(--content-pad);
-    padding-bottom:var(--sp-6);
-    padding-top:var(--sp-3);
+    padding-left:var(--content-pad);padding-right:var(--content-pad);
+    padding-top:var(--sp-3);padding-bottom:var(--sp-6);
     grid-template-columns:repeat(auto-fill,minmax(min(100%,260px),1fr));
   }
-  /* Cuando #grid tiene un .poster-grid directo, el #grid no debe ser grid */
-  .grid:has(> .poster-grid){
-    display:block;
-  }
-  /* El poster-grid dentro del grid ocupa todo el ancho del padre */
-  .grid > .poster-grid{
-    width:100%;
-    grid-template-columns:repeat(6,1fr);
-  }
+  .grid:has(> .poster-grid){display:block}
+  .grid > .poster-grid{width:100%;grid-template-columns:repeat(6,1fr)}
 
   .ag-view{
-    padding-left:var(--content-pad);
-    padding-right:var(--content-pad);
-    padding-top:var(--sp-3);
-    padding-bottom:var(--sp-6);
+    max-width:var(--content-w);margin-left:auto;margin-right:auto;
+    padding-left:var(--content-pad);padding-right:var(--content-pad);
+    padding-top:var(--sp-3);padding-bottom:var(--sp-6);
   }
 
-  /* ── GRIDS EN DESKTOP ── */
+  /* Grids en desktop */
   .ag-film-grid{grid-template-columns:repeat(6,1fr) !important}
   .poster-grid{grid-template-columns:repeat(6,1fr)}
 
-  /* ── INTERESES — hover reveal ── */
+  /* Intereses hover */
   .ag-fi-overlay,.ag-fi-bottom,.ag-fi-actions{opacity:0;transition:opacity var(--tr-base)}
-  .ag-film-item.ag-prog .ag-fi-overlay,
-  .ag-film-item.ag-prog .ag-fi-bottom{opacity:1}
-  .ag-film-item:hover .ag-fi-overlay,
-  .ag-film-item:hover .ag-fi-bottom,
-  .ag-film-item:hover .ag-fi-actions{opacity:1}
+  .ag-film-item.ag-prog .ag-fi-overlay,.ag-film-item.ag-prog .ag-fi-bottom{opacity:1}
+  .ag-film-item:hover .ag-fi-overlay,.ag-film-item:hover .ag-fi-bottom,.ag-film-item:hover .ag-fi-actions{opacity:1}
 
-  /* ── CARDS DE PROGRAMA — hover ── */
+  /* Cards hover */
   .card:hover:not(.conflict){
     transform:translateY(-2px);
     box-shadow:0 8px 24px var(--overlay-60);
     border-color:var(--amber-35);
   }
 
-  /* ── BOTONES DE ACCIÓN EN INTERESES ── */
   .ag-fi-actions{gap:var(--sp-1)}
   .ag-fi-btn{padding:var(--sp-1) var(--sp-2)}
 
-  /* ── TOAST — top-right del área de contenido ── */
+  /* Toast */
   .prio-toast{
-    top:var(--sp-3);
-    left:auto;
+    top:var(--sp-3);left:auto;
     right:max(var(--sp-4),calc(50vw - 464px));
-    transform:none;
-    width:auto;
-    max-width:300px;
+    transform:none;width:auto;max-width:300px;
   }
 
-  /* ── SPLASH SELECTOR — centrado, ancho cómodo ── */
+  /* Splash desktop */
   #otrofestiv-splash{padding:var(--sp-6) var(--sp-7)}
   .splash-tagline{max-width:560px}
   .splash-selector{max-width:400px}
 
-  /* ── WELCOME OVERLAY — modal centrado ── */
+  /* Welcome modal */
   .welcome-overlay{align-items:center;justify-content:center}
   .welcome-sheet{
-    border-radius:var(--r);
-    border-top:none;
+    border-radius:var(--r);border-top:none;
     border:1px solid var(--bdr);
     padding:var(--sp-6) var(--sp-5);
     box-shadow:0 24px 80px rgba(0,0,0,.6);
@@ -1797,19 +1784,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 <div class="topbar">
 <div class="hdr">
   <h1 class="hdr-wordmark">Otro<span>festiv</span></h1>
-  <div id="hdr-share-wrap" style="display:none;margin-left:auto;position:relative">
-    <button onclick="toggleShareMenu()" style="background:none;border:none;color:var(--gray2);cursor:pointer;padding:6px;display:flex;align-items:center;justify-content:center">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
-    </button>
-    <div class="share-menu-wrap" id="share-menu-wrap" style="position:absolute;top:100%;right:0">
-      <div class="share-dropdown" id="share-dropdown">
-        <button class="share-opt" onclick="shareAsImage();closeShareMenu()">Como imagen</button>
-        <button class="share-opt" onclick="exportICS();closeShareMenu()">Archivo .ICS</button>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="hdr-fest-bar" onclick="openFestivalSheet()">
+  <div class="hdr-fest-bar" onclick="openFestivalSheet()">
   <div class="hdr-fest-left">
     <div class="hdr-fest-dot"></div>
     <div class="hdr-fest-name">FICCI 65</div>
@@ -1817,8 +1792,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
   </div>
   <div class="hdr-fest-chev">˅</div>
 </div>
-</div><!-- /topbar -->
-<div class="main-nav" id="main-nav" role="navigation" aria-label="Navegación principal">
+  <div class="main-nav" id="main-nav" role="navigation" aria-label="Navegación principal">
   <button class="main-nav-tab on" id="mnav-cartelera" onclick="{const _ph=_getProgramaPhase();programaSubMode=_ph.default;switchMainNav('mnav-cartelera');showDayView();}">
     <span class="main-nav-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="2.18"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="2" y1="7" x2="7" y2="7"/><line x1="2" y1="17" x2="7" y2="17"/><line x1="17" y1="17" x2="22" y2="17"/><line x1="17" y1="7" x2="22" y2="7"/></svg></span>
     <span class="main-nav-lbl">PROGRAMA</span>
@@ -1836,6 +1810,20 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
     <span class="main-nav-lbl">MI PLAN</span>
   </button>
 </div>
+  <div id="hdr-share-wrap" style="display:none;margin-left:auto;position:relative">
+    <button onclick="toggleShareMenu()" style="background:none;border:none;color:var(--gray2);cursor:pointer;padding:6px;display:flex;align-items:center;justify-content:center">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
+    </button>
+    <div class="share-menu-wrap" id="share-menu-wrap" style="position:absolute;top:100%;right:0">
+      <div class="share-dropdown" id="share-dropdown">
+        <button class="share-opt" onclick="shareAsImage();closeShareMenu()">Como imagen</button>
+        <button class="share-opt" onclick="exportICS();closeShareMenu()">Archivo .ICS</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div><!-- /topbar -->
+
 <div class="carta-mode-toggle" id="carta-mode-toggle" style="display:none"></div>
 <!-- ── Post-View Rating Sheet ── -->
 <div class="pv-rating-overlay" id="pv-rating-overlay" onclick="closePVRating()"></div>
@@ -2497,7 +2485,7 @@ const FESTIVAL_STORAGE_KEY='ficci65_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202604202135';
+const BUILD_VERSION='202604202143';
 (function(){
   const _vk='otrofestiv_build';
   const _sk='otrofestiv_reloaded';
