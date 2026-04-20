@@ -2406,7 +2406,7 @@ const FESTIVAL_STORAGE_KEY='ficci65_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202604201420';
+const BUILD_VERSION='202604201422';
 (function(){
   const _vk='otrofestiv_build';
   const _sk='otrofestiv_reloaded';
@@ -5004,6 +5004,7 @@ function _pvRenderStars(val){
 
 function openPostViewRating(title, day, time, venue, duration){
   _pvTitle=title;
+  _pushSheetState();
   _pvRating=filmRatings[title]||0;
 
   const{displayTitle}=parseProgramTitle(title);
@@ -5130,6 +5131,7 @@ function openConflictSheet(incomingTitle, incomingScreen, existingEntry){
 
   document.getElementById('conflict-sheet-overlay').classList.add('open');
   document.getElementById('conflict-sheet').classList.add('open');
+  _pushSheetState();
 
   // Acción del botón
   if(btn) btn.onclick=confirmConflictReplace;
@@ -5203,6 +5205,7 @@ function openWLAdd(title){
   // Abrir
   document.getElementById('wl-add-overlay').classList.add('open');
   document.getElementById('wl-add-sheet').classList.add('open');
+  _pushSheetState();
 
   // Auto-close a los 4s si no hay interacción
   if(_wlAddTimer) clearTimeout(_wlAddTimer);
@@ -5862,6 +5865,7 @@ function _initRatingInteraction(){
 
 function openRatingSheet(title){
   _ratingTitle=title;
+  _pushSheetState();
   _currentRating=filmRatings[title]||0;
   const{displayTitle}=parseProgramTitle(title);
   document.getElementById('rating-film-title').textContent=displayTitle;
@@ -6079,11 +6083,23 @@ function closePelSheet(){
   document.getElementById('pel-overlay').classList.remove('open');
   document.getElementById('pel-sheet').classList.remove('open');
 }
-// History API — cerrar sheet con botón back del browser
+// History API — cerrar cualquier sheet/overlay con botón back del browser
+function _closeTopSheet(){
+  // Cerrar en orden de prioridad (el más reciente primero)
+  if(document.getElementById('pv-rating-sheet')?.classList.contains('open')){closePVRating();return true;}
+  if(document.getElementById('conflict-sheet')?.classList.contains('open')){closeConflictSheet();return true;}
+  if(document.getElementById('wl-add-sheet')?.classList.contains('open')){closeWLAdd();return true;}
+  if(document.getElementById('prio-limit-sheet')?.classList.contains('open')){closePrioLimit();return true;}
+  if(document.getElementById('rating-overlay')?.classList.contains('open')){closeRatingSheet();return true;}
+  if(document.getElementById('pel-sheet')?.classList.contains('open')){closePelSheet();return true;}
+  // Action modal dinámico
+  const modal=document.querySelector('.conflict-modal');
+  if(modal){modal.remove();return true;}
+  return false;
+}
 window.addEventListener('popstate',function(e){
-  const sheet=document.getElementById('pel-sheet');
-  if(sheet&&sheet.classList.contains('open')){
-    closePelSheet();
+  if(!_closeTopSheet()){
+    // Ningún sheet abierto — dejar que el browser navegue normalmente
   }
 });
 function _pushSheetState(){
