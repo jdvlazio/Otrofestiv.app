@@ -415,7 +415,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:20px;fo
 
 /* ── Sugerencias ── */
 .suggestion-wrap{margin-top:var(--sp-5);padding-top:var(--sp-3);border-top:1px solid var(--bdr-l)}
-.suggestion-day-lbl{display:flex;flex-direction:column;align-items:flex-start;gap:1px;margin:var(--sp-3) 0 var(--sp-2);padding-left:2px}
+.suggestion-day-lbl{display:flex;flex-direction:column;align-items:flex-start;gap:0;margin:var(--sp-3) 0 var(--sp-2);padding-left:2px}
 .suggestion-item{display:flex;align-items:center;gap:var(--sp-3);padding:var(--sp-2) 0;border-bottom:1px solid var(--bdr-l);opacity:.9}
 .suggestion-item:last-child{border-bottom:none}
 .suggestion-item:hover{opacity:1}
@@ -566,7 +566,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:20px;fo
 .pmode-spacer{flex:1}
 .pmode-controls{display:flex;align-items:center;gap:8px}
 .pmode-view-switch{display:flex;align-items:center;gap:2px;background:var(--surf-2);border:1px solid var(--bdr);border-radius:8px;padding:3px}
-.pmode-view-btn{width:24px;height:24px;display:flex;align-items:center;justify-content:center;border-radius:5px;cursor:pointer;color:var(--gray);background:none;border:none;transition:all .15s}
+.pmode-view-btn{width:24px;height:24px;display:flex;align-items:center;justify-content:center;border-radius:var(--r-sm);cursor:pointer;color:var(--gray);background:none;border:none;transition:all .15s}
 .pmode-view-btn.on{background:var(--amber);color:#000}
 .pmode-filter-btn{display:flex;align-items:center;gap:4px;font-size:11px;font-weight:700;color:var(--gray2);background:none;border:none;cursor:pointer;font-family:var(--font);padding:4px 0;transition:color .15s;white-space:nowrap}
 .pmode-filter-btn.active{color:var(--amber)}
@@ -575,12 +575,12 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:20px;fo
 .programa-chips::-webkit-scrollbar{display:none}
 .programa-chips{-webkit-overflow-scrolling:touch}
 .programa-chips.hidden{display:none}
-.pchip{flex-shrink:0;font-size:11px;font-weight:700;color:var(--gray);background:none;border:1px solid var(--bdr);border-radius:20px;padding:5px 12px;cursor:pointer;font-family:var(--font);white-space:nowrap;transition:all .15s}
+.pchip{flex-shrink:0;font-size:var(--t-sm);font-weight:var(--w-bold);color:var(--gray);background:none;border:1px solid var(--bdr);border-radius:20px;padding:5px 12px;cursor:pointer;font-family:var(--font);white-space:nowrap;transition:all .15s}
 .pchip.on{background:var(--amber-10);border-color:var(--amber-30);color:var(--amber)}
 /* Tag activo dismissible */
-.programa-active-filter{display:none;align-items:center;gap:6px;padding:5px 12px;border-bottom:1px solid var(--bdr-l);background:var(--surf);flex-shrink:0}
+.programa-active-filter{display:none;align-items:center;gap:var(--sp-1);padding:var(--sp-1) var(--sp-3);border-bottom:1px solid var(--bdr-l);background:var(--surf);flex-shrink:0}
 .programa-active-filter.visible{display:flex}
-.paf-tag{display:flex;align-items:center;gap:5px;font-size:11px;font-weight:700;color:var(--amber);background:var(--amber-10);border:1px solid var(--amber-30);border-radius:20px;padding:3px 8px 3px 10px;cursor:pointer}
+.paf-tag{display:flex;align-items:center;gap:var(--sp-1);font-size:var(--t-sm);font-weight:var(--w-bold);color:var(--amber);background:var(--amber-10);border:1px solid var(--amber-30);border-radius:20px;padding:3px 8px 3px 10px;cursor:pointer}
 .paf-count{font-size:11px;color:var(--gray)}
 /* Lista Hoy/Mañana */
 .programa-list{display:none;flex-direction:column;overflow-y:auto;flex:1}
@@ -596,7 +596,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:20px;fo
 .plist-heart{font-size:15px;color:var(--amber);flex-shrink:0;cursor:pointer;padding:4px}
 /* Mi Plan — modo lista compacta */
 .mplan-list-view{display:flex;flex-direction:column}
-.mplan-list-day{padding:6px 16px 4px;font-size:10px;font-weight:800;color:var(--amber);letter-spacing:.5px;text-transform:uppercase;background:var(--surf);border-bottom:1px solid var(--bdr-l);position:sticky;top:0;z-index:2}
+.mplan-list-day{padding:var(--sp-1) var(--sp-4);font-size:var(--t-xs);font-weight:800;color:var(--amber);letter-spacing:.5px;text-transform:uppercase;background:var(--surf);border-bottom:1px solid var(--bdr-l);position:sticky;top:0;z-index:2}
 .mplan-list-item{display:flex;align-items:center;gap:12px;padding:11px 16px;border-bottom:1px solid var(--bdr-l);cursor:pointer}
 .mplan-list-item:active{background:var(--surf-2)}
 .mplan-list-poster{width:32px;height:48px;border-radius:4px;flex-shrink:0;object-fit:cover;background:var(--surf-3)}
@@ -606,7 +606,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:20px;fo
 .mplan-list-check{font-size:11px;font-weight:700;color:var(--green);flex-shrink:0}
 /* Switch en progress bar */
 .miplan-view-switch{display:flex;align-items:center;gap:2px;background:var(--surf-2);border:1px solid var(--bdr);border-radius:8px;padding:3px;flex-shrink:0}
-.miplan-view-btn{width:24px;height:24px;display:flex;align-items:center;justify-content:center;border-radius:5px;cursor:pointer;color:var(--gray);background:none;border:none;transition:all .15s;font-family:var(--font)}
+.miplan-view-btn{width:24px;height:24px;display:flex;align-items:center;justify-content:center;border-radius:var(--r-sm);cursor:pointer;color:var(--gray);background:none;border:none;transition:all .15s;font-family:var(--font)}
 .miplan-view-btn.on{background:var(--amber);color:#000}
 .plist-heart.empty{color:var(--gray2)}
 /* ── Grid Por Película ── */
@@ -854,7 +854,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:20px;fo
 .intereses-mode-bar{display:flex;align-items:center;justify-content:space-between;padding:var(--sp-2) 0;margin-bottom:var(--sp-1)}
 .intereses-mode-title{font-size:var(--t-base);font-weight:var(--w-bold);color:var(--white);display:flex;align-items:center;gap:var(--sp-1)}
 .intereses-view-switch{display:flex;align-items:center;gap:2px;background:var(--surf-2);border:1px solid var(--bdr);border-radius:8px;padding:3px}
-.intereses-view-btn{width:24px;height:24px;display:flex;align-items:center;justify-content:center;border-radius:5px;cursor:pointer;color:var(--gray);background:none;border:none;transition:all .15s}
+.intereses-view-btn{width:24px;height:24px;display:flex;align-items:center;justify-content:center;border-radius:var(--r-sm);cursor:pointer;color:var(--gray);background:none;border:none;transition:all .15s}
 .intereses-view-btn.on{background:var(--amber);color:#000}
 .ag-film-item{position:relative;border-radius:var(--r-md);overflow:hidden;background:var(--card-a);border:1px solid var(--bdr);cursor:default}
 .ag-film-item.watched-item{opacity:.55}
