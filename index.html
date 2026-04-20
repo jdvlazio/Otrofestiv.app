@@ -577,7 +577,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .pmode-filter-btn{display:flex;align-items:center;gap:4px;font-size:var(--t-sm);font-weight:700;color:var(--gray2);background:none;border:none;cursor:pointer;font-family:var(--font);padding:4px 0;transition:color .15s;white-space:nowrap}
 .pmode-filter-btn.active{color:var(--amber)}
 /* Chips de categoría (solo Explorar) */
-.programa-chips{display:flex;gap:6px;padding:var(--sp-2) var(--sp-3);overflow-x:auto;scrollbar-width:none;flex-shrink:0;border-bottom:1px solid var(--bdr-l);background:var(--surf);position:sticky;top:var(--sticky-top-chips);z-index:119}
+.programa-chips{display:flex;gap:var(--sp-1);padding:var(--sp-2) var(--sp-3);overflow-x:auto;scrollbar-width:none;flex-shrink:0;border-bottom:1px solid var(--bdr-l);background:var(--surf);position:sticky;top:var(--sticky-top-chips);z-index:119}
 .programa-chips::-webkit-scrollbar{display:none}
 .programa-chips{-webkit-overflow-scrolling:touch}
 .programa-chips.hidden{display:none}
@@ -687,7 +687,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .rating-sheet.open{transform:translateY(0)}
 .rating-handle{width:36px;height:4px;background:var(--bdr);border-radius:var(--r-handle);margin:0 auto 18px}
 .rating-title{font-size:var(--t-base);color:var(--gray2);margin-bottom:4px}
-.rating-film{font-size:var(--t-md);font-weight:700;color:var(--white);margin-bottom:20px;line-height:1.3}
+.rating-film{font-size:var(--t-md);font-weight:700;color:var(--white);margin-bottom:var(--sp-5);line-height:1.3}
 .rating-stars-wrap, #rating-stars-wrap{position:relative;margin-bottom:24px}
 #rating-range{position:absolute;inset:0;width:100%;height:100%;opacity:0.01;cursor:pointer;z-index:2;-webkit-appearance:none;appearance:none;background:transparent;touch-action:none;margin:0}
 #rating-range::-webkit-slider-thumb{-webkit-appearance:none;width:44px;height:44px;background:transparent}
@@ -730,7 +730,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .conflict-sheet.open{transform:translateY(0)}
 .conflict-handle{width:36px;height:4px;background:rgba(255,255,255,.1);border-radius:var(--r-handle);margin:12px auto 0}
 .conflict-hdr{padding:16px 20px 14px;border-bottom:1px solid var(--bdr)}
-.conflict-eyebrow{font-size:var(--t-label);font-weight:700;color:var(--red);letter-spacing:1px;text-transform:uppercase;display:flex;align-items:center;gap:5px;margin-bottom:4px;opacity:.8}
+.conflict-eyebrow{font-size:var(--t-label);font-weight:700;color:var(--red);letter-spacing:1px;text-transform:uppercase;display:flex;align-items:center;gap:var(--sp-1);margin-bottom:4px;opacity:.8}
 .conflict-title{font-size:var(--t-md);font-weight:800;color:var(--white);letter-spacing:-.2px}
 .conflict-sub{font-size:var(--t-base);color:var(--gray);margin-top:4px}
 .conflict-arena{padding:16px 20px;display:flex;flex-direction:column;gap:10px}
@@ -950,7 +950,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .ag-summary-text b{color:var(--white)}
 .ag-save-btn{width:100%;margin-top:var(--sp-3);padding:var(--sp-3);border-radius:var(--r-md);background:var(--green-12);border:1px solid var(--green-35);color:var(--green);font-size:var(--t-sm);font-weight:var(--w-display);letter-spacing:.1em;text-transform:uppercase;cursor:pointer;font-family:var(--font);transition:background var(--tr-base)}
 .ag-save-btn:hover{background:var(--green-20)}
-.ag-nav{display:flex;align-items:center;justify-content:center;gap:6px;margin-top:var(--sp-3);flex-wrap:wrap}
+.ag-nav{display:flex;align-items:center;justify-content:center;gap:var(--sp-1);margin-top:var(--sp-3);flex-wrap:wrap}
 /* ── Dot navigation para opciones de plan ─────────────────────────
    Un botón por opción, activo destacado con fondo ámbar.
    El usuario ve cuántas hay y en cuál está de un vistazo.
@@ -1085,7 +1085,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .mplan-prog-num{font-size:var(--t-sm);color:var(--gray2);min-width:16px;text-align:right;flex-shrink:0}
 .mplan-prog-title{font-size:var(--t-sm);color:var(--white);flex:1;min-width:0;line-height:1.35}
 .mplan-prog-dur{font-size:var(--t-sm);color:var(--gray);flex-shrink:0}
-.mplan-prog-toggle{background:none;border:none;color:var(--orange);font-size:var(--t-sm);font-weight:var(--w-semi);cursor:pointer;font-family:var(--font);padding:0;margin-top:var(--sp-1);display:inline-flex;align-items:center;gap:5px;touch-action:manipulation;line-height:1}
+.mplan-prog-toggle{background:none;border:none;color:var(--orange);font-size:var(--t-sm);font-weight:var(--w-semi);cursor:pointer;font-family:var(--font);padding:0;margin-top:var(--sp-1);display:inline-flex;align-items:center;gap:var(--sp-1);touch-action:manipulation;line-height:1}
 .mplan-prog-toggle:active{color:var(--orange)}
 .mplan-row:last-child{border-bottom:none}
 .mplan-tc{flex-shrink:0;min-width:50px}
@@ -1114,12 +1114,12 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .today-banner{background:var(--amber-10);border:1px solid var(--amber-30);border-radius:var(--r-md);padding:var(--sp-2) var(--sp-3);margin-bottom:var(--sp-2);font-size:var(--t-sm);color:var(--orange);font-weight:var(--w-semi);letter-spacing:.5px}
 
 /* ── Retraso en función en curso ── */
-.delay-row{display:flex;align-items:center;gap:6px;padding:8px 12px 6px;border-top:1px solid var(--bdr)}
+.delay-row{display:flex;align-items:center;gap:var(--sp-1);padding:8px 12px 6px;border-top:1px solid var(--bdr)}
 .delay-lbl{font-size:var(--t-sm);color:var(--gray2);flex-shrink:0}
 .delay-btn{background:var(--surf-2);border:1px solid var(--bdr);color:var(--white);font-size:var(--t-sm);font-weight:600;font-family:var(--font);padding:4px 9px;border-radius:var(--r-pill);cursor:pointer;flex-shrink:0}
 .delay-btn:active{background:var(--amber-10);border-color:var(--amber-30)}
 .delay-clear{background:none;border:none;color:var(--gray);font-size:var(--t-sm);cursor:pointer;font-family:var(--font);padding:2px 4px;flex-shrink:0}
-.delay-warn{background:rgba(192,57,43,0.08);border-top:1px solid rgba(192,57,43,0.2);padding:8px 12px;font-size:var(--t-sm);color:var(--red);line-height:1.45;display:flex;gap:6px;align-items:flex-start}
+.delay-warn{background:rgba(192,57,43,0.08);border-top:1px solid rgba(192,57,43,0.2);padding:8px 12px;font-size:var(--t-sm);color:var(--red);line-height:1.45;display:flex;gap:var(--sp-1);align-items:flex-start}
 .delay-warn-ico{flex-shrink:0;margin-top:1px}
 /* ── CTAs contextuales Mi Plan ── */
 .cta-ctx{border-radius:var(--r-md);padding:12px 14px;display:flex;align-items:center;gap:12px;cursor:pointer;margin-bottom:var(--sp-2)}
@@ -1172,7 +1172,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .festival-progress{padding:var(--sp-3) var(--sp-3);background:var(--amber-06);border-radius:var(--r-md);margin-bottom:var(--sp-3)}
 /* ── Header contextual de Mi Plan ── */
 .ctx-header{padding:var(--sp-3) var(--sp-4) var(--sp-3);border-bottom:1px solid var(--bdr);background:var(--surf)}
-.ctx-eyebrow{font-size:var(--t-label);font-weight:700;letter-spacing:.8px;text-transform:uppercase;display:flex;align-items:center;gap:5px;margin-bottom:6px}
+.ctx-eyebrow{font-size:var(--t-label);font-weight:700;letter-spacing:.8px;text-transform:uppercase;display:flex;align-items:center;gap:var(--sp-1);margin-bottom:6px}
 .ctx-main-title{font-size:var(--t-md);font-weight:800;color:var(--white);letter-spacing:-.2px;line-height:1.2;margin-bottom:3px}
 .ctx-sub{font-size:var(--t-base);color:var(--gray)}
 .ctx-prio-row{display:flex;gap:8px;margin-top:12px}
@@ -1185,7 +1185,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .ctx-next-title{font-size:var(--t-base);font-weight:700;color:var(--white);letter-spacing:-.1px;margin-bottom:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .ctx-next-detail{font-size:var(--t-sm);color:var(--gray);margin-bottom:7px}
 .ctx-next-badge{display:inline-flex;align-items:center;gap:4px;background:var(--amber);color:var(--black);border-radius:var(--r-pill);padding:3px 10px;font-size:var(--t-sm);font-weight:800}
-.ctx-gap-bar{display:flex;align-items:center;gap:6px;margin:10px 0 10px}
+.ctx-gap-bar{display:flex;align-items:center;gap:var(--sp-1);margin:10px 0 10px}
 .ctx-gap-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
 .ctx-gap-line{flex:1;height:2px;background:var(--bdr);border-radius:var(--r-handle);position:relative;overflow:hidden}
 .ctx-gap-fill{position:absolute;left:0;top:0;bottom:0;background:var(--green);border-radius:var(--r-handle)}
@@ -1196,7 +1196,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .ctx-suggest-title{font-size:var(--t-base);font-weight:700;color:var(--white);margin-bottom:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .ctx-suggest-venue{font-size:var(--t-sm);color:var(--gray)}
 .ctx-suggest-info{flex:1;min-width:0}
-.ctx-eve-films{display:flex;flex-direction:column;gap:5px;margin-top:10px}
+.ctx-eve-films{display:flex;flex-direction:column;gap:var(--sp-1);margin-top:10px}
 .ctx-eve-film{display:flex;align-items:center;gap:10px;background:var(--surf-2);border-radius:var(--r-md);border:1px solid var(--bdr);padding:8px 12px}
 .ctx-eve-film-title{flex:1;font-size:var(--t-caption);font-weight:600;color:var(--white);min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .ctx-eve-stars{font-size:var(--t-caption);color:var(--amber);flex-shrink:0;letter-spacing:1px}
@@ -1476,7 +1476,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
   text-transform:uppercase;margin-bottom:8px;
 }
 .splash-selector{
-  width:100%;max-width:300px;position:relative;margin-bottom:10px;
+  width:100%;max-width:300px;position:relative;margin-bottom:var(--sp-3);
 }
 .splash-sel-btn{
   width:100%;background:var(--surf);border:1px solid var(--bdr);
@@ -1491,7 +1491,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .splash-sel-btn.open .splash-sel-chev{transform:rotate(180deg);color:var(--amber)}
 .splash-dropdown{
   position:absolute;top:calc(100% + 6px);left:0;right:0;
-  background:#1C1C1C;border:1px solid var(--bdr);border-radius:var(--r);
+  background:var(--surf-2);border:1px solid var(--bdr);border-radius:var(--r);
   overflow:hidden;z-index:10;
   box-shadow:0 16px 40px rgba(0,0,0,.6);
 }
@@ -1651,7 +1651,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
   overflow:hidden;
 }
 .flow-step{
-  display:flex;align-items:center;gap:6px;
+  display:flex;align-items:center;gap:var(--sp-1);
   flex:1;min-width:0;
   font-size:var(--t-xs);font-weight:var(--w-bold);
   letter-spacing:.05em;text-transform:uppercase;
@@ -2426,7 +2426,7 @@ const FESTIVAL_STORAGE_KEY='ficci65_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202604201645';
+const BUILD_VERSION='202604201646';
 (function(){
   const _vk='otrofestiv_build';
   const _sk='otrofestiv_reloaded';
@@ -2687,7 +2687,7 @@ function renderMiPlanCalendar(){
         <div class="mplan-ri">
           <div>${(()=>{const{displayTitle:_dt,progSuffix:_ps}=parseProgramTitle(s._title||'');return`<div class="mplan-rtitle">${prioritized.has(s._title)?`<span style="color:var(--orange);margin-right:4px">${ICONS.starFill}</span>`:''} ${_dt}</div>${_ps?`<div style="font-size:var(--t-sm);color:var(--orange);font-weight:700;line-height:1;margin-top:2px">${_ps}</div>`:''}`;})()} </div>
           <div class="mplan-rvenue">${ICONS.pin} ${vcfg(s.venue).short}${sala(s.venue)?' \u00b7 '+sala(s.venue):''}</div>
-          ${(()=>{const _mf=FILMS.find(fi=>fi.title===s._title&&fi.day===s.day&&fi.time===s.time);if(!_mf||!_mf.is_cortos||!_mf.film_list||!_mf.film_list.length) return'';return`<button class="mplan-prog-toggle" onclick="toggleMplanProg(this,event)" style="display:inline-flex;align-items:center;gap:5px">${ICONS.chevronR} Programa</button>`;})()}
+          ${(()=>{const _mf=FILMS.find(fi=>fi.title===s._title&&fi.day===s.day&&fi.time===s.time);if(!_mf||!_mf.is_cortos||!_mf.film_list||!_mf.film_list.length) return'';return`<button class="mplan-prog-toggle" onclick="toggleMplanProg(this,event)" style="display:inline-flex;align-items:center;gap:var(--sp-1)">${ICONS.chevronR} Programa</button>`;})()}
         </div>
         <div style="display:flex;flex-direction:column;align-items:flex-end;justify-content:center;flex-shrink:0">
           <button class="ag-fi-btn del" data-rmt="${safeT}" onclick="removeFromAgenda(this.dataset.rmt);event.stopPropagation()" style="display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;padding:0">${ICONS.x}</button>
@@ -2929,7 +2929,7 @@ function onSearchInput(){
         <div class="ag-sr-title">${f.title}</div>
         <div class="ag-sr-meta">${f.flags||''} ${f.duration||''}${f.is_cortos?' · Programa':''}${inWL?' · <span style="color:var(--orange)">${ICONS.heartFill}</span>':''}</div>
       </div>
-      <button class="ag-sr-add${inWL?' added':''}" data-title="${f.title.replace(/"/g,'&quot;')}" onclick="addFromSearch(this.dataset.title)" style="display:inline-flex;align-items:center;gap:5px">
+      <button class="ag-sr-add${inWL?' added':''}" data-title="${f.title.replace(/"/g,'&quot;')}" onclick="addFromSearch(this.dataset.title)" style="display:inline-flex;align-items:center;gap:var(--sp-1)">
         ${inWL?`${ICONS.check} En Intereses`:`${ICONS.plus} Añadir`}
       </button>
     </div>`;
@@ -3191,7 +3191,7 @@ function renderAvDay(day){
       ${inlineForm}
       <div class="av-row-btns" style="margin-top:${pillsHtml||addOpen?'6px':'0'}">
         ${!fullBlocked&&!addOpen?`<button class="av-plus-btn" onclick="avAddOpen['${day}']=true;renderAvDay('${day}')">${ICONS.plus} No disponible</button>`:''}
-        ${!addOpen?`<button class="av-full-btn${fullBlocked?' active':''}" onclick="toggleFullDay('${day}')" style="display:inline-flex;align-items:center;gap:5px">
+        ${!addOpen?`<button class="av-full-btn${fullBlocked?' active':''}" onclick="toggleFullDay('${day}')" style="display:inline-flex;align-items:center;gap:var(--sp-1)">
           ${fullBlocked?ICONS.x+' Liberar día':ICONS.plus+' Todo el día'}
         </button>`:''}
       </div>
@@ -3541,9 +3541,9 @@ function parseProgramTitle(t){
 //      renderSimPanel, renderNextStrip, renderUnconfirmed
 // ═══════════════════════════════════════════════════════════════
 function renderPrioStrip(){
-  if(!prioritized.size) return `<div style="text-align:center;padding:24px 20px">
-      <div style="font-size:var(--t-lg);margin-bottom:10px">${ICONS.star}</div>
-      <div style="font-weight:var(--w-bold);color:var(--white);margin-bottom:6px">Sin prioridades aún</div>
+  if(!prioritized.size) return `<div style="text-align:center;padding:var(--sp-5) var(--sp-5)">
+      <div style="font-size:var(--t-lg);margin-bottom:var(--sp-3)">${ICONS.star}</div>
+      <div style="font-weight:var(--w-bold);color:var(--white);margin-bottom:var(--sp-1)">Sin prioridades aún</div>
       <div style="font-size:var(--t-sm);color:var(--gray);line-height:1.6;margin-bottom:16px">
         Marca hasta ${PRIO_LIMIT} películas como ★ en Intereses para que el algoritmo las incluya primero.
       </div>
@@ -3592,7 +3592,7 @@ function renderFilmListHTML(){
       ${posterHtml}
       <div class="ag-fi-overlay"></div>
       <div class="ag-fi-actions">
-        <button class="ag-fi-btn prio-fi-btn${isPrio?' prio-on':''}" data-pt="${safeT}" onclick="togglePriority(this.dataset.pt);event.stopPropagation()" style="display:inline-flex;align-items:center;gap:5px">${isPrio?ICONS.starFill+' Priorizada':ICONS.star+' Priorizar'}</button>
+        <button class="ag-fi-btn prio-fi-btn${isPrio?' prio-on':''}" data-pt="${safeT}" onclick="togglePriority(this.dataset.pt);event.stopPropagation()" style="display:inline-flex;align-items:center;gap:var(--sp-1)">${isPrio?ICONS.starFill+' Priorizada':ICONS.star+' Priorizar'}</button>
       </div>
       <div class="ag-fi-bottom">
         <div class="ag-fi-flags">${f?f.flags||'🌐':'🌐'}</div>
@@ -3614,10 +3614,10 @@ function renderFilmListHTML(){
 
   let html='';
   if(!allPending.length&&!watchedList.length){
-    return `<div style="text-align:center;padding:32px 20px">
+    return `<div style="text-align:center;padding:var(--sp-6) var(--sp-5)">
       <div style="font-size:var(--t-display);margin-bottom:12px">${ICONS.heart}</div>
       <div style="font-weight:var(--w-bold);color:var(--white);margin-bottom:8px">Tu lista está vacía</div>
-      <div style="font-size:var(--t-sm);color:var(--gray);line-height:1.6;margin-bottom:20px;max-width:260px;margin-left:auto;margin-right:auto">
+      <div style="font-size:var(--t-sm);color:var(--gray);line-height:1.6;margin-bottom:var(--sp-5);max-width:260px;margin-left:auto;margin-right:auto">
         Tu plan para el festival, sin complicaciones.
       </div>
       <button onclick="switchMainNav('mnav-cartelera');showDayView()" style="background:var(--amber-10);border:1px solid var(--amber-30);color:var(--amber);font-family:var(--font);font-size:var(--t-sm);font-weight:var(--w-bold);padding:10px 20px;border-radius:var(--r-pill);cursor:pointer">
@@ -3645,15 +3645,15 @@ function renderFilmListHTML(){
     html+=`<div class="ag-film-grid${_listMode?' list-mode':''}">${nonPrioList.map(t=>mkItem(t,_listMode)).join('')}</div>`;
   }
   if(!allPending.length&&!watchedList.length){
-    return`<div style="margin-top:8px;padding:20px 16px;border:1px solid var(--bdr-l);border-radius:var(--r);text-align:center">
-      <div class="prio-strip-title" style="justify-content:center;margin-bottom:10px">${ICONS.heart} Intereses</div>
+    return`<div style="margin-top:8px;padding:var(--sp-5) var(--sp-4);border:1px solid var(--bdr-l);border-radius:var(--r);text-align:center">
+      <div class="prio-strip-title" style="justify-content:center;margin-bottom:var(--sp-3)">${ICONS.heart} Intereses</div>
       <div style="font-size:var(--t-base);color:var(--gray);line-height:1.6;text-align:center;max-width:240px;margin-left:auto;margin-right:auto;text-wrap:balance">
         Aún no tienes películas guardadas.<br>Usa el buscador para añadir títulos.
       </div>
     </div>`;
   }
   if(watchedList.length){
-    html+=`<div class="prio-strip-title" style="margin-top:${allPending.length?'10px':'0'};margin-bottom:6px;color:var(--green)">${ICONS.check} Ya vistas</div>`;
+    html+=`<div class="prio-strip-title" style="margin-top:${allPending.length?'10px':'0'};margin-bottom:var(--sp-1);color:var(--green)">${ICONS.check} Ya vistas</div>`;
     const _sortedW=[...watchedList].sort((a,b)=>(filmRatings[b]||0)-(filmRatings[a]||0));
     html+=`<div class="ag-film-grid">${_sortedW.map(t=>{
       const f=FILMS.find(fi=>fi.title===t);
@@ -3676,8 +3676,8 @@ function renderFilmListHTML(){
       </div>`;
     }).join('')}</div>`;
   }
-  return html||`<div style="margin-top:8px;padding:20px 16px;border:1px solid var(--bdr-l);border-radius:var(--r);text-align:center">
-      <div class="prio-strip-title" style="justify-content:center;margin-bottom:10px">${ICONS.heart} Intereses</div>
+  return html||`<div style="margin-top:8px;padding:var(--sp-5) var(--sp-4);border:1px solid var(--bdr-l);border-radius:var(--r);text-align:center">
+      <div class="prio-strip-title" style="justify-content:center;margin-bottom:var(--sp-3)">${ICONS.heart} Intereses</div>
       <div style="font-size:var(--t-base);color:var(--gray);line-height:1.6;text-align:center;max-width:240px;margin-left:auto;margin-right:auto;text-wrap:balance">
         Aún no tienes películas guardadas.<br>Usa el buscador para añadir títulos.
       </div>
@@ -3721,13 +3721,13 @@ function mkAgendaRow(s, mode='saved'){
   const filmKey=(s._title||'')+(s.day||'')+(s.time||'');
   const isExpanded=_expandedFilm===filmKey;
   const actionBtn=mode==='saved'
-    ?`<button class="ag-fi-btn del" data-rmt="${safeT}" onclick="removeFromAgenda(this.dataset.rmt);event.stopPropagation()" style="display:inline-flex;align-items:center;gap:5px">${ICONS.x} Quitar</button>`
-    :`<button class="ag-fi-btn del" data-rfs="${safeT}" onclick="removeFilmFromScenario(this.dataset.rfs,event)" style="display:inline-flex;align-items:center;gap:5px">${ICONS.x} Quitar</button>`;
+    ?`<button class="ag-fi-btn del" data-rmt="${safeT}" onclick="removeFromAgenda(this.dataset.rmt);event.stopPropagation()" style="display:inline-flex;align-items:center;gap:var(--sp-1)">${ICONS.x} Quitar</button>`
+    :`<button class="ag-fi-btn del" data-rfs="${safeT}" onclick="removeFilmFromScenario(this.dataset.rfs,event)" style="display:inline-flex;align-items:center;gap:var(--sp-1)">${ICONS.x} Quitar</button>`;
   const switchBtn=mode==='saved'&&!isDone
     ?`<button class="film-switch${isExpanded?' open':''}" onclick="toggleFilmAlternatives('${filmKey}','${safeT}','${s.day||''}','${s.time||''}');event.stopPropagation()">Cambiar</button>`
     :'';
   const altsHtml=isExpanded&&mode==='saved'?renderFilmAlternatives(t,s.day,s.time):'';
-  const _progBtn=(()=>{const _mf=f;if(!_mf||!_mf.is_cortos||!_mf.film_list||!_mf.film_list.length)return'';return`<button class="mplan-prog-toggle" onclick="toggleMplanProg(this,event)" style="display:inline-flex;align-items:center;gap:5px">${ICONS.chevronR} Programa</button>`;})();
+  const _progBtn=(()=>{const _mf=f;if(!_mf||!_mf.is_cortos||!_mf.film_list||!_mf.film_list.length)return'';return`<button class="mplan-prog-toggle" onclick="toggleMplanProg(this,event)" style="display:inline-flex;align-items:center;gap:var(--sp-1)">${ICONS.chevronR} Programa</button>`;})();
   const _progList=(()=>{const _mf=f;if(!_mf||!_mf.is_cortos||!_mf.film_list||!_mf.film_list.length)return'';return`<div class="mplan-prog-list">${_mf.film_list.map((item,n)=>{const _mt=getPosterSrc(item.title,item.is_cortos!==false);const _mth=_mt?`<img src="${_mt}" class="c-film-thumb" loading="lazy" onerror="this.outerHTML='<div class=c-film-thumb-ph>🎬</div>'" alt="">`:'<div class="c-film-thumb-ph">🎬</div>';const _sc=item.title.replace(/'/g,"\'");const _sco=item.country||'';const _scd=item.duration||'';const _scf=countryToFlags(item.country||'');const _scs=f?.section||'';return`<div class="mplan-prog-item" onclick="event.stopPropagation();openCortoSheet('${_sc}','${_sco}','${_scd}','${_scs}','${_scf}')">${_mth}<div class="mplan-prog-num">${n+1}</div><div class="mplan-prog-title">${item.title}</div><div class="mplan-prog-dur">${item.duration}</div></div>`;}).join('')}</div>`;})();
   return`<div class="saved-item${isDone?' done':''}">
     ${_ph}
@@ -3737,7 +3737,7 @@ function mkAgendaRow(s, mode='saved'){
       <div class="saved-venue">${ICONS.pin} ${vc2.short}${sl?' · '+sl:''}${s.duration?' · '+s.duration:''}${altBadge}</div>
       ${_progBtn}
     </div>
-    <button class="saved-check${isDone?' done':''}" data-title="${safeT}" data-day="${s.day||''}" data-time="${s.time||''}" data-venue="${(s.venue||'').replace(/"/g,'&quot;')}" data-dur="${s.duration||''}" onclick="${isDone?'toggleWatched(this.dataset.title,event)':'markWatchedFromPlan(this.dataset.title,this.dataset.day,this.dataset.time,this.dataset.venue,this.dataset.dur,event)'}" style="display:inline-flex;align-items:center;gap:5px">${isDone?'No vista':ICONS.check+' Vista'}</button>
+    <button class="saved-check${isDone?' done':''}" data-title="${safeT}" data-day="${s.day||''}" data-time="${s.time||''}" data-venue="${(s.venue||'').replace(/"/g,'&quot;')}" data-dur="${s.duration||''}" onclick="${isDone?'toggleWatched(this.dataset.title,event)':'markWatchedFromPlan(this.dataset.title,this.dataset.day,this.dataset.time,this.dataset.venue,this.dataset.dur,event)'}" style="display:inline-flex;align-items:center;gap:var(--sp-1)">${isDone?'No vista':ICONS.check+' Vista'}</button>
   </div>${_progList}${altsHtml?`<div class="film-alts">${altsHtml}</div>`:''}`;
 }
 
@@ -3947,7 +3947,7 @@ function renderUnconfirmed(schedule){
         const st=s._title.replace(/'/g,"\'");
         return`<div class="checkin-item">
           <div class="checkin-info"><div class="checkin-title">${sh}</div><div class="checkin-time">${s.day} · ${s.time}</div></div>
-          <div class="checkin-btns"><button class="checkin-btn yes" onclick="checkinLaVi('${st}')" style="display:inline-flex;align-items:center;gap:5px">${ICONS.check} Vista</button><button class="checkin-btn no" onclick="checkinNoLaVi('${st}')">Luego</button></div>
+          <div class="checkin-btns"><button class="checkin-btn yes" onclick="checkinLaVi('${st}')" style="display:inline-flex;align-items:center;gap:var(--sp-1)">${ICONS.check} Vista</button><button class="checkin-btn no" onclick="checkinNoLaVi('${st}')">Luego</button></div>
         </div>`;
       }).join('')}
     </div>
@@ -3962,7 +3962,7 @@ function renderUnconfirmed(schedule){
     <div class="checkin-item">
       <div class="checkin-info"><div class="checkin-title">${short}</div><div class="checkin-time">${timeDesc}</div></div>
       <div class="checkin-btns">
-        <button class="checkin-btn yes" onclick="checkinLaVi('${safeLast}')" style="display:inline-flex;align-items:center;gap:5px">${ICONS.check} Vista</button>
+        <button class="checkin-btn yes" onclick="checkinLaVi('${safeLast}')" style="display:inline-flex;align-items:center;gap:var(--sp-1)">${ICONS.check} Vista</button>
         <button class="checkin-btn no" onclick="checkinNoLaVi('${safeLast}')">Luego</button>
       </div>
     </div>${olderHtml}
@@ -4314,7 +4314,7 @@ function renderContextualHeader(){
       const vc2=vcfg(gapSuggestion.venue);
       const dur=parseInt(gapSuggestion.duration)||90;
       const safeT=gapSuggestion.title.replace(/'/g,"\'");
-      return`<div style="font-size:var(--t-sm);color:var(--gray);margin-bottom:6px">Cabe en tu hueco</div>
+      return`<div style="font-size:var(--t-sm);color:var(--gray);margin-bottom:var(--sp-1)">Cabe en tu hueco</div>
         <div class="ctx-suggest-card" onclick="openPelSheet('${safeT}')" style="cursor:pointer">
           <div class="ctx-suggest-badge">${gapSuggestion.time}<br>${dur}m</div>
           <div class="ctx-suggest-info">
@@ -4389,10 +4389,10 @@ function _renderSavedAgendaHTML(){
     const _eh=renderContextualHeader();
     return _eh?`<div class="saved-agenda">${_eh}</div>`:'';
   }
-  if(!savedAgenda||!savedAgenda.schedule.length) return `<div style="text-align:center;padding:32px 20px">
+  if(!savedAgenda||!savedAgenda.schedule.length) return `<div style="text-align:center;padding:var(--sp-6) var(--sp-5)">
       <div style="font-size:var(--t-display);margin-bottom:12px">${ICONS.calendar}</div>
       <div style="font-weight:var(--w-bold);color:var(--white);margin-bottom:8px">Tu plan aparecerá aquí</div>
-      <div style="font-size:var(--t-sm);color:var(--gray);line-height:1.6;margin-bottom:20px;max-width:260px;margin-left:auto;margin-right:auto">
+      <div style="font-size:var(--t-sm);color:var(--gray);line-height:1.6;margin-bottom:var(--sp-5);max-width:260px;margin-left:auto;margin-right:auto">
         Añade películas a Intereses y genera opciones en Planear. El algoritmo hace el resto.
       </div>
       <button onclick="switchMainNav('mnav-planner');showAgView()" style="background:var(--amber-10);border:1px solid var(--amber-30);color:var(--amber);font-family:var(--font);font-size:var(--t-sm);font-weight:var(--w-bold);padding:10px 20px;border-radius:var(--r-pill);cursor:pointer">
@@ -5499,7 +5499,7 @@ function renderAgenda(){
         </div>
         ${renderPrioStrip()}
         <div class="ag-section-title">${ICONS.clock} Disponibilidad</div>
-        <div style="font-size:var(--t-base);color:var(--gray);margin-bottom:10px;line-height:1.5">Marca cu&aacute;ndo est&aacute;s ocupado. El algoritmo lo tendr&aacute; en cuenta al planear.</div>
+        <div style="font-size:var(--t-base);color:var(--gray);margin-bottom:var(--sp-3);line-height:1.5">Marca cu&aacute;ndo est&aacute;s ocupado. El algoritmo lo tendr&aacute; en cuenta al planear.</div>
         <div class="av-section">
           ${DAY_KEYS.map(day=>{
             const passed=dayFullyPassed(day);
@@ -6134,15 +6134,15 @@ function openPelSheet(title){
     ${!f.is_cortos?`<a class="c-lb" href="${lbUrl(f.title)}" target="_blank" rel="noopener" style="display:inline-flex;margin-top:14px;margin-bottom:2px">${LB_SVG}<span class="c-lb-text">Letterboxd</span></a>`:''}
     <div class="pel-sheet-divider" style="margin-top:16px"></div>
     ${inW?`<div style="display:flex;gap:8px;margin-top:12px">
-        <button onclick="toggleWatched('${safeT}',event);closePelSheet()" style="flex:1;background:rgba(39,174,96,.08);border:1px solid rgba(39,174,96,.2);border-radius:var(--r-pill);color:var(--green);font-family:var(--font);font-size:var(--t-base);font-weight:700;padding:10px 0;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:5px">${ICONS.check} Ya vista</button>
-        ${!f.is_cortos?`<button onclick="closePelSheet();setTimeout(()=>openRatingSheet('${safeT}'),100)" style="flex:1;background:none;border:1px solid var(--bdr);border-radius:var(--r-pill);color:var(--gray2);font-family:var(--font);font-size:var(--t-base);font-weight:700;padding:10px 0;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:5px">${ICONS.star} ${filmRatings['${safeT}']?'Cambiar':'Calificar'}</button>`:``}
+        <button onclick="toggleWatched('${safeT}',event);closePelSheet()" style="flex:1;background:rgba(39,174,96,.08);border:1px solid rgba(39,174,96,.2);border-radius:var(--r-pill);color:var(--green);font-family:var(--font);font-size:var(--t-base);font-weight:700;padding:10px 0;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:var(--sp-1)">${ICONS.check} Ya vista</button>
+        ${!f.is_cortos?`<button onclick="closePelSheet();setTimeout(()=>openRatingSheet('${safeT}'),100)" style="flex:1;background:none;border:1px solid var(--bdr);border-radius:var(--r-pill);color:var(--gray2);font-family:var(--font);font-size:var(--t-base);font-weight:700;padding:10px 0;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:var(--sp-1)">${ICONS.star} ${filmRatings['${safeT}']?'Cambiar':'Calificar'}</button>`:``}
       </div>`
-    :`<div style="display:flex;gap:6px;margin-top:12px">
-        <button id="pel-wl-btn" class="pel-sheet-action-btn${inWL?' act-on':''}" onclick="togglePelWL('${safeT}',event)" style="display:inline-flex;align-items:center;justify-content:center;gap:5px">${inWL?ICONS.heartFill:ICONS.heart} ${inWL?'En Intereses':'Intereses'}</button>
-        <button id="pel-prio-btn" class="pel-sheet-action-btn${inPrio?' act-prio':''}" onclick="togglePelPrio('${safeT}')" style="display:inline-flex;align-items:center;justify-content:center;gap:5px">${inPrio?ICONS.starFill:ICONS.star} ${inPrio?'Priorizada':'Priorizar'}</button>
-        <button id="pel-vista-btn" class="pel-sheet-action-btn" onclick="toggleWatched('${safeT}',event)" style="display:inline-flex;align-items:center;justify-content:center;gap:5px">${ICONS.check} Vista</button>
+    :`<div style="display:flex;gap:var(--sp-1);margin-top:12px">
+        <button id="pel-wl-btn" class="pel-sheet-action-btn${inWL?' act-on':''}" onclick="togglePelWL('${safeT}',event)" style="display:inline-flex;align-items:center;justify-content:center;gap:var(--sp-1)">${inWL?ICONS.heartFill:ICONS.heart} ${inWL?'En Intereses':'Intereses'}</button>
+        <button id="pel-prio-btn" class="pel-sheet-action-btn${inPrio?' act-prio':''}" onclick="togglePelPrio('${safeT}')" style="display:inline-flex;align-items:center;justify-content:center;gap:var(--sp-1)">${inPrio?ICONS.starFill:ICONS.star} ${inPrio?'Priorizada':'Priorizar'}</button>
+        <button id="pel-vista-btn" class="pel-sheet-action-btn" onclick="toggleWatched('${safeT}',event)" style="display:inline-flex;align-items:center;justify-content:center;gap:var(--sp-1)">${ICONS.check} Vista</button>
       </div>`}
-    ${_inPlan&&activeView==='agenda'?`<button onclick="closePelSheet();removeFromAgenda('${safeT}')" style="width:100%;margin-top:8px;background:none;border:1px solid var(--bdr);border-radius:var(--r-pill);color:var(--gray2);font-family:var(--font);font-size:var(--t-caption);font-weight:600;padding:8px 0;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:5px">${ICONS.x} Quitar del plan</button>`:''}
+    ${_inPlan&&activeView==='agenda'?`<button onclick="closePelSheet();removeFromAgenda('${safeT}')" style="width:100%;margin-top:8px;background:none;border:1px solid var(--bdr);border-radius:var(--r-pill);color:var(--gray2);font-family:var(--font);font-size:var(--t-caption);font-weight:600;padding:8px 0;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:var(--sp-1)">${ICONS.x} Quitar del plan</button>`:''}
   `;
   document.getElementById('pel-overlay').classList.add('open');
   document.getElementById('pel-sheet').classList.add('open');
@@ -6253,9 +6253,9 @@ function openCortoSheet(title, country, duration, section, flags){
   const ratingSection=`
     <div class="pel-sheet-divider" style="margin-top:16px"></div>
     <div style="display:flex;gap:8px;margin-top:12px">
-      ${r?`<div style="flex:1;display:flex;align-items:center;gap:6px;font-size:var(--t-md);color:var(--amber)">${starsText(r)}</div>`:``}
+      ${r?`<div style="flex:1;display:flex;align-items:center;gap:var(--sp-1);font-size:var(--t-md);color:var(--amber)">${starsText(r)}</div>`:``}
       <button onclick="closePelSheet();setTimeout(()=>openRatingSheet('${safeT}'),100)"
-        style="flex:1;background:none;border:1px solid var(--bdr);border-radius:var(--r-pill);color:var(--gray2);font-family:var(--font);font-size:var(--t-base);font-weight:700;padding:10px 0;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:5px">
+        style="flex:1;background:none;border:1px solid var(--bdr);border-radius:var(--r-pill);color:var(--gray2);font-family:var(--font);font-size:var(--t-base);font-weight:700;padding:10px 0;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:var(--sp-1)">
         ${ICONS.star} ${r?'Cambiar':'Calificar'}
       </button>
     </div>`;
@@ -6303,7 +6303,7 @@ function renderMiPlanList(schedule){
       const db=new Date(`${FESTIVAL_DATES[b.day]}T${b.time}:00`);
       return da-db;
     });
-  if(!upcoming.length) return '<div style="padding:20px 16px;text-align:center;color:var(--gray);font-size:var(--t-base)">Sin funciones pendientes</div>';
+  if(!upcoming.length) return '<div style="padding:var(--sp-5) var(--sp-4);text-align:center;color:var(--gray);font-size:var(--t-base)">Sin funciones pendientes</div>';
   
   // Agrupar por día
   const byDay={};
