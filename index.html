@@ -220,14 +220,14 @@ body{background:var(--bg);color:var(--white);font-family:var(--font),'Plus Jakar
 ════════════════════════════════════════════════════════ */
 
 /* Header */
-.hdr{display:flex;align-items:center;height:44px;padding:0 var(--sp-4)}
-h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t-lg);font-weight:var(--w-display);line-height:1;letter-spacing:-.03em;color:var(--white)}
+.hdr{display:flex;align-items:center;flex-wrap:wrap;padding:0 var(--sp-4);min-height:44px}
+h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t-lg);font-weight:var(--w-display);line-height:1;letter-spacing:-.03em;color:var(--white);flex:1}
 .hdr-wordmark span{color:var(--amber)}
 /* Barra de contexto — Opción C
    Vive dentro de .hdr (padding:var(--sp-5)).
    margin negativo cancela ese padding → barra full-width.
    padding propio var(--sp-5) → contenido alineado con el wordmark. */
-.hdr-fest-bar{display:flex;align-items:center;justify-content:space-between;background:var(--surf-2);border-top:1px solid var(--bdr);border-bottom:1px solid var(--bdr);padding:var(--sp-2) var(--sp-5);cursor:pointer;-webkit-tap-highlight-color:transparent}
+.hdr-fest-bar{display:flex;align-items:center;justify-content:space-between;background:var(--surf-2);border-top:1px solid var(--bdr);border-bottom:1px solid var(--bdr);padding:var(--sp-2) var(--sp-4);cursor:pointer;-webkit-tap-highlight-color:transparent;width:100%;flex-basis:100%}
 .hdr-fest-bar:active{background:var(--surf-2)}
 .hdr-fest-left{display:flex;align-items:center;gap:var(--sp-2)}
 .hdr-fest-dot{width:5px;height:5px;border-radius:50%;background:var(--amber);flex-shrink:0}
@@ -1297,9 +1297,6 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
   .topbar{
     position:sticky;top:0;z-index:200;
     background:var(--surf);border-bottom:1px solid var(--bdr);
-    display:flex;align-items:stretch;
-    justify-content:center;
-    height:var(--tb-h);
   }
 
   /* Contenedor interno centrado — logo + nav + acciones en una fila */
@@ -1318,16 +1315,20 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
     margin-right:var(--sp-3);
   }
 
-  /* Festival bar: inline junto al logo, no debajo */
+  /* Festival bar: pill inline junto al logo */
   .hdr-fest-bar{
     display:flex;align-items:center;
     gap:var(--sp-2);
     padding:0 var(--sp-3);
     background:var(--surf-2);
     border:1px solid var(--bdr);
+    border-top:1px solid var(--bdr);
+    border-bottom:1px solid var(--bdr);
     border-radius:var(--r-pill);
     height:28px;
     flex-shrink:0;
+    flex-basis:auto;
+    width:auto;
     cursor:pointer;
     margin-right:auto;
   }
@@ -2485,7 +2486,7 @@ const FESTIVAL_STORAGE_KEY='ficci65_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202604202143';
+const BUILD_VERSION='202604202152';
 (function(){
   const _vk='otrofestiv_build';
   const _sk='otrofestiv_reloaded';
