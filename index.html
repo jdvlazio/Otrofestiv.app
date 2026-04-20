@@ -280,25 +280,35 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 }
 .cnt-line{padding:6px var(--sp-5) 4px;font-size:var(--t-sm);color:var(--gray)}
 /* ── Buscador unificado (Programa, Intereses, Planear) ── */
-.app-search-wrap{position:relative;padding:8px 16px 0}
-.app-search{width:100%;background:var(--surf-2);border:1px solid var(--bdr);border-radius:var(--r-pill);color:var(--white);font-family:var(--font);font-size:var(--t-sm);padding:9px 36px 9px 36px;outline:none;box-sizing:border-box;transition:border-color var(--tr-base);-webkit-appearance:none}
-.app-search::placeholder{color:var(--gray2)}
-.app-search:focus{border-color:var(--amber-30)}
-.app-search-ico{position:absolute;left:26px;top:50%;transform:translateY(-50%);color:var(--gray2);display:flex;align-items:center;pointer-events:none}
-.app-search-clear{position:absolute;right:26px;top:50%;transform:translateY(-50%);background:none;border:none;color:var(--gray2);cursor:pointer;display:none;align-items:center;padding:4px}
-.app-search-clear.visible{display:flex}
-.app-search-results{position:absolute;top:calc(100% + 4px);left:16px;right:16px;background:var(--surf);border:1px solid var(--bdr);border-radius:var(--r);z-index:200;max-height:300px;overflow-y:auto;display:none;box-shadow:0 8px 24px rgba(0,0,0,.4)}
-.app-search-results.open{display:block}
-/* Alias legacy — mantener IDs pero usar estilos unificados */
-.carta-search-wrap{position:relative;margin:var(--sp-2) var(--sp-4) 0}
-.ag-search-wrap{position:relative;padding:0 0 var(--sp-2)}
-.carta-search,.ag-search{width:100%;background:var(--surf-2);border:1px solid var(--bdr);border-radius:var(--r-pill);color:var(--white);font-family:var(--font);font-size:var(--t-sm);padding:9px 36px 9px 32px;outline:none;box-sizing:border-box;transition:border-color var(--tr-base);-webkit-appearance:none}
+/* ── Buscador unificado — una sola implementación ──────────────────────
+   El pill ES el contenedor flex. El ícono es hijo flex → imposible salirse.
+   carta-search-wrap: provee margen externo (está fuera de ag-view)
+   ag-search-wrap:    solo margen inferior (ag-view provee márgenes laterales)
+────────────────────────────────────────────────────────────────────────── */
+.carta-search-wrap{margin:var(--sp-2) var(--sp-4) 0;position:relative}
+.ag-search-wrap{margin-bottom:var(--sp-2);position:relative}
+/* El pill: flex row que contiene ícono + input + clear */
+.carta-search-field,.ag-search-field{
+  display:flex;align-items:center;gap:var(--sp-1);
+  background:var(--surf-2);border:1px solid var(--bdr);border-radius:var(--r-pill);
+  padding:0 var(--sp-3);transition:border-color var(--tr-base)
+}
+.carta-search-field:focus-within,.ag-search-field:focus-within{border-color:var(--amber-30)}
+.carta-search-ico,.ag-search-ico{color:var(--gray2);flex-shrink:0;display:flex;align-items:center;pointer-events:none}
+.carta-search,.ag-search{
+  flex:1;background:transparent;border:none;outline:none;
+  color:var(--white);font-family:var(--font);font-size:var(--t-sm);
+  padding:9px 0;-webkit-appearance:none;min-width:0
+}
 .carta-search::placeholder,.ag-search::placeholder{color:var(--gray2)}
-.carta-search:focus,.ag-search:focus{border-color:var(--amber-30)}
-.carta-search-ico,.ag-search-ico{position:absolute;left:10px;top:50%;transform:translateY(-50%);color:var(--gray2);display:flex;align-items:center;pointer-events:none}
-.carta-search-clear{position:absolute;right:10px;top:50%;transform:translateY(-50%);background:none;border:none;color:var(--gray2);cursor:pointer;display:none;align-items:center;padding:4px}
+.carta-search-clear{background:none;border:none;color:var(--gray2);cursor:pointer;display:none;align-items:center;padding:var(--sp-1);flex-shrink:0}
 .carta-search-clear.visible{display:flex}
-.carta-search-results,.ag-search-results{position:absolute;top:calc(100% + 4px);left:0;right:0;background:var(--surf);border:1px solid var(--bdr);border-radius:var(--r);z-index:200;max-height:300px;overflow-y:auto;display:none;box-shadow:0 8px 24px rgba(0,0,0,.4)}
+.carta-search-results,.ag-search-results{
+  position:absolute;top:calc(100% + var(--sp-1));left:0;right:0;
+  background:var(--surf);border:1px solid var(--bdr);border-radius:var(--r);
+  z-index:200;max-height:300px;overflow-y:auto;display:none;
+  box-shadow:0 8px 24px rgba(0,0,0,.4)
+}
 .carta-search-results.open,.ag-search-results.open{display:block}
 .carta-sr-item{display:flex;align-items:center;gap:10px;padding:10px 14px;border-bottom:1px solid var(--bdr-l);cursor:pointer;transition:background var(--tr-base)}
 .carta-sr-item:active,.ag-sr-item:active{background:var(--surf-2)}
@@ -1904,9 +1914,11 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
   <div class="pel-sheet-inner" id="pel-sheet-inner"></div>
 </div>
 <div class="carta-search-wrap" id="carta-search-wrap">
-  <span class="carta-search-ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
-  <input type="text" id="carta-search-input" class="carta-search" placeholder="Buscar película…" oninput="onCartaSearch()" autocomplete="off" autocorrect="off" autocapitalize="off">
-  <button class="carta-search-clear" id="carta-search-clear" onclick="clearCartaSearch()"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+  <div class="carta-search-field">
+    <span class="carta-search-ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
+    <input type="text" id="carta-search-input" class="carta-search" placeholder="Buscar película…" oninput="onCartaSearch()" autocomplete="off" autocorrect="off" autocapitalize="off">
+    <button class="carta-search-clear" id="carta-search-clear" onclick="clearCartaSearch()"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+  </div>
   <div id="carta-search-results" class="carta-search-results"></div>
 </div>
 <!-- ── Programa: barra de modos Explorar/Hoy/Mañana ── -->
@@ -2427,7 +2439,7 @@ const FESTIVAL_STORAGE_KEY='ficci65_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202604201654';
+const BUILD_VERSION='202604201658';
 (function(){
   const _vk='otrofestiv_build';
   const _sk='otrofestiv_reloaded';
@@ -5444,10 +5456,12 @@ function renderAgenda(){
     view.innerHTML=`${_progressHtml}
       <div class="ag-section">
         <div class="ag-search-wrap">
-          <span class="ag-search-ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
-          <input type="text" id="ag-search-input" class="ag-search"
-            placeholder="Buscar y añadir a Intereses…"
-            oninput="onSearchInput()" onblur="closeSearch()" autocomplete="off" autocapitalize="off">
+          <div class="ag-search-field">
+            <span class="ag-search-ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
+            <input type="text" id="ag-search-input" class="ag-search"
+              placeholder="Buscar y añadir a Intereses…"
+              oninput="onSearchInput()" onblur="closeSearch()" autocomplete="off" autocapitalize="off">
+          </div>
           <div id="ag-search-results" class="ag-search-results"></div>
         </div>
         <div id="ag-film-list">${renderFilmListHTML()}</div>
@@ -5492,10 +5506,12 @@ function renderAgenda(){
     view.innerHTML=`${_progressHtml}
       <div class="ag-section">
         <div class="ag-search-wrap">
-          <span class="ag-search-ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
-          <input type="text" id="ag-search-input" class="ag-search"
-            placeholder="Buscar y añadir a Intereses…"
-            oninput="onSearchInput()" onblur="closeSearch()" autocomplete="off" autocapitalize="off">
+          <div class="ag-search-field">
+            <span class="ag-search-ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
+            <input type="text" id="ag-search-input" class="ag-search"
+              placeholder="Buscar y añadir a Intereses…"
+              oninput="onSearchInput()" onblur="closeSearch()" autocomplete="off" autocapitalize="off">
+          </div>
           <div id="ag-search-results" class="ag-search-results"></div>
         </div>
         ${renderPrioStrip()}
