@@ -6206,7 +6206,7 @@ function openCortoSheet(title, country, duration, section, flags){
         <div class="pel-sheet-title">${title}</div>
         <div class="pel-sheet-flags">${displayFlags||'🌐'}</div>
         <div class="pel-sheet-dur">${ICONS.clock} ${duration}</div>
-        ${secShort&&section?`<div class="pel-sheet-sec" onclick="closePelSheet();setTimeout(()=>filterBySection('${(section||''). replace(/'/g,\"\\'\")}'),50)">${secShort} <span class="pel-sheet-sec-arrow">›</span></div>`:''}
+        ${secShort&&section?`<div class="pel-sheet-sec" data-sec="${(section||'').replace(/"/g,'&quot;')}" onclick="closePelSheet();setTimeout(()=>filterBySection(this.dataset.sec),50)">${secShort} <span class="pel-sheet-sec-arrow">›</span></div>`:''}}
         ${country?`<div style="font-size:11px;color:var(--gray);margin-top:3px">${country}</div>`:''}
         <div style="font-size:11px;color:var(--orange);margin-top:3px;font-weight:600">Cortometraje</div>
         ${(()=>{const prog=FILMS.find(p=>p.is_cortos&&p.film_list?.some(c=>c.title===title));if(!prog)return'';const safeP=prog.title.replace(/'/g,"\'");const{displayTitle:dp}=parseProgramTitle(prog.title);return`<div style="font-size:10px;color:var(--gray2);margin-top:4px;cursor:pointer;text-decoration:underline;text-underline-offset:2px" onclick="closePelSheet();setTimeout(()=>openPelSheet('${safeP}'),50)">Parte de ${dp} ›</div>`;})()}
