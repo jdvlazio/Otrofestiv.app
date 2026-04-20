@@ -2406,7 +2406,7 @@ const FESTIVAL_STORAGE_KEY='ficci65_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202604201506';
+const BUILD_VERSION='202604201507';
 (function(){
   const _vk='otrofestiv_build';
   const _sk='otrofestiv_reloaded';
@@ -4211,7 +4211,7 @@ function renderContextualHeader(){
       </div>
       <div class="ctx-main-title">${mainTitle}</div>
       <div class="ctx-sub" style="margin-bottom:${totalWatched?'12px':'0'}">${subMsg}</div>
-      ${totalWatched?`<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;padding:4px 0 8px">${watchedFilms}</div>`:''}
+      ${totalWatched?`<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;padding:4px 0 8px">${watchedFilms}</div>`:''}
     </div>`;
   }
 
