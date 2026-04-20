@@ -802,6 +802,10 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:20px;fo
 .c-film-list{display:none;border-top:1px solid var(--bdr-l);padding:var(--sp-1) var(--sp-4) var(--sp-1) var(--sp-4)}
 .c-film-list.visible{display:block}
 .c-film-thumb{width:var(--poster-xs-w);height:var(--poster-xs-h);object-fit:cover;border-radius:var(--r-sm);flex-shrink:0;display:block}
+.pel-sheet-corto-item{display:flex;cursor:pointer;transition:background var(--tr-base);border-radius:var(--r-sm);margin:0 -6px;padding-left:6px;padding-right:6px}
+.pel-sheet-corto-item:active{background:var(--surf-2)}
+.corto-rating-stars{font-size:11px;color:var(--amber);flex-shrink:0;letter-spacing:1px}
+.corto-rate-btn{background:none;border:1px solid var(--bdr);border-radius:20px;color:var(--gray);font-size:10px;font-weight:700;font-family:var(--font);padding:2px 8px;cursor:pointer;flex-shrink:0;white-space:nowrap}
 .c-film-thumb-ph{width:var(--poster-xs-w);height:var(--poster-xs-h);border-radius:var(--r-sm);flex-shrink:0;background:var(--surf-2);display:flex;align-items:center;justify-content:center;font-size:var(--t-sm);opacity:.3}
 .c-film-item{display:flex;align-items:flex-start;gap:var(--sp-3);padding:var(--sp-3) 0;border-bottom:1px solid var(--amber-06)}
 .c-film-item:last-child{border-bottom:none}
@@ -1055,7 +1059,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:20px;fo
 .mplan-row.active{background:var(--amber-08);border-left:2px solid var(--orange);padding-left:var(--sp-3)}
 .mplan-prog-list{display:none;border-top:1px solid var(--bdr-l);padding:var(--sp-2) var(--sp-3)}
 .mplan-prog-list.open{display:block}
-.mplan-prog-item{display:flex;align-items:center;gap:var(--sp-2);padding:var(--sp-2) 0;border-bottom:1px solid var(--bdr-l)}
+.mplan-prog-item{display:flex;align-items:center;gap:var(--sp-2);padding:var(--sp-2) 0;border-bottom:1px solid var(--bdr-l);cursor:pointer;transition:background var(--tr-fast)}.mplan-prog-item:active{background:var(--surf-2)}
 .mplan-prog-item:last-child{border-bottom:none}
 .mplan-prog-num{font-size:var(--t-sm);color:var(--gray2);min-width:16px;text-align:right;flex-shrink:0}
 .mplan-prog-title{font-size:var(--t-sm);color:var(--white);flex:1;min-width:0;line-height:1.35}
@@ -2402,7 +2406,7 @@ const FESTIVAL_STORAGE_KEY='ficci65_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202604201341';
+const BUILD_VERSION='202604201344';
 (function(){
   const _vk='otrofestiv_build';
   const _sk='otrofestiv_reloaded';
@@ -2668,7 +2672,7 @@ function renderMiPlanCalendar(){
         <div style="display:flex;flex-direction:column;align-items:flex-end;justify-content:center;flex-shrink:0">
           <button class="ag-fi-btn del" data-rmt="${safeT}" onclick="removeFromAgenda(this.dataset.rmt);event.stopPropagation()" style="display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;padding:0">${ICONS.x}</button>
         </div>
-      </div>${_expandedFilm===(s._title||'')+(s.day||'')+(s.time||'')?`<div class="film-alts">${renderFilmAlternatives(s._title,s.day,s.time)}</div>`:''}${(()=>{const _mf=FILMS.find(fi=>fi.title===s._title&&fi.day===s.day&&fi.time===s.time);if(!_mf||!_mf.is_cortos||!_mf.film_list||!_mf.film_list.length) return'';return`<div class="mplan-prog-list">${_mf.film_list.map((item,n)=>{const _mt=getPosterSrc(item.title,item.is_cortos!==false);const _mth=_mt?`<img src="${_mt}" class="c-film-thumb" loading="lazy" onerror="this.outerHTML='<div class=c-film-thumb-ph>🎬</div>'" alt="">`:'<div class="c-film-thumb-ph">🎬</div>';return`<div class="mplan-prog-item">${_mth}<div class="mplan-prog-num">${n+1}</div><div class="mplan-prog-title">${item.title}</div><div class="mplan-prog-dur">${item.duration}</div></div>`;}).join('')}</div>`;})()}`;
+      </div>${_expandedFilm===(s._title||'')+(s.day||'')+(s.time||'')?`<div class="film-alts">${renderFilmAlternatives(s._title,s.day,s.time)}</div>`:''}${(()=>{const _mf=FILMS.find(fi=>fi.title===s._title&&fi.day===s.day&&fi.time===s.time);if(!_mf||!_mf.is_cortos||!_mf.film_list||!_mf.film_list.length) return'';return`<div class="mplan-prog-list">${_mf.film_list.map((item,n)=>{const _mt=getPosterSrc(item.title,item.is_cortos!==false);const _mth=_mt?`<img src="${_mt}" class="c-film-thumb" loading="lazy" onerror="this.outerHTML='<div class=c-film-thumb-ph>🎬</div>'" alt="">`:'<div class="c-film-thumb-ph">🎬</div>';const _sc2=item.title.replace(/'/g,"\'");const _sco2=(item.country||"").replace(/'/g,"\'");const _scd2=(item.duration||"");const _scf2=(_mf.flags||"🎬").replace(/'/g,"\'");const _scs2=(_mf.section||"").replace(/'/g,"\'");return`<div class="mplan-prog-item" onclick="event.stopPropagation();openCortoSheet('${_sc2}','${_sco2}','${_scd2}','${_scs2}','${_scf2}')">${_mth}<div class="mplan-prog-num">${n+1}</div><div class="mplan-prog-title">${item.title}</div><div class="mplan-prog-dur">${item.duration}</div></div>`;}).join('')}</div>`;})()}`;
     });
   }
   listHtml+='</div>';
@@ -3702,7 +3706,7 @@ function mkAgendaRow(s, mode='saved'){
     :'';
   const altsHtml=isExpanded&&mode==='saved'?renderFilmAlternatives(t,s.day,s.time):'';
   const _progBtn=(()=>{const _mf=f;if(!_mf||!_mf.is_cortos||!_mf.film_list||!_mf.film_list.length)return'';return`<button class="mplan-prog-toggle" onclick="toggleMplanProg(this,event)" style="display:inline-flex;align-items:center;gap:5px">${ICONS.chevronR} Programa</button>`;})();
-  const _progList=(()=>{const _mf=f;if(!_mf||!_mf.is_cortos||!_mf.film_list||!_mf.film_list.length)return'';return`<div class="mplan-prog-list">${_mf.film_list.map((item,n)=>{const _mt=getPosterSrc(item.title,item.is_cortos!==false);const _mth=_mt?`<img src="${_mt}" class="c-film-thumb" loading="lazy" onerror="this.outerHTML='<div class=c-film-thumb-ph>🎬</div>'" alt="">`:'<div class="c-film-thumb-ph">🎬</div>';return`<div class="mplan-prog-item">${_mth}<div class="mplan-prog-num">${n+1}</div><div class="mplan-prog-title">${item.title}</div><div class="mplan-prog-dur">${item.duration}</div></div>`;}).join('')}</div>`;})();
+  const _progList=(()=>{const _mf=f;if(!_mf||!_mf.is_cortos||!_mf.film_list||!_mf.film_list.length)return'';return`<div class="mplan-prog-list">${_mf.film_list.map((item,n)=>{const _mt=getPosterSrc(item.title,item.is_cortos!==false);const _mth=_mt?`<img src="${_mt}" class="c-film-thumb" loading="lazy" onerror="this.outerHTML='<div class=c-film-thumb-ph>🎬</div>'" alt="">`:'<div class="c-film-thumb-ph">🎬</div>';const _sc=item.title.replace(/'/g,"\'");const _sco=item.country||'';const _scd=item.duration||'';const _scf=f?.flags||'🎬';const _scs=f?.section||'';return`<div class="mplan-prog-item" onclick="event.stopPropagation();openCortoSheet('${_sc}','${_sco}','${_scd}','${_scs}','${_scf}')">${_mth}<div class="mplan-prog-num">${n+1}</div><div class="mplan-prog-title">${item.title}</div><div class="mplan-prog-dur">${item.duration}</div></div>`;}).join('')}</div>`;})();
   return`<div class="saved-item${isDone?' done':''}">
     ${_ph}
     <div class="saved-time">${s.time}</div>
@@ -5964,17 +5968,25 @@ function openPelSheet(title){
   // Lista de cortos si es programa
   let cortosHtml='';
   if(f.is_cortos&&f.film_list?.length){
-    const cortoItems=f.film_list.map(item=>{
-      const thumb=getPosterSrc(item.title,true);
-      // Siempre hay imagen: poster real o SVG generativo de identidad
-      const thumbSrc=thumb||makeProgramPoster(item.title);
-      const thumbHtml=`<img src="${thumbSrc}" loading="lazy" style="width:36px;height:54px;object-fit:cover;border-radius:4px;flex-shrink:0" alt="">`;
-      return`<div class="pel-sheet-corto-item" style="align-items:center;gap:10px;padding:6px 0">
+    const cortoItems=f.film_list.map((item,n)=>{
+      const thumb=getPosterSrc(item.title,false)||makeProgramPoster(item.title);
+      const thumbHtml=`<img src="${thumb}" loading="lazy" style="width:40px;height:60px;object-fit:cover;border-radius:5px;flex-shrink:0" onerror="this.style.opacity=0" alt="">`;
+      const r=filmRatings[item.title]||0;
+      const safeCorto=item.title.replace(/'/g,"\'");
+      const safeCountry=(item.country||'').replace(/'/g,"\'");
+      const safeDur=(item.duration||'').replace(/'/g,"\'");
+      const safeFlags=(f.flags||'🎬').replace(/'/g,"\'");
+      const safeSec=(f.section||'').replace(/'/g,"\'");
+      const ratingEl=r
+        ?`<span class="corto-rating-stars">${'★'.repeat(Math.round(r))}</span>`
+        :`<button class="corto-rate-btn" onclick="event.stopPropagation();closePelSheet();setTimeout(()=>openRatingSheet('${safeCorto}'),100)">★</button>`;
+      return`<div class="pel-sheet-corto-item" onclick="openCortoSheet('${safeCorto}','${safeCountry}','${safeDur}','${safeSec}','${safeFlags}')">
         ${thumbHtml}
         <div style="flex:1;min-width:0">
-          <div style="font-size:12px;color:var(--white);line-height:1.3;margin-bottom:2px">${item.title}</div>
-          <div style="font-size:11px;color:var(--gray2)">${item.duration}</div>
+          <div style="font-size:12px;font-weight:600;color:var(--white);line-height:1.3;margin-bottom:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${item.title}</div>
+          <div style="font-size:11px;color:var(--gray2)">${item.country||''} · ${item.duration}</div>
         </div>
+        ${ratingEl}
       </div>`;
     }).join('');
     cortosHtml=`<div class="pel-sheet-divider"></div>
@@ -6061,6 +6073,51 @@ function closePelSheet(){
 // ─────────────────────────────────────────────────────────────────
 // PROGRAMA — EXPLORAR / HOY / MAÑANA
 // ─────────────────────────────────────────────────────────────────
+// ─────────────────────────────────────────────────────────────
+// SHEET INDIVIDUAL DE CORTOMETRAJE
+// Trata cada corto como película — poster, info, rating, Letterboxd
+// ─────────────────────────────────────────────────────────────
+function openCortoSheet(title, country, duration, section, flags){
+  const safeT=title.replace(/'/g,"\'");
+  const posterSrc=getPosterSrc(title,false)||makeProgramPoster(title);
+  const posterHtml=posterSrc
+    ?`<img src="${posterSrc}" loading="lazy" style="width:96px;height:144px;object-fit:cover;border-radius:var(--r-md);flex-shrink:0" onerror="this.style.opacity=0" alt="">`
+    :`<div style="width:96px;height:144px;border-radius:var(--r-md);background:var(--surf-2);flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:32px">🎬</div>`;
+  const r=filmRatings[title]||0;
+  const secShort=(section||'').replace(/^[^ ]+ /,'');
+  const lbSlug=LB_SLUGS[title];
+  const lbLink=lbSlug?`<a class="c-lb" href="https://boxd.it/${lbSlug}" target="_blank" rel="noopener" style="display:inline-flex;margin-top:14px;margin-bottom:2px">${LB_SVG}<span class="c-lb-text">Ver en Letterboxd</span></a>`:'';
+  const ratingSection=`
+    <div class="pel-sheet-divider" style="margin-top:16px"></div>
+    <div style="display:flex;gap:8px;margin-top:12px">
+      ${r?`<div style="flex:1;display:flex;align-items:center;gap:6px;font-size:16px;color:var(--amber)">${'★'.repeat(Math.round(r))}</div>`:``}
+      <button onclick="closePelSheet();setTimeout(()=>openRatingSheet('${safeT}'),100)"
+        style="flex:1;background:none;border:1px solid var(--bdr);border-radius:var(--r-pill);color:var(--gray2);font-family:var(--font);font-size:13px;font-weight:700;padding:10px 0;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:5px">
+        ${ICONS.star} ${r?'Cambiar':'Calificar'}
+      </button>
+    </div>`;
+  document.getElementById('pel-sheet-inner').innerHTML=`
+    <div class="pel-sheet-header">
+      ${posterHtml}
+      <div class="pel-sheet-meta">
+        <div class="pel-sheet-title">${title}</div>
+        <div class="pel-sheet-flags">${flags||'🎬'}</div>
+        <div class="pel-sheet-dur">${ICONS.clock} ${duration}</div>
+        ${secShort?`<div class="pel-sheet-sec">${secShort}</div>`:''}
+        ${country?`<div style="font-size:11px;color:var(--gray);margin-top:3px">${country}</div>`:''}
+        <div style="font-size:11px;color:var(--orange);margin-top:3px;font-weight:600">Cortometraje</div>
+      </div>
+    </div>
+    <div class="pel-sheet-divider"></div>
+    <div class="pel-sheet-section-lbl">Sinopsis</div>
+    <div class="pel-sheet-synopsis">Sinopsis disponible próximamente.</div>
+    ${lbLink}
+    ${ratingSection}`;
+  document.getElementById('pel-overlay').classList.add('open');
+  document.getElementById('pel-sheet').classList.add('open');
+  setTimeout(()=>document.querySelector('.pel-sheet-topbar')&&(document.querySelector('.pel-sheet-topbar')._swipeInit=false),50);
+}
+
 function setMiPlanView(mode){
   miPlanViewMode=mode;
   document.getElementById('mpbtn-cal')?.classList.toggle('on',mode==='calendar');
