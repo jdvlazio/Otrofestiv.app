@@ -2406,7 +2406,7 @@ const FESTIVAL_STORAGE_KEY='ficci65_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202604201449';
+const BUILD_VERSION='202604201452';
 (function(){
   const _vk='otrofestiv_build';
   const _sk='otrofestiv_reloaded';
@@ -6069,7 +6069,7 @@ function openPelSheet(title){
     <div class="pel-sheet-section-lbl">Sinopsis</div>
     <div class="pel-sheet-synopsis">Sinopsis disponible próximamente.</div>
     ${cortosHtml}
-    ${!f.is_cortos?`<a class="c-lb" href="${lbUrl(f.title)}" target="_blank" rel="noopener" style="display:inline-flex;margin-top:14px;margin-bottom:2px">${LB_SVG}<span class="c-lb-text">Ver en Letterboxd</span></a>`:''}
+    ${!f.is_cortos?`<a class="c-lb" href="${lbUrl(f.title)}" target="_blank" rel="noopener" style="display:inline-flex;margin-top:14px;margin-bottom:2px">${LB_SVG}<span class="c-lb-text">Letterboxd</span></a>`:''}
     <div class="pel-sheet-divider" style="margin-top:16px"></div>
     ${inW?`<div style="display:flex;gap:8px;margin-top:12px">
         <button onclick="toggleWatched('${safeT}',event);closePelSheet()" style="flex:1;background:rgba(39,174,96,.08);border:1px solid rgba(39,174,96,.2);border-radius:var(--r-pill);color:var(--green);font-family:var(--font);font-size:13px;font-weight:700;padding:10px 0;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:5px">${ICONS.check} Ya vista</button>
@@ -6187,7 +6187,7 @@ function openCortoSheet(title, country, duration, section, flags){
     :`<div style="width:96px;height:144px;border-radius:var(--r-md);background:var(--surf-2);flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:32px">🎬</div>`;
   const r=filmRatings[title]||0;
   const secShort=(section||'').replace(/^[^ ]+ /,'');
-  const lbLink=LB_SLUGS[title]?`<a class="c-lb" href="${lbUrl(title)}" target="_blank" rel="noopener" style="display:inline-flex;margin-top:14px;margin-bottom:2px">${LB_SVG}<span class="c-lb-text">Ver en Letterboxd</span></a>`:'';
+  const lbLink=LB_SLUGS[title]?`<a class="c-lb" href="${lbUrl(title)}" target="_blank" rel="noopener" style="display:inline-flex;margin-top:14px;margin-bottom:2px">${LB_SVG}<span class="c-lb-text">Letterboxd</span></a>`:'';
   const ratingSection=`
     <div class="pel-sheet-divider" style="margin-top:16px"></div>
     <div style="display:flex;gap:8px;margin-top:12px">
