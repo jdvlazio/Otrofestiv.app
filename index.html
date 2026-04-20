@@ -502,6 +502,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 ════════════════════════════════════════════════════════ */
 
 /* ── CARTELERA ── */
+.programa-view{display:block}
 .grid{padding:var(--sp-3) var(--sp-3) 60px;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:var(--sp-3);overflow:visible;grid-auto-rows:minmax(210px,auto)}
 
 /* Card */
@@ -1365,23 +1366,35 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
     max-width:var(--content-w);width:100%;
     margin-left:auto;margin-right:auto;
   }
-  .programa-mode-bar{
-    max-width:var(--content-w);
-    margin-left:auto;margin-right:auto;
-    padding:0 var(--content-pad);
-  }
-  .programa-chips{
-    max-width:var(--content-w);
-    margin-left:auto;margin-right:auto;
-    padding:var(--sp-2) var(--content-pad);
-  }
+  /* programa-mode-bar y chips: centrado via .programa-view wrapper */
 
   /* ── CONTENIDO PRINCIPAL — centrado a 960px ── */
-  .grid{
+
+  /* Programa: wrapper único que contiene search, mode-bar, chips, grid, etc */
+  .programa-view{
     max-width:var(--content-w);
-    margin-left:auto;margin-right:auto;
-    padding-left:var(--content-pad);
-    padding-right:var(--content-pad);
+    margin:0 auto;
+    padding:0 var(--content-pad);
+  }
+  /* Los hijos del wrapper no necesitan max-width ni margen propio */
+  .programa-view .carta-search-wrap{
+    margin-left:0;margin-right:0;
+  }
+  .programa-view .programa-mode-bar,
+  .programa-view .programa-chips,
+  .programa-view .filter-row{
+    padding-left:0;padding-right:0;
+    margin-left:calc(-1 * var(--content-pad));
+    margin-right:calc(-1 * var(--content-pad));
+    width:calc(100% + 2 * var(--content-pad));
+  }
+  .programa-view .cartelera-cta{
+    margin-left:calc(-1 * var(--content-pad));
+    margin-right:calc(-1 * var(--content-pad));
+    width:calc(100% + 2 * var(--content-pad));
+  }
+  .grid{
+    padding-left:0;padding-right:0;
     padding-bottom:var(--sp-6);
     grid-template-columns:repeat(auto-fill,minmax(min(100%,280px),1fr));
   }
@@ -1928,6 +1941,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
   <div class="pel-sheet-topbar"><div class="pel-sheet-handle"></div><button class="pel-sheet-close" onclick="closePelSheet()"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button></div>
   <div class="pel-sheet-inner" id="pel-sheet-inner"></div>
 </div>
+<div class="programa-view" id="programa-view">
 <div class="carta-search-wrap" id="carta-search-wrap">
   <div class="carta-search-field">
     <span class="carta-search-ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
@@ -1998,6 +2012,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 </div>
 <div class="cnt-line" id="cnt"></div>
 <div class="grid" id="grid"></div>
+</div><!-- /programa-view -->
 <div class="ag-view" id="ag-view"></div>
 
 <script>
@@ -2454,7 +2469,7 @@ const FESTIVAL_STORAGE_KEY='ficci65_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202604202111';
+const BUILD_VERSION='202604202113';
 (function(){
   const _vk='otrofestiv_build';
   const _sk='otrofestiv_reloaded';
