@@ -6127,6 +6127,7 @@ function setMiPlanView(mode){
 }
 
 function renderMiPlanList(schedule){
+  try{
   // Vista lista compacta — mismo patrón que Hoy/Mañana en Programa
   const upcoming=schedule
     .filter(s=>!watched.has(s._title))
@@ -6164,8 +6165,8 @@ function renderMiPlanList(schedule){
       }).join('')}
     `).join('')
   }</div>`;
+  }catch(e){return '<div style="padding:16px;color:var(--gray);font-size:13px">Error al cargar lista</div>';}
 }
-
 function setInteresesView(mode){
   interesesViewMode=mode;
   document.getElementById('ibtn-grid')?.classList.toggle('on',mode==='grid');
@@ -6332,6 +6333,7 @@ function renderProgramaChips(){
 }
 
 function renderProgramaList(){
+  try{
   // Vista lista cronológica para Hoy/Mañana
   const el=document.getElementById('programa-list');
   if(!el) return;
@@ -6369,8 +6371,8 @@ function renderProgramaList(){
       </div>`;
     }).join('')}
   `).join('');
+  }catch(e){return '<div style="padding:16px;color:var(--gray);font-size:13px">Error al cargar funciones</div>';}
 }
-
 function _renderProgramaContent(){
   const grid=document.getElementById('grid');
   const lista=document.getElementById('programa-list');
@@ -6403,6 +6405,7 @@ function _renderProgramaContent(){
 }
 
 function _renderExploreLista(){
+  try{
   // Vista lista del catálogo completo (Explorar en modo lista)
   const el=document.getElementById('programa-list');
   if(!el) return;
@@ -6442,8 +6445,8 @@ function _renderExploreLista(){
       <div class="plist-heart${inWL?'':' empty'}" onclick="event.stopPropagation();_toggleWLFromList('${safeT}',this)">${inWL?ICONS.heartFill:ICONS.heart}</div>
     </div>`;
   }).join('');
+  }catch(e){return;}
 }
-
 function _toggleWLFromList(title,btn){
   // Wrapper para el ♥ en la lista de Programa — usa el toggleWL existente
   const wasIn=watchlist.has(title);
