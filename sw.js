@@ -1,10 +1,9 @@
-// Otrofestiv — Service Worker v10
+// Otrofestiv — Service Worker v11
 // Estrategia: HTML siempre desde red. Assets en caché.
 
-const CACHE_NAME = 'otrofestiv-v17';
-const BUILD = '202604201319';
+const CACHE_NAME = 'otrofestiv-v202604202233';
+const BUILD = '202604202233';
 
-// Solo assets estáticos — NUNCA el HTML
 const STATIC_ASSETS = [
   '/manifest.json',
   '/icon-192.png',
@@ -12,21 +11,17 @@ const STATIC_ASSETS = [
 ];
 
 self.addEventListener('install', () => {
-  // Activar inmediatamente sin esperar a que se cierren tabs
   self.skipWaiting();
 });
 
 self.addEventListener('activate', event => {
   event.waitUntil(
-    // Borrar TODOS los cachés anteriores sin excepción
     caches.keys().then(keys =>
       Promise.all(keys.map(key => caches.delete(key)))
     ).then(() => {
-      // Pre-cachear solo assets estáticos
       return caches.open(CACHE_NAME).then(c => c.addAll(STATIC_ASSETS));
     }).then(() => self.clients.claim())
     .then(() => {
-      // Notificar a todos los clientes para que recarguen
       return self.clients.matchAll({type:'window',includeUncontrolled:true})
         .then(clients => clients.forEach(c => c.postMessage({type:'SW_UPDATED',build:BUILD})));
     })
@@ -45,7 +40,7 @@ self.addEventListener('fetch', event => {
   const url = new URL(request.url);
   if (url.origin !== location.origin) return;
 
-  // HTML → SIEMPRE desde red, nunca desde caché
+  // HTML → siempre desde red, sin caché
   if (request.destination === 'document') {
     event.respondWith(
       fetch(new Request(request, { cache: 'no-store' }))
