@@ -1629,9 +1629,20 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .welcome-sheet{
   width:100%;max-width:480px;margin:0 auto;
   background:var(--surf);
-  border-radius:var(--r) var(--r) 0 0;
+  border-radius:var(--r-sheet) var(--r-sheet) 0 0;
   border-top:1px solid var(--bdr);
   padding:var(--sp-6) var(--sp-5) calc(var(--sp-6) + env(safe-area-inset-bottom));
+}
+@media(min-width:600px){
+  .welcome-overlay{align-items:center;justify-content:center}
+  .welcome-sheet{
+    border-radius:var(--r);
+    border-top:none;
+    border:1px solid var(--bdr);
+    padding:var(--sp-6) var(--sp-5);
+    box-shadow:0 24px 80px rgba(0,0,0,.6);
+    max-width:420px;
+  }
 }
 .welcome-wordmark{
   font-family:var(--font);font-size:var(--t-lg);font-weight:var(--w-display);
@@ -2443,7 +2454,7 @@ const FESTIVAL_STORAGE_KEY='ficci65_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202604202104';
+const BUILD_VERSION='202604202109';
 (function(){
   const _vk='otrofestiv_build';
   const _sk='otrofestiv_reloaded';
