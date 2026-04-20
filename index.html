@@ -1873,7 +1873,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:20px;fo
     </div>
     <button class="pmode-filter-btn" id="pmode-filter-btn" onclick="toggleProgramaFilter()">
       <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>
-      Filtrar
+      <span id="pmode-filter-lbl">Lugar</span>
     </button>
   </div>
 </div>
@@ -1902,13 +1902,8 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:20px;fo
       </button>
       <div class="fdr-panel" id="vdr-panel"></div>
     </div>
-    <div class="fdr-wrap">
-      <button class="fdr-btn" id="sdr-btn" onclick="toggleDropdown('sdr')" title="Filtrar por sección">
-        <span class="fdr-label" id="sdr-label">Categoría</span>
-        <span class="fdr-arrow" id="sdr-arrow"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
-      </button>
-      <div class="fdr-panel" id="sdr-panel"></div>
-    </div>
+    <!-- Categoría eliminada — los chips de la barra horizontal la reemplazan -->
+    <div style="display:none"><div class="fdr-panel" id="sdr-panel"></div><span id="sdr-label"></span><button id="sdr-btn"></button><span id="sdr-arrow"></span></div>
   </div>
 </div>
 <div id="filter-bars">
@@ -2379,7 +2374,7 @@ const FESTIVAL_STORAGE_KEY='ficci65_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202604200246';
+const BUILD_VERSION='202604200251';
 (function(){
   const _vk='otrofestiv_build';
   const _sk='otrofestiv_reloaded';
@@ -5514,7 +5509,7 @@ function renderVbar(){
   const lbl=document.getElementById('vdr-label');
   if(!panel) return;
   panel.innerHTML='';
-  const dayFilms=FILMS.filter(f=>f.day===activeDay);
+  const dayFilms=programaSubMode==='explorar'?FILMS:FILMS.filter(f=>f.day===activeDay);
   const vs=[...new Set(dayFilms.map(f=>vcfg(f.venue).short))];
   const mkOpt=(html,isOn,cb)=>{
     const b=document.createElement('button');
@@ -5523,11 +5518,11 @@ function renderVbar(){
     b.onclick=e=>{e.stopPropagation();cb();};
     panel.appendChild(b);
   };
-  mkOpt(`Todos los lugares <span class="fdr-cnt">${dayFilms.length}</span>`,activeVenue==='all',()=>{activeVenue='all';selectedIdx=null;setHint(null);closeDropdowns();render();});
+  mkOpt(`Todos los lugares <span class="fdr-cnt">${dayFilms.length}</span>`,activeVenue==='all',()=>{activeVenue='all';selectedIdx=null;setHint(null);closeDropdowns();_updateProgramaActiveFilter();if(programaSubMode==='explorar')_renderProgramaContent();else render();});
   vs.forEach(vk=>{
     const cfg=Object.values(VENUES).find(c=>c.short===vk)||VENUES['C. Convenciones'];
     const cnt=dayFilms.filter(f=>vcfg(f.venue).short===vk).length;
-    mkOpt(`${ICONS.pin} ${vk} <span class="fdr-cnt">${cnt}</span>`,activeVenue===vk,()=>{activeVenue=activeVenue===vk?'all':vk;selectedIdx=null;setHint(null);closeDropdowns();render();});
+    mkOpt(`${ICONS.pin} ${vk} <span class="fdr-cnt">${cnt}</span>`,activeVenue===vk,()=>{activeVenue=activeVenue===vk?'all':vk;selectedIdx=null;setHint(null);closeDropdowns();_updateProgramaActiveFilter();if(programaSubMode==='explorar')_renderProgramaContent();else render();});
   });
   if(lbl) lbl.textContent=activeVenue==='all'?'Lugar':activeVenue;
   if(trigBtn) trigBtn.classList.toggle('active',activeVenue!=='all');
@@ -6037,6 +6032,10 @@ function setProgramaChip(chipId){
 
 function clearProgramaChip(){
   _programaChipMatchFn=null;
+  activeVenue='all';
+  // Resetear label del venue dropdown
+  const vl=document.getElementById('vdr-label');if(vl) vl.textContent='Lugar';
+  const vb=document.getElementById('vdr-btn');if(vb) vb.classList.remove('active');
   setProgramaChip('all');
 }
 
@@ -6056,12 +6055,23 @@ function _updateProgramaActiveFilter(){
   const countEl=document.getElementById('paf-count');
   if(!af) return;
   const chip=PROGRAMA_CHIPS.find(c=>c.id===programaChip);
-  if(programaChip!=='all'&&chip){
-    tagText.textContent=chip.label;
-    // Contar películas únicas que coinciden
+  const hasChip=programaChip!=='all'&&chip;
+  const hasVenue=activeVenue!=='all';
+
+  if(hasChip||hasVenue){
+    // Construir el label del tag — chip + venue si ambos activos
+    let parts=[];
+    if(hasChip) parts.push(chip.label);
+    if(hasVenue) parts.push('📍 '+activeVenue);
+    tagText.textContent=parts.join(' · ');
+    // Contar películas que cumplen ambos filtros
     const titleMap={};
-    FILMS.forEach(f=>{if(!titleMap[f.title])titleMap[f.title]=f;});
-    const count=Object.values(titleMap).filter(f=>chip.match&&chip.match(f.section||'')).length;
+    FILMS.forEach(f=>{if(!titleMap[f.title])titleMap[f.title]={film:f,screenings:[]};titleMap[f.title].screenings.push(f);});
+    const count=Object.values(titleMap).filter(({film:f,screenings})=>{
+      const secOk=hasChip?(chip.match&&chip.match(f.section||'')):true;
+      const venueOk=hasVenue?screenings.some(s=>vcfg(s.venue).short===activeVenue):true;
+      return secOk&&venueOk;
+    }).length;
     countEl.textContent=count+' película'+(count!==1?'s':'');
     af.classList.add('visible');
   } else {
@@ -6161,6 +6171,9 @@ function _renderExploreLista(){
   } else if(activeSec!=='all'){
     entries=entries.filter(e=>e.film.section===activeSec);
   }
+  if(activeVenue!=='all'){
+    entries=entries.filter(e=>e.screenings.some(s=>vcfg(s.venue).short===activeVenue));
+  }
   const secIdxLF=s=>{const i=SECTION_ORDER_LF.indexOf(s);return i>=0?i:98;};
   entries.sort((a,b)=>{
     if(a.film.is_cortos!==b.film.is_cortos) return a.film.is_cortos?1:-1;
@@ -6222,12 +6235,16 @@ function renderPeliculaView(){
     titleMap[f.title].screenings.push(f);
   });
 
-  // Aplicar filtro de sección si está activo
+  // Aplicar filtro de sección (chip o dropdown)
   let entries=Object.values(titleMap);
   if(activeSec==='_chip_'&&_programaChipMatchFn){
     entries=entries.filter(e=>_programaChipMatchFn(e.film.section||''));
   } else if(activeSec!=='all'){
     entries=entries.filter(e=>e.film.section===activeSec);
+  }
+  // Aplicar filtro de venue — incluir film si alguna función es en ese lugar
+  if(activeVenue!=='all'){
+    entries=entries.filter(e=>e.screenings.some(s=>vcfg(s.venue).short===activeVenue));
   }
 
   // Orden oficial FICCI 65 según Letterboxd: largometrajes primero, cortos al final
