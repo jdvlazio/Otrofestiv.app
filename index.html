@@ -2273,7 +2273,7 @@ const FESTIVAL_STORAGE_KEY='ficci65_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202604192242';
+const BUILD_VERSION='202604200028';
 (function(){
   const _vk='otrofestiv_build';
   const _sk='otrofestiv_reloaded';
@@ -5840,15 +5840,48 @@ setTimeout(showWelcomeIfNeeded, 400);
 
 document.addEventListener('visibilitychange', function(){
   if(document.visibilityState!=='visible') return;
-  if(activeMNav==='mnav-miplan'&&activeView==='agenda') renderAgenda();
-  else if(activeMNav==='mnav-planner'&&activeView==='agenda') renderAgenda();
-  else if(activeView==='day') render();
+  // Al volver al primer plano: si hay función en los próximos 30min → Mi Plan
+  if(_checkNavigateToMiPlan()&&activeMNav!=='mnav-miplan'){
+    switchMainNav('mnav-miplan');
+    showAgView();
+  } else {
+    if(activeMNav==='mnav-miplan'&&activeView==='agenda') renderAgenda();
+    else if(activeMNav==='mnav-planner'&&activeView==='agenda') renderAgenda();
+    else if(activeView==='day') render();
+  }
   updateAgTab();
 }); // visibilitychange
 
 // html2canvas eliminado — Canvas API puro
 document.addEventListener('click',e=>{if(!e.target.closest('.fdr-wrap')) closeDropdowns();});
 updateAgTab();render();
+
+// ── Auto-navegar a Mi Plan si hay función próxima ──────────────
+// Si el usuario tiene un plan guardado y hay una función
+// empezando en los próximos 30 minutos, aterrizamos en Mi Plan.
+// También se revisa al volver de background (visibilitychange).
+function _checkNavigateToMiPlan(){
+  if(festivalEnded()) return false;
+  if(!savedAgenda||!savedAgenda.schedule||!savedAgenda.schedule.length) return false;
+  const now=simNow();
+  const WINDOW_MS=30*60*1000; // 30 minutos
+  const upcoming=savedAgenda.schedule.find(s=>{
+    const dateStr=FESTIVAL_DATES[s.day];
+    if(!dateStr) return false;
+    const start=new Date(`${dateStr}T${s.time}:00`);
+    const diff=start-now;
+    return diff>=0 && diff<=WINDOW_MS; // empieza en los próximos 30min
+  });
+  return !!upcoming;
+}
+
+// Al arrancar — solo si no estamos en primer uso (welcome overlay visible)
+setTimeout(()=>{
+  if(_checkNavigateToMiPlan()){
+    switchMainNav('mnav-miplan');
+    showAgView();
+  }
+}, 600); // después del welcome check (400ms) y del render inicial
 </script>
 <script>
 if('serviceWorker' in navigator){
