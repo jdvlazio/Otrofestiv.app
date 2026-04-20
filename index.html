@@ -560,7 +560,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:20px;fo
 /* ── Toggle Por Horario / Por Película — mismo sistema que fdr-btn ── */
 .carta-mode-toggle{display:none} /* reemplazado por programa-mode-bar */
 /* ── Programa: mode bar Explorar/Hoy/Mañana ── */
-.programa-mode-bar{display:flex;align-items:center;border-bottom:1px solid var(--bdr);padding:0 12px;flex-shrink:0;background:var(--surf);position:sticky;top:var(--sticky-top-carta);z-index:120}
+.programa-mode-bar{display:flex;align-items:center;border-bottom:1px solid var(--bdr);padding:0 var(--sp-3);flex-shrink:0;background:var(--surf);position:sticky;top:var(--sticky-top-carta);z-index:120}
 .pmode-tab{padding:10px 12px 8px;font-size:13px;font-weight:700;color:var(--gray);border-bottom:2px solid transparent;cursor:pointer;background:none;border-top:none;border-left:none;border-right:none;font-family:var(--font);transition:color .15s,border-color .15s;white-space:nowrap}
 .pmode-tab.on{color:var(--white);border-bottom-color:var(--amber)}
 .pmode-spacer{flex:1}
@@ -571,7 +571,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:20px;fo
 .pmode-filter-btn{display:flex;align-items:center;gap:4px;font-size:11px;font-weight:700;color:var(--gray2);background:none;border:none;cursor:pointer;font-family:var(--font);padding:4px 0;transition:color .15s;white-space:nowrap}
 .pmode-filter-btn.active{color:var(--amber)}
 /* Chips de categoría (solo Explorar) */
-.programa-chips{display:flex;gap:6px;padding:8px 12px;overflow-x:auto;scrollbar-width:none;flex-shrink:0;border-bottom:1px solid var(--bdr-l);background:var(--surf);position:sticky;top:var(--sticky-top-chips);z-index:119}
+.programa-chips{display:flex;gap:6px;padding:var(--sp-2) var(--sp-3);overflow-x:auto;scrollbar-width:none;flex-shrink:0;border-bottom:1px solid var(--bdr-l);background:var(--surf);position:sticky;top:var(--sticky-top-chips);z-index:119}
 .programa-chips::-webkit-scrollbar{display:none}
 .programa-chips{-webkit-overflow-scrolling:touch}
 .programa-chips.hidden{display:none}
@@ -851,8 +851,8 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:20px;fo
 .ag-film-item.list-mode .ag-fi-flags{font-size:11px;color:var(--gray2);margin-bottom:2px}
 .ag-film-item.list-mode .ag-fi-overlay{display:none}
 /* Barra de modo Intereses */
-.intereses-mode-bar{display:flex;align-items:center;justify-content:space-between;padding:8px 0 6px;margin-bottom:4px}
-.intereses-mode-title{font-size:13px;font-weight:700;color:var(--white);display:flex;align-items:center;gap:6px}
+.intereses-mode-bar{display:flex;align-items:center;justify-content:space-between;padding:var(--sp-2) 0;margin-bottom:var(--sp-1)}
+.intereses-mode-title{font-size:var(--t-base);font-weight:var(--w-bold);color:var(--white);display:flex;align-items:center;gap:var(--sp-1)}
 .intereses-view-switch{display:flex;align-items:center;gap:2px;background:var(--surf-2);border:1px solid var(--bdr);border-radius:8px;padding:3px}
 .intereses-view-btn{width:24px;height:24px;display:flex;align-items:center;justify-content:center;border-radius:5px;cursor:pointer;color:var(--gray);background:none;border:none;transition:all .15s}
 .intereses-view-btn.on{background:var(--amber);color:#000}
@@ -1165,10 +1165,10 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:20px;fo
 /* Progress festival */
 .festival-progress{padding:var(--sp-3) var(--sp-3);background:var(--amber-06);border-radius:var(--r-md);margin-bottom:var(--sp-3)}
 /* ── Header contextual de Mi Plan ── */
-.ctx-header{padding:14px 16px 12px;border-bottom:1px solid var(--bdr);background:var(--surf)}
+.ctx-header{padding:var(--sp-3) var(--sp-4) var(--sp-3);border-bottom:1px solid var(--bdr);background:var(--surf)}
 .ctx-eyebrow{font-size:10px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;display:flex;align-items:center;gap:5px;margin-bottom:6px}
-.ctx-main-title{font-size:17px;font-weight:800;color:var(--white);letter-spacing:-.2px;line-height:1.2;margin-bottom:3px}
-.ctx-sub{font-size:13px;color:var(--gray)}
+.ctx-main-title{font-size:var(--t-md);font-weight:800;color:var(--white);letter-spacing:-.2px;line-height:1.2;margin-bottom:3px}
+.ctx-sub{font-size:var(--t-base);color:var(--gray)}
 .ctx-prio-row{display:flex;gap:8px;margin-top:12px}
 .ctx-prio-chip{display:flex;align-items:center;gap:8px;flex:1;min-width:0;background:var(--surf-2);border:1px solid var(--amber-30);border-radius:10px;padding:8px 10px}
 .ctx-prio-thumb{width:24px;height:36px;border-radius:3px;flex-shrink:0;object-fit:cover;background:var(--surf-3)}
@@ -2420,7 +2420,7 @@ const FESTIVAL_STORAGE_KEY='ficci65_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202604201545';
+const BUILD_VERSION='202604201547';
 (function(){
   const _vk='otrofestiv_build';
   const _sk='otrofestiv_reloaded';
