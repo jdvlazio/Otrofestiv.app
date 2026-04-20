@@ -1280,90 +1280,92 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
   :root{
     --content-w:960px;
     --content-pad:var(--sp-5);
-    --tb-h:52px;
-    --sticky-top-carta:var(--tb-h);
-    --sticky-top-chips:calc(var(--tb-h) + 40px);
+    --tb-h:44px;
+    --nav-h:44px;
+    --sticky-top-carta:calc(var(--tb-h) + var(--nav-h));
+    --sticky-top-chips:calc(var(--tb-h) + var(--nav-h) + 42px);
     --poster-lg-w:112px;
     --poster-lg-h:168px;
   }
 
   html{scrollbar-gutter:stable}
 
-  /* ══════════════════════════════════════════════════
-     TOPBAR DESKTOP — una sola fila unificada
-     Logo izquierda · Tabs centro-derecha · Actions derecha
-     Todo en el mismo eje del área de contenido (960px)
-  ══════════════════════════════════════════════════ */
+  /* ══════════════════════════════════════════════
+     TOPBAR — dos filas con jerarquía clara
+     Fila 1 (44px): Marca — logo + festival pill
+     Fila 2 (44px): Nav  — tabs de sección
+     Las dos filas comparten el mismo eje de 960px
+  ══════════════════════════════════════════════ */
   .topbar{
     position:sticky;top:0;z-index:200;
-    background:var(--surf);border-bottom:1px solid var(--bdr);
+    background:var(--surf);
+    border-bottom:1px solid var(--bdr);
+    display:block;
   }
 
-  /* Contenedor interno centrado — logo + nav + acciones en una fila */
+  /* Fila 1 — identidad: logo + festival pill */
   .hdr{
-    display:flex;align-items:center;
-    width:100%;max-width:var(--content-w);
+    display:flex;align-items:center;flex-wrap:nowrap;
+    max-width:var(--content-w);
     height:var(--tb-h);
+    margin:0 auto;
     padding:0 var(--content-pad);
-    gap:var(--sp-5);
-    /* Anula el padding del topbar en mobile */
+    min-height:auto;
+    border-bottom:1px solid var(--bdr-l);
   }
 
   .hdr-wordmark{
     font-size:var(--t-lg);
-    flex-shrink:0;
-    margin-right:var(--sp-3);
+    flex:none;
+    margin-right:var(--sp-4);
   }
 
-  /* Festival bar: pill inline junto al logo */
+  /* Festival pill — inline junto al logo, empuja nav a la derecha */
   .hdr-fest-bar{
-    display:flex;align-items:center;
+    display:inline-flex;
+    align-items:center;
     gap:var(--sp-2);
     padding:0 var(--sp-3);
     background:var(--surf-2);
     border:1px solid var(--bdr);
-    border-top:1px solid var(--bdr);
-    border-bottom:1px solid var(--bdr);
     border-radius:var(--r-pill);
-    height:28px;
+    height:26px;
     flex-shrink:0;
     flex-basis:auto;
     width:auto;
     cursor:pointer;
-    margin-right:auto;
   }
-  .hdr-fest-bar:hover{background:var(--surf-3,var(--bdr))}
+  .hdr-fest-bar:hover{border-color:var(--bdr-hover,var(--amber-30))}
 
-  /* Nav: ocupa el espacio restante del .hdr, se comporta como flex inline */
+  /* Fila 2 — navegación: tabs sticky debajo de la marca */
   .main-nav{
-    /* Reset mobile */
-    position:static !important;
-    top:auto !important;
+    position:sticky !important;
+    top:var(--tb-h) !important;
     bottom:auto !important;
     left:auto !important;
     right:auto !important;
-    border:none !important;
-    padding:0 !important;
-    background:transparent;
-    z-index:auto;
-    /* Flex inline dentro del .hdr */
+    z-index:199;
     display:flex !important;
-    align-items:stretch;
-    height:100%;
-    flex:1;
-    justify-content:flex-end;
-    margin-left:auto;
+    justify-content:center;
+    border-top:none !important;
+    border-bottom:1px solid var(--bdr) !important;
+    padding:0 !important;
+    padding-bottom:0 !important;
+    background:var(--surf);
+    height:var(--nav-h);
   }
+
+  /* Tabs centrados en el área de 960px */
   .main-nav-tab{
     flex:none !important;
     width:auto !important;
-    height:100% !important;
+    height:var(--nav-h) !important;
     flex-direction:row !important;
     gap:var(--sp-1) !important;
     padding:0 var(--sp-4) !important;
     border-bottom:2px solid transparent !important;
     border-top:none !important;
-    margin-bottom:0 !important;
+    margin-bottom:-1px !important;
     margin-top:0 !important;
     font-size:var(--t-sm) !important;
     color:var(--gray2) !important;
@@ -1380,21 +1382,18 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
   .main-nav-ico svg{width:14px;height:14px}
   .main-nav-lbl{font-size:var(--t-sm)}
 
-  /* El main-nav VIVE DENTRO del .hdr — debe moverse al HTML */
-  /* Por ahora: ocultar el main-nav original y simular via CSS */
-
-  /* ══════════════════════════════════════════════════
-     CONTENIDO — centrado a 960px, sin nav-row separado
-  ══════════════════════════════════════════════════ */
+  /* ══════════════════════════════════════════════
+     CONTENIDO — centrado a 960px, sticky correcto
+  ══════════════════════════════════════════════ */
   .nav-row{
-    position:sticky;top:var(--tb-h);z-index:198;
+    position:sticky;top:var(--sticky-top-carta);z-index:198;
     background:var(--bg);
     max-width:var(--content-w);width:100%;
     margin-left:auto;margin-right:auto;
     padding-left:var(--content-pad);padding-right:var(--content-pad);
   }
   .filter-row{
-    position:sticky;top:var(--tb-h);z-index:197;
+    position:sticky;top:var(--sticky-top-carta);z-index:197;
     background:var(--bg);
     max-width:var(--content-w);width:100%;
     margin-left:auto;margin-right:auto;
@@ -1403,26 +1402,34 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 
   .carta-search-wrap,
   .programa-mode-bar,
-  .programa-chips,
   .programa-active-filter,
-  .hint,
-  .cnt-line,
-  .grid,
-  .ag-view,
-  #cartelera-stepper,
-  #cartelera-cta{
+  .hint,.cnt-line,.grid,.ag-view,
+  #cartelera-stepper,#cartelera-cta{
     max-width:var(--content-w);
-    margin-left:auto;
-    margin-right:auto;
+    margin-left:auto;margin-right:auto;
   }
 
-  .carta-search-wrap{padding-left:var(--content-pad);padding-right:var(--content-pad);margin-top:var(--sp-2)}
+  .carta-search-wrap{
+    padding-left:var(--content-pad);padding-right:var(--content-pad);
+    margin-top:var(--sp-2);
+  }
   .programa-mode-bar{padding-left:var(--content-pad);padding-right:var(--content-pad)}
-  .programa-chips{padding-left:var(--content-pad);padding-right:var(--content-pad)}
   .programa-active-filter{padding-left:var(--content-pad);padding-right:var(--content-pad)}
   .hint{padding-left:var(--content-pad);padding-right:var(--content-pad)}
   .cnt-line{padding-left:var(--content-pad);padding-right:var(--content-pad)}
   #cartelera-cta{padding-left:var(--content-pad);padding-right:var(--content-pad)}
+
+  /* ── Chips — fade en el borde derecho ── */
+  .programa-chips{
+    max-width:var(--content-w);
+    margin-left:auto;margin-right:auto;
+    padding-left:var(--content-pad);
+    /* Sin padding-right — el fade lo reemplaza visualmente */
+    padding-right:0;
+    /* Degradado que cubre los últimos 80px */
+    -webkit-mask-image:linear-gradient(to right,black calc(100% - 80px),transparent 100%);
+    mask-image:linear-gradient(to right,black calc(100% - 80px),transparent 100%);
+  }
 
   .grid{
     padding-left:var(--content-pad);padding-right:var(--content-pad);
@@ -1438,7 +1445,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
     padding-top:var(--sp-3);padding-bottom:var(--sp-6);
   }
 
-  /* Grids en desktop */
+  /* Grids */
   .ag-film-grid{grid-template-columns:repeat(6,1fr) !important}
   .poster-grid{grid-template-columns:repeat(6,1fr)}
 
@@ -1464,7 +1471,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
     transform:none;width:auto;max-width:300px;
   }
 
-  /* Splash desktop */
+  /* Splash */
   #otrofestiv-splash{padding:var(--sp-6) var(--sp-7)}
   .splash-tagline{max-width:560px}
   .splash-selector{max-width:400px}
@@ -2486,7 +2493,7 @@ const FESTIVAL_STORAGE_KEY='ficci65_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202604202152';
+const BUILD_VERSION='202604202201';
 (function(){
   const _vk='otrofestiv_build';
   const _sk='otrofestiv_reloaded';
