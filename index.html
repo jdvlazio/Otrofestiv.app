@@ -4205,7 +4205,7 @@ function renderContextualHeader(){
       const{displayTitle:dt}=parseProgramTitle(t);
       const src=f?.is_cortos?makeProgramPoster(t):(getPosterSrc(t,false)||'');
       const safeT=t.replace(/'/g,"\'");
-      const stars=r?'★'.repeat(Math.round(r)):'';
+      const stars=r?starsText(r):'';
       // Posters grandes, plena opacidad — pensado para screenshot
       // Usar poster-card existente — mismo patrón que Hoy/Mañana
       return`<div class="poster-card ended-poster" onclick="openPelSheet('${safeT}')">
@@ -4349,7 +4349,7 @@ function renderContextualHeader(){
     const rated=todayScreenings.filter(s=>watched.has(s._title)&&filmRatings[s._title]);
     const total=todayScreenings.filter(s=>watched.has(s._title)).length;
     if(!total) return '';
-    const starsStr=n=>'★'.repeat(Math.round(n));
+    const starsStr=n=>starsText(n);
     // Posters tappables — igual que en Intereses, consistente con el resto de la app
     const filmRows=todayScreenings.filter(s=>watched.has(s._title)).map(s=>{
       const{displayTitle:dt}=parseProgramTitle(s._title||'');
@@ -4357,7 +4357,7 @@ function renderContextualHeader(){
       const src=f?.is_cortos?makeProgramPoster(s._title||''):(getPosterSrc(s._title||'',false)||'');
       const r=filmRatings[s._title];
       const safeT=(s._title||'').replace(/'/g,"\'");
-      const stars=r?'★'.repeat(Math.round(r)):'';
+      const stars=r?starsText(r):'';
       return`<div style="position:relative;flex-shrink:0;cursor:pointer" onclick="openPelSheet('${safeT}')">
         ${src
           ?`<img class="prio-chip-poster" src="${src}" onerror="this.style.opacity=0" alt="">`
@@ -5960,10 +5960,16 @@ function closeRatingSheet(){
   if(_pelSheet&&_pelSheet.classList.contains('open')){
     // Actualizar estrellas en el sheet actual (si el título coincide)
     const _rStars=_pelSheet.querySelector('.pel-sheet-rating-stars');
-    if(_rStars&&_currentRating>0) _rStars.textContent='★'.repeat(Math.round(_currentRating));
+    if(_rStars&&_currentRating>0) _rStars.textContent=starsText(_currentRating);
   }
 }
 
+function starsText(r){
+  if(!r) return '';
+  const full=Math.floor(r);
+  const half=(r%1)>=0.5;
+  return '★'.repeat(full)+(half?'½':'');
+}
 function starsDisplay(rating,size){
   // size en px para display compacto
   if(!rating) return '';
@@ -6084,7 +6090,7 @@ function openPelSheet(title){
       const safeFlags=_cortoFlags.replace(/'/g,"\'");
       const safeSec=(f.section||'').replace(/'/g,"\'");
       const ratingEl=r
-        ?`<span class="corto-rating-stars">${'★'.repeat(Math.round(r))}</span>`
+        ?`<span class="corto-rating-stars">${starsText(r)}</span>`
         :`<button class="corto-rate-btn" onclick="event.stopPropagation();closePelSheet();setTimeout(()=>openRatingSheet('${safeCorto}'),100)">★</button>`;
       return`<div class="pel-sheet-corto-item" onclick="openCortoSheet('${safeCorto}','${safeCountry}','${safeDur}','${safeSec}','${safeFlags}')">
         ${thumbHtml}
@@ -6247,7 +6253,7 @@ function openCortoSheet(title, country, duration, section, flags){
   const ratingSection=`
     <div class="pel-sheet-divider" style="margin-top:16px"></div>
     <div style="display:flex;gap:8px;margin-top:12px">
-      ${r?`<div style="flex:1;display:flex;align-items:center;gap:6px;font-size:var(--t-md);color:var(--amber)">${'★'.repeat(Math.round(r))}</div>`:``}
+      ${r?`<div style="flex:1;display:flex;align-items:center;gap:6px;font-size:var(--t-md);color:var(--amber)">${starsText(r)}</div>`:``}
       <button onclick="closePelSheet();setTimeout(()=>openRatingSheet('${safeT}'),100)"
         style="flex:1;background:none;border:1px solid var(--bdr);border-radius:var(--r-pill);color:var(--gray2);font-family:var(--font);font-size:var(--t-base);font-weight:700;padding:10px 0;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:5px">
         ${ICONS.star} ${r?'Cambiar':'Calificar'}
