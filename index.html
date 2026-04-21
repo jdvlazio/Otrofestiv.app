@@ -1412,6 +1412,8 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
     padding-left:var(--content-pad);
     padding-right:var(--content-pad);
   }
+  /* Desktop: center day tabs when they don't fill full width */
+  .nav-tabs{justify-content:center;}
 
   .carta-search-wrap,
   .programa-mode-bar,
@@ -2646,7 +2648,7 @@ let FESTIVAL_STORAGE_KEY='ficci65_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202604211606';
+const BUILD_VERSION='202604211626';
 (function(){
   const _vk='otrofestiv_build';
   const _sk='otrofestiv_reloaded';
@@ -7035,13 +7037,12 @@ return`<div class="poster-card${inWL&&!inW?' in-wl':''}${inW&&!_fe?' in-watched'
   }).join('')+'</div>';
 
 
-  // ── Cartelera: stepper + micro-CTA ──────────────────────────────
+  // ── Cartelera: micro-CTA only (step bar removed from PROGRAMA context)
+  // Flow progress bar belongs in INTERESES/PLANEAR/MI PLAN tabs, not in PROGRAMA.
   if(activeView==='day'){
     const _cStepper=document.getElementById('cartelera-stepper');
     const _cCta=document.getElementById('cartelera-cta');
-    const _hasPlan=savedAgenda&&savedAgenda.schedule&&savedAgenda.schedule.length>0;
-    const _showStep=!festivalEnded()&&!_hasPlan;
-    if(_cStepper){_cStepper.style.display=_showStep?'':'none';if(_showStep)_cStepper.innerHTML=renderFlowProgress('cartelera');}
+    if(_cStepper) _cStepper.style.display='none';// always hidden in day/hora view
     if(_cCta)_cCta.style.display=(!festivalEnded()&&watchlist.size===0)?'':'none';
   }
 }
@@ -7180,10 +7181,22 @@ function dismissSplash(){
   }
 })();
 
-loadState();{const _ts=simTodayStr();const _ni=DAY_KEYS.findIndex(d=>FESTIVAL_DATES[d]===_ts);activeDay=_ni>=0?DAY_KEYS[_ni]:DAY_KEYS[0];}
-// Aplicar modo inicial al DOM antes del primer render
-// Modo inicial lo maneja showDayView() abajo
-updateAgTab();showDayView();
+// ── Init: auto-dismiss splash for returning users ──────────────────
+// First visit → show splash (user picks festival → dismissSplash())
+// Return visit → skip splash, load saved festival directly
+(function(){
+  const _saved=localStorage.getItem('otrofestiv_festival');
+  if(_saved&&FESTIVAL_CONFIG[_saved]){
+    // Returning user: hide splash immediately and load their festival
+    const _sp=document.getElementById('otrofestiv-splash');
+    if(_sp){_sp.style.opacity='0';_sp.style.pointerEvents='none';setTimeout(()=>_sp.remove(),50);}
+    loadFestival(_saved);// handles loadState+showDayView internally
+  }else{
+    // First visit: show splash, fall through to default init
+    loadState();{const _ts=simTodayStr();const _ni=DAY_KEYS.findIndex(d=>FESTIVAL_DATES[d]===_ts);activeDay=_ni>=0?DAY_KEYS[_ni]:DAY_KEYS[0];}
+    updateAgTab();showDayView();
+  }
+})();
 /* ── Tap-to-reveal en Intereses mobile ──────────────────────────
    Toca el poster → revela botones (ag-active).
    Toca fuera o toca un botón → cierra. */
