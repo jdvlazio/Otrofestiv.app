@@ -1797,6 +1797,15 @@ html.splash-skip #otrofestiv-splash{display:none}
 </script>
 </head>
 <body>
+<!-- Pre-render: set splash-skip BEFORE browser paints, so returning users
+     never see the splash flicker. The CSS rule html.splash-skip #otrofestiv-splash{display:none}
+     suppresses it at the CSS level, before any JS runs. -->
+<script>
+(function(){
+  var f=localStorage.getItem('otrofestiv_festival');
+  if(f) document.documentElement.classList.add('splash-skip');
+})();
+</script>
 <div id="otrofestiv-splash" role="dialog" aria-label="Bienvenida" aria-modal="true">
   <div class="splash-wordmark">OTRO<span>FESTIV</span></div>
   <div class="splash-tagline">
@@ -2648,7 +2657,7 @@ let FESTIVAL_STORAGE_KEY='ficci65_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202604211643';
+const BUILD_VERSION='202604211657';
 (function(){
   const _vk='otrofestiv_build';
   const _sk='otrofestiv_reloaded';
@@ -3881,7 +3890,7 @@ function renderFilmListHTML(){
     const _sortedW=[...watchedList].sort((a,b)=>(filmRatings[b]||0)-(filmRatings[a]||0));
     html+=`<div class="ag-film-grid">${_sortedW.map(t=>{
       const f=FILMS.find(fi=>fi.title===t);
-      const posterSrc=f?(f.is_cortos?getCortosProgramPoster(f):getPosterSrc(t,false)):null;
+      const posterSrc=f?(f.is_cortos?makeProgramPoster(t):getPosterSrc(t,false)):null;
       const _yvOp=festivalEnded()?'':';opacity:.55';
       const posterHtml=posterSrc?`<img class="ag-fi-poster" src="${posterSrc}" loading="lazy" style="object-fit:cover${_yvOp}" onerror="this.outerHTML='<div class=ag-fi-poster-ph>🎬</div>'" alt="">`:`<div class="ag-fi-poster-ph" style="opacity:${festivalEnded()?1:.55}">🎬</div>`;
       const safeT=t.replace(/"/g,'&quot;');
@@ -6765,6 +6774,7 @@ function renderProgramaList(){
   // Vista lista cronológica para Hoy/Mañana
   const el=document.getElementById('programa-list');
   if(!el) return;
+  el.scrollTop=0;// always reset before re-render
   let films=FILMS.filter(f=>f.day===activeDay);
   if(activeVenue!=='all') films=films.filter(f=>vcfg(f.venue).short===activeVenue);
   if(activeSec!=='all') films=films.filter(f=>f.section===activeSec);
@@ -6832,6 +6842,9 @@ function _renderProgramaContent(){
       grid.style.display='none';
       lista.classList.add('visible');
       renderProgramaList();
+      // Reset scroll: prevent page jumping to bottom after day-tab navigation
+      lista.scrollTop=0;
+      window.scrollTo({top:0,behavior:'instant'});
     }
   }
 }
@@ -6870,7 +6883,7 @@ function _renderExploreLista(){
     const isEvent=f.type==='event';
     const safeT=f.title.replace(/\'/g,"\\'");
     const{displayTitle:dt}=parseProgramTitle(f.title);
-    const src=isEvent?'':(f.is_cortos?getCortosProgramPoster(f):(getPosterSrc(f.title,false)||''));
+    const src=isEvent?'':(f.is_cortos?makeProgramPoster(f.title,f.duration):(getPosterSrc(f.title,false)||''));
     const allPast=screenings.every(s=>screeningPassed(s));
     const days=[...new Set(screenings.map(s=>_hasAmbigDays?s.day:(DAY_ABBR[s.day]||s.day)))].join('·');
     if(isEvent) return`<div class="plist-item plist-event" style="${allPast?'opacity:.35':''}" onclick="openPelSheet('${safeT}')">
@@ -6915,21 +6928,6 @@ function setCartelaMode(mode){
 
 
 
-/* ── getCortosProgramPoster: use real first-film image for cortos programs ──
-   Instead of generating an SVG placeholder, use the poster of the first
-   short film in the collection. Falls back to generated SVG if unavailable. */
-function getCortosProgramPoster(f){
-  const fl=f.film_list;
-  if(fl&&fl.length){
-    // Try each film in the list until we find a real poster
-    for(let i=0;i<Math.min(fl.length,3);i++){
-      const p=getPosterSrc(fl[i].title,true);
-      if(p&&!p.startsWith('data:')) return p; // skip SVG fallbacks
-    }
-  }
-  // Fall back to generated teal SVG header
-  return makeProgramPoster(f.title,f.duration);
-}
 
 function renderPeliculaView(){
   const grid=document.getElementById('grid');
@@ -6975,7 +6973,7 @@ function renderPeliculaView(){
     const inWL=watchlist.has(f.title);
     const inW=watched.has(f.title);
     const allPast=screenings.every(s=>screeningPassed(s));
-    const posterSrc=f.type==='event'?makeEventPoster(f.title,f.duration):(f.is_cortos?getCortosProgramPoster(f):(getPosterSrc(f.title,false)||null));
+    const posterSrc=f.type==='event'?makeEventPoster(f.title,f.duration):(f.is_cortos?makeProgramPoster(f.title):(getPosterSrc(f.title,false)||null));
     const safeT=f.title.replace(/'/g,"\'");
     const{displayTitle}=parseProgramTitle(f.title);
     const progBadge='';//REMOVED: no count badge
@@ -7020,7 +7018,7 @@ function render(){
     const inWL=watchlist.has(f.title),inW=watched.has(f.title);
     const isNow=isNowShowing(f);
     const safeT=f.title.replace(/'/g,"\'");
-    const posterSrc=isProg?getCortosProgramPoster(f):(getPosterSrc(f.title,false)||null);
+    const posterSrc=isProg?makeProgramPoster(f.title):(getPosterSrc(f.title,false)||null);
     const posterImg=posterSrc
       ?`<img src="${posterSrc}" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block" onerror="this.style.opacity=0" alt="">`
       :``;
@@ -7182,20 +7180,18 @@ function dismissSplash(){
 })();
 
 // ── Init: auto-dismiss splash for returning users ──────────────────
-// First visit → show splash (user picks festival → dismissSplash())
-// Return visit → skip splash instantly via dismissSplash() tested flow
+// The pre-render <script> above already adds html.splash-skip so the splash
+// is display:none from first paint. Here we just load the correct festival.
 (function(){
   const _saved=localStorage.getItem('otrofestiv_festival');
   if(_saved&&FESTIVAL_CONFIG[_saved]){
-    // Returning user: defer dismissSplash to after browser completes initial
-    // render pass. Calling it synchronously in init IIFE causes the mode bar
-    // to remain display:none — the browser hasn't applied CSS yet at that point.
+    // Returning user: splash already hidden by CSS. Load festival directly.
+    // Also suppress the welcome overlay — returning users already onboarded.
     _splashSelectedFestId=_saved;
-    requestAnimationFrame(function(){
-      requestAnimationFrame(function(){// double-rAF: after paint
-        dismissSplash();
-      });
-    });
+    dismissSplash();
+    // Mark welcome as seen for this festival so overlay doesn't flash
+    const _festCfg=FESTIVAL_CONFIG[_saved];
+    if(_festCfg) localStorage.setItem((_festCfg.storageKey||_saved+'_')+'welcome_seen','1');
   }else{
     // First visit: show splash, fall through to default init
     loadState();{const _ts=simTodayStr();const _ni=DAY_KEYS.findIndex(d=>FESTIVAL_DATES[d]===_ts);activeDay=_ni>=0?DAY_KEYS[_ni]:DAY_KEYS[0];}
