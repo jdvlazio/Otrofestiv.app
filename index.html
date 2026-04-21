@@ -6520,7 +6520,7 @@ function openCortoSheet(title, country, duration, section, flags, director, genr
   const ctry=country||(richItem&&richItem.country)||'';
   const dur=duration||(richItem&&richItem.duration)||'';
   const flgs=flags||countryToFlags(ctry)||'🌐';
-  const posterUrl=(typeof SHORT_IMGS!=='undefined'&&SHORT_IMGS[title])||null;
+  const posterUrl=getPosterSrc(title,true)||null;
   const posterHtml=posterUrl
     ?`<img class="pel-sheet-poster" src="${posterUrl}" loading="lazy" onerror="this.outerHTML='<div class=pel-sheet-poster-ph>🎬</div>'" alt="">`
     :`<div class="pel-sheet-poster-ph">🎬</div>`;
