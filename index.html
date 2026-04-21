@@ -2657,7 +2657,7 @@ let FESTIVAL_STORAGE_KEY='ficci65_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202604211715';
+const BUILD_VERSION='202604211717';
 (function(){
   const _vk='otrofestiv_build';
   const _sk='otrofestiv_reloaded';
@@ -5883,7 +5883,6 @@ function switchMainNav(id){
   _updateShareBtn();
 }
 function showDayView(){
-  console.log('[SDV] showDayView called, stack:', new Error().stack.split('\n').slice(1,4).join(' | '));
   activeView='day';
   switchMainNav('mnav-cartelera');
   // Mostrar buscador y mode bar
@@ -7158,9 +7157,7 @@ function loadFestival(id){
   // Render
   closeFestivalSheet();
   switchMainNav('mnav-cartelera');
-  console.log('[LF-END] About to call showDayView, modeBar:',document.getElementById('programa-mode-bar')?.style.display);
   showDayView();
-  console.log('[LF-END] showDayView returned, modeBar:',document.getElementById('programa-mode-bar')?.style.display,'data-sdv:',document.getElementById('programa-mode-bar')?.getAttribute('data-sdv'));
 }
 function dismissSplash(){
   const s=document.getElementById('otrofestiv-splash');
@@ -7185,22 +7182,25 @@ function dismissSplash(){
   }
 })();
 
-// ── Init: returning users skip splash via CSS, load festival directly ─
+// ── Init: reliable two-phase startup ────────────────────────────────
+// Phase 1: standard init (always works — loadState + showDayView)
+// Phase 2: switch to saved festival if different from default (synchronous)
+// Both phases run before browser paints → user sees only the final state.
 (function(){
   const _saved=localStorage.getItem('otrofestiv_festival');
+  // Pre-set state for returning users
   if(_saved&&FESTIVAL_CONFIG[_saved]){
     _splashSelectedFestId=_saved;
-    // Pre-set welcome_seen to prevent the 400ms overlay flash
+    // Suppress welcome overlay for returning users
     const _festCfg=FESTIVAL_CONFIG[_saved];
     if(_festCfg) localStorage.setItem((_festCfg.storageKey||_saved+'_')+'welcome_seen','1');
-    // Load correct festival state — splash is already CSS-hidden (splash-skip class)
-    console.log('[INIT] Calling loadFestival with:', _saved);
+  }
+  // Phase 1: reliable standard init (default festival)
+  loadState();{const _ts=simTodayStr();const _ni=DAY_KEYS.findIndex(d=>FESTIVAL_DATES[d]===_ts);activeDay=_ni>=0?DAY_KEYS[_ni]:DAY_KEYS[0];}
+  updateAgTab();showDayView();
+  // Phase 2: switch to saved festival if different (all synchronous, one paint)
+  if(_saved&&FESTIVAL_CONFIG[_saved]&&_saved!==_activeFestId){
     loadFestival(_saved);
-    console.log('[INIT] loadFestival returned, data-sdv:', document.getElementById('programa-mode-bar')?.getAttribute('data-sdv'));
-  }else{
-    // First visit: show splash, standard init path
-    loadState();{const _ts=simTodayStr();const _ni=DAY_KEYS.findIndex(d=>FESTIVAL_DATES[d]===_ts);activeDay=_ni>=0?DAY_KEYS[_ni]:DAY_KEYS[0];}
-    updateAgTab();showDayView();
   }
 })();
 /* ── Tap-to-reveal en Intereses mobile ──────────────────────────
