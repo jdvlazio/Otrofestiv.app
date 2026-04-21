@@ -294,7 +294,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
    carta-search-wrap: provee margen externo (está fuera de ag-view)
    ag-search-wrap:    solo margen inferior (ag-view provee márgenes laterales)
 ────────────────────────────────────────────────────────────────────────── */
-#hdr-programa{position:sticky;top:var(--sticky-top-carta);z-index:121;background:var(--surf);padding-top:var(--sp-2)}
+#hdr-programa{position:sticky;top:var(--sticky-top-carta);z-index:121;background:var(--surf)}
 .carta-search-wrap{margin:0 var(--sp-4);padding:0}
 .ag-search-wrap{margin-bottom:var(--sp-2);position:relative}
 /* El pill: flex row que contiene ícono + input + clear */
@@ -1268,7 +1268,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
        --sticky-top-carta is undefined in mobile so override directly */
   .topbar{position:sticky;top:0;z-index:200;background:var(--surf)}
   .hdr{background:var(--surf)}
-  #hdr-programa{top:47px}
+  #hdr-programa{padding-top:var(--sp-2);top:47px}
 }
 
 /* ── FESTIVAL BOTTOM SHEET ── */
@@ -1433,8 +1433,6 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
     padding-right:var(--content-pad);
   }
   .carta-search-wrap{margin-top:0}
-  .nav-row{margin-top:0}
-  #hdr-programa{padding-top:0}
 
   /* ── Chips — scroll natural sin mask (el marco del body reemplaza el cue visual) ── */
   .programa-chips{
