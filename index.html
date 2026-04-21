@@ -775,8 +775,8 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .conflict-btn-cancel{width:100%;background:none;border:1px solid var(--bdr);border-radius:var(--r-pill);color:var(--gray);font-family:var(--font);font-size:var(--t-base);font-weight:var(--w-semi);padding:12px;cursor:pointer}
 .wl-add-overlay{position:fixed;inset:0;z-index:9150;pointer-events:none}
 .wl-add-overlay.open{pointer-events:all}
-.wl-add-sheet{position:fixed;bottom:0;left:0;right:0;background:var(--surf-2);border-top:1px solid var(--bdr);padding:var(--sp-btn) var(--sp-5) calc(var(--sp-6)+var(--sp-2));z-index:9151;transform:translateY(100%);transition:transform .28s cubic-bezier(.32,0,.67,0);pointer-events:all}
-.wl-add-sheet.open{transform:translateY(0)}
+.wl-add-sheet{position:fixed;bottom:0;left:0;right:0;background:var(--surf-2);border-top:1px solid var(--bdr);padding:var(--sp-btn) var(--sp-5) calc(var(--sp-6)+var(--sp-2));z-index:9151;display:none;transition:transform .28s cubic-bezier(.32,0,.67,0);pointer-events:all}
+.wl-add-sheet.open{display:block;transform:translateY(0)}
 .wl-add-row{display:flex;align-items:center;gap:12px;margin-bottom:14px}
 .wl-add-poster{width:36px;height:54px;border-radius:var(--r-sm);flex-shrink:0;background:var(--surf-3);object-fit:cover;position:relative}
 .wl-add-heart{position:absolute;top:-7px;right:-7px;width:20px;height:20px;background:var(--surf-2);border-radius:50%;display:flex;align-items:center;justify-content:center;border:1.5px solid var(--green-30);animation:heartPop .35s cubic-bezier(.34,1.56,.64,1) .1s both}
@@ -1961,7 +1961,7 @@ html.splash-skip #otrofestiv-splash{display:none}
 </div>
 <!-- ── WL Add Sheet ── -->
 <div class="wl-add-overlay" id="wl-add-overlay"></div>
-<div class="wl-add-sheet" id="wl-add-sheet">
+<div class="wl-add-sheet" id="wl-add-sheet" style="display:none">
   <div class="wl-add-row">
     <div style="position:relative;flex-shrink:0">
       <img class="wl-add-poster" id="wl-add-poster" src="" alt="">
@@ -5485,7 +5485,8 @@ function openWLAdd(title){
 
   // Abrir
   document.getElementById('wl-add-overlay').classList.add('open');
-  document.getElementById('wl-add-sheet').classList.add('open');
+  const _was=document.getElementById('wl-add-sheet');
+  if(_was){ _was.style.display=''; requestAnimationFrame(()=>_was.classList.add('open')); }
   _pushSheetState();
 
   // Auto-close a los 4s si no hay interacción
@@ -5496,7 +5497,11 @@ function openWLAdd(title){
 function closeWLAdd(){
   if(_wlAddTimer){clearTimeout(_wlAddTimer);_wlAddTimer=null;}
   document.getElementById('wl-add-overlay').classList.remove('open');
-  document.getElementById('wl-add-sheet').classList.remove('open');
+  const _was=document.getElementById('wl-add-sheet');
+  if(_was){
+    _was.classList.remove('open');
+    setTimeout(()=>{ if(!_was.classList.contains('open')) _was.style.display='none'; },300);
+  }
 }
 
 function openPrioLimit(newTitle){
