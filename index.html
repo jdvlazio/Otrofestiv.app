@@ -1455,6 +1455,10 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
     padding-left:var(--content-pad);padding-right:var(--content-pad);
     padding-top:var(--sp-3);padding-bottom:var(--sp-6);
   }
+  /* Search — max-width on desktop so it doesn't span full 960px */
+  .ag-search-wrap{max-width:480px}
+  /* Flow progress — remove top padding (nav already provides separation) */
+  .flow-progress{padding-top:var(--sp-3)}
 
   /* Grids — 6 cols uniformes en desktop */
   .ag-film-grid{grid-template-columns:repeat(6,1fr) !important}
@@ -1750,15 +1754,14 @@ html.splash-skip #otrofestiv-splash{display:none}
    Escalable: basado en watchlist.size y savedAgenda — sin datos del festival. */
 .flow-progress{
   display:flex;align-items:center;justify-content:center;gap:0;
-  padding:10px var(--sp-4);
-  border-bottom:1px solid var(--bdr-l);
-  background:var(--surf);
+  padding:var(--sp-4) var(--sp-4) var(--sp-3);
+  background:transparent;
 }
 .flow-step{
   display:flex;align-items:center;gap:var(--sp-1);
   flex-shrink:0;
-  font-size:var(--t-xs);font-weight:var(--w-bold);
-  letter-spacing:.05em;text-transform:uppercase;
+  font-size:var(--t-sm);font-weight:var(--w-semi);
+  letter-spacing:.04em;text-transform:uppercase;
   color:var(--gray2);
   white-space:nowrap;
 }
@@ -1786,7 +1789,7 @@ html.splash-skip #otrofestiv-splash{display:none}
 /* ── Programa: micro-CTA entrada al flujo ─────────────────────────
    Corazón ámbar + texto. Misma jerarquía que el stepper.
    Desaparece al añadir primera película. */
-.cartelera-cta{display:flex;align-items:flex-start;gap:var(--sp-2);padding:10px var(--sp-4);border-bottom:1px solid var(--bdr-l)}
+.cartelera-cta{display:flex;align-items:flex-start;gap:var(--sp-2);padding:var(--sp-3) var(--sp-4);border-bottom:1px solid var(--bdr-l)}
 .cartelera-cta-text{font-size:var(--t-sm);color:var(--gray);line-height:1.5}
 .cartelera-cta-text b{color:var(--white-60);font-weight:var(--w-semi)}
 </style>
@@ -2666,7 +2669,7 @@ let FESTIVAL_STORAGE_KEY='ficci65_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202604211844';
+const BUILD_VERSION='202604211850';
 (function(){
   const _vk='otrofestiv_build';
   const _sk='otrofestiv_reloaded';
