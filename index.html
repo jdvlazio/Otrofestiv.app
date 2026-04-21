@@ -286,8 +286,8 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
    carta-search-wrap: provee margen externo (está fuera de ag-view)
    ag-search-wrap:    solo margen inferior (ag-view provee márgenes laterales)
 ────────────────────────────────────────────────────────────────────────── */
-#hdr-programa{position:sticky;top:var(--sticky-top-carta);z-index:121;background:var(--surf)}
-.carta-search-wrap{margin:0 var(--sp-4);padding:var(--sp-2) 0 0}
+#hdr-programa{position:sticky;top:var(--sticky-top-carta);z-index:121;background:var(--surf);padding-top:var(--sp-2)}
+.carta-search-wrap{margin:0 var(--sp-4);padding:0}
 .ag-search-wrap{margin-bottom:var(--sp-2);position:relative}
 /* El pill: flex row que contiene ícono + input + clear */
 .carta-search-field,.ag-search-field{
@@ -1407,7 +1407,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
     padding-left:var(--content-pad);
     padding-right:var(--content-pad);
   }
-  .carta-search-wrap{margin-top:var(--sp-2)}
+  .carta-search-wrap{margin-top:0}
 
   /* ── Chips — scroll natural sin mask (el marco del body reemplaza el cue visual) ── */
   .programa-chips{
@@ -2645,7 +2645,7 @@ let FESTIVAL_STORAGE_KEY='ficci65_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202604211219';
+const BUILD_VERSION='202604211306';
 (function(){
   const _vk='otrofestiv_build';
   const _sk='otrofestiv_reloaded';
@@ -6924,10 +6924,12 @@ function renderPeliculaView(){
     entries=entries.filter(e=>e.screenings.some(s=>vcfg(s.venue).short===activeVenue));
   }
 
-  // Orden oficial FICCI 65 según Letterboxd: largometrajes primero, cortos al final
+  // Orden: películas → cortos → eventos
+  const _typeOrd=f=>f.type==='event'?2:f.is_cortos?1:0;
   const secIdxLF=s=>{const i=SECTION_ORDER_LF.indexOf(s);return i>=0?i:98;};
   entries.sort((a,b)=>{
-    // Cortos siempre al final
+    const to=_typeOrd(a.film)-_typeOrd(b.film);
+    if(to!==0) return to;
     if(a.film.is_cortos!==b.film.is_cortos) return a.film.is_cortos?1:-1;
     const si=secIdxLF(a.film.section)-secIdxLF(b.film.section);
     if(si!==0) return si;
@@ -6942,7 +6944,7 @@ function renderPeliculaView(){
     const inWL=watchlist.has(f.title);
     const inW=watched.has(f.title);
     const allPast=screenings.every(s=>screeningPassed(s));
-    const posterSrc=f.is_cortos?makeProgramPoster(f.title):(getPosterSrc(f.title,false)||null);
+    const posterSrc=f.type==='event'?makeEventPoster(f.title,f.duration):(f.is_cortos?makeProgramPoster(f.title):(getPosterSrc(f.title,false)||null));
     const safeT=f.title.replace(/'/g,"\'");
     const{displayTitle}=parseProgramTitle(f.title);
     const progBadge=f.is_cortos&&f.film_list?.length
