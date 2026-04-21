@@ -2088,62 +2088,67 @@ const TMDB_IMG="https://image.tmdb.org/t/p/w185";
 const FICCI_POSTER_URL='https://ficcifestival.com/sites/default/files/2026-02/logo-ficci65_2.png';
 
 /* ── POSTER GENERATIVO — identidad Otrofestiv para programas ────────── */
-function makeProgramPoster(title){
-  // Patrón fijo — un solo estándar para todos los programas.
-  // "Cortos Iberoamérica — Prog. 1" → mainLabel + subLabel
-  const dashIdx=title.indexOf('—');
-  const mainLabel=(dashIdx>-1?title.slice(0,dashIdx):title).trim();
-  const subLabel=dashIdx>-1?title.slice(dashIdx+1).trim():'';
+function _buildPosterSVG(o){
+  // Unified 120×180 poster layout for events and cortos programs.
+  // Identical internal distribution — only colors and header labels differ.
+  const VW=120,VH=180;
+  // ── HEADER: 38px, 2 text lines centred mathematically ──────────────
+  // Cap height ≈ 6px for 8px font. Two lines @ 10px line-height.
+  // Block height=18, centre=19 (38/2). y1=16, y2=26.
+  const HDR_H=38,HDR_Y1=16,HDR_Y2=26;
+  // ── INNER BOX ──────────────────────────────────────────────────────
+  const BX=10,BY=46,BW=VW-20,BH=VH-56;
+  // ── FOOTER ─────────────────────────────────────────────────────────
+  const FY=VH-16;
 
-  // CONSTANTES FIJAS — no cambian por título
-  const VW=120, VH=180;
-  const FONT_SIZE=12;       // siempre 12px (-30%)
-  const LINE_H=15;          // siempre 15px de interlineado
-  const MAX_CHARS=14;       // máx 14 chars por línea — más chars caben a font menor
-  const SUB_SIZE=9;         // subtítulo siempre 9px (-10%)
-
-  // Partir en líneas de máx MAX_CHARS (sin tocar el font-size)
-  const words=mainLabel.split(/\s+/);
-  const lines=[];let cur='';
-  for(const w of words){
-    if(cur&&(cur+' '+w).length>MAX_CHARS){lines.push(cur);cur=w;}
-    else cur=cur?cur+' '+w:w;
+  // Wrap body title into lines of ≤13 chars
+  const MAX=13,LD=13;
+  const ws=(o.title||'').split(/\s+/);
+  const ls=[];let c='';
+  for(const w of ws){
+    if(c&&(c+' '+w).length>MAX){ls.push(c);c=w;}
+    else c=c?c+' '+w:w;
   }
-  if(cur) lines.push(cur);
+  if(c) ls.push(c);
 
-  // Centrar verticalmente el bloque de texto
-  const blockH=lines.length*LINE_H+(subLabel?LINE_H*0.9:0);
-  const startY=Math.round((VH-26-blockH)/2)+FONT_SIZE*0.88;
+  // Centre title+duration block inside inner box
+  const dH=o.duration?19:0;
+  const bH=ls.length*LD+dH;
+  const sY=Math.round((VH-50-bH)/2)+52;
 
-  const textLines=lines.map((l,i)=>
-    `<text x="${VW/2}" y="${Math.round(startY+i*LINE_H)}"
-      text-anchor="middle"
-      font-family="-apple-system,BlinkMacSystemFont,sans-serif"
-      font-size="${FONT_SIZE}" font-weight="800" fill="#F0EBE0">${l}</text>`
-  ).join('');
-
-  const subY=Math.round(startY+lines.length*LINE_H+4);
-  const subText=subLabel
-    ?`<text x="${VW/2}" y="${subY}" text-anchor="middle"
-        font-family="-apple-system,BlinkMacSystemFont,sans-serif"
-        font-size="${SUB_SIZE}" font-weight="600" fill="#C8963E" letter-spacing="0.5">${subLabel}</text>`
-    :'';
+  const tl=ls.map((l,i)=>`<text x="${VW/2}" y="${sY+i*LD}" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" font-weight="700" fill="#F0EBE0">${l}</text>`).join('');
+  const dT=o.duration?`<text x="${VW/2}" y="${sY+ls.length*LD+9}" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="8" font-weight="500" fill="${o.accent}">${o.duration}</text>`:'';
 
   const svg=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${VW} ${VH}">
-    <rect width="${VW}" height="${VH}" fill="#0D0D0D"/>
-    <rect x="0" y="0" width="3" height="${VH}" fill="#C8963E"/>
-    <rect x="0" y="${VH-22}" width="${VW}" height="1" fill="#222018"/>
-    ${textLines}
-    ${subText}
-    <text x="${VW/2}" y="${VH-9}" text-anchor="middle"
-      font-family="-apple-system,BlinkMacSystemFont,sans-serif"
-      font-size="7" font-weight="500" fill="#443C34" letter-spacing="1.5">${(FESTIVAL_CONFIG[_activeFestId]||FESTIVAL_CONFIG[Object.keys(FESTIVAL_CONFIG)[0]]||{}).shortName||(FESTIVAL_CONFIG[_activeFestId]||{}).name||'FESTIVAL'}</text>
-    <text x="${VW/2}" y="${VH-2}" text-anchor="middle"
-      font-family="-apple-system,BlinkMacSystemFont,sans-serif"
-      font-size="5.5" font-weight="400" fill="#2E2820" letter-spacing="1">OTROFESTIV</text>
+    <rect width="${VW}" height="${VH}" fill="#1E1B17"/>
+    <rect x="0" y="0" width="${VW}" height="${HDR_H}" fill="${o.hc}"/>
+    <rect x="0" y="${HDR_H}" width="${VW}" height="1" fill="${o.sep}"/>
+    <text x="${VW/2}" y="${HDR_Y1}" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="8" font-weight="700" fill="${o.ht}" letter-spacing="1.5">${o.l1}</text>
+    <text x="${VW/2}" y="${HDR_Y2}" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="8" font-weight="700" fill="${o.ht}" letter-spacing="1.5">${o.l2}</text>
+    <rect x="${BX}" y="${BY}" width="${BW}" height="${BH}" rx="3" fill="${o.bf}" stroke="${o.bs}" stroke-width="1"/>
+    ${tl}
+    ${dT}
+    <rect x="0" y="${FY}" width="${VW}" height="16" fill="#161310"/>
+    <text x="${VW/2}" y="${VH-5}" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="6" font-weight="500" fill="#5A4E40" letter-spacing="1">${o.ft}</text>
   </svg>`;
 
-  return 'data:image/svg+xml;charset=utf-8,'+encodeURIComponent(svg);
+  return `data:image/svg+xml,${encodeURIComponent(svg)}`;
+}
+function makeProgramPoster(title,duration){
+  // Extract display text: "Cortos: Familia 12+" → "Familia 12+"
+  // "Costas — Prog. 4" → "Costas · Prog. 4"
+  let t=title;
+  if(t.startsWith('Cortos: ')) t=t.slice(8);
+  else{const d=t.indexOf(' \u2014 ');if(d>-1) t=t.slice(0,d)+' \u00b7 '+t.slice(d+3);}
+  const festName=((FESTIVAL_CONFIG&&FESTIVAL_CONFIG[_activeFestId])||Object.values(FESTIVAL_CONFIG||{})[0]||{}).shortName||'FESTIVAL';
+  return _buildPosterSVG({
+    hc:'#E87B3A',sep:'#7A4020',ht:'#180E06',
+    l1:'COMP.',l2:'CORTOS',
+    bf:'#201810',bs:'#3A2818',
+    accent:'#E87B3A',
+    title:t,duration:duration||null,
+    ft:festName
+  });
 }
 const SHORT_IMGS={"Ghost Strata": "https://image.tmdb.org/t/p/w92/a03LyOUDzsslvweETxrLF7g13Z1.jpg", "Slow Action": "https://image.tmdb.org/t/p/w92/mtmL6Jg517QyPBl7nOC0hEI7dSE.jpg", "This Is My Land": "https://image.tmdb.org/t/p/w92/cZZDiPzFc0V628Of5GMgvQVyBVM.jpg", "Ah, Liberty!": "https://image.tmdb.org/t/p/w92/yI5spv1sccMarSNzKXuC0woXkeI.jpg", "Two Years at Sea": "https://image.tmdb.org/t/p/w92/eBy5Y543lS3jhvcDNp4uBNDxLpI.jpg", "A Running Woman (1, 2, 3)": "https://image.tmdb.org/t/p/w92/2YHPPGfd7GQlTE5r3c4Hlijsorv.jpg", "Instant Life": "https://image.tmdb.org/t/p/w92/tjzeeyKk9nY2Ek8W1KK5NyZopMU.jpg", "Come and Dance with Me": "https://image.tmdb.org/t/p/w92/lCAGVjfOqLluZVCfJ5Rqi74OyXi.jpg", "Gente perra": "https://image.tmdb.org/t/p/w92/tRZcXstcIDLw1K8On51WXL8y1oG.jpg", "A Flea's Skin Would Be Too Big for You": "https://image.tmdb.org/t/p/w92/dVBwHO487uMYnzBcAwtKmy8WEfI.jpg", "Fuego en el mar": "https://image.tmdb.org/t/p/w92/sWItTOPiellWkuG8H1Gb70LWI9p.jpg", "Ali au pays des merveilles": "https://image.tmdb.org/t/p/w92/z7djyMjFNZSxYaImAQ5DJHtorgL.jpg", "Cul-De-Sac!": "https://image.tmdb.org/t/p/w92/lpcPZ6dfJFLjpeDAuvsMi11amOR.jpg", "Ein Unfall": "https://image.tmdb.org/t/p/w92/mMwxovImXvfegUlzJWo37OuYcaN.jpg", "Force Times Displacement": "https://image.tmdb.org/t/p/w92/1Ix7UsaMvxiL3yFVxngYAdvCrPy.jpg", "Luna Rossa": "https://image.tmdb.org/t/p/w92/cOjnO0TenOYL2HMNmaxlGdA4NhV.jpg", "Evacuations": "https://image.tmdb.org/t/p/w92/mzDgA3o8Xx9m4A1AEOmz8DrNrnc.jpg", "El cuento de Antonia": "https://image.tmdb.org/t/p/w92/sK1dtEiHts0gnyPccusSiJtsWdV.jpg", "Flores del otro patio": "https://image.tmdb.org/t/p/w92/icXmSR2VtpFsfeP0BHHvVwehP8g.jpg", "Como Nasce um Rio": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_Poster_EN_How%20A%20River%20Is%20Born%20%281%29%20-%20Clara%20Fl%C3%B4res.png?itok=7vkG9BHm", "Taxi Moto": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_affiche_MOTOTAXI_GB_1500x2000%20-%20Festivals%20Sudu.jpg?itok=7LEPmRue", "Voz, Zov, Zvo": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/CARTAZ%20ZOV%20-%20P%C3%AA%20Moreira%20-%20Por%20Extenso%20Produ%C3%A7%C3%B5es_0.jpg?itok=8BtA2E2m", "Runa Simi": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/RUNA%20SIMI%20POSTER%20AF%20-%20Claudia%20chavez%20levano.jpg?itok=ObXBIPVJ", "Tu mañana será mi canto": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_TuMan%CC%83anaSera%CC%81MiCanto_Poster%20-%20Fernando%20Saldivia%20Y%C3%A1%C3%B1ez.jpg?itok=O0EAsSCB", "Ángeles somos": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_angeles%20somos%20poster%20-%20KIZZIS%20RADE.png?itok=9K9uH-kw", "Héroes del silencio": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_4_He%CC%81roes%20del%20Silencio_Po%CC%81ster%20-%20Santiago%20Alejandro%20Mu%C3%B1oz%20Marrugo.jpg?itok=NGH1UWzS", "El reportaje": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_Poster%20El%20Reportaje%20-%20Henry%20Laserna.jpeg?itok=ZqJjHget", "Kuagro": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/poster%20KUAGRO%20FINAL_Mesa%20de%20trabajo%201%20-%20Diego%20Casseres.png?itok=qvukayHP","Futuros luminosos": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_P%C3%B3ster%20Futuros%20luminosos%20-%20Ismael%20Garcia.jpg?itok=6WCvT13b", "La forma y la raíz": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_poster%20la%20forma%20y%20la%20raiz%20-%20Nathalia%20Quimbay%20Cadena.jpg?itok=dR-4fsTr", "Sombras en la niebla": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_afiche%20SELN%20-%20Pedro%20Vega_0.jpg?itok=2FqonkaA", "Winter Blumen Garten": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_WINTER_BLUMEN_GARTEN_POSTER_ESP_1%20-%20EXPERIMENTA.jpg?itok=dZG03ssO", "Todas las manos que solté": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_Captura%20de%20pantalla%202026-03-25%20155500.png?itok=liUEj-a0", "Montaña luminosa": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_ML%20Poster%20FICCI%2065%20-2026%20-%20Lony%20Welter.png?itok=0KYb7rep", "Las formas de la magia": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_LFM_poster_Ficci_595x842%20-%20Maria%20Paula%20Lorgia.jpg?itok=5XCaIr83", "Pawa": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_Portada%20Pawa%20png%20-%20Aguacate%20Audiovisual.jpg?itok=qWnn1F5-", "La garganta del diablo": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_LaGargantadeDiablo%20-%20Juanita%20Urue%C3%B1a%20Barreto.png?itok=WsH78OYf", "Suite intercontinental": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_Capture_decran_2025-05-28_a_15.57.26%20-%20Marianna%20Manili.jpg?itok=alqasZXz", "Belleza letal": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_afiche%20belleza%20letal%20-%20Samuel%20Moreno.jpg?itok=ZrOw0nvZ", "Consagración": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_FICCI_xPosters_Instagram_4x5_9x162%20-%20Vanessa%20Monti.png?itok=9P9UU2BT", "Madres de nacimiento": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_MDN_Poster_Blanco_WEB.jpg?itok=OR2_OCi0", "Lejanía": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_PO%CC%81STER%20LEJANIA%20-%20Carolina%20Zarate%20Garcia.png?itok=UPHrcFZ4", "El cazador": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_Captura%20de%20pantalla%202026-03-30%20170710.png?itok=dXa68A0J", "Decaer": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/Captura%20de%20pantalla%202026-04-04%20a%20la%28s%29%203.43.18%20p.m..jpg?itok=SfE8u2Hj", "Ya se ven los tigres en la lluvia": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_Captura%20de%20pantalla%202026-03-23%20202933.png?itok=fJ60ATsd", "Filme Pin": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_POSTER-FILME-PIN-2026%20-%20La%20Vulcanizadora.jpg?itok=qrKWWtjf", "Sirena mecánica": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_Captura%20de%20pantalla%202026-03-23%20205043.png?itok=BR7oyf-o", "Mi amigo, el arquitecto": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_MFTA_Final_Untextured_Low-Res%20-%20MEDIOCIELO%20Cine%20%281%29.jpg?itok=MXASl-yt", "Samba Infinito": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/SAMBA-INFINITO-POSTER-VERSION-02_LOW%20-%20Leonardo%20Martinelli.jpg?itok=amDXZSrX", "Agua fría": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/Captura%20de%20pantalla%202026-04-01%20a%20la%28s%29%207.42.27%20p.m..jpg?itok=Ygi-1TlW", "Fim de Rodovia": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/FimdeRodovia_Poster%20-%20Valentina%20Rosset.jpeg?itok=T6gk5I3T", "Los peces no se ahogan": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/Poster%20LPNSA%20-%20Le%CC%81a%20Vidotto%20%281%29.png?itok=p1sNnCoH", "Quem se Move": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_QSM-cartaz-3-PT-menor%20%281%29.png?itok=PlEjYkVF", "Pajuyuk": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_POSTER_PAJUYUK-LAURELES%20-%20A%20POSTERIORI%20ENTERTAINMENT.jpg?itok=PWKdk9HE", "A donde nos lleva la fe de José Gerónimo": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_Poster_adondenosllevalafedeJoseGeronimo_011.jpg?itok=X2Ld7Y2V", "O Mapa em que Estão os Meus Pés": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_CARTAZ_CORRECAO%20-%20luciano%20pedro.jpg?itok=Y7jI8K3m", "En otra Palestina": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_EOP_Poster_FICCI.jpg?itok=HNZnf8_-", "Fuente alemana": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_fuente%20alemana2%20-%20Galleryr3.jpeg?itok=VmP1Zq8n", "Abortion Party": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_Abortion%20Party%20-%20Poster.png?itok=Vh79cJxK", "Trizas": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_Afiche%20C-ESP%20%28A2%20RGB%20300dpi%29%20-%20Pau%20Pascua.jpg?itok=kL9mQ1Xp","Atado": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_ATADO_POSTER%20%281%29%20-%20Ran%20Shao.jpg?itok=3ykhh5PE", "Pequeno Jogo": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_PEQUENO-JOGO-POSTER_ES%20-%20Sofia%20Tomic.png?itok=ZkyptTrE", "Trưa Lịm": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_Captura%20de%20pantalla%202026-03-23%20211541.png?itok=GbDa6pdw", "Warnungen an die ferne Zukunft": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_Warnungen%20an%20die%20ferne%20Zukunft%20PLAKAT%20-%20Ju%20liane_page-0001.jpg?itok=BKoBLV6t", "3cm of Complexity": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_Film%20Poster_3cm%20of%20Complexity%20-%20Fanny%20Berghofer.jpg?itok=RsFqy5mK", "Mapalé": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/Mapale%20-%20Yan%20Dec%20%281%29_0.png?itok=GhrVrm0p", "Soeurs Jarariju": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/Screenshot%202026-04-04%20at%2023.27.1.png?itok=rlQuj2tc", "Les Trois Hirondelles": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/Les_trois_hirondelles2%20-%20Yan%20Dec.jpg?itok=HNjh4Nx6", "Sonali": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/254919-1920x1054%20-%20Yan%20Dec.jpg?itok=EeAwmLhP", "Ako počúvať fontány": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/Screenshot%202026-04-05%20at%2000.25.0.png?itok=UO8Zgy0V", "La baraja de Myriam": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/Screenshot%202026-04-05%20at%2000.29.4.png?itok=cUJ_Btno", "Venezia Diorama": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/Screenshot%202026-04-05%20at%2000.35.2.png?itok=QQDpFBWe", "La Raya": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_Captura%20de%20pantalla%202026-03-29%20235923.png?itok=0Rlq5ukp", "Apotnojushi La casa del viento": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_PORTADAS%20CASA%20EN%20EL%20%20aire%202-im%C3%A1genes-0%20-%20Aguacate%20Audiovisual.jpg?itok=b37CurBg", "La tinaja": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_POSTER_SIN%20CREDITOS%20copia%20-%20Mar%20Aj%C3%A9.jpg?itok=Dhen7YE6", "Piratas de La Boquilla": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_Portada%20piratas%20de%20la%20boquilla.jpg%20-%20Cra%2073%20Club.jpeg?itok=WV1ROqrJ", "A donde nos lleva la fe de José Gerónimo": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_Poster_adondenosllevalafedeJoseGeronimo_011.jpg?itok=aCpXNMkE","An Incomplete Calendar": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/Captura%20de%20pantalla%202026-04-01%20a%20la%28s%29%2016.28.13.png?itok=znYWjLkI", "No les pedimos un viaje a la luna": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/sf-poster-nolespedimos.jpg?itok=H8njrtBo", "Ali au pays des merveilles": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/images-original%20%281%29.jpg?itok=ldu9nBqc", "Nicaragua, semilla de soles": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/Captura%20de%20pantalla%202026-04-01%20a%20la%28s%29%2017.58.43.png?itok=YZyn6Dtw", "Petrolita": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/Captura%20de%20pantalla%202026-03-02%20a%20la%28s%29%2011.35.28%20-%20Adria%CC%81n%20Iturralde.png?itok=_QYZJ_UL", "Fuego en el mar": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/Afiche%20Fuego%20en%20el%20mar%20%281%29.jpg?itok=scGRKes4", "Viaje a la explotación": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/ViajeExplotacion%20-%20Josep%20Calle.jpg?itok=pU71m7-F", "¡Aysa!": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/Captura%20de%20pantalla%202026-04-01%20a%20la%28s%29%2017.12.48.png?itok=hz4I9Ged", "Comunicado de Argentina": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/comunicado1-992x744%20-%20Carolina%20Cappa.jpg?itok=4ILAHwdM", "Palestina, otro Vietnam": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/Portada%20-%20POV.jpg?itok=KiL9H_9L", "Riochiquito": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/Captura%20de%20pantalla%202026-04-01%20a%20la%28s%29%2021.59.57.png?itok=1-wp2Q2u", "A World Rattled of Habit": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/a%2Bworld%2Brattled%2B1.jpeg?itok=-_KI4p80", "Origin of the Species": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/origin%20s%20thru%20trees.jpeg?itok=oEJXHvsj", "Ah, Liberty!": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/Ah%252C%2BLiberty%2521%2B3%2Bcopy.jpg?itok=ZTE4aLZH", "This Is My Land": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/this%20is%20my%20land%202.jpg?itok=o8AguBHA", "Urth": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/Urth%2B3.jpg?itok=8EYylnMd", "Look Then Below": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/Look%20Then%20Below%208.jpeg?itok=GvGZteEc", "Slow Action": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/SLOW%2BACTION%2BHD%2B17.jpeg?itok=EeNxF7Dz", "Things": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/Things%2B9%2Ba%252C%2Bb%2Bbook.jpg?itok=dA3ARMJ6", "The Shape of Things": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/stateofthings%2B1.jpeg?itok=DIUYu98C", "Ghost Strata": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/Ghost%2BStrata%2Bstill%2B4_0.jpg?itok=DSphQJHs", "A Running Woman (1, 2, 3)": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/Captura%20de%20pantalla%202026-04-05%20152313.png?itok=Z-p9Vizo", "Instant Life": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/Captura%20de%20pantalla%202026-04-05%20154413_0.png?itok=y69N_vUg", "The Masked Monkeys": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/Captura%20de%20pantalla%202026-04-05%20165739.png?itok=lr5goUXn", "Wolkenschatten": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/Captura%20de%20pantalla%202026-04-05%20170542.png?itok=zXreDt0y", "Gente perra": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/Captura%20de%20pantalla%202026-04-05%20171632_0.png?itok=sogZK08j", "A Flea's Skin Would Be Too Big for You": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/Captura%20de%20pantalla%202026-04-05%20172446.png?itok=JLdRnxKz", "Come and Dance with Me": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/Captura%20de%20pantalla%202026-04-05%20173312.png?itok=YL7Tv6gw", "Eigenheim": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/Captura%20de%20pantalla%202026-04-05%20173912.png?itok=g_7kENPD", "Intersecting Memory": "https://ficcifestival.com/sites/default/files/styles/1920px_x_480px/public/img-catalogo/result_Intersecting%20memory%20photo%204%20-%20Association%20Grec.jpg?itok=1WX0MrRb", "Daria's Night Flowers": "https://image.tmdb.org/t/p/w92/hNuuQciHXD7VqBPHgNVKSHh4yLB.jpg", "Two Years at Sea": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/Poster%20-%20TWO%20YEARS%20AT%20SEA.jpg?itok=yluyy15n"};
 /* ══════════════════════════════════════════════════════
@@ -2380,35 +2385,15 @@ function lbUrl(title){
 }
 
 function makeEventPoster(title,duration){
-  // Poster SVG para eventos Industry Days — fondo visible, estilo institucional
-  const VW=120, VH=180;
-  // Partir título en líneas de máx 13 chars
-  const words=title.split(/\s+/);
-  const lines=[];let cur='';
-  for(const w of words){
-    if(cur&&(cur+' '+w).length>13){lines.push(cur);cur=w;}
-    else cur=cur?cur+' '+w:w;
-  }
-  if(cur) lines.push(cur);
-  const blockH=lines.length*13;
-  const startY=Math.round((VH-50-blockH)/2)+52;
-  const textLines=lines.map((l,i)=>
-    `<text x="${VW/2}" y="${Math.round(startY+i*13)}" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" font-weight="700" fill="#F0EBE0">${l}</text>`
-  ).join('');
-  const durY=startY+lines.length*13+9;
-  const durText=duration?`<text x="${VW/2}" y="${durY}" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="8" font-weight="500" fill="#C8963E">${duration}</text>`:'';
-  return`data:image/svg+xml,${encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${VW} ${VH}">
-    <rect width="${VW}" height="${VH}" fill="#1E1B17"/>
-    <rect x="0" y="0" width="${VW}" height="38" fill="#C8963E"/>
-    <rect x="0" y="37" width="${VW}" height="1" fill="#8A6228"/>
-    <text x="${VW/2}" y="25" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="8" font-weight="700" fill="#1A1410" letter-spacing="1.5">INDUSTRY</text>
-    <text x="${VW/2}" y="34" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="8" font-weight="700" fill="#1A1410" letter-spacing="1.5">DAYS</text>
-    <rect x="10" y="46" width="${VW-20}" height="${VH-56}" rx="3" fill="#252017" stroke="#3A3228" stroke-width="1"/>
-    ${textLines}
-    ${durText}
-    <rect x="0" y="${VH-16}" width="${VW}" height="16" fill="#161310"/>
-    <text x="${VW/2}" y="${VH-5}" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="6" font-weight="500" fill="#5A4E40" letter-spacing="1">ALTERNATIVA FILM FESTIVAL</text>
-  </svg>`)}`;
+  const festName=((FESTIVAL_CONFIG&&FESTIVAL_CONFIG[_activeFestId])||Object.values(FESTIVAL_CONFIG||{})[0]||{}).shortName||'FESTIVAL';
+  return _buildPosterSVG({
+    hc:'#C8963E',sep:'#8A6228',ht:'#1A1410',
+    l1:'INDUSTRY',l2:'DAYS',
+    bf:'#252017',bs:'#3A3228',
+    accent:'#C8963E',
+    title,duration,
+    ft:festName
+  });
 }
 
 /* ══════════════════════════════════════════════════════════════
@@ -2645,7 +2630,7 @@ let FESTIVAL_STORAGE_KEY='ficci65_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202604211315';
+const BUILD_VERSION='202604211334';
 (function(){
   const _vk='otrofestiv_build';
   const _sk='otrofestiv_reloaded';
@@ -5825,7 +5810,7 @@ function onCartaSearch(){
 
   res.innerHTML=matches.map(f=>{
     const{displayTitle,progSuffix}=parseProgramTitle(f.title);
-    const poster=f._isCortoItem?(getPosterSrc(f.title,false)||makeProgramPoster(f.title)):(f.is_cortos?makeProgramPoster(f.title):(getPosterSrc(f.title,false)||''));
+    const poster=f._isCortoItem?(getPosterSrc(f.title,false)||makeProgramPoster(f.title)):(f.is_cortos?makeProgramPoster(f.title,f.duration):(getPosterSrc(f.title,false)||''));
     const safeT=f.title.replace(/'/g,"\'");
     const safeC=(f.country||'').replace(/'/g,"\'");
     const safeD=(f.duration||'').replace(/'/g,"\'");
@@ -6279,7 +6264,7 @@ function openPelSheet(title){
   if(!entry) return;
   const{film:f,screenings}=entry;
   const inWL=watchlist.has(f.title),inW=watched.has(f.title),inPrio=prioritized.has(f.title);
-  const posterSrc=f.type==='event'?makeEventPoster(f.title,f.duration):(f.is_cortos?makeProgramPoster(f.title):getPosterSrc(f.title,false));
+  const posterSrc=f.type==='event'?makeEventPoster(f.title,f.duration):(f.is_cortos?makeProgramPoster(f.title,f.duration):getPosterSrc(f.title,false));
   const posterHtml=posterSrc
     ?`<img class="pel-sheet-poster" src="${posterSrc}" loading="lazy" onerror="this.outerHTML='<div class=pel-sheet-poster-ph>🎬</div>'" alt="">`
     :`<div class="pel-sheet-poster-ph">🎬</div>`;
@@ -6776,7 +6761,7 @@ function renderProgramaList(){
       const safeT=f.title.replace(/'/g,"\'");
       const{displayTitle:dt}=parseProgramTitle(f.title);
       const vc=vcfg(f.venue);
-      const src=f.type==='event'?makeEventPoster(f.title,f.duration):(f.is_cortos?makeProgramPoster(f.title):(getPosterSrc(f.title,false)||''));
+      const src=f.type==='event'?makeEventPoster(f.title,f.duration):(f.is_cortos?makeProgramPoster(f.title,f.duration):(getPosterSrc(f.title,false)||''));
       const nowBadge=isNow?`<span style="font-size:var(--t-xs);font-weight:var(--w-display);color:var(--green);background:var(--green-10);border:1px solid var(--green-30);border-radius:var(--r);padding:2px 6px;margin-left:4px">AHORA</span>`:'';
       const pastStyle=passed&&!isNow&&!festivalEnded()?'opacity:.45':'';
       return`<div class="plist-item" style="${pastStyle}" onclick="openPelSheet('${safeT}')">
@@ -6856,7 +6841,7 @@ function _renderExploreLista(){
     const isEvent=f.type==='event';
     const safeT=f.title.replace(/\'/g,"\\'");
     const{displayTitle:dt}=parseProgramTitle(f.title);
-    const src=isEvent?'':(f.is_cortos?makeProgramPoster(f.title):(getPosterSrc(f.title,false)||''));
+    const src=isEvent?'':(f.is_cortos?makeProgramPoster(f.title,f.duration):(getPosterSrc(f.title,false)||''));
     const allPast=screenings.every(s=>screeningPassed(s));
     const days=[...new Set(screenings.map(s=>_hasAmbigDays?s.day:(DAY_ABBR[s.day]||s.day)))].join('·');
     if(isEvent) return`<div class="plist-item plist-event" style="${allPast?'opacity:.35':''}" onclick="openPelSheet('${safeT}')">
