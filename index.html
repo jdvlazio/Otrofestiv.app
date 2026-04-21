@@ -2657,7 +2657,7 @@ let FESTIVAL_STORAGE_KEY='ficci65_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202604211708';
+const BUILD_VERSION='202604211713';
 (function(){
   const _vk='otrofestiv_build';
   const _sk='otrofestiv_reloaded';
@@ -7311,15 +7311,6 @@ setTimeout(()=>{
     showAgView();
   }
 }, 600); // después del welcome check (400ms) y del render inicial
-</script>
-<script>
-if('serviceWorker' in navigator){
-  navigator.serviceWorker.register('/sw.js').catch(function(){});
-  // Recargar cuando el SW notifique actualización (iOS fix)
-  navigator.serviceWorker.addEventListener('message', e => {
-    if(e.data && e.data.type==='SW_UPDATED') location.reload();
-  });
-}
 
 function openFestivalSheet(){
   document.getElementById('fs-overlay').classList.add('open');
@@ -7330,13 +7321,12 @@ function closeFestivalSheet(){
   document.getElementById('fs-sheet').classList.remove('open');
 }
 
-/* ── _fixStickyOffset: correct sticky positions for desktop gap ──────────
-   Desktop: .topbar actual h ≠ --tb-total (calc uses slightly wrong --fest-h).
-   Measures actual topbar and sets CSS vars so #hdr-programa sticks correctly.
-   Also used by desktop resize handler.                                     */
+/* ── _fixStickyOffset: correct sticky positions for desktop gap ─────────
+   Measures actual topbar height so #hdr-programa sticks precisely.
+   Runs synchronously + on resize. Desktop only (mobile uses CSS 47px). */
 function _fixStickyOffset(){
   const tb=document.querySelector('.topbar');
-  if(!tb||window.innerWidth<768) return;// mobile uses static 47px in CSS
+  if(!tb||window.innerWidth<768) return;
   const h=Math.ceil(tb.getBoundingClientRect().height)||130;
   const r=document.documentElement.style;
   r.setProperty('--tb-total',h+'px');
@@ -7346,7 +7336,15 @@ function _fixStickyOffset(){
 }
 _fixStickyOffset();
 window.addEventListener('resize',function(){requestAnimationFrame(_fixStickyOffset);});
-
+</script>
+<script>
+if('serviceWorker' in navigator){
+  navigator.serviceWorker.register('/sw.js').catch(function(){});
+  // Recargar cuando el SW notifique actualización (iOS fix)
+  navigator.serviceWorker.addEventListener('message', e => {
+    if(e.data && e.data.type==='SW_UPDATED') location.reload();
+  });
+}
 </script>
 
 <!-- Festival switcher bottom sheet -->
