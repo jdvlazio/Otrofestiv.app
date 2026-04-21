@@ -2566,7 +2566,7 @@ let FESTIVAL_STORAGE_KEY='ficci65_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202604210229';
+const BUILD_VERSION='202604210234';
 (function(){
   const _vk='otrofestiv_build';
   const _sk='otrofestiv_reloaded';
@@ -6761,15 +6761,27 @@ function _renderExploreLista(){
     return a.film.title.localeCompare(b.film.title,'es');
   });
   if(!entries.length){el.innerHTML=`<div style="text-align:center;padding:var(--sp-6) var(--sp-5);color:var(--gray);font-size:var(--t-base)">Sin películas para este filtro</div>`;return;}
+    // Detectar días ambiguos (ej: MAR 21 y MAR 28 → ambos 'MAR')
+  const _allAbbrs=Object.values(DAY_ABBR);
+  const _hasAmbigDays=new Set(_allAbbrs).size<_allAbbrs.length;
   el.innerHTML=entries.map(({film:f,screenings})=>{
     const inWL=watchlist.has(f.title);
-    const safeT=f.title.replace(/'/g,"\'");
+    const isEvent=f.type==='event';
+    const safeT=f.title.replace(/\'/g,"\\'");
     const{displayTitle:dt}=parseProgramTitle(f.title);
-    const src=f.is_cortos?makeProgramPoster(f.title):(getPosterSrc(f.title,false)||'');
+    const src=isEvent?'':(f.is_cortos?makeProgramPoster(f.title):(getPosterSrc(f.title,false)||''));
     const allPast=screenings.every(s=>screeningPassed(s));
-    const days=[...new Set(screenings.map(s=>DAY_ABBR[s.day]||s.day))].join('·');
+    const days=[...new Set(screenings.map(s=>_hasAmbigDays?s.day:(DAY_ABBR[s.day]||s.day)))].join('·');
+    if(isEvent) return`<div class="plist-item plist-event" style="${allPast?'opacity:.35':''}" onclick="openPelSheet('${safeT}')">
+      <div class="plist-poster" style="background:var(--surf-2);display:flex;align-items:center;justify-content:center;font-size:15px">🏛️</div>
+      <div class="plist-info">
+        <div class="plist-title" style="color:var(--gray2);font-weight:var(--w-semi)">${dt}</div>
+        <div class="plist-meta">${f.duration||''} · ${days}</div>
+        <div class="plist-sec">${f.section||''}</div>
+      </div>
+    </div>`;
     return`<div class="plist-item${allPast?' past-card':''}" onclick="openPelSheet('${safeT}')">
-      ${src?`<img class="plist-poster" src="${src}" loading="lazy" onerror="this.style.opacity=0" alt="${dt}" style="${allPast&&!festivalEnded()?'opacity:.45':''}">`:`<div class="plist-poster"></div>`}
+      ${src?`<img class="plist-poster" src="${src}" loading="lazy" onerror="this.style.opacity=0" alt="${dt}" style="${allPast&&!festivalEnded()?'opacity:.45':''}">` :`<div class="plist-poster"></div>`}
       <div class="plist-info">
         <div class="plist-title" style="${allPast?'opacity:.5':''}">${dt}</div>
         <div class="plist-meta">${f.duration||'~90 min'} · ${days}</div>
