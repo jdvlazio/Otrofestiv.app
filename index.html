@@ -2657,7 +2657,7 @@ let FESTIVAL_STORAGE_KEY='ficci65_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202604211657';
+const BUILD_VERSION='202604211701';
 (function(){
   const _vk='otrofestiv_build';
   const _sk='otrofestiv_reloaded';
@@ -5888,7 +5888,10 @@ function showDayView(){
   // Mostrar buscador y mode bar
   const _csw2=document.getElementById('carta-search-wrap');if(_csw2) _csw2.style.display='';
   const modeBar=document.getElementById('programa-mode-bar');
-  if(modeBar) modeBar.style.display='';
+  if(modeBar){
+    modeBar.style.removeProperty('display');// removeProperty is more reliable than =""
+    modeBar.setAttribute('data-sdv',Date.now());// tag for debugging
+  }
   // Ocultar toggle legacy
   const toggle=document.getElementById('carta-mode-toggle');if(toggle) toggle.style.display='none';
   // Ocultar filter-row hasta que se pida con "Filtrar"
