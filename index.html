@@ -2134,7 +2134,7 @@ function makeProgramPoster(title){
     ${subText}
     <text x="${VW/2}" y="${VH-9}" text-anchor="middle"
       font-family="-apple-system,BlinkMacSystemFont,sans-serif"
-      font-size="7" font-weight="500" fill="#443C34" letter-spacing="1.5">FICCI 65</text>
+      font-size="7" font-weight="500" fill="#443C34" letter-spacing="1.5">${(FESTIVAL_CONFIG[_activeFestId]||{}).name||'FESTIVAL'}</text>
     <text x="${VW/2}" y="${VH-2}" text-anchor="middle"
       font-family="-apple-system,BlinkMacSystemFont,sans-serif"
       font-size="5.5" font-weight="400" fill="#2E2820" letter-spacing="1">OTROFESTIV</text>
@@ -2376,6 +2376,37 @@ function lbUrl(title){
   return`https://letterboxd.com/film/${slug}/`;
 }
 
+function makeEventPoster(title,duration){
+  // Genera un poster SVG para eventos Industry Days
+  const VW=120, VH=180;
+  const words=title.split(/\s+/);
+  const lines=[];let cur='';
+  for(const w of words){
+    if(cur&&(cur+' '+w).length>13){lines.push(cur);cur=w;}
+    else cur=cur?cur+' '+w:w;
+  }
+  if(cur) lines.push(cur);
+  const blockH=lines.length*14+(duration?10:0);
+  const startY=Math.round((VH-32-blockH)/2)+12*0.88;
+  const textLines=lines.map((l,i)=>
+    `<text x="${VW/2}" y="${Math.round(startY+i*14)}" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" font-weight="800" fill="#E8DFD0">${l}</text>`
+  ).join('');
+  const durY=Math.round(startY+lines.length*14+5);
+  const durText=duration?`<text x="${VW/2}" y="${durY}" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="8" font-weight="500" fill="#C8963E">${duration}</text>`:'';
+  return`data:image/svg+xml,${encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${VW} ${VH}">
+    <rect width="${VW}" height="${VH}" fill="#0A0A0C"/>
+    <rect x="0" y="0" width="${VW}" height="3" fill="#C8963E"/>
+    <rect x="0" y="0" width="3" height="${VH}" fill="#1E1A14"/>
+    <text x="${VW/2}" y="22" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="18" fill="#2A2520">◼</text>
+    <text x="${VW/2}" y="22" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="13" fill="#C8963E">🏛</text>
+    ${textLines}
+    ${durText}
+    <rect x="0" y="${VH-22}" width="${VW}" height="1" fill="#1A1812"/>
+    <text x="${VW/2}" y="${VH-9}" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="7" font-weight="500" fill="#443C34" letter-spacing="1.5">INDUSTRY</text>
+    <text x="${VW/2}" y="${VH-2}" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="5.5" font-weight="400" fill="#2E2820" letter-spacing="1">DAYS</text>
+  </svg>`)}`;
+}
+
 /* ══════════════════════════════════════════════════════════════
    MULTI-FESTIVAL — AFF 2026 data + config
 ══════════════════════════════════════════════════════════════ */
@@ -2585,7 +2616,7 @@ let FESTIVAL_STORAGE_KEY='ficci65_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202604211206';
+const BUILD_VERSION='202604211214';
 (function(){
   const _vk='otrofestiv_build';
   const _sk='otrofestiv_reloaded';
@@ -6716,7 +6747,7 @@ function renderProgramaList(){
       const safeT=f.title.replace(/'/g,"\'");
       const{displayTitle:dt}=parseProgramTitle(f.title);
       const vc=vcfg(f.venue);
-      const src=f.is_cortos?makeProgramPoster(f.title):(getPosterSrc(f.title,false)||'');
+      const src=f.type==='event'?makeEventPoster(f.title,f.duration):(f.is_cortos?makeProgramPoster(f.title):(getPosterSrc(f.title,false)||''));
       const nowBadge=isNow?`<span style="font-size:var(--t-xs);font-weight:var(--w-display);color:var(--green);background:var(--green-10);border:1px solid var(--green-30);border-radius:var(--r);padding:2px 6px;margin-left:4px">AHORA</span>`:'';
       const pastStyle=passed&&!isNow&&!festivalEnded()?'opacity:.45':'';
       return`<div class="plist-item" style="${pastStyle}" onclick="openPelSheet('${safeT}')">
@@ -6778,7 +6809,10 @@ function _renderExploreLista(){
     entries=entries.filter(e=>e.screenings.some(s=>vcfg(s.venue).short===activeVenue));
   }
   const secIdxLF=s=>{const i=SECTION_ORDER_LF.indexOf(s);return i>=0?i:98;};
+  const _typeOrder=f=>f.type==='event'?2:f.is_cortos?1:0;
   entries.sort((a,b)=>{
+    const to=_typeOrder(a.film)-_typeOrder(b.film);
+    if(to!==0) return to;
     if(a.film.is_cortos!==b.film.is_cortos) return a.film.is_cortos?1:-1;
     const si=secIdxLF(a.film.section)-secIdxLF(b.film.section);
     if(si!==0) return si;
@@ -6797,7 +6831,7 @@ function _renderExploreLista(){
     const allPast=screenings.every(s=>screeningPassed(s));
     const days=[...new Set(screenings.map(s=>_hasAmbigDays?s.day:(DAY_ABBR[s.day]||s.day)))].join('·');
     if(isEvent) return`<div class="plist-item plist-event" style="${allPast?'opacity:.35':''}" onclick="openPelSheet('${safeT}')">
-      <div class="plist-poster" style="background:var(--surf-2);display:flex;align-items:center;justify-content:center;font-size:15px">🏛️</div>
+      <img class="plist-poster" src="${makeEventPoster(dt,f.duration)}" alt="${dt}">
       <div class="plist-info">
         <div class="plist-title" style="color:var(--gray2);font-weight:var(--w-semi)">${dt}</div>
         <div class="plist-meta">${f.duration||''} · ${days}</div>
