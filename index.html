@@ -2645,7 +2645,7 @@ let FESTIVAL_STORAGE_KEY='ficci65_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202604211306';
+const BUILD_VERSION='202604211315';
 (function(){
   const _vk='otrofestiv_build';
   const _sk='otrofestiv_reloaded';
@@ -6279,7 +6279,7 @@ function openPelSheet(title){
   if(!entry) return;
   const{film:f,screenings}=entry;
   const inWL=watchlist.has(f.title),inW=watched.has(f.title),inPrio=prioritized.has(f.title);
-  const posterSrc=f.is_cortos?makeProgramPoster(f.title):getPosterSrc(f.title,false);
+  const posterSrc=f.type==='event'?makeEventPoster(f.title,f.duration):(f.is_cortos?makeProgramPoster(f.title):getPosterSrc(f.title,false));
   const posterHtml=posterSrc
     ?`<img class="pel-sheet-poster" src="${posterSrc}" loading="lazy" onerror="this.outerHTML='<div class=pel-sheet-poster-ph>🎬</div>'" alt="">`
     :`<div class="pel-sheet-poster-ph">🎬</div>`;
@@ -6318,7 +6318,10 @@ function openPelSheet(title){
       const ratingEl=r
         ?`<span class="corto-rating-stars">${starsText(r)}</span>`
         :`<button class="corto-rate-btn" onclick="event.stopPropagation();closePelSheet();setTimeout(()=>openRatingSheet('${safeCorto}'),100)">★</button>`;
-      return`<div class="pel-sheet-corto-item" onclick="openCortoSheet('${safeCorto}','${safeCountry}','${safeDur}','${safeSec}','${safeFlags}')">
+      const _sd=(item.director||'').replace(/['"]/g,'');
+      const _sg=(item.genre||'').replace(/['"]/g,'');
+      const _ss=(item.synopsis||'').replace(/['"]/g,'');
+      return`<div class="pel-sheet-corto-item" onclick="openCortoSheet('${safeCorto}','${safeCountry}','${safeDur}','${safeSec}','${safeFlags}','${_sd}','${_sg}','${_ss.slice(0,150)}')">
         ${thumbHtml}
         <div style="flex:1;min-width:0">
           <div style="font-size:var(--t-caption);font-weight:var(--w-semi);color:var(--white);line-height:1.3;margin-bottom:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${item.title}</div>
@@ -6467,52 +6470,49 @@ function countryToFlags(countryStr){
 // SHEET INDIVIDUAL DE CORTOMETRAJE
 // Trata cada corto como película — poster, info, rating, Letterboxd
 // ─────────────────────────────────────────────────────────────
-function openCortoSheet(title, country, duration, section, flags){
-  const safeT=title.replace(/'/g,"\'");
-  // Usar banderas reales del país si las del programa son genéricas
-  const displayFlags=(!flags||flags==='🌍'||flags==='🎬'||flags==='⏳'||flags==='🌊'||flags==='🌎'||flags==='✊'||flags==='🪶'||flags==='🏆'||flags==='⭐'||flags==='🎨'||flags==='🏛️')?countryToFlags(country):flags;
-  const posterSrc=getPosterSrc(title,false)||makeProgramPoster(title);
-  const posterHtml=posterSrc
-    ?`<img class="pel-sheet-poster" src="${posterSrc}" loading="lazy" onerror="this.style.opacity=0" alt="">`
+function openCortoSheet(title, country, duration, section, flags, director, genre, synopsis){
+  const inner=document.getElementById('pel-sheet-inner');
+  if(!inner) return;
+  // Find richer data from FILMS film_list if available
+  let richItem=null;
+  for(const f of FILMS){
+    if(f.film_list){const found=f.film_list.find(c=>c.title===title);if(found){richItem=found;break;}}
+  }
+  const dir=director||(richItem&&richItem.director)||'';
+  const gnr=genre||(richItem&&richItem.genre)||'';
+  const syn=synopsis||(richItem&&richItem.synopsis)||'';
+  const ctry=country||(richItem&&richItem.country)||'';
+  const dur=duration||(richItem&&richItem.duration)||'';
+  const flgs=flags||countryToFlags(ctry)||'🌐';
+  const posterUrl=(typeof SHORT_IMGS!=='undefined'&&SHORT_IMGS[title])||null;
+  const posterHtml=posterUrl
+    ?`<img class="pel-sheet-poster" src="${posterUrl}" loading="lazy" onerror="this.outerHTML='<div class=pel-sheet-poster-ph>🎬</div>'" alt="">`
     :`<div class="pel-sheet-poster-ph">🎬</div>`;
-  const r=filmRatings[title]||0;
-  const secShort=(section||'').replace(/^[^ ]+ /,'');
-  const lbLink=!f?.is_cortos?`<a class="c-lb" href="${lbUrl(title)}" target="_blank" rel="noopener" style="display:inline-flex;margin-top:14px;margin-bottom:2px">${LB_SVG}<span class="c-lb-text">Letterboxd</span></a>`:''; // always show for non-cortos
-  const ratingSection=`
-    <div class="pel-sheet-divider" style="margin-top:16px"></div>
-    <div style="display:flex;gap:8px;margin-top:12px">
-      ${r?`<div style="flex:1;display:flex;align-items:center;gap:var(--sp-1);font-size:var(--t-md);color:var(--amber)">${starsText(r)}</div>`:``}
-      <button onclick="closePelSheet();setTimeout(()=>openRatingSheet('${safeT}'),100)"
-        style="flex:1;background:none;border:1px solid var(--bdr);border-radius:var(--r-pill);color:var(--gray2);font-family:var(--font);font-size:var(--t-base);font-weight:var(--w-bold);padding:var(--sp-btn) 0;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:var(--sp-1)">
-        ${ICONS.star} ${r?'Cambiar':'Calificar'}
-      </button>
-    </div>`;
-  // Asegurar que el sheet esté abierto (puede venir de lista sin sheet previo)
-  document.getElementById('pel-overlay').classList.add('open');
-  const _psC=document.getElementById('pel-sheet');
-  if(_psC){_psC.classList.add('open');_psC.scrollTop=0;}
+  const ps=document.getElementById('pel-sheet');
+  if(ps) ps.scrollTop=0;
   _pushSheetState();
-  document.getElementById('pel-sheet-inner').innerHTML=`
+  const safeTitle=title.replace(/'/g,"\\'");
+  inner.innerHTML=`
     <div class="pel-sheet-header">
       ${posterHtml}
       <div class="pel-sheet-meta">
         <div class="pel-sheet-title">${title}</div>
-        <div class="pel-sheet-flags">${displayFlags||'🌐'}</div>
-        <div class="pel-sheet-dur">${ICONS.clock} ${duration}</div>
-        ${secShort&&section?`<div class="pel-sheet-sec" data-sec="${(section||'').replace(/"/g,'&quot;')}" onclick="closePelSheet();setTimeout(()=>filterBySection(this.dataset.sec),50)">${secShort} <span class="pel-sheet-sec-arrow">›</span></div>`:''}
-        ${country?`<div style="font-size:var(--t-sm);color:var(--gray);margin-top:3px">${country}</div>`:''}
-        <div style="font-size:var(--t-sm);color:var(--orange);margin-top:3px;font-weight:var(--w-semi)">Cortometraje</div>
-        ${(()=>{const prog=FILMS.find(p=>p.is_cortos&&p.film_list?.some(c=>c.title===title));if(!prog)return'';const safeP=prog.title.replace(/'/g,"\'");const{displayTitle:dp,progSuffix:dps}=parseProgramTitle(prog.title);const dpFull=dps?`${dp} — ${dps}`:dp;return`<div style="font-size:var(--t-label);color:var(--gray2);margin-top:4px;cursor:pointer;text-decoration:underline;text-underline-offset:2px" onclick="closePelSheet();setTimeout(()=>openPelSheet('${safeP}'),50)">Parte de ${dpFull} ›</div>`;})()}
+        <div class="pel-sheet-flags">${flgs}</div>
+        ${dur?`<div class="pel-sheet-dur">${ICONS.clock} ${dur}</div>`:''}
+        ${ctry?`<div style="font-size:var(--t-sm);color:var(--gray2);margin-top:2px">${ctry}</div>`:''}
+        ${gnr?`<div style="font-size:var(--t-xs);color:var(--orange);margin-top:3px;font-weight:var(--w-semi)">${gnr}</div>`:''}
       </div>
     </div>
-    <div class="pel-sheet-divider"></div>
-    <div class="pel-sheet-section-lbl">Sinopsis</div>
-    ${f.director?`<div style="font-size:var(--t-sm);color:var(--orange);margin-bottom:6px;font-weight:var(--w-semi)">Dir. ${f.director}</div>`:''}
-    <div class="pel-sheet-synopsis">${f.synopsis||'Sinopsis disponible próximamente.'}</div>
-    ${f.genre?`<div style="font-size:var(--t-xs);color:var(--gray);margin-top:6px">${f.genre}${f.year?' · '+f.year:''}</div>`:''}
-    ${lbLink}
-    ${ratingSection}`;
-  setTimeout(()=>{const t=document.querySelector('.pel-sheet-topbar');if(t)t._swipeInit=false;},50);
+    ${dir||syn?`<div class="pel-sheet-divider"></div>`:''}
+    ${dir?`<div style="font-size:var(--t-sm);color:var(--orange);margin-bottom:6px;font-weight:var(--w-semi)">Dir. ${dir}</div>`:''}
+    ${syn?`<div class="pel-sheet-synopsis">${syn}</div>`:''}
+    <div class="pel-sheet-divider" style="margin-top:14px"></div>
+    <div style="display:flex;gap:var(--sp-1);margin-top:12px">
+      <button class="pel-sheet-action-btn${filmRatings[title]?' act-on':''}" onclick="closePelSheet();setTimeout(()=>openRatingSheet('${safeTitle}'),100)" style="display:inline-flex;align-items:center;justify-content:center;gap:var(--sp-1)">${ICONS.star} ${filmRatings[title]?'Cambiar':'Calificar'}</button>
+    </div>
+  `;
+  document.getElementById('pel-overlay').classList.add('open');
+  document.getElementById('pel-sheet').classList.add('open');
 }
 
 function setMiPlanView(mode){
