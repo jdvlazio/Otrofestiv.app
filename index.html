@@ -2547,7 +2547,7 @@ function normalize(str){
 // ═══════════════════════════════════════════════════════════════
 // ── STATE ──
 let watchlist=new Set();
-const filmRatings={}; // {title: 0.5..5} medias estrellas Letterboxd-style
+let filmRatings={}; // {title: 0.5..5} medias estrellas Letterboxd-style
 let watched=new Set();
 let prioritized=new Set();
 const PRIO_LIMIT=5;
@@ -2559,7 +2559,7 @@ let FESTIVAL_STORAGE_KEY='ficci65_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202604210123';
+const BUILD_VERSION='202604210132';
 (function(){
   const _vk='otrofestiv_build';
   const _sk='otrofestiv_reloaded';
