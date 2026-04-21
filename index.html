@@ -246,7 +246,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 /* Nav row (tabs de días en Planear) */
 .nav-row{display:flex;align-items:stretch;border-bottom:1px solid var(--bdr);margin-top:var(--sp-1)}
 .nav-row.hidden{display:none}
-.nav-tabs{display:flex;flex:1;overflow-x:auto;-webkit-overflow-scrolling:touch;justify-content:flex-start;gap:0;padding:0;scrollbar-width:none;scroll-behavior:smooth}
+.nav-tabs{display:flex;flex:1;overflow-x:auto;-webkit-overflow-scrolling:touch;justify-content:flex-start;gap:0;padding:0;scrollbar-width:none;scroll-behavior:smooth;touch-action:pan-x;overscroll-behavior-x:contain}
 .nav-tabs::-webkit-scrollbar{display:none}
 .fdr-filters{display:flex;align-items:center;flex-shrink:0}
 .filter-row{display:flex;align-items:center;border-bottom:1px solid var(--bdr);padding:0 2px}
@@ -1459,7 +1459,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
   /* Search — max-width on desktop so it doesn't span full 960px */
   .ag-search-wrap{max-width:480px}
   /* Flow progress — remove top padding (nav already provides separation) */
-  .flow-progress{padding-top:var(--sp-3)}
+  .flow-progress{padding-top:var(--sp-1)}
 
   /* Grids — 6 cols uniformes en desktop */
   .ag-film-grid{grid-template-columns:repeat(6,1fr) !important}
@@ -1755,7 +1755,7 @@ html.splash-skip #otrofestiv-splash{display:none}
    Escalable: basado en watchlist.size y savedAgenda — sin datos del festival. */
 .flow-progress{
   display:flex;align-items:center;justify-content:center;gap:0;
-  padding:var(--sp-4) var(--sp-4) var(--sp-3);
+  padding:var(--sp-2) var(--sp-4) var(--sp-3);
   background:transparent;
 }
 .flow-step{
@@ -2670,7 +2670,7 @@ let FESTIVAL_STORAGE_KEY='ficci65_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202604211931';
+const BUILD_VERSION='202604211935';
 (function(){
   const _vk='otrofestiv_build';
   const _sk='otrofestiv_reloaded';
