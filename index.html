@@ -1771,19 +1771,20 @@ html.splash-skip #otrofestiv-splash{display:none}
 }
 .welcome-wordmark span{color:var(--amber)}
 .welcome-title{
-  font-size:var(--t-lg);font-weight:var(--w-bold);
-  color:var(--white);line-height:1.25;margin-bottom:var(--sp-3);
+  font-size:var(--t-display);font-weight:var(--w-bold);
+  color:var(--white);line-height:1.1;margin-bottom:var(--sp-3);
+  letter-spacing:-.02em;white-space:nowrap;
 }
 .welcome-sub{
-  font-size:var(--t-base);color:var(--gray);line-height:1.6;
+  font-size:var(--t-base);color:var(--gray2);line-height:1.6;
   margin-bottom:var(--sp-5);
 }
-.welcome-sub b{color:var(--white-60);font-weight:var(--w-semi)}
 .welcome-cta{
   width:100%;padding:var(--sp-btn);
-  background:var(--orange);border:none;border-radius:var(--r);
-  color:var(--white);font-family:var(--font);font-size:var(--t-base);
+  background:var(--amber);border:none;border-radius:var(--r);
+  color:#000;font-family:var(--font);font-size:var(--t-base);
   font-weight:var(--w-bold);cursor:pointer;
+  display:flex;align-items:center;justify-content:center;gap:var(--sp-2);
   transition:opacity var(--tr-base);
 }
 .welcome-cta:active{opacity:.85}
@@ -7558,13 +7559,9 @@ if('serviceWorker' in navigator){
 <div id="welcome-overlay" class="welcome-overlay" style="display:none" role="dialog" aria-modal="true">
   <div class="welcome-sheet">
     <div class="welcome-wordmark">Otro<span>festiv</span></div>
-    <div class="welcome-title">Tú decides<br>el festival.</div>
-    <div class="welcome-sub">
-      <b>Añade</b> lo que quieres ver a Intereses.<br>
-      <b>Prioriza</b> lo que no te puedes perder.<br>
-      <b>Elige</b> tu plan y disfruta.
-    </div>
-    <button class="welcome-cta" onclick="dismissWelcome()">Empezar →</button>
+    <div class="welcome-title">Tú decides el festival.</div>
+    <div class="welcome-sub">Nosotros planeamos, tú disfrutas.</div>
+    <button class="welcome-cta" onclick="dismissWelcome()">Empezar <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
   </div>
 </div>
 </body>
