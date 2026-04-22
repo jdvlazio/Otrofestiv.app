@@ -4803,18 +4803,18 @@ function _renderSavedAgendaHTML(){
       <div class="festival-progress-bar"><div class="festival-progress-fill" style="width:${progressPct}%"></div></div>
     </div>
     ${_mpSwitch}
-  </div>
-  <div class="mplan-act-row">
+  </div>`:'';
+  const planActions=`<div class="mplan-act-row">
     <button class="mplan-act-btn" onclick="sharePlan()">${ICONS.share} Compartir</button>
     <button class="mplan-act-btn" onclick="exportICS()">${ICONS.calendar} Calendario</button>
-  </div>`:'';
+  </div>`;
 
   const _ctxHeader=renderContextualHeader();
   const _nextStrip=renderNextStrip(all);
   const _unconfirmed=renderUnconfirmed(all);
   let html=`<div class="saved-agenda">
     ${_nextStrip}${_unconfirmed}${_ctxHeader}
-    ${progressBar}
+    ${progressBar}${planActions}
 `;
 
   // ── CTA B: post-eliminación (temporal, auto-dismiss 6s) ──
