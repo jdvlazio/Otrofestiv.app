@@ -1056,12 +1056,10 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .saved-agenda-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:var(--sp-3)}
 .saved-agenda-clear{background:none;border:none;cursor:pointer;color:var(--gray2);font-size:var(--t-xs);font-weight:var(--w-semi);font-family:var(--font);padding:4px 2px;display:inline-flex;align-items:center;gap:4px;transition:color var(--tr-base)}
 .saved-agenda-clear:hover{color:var(--gray)}
-.share-menu-wrap{position:relative}
-.share-dropdown{display:none;position:absolute;top:calc(100% + 8px);right:0;background:var(--surf-2);border:1px solid var(--bdr);border-radius:var(--r);overflow:hidden;z-index:500;min-width:160px;box-shadow:0 8px 24px var(--overlay-50)}
-.share-dropdown.open{display:block}
-.share-opt{display:flex;align-items:center;gap:var(--sp-2);width:100%;background:none;border:none;border-bottom:1px solid var(--bdr-l);padding:var(--sp-3) var(--sp-4);color:var(--white);font-size:var(--t-base);font-family:var(--font);cursor:pointer;text-align:left;transition:background var(--tr-base)}
-.share-opt:last-child{border-bottom:none}
-.share-opt:hover{background:var(--surf)}
+.mplan-act-row{display:flex;justify-content:flex-end;align-items:center;gap:var(--sp-2);margin-top:var(--sp-2)}
+.mplan-act-btn{display:inline-flex;align-items:center;gap:5px;background:none;border:1px solid var(--bdr);border-radius:var(--r-pill);color:var(--gray2);font-size:var(--t-sm);font-weight:var(--w-semi);font-family:var(--font);padding:5px var(--sp-3);cursor:pointer;transition:color var(--tr-base),border-color var(--tr-base);white-space:nowrap}
+.mplan-act-btn:hover{color:var(--white);border-color:var(--gray)}
+.mplan-act-btn:active{opacity:.7}
 
 /* Calendario semanal */
 .mplan-wrap{border:1px solid var(--bdr-l);border-radius:var(--r);overflow:hidden;margin-bottom:var(--sp-4)}
@@ -1934,17 +1932,7 @@ html.splash-skip #otrofestiv-splash{display:none}
   <div class="hdr-fest-chev">˅</div>
 </div>
   
-  <div id="hdr-share-wrap" style="display:none;margin-left:auto;position:relative">
-    <button onclick="toggleShareMenu()" style="background:none;border:none;color:var(--gray2);cursor:pointer;padding:6px;display:flex;align-items:center;justify-content:center">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
-    </button>
-    <div class="share-menu-wrap" id="share-menu-wrap" style="position:absolute;top:100%;right:0">
-      <div class="share-dropdown" id="share-dropdown">
-        <button class="share-opt" onclick="shareAsImage();closeShareMenu()">Como imagen</button>
-        <button class="share-opt" onclick="exportICS();closeShareMenu()">Archivo .ICS</button>
-      </div>
-    </div>
-  </div>
+
 </div>
 <div class="main-nav" id="main-nav" role="navigation" aria-label="Navegación principal">
   <button class="main-nav-tab on" id="mnav-cartelera" onclick="{const _ph=_getProgramaPhase();programaSubMode=_ph.default;switchMainNav('mnav-cartelera');showDayView();}">
@@ -4815,6 +4803,10 @@ function _renderSavedAgendaHTML(){
       <div class="festival-progress-bar"><div class="festival-progress-fill" style="width:${progressPct}%"></div></div>
     </div>
     ${_mpSwitch}
+  </div>
+  <div class="mplan-act-row">
+    <button class="mplan-act-btn" onclick="sharePlan()">${ICONS.share} Compartir</button>
+    <button class="mplan-act-btn" onclick="exportICS()">${ICONS.calendar} Calendario</button>
   </div>`:'';
 
   const _ctxHeader=renderContextualHeader();
@@ -4940,19 +4932,43 @@ function toggleArchive(){
 }
 
 
-function toggleShareMenu(){
-  const d=document.getElementById('share-dropdown');
-  if(d) d.classList.toggle('open');
+
+
+
+
+
+/* ── SHARE/EXPORT: imagen, ICS ──────────────────────────────────────── */
+async function sharePlan(){
+  if(!savedAgenda||!savedAgenda.schedule||!savedAgenda.schedule.length){
+    showToast('No tienes un plan guardado','warn');return;
+  }
+  let canvas,dataUrl;
+  try{
+    canvas=_buildAgendaCanvas();
+    dataUrl=canvas.toDataURL('image/png');
+    if(!dataUrl||dataUrl==='data:,') throw new Error('canvas vacío');
+  }catch(e){showToast('Error al generar imagen','err');return;}
+
+  // Web Share API con archivo (iOS Safari 15+, Chrome Android 86+)
+  if(navigator.share&&navigator.canShare){
+    canvas.toBlob(async blob=>{
+      if(!blob){_dlDirect(dataUrl);return;}
+      const cfg=FESTIVAL_CONFIG[_activeFestId]||{};
+      const fname=`otrofestiv-${(cfg.shortName||'plan').toLowerCase().replace(/\s+/g,'-')}.png`;
+      const file=new File([blob],fname,{type:'image/png'});
+      if(navigator.canShare({files:[file]})){
+        try{
+          await navigator.share({files:[file],title:`Mi Plan · ${cfg.name||'Otrofestiv'}`});
+          showToast('Compartido ✓','info');
+        }catch(e){if(e.name!=='AbortError') _dlDirect(dataUrl);}
+      }else{_dlDirect(dataUrl);}
+    },'image/png');
+  }else{
+    // Fallback desktop: descarga directa
+    _dlDirect(dataUrl);
+  }
 }
-function closeShareMenu(){
-  const d=document.getElementById('share-dropdown');
-  if(d) d.classList.remove('open');
-}
-// Mostrar/ocultar botón de compartir según el tab activo
-function _updateShareBtn(){
-  const wrap=document.getElementById('hdr-share-wrap');
-  if(wrap) wrap.style.display=activeMNav==='mnav-miplan'&&savedAgenda&&savedAgenda.schedule&&savedAgenda.schedule.length?'block':'none';
-}
+
 // Close menu when clicking outside
 document.addEventListener('click',function(e){
   const wrap=document.getElementById('share-menu-wrap');
@@ -5031,9 +5047,11 @@ function _generateAndShare(){
 
 function _buildAgendaCanvas(){
   const DPR=Math.min(window.devicePixelRatio||2,3);
-  const DAYS=['Martes','Miércoles','Jueves','Viernes','Sábado','Domingo'];
-  const DS=['MAR','MIÉ','JUE','VIE','SÁB','DOM'];
-  const DN=['14','15','16','17','18','19'];
+  const cfg=FESTIVAL_CONFIG[_activeFestId]||{};
+  const festDays=cfg.days||DAY_KEYS.map(k=>({k,lbl:k.slice(0,3).toUpperCase(),d:parseInt(k.slice(-2))||''}));
+  const DAYS=festDays.map(d=>d.k);
+  const DS=festDays.map(d=>d.lbl);
+  const DN=festDays.map(d=>String(d.d));
   const byDay={};
   DAYS.forEach(d=>{byDay[d]=[];});
   (savedAgenda.schedule||[]).forEach(s=>{if(byDay[s.day])byDay[s.day].push(s);});
@@ -5077,7 +5095,7 @@ function _buildAgendaCanvas(){
   // Subtítulo: --gray (#888888)
   c.fillStyle='#888888';
   c.font='500 11px system-ui,-apple-system,sans-serif';
-  c.fillText('Mi Plan · FICCI 65 · '+active.length+' día'+(active.length!==1?'s':''),PAD,HDR/2+20);
+  c.fillText('Mi Plan · '+(cfg.name||'Festival')+' · '+active.length+' día'+(active.length!==1?'s':''),PAD,HDR/2+20);
   active.forEach((day,ci)=>{
     const x=PAD+ci*(CW+CGAP);
     const di=DAYS.indexOf(day);
@@ -5201,23 +5219,24 @@ function exportICS(){
   if(!savedAgenda||!savedAgenda.schedule.length){showToast('No tienes un plan guardado','warn');return;}
   const pad=n=>String(n).padStart(2,'0');
   const fmt=dt=>`${dt.getFullYear()}${pad(dt.getMonth()+1)}${pad(dt.getDate())}T${pad(dt.getHours())}${pad(dt.getMinutes())}00`;
-  const lines=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//FICCI65//ES','CALSCALE:GREGORIAN','METHOD:PUBLISH'];
+  const _icsCfg=FESTIVAL_CONFIG[_activeFestId]||{};
+  const _icsId=(_icsCfg.shortName||'festival').toLowerCase().replace(/\s+/g,'');
+  const lines=['BEGIN:VCALENDAR','VERSION:2.0',`PRODID:-//Otrofestiv//${_icsId}//ES`,'CALSCALE:GREGORIAN','METHOD:PUBLISH'];
   savedAgenda.schedule.forEach(s=>{
     const dateStr=FESTIVAL_DATES[s.day];if(!dateStr) return;
     const start=new Date(`${dateStr}T${s.time}:00`);
     const dur=s.duration?parseInt(s.duration):90;
     const end=new Date(start.getTime()+dur*60000);
-    const vc=VENUES[s.venue]||{};
     lines.push('BEGIN:VEVENT',
       `DTSTART:${fmt(start)}`,`DTEND:${fmt(end)}`,
       `SUMMARY:${s._title}`,
-      `LOCATION:${s.venue}`,
-      `DESCRIPTION:FICCI 65 · ${s.section||''} · ${s.duration||''}`,
+      `LOCATION:${s.venue||''}`,
+      `DESCRIPTION:${_icsCfg.name||'Festival'} · ${s.section||''} · ${s.duration||''}`,
       'END:VEVENT');
   });
   lines.push('END:VCALENDAR');
   const blob=new Blob([lines.join('\r\n')],{type:'text/calendar'});
-  const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='FICCI65_agenda.ics';a.click();
+  const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=`otrofestiv-${_icsId}.ics`;a.click();
   showToast('Calendario exportado','info');
 }
 function clearSavedAgenda(){
@@ -5863,7 +5882,6 @@ function renderAgenda(){
     // ── Mi Plan: stepper de progreso + calendario + sugerencias ──
     const _progressHtmlPlan=(!festivalEnded()&&(!savedAgenda||!savedAgenda.schedule||!savedAgenda.schedule.length))?renderFlowProgress('miplan'):'';
     view.innerHTML=_progressHtmlPlan+renderSavedAgendaHTML();
-    _updateShareBtn();
   } else {
     // ── Planear: stepper de progreso + prio strip + disponibilidad + opciones ──
     if(festivalEnded()){
