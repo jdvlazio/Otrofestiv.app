@@ -4972,7 +4972,7 @@ async function sharePlan(){
 // Close menu when clicking outside
 document.addEventListener('click',function(e){
   const wrap=document.getElementById('share-menu-wrap');
-  if(wrap&&!wrap.contains(e.target)) closeShareMenu();
+  if(wrap&&!wrap.contains(e.target)){}
 });
 
 
@@ -6063,7 +6063,6 @@ function switchMainNav(id){
   activeMNav=id;
   document.querySelectorAll('.main-nav-tab').forEach(t=>t.classList.remove('on'));
   const el=document.getElementById(id);if(el) el.classList.add('on');
-  _updateShareBtn();
 }
 function showDayView(){
   activeView='day';
