@@ -6743,7 +6743,7 @@ function openCortoSheet(title, country, duration, section, flags, director, genr
   const safeParent=parentTitle?parentTitle.replace(/'/g,"\\'"):safeTitle;
   const inWL=watchlist.has(parentTitle||title);
   const inPrio=prioritized.has(parentTitle||title);
-  const secLabel=section?section.replace(/^[\p{Emoji}\s]+/u,'').trim():'';
+  const secLabel=section?section.replace(/^[^ ]+ /,'').trim():'';
   inner.innerHTML=`
     <div class="pel-sheet-header">
       ${posterHtml}
