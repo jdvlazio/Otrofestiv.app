@@ -2998,7 +2998,7 @@ function saveWL(){try{localStorage.setItem(`${FESTIVAL_STORAGE_KEY}wl`,JSON.stri
 function saveWatched(){try{localStorage.setItem(`${FESTIVAL_STORAGE_KEY}watched`,JSON.stringify([...watched]));}catch(e){}_cloudSave();}
 function saveRating(title,rating){
   if(rating>0) filmRatings[title]=rating; else delete filmRatings[title];
-  try{localStorage.setItem(`${FESTIVAL_STORAGE_KEY}ratings`,JSON.stringify(filmRatings));}catch(e){}
+  try{localStorage.setItem(`${FESTIVAL_STORAGE_KEY}ratings`,JSON.stringify(filmRatings));}catch(e){}_cloudSave();
 }
 function saveAV(){try{localStorage.setItem(`${FESTIVAL_STORAGE_KEY}av3`,JSON.stringify(availability));}catch(e){}_cloudSave();}
 function saveSavedAgenda(){try{localStorage.setItem(`${FESTIVAL_STORAGE_KEY}saved`,JSON.stringify(savedAgenda));}catch(e){}_cloudSave();}
