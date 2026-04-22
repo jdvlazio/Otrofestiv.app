@@ -1180,7 +1180,6 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .archive-body.open{display:block}
 
 /* Banners contextuales */
-.today-banner{background:var(--amber-10);border:1px solid var(--amber-30);border-radius:var(--r-md);padding:var(--sp-2) var(--sp-3);margin-bottom:var(--sp-2);font-size:var(--t-sm);color:var(--orange);font-weight:var(--w-semi)}
 
 /* ── Retraso en función en curso ── */
 .delay-row{display:flex;align-items:center;gap:var(--sp-1);padding:var(--sp-2) var(--sp-3);border-top:1px solid var(--bdr)}
@@ -4778,7 +4777,6 @@ function _renderSavedAgendaHTML(){
     .filter(Boolean)
     .filter((f,i,arr)=>arr.findIndex(x=>x.title===f.title)===i);
   const upcoming=all.filter(s=>!screeningPassed(s)&&!watched.has(s._title));
-  const todayItems=upcoming.filter(s=>isToday(s.day));
   const futureItems=upcoming.filter(s=>!isToday(s.day));
   const byDay={};
   futureItems.forEach(s=>{if(!byDay[s.day])byDay[s.day]=[];byDay[s.day].push(s);});
@@ -4873,9 +4871,6 @@ function _renderSavedAgendaHTML(){
     </div>`;
   }
 
-  if(todayItems.length){
-    html+=`<div class="today-banner">Hoy — Funciones pendientes</div>`;
-  }
 
   if(miPlanViewMode==='list'){
     html+=renderMiPlanList(all);
