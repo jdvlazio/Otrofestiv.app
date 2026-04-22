@@ -2215,7 +2215,6 @@ function _buildPosterSVG(o){
 }
 function makeProgramPoster(title, duration, section){
   // Limpiar prefijos redundantes del título
-  // "Cortos: Familia 12+" → "Familia 12+"
   let t=title;
   t=t.replace(/^Cortos:\s*/i,'');
   t=t.replace(/^Prog\.\s*de\s*Cortos\s*[—-]\s*/i,'');
@@ -2223,11 +2222,13 @@ function makeProgramPoster(title, duration, section){
 
   const festName=((FESTIVAL_CONFIG&&FESTIVAL_CONFIG[_activeFestId])||Object.values(FESTIVAL_CONFIG||{})[0]||{}).shortName||'FESTIVAL';
 
-  // Detectar si es competencia o programa desde la sección
+  // Detectar tipo desde la sección
   const sec=(section||'').toLowerCase();
-  const isComp=sec.includes('comp') || sec.includes('competencia');
+  const isComp=sec.includes('comp')||sec.includes('competencia');
+
+  // Línea 1 / Línea 2 — máx ~15 chars cada una para caber en 120px
   const l1=isComp?'COMPETENCIA':'PROGRAMA';
-  const l2='DE CORTOMETRAJES';
+  const l2='CORTOMETRAJES';
 
   return _buildPosterSVG({
     hc:'#3A8E8E',sep:'#1C5A5A',ht:'#051A1A',
