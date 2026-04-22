@@ -2299,6 +2299,33 @@ function getPosterSrc(title, isCortos, section){
 }
 
 // ═══════════════════════════════════════════════════════════════
+// FUENTE ÚNICA DE VERDAD — getFilmPoster(f)
+// ───────────────────────────────────────────────────────────────
+// Recibe el objeto film completo. Devuelve siempre el poster
+// correcto según el tipo. Nunca tomar esta decisión en otro lugar.
+//
+// TIPOS Y REGLAS:
+//   f.type === 'event'   → poster ámbar generativo
+//   f.is_cortos === true → poster real si existe, teal generativo si no
+//   corto individual     → getPosterSrc(title, true) — busca en SHORT_IMGS
+//   película             → poster real si existe, null si no
+//
+// USO: getFilmPoster(f) en TODOS los contextos — grilla, card, lista, Mi Plan
+// ═══════════════════════════════════════════════════════════════
+function getFilmPoster(f){
+  if(!f) return null;
+  if(f.type==='event') return makeEventPoster(f.title,f.duration);
+  if(f.is_cortos) return getPosterSrc(f.title,true)||makeProgramPoster(f.title,f.duration,f.section);
+  return getPosterSrc(f.title,false)||null;
+}
+
+// Para cortos individuales dentro de un film_list (no tienen objeto film completo)
+function getCortoItemPoster(item){
+  if(!item) return null;
+  return getCortoItemPoster(item);
+}
+
+// ═══════════════════════════════════════════════════════════════
 // 2 · SISTEMA DE ÍCONOS
 //     LB_SVG (Letterboxd), ICONS (Lucide)
 // ═══════════════════════════════════════════════════════════════
@@ -3886,7 +3913,7 @@ function renderPrioStrip(){
     </div>`;
   const chips=[...prioritized].map(t=>{
     const f=FILMS.find(fi=>fi.title===t);
-    const p=f?.is_cortos?(getPosterSrc(t,true)||makeProgramPoster(t)):getPosterSrc(t,false);
+    const p=getFilmPoster(f);
     const _safeChipT=t.replace(/'/g,"\'");
     const img=p?`<img class="prio-chip-poster" src="${p}" loading="eager" style="object-fit:cover;cursor:pointer" onclick="event.stopPropagation();openPelSheet('${_safeChipT}')" onerror="this.outerHTML='<div class=prio-chip-ph>🎬</div>'" alt="">`:`<div class="prio-chip-ph">${ICONS.star}</div>`;
     const{displayTitle,progSuffix}=parseProgramTitle(t);
@@ -3915,7 +3942,7 @@ function renderFilmListHTML(){
     const f=FILMS.find(fi=>fi.title===t);
     const hasFuture=FILMS.some(fi=>fi.title===t&&!screeningPassed(fi));
     const FICCI_POSTER_AG='https://ficcifestival.com/sites/default/files/2026-02/logo-ficci65_2.png';
-    const posterSrc=f?(f.is_cortos?(getPosterSrc(t,true)||makeProgramPoster(t)):getPosterSrc(t,false)):null;
+    const posterSrc=f?(getFilmPoster(f)):null;
     const posterHtml=posterSrc?`<img class="ag-fi-poster" src="${posterSrc}" loading="eager" style="object-fit:cover" onerror="this.outerHTML='<div class=ag-fi-poster-ph>🎬</div>'" alt="">`:`<div class="ag-fi-poster-ph">🎬</div>`;
     const isPrio=prioritized.has(t);
     const safeT=t.replace(/"/g,'&quot;');
@@ -3987,7 +4014,7 @@ function renderFilmListHTML(){
     const _sortedW=[...watchedList].sort((a,b)=>(filmRatings[b]||0)-(filmRatings[a]||0));
     html+=`<div class="ag-film-grid">${_sortedW.map(t=>{
       const f=FILMS.find(fi=>fi.title===t);
-      const posterSrc=f?(f.is_cortos?(getPosterSrc(t,true)||makeProgramPoster(t)):getPosterSrc(t,false)):null;
+      const posterSrc=f?(getFilmPoster(f)):null;
       const _yvOp=festivalEnded()?'':';opacity:.55';
       const posterHtml=posterSrc?`<img class="ag-fi-poster" src="${posterSrc}" loading="eager" style="object-fit:cover${_yvOp}" onerror="this.outerHTML='<div class=ag-fi-poster-ph>🎬</div>'" alt="">`:`<div class="ag-fi-poster-ph" style="opacity:${festivalEnded()?1:.55}">🎬</div>`;
       const safeT=t.replace(/"/g,'&quot;');
@@ -4533,7 +4560,7 @@ function renderContextualHeader(){
       const f=FILMS.find(fi=>fi.title===t);
       const r=filmRatings[t];
       const{displayTitle:dt}=parseProgramTitle(t);
-      const src=f?.is_cortos?makeProgramPoster(t):(getPosterSrc(t,false)||'');
+      const src=getFilmPoster(f)||'';
       const safeT=t.replace(/'/g,"\'");
       const stars=r?starsText(r):'';
       // Posters grandes, plena opacidad — pensado para screenshot
@@ -4581,7 +4608,7 @@ function renderContextualHeader(){
     const prioHtml=prios.map(({t,f})=>{
       const{displayTitle:dt}=parseProgramTitle(t);
       const short=dt.length>18?dt.slice(0,16)+'…':dt;
-      const src=f.is_cortos?makeProgramPoster(t):(getPosterSrc(t,false)||'');
+      const src=getFilmPoster(f)||'';
       return`<div class="ctx-prio-chip">
         ${src?`<img class="ctx-prio-thumb" src="${src}" onerror="this.style.opacity=0" alt="">`:
               `<div class="ctx-prio-thumb"></div>`}
@@ -4607,7 +4634,7 @@ function renderContextualHeader(){
     const{next,minsUntil,isNow}=ph;
     const{displayTitle:dt}=parseProgramTitle(next._title||'');
     const vc=vcfg(next.venue);
-    const src=next.is_cortos?makeProgramPoster(next._title||''):(getPosterSrc(next._title||'',false)||'');
+    const src=getFilmPoster(next)||'';
     const badge=isNow
       ?`<span class="ctx-next-badge" style="background:var(--green);color:var(--white)">Ahora</span>`
       :`<span class="ctx-next-badge">En ${minsUntil} min</span>`;
@@ -4684,7 +4711,7 @@ function renderContextualHeader(){
     const filmRows=todayScreenings.filter(s=>watched.has(s._title)).map(s=>{
       const{displayTitle:dt}=parseProgramTitle(s._title||'');
       const f=FILMS.find(fi=>fi.title===s._title);
-      const src=f?.is_cortos?makeProgramPoster(s._title||''):(getPosterSrc(s._title||'',false)||'');
+      const src=getFilmPoster(f)||'';
       const r=filmRatings[s._title];
       const safeT=(s._title||'').replace(/'/g,"\'");
       const stars=r?starsText(r):'';
@@ -5371,7 +5398,7 @@ function openPostViewRating(title, day, time, venue, duration){
   // Poster
   const poster=document.getElementById('pv-poster');
   if(poster){
-    const src=f?.is_cortos?makeProgramPoster(title):(getPosterSrc(title,false)||'');
+    const src=getFilmPoster(f)||'';
     poster.src=src;
     poster.onerror=()=>{poster.style.opacity='0';};
   }
@@ -5468,8 +5495,8 @@ function openConflictSheet(incomingTitle, incomingScreen, existingEntry){
   // Pósters
   const inF=FILMS.find(f=>f.title===incomingTitle&&f.day===incomingScreen.day&&f.time===incomingScreen.time);
   const exF=FILMS.find(f=>f.title===(existingEntry._title||''));
-  const inPoster=inF?.is_cortos?makeProgramPoster(incomingTitle):(getPosterSrc(incomingTitle,false)||'');
-  const exPoster=exF?.is_cortos?makeProgramPoster(existingEntry._title||''):(getPosterSrc(existingEntry._title||'',false)||'');
+  const inPoster=getFilmPoster(inF)||'';
+  const exPoster=getFilmPoster(exF)||'';
 
   const ip=document.getElementById('cs-incoming-poster');
   const ep=document.getElementById('cs-existing-poster');
@@ -5530,7 +5557,7 @@ function openWLAdd(title){
   // Poster
   const poster=document.getElementById('wl-add-poster');
   if(poster){
-    const src=f.is_cortos?makeProgramPoster(title):(getPosterSrc(title,false)||makeProgramPoster(title));
+    const src=getFilmPoster(f)||'';
     poster.src=src;
     poster.onerror=()=>{poster.style.opacity='0';};
   }
@@ -5606,7 +5633,7 @@ function openPrioLimit(newTitle){
       const{displayTitle:dt}=parseProgramTitle(t);
       const f=FILMS.find(fi=>fi.title===t&&!screeningPassed(fi));
       const when=f?`${DAY_A[f.day]||f.day} · ${f.time}`:'';
-      const poster=t===dt?(getPosterSrc(t,false)||''):makeProgramPoster(t);
+      const poster=getFilmPoster(f)||'';
       const safeSwap=t.replace(/'/g,"\'");
       const safeNew=newTitle.replace(/'/g,"\'");
       return`<div class="prio-limit-item">
@@ -5952,7 +5979,7 @@ function onCartaSearch(){
 
   res.innerHTML=matches.map(f=>{
     const{displayTitle,progSuffix}=parseProgramTitle(f.title);
-    const poster=f._isCortoItem?(getPosterSrc(f.title,false)||makeProgramPoster(f.title)):(f.is_cortos?makeProgramPoster(f.title,f.duration):(getPosterSrc(f.title,false)||''));
+    const poster=getFilmPoster(f)||'';
     const safeT=f.title.replace(/'/g,"\'");
     const safeC=(f.country||'').replace(/'/g,"\'");
     const safeD=(f.duration||'').replace(/'/g,"\'");
@@ -6444,7 +6471,7 @@ function openPelSheet(title){
   if(!entry) return;
   const{film:f,screenings}=entry;
   const inWL=watchlist.has(f.title),inW=watched.has(f.title),inPrio=prioritized.has(f.title);
-  const posterSrc=f.type==='event'?makeEventPoster(f.title,f.duration):(f.is_cortos?makeProgramPoster(f.title,f.duration,f.section):getPosterSrc(f.title,false));
+  const posterSrc=getFilmPoster(f);
   const posterHtml=posterSrc
     ?`<img class="pel-sheet-poster" src="${posterSrc}" loading="lazy" onerror="this.outerHTML='<div class=pel-sheet-poster-ph>🎬</div>'" alt="">`
     :`<div class="pel-sheet-poster-ph">🎬</div>`;
@@ -6470,7 +6497,7 @@ function openPelSheet(title){
   let cortosHtml='';
   if(f.is_cortos&&f.film_list?.length){
     const cortoItems=f.film_list.map((item,n)=>{
-      const thumb=getPosterSrc(item.title,true)||null;
+      const thumb=getCortoItemPoster(item);
       const thumbHtml=`<img src="${thumb}" loading="lazy" class="lb-poster" onerror="this.style.opacity=0" alt="">`;
       const r=filmRatings[item.title]||0;
       const safeCorto=item.title.replace(/'/g,"\'");
@@ -6669,7 +6696,7 @@ function openCortoSheet(title, country, duration, section, flags, director, genr
   const ctry=country||(richItem&&richItem.country)||'';
   const dur=duration||(richItem&&richItem.duration)||'';
   const flgs=flags||countryToFlags(ctry)||'🌐';
-  const posterUrl=getPosterSrc(title,true)||null;
+  const posterUrl=getCortoItemPoster({title});
   const posterHtml=posterUrl
     ?`<img class="pel-sheet-poster" src="${posterUrl}" loading="lazy" onerror="this.outerHTML='<div class=pel-sheet-poster-ph>🎬</div>'" alt="">`
     :`<div class="pel-sheet-poster-ph">🎬</div>`;
@@ -6734,7 +6761,7 @@ function renderMiPlanList(schedule){
       ${byDay[day].map(s=>{
         const{displayTitle:dt}=parseProgramTitle(s._title||'');
         const vc=vcfg(s.venue);
-        const src=s.is_cortos?makeProgramPoster(s._title||''):(getPosterSrc(s._title||'',false)||'');
+        const src=getFilmPoster(FILMS.find(fi=>fi.title===s._title&&fi.day===s.day))||'';
         const safeT=(s._title||'').replace(/'/g,"\'");
         const isW=watched.has(s._title);
         const isPassed=screeningPassed(s);
@@ -6972,7 +6999,7 @@ function renderProgramaList(){
       const safeT=f.title.replace(/'/g,"\'");
       const{displayTitle:dt}=parseProgramTitle(f.title);
       const vc=vcfg(f.venue);
-      const src=f.type==='event'?makeEventPoster(f.title,f.duration):(f.is_cortos?makeProgramPoster(f.title,f.duration):(getPosterSrc(f.title,false)||''));
+      const src=getFilmPoster(f)||'';
       const nowBadge=isNow?`<span style="font-size:var(--t-xs);font-weight:var(--w-display);color:var(--green);background:var(--green-10);border:1px solid var(--green-30);border-radius:var(--r);padding:2px 6px;margin-left:4px">AHORA</span>`:'';
       const pastStyle=passed&&!isNow&&!festivalEnded()?'opacity:.45':'';
       return`<div class="plist-item" style="${pastStyle}" onclick="openPelSheet('${safeT}')">
@@ -7051,7 +7078,7 @@ function _renderExploreLista(){
     const isEvent=f.type==='event';
     const safeT=f.title.replace(/\'/g,"\\'");
     const{displayTitle:dt}=parseProgramTitle(f.title);
-    const src=isEvent?'':(f.is_cortos?makeProgramPoster(f.title,f.duration):(getPosterSrc(f.title,false)||''));
+    const src=isEvent?'':getFilmPoster(f)||'';
     const allPast=screenings.every(s=>screeningPassed(s));
     const days=[...new Set(screenings.map(s=>DAY_SHORT[s.day]||s.day))].join(' · ');
     if(isEvent) return`<div class="plist-item plist-event" style="${allPast?'opacity:.35':''}" onclick="openPelSheet('${safeT}')">
@@ -7141,7 +7168,7 @@ function renderPeliculaView(){
     const inWL=watchlist.has(f.title);
     const inW=watched.has(f.title);
     const allPast=screenings.every(s=>screeningPassed(s));
-    const posterSrc=f.type==='event'?makeEventPoster(f.title,f.duration):(f.is_cortos?makeProgramPoster(f.title):(getPosterSrc(f.title,false)||null));
+    const posterSrc=getFilmPoster(f);
     const safeT=f.title.replace(/'/g,"\'");
     const{displayTitle}=parseProgramTitle(f.title);
     const progBadge='';//REMOVED: no count badge
@@ -7188,7 +7215,7 @@ function render(){
     const inWL=watchlist.has(f.title),inW=watched.has(f.title);
     const isNow=isNowShowing(f);
     const safeT=f.title.replace(/'/g,"\'");
-    const posterSrc=isEvent?makeEventPoster(f.title,f.duration):isProg?(getPosterSrc(f.title,true)||makeProgramPoster(f.title,null,f.section)):(getPosterSrc(f.title,false)||null);
+    const posterSrc=getFilmPoster(f);
     const posterImg=posterSrc
       ?`<img src="${posterSrc}" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block" onerror="this.style.opacity=0" alt="">`
       :``;
