@@ -3271,7 +3271,14 @@ function toggleWL(title,e){
   }
   else{
     watchlist.add(title);watched.delete(title);
-    if(activeMNav==='mnav-cartelera'||activeMNav==='mnav-seleccion'){
+    // ── CASO 3: todas las funciones en horario no disponible ──
+    const _allScreens=FILMS.filter(f=>f.title===title&&!screeningPassed(f));
+    const _allBlocked=_allScreens.length>0&&_allScreens.every(s=>isScreeningBlocked(s));
+    if(_allBlocked){
+      const{displayTitle}=parseProgramTitle(title);
+      const _short=displayTitle.length>28?displayTitle.slice(0,26)+'…':displayTitle;
+      setTimeout(()=>showToast(`"${_short}" cae en horarios no disponibles — no podrá incluirse en el plan`,'warn',5000),300);
+    } else if(activeMNav==='mnav-cartelera'||activeMNav==='mnav-seleccion'){
       showActionToast(`${ICONS.heartFill} En Intereses`,`${ICONS.star} Priorizar`,()=>togglePriority(title));
     } else {
       showToast(`${ICONS.heartFill} En Intereses`,'info');
@@ -3531,6 +3538,22 @@ function checkPlanConflictsWithBlock(day, fromStr, toStr){
     return sStart<bTo&&sEnd>bFrom;
   });
 }
+// ── CASO 2: al quitar un bloque de no disponible, ¿caben más títulos? ──
+function _checkRecalcOpportunity(){
+  if(!savedAgenda||!savedAgenda.schedule.length) return;
+  const planTitles=new Set(savedAgenda.schedule.map(s=>s._title));
+  const candidates=[...watchlist].filter(t=>!planTitles.has(t)&&!watched.has(t));
+  const hasOpportunity=candidates.some(t=>{
+    const screens=FILMS.filter(f=>f.title===t&&!screeningPassed(f));
+    return screens.length&&screens.some(s=>!isScreeningBlocked(s));
+  });
+  if(hasOpportunity){
+    showActionToast('Horario liberado — podrían caber más títulos','Recalcular',()=>{
+      switchMainNav('mnav-planner');showAgView();setTimeout(runCalc,300);
+    },5000);
+  }
+}
+
 function _removePlanItem(title){
   if(!savedAgenda) return;
   const removed=savedAgenda.schedule.find(s=>s._title===title);
@@ -3579,6 +3602,7 @@ function toggleFullDay(day){
   if(isFullDayBlocked(day)){
     availability[day].blocks=[];
     cachedResult=null;saveAV();renderAvBlocks();invalidateCalcResult();
+    _checkRecalcOpportunity();
     return;
   }
   const _conflicts=checkPlanConflictsWithBlock(day,'00:00','23:59');
@@ -3610,6 +3634,7 @@ function addBlock(day){
 function removeBlock(day,fromVal,toVal){
   availability[day].blocks=availability[day].blocks.filter(b=>!(b.from===fromVal&&b.to===toVal));
   cachedResult=null;saveAV();renderAvBlocks();invalidateCalcResult();
+  _checkRecalcOpportunity();
 }
 function renderAvDay(day){
   const row=document.getElementById(`av-row-${day}`);if(!row) return;
@@ -3718,20 +3743,25 @@ function setAvType(type){
 function confirmAvBlock(){
   if(!_avSheetDay) return;
   if(_avSheetType==='full'){
-    // Usar toggleFullDay existente
-    if(!isFullDayBlocked(_avSheetDay)) toggleFullDay(_avSheetDay);
+    // toggleFullDay ya maneja conflictos internamente
+    closeAvSheet();
+    if(!isFullDayBlocked(_avSheetDay)) setTimeout(()=>toggleFullDay(_avSheetDay),50);
   } else {
     const from=document.getElementById('av-sheet-from')?.value||'09:00';
     const to=document.getElementById('av-sheet-to')?.value||'12:00';
     if(from>=to){showToast('La hora de inicio debe ser menor que la de fin','warn');return;}
-    // Usar addBlock existente
-    avAddOpen[_avSheetDay]=false;
-    const f=from,t=to;
-    if(availability[_avSheetDay].blocks.some(b=>b.from===f&&b.to===t)) return;
-    availability[_avSheetDay].blocks.push({from:f,to:t});
-    cachedResult=null;saveAV();renderAvBlocks();invalidateCalcResult();
+    if(availability[_avSheetDay].blocks.some(b=>b.from===from&&b.to===to)){closeAvSheet();return;}
+    // ── CASO 1: detectar conflictos con el plan antes de confirmar ──
+    const _conflicts=checkPlanConflictsWithBlock(_avSheetDay,from,to);
+    const _doAdd=()=>{
+      _conflicts.forEach(s=>_removePlanItem(s._title));
+      availability[_avSheetDay].blocks.push({from,to});
+      cachedResult=null;saveAV();renderAvBlocks();invalidateCalcResult();
+    };
+    closeAvSheet();
+    if(_conflicts.length) setTimeout(()=>showConflictModal(_conflicts,_doAdd),50);
+    else _doAdd();
   }
-  closeAvSheet();
 }
 
 function renderAvBlocks(){
