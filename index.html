@@ -7290,6 +7290,10 @@ function dismissSplash(){
   loadFestival(_splashSelectedFestId||'aff2026').catch(e=>console.error('Error init festival:',e));
 }
 // Inicializar Supabase al cargar la página
+// Capgo OTA — notifica que la app arrancó correctamente
+if(window.CapacitorUpdater){
+  window.CapacitorUpdater.notifyAppReady();
+}
 _sbInit();
 (function(){
   // Detecta el festival en curso por fecha. Prioridad:
