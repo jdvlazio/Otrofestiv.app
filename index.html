@@ -4073,16 +4073,7 @@ function parseProgramTitle(t){
 //      renderSimPanel, renderNextStrip, renderUnconfirmed
 // ═══════════════════════════════════════════════════════════════
 function renderPrioStrip(){
-  if(!prioritized.size) return `<div style="text-align:center;padding:var(--sp-5) var(--sp-5)">
-      <div style="font-size:var(--t-lg);margin-bottom:var(--sp-3)">${ICONS.star}</div>
-      <div style="font-weight:var(--w-bold);color:var(--white);margin-bottom:var(--sp-1)">Sin prioridades aún</div>
-      <div style="font-size:var(--t-sm);color:var(--gray);line-height:1.6;margin-bottom:16px">
-        Marca hasta ${PRIO_LIMIT} películas como ★ en Intereses para que el algoritmo las incluya primero.
-      </div>
-      <button onclick="switchMainNav('mnav-seleccion');showAgView()" style="background:var(--amber-10);border:1px solid var(--amber-30);color:var(--amber);font-family:var(--font);font-size:var(--t-sm);padding:8px 16px;border-radius:var(--r-pill);cursor:pointer">
-        Ir a Intereses
-      </button>
-    </div>`;
+  if(!prioritized.size) return '';
   const chips=[...prioritized].map(t=>{
     const f=FILMS.find(fi=>fi.title===t);
     const p=getFilmPoster(f);
@@ -4975,7 +4966,7 @@ function _renderSavedAgendaHTML(){
       <div style="font-size:var(--t-display);margin-bottom:12px">${ICONS.calendar}</div>
       <div style="font-weight:var(--w-bold);color:var(--white);margin-bottom:8px">Tu plan aparecerá aquí</div>
       <div style="font-size:var(--t-sm);color:var(--gray);line-height:1.6;margin-bottom:var(--sp-5);max-width:260px;margin-left:auto;margin-right:auto">
-        Añade películas a Intereses y genera opciones en Planear. El algoritmo hace el resto.
+        Añade películas a Intereses y genera opciones en Planear. Otrofestiv arma el resto.
       </div>
       <button onclick="switchMainNav('mnav-planner');showAgView()" style="background:var(--amber-10);border:1px solid var(--amber-30);color:var(--amber);font-family:var(--font);font-size:var(--t-sm);font-weight:var(--w-bold);padding:var(--sp-btn) var(--sp-5);border-radius:var(--r-pill);cursor:pointer">
         Ir a Planear
@@ -5507,7 +5498,7 @@ let cachedResult=null;
 
 function buildResultHTML(scenarios){
   if(!scenarios||!scenarios.length)
-    return`<div class="ag-calc-prompt">No hay combinaciones posibles. Ajusta disponibilidad o añade más películas.</div>`;
+    return`<div class="ag-calc-prompt">No hay combinaciones posibles. Ajusta la disponibilidad o añade más títulos.</div>`;
   const{currentIdx}=cachedResult;
   const sc=scenarios[currentIdx],n=scenarios.length;
   const pending=[...watchlist].filter(t=>!watched.has(t)&&FILMS.some(f=>f.title===t&&!screeningPassed(f)));
@@ -6048,8 +6039,8 @@ function invalidateCalcResult(){
   const res=document.getElementById('ag-result');
   const pending=[...watchlist].filter(t=>!watched.has(t)&&FILMS.some(f=>f.title===t&&!screeningPassed(f)));
   res.innerHTML=pending.length
-    ?`<div class="ag-calc-prompt">Configura tu disponibilidad<br>y toca <strong>Calcular opciones</strong>.</div>`
-    :`<div class="ag-calc-prompt">Añade películas en <strong>Intereses</strong> para poder calcular opciones.</div>`;
+    ?`<div class="ag-calc-prompt">Toca <strong>Calcular opciones</strong> para ver tu plan.</div>`
+    :`<div class="ag-calc-prompt">Añade lo que no quieres perderte en <strong>Intereses</strong>.</div>`;
 }
 function runCalc(){
   if(festivalEnded()){showToast('El festival ya terminó','info');return;}
@@ -6155,13 +6146,36 @@ function renderAgenda(){
       return;
     }
     const _progressHtml=(!savedAgenda||!savedAgenda.schedule||!savedAgenda.schedule.length)?renderFlowProgress('planner'):'';
-    // El indicador desaparece cuando hay plan guardado
     const pending=[...watchlist].filter(t=>!watched.has(t)&&FILMS.some(f=>f.title===t&&!screeningPassed(f)));
+
+    // ── Estado A: sin Intereses — pantalla simple, no mostrar herramienta ──
+    if(!pending.length&&!cachedResult){
+      view.innerHTML=`${_progressHtml}
+        <div class="ag-section">
+          <div class="ag-search-wrap">
+            <div class="ag-search-field">
+              <span class="ag-search-ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
+              <input type="text" id="ag-search-input" class="ag-search"
+                placeholder="Buscar y añadir a Intereses…"
+                oninput="onSearchInput()" onblur="closeSearch()" autocomplete="off" autocapitalize="off">
+            </div>
+            <div id="ag-search-results" class="ag-search-results"></div>
+          </div>
+          <div style="text-align:center;padding:var(--sp-6) var(--sp-4) var(--sp-5)">
+            <div style="font-size:32px;margin-bottom:var(--sp-3)">${ICONS.calendar}</div>
+            <div style="font-size:var(--t-md);font-weight:var(--w-bold);color:var(--white);margin-bottom:var(--sp-2)">Primero, elige tus títulos</div>
+            <div style="font-size:var(--t-base);color:var(--gray);line-height:1.6;margin-bottom:var(--sp-2)">Añade lo que no quieres perderte.</div>
+            <div style="font-size:var(--t-base);color:var(--gray);line-height:1.6;margin-bottom:var(--sp-5)">Cuando tengas tu lista, armamos tu plan.</div>
+            <button onclick="switchMainNav('mnav-seleccion');showAgView()" style="background:var(--amber);border:none;color:#000;font-family:var(--font);font-size:var(--t-base);font-weight:var(--w-bold);padding:var(--sp-btn) var(--sp-6);border-radius:var(--r-pill);cursor:pointer">Ir a Intereses</button>
+          </div>
+        </div>`;
+      return;
+    }
+
+    // ── Estado B: con Intereses — herramienta completa ──
     const resultContent=cachedResult
       ?buildResultHTML(cachedResult.scenarios)
-      :pending.length
-        ?`<div class="ag-calc-prompt">Configura tu disponibilidad<br>y toca <strong>Calcular opciones</strong>.</div>`
-        :`<div class="ag-calc-prompt">Añade películas en <strong>Intereses</strong> para poder calcular opciones.</div>`;
+      :`<div class="ag-calc-prompt">Toca <strong>Calcular opciones</strong> para ver tu plan.</div>`;
     view.innerHTML=`${_progressHtml}
       <div class="ag-section">
         <div class="ag-search-wrap">
@@ -6174,13 +6188,15 @@ function renderAgenda(){
           <div id="ag-search-results" class="ag-search-results"></div>
         </div>
         ${renderPrioStrip()}
-        <div class="sec-hdr">${ICONS.clock} Disponibilidad</div>
-        <div style="font-size:var(--t-base);color:var(--gray);margin-bottom:var(--sp-3);line-height:1.5">Marca cu&aacute;ndo est&aacute;s ocupado. El algoritmo lo tendr&aacute; en cuenta al planear.</div>
-        <div id="av-blocks-list"></div>
-        <button class="av-add-unavail" onclick="openAvSheet()">${ICONS.plus} No disponible</button>
-        <button class="av-calc-btn" onclick="runCalc()" ${!pending.length?'disabled':''}>
+        <button class="av-calc-btn" onclick="runCalc()">
           Calcular opciones
         </button>
+        <div style="margin-top:var(--sp-4)">
+          <div class="sec-hdr" style="margin-bottom:var(--sp-2)">${ICONS.clock} Disponibilidad <span style="font-size:var(--t-xs);color:var(--gray);font-weight:var(--w-regular);letter-spacing:0;text-transform:none;margin-left:4px">opcional</span></div>
+          <div style="font-size:var(--t-sm);color:var(--gray2);margin-bottom:var(--sp-3);line-height:1.5">Otrofestiv respetará esos horarios al armar tu plan.</div>
+          <div id="av-blocks-list"></div>
+          <button class="av-add-unavail" onclick="openAvSheet()">${ICONS.plus} No disponible</button>
+        </div>
       </div>
       <div class="ag-section">
         <div class="sec-hdr">${ICONS.switch} Opciones</div>
