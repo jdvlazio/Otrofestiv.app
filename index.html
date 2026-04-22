@@ -932,7 +932,8 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .ya-vistas-bar{display:flex;align-items:center;padding:var(--sp-2) 0;margin-bottom:var(--sp-1)}
 .ya-vistas-lbl{font-size:var(--t-base);font-weight:var(--w-bold);color:var(--gray2);display:flex;align-items:center;gap:var(--sp-1)}
 /* Vista Intereses — view switch (estilos base en sistema unificado arriba) */
-.ag-film-item{position:relative;border-radius:var(--r-md);overflow:hidden;background:var(--card-a);border:1px solid var(--bdr);cursor:pointer}
+.ag-film-item{position:relative;border-radius:var(--r-md);overflow:hidden;background:var(--card-a);border:1px solid var(--bdr);cursor:pointer;transition:opacity var(--tr-smooth)}
+.ag-film-item:active{opacity:.85}
 .ag-film-item.watched-item{opacity:.55}
 .ag-fi-poster{width:100%;aspect-ratio:2/3;object-fit:cover;display:block;background:var(--surf-2)}
 .ag-fi-poster-ph{width:100%;aspect-ratio:2/3;background:var(--surf-2);display:flex;align-items:center;justify-content:center;font-size:var(--t-lg);opacity:.3}
