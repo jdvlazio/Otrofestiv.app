@@ -1601,8 +1601,10 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 #otrofestiv-splash{
   position:fixed;inset:0;background:var(--bg);
   display:flex;flex-direction:column;
-  align-items:center;justify-content:center;
-  z-index:99999;padding:32px;text-align:center;
+  align-items:center;justify-content:space-between;
+  z-index:99999;
+  padding:calc(env(safe-area-inset-top) + 64px) 32px calc(env(safe-area-inset-bottom) + 48px);
+  text-align:center;
   transition:opacity .5s ease, visibility .5s ease;
 }
 #otrofestiv-splash.fade-out{opacity:0;visibility:hidden;pointer-events:none}
@@ -1612,6 +1614,8 @@ html.splash-skip #otrofestiv-splash{display:none}
   font-size:var(--t-lg);letter-spacing:-.03em;color:var(--white);
   font-weight:var(--w-display);line-height:1;margin-bottom:var(--sp-5);
 }
+.splash-brand{display:flex;flex-direction:column;align-items:center}
+.splash-action{width:100%;display:flex;flex-direction:column;align-items:center}
 .splash-wordmark span{color:var(--amber)}
 .splash-tagline{text-align:center;margin-bottom:var(--sp-6)}
 .splash-tagline-line{
@@ -1864,11 +1868,14 @@ html.splash-skip #otrofestiv-splash{display:none}
 <body>
 <!-- Splash siempre visible — se pre-selecciona el festival en curso por fecha. -->
 <div id="otrofestiv-splash" role="dialog" aria-label="Bienvenida" aria-modal="true">
-  <div class="splash-wordmark">Otro<span>festiv</span></div>
-  <div class="splash-tagline">
-    <div class="splash-tagline-line">Más de lo que</div>
-    <div class="splash-tagline-line" style="color:var(--white)">crees <span>posible</span><span>.</span></div>
+  <div class="splash-brand">
+    <div class="splash-wordmark">Otro<span>festiv</span></div>
+    <div class="splash-tagline">
+      <div class="splash-tagline-line">Más de lo que</div>
+      <div class="splash-tagline-line" style="color:var(--white)">crees <span>posible</span><span>.</span></div>
+    </div>
   </div>
+  <div class="splash-action">
   <div class="splash-selector">
     <div class="splash-fest-label">¿A qué festival vas?</div>
     <button class="splash-sel-btn" id="splash-sel-btn" onclick="toggleSplashDropdown()" aria-haspopup="listbox">
@@ -1898,6 +1905,7 @@ html.splash-skip #otrofestiv-splash{display:none}
     </div>
   </div>
   <button class="splash-enter-btn" onclick="dismissSplash()">Entrar</button>
+  </div>
 </div>
 
 
