@@ -432,6 +432,8 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 /* ── Toast ── */
 .prio-toast{position:fixed;top:70px;left:50%;transform:translateX(-50%);background:var(--surf-2);border:1px solid var(--bdr);color:var(--white);font-size:var(--t-base);padding:var(--sp-3) var(--sp-5);border-radius:var(--r-md);z-index:9999;transition:opacity var(--tr-smooth);max-width:320px;width:calc(100% - 32px);text-align:center;pointer-events:none;line-height:1.5}
 .prio-toast.warn{border-color:var(--yellow-12);color:var(--yellow)}
+.prio-toast.action{pointer-events:all;display:flex;align-items:center;justify-content:center;gap:var(--sp-3);text-align:left}
+.toast-action-btn{background:none;border:none;color:var(--amber);font-family:var(--font);font-size:var(--t-base);font-weight:var(--w-bold);cursor:pointer;padding:0;white-space:nowrap;flex-shrink:0}
 
 /* ── Badges ── */
 .apertura-badge{display:inline-block;font-size:var(--t-xs);background:var(--orange);color:var(--white);font-weight:var(--w-bold);letter-spacing:1px;padding:2px var(--sp-2);border-radius:var(--r-md);font-family:var(--font);margin-right:var(--sp-2);vertical-align:middle;flex-shrink:0}
@@ -3260,7 +3262,7 @@ function toggleWL(title,e){
   else{
     watchlist.add(title);watched.delete(title);
     if(activeMNav==='mnav-cartelera'||activeMNav==='mnav-seleccion'){
-      openWLAdd(title);
+      showActionToast(`${ICONS.heartFill} En Intereses`,`${ICONS.star} Priorizar`,()=>togglePriority(title));
     } else {
       showToast(`${ICONS.heartFill} En Intereses`,'info');
     }
@@ -5615,8 +5617,18 @@ function togglePriority(title,cost){
 function showToast(msg,type='info',duration=2800){
   let t=document.getElementById('prio-toast');
   if(!t){t=document.createElement('div');t.id='prio-toast';document.body.appendChild(t);}
-  t.className='prio-toast '+type;t.innerHTML=msg;t.style.opacity='1';
+  t.className='prio-toast '+type;t.innerHTML=msg;t.style.opacity='1';t.style.pointerEvents='none';
   clearTimeout(t._to);t._to=setTimeout(()=>{t.style.opacity='0';},duration);
+}
+let _toastActionFn=null;
+function showActionToast(msg,actionLabel,actionFn,duration=4000){
+  _toastActionFn=actionFn;
+  let t=document.getElementById('prio-toast');
+  if(!t){t=document.createElement('div');t.id='prio-toast';document.body.appendChild(t);}
+  t.className='prio-toast action';
+  t.innerHTML=`<span>${msg}</span><button class="toast-action-btn" onclick="if(_toastActionFn){_toastActionFn();_toastActionFn=null;showToast('','info',100)}">${actionLabel}</button>`;
+  t.style.opacity='1';t.style.pointerEvents='all';
+  clearTimeout(t._to);t._to=setTimeout(()=>{t.style.opacity='0';t.style.pointerEvents='none';},duration);
 }
 
 // ── POST-SELECTION SQUEEZE ──
@@ -6711,7 +6723,7 @@ function togglePelWL(title,e){
   // Abrir WLAdd solo al AÑADIR — no al quitar (modal async deja wasInWL=true)
   if(!wasInWL&&inWL&&(activeMNav==='mnav-cartelera'||activeMNav==='mnav-seleccion')){
     closePelSheet();
-    setTimeout(()=>openWLAdd(title),150);
+    showActionToast(`${ICONS.heartFill} En Intereses`,`${ICONS.star} Priorizar`,()=>togglePriority(title));
   }
 }
 function filterByVenue(venue){
