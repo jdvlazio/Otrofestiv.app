@@ -2166,7 +2166,27 @@ let CUSTOM_POSTERS={};
 const TMDB_IMG="https://image.tmdb.org/t/p/w185";
 const FICCI_POSTER_URL='https://ficcifestival.com/sites/default/files/2026-02/logo-ficci65_2.png';
 
-/* ── POSTER GENERATIVO — identidad Otrofestiv para programas ────────── */
+/* ── POSTER GENERATIVO — identidad Otrofestiv para programas ──────────
+   REGLA CANÓNICA — nunca romper sin justificación explícita:
+
+   PRIORIDAD DE POSTER (en todo contexto — grilla, card, Mi Plan):
+     1. Poster real (CUSTOM_POSTERS > SHORT_IMGS > POSTERS/TMDB)
+     2. Poster generativo (solo si no hay real)
+     3. Placeholder vacío (surf-2) — nunca negro
+
+   TIPOS DE POSTER GENERATIVO — mismo _buildPosterSVG, misma plantilla:
+     · Competencia cortos → header teal  · l1:'COMPETENCIA' · l2:'CORTOMETRAJES'
+     · Programa cortos   → header teal  · l1:'PROGRAMA'    · l2:'CORTOMETRAJES'
+     · Evento/Industry   → header ámbar · l1:'INDUSTRY'    · l2:'DAYS'
+
+   REGLA DE DETECCIÓN:
+     f.type === 'event'  → makeEventPoster()
+     f.is_cortos === true → getPosterSrc(title,true) || makeProgramPoster(title,dur,section)
+     resto               → getPosterSrc(title,false) || null
+
+   ONERROR: siempre this.remove() — nunca this.style.opacity=0
+   TÍTULO: limpiar prefijos redundantes en makeProgramPoster()
+────────────────────────────────────────────────────────────────────── */
 function _buildPosterSVG(o){
   // Unified 120×180 poster layout for events and cortos programs.
   // Identical internal distribution — only colors and header labels differ.
