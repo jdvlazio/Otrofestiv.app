@@ -2264,17 +2264,10 @@ let _POSTERS_N = Object.fromEntries(Object.entries(POSTERS).map(([k,v])=>[normKe
 
 function getPosterSrc(title, isCortos, section){
   const t = normKey(title);
-  // 1. Custom manual
   if(_CUSTOM_N[t]) return _CUSTOM_N[t];
-  // 2. Short film — FICCI URL o TMDB directo
   if(isCortos && _SHORT_N[t]) return _SHORT_N[t];
-  // 3. Feature/corto — TMDB path
   if(_POSTERS_N[t]) return _POSTERS_N[t].startsWith('http')?_POSTERS_N[t]:TMDB_IMG+_POSTERS_N[t];
-  // 4. Fallback FICCI para programas/cortos sin poster — buscar sección en FILMS si no se pasó
-  if(isCortos){
-    const _sec=section||(FILMS.find(f=>f.title===title)?.section)||'';
-    return makeProgramPoster(title, null, _sec);
-  }
+  if(isCortos) return null;
   return null;
 }
 
