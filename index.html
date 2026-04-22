@@ -2213,17 +2213,18 @@ function _buildPosterSVG(o){
   // Centre title+duration block inside inner box
   const dH=o.duration?19:0;
   const bH=ls.length*LD+dH;
-  const sY=Math.round((VH-50-bH)/2)+52;
+  const boxCenter=BY+Math.round(BH/2);
+  const sY=boxCenter-Math.round(bH/2)+LD-2;
 
   const tl=ls.map((l,i)=>`<text x="${VW/2}" y="${sY+i*LD}" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" font-weight="700" fill="#F0EBE0">${l}</text>`).join('');
-  const dT=o.duration?`<text x="${VW/2}" y="${sY+ls.length*LD+9}" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="8" font-weight="500" fill="${o.accent}">${o.duration}</text>`:'';
+  const dT=o.duration?`<text x="${VW/2}" y="${sY+ls.length*LD+8}" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="8" font-weight="500" fill="${o.accent}">${o.duration}</text>`:'';
 
   const svg=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${VW} ${VH}">
     <rect width="${VW}" height="${VH}" fill="#1E1B17"/>
     <rect x="0" y="0" width="${VW}" height="${HDR_H}" fill="${o.hc}"/>
     <rect x="0" y="${HDR_H}" width="${VW}" height="1" fill="${o.sep}"/>
-    <text x="${VW/2}" y="${HDR_Y1}" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="8" font-weight="700" fill="${o.ht}" letter-spacing="1.5">${o.l1}</text>
-    <text x="${VW/2}" y="${HDR_Y2}" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="8" font-weight="700" fill="${o.ht}" letter-spacing="1.5">${o.l2}</text>
+    <text x="${VW/2}" y="${HDR_Y1}" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="8" font-weight="700" fill="${o.ht}" letter-spacing="0.8">${o.l1}</text>
+    <text x="${VW/2}" y="${HDR_Y2}" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="8" font-weight="700" fill="${o.ht}" letter-spacing="0.8">${o.l2}</text>
     <rect x="${BX}" y="${BY}" width="${BW}" height="${BH}" rx="3" fill="${o.bf}" stroke="${o.bs}" stroke-width="1"/>
     ${tl}
     ${dT}
