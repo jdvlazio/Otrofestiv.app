@@ -7256,7 +7256,10 @@ async function loadFestival(id){
   // Set active day to today
   const _ts=simTodayStr();
   const _ni=DAY_KEYS.findIndex(d=>FESTIVAL_DATES[d]===_ts);
-  if(_ni>=0) activeDay=DAY_KEYS[_ni];
+  if(_ni>=0){
+    activeDay=DAY_KEYS[_ni];
+    programaSubMode='hoy'; // Durante el festival → ir directo a Hoy
+  }
   // Update fest-bar
   const _fn=document.querySelector('.hdr-fest-name');
   const _fd=document.querySelector('.hdr-fest-dates');
@@ -7269,10 +7272,10 @@ async function loadFestival(id){
   });
   // Persist choice
   localStorage.setItem('otrofestiv_festival',id);
-  // Render
+  // Render — defer un frame para evitar flash de contenido previo
   closeFestivalSheet();
   switchMainNav('mnav-cartelera');
-  showDayView();
+  requestAnimationFrame(()=>showDayView());
 }
 function dismissSplash(){
   const s=document.getElementById('otrofestiv-splash');
