@@ -4256,7 +4256,7 @@ function renderNextStrip(schedule){
       delayHtml=`<div class="delay-row">
         <span class="delay-lbl">+${delayMins} min</span>
         ${[10,15,20,30].map(m=>`<button class="delay-btn" onclick="setDelay('${safeT}','${item.day}','${item.time}',${m})" title="+${m} min">+${m}</button>`).join('')}
-        <button class="delay-btn" onclick="undoDelay('${safeT}','${item.day}','${item.time}')" title="Deshacer último">${ICONS.undo}</button>
+        <button class="delay-clear" onclick="undoDelay('${safeT}','${item.day}','${item.time}')" title="Deshacer último">${ICONS.undo}</button>
         <button class="delay-clear" onclick="clearDelay('${safeT}','${item.day}','${item.time}')" title="Quitar retraso">${ICONS.x}</button>
       </div>`;
     } else {
