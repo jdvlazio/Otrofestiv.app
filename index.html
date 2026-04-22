@@ -4655,6 +4655,47 @@ function renderContextualHeader(){
       ?`<span class="ctx-next-badge" style="background:var(--green);color:var(--white)">Ahora</span>`
       :`<span class="ctx-next-badge">En ${minsUntil} min</span>`;
     const eyebrowLabel=isNow?'En pantalla ahora':'Próxima función';
+
+    // ── Delay controls — solo cuando está en curso ──
+    let delayHtml='';
+    let warnHtml='';
+    if(isNow){
+      const safeT=(next._title||'').replace(/'/g,"\'");
+      const _dk=_delayKey(next);
+      const delayMins=filmDelays[_dk]||0;
+      if(delayMins>0){
+        delayHtml=`<div class="delay-row">
+          <span class="delay-lbl">+${delayMins} min</span>
+          ${[10,15,20,30].map(m=>`<button class="delay-btn" onclick="setDelay('${safeT}','${next.day}','${next.time}',${m})" title="+${m} min">+${m}</button>`).join('')}
+          <button class="delay-clear" onclick="undoDelay('${safeT}','${next.day}','${next.time}')" title="Deshacer último">${ICONS.undo}</button>
+          <button class="delay-clear" onclick="clearDelay('${safeT}','${next.day}','${next.time}')" title="Quitar retraso">${ICONS.x}</button>
+        </div>`;
+        // Warning si el retraso come el buffer
+        const schedule=savedAgenda&&savedAgenda.schedule||[];
+        const upcoming=schedule.filter(s=>!screeningPassed(s)&&s._title!==next._title)
+          .sort((a,b)=>toMin(a.time)-toMin(b.time));
+        const nextFilm=upcoming[0];
+        if(nextFilm&&nextFilm.day===next.day){
+          const dur=parseDur(next.duration);
+          const effectiveEndMin=toMin(next.time)+dur+delayMins;
+          const travel=travelMins(next.venue,nextFilm.venue);
+          const margin=toMin(nextFilm.time)-(effectiveEndMin+FESTIVAL_BUFFER+travel);
+          const{displayTitle:nt}=parseProgramTitle(nextFilm._title||'');
+          const nShort=nt.length>22?nt.slice(0,20)+'…':nt;
+          if(margin<0){
+            warnHtml=`<div class="delay-warn"><span class="delay-warn-ico">${ICONS.alert}</span><span>Con el retraso terminas ~${minToStr(effectiveEndMin)}. Solo quedan <b>${toMin(nextFilm.time)-effectiveEndMin} min</b> antes de <b>${nShort}</b>${travel>0?` (${travel} min de viaje)`:''}</span></div>`;
+          }else if(margin<15){
+            warnHtml=`<div class="delay-warn warn-amber"><span class="delay-warn-ico">${ICONS.alert}</span><span>Terminas ~${minToStr(effectiveEndMin)}. Margen ajustado: <b>${margin} min</b> hasta <b>${nShort}</b>.</span></div>`;
+          }
+        }
+      }else{
+        delayHtml=`<div class="delay-row">
+          <span class="delay-lbl">¿Retraso?</span>
+          ${[10,15,20,30].map(m=>`<button class="delay-btn" onclick="setDelay('${safeT}','${next.day}','${next.time}',${m})" title="Reportar +${m} min">+${m}</button>`).join('')}
+        </div>`;
+      }
+    }
+
     return`<div class="ctx-header">
       <div class="ctx-eyebrow">
         <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
@@ -4669,6 +4710,7 @@ function renderContextualHeader(){
           ${badge}
         </div>
       </div>
+      ${delayHtml}${warnHtml}
     </div>`;
   }
 
@@ -4816,7 +4858,7 @@ function _renderSavedAgendaHTML(){
   </div>`;
 
   const _ctxHeader=renderContextualHeader();
-  const _nextStrip=renderNextStrip(all);
+  const _nextStrip=''; // delay controls integrated into ctx-header
   const _unconfirmed=renderUnconfirmed(all);
   let html=`<div class="saved-agenda">
     ${_nextStrip}${_unconfirmed}${_ctxHeader}
