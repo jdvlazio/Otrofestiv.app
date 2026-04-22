@@ -819,20 +819,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .conflict-actions{padding:4px 20px 44px;display:flex;flex-direction:column;gap:8px}
 .conflict-btn-replace{width:100%;background:var(--amber);color:var(--black);border:none;border-radius:var(--r-pill);font-family:var(--font);font-size:var(--t-base);font-weight:var(--w-display);padding:var(--sp-btn);cursor:pointer}
 .conflict-btn-cancel{width:100%;background:none;border:1px solid var(--bdr);border-radius:var(--r-pill);color:var(--gray);font-family:var(--font);font-size:var(--t-base);font-weight:var(--w-semi);padding:12px;cursor:pointer}
-.wl-add-overlay{position:fixed;inset:0;z-index:9150;pointer-events:none}
-.wl-add-overlay.open{pointer-events:all}
-.wl-add-sheet{position:fixed;bottom:0;left:0;right:0;background:var(--surf-2);border-top:1px solid var(--bdr);padding:var(--sp-btn) var(--sp-5) calc(var(--sp-6)+var(--sp-2));z-index:9151;display:none;transition:transform .28s cubic-bezier(.32,0,.67,0);pointer-events:all}
-.wl-add-sheet.open{display:block;transform:translateY(0)}
-.wl-add-row{display:flex;align-items:center;gap:12px;margin-bottom:14px}
-.wl-add-poster{width:36px;height:54px;border-radius:var(--r-sm);flex-shrink:0;background:var(--surf-3);object-fit:cover;position:relative}
-.wl-add-heart{position:absolute;top:-7px;right:-7px;width:20px;height:20px;background:var(--surf-2);border-radius:50%;display:flex;align-items:center;justify-content:center;border:1.5px solid var(--green-30);animation:heartPop .35s cubic-bezier(.34,1.56,.64,1) .1s both}
-.wl-add-status{font-size:var(--t-sm);font-weight:var(--w-bold);color:var(--green);letter-spacing:.3px;display:flex;align-items:center;gap:4px;margin-bottom:2px}
-.wl-add-title{font-size:var(--t-base);font-weight:var(--w-bold);color:var(--white);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.wl-add-meta{font-size:var(--t-sm);color:var(--gray);margin-top:2px}
-.wl-add-actions{display:flex;gap:8px}
-.wl-add-prio{flex:1;background:var(--amber-10);border:1px solid var(--amber-30);border-radius:var(--r-pill);color:var(--amber);font-family:var(--font);font-size:var(--t-caption);font-weight:var(--w-bold);padding:10px;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:5px}
-.wl-add-close{flex:1;background:none;border:1px solid var(--bdr);border-radius:var(--r-pill);color:var(--gray);font-family:var(--font);font-size:var(--t-caption);font-weight:var(--w-semi);padding:10px;cursor:pointer}
-@keyframes heartPop{from{transform:scale(0);opacity:0}to{transform:scale(1);opacity:1}}
+
 .prio-limit-overlay{position:fixed;inset:0;background:rgba(5,5,5,.75);backdrop-filter:blur(8px);z-index:9200;opacity:0;pointer-events:none;transition:opacity .25s}
 .prio-limit-overlay.open{opacity:1;pointer-events:all}
 .prio-limit-sheet{position:fixed;bottom:0;left:0;right:0;background:var(--surf-2);border-top:1px solid var(--bdr);border-radius:var(--r-sheet) var(--r-sheet) 0 0;z-index:9201;transform:translateY(100%);transition:transform .32s cubic-bezier(.32,0,.67,0)}
@@ -2063,27 +2050,6 @@ html.splash-skip #otrofestiv-splash{display:none}
   <div class="conflict-actions">
     <button class="conflict-btn-replace" id="cs-replace-btn"></button>
     <button class="conflict-btn-cancel" onclick="closeConflictSheet()">Cancelar</button>
-  </div>
-</div>
-<!-- ── WL Add Sheet ── -->
-<div class="wl-add-overlay" id="wl-add-overlay"></div>
-<div class="wl-add-sheet" id="wl-add-sheet" style="display:none">
-  <div class="wl-add-row">
-    <div style="position:relative;flex-shrink:0">
-      <img class="wl-add-poster" id="wl-add-poster" src="" alt="">
-      <div class="wl-add-heart">
-        <svg width="10" height="10" viewBox="0 0 24 24" fill="#3AAA6E" stroke="#3AAA6E" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-      </div>
-    </div>
-    <div style="flex:1;min-width:0">
-      <div class="wl-add-status"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>En Intereses</div>
-      <div class="wl-add-title" id="wl-add-title"></div>
-      <div class="wl-add-meta" id="wl-add-meta"></div>
-    </div>
-  </div>
-  <div class="wl-add-actions">
-    <button class="wl-add-prio" id="wl-add-prio-btn"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>Priorizar</button>
-    <button class="wl-add-close" onclick="closeWLAdd()">Seguir explorando</button>
   </div>
 </div>
 <!-- ── Prio Limit Sheet ── -->
@@ -5884,72 +5850,6 @@ function closeConflictSheet(){
   _conflictPending=null;
   document.getElementById('conflict-sheet-overlay').classList.remove('open');
   document.getElementById('conflict-sheet').classList.remove('open');
-}
-
-let _wlAddTimer=null;
-
-function openWLAdd(title){
-  const f=FILMS.find(fi=>fi.title===title);
-  if(!f) return;
-  const{displayTitle,progSuffix}=parseProgramTitle(title);
-
-  // Poster
-  const poster=document.getElementById('wl-add-poster');
-  if(poster){
-    const src=getFilmPoster(f)||'';
-    poster.src=src;
-    poster.onerror=()=>{poster.style.opacity='0';};
-  }
-
-  // Título
-  const titleEl=document.getElementById('wl-add-title');
-  if(titleEl) titleEl.textContent=displayTitle+(progSuffix?' — '+progSuffix:'');
-
-  // Meta: duración + próxima función
-  const metaEl=document.getElementById('wl-add-meta');
-  if(metaEl){
-    const DAY_A={Martes:'MAR',Miércoles:'MIÉ',Jueves:'JUE',Viernes:'VIE',Sábado:'SÁB',Domingo:'DOM'};
-    const next=FILMS.filter(fi=>fi.title===title&&!screeningPassed(fi))
-      .sort((a,b)=>a.day_order-b.day_order||a.time.localeCompare(b.time))[0];
-    const meta=next?`${DAY_A[next.day]||next.day} · ${next.time} · ${f.duration||''}`:(f.duration||'');
-    metaEl.textContent=meta;
-  }
-
-  // Botón Priorizar — estado según si ya está priorizada
-  const prioBtn=document.getElementById('wl-add-prio-btn');
-  if(prioBtn){
-    const inPrio=prioritized.has(title);
-    const safeT=title.replace(/'/g,"\'");
-    if(inPrio){
-      prioBtn.innerHTML=`${ICONS.starFill} Priorizada`;
-      prioBtn.style.opacity='.5';
-      prioBtn.onclick=null;
-    } else {
-      prioBtn.innerHTML=`${ICONS.star} Priorizar`;
-      prioBtn.style.opacity='1';
-      prioBtn.onclick=()=>{togglePriority(title);closeWLAdd();};
-    }
-  }
-
-  // Abrir
-  document.getElementById('wl-add-overlay').classList.add('open');
-  const _was=document.getElementById('wl-add-sheet');
-  if(_was){ _was.style.display=''; requestAnimationFrame(()=>_was.classList.add('open')); }
-  _pushSheetState();
-
-  // Auto-close a los 4s si no hay interacción
-  if(_wlAddTimer) clearTimeout(_wlAddTimer);
-  _wlAddTimer=setTimeout(closeWLAdd, 4000);
-}
-
-function closeWLAdd(){
-  if(_wlAddTimer){clearTimeout(_wlAddTimer);_wlAddTimer=null;}
-  document.getElementById('wl-add-overlay').classList.remove('open');
-  const _was=document.getElementById('wl-add-sheet');
-  if(_was){
-    _was.classList.remove('open');
-    setTimeout(()=>{ if(!_was.classList.contains('open')) _was.style.display='none'; },300);
-  }
 }
 
 function openPrioLimit(newTitle){
