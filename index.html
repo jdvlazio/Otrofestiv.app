@@ -3055,7 +3055,7 @@ function renderMiPlanCalendar(){
       }
       const _rowKey=(s._title||'')+s.time;
       const _safeRowKey=_rowKey.replace(/"/g,'&quot;');
-      const _mp=getPosterSrc(s._title,s.is_cortos||false);
+      const _mf=FILMS.find(fi=>fi.title===s._title);const _mp=_mf?getFilmPoster(_mf):null;
       const _safeMpT=(s._title||"").replace(/'/g,"\'");
       const _mph=_mp?`<img class="lb-poster" src="${_mp}" loading="lazy" style="cursor:pointer" onclick="event.stopPropagation();openPelSheet('${_safeMpT}')" onerror="this.outerHTML='<div class=lb-poster-ph>🎬</div>'" alt="">`:'<div class="lb-poster-ph">🎬</div>';
       listHtml+=`<div class="mplan-row${_rowKey===_activeMiPlanFilm?' active':''}" style="cursor:pointer" data-rkey="${_safeRowKey}" onclick="selectFromDetail(this)">
@@ -4850,7 +4850,7 @@ function _renderSavedAgendaHTML(){
         <div class="saved-day-lbl">${dayChip(day)}</div>
         ${archByDay[day].map(s=>{
           const vc2=vcfg(s.venue),sl=sala(s.venue);
-          const _ap=getPosterSrc(s._title,s.is_cortos||false);
+          const _af=FILMS.find(fi=>fi.title===s._title);const _ap=_af?getFilmPoster(_af):null;
           const _safeMpT2=(s._title||"").replace(/'/g,"\'");
           const _aph=_ap?`<img class="lb-poster" src="${_ap}" loading="lazy" style="cursor:pointer" onclick="event.stopPropagation();openPelSheet('${_safeMpT2}')" onerror="this.outerHTML='<div class=lb-poster-ph>🎬</div>'" alt="">`:'<div class="lb-poster-ph">🎬</div>';
           return`<div class="saved-item done">
@@ -4866,7 +4866,7 @@ function _renderSavedAgendaHTML(){
       ${watchedOutsidePlan.length?`
         <div class="archive-out-lbl">Vistas fuera del Plan</div>
         ${watchedOutsidePlan.map(f=>{
-          const _ap=getPosterSrc(f.title,f.is_cortos||false);
+          const _ap=getFilmPoster(f);
           const _aph=_ap?`<img class="lb-poster" src="${_ap}" loading="lazy" onerror="this.outerHTML='<div class=lb-poster-ph>🎬</div>'" alt="">`:'<div class="lb-poster-ph">🎬</div>';
           return`<div class="saved-item done">
             ${_aph}
@@ -4902,7 +4902,7 @@ function _renderSavedAgendaHTML(){
       html+=`<div class="suggestion-day-lbl">${dayChip(day)}</div>`;
       html+=suggsByDay[day].slice(0,4).map(f=>{
         const vc2=vcfg(f.venue),sl=sala(f.venue);
-        const _sp=getPosterSrc(f.title,f.is_cortos||false);
+        const _sp=getFilmPoster(f);
         const _sph=_sp?`<img class="lb-poster" src="${_sp}" loading="lazy" onerror="this.outerHTML='<div class=lb-poster-ph>🎬</div>'" alt="">`:'<div class="lb-poster-ph">🎬</div>';
         return`<div class="suggestion-item" onclick="openPelSheet('${f.title.replace(/'/g,"\\'")}')">
           ${_sph}
