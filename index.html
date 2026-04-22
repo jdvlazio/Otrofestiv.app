@@ -6905,9 +6905,6 @@ function openCortoSheet(title, country, duration, section, flags, director, genr
 
 function setMiPlanView(mode){
   miPlanViewMode=mode;
-  document.getElementById('mpbtn-ov')?.classList.toggle('on',mode==='overview');
-  document.getElementById('mpbtn-cal')?.classList.toggle('on',mode==='calendar');
-  document.getElementById('mpbtn-list')?.classList.toggle('on',mode==='list');
   try{const _v=JSON.parse(localStorage.getItem(`${FESTIVAL_STORAGE_KEY}viewmodes`)||'{}');_v.miPlan=mode;localStorage.setItem(`${FESTIVAL_STORAGE_KEY}viewmodes`,JSON.stringify(_v));}catch(e){}
   renderAgenda();
 }
