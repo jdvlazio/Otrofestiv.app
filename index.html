@@ -500,7 +500,8 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 
 /* ── Strip de prioridades ── */
 .prio-strip{margin-bottom:var(--sp-3)}
-.prio-strip-title{font-size:var(--t-xs);font-weight:var(--w-bold);color:var(--amber-60);letter-spacing:1px;text-transform:uppercase;margin-bottom:var(--sp-2);display:flex;align-items:center;gap:var(--sp-2);width:100%}
+.sec-hdr{font-size:var(--t-base);font-weight:var(--w-bold);color:var(--white);display:flex;align-items:center;gap:var(--sp-1);margin-bottom:var(--sp-2);width:100%}
+.prio-strip-title{font-size:var(--t-base);font-weight:var(--w-bold);color:var(--white);display:flex;align-items:center;gap:var(--sp-1);margin-bottom:var(--sp-2);width:100%}
 .prio-strip-row{display:flex;gap:var(--sp-2);overflow-x:auto;padding-bottom:var(--sp-1)}
 .prio-chip{flex-shrink:0;width:var(--poster-md-w);position:relative;cursor:pointer}
 .prio-chip-poster{width:var(--poster-md-w);height:var(--poster-md-h);object-fit:cover;border-radius:var(--r-md);display:block;background:var(--surf-2)}
@@ -912,7 +913,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 
 /* ── MI LISTA ── */
 .ag-section{margin-bottom:var(--sp-5)}
-.ag-section-title,.ag-section-lbl{font-size:var(--t-xs);font-weight:var(--w-bold);color:var(--amber-60);letter-spacing:1px;text-transform:uppercase;display:flex;align-items:center;gap:var(--sp-2)}
+.ag-section-title,.ag-section-lbl{font-size:var(--t-base);font-weight:var(--w-bold);color:var(--white);display:flex;align-items:center;gap:var(--sp-1)}
 .ag-section-title{margin-bottom:var(--sp-3)}
 .ag-section-lbl{margin-bottom:var(--sp-2)}
 .ag-film-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--sp-2);margin-bottom:var(--sp-2)}
@@ -926,6 +927,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 /* Barra de modo Intereses */
 .intereses-mode-bar{display:flex;align-items:center;justify-content:space-between;padding:var(--sp-2) 0;margin-bottom:var(--sp-1)}
 .intereses-mode-title{font-size:var(--t-base);font-weight:var(--w-bold);color:var(--white);display:flex;align-items:center;gap:var(--sp-1)}
+/* .sec-hdr es la clase canónica — intereses-mode-title, ag-section-title, prio-strip-title son aliases */
 .intereses-cnt{font-size:var(--t-xs);font-weight:var(--w-bold);color:var(--gray);background:var(--surf-2);border:1px solid var(--bdr);border-radius:20px;padding:1px 7px;letter-spacing:.3px}
 .ya-vistas-bar{display:flex;align-items:center;padding:var(--sp-2) 0;margin-bottom:var(--sp-1)}
 .ya-vistas-lbl{font-size:var(--t-base);font-weight:var(--w-bold);color:var(--gray2);display:flex;align-items:center;gap:var(--sp-1)}
@@ -3946,7 +3948,7 @@ function renderPrioStrip(){
     </div>`;
   }).join('');
   return`<div class="prio-strip">
-    <div class="prio-strip-title">${ICONS.star} Prioridades ${prioritized.size}/${PRIO_LIMIT}</div>
+    <div class="sec-hdr">${ICONS.star} Prioridades <span class="intereses-cnt">${prioritized.size}/${PRIO_LIMIT}</span></div>
     <div class="prio-strip-row">${chips}</div>
   </div>`;
 }
@@ -4013,17 +4015,17 @@ function renderFilmListHTML(){
   </div>`;
   const _listMode=interesesViewMode==='list';
   if(prioList.length){
-    html+=`<div class="intereses-mode-bar"><div class="intereses-mode-title">${ICONS.star} Prioridades <span class="intereses-cnt">${prioList.length}/${PRIO_LIMIT}</span></div>${_iSwitch}</div>`;
+    html+=`<div class="intereses-mode-bar"><div class="sec-hdr">${ICONS.star} Prioridades <span class="intereses-cnt">${prioList.length}/${PRIO_LIMIT}</span></div>${_iSwitch}</div>`;
     html+=`<div class="ag-film-grid${_listMode?' list-mode':''}">${prioList.map(t=>mkItem(t,_listMode)).join('')}</div>`;
   }
   if(nonPrioList.length){
     if(prioList.length) html+=`<div class="ag-list-sep"></div>`;
-    html+=`<div class="intereses-mode-bar"><div class="intereses-mode-title">${ICONS.heart} Intereses <span class="intereses-cnt">${nonPrioList.length}</span></div>${prioList.length?'':_iSwitch}</div>`;
+    html+=`<div class="intereses-mode-bar"><div class="sec-hdr">${ICONS.heart} Intereses <span class="intereses-cnt">${nonPrioList.length}</span></div>${prioList.length?'':_iSwitch}</div>`;
     html+=`<div class="ag-film-grid${_listMode?' list-mode':''}">${nonPrioList.map(t=>mkItem(t,_listMode)).join('')}</div>`;
   }
   if(!allPending.length&&!watchedList.length){
     return`<div style="margin-top:8px;padding:var(--sp-5) var(--sp-4);border:1px solid var(--bdr-l);border-radius:var(--r);text-align:center">
-      <div class="prio-strip-title" style="justify-content:center;margin-bottom:var(--sp-3)">${ICONS.heart} Intereses</div>
+      <div class="sec-hdr" style="justify-content:center;margin-bottom:var(--sp-3)">${ICONS.heart} Intereses</div>
       <div style="font-size:var(--t-base);color:var(--gray);line-height:1.6;text-align:center;max-width:240px;margin-left:auto;margin-right:auto;text-wrap:balance">
         Aún no tienes películas guardadas.<br>Usa el buscador para añadir títulos.
       </div>
@@ -4054,7 +4056,7 @@ function renderFilmListHTML(){
     }).join('')}</div>`;
   }
   return html||`<div style="margin-top:8px;padding:var(--sp-5) var(--sp-4);border:1px solid var(--bdr-l);border-radius:var(--r);text-align:center">
-      <div class="prio-strip-title" style="justify-content:center;margin-bottom:var(--sp-3)">${ICONS.heart} Intereses</div>
+      <div class="sec-hdr" style="justify-content:center;margin-bottom:var(--sp-3)">${ICONS.heart} Intereses</div>
       <div style="font-size:var(--t-base);color:var(--gray);line-height:1.6;text-align:center;max-width:240px;margin-left:auto;margin-right:auto;text-wrap:balance">
         Aún no tienes películas guardadas.<br>Usa el buscador para añadir títulos.
       </div>
@@ -4893,7 +4895,7 @@ function _renderSavedAgendaHTML(){
   const suggsByDay=getSuggestions();
   const suggDays=DAY_KEYS.filter(d=>suggsByDay[d]&&suggsByDay[d].length>0);
   html+=`<div class="suggestion-wrap">
-    <div class="prio-strip-title" style="margin-bottom:8px">${ICONS.search} Sugerencias</div>`;
+    <div class="sec-hdr" style="margin-bottom:8px">${ICONS.search} Sugerencias</div>`;
   if(suggDays.length){
     suggDays.forEach(day=>{
       html+=`<div class="suggestion-day-lbl">${dayChip(day)}</div>`;
@@ -5897,7 +5899,7 @@ function renderAgenda(){
           <div id="ag-search-results" class="ag-search-results"></div>
         </div>
         ${renderPrioStrip()}
-        <div class="ag-section-title">${ICONS.clock} Disponibilidad</div>
+        <div class="sec-hdr">${ICONS.clock} Disponibilidad</div>
         <div style="font-size:var(--t-base);color:var(--gray);margin-bottom:var(--sp-3);line-height:1.5">Marca cu&aacute;ndo est&aacute;s ocupado. El algoritmo lo tendr&aacute; en cuenta al planear.</div>
         <div class="av-section">
           ${DAY_KEYS.map(day=>{
@@ -5910,7 +5912,7 @@ function renderAgenda(){
         </button>
       </div>
       <div class="ag-section">
-        <div class="ag-section-title">${ICONS.switch} Opciones</div>
+        <div class="sec-hdr">${ICONS.switch} Opciones</div>
         <div id="ag-result">${resultContent}</div>
       </div>`;
     DAY_KEYS.forEach(d=>renderAvDay(d));
