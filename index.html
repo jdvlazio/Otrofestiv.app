@@ -3655,19 +3655,22 @@ let _avSheetDay=null;
 function openAvSheet(){
   const ov=document.getElementById('av-sheet-overlay');
   if(!ov) return;
+  // Seleccionar primer día no pasado
+  if(!_avSheetDay||dayFullyPassed(_avSheetDay)){
+    _avSheetDay=DAY_KEYS.find(d=>!dayFullyPassed(d))||DAY_KEYS[0];
+  }
+  // Poblar chips de días con data-day para comparación fiable
   const chipsEl=document.getElementById('av-day-chips');
   if(chipsEl){
     chipsEl.innerHTML=DAY_KEYS.map(d=>{
       const isPast=dayFullyPassed(d);
       const lbl=(DAY_ABBR&&DAY_ABBR[d])||d.slice(0,3).toUpperCase();
       const num=(DAY_NUM&&DAY_NUM[d])||'';
-      return`<button class="av-day-chip${isPast?' past':''}${_avSheetDay===d?' selected':''}" onclick="selectAvDay('${d}')">${lbl} ${num}</button>`;
+      const sel=_avSheetDay===d?' selected':'';
+      return`<button class="av-day-chip${isPast?' past':''}${sel}" data-day="${d}" onclick="selectAvDay(this.dataset.day)">${lbl} ${num}</button>`;
     }).join('');
   }
-  if(!_avSheetDay||dayFullyPassed(_avSheetDay)){
-    _avSheetDay=DAY_KEYS.find(d=>!dayFullyPassed(d))||DAY_KEYS[0];
-  }
-  _refreshAvDayChips();
+  // Poblar selects de horas
   const timeOpts=['08:00','08:30','09:00','09:30','10:00','10:30','11:00','11:30','12:00','12:30','13:00','13:30','14:00','14:30','15:00','15:30','16:00','16:30','17:00','17:30','18:00','18:30','19:00','19:30','20:00','20:30','21:00','21:30','22:00','22:30','23:00'];
   const optsHtml=timeOpts.map(t=>`<option value="${t}">${t}</option>`).join('');
   const fromEl=document.getElementById('av-sheet-from');
@@ -3675,7 +3678,6 @@ function openAvSheet(){
   if(fromEl){fromEl.innerHTML=optsHtml;fromEl.value='09:00';}
   if(toEl){toEl.innerHTML=optsHtml;toEl.value='12:00';}
   setAvType('hours');
-  // Usar style.display — inline style tiene mayor especificidad que classList
   ov.style.display='flex';
 }
 
@@ -3691,9 +3693,7 @@ function selectAvDay(day){
 
 function _refreshAvDayChips(){
   document.querySelectorAll('.av-day-chip').forEach(btn=>{
-    const d=btn.textContent.trim();
-    // Match por contenido o por data
-    btn.classList.toggle('selected',btn.getAttribute('onclick')===`selectAvDay('${_avSheetDay}')`);
+    btn.classList.toggle('selected', btn.dataset.day===_avSheetDay);
   });
 }
 
