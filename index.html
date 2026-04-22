@@ -6397,17 +6397,22 @@ function starsDisplay(rating,size){
 
 function togglePelPrio(title){
   togglePriority(title);
-  const btn=document.getElementById('pel-prio-btn');
+  const btn=document.getElementById('pel-prio-btn')||document.getElementById('corto-prio-btn');
   if(!btn) return;
   const inPrio=prioritized.has(title);
   btn.innerHTML=(inPrio?ICONS.starFill:ICONS.star)+' '+(inPrio?'Priorizada':'Priorizar');
   btn.className='pel-sheet-action-btn'+(inPrio?' act-prio':'');
-  // Priorizar auto-añade a watchlist — actualizar el botón de Intereses también
-  const wlBtn=document.getElementById('pel-wl-btn');
-  if(wlBtn){
-    const inWL=watchlist.has(title);
-    wlBtn.innerHTML=(inWL?ICONS.heartFill:ICONS.heart)+' '+(inWL?'En Intereses':'Intereses');
-    wlBtn.className='pel-sheet-action-btn'+(inWL?' act-on btn-primary':'');
+  // Priorizar auto-añade a watchlist — sincronizar el botón de Intereses
+  const inWL=watchlist.has(title);
+  const pelWlBtn=document.getElementById('pel-wl-btn');
+  if(pelWlBtn){
+    pelWlBtn.innerHTML=(inWL?ICONS.heartFill:ICONS.heart)+' '+(inWL?'En Intereses':'Intereses');
+    pelWlBtn.className='pel-sheet-action-btn'+(inWL?' act-on btn-primary':'');
+  }
+  const cortoWlBtn=document.getElementById('corto-wl-btn');
+  if(cortoWlBtn){
+    cortoWlBtn.innerHTML=(inWL?ICONS.heartFill:ICONS.heart)+' '+(inWL?'En Intereses':'Intereses');
+    cortoWlBtn.className='pel-sheet-action-btn'+(inWL?' act-on':'');
   }
 }
 
