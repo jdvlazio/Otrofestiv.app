@@ -3178,7 +3178,7 @@ function toggleWL(title,e){
   if(watchlist.has(title)){
     // If film is in saved agenda, ask first
     if(savedAgenda&&savedAgenda.schedule.some(s=>s._title===title)){
-      showActionModal(`${ICONS.x} Quitar de Intereses`,
+      showActionModal(`Quitar de Intereses`,
         `<b>${title.length>36?title.slice(0,34)+'…':title}</b> está en tu plan.<br><br>¿Quitarla también del plan guardado?`,
         'Sí, quitar de todo',()=>{
           savedAgenda.schedule=savedAgenda.schedule.filter(s=>s._title!==title);
@@ -3223,7 +3223,7 @@ function toggleWatched(title,e){
     // Confirmar antes de marcar como vista
     const short=title.length>36?title.slice(0,34)+'…':title;
     showActionModal(
-      `${ICONS.check} ¿Ya viste esta película?`,
+      `¿Ya viste esta película?`,
       `<b>${short}</b><br><br>Se moverá a <b>Ya vistas</b> en Intereses.`,
       'Sí, ya la vi',
       ()=>{
@@ -3310,7 +3310,7 @@ function addFromSearch(title){
 function removeFromAgenda(title){
   if(!savedAgenda) return;
   const _s=title.length>36?title.slice(0,34)+'…':title;
-  showActionModal(`${ICONS.x} Quitar del plan`,`<b>${_s}</b><br><br>Podrás restaurarla desde Sugerencias.`,'Quitar',()=>{
+  showActionModal(`Quitar del plan`,`<b>${_s}</b><br><br>Podrás restaurarla desde Sugerencias.`,'Quitar',()=>{
     const rem=savedAgenda.schedule.find(s=>s._title===title);
     if(rem){lastRemovedSlots=lastRemovedSlots.filter(r=>r._title!==rem._title);lastRemovedSlots.unshift({...rem,_isRestored:true});if(lastRemovedSlots.length>MAX_REMEMBERED_SLOTS)lastRemovedSlots.length=MAX_REMEMBERED_SLOTS;saveLastSlot();}
     savedAgenda.schedule=savedAgenda.schedule.filter(s=>s._title!==title);
@@ -3472,7 +3472,7 @@ function showConflictModal(conflicts, onConfirm){
   const modal=document.createElement('div');
   modal.id='conflict-modal';modal.className='conflict-modal';
   modal.innerHTML=`<div class="conflict-modal-box">
-    <div class="conflict-modal-hdr">${ICONS.alert} Conflicto con tu plan</div>
+    <div class="conflict-modal-hdr">Conflicto con tu plan</div>
     <div class="conflict-modal-body">
       Este horario choca con:<br>${names}<br><br>
       ¿Continuar y quitar ${conflicts.length===1?'esa función':'esas funciones'} del plan?
@@ -4058,7 +4058,7 @@ function removeFilmFromScenario(title,e){
   if(e) e.stopPropagation();
   const short=title.length>36?title.slice(0,34)+'…':title;
   showActionModal(
-    `${ICONS.x} Quitar de Intereses`,
+    `Quitar de Intereses`,
     `<b>${short}</b><br><br>Se quitará de Intereses y las opciones se recalcularán.`,
     'Quitar',
     ()=>{
@@ -5207,7 +5207,7 @@ function exportICS(){
   showToast('Calendario exportado','info');
 }
 function clearSavedAgenda(){
-  showDestructiveModal(`${ICONS.alert} Borrar plan`,
+  showDestructiveModal(`Borrar plan`,
     'Se eliminará tu plan completo. Esta acción no se puede deshacer.',
     'Borrar plan',
     ()=>{savedAgenda=null;localStorage.removeItem(`${FESTIVAL_STORAGE_KEY}saved`);renderAgenda();});
@@ -5311,7 +5311,7 @@ function togglePriority(title,cost){
     // Si estamos en Planear, confirmar antes de quitar
     if(activeMNav==='mnav-planner'){
       const short=title.length>40?title.slice(0,38)+'…':title;
-      showActionModal(`${ICONS.star} Quitar prioridad`,
+      showActionModal(`Quitar prioridad`,
         `<b>${short}</b><br><br>Sigue en Intereses, deja de ser prioritaria.`,
         'Quitar prioridad',()=>{
           prioritized.delete(title);savePrio();updateCardState(title);updateAgTab();runCalc();
