@@ -2977,8 +2977,8 @@ function renderMiPlanCalendar(){
   });
   const _minStart=Math.min(..._allMins);
   const _maxEnd=Math.max(..._allMins);
-  const SH=Math.max(8, Math.floor((_minStart-45)/60));
-  const EH=Math.min(26, Math.ceil((_maxEnd+45)/60));
+  const SH=Math.max(8, Math.floor((_minStart-30)/60));
+  const EH=Math.min(26, Math.ceil((_maxEnd+30)/60));
 
   const TOTAL=(EH-SH)*PPH;
   function toPx(min){return(min-SH*60)/60*PPH;}
