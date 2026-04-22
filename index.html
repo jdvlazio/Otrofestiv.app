@@ -232,15 +232,19 @@ body{background:var(--bg);color:var(--white);font-family:var(--font),'Plus Jakar
 h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t-lg);font-weight:var(--w-display);line-height:1;letter-spacing:-.03em;color:var(--white);flex:1}
 .hdr-wordmark span{color:var(--amber)}
 /* Auth button */
-.auth-btn{position:relative;width:32px;height:32px;border-radius:50%;border:none;background:transparent;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-left:auto;-webkit-tap-highlight-color:transparent}
-.auth-btn svg{opacity:.55;transition:opacity .2s}
-.auth-btn:hover svg{opacity:.9}
+.auth-btn{position:relative;width:32px;height:32px;border-radius:50%;border:none;background:transparent;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;-webkit-tap-highlight-color:transparent}
+.auth-btn svg{opacity:.75;transition:opacity .2s;stroke:var(--white)}
+.auth-btn:hover svg{opacity:1}
 .auth-btn.signed-in svg{display:none}
 .auth-btn .auth-avatar{display:none;width:28px;height:28px;border-radius:50%;background:var(--amber);align-items:center;justify-content:center;font-size:12px;font-weight:700;color:#000;letter-spacing:0}
 .auth-btn.signed-in .auth-avatar{display:flex}
 .sync-dot{position:absolute;bottom:0;right:0;width:7px;height:7px;border-radius:50%;border:1.5px solid var(--surf);display:none}
 .sync-dot.sync-ok{display:block;background:var(--amber)}
 .sync-dot.sync-err{display:block;background:#e05}
+/* Fila wordmark + account */
+.hdr-top{display:flex;align-items:center;padding:0 var(--sp-4);min-height:44px}
+.hdr-top .hdr-wordmark{flex:1;margin:0}
+.hdr-top .auth-btn{margin-left:var(--sp-3)}
 .sync-dot{position:absolute;top:2px;right:2px;width:6px;height:6px;border-radius:50%;display:none}
 .sync-dot.sync-ok{display:block;background:var(--amber)}
 .sync-dot.sync-err{display:block;background:#e05}
@@ -1379,10 +1383,13 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
     padding:0;
     min-height:auto;
   }
+  .hdr-top{
+    padding:0 var(--content-pad);
+    min-height:auto;
+  }
   .hdr-wordmark{
     display:block;
     flex:none;
-    padding:var(--sp-3) var(--content-pad);
     font-size:var(--t-lg);
   }
 
@@ -1880,12 +1887,14 @@ html.splash-skip #otrofestiv-splash{display:none}
 
 <div class="topbar">
 <div class="hdr">
-  <h1 class="hdr-wordmark">Otro<span>festiv</span></h1>
-  <button class="auth-btn" id="auth-btn" onclick="openAuthSheet()" title="Sincronizar entre dispositivos" aria-label="Cuenta">
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-    <span class="auth-avatar" id="auth-avatar"></span>
-    <span class="sync-dot" id="sync-dot"></span>
-  </button>
+  <div class="hdr-top">
+    <h1 class="hdr-wordmark">Otro<span>festiv</span></h1>
+    <button class="auth-btn" id="auth-btn" onclick="openAuthSheet()" title="Sincronizar entre dispositivos" aria-label="Cuenta">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      <span class="auth-avatar" id="auth-avatar"></span>
+      <span class="sync-dot" id="sync-dot"></span>
+    </button>
+  </div>
   <div class="hdr-fest-bar" onclick="openFestivalSheet()">
   <div class="hdr-fest-left">
     <div class="hdr-fest-dot"></div>
