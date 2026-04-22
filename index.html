@@ -4652,13 +4652,22 @@ function renderContextualHeader(){
     const vc=vcfg(next.venue);
     const src=getFilmPoster(next)||'';
     // REGLA — badge ctx-header: solo cuando aporta info específica que el eyebrow no tiene.
-    //   ✅ "En X min" — tiempo exacto; eyebrow solo dice "Próxima función"
-    //   ❌ "Ahora"   — redundante; eyebrow ya dice "En pantalla ahora"
+    //   ✅ "En X min"        — tiempo hasta inicio; eyebrow solo dice "Próxima función"
+    //   ✅ "Termina en X min"— tiempo restante en curso; eyebrow no lo especifica
+    //   ❌ "Ahora"           — redundante; eyebrow ya dice "En pantalla ahora"
     //   Todo estado nuevo debe pasar este filtro antes de añadir badge.
+    const _nowMin=simNow().getHours()*60+simNow().getMinutes();
+    const _endMin=toMin(next.time)+parseDur(next.duration)+(filmDelays[_delayKey(next)]||0);
+    const _leftMin=Math.max(0,_endMin-_nowMin);
     const badge=isNow
-      ?''
+      ?`<span class="ctx-next-badge" style="background:var(--surf);color:var(--white-60);border:1px solid var(--bdr)">Termina en ${_leftMin} min</span>`
       :`<span class="ctx-next-badge">En ${minsUntil} min</span>`;
-    const eyebrowLabel=isNow?'En pantalla ahora':'Próxima función';
+    // Eyebrow context-aware: eventos/talleres no están "en pantalla"
+    const _filmObj=FILMS.find(f=>f.title===next._title);
+    const _isEvent=_filmObj&&_filmObj.type==='event';
+    const eyebrowLabel=isNow
+      ?(_isEvent?'En curso ahora':'En pantalla ahora')
+      :(_isEvent?'Próximo evento':'Próxima función');
 
     // ── Delay controls — solo cuando está en curso ──
     let delayHtml='';
