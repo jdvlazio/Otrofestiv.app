@@ -2213,19 +2213,25 @@ function _buildPosterSVG(o){
 
   return `data:image/svg+xml,${encodeURIComponent(svg)}`;
 }
-function makeProgramPoster(title,duration){
-  // Extract display text: "Cortos: Familia 12+" → "Familia 12+"
-  // "Costas — Prog. 4" → "Costas · Prog. 4"
+function makeProgramPoster(title, duration, section){
+  // Limpiar prefijos redundantes del título
+  // "Cortos: Familia 12+" → "Familia 12+"
   let t=title;
-  if(t.startsWith('Cortos: ')) t=t.slice(8);
-  else{const d=t.indexOf(' \u2014 ');if(d>-1) t=t.slice(0,d)+' \u00b7 '+t.slice(d+3);}
+  t=t.replace(/^Cortos:\s*/i,'');
+  t=t.replace(/^Prog\.\s*de\s*Cortos\s*[—-]\s*/i,'');
+  t=t.replace(/^Programa\s*de\s*Cortos\s*[—-]\s*/i,'');
+
   const festName=((FESTIVAL_CONFIG&&FESTIVAL_CONFIG[_activeFestId])||Object.values(FESTIVAL_CONFIG||{})[0]||{}).shortName||'FESTIVAL';
-  // Header: teal — distinct from Industry Days amber
-  // l1/l2 mirror the INDUSTRY/DAYS split: category / type
-  const _isComp=(FESTIVAL_CONFIG[_activeFestId]&&FESTIVAL_CONFIG[_activeFestId].name||'').includes('AFF');
+
+  // Detectar si es competencia o programa desde la sección
+  const sec=(section||'').toLowerCase();
+  const isComp=sec.includes('comp') || sec.includes('competencia');
+  const l1=isComp?'COMPETENCIA':'PROGRAMA';
+  const l2='DE CORTOMETRAJES';
+
   return _buildPosterSVG({
     hc:'#3A8E8E',sep:'#1C5A5A',ht:'#051A1A',
-    l1:_isComp?'COMP.':'PROG.',l2:'CORTOS',
+    l1,l2,
     bf:'#0D2222',bs:'#1C4444',
     accent:'#4ABABA',
     title:t,duration:duration||null,
@@ -2256,7 +2262,7 @@ let _CUSTOM_N = {};
 const _SHORT_N   = Object.fromEntries(Object.entries(SHORT_IMGS).map(([k,v])=>[normKey(k),v]));
 let _POSTERS_N = Object.fromEntries(Object.entries(POSTERS).map(([k,v])=>[normKey(k),v]));
 
-function getPosterSrc(title, isCortos){
+function getPosterSrc(title, isCortos, section){
   const t = normKey(title);
   // 1. Custom manual
   if(_CUSTOM_N[t]) return _CUSTOM_N[t];
@@ -2264,8 +2270,11 @@ function getPosterSrc(title, isCortos){
   if(isCortos && _SHORT_N[t]) return _SHORT_N[t];
   // 3. Feature/corto — TMDB path
   if(_POSTERS_N[t]) return _POSTERS_N[t].startsWith('http')?_POSTERS_N[t]:TMDB_IMG+_POSTERS_N[t];
-  // 4. Fallback FICCI para programas/cortos sin poster
-  if(isCortos) return makeProgramPoster(title);
+  // 4. Fallback FICCI para programas/cortos sin poster — buscar sección en FILMS si no se pasó
+  if(isCortos){
+    const _sec=section||(FILMS.find(f=>f.title===title)?.section)||'';
+    return makeProgramPoster(title, null, _sec);
+  }
   return null;
 }
 
