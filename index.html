@@ -6482,7 +6482,7 @@ function openPelSheet(title){
         <div class="pel-sheet-flags">${f.flags||'🌐'}</div>
         <div class="pel-sheet-dur">${ICONS.clock} ${f.duration}</div>
         ${f.section?`<div class="pel-sheet-sec" data-sec="${f.section.replace(/"/g,'&quot;')}" onclick="filterBySection(this.dataset.sec)">${secLabel} <span class="pel-sheet-sec-arrow">›</span></div>`:''}
-        ${unica?`<div style="font-size:var(--t-sm);color:var(--gray2);font-weight:var(--w-semi);margin-top:3px;letter-spacing:.3px">Única función</div>`:''}
+        ${(!f.type||f.type!=='event')&&unica?`<div style="font-size:var(--t-sm);color:var(--gray2);font-weight:var(--w-semi);margin-top:3px;letter-spacing:.3px">Única función</div>`:''}
         ${f.is_cortos&&f.film_list?.length?`<div style="font-size:var(--t-sm);color:var(--orange);margin-top:2px">${f.film_list.length} corto${f.film_list.length!==1?'s':''}</div>`:''}
       </div>
     </div>
@@ -6503,7 +6503,7 @@ function openPelSheet(title){
     :`<div style="display:flex;gap:var(--sp-1);margin-top:12px">
         <button id="pel-wl-btn" class="pel-sheet-action-btn${inWL?' act-on':''}" onclick="togglePelWL('${safeT}',event)" style="display:inline-flex;align-items:center;justify-content:center;gap:var(--sp-1)">${inWL?ICONS.heartFill:ICONS.heart} ${inWL?'En Intereses':'Intereses'}</button>
         <button id="pel-prio-btn" class="pel-sheet-action-btn${inPrio?' act-prio':''}" onclick="togglePelPrio('${safeT}')" style="display:inline-flex;align-items:center;justify-content:center;gap:var(--sp-1)">${inPrio?ICONS.starFill:ICONS.star} ${inPrio?'Priorizada':'Priorizar'}</button>
-        <button id="pel-vista-btn" class="pel-sheet-action-btn" onclick="toggleWatched('${safeT}',event)" style="display:inline-flex;align-items:center;justify-content:center;gap:var(--sp-1)">${ICONS.check} Vista</button>
+        <button id="pel-vista-btn" class="pel-sheet-action-btn" onclick="toggleWatched('${safeT}',event)" style="display:inline-flex;align-items:center;justify-content:center;gap:var(--sp-1)">${ICONS.check} ${f.type==='event'?'Asistí':'Vista'}</button>
       </div>`}
     ${_inPlan&&activeView==='agenda'?`<button onclick="closePelSheet();removeFromAgenda('${safeT}')" style="width:100%;margin-top:8px;background:none;border:1px solid var(--bdr);border-radius:var(--r-pill);color:var(--gray2);font-family:var(--font);font-size:var(--t-caption);font-weight:var(--w-semi);padding:8px 0;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:var(--sp-1)">${ICONS.x} Quitar del plan</button>`:''}
   `;
