@@ -4932,10 +4932,68 @@ function toggleArchive(){
 
 
 
+
+/* ── Display name — cadena de prioridad para imagen compartida ──
+   1. Supabase user_metadata.display_name (cuenta / app nativa)
+   2. localStorage 'otrofestiv_display_name' (web sin cuenta)
+   3. Email prefix (fallback con cuenta)
+   4. null (anónimo)
+*/
+function _getDisplayName(){
+  if(_sbUser){
+    const meta=_sbUser.user_metadata||{};
+    if(meta.display_name) return meta.display_name;
+  }
+  const local=localStorage.getItem('otrofestiv_display_name');
+  if(local) return local;
+  if(_sbUser&&_sbUser.email) return _sbUser.email.split('@')[0];
+  return null;
+}
+async function _saveDisplayName(name){
+  const n=name.trim().slice(0,30);
+  if(!n) return;
+  localStorage.setItem('otrofestiv_display_name',n);
+  if(_sb&&_sbUser){
+    try{ await _sb.auth.updateUser({data:{display_name:n}}); }catch(e){}
+  }
+}
+
+
+function _promptDisplayName(onSave){
+  const prev=document.getElementById('display-name-sheet');if(prev)prev.remove();
+  const el=document.createElement('div');
+  el.id='display-name-sheet';
+  el.style.cssText='position:fixed;inset:0;background:var(--overlay-70);z-index:9999;display:flex;align-items:flex-end;justify-content:center';
+  el.innerHTML=`<div style="background:var(--surf-2);border-radius:var(--r-sheet) var(--r-sheet) 0 0;padding:24px 20px 40px;width:100%;max-width:480px;box-sizing:border-box">
+    <div style="width:36px;height:4px;background:var(--bdr);border-radius:2px;margin:0 auto 20px"></div>
+    <div style="font-size:var(--t-base);font-weight:var(--w-bold);color:var(--white);margin-bottom:6px">¿Cómo quieres aparecer en tu plan?</div>
+    <div style="font-size:var(--t-sm);color:var(--gray);margin-bottom:16px">Aparecerá en la imagen cuando la compartas.</div>
+    <input id="dname-input" type="text" maxlength="30" placeholder="Tu nombre" autocomplete="name"
+      style="width:100%;background:var(--surf);border:1px solid var(--bdr);border-radius:var(--r-md);padding:12px 14px;font-size:var(--t-base);color:var(--white);outline:none;box-sizing:border-box;font-family:var(--font);margin-bottom:12px">
+    <button id="dname-save" style="width:100%;background:var(--amber);border:none;border-radius:var(--r-md);padding:var(--sp-btn) 0;font-size:var(--t-base);font-weight:var(--w-bold);color:#000;cursor:pointer;font-family:var(--font)">Guardar y compartir</button>
+  </div>`;
+  document.body.appendChild(el);
+  const input=document.getElementById('dname-input');
+  input.focus();
+  document.getElementById('dname-save').onclick=async()=>{
+    const v=input.value.trim();
+    if(!v){input.style.borderColor='var(--red)';return;}
+    await _saveDisplayName(v);
+    el.remove();
+    if(onSave) onSave();
+  };
+  el.addEventListener('click',e=>{if(e.target===el)el.remove();});
+}
+
 /* ── SHARE/EXPORT: imagen, ICS ──────────────────────────────────────── */
 async function sharePlan(){
   if(!savedAgenda||!savedAgenda.schedule||!savedAgenda.schedule.length){
     showToast('No tienes un plan guardado','warn');return;
+  }
+  // Pedir nombre si no existe — solo la primera vez
+  if(!_getDisplayName()){
+    _promptDisplayName(()=>sharePlan());
+    return;
   }
   let canvas,dataUrl;
   try{
@@ -5085,7 +5143,9 @@ function _buildAgendaCanvas(){
   // Subtítulo: --gray (#888888)
   c.fillStyle='#888888';
   c.font='500 11px system-ui,-apple-system,sans-serif';
-  c.fillText('Mi Plan · '+(cfg.name||'Festival')+' · '+active.length+' día'+(active.length!==1?'s':''),PAD,HDR/2+20);
+  const _dn=_getDisplayName();
+  const _sub=(_dn?_dn+' · ':'')+'Mi Plan · '+(cfg.name||'Festival')+' · '+active.length+' día'+(active.length!==1?'s':'');
+  c.fillText(_sub,PAD,HDR/2+20);
   active.forEach((day,ci)=>{
     const x=PAD+ci*(CW+CGAP);
     const di=DAYS.indexOf(day);
