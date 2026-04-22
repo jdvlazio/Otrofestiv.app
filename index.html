@@ -2362,7 +2362,7 @@ async function _sbSignIn(email){
   if(!_sb) return {error:'no client'};
   const{error}=await _sb.auth.signInWithOtp({
     email,
-    options:{emailRedirectTo:window.location.origin}
+    options:{shouldCreateUser:true}
   });
   return{error};
 }
@@ -2474,11 +2474,39 @@ async function submitAuthEmail(){
   const{error}=await _sbSignIn(email);
   if(error){
     msg.textContent='Error al enviar. Intenta de nuevo.';
-    btn.disabled=false;btn.textContent='Enviar enlace';
+    btn.disabled=false;btn.textContent='Enviar código';
   } else {
     msg.textContent='';
+    // Guardar email para verificación OTP
+    document.getElementById('auth-otp-email').textContent=email;
     document.getElementById('auth-sheet-step1').style.display='none';
     document.getElementById('auth-sheet-step2').style.display='block';
+    setTimeout(()=>document.getElementById('auth-otp-inp')?.focus(),300);
+  }
+}
+
+async function submitOTP(){
+  const email=document.getElementById('auth-otp-email').textContent;
+  const token=(document.getElementById('auth-otp-inp')?.value||'').trim();
+  const btn=document.getElementById('auth-otp-btn');
+  const msg=document.getElementById('auth-otp-msg');
+  if(!token||token.length<6){msg.textContent='Ingresa el código de 6 dígitos.';return;}
+  btn.disabled=true;btn.textContent='Verificando…';
+  try{
+    const{data,error}=await _sb.auth.verifyOtp({email,token,type:'email'});
+    if(error){
+      msg.textContent='Código incorrecto o expirado. Intenta de nuevo.';
+      btn.disabled=false;btn.textContent='Confirmar';
+    } else {
+      closeAuthSheet();
+      // Reset steps
+      document.getElementById('auth-sheet-step1').style.display='block';
+      document.getElementById('auth-sheet-step2').style.display='none';
+      document.getElementById('auth-otp-inp').value='';
+    }
+  }catch(e){
+    msg.textContent='Error. Intenta de nuevo.';
+    btn.disabled=false;btn.textContent='Confirmar';
   }
 }
 function _showSignedInSheet(){
@@ -7457,17 +7485,19 @@ if('serviceWorker' in navigator){
   <div class="auth-sheet-inner">
     <div id="auth-sheet-step1">
       <div class="auth-sheet-title">Sincronizar tu plan</div>
-      <div class="auth-sheet-sub">Ingresa tu email y te enviamos un enlace para acceder. Sin contraseña. Tu plan se sincroniza entre todos tus dispositivos.</div>
+      <div class="auth-sheet-sub">Ingresa tu email y te enviamos un código de 6 dígitos. Sin contraseña. Tu plan se sincroniza entre todos tus dispositivos.</div>
       <input class="auth-email-inp" id="auth-email-inp" type="email" placeholder="tu@email.com" autocomplete="email" onkeydown="if(event.key==='Enter')submitAuthEmail()">
-      <button class="auth-send-btn" id="auth-send-btn" onclick="submitAuthEmail()">Enviar enlace</button>
+      <button class="auth-send-btn" id="auth-send-btn" onclick="submitAuthEmail()">Enviar código</button>
       <div class="auth-msg" id="auth-msg"></div>
       <span class="auth-cancel" onclick="closeAuthSheet()">Cancelar</span>
     </div>
-    <div id="auth-sheet-step2" style="display:none;text-align:center">
-      <div class="auth-check-icon">✉️</div>
+    <div id="auth-sheet-step2" style="display:none">
       <div class="auth-sheet-title">Revisa tu email</div>
-      <div class="auth-sheet-sub">Te enviamos un enlace de acceso. Ábrelo desde este dispositivo para sincronizar tu plan.</div>
-      <span class="auth-cancel" onclick="closeAuthSheet()">Cerrar</span>
+      <div class="auth-sheet-sub">Enviamos un código de 6 dígitos a <span id="auth-otp-email" style="color:var(--white)"></span></div>
+      <input class="auth-email-inp" id="auth-otp-inp" type="number" placeholder="123456" inputmode="numeric" maxlength="6" onkeydown="if(event.key==='Enter')submitOTP()" style="letter-spacing:4px;font-size:var(--t-md);text-align:center">
+      <button class="auth-send-btn" id="auth-otp-btn" onclick="submitOTP()">Confirmar</button>
+      <div class="auth-msg" id="auth-otp-msg"></div>
+      <span class="auth-cancel" onclick="closeAuthSheet();document.getElementById('auth-sheet-step1').style.display='block';document.getElementById('auth-sheet-step2').style.display='none'">Cancelar</span>
     </div>
     <div id="auth-sheet-step3" style="display:none">
       <div class="auth-sheet-title">Tu cuenta</div>
