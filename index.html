@@ -3750,12 +3750,17 @@ function confirmAvBlock(){
     const from=document.getElementById('av-sheet-from')?.value||'09:00';
     const to=document.getElementById('av-sheet-to')?.value||'12:00';
     if(from>=to){showToast('La hora de inicio debe ser menor que la de fin','warn');return;}
-    if(availability[_avSheetDay].blocks.some(b=>b.from===from&&b.to===to)){closeAvSheet();return;}
+    // Verificar solapamiento con bloques existentes (no solo igualdad exacta)
+    const av=availability[_avSheetDay];
+    if(av.blocks.some(b=>toMin(from)<toMin(b.to)&&toMin(to)>toMin(b.from))){
+      showToast('Este horario coincide con un bloque existente','warn');return;
+    }
     // ── CASO 1: detectar conflictos con el plan antes de confirmar ──
     const _conflicts=checkPlanConflictsWithBlock(_avSheetDay,from,to);
     const _doAdd=()=>{
       _conflicts.forEach(s=>_removePlanItem(s._title));
-      availability[_avSheetDay].blocks.push({from,to});
+      av.blocks.push({from,to});
+      av.blocks.sort((a,b)=>toMin(a.from)-toMin(b.from)); // mantener orden cronológico
       cachedResult=null;saveAV();renderAvBlocks();invalidateCalcResult();
     };
     closeAvSheet();
