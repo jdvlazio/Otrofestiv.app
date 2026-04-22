@@ -232,9 +232,9 @@ body{background:var(--bg);color:var(--white);font-family:var(--font),'Plus Jakar
 h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t-lg);font-weight:var(--w-display);line-height:1;letter-spacing:-.03em;color:var(--white);flex:1}
 .hdr-wordmark span{color:var(--amber)}
 /* Auth button */
-.auth-btn{position:relative;width:30px;height:30px;border-radius:50%;border:1px solid var(--white-20);background:transparent;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:border-color .15s}
-.auth-btn:hover{border-color:var(--white-60)}
-.auth-btn svg{opacity:.5;transition:opacity .15s}
+.auth-btn{position:relative;width:32px;height:32px;border-radius:50%;border:1.5px solid var(--white-20);background:transparent;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:border-color .2s,background .2s;margin-left:auto}
+.auth-btn:hover{border-color:var(--white-60);background:rgba(255,255,255,.05)}
+.auth-btn svg{opacity:.6;transition:opacity .15s}
 .auth-btn:hover svg,.auth-btn.signed-in svg{opacity:1}
 .auth-btn.signed-in{border-color:var(--amber)}
 .auth-btn.signed-in svg{stroke:var(--amber)}
