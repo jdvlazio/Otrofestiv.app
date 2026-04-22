@@ -524,16 +524,23 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
    EMPTY-STATE — componente vacío unificado
    Uso: todos los tabs cuando no hay contenido
    ─────────────────────────────────────────────────────
-   .empty-state          → contenedor centrado
+   .empty-state          → contenedor centrado (inline: search results, sugerencias)
+   .empty-state-hero     → pantalla completa (Mi Plan, Intereses, Planear vacíos)
    .empty-state-icon     → ícono SVG 20px, amber-60
    .empty-state-title    → mensaje principal, white
    .empty-state-sub      → subtexto / acción, gray
+   .empty-state-cta      → CTA primario: ámbar sólido, texto negro (regla del sistema)
 ══════════════════════════════════════════════════════ */
 .empty-state{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:var(--sp-6) var(--sp-5);gap:var(--sp-2)}
+.empty-state-hero{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:var(--sp-7) var(--sp-5);gap:var(--sp-2)}
 .empty-state-icon{color:var(--amber-60);display:flex;align-items:center;justify-content:center;margin-bottom:var(--sp-1)}
 .empty-state-icon svg{width:20px;height:20px}
+.empty-state-hero .empty-state-icon svg{width:28px;height:28px}
 .empty-state-title{font-size:var(--t-base);font-weight:var(--w-semi);color:var(--white);line-height:1.4}
-.empty-state-sub{font-size:var(--t-sm);color:var(--gray);line-height:1.5;max-width:240px}
+.empty-state-hero .empty-state-title{font-size:var(--t-lg);font-weight:var(--w-bold)}
+.empty-state-sub{font-size:var(--t-sm);color:var(--gray);line-height:1.6;max-width:260px}
+.empty-state-hero .empty-state-sub{font-size:var(--t-base);max-width:280px}
+.empty-state-cta{background:var(--amber);border:none;color:#000;font-family:var(--font);font-size:var(--t-base);font-weight:var(--w-bold);padding:var(--sp-btn) var(--sp-6);border-radius:var(--r-pill);cursor:pointer;margin-top:var(--sp-3)}
 
 .empty{grid-column:1/-1}
 .empty span{font-size:var(--t-display);display:block;margin-bottom:var(--sp-3)}
@@ -3472,6 +3479,16 @@ const emptyState = (icon, title, sub='') =>
     <div class="empty-state-title">${title}</div>
     ${sub ? `<div class="empty-state-sub">${sub}</div>` : ''}
   </div>`;
+
+// Hero: para pantallas completas vacías — Mi Plan, Intereses, Planear
+// REGLA: CTA siempre con .empty-state-cta (ámbar sólido, texto negro)
+const emptyStateHero = (icon, title, sub='', ctaLabel='', ctaOnclick='') =>
+  `<div class="empty-state-hero">
+    <div class="empty-state-icon">${icon}</div>
+    <div class="empty-state-title">${title}</div>
+    ${sub ? `<div class="empty-state-sub">${sub}</div>` : ''}
+    ${ctaLabel ? `<button class="empty-state-cta" onclick="${ctaOnclick}">${ctaLabel}</button>` : ''}
+  </div>`;
 let avAddOpen={};
 /* ── Sistema de modales de confirmación ── */
 function showDestructiveModal(title,body,label,cb){_showModal(title,body,label,cb,'destructive');}
@@ -4133,16 +4150,7 @@ function renderFilmListHTML(){
 
   let html='';
   if(!allPending.length&&!watchedList.length){
-    return `<div style="text-align:center;padding:var(--sp-6) var(--sp-5)">
-      <div style="font-size:var(--t-display);margin-bottom:12px">${ICONS.heart}</div>
-      <div style="font-weight:var(--w-bold);color:var(--white);margin-bottom:8px">Tu lista está vacía</div>
-      <div style="font-size:var(--t-sm);color:var(--gray);line-height:1.6;margin-bottom:var(--sp-5);max-width:260px;margin-left:auto;margin-right:auto">
-        Tu plan para el festival, sin complicaciones.
-      </div>
-      <button onclick="switchMainNav('mnav-cartelera');showDayView()" style="background:var(--amber-10);border:1px solid var(--amber-30);color:var(--amber);font-family:var(--font);font-size:var(--t-sm);font-weight:var(--w-bold);padding:var(--sp-btn) var(--sp-5);border-radius:var(--r-pill);cursor:pointer">
-        Explorar Programa
-      </button>
-    </div>`;
+    return emptyStateHero(ICONS.heart,'Tu lista está vacía','Tu plan para el festival, sin complicaciones.','Explorar Programa',"switchMainNav('mnav-cartelera');showDayView()");
   }
   // Switch grid/lista para Intereses
   const _iSwitch=`<div class="intereses-view-switch" style="flex-shrink:0">
@@ -4961,16 +4969,7 @@ function _renderSavedAgendaHTML(){
     const _eh=renderContextualHeader();
     return _eh?`<div class="saved-agenda">${_eh}</div>`:'';
   }
-  if(!savedAgenda||!savedAgenda.schedule.length) return `<div style="text-align:center;padding:var(--sp-6) var(--sp-5)">
-      <div style="font-size:var(--t-display);margin-bottom:12px">${ICONS.calendar}</div>
-      <div style="font-weight:var(--w-bold);color:var(--white);margin-bottom:8px">Tu plan aparecerá aquí</div>
-      <div style="font-size:var(--t-sm);color:var(--gray);line-height:1.6;margin-bottom:var(--sp-5);max-width:260px;margin-left:auto;margin-right:auto">
-        Añade películas a Intereses y genera opciones en Planear. Otrofestiv arma el resto.
-      </div>
-      <button onclick="switchMainNav('mnav-planner');showAgView()" style="background:var(--amber-10);border:1px solid var(--amber-30);color:var(--amber);font-family:var(--font);font-size:var(--t-sm);font-weight:var(--w-bold);padding:var(--sp-btn) var(--sp-5);border-radius:var(--r-pill);cursor:pointer">
-        Ir a Planear
-      </button>
-    </div>`;
+  if(!savedAgenda||!savedAgenda.schedule.length) return emptyStateHero(ICONS.calendar,'Tu plan aparecerá aquí','Añade lo que no quieres perderte y armamos tu plan.','Ir a Planear',"switchMainNav('mnav-planner');showAgView()");
   const all=savedAgenda.schedule;
   const planTitles=new Set(all.map(s=>s._title));
   const archive=all.filter(s=>screeningPassed(s)||watched.has(s._title));
@@ -6160,13 +6159,7 @@ function renderAgenda(){
             </div>
             <div id="ag-search-results" class="ag-search-results"></div>
           </div>
-          <div style="text-align:center;padding:var(--sp-6) var(--sp-4) var(--sp-5)">
-            <div style="font-size:32px;margin-bottom:var(--sp-3)">${ICONS.calendar}</div>
-            <div style="font-size:var(--t-md);font-weight:var(--w-bold);color:var(--white);margin-bottom:var(--sp-2)">Primero, elige tus títulos</div>
-            <div style="font-size:var(--t-base);color:var(--gray);line-height:1.6;margin-bottom:var(--sp-2)">Añade lo que no quieres perderte.</div>
-            <div style="font-size:var(--t-base);color:var(--gray);line-height:1.6;margin-bottom:var(--sp-5)">Cuando tengas tu lista, armamos tu plan.</div>
-            <button onclick="switchMainNav('mnav-seleccion');showAgView()" style="background:var(--amber);border:none;color:#000;font-family:var(--font);font-size:var(--t-base);font-weight:var(--w-bold);padding:var(--sp-btn) var(--sp-6);border-radius:var(--r-pill);cursor:pointer">Ir a Intereses</button>
-          </div>
+          ${emptyStateHero(ICONS.calendar,'Primero, elige tus títulos','Añade lo que no quieres perderte. Cuando tengas tu lista, armamos tu plan.','Ir a Intereses',"switchMainNav('mnav-seleccion');showAgView()")}
         </div>`;
       return;
     }
