@@ -7574,7 +7574,7 @@ function render(){
     const progBadge='';//REMOVED
     const nowBadge=isNow?`<div class="poster-now">AHORA</div>`:'';
     const _notice=NOTICES.find(n=>n.title===f.title&&n.festival===(_activeFestId||'aff2026'));
-    const pastBadge=_notice?`<div class="poster-past-badge" style="background:var(--amber-60);color:var(--black)">${_notice.type==='cancelled'?'Cancelada':'Reprog.'}</div>`:passed&&!isNow?`<div class="poster-past-badge">Pasó</div>`:'';
+    const pastBadge=_notice?`<div class="poster-past-badge" style="background:var(--amber-60);color:var(--black)">${_notice.type==='cancelled'?'Cancelada':'Reprog.'}</div>`:'';
 
     const _fe=festivalEnded();
 return`<div class="poster-card${inWL&&!inW?' in-wl':''}${inW&&!_fe?' in-watched':''}${passed&&!_fe?' past-card':''}" onclick="openPelSheet('${safeT}')">
