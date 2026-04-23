@@ -6855,6 +6855,7 @@ function openPelSheet(title){
     </div>
     <div class="pel-sheet-divider"></div>
     <div class="pel-sheet-section-lbl">${f.type==='event'?'horario':allScr.length===1?'función':'funciones'}</div>
+    ${(()=>{const _n=NOTICES.find(n=>n.title===f.title&&n.festival===(_activeFestId||'aff2026'));if(!_n)return'';const _msg=_n.type==='cancelled'?'Función cancelada · Pendiente nueva fecha':`Reprogramada → ${_n.newDay||''} ${_n.newTime||''}${_n.newVenue?' · '+_n.newVenue:''}`;return`<div style="display:flex;align-items:center;gap:var(--sp-2);padding:var(--sp-2) var(--sp-3);background:var(--amber-08);border-radius:var(--r-sm);margin-bottom:var(--sp-2)"><span class="notice-badge">${_n.type==='cancelled'?'CANCELADA':'REPROG.'}</span><span style="font-size:var(--t-sm);color:var(--amber-60)">${_msg}</span></div>`;})()}
     <div class="pel-sheet-screenings">${rows}</div>
     <div class="pel-sheet-divider"></div>
     <div class="pel-sheet-section-lbl">${f.type==='event'?'descripción':'sinopsis'}</div>
