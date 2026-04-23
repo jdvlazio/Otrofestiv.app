@@ -6343,6 +6343,20 @@ DAYS.forEach(day=>{
   dtabs.appendChild(btn);
 });
 
+// Auto-posicionar en el primer día vigente al cargar
+// Los días pasados siguen accesibles con scroll hacia la izquierda
+(()=>{
+  const firstFuture=DAY_KEYS.find(d=>!dayFullyPassed(d));
+  if(firstFuture&&dayFullyPassed(activeDay)){
+    activeDay=firstFuture;
+    dtabs.querySelectorAll('.dtab').forEach(t=>t.classList.toggle('on',t.dataset.day===firstFuture));
+  }
+  requestAnimationFrame(()=>{
+    const activeBtn=dtabs.querySelector('.dtab.on');
+    if(activeBtn) dtabs.scrollLeft=activeBtn.offsetLeft-dtabs.offsetLeft;
+  });
+})();
+
 
 function toggleDropdown(id){
   const panel=document.getElementById(id+'-panel');
