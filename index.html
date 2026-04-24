@@ -3101,7 +3101,7 @@ function renderMiPlanCalendar(){
         <div class="cta-ctx-arr cta-ctx-arr-c">${ICONS.chevronD}</div>
       </div>`;
     } else {
-      listHtml+=`<div class="mplan-empty">Sin funciones este día</div>`;
+      listHtml+=`<div class="mplan-empty">Nada en tu plan este día</div>`;
     }
   } else {
     dayFilms.forEach((s,idx)=>{
@@ -3112,8 +3112,8 @@ function renderMiPlanCalendar(){
       if(idx>0){
         const prev=dayFilms[idx-1];
         const gap=fMin-(toMin(prev.time)+parseDur(prev.duration));
-        if(gap>=0&&gap<25) listHtml+=`<div class="mplan-warn-row">\u25b2 ~${gap} min entre funciones</div>`;
-        if(prev.has_qa){const qaGap=gap-30;qaGap<0?listHtml+=`<div class="mplan-warn-row" style="color:var(--red)">Q&A · si te quedas no llegas a tu siguiente función</div>`:listHtml+=`<div class="mplan-warn-row" style="color:var(--amber)">Q&A · si te quedas tienes ~${qaGap} min</div>`;}
+        if(gap>=0&&gap<25) listHtml+=`<div class="mplan-warn-row">\u25b2 ~${gap} min hasta la siguiente</div>`;
+        if(prev.has_qa){const qaGap=gap-30;qaGap<0?listHtml+=`<div class="mplan-warn-row" style="color:var(--red)">Q&A · si te quedas no llegas a la siguiente</div>`:listHtml+=`<div class="mplan-warn-row" style="color:var(--amber)">Q&A · si te quedas tienes ~${qaGap} min</div>`;}
         const tw=travelWarn(prev,s);
         if(tw) listHtml+=`<div class="mplan-warn-row">${tw}</div>`;
       }
@@ -3586,7 +3586,7 @@ function showConflictModal(conflicts, onConfirm){
     <div class="conflict-modal-hdr">Conflicto con tu plan</div>
     <div class="conflict-modal-body">
       Este horario choca con:<br>${names}<br><br>
-      ¿Continuar y quitar ${conflicts.length===1?'esa función':'esas funciones'} del plan?
+      ¿Continuar y quitar ${conflicts.length===1?'esta actividad':'estas actividades'} del plan?
     </div>
     <div class="conflict-modal-btns">
       <button class="conflict-modal-btn cancel" id="conflict-cancel">Cancelar</button>
@@ -4951,13 +4951,13 @@ function renderContextualHeader(){
             <div class="ctx-suggest-venue">${vc2.short}</div>
           </div>
         </div>`;
-    })():`<div style="font-size:var(--t-caption);color:var(--gray)">Sin funciones disponibles en este tramo.</div>`;
+    })():`<div style="font-size:var(--t-caption);color:var(--gray)">Sin actividades disponibles en este tramo.</div>`;
     return`<div class="ctx-header">
       <div class="ctx-eyebrow" style="color:var(--green-70)">
         <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
         Tiempo libre
       </div>
-      <div class="ctx-main-title">${gapLabel} hasta tu próxima función</div>
+      <div class="ctx-main-title">${gapLabel} hasta tu siguiente actividad</div>
       <div class="ctx-gap-bar">
         <div class="ctx-gap-dot" style="background:var(--green)"></div>
         <div class="ctx-gap-line"><div class="ctx-gap-fill" style="width:${fillPct}%"></div></div>
@@ -5153,7 +5153,7 @@ function _renderSavedAgendaHTML(){
     });
     html+='</div>'; // close suggestion-wrap content
   } else {
-    html+=emptyState(ICONS.search,'Tu plan está bien cubierto.','Tu agenda está bien cubierta. No hay más funciones que quepan.');
+    html+=emptyState(ICONS.search,'Tu plan está bien cubierto.','Tu agenda está bien cubierta. No hay más actividades que quepan.');
   }
   html+='</div>'; // close suggestion-wrap
   } // end !festivalEnded
@@ -5300,12 +5300,12 @@ function shareAsImage(){
   }
   if(conflicting.length){
     const names=[...new Set(conflicting)].map(t=>t.length>20?t.slice(0,18)+'…':t).join(', ');
-    issues.push(`Hay funciones con horario solapado: ${names}`);
+    issues.push(`Hay actividades con horario solapado: ${names}`);
   }
 
   // 3. Plan completamente pasado
   const stillActive=savedAgenda.schedule.some(s=>!screeningPassed(s));
-  if(!stillActive) issues.push('Todas las funciones de tu plan ya pasaron');
+  if(!stillActive) issues.push('Todas las actividades de tu plan ya pasaron');
 
   // Si hay problemas: mostrar advertencia con opción de continuar igual
   if(issues.length){
@@ -7084,7 +7084,7 @@ function renderMiPlanList(schedule){
       const db=new Date(`${FESTIVAL_DATES[b.day]}T${b.time}:00`);
       return da-db;
     });
-  if(!upcoming.length) return '<div style="padding:var(--sp-5) var(--sp-4);text-align:center;color:var(--gray);font-size:var(--t-base)">Sin funciones pendientes</div>';
+  if(!upcoming.length) return '<div style="padding:var(--sp-5) var(--sp-4);text-align:center;color:var(--gray);font-size:var(--t-base)">Sin actividades pendientes</div>';
   
   // Agrupar por día
   const byDay={};
@@ -7385,7 +7385,7 @@ function renderProgramaList(){
     return cat(a)-cat(b);
   });
   if(!films.length){
-    el.innerHTML=`<div style="text-align:center;padding:var(--sp-6) var(--sp-5);color:var(--gray);font-size:var(--t-base)">Sin funciones para este filtro</div>`;
+    el.innerHTML=`<div style="text-align:center;padding:var(--sp-6) var(--sp-5);color:var(--gray);font-size:var(--t-base)">Sin actividades para este filtro</div>`;
     return;
   }
   // Agrupar por hora
@@ -7608,12 +7608,12 @@ function render(){
   if(activeSec!=='all') films=films.filter(f=>f.section===activeSec);
   const cntEl=document.getElementById('cnt');
   if(activeVenue!=='all'||activeSec!=='all'){
-    cntEl.innerHTML=`<b>${films.length}</b> función${films.length!==1?'es':''}`;
+    cntEl.innerHTML=`<b>${films.length}</b> actividad${films.length!==1?'es':''}`;
   } else {
     cntEl.innerHTML='';
   }
   const grid=document.getElementById('grid');
-  if(!films.length){grid.innerHTML=emptyState(ICONS.search,'Sin funciones para este filtro.','Ajusta los filtros de sección o sede.');return;}
+  if(!films.length){grid.innerHTML=emptyState(ICONS.search,'Sin actividades para este filtro.','Ajusta los filtros de sección o sede.');return;}
   // ── Vista horario: poster-grid 3 col + overlay de hora ──
   grid.innerHTML='<div class="poster-grid">'+films.map((f,i)=>{
     const FICCI_POSTER='https://ficcifestival.com/sites/default/files/2026-02/logo-ficci65_2.png';
