@@ -2781,6 +2781,8 @@ function sala(v){const m=v.match(/Sala\s*(\d+)/)||v.match(/Sal[oó]n\s*(\d+)/i);
 /* ── UTILS: tiempo, fecha, duración ─────────────────────────────────── */
 function toMin(t){const[h,m]=t.split(':').map(Number);return h*60+m;}
 function parseDur(d){const m=d&&d.replace('~','').match(/(\d+)/);return m?parseInt(m[1]):90;}
+// Duración efectiva: parseDur + 30 min si has_qa (Q&A alarga la función)
+function effectiveDuration(f){return parseDur(f&&f.duration)+(f&&f.has_qa?30:0);}
 function minToStr(m){
   const h=Math.floor(((m%1440)+1440)%1440/60),mn=((m%1440)+1440)%1440%60;
   return`${String(h).padStart(2,'0')}:${String(mn).padStart(2,'0')}`;
@@ -2789,8 +2791,8 @@ function minToStr(m){
 /* ── CONFLICTS: detección de solapamientos entre funciones ──────────── */
 function screensConflict(a,b){
   if(a.day!==b.day) return false;
-  const aS=toMin(a.time), aE=aS+parseDur(a.duration);
-  const bS=toMin(b.time), bE=bS+parseDur(b.duration);
+  const aS=toMin(a.time), aE=aS+effectiveDuration(a);
+  const bS=toMin(b.time), bE=bS+effectiveDuration(b);
   // Gap requerido: tiempo de viaje entre sedes + 5min margen (mínimo 10min)
   const travel=(a.venue&&b.venue)?travelMins(a.venue,b.venue):0;
   const minGap=Math.max(FESTIVAL_BUFFER, travel+FESTIVAL_BUFFER);
@@ -2814,7 +2816,7 @@ function travelWarn(s1,s2){
   if(s1.day!==s2.day) return null;
   const travel=travelMins(s1.venue,s2.venue);
   if(travel===0) return null;
-  const gap=toMin(s2.time)-(toMin(s1.time)+parseDur(s1.duration));
+  const gap=toMin(s2.time)-(toMin(s1.time)+effectiveDuration(s1));
   if(gap<travel+10) return`▲ ~${travel} min en carro entre estas sedes`;
   return null;
 }
@@ -3109,7 +3111,7 @@ function renderMiPlanCalendar(){
       const safeT=(s._title||'').replace(/"/g,'&quot;');
       if(idx>0){
         const prev=dayFilms[idx-1];
-        const gap=fMin-(toMin(prev.time)+parseDur(prev.duration));
+        const gap=fMin-(toMin(prev.time)+effectiveDuration(prev));
         if(gap>=0&&gap<25) listHtml+=`<div class="mplan-warn-row">\u25b2 ~${gap} min entre funciones</div>`;
         const tw=travelWarn(prev,s);
         if(tw) listHtml+=`<div class="mplan-warn-row">${tw}</div>`;
