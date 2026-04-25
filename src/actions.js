@@ -552,10 +552,5 @@ function renderAvBlocks(){
   el.innerHTML=items.length?`<div class="av-block-list">${items.join('')}</div>`:'';
 }
 
-function isScreeningBlocked(s){
-  const av=availability[s.day];if(!av) return false;
-  const sStart=toMin(s.time),sEnd=sStart+parseDur(s.duration);
-  // Chequeo de solapamiento completo: excluye funciones que ocurran durante el bloque
-  return av.blocks.some(b=>sStart<toMin(b.to)&&sEnd>toMin(b.from));
-}
+// isScreeningBlocked — definida en src/utils.js
 

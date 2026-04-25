@@ -3232,56 +3232,6 @@ function isToday(day){
 //               parseDur(), toMin(), FESTIVAL_BUFFER
 // ══════════════════════════════════════════════════════════════════
 
-// ── ALGORITHM — exhaustive max + MRV + random restarts ──
-function shuffle(arr){
-  const a=[...arr];
-  for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}
-  return a;
-}
-
-// ── Mejora 1: Scoring por película ──
-// Pondera cuánto vale incluir una película según rareza, sección y duración
-function scoreFilm(title, screens, isPriority, allTitles){
-  let score=0;
-  // Prioridad explícita: peso máximo
-  if(isPriority) score+=100;
-  // Unicidad: menos funciones = más difícil de ver = mayor peso
-  const n=screens.length;
-  if(n===1) score+=40;
-  else if(n===2) score+=20;
-  else score+=5;
-  // Sección única: si es la única película de su sección en la watchlist
-  const mySection=screens[0]?.section||'';
-  const siblingsInSection=allTitles.filter(t=>{
-    if(t===title) return false;
-    return FILMS.some(f=>f.title===t&&f.section===mySection);
-  });
-  if(siblingsInSection.length===0) score+=15;
-  // Duración larga: película de >150 min es un compromiso grande, priorizar
-  const dur=parseInt(screens[0]?.duration)||0;
-  if(dur>150) score+=10;
-  return score;
-}
-
-// ── Mejora 2: Interval Scheduling — ordenar funciones por conflictos mínimos + fin temprano ──
-// Para cada película con múltiples funciones, prioriza la que:
-// 1. Conflicta con menos otras funciones de la watchlist (menos bloqueos)
-// 2. Termina más temprano (earliest-finish-time: principio clásico de interval scheduling)
-function sortScreensByStrategy(screens, allGroups){
-  // Precalcular todas las funciones de todas las otras películas
-  const allOtherScreenings=allGroups.flatMap(g=>g.screens);
-  return [...screens].sort((a,b)=>{
-    // Contar cuántas funciones ajenas conflictan con cada opción
-    const conflA=allOtherScreenings.filter(s=>s!==a&&screensConflict(a,s)).length;
-    const conflB=allOtherScreenings.filter(s=>s!==b&&screensConflict(b,s)).length;
-    if(conflA!==conflB) return conflA-conflB; // menos conflictos primero
-    // Si empatan, earliest finish time (termina antes = deja más espacio)
-    const endA=toMin(a.time)+parseDur(a.duration);
-    const endB=toMin(b.time)+parseDur(b.duration);
-    return endA-endB;
-  });
-}
-
 
 function _effectiveVenue(s){
   const n=NOTICES.find(nx=>nx.title===s._title&&nx.festival===(window._currentFestivalId||'aff2026')&&nx.type==='rescheduled'&&nx.newVenue);
@@ -4280,12 +4230,7 @@ function renderAvBlocks(){
   el.innerHTML=items.length?`<div class="av-block-list">${items.join('')}</div>`:'';
 }
 
-function isScreeningBlocked(s){
-  const av=availability[s.day];if(!av) return false;
-  const sStart=toMin(s.time),sEnd=sStart+parseDur(s.duration);
-  // Chequeo de solapamiento completo: excluye funciones que ocurran durante el bloque
-  return av.blocks.some(b=>sStart<toMin(b.to)&&sEnd>toMin(b.from));
-}
+// isScreeningBlocked — definida en src/utils.js
 
 
 

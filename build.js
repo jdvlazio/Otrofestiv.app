@@ -118,6 +118,13 @@ function build() {
   fs.writeFileSync(path.join(DIST, 'index.html'), html);
   const kb = (fs.statSync(path.join(DIST, 'index.html')).size / 1024).toFixed(0);
   console.log(`\n✓ dist/index.html (${kb}kb) in ${Date.now() - start}ms`);
+  
+  // Auto-verify integrity
+  try {
+    require('./verify.js');
+  } catch(e) {
+    // verify.js calls process.exit(1) on failure — that's the intended behavior
+  }
 }
 
 build();
