@@ -2449,6 +2449,54 @@ function festivalEnded(){ return simNow()>FESTIVAL_END; }
 //     Funciones puras: fechas, tiempo, conflictos, normalización
 // ═══════════════════════════════════════════════════════════════
 
+/* ── Venues — resolución de sedes para cualquier festival ─────────────
+   _FEST_VENUES se carga desde el JSON del festival en loadFestival().
+   VENUES es el fallback estático para FICCI 65.                      */
+let _FEST_VENUES = {};
+let _FEST_TRANSPORT = 'transit'; // 'walking' | 'transit' | 'mixed'
+
+const VENUES={
+  'Teatro Adolfo Mejía': {short:'Teatro Adolfo Mejía', lat:10.4238, lon:-75.5503},
+  'Plaza Bocagrande':    {short:'Plaza Bocagrande',    lat:10.3987, lon:-75.5600},
+  'CC Caribe Plaza':     {short:'CC Caribe Plaza',     lat:10.4071, lon:-75.5124},
+  'Auditorio Nido':      {short:'Auditorio Nido',      lat:10.4250, lon:-75.5490},
+  'Plaza Proclamación':  {short:'Plaza Proclamación',  lat:10.4230, lon:-75.5510},
+  'C. Convenciones':     {short:'C. de Convenciones',  lat:10.4242, lon:-75.5497},
+  'Unibac':              {short:'Unibac',               lat:10.4180, lon:-75.5430},
+  'AECID':               {short:'AECID',                lat:10.4210, lon:-75.5470},
+};
+function _resolveVenue(v){
+  if(!v) return null;
+  if(_FEST_VENUES[v]) return _FEST_VENUES[v];
+  const fk=Object.keys(_FEST_VENUES).find(k=>v.includes(k)||k.includes(v));
+  if(fk) return _FEST_VENUES[fk];
+  const sk=Object.keys(VENUES).find(k=>v.includes(k)||k.includes(v));
+  if(sk) return VENUES[sk];
+  return null;
+}
+const _TRAVEL_SCALE={
+  walking:[{d:0.10,t:0},{d:0.35,t:5},{d:0.8,t:10},{d:1.5,t:20},{d:3.0,t:35},{d:Infinity,t:50}],
+  transit:[{d:0.15,t:0},{d:0.40,t:8},{d:1.0,t:12},{d:2.5,t:18},{d:5.0,t:25},{d:Infinity,t:35}],
+  mixed:  [{d:0.10,t:0},{d:0.35,t:5},{d:0.8,t:10},{d:1.0,t:12},{d:2.5,t:18},{d:5.0,t:25},{d:Infinity,t:35}],
+};
+function venueTravelMins(v1,v2){
+  const c1=_resolveVenue(v1),c2=_resolveVenue(v2);
+  if(!c1?.lat||!c2?.lat) return 0;
+  const dlat=(c1.lat-c2.lat)*111;
+  const dlon=(c1.lon-c2.lon)*111*Math.cos(c1.lat*Math.PI/180);
+  const km=Math.sqrt(dlat*dlat+dlon*dlon);
+  const scale=_TRAVEL_SCALE[_FEST_TRANSPORT]||_TRAVEL_SCALE.transit;
+  const tier=scale.find(s=>km<=s.d);
+  return tier?tier.t:35;
+}
+function vcfg(v){
+  if(!v) return{short:''};
+  const r=_resolveVenue(v);
+  if(r) return r;
+  return{short:v.split(' · ')[0].trim()};
+}
+function sala(v){const m=v.match(/Sala\s*(\d+)/)||v.match(/Sal[oó]n\s*(\d+)/i);return m?'Sala '+m[1]:'';}
+
 
 // ─── posters.js ──────────────────────────────────────
 // ══ Posters — generativos SVG, TMDB, getFilmPoster ══
