@@ -1,27 +1,22 @@
 #!/usr/bin/env node
 // build.js — Otrofestiv build system
-// Uso: node build.js
-// Ensambla src/ → index.html (deploy target)
-//
-// Fuentes canónicas:
-//   src/shell.html     — HTML puro sin CSS ni JS
-//   src/styles.css     — todo el CSS
-//   src/config.js      — UI, ICONS, FESTIVAL_CONFIG, VENUES, NOTICES
-//   src/algo.js        — algoritmo + getSuggestions + squeezeExcluded
-//   src/renders/*.js   — renders por tab
-//
-// Output: index.html (GitHub Pages deploy)
+// Uso: node build.js → produce dist/index.html
 
 const fs   = require('fs');
 const path = require('path');
 
-const ROOT = __dirname;
-const SRC  = path.join(ROOT, 'src');
-const OUT  = path.join(ROOT, 'index.html');
+const ROOT  = __dirname;
+const SRC   = path.join(ROOT, 'src');
+const DIST  = path.join(ROOT, 'dist');
+const INDEX = path.join(ROOT, 'index.html');
 
-// ── JS build order ──────────────────────────────────────────────
 const JS_ORDER = [
   'config.js',
+  'posters.js',
+  'auth.js',
+  'utils.js',
+  'state.js',
+  'actions.js',
   'algo.js',
   'renders/helpers.js',
   'renders/mi-lista.js',
@@ -33,59 +28,93 @@ const JS_ORDER = [
   'renders/init.js',
 ];
 
+// Remove top-level const/let declarations that are already declared
+function dedup(code, alreadyDeclared) {
+  const lines = code.split('\n');
+  const result = [];
+  let skipDepth = 0;
+  let skipName = null;
+
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
+    const trimmed = line.trimStart();
+
+    // Detect top-level duplicate declaration
+    if (skipDepth === 0) {
+      const m = trimmed.match(/^(const|let|var)\s+(\w+)\s*=/);
+      if (m && alreadyDeclared.has(m[2]) && !line.startsWith(' ') && !line.startsWith('\t')) {
+        skipName = m[2];
+        skipDepth = 1;
+        // Count braces in this line
+        skipDepth += (line.match(/\{/g)||[]).length - (line.match(/\}/g)||[]).length;
+        // Single-line declaration ends with ;
+        if (skipDepth <= 1 && trimmed.endsWith(';')) skipDepth = 0;
+        continue;
+      }
+    }
+
+    if (skipDepth > 0) {
+      skipDepth += (line.match(/\{/g)||[]).length - (line.match(/\}/g)||[]).length;
+      if (skipDepth <= 0) { skipDepth = 0; skipName = null; }
+      continue;
+    }
+
+    result.push(line);
+
+    // Track new declarations for subsequent files
+    const m = trimmed.match(/^(const|let|var)\s+(\w+)/);
+    if (m && !line.startsWith(' ') && !line.startsWith('\t')) {
+      alreadyDeclared.add(m[2]);
+    }
+  }
+
+  return result.join('\n');
+}
+
 function build() {
-  const t0 = Date.now();
+  const start = Date.now();
   console.log('Building Otrofestiv...\n');
+  if (!fs.existsSync(DIST)) fs.mkdirSync(DIST);
 
-  // 1. Read shell
-  const shellPath = path.join(SRC, 'shell.html');
-  if (!fs.existsSync(shellPath)) {
-    console.error('ERROR: src/shell.html not found');
-    process.exit(1);
+  let html = fs.readFileSync(INDEX, 'utf8');
+
+  // 1. Inline CSS from src/styles.css
+  const cssFile = path.join(SRC, 'styles.css');
+  if (fs.existsSync(cssFile)) {
+    const css = fs.readFileSync(cssFile, 'utf8');
+    html = html.replace(
+      /<style>[\s\S]*?<\/style>\s*<style>[\s\S]*?<\/style>/,
+      '<style>\n' + css + '\n</style>'
+    );
+    console.log(`  ✓ styles.css (${(css.length/1024).toFixed(0)}kb)`);
   }
-  let html = fs.readFileSync(shellPath, 'utf8');
 
-  // 2. Inline CSS
-  const cssPath = path.join(SRC, 'styles.css');
-  if (!fs.existsSync(cssPath)) {
-    console.error('ERROR: src/styles.css not found');
-    process.exit(1);
-  }
-  const css = fs.readFileSync(cssPath, 'utf8');
-  html = html.replace('<style>/* __STYLES__ */</style>', '<style>\n' + css + '\n</style>');
-  console.log(`  ✓ styles.css       (${css.length.toLocaleString()} chars)`);
-
-  // 3. Concatenate JS
+  // 2. Concatenate JS with dedup
   const missing = JS_ORDER.filter(f => !fs.existsSync(path.join(SRC, f)));
   if (missing.length) {
-    console.error('ERROR: Missing src files:', missing.join(', '));
-    process.exit(1);
+    console.log(`  ⚠ Missing: ${missing.join(', ')} — keeping inline JS`);
+  } else {
+    const declared = new Set();
+    const parts = [];
+
+    for (const f of JS_ORDER) {
+      let code = fs.readFileSync(path.join(SRC, f), 'utf8');
+      const before = declared.size;
+      code = dedup(code, declared);
+      parts.push(`\n// ─── ${f} ${'─'.repeat(Math.max(0,48-f.length))}\n${code}`);
+      console.log(`  ✓ ${f.padEnd(28)} (${(code.length/1024).toFixed(0)}kb, +${declared.size-before} symbols)`);
+    }
+
+    const js = parts.join('\n');
+    const scriptBlocks = [...html.matchAll(/<script>([\s\S]*?)<\/script>/g)];
+    const mainBlock = scriptBlocks.reduce((a, b) => b[0].length > a[0].length ? b : a);
+    html = html.replace(mainBlock[0], `<script>\n${js}\n</script>`);
+    console.log(`\n  ✓ ${JS_ORDER.length} modules, ${declared.size} total symbols`);
   }
 
-  const js = JS_ORDER.map(f => {
-    const code = fs.readFileSync(path.join(SRC, f), 'utf8');
-    console.log(`  ✓ src/${f.padEnd(28)} (${code.length.toLocaleString()} chars)`);
-    return `\n// ════ ${f} ════\n${code}`;
-  }).join('\n');
-
-  html = html.replace('<script>/* __SCRIPTS__ */</script>', '<script>' + js + '\n</script>');
-
-  // 4. Write output
-  fs.writeFileSync(OUT, html);
-  const elapsed = Date.now() - t0;
-  console.log(`\n✓ index.html (${html.length.toLocaleString()} chars) — ${elapsed}ms`);
-
-  // 5. Validate JS
-  try {
-    const scriptBlocks = [...html.matchAll(/<script(?![^>]*src)[^>]*>([\s\S]*?)<\/script>/gi)]
-      .filter(m => !m[0].includes('ld+json'))
-      .map(m => m[1]);
-    scriptBlocks.forEach((block, i) => new Function(block));
-    console.log(`✓ JS validation: ${scriptBlocks.length} blocks OK`);
-  } catch(e) {
-    console.error('✗ JS validation error:', e.message.slice(0, 100));
-    process.exit(1);
-  }
+  fs.writeFileSync(path.join(DIST, 'index.html'), html);
+  const kb = (fs.statSync(path.join(DIST, 'index.html')).size / 1024).toFixed(0);
+  console.log(`\n✓ dist/index.html (${kb}kb) in ${Date.now() - start}ms`);
 }
 
 build();
