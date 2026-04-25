@@ -2750,6 +2750,7 @@ const VENUE_COORDS={
   'MAMM · Plazoleta':{lat:6.2338,lon:-75.5733},
   'Industry Days':{lat:6.2338,lon:-75.5733},
   'Colombo Americano':{lat:6.2592,lon:-75.5680},
+  'Cineprox Las Américas':{lat:6.2504,lon:-75.5800},
   // FICCI venues in Cartagena
   'Teatro Adolfo Mejía':{lat:10.4238,lon:-75.5503},
   'Plaza Bocagrande':{lat:10.3987,lon:-75.5600},
@@ -2775,6 +2776,7 @@ function vcfg(v){
   if(/aecid/i.test(v))             return VENUES['AECID'];
   if(v.includes('Convenciones'))   return VENUES['C. Convenciones'];
   // AFF 2026 venues
+  if(v.includes('Cineprox')||v.includes('Las Américas')||v.includes('Las Americas')) return {short:'Cineprox Las Américas'};
   if(v.includes('MAMM · Plazoleta')) return {short:'MAMM Plazoleta'};
   if(v.includes('MAMM'))             return {short:'MAMM'};
   if(v.includes('Colombo'))          return {short:'Colombo Americano'};
@@ -2816,9 +2818,15 @@ function travelMins(venueA,venueB){
   if(g1==='centro'||g2==='centro') return g1==='cp'||g2==='cp'?16:12;
   return 0;
 }
+function _effectiveVenue(s){
+  // Si hay un notice de cambio de sede, usa la nueva sede
+  const n=NOTICES.find(nx=>nx.title===s._title&&nx.festival===(window._currentFestivalId||'aff2026')&&nx.type==='rescheduled'&&nx.newVenue);
+  return n?n.newVenue:s.venue;
+}
 function travelWarn(s1,s2){
   if(s1.day!==s2.day) return null;
-  const travel=travelMins(s1.venue,s2.venue);
+  const v1=_effectiveVenue(s1), v2=_effectiveVenue(s2);
+  const travel=travelMins(v1,v2);
   if(travel===0) return null;
   const gap=toMin(s2.time)-(toMin(s1.time)+parseDur(s1.duration));
   if(gap<travel+10) return`▲ ~${travel} min en carro entre estas sedes`;
