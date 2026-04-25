@@ -2,7 +2,7 @@
 // Estrategia: HTML siempre desde red. Assets en caché.
 
 const CACHE_NAME = 'otrofestiv-v202604250402';
-const BUILD = '202604251300';
+const BUILD = '202604251305';
 
 const STATIC_ASSETS = [
   '/manifest.json',

@@ -1370,21 +1370,16 @@ function buildResultHTML(scenarios){
         <div class="ag-excl-title">${short}</div>
       </div>`;
     }).join('');
-    const hasNext=n>1&&currentIdx<n-1;
     html+=`<div class="ag-excl-block">
       <div class="ag-excl-eyebrow">
         <span class="ag-excl-label">No incluidas</span>
         <span class="ag-excl-count">${sc.excluded.length}</span>
       </div>
       <div class="ag-excl-strip">${excPosters}</div>
-      ${hasNext
-        ?`<button class="ag-excl-cta" onclick="jumpToScenario(${currentIdx+1})">${ICONS.switch} Probar siguiente variación</button>`
-        :`<button class="ag-excl-cta" onclick="saveCurrentScenario();switchMainNav('mnav-miplan');showAgView()">${ICONS.calendar} Ajustar en Mi Plan</button>`
-      }
     </div>`;
   }
 
-  // ── CTA repetido al final — patrón UX formulario largo ──
+  // ── CTA único — un patrón, sin competencia, consistente en todas las variaciones ──
   html+=`<div class="ag-summary" style="margin-top:var(--sp-4)">
     ${navHtml}
     <div style="margin-top:${navHtml?'var(--sp-3)':'0'}">${saveBtnHtml}</div>

@@ -18,7 +18,7 @@ if (!styles) { err('No <style> block found'); process.exit(1); }
 const css = styles[1];
 
 const requiredCSS = [
-  'ag-excl-strip','ag-excl-poster','ag-excl-cta',
+  'ag-excl-strip','ag-excl-poster',
   'ag-warn','ctx-header','mplan-wk-block',
   'ctx-eyebrow','notice-banner','wl-heart',
   'prog-suffix','badge-live',
