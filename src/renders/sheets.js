@@ -278,7 +278,9 @@ function openPelSheet(title){
   const future=screenings.filter(s=>!screeningPassed(s)).sort((a,b)=>a.day_order-b.day_order||toMin(a.time)-toMin(b.time));
   const past=screenings.filter(s=>screeningPassed(s));
   const allScr=[...future,...past];
+  const safeT=f.title.replace(/'/g,"\'");
   const _hasPlan=savedAgenda&&savedAgenda.schedule.length>0;
+  const _inPlan=savedAgenda&&savedAgenda.schedule.some(s=>s._title===f.title);
   const rows=allScr.map(s=>{
     const dayAbb=DAY_SHORT[s.day]||DAY_ABB[DAY_KEYS.indexOf(s.day)]||s.day.slice(0,3).toUpperCase();
     const vc=vcfg(s.venue),sl=sala(s.venue);
@@ -326,8 +328,6 @@ function openPelSheet(title){
       <div class="pel-sheet-cortos-wrap">${cortoItems}</div>`;
   }
   const wlLabel=inWL?`${ICONS.heartFill} En Intereses`:`${ICONS.heart} Intereses`;
-  const safeT=f.title.replace(/'/g,"\'");
-  const _inPlan=savedAgenda&&savedAgenda.schedule.some(s=>s._title===f.title);
   const _planEntry=_inPlan?savedAgenda.schedule.find(s=>s._title===f.title):null;
   const _ps=document.getElementById('pel-sheet');
   if(_ps) _ps.scrollTop=0;
