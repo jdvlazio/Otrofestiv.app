@@ -2,6 +2,21 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
+<script>
+// ── Build check síncrono — corre ANTES del primer paint ──
+// Si la versión cambió, recarga antes de que el usuario vea nada.
+// Evita el brinco del splash que causa un reload asíncrono.
+(function(){
+  var BUILD='202604250257';
+  var stored=localStorage.getItem('_ofv_build');
+  if(stored&&stored!==BUILD){
+    localStorage.setItem('_ofv_build',BUILD);
+    location.replace(location.href+'?v='+BUILD);
+  }else{
+    localStorage.setItem('_ofv_build',BUILD);
+  }
+})();
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <link rel="manifest" href="/manifest.json">
 <meta name="theme-color" content="#0A0A0A">
@@ -8052,24 +8067,7 @@ if('serviceWorker' in navigator){
   });
   navigator.serviceWorker.addEventListener('controllerchange', () => location.reload());
 }
-// ── Version check: recarga la PWA si hay una versión nueva en el servidor ──
-// Método más confiable que SW updates en iOS Safari
-(function(){
-  const CURRENT_BUILD = localStorage.getItem('otrofestiv_build');
-  fetch('/version.json?t=' + Date.now(), {cache:'no-store'})
-    .then(r => r.json())
-    .then(data => {
-      if(!data.build) return;
-      if(CURRENT_BUILD && CURRENT_BUILD !== data.build) {
-        // Nueva versión disponible — recargar limpio
-        localStorage.setItem('otrofestiv_build', data.build);
-        location.reload(true);
-      } else {
-        localStorage.setItem('otrofestiv_build', data.build);
-      }
-    })
-    .catch(function(){});
-})();
+// version check moved to <head>
 </script>
 
 <!-- Festival switcher bottom sheet -->
