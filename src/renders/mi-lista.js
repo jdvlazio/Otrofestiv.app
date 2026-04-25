@@ -72,7 +72,7 @@ function renderFilmListHTML(){
   }
   if(watchedList.length){
     if(allPending.length) html+=`<div class="ag-list-sep"></div>`;
-    html+=`<div class="ya-vistas-bar"><div class="ya-vistas-lbl">${ICONS.check} Ya vistas</div></div>`;
+    html+=`<div class="ya-vistas-bar"><div class="ya-vistas-lbl">${ICONS.check} Ya vistas <span class="cnt-badge">${watchedList.length}</span></div></div>`;
     const _sortedW=[...watchedList].sort((a,b)=>(filmRatings[b]||0)-(filmRatings[a]||0));
     html+=`<div class="ag-film-grid">${_sortedW.map(t=>{
       const f=FILMS.find(fi=>fi.title===t);

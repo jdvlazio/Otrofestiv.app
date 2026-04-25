@@ -944,7 +944,12 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 /* Barra de modo Intereses */
 .intereses-mode-bar{display:flex;align-items:center;justify-content:space-between;padding:var(--sp-2) 0;margin-bottom:var(--sp-1)}
 /* .sec-hdr es la clase canónica — intereses-mode-title, ag-section-title, prio-strip-title son aliases */
-.intereses-cnt{font-size:var(--t-xs);font-weight:var(--w-bold);color:var(--gray);background:var(--surf-2);border:1px solid var(--bdr);border-radius:20px;padding:1px 7px;letter-spacing:.3px}
+/* ── cnt-badge — clase canónica para conteos en headers de sección ──────
+   Regla: cualquier número junto a un label de sección usa esta clase.
+   Alias: .intereses-cnt, .ag-excl-count — mantienen nombre por compatibilidad
+   NO usar para conteos narrativos inline (frases, descripciones).          */
+.cnt-badge{font-size:var(--t-xs);font-weight:var(--w-bold);color:var(--white-60);background:var(--surf-2);border:1px solid var(--bdr);border-radius:var(--r-pill);padding:1px 7px;letter-spacing:0;flex-shrink:0}
+.intereses-cnt{font-size:var(--t-xs);font-weight:var(--w-bold);color:var(--white-60);background:var(--surf-2);border:1px solid var(--bdr);border-radius:var(--r-pill);padding:1px 7px;letter-spacing:0;flex-shrink:0}
 .ya-vistas-bar{display:flex;align-items:center;padding:var(--sp-2) 0;margin-bottom:var(--sp-1)}
 .ya-vistas-lbl{font-size:var(--t-base);font-weight:var(--w-bold);color:var(--gray2);display:flex;align-items:center;gap:var(--sp-1)}
 /* Vista Intereses — view switch (estilos base en sistema unificado arriba) */
@@ -1055,7 +1060,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .ag-excl-block{background:var(--surf);border:1px solid var(--bdr);border-radius:var(--r);padding:var(--sp-3) var(--sp-4) var(--sp-4);margin-bottom:var(--sp-4);overflow:hidden}
 .ag-excl-eyebrow{display:flex;align-items:center;gap:var(--sp-2);margin-bottom:var(--sp-3)}
 .ag-excl-label{font-size:var(--t-label);font-weight:var(--w-bold);color:var(--gray);letter-spacing:.08em;text-transform:uppercase}
-.ag-excl-count{background:var(--surf-2);border:1px solid var(--bdr);border-radius:var(--r-pill);font-size:var(--t-xs);font-weight:var(--w-bold);color:var(--white-60);padding:1px 7px;letter-spacing:.03em}
+.ag-excl-count{font-size:var(--t-xs);font-weight:var(--w-bold);color:var(--white-60);background:var(--surf-2);border:1px solid var(--bdr);border-radius:var(--r-pill);padding:1px 7px;letter-spacing:0;flex-shrink:0}
 .ag-excl-strip{display:flex;gap:var(--sp-2);overflow-x:auto;padding-bottom:var(--sp-1);scrollbar-width:none}
 .ag-excl-strip::-webkit-scrollbar{display:none}
 .ag-excl-item{flex-shrink:0;width:52px;cursor:pointer;-webkit-tap-highlight-color:transparent}
@@ -1069,7 +1074,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .ag-conflict-item strong{color:var(--white)}
 .ag-day-label{font-family:var(--font);display:flex;align-items:flex-end;gap:var(--sp-2);margin:var(--sp-5) 0 var(--sp-2);padding-bottom:var(--sp-2);border-bottom:1px solid var(--bdr-l)}
 .ag-day-name{display:flex;flex-direction:column;align-items:flex-start;gap:1px}
-.ag-day-cnt{font-size:var(--t-sm);font-weight:var(--w-thin);color:var(--gray);letter-spacing:.02em;text-transform:none}
+.ag-day-cnt{font-size:var(--t-xs);font-weight:var(--w-bold);color:var(--white-60);background:var(--surf-2);border:1px solid var(--bdr);border-radius:var(--r-pill);padding:1px 7px;letter-spacing:0;flex-shrink:0}
 .ag-card{background:var(--card-a);border:1px solid var(--bdr);border-radius:var(--r);padding:var(--sp-3) var(--sp-4);margin-bottom:var(--sp-1);display:flex;align-items:center;gap:var(--sp-3)}
 .ag-time{font-family:var(--font);font-size:var(--t-md);color:var(--orange);letter-spacing:.5px;line-height:1;flex-shrink:0;min-width:40px}
 .ag-info{flex:1;min-width:0}
@@ -4444,7 +4449,7 @@ function renderFilmListHTML(){
   }
   if(watchedList.length){
     if(allPending.length) html+=`<div class="ag-list-sep"></div>`;
-    html+=`<div class="ya-vistas-bar"><div class="ya-vistas-lbl">${ICONS.check} Ya vistas</div></div>`;
+    html+=`<div class="ya-vistas-bar"><div class="ya-vistas-lbl">${ICONS.check} Ya vistas <span class="cnt-badge">${watchedList.length}</span></div></div>`;
     const _sortedW=[...watchedList].sort((a,b)=>(filmRatings[b]||0)-(filmRatings[a]||0));
     html+=`<div class="ag-film-grid">${_sortedW.map(t=>{
       const f=FILMS.find(fi=>fi.title===t);
@@ -5883,7 +5888,7 @@ function buildResultHTML(scenarios){
   sc.schedule.forEach(s=>{if(!byDay[s.day])byDay[s.day]=[];byDay[s.day].push(s);});
   DAY_KEYS.forEach(day=>{
     const films=byDay[day];if(!films||!films.length) return;
-    html+=`<div class="ag-day-label"><span class="ag-day-name">${dayChip(day)}</span><span class="ag-day-cnt">${films.length} película${films.length!==1?'s':''}</span></div>`;
+    html+=`<div class="ag-day-label"><span class="ag-day-name">${dayChip(day)}</span><span class="ag-day-cnt">${films.length}</span></div>`;
     films.forEach((s,i)=>{
       if(i>0){const warn=travelWarn(films[i-1],s);if(warn) html+=`<div class="ag-warn">${warn}</div>`;}
       html+=mkAgendaRow(s,'scenario');

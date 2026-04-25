@@ -1345,7 +1345,7 @@ function buildResultHTML(scenarios){
   sc.schedule.forEach(s=>{if(!byDay[s.day])byDay[s.day]=[];byDay[s.day].push(s);});
   DAY_KEYS.forEach(day=>{
     const films=byDay[day];if(!films||!films.length) return;
-    html+=`<div class="ag-day-label"><span class="ag-day-name">${dayChip(day)}</span><span class="ag-day-cnt">${films.length} película${films.length!==1?'s':''}</span></div>`;
+    html+=`<div class="ag-day-label"><span class="ag-day-name">${dayChip(day)}</span><span class="ag-day-cnt">${films.length}</span></div>`;
     films.forEach((s,i)=>{
       if(i>0){const warn=travelWarn(films[i-1],s);if(warn) html+=`<div class="ag-warn">${warn}</div>`;}
       html+=mkAgendaRow(s,'scenario');
