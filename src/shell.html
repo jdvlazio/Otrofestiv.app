@@ -198,7 +198,7 @@
     <div class="conflict-sub">¿Cuál querés en tu plan?</div>
   </div>
   <div class="conflict-arena">
-    <div class="conflict-card incoming">
+    <div class="conflict-card incoming cs-selected" id="cs-incoming-card" onclick="selectConflictChoice('incoming')">
       <img class="conflict-poster" id="cs-incoming-poster" src="" alt="">
       <div style="flex:1;min-width:0">
         <div class="conflict-role">Querés añadir</div>
@@ -207,7 +207,7 @@
       </div>
     </div>
     <div class="conflict-vs"><div class="conflict-vs-line"></div><div class="conflict-vs-lbl">vs</div><div class="conflict-vs-line"></div></div>
-    <div class="conflict-card existing">
+    <div class="conflict-card existing cs-unselected" id="cs-existing-card" onclick="selectConflictChoice('existing')">
       <img class="conflict-poster" id="cs-existing-poster" src="" alt="">
       <div style="flex:1;min-width:0">
         <div class="conflict-role">Ya en tu plan</div>
@@ -217,7 +217,7 @@
     </div>
   </div>
   <div class="conflict-actions">
-    <button class="conflict-btn-replace" id="cs-replace-btn"></button>
+    <button class="conflict-btn-replace" id="cs-replace-btn">Confirmar</button>
     <button class="conflict-btn-cancel" onclick="closeConflictSheet()">Cancelar</button>
   </div>
 </div>

@@ -179,7 +179,16 @@ function markWatchedFromPlan(title, day, time, venue, duration, e){
 }
 
 /* ── CONFLICT SHEET ── */
-let _conflictPending=null; // {title, day, time, screen, existingTitle}
+let _conflictChoice='incoming'; // 'incoming' | 'existing'
+
+function selectConflictChoice(choice){
+  _conflictChoice=choice;
+  const ic=document.getElementById('cs-incoming-card');
+  const ec=document.getElementById('cs-existing-card');
+  if(!ic||!ec) return;
+  ic.className='conflict-card incoming '+(choice==='incoming'?'cs-selected':'cs-unselected');
+  ec.className='conflict-card existing '+(choice==='existing'?'cs-selected':'cs-unselected');
+}
 
 function openConflictSheet(incomingTitle, incomingScreen, existingEntry){
   const{displayTitle:inDT}=parseProgramTitle(incomingTitle);
@@ -205,10 +214,10 @@ function openConflictSheet(incomingTitle, incomingScreen, existingEntry){
   const exWhen=existingEntry.day?`${DAY_A[existingEntry.day]||''} · ${existingEntry.time} · ${exF?.duration||''}`:'';
   setEl('cs-existing-when', exWhen);
 
-  // Botón de reemplazo con nombre exacto
-  const btn=document.getElementById('cs-replace-btn');
-  const shortEx=exDT.length>24?exDT.slice(0,22)+'…':exDT;
-  if(btn) btn.textContent=`Añadir y quitar ${shortEx}`;
+  // Botón — siempre "Confirmar", la card seleccionada indica la acción
+  // Resetear selección: incoming seleccionada por defecto (el usuario quiso añadirla)
+  _conflictChoice='incoming';
+  selectConflictChoice('incoming');
 
   // Guardar pendiente para ejecutar al confirmar
   _conflictPending={incomingTitle, incomingScreen, existingEntry};
@@ -224,7 +233,14 @@ function openConflictSheet(incomingTitle, incomingScreen, existingEntry){
 function confirmConflictReplace(){
   if(!_conflictPending) return;
   const{incomingTitle, incomingScreen, existingEntry}=_conflictPending;
-  // Quitar la existente e insertar la nueva
+
+  if(_conflictChoice==='existing'){
+    // Usuario eligió conservar la existente — simplemente cerrar
+    closeConflictSheet();
+    return;
+  }
+
+  // Usuario eligió la incoming — reemplazar existente
   savedAgenda.schedule=savedAgenda.schedule.filter(s=>!(s._title===existingEntry._title&&s.day===existingEntry.day&&s.time===existingEntry.time));
   savedAgenda.schedule.push({...incomingScreen,_title:incomingTitle});
   savedAgenda.schedule.sort((a,b)=>a.day_order!==b.day_order?a.day_order-b.day_order:toMin(a.time)-toMin(b.time));
@@ -478,22 +494,24 @@ let _conflictScenarioCtx=null;
 function _confirmScenarioReplace(){
   if(!_conflictScenarioCtx||!cachedResult) return;
   const{title,screen,existing}=_conflictScenarioCtx;
+
+  if(_conflictChoice==='existing'){
+    _conflictScenarioCtx=null;
+    closeConflictSheet();
+    return;
+  }
+
   const sc=cachedResult.scenarios[cachedResult.currentIdx];
   const newSchedule=[
     ...sc.schedule.filter(s=>!(s._title===existing._title&&s.day===existing.day&&s.time===existing.time)),
     {...screen,_title:title}
   ].sort((a,b)=>a.day_order!==b.day_order?a.day_order-b.day_order:toMin(a.time)-toMin(b.time));
-  // El film reemplazado vuelve a excluidas
   const newExcluded=[...sc.excluded.filter(t=>t!==title),existing._title];
   const newScenario={
-    schedule:newSchedule,
-    excluded:newExcluded,
-    incompatiblePriorities:sc.incompatiblePriorities,
-    trueMax:sc.trueMax,
-    maxWithPriorities:sc.maxWithPriorities,
-    priorityCost:sc.priorityCost,
-    dayBalance:sc.dayBalance,
-    _custom:true
+    schedule:newSchedule,excluded:newExcluded,
+    incompatiblePriorities:sc.incompatiblePriorities,trueMax:sc.trueMax,
+    maxWithPriorities:sc.maxWithPriorities,priorityCost:sc.priorityCost,
+    dayBalance:sc.dayBalance,_custom:true
   };
   const insertAt=cachedResult.currentIdx+1;
   cachedResult.scenarios.splice(insertAt,0,newScenario);
