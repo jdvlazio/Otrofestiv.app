@@ -2,8 +2,8 @@
 // Estrategia: HTML siempre desde red. Assets en caché.
 // v12: auto-reload en cliente cuando SW detecta nueva versión
 
-const CACHE_NAME = 'otrofestiv-v202604251913';
-const BUILD = '202604251913';
+const CACHE_NAME = 'otrofestiv-v202604251944';
+const BUILD = '202604251944';
 
 const STATIC_ASSETS = [
   '/manifest.json',
@@ -11,8 +11,14 @@ const STATIC_ASSETS = [
   '/icon-512.png',
 ];
 
-self.addEventListener('install', () => {
+self.addEventListener('install', event => {
   self.skipWaiting();
+});
+
+self.addEventListener('message', event => {
+  if (event.data && event.data.type === 'SKIP_WAITING') {
+    self.skipWaiting();
+  }
 });
 
 self.addEventListener('activate', event => {

@@ -351,16 +351,23 @@
 <script>
 if('serviceWorker' in navigator){
   navigator.serviceWorker.register('/sw.js').then(reg => {
-    reg.update();
-    // Forzar chequeo al volver al foco — crítico para iOS PWA standalone
+    // Forzar activación inmediata si hay SW en espera
+    if(reg.waiting) reg.waiting.postMessage({type:'SKIP_WAITING'});
+    // Chequear actualización al volver al foco — crítico para iOS PWA
     document.addEventListener('visibilitychange', () => {
-      if(document.visibilityState === 'visible') reg.update();
+      if(document.visibilityState === 'visible') {
+        reg.update().then(() => {
+          if(reg.waiting) reg.waiting.postMessage({type:'SKIP_WAITING'});
+        });
+      }
     });
     reg.addEventListener('updatefound', () => {
       const newSW = reg.installing;
       if(!newSW) return;
       newSW.addEventListener('statechange', () => {
-        if(newSW.state === 'activated') location.reload();
+        if(newSW.state === 'installed') {
+          newSW.postMessage({type:'SKIP_WAITING'});
+        }
       });
     });
   }).catch(function(){});
