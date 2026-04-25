@@ -32,8 +32,10 @@ function checkinNoLaVi(title){
   _removePlanItem(title);
   renderAgenda();
 }
-const _SIM_START=new Date('2026-04-14T09:00:00');
-const _SIM_END=new Date('2026-04-20T02:00:00');
+// _SIM_START/_SIM_END derivados del festival activo — escalable
+const _simCfg=()=>FESTIVAL_CONFIG[_activeFestId]||{};
+const _SIM_START=new Date((()=>{const c=_simCfg();const firstDay=c.dayKeys&&c.dayKeys[0];return firstDay&&c.festivalDates&&c.festivalDates[firstDay]?c.festivalDates[firstDay]+'T09:00:00':'2026-04-14T09:00:00';})());
+const _SIM_END=new Date((()=>{const c=_simCfg();return c.festivalEndStr||'2026-04-20T02:00:00';})());
 const _SIM_TOTAL=(_SIM_END-_SIM_START)/60000;
 function renderSimPanel(){
   const cur=_simTime?new Date(_simTime):null;
@@ -414,7 +416,10 @@ function renderGapOptions(gapStartMin,gapEndMin,todayKey,removedTitle){
 // Responde: ¿Qué hago ahora? Cambia según el momento del festival.
 // ─────────────────────────────────────────────────────────────
 function _getFestivalPhase(){
-  const FESTIVAL_START=new Date('2026-04-14T09:00:00');
+  const _cfg=FESTIVAL_CONFIG[_activeFestId]||{};
+  const _firstDay=_cfg.dayKeys&&_cfg.dayKeys[0];
+  const _firstDateStr=_firstDay&&_cfg.festivalDates&&_cfg.festivalDates[_firstDay];
+  const FESTIVAL_START=new Date(_firstDateStr?_firstDateStr+'T09:00:00':'2026-04-14T09:00:00');
   const now=simNow();
   if(festivalEnded()){
     // ENDED: resumen post-festival
@@ -573,7 +578,7 @@ function renderContextualHeader(){
         ${(FESTIVAL_CONFIG[_activeFestId]||{}).name||''}
       </div>
       <div class="ctx-main-title">El festival empieza ${label}</div>
-      <div class="ctx-sub">Cartagena · 14–19 de abril</div>
+      <div class="ctx-sub">${_cfg.city||''} · ${_cfg.dates||''}</div>
       ${prioHtml?`<div class="ctx-prio-row">${prioHtml}</div>`:''}
     </div>`;
   }
