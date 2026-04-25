@@ -1,7 +1,43 @@
 // ══ Utils — festivalEnded, screeningPassed, venues, conflictos, travel ══
 // SOURCE: index.html L2714-2874
 
-function festivalEnded(){ return simNow()>FESTIVAL_END; }
+/* ── UTILS: tiempo, fecha, duración ─────────────────────────────────── */
+function toMin(t){const[h,m]=t.split(':').map(Number);return h*60+m;}
+function parseDur(d){const m=d&&d.replace('~','').match(/(\d+)/);return m?parseInt(m[1]):90;}
+function effectiveDuration(f){return parseDur(f&&f.duration)+(f&&f.has_qa?30:0);}
+function minToStr(m){
+  const h=Math.floor(((m%1440)+1440)%1440/60),mn=((m%1440)+1440)%1440%60;
+  return`${String(h).padStart(2,'0')}:${String(mn).padStart(2,'0')}`;
+}
+
+/* ── CONFLICTS: detección de solapamientos entre funciones ──────────── */
+function screensConflict(a,b){
+  if(a.day!==b.day) return false;
+  const aS=toMin(a.time), aE=aS+parseDur(a.duration);
+  const bS=toMin(b.time), bE=bS+parseDur(b.duration);
+  const travel=(a.venue&&b.venue)?travelMins(a.venue,b.venue):0;
+  const minGap=Math.max(FESTIVAL_BUFFER, travel+FESTIVAL_BUFFER);
+  if(aE<=bS) return (bS-aE)<minGap;
+  if(bE<=aS) return (aS-bE)<minGap;
+  return true;
+}
+function travelMins(venueA,venueB){
+  const coordMins=venueTravelMins(venueA,venueB);
+  if(coordMins>0) return coordMins;
+  const g=v=>v.includes('Bocagrande')?'bog':v.includes('Caribe Plaza')?'cp':'centro';
+  const g1=g(venueA),g2=g(venueB);
+  if(g1===g2) return 0;
+  if((g1==='bog'&&g2==='cp')||(g1==='cp'&&g2==='bog')) return 13;
+  if(g1==='centro'||g2==='centro') return g1==='cp'||g2==='cp'?16:12;
+  return 0;
+}
+function isScreeningBlocked(s){
+  const av=availability[s.day];if(!av) return false;
+  const sStart=toMin(s.time),sEnd=sStart+parseDur(s.duration);
+  return av.blocks.some(b=>sStart<toMin(b.to)&&sEnd>toMin(b.from));
+}
+
+
 
 // Check if a screening has passed (with 10 min grace)
 
