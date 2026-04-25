@@ -503,7 +503,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .suggestion-time{font-family:var(--font);font-size:var(--t-md);color:var(--orange);letter-spacing:.5px;flex-shrink:0;min-width:46px}
 .suggestion-info{flex:1;min-width:0}
 .suggestion-title{font-size:var(--t-base);color:var(--white);font-weight:var(--w-semi);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.suggestion-meta{font-size:var(--t-sm);color:var(--gray2);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.suggestion-meta-ico{display:flex;align-items:center;gap:var(--sp-1);font-size:var(--t-sm);color:var(--gray2);margin-top:2px}.suggestion-meta-ico svg{flex-shrink:0;opacity:.7}
+.suggestion-meta{font-size:var(--t-sm);color:var(--gray2);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.suggestion-meta-ico{display:flex;align-items:center;gap:var(--sp-1);font-size:var(--t-sm);color:var(--gray2);margin-top:2px}.suggestion-meta-ico svg{flex-shrink:0;opacity:.7}.suggestion-travel-warn{font-size:var(--t-xs);color:var(--yellow);margin-top:3px}
 .suggestion-add{background:none;border:1px solid var(--bdr);border-radius:var(--r-pill);color:var(--gray);font-size:var(--t-sm);padding:4px var(--sp-2);cursor:pointer;font-family:var(--font);transition:background var(--tr-base),color var(--tr-base);white-space:nowrap;flex-shrink:0;touch-action:manipulation;-webkit-tap-highlight-color:transparent;min-width:76px;text-align:center;display:inline-flex;align-items:center;justify-content:center;gap:3px}
 .suggestion-add:hover{border-color:var(--orange);color:var(--orange)}
 
@@ -3883,6 +3883,9 @@ function scoreFilm(title, screens, isPriority, allTitles){
   // Duración larga: película de >150 min es un compromiso grande, priorizar
   const dur=parseInt(screens[0]?.duration)||0;
   if(dur>150) score+=10;
+  // Urgencia: si todas las funciones restantes son hoy, el título se acaba
+  const todayStr=simTodayStr();
+  if(screens.length>0&&screens.every(s=>FESTIVAL_DATES[s.day]===todayStr)) score+=25;
   return score;
 }
 
@@ -3910,6 +3913,22 @@ function sortScreensByStrategy(screens, allGroups){
 // 10 · LÓGICA DE NEGOCIO
 //      computeScenarios (MRV+backtracking), getSuggestions
 // ═══════════════════════════════════════════════════════════════
+
+// ── Mejora 3: Greedy floor — earliest-finish-time ──
+// Garantiza un piso para trueMax: el B&B siempre parte de al menos este resultado.
+// Si el nodo-limit corta el árbol, el greedy salva la estimación.
+// Solo aplica a mustIncludeAll=false — para prioridades el B&B arranca desde 0.
+function greedyFloor(groups){
+  const all=groups.flatMap(g=>g.screens.map(s=>({...s,_gTitle:g.title})));
+  all.sort((a,b)=>(toMin(a.time)+parseDur(a.duration))-(toMin(b.time)+parseDur(b.duration)));
+  const chosen=[];
+  const used=new Set();
+  for(const s of all){
+    if(used.has(s._gTitle)) continue;
+    if(!chosen.some(c=>screensConflict(c,s))){chosen.push(s);used.add(s._gTitle);}
+  }
+  return chosen.length;
+}
 
 /* ── ALGO: backtracking MRV + escenarios óptimos ────────────────────── */
 function computeScenarios(titles){
@@ -3946,7 +3965,7 @@ function computeScenarios(titles){
   const MAX_NODES_PER_CALL=80000;
 
   function findMax(groups, mustIncludeAll){
-    let best=0;
+    let best=mustIncludeAll?0:greedyFloor(groups); // piso garantizado si no hay prioridades
     let nodes=0;
     function bb(idx,chosen){
       if(++nodes>MAX_NODES_PER_CALL) return;
@@ -3980,7 +3999,7 @@ function computeScenarios(titles){
   const maxWithPriorities=hasPriorities?findMax(mrvGroups,true):trueMax;
   const priorityCost=trueMax-maxWithPriorities;
 
-  const seenKeys=new Set();const allScenarios=[];
+  const seenKeys=new Set();const seenTitleSets=new Set();const allScenarios=[];
   let incompatiblePriorities=false;
 
   function collectAt(groups,targetCount,enforcePriority){
@@ -3996,7 +4015,11 @@ function computeScenarios(titles){
             if(!groups.every(g=>!g.priority||ct.has(g.title))) return;
           }
           const key=chosen.map(s=>s._title+'@'+s.day+s.time).sort().join('|');
-          if(!seenKeys.has(key)){seenKeys.add(key);allScenarios.push(chosen.map(c=>({...c})));}
+          const titleKey=chosen.map(s=>s._title).sort().join('|');
+          if(!seenKeys.has(key)&&!seenTitleSets.has(titleKey)){
+            seenKeys.add(key);seenTitleSets.add(titleKey);
+            allScenarios.push(chosen.map(c=>({...c})));
+          }
         }
         return;
       }
@@ -4126,12 +4149,35 @@ function getSuggestions(){
         const fStart=toMin(f.time),fEnd=fStart+parseDur(f.duration);
         const slot=slots.find(sl=>fStart>=sl.start&&fEnd<=sl.end&&fEnd-fStart>=20);
         if(slot){
+          // Advertencia de viaje: verifica tiempo desde/hacia funciones adyacentes del plan
+          let _travelWarn=null;
+          const prevPlan=[...dayItems].filter(pi=>toMin(pi.time)+parseDur(pi.duration)<=fStart)
+            .sort((a,b)=>toMin(b.time)-toMin(a.time))[0];
+          const nextPlan=[...dayItems].filter(pi=>toMin(pi.time)>=fEnd)
+            .sort((a,b)=>toMin(a.time)-toMin(b.time))[0];
+          if(prevPlan&&f.venue&&prevPlan.venue){
+            const tr=travelMins(prevPlan.venue,f.venue);
+            const gap=fStart-(toMin(prevPlan.time)+parseDur(prevPlan.duration));
+            if(tr>0&&gap<tr+FESTIVAL_BUFFER){
+              const lbl=(_FEST_TRANSPORT==='walking'||(tr<=12&&_FEST_TRANSPORT==='mixed'))?UI.travel.walking:UI.travel.transit;
+              _travelWarn=`▲ ~${tr} min ${lbl}`;
+            }
+          }
+          if(!_travelWarn&&nextPlan&&f.venue&&nextPlan.venue){
+            const tr=travelMins(f.venue,nextPlan.venue);
+            const gap=toMin(nextPlan.time)-fEnd;
+            if(tr>0&&gap<tr+FESTIVAL_BUFFER){
+              const lbl=(_FEST_TRANSPORT==='walking'||(tr<=12&&_FEST_TRANSPORT==='mixed'))?UI.travel.walking:UI.travel.transit;
+              _travelWarn=`▲ ~${tr} min ${lbl} a la siguiente`;
+            }
+          }
           seenDay.add(f.title);
           if(!byDay[day]) byDay[day]=[];
           const inWL=watchlist.has(f.title);
           byDay[day].push({...f,
             gapCtx: inWL ? 'De tu lista · cabe en tu agenda' : slot.ctx,
-            _inWatchlist: inWL
+            _inWatchlist: inWL,
+            _travelWarn
           });
         }
       });
@@ -5182,6 +5228,7 @@ function _renderSavedAgendaHTML(){
             <div class="suggestion-meta">${f.section||''}</div>
             <div class="suggestion-meta-ico">${ICONS.clock} ${f.duration}</div>
             <div class="suggestion-meta-ico">${ICONS.pin} ${venueDisplay(_fv)}${sl?' · '+sl:''}</div>
+            ${f._travelWarn?`<div class="suggestion-travel-warn">${f._travelWarn}</div>`:''}
             ${f.gapCtx?`<div style="font-size:var(--t-xs);color:var(--gray);margin-top:2px;font-style:italic">${f.gapCtx.length>35?f.gapCtx.slice(0,33)+'…':f.gapCtx}</div>`:''}
           </div>
           <button class="suggestion-add" onclick="event.stopPropagation();addSuggestion('${f.title.replace(/'/g,"\\'")}','${f.day}','${f.time}')" style="${f._isRestored?'border-color:var(--orange);color:var(--orange);background:var(--amber-10)':''}">

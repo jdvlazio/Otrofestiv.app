@@ -33,6 +33,9 @@ function scoreFilm(title, screens, isPriority, allTitles){
   // Duración larga: película de >150 min es un compromiso grande, priorizar
   const dur=parseInt(screens[0]?.duration)||0;
   if(dur>150) score+=10;
+  // Urgencia: si todas las funciones restantes son hoy, el título se acaba
+  const todayStr=simTodayStr();
+  if(screens.length>0&&screens.every(s=>FESTIVAL_DATES[s.day]===todayStr)) score+=25;
   return score;
 }
 
@@ -56,10 +59,23 @@ function sortScreensByStrategy(screens, allGroups){
 }
 
 
-// ═══════════════════════════════════════════════════════════════
-// 10 · LÓGICA DE NEGOCIO
-//      computeScenarios (MRV+backtracking), getSuggestions
-// ═══════════════════════════════════════════════════════════════
+// ── Mejora 3: Greedy floor — earliest-finish-time ──
+// Garantiza un piso para trueMax: el B&B siempre parte de al menos este resultado.
+// Si el nodo-limit corta el árbol, el greedy salva la estimación.
+// Solo aplica a mustIncludeAll=false — para prioridades el B&B arranca desde 0.
+function greedyFloor(groups){
+  const all=groups.flatMap(g=>g.screens.map(s=>({...s,_gTitle:g.title})));
+  all.sort((a,b)=>(toMin(a.time)+parseDur(a.duration))-(toMin(b.time)+parseDur(b.duration)));
+  const chosen=[];
+  const used=new Set();
+  for(const s of all){
+    if(used.has(s._gTitle)) continue;
+    if(!chosen.some(c=>screensConflict(c,s))){chosen.push(s);used.add(s._gTitle);}
+  }
+  return chosen.length;
+}
+
+
 
 /* ── ALGO: backtracking MRV + escenarios óptimos ────────────────────── */
 function computeScenarios(titles){
@@ -96,7 +112,7 @@ function computeScenarios(titles){
   const MAX_NODES_PER_CALL=80000;
 
   function findMax(groups, mustIncludeAll){
-    let best=0;
+    let best=mustIncludeAll?0:greedyFloor(groups); // piso garantizado si no hay prioridades
     let nodes=0;
     function bb(idx,chosen){
       if(++nodes>MAX_NODES_PER_CALL) return;
@@ -130,7 +146,7 @@ function computeScenarios(titles){
   const maxWithPriorities=hasPriorities?findMax(mrvGroups,true):trueMax;
   const priorityCost=trueMax-maxWithPriorities;
 
-  const seenKeys=new Set();const allScenarios=[];
+  const seenKeys=new Set();const seenTitleSets=new Set();const allScenarios=[];
   let incompatiblePriorities=false;
 
   function collectAt(groups,targetCount,enforcePriority){
@@ -146,7 +162,11 @@ function computeScenarios(titles){
             if(!groups.every(g=>!g.priority||ct.has(g.title))) return;
           }
           const key=chosen.map(s=>s._title+'@'+s.day+s.time).sort().join('|');
-          if(!seenKeys.has(key)){seenKeys.add(key);allScenarios.push(chosen.map(c=>({...c})));}
+          const titleKey=chosen.map(s=>s._title).sort().join('|');
+          if(!seenKeys.has(key)&&!seenTitleSets.has(titleKey)){
+            seenKeys.add(key);seenTitleSets.add(titleKey);
+            allScenarios.push(chosen.map(c=>({...c})));
+          }
         }
         return;
       }
@@ -276,12 +296,35 @@ function getSuggestions(){
         const fStart=toMin(f.time),fEnd=fStart+parseDur(f.duration);
         const slot=slots.find(sl=>fStart>=sl.start&&fEnd<=sl.end&&fEnd-fStart>=20);
         if(slot){
+          // Advertencia de viaje: verifica tiempo desde/hacia funciones adyacentes del plan
+          let _travelWarn=null;
+          const prevPlan=[...dayItems].filter(pi=>toMin(pi.time)+parseDur(pi.duration)<=fStart)
+            .sort((a,b)=>toMin(b.time)-toMin(a.time))[0];
+          const nextPlan=[...dayItems].filter(pi=>toMin(pi.time)>=fEnd)
+            .sort((a,b)=>toMin(a.time)-toMin(b.time))[0];
+          if(prevPlan&&f.venue&&prevPlan.venue){
+            const tr=travelMins(prevPlan.venue,f.venue);
+            const gap=fStart-(toMin(prevPlan.time)+parseDur(prevPlan.duration));
+            if(tr>0&&gap<tr+FESTIVAL_BUFFER){
+              const lbl=(_FEST_TRANSPORT==='walking'||(tr<=12&&_FEST_TRANSPORT==='mixed'))?UI.travel.walking:UI.travel.transit;
+              _travelWarn=`▲ ~${tr} min ${lbl}`;
+            }
+          }
+          if(!_travelWarn&&nextPlan&&f.venue&&nextPlan.venue){
+            const tr=travelMins(f.venue,nextPlan.venue);
+            const gap=toMin(nextPlan.time)-fEnd;
+            if(tr>0&&gap<tr+FESTIVAL_BUFFER){
+              const lbl=(_FEST_TRANSPORT==='walking'||(tr<=12&&_FEST_TRANSPORT==='mixed'))?UI.travel.walking:UI.travel.transit;
+              _travelWarn=`▲ ~${tr} min ${lbl} a la siguiente`;
+            }
+          }
           seenDay.add(f.title);
           if(!byDay[day]) byDay[day]=[];
           const inWL=watchlist.has(f.title);
           byDay[day].push({...f,
             gapCtx: inWL ? 'De tu lista · cabe en tu agenda' : slot.ctx,
-            _inWatchlist: inWL
+            _inWatchlist: inWL,
+            _travelWarn
           });
         }
       });
