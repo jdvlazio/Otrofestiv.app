@@ -12,10 +12,10 @@
     transit: 'en carro',
   },
   empty: {
-    noActivity:  'Nada en tu plan este día',
+    noActivity:  UI.empty.noActivity,
     noResults:   'Sin actividades para este filtro',
-    noPending:   'Sin actividades pendientes',
-    planCovered: 'Tu agenda está bien cubierta. No hay más actividades que quepan.',
+    noPending:   UI.empty.noPending,
+    planCovered: UI.empty.planCovered,
     allPassed:   'Todas las actividades de tu plan ya pasaron',
     overlap:     'Hay actividades con horario solapado',
   },

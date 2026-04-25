@@ -1,6 +1,22 @@
-// ══ Utils — dayFullyPassed, venues, conflicts, travel ══
-// SOURCE: index.html L2711-2876
+// ══ Utils — festivalEnded, screeningPassed, venues, conflictos, travel ══
+// SOURCE: index.html L2714-2874
 
+function festivalEnded(){ return simNow()>FESTIVAL_END; }
+
+// Check if a screening has passed (with 10 min grace)
+
+// ═══════════════════════════════════════════════════════════════
+// 4 · UTILIDADES
+//     Funciones puras: fechas, tiempo, conflictos, normalización
+// ═══════════════════════════════════════════════════════════════
+function screeningPassed(s){
+  if(festivalEnded()) return false; // festival terminado — todo vuelve a plena opacidad
+  const dateStr=FESTIVAL_DATES[s.day];
+  if(!dateStr) return false;
+  const screeningTime=new Date(`${dateStr}T${s.time}:00`);
+  screeningTime.setMinutes(screeningTime.getMinutes()+10); // 10 min grace
+  return simNow()>screeningTime;
+}
 function dayFullyPassed(day){
   const dateStr=FESTIVAL_DATES[day];
   if(!dateStr) return false;
@@ -87,42 +103,67 @@ function vcfg(v){
   return {short:v.split(' · ')[0].trim()};
 }
 function sala(v){const m=v.match(/Sala\s*(\d+)/)||v.match(/Sal[oó]n\s*(\d+)/i);return m?'Sala '+m[1]:'';}
-/* ── UTILS: tiempo, fecha, duración ─────────────────────────────────── */
-function toMin(t){const[h,m]=t.split(':').map(Number);return h*60+m;}
-function parseDur(d){const m=d&&d.replace('~','').match(/(\d+)/);return m?parseInt(m[1]):90;}
-// Duración efectiva: parseDur + 30 min si has_qa (Q&A alarga la función)
-function effectiveDuration(f){return parseDur(f&&f.duration)+(f&&f.has_qa?30:0);}
-function minToStr(m){
-  const h=Math.floor(((m%1440)+1440)%1440/60),mn=((m%1440)+1440)%1440%60;
-  return`${String(h).padStart(2,'0')}:${String(mn).padStart(2,'0')}`;
+
+// ════ algo.js ════
+// ══════════════════════════════════════════════════════════════════
+// ALGORITMO DE PLANIFICACIÓN — exhaustive max + MRV + backtracking
+// Dependencias: FILMS, watchlist, prioritized, availability,
+//               screensConflict(), screeningPassed(), isScreeningBlocked(),
+//               parseDur(), toMin(), FESTIVAL_BUFFER
+// ══════════════════════════════════════════════════════════════════
+
+// ── ALGORITHM — exhaustive max + MRV + random restarts ──
+function shuffle(arr){
+  const a=[...arr];
+  for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}
+  return a;
 }
 
-/* ── CONFLICTS: detección de solapamientos entre funciones ──────────── */
-function screensConflict(a,b){
-  if(a.day!==b.day) return false;
-  const aS=toMin(a.time), aE=aS+parseDur(a.duration);
-  const bS=toMin(b.time), bE=bS+parseDur(b.duration);
-  // Gap requerido: tiempo de viaje entre sedes + 5min margen (mínimo 10min)
-  const travel=(a.venue&&b.venue)?travelMins(a.venue,b.venue):0;
-  const minGap=Math.max(FESTIVAL_BUFFER, travel+FESTIVAL_BUFFER);
-  if(aE<=bS) return (bS-aE)<minGap; // a antes que b
-  if(bE<=aS) return (aS-bE)<minGap; // b antes que a
-  return true; // solapamiento directo
+// ── Mejora 1: Scoring por película ──
+// Pondera cuánto vale incluir una película según rareza, sección y duración
+function scoreFilm(title, screens, isPriority, allTitles){
+  let score=0;
+  // Prioridad explícita: peso máximo
+  if(isPriority) score+=100;
+  // Unicidad: menos funciones = más difícil de ver = mayor peso
+  const n=screens.length;
+  if(n===1) score+=40;
+  else if(n===2) score+=20;
+  else score+=5;
+  // Sección única: si es la única película de su sección en la watchlist
+  const mySection=screens[0]?.section||'';
+  const siblingsInSection=allTitles.filter(t=>{
+    if(t===title) return false;
+    return FILMS.some(f=>f.title===t&&f.section===mySection);
+  });
+  if(siblingsInSection.length===0) score+=15;
+  // Duración larga: película de >150 min es un compromiso grande, priorizar
+  const dur=parseInt(screens[0]?.duration)||0;
+  if(dur>150) score+=10;
+  return score;
 }
-function travelMins(venueA,venueB){
-  // First try coordinate-based calculation (works for all festivals)
-  const coordMins=venueTravelMins(venueA,venueB);
-  if(coordMins>0) return coordMins;
-  // Fallback: FICCI Cartagena venue groups
-  const g=v=>v.includes('Bocagrande')?'bog':v.includes('Caribe Plaza')?'cp':'centro';
-  const g1=g(venueA),g2=g(venueB);
-  if(g1===g2) return 0;
-  if((g1==='bog'&&g2==='cp')||(g1==='cp'&&g2==='bog')) return 13;
-  if(g1==='centro'||g2==='centro') return g1==='cp'||g2==='cp'?16:12;
-  return 0;
+
+// ── Mejora 2: Interval Scheduling — ordenar funciones por conflictos mínimos + fin temprano ──
+// Para cada película con múltiples funciones, prioriza la que:
+// 1. Conflicta con menos otras funciones de la watchlist (menos bloqueos)
+// 2. Termina más temprano (earliest-finish-time: principio clásico de interval scheduling)
+function sortScreensByStrategy(screens, allGroups){
+  // Precalcular todas las funciones de todas las otras películas
+  const allOtherScreenings=allGroups.flatMap(g=>g.screens);
+  return [...screens].sort((a,b)=>{
+    // Contar cuántas funciones ajenas conflictan con cada opción
+    const conflA=allOtherScreenings.filter(s=>s!==a&&screensConflict(a,s)).length;
+    const conflB=allOtherScreenings.filter(s=>s!==b&&screensConflict(b,s)).length;
+    if(conflA!==conflB) return conflA-conflB; // menos conflictos primero
+    // Si empatan, earliest finish time (termina antes = deja más espacio)
+    const endA=toMin(a.time)+parseDur(a.duration);
+    const endB=toMin(b.time)+parseDur(b.duration);
+    return endA-endB;
+  });
 }
+
+
 function _effectiveVenue(s){
-  // Si hay un notice de cambio de sede, usa la nueva sede
   const n=NOTICES.find(nx=>nx.title===s._title&&nx.festival===(window._currentFestivalId||'aff2026')&&nx.type==='rescheduled'&&nx.newVenue);
   return n?n.newVenue:s.venue;
 }
@@ -131,39 +172,8 @@ function travelWarn(s1,s2){
   const v1=_effectiveVenue(s1), v2=_effectiveVenue(s2);
   const travel=travelMins(v1,v2);
   if(travel===0) return null;
-  const gap=toMin(s2.time)-(toMin(s1.time)+parseDur(s1.duration));
   const _tLabel=(_FEST_TRANSPORT==='walking'||(travel<=12&&_FEST_TRANSPORT==='mixed'))?UI.travel.walking:UI.travel.transit;
-  if(gap<travel+10) return`▲ ~${travel} min ${_tLabel} entre sedes`;
+  const gap=toMin(s2.time)-(toMin(s1.time)+parseDur(s1.duration));
+  if(gap<travel+10) return`\u25b2 ~${travel} min ${_tLabel} entre sedes`;
   return null;
 }
-
-// Normalize text for accent-insensitive search
-function normalize(str){
-  return str.normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase();
-}
-
-
-// ═══════════════════════════════════════════════════════════════
-// 5 · ESTADO GLOBAL
-//     watchlist, watched, prioritized, savedAgenda, availability
-// ═══════════════════════════════════════════════════════════════
-// ── STATE ──
-let watchlist=new Set();
-let filmRatings={}; // {title: 0.5..5} medias estrellas Letterboxd-style
-let watched=new Set();
-let prioritized=new Set();
-let PRIO_LIMIT=5; // Updated by loadFestival per festival
-/* ── Clave de almacenamiento — cambiar por edición del festival ──
-   Formato: {nombre}{año}_ → prefija todas las keys de localStorage.
-   Garantiza que cada edición empiece limpia sin datos residuales. */
-let FESTIVAL_STORAGE_KEY='ficci65_';
-// ── Reset agresivo de caché — independiente del SW ────────────────
-// BUILD_VERSION: cambia en cada deploy.
-// Al cargar, compara con localStorage. Si difiere → reload duro.
-// sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202604211937';
-(function(){
-  const _vk='otrofestiv_build';
-  const _sk='otrofestiv_reloaded';
-  const _stored=localStorage.getItem(_vk);
-  const _reloaded=sessionStorage.getItem(_sk);

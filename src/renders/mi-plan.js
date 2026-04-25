@@ -835,7 +835,7 @@ function _renderSavedAgendaHTML(){
     });
     html+='</div>'; // close suggestion-wrap content
   } else {
-    html+=emptyState(ICONS.search,'Tu plan está bien cubierto.','Tu agenda está bien cubierta. No hay más actividades que quepan.');
+    html+=emptyState(ICONS.search,'Tu plan está bien cubierto.',UI.empty.planCovered);
   }
   html+='</div>'; // close suggestion-wrap
   } // end !festivalEnded
