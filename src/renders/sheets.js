@@ -285,7 +285,7 @@ function openPelSheet(title){
     return`<div class="pel-sheet-screening"${isPast?' style="opacity:.4"':''}>
       <span class="pelicula-day">${dayAbb}</span>
       <span class="pelicula-time">${s.time}</span>
-      <span class="pelicula-venue" data-venue="${vc.short.replace(/"/g,'&quot;')}" onclick="filterByVenue(this.dataset.venue)">${ICONS.pin} ${vc.short}${sl?' · '+sl:''}${unica&&f.type!=='event'?`<span style="font-size:var(--t-xs);color:var(--gray);margin-left:4px">· única función</span>`:''}  <span style="opacity:.4;font-size:var(--t-xs)">›</span></span>
+      <span class="pelicula-venue" data-venue="${vc.short.replace(/"/g,'&quot;')}" onclick="filterByVenue(this.dataset.venue)">${ICONS.pin} ${vc.short}${sl?' · '+sl:''}  <span style="opacity:.4;font-size:var(--t-xs)">›</span></span>
     </div>`;
   }).join('');
   // Lista de cortos si es programa
@@ -344,7 +344,7 @@ function openPelSheet(title){
       </div>
     </div>
     <div class="pel-sheet-divider"></div>
-    <div class="pel-sheet-section-lbl">${f.type==='event'?'horario':allScr.length===1?'función':'funciones'}</div>
+    <div class="pel-sheet-section-lbl${allScr.length===1&&f.type!=='event'?' pel-sheet-section-lbl--urgent':''}">${f.type==='event'?'horario':allScr.length===1?'única función':'funciones'}</div>
     ${(()=>{const _n=NOTICES.find(n=>n.title===f.title&&n.festival===(_activeFestId||'aff2026'));if(!_n)return'';const _msg=_n.type==='cancelled'?'Función cancelada · Pendiente nueva fecha':_n.newVenue&&!_n.newTime?`Nueva sede: ${_n.newVenue}`:`Reprogramada → ${_n.newDay||''} ${_n.newTime||''}${_n.newVenue?' · '+_n.newVenue:''}`;return`<div style="display:flex;align-items:center;gap:var(--sp-2);padding:var(--sp-2) var(--sp-3);background:var(--amber-08);border-radius:var(--r-sm);margin-bottom:var(--sp-2)"><span class="notice-badge">${_n.type==='cancelled'?UI.badge.cancelled:UI.badge.rescheduled}</span><span style="font-size:var(--t-sm);color:var(--amber-60)">${_msg}</span></div>`;})()}
     ${_metaBanners(f)}
     <div class="pel-sheet-screenings">${rows}</div>

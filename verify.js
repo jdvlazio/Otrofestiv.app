@@ -20,6 +20,7 @@ const css = styles[1];
 const requiredCSS = [
   'cnt-badge',
   'ag-excl-strip','ag-excl-poster',
+  'pel-sheet-section-lbl--urgent',
   'ag-warn','ctx-header','mplan-wk-block',
   'ctx-eyebrow','notice-banner','wl-heart',
   'prog-suffix','badge-live',
