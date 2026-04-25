@@ -8047,11 +8047,24 @@ window.addEventListener('resize',function(){requestAnimationFrame(_fixStickyOffs
 </script>
 <script>
 if('serviceWorker' in navigator){
-  navigator.serviceWorker.register('/sw.js').catch(function(){});
-  // Recargar cuando el SW notifique actualización (iOS fix)
+  navigator.serviceWorker.register('/sw.js').then(reg => {
+    // Forzar verificación de actualización inmediata (iOS PWA fix)
+    reg.update();
+    // Recargar cuando el SW nuevo tome control
+    reg.addEventListener('updatefound', () => {
+      const newSW = reg.installing;
+      if(!newSW) return;
+      newSW.addEventListener('statechange', () => {
+        if(newSW.state === 'activated') location.reload();
+      });
+    });
+  }).catch(function(){});
+  // Recargar cuando el SW notifique actualización
   navigator.serviceWorker.addEventListener('message', e => {
     if(e.data && e.data.type==='SW_UPDATED') location.reload();
   });
+  // Recargar si controllerchange (nuevo SW tomó control)
+  navigator.serviceWorker.addEventListener('controllerchange', () => location.reload());
 }
 </script>
 
