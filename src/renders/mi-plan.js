@@ -1363,10 +1363,13 @@ function buildResultHTML(scenarios){
       const poster=f?getFilmPoster(f):null;
       const short=dt.length>18?dt.slice(0,16)+'…':dt;
       const safeT=t.replace(/'/g,"\\'");
+      // Verificar si tiene al menos una función posible (Caso A o B)
+      const hasScreen=f&&FILMS.some(fi=>fi.title===t&&!screeningPassed(fi)&&!isScreeningBlocked(fi));
       return`<div class="ag-excl-item" onclick="openPelSheet('${safeT}')">
         ${poster
           ?`<img class="ag-excl-poster" src="${poster}" onerror="this.outerHTML='<div class=ag-excl-poster-ph></div>'" alt="">`
           :`<div class="ag-excl-poster-ph"></div>`}
+        ${hasScreen?`<div class="ag-excl-add-bar" onclick="event.stopPropagation();_tryAddExcludedToScenario('${safeT}')">${ICONS.plus}</div>`:''}
         <div class="ag-excl-title">${short}</div>
       </div>`;
     }).join('');

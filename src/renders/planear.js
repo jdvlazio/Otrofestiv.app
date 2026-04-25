@@ -413,6 +413,98 @@ function jumpToScenario(idx){
   renderAgenda();
 }
 
+// ── AÑADIR EXCLUIDA AL SCENARIO ACTIVO ────────────────────────────────
+// Opera SOLO sobre cachedResult.scenarios — nunca toca savedAgenda.
+// Flujo:
+//   1. Busca la mejor función disponible (menor conflictos, earliest finish)
+//   2. Sin conflicto → crea scenario personalizado con la película añadida
+//   3. Con conflicto → abre conflict sheet en modo "scenario" (no savedAgenda)
+//   4. Sin función compatible → no hace nada (Caso C)
+function _tryAddExcludedToScenario(title){
+  if(!cachedResult) return;
+  const sc=cachedResult.scenarios[cachedResult.currentIdx];
+  if(!sc) return;
+
+  // Encontrar funciones disponibles (no pasadas, no bloqueadas)
+  const screens=FILMS.filter(f=>f.title===title&&!screeningPassed(f)&&!isScreeningBlocked(f));
+  if(!screens.length) return; // Caso C — no hay función compatible
+
+  // Ordenar por estrategia: menos conflictos + earliest finish
+  const sorted=sortScreensByStrategy(screens,[{title,screens}]);
+
+  // Buscar la primera que no conflictúe con ninguna del scenario
+  const currentSchedule=sc.schedule;
+  let freeScreen=null, conflictWith=null;
+  for(const s of sorted){
+    const clash=currentSchedule.find(c=>screensConflict(c,s));
+    if(!clash){freeScreen=s;break;}
+    if(!conflictWith) conflictWith={screen:s,existing:clash};
+  }
+
+  if(freeScreen){
+    // Caso A — cabe sin conflicto: crear scenario personalizado
+    const newSchedule=[...currentSchedule,{...freeScreen,_title:title}]
+      .sort((a,b)=>a.day_order!==b.day_order?a.day_order-b.day_order:toMin(a.time)-toMin(b.time));
+    const newExcluded=sc.excluded.filter(t=>t!==title);
+    const newScenario={
+      schedule:newSchedule,
+      excluded:newExcluded,
+      incompatiblePriorities:sc.incompatiblePriorities,
+      trueMax:sc.trueMax,
+      maxWithPriorities:sc.maxWithPriorities,
+      priorityCost:sc.priorityCost,
+      dayBalance:sc.dayBalance,
+      _custom:true
+    };
+    // Insertar después del scenario actual
+    const insertAt=cachedResult.currentIdx+1;
+    cachedResult.scenarios.splice(insertAt,0,newScenario);
+    cachedResult.currentIdx=insertAt;
+    const{displayTitle:dt}=parseProgramTitle(title);
+    showToast(`${ICONS.plus} ${dt.length>22?dt.slice(0,20)+'…':dt} añadida`,'info');
+    renderAgenda();
+  } else if(conflictWith){
+    // Caso B — conflicto: abrir conflict sheet en modo scenario
+    _conflictScenarioCtx={title, screen:conflictWith.screen, existing:conflictWith.existing};
+    openConflictSheet(title, conflictWith.screen, conflictWith.existing);
+    // Override del confirm button para operar sobre scenario
+    const btn=document.getElementById('cs-replace-btn');
+    if(btn) btn.onclick=_confirmScenarioReplace;
+  }
+  // Caso C (ninguna función compatible) — no pasa nada, tap en poster abre ficha
+}
+
+let _conflictScenarioCtx=null;
+function _confirmScenarioReplace(){
+  if(!_conflictScenarioCtx||!cachedResult) return;
+  const{title,screen,existing}=_conflictScenarioCtx;
+  const sc=cachedResult.scenarios[cachedResult.currentIdx];
+  const newSchedule=[
+    ...sc.schedule.filter(s=>!(s._title===existing._title&&s.day===existing.day&&s.time===existing.time)),
+    {...screen,_title:title}
+  ].sort((a,b)=>a.day_order!==b.day_order?a.day_order-b.day_order:toMin(a.time)-toMin(b.time));
+  // El film reemplazado vuelve a excluidas
+  const newExcluded=[...sc.excluded.filter(t=>t!==title),existing._title];
+  const newScenario={
+    schedule:newSchedule,
+    excluded:newExcluded,
+    incompatiblePriorities:sc.incompatiblePriorities,
+    trueMax:sc.trueMax,
+    maxWithPriorities:sc.maxWithPriorities,
+    priorityCost:sc.priorityCost,
+    dayBalance:sc.dayBalance,
+    _custom:true
+  };
+  const insertAt=cachedResult.currentIdx+1;
+  cachedResult.scenarios.splice(insertAt,0,newScenario);
+  cachedResult.currentIdx=insertAt;
+  _conflictScenarioCtx=null;
+  closeConflictSheet();
+  const{displayTitle:dt}=parseProgramTitle(title);
+  showToast(`${ICONS.switch} ${dt.length>22?dt.slice(0,20)+'…':dt} añadida`,'info');
+  renderAgenda();
+}
+
 
 function renderFlowProgress(activeTab){
   // activeTab: qué tab está activo ahora ('cartelera'|'seleccion'|'planner'|'miplan')
