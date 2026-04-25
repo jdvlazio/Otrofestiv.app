@@ -2768,9 +2768,11 @@ function _resolveVenue(v){
 // Escalas de tiempo por modo de transporte
 // walking: festival compacto (pueblo, campus) — todo a pie
 // transit: festival en ciudad — Uber/Metro entre sedes
+// mixed:   híbrido — a pie si < 1km, en carro si > 1km (ej: Cartagena)
 const _TRAVEL_SCALE = {
   walking: [{d:0.10,t:0},{d:0.35,t:5},{d:0.8,t:10},{d:1.5,t:20},{d:3.0,t:35},{d:Infinity,t:50}],
   transit: [{d:0.15,t:0},{d:0.40,t:8},{d:1.0,t:12},{d:2.5,t:18},{d:5.0,t:25},{d:Infinity,t:35}],
+  mixed:   [{d:0.10,t:0},{d:0.35,t:5},{d:0.8,t:10},{d:1.0,t:12},{d:2.5,t:18},{d:5.0,t:25},{d:Infinity,t:35}],
 };
 function venueTravelMins(v1,v2){
   const c1=_resolveVenue(v1), c2=_resolveVenue(v2);
@@ -2835,7 +2837,7 @@ function travelWarn(s1,s2){
   const travel=travelMins(v1,v2);
   if(travel===0) return null;
   const gap=toMin(s2.time)-(toMin(s1.time)+parseDur(s1.duration));
-  const _tLabel=_FEST_TRANSPORT==='walking'?'a pie':'en carro';
+  const _tLabel=(_FEST_TRANSPORT==='walking'||(travel<=12&&_FEST_TRANSPORT==='mixed'))?'a pie':'en carro';
   if(gap<travel+10) return`▲ ~${travel} min ${_tLabel} entre sedes`;
   return null;
 }
