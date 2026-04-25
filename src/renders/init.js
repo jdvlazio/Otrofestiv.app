@@ -36,12 +36,10 @@ async function loadFestival(id){
   if(!cfg){console.warn('Festival desconocido:',id);return;}
   // ── Fase 1: cargar datos del festival desde JSON si no están en memoria ──
   if(!cfg.films){
-    const festFile=id==='ficci65'?'ficci-65':'aff-2026';
     try{
-      const data=await fetch('festivals/'+festFile+'.json').then(r=>{
-        if(!r.ok)throw new Error('HTTP '+r.status);
-        return r.json();
-      });
+      // Datos incrustados en build-time — no hay fetch, no hay 403
+      const data=_FESTIVAL_DATA[id];
+      if(!data) throw new Error('Festival data not embedded: '+id);
       // ── Explosión de screenings[] → objetos planos por función ──
       // Si un film tiene screenings[], genera un objeto por función.
       // Compatibilidad total con el formato plano existente (day/time/venue).

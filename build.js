@@ -107,7 +107,24 @@ function build() {
     }
 
     const js = parts.join('\n');
-    const r2 = html.replace('<script>/* __SCRIPTS__ */</script>', `<script>\n${js}\n</script>`);
+
+    // ── Incrustar datos de festivales en el bundle ──────────────────────────
+    // GitHub Pages bloquea fetch() a subdirectorios sin index.html (HTTP 403).
+    // Solución: leer los JSONs en build-time e inyectarlos como variables JS.
+    // loadFestival() los consume de _FESTIVAL_DATA en lugar de fetchear.
+    const FEST_DIR = path.join(ROOT, 'festivals');
+    let festDataJs = '\n// ─── Festival data (build-time embedded) ────────────────────────────\n';
+    festDataJs += 'const _FESTIVAL_DATA = {};\n';
+    if (fs.existsSync(FEST_DIR)) {
+      fs.readdirSync(FEST_DIR).filter(f => f.endsWith('.json')).forEach(fname => {
+        const data = fs.readFileSync(path.join(FEST_DIR, fname), 'utf8');
+        const id = JSON.parse(data).id || fname.replace('.json','');
+        festDataJs += `_FESTIVAL_DATA[${JSON.stringify(id)}] = ${data};\n`;
+        console.log(`  ✓ festivals/${fname} (${(data.length/1024).toFixed(0)}kb)`);
+      });
+    }
+
+    const r2 = html.replace('<script>/* __SCRIPTS__ */</script>', `<script>\n${festDataJs}\n${js}\n</script>`);
     if (r2 === html) { console.error('  ✗ JS: __SCRIPTS__ placeholder missing'); process.exit(1); }
     html = r2;
     console.log(`\n  ✓ ${JS_ORDER.length} modules, ${declared.size} total symbols`);
