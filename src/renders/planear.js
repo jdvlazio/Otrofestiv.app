@@ -248,6 +248,7 @@ function confirmConflictReplace(){
   saveSavedAgenda();
   const{displayTitle:dt}=parseProgramTitle(incomingTitle);
   closeConflictSheet();
+  closePelSheet();
   showToast(`${ICONS.calendar} ${dt.length>22?dt.slice(0,20)+'…':dt} en tu plan`,'info');
   renderAgenda();
 }
