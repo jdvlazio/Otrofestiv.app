@@ -2197,6 +2197,30 @@ html.splash-skip #otrofestiv-splash{display:none}
 <div class="ag-view" id="ag-view"></div>
 
 <script>
+// ══════════════════════════════════════════════════════════════════
+// FUENTE ÚNICA DE VERDAD — Textos del UI
+// ══════════════════════════════════════════════════════════════════
+const UI = {
+  badge: {
+    cancelled:   'CANCELADA',
+    rescheduled: 'REPROGRAMADA',
+    qa:          'Q&A',
+    inscription: 'INSCRIPCIÓN',
+  },
+  travel: {
+    walking: 'a pie',
+    transit: 'en carro',
+  },
+  empty: {
+    noActivity:  'Nada en tu plan este día',
+    noResults:   'Sin actividades para este filtro',
+    noPending:   'Sin actividades pendientes',
+    planCovered: 'Tu agenda está bien cubierta. No hay más actividades que quepan.',
+    allPassed:   'Todas las actividades de tu plan ya pasaron',
+    overlap:     'Hay actividades con horario solapado',
+  },
+};
+
 // ── Capgo: confirma que el bundle cargó correctamente ──────────
 // Sin esta llamada, Capgo hace rollback automático a los 10s.
 // El guard ?. asegura que en web (GitHub Pages) no hay error.
@@ -2837,7 +2861,7 @@ function travelWarn(s1,s2){
   const travel=travelMins(v1,v2);
   if(travel===0) return null;
   const gap=toMin(s2.time)-(toMin(s1.time)+parseDur(s1.duration));
-  const _tLabel=(_FEST_TRANSPORT==='walking'||(travel<=12&&_FEST_TRANSPORT==='mixed'))?'a pie':'en carro';
+  const _tLabel=(_FEST_TRANSPORT==='walking'||(travel<=12&&_FEST_TRANSPORT==='mixed'))?UI.travel.walking:UI.travel.transit;
   if(gap<travel+10) return`▲ ~${travel} min ${_tLabel} entre sedes`;
   return null;
 }
@@ -3150,7 +3174,7 @@ function renderMiPlanCalendar(){
           <div class="mplan-t2">${mplanEndStr(s.time,dur)}${isNow?` <span style="color:var(--green);font-weight:var(--w-semi)">en curso</span>`:''}</div>
         </div>
         <div class="mplan-ri">
-          <div>${(()=>{const{displayTitle:_dt,progSuffix:_ps}=parseProgramTitle(s._title||'');const _mfqa=FILMS.find(fi=>fi.title===s._title&&fi.day===s.day&&fi.time===s.time);const _qab=_mfqa?.has_qa?`<span class="meta-badge" style="font-size:8px;padding:1px 4px;margin-right:4px">Q&A</span>`:'';return`<div class="mplan-rtitle">${prioritized.has(s._title)?`<span style="color:var(--orange);margin-right:4px">${ICONS.starFill}</span>`:''} ${_qab}${_dt}</div>${_ps?`<div style="font-size:var(--t-sm);color:var(--orange);font-weight:var(--w-bold);line-height:1;margin-top:2px">${_ps}</div>`:''}`;})()} </div>
+          <div>${(()=>{const{displayTitle:_dt,progSuffix:_ps}=parseProgramTitle(s._title||'');const _mfqa=FILMS.find(fi=>fi.title===s._title&&fi.day===s.day&&fi.time===s.time);const _qab=_mfqa?.has_qa?`<span class="meta-badge" style="font-size:8px;padding:1px 4px;margin-right:4px">${UI.badge.qa}</span>`:'';return`<div class="mplan-rtitle">${prioritized.has(s._title)?`<span style="color:var(--orange);margin-right:4px">${ICONS.starFill}</span>`:''} ${_qab}${_dt}</div>${_ps?`<div style="font-size:var(--t-sm);color:var(--orange);font-weight:var(--w-bold);line-height:1;margin-top:2px">${_ps}</div>`:''}`;})()} </div>
           <div class="mplan-rvenue">${ICONS.pin} ${vcfg(s.venue).short}${sala(s.venue)?' \u00b7 '+sala(s.venue):''}</div>
           ${(()=>{const _mf=FILMS.find(fi=>fi.title===s._title&&fi.day===s.day&&fi.time===s.time);if(!_mf||!_mf.is_cortos||!_mf.film_list||!_mf.film_list.length) return'';return`<button class="mplan-prog-toggle" onclick="toggleMplanProg(this,event)" style="display:inline-flex;align-items:center;gap:var(--sp-1)">${ICONS.chevronR} Programa</button>`;})()}
         </div>
@@ -5316,7 +5340,7 @@ function shareAsImage(){
 
   // 3. Plan completamente pasado
   const stillActive=savedAgenda.schedule.some(s=>!screeningPassed(s));
-  if(!stillActive) issues.push('Todas las actividades de tu plan ya pasaron');
+  if(!stillActive) issues.push(UI.empty.allPassed);
 
   // Si hay problemas: mostrar advertencia con opción de continuar igual
   if(issues.length){
@@ -6884,7 +6908,7 @@ function openPelSheet(title){
     </div>
     <div class="pel-sheet-divider"></div>
     <div class="pel-sheet-section-lbl">${f.type==='event'?'horario':allScr.length===1?'función':'funciones'}</div>
-    ${(()=>{const _n=NOTICES.find(n=>n.title===f.title&&n.festival===(_activeFestId||'aff2026'));if(!_n)return'';const _msg=_n.type==='cancelled'?'Función cancelada · Pendiente nueva fecha':_n.newVenue&&!_n.newTime?`Nueva sede: ${_n.newVenue}`:`Reprogramada → ${_n.newDay||''} ${_n.newTime||''}${_n.newVenue?' · '+_n.newVenue:''}`;return`<div style="display:flex;align-items:center;gap:var(--sp-2);padding:var(--sp-2) var(--sp-3);background:var(--amber-08);border-radius:var(--r-sm);margin-bottom:var(--sp-2)"><span class="notice-badge">${_n.type==='cancelled'?'CANCELADA':'REPROGRAMADA'}</span><span style="font-size:var(--t-sm);color:var(--amber-60)">${_msg}</span></div>`;})()}
+    ${(()=>{const _n=NOTICES.find(n=>n.title===f.title&&n.festival===(_activeFestId||'aff2026'));if(!_n)return'';const _msg=_n.type==='cancelled'?'Función cancelada · Pendiente nueva fecha':_n.newVenue&&!_n.newTime?`Nueva sede: ${_n.newVenue}`:`Reprogramada → ${_n.newDay||''} ${_n.newTime||''}${_n.newVenue?' · '+_n.newVenue:''}`;return`<div style="display:flex;align-items:center;gap:var(--sp-2);padding:var(--sp-2) var(--sp-3);background:var(--amber-08);border-radius:var(--r-sm);margin-bottom:var(--sp-2)"><span class="notice-badge">${_n.type==='cancelled'?UI.badge.cancelled:UI.badge.rescheduled}</span><span style="font-size:var(--t-sm);color:var(--amber-60)">${_msg}</span></div>`;})()}
     ${_metaBanners(f)}
     <div class="pel-sheet-screenings">${rows}</div>
     <div class="pel-sheet-divider"></div>
@@ -7316,8 +7340,8 @@ function renderProgramaChips(){
 // ── Badges de metadata: Q&A e Inscripción previa ────────────────────────
 function _metaBadges(f){
   let b='';
-  if(f.has_qa) b+=`<span class="meta-badge">Q&A</span>`;
-  if(f.requires_registration) b+=`<span class="meta-badge">INSCRIPCIÓN</span>`;
+  if(f.has_qa) b+=`<span class="meta-badge">${UI.badge.qa}</span>`;
+  if(f.requires_registration) b+=`<span class="meta-badge">${UI.badge.inscription}</span>`;
   return b;
 }
 function _metaBanners(f){
@@ -7360,7 +7384,7 @@ function renderNoticesBanner(){
   const active=getActiveNotices();
   if(!active.length){el.innerHTML='';return;}
   el.innerHTML=active.map(n=>{
-    const label=n.type==='cancelled'?'CANCELADA':'REPROGRAMADA';
+    const label=n.type==='cancelled'?UI.badge.cancelled:UI.badge.rescheduled;
     const msgCancelled=`<span>Pendiente nueva fecha.</span>`;
     const msgRescheduled=n.newVenue&&!n.newTime?`Nueva sede: <span style="color:var(--white-60)">${n.newVenue}</span>`:n.newDay&&n.newTime?`Nueva sede: <span style="color:var(--white-60)">${n.newDay} · ${n.newTime}${n.newVenue?' · '+n.newVenue:''}</span>`:'';
     const msg=n.type==='cancelled'?msgCancelled:msgRescheduled;
@@ -7414,7 +7438,7 @@ function renderProgramaList(){
       const src=getFilmPoster(f)||'';
       const nowBadge=isNow?`<span style="font-size:var(--t-xs);font-weight:var(--w-display);color:var(--green);background:var(--green-10);border:1px solid var(--green-30);border-radius:var(--r);padding:2px 6px;margin-left:4px">AHORA</span>`:'';
       const notice=NOTICES.find(n=>n.title===f.title&&n.festival===(window._currentFestivalId||'aff2026'));
-      const noticeBadge=notice?`<span class="notice-badge">${notice.type==='cancelled'?'CANCELADA':'REPROGRAMADA'}</span>`:'';
+      const noticeBadge=notice?`<span class="notice-badge">${notice.type==='cancelled'?UI.badge.cancelled:UI.badge.rescheduled}</span>`:'';
       const noticeNote=notice&&notice.type==='cancelled'?`<div style="font-size:var(--t-xs);color:var(--amber);margin-top:2px;font-weight:var(--w-semi)">Pendiente nueva fecha</div>`:
         notice&&notice.type==='rescheduled'&&notice.newTime?`<div style="font-size:var(--t-xs);color:var(--green);margin-top:2px;font-weight:var(--w-semi)">${notice.newDay||''} · ${notice.newTime}${notice.newVenue?' · '+notice.newVenue:''}</div>`:'';
       const cancelStyle=notice&&notice.type==='cancelled'?'opacity:.5':'';
@@ -7513,7 +7537,7 @@ function _renderExploreLista(){
     return`<div class="plist-item${allPast?' past-card':''}" onclick="openPelSheet('${safeT}')">
       ${_stk2||(src?`<img class="plist-poster" src="${src}" loading="lazy" onerror="this.style.opacity=0" alt="${dt}" style="${allPast&&!festivalEnded()?'opacity:.45':''}">` :`<div class="plist-poster"></div>`)}
       <div class="plist-info">
-        ${(()=>{const n=NOTICES.find(nx=>nx.title===f.title&&nx.festival===(window._currentFestivalId||'aff2026'));const nb=n?`<span class="notice-badge">${n.type==='cancelled'?'CANCELADA':'REPROGRAMADA'}</span>`:'';const nn=n&&n.type==='cancelled'?`<div style="font-size:var(--t-xs);color:var(--amber);margin-top:2px;font-weight:var(--w-semi)">Pendiente nueva fecha</div>`:n&&n.type==='rescheduled'&&(n.newTime||n.newVenue)?`<div style="font-size:var(--t-xs);color:var(--green);margin-top:2px;font-weight:var(--w-semi)">${n.newVenue&&!n.newTime?n.newVenue:`${n.newDay||''} · ${n.newTime}${n.newVenue?' · '+n.newVenue:''}`}</div>`:'';return`<div class="plist-title" style="${allPast?'opacity:.5':''}">${nb}${dt}</div><div class="plist-meta" style="${n&&n.type==='cancelled'?'text-decoration:line-through':''}">${f.duration||'~90 min'} · ${days}</div>${nn||`<div class="plist-sec">${f.section||''}</div>`}`;})()}
+        ${(()=>{const n=NOTICES.find(nx=>nx.title===f.title&&nx.festival===(window._currentFestivalId||'aff2026'));const nb=n?`<span class="notice-badge">${n.type==='cancelled'?UI.badge.cancelled:UI.badge.rescheduled}</span>`:'';const nn=n&&n.type==='cancelled'?`<div style="font-size:var(--t-xs);color:var(--amber);margin-top:2px;font-weight:var(--w-semi)">Pendiente nueva fecha</div>`:n&&n.type==='rescheduled'&&(n.newTime||n.newVenue)?`<div style="font-size:var(--t-xs);color:var(--green);margin-top:2px;font-weight:var(--w-semi)">${n.newVenue&&!n.newTime?n.newVenue:`${n.newDay||''} · ${n.newTime}${n.newVenue?' · '+n.newVenue:''}`}</div>`:'';return`<div class="plist-title" style="${allPast?'opacity:.5':''}">${nb}${dt}</div><div class="plist-meta" style="${n&&n.type==='cancelled'?'text-decoration:line-through':''}">${f.duration||'~90 min'} · ${days}</div>${nn||`<div class="plist-sec">${f.section||''}</div>`}`;})()}
       </div>
       <div class="plist-heart${inWL?'':' empty'}" onclick="event.stopPropagation();_toggleWLFromList('${safeT}',this)">${inWL?ICONS.heartFill:ICONS.heart}</div>
     </div>`;
@@ -7624,7 +7648,7 @@ function render(){
     cntEl.innerHTML='';
   }
   const grid=document.getElementById('grid');
-  if(!films.length){grid.innerHTML=emptyState(ICONS.search,'Sin actividades para este filtro.','Ajusta los filtros de sección o sede.');return;}
+  if(!films.length){grid.innerHTML=emptyState(ICONS.search,UI.empty.noResults,'Ajusta los filtros de sección o sede.');return;}
   // ── Vista horario: poster-grid 3 col + overlay de hora ──
   grid.innerHTML='<div class="poster-grid">'+films.map((f,i)=>{
     const FICCI_POSTER='https://ficcifestival.com/sites/default/files/2026-02/logo-ficci65_2.png';
@@ -7641,7 +7665,7 @@ function render(){
     const progBadge='';//REMOVED
     const nowBadge=isNow?`<div class="poster-now">AHORA</div>`:'';
     const _notice=NOTICES.find(n=>n.title===f.title&&n.festival===(_activeFestId||'aff2026'));
-    const pastBadge=_notice?`<div class="poster-past-badge" style="background:var(--amber-60);color:var(--black)">${_notice.type==='cancelled'?'CANCELADA':'REPROGRAMADA'}</div>`:'';
+    const pastBadge=_notice?`<div class="poster-past-badge" style="background:var(--amber-60);color:var(--black)">${_notice.type==='cancelled'?UI.badge.cancelled:UI.badge.rescheduled}</div>`:'';
 
     const _fe=festivalEnded();
 return`<div class="poster-card${inWL&&!inW?' in-wl':''}${inW&&!_fe?' in-watched':''}${passed&&!_fe?' past-card':''}" onclick="openPelSheet('${safeT}')">
