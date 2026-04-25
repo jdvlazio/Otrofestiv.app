@@ -1,8 +1,8 @@
 // Otrofestiv — Service Worker v11
 // Estrategia: HTML siempre desde red. Assets en caché.
 
-const CACHE_NAME = 'otrofestiv-v202604250402';
-const BUILD = '202604251902';
+const CACHE_NAME = 'otrofestiv-v202604251911';
+const BUILD = '202604251911';
 
 const STATIC_ASSETS = [
   '/manifest.json',
