@@ -303,7 +303,7 @@ function getSuggestions(){
           const nextPlan=[...dayItems].filter(pi=>toMin(pi.time)>=fEnd)
             .sort((a,b)=>toMin(a.time)-toMin(b.time))[0];
           if(prevPlan&&f.venue&&prevPlan.venue){
-            const tr=travelMins(prevPlan.venue,f.venue);
+            const tr=travelMins(_effectiveVenue(prevPlan),f.venue);
             const gap=fStart-(toMin(prevPlan.time)+parseDur(prevPlan.duration));
             if(tr>0&&gap<tr+FESTIVAL_BUFFER){
               const lbl=(_FEST_TRANSPORT==='walking'||(tr<=12&&_FEST_TRANSPORT==='mixed'))?UI.travel.walking:UI.travel.transit;
@@ -311,7 +311,7 @@ function getSuggestions(){
             }
           }
           if(!_travelWarn&&nextPlan&&f.venue&&nextPlan.venue){
-            const tr=travelMins(f.venue,nextPlan.venue);
+            const tr=travelMins(f.venue,_effectiveVenue(nextPlan));
             const gap=toMin(nextPlan.time)-fEnd;
             if(tr>0&&gap<tr+FESTIVAL_BUFFER){
               const lbl=(_FEST_TRANSPORT==='walking'||(tr<=12&&_FEST_TRANSPORT==='mixed'))?UI.travel.walking:UI.travel.transit;
