@@ -246,40 +246,87 @@ function toggleFilmAlternatives(key,title,day,time){
 
 function renderFilmAlternatives(title,day,time){
   const fStart=toMin(time);
+  const fFilm=FILMS.find(f=>f.title===title&&f.day===day&&f.time===time);
+  const fEnd=fStart+parseDur(fFilm?.duration||'90');
   const safeT=title.replace(/'/g,"\'");
-  const plannedTitles=new Set(savedAgenda?savedAgenda.schedule.map(s=>s._title):[]);
-  // ±15 min window — direct competition in the same slot
-  const WINDOW=15;
-  const opts=FILMS.filter(f=>{
+
+  // Plan sin la función actual — para verificar conflictos de las alternativas
+  const planWithout=(savedAgenda?savedAgenda.schedule:[]).filter(s=>!(s._title===title&&s.day===day&&s.time===time));
+  const plannedTitles=new Set(planWithout.map(s=>s._title));
+
+  // Hueco disponible: desde fin de la función anterior hasta inicio de la siguiente
+  const dayPlan=planWithout.filter(s=>s.day===day).sort((a,b)=>toMin(a.time)-toMin(b.time));
+  const prevFilm=dayPlan.filter(s=>toMin(s.time)+parseDur(s.duration)<=fStart).slice(-1)[0];
+  const nextFilm=dayPlan.filter(s=>toMin(s.time)>=fEnd)[0];
+  const gapStart=prevFilm?toMin(prevFilm.time)+parseDur(prevFilm.duration)+FESTIVAL_BUFFER:0;
+  const gapEnd=nextFilm?toMin(nextFilm.time)-FESTIVAL_BUFFER:25*60;
+
+  // ── Sección 1: Otras funciones del mismo título (cambio de horario) ──
+  const sameTitle=FILMS.filter(f=>{
+    if(f.title!==title) return false;
+    if(f.day===day&&f.time===time) return false; // es la actual
+    if(screeningPassed(f)||isScreeningBlocked(f)) return false;
+    // Verificar que cabe en el plan sin conflictos
+    return !planWithout.some(p=>screensConflict(p,f));
+  }).sort((a,b)=>a.day_order!==b.day_order?a.day_order-b.day_order:toMin(a.time)-toMin(b.time));
+
+  // ── Sección 2: Otras películas que caben en el hueco ──
+  const DAY_A={Martes:'MAR',Miércoles:'MIÉ',Jueves:'JUE',Viernes:'VIE',Sábado:'SÁB',Domingo:'DOM'};
+  const others=FILMS.filter(f=>{
     if(f.day!==day) return false;
     if(f.title===title) return false;
     if(plannedTitles.has(f.title)) return false;
     if(watched.has(f.title)) return false;
-    if(isScreeningBlocked(f)) return false;
-    return Math.abs(toMin(f.time)-fStart)<=WINDOW;
-  }).sort((a,b)=>toMin(a.time)-toMin(b.time));
+    if(screeningPassed(f)||isScreeningBlocked(f)) return false;
+    const fs=toMin(f.time),fe=fs+parseDur(f.duration);
+    // Cabe en el hueco disponible
+    if(fs<gapStart||fe>gapEnd) return false;
+    // No conflictúa con ninguna función restante del plan
+    return !planWithout.some(p=>screensConflict(p,f));
+  }).sort((a,b)=>{
+    // Watchlist primero, luego cronológico
+    const aWL=watchlist.has(a.title),bWL=watchlist.has(b.title);
+    if(aWL&&!bWL) return -1;
+    if(!aWL&&bWL) return 1;
+    return toMin(a.time)-toMin(b.time);
+  });
 
-  const optsHtml=opts.map(f=>{
+  const mkCard=(f,isSameTitle=false)=>{
     const vc2=vcfg(f.venue);
     const{displayTitle}=parseProgramTitle(f.title);
     const short=displayTitle.length>28?displayTitle.slice(0,26)+'…':displayTitle;
     const safeTNew=f.title.replace(/'/g,"\'");
-    return`<div class="checkin-opt" onclick="confirmReplace('${safeT}','${safeTNew}','${f.day}','${f.time}')">
+    const inWL=!isSameTitle&&watchlist.has(f.title);
+    const dayLabel=isSameTitle&&f.day!==day?`<span style="color:var(--amber);font-size:var(--t-xs);font-weight:var(--w-bold)">${DAY_A[f.day]||f.day} · </span>`:'';
+    return`<div class="checkin-opt" onclick="confirmReplace('${isSameTitle?'':''}${safeT}','${safeTNew}','${f.day}','${f.time}')">
       <div class="checkin-opt-info">
-        <div class="checkin-opt-time">${f.time} · ${f.duration}</div>
-        <div class="checkin-opt-title">${short}</div>
+        <div class="checkin-opt-time">${dayLabel}${f.time} · ${f.duration}</div>
+        <div class="checkin-opt-title">${short}${inWL?` <span style="color:var(--amber);font-size:var(--t-xs)">♥</span>`:''}</div>
         <div class="checkin-opt-venue">${ICONS.pin} ${vc2.short}</div>
       </div>
       <div class="checkin-opt-add">${ICONS.plus}</div>
     </div>`;
-  }).join('');
+  };
 
-  return`<div class="film-alts">
-    ${optsHtml||`<div style="padding:var(--sp-btn) var(--sp-3);font-size:var(--t-sm);color:var(--gray)">No hay alternativas en este horario — revisa Sugerencias.</div>`}
-    <div style="padding:4px 14px 10px">
-      <button class="checkin-result-btn secondary" style="width:100%;font-size:var(--t-sm)" onclick="_expandedFilm='';renderAgenda()">Cerrar</button>
-    </div>
-  </div>`;
+  let html='<div class="film-alts">';
+
+  if(sameTitle.length){
+    html+=`<div style="padding:6px 14px 4px;font-size:var(--t-xs);color:var(--gray);text-transform:uppercase;letter-spacing:.06em;font-weight:var(--w-bold)">Otro horario · mismo título</div>`;
+    html+=sameTitle.map(f=>mkCard(f,true)).join('');
+  }
+  if(others.length){
+    if(sameTitle.length) html+=`<div style="height:1px;background:var(--bdr-l);margin:4px 0"></div>`;
+    html+=`<div style="padding:6px 14px 4px;font-size:var(--t-xs);color:var(--gray);text-transform:uppercase;letter-spacing:.06em;font-weight:var(--w-bold)">Caben en tu hueco</div>`;
+    html+=others.slice(0,5).map(f=>mkCard(f,false)).join('');
+  }
+  if(!sameTitle.length&&!others.length){
+    html+=`<div style="padding:var(--sp-btn) var(--sp-3);font-size:var(--t-sm);color:var(--gray)">No hay alternativas disponibles — revisa Sugerencias.</div>`;
+  }
+
+  html+=`<div style="padding:4px 14px 10px">
+    <button class="checkin-result-btn secondary" style="width:100%;font-size:var(--t-sm)" onclick="_expandedFilm='';renderAgenda()">Cerrar</button>
+  </div></div>`;
+  return html;
 }
 
 
