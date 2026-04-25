@@ -195,9 +195,12 @@ function addSuggestion(title,day,time){
   // 3. Quitar de lista de restaurables
   lastRemovedSlots=lastRemovedSlots.filter(r=>r._title!==title);
   saveLastSlot();
-  // 4. Saltar al día de la sugerencia en el calendario
+  // 4. Saltar al día de la sugerencia en el calendario y asegurar que sea visible
   const jumpIdx=DAY_KEYS.indexOf(day);
-  if(jumpIdx>=0) activeMiPlanDay=jumpIdx;
+  if(jumpIdx>=0){
+    activeMiPlanDay=jumpIdx;
+    miPlanViewStart=Math.max(0,Math.min(jumpIdx,DAY_KEYS.length-2));
+  }
   // 5. Re-render
   renderAgenda();
 }
