@@ -2802,6 +2802,12 @@ function venueTravelMins(v1,v2){
   return tier?tier.t:35;
 }
 
+function venueDisplay(v){
+  // Regla: venue tal cual lo pone el festival — nunca abreviado
+  // Solo elimina "Sala X" o "· Sala X" del final si existe
+  if(!v) return '';
+  return v.replace(/\s*[·\-]\s*Sala\s*\d+.*$/i,'').replace(/\s*Sala\s*\d+.*$/i,'').trim();
+}
 function vcfg(v){
   if(!v) return {short:''};
   const r=_resolveVenue(v);
@@ -3109,7 +3115,7 @@ function renderMiPlanCalendar(){
         ${isPrio?`<div class="mplan-wk-badge">${ICONS.star}</div>`:''}
         <div class="mplan-wk-time">${s.time}</div>
         <div class="mplan-wk-title">${displayTitle}</div>
-        ${showVenue?`<div class="mplan-wk-venue">${ICONS.pin} ${vc2.short}</div>`:''}
+        ${showVenue?`<div class="mplan-wk-venue">${ICONS.pin} ${venueDisplay(_noticeVenue(s._title,s.venue))}</div>`:''}
       </div>`;
     }).join('');
 
@@ -3173,7 +3179,7 @@ function renderMiPlanCalendar(){
         </div>
         <div class="mplan-ri">
           <div>${(()=>{const{displayTitle:_dt,progSuffix:_ps}=parseProgramTitle(s._title||'');const _mfqa=FILMS.find(fi=>fi.title===s._title&&fi.day===s.day&&fi.time===s.time);const _qab=_mfqa?.has_qa?`<span class="meta-badge" style="font-size:8px;padding:1px 4px;margin-right:4px">${UI.badge.qa}</span>`:'';return`<div class="mplan-rtitle">${prioritized.has(s._title)?`<span style="color:var(--orange);margin-right:4px">${ICONS.starFill}</span>`:''} ${_qab}${_dt}</div>${_ps?`<div style="font-size:var(--t-sm);color:var(--orange);font-weight:var(--w-bold);line-height:1;margin-top:2px">${_ps}</div>`:''}`;})()} </div>
-          <div class="mplan-rvenue">${ICONS.pin} ${vcfg(_noticeVenue(s._title,s.venue)).short}${sala(_noticeVenue(s._title,s.venue))?' \u00b7 '+sala(_noticeVenue(s._title,s.venue)):''}</div>
+          <div class="mplan-rvenue">${ICONS.pin} ${venueDisplay(_noticeVenue(s._title,s.venue))}${sala(_noticeVenue(s._title,s.venue))?' \u00b7 '+sala(_noticeVenue(s._title,s.venue)):''}</div>
           ${(()=>{const _mf=FILMS.find(fi=>fi.title===s._title&&fi.day===s.day&&fi.time===s.time);if(!_mf||!_mf.is_cortos||!_mf.film_list||!_mf.film_list.length) return'';return`<button class="mplan-prog-toggle" onclick="toggleMplanProg(this,event)" style="display:inline-flex;align-items:center;gap:var(--sp-1)">${ICONS.chevronR} Programa</button>`;})()}
         </div>
         <div style="display:flex;flex-direction:column;align-items:flex-end;justify-content:center;flex-shrink:0">
@@ -4344,7 +4350,7 @@ function mkAgendaRow(s, mode='saved'){
     <div class="saved-time">${s.time}</div>
     <div class="saved-info">
       <div class="saved-title">${displayTitle}</div>${progSuffix?`<div style="font-size:var(--t-sm);color:var(--orange);font-weight:var(--w-bold);margin-top:1px;line-height:1">${progSuffix}</div>`:''}
-      <div class="saved-venue">${ICONS.pin} ${vc2.short}${sl?' · '+sl:''}${s.duration?' · '+s.duration:''}${altBadge}</div>
+      <div class="saved-venue">${ICONS.pin} ${venueDisplay(_sv)}${sl?' · '+sl:''}${s.duration?' · '+s.duration:''}${altBadge}</div>
       ${_progBtn}
     </div>
     <button class="saved-check${isDone?' done':''}" data-title="${safeT}" data-day="${s.day||''}" data-time="${s.time||''}" data-venue="${(s.venue||'').replace(/"/g,'&quot;')}" data-dur="${s.duration||''}" onclick="${isDone?'toggleWatched(this.dataset.title,event)':'markWatchedFromPlan(this.dataset.title,this.dataset.day,this.dataset.time,this.dataset.venue,this.dataset.dur,event)'}" style="display:inline-flex;align-items:center;gap:var(--sp-1)">${isDone?'No vista':ICONS.check+' Vista'}</button>
@@ -4520,7 +4526,7 @@ function renderNextStrip(schedule){
     <div class="next-film-info">
       <div class="next-film-countdown">${label}</div>
       <div class="next-film-title">${short}</div>
-      <div class="next-film-venue">${ICONS.pin} ${vc2.short}${sl?' · '+sl:''}</div>
+      <div class="next-film-venue">${ICONS.pin} ${venueDisplay(_noticeVenue(next._title,next.venue))}${sl?' · '+sl:''}</div>
     </div>
   </div>${delayHtml}${warnHtml}`;
 }
@@ -4619,7 +4625,7 @@ function renderFilmAlternatives(title,day,time){
       <div class="checkin-opt-info">
         <div class="checkin-opt-time">${f.time} · ${f.duration}</div>
         <div class="checkin-opt-title">${short}</div>
-        <div class="checkin-opt-venue">${ICONS.pin} ${vc2.short}</div>
+        <div class="checkin-opt-venue">${ICONS.pin} ${venueDisplay(f.venue)}</div>
       </div>
       <div class="checkin-opt-add">${ICONS.plus}</div>
     </div>`;
@@ -4708,7 +4714,7 @@ function renderGapOptions(gapStartMin,gapEndMin,todayKey,removedTitle){
     const minsIn=inProg?nowMin-fStart:0;
     const badge=inProg?`<span style="font-size:var(--t-xs);color:var(--green);font-weight:var(--w-bold);display:block;margin-bottom:2px">EN CURSO · entró hace ${minsIn} min</span>`:'';
     return`<div class="checkin-opt" onclick="confirmReplace('${safeRem}','${safeT}','${f.day}','${f.time}')">
-      <div class="checkin-opt-info">${badge}<div class="checkin-opt-time">${f.time} · ${f.duration}</div><div class="checkin-opt-title">${short}</div><div class="checkin-opt-venue">${ICONS.pin} ${vc2.short}</div></div>
+      <div class="checkin-opt-info">${badge}<div class="checkin-opt-time">${f.time} · ${f.duration}</div><div class="checkin-opt-title">${short}</div><div class="checkin-opt-venue">${ICONS.pin} ${venueDisplay(f.venue)}</div></div>
       <div class="checkin-opt-add">${ICONS.plus}</div>
     </div>`;
   }).join('');
@@ -4953,7 +4959,7 @@ function renderContextualHeader(){
               `<div class="ctx-next-poster"></div>`}
         <div style="flex:1;min-width:0">
           <div class="ctx-next-title">${dt}</div>
-          <div class="ctx-next-detail">${next.time} · ${vc.short}</div>
+          <div class="ctx-next-detail">${next.time} · ${venueDisplay(_noticeVenue(next._title,next.venue))}</div>
           ${badge}
         </div>
       </div>
@@ -4981,7 +4987,7 @@ function renderContextualHeader(){
           <div class="ctx-suggest-badge">${gapSuggestion.time}<br>${dur}m</div>
           <div class="ctx-suggest-info">
             <div class="ctx-suggest-title">${dt.length>26?dt.slice(0,24)+'…':dt}</div>
-            <div class="ctx-suggest-venue">${vc2.short}</div>
+            <div class="ctx-suggest-venue">${venueDisplay(_fv)}</div>
           </div>
         </div>`;
     })():`<div style="font-size:var(--t-caption);color:var(--gray)">Sin actividades disponibles en este tramo.</div>`;
@@ -5129,7 +5135,7 @@ function _renderSavedAgendaHTML(){
             <div class="saved-time">${s.time}</div>
             <div class="saved-info">
               <div class="saved-title">${s._title}</div>
-              <div class="saved-venue">${ICONS.pin} ${vc2.short}${sl?' · '+sl:''}</div>
+              <div class="saved-venue">${ICONS.pin} ${venueDisplay(_sv2)}${sl?' · '+sl:''}</div>
             </div>
             <button class="saved-check done" data-wt="${(s._title||'').replace(/"/g,'&quot;')}" onclick="toggleWatched(this.dataset.wt,event)" >No vista</button>
           </div>`;
@@ -5175,7 +5181,7 @@ function _renderSavedAgendaHTML(){
             <div class="suggestion-title">${(()=>{const{displayTitle:_dt}=parseProgramTitle(f.title);return _dt;})()}</div>
             <div class="suggestion-meta">${f.section||''}</div>
             <div class="suggestion-meta-ico">${ICONS.clock} ${f.duration}</div>
-            <div class="suggestion-meta-ico">${ICONS.pin} ${vc2.short}${sl?' · '+sl:''}</div>
+            <div class="suggestion-meta-ico">${ICONS.pin} ${venueDisplay(_fv)}${sl?' · '+sl:''}</div>
             ${f.gapCtx?`<div style="font-size:var(--t-xs);color:var(--gray);margin-top:2px;font-style:italic">${f.gapCtx.length>35?f.gapCtx.slice(0,33)+'…':f.gapCtx}</div>`:''}
           </div>
           <button class="suggestion-add" onclick="event.stopPropagation();addSuggestion('${f.title.replace(/'/g,"\\'")}','${f.day}','${f.time}')" style="${f._isRestored?'border-color:var(--orange);color:var(--orange);background:var(--amber-10)':''}">
@@ -5453,7 +5459,7 @@ function _buildAgendaCanvas(){
       ty+=22;
       c.fillStyle='#FFF';c.font=`600 ${FONT_T}px system-ui,-apple-system,sans-serif`;
       ty=_drawWrapped(c,s._title||'',tx,ty,CW-CARD_PAD*2-6,LINE_T,MAX_TL);
-      if(s.venue){const _vc=vcfg(s.venue);const _vraw=_vc.short||s.venue;const v=_vraw.length>30?_vraw.slice(0,28)+'…':_vraw;c.fillStyle='#5A5A5A';c.font='400 10px system-ui,-apple-system,sans-serif';c.textBaseline='top';c.fillText(v,tx,cardY+ch-CARD_PAD-11);}
+      if(s.venue){const _vc=vcfg(s.venue);const _vraw=venueDisplay(s.venue)||s.venue;const v=_vraw.length>30?_vraw.slice(0,28)+'…':_vraw;c.fillStyle='#5A5A5A';c.font='400 10px system-ui,-apple-system,sans-serif';c.textBaseline='top';c.fillText(v,tx,cardY+ch-CARD_PAD-11);}
       cardY+=ch+CARD_GAP;
     });
   });
@@ -6848,7 +6854,7 @@ function openPelSheet(title){
     return`<div class="pel-sheet-screening"${isPast?' style="opacity:.4"':''}>
       <span class="pelicula-day">${dayAbb}</span>
       <span class="pelicula-time">${s.time}</span>
-      <span class="pelicula-venue" data-venue="${vc.short.replace(/"/g,'&quot;')}" onclick="filterByVenue(this.dataset.venue)">${ICONS.pin} ${vc.short}${sl?' · '+sl:''}${unica&&f.type!=='event'?`<span style="font-size:var(--t-xs);color:var(--gray);margin-left:4px">· única función</span>`:''}  <span style="opacity:.4;font-size:var(--t-xs)">›</span></span>
+      <span class="pelicula-venue" data-venue="${venueDisplay(_sVenue).replace(/"/g,'&quot;')}" onclick="filterByVenue(this.dataset.venue)">${ICONS.pin} ${venueDisplay(_sVenue)}${sl?' · '+sl:''}${unica&&f.type!=='event'?`<span style="font-size:var(--t-xs);color:var(--gray);margin-left:4px">· única función</span>`:''}  <span style="opacity:.4;font-size:var(--t-xs)">›</span></span>
     </div>`;
   }).join('');
   // Lista de cortos si es programa
@@ -7141,7 +7147,7 @@ function renderMiPlanList(schedule){
             :`<div class="mplan-list-poster"></div>`}
           <div class="mplan-list-info">
             <div class="mplan-list-title" style="${isPassed?'opacity:.5':''}">${dt}</div>
-            <div class="mplan-list-meta">${s.time} · ${vc.short}${FILMS.find(fi=>fi.title===s._title)?.is_cortos?' · Cortos':''}</div>
+            <div class="mplan-list-meta">${s.time} · ${venueDisplay(_mv)}${FILMS.find(fi=>fi.title===s._title)?.is_cortos?' · Cortos':''}</div>
           </div>
           ${isW?`<div class="mplan-list-check">✓</div>`:''}
         </div>`;
@@ -7451,7 +7457,7 @@ function renderProgramaList(){
         ${_stk||(src?`<img class="plist-poster" src="${src}" loading="lazy" onerror="this.remove()" alt="">`:`<div class="plist-poster"></div>`)}
         <div class="plist-info">
           <div class="plist-title">${noticeBadge}${_metaBadges(f)}${dt}${nowBadge}</div>
-          <div class="plist-meta" style="${notice&&notice.type==='cancelled'?'text-decoration:line-through':''}">${vc.short}${sala(_effVenue)?' · '+sala(_effVenue):''} · ${f.duration||'~90 min'}</div>
+          <div class="plist-meta" style="${notice&&notice.type==='cancelled'?'text-decoration:line-through':''}">${venueDisplay(_effVenue)}${sala(_effVenue)?' · '+sala(_effVenue):''} · ${f.duration||'~90 min'}</div>
           ${noticeNote||`<div class="plist-sec">${f.section||''}</div>`}
         </div>
         <div class="plist-heart${inWL?'':' empty'}" onclick="event.stopPropagation();_toggleWLFromList('${safeT}',this)">${inWL?ICONS.heartFill:ICONS.heart}</div>
