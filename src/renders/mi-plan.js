@@ -390,6 +390,9 @@ function renderGapOptions(gapStartMin,gapEndMin,todayKey,removedTitle){
     if(inProgress) return (fEnd-nowMin)>=MIN_REMAINING&&fEnd<=gapEndMin;
     return fStart>=gapStartMin&&fEnd<=gapEndMin;
   }).sort((a,b)=>{
+    const aWL=watchlist.has(a.title),bWL=watchlist.has(b.title);
+    if(aWL&&!bWL) return -1;
+    if(!aWL&&bWL) return 1;
     const aStart=toMin(a.time),bStart=toMin(b.time);
     const aFuture=!isLiveDay||aStart>=nowMin,bFuture=!isLiveDay||bStart>=nowMin;
     if(aFuture&&!bFuture) return -1;
@@ -405,8 +408,9 @@ function renderGapOptions(gapStartMin,gapEndMin,todayKey,removedTitle){
     const fStart=toMin(f.time);const inProg=isLiveDay&&fStart<nowMin;
     const minsIn=inProg?nowMin-fStart:0;
     const badge=inProg?`<span style="font-size:var(--t-xs);color:var(--green);font-weight:var(--w-bold);display:block;margin-bottom:2px">EN CURSO · entró hace ${minsIn} min</span>`:'';
+    const inWL=watchlist.has(f.title);
     return`<div class="checkin-opt" onclick="confirmReplace('${safeRem}','${safeT}','${f.day}','${f.time}')">
-      <div class="checkin-opt-info">${badge}<div class="checkin-opt-time">${f.time} · ${f.duration}</div><div class="checkin-opt-title">${short}</div><div class="checkin-opt-venue">${ICONS.pin} ${vc2.short}</div></div>
+      <div class="checkin-opt-info">${badge}<div class="checkin-opt-time">${f.time} · ${f.duration}</div><div class="checkin-opt-title">${short}${inWL?` <span style="color:var(--amber);font-size:var(--t-xs)">♥</span>`:''}</div><div class="checkin-opt-venue">${ICONS.pin} ${vc2.short}</div></div>
       <div class="checkin-opt-add">${ICONS.plus}</div>
     </div>`;
   }).join('');
