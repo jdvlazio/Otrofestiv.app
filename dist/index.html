@@ -1001,8 +1001,9 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .av-time-input{background:var(--surf);border:1px solid var(--bdr);border-radius:var(--r-md);color:var(--white);font-size:var(--t-base);padding:var(--sp-2) var(--sp-2);font-family:var(--font);width:88px;cursor:pointer;appearance:none;-webkit-appearance:none}
 .av-time-input:focus{outline:none;border-color:var(--orange)}
 .av-sep{font-size:var(--t-sm);color:var(--gray2)}
-.av-add-btn{background:var(--amber-10);border:1px solid var(--amber-30);border-radius:var(--r-md);color:var(--orange);font-size:var(--t-sm);font-weight:var(--w-semi);padding:var(--sp-2) var(--sp-3);cursor:pointer;font-family:var(--font);transition:background var(--tr-base)}
-.av-add-btn:hover{background:var(--amber-20)}
+.av-add-btn{width:100%;background:var(--amber);border:none;border-radius:var(--r-md);color:#000;font-size:var(--t-base);font-weight:var(--w-bold);padding:var(--sp-btn) var(--sp-4);cursor:pointer;font-family:var(--font);transition:opacity var(--tr-base)}
+.av-add-btn:hover{opacity:.88}
+.av-add-btn:active{opacity:.75}
 .av-plus-btn{background:none;border:1px solid var(--bdr);border-radius:var(--r-md);color:var(--gray);font-size:var(--t-sm);padding:var(--sp-2) var(--sp-3);cursor:pointer;font-family:var(--font);transition:color var(--tr-base),border-color var(--tr-base);white-space:nowrap}
 .av-plus-btn:hover{border-color:var(--orange);color:var(--orange)}
 .av-full-btn{background:none;border:1px solid var(--red-12);border-radius:var(--r-md);color:var(--gray);font-size:var(--t-sm);padding:var(--sp-2) var(--sp-3);cursor:pointer;font-family:var(--font);transition:color var(--tr-base),border-color var(--tr-base);white-space:nowrap}
@@ -1013,7 +1014,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 /* ══════════════════════════════════════════════════════
    SISTEMA DE BOTONES — 4 niveles semánticos
    ─────────────────────────────────────────────────────
-   PRIMARIO   .av-calc-btn .ag-save-btn
+   PRIMARIO   .av-calc-btn .ag-save-btn .av-add-btn .empty-state-cta .av-sheet-confirm
               fondo sólido, full-width, w-display, uppercase
    SECUNDARIO .av-add-btn .ctx-btn .checkin-btn
               fondo tintado/sólido, inline, w-semi
@@ -6399,7 +6400,7 @@ function renderAgenda(){
         <div style="font-size:var(--t-sm);color:var(--gray);line-height:1.6;margin-bottom:24px;max-width:260px;margin-left:auto;margin-right:auto">
           El festival ya concluyó. Revisá las películas que viste en Mi Plan.
         </div>
-        <button onclick="switchMainNav('mnav-miplan');showAgView()" style="background:var(--amber-10);border:1px solid var(--amber-30);color:var(--amber);font-family:var(--font);font-size:var(--t-sm);font-weight:var(--w-bold);padding:var(--sp-btn) var(--sp-5);border-radius:var(--r-pill);cursor:pointer">
+        <button onclick="switchMainNav('mnav-miplan');showAgView()" class="av-calc-btn" style="margin-top:0">
           Ver Mi Plan
         </button>
       </div>`;

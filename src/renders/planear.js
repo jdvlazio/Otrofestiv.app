@@ -471,7 +471,7 @@ function renderAgenda(){
         <div style="font-size:var(--t-sm);color:var(--gray);line-height:1.6;margin-bottom:24px;max-width:260px;margin-left:auto;margin-right:auto">
           El festival ya concluyó. Revisá las películas que viste en Mi Plan.
         </div>
-        <button onclick="switchMainNav('mnav-miplan');showAgView()" style="background:var(--amber-10);border:1px solid var(--amber-30);color:var(--amber);font-family:var(--font);font-size:var(--t-sm);font-weight:var(--w-bold);padding:var(--sp-btn) var(--sp-5);border-radius:var(--r-pill);cursor:pointer">
+        <button onclick="switchMainNav('mnav-miplan');showAgView()" class="av-calc-btn" style="margin-top:0">
           Ver Mi Plan
         </button>
       </div>`;
