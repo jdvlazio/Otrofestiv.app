@@ -72,7 +72,12 @@ function toggleWatched(title,e){
         if(activeMNav==='mnav-miplan') renderAgenda();
         showToast('Movida a Ya vistas','info');
         // Los programas de cortos no tienen calificación general
-        if(!FILMS.find(fi=>fi.title===title)?.is_cortos) setTimeout(()=>openRatingSheet(title),350);
+        if(!FILMS.find(fi=>fi.title===title)?.is_cortos){
+          closePelSheet();
+          setTimeout(()=>openRatingSheet(title),350);
+        } else {
+          closePelSheet();
+        }
       }
     );
   }
