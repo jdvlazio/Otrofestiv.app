@@ -159,11 +159,11 @@ function removeFromAgenda(title){
     savedAgenda.schedule=savedAgenda.schedule.filter(s=>s._title!==title);
     if(!savedAgenda.schedule.length)savedAgenda=null;
     saveSavedAgenda();
-    // CTA B: mostrar aviso contextual post-eliminación
+    showToast('Quitada de Mi Plan','info');
     _ctaRemovedVisible=true;
     if(_ctaRemovedTimer) clearTimeout(_ctaRemovedTimer);
     _ctaRemovedTimer=setTimeout(()=>{_ctaRemovedVisible=false;renderAgenda();},6000);
-    renderAgenda();showToast('Quitada de Mi Plan','info');
+    setTimeout(()=>renderAgenda(),0);
   });
 }
 function addSuggestion(title,day,time){
@@ -200,8 +200,8 @@ function addSuggestion(title,day,time){
     activeMiPlanDay=jumpIdx;
     miPlanViewStart=Math.max(0,Math.min(jumpIdx,DAY_KEYS.length-2));
   }
-  // 5. Re-render
-  renderAgenda();
+  // 5. Re-render diferido — libera el hilo principal antes del cálculo pesado
+  setTimeout(()=>renderAgenda(),0);
   return 'added'; // caller puede cerrar la ficha
 }
 function closeSearch(){setTimeout(()=>{const r=document.getElementById('ag-search-results');if(r) r.classList.remove('open');},200);}
