@@ -87,13 +87,6 @@
   --tr-smooth: 200ms ease;   /* overlays, opacidades, estados             */
   --tr-enter:  300ms ease-out; /* entradas al DOM: paneles, drawers       */
 
-  /* ── Estados de interacción — fuente única de verdad ──
-     Aplicar via CSS, nunca via JS inline.
-     JS solo gestiona el atributo disabled/aria-disabled.           */
-  --tap-active:   .7;   /* :active  — feedback táctil inmediato          */
-  --tap-disabled: .35;  /* :disabled — no disponible, no re-tappeable    */
-  --tap-loading:  .5;   /* procesando — deshabilitar sin feedback visual  */
-
   /* ── Layout — espaciado (escala base-2) ── */
   --sp-1:  4px;   /* micro: gaps inline, separaciones mínimas    */
   --sp-2:  8px;   /* xs:    gaps entre elementos, padding botones */
@@ -200,30 +193,6 @@ html{-webkit-tap-highlight-color:transparent}
 body{background:var(--bg);color:var(--white);font-family:var(--font),'Plus Jakarta Sans Fallback',system-ui,sans-serif;min-height:100vh}
 
 /* ════════════════════════════════════════════════════════
-   SISTEMA DE ESTADOS DE INTERACCIÓN — fuente única
-   JS gestiona el atributo disabled. CSS gestiona lo visual.
-   No implementar estados visuales de tap en JS inline.
-════════════════════════════════════════════════════════ */
-button,
-[role="button"],
-.tappable{
-  touch-action: manipulation;
-  -webkit-tap-highlight-color: transparent;
-  transition: opacity var(--tr-fast);
-}
-button:active,
-[role="button"]:active,
-.tappable:active{ opacity: var(--tap-active) }
-
-button:disabled,
-button[aria-disabled="true"],
-[role="button"][aria-disabled="true"]{
-  opacity: var(--tap-disabled);
-  cursor: not-allowed;
-  pointer-events: none;
-}
-
-/* ════════════════════════════════════════════════════════
    3 · LAYOUT
    Estructura global: header, navegación principal, tabs.
 ════════════════════════════════════════════════════════ */
@@ -258,7 +227,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .auth-email-inp::placeholder{color:var(--gray3)}
 .auth-email-inp:focus{border-color:var(--amber)}
 .auth-send-btn{width:100%;padding:var(--sp-btn);background:var(--amber);color:var(--black);border:none;border-radius:10px;font-size:var(--t-base);font-weight:var(--w-bold);cursor:pointer}
-
+.auth-send-btn:disabled{opacity:.5;cursor:not-allowed}
 .auth-msg{font-size:var(--t-sm);color:var(--red);margin-top:var(--sp-1)}
 .auth-cancel{display:block;text-align:center;margin-top:var(--sp-3);font-size:var(--t-sm);color:var(--gray2);cursor:pointer;padding:var(--sp-1) 0}
 .auth-check-icon{font-size:32px;margin-bottom:var(--sp-3)}
@@ -302,7 +271,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 /* Navegación principal (bottom tabs) */
 .main-nav{display:flex;border-bottom:1px solid var(--bdr);background:var(--surf)}
 .main-nav-tab{flex:1;background:none;border:none;border-bottom:2px solid transparent;margin-bottom:-1px;padding:var(--sp-2) var(--sp-1) var(--sp-3);cursor:pointer;color:var(--gray2);font-family:var(--font);font-size:var(--t-base);font-weight:var(--w-semi);letter-spacing:.3px;text-align:center;transition:color var(--tr-base),border-color var(--tr-base);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:var(--sp-1);height:52px;box-sizing:border-box}
-
+.main-nav-tab:active{opacity:.7}
 .main-nav-tab.on{color:var(--orange);border-bottom-color:var(--orange)}
 .main-nav-tab:hover:not(.on){color:var(--white)}
 .main-nav-ico{font-size:var(--t-icon);line-height:1;height:20px;display:flex;align-items:center;justify-content:center}
@@ -392,7 +361,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .fbar{display:flex;gap:0;padding:0 var(--sp-4);width:max-content;min-width:100%;align-items:center}
 .fbar-lbl,.agbar-lbl{font-size:var(--t-xs);color:var(--gray2);text-transform:uppercase;letter-spacing:1.2px;white-space:nowrap;flex-shrink:0;min-width:44px;font-weight:var(--w-semi);opacity:.6}
 .fbtn{flex-shrink:0;padding:var(--sp-2) var(--sp-3) var(--sp-2);border-radius:0;border:none;border-bottom:1.5px solid transparent;margin-bottom:-1px;background:none;color:var(--gray2);font-size:var(--t-sm);font-weight:var(--w-regular);cursor:pointer;font-family:var(--font);transition:color var(--tr-base),border-color var(--tr-base);white-space:nowrap;min-height:30px;display:inline-flex;align-items:center;gap:var(--sp-1)}
-
+.fbtn:active{opacity:.7}
 .fbtn.on{border-bottom-color:var(--orange);color:var(--white)}
 .agbar{overflow-x:auto;scrollbar-width:none;border-bottom:1px solid var(--bdr);-webkit-overflow-scrolling:touch}
 .agbar-inner{display:flex;gap:0;padding:0 var(--sp-4);align-items:center}
@@ -578,7 +547,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .card:nth-child(odd){background:var(--card-a)}
 .card:nth-child(even){background:var(--card-b)}
 @media(hover:hover){.card:not(.conflict):hover{transform:translateY(-2px);box-shadow:0 8px 24px var(--overlay-60);border-color:var(--amber-35)}}
-
+.card:active{opacity:.85}
 .card.program{background:var(--surf-2)!important}
 .card.selected{
   border-color:var(--orange)!important;
@@ -711,7 +680,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .poster-card.in-wl{outline:2px solid var(--amber-30);outline-offset:-2px}
 .poster-card.in-watched{opacity:.45}
 .poster-card.past-card{opacity:.4}
-
+.poster-card:active{opacity:.85}
 /* Overlay de hora (Por Horario) */
 .poster-time{position:absolute;bottom:0;left:0;right:0;padding:20px 7px 6px;background:linear-gradient(to top,rgba(0,0,0,.85) 0%,rgba(0,0,0,0) 100%);font-size:var(--t-icon);font-weight:var(--w-display);color:var(--amber);line-height:1;letter-spacing:-.3px}
 /* Indicador ♥ en lista */
@@ -813,7 +782,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .pv-range::-webkit-slider-thumb{-webkit-appearance:none;width:44px;height:44px;background:transparent}
 .pv-actions{padding:0 20px 44px;display:flex;gap:8px}
 .pv-btn-save{flex:2;background:var(--amber);color:var(--black);border:none;border-radius:var(--r-pill);font-family:var(--font);font-size:var(--t-base);font-weight:var(--w-display);padding:var(--sp-btn);cursor:pointer;transition:opacity var(--tr-base)}
-
+.pv-btn-save:disabled{opacity:.3;cursor:default}
 .pv-btn-later{flex:1;background:none;border:1px solid var(--bdr);border-radius:var(--r-pill);color:var(--gray);font-family:var(--font);font-size:var(--t-base);font-weight:var(--w-semi);padding:var(--sp-btn);cursor:pointer;white-space:nowrap}
 .conflict-sheet-overlay{position:fixed;inset:0;background:var(--overlay-70);backdrop-filter:blur(10px);z-index:9180;opacity:0;pointer-events:none;transition:opacity .25s}
 .conflict-sheet-overlay.open{opacity:1;pointer-events:all}
@@ -1041,7 +1010,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 ══════════════════════════════════════════════════════ */
 .av-calc-btn{width:100%;margin-top:var(--sp-5);padding:var(--sp-btn) var(--sp-4);border-radius:var(--r-md);background:var(--amber);border:none;color:#000;font-size:var(--t-base);font-weight:var(--w-bold);cursor:pointer;font-family:var(--font);transition:opacity var(--tr-base)}
 .av-calc-btn:hover{opacity:.88}
-
+.av-calc-btn:disabled{opacity:.35;cursor:default}
 
 /* Resultados / Opciones */
 .ag-calc-prompt{text-align:center;padding:var(--sp-3) var(--sp-4);color:var(--gray);font-size:var(--t-sm);line-height:1.5}
@@ -1146,7 +1115,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .mplan-nav-btn-wrap.right{border-right:none;border-left:1px solid var(--bdr-l);width:36px}
 .mplan-nav-btn{background:none;border:none;color:var(--white);font-size:var(--t-base);width:28px;height:28px;cursor:pointer;display:flex;align-items:center;justify-content:center;border-radius:var(--r-md);transition:background var(--tr-base)}
 .mplan-nav-btn:active{background:var(--surf-2)}
-
+.mplan-nav-btn:disabled{opacity:.25;cursor:default}
 .mplan-nav-labels{display:flex;flex:1}
 .mplan-nav-day{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;padding:var(--sp-2) 0;cursor:pointer}
 .mplan-nav-day.past{opacity:.35}
@@ -1932,41 +1901,3 @@ html.splash-skip #otrofestiv-splash{display:none}
 .av-time-row{display:flex;align-items:center;gap:var(--sp-2);margin-bottom:20px}
 .av-time-sel{flex:1;background:var(--surf);border:1px solid var(--bdr);border-radius:var(--r-md);color:var(--white);font-size:var(--t-base);font-family:var(--font);padding:10px var(--sp-3);cursor:pointer}
 .av-sheet-confirm{width:100%;background:var(--amber);border:none;border-radius:var(--r-md);padding:var(--sp-btn) 0;font-size:var(--t-base);font-weight:var(--w-bold);color:#000;cursor:pointer;font-family:var(--font)}
-
-/* ════════════════════════════════════════════════════════
-   UTILIDADES — clases atómicas extraídas de inline styles
-   Nunca usar inline styles en JS. Usar estas clases.
-════════════════════════════════════════════════════════ */
-
-/* Layout flex */
-.u-flex        { display: flex }
-.u-iflex       { display: inline-flex }
-.u-flex-col    { flex-direction: column }
-.u-ac          { align-items: center }
-.u-jc          { justify-content: center }
-.u-jb          { justify-content: space-between }
-.u-iflex-ac    { display: inline-flex; align-items: center }
-.u-iflex-ac-jc { display: inline-flex; align-items: center; justify-content: center }
-.u-gap-1       { gap: var(--sp-1) }
-.u-gap-2       { gap: var(--sp-2) }
-.u-gap-3       { gap: var(--sp-3) }
-.u-flex-1      { flex: 1; min-width: 0 }
-.u-shrink-0    { flex-shrink: 0 }
-.u-hidden      { display: none }
-.u-w-full      { width: 100% }
-
-/* Tipografía */
-.u-xs          { font-size: var(--t-xs) }
-.u-sm          { font-size: var(--t-sm) }
-.u-caps        { text-transform: uppercase; letter-spacing: .08em }
-.u-gray        { color: var(--gray) }
-.u-amber       { color: var(--amber) }
-.u-bold        { font-weight: var(--w-bold) }
-.u-semi        { font-weight: var(--w-semi) }
-.u-muted       { opacity: .4 }
-
-/* Separador */
-.u-divider     { height: 1px; background: var(--bdr-l); margin: 4px 0 }
-
-/* Cursor */
-.u-pointer     { cursor: pointer }

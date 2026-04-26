@@ -347,14 +347,6 @@ function loadState(){
     const _rt=localStorage.getItem(`${FESTIVAL_STORAGE_KEY}ratings`); if(_rt) try{Object.assign(filmRatings,JSON.parse(_rt));}catch(e){}
     const av=localStorage.getItem(`${FESTIVAL_STORAGE_KEY}av3`); if(av){const p=JSON.parse(av);DAY_KEYS.forEach(d=>{if(p[d]) availability[d]=p[d];});}
     const sa=localStorage.getItem(`${FESTIVAL_STORAGE_KEY}saved`); if(sa) savedAgenda=JSON.parse(sa);
-    // Deduplicar por _title — limpia datos corruptos de versiones anteriores
-    if(savedAgenda&&savedAgenda.schedule){
-      const seen=new Set();
-      savedAgenda.schedule=savedAgenda.schedule.filter(s=>{
-        if(seen.has(s._title)) return false;
-        seen.add(s._title); return true;
-      });
-    }
     // Normalizar venues viejos (ej: 'CC Bocagrande' → 'Plaza Bocagrande')
     if(savedAgenda&&savedAgenda.schedule){
       savedAgenda.schedule.forEach(s=>{

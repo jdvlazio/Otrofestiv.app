@@ -15,18 +15,6 @@ const UI = {
     walking: 'a pie',
     transit: 'en carro',
   },
-  action: {
-    add:      'Añadir',
-    remove:   'Quitar',
-    confirm:  'Confirmar',
-    cancel:   'Cancelar',
-    save:     'Guardar',
-    close:    'Cerrar',
-    restore:  'Restaurar',
-    rate:     'Calificar',
-    change:   'Cambiar',
-    addPlan:  'Añadir a mi plan',
-  },
   empty: {
     noActivity:  'Sin actividades para este día',
     noResults:   'Sin actividades para este filtro',
@@ -116,9 +104,8 @@ function getPosterSrc(title, isCortos, section){
 function getFilmPoster(f){
   if(!f) return null;
   if(f.type==='event') return makeEventPoster(f.title,f.duration);
-  // film.poster — fuente directa, máxima prioridad (Fase 1.2)
-  if(f.poster) return f.poster;
   if(f.is_cortos) return getPosterSrc(f.title,true)||makeProgramPoster(f.title,f.duration,f.section);
+  // is_programa: programa combinado de largometrajes — usa poster del primer film del program
   if(f.is_programa&&f.film_list&&f.film_list.length){
     const first=f.film_list[0];
     return getPosterSrc(first.title||first,false)||getPosterSrc(f.title,false)||null;
