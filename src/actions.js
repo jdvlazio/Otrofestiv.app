@@ -168,13 +168,13 @@ function removeFromAgenda(title){
   });
 }
 function addSuggestion(title,day,time){
-  // DEBUG TEMPORAL: mostrar estado al añadir
-  showToast(`festivalEnded:${festivalEnded()} FEST_END:${FESTIVAL_END?.toISOString?.()?.slice(0,10)}`,'warn',5000);
   if(festivalEnded()) return null;
   // 1. Add to watchlist if not already there
   if(!watchlist.has(title)){watchlist.add(title);watched.delete(title);saveState('wl','watched');updateCardState(title);updateAgTab();}
   // 2. Add specific screening to saved agenda
   const screen=FILMS.find(f=>f.title===title&&f.day===day&&f.time===time);
+  // DEBUG: mostrar si se encontró la película
+  showToast(screen?`✓ screen: ${title.slice(0,20)}`:`✗ screen null: ${title.slice(0,20)} ${day} ${time}`,'warn',6000);
   if(screen){
     if(!savedAgenda) savedAgenda={schedule:[]};
     if(!savedAgenda.schedule.some(s=>s._title===title)){
