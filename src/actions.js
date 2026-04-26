@@ -158,12 +158,12 @@ function removeFromAgenda(title){
     if(rem){lastRemovedSlots=lastRemovedSlots.filter(r=>r._title!==rem._title);lastRemovedSlots.unshift({...rem,_isRestored:true});if(lastRemovedSlots.length>MAX_REMEMBERED_SLOTS)lastRemovedSlots.length=MAX_REMEMBERED_SLOTS;saveLastSlot();}
     savedAgenda.schedule=savedAgenda.schedule.filter(s=>s._title!==title);
     if(!savedAgenda.schedule.length)savedAgenda=null;
-  saveSavedAgenda();
-    showToast('Quitada de Mi Plan','info');
+    saveSavedAgenda();
+    // CTA B: mostrar aviso contextual post-eliminación
     _ctaRemovedVisible=true;
     if(_ctaRemovedTimer) clearTimeout(_ctaRemovedTimer);
     _ctaRemovedTimer=setTimeout(()=>{_ctaRemovedVisible=false;renderAgenda();},6000);
-    renderAgenda();
+    renderAgenda();showToast('Quitada de Mi Plan','info');
   });
 }
 function addSuggestion(title,day,time){

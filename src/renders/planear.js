@@ -55,14 +55,7 @@ function showActionToast(msg,actionLabel,actionFn,duration=4000){
   clearTimeout(t._to);t._to=setTimeout(()=>{t.style.opacity='0';t.style.pointerEvents='none';},duration);
 }
 
-// ── Manejador global para botón Añadir en Sugerencias ──────────────────
-// Función global = fácil de debuggear, sin IIFEs, sin closures complejos.
-function _suggestionAdd(btn, title, day, time){
-  btn.disabled=true;
-  const r=addSuggestion(title,day,time);
-  if(r==='conflict') btn.disabled=false;
-  // Si r==='added': renderAgenda() ya fue llamado dentro de addSuggestion
-}
+// squeezeExcluded — definida en src/algo.js (fuente canónica)
 
 /* ── POST-VIEW RATING SHEET ── */
 let _pvTitle='', _pvRating=0;
