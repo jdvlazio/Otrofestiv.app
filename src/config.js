@@ -138,10 +138,9 @@ let POSTERS_AFF={};
 // date: 'YYYY-MM-DD' de la función original — el banner desaparece al día siguiente
 // Para 'rescheduled': añadir newDay, newTime, newVenue
 const NOTICES=[
-  {title:'Un mundo frágil y maravilloso',festival:'aff2026',type:'cancelled',date:'2026-04-23'},
-  {title:'La misteriosa mirada del flamenco',festival:'aff2026',type:'rescheduled',date:'2026-04-24',newVenue:'Cineprox Las Américas'},
-  {title:'Rayas de tigre',festival:'aff2026',type:'rescheduled',date:'2026-04-25',newVenue:'Cineprox Las Américas'},
-  {title:'Un mundo frágil y maravilloso',festival:'aff2026',type:'rescheduled',date:'2026-04-26',newVenue:'Cineprox Las Américas'},
+  {title:'La misteriosa mirada del flamenco',festival:'aff2026',type:'rescheduled',date:'2026-04-24',newDay:'VIE 24',newTime:'19:00',newVenue:'Cineprox Las Américas'},
+  {title:'Rayas de tigre',festival:'aff2026',type:'rescheduled',date:'2026-04-25',newDay:'SÁB 25',newTime:'16:00',newVenue:'Cineprox Las Américas'},
+  {title:'Un mundo frágil y maravilloso',festival:'aff2026',type:'rescheduled',date:'2026-04-26',newDay:'DOM 26',newTime:'13:30',newVenue:'Cineprox Las Américas'},
   {title:'Confinados',festival:'aff2026',type:'rescheduled',date:'2026-04-26',newVenue:'Cineprox Las Américas'},
 ];
 
