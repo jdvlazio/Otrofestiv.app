@@ -12806,15 +12806,28 @@ async function loadFestival(id){
   POSTERS=cfg.posters;
   LB_SLUGS=cfg.lbSlugs||{};
 
-  // Fetch posters from TMDB for films with tmdb_id not already in POSTERS
-  const _filmsWithTmdb=(cfg.films||[]).filter(f=>f.tmdb_id&&!cfg.posters[f.title]);
-  if(_filmsWithTmdb.length){
-    Promise.all(_filmsWithTmdb.map(f=>
-      fetch(`https://api.themoviedb.org/3/movie/${f.tmdb_id}?api_key=38f24e78b2f13970af3430eb0732f0ac`)
-        .then(r=>r.ok?r.json():null)
-        .then(d=>{if(d?.poster_path){POSTERS[f.title]=d.poster_path;_POSTERS_N[normKey(f.title)]=d.poster_path;}})
-        .catch(()=>{})
-    )).then(()=>_renderProgramaContent());
+  // Fetch TMDB posters para films con tmdb_id — secuencial para evitar race conditions
+  const _tmdbFilms=(cfg.films||[]).filter(f=>f.tmdb_id&&!cfg.posters[f.title]);
+  if(_tmdbFilms.length){
+    (async()=>{
+      let updated=false;
+      for(const f of _tmdbFilms){
+        try{
+          const r=await fetch(`https://api.themoviedb.org/3/movie/${f.tmdb_id}?api_key=38f24e78b2f13970af3430eb0732f0ac`);
+          if(r.ok){
+            const d=await r.json();
+            if(d.poster_path){
+              const url=`https://image.tmdb.org/t/p/w185${d.poster_path}`;
+              cfg.posters[f.title]=url;
+              POSTERS[f.title]=url;
+              _POSTERS_N[normKey(f.title)]=d.poster_path;
+              updated=true;
+            }
+          }
+        }catch(e){}
+      }
+      if(updated) _renderProgramaContent();
+    })();
   }
   FESTIVAL_DATES=cfg.festivalDates;
   FESTIVAL_END=new Date(cfg.festivalEndStr);
