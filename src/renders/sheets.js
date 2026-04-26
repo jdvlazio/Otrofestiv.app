@@ -356,7 +356,7 @@ function openPelSheet(title){
     <div class="pel-sheet-section-lbl">${f.type==='event'?'descripción':'sinopsis'}</div>
     <div class="pel-sheet-synopsis">${f.synopsis||'Sinopsis disponible próximamente.'}</div>
     ${cortosHtml}
-    ${(!f.is_cortos&&f.type!=='event')?`<a class="c-lb pel-sheet-lb" href="${lbUrl(f.title)}" target="_blank" rel="noopener">${LB_SVG}<span class="c-lb-text pel-sheet-lb-text">Letterboxd</span></a>`:''}
+    ${(!f.is_cortos&&f.type!=='event')?`<a class="c-lb pel-sheet-lb" href="${f.lb_slug?'https://letterboxd.com/film/'+f.lb_slug+'/':lbUrl(f.title)}" target="_blank" rel="noopener">${LB_SVG}<span class="c-lb-text pel-sheet-lb-text">Letterboxd</span></a>`:''}
     <div class="pel-sheet-divider"></div>
     ${inW?`<div class="pel-sheet-ctas-watched">
         <button onclick="toggleWatched('${safeT}',event)" class="pel-sheet-action-btn act-on">${ICONS.check} Ya vista</button>
