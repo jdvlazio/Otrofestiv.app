@@ -50,3 +50,31 @@ function renderPrioStrip(){
   </div>`;
 }
 
+
+
+// ════════════════════════════════════════════════════════
+// COMPONENTES REUTILIZABLES — Fase 2.3
+// Fuente única para patrones que se repiten en renders.
+// Nunca duplicar HTML de componentes — llamar estas funciones.
+// ════════════════════════════════════════════════════════
+
+// Poster thumbnail — uso en grilla, Mi Plan, ficha
+function renderPosterThumb(poster, title, cssClass, clickFn) {
+  if (!poster) return '';
+  const safeT = (title||'').replace(/'/g,"\\'");
+  const click = clickFn ? `onclick="${clickFn}"` : '';
+  return `<img class="${cssClass||'ag-poster'}" src="${poster}" alt="" loading="lazy"
+    onerror="this.remove()" ${click}>`;
+}
+
+// Eyebrow de sección — "COMPETENCIA LARGOMETRAJES", "IMPACT HITS", etc.
+function renderSectionEyebrow(section) {
+  if (!section) return '';
+  const clean = section.replace(/^[^\w]+/,'').toUpperCase();
+  return `<div class="ctx-eyebrow">${clean}</div>`;
+}
+
+// Divider semántico
+function renderDivider() {
+  return `<div class="u-divider"></div>`;
+}

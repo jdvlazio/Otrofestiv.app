@@ -1932,3 +1932,41 @@ html.splash-skip #otrofestiv-splash{display:none}
 .av-time-row{display:flex;align-items:center;gap:var(--sp-2);margin-bottom:20px}
 .av-time-sel{flex:1;background:var(--surf);border:1px solid var(--bdr);border-radius:var(--r-md);color:var(--white);font-size:var(--t-base);font-family:var(--font);padding:10px var(--sp-3);cursor:pointer}
 .av-sheet-confirm{width:100%;background:var(--amber);border:none;border-radius:var(--r-md);padding:var(--sp-btn) 0;font-size:var(--t-base);font-weight:var(--w-bold);color:#000;cursor:pointer;font-family:var(--font)}
+
+/* ════════════════════════════════════════════════════════
+   UTILIDADES — clases atómicas extraídas de inline styles
+   Nunca usar inline styles en JS. Usar estas clases.
+════════════════════════════════════════════════════════ */
+
+/* Layout flex */
+.u-flex        { display: flex }
+.u-iflex       { display: inline-flex }
+.u-flex-col    { flex-direction: column }
+.u-ac          { align-items: center }
+.u-jc          { justify-content: center }
+.u-jb          { justify-content: space-between }
+.u-iflex-ac    { display: inline-flex; align-items: center }
+.u-iflex-ac-jc { display: inline-flex; align-items: center; justify-content: center }
+.u-gap-1       { gap: var(--sp-1) }
+.u-gap-2       { gap: var(--sp-2) }
+.u-gap-3       { gap: var(--sp-3) }
+.u-flex-1      { flex: 1; min-width: 0 }
+.u-shrink-0    { flex-shrink: 0 }
+.u-hidden      { display: none }
+.u-w-full      { width: 100% }
+
+/* Tipografía */
+.u-xs          { font-size: var(--t-xs) }
+.u-sm          { font-size: var(--t-sm) }
+.u-caps        { text-transform: uppercase; letter-spacing: .08em }
+.u-gray        { color: var(--gray) }
+.u-amber       { color: var(--amber) }
+.u-bold        { font-weight: var(--w-bold) }
+.u-semi        { font-weight: var(--w-semi) }
+.u-muted       { opacity: .4 }
+
+/* Separador */
+.u-divider     { height: 1px; background: var(--bdr-l); margin: 4px 0 }
+
+/* Cursor */
+.u-pointer     { cursor: pointer }

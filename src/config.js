@@ -15,6 +15,18 @@ const UI = {
     walking: 'a pie',
     transit: 'en carro',
   },
+  action: {
+    add:      'Añadir',
+    remove:   'Quitar',
+    confirm:  'Confirmar',
+    cancel:   'Cancelar',
+    save:     'Guardar',
+    close:    'Cerrar',
+    restore:  'Restaurar',
+    rate:     'Calificar',
+    change:   'Cambiar',
+    addPlan:  'Añadir a mi plan',
+  },
   empty: {
     noActivity:  'Sin actividades para este día',
     noResults:   'Sin actividades para este filtro',
