@@ -8784,6 +8784,8 @@ function computeScenarios(titles){
     return{title:t,screens,priority:isPrio,score:sc};
   }).filter(g=>g.screens.length>0);
   if(!baseGroups.length) return[];
+  // Solo títulos con funciones futuras pueden aparecer en excluded
+  const eligibleTitles=new Set(baseGroups.map(g=>g.title));
 
   // Aplicar Mejora 2: ordenar las funciones de cada película por estrategia
   baseGroups.forEach(g=>{
@@ -8920,7 +8922,7 @@ function computeScenarios(titles){
     const included=new Set(sc.map(s=>s._title));
     return{
       schedule:sc,
-      excluded:pending.filter(t=>!included.has(t)),
+      excluded:pending.filter(t=>eligibleTitles.has(t)&&!included.has(t)),
       incompatiblePriorities,
       trueMax,
       maxWithPriorities,
