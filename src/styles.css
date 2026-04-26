@@ -395,7 +395,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .conflict-modal-btn.confirm{background:var(--amber);color:var(--black)}
 
 /* ── Toast ── */
-.prio-toast{position:fixed;bottom:calc(80px + env(safe-area-inset-bottom));left:50%;transform:translateX(-50%) translateY(8px);background:var(--surf-2);border:1px solid var(--amber-30);color:var(--white);font-size:var(--t-sm);font-weight:var(--w-semi);padding:var(--sp-2) var(--sp-4);border-radius:var(--r-pill);z-index:9999;transition:opacity .25s,transform .25s;max-width:300px;width:calc(100% - 48px);text-align:center;pointer-events:none;line-height:1.4;opacity:0;box-shadow:0 4px 24px rgba(0,0,0,.4)}
+.prio-toast{position:fixed;bottom:calc(72px + env(safe-area-inset-bottom));left:50%;transform:translateX(-50%);background:var(--surf-2);border:1px solid var(--amber-30);color:var(--white);font-size:var(--t-sm);font-weight:var(--w-semi);padding:var(--sp-2) var(--sp-4);border-radius:var(--r-pill);z-index:9999;transition:opacity var(--tr-smooth);max-width:300px;width:calc(100% - 48px);text-align:center;pointer-events:none;line-height:1.4;box-shadow:0 4px 24px rgba(0,0,0,.4)}
 .prio-toast.warn{border-color:var(--yellow-12);color:var(--yellow)}
 .prio-toast.action{pointer-events:all;display:flex;align-items:center;justify-content:center;gap:var(--sp-3);text-align:left}
 .toast-action-btn{background:none;border:none;color:var(--amber);font-family:var(--font);font-size:var(--t-base);font-weight:var(--w-bold);cursor:pointer;padding:0;white-space:nowrap;flex-shrink:0}
