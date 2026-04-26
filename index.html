@@ -6709,8 +6709,7 @@ function togglePelWL(title,e){
   btn.innerHTML=(inWL?ICONS.heartFill:ICONS.heart)+' '+(inWL?'En Intereses':'Intereses');
   btn.className='pel-sheet-action-btn'+(inWL?' act-on btn-primary':'');
   // Abrir WLAdd solo al AÑADIR — no al quitar (modal async deja wasInWL=true)
-  if(!wasInWL&&inWL&&(activeMNav==='mnav-cartelera'||activeMNav==='mnav-seleccion')){
-    closePelSheet();
+  if(!wasInWL&&inWL){
     showActionToast(`${ICONS.heartFill} En Intereses`,`${ICONS.star} Priorizar`,()=>togglePriority(title));
   }
 }
