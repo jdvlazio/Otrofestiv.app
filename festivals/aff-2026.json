@@ -476,12 +476,12 @@
       "country": "India",
       "flags": "🇮🇳",
       "duration": "117 min",
-      "day": "JUE 23",
-      "date": 23,
-      "time": "16:30",
-      "venue": "Colombo Americano",
+      "day": "DOM 26",
+      "date": 26,
+      "time": "17:00",
+      "venue": "Cineprox Las Américas",
       "section": "✨ Impact Hits",
-      "day_order": 2,
+      "day_order": 5,
       "is_cortos": false,
       "film_list": [],
       "director": "Neeraj Ghaywan",
@@ -956,6 +956,14 @@
       "date": "2026-04-26",
       "newDay": "DOM 26",
       "newTime": "13:30",
+      "newVenue": "Cineprox Las Américas"
+    },
+    {
+      "title": "Un mundo frágil y maravilloso",
+      "type": "rescheduled",
+      "date": "2026-04-26",
+      "newDay": "DOM 26",
+      "newTime": "17:00",
       "newVenue": "Cineprox Las Américas"
     }
   ]
