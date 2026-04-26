@@ -8253,14 +8253,12 @@ function removeFromAgenda(title){
     savedAgenda.schedule=savedAgenda.schedule.filter(s=>s._title!==title);
     if(!savedAgenda.schedule.length)savedAgenda=null;
     saveSavedAgenda();
-    // CTA B: mostrar aviso contextual post-eliminación
     _ctaRemovedVisible=true;
     if(_ctaRemovedTimer) clearTimeout(_ctaRemovedTimer);
     _ctaRemovedTimer=setTimeout(()=>{_ctaRemovedVisible=false;renderAgenda();},6000);
     renderAgenda();
     showToast('Quitada de Mi Plan','info');
-    const _avr=document.getElementById('ag-view');
-    if(_avr) _avr.scrollIntoView({behavior:'smooth',block:'start'});
+    window.scrollTo({top:0,behavior:'smooth'});
   });
 }
 function addSuggestion(title,day,time){
@@ -8297,11 +8295,9 @@ function addSuggestion(title,day,time){
     activeMiPlanDay=jumpIdx;
     miPlanViewStart=Math.max(0,Math.min(jumpIdx,DAY_KEYS.length-2));
   }
-  // 5. Re-render y scroll al plan
+  // 5. Re-render y scroll al tope para mostrar el plan actualizado
   renderAgenda();
-  // Scroll para mostrar el plan actualizado — el usuario puede estar abajo en sugerencias
-  const _av=document.getElementById('ag-view');
-  if(_av) _av.scrollIntoView({behavior:'smooth',block:'start'});
+  window.scrollTo({top:0,behavior:'smooth'});
   return 'added'; // caller puede cerrar la ficha
 }
 function closeSearch(){setTimeout(()=>{const r=document.getElementById('ag-search-results');if(r) r.classList.remove('open');},200);}
