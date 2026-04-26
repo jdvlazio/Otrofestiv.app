@@ -395,7 +395,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .conflict-modal-btn.confirm{background:var(--amber);color:var(--black)}
 
 /* ── Toast ── */
-.prio-toast{position:fixed;bottom:calc(72px + env(safe-area-inset-bottom));left:50%;transform:translateX(-50%);background:var(--surf-2);border:1px solid var(--amber-30);color:var(--white);font-size:var(--t-sm);font-weight:var(--w-semi);padding:var(--sp-2) var(--sp-4);border-radius:var(--r-pill);z-index:9999;transition:opacity var(--tr-smooth);max-width:300px;width:calc(100% - 48px);text-align:center;pointer-events:none;line-height:1.4;box-shadow:0 4px 24px rgba(0,0,0,.4)}
+.prio-toast{position:fixed;top:70px;left:50%;transform:translateX(-50%);background:var(--surf-2);border:1px solid var(--bdr);color:var(--white);font-size:var(--t-base);padding:var(--sp-3) var(--sp-5);border-radius:var(--r-md);z-index:9999;transition:opacity var(--tr-smooth);max-width:320px;width:calc(100% - 32px);text-align:center;pointer-events:none;line-height:1.5}
 .prio-toast.warn{border-color:var(--yellow-12);color:var(--yellow)}
 .prio-toast.action{pointer-events:all;display:flex;align-items:center;justify-content:center;gap:var(--sp-3);text-align:left}
 .toast-action-btn{background:none;border:none;color:var(--amber);font-family:var(--font);font-size:var(--t-base);font-weight:var(--w-bold);cursor:pointer;padding:0;white-space:nowrap;flex-shrink:0}
@@ -1336,7 +1336,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
   .main-nav-tab.on{border-bottom-color:transparent;border-top-color:var(--orange)}
   .grid{padding-bottom:calc(80px + env(safe-area-inset-bottom))}
   .ag-view{padding-top:var(--sp-2);padding-left:var(--sp-4);padding-right:var(--sp-4);padding-bottom:calc(80px + env(safe-area-inset-bottom))}
-  /* prio-toast position inherited from base rule */
+  .prio-toast{top:calc(60px + env(safe-area-inset-top) + 4px)}
   .ag-film-grid{grid-template-columns:repeat(4,1fr);gap:var(--sp-2)}
   /* ── Mobile header: remove visual band separations ───────────────
      .hdr-fest-bar borders create lines between wordmark/fest/search.

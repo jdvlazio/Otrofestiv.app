@@ -430,7 +430,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .conflict-modal-btn.confirm{background:var(--amber);color:var(--black)}
 
 /* ── Toast ── */
-.prio-toast{position:fixed;bottom:calc(72px + env(safe-area-inset-bottom));left:50%;transform:translateX(-50%);background:var(--surf-2);border:1px solid var(--amber-30);color:var(--white);font-size:var(--t-sm);font-weight:var(--w-semi);padding:var(--sp-2) var(--sp-4);border-radius:var(--r-pill);z-index:9999;transition:opacity var(--tr-smooth);max-width:300px;width:calc(100% - 48px);text-align:center;pointer-events:none;line-height:1.4;box-shadow:0 4px 24px rgba(0,0,0,.4)}
+.prio-toast{position:fixed;top:70px;left:50%;transform:translateX(-50%);background:var(--surf-2);border:1px solid var(--bdr);color:var(--white);font-size:var(--t-base);padding:var(--sp-3) var(--sp-5);border-radius:var(--r-md);z-index:9999;transition:opacity var(--tr-smooth);max-width:320px;width:calc(100% - 32px);text-align:center;pointer-events:none;line-height:1.5}
 .prio-toast.warn{border-color:var(--yellow-12);color:var(--yellow)}
 .prio-toast.action{pointer-events:all;display:flex;align-items:center;justify-content:center;gap:var(--sp-3);text-align:left}
 .toast-action-btn{background:none;border:none;color:var(--amber);font-family:var(--font);font-size:var(--t-base);font-weight:var(--w-bold);cursor:pointer;padding:0;white-space:nowrap;flex-shrink:0}
@@ -1371,7 +1371,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
   .main-nav-tab.on{border-bottom-color:transparent;border-top-color:var(--orange)}
   .grid{padding-bottom:calc(80px + env(safe-area-inset-bottom))}
   .ag-view{padding-top:var(--sp-2);padding-left:var(--sp-4);padding-right:var(--sp-4);padding-bottom:calc(80px + env(safe-area-inset-bottom))}
-  /* prio-toast position inherited from base rule */
+  .prio-toast{top:calc(60px + env(safe-area-inset-top) + 4px)}
   .ag-film-grid{grid-template-columns:repeat(4,1fr);gap:var(--sp-2)}
   /* ── Mobile header: remove visual band separations ───────────────
      .hdr-fest-bar borders create lines between wordmark/fest/search.
@@ -7080,10 +7080,11 @@ let POSTERS_AFF={};
 // date: 'YYYY-MM-DD' de la función original — el banner desaparece al día siguiente
 // Para 'rescheduled': añadir newDay, newTime, newVenue
 const NOTICES=[
-  {title:'La misteriosa mirada del flamenco',festival:'aff2026',type:'rescheduled',date:'2026-04-24',newDay:'VIE 24',newTime:'19:00',newVenue:'Cineprox Las Américas'},
-  {title:'Rayas de tigre',festival:'aff2026',type:'rescheduled',date:'2026-04-25',newDay:'SÁB 25',newTime:'16:00',newVenue:'Cineprox Las Américas'},
-  {title:'Un mundo frágil y maravilloso',festival:'aff2026',type:'rescheduled',date:'2026-04-26',newDay:'DOM 26',newTime:'13:30',newVenue:'Cineprox Las Américas'},
-  {title:'Hacia casa',festival:'aff2026',type:'rescheduled',date:'2026-04-26',newDay:'DOM 26',newTime:'17:00',newVenue:'Cineprox Las Américas'},
+  {title:'Un mundo frágil y maravilloso',festival:'aff2026',type:'cancelled',date:'2026-04-23'},
+  {title:'La misteriosa mirada del flamenco',festival:'aff2026',type:'rescheduled',date:'2026-04-24',newVenue:'Cineprox Las Américas'},
+  {title:'Rayas de tigre',festival:'aff2026',type:'rescheduled',date:'2026-04-25',newVenue:'Cineprox Las Américas'},
+  {title:'Un mundo frágil y maravilloso',festival:'aff2026',type:'rescheduled',date:'2026-04-26',newVenue:'Cineprox Las Américas'},
+  {title:'Confinados',festival:'aff2026',type:'rescheduled',date:'2026-04-26',newVenue:'Cineprox Las Américas'},
 ];
 
 const FESTIVAL_CONFIG={
@@ -7107,11 +7108,7 @@ const FESTIVAL_CONFIG={
     dayKeys:['MAR 21','MIÉ 22','JUE 23','VIE 24','SÁB 25','DOM 26','LUN 27','MAR 28','MIÉ 29','JUE 30'],
     dayShort:{'MAR 21':'MAR 21','MIÉ 22':'MIÉ 22','JUE 23':'JUE 23','VIE 24':'VIE 24','SÁB 25':'SÁB 25','DOM 26':'DOM 26','LUN 27':'LUN 27','MAR 28':'MAR 28','MIÉ 29':'MIÉ 29','JUE 30':'JUE 30'},
     dayLong:{'MAR 21':'Martes 21','MIÉ 22':'Miércoles 22','JUE 23':'Jueves 23','VIE 24':'Viernes 24','SÁB 25':'Sábado 25','DOM 26':'Domingo 26','LUN 27':'Lunes 27','MAR 28':'Martes 28','MIÉ 29':'Miércoles 29','JUE 30':'Jueves 30'},
-    films:null,posters:null,
-    lbSlugs:{
-      'Homebound':'homebound-2025',
-      'Un mundo frágil y maravilloso':'a-sad-and-beautiful-world'
-    }
+    films:null,posters:null,lbSlugs:null
   }
 };// Festival data loaded async from festivals/<id>.json via loadFestival()
 
@@ -8164,15 +8161,9 @@ function toggleWatched(title,e){
         cachedResult=null;
         if(activeView==='agenda') renderAgenda();
         if(activeMNav==='mnav-miplan') renderAgenda();
-        requestAnimationFrame(()=>window.dispatchEvent(new Event('scroll')));
         showToast('Movida a Ya vistas','info');
         // Los programas de cortos no tienen calificación general
-        if(!FILMS.find(fi=>fi.title===title)?.is_cortos){
-          closePelSheet();
-          setTimeout(()=>openRatingSheet(title),350);
-        } else {
-          closePelSheet();
-        }
+        if(!FILMS.find(fi=>fi.title===title)?.is_cortos) setTimeout(()=>openRatingSheet(title),350);
       }
     );
   }
@@ -8258,9 +8249,7 @@ function removeFromAgenda(title){
     _ctaRemovedVisible=true;
     if(_ctaRemovedTimer) clearTimeout(_ctaRemovedTimer);
     _ctaRemovedTimer=setTimeout(()=>{_ctaRemovedVisible=false;renderAgenda();},6000);
-    renderAgenda();
-    requestAnimationFrame(()=>window.dispatchEvent(new Event('scroll')));
-    showToast('Quitada de Mi Plan','info');
+    renderAgenda();showToast('Quitada de Mi Plan','info');
   });
 }
 function addSuggestion(title,day,time){
@@ -8274,9 +8263,7 @@ function addSuggestion(title,day,time){
     if(!savedAgenda.schedule.some(s=>s._title===title)){
       const realConflict=savedAgenda.schedule.find(s=>s.day===day&&screensConflict(s,screen));
       if(realConflict){
-        // Delay para que el action modal se cierre antes de abrir el conflict sheet
-        // Evita que el modal interceda clicks en el conflict sheet
-        setTimeout(()=>openConflictSheet(title, screen, realConflict), 150);
+        openConflictSheet(title, screen, realConflict);
         return 'conflict'; // caller NO debe cerrar la ficha — conflict sheet necesita el DOM
       }
       savedAgenda.schedule.push({...screen,_title:title});
@@ -8297,9 +8284,8 @@ function addSuggestion(title,day,time){
     activeMiPlanDay=jumpIdx;
     miPlanViewStart=Math.max(0,Math.min(jumpIdx,DAY_KEYS.length-2));
   }
-  // 5. Re-render + forzar composite WebKit
+  // 5. Re-render
   renderAgenda();
-  requestAnimationFrame(()=>window.dispatchEvent(new Event('scroll')));
   return 'added'; // caller puede cerrar la ficha
 }
 function closeSearch(){setTimeout(()=>{const r=document.getElementById('ag-search-results');if(r) r.classList.remove('open');},200);}
@@ -8748,8 +8734,6 @@ function computeScenarios(titles){
     return{title:t,screens,priority:isPrio,score:sc};
   }).filter(g=>g.screens.length>0);
   if(!baseGroups.length) return[];
-  // Solo títulos con funciones futuras pueden aparecer en excluded
-  const eligibleTitles=new Set(baseGroups.map(g=>g.title));
 
   // Aplicar Mejora 2: ordenar las funciones de cada película por estrategia
   baseGroups.forEach(g=>{
@@ -8886,7 +8870,7 @@ function computeScenarios(titles){
     const included=new Set(sc.map(s=>s._title));
     return{
       schedule:sc,
-      excluded:pending.filter(t=>eligibleTitles.has(t)&&!included.has(t)),
+      excluded:pending.filter(t=>!included.has(t)),
       incompatiblePriorities,
       trueMax,
       maxWithPriorities,
@@ -10155,7 +10139,7 @@ function _renderSavedAgendaHTML(){
             ${f._travelWarn?`<div class="suggestion-travel-warn">${f._travelWarn}</div>`:''}
             ${f.gapCtx?`<div style="font-size:var(--t-xs);color:var(--gray);margin-top:2px;font-style:italic">${f.gapCtx.length>35?f.gapCtx.slice(0,33)+'…':f.gapCtx}</div>`:''}
           </div>
-          <button class="suggestion-add" onclick="event.stopPropagation();(function(btn){btn.disabled=true;btn.style.opacity='.5';const r=addSuggestion('${f.title.replace(/'/g,"\\'")}','${f.day}','${f.time}');if(r!=='conflict'){renderAgenda();}else{btn.disabled=false;btn.style.opacity='1';}})(this)" style="${f._isRestored?'border-color:var(--orange);color:var(--orange);background:var(--amber-10)':''}">
+          <button class="suggestion-add" onclick="event.stopPropagation();addSuggestion('${f.title.replace(/'/g,"\\'")}','${f.day}','${f.time}')" style="${f._isRestored?'border-color:var(--orange);color:var(--orange);background:var(--amber-10)':''}">
             ${f._isRestored?`${ICONS.undo} Restaurar`:`${ICONS.plus} Añadir`}
           </button>
         </div>`;
@@ -10685,7 +10669,7 @@ function showToast(msg,type='info',duration=2800){
   let t=document.getElementById('prio-toast');
   if(!t){t=document.createElement('div');t.id='prio-toast';document.body.appendChild(t);}
   t.className='prio-toast '+type;t.innerHTML=msg;t.style.opacity='1';t.style.pointerEvents='none';
-  clearTimeout(t._to);t._to=setTimeout(()=>{t.style.opacity='0';t.style.transform='translateX(-50%) translateY(8px)';},duration);
+  clearTimeout(t._to);t._to=setTimeout(()=>{t.style.opacity='0';},duration);
 }
 let _toastActionFn=null;
 function showActionToast(msg,actionLabel,actionFn,duration=4000){
@@ -10890,11 +10874,8 @@ function confirmConflictReplace(){
   }
 
   // Usuario eligió la incoming — reemplazar existente
-  // Guard: no duplicar si incomingTitle ya está en el schedule
-  savedAgenda.schedule=savedAgenda.schedule.filter(s=>!(s._title===existingEntry._title&&s.day===existingEntry.day&&s.time===existingEntry.time)||(s._title===incomingTitle));
-  if(!savedAgenda.schedule.some(s=>s._title===incomingTitle)){
-    savedAgenda.schedule.push({...incomingScreen,_title:incomingTitle});
-  }
+  savedAgenda.schedule=savedAgenda.schedule.filter(s=>!(s._title===existingEntry._title&&s.day===existingEntry.day&&s.time===existingEntry.time));
+  savedAgenda.schedule.push({...incomingScreen,_title:incomingTitle});
   savedAgenda.schedule.sort((a,b)=>a.day_order!==b.day_order?a.day_order-b.day_order:toMin(a.time)-toMin(b.time));
   saveSavedAgenda();
   const{displayTitle:dt}=parseProgramTitle(incomingTitle);
@@ -11844,7 +11825,7 @@ function openPelSheet(title){
       <span class="pelicula-day">${dayAbb}</span>
       <span class="pelicula-time">${s.time}</span>
       <span class="pelicula-venue" data-venue="${vc.short.replace(/"/g,'&quot;')}" onclick="filterByVenue(this.dataset.venue)">${ICONS.pin} ${vc.short}${sl?' · '+sl:''}  <span style="opacity:.4;font-size:var(--t-xs)">›</span></span>
-      ${_showAdd?`<button class="pel-sheet-add-plan" onclick="event.stopPropagation();(function(){const _d='${safeDay}',_t='${s.time}',_vc='${vc.short.replace(/'/g,"\\'")}';showActionModal('Añadir a mi plan',\`<b>${displayTitle.length>32?displayTitle.slice(0,30)+'…':displayTitle}</b><br><br>\${_d} · \${_t} · \${_vc}\`,'Añadir',()=>{const r=addSuggestion('${safeT}',_d,_t);if(r==='added')closePelSheet();});})()" title="Añadir a mi plan">${ICONS.plus}</button>`:''}
+      ${_showAdd?`<button class="pel-sheet-add-plan" onclick="event.stopPropagation();if(addSuggestion('${safeT}','${safeDay}','${s.time}')==='added')closePelSheet()" title="Añadir a mi plan">${ICONS.plus}</button>`:''}
     </div>`;
   }).join('');
   // Lista de cortos si es programa
@@ -11909,10 +11890,10 @@ function openPelSheet(title){
     <div class="pel-sheet-section-lbl">${f.type==='event'?'descripción':'sinopsis'}</div>
     <div class="pel-sheet-synopsis">${f.synopsis||'Sinopsis disponible próximamente.'}</div>
     ${cortosHtml}
-    ${(!f.is_cortos&&f.type!=='event')?`<a class="c-lb pel-sheet-lb" href="${f.lb_slug?'https://letterboxd.com/film/'+f.lb_slug+'/':lbUrl(f.title)}" target="_blank" rel="noopener">${LB_SVG}<span class="c-lb-text pel-sheet-lb-text">Letterboxd</span></a>`:''}
+    ${(!f.is_cortos&&f.type!=='event')?`<a class="c-lb pel-sheet-lb" href="${lbUrl(f.title)}" target="_blank" rel="noopener">${LB_SVG}<span class="c-lb-text pel-sheet-lb-text">Letterboxd</span></a>`:''}
     <div class="pel-sheet-divider"></div>
     ${inW?`<div class="pel-sheet-ctas-watched">
-        <button onclick="toggleWatched('${safeT}',event)" class="pel-sheet-action-btn act-on">${ICONS.check} Ya vista</button>
+        <button onclick="toggleWatched('${safeT}',event);closePelSheet()" class="pel-sheet-action-btn act-on">${ICONS.check} Ya vista</button>
         ${!f.is_cortos?`<button onclick="closePelSheet();setTimeout(()=>openRatingSheet('${safeT}'),100)" class="pel-sheet-action-btn">${ICONS.star} ${filmRatings['${safeT}']?'Cambiar':'Calificar'}</button>`:``}
       </div>`
     :`<div class="pel-sheet-ctas">
@@ -12510,8 +12491,11 @@ function _renderExploreLista(){
   if(activeVenue!=='all'){
     entries=entries.filter(e=>e.screenings.some(s=>vcfg(s.venue).short===activeVenue));
   }
-  // Sort: siempre cronológico (day_order → time). La categoría NUNCA rompe el orden horario.
+  // Sort: Movies → Cortos → Industry (category), within each: day_order → time
+  const _typeOrder=f=>f.type==='event'?2:f.is_cortos?1:0;
   entries.sort((a,b)=>{
+    const to=_typeOrder(a.film)-_typeOrder(b.film);
+    if(to!==0) return to;
     const do_diff=(a.film.day_order||0)-(b.film.day_order||0);
     if(do_diff!==0) return do_diff;
     return (a.film.time||'').localeCompare(b.film.time||'');
@@ -12592,8 +12576,12 @@ function renderPeliculaView(){
   }
 
   // Sort: Movies → Cortos → Industry (category order)
-  // Sort: siempre cronológico (day_order → time). La categoría NUNCA rompe el orden horario.
+  // Within each category: chronological (day_order → time)
+  const _typeOrd2=f=>f.type==='event'?2:f.is_cortos?1:0;
   entries.sort((a,b)=>{
+    const to=_typeOrd2(a.film)-_typeOrd2(b.film);
+    if(to!==0) return to;
+    // Within same category: chronological
     const do_diff=(a.film.day_order||0)-(b.film.day_order||0);
     if(do_diff!==0) return do_diff;
     return (a.film.time||'').localeCompare(b.film.time||'');
@@ -12767,11 +12755,9 @@ async function loadFestival(id){
         });
       }
       cfg.films=exploded;
-  // Merge lbSlugs from JSON into config
-  const _jsonLbSlugs=data.lbSlugs||{};
-  cfg.lbSlugs={...(FESTIVAL_CONFIG[id]?.lbSlugs||{}),..._jsonLbSlugs};
-  cfg.posters=data.posters||{};
-  cfg.customPosters=data.customPosters||{};
+      cfg.posters=data.posters||{};
+      cfg.customPosters=data.customPosters||{};
+      cfg.lbSlugs=data.lbSlugs||{};
     }catch(e){
       console.error('Error cargando festival '+id+':',e);
       return;
@@ -12782,31 +12768,6 @@ async function loadFestival(id){
   FILMS=cfg.films;
   POSTERS=cfg.posters;
   LB_SLUGS=cfg.lbSlugs||{};
-
-  // Fetch posters desde TMDB para películas con tmdb_id
-  // Secuencial con async/await — sin race conditions
-  const _tmdbPending=(cfg.films||[]).filter(f=>f.tmdb_id&&!POSTERS[f.title]&&!f.is_cortos);
-  if(_tmdbPending.length){
-    (async()=>{
-      for(const f of _tmdbPending){
-        if(f._tmdbFetched) continue;
-        f._tmdbFetched=true;
-        try{
-          const r=await fetch(`https://api.themoviedb.org/3/movie/${f.tmdb_id}?api_key=38f24e78b2f13970af3430eb0732f0ac`);
-          if(!r.ok) continue;
-          const d=await r.json();
-          if(d.poster_path){
-            const url=`https://image.tmdb.org/t/p/w185${d.poster_path}`;
-            // Escribir SOLO bajo el título exacto de este film
-            const key=normKey(f.title);
-            POSTERS[f.title]=url;
-            _POSTERS_N[key]=d.poster_path;
-          }
-        }catch(e){}
-      }
-      _renderProgramaContent();
-    })();
-  }
   FESTIVAL_DATES=cfg.festivalDates;
   FESTIVAL_END=new Date(cfg.festivalEndStr);
   FESTIVAL_STORAGE_KEY=cfg.storageKey;
@@ -13089,10 +13050,31 @@ window.addEventListener('resize',function(){requestAnimationFrame(_fixStickyOffs
 </script>
 <script>
 if('serviceWorker' in navigator){
-  navigator.serviceWorker.register('/sw.js').catch(function(){});
+  navigator.serviceWorker.register('/sw.js').then(reg => {
+    // Forzar activación inmediata si hay SW en espera
+    if(reg.waiting) reg.waiting.postMessage({type:'SKIP_WAITING'});
+    // Chequear actualización al volver al foco — crítico para iOS PWA
+    document.addEventListener('visibilitychange', () => {
+      if(document.visibilityState === 'visible') {
+        reg.update().then(() => {
+          if(reg.waiting) reg.waiting.postMessage({type:'SKIP_WAITING'});
+        });
+      }
+    });
+    reg.addEventListener('updatefound', () => {
+      const newSW = reg.installing;
+      if(!newSW) return;
+      newSW.addEventListener('statechange', () => {
+        if(newSW.state === 'installed') {
+          newSW.postMessage({type:'SKIP_WAITING'});
+        }
+      });
+    });
+  }).catch(function(){});
   navigator.serviceWorker.addEventListener('message', e => {
-    if(e.data && e.data.type==='SW_UPDATED') location.reload();
+    if(e.data && e.data.type==='SW_UPDATED') setTimeout(()=>location.reload(),100);
   });
+  navigator.serviceWorker.addEventListener('controllerchange', () => location.reload());
 }
 </script>
 

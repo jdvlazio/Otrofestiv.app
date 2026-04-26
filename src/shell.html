@@ -350,10 +350,31 @@
 <script>/* __SCRIPTS__ */</script>
 <script>
 if('serviceWorker' in navigator){
-  navigator.serviceWorker.register('/sw.js').catch(function(){});
+  navigator.serviceWorker.register('/sw.js').then(reg => {
+    // Forzar activación inmediata si hay SW en espera
+    if(reg.waiting) reg.waiting.postMessage({type:'SKIP_WAITING'});
+    // Chequear actualización al volver al foco — crítico para iOS PWA
+    document.addEventListener('visibilitychange', () => {
+      if(document.visibilityState === 'visible') {
+        reg.update().then(() => {
+          if(reg.waiting) reg.waiting.postMessage({type:'SKIP_WAITING'});
+        });
+      }
+    });
+    reg.addEventListener('updatefound', () => {
+      const newSW = reg.installing;
+      if(!newSW) return;
+      newSW.addEventListener('statechange', () => {
+        if(newSW.state === 'installed') {
+          newSW.postMessage({type:'SKIP_WAITING'});
+        }
+      });
+    });
+  }).catch(function(){});
   navigator.serviceWorker.addEventListener('message', e => {
-    if(e.data && e.data.type==='SW_UPDATED') location.reload();
+    if(e.data && e.data.type==='SW_UPDATED') setTimeout(()=>location.reload(),100);
   });
+  navigator.serviceWorker.addEventListener('controllerchange', () => location.reload());
 }
 </script>
 

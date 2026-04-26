@@ -897,7 +897,7 @@ function _renderSavedAgendaHTML(){
             ${f._travelWarn?`<div class="suggestion-travel-warn">${f._travelWarn}</div>`:''}
             ${f.gapCtx?`<div style="font-size:var(--t-xs);color:var(--gray);margin-top:2px;font-style:italic">${f.gapCtx.length>35?f.gapCtx.slice(0,33)+'…':f.gapCtx}</div>`:''}
           </div>
-          <button class="suggestion-add" onclick="event.stopPropagation();(function(btn){btn.disabled=true;btn.style.opacity='.5';const r=addSuggestion('${f.title.replace(/'/g,"\\'")}','${f.day}','${f.time}');if(r!=='conflict'){renderAgenda();}else{btn.disabled=false;btn.style.opacity='1';}})(this)" style="${f._isRestored?'border-color:var(--orange);color:var(--orange);background:var(--amber-10)':''}">
+          <button class="suggestion-add" onclick="event.stopPropagation();addSuggestion('${f.title.replace(/'/g,"\\'")}','${f.day}','${f.time}')" style="${f._isRestored?'border-color:var(--orange);color:var(--orange);background:var(--amber-10)':''}">
             ${f._isRestored?`${ICONS.undo} Restaurar`:`${ICONS.plus} Añadir`}
           </button>
         </div>`;

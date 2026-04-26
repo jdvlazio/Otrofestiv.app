@@ -80,11 +80,9 @@ async function loadFestival(id){
         });
       }
       cfg.films=exploded;
-  // Merge lbSlugs from JSON into config
-  const _jsonLbSlugs=data.lbSlugs||{};
-  cfg.lbSlugs={...(FESTIVAL_CONFIG[id]?.lbSlugs||{}),..._jsonLbSlugs};
-  cfg.posters=data.posters||{};
-  cfg.customPosters=data.customPosters||{};
+      cfg.posters=data.posters||{};
+      cfg.customPosters=data.customPosters||{};
+      cfg.lbSlugs=data.lbSlugs||{};
     }catch(e){
       console.error('Error cargando festival '+id+':',e);
       return;
@@ -95,31 +93,6 @@ async function loadFestival(id){
   FILMS=cfg.films;
   POSTERS=cfg.posters;
   LB_SLUGS=cfg.lbSlugs||{};
-
-  // Fetch posters desde TMDB para películas con tmdb_id
-  // Secuencial con async/await — sin race conditions
-  const _tmdbPending=(cfg.films||[]).filter(f=>f.tmdb_id&&!POSTERS[f.title]&&!f.is_cortos);
-  if(_tmdbPending.length){
-    (async()=>{
-      for(const f of _tmdbPending){
-        if(f._tmdbFetched) continue;
-        f._tmdbFetched=true;
-        try{
-          const r=await fetch(`https://api.themoviedb.org/3/movie/${f.tmdb_id}?api_key=38f24e78b2f13970af3430eb0732f0ac`);
-          if(!r.ok) continue;
-          const d=await r.json();
-          if(d.poster_path){
-            const url=`https://image.tmdb.org/t/p/w185${d.poster_path}`;
-            // Escribir SOLO bajo el título exacto de este film
-            const key=normKey(f.title);
-            POSTERS[f.title]=url;
-            _POSTERS_N[key]=d.poster_path;
-          }
-        }catch(e){}
-      }
-      _renderProgramaContent();
-    })();
-  }
   FESTIVAL_DATES=cfg.festivalDates;
   FESTIVAL_END=new Date(cfg.festivalEndStr);
   FESTIVAL_STORAGE_KEY=cfg.storageKey;

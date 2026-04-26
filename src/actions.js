@@ -70,15 +70,9 @@ function toggleWatched(title,e){
         cachedResult=null;
         if(activeView==='agenda') renderAgenda();
         if(activeMNav==='mnav-miplan') renderAgenda();
-        requestAnimationFrame(()=>window.dispatchEvent(new Event('scroll')));
         showToast('Movida a Ya vistas','info');
         // Los programas de cortos no tienen calificación general
-        if(!FILMS.find(fi=>fi.title===title)?.is_cortos){
-          closePelSheet();
-          setTimeout(()=>openRatingSheet(title),350);
-        } else {
-          closePelSheet();
-        }
+        if(!FILMS.find(fi=>fi.title===title)?.is_cortos) setTimeout(()=>openRatingSheet(title),350);
       }
     );
   }
@@ -164,9 +158,7 @@ function removeFromAgenda(title){
     _ctaRemovedVisible=true;
     if(_ctaRemovedTimer) clearTimeout(_ctaRemovedTimer);
     _ctaRemovedTimer=setTimeout(()=>{_ctaRemovedVisible=false;renderAgenda();},6000);
-    renderAgenda();
-    requestAnimationFrame(()=>window.dispatchEvent(new Event('scroll')));
-    showToast('Quitada de Mi Plan','info');
+    renderAgenda();showToast('Quitada de Mi Plan','info');
   });
 }
 function addSuggestion(title,day,time){
@@ -180,9 +172,7 @@ function addSuggestion(title,day,time){
     if(!savedAgenda.schedule.some(s=>s._title===title)){
       const realConflict=savedAgenda.schedule.find(s=>s.day===day&&screensConflict(s,screen));
       if(realConflict){
-        // Delay para que el action modal se cierre antes de abrir el conflict sheet
-        // Evita que el modal interceda clicks en el conflict sheet
-        setTimeout(()=>openConflictSheet(title, screen, realConflict), 150);
+        openConflictSheet(title, screen, realConflict);
         return 'conflict'; // caller NO debe cerrar la ficha — conflict sheet necesita el DOM
       }
       savedAgenda.schedule.push({...screen,_title:title});
@@ -203,9 +193,8 @@ function addSuggestion(title,day,time){
     activeMiPlanDay=jumpIdx;
     miPlanViewStart=Math.max(0,Math.min(jumpIdx,DAY_KEYS.length-2));
   }
-  // 5. Re-render + forzar composite WebKit
+  // 5. Re-render
   renderAgenda();
-  requestAnimationFrame(()=>window.dispatchEvent(new Event('scroll')));
   return 'added'; // caller puede cerrar la ficha
 }
 function closeSearch(){setTimeout(()=>{const r=document.getElementById('ag-search-results');if(r) r.classList.remove('open');},200);}

@@ -291,7 +291,7 @@ function openPelSheet(title){
       <span class="pelicula-day">${dayAbb}</span>
       <span class="pelicula-time">${s.time}</span>
       <span class="pelicula-venue" data-venue="${vc.short.replace(/"/g,'&quot;')}" onclick="filterByVenue(this.dataset.venue)">${ICONS.pin} ${vc.short}${sl?' · '+sl:''}  <span style="opacity:.4;font-size:var(--t-xs)">›</span></span>
-      ${_showAdd?`<button class="pel-sheet-add-plan" onclick="event.stopPropagation();(function(){const _d='${safeDay}',_t='${s.time}',_vc='${vc.short.replace(/'/g,"\\'")}';showActionModal('Añadir a mi plan',\`<b>${displayTitle.length>32?displayTitle.slice(0,30)+'…':displayTitle}</b><br><br>\${_d} · \${_t} · \${_vc}\`,'Añadir',()=>{const r=addSuggestion('${safeT}',_d,_t);if(r==='added')closePelSheet();});})()" title="Añadir a mi plan">${ICONS.plus}</button>`:''}
+      ${_showAdd?`<button class="pel-sheet-add-plan" onclick="event.stopPropagation();if(addSuggestion('${safeT}','${safeDay}','${s.time}')==='added')closePelSheet()" title="Añadir a mi plan">${ICONS.plus}</button>`:''}
     </div>`;
   }).join('');
   // Lista de cortos si es programa
@@ -356,10 +356,10 @@ function openPelSheet(title){
     <div class="pel-sheet-section-lbl">${f.type==='event'?'descripción':'sinopsis'}</div>
     <div class="pel-sheet-synopsis">${f.synopsis||'Sinopsis disponible próximamente.'}</div>
     ${cortosHtml}
-    ${(!f.is_cortos&&f.type!=='event')?`<a class="c-lb pel-sheet-lb" href="${f.lb_slug?'https://letterboxd.com/film/'+f.lb_slug+'/':lbUrl(f.title)}" target="_blank" rel="noopener">${LB_SVG}<span class="c-lb-text pel-sheet-lb-text">Letterboxd</span></a>`:''}
+    ${(!f.is_cortos&&f.type!=='event')?`<a class="c-lb pel-sheet-lb" href="${lbUrl(f.title)}" target="_blank" rel="noopener">${LB_SVG}<span class="c-lb-text pel-sheet-lb-text">Letterboxd</span></a>`:''}
     <div class="pel-sheet-divider"></div>
     ${inW?`<div class="pel-sheet-ctas-watched">
-        <button onclick="toggleWatched('${safeT}',event)" class="pel-sheet-action-btn act-on">${ICONS.check} Ya vista</button>
+        <button onclick="toggleWatched('${safeT}',event);closePelSheet()" class="pel-sheet-action-btn act-on">${ICONS.check} Ya vista</button>
         ${!f.is_cortos?`<button onclick="closePelSheet();setTimeout(()=>openRatingSheet('${safeT}'),100)" class="pel-sheet-action-btn">${ICONS.star} ${filmRatings['${safeT}']?'Cambiar':'Calificar'}</button>`:``}
       </div>`
     :`<div class="pel-sheet-ctas">

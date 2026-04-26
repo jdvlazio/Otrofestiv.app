@@ -138,10 +138,11 @@ let POSTERS_AFF={};
 // date: 'YYYY-MM-DD' de la función original — el banner desaparece al día siguiente
 // Para 'rescheduled': añadir newDay, newTime, newVenue
 const NOTICES=[
-  {title:'La misteriosa mirada del flamenco',festival:'aff2026',type:'rescheduled',date:'2026-04-24',newDay:'VIE 24',newTime:'19:00',newVenue:'Cineprox Las Américas'},
-  {title:'Rayas de tigre',festival:'aff2026',type:'rescheduled',date:'2026-04-25',newDay:'SÁB 25',newTime:'16:00',newVenue:'Cineprox Las Américas'},
-  {title:'Un mundo frágil y maravilloso',festival:'aff2026',type:'rescheduled',date:'2026-04-26',newDay:'DOM 26',newTime:'13:30',newVenue:'Cineprox Las Américas'},
-  {title:'Hacia casa',festival:'aff2026',type:'rescheduled',date:'2026-04-26',newDay:'DOM 26',newTime:'17:00',newVenue:'Cineprox Las Américas'},
+  {title:'Un mundo frágil y maravilloso',festival:'aff2026',type:'cancelled',date:'2026-04-23'},
+  {title:'La misteriosa mirada del flamenco',festival:'aff2026',type:'rescheduled',date:'2026-04-24',newVenue:'Cineprox Las Américas'},
+  {title:'Rayas de tigre',festival:'aff2026',type:'rescheduled',date:'2026-04-25',newVenue:'Cineprox Las Américas'},
+  {title:'Un mundo frágil y maravilloso',festival:'aff2026',type:'rescheduled',date:'2026-04-26',newVenue:'Cineprox Las Américas'},
+  {title:'Confinados',festival:'aff2026',type:'rescheduled',date:'2026-04-26',newVenue:'Cineprox Las Américas'},
 ];
 
 const FESTIVAL_CONFIG={
@@ -165,11 +166,7 @@ const FESTIVAL_CONFIG={
     dayKeys:['MAR 21','MIÉ 22','JUE 23','VIE 24','SÁB 25','DOM 26','LUN 27','MAR 28','MIÉ 29','JUE 30'],
     dayShort:{'MAR 21':'MAR 21','MIÉ 22':'MIÉ 22','JUE 23':'JUE 23','VIE 24':'VIE 24','SÁB 25':'SÁB 25','DOM 26':'DOM 26','LUN 27':'LUN 27','MAR 28':'MAR 28','MIÉ 29':'MIÉ 29','JUE 30':'JUE 30'},
     dayLong:{'MAR 21':'Martes 21','MIÉ 22':'Miércoles 22','JUE 23':'Jueves 23','VIE 24':'Viernes 24','SÁB 25':'Sábado 25','DOM 26':'Domingo 26','LUN 27':'Lunes 27','MAR 28':'Martes 28','MIÉ 29':'Miércoles 29','JUE 30':'Jueves 30'},
-    films:null,posters:null,
-    lbSlugs:{
-      'Homebound':'homebound-2025',
-      'Un mundo frágil y maravilloso':'a-sad-and-beautiful-world'
-    }
+    films:null,posters:null,lbSlugs:null
   }
 };// Festival data loaded async from festivals/<id>.json via loadFestival()
 

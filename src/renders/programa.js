@@ -402,8 +402,11 @@ function _renderExploreLista(){
   if(activeVenue!=='all'){
     entries=entries.filter(e=>e.screenings.some(s=>vcfg(s.venue).short===activeVenue));
   }
-  // Sort: siempre cronológico (day_order → time). La categoría NUNCA rompe el orden horario.
+  // Sort: Movies → Cortos → Industry (category), within each: day_order → time
+  const _typeOrder=f=>f.type==='event'?2:f.is_cortos?1:0;
   entries.sort((a,b)=>{
+    const to=_typeOrder(a.film)-_typeOrder(b.film);
+    if(to!==0) return to;
     const do_diff=(a.film.day_order||0)-(b.film.day_order||0);
     if(do_diff!==0) return do_diff;
     return (a.film.time||'').localeCompare(b.film.time||'');
@@ -484,8 +487,12 @@ function renderPeliculaView(){
   }
 
   // Sort: Movies → Cortos → Industry (category order)
-  // Sort: siempre cronológico (day_order → time). La categoría NUNCA rompe el orden horario.
+  // Within each category: chronological (day_order → time)
+  const _typeOrd2=f=>f.type==='event'?2:f.is_cortos?1:0;
   entries.sort((a,b)=>{
+    const to=_typeOrd2(a.film)-_typeOrd2(b.film);
+    if(to!==0) return to;
+    // Within same category: chronological
     const do_diff=(a.film.day_order||0)-(b.film.day_order||0);
     if(do_diff!==0) return do_diff;
     return (a.film.time||'').localeCompare(b.film.time||'');

@@ -37,7 +37,7 @@ function showToast(msg,type='info',duration=2800){
   let t=document.getElementById('prio-toast');
   if(!t){t=document.createElement('div');t.id='prio-toast';document.body.appendChild(t);}
   t.className='prio-toast '+type;t.innerHTML=msg;t.style.opacity='1';t.style.pointerEvents='none';
-  clearTimeout(t._to);t._to=setTimeout(()=>{t.style.opacity='0';t.style.transform='translateX(-50%) translateY(8px)';},duration);
+  clearTimeout(t._to);t._to=setTimeout(()=>{t.style.opacity='0';},duration);
 }
 let _toastActionFn=null;
 function showActionToast(msg,actionLabel,actionFn,duration=4000){
@@ -242,11 +242,8 @@ function confirmConflictReplace(){
   }
 
   // Usuario eligió la incoming — reemplazar existente
-  // Guard: no duplicar si incomingTitle ya está en el schedule
-  savedAgenda.schedule=savedAgenda.schedule.filter(s=>!(s._title===existingEntry._title&&s.day===existingEntry.day&&s.time===existingEntry.time)||(s._title===incomingTitle));
-  if(!savedAgenda.schedule.some(s=>s._title===incomingTitle)){
-    savedAgenda.schedule.push({...incomingScreen,_title:incomingTitle});
-  }
+  savedAgenda.schedule=savedAgenda.schedule.filter(s=>!(s._title===existingEntry._title&&s.day===existingEntry.day&&s.time===existingEntry.time));
+  savedAgenda.schedule.push({...incomingScreen,_title:incomingTitle});
   savedAgenda.schedule.sort((a,b)=>a.day_order!==b.day_order?a.day_order-b.day_order:toMin(a.time)-toMin(b.time));
   saveSavedAgenda();
   const{displayTitle:dt}=parseProgramTitle(incomingTitle);
