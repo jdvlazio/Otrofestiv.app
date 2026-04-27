@@ -2936,6 +2936,8 @@ function renderMiPlanCalendar(){
   // Si los días visibles están vacíos, fallback al plan completo.
   // Buffer 30min en cada extremo, snapped a hora entera.
   // Límites absolutos: nunca antes de las 9:00, nunca después de las 26:00.
+  const vs=miPlanViewStart;
+  const ve=vs+1;
   const _visDays=new Set([DAY_KEYS[vs],DAY_KEYS[ve]]);
   const _visSched=schedule.filter(s=>_visDays.has(s.day));
   const _src=_visSched.length?_visSched:schedule;
@@ -2960,8 +2962,6 @@ function renderMiPlanCalendar(){
   }).join('');
 
   // ── Navigation header ──
-  const vs=miPlanViewStart;
-  const ve=vs+1; // show days vs and ve (2 days)
   // En overview: no paginador
   const lbl1=dayLabel(DAY_KEYS[vs]); // 'MIÉ 15'
   const lbl2=dayLabel(DAY_KEYS[ve]); // 'MIÉ 15'
