@@ -3096,7 +3096,7 @@ function renderMiPlanCalendar(){
       const _mph=_mp
         ?`<img class="lb-poster" src="${_mp}" loading="lazy" style="cursor:pointer" onclick="event.stopPropagation();openPelSheet('${_safeMpT}')" onerror="this.remove()" alt="">`
         :_isEventRow
-          ?`<div style="cursor:pointer;flex-shrink:0" onclick="event.stopPropagation();openPelSheet('${_safeMpT}')">${makeEventPoster(_mf.title,_mf.duration).replace('<svg','<svg style="width:50px;height:75px;border-radius:var(--r-sm);display:block"')}</div>`
+          ?`<div style="cursor:pointer;flex-shrink:0" onclick="event.stopPropagation();openPelSheet('${_safeMpT}')">${makeEventPoster(_mf.title,_mf.duration).replace('<svg','<svg style="width:40px;height:60px;border-radius:var(--r-sm);display:block"')}</div>`
           :`<div class="lb-poster-ph" onclick="event.stopPropagation();openPelSheet('${_safeMpT}')">🎬</div>`;
       listHtml+=`<div class="mplan-row${_rowKey===_activeMiPlanFilm?' active':''}" style="cursor:pointer" data-rkey="${_safeRowKey}" onclick="selectFromDetail(this)">
         ${_mph}
@@ -5590,7 +5590,7 @@ function buildResultHTML(scenarios){
     html+=`<div class="ag-excl-block">
       <div class="ag-excl-eyebrow">
         <span class="ag-excl-label">No incluidas</span>
-        <span class="ag-excl-count">${sc.excluded.length}</span>
+        <span class="count-badge cb-neutral">${sc.excluded.length}</span>
       </div>
       <div class="ag-excl-strip">${excPosters}</div>
     </div>`;
@@ -7069,17 +7069,21 @@ function renderMiPlanList(schedule){
       ${byDay[day].map(s=>{
         const{displayTitle:dt}=parseProgramTitle(s._title||'');
         const vc=vcfg(s.venue);
-        const src=getFilmPoster(FILMS.find(fi=>fi.title===s._title&&fi.day===s.day))||'';
-        const safeT=(s._title||'').replace(/'/g,"\'");
+        const _lmf=FILMS.find(fi=>fi.title===s._title&&fi.day===s.day);
+        const src=getFilmPoster(_lmf)||'';
+        const _lIsEvent=_lmf&&_lmf.type==='event';
+        const safeT=(s._title||'').replace(/'/g,"\\'");
         const isW=watched.has(s._title);
         const isPassed=screeningPassed(s);
         return`<div class="mplan-list-item${isPassed?' past-card':''}" onclick="openPelSheet('${safeT}')">
           ${src
-            ?`<img class="mplan-list-poster" src="${src}" loading="lazy" onerror="this.style.opacity=0" alt="" style="${isPassed?'opacity:.4':''}">`
-            :`<div class="mplan-list-poster"></div>`}
+            ?`<img class="mplan-list-poster" src="${src}" loading="lazy" onerror="this.remove()" alt="" style="${isPassed?'opacity:.4':''}">`
+            :_lIsEvent
+              ?makeEventPoster(_lmf.title,_lmf.duration).replace('<svg','<svg class="mplan-list-poster" style="flex-shrink:0;display:block"')
+              :`<div class="mplan-list-poster"></div>`}
           <div class="mplan-list-info">
             <div class="mplan-list-title" style="${isPassed?'opacity:.5':''}">${dt}</div>
-            <div class="mplan-list-meta">${s.time} · ${vc.short}${FILMS.find(fi=>fi.title===s._title)?.is_cortos?' · Cortos':''}</div>
+            <div class="mplan-list-meta">${s.time} · ${vc.short}${_lmf?.is_cortos?' · Cortos':''}</div>
           </div>
           ${isW?`<div class="mplan-list-check">✓</div>`:''}
         </div>`;
