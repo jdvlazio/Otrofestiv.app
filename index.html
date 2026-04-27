@@ -38,6 +38,19 @@
 @font-face{font-family:'Plus Jakarta Sans';font-style:normal;font-weight:600;font-display:block;src:url('/fonts/plus-jakarta-sans-latin-600-normal.woff2') format('woff2')}
 @font-face{font-family:'Plus Jakarta Sans';font-style:normal;font-weight:700;font-display:block;src:url('/fonts/plus-jakarta-sans-latin-700-normal.woff2') format('woff2')}
 @font-face{font-family:'Plus Jakarta Sans';font-style:normal;font-weight:800;font-display:block;src:url('/fonts/plus-jakarta-sans-latin-800-normal.woff2') format('woff2')}
+
+/* ── No incluidas — posters en scroll horizontal ── */
+.ag-excl-item{flex-shrink:0;width:52px;cursor:pointer;-webkit-tap-highlight-color:transparent;position:relative;touch-action:manipulation}
+.ag-excl-item:active{opacity:.7}
+.ag-excl-poster{width:52px;height:78px;object-fit:cover;border-radius:var(--r-md);display:block;background:var(--surf-2)}
+.ag-excl-poster-ph{width:52px;height:78px;border-radius:var(--r-md);background:var(--surf-2)}
+.ag-excl-title{font-size:var(--t-xs);color:var(--gray2);margin-top:var(--sp-1);line-height:1.3;text-align:center;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.ag-excl-block{background:var(--surf);border:1px solid var(--bdr);border-radius:var(--r);padding:var(--sp-3) var(--sp-4) var(--sp-4);margin-bottom:var(--sp-4);overflow:hidden}
+.ag-excl-strip{display:flex;gap:var(--sp-2);overflow-x:auto;padding-bottom:var(--sp-1);scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.ag-excl-strip::-webkit-scrollbar{display:none}
+.ag-excl-eyebrow{display:flex;align-items:center;gap:var(--sp-2);margin-bottom:var(--sp-3)}
+.ag-excl-label{font-size:var(--t-label);font-weight:var(--w-bold);color:var(--gray);letter-spacing:.08em;text-transform:uppercase}
+.ag-excl-count{font-size:var(--t-xs);font-weight:var(--w-bold);color:var(--white-60);background:var(--surf-2);border:1px solid var(--bdr);border-radius:var(--r-pill);padding:1px 7px;letter-spacing:0;flex-shrink:0}
 </style>
 <style>
 
@@ -5605,18 +5618,25 @@ function buildResultHTML(scenarios){
   // Flujo: Planear = elegir base → Mi Plan = ajustar fino.
   // Escalable: no depende de lógica de swap — solo muestra qué falta.
   if(sc.excluded.length){
-    const excNames=sc.excluded.map(t=>{
-      const{displayTitle}=parseProgramTitle(t);
-      return`<span style="color:var(--gray2)">${displayTitle.length>22?displayTitle.slice(0,20)+'…':displayTitle}</span>`;
-    }).join('<span style="color:var(--gray3)"> · </span>');
-    html+=`<div class="ag-conflicts">
-      <div style="font-size:var(--t-label);font-weight:var(--w-bold);color:var(--gray2);text-transform:uppercase;letter-spacing:.08em;margin-bottom:var(--sp-2)">
-        ${sc.excluded.length} no caben en esta variación
+    const excPosters=sc.excluded.map(t=>{
+      const{displayTitle:dt}=parseProgramTitle(t);
+      const f=FILMS.find(fi=>fi.title===t);
+      const poster=f?getFilmPoster(f):null;
+      const short=dt.length>18?dt.slice(0,16)+'…':dt;
+      const safeT=t.replace(/'/g,"\'");
+      return`<div class="ag-excl-item" onclick="openPelSheet('${safeT}')">
+        ${poster
+          ?`<img class="ag-excl-poster" src="${poster}" onerror="this.outerHTML='<div class=ag-excl-poster-ph></div>'" alt="">`
+          :`<div class="ag-excl-poster-ph"></div>`}
+        <div class="ag-excl-title">${short}</div>
+      </div>`;
+    }).join('');
+    html+=`<div class="ag-excl-block">
+      <div class="ag-excl-eyebrow">
+        <span class="ag-excl-label">No incluidas</span>
+        <span class="ag-excl-count">${sc.excluded.length}</span>
       </div>
-      <div style="font-size:var(--t-sm);color:var(--gray2);line-height:1.5">${excNames}</div>
-      <div style="margin-top:var(--sp-2);font-size:var(--t-xs);color:var(--gray)">
-        Prueba otra variación o ajústalas en Mi Plan
-      </div>
+      <div class="ag-excl-strip">${excPosters}</div>
     </div>`;
   }
 
