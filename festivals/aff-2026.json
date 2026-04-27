@@ -876,14 +876,5 @@
   },
   "transport": "transit",
   "_venue_rule": "REGLA: short == nombre completo de la sede, siempre. Sin abreviaciones, sin excepciones. Si no cabe en el UI, se achica la fuente.",
-  "notices": [
-    {
-      "title": "Un mundo frágil y maravilloso",
-      "type": "rescheduled",
-      "date": "2026-04-26",
-      "newDay": "DOM 26",
-      "newTime": "13:30",
-      "newVenue": "Cineprox Las Américas"
-    }
-  ]
+  "notices": []
 }
