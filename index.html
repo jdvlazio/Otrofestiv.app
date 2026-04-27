@@ -7560,9 +7560,10 @@ function renderPeliculaView(){
   // Within each category: chronological (day_order → time)
   const _typeOrd2=f=>f.type==='event'?2:f.is_cortos?1:0;
   entries.sort((a,b)=>{
-    const to=_typeOrd2(a.film)-_typeOrd2(b.film);
-    if(to!==0) return to;
-    // Within same category: chronological
+    if(programaSubMode==='explorar'){
+      const to=_typeOrd2(a.film)-_typeOrd2(b.film);
+      if(to!==0) return to;
+    }
     const do_diff=(a.film.day_order||0)-(b.film.day_order||0);
     if(do_diff!==0) return do_diff;
     return (a.film.time||'').localeCompare(b.film.time||'');
