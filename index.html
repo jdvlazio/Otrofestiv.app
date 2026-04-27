@@ -901,7 +901,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .plan-confirm-cta{width:100%;background:var(--amber);color:var(--black);border:none;border-radius:var(--r-pill);font-family:var(--font);font-size:var(--t-base);font-weight:var(--w-display);padding:var(--sp-btn);cursor:pointer;letter-spacing:.1px}
 .rating-action-btn.skip{background:none;color:var(--gray)}
 .rating-action-btn.save{background:var(--amber-10);border:1px solid var(--amber-30);color:var(--amber)}
-.ya-vistas-stars{display:flex;align-items:center;justify-content:center;gap:1px;padding:3px 0 2px;height:16px;filter:drop-shadow(0 1px 2px rgba(0,0,0,.8))}
+.ya-vistas-stars{display:flex;align-items:center;justify-content:center;gap:1px;padding:3px 0 1px;height:14px}
 
 .pel-sheet-prio-btn{background:none;border:1px solid var(--bdr);border-radius:var(--r-pill);color:var(--gray2);font-family:var(--font);font-size:var(--t-base);font-weight:var(--w-bold);padding:var(--sp-btn) 0;cursor:pointer;width:100%;margin-top:8px;transition:all var(--tr-base)}
 .pel-sheet-prio-btn.prio-on{background:var(--amber-10);border-color:var(--amber-30);color:var(--amber)}
@@ -955,15 +955,15 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .ag-section-lbl{margin-bottom:var(--sp-2)}
 .ag-film-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--sp-2);margin-bottom:var(--sp-2)}
 .ag-film-grid.list-mode{display:flex;flex-direction:column;gap:0}
-.ag-film-item.list-mode{display:flex;flex-direction:row;align-items:center;gap:12px;border-radius:0;border-bottom:1px solid var(--bdr-l);padding:8px 0;background:none;overflow:visible;height:72px}
-.ag-film-item.list-mode .ag-fi-poster,.ag-film-item.list-mode img.ag-fi-poster{width:40px;height:60px;min-width:40px;min-height:60px;border-radius:var(--r-sm);flex-shrink:0;aspect-ratio:unset;object-fit:cover}
-.ag-film-item.list-mode .ag-fi-poster-ph{width:40px;height:60px;min-width:40px;min-height:60px;border-radius:var(--r-sm);flex-shrink:0;aspect-ratio:unset;font-size:var(--t-md)}
+.ag-film-grid.ya-vistas-grid{grid-template-columns:repeat(3,1fr)}
+.ag-film-item.list-mode{display:flex;flex-direction:row;align-items:center;gap:12px;border-radius:0;border-bottom:1px solid var(--bdr-l);padding:10px 0;background:none;overflow:visible;height:72px}
+.ag-film-item.list-mode .ag-fi-poster,.ag-film-item.list-mode img.ag-fi-poster{width:40px;height:60px;min-width:40px;border-radius:var(--r-sm);flex-shrink:0;aspect-ratio:unset;object-fit:cover}
+.ag-film-item.list-mode .ag-fi-poster-ph{width:40px;height:60px;min-width:40px;border-radius:var(--r-sm);flex-shrink:0;aspect-ratio:unset}
 .ag-film-item.list-mode .ag-fi-bottom{position:static;padding:0;background:none;flex:1;min-width:0}
 .ag-film-item.list-mode .ag-fi-title{font-size:var(--t-base);font-weight:var(--w-bold);color:var(--white);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .ag-film-item.list-mode .ag-fi-flags{font-size:var(--t-sm);color:var(--gray2);margin-bottom:2px}
 .ag-film-item.list-mode .ag-fi-overlay{display:none}
 .ag-film-item.list-mode .ag-fi-actions{display:none}
-.ag-film-grid.ya-vistas-grid{grid-template-columns:repeat(3,1fr)}
 /* Barra de modo Intereses */
 .intereses-mode-bar{display:flex;align-items:center;justify-content:space-between;padding:var(--sp-2) 0;margin-bottom:var(--sp-1)}
 .intereses-mode-title{font-size:var(--t-base);font-weight:var(--w-bold);color:var(--white-60);display:flex;align-items:center;gap:var(--sp-1)}
@@ -979,7 +979,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .ag-fi-poster-ph{width:100%;aspect-ratio:2/3;background:var(--surf-2);display:flex;align-items:center;justify-content:center;font-size:var(--t-lg);opacity:.3}
 .ag-fi-overlay{position:absolute;top:0;left:0;right:0;bottom:0;background:linear-gradient(to top,var(--overlay-75) 0%,var(--overlay-40) 40%,rgba(0,0,0,0) 58%);pointer-events:none;opacity:1;transition:opacity var(--tr-smooth)}
 .ag-fi-actions{position:absolute;top:5px;right:5px;display:flex;gap:var(--sp-1);pointer-events:all}
-.ag-fi-btn{background:var(--overlay-55);border:1px solid var(--white-15);border-radius:var(--r-pill);cursor:pointer;font-size:var(--t-sm);padding:var(--sp-1) var(--sp-2);color:var(--white-60);line-height:1;backdrop-filter:blur(4px);transition:color var(--tr-base),border-color var(--tr-base);display:inline-flex;align-items:center;justify-content:center}
+.ag-fi-btn{background:var(--overlay-55);border:1px solid var(--white-15);border-radius:var(--r-sm);cursor:pointer;font-size:var(--t-sm);padding:var(--sp-1) var(--sp-2);color:var(--white-60);line-height:1;backdrop-filter:blur(4px);transition:color var(--tr-base),border-color var(--tr-base);display:inline-flex;align-items:center;justify-content:center}
 .ag-fi-btn:hover{border-color:var(--orange);color:var(--orange)}
 .ag-fi-btn.w-on{color:var(--green);border-color:var(--green-20)}
 .ag-fi-btn.prio-fi-btn{font-size:var(--t-sm)}
@@ -4178,9 +4178,11 @@ function renderFilmListHTML(){
     </div>`;
   };
 
+  let html='';
   if(!allPending.length&&!watchedList.length){
     return emptyStateHero(ICONS.heart,'Tu lista está vacía','Tu plan para el festival, sin complicaciones.','Explorar Programa',"switchMainNav('mnav-cartelera');showDayView()");
   }
+  // Switch grid/lista para Intereses
   const _iSwitch=`<div class="intereses-view-switch" style="flex-shrink:0">
     <button class="intereses-view-btn${interesesViewMode==='grid'?' on':''}" id="ibtn-grid" onclick="setInteresesView('grid')">
       <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
@@ -4190,14 +4192,13 @@ function renderFilmListHTML(){
     </button>
   </div>`;
   const _listMode=interesesViewMode==='list';
-  let html=`<div class="intereses-mode-bar" style="border-bottom:1px solid var(--bdr-l);padding-bottom:var(--sp-2);margin-bottom:var(--sp-2)"><div class="sec-hdr" style="color:var(--white-60)">Intereses<span class="count-badge cb-neutral" style="margin-left:var(--sp-2)">${allPending.length}</span></div>${_iSwitch}</div>`;
   if(prioList.length){
-    html+=`<div class="intereses-mode-bar"><div class="sec-hdr">${ICONS.star} Prioridades <span class="count-badge cb-amber" style="margin-left:var(--sp-1)">${prioList.length}/${PRIO_LIMIT}</span></div></div>`;
+    html+=`<div class="intereses-mode-bar"><div class="sec-hdr">${ICONS.star} Prioridades <span class="count-badge cb-amber" style="margin-left:var(--sp-1)">${prioList.length}/${PRIO_LIMIT}</span></div>${_iSwitch}</div>`;
     html+=`<div class="ag-film-grid${_listMode?' list-mode':''}">${prioList.map(t=>mkItem(t,_listMode)).join('')}</div>`;
   }
   if(nonPrioList.length){
     if(prioList.length) html+=`<div class="ag-list-sep"></div>`;
-    html+=`<div class="intereses-mode-bar"><div class="sec-hdr">${ICONS.heart} Intereses <span class="count-badge cb-neutral" style="margin-left:var(--sp-1)">${nonPrioList.length}</span></div></div>`;
+    html+=`<div class="intereses-mode-bar"><div class="sec-hdr">${ICONS.heart} Intereses <span class="count-badge cb-neutral" style="margin-left:var(--sp-1)">${nonPrioList.length}</span></div>${prioList.length?'':_iSwitch}</div>`;
     html+=`<div class="ag-film-grid${_listMode?' list-mode':''}">${nonPrioList.map(t=>mkItem(t,_listMode)).join('')}</div>`;
   }
   if(!allPending.length&&!watchedList.length){
@@ -4221,7 +4222,7 @@ function renderFilmListHTML(){
       const safeTQ2=t.replace(/'/g,"\'");
       const{displayTitle}=parseProgramTitle(t);
       const _rating=f?(filmRatings[t]||0):0;
-      const _stars=_rating?`<div class="ya-vistas-stars">${starsDisplay(_rating,11)}</div><div class="ya-vistas-stars" style="visibility:hidden;height:0;padding:0"></div>`:`<div class="ya-vistas-stars" style="visibility:hidden"></div>`;
+      const _stars=_rating?`<div class="ya-vistas-stars">${starsDisplay(_rating,11)}</div>`:`<div class="ya-vistas-stars" style="visibility:hidden"></div>`;
       return`<div class="ag-film-item${festivalEnded()?'':' watched-item'}" onclick="openPelSheet('${safeTQ2}')">
         ${posterHtml}
         <div class="ag-fi-overlay"></div>
@@ -7098,8 +7099,14 @@ function renderMiPlanList(schedule){
 }
 function setInteresesView(mode){
   interesesViewMode=mode;
+  document.getElementById('ibtn-grid')?.classList.toggle('on',mode==='grid');
+  document.getElementById('ibtn-list')?.classList.toggle('on',mode==='list');
   try{const _v=JSON.parse(localStorage.getItem(`${FESTIVAL_STORAGE_KEY}viewmodes`)||'{}');_v.intereses=mode;localStorage.setItem(`${FESTIVAL_STORAGE_KEY}viewmodes`,JSON.stringify(_v));}catch(e){}
-  updateAgTab();
+  // Re-renderizar sección activa
+  const grids=document.querySelectorAll('.ag-film-grid');
+  const items=document.querySelectorAll('.ag-film-item:not(.watched-item)');
+  grids.forEach(g=>g.classList.toggle('list-mode',mode==='list'));
+  items.forEach(el=>el.classList.toggle('list-mode',mode==='list'));
 }
 
 function _getProgramaPhase(){
