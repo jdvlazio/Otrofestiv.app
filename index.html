@@ -7607,6 +7607,7 @@ function render(){
   let films=FILMS.filter(f=>f.day===activeDay);
   if(activeVenue!=='all') films=films.filter(f=>vcfg(f.venue).short===activeVenue);
   if(activeSec!=='all') films=films.filter(f=>f.section===activeSec);
+  films.sort((a,b)=>toMin(a.time)-toMin(b.time));
   const cntEl=document.getElementById('cnt');
   if(activeVenue!=='all'||activeSec!=='all'){
     cntEl.innerHTML=`<span class="count-badge cb-neutral">${films.length}</span>`;
