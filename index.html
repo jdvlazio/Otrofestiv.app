@@ -3453,7 +3453,8 @@ function addSuggestion(title,day,time){
       // usuario sepa si coincide con lo que esperaba.
       const{displayTitle:dt}=parseProgramTitle(title);
       const shortT=dt.length>20?dt.slice(0,18)+'…':dt;
-      const dayShort=DAY_KEYS.indexOf(day)>=0?['MAR','MIÉ','JUE','VIE','SÁB','DOM'][DAY_KEYS.indexOf(day)]:'';
+      const _dayShortMap=(FESTIVAL_CONFIG[_activeFestId]||{}).dayShort||{};
+      const dayShort=_dayShortMap[day]||day||'';
       showToast(`${ICONS.calendar} ${shortT} · ${dayShort} · ${time}`,'info');
     }
   }
