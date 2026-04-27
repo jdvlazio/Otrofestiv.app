@@ -4231,15 +4231,12 @@ function renderFilmListHTML(){
       const safeT=t.replace(/"/g,'&quot;');
       const safeTQ2=t.replace(/'/g,"\\'");
       const{displayTitle}=parseProgramTitle(t);
-      const _rating=f?(filmRatings[t]||0):0;
-      const _stars=`<div class="ya-vistas-stars" style="${_rating?'':' visibility:hidden'}">${_rating?starsDisplay(_rating,11):''}</div>`;
       return`<div class="ag-film-item${festivalEnded()?'':' watched-item'}" onclick="openPelSheet('${safeTQ2}')">
         ${posterHtml}
         <div class="ag-fi-overlay"></div>
-        <div style="position:absolute;bottom:0;left:0;right:0;padding:var(--sp-2);pointer-events:none">
+        <div class="ag-fi-bottom">
           <div class="ag-fi-flags">${f?f.flags||'🌐':'🌐'}</div>
           <div class="ag-fi-title">${displayTitle}</div>
-          ${_stars}
         </div>
       </div>`;
     }).join('')}</div>`;
