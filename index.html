@@ -1211,8 +1211,8 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .mplan-ld{width:10px;height:10px;border-radius:var(--r-handle);flex-shrink:0}
 
 /* Sección archivo */
-.archive-toggle{display:flex;align-items:center;justify-content:space-between;padding:var(--sp-2) var(--sp-3);background:var(--overlay-20);border-radius:var(--r-md);cursor:pointer;margin-bottom:var(--sp-2);user-select:none}#arch-arrow{display:inline-flex;transition:transform var(--tr-base);flex-shrink:0}
-.archive-toggle-lbl{font-size:var(--t-sm);color:var(--gray);font-weight:var(--w-regular)}.archive-out-lbl{font-size:var(--t-xs);font-weight:var(--w-bold);color:var(--gray2);text-transform:uppercase;letter-spacing:.5px;padding:var(--sp-3) 0 var(--sp-2);border-top:1px solid var(--bdr-l);margin-top:var(--sp-2)}
+.archive-toggle{display:flex;align-items:center;justify-content:space-between;padding:var(--sp-2) var(--sp-3);background:var(--surf);border:1px solid var(--bdr-l);border-radius:var(--r-sm);cursor:pointer;margin-bottom:var(--sp-2);user-select:none}#arch-arrow{display:inline-flex;transition:transform var(--tr-base);flex-shrink:0}
+.archive-toggle-lbl{font-size:var(--t-sm);color:var(--white-60);font-weight:var(--w-semi);display:flex;align-items:center;gap:var(--sp-2)}.archive-out-lbl{font-size:var(--t-xs);font-weight:var(--w-bold);color:var(--gray2);text-transform:uppercase;letter-spacing:.5px;padding:var(--sp-3) 0 var(--sp-2);border-top:1px solid var(--bdr-l);margin-top:var(--sp-2)}
 .archive-body{display:none}
 .archive-body.open{display:block}
 
@@ -1263,13 +1263,13 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 /* .saved-day-lbl — estilos compartidos con .suggestion-day-lbl */
 .saved-item{display:flex;align-items:center;gap:var(--sp-2);padding:var(--sp-3) 0;border-bottom:1px solid var(--bdr-l)}
 .saved-item:last-child{border-bottom:none}
-.saved-item.done{opacity:.5;border-left:2px solid var(--green-20)}
+.saved-item.done{opacity:.5}
 .saved-time{font-family:var(--font);font-size:var(--t-md);color:var(--orange);letter-spacing:.5px;flex-shrink:0;min-width:40px}
 .saved-item.done .saved-time{color:var(--gray2)}
 .saved-info{flex:1;min-width:0}
 .saved-title{font-size:var(--t-base);font-weight:var(--w-semi);color:var(--white);line-height:1.3}
 .saved-venue{font-size:var(--t-sm);color:var(--gray);margin-top:1px}
-.saved-check{background:none;border:1px solid var(--bdr);border-radius:var(--r-md);cursor:pointer;font-size:var(--t-sm);padding:var(--sp-1) var(--sp-2);color:var(--gray2);transition:color var(--tr-base),border-color var(--tr-base);flex-shrink:0;font-family:var(--font);display:inline-flex;align-items:center;gap:4px;line-height:1}
+.saved-check{background:none;border:1px solid var(--bdr);border-radius:var(--r-pill);cursor:pointer;font-size:var(--t-sm);padding:var(--sp-1) var(--sp-2);color:var(--gray2);transition:color var(--tr-base),border-color var(--tr-base);flex-shrink:0;font-family:var(--font);display:inline-flex;align-items:center;gap:4px;line-height:1}
 .saved-check.done{color:var(--green);border-color:var(--green-20)}
 .saved-check:hover{border-color:var(--bdr);color:var(--gray)}
 .saved-check.done:hover{border-color:var(--bdr);color:var(--gray2)}
@@ -2634,6 +2634,7 @@ const ICONS={
   image:    `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>`,
   search:   `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>`,
   sparkles: `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c-1 2.5-3.5 4-6 4 2.5 1 4 3.5 4 6 1-2.5 3.5-4 6-4-2.5-1-4-3.5-4-6z"/><path d="M5 3c-.5 1.5-2 2.5-3.5 2.5C3 6 4 7.5 4 9c.5-1.5 2-2.5 3.5-2.5C6 5.5 5 4 5 3z"/><path d="M19 13c-.5 1.5-2 2.5-3.5 2.5C17 16 18 17.5 18 19c.5-1.5 2-2.5 3.5-2.5C20 15.5 19 14 19 13z"/></svg>`,
+  checkCircle:`<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>`,
   pin:      `<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>`,
 };
 
@@ -5044,8 +5045,8 @@ function _renderSavedAgendaHTML(){
     const archByDay={};
     archive.forEach(s=>{if(!archByDay[s.day])archByDay[s.day]=[];archByDay[s.day].push(s);});
     html+=`<div class="archive-toggle" onclick="toggleArchive()">
-      <span class="archive-toggle-lbl">Historial (${totalWatched})</span>
-      <span id="arch-arrow">${ICONS.chevronD}</span>
+      <span class="archive-toggle-lbl">${ICONS.checkCircle} Historial</span>
+      <span style="display:flex;align-items:center;gap:var(--sp-2)"><span class="count-badge cb-neutral">${totalWatched}</span><span id="arch-arrow">${ICONS.chevronD}</span></span>
     </div>
     <div class="archive-body${archiveOpen?' open':''}" id="archive-body">
       ${archive.length?DAY_KEYS.filter(d=>archByDay[d]).map(day=>`
