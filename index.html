@@ -1091,10 +1091,11 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .saved-agenda-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:var(--sp-3)}
 .saved-agenda-clear{background:none;border:none;cursor:pointer;color:var(--gray2);font-size:var(--t-xs);font-weight:var(--w-semi);font-family:var(--font);padding:4px 2px;display:inline-flex;align-items:center;gap:4px;transition:color var(--tr-base)}
 .saved-agenda-clear:hover{color:var(--gray)}
-.mplan-act-row{display:flex;justify-content:space-between;align-items:center;gap:var(--sp-2);margin-top:var(--sp-2)}
+.mplan-act-row{display:flex;justify-content:center;align-items:center;gap:var(--sp-2);margin-top:var(--sp-2);flex-wrap:wrap}
 .mplan-act-btn{display:inline-flex;align-items:center;gap:5px;background:none;border:1px solid var(--bdr);border-radius:var(--r-pill);color:var(--gray2);font-size:var(--t-sm);font-weight:var(--w-semi);font-family:var(--font);padding:5px var(--sp-3);cursor:pointer;transition:color var(--tr-base),border-color var(--tr-base);white-space:nowrap}
 .mplan-act-btn:hover{color:var(--white);border-color:var(--gray)}
 .mplan-act-btn:active{opacity:.7}
+.mplan-act-btn.primary{border-color:var(--gray);color:var(--white-60)}
 
 /* Calendario semanal */
 .mplan-wrap{border:1px solid var(--bdr-l);border-radius:var(--r);overflow:hidden;margin-bottom:var(--sp-4)}
@@ -5002,10 +5003,7 @@ function _renderSavedAgendaHTML(){
   const currentDayNum=dayIdx>=0?dayIdx+1:null;
   const viewedCount=all.filter(s=>watched.has(s._title)).length;
   const progressPct=dayIdx>=0?Math.round((dayIdx/5)*100):0;
-  const _mpSwitch=`<button class="mplan-act-btn" onclick="_scrollToMplanDetail()" title="Ir al detalle del día">
-    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
-    Ver día
-  </button>`;
+  const _mpSwitch=`<button class="mplan-act-btn primary" onclick="_scrollToMplanDetail()" title="Ir al detalle del día">${ICONS.chevronD} Ver día</button>`;
   const progressBar=currentDayNum?`<div class="festival-progress" style="display:flex;align-items:center;gap:8px">
     <div style="flex:1">
       <div class="festival-progress-text"><span>Día <b>${currentDayNum}</b> de 6</span><span style="color:var(--orange)">${ICONS.check} ${viewedCount} ${viewedCount===1?'vista':'vistas'}</span></div>
