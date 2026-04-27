@@ -521,7 +521,8 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .suggestion-time{font-family:var(--font);font-size:var(--t-md);color:var(--orange);letter-spacing:.5px;flex-shrink:0;min-width:46px}
 .suggestion-info{flex:1;min-width:0}
 .suggestion-title{font-size:var(--t-base);color:var(--white);font-weight:var(--w-semi);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.suggestion-meta{font-size:var(--t-sm);color:var(--gray2);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.suggestion-meta-ico{display:flex;align-items:center;gap:var(--sp-1);font-size:var(--t-sm);color:var(--gray2);margin-top:2px}.suggestion-meta-ico svg{flex-shrink:0;opacity:.7}
+.suggestion-meta{font-size:var(--t-sm);color:var(--gray2);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.suggestion-sec{font-size:var(--t-label);color:var(--white-60);font-weight:var(--w-semi);margin-bottom:2px;letter-spacing:.2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .suggestion-add{background:none;border:1px solid var(--bdr);border-radius:var(--r-pill);color:var(--gray);font-size:var(--t-sm);padding:4px var(--sp-2);cursor:pointer;font-family:var(--font);transition:background var(--tr-base),color var(--tr-base);white-space:nowrap;flex-shrink:0;touch-action:manipulation;-webkit-tap-highlight-color:transparent;min-width:76px;text-align:center;display:inline-flex;align-items:center;justify-content:center;gap:3px}
 .suggestion-add:hover{border-color:var(--orange);color:var(--orange)}
 
@@ -2632,6 +2633,7 @@ const ICONS={
   share:    `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>`,
   image:    `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>`,
   search:   `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>`,
+  sparkles: `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c-1 2.5-3.5 4-6 4 2.5 1 4 3.5 4 6 1-2.5 3.5-4 6-4-2.5-1-4-3.5-4-6z"/><path d="M5 3c-.5 1.5-2 2.5-3.5 2.5C3 6 4 7.5 4 9c.5-1.5 2-2.5 3.5-2.5C6 5.5 5 4 5 3z"/><path d="M19 13c-.5 1.5-2 2.5-3.5 2.5C17 16 18 17.5 18 19c.5-1.5 2-2.5 3.5-2.5C20 15.5 19 14 19 13z"/></svg>`,
   pin:      `<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>`,
 };
 
@@ -5089,7 +5091,7 @@ function _renderSavedAgendaHTML(){
   const suggsByDay=getSuggestions();
   const suggDays=DAY_KEYS.filter(d=>suggsByDay[d]&&suggsByDay[d].length>0);
   html+=`<div class="suggestion-wrap">
-    <div class="sec-hdr" style="margin-bottom:8px">${ICONS.search} Sugerencias</div>`;
+    <div class="sec-hdr" style="margin-bottom:8px">${ICONS.sparkles} Sugerencias</div>`;
   if(suggDays.length){
     suggDays.forEach(day=>{
       html+=`<div class="suggestion-day-lbl">${dayChip(day)}</div>`;
@@ -5102,10 +5104,8 @@ function _renderSavedAgendaHTML(){
           <div class="suggestion-time">${f.time}</div>
           <div class="suggestion-info">
             <div class="suggestion-title">${(()=>{const{displayTitle:_dt}=parseProgramTitle(f.title);return _dt;})()}</div>
-            <div class="suggestion-meta">${f.section||''}</div>
-            <div class="suggestion-meta-ico">${ICONS.clock} ${f.duration}</div>
-            <div class="suggestion-meta-ico">${ICONS.pin} ${vc2.short}${sl?' · '+sl:''}</div>
-            ${f.gapCtx?`<div style="font-size:var(--t-xs);color:var(--gray);margin-top:2px;font-style:italic">${f.gapCtx.length>35?f.gapCtx.slice(0,33)+'…':f.gapCtx}</div>`:''}
+            <div class="suggestion-sec">${f.section||''}</div>
+            <div class="suggestion-meta">${f.duration}${vc2.short?' · '+vc2.short+(sl?' · '+sl:''):''}</div>
           </div>
           <button class="suggestion-add" onclick="event.stopPropagation();addSuggestion('${f.title.replace(/'/g,"\\'")}','${f.day}','${f.time}')" style="${f._isRestored?'border-color:var(--orange);color:var(--orange);background:var(--amber-10)':''}">
             ${f._isRestored?`${ICONS.undo} Restaurar`:`${ICONS.plus} Añadir`}
