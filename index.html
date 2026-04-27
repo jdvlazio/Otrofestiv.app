@@ -909,7 +909,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .pel-sheet-action-btn.btn-tertiary{background:none;border-color:transparent;color:var(--gray)}
 .pel-sheet-ctas{display:flex;gap:var(--sp-1);align-items:center}
 .pel-sheet-ctas-watched{display:flex;gap:8px}
-.pel-sheet-cortos-count{font-size:var(--t-sm);color:var(--orange);margin-top:2px}
+.pel-sheet-cortos-count{margin-top:2px}
 .pel-sheet-lb{display:inline-flex;align-items:center;gap:6px;margin-top:16px;opacity:.6;text-decoration:none}
 .pel-sheet-lb-text{font-size:var(--t-sm);color:var(--gray2)}
 .pel-sheet-remove-plan{width:100%;margin-top:8px;background:none;border:1px solid var(--bdr);border-radius:var(--r-pill);color:var(--gray2);font-family:var(--font);font-size:var(--t-caption);font-weight:var(--w-semi);padding:8px 0;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:var(--sp-1)}
@@ -6834,7 +6834,7 @@ function openPelSheet(title){
         <div class="pel-sheet-dur">${ICONS.clock} ${f.duration}</div>
         ${_metaLine?`<div class="pel-sheet-metaline">${_metaLine}</div>`:''}
         ${f.section?`<div class="pel-sheet-sec" data-sec="${f.section.replace(/"/g,'&quot;')}" onclick="filterBySection(this.dataset.sec)">${secLabel} <span class="pel-sheet-sec-arrow">›</span></div>`:''}
-        ${f.is_cortos&&f.film_list?.length?`<div class="pel-sheet-cortos-count">${f.film_list.length} corto${f.film_list.length!==1?'s':''}</div>`:''}
+        ${f.is_cortos&&f.film_list?.length?`<div class="pel-sheet-cortos-count"><span class="count-badge cb-neutral">${f.film_list.length}</span></div>`:''}
       </div>
     </div>
     <div class="pel-sheet-divider"></div>
