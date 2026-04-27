@@ -4223,20 +4223,20 @@ function renderFilmListHTML(){
     if(allPending.length) html+=`<div class="ag-list-sep"></div>`;
     html+=`<div class="ya-vistas-bar"><div class="ya-vistas-lbl">${ICONS.check} Ya vistas<span class="count-badge cb-neutral" style="margin-left:var(--sp-2)">${watchedList.length}</span></div></div>`;
     const _sortedW=[...watchedList].sort((a,b)=>(filmRatings[b]||0)-(filmRatings[a]||0));
-    html+=`<div class="ag-film-grid">${_sortedW.map(t=>{
+    html+=`<div class="ag-film-grid" style="grid-template-columns:repeat(3,1fr)">${_sortedW.map(t=>{
       const f=FILMS.find(fi=>fi.title===t);
       const posterSrc=f?(getFilmPoster(f)):null;
       const _yvOp=festivalEnded()?'':';opacity:.70';
       const posterHtml=posterSrc?`<img class="ag-fi-poster" src="${posterSrc}" loading="eager" style="object-fit:cover${_yvOp}" onerror="this.remove()" alt="">`:`<div class="ag-fi-poster-ph" style="opacity:${festivalEnded()?1:.70}">🎬</div>`;
       const safeT=t.replace(/"/g,'&quot;');
-      const safeTQ2=t.replace(/'/g,"\'");
+      const safeTQ2=t.replace(/'/g,"\\'");
       const{displayTitle}=parseProgramTitle(t);
       const _rating=f?(filmRatings[t]||0):0;
-      const _stars=_rating?`<div class="ya-vistas-stars">${starsDisplay(_rating,11)}</div>`:`<div class="ya-vistas-stars" style="visibility:hidden"></div>`;
+      const _stars=`<div class="ya-vistas-stars" style="${_rating?'':' visibility:hidden'}">${_rating?starsDisplay(_rating,11):''}</div>`;
       return`<div class="ag-film-item${festivalEnded()?'':' watched-item'}" onclick="openPelSheet('${safeTQ2}')">
         ${posterHtml}
         <div class="ag-fi-overlay"></div>
-        <div class="ag-fi-bottom">
+        <div style="position:absolute;bottom:0;left:0;right:0;padding:var(--sp-2);pointer-events:none">
           <div class="ag-fi-flags">${f?f.flags||'🌐':'🌐'}</div>
           <div class="ag-fi-title">${displayTitle}</div>
           ${_stars}
