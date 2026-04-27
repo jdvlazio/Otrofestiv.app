@@ -4132,7 +4132,7 @@ function renderPrioStrip(){
     </div>`;
   }).join('');
   return`<div class="prio-strip">
-    <div class="sec-hdr">${ICONS.star} Prioridades <span class="intereses-cnt">${prioritized.size}/${PRIO_LIMIT}</span></div>
+    <div class="sec-hdr">${ICONS.star} Prioridades <span class="count-badge cb-amber" style="margin-left:var(--sp-1)">${prioritized.size}/${PRIO_LIMIT}</span></div>
     <div class="prio-strip-row">${chips}</div>
   </div>`;
 }
@@ -4203,12 +4203,12 @@ function renderFilmListHTML(){
   </div>`;
   const _listMode=interesesViewMode==='list';
   if(prioList.length){
-    html+=`<div class="intereses-mode-bar"><div class="sec-hdr">${ICONS.star} Prioridades <span class="intereses-cnt">${prioList.length}/${PRIO_LIMIT}</span></div>${_iSwitch}</div>`;
+    html+=`<div class="intereses-mode-bar"><div class="sec-hdr">${ICONS.star} Prioridades <span class="count-badge cb-amber" style="margin-left:var(--sp-1)">${prioList.length}/${PRIO_LIMIT}</span></div>${_iSwitch}</div>`;
     html+=`<div class="ag-film-grid${_listMode?' list-mode':''}">${prioList.map(t=>mkItem(t,_listMode)).join('')}</div>`;
   }
   if(nonPrioList.length){
     if(prioList.length) html+=`<div class="ag-list-sep"></div>`;
-    html+=`<div class="intereses-mode-bar"><div class="sec-hdr">${ICONS.heart} Intereses <span class="intereses-cnt">${nonPrioList.length}</span></div>${prioList.length?'':_iSwitch}</div>`;
+    html+=`<div class="intereses-mode-bar"><div class="sec-hdr">${ICONS.heart} Intereses <span class="count-badge cb-neutral" style="margin-left:var(--sp-1)">${nonPrioList.length}</span></div>${prioList.length?'':_iSwitch}</div>`;
     html+=`<div class="ag-film-grid${_listMode?' list-mode':''}">${nonPrioList.map(t=>mkItem(t,_listMode)).join('')}</div>`;
   }
   if(!allPending.length&&!watchedList.length){
