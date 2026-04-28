@@ -4193,22 +4193,14 @@ function renderFilmListHTML(){
     return emptyStateHero(ICONS.heart,'Tu lista está vacía','Tu plan para el festival, sin complicaciones.','Explorar Programa',"switchMainNav('mnav-cartelera');showDayView()");
   }
   // Switch grid/lista para Intereses
-  const _iSwitch=`<div class="intereses-view-switch" style="flex-shrink:0">
-    <button class="intereses-view-btn${interesesViewMode==='grid'?' on':''}" id="ibtn-grid" onclick="setInteresesView('grid')">
-      <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
-    </button>
-    <button class="intereses-view-btn${interesesViewMode==='list'?' on':''}" id="ibtn-list" onclick="setInteresesView('list')">
-      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg>
-    </button>
-  </div>`;
   const _listMode=interesesViewMode==='list';
   if(prioList.length){
-    html+=`<div class="intereses-mode-bar"><div class="sec-hdr">${ICONS.star} Prioridades <span class="count-badge cb-amber" style="margin-left:var(--sp-1)">${prioList.length}/${PRIO_LIMIT}</span></div>${_iSwitch}</div>`;
+    html+=`<div class="intereses-mode-bar"><div class="sec-hdr">${ICONS.star} Prioridades <span class="count-badge cb-amber" style="margin-left:var(--sp-1)">${prioList.length}/${PRIO_LIMIT}</span></div></div>`;
     html+=`<div class="ag-film-grid${_listMode?' list-mode':''}">${prioList.map(t=>mkItem(t,_listMode)).join('')}</div>`;
   }
   if(nonPrioList.length){
     if(prioList.length) html+=`<div class="ag-list-sep"></div>`;
-    html+=`<div class="intereses-mode-bar"><div class="sec-hdr">${ICONS.heart} Intereses <span class="count-badge cb-neutral" style="margin-left:var(--sp-1)">${nonPrioList.length}</span></div>${prioList.length?'':_iSwitch}</div>`;
+    html+=`<div class="intereses-mode-bar"><div class="sec-hdr">${ICONS.heart} Intereses <span class="count-badge cb-neutral" style="margin-left:var(--sp-1)">${nonPrioList.length}</span></div></div>`;
     html+=`<div class="ag-film-grid${_listMode?' list-mode':''}">${nonPrioList.map(t=>mkItem(t,_listMode)).join('')}</div>`;
   }
   if(!allPending.length&&!watchedList.length){
@@ -6091,6 +6083,7 @@ function renderAgenda(){
           </div>
           <div id="ag-search-results" class="ag-search-results"></div>
         </div>
+        <div class="intereses-view-switch" style="flex-shrink:0;margin-bottom:var(--sp-2)"><button class="intereses-view-btn" id="ibtn-grid" onclick="setInteresesView('grid')"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg></button><button class="intereses-view-btn" id="ibtn-list" onclick="setInteresesView('list')"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg></button></div>
         <div id="ag-film-list">${renderFilmListHTML()}</div>
 
       </div>`;
@@ -7107,6 +7100,8 @@ function renderMiPlanList(schedule){
 function setInteresesView(mode){
   interesesViewMode=mode;
   try{const _v=JSON.parse(localStorage.getItem(`${FESTIVAL_STORAGE_KEY}viewmodes`)||'{}');_v.intereses=mode;localStorage.setItem(`${FESTIVAL_STORAGE_KEY}viewmodes`,JSON.stringify(_v));}catch(e){}
+  document.getElementById('ibtn-grid')?.classList.toggle('on',mode==='grid');
+  document.getElementById('ibtn-list')?.classList.toggle('on',mode==='list');
   const el=document.getElementById('ag-film-list');
   if(el) el.innerHTML=renderFilmListHTML();
 }
