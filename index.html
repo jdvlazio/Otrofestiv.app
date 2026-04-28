@@ -2101,7 +2101,7 @@ html.splash-skip #otrofestiv-splash{display:none}
 <div class="carta-search-wrap" id="carta-search-wrap">
   <div class="carta-search-field">
     <span class="carta-search-ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
-    <input type="text" id="carta-search-input" class="carta-search" placeholder="Buscar película…" oninput="onCartaSearch()" autocomplete="off" autocorrect="off" autocapitalize="off">
+    <input type="text" id="carta-search-input" class="carta-search" placeholder="Buscar…" oninput="onCartaSearch()" autocomplete="off" autocorrect="off" autocapitalize="off">
     <button class="carta-search-clear" id="carta-search-clear" onclick="clearCartaSearch()"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
   </div>
   <div id="carta-search-results" class="carta-search-results"></div>
@@ -2178,7 +2178,7 @@ html.splash-skip #otrofestiv-splash{display:none}
   <div class="carta-search-wrap">
     <div class="carta-search-field">
       <span class="carta-search-ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
-      <input type="text" id="ag-search-input" class="carta-search" placeholder="Buscar y añadir a Intereses…" oninput="onSearchInput()" onblur="closeSearch()" autocomplete="off" autocapitalize="off">
+      <input type="text" id="ag-search-input" class="carta-search" placeholder="Buscar…" oninput="onSearchInput()" onblur="closeSearch()" autocomplete="off" autocapitalize="off">
     </div>
     <div id="ag-search-results" class="ag-search-results"></div>
   </div>
@@ -6349,8 +6349,6 @@ function showAgView(){
   const _agH=document.getElementById('hdr-ag');
   if(_agH){
     _agH.style.display='';
-    const _inp=document.getElementById('ag-search-input');
-    if(_inp) _inp.placeholder=activeMNav==='mnav-seleccion'?'Buscar y añadir a Intereses…':'Buscar y añadir a Intereses…';
     const _tb=document.getElementById('ag-toggle-bar');
     if(_tb) _tb.style.display=activeMNav==='mnav-seleccion'?'flex':'none';
   }
