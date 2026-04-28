@@ -7816,6 +7816,8 @@ async function loadFestival(id){
         Object.assign(cfg, data.config);
         cfg.films=exploded;// preservar films ya procesados
       }
+      // Absorber venues desde raíz del JSON (AFF/FICCI los tienen hardcodeados; otros festivales los traen aquí)
+      if(data.venues) cfg.venues=data.venues;
     }catch(e){
       console.error('Error cargando festival '+id+':',e);
       return;
