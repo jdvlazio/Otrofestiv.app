@@ -622,7 +622,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .card.apertura{border-color:var(--amber-55);box-shadow:0 0 16px var(--amber-10)}
 .card.in-wl{border-color:var(--amber-40)}
 .card.in-watched{border-color:var(--green-20)}
-.card.past-card{opacity:.5}
+.card.past-card{opacity:.35}
 
 /* Card actions */
 .card-actions{position:absolute;top:9px;right:10px;display:flex;gap:var(--sp-1);z-index:4}
@@ -741,7 +741,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .poster-card img{width:100%;height:100%;object-fit:cover;display:block}
 .poster-card.in-wl{outline:2px solid var(--amber-30);outline-offset:-2px}
 .poster-card.in-watched{opacity:.45}
-.poster-card.past-card{opacity:.4}
+.poster-card.past-card{opacity:.35}
 .ag-excl-item.past-card{opacity:.35}
 .poster-card:active{opacity:.85}
 /* Overlay de hora (Por Horario) */
@@ -1157,7 +1157,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .mplan-wk-block.mp-priority{background:var(--amber-20);border-left-color:var(--orange)}
 .mplan-wk-block.mp-program{background:var(--amber-06);border-left-color:var(--amber-40)}
 .mplan-wk-block.mp-event{background:rgba(107,155,209,.08);border-left-color:rgba(107,155,209,.5)}
-.mplan-wk-block.mp-past{filter:saturate(.2);opacity:.3}
+.mplan-wk-block.mp-past{filter:saturate(.2);opacity:.35}
 .mplan-wk-block.mp-active{outline:2px solid var(--orange);outline-offset:-2px;opacity:1}
 .mplan-wk-block.mp-now{opacity:1;border-left-color:var(--green);background:var(--green-12)}
 .mplan-wk-badge{position:absolute;top:5px;right:6px;font-size:var(--t-xs);color:var(--orange);line-height:1}
@@ -1853,7 +1853,7 @@ html.splash-skip #otrofestiv-splash{display:none}
 .av-day-chips{display:flex;flex-wrap:wrap;gap:var(--sp-1);margin-bottom:20px}
 .av-day-chip{background:none;border:1px solid var(--bdr);border-radius:var(--r-pill);color:var(--gray2);font-size:var(--t-sm);font-family:var(--font);padding:5px var(--sp-3);cursor:pointer;transition:all var(--tr-base)}
 .av-day-chip.selected{background:var(--amber-10);border-color:var(--amber-30);color:var(--amber)}
-.av-day-chip.past{opacity:.3;pointer-events:none}
+.av-day-chip.past{opacity:.35;pointer-events:none}
 .av-type-row{display:flex;gap:var(--sp-2);margin-bottom:20px}
 .av-type-btn{flex:1;padding:var(--sp-2) var(--sp-3);border:1px solid var(--bdr);border-radius:var(--r-md);background:none;color:var(--gray2);font-size:var(--t-sm);font-family:var(--font);cursor:pointer;transition:all var(--tr-base)}
 .av-type-btn.selected{border-color:var(--bdr);background:var(--surf);color:var(--white)}
@@ -7119,12 +7119,12 @@ function renderMiPlanList(schedule){
         const isPassed=screeningPassed(s);
         return`<div class="mplan-list-item${isPassed?' past-card':''}" onclick="openPelSheet('${safeT}')">
           ${src
-            ?`<img class="mplan-list-poster" src="${src}" loading="lazy" onerror="this.remove()" alt="" style="${isPassed?'opacity:.4':''}">`
+            ?`<img class="mplan-list-poster" src="${src}" loading="lazy" onerror="this.remove()" alt="" style="${isPassed?'opacity:.35':''}">`
             :_lIsEvent
               ?makeEventPoster(_lmf.title,_lmf.duration).replace('<svg','<svg class="mplan-list-poster" style="flex-shrink:0;display:block"')
               :`<div class="mplan-list-poster"></div>`}
           <div class="mplan-list-info">
-            <div class="mplan-list-title" style="${isPassed?'opacity:.5':''}">${dt}</div>
+            <div class="mplan-list-title" style="${isPassed?'opacity:.35':''}">${dt}</div>
             <div class="mplan-list-meta">${s.time} · ${vc.short}${_lmf?.is_cortos?' · Cortos':''}</div>
           </div>
           ${isW?`<div class="mplan-list-check">✓</div>`:''}
