@@ -237,12 +237,22 @@ Mapa de nombre de venue → configuración de visualización:
 ```json
 "venues": {
   "Teatro Municipal": {
-    "short": "T. Municipal",
+    "short": "Teatro Municipal",
+    "city": "Jardín",
     "lat": 5.5985,
-    "lng": -75.8192
+    "lng": -75.8192,
+    "address": "Calle 7 #5-20, Jardín"
   }
 }
 ```
+
+**Regla del `short`:** debe ser reconocible sin contexto adicional.
+- Si el nombre completo ya es corto y único, usarlo completo: `"Teatro Caribe"`, `"MAMM"`, `"Planetario"`.
+- Si es largo, acortar conservando el identificador único: `"Colombo Americano"`, `"Cineprox Las Américas"`.
+- Nunca abreviaciones genéricas: `"T. Caribe"`, `"Bib. Bello"`, `"S1"` — no identifican el venue sin saber el municipio.
+- Si un edificio tiene varias salas (Sala 1, Sala 2), todas comparten el mismo `short`. El filtro de Lugar las agrupa automáticamente bajo un solo ítem con el conteo combinado.
+- Usar el nombre de marca actual: `"Cineprox"` no `"Procinal"`.
+- Verificar coordenadas con `geocode-venues.py` + revisión visual en Google Maps.
 
 ### `transport`
 String. Modo de transporte para calcular tiempo de traslado entre sedes. Valores: `"transit"`, `"walking"`, `"driving"`.
