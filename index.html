@@ -409,6 +409,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .fdr-opt:last-child{border-bottom:none}
 .fdr-opt:hover{background:var(--card-b);color:var(--white)}
 .fdr-opt.on{color:var(--orange);background:var(--amber-08)}
+.fdr-city-sep{display:block;width:100%;padding:var(--sp-1) var(--sp-4);font-size:var(--t-xs);font-weight:var(--w-bold);color:var(--gray2);letter-spacing:.07em;text-transform:uppercase;background:var(--surf-2);border-bottom:1px solid var(--bdr-l);border-top:1px solid var(--bdr-l);margin-top:2px}
 
 .fdr-cnt{color:var(--gray2);font-size:var(--t-sm);margin-left:var(--sp-1)}
 
@@ -2774,30 +2775,38 @@ const VENUE_COORDS={
   'CC Caribe Plaza':{lat:10.4071,lon:-75.5124},
 };
 function venueTravelMins(v1,v2){
-  const c1=VENUE_COORDS[v1],c2=VENUE_COORDS[v2];
+  // Data-driven: uses coords from active festival's venues JSON
+  const festVenues=(FESTIVAL_CONFIG[_activeFestId]||{}).venues||{};
+  const findCoords=v=>{
+    if(festVenues[v]) return festVenues[v];
+    // Prefix match (e.g. "CC Caribe Plaza ‒ Sala 2" → "CC Caribe Plaza")
+    const sorted=Object.keys(festVenues).sort((a,b)=>b.length-a.length);
+    const k=sorted.find(k=>v.startsWith(k)||v.includes(k));
+    return k?festVenues[k]:null;
+  };
+  const c1=findCoords(v1),c2=findCoords(v2);
   if(!c1||!c2) return 0;
-  const dlat=(c1.lat-c2.lat)*111,dlon=(c1.lon-c2.lon)*111*Math.cos(c1.lat*Math.PI/180);
+  const lat1=c1.lat,lng1=c1.lng??c1.lon,lat2=c2.lat,lng2=c2.lng??c2.lon;
+  if(!lat1||!lat2) return 0;
+  const dlat=(lat1-lat2)*111,dlon=(lng1-lng2)*111*Math.cos(lat1*Math.PI/180);
   const km=Math.sqrt(dlat*dlat+dlon*dlon);
-  if(km<0.2) return 0;           // same venue / adjacent
-  if(km<0.5) return 10;           // very close: 10 min walk
-  if(km<1.5) return 15;           // close: 15 min walk/transit
-  return Math.round(km/0.25*5);   // ~5min per 250m walking (rough)
+  if(km<0.2) return 0;
+  if(km<0.5) return 10;
+  if(km<1.5) return 15;
+  return Math.round(km/0.25*5);
 }
 function vcfg(v){
-  if(v.includes('Teatro Adolfo'))  return VENUES['Teatro Adolfo Mejía'];
-  if(v.includes('Bocagrande'))     return VENUES['Plaza Bocagrande'];
-  if(v.includes('Caribe Plaza'))   return VENUES['CC Caribe Plaza'];
-  if(/nido/i.test(v))              return VENUES['Auditorio Nido'];
-  if(v.includes('Proclamación'))   return VENUES['Plaza Proclamación'];
-  if(/unibac/i.test(v))            return VENUES['Unibac'];
-  if(/aecid/i.test(v))             return VENUES['AECID'];
-  if(v.includes('Convenciones'))   return VENUES['C. Convenciones'];
-  // AFF 2026 venues
-  if(v.includes('MAMM · Plazoleta')) return {short:'MAMM Plazoleta'};
-  if(v.includes('MAMM'))             return {short:'MAMM'};
-  if(v.includes('Colombo'))          return {short:'Colombo Americano'};
-  if(v.includes('Industry'))         return {short:'Industry Days'};
-  return VENUES['C. Convenciones'];
+  if(!v) return{short:''};
+  const festVenues=(FESTIVAL_CONFIG[_activeFestId]||{}).venues||{};
+  // 1. Exact match
+  if(festVenues[v]) return festVenues[v];
+  // 2. Prefix/include match — longest key first, case-insensitive
+  const sorted=Object.keys(festVenues).sort((a,b)=>b.length-a.length);
+  const vl=v.toLowerCase();
+  const k=sorted.find(k=>v.startsWith(k)||v.includes(k)||vl.startsWith(k.toLowerCase())||vl.includes(k.toLowerCase()));
+  if(k) return festVenues[k];
+  // 3. Final fallback — show real name, never another festival's venue
+  return{short:v};
 }
 function sala(v){const m=v.match(/Sala\s*(\d+)/)||v.match(/Sal[oó]n\s*(\d+)/i);return m?'Sala '+m[1]:'';}
 /* ── UTILS: tiempo, fecha, duración ─────────────────────────────────── */
@@ -6445,11 +6454,41 @@ function renderVbar(){
     panel.appendChild(b);
   };
   mkOpt(`Todos los lugares <span class="fdr-cnt">${dayFilms.length}</span>`,activeVenue==='all',()=>{activeVenue='all';selectedIdx=null;setHint(null);closeDropdowns();_updateProgramaActiveFilter();if(programaSubMode==='explorar')_renderProgramaContent();else render();});
-  vs.forEach(vk=>{
-    const cfg=Object.values(VENUES).find(c=>c.short===vk)||VENUES['C. Convenciones'];
-    const cnt=dayFilms.filter(f=>vcfg(f.venue).short===vk).length;
-    mkOpt(`${ICONS.pin} ${vk} <span class="fdr-cnt">${cnt}</span>`,activeVenue===vk,()=>{activeVenue=activeVenue===vk?'all':vk;selectedIdx=null;setHint(null);closeDropdowns();_updateProgramaActiveFilter();if(programaSubMode==='explorar')_renderProgramaContent();else render();});
+  // Build venue list with city grouping from active festival's venues config
+  const festVenues=(FESTIVAL_CONFIG[_activeFestId]||{}).venues||{};
+  const venueData={};
+  dayFilms.forEach(f=>{
+    const cfg=vcfg(f.venue);
+    const short=cfg.short||f.venue;
+    if(!venueData[short]) venueData[short]={city:cfg.city||'',count:0};
+    venueData[short].count++;
   });
+  // Check if multi-city festival
+  const cities=[...new Set(Object.values(venueData).map(v=>v.city).filter(Boolean))];
+  const multiCity=cities.length>1;
+  if(multiCity){
+    // Group by city, sort cities alphabetically, venues by count desc
+    const byCityObj={};
+    Object.entries(venueData).forEach(([short,d])=>{
+      const c=d.city||'Otros';
+      if(!byCityObj[c]) byCityObj[c]=[];
+      byCityObj[c].push({short,count:d.count});
+    });
+    Object.entries(byCityObj).sort(([a],[b])=>a.localeCompare(b,'es')).forEach(([city,venues])=>{
+      const sep=document.createElement('span');
+      sep.className='fdr-city-sep';
+      sep.textContent=city;
+      panel.appendChild(sep);
+      venues.sort((a,b)=>b.count-a.count).forEach(({short,count})=>{
+        mkOpt(`${ICONS.pin} ${short} <span class="fdr-cnt">${count}</span>`,activeVenue===short,()=>{activeVenue=activeVenue===short?'all':short;selectedIdx=null;setHint(null);closeDropdowns();_updateProgramaActiveFilter();if(programaSubMode==='explorar')_renderProgramaContent();else render();});
+      });
+    });
+  } else {
+    // Single city — flat list sorted by count
+    Object.entries(venueData).sort(([,a],[,b])=>b.count-a.count).forEach(([short,{count}])=>{
+      mkOpt(`${ICONS.pin} ${short} <span class="fdr-cnt">${count}</span>`,activeVenue===short,()=>{activeVenue=activeVenue===short?'all':short;selectedIdx=null;setHint(null);closeDropdowns();_updateProgramaActiveFilter();if(programaSubMode==='explorar')_renderProgramaContent();else render();});
+    });
+  }
   if(lbl) lbl.textContent=activeVenue==='all'?'Lugar':activeVenue;
   if(trigBtn) trigBtn.classList.toggle('active',activeVenue!=='all');
 }
