@@ -4201,14 +4201,17 @@ function renderFilmListHTML(){
     // En modo lista: usar plist-item (mismo CSS que Programa) en lugar de ag-film-item
     if(listMode){
       const _ps=posterSrc?`<img class="plist-poster" src="${posterSrc}" loading="eager" onerror="this.remove()" alt="">`:`<div class="plist-poster"></div>`;
-      const filmDays=FILMS.filter(fi=>fi.title===t&&!screeningPassed(fi));
-      const dayChips=[...new Set(filmDays.map(fi=>DAY_SHORT[fi.day]).filter(Boolean))].join(' · ');
+      const allFilmDays=FILMS.filter(fi=>fi.title===t);
+      const dayChips=[...new Set(allFilmDays.map(fi=>fi.day).filter(Boolean))].map(day=>{
+        const passed=FILMS.filter(fi=>fi.title===t&&fi.day===day).every(fi=>screeningPassed(fi));
+        return`<span style="${passed?'opacity:.35':''}color:var(--gray)">${DAY_SHORT[day]||day}</span>`;
+      }).join(' · ');
       return`<div class="plist-item" onclick="openPelSheet('${safeTQ}')">
         ${_ps}
         <div class="plist-info">
           <div class="plist-title">${displayTitle}${isPrio?` <span style="color:var(--orange);font-size:var(--t-xs)">${ICONS.starFill}</span>`:''}${progSuffix?` <span style="color:var(--orange);font-size:var(--t-xs);font-weight:var(--w-bold)">${progSuffix}</span>`:''}</div>
           <div class="plist-sec">${f?.section||''}</div>
-          <div class="plist-meta">${dayChips?`<span style="color:var(--gray)">${dayChips}</span> · `:''}${f?.duration||''}</div>
+          <div class="plist-meta">${dayChips?`${dayChips} · `:''}${f?.duration||''}</div>
         </div>
       </div>`;
     }
