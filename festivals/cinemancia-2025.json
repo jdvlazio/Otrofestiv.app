@@ -366,7 +366,9 @@
     "Parado mirando": "https://image.tmdb.org/t/p/w185/hQN2fEHMDJixe7sGHBvVMG5JNAQ.jpg",
     "Ensayos y errores": "https://image.tmdb.org/t/p/w185/tWWuOV3hJnJfOzwjcRGVBOZeX2m.jpg",
     "Paroles/Images/Vitez": "https://cinemanciafestival.com/wp-content/uploads/2025/08/Paroles_Images_Vitez.png",
-    "Prefacio para el Dialoguito + Tú me abrasas": "https://pics.filmaffinity.com/tu_me_abrasas-341641211-mmed.jpg"
+    "Prefacio para el Dialoguito + Tú me abrasas": "https://pics.filmaffinity.com/tu_me_abrasas-341641211-mmed.jpg",
+    "La babosa y el caracol + Molinos del tiempo": "https://pics.filmaffinity.com/la_limace_et_l_escargot-282639212-mmed.jpg",
+    "Portales + Las muchas muertes de Antonio Parreiras": "https://pics.filmaffinity.com/portales-112149060-mmed.jpg"
   },
   "customPosters": {},
   "lbSlugs": {
@@ -1596,7 +1598,9 @@
       "day_order": 6,
       "is_cortos": false,
       "film_list": [],
-      "synopsis": "Película española de Pablo García Canga presentada en la sección ¿Qué es la ficción? de Cinemancia 2025."
+      "synopsis": "Película española de Pablo García Canga presentada en la sección ¿Qué es la ficción? de Cinemancia 2025.",
+      "type": "event",
+      "event_kind": "ponencia"
     },
     {
       "title": "Las tierras del cielo",
