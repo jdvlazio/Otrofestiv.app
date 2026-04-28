@@ -7721,6 +7721,10 @@ function selectSplashFest(name,meta,festId){
 }
 
 async function loadFestival(id){
+  // Si no está en FESTIVAL_CONFIG, intentar cargar config desde JSON
+  if(!FESTIVAL_CONFIG[id]){
+    FESTIVAL_CONFIG[id]={films:null,posters:null};
+  }
   const cfg=FESTIVAL_CONFIG[id];
   if(!cfg){console.warn('Festival desconocido:',id);return;}
   // ── Fase 1: cargar datos del festival desde JSON si no están en memoria ──
@@ -7764,6 +7768,11 @@ async function loadFestival(id){
       cfg.posters=data.posters||{};
       cfg.customPosters=data.customPosters||{};
       cfg.lbSlugs=data.lbSlugs||{};
+      // Absorber config del JSON si existe — permite festivales sin config hardcodeada
+      if(data.config){
+        Object.assign(cfg, data.config);
+        cfg.films=exploded;// preservar films ya procesados
+      }
     }catch(e){
       console.error('Error cargando festival '+id+':',e);
       return;

@@ -3789,5 +3789,78 @@
     }
   },
   "transport": "mixed",
-  "_venue_rule": "REGLA: short == nombre completo de la sede, siempre. Sin abreviaciones, sin excepciones. Si no cabe en el UI, se achica la fuente."
+  "_venue_rule": "REGLA: short == nombre completo de la sede, siempre. Sin abreviaciones, sin excepciones. Si no cabe en el UI, se achica la fuente.",
+  "config": {
+    "name": "FICCI 65",
+    "shortName": "FICCI 65",
+    "city": "Cartagena",
+    "dates": "14–19 ABR",
+    "storageKey": "ficci65_",
+    "festivalEndStr": "2026-04-20T02:00:00",
+    "festivalDates": {
+      "Martes": "2026-04-14",
+      "Miércoles": "2026-04-15",
+      "Jueves": "2026-04-16",
+      "Viernes": "2026-04-17",
+      "Sábado": "2026-04-18",
+      "Domingo": "2026-04-19"
+    },
+    "days": [
+      {
+        "k": "Martes",
+        "d": 14,
+        "lbl": "MAR"
+      },
+      {
+        "k": "Miércoles",
+        "d": 15,
+        "lbl": "MIÉ"
+      },
+      {
+        "k": "Jueves",
+        "d": 16,
+        "lbl": "JUE"
+      },
+      {
+        "k": "Viernes",
+        "d": 17,
+        "lbl": "VIE"
+      },
+      {
+        "k": "Sábado",
+        "d": 18,
+        "lbl": "SÁB"
+      },
+      {
+        "k": "Domingo",
+        "d": 19,
+        "lbl": "DOM"
+      }
+    ],
+    "dayKeys": [
+      "Martes",
+      "Miércoles",
+      "Jueves",
+      "Viernes",
+      "Sábado",
+      "Domingo"
+    ],
+    "dayShort": {
+      "Martes": "MAR",
+      "Miércoles": "MIÉ",
+      "Jueves": "JUE",
+      "Viernes": "VIE",
+      "Sábado": "SÁB",
+      "Domingo": "DOM"
+    },
+    "dayLong": {
+      "Martes": "Martes",
+      "Miércoles": "Miércoles",
+      "Jueves": "Jueves",
+      "Viernes": "Viernes",
+      "Sábado": "Sábado",
+      "Domingo": "Domingo"
+    },
+    "lbSlugs": {}
+  }
 }

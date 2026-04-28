@@ -877,5 +877,117 @@
   },
   "transport": "transit",
   "_venue_rule": "REGLA: short == nombre completo de la sede, siempre. Sin abreviaciones, sin excepciones. Si no cabe en el UI, se achica la fuente.",
-  "notices": []
+  "notices": [],
+  "config": {
+    "name": "AFF 2026",
+    "shortName": "ALTERNATIVA",
+    "city": "Medellín",
+    "dates": "21–29 ABR",
+    "storageKey": "aff2026_",
+    "festivalEndStr": "2026-04-29T23:00:00",
+    "festivalDates": {
+      "MAR 21": "2026-04-21",
+      "MIÉ 22": "2026-04-22",
+      "JUE 23": "2026-04-23",
+      "VIE 24": "2026-04-24",
+      "SÁB 25": "2026-04-25",
+      "DOM 26": "2026-04-26",
+      "LUN 27": "2026-04-27",
+      "MAR 28": "2026-04-28",
+      "MIÉ 29": "2026-04-29",
+      "JUE 30": "2026-04-30"
+    },
+    "days": [
+      {
+        "k": "MAR 21",
+        "d": 21,
+        "lbl": "MAR"
+      },
+      {
+        "k": "MIÉ 22",
+        "d": 22,
+        "lbl": "MIÉ"
+      },
+      {
+        "k": "JUE 23",
+        "d": 23,
+        "lbl": "JUE"
+      },
+      {
+        "k": "VIE 24",
+        "d": 24,
+        "lbl": "VIE"
+      },
+      {
+        "k": "SÁB 25",
+        "d": 25,
+        "lbl": "SÁB"
+      },
+      {
+        "k": "DOM 26",
+        "d": 26,
+        "lbl": "DOM"
+      },
+      {
+        "k": "LUN 27",
+        "d": 27,
+        "lbl": "LUN"
+      },
+      {
+        "k": "MAR 28",
+        "d": 28,
+        "lbl": "MAR"
+      },
+      {
+        "k": "MIÉ 29",
+        "d": 29,
+        "lbl": "MIÉ"
+      },
+      {
+        "k": "JUE 30",
+        "d": 30,
+        "lbl": "JUE"
+      }
+    ],
+    "dayKeys": [
+      "MAR 21",
+      "MIÉ 22",
+      "JUE 23",
+      "VIE 24",
+      "SÁB 25",
+      "DOM 26",
+      "LUN 27",
+      "MAR 28",
+      "MIÉ 29",
+      "JUE 30"
+    ],
+    "dayShort": {
+      "MAR 21": "MAR 21",
+      "MIÉ 22": "MIÉ 22",
+      "JUE 23": "JUE 23",
+      "VIE 24": "VIE 24",
+      "SÁB 25": "SÁB 25",
+      "DOM 26": "DOM 26",
+      "LUN 27": "LUN 27",
+      "MAR 28": "MAR 28",
+      "MIÉ 29": "MIÉ 29",
+      "JUE 30": "JUE 30"
+    },
+    "dayLong": {
+      "MAR 21": "Martes 21",
+      "MIÉ 22": "Miércoles 22",
+      "JUE 23": "Jueves 23",
+      "VIE 24": "Viernes 24",
+      "SÁB 25": "Sábado 25",
+      "DOM 26": "Domingo 26",
+      "LUN 27": "Lunes 27",
+      "MAR 28": "Martes 28",
+      "MIÉ 29": "Miércoles 29",
+      "JUE 30": "Jueves 30"
+    },
+    "lbSlugs": {
+      "Un mundo frágil y maravilloso": "a-sad-and-beautiful-world",
+      "Homebound": "homebound-2025"
+    }
+  }
 }
