@@ -472,7 +472,8 @@
     "Licencia de conducción": "licencia-de-conduccion",
     "La casa grande": "main-home",
     "Transversal 30FF": "transversal-30ff",
-    "A dónde van los pájaros cuando llueve": "where-do-birds-go-when-it-rains"
+    "A dónde van los pájaros cuando llueve": "where-do-birds-go-when-it-rains",
+    "Niña Chilapa": "chilapa-girl"
   },
   "notices": [],
   "films": [
@@ -646,7 +647,7 @@
       "synopsis": "El nuevo film de Lisandro Alonso atraviesa el tiempo y el espacio entre el lejano Oeste americano y las comunidades indígenas argentinas."
     },
     {
-      "title": "Cortos: Competencia 4",
+      "title": "Programa de cortos 4",
       "title_en": "Short Films: Competition 4",
       "country": "Varios",
       "flags": "🎬",
@@ -660,10 +661,39 @@
       "day_order": 1,
       "is_cortos": true,
       "synopsis": "Cuarta sesión de la competencia internacional de cortometrajes de Cinemancia 2025.",
-      "film_list": []
+      "film_list": [
+        {
+          "title": "Kilómetro 126",
+          "director": "Felipe López Gómez",
+          "country": "Colombia",
+          "duration": "17 min",
+          "year": 2025
+        },
+        {
+          "title": "Una trabaja, la otra no",
+          "director": "Maider Fernández Iriarte",
+          "country": "España",
+          "duration": "19 min",
+          "year": 2024
+        },
+        {
+          "title": "La balandra",
+          "director": "Matías Lima",
+          "country": "Argentina",
+          "duration": "13 min",
+          "year": 2024
+        },
+        {
+          "title": "Maria Henriqueta Esteve Aqui",
+          "director": "Nuno Pimentel",
+          "country": "Portugal",
+          "duration": "13 min",
+          "year": 2025
+        }
+      ]
     },
     {
-      "title": "Cortos: Competencia 1",
+      "title": "Programa de cortos 1",
       "title_en": "Short Films: Competition 1",
       "country": "Varios",
       "flags": "🎬",
@@ -679,24 +709,31 @@
       "synopsis": "Primera sesión de la competencia internacional de cortometrajes de Cinemancia 2025.",
       "film_list": [
         {
-          "title": "A.",
-          "director": "Ramon Balcells",
-          "country": "España",
-          "duration": "10 min",
+          "title": "Orinar oro",
+          "director": "Alejandro Pérez",
+          "country": "Colombia",
+          "duration": "14 min",
           "year": 2025
         },
         {
-          "title": "A Study of Empathy",
-          "director": "Hilke Rönnfeldt",
-          "country": "Dinamarca",
-          "duration": "15 min",
-          "year": 2023
+          "title": "p u r o a n d a r",
+          "director": "Luciana Decker Orozco",
+          "country": "Bolivia",
+          "duration": "13 min",
+          "year": 2025
         },
         {
-          "title": "Buseok",
-          "director": "Park Kyujae",
-          "country": "Corea del Sur",
-          "duration": "18 min",
+          "title": "Jirapo",
+          "director": "María Rojas Arias",
+          "country": "Colombia",
+          "duration": "20 min",
+          "year": 2025
+        },
+        {
+          "title": "The Stag",
+          "director": "Chu An",
+          "country": "Taiwán",
+          "duration": "14 min",
           "year": 2024
         },
         {
@@ -705,13 +742,6 @@
           "country": "Portugal",
           "duration": "19 min",
           "year": 2023
-        },
-        {
-          "title": "Julian and the Wind",
-          "director": "Connor Jessup",
-          "country": "Canadá",
-          "duration": "15 min",
-          "year": 2024
         }
       ]
     },
@@ -870,7 +900,7 @@
       "synopsis": "Película del cineasta canadiense Olivier Godin en el foco de Cinemancia 2025."
     },
     {
-      "title": "Cortos: Competencia 1",
+      "title": "Programa de cortos 1",
       "title_en": "Short Films: Competition 1",
       "country": "Varios",
       "flags": "🎬",
@@ -886,34 +916,39 @@
       "synopsis": "Primera sesión de la competencia internacional de cortometrajes de Cinemancia 2025.",
       "film_list": [
         {
-          "title": "A.",
-          "director": "Ramon Balcells",
-          "country": "España",
-          "duration": "10 min"
+          "title": "Orinar oro",
+          "director": "Alejandro Pérez",
+          "country": "Colombia",
+          "duration": "14 min",
+          "year": 2025
         },
         {
-          "title": "A Study of Empathy",
-          "director": "Hilke Rönnfeldt",
-          "country": "Dinamarca",
-          "duration": "15 min"
+          "title": "p u r o a n d a r",
+          "director": "Luciana Decker Orozco",
+          "country": "Bolivia",
+          "duration": "13 min",
+          "year": 2025
         },
         {
-          "title": "Buseok",
-          "director": "Park Kyujae",
-          "country": "Corea del Sur",
-          "duration": "18 min"
+          "title": "Jirapo",
+          "director": "María Rojas Arias",
+          "country": "Colombia",
+          "duration": "20 min",
+          "year": 2025
+        },
+        {
+          "title": "The Stag",
+          "director": "Chu An",
+          "country": "Taiwán",
+          "duration": "14 min",
+          "year": 2024
         },
         {
           "title": "Campos belos",
           "director": "David Ferreira",
           "country": "Portugal",
-          "duration": "19 min"
-        },
-        {
-          "title": "Julian and the Wind",
-          "director": "Connor Jessup",
-          "country": "Canadá",
-          "duration": "15 min"
+          "duration": "19 min",
+          "year": 2023
         }
       ]
     },
@@ -1189,9 +1224,8 @@
       "time": "19:00",
       "venue": "Teatro Caribe",
       "day_order": 3,
-      "is_cortos": true,
-      "synopsis": "Segunda sesión de la programación de cortometrajes de la sección ¿Qué es la ficción? de Cinemancia 2025.",
-      "film_list": []
+      "is_cortos": false,
+      "synopsis": "Segunda sesión de la programación de cortometrajes de la sección ¿Qué es la ficción? de Cinemancia 2025."
     },
     {
       "title": "Cortos: Competencia Nuevas Voces 2",
@@ -1709,11 +1743,11 @@
       "synopsis": "Película austriaca en competencia central de Cinemancia 2025."
     },
     {
-      "title": "Cortos: Competencia 2",
+      "title": "Programa de cortos 2",
       "title_en": "Short Films: Competition 2",
       "country": "Varios",
       "flags": "🎬",
-      "duration": "69 min",
+      "duration": "82 min",
       "director": "Varios",
       "section": "🎞️ Competencia de cortometrajes",
       "day": "MIÉ 17",
@@ -1725,34 +1759,39 @@
       "synopsis": "Segunda sesión de la competencia internacional de cortometrajes de Cinemancia 2025.",
       "film_list": [
         {
-          "title": "Do Caldeirao da Santa Cruz",
-          "director": "Weyna Macedo, Lucas Parente, Adeciany Castro",
-          "country": "Brasil",
-          "duration": "11 min"
+          "title": "Julian and the Wind",
+          "director": "Connor Jessup",
+          "country": "Canadá",
+          "duration": "15 min",
+          "year": 2024
         },
         {
-          "title": "Jirapo",
-          "director": "María Rojas Arias",
-          "country": "Colombia",
-          "duration": "20 min"
-        },
-        {
-          "title": "Kilómetro 126",
-          "director": "Felipe López Gómez",
-          "country": "Colombia",
-          "duration": "17 min"
-        },
-        {
-          "title": "La balandra",
-          "director": "Matías Lima",
+          "title": "Unas bolitas de mercurio",
+          "director": "Andrea Márquez",
           "country": "Argentina",
-          "duration": "13 min"
+          "duration": "9 min",
+          "year": 2025
         },
         {
-          "title": "Las entrañas saben lo que la razón no entiende",
-          "director": "Alberto Lobelle",
+          "title": "Buseok",
+          "director": "Park Kyujae",
+          "country": "Corea del Sur",
+          "duration": "18 min",
+          "year": 2024
+        },
+        {
+          "title": "A.",
+          "director": "Ramon Balcells",
           "country": "España",
-          "duration": "6 min"
+          "duration": "10 min",
+          "year": 2025
+        },
+        {
+          "title": "Niña Chilapa",
+          "director": "Juana Lotero López",
+          "country": "Colombia",
+          "duration": "17 min",
+          "year": 2025
         }
       ]
     },
@@ -1908,7 +1947,7 @@
       "synopsis": "Película colombiana en la sección ¿Qué es la ficción? de Cinemancia 2025."
     },
     {
-      "title": "Cortos: Competencia 3",
+      "title": "Programa de cortos 3",
       "title_en": "Short Films: Competition 3",
       "country": "Varios",
       "flags": "🎬",
@@ -1924,40 +1963,46 @@
       "synopsis": "Tercera sesión de la competencia internacional de cortometrajes de Cinemancia 2025.",
       "film_list": [
         {
-          "title": "Maria Henriqueta Esteve Aqui",
-          "director": "Nuno Pimentel",
-          "country": "Portugal",
-          "duration": "13 min"
+          "title": "Nemo 1",
+          "director": "Albéric Aurtenèche",
+          "country": "Canadá",
+          "duration": "12 min",
+          "year": 2024
+        },
+        {
+          "title": "Do Caldeirao da Santa Cruz",
+          "director": "Weyna Macedo, Lucas Parente, Adeciany Castro",
+          "country": "Brasil",
+          "duration": "11 min",
+          "year": 2025
         },
         {
           "title": "Montsouris",
           "director": "Guil Sela",
           "country": "Francia",
-          "duration": "14 min"
+          "duration": "14 min",
+          "year": 2024
         },
         {
-          "title": "Nemo 1",
-          "director": "Albéric Aurtenèche",
-          "country": "Canadá",
-          "duration": "12 min"
-        },
-        {
-          "title": "The Stag",
-          "director": "Chu An",
-          "country": "Taiwán",
-          "duration": "14 min"
-        },
-        {
-          "title": "Una trabaja, la otra no",
-          "director": "Maider Fernández Iriarte",
+          "title": "Las entrañas saben lo que la razón no entiende",
+          "director": "Alberto Lobelle",
           "country": "España",
-          "duration": "19 min"
+          "duration": "6 min",
+          "year": 2025
         },
         {
-          "title": "Unas bolitas de mercurio",
-          "director": "Andrea Márquez",
-          "country": "Argentina",
-          "duration": "9 min"
+          "title": "Soñar una serpiente",
+          "director": "Maria Carolina Ardila, Liliana Patricia Correa",
+          "country": "Colombia",
+          "duration": "14 min",
+          "year": 2025
+        },
+        {
+          "title": "A Study of Empathy",
+          "director": "Hilke Rönnfeldt",
+          "country": "Dinamarca",
+          "duration": "15 min",
+          "year": 2023
         }
       ]
     },
@@ -2263,16 +2308,15 @@
       "time": "21:00",
       "venue": "Colombo Sala 1",
       "day_order": 8,
-      "is_cortos": true,
-      "synopsis": "Programa de cortometrajes de la sección ¿Qué es la ficción? de Cinemancia 2025.",
-      "film_list": []
+      "is_cortos": false,
+      "synopsis": "Programa de cortometrajes de la sección ¿Qué es la ficción? de Cinemancia 2025."
     },
     {
-      "title": "Cortos: Competencia 4",
+      "title": "Programa de cortos 2",
       "title_en": "Short Films: Competition 4",
       "country": "Varios",
       "flags": "🎬",
-      "duration": "64 min",
+      "duration": "82 min",
       "director": "Varios",
       "section": "🎞️ Competencia de cortometrajes",
       "day": "VIE 19",
@@ -2282,7 +2326,43 @@
       "day_order": 8,
       "is_cortos": true,
       "synopsis": "Cuarta sesión de la competencia internacional de cortometrajes de Cinemancia 2025.",
-      "film_list": []
+      "film_list": [
+        {
+          "title": "Julian and the Wind",
+          "director": "Connor Jessup",
+          "country": "Canadá",
+          "duration": "15 min",
+          "year": 2024
+        },
+        {
+          "title": "Unas bolitas de mercurio",
+          "director": "Andrea Márquez",
+          "country": "Argentina",
+          "duration": "9 min",
+          "year": 2025
+        },
+        {
+          "title": "Buseok",
+          "director": "Park Kyujae",
+          "country": "Corea del Sur",
+          "duration": "18 min",
+          "year": 2024
+        },
+        {
+          "title": "A.",
+          "director": "Ramon Balcells",
+          "country": "España",
+          "duration": "10 min",
+          "year": 2025
+        },
+        {
+          "title": "Niña Chilapa",
+          "director": "Juana Lotero López",
+          "country": "Colombia",
+          "duration": "17 min",
+          "year": 2025
+        }
+      ]
     },
     {
       "title": "Proyecciones especiales",
@@ -2452,6 +2532,112 @@
       "is_cortos": false,
       "film_list": [],
       "synopsis": "Ignacio es un joven cineasta que quiere hacer una película, sin embargo, al encontrarse sin trabajo, su extravagante madre le propone realizar distintas tareas en la boutique familiar, ubicada en el balneario Reñaca."
+    },
+    {
+      "title": "Programa de cortos 3",
+      "title_en": "Short Films: Competition 3",
+      "country": "Varios",
+      "flags": "🎬",
+      "duration": "71 min",
+      "director": "Varios",
+      "section": "🎞️ Competencia de cortometrajes",
+      "day": "DOM 14",
+      "date": 14,
+      "time": "18:30",
+      "venue": "Auditorio Ciro Mendía Caldas",
+      "day_order": 3,
+      "is_cortos": true,
+      "synopsis": "Tercera sesión de la competencia internacional de cortometrajes de Cinemancia 2025.",
+      "film_list": [
+        {
+          "title": "Nemo 1",
+          "director": "Albéric Aurtenèche",
+          "country": "Canadá",
+          "duration": "12 min",
+          "year": 2024
+        },
+        {
+          "title": "Do Caldeirao da Santa Cruz",
+          "director": "Weyna Macedo, Lucas Parente, Adeciany Castro",
+          "country": "Brasil",
+          "duration": "11 min",
+          "year": 2025
+        },
+        {
+          "title": "Montsouris",
+          "director": "Guil Sela",
+          "country": "Francia",
+          "duration": "14 min",
+          "year": 2024
+        },
+        {
+          "title": "Las entrañas saben lo que la razón no entiende",
+          "director": "Alberto Lobelle",
+          "country": "España",
+          "duration": "6 min",
+          "year": 2025
+        },
+        {
+          "title": "Soñar una serpiente",
+          "director": "Maria Carolina Ardila, Liliana Patricia Correa",
+          "country": "Colombia",
+          "duration": "14 min",
+          "year": 2025
+        },
+        {
+          "title": "A Study of Empathy",
+          "director": "Hilke Rönnfeldt",
+          "country": "Dinamarca",
+          "duration": "15 min",
+          "year": 2023
+        }
+      ]
+    },
+    {
+      "title": "Programa de cortos 4",
+      "title_en": "Short Films: Competition 4",
+      "country": "Varios",
+      "flags": "🎬",
+      "duration": "64 min",
+      "director": "Varios",
+      "section": "🎞️ Competencia de cortometrajes",
+      "day": "VIE 19",
+      "date": 19,
+      "time": "17:00",
+      "venue": "Centro Colombo Americano",
+      "day_order": 8,
+      "is_cortos": true,
+      "synopsis": "Cuarta sesión de la competencia internacional de cortometrajes de Cinemancia 2025.",
+      "film_list": [
+        {
+          "title": "Kilómetro 126",
+          "director": "Felipe López Gómez",
+          "country": "Colombia",
+          "duration": "17 min",
+          "year": 2025
+        },
+        {
+          "title": "Una trabaja, la otra no",
+          "director": "Maider Fernández Iriarte",
+          "country": "España",
+          "duration": "19 min",
+          "year": 2024
+        },
+        {
+          "title": "La balandra",
+          "director": "Matías Lima",
+          "country": "Argentina",
+          "duration": "13 min",
+          "year": 2024
+        },
+        {
+          "title": "Maria Henriqueta Esteve Aqui",
+          "director": "Nuno Pimentel",
+          "country": "Portugal",
+          "duration": "13 min",
+          "year": 2025
+        }
+      ]
     }
   ]
 }
