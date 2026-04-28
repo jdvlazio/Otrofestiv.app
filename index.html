@@ -6081,9 +6081,9 @@ function renderAgenda(){
               placeholder="Buscar y añadir a Intereses…"
               oninput="onSearchInput()" onblur="closeSearch()" autocomplete="off" autocapitalize="off">
           </div>
+          <div class="intereses-view-switch" style="flex-shrink:0;border-left:1px solid var(--bdr);padding-left:var(--sp-2);margin-left:var(--sp-1)"><button class="intereses-view-btn" id="ibtn-grid" onclick="setInteresesView('grid')"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg></button><button class="intereses-view-btn" id="ibtn-list" onclick="setInteresesView('list')"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg></button></div>
           <div id="ag-search-results" class="ag-search-results"></div>
         </div>
-        <div class="intereses-view-switch" style="flex-shrink:0;margin-bottom:var(--sp-2)"><button class="intereses-view-btn" id="ibtn-grid" onclick="setInteresesView('grid')"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg></button><button class="intereses-view-btn" id="ibtn-list" onclick="setInteresesView('list')"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg></button></div>
         <div id="ag-film-list">${renderFilmListHTML()}</div>
 
       </div>`;
