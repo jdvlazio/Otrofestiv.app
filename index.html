@@ -6169,16 +6169,17 @@ function renderAgenda(){
     view.innerHTML=`${_progressHtml}
       <div class="ag-section">
         ${renderPrioStrip()}
-        <button class="av-calc-btn" onclick="runCalc()">
-          Calcular opciones
-        </button>
-        <div style="margin-top:var(--sp-5);border-top:1px solid var(--bdr-l);padding-top:var(--sp-4)">
+        <div style="margin-top:var(--sp-4);border-top:1px solid var(--bdr-l);padding-top:var(--sp-4)">
           <div class="sec-hdr" style="margin-bottom:var(--sp-2)">${ICONS.clock} Disponibilidad <span class="sec-hdr-opt">opcional</span></div>
           <div style="font-size:var(--t-sm);color:var(--gray2);margin-bottom:var(--sp-3);line-height:1.5">Tu plan no incluirá funciones en estos horarios.</div>
           <div id="av-blocks-list"></div>
           <button class="av-add-unavail" onclick="openAvSheet()">${ICONS.plus} No disponible</button>
         </div>
+        <button class="av-calc-btn" onclick="runCalc()">
+          Calcular opciones
+        </button>
       </div>
+      <div class="ag-list-sep"></div>
       <div class="ag-section">
         <div class="sec-hdr">${ICONS.switch} Opciones</div>
         <div id="ag-result">${resultContent}</div>
