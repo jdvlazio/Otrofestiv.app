@@ -2164,23 +2164,25 @@ html.splash-skip #otrofestiv-splash{display:none}
 <div class="grid" id="grid"></div>
 
 <!-- ── Intereses: search + toggle — estáticos, fuera de ag-view ── -->
-<div class="carta-search-wrap" id="ag-search-static" style="display:none">
-  <div class="carta-search-field">
-    <span class="carta-search-ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
-    <input type="text" id="ag-search-input" class="carta-search" placeholder="Buscar y añadir a Intereses…" oninput="onSearchInput()" onblur="closeSearch()" autocomplete="off" autocapitalize="off">
+<div id="ag-intereses-header" style="display:none;background:var(--surf);border-bottom:1px solid var(--bdr)">
+  <div class="carta-search-wrap">
+    <div class="carta-search-field">
+      <span class="carta-search-ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
+      <input type="text" id="ag-search-input" class="carta-search" placeholder="Buscar y añadir a Intereses…" oninput="onSearchInput()" onblur="closeSearch()" autocomplete="off" autocapitalize="off">
+    </div>
+    <div id="ag-search-results" class="ag-search-results"></div>
   </div>
-  <div id="ag-search-results" class="ag-search-results"></div>
-</div>
-<div class="programa-mode-bar" id="intereses-mode-bar" style="display:none">
-  <div class="pmode-spacer"></div>
-  <div class="pmode-controls">
-    <div class="intereses-view-switch">
-      <button class="intereses-view-btn on" id="ibtn-grid" onclick="setInteresesView('grid')">
-        <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
-      </button>
-      <button class="intereses-view-btn" id="ibtn-list" onclick="setInteresesView('list')">
-        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg>
-      </button>
+  <div class="programa-mode-bar" id="intereses-mode-bar" style="display:flex;border-bottom:none">
+    <div class="pmode-spacer"></div>
+    <div class="pmode-controls">
+      <div class="intereses-view-switch">
+        <button class="intereses-view-btn on" id="ibtn-grid" onclick="setInteresesView('grid')">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+        </button>
+        <button class="intereses-view-btn" id="ibtn-list" onclick="setInteresesView('list')">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg>
+        </button>
+      </div>
     </div>
   </div>
 </div>
@@ -6305,8 +6307,7 @@ function showDayView(){
   switchMainNav('mnav-cartelera');
   // Mostrar buscador y mode bar
   const _csw2=document.getElementById('carta-search-wrap');if(_csw2) _csw2.style.display='';
-  document.getElementById('ag-search-static')?.style.setProperty('display','none');
-  document.getElementById('intereses-mode-bar')?.style.setProperty('display','none');
+  document.getElementById('ag-intereses-header')?.style.setProperty('display','none');
   const modeBar=document.getElementById('programa-mode-bar');
   if(modeBar){
     modeBar.style.removeProperty('display');// removeProperty is more reliable than =""
@@ -6334,8 +6335,7 @@ function showAgView(){
   const _paf=document.getElementById('programa-active-filter');if(_paf) _paf.classList.remove('visible');
   const _lista=document.getElementById('programa-list');if(_lista) _lista.classList.remove('visible');
   const _csw=document.getElementById('carta-search-wrap');if(_csw) _csw.style.display='none';
-  const _agss=document.getElementById('ag-search-static');if(_agss) _agss.style.display=activeMNav==='mnav-seleccion'?'':'none';
-  const _imb=document.getElementById('intereses-mode-bar');if(_imb) _imb.style.display=activeMNav==='mnav-seleccion'?'flex':'none';
+  const _agss=document.getElementById('ag-intereses-header');if(_agss) _agss.style.display=activeMNav==='mnav-seleccion'?'':'none';
   document.getElementById('nav-row').classList.add('hidden');
   document.getElementById('filter-row').classList.add('hidden');
   document.getElementById('filter-bars').style.display='none';
