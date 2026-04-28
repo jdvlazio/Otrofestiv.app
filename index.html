@@ -1887,7 +1887,7 @@ html.splash-skip #otrofestiv-splash{display:none}
         <div class="splash-sel-name" id="splash-sel-name">AFF 2026</div>
         <div class="splash-sel-meta" id="splash-sel-meta">Medellín · 21–29 ABR 2026</div>
       </div>
-      <div class="splash-sel-chev">▾</div>
+      <div class="splash-sel-chev"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></div>
     </button>
     <div class="splash-dropdown" id="splash-dropdown" style="display:none" role="listbox">
       <button class="splash-drop-item selected" data-fest="aff2026" role="option" aria-selected="true" onclick="selectSplashFest('AFF 2026','Medellín · 21–29 ABR 2026','aff2026')">
@@ -2835,7 +2835,7 @@ function travelWarn(s1,s2){
   const travel=travelMins(s1.venue,s2.venue);
   if(travel===0) return null;
   const gap=toMin(s2.time)-(toMin(s1.time)+parseDur(s1.duration));
-  if(gap<travel+10) return`▲ ~${travel} min en carro entre estas sedes`;
+  if(gap<travel+10) return`${ICONS.alert} ~${travel} min en carro entre estas sedes`;
   return null;
 }
 
@@ -3159,7 +3159,7 @@ function renderMiPlanCalendar(){
         <div style="display:flex;flex-direction:column;align-items:flex-end;justify-content:center;flex-shrink:0">
           <button class="ag-fi-btn del" data-rmt="${safeT}" onclick="removeFromAgenda(this.dataset.rmt);event.stopPropagation()" style="display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;padding:0;border-radius:50%;border:none;opacity:.5">${ICONS.x}</button>
         </div>
-      </div>${_expandedFilm===(s._title||'')+(s.day||'')+(s.time||'')?`<div class="film-alts">${renderFilmAlternatives(s._title,s.day,s.time)}</div>`:''}${(()=>{const _mf=FILMS.find(fi=>fi.title===s._title&&fi.day===s.day&&fi.time===s.time);if(!_mf||!_mf.is_cortos||!_mf.film_list||!_mf.film_list.length) return'';return`<div class="mplan-prog-list">${_mf.film_list.map((item,n)=>{const _mt=getCortoItemPoster(item);const _mth=_mt?`<img src="${_mt}" class="c-film-thumb" loading="lazy" onerror="this.outerHTML='<div class=c-film-thumb-ph>🎬</div>'" alt="">`:'<div class="c-film-thumb-ph">🎬</div>';const _sc2=item.title.replace(/'/g,"\'");const _sco2=(item.country||"").replace(/'/g,"\'");const _scd2=(item.duration||"");const _scf2=countryToFlags(item.country||"");const _scs2=(_mf.section||"").replace(/'/g,"\'");return`<div class="mplan-prog-item" onclick="event.stopPropagation();openCortoSheet('${_sc2}','${_sco2}','${_scd2}','${_scs2}','${_scf2}')">${_mth}<div class="mplan-prog-num">${n+1}</div><div class="mplan-prog-title">${item.title}</div><div class="mplan-prog-dur">${item.duration}</div></div>`;}).join('')}</div>`;})()}`;
+      </div>${_expandedFilm===(s._title||'')+(s.day||'')+(s.time||'')?`<div class="film-alts">${renderFilmAlternatives(s._title,s.day,s.time)}</div>`:''}${(()=>{const _mf=FILMS.find(fi=>fi.title===s._title&&fi.day===s.day&&fi.time===s.time);if(!_mf||!_mf.is_cortos||!_mf.film_list||!_mf.film_list.length) return'';return`<div class="mplan-prog-list">${_mf.film_list.map((item,n)=>{const _mt=getCortoItemPoster(item);const _mth=_mt?`<img src="${_mt}" class="c-film-thumb" loading="lazy" onerror="this.remove()" alt="">`:'<div class="c-film-thumb-ph">🎬</div>';const _sc2=item.title.replace(/'/g,"\'");const _sco2=(item.country||"").replace(/'/g,"\'");const _scd2=(item.duration||"");const _scf2=countryToFlags(item.country||"");const _scs2=(_mf.section||"").replace(/'/g,"\'");return`<div class="mplan-prog-item" onclick="event.stopPropagation();openCortoSheet('${_sc2}','${_sco2}','${_scd2}','${_scs2}','${_scf2}')">${_mth}<div class="mplan-prog-num">${n+1}</div><div class="mplan-prog-title">${item.title}</div><div class="mplan-prog-dur">${item.duration}</div></div>`;}).join('')}</div>`;})()}`;
     });
   }
   listHtml+='</div>';
@@ -4167,7 +4167,7 @@ function renderPrioStrip(){
     const f=FILMS.find(fi=>fi.title===t);
     const p=getFilmPoster(f);
     const _safeChipT=t.replace(/'/g,"\'");
-    const img=p?`<img class="prio-chip-poster" src="${p}" loading="eager" style="object-fit:cover;cursor:pointer" onclick="event.stopPropagation();openPelSheet('${_safeChipT}')" onerror="this.outerHTML='<div class=prio-chip-ph>🎬</div>'" alt="">`:`<div class="prio-chip-ph">${ICONS.star}</div>`;
+    const img=p?`<img class="prio-chip-poster" src="${p}" loading="eager" style="object-fit:cover;cursor:pointer" onclick="event.stopPropagation();openPelSheet('${_safeChipT}')" onerror="this.remove()" alt="">`:`<div class="prio-chip-ph">${ICONS.star}</div>`;
     const{displayTitle,progSuffix}=parseProgramTitle(t);
     const short=displayTitle.length>16?displayTitle.slice(0,14)+'…':displayTitle;
     const allPast=!festivalEnded()&&!FILMS.some(f=>f.title===t&&!screeningPassed(f));
@@ -4343,7 +4343,7 @@ function mkAgendaRow(s, mode='saved'){
     :'';
   const altsHtml=isExpanded&&mode==='saved'?renderFilmAlternatives(t,s.day,s.time):'';
   const _progBtn=(()=>{const _mf=f;if(!_mf||!_mf.is_cortos||!_mf.film_list||!_mf.film_list.length)return'';return`<button class="mplan-prog-toggle" onclick="toggleMplanProg(this,event)" style="display:inline-flex;align-items:center;gap:var(--sp-1)">${ICONS.chevronR} Programa</button>`;})();
-  const _progList=(()=>{const _mf=f;if(!_mf||!_mf.is_cortos||!_mf.film_list||!_mf.film_list.length)return'';return`<div class="mplan-prog-list">${_mf.film_list.map((item,n)=>{const _mt=getCortoItemPoster(item);const _mth=_mt?`<img src="${_mt}" class="c-film-thumb" loading="lazy" onerror="this.outerHTML='<div class=c-film-thumb-ph>🎬</div>'" alt="">`:'<div class="c-film-thumb-ph">🎬</div>';const _sc=item.title.replace(/'/g,"\'");const _sco=item.country||'';const _scd=item.duration||'';const _scf=countryToFlags(item.country||'');const _scs=f?.section||'';return`<div class="mplan-prog-item" onclick="event.stopPropagation();openCortoSheet('${_sc}','${_sco}','${_scd}','${_scs}','${_scf}')">${_mth}<div class="mplan-prog-num">${n+1}</div><div class="mplan-prog-title">${item.title}</div><div class="mplan-prog-dur">${item.duration}</div></div>`;}).join('')}</div>`;})();
+  const _progList=(()=>{const _mf=f;if(!_mf||!_mf.is_cortos||!_mf.film_list||!_mf.film_list.length)return'';return`<div class="mplan-prog-list">${_mf.film_list.map((item,n)=>{const _mt=getCortoItemPoster(item);const _mth=_mt?`<img src="${_mt}" class="c-film-thumb" loading="lazy" onerror="this.remove()" alt="">`:'<div class="c-film-thumb-ph">🎬</div>';const _sc=item.title.replace(/'/g,"\'");const _sco=item.country||'';const _scd=item.duration||'';const _scf=countryToFlags(item.country||'');const _scs=f?.section||'';return`<div class="mplan-prog-item" onclick="event.stopPropagation();openCortoSheet('${_sc}','${_sco}','${_scd}','${_scs}','${_scf}')">${_mth}<div class="mplan-prog-num">${n+1}</div><div class="mplan-prog-title">${item.title}</div><div class="mplan-prog-dur">${item.duration}</div></div>`;}).join('')}</div>`;})();
   return`<div class="saved-item${isDone?' done':''}">
     ${_ph}
     <div class="saved-time">${s.time}</div>
@@ -5122,7 +5122,7 @@ function _renderSavedAgendaHTML(){
           const vc2=vcfg(s.venue),sl=sala(s.venue);
           const _af=FILMS.find(fi=>fi.title===s._title);const _ap=_af?getFilmPoster(_af):null;
           const _safeMpT2=(s._title||"").replace(/'/g,"\'");
-          const _aph=_ap?`<img class="lb-poster" src="${_ap}" loading="lazy" style="cursor:pointer" onclick="event.stopPropagation();openPelSheet('${_safeMpT2}')" onerror="this.outerHTML='<div class=lb-poster-ph>🎬</div>'" alt="">`:'<div class="lb-poster-ph">🎬</div>';
+          const _aph=_ap?`<img class="lb-poster" src="${_ap}" loading="lazy" style="cursor:pointer" onclick="event.stopPropagation();openPelSheet('${_safeMpT2}')" onerror="this.remove()" alt="">`:'<div class="lb-poster-ph">🎬</div>';
           return`<div class="saved-item done">
             ${_aph}
             <div class="saved-time">${s.time}</div>
@@ -5137,7 +5137,7 @@ function _renderSavedAgendaHTML(){
         <div class="archive-out-lbl">Vistas fuera del Plan</div>
         ${watchedOutsidePlan.map(f=>{
           const _ap=getFilmPoster(f);
-          const _aph=_ap?`<img class="lb-poster" src="${_ap}" loading="lazy" onerror="this.outerHTML='<div class=lb-poster-ph>🎬</div>'" alt="">`:'<div class="lb-poster-ph">🎬</div>';
+          const _aph=_ap?`<img class="lb-poster" src="${_ap}" loading="lazy" onerror="this.remove()" alt="">`:'<div class="lb-poster-ph">🎬</div>';
           return`<div class="saved-item done">
             ${_aph}
             <div class="saved-time">${f.flags||'🌐'}</div>
@@ -5166,7 +5166,7 @@ function _renderSavedAgendaHTML(){
       html+=suggsByDay[day].slice(0,4).map(f=>{
         const vc2=vcfg(f.venue),sl=sala(f.venue);
         const _sp=getFilmPoster(f);
-        const _sph=_sp?`<img class="lb-poster" src="${_sp}" loading="lazy" onerror="this.outerHTML='<div class=lb-poster-ph>🎬</div>'" alt="">`:'<div class="lb-poster-ph">🎬</div>';
+        const _sph=_sp?`<img class="lb-poster" src="${_sp}" loading="lazy" onerror="this.remove()" alt="">`:'<div class="lb-poster-ph">🎬</div>';
         return`<div class="suggestion-item" onclick="openPelSheet('${f.title.replace(/'/g,"\\'")}')">
           ${_sph}
           <div class="suggestion-time">${f.time}</div>
@@ -6080,7 +6080,7 @@ function runCalc(){
   const res=document.getElementById('ag-result');
   // ── Loading state: mostrar siempre aunque el resultado sea idéntico ──
   if(btn){btn.disabled=true;btn.textContent='Calculando…';}
-  if(res) res.innerHTML=`<div class="ag-calc-prompt" style="opacity:.6">◌ Calculando opciones…</div>`;
+  if(res) res.innerHTML=`<div class="ag-calc-prompt" style="opacity:.6">Calculando opciones…</div>`;
   // Defer computation to allow browser to paint loading state first
   setTimeout(()=>{
     try{
@@ -6815,7 +6815,7 @@ function openPelSheet(title){
   const inWL=watchlist.has(f.title),inW=watched.has(f.title),inPrio=prioritized.has(f.title);
   const posterSrc=getFilmPoster(f);
   const posterHtml=posterSrc
-    ?`<img class="pel-sheet-poster" src="${posterSrc}" loading="lazy" onerror="this.outerHTML='<div class=pel-sheet-poster-ph>🎬</div>'" alt="">`
+    ?`<img class="pel-sheet-poster" src="${posterSrc}" loading="lazy" onerror="this.remove()" alt="">`
     :`<div class="pel-sheet-poster-ph">🎬</div>`;
   const{displayTitle}=parseProgramTitle(f.title);
   const secLabel=f.section?f.section.replace(/^[^ ]+ /,''):'';
@@ -7049,7 +7049,7 @@ function openCortoSheet(title, country, duration, section, flags, director, genr
   const flgs=flags||countryToFlags(ctry)||'🌐';
   const posterUrl=getPosterSrc(title,true)||null;
   const posterHtml=posterUrl
-    ?`<img class="pel-sheet-poster" src="${posterUrl}" loading="lazy" onerror="this.outerHTML='<div class=pel-sheet-poster-ph>🎬</div>'" alt="">`
+    ?`<img class="pel-sheet-poster" src="${posterUrl}" loading="lazy" onerror="this.remove()" alt="">`
     :`<div class="pel-sheet-poster-ph">🎬</div>`;
   const ps=document.getElementById('pel-sheet');
   if(ps) ps.scrollTop=0;
