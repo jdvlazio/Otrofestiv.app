@@ -2447,7 +2447,7 @@ function getPosterSrc(title, isCortos, section){
 // ═══════════════════════════════════════════════════════════════
 function getFilmPoster(f){
   if(!f) return null;
-  if(f.type==='event') return makeEventPoster(f.title,f.duration);
+  if(f.type==='event') return makeEventPoster(f.title,f.duration,f.event_kind);
   if(f.is_cortos) return getPosterSrc(f.title,true)||makeProgramPoster(f.title,f.duration,f.section);
   // is_programa: programa combinado de largometrajes — usa poster del primer film del program
   if(f.is_programa&&f.film_list&&f.film_list.length){
@@ -2485,9 +2485,20 @@ function lbUrl(title){
   return`https://letterboxd.com/film/${slug}/`;
 }
 
-function makeEventPoster(title,duration){
+function makeEventPoster(title,duration,eventKind){
+  // Colores y labels por event_kind — acordados en sesión de diseño
+  // Si no hay event_kind, usa eventPosterLabel del festival como fallback
   const festCfg=(FESTIVAL_CONFIG&&FESTIVAL_CONFIG[_activeFestId])||Object.values(FESTIVAL_CONFIG||{})[0]||{};
   const festName=festCfg.shortName||'FESTIVAL';
+  const _kindMap={
+    'ponencia':    {hc:'#EF9F27',sep:'#BA7517',ht:'#412402',l1:'PONENCIA',l2:'',bf:'#2A1E08',bs:'#4A3410',accent:'#EF9F27'},
+    'masterclass': {hc:'#7F77DD',sep:'#534AB7',ht:'#26215C',l1:'MASTER',  l2:'CLASS',bf:'#0F0D2A',bs:'#2A2660',accent:'#AFA9EC'},
+    'encuentro':   {hc:'#378ADD',sep:'#185FA5',ht:'#042C53',l1:'ENCUENTRO',l2:'',bf:'#0A1828',bs:'#1A3A5C',accent:'#85B7EB'},
+    'cineconcierto':{hc:'#D85A30',sep:'#993C1D',ht:'#4A1B0C',l1:'CINE',   l2:'CONCIERTO',bf:'#1E0E08',bs:'#4A2010',accent:'#F0997B'},
+  };
+  const kind=_kindMap[eventKind];
+  if(kind) return _buildPosterSVG({...kind,title,duration,ft:festName});
+  // Fallback: usa eventPosterLabel del config del festival activo
   const lbl=festCfg.eventPosterLabel||['EVENTO',''];
   return _buildPosterSVG({
     hc:'#6B9BD1',sep:'#3D6490',ht:'#0D1520',
@@ -6993,9 +7004,9 @@ function openPelSheet(title){
       ${posterHtml}
       <div class="pel-sheet-meta">
         <div class="pel-sheet-title">${displayTitle}</div>
-        <div class="pel-sheet-flags">${f.flags||'🌐'}</div>
+        ${f.type!=='event'?`<div class="pel-sheet-flags">${f.flags||'🌐'}</div>`:''}
         <div class="pel-sheet-dur">${ICONS.clock} ${f.duration}</div>
-        ${_metaLine?`<div class="pel-sheet-metaline">${_metaLine}</div>`:''}
+        ${f.type!=='event'&&_metaLine?`<div class="pel-sheet-metaline">${_metaLine}</div>`:''}
         ${f.section?`<div class="pel-sheet-sec" data-sec="${f.section.replace(/"/g,'&quot;')}" onclick="filterBySection(this.dataset.sec)">${secLabel} <span class="pel-sheet-sec-arrow">›</span></div>`:''}
         ${f.is_cortos&&f.film_list?.length?`<div class="pel-sheet-cortos-count"><span class="count-badge cb-neutral">${f.film_list.length}</span></div>`:''}
       </div>
