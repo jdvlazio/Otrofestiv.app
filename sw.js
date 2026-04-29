@@ -2,7 +2,7 @@
 // Estrategia: HTML siempre desde red. Assets en caché.
 // v12: auto-reload en cliente cuando SW detecta nueva versión
 
-const CACHE_NAME = 'otrofestiv-v202604270103';
+const CACHE_NAME = 'otrofestiv-v202604292252';
 const BUILD = '202604270103';
 
 const STATIC_ASSETS = [
@@ -52,7 +52,16 @@ self.addEventListener('fetch', event => {
     return;
   }
 
-  // Assets → caché primero
+  // JSONs de festivales → siempre desde red (datos pueden cambiar)
+  if (url.pathname.startsWith('/festivals/')) {
+    event.respondWith(
+      fetch(new Request(request, { cache: 'no-store' }))
+        .catch(() => caches.match(request))
+    );
+    return;
+  }
+
+  // Assets estáticos → caché primero
   event.respondWith(
     caches.match(request).then(cached => cached || fetch(request))
   );
