@@ -400,7 +400,8 @@
     "Retrato de la luz": "https://cinemanciafestival.com/wp-content/uploads/2025/08/Poster-RDLL.png",
     "Espaciar": "https://cinemanciafestival.com/wp-content/uploads/2025/08/ESPACIAR-AFICHE.jpg",
     "Esperando abril": "https://image.tmdb.org/t/p/w500/ahOz8eDlzvHUGpKKJdKooB4Yo7M.jpg",
-    "Los bandidos del hotel azul": "https://image.tmdb.org/t/p/w500/tVwmXEloSNupkzcAkLlp4dZPqS0.jpg"
+    "Los bandidos del hotel azul": "https://image.tmdb.org/t/p/w500/tVwmXEloSNupkzcAkLlp4dZPqS0.jpg",
+    "Tú me abrasas": "https://image.tmdb.org/t/p/w500/q1NKq1qGwoKfNPehiWiD3ZoNWpL.jpg"
   },
   "customPosters": {
     "Proyección sorpresa": "assets/proyeccion-sorpresa.svg"
@@ -1978,7 +1979,8 @@
           "lbSlug": "you-burn-me"
         }
       ],
-      "synopsis": "Doble función de Matías Piñeiro: Prefacio para el Dialoguito y Tú me abrasas."
+      "synopsis": "Doble función de Matías Piñeiro: Prefacio para el Dialoguito y Tú me abrasas.",
+      "is_programa": true
     },
     {
       "title": "La piel en primavera",
