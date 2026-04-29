@@ -1226,8 +1226,9 @@
       "time": "19:00",
       "venue": "Teatro Caribe",
       "day_order": 3,
-      "is_cortos": false,
-      "synopsis": "Segunda sesión de la programación de cortometrajes de la sección ¿Qué es la ficción? de Cinemancia 2025."
+      "is_cortos": true,
+      "synopsis": "Segunda sesión de la programación de cortometrajes de la sección ¿Qué es la ficción? de Cinemancia 2025.",
+      "film_list": []
     },
     {
       "title": "Cortos: Competencia Nuevas Voces 2",
@@ -2310,8 +2311,9 @@
       "time": "21:00",
       "venue": "Colombo Sala 1",
       "day_order": 8,
-      "is_cortos": false,
-      "synopsis": "Programa de cortometrajes de la sección ¿Qué es la ficción? de Cinemancia 2025."
+      "is_cortos": true,
+      "synopsis": "Programa de cortometrajes de la sección ¿Qué es la ficción? de Cinemancia 2025.",
+      "film_list": []
     },
     {
       "title": "Programa de cortos 2",
