@@ -398,7 +398,9 @@
     "Do Caldeirao da Santa Cruz": "https://image.tmdb.org/t/p/w500/zIdCogOlZw2Quz3qqzKJrw2FZWi.jpg",
     "Las entrañas saben lo que la razón no entiende": "https://image.tmdb.org/t/p/w500/ygwQE5nS5bwsyHc1XRbHPTXFKRT.jpg",
     "Retrato de la luz": "https://cinemanciafestival.com/wp-content/uploads/2025/08/Poster-RDLL.png",
-    "Espaciar": "https://cinemanciafestival.com/wp-content/uploads/2025/08/ESPACIAR-AFICHE.jpg"
+    "Espaciar": "https://cinemanciafestival.com/wp-content/uploads/2025/08/ESPACIAR-AFICHE.jpg",
+    "Esperando abril": "https://image.tmdb.org/t/p/w500/ahOz8eDlzvHUGpKKJdKooB4Yo7M.jpg",
+    "Los bandidos del hotel azul": "https://image.tmdb.org/t/p/w500/tVwmXEloSNupkzcAkLlp4dZPqS0.jpg"
   },
   "customPosters": {
     "Proyección sorpresa": "assets/proyeccion-sorpresa.svg"
@@ -1705,8 +1707,16 @@
       "venue": "Colombo Sala 2",
       "day_order": 6,
       "is_cortos": false,
-      "film_list": [],
-      "synopsis": "Doble función de Olivier Godin: En attendant Avril (2018) y el cortometraje Les brigands de l'hôtel bleu."
+      "film_list": [
+        {
+          "title": "Esperando abril"
+        },
+        {
+          "title": "Los bandidos del hotel azul"
+        }
+      ],
+      "synopsis": "Doble función de Olivier Godin: En attendant Avril (2018) y el cortometraje Les brigands de l'hôtel bleu.",
+      "is_programa": true
     },
     {
       "title": "Cartas a mis padres muertos",
