@@ -736,6 +736,10 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
  * Ratio 2:3 → 177px alto. Estándar one-sheet cinematográfico.          */
 .poster-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;padding:10px}
 .poster-card{position:relative;border-radius:var(--r-md);overflow:hidden;cursor:pointer;background:var(--surf-2);background-size:cover;background-position:center;aspect-ratio:2/3;display:block}
+.poster-card-stack{width:100%;height:100%;position:relative}
+.pcs-back{position:absolute;top:0;right:0;width:88%;height:92%;object-fit:cover;border-radius:var(--r-sm);opacity:.6;display:block}
+.pcs-front{position:absolute;bottom:0;left:0;width:88%;height:92%;object-fit:cover;border-radius:var(--r-md);box-shadow:4px -4px 10px rgba(0,0,0,.7);display:block}
+.pel-sheet-dual{display:flex;gap:8px;flex-shrink:0}
 .ended-poster .ended-poster-footer{position:absolute;bottom:0;left:0;right:0;padding:16px 6px 6px;background:linear-gradient(to top,rgba(0,0,0,.8),transparent);display:flex;flex-direction:column;gap:2px;align-items:center}
 .ended-poster-title{font-size:var(--t-xs);color:rgba(255,255,255,.8);text-align:center;line-height:1.2;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;max-width:100%}
 .ended-rate-btn{background:var(--overlay-60);border:1px solid var(--white-20);border-radius:var(--r-pill);color:var(--white);font-size:var(--t-xs);font-weight:var(--w-bold);font-family:var(--font);padding:2px 6px;cursor:pointer}
@@ -6938,9 +6942,18 @@ function openPelSheet(title){
   const{film:f,screenings}=entry;
   const inWL=watchlist.has(f.title),inW=watched.has(f.title),inPrio=prioritized.has(f.title);
   const posterSrc=getFilmPoster(f);
-  const posterHtml=posterSrc
-    ?`<img class="pel-sheet-poster" src="${posterSrc}" loading="lazy" onerror="this.remove()" alt="">`
-    :`<div class="pel-sheet-poster-ph">🎬</div>`;
+  let posterHtml;
+  if(f.is_programa&&f.film_list&&f.film_list.length>=2){
+    const _sp1=getPosterSrc(f.film_list[0].title||f.film_list[0],false);
+    const _sp2=getPosterSrc(f.film_list[1].title||f.film_list[1],false);
+    const _si1=_sp1?`<img class="pel-sheet-poster" src="${_sp1}" loading="lazy" onerror="this.remove()" alt="">`:`<div class="pel-sheet-poster-ph">🎬</div>`;
+    const _si2=_sp2?`<img class="pel-sheet-poster" src="${_sp2}" loading="lazy" onerror="this.remove()" alt="">`:`<div class="pel-sheet-poster-ph">🎬</div>`;
+    posterHtml=`<div class="pel-sheet-dual">${_si1}${_si2}</div>`;
+  } else {
+    posterHtml=posterSrc
+      ?`<img class="pel-sheet-poster" src="${posterSrc}" loading="lazy" onerror="this.remove()" alt="">`
+      :`<div class="pel-sheet-poster-ph">🎬</div>`;
+  }
   const{displayTitle}=parseProgramTitle(f.title);
   const secLabel=f.section?f.section.replace(/^[^ ]+ /,''):'';
   const totalFn=FILMS.filter(fi=>fi.title===f.title).length;
@@ -7747,14 +7760,21 @@ function renderPeliculaView(){
     const{displayTitle}=parseProgramTitle(f.title);
     const progBadge='';//REMOVED: no count badge
     const _ended=festivalEnded();
-    // Si posterSrc es URL HTTP real, el card lleva background-image con el placeholder SVG.
-    // Si el <img> falla (404, ID incorrecto), onerror lo elimina y el placeholder queda visible.
-    // Garantiza que nunca haya un card completamente negro.
-    const _needsBg=posterSrc&&posterSrc.startsWith('http');
-    const _cardBg=_needsBg?` style="background-image:url(${makeFilmPlaceholder(f.title,f.director,f.year)})"`:'';
-    const posterImg=posterSrc
-      ?`<img src="${posterSrc}" loading="lazy" style="width:100%;height:100%;object-fit:cover${allPast&&!_ended?';opacity:.45':''};display:block" onerror="this.remove()" alt="">`
-      :``;
+    const _isPrograma=f.is_programa&&f.film_list&&f.film_list.length>=2;
+    let posterImg,_cardBg='';
+    if(_isPrograma){
+      const _p1=getPosterSrc(f.film_list[0].title||f.film_list[0],false)||'';
+      const _p2=getPosterSrc(f.film_list[1].title||f.film_list[1],false)||'';
+      const _ib=_p2?`<img class="pcs-back" src="${_p2}" loading="lazy" onerror="this.remove()" alt="">`:`<div class="pcs-back"></div>`;
+      const _if=_p1?`<img class="pcs-front" src="${_p1}" loading="lazy" onerror="this.remove()" alt="">`:`<div class="pcs-front"></div>`;
+      posterImg=`<div class="poster-card-stack">${_ib}${_if}</div>`;
+    } else {
+      const _needsBg=posterSrc&&posterSrc.startsWith('http');
+      _cardBg=_needsBg?` style="background-image:url(${makeFilmPlaceholder(f.title,f.director,f.year)})"`:'';
+      posterImg=posterSrc
+        ?`<img src="${posterSrc}" loading="lazy" style="width:100%;height:100%;object-fit:cover${allPast&&!_ended?';opacity:.45':''};display:block" onerror="this.remove()" alt="">`
+        :``;
+    }
     return`<div class="poster-card${inWL&&!inW?' in-wl':''}${inW&&!_ended?' in-watched':''}" data-title="${f.title.replace(/"/g,'&quot;')}" onclick="openPelSheet('${safeT}')"${_cardBg}>
       ${posterImg}
       ${progBadge}
