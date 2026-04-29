@@ -402,7 +402,8 @@
     "Esperando abril": "https://image.tmdb.org/t/p/w500/ahOz8eDlzvHUGpKKJdKooB4Yo7M.jpg",
     "Los bandidos del hotel azul": "https://image.tmdb.org/t/p/w500/tVwmXEloSNupkzcAkLlp4dZPqS0.jpg",
     "Tú me abrasas": "https://image.tmdb.org/t/p/w500/q1NKq1qGwoKfNPehiWiD3ZoNWpL.jpg",
-    "La babosa y el caracol": "https://image.tmdb.org/t/p/w500/86has5a79xtT7LmvdpldLdPwxJ7.jpg"
+    "La babosa y el caracol": "https://image.tmdb.org/t/p/w500/86has5a79xtT7LmvdpldLdPwxJ7.jpg",
+    "Molinos del tiempo": "https://image.tmdb.org/t/p/w500/4acN1XtdllBFjQ1JaZSDDkGpwF0.jpg"
   },
   "customPosters": {
     "Proyección sorpresa": "assets/proyeccion-sorpresa.svg"
@@ -2269,7 +2270,8 @@
           "lbSlug": "mills-of-time-2025"
         }
       ],
-      "synopsis": "Doble función de la competencia central: La babosa y el caracol (Anne Benhaïem) y Molinos del tiempo (Pauline Rigal)."
+      "synopsis": "Doble función de la competencia central: La babosa y el caracol (Anne Benhaïem) y Molinos del tiempo (Pauline Rigal).",
+      "is_programa": true
     },
     {
       "title": "Red Persimmons",
