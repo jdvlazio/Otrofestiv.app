@@ -404,7 +404,8 @@
     "Tú me abrasas": "https://image.tmdb.org/t/p/w500/q1NKq1qGwoKfNPehiWiD3ZoNWpL.jpg",
     "La babosa y el caracol": "https://image.tmdb.org/t/p/w500/86has5a79xtT7LmvdpldLdPwxJ7.jpg",
     "Molinos del tiempo": "https://image.tmdb.org/t/p/w500/4acN1XtdllBFjQ1JaZSDDkGpwF0.jpg",
-    "Portales": "https://image.tmdb.org/t/p/w500/cjrvF2app2YVhQwPsguxrkKtdcU.jpg"
+    "Portales": "https://image.tmdb.org/t/p/w500/cjrvF2app2YVhQwPsguxrkKtdcU.jpg",
+    "Las muchas muertes de Antonio Parreiras": "https://image.tmdb.org/t/p/w500/xm2Djqa6Sx6RA2Lz2vimFTH4bdd.jpg"
   },
   "customPosters": {
     "Proyección sorpresa": "assets/proyeccion-sorpresa.svg"
@@ -2542,7 +2543,8 @@
           "lbSlug": "as-muitas-mortes-de-antonio-parreiras"
         }
       ],
-      "synopsis": "Doble función de competencia: Portales (Elena Duque) y Las muchas muertes de Antônio Parreiras (Lucas Parente)."
+      "synopsis": "Doble función de competencia: Portales (Elena Duque) y Las muchas muertes de Antônio Parreiras (Lucas Parente).",
+      "is_programa": true
     },
     {
       "title": "7 caminadas con Mark Brown",
