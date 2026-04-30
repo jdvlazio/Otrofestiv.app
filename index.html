@@ -7226,7 +7226,7 @@ function _openCombinedFilmSheet(filmData){
   if(pelSheet&&pelSheet.classList.contains('open')){
     _cortoParentHtml=inner.innerHTML;
   }
-  const{title='',title_en='',director='',year='',duration='',flags='🌐',country='',synopsis='',lbSlug=''}=filmData;
+  const{title='',director='',year='',duration='',flags='🌐',country='',synopsis='',lbSlug=''}=filmData;
   const posterUrl=getPosterSrc(title,false)||null;
   const posterHtml=posterUrl
     ?`<img class="pel-sheet-poster" src="${posterUrl}" loading="lazy" onerror="this.remove()" alt="">`
@@ -7244,7 +7244,6 @@ function _openCombinedFilmSheet(filmData){
         ${flags?`<div class="pel-sheet-flags">${flags}</div>`:''}
         ${duration?`<div class="pel-sheet-dur">${ICONS.clock} ${duration}</div>`:''}
         ${metaLine?`<div class="pel-sheet-metaline">${metaLine}</div>`:''}
-        ${title_en&&title_en!==title?`<div class="pel-sheet-metaline" style="color:var(--gray);font-weight:var(--w-regular)">${title_en}</div>`:''}
         ${(()=>{const _parent=FILMS.find(f=>f.film_list&&f.film_list.some(c=>c.title===title));const _sec=_parent?.section;if(!_sec)return'';const _lbl=_sec.replace(/^[^ ]+ /,'');return`<div class="pel-sheet-sec" style="cursor:default">${_lbl}</div>`;})()}
       </div>
     </div>
