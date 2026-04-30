@@ -7068,13 +7068,16 @@ function _pspAttach(){
   const stage=document.getElementById('psp-stage');
   if(!stage||stage._pspReady) return;
   stage._pspReady=true;
-  // Tap front poster → abre su film sheet
-  const front=document.getElementById('psp-img-0');
-  const back=document.getElementById('psp-img-1');
-  if(front) front.addEventListener('click',function(e){
-    e.stopPropagation();
-    const idx=parseInt(stage.dataset.front||'0');
-    try{_openCombinedFilmSheet(JSON.parse(stage.dataset['film'+idx]));}catch(err){}
+  // Ambos posters abren su film — leen data-front en el momento del tap
+  [0,1].forEach(i=>{
+    const el=document.getElementById('psp-img-'+i);
+    if(!el) return;
+    el.addEventListener('click',function(e){
+      e.stopPropagation();
+      const front=parseInt(stage.dataset.front||'0');
+      if(i!==front) return; // solo responde si es el frontal
+      try{_openCombinedFilmSheet(JSON.parse(stage.dataset['film'+i]));}catch(err){}
+    });
   });
   // Swap zone — franja dedicada de 44px bajo el poster frontal
   const swapZone=document.getElementById('psp-swap-zone');
