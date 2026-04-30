@@ -7250,6 +7250,7 @@ function _openCombinedFilmSheet(filmData){
     <div class="pel-sheet-divider"></div>
     <div class="pel-sheet-section-lbl">sinopsis</div>
     <div class="pel-sheet-synopsis">${synopsis||'Sinopsis no disponible.'}</div>
+    <a class="c-lb pel-sheet-lb" href="${lbHref}" target="_blank" rel="noopener">${LB_SVG}<span class="c-lb-text pel-sheet-lb-text">Letterboxd</span></a>
     <div class="pel-sheet-divider"></div>
   `;
   document.getElementById('pel-overlay').classList.add('open');
