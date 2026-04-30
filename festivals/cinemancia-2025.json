@@ -1236,7 +1236,43 @@
       "day_order": 3,
       "is_cortos": true,
       "synopsis": "Segunda sesión de la programación de cortometrajes de la sección ¿Qué es la ficción? de Cinemancia 2025.",
-      "film_list": []
+      "film_list": [
+        {
+          "title": "[sic]",
+          "director": "Éric Baudelaire",
+          "year": 2009,
+          "country": "Francia",
+          "duration": "15 min"
+        },
+        {
+          "title": "Fu",
+          "director": "Maria Rojas Arias, Andrés Jurado",
+          "year": 2019,
+          "country": "Colombia",
+          "duration": "9 min"
+        },
+        {
+          "title": "WVLNT: Wavelength For Those Who Don't Have The Time",
+          "director": "Michael Snow",
+          "year": 2003,
+          "country": "Canadá",
+          "duration": "15 min"
+        },
+        {
+          "title": "Municipal Relaxation Module",
+          "director": "Matthew Rankin",
+          "year": 2022,
+          "country": "Canadá",
+          "duration": "6 min"
+        },
+        {
+          "title": "Canção De Amor E Saúde",
+          "director": "João Nicolau",
+          "year": 2009,
+          "country": "Portugal",
+          "duration": "30 min"
+        }
+      ]
     },
     {
       "title": "Cortos: Competencia Nuevas Voces 2",
@@ -2393,7 +2429,36 @@
       "day_order": 8,
       "is_cortos": true,
       "synopsis": "Programa de cortometrajes de la sección ¿Qué es la ficción? de Cinemancia 2025.",
-      "film_list": []
+      "film_list": [
+        {
+          "title": "O Velho Do Restelo",
+          "director": "Manoel de Oliveira",
+          "year": 2014,
+          "country": "Portugal",
+          "duration": "19 min"
+        },
+        {
+          "title": "La briglia sul collo",
+          "director": "Cecilia Mangini",
+          "year": 1974,
+          "country": "Italia",
+          "duration": "13 min"
+        },
+        {
+          "title": "Mi última aventura",
+          "director": "Ezequiel Salinas, Ramiro Sonzini",
+          "year": 2021,
+          "country": "Argentina",
+          "duration": "15 min"
+        },
+        {
+          "title": "Jaime",
+          "director": "António Reis",
+          "year": 1974,
+          "country": "Portugal",
+          "duration": "35 min"
+        }
+      ]
     },
     {
       "title": "Programa de cortos 2",
@@ -2744,6 +2809,66 @@
           "country": "Portugal",
           "duration": "13 min",
           "year": 2025
+        }
+      ]
+    },
+    {
+      "title": "¿Qué es la ficción?",
+      "title_en": "What is Fiction? Program 3",
+      "country": "Varios",
+      "flags": "🎬",
+      "duration": "90 min",
+      "director": "Varios",
+      "section": "🎭 ¿Qué es la ficción?",
+      "day": "VIE 12",
+      "date": 12,
+      "time": "17:00",
+      "venue": "La Capilla del Claustro Comfama",
+      "day_order": 1,
+      "is_cortos": true,
+      "synopsis": "Primer programa de cortometrajes de la sección ¿Qué es la ficción? de Cinemancia 2025. Cinemancia responde la pregunta a través de tres programas de cortometrajes que, como estribillo disparatado, se proponen pensar qué hace de la ficción una dimensión conjetural.",
+      "film_list": [
+        {
+          "title": "Aliens",
+          "director": "Luis Lopez Carrasco",
+          "year": 2017,
+          "country": "España",
+          "duration": "23 min"
+        },
+        {
+          "title": "En rachâchant",
+          "director": "Jean-Marie Straub, Danièle Huillet",
+          "year": 1983,
+          "country": "Francia",
+          "duration": "7 min"
+        },
+        {
+          "title": "The Cat With Hands",
+          "director": "Robert Morgan",
+          "year": 2001,
+          "country": "Reino Unido",
+          "duration": "4 min"
+        },
+        {
+          "title": "Seguro que Bach cerraba la puerta cuando quería trabajar",
+          "director": "Narcisa Hirsch",
+          "year": 1979,
+          "country": "Argentina",
+          "duration": "27 min"
+        },
+        {
+          "title": "Hanging Upside Down in the Branches",
+          "director": "Ute Aurand",
+          "year": 2007,
+          "country": "Alemania",
+          "duration": "15 min"
+        },
+        {
+          "title": "The Silence of Ani",
+          "director": "Francis Alÿs",
+          "year": 2015,
+          "country": "Turquía",
+          "duration": "13 min"
         }
       ]
     }
