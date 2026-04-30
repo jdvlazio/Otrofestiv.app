@@ -738,7 +738,13 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .poster-card{position:relative;border-radius:var(--r-md);overflow:hidden;cursor:pointer;background:var(--surf-2);background-size:cover;background-position:center;aspect-ratio:2/3;display:block}
 .poster-card-stack{width:100%;height:100%;display:flex;gap:1px;background:var(--bdr)}
 .pcs-back,.pcs-front{flex:1;height:100%;object-fit:cover;object-position:center;display:block;min-width:0}
-.pel-sheet-dual{display:flex;gap:8px;flex-shrink:0;align-items:flex-start}
+.pel-sheet-poster-stage{position:relative;flex-shrink:0;width:var(--poster-lg-w)}
+.pel-sheet-poster-stage .pel-sheet-poster{position:absolute;top:0;left:0;transition:opacity 200ms ease}
+.pel-sheet-poster-stage .pel-sheet-poster.psp-hidden{opacity:0;pointer-events:none}
+.pel-sheet-poster-stage .pel-sheet-poster.psp-visible{opacity:1;position:relative}
+.psp-dots{display:flex;justify-content:center;gap:5px;margin-top:6px}
+.psp-dot{width:6px;height:6px;border-radius:50%;border:none;padding:0;cursor:pointer;background:var(--white-30);transition:background 150ms,transform 150ms}
+.psp-dot.active{background:var(--amber);transform:scale(1.2)}
 .ended-poster .ended-poster-footer{position:absolute;bottom:0;left:0;right:0;padding:16px 6px 6px;background:linear-gradient(to top,rgba(0,0,0,.8),transparent);display:flex;flex-direction:column;gap:2px;align-items:center}
 .ended-poster-title{font-size:var(--t-xs);color:rgba(255,255,255,.8);text-align:center;line-height:1.2;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;max-width:100%}
 .ended-rate-btn{background:var(--overlay-60);border:1px solid var(--white-20);border-radius:var(--r-pill);color:var(--white);font-size:var(--t-xs);font-weight:var(--w-bold);font-family:var(--font);padding:2px 6px;cursor:pointer}
@@ -6945,16 +6951,13 @@ function openPelSheet(title){
   if(f.is_programa&&f.film_list&&f.film_list.length>=2){
     const _sp1=getPosterSrc(f.film_list[0].title||f.film_list[0],false);
     const _sp2=getPosterSrc(f.film_list[1].title||f.film_list[1],false);
-    const _fd1=f.film_list[0],_fd2=f.film_list[1];
-    const _safe1=JSON.stringify(_fd1).replace(/'/g,"&#39;").replace(/"/g,"&quot;");
-    const _safe2=JSON.stringify(_fd2).replace(/'/g,"&#39;").replace(/"/g,"&quot;");
-    const _si1=_sp1
-      ?`<img class="pel-sheet-poster" src="${_sp1}" loading="lazy" onerror="this.remove()" alt="" style="cursor:pointer" onclick="_openCombinedFilmSheet(JSON.parse(this.dataset.film))" data-film="${_safe1}">`
-      :`<div class="pel-sheet-poster-ph" style="cursor:pointer" onclick="_openCombinedFilmSheet(JSON.parse(this.dataset.film))" data-film="${_safe1}">🎬</div>`;
-    const _si2=_sp2
-      ?`<img class="pel-sheet-poster" src="${_sp2}" loading="lazy" onerror="this.remove()" alt="" style="cursor:pointer" onclick="_openCombinedFilmSheet(JSON.parse(this.dataset.film))" data-film="${_safe2}">`
-      :`<div class="pel-sheet-poster-ph" style="cursor:pointer" onclick="_openCombinedFilmSheet(JSON.parse(this.dataset.film))" data-film="${_safe2}">🎬</div>`;
-    posterHtml=`<div class="pel-sheet-dual">${_si1}${_si2}</div>`;
+    const _img1=_sp1
+      ?`<img id="psp-img-0" class="pel-sheet-poster psp-visible" src="${_sp1}" loading="lazy" onerror="this.remove()" alt="">`
+      :`<div id="psp-img-0" class="pel-sheet-poster-ph psp-visible">🎬</div>`;
+    const _img2=_sp2
+      ?`<img id="psp-img-1" class="pel-sheet-poster psp-hidden" src="${_sp2}" loading="lazy" onerror="this.remove()" alt="">`
+      :`<div id="psp-img-1" class="pel-sheet-poster-ph psp-hidden">🎬</div>`;
+    posterHtml=`<div class="pel-sheet-poster-stage">${_img1}${_img2}<div class="psp-dots"><button class="psp-dot active" onclick="_pspSwap(0)"></button><button class="psp-dot" onclick="_pspSwap(1)"></button></div></div>`;
   } else {
     posterHtml=posterSrc
       ?`<img class="pel-sheet-poster" src="${posterSrc}" loading="lazy" onerror="this.remove()" alt="">`
@@ -7043,7 +7046,7 @@ function openPelSheet(title){
     <div class="pel-sheet-section-lbl">${f.type==='event'?'descripción':'sinopsis'}</div>
     <div class="pel-sheet-synopsis">${f.synopsis||'Sinopsis disponible próximamente.'}</div>
     ${cortosHtml}
-    ${(!f.is_cortos&&f.type!=='event')?`<a class="c-lb pel-sheet-lb" href="${lbUrl(f.title)}" target="_blank" rel="noopener">${LB_SVG}<span class="c-lb-text pel-sheet-lb-text">Letterboxd</span></a>`:''}
+    ${(!f.is_cortos&&!f.is_programa&&f.type!=='event')?`<a class="c-lb pel-sheet-lb" href="${lbUrl(f.title)}" target="_blank" rel="noopener">${LB_SVG}<span class="c-lb-text pel-sheet-lb-text">Letterboxd</span></a>`:''}
     <div class="pel-sheet-divider"></div>
     ${inW?`<div class="pel-sheet-ctas-watched">
         <button onclick="toggleWatched('${safeT}',event);closePelSheet()" class="pel-sheet-action-btn act-on">${ICONS.check} Ya vista</button>
@@ -7058,6 +7061,17 @@ function openPelSheet(title){
   `;
   document.getElementById('pel-overlay').classList.add('open');
   document.getElementById('pel-sheet').classList.add('open');
+}
+function _pspSwap(idx){
+  [0,1].forEach(i=>{
+    const img=document.getElementById('psp-img-'+i);
+    const dot=document.querySelectorAll('.psp-dot')[i];
+    if(!img||!dot) return;
+    const active=i===idx;
+    img.classList.toggle('psp-visible',active);
+    img.classList.toggle('psp-hidden',!active);
+    dot.classList.toggle('active',active);
+  });
 }
 function closePelSheet(){
   // Si hay contenido padre guardado, volvemos al programa en lugar de cerrar
