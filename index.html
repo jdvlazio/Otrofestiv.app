@@ -7250,7 +7250,6 @@ function _openCombinedFilmSheet(filmData){
     <div class="pel-sheet-divider"></div>
     <div class="pel-sheet-section-lbl">sinopsis</div>
     <div class="pel-sheet-synopsis">${synopsis||'Sinopsis no disponible.'}</div>
-    <a class="c-lb pel-sheet-lb" href="${lbHref}" target="_blank" rel="noopener">${LB_SVG}<span class="c-lb-text pel-sheet-lb-text">Letterboxd</span></a>
     <div class="pel-sheet-divider"></div>
   `;
   document.getElementById('pel-overlay').classList.add('open');
@@ -7304,9 +7303,9 @@ function openCortoSheet(title, country, duration, section, flags, director, genr
       </div>
     </div>
     <div class="pel-sheet-divider"></div>
-    ${syn?`<div class="pel-sheet-section-lbl">Sinopsis</div><div class="pel-sheet-synopsis">${syn}</div><div class="pel-sheet-divider" style="margin-top:16px"></div>`:''}
-    <a class="c-lb" href="${lbUrl(title)}" target="_blank" rel="noopener" style="display:inline-flex;margin-bottom:2px">${LB_SVG}<span class="c-lb-text">Letterboxd</span></a>
-    <div class="pel-sheet-divider" style="margin-top:16px"></div>
+    ${syn?`<div class="pel-sheet-section-lbl">sinopsis</div><div class="pel-sheet-synopsis">${syn}</div><div class="pel-sheet-divider"></div>`:''}
+    <a class="c-lb pel-sheet-lb" href="${lbUrl(title)}" target="_blank" rel="noopener">${LB_SVG}<span class="c-lb-text pel-sheet-lb-text">Letterboxd</span></a>
+    <div class="pel-sheet-divider"></div>
     ${parentTitle?`<div style="font-size:var(--t-xs);color:var(--gray);margin-bottom:8px">Al agregar un corto se incluye el programa completo</div>`:''}
     <div style="display:flex;gap:var(--sp-1);margin-top:4px">
       <button id="corto-wl-btn" class="pel-sheet-action-btn${inWL?' act-on':''}" onclick="toggleWL('${safeParent}',event)" style="display:inline-flex;align-items:center;justify-content:center;gap:var(--sp-1)">${inWL?ICONS.heartFill:ICONS.heart} ${inWL?'En Intereses':'Intereses'}</button>
