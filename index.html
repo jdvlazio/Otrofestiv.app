@@ -2391,10 +2391,11 @@ function makeProgramPoster(title, duration, section){
   const filmSec=section||((typeof FILMS!=='undefined'&&FILMS.find(f=>f.title===title))?.section)||'';
   const sec=filmSec.toLowerCase();
 
-  // Color canónico
-  let accent='#F59E0B';
-  if(sec.includes('nuevas voces')) accent='#3AAA6E';
-  else if(sec.includes('ficción')||sec.includes('ficcion')) accent='#E5A020';
+  // ── Paleta de 6 colores canónicos — asignados por hash de sección ──
+  // Consistente: misma sección → mismo color en cualquier festival
+  const ACCENT_PALETTE=['#F59E0B','#3AAA6E','#E5A020','#E05252','#378ADD','#3A8E8E'];
+  const _hash=s=>[...s].reduce((h,c)=>(Math.imul(31,h)+c.charCodeAt(0))|0,0);
+  const accent=ACCENT_PALETTE[Math.abs(_hash(sec))%ACCENT_PALETTE.length];
 
   // Header: sección limpia de emoji, uppercase, sin truncar vocablos
   const cleanSection=filmSec
