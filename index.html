@@ -2388,80 +2388,87 @@ function makeFilmPlaceholder(title, director, year){
 }
 
 function makeProgramPoster(title, duration, section){
-  // ── Sistema tipográfico v15 ──────────────────────────────────
-  // Fondo: surf-2 (#1A1A1A) neutro — sin tinte
-  // Variante A (tiene número): label arriba en blanco + número abajo en color de sección
-  // Variante B (nombre propio): título expande de abajo hacia arriba en blanco
-  // Color: solo en el número, derivado de la sección — paleta canónica de identidad
+  // ── Sistema tipográfico v16 ──────────────────────────────────
+  // Header sólido en color de sección (~30% superior) — señal inmediata
+  // Body surf-2: título blanco arriba + número en color abajo (si existe)
+  // Sin número: título expande. Paleta canónica de identidad.
   // ─────────────────────────────────────────────────────────────
+  const VW=120, VH=180, HDR=52, PAD=8;
 
-  const VW=120,VH=180;
-  const PAD=9;
-
-  // Color de sección según paleta de identidad
+  // Color de sección — paleta canónica
   const sec=(section||(FILMS.find(f=>f.title===title)?.section)||'').toLowerCase();
-  let accentColor='#F59E0B'; // amber — default
-  if(sec.includes('nuevas voces')||sec.includes('nuevas_voces')) accentColor='#3AAA6E';
-  else if(sec.includes('ficción')||sec.includes('ficcion')) accentColor='#E5A020';
-  else if(sec.includes('green')) accentColor='#3AAA6E';
+  let accent='#F59E0B'; // amber — default
+  if(sec.includes('nuevas voces')) accent='#3AAA6E';
+  else if(sec.includes('ficción')||sec.includes('ficcion')) accent='#E5A020';
 
-  // Extraer número del título si existe (ej: "Programa de cortos 1" → num=1)
+  // Label de sección — texto corto para el header
+  let headerLabel='PROGRAMA';
+  if(sec.includes('competencia')&&sec.includes('cort')) headerLabel='COMPETENCIA CORTOS';
+  else if(sec.includes('nuevas voces')) headerLabel='NUEVAS VOCES';
+  else if(sec.includes('ficción')||sec.includes('ficcion')) headerLabel='¿QUÉ ES LA FICCIÓN?';
+  else if(sec.includes('proyecci')) headerLabel='PROYECCIONES';
+  else if(sec.includes('iluminaci')) headerLabel='ILUMINACIONES';
+  else if(sec.includes('especial')) headerLabel='PROYECCIONES ESPECIALES';
+
+  // Extraer número del título
   const numMatch=title.match(/\s+(\d+)\s*$/);
   const num=numMatch?numMatch[1]:null;
 
-  // Label limpio — sin el número al final
-  let label=title
+  // Título limpio sin número
+  let cleanTitle=title
     .replace(/^Cortos:\s*/i,'')
-    .replace(/^Prog\.\s*de\s*Cortos\s*[—-]\s*/i,'')
     .replace(/\s+\d+\s*$/,'')
     .trim();
 
-  // Wrap de texto para SVG — máx ~14 chars/línea a 13px en 102px
-  function wrapText(str, maxChars){
-    const words=str.split(' ');
-    const lines=[];
+  // Word wrap para SVG
+  function wrap(str, maxCh){
+    const words=str.split(' '), lines=[];
     let cur='';
     for(const w of words){
-      if(cur&&(cur+' '+w).length>maxChars){lines.push(cur);cur=w;}
+      if(cur&&(cur+' '+w).length>maxCh){lines.push(cur);cur=w;}
       else cur=cur?cur+' '+w:w;
     }
     if(cur)lines.push(cur);
     return lines;
   }
 
-  let svgContent='';
+  // Header label — wrap a 13 chars, 6.5px
+  const hLines=wrap(headerLabel,14);
+  const hFS=6.5, hLD=9;
+  const hStartY=HDR/2-((hLines.length-1)*hLD/2)+hFS/2;
+  const headerText=hLines.map((l,i)=>
+    `<text x="${PAD}" y="${hStartY+i*hLD}" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="${hFS}" font-weight="800" letter-spacing="0.8" fill="#0A0A0A">${l}</text>`
+  ).join('');
+
+  // Body
+  const bodyY=HDR+PAD;
+  let bodyContent='';
 
   if(num){
-    // ── VARIANTE A: label arriba + número abajo ──
-    const lines=wrapText(label,13);
-    const FS=13,LD=16;
-    const titleY=PAD+FS; // primera línea
-    const titleLines=lines.map((l,i)=>
-      `<text x="${PAD}" y="${titleY+i*LD}" font-family="-apple-system,BlinkMacSystemFont,'Plus Jakarta Sans',sans-serif" font-size="${FS}" font-weight="800" fill="#F0EDE8" letter-spacing="-0.3">${l}</text>`
+    // Variante A: título arriba + número abajo
+    const tLines=wrap(cleanTitle,12);
+    const tFS=11, tLD=14;
+    const titleText=tLines.map((l,i)=>
+      `<text x="${PAD}" y="${bodyY+tFS+i*tLD}" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="${tFS}" font-weight="800" letter-spacing="-0.3" fill="#F0EDE8">${l}</text>`
     ).join('');
-
-    const numFS=28;
-    const numY=VH-PAD;
-    svgContent=`
-      ${titleLines}
-      <text x="${PAD}" y="${numY}" font-family="-apple-system,BlinkMacSystemFont,'Plus Jakarta Sans',sans-serif" font-size="${numFS}" font-weight="800" fill="${accentColor}" letter-spacing="-1">${num}</text>
-    `;
+    const numText=`<text x="${PAD}" y="${VH-PAD}" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="24" font-weight="800" letter-spacing="-1" fill="${accent}">${num}</text>`;
+    bodyContent=titleText+numText;
   } else {
-    // ── VARIANTE B: título expande desde abajo ──
-    const lines=wrapText(label,13);
-    const FS=13,LD=16;
-    // Anclar desde abajo
-    const totalH=lines.length*LD;
-    const startY=VH-PAD-totalH+LD;
-    const titleLines=lines.map((l,i)=>
-      `<text x="${PAD}" y="${startY+i*LD}" font-family="-apple-system,BlinkMacSystemFont,'Plus Jakarta Sans',sans-serif" font-size="${FS}" font-weight="800" fill="#F0EDE8" letter-spacing="-0.3">${l}</text>`
+    // Variante B: título expande desde abajo
+    const tLines=wrap(cleanTitle,12);
+    const tFS=11, tLD=14;
+    const totalH=tLines.length*tLD;
+    const startY=VH-PAD-totalH+tLD;
+    bodyContent=tLines.map((l,i)=>
+      `<text x="${PAD}" y="${startY+i*tLD}" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="${tFS}" font-weight="800" letter-spacing="-0.3" fill="#F0EDE8">${l}</text>`
     ).join('');
-    svgContent=titleLines;
   }
 
   const svg=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${VW} ${VH}">
     <rect width="${VW}" height="${VH}" fill="#1A1A1A"/>
-    ${svgContent}
+    <rect width="${VW}" height="${HDR}" fill="${accent}"/>
+    ${headerText}
+    ${bodyContent}
   </svg>`;
 
   return `data:image/svg+xml,${encodeURIComponent(svg)}`;
