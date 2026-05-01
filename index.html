@@ -3334,7 +3334,7 @@ function renderMiPlanCalendar(){
       const _mph=_mp
         ?`<img class="lb-poster" src="${_mp}" loading="lazy" style="cursor:pointer" onclick="event.stopPropagation();openPelSheet('${_safeMpT}')" onerror="this.remove()" alt="">`
         :_isEventRow
-          ?`<div style="cursor:pointer;flex-shrink:0" onclick="event.stopPropagation();openPelSheet('${_safeMpT}')">${makeEventPoster(_mf.title,_mf.duration).replace('<svg','<svg style="width:40px;height:60px;border-radius:var(--r-sm);display:block"')}</div>`
+          ?`<div style="cursor:pointer;flex-shrink:0" onclick="event.stopPropagation();openPelSheet('${_safeMpT}')">${makeEventPoster(_mf.title,_mf.duration,_mf.event_kind).replace('<svg','<svg style="width:40px;height:60px;border-radius:var(--r-sm);display:block"')}</div>`
           :`<div class="lb-poster-ph" onclick="event.stopPropagation();openPelSheet('${_safeMpT}')">🎬</div>`;
       listHtml+=`<div class="mplan-row${_rowKey===_activeMiPlanFilm?' active':''}" style="cursor:pointer" data-rkey="${_safeRowKey}" onclick="selectFromDetail(this)">
         ${_mph}
@@ -5148,7 +5148,7 @@ function renderContextualHeader(){
         ${src
           ?`<img class="ctx-next-poster" src="${src}" onerror="this.remove()" alt="">`
           :_isEvent
-            ?makeEventPoster(next._title,next.duration).replace('<svg','<svg class="ctx-next-poster" style="width:36px;height:54px;border-radius:var(--r-sm);flex-shrink:0"')
+            ?makeEventPoster(next._title,next.duration,next.event_kind).replace('<svg','<svg class="ctx-next-poster" style="width:36px;height:54px;border-radius:var(--r-sm);flex-shrink:0"')
             :`<div class="ctx-next-poster" style="background:var(--surf-3)"></div>`}
         <div style="flex:1;min-width:0">
           <div class="ctx-next-title-row">
@@ -7446,7 +7446,7 @@ function renderMiPlanList(schedule){
           ${src
             ?`<img class="mplan-list-poster" src="${src}" loading="lazy" onerror="this.remove()" alt="" style="${isPassed?'opacity:.35':''}">`
             :_lIsEvent
-              ?makeEventPoster(_lmf.title,_lmf.duration).replace('<svg','<svg class="mplan-list-poster" style="flex-shrink:0;display:block"')
+              ?makeEventPoster(_lmf.title,_lmf.duration,_lmf.event_kind).replace('<svg','<svg class="mplan-list-poster" style="flex-shrink:0;display:block"')
               :`<div class="mplan-list-poster"></div>`}
           <div class="mplan-list-info">
             <div class="mplan-list-title" style="${isPassed?'opacity:.35':''}">${dt}</div>
@@ -7845,7 +7845,7 @@ function _renderExploreLista(){
     const allPast=screenings.every(s=>screeningPassed(s));
     const days=[...new Set(screenings.map(s=>DAY_SHORT[s.day]||s.day))].join(' · ');
     if(isEvent) return`<div class="plist-item plist-event" style="${allPast?'opacity:.35':''}" onclick="openPelSheet('${safeT}')">
-      <img class="plist-poster" src="${makeEventPoster(dt,f.duration)}" alt="${dt}">
+      <img class="plist-poster" src="${makeEventPoster(dt,f.duration,f.event_kind)}" alt="${dt}">
       <div class="plist-info">
         <div class="plist-title" style="color:var(--gray2);font-weight:var(--w-semi)">${dt}</div>
         <div class="plist-meta">${f.duration||''} · ${days}</div>
