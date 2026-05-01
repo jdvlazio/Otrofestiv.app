@@ -587,6 +587,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .empty-state-sub{font-size:var(--t-sm);color:var(--gray);line-height:1.6;max-width:260px}
 .empty-state-hero .empty-state-sub{font-size:var(--t-base);max-width:280px}
 .empty-state-cta{background:var(--amber);border:none;color:#000;font-family:var(--font);font-size:var(--t-base);font-weight:var(--w-bold);padding:var(--sp-btn) var(--sp-6);border-radius:var(--r-pill);cursor:pointer;margin-top:var(--sp-3)}
+.empty-state-cta-sec{background:transparent;border:1px solid var(--amber-30);color:var(--amber);font-family:var(--font);font-size:var(--t-base);font-weight:var(--w-bold);padding:var(--sp-btn) var(--sp-6);border-radius:var(--r-pill);cursor:pointer;margin-top:var(--sp-3)}
 
 .empty{grid-column:1/-1}
 .empty span{font-size:var(--t-display);display:block;margin-bottom:var(--sp-3)}
@@ -3720,13 +3721,13 @@ const emptyState = (icon, title, sub='') =>
   </div>`;
 
 // Hero: para pantallas completas vacías — Mi Plan, Intereses, Planear
-// REGLA: CTA siempre con .empty-state-cta (ámbar sólido, texto negro)
-const emptyStateHero = (icon, title, sub='', ctaLabel='', ctaOnclick='') =>
+// REGLA: CTA primario → .empty-state-cta (ámbar sólido, texto negro). Secundario → pasar ctaSecondary=true
+const emptyStateHero = (icon, title, sub='', ctaLabel='', ctaOnclick='', ctaSecondary=false) =>
   `<div class="empty-state-hero">
     <div class="empty-state-icon">${icon}</div>
     <div class="empty-state-title">${title}</div>
     ${sub ? `<div class="empty-state-sub">${sub}</div>` : ''}
-    ${ctaLabel ? `<button class="empty-state-cta" onclick="${ctaOnclick}">${ctaLabel}</button>` : ''}
+    ${ctaLabel ? `<button class="${ctaSecondary?'empty-state-cta-sec':'empty-state-cta'}" onclick="${ctaOnclick}">${ctaLabel}</button>` : ''}
   </div>`;
 let avAddOpen={};
 /* ── Sistema de modales de confirmación ── */
@@ -5242,10 +5243,15 @@ function renderContextualHeader(){
 }
 
 function _renderSavedAgendaHTML(){
-  // Post-festival: el ENDED header es el contenido completo
   if(festivalEnded()){
-    const _eh=renderContextualHeader();
-    return _eh?`<div class="saved-agenda">${_eh}</div>`:'';
+    // Con películas vistas: poster grid via renderContextualHeader
+    if(watched.size>0){
+      const _eh=renderContextualHeader();
+      return _eh?`<div class="saved-agenda">${_eh}</div>`:'';
+    }
+    // Sin películas vistas: empty state canónico
+    const _festNameMp=(FESTIVAL_CONFIG[_activeFestId]||{}).name||'El festival';
+    return emptyStateHero(ICONS.star,`${_festNameMp} ha terminado`,'No marcaste ninguna película como vista.','Explorar Programa',"switchMainNav('mnav-cartelera');showDayView()");
   }
   if(!savedAgenda||!savedAgenda.schedule.length) return emptyStateHero(ICONS.calendar,'Tu plan aparecerá aquí','Añade lo que no quieres perderte y armamos tu plan.','Ir a Planear',"switchMainNav('mnav-planner');showAgView()");
   const all=savedAgenda.schedule;
@@ -6341,16 +6347,8 @@ function renderAgenda(){
     // ── Planear: stepper de progreso + prio strip + disponibilidad + opciones ──
     if(festivalEnded()){
       // Post-festival: Planear no tiene función — redirigir a Mi Plan
-      view.innerHTML=`<div style="text-align:center;padding:48px 24px">
-        <div style="font-size:var(--t-display);margin-bottom:16px">🎬</div>
-        <div style="font-weight:var(--w-bold);color:var(--white);font-size:var(--t-lg);margin-bottom:8px">${(FESTIVAL_CONFIG[_activeFestId]||{}).name||'El festival'} ha terminado</div>
-        <div style="font-size:var(--t-sm);color:var(--gray);line-height:1.6;margin-bottom:24px;max-width:260px;margin-left:auto;margin-right:auto">
-          El festival ya concluyó. Revisá las películas que viste en Mi Plan.
-        </div>
-        <button onclick="switchMainNav('mnav-miplan');showAgView()" style="background:var(--amber-10);border:1px solid var(--amber-30);color:var(--amber);font-family:var(--font);font-size:var(--t-sm);font-weight:var(--w-bold);padding:var(--sp-btn) var(--sp-5);border-radius:var(--r-pill);cursor:pointer">
-          Ver Mi Plan
-        </button>
-      </div>`;
+      const _festNamePl=(FESTIVAL_CONFIG[_activeFestId]||{}).name||'El festival';
+      view.innerHTML=emptyStateHero(ICONS.checkCircle,`${_festNamePl} ha terminado`,'El festival concluyó. Revisá las películas que viste en Mi Plan.',"Ver Mi Plan","switchMainNav('mnav-miplan');showAgView()",true);
       return;
     }
     const _progressHtml=(!savedAgenda||!savedAgenda.schedule||!savedAgenda.schedule.length)?renderFlowProgress('planner'):'';
