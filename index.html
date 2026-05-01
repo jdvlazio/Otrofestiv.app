@@ -738,12 +738,11 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .poster-card{position:relative;border-radius:var(--r-md);overflow:hidden;cursor:pointer;background:var(--surf-2);background-size:cover;background-position:center;aspect-ratio:2/3;display:block}
 .poster-card-stack{width:100%;height:100%;display:flex;gap:1px;background:var(--bdr)}
 .pcs-back,.pcs-front{flex:1;height:100%;object-fit:cover;object-position:center;display:block;min-width:0}
-.pel-sheet-poster-stage{position:relative;flex-shrink:0;width:var(--poster-lg-w);height:calc(var(--poster-lg-h) + 44px)}
-.psp-card{position:absolute;left:0;width:var(--poster-lg-w);height:var(--poster-lg-h);object-fit:cover;border-radius:var(--r-md);cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:transparent;transition:transform 320ms cubic-bezier(0.34,1.4,0.64,1),opacity 320ms ease,box-shadow 320ms ease;will-change:transform}
-.psp-front{top:0;z-index:2;transform:translateY(0) scale(1);opacity:1;box-shadow:0 6px 20px rgba(0,0,0,.75)}
-.psp-back{top:0;z-index:1;transform:translateY(44px) scale(0.92);opacity:.65;box-shadow:none}
-.psp-card-ph{display:flex;align-items:center;justify-content:center;background:var(--surf-2);font-size:var(--t-display)}
-.psp-swap-zone{position:absolute;top:var(--poster-lg-h);left:0;right:0;height:44px;z-index:3;cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+.pel-sheet-poster-stage{display:flex;gap:1px;background:var(--bdr);flex-shrink:0;width:var(--poster-lg-w);height:var(--poster-lg-h);border-radius:var(--r-md);overflow:hidden}
+.psp-card{flex:1;height:100%;object-fit:cover;object-position:center;display:block;min-width:0;cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+.psp-front,.psp-back{/* split visual — sin posicionamiento absoluto */}
+.psp-card-ph{flex:1;height:100%;display:flex;align-items:center;justify-content:center;background:var(--surf-2);font-size:var(--t-sm)}
+.psp-swap-zone{display:none}
 .ended-poster .ended-poster-footer{position:absolute;bottom:0;left:0;right:0;padding:16px 6px 6px;background:linear-gradient(to top,rgba(0,0,0,.8),transparent);display:flex;flex-direction:column;gap:2px;align-items:center}
 .ended-poster-title{font-size:var(--t-xs);color:rgba(255,255,255,.8);text-align:center;line-height:1.2;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;max-width:100%}
 .ended-rate-btn{background:var(--overlay-60);border:1px solid var(--white-20);border-radius:var(--r-pill);color:var(--white);font-size:var(--t-xs);font-weight:var(--w-bold);font-family:var(--font);padding:2px 6px;cursor:pointer}
@@ -6975,12 +6974,12 @@ function openPelSheet(title){
     const _fd1=JSON.stringify(f.film_list[0]).replace(/"/g,'&quot;');
     const _fd2=JSON.stringify(f.film_list[1]).replace(/"/g,'&quot;');
     const _c1=_sp1
-      ?`<img id="psp-img-0" class="psp-card psp-front" src="${_sp1}" loading="lazy" onerror="this.style.opacity=0" alt="">`
-      :`<div id="psp-img-0" class="psp-card psp-front psp-card-ph">🎬</div>`;
+      ?`<img class="psp-card psp-front" src="${_sp1}" loading="lazy" onerror="this.style.opacity=0" alt="" onclick="_openCombinedFilmSheet(JSON.parse(this.dataset.film))" data-film="${_fd1}">`
+      :`<div class="psp-card-ph" onclick="_openCombinedFilmSheet(JSON.parse(this.dataset.film))" data-film="${_fd1}">🎬</div>`;
     const _c2=_sp2
-      ?`<img id="psp-img-1" class="psp-card psp-back" src="${_sp2}" loading="lazy" onerror="this.style.opacity=0" alt="">`
-      :`<div id="psp-img-1" class="psp-card psp-back psp-card-ph">🎬</div>`;
-    posterHtml=`<div class="pel-sheet-poster-stage" id="psp-stage" data-front="0" data-film0="${_fd1}" data-film1="${_fd2}">${_c1}${_c2}<div class="psp-swap-zone" id="psp-swap-zone"></div></div>`;
+      ?`<img class="psp-card psp-back" src="${_sp2}" loading="lazy" onerror="this.style.opacity=0" alt="" onclick="_openCombinedFilmSheet(JSON.parse(this.dataset.film))" data-film="${_fd2}">`
+      :`<div class="psp-card-ph" onclick="_openCombinedFilmSheet(JSON.parse(this.dataset.film))" data-film="${_fd2}">🎬</div>`;
+    posterHtml=`<div class="pel-sheet-poster-stage">${_c1}${_c2}</div>`;
   } else {
     posterHtml=posterSrc
       ?`<img class="pel-sheet-poster" src="${posterSrc}" loading="lazy" onerror="this.remove()" alt="">`
