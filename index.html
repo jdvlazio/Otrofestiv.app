@@ -5148,7 +5148,7 @@ function renderContextualHeader(){
         ${src
           ?`<img class="ctx-next-poster" src="${src}" onerror="this.remove()" alt="">`
           :_isEvent
-            ?makeEventPoster(next._title,next.duration,next.event_kind).replace('<svg','<svg class="ctx-next-poster" style="width:36px;height:54px;border-radius:var(--r-sm);flex-shrink:0"')
+            ?makeEventPoster(next._title,next.duration,_filmObj?.event_kind).replace('<svg','<svg class="ctx-next-poster" style="width:36px;height:54px;border-radius:var(--r-sm);flex-shrink:0"')
             :`<div class="ctx-next-poster" style="background:var(--surf-3)"></div>`}
         <div style="flex:1;min-width:0">
           <div class="ctx-next-title-row">
