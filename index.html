@@ -4924,13 +4924,12 @@ function _getFestivalPhase(){
     // ENDED: resumen post-festival
     const totalWatched=[...watched].length;
     const totalPlanned=savedAgenda&&savedAgenda.schedule?savedAgenda.schedule.length:0;
-    // Calificaciones pendientes: programas vistos sin rating + cortos individuales sin rating
-    const _cortoPendRatings=FILMS.filter(f=>f.is_cortos&&f.film_list?.length&&watched.has(f.title))
-      .reduce((acc,prog)=>acc+prog.film_list.filter(c=>!filmRatings[c.title]).length,0);
+    // Calificaciones pendientes: solo films no-cortos sin rating
+    // (is_cortos no tienen botón Calificar — contar cortos individuales sería cifra irresoluble)
     const pendingRatings=[...watched].filter(t=>{
       const f=FILMS.find(fi=>fi.title===t);
-      return f&&!f.is_cortos&&!filmRatings[t]; // programas de larga duración sin rating
-    }).length+_cortoPendRatings;
+      return f&&!f.is_cortos&&!filmRatings[t];
+    }).length;
     return{phase:'ended',totalWatched,totalPlanned,pendingRatings};
   }
   if(!savedAgenda||!savedAgenda.schedule||!savedAgenda.schedule.length) return null;
@@ -6038,6 +6037,8 @@ function savePVRating(){
     showToast(stars[Math.round(_pvRating)]||'★ Calificada','info');
   }
   closePVRating();
+  // Re-render MI PLAN para actualizar contador de pendientes y orden de pósters
+  if(activeMNav==='mnav-miplan') renderAgenda();
 }
 
 function closePVRating(){
