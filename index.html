@@ -8000,7 +8000,12 @@ function render(){
     const safeT=f.title.replace(/'/g,"\'");
     const posterSrc=getFilmPoster(f);
     const _needsBg2=posterSrc&&posterSrc.startsWith('http');
-    const _cardBg2=_needsBg2?` style="background-image:url(${makeFilmPlaceholder(f.title,f.director,f.year)})"`:'';
+    const _cardBg2='';
+    const posterImg=posterSrc&&posterSrc.startsWith('http')
+      ?`<img src="${posterSrc}" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block" onerror="this.remove()" alt="">`
+      :posterSrc
+        ?`<img src="${posterSrc}" style="width:100%;height:100%;object-fit:cover;display:block" alt="">`
+        :``;
     const posterImg=posterSrc
       ?`<img src="${posterSrc}" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block" onerror="this.remove()" alt="">`
       :``;
