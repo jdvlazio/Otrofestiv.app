@@ -2388,32 +2388,44 @@ function makeFilmPlaceholder(title, director, year){
 }
 
 function makeProgramPoster(title, duration, section){
-  const sec=(section||((typeof FILMS!=='undefined'&&FILMS.find(f=>f.title===title))?.section)||'').toLowerCase();
+  const filmSec=section||((typeof FILMS!=='undefined'&&FILMS.find(f=>f.title===title))?.section)||'';
+  const sec=filmSec.toLowerCase();
+
+  // Color canónico
   let accent='#F59E0B';
   if(sec.includes('nuevas voces')) accent='#3AAA6E';
   else if(sec.includes('ficción')||sec.includes('ficcion')) accent='#E5A020';
 
-  let headerLabel='PROGRAMA';
-  if(sec.includes('competencia')&&sec.includes('cort')) headerLabel='COMPETENCIA CORTOS';
-  else if(sec.includes('nuevas voces')) headerLabel='NUEVAS VOCES';
-  else if(sec.includes('ficción')||sec.includes('ficcion')) headerLabel='¿QUÉ ES LA FICCIÓN?';
-  else if(sec.includes('proyecci')) headerLabel='PROYECCIONES';
-  else if(sec.includes('iluminaci')) headerLabel='ILUMINACIONES';
-  else if(sec.includes('especial')) headerLabel='PROYECCIONES ESPECIALES';
+  // Header: sección limpia de emoji, uppercase, sin truncar vocablos
+  const cleanSection=filmSec
+    .replace(/\p{Emoji}/gu,'')
+    .replace(/[^\w\sáéíóúüñÁÉÍÓÚÜÑ¿!?()·\-]/gu,'')
+    .trim()
+    .toUpperCase()
+    .substring(0,28);
+  const headerLabel=cleanSection||'PROGRAMA';
 
-  const numMatch=title.match(/\s+(\d+)\s*$/);
-  const num=numMatch?numMatch[1]:null;
+  // Número — patrones: "Prog. 4", "Prog. 1 · 16mm", "Voces 2", número al final
+  const numMatch=title.match(/(?:Prog\.\s*|Programa\s+)(\d+)|(?:—\s*|:\s*|Prog\.\s*)(\d+)\s*(?:·|$)|\s(\d+)\s*$/);
+  const num=numMatch?(numMatch[1]||numMatch[2]||numMatch[3]):null;
 
-  // Título distintivo — sin número, sin prefijos redundantes con el header
-  let bodyTitle=num
-    ? '' // Con número: el número es suficiente, sin texto adicional
-    : title
-        .replace(/^Programa\s+/i,'')
-        .replace(/^Cortos:\s*/i,'')
-        .replace(/^Competencia\s+/i,'')
-        .replace(/¿qué es la ficción\?/i,'')
-        .replace(/^Nuevas voces\s*/i,'')
-        .trim();
+  // Body: siempre vacío cuando hay número (el header + número son suficientes)
+  // Sin número: extraer solo la parte distintiva
+  let bodyTitle='';
+  if(!num){
+    const secBase=filmSec.replace(/\p{Emoji}/gu,'').replace(/[^\w\sáéíóúüñÁÉÍÓÚÜÑ¿!()·\-]/gu,'').trim();
+    bodyTitle=title
+      .replace(/—?\s*Prog\.\s*(?:de\s+)?Cortos\s*$/i,'')
+      .replace(/—?\s*Prog\.\s*Cortometrajes\s*—?\s*/i,'')
+      .replace(new RegExp('^'+secBase.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+'\\s*—?\\s*','i'),'')
+      .replace(/^Cortos:\s*/i,'')
+      .replace(/^Programa\s+/i,'')
+      .replace(/^Competencia\s+/i,'')
+      .trim();
+    // Si lo que queda es subcadena del header, no vale la pena mostrarlo
+    if(!bodyTitle||headerLabel.includes(bodyTitle.toUpperCase())||bodyTitle.toUpperCase().includes(headerLabel)||/^[^a-zA-ZáéíóúüñÁÉÍÓÚÜÑ0-9]+$/.test(bodyTitle))
+      bodyTitle='';
+  }
 
   return _buildPosterV16({accent, headerLabel, title:bodyTitle, num});
 }
@@ -2592,9 +2604,10 @@ function makeEventPoster(title,duration,eventKind){
   };
   const kind=_kindMap[eventKind];
   if(kind) return _buildPosterV16({...kind, title, num:null});
-  // Fallback — usa eventPosterLabel del config del festival
-  const lbl=((festCfg.eventPosterLabel)||['EVENTO',''])[0];
-  return _buildPosterV16({accent:'#6B9BD1', headerLabel:lbl, title, num:null});
+  // Fallback — usa eventPosterLabel del config del festival (puede ser ['INDUSTRY','DAYS'])
+  const lbl=((festCfg.eventPosterLabel)||['EVENTO','']);
+  const headerLabel=lbl.filter(Boolean).join(' ');
+  return _buildPosterV16({accent:'#6B9BD1', headerLabel, title, num:null});
 }
 
 /* ══════════════════════════════════════════════════════════════
