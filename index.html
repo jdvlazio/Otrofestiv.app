@@ -693,6 +693,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .programa-chips::-webkit-scrollbar{display:none}
 .programa-chips{-webkit-overflow-scrolling:touch}
 .programa-chips.hidden{display:none}
+.programa-chips{position:sticky;top:var(--sticky-top-chips);z-index:195;background:var(--surf)}
 .pchip{flex-shrink:0;font-size:var(--t-sm);font-weight:var(--w-bold);color:var(--gray);background:none;border:1px solid var(--bdr);border-radius:var(--r-pill);padding:var(--sp-1) var(--sp-3);cursor:pointer;font-family:var(--font);white-space:nowrap;transition:all var(--tr-base)}
 .pchip.on{background:var(--amber-10);border-color:var(--amber-30);color:var(--amber)}
 .pchip[data-chip="all"].on{background:var(--surf-2);border-color:var(--bdr);color:var(--white-60)}
@@ -2147,14 +2148,14 @@ html.splash-skip #otrofestiv-splash{display:none}
     </button>
   </div>
 </div>
-<!-- Chips de categoría — solo Explorar -->
-<div class="programa-chips hidden" id="programa-chips"></div>
 <div id="cartelera-cta" style="display:none">
   <div class="cartelera-cta">
     <span class="cartelera-cta-text">Toca <span style="color:var(--amber)">♥</span> en cualquier título para añadirlo a <b>Intereses</b></span>
   </div>
 </div>
 </div>
+<!-- Chips de categoría — sticky, fuera de #hdr-programa para mantener chrome uniforme (38px en todos los tabs) -->
+<div class="programa-chips hidden" id="programa-chips"></div>
 <!-- Tag activo dismissible -->
 <div class="programa-active-filter" id="programa-active-filter">
   <div class="paf-tag" id="paf-tag" onclick="clearProgramaChip()">
@@ -8431,13 +8432,21 @@ function closeFestivalSheet(){
    Runs synchronously + on resize. Desktop only (mobile uses CSS 47px). */
 function _fixStickyOffset(){
   const tb=document.querySelector('.topbar');
-  if(!tb||window.innerWidth<768) return;
-  const h=Math.ceil(tb.getBoundingClientRect().height)||130;
+  if(!tb) return;
+  const isMobile=window.innerWidth<768;
+  const tbH=Math.ceil(tb.getBoundingClientRect().height)||(isMobile?47:130);
+  const modeH=38; // .pmode-tab min-height
+  const chipsH=44; // .programa-chips approx
   const r=document.documentElement.style;
-  r.setProperty('--tb-total',h+'px');
-  r.setProperty('--sticky-top-carta',h+'px');
-  r.setProperty('--sticky-top-modebar',(h+44)+'px');
-  r.setProperty('--sticky-top-chips',(h+44+42)+'px');
+  if(!isMobile){
+    r.setProperty('--tb-total',tbH+'px');
+    r.setProperty('--sticky-top-carta',tbH+'px');
+    r.setProperty('--sticky-top-modebar',(tbH+modeH)+'px');
+  }
+  // --sticky-top-chips: runs on both mobile and desktop
+  const modeBarH=document.getElementById('programa-mode-bar')?.offsetHeight||modeH;
+  const hdrH=document.getElementById('hdr-programa')?.offsetHeight||tbH;
+  r.setProperty('--sticky-top-chips',hdrH+'px');
 }
 _fixStickyOffset();
 window.addEventListener('resize',function(){requestAnimationFrame(_fixStickyOffset);});
