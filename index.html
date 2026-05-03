@@ -2181,7 +2181,6 @@ html.splash-skip #otrofestiv-splash{display:none}
       <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>
       <span id="pmode-filter-lbl">Lugar</span>
     </button>
-    <div class="fdr-panel" id="vdr-panel" style="top:100%;right:0;min-width:200px;max-width:260px;max-height:50vh"></div>
     <!-- single toggle btn — icono refleja estado actual -->
     <button class="view-toggle-btn" id="view-toggle-btn" onclick="toggleProgramaView()" title="Cambiar vista" aria-label="Cambiar vista">
       <svg id="view-toggle-ico-grid" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
@@ -7734,24 +7733,31 @@ function toggleProgramaFilter(){
   const btn=document.getElementById('pmode-filter-btn');
   const panel=document.getElementById('vdr-panel');
   if(!panel) return;
-  const isOpen=panel.classList.contains('open');
-  closeDropdowns();
-  if(!isOpen){
-    renderVbar();
-    panel.classList.add('open');
-    if(btn) btn.classList.add('active');
-    // Close on outside click
-    const onOutside=e=>{
-      if(!panel.contains(e.target)&&e.target!==btn){
-        panel.classList.remove('open');
-        if(btn) btn.classList.remove('active');
-        document.removeEventListener('click',onOutside,true);
-      }
-    };
-    setTimeout(()=>document.addEventListener('click',onOutside,true),0);
-  } else {
+  const isOpen=panel.style.display==='block';
+  // Close if already open
+  if(isOpen){
+    panel.style.display='none';
     if(btn) btn.classList.remove('active');
+    return;
   }
+  // Fill panel
+  renderVbar();
+  // Position using fixed coords from button rect
+  const r=btn?btn.getBoundingClientRect():{bottom:100,right:window.innerWidth-16};
+  panel.style.top=(r.bottom+4)+'px';
+  panel.style.right=(window.innerWidth-r.right)+'px';
+  panel.style.left='auto';
+  panel.style.display='block';
+  if(btn) btn.classList.add('active');
+  // Close on outside tap — capture phase so it fires before anything else
+  const onOutside=e=>{
+    if(!panel.contains(e.target)&&e.target!==btn){
+      panel.style.display='none';
+      if(btn) btn.classList.remove('active');
+      document.removeEventListener('click',onOutside,true);
+    }
+  };
+  setTimeout(()=>document.addEventListener('click',onOutside,true),10);
 }
 
 function _updateProgramaActiveFilter(){
@@ -8710,5 +8716,7 @@ if('serviceWorker' in navigator){
 
 <button id="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Volver arriba">↑</button>
 
+<!-- vdr-panel: body-level, position:fixed, positioned by JS -->
+<div class="fdr-panel" id="vdr-panel" style="position:fixed;min-width:200px;max-width:min(260px,90vw);max-height:50vh;z-index:9999;display:none"></div>
 </body>
 </html>
