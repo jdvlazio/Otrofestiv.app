@@ -6727,7 +6727,13 @@ function toggleDropdown(id){
   const arrow=document.getElementById(id+'-arrow');
   const isOpen=panel.classList.contains('open');
   closeDropdowns();
-  if(!isOpen){panel.classList.add('open');if(arrow) arrow.classList.add('open');}
+  if(!isOpen){
+    // Render panel contents before opening
+    if(id==='vdr') renderVbar();
+    else if(id==='sdr') renderSbar();
+    panel.classList.add('open');
+    if(arrow) arrow.classList.add('open');
+  }
 }
 function closeDropdowns(){
   document.querySelectorAll('.fdr-panel').forEach(p=>p.classList.remove('open'));
