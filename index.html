@@ -8775,8 +8775,8 @@ function seccionOpen(){
 
   drop.innerHTML = opts.map(o=>{
     const isActive = o.sec==='all' ? activeSec==='all' : activeSec===o.sec;
-    const chip = o.sec!=='all' ? PROGRAMA_CHIPS.find(c=>c.match&&c.match(o.sec)) : null;
-    const displayLabel = chip ? chip.label : o.label;
+    // Usar el nombre real de la sección — ya incluye emoji propio
+    const displayLabel = o.label;
     return '<div class="lugar-opt'+(isActive?' on':'')+'" data-s="'+o.sec.replace(/"/g,'&quot;')+'">'
       +'<span>'+displayLabel+'</span>'
       +'<span class="lugar-cnt">'+o.count+'</span>'
