@@ -3604,9 +3604,11 @@ function searchFilms(query){
     .slice(0,8);
 }
 function onSearchInput(){
-  const q=document.getElementById('ag-search-input').value.trim();
+  // ag-search-input eliminado — búsqueda ahora en onGlobalSearch()
+  return;
+  const q=document.getElementById('ag-search-input')?.value.trim()||'';
   const res=document.getElementById('ag-search-results');
-  if(!q||q.length<2){res.classList.remove('open');return;}
+  if(!q||q.length<2){if(res) res.classList.remove('open');return;}
   const films=searchFilms(q);
   if(!films.length){res.innerHTML=emptyState(ICONS.search,'Sin resultados.');res.classList.add('open');return;}
   res.innerHTML=films.map(f=>{
@@ -3625,7 +3627,7 @@ function onSearchInput(){
 }
 function addFromSearch(title){
   if(!watchlist.has(title)){watchlist.add(title);watched.delete(title);saveState('wl','watched');updateCardState(title);updateAgTab();}
-  onSearchInput();
+  closeGlobalSearch();
   const listEl=document.getElementById('ag-film-list');if(listEl) listEl.innerHTML=renderFilmListHTML();
 }
 function removeFromAgenda(title){
@@ -3685,7 +3687,7 @@ function addSuggestion(title,day,time){
   // 5. Re-render
   renderAgenda();
 }
-function closeSearch(){setTimeout(()=>{const r=document.getElementById('ag-search-results');if(r) r.classList.remove('open');},200);}
+function closeSearch(){closeGlobalSearch();}
 
 // ── AVAILABILITY ──
 // ─────────────────────────────────────────────────────────────────────────────
@@ -6528,6 +6530,8 @@ document.addEventListener('click',e=>{
 });
 
 function onCartaSearch(){
+  // Legacy — búsqueda ahora en onGlobalSearch(). Redirigir si se llama.
+  onGlobalSearch(); return;
   const inp=document.getElementById('carta-search-input');
   const res=document.getElementById('carta-search-results');
   const clr=document.getElementById('carta-search-clear');
@@ -6598,12 +6602,8 @@ function onCartaSearch(){
 }
 
 function clearCartaSearch(){
-  const inp=document.getElementById('carta-search-input');
-  const res=document.getElementById('carta-search-results');
-  const clr=document.getElementById('carta-search-clear');
-  if(inp) inp.value='';
-  if(res){res.classList.remove('open');res.innerHTML='';}
-  if(clr) clr.classList.remove('visible');
+  // Redirige al nuevo sistema global
+  closeGlobalSearch();
 }
 
 // Cerrar al tocar fuera
