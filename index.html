@@ -4547,101 +4547,112 @@ function renderPrioStrip(){
 function renderFilmListHTML(){
   const prioList=[...prioritized].filter(t=>!watched.has(t));
   const nonPrioList=[...watchlist].filter(t=>!watched.has(t)&&!prioritized.has(t));
-  const allPending=[...new Set([...prioList,...nonPrioList])];
   const watchedList=[...watched];
 
-  const mkItem=(t,listMode=false)=>{
-    const f=FILMS.find(fi=>fi.title===t);
-    const hasFuture=FILMS.some(fi=>fi.title===t&&!screeningPassed(fi));
-    const posterSrc=f?(getFilmPoster(f)):null;
-    const isPrio=prioritized.has(t);
-    const safeT=t.replace(/"/g,'&quot;');
-    const{displayTitle,progSuffix}=parseProgramTitle(t);
-    const safeTQ=t.replace(/'/g,"\'");
-    // En modo lista: usar plist-item (mismo CSS que Programa) en lugar de ag-film-item
-    if(listMode){
-      const _ps=posterSrc?`<img class="plist-poster" src="${posterSrc}" loading="eager" onerror="this.remove()" alt="">`:`<div class="plist-poster"></div>`;
-      const allFilmDays=FILMS.filter(fi=>fi.title===t);
-      const dayChips=[...new Set(allFilmDays.map(fi=>fi.day).filter(Boolean))].map(day=>{
-        const passed=FILMS.filter(fi=>fi.title===t&&fi.day===day).every(fi=>screeningPassed(fi));
-        return`<span style="${passed?'opacity:.35':''}color:var(--gray)">${DAY_SHORT[day]||day}</span>`;
-      }).join(' · ');
-      return`<div class="plist-item" onclick="openPelSheet('${safeTQ}')">
-        ${_ps}
-        <div class="plist-info">
-          <div class="plist-title">${displayTitle}${isPrio?` <span style="color:var(--orange);font-size:var(--t-xs)">${ICONS.starFill}</span>`:''}${progSuffix?` <span style="color:var(--orange);font-size:var(--t-xs);font-weight:var(--w-bold)">${progSuffix}</span>`:''}</div>
-          <div class="plist-sec">${f?.section||''}</div>
-          <div class="plist-meta">${dayChips?`${dayChips} · `:''}${f?.duration||''}</div>
-        </div>
-      </div>`;
+  if(!prioList.length&&!nonPrioList.length&&!watchedList.length){
+    return emptyStateHero(ICONS.heart,'Tu lista está vacía','Guarda películas desde Explorar para construir tu plan.','Explorar Programa',"switchMainNav('mnav-cartelera');showDayView()");
+  }
+
+  // ── Próxima función futura de un film ──────────────────────────────────
+  function _nextScreening(title){
+    const future=FILMS.filter(f=>f.title===title&&!screeningPassed(f))
+      .sort((a,b)=>{ const d=(a.day_order||0)-(b.day_order||0); return d||toMin(a.time)-toMin(b.time); });
+    return future[0]||null;
+  }
+
+  // ── Detecta conflicto con agenda guardada ──────────────────────────────
+  function _hasConflict(title){
+    if(!savedAgenda?.schedule?.length) return null;
+    const next=_nextScreening(title);
+    if(!next) return null;
+    for(const s of savedAgenda.schedule){
+      const sf=FILMS.find(f=>f.title===s.filmTitle&&f.day===s.day&&f.time===s.time);
+      if(sf&&screensConflict(next,sf)){
+        const{displayTitle}=parseProgramTitle(sf.title);
+        return displayTitle;
+      }
     }
-    const posterHtml=posterSrc?`<img class="ag-fi-poster" src="${posterSrc}" loading="eager" style="object-fit:cover" onerror="this.remove()" alt="">`:`<div class="ag-fi-poster-ph">🎬</div>`;
-    return`<div class="ag-film-item" onclick="openPelSheet('${safeTQ}')">
+    return null;
+  }
+
+  // ── Item de lista ──────────────────────────────────────────────────────
+  function _mkItem(title){
+    const f=FILMS.find(fi=>fi.title===title);
+    const{displayTitle,progSuffix}=parseProgramTitle(title);
+    const isPrio=prioritized.has(title);
+    const isWatched=watched.has(title);
+    const next=_nextScreening(title);
+    const conflict=_hasConflict(title);
+    const safeT=title.replace(/'/g,"\'");
+    const poster=f?getFilmPoster(f):null;
+    const posterHtml=poster
+      ?`<img class="int-item-poster" src="${poster}" onerror="this.style.background='var(--surf-2)'" alt="">`
+      :`<div class="int-item-poster"></div>`;
+    const secLabel=(f?.section||'').replace(/^\S+ /,'')||f?.section||'';
+    const nextHtml=next
+      ?`<div class="int-item-next">
+          <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          ${next.day} · ${next.time}${next.venue?' · '+next.venue:''}
+        </div>`
+      :`<div class="int-item-gone">Sin funciones disponibles</div>`;
+    const conflictHtml=conflict
+      ?`<div class="int-item-conflict">
+          <svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/></svg>
+          Conflicto con ${conflict}
+        </div>`
+      :'';
+    return`<div class="int-item" onclick="openPelSheet('${safeT}')">
       ${posterHtml}
-      <div class="ag-fi-overlay"></div>
-      <div class="ag-fi-actions">
-        <button class="ag-fi-btn prio-fi-btn${isPrio?' prio-on':''}" data-pt="${safeT}" onclick="togglePriority(this.dataset.pt);event.stopPropagation()" style="display:inline-flex;align-items:center;gap:var(--sp-1)">${isPrio?ICONS.starFill+' Priorizada':ICONS.star+' Priorizar'}</button>
+      <div class="int-item-info">
+        <div class="int-item-title">${displayTitle}${progSuffix?` <span style="color:var(--orange);font-size:var(--t-xs)">${progSuffix}</span>`:''}</div>
+        <div class="int-item-sec">${f?.flags||''} ${secLabel}</div>
+        ${nextHtml}
+        ${conflictHtml}
       </div>
-      <div class="ag-fi-bottom">
-        <div class="ag-fi-flags">${f?f.flags||'🌐':'🌐'}</div>
-        <div class="ag-fi-title">${displayTitle}</div>
-        ${(()=>{
-          if(!f) return '';
-          const filmDays=FILMS.filter(fi=>fi.title===t&&!screeningPassed(fi));
-          const dayChips=[...new Set(filmDays.map(fi=>DAY_SHORT[fi.day]).filter(Boolean))].join(' · ');
-          const secShort=(f.section||'').replace(/^[^\s]+ /,'');
-          return dayChips?`<div class="ag-fi-days">${dayChips}${secShort?' · '+secShort:''}</div>`:'';
-        })()}
-        ${progSuffix?`<div style="font-size:var(--t-xs);color:var(--orange);font-weight:var(--w-bold);margin-top:1px;line-height:1">${progSuffix}</div>`:''}
+      <div class="int-item-actions">
+        <button class="int-prio-btn${isPrio?' on':''}" onclick="togglePriority('${safeT}');event.stopPropagation()" aria-label="Priorizar">★</button>
+        <button class="int-seen-btn${isWatched?' on':''}" onclick="toggleWatched('${safeT}',event)" aria-label="Marcar vista">✓</button>
       </div>
     </div>`;
-  };
+  }
 
+  // ── Render secciones ───────────────────────────────────────────────────
+  const chevSvg=`<svg class="int-section-hdr-chev" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>`;
   let html='';
-  if(!allPending.length&&!watchedList.length){
-    return emptyStateHero(ICONS.heart,'Tu lista está vacía','Tu plan para el festival, sin complicaciones.','Explorar Programa',"switchMainNav('mnav-cartelera');showDayView()");
-  }
-  // Switch grid/lista para Intereses
-  const _listMode=interesesViewMode==='list';
+
   if(prioList.length){
-    html+=`<div class="intereses-mode-bar" id="sec-prio"><div class="sec-hdr">${ICONS.star} Prioridades <span class="count-badge cb-amber" style="margin-left:var(--sp-1)">${prioList.length}/${PRIO_LIMIT}</span></div></div>`;
-    html+=`<div class="ag-film-grid${_listMode?' list-mode':''}">${prioList.map(t=>mkItem(t,_listMode)).join('')}</div>`;
+    html+=`<div class="int-section-hdr" onclick="this.classList.toggle('collapsed');document.getElementById('int-prio-list').classList.toggle('hidden')">
+      <span class="int-section-hdr-ico">${ICONS.star}</span>
+      <span class="int-section-hdr-lbl">Prioridades</span>
+      <span class="count-badge cb-amber">${prioList.length}/${PRIO_LIMIT}</span>
+      ${chevSvg}
+    </div>
+    <div id="int-prio-list">${prioList.map(_mkItem).join('')}</div>`;
   }
+
   if(nonPrioList.length){
     if(prioList.length) html+=`<div class="ag-list-sep"></div>`;
-    html+=`<div class="intereses-mode-bar" id="sec-int"><div class="sec-hdr">${ICONS.heart} Intereses <span class="count-badge cb-neutral" style="margin-left:var(--sp-1)">${nonPrioList.length}</span></div></div>`;
-    html+=`<div class="ag-film-grid${_listMode?' list-mode':''}">${nonPrioList.map(t=>mkItem(t,_listMode)).join('')}</div>`;
+    html+=`<div class="int-section-hdr" onclick="this.classList.toggle('collapsed');document.getElementById('int-interes-list').classList.toggle('hidden')">
+      <span class="int-section-hdr-ico">${ICONS.heart}</span>
+      <span class="int-section-hdr-lbl">Intereses</span>
+      <span class="count-badge cb-neutral">${nonPrioList.length}</span>
+      ${chevSvg}
+    </div>
+    <div id="int-interes-list">${nonPrioList.map(_mkItem).join('')}</div>`;
   }
-  if(!allPending.length&&!watchedList.length){
-    return`<div style="margin-top:8px;padding:var(--sp-5) var(--sp-4);border:1px solid var(--bdr-l);border-radius:var(--r);text-align:center">
-      <div class="sec-hdr" style="justify-content:center;margin-bottom:var(--sp-3)">${ICONS.heart} Intereses</div>
-      <div style="font-size:var(--t-base);color:var(--gray);line-height:1.6;text-align:center;max-width:240px;margin-left:auto;margin-right:auto;text-wrap:balance">
-        Aún no tienes películas guardadas.<br>Usa el buscador para añadir títulos.
-      </div>
-    </div>`;
-  }
+
   if(watchedList.length){
-    if(allPending.length) html+=`<div class="ag-list-sep"></div>`;
-    html+=`<div class="ya-vistas-bar" id="sec-yv"><div class="ya-vistas-lbl">${ICONS.check} Ya vistas<span class="count-badge cb-neutral" style="margin-left:var(--sp-2)">${watchedList.length}</span></div></div>`;
-    const _sortedW=[...watchedList].sort((a,b)=>(filmRatings[b]||0)-(filmRatings[a]||0));
-    html+=`<div class="ag-film-grid" style="grid-template-columns:repeat(4,1fr)">${_sortedW.map(t=>{
-      const f=FILMS.find(fi=>fi.title===t);
-      const posterSrc=f?(getFilmPoster(f)):null;
-      const _yvOp=festivalEnded()?'':';opacity:.70';
-      const posterHtml=posterSrc?`<img class="ag-fi-poster" src="${posterSrc}" loading="eager" style="object-fit:cover${_yvOp}" onerror="this.remove()" alt="">`:`<div class="ag-fi-poster-ph" style="opacity:${festivalEnded()?1:.70}">🎬</div>`;
-      const safeT=t.replace(/"/g,'&quot;');
-      const safeTQ2=t.replace(/'/g,"\\'");
-      const{displayTitle}=parseProgramTitle(t);
-      return`<div class="ag-film-item${festivalEnded()?'':' watched-item'}" onclick="openPelSheet('${safeTQ2}')">
-        ${posterHtml}
-        <div class="ag-fi-overlay"></div>
-        <div class="ag-fi-bottom">
-          <div class="ag-fi-flags">${f?f.flags||'🌐':'🌐'}</div>
-          <div class="ag-fi-title">${displayTitle}</div>
-        </div>
-      </div>`;
-    }).join('')}</div>`;
+    if(prioList.length||nonPrioList.length) html+=`<div class="ag-list-sep"></div>`;
+    const sortedW=[...watchedList].sort((a,b)=>(filmRatings[b]||0)-(filmRatings[a]||0));
+    html+=`<div class="int-section-hdr collapsed" onclick="this.classList.toggle('collapsed');document.getElementById('int-vistas-list').classList.toggle('hidden')">
+      <span class="int-section-hdr-ico">${ICONS.check}</span>
+      <span class="int-section-hdr-lbl">Ya vistas</span>
+      <span class="count-badge cb-neutral">${watchedList.length}</span>
+      ${chevSvg}
+    </div>
+    <div id="int-vistas-list" class="hidden">${sortedW.map(_mkItem).join('')}</div>`;
   }
+
   // Actualizar counts en pills de navegación
   setTimeout(()=>{
     const _pp=document.getElementById('pill-prio-cnt');if(_pp) _pp.textContent=prioList.length?`${prioList.length}/${PRIO_LIMIT}`:'—';
@@ -4651,13 +4662,10 @@ function renderFilmListHTML(){
     document.getElementById('pill-int')?.style.setProperty('display',nonPrioList.length?'inline-flex':'none');
     document.getElementById('pill-yv')?.style.setProperty('display',watchedList.length?'inline-flex':'none');
   },0);
-  return html||`<div style="margin-top:8px;padding:var(--sp-5) var(--sp-4);border:1px solid var(--bdr-l);border-radius:var(--r);text-align:center">
-      <div class="sec-hdr" style="justify-content:center;margin-bottom:var(--sp-3)">${ICONS.heart} Intereses</div>
-      <div style="font-size:var(--t-base);color:var(--gray);line-height:1.6;text-align:center;max-width:240px;margin-left:auto;margin-right:auto;text-wrap:balance">
-        Aún no tienes películas guardadas.<br>Usa el buscador para añadir títulos.
-      </div>
-    </div>`;
+
+  return html;
 }
+
 
 // ── RENDER SAVED AGENDA ──
 // ── Componente unificado: fila de función en agenda ──
