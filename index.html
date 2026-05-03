@@ -4606,7 +4606,7 @@ function renderFilmListHTML(){
     const safeT=title.replace(/'/g,"\'");
     const poster=f?getFilmPoster(f):null;
     const posterHtml=poster
-      ?`<img class="int-item-poster" src="${poster}" onerror="_posterErr(this)" alt="">`
+      ?`<img class="int-item-poster" src="${poster}" data-title="${title.replace(/"/g,'&quot;')}" onerror="_posterErr(this)" alt="">`
       :`<div class="int-item-poster"></div>`;
     const secLabel=(f?.section||'').replace(/^\S+ /,'')||f?.section||'';
     const nextHtml=next
