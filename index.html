@@ -7021,11 +7021,9 @@ function filterBySection(section){
   closePelSheet();
   activeSec=section;activeVenue='all';selectedIdx=null;
   programaSubMode='explorar';programaViewMode='grid';
-  // Buscar chip que corresponda a esta sección y activar filtro
-  const matchedChip=PROGRAMA_CHIPS.find(ch=>ch.match&&ch.match(section));
-  programaChip=matchedChip?matchedChip.id:'all';
-  _programaChipMatchFn=matchedChip?.match||null;
-  if(matchedChip) activeSec='_chip_';
+  // activeSec = sección directa (sin _chip_ signal)
+  programaChip='all';
+  _programaChipMatchFn=null;
   switchMainNav('mnav-cartelera');
   showDayView();
   // Actualizar chips visualmente después del render
@@ -7614,13 +7612,9 @@ function setProgramaChip(chipId){
   });
   // Guardar la función de match — soporta múltiples secciones
   const chip=(_currentChips.length?_currentChips:PROGRAMA_CHIPS).find(c=>c.id===chipId);
-  if(chip&&chip.match){
-    _programaChipMatchFn=chip.match;
-    activeSec='_chip_'; // señal de que el filtro lo maneja el chip
-  } else {
-    _programaChipMatchFn=null;
-    activeSec='all';
-  }
+  // Chips ocultos — activeSec siempre directo, nunca _chip_
+  _programaChipMatchFn=null;
+  activeSec='all';
   _updateProgramaActiveFilter();
   _renderProgramaContent();
 }
@@ -7943,9 +7937,7 @@ function renderPeliculaView(){
 
   // Aplicar filtro de sección (chip o dropdown)
   let entries=Object.values(titleMap);
-  if(activeSec==='_chip_'&&_programaChipMatchFn){
-    entries=entries.filter(e=>_programaChipMatchFn(e.film.section||''));
-  } else if(activeSec!=='all'){
+  if(activeSec!=='all'){
     entries=entries.filter(e=>e.film.section===activeSec);
   }
   // Aplicar filtro de venue — incluir film si alguna función es en ese lugar
