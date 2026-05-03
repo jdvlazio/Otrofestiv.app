@@ -6751,8 +6751,10 @@ function toggleDropdown(id){
   }
 }
 function closeDropdowns(){
-  document.querySelectorAll('.fdr-panel').forEach(p=>{p.classList.remove('open');});
+  document.querySelectorAll('.fdr-panel').forEach(p=>{p.classList.remove('open');p.style.display='none';});
   document.querySelectorAll('.fdr-arrow').forEach(a=>a.classList.remove('open'));
+  const pb=document.getElementById('pmode-filter-btn');
+  if(pb&&activeVenue==='all') pb.classList.remove('active');
 }
 
 /* ── RENDER — CARTELERA: filtros, grid horario, grid película ────────── */
