@@ -6457,6 +6457,85 @@ const PROGRAMA_CHIPS=[
 let expandedPelicula=''; // título expandido en vista Por Película
 
 /* ── BÚSQUEDA EN CARTELERA ── */
+// ── BÚSQUEDA GLOBAL ────────────────────────────────────────────────────────
+function openGlobalSearch(){
+  const bar=document.getElementById('hdr-fest-bar');
+  const inp=document.getElementById('global-search-input');
+  if(bar) bar.classList.add('search-open');
+  if(inp) setTimeout(()=>inp.focus(),60);
+}
+function closeGlobalSearch(){
+  const bar=document.getElementById('hdr-fest-bar');
+  const inp=document.getElementById('global-search-input');
+  const res=document.getElementById('hdr-search-results');
+  if(bar) bar.classList.remove('search-open');
+  if(inp) inp.value='';
+  if(res) res.style.display='none';
+}
+function onGlobalSearch(){
+  const inp=document.getElementById('global-search-input');
+  const res=document.getElementById('hdr-search-results');
+  if(!inp||!res) return;
+  const q=inp.value.trim().toLowerCase();
+  if(!q){res.style.display='none';return;}
+  // Reusar lógica de onCartaSearch: programas + cortos individuales
+  const titleMap={};
+  FILMS.forEach(f=>{if(!titleMap[f.title]) titleMap[f.title]=f;});
+  const progMatches=Object.values(titleMap).filter(f=>{
+    const{displayTitle}=parseProgramTitle(f.title);
+    const sec=(f.section||'').replace(/^[^ ]+ /,'').toLowerCase();
+    return displayTitle.toLowerCase().includes(q)||f.title.toLowerCase().includes(q)
+      ||sec.includes(q)||(f.country||'').toLowerCase().includes(q);
+  });
+  const cortoMatches=[];
+  FILMS.filter(f=>f.is_cortos&&f.film_list?.length).forEach(prog=>{
+    prog.film_list.forEach(item=>{
+      if(item.title.toLowerCase().includes(q)){
+        cortoMatches.push({_isCortoItem:true,_prog:prog,
+          title:item.title,country:item.country,duration:item.duration,
+          flags:countryToFlags(item.country||''),section:prog.section,is_cortos:false});
+      }
+    });
+  });
+  const seen=new Set();
+  const matches=[...progMatches,...cortoMatches]
+    .filter(f=>{if(seen.has(f.title))return false;seen.add(f.title);return true;})
+    .slice(0,10);
+  if(!matches.length){
+    res.innerHTML='<div style="padding:var(--sp-btn);text-align:center;color:var(--gray);font-size:var(--t-base)">Sin resultados</div>';
+    res.style.display='block';return;
+  }
+  res.innerHTML=matches.map(f=>{
+    const{displayTitle,progSuffix}=parseProgramTitle(f.title);
+    const poster=getFilmPoster(f)||'';
+    const safeT=f.title.replace(/'/g,"\\'");
+    const safeC=(f.country||'').replace(/'/g,"\\'");
+    const safeD=(f.duration||'').replace(/'/g,"\\'");
+    const safeS=(f.section||'').replace(/'/g,"\\'");
+    const safeF=(f.flags||'🌍').replace(/'/g,"\\'");
+    const fn=f._isCortoItem
+      ? "closeGlobalSearch();openCortoSheet('"+safeT+"','"+safeC+"','"+safeD+"','"+safeS+"','"+safeF+"')"
+      : "closeGlobalSearch();openPelSheet('"+safeT+"')";
+    const meta=f._isCortoItem
+      ? 'Cortometraje'+(f._prog?' · '+parseProgramTitle(f._prog.title).displayTitle:'')
+      : (f.duration||'')+(f.section?' · '+f.section.replace(/^[^ ]+ /,''):'');
+    return '<div class="carta-sr-item" onclick="'+fn+'">'
+      +(poster?'<img class="carta-sr-poster" src="'+poster+'" onerror="this.style.opacity=0" alt="">'
+              :'<div class="carta-sr-poster"></div>')
+      +'<div class="carta-sr-info">'
+      +'<div class="carta-sr-title">'+displayTitle
+      +(progSuffix?'<span style="color:var(--orange);font-size:var(--t-label)"> '+progSuffix+'</span>':'')
+      +'</div>'
+      +'<div class="carta-sr-meta">'+meta+'</div>'
+      +'</div></div>';
+  }).join('');
+  res.style.display='block';
+}
+document.addEventListener('click',e=>{
+  const bar=document.getElementById('hdr-fest-bar');
+  if(bar&&bar.classList.contains('search-open')&&!bar.contains(e.target)) closeGlobalSearch();
+});
+
 function onCartaSearch(){
   const inp=document.getElementById('carta-search-input');
   const res=document.getElementById('carta-search-results');
