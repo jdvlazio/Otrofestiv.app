@@ -8716,11 +8716,10 @@ if(window.visualViewport){
 // activeSec: 'all' | nombre exacto de sección (f.section)
 
 function _seccionLabel(sec){
-  // Botón mode bar: emoji + nombre completo
+  // Botón mode bar: solo emoji si hay match, si no el texto base
   if(!sec||sec==='all') return 'Sección';
   const chip = PROGRAMA_CHIPS.find(c=>c.match&&c.match(sec));
-  const emoji = chip ? chip.label.split(' ')[0] : '';
-  return emoji ? (emoji+' '+sec) : sec;
+  return chip ? chip.label.split(' ')[0] : sec.slice(0,8)+'…';
 }
 function _seccionPillLabel(sec){
   // Pill: emoji + nombre completo de sección
