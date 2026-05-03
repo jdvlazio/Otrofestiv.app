@@ -1865,9 +1865,7 @@ html.splash-skip #otrofestiv-splash{display:none}
 /* ── Programa: micro-CTA entrada al flujo ─────────────────────────
    Corazón ámbar + texto. Misma jerarquía que el stepper.
    Desaparece al añadir primera película. */
-.cartelera-cta{display:flex;align-items:flex-start;gap:var(--sp-2);padding:var(--sp-3) var(--sp-4);border-bottom:1px solid var(--bdr-l)}
-.cartelera-cta-text{font-size:var(--t-sm);color:var(--gray);line-height:1.5}
-.cartelera-cta-text b{color:var(--white-60);font-weight:var(--w-semi)}
+.cartelera-cta{display:none!important}
 
 /* ── Disponibilidad — nueva UI ───────────────────── */
 .av-block-list{display:flex;flex-direction:column;gap:var(--sp-2);margin-bottom:var(--sp-3)}
@@ -6651,7 +6649,7 @@ function showDayView(){
   // Ocultar filter-row hasta que se pida con "Filtrar"
   document.getElementById('filter-row').classList.add('hidden');
   document.getElementById('filter-bars').style.display='';
-  ['hint','cnt','grid','cartelera-stepper','cartelera-cta'].forEach(id=>{const el=document.getElementById(id);if(el) el.style.display='';});
+  ['hint','cnt','grid','cartelera-stepper'].forEach(id=>{const el=document.getElementById(id);if(el) el.style.display='';});
   const _av=document.getElementById('ag-view');
   _av.classList.remove('visible');
   _av.style.display='none';
@@ -6676,7 +6674,7 @@ function showAgView(){
   document.getElementById('nav-row').classList.add('hidden');
   document.getElementById('filter-row').classList.add('hidden');
   document.getElementById('filter-bars').style.display='none';
-  ['hint','cnt','grid','cartelera-stepper','cartelera-cta'].forEach(id=>{const el=document.getElementById(id);if(el) el.style.display='none';});
+  ['hint','cnt','grid','cartelera-stepper'].forEach(id=>{const el=document.getElementById(id);if(el) el.style.display='none';});
   const _av=document.getElementById('ag-view');
   _av.style.display='';
   _av.classList.add('visible');
@@ -8155,7 +8153,6 @@ return`<div class="poster-card${inWL&&!inW?' in-wl':''}${inW&&!_fe?' in-watched'
     const _cStepper=document.getElementById('cartelera-stepper');
     const _cCta=document.getElementById('cartelera-cta');
     if(_cStepper) _cStepper.style.display='none';// always hidden in day/hora view
-    if(_cCta)_cCta.style.display=(!festivalEnded()&&watchlist.size===0)?'':'none';
   }
 }
 
