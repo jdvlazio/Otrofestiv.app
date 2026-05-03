@@ -2022,7 +2022,7 @@ html.splash-skip #otrofestiv-splash{display:none}
 /* ── INTERESES — vista lista ─────────────────────────────────────────────
    Reemplaza el grid de posters por lista de decisión con metadata
    completa: próxima función, conflicto, acciones inline.             */
-.int-section-hdr{display:flex;align-items:center;gap:var(--sp-2);padding:var(--sp-3) var(--sp-4) var(--sp-2);cursor:pointer;user-select:none;-webkit-user-select:none}
+.int-section-hdr{display:flex;align-items:center;gap:var(--sp-2);padding:var(--sp-3) var(--sp-4);min-height:44px;width:100%;background:none;border:none;font-family:var(--font);cursor:pointer;-webkit-tap-highlight-color:transparent;text-align:left}
 .int-section-hdr-ico{color:var(--gray2);flex-shrink:0}
 .int-section-hdr-lbl{font-size:var(--t-xs);font-weight:var(--w-bold);color:var(--white);letter-spacing:.06em;text-transform:uppercase;flex:1}
 .int-section-hdr-chev{color:var(--gray2);transition:transform var(--tr-base);flex-shrink:0}
@@ -4557,11 +4557,7 @@ function _intToggleSection(hdrEl){
   if(list) list.classList.toggle('hidden');
 }
 
-// Event delegation — más confiable en iOS que onclick inline en divs
-document.addEventListener('click', function(e){
-  const hdr = e.target.closest('.int-section-hdr');
-  if(hdr) _intToggleSection(hdr);
-});
+// section headers usan <button> con onclick directo
 
 // Preserva el estado colapsado al re-renderizar la lista de Intereses
 function _reRenderIntereses(){
@@ -4652,35 +4648,35 @@ function renderFilmListHTML(){
   let html='';
 
   if(prioList.length){
-    html+=`<div class="int-section-hdr" data-list="int-prio-list">
+    html+=`<button class="int-section-hdr" data-list="int-prio-list" onclick="_intToggleSection(this)">
       <span class="int-section-hdr-ico">${ICONS.star}</span>
       <span class="int-section-hdr-lbl">Prioridades</span>
       <span class="count-badge cb-amber">${prioList.length}/${PRIO_LIMIT}</span>
       ${chevSvg}
-    </div>
+    </button>
     <div id="int-prio-list">${prioList.map(_mkItem).join('')}</div>`;
   }
 
   if(nonPrioList.length){
     if(prioList.length) html+=`<div style="height:1px;background:var(--bdr);margin:0"></div>`;
-    html+=`<div class="int-section-hdr" data-list="int-interes-list">
+    html+=`<button class="int-section-hdr" data-list="int-interes-list" onclick="_intToggleSection(this)">
       <span class="int-section-hdr-ico">${ICONS.heart}</span>
       <span class="int-section-hdr-lbl">Intereses</span>
       <span class="count-badge cb-neutral">${nonPrioList.length}</span>
       ${chevSvg}
-    </div>
+    </button>
     <div id="int-interes-list">${nonPrioList.map(_mkItem).join('')}</div>`;
   }
 
   if(watchedList.length){
     if(prioList.length||nonPrioList.length) html+=`<div style="height:1px;background:var(--bdr);margin:0"></div>`;
     const sortedW=[...watchedList].sort((a,b)=>(filmRatings[b]||0)-(filmRatings[a]||0));
-    html+=`<div class="int-section-hdr collapsed" data-list="int-vistas-list">
+    html+=`<button class="int-section-hdr collapsed" data-list="int-vistas-list" onclick="_intToggleSection(this)">
       <span class="int-section-hdr-ico">${ICONS.check}</span>
       <span class="int-section-hdr-lbl">Ya vistas</span>
       <span class="count-badge cb-neutral">${watchedList.length}</span>
       ${chevSvg}
-    </div>
+    </button>
     <div id="int-vistas-list" class="hidden">${sortedW.map(_mkItem).join('')}</div>`;
   }
 
