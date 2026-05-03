@@ -301,7 +301,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .hdr-search-field input{flex:1;background:none;border:none;color:var(--white);font-family:var(--font);font-size:16px;outline:none}
 .hdr-search-field input::placeholder{color:var(--gray2)}
 .hdr-search-cancel{font-size:var(--t-sm);font-weight:var(--w-semi);color:var(--gray);cursor:pointer;flex-shrink:0;background:none;border:none;font-family:var(--font);padding:var(--sp-1)}
-.hdr-search-results{position:fixed;top:var(--search-res-top,120px);left:0;right:0;background:var(--surf);border-bottom:1px solid var(--bdr);z-index:201;overflow-y:auto;display:none;max-height:50vh}
+.hdr-search-results{position:fixed;top:var(--search-res-top,120px);left:0;right:0;background:var(--surf);border-bottom:1px solid var(--bdr);z-index:201;overflow-y:auto;display:none}
 .hdr-fest-left{display:flex;align-items:center;gap:var(--sp-2)}
 .hdr-fest-dot{width:5px;height:5px;border-radius:50%;background:var(--amber);flex-shrink:0}
 .hdr-fest-name{font-size:var(--t-xs);font-weight:var(--w-bold);letter-spacing:.08em;text-transform:uppercase;color:var(--white)}
@@ -6459,6 +6459,17 @@ let expandedPelicula=''; // título expandido en vista Por Película
 
 /* ── BÚSQUEDA EN CARTELERA ── */
 // ── BÚSQUEDA GLOBAL ────────────────────────────────────────────────────────
+function _updateSearchResultsHeight(){
+  const res=document.getElementById('hdr-search-results');
+  if(!res||res.style.display==='none') return;
+  const resTop=parseInt(getComputedStyle(document.documentElement).getPropertyValue('--search-res-top'))||88;
+  const vvH=window.visualViewport?window.visualViewport.height:window.innerHeight;
+  res.style.height=(vvH-resTop)+'px';
+}
+// Update results height when keyboard appears/disappears
+if(window.visualViewport){
+  window.visualViewport.addEventListener('resize',_updateSearchResultsHeight);
+}
 function openGlobalSearch(){
   const bar=document.getElementById('hdr-fest-bar');
   const inp=document.getElementById('global-search-input');
@@ -6540,6 +6551,7 @@ function onGlobalSearch(){
       +'</div></div>';
   }).join('');
   res.style.display='block';
+  _updateSearchResultsHeight();
 }
 document.addEventListener('click',e=>{
   const bar=document.getElementById('hdr-fest-bar');
