@@ -2027,6 +2027,7 @@ html.splash-skip #otrofestiv-splash{display:none}
 .int-section-hdr-lbl{font-size:var(--t-xs);font-weight:var(--w-bold);color:var(--white);letter-spacing:.06em;text-transform:uppercase;flex:1}
 .int-item{display:flex;align-items:center;gap:var(--sp-3);padding:var(--sp-3) var(--sp-4);border-bottom:1px solid var(--bdr-l);cursor:pointer;transition:background var(--tr-base);-webkit-tap-highlight-color:transparent}
 .int-item:last-child{border-bottom:none}
+.int-item.gone{opacity:.4}
 .int-item:active{background:var(--surf-2)}
 .int-item-poster{width:38px;height:57px;border-radius:var(--r-sm);background:var(--surf-2);flex-shrink:0;overflow:hidden;object-fit:cover}
 .int-item-info{flex:1;min-width:0}
@@ -4625,7 +4626,7 @@ function renderFilmListHTML(){
           Conflicto con ${conflict}
         </div>`
       :'';
-    return`<div class="int-item" onclick="openPelSheet('${safeT}')">
+    return`<div class="int-item${!next?' gone':''}" onclick="openPelSheet('${safeT}')">
       ${posterHtml}
       <div class="int-item-info">
         <div class="int-item-title">${displayTitle}${progSuffix?` <span style="color:var(--orange);font-size:var(--t-xs)">${progSuffix}</span>`:''}</div>
@@ -4644,22 +4645,24 @@ function renderFilmListHTML(){
   let html='';
 
   if(prioList.length){
+    const _sortedPrio=[...prioList].sort((a,b)=>(!!_nextScreening(b))-(!!_nextScreening(a)));
     html+=`<div class="int-section-hdr">
       <span class="int-section-hdr-ico">${ICONS.star}</span>
       <span class="int-section-hdr-lbl">Prioridades</span>
       <span class="count-badge cb-amber">${prioList.length}/${PRIO_LIMIT}</span>
     </div>
-    <div>${prioList.map(_mkItem).join('')}</div>`;
+    <div>${_sortedPrio.map(_mkItem).join('')}</div>`;
   }
 
   if(nonPrioList.length){
     if(prioList.length) html+=`<div style="height:1px;background:var(--bdr);margin:0"></div>`;
+    const _sortedInt=[...nonPrioList].sort((a,b)=>(!!_nextScreening(b))-(!!_nextScreening(a)));
     html+=`<div class="int-section-hdr">
       <span class="int-section-hdr-ico">${ICONS.heart}</span>
       <span class="int-section-hdr-lbl">Intereses</span>
       <span class="count-badge cb-neutral">${nonPrioList.length}</span>
     </div>
-    <div>${nonPrioList.map(_mkItem).join('')}</div>`;
+    <div>${_sortedInt.map(_mkItem).join('')}</div>`;
   }
 
   if(watchedList.length){
