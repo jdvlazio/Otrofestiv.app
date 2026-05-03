@@ -392,14 +392,17 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
   box-shadow:0 8px 24px var(--overlay-40)
 }
 .carta-search-results.open,.ag-search-results.open{display:block}
-.carta-sr-item{display:flex;align-items:center;gap:10px;padding:var(--sp-btn) var(--sp-3);border-bottom:1px solid var(--bdr-l);cursor:pointer;transition:background var(--tr-base)}
+.carta-sr-item{display:flex;align-items:center;gap:var(--sp-3);padding:var(--sp-3) var(--sp-4);border-bottom:1px solid var(--bdr-l);cursor:pointer;transition:background var(--tr-base);-webkit-tap-highlight-color:transparent}
 .carta-sr-item:active,.ag-sr-item:active{background:var(--surf-2)}
 .carta-sr-item:last-child{border-bottom:none}
-.carta-sr-item:active{background:var(--surf-2)}
-.carta-sr-poster{width:var(--poster-xs-w);height:var(--poster-xs-h);object-fit:cover;border-radius:var(--r-sm);flex-shrink:0;background:var(--surf-2)}
+.carta-sr-poster{width:36px;height:54px;object-fit:cover;border-radius:var(--r-sm);flex-shrink:0;background:var(--surf-2)}
 .carta-sr-info{flex:1;min-width:0}
-.carta-sr-title{font-size:var(--t-sm);font-weight:var(--w-semi);color:var(--white);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.carta-sr-meta{font-size:var(--t-xs);color:var(--gray2);margin-top:1px}
+.carta-sr-title{font-size:var(--t-base);font-weight:var(--w-semi);color:var(--white);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;line-height:1.3}
+.carta-sr-meta{font-size:var(--t-sm);color:var(--gray);margin-top:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.carta-sr-arrow{color:var(--gray2);flex-shrink:0;font-size:var(--t-base)}
+.carta-sr-section{padding:var(--sp-2) var(--sp-4) var(--sp-1);font-size:var(--t-xs);font-weight:var(--w-bold);letter-spacing:.07em;text-transform:uppercase;color:var(--gray2);background:var(--surf)}
+.carta-sr-empty{padding:var(--sp-7) var(--sp-4);text-align:center;color:var(--gray);font-size:var(--t-base);line-height:1.6}
+.carta-sr-empty-ico{font-size:28px;margin-bottom:var(--sp-2)}
 .cnt-line b{color:var(--white)}
 
 /* ════════════════════════════════════════════════════════
