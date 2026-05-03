@@ -6515,7 +6515,7 @@ function onGlobalSearch(){
       <div class="carta-sr-info">
         <div class="carta-sr-title">${displayTitle}${progSuffix?` <span style="color:var(--orange);font-size:var(--t-label)">${progSuffix}</span>`:''}</div>
         <div class="carta-sr-meta">${f._isCortoItem
-          ?`Cortometraje${f._prog?\` · ${parseProgramTitle(f._prog.title).displayTitle}\`:''}` 
+          ?`Cortometraje${f._prog?' · '+parseProgramTitle(f._prog.title).displayTitle:''}` 
           :`${f.duration||''} ${f.section?' · '+f.section.replace(/^[^ ]+ /,''):''}`
         }</div>
       </div>
