@@ -8576,6 +8576,7 @@ function lugarClose(){
 }
 
 function lugarToggle(){
+  if(document.getElementById('seccion-drop')) seccionClose();
   if(document.getElementById('lugar-drop')) lugarClose();
   else lugarOpen();
 }
@@ -8808,6 +8809,7 @@ function seccionClose(){
 }
 
 function seccionToggle(){
+  if(document.getElementById('lugar-drop')) lugarClose();
   if(document.getElementById('seccion-drop')) seccionClose();
   else seccionOpen();
 }
