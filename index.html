@@ -8587,14 +8587,21 @@ function lugarToggle(){
 
 function searchPositionOverlay(){
   const overlay = document.getElementById('search-overlay');
+  const results = document.getElementById('search-results');
   if(!overlay || overlay.style.display==='none') return;
+  // Overlay: desde topbar hasta el borde inferior de la pantalla (bottom:0)
+  // El teclado es UI del sistema — siempre por encima, no interfiere con el overlay
   const tb = document.querySelector('.topbar');
   const top = tb ? Math.ceil(tb.getBoundingClientRect().bottom) : 88;
-  const vv = window.visualViewport;
-  const availH = vv ? vv.height : window.innerHeight;
   overlay.style.top = top + 'px';
-  overlay.style.height = (availH - top) + 'px';
-  overlay.style.bottom = 'auto';
+  overlay.style.bottom = '0';
+  overlay.style.height = 'auto';
+  // Padding-bottom en resultados = altura del teclado para que nada quede oculto
+  if(results){
+    const vv = window.visualViewport;
+    const kbH = vv ? Math.max(0, window.innerHeight - vv.height - (vv.offsetTop||0)) : 0;
+    results.style.paddingBottom = (kbH + 16) + 'px';
+  }
 }
 
 function searchOpen(){
