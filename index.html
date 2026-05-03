@@ -8717,17 +8717,15 @@ if(window.visualViewport){
 // activeSec: 'all' | nombre exacto de sección (f.section)
 
 function _seccionLabel(sec){
-  // Botón mode bar: solo emoji si hay match, si no el texto base
+  // Botón mode bar: solo el emoji que ya viene en el nombre de sección
+  // Las secciones tienen formato "🏆 Nombre" en todos los festivales
   if(!sec||sec==='all') return 'Sección';
-  const chip = PROGRAMA_CHIPS.find(c=>c.match&&c.match(sec));
-  return chip ? chip.label.split(' ')[0] : sec.slice(0,8)+'…';
+  return sec.match(/^\S+/)?.[0] || sec.slice(0,4);
 }
 function _seccionPillLabel(sec){
-  // Pill: emoji + nombre completo de sección
+  // Pill: nombre completo tal como viene en el JSON — ya incluye emoji
   if(!sec||sec==='all') return sec;
-  const chip = PROGRAMA_CHIPS.find(c=>c.match&&c.match(sec));
-  const emoji = chip ? chip.label.split(' ')[0] : '';
-  return emoji ? (emoji+' '+sec) : sec;
+  return sec;
 }
 
 function seccionOpen(){
