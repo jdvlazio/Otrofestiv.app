@@ -287,6 +287,20 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
    padding propio var(--sp-5) → contenido alineado con el wordmark. */
 .hdr-fest-bar{display:flex;align-items:center;justify-content:space-between;background:var(--surf-2);border-top:1px solid var(--bdr);border-bottom:1px solid var(--bdr);padding:var(--sp-2) var(--sp-4);cursor:pointer;-webkit-tap-highlight-color:transparent;width:100%;flex-basis:100%}
 .hdr-fest-bar:active{background:var(--surf-2)}
+.hdr-fest-selector{display:flex;align-items:center;flex:1;gap:var(--sp-2);padding:var(--sp-2) var(--sp-4);cursor:pointer;-webkit-tap-highlight-color:transparent;min-width:0}
+.hdr-fest-selector:active{opacity:.7}
+.hdr-search-btn{width:44px;min-height:36px;display:flex;align-items:center;justify-content:center;border-left:1px solid var(--bdr);cursor:pointer;color:var(--gray);flex-shrink:0;-webkit-tap-highlight-color:transparent;background:none;border-top:none;border-bottom:none;border-right:none;font-family:var(--font);transition:color var(--tr-base)}
+.hdr-search-btn:active{color:var(--white);background:rgba(255,255,255,.04)}
+.hdr-search-expanded{display:none;align-items:center;gap:var(--sp-2);flex:1;padding:0 var(--sp-3)}
+.hdr-fest-bar.search-open .hdr-fest-selector{display:none}
+.hdr-fest-bar.search-open .hdr-search-btn{display:none}
+.hdr-fest-bar.search-open .hdr-search-expanded{display:flex}
+.hdr-search-back{width:28px;height:36px;display:flex;align-items:center;justify-content:center;color:var(--gray);cursor:pointer;flex-shrink:0;background:none;border:none;font-family:var(--font);-webkit-tap-highlight-color:transparent}
+.hdr-search-field{flex:1;display:flex;align-items:center;gap:var(--sp-2);background:var(--surf);border:1px solid var(--bdr);border-radius:var(--r-md);height:26px;padding:0 var(--sp-2)}
+.hdr-search-field input{flex:1;background:none;border:none;color:var(--white);font-family:var(--font);font-size:var(--t-sm);outline:none}
+.hdr-search-field input::placeholder{color:var(--gray2)}
+.hdr-search-cancel{font-size:var(--t-sm);font-weight:var(--w-semi);color:var(--gray);cursor:pointer;flex-shrink:0;background:none;border:none;font-family:var(--font);padding:var(--sp-1)}
+.hdr-search-results{position:absolute;left:0;right:0;background:var(--surf);border-bottom:1px solid var(--bdr);z-index:199;max-height:60vh;overflow-y:auto;display:none}
 .hdr-fest-left{display:flex;align-items:center;gap:var(--sp-2)}
 .hdr-fest-dot{width:5px;height:5px;border-radius:50%;background:var(--amber);flex-shrink:0}
 .hdr-fest-name{font-size:var(--t-xs);font-weight:var(--w-bold);letter-spacing:.08em;text-transform:uppercase;color:var(--white)}
