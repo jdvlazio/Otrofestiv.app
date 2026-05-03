@@ -6727,9 +6727,6 @@ function toggleDropdown(id){
 function closeDropdowns(){
   document.querySelectorAll('.fdr-panel').forEach(p=>{p.classList.remove('open');p.style.display='none';});
   document.querySelectorAll('.fdr-arrow').forEach(a=>a.classList.remove('open'));
-  // Reset pmode-filter-btn active state
-  const pb=document.getElementById('pmode-filter-btn');
-  if(pb&&activeVenue==='all') pb.classList.remove('active');
 }
 
 /* ── RENDER — CARTELERA: filtros, grid horario, grid película ────────── */
@@ -7709,8 +7706,7 @@ function toggleProgramaFilter(){
   const panel=document.getElementById('vdr-panel');
   if(!panel) return;
   const isOpen=panel.style.display==='block';
-  // Close all other dropdowns first
-  document.querySelectorAll('.fdr-panel').forEach(p=>{p.classList.remove('open');p.style.display='none';});
+  closeDropdowns(); // close any open panel first
   if(!isOpen){
     renderVbar();
     const btnRect=btn?btn.getBoundingClientRect():null;
