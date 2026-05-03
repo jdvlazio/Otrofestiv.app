@@ -7025,7 +7025,7 @@ function filterBySection(section){
   closePelSheet();
   activeSec=section;activeVenue='all';selectedIdx=null;
   programaSubMode='explorar';programaViewMode='grid';
-  // activeSec = sección directa (sin _chip_ signal)
+  // activeSec = sección directa
   programaChip='all';
   _programaChipMatchFn=null;
   switchMainNav('mnav-cartelera');
@@ -7572,9 +7572,10 @@ function initProgramaModeBar(){
 
 function setProgramaMode(mode){
   programaSubMode=mode;
-  // Reset filtros al cambiar modo
+  // Reset filtros al cambiar modo y cerrar dropdowns
   activeSec='all';activeVenue='all';selectedIdx=null;
   programaChip='all';_programaChipMatchFn=null;
+  lugarClose();seccionClose();
   clearCartaSearch();
   // Set active day for hoy/mañana modes
   const _pts=simTodayStr();
@@ -7616,7 +7617,7 @@ function setProgramaChip(chipId){
   });
   // Guardar la función de match — soporta múltiples secciones
   const chip=(_currentChips.length?_currentChips:PROGRAMA_CHIPS).find(c=>c.id===chipId);
-  // Chips ocultos — activeSec siempre directo, nunca _chip_
+  // Chips ocultos — activeSec siempre directo
   _programaChipMatchFn=null;
   activeSec='all';
   _updateProgramaActiveFilter();
