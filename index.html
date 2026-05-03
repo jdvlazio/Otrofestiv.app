@@ -2174,7 +2174,7 @@ html.splash-skip #otrofestiv-splash{display:none}
   <button class="pmode-tab" id="pmode-manana" onclick="setProgramaMode('manana')">Mañana</button>
   <div class="pmode-spacer"></div>
   <div class="pmode-controls">
-    <button class="pmode-filter-btn" id="pmode-filter-btn" onclick="toggleProgramaFilter()">
+    <button class="pmode-filter-btn" id="pmode-filter-btn" onclick="toggleDropdown('vdr')">
       <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>
       <span id="pmode-filter-lbl">Lugar</span>
     </button>
@@ -7717,9 +7717,7 @@ function clearProgramaChip(){
 }
 
 function toggleProgramaFilter(){
-  // No longer toggles — filter-row is permanent in Explorar.
-  // Kept for backward compat (pmode-filter-btn still calls it).
-  renderVbar();renderSbar();
+  // Legacy shim — pmode-filter-btn now calls toggleDropdown directly
 }
 
 function _updateProgramaActiveFilter(){
