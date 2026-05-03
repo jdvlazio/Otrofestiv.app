@@ -685,13 +685,13 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .pmode-tab{padding:var(--sp-2) var(--sp-3);font-size:var(--t-sm);font-weight:var(--w-semi);color:var(--gray);border-bottom:2px solid transparent;min-height:38px;cursor:pointer;background:none;border-top:none;border-left:none;border-right:none;font-family:var(--font);transition:color var(--tr-base),border-color var(--tr-base);white-space:nowrap;display:inline-flex;align-items:center}
 .pmode-tab.on{color:var(--white);border-bottom-color:var(--amber)}
 .pmode-spacer{flex:1}
-.pmode-controls{display:flex;align-items:center;gap:8px}
+.pmode-controls{display:flex;align-items:center;gap:16px}
 /* ── View switch — sistema unificado (Programa / Mi Plan / Intereses) ── */
 /* view toggle — icono único, sin contenedor, mismo peso visual que lupa */
 .pmode-view-switch,.miplan-view-switch,.intereses-view-switch{display:flex}
 .pmode-view-btn,.miplan-view-btn,.intereses-view-btn{display:none} /* ocultar botones legacy */
 .view-toggle-btn{width:32px;min-height:36px;display:flex;align-items:center;justify-content:center;padding-right:4px;background:none;border:none;cursor:pointer;color:var(--gray);flex-shrink:0;-webkit-tap-highlight-color:transparent;font-family:var(--font);transition:color var(--tr-base);position:relative}
-.view-toggle-btn::before{content:'';position:absolute;left:0;top:15%;bottom:15%;width:1px;background:var(--bdr)}
+.view-toggle-btn::before{content:'';position:absolute;left:0;top:0;bottom:0;width:1px;background:var(--bdr)}
 .view-toggle-btn:active{color:var(--white)}
 
 /* Chips de categoría (solo Explorar) */
@@ -1888,10 +1888,10 @@ html.splash-skip #otrofestiv-splash{display:none}
 .av-sheet-confirm{width:100%;background:var(--amber);border:none;border-radius:var(--r-md);padding:var(--sp-btn) 0;font-size:var(--t-base);font-weight:var(--w-bold);color:#000;cursor:pointer;font-family:var(--font)}
 
 /* Sección + Lugar — filtros dropdown ────────────────────── */
-.seccion-btn{display:flex;align-items:center;gap:4px;font-size:var(--t-sm);font-weight:var(--w-bold);color:var(--gray);background:none;border:none;cursor:pointer;font-family:var(--font);padding:4px 0;transition:color var(--tr-base);white-space:nowrap;-webkit-tap-highlight-color:transparent}
+.seccion-btn{display:flex;align-items:center;gap:4px;font-size:var(--t-sm);font-weight:var(--w-regular);color:var(--gray);background:none;border:none;cursor:pointer;font-family:var(--font);padding:4px 0;transition:color var(--tr-base);white-space:nowrap;-webkit-tap-highlight-color:transparent}
 .seccion-btn.active{color:var(--amber)}
 /* Lugar filter — nuevo sistema ────────────────────────── */
-.lugar-btn{display:flex;align-items:center;gap:4px;font-size:var(--t-sm);font-weight:var(--w-bold);color:var(--gray);background:none;border:none;cursor:pointer;font-family:var(--font);padding:4px 0;transition:color var(--tr-base);white-space:nowrap;-webkit-tap-highlight-color:transparent}
+.lugar-btn{display:flex;align-items:center;gap:4px;font-size:var(--t-sm);font-weight:var(--w-regular);color:var(--gray);background:none;border:none;cursor:pointer;font-family:var(--font);padding:4px 0;transition:color var(--tr-base);white-space:nowrap;-webkit-tap-highlight-color:transparent}
 .lugar-btn.active{color:var(--amber)}
 .lugar-opt{display:flex;align-items:center;gap:var(--sp-2);padding:10px var(--sp-4);cursor:pointer;font-size:var(--t-base);color:var(--gray);border-bottom:1px solid var(--bdr-l);transition:background var(--tr-base)}
 .lugar-opt:last-child{border-bottom:none}
@@ -1917,7 +1917,7 @@ html.splash-skip #otrofestiv-splash{display:none}
 }
 .hdr-search-icon::before{
   content:'';position:absolute;
-  left:0;top:15%;bottom:15%;
+  left:0;top:0;bottom:0;
   width:1px;background:var(--bdr);
 }
 .hdr-search-icon:active{color:var(--white)}
@@ -2280,7 +2280,7 @@ html.splash-skip #otrofestiv-splash{display:none}
   <div class="pmode-spacer"></div>
   <div class="pmode-controls" style="position:relative">
     <button class="seccion-btn" id="seccion-btn" onclick="seccionToggle()">
-      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>
+      <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>
       <span id="seccion-lbl">Sección</span>
     </button>
     <button class="lugar-btn" id="lugar-btn" onclick="lugarToggle()">
