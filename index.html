@@ -292,17 +292,6 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .hdr-search-btn{width:44px;min-height:36px;display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--gray);flex-shrink:0;-webkit-tap-highlight-color:transparent;background:none;border:none;font-family:var(--font);transition:color var(--tr-base);position:relative}
 .hdr-search-btn::before{content:'';position:absolute;left:0;top:15%;bottom:15%;width:1px;background:var(--bdr)}
 .hdr-search-btn:active{color:var(--white);background:rgba(255,255,255,.04)}
-.hdr-search-expanded{display:none;align-items:center;gap:var(--sp-2);flex:1;padding:0 var(--sp-3)}
-.hdr-fest-bar.search-open .hdr-fest-selector{display:none}
-.hdr-fest-bar.search-open .hdr-search-btn{display:none}
-.hdr-fest-bar.search-open .hdr-search-expanded{display:flex}
-.hdr-search-back{width:28px;height:36px;display:flex;align-items:center;justify-content:center;color:var(--gray);cursor:pointer;flex-shrink:0;background:none;border:none;font-family:var(--font);-webkit-tap-highlight-color:transparent}
-.hdr-search-field{flex:1;display:flex;align-items:center;gap:var(--sp-2);background:var(--surf);border:1px solid var(--bdr);border-radius:var(--r-md);height:26px;padding:0 var(--sp-2)}
-.hdr-search-field input{flex:1;background:none;border:none;color:var(--white);font-family:var(--font);font-size:16px;outline:none}
-.hdr-search-field input::placeholder{color:var(--gray2)}
-.hdr-search-cancel{font-size:var(--t-sm);font-weight:var(--w-semi);color:var(--gray);cursor:pointer;flex-shrink:0;background:none;border:none;font-family:var(--font);padding:var(--sp-1)}
-.hdr-search-results{position:fixed;top:var(--search-res-top,120px);left:0;right:0;background:var(--surf);border-bottom:1px solid var(--bdr);z-index:201;overflow-y:auto;display:none}
-.hdr-fest-left{display:flex;align-items:center;gap:var(--sp-2)}
 .hdr-fest-dot{width:5px;height:5px;border-radius:50%;background:var(--amber);flex-shrink:0}
 .hdr-fest-name{font-size:var(--t-xs);font-weight:var(--w-bold);letter-spacing:.08em;text-transform:uppercase;color:var(--white)}
 .hdr-fest-dates{font-size:var(--t-xs);font-weight:var(--w-semi);letter-spacing:.05em;text-transform:uppercase;color:var(--white-60)}
@@ -1903,6 +1892,122 @@ html.splash-skip #otrofestiv-splash{display:none}
 .lugar-opt span{flex:1}
 .lugar-cnt{font-size:var(--t-sm);color:var(--gray2);flex:none!important}
 @keyframes lugarFadeIn{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:translateY(0)}}
+
+/* ── BUSCADOR — arquitectura overlay ─────────────────────────────────────
+   El overlay cubre la pantalla desde el topbar hacia abajo.
+   El teclado ajusta su altura via visualViewport.
+   La página detrás no se ve, no interfiere.                              */
+.hdr-search-icon{
+  width:44px;min-height:36px;
+  display:flex;align-items:center;justify-content:center;
+  background:none;border:none;cursor:pointer;
+  color:var(--gray);flex-shrink:0;
+  -webkit-tap-highlight-color:transparent;
+  font-family:var(--font);
+  transition:color var(--tr-base);
+  position:relative;
+}
+.hdr-search-icon::before{
+  content:'';position:absolute;
+  left:0;top:15%;bottom:15%;
+  width:1px;background:var(--bdr);
+}
+.hdr-search-icon:active{color:var(--white)}
+
+#search-overlay{
+  position:fixed;
+  left:0;right:0;
+  background:var(--surf);
+  z-index:290;
+  display:none;
+  flex-direction:column;
+  overflow:hidden;
+}
+
+.search-bar{
+  display:flex;align-items:center;
+  gap:var(--sp-2);
+  padding:0 var(--sp-3);
+  height:44px;
+  border-bottom:1px solid var(--bdr);
+  flex-shrink:0;
+}
+.search-back{
+  width:32px;height:44px;
+  display:flex;align-items:center;justify-content:center;
+  color:var(--gray);cursor:pointer;flex-shrink:0;
+  background:none;border:none;font-family:var(--font);
+  -webkit-tap-highlight-color:transparent;
+}
+.search-input-wrap{
+  flex:1;
+  display:flex;align-items:center;gap:var(--sp-2);
+  background:var(--surf-2);
+  border:1px solid var(--bdr);
+  border-radius:var(--r-pill);
+  height:34px;
+  padding:0 var(--sp-3);
+}
+.search-input-wrap svg{flex-shrink:0;color:var(--gray2)}
+#search-input{
+  flex:1;background:none;border:none;
+  color:var(--white);font-family:var(--font);
+  font-size:16px; /* 16px prevents iOS auto-zoom */
+  outline:none;
+}
+#search-input::placeholder{color:var(--gray2)}
+.search-cancel{
+  font-size:var(--t-base);font-weight:var(--w-semi);
+  color:var(--gray);cursor:pointer;flex-shrink:0;
+  background:none;border:none;font-family:var(--font);
+  padding:0 var(--sp-1);
+  -webkit-tap-highlight-color:transparent;
+}
+
+#search-results{
+  flex:1;overflow-y:auto;
+  -webkit-overflow-scrolling:touch;
+}
+.search-section-hdr{
+  padding:var(--sp-3) var(--sp-4) var(--sp-1);
+  font-size:var(--t-xs);font-weight:var(--w-bold);
+  letter-spacing:.07em;text-transform:uppercase;
+  color:var(--gray2);
+}
+.search-item{
+  display:flex;align-items:center;
+  gap:var(--sp-3);
+  padding:var(--sp-3) var(--sp-4);
+  border-bottom:1px solid var(--bdr-l);
+  cursor:pointer;
+  -webkit-tap-highlight-color:transparent;
+  transition:background var(--tr-base);
+}
+.search-item:last-child{border-bottom:none}
+.search-item:active{background:var(--surf-2)}
+.search-item-poster{
+  width:38px;height:57px;
+  object-fit:cover;border-radius:var(--r-sm);
+  flex-shrink:0;background:var(--surf-2);
+}
+.search-item-info{flex:1;min-width:0}
+.search-item-title{
+  font-size:var(--t-base);font-weight:var(--w-semi);
+  color:var(--white);
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+.search-item-meta{
+  font-size:var(--t-sm);color:var(--gray);
+  margin-top:3px;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+.search-item-arrow{color:var(--gray2);flex-shrink:0}
+.search-empty{
+  display:flex;flex-direction:column;align-items:center;
+  justify-content:center;padding:var(--sp-8) var(--sp-4);
+  text-align:center;color:var(--gray);
+}
+.search-empty-icon{font-size:32px;margin-bottom:var(--sp-3)}
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebApplication","name":"Otrofestiv","description":"Tu agenda personal para festivales de cine. Planea, prioriza y saca el máximo de cada festival.","url":"https://otrofestiv.app","applicationCategory":"EntertainmentApplication","operatingSystem":"iOS, Android, Web","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
@@ -2000,7 +2105,6 @@ html.splash-skip #otrofestiv-splash{display:none}
     </button>
   </div>
   <div class="hdr-fest-bar" id="hdr-fest-bar">
-  <!-- Selector — tap opens festival sheet -->
   <div class="hdr-fest-selector" onclick="openFestivalSheet()">
     <div class="hdr-fest-left">
       <div class="hdr-fest-dot"></div>
@@ -2009,23 +2113,10 @@ html.splash-skip #otrofestiv-splash{display:none}
     </div>
     <div class="hdr-fest-chev"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></div>
   </div>
-  <!-- Search icon — tap expands inline -->
-  <button class="hdr-search-btn" id="hdr-search-btn" onclick="openGlobalSearch()" aria-label="Buscar">
+  <button class="hdr-search-icon" id="hdr-search-icon" onclick="searchOpen()" aria-label="Buscar">
     <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
   </button>
-  <!-- Expanded search field — hidden by default -->
-  <div class="hdr-search-expanded" id="hdr-search-expanded">
-    <button class="hdr-search-back" onclick="closeGlobalSearch()" aria-label="Cancelar">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
-    </button>
-    <div class="hdr-search-field">
-      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-      <input type="text" id="global-search-input" placeholder="Buscar…" oninput="onGlobalSearch()" autocomplete="off" autocorrect="off" autocapitalize="off">
-    </div>
-    <button class="hdr-search-cancel" onclick="closeGlobalSearch()">Cancelar</button>
-  </div>
-  <!-- Results dropdown -->
-  <div class="hdr-search-results" id="hdr-search-results"></div>
+</div>
 </div>
   
 
@@ -6460,111 +6551,12 @@ let expandedPelicula=''; // título expandido en vista Por Película
 
 /* ── BÚSQUEDA EN CARTELERA ── */
 // ── BÚSQUEDA GLOBAL ────────────────────────────────────────────────────────
-function _updateSearchResultsHeight(){
-  const res=document.getElementById('hdr-search-results');
-  if(!res||res.style.display==='none') return;
-  // Recalculate topbar bottom every time — topbar may have moved
-  const tb=document.querySelector('.topbar');
-  const topbarBottom=tb?Math.ceil(tb.getBoundingClientRect().bottom):88;
-  // Visual viewport height accounts for keyboard
-  const vvH=window.visualViewport?window.visualViewport.height+window.visualViewport.offsetTop:window.innerHeight;
-  res.style.top=topbarBottom+'px';
-  res.style.height=(vvH-topbarBottom)+'px';
-}
-// Update on keyboard appear/disappear and scroll
-if(window.visualViewport){
-  window.visualViewport.addEventListener('resize',_updateSearchResultsHeight);
-  window.visualViewport.addEventListener('scroll',_updateSearchResultsHeight);
-}
-function openGlobalSearch(){
-  const bar=document.getElementById('hdr-fest-bar');
-  const inp=document.getElementById('global-search-input');
-  if(bar) bar.classList.add('search-open');
-  window.scrollTo({top:0,behavior:'instant'});
-  requestAnimationFrame(()=>{
-    if(inp){
-      inp.focus();
-      // Update position after focus (keyboard may appear)
-      inp.addEventListener('focus',_updateSearchResultsHeight,{once:false});
-    }
-  });
-}
-function closeGlobalSearch(){
-  const bar=document.getElementById('hdr-fest-bar');
-  const inp=document.getElementById('global-search-input');
-  const res=document.getElementById('hdr-search-results');
-  if(bar) bar.classList.remove('search-open');
-  if(inp){inp.value='';inp.blur();}
-  if(res) res.style.display='none';
-}
-function onGlobalSearch(){
-  const inp=document.getElementById('global-search-input');
-  const res=document.getElementById('hdr-search-results');
-  if(!inp||!res) return;
-  const q=inp.value.trim().toLowerCase();
-  if(!q){res.style.display='none';return;}
-  // Reusar lógica de onCartaSearch: programas + cortos individuales
-  const titleMap={};
-  FILMS.forEach(f=>{if(!titleMap[f.title]) titleMap[f.title]=f;});
-  const progMatches=Object.values(titleMap).filter(f=>{
-    const{displayTitle}=parseProgramTitle(f.title);
-    const sec=(f.section||'').replace(/^[^ ]+ /,'').toLowerCase();
-    return displayTitle.toLowerCase().includes(q)||f.title.toLowerCase().includes(q)
-      ||sec.includes(q)||(f.country||'').toLowerCase().includes(q);
-  });
-  const cortoMatches=[];
-  FILMS.filter(f=>f.is_cortos&&f.film_list?.length).forEach(prog=>{
-    prog.film_list.forEach(item=>{
-      if(item.title.toLowerCase().includes(q)){
-        cortoMatches.push({_isCortoItem:true,_prog:prog,
-          title:item.title,country:item.country,duration:item.duration,
-          flags:countryToFlags(item.country||''),section:prog.section,is_cortos:false});
-      }
-    });
-  });
-  const seen=new Set();
-  const matches=[...progMatches,...cortoMatches]
-    .filter(f=>{if(seen.has(f.title))return false;seen.add(f.title);return true;})
-    .slice(0,10);
-  if(!matches.length){
-    res.innerHTML='<div class="carta-sr-empty"><div class="carta-sr-empty-ico">🔍</div>Sin resultados para <strong style="color:var(--white-60)">&ldquo;'+q+'&rdquo;</strong></div>';
-    res.style.display='block';
-    _updateSearchResultsHeight();
-  return;
-  }
-  res.innerHTML='<div class="carta-sr-section">Películas</div>'+matches.map(f=>{
-    const{displayTitle,progSuffix}=parseProgramTitle(f.title);
-    const poster=getFilmPoster(f)||'';
-    const safeT=f.title.replace(/'/g,"\\'");
-    const safeC=(f.country||'').replace(/'/g,"\\'");
-    const safeD=(f.duration||'').replace(/'/g,"\\'");
-    const safeS=(f.section||'').replace(/'/g,"\\'");
-    const safeF=(f.flags||'🌍').replace(/'/g,"\\'");
-    const fn=f._isCortoItem
-      ? "closeGlobalSearch();openCortoSheet('"+safeT+"','"+safeC+"','"+safeD+"','"+safeS+"','"+safeF+"')"
-      : "closeGlobalSearch();openPelSheet('"+safeT+"')";
-    const meta=f._isCortoItem
-      ? 'Cortometraje'+(f._prog?' · '+parseProgramTitle(f._prog.title).displayTitle:'')
-      : (f.duration||'')+(f.section?' · '+f.section.replace(/^[^ ]+ /,''):'');
-    return '<div class="carta-sr-item" onclick="'+fn+'">'
-      +(poster?'<img class="carta-sr-poster" src="'+poster+'" onerror="this.style.opacity=0" alt="">'
-              :'<div class="carta-sr-poster"></div>')
-      +'<div class="carta-sr-info">'
-      +'<div class="carta-sr-title">'+displayTitle
-      +(progSuffix?'<span style="color:var(--orange);font-size:var(--t-label)"> '+progSuffix+'</span>':'')
-      +'</div>'
-      +'<div class="carta-sr-meta">'+meta+'</div>'
-      +'</div>'
-      +'<div class="carta-sr-arrow">›</div>'
-      +'</div>';
-  }).join('');
-  res.style.display='block';
-  _updateSearchResultsHeight();
-}
-document.addEventListener('click',e=>{
-  const bar=document.getElementById('hdr-fest-bar');
-  if(bar&&bar.classList.contains('search-open')&&!bar.contains(e.target)) closeGlobalSearch();
-});
+
+
+
+
+
+
 
 function onCartaSearch(){
   const inp=document.getElementById('carta-search-input');
@@ -8599,6 +8591,118 @@ function lugarToggle(){
   if(document.getElementById('lugar-drop')) lugarClose();
   else lugarOpen();
 }
+
+// ── BUSCADOR — sistema completo ───────────────────────────────────────────
+// Overlay position:fixed. Se posiciona debajo del topbar.
+// El teclado ajusta la altura via visualViewport.
+
+function searchPositionOverlay(){
+  const overlay = document.getElementById('search-overlay');
+  if(!overlay || overlay.style.display==='none') return;
+  const tb = document.querySelector('.topbar');
+  const top = tb ? Math.ceil(tb.getBoundingClientRect().bottom) : 88;
+  const vv = window.visualViewport;
+  const bottom = vv ? window.innerHeight - vv.height - vv.offsetTop : 0;
+  overlay.style.top = top + 'px';
+  overlay.style.bottom = Math.max(0, bottom) + 'px';
+}
+
+function searchOpen(){
+  const overlay = document.getElementById('search-overlay');
+  const inp = document.getElementById('search-input');
+  if(!overlay) return;
+  window.scrollTo({top:0, behavior:'instant'});
+  overlay.style.display = 'flex';
+  requestAnimationFrame(()=>{
+    searchPositionOverlay();
+    if(inp) inp.focus();
+  });
+}
+
+function searchClose(){
+  const overlay = document.getElementById('search-overlay');
+  const inp = document.getElementById('search-input');
+  const results = document.getElementById('search-results');
+  if(overlay) overlay.style.display = 'none';
+  if(inp){ inp.value = ''; inp.blur(); }
+  if(results) results.innerHTML = '';
+}
+
+function searchQuery(){
+  const inp = document.getElementById('search-input');
+  const results = document.getElementById('search-results');
+  if(!inp || !results) return;
+  const q = inp.value.trim().toLowerCase();
+
+  if(!q){ results.innerHTML = ''; return; }
+
+  // Search: film titles + cortos individuales
+  const seen = new Set();
+  const matches = [];
+
+  // Programs
+  const titleMap = {};
+  FILMS.forEach(f=>{ if(!titleMap[f.title]) titleMap[f.title]=f; });
+  Object.values(titleMap).forEach(f=>{
+    const{displayTitle}=parseProgramTitle(f.title);
+    const sec=(f.section||'').replace(/^[^ ]+ /,'').toLowerCase();
+    if(displayTitle.toLowerCase().includes(q)||f.title.toLowerCase().includes(q)||sec.includes(q)||(f.country||'').toLowerCase().includes(q)){
+      if(!seen.has(f.title)){ seen.add(f.title); matches.push(f); }
+    }
+  });
+
+  // Individual shorts inside cortos programs
+  FILMS.filter(f=>f.is_cortos&&f.film_list?.length).forEach(prog=>{
+    prog.film_list.forEach(item=>{
+      if(item.title.toLowerCase().includes(q)&&!seen.has(item.title)){
+        seen.add(item.title);
+        matches.push({_isCortoItem:true,_prog:prog,
+          title:item.title,country:item.country,duration:item.duration,
+          flags:countryToFlags(item.country||''),section:prog.section,is_cortos:false});
+      }
+    });
+  });
+
+  const top10 = matches.slice(0, 10);
+
+  if(!top10.length){
+    results.innerHTML = '<div class="search-empty"><div class="search-empty-icon">🔍</div><div>Sin resultados para <strong>&ldquo;'+q+'&rdquo;</strong></div></div>';
+    return;
+  }
+
+  results.innerHTML = '<div class="search-section-hdr">Películas</div>'
+    + top10.map(f=>{
+      const{displayTitle,progSuffix}=parseProgramTitle(f.title);
+      const poster=getFilmPoster(f)||'';
+      const meta=f._isCortoItem
+        ?'Cortometraje'+(f._prog?' · '+parseProgramTitle(f._prog.title).displayTitle:'')
+        :(f.duration||'')+(f.section?' · '+f.section.replace(/^[^ ]+ /,''):'');
+      const safeT=f.title.replace(/'/g,"\'");
+      const safeC=(f.country||'').replace(/'/g,"\'");
+      const safeD=(f.duration||'').replace(/'/g,"\'");
+      const safeS=(f.section||'').replace(/'/g,"\'");
+      const safeF=(f.flags||'🌍').replace(/'/g,"\'");
+      const onclick=f._isCortoItem
+        ?`searchClose();openCortoSheet('${safeT}','${safeC}','${safeD}','${safeS}','${safeF}')`
+        :`searchClose();openPelSheet('${safeT}')`;
+      return '<div class="search-item" onclick="'+onclick+'">'
+        +(poster?'<img class="search-item-poster" src="'+poster+'" onerror="this.style.opacity=0" alt="">'
+                :'<div class="search-item-poster"></div>')
+        +'<div class="search-item-info">'
+        +'<div class="search-item-title">'+displayTitle
+        +(progSuffix?'<span style="color:var(--orange);font-size:var(--t-sm)"> '+progSuffix+'</span>':'')
+        +'</div>'
+        +'<div class="search-item-meta">'+meta+'</div>'
+        +'</div>'
+        +'<div class="search-item-arrow">›</div>'
+        +'</div>';
+    }).join('');
+}
+
+// Reposition when keyboard appears/disappears
+if(window.visualViewport){
+  window.visualViewport.addEventListener('resize', searchPositionOverlay);
+}
 </script>
 
 <!-- Festival switcher bottom sheet -->
@@ -8682,5 +8786,19 @@ function lugarToggle(){
 
 <button id="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Volver arriba">↑</button>
 
+<!-- ── SEARCH OVERLAY ── position:fixed, cubre pantalla desde topbar ── -->
+<div id="search-overlay">
+  <div class="search-bar">
+    <button class="search-back" onclick="searchClose()" aria-label="Cancelar">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+    </button>
+    <div class="search-input-wrap">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input type="text" id="search-input" placeholder="Buscar…" oninput="searchQuery()" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+    </div>
+    <button class="search-cancel" onclick="searchClose()">Cancelar</button>
+  </div>
+  <div id="search-results"></div>
+</div>
 </body>
 </html>
