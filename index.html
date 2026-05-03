@@ -8148,6 +8148,7 @@ async function loadFestival(id){
   // Resetear filtros al cambiar festival
   activeVenue='all';activeSec='all';programaChip='all';_programaChipMatchFn=null;
   lugarClose();
+  seccionClose();
   // Si no está en FESTIVAL_CONFIG, intentar cargar config desde JSON
   if(!FESTIVAL_CONFIG[id]){
     FESTIVAL_CONFIG[id]={films:null,posters:null};
@@ -8707,6 +8708,118 @@ function searchQuery(){
 // Reposition when keyboard appears/disappears
 if(window.visualViewport){
   window.visualViewport.addEventListener('resize', searchPositionOverlay);
+}
+
+// ── FILTRO SECCIÓN ────────────────────────────────────────────────────────
+// Mismo patrón que lugarOpen/Close/Outside/Toggle.
+// activeSec: 'all' | nombre exacto de sección (f.section)
+
+function _seccionLabel(sec){
+  // Emoji + primera palabra, máx 14 chars total
+  if(!sec||sec==='all') return 'Sección';
+  // Buscar emoji en PROGRAMA_CHIPS
+  const chip = PROGRAMA_CHIPS.find(c=>c.match&&c.match(sec));
+  const parts = sec.split(' ');
+  const firstWord = parts[0]||sec;
+  const emoji = chip ? chip.label.split(' ')[0] : '';
+  const label = emoji ? (emoji+' '+firstWord) : firstWord;
+  return label.length>14 ? label.slice(0,13)+'…' : label;
+}
+
+function seccionOpen(){
+  const btn = document.getElementById('seccion-btn');
+  const r = btn.getBoundingClientRect();
+
+  const drop = document.createElement('div');
+  drop.id = 'seccion-drop';
+  drop.style.cssText = [
+    'position:fixed',
+    'top:'+(r.bottom+4)+'px',
+    'right:'+(window.innerWidth-r.right)+'px',
+    'min-width:200px',
+    'max-width:min(300px,90vw)',
+    'max-height:55vh',
+    'overflow-y:auto',
+    'background:var(--surf)',
+    'border:1px solid var(--bdr)',
+    'border-radius:var(--r)',
+    'box-shadow:0 8px 24px rgba(0,0,0,.55)',
+    'z-index:9999',
+    'animation:lugarFadeIn .12s ease'
+  ].join(';');
+
+  // Secciones únicas del festival activo (filtradas por día si aplica)
+  const baseFilms = programaSubMode==='explorar'
+    ? FILMS
+    : FILMS.filter(f=>f.day===activeDay);
+  // Si hay venue activo, mostrar solo secciones disponibles en ese venue
+  const films = activeVenue!=='all'
+    ? baseFilms.filter(f=>vcfg(f.venue).short===activeVenue)
+    : baseFilms;
+
+  const secMap = {};
+  const titleSet = {};
+  films.forEach(f=>{
+    if(!titleSet[f.title]){
+      titleSet[f.title]=true;
+      const s=f.section||'';
+      if(s) secMap[s]=(secMap[s]||0)+1;
+    }
+  });
+  const total = Object.keys(titleSet).length;
+  const secs = Object.entries(secMap).sort((a,b)=>b[1]-a[1]);
+
+  const opts = [{sec:'all', label:'Todo el programa', count:total}, ...secs.map(([sec,cnt])=>({sec, label:sec, count:cnt}))];
+
+  drop.innerHTML = opts.map(o=>{
+    const isActive = o.sec==='all' ? activeSec==='all' : activeSec===o.sec;
+    const chip = o.sec!=='all' ? PROGRAMA_CHIPS.find(c=>c.match&&c.match(o.sec)) : null;
+    const displayLabel = chip ? chip.label : o.label;
+    return '<div class="lugar-opt'+(isActive?' on':'')+'" data-s="'+o.sec.replace(/"/g,'&quot;')+'">'
+      +'<span>'+displayLabel+'</span>'
+      +'<span class="lugar-cnt">'+o.count+'</span>'
+      +(isActive&&o.sec!=='all'?'<span style="color:var(--amber);margin-left:2px">✓</span>':'')
+      +'</div>';
+  }).join('');
+
+  drop.addEventListener('click', e=>{
+    const opt = e.target.closest('.lugar-opt');
+    if(!opt) return;
+    const s = opt.dataset.s;
+    activeSec = (s==='all'||s===activeSec) ? 'all' : s;
+    _programaChipMatchFn = null;
+    programaChip = 'all';
+    seccionClose();
+    _updateProgramaActiveFilter();
+    if(programaSubMode==='explorar') _renderProgramaContent(); else render();
+  });
+
+  document.body.appendChild(drop);
+  btn.classList.add('active');
+  setTimeout(()=>{ document.addEventListener('click', seccionOutside); }, 0);
+}
+
+function seccionOutside(e){
+  const drop = document.getElementById('seccion-drop');
+  const btn = document.getElementById('seccion-btn');
+  if(drop && !drop.contains(e.target) && e.target!==btn && !btn?.contains(e.target)){
+    seccionClose();
+  }
+}
+
+function seccionClose(){
+  const drop = document.getElementById('seccion-drop');
+  if(drop) drop.remove();
+  document.removeEventListener('click', seccionOutside);
+  const btn = document.getElementById('seccion-btn');
+  if(btn) btn.classList.toggle('active', activeSec!=='all');
+  const lbl = document.getElementById('seccion-lbl');
+  if(lbl) lbl.textContent = _seccionLabel(activeSec);
+}
+
+function seccionToggle(){
+  if(document.getElementById('seccion-drop')) seccionClose();
+  else seccionOpen();
 }
 </script>
 
