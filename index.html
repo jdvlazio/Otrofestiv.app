@@ -289,7 +289,8 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .hdr-fest-bar:active{background:var(--surf-2)}
 .hdr-fest-selector{display:flex;align-items:center;flex:1;gap:var(--sp-2);padding:var(--sp-2) var(--sp-4);cursor:pointer;-webkit-tap-highlight-color:transparent;min-width:0}
 .hdr-fest-selector:active{opacity:.7}
-.hdr-search-btn{width:44px;min-height:36px;display:flex;align-items:center;justify-content:center;border-left:1px solid var(--bdr);cursor:pointer;color:var(--gray);flex-shrink:0;-webkit-tap-highlight-color:transparent;background:none;border-top:none;border-bottom:none;border-right:none;font-family:var(--font);transition:color var(--tr-base)}
+.hdr-search-btn{width:44px;min-height:36px;display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--gray);flex-shrink:0;-webkit-tap-highlight-color:transparent;background:none;border:none;font-family:var(--font);transition:color var(--tr-base);position:relative}
+.hdr-search-btn::before{content:'';position:absolute;left:0;top:15%;bottom:15%;width:1px;background:var(--bdr)}
 .hdr-search-btn:active{color:var(--white);background:rgba(255,255,255,.04)}
 .hdr-search-expanded{display:none;align-items:center;gap:var(--sp-2);flex:1;padding:0 var(--sp-3)}
 .hdr-fest-bar.search-open .hdr-fest-selector{display:none}
