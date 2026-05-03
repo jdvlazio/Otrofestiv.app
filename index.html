@@ -6530,8 +6530,20 @@ function renderFlowProgress(activeTab){
 function renderAgenda(){
   const view=document.getElementById('ag-view');
   if(activeMNav==='mnav-seleccion'){
+    // ── Post-festival: redirigir a Mi Plan ──
+    if(festivalEnded()){
+      const _festName=(FESTIVAL_CONFIG[_activeFestId]||{}).name||'El festival';
+      view.innerHTML=emptyStateHero(
+        ICONS.check,
+        `${_festName} ha terminado`,
+        'Revisá las películas que agendaste y marcaste como vistas en Mi Plan.',
+        'Ver Mi Plan',
+        "switchMainNav('mnav-miplan')"
+      );
+      return;
+    }
     // ── Mi Lista: buscador + lista de películas ──
-    const _progressHtml=(!festivalEnded()&&(!savedAgenda||!savedAgenda.schedule||!savedAgenda.schedule.length))?renderFlowProgress('seleccion'):'';
+    const _progressHtml=(!savedAgenda||!savedAgenda.schedule||!savedAgenda.schedule.length)?renderFlowProgress('seleccion'):'';
     view.innerHTML=`${_progressHtml}
       <div class="ag-section">
         <div id="ag-film-list">${renderFilmListHTML()}</div>
