@@ -2272,8 +2272,12 @@ html.splash-skip #otrofestiv-splash{display:none}
   <button class="pmode-tab" id="pmode-manana" onclick="setProgramaMode('manana')">Mañana</button>
   <div class="pmode-spacer"></div>
   <div class="pmode-controls" style="position:relative">
-    <button class="lugar-btn" id="lugar-btn" onclick="lugarToggle()">
+    <button class="seccion-btn" id="seccion-btn" onclick="seccionToggle()">
       <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>
+      <span id="seccion-lbl">Sección</span>
+    </button>
+    <button class="lugar-btn" id="lugar-btn" onclick="lugarToggle()">
+      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
       <span id="lugar-lbl">Lugar</span>
     </button>
     <!-- single toggle btn — icono refleja estado actual -->
