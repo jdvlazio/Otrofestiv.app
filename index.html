@@ -1396,7 +1396,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
        --sticky-top-carta is undefined in mobile so override directly */
   .topbar{position:sticky;top:0;z-index:200;background:var(--surf)}
   .hdr{background:var(--surf)}
-  #hdr-programa{padding-top:var(--sp-2);top:47px}
+  #hdr-programa{padding-top:0} /* top viene de --sticky-top-carta via _fixStickyOffset */
   #hdr-ag{top:47px}
 }
 
@@ -8474,14 +8474,15 @@ function _fixStickyOffset(){
   const tb=document.querySelector('.topbar');
   if(!tb) return;
   const isMobile=window.innerWidth<768;
-  const tbH=Math.ceil(tb.getBoundingClientRect().height)||(isMobile?47:86);
+  const tbH=Math.ceil(tb.getBoundingClientRect().height)||(isMobile?80:86);
   const navH=44; // main-nav height on desktop
   const modeH=38;
   const r=document.documentElement.style;
-  if(!isMobile){
-    // Topbar (wordmark+fest-bar) without nav
+  if(isMobile){
+    // Mobile: topbar sticky at 0, hdr-programa sticks right below
+    r.setProperty('--sticky-top-carta',tbH+'px');
+  } else {
     r.setProperty('--tb-no-nav',tbH+'px');
-    // Topbar + nav = where #hdr-programa sticks
     r.setProperty('--tb-total',(tbH+navH)+'px');
     r.setProperty('--sticky-top-carta',(tbH+navH)+'px');
     r.setProperty('--sticky-top-modebar',(tbH+navH+modeH)+'px');
