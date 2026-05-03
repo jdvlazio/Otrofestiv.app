@@ -6770,7 +6770,14 @@ function renderVbar(){
     const b=document.createElement('button');
     b.className='fdr-opt'+(isOn?' on':'');
     b.innerHTML=html;
-    b.onclick=e=>{e.stopPropagation();cb();};
+    b.onclick=e=>{
+      e.stopPropagation();
+      cb();
+      const vp=document.getElementById('vdr-panel');
+      if(vp) vp.style.display='none';
+      const pb=document.getElementById('pmode-filter-btn');
+      if(pb) pb.classList.toggle('active',activeVenue!=='all');
+    };
     panel.appendChild(b);
   };
   mkOpt(`Todos los lugares <span class="fdr-cnt">${dayFilms.length}</span>`,activeVenue==='all',()=>{activeVenue='all';selectedIdx=null;setHint(null);closeDropdowns();_updateProgramaActiveFilter();if(programaSubMode==='explorar')_renderProgramaContent();else render();});
@@ -6830,7 +6837,12 @@ function renderSbar(){
     const b=document.createElement('button');
     b.className='fdr-opt'+(isOn?' on':'');
     b.innerHTML=html;
-    b.onclick=e=>{e.stopPropagation();cb();};
+    b.onclick=e=>{
+      e.stopPropagation();
+      cb();
+      const vp=document.getElementById('vdr-panel');
+      if(vp) vp.style.display='none';
+    };
     panel.appendChild(b);
   };
   mkOpt(`Todas las categorías <span class="fdr-cnt">${dayF.length}</span>`,activeSec==='all',()=>{activeSec='all';selectedIdx=null;setHint(null);closeDropdowns();render();});
