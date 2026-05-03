@@ -2214,7 +2214,7 @@ html.splash-skip #otrofestiv-splash{display:none}
 <!-- filter-row y vdr-btn: solo IDs para compat JS -->
 <div id="filter-row" style="display:none"><button id="vdr-btn" style="display:none"><span id="vdr-label"></span><span id="vdr-arrow"></span></button></div>
 <!-- vdr-panel: en body, position:fixed, posicionado por JS -->
-<div class="fdr-panel" id="vdr-panel" style="position:fixed;display:none;min-width:220px;z-index:9999"></div>
+<div class="fdr-panel" id="vdr-panel" style="position:fixed;display:none;min-width:200px;max-width:260px;max-height:50vh;z-index:9999"></div>
 <div class="programa-list" id="programa-list"></div>
 <div id="notices-banner"></div>
 <div id="filter-bars">
@@ -6725,8 +6725,11 @@ function toggleDropdown(id){
   }
 }
 function closeDropdowns(){
-  document.querySelectorAll('.fdr-panel').forEach(p=>p.classList.remove('open'));
+  document.querySelectorAll('.fdr-panel').forEach(p=>{p.classList.remove('open');p.style.display='none';});
   document.querySelectorAll('.fdr-arrow').forEach(a=>a.classList.remove('open'));
+  // Reset pmode-filter-btn active state
+  const pb=document.getElementById('pmode-filter-btn');
+  if(pb&&activeVenue==='all') pb.classList.remove('active');
 }
 
 /* ── RENDER — CARTELERA: filtros, grid horario, grid película ────────── */
