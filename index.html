@@ -8085,7 +8085,6 @@ function render(){
     const isNow=isNowShowing(f);
     const safeT=f.title.replace(/'/g,"\'");
     const posterSrc=getFilmPoster(f);
-    const _cardBg2='';
     const _genSrc2=posterSrc&&!posterSrc.startsWith('http')?posterSrc:getFilmPoster(f)||'';
     const _cardBg2=_genSrc2?`style="background-image:url('${_genSrc2.replace(/'/g,'%27')}');background-size:cover;background-position:center"`:'';
     const posterImg=posterSrc&&posterSrc.startsWith('http')
