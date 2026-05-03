@@ -361,7 +361,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 ────────────────────────────────────────────────────────────────────────── */
 #hdr-programa{position:sticky;top:var(--sticky-top-carta);z-index:121;background:var(--surf)}
 #hdr-ag{position:sticky;top:var(--sticky-top-carta);z-index:121;background:var(--surf);border-bottom:1px solid var(--bdr)}
-.ag-toggle-bar{display:flex;align-items:stretch;border-top:1px solid var(--bdr-l);border-bottom:1px solid var(--bdr);background:var(--surf)}
+.ag-toggle-bar{display:none!important}
 .ag-toggle-bar::-webkit-scrollbar{display:none}
 .ag-sec-pill{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:3px;font-size:var(--t-sm);font-weight:var(--w-semi);color:var(--gray);background:none;border:none;border-bottom:2px solid transparent;padding:var(--sp-2) var(--sp-1);white-space:nowrap;cursor:pointer;font-family:var(--font);transition:color var(--tr-base),border-color var(--tr-base);min-height:38px}
 .ag-sec-pill:active{opacity:.7}
@@ -6671,8 +6671,7 @@ function showAgView(){
   const _agH=document.getElementById('hdr-ag');
   if(_agH){
     _agH.style.display='';
-    const _tb=document.getElementById('ag-toggle-bar');
-    if(_tb) _tb.style.removeProperty('display'); // siempre visible — CSS controla
+    // ag-toggle-bar eliminado de Intereses (solo en Explorar)
   }
   document.getElementById('nav-row').classList.add('hidden');
   document.getElementById('filter-row').classList.add('hidden');
