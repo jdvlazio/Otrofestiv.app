@@ -7699,6 +7699,8 @@ function setProgramaView(view){
 }
 
 function setProgramaChip(chipId){
+  // Toggle: tap active chip → deselect back to 'all'
+  if(chipId!=='all'&&chipId===programaChip) chipId='all';
   programaChip=chipId;
   // Actualizar chips visuales
   document.querySelectorAll('.pchip').forEach(el=>{
@@ -7753,8 +7755,9 @@ function _updateProgramaActiveFilter(){
   const hasChip=programaChip!=='all'&&chip;
   const hasVenue=activeVenue!=='all';
 
-  if(hasChip||hasVenue){
-    // Construir el label del tag — chip + venue si ambos activos
+  if(hasVenue){
+    // Tag solo visible cuando hay filtro de Lugar activo
+    // Los chips ya muestran su propio estado seleccionado
     let parts=[];
     if(hasChip) parts.push(chip.label);
     if(hasVenue) parts.push(ICONS.pin+' '+activeVenue);
@@ -8087,7 +8090,8 @@ function renderPeliculaView(){
     return (a.film.time||'').localeCompare(b.film.time||'');
   });
 
-  cntEl.innerHTML=(activeSec!=='all'||programaChip!=='all')?`<span class="count-badge cb-neutral">${entries.length}</span>`:'';
+  // Count badge: solo cuando hay filtro de Lugar (sin chip activo muestra el count de la sección en el chip)
+  cntEl.innerHTML=(activeVenue!=='all')?`<span class="count-badge cb-neutral">${entries.length}</span>`:'';
 
   const DAY_ABB=['MAR','MIÉ','JUE','VIE','SÁB','DOM'];
 
