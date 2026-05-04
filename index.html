@@ -1079,7 +1079,8 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
    ICONO      .ag-fi-btn .action-btn .film-switch
               sin texto, padding mínimo, bg contextual
 ══════════════════════════════════════════════════════ */
-.av-calc-btn{width:100%;margin-top:var(--sp-5);padding:var(--sp-btn) var(--sp-4);border-radius:var(--r-pill);background:var(--amber);border:none;color:#000;font-size:var(--t-base);font-weight:var(--w-bold);cursor:pointer;font-family:var(--font);transition:opacity var(--tr-base)}
+.av-calc-btn{width:100%;padding:var(--sp-btn) var(--sp-4);border-radius:var(--r-pill);background:var(--amber);border:none;color:#000;font-size:var(--t-base);font-weight:var(--w-bold);cursor:pointer;font-family:var(--font);transition:opacity var(--tr-base)}
+.av-calc-wrap{position:sticky;bottom:0;background:var(--surf);border-top:1px solid var(--bdr-l);padding:var(--sp-3) 0 var(--sp-4);margin-top:var(--sp-5)}
 .av-calc-btn:hover{opacity:.88}
 .av-calc-btn:disabled{opacity:.35;cursor:default}
 
@@ -6611,9 +6612,11 @@ function renderAgenda(){
           <div id="av-blocks-list"></div>
           <button class="av-add-unavail" onclick="openAvSheet()">${ICONS.plus} No disponible</button>
         </div>
-        <button class="av-calc-btn" onclick="runCalc()">
-          Calcular opciones
-        </button>
+        <div class="av-calc-wrap">
+          <button class="av-calc-btn" onclick="runCalc()">
+            Calcular opciones
+          </button>
+        </div>
       </div>
       <div class="ag-list-sep"></div>
       <div class="ag-section" style="border-top:2px solid var(--amber-30);padding-top:var(--sp-3)">
