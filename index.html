@@ -8039,7 +8039,7 @@ function _renderExploreLista(){
       <div class="plist-info">
         <div class="plist-title">${dt}</div>
         <div class="plist-sec">${f.section||''}</div>
-        <div class="plist-meta">${days}${screenings[0]?.time?' · '+screenings[0].time:''} · ${f.duration||''}</div>
+        <div class="plist-meta">${days?`<span style="color:var(--gray)">${days}</span>${screenings[0]?.time?' · '+screenings[0].time:''} · `:''}${f.duration||''}</div>
       </div>
     </div>`;
     const _stk2=_programaStack(f);
