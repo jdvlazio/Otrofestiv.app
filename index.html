@@ -762,6 +762,9 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .poster-card.in-watched{opacity:.45}
 .poster-card.past-card{opacity:.35}
 .ag-excl-item.past-card{opacity:.35}
+.excl-reason{font-size:var(--t-xs);color:var(--gray2);font-style:italic}
+.excl-reason.conflict{color:var(--red);font-style:normal;font-weight:var(--w-semi)}
+.excl-include-btn{flex-shrink:0;height:28px;padding:0 10px;border-radius:var(--r-pill);border:1px solid var(--bdr);background:none;color:var(--gray);font-size:var(--t-xs);font-weight:var(--w-bold);font-family:var(--font);cursor:pointer;white-space:nowrap;transition:border-color var(--tr-base),color var(--tr-base);-webkit-tap-highlight-color:transparent}
 .poster-card:active{opacity:.85;transform:scale(.97)}
 /* Overlay de hora (Por Horario) */
 .poster-time{position:absolute;bottom:0;left:0;right:0;padding:20px 7px 6px;background:linear-gradient(to top,rgba(0,0,0,.85) 0%,rgba(0,0,0,0) 100%);font-size:var(--t-icon);font-weight:var(--w-display);color:var(--amber);line-height:1;letter-spacing:-.3px}
@@ -5996,6 +5999,53 @@ function clearSavedAgenda(){
 // ── RESULT HTML ──
 let cachedResult=null;
 
+
+// ── forceInclude — crea variante custom con la película forzada ──────
+function forceInclude(title){
+  if(festivalEnded()){showToast('El festival ya terminó','info');return;}
+  if(!cachedResult||!cachedResult.scenarios.length) return;
+  const sc=cachedResult.scenarios[cachedResult.currentIdx];
+
+  // Intentar encajar la película en el schedule actual
+  const newSchedule=squeezeExcluded(sc.schedule,[title]);
+  const included=newSchedule.find(s=>s._title===title&&s._squeezed);
+
+  if(!included){
+    showToast('No hay slot disponible para esta película','info');
+    return;
+  }
+
+  // Construir nuevo escenario custom
+  const includedTitles=new Set(newSchedule.map(s=>s._title));
+  const pending=[...watchlist].filter(t=>!watched.has(t));
+  const newScenario={
+    schedule:newSchedule,
+    excluded:pending.filter(t=>!includedTitles.has(t)),
+    _custom:true,
+    incompatiblePriorities:sc.incompatiblePriorities,
+    trueMax:sc.trueMax,
+    maxWithPriorities:sc.maxWithPriorities,
+    priorityCost:sc.priorityCost,
+    dayBalance:sc.dayBalance
+  };
+
+  // Deduplicar — si ya existe un escenario idéntico, saltar a él
+  const newKey=newSchedule.map(s=>(s._title||'')+'@'+s.day+s.time).sort().join('|');
+  const existingIdx=cachedResult.scenarios.findIndex(s=>{
+    const k=s.schedule.map(x=>(x._title||'')+'@'+x.day+x.time).sort().join('|');
+    return k===newKey;
+  });
+
+  if(existingIdx>-1){
+    cachedResult.currentIdx=existingIdx;
+    showToast('Esta variación ya existe','info');
+  } else {
+    cachedResult.scenarios.push(newScenario);
+    cachedResult.currentIdx=cachedResult.scenarios.length-1;
+  }
+  renderAgenda();
+}
+
 function buildResultHTML(scenarios){
   if(!scenarios||!scenarios.length)
     return`<div class="ag-calc-prompt">No hay combinaciones posibles. Ajusta la disponibilidad o añade más títulos.</div>`;
@@ -6006,7 +6056,8 @@ function buildResultHTML(scenarios){
   const isOptimo=currentIdx===0;
 
   // ── Header: Plan óptimo vs Variación ──
-  const planLabel=isOptimo?`${ICONS.calendar} Plan óptimo`:`Variación ${currentIdx}`;
+  const isCustom=sc._custom===true;
+  const planLabel=isOptimo?`${ICONS.calendar} Plan óptimo`:isCustom?'Opción personalizada':`Variación ${currentIdx}`;
 
   // ── Navigation ──
   let navHtml='';
@@ -6053,33 +6104,61 @@ function buildResultHTML(scenarios){
     });
   });
 
-  // ── Películas no incluidas — info sin intercambio ──────────────
-  // Los ajustes se hacen en Mi Plan después de elegir la opción base.
-  // Flujo: Planear = elegir base → Mi Plan = ajustar fino.
-  // Escalable: no depende de lógica de swap — solo muestra qué falta.
+  // ── Películas no incluidas — lista con razón + botón Incluir ────────
   if(sc.excluded.length){
-    const _active=sc.excluded.filter(t=>FILMS.some(f=>f.title===t&&!screeningPassed(f)));
-    const _past=sc.excluded.filter(t=>!FILMS.some(f=>f.title===t&&!screeningPassed(f)));
-    const excPosters=[..._active,..._past].map(t=>{
-      const isPast=!FILMS.some(f=>f.title===t&&!screeningPassed(f));
+    const _excItems=sc.excluded.map(t=>{
       const{displayTitle:dt}=parseProgramTitle(t);
       const f=FILMS.find(fi=>fi.title===t);
       const poster=f?getFilmPoster(f):null;
-      const short=dt.length>18?dt.slice(0,16)+'…':dt;
+      const secLabel=f?(f.section||'').replace(/^\S+ /,'')||f.section||'':'';
       const safeT=t.replace(/'/g,"\'");
-      return`<div class="ag-excl-item${isPast?' past-card':''}" onclick="openPelSheet('${safeT}')">
-        ${poster
-          ?`<img class="ag-excl-poster" src="${poster}" data-title="${t.replace(/"/g,'&quot;')}" onerror="_posterErr(this)" alt="">`
-          :`<div class="ag-excl-poster-ph"></div>`}
-        <div class="ag-excl-title">${short}</div>
+      const posterHtml=poster
+        ?`<img class="int-item-poster" src="${poster}" data-title="${t.replace(/"/g,'&quot;')}" onerror="_posterErr(this)" alt="">`
+        :`<div class="int-item-poster"></div>`;
+      // Detectar razón usando screensConflict contra el schedule activo
+      const screens=FILMS.filter(fi=>fi.title===t&&!screeningPassed(fi)&&!isScreeningBlocked(fi));
+      let reason='',canInclude=false;
+      if(!screens.length){
+        reason=`<div class="excl-reason">Sin funciones disponibles</div>`;
+      } else {
+        // Buscar conflicto con el schedule actual
+        let conflictWith=null;
+        for(const s of screens){
+          for(const c of sc.schedule){
+            if(screensConflict(s,c)){
+              const{displayTitle:ct}=parseProgramTitle(c._title||'');
+              conflictWith=ct;break;
+            }
+          }
+          if(conflictWith) break;
+        }
+        if(conflictWith){
+          reason=`<div class="excl-reason conflict">Conflicto con ${conflictWith}</div>`;
+          canInclude=true;
+        } else {
+          reason=`<div class="excl-reason">No pudo incluirse</div>`;
+        }
+      }
+      const includeBtn=canInclude
+        ?`<button class="excl-include-btn" onclick="forceInclude('${safeT}');event.stopPropagation()">+ Incluir</button>`
+        :'';
+      const opacity=!screens.length?'opacity:.45;':'';
+      return`<div class="int-item" style="${opacity}" onclick="openPelSheet('${safeT}')">
+        ${posterHtml}
+        <div class="int-item-info">
+          <div class="int-item-title">${dt}</div>
+          <div class="int-item-sec">${f?.flags||''} ${secLabel}</div>
+          ${reason}
+        </div>
+        ${includeBtn}
       </div>`;
     }).join('');
-    html+=`<div class="ag-excl-block">
-      <div class="ag-excl-eyebrow">
+    html+=`<div class="ag-excl-block" style="padding:0;overflow:hidden">
+      <div class="ag-excl-eyebrow" style="padding:var(--sp-3) var(--sp-4)">
         <span class="ag-excl-label">No incluidas</span>
-        <span class="count-badge cb-neutral">${_active.length||sc.excluded.length}</span>
+        <span class="count-badge cb-neutral">${sc.excluded.length}</span>
       </div>
-      <div class="ag-excl-strip">${excPosters}</div>
+      ${_excItems}
     </div>`;
   }
 
