@@ -8573,7 +8573,7 @@ function _startTickLoop(){
 }
 // Esperar al próximo minuto exacto antes de iniciar el loop
 const _msToNextMin=(60-new Date().getSeconds())*1000;
-setTimeout(function(){ _startTickLoop(); _startTickLoop.call(); }, _msToNextMin);
+setTimeout(function(){ _startTickLoop(); }, _msToNextMin);
 // Mientras tanto, tick inmediato para estado inicial correcto
 updateAgTab();
 
