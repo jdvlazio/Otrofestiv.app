@@ -7195,7 +7195,7 @@ function openPelSheet(title){
     posterHtml=`<div class="pel-sheet-poster-stage">${_c1}${_c2}</div>`;
   } else {
     posterHtml=posterSrc
-      ?`<img class="pel-sheet-poster" src="${posterSrc}" loading="lazy" onerror="this.remove()" alt="">`
+      ?`<img class="pel-sheet-poster" src="${posterSrc}" data-title="${f.title.replace(/"/g,'&quot;')}" loading="lazy" onerror="_posterErr(this)" alt="">`
       :`<div class="pel-sheet-poster-ph">🎬</div>`;
   }
   const{displayTitle}=parseProgramTitle(f.title);
