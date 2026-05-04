@@ -5307,7 +5307,7 @@ function renderContextualHeader(){
         ${(FESTIVAL_CONFIG[_activeFestId]||{}).name||''}
       </div>
       <div class="ctx-main-title">El festival empieza ${label}</div>
-      <div class="ctx-sub">Cartagena · 14–19 de abril</div>
+      <div class="ctx-sub">${(FESTIVAL_CONFIG[_activeFestId]||{}).city||''} · ${(FESTIVAL_CONFIG[_activeFestId]||{}).dates||''}</div>
       ${prioHtml?`<div class="ctx-prio-row">${prioHtml}</div>`:''}
     </div>`;
   }
