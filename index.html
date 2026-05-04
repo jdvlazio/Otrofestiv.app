@@ -5232,6 +5232,7 @@ function renderContextualHeader(){
   const ph=_getFestivalPhase();
   if(!ph) return '';
   const DAY_A={Martes:'MAR',Miércoles:'MIÉ',Jueves:'JUE',Viernes:'VIE',Sábado:'SÁB',Domingo:'DOM'};
+  const _dayAbbr=k=>DAY_A[k]||(k?k.split(' ')[0]:'');
 
   // ── ENDED ─────────────────────────────────────────────────
   if(ph.phase==='ended'){
@@ -5296,7 +5297,7 @@ function renderContextualHeader(){
               `<div class="ctx-prio-thumb"></div>`}
         <div style="flex:1;min-width:0">
           <div class="ctx-prio-name">${short}</div>
-          <div class="ctx-prio-when">${DAY_A[f.day]||''} · ${f.time}</div>
+          <div class="ctx-prio-when">${_dayAbbr(f.day)} · ${f.time}</div>
         </div>
       </div>`;
     }).join('');
@@ -5379,7 +5380,7 @@ function renderContextualHeader(){
       </div>
       <div class="ctx-next-card" onclick="openPelSheet('${(next._title||'').replace(/'/g,"\\'")}')" style="cursor:pointer">
         ${src
-          ?`<img class="ctx-next-poster" src="${src}" onerror="this.remove()" alt="">`
+          ?`<img class="ctx-next-poster" src="${src}" data-title="${(next._title||'').replace(/"/g,'&quot;')}" onerror="_posterErr(this)" alt="">`
           :_isEvent
             ?makeEventPoster(next._title,next.duration,_filmObj?.event_kind).replace('<svg','<svg class="ctx-next-poster" style="width:36px;height:54px;border-radius:var(--r-sm);flex-shrink:0"')
             :`<div class="ctx-next-poster" style="background:var(--surf-3)"></div>`}
