@@ -7464,7 +7464,7 @@ function _openCombinedFilmSheet(filmData){
   const{title='',director='',year='',duration='',flags='🌐',country='',synopsis='',lbSlug=''}=filmData;
   const posterUrl=getPosterSrc(title,false)||null;
   const posterHtml=posterUrl
-    ?`<img class="pel-sheet-poster" src="${posterUrl}" loading="lazy" onerror="this.remove()" alt="">`
+    ?`<img class="pel-sheet-poster" src="${posterUrl}" data-title="${(title||"").replace(/"/g,'&quot;')}" loading="lazy" onerror="_posterErr(this)" alt="">`
     :`<div class="pel-sheet-poster-ph">🎬</div>`;
   const metaLine=[director,year].filter(Boolean).join(' · ');
   const lbHref=lbSlug?`https://letterboxd.com/film/${lbSlug}/`:lbUrl(title);
@@ -7514,7 +7514,7 @@ function openCortoSheet(title, country, duration, section, flags, director, genr
   const flgs=flags||countryToFlags(ctry)||'🌐';
   const posterUrl=getPosterSrc(title,true)||null;
   const posterHtml=posterUrl
-    ?`<img class="pel-sheet-poster" src="${posterUrl}" loading="lazy" onerror="this.remove()" alt="">`
+    ?`<img class="pel-sheet-poster" src="${posterUrl}" data-title="${(title||"").replace(/"/g,'&quot;')}" loading="lazy" onerror="_posterErr(this)" alt="">`
     :`<div class="pel-sheet-poster-ph">🎬</div>`;
   const ps=document.getElementById('pel-sheet');
   if(ps) ps.scrollTop=0;
@@ -7589,7 +7589,7 @@ function renderMiPlanList(schedule){
         const isPassed=screeningPassed(s);
         return`<div class="mplan-list-item${isPassed?' past-card':''}" onclick="openPelSheet('${safeT}')">
           ${src
-            ?`<img class="mplan-list-poster" src="${src}" loading="lazy" onerror="this.remove()" alt="" style="${isPassed?'opacity:.35':''}">`
+            ?`<img class="mplan-list-poster" src="${src}" data-title="${(_title||"").replace(/"/g,'&quot;')}" loading="lazy" onerror="_posterErr(this)" alt="" style="${isPassed?'opacity:.35':''}">`
             :_lIsEvent
               ?makeEventPoster(_lmf.title,_lmf.duration,_lmf.event_kind).replace('<svg','<svg class="mplan-list-poster" style="flex-shrink:0;display:block"')
               :`<div class="mplan-list-poster"></div>`}
