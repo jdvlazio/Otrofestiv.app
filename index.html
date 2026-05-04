@@ -7269,7 +7269,7 @@ function openPelSheet(title){
     return`<div class="pel-sheet-screening"${isPast?' style="opacity:.4"':''}>
       <span class="pelicula-day">${dayAbb}</span>
       <span class="pelicula-time">${s.time}</span>
-      <span class="pelicula-venue" data-venue="${vc.short.replace(/"/g,'&quot;')}" onclick="filterByVenue(this.dataset.venue)">${ICONS.pin} <span class="venue-text">${vc.short}${sl?' · '+sl:''}  <span style="opacity:.2;font-size:var(--t-xs)">›</span>${_city?`<span class="venue-municipio">${_city}</span>`:''}</span></span>
+      <span class="pelicula-venue" data-venue="${vc.short.replace(/"/g,'&quot;')}" onclick="filterByVenue(this.dataset.venue)">${ICONS.pin} <span class="venue-text">${vc.short}${sl?' · '+sl:''}${_city?`<span class="venue-municipio">${_city}</span>`:''}</span></span>
     </div>`;
   }).join('');
   // Lista de cortos si es programa
