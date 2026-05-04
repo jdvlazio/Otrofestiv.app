@@ -8414,7 +8414,7 @@ async function loadFestival(id){
     _dt.innerHTML='';
     cfg.days.forEach(day=>{
       const btn=document.createElement('button');
-      btn.className='dtab';
+      btn.className='dtab'+(dayFullyPassed(day.k)?' past':'');
       btn.dataset.day=day.k;
       btn.innerHTML=`<span class="dtab-date">${day.lbl}</span><span class="dtab-name">${day.d}</span>`;
       btn.onclick=()=>{
