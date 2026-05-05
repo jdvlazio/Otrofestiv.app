@@ -2421,6 +2421,15 @@ let CUSTOM_POSTERS={};
 
 
 const TMDB_IMG="https://image.tmdb.org/t/p/w185";
+
+// ── Timezone helper — festival-aware date construction ────────────────────
+// TZ_OFFSET se actualiza en loadFestival() desde cfg.timezoneOffset.
+// Default '-05:00' = Colombia. Festivals internacionales usan su propio offset.
+// Ejemplo: Tribeca NYC junio = '-04:00'
+let TZ_OFFSET='-05:00';
+function _festDate(dateStr,time){
+  return new Date(dateStr+'T'+time+':00'+TZ_OFFSET);
+}
 const TMDB_API_KEY='38f24e78b2f13970af3430eb0732f0ac';
 const TMDB_API_BASE='https://api.themoviedb.org/3';
 const TMDB_POSTER_BASE='https://image.tmdb.org/t/p/w500';
@@ -2806,7 +2815,7 @@ const NOTICES=[
 
 const FESTIVAL_CONFIG={
   'ficci65':{
-    name:'FICCI 65',shortName:'FICCI 65',city:'Cartagena',dates:'14\u201319 ABR',
+    name:'FICCI 65',shortName:'FICCI 65',city:'Cartagena',dates:'14\u201319 ABR',year:2026,timezoneOffset:'-05:00',
     storageKey:'ficci65_',
     festivalEndStr:'2026-04-20T02:00:00',
     festivalDates:{'Martes':'2026-04-14','Miércoles':'2026-04-15','Jueves':'2026-04-16','Viernes':'2026-04-17','Sábado':'2026-04-18','Domingo':'2026-04-19'},
@@ -2817,7 +2826,7 @@ const FESTIVAL_CONFIG={
     films:null,posters:null,lbSlugs:null,eventPosterLabel:['ACADEMIA','']
   },
   'aff2026':{
-    name:'AFF 2026',shortName:'ALTERNATIVA',city:'Medellín',dates:'21\u201329 ABR',
+    name:'AFF 2026',shortName:'ALTERNATIVA',city:'Medellín',dates:'21\u201329 ABR',year:2026,timezoneOffset:'-05:00',
     storageKey:'aff2026_',
     festivalEndStr:'2026-04-29T23:00:00',
     festivalDates:{'MAR 21':'2026-04-21','MIÉ 22':'2026-04-22','JUE 23':'2026-04-23','VIE 24':'2026-04-24','SÁB 25':'2026-04-25','DOM 26':'2026-04-26','LUN 27':'2026-04-27','MAR 28':'2026-04-28','MIÉ 29':'2026-04-29','JUE 30':'2026-04-30'},
@@ -3080,7 +3089,7 @@ function screeningPassed(s){
   if(festivalEnded()) return false; // festival terminado — todo vuelve a plena opacidad
   const dateStr=FESTIVAL_DATES[s.day];
   if(!dateStr) return false;
-  const screeningTime=new Date(`${dateStr}T${s.time}:00`);
+  const screeningTime=_festDate(dateStr,s.time);
   screeningTime.setMinutes(screeningTime.getMinutes()+10); // 10 min grace
   return simNow()>screeningTime;
 }
@@ -3091,14 +3100,14 @@ function dayFullyPassed(day){
   const dayFilms=FILMS.filter(f=>f.day===day);
   if(!dayFilms.length) return false;
   const lastTime=dayFilms.reduce((max,f)=>f.time>max?f.time:max,'00:00');
-  const lastScreen=new Date(`${dateStr}T${lastTime}:00`);
+  const lastScreen=_festDate(dateStr,lastTime);
   lastScreen.setMinutes(lastScreen.getMinutes()+10);
   return simNow()>lastScreen;
 }
 function isNowShowing(f){
   const dateStr=FESTIVAL_DATES[f.day];if(!dateStr) return false;
   const now=simNow();
-  const start=new Date(`${dateStr}T${f.time}:00`);
+  const start=_festDate(dateStr,f.time);
   const dur=f.duration?parseInt(f.duration):90;
   const end=new Date(start.getTime()+dur*60000);
   return now>=start&&now<=end;
@@ -4874,7 +4883,7 @@ function renderNextStrip(schedule){
     .filter(s=>!watched.has(s._title))
     .map(s=>{
       const dateStr=FESTIVAL_DATES[s.day];if(!dateStr) return null;
-      const start=new Date(`${dateStr}T${s.time}:00`);
+      const start=_festDate(dateStr,s.time);
       const dur=parseDur(s.duration);
       const end=new Date(start.getTime()+dur*60000);
       return{...s,start,end,startMin:toMin(s.time),endMin:toMin(s.time)+dur};
@@ -4960,12 +4969,12 @@ function renderUnconfirmed(schedule){
   const past=schedule.filter(s=>{
     if(watched.has(s._title)) return false;
     const dateStr=FESTIVAL_DATES[s.day];if(!dateStr) return false;
-    const end=new Date(`${dateStr}T${s.time}:00`);
+    const end=_festDate(dateStr,s.time);
     end.setMinutes(end.getMinutes()+parseDur(s.duration));
     return end<now;
   }).sort((a,b)=>{
-    const da=new Date(`${FESTIVAL_DATES[a.day]}T${a.time}:00`);
-    const db=new Date(`${FESTIVAL_DATES[b.day]}T${b.time}:00`);
+    const da=_festDate(FESTIVAL_DATES[a.day],a.time);
+    const db=_festDate(FESTIVAL_DATES[b.day],b.time);
     return db-da;
   });
   if(!past.length) return'';
@@ -4975,7 +4984,7 @@ function renderUnconfirmed(schedule){
   const latest=past[0];const older=past.slice(1);
   const{displayTitle}=parseProgramTitle(latest._title||'');
   const short=displayTitle.length>28?displayTitle.slice(0,26)+'…':displayTitle;
-  const endMs=new Date(`${FESTIVAL_DATES[latest.day]}T${latest.time}:00`).getTime()+parseDur(latest.duration)*60000;
+  const endMs=_festDate(FESTIVAL_DATES[latest.day],latest.time).getTime()+parseDur(latest.duration)*60000;
   const minsAgo=Math.round((now.getTime()-endMs)/60000);
   const timeDesc=minsAgo<120?`Terminó hace ${minsAgo} min`:`${latest.day} · ${latest.time}`;
   const safeLast=latest._title.replace(/'/g,"\'");
@@ -5979,7 +5988,7 @@ function exportICS(){
   const lines=['BEGIN:VCALENDAR','VERSION:2.0',`PRODID:-//Otrofestiv//${_icsId}//ES`,'CALSCALE:GREGORIAN','METHOD:PUBLISH'];
   savedAgenda.schedule.forEach(s=>{
     const dateStr=FESTIVAL_DATES[s.day];if(!dateStr) return;
-    const start=new Date(`${dateStr}T${s.time}:00`);
+    const start=_festDate(dateStr,s.time);
     const dur=s.duration?parseInt(s.duration):90;
     const end=new Date(start.getTime()+dur*60000);
     lines.push('BEGIN:VEVENT',
@@ -7641,8 +7650,8 @@ function renderMiPlanList(schedule){
   const upcoming=schedule
     .filter(s=>!watched.has(s._title))
     .sort((a,b)=>{
-      const da=new Date(`${FESTIVAL_DATES[a.day]}T${a.time}:00`);
-      const db=new Date(`${FESTIVAL_DATES[b.day]}T${b.time}:00`);
+      const da=_festDate(FESTIVAL_DATES[a.day],a.time);
+      const db=_festDate(FESTIVAL_DATES[b.day],b.time);
       return da-db;
     });
   if(!upcoming.length) return '<div style="padding:var(--sp-5) var(--sp-4);text-align:center;color:var(--gray);font-size:var(--t-base)">Sin actividades pendientes</div>';
@@ -8453,6 +8462,7 @@ async function loadFestival(id){
     activeDay=DAY_KEYS[_ni];
     programaSubMode='hoy'; // Durante el festival → ir directo a Hoy
   }
+  TZ_OFFSET=cfg.timezoneOffset||'-05:00';
   // Update fest-bar
   const _fn=document.querySelector('.hdr-fest-name');
   const _fd=document.querySelector('.hdr-fest-dates');
@@ -8512,7 +8522,7 @@ _sbInit();
     const n=document.getElementById('splash-sel-name');
     const m=document.getElementById('splash-sel-meta');
     if(n) n.textContent=cfg.name;
-    if(m) m.textContent=cfg.city+' \u00b7 '+cfg.dates+' 2026';
+    if(m) m.textContent=cfg.city+' \u00b7 '+cfg.dates+(cfg.year?' '+cfg.year:'');
     document.querySelectorAll('.splash-drop-item').forEach(el=>{
       el.classList.toggle('selected',el.dataset.fest===activeFest);
     });
@@ -8611,7 +8621,7 @@ function _checkNavigateToMiPlan(){
   const upcoming=savedAgenda.schedule.find(s=>{
     const dateStr=FESTIVAL_DATES[s.day];
     if(!dateStr) return false;
-    const start=new Date(`${dateStr}T${s.time}:00`);
+    const start=_festDate(dateStr,s.time);
     const diff=start-now;
     return diff>=0 && diff<=WINDOW_MS; // empieza en los próximos 30min
   });
