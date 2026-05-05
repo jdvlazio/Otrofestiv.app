@@ -8178,7 +8178,7 @@ function renderPeliculaView(){
       _cardBg='';
       const _opacity=allPast&&!_ended?';opacity:.45':'';
       posterImg=posterSrc
-        ?`<img src="${posterSrc}" loading="lazy" data-title="${f.title.replace(/"/g,'&quot;')}" style="width:100%;height:100%;object-fit:cover${_opacity};display:block" onerror="_posterErr(this)" alt="">`
+        ?`<img src="${posterSrc}" loading="lazy" data-title="${f.title.replace(/"/g,'&quot;')}" style="width:100%;height:100%;object-fit:cover${_opacity};display:block;opacity:0;transition:opacity 250ms ease" onload="this.style.opacity='1'" onerror="_posterErr(this)" alt="">`
         :``;
     }
     return`<div class="poster-card${inWL&&!inW?' in-wl':''}${inW&&!_ended?' in-watched':''}" data-title="${f.title.replace(/"/g,'&quot;')}" onclick="openPelSheet('${safeT}')"${_isPrograma?' style="background:var(--surf-2)"':_cardBg}>
