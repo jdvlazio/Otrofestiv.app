@@ -1,0 +1,200 @@
+{
+  "_TEMPLATE_VERSION": "2.0",
+  "_INSTRUCTIONS": [
+    "1. Copiar este archivo como festivals/<id>.json (ej: festivals/tribeca-2026.json)",
+    "2. El <id> sigue la convención: nombre+año sin espacios (tribeca2026, bogoshorts2026)",
+    "   El regex id.replace(/([a-zA-Z]+)(\\d+)$/, '$1-$2') convierte tribeca2026 → tribeca-2026",
+    "3. Añadir entrada a FESTIVAL_CONFIG en index.html (ver sección al final de este archivo)",
+    "4. Añadir fila al selector fs-sheet y al splash en index.html",
+    "5. Eliminar este bloque _INSTRUCTIONS y _TEMPLATE_VERSION antes de usar"
+  ],
+
+  "_FESTIVAL_CONFIG_ENTRY": {
+    "_comment": "Pegar esto en FESTIVAL_CONFIG en index.html, reemplazando <id> con el id real",
+    "id": {
+      "name": "Nombre Completo 2026",
+      "shortName": "NOMBRE",
+      "city": "Ciudad",
+      "dates": "4–15 JUN",
+      "year": 2026,
+      "timezoneOffset": "-05:00",
+      "_timezoneOffset_note": "Colombia = -05:00 | NYC junio = -04:00 | Madrid verano = +02:00",
+      "storageKey": "id_",
+      "festivalEndStr": "2026-06-15T23:59:00",
+      "festivalDates": {
+        "JUE 4": "2026-06-04",
+        "VIE 5": "2026-06-05"
+      },
+      "days": [
+        { "k": "JUE 4", "d": 4, "lbl": "JUE" },
+        { "k": "VIE 5", "d": 5, "lbl": "VIE" }
+      ],
+      "dayKeys": ["JUE 4", "VIE 5"],
+      "dayShort": {
+        "JUE 4": "JUE 4",
+        "VIE 5": "VIE 5"
+      },
+      "dayLong": {
+        "JUE 4": "Jueves 4",
+        "VIE 5": "Viernes 5"
+      },
+      "eventPosterLabel": ["INDUSTRIA", ""],
+      "_eventPosterLabel_note": "Label del poster generativo para eventos. AFF usa ['INDUSTRY','DAYS']. FICCI usa ['ACADEMIA','']",
+      "prioLimit": 5,
+      "_prioLimit_note": "Máximo de películas en Prioridades. Default 5.",
+      "films": null,
+      "posters": null,
+      "lbSlugs": null
+    }
+  },
+
+  "config": {
+    "_comment": "Metadatos del festival — se merge con FESTIVAL_CONFIG al cargar",
+    "name": "Nombre Completo 2026",
+    "shortName": "NOMBRE",
+    "city": "Ciudad",
+    "dates": "4–15 JUN",
+    "year": 2026,
+    "timezoneOffset": "-05:00",
+    "storageKey": "id_",
+    "festivalEndStr": "2026-06-15T23:59:00",
+    "eventPosterLabel": ["INDUSTRIA", ""],
+    "test": false,
+    "_test_note": "true = aparece en sección Pruebas del selector, no en Festivales"
+  },
+
+  "venues": {
+    "_comment": "Mapa de venues. La key es el string exacto que aparece en films[].venue",
+    "NOMBRE VENUE": {
+      "short": "NOMBRE VENUE",
+      "_short_note": "Label corto para mostrar en cards. Max ~15 chars.",
+      "lat": 40.7580,
+      "lon": -73.9855,
+      "city": "New York",
+      "_city_note": "Solo incluir si es diferente a la ciudad principal del festival",
+      "address": "Dirección completa opcional"
+    }
+  },
+
+  "transport": {
+    "_comment": "Tiempos de transporte entre venues en minutos. Clave: 'VenueA|VenueB'",
+    "VENUE A|VENUE B": 15
+  },
+
+  "films": [
+    {
+      "_comment_film": "--- PELÍCULA ESTÁNDAR ---",
+      "title": "Título en español",
+      "title_en": "Title in English",
+      "_title_en_note": "Usado para búsqueda en TMDB. Dejar vacío si el título español es suficiente.",
+      "director": "Nombre Director",
+      "year": 2026,
+      "duration": "94 min",
+      "country": "Argentina",
+      "flags": "🇦🇷",
+      "_flags_note": "Emojis de bandera del país de producción. Múltiples: '🇦🇷 🇨🇱'",
+      "genre": "Drama",
+      "synopsis": "Sinopsis breve en español.",
+      "day": "JUE 4",
+      "_day_note": "Debe existir en config.dayKeys exactamente",
+      "date": 4,
+      "time": "18:00",
+      "venue": "NOMBRE VENUE",
+      "section": "🏆 Competencia Largometrajes",
+      "_section_note": "Emoji + nombre. El emoji es el identificador visual de sección.",
+      "day_order": 0,
+      "_day_order_note": "Índice numérico del día (0 = primer día). Usado para ordenamiento.",
+      "is_cortos": false,
+      "film_list": [],
+      "_film_list_note": "Para programas de cortos: array de objetos {title, director, year, duration, country, flags, synopsis, lbSlug}",
+      "lbSlug": "titulo-en-letterboxd",
+      "_lbSlug_note": "Slug de Letterboxd para el link. Opcional."
+    },
+    {
+      "_comment_event": "--- EVENTO / TALLER / PANEL ---",
+      "title": "Panel: Distribución Internacional",
+      "title_en": "",
+      "duration": "90 min",
+      "day": "VIE 5",
+      "date": 5,
+      "time": "10:00",
+      "venue": "NOMBRE VENUE",
+      "section": "📋 Industry Days",
+      "day_order": 1,
+      "type": "event",
+      "_type_note": "REQUERIDO para eventos. Activa makeEventPoster y layout de card sin flags/poster.",
+      "event_kind": "ponencia",
+      "_event_kind_note": "Opciones: ponencia | masterclass | workshop | panel | proyeccion | ceremonia | otro",
+      "synopsis": "Descripción del evento.",
+      "flags": "",
+      "is_cortos": false,
+      "film_list": []
+    },
+    {
+      "_comment_cortos": "--- PROGRAMA DE CORTOMETRAJES ---",
+      "title": "Competencia Cortometrajes 1",
+      "duration": "~90 min",
+      "day": "JUE 4",
+      "date": 4,
+      "time": "14:00",
+      "venue": "NOMBRE VENUE",
+      "section": "🎬 Competencia Cortometrajes",
+      "day_order": 0,
+      "is_cortos": true,
+      "_is_cortos_note": "true = programa de cortos. Activa makeProgramPoster y abre openCortoSheet para items.",
+      "film_list": [
+        {
+          "title": "Título corto 1",
+          "title_en": "Short title 1",
+          "director": "Director",
+          "year": 2026,
+          "duration": "15 min",
+          "country": "Colombia",
+          "flags": "🇨🇴",
+          "synopsis": "Sinopsis del corto.",
+          "lbSlug": "slug-letterboxd"
+        }
+      ],
+      "flags": "🇨🇴 🇦🇷",
+      "type": null
+    }
+  ],
+
+  "posters": {
+    "_comment": "URLs de posters indexadas por title exacto. TMDB recomendado.",
+    "_format": "https://image.tmdb.org/t/p/w500/PATH.jpg",
+    "_priority": "1. customPosters (más alta), 2. posters (esta sección), 3. generativo (fallback)",
+    "Título en español": "https://image.tmdb.org/t/p/w500/xxxxxxxxxxxxxxxx.jpg"
+  },
+
+  "customPosters": {
+    "_comment": "Posters custom que sobreescriben todo. Para SVGs propios o casos especiales.",
+    "Proyección sorpresa": "assets/proyeccion-sorpresa.svg"
+  },
+
+  "lbSlugs": {
+    "_comment": "Letterboxd slugs indexados por title. Alternativa a film[].lbSlug para edición masiva.",
+    "Título película": "slug-en-letterboxd"
+  },
+
+  "notices": {
+    "_comment": "Avisos banner que aparecen en Programa. Array de objetos.",
+    "_example": [
+      {
+        "id": "aviso-unico-id",
+        "text": "Texto del aviso visible al usuario.",
+        "type": "info",
+        "_type_note": "info | warning | alert"
+      }
+    ]
+  },
+
+  "_FIELD_SUMMARY": {
+    "REQUERIDOS_config": ["name","shortName","city","dates","year","timezoneOffset","storageKey","festivalEndStr"],
+    "REQUERIDOS_film": ["title","day","time","venue","section","day_order","is_cortos"],
+    "REQUERIDOS_event": ["title","day","time","venue","section","day_order","type"],
+    "OPCIONALES_config": ["eventPosterLabel","prioLimit","test"],
+    "OPCIONALES_film": ["title_en","director","year","duration","country","flags","genre","synopsis","lbSlug","film_list"],
+    "FALLBACK_poster": "Si no hay URL → generativo automático según tipo (event/cortos/film)"
+  }
+}
