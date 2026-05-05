@@ -1379,7 +1379,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 @media(max-width:768px){
   .mplan-nav{display:flex}
   .mplan-wrap.is-overview .mplan-nav{display:none}
-  .main-nav{position:fixed;bottom:0;left:0;right:0;top:auto;border-top:1px solid var(--bdr);border-bottom:none;z-index:1000;padding-bottom:env(safe-area-inset-bottom)}
+  .main-nav{position:fixed;bottom:0;left:0;right:0;top:auto;border-top:1px solid var(--bdr);border-bottom:none;z-index:1000;padding-bottom:env(safe-area-inset-bottom);background:rgba(20,20,20,0.85);backdrop-filter:blur(20px) saturate(160%);-webkit-backdrop-filter:blur(20px) saturate(160%)}
   .main-nav-tab{border-bottom:none;border-top:none;margin-bottom:0;margin-top:0;padding:var(--sp-2) var(--sp-1);height:52px}
   .main-nav-tab.on{background:var(--amber-08)}
   .main-nav-tab.on::before{content:'';position:absolute;top:0;left:20%;right:20%;height:3px;background:var(--amber);border-radius:0 0 3px 3px}
@@ -1401,7 +1401,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
      - .hdr: remove transparent bg so wordmark row matches fest-bar
      - #hdr-programa: sticky below topbar (47px = measured .hdr height)
        --sticky-top-carta is undefined in mobile so override directly */
-  .topbar{position:sticky;top:0;z-index:200;background:var(--surf)}
+  .topbar{position:sticky;top:0;z-index:200;background:rgba(20,20,20,0.85);backdrop-filter:blur(20px) saturate(160%);-webkit-backdrop-filter:blur(20px) saturate(160%)}
   .hdr{background:var(--surf)}
   #hdr-programa{padding-top:0} /* top viene de --sticky-top-carta via _fixStickyOffset */
   #hdr-ag{top:47px}
