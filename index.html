@@ -6679,7 +6679,7 @@ function renderAgenda(){
     if(festivalEnded()){
       // Post-festival: Planear no tiene función — redirigir a Mi Plan
       const _festNamePl=(FESTIVAL_CONFIG[_activeFestId]||{}).name||'El festival';
-      view.innerHTML=emptyStateHero(ICONS.checkCircle,`${_festNamePl} ha terminado`,'El festival concluyó. Revisá las películas que viste en Mi Plan.',"Ver Mi Plan","switchMainNav('mnav-miplan');showAgView()",true);
+      view.innerHTML=emptyStateHero(ICONS.checkCircle,`${_festNamePl} ha terminado`,'El festival concluyó. Revisá las películas que viste en Mi Plan.',"Ver Mi Plan","switchMainNav('mnav-miplan');showAgView()");
       return;
     }
     const _progressHtml=(!savedAgenda||!savedAgenda.schedule||!savedAgenda.schedule.length)?renderFlowProgress('planner'):'';
