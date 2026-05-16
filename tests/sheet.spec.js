@@ -88,18 +88,18 @@ test('T33 — intereses muestra películas en watchlist', async ({ page }) => {
 
 // ─── YA VISTA + RATING ────────────────────────────────────────────────────────
 
-// V01 — Marcar como vista abre rating sheet (flujo real: toggleWatched → openRatingSheet)
-// #pel-vista-btn llama toggleWatched que luego abre el rating sheet via setTimeout
-test('V01 — marcar como vista abre rating sheet', async ({ page }) => {
+// V01 — Click en "Seen" abre modal de confirmación (verificado en browser)
+// Flujo real: pel-vista-btn → modal pv-rating-sheet "Have you seen this film?"
+test('V01 — botón Seen abre modal de confirmación', async ({ page }) => {
   await enterFestival(page, 'leviza2026', LEVIZA_SIMTIME);
   await page.evaluate(() => openPelSheet('La Suprema'));
   await page.waitForSelector('#pel-sheet.open', { timeout: 8000 });
   const vistaBtn = page.locator('#pel-vista-btn');
   await expect(vistaBtn).toBeVisible({ timeout: 5000 });
   await vistaBtn.click();
-  // toggleWatched → setTimeout(openRatingSheet, 350)
-  await page.waitForSelector('#rating-sheet.open', { timeout: 5000 });
-  expect(await page.locator('#rating-sheet.open').count()).toBe(1);
+  // Flujo real verificado en browser: abre pv-rating-sheet (modal de confirmación)
+  await page.waitForSelector('#pv-rating-sheet.open', { timeout: 5000 });
+  expect(await page.locator('#pv-rating-sheet.open').count()).toBe(1);
 });
 
 // V02 — Rating sheet abre correctamente
