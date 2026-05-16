@@ -94,10 +94,11 @@ test('V01 — botón Vista en sheet cierra el sheet', async ({ page }) => {
   await enterFestival(page, 'leviza2026', LEVIZA_SIMTIME);
   await page.evaluate(() => openPelSheet('La Suprema'));
   await page.waitForSelector('#pel-sheet.open', { timeout: 8000 });
-  // El botón Vista tiene onclick="toggleWatched(...);closePelSheet()"
-  const vistaBtn = page.locator('#pel-sheet .pel-sheet-action-btn.act-on').first();
+  // #pel-vista-btn aparece cuando la película NO está en watched aún
+  const vistaBtn = page.locator('#pel-vista-btn');
   await expect(vistaBtn).toBeVisible({ timeout: 5000 });
   await vistaBtn.click();
+  await page.waitForTimeout(300); // animación de cierre
   await expect(page.locator('#pel-sheet.open')).toHaveCount(0, { timeout: 5000 });
 });
 
