@@ -10172,8 +10172,26 @@ async function loadFestival(id){
   // usar festivalEndStr con offset explícito: '2026-08-09T23:00:00-05:00'
   FESTIVAL_STORAGE_KEY=cfg.storageKey;
   DAY_KEYS=cfg.dayKeys;
-  DAY_SHORT=cfg.dayShort;
   DAY_SHORT_EN=cfg.dayShort_en||cfg.dayShort;
+  // Si el festival no tiene dayShort en español (ej. Tribeca: valores en inglés),
+  // construirlo desde las fechas ISO usando el día de la semana.
+  // _EN_TO_I18N ya definido más abajo — usamos el mapa directo aquí.
+  const _EN_TO_ES={'SUN':'DOM','MON':'LUN','TUE':'MAR','WED':'MIÉ','THU':'JUE','FRI':'VIE','SAT':'SÁB'};
+  const _needsTranslation = Object.values(cfg.dayShort||{}).some(v=>
+    /^(MON|TUE|WED|THU|FRI|SAT|SUN)/.test(v)
+  );
+  if(_needsTranslation){
+    const _translated={};
+    Object.entries(cfg.dayShort||{}).forEach(([k,v])=>{
+      const enAbb=v.split(' ')[0];
+      const num=v.split(' ')[1]||'';
+      const esAbb=_EN_TO_ES[enAbb]||enAbb;
+      _translated[k]=num?esAbb+' '+num:esAbb;
+    });
+    DAY_SHORT=_translated;
+  } else {
+    DAY_SHORT=cfg.dayShort;
+  }
   // PRIO_LIMIT: regla global por festival — round(días/2), cap [3,8]
   // Garantiza ~8.3% de los films físicamente posibles como prioridades.
   // Definido en cada festivals/*.json como 'prioLimit'.
