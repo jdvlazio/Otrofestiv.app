@@ -11,7 +11,7 @@ test('T01 — apóstrofe: corazón en lista agrega al watchlist', async ({ page 
   const whoopi = page.locator('.plist-item[data-title*="Whoopi"]').first();
   await whoopi.scrollIntoViewIfNeeded();
   await whoopi.locator('.plist-heart').click();
-  await page.waitForTimeout(500);
+  await page.waitForFunction(() => watchlist.size > 0, { timeout: 5000 });
   const inWL = await page.evaluate(() =>
     watchlist.has("Shorts: Whoopi's Wonderful World of Animation")
   );
@@ -37,7 +37,7 @@ test('T05 — corazón en lista no abre sheet', async ({ page }) => {
   await page.locator('.dtab[data-day="VIE 15"]').click();
   await page.waitForSelector('.plist-item', { timeout: 8000 });
   await page.locator('.plist-item').first().locator('.plist-heart').click();
-  await page.waitForTimeout(600);
+  await page.waitForTimeout(300); // mínimo necesario: verificar ausencia de sheet
   expect(await page.locator('#pel-sheet.open').count()).toBe(0);
 });
 
@@ -117,7 +117,7 @@ test('T22 — toggle grid/lista cambia el modo de vista', async ({ page }) => {
   await page.evaluate(() => { activeDay='all'; programaViewMode='grid'; _renderProgramaContent(); });
   await page.waitForSelector('.poster-card', { timeout: 5000 });
   await page.evaluate(() => setProgramaView('list'));
-  await page.waitForTimeout(400);
+  await page.waitForSelector('.plist-item', { timeout: 5000 });
   const afterToggle = await page.evaluate(() => programaViewMode);
   expect(afterToggle).toBe('list');
 });

@@ -48,7 +48,7 @@ test('T29 — planear sin watchlist muestra estado vacío', async ({ page }) => 
   await enterFestival(page, 'leviza2026', LEVIZA_SIMTIME);
   await page.evaluate(() => { watchlist.clear(); savedAgenda = null; saveState('wl','watched'); saveSavedAgenda(); });
   await page.evaluate(() => { switchMainNav('mnav-planner'); showAgView(); });
-  await page.waitForTimeout(800);
+  await page.waitForSelector('.empty-state, .av-empty, .planear-empty, [class*="empty"]', { timeout: 5000 });
   const empty = await page.locator('.empty-state, .av-empty, .planear-empty, [class*="empty"]').count();
   expect(empty).toBeGreaterThan(0);
 });
@@ -58,8 +58,7 @@ test('T30 — planear con watchlist muestra botón calcular', async ({ page }) =
   await enterFestival(page, 'leviza2026', LEVIZA_SIMTIME);
   await addToWatchlist(page, 'Taller de Guion');
   await page.evaluate(() => { switchMainNav('mnav-planner'); showAgView(); });
-  await page.waitForTimeout(800);
-  await expect(page.locator('.av-calc-btn')).toBeVisible({ timeout: 5000 });
+  await expect(page.locator('.av-calc-btn')).toBeVisible({ timeout: 8000 });
 });
 
 // T31 — Planear genera al menos un escenario
@@ -86,7 +85,7 @@ test('T36 — sesión solapada abre modal de conflicto', async ({ page }) => {
     const f2 = FILMS.find(fi => fi.title === 'Rebelión' && fi.day === 'VIE 15');
     if (f2) openConflictSheet(f2.title, f2, savedAgenda.schedule[0]);
   });
-  await page.waitForTimeout(500);
+  await page.waitForSelector('#conflict-sheet', { timeout: 5000 });
   const sheet = await page.locator('#conflict-sheet.open, #conflict-sheet[style*="block"], #conflict-sheet').count();
   expect(sheet).toBeGreaterThan(0);
 });
@@ -96,7 +95,7 @@ test('T43 — planear con títulos muestra chips de disponibilidad', async ({ pa
   await enterFestival(page, 'leviza2026', LEVIZA_SIMTIME);
   await addToWatchlist(page, 'Taller de Guion');
   await page.evaluate(() => { switchMainNav('mnav-planner'); showAgView(); });
-  await page.waitForTimeout(800);
+  await page.waitForSelector('.av-calc-btn', { timeout: 8000 });
   const hasUI = await page.locator('.av-calc-btn').count();
   expect(hasUI).toBeGreaterThan(0);
 });

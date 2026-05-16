@@ -7,18 +7,15 @@ const { LEVIZA_SIMTIME, enterFestival, addToWatchlist } = require('./helpers');
 test('T11 — cerrar alternativas en Mi Plan cierra el panel', async ({ page }) => {
   await enterFestival(page, 'tribeca2026');
   await page.locator('.mnav-tab[data-nav="mnav-cartelera"], .main-nav-tab').first().click();
-  await page.waitForTimeout(500);
   await page.evaluate(() => switchMainNav('mnav-miplan'));
-  await page.waitForTimeout(1000);
+  await page.waitForSelector('.mplan-t1, .empty-state, [class*="empty"]', { timeout: 8000 });
   const hasPlan = await page.locator('.mplan-t1').count();
   if (hasPlan === 0) { console.log('T11: sin plan activo, skip'); return; }
   await page.locator('.mplan-t1').first().click();
-  await page.waitForTimeout(800);
   const altPanel = page.locator('.film-alts').first();
   await expect(altPanel).toBeVisible({ timeout: 5000 });
   await page.locator('.film-alts .checkin-result-btn.secondary').first().click();
-  await page.waitForTimeout(800);
-  expect(await page.locator('.film-alts').count()).toBe(0);
+  await expect(page.locator('.film-alts')).toHaveCount(0, { timeout: 5000 });
 });
 
 // T24 — Quitar sesión del plan la elimina
@@ -57,11 +54,11 @@ test('T25 — datos del plan disponibles para el día seleccionado', async ({ pa
 test('T26 — hora punteada abre panel de alternativas', async ({ page }) => {
   await enterFestival(page, 'tribeca2026');
   await page.evaluate(() => switchMainNav('mnav-miplan'));
-  await page.waitForTimeout(1000);
+  await page.waitForSelector('.mplan-t1, .empty-state, [class*="empty"]', { timeout: 8000 });
   const hasPlan = await page.locator('.mplan-t1').count();
   if (!hasPlan) return;
   await page.locator('.mplan-t1').first().click();
-  await page.waitForTimeout(800);
+  await expect(page.locator('.film-alts').first()).toBeVisible({ timeout: 5000 });
   expect(await page.locator('.film-alts').count()).toBeGreaterThan(0);
 });
 
@@ -69,23 +66,22 @@ test('T26 — hora punteada abre panel de alternativas', async ({ page }) => {
 test('T27 — sugerencias: añadir no abre sheet', async ({ page }) => {
   await enterFestival(page, 'tribeca2026');
   await page.evaluate(() => switchMainNav('mnav-miplan'));
-  await page.waitForTimeout(1000);
+  await page.waitForSelector('.suggestion-add, .mplan-t1, .empty-state, [class*="empty"]', { timeout: 8000 });
   const addBtn = page.locator('.suggestion-add').first();
   if (!await addBtn.count()) return;
   await addBtn.click();
-  await page.waitForTimeout(800);
-  expect(await page.locator('#pel-sheet.open').count()).toBe(0);
+  await expect(page.locator('#pel-sheet.open')).toHaveCount(0, { timeout: 3000 });
 });
 
 // T28 — Sugerencias: botón Añadir muestra toast de confirmación
 test('T28 — sugerencias: añadir muestra toast', async ({ page }) => {
   await enterFestival(page, 'tribeca2026');
   await page.evaluate(() => switchMainNav('mnav-miplan'));
-  await page.waitForTimeout(1000);
+  await page.waitForSelector('.suggestion-add, .mplan-t1, .empty-state, [class*="empty"]', { timeout: 8000 });
   const addBtn = page.locator('.suggestion-add').first();
   if (!await addBtn.count()) return;
   await addBtn.click();
-  await page.waitForTimeout(500);
+  await page.waitForSelector('.toast, .toast-msg, #toast', { timeout: 5000 });
   const toast = await page.locator('.toast, .toast-msg, #toast').count();
   expect(toast).toBeGreaterThan(0);
 });
@@ -99,7 +95,7 @@ test('T40 — mi plan vacío muestra estado vacío', async ({ page }) => {
     switchMainNav('mnav-miplan');
     renderAgenda();
   });
-  await page.waitForTimeout(800);
+  await page.waitForSelector('.empty-state, [class*="empty"], .mplan-empty, .cta-ctx', { timeout: 5000 });
   const empty = await page.locator('.empty-state, [class*="empty"], .mplan-empty, .cta-ctx').count();
   expect(empty).toBeGreaterThan(0);
 });
@@ -110,7 +106,7 @@ test('T44 — flujo completo: Tribeca filtro día + intereses + plan + mi plan',
   await page.locator('.dtab[data-day="2026-06-04"]').click();
   await page.waitForSelector('.plist-item', { timeout: 8000 });
   await page.locator('.plist-item').first().locator('.plist-heart').click();
-  await page.waitForTimeout(500);
+  await page.waitForFunction(() => watchlist.size > 0, { timeout: 5000 });
   const inWL = await page.evaluate(() => watchlist.size > 0);
   expect(inWL).toBe(true);
   await page.locator('#mnav-seleccion').click();
@@ -118,16 +114,15 @@ test('T44 — flujo completo: Tribeca filtro día + intereses + plan + mi plan',
   const wlItems = await page.locator('.ag-item, .wl-item, .plist-item').count();
   expect(wlItems).toBeGreaterThan(0);
   await page.locator('#mnav-planner').click();
-  await page.waitForTimeout(500);
   const calcBtn = page.locator('.av-calc-btn');
   if (await calcBtn.count() > 0) {
     await calcBtn.click();
-    await page.waitForTimeout(1000);
+    await page.waitForTimeout(500); // mínimo: cálculo async
   }
   await page.locator('#mnav-miplan').click();
   await page.waitForSelector('#ag-view', { state: 'visible', timeout: 5000 });
   const errors = [];
   page.on('pageerror', e => errors.push(e.message));
-  await page.waitForTimeout(500);
+  await page.waitForTimeout(200); // mínimo: colección de errores async
   expect(errors).toHaveLength(0);
 });

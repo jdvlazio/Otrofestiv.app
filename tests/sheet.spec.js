@@ -12,8 +12,7 @@ test('T07 — quitar de Intereses desde sheet cierra el sheet', async ({ page })
   const wlBtn = page.locator('#pel-wl-btn');
   await expect(wlBtn).toContainText(/(intereses|interests)/i);
   await wlBtn.click();
-  await page.waitForTimeout(700);
-  expect(await page.locator('#pel-sheet.open').count()).toBe(0);
+  await expect(page.locator('#pel-sheet.open')).toHaveCount(0, { timeout: 5000 });
 });
 
 // T14 — Sheet muestra el título correcto
@@ -50,7 +49,7 @@ test('T17 — añadir al watchlist desde sheet actualiza el estado', async ({ pa
   await page.evaluate(() => openPelSheet('La Suprema'));
   await page.waitForSelector('#pel-sheet.open', { timeout: 8000 });
   await page.locator('#pel-wl-btn').click();
-  await page.waitForTimeout(500);
+  await page.waitForFunction(() => watchlist.has('La Suprema'), { timeout: 5000 });
   const inWL = await page.evaluate(() => watchlist.has('La Suprema'));
   expect(inWL).toBe(true);
 });
@@ -61,8 +60,7 @@ test('T18 — sheet se cierra con el botón X', async ({ page }) => {
   await page.evaluate(() => openPelSheet('La Suprema'));
   await page.waitForSelector('#pel-sheet.open', { timeout: 8000 });
   await page.evaluate(() => closePelSheet());
-  await page.waitForTimeout(500);
-  expect(await page.locator('#pel-sheet.open').count()).toBe(0);
+  await expect(page.locator('#pel-sheet.open')).toHaveCount(0, { timeout: 5000 });
 });
 
 // T19 — Watchlist persiste al navegar entre tabs
@@ -70,9 +68,9 @@ test('T19 — watchlist persiste al navegar entre tabs', async ({ page }) => {
   await enterFestival(page, 'leviza2026', LEVIZA_SIMTIME);
   await addToWatchlist(page, 'La Suprema');
   await page.evaluate(() => { switchMainNav('mnav-seleccion'); showAgView(); });
-  await page.waitForTimeout(500);
+  await page.waitForSelector('#ag-view', { state: 'visible', timeout: 5000 });
   await page.evaluate(() => switchMainNav('mnav-cartelera'));
-  await page.waitForTimeout(500);
+  await page.waitForSelector('.poster-card, .plist-item, .dtab', { timeout: 5000 });
   const inWL = await page.evaluate(() => watchlist.has('La Suprema'));
   expect(inWL).toBe(true);
 });
@@ -83,7 +81,7 @@ test('T33 — intereses muestra películas en watchlist', async ({ page }) => {
   await addToWatchlist(page, 'La Suprema');
   await addToWatchlist(page, 'Taller de Guion');
   await page.evaluate(() => { switchMainNav('mnav-seleccion'); showAgView(); });
-  await page.waitForTimeout(800);
+  await page.waitForSelector('.plist-item, .poster-card, .ag-film-row, .int-item', { timeout: 5000 });
   const items = await page.locator('.plist-item, .poster-card, .ag-film-row, .int-item').count();
   expect(items).toBeGreaterThan(0);
 });

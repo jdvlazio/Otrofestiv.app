@@ -20,7 +20,10 @@ test('T37 — cambiar de festival actualiza el topbar', async ({ page }) => {
   await enterFestival(page, 'leviza2026', LEVIZA_SIMTIME);
   const beforeName = await page.locator('.hdr-fest-name').textContent();
   await page.evaluate(() => loadFestival('tribeca2026'));
-  await page.waitForTimeout(2000);
+  await page.waitForFunction(
+    () => document.querySelector('.hdr-fest-name')?.textContent?.toUpperCase().includes('TRIBECA'),
+    { timeout: 8000 }
+  );
   const afterName = await page.locator('.hdr-fest-name').textContent();
   expect(beforeName).not.toEqual(afterName);
   expect(afterName?.toUpperCase()).toContain('TRIBECA');
@@ -36,7 +39,7 @@ test('T39 — todos los festivales cargan sin crash', async ({ page }) => {
   );
   for (const id of festIds) {
     await page.evaluate((fid) => loadFestival(fid), id);
-    await page.waitForTimeout(1500);
+    await page.waitForFunction(() => typeof FILMS !== 'undefined' && FILMS.length > 0, { timeout: 8000 });
   }
   const realErrors = errors.filter(e => !e.includes('sentry'));
   expect(realErrors).toHaveLength(0);
@@ -47,6 +50,6 @@ test('T42 — onclick handlers tienen JS válido', async ({ page }) => {
   await enterFestival(page, 'leviza2026', LEVIZA_SIMTIME);
   const errors = [];
   page.on('pageerror', e => { if (e.message.includes('SyntaxError')) errors.push(e.message); });
-  await page.waitForTimeout(500);
+  await page.waitForTimeout(200); // mínimo: colección de errores async
   expect(errors).toHaveLength(0);
 });
