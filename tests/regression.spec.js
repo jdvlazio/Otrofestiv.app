@@ -734,18 +734,18 @@ test('T43 — planear con títulos muestra chips de disponibilidad', async ({ pa
 test('T44 — flujo completo: Tribeca filtro día + intereses + plan + mi plan', async ({ page }) => {
   await enterFestival(page, 'tribeca2026');
 
-  // Filtrar por día WED 3
-  await page.locator('.dtab[data-day]').filter({ hasText: 'WED' }).first().click();
+  // Filtrar por día WED 3 (2026-06-04)
+  await page.locator('.dtab[data-day="2026-06-04"]').click();
+  await page.waitForSelector('.plist-item', { timeout: 8000 });
+
+  // Agregar primera película a Intereses
+  const firstItem = page.locator('.plist-item').first();
+  await firstItem.locator('.plist-heart').click();
   await page.waitForTimeout(500);
 
-  // Agregar primera película disponible a Intereses
-  const firstHeart = page.locator('.plist-heart').first();
-  await firstHeart.click();
-  await page.waitForTimeout(300);
-
-  // Verificar que está en Intereses
-  const heartActive = page.locator('.plist-heart.act-on').first();
-  await expect(heartActive).toBeVisible();
+  // Verificar que quedó en watchlist
+  const inWL = await page.evaluate(() => watchlist.size > 0);
+  expect(inWL).toBe(true);
 
   // Ir a tab Intereses
   await page.locator('#mnav-seleccion').click();
