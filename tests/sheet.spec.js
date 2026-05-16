@@ -97,9 +97,9 @@ test('V01 — botón Seen abre modal de confirmación', async ({ page }) => {
   const vistaBtn = page.locator('#pel-vista-btn');
   await expect(vistaBtn).toBeVisible({ timeout: 5000 });
   await vistaBtn.click();
-  // Flujo real verificado en browser: abre pv-rating-sheet (modal de confirmación)
-  await page.waitForSelector('#pv-rating-sheet.open', { timeout: 5000 });
-  expect(await page.locator('#pv-rating-sheet.open').count()).toBe(1);
+  // showActionModal → crea #conflict-modal en el DOM
+  await page.waitForSelector('#conflict-modal', { timeout: 5000 });
+  expect(await page.locator('#conflict-modal').count()).toBe(1);
 });
 
 // V02 — Rating sheet abre correctamente
