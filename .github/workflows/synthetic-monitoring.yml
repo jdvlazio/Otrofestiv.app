@@ -2,9 +2,9 @@ name: Synthetic Monitoring
 
 on:
   schedule:
-    # Corre cada 6 horas: 00:00, 06:00, 12:00, 18:00 UTC (19:00, 01:00, 07:00, 13:00 COT)
+    # Corre cada 6 horas: 00:00, 06:00, 12:00, 18:00 UTC
     - cron: '0 0,6,12,18 * * *'
-  workflow_dispatch: # permite correrlo manualmente desde GitHub
+  workflow_dispatch:
 
 jobs:
   monitor:
@@ -27,8 +27,8 @@ jobs:
       - name: Install Playwright browsers
         run: npx playwright install --with-deps chromium
 
-      - name: Run regression tests contra producción
-        run: npx playwright test tests/regression.spec.js
+      - name: Run monitoring tests contra producción
+        run: npx playwright test tests/monitoring.spec.js
         env:
           BASE_URL: https://otrofestiv.app
 
