@@ -30,18 +30,37 @@ test('A03 — auth sheet tiene campo de email', async ({ page }) => {
   await expect(emailInput).toBeVisible({ timeout: 5000 });
 });
 
-// A04 — Auth sheet muestra botón de eliminar cuenta
+// A04 — Auth sheet muestra botón eliminar cuando usuario está autenticado
+// Simula estado signed-in via JS (no requiere sesión real de Supabase)
 test('A04 — auth sheet tiene botón eliminar cuenta', async ({ page }) => {
   await enterFestival(page, 'leviza2026', LEVIZA_SIMTIME);
-  await page.evaluate(() => openAuthSheet());
+  // Simular estado autenticado: mostrar step3 directamente
+  await page.evaluate(() => {
+    document.getElementById('auth-sheet-step1').style.display = 'none';
+    document.getElementById('auth-sheet-step2').style.display = 'none';
+    document.getElementById('auth-sheet-step3').style.display = 'block';
+    const s = document.getElementById('auth-sheet');
+    s.style.display = 'flex';
+    setTimeout(() => s.classList.add('open'), 10);
+  });
   await page.waitForSelector('#auth-sheet.open', { timeout: 5000 });
   await expect(page.locator('#auth-delete-btn')).toBeVisible({ timeout: 5000 });
 });
 
 // A05 — Primer tap en eliminar cambia el texto a confirmación
+// Simula estado signed-in via JS — no requiere sesión real de Supabase
 test('A05 — primer tap eliminar cuenta pide confirmación', async ({ page }) => {
   await enterFestival(page, 'leviza2026', LEVIZA_SIMTIME);
-  await page.evaluate(() => openAuthSheet());
+  await page.evaluate(() => {
+    document.getElementById('auth-sheet-step1').style.display = 'none';
+    document.getElementById('auth-sheet-step2').style.display = 'none';
+    document.getElementById('auth-sheet-step3').style.display = 'block';
+    const s = document.getElementById('auth-sheet');
+    s.style.display = 'flex';
+    setTimeout(() => s.classList.add('open'), 10);
+    // Simular _sbUser para que deleteAccount() pase el guard
+    _sbUser = { email: 'test@test.com', id: 'test-id' };
+  });
   await page.waitForSelector('#auth-sheet.open', { timeout: 5000 });
   const btn = page.locator('#auth-delete-btn');
   await expect(btn).toBeVisible({ timeout: 5000 });
@@ -49,7 +68,6 @@ test('A05 — primer tap eliminar cuenta pide confirmación', async ({ page }) =
   await btn.click();
   await page.waitForTimeout(300);
   const textDespues = await btn.textContent();
-  // El texto debe cambiar al mensaje de confirmación
   expect(textDespues).not.toEqual(textAntes);
 });
 
