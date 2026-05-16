@@ -88,18 +88,18 @@ test('T33 — intereses muestra películas en watchlist', async ({ page }) => {
 
 // ─── YA VISTA + RATING ────────────────────────────────────────────────────────
 
-// V01 — Botón Vista en sheet cierra el sheet (comportamiento DOM observable)
-// toggleWatched está en closure — testeamos efecto visible: sheet se cierra tras marcar vista
-test('V01 — botón Vista en sheet cierra el sheet', async ({ page }) => {
+// V01 — Marcar como vista abre rating sheet (flujo real: toggleWatched → openRatingSheet)
+// #pel-vista-btn llama toggleWatched que luego abre el rating sheet via setTimeout
+test('V01 — marcar como vista abre rating sheet', async ({ page }) => {
   await enterFestival(page, 'leviza2026', LEVIZA_SIMTIME);
   await page.evaluate(() => openPelSheet('La Suprema'));
   await page.waitForSelector('#pel-sheet.open', { timeout: 8000 });
-  // #pel-vista-btn aparece cuando la película NO está en watched aún
   const vistaBtn = page.locator('#pel-vista-btn');
   await expect(vistaBtn).toBeVisible({ timeout: 5000 });
   await vistaBtn.click();
-  await page.waitForTimeout(300); // animación de cierre
-  await expect(page.locator('#pel-sheet.open')).toHaveCount(0, { timeout: 5000 });
+  // toggleWatched → setTimeout(openRatingSheet, 350)
+  await page.waitForSelector('#rating-sheet.open', { timeout: 5000 });
+  expect(await page.locator('#rating-sheet.open').count()).toBe(1);
 });
 
 // V02 — Rating sheet abre correctamente
