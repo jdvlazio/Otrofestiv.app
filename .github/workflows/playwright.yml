@@ -42,6 +42,9 @@ jobs:
       - name: Regression tests
         run: npx playwright test tests/programa.spec.js tests/sheet.spec.js tests/planner.spec.js tests/miplan.spec.js tests/festivals.spec.js
 
+      - name: Feature tests
+        run: npx playwright test tests/auth.spec.js tests/search.spec.js tests/i18n.spec.js
+
       - name: Run visual audit
         run: |
           mkdir -p test-results/visual
