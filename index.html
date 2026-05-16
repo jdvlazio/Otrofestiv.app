@@ -4706,12 +4706,12 @@ function renderMiPlanCalendar(){
     </div>
     <div class="mplan-nav-labels">
       <div class="mplan-nav-day${isPastVs?' past':''}" onclick="selectMiPlanDay(${vs})">
-        <div class="mplan-nav-day-name">${_lang==='en'?(DAY_SHORT_EN[DAYS[vs].k]||DAYS[vs].lbl).split(' ')[0]:DAYS[vs].lbl}</div>
+        <div class="mplan-nav-day-name">${_lblLocalized((DAY_SHORT_EN[DAYS[vs].k]||DAYS[vs].lbl).split(' ')[0])}</div>
         <div class="mplan-nav-day-num${vs===activeMiPlanDay?' wk-active-num':''}">${DAYS[vs].d}</div>
         ${vs===activeMiPlanDay?'<div class="mplan-nav-day-arrow"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><path d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg></div>':''}
       </div>
       <div class="mplan-nav-day${isPastVe?' past':''}" onclick="selectMiPlanDay(${ve})">
-        <div class="mplan-nav-day-name">${_lang==='en'?(DAY_SHORT_EN[DAYS[ve].k]||DAYS[ve].lbl).split(' ')[0]:DAYS[ve].lbl}</div>
+        <div class="mplan-nav-day-name">${_lblLocalized((DAY_SHORT_EN[DAYS[ve].k]||DAYS[ve].lbl).split(' ')[0])}</div>
         <div class="mplan-nav-day-num${ve===activeMiPlanDay?' wk-active-num':''}">${DAYS[ve].d}</div>
         ${ve===activeMiPlanDay?'<div class="mplan-nav-day-arrow"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><path d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg></div>':''}
       </div>
@@ -4771,7 +4771,7 @@ function renderMiPlanCalendar(){
     const colClass=['mplan-wk-col',isToday?'wk-today':'',isActive?'wk-active':'',extraClass].filter(Boolean).join(' ');
     return`<div class="${colClass}" style="height:${PHDR+TOTAL}px" onclick="selectMiPlanDay(${i})">
       <div class="mplan-wk-col-hdr">
-        <div class="mplan-wk-col-day"><span class="mplan-wk-day-name">${_lang==='en'?(DAY_SHORT_EN[DAYS[i].k]||DAYS[i].lbl).split(' ')[0]:DAYS[i].lbl}</span><span class="mplan-wk-col-date${dayFilms.length?' wk-has':''}">${DAYS[i].d}</span></div>
+        <div class="mplan-wk-col-day"><span class="mplan-wk-day-name">${_lblLocalized((DAY_SHORT_EN[DAYS[i].k]||DAYS[i].lbl).split(' ')[0])}</span><span class="mplan-wk-col-date${dayFilms.length?' wk-has':''}">${DAYS[i].d}</span></div>
         ${dayFilms.length?(isActive?'<div class="mplan-wk-col-arrow"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><path d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg></div>':'<div class="mplan-wk-col-dot"></div>'):''}
       </div>
       ${gridHtml}${nowHtml}${blocksHtml}
@@ -5163,6 +5163,16 @@ const dayChip = key => {
 };
 /* dayLabel/dayHeader — mantenidos para compatibilidad, internamente usan dayChip */
 const dayLabel  = key => (_lang==='en' ? DAY_SHORT_EN : DAY_SHORT)[key] || key;
+/* _lblLocalized: traduce abreviación de día al idioma activo.
+   Resuelve el caso donde lbl viene en inglés (ej. Tribeca: 'WED')
+   y el usuario está en español → debe mostrar 'MIÉ'. */
+const _EN_TO_I18N = {MON:'day_short_lun',TUE:'day_short_mar',WED:'day_short_mie',
+                     THU:'day_short_jue',FRI:'day_short_vie',SAT:'day_short_sab',SUN:'day_short_dom'};
+const _lblLocalized = lbl => {
+  if(_lang==='en') return lbl;
+  const key = _EN_TO_I18N[lbl];
+  return key ? t(key) : lbl;
+};
 const durFmt    = d   => d ? (String(d).includes('min') ? String(d) : String(d)+' min') : '';
 const _isoToFlag = c  => c&&c.length===2 ? String.fromCodePoint(0x1F1E6+c.toUpperCase().charCodeAt(0)-65)+String.fromCodePoint(0x1F1E6+c.toUpperCase().charCodeAt(1)-65) : '';
 const flagFmt   = fl  => { if(!fl) return ''; const _fc=(FESTIVAL_CONFIG[_activeFestId||_DEFAULT_FEST_ID]||{}).country||''; return (_fc&&fl===_isoToFlag(_fc))?'':fl; };
