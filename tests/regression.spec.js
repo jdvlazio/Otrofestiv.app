@@ -748,7 +748,7 @@ test('T44 — flujo completo: Tribeca filtro día + intereses + plan + mi plan',
   await expect(heartActive).toBeVisible();
 
   // Ir a tab Intereses
-  await page.locator('#mnav-wl').click();
+  await page.locator('#mnav-seleccion').click();
   await page.waitForSelector('#ag-view', { state: 'visible', timeout: 5000 });
   const wlItems = await page.locator('.ag-item, .wl-item, .plist-item').count();
   expect(wlItems).toBeGreaterThan(0);
@@ -765,8 +765,8 @@ test('T44 — flujo completo: Tribeca filtro día + intereses + plan + mi plan',
   }
 
   // Ir a Mi Plan
-  await page.locator('#mnav-agenda').click();
-  await page.waitForSelector('#agenda-view', { state: 'visible', timeout: 5000 });
+  await page.locator('#mnav-miplan').click();
+  await page.waitForSelector('#ag-view', { state: 'visible', timeout: 5000 });
 
   // Mi Plan renderizó sin crash
   const errors = [];
