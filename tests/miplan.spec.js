@@ -8,7 +8,7 @@ test('T11 — cerrar alternativas en Mi Plan cierra el panel', async ({ page }) 
   await enterFestival(page, 'tribeca2026');
   await page.locator('.mnav-tab[data-nav="mnav-cartelera"], .main-nav-tab').first().click();
   await page.evaluate(() => switchMainNav('mnav-miplan'));
-  await page.waitForSelector('.mplan-t1, .empty-state, [class*="empty"]', { timeout: 8000 });
+  await page.waitForSelector('#ag-view', { state: 'visible', timeout: 8000 });
   const hasPlan = await page.locator('.mplan-t1').count();
   if (hasPlan === 0) { console.log('T11: sin plan activo, skip'); return; }
   await page.locator('.mplan-t1').first().click();
@@ -54,7 +54,7 @@ test('T25 — datos del plan disponibles para el día seleccionado', async ({ pa
 test('T26 — hora punteada abre panel de alternativas', async ({ page }) => {
   await enterFestival(page, 'tribeca2026');
   await page.evaluate(() => switchMainNav('mnav-miplan'));
-  await page.waitForSelector('.mplan-t1, .empty-state, [class*="empty"]', { timeout: 8000 });
+  await page.waitForSelector('#ag-view', { state: 'visible', timeout: 8000 });
   const hasPlan = await page.locator('.mplan-t1').count();
   if (!hasPlan) return;
   await page.locator('.mplan-t1').first().click();
@@ -66,7 +66,7 @@ test('T26 — hora punteada abre panel de alternativas', async ({ page }) => {
 test('T27 — sugerencias: añadir no abre sheet', async ({ page }) => {
   await enterFestival(page, 'tribeca2026');
   await page.evaluate(() => switchMainNav('mnav-miplan'));
-  await page.waitForSelector('.suggestion-add, .mplan-t1, .empty-state, [class*="empty"]', { timeout: 8000 });
+  await page.waitForSelector('#ag-view', { state: 'visible', timeout: 8000 });
   const addBtn = page.locator('.suggestion-add').first();
   if (!await addBtn.count()) return;
   await addBtn.click();
@@ -77,7 +77,7 @@ test('T27 — sugerencias: añadir no abre sheet', async ({ page }) => {
 test('T28 — sugerencias: añadir muestra toast', async ({ page }) => {
   await enterFestival(page, 'tribeca2026');
   await page.evaluate(() => switchMainNav('mnav-miplan'));
-  await page.waitForSelector('.suggestion-add, .mplan-t1, .empty-state, [class*="empty"]', { timeout: 8000 });
+  await page.waitForSelector('#ag-view', { state: 'visible', timeout: 8000 });
   const addBtn = page.locator('.suggestion-add').first();
   if (!await addBtn.count()) return;
   await addBtn.click();
@@ -95,8 +95,8 @@ test('T40 — mi plan vacío muestra estado vacío', async ({ page }) => {
     switchMainNav('mnav-miplan');
     renderAgenda();
   });
-  await page.waitForSelector('.empty-state, [class*="empty"], .mplan-empty, .cta-ctx', { timeout: 5000 });
-  const empty = await page.locator('.empty-state, [class*="empty"], .mplan-empty, .cta-ctx').count();
+  await page.waitForSelector('.empty-state-hero, .cta-ctx', { timeout: 8000 });
+  const empty = await page.locator('.empty-state-hero, .cta-ctx').count();
   expect(empty).toBeGreaterThan(0);
 });
 

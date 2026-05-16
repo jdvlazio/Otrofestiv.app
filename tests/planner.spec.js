@@ -48,8 +48,8 @@ test('T29 — planear sin watchlist muestra estado vacío', async ({ page }) => 
   await enterFestival(page, 'leviza2026', LEVIZA_SIMTIME);
   await page.evaluate(() => { watchlist.clear(); savedAgenda = null; saveState('wl','watched'); saveSavedAgenda(); });
   await page.evaluate(() => { switchMainNav('mnav-planner'); showAgView(); });
-  await page.waitForSelector('.empty-state, .av-empty, .planear-empty, [class*="empty"]', { timeout: 5000 });
-  const empty = await page.locator('.empty-state, .av-empty, .planear-empty, [class*="empty"]').count();
+  await page.waitForSelector('.empty-state-hero', { timeout: 8000 });
+  const empty = await page.locator('.empty-state-hero').count();
   expect(empty).toBeGreaterThan(0);
 });
 

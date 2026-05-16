@@ -81,7 +81,7 @@ test('T33 — intereses muestra películas en watchlist', async ({ page }) => {
   await addToWatchlist(page, 'La Suprema');
   await addToWatchlist(page, 'Taller de Guion');
   await page.evaluate(() => { switchMainNav('mnav-seleccion'); showAgView(); });
-  await page.waitForSelector('.plist-item, .poster-card, .ag-film-row, .int-item', { timeout: 5000 });
+  await page.waitForSelector('#ag-view', { state: 'visible', timeout: 5000 });
   const items = await page.locator('.plist-item, .poster-card, .ag-film-row, .int-item').count();
   expect(items).toBeGreaterThan(0);
 });
