@@ -27,3 +27,4 @@ module.exports = defineConfig({
     timeout: 10000,
   },
 });
+// Updated: CI now runs on Node 24 (checkout@v5, setup-node@v5, upload-artifact@v6)
