@@ -53,3 +53,39 @@ test('T42 — onclick handlers tienen JS válido', async ({ page }) => {
   await page.waitForTimeout(200); // mínimo: colección de errores async
   expect(errors).toHaveLength(0);
 });
+
+// ─── PARAMETRIZADOS test.each ────────────────────────────────────────────────
+// Mismo invariante corriendo contra todos los festivales principales.
+// 1 definición → N test runs. Patrón correcto para cobertura cross-festival.
+
+const MAIN_FESTIVALS = ['leviza2026', 'tribeca2026'];
+
+// P01 — Festival tiene films (parametrizado)
+for (const festId of MAIN_FESTIVALS) {
+  test(`P01 — ${festId}: carga con films`, async ({ page }) => {
+    await enterFestival(page, festId);
+    const count = await page.evaluate(() => typeof FILMS !== 'undefined' ? FILMS.length : 0);
+    expect(count).toBeGreaterThan(0);
+  });
+}
+
+// P02 — Festival carga sin errores JS (parametrizado)
+for (const festId of MAIN_FESTIVALS) {
+  test(`P02 — ${festId}: carga sin errores JS`, async ({ page }) => {
+    const errors = [];
+    page.on('pageerror', e => errors.push(e.message));
+    await enterFestival(page, festId);
+    const critical = errors.filter(e => !e.includes('sentry') && !e.includes('clarity'));
+    expect(critical).toHaveLength(0);
+  });
+}
+
+// P03 — Festival: topbar muestra nombre del festival (parametrizado)
+for (const festId of MAIN_FESTIVALS) {
+  test(`P03 — ${festId}: topbar muestra nombre`, async ({ page }) => {
+    await enterFestival(page, festId);
+    await page.waitForSelector('.hdr-fest-name', { timeout: 5000 });
+    const name = await page.locator('.hdr-fest-name').textContent();
+    expect(name?.trim().length).toBeGreaterThan(0);
+  });
+}

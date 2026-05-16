@@ -85,3 +85,58 @@ test('T33 — intereses muestra películas en watchlist', async ({ page }) => {
   const items = await page.locator('.plist-item, .poster-card, .ag-film-row, .int-item').count();
   expect(items).toBeGreaterThan(0);
 });
+
+// ─── YA VISTA + RATING ────────────────────────────────────────────────────────
+
+// V01 — Marcar película como vista desde sheet actualiza watched
+test('V01 — marcar como vista desde sheet actualiza watched', async ({ page }) => {
+  await enterFestival(page, 'leviza2026', LEVIZA_SIMTIME);
+  // Limpiar estado
+  await page.evaluate(() => { watched.clear(); saveWatched(); });
+  await page.evaluate(() => openPelSheet('La Suprema'));
+  await page.waitForSelector('#pel-sheet.open', { timeout: 8000 });
+  // Click botón "Vista" en el sheet
+  const vistaBtn = page.locator('#pel-sheet .pel-sheet-action-btn[onclick*="toggleWatched"]').first();
+  await expect(vistaBtn).toBeVisible({ timeout: 5000 });
+  await vistaBtn.click();
+  await page.waitForFunction(() => watched.size > 0, { timeout: 5000 });
+  const inWatched = await page.evaluate(() => watched.has('La Suprema'));
+  expect(inWatched).toBe(true);
+});
+
+// V02 — Botón calificar abre rating sheet
+test('V02 — botón calificar abre rating sheet', async ({ page }) => {
+  await enterFestival(page, 'leviza2026', LEVIZA_SIMTIME);
+  await page.evaluate(() => openPelSheet('La Suprema'));
+  await page.waitForSelector('#pel-sheet.open', { timeout: 8000 });
+  const calificarBtn = page.locator('#pel-sheet .pel-sheet-action-btn[onclick*="openRatingSheet"]').first();
+  await expect(calificarBtn).toBeVisible({ timeout: 5000 });
+  await calificarBtn.click();
+  await page.waitForSelector('#rating-sheet', { timeout: 5000 });
+  await expect(page.locator('#rating-sheet')).toBeVisible({ timeout: 5000 });
+});
+
+// V03 — Rating sheet se cierra con omitir
+test('V03 — rating sheet se cierra con omitir', async ({ page }) => {
+  await enterFestival(page, 'leviza2026', LEVIZA_SIMTIME);
+  await page.evaluate(() => openRatingSheet('La Suprema'));
+  await page.waitForSelector('#rating-sheet', { timeout: 5000 });
+  await page.locator('#rating-action-btn').click();
+  await expect(page.locator('#rating-sheet')).toBeHidden({ timeout: 5000 });
+});
+
+// V04 — toggleWatched desde lista no abre sheet
+test('V04 — marcar vista desde lista no abre sheet', async ({ page }) => {
+  await enterFestival(page, 'leviza2026', LEVIZA_SIMTIME);
+  await page.locator('.dtab[data-day="VIE 15"]').click();
+  await page.waitForSelector('.plist-item', { timeout: 8000 });
+  // Marcar vista directamente via JS (el botón en lista requiere Ya en intereses)
+  await page.evaluate(() => {
+    watched.clear();
+    toggleWatched('La Suprema', { stopPropagation: () => {} });
+  });
+  await page.waitForTimeout(200);
+  expect(await page.locator('#pel-sheet.open').count()).toBe(0);
+  const inWatched = await page.evaluate(() => watched.has('La Suprema'));
+  expect(inWatched).toBe(true);
+});
