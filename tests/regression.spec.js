@@ -728,3 +728,49 @@ test('T43 — planear con títulos muestra chips de disponibilidad', async ({ pa
   const hasUI = await page.locator('.av-calc-btn').count();
   expect(hasUI).toBeGreaterThan(0);
 });
+
+// T44 — flujo completo grabado con Playwright Codegen (Tribeca 2026)
+// Graba el flujo real: cambiar festival → filtrar día → agregar a Intereses → Planear → Mi Plan
+test('T44 — flujo completo: Tribeca filtro día + intereses + plan + mi plan', async ({ page }) => {
+  await enterFestival(page, 'tribeca2026');
+
+  // Filtrar por día WED 3
+  await page.locator('.dtab[data-day]').filter({ hasText: 'WED' }).first().click();
+  await page.waitForTimeout(500);
+
+  // Agregar primera película disponible a Intereses
+  const firstHeart = page.locator('.plist-heart').first();
+  await firstHeart.click();
+  await page.waitForTimeout(300);
+
+  // Verificar que está en Intereses
+  const heartActive = page.locator('.plist-heart.act-on').first();
+  await expect(heartActive).toBeVisible();
+
+  // Ir a tab Intereses
+  await page.locator('#mnav-wl').click();
+  await page.waitForSelector('#ag-view', { state: 'visible', timeout: 5000 });
+  const wlItems = await page.locator('.ag-item, .wl-item, .plist-item').count();
+  expect(wlItems).toBeGreaterThan(0);
+
+  // Ir a tab Planear
+  await page.locator('#mnav-planner').click();
+  await page.waitForTimeout(500);
+
+  // Generar plan
+  const calcBtn = page.locator('.av-calc-btn');
+  if (await calcBtn.count() > 0) {
+    await calcBtn.click();
+    await page.waitForTimeout(1000);
+  }
+
+  // Ir a Mi Plan
+  await page.locator('#mnav-agenda').click();
+  await page.waitForSelector('#agenda-view', { state: 'visible', timeout: 5000 });
+
+  // Mi Plan renderizó sin crash
+  const errors = [];
+  page.on('pageerror', e => errors.push(e.message));
+  await page.waitForTimeout(500);
+  expect(errors).toHaveLength(0);
+});
