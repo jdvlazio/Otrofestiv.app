@@ -7,7 +7,7 @@ const { LEVIZA_SIMTIME, enterFestival, addToWatchlist } = require('./helpers');
 test('T11 — cerrar alternativas en Mi Plan cierra el panel', async ({ page }) => {
   await enterFestival(page, 'tribeca2026');
   await page.locator('.mnav-tab[data-nav="mnav-cartelera"], .main-nav-tab').first().click();
-  await page.evaluate(() => switchMainNav('mnav-miplan'));
+  await page.evaluate(() => { switchMainNav('mnav-miplan'); showAgView(); });
   await page.waitForSelector('#ag-view', { state: 'visible', timeout: 8000 });
   const hasPlan = await page.locator('.mplan-t1').count();
   if (hasPlan === 0) { console.log('T11: sin plan activo, skip'); return; }
@@ -53,7 +53,7 @@ test('T25 — datos del plan disponibles para el día seleccionado', async ({ pa
 // T26 — Hora punteada abre panel de alternativas
 test('T26 — hora punteada abre panel de alternativas', async ({ page }) => {
   await enterFestival(page, 'tribeca2026');
-  await page.evaluate(() => switchMainNav('mnav-miplan'));
+  await page.evaluate(() => { switchMainNav('mnav-miplan'); showAgView(); });
   await page.waitForSelector('#ag-view', { state: 'visible', timeout: 8000 });
   const hasPlan = await page.locator('.mplan-t1').count();
   if (!hasPlan) return;
@@ -65,7 +65,7 @@ test('T26 — hora punteada abre panel de alternativas', async ({ page }) => {
 // T27 — Sugerencias: botón Añadir NO abre sheet de película
 test('T27 — sugerencias: añadir no abre sheet', async ({ page }) => {
   await enterFestival(page, 'tribeca2026');
-  await page.evaluate(() => switchMainNav('mnav-miplan'));
+  await page.evaluate(() => { switchMainNav('mnav-miplan'); showAgView(); });
   await page.waitForSelector('#ag-view', { state: 'visible', timeout: 8000 });
   const addBtn = page.locator('.suggestion-add').first();
   if (!await addBtn.count()) return;
@@ -76,7 +76,7 @@ test('T27 — sugerencias: añadir no abre sheet', async ({ page }) => {
 // T28 — Sugerencias: botón Añadir muestra toast de confirmación
 test('T28 — sugerencias: añadir muestra toast', async ({ page }) => {
   await enterFestival(page, 'tribeca2026');
-  await page.evaluate(() => switchMainNav('mnav-miplan'));
+  await page.evaluate(() => { switchMainNav('mnav-miplan'); showAgView(); });
   await page.waitForSelector('#ag-view', { state: 'visible', timeout: 8000 });
   const addBtn = page.locator('.suggestion-add').first();
   if (!await addBtn.count()) return;
@@ -93,6 +93,7 @@ test('T40 — mi plan vacío muestra estado vacío', async ({ page }) => {
     savedAgenda = null;
     saveSavedAgenda();
     switchMainNav('mnav-miplan');
+    showAgView();
     renderAgenda();
   });
   await page.waitForSelector('.empty-state-hero, .cta-ctx', { timeout: 8000 });
