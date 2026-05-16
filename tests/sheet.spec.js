@@ -132,5 +132,5 @@ test('V04 — rating sheet muestra estrellas', async ({ page }) => {
   const filmTitle = await page.locator('#rating-film-title').textContent();
   expect(filmTitle).toContain('Suprema');
   // El área de estrellas debe estar presente
-  await expect(page.locator('#rating-stars-wrap')).toBeVisible({ timeout: 3000 });
+  await expect(page.locator('.rating-stars')).toBeVisible({ timeout: 3000 });
 });
