@@ -7,11 +7,13 @@ on:
       - 'sw.js'
       - 'festivals/**.json'
       - 'tests/**.spec.js'
+      - 'tests/helpers.js'
       - 'playwright.config.js'
   pull_request:
     paths:
       - 'index.html'
       - 'tests/**.spec.js'
+      - 'tests/helpers.js'
 
 jobs:
   test:
@@ -34,8 +36,11 @@ jobs:
       - name: Install Playwright browsers
         run: npx playwright install --with-deps chromium
 
-      - name: Run regression tests
-        run: npx playwright test tests/regression.spec.js
+      - name: Smoke tests
+        run: npx playwright test tests/smoke.spec.js
+
+      - name: Regression tests
+        run: npx playwright test tests/programa.spec.js tests/sheet.spec.js tests/planner.spec.js tests/miplan.spec.js tests/festivals.spec.js
 
       - name: Run visual audit
         run: |
