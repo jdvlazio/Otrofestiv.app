@@ -5220,7 +5220,7 @@ const _lblLocalized = lbl => {
 };
 const durFmt    = d   => d ? (String(d).includes('min') ? String(d) : String(d)+' min') : '';
 const _isoToFlag = c  => c&&c.length===2 ? String.fromCodePoint(0x1F1E6+c.toUpperCase().charCodeAt(0)-65)+String.fromCodePoint(0x1F1E6+c.toUpperCase().charCodeAt(1)-65) : '';
-const flagFmt   = fl  => { if(!fl) return ''; const _fc=(FESTIVAL_CONFIG[_activeFestId||_DEFAULT_FEST_ID]||{}).country||''; return (_fc&&fl===_isoToFlag(_fc))?'':fl; };
+const flagFmt   = fl  => fl||'';
 
 /* ══════════════════════════════════════════════════════
    emptyState(icon, title, sub) — componente vacío unificado
