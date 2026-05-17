@@ -7009,7 +7009,7 @@ function _renderSavedAgendaHTML(){
   if(!savedAgenda||!savedAgenda.schedule.length) return emptyStateHero(ICONS.calendar,t('plan_tu_plan_empty'),t('empty_intereses'),t('cta_ir_planear'),"switchMainNav('mnav-planner');showAgView()");
   const all=savedAgenda.schedule;
   const planTitles=new Set(all.map(s=>s._title));
-  const archive=all.filter(s=>screeningPassed(s)||watched.has(s._title));
+  const archive=all.filter(s=>watched.has(s._title));
   // Películas marcadas vistas FUERA del plan — en watched pero no en savedAgenda
   const watchedOutsidePlan=[...watched]
     .filter(t=>!planTitles.has(t))
@@ -7068,23 +7068,17 @@ function _renderSavedAgendaHTML(){
         <div class="saved-day-lbl">${dayChip(day)}</div>
         ${archByDay[day].map(s=>{
           const vc2=vcfg(s.venue),sl=sala(s.venue);
-          const _af=FILMS.find(fi=>fi.title===s._title);const _ap=_af?getFilmPoster(_af):null;
+          const _af=FILMS.find(fi=>fi.title===s._title);
           const _safeMpT2=(s._title||"").replace(/'/g,"&#39;");
           const _aph=_posterThumb(_af,'lb-poster',`openPelSheet('${_safeMpT2}')`);
-          const _archWatched=watched.has(s._title);
-          const _archSafeT=(s._title||'').replace(/"/g,'&quot;');
-          const _archSafeV=(s.venue||'').replace(/"/g,'&quot;');
-          const _archBtn=_archWatched
-            ?`<button class="saved-check done" data-wt="${_archSafeT}" onclick="toggleWatched(this.dataset.wt,event)">${t('cta_no_vista')}</button>`
-            :`<button class="saved-check" data-title="${_archSafeT}" data-day="${s.day||''}" data-time="${s.time||''}" data-venue="${_archSafeV}" data-dur="${s.duration||''}" onclick="markWatchedFromPlan(this.dataset.title,this.dataset.day,this.dataset.time,this.dataset.venue,this.dataset.dur,event)">${ICONS.check} ${t('cta_vista')}</button>`;
-          return`<div class="saved-item${_archWatched?' done':''}">
+          return`<div class="saved-item done">
             ${_aph}
             <div class="saved-time">${s.time}</div>
             <div class="saved-info">
               <div class="saved-title">${s._title}</div>
               <div class="saved-venue">${ICONS.pin} ${vc2.short}${sl?' · '+sl:''}</div>
             </div>
-            ${_archBtn}
+            <button class="saved-check done" data-wt="${(s._title||'').replace(/"/g,'&quot;')}" onclick="toggleWatched(this.dataset.wt,event)">${t('cta_no_vista')}</button>
           </div>`;
         }).join('')}`).join(''):''}
       ${watchedOutsidePlan.length?`
