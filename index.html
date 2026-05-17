@@ -7071,14 +7071,20 @@ function _renderSavedAgendaHTML(){
           const _af=FILMS.find(fi=>fi.title===s._title);const _ap=_af?getFilmPoster(_af):null;
           const _safeMpT2=(s._title||"").replace(/'/g,"&#39;");
           const _aph=_posterThumb(_af,'lb-poster',`openPelSheet('${_safeMpT2}')`);
-          return`<div class="saved-item done">
+          const _archWatched=watched.has(s._title);
+          const _archSafeT=(s._title||'').replace(/"/g,'&quot;');
+          const _archSafeV=(s.venue||'').replace(/"/g,'&quot;');
+          const _archBtn=_archWatched
+            ?`<button class="saved-check done" data-wt="${_archSafeT}" onclick="toggleWatched(this.dataset.wt,event)">${t('cta_no_vista')}</button>`
+            :`<button class="saved-check" data-title="${_archSafeT}" data-day="${s.day||''}" data-time="${s.time||''}" data-venue="${_archSafeV}" data-dur="${s.duration||''}" onclick="markWatchedFromPlan(this.dataset.title,this.dataset.day,this.dataset.time,this.dataset.venue,this.dataset.dur,event)">${ICONS.check} ${t('cta_vista')}</button>`;
+          return`<div class="saved-item${_archWatched?' done':''}">
             ${_aph}
             <div class="saved-time">${s.time}</div>
             <div class="saved-info">
               <div class="saved-title">${s._title}</div>
               <div class="saved-venue">${ICONS.pin} ${vc2.short}${sl?' · '+sl:''}</div>
             </div>
-            <button class="saved-check done" data-wt="${(s._title||'').replace(/"/g,'&quot;')}" onclick="toggleWatched(this.dataset.wt,event)" >${t('cta_no_vista')}</button>
+            ${_archBtn}
           </div>`;
         }).join('')}`).join(''):''}
       ${watchedOutsidePlan.length?`
