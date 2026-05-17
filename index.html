@@ -7508,9 +7508,9 @@ function exportICS(){
       'END:VEVENT');
   });
   lines.push('END:VCALENDAR');
-  const blob=new Blob([lines.join('\r\n')],{type:'text/calendar'});
-  const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=`otrofestiv-${_icsId}.ics`;a.click();
-  showToast(t('misc_calendario_listo'),'info');
+  const _icsContent=lines.join('\r\n');
+  const _icsFilename=`otrofestiv-${_icsId}.ics`;
+  if(navigator.share&&navigator.canShare){    const _icsFile=new File([_icsContent],_icsFilename,{type:'text/calendar'});    if(navigator.canShare({files:[_icsFile]})){      navigator.share({files:[_icsFile]}).catch(()=>{});      showToast(t('misc_calendario_listo'),'info');      return;    }  }  const blob=new Blob([_icsContent],{type:'text/calendar'});  const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=_icsFilename;a.click();  showToast(t('misc_calendario_listo'),'info');
 }
 function clearSavedAgenda(){
   showDestructiveModal(`Borrar plan`,
