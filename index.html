@@ -6957,23 +6957,31 @@ function renderContextualHeader(){
     const rated=todayScreenings.filter(s=>watched.has(s._title)&&filmRatings[s._title]);
     const total=todayScreenings.filter(s=>watched.has(s._title)).length;
     if(!total) return '';
-    const starsStr=n=>starsText(n);
-    // Posters tappables — igual que en Intereses, consistente con el resto de la app
-    const filmRows=todayScreenings.filter(s=>watched.has(s._title)).map(s=>{
+    // Máximo 2 posters visibles — el resto se expande con "Ver todo (N)"
+    // Consistente con el sistema: link-gray-xs, misc_ver_todo existente
+    const MAX_VISIBLE=2;
+    const allWatched=todayScreenings.filter(s=>watched.has(s._title));
+    const mkChip=s=>{
       const{displayTitle:dt}=parseProgramTitle(s._title||'');
       const f=FILMS.find(fi=>fi.title===s._title);
-      const src=getFilmPoster(f)||'';
       const r=filmRatings[s._title];
       const safeT=(s._title||'').replace(/'/g,"&#39;");
       const stars=r?starsText(r):'';
       return`<div class="prio-chip-wrap js-open-pel" data-title="${f.title}">
-        ${src?_posterThumb(f,'prio-chip-poster',null):`<div class="prio-chip-ph">🎬</div>`}
+        ${getFilmPoster(f)?_posterThumb(f,'prio-chip-poster',null):`<div class="prio-chip-ph">🎬</div>`}
         ${r?`<div class="prio-overlay-label">${stars}</div>`:''}
         ${!r?`<div class="prio-overlay-center">
           <button class="prio-star-pill" onclick="event.stopPropagation();openPostViewRating('${safeT}','${s.day||''}','${s.time||''}','${(s.venue||'').replace(/'/g,"&#39;")}','${s.duration||''}')">★</button>
         </div>`:''}
       </div>`;
-    }).join('');
+    };
+    const visible=allWatched.slice(0,MAX_VISIBLE).map(mkChip).join('');
+    const hidden=allWatched.length>MAX_VISIBLE
+      ?`<span id="eve-films-extra" style="display:none">${allWatched.slice(MAX_VISIBLE).map(mkChip).join('')}</span>`
+      :'';
+    const verTodas=allWatched.length>MAX_VISIBLE
+      ?`<div class="sim-hdr-pad"><button class="link-gray-xs" onclick="_toggleEveningFilms(this)">${t('misc_ver_todo')} (${allWatched.length})</button></div>`
+      :'';
     const dayName=DAY_A[todayScreenings[0]?.day]||'Hoy';
     return`<div class="ctx-header">
       <div class="ctx-eyebrow" style="color:var(--gray)">
@@ -8354,6 +8362,16 @@ function _scrollMiPlanToNow(){
 // _updateMiPlanBadge — muestra el número de funciones sin confirmar
 // en el tab de Mi Plan. Ámbar, no rojo — es una tarea diferible, no un error.
 // Se llama al final de renderAgenda() y cuando cambia watched.
+// _toggleEveningFilms — muestra/oculta posters adicionales en EVENING.
+// Sin CSS nuevo — usa hscroll-strip existente y link-gray-xs.
+function _toggleEveningFilms(btn){
+  const extra=document.getElementById('eve-films-extra');
+  if(!extra) return;
+  const open=extra.style.display!=='none';
+  extra.style.display=open?'none':'contents';
+  btn.style.display='none'; // ocultar el botón al expandir — ya no hace falta
+}
+
 function _updateMiPlanBadge(){
   const badge=document.getElementById('miplan-badge');
   if(!badge) return;
