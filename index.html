@@ -7223,7 +7223,7 @@ async function sharePlan(){
     canvas=_buildAgendaCanvas();
     dataUrl=canvas.toDataURL('image/png');
     if(!dataUrl||dataUrl==='data:,') throw new Error('canvas vacío');
-  }catch(e){console.error('[share] Error al generar imagen:',e);showToast('Error al generar imagen — ver consola','err');return;}
+  }catch(e){console.error('[share] canvas error:',e);showToast('Error: '+(e?.message||e),'err');return;}
 
   // Web Share API con archivo (iOS Safari 15+, Chrome Android 86+)
   if(navigator.share&&navigator.canShare){
@@ -7311,7 +7311,7 @@ function _generateAndShare(){
     dataUrl=canvas.toDataURL('image/png');
     if(!dataUrl||dataUrl==='data:,') throw new Error('canvas vacío');
   }catch(e){
-    console.error('[share] Error al generar imagen:',e);showToast('Error al generar imagen — ver consola','err'); return;
+    console.error('[share] canvas error:',e);showToast('Error: '+(e?.message||e),'err'); return;
   }
   _showImageModal(dataUrl,canvas);
 }
