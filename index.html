@@ -7317,7 +7317,6 @@ function _generateAndShare(){
 }
 
 function _buildAgendaCanvas(){
-  const DPR=Math.min(window.devicePixelRatio||2,3);
   const cfg=FESTIVAL_CONFIG[_activeFestId]||{};
   const festDays=cfg.days||DAY_KEYS.map(k=>({k,lbl:k.slice(0,3).toUpperCase(),d:parseInt(k.slice(-2))||''}));
   const DAYS=festDays.map(d=>d.k);
@@ -7329,6 +7328,9 @@ function _buildAgendaCanvas(){
   DAYS.forEach(d=>{byDay[d].sort((a,b)=>a.time.localeCompare(b.time));});
   const active=DAYS.filter(d=>byDay[d].length>0);
   const nC=active.length||1;
+  // DPR adaptativo: iOS limita canvas a ~4096px por dimensión — calcular tras conocer nC
+  const _W_RAW=48+nC*200-10; // PAD*2 + nC*CW + (nC-1)*CGAP
+  const DPR=Math.max(1,Math.min(window.devicePixelRatio||2,3,Math.floor(4096/_W_RAW)));
   const cleanDur=s=>(s.duration||'').replace(/\s*min\s*min/i,'min').trim();
   const PAD=24,HDR=72,COL_HDR=46,CW=190,CGAP=10,CARD_PAD=12,CARD_R=8,CARD_GAP=8;
   const FONT_T=12,LINE_T=16,MAX_TL=3,CARD_MIN=90;
