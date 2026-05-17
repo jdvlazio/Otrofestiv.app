@@ -7326,7 +7326,7 @@ function _buildAgendaCanvas(){
   DAYS.forEach(d=>{byDay[d]=[];});
   (savedAgenda.schedule||[]).forEach(s=>{if(byDay[s.day])byDay[s.day].push(s);});
   DAYS.forEach(d=>{byDay[d].sort((a,b)=>a.time.localeCompare(b.time));});
-  const active=DAYS.filter(d=>byDay[d].length>0);
+  const active=DAYS; // Todos los días del festival — registro completo independiente del plan
   const nC=active.length||1;
   // DPR adaptativo: iOS limita canvas a ~4096px por dimensión — calcular tras conocer nC
   const _W_RAW=48+nC*200-10; // PAD*2 + nC*CW + (nC-1)*CGAP
@@ -7349,7 +7349,7 @@ function _buildAgendaCanvas(){
     return Math.max(mx,h);
   },0);
   const W=PAD*2+nC*CW+(nC-1)*CGAP;
-  const H=HDR+PAD+COL_HDR+CARD_GAP+maxColH+PAD*2;
+  const H=HDR+PAD+COL_HDR+CARD_GAP+Math.max(0,maxColH)+PAD*2;
   const cv=document.createElement('canvas');
   cv.width=W*DPR;cv.height=H*DPR;
   const c=cv.getContext('2d');
