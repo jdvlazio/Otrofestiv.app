@@ -1518,7 +1518,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .saved-check.done:hover{border-color:var(--bdr);color:var(--gray2)}
 
 /* Progress festival */
-.festival-progress{padding:var(--sp-2) 0;margin-bottom:var(--sp-2)}
+.festival-progress{padding:var(--sp-1) 0;margin-bottom:var(--sp-1)}
 /* ── Header contextual de Mi Plan ── */
 .ctx-header{padding:var(--sp-3) var(--sp-4) var(--sp-3);border-bottom:1px solid var(--bdr);background:var(--surf)}
 .ctx-eyebrow{font-size:var(--t-label);font-weight:var(--w-bold);letter-spacing:.8px;text-transform:uppercase;display:flex;align-items:center;gap:var(--sp-1);margin-bottom:6px;color:var(--amber-60)}
@@ -1552,9 +1552,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .ctx-eve-film-title{flex:1;font-size:var(--t-sm);font-weight:var(--w-semi);color:var(--white);min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .ctx-eve-stars{font-size:var(--t-caption);color:var(--amber);flex-shrink:0;letter-spacing:1px}
 .ctx-eve-rate{background:none;border:1px solid var(--bdr);border-radius:var(--r-pill);color:var(--gray);font-size:var(--t-label);font-weight:var(--w-semi);font-family:var(--font);padding:3px 8px;cursor:pointer;flex-shrink:0;white-space:nowrap}
-.festival-progress-text{font-size:var(--t-sm);color:var(--gray2);margin-bottom:var(--sp-2);display:flex;justify-content:space-between}
-.festival-progress-bar{height:3px;background:var(--gray2);border-radius:var(--r-handle);overflow:hidden}
-.festival-progress-fill{height:100%;background:var(--amber);border-radius:var(--r-handle);transition:width var(--tr-smooth)}
+.festival-progress-text{font-size:var(--t-sm);color:var(--gray2);display:flex;justify-content:space-between;align-items:center;border-bottom:3px solid var(--amber)}
 
 /* ════════════════════════════════════════════════════════
    6 · RESPONSIVE
@@ -7031,8 +7029,7 @@ function _renderSavedAgendaHTML(){
   const progressPct=dayIdx>=0?Math.round((dayIdx/(totalDays-1))*100):0;
   const progressBar=currentDayNum?`<div class="row-sm festival-progress">
     <div style="flex:1">
-      <div class="festival-progress-text"><span>${t('label_dia_prog')} <b>${currentDayNum}</b> ${t('label_de_dias')} ${totalDays}</span><span style="color:var(--amber)">${ICONS.check} ${viewedCount} ${viewedCount===1?t('label_vista'):t('label_vistas')}</span></div>
-      <div class="festival-progress-bar"><div class="festival-progress-fill" style="width:${progressPct}%"></div></div>
+      <div class="festival-progress-text"><span>${t('label_dia_prog')} <b>${currentDayNum}</b> ${t('label_de_dias')} ${totalDays}</span><span style="color:var(--amber);display:flex;align-items:center;gap:4px">${viewedCount} ${viewedCount===1?t('label_vista'):t('label_vistas')} ${ICONS.check}</span></div>
     </div>
   </div>`:'';
 
