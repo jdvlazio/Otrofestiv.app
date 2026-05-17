@@ -1966,6 +1966,24 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .splash-drop-item.selected .splash-drop-item-name{color:var(--amber)}
 .splash-drop-item-meta{font-size:var(--t-sm);color:var(--gray2);margin-top:1px}
 .splash-drop-item-badge{font-size:var(--t-xs);color:var(--gray);letter-spacing:.8px}
+/* Separador "Anteriores" en el dropdown del splash */
+.splash-drop-sep{
+  padding:6px var(--sp-4) 4px;font-size:var(--t-xs);color:var(--gray2);
+  letter-spacing:.6px;text-transform:uppercase;
+  border-top:1px solid var(--bdr);border-bottom:none;
+  background:none;font-family:var(--font);
+}
+/* Items de festivales pasados — colapsados por defecto */
+.splash-drop-item.past{opacity:.55;padding:10px var(--sp-4)}
+.splash-drop-item.past .splash-drop-item-name{
+  font-size:var(--t-sm);font-weight:var(--w-med);
+}
+.splash-drop-item.past .splash-drop-item-meta{display:none}
+.splash-drop-item.past.past-open{opacity:.75}
+.splash-drop-item.past.past-open .splash-drop-item-meta{display:block}
+/* Chevron del item pasado */
+.past-item-chev{color:var(--gray2);display:flex;transition:transform .2s ease;flex-shrink:0}
+.splash-drop-item.past.past-open .past-item-chev{transform:rotate(180deg)}
 .splash-enter-btn{
   width:100%;max-width:300px;
   background:var(--amber);border:none;
@@ -2953,6 +2971,7 @@ const _I18N = {
     "plan_fest_terminado": "ha terminado",
     "misc_prioridades": "prioridades",
     "badge_pasado": "PASADO",
+    "splash_anteriores": "Anteriores",
     "plan_quitar_prioridad": "Quitar prioridad",
     "plan_reemplazar_funcion": "¿Reemplazar función?",
     "plan_anadir_plan": "¿Añadir al plan?",
@@ -3277,6 +3296,7 @@ const _I18N = {
     "plan_fest_terminado": "has ended",
     "misc_prioridades": "priorities",
     "badge_pasado": "PAST",
+    "splash_anteriores": "Previous",
     "plan_quitar_prioridad": "Remove priority",
     "plan_reemplazar_funcion": "Replace screening?",
     "plan_anadir_plan": "Add to plan?",
@@ -9929,25 +9949,68 @@ function _sortFestivals(entries, activeFestId){
     return new Date(b[1].festivalEndStr)-new Date(a[1].festivalEndStr);
   });
 }
+// Toggle colapso/expansión de festival pasado en el dropdown del splash.
+// Al expandir muestra metadata completa y hace el item seleccionable.
+// Al colapsar vuelve al estado condensado.
+function _togglePastFest(btn, name, meta, id){
+  const isOpen = btn.classList.contains('past-open');
+  if(isOpen){
+    // Colapsar
+    btn.classList.remove('past-open');
+    btn.setAttribute('aria-selected','false');
+  } else {
+    // Expandir — y al tap en la metadata expandida seleccionar el festival
+    btn.classList.add('past-open');
+    btn.setAttribute('aria-selected','true');
+    // Segundo tap (ya expandido) → seleccionar
+    btn.onclick = () => {
+      if(btn.classList.contains('past-open')){
+        selectSplashFest(name, meta, id);
+      } else {
+        _togglePastFest(btn, name, meta, id);
+      }
+    };
+  }
+}
+
 function _renderSplashDropdown(activeFestId){
   const dd=document.getElementById('splash-dropdown');
   if(!dd) return;
   const today=new Date();today.setHours(12,0,0,0);
   const entries=_sortFestivals(Object.entries(FESTIVAL_CONFIG)
     .filter(([,cfg])=>cfg.name&&cfg.group!=='test'), activeFestId);
-  const html=entries.map(([id,cfg])=>{
-    if(!cfg.name) return '';
-    const isTest=cfg.group==='test';
+  // Separar activos/próximos de pasados
+  const active=entries.filter(([,cfg])=>{
     const end=cfg.festivalEndStr?new Date(cfg.festivalEndStr):null;
-    const isPast=end&&today>end;
+    return !end||today<=end;
+  });
+  const past=entries.filter(([,cfg])=>{
+    const end=cfg.festivalEndStr?new Date(cfg.festivalEndStr):null;
+    return end&&today>end;
+  });
+  // Renderizar activos — igual que antes
+  const mkItem=([id,cfg],isPast)=>{
+    if(!cfg.name) return '';
     const isActive=id===activeFestId;
-    const badge=isTest?'TEST':isPast?t('badge_pasado'):'';
     const meta=`${cfg.city} · ${_lang==='en'&&cfg.dates_en?cfg.dates_en:cfg.dates} ${cfg.year||''}`.trim();
+    // Label corto para colapsado: shortName || primera palabra del nombre
+    const shortLabel=(cfg.shortName||cfg.name.split(' ')[0])+' · '+(_lang==='en'&&cfg.dates_en?cfg.dates_en:cfg.dates).split(/[–—-]/)[0].trim()+' '+cfg.year;
+    const chevSvg=`<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>`;
+    if(isPast){
+      return`<button class="splash-drop-item past" data-fest="${id}" role="option" aria-selected="false" onclick="_togglePastFest(this,'${cfg.name}','${meta}','${id}')">
+        <div><div class="splash-drop-item-name">${shortLabel}</div><div class="splash-drop-item-meta">${meta}</div></div>
+        <span class="past-item-chev">${chevSvg}</span>
+      </button>`;
+    }
     return`<button class="splash-drop-item${isActive?' selected':''}" data-fest="${id}" role="option" aria-selected="${isActive}" onclick="selectSplashFest('${cfg.name}','${meta}','${id}')">
       <div><div class="splash-drop-item-name">${cfg.name}</div><div class="splash-drop-item-meta">${meta}</div></div>
-      ${badge?`<div class="splash-drop-item-badge">${badge}</div>`:''}
     </button>`;
-  }).filter(Boolean).join('');
+  };
+  let html=active.map(e=>mkItem(e,false)).filter(Boolean).join('');
+  if(past.length){
+    html+=`<div class="splash-drop-sep">${t('splash_anteriores')}</div>`;
+    html+=past.map(e=>mkItem(e,true)).filter(Boolean).join('');
+  }
   dd.innerHTML=html;
   // Update selected button meta with language-aware dates
   const _activeCfg=FESTIVAL_CONFIG[activeFestId];
