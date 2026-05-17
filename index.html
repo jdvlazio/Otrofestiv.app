@@ -1630,6 +1630,18 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .fs-fest-name{font-size:var(--t-base);font-weight:var(--w-semi);color:var(--white);line-height:1.2}
 .fs-fest-meta{font-size:var(--t-sm);color:var(--gray);margin-top:2px}
 .fs-fest-check{color:var(--amber);flex-shrink:0}
+/* Festivales pasados en el sheet — colapsados por defecto, idéntico al splash */
+.fs-festival-row.past{opacity:.55;padding:var(--sp-2) var(--sp-5)}
+.fs-festival-row.past .fs-fest-name{
+  font-size:var(--t-sm);font-weight:var(--w-med);
+}
+.fs-festival-row.past .fs-fest-meta{display:none}
+.fs-festival-row.past .fs-fest-dot{opacity:.5}
+.fs-festival-row.past.past-open{opacity:.75}
+.fs-festival-row.past.past-open .fs-fest-meta{display:block}
+/* Chevron del item pasado en el sheet */
+.fs-past-chev{color:var(--gray2);display:flex;margin-left:auto;transition:transform .2s ease;flex-shrink:0}
+.fs-festival-row.past.past-open .fs-past-chev{transform:rotate(180deg)}
 .fs-soon-row{display:flex;align-items:center;gap:var(--sp-3);padding:var(--sp-3) var(--sp-5);opacity:.35}
 .fs-soon-dot{width:6px;height:6px;border-radius:50%;background:var(--gray2);flex-shrink:0}
 .fs-soon-info{flex:1}
@@ -2972,6 +2984,8 @@ const _I18N = {
     "misc_prioridades": "prioridades",
     "badge_pasado": "PASADO",
     "splash_anteriores": "Anteriores",
+    "fs_festivales": "Festivales",
+    "fs_cambiar": "Cambiar festival",
     "plan_quitar_prioridad": "Quitar prioridad",
     "plan_reemplazar_funcion": "¿Reemplazar función?",
     "plan_anadir_plan": "¿Añadir al plan?",
@@ -3297,6 +3311,8 @@ const _I18N = {
     "misc_prioridades": "priorities",
     "badge_pasado": "PAST",
     "splash_anteriores": "Previous",
+    "fs_festivales": "Festivals",
+    "fs_cambiar": "Change festival",
     "plan_quitar_prioridad": "Remove priority",
     "plan_reemplazar_funcion": "Replace screening?",
     "plan_anadir_plan": "Add to plan?",
@@ -10022,16 +10038,40 @@ function _renderSplashDropdown(activeFestId){
   if(_activeCfg && _selName) _selName.textContent=_activeCfg.name;
 }
 
+// Toggle colapso/expansión de festival pasado en el sheet in-app.
+// Idéntico en comportamiento a _togglePastFest del splash.
+// Primer tap: expande mostrando metadata completa.
+// Segundo tap: selecciona el festival vía loadFestival.
+function _togglePastFestRow(row, id){
+  const isOpen=row.classList.contains('past-open');
+  if(isOpen){
+    loadFestival(id);
+  } else {
+    // Colapsar cualquier otro que esté abierto
+    document.querySelectorAll('.fs-festival-row.past.past-open')
+      .forEach(el=>el.classList.remove('past-open'));
+    row.classList.add('past-open');
+  }
+}
+
 function _renderFestivalSelector(activeFestId){
   const container=document.getElementById('fs-festival-list');
   if(!container) return;
   const today=new Date();today.setHours(12,0,0,0);
   const entries=_sortFestivals(Object.entries(FESTIVAL_CONFIG)
-    .filter(([,cfg])=>cfg.name), activeFestId);
-  // Group: regular vs test
-  const regular=entries.filter(([,cfg])=>cfg.name&&cfg.group!=='test');
-  const tests=entries.filter(([,cfg])=>cfg.name&&cfg.group==='test');
-  function mkRow([id,cfg],isActive){
+    .filter(([,cfg])=>cfg.name&&cfg.group!=='test'), activeFestId);
+  const chevSvg=`<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>`;
+  // Separar activos/próximos de pasados — idéntico al splash
+  const active=entries.filter(([,cfg])=>{
+    const end=cfg.festivalEndStr?new Date(cfg.festivalEndStr):null;
+    return !end||today<=end;
+  });
+  const past=entries.filter(([,cfg])=>{
+    const end=cfg.festivalEndStr?new Date(cfg.festivalEndStr):null;
+    return end&&today>end;
+  });
+  function mkRow([id,cfg]){
+    const isActive=id===activeFestId;
     const meta=`${cfg.city} · ${_lang==='en'&&cfg.dates_en?cfg.dates_en:cfg.dates} ${cfg.year||''}`.trim();
     return`<div class="fs-festival-row" data-fest="${id}" onclick="loadFestival('${id}')">
       <div class="fs-fest-dot"></div>
@@ -10042,10 +10082,26 @@ function _renderFestivalSelector(activeFestId){
       <div class="fs-fest-check" style="display:${isActive?'':'none'}">${CHECK_SVG}</div>
     </div>`;
   }
+  function mkPastRow([id,cfg]){
+    const meta=`${cfg.city} · ${_lang==='en'&&cfg.dates_en?cfg.dates_en:cfg.dates} ${cfg.year||''}`.trim();
+    const shortLabel=(cfg.shortName||cfg.name.split(' ')[0])+' · '+(_lang==='en'&&cfg.dates_en?cfg.dates_en:cfg.dates).split(/[–—-]/)[0].trim()+' '+cfg.year;
+    return`<div class="fs-festival-row past" data-fest="${id}" onclick="_togglePastFestRow(this,'${id}')">
+      <div class="fs-fest-dot"></div>
+      <div class="fs-fest-info">
+        <div class="fs-fest-name">${shortLabel}</div>
+        <div class="fs-fest-meta">${meta}</div>
+      </div>
+      <span class="fs-past-chev">${chevSvg}</span>
+    </div>`;
+  }
   let html='';
-  if(regular.length){
-    html+=`<div class="fs-section-lbl">Festivales</div>`;
-    html+=regular.map(e=>mkRow(e,e[0]===activeFestId)).join('<div class="fs-divider"></div>');
+  if(active.length){
+    html+=`<div class="fs-section-lbl">${t('fs_festivales')}</div>`;
+    html+=active.map(e=>mkRow(e)).join('<div class="fs-divider"></div>');
+  }
+  if(past.length){
+    html+=`<div class="fs-divider"></div><div class="fs-section-lbl">${t('splash_anteriores')}</div>`;
+    html+=past.map(e=>mkPastRow(e)).join('<div class="fs-divider"></div>');
   }
   // test festivals (group:'test') are hidden from the selector — data preserved for reuse
   container.innerHTML=html;
@@ -11169,7 +11225,7 @@ function _cortoSheetPosterErr(img){
 <div class="fs-sheet" id="fs-sheet">
   <div class="fs-handle"></div>
   <div class="fs-header">
-    <div class="fs-title">Cambiar festival</div>
+    <div class="fs-title" data-i18n="fs_cambiar">Cambiar festival</div>
   </div>
   <!-- Generado dinámicamente por _renderFestivalSelector() en init -->
   <div id="fs-festival-list"></div>
