@@ -2985,6 +2985,8 @@ const _I18N = {
     "badge_pasado": "PASADO",
     "splash_anteriores": "Anteriores",
     "fs_festivales": "Festivales",
+    "fs_en_curso": "En curso",
+    "fs_proximos": "Próximos",
     "fs_cambiar": "Cambiar festival",
     "plan_quitar_prioridad": "Quitar prioridad",
     "plan_reemplazar_funcion": "¿Reemplazar función?",
@@ -3312,6 +3314,8 @@ const _I18N = {
     "badge_pasado": "PAST",
     "splash_anteriores": "Previous",
     "fs_festivales": "Festivals",
+    "fs_en_curso": "Ongoing",
+    "fs_proximos": "Upcoming",
     "fs_cambiar": "Change festival",
     "plan_quitar_prioridad": "Remove priority",
     "plan_reemplazar_funcion": "Replace screening?",
@@ -3437,6 +3441,10 @@ function setLang(code){
     else if(nav === 'mnav-planner')   { typeof renderSimPanel === 'function'      && renderSimPanel(); }
     else if(nav === 'mnav-miplan')    { typeof renderAgenda === 'function'         && renderAgenda(); }
     // Fade in
+    // Re-renderizar componentes dinámicos que usan t() en tiempo de render
+    // Esto garantiza que el idioma se respete sin excepción
+    _renderSplashDropdown(_splashSelectedFestId||_DEFAULT_FEST_ID);
+    _renderFestivalSelector(_activeFestId);
     requestAnimationFrame(()=>{
       _fadeEls.forEach(el=>el.classList.remove('lang-fade'));
     });
@@ -4076,22 +4084,22 @@ const FESTIVAL_CONFIG={
   // y se mergea en loadFestival() — el JSON es la fuente única de verdad.
   'ficci65':{
     name:'FICCI 65',city:'Cartagena',dates:'14–19 ABR',dates_en:'APR 14–19',year:2026,
-    storageKey:'ficci65_',festivalEndStr:'2026-04-20T02:00:00',
+    storageKey:'ficci65_',festivalStartStr:'2026-04-14T00:00:00',festivalEndStr:'2026-04-20T02:00:00',
     films:null,posters:null,lbSlugs:{}
   },
   'aff2026':{
     name:'AFF 2026',city:'Medellín',dates:'21–29 ABR',dates_en:'APR 21–29',year:2026,
-    storageKey:'aff2026_',festivalEndStr:'2026-04-29T23:00:00',
+    storageKey:'aff2026_',festivalStartStr:'2026-04-21T00:00:00',festivalEndStr:'2026-04-29T23:00:00',
     films:null,posters:null,lbSlugs:{}
   },
   'tribeca2026':{
     name:'Tribeca Festival',city:'New York',dates:'JUN 3–14',dates_en:'JUN 3–14',year:2026,
-    storageKey:'tribeca2026_',festivalEndStr:'2026-06-14T23:59:00',
+    storageKey:'tribeca2026_',festivalStartStr:'2026-06-03T00:00:00',festivalEndStr:'2026-06-14T23:59:00',
     films:null,posters:null,lbSlugs:{}
   },
   'cinemancia2025':{
     name:'Cinemancia 2025',city:'Valle de Aburrá',dates:'11–20 SEP',dates_en:'SEP 11–20',year:2025,
-    storageKey:'cinemancia2025_',festivalEndStr:'2025-09-20T23:00:00',
+    storageKey:'cinemancia2025_',festivalStartStr:'2025-09-11T00:00:00',festivalEndStr:'2025-09-20T23:00:00',
     group:'test', // datos preservados como guía para sep 2025 — no visible en splash
     films:null,posters:null,lbSlugs:{}
   },
@@ -4099,7 +4107,7 @@ const FESTIVAL_CONFIG={
     name:'Leviza - Festival de Cine y Audiovisuales',shortName:'LEVIZA',
     city:'Zapatoca',country:'CO',
     dates:'14–17 MAY',dates_en:'MAY 14–17',year:2026,timezoneOffset:'-05:00',
-    storageKey:'leviza2026_',festivalEndStr:'2026-05-17T23:00:00',
+    storageKey:'leviza2026_',festivalStartStr:'2026-05-14T00:00:00',festivalEndStr:'2026-05-17T23:00:00',
     festivalDates:{'JUE 14':'2026-05-14','VIE 15':'2026-05-15','SÁB 16':'2026-05-16','DOM 17':'2026-05-17'},
     days:[{k:'JUE 14',d:14,lbl:'JUE'},{k:'VIE 15',d:15,lbl:'VIE'},{k:'SÁB 16',d:16,lbl:'SÁB'},{k:'DOM 17',d:17,lbl:'DOM'}],
     dayKeys:['JUE 14','VIE 15','SÁB 16','DOM 17'],
@@ -9951,18 +9959,36 @@ function toggleSplashDropdown(){
 // ── Genera el splash dropdown y el festival selector desde FESTIVAL_CONFIG ──
 // Agregar un festival = una entrada en FESTIVAL_CONFIG. Nada más que tocar.
 const CHECK_SVG=`<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>`;
+// _classifyFestival — fuente única de verdad para el estado temporal de un festival.
+// Usada en splash, sheet, y cualquier contexto futuro.
+// Retorna: 'ongoing' | 'upcoming' | 'past'
+function _classifyFestival(cfg){
+  const now=new Date();
+  const start=cfg.festivalStartStr?new Date(cfg.festivalStartStr):null;
+  const end=cfg.festivalEndStr?new Date(cfg.festivalEndStr):null;
+  if(!end) return 'upcoming';          // sin fecha de cierre → tratar como próximo
+  if(now>end) return 'past';           // ya terminó
+  if(start&&now<start) return 'upcoming'; // aún no empieza
+  return 'ongoing';                    // entre start y end → en curso
+}
+
 function _sortFestivals(entries, activeFestId){
-  const _now=new Date();
   const _tier=([id,cfg])=>{
     if(id===activeFestId) return 0;
-    if(new Date(cfg.festivalEndStr||'2000-01-01')>_now) return 1;
-    return 2;
+    const cls=_classifyFestival(cfg);
+    if(cls==='ongoing')  return 1;
+    if(cls==='upcoming') return 2;
+    return 3; // past
   };
   return entries.sort((a,b)=>{
     const ta=_tier(a),tb=_tier(b);
     if(ta!==tb) return ta-tb;
-    if(ta===1) return new Date(a[1].festivalEndStr)-new Date(b[1].festivalEndStr);
-    return new Date(b[1].festivalEndStr)-new Date(a[1].festivalEndStr);
+    // ongoing: termina antes primero
+    if(ta===1) return new Date(a[1].festivalEndStr||0)-new Date(b[1].festivalEndStr||0);
+    // upcoming: empieza antes primero
+    if(ta===2) return new Date(a[1].festivalStartStr||'2099-01-01')-new Date(b[1].festivalStartStr||'2099-01-01');
+    // past: más reciente primero
+    return new Date(b[1].festivalEndStr||0)-new Date(a[1].festivalEndStr||0);
   });
 }
 // Toggle colapso/expansión de festival pasado en el dropdown del splash.
@@ -9992,42 +10018,33 @@ function _togglePastFest(btn, name, meta, id){
 function _renderSplashDropdown(activeFestId){
   const dd=document.getElementById('splash-dropdown');
   if(!dd) return;
-  const today=new Date();today.setHours(12,0,0,0);
   const entries=_sortFestivals(Object.entries(FESTIVAL_CONFIG)
     .filter(([,cfg])=>cfg.name&&cfg.group!=='test'), activeFestId);
-  // Separar activos/próximos de pasados
-  const active=entries.filter(([,cfg])=>{
-    const end=cfg.festivalEndStr?new Date(cfg.festivalEndStr):null;
-    return !end||today<=end;
-  });
-  const past=entries.filter(([,cfg])=>{
-    const end=cfg.festivalEndStr?new Date(cfg.festivalEndStr):null;
-    return end&&today>end;
-  });
-  // Renderizar activos — igual que antes
-  const mkItem=([id,cfg],isPast)=>{
-    if(!cfg.name) return '';
+  const chevSvg=`<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>`;
+  // Clasificar en tres grupos usando la fuente única de verdad
+  const ongoing  = entries.filter(([,cfg])=>_classifyFestival(cfg)==='ongoing');
+  const upcoming = entries.filter(([,cfg])=>_classifyFestival(cfg)==='upcoming');
+  const past     = entries.filter(([,cfg])=>_classifyFestival(cfg)==='past');
+  const mkItem=([id,cfg])=>{
     const isActive=id===activeFestId;
     const meta=`${cfg.city} · ${_lang==='en'&&cfg.dates_en?cfg.dates_en:cfg.dates} ${cfg.year||''}`.trim();
-    // Label corto para colapsado: shortName || primera palabra del nombre
-    const shortLabel=(cfg.shortName||cfg.name.split(' ')[0])+' · '+(_lang==='en'&&cfg.dates_en?cfg.dates_en:cfg.dates).split(/[–—-]/)[0].trim()+' '+cfg.year;
-    const chevSvg=`<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>`;
-    if(isPast){
-      return`<button class="splash-drop-item past" data-fest="${id}" role="option" aria-selected="false" onclick="_togglePastFest(this,'${cfg.name}','${meta}','${id}')">
-        <div><div class="splash-drop-item-name">${shortLabel}</div><div class="splash-drop-item-meta">${meta}</div></div>
-        <span class="past-item-chev">${chevSvg}</span>
-      </button>`;
-    }
     return`<button class="splash-drop-item${isActive?' selected':''}" data-fest="${id}" role="option" aria-selected="${isActive}" onclick="selectSplashFest('${cfg.name}','${meta}','${id}')">
       <div><div class="splash-drop-item-name">${cfg.name}</div><div class="splash-drop-item-meta">${meta}</div></div>
     </button>`;
   };
-  let html=active.map(e=>mkItem(e,false)).filter(Boolean).join('');
-  if(past.length){
-    html+=`<div class="splash-drop-sep">${t('splash_anteriores')}</div>`;
-    html+=past.map(e=>mkItem(e,true)).filter(Boolean).join('');
-  }
-  dd.innerHTML=html;
+  const mkPastItem=([id,cfg])=>{
+    const meta=`${cfg.city} · ${_lang==='en'&&cfg.dates_en?cfg.dates_en:cfg.dates} ${cfg.year||''}`.trim();
+    const shortLabel=(cfg.shortName||cfg.name.split(' ')[0])+' · '+(_lang==='en'&&cfg.dates_en?cfg.dates_en:cfg.dates).split(/[–—-]/)[0].trim()+' '+cfg.year;
+    return`<button class="splash-drop-item past" data-fest="${id}" role="option" aria-selected="false" onclick="_togglePastFest(this,'${cfg.name}','${meta}','${id}')">
+      <div><div class="splash-drop-item-name">${shortLabel}</div><div class="splash-drop-item-meta">${meta}</div></div>
+      <span class="past-item-chev">${chevSvg}</span>
+    </button>`;
+  };
+  let html='';
+  if(ongoing.length)  html+=`<div class="splash-drop-sep">${t('fs_en_curso')}</div>`+ongoing.map(mkItem).join('');
+  if(upcoming.length) html+=`<div class="splash-drop-sep">${t('fs_proximos')}</div>`+upcoming.map(mkItem).join('');
+  if(past.length)     html+=`<div class="splash-drop-sep">${t('splash_anteriores')}</div>`+past.map(mkPastItem).join('');
+  dd.innerHTML=html;  dd.innerHTML=html;
   // Update selected button meta with language-aware dates
   const _activeCfg=FESTIVAL_CONFIG[activeFestId];
   const _selMeta=document.getElementById('splash-sel-meta');
@@ -10057,24 +10074,19 @@ function _togglePastFestRow(row, id){
 function _renderFestivalSelector(activeFestId){
   const container=document.getElementById('fs-festival-list');
   if(!container) return;
-  const today=new Date();today.setHours(12,0,0,0);
   const entries=_sortFestivals(Object.entries(FESTIVAL_CONFIG)
     .filter(([,cfg])=>cfg.name&&cfg.group!=='test'), activeFestId);
   const chevSvg=`<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>`;
-  // Separar activos/próximos de pasados — idéntico al splash
-  const active=entries.filter(([,cfg])=>{
-    const end=cfg.festivalEndStr?new Date(cfg.festivalEndStr):null;
-    return !end||today<=end;
-  });
-  const past=entries.filter(([,cfg])=>{
-    const end=cfg.festivalEndStr?new Date(cfg.festivalEndStr):null;
-    return end&&today>end;
-  });
+  // Clasificar en tres grupos — fuente única de verdad
+  const ongoing  = entries.filter(([,cfg])=>_classifyFestival(cfg)==='ongoing');
+  const upcoming = entries.filter(([,cfg])=>_classifyFestival(cfg)==='upcoming');
+  const past     = entries.filter(([,cfg])=>_classifyFestival(cfg)==='past');
   function mkRow([id,cfg]){
     const isActive=id===activeFestId;
     const meta=`${cfg.city} · ${_lang==='en'&&cfg.dates_en?cfg.dates_en:cfg.dates} ${cfg.year||''}`.trim();
+    const dotClass=`fs-fest-dot${isActive?' active':''}`;
     return`<div class="fs-festival-row" data-fest="${id}" onclick="loadFestival('${id}')">
-      <div class="fs-fest-dot"></div>
+      <div class="${dotClass}"></div>
       <div class="fs-fest-info">
         <div class="fs-fest-name">${cfg.name}</div>
         <div class="fs-fest-meta">${meta}</div>
@@ -10086,7 +10098,7 @@ function _renderFestivalSelector(activeFestId){
     const meta=`${cfg.city} · ${_lang==='en'&&cfg.dates_en?cfg.dates_en:cfg.dates} ${cfg.year||''}`.trim();
     const shortLabel=(cfg.shortName||cfg.name.split(' ')[0])+' · '+(_lang==='en'&&cfg.dates_en?cfg.dates_en:cfg.dates).split(/[–—-]/)[0].trim()+' '+cfg.year;
     return`<div class="fs-festival-row past" data-fest="${id}" onclick="_togglePastFestRow(this,'${id}')">
-      <div class="fs-fest-dot"></div>
+      <div class="fs-fest-dot past"></div>
       <div class="fs-fest-info">
         <div class="fs-fest-name">${shortLabel}</div>
         <div class="fs-fest-meta">${meta}</div>
@@ -10095,15 +10107,10 @@ function _renderFestivalSelector(activeFestId){
     </div>`;
   }
   let html='';
-  if(active.length){
-    html+=`<div class="fs-section-lbl">${t('fs_festivales')}</div>`;
-    html+=active.map(e=>mkRow(e)).join('<div class="fs-divider"></div>');
-  }
-  if(past.length){
-    html+=`<div class="fs-divider"></div><div class="fs-section-lbl">${t('splash_anteriores')}</div>`;
-    html+=past.map(e=>mkPastRow(e)).join('<div class="fs-divider"></div>');
-  }
-  // test festivals (group:'test') are hidden from the selector — data preserved for reuse
+  if(ongoing.length)  html+=`<div class="fs-section-lbl">${t('fs_en_curso')}</div>`+ongoing.map(mkRow).join('<div class="fs-divider"></div>');
+  if(upcoming.length) html+=`<div class="fs-section-lbl">${t('fs_proximos')}</div>`+upcoming.map(mkRow).join('<div class="fs-divider"></div>');
+  if(past.length)     html+=`<div class="fs-section-lbl">${t('splash_anteriores')}</div>`+past.map(mkPastRow).join('<div class="fs-divider"></div>');
+  container.innerHTML=html;
   container.innerHTML=html;
 }
 // ─────────────────────────────────────────────────────────────────────────────
@@ -11229,14 +11236,7 @@ function _cortoSheetPosterErr(img){
   </div>
   <!-- Generado dinámicamente por _renderFestivalSelector() en init -->
   <div id="fs-festival-list"></div>
-  <div class="fs-divider"></div>
-  <div class="fs-section-lbl" data-i18n="misc_proxi">Próximamente</div>
-  <div class="fs-soon-row">
-    <div class="fs-soon-dot"></div>
-    <div class="fs-soon-info">
-      <div class="fs-soon-name" data-i18n="splash_proximamente">Más festivales en camino…</div>
-    </div>
-  </div>
+
 </div>
 
 
