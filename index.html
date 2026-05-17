@@ -7223,7 +7223,7 @@ async function sharePlan(){
     canvas=_buildAgendaCanvas();
     dataUrl=canvas.toDataURL('image/png');
     if(!dataUrl||dataUrl==='data:,') throw new Error('canvas vacío');
-  }catch(e){console.error('[share] canvas error:',e);showToast('Error: '+(e?.message||e),'err');return;}
+  }catch(e){showToast('Error al generar imagen','err');return;}
 
   // Web Share API con archivo (iOS Safari 15+, Chrome Android 86+)
   if(navigator.share&&navigator.canShare){
@@ -7311,7 +7311,7 @@ function _generateAndShare(){
     dataUrl=canvas.toDataURL('image/png');
     if(!dataUrl||dataUrl==='data:,') throw new Error('canvas vacío');
   }catch(e){
-    console.error('[share] canvas error:',e);showToast('Error: '+(e?.message||e),'err'); return;
+    showToast('Error al generar imagen','err'); return;
   }
   _showImageModal(dataUrl,canvas);
 }
@@ -7331,7 +7331,7 @@ function _buildAgendaCanvas(){
   // DPR adaptativo: iOS limita canvas a ~4096px por dimensión — calcular tras conocer nC
   const _W_RAW=48+nC*200-10; // PAD*2 + nC*CW + (nC-1)*CGAP
   const DPR=Math.max(1,Math.min(window.devicePixelRatio||2,3,Math.floor(4096/_W_RAW)));
-  const cleanDur=s=>(s.duration||'').replace(/\s*min\s*min/i,'min').trim();
+  const cleanDur=s=>String(s.duration||'').replace(/\s*min\s*min/i,'min').trim();
   const PAD=24,HDR=72,COL_HDR=46,CW=190,CGAP=10,CARD_PAD=12,CARD_R=8,CARD_GAP=8;
   const FONT_T=12,LINE_T=16,MAX_TL=3,CARD_MIN=90;
   const cv0=document.createElement('canvas');
