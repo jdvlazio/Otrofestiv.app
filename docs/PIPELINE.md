@@ -107,6 +107,74 @@
 
 ---
 
+### Fase 3b · Letterboxd slugs `[Data Engineer — Chrome tab obligatorio]`
+
+**Objetivo:** Poblar `lbSlugs{}` en el JSON del festival para que cada film muestre enlace a Letterboxd.
+
+> ⚠️ **Regla absoluta:** Los slugs de Letterboxd NUNCA se infieren desde el título. El slug se extrae directamente del DOM de Letterboxd y se verifica individualmente. Inferir slugs produce errores silenciosos — un slug plausible puede apuntar a un film completamente distinto.
+
+#### Paso 1 — Extraer slugs desde listas de Letterboxd
+
+Buscar listas compiladas del festival (buscar en Google: `letterboxd list [nombre festival] [año]`).
+
+Abrir cada lista en el Chrome tab y ejecutar este JS en cada página:
+
+```js
+// Extraer slug + título de todos los films en la página
+Array.from(document.querySelectorAll('a[href*="/film/"]'))
+  .map(a => {
+    const m = a.href.match(/letterboxd\.com\/film\/([^/?#]+)/);
+    const img = a.querySelector('img') || a.closest('li,div,article')?.querySelector('img');
+    return m ? m[1] + '|||' + (img?.alt?.replace('Poster for ','') || '') : null;
+  })
+  .filter(Boolean)
+  .join('\n')
+```
+
+Repetir para cada página de la lista (`/page/2/`, `/page/3/`, etc.).
+
+#### Paso 2 — Verificar cada slug individualmente
+
+**Este paso es obligatorio. Sin excepción.**
+
+Para cada slug extraído, navegar a `https://letterboxd.com/film/SLUG/` y verificar:
+```js
+document.title
+// Debe contener: "Título (año) directed by Director"
+```
+
+Comparar director y año contra los datos del JSON del festival. Si no coinciden → el slug es incorrecto, buscar el correcto.
+
+**Casos frecuentes de error:**
+- Films con títulos genéricos (`Cotton Fever`, `Harvest`, `Funk`) tienen múltiples páginas en LB con sufijos (`-1`, `-2026`, etc.)
+- Films de retrospectiva usan el slug del año original, no el año del festival
+- El título en LB a veces difiere del título en el programa (ej: `Billy Joel - The Last Play at Shea` vs `The Last Play at Shea`)
+- Films que son World Premieres pueden no tener página en LB todavía — dejar sin slug
+
+#### Paso 3 — Insertar en el JSON
+
+```python
+with open('festivals/festival-id.json') as f:
+    d = json.load(f)
+
+d['lbSlugs'] = {
+    "Título exacto del film": "slug-verificado",
+    # ...
+}
+
+with open('festivals/festival-id.json', 'w') as f:
+    json.dump(d, f, ensure_ascii=False, indent=2)
+```
+
+La clave del dict es el `title` exacto del film en el JSON (case-sensitive, apóstrofes incluidos).
+
+**Gates de salida:**
+- [ ] Cada slug fue visitado y verificado (director + año)
+- [ ] Competencias principales: cobertura 100%
+- [ ] 0 slugs inferidos sin verificación
+
+---
+
 ### Fase 4 · Validación automática `[automatizado — validate-festivals.js]`
 
 ```bash
@@ -197,3 +265,4 @@ node scripts/validate-festivals.js [festival-id]
 | `config{}` en JSON | Configuración ignorada silenciosamente por el engine | Gate bloqueante en validator |
 | Títulos en ALLCAPS | ALEJANDRO SANZ, MOUTH FULL OF GOLDS visibles en producción | Gate bloqueante en validator |
 | `synopsis_en` de TMDB sin validar | Sinopsis de films incorrectos aparecen en la UI | Misma validación estricta que posters |
+| lbSlugs inferidos desde título | Slugs plausibles apuntando a films distintos (ej: `cotton-fever-1` existía pero era otro film; `ascension-2026` no existía; `against-the-flow` era un film diferente al de Tribeca) | Método Chrome tab obligatorio: extraer del DOM de listas LB + verificar cada URL individualmente |
