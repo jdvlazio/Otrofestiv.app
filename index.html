@@ -9995,24 +9995,10 @@ function _sortFestivals(entries, activeFestId){
 // Al expandir muestra metadata completa y hace el item seleccionable.
 // Al colapsar vuelve al estado condensado.
 function _togglePastFest(btn, name, meta, id){
-  const isOpen = btn.classList.contains('past-open');
-  if(isOpen){
-    // Colapsar
-    btn.classList.remove('past-open');
-    btn.setAttribute('aria-selected','false');
-  } else {
-    // Expandir — y al tap en la metadata expandida seleccionar el festival
-    btn.classList.add('past-open');
-    btn.setAttribute('aria-selected','true');
-    // Segundo tap (ya expandido) → seleccionar
-    btn.onclick = () => {
-      if(btn.classList.contains('past-open')){
-        selectSplashFest(name, meta, id);
-      } else {
-        _togglePastFest(btn, name, meta, id);
-      }
-    };
-  }
+  // Toggle colapso/expansión — siempre. Nunca selecciona.
+  const isOpen=btn.classList.contains('past-open');
+  btn.classList.toggle('past-open', !isOpen);
+  btn.setAttribute('aria-selected', isOpen ? 'false' : 'true');
 }
 
 function _renderSplashDropdown(activeFestId){
@@ -10044,7 +10030,7 @@ function _renderSplashDropdown(activeFestId){
   if(ongoing.length)  html+=`<div class="splash-drop-sep">${t('fs_en_curso')}</div>`+ongoing.map(mkItem).join('');
   if(upcoming.length) html+=`<div class="splash-drop-sep">${t('fs_proximos')}</div>`+upcoming.map(mkItem).join('');
   if(past.length)     html+=`<div class="splash-drop-sep">${t('splash_anteriores')}</div>`+past.map(mkPastItem).join('');
-  dd.innerHTML=html;  dd.innerHTML=html;
+  dd.innerHTML=html;
   // Update selected button meta with language-aware dates
   const _activeCfg=FESTIVAL_CONFIG[activeFestId];
   const _selMeta=document.getElementById('splash-sel-meta');
@@ -10060,15 +10046,14 @@ function _renderSplashDropdown(activeFestId){
 // Primer tap: expande mostrando metadata completa.
 // Segundo tap: selecciona el festival vía loadFestival.
 function _togglePastFestRow(row, id){
+  // Toggle colapso/expansión — siempre. Nunca carga el festival.
   const isOpen=row.classList.contains('past-open');
-  if(isOpen){
-    loadFestival(id);
-  } else {
-    // Colapsar cualquier otro que esté abierto
+  if(!isOpen){
+    // Colapsar cualquier otro abierto antes de expandir
     document.querySelectorAll('.fs-festival-row.past.past-open')
       .forEach(el=>el.classList.remove('past-open'));
-    row.classList.add('past-open');
   }
+  row.classList.toggle('past-open', !isOpen);
 }
 
 function _renderFestivalSelector(activeFestId){
