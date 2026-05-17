@@ -836,7 +836,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .plist-poster-stack .ps-back{position:absolute;top:0;right:0;width:46px;height:72px;border-radius:var(--r-sm);object-fit:cover;background:var(--surf-3);opacity:.6;border:1px solid var(--bdr)}
 .plist-poster-stack .ps-front{position:absolute;bottom:0;left:0;width:46px;height:72px;border-radius:var(--r-sm);object-fit:cover;background:var(--surf-3);box-shadow:2px -2px 0 rgba(0,0,0,.5)}
 .plist-info{flex:1;min-width:0}
-.plist-title{font-size:var(--t-base);font-weight:var(--w-bold);color:var(--white);margin-bottom:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.plist-title{font-size:var(--t-base);font-weight:var(--w-bold);color:var(--white);margin-bottom:2px;display:flex;align-items:center;gap:var(--sp-1);min-width:0}.plist-title-txt{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .plist-meta{font-size:var(--t-sm);color:var(--gray2)}
 .plist-sec{font-size:var(--t-label);color:var(--gray2);font-weight:var(--w-semi);margin-top:2px;letter-spacing:.2px}
 .plist-heart{font-size:var(--t-icon);color:var(--amber);flex-shrink:0;cursor:pointer;padding:6px;border-radius:50%;transition:background var(--tr-base),transform 200ms cubic-bezier(.34,1.56,.64,1)/* bounce intencional */;display:flex;align-items:center;justify-content:center}
@@ -2411,7 +2411,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .txt-white60{color:var(--white-60)}
 .txt-white60-semi{color:var(--white-60);font-weight:var(--w-semi)}
 .film-count-badge{font-size:var(--t-xs);background:var(--surf-3);color:var(--amber);border-radius:var(--r);padding:1px 5px;margin-left:5px;font-weight:var(--w-bold)}
-.film-check-badge{font-size:var(--t-xs);font-weight:var(--w-display);color:var(--green);background:var(--green-10);border:1px solid var(--green-30);border-radius:var(--r);padding:2px 6px;margin-left:var(--sp-1)}
+.film-check-badge{font-size:var(--t-xs);font-weight:var(--w-display);color:var(--green);background:var(--green-10);border:1px solid var(--green-30);border-radius:var(--r);padding:2px 6px;margin-left:var(--sp-1);flex-shrink:0}
 .bg-surf-2{background:var(--surf-2)}
 .badge-past{background:var(--amber-60);color:var(--black)}
 .txt-amber-sm{color:var(--amber);font-size:var(--t-sm)}
@@ -9698,7 +9698,7 @@ function renderProgramaList(){
       return`<div class="plist-item js-open-pel" style="${itemStyle}" data-title="${f.title}">
         ${_stk||_plistPosterHtml(f,src)}
         <div class="plist-info">
-          <div class="plist-title">${noticeBadge}${dt}${_metaBadges(f)}${nowBadge}</div>
+          <div class="plist-title">${noticeBadge}<span class="plist-title-txt">${dt}</span>${_metaBadges(f)}${nowBadge}</div>
           <div class="plist-meta" style="${notice&&notice.type==='cancelled'?'text-decoration:line-through':''}">${vc.short}${sala(f.venue)?' · '+sala(f.venue):''}${f.duration?' · '+durFmt(f.duration):''}</div>
           ${noticeNote||`<div class="plist-sec">${f.section||''}</div>`}
         </div>
