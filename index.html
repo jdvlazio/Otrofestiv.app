@@ -8315,6 +8315,36 @@ function renderFlowProgress(activeTab){
     ${mkStep(3,t('nav_miplan'))}
   </div>`;
 }
+// _scrollMiPlanToNow — auto-scroll del calendario de Mi Plan al tiempo actual.
+// Se llama después del render, usa requestAnimationFrame para esperar el paint.
+// Solo actúa cuando el festival está en curso (nowDayIdx >= 0).
+// Centra la nowline verticalmente en el viewport del contenedor.
+function _scrollMiPlanToNow(){
+  requestAnimationFrame(()=>{
+    const outer = document.querySelector('.mplan-wk-outer');
+    if(!outer) return;
+    // Replicar constantes de renderMiPlanCalendar
+    const PHDR = 44;
+    const PPH  = window.innerWidth <= 600 ? 40 : 64;
+    const todayStr = simTodayStr();
+    const nowDayIdx = DAY_KEYS.findIndex(d => FESTIVAL_DATES[d] === todayStr);
+    if(nowDayIdx < 0) return; // festival no en curso — no scrollear
+    const nowMin = simNow().getHours() * 60 + simNow().getMinutes();
+    // Calcular SH igual que renderMiPlanCalendar (usamos plan completo como fallback)
+    if(!savedAgenda || !savedAgenda.schedule.length) return;
+    const allMins = savedAgenda.schedule.flatMap(s => {
+      const st = toMin(s.time), en = st + parseDur(s.duration);
+      return [st, en];
+    });
+    const SH = Math.max(9, Math.floor((Math.min(...allMins) - 30) / 60));
+    const nowTop = PHDR + (nowMin - SH * 60) / 60 * PPH;
+    const viewH  = outer.clientHeight;
+    // Centrar la nowline en el viewport, con un margen superior de 20%
+    const target = nowTop - viewH * 0.30;
+    outer.scrollTo({ top: Math.max(0, target), behavior: 'smooth' });
+  });
+}
+
 function renderAgenda(){
   const view=document.getElementById('ag-view');
   if(activeMNav==='mnav-seleccion'){
@@ -8344,6 +8374,7 @@ function renderAgenda(){
     // ── Mi Plan: stepper de progreso + calendario + sugerencias ──
     const _progressHtmlPlan=(!festivalEnded()&&(!savedAgenda||!savedAgenda.schedule||!savedAgenda.schedule.length))?renderFlowProgress('miplan'):'';
     view.innerHTML=_progressHtmlPlan+renderSavedAgendaHTML();
+    _scrollMiPlanToNow();
   } else {
     // ── Planear: stepper de progreso + prio strip + disponibilidad + opciones ──
     if(festivalEnded()){
