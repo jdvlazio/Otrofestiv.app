@@ -1518,7 +1518,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .saved-check.done:hover{border-color:var(--bdr);color:var(--gray2)}
 
 /* Progress festival */
-.festival-progress{padding:var(--sp-1) 0;margin-bottom:var(--sp-1)}
+.festival-progress{padding:var(--sp-2) 0;margin-bottom:var(--sp-1)}
 /* ── Header contextual de Mi Plan ── */
 .ctx-header{padding:var(--sp-3) var(--sp-4) var(--sp-3);border-bottom:1px solid var(--bdr);background:var(--surf)}
 .ctx-eyebrow{font-size:var(--t-label);font-weight:var(--w-bold);letter-spacing:.8px;text-transform:uppercase;display:flex;align-items:center;gap:var(--sp-1);margin-bottom:6px;color:var(--amber-60)}
@@ -1529,7 +1529,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .ctx-prio-thumb{width:24px;height:36px;border-radius:var(--r-sm);flex-shrink:0;object-fit:cover;background:var(--surf-3)}
 .ctx-prio-name{font-size:var(--t-sm);font-weight:var(--w-bold);color:var(--white);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .ctx-prio-when{font-size:var(--t-label);color:var(--amber);margin-top:1px}
-.ctx-next-card{display:flex;align-items:center;gap:var(--sp-3);background:var(--surf-2);border:1px solid var(--amber-30);border-radius:var(--r);padding:var(--sp-3);margin-top:var(--sp-3)}
+.ctx-next-row{display:flex;align-items:center;gap:var(--sp-3);margin-top:8px}
 .ctx-next-poster{width:36px;height:54px;border-radius:var(--r-sm);flex-shrink:0;object-fit:cover;background:var(--surf-3)}
 .ctx-next-title{font-size:var(--t-base);font-weight:var(--w-bold);color:var(--white);letter-spacing:-.1px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;flex:1;min-width:0}
 .ctx-next-title-row{display:flex;align-items:center;gap:var(--sp-2);margin-bottom:3px}
@@ -1552,7 +1552,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .ctx-eve-film-title{flex:1;font-size:var(--t-sm);font-weight:var(--w-semi);color:var(--white);min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .ctx-eve-stars{font-size:var(--t-caption);color:var(--amber);flex-shrink:0;letter-spacing:1px}
 .ctx-eve-rate{background:none;border:1px solid var(--bdr);border-radius:var(--r-pill);color:var(--gray);font-size:var(--t-label);font-weight:var(--w-semi);font-family:var(--font);padding:3px 8px;cursor:pointer;flex-shrink:0;white-space:nowrap}
-.festival-progress-text{font-size:var(--t-sm);color:var(--gray2);display:flex;justify-content:space-between;align-items:center;border-bottom:3px solid var(--amber)}
+.festival-progress-text{font-size:var(--t-sm);color:var(--gray2);display:flex;justify-content:space-between;align-items:center;padding-bottom:var(--sp-2);border-bottom:3px solid var(--amber)}
 
 /* ════════════════════════════════════════════════════════
    6 · RESPONSIVE
@@ -6895,7 +6895,7 @@ function renderContextualHeader(){
         <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
         ${eyebrowLabel}
       </div>
-      <div class="ctx-next-card js-open-pel" data-title="${next._title||''}" style="cursor:pointer">
+      <div class="ctx-next-row js-open-pel" data-title="${next._title||''}" style="cursor:pointer">
         ${src
           ?`<img class="ctx-next-poster" src="${src}" data-title="${(next._title||'').replace(/"/g,'&quot;')}" onerror="_posterErr(this)" alt="" loading="lazy">`
           :_isEvent
