@@ -6236,7 +6236,7 @@ function mkAgendaRow(s, mode='saved'){
       <div class="saved-venue">${ICONS.pin} ${vc2.short}${sl?' · '+sl:''}${s.duration?' · '+durFmt(s.duration):''}${altBadge}</div>
       ${_progBtn}
     </div>
-    ${mode==='saved'?`<button class="row-xs saved-check${isDone?' done':''}" data-title="${safeT}" data-day="${s.day||''}" data-time="${s.time||''}" data-venue="${(s.venue||'').replace(/"/g,'&quot;')}" data-dur="${s.duration||''}" onclick="${isDone?'toggleWatched(this.dataset.title,event)':'markWatchedFromPlan(this.dataset.title,this.dataset.day,this.dataset.time,this.dataset.venue,this.dataset.dur,event)'}">${isDone?t('cta_no_vista'):ICONS.check+' '+t('cta_vista')}</button>`:''}
+    ${mode==='saved'?`<button class="row-xs saved-check${isDone?' done':''}" data-title="${safeT}" data-day="${s.day||''}" data-time="${s.time||''}" data-venue="${(s.venue||'').replace(/"/g,'&quot;')}" data-dur="${s.duration||''}" onclick="${isDone?'toggleWatched(this.dataset.title,event)':'markWatchedFromPlan(this.dataset.title,this.dataset.day,this.dataset.time,this.dataset.venue,this.dataset.dur,event)'}">${ICONS.check+' '+t('cta_vista')}</button>`:''}
   </div>${_progList}${altsHtml?`<div class="film-alts">${altsHtml}</div>`:''}`;
 }
 
@@ -7078,7 +7078,7 @@ function _renderSavedAgendaHTML(){
               <div class="saved-title">${s._title}</div>
               <div class="saved-venue">${ICONS.pin} ${vc2.short}${sl?' · '+sl:''}</div>
             </div>
-            <button class="saved-check done" data-wt="${(s._title||'').replace(/"/g,'&quot;')}" onclick="toggleWatched(this.dataset.wt,event)">${t('cta_no_vista')}</button>
+            <button class="saved-check done" data-wt="${(s._title||'').replace(/"/g,'&quot;')}" onclick="toggleWatched(this.dataset.wt,event)">${ICONS.check+' '+t('cta_vista')}</button>
           </div>`;
         }).join('')}`).join(''):''}
       ${watchedOutsidePlan.length?`
@@ -7094,7 +7094,7 @@ function _renderSavedAgendaHTML(){
               <div class="saved-title">${f.title}</div>
               <div class="saved-venue">${ICONS.clock} ${durFmt(f.duration)||'—'}</div>
             </div>
-            <button class="saved-check done" data-wt="${(f.title||'').replace(/"/g,'&quot;')}" onclick="toggleWatched(this.dataset.wt,event)" >${t('cta_no_vista')}</button>
+            <button class="saved-check done" data-wt="${(f.title||'').replace(/"/g,'&quot;')}" onclick="toggleWatched(this.dataset.wt,event)" >${ICONS.check+' '+t('cta_vista')}</button>
           </div>`;
         }).join('')}`:''}
     </div>`;
