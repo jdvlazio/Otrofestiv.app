@@ -422,7 +422,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .dtab.past{opacity:.35}
 
 /* Navegación principal (bottom tabs) */
-.main-nav{display:flex;border-bottom:1px solid var(--bdr);background:var(--surf)}
+.main-nav{display:flex;border-bottom:1px solid var(--bdr);background:var(--surf);padding-bottom:env(safe-area-inset-bottom)}
 .main-nav-tab{flex:1;background:none;border:none;border-bottom:2px solid transparent;margin-bottom:-1px;padding:var(--sp-2) var(--sp-1) var(--sp-3);cursor:pointer;color:var(--gray);font-family:var(--font);font-size:var(--t-base);font-weight:var(--w-semi);letter-spacing:.3px;text-align:center;transition:color var(--tr-base),border-color var(--tr-base);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:var(--sp-1);height:52px;box-sizing:border-box;position:relative}
 .main-nav-tab:active{opacity:.7}
 .main-nav-tab.on{color:var(--amber);border-bottom-color:var(--amber)}
