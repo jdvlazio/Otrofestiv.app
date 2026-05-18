@@ -4130,7 +4130,11 @@ const _DEFAULT_FEST_ID=(()=>{
   return entries.sort((a,b)=>new Date(b[1].festivalEndStr)-new Date(a[1].festivalEndStr))[0][0];
 })();
 
-let _activeFestId=localStorage.getItem('otrofestiv_festival')||_DEFAULT_FEST_ID;
+const _storedFestId=localStorage.getItem('otrofestiv_festival');
+// Si el festival guardado ya terminó, ignorarlo y usar el default
+const _storedFestCfg=_storedFestId&&FESTIVAL_CONFIG[_storedFestId];
+const _storedFestEnded=_storedFestCfg&&_storedFestCfg.festivalEndStr&&new Date(_storedFestCfg.festivalEndStr)<new Date();
+let _activeFestId=(_storedFestId&&!_storedFestEnded)?_storedFestId:_DEFAULT_FEST_ID;
 
 // ═══════════════════════════════════════════════════════════════
 // SUPABASE — Auth + Cloud Sync
