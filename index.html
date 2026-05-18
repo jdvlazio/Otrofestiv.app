@@ -3517,11 +3517,17 @@ function _applyI18nDOM(){
     if(attrs.includes('ariaLabel')) el.setAttribute('aria-label',val);
     if(attrs.includes('title'))     el.title=val;
   }
-  // 6. dtab labels — update when lang changes (built once in loadFestival)
-  document.querySelectorAll('.dtab[data-lbl-es]').forEach(btn=>{
-    const lbl=_lang==='en'?(btn.dataset.lblEn||btn.dataset.lblEs):btn.dataset.lblEs;
+  // 6. dtab labels — calculado en tiempo real desde DAY_SHORT/DAY_SHORT_EN
+  // No depende de data-lbl-es/en en el DOM — funciona con cualquier formato de datos
+  document.querySelectorAll('.dtab[data-day]').forEach(btn=>{
+    const dayKey=btn.dataset.day;
     const dateSpan=btn.querySelector('.dtab-date');
-    if(dateSpan&&lbl) dateSpan.textContent=lbl;
+    if(!dateSpan||!dayKey) return;
+    // Obtener abreviación del día según idioma activo
+    const shortMap=_lang==='en'?DAY_SHORT_EN:DAY_SHORT;
+    const fullEntry=shortMap[dayKey]||''; // ej: 'MIÉ 15' o 'WED 3'
+    const lbl=fullEntry.split(' ')[0]||btn.dataset.lblEs||btn.dataset.lblEn||'';
+    if(lbl) dateSpan.textContent=lbl;
   });
 
 }
