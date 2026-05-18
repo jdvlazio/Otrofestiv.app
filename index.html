@@ -10164,7 +10164,7 @@ function _renderFestivalSelector(activeFestId){
   }
   function mkPastRow([id,cfg]){
     const meta=`${cfg.city} · ${_lang==='en'&&cfg.dates_en?cfg.dates_en:cfg.dates} ${cfg.year||''}`.trim();
-    const shortLabel=(cfg.shortName||cfg.name.split(' ')[0])+' · '+(_lang==='en'&&cfg.dates_en?cfg.dates_en:cfg.dates).split(/[–—-]/)[0].trim()+' '+cfg.year;
+    const shortLabel=(cfg.shortName||cfg.name.split(' ')[0])+' · '+cfg.year;
     return`<div class="fs-festival-row past" data-fest="${id}" onclick="_togglePastFestRow(this,'${id}')">
       <div class="fs-fest-dot past"></div>
       <div class="fs-fest-info">
