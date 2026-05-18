@@ -71,6 +71,7 @@ test('T10 — poster editorial: sección completa sin truncar', async ({ page })
 test('T12 — día específico carga en vista lista por defecto', async ({ page }) => {
   await enterFestival(page, 'leviza2026', LEVIZA_SIMTIME);
   await page.waitForSelector('.plist-item, .poster-card', { timeout: 8000 });
+  await page.waitForTimeout(300); // espera rAFs de showDayView post-simTime
   const activeDay = await page.evaluate(() => activeDay);
   if (activeDay === 'all') return;
   const listItems = await page.locator('.plist-item').count();
