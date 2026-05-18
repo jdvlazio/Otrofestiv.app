@@ -3458,11 +3458,6 @@ function setLang(code){
     // Re-renderizar componentes dinámicos que usan t() en tiempo de render
     // Esto garantiza que el idioma se respete sin excepción
     _renderSplashDropdown(_splashSelectedFestId||_DEFAULT_FEST_ID);
-  // Trigger splash entrada animation after first paint
-  requestAnimationFrame(()=>requestAnimationFrame(()=>{
-    const _sp=document.getElementById('otrofestiv-splash');
-    if(_sp)_sp.classList.add('splash-animating');
-  }));
     _renderFestivalSelector(_activeFestId);
     requestAnimationFrame(()=>{
       _fadeEls.forEach(el=>el.classList.remove('lang-fade'));
@@ -10632,6 +10627,11 @@ _sbInit();
   _splashSelectedFestId=activeFest;
   // Render dinámico — agregar festival = solo FESTIVAL_CONFIG, nada más
   _renderSplashDropdown(activeFest);
+  // Trigger splash entrada animation después del primer paint
+  requestAnimationFrame(()=>requestAnimationFrame(()=>{
+    const _sp=document.getElementById('otrofestiv-splash');
+    if(_sp&&!_sp.classList.contains('fade-out'))_sp.classList.add('splash-animating');
+  }));
   _renderFestivalSelector(activeFest);
   const cfg=FESTIVAL_CONFIG[activeFest];
   if(cfg){
