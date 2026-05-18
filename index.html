@@ -10103,7 +10103,7 @@ function _renderSplashDropdown(activeFestId){
   };
   const mkPastItem=([id,cfg])=>{
     const meta=`${cfg.city} · ${_lang==='en'&&cfg.dates_en?cfg.dates_en:cfg.dates} ${cfg.year||''}`.trim();
-    const shortLabel=(cfg.shortName||cfg.name.split(' ')[0])+' · '+(_lang==='en'&&cfg.dates_en?cfg.dates_en:cfg.dates)+' '+cfg.year;
+    const shortLabel=(cfg.shortName||cfg.name.split(' ')[0])+' · '+cfg.year;
     return`<button class="splash-drop-item past" data-fest="${id}" role="option" aria-selected="false" onclick="_togglePastFest(this,'${cfg.name}','${meta}','${id}')">
       <div><div class="splash-drop-item-name">${shortLabel}</div><div class="splash-drop-item-meta">${meta}</div></div>
       <span class="past-item-chev">${chevSvg}</span>
