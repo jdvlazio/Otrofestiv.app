@@ -457,6 +457,53 @@ try:
             fail(check, f"'{s}' hardcodeado en JS — debe usar t()")
     else:
         ok(check, f'{len(UI_STRINGS_MUST_USE_T)} strings de UI verificados — ninguno hardcodeado')
+
+    # ── Check dinámico: strings JS con español fuera de t() ──────────────────
+    # Produce warnings (no falla el deploy) — puede tener falsos positivos
+    # pero detecta nuevos strings hardcodeados antes de llegar a producción
+    SAFE_LINE_MARKERS = [
+        'includes(', 'PROGRAMA_CHIPS', 'FESTIVAL_DATES', 'DAY_SHORT',
+        'DAYS_ES', 'DAYS_EN', 'var(--', 'replace(', 'toLowerCase(',
+        'normTitle', '.json', 'regex', 'RegExp', 'https://',
+        'Adolfo', 'SÁB 16', 'MIÉ 15', # venue/date literals en FESTIVAL_DATES Leviza
+        'canvas vacío', # error interno, no UI visible
+        'PROYECCIÓN SORPRESA', 'Valle de Aburrá', 'Plaza Proclamación', # venue/nombres Leviza
+        'Ciencia Ficción', 'Animación', # géneros PROGRAMA_CHIPS FICCI
+        'Opción personalizada', # ya usa t() — falso positivo del dict
+        'SÁB 18', # fecha FESTIVAL_DATES Leviza
+    ]
+    SPANISH_ACCENT = set('áéíóúñÁÉÍÓÚÑ')
+    import re as _re3
+
+    # Extract only lines with Spanish chars from JS code
+    dynamic_found = []
+    for lnum, line in enumerate(code_no_comments.split('\n'), 1):
+        if not any(c in line for c in SPANISH_ACCENT):
+            continue
+        if any(m in line for m in SAFE_LINE_MARKERS):
+            continue
+        stripped = line.strip()
+        if stripped.startswith('//') or _re3.match(r'^\s*"[a-z_]+\s*:', stripped):
+            continue
+        # Look for single or double quoted strings with Spanish chars
+        pat = "'([^'\\n]{4,60})'" + "|" + '"([^"\\n]{4,60})"'
+        for m in _re3.finditer(pat, line):
+            text = m.group(1) or m.group(2)
+            if not any(c in text for c in SPANISH_ACCENT):
+                continue
+            if ' ' not in text:
+                continue  # likely a key, not UI text
+            # Skip if t() appears right before the quote
+            pos = m.start()
+            before = line[max(0, pos-3):pos]
+            if before.endswith("t("):
+                continue
+            dynamic_found.append(f'L{lnum}: "{text[:55]}"')
+
+    if dynamic_found:
+        for item in dynamic_found[:8]:
+            warn('i18n-dynamic', f'Posible string ES sin t(): {item}')
+
 except Exception as e:
     warn(check, f'no se pudo verificar hardcoding: {e}')
 
