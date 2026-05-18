@@ -96,6 +96,16 @@ function validateFestival(fname, data) {
     if (!festDates[k]) errors.push(`dayKeys tiene '${k}' pero festivalDates no lo tiene`);
   }
 
+  // days[].lbl must be in Spanish (MIÉ, JUE, VIE...) not English (WED, THU, FRI...)
+  // Si está en inglés, el switch de idioma no puede traducir los días
+  const EN_DAYS = ['MON','TUE','WED','THU','FRI','SAT','SUN'];
+  const days = data.days || cfg.days || [];
+  for (const day of days) {
+    if (day.lbl && EN_DAYS.includes(day.lbl.toUpperCase())) {
+      errors.push(`days[].lbl '${day.lbl}' está en inglés — debe ser español (LUN/MAR/MIÉ/JUE/VIE/SÁB/DOM). El switch de idioma no funcionará.`);
+    }
+  }
+
   // Track sections
   const emojiToSections = {}; // emoji → [section names]
   const sectionStrings = {};  // sec_name → Set of exact strings
