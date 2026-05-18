@@ -1928,6 +1928,23 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
   visibility:hidden;
   pointer-events:none;
 }
+/* ── Splash entrada animada ─────────────────────────────────
+   CSS puro — no toca el mecanismo de salida (.fade-out).
+   .splash-animating se añade en init() via rAF.
+   prefers-reduced-motion: todo visible instantáneo.
+──────────────────────────────────────────────────────────── */
+@keyframes _sfUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+@keyframes _sfIn{from{opacity:0}to{opacity:1}}
+#otrofestiv-splash.splash-animating .splash-wordmark{
+  opacity:0;animation:_sfUp .55s cubic-bezier(.22,1,.36,1) .1s forwards}
+#otrofestiv-splash.splash-animating .splash-tagline{
+  opacity:0;animation:_sfIn .5s ease .35s forwards}
+#otrofestiv-splash.splash-animating .splash-action{
+  opacity:0;animation:_sfUp .5s cubic-bezier(.22,1,.36,1) .45s forwards}
+@media(prefers-reduced-motion:reduce){
+  #otrofestiv-splash.splash-animating .splash-wordmark,
+  #otrofestiv-splash.splash-animating .splash-tagline,
+  #otrofestiv-splash.splash-animating .splash-action{opacity:1;animation:none}}
 .splash-wordmark{
   font-size:23px;letter-spacing:-.03em;color:var(--white);
   font-weight:var(--w-display);line-height:1;
@@ -3441,6 +3458,11 @@ function setLang(code){
     // Re-renderizar componentes dinámicos que usan t() en tiempo de render
     // Esto garantiza que el idioma se respete sin excepción
     _renderSplashDropdown(_splashSelectedFestId||_DEFAULT_FEST_ID);
+  // Trigger splash entrada animation after first paint
+  requestAnimationFrame(()=>requestAnimationFrame(()=>{
+    const _sp=document.getElementById('otrofestiv-splash');
+    if(_sp)_sp.classList.add('splash-animating');
+  }));
     _renderFestivalSelector(_activeFestId);
     requestAnimationFrame(()=>{
       _fadeEls.forEach(el=>el.classList.remove('lang-fade'));
