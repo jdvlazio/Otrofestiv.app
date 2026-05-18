@@ -22,6 +22,8 @@ jobs:
       - name: Build www folder from repo root
         run: |
           mkdir -p www/festivals www/i18n www/assets/leviza
+          # Estampar BUILD_VERSION con timestamp del deploy — fuerza SW cache bust
+          sed -i "s/const BUILD_VERSION='[^']*'/const BUILD_VERSION='${{ steps.build.outputs.number }}'/" index.html
           cp index.html www/
           cp sw.js www/
           cp manifest.json www/
