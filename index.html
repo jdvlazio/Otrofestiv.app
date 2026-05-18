@@ -10195,13 +10195,13 @@ function _renderFestivalSelector(activeFestId){
   function mkPastRow([id,cfg]){
     const meta=`${cfg.city} · ${_lang==='en'&&cfg.dates_en?cfg.dates_en:cfg.dates} ${cfg.year||''}`.trim();
     const shortLabel=(cfg.shortName||cfg.name.split(' ')[0])+' · '+cfg.year;
-    return`<div class="fs-festival-row past" data-fest="${id}" onclick="_togglePastFestRow(this,'${id}')">
+    return`<div class="fs-festival-row past" data-fest="${id}">
       <div class="fs-fest-dot past"></div>
-      <div class="fs-fest-info">
+      <div class="fs-fest-info" onclick="loadFestival('${id}')" style="cursor:pointer;flex:1;min-width:0">
         <div class="fs-fest-name">${shortLabel}</div>
         <div class="fs-fest-meta">${meta}</div>
       </div>
-      <span class="fs-past-chev">${chevSvg}</span>
+      <span class="fs-past-chev" onclick="_togglePastFestRow(this.closest('.fs-festival-row'),'${id}')" style="padding:var(--sp-2);margin:-var(--sp-2);-webkit-tap-highlight-color:transparent">${chevSvg}</span>
     </div>`;
   }
   let html='';
