@@ -2788,6 +2788,11 @@ const _I18N = {
     "plan_tu_plan": "Tu plan",
     "plan_guardar": "Guardar plan",
     "plan_borrar": "Borrar plan",
+    "plan_borrar_confirm": "Se eliminará tu plan completo. Esta acción no se puede deshacer.",
+    "plan_quitar_confirm": "Sí, quitar de todo",
+    "misc_descargar_guardar": "Tocá Descargar para guardar",
+    "misc_interes_label": "Interés",
+    "plan_borrar_titulo": "Borrar plan",
     "plan_compartir": "Compartir",
     "plan_optimo": "Óptimo",
     "plan_sin_plan": "No tenés un plan guardado",
@@ -3117,6 +3122,11 @@ const _I18N = {
     "plan_tu_plan": "Your plan",
     "plan_guardar": "Save plan",
     "plan_borrar": "Delete plan",
+    "plan_borrar_confirm": "Your entire plan will be deleted. This action cannot be undone.",
+    "plan_quitar_confirm": "Yes, remove from everything",
+    "misc_descargar_guardar": "Tap Download to save",
+    "misc_interes_label": "Interest",
+    "plan_borrar_titulo": "Delete plan",
     "plan_compartir": "Share",
     "plan_optimo": "Best",
     "plan_sin_plan": "You don't have a saved plan",
@@ -5036,7 +5046,7 @@ function toggleWL(title,e){
     if(savedAgenda&&savedAgenda.schedule.some(s=>s._title===title)){
       showActionModal(t('plan_quitar_intereses'),
         `<b>${title.length>36?title.slice(0,34)+'…':title}</b> ${t('plan_en_tu_plan')}<br><br>${t('plan_quitar_tmb')}`,
-        'Sí, quitar de todo',()=>{
+        t('plan_quitar_confirm'),()=>{
           savedAgenda.schedule=savedAgenda.schedule.filter(s=>s._title!==title);
           if(!savedAgenda.schedule.length)savedAgenda=null;
           saveSavedAgenda();
@@ -7470,7 +7480,7 @@ function _showImageModal(dataUrl,canvas){
   ov.style.cssText='position:fixed;inset:0;background:var(--overlay-92);z-index:9999;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px;box-sizing:border-box;gap:var(--sp-btn)';
   const hint=document.createElement('p');
   hint.style.cssText='color:var(--gray);font-size:var(--t-caption);font-family:system-ui;text-align:center;margin:0;line-height:1.6';
-  hint.textContent=isIOS?t('misc_mantener'):'Tocá Descargar para guardar';
+  hint.textContent=isIOS?t('misc_mantener'):t('misc_descargar_guardar');
   ov.appendChild(hint);
   const img=document.createElement('img');
   img.src=dataUrl;
@@ -7563,8 +7573,8 @@ async function exportICS(){
   showToast(t('misc_calendario_listo'),'info');
 }
 function clearSavedAgenda(){
-  showDestructiveModal(`Borrar plan`,
-    'Se eliminará tu plan completo. Esta acción no se puede deshacer.',
+  showDestructiveModal(t('plan_borrar_titulo'),
+    t('plan_borrar_confirm'),
     t('plan_borrar'),
     ()=>{savedAgenda=null;localStorage.removeItem(`${FESTIVAL_STORAGE_KEY}saved`);renderAgenda();});
 }
@@ -9976,7 +9986,7 @@ function renderPeliculaView(){
     return _sep+`<div class="bg-surf-2 poster-card js-open-pel${inWL&&!inW?' in-wl':''}${inW&&!_ended?' in-watched':''}${(_isPrograma?false:_isEditorialPoster(f))?' editorial':''}" data-title="${f.title}"${_isPrograma?'':_cardBg}>
       ${posterImg}
       ${progBadge}
-      ${inWL?`<button class="poster-wl-dot wl-on" data-title="${f.title.replace(/"/g,'&quot;')}" onclick="event.stopPropagation();toggleWL(this.dataset.title,event)" aria-label="Interés">${ICONS.heartFill}</button>`:''}
+      ${inWL?`<button class="poster-wl-dot wl-on" data-title="${f.title.replace(/"/g,'&quot;')}" onclick="event.stopPropagation();toggleWL(this.dataset.title,event)" aria-label="${t('misc_interes_label')}">${ICONS.heartFill}</button>`:''}
     </div>`
   }).join('')}</div>`;
   requestAnimationFrame(()=>window.dispatchEvent(new Event('scroll')));// trigger lazy load
