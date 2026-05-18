@@ -4131,9 +4131,10 @@ const _DEFAULT_FEST_ID=(()=>{
 })();
 
 const _storedFestId=localStorage.getItem('otrofestiv_festival');
-// Si el festival guardado ya terminó, ignorarlo y usar el default
+// Si el festival guardado ya terminó → limpiar localStorage ahora, antes de que nada más lo lea
 const _storedFestCfg=_storedFestId&&FESTIVAL_CONFIG[_storedFestId];
 const _storedFestEnded=_storedFestCfg&&_storedFestCfg.festivalEndStr&&new Date(_storedFestCfg.festivalEndStr)<new Date();
+if(_storedFestEnded) localStorage.removeItem('otrofestiv_festival');
 let _activeFestId=(_storedFestId&&!_storedFestEnded)?_storedFestId:_DEFAULT_FEST_ID;
 
 // ═══════════════════════════════════════════════════════════════
