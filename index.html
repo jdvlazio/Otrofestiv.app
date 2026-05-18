@@ -7617,7 +7617,7 @@ function buildResultHTML(scenarios){
 
   // ── Header: Plan óptimo vs Variación ──
   const isCustom=sc._custom===true;
-  const planLabel=isOptimo?`${ICONS.calendar} ${t('plan_optimo')}`:isCustom?t('av_opcion_pers'):'';
+  const planLabel=isOptimo?t('plan_optimo'):isCustom?t('av_opcion_pers'):'';
 
   // ── Navigation ──
   let navHtml='';
