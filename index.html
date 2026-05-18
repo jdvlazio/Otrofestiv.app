@@ -7491,7 +7491,7 @@ function _dlDirect(dataUrl){
   document.body.appendChild(a);a.click();
   setTimeout(()=>{document.body.removeChild(a);showToast('Imagen guardada ✓','info');},200);
 }
-function exportICS(){
+async function exportICS(){
   if(!savedAgenda||!savedAgenda.schedule.length){showToast(t('plan_sin_plan'),'warn');return;}
   const pad=n=>String(n).padStart(2,'0');
   const fmt=dt=>`${dt.getFullYear()}${pad(dt.getMonth()+1)}${pad(dt.getDate())}T${pad(dt.getHours())}${pad(dt.getMinutes())}00`;
@@ -7517,15 +7517,28 @@ function exportICS(){
   });
   lines.push('END:VCALENDAR');
   const icsText=lines.join('\r\n');
-  // Capacitor nativo: usar data URI para que iOS lo maneje como archivo
+  const fileName=`otrofestiv-${_icsId}.ics`;
+  // Capacitor nativo: Filesystem + Share para invocar Calendar.app
   if(window.Capacitor?.isNativePlatform()){
     const b64=btoa(unescape(encodeURIComponent(icsText)));
-    const a=document.createElement('a');
-    a.href=`data:text/calendar;charset=utf-8;base64,${b64}`;
-    a.download=`otrofestiv-${_icsId}.ics`;a.click();
+    try{
+      const {Filesystem,Share}=window.Capacitor.Plugins;
+      const result=await Filesystem.writeFile({
+        path:fileName,
+        data:b64,
+        directory:'CACHE'
+      });
+      await Share.share({
+        title:'Otrofestiv — Mi Plan',
+        files:[result.uri]
+      });
+    }catch(e){
+      console.error('ICS share error:',e);
+      showToast('No se pudo abrir Calendario','warn');
+    }
   } else {
     const blob=new Blob([icsText],{type:'text/calendar;charset=utf-8'});
-    const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=`otrofestiv-${_icsId}.ics`;a.click();
+    const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=fileName;a.click();
   }
   showToast(t('misc_calendario_listo'),'info');
 }
