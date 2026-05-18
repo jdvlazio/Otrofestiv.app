@@ -2789,7 +2789,7 @@ const _I18N = {
     "plan_guardar": "Guardar plan",
     "plan_borrar": "Borrar plan",
     "plan_compartir": "Compartir",
-    "plan_optimo": "Plan óptimo",
+    "plan_optimo": "Óptimo",
     "plan_sin_plan": "No tenés un plan guardado",
     "plan_dia_libre": "Día libre en tu Plan",
     "plan_desactualizado": "Tu plan puede estar desactualizado",
@@ -3117,7 +3117,7 @@ const _I18N = {
     "plan_guardar": "Save plan",
     "plan_borrar": "Delete plan",
     "plan_compartir": "Share",
-    "plan_optimo": "Best option",
+    "plan_optimo": "Best",
     "plan_sin_plan": "You don't have a saved plan",
     "plan_dia_libre": "Free day in your plan",
     "plan_desactualizado": "Your plan may be outdated",
@@ -3442,7 +3442,7 @@ function setLang(code){
     const nav = activeMNav || 'mnav-cartelera';
     if(nav === 'mnav-cartelera')      { typeof showDayView === 'function'         && showDayView(); }
     else if(nav === 'mnav-seleccion') { typeof renderAgenda === 'function'        && renderAgenda(); }
-    else if(nav === 'mnav-planner')   { typeof renderSimPanel === 'function'      && renderSimPanel(); }
+    else if(nav === 'mnav-planner')   { cachedResult=null; typeof renderAgenda === 'function' && renderAgenda(); }
     else if(nav === 'mnav-miplan')    { typeof renderAgenda === 'function'         && renderAgenda(); }
     // Fade in
     // Re-renderizar componentes dinámicos que usan t() en tiempo de render
