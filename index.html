@@ -10570,10 +10570,8 @@ _sbInit();
     const today=new Date();today.setHours(12,0,0,0);
     let inProgress=null,nextUp=null,nextUpStart=null,mostRecent=null,mostRecentEnd=null;
     Object.entries(FESTIVAL_CONFIG).forEach(([id,cfg])=>{
-      if(!cfg.festivalDates) return;
-      const dates=Object.values(cfg.festivalDates);
-      const startStr=dates.reduce((a,b)=>a<b?a:b);
-      const start=new Date(startStr+'T00:00:00');
+      if(!cfg.festivalStartStr||!cfg.festivalEndStr) return;
+      const start=new Date(cfg.festivalStartStr);
       const end=new Date(cfg.festivalEndStr);
       if(today>=start&&today<=end){
         inProgress=id;
