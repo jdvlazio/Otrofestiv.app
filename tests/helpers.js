@@ -9,7 +9,22 @@ const LEVIZA_SIMTIME = '2026-05-14T00:00:00-05:00';
 async function selectFestival(page, festId) {
   await page.locator('#splash-sel-btn').click();
   await page.waitForSelector('#splash-dropdown', { state: 'visible', timeout: 5000 });
-  await page.locator(`.splash-drop-item[data-fest="${festId}"]`).click();
+  // Si el item está en "Anteriores" puede estar colapsado — expandirlo primero
+  const item = page.locator(`.splash-drop-item[data-fest="${festId}"]`);
+  const isPast = await item.evaluate(el => el.classList.contains('past')).catch(() => false);
+  if (isPast) {
+    await item.click(); // primer click expande el past-item
+    await page.waitForTimeout(200);
+    // segundo click confirma la selección (si _togglePastFest requiere doble acción)
+    // o bien usamos evaluate para forzar la selección directamente
+    await page.evaluate((id) => {
+      const cfg = FESTIVAL_CONFIG[id] || {};
+      const meta = `${cfg.city} · ${cfg.dates} ${cfg.year||''}`.trim();
+      selectSplashFest(cfg.name, meta, id);
+    }, festId);
+  } else {
+    await item.click();
+  }
   await page.waitForTimeout(300);
 }
 
