@@ -1928,23 +1928,13 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
   visibility:hidden;
   pointer-events:none;
 }
-/* ── Splash entrada animada ─────────────────────────────────
-   CSS puro — no toca el mecanismo de salida (.fade-out).
-   .splash-animating se añade en init() via rAF.
-   prefers-reduced-motion: todo visible instantáneo.
+/* ── Splash entrada: elementos ocultos inicialmente ────────
+   La animación se controla desde JS via Web Animations API
+   para garantizar compatibilidad con WKWebView/Capacitor.
 ──────────────────────────────────────────────────────────── */
-@keyframes _sfUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
-@keyframes _sfIn{from{opacity:0}to{opacity:1}}
-#otrofestiv-splash.splash-animating .splash-wordmark{
-  opacity:0;animation:_sfUp .6s cubic-bezier(.22,1,.36,1) .15s forwards}
-#otrofestiv-splash.splash-animating .splash-tagline{
-  opacity:0;animation:_sfIn .55s ease .65s forwards}
-#otrofestiv-splash.splash-animating .splash-action{
-  opacity:0;animation:_sfUp .55s cubic-bezier(.22,1,.36,1) 1.05s forwards}
-@media(prefers-reduced-motion:reduce){
-  #otrofestiv-splash.splash-animating .splash-wordmark,
-  #otrofestiv-splash.splash-animating .splash-tagline,
-  #otrofestiv-splash.splash-animating .splash-action{opacity:1;animation:none}}
+#otrofestiv-splash .splash-wordmark,
+#otrofestiv-splash .splash-tagline,
+#otrofestiv-splash .splash-action{opacity:0}
 .splash-wordmark{
   font-size:23px;letter-spacing:-.03em;color:var(--white);
   font-weight:var(--w-display);line-height:1;
@@ -10627,10 +10617,32 @@ _sbInit();
   _splashSelectedFestId=activeFest;
   // Render dinámico — agregar festival = solo FESTIVAL_CONFIG, nada más
   _renderSplashDropdown(activeFest);
-  // Trigger splash entrada animation después del primer paint
+  // Splash entrada — Web Animations API (fiable en WKWebView/Capacitor)
+  // Doble rAF garantiza que el compositor iOS procese el estado opacity:0 antes de animar
   requestAnimationFrame(()=>requestAnimationFrame(()=>{
     const _sp=document.getElementById('otrofestiv-splash');
-    if(_sp&&!_sp.classList.contains('fade-out'))_sp.classList.add('splash-animating');
+    if(!_sp||_sp.classList.contains('fade-out')) return;
+    const _prefersReduced=window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+    const _ease='cubic-bezier(.22,1,.36,1)';
+    const _animUp=(el,delay)=>{
+      if(!el) return;
+      if(_prefersReduced){el.style.opacity='1';return;}
+      el.animate(
+        [{opacity:0,transform:'translateY(14px)'},{opacity:1,transform:'none'}],
+        {duration:600,delay,fill:'forwards',easing:_ease}
+      );
+    };
+    const _animFade=(el,delay)=>{
+      if(!el) return;
+      if(_prefersReduced){el.style.opacity='1';return;}
+      el.animate(
+        [{opacity:0},{opacity:1}],
+        {duration:550,delay,fill:'forwards',easing:'ease'}
+      );
+    };
+    _animUp(_sp.querySelector('.splash-wordmark'),150);
+    _animFade(_sp.querySelector('.splash-tagline'),650);
+    _animUp(_sp.querySelector('.splash-action'),1050);
   }));
   _renderFestivalSelector(activeFest);
   const cfg=FESTIVAL_CONFIG[activeFest];
