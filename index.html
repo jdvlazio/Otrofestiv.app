@@ -7495,24 +7495,38 @@ function exportICS(){
   if(!savedAgenda||!savedAgenda.schedule.length){showToast(t('plan_sin_plan'),'warn');return;}
   const pad=n=>String(n).padStart(2,'0');
   const fmt=dt=>`${dt.getFullYear()}${pad(dt.getMonth()+1)}${pad(dt.getDate())}T${pad(dt.getHours())}${pad(dt.getMinutes())}00`;
+  // Convierte tiempo 12h (8:00 PM) → 24h (20:00) para _festDate
+  const to24h=t=>{if(!t)return'12:00';const m=t.match(/(\d+):(\d+)\s*(AM|PM)/i);if(!m)return t;let h=parseInt(m[1]),mn=m[2],ap=m[3].toUpperCase();if(ap==='PM'&&h!==12)h+=12;if(ap==='AM'&&h===12)h=0;return pad(h)+':'+mn;};
   const _icsCfg=FESTIVAL_CONFIG[_activeFestId]||{};
   const _icsId=(_icsCfg.shortName||'festival').toLowerCase().replace(/\s+/g,'');
   const lines=['BEGIN:VCALENDAR','VERSION:2.0',`PRODID:-//Otrofestiv//${_icsId}//ES`,'CALSCALE:GREGORIAN','METHOD:PUBLISH'];
   savedAgenda.schedule.forEach(s=>{
     const dateStr=FESTIVAL_DATES[s.day];if(!dateStr) return;
-    const start=_festDate(dateStr,s.time);
-    const dur=s.duration?parseInt(s.duration):90;
-    const end=new Date(start.getTime()+dur*60000);
+    const start=_festDate(dateStr,to24h(s.time));
+    if(isNaN(start.getTime())) return; // skip si fecha inválida
+    const dur=s.duration?parseInt(String(s.duration)):90;
+    const end=new Date(start.getTime()+(isNaN(dur)?90:dur)*60000);
+    const clean=str=>(str||'').replace(/[\r\n,;\\]/g,' ').trim();
     lines.push('BEGIN:VEVENT',
       `DTSTART:${fmt(start)}`,`DTEND:${fmt(end)}`,
-      `SUMMARY:${s._title}`,
-      `LOCATION:${s.venue||''}`,
-      `DESCRIPTION:${_icsCfg.name||'Festival'} · ${s.section||''} · ${s.duration||''}`,
+      `SUMMARY:${clean(s._title)}`,
+      `LOCATION:${clean(s.venue)}`,
+      `DESCRIPTION:${clean(_icsCfg.name||'Festival')} - ${clean(s.section)} - ${clean(s.duration)}`,
+      `UID:otrofestiv-${_icsId}-${s._title?.replace(/\s/g,'')}-${fmt(start)}@otrofestiv.app`,
       'END:VEVENT');
   });
   lines.push('END:VCALENDAR');
-  const blob=new Blob([lines.join('\r\n')],{type:'text/calendar'});
-  const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=`otrofestiv-${_icsId}.ics`;a.click();
+  const icsText=lines.join('\r\n');
+  // Capacitor nativo: usar data URI para que iOS lo maneje como archivo
+  if(window.Capacitor?.isNativePlatform()){
+    const b64=btoa(unescape(encodeURIComponent(icsText)));
+    const a=document.createElement('a');
+    a.href=`data:text/calendar;charset=utf-8;base64,${b64}`;
+    a.download=`otrofestiv-${_icsId}.ics`;a.click();
+  } else {
+    const blob=new Blob([icsText],{type:'text/calendar;charset=utf-8'});
+    const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=`otrofestiv-${_icsId}.ics`;a.click();
+  }
   showToast(t('misc_calendario_listo'),'info');
 }
 function clearSavedAgenda(){
