@@ -11,8 +11,12 @@ test('T08 — festival selector: Leviza aparece antes que Tribeca', async ({ pag
   await page.waitForSelector('#splash-dropdown', { state: 'visible', timeout: 5000 });
   const items = page.locator('.splash-drop-item[data-fest]');
   expect(await items.count()).toBeGreaterThan(1);
+  // Tribeca es el festival próximo — aparece primero en la lista (upcoming > past)
+  // Leviza terminó el 17 MAY y aparece en Anteriores, después de los próximos
   const firstFestId = await items.first().getAttribute('data-fest');
-  expect(firstFestId).toContain('leviza');
+  expect(firstFestId).toContain('tribeca');
+  const allIds = await items.evaluateAll(els => els.map(el => el.getAttribute('data-fest')));
+  expect(allIds.some(id => id.includes('leviza'))).toBe(true);
 });
 
 // T37 — Cambiar de festival actualiza el topbar

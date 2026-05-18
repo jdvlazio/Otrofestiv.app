@@ -105,6 +105,7 @@ test('T20 — TODO muestra vista grid', async ({ page }) => {
 // T21 — Día específico muestra vista lista
 test('T21 — día específico muestra vista lista', async ({ page }) => {
   await enterFestival(page, 'leviza2026', LEVIZA_SIMTIME);
+  await page.waitForTimeout(300); // espera rAFs de showDayView post-simTime
   const grid = await page.locator('.poster-card').count();
   const list = await page.locator('.plist-item').count();
   expect(list).toBeGreaterThan(0);
