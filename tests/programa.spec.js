@@ -70,10 +70,11 @@ test('T10 — poster editorial: sección completa sin truncar', async ({ page })
 // T12 — Día específico carga en vista lista por defecto
 test('T12 — día específico carga en vista lista por defecto', async ({ page }) => {
   await enterFestival(page, 'leviza2026', LEVIZA_SIMTIME);
-  await page.waitForSelector('.plist-item, .poster-card', { timeout: 8000 });
-  await page.waitForTimeout(300); // espera rAFs de showDayView post-simTime
   const activeDay = await page.evaluate(() => activeDay);
   if (activeDay === 'all') return;
+  // Esperar a que la vista lista esté renderizada (no grid)
+  await page.waitForSelector('.plist-item', { timeout: 8000 });
+  await page.waitForFunction(() => document.querySelectorAll('.poster-card').length === 0, { timeout: 5000 }).catch(() => {});
   const listItems = await page.locator('.plist-item').count();
   const gridCards = await page.locator('.poster-card').count();
   expect(listItems).toBeGreaterThan(0);
@@ -106,7 +107,8 @@ test('T20 — TODO muestra vista grid', async ({ page }) => {
 // T21 — Día específico muestra vista lista
 test('T21 — día específico muestra vista lista', async ({ page }) => {
   await enterFestival(page, 'leviza2026', LEVIZA_SIMTIME);
-  await page.waitForTimeout(300); // espera rAFs de showDayView post-simTime
+  await page.waitForSelector('.plist-item', { timeout: 8000 });
+  await page.waitForFunction(() => document.querySelectorAll('.poster-card').length === 0, { timeout: 5000 }).catch(() => {});
   const grid = await page.locator('.poster-card').count();
   const list = await page.locator('.plist-item').count();
   expect(list).toBeGreaterThan(0);
