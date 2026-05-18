@@ -2910,6 +2910,7 @@ const _I18N = {
     "plan_ver_dia": "Ver día",
     "plan_otra_cosa": "¿Querés poner otra cosa ahí?",
     "export_aparecera": "Aparecerá en la imagen cuando la compartas.",
+    "export_guardar_compartir": "Guardar y compartir",
     "export_como_aparecer": "¿Cómo querés aparecer en tu plan?",
     "plan_sin_combos": "No hay combinaciones posibles. Ajusta la disponibilidad.",
     "plan_choca": "Choca con otras películas de tu plan",
@@ -3238,6 +3239,7 @@ const _I18N = {
     "plan_ver_dia": "See day",
     "plan_otra_cosa": "Want to add something else there?",
     "export_aparecera": "Shows in the image when you share your plan.",
+    "export_guardar_compartir": "Save and share",
     "export_como_aparecer": "What name should appear on your plan?",
     "plan_sin_combos": "No combinations found. Adjust your availability.",
     "plan_choca": "Conflicts with your plan",
@@ -7211,9 +7213,8 @@ function _promptDisplayName(onSave){
     <div class="sheet-handle-bar"></div>
     <div class="sheet-title">${t('export_como_aparecer')}</div>
     <div class="sheet-subtitle">${t('export_aparecera')}</div>
-    <input class="sheet-input" id="dname-input" type="text" maxlength="30" placeholder="Tu nombre" data-i18n-ph="auth_nombre" autocomplete="name"
-     >
-    <button class="sheet-cta" id="dname-save">Guardar y compartir</button>
+    <input class="sheet-input" id="dname-input" type="text" maxlength="30" placeholder="${t('auth_nombre')}" autocomplete="name">
+    <button class="sheet-cta" id="dname-save">${t('export_guardar_compartir')}</button>
   </div>`;
   document.body.appendChild(el);
   const input=document.getElementById('dname-input');
