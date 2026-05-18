@@ -7642,7 +7642,7 @@ function buildResultHTML(scenarios){
 
   const saveBtnHtml=`<button class="ag-save-btn" onclick="saveCurrentScenario()">${ICONS.calendar} ${t('plan_usar_plan')}</button>`;
   let html=`<div class="ag-summary">
-    <div class="ag-summary-title" style="font-size:${isOptimo?'var(--t-md)':'var(--t-base)'};color:${isOptimo?'var(--white)':'var(--gray)'}">${planLabel} <span class="ml-1 count-badge cb-amber">${ok}/${total}</span></div>
+    <div class="ag-summary-title" style="font-size:var(--t-base);color:${isOptimo?'var(--white)':'var(--gray)'}">${planLabel} <span class="ml-1 count-badge cb-amber">${ok}/${total}</span></div>
     ${bad?`<div class="tags-row ag-summary-text"><span class="txt-gray2-sm">${bad} ${t('plan_excluidos')}</span></div>`:''}
     ${bad>0&&bad>=total?`<div class="ag-excl-note txt-gray2-sm">${t('plan_contexto_max')}</div>`:''}
     ${sc.incompatiblePriorities?(()=>{
