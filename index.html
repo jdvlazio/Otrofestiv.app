@@ -3442,7 +3442,7 @@ function setLang(code){
     const nav = activeMNav || 'mnav-cartelera';
     if(nav === 'mnav-cartelera')      { typeof showDayView === 'function'         && showDayView(); }
     else if(nav === 'mnav-seleccion') { typeof renderAgenda === 'function'        && renderAgenda(); }
-    else if(nav === 'mnav-planner')   { cachedResult=null; typeof renderAgenda === 'function' && renderAgenda(); }
+    else if(nav === 'mnav-planner')   { typeof renderAgenda === 'function' && renderAgenda(); }
     else if(nav === 'mnav-miplan')    { typeof renderAgenda === 'function'         && renderAgenda(); }
     // Fade in
     // Re-renderizar componentes dinámicos que usan t() en tiempo de render
