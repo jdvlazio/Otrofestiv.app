@@ -15,7 +15,9 @@ const { test, expect } = require('@playwright/test');
 async function enterFirstFestival(page) {
   await page.goto('/');
   await page.waitForSelector('#splash-sel-btn', { timeout: 15000 });
-  await page.locator('.splash-enter-btn').click();
+  // Esperar que el botón sea visible (la animación puede tardar hasta 1.1s)
+  await page.waitForSelector('.splash-enter-btn', { state: 'visible', timeout: 10000 });
+  await page.locator('.splash-enter-btn').click({ force: true });
   await page.waitForSelector('.poster-card, .plist-item, .dtab', { timeout: 20000 });
 }
 
