@@ -3074,7 +3074,9 @@ const _I18N = {
     "plan_vistas_fuera": "Vistas fuera del Plan",
     "plan_historial": "Historial",
     "plan_alt": "alt.",
-    "plan_fest_empieza": "El festival empieza",
+    "plan_fest_empieza": "Empieza en",
+    "plan_fest_manana": "Empieza mañana",
+    "plan_fest_hoy": "¡Hoy empieza!",
     "label_cortos": "Cortometrajes",
     "plan_restaurar_suger": "Lo podés encontrar de nuevo en Sugerencias.",
     "error_cargar_miplan": "Error al cargar Mi Plan:",
@@ -3409,7 +3411,9 @@ const _I18N = {
     "plan_vistas_fuera": "Seen outside your plan",
     "plan_historial": "History",
     "plan_alt": "alt.",
-    "plan_fest_empieza": "Festival starts",
+    "plan_fest_empieza": "Starts in",
+    "plan_fest_manana": "Starts tomorrow",
+    "plan_fest_hoy": "It starts today!",
     "label_cortos": "Short Films",
     "plan_restaurar_suger": "You can find it again in Suggestions.",
     "error_cargar_miplan": "Error loading My Plan:",
@@ -6897,15 +6901,11 @@ function renderContextualHeader(){
         </div>
       </div>`;
     }).join('');
-    return`<div class="ctx-header">
-      <div class="ctx-eyebrow">
-        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5"/></svg>
-        ${(FESTIVAL_CONFIG[_activeFestId]||{}).name||''}
-      </div>
-      <div class="ctx-main-title">${t('plan_fest_empieza')} ${label}</div>
-      <div class="ctx-sub">${(FESTIVAL_CONFIG[_activeFestId]||{}).city||''} · ${_langDates(FESTIVAL_CONFIG[_activeFestId])}</div>
-      ${prioHtml?`<div class="ctx-prio-row">${prioHtml}</div>`:''}
-    </div>`;
+    // Countdown line — discreta, sin repetir info del topbar
+    const _daysLeft=Math.ceil((start-simNow())/86400000);
+    const _countdownLabel=_daysLeft<=0?t('plan_fest_hoy'):_daysLeft===1?t('plan_fest_manana'):`${t('plan_fest_empieza')} ${_daysLeft} ${_lang==='en'?'days':'días'}`;
+    return`<div style="text-align:center;padding:var(--sp-2) 0 var(--sp-1);color:var(--gray2);font-size:var(--t-xs)">${_countdownLabel}</div>
+      ${prioHtml?`<div class="ctx-prio-row" style="margin-bottom:var(--sp-3)">${prioHtml}</div>`:''}`;
   }
 
   // ── NEXT ────────────────────────────────────────────────────
