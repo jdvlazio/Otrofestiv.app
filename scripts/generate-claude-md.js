@@ -181,7 +181,7 @@ ${featuresSection}
 
 ## APIs
 
-- **TMDB:** \`38f24e78b2f13970af3430eb0732f0ac\`
+- **TMDB:** \`$TMDB_API_KEY\` (variable de entorno — nunca hardcodeada)
 - **GitHub token:** en el bootstrap command de arriba
 
 ---
