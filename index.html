@@ -1932,9 +1932,8 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
    La animación se controla desde JS via Web Animations API
    para garantizar compatibilidad con WKWebView/Capacitor.
 ──────────────────────────────────────────────────────────── */
-#otrofestiv-splash .splash-wordmark,
-#otrofestiv-splash .splash-tagline,
-#otrofestiv-splash .splash-action{opacity:0}
+/* opacity:0 inicial se aplica via JS antes de animar — no via CSS
+   para que en CI/headless los elementos sean visibles por defecto */
 .splash-wordmark{
   font-size:23px;letter-spacing:-.03em;color:var(--white);
   font-weight:var(--w-display);line-height:1;
@@ -10650,6 +10649,7 @@ _sbInit();
     const _animUp=(el,delay)=>{
       if(!el) return;
       if(_prefersReduced){el.style.opacity='1';return;}
+      el.style.opacity='0'; // set initial state via JS — no via CSS
       el.animate(
         [{opacity:0,transform:'translateY(14px)'},{opacity:1,transform:'none'}],
         {duration:600,delay,fill:'forwards',easing:_ease}
@@ -10658,6 +10658,7 @@ _sbInit();
     const _animFade=(el,delay)=>{
       if(!el) return;
       if(_prefersReduced){el.style.opacity='1';return;}
+      el.style.opacity='0'; // set initial state via JS — no via CSS
       el.animate(
         [{opacity:0},{opacity:1}],
         {duration:550,delay,fill:'forwards',easing:'ease'}
