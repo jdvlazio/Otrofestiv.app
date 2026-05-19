@@ -4983,7 +4983,55 @@ function saveRating(title,rating){
   try{localStorage.setItem(`${FESTIVAL_STORAGE_KEY}ratings`,JSON.stringify(filmRatings));}catch(e){}_cloudSave();
 }
 function saveAV(){try{localStorage.setItem(`${FESTIVAL_STORAGE_KEY}av3`,JSON.stringify(availability));}catch(e){}_cloudSave();}
-function saveSavedAgenda(){try{localStorage.setItem(`${FESTIVAL_STORAGE_KEY}saved`,JSON.stringify(savedAgenda));}catch(e){}_cloudSave();}
+function saveSavedAgenda(){try{localStorage.setItem(`${FESTIVAL_STORAGE_KEY}saved`,JSON.stringify(savedAgenda));}catch(e){}_cloudSave();_scheduleNotifications();}
+
+// ── Notificaciones locales — aviso 30 min antes de cada función ───────────
+async function _scheduleNotifications(){
+  if(!window.Capacitor?.isNativePlatform()) return;
+  try{
+    const {LocalNotifications}=window.Capacitor.Plugins;
+    // Solicitar permiso si no se tiene
+    const perm=await LocalNotifications.requestPermissions();
+    if(perm.display!=='granted') return;
+    // Cancelar notificaciones anteriores del plan
+    await _cancelNotifications();
+    if(!savedAgenda?.schedule?.length) return;
+    // Convertir tiempo 12h→24h (mismo helper que exportICS)
+    const pad=n=>String(n).padStart(2,'0');
+    const to24h=t=>{if(!t)return'12:00';const m=t.match(/(\d+):(\d+)\s*(AM|PM)/i);if(!m)return t;let h=parseInt(m[1]),mn=m[2],ap=m[3].toUpperCase();if(ap==='PM'&&h!==12)h+=12;if(ap==='AM'&&h===12)h=0;return pad(h)+':'+mn;};
+    const notifications=[];
+    savedAgenda.schedule.forEach((s,i)=>{
+      const dateStr=FESTIVAL_DATES[s.day];if(!dateStr) return;
+      const [h,min]=to24h(s.time).split(':').map(Number);
+      const tz=FESTIVAL_CONFIG[_activeFestId]?.timezoneOffset??-5;
+      const start=new Date(`${dateStr}T${pad(h)}:${pad(min)}:00`);
+      if(isNaN(start.getTime())) return;
+      // 30 min antes
+      const notify=new Date(start.getTime()-30*60000);
+      if(notify<=new Date()) return; // ya pasó
+      notifications.push({
+        id:1000+i,
+        title:'Otrofestiv',
+        body:`${s._title} · ${s.venue||''} · ${s.time}`,
+        schedule:{at:notify,allowWhileIdle:true},
+        sound:null,extra:null
+      });
+    });
+    if(notifications.length){
+      await LocalNotifications.schedule({notifications});
+    }
+  }catch(e){console.warn('Notifications error:',e);}
+}
+
+async function _cancelNotifications(){
+  if(!window.Capacitor?.isNativePlatform()) return;
+  try{
+    const {LocalNotifications}=window.Capacitor.Plugins;
+    const pending=await LocalNotifications.getPending();
+    const toCancel=pending.notifications.filter(n=>n.id>=1000&&n.id<2000);
+    if(toCancel.length) await LocalNotifications.cancel({notifications:toCancel});
+  }catch(e){}
+}
 function savePrio(){try{localStorage.setItem(`${FESTIVAL_STORAGE_KEY}prio`,JSON.stringify([...prioritized]));}catch(e){}_cloudSave();}
 function saveLastSlot(){try{localStorage.setItem(`${FESTIVAL_STORAGE_KEY}lastslot`,JSON.stringify(lastRemovedSlots));}catch(e){}}
 function saveDelays(){try{localStorage.setItem(`${FESTIVAL_STORAGE_KEY}delays`,JSON.stringify(filmDelays));}catch(e){}}
@@ -7572,6 +7620,7 @@ async function exportICS(){
   showToast(t('misc_calendario_listo'),'info');
 }
 function clearSavedAgenda(){
+  _cancelNotifications();
   showDestructiveModal(t('plan_borrar_titulo'),
     t('plan_borrar_confirm'),
     t('plan_borrar'),
