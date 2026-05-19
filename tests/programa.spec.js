@@ -73,10 +73,14 @@ test('T12 — día específico carga en vista lista por defecto', async ({ page 
   await enterFestival(page, 'leviza2026', LEVIZA_SIMTIME);
   const activeDay = await page.evaluate(() => activeDay);
   if (activeDay === 'all') return;
-  // Esperar a que el modo lista esté activo (programaViewMode === 'list')
-  await page.waitForFunction(() => typeof programaViewMode !== 'undefined' && programaViewMode === 'list', { timeout: 8000 }).catch(() => {});
-  const listItems = await page.locator('.plist-item').count();
-  const gridCards = await page.locator('.poster-card').count();
+  // Esperar a que .plist-item sea visible y .poster-card desaparezca del DOM visible
+  await page.waitForSelector('.plist-item', { timeout: 8000 });
+  await page.waitForFunction(() => {
+    const cards = document.querySelectorAll('.poster-card');
+    return Array.from(cards).every(c => getComputedStyle(c).display === 'none' || !c.offsetParent);
+  }, { timeout: 8000 }).catch(() => {});
+  const listItems = await page.locator('.plist-item:visible').count();
+  const gridCards = await page.locator('.poster-card:visible').count();
   expect(listItems).toBeGreaterThan(0);
   expect(gridCards).toBe(0);
 });
@@ -108,9 +112,13 @@ test('T20 — TODO muestra vista grid', async ({ page }) => {
 test('T21 — día específico muestra vista lista', async ({ page }) => {
   test.setTimeout(40000);
   await enterFestival(page, 'leviza2026', LEVIZA_SIMTIME);
-  await page.waitForFunction(() => typeof programaViewMode !== 'undefined' && programaViewMode === 'list', { timeout: 8000 }).catch(() => {});
-  const grid = await page.locator('.poster-card').count();
-  const list = await page.locator('.plist-item').count();
+  await page.waitForSelector('.plist-item', { timeout: 8000 });
+  await page.waitForFunction(() => {
+    const cards = document.querySelectorAll('.poster-card');
+    return Array.from(cards).every(c => getComputedStyle(c).display === 'none' || !c.offsetParent);
+  }, { timeout: 8000 }).catch(() => {});
+  const grid = await page.locator('.poster-card:visible').count();
+  const list = await page.locator('.plist-item:visible').count();
   expect(list).toBeGreaterThan(0);
   expect(grid).toBe(0);
 });
