@@ -454,3 +454,184 @@ Verificar en dispositivo físico antes de commitear cambios con: `overflow`, `po
 | `100vh` | incluye chrome del browser en < 15 (usar `100dvh`) |
 | Modificar `aria-label` en `role="dialog"` activo | puede triggear reposicionamiento de foco |
 | `data-i18n` en `<script>` o `<style>` | nunca — `_applyI18nDOM` tiene guard pero la regla es no hacerlo |
+
+---
+
+## 16. ARQUITECTURA OBJETIVO — MVC vanilla JS
+
+> **DESTINO, NO ESTADO ACTUAL.** Las secciones 1–15 documentan el código tal como existe hoy. Esta sección documenta hacia dónde estamos migrando. Las Fases 1 y 2 ya están en producción (capa Model parcialmente extraída con tests). El resto del roadmap está propuesto.
+>
+> Si tocás código siguiendo esta sección, declarar explícitamente que estás avanzando una Fase del roadmap. Para el comportamiento actual, mirar 1–15.
+
+### 16.1 Principios
+
+- **MVC clásico**, sin frameworks, sin build step
+- **ES modules nativos** cargados directamente por el browser (HTTP/2 multiplexing absorbe el costo)
+- **Estado centralizado**: un único contenedor de estado, mutado solo desde Controllers
+- **Funciones puras** en Model: dependencias por parámetro, cero globals, cero DOM
+- **Views puras**: `(state, deps) → HTML string` — sin mutación de estado, sin side effects
+- **Controllers**: único lugar donde conviven `addEventListener`, `state.update()` y `rerender()`
+- **Worker boundary explícita**: archivo standalone que importa los módulos Model que necesita
+
+### 16.2 Estructura de archivos destino
+
+```
+/
+├── index.html                    ← Shell: <head>, body skeleton, <script type="module" src="controller/boot.js">
+├── sw.js                         ← Service Worker — cachea model/, view/, controller/, styles/, JSONs
+├── manifest.json                 ← PWA (sin cambios)
+├── version.json                  ← Build (sin cambios)
+│
+├── model/
+│   ├── time.js                   ← simNow, simTodayStr, festivalEnded, screeningPassed, dayFullyPassed, _festDate
+│   ├── venues.js                 ← _resolveVenue, venueTravelMins, travelMins, vcfg
+│   ├── conflict.js               ← screensConflict, effectiveDuration, parseDur, toMin
+│   ├── phase.js                  ← _getFestivalPhase + _endedStats + _classifyTodayScreenings + _gapSuggestion
+│   ├── schedule.js               ← computeScenarios, scoreFilm, sortScreensByStrategy, isScreeningBlocked, RNG
+│   ├── film.js                   ← normTitle, getFilmPoster, getCortoItemPoster, _isEditorialPoster
+│   ├── festival.js               ← FESTIVAL_CONFIG, loadFestival, switching activo
+│   ├── state.js                  ← single state container — subscribe(), update(), get()
+│   ├── storage.js                ← localStorage adapter (watchlist, watched, savedAgenda, etc.)
+│   └── i18n.js                   ← t(), setLang, _applyI18nDOM
+│
+├── view/
+│   ├── miplan/
+│   │   ├── agenda.js             ← renderAgenda (orquestador)
+│   │   ├── header.js             ← renderContextualHeader
+│   │   ├── strip.js              ← renderNextStrip
+│   │   ├── unconfirmed.js        ← renderUnconfirmed
+│   │   ├── list.js               ← renderMiPlanList
+│   │   └── calendar.js           ← renderMiPlanCalendar
+│   ├── programa/
+│   │   ├── content.js            ← _renderProgramaContent
+│   │   ├── list.js               ← renderProgramaList
+│   │   ├── grid.js               ← render (timetable grid)
+│   │   ├── film.js               ← renderPeliculaView
+│   │   ├── chips.js              ← renderProgramaChips
+│   │   └── notices.js            ← renderNoticesBanner
+│   ├── planear/
+│   │   ├── sim-panel.js          ← renderSimPanel
+│   │   ├── gap-options.js        ← renderGapOptions
+│   │   └── alternatives.js       ← renderFilmAlternatives
+│   └── components/
+│       ├── sheet.js              ← openPelSheet, openCortoSheet, openAvSheet
+│       ├── modal.js              ← showDestructiveModal, showActionModal, showConflictModal
+│       ├── toast.js              ← showToast, showActionToast
+│       ├── badges.js             ← templates de badges (apertura, past, notice, poster-past)
+│       └── poster.js             ← makeFilmPlaceholder, _buildPosterV16, makeEventPoster
+│
+├── controller/
+│   ├── boot.js                   ← bootstrap inicial, lee storage, escoge festival activo, monta listeners
+│   ├── tabs.js                   ← switching entre Mi Plan / Programa / Planear
+│   ├── watchlist.js              ← togglePelWL, togglePelPrio, toggleWatched, addSuggestion
+│   ├── plan.js                   ← Calcular plan, aplicar escenario, slot management
+│   ├── filters.js                ← filterByVenue, filterBySection, filterByDay
+│   ├── lang.js                   ← setLang trigger
+│   ├── sim-time.js               ← applySimTime
+│   └── availability.js           ← bloques de no-disponibilidad (av-sheet)
+│
+├── worker/
+│   ├── calc-worker.js            ← Worker entry — recibe state slice, retorna escenarios
+│   └── boundary.js               ← serialización del state slice main → worker
+│
+├── styles/
+│   ├── tokens.css                ← design tokens (--bg, --amber, --sp-*, etc.)
+│   ├── base.css                  ← reset, body, tipografía
+│   ├── components/               ← un .css por componente reutilizable (sheet, modal, badge, card, poster)
+│   └── views/                    ← un .css por vista (miplan, programa, planear)
+│
+├── tests/
+│   ├── unit/                     ← node:test sobre Model (import directo, sin parseo de index.html)
+│   ├── integration/              ← Playwright sobre Controller + interacciones UI
+│   └── fixtures/                 ← festival JSONs reducidos para tests
+│
+├── festivals/                    (sin cambios — datos JSON por festival)
+├── i18n/                         (sin cambios — strings ES/EN)
+├── assets/                       (sin cambios)
+├── docs/                         (sin cambios)
+└── scripts/                      (sin cambios — bump-version, generate-config, enrich, geocode)
+```
+
+### 16.3 Responsabilidades por capa
+
+#### Model
+- **Funciones puras**: input → output determinístico
+- Lee state **como parámetro**, NO como global
+- No referencia DOM
+- Único lugar donde existe estado mutable es `state.js`; el resto del Model lee state como parámetro
+- Testeable directamente con `node:test` sin DOM (`import` directo, no más extracción de `index.html`)
+- Worker importa los módulos Model que necesita (sin `.toString()` serialización)
+
+#### View
+- Funciones de forma `(state, deps) → HTML string` o componentes que reciben un container y appenden DOM (sheets, modales)
+- No mutan state
+- No hacen fetch ni llamadas a API
+- Pueden llamar a funciones Model para derivar data (pure reads), nunca para actualizar
+- Reciben el slice de state que necesitan, no el state completo
+
+#### Controller
+- **Único lugar** con `addEventListener`
+- Cada handler: 1) llama Model para actualizar state, 2) dispara re-render de View afectada
+- Cero `onclick=""` inline en HTML
+- Conecta `storage.js` con `state.js`: load on boot, save on change
+- Conecta el Worker: dispara cálculos en background, recibe resultados, actualiza state
+
+### 16.4 Trade-offs respecto al estado actual
+
+| Concern | Estado actual | Destino | Comentario |
+|---|---|---|---|
+| Single-file `index.html` | ~10.150 líneas, todo mezclado | Shell de ~50 líneas + `<script type="module">` | **Se rompe el invariant single-file.** El deploy sigue siendo drag-and-drop, pero con varios archivos. |
+| Build step | Ninguno | Ninguno (ES modules nativos) | HTTP/2 multiplexing absorbe el costo. Sin npm install — zero-dep mantenido. |
+| Service Worker cache | Lista corta hardcodeada | Lista generada por `bump-version.js` | Crece para incluir todos los `.js`/`.css`. |
+| Worker | `.toString()` + concat en string + `eval` | Archivo standalone con `import` directo | Elimina duplicación de funciones y la fragilidad del template literal. |
+| Globals mutables | ~12 globals swapeados por `loadFestival` | `state.js` con `update()` / `subscribe()` | Estado explícito. Mutación trazable. |
+| Android shell | Carga desde producción URL | Sin cambios | El shell no sabe ni le importa la estructura interna. |
+| Deploy manual | Drag-and-drop de `index.html` (+ sw.js, etc.) | Drag-and-drop de carpeta completa | Igual de simple, ligero ajuste de proceso. |
+
+### 16.5 Roadmap — fases concretas
+
+| Fase | Alcance | Capa | Estado |
+|---|---|---|:---:|
+| **1** | `_resolveVenue` extraído + contratos en `screensConflict`/`effectiveDuration` + 18 tests | Model | ✅ merged |
+| **2** | `_getFestivalPhase` descompuesto en 3 helpers + 19 tests | Model | ✅ merged |
+| **3** | Subsistema temporal: `simNow`, `simTodayStr`, `festivalEnded`, `screeningPassed`, `dayFullyPassed`, `_festDate` + contratos + tests | Model | propuesta |
+| **4** | Schedule planning: `computeScenarios`, `scoreFilm`, `sortScreensByStrategy`, `isScreeningBlocked`, RNG helpers + contratos + tests | Model | propuesta |
+| **5** | State container + storage adapter: consolidar los ~12 globals en `state.js` con `update()`/`subscribe()`. Migrar Model functions a recibir state por parámetro (pureza real, no contrato implícito) | Model | propuesta |
+| **6** | View extraction: convertir cada `renderXxx` en función pura `(state, deps) → HTML string`. Mover componentes (sheet, modal, toast, badges, poster) a `view/components/` | View | propuesta |
+| **7** | Controller layer: migrar inline `onclick` a `addEventListener` en `controller/*.js`. Cada handler = Model update + View rerender | Controller | propuesta |
+| **8** | File split: mover Model/View/Controller a archivos físicos `.js`. `index.html` queda como shell. Worker en archivo standalone. CSS modularizado. CI cachea estructura nueva en sw.js | Build/Deploy | propuesta |
+
+### 16.6 Dependencias entre fases
+
+```
+Fase 1 ── Fase 2 ── Fase 3 ── Fase 4 ──┐
+                                       ├── Fase 5 ── Fase 6 ── Fase 7 ── Fase 8
+                                       │
+                            (Model completo es prereq de State container)
+```
+
+- Fases 1–4 completan la **capa Model** (extracción + contratos + tests, todavía en index.html)
+- Fase 5 introduce **State explícito**, prerequisito para Views puras
+- Fases 6–7 mueven la lógica de UI a su capa correspondiente (aún en index.html)
+- Fase 8 hace el **split físico** una vez todas las capas están limpias internamente
+
+### 16.7 Lo que NO cambia en el destino
+
+- Festival JSON schema (`docs/SCHEMA.md`)
+- i18n JSON schema (`es.json`, `en.json`, `strings-reference.json`)
+- Design tokens (las mismas `--*` CSS vars, solo extraídas a `styles/tokens.css`)
+- TMDB / Lucide / Plus Jakarta Sans (siguen vía CDN)
+- Manifest / PWA / Android shell
+- Deploy manual via GitHub web interface
+- `validate.py` (sigue corriendo en CI; cobertura se extiende a los nuevos archivos)
+- El protocolo de trabajo con Juan (arquitectura antes de ejecución, cambios quirúrgicos, validar antes de commitear)
+
+### 16.8 Riesgos del destino y cuándo abortar
+
+| Riesgo | Mitigación | Trigger para abortar |
+|---|---|---|
+| ES modules en Safari iOS < 11 | Confirmar versión mínima soportada (la app es mobile-first iOS) | Soporte Safari ≥ 11 cubre el mercado real |
+| Latencia inicial del Service Worker con muchos archivos | sw.js pre-cache all en `install` event | Si TTI mobile sube > 200 ms, considerar bundling minimal |
+| Worker importa modules dinámicamente (no toString) | Test exhaustivo del worker post-split | Si Planear se degrada, mantener serialización vía toString hasta resolver |
+| Fase 5 (state container) implica tocar muchos callsites | Hacer un PR por subsistema (time, venues, conflict, phase, schedule, festival) | Si el blast radius por PR > 200 líneas tocadas, dividir más |
+| Fase 8 cambia el modelo de deploy de Juan | Documentar el nuevo flujo en CLAUDE.md antes de mergear Fase 8 | Si el deploy nuevo no es drag-and-drop friendly, mantener single-file build como fallback |
