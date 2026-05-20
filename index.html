@@ -4499,18 +4499,27 @@ const VENUES={
 /* ── VENUES: configuración, salas, tiempos de viaje ─────────────────── */
 // Las coordenadas de sedes viven en festivals/*.json bajo venues{}.
 // venueTravelMins() las lee directamente de FESTIVAL_CONFIG[id].venues.
+// _resolveVenue — name + venues → entrada de venues{} o {short:name} (fallback).
+// Pura: no lee globals. Es la única de las _SCHED_PURE_FNS que es genuinamente
+//   pura — las demás leen FESTIVAL_BUFFER, FESTIVAL_TRANSPORT, etc. como contrato
+//   implícito. Se inyecta al worker vía .toString(); el worker pasa _venueCoords
+//   como segundo arg (mismo shape).
+// Match: exacto → prefix/includes case-insensitive, longest-key-first.
+//   El longest-first garantiza determinismo cuando un name matchea múltiples keys
+//   (ej: "Sala A Mejorada" gana sobre "Sala A").
+function _resolveVenue(name,venues){
+  if(!name) return{short:''};
+  if(!venues) return{short:name};
+  if(venues[name]) return venues[name];
+  const sorted=Object.keys(venues).sort((a,b)=>b.length-a.length);
+  const nl=name.toLowerCase();
+  const k=sorted.find(k=>name.startsWith(k)||name.includes(k)||nl.startsWith(k.toLowerCase())||nl.includes(k.toLowerCase()));
+  return k?venues[k]:{short:name};
+}
 function venueTravelMins(v1,v2){
   // Data-driven: uses coords from active festival's venues JSON
   const festVenues=(FESTIVAL_CONFIG[_activeFestId]||{}).venues||{};
-  const findCoords=v=>{
-    if(festVenues[v]) return festVenues[v];
-    // Prefix match (e.g. "CC Caribe Plaza ‒ Sala 2" → "CC Caribe Plaza")
-    const sorted=Object.keys(festVenues).sort((a,b)=>b.length-a.length);
-    const k=sorted.find(k=>v.startsWith(k)||v.includes(k));
-    return k?festVenues[k]:null;
-  };
-  const c1=findCoords(v1),c2=findCoords(v2);
-  if(!c1||!c2) return 0;
+  const c1=_resolveVenue(v1,festVenues),c2=_resolveVenue(v2,festVenues);
   const lat1=c1.lat,lng1=c1.lng??c1.lon,lat2=c2.lat,lng2=c2.lng??c2.lon;
   if(!lat1||!lng1||!lat2||!lng2) return 0;
   const dlat=(lat1-lat2)*111,dlon=(lng1-lng2)*111*Math.cos(lat1*Math.PI/180);
@@ -4521,17 +4530,8 @@ function venueTravelMins(v1,v2){
   return Math.max(5,Math.round(km/spd*60/5)*5);
 }
 function vcfg(v){
-  if(!v) return{short:''};
   const festVenues=(FESTIVAL_CONFIG[_activeFestId]||{}).venues||{};
-  // 1. Exact match
-  if(festVenues[v]) return festVenues[v];
-  // 2. Prefix/include match — longest key first, case-insensitive
-  const sorted=Object.keys(festVenues).sort((a,b)=>b.length-a.length);
-  const vl=v.toLowerCase();
-  const k=sorted.find(k=>v.startsWith(k)||v.includes(k)||vl.startsWith(k.toLowerCase())||vl.includes(k.toLowerCase()));
-  if(k) return festVenues[k];
-  // 3. Final fallback — show real name, never another festival's venue
-  return{short:v};
+  return _resolveVenue(v,festVenues);
 }
 function sala(v){const m=v.match(/Sala\s*(\d+)/)||v.match(/Sal[oó]n\s*(\d+)/i);return m?'Sala '+m[1]:'';}
 /* ── UTILS: tiempo, fecha, duración ─────────────────────────────────── */
@@ -4549,7 +4549,11 @@ function toMin(t){
   return h*60+m; // 24h format
 }
 function parseDur(d){const s=d!=null?String(d):'';const m=s&&s.replace('~','').match(/(\d+)/);return m?parseInt(m[1]):DEFAULT_DURATION_MIN;}
-// Duración efectiva: parseDur + 30 min si has_qa (Q&A alarga la función)
+// effectiveDuration — duración total de una función incluyendo Q&A.
+// Pura (contrato implícito): lee DEFAULT_DURATION_MIN vía parseDur. El worker
+//   define la misma constante en _workerGlobals → comportamiento idéntico.
+// Asume: f.duration es string parseable a int ("90 min", "~95 min");
+//   f.has_qa boolean. Si has_qa, suma 30 min (Q&A extiende la función).
 function effectiveDuration(f){return parseDur(f&&f.duration)+(f&&f.has_qa?30:0);}
 function minToStr(m){
   const h=Math.floor(((m%1440)+1440)%1440/60),mn=((m%1440)+1440)%1440%60;
@@ -4557,6 +4561,14 @@ function minToStr(m){
 }
 
 /* ── CONFLICTS: detección de solapamientos entre funciones ──────────── */
+// screensConflict — true si dos funciones a y b no pueden ambas asistirse.
+// Pura (contrato implícito): lee FESTIVAL_BUFFER (gap mínimo entre funciones),
+//   FESTIVAL_TRANSPORT y FESTIVAL_CONFIG[_activeFestId].venues vía travelMins.
+//   El worker define equivalentes (FESTIVAL_BUFFER, _transport, _venueCoords)
+//   en _workerGlobals → comportamiento idéntico.
+// Lógica: días distintos → no conflicto. Mismo día → suman effectiveDuration
+//   (Q&A incluido) y exigen gap ≥ max(FESTIVAL_BUFFER, travel+FESTIVAL_BUFFER)
+//   entre el fin de una y el inicio de la otra.
 function screensConflict(a,b){
   if(a.day!==b.day) return false;
   // effectiveDuration: suma 30 min si has_qa:true (Q&A extiende la función)
@@ -4621,7 +4633,7 @@ let FESTIVAL_STORAGE_KEY=(localStorage.getItem('otrofestiv_festival')||_DEFAULT_
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202605181138';
+const BUILD_VERSION='202605200613';
 (function(){
   const _vk='otrofestiv_build';
   const _sk='otrofestiv_reloaded';
@@ -8230,7 +8242,7 @@ function invalidateCalcResult(){
 // diferente en worker scope (_simTime→SIM_TIME, FESTIVAL_END→FESTIVAL_END_TS).
 // Estas se proveen como worker-local en _mkCalcWorker._venueFns.
 const _SCHED_PURE_FNS = [
-  'toMin','parseDur','_festDate',
+  'toMin','parseDur','_festDate','_resolveVenue',
   'effectiveDuration','screensConflict','screeningPassed',
   'isScreeningBlocked','_djb2','_titleSeed','_mulberry32',
   'shuffle','scoreFilm','sortScreensByStrategy','computeScenarios'
@@ -8255,15 +8267,11 @@ let _transport='transit';
 function simNow(){return SIM_TIME?new Date(SIM_TIME):new Date();}
 function festivalEnded(){return simNow()>new Date(FESTIVAL_END_TS);}
 function _workerFindCoords(v){
-  if(!_venueCoords) return null;
-  if(_venueCoords[v]) return _venueCoords[v];
-  const keys=Object.keys(_venueCoords).sort((a,b)=>b.length-a.length);
-  const k=keys.find(k=>v.startsWith(k)||v.includes(k));
-  return k?_venueCoords[k]:null;
+  return _resolveVenue(v,_venueCoords);
 }
 function venueTravelMins(v1,v2){
   const c1=_workerFindCoords(v1),c2=_workerFindCoords(v2);
-  if(!c1||!c2) return 0;
+  if(!c1.lat||!c1.lng||!c2.lat||!c2.lng) return 0;
   const dlat=(c1.lat-c2.lat)*111,dlon=(c1.lng-c2.lng)*111*Math.cos(c1.lat*Math.PI/180);
   const km=Math.sqrt(dlat*dlat+dlon*dlon);
   if(km<0.15) return 0;

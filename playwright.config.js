@@ -3,6 +3,7 @@ const { defineConfig, devices } = require('@playwright/test');
 
 module.exports = defineConfig({
   testDir: './tests',
+  testIgnore: ['**/unit/**'], // unit tests viven en tests/unit/ y corren con `node --test`
   timeout: 30000,
   retries: 1,
   reporter: [

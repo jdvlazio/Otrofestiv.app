@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `b99c35e fix(tests): T25 usa waitForSelector en lugar de timeout fijo — retry automático para render async`
+> Último commit: `aa31fd0 docs: domain-layer-extraction spec + plan + tasks (p1)`
 
 ---
 
@@ -55,15 +55,16 @@ Juan es Product Owner, diseñador y developer. Claude ejecuta; Juan audita y apr
 
 | ID | Nombre | Ciudad | Fechas | Estado |
 |---|---|---|---|---|
-| `ficci65` | FICCI 65 | Cartagena | 14–19 ABR | Recién terminado |
+| `ficci65` | FICCI 65 | Cartagena | 14–19 ABR | Archivado |
 | `aff2026` | AFF 2026 | Medellín | 21–29 ABR | Recién terminado |
 | `tribeca2026` | Tribeca Festival | New York | JUN 3–14 | **Próximo / activo** |
 | `cinemancia2025` | Cinemancia 2025 | Valle de Aburrá | 11–20 SEP | Archivado |
-| `leviza2026` | Leviza - Festival de Cine y Audiovisuales | Zapatoca | 14–17 MAY | **Próximo / activo** |
+| `leviza2026` | Leviza - Festival de Cine y Audiovisuales | Zapatoca | 14–17 MAY | Recién terminado |
 
 ### Features activas (desde `.specify/features/`)
 
 - `data-title-refactor/` — fase actual: **tasks**
+- `domain-layer-extraction/` — fase actual: **tasks**
 - `grid-section-separators/` — fase actual: **tasks**
 - `i18n-films-audit/` — fase actual: **tasks**
 - `i18n-planner-audit/` — fase actual: **tasks**

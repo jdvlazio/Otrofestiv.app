@@ -130,10 +130,11 @@ solo si el extractor se rompe.
 
 ```yaml
 - name: Unit tests dominio
-  run: node --test tests/unit/
+  run: node --test tests/unit/*.test.js
 ```
 
 Node 18+ tiene `node:test` y `node:assert` en stdlib — cero npm install.
+Glob explícito (no `tests/unit/`): Node 22 trata el dir suelto como module path y falla con `MODULE_NOT_FOUND`. El glob lo expande bash antes de invocar a node, lo cual es portable entre Node 20 (CI) y Node 22 (local).
 
 ## Riesgos
 
@@ -143,3 +144,7 @@ Node 18+ tiene `node:test` y `node:assert` en stdlib — cero npm install.
 | Loader regex de tests falla si el formateo del archivo cambia (one-liners, etc.) | Loader es código de tests, no de prod. Si rompe, los tests rompen ruidosamente. No es riesgo para usuarios. |
 | Worker rompe porque `_resolveVenue` no se inyecta correctamente | Smoke test: abrir Planear y verificar que rendera el schedule. Paso explícito en el QA browser de spec.md. |
 | Cambio de comportamiento sutil entre la copia inline de `venueTravelMins` (solo prefix) y la unificada (prefix + includes case-insensitive) afecta cálculo de travel time | Antes del commit final: comparar `travelMins` outputs en pares conocidos de venues (FICCI, Tribeca) con un snapshot manual. |
+
+## Deuda futura
+
+- Check en `validate.py` que detecte ambigüedad estática en `venues{}` por festival (una key matchea otra bajo prefix/includes case-insensitive). Auditoría manual de los 5 festivales actuales: clean. Útil como red de seguridad para festivales futuros con nombres de sala que se solapen.

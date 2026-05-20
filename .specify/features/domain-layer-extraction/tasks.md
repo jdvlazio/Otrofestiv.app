@@ -1,23 +1,23 @@
 # Tasks — Domain Extraction Fase 1
 
-- [ ] 1. `python3 validate.py` → 12/12 antes de tocar nada (baseline limpio)
-- [ ] 2. Crear branch `refactor/domain-extraction-p1`
-- [ ] 3. Auditar venues de los 5 festivales — ¿hay ambigüedad de matching case-insensitive?
-- [ ] 4. Definir `_resolveVenue(name, venues)` en index.html (~línea 4499)
-- [ ] 5. Bloque de comentario de contrato sobre `_resolveVenue`
-- [ ] 6. Reemplazar `findCoords` inline en `venueTravelMins` por `_resolveVenue`
-- [ ] 7. Reemplazar cuerpo de `vcfg` por `_resolveVenue`
-- [ ] 8. Reemplazar cuerpo de `_workerFindCoords` por `_resolveVenue`
-- [ ] 9. Añadir `'_resolveVenue'` a `_SCHED_PURE_FNS`
-- [ ] 10. Comentario de contrato sobre `effectiveDuration`
-- [ ] 11. Comentario de contrato sobre `screensConflict`
-- [ ] 12. Crear `tests/lib/load-domain.js`
-- [ ] 13. `tests/unit/effectiveDuration.test.js` — 5 casos
-- [ ] 14. `tests/unit/screensConflict.test.js` — 7 casos
-- [ ] 15. `tests/unit/resolveVenue.test.js` — 6 casos
-- [ ] 16. Verificar `node --test tests/unit/` corre en local — 0 fallos
-- [ ] 17. Añadir step "Unit tests dominio" a `.github/workflows/bump-and-validate.yml`
-- [ ] 18. Verificación JS syntax (script del SCHEMA checklist)
+- [x] 1. `python3 validate.py` → 12/12 antes de tocar nada (baseline limpio)
+- [x] 2. Crear branch `refactor/domain-extraction-p1`
+- [x] 3. Auditar venues de los 5 festivales — ¿hay ambigüedad de matching case-insensitive?
+- [x] 4. Definir `_resolveVenue(name, venues)` en index.html (~línea 4499)
+- [x] 5. Bloque de comentario de contrato sobre `_resolveVenue`
+- [x] 6. Reemplazar `findCoords` inline en `venueTravelMins` por `_resolveVenue`
+- [x] 7. Reemplazar cuerpo de `vcfg` por `_resolveVenue`
+- [x] 8. Reemplazar cuerpo de `_workerFindCoords` por `_resolveVenue`
+- [x] 9. Añadir `'_resolveVenue'` a `_SCHED_PURE_FNS`
+- [x] 10. Comentario de contrato sobre `effectiveDuration`
+- [x] 11. Comentario de contrato sobre `screensConflict`
+- [x] 12. Crear `tests/lib/load-domain.js`
+- [x] 13. `tests/unit/effectiveDuration.test.js` — 5 casos
+- [x] 14. `tests/unit/screensConflict.test.js` — 7 casos
+- [x] 15. `tests/unit/resolveVenue.test.js` — 6 casos
+- [x] 16. Verificar `node --test tests/unit/` corre en local — 0 fallos
+- [x] 17. Añadir step "Unit tests dominio" a `.github/workflows/bump-and-validate.yml`
+- [x] 18. Verificación JS syntax (script del SCHEMA checklist)
 - [ ] 19. Diff review completo
 - [ ] 20. QA browser — sheet venue, conflicto, Planear (worker)
 - [ ] 21. `python3 validate.py` → 12/12 antes del commit (sin regresión)
