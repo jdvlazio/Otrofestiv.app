@@ -93,6 +93,8 @@ const DEFAULT_FNS = [
   'screensConflict',
   // Fase 2 — festival phase helpers
   '_endedStats', '_classifyTodayScreenings', '_gapSuggestion', '_getFestivalPhase',
+  // Fase 3 — temporal subsystem
+  '_festDate', 'simNow', 'simTodayStr', 'festivalEnded', 'screeningPassed', 'dayFullyPassed',
 ];
 
 function loadDomain(opts = {}) {
@@ -100,7 +102,13 @@ function loadDomain(opts = {}) {
   const fns = opts.functions || DEFAULT_FNS;
   const source = readScripts();
 
-  const declarations = fns.map(name => {
+  // Functions whose names appear in `globals` are OVERRIDDEN by the global —
+  // skip the function declaration to avoid `Identifier already declared`.
+  // The let binding from globalDecls wins; functions referencing the name
+  // resolve to the stub via closure.
+  const fnsToDeclare = fns.filter(name => !(name in globals));
+
+  const declarations = fnsToDeclare.map(name => {
     const fn = extractFunction(source, name);
     if (!fn) throw new Error(`Function not found in index.html: ${name}`);
     return fn;
