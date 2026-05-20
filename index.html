@@ -4660,7 +4660,7 @@ let FESTIVAL_STORAGE_KEY=(localStorage.getItem('otrofestiv_festival')||_DEFAULT_
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202605201736';
+const BUILD_VERSION='202605201810';
 (function(){
   const _vk='otrofestiv_build';
   const _sk='otrofestiv_reloaded';
@@ -5665,6 +5665,12 @@ function renderAvBlocks(){
   el.innerHTML=items.length?`<div class="av-block-list">${items.join('')}</div>`:'';
 }
 
+// isScreeningBlocked(s) → boolean — true si el screening cae dentro de un block de availability del usuario.
+// Lee (contrato implícito): availability (mapa dayKey → {blocks:[{from,to}]}).
+// Llama: toMin (para s.time, b.from, b.to), parseDur (para s.duration).
+// Solapamiento estricto: sStart<bTo && sEnd>bFrom — un screening que termina
+//   exactamente cuando empieza el block NO se considera bloqueado (boundary OK).
+// En _SCHED_PURE_FNS: el worker la consume vía .toString() con su propio availability.
 function isScreeningBlocked(s){
   const av=availability[s.day];if(!av) return false;
   const sStart=toMin(s.time),sEnd=sStart+parseDur(s.duration);
@@ -5673,6 +5679,16 @@ function isScreeningBlocked(s){
 }
 
 // ── ALGORITHM — exhaustive max + MRV + random restarts ──
+// _djb2 / _titleSeed / _mulberry32 — RNG determinista.
+// Puras. Producen un seed reproducible a partir de un set de strings y un
+// PRNG con esa semilla. _djb2: hash xor-shift de Bernstein (seed 5381).
+// _titleSeed: ordena titles[] (set semantics) y hashea con _djb2 → seed
+// order-independent. _mulberry32: closure factory que retorna un PRNG con
+// output en [0, 1). Mismo seed → misma secuencia infinita.
+// En _SCHED_PURE_FNS: el worker las consume vía .toString().
+// NOTA: computeScenarios NO usa estos helpers — usa Math.random directo en
+// sus shuffles internos, por design (random restarts dan diversidad). Para
+// forzar reproducibilidad: shuffle(arr, _mulberry32(_titleSeed(titles))).
 function _djb2(str){
   let h=5381;
   for(let i=0;i<str.length;i++) h=(Math.imul(31,h)+str.charCodeAt(i))|0;
@@ -5690,6 +5706,11 @@ function _mulberry32(seed){
     return((t^t>>>14)>>>0)/4294967296;
   };
 }
+// shuffle(arr, rand) → array — Fisher-Yates.
+// Pura cuando se pasa `rand`. Impure con Math.random (default).
+// NO muta input — clona con [...arr] y retorna el clon.
+// `rand` debe retornar valor en [0, 1) (compatible con _mulberry32).
+// En _SCHED_PURE_FNS: el worker la consume vía .toString().
 function shuffle(arr,rand){
   const a=[...arr];
   const r=rand||Math.random.bind(Math);
@@ -5699,6 +5720,13 @@ function shuffle(arr,rand){
 
 // ── Mejora 1: Scoring por película ──
 // Pondera cuánto vale incluir una película según rareza, sección y duración
+// scoreFilm(title, screens, isPriority, allTitles) → number — heurística aditiva.
+// Lee (contrato implícito): FILMS (para chequear section uniqueness).
+// 4 factores: isPriority +100, scarcity (+40 si 1 screening, +20 si 2, +5 si más),
+//   section uniqueness +15 (única película de su sección en allTitles),
+//   long-form +10 (duración del primer screening > 150 min).
+// Usada por computeScenarios para el MRV ordering.
+// En _SCHED_PURE_FNS: el worker la consume vía .toString().
 function scoreFilm(title, screens, isPriority, allTitles){
   let score=0;
   // Prioridad explícita: peso máximo
@@ -5725,6 +5753,12 @@ function scoreFilm(title, screens, isPriority, allTitles){
 // Para cada película con múltiples funciones, prioriza la que:
 // 1. Conflicta con menos otras funciones de la watchlist (menos bloqueos)
 // 2. Termina más temprano (earliest-finish-time: principio clásico de interval scheduling)
+// sortScreensByStrategy(screens, allGroups) → array — interval scheduling con tiebreak.
+// Llama: screensConflict (con sus deps), toMin, parseDur.
+// NO muta input — clona con [...screens].
+// Criterio: 1) fewest-conflicts contra screenings de OTROS grupos primero;
+//   2) tiebreak por earliest-finish-time.
+// En _SCHED_PURE_FNS: el worker la consume vía .toString().
 function sortScreensByStrategy(screens, allGroups){
   // Precalcular todas las funciones de todas las otras películas
   const allOtherScreenings=allGroups.flatMap(g=>g.screens);
@@ -5747,6 +5781,24 @@ function sortScreensByStrategy(screens, allGroups){
 // ═══════════════════════════════════════════════════════════════
 
 /* ── ALGO: backtracking MRV + escenarios óptimos ────────────────────── */
+// computeScenarios(titles) → Scenario[] — corazón del Planner.
+// Lee (contrato implícito): watched, prioritized, FILMS, availability
+//   (vía isScreeningBlocked), savedAgenda (indirecto vía screeningPassed).
+// Llama: isScreeningBlocked, screeningPassed, scoreFilm, sortScreensByStrategy,
+//   screensConflict, shuffle.
+// Algoritmo: MRV (Most Restricted Variable) ordering + branch-and-bound con
+//   cap MAX_NODES_PER_CALL=80000 (FIX CRÍTICO Apr 2026 — sin el cap, el JS
+//   engine de mobile cortaba la recursión antes que desktop → outputs
+//   inconsistentes entre dispositivos).
+// 3 fases de generación: (1) escenarios CON prioridades, (2) fallback si las
+//   prioridades conflictan todas entre sí, (3) llenar slots restantes con
+//   escenarios sin prioridad para diversidad.
+// Retorna hasta 8 escenarios ordenados por dayBalance (menor desviación
+//   estándar de películas por día primero).
+// NO determinístico: usa shuffle(arr) sin rand → Math.random en cada restart.
+//   Por design — random restarts dan diversidad. Para reproducibilidad ver
+//   contrato de _mulberry32 / _titleSeed.
+// En _SCHED_PURE_FNS: el worker la consume vía .toString().
 function computeScenarios(titles){
   const pending=titles.filter(t=>!watched.has(t));
   const allPendingTitles=pending; // for section uniqueness check
