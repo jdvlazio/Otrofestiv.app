@@ -1,0 +1,25 @@
+# Tasks — Temporal Subsystem Fase 3
+
+- [ ] 1. `python3 validate.py` → 21/21 antes de tocar nada (baseline limpio)
+- [ ] 2. Crear branch `refactor/temporal-subsystem-p3`
+- [ ] 3. Bloque de contrato sobre `_festDate` (~línea 3585)
+- [ ] 4. Bloque de contrato sobre `simNow` (~línea 4680)
+- [ ] 5. Bloque de contrato sobre `simTodayStr` (~línea 4681)
+- [ ] 6. Bloque de contrato sobre `festivalEnded` (~línea 4446)
+- [ ] 7. Bloque de contrato sobre `screeningPassed` (~línea 4454)
+- [ ] 8. Bloque de contrato sobre `dayFullyPassed` (~línea 4462)
+- [ ] 9. `tests/lib/load-domain.js`: añadir las 6 funciones a `DEFAULT_FNS`
+- [ ] 10. `tests/unit/festDate.test.js` — 3 casos
+- [ ] 11. `tests/unit/simNow.test.js` — 3 casos
+- [ ] 12. `tests/unit/simTodayStr.test.js` — 3 casos
+- [ ] 13. `tests/unit/festivalEnded.test.js` — 3 casos
+- [ ] 14. `tests/unit/screeningPassed.test.js` — 5 casos
+- [ ] 15. `tests/unit/dayFullyPassed.test.js` — 4 casos
+- [ ] 16. Verificar `node --test tests/unit/*.test.js` corre en local — 0 fallos (58 totales)
+- [ ] 17. Verificación JS syntax (script del SCHEMA checklist)
+- [ ] 18. Diff review completo
+- [ ] 19. QA browser smoke — Mi Plan funciona en Tribeca (Console limpia, tabs cargan)
+- [ ] 20. QA browser — verificar `simTodayStr()` con `_simTime` seteado explícitamente (3 casos: null, mid-day, near-midnight)
+- [ ] 21. `python3 validate.py` → 21/21 antes del commit (sin regresión)
+- [ ] 22. `node scripts/bump-version.js`
+- [ ] 23. Commit atómico
