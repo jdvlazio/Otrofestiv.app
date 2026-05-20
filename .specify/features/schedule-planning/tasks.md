@@ -1,0 +1,27 @@
+# Tasks — Schedule Planning Fase 4
+
+- [ ] 1. `python3 validate.py` → 21/21 antes de tocar nada (baseline limpio)
+- [ ] 2. Crear branch `refactor/schedule-planning-p4`
+- [ ] 3. Bloque de contrato sobre `isScreeningBlocked` (~línea 5668)
+- [ ] 4. Bloques de contrato sobre RNG helpers `_djb2`, `_titleSeed`, `_mulberry32` (~líneas 5676–5692)
+- [ ] 5. Bloque de contrato sobre `shuffle` (~línea 5693)
+- [ ] 6. Bloque de contrato sobre `scoreFilm` (~línea 5702)
+- [ ] 7. Bloque de contrato sobre `sortScreensByStrategy` (~línea 5728)
+- [ ] 8. Bloque de contrato sobre `computeScenarios` (~línea 5750)
+- [ ] 9. `tests/lib/load-domain.js`: añadir 8 funciones a `DEFAULT_FNS`
+- [ ] 10. `tests/unit/isScreeningBlocked.test.js` — 3 casos
+- [ ] 11. `tests/unit/djb2.test.js` — 2 casos
+- [ ] 12. `tests/unit/titleSeed.test.js` — 2 casos
+- [ ] 13. `tests/unit/mulberry32.test.js` — 2 casos
+- [ ] 14. `tests/unit/shuffle.test.js` — 3 casos
+- [ ] 15. `tests/unit/scoreFilm.test.js` — 5 casos
+- [ ] 16. `tests/unit/sortScreensByStrategy.test.js` — 4 casos
+- [ ] 17. `tests/unit/computeScenarios.test.js` — 5 property tests
+- [ ] 18. Verificar `node --test tests/unit/*.test.js` corre en local — 0 fallos (84 totales)
+- [ ] 19. Verificación JS syntax (script del SCHEMA checklist)
+- [ ] 20. Diff review completo
+- [ ] 21. QA browser smoke — Planear genera escenarios en Tribeca con watchlist real
+- [ ] 22. QA browser específico — verificar conflict-free invariant en console sobre escenarios reales
+- [ ] 23. `python3 validate.py` → 21/21 antes del commit (sin regresión)
+- [ ] 24. `node scripts/bump-version.js`
+- [ ] 25. Commit atómico
