@@ -3582,6 +3582,11 @@ let TZ_OFFSET='-05:00';
 // Valores: 'transit' (Uber/Metro) · 'walking' (a pie) · 'mixed' (depende de la sede)
 // Afecta el texto de aviso de viaje en Mi Plan. Se actualiza en loadFestival().
 let FESTIVAL_TRANSPORT='transit';
+// _festDate(dateStr, time) → Date — construye Date con TZ_OFFSET explícito.
+// Lee (contrato implícito): TZ_OFFSET (offset del festival activo, e.g. '-05:00').
+// Inputs: dateStr en formato YYYY-MM-DD, time en formato HH:mm.
+// Returns: Date object cuyo valor representa dateStr+time en la TZ del festival.
+// En _SCHED_PURE_FNS: el worker la consume vía .toString() con la misma TZ_OFFSET inyectada.
 function _festDate(dateStr,time){
   return new Date(dateStr+'T'+time+':00'+TZ_OFFSET);
 }
@@ -4443,6 +4448,13 @@ let FESTIVAL_DATES={
 };
 // Fin del festival — última función del Domingo + margen
 let FESTIVAL_END=new Date('2026-04-20T02:00:00');
+// festivalEnded() → boolean — true si el festival ya terminó.
+// Lee (contrato implícito): FESTIVAL_END (mutable, swapeada por loadFestival).
+// Llama: simNow().
+// Comparación estricta (>): simNow === FESTIVAL_END retorna false.
+// NO en _SCHED_PURE_FNS — el worker define su propia copia (línea ~8297) con
+//   FESTIVAL_END_TS (timestamp ms) en vez de FESTIVAL_END (Date). Artefacto del
+//   mecanismo .toString(); se elimina en Fase 8 del destino.
 function festivalEnded(){ return simNow()>FESTIVAL_END; }
 
 // Check if a screening has passed (with 10 min grace)
@@ -4451,6 +4463,14 @@ function festivalEnded(){ return simNow()>FESTIVAL_END; }
 // 4 · UTILIDADES
 //     Funciones puras: fechas, tiempo, conflictos, normalización
 // ═══════════════════════════════════════════════════════════════
+// screeningPassed(s) → boolean — true si el screening ya pasó (con 10 min de grace).
+// Lee (contrato implícito): FESTIVAL_DATES (mapa dayKey → ISO date).
+// Llama: festivalEnded(), _festDate(), simNow().
+// Gate: si festivalEnded()=true → retorna false (post-festival, todo vuelve a
+//   opacidad plena; no se marca nada como "pasado").
+// Grace: suma 10 min al startTime antes de comparar — un screening que arrancó
+//   hace 5 min todavía cuenta como "no pasado" (el usuario aún puede llegar).
+// En _SCHED_PURE_FNS: el worker la consume vía .toString().
 function screeningPassed(s){
   if(festivalEnded()) return false; // festival terminado — todo vuelve a plena opacidad
   const dateStr=FESTIVAL_DATES[s.day];
@@ -4459,6 +4479,13 @@ function screeningPassed(s){
   screeningTime.setMinutes(screeningTime.getMinutes()+10); // 10 min grace
   return simNow()>screeningTime;
 }
+// dayFullyPassed(day) → boolean — true si la última función del día ya pasó.
+// Lee (contrato implícito): FESTIVAL_DATES, FILMS.
+// Llama: _festDate(), simNow().
+// Computa "última función" tomando max(FILMS[].time) para films con f.day===day,
+//   y aplica el mismo grace de 10 min que screeningPassed.
+// Si no hay films del día (o day no existe en FESTIVAL_DATES) → retorna false.
+// Main-thread only — usado en render de chips de día y línea "now" del agenda.
 function dayFullyPassed(day){
   const dateStr=FESTIVAL_DATES[day];
   if(!dateStr) return false;
@@ -4633,7 +4660,7 @@ let FESTIVAL_STORAGE_KEY=(localStorage.getItem('otrofestiv_festival')||_DEFAULT_
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202605200901';
+const BUILD_VERSION='202605201736';
 (function(){
   const _vk='otrofestiv_build';
   const _sk='otrofestiv_reloaded';
@@ -4677,7 +4704,18 @@ let _ctaRemovedTimer=null;    // CTA B: timer de auto-dismiss
 let filmDelays={};            // retrasos manuales: key=title|day|time, val=mins
 // ── Simulation clock (dev tool) ──
 let _simTime=null; // null = real time
+// simNow() → Date — Date de "ahora" controlable para sim/QA.
+// Lee (contrato implícito): _simTime (null = tiempo real; string ISO = override).
+// Returns: new Date(_simTime) si _simTime es truthy, sino new Date() (tiempo real).
+// NO en _SCHED_PURE_FNS — el worker define su propia copia (línea ~8296) con
+//   SIM_TIME en vez de _simTime (artefacto del .toString(); resuelto en Fase 8).
 function simNow(){return _simTime?new Date(_simTime):new Date();}
+// simTodayStr() → 'YYYY-MM-DD' — fecha local de simNow().
+// Llama: simNow().
+// Usa getFullYear/getMonth/getDate (TZ local del runtime). NO toISOString —
+//   éste devuelve UTC y produciría el día siguiente después de las 7 PM en
+//   Colombia (UTC-5), rompiendo la línea "ahora" en agenda y header.
+// Main-thread only.
 function simTodayStr(){
   // Usa fecha LOCAL (no UTC) para consistencia con getHours()/getMinutes()
   // toISOString() devuelve UTC — en Colombia (UTC-5) esto da el día siguiente
