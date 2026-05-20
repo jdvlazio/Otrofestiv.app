@@ -91,6 +91,8 @@ const DEFAULT_FNS = [
   'toMin', 'parseDur', 'effectiveDuration',
   '_resolveVenue', 'venueTravelMins', 'travelMins',
   'screensConflict',
+  // Fase 2 — festival phase helpers
+  '_endedStats', '_classifyTodayScreenings', '_gapSuggestion', '_getFestivalPhase',
 ];
 
 function loadDomain(opts = {}) {

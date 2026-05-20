@@ -4633,7 +4633,7 @@ let FESTIVAL_STORAGE_KEY=(localStorage.getItem('otrofestiv_festival')||_DEFAULT_
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202605200613';
+const BUILD_VERSION='202605200901';
 (function(){
   const _vk='otrofestiv_build';
   const _sk='otrofestiv_reloaded';
@@ -6759,54 +6759,85 @@ function renderGapOptions(gapStartMin,gapEndMin,todayKey,removedTitle){
 // Usado en el scheduling engine para calcular gaps y conflictos.
 const DEFAULT_DURATION_MIN=90;
 
+// _endedStats — stats post-festival para la rama `ended` de _getFestivalPhase.
+// Pura (contrato implícito): lee FILMS, watched, savedAgenda, filmRatings.
+//   Cuenta solo películas regulares (excluye is_cortos y type==='event'):
+//   los cortos son contenedores y los eventos no tienen rating mechanism.
+// Returns: { totalWatched, totalPlanned, pendingRatings }.
+function _endedStats(){
+  const _isRegular=t=>{const f=FILMS.find(fi=>fi.title===t);return f&&!f.is_cortos&&f.type!=='event';};
+  const totalWatched=[...watched].filter(_isRegular).length;
+  const totalPlanned=savedAgenda&&savedAgenda.schedule?savedAgenda.schedule.length:0;
+  const pendingRatings=[...watched].filter(t=>_isRegular(t)&&!filmRatings[t]).length;
+  return{totalWatched,totalPlanned,pendingRatings};
+}
+
+// _classifyTodayScreenings(screenings, nowMin) → {done, active, future}.
+// Particiona funciones de hoy por su relación con nowMin (minutos del día).
+// Pura (contrato implícito): lee DEFAULT_DURATION_MIN. Usa parseInt(s.duration),
+//   NO parseDur — para fidelidad byte-a-byte con el código inline original
+//   (tilde-prefixed durations caen al fallback de DEFAULT_DURATION_MIN).
+function _classifyTodayScreenings(screenings,nowMin){
+  const done=screenings.filter(s=>{
+    const dur=parseInt(s.duration)||DEFAULT_DURATION_MIN;
+    return toMin(s.time)+dur<=nowMin;
+  });
+  const active=screenings.filter(s=>{
+    const dur=parseInt(s.duration)||DEFAULT_DURATION_MIN;
+    const start=toMin(s.time);
+    return start<=nowMin&&start+dur>nowMin;
+  });
+  const future=screenings.filter(s=>toMin(s.time)>nowMin);
+  return{done,active,future};
+}
+
+// _gapSuggestion(todayDay, gapFromMin, gapToMin) → Film | null.
+// Busca una film del día que quepa en el hueco entre dos funciones planeadas.
+// Lee: FILMS, watched, savedAgenda, DEFAULT_DURATION_MIN. Llama: screeningPassed, toMin.
+// Excluye films de otro día, ya watched, ya en savedAgenda, o screeningPassed=true.
+// Slack +10 min en gapToMin: la film puede terminar hasta 10 min después del
+//   cierre nominal del hueco (margen práctico).
+function _gapSuggestion(todayDay,gapFromMin,gapToMin){
+  return FILMS.filter(f=>{
+    if(f.day!==todayDay) return false;
+    if(watched.has(f.title)) return false;
+    if(savedAgenda.schedule.some(s=>s._title===f.title)) return false;
+    if(screeningPassed(f)) return false;
+    const fStart=toMin(f.time);
+    const fEnd=fStart+(parseInt(f.duration)||DEFAULT_DURATION_MIN);
+    return fStart>=gapFromMin&&fEnd<=gapToMin+10;
+  })[0]||null;
+}
+
+// _getFestivalPhase — devuelve {phase, ...derived} o `null`.
+// Composer thin: delega a _endedStats (post-festival), _classifyTodayScreenings
+//   (partición temporal del día), _gapSuggestion (sugerencia para hueco).
+// Lee (contrato implícito): FILMS, watched, savedAgenda, filmRatings, DAY_KEYS,
+//   FESTIVAL_DATES; usa simNow, simTodayStr, festivalEnded, screeningPassed.
+// 5 fases posibles: ended | before | evening | between | next.
+// `null`: sin agenda, sin día actual en DAY_KEYS, o sin screenings hoy.
+// Caller único: renderContextualHeader().
 function _getFestivalPhase(){
-  const _fsDStr=DAY_KEYS[0]?FESTIVAL_DATES[DAY_KEYS[0]]||'':'';
-  const FESTIVAL_START=_fsDStr?new Date(_fsDStr+'T00:00:00'):new Date(0);
-  const now=simNow();
-  if(festivalEnded()){
-    // ENDED: resumen post-festival
-    // Solo películas regulares cuentan en el conteo y en pendientes de calificación.
-    // Cortos (is_cortos) son contenedores — sus ratings van a nivel de corto individual.
-    // Eventos (type==='event') no tienen mecanismo de calificación.
-    const _isRegular=t=>{const f=FILMS.find(fi=>fi.title===t);return f&&!f.is_cortos&&f.type!=='event';};
-    const totalWatched=[...watched].filter(_isRegular).length;
-    const totalPlanned=savedAgenda&&savedAgenda.schedule?savedAgenda.schedule.length:0;
-    const pendingRatings=[...watched].filter(t=>_isRegular(t)&&!filmRatings[t]).length;
-    return{phase:'ended',totalWatched,totalPlanned,pendingRatings};
-  }
+  if(festivalEnded()) return{phase:'ended',..._endedStats()};
   if(!savedAgenda||!savedAgenda.schedule||!savedAgenda.schedule.length) return null;
 
-  // BEFORE: antes de que arranque el festival
-  if(now<FESTIVAL_START){
-    const msDiff=FESTIVAL_START-now;
-    const daysDiff=Math.ceil(msDiff/86400000);
-    return{phase:'before',daysDiff};
-  }
+  const now=simNow();
+  const _fsDStr=DAY_KEYS[0]?FESTIVAL_DATES[DAY_KEYS[0]]||'':'';
+  const FESTIVAL_START=_fsDStr?new Date(_fsDStr+'T00:00:00'):new Date(0);
+  if(now<FESTIVAL_START) return{phase:'before',daysDiff:Math.ceil((FESTIVAL_START-now)/86400000)};
 
   const todayStr=simTodayStr();
   const todayDay=DAY_KEYS.find(d=>FESTIVAL_DATES[d]===todayStr);
   if(!todayDay) return null;
-
   const todayScreenings=savedAgenda.schedule
     .filter(s=>s.day===todayDay)
     .sort((a,b)=>toMin(a.time)-toMin(b.time));
   if(!todayScreenings.length) return null;
 
   const nowMin=now.getHours()*60+now.getMinutes();
+  const {done,active,future}=_classifyTodayScreenings(todayScreenings,nowMin);
 
-  // Clasificar funciones de hoy
-  const done=todayScreenings.filter(s=>{
-    const dur=parseInt(s.duration)||DEFAULT_DURATION_MIN;
-    return toMin(s.time)+dur<=nowMin;
-  });
-  const active=todayScreenings.filter(s=>{
-    const dur=parseInt(s.duration)||DEFAULT_DURATION_MIN;
-    const start=toMin(s.time);
-    return start<=nowMin&&start+dur>nowMin;
-  });
-  const future=todayScreenings.filter(s=>toMin(s.time)>nowMin);
-
-  // Todas las del día terminaron → EVENING
+  // EVENING: todas las funciones del día terminaron
   if(!active.length&&!future.length){
     const todayWatched=todayScreenings.filter(s=>watched.has(s._title)||screeningPassed(s));
     return{phase:'evening',todayScreenings,todayWatched};
@@ -6817,23 +6848,21 @@ function _getFestivalPhase(){
   const minsUntil=Math.max(0,nextStartMin-nowMin);
   const lastDone=done[done.length-1];
 
-  // BETWEEN: hay hueco de más de 45 min entre función terminada y la próxima
+  // BETWEEN: hueco > 45 min entre función terminada y la próxima
   if(lastDone&&!active.length&&minsUntil>45){
     const lastDoneDur=parseInt(lastDone.duration)||DEFAULT_DURATION_MIN;
     const gapFromMin=toMin(lastDone.time)+lastDoneDur;
     const gapToMin=nextStartMin;
-    const gapMin=gapToMin-gapFromMin;
-    // Buscar sugerencia que quepa en el hueco
-    const gapSuggestion=FILMS.filter(f=>{
-      if(f.day!==todayDay) return false;
-      if(watched.has(f.title)) return false;
-      if(savedAgenda.schedule.some(s=>s._title===f.title)) return false;
-      if(screeningPassed(f)) return false;
-      const fStart=toMin(f.time);
-      const fEnd=fStart+(parseInt(f.duration)||DEFAULT_DURATION_MIN);
-      return fStart>=gapFromMin&&fEnd<=gapToMin+10;
-    })[0]||null;
-    return{phase:'between',next,lastDone,gapMin,gapFromMin,gapToMin,gapSuggestion,minsUntil};
+    return{
+      phase:'between',
+      next,
+      lastDone,
+      gapMin:gapToMin-gapFromMin,
+      gapFromMin,
+      gapToMin,
+      gapSuggestion:_gapSuggestion(todayDay,gapFromMin,gapToMin),
+      minsUntil
+    };
   }
 
   // NEXT: próxima función en ≤ 45 min, o función en curso
