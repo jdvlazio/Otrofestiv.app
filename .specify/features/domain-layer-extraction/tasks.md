@@ -18,8 +18,8 @@
 - [x] 16. Verificar `node --test tests/unit/` corre en local — 0 fallos
 - [x] 17. Añadir step "Unit tests dominio" a `.github/workflows/bump-and-validate.yml`
 - [x] 18. Verificación JS syntax (script del SCHEMA checklist)
-- [ ] 19. Diff review completo
-- [ ] 20. QA browser — sheet venue, conflicto, Planear (worker)
-- [ ] 21. `python3 validate.py` → 12/12 antes del commit (sin regresión)
-- [ ] 22. `node scripts/bump-version.js`
-- [ ] 23. Commit atómico
+- [x] 19. Diff review completo
+- [x] 20. QA browser — sheet venue, conflicto, Planear (worker)
+- [x] 21. `python3 validate.py` → 12/12 antes del commit (sin regresión)
+- [x] 22. `node scripts/bump-version.js`
+- [x] 23. Commit atómico
