@@ -3001,7 +3001,7 @@ const state = (() => {
 // Componentes:
 //   1. Composite helpers (11) — encapsulan patrones multi-statement
 //      detectados durante auditoría de onclick. Usados por 7c-3
-//   2. ACTION_REGISTRY (87 entries categorías A-G) — schema completo
+//   2. ACTION_REGISTRY (89 entries categorías A-G) — schema completo
 //   3. Delegated listener + data-close-bg infra
 //
 // Decisión D4 (validate.py): foundation completa up-front. Composite
@@ -3084,7 +3084,7 @@ function _toggleWLAndClose(title, e) {
 }
 
 // ── 2. ACTION_REGISTRY — mapping data-action → handler ────────────────
-// 87 entries totales en 7 categorías. Cada entry sabe cómo extraer args
+// 89 entries totales en 7 categorías. Cada entry sabe cómo extraer args
 // del DOM element (dataset attributes).
 // Usage en HTML: el data-action attribute identifica el handler en el
 // registry. Args adicionales via data-* attributes leídos por el handler.
@@ -3138,7 +3138,7 @@ const ACTION_REGISTRY = {
   _togglePastFestRow:    (el)    => _togglePastFestRow(el.closest('.fs-festival-row'), el.dataset.fest),
   openPostViewRating:    (el)    => openPostViewRating(el.dataset.title, el.dataset.day, el.dataset.time, el.dataset.venue, el.dataset.duration),
   selectSplashFest:      (el)    => selectSplashFest(el.dataset.name, el.dataset.meta, el.dataset.fest),
-  selectFromDetail:      (el)    => selectFromDetail(el.dataset.title, el.dataset.day, el.dataset.time),
+  selectFromDetail:      (el)    => selectFromDetail(el),
   _openCombinedFilmSheet:(el)    => _openCombinedFilmSheet(el.dataset.title),
 
   // ── C: Navigation (12) ──
@@ -3155,12 +3155,13 @@ const ACTION_REGISTRY = {
   selectAvDay:         (el)    => selectAvDay(el.dataset.day),
   navTo:               (el)    => _navTo(el.dataset.tab),
 
-  // ── D: Cartelera/Programa filters (8) ──
+  // ── D: Cartelera/Programa filters (9) ──
   filterBySection:     (el)    => filterBySection(el.dataset.section),
   filterByVenue:       (el)    => filterByVenue(el.dataset.venue),
   _pafClearSec:        ()      => _pafClearSec(),
   _pafClearVenue:      ()      => _pafClearVenue(),
   _toggleEveningFilms: ()      => _toggleEveningFilms(),
+  _toggleWLFromList:   (el)    => _toggleWLFromList(el.dataset.title, el),
   clearProgramaChip:   ()      => clearProgramaChip(),
   runCalc:             ()      => runCalc(),
   toggleArchive:       ()      => toggleArchive(),
@@ -5148,7 +5149,7 @@ let FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202605211537';
+const BUILD_VERSION='202605211656';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';
@@ -5450,7 +5451,7 @@ function renderMiPlanCalendar(state){
             ?`<img class="lb-poster" src="${makeEventPoster(state,_mf.title,_mf.duration,_mf.event_kind)}" alt="" loading="lazy" onerror="this.remove()">`
             :_posterThumb(_mf,'lb-poster',null);
       const _mph=`<div class="js-open-pel" data-title="${s._title||''}" style="flex-shrink:0;cursor:pointer" onclick="event.stopPropagation()">${_mphInner}</div>`
-      listHtml+=`<div class="mplan-row${_rowKey===_activeMiPlanFilm?' active':''}" style="cursor:pointer" data-rkey="${_safeRowKey}" onclick="selectFromDetail(this)">
+      listHtml+=`<div class="mplan-row${_rowKey===_activeMiPlanFilm?' active':''}" style="cursor:pointer" data-rkey="${_safeRowKey}" data-action="selectFromDetail">
         ${_mph}
         <div class="mplan-tc" onclick="event.stopPropagation()">
           <div class="mplan-t1${isPast?' mp-past':''}" ${!isPast?`onclick="toggleFilmAlternatives('${(s._title||'')+(s.day||'')+(s.time||'')}','${safeT}','${s.day||''}','${s.time||''}');event.stopPropagation()"`:''} title="${!isPast?'Cambiar horario':''}">${s.time}</div>
@@ -5459,10 +5460,10 @@ function renderMiPlanCalendar(state){
         <div class="mplan-ri">
           <div>${(()=>{const{displayTitle:_dt,progSuffix:_ps}=parseProgramTitle(s._title||'');const _mfqa=FILMS.find(fi=>fi.title===s._title&&fi.day===s.day&&fi.time===s.time);const _qab=_mfqa?.has_qa?`<span class="meta-badge sm">Q&A</span>`:'';return`<div class="mplan-rtitle${_isEventRow?' mp-event-title':''}">${_dt}${_qab}</div>${_ps?`<div class="prog-suffix">${_ps}</div>`:''}`;})()} </div>
           <div class="mplan-rvenue${_isEventRow?' mp-event-venue':''}">${ICONS.pin} ${vcfg(s.venue).short}${sala(s.venue)?' \u00b7 '+sala(s.venue):''}</div>
-          ${(()=>{const _mf=FILMS.find(fi=>fi.title===s._title&&fi.day===s.day&&fi.time===s.time);if(!_mf||!_mf.is_cortos||!_mf.film_list||!_mf.film_list.length) return'';return`<button class="row-xs mplan-prog-toggle" onclick="toggleMplanProg(this,event)">${ICONS.chevronR} ${t('label_programa')}</button>`;})()}
+          ${(()=>{const _mf=FILMS.find(fi=>fi.title===s._title&&fi.day===s.day&&fi.time===s.time);if(!_mf||!_mf.is_cortos||!_mf.film_list||!_mf.film_list.length) return'';return`<button class="row-xs mplan-prog-toggle" data-action="toggleMplanProg">${ICONS.chevronR} ${t('label_programa')}</button>`;})()}
         </div>
         <div class="col-end">
-          <button class="icon-btn-circle ag-fi-btn del" data-rmt="${safeT}" onclick="removeFromAgenda(this.dataset.rmt);event.stopPropagation()">${ICONS.x}</button>
+          <button class="icon-btn-circle ag-fi-btn del" data-title="${safeT}" data-action="removeFromAgenda" data-stop="1">${ICONS.x}</button>
         </div>
       </div>${_expandedFilm===(s._title||'')+(s.day||'')+(s.time||'')?`<div class="film-alts">${renderFilmAlternatives(state,s._title,s.day,s.time)}</div>`:''}${(()=>{const _mf=FILMS.find(fi=>fi.title===s._title&&fi.day===s.day&&fi.time===s.time);if(!_mf||!_mf.is_cortos||!_mf.film_list||!_mf.film_list.length) return'';return`<div class="mplan-prog-list">${_mf.film_list.map((item,n)=>_mkCortoItemHtml(item,n,{section:_mf.section||''})).join('')}</div>`;})()}`;
     });
@@ -6169,7 +6170,7 @@ function openAvSheet(){
       const lbl=(DAY_ABBR&&DAY_ABBR[d])||d.slice(0,3).toUpperCase();
       const num=(DAY_NUM&&DAY_NUM[d])||'';
       const sel=_avSheetDay===d?' selected':'';
-      return`<button class="av-day-chip${isPast?' past':''}${sel}" data-day="${d}" onclick="selectAvDay(this.dataset.day)">${lbl} ${num}</button>`;
+      return`<button class="av-day-chip${isPast?' past':''}${sel}" data-day="${d}" data-action="selectAvDay">${lbl} ${num}</button>`;
     }).join('');
   }
   // Poblar selects de horas
@@ -6781,7 +6782,7 @@ function renderPrioStrip(state){
     const allPast=!festivalEnded()&&!FILMS.some(f=>f.title===title&&!screeningPassed(f));
     return`<div class="prio-chip${allPast?' past':''}">
       ${img}
-      <button class="prio-chip-rm" data-prio-title="${title.replace(/"/g,'&quot;')}" onclick="event.stopPropagation();togglePriority(this.dataset.prioTitle)" title="${t('aria_quitar_prio')}">${ICONS.x}</button>
+      <button class="prio-chip-rm" data-title="${title.replace(/"/g,'&quot;')}" data-action="togglePriority" data-stop="1" title="${t('aria_quitar_prio')}">${ICONS.x}</button>
       <div class="prio-chip-title">${short}${progSuffix?`<span class="poster-label-amber">${progSuffix}</span>`:''}</div>
     </div>`;
   }).join('');
@@ -6876,7 +6877,7 @@ function renderFilmListHTML(state){
         ${conflictHtml}
       </div>
       <div class="int-item-actions">
-        <button class="int-prio-btn${isPrio?' on':''}" data-title="${title}" onclick="togglePriority(this.dataset.title);event.stopPropagation()" aria-label="${t('aria_priorizar')}">★</button>
+        <button class="int-prio-btn${isPrio?' on':''}" data-title="${title}" data-action="togglePriority" data-stop="1" aria-label="${t('aria_priorizar')}">★</button>
       </div>
     </div>`;
   }
@@ -6894,7 +6895,7 @@ function renderFilmListHTML(state){
       :'';
     const ratingHtml=stars
       ?`<div class="int-item-rating">${stars}</div>`
-      :`<div class="int-item-rating-empty" data-title="${title}" onclick="openRatingSheet(this.dataset.title);event.stopPropagation()">${t('cta_calificar')} →</div>`;
+      :`<div class="int-item-rating-empty" data-title="${title}" data-action="openRatingSheet" data-stop="1">${t('cta_calificar')} →</div>`;
     return`<div class="int-item js-open-pel" data-title="${title}">
       ${posterHtml}
       <div class="int-item-info">
@@ -6903,7 +6904,7 @@ function renderFilmListHTML(state){
         ${ratingHtml}
       </div>
       <div class="int-item-actions">
-        <button class="int-seen-btn on" data-title="${title}" onclick="toggleWatched(this.dataset.title,event)" aria-label="${t('aria_quitar_vista')}">✓</button>
+        <button class="int-seen-btn on" data-title="${title}" data-action="toggleWatched" aria-label="${t('aria_quitar_vista')}">✓</button>
       </div>
     </div>`;
   }
@@ -7033,13 +7034,13 @@ function mkAgendaRow(s, mode='saved'){
   const filmKey=(s._title||'')+(s.day||'')+(s.time||'');
   const isExpanded=_expandedFilm===filmKey;
   const actionBtn=mode==='saved'
-    ?`<button class="row-xs ag-fi-btn del" data-rmt="${safeT}" onclick="removeFromAgenda(this.dataset.rmt);event.stopPropagation()">${ICONS.x} ${t('misc_quitar')}</button>`
-    :`<button class="row-xs ag-fi-btn del" data-rfs="${safeT}" onclick="removeFilmFromScenario(this.dataset.rfs,event)">${ICONS.x} ${t('misc_quitar')}</button>`;
+    ?`<button class="row-xs ag-fi-btn del" data-title="${safeT}" data-action="removeFromAgenda" data-stop="1">${ICONS.x} ${t('misc_quitar')}</button>`
+    :`<button class="row-xs ag-fi-btn del" data-title="${safeT}" data-action="removeFilmFromScenario">${ICONS.x} ${t('misc_quitar')}</button>`;
   const switchBtn=mode==='saved'&&!isDone
     ?`<button class="film-switch${isExpanded?' open':''}" onclick="toggleFilmAlternatives('${filmKey}','${safeT}','${s.day||''}','${s.time||''}');event.stopPropagation()">Cambiar</button>`
     :'';
   const altsHtml=isExpanded&&mode==='saved'?renderFilmAlternatives(state,title,s.day,s.time):'';
-  const _progBtn=(()=>{const _mf=f;if(!_mf||!_mf.is_cortos||!_mf.film_list||!_mf.film_list.length)return'';return`<button class="row-xs mplan-prog-toggle" onclick="toggleMplanProg(this,event)">${ICONS.chevronR} ${t('label_programa')}</button>`;})();
+  const _progBtn=(()=>{const _mf=f;if(!_mf||!_mf.is_cortos||!_mf.film_list||!_mf.film_list.length)return'';return`<button class="row-xs mplan-prog-toggle" data-action="toggleMplanProg">${ICONS.chevronR} ${t('label_programa')}</button>`;})();
   const _progList=(()=>{const _mf=f;if(!_mf||!_mf.is_cortos||!_mf.film_list||!_mf.film_list.length)return'';return`<div class="mplan-prog-list">${_mf.film_list.map((item,n)=>_mkCortoItemHtml(item,n,{section:_mf.section||''})).join('')}</div>`;})();
   return`<div class="saved-item${isDone?' done':''}">
     ${_ph}
@@ -7074,7 +7075,7 @@ function _mkCortoItemHtml(item, n, {cls='mplan-prog-item', section='', ratingEl=
   const _ds=encodeURIComponent((item.synopsis||'').slice(0,200));
   // data-cp: poster resuelto en render time — viaja directo al sheet, sin re-lookup
   const _dp=encodeURIComponent(thumb||'');
-  return`<div class="${cls}" data-ct="${_dt}" data-cc="${_dc}" data-cd="${_dd}" data-cdir="${_dir}" data-cg="${_dg}" data-cs="${_ds}" data-cp="${_dp}" onclick="openCortoSheetFromEl(this,event)">
+  return`<div class="${cls}" data-ct="${_dt}" data-cc="${_dc}" data-cd="${_dd}" data-cdir="${_dir}" data-cg="${_dg}" data-cs="${_ds}" data-cp="${_dp}" data-action="openCortoSheetFromEl">
     ${thumbHtml}
     <div style="flex:1;min-width:0">
       <div class="row-baseline">
@@ -7784,7 +7785,7 @@ function _renderSavedAgendaHTML(state){
               <div class="saved-title">${s._title}</div>
               <div class="saved-venue">${ICONS.pin} ${vc2.short}${sl?' · '+sl:''}</div>
             </div>
-            <button class="saved-check done" data-wt="${(s._title||'').replace(/"/g,'&quot;')}" onclick="toggleWatched(this.dataset.wt,event)">${ICONS.check+' '+t('cta_vista')}</button>
+            <button class="saved-check done" data-title="${(s._title||'').replace(/"/g,'&quot;')}" data-action="toggleWatched">${ICONS.check+' '+t('cta_vista')}</button>
           </div>`;
         }).join('')}`).join(''):''}
       ${watchedOutsidePlan.length?`
@@ -7800,7 +7801,7 @@ function _renderSavedAgendaHTML(state){
               <div class="saved-title">${f.title}</div>
               <div class="saved-venue">${ICONS.clock} ${durFmt(f.duration)||'—'}</div>
             </div>
-            <button class="saved-check done" data-wt="${(f.title||'').replace(/"/g,'&quot;')}" onclick="toggleWatched(this.dataset.wt,event)" >${ICONS.check+' '+t('cta_vista')}</button>
+            <button class="saved-check done" data-title="${(f.title||'').replace(/"/g,'&quot;')}" data-action="toggleWatched" >${ICONS.check+' '+t('cta_vista')}</button>
           </div>`;
         }).join('')}`:''}
     </div>`;
@@ -9722,7 +9723,7 @@ function openPelSheet(title){
     return`<div class="pel-sheet-screening"${isPast?' style="opacity:.4"':''}>
       <span class="pelicula-day" data-day="${s.day}">${dayAbb}</span>
       <span class="pelicula-time">${s.time}</span>
-      <span class="pelicula-venue" data-venue="${vc.short.replace(/"/g,'&quot;')}" onclick="filterByVenue(this.dataset.venue)">${ICONS.pin} <span class="venue-text">${vc.short}${sl?' · '+sl:''}${_city?`<span class="venue-municipio">${_city}</span>`:''}</span></span>
+      <span class="pelicula-venue" data-venue="${vc.short.replace(/"/g,'&quot;')}" data-action="filterByVenue">${ICONS.pin} <span class="venue-text">${vc.short}${sl?' · '+sl:''}${_city?`<span class="venue-municipio">${_city}</span>`:''}</span></span>
     </div>`;
   }).join('');
   // Lista de cortos si es programa
@@ -9763,7 +9764,7 @@ function openPelSheet(title){
           ?`<div class="pel-sheet-flags-dur">${flagFmt(f.flags)||''}${f.duration?` · ${durFmt(f.duration)}`:''}</div>`
           :(f.duration?`<div class="pel-sheet-flags-dur">${durFmt(f.duration)}</div>`:'')}
         ${f.type!=='event'&&_metaLine?`<div class="pel-sheet-metaline">${_metaLine}</div>`:''}
-        ${f.section?`<div class="pel-sheet-sec" data-sec="${f.section.replace(/"/g,'&quot;')}" onclick="filterBySection(this.dataset.sec)">${secLabel} <span class="pel-sheet-sec-arrow">›</span></div>`:''}
+        ${f.section?`<div class="pel-sheet-sec" data-section="${f.section.replace(/"/g,'&quot;')}" data-action="filterBySection">${secLabel} <span class="pel-sheet-sec-arrow">›</span></div>`:''}
       </div>
     </div>
     <div class="pel-sheet-divider"></div>
@@ -9782,9 +9783,9 @@ function openPelSheet(title){
         ${!f.is_cortos?`<button data-title="${f.title}" onclick="closePelSheet();setTimeout(()=>openRatingSheet(this.dataset.title),100)" class="pel-sheet-action-btn btn-secondary">${ICONS.star} ${filmRatings[f.title]?'Cambiar':t('cta_calificar')}</button>`:``}
       </div>`
     :`<div class="pel-sheet-ctas">
-        <button id="pel-wl-btn" class="row-center-xs pel-sheet-action-btn${inWL?' act-on btn-primary':' btn-primary'}" data-title="${f.title}" onclick="togglePelWL(this.dataset.title,event)">${inWL?ICONS.heartFill:ICONS.heart} ${inWL?t('cta_en_intereses'):t('cta_intereses')}</button>
-        <button id="pel-prio-btn" class="row-center-xs pel-sheet-action-btn${inPrio?' act-prio':' btn-secondary'}" data-title="${f.title}" onclick="togglePelPrio(this.dataset.title)">${inPrio?ICONS.starFill:ICONS.star} ${inPrio?t('cta_priorizada'):t('cta_priorizar')}</button>
-        <button id="pel-vista-btn" class="row-center-xs pel-sheet-action-btn btn-tertiary" data-title="${f.title}" onclick="toggleWatched(this.dataset.title,event)">${ICONS.check} ${f.type==='event'?t('cta_asistio'):t('cta_vista')}</button>
+        <button id="pel-wl-btn" class="row-center-xs pel-sheet-action-btn${inWL?' act-on btn-primary':' btn-primary'}" data-title="${f.title}" data-action="togglePelWL">${inWL?ICONS.heartFill:ICONS.heart} ${inWL?t('cta_en_intereses'):t('cta_intereses')}</button>
+        <button id="pel-prio-btn" class="row-center-xs pel-sheet-action-btn${inPrio?' act-prio':' btn-secondary'}" data-title="${f.title}" data-action="togglePelPrio">${inPrio?ICONS.starFill:ICONS.star} ${inPrio?t('cta_priorizada'):t('cta_priorizar')}</button>
+        <button id="pel-vista-btn" class="row-center-xs pel-sheet-action-btn btn-tertiary" data-title="${f.title}" data-action="toggleWatched">${ICONS.check} ${f.type==='event'?t('cta_asistio'):t('cta_vista')}</button>
       </div>`}
     ${_inPlan&&activeView==='agenda'?`<button data-title="${f.title}" onclick="closePelSheet();removeFromAgenda(this.dataset.title)" class="pel-sheet-remove-plan">${ICONS.x} ${t('plan_quitar_plan')}</button>`:''}
   `;
@@ -10090,8 +10091,8 @@ function openCortoSheet(title, country, duration, section, flags, director, genr
     <div class="pel-sheet-divider"></div>
     ${parentTitle?`<div class="meta-xs-gray">${t('meta_corto_incluye')}</div>`:''}
     <div class="flex-gap1-mt1">
-      <button id="corto-wl-btn" class="row-center-xs pel-sheet-action-btn${inWL?' act-on btn-primary':' btn-primary'}" data-title="${parentTitle||title}" onclick="toggleWL(this.dataset.title,event)">${inWL?ICONS.heartFill:ICONS.heart} ${inWL?t('cta_en_intereses'):t('cta_intereses')}</button>
-      <button id="corto-prio-btn" class="row-center-xs pel-sheet-action-btn${inPrio?' act-prio':' btn-secondary'}" data-title="${parentTitle||title}" onclick="togglePelPrio(this.dataset.title)">${inPrio?ICONS.starFill:ICONS.star} ${inPrio?t('cta_priorizada'):t('cta_priorizar')}</button>
+      <button id="corto-wl-btn" class="row-center-xs pel-sheet-action-btn${inWL?' act-on btn-primary':' btn-primary'}" data-title="${parentTitle||title}" data-action="toggleWL">${inWL?ICONS.heartFill:ICONS.heart} ${inWL?t('cta_en_intereses'):t('cta_intereses')}</button>
+      <button id="corto-prio-btn" class="row-center-xs pel-sheet-action-btn${inPrio?' act-prio':' btn-secondary'}" data-title="${parentTitle||title}" data-action="togglePelPrio">${inPrio?ICONS.starFill:ICONS.star} ${inPrio?t('cta_priorizada'):t('cta_priorizar')}</button>
       <button class="row-center-xs pel-sheet-action-btn${filmRatings[title]?' act-on':' btn-secondary'}" data-title="${title}" onclick="closePelSheet();setTimeout(()=>openRatingSheet(this.dataset.title),100)">${ICONS.star} ${filmRatings[title]?'Cambiar':t('cta_calificar')}</button>
     </div>
   `;
@@ -10428,7 +10429,7 @@ function renderProgramaListHTML(state){
           <div class="plist-meta" style="${notice&&notice.type==='cancelled'?'text-decoration:line-through':''}">${vc.short}${sala(f.venue)?' · '+sala(f.venue):''}${f.duration?' · '+durFmt(f.duration):''}</div>
           ${noticeNote||`<div class="plist-sec">${f.section||''}</div>`}
         </div>
-        <div class="plist-heart${inWL?'':' empty'}" data-title="${f.title.replace(/"/g,'&quot;')}" onclick="event.stopPropagation();_toggleWLFromList(this.dataset.title,this)">${inWL?ICONS.heartFill:ICONS.heart}</div>
+        <div class="plist-heart${inWL?'':' empty'}" data-title="${f.title.replace(/"/g,'&quot;')}" data-action="_toggleWLFromList" data-stop="1">${inWL?ICONS.heartFill:ICONS.heart}</div>
       </div>`;
     }).join('')}
   `).join('');
@@ -10528,7 +10529,7 @@ function _renderExploreListaHTML(state){
         <div class="plist-meta">${days?`${daysHtml} · `:''}${durFmt(f.duration)}</div>
         <div class="plist-sec">${f.section||''}</div>
       </div>
-      <div class="plist-heart${inWL?'':' empty'}" data-title="${f.title.replace(/"/g,'&quot;')}" onclick="event.stopPropagation();_toggleWLFromList(this.dataset.title,this)">${inWL?ICONS.heartFill:ICONS.heart}</div>
+      <div class="plist-heart${inWL?'':' empty'}" data-title="${f.title.replace(/"/g,'&quot;')}" data-action="_toggleWLFromList" data-stop="1">${inWL?ICONS.heartFill:ICONS.heart}</div>
     </div>`;
     const _stk2=_programaStack(f);
     return`<div class="plist-item js-open-pel${allPast?' past-card':''}" data-title="${f.title}">
@@ -10536,7 +10537,7 @@ function _renderExploreListaHTML(state){
       <div class="plist-info">
         ${(()=>{const n=NOTICES.find(nx=>nx.title===f.title&&nx.festival===((_activeFestId||_DEFAULT_FEST_ID)));const nb=n?`<span class="notice-badge">${n.type==='cancelled'?t('notice_cancelada'):t('notice_reprog_short')}</span>`:'';const nn=n&&n.type==='cancelled'?`<div class="notice-detail-amber">${t('plan_fecha_pendiente')}</div>`:n&&n.type==='rescheduled'&&n.newTime?`<div class="notice-detail-green">${n.newDay||''} · ${n.newTime}${n.newVenue?' · '+n.newVenue:''}</div>`:'';return`<div class="plist-title" style="${allPast?'opacity:.5':''}">${nb}${dt}</div><div class="plist-meta" style="${n&&n.type==='cancelled'?'text-decoration:line-through':''}${allPast?';opacity:.5':''}">${daysHtml?`${daysHtml} · `:''}${durFmt(f.duration)}${_metaBadges(f)?` · ${_metaBadges(f)}`:''}</div>${nn||`<div class="plist-sec">${f.section||''}</div>`}`;})()}
       </div>
-      <div class="plist-heart${inWL?'':' empty'}" data-title="${f.title.replace(/"/g,'&quot;')}" onclick="event.stopPropagation();_toggleWLFromList(this.dataset.title,this)">${inWL?ICONS.heartFill:ICONS.heart}</div>
+      <div class="plist-heart${inWL?'':' empty'}" data-title="${f.title.replace(/"/g,'&quot;')}" data-action="_toggleWLFromList" data-stop="1">${inWL?ICONS.heartFill:ICONS.heart}</div>
     </div>`;
   }).join('');
   }catch(e){return '';}
@@ -10648,7 +10649,7 @@ function renderPeliculaViewHTML(state){
     return _sep+`<div class="bg-surf-2 poster-card js-open-pel${inWL&&!inW?' in-wl':''}${inW&&!_ended?' in-watched':''}${(_isPrograma?false:_isEditorialPoster(f))?' editorial':''}" data-title="${f.title}"${_isPrograma?'':_cardBg}>
       ${posterImg}
       ${progBadge}
-      ${inWL?`<button class="poster-wl-dot wl-on" data-title="${f.title.replace(/"/g,'&quot;')}" onclick="event.stopPropagation();toggleWL(this.dataset.title,event)" aria-label="${t('misc_interes_label')}">${ICONS.heartFill}</button>`:''}
+      ${inWL?`<button class="poster-wl-dot wl-on" data-title="${f.title.replace(/"/g,'&quot;')}" data-action="toggleWL" data-stop="1" aria-label="${t('misc_interes_label')}">${ICONS.heartFill}</button>`:''}
     </div>`
   }).join('')}</div>`;
   return {html, hasEntries: true};
@@ -10743,7 +10744,7 @@ return`<div class="poster-card js-open-pel${inWL&&!inW?' in-wl':''}${inW&&!_fe?'
       ${posterImg}
       <div class="poster-time">${f.time}</div>
       ${nowBadge||pastBadge||progBadge}
-      ${inWL?`<button class="poster-wl-dot wl-on" data-title="${f.title.replace(/"/g,'&quot;')}" onclick="event.stopPropagation();toggleWL(this.dataset.title,event)" aria-label="Interés">${ICONS.heartFill}</button>`:''}
+      ${inWL?`<button class="poster-wl-dot wl-on" data-title="${f.title.replace(/"/g,'&quot;')}" data-action="toggleWL" data-stop="1" aria-label="Interés">${ICONS.heartFill}</button>`:''}
     </div>`;
   }).join('')+'</div>';
 
