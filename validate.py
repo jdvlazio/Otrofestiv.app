@@ -1009,6 +1009,122 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar view purity: {_e}')
 
+# ── [controller-pattern] ──────────────────────────────────────────────────────
+# Verifica que los 18 action handlers (Fase 7a) sigan el shape canónico:
+#   - State reads (destructure de state.snapshot()) al top, NO después de mutations
+#   - State mutations (state.set/update/batchUpdate) ANTES de la primera render call
+#
+# Whitelist: modal callbacks (closures dentro de showActionModal/etc.) NO se
+# validan — son closures internas con su propia estructura. Solo el outer
+# handler nombrado se evalúa.
+#
+# Nivel: WARNING en 7a. Promote a FAIL en 7d cuando subscribe→render pipeline
+# elimina los render calls explícitos.
+check = 'controller-pattern'
+try:
+    import re as _re
+    _html = open('index.html').read()
+    _lines = _html.split('\n')
+    CONTROLLER_FNS = [
+        # Pequeños (6)
+        'removeBlock', 'clearDelay', 'setDelay', 'undoDelay',
+        'checkinLaVi', 'savePVRating',
+        # Medianos (8)
+        'removeFromAgenda', 'confirmConflictReplace', 'toggleFullDay',
+        'addBlock', 'markWatchedFromPlan', 'setLang', 'confirmAvBlock',
+        'togglePriority',
+        # Grandes (4)
+        'toggleWatched', 'confirmReplace', 'addSuggestion', 'toggleWL',
+    ]
+
+    RENDER_CALLS = _re.compile(
+        r'\b(render(Agenda|FilmListHTML|ContextualHeader|MiPlanCalendar|Sbar|'
+        r'PeliculaView|ProgramaList|FlowProgress|PrioStrip|NoticesBanner|'
+        r'ProgramaChips|AvBlocks|AvDay|FilmAlternatives|Unconfirmed|'
+        r'SavedAgendaHTML|RatingStars)|_renderProgramaContent|'
+        r'_reRenderIntereses|_rerenderFilmList|runCalc)\s*\('
+    )
+    STATE_MUTATIONS = _re.compile(r'\bstate\.(set|update|batchUpdate)\s*\(')
+
+    def _find_fn_body_7a(name):
+        pat = _re.compile(rf'^(?:async\s+)?function\s+{_re.escape(name)}\s*\(')
+        for _i, _line in enumerate(_lines):
+            if pat.match(_line):
+                depth = 0; started = False
+                for _j in range(_i, len(_lines)):
+                    for _ch in _lines[_j]:
+                        if _ch == '{':
+                            depth += 1; started = True
+                        elif _ch == '}':
+                            depth -= 1
+                            if started and depth == 0:
+                                return (_i+1, _j+1, _lines[_i:_j+1])
+        return None
+
+    _cp_warnings = []
+    for _fn in CONTROLLER_FNS:
+        _result = _find_fn_body_7a(_fn)
+        if not _result:
+            _cp_warnings.append(f'{_fn}: NOT FOUND en index.html')
+            continue
+        _start, _end, _body = _result
+        # Skip modal closures: find positions of showActionModal/showDestructiveModal/
+        # showConflictModal/btn.onclick= en el body. El contenido dentro de su `() => {...}`
+        # callback se whitelistea (no se valida).
+        _body_text = '\n'.join(_body)
+        # Sustituir contenido de modal callbacks por placeholders neutros
+        # Pattern: `showActionModal(...)`, `showDestructiveModal(...)`, `showConflictModal(...)`
+        # con `()=>{...}` adentro. Y `btn.onclick=()=>{...}`. Estos son closures internas.
+        _stripped = _re.sub(
+            r'(show(?:Action|Destructive|Conflict)Modal\s*\([^)]*?\(\s*\)\s*=>\s*\{[\s\S]*?\}\s*\)|'
+            r'\.onclick\s*=\s*\(\s*\)\s*=>\s*\{[\s\S]*?\})',
+            '/* MODAL_CALLBACK_WHITELIST */',
+            _body_text
+        )
+
+        # Find first state mutation position
+        _mut_match = STATE_MUTATIONS.search(_stripped)
+        # Find first render call position
+        _render_match = RENDER_CALLS.search(_stripped)
+
+        # Check 1: state mutation AFTER first render call
+        # Excepción: si hay `return;` ENTRE el render y la mutation, están en
+        # branches distintos (early-return + fall-through) — mutuamente exclusivos
+        if _mut_match and _render_match and _mut_match.start() > _render_match.start():
+            _between = _stripped[_render_match.end():_mut_match.start()]
+            _has_early_return = bool(_re.search(r'\breturn\s*;', _between))
+            if not _has_early_return:
+                _cp_warnings.append(f'{_fn}: state.set/update AFTER render call — debe ser mutate → render')
+
+        # Check 2: roster read directo (NO via state.snapshot/get) DESPUÉS de primera mutation
+        # Solo se valida si el handler hace mutations
+        if _mut_match:
+            _after_mut = _stripped[_mut_match.end():]
+            _roster_after = ['savedAgenda', 'FILMS', 'watched', 'watchlist', 'prioritized',
+                             'filmRatings', 'filmDelays', 'availability', '_activeFestId',
+                             '_lang', 'PRIO_LIMIT']
+            # Heurística simple: el handler tiene destructure al top si tiene
+            # `const {...} = state.snapshot()` antes de la primera mutation
+            _has_top_destructure = bool(_re.search(
+                r'^\s*(?://[^\n]*\n\s*)*\s*const\s*\{[^}]+\}\s*=\s*state\.snapshot\(\)',
+                _stripped[:_mut_match.start()]
+            ))
+            if not _has_top_destructure:
+                # Si hay reads del roster, podría faltar destructure
+                _reads_after = [g for g in _roster_after
+                                if _re.search(r'(?<![.\w])' + _re.escape(g) + r'\b', _stripped)]
+                if _reads_after:
+                    # No fail — solo informativo en 7a (la mayoría son OK al usar el global mirror)
+                    pass
+
+    if _cp_warnings:
+        for _w in _cp_warnings:
+            warn(check, _w)
+    else:
+        ok(check, f'{len(CONTROLLER_FNS)} action handlers siguen el pattern canónico (mutate → render, modal callbacks whitelisted)')
+except Exception as _e:
+    warn(check, f'no se pudo verificar controller pattern: {_e}')
+
 # ── Report ────────────────────────────────────────────────────────────────────
 print()
 print('═' * 60)

@@ -96,7 +96,7 @@ que `this` es el button (deja de funcionar con delegation).
 **Con 7a completado**, 7c puede hacer mass-refactor mecánico de los 142
 onclick a data-action sabiendo que los handlers tienen shape predecible.
 
-## Las 20 action handlers en scope
+## Las 18 action handlers activos en scope
 
 | Función | Líneas | Naturaleza | Categoría |
 |---|---|---|---|
@@ -113,16 +113,23 @@ onclick a data-action sabiendo que los handlers tienen shape predecible.
 | `confirmConflictReplace` | 16 | Confirm conflict resolution | confirm* |
 | `removeFromAgenda` | 15 | Remove film del plan con confirm | remove* |
 | `setDelay` | 12 | Set film delay | set* |
-| `applySimTime` | 12 | Apply simulation time | set* |
 | `undoDelay` | 11 | Undo delay | undo* |
 | `checkinLaVi` | 11 | Quick check "la vi" | toggle* |
 | `savePVRating` | 10 | Save post-view rating | set* |
-| `clearSavedAgenda` | 6 | Clear savedAgenda | clear* |
 | `clearDelay` | 4 | Clear film delay | clear* |
 | `removeBlock` | 4 | Remove availability block | remove* |
 
-**Total ~387 líneas** a reorganizar. Magnitud similar a 6c (270 LOC) pero
-con mayor density per function.
+**Total ~373 líneas activas** a reorganizar.
+
+## Dead removes incluidos en 7a (-18 líneas)
+
+| Función | Líneas | Motivo |
+|---|---|---|
+| `clearSavedAgenda` | 6 | Orphaned por commit `7219918` ("refactor: Mi Plan sin segunda barra — Borrar eliminado"). El botón onclick fue removido pero la función quedó |
+| `applySimTime` | 12 | Orphaned por commit de Fase 6c (`5574800` — view-purity Tier 3). Los callers vivían dentro de `renderSimPanel` que fue removido como dead code en 6c. Cleanup follow-up |
+
+Precedent: 6a (renderNextStrip + renderGapOptions), 6b (renderSimPanel),
+6c (renderMiPlanList). Total dead removed acumulado tras 7a: 6 funciones.
 
 ## Excluida del scope
 
@@ -149,9 +156,9 @@ CONTROLLER_FNS = [
     'toggleWL', 'addSuggestion', 'confirmReplace', 'toggleWatched',
     'togglePriority', 'confirmAvBlock', 'setLang', 'markWatchedFromPlan',
     'addBlock', 'toggleFullDay', 'confirmConflictReplace', 'removeFromAgenda',
-    'setDelay', 'applySimTime', 'undoDelay', 'checkinLaVi', 'savePVRating',
-    'clearSavedAgenda', 'clearDelay', 'removeBlock',
-]
+    'setDelay', 'undoDelay', 'checkinLaVi', 'savePVRating',
+    'clearDelay', 'removeBlock',
+]  # 18 handlers activos (clearSavedAgenda + applySimTime dead-removed)
 
 # Para cada handler:
 #   1. Verificar que tenga state.snapshot() destructure en las primeras

@@ -149,18 +149,23 @@ renderAgenda();
 
 ## 2. Lista de migraciones (orden creciente de tamaño)
 
-### 2.1 Pequeños (4-15 líneas) — 8 fns
+### 2.0 Dead removes (-18 líneas)
+
+| Función | Líneas | Motivo |
+|---|---|---|
+| `clearSavedAgenda` | 6 | Orphaned por commit 7219918 |
+| `applySimTime` | 12 | Orphaned por mi commit de Fase 6c (renderSimPanel removal) |
+
+### 2.1 Pequeños activos (4-15 líneas) — 6 fns
 
 | Función | Líneas | State reads necesarios | Acciones |
 |---|---|---|---|
 | `removeBlock` | 4 | (none — solo escribe) | state.update + saveAV + render |
 | `clearDelay` | 4 | (none) | state.update + saveDelays + render |
-| `clearSavedAgenda` | 6 | (none) | state.set + storage.remove + render |
-| `applySimTime` | 12 | (none) | state.set + render |
 | `setDelay` | 12 | filmDelays, filmDelaysHistory | batchUpdate + saveDelays + render |
 | `undoDelay` | 11 | filmDelays, filmDelaysHistory | batchUpdate + saveDelays + render |
-| `checkinLaVi` | 11 | watched | update + saveWatched + render |
-| `savePVRating` | 10 | (none — solo escribe) | update + saveFilmRatings + showToast |
+| `checkinLaVi` | 11 | FILMS, savedAgenda, watched | update + saveWatched + render |
+| `savePVRating` | 10 | filmRatings | update + saveFilmRatings + showToast |
 
 ### 2.2 Medianos (15-30 líneas) — 8 fns
 

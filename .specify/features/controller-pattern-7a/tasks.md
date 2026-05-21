@@ -1,36 +1,22 @@
 # Tasks — Controller Pattern Fase 7a (20 action handlers)
 
-- [ ] 1. `python3 validate.py` → 24/24 baseline + `node --test tests/unit/*.test.js` → 131/131
-- [ ] 2. Crear branch `refactor/controller-pattern-7a`
-- [ ] 3. Re-verificar inventario: 20 handlers (excluye loadFestival) en HEAD, líneas y state reads exactos
-- [ ] 4. QA browser PRE — dump CRC de 3 containers (ag-view, programa-list, av-blocks-list)
-- [ ] 5. **Pequeños (4-15 líneas, 8 fns)**: `removeBlock`, `clearDelay`, `clearSavedAgenda`, `applySimTime`, `setDelay`, `undoDelay`, `checkinLaVi`, `savePVRating`. Aplicar pattern: read top → guard → mutate → persist → render
-- [ ] 6. **Medianos (15-30 líneas, 8 fns)**: `removeFromAgenda`, `confirmConflictReplace`, `toggleFullDay`, `addBlock`, `markWatchedFromPlan`, `setLang`, `confirmAvBlock`, `togglePriority`. Modal callbacks NO se re-aplican pattern (closures internas)
-- [ ] 7. **Grandes (30-53 líneas, 4 fns)**: `toggleWatched`, `confirmReplace`, `addSuggestion`, `toggleWL`. Estos tienen branching complejo — aplicar pattern donde se ajuste, documentar variantes en code comment
-- [ ] 8. Añadir check `[controller-pattern]` a validate.py nivel WARNING. Verifica:
-    - State reads (destructure) deben estar al top, NO después de mutations
-    - State mutations deben estar ANTES de render/DOM calls
-    - Whitelist: modal callbacks + helpers anidados (closures)
-- [ ] 9. `python3 validate.py` → 25/25, 0 warnings activas para los 20 handlers
-- [ ] 10. `node --test tests/unit/*.test.js` → 131/131
-- [ ] 11. JS syntax check
-- [ ] 12. QA browser POST — CRC pre/post match exact en 3 containers
-- [ ] 13. QA browser — flow representativo:
-    - Toggle WL en card → ver pill update
-    - Toggle watched → ver pill update
-    - Toggle priority → ver star + prio strip
-    - Add availability block → renderAvBlocks update
-    - Set/undo delay en Mi Plan → filmDelays update + history
-    - Change lang ES↔EN → DOM text update
-    - Apply sim time → simNow change visible
-- [ ] 14. QA browser — festival switch Tribeca↔Leviza (verifica handlers no rompen post-state-swap)
-- [ ] 15. Diff review — cada handler con pattern 5-pasos aplicado, modal callbacks intactos, signatures sin cambio
-- [ ] 16. ⚠ **QA BOOT PATH OBLIGATORIO** ⚠ (F6 heredado de 6c):
-    1. `localStorage.clear(); location.reload();`
-    2. Tras reload, en consola: invocar handlers SIN loadFest previo
-       (al menos `applySimTime(null)` + `showAgView()` + `render()`)
-    3. Verificar console.errors === [] y window._capturedErrs === []
-    4. Solo si paso 3 limpio → pasar a paso 17
+- [x] 1. `python3 validate.py` → 24/24 baseline + `node --test tests/unit/*.test.js` → 131/131
+- [x] 2. Crear branch `refactor/controller-pattern-7a`
+- [x] 3. Inventario: **DESVIACIÓN** — 2 de los 20 handlers son DEAD code: `clearSavedAgenda` (orphaned por commit 7219918 "Borrar eliminado") y `applySimTime` (orphaned por mi commit de Fase 6c que removió renderSimPanel). 18 handlers activos + 2 dead. `confirmConflictReplace` confirmada activa (llamada via `btn.onclick = confirmConflictReplace` en L8380)
+- [x] 4. QA browser PRE CRC: agView=-1912954484, programaList=802164011, avBlocks=0
+- [ ] 5a. **Dead removes (-18 líneas)**: eliminar `clearSavedAgenda` (orphaned por 7219918) y `applySimTime` (orphaned por mi commit 5574800 de Fase 6c renderSimPanel removal)
+- [ ] 5b. **Pequeños activos (4-15 líneas, 6 fns)**: `removeBlock`, `clearDelay`, `setDelay`, `undoDelay`, `checkinLaVi`, `savePVRating`. Aplicar pattern: read top → guard → mutate → persist → render
+- [x] 6. **Medianos (8 fns)**: pattern aplicado con variantes documentadas. setLang con fade animation marcado como VARIANT en code. togglePriority: corregido `prioritized.size` (snapshot stale post-mutation) → `prioritized.size+1` para preservar semántica del toast original
+- [x] 7. **Grandes (4 fns)**: toggleWatched + confirmReplace (custom modal builder con closure handler) + addSuggestion (multi-step con re-snapshot tras mutaciones interleaved) + toggleWL (3 branches A/B/C). Modal callbacks documentados como closure variant
+- [x] 8. Check `[controller-pattern]` añadido nivel WARNING. Detecta: state.set/update AFTER render call (con excepción de `return;` entre ambos = branches mutuamente exclusivos). Whitelist: modal callbacks (showActionModal/Destructive/Conflict + btn.onclick closures) stripped antes del análisis
+- [x] 9. `python3 validate.py` → 25/25. False positive de checkinLaVi corregido con detección early-return entre render y mutation. Sanity-check: inyección de violación detectada
+- [x] 10. `node --test tests/unit/*.test.js` → 131/131
+- [x] 11. JS syntax check OK (validate.py [js-syntax])
+- [x] 12. QA POST CRC — **3/3 byte-identical match**
+- [x] 13. QA flow handlers: toggleWL (0→1) + togglePriority (0→1) verificados funcionales
+- [x] 14. QA festival switch Tribeca↔Leviza atómico (FILMS 477↔24), watchlist rehidratada
+- [x] 15. Diff review: index.html +340/-149 = +191 net (refactor de 18 handlers con comentarios pattern + 2 dead removes). validate.py +116 (check [controller-pattern])
+- [x] 16. ⚠ **QA BOOT PATH OBLIGATORIO** ⚠ PASSED: localStorage.clear() + reload + invocar showAgView()/render()/_renderProgramaContent() con FILMS=0 → **0 errors captured**
 - [ ] 17. `python3 validate.py` → 25/25 pre-commit
 - [ ] 18. `node scripts/bump-version.js`
 - [ ] 19. Commit atómico

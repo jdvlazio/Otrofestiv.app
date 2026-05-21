@@ -3689,23 +3689,26 @@ function t(key, params){
   return str;
 }
 
+// Controller (p7a) — VARIANT aceptada: fade animation + delayed mutate dentro
+// del setTimeout. Pattern 5-pasos NO se aplica literal (mutate diferido tras
+// fade-out animation). Documentada como variant en spec/plan.
 function setLang(code){
+  // 1. READ + 2. GUARD
+  const {_lang, _activeFestId} = state.snapshot();
   if(!_I18N[code]) return;
   if(code === _lang) return;
-  // Fade out content containers
+  // Fade out content containers (UI effect inmediato)
   const _fadeEls=['programa-list','ag-view','grid'].map(id=>document.getElementById(id)).filter(Boolean);
   _fadeEls.forEach(el=>el.classList.add('lang-fade'));
   setTimeout(()=>{
+    // 3. MUTATE (diferido tras fade-out)
     state.set('_lang', code);
+    // 4. PERSIST
     storage.setLang(code);
+    // 5. RENDER + UI EFFECTS — full DOM refresh + componentes dinámicos
     _applyI18nDOM();
-    // Re-render vista activa — sin branches por tab
-    // showDayView y renderAgenda manejan internamente qué tab está activo
     if(activeView === 'day') { typeof showDayView === 'function' && showDayView(); }
     else                     { typeof renderAgenda === 'function' && renderAgenda(); }
-    // Fade in
-    // Re-renderizar componentes dinámicos que usan t() en tiempo de render
-    // Esto garantiza que el idioma se respete sin excepción
     _renderSplashDropdown(_splashSelectedFestId||_DEFAULT_FEST_ID);
     _renderFestivalSelector(_activeFestId);
     requestAnimationFrame(()=>{
@@ -4913,7 +4916,7 @@ let FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202605211326';
+const BUILD_VERSION='202605211421';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';
@@ -5361,35 +5364,48 @@ function savePrio(){ storage.setPrioritized(prioritized); _cloudSave(); }
 function saveLastSlot(){ storage.setLastRemovedSlots(lastRemovedSlots); }
 function saveDelays(){ storage.setFilmDelays(filmDelays); storage.setFilmDelaysHistory(filmDelaysHistory); }
 function _delayKey(s){return(s._title||s.title||'')+'|'+(s.day||'')+'|'+(s.time||'');}
+// Controller (p7a)
 function setDelay(title,day,time,addMins){
+  // 1. READ — state + args
+  const {filmDelays, filmDelaysHistory} = state.snapshot();
   const k=title+'|'+day+'|'+time;
-  const fd=state.get('filmDelays');
-  const newVal=Math.max(0,(fd[k]||0)+addMins);
+  const newVal=Math.max(0, (filmDelays[k]||0)+addMins);
+  // 3. MUTATE
   state.batchUpdate({
-    filmDelaysHistory: (() => {
-      const h=state.get('filmDelaysHistory');
-      return {...h, [k]: [...(h[k]||[]), fd[k]||0]};
-    })(),
-    filmDelays: newVal===0 ? state._omit(fd, k) : {...fd, [k]: newVal},
+    filmDelaysHistory: {...filmDelaysHistory, [k]: [...(filmDelaysHistory[k]||[]), filmDelays[k]||0]},
+    filmDelays: newVal===0 ? state._omit(filmDelays, k) : {...filmDelays, [k]: newVal},
   });
-  saveDelays();renderAgenda();
+  // 4. PERSIST + 5. RENDER
+  saveDelays();
+  renderAgenda();
 }
+// Controller (p7a)
 function undoDelay(title,day,time){
+  // 1. READ — state + args
+  const {filmDelays, filmDelaysHistory} = state.snapshot();
   const k=title+'|'+day+'|'+time;
-  const h=state.get('filmDelaysHistory');
-  if(!h[k]||!h[k].length) return;
-  const prev=h[k][h[k].length-1];
-  const newHistArr=h[k].slice(0,-1);
+  // 2. GUARD — no history para esta key
+  if(!filmDelaysHistory[k]||!filmDelaysHistory[k].length) return;
+  const prev=filmDelaysHistory[k][filmDelaysHistory[k].length-1];
+  const newHistArr=filmDelaysHistory[k].slice(0,-1);
+  // 3. MUTATE
   state.batchUpdate({
-    filmDelaysHistory: newHistArr.length ? {...h, [k]: newHistArr} : state._omit(h, k),
-    filmDelays: prev===0 ? state._omit(state.get('filmDelays'), k) : {...state.get('filmDelays'), [k]: prev},
+    filmDelaysHistory: newHistArr.length ? {...filmDelaysHistory, [k]: newHistArr} : state._omit(filmDelaysHistory, k),
+    filmDelays: prev===0 ? state._omit(filmDelays, k) : {...filmDelays, [k]: prev},
   });
-  saveDelays();renderAgenda();
+  // 4. PERSIST + 5. RENDER
+  saveDelays();
+  renderAgenda();
 }
+// Controller (p7a)
 function clearDelay(title,day,time){
+  // 1. READ — args local
   const k=title+'|'+day+'|'+time;
+  // 3. MUTATE
   state.update('filmDelays', fd => state._omit(fd, k));
-  saveDelays();renderAgenda();
+  // 4. PERSIST + 5. RENDER
+  saveDelays();
+  renderAgenda();
 }
 /* ── saveState — batching de localStorage ── */
 function saveState(...keys){
@@ -5420,40 +5436,47 @@ function updateAgTab(){
 // ═══════════════════════════════════════════════════════════════
 
 /* ── ACTIONS: watchlist, prioridades, vistas, retraso ───────────────── */
+// Controller (p7a) — el más branchy de los handlers. 3 branches:
+//   A: remove con confirm modal (film en savedAgenda)
+//   B: remove directo (film NO en savedAgenda)
+//   C: add (con detección de "todas funciones bloqueadas" + UI variants)
 function toggleWL(title,e){
   if(e) e.stopPropagation();
+  // 1. READ
+  const {FILMS, prioritized, savedAgenda, watched, watchlist} = state.snapshot();
+  // 2. GUARD + 3. MUTATE — branch A: remove con modal si en savedAgenda
   if(watchlist.has(title)){
-    // If film is in saved agenda, ask first
     if(savedAgenda&&savedAgenda.schedule.some(s=>s._title===title)){
       showActionModal(t('plan_quitar_intereses'),
         `<b>${title.length>36?title.slice(0,34)+'…':title}</b> ${t('plan_en_tu_plan')}<br><br>${t('plan_quitar_tmb')}`,
         t('plan_quitar_confirm'),()=>{
+          // Modal callback variant
           state.update('savedAgenda', a => ({...a, schedule: a.schedule.filter(s=>s._title!==title)}));
           if(!savedAgenda.schedule.length)state.set('savedAgenda', null);
           saveSavedAgenda();
           state.batchUpdate({
-            watchlist: state._delFromSet(state.get('watchlist'), title),
-            watched: state._delFromSet(state.get('watched'), title),
-            prioritized: state._delFromSet(state.get('prioritized'), title),
+            watchlist: state._delFromSet(watchlist, title),
+            watched: state._delFromSet(watched, title),
+            prioritized: state._delFromSet(prioritized, title),
           });
           saveState('wl','watched');updateCardState(title);updateAgTab();
           if(activeView==='agenda'){cachedResult=null;renderAgenda();}
         });return;
     }
-    // Now safe to remove from watchlist
+    // Branch B: remove directo (film NO en savedAgenda)
     state.batchUpdate({
-      watchlist: state._delFromSet(state.get('watchlist'), title),
-      watched: state._delFromSet(state.get('watched'), title),
-      prioritized: state._delFromSet(state.get('prioritized'), title),
+      watchlist: state._delFromSet(watchlist, title),
+      watched: state._delFromSet(watched, title),
+      prioritized: state._delFromSet(prioritized, title),
     });
     showToast('Fuera de tus intereses','info');
   }
   else{
+    // Branch C: add — con detección "todas funciones bloqueadas" + UI variants
     state.batchUpdate({
-      watchlist: state._addToSet(state.get('watchlist'), title),
-      watched: state._delFromSet(state.get('watched'), title),
+      watchlist: state._addToSet(watchlist, title),
+      watched: state._delFromSet(watched, title),
     });
-    // ── CASO 3: todas las funciones en horario no disponible ──
     const _allScreens=FILMS.filter(f=>f.title===title&&!screeningPassed(f));
     const _allBlocked=_allScreens.length>0&&_allScreens.every(s=>isScreeningBlocked(s));
     if(_allBlocked){
@@ -5466,6 +5489,7 @@ function toggleWL(title,e){
       showToast(`${ICONS.heartFill} En Intereses`,'info');
     }
   }
+  // 4. PERSIST + 5. RENDER + UI EFFECTS (compartido entre branch B y C)
   saveState('wl','watched');updateCardState(title);updateAgTab();
   if(activeView==='agenda'){cachedResult=null;renderAgenda();}
   else if(activeView==='day'&&activeMNav==='mnav-cartelera'){
@@ -5474,39 +5498,44 @@ function toggleWL(title,e){
     if(!_pelOpen){const _sy=window.scrollY;_renderProgramaContent();window.scrollTo(0,_sy);}
   }
 }
+// Controller (p7a) — branchy toggle con confirm modal en branch B
 function toggleWatched(title,e){
   title=normTitle(title);
   if(e) e.stopPropagation();
+  // 1. READ
+  const {FILMS, watched, watchlist} = state.snapshot();
+  // 2. GUARD + 3. MUTATE — branch A: ya watched, desmarcar y devolver a Intereses
   if(watched.has(title)){
-    // Quitar de vistas — si no está en Intereses, devolverla ahí
     state.batchUpdate({
-      watched: state._delFromSet(state.get('watched'), title),
-      watchlist: state._addToSet(state.get('watchlist'), title),
+      watched: state._delFromSet(watched, title),
+      watchlist: state._addToSet(watchlist, title),
     });
-    saveState('wl','watched');updateCardState(title);updateAgTab();
-    const listEl=document.getElementById('ag-film-list');
+    // 4. PERSIST + 5. RENDER + UI EFFECTS
+    saveState('wl','watched');
+    updateCardState(title);
+    updateAgTab();
     _reRenderIntereses();
     if(activeView==='agenda') renderAgenda();
     showToast(t('plan_vuelta_pendientes'),'info');
-  } else {
-    // Confirmar antes de marcar como vista
-    const _short=title.length>36?title.slice(0,34)+'…':title;
-    showActionModal(
-      t('modal_ya_viste_titulo'),
-      `<b>${_short}</b><br><br>${t('modal_ya_viste_body')}`,
-      t('modal_ya_viste_cta'),
-      ()=>{
-        state.update('watched', s => state._addToSet(s, title));
-        saveWatched();updateCardState(title);updateAgTab();
-        cachedResult=null;
-        _reRenderIntereses();
-        if(activeView==='agenda') renderAgenda();
-        if(activeMNav==='mnav-miplan') renderAgenda();
-        showToast(t('toast_marcada_vista'),'info');
-        if(!FILMS.find(fi=>fi.title===title)?.is_cortos) setTimeout(()=>openRatingSheet(title),350);
-      }
-    );
+    return;
   }
+  // Branch B: marcar como vista — modal confirm (closure variant)
+  const _short=title.length>36?title.slice(0,34)+'…':title;
+  showActionModal(
+    t('modal_ya_viste_titulo'),
+    `<b>${_short}</b><br><br>${t('modal_ya_viste_body')}`,
+    t('modal_ya_viste_cta'),
+    ()=>{
+      state.update('watched', s => state._addToSet(s, title));
+      saveWatched();updateCardState(title);updateAgTab();
+      cachedResult=null;
+      _reRenderIntereses();
+      if(activeView==='agenda') renderAgenda();
+      if(activeMNav==='mnav-miplan') renderAgenda();
+      showToast(t('toast_marcada_vista'),'info');
+      if(!FILMS.find(fi=>fi.title===title)?.is_cortos) setTimeout(()=>openRatingSheet(title),350);
+    }
+  );
 }
 function updateCardState(title){
   const inWL=watchlist.has(title),inW=watched.has(title),inPrio=prioritized.has(title);
@@ -5537,10 +5566,14 @@ function fuzzyMatch(query,title){
   if(qi===q.length) return{match:true,score:qi};
   return{match:false,score:0};
 }
+// Controller (p7a) — modal callback contiene el handler real (closure variant)
 function removeFromAgenda(title){
+  // 1. READ + 2. GUARD — el outer handler solo abre el modal de confirmación
+  const {savedAgenda} = state.snapshot();
   if(!savedAgenda) return;
   const _s=title.length>36?title.slice(0,34)+'…':title;
   showActionModal(t('plan_quitar_plan'),`<b>${_s}</b><br><br>${t('plan_restaurar_suger')}`,t('misc_quitar'),()=>{
+    // Modal callback — el handler real (variant aceptada en spec)
     const rem=savedAgenda.schedule.find(s=>s._title===title);
     if(rem){state.update('lastRemovedSlots', arr => [{...rem,_isRestored:true}, ...arr.filter(r=>r._title!==rem._title)].slice(0,MAX_REMEMBERED_SLOTS));saveLastSlot();}
     state.update('savedAgenda', a => ({...a, schedule: a.schedule.filter(s=>s._title!==title)}));
@@ -5553,22 +5586,37 @@ function removeFromAgenda(title){
     renderAgenda();showToast('Fuera de tu plan','info');
   });
 }
+// Controller (p7a) — multi-step: add to watchlist + add to plan + cleanup
+// lastRemovedSlots + jump al día. NO usa modal (excepto conflict sheet en
+// rama de error). NOTE: state snapshot re-leído tras mutaciones interleaved
+// porque condicionalmente openConflictSheet sale temprano y necesita state
+// fresh para el branch.
 function addSuggestion(title,day,time){
   title=normTitle(title);
+  // 1. READ
+  const {FILMS, _activeFestId, savedAgenda, watchlist, watched} = state.snapshot();
+  // 2. GUARD
   if(festivalEnded()) return;
-  // 1. Add to watchlist if not already there
-  if(!watchlist.has(title)){state.batchUpdate({watchlist:state._addToSet(state.get('watchlist'),title), watched:state._delFromSet(state.get('watched'),title)});saveState('wl','watched');updateCardState(title);updateAgTab();}
-  // 2. Add specific screening to saved agenda
+  // 3. MUTATE (step 1): Add to watchlist if not already there
+  if(!watchlist.has(title)){
+    state.batchUpdate({
+      watchlist:state._addToSet(watchlist,title),
+      watched:state._delFromSet(watched,title),
+    });
+    saveState('wl','watched');updateCardState(title);updateAgTab();
+  }
+  // 3. MUTATE (step 2): Add specific screening to saved agenda
   const screen=FILMS.find(f=>f.title===title&&f.day===day&&f.time===time);
   if(screen){
     if(!savedAgenda) state.set('savedAgenda', {schedule:[]});
-    // Avoid duplicates
-    if(!savedAgenda.schedule.some(s=>s._title===title)){
+    // Avoid duplicates (re-read state porque pudo haber sido seteado arriba)
+    const sa=state.get('savedAgenda');
+    if(!sa.schedule.some(s=>s._title===title)){
       // ── Re-validación en tiempo real ─────────────────────────────
       // getSuggestions verificó el hueco al renderizar, pero el plan
       // pudo haber cambiado desde entonces (otra sugerencia añadida
       // en la misma sesión). Revalidamos contra el estado actual.
-      const realConflict=savedAgenda.schedule.find(s=>s.day===day&&screensConflict(s,screen));
+      const realConflict=sa.schedule.find(s=>s.day===day&&screensConflict(s,screen));
       if(realConflict){
         openConflictSheet(title, screen, realConflict);
         return;
@@ -5579,9 +5627,7 @@ function addSuggestion(title,day,time){
           .sort((x,y)=>x.day_order!==y.day_order?x.day_order-y.day_order:toMin(x.time)-toMin(y.time))
       }));
       saveSavedAgenda();
-      // ── Toast informativo con día y hora ─────────────────────────
-      // Informa exactamente dónde quedó la película para que el
-      // usuario sepa si coincide con lo que esperaba.
+      // 5. UI EFFECT: toast informativo con día y hora
       const{displayTitle:dt}=parseProgramTitle(title);
       const shortT=dt.length>20?dt.slice(0,18)+'…':dt;
       const _dayShortMap=(FESTIVAL_CONFIG[_activeFestId]||{}).dayShort||{};
@@ -5589,13 +5635,13 @@ function addSuggestion(title,day,time){
       showToast(`${ICONS.calendar} ${shortT} · ${dayShort} · ${time}`,'info');
     }
   }
-  // 3. Quitar de lista de restaurables
+  // 3. MUTATE (step 3): Quitar de lista de restaurables
   state.update('lastRemovedSlots', arr => arr.filter(r=>r._title!==title));
+  // 4. PERSIST
   saveLastSlot();
-  // 4. Saltar al día de la sugerencia en el calendario
+  // 5. RENDER + UI EFFECTS: jump al día de la sugerencia + re-render
   const jumpIdx=DAY_KEYS.indexOf(day);
   if(jumpIdx>=0) activeMiPlanDay=jumpIdx;
-  // 5. Re-render
   renderAgenda();
 }
 
@@ -5760,13 +5806,17 @@ function showConflictModal(conflicts, onConfirm){
     onConfirm();
   };
 }
+// Controller (p7a) — branchy: si día ya bloqueado, libera; si no, bloquea con conflict modal opcional
 function toggleFullDay(day){
+  // 1. READ — UI state (isFullDayBlocked lee availability via free var)
+  // 2. GUARD + 3. MUTATE — branch A: libera día
   if(isFullDayBlocked(day)){
     state.update('availability', a => ({...a, [day]: {...a[day], blocks: []}}));
     cachedResult=null;saveAV();renderAvBlocks();invalidateCalcResult();
     _checkRecalcOpportunity();
     return;
   }
+  // Branch B: bloquea — con confirm modal si hay conflictos
   const _conflicts=checkPlanConflictsWithBlock(day,'00:00','23:59');
   const _doBlock=()=>{
     _conflicts.forEach(s=>_removePlanItem(s._title));
@@ -5777,13 +5827,17 @@ function toggleFullDay(day){
   if(_conflicts.length) setTimeout(()=>showConflictModal(_conflicts,_doBlock),50);
   else _doBlock();
 }
+// Controller (p7a) — lee 2 inputs DOM, valida, muta con conflict check
 function addBlock(day){
+  // 1. READ — DOM inputs (input state, ephemeral)
   const f=document.getElementById(`av-from-${day}`).value;
   const toVal=document.getElementById(`av-to-${day}`).value;
+  // 2. GUARD — validation con early returns + toast
   if(!f||!toVal){showToast(t('av_seleccionar'),'warn');return;}
   if(toMin(f)>=toMin(toVal)){showToast(t('av_hora_invalida'),'warn');return;}
   const av=availability[day];
   if(av.blocks.some(b=>toMin(f)<toMin(b.to)&&toMin(toVal)>toMin(b.from))){showToast('Este horario coincide con otro bloque','warn');return;}
+  // 3. MUTATE — diferida via conflict modal si hay conflictos
   const _blockConflicts=checkPlanConflictsWithBlock(day,f,toVal);
   const _doAdd=()=>{
     _blockConflicts.forEach(s=>_removePlanItem(s._title));
@@ -5792,14 +5846,21 @@ function addBlock(day){
       [day]: {...a[day], blocks: [...a[day].blocks, {from:f,to:toVal}].sort((x,y)=>toMin(x.from)-toMin(y.from))}
     }));
     avAddOpen[day]=false;
+    // 4. PERSIST + 5. RENDER
     cachedResult=null;saveAV();renderAvBlocks();invalidateCalcResult();
   };
   if(_blockConflicts.length) setTimeout(()=>showConflictModal(_blockConflicts,_doAdd),50);
   else _doAdd();
 }
+// Controller (p7a) — action handler standardizado: mutate → persist → render
 function removeBlock(day,fromVal,toVal){
+  // 3. MUTATE
   state.update('availability', a => ({...a, [day]: {...a[day], blocks: a[day].blocks.filter(b=>!(b.from===fromVal&&b.to===toVal))}}));
-  cachedResult=null;saveAV();renderAvBlocks();invalidateCalcResult();
+  // 4. PERSIST + 5. RENDER + UI EFFECTS
+  cachedResult=null;
+  saveAV();
+  renderAvBlocks();
+  invalidateCalcResult();
   _checkRecalcOpportunity();
 }
 // Pure half (p6b) — innerHTML del row del día. NO incluye className ni post-
@@ -5915,35 +5976,40 @@ function setAvType(type){
   if(ts) ts.style.display=type==='hours'?'':'none';
 }
 
+// Controller (p7a) — branchy: full-day usa toggleFullDay, range crea block con conflict check
 function confirmAvBlock(){
+  // 1. READ + 2. GUARD
   if(!_avSheetDay) return;
   if(_avSheetType==='full'){
-    // toggleFullDay ya maneja conflictos internamente
+    // Branch A: full-day — delega a toggleFullDay
     closeAvSheet();
     if(!isFullDayBlocked(_avSheetDay)) setTimeout(()=>toggleFullDay(_avSheetDay),50);
-  } else {
-    const from=document.getElementById('av-sheet-from')?.value||'09:00';
-    const to=document.getElementById('av-sheet-to')?.value||'12:00';
-    if(from>=to){showToast(t('av_hora_invalida'),'warn');return;}
-    // Verificar solapamiento con bloques existentes (no solo igualdad exacta)
-    const av=availability[_avSheetDay];
-    if(av.blocks.some(b=>toMin(from)<toMin(b.to)&&toMin(to)>toMin(b.from))){
-      showToast('Este horario coincide con otro bloque','warn');return;
-    }
-    // ── CASO 1: detectar conflictos con el plan antes de confirmar ──
-    const _conflicts=checkPlanConflictsWithBlock(_avSheetDay,from,to);
-    const _doAdd=()=>{
-      _conflicts.forEach(s=>_removePlanItem(s._title));
-      state.update('availability', a => ({
-        ...a,
-        [_avSheetDay]: {...a[_avSheetDay], blocks: [...a[_avSheetDay].blocks, {from,to}].sort((x,y)=>toMin(x.from)-toMin(y.from))}
-      }));
-      cachedResult=null;saveAV();renderAvBlocks();invalidateCalcResult();
-    };
-    closeAvSheet();
-    if(_conflicts.length) setTimeout(()=>showConflictModal(_conflicts,_doAdd),50);
-    else _doAdd();
+    return;
   }
+  // Branch B: range
+  // 1b. READ DOM inputs
+  const from=document.getElementById('av-sheet-from')?.value||'09:00';
+  const to=document.getElementById('av-sheet-to')?.value||'12:00';
+  // 2b. GUARD — validation con early returns
+  if(from>=to){showToast(t('av_hora_invalida'),'warn');return;}
+  const av=availability[_avSheetDay];
+  if(av.blocks.some(b=>toMin(from)<toMin(b.to)&&toMin(to)>toMin(b.from))){
+    showToast('Este horario coincide con otro bloque','warn');return;
+  }
+  // 3. MUTATE — diferido via conflict modal si hay conflictos
+  const _conflicts=checkPlanConflictsWithBlock(_avSheetDay,from,to);
+  const _doAdd=()=>{
+    _conflicts.forEach(s=>_removePlanItem(s._title));
+    state.update('availability', a => ({
+      ...a,
+      [_avSheetDay]: {...a[_avSheetDay], blocks: [...a[_avSheetDay].blocks, {from,to}].sort((x,y)=>toMin(x.from)-toMin(y.from))}
+    }));
+    // 4. PERSIST + 5. RENDER
+    cachedResult=null;saveAV();renderAvBlocks();invalidateCalcResult();
+  };
+  closeAvSheet();
+  if(_conflicts.length) setTimeout(()=>showConflictModal(_conflicts,_doAdd),50);
+  else _doAdd();
 }
 
 // Pure half (p6c)
@@ -6824,17 +6890,27 @@ function renderSavedAgendaHTML(state){
     </div>`;
   }
 }
+// Controller (p7a) — branchy: si NO está watched, marca + post-view rating modal
 function checkinLaVi(title){
-  if(!watched.has(title)){
-    state.update('watched', s => state._addToSet(s, title));saveWatched();updateCardState(title);updateAgTab();
+  // 1. READ — state al top
+  const {FILMS, savedAgenda, watched} = state.snapshot();
+  // 2. GUARD — si ya está watched, solo re-renderea (no-op del estado)
+  if(watched.has(title)){
     renderAgenda();
-    const s=savedAgenda&&savedAgenda.schedule.find(e=>e._title===title);
-    // Los programas de cortos no tienen calificación general
+    return;
+  }
+  // 3. MUTATE
+  state.update('watched', s => state._addToSet(s, title));
+  // 4. PERSIST
+  saveWatched();
+  // 5. RENDER + UI EFFECTS
+  updateCardState(title);
+  updateAgTab();
+  renderAgenda();
+  // Post-view rating modal (sólo para films, no cortos)
+  const s=savedAgenda&&savedAgenda.schedule.find(e=>e._title===title);
   const _isCortos=FILMS.find(fi=>fi.title===title)?.is_cortos;
   if(!_isCortos) setTimeout(()=>openPostViewRating(title, s?.day, s?.time, s?.venue, s?.duration), 250);
-  } else {
-    renderAgenda();
-  }
 }
 function checkinNoLaVi(title){
   _removePlanItem(title);
@@ -6848,19 +6924,6 @@ function updateSimLabel(val){
   const d=new Date(_simFestStart().getTime()+Math.round(val/1000*_SIM_TOTAL())*60000);
   const el=document.getElementById('sim-label');
   if(el) el.textContent=d.toLocaleString(_lang==='en'?'en-US':'es',{weekday:'short',day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'});
-}
-function applySimTime(val){
-  if(val===null){
-    state.set('_simTime', null);
-    const sl=document.getElementById('sim-slider');if(sl) sl.value=0;
-    const lb=document.getElementById('sim-label');if(lb) lb.textContent='Tiempo real';
-  } else {
-    state.set('_simTime', new Date(_simFestStart().getTime()+Math.round(val/1000*_SIM_TOTAL())*60000).toISOString());
-  }
-  _expandedFilm='';
-  _activeMiPlanFilm='';
-  activeMiPlanDay=null;
-  renderAgenda();
 }
 let _expandedFilm=''; // key: title+day+time — which film has alternatives open
 let _activeMiPlanFilm=''; // key: title+time — highlighted from calendar click
@@ -6994,7 +7057,12 @@ function renderFilmAlternatives(state,title,day,time){
 }
 
 
+// Controller (p7a) — modal builder + handler closure variant. Modal es custom
+// (no showActionModal) por requirements de styling. El handler real vive en
+// el `btn.onclick` closure adentro del setTimeout.
 function confirmReplace(removedTitle,newTitle,day,time){
+  // 1. READ — args + state (snapshot del state se hace dentro del closure
+  // porque el handler se ejecuta tras el user click, no inmediato)
   const{displayTitle:dt}=parseProgramTitle(newTitle);
   const shortNew=dt.length>22?dt.slice(0,20)+'…':dt;
   const{displayTitle:dr}=parseProgramTitle(removedTitle||'');
@@ -7014,6 +7082,8 @@ function confirmReplace(removedTitle,newTitle,day,time){
   setTimeout(()=>{
     const btn=document.getElementById('replace-ok');
     if(btn) btn.onclick=()=>{
+      // Handler real — fresh snapshot al ejecutarse (post user-click)
+      const {FILMS, savedAgenda, watchlist} = state.snapshot();
       modal.remove();
       if(removedTitle) _removePlanItem(removedTitle);
       const screen=FILMS.find(f=>f.title===newTitle&&f.day===day&&f.time===time);
@@ -7945,14 +8015,6 @@ async function exportICS(){
   }
   showToast(t('misc_calendario_listo'),'info');
 }
-function clearSavedAgenda(){
-  _cancelNotifications();
-  showDestructiveModal(t('plan_borrar_titulo'),
-    t('plan_borrar_confirm'),
-    t('plan_borrar'),
-    ()=>{state.set('savedAgenda', null);localStorage.removeItem(`${FESTIVAL_STORAGE_KEY}saved`);renderAgenda();});
-}
-
 // ── RESULT HTML ──
 let cachedResult=null;
 
@@ -8140,14 +8202,17 @@ function buildResultHTML(scenarios){
 // 13 · RENDER — VISTAS PRINCIPALES
 //      renderCartelera, togglePriority, showToast, renderAgenda
 // ═══════════════════════════════════════════════════════════════
+// Controller (p7a) — branchy: prioritize/unprioritize con prio limit + modal confirm en Planear
 function togglePriority(title,cost){
+  // 1. READ
+  const {prioritized, watchlist, watched, PRIO_LIMIT} = state.snapshot();
+  // 2. GUARD + 3. MUTATE — branch A: unprioritize
   if(prioritized.has(title)){
-    // Si estamos en Planear, confirmar antes de quitar
+    // Si estamos en Planear, confirmar antes de quitar (modal callback variant)
     if(activeMNav==='mnav-planner'){
       const short=title.length>40?title.slice(0,38)+'…':title;
       showActionModal(t('plan_quitar_prioridad'),
         `<b>${short}</b><br><br>${t('plan_sigue_intereses')}`,
-
         t('plan_quitar_prioridad'),()=>{
           state.update('prioritized', s=>state._delFromSet(s,title));savePrio();updateCardState(title);updateAgTab();runCalc();
           showToast(`${ICONS.star} ${t('toast_prioridad_quitada')}`,'info');
@@ -8156,16 +8221,18 @@ function togglePriority(title,cost){
         });return;
     }
     state.update('prioritized', s=>state._delFromSet(s,title));
+    // 4. PERSIST + 5. RENDER + UI EFFECTS
     savePrio();updateCardState(title);updateAgTab();runCalc();
     showToast(`${ICONS.star} ${t('toast_prioridad_quitada')}`,'info');
   } else {
+    // Branch B: prioritize (con limit check)
     if(prioritized.size>=PRIO_LIMIT){
       openPrioLimit(title);return;
     }
     state.update('prioritized', s=>state._addToSet(s,title));
-    if(!watchlist.has(title)){state.batchUpdate({watchlist:state._addToSet(state.get('watchlist'),title), watched:state._delFromSet(state.get('watched'),title)});saveWL();saveWatched();}
+    if(!watchlist.has(title)){state.batchUpdate({watchlist:state._addToSet(watchlist,title), watched:state._delFromSet(watched,title)});saveWL();saveWatched();}
     savePrio();updateCardState(title);updateAgTab();
-    showToast(`${ICONS.starFill} ${t('cta_priorizada')} · ${prioritized.size}/${PRIO_LIMIT}`,'info');
+    showToast(`${ICONS.starFill} ${t('cta_priorizada')} · ${prioritized.size+1}/${PRIO_LIMIT}`,'info');
     runCalc();
   }
   if(activeView==='agenda') renderAgenda();
@@ -8298,10 +8365,16 @@ function openPostViewRating(title, day, time, venue, duration){
   if(_pvSheet){ _pvSheet.style.display=''; requestAnimationFrame(()=>_pvSheet.classList.add('open')); }
 }
 
+// Controller (p7a)
 function savePVRating(){
+  // 1. READ — UI state ephemeral (_pvRating, _pvTitle son module-level)
+  // 2. GUARD — solo guardar si rating válido
   if(_pvRating>0){
+    // 3. MUTATE
     state.update('filmRatings', o => ({...o, [_pvTitle]: _pvRating}));
+    // 4. PERSIST
     storage.setFilmRatings(filmRatings);
+    // 5. RENDER + UI EFFECTS — toast
     const stars=['','★','★★','★★★','★★★★','★★★★★'];
     showToast(stars[Math.round(_pvRating)]||'★ Calificada','info');
   }
@@ -8320,22 +8393,28 @@ function closePVRating(){
   }
 }
 
+// Controller (p7a) — branchy toggle desde Mi Plan
 function markWatchedFromPlan(title, day, time, venue, duration, e){
   if(e) e.stopPropagation();
+  // 1. READ
+  const {FILMS, watched, watchlist} = state.snapshot();
+  // 2. GUARD + 3. MUTATE — branch A: desmarcar (ya watched)
   if(watched.has(title)){
-    // Ya está vista — desmarcar
     state.batchUpdate({
-      watched: state._delFromSet(state.get('watched'), title),
-      watchlist: state.get('watchlist').has(title) ? state.get('watchlist') : state._addToSet(state.get('watchlist'), title),
+      watched: state._delFromSet(watched, title),
+      watchlist: watchlist.has(title) ? watchlist : state._addToSet(watchlist, title),
     });
+    // 4. PERSIST + 5. RENDER + UI EFFECTS
     saveState('wl','watched');
     updateCardState(title);
     updateAgTab();
     showToast(t('plan_vuelta_pendientes'),'info');
     return;
   }
-  // Marcar como vista y abrir sheet de calificación
+  // Branch B: marcar como vista + post-view rating modal
+  // 3. MUTATE
   state.update('watched', s=>state._addToSet(s, title));
+  // 4. PERSIST + 5. RENDER + UI EFFECTS
   saveWatched();
   updateCardState(title);
   updateAgTab();
@@ -8385,10 +8464,12 @@ function openConflictSheet(incomingTitle, incomingScreen, existingEntry){
   _pushSheetState();
 }
 
+// Controller (p7a) — handler del btn de "Reemplazar" en conflict sheet
 function confirmConflictReplace(){
+  // 1. READ + 2. GUARD
   if(!_conflictPending) return;
   const{incomingTitle, incomingScreen, existingEntry}=_conflictPending;
-  // Quitar la existente e insertar la nueva
+  // 3. MUTATE — quitar la existente e insertar la nueva
   state.update('savedAgenda', a => ({
     ...a,
     schedule: [
@@ -8396,6 +8477,7 @@ function confirmConflictReplace(){
       {...incomingScreen,_title:incomingTitle}
     ].sort((x,y)=>x.day_order!==y.day_order?x.day_order-y.day_order:toMin(x.time)-toMin(y.time))
   }));
+  // 4. PERSIST + 5. RENDER + UI EFFECTS
   saveSavedAgenda();
   const{displayTitle:dt}=parseProgramTitle(incomingTitle);
   closeConflictSheet();
