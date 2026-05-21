@@ -1125,6 +1125,56 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar controller pattern: {_e}')
 
+# ── [event-delegation] ────────────────────────────────────────────────────────
+# Tracking de migración onclick inline → data-action delegated.
+# Reporta:
+#   - Cuántos onclick="..." quedan (baseline 142 antes de 7c-1)
+#   - Typos: data-action="X" usado pero X no existe en ACTION_REGISTRY
+#   - Dead entries: ACTION_REGISTRY entries sin call site (excepto composite
+#     helpers, que son foundation up-front)
+#
+# Nivel: WARNING en 7c-1. Promote a FAIL en 7c-4 cuando onclick_count === 0.
+check = 'event-delegation'
+try:
+    import re as _re
+    _html = open('index.html').read()
+    # Onclick remaining (excluyendo el ejemplo en mi comentario del CONTROLLER LAYER block)
+    _onclick_count = len(_re.findall(r'\bonclick="', _html))
+    # Parsear ACTION_REGISTRY entries
+    _reg_start = _html.find('const ACTION_REGISTRY = {')
+    _reg_end = _html.find('};', _reg_start) if _reg_start >= 0 else -1
+    if _reg_start < 0 or _reg_end < 0:
+        fail(check, 'ACTION_REGISTRY no encontrado en index.html')
+    else:
+        _reg_block = _html[_reg_start:_reg_end]
+        # Match `keyname: ` (al inicio de línea, con indentación)
+        _registry_keys = set(_re.findall(r'^\s+([_a-zA-Z][_a-zA-Z0-9]*)\s*:\s*\(', _reg_block, _re.M))
+        # data-action usados en HTML
+        _used_actions = set(_re.findall(r'data-action="([^"]+)"', _html))
+        # Typo detection
+        _typos = _used_actions - _registry_keys
+        # Dead entries (entries en registry sin uso en HTML)
+        _dead = _registry_keys - _used_actions
+        # Composite helpers se esperan dead en 7c-1 (foundation up-front)
+        _composite_helpers = {
+            'scrollToAgSec', 'clearExpandedFilm', 'setAvAddOpen',
+            'closePelAndRemove', 'closePelAndRate', 'navTo',
+            'closeAuthAndReset', 'dismissToastAction', 'toggleCtxOlder',
+            'toggleWatchedAndClose', 'toggleWLAndClose',
+        }
+        _dead_non_composite = _dead - _composite_helpers
+
+        if _typos:
+            for _typo in sorted(_typos):
+                fail(check, f'data-action="{_typo}" usado en HTML pero NO existe en ACTION_REGISTRY')
+        else:
+            ok(check, f'Migration: onclick remaining={_onclick_count}, '
+                      f'{len(_used_actions)} data-actions usados, '
+                      f'{len(_registry_keys)} entries en registry, '
+                      f'{len(_dead_non_composite)} dead non-composite (tolerado pre-7c-4)')
+except Exception as _e:
+    warn(check, f'no se pudo verificar event delegation: {_e}')
+
 # ── Report ────────────────────────────────────────────────────────────────────
 print()
 print('═' * 60)

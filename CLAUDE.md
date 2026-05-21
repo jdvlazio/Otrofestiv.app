@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `740ae81 refactor(controller): 7a — 18 action handlers al pattern canónico + 2 dead removes (#10)`
+> Último commit: `0cd2862 docs: event-delegation-7c1 spec + plan + tasks (p7c-1)`
 
 ---
 
@@ -66,6 +66,7 @@ Juan es Product Owner, diseñador y developer. Claude ejecuta; Juan audita y apr
 - `controller-pattern-7a/` — fase actual: **tasks**
 - `data-title-refactor/` — fase actual: **tasks**
 - `domain-layer-extraction/` — fase actual: **tasks**
+- `event-delegation-7c1/` — fase actual: **tasks**
 - `festival-phase-extraction/` — fase actual: **tasks**
 - `grid-section-separators/` — fase actual: **tasks**
 - `i18n-films-audit/` — fase actual: **tasks**
