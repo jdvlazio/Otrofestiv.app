@@ -2589,19 +2589,19 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 </div>
 </div><!-- /topbar -->
 <div class="main-nav" id="main-nav" role="navigation" aria-label="Navegación principal">
-  <button class="main-nav-tab on" id="mnav-cartelera" onclick="{const _ph=_getProgramaPhase();programaSubMode=_ph.default;switchMainNav('mnav-cartelera');showDayView();}">
+  <button class="main-nav-tab on" id="mnav-cartelera" data-action="navTo" data-tab="mnav-cartelera">
     <span class="main-nav-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="2.18"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="2" y1="7" x2="7" y2="7"/><line x1="2" y1="17" x2="7" y2="17"/><line x1="17" y1="17" x2="22" y2="17"/><line x1="17" y1="7" x2="22" y2="7"/></svg></span>
     <span class="main-nav-lbl" id="lbl-nav-programa">PROGRAMA</span>
   </button>
-  <button class="main-nav-tab" id="mnav-seleccion" onclick="switchMainNav('mnav-seleccion');showAgView()">
+  <button class="main-nav-tab" id="mnav-seleccion" data-action="navTo" data-tab="mnav-seleccion">
     <span class="main-nav-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"/></svg></span>
     <span class="main-nav-lbl" id="lbl-nav-intereses">INTERESES</span>
   </button>
-  <button class="main-nav-tab" id="mnav-planner" onclick="switchMainNav('mnav-planner');showAgView()">
+  <button class="main-nav-tab" id="mnav-planner" data-action="navTo" data-tab="mnav-planner">
     <span class="main-nav-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="21" x2="4" y2="14"/><line x1="4" y1="10" x2="4" y2="3"/><line x1="12" y1="21" x2="12" y2="12"/><line x1="12" y1="8" x2="12" y2="3"/><line x1="20" y1="21" x2="20" y2="16"/><line x1="20" y1="12" x2="20" y2="3"/><line x1="1" y1="14" x2="7" y2="14"/><line x1="9" y1="8" x2="15" y2="8"/><line x1="17" y1="16" x2="23" y2="16"/></svg></span>
     <span class="main-nav-lbl" id="lbl-nav-planear">PLANEAR</span>
   </button>
-  <button class="main-nav-tab" id="mnav-miplan" onclick="switchMainNav('mnav-miplan');showAgView()">
+  <button class="main-nav-tab" id="mnav-miplan" data-action="navTo" data-tab="mnav-miplan">
     <span class="tab-badge" id="miplan-badge"></span>
     <span class="main-nav-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5"/></svg></span>
     <span class="main-nav-lbl" id="lbl-nav-miplan">MI PLAN</span>
@@ -2707,7 +2707,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
     </div>
   </div>
   <div class="plan-confirm-films" id="plan-confirm-films"></div>
-  <button class="plan-confirm-cta" data-i18n="cta_mi_plan" onclick="closePlanConfirm(true)">Ver Mi Plan</button>
+  <button class="plan-confirm-cta" data-i18n="cta_mi_plan" data-action="closePlanConfirm" data-force="1">Ver Mi Plan</button>
 </div>
 <!-- ── Rating Sheet ── -->
 <div class="rating-overlay" id="rating-overlay" data-action="closeRatingSheet"></div>
@@ -3001,7 +3001,7 @@ const state = (() => {
 // Componentes:
 //   1. Composite helpers (11) — encapsulan patrones multi-statement
 //      detectados durante auditoría de onclick. Usados por 7c-3
-//   2. ACTION_REGISTRY (89 entries categorías A-G) — schema completo
+//   2. ACTION_REGISTRY (91 entries categorías A-G) — schema completo
 //   3. Delegated listener + data-close-bg infra
 //
 // Decisión D4 (validate.py): foundation completa up-front. Composite
@@ -3083,8 +3083,14 @@ function _toggleWLAndClose(title, e) {
   closePelSheet();
 }
 
+function _activatePlanFilm(el) {
+  setActivePlanFilm(el);
+  const i = parseInt(el.dataset.dayIndex, 10);
+  if (!isNaN(i)) selectMiPlanDay(i);
+}
+
 // ── 2. ACTION_REGISTRY — mapping data-action → handler ────────────────
-// 89 entries totales en 7 categorías. Cada entry sabe cómo extraer args
+// 91 entries totales en 7 categorías. Cada entry sabe cómo extraer args
 // del DOM element (dataset attributes).
 // Usage en HTML: el data-action attribute identifica el handler en el
 // registry. Args adicionales via data-* attributes leídos por el handler.
@@ -3128,7 +3134,7 @@ const ACTION_REGISTRY = {
   closeFestivalSheet:    ()      => closeFestivalSheet(),
   closeRatingSheet:      ()      => closeRatingSheet(),
   closePVRating:         ()      => closePVRating(),
-  closePlanConfirm:      ()      => closePlanConfirm(),
+  closePlanConfirm:      (el)    => closePlanConfirm(el.dataset.force === '1'),
   closePrioLimit:        ()      => closePrioLimit(),
   dismissSplash:         ()      => dismissSplash(),
   toggleSplashDropdown:  ()      => toggleSplashDropdown(),
@@ -3155,13 +3161,14 @@ const ACTION_REGISTRY = {
   selectAvDay:         (el)    => selectAvDay(el.dataset.day),
   navTo:               (el)    => _navTo(el.dataset.tab),
 
-  // ── D: Cartelera/Programa filters (9) ──
+  // ── D: Cartelera/Programa filters (10) ──
   filterBySection:     (el)    => filterBySection(el.dataset.section),
   filterByVenue:       (el)    => filterByVenue(el.dataset.venue),
   _pafClearSec:        ()      => _pafClearSec(),
   _pafClearVenue:      ()      => _pafClearVenue(),
-  _toggleEveningFilms: ()      => _toggleEveningFilms(),
+  _toggleEveningFilms: (el)    => _toggleEveningFilms(el),
   _toggleWLFromList:   (el)    => _toggleWLFromList(el.dataset.title, el),
+  addSuggestion:       (el)    => addSuggestion(el.dataset.title, el.dataset.day, el.dataset.time),
   clearProgramaChip:   ()      => clearProgramaChip(),
   runCalc:             ()      => runCalc(),
   toggleArchive:       ()      => toggleArchive(),
@@ -3183,7 +3190,7 @@ const ACTION_REGISTRY = {
   deleteAccount:    ()    => deleteAccount(),
   signOutAndClose:  ()    => signOutAndClose(),
 
-  // ── G: Composite helpers (Patrones A-J multi-statement) (10) ──
+  // ── G: Composite helpers (Patrones A-J multi-statement) (11) ──
   scrollToAgSec:        (el)    => _scrollToAgSection(el.dataset.target),
   clearExpandedFilm:    ()      => _setExpandedFilm(''),
   setAvAddOpen:         (el)    => _setAvAddOpen(el.dataset.day, el.dataset.open === '1'),
@@ -3194,6 +3201,7 @@ const ACTION_REGISTRY = {
   toggleCtxOlder:       ()      => _toggleCtxOlder(),
   toggleWatchedAndClose:(el, e) => _toggleWatchedAndClose(el.dataset.title, e),
   toggleWLAndClose:     (el, e) => _toggleWLAndClose(el.dataset.title, e),
+  activatePlanFilm:     (el)    => _activatePlanFilm(el),
 };
 
 // ── 3. Delegated click listener + data-close-bg infra ────────────────
@@ -5149,7 +5157,7 @@ let FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202605211656';
+const BUILD_VERSION='202605211813';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';
@@ -5324,22 +5332,22 @@ function renderMiPlanCalendar(state){
   const isPastVe=nowDayIdx>=0&&ve<nowDayIdx;
   const navHtml=`<div class="mplan-nav">
     <div class="mplan-nav-btn-wrap">
-      <button class="mplan-nav-btn" aria-label="${t('aria_dia_ant')}" onclick="miPlanNav(-1)" ${vs===0?'disabled':''}><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"/></svg></button>
+      <button class="mplan-nav-btn" aria-label="${t('aria_dia_ant')}" data-action="miPlanNav" data-dir="-1" ${vs===0?'disabled':''}><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"/></svg></button>
     </div>
     <div class="mplan-nav-labels">
-      <div class="mplan-nav-day${isPastVs?' past':''}" onclick="selectMiPlanDay(${vs})">
+      <div class="mplan-nav-day${isPastVs?' past':''}" data-action="selectMiPlanDay" data-index="${vs}">
         <div class="mplan-nav-day-name">${_lblLocalized((DAY_SHORT_EN[DAYS[vs].k]||DAYS[vs].lbl).split(' ')[0])}</div>
         <div class="mplan-nav-day-num${vs===activeMiPlanDay?' wk-active-num':''}">${DAYS[vs].d}</div>
         ${vs===activeMiPlanDay?'<div class="mplan-nav-day-arrow"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><path d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg></div>':''}
       </div>
-      <div class="mplan-nav-day${isPastVe?' past':''}" onclick="selectMiPlanDay(${ve})">
+      <div class="mplan-nav-day${isPastVe?' past':''}" data-action="selectMiPlanDay" data-index="${ve}">
         <div class="mplan-nav-day-name">${_lblLocalized((DAY_SHORT_EN[DAYS[ve].k]||DAYS[ve].lbl).split(' ')[0])}</div>
         <div class="mplan-nav-day-num${ve===activeMiPlanDay?' wk-active-num':''}">${DAYS[ve].d}</div>
         ${ve===activeMiPlanDay?'<div class="mplan-nav-day-arrow"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><path d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg></div>':''}
       </div>
     </div>
     <div class="mplan-nav-btn-wrap right">
-      <button class="mplan-nav-btn" onclick="miPlanNav(1)" ${ve>=DAY_KEYS.length-1?'disabled':''}>${ICONS.chevronR}</button>
+      <button class="mplan-nav-btn" data-action="miPlanNav" data-dir="1" ${ve>=DAY_KEYS.length-1?'disabled':''}>${ICONS.chevronR}</button>
     </div>
   </div>`;
 
@@ -5382,7 +5390,7 @@ function renderMiPlanCalendar(state){
       const isEvent=type==='mp-event';
       const showVenue=blockH>44;
       const vc2=vcfg(s.venue);
-      return`<div class="mplan-wk-block ${type}${stateClass}" style="top:${top.toFixed(0)}px;height:${blockH.toFixed(0)}px" data-fkey="${(s._title||'')}${s.time}" onclick="setActivePlanFilm(this);selectMiPlanDay(${i});event.stopPropagation()" title="${(s._title||'').replace(/"/g,'&quot;')}">
+      return`<div class="mplan-wk-block ${type}${stateClass}" style="top:${top.toFixed(0)}px;height:${blockH.toFixed(0)}px" data-fkey="${(s._title||'')}${s.time}" data-action="activatePlanFilm" data-day-index="${i}" data-stop="1" title="${(s._title||'').replace(/"/g,'&quot;')}">
         ${isPrio?`<div class="mplan-wk-badge">★</div>`:''}
         <div class="mplan-wk-time${isEvent?' mp-event-time':''}">${s.time}</div>
         <div class="mplan-wk-title${isEvent?' mp-event-title':''}">${displayTitle}</div>
@@ -5391,7 +5399,7 @@ function renderMiPlanCalendar(state){
     }).join('');
 
     const colClass=['mplan-wk-col',isToday?'wk-today':'',isActive?'wk-active':'',extraClass].filter(Boolean).join(' ');
-    return`<div class="${colClass}" style="height:${PHDR+TOTAL}px" onclick="selectMiPlanDay(${i})">
+    return`<div class="${colClass}" style="height:${PHDR+TOTAL}px" data-action="selectMiPlanDay" data-index="${i}">
       <div class="mplan-wk-col-hdr">
         <div class="mplan-wk-col-day"><span class="mplan-wk-day-name">${_lblLocalized((DAY_SHORT_EN[DAYS[i].k]||DAYS[i].lbl).split(' ')[0])}</span><span class="mplan-wk-col-date${dayFilms.length?' wk-has':''}">${DAYS[i].d}</span></div>
         ${dayFilms.length?(isActive?'<div class="mplan-wk-col-arrow"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><path d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg></div>':'<div class="mplan-wk-col-dot"></div>'):''}
@@ -5454,7 +5462,7 @@ function renderMiPlanCalendar(state){
       listHtml+=`<div class="mplan-row${_rowKey===_activeMiPlanFilm?' active':''}" style="cursor:pointer" data-rkey="${_safeRowKey}" data-action="selectFromDetail">
         ${_mph}
         <div class="mplan-tc" onclick="event.stopPropagation()">
-          <div class="mplan-t1${isPast?' mp-past':''}" ${!isPast?`onclick="toggleFilmAlternatives('${(s._title||'')+(s.day||'')+(s.time||'')}','${safeT}','${s.day||''}','${s.time||''}');event.stopPropagation()"`:''} title="${!isPast?'Cambiar horario':''}">${s.time}</div>
+          <div class="mplan-t1${isPast?' mp-past':''}" ${!isPast?`data-action="toggleFilmAlternatives" data-key="${(s._title||'')+(s.day||'')+(s.time||'')}" data-title="${safeT}" data-day="${s.day||''}" data-time="${s.time||''}" data-stop="1"`:''} title="${!isPast?'Cambiar horario':''}">${s.time}</div>
           <div class="mplan-t2">${mplanEndStr(s.time,dur)}${prioritized.has(s._title)?` <span class="txt-amber60-xs">★</span>`:''}${isNow?` <span class="txt-green-semi">en curso</span>`:''}</div>
         </div>
         <div class="mplan-ri">
@@ -6106,7 +6114,7 @@ function renderAvDayHTML(state, day){
 
   const pillsHtml=fullBlocked
     ?`<span class="av-pill full">${t('av_todo_el_dia')}</span>`
-    :visibleBlocks.map(b=>`<span class="av-pill">${b.from}–${b.to}<button class="av-pill-rm" aria-label="${t('av_eliminar')}" onclick="removeBlock('${day}','${b.from}','${b.to}');event.stopPropagation()">×</button></span>`).join('');
+    :visibleBlocks.map(b=>`<span class="av-pill">${b.from}–${b.to}<button class="av-pill-rm" aria-label="${t('av_eliminar')}" data-action="removeBlock" data-day="${day}" data-from="${b.from}" data-to="${b.to}" data-stop="1">×</button></span>`).join('');
 
   // Inline form — always shows when addOpen, with 15-min slot dropdowns
   const timeOpts=`<option value="08:00">08:00</option><option value="08:15">08:15</option><option value="08:30">08:30</option><option value="08:45">08:45</option><option value="09:00">09:00</option><option value="09:15">09:15</option><option value="09:30">09:30</option><option value="09:45">09:45</option><option value="10:00">10:00</option><option value="10:15">10:15</option><option value="10:30">10:30</option><option value="10:45">10:45</option><option value="11:00">11:00</option><option value="11:15">11:15</option><option value="11:30">11:30</option><option value="11:45">11:45</option><option value="12:00">12:00</option><option value="12:15">12:15</option><option value="12:30">12:30</option><option value="12:45">12:45</option><option value="13:00">13:00</option><option value="13:15">13:15</option><option value="13:30">13:30</option><option value="13:45">13:45</option><option value="14:00">14:00</option><option value="14:15">14:15</option><option value="14:30">14:30</option><option value="14:45">14:45</option><option value="15:00">15:00</option><option value="15:15">15:15</option><option value="15:30">15:30</option><option value="15:45">15:45</option><option value="16:00">16:00</option><option value="16:15">16:15</option><option value="16:30">16:30</option><option value="16:45">16:45</option><option value="17:00">17:00</option><option value="17:15">17:15</option><option value="17:30">17:30</option><option value="17:45">17:45</option><option value="18:00">18:00</option><option value="18:15">18:15</option><option value="18:30">18:30</option><option value="18:45">18:45</option><option value="19:00">19:00</option><option value="19:15">19:15</option><option value="19:30">19:30</option><option value="19:45">19:45</option><option value="20:00">20:00</option><option value="20:15">20:15</option><option value="20:30">20:30</option><option value="20:45">20:45</option><option value="21:00">21:00</option><option value="21:15">21:15</option><option value="21:30">21:30</option><option value="21:45">21:45</option><option value="22:00">22:00</option><option value="22:15">22:15</option><option value="22:30">22:30</option><option value="22:45">22:45</option><option value="23:00">23:00</option><option value="23:15">23:15</option><option value="23:30">23:30</option><option value="23:45">23:45</option><option value="00:00">00:00</option><option value="00:15">00:15</option><option value="00:30">00:30</option><option value="00:45">00:45</option><option value="01:00">01:00</option>`;
@@ -6114,8 +6122,8 @@ function renderAvDayHTML(state, day){
       <select id="av-from-${day}" class="av-time-input">${timeOpts}</select>
       <span class="av-sep">–</span>
       <select id="av-to-${day}" class="av-time-input">${timeOpts}</select>
-      <button class="av-add-btn" onclick="addBlock('${day}')">${t('av_confirmar')}</button>
-      <button class="av-plus-btn" onclick="avAddOpen['${day}']=false;renderAvDay('${day}')">${ICONS.x}</button>
+      <button class="av-add-btn" data-action="addBlock" data-day="${day}">${t('av_confirmar')}</button>
+      <button class="av-plus-btn" data-action="setAvAddOpen" data-day="${day}" data-open="0">${ICONS.x}</button>
     </div>`:'';
 
   return `
@@ -6127,8 +6135,8 @@ function renderAvDayHTML(state, day){
       ${pillsHtml?`<div class="av-pills">${pillsHtml}</div>`:''}
       ${inlineForm}
       <div class="av-row-btns" style="margin-top:${pillsHtml||addOpen?'6px':'0'}">
-        ${!fullBlocked&&!addOpen?`<button class="av-plus-btn" onclick="avAddOpen['${day}']=true;renderAvDay('${day}')">${ICONS.plus} ${t('misc_no_disp')}</button>`:''}
-        ${!addOpen?`<button class="row-xs av-full-btn${fullBlocked?' active':''}" onclick="toggleFullDay('${day}')">
+        ${!fullBlocked&&!addOpen?`<button class="av-plus-btn" data-action="setAvAddOpen" data-day="${day}" data-open="1">${ICONS.plus} ${t('misc_no_disp')}</button>`:''}
+        ${!addOpen?`<button class="row-xs av-full-btn${fullBlocked?' active':''}" data-action="toggleFullDay" data-day="${day}">
           ${fullBlocked?ICONS.x+' '+t('av_liberar_dia'):ICONS.plus+' '+t('av_todo_el_dia_btn')}
         </button>`:''}
       </div>
@@ -6257,14 +6265,14 @@ function renderAvBlocksHTML(state){
       items.push(`<div class="av-block-item is-full">
         <span class="av-block-day">${lbl} ${num}</span>
         <span class="av-block-time">${t('av_todo_el_dia')}</span>
-        <button class="av-block-rm" onclick="toggleFullDay('${day}')" title="Quitar">${ICONS.x}</button>
+        <button class="av-block-rm" data-action="toggleFullDay" data-day="${day}" title="Quitar">${ICONS.x}</button>
       </div>`);
     } else {
       visible.forEach(b=>{
         items.push(`<div class="av-block-item">
           <span class="av-block-day">${lbl} ${num}</span>
           <span class="av-block-time">${b.from} – ${b.to}</span>
-          <button class="av-block-rm" onclick="removeBlock('${day}','${b.from}','${b.to}')" title="Quitar">${ICONS.x}</button>
+          <button class="av-block-rm" data-action="removeBlock" data-day="${day}" data-from="${b.from}" data-to="${b.to}" title="Quitar">${ICONS.x}</button>
         </div>`);
       });
     }
@@ -7037,7 +7045,7 @@ function mkAgendaRow(s, mode='saved'){
     ?`<button class="row-xs ag-fi-btn del" data-title="${safeT}" data-action="removeFromAgenda" data-stop="1">${ICONS.x} ${t('misc_quitar')}</button>`
     :`<button class="row-xs ag-fi-btn del" data-title="${safeT}" data-action="removeFilmFromScenario">${ICONS.x} ${t('misc_quitar')}</button>`;
   const switchBtn=mode==='saved'&&!isDone
-    ?`<button class="film-switch${isExpanded?' open':''}" onclick="toggleFilmAlternatives('${filmKey}','${safeT}','${s.day||''}','${s.time||''}');event.stopPropagation()">Cambiar</button>`
+    ?`<button class="film-switch${isExpanded?' open':''}" data-action="toggleFilmAlternatives" data-key="${filmKey}" data-title="${safeT}" data-day="${s.day||''}" data-time="${s.time||''}" data-stop="1">Cambiar</button>`
     :'';
   const altsHtml=isExpanded&&mode==='saved'?renderFilmAlternatives(state,title,s.day,s.time):'';
   const _progBtn=(()=>{const _mf=f;if(!_mf||!_mf.is_cortos||!_mf.film_list||!_mf.film_list.length)return'';return`<button class="row-xs mplan-prog-toggle" data-action="toggleMplanProg">${ICONS.chevronR} ${t('label_programa')}</button>`;})();
@@ -7211,13 +7219,13 @@ function renderUnconfirmed(state,schedule){
         const st=s._title.replace(/'/g,"&#39;");
         return`<div class="checkin-item">
           <div class="checkin-info"><div class="checkin-title">${sh}</div><div class="checkin-time">${dayLabel(s.day)} · ${s.time}</div></div>
-          <div class="checkin-btns"><button class="row-xs checkin-btn yes" onclick="checkinLaVi('${st}')">${ICONS.check} ${t('cta_vista')}</button><button class="checkin-btn no" onclick="checkinNoLaVi('${st}')">${t('misc_luego')}</button></div>
+          <div class="checkin-btns"><button class="row-xs checkin-btn yes" data-action="checkinLaVi" data-title="${st}">${ICONS.check} ${t('cta_vista')}</button><button class="checkin-btn no" data-action="checkinNoLaVi" data-title="${st}">${t('misc_luego')}</button></div>
         </div>`;
       }).join('')}
     </div>
     <div class="sim-hdr-pad">
       <button class="link-gray-xs"
-        onclick="const el=document.getElementById('ctx-older');el.style.display=el.style.display==='none'?'block':'none'">
+        data-action="toggleCtxOlder">
         + ${older.length} ${older.length>1?t('label_anteriores'):t('label_anterior')} ${t('label_sin_confirmar')}
       </button>
     </div>`:'';
@@ -7226,8 +7234,8 @@ function renderUnconfirmed(state,schedule){
     <div class="checkin-item">
       <div class="checkin-info"><div class="checkin-title">${short}</div><div class="checkin-time">${timeDesc}</div></div>
       <div class="checkin-btns">
-        <button class="row-xs checkin-btn yes" onclick="checkinLaVi('${safeLast}')">${ICONS.check} ${t('cta_vista')}</button>
-        <button class="checkin-btn no" onclick="checkinNoLaVi('${safeLast}')">${t('misc_luego')}</button>
+        <button class="row-xs checkin-btn yes" data-action="checkinLaVi" data-title="${safeLast}">${ICONS.check} ${t('cta_vista')}</button>
+        <button class="checkin-btn no" data-action="checkinNoLaVi" data-title="${safeLast}">${t('misc_luego')}</button>
       </div>
     </div>${olderHtml}
   </div>`;
@@ -7270,7 +7278,7 @@ function renderFilmAlternatives(state,title,day,time){
     const{displayTitle}=parseProgramTitle(f.title);
     const short=displayTitle.length>28?displayTitle.slice(0,26)+'…':displayTitle;
     const safeTNew=f.title.replace(/'/g,"&#39;");
-    return`<div class="checkin-opt" onclick="confirmReplace('${safeT}','${safeTNew}','${f.day}','${f.time}')">
+    return`<div class="checkin-opt" data-action="confirmReplace" data-rmtitle="${safeT}" data-newtitle="${safeTNew}" data-day="${f.day}" data-time="${f.time}">
       <div class="checkin-opt-info">
         <div class="checkin-opt-time">${f.time} · ${durFmt(f.duration)}</div>
         <div class="checkin-opt-title">${short}</div>
@@ -7283,7 +7291,7 @@ function renderFilmAlternatives(state,title,day,time){
   return`<div class="film-alts">
     ${optsHtml||`<div class="scenario-label">${t('plan_no_alts_horario')}.</div>`}
     <div class="scenario-footer">
-      <button class="w-full-sm checkin-result-btn secondary" onclick="_expandedFilm='';renderAgenda()">${t('misc_cerrar')}</button>
+      <button class="w-full-sm checkin-result-btn secondary" data-action="clearExpandedFilm">${t('misc_cerrar')}</button>
     </div>
   </div>`;
 }
@@ -7481,7 +7489,7 @@ function renderContextualHeader(state){
           :src?`<img class="img-cover" src="${src}" loading="lazy" onerror="this.remove()" alt="">`:``}
         <div class="ended-poster-footer">
           ${r?`<div class="label-track-amber">${stars}</div>`
-             :`<button class="ended-rate-btn" onclick="event.stopPropagation();openPostViewRating('${safeT}','','','','')">★</button>`}
+             :`<button class="ended-rate-btn" data-action="openPostViewRating" data-title="${safeT}" data-stop="1">★</button>`}
           <div class="ended-poster-title">${dt}</div>
         </div>
       </div>`;
@@ -7566,9 +7574,9 @@ function renderContextualHeader(state){
       if(delayMins>0){
         delayHtml=`<div class="delay-row">
           <span class="delay-lbl">+${delayMins} min</span>
-          ${[10,15,20,30].map(m=>`<button class="delay-btn" onclick="setDelay('${safeT}','${next.day}','${next.time}',${m})" title="+${m} min">+${m}</button>`).join('')}
-          <button class="delay-clear" onclick="undoDelay('${safeT}','${next.day}','${next.time}')" title="${t('aria_deshacer')}">${ICONS.undo}</button>
-          <button class="delay-clear" onclick="clearDelay('${safeT}','${next.day}','${next.time}')" title="Quitar retraso">${ICONS.x}</button>
+          ${[10,15,20,30].map(m=>`<button class="delay-btn" data-action="setDelay" data-title="${safeT}" data-day="${next.day}" data-time="${next.time}" data-mins="${m}" title="+${m} min">+${m}</button>`).join('')}
+          <button class="delay-clear" data-action="undoDelay" data-title="${safeT}" data-day="${next.day}" data-time="${next.time}" title="${t('aria_deshacer')}">${ICONS.undo}</button>
+          <button class="delay-clear" data-action="clearDelay" data-title="${safeT}" data-day="${next.day}" data-time="${next.time}" title="Quitar retraso">${ICONS.x}</button>
         </div>`;
         // Warning si el retraso come el buffer
         const schedule=savedAgenda&&savedAgenda.schedule||[];
@@ -7591,7 +7599,7 @@ function renderContextualHeader(state){
       }else{
         delayHtml=`<div class="delay-row">
           <span class="delay-lbl">${t('plan_retraso')}</span>
-          ${[10,15,20,30].map(m=>`<button class="delay-btn" onclick="setDelay('${safeT}','${next.day}','${next.time}',${m})" title="Reportar +${m} min">+${m}</button>`).join('')}
+          ${[10,15,20,30].map(m=>`<button class="delay-btn" data-action="setDelay" data-title="${safeT}" data-day="${next.day}" data-time="${next.time}" data-mins="${m}" title="Reportar +${m} min">+${m}</button>`).join('')}
         </div>`;
       }
     }
@@ -7675,7 +7683,7 @@ function renderContextualHeader(state){
         ${getFilmPoster(f)?_posterThumb(f,'prio-chip-poster',null):`<div class="prio-chip-ph">🎬</div>`}
         ${r?`<div class="prio-overlay-label">${stars}</div>`:''}
         ${!r?`<div class="prio-overlay-center">
-          <button class="prio-star-pill" onclick="event.stopPropagation();openPostViewRating('${safeT}','${s.day||''}','${s.time||''}','${(s.venue||'').replace(/'/g,"&#39;")}','${s.duration||''}')">★</button>
+          <button class="prio-star-pill" data-action="openPostViewRating" data-title="${safeT}" data-day="${s.day||''}" data-time="${s.time||''}" data-venue="${(s.venue||'').replace(/"/g,'&quot;')}" data-duration="${s.duration||''}" data-stop="1">★</button>
         </div>`:''}
       </div>`;
     };
@@ -7684,7 +7692,7 @@ function renderContextualHeader(state){
       ?`<span id="eve-films-extra" style="display:none">${allWatched.slice(MAX_VISIBLE).map(mkChip).join('')}</span>`
       :'';
     const verTodas=allWatched.length>MAX_VISIBLE
-      ?`<div class="sim-hdr-pad"><button class="link-gray-xs" onclick="_toggleEveningFilms(this)">${t('misc_ver_todo')} (${allWatched.length})</button></div>`
+      ?`<div class="sim-hdr-pad"><button class="link-gray-xs" data-action="_toggleEveningFilms">${t('misc_ver_todo')} (${allWatched.length})</button></div>`
       :'';
     const dayName=DAY_A[todayScreenings[0]?.day]||'Hoy';
     return`<div class="ctx-header">
@@ -7750,7 +7758,7 @@ function _renderSavedAgendaHTML(state){
 
   // ── CTA B: post-eliminación (temporal, auto-dismiss 6s) ──
   if(_ctaRemovedVisible){
-    html+=`<div class="cta-ctx cta-ctx-b" onclick="switchMainNav('mnav-planner');showAgView()">
+    html+=`<div class="cta-ctx cta-ctx-b" data-action="navTo" data-tab="mnav-planner">
       <div class="flex-center cta-ctx-ico">${ICONS.undo}</div>
       <div class="cta-ctx-body">
         <div class="cta-ctx-title cta-ctx-title-b">${t('plan_otra_cosa')}</div>
@@ -7831,7 +7839,7 @@ function _renderSavedAgendaHTML(state){
             <div class="suggestion-sec">${f.section||''}</div>
             <div class="suggestion-meta">${durFmt(f.duration)}${vc2.short?' · '+vc2.short+(sl?' · '+sl:''):''}</div>
           </div>
-          <button class="suggestion-add" onclick="event.stopPropagation();addSuggestion('${f.title.replace(/'/g,"\\'")}','${f.day}','${f.time}')" style="${f._isRestored?'border-color:var(--amber);color:var(--amber);background:var(--amber-10)':''}">
+          <button class="suggestion-add" data-action="addSuggestion" data-title="${f.title.replace(/"/g,'&quot;')}" data-day="${f.day}" data-time="${f.time}" data-stop="1" style="${f._isRestored?'border-color:var(--amber);color:var(--amber);background:var(--amber-10)':''}">
             ${f._isRestored?`${ICONS.undo} Restaurar`:`${ICONS.plus} ${t('misc_anadir')}`}
           </button>
         </div>`;
@@ -8326,7 +8334,7 @@ function buildResultHTML(scenarios){
       const cls=(isOptimoDot?'ag-nav-dot optimo':'ag-nav-dot')+(isActive?' active':'');
       const label=isOptimoDot?'★':isCustom?'✎':(di).toString();
       const titleStr=isOptimoDot?t('plan_optimo'):isCustom?'Opción personalizada':'Opción '+di;
-      return`<button class="${cls}" onclick="jumpToScenario(${di})" title="${titleStr}">${label}</button>`;
+      return`<button class="${cls}" data-action="jumpToScenario" data-index="${di}" title="${titleStr}">${label}</button>`;
     }).join('');
     navHtml=`<div class="mt-2 ag-nav">${dots}</div>`;
   }
@@ -8399,7 +8407,7 @@ function buildResultHTML(scenarios){
         }
       }
       const includeBtn=canInclude
-        ?`<button class="excl-include-btn" onclick="forceInclude('${safeT}');event.stopPropagation()">+ Incluir</button>`
+        ?`<button class="excl-include-btn" data-action="forceInclude" data-title="${safeT}" data-stop="1">+ Incluir</button>`
         :'';
       const opacity=!screens.length?'opacity:.45;':'';
       return`<div class="int-item js-open-pel" style="${opacity}" data-title="${f.title}">
@@ -8482,7 +8490,7 @@ function showActionToast(msg,actionLabel,actionFn,duration=4000){
   let t=document.getElementById('prio-toast');
   if(!t){t=document.createElement('div');t.id='prio-toast';document.body.appendChild(t);}
   t.className='prio-toast action';
-  t.innerHTML=`<span>${msg}</span><button class="toast-action-btn" onclick="if(_toastActionFn){_toastActionFn();_toastActionFn=null;showToast('','info',100)}">${actionLabel}</button>`;
+  t.innerHTML=`<span>${msg}</span><button class="toast-action-btn" data-action="dismissToastAction">${actionLabel}</button>`;
   t.style.opacity='1';t.style.pointerEvents='all';
   clearTimeout(t._to);t._to=setTimeout(()=>{t.style.opacity='0';t.style.pointerEvents='none';},duration);
 }
@@ -8759,7 +8767,7 @@ function openPrioLimit(newTitle){
           <div class="prio-limit-name">${dt}</div>
           <div class="prio-limit-when">${when}</div>
         </div>
-        <button class="prio-limit-swap" onclick="swapPriority('${safeSwap}','${safeNew}')">Cambiar</button>
+        <button class="prio-limit-swap" data-action="swapPriority" data-rmtitle="${safeSwap}" data-addtitle="${safeNew}">Cambiar</button>
       </div>`;
     }).join('');
     list.innerHTML=items;
@@ -9733,7 +9741,7 @@ function openPelSheet(title){
       const r=filmRatings[item.title]||0;
       const ratingEl=r
         ?`<span class="corto-rating-stars">${starsText(r)}</span>`
-:`<button class="corto-rate-btn" data-title="${item.title||''}" onclick="event.stopPropagation();closePelSheet();setTimeout(()=>openRatingSheet(this.dataset.title),100)">★</button>`;
+:`<button class="corto-rate-btn" data-title="${item.title||''}" data-action="closePelAndRate" data-stop="1">★</button>`;
       return _mkCortoItemHtml(item,n,{
         cls:'pel-sheet-corto-item',
         section:f.section||'',
@@ -9779,15 +9787,15 @@ function openPelSheet(title){
     ${(!f.is_cortos&&!f.is_programa&&f.type!=='event')?lbLink(f.title,f):''}
     <div class="pel-sheet-divider"></div>
     ${inW?`<div class="pel-sheet-ctas-watched">
-        <button data-title="${f.title}" onclick="toggleWatched(this.dataset.title,event);closePelSheet()" class="pel-sheet-action-btn act-on">${ICONS.check} ${t('cta_vista')}</button>
-        ${!f.is_cortos?`<button data-title="${f.title}" onclick="closePelSheet();setTimeout(()=>openRatingSheet(this.dataset.title),100)" class="pel-sheet-action-btn btn-secondary">${ICONS.star} ${filmRatings[f.title]?'Cambiar':t('cta_calificar')}</button>`:``}
+        <button data-title="${f.title}" data-action="toggleWatchedAndClose" class="pel-sheet-action-btn act-on">${ICONS.check} ${t('cta_vista')}</button>
+        ${!f.is_cortos?`<button data-title="${f.title}" data-action="closePelAndRate" class="pel-sheet-action-btn btn-secondary">${ICONS.star} ${filmRatings[f.title]?'Cambiar':t('cta_calificar')}</button>`:``}
       </div>`
     :`<div class="pel-sheet-ctas">
         <button id="pel-wl-btn" class="row-center-xs pel-sheet-action-btn${inWL?' act-on btn-primary':' btn-primary'}" data-title="${f.title}" data-action="togglePelWL">${inWL?ICONS.heartFill:ICONS.heart} ${inWL?t('cta_en_intereses'):t('cta_intereses')}</button>
         <button id="pel-prio-btn" class="row-center-xs pel-sheet-action-btn${inPrio?' act-prio':' btn-secondary'}" data-title="${f.title}" data-action="togglePelPrio">${inPrio?ICONS.starFill:ICONS.star} ${inPrio?t('cta_priorizada'):t('cta_priorizar')}</button>
         <button id="pel-vista-btn" class="row-center-xs pel-sheet-action-btn btn-tertiary" data-title="${f.title}" data-action="toggleWatched">${ICONS.check} ${f.type==='event'?t('cta_asistio'):t('cta_vista')}</button>
       </div>`}
-    ${_inPlan&&activeView==='agenda'?`<button data-title="${f.title}" onclick="closePelSheet();removeFromAgenda(this.dataset.title)" class="pel-sheet-remove-plan">${ICONS.x} ${t('plan_quitar_plan')}</button>`:''}
+    ${_inPlan&&activeView==='agenda'?`<button data-title="${f.title}" data-action="closePelAndRemove" class="pel-sheet-remove-plan">${ICONS.x} ${t('plan_quitar_plan')}</button>`:''}
   `;
   document.getElementById('pel-overlay').classList.add('open');
   _ps.classList.add('open');
@@ -10093,7 +10101,7 @@ function openCortoSheet(title, country, duration, section, flags, director, genr
     <div class="flex-gap1-mt1">
       <button id="corto-wl-btn" class="row-center-xs pel-sheet-action-btn${inWL?' act-on btn-primary':' btn-primary'}" data-title="${parentTitle||title}" data-action="toggleWL">${inWL?ICONS.heartFill:ICONS.heart} ${inWL?t('cta_en_intereses'):t('cta_intereses')}</button>
       <button id="corto-prio-btn" class="row-center-xs pel-sheet-action-btn${inPrio?' act-prio':' btn-secondary'}" data-title="${parentTitle||title}" data-action="togglePelPrio">${inPrio?ICONS.starFill:ICONS.star} ${inPrio?t('cta_priorizada'):t('cta_priorizar')}</button>
-      <button class="row-center-xs pel-sheet-action-btn${filmRatings[title]?' act-on':' btn-secondary'}" data-title="${title}" onclick="closePelSheet();setTimeout(()=>openRatingSheet(this.dataset.title),100)">${ICONS.star} ${filmRatings[title]?'Cambiar':t('cta_calificar')}</button>
+      <button class="row-center-xs pel-sheet-action-btn${filmRatings[title]?' act-on':' btn-secondary'}" data-title="${title}" data-action="closePelAndRate">${ICONS.star} ${filmRatings[title]?'Cambiar':t('cta_calificar')}</button>
     </div>
   `;
   const _psReset2=document.getElementById('pel-sheet');
@@ -10284,7 +10292,7 @@ function renderProgramaChipsHTML(state){
       (_programaChipMatchFn&&chip.match&&_programaChipMatchFn.toString()===chip.match.toString());
     const label=chip.id==='all'?chip.label:`${chip.label}<span class="ml-1 count-badge cb-neutral">${chip.count}</span>`;
     return`<div class="pchip${isOn?' on':''}" data-chip="${chip.id}"
-         onclick="setProgramaChip('${chip.id}')">${label}</div>`;
+         data-action="setProgramaChip" data-chip="${chip.id}">${label}</div>`;
   }).join('');
 }
 // Impure caller (p6b) — muta _currentChips (UI state ephemeral, out-of-roster) + DOM
@@ -10352,7 +10360,7 @@ function renderNoticesBannerHTML(state){
         <div class="notice-banner-label">AVISO DEL FESTIVAL</div>
         <div class="notice-banner-text"><b class="txt-white60-semi">${safeTitle}</b> · <span>${label.toLowerCase()}</span>. ${msg}</div>
       </div>
-      <button class="notice-banner-close" onclick="_dismissNotice('${n.title.replace(/'/g,"\\'")}')">✕</button>
+      <button class="notice-banner-close" data-action="_dismissNotice" data-title="${n.title.replace(/"/g,'&quot;')}">✕</button>
     </div>`;
   }).join('');
 }
@@ -10830,14 +10838,14 @@ function _renderSplashDropdownHTML(state, activeFestId){
   const mkItem=([id,cfg])=>{
     const isActive=id===activeFestId;
     const meta=`${cfg.city} · ${_lang==='en'&&cfg.dates_en?cfg.dates_en:cfg.dates} ${cfg.year||''}`.trim();
-    return`<button class="splash-drop-item${isActive?' selected':''}" data-fest="${id}" role="option" aria-selected="${isActive}" onclick="selectSplashFest('${cfg.name}','${meta}','${id}')">
+    return`<button class="splash-drop-item${isActive?' selected':''}" data-fest="${id}" role="option" aria-selected="${isActive}" data-action="selectSplashFest" data-name="${cfg.name}" data-meta="${meta}">
       <div><div class="splash-drop-item-name">${cfg.name}</div><div class="splash-drop-item-meta">${meta}</div></div>
     </button>`;
   };
   const mkPastItem=([id,cfg])=>{
     const meta=`${cfg.city} · ${_lang==='en'&&cfg.dates_en?cfg.dates_en:cfg.dates} ${cfg.year||''}`.trim();
     const shortLabel=(cfg.shortName||cfg.name.split(' ')[0])+' · '+cfg.year;
-    return`<button class="splash-drop-item past" data-fest="${id}" role="option" aria-selected="false" onclick="_togglePastFest(this,'${cfg.name}','${meta}','${id}')">
+    return`<button class="splash-drop-item past" data-fest="${id}" role="option" aria-selected="false" data-action="_togglePastFest">
       <div><div class="splash-drop-item-name">${shortLabel}</div><div class="splash-drop-item-meta">${meta}</div></div>
       <span class="past-item-chev">${chevSvg}</span>
     </button>`;
@@ -10892,7 +10900,7 @@ function _renderFestivalSelectorHTML(state, activeFestId){
     const isActive=id===activeFestId;
     const meta=`${cfg.city} · ${_lang==='en'&&cfg.dates_en?cfg.dates_en:cfg.dates} ${cfg.year||''}`.trim();
     const dotClass=`fs-fest-dot${isActive?' active':''}`;
-    return`<div class="fs-festival-row" data-fest="${id}" onclick="loadFestival('${id}')">
+    return`<div class="fs-festival-row" data-fest="${id}" data-action="loadFestival">
       <div class="${dotClass}"></div>
       <div class="fs-fest-info">
         <div class="fs-fest-name">${cfg.name}</div>
@@ -10906,11 +10914,11 @@ function _renderFestivalSelectorHTML(state, activeFestId){
     const shortLabel=(cfg.shortName||cfg.name.split(' ')[0])+' · '+cfg.year;
     return`<div class="fs-festival-row past" data-fest="${id}">
       <div class="fs-fest-dot past"></div>
-      <div class="fs-fest-info" onclick="loadFestival('${id}')" style="cursor:pointer;flex:1;min-width:0">
+      <div class="fs-fest-info" data-action="loadFestival" data-fest="${id}" style="cursor:pointer;flex:1;min-width:0">
         <div class="fs-fest-name">${shortLabel}</div>
         <div class="fs-fest-meta">${meta}</div>
       </div>
-      <span class="fs-past-chev" onclick="_togglePastFestRow(this.closest('.fs-festival-row'),'${id}')" style="padding:var(--sp-2);margin:-var(--sp-2);-webkit-tap-highlight-color:transparent">${chevSvg}</span>
+      <span class="fs-past-chev" data-action="_togglePastFestRow" data-fest="${id}" style="padding:var(--sp-2);margin:-var(--sp-2);-webkit-tap-highlight-color:transparent">${chevSvg}</span>
     </div>`;
   }
   let html='';
@@ -12115,7 +12123,7 @@ function _cortoSheetPosterErr(img){
       <input class="pin-display auth-email-inp" id="auth-otp-inp" type="number" placeholder="123456" inputmode="numeric" maxlength="6" onkeydown="if(event.key==='Enter')submitOTP()"><!-- 16px: prevents iOS auto-zoom -->
       <button class="auth-send-btn" data-i18n="av_confirmar" id="auth-otp-btn" data-action="submitOTP">Confirmar</button>
       <div class="auth-msg" id="auth-otp-msg"></div>
-      <span class="auth-cancel" onclick="closeAuthSheet();document.getElementById('auth-sheet-step1').style.display='block';document.getElementById('auth-sheet-step2').style.display='none'" data-i18n="misc_cancelar">Cancelar</span>
+      <span class="auth-cancel" data-action="closeAuthAndReset" data-i18n="misc_cancelar">Cancelar</span>
     </div>
     <div id="auth-sheet-step3" style="display:none">
       <div class="auth-sheet-title" data-i18n="auth_cuenta">Cuenta</div>
