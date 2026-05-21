@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `20d4659 docs: state-mirror spec + plan + tasks (p5.5)`
+> Último commit: `c94e9a2 docs: view-purity-6a spec + plan + tasks + roadmap update (p6a)`
 
 ---
 
@@ -79,6 +79,7 @@ Juan es Product Owner, diseñador y developer. Claude ejecuta; Juan audita y apr
 - `temporal-subsystem/` — fase actual: **tasks**
 - `title-truncation/` — fase actual: **tasks**
 - `venue-warnings/` — fase actual: **tasks**
+- `view-purity-6a/` — fase actual: **tasks**
 
 ---
 

@@ -3935,8 +3935,9 @@ function _buildPosterSVG(o){
   return `data:image/svg+xml,${encodeURIComponent(svg)}`;
 }
 
-function makeProgramPoster(title, duration, section){
-  const filmSec=section||((typeof FILMS!=='undefined'&&FILMS.find(f=>f.title===title))?.section)||'';
+function makeProgramPoster(state, title, duration, section){
+  const {FILMS} = state.snapshot();
+  const filmSec=section||(FILMS.find(f=>f.title===title)?.section)||'';
   const sec=filmSec.toLowerCase();
 
   // ── Paleta de 6 colores canónicos — asignados por hash de sección ──
@@ -4039,11 +4040,11 @@ function getFilmPoster(f){
   const _cn=normKey(f.title||'');
   if(_CUSTOM_N[_cn]) return _CUSTOM_N[_cn];
   // 2. Eventos — siempre poster ámbar generativo (ignora f.poster/TMDB)
-  if(f.type==='event'){const _et=f.is_awards_screening?f.title.replace(/^Award Screening:\s*/i,''):f.title;return f.poster||makeEventPoster(_et,f.duration,f.event_kind,f.section);}
+  if(f.type==='event'){const _et=f.is_awards_screening?f.title.replace(/^Award Screening:\s*/i,''):f.title;return f.poster||makeEventPoster(state,_et,f.duration,f.event_kind,f.section);}
   // 3. Proyección sorpresa
   if(f.title&&f.title.toLowerCase().includes('sorpresa')) return makeSorpresaPoster();
   // 4. Cortos
-  if(f.is_cortos) return f.poster||getPosterSrc(f.title,true)||makeProgramPoster(f.title,f.duration,f.section);
+  if(f.is_cortos) return f.poster||getPosterSrc(f.title,true)||makeProgramPoster(state,f.title,f.duration,f.section);
   // 5. Programa combinado
   if(f.is_programa&&f.film_list&&f.film_list.length){
     const first=f.film_list[0];
@@ -4310,7 +4311,8 @@ function _buildPosterV16({accent, headerLabel, title, num}){
   </svg>`;
   return `data:image/svg+xml,${encodeURIComponent(svg)}`;
 }
-function makeEventPoster(title,duration,eventKind){
+function makeEventPoster(state,title,duration,eventKind,section){
+  const {_activeFestId, _lang} = state.snapshot();
   const festCfg=(FESTIVAL_CONFIG&&FESTIVAL_CONFIG[_activeFestId])||Object.values(FESTIVAL_CONFIG||{})[0]||{};
   const _kindMapES={
     'ponencia':     {accent:'#F59E0B', headerLabel:'PONENCIA'},
@@ -4330,10 +4332,10 @@ function makeEventPoster(title,duration,eventKind){
   const kind=_kindMap[eventKind];
   if(kind) return _buildPosterV16({...kind, title, num:null});
   // Fallback — usa la sección del film si existe, sino eventPosterLabel del config
-  const _secFallback=arguments[3]?_secLabel(arguments[3]):''; // 4th param: f.section
+  const _secFallback=section?_secLabel(section):'';
   const lbl=_secFallback?[_secFallback]:((festCfg.eventPosterLabel)||['EVENTO','']);
   const headerLabel=lbl.filter(Boolean).join(' ');
-  const _sectionAccent=arguments[3]?_sectionColor(arguments[3]):'#6B9BD1';
+  const _sectionAccent=section?_sectionColor(section):'#6B9BD1';
   return _buildPosterV16({accent:_sectionAccent||'#6B9BD1', headerLabel, title, num:null});
 }
 
@@ -4911,7 +4913,7 @@ let FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202605211047';
+const BUILD_VERSION='202605211140';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';
@@ -5031,7 +5033,8 @@ function miPlanNav(dir){
   renderAgenda();
 }
 
-function renderMiPlanCalendar(){
+function renderMiPlanCalendar(state){
+  const {savedAgenda, FILMS, prioritized, FESTIVAL_DATES} = state.snapshot();
   if(!savedAgenda||!savedAgenda.schedule.length) return'';
   const schedule=savedAgenda.schedule;
   const todayStr=simTodayStr();
@@ -5209,7 +5212,7 @@ function renderMiPlanCalendar(){
       const _mphInner=_mp
           ?_posterThumb(_mf,'lb-poster',null)
           :_isEventRow
-            ?`<img class="lb-poster" src="${makeEventPoster(_mf.title,_mf.duration,_mf.event_kind)}" alt="" loading="lazy" onerror="this.remove()">`
+            ?`<img class="lb-poster" src="${makeEventPoster(state,_mf.title,_mf.duration,_mf.event_kind)}" alt="" loading="lazy" onerror="this.remove()">`
             :_posterThumb(_mf,'lb-poster',null);
       const _mph=`<div class="js-open-pel" data-title="${s._title||''}" style="flex-shrink:0;cursor:pointer" onclick="event.stopPropagation()">${_mphInner}</div>`
       listHtml+=`<div class="mplan-row${_rowKey===_activeMiPlanFilm?' active':''}" style="cursor:pointer" data-rkey="${_safeRowKey}" onclick="selectFromDetail(this)">
@@ -6451,7 +6454,7 @@ function filmDisplayTitle(f) {
 // ═══════════════════════════════════════════════════════════════
 // 11 · RENDER — MI AGENDA
 //      renderPrioStrip, renderFilmListHTML, renderSavedAgendaHTML
-//      renderSimPanel, renderNextStrip, renderUnconfirmed
+//      renderSimPanel, renderUnconfirmed
 // ═══════════════════════════════════════════════════════════════
 function renderPrioStrip(){
   if(!prioritized.size) return '';
@@ -6734,7 +6737,7 @@ function mkAgendaRow(s, mode='saved'){
 // opts.ratingEl → HTML del botón de calificación (opcional)
 function _mkCortoItemHtml(item, n, {cls='mplan-prog-item', section='', ratingEl=''}={}){
   // Mismo fallback que openCortoSheet: real → generativo. Nunca emoji.
-  const thumb=getCortoItemPoster(item)||makeProgramPoster(item.title,item.duration||'',section);
+  const thumb=getCortoItemPoster(item)||makeProgramPoster(state,item.title,item.duration||'',section);
   const thumbHtml=`<img src="${thumb}" class="c-film-thumb" loading="lazy" onerror="this.remove()" alt="">`;
   // data-* attrs — nunca interpolar strings con contenido variable en onclick
   const _dt=encodeURIComponent(item.title||'');
@@ -6783,7 +6786,7 @@ function renderSavedAgendaHTML(){
   // try/catch permanente: un error en renderMiPlanCalendar u otras subfunciones
   // causaba que Mi Agenda quedara en blanco sin ningún mensaje de error visible.
   // Este wrapper aísla el fallo y muestra el error en pantalla en lugar de silencio.
-  try{ return _renderSavedAgendaHTML(); }
+  try{ return _renderSavedAgendaHTML(state); }
   catch(err){
     /* renderSavedAgendaHTML error — silent in production */
     return`<div class="error-box">
@@ -6864,95 +6867,8 @@ function selectFromDetail(el){
   renderAgenda();
 }
 
-function renderNextStrip(schedule){
-  if(!schedule||!schedule.length) return'';
-  const now=simNow();
-  const upcoming=schedule
-    .filter(s=>!watched.has(s._title))
-    .map(s=>{
-      const dateStr=FESTIVAL_DATES[s.day];if(!dateStr) return null;
-      const start=_festDate(dateStr,s.time);
-      const dur=parseDur(s.duration);
-      const end=new Date(start.getTime()+dur*60000);
-      return{...s,start,end,startMin:toMin(s.time),endMin:toMin(s.time)+dur};
-    })
-    .filter(Boolean)
-    .sort((a,b)=>a.start-b.start);
-  const nowMs=now.getTime();
-  const nowMin=now.getHours()*60+now.getMinutes();
-  const inProg=upcoming.find(s=>s.start<=now&&s.end>now);
-  const next=upcoming.find(s=>s.start>now);
-  const item=inProg||next;
-  if(!item) return'';
-  // Only show strip if within 59 min of next film (or in progress)
-  if(!inProg){
-    const minsAway=Math.ceil((item.start-now)/60000);
-    if(minsAway>59) return'';
-  }
-  const{displayTitle}=parseProgramTitle(item._title||'');
-  const short=displayTitle.length>30?displayTitle.slice(0,28)+'…':displayTitle;
-  const vc2=vcfg(item.venue),sl=sala(item.venue);
-  const _dk=_delayKey(item);
-  const delayMins=filmDelays[_dk]||0;
-  let label,ico;
-  if(inProg){
-    const effectiveEnd=new Date(item.end.getTime()+delayMins*60000);
-    const leftMin=Math.round((effectiveEnd-now)/60000);
-    label=delayMins>0?`${t('label_en_curso')} · +${delayMins} min ${t('misc_retraso')} · ${t('plan_termina')} ~${minToStr(item.endMin+delayMins)}`:`${t('label_en_curso')} · ${t('plan_termina_en')} ${leftMin} min`;ico=ICONS.play;
-  } else {
-    const mins=Math.ceil((item.start-now)/60000);
-    label=mins<60?`En ${mins} min`:`En ${Math.floor(mins/60)}h${mins%60?` ${mins%60}min`:''}`;ico=ICONS.clock;
-  }
-
-  // ── Botones de retraso (solo cuando está en curso) ──
-  let delayHtml='';
-  if(inProg){
-    const safeT=(item._title||'').replace(/'/g,"&#39;");
-    if(delayMins>0){
-      delayHtml=`<div class="delay-row">
-        <span class="delay-lbl">+${delayMins} min</span>
-        ${[10,15,20,30].map(m=>`<button class="delay-btn" onclick="setDelay('${safeT}','${item.day}','${item.time}',${m})" title="+${m} min">+${m}</button>`).join('')}
-        <button class="delay-clear" onclick="undoDelay('${safeT}','${item.day}','${item.time}')" title="${t('aria_deshacer')}">${ICONS.undo}</button>
-        <button class="delay-clear" onclick="clearDelay('${safeT}','${item.day}','${item.time}')" title="Quitar retraso">${ICONS.x}</button>
-      </div>`;
-    } else {
-      delayHtml=`<div class="delay-row">
-        <span class="delay-lbl">${t('plan_retraso')}</span>
-        ${[10,15,20,30].map(m=>`<button class="delay-btn" onclick="setDelay('${safeT}','${item.day}','${item.time}',${m})" title="Reportar +${m} min">+${m}</button>`).join('')}
-      </div>`;
-    }
-  }
-
-  // ── Advertencia si el retraso come el buffer hacia la siguiente función ──
-  let warnHtml='';
-  if(inProg&&delayMins>0&&next&&next.day===item.day){
-    const effectiveEndMin=item.endMin+delayMins;
-    const travel=travelMins(item.venue,next.venue);
-    const needed=effectiveEndMin+FESTIVAL_BUFFER+travel;
-    const nextStart=toMin(next.time);
-    const margin=nextStart-needed;
-    if(margin<0){
-      const{displayTitle:nt}=parseProgramTitle(next._title||'');
-      const nShort=nt.length>26?nt.slice(0,24)+'…':nt;
-      warnHtml=`<div class="delay-warn"><span class="delay-warn-ico">${ICONS.alert}</span><span>Con el retraso terminas ~${minToStr(effectiveEndMin)}. Solo quedan <b>${nextStart-effectiveEndMin} min</b> antes de <b>${nShort}</b>${travel>0?` (${travel} min de viaje)`:''}.</span></div>`;
-    } else if(margin<15){
-      const{displayTitle:nt}=parseProgramTitle(next._title||'');
-      const nShort=nt.length>26?nt.slice(0,24)+'…':nt;
-      warnHtml=`<div class="delay-warn warn-amber"><span class="delay-warn-ico">${ICONS.alert}</span><span>Terminas ~${minToStr(effectiveEndMin)}. Margen ajustado: <b>${margin} min</b> hasta <b>${nShort}</b>.</span></div>`;
-    }
-  }
-
-  return`<div class="next-film-strip${inProg?' now':''}">
-    <div class="next-film-ico">${ico}</div>
-    <div class="next-film-info">
-      <div class="next-film-countdown">${label}</div>
-      <div class="next-film-title">${short}</div>
-      <div class="next-film-venue">${ICONS.pin} ${vc2.short}${sl?' · '+sl:''}</div>
-    </div>
-  </div>${delayHtml}${warnHtml}`;
-}
-
-function renderUnconfirmed(schedule){
+function renderUnconfirmed(state,schedule){
+  const {watched, FESTIVAL_DATES} = state.snapshot();
   const now=simNow();
   const past=schedule.filter(s=>{
     if(watched.has(s._title)) return false;
@@ -7009,7 +6925,7 @@ function renderUnconfirmed(schedule){
 
 // ═══════════════════════════════════════════════════════════════
 // 12 · RENDER — PLANEAR
-//      toggleFilmAlternatives, renderFilmAlternatives, renderGapOptions
+//      toggleFilmAlternatives, renderFilmAlternatives
 //      toggleArchive, runCalc, saveCurrentScenario, renderAgenda
 // ═══════════════════════════════════════════════════════════════
 function toggleFilmAlternatives(key,title,day,time){
@@ -7101,47 +7017,6 @@ function confirmReplace(removedTitle,newTitle,day,time){
   },50);
 }
 
-function renderGapOptions(gapStartMin,gapEndMin,todayKey,removedTitle){
-  removedTitle=removedTitle||'';
-  const plannedTitles=new Set(savedAgenda?savedAgenda.schedule.map(s=>s._title):[]);
-  const now=simNow();const nowMin=now.getHours()*60+now.getMinutes();
-  // Only apply in-progress logic if todayKey matches the actual current festival day
-  const realTodayKey=DAY_KEYS.find(d=>FESTIVAL_DATES[d]===simTodayStr());
-  const isLiveDay=realTodayKey===todayKey;
-  const MIN_REMAINING=20;
-  const safeRem=removedTitle.replace(/'/g,"&#39;");
-  const opts=FILMS.filter(f=>{
-    if(f.day!==todayKey) return false;
-    if(isScreeningBlocked(f)) return false;
-    if(plannedTitles.has(f.title)&&f.title!==removedTitle) return false;
-    if(f.title===removedTitle) return false;
-    if(watched.has(f.title)) return false;
-    const fStart=toMin(f.time),fEnd=fStart+parseDur(f.duration);
-    const inProgress=isLiveDay&&fStart<nowMin&&fEnd>nowMin;
-    if(inProgress) return (fEnd-nowMin)>=MIN_REMAINING&&fEnd<=gapEndMin;
-    return fStart>=gapStartMin&&fEnd<=gapEndMin;
-  }).sort((a,b)=>{
-    const aStart=toMin(a.time),bStart=toMin(b.time);
-    const aFuture=!isLiveDay||aStart>=nowMin,bFuture=!isLiveDay||bStart>=nowMin;
-    if(aFuture&&!bFuture) return -1;
-    if(!aFuture&&bFuture) return 1;
-    if(aFuture&&bFuture) return aStart-bStart;
-    return(bStart+parseDur(b.duration))-(aStart+parseDur(a.duration));
-  }).slice(0,4);
-  if(!opts.length) return`<div class="sim-section-hdr">${t('plan_empty_hueco')}</div>`;
-  return opts.map(f=>{
-    const vc2=vcfg(f.venue);const{displayTitle}=parseProgramTitle(f.title);
-    const short=displayTitle.length>26?displayTitle.slice(0,24)+'…':displayTitle;
-    const safeT=f.title.replace(/'/g,"&#39;").replace(/"/g,'&quot;');
-    const fStart=toMin(f.time);const inProg=isLiveDay&&fStart<nowMin;
-    const minsIn=inProg?nowMin-fStart:0;
-    const badge=inProg?`<span class="label-confirmed">${t('plan_en_curso')} ${minsIn} min</span>`:'';
-    return`<div class="checkin-opt" onclick="confirmReplace('${safeRem}','${safeT}','${f.day}','${f.time}')">
-      <div class="checkin-opt-info">${badge}<div class="checkin-opt-time">${f.time} · ${durFmt(f.duration)}</div><div class="checkin-opt-title">${short}</div><div class="checkin-opt-venue">${ICONS.pin} ${vc2.short}</div></div>
-      <div class="checkin-opt-add">${ICONS.plus}</div>
-    </div>`;
-  }).join('');
-}
 // ─────────────────────────────────────────────────────────────
 // HEADER CONTEXTUAL DE MI PLAN
 // Responde: ¿Qué hago ahora? Cambia según el momento del festival.
@@ -7260,7 +7135,8 @@ function _getFestivalPhase(){
   return{phase:'next',next,minsUntil,isNow:active.length>0};
 }
 
-function renderContextualHeader(){
+function renderContextualHeader(state){
+  const {savedAgenda, FILMS, watched, prioritized, filmRatings, filmDelays, _activeFestId, _lang} = state.snapshot();
   const ph=_getFestivalPhase();
   if(!ph) return '';
   const DAY_A={Martes:'MAR',Miércoles:'MIÉ',Jueves:'JUE',Viernes:'VIE',Sábado:'SÁB',Domingo:'DOM'};
@@ -7410,7 +7286,7 @@ function renderContextualHeader(){
         ${src
           ?`<img class="ctx-next-poster" src="${src}" data-title="${(next._title||'').replace(/"/g,'&quot;')}" onerror="_posterErr(this)" alt="" loading="lazy">`
           :_isEvent
-            ?makeEventPoster(next._title,next.duration,_filmObj?.event_kind).replace('<svg','<svg class="bg-surf-3 poster-sm ctx-next-poster"')
+            ?makeEventPoster(state,next._title,next.duration,_filmObj?.event_kind).replace('<svg','<svg class="bg-surf-3 poster-sm ctx-next-poster"')
             :`<div class="ctx-next-poster"></div>`}
         <div style="flex:1;min-width:0">
           <div class="ctx-next-title-row">
@@ -7506,11 +7382,12 @@ function renderContextualHeader(){
   return '';
 }
 
-function _renderSavedAgendaHTML(){
+function _renderSavedAgendaHTML(state){
+  const {savedAgenda, FILMS, watched, _activeFestId, FESTIVAL_DATES} = state.snapshot();
   if(festivalEnded()){
     // Con películas vistas: poster grid via renderContextualHeader
     if(watched.size>0){
-      const _eh=renderContextualHeader();
+      const _eh=renderContextualHeader(state);
       return _eh?`<div class="saved-agenda">${_eh}</div>`:'';
     }
     // Sin películas vistas: empty state canónico
@@ -7544,9 +7421,9 @@ function _renderSavedAgendaHTML(){
     </div>
   </div>`:'';
 
-  const _ctxHeader=renderContextualHeader();
+  const _ctxHeader=renderContextualHeader(state);
   const _nextStrip=''; // delay controls integrated into ctx-header
-  const _unconfirmed=renderUnconfirmed(all);
+  const _unconfirmed=renderUnconfirmed(state,all);
   let html=`<div class="saved-agenda">
     ${_ctxHeader}
     ${progressBar}
@@ -7564,7 +7441,7 @@ function _renderSavedAgendaHTML(){
     </div>`;
   }
 
-    html+=renderMiPlanCalendar();
+    html+=renderMiPlanCalendar(state);
 
   if(archive.length||watchedOutsidePlan.length){
     const totalWatched=archive.length+watchedOutsidePlan.length;
@@ -9846,7 +9723,7 @@ function openCortoSheet(title, country, duration, section, flags, director, genr
     ?`<div class="psp-editorial"><div class="psp-ed-hdr" style="background:${_sectionColor(section||'')}"><span>${_secLabel(section||'').toUpperCase()}</span></div><div class="psp-ed-img"><img src="${posterUrl}" loading="lazy" onerror="this.parentElement.style.display='none'" alt=""></div></div>`
     :posterUrl
       ?`<img class="pel-sheet-poster" src="${posterUrl}" data-title="${(title||"").replace(/"/g,'&quot;')}" loading="lazy" onerror="_cortoSheetPosterErr(this)" alt="">`
-      :`<img class="pel-sheet-poster" src="${makeProgramPoster(title,dur,section||'')||''}" alt="" loading="lazy">`;
+      :`<img class="pel-sheet-poster" src="${makeProgramPoster(state,title,dur,section||'')||''}" alt="" loading="lazy">`;
   const ps=document.getElementById('pel-sheet');
   if(ps) ps.scrollTop=0;
   _pushSheetState();
@@ -9922,7 +9799,7 @@ function renderMiPlanList(schedule){
           ${src
             ?`<img class="mplan-list-poster" src="${src}" data-title="${(s._title||"").replace(/"/g,'&quot;')}" loading="lazy" onerror="_posterErr(this)" alt="" style="${isPassed?'opacity:.35':''}">`
             :_lIsEvent
-              ?makeEventPoster(_lmf.title,_lmf.duration,_lmf.event_kind).replace('<svg','<svg class="block-shrink mplan-list-poster"')
+              ?makeEventPoster(state,_lmf.title,_lmf.duration,_lmf.event_kind).replace('<svg','<svg class="block-shrink mplan-list-poster"')
               :`<div class="mplan-list-poster"></div>`}
           <div class="mplan-list-info">
             <div class="mplan-list-title" style="${isPassed?'opacity:.35':''}">${dt}</div>
@@ -10332,7 +10209,7 @@ function _renderExploreLista(){
     const days=[...new Set(screenings.map(s=>dayLabel(s.day)||s.day))].join(' · ');
     const daysHtml=_dayChips(screenings);
     if(isEvent) return`<div class="plist-item plist-event js-open-pel" style="${allPast?'opacity:.35':''}" data-title="${f.title}">
-      <img class="plist-poster" src="${makeEventPoster(dt,f.duration,f.event_kind)}" alt="${dt}" loading="lazy">
+      <img class="plist-poster" src="${makeEventPoster(state,dt,f.duration,f.event_kind)}" alt="${dt}" loading="lazy">
       <div class="plist-info">
         <div class="plist-title">${dt}</div>
         <div class="plist-meta">${days?`${daysHtml} · `:''}${durFmt(f.duration)}</div>
@@ -11833,8 +11710,8 @@ function _posterGenFallback(img, f){
   if(!f){ img.style.display='none'; return; }
   let gen;
   if(f.title&&f.title.toLowerCase().includes('sorpresa')) gen=makeSorpresaPoster();
-  else if(f.type==='event') gen=makeEventPoster(f.title,f.duration,f.event_kind);
-  else if(f.is_cortos) gen=makeProgramPoster(f.title,f.duration,f.section);
+  else if(f.type==='event') gen=makeEventPoster(state,f.title,f.duration,f.event_kind);
+  else if(f.is_cortos) gen=makeProgramPoster(state,f.title,f.duration,f.section);
   else gen=_buildPosterV16({
     accent: _sectionColor(f.section||''),
     headerLabel: _secLabel(f.section||'')||'FESTIVAL',

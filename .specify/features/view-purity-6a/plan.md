@@ -226,6 +226,9 @@ function renderContextualHeader(state) {
 }
 ```
 
+Nota: NO incluye FESTIVAL_DATES (spec previa lo listaba erróneamente — auditoría
+de paso 3 lo confirmó).
+
 ## 3. Validate check `[view-purity]`
 
 ### 3.1 Detector

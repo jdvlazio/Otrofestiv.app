@@ -57,7 +57,7 @@ primer param) y la fuente de lectura (snapshot vs global directo).
 | 4 | `renderUnconfirmed(schedule)` | 52 | watched, FESTIVAL_DATES | renderAgenda |
 | 5 | `renderGapOptions(gapStartMin, gapEndMin, todayKey, removedTitle)` | 40 | savedAgenda, FILMS, watched, FESTIVAL_DATES | renderAgenda (gap suggestion) |
 | 6 | `_renderSavedAgendaHTML()` | 144 | savedAgenda, FILMS, watched, _activeFestId, FESTIVAL_DATES | shareAsImage (export) |
-| 7 | `renderContextualHeader()` | 244 | savedAgenda, FILMS, watched, prioritized, filmRatings, filmDelays, _activeFestId, _lang | renderAgenda |
+| 7 | `renderContextualHeader()` | 244 | FILMS, _activeFestId, _lang, filmDelays, filmRatings, prioritized, savedAgenda, watched (8 globals) | renderAgenda |
 | 8 | `renderMiPlanCalendar()` | 220 | savedAgenda, FILMS, prioritized, FESTIVAL_DATES | renderAgenda |
 
 **Total:** ~860 líneas de View afectadas.
