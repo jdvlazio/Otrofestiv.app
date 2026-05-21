@@ -631,7 +631,10 @@ for i, line in enumerate(lines_html, 1):
     # Si es un botón o elemento de acción, ignorar
     if any(exc in line for exc in CARD_EXCLUSIONS):
         continue
-    if '<button' in line or 'onclick=' in line and 'event.stopPropagation' in line:
+    if '<button' in line or ('onclick=' in line and 'event.stopPropagation' in line):
+        continue
+    # Post-7c: si tiene data-action, el delegated listener resuelve el handler explícitamente
+    if 'data-action=' in line:
         continue
     # Extraer clase para mejor reporte
     cls_match = _re2.search(r'class="([^"]{1,60})"', line)
