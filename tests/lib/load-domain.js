@@ -87,6 +87,56 @@ function extractFunction(source, name) {
   return null;
 }
 
+// Returns the source of `const NAME = { ... };` from `source`, or null.
+// Walks braces from the opening `{` after `=` while skipping strings and
+// comments. Captures the trailing `;` if present.
+// Same caveats as extractFunction: does NOT detect regex literals; callers
+// should not ask for objects whose body contains regex with unbalanced braces.
+function extractObject(source, name) {
+  const re = new RegExp(`\\bconst\\s+${name}\\s*=\\s*\\{`);
+  const m = source.match(re);
+  if (!m) return null;
+  const start = m.index;
+  let i = start + m[0].length - 1; // points to '{'
+  let depth = 0;
+  while (i < source.length) {
+    const c = source[i], n = source[i + 1];
+    if (c === '/' && n === '*') {
+      i += 2;
+      while (i < source.length - 1 && !(source[i] === '*' && source[i + 1] === '/')) i++;
+      i += 2;
+      continue;
+    }
+    if (c === '/' && n === '/') {
+      while (i < source.length && source[i] !== '\n') i++;
+      continue;
+    }
+    if (c === '"' || c === "'" || c === '`') {
+      const q = c;
+      i++;
+      while (i < source.length) {
+        if (source[i] === '\\') { i += 2; continue; }
+        if (source[i] === q) { i++; break; }
+        i++;
+      }
+      continue;
+    }
+    if (c === '{') depth++;
+    else if (c === '}') {
+      depth--;
+      if (depth === 0) {
+        let end = i + 1;
+        // Capture optional trailing `;`
+        while (end < source.length && /\s/.test(source[end])) end++;
+        if (source[end] === ';') end++;
+        return source.slice(start, end);
+      }
+    }
+    i++;
+  }
+  return null;
+}
+
 const DEFAULT_FNS = [
   'toMin', 'parseDur', 'effectiveDuration',
   '_resolveVenue', 'venueTravelMins', 'travelMins',
@@ -103,6 +153,7 @@ const DEFAULT_FNS = [
 function loadDomain(opts = {}) {
   const globals = opts.globals || {};
   const fns = opts.functions || DEFAULT_FNS;
+  const objects = opts.objects || [];
   const source = readScripts();
 
   // Functions whose names appear in `globals` are OVERRIDDEN by the global —
@@ -111,17 +162,26 @@ function loadDomain(opts = {}) {
   // resolve to the stub via closure.
   const fnsToDeclare = fns.filter(name => !(name in globals));
 
-  const declarations = fnsToDeclare.map(name => {
+  const fnDeclarations = fnsToDeclare.map(name => {
     const fn = extractFunction(source, name);
     if (!fn) throw new Error(`Function not found in index.html: ${name}`);
     return fn;
   }).join('\n\n');
 
+  const objDeclarations = objects.map(name => {
+    const obj = extractObject(source, name);
+    if (!obj) throw new Error(`Object not found in index.html: ${name}`);
+    return obj;
+  }).join('\n\n');
+
+  const declarations = fnDeclarations + (objDeclarations ? '\n\n' + objDeclarations : '');
+
   const globalDecls = Object.keys(globals)
     .map(k => `let ${k} = __g[${JSON.stringify(k)}];`)
     .join('\n');
 
-  const returnObj = '{' + fns.join(', ') + '}';
+  const returnNames = [...fns, ...objects];
+  const returnObj = '{' + returnNames.join(', ') + '}';
   const src = `(function (__g) {\n${globalDecls}\n${declarations}\nreturn ${returnObj};\n})`;
 
   // eslint-disable-next-line no-eval
@@ -129,4 +189,4 @@ function loadDomain(opts = {}) {
   return factory(globals);
 }
 
-module.exports = { loadDomain, extractFunction };
+module.exports = { loadDomain, extractFunction, extractObject };

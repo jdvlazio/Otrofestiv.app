@@ -39,8 +39,8 @@ encapsulación.**
 | `savedAgenda` | `{festKey}saved` | object\|null | identity |
 | `availability` | `{festKey}av3` | object | identity |
 | `lastRemovedSlots` | `{festKey}lastslot` | array | identity |
-| `filmDelays` | `{festKey}delays` (TBD) | object | identity |
-| `_dismissedNotices` | `{festKey}dismissed_notices` (TBD) | Set<string> | Array ↔ Set |
+| `filmDelays` | `{festKey}delays` | object | identity |
+| viewmodes (miPlan + intereses) | `{festKey}viewmodes` | object | identity |
 
 | Global key (NO festival prefix) | Storage key | Tipo |
 |---|---|---|
@@ -48,7 +48,15 @@ encapsulación.**
 | Language | `otrofestiv_lang` | string |
 | Build version | `otrofestiv_build` | string |
 
-(Las claves marcadas TBD se confirman en el paso 7 — inventario de callsites.)
+**Nota de scope** (confirmado en paso 5 al diseñar):
+- `_dismissedNotices` (`let` en línea 9831) es in-memory only — NO se persiste a localStorage en el código actual. Excluido del adapter (no necesita encapsulación).
+- `viewmodes` (`{miPlan, intereses}`) sí está persistido (`{festKey}viewmodes`, líneas 5030, 9583, 9634). Incluido en lugar de `_dismissedNotices`.
+
+Otras claves de localStorage que **NO** son parte del scope (excluidas deliberadamente):
+- `otrofestiv_hint_cambiar` — flag de onboarding one-shot
+- `otrofestiv_display_name` — feature Supabase, scope separado
+- TMDB poster cache (`orf_poster_v1_*`) — caches dinámicos, no user state
+- Build version cache (manejado por SW update logic, scope separado)
 
 ### Diseño del namespace
 
