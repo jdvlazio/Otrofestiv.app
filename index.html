@@ -4913,7 +4913,7 @@ let FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202605211140';
+const BUILD_VERSION='202605211231';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';
@@ -5229,7 +5229,7 @@ function renderMiPlanCalendar(state){
         <div class="col-end">
           <button class="icon-btn-circle ag-fi-btn del" data-rmt="${safeT}" onclick="removeFromAgenda(this.dataset.rmt);event.stopPropagation()">${ICONS.x}</button>
         </div>
-      </div>${_expandedFilm===(s._title||'')+(s.day||'')+(s.time||'')?`<div class="film-alts">${renderFilmAlternatives(s._title,s.day,s.time)}</div>`:''}${(()=>{const _mf=FILMS.find(fi=>fi.title===s._title&&fi.day===s.day&&fi.time===s.time);if(!_mf||!_mf.is_cortos||!_mf.film_list||!_mf.film_list.length) return'';return`<div class="mplan-prog-list">${_mf.film_list.map((item,n)=>_mkCortoItemHtml(item,n,{section:_mf.section||''})).join('')}</div>`;})()}`;
+      </div>${_expandedFilm===(s._title||'')+(s.day||'')+(s.time||'')?`<div class="film-alts">${renderFilmAlternatives(state,s._title,s.day,s.time)}</div>`:''}${(()=>{const _mf=FILMS.find(fi=>fi.title===s._title&&fi.day===s.day&&fi.time===s.time);if(!_mf||!_mf.is_cortos||!_mf.film_list||!_mf.film_list.length) return'';return`<div class="mplan-prog-list">${_mf.film_list.map((item,n)=>_mkCortoItemHtml(item,n,{section:_mf.section||''})).join('')}</div>`;})()}`;
     });
   }
   listHtml+='</div>';
@@ -5802,8 +5802,10 @@ function removeBlock(day,fromVal,toVal){
   cachedResult=null;saveAV();renderAvBlocks();invalidateCalcResult();
   _checkRecalcOpportunity();
 }
-function renderAvDay(day){
-  const row=document.getElementById(`av-row-${day}`);if(!row) return;
+// Pure half (p6b) — innerHTML del row del día. NO incluye className ni post-
+// render defaults (esos quedan en el impure caller porque son DOM ops).
+function renderAvDayHTML(state, day){
+  const {availability} = state.snapshot();
   const fullBlocked=isFullDayBlocked(day);
   const visibleBlocks=availability[day].blocks.filter(b=>!(toMin(b.from)<=0&&toMin(b.to)>=toMin('23:59')));
   const hasAny=fullBlocked||visibleBlocks.length>0;
@@ -5823,8 +5825,7 @@ function renderAvDay(day){
       <button class="av-plus-btn" onclick="avAddOpen['${day}']=false;renderAvDay('${day}')">${ICONS.x}</button>
     </div>`:'';
 
-  const isPast=dayFullyPassed(day);row.className=`av-row${isPast?' av-past':''}${fullBlocked?' av-full':''}`;
-  row.innerHTML=`
+  return `
     <div class="av-row-lbl">
       <div class="av-row-dayname">${DAY_ABBR[day]}</div>
       <div class="av-row-date${hasAny?' wk-has':''}">${DAY_NUM[day]}</div>
@@ -5839,8 +5840,16 @@ function renderAvDay(day){
         </button>`:''}
       </div>
     </div>`;
+}
+// Impure caller (p6b) — className + innerHTML + post-render select defaults
+function renderAvDay(day){
+  const row=document.getElementById(`av-row-${day}`);if(!row) return;
+  const fullBlocked=isFullDayBlocked(day);
+  const isPast=dayFullyPassed(day);
+  row.className=`av-row${isPast?' av-past':''}${fullBlocked?' av-full':''}`;
+  row.innerHTML=renderAvDayHTML(state, day);
   // Set default values for selects after render
-  if(addOpen){
+  if(avAddOpen[day]){
     const sf=document.getElementById(`av-from-${day}`);
     const st=document.getElementById(`av-to-${day}`);
     if(sf) sf.value='12:00';
@@ -6454,9 +6463,10 @@ function filmDisplayTitle(f) {
 // ═══════════════════════════════════════════════════════════════
 // 11 · RENDER — MI AGENDA
 //      renderPrioStrip, renderFilmListHTML, renderSavedAgendaHTML
-//      renderSimPanel, renderUnconfirmed
+//      renderUnconfirmed
 // ═══════════════════════════════════════════════════════════════
-function renderPrioStrip(){
+function renderPrioStrip(state){
+  const {FILMS, PRIO_LIMIT, prioritized} = state.snapshot();
   if(!prioritized.size) return '';
   const chips=[...prioritized].map(title=>{
     const f=FILMS.find(fi=>fi.title===title);
@@ -6483,13 +6493,13 @@ function renderPrioStrip(){
 // ── Intereses — collapse/expand secciones ────────────────────────────────
 // section headers — sin toggle, siempre visibles
 
-// Preserva el estado colapsado al re-renderizar la lista de Intereses
+// Preserva el estado colapsado al re-renderizar la lista de Intereses.
+// Post-p6b: delega en _rerenderFilmList que también actualiza pill counts.
 function _reRenderIntereses(){
-  const lel=document.getElementById('ag-film-list');
-  if(!lel) return;
-  lel.innerHTML=renderFilmListHTML();
+  _rerenderFilmList();
 }
-function renderFilmListHTML(){
+function renderFilmListHTML(state){
+  const {FILMS, FESTIVAL_DATES, filmRatings, PRIO_LIMIT, prioritized, savedAgenda, watched, watchlist} = state.snapshot();
   const prioList=[...prioritized].filter(titleStr=>!watched.has(titleStr));
   const nonPrioList=[...watchlist].filter(titleStr=>!watched.has(titleStr)&&!prioritized.has(titleStr));
   const watchedList=[...watched];
@@ -6653,7 +6663,22 @@ function renderFilmListHTML(){
     <div>${_sortedW.map(_mkItemWatched).join('')}</div>`;
   }
 
-  // Actualizar counts en pills de navegación
+  return html;
+}
+// Impure caller (p6b) — commit a DOM + update pill counts post-render.
+// renderFilmListHTML mantuvo su nombre original (ya tenía suffix HTML) como
+// la pure half. _rerenderFilmList es el nuevo impure caller. Asimetría
+// documentada en plan §1.2.
+function _rerenderFilmList(){
+  const lel=document.getElementById('ag-film-list');
+  if(!lel) return;
+  lel.innerHTML=renderFilmListHTML(state);
+  // Recompute pill counts — filter sobre Sets, O(n) trivial. Mismo cálculo
+  // que la pure half hace; se duplica para mantener purity de renderFilmListHTML.
+  const {prioritized, watched, watchlist, PRIO_LIMIT} = state.snapshot();
+  const prioList=[...prioritized].filter(titleStr=>!watched.has(titleStr));
+  const nonPrioList=[...watchlist].filter(titleStr=>!watched.has(titleStr)&&!prioritized.has(titleStr));
+  const watchedList=[...watched];
   setTimeout(()=>{
     const _pp=document.getElementById('pill-prio-cnt');if(_pp) _pp.textContent=prioList.length?`${prioList.length}/${PRIO_LIMIT}`:'—';
     const _pi=document.getElementById('pill-int-cnt');if(_pi) _pi.textContent=nonPrioList.length?String(nonPrioList.length):'—';
@@ -6662,8 +6687,6 @@ function renderFilmListHTML(){
     document.getElementById('pill-int')?.style.setProperty('display',nonPrioList.length?'inline-flex':'none');
     document.getElementById('pill-yv')?.style.setProperty('display',watchedList.length?'inline-flex':'none');
   },0);
-
-  return html;
 }
 
 
@@ -6712,7 +6735,7 @@ function mkAgendaRow(s, mode='saved'){
   const switchBtn=mode==='saved'&&!isDone
     ?`<button class="film-switch${isExpanded?' open':''}" onclick="toggleFilmAlternatives('${filmKey}','${safeT}','${s.day||''}','${s.time||''}');event.stopPropagation()">Cambiar</button>`
     :'';
-  const altsHtml=isExpanded&&mode==='saved'?renderFilmAlternatives(title,s.day,s.time):'';
+  const altsHtml=isExpanded&&mode==='saved'?renderFilmAlternatives(state,title,s.day,s.time):'';
   const _progBtn=(()=>{const _mf=f;if(!_mf||!_mf.is_cortos||!_mf.film_list||!_mf.film_list.length)return'';return`<button class="row-xs mplan-prog-toggle" onclick="toggleMplanProg(this,event)">${ICONS.chevronR} ${t('label_programa')}</button>`;})();
   const _progList=(()=>{const _mf=f;if(!_mf||!_mf.is_cortos||!_mf.film_list||!_mf.film_list.length)return'';return`<div class="mplan-prog-list">${_mf.film_list.map((item,n)=>_mkCortoItemHtml(item,n,{section:_mf.section||''})).join('')}</div>`;})();
   return`<div class="saved-item${isDone?' done':''}">
@@ -6781,7 +6804,7 @@ function openCortoSheetFromEl(el,e){
   );
 }
 
-function renderSavedAgendaHTML(){
+function renderSavedAgendaHTML(state){
   // ⚠️ FIX CRÍTICO — NO REMOVER (Apr 2026)
   // try/catch permanente: un error en renderMiPlanCalendar u otras subfunciones
   // causaba que Mi Agenda quedara en blanco sin ningún mensaje de error visible.
@@ -6815,19 +6838,6 @@ function checkinNoLaVi(title){
 function _simFestStart(){const k=DAY_KEYS[0];const d=FESTIVAL_DATES[k];return d?new Date(d+'T09:00:00'):new Date();}
 function _simFestEnd(){return FESTIVAL_END||new Date();}
 const _SIM_TOTAL=()=>((_simFestEnd()-_simFestStart())/60000)||1;
-function renderSimPanel(){
-  const cur=_simTime?new Date(_simTime):null;
-  const _ss=_simFestStart(),_st=_SIM_TOTAL();
-  const label=cur?cur.toLocaleString(_lang==='en'?'en-US':'es',{weekday:'short',day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'}):'Tiempo real';
-  const pct=cur?Math.round(Math.max(0,Math.min(_st,(cur-_ss)/60000))/_st*1000):0;
-  return`<div class="sim-panel">
-    <label>🔧 Simular</label>
-    <input type="range" id="sim-slider" min="0" max="1000" value="${pct}"
-      oninput="updateSimLabel(this.value)" onchange="applySimTime(this.value)">
-    <span id="sim-label">${label}</span>
-    <button onclick="applySimTime(null)">Real</button>
-  </div>`;
-}
 function updateSimLabel(val){
   const d=new Date(_simFestStart().getTime()+Math.round(val/1000*_SIM_TOTAL())*60000);
   const el=document.getElementById('sim-label');
@@ -6938,7 +6948,8 @@ function toggleFilmAlternatives(key,title,day,time){
   renderAgenda();
 }
 
-function renderFilmAlternatives(title,day,time){
+function renderFilmAlternatives(state,title,day,time){
+  const {FILMS, watched, savedAgenda} = state.snapshot();
   const fStart=toMin(time);
   const safeT=title.replace(/'/g,"&#39;");
   const plannedTitles=new Set(savedAgenda?savedAgenda.schedule.map(s=>s._title):[]);
@@ -8720,10 +8731,11 @@ function jumpToScenario(idx){
 }
 
 
-function renderFlowProgress(activeTab){
+function renderFlowProgress(state,activeTab){
   // activeTab: qué tab está activo ahora ('cartelera'|'seleccion'|'planner'|'miplan')
   // Paso activo = tab actual. ✓ solo cuando hay plan guardado.
   // Escalable: misma lógica para cualquier festival.
+  const {savedAgenda} = state.snapshot();
   const hasPlan=savedAgenda&&savedAgenda.schedule&&savedAgenda.schedule.length>0;
   const tabStep={'cartelera':0,'seleccion':1,'planner':2,'miplan':3};
   const currentStep=tabStep[activeTab]||1;
@@ -8826,7 +8838,7 @@ function renderAgenda(){
       return;
     }
     // ── Mi Lista: buscador + lista de películas ──
-    const _progressHtml=(!savedAgenda||!savedAgenda.schedule||!savedAgenda.schedule.length)?renderFlowProgress('seleccion'):'';
+    const _progressHtml=(!savedAgenda||!savedAgenda.schedule||!savedAgenda.schedule.length)?renderFlowProgress(state,'seleccion'):'';
     view.innerHTML=`${_progressHtml}
       <div class="ag-section">
         <div id="ag-film-list">${renderFilmListHTML()}</div>
@@ -8834,8 +8846,8 @@ function renderAgenda(){
 
   } else if(activeMNav==='mnav-miplan'){
     // ── Mi Plan: stepper de progreso + calendario + sugerencias ──
-    const _progressHtmlPlan=(!festivalEnded()&&(!savedAgenda||!savedAgenda.schedule||!savedAgenda.schedule.length))?renderFlowProgress('miplan'):'';
-    view.innerHTML=_progressHtmlPlan+renderSavedAgendaHTML();
+    const _progressHtmlPlan=(!festivalEnded()&&(!savedAgenda||!savedAgenda.schedule||!savedAgenda.schedule.length))?renderFlowProgress(state,'miplan'):'';
+    view.innerHTML=_progressHtmlPlan+renderSavedAgendaHTML(state);
     _scrollMiPlanToNow();
     _updateMiPlanBadge();
   } else {
@@ -8848,7 +8860,7 @@ function renderAgenda(){
       view.innerHTML=emptyStateHero(ICONS.sparkles,`${_festNamePl} ${t('plan_fest_terminado')}`,t('plan_revisa_planeaste'),t('cta_mi_plan'),"switchMainNav('mnav-miplan');showAgView()");
       return;
     }
-    const _progressHtml=(!savedAgenda||!savedAgenda.schedule||!savedAgenda.schedule.length)?renderFlowProgress('planner'):'';
+    const _progressHtml=(!savedAgenda||!savedAgenda.schedule||!savedAgenda.schedule.length)?renderFlowProgress(state,'planner'):'';
     const pending=[...watchlist].filter(titleStr=>!watched.has(titleStr)&&FILMS.some(f=>f.title===titleStr&&!screeningPassed(f)));
 
     // ── Estado A: sin Intereses — pantalla simple, no mostrar herramienta ──
@@ -8866,7 +8878,7 @@ function renderAgenda(){
       :'';
     view.innerHTML=`${_progressHtml}
       <div class="ag-section">
-        ${renderPrioStrip()}
+        ${renderPrioStrip(state)}
         <div class="section-div">
           <div class="mb-2 sec-hdr">${ICONS.clock} ${t('av_disponibilidad')} <span class="sec-hdr-opt">${t('misc_opcional')}</span></div>
           <div class="txt-gray2-sm-lh">${t('av_no_incluir')}</div>
@@ -9037,16 +9049,22 @@ function starSVG(fill){
   return`<svg class="block-shrink" width="28" height="28" viewBox="0 0 24 24">${grad}<polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" fill="${fillVal}" stroke="${stroke}" stroke-width="1.75" stroke-linejoin="round"/></svg>`;
 }
 
-// Render inicial — construye el DOM de las 5 estrellas una sola vez
-function renderRatingStars(current){
-  const el=document.getElementById('rating-stars');
-  if(!el) return;
+// Pure half (p6b): construye el HTML de 5 estrellas según el rating actual.
+// state param incluido por uniformidad — esta vista no lee state, todo viene
+// del parámetro `current`.
+function renderRatingStarsHTML(state, current){
   let html='';
   for(let i=1;i<=5;i++){
     const fill=current>=i?'full':current>=i-0.5?'half':'none';
     html+=`<div class="touch-44">${starSVG(fill)}</div>`;
   }
-  el.innerHTML=html;
+  return html;
+}
+// Impure caller (p6b): commit a DOM
+function renderRatingStars(current){
+  const el=document.getElementById('rating-stars');
+  if(!el) return;
+  el.innerHTML=renderRatingStarsHTML(state, current);
 }
 
 // Update rápido durante drag — solo actualiza los atributos SVG sin recrear DOM
@@ -9960,10 +9978,11 @@ function _updateProgramaActiveFilter(){
   af.classList.add('visible');
 }
 
-function renderProgramaChips(){
-  const el=document.getElementById('programa-chips');
-  if(!el) return;
-  // Derivar chips dinámicamente desde secciones del festival activo
+// Helper compartido entre la pure half (renderProgramaChipsHTML) y el impure
+// caller (renderProgramaChips, que muta _currentChips). Extraído para evitar
+// duplicar el cómputo o mezclar la mutación al state UI ephemeral con la pureza.
+function _computeProgramaChips(state){
+  const {FILMS} = state.snapshot();
   const titleSet={};
   FILMS.forEach(f=>{if(!titleSet[f.title])titleSet[f.title]=f;});
   const allFilms=Object.values(titleSet);
@@ -9975,15 +9994,25 @@ function renderProgramaChips(){
       id:'sec_'+sec.replace(/[^a-zA-Z0-9]/g,'_').slice(0,30),
       label:sec, match:s=>s===sec, count:cnt
     }));
-  const chips=[{id:'all',label:'Todo',match:null,count:allFilms.length},...secChips];
-  _currentChips=chips;
-  el.innerHTML=chips.map(chip=>{
+  return [{id:'all',label:'Todo',match:null,count:allFilms.length},...secChips];
+}
+// Pure half (p6b) — returns HTML string
+function renderProgramaChipsHTML(state){
+  const chips=_computeProgramaChips(state);
+  return chips.map(chip=>{
     const isOn=chip.id==='all'?programaChip==='all':
       (_programaChipMatchFn&&chip.match&&_programaChipMatchFn.toString()===chip.match.toString());
     const label=chip.id==='all'?chip.label:`${chip.label}<span class="ml-1 count-badge cb-neutral">${chip.count}</span>`;
     return`<div class="pchip${isOn?' on':''}" data-chip="${chip.id}"
          onclick="setProgramaChip('${chip.id}')">${label}</div>`;
   }).join('');
+}
+// Impure caller (p6b) — muta _currentChips (UI state ephemeral, out-of-roster) + DOM
+function renderProgramaChips(){
+  const el=document.getElementById('programa-chips');
+  if(!el) return;
+  _currentChips=_computeProgramaChips(state);
+  el.innerHTML=renderProgramaChipsHTML(state);
 }
 
 // ── Badges de metadata: Q&A e Inscripción previa ────────────────────────
@@ -10027,12 +10056,11 @@ function getActiveNotices(){
     return true;
   });
 }
-function renderNoticesBanner(){
-  const el=document.getElementById('notices-banner');
-  if(!el) return;
+// Pure half (p6b)
+function renderNoticesBannerHTML(state){
   const active=getActiveNotices();
-  if(!active.length){el.innerHTML='';return;}
-  el.innerHTML=active.map(n=>{
+  if(!active.length) return '';
+  return active.map(n=>{
     const label=n.type==='cancelled'?t('notice_cancelada'):t('notice_reprogramada');
     const msgCancelled=`<span>${t('plan_fecha_pendiente')}</span>`;
     const msgRescheduled=n.newDay&&n.newTime?`${t('notice_nueva_funcion')} <span class="txt-white60">${n.newDay} · ${n.newTime}${n.newVenue?' · '+n.newVenue:''}</span>`:'';
@@ -10047,6 +10075,12 @@ function renderNoticesBanner(){
       <button class="notice-banner-close" onclick="_dismissNotice('${n.title.replace(/'/g,"\\'")}')">✕</button>
     </div>`;
   }).join('');
+}
+// Impure caller (p6b)
+function renderNoticesBanner(){
+  const el=document.getElementById('notices-banner');
+  if(!el) return;
+  el.innerHTML=renderNoticesBannerHTML(state);
 }
 function _dismissNotice(title){
   _dismissedNotices.add(title);
@@ -10495,9 +10529,9 @@ function _togglePastFest(btn, name, meta, id){
   btn.setAttribute('aria-selected', isOpen ? 'false' : 'true');
 }
 
-function _renderSplashDropdown(activeFestId){
-  const dd=document.getElementById('splash-dropdown');
-  if(!dd) return;
+// Pure half (p6b) — HTML del dropdown list
+function _renderSplashDropdownHTML(state, activeFestId){
+  const {_lang} = state.snapshot();
   const entries=_sortFestivals(Object.entries(FESTIVAL_CONFIG)
     .filter(([,cfg])=>cfg.name&&cfg.group!=='test'), activeFestId);
   const chevSvg=`<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>`;
@@ -10524,7 +10558,13 @@ function _renderSplashDropdown(activeFestId){
   if(ongoing.length)  html+=`<div class="splash-drop-sep">${t('fs_en_curso')}</div>`+ongoing.map(mkItem).join('');
   if(upcoming.length) html+=`<div class="splash-drop-sep">${t('fs_proximos')}</div>`+upcoming.map(mkItem).join('');
   if(past.length)     html+=`<div class="splash-drop-sep">${t('splash_anteriores')}</div>`+past.map(mkPastItem).join('');
-  dd.innerHTML=html;
+  return html;
+}
+// Impure caller (p6b) — DOM mutations en 3 elementos del splash
+function _renderSplashDropdown(activeFestId){
+  const dd=document.getElementById('splash-dropdown');
+  if(!dd) return;
+  dd.innerHTML=_renderSplashDropdownHTML(state, activeFestId);
   // Update selected button meta with language-aware dates
   const _activeCfg=FESTIVAL_CONFIG[activeFestId];
   const _selMeta=document.getElementById('splash-sel-meta');
@@ -10550,9 +10590,9 @@ function _togglePastFestRow(row, id){
   row.classList.toggle('past-open', !isOpen);
 }
 
-function _renderFestivalSelector(activeFestId){
-  const container=document.getElementById('fs-festival-list');
-  if(!container) return;
+// Pure half (p6b) — HTML del festival selector list
+function _renderFestivalSelectorHTML(state, activeFestId){
+  const {_lang} = state.snapshot();
   const entries=_sortFestivals(Object.entries(FESTIVAL_CONFIG)
     .filter(([,cfg])=>cfg.name&&cfg.group!=='test'), activeFestId);
   const chevSvg=`<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>`;
@@ -10589,6 +10629,14 @@ function _renderFestivalSelector(activeFestId){
   if(ongoing.length)  html+=`<div class="fs-section-lbl">${t('fs_en_curso')}</div>`+ongoing.map(mkRow).join('<div class="fs-divider"></div>');
   if(upcoming.length) html+=`<div class="fs-section-lbl">${t('fs_proximos')}</div>`+upcoming.map(mkRow).join('<div class="fs-divider"></div>');
   if(past.length)     html+=`<div class="fs-section-lbl">${t('splash_anteriores')}</div>`+past.map(mkPastRow).join('<div class="fs-divider"></div>');
+  return html;
+}
+// Impure caller (p6b) — DOM mutation. Preserva el doble innerHTML= pre-existente
+// (bug benign — escribe el mismo valor dos veces, sin efecto observable)
+function _renderFestivalSelector(activeFestId){
+  const container=document.getElementById('fs-festival-list');
+  if(!container) return;
+  const html=_renderFestivalSelectorHTML(state, activeFestId);
   container.innerHTML=html;
   container.innerHTML=html;
 }
