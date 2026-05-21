@@ -1,0 +1,30 @@
+# Tasks — State Container Mirror (Fase 5.5)
+
+- [ ] 1. `python3 validate.py` → 22/22 antes de tocar nada (baseline)
+- [ ] 2. Crear branch `refactor/state-mirror-p55`
+- [ ] 3. Re-validar inventario de mutaciones contra HEAD actual (cero drift respecto al doc previo)
+- [ ] 4. Declarar `let filmDelaysHistory={};` adyacente a `let filmDelays={};` (~línea 4771)
+- [ ] 5. Extender `storage` namespace: `getFilmDelaysHistory()` con fallback al `_hist` viejo + `setFilmDelaysHistory()` + ajustar `getFilmDelays()` para strippear `_hist`
+- [ ] 6. Diseñar e implementar el bloque `state` namespace (~150 líneas) con marcadores `[STATE-START]`/`[STATE-END]`, ubicado inmediatamente después del bloque `storage` en script 3
+- [ ] 7. **BLOQUEANTE**: `tests/unit/state.test.js` con casos de `batchUpdate` atómico, rollback, reentrada, subscribe/unsubscribe (~250 líneas, ~25 tests). Verificar 100% pass ANTES de migrar cualquier callsite
+- [ ] 8. Migrar reasignaciones simples — `_lang`, `_simTime`, `savedAgenda={schedule:..}` (~5 sitios)
+- [ ] 9. Migrar Sets — watchlist/watched/prioritized (21 sitios). Usar `_addToSet`/`_delFromSet` helpers o `batchUpdate` para triples
+- [ ] 10. Migrar Objects — filmRatings, savedAgenda (.schedule.push y .filter), availability (incluido `availability[d].blocks=...`)
+- [ ] 11. Migrar Array `lastRemovedSlots` — incluyendo el patrón `.length=MAX` → `.slice(0,MAX)`
+- [ ] 12. Migrar filmDelays + filmDelaysHistory (caso especial — separación de `_hist` anidado)
+- [ ] 13. Migrar `loadFestival` swap a `state.batchUpdate` (caso más crítico, último)
+- [ ] 14. Añadir check `[state-mirror]` a `validate.py` con whitelist documentada (declaraciones iniciales + bloque state + template literal worker)
+- [ ] 15. `python3 validate.py` → 23/23 (con el nuevo check)
+- [ ] 16. `node --test tests/unit/*.test.js` — 0 fallos (~130 totales)
+- [ ] 17. Verificación JS syntax (extracción de 3 scripts via SCHEMA checklist)
+- [ ] 18. Diff review completo — cero cambios de comportamiento, sólo canalización
+- [ ] 19. QA browser — watchlist add/remove persiste post-reload en Tribeca
+- [ ] 20. QA browser — festival switch atómico (todos los state cambian sin glitch visual)
+- [ ] 21. QA browser — cambio de idioma persiste; sim time afecta `simNow`
+- [ ] 22. QA browser — filmDelays: aplicar retraso a una función + undo → state restaurado correctamente (verifica filmDelaysHistory + migración del `_hist` viejo si hay storage previo)
+- [ ] 23. `python3 validate.py` → 23/23 pre-commit
+- [ ] 24. `node scripts/bump-version.js`
+- [ ] 25. Commit atómico
+- [ ] 26. Push + PR contra `main` con título `refactor(state): mirror state container for ~19 globals (p5.5)`
+- [ ] 27. Monitorear CI hasta verde
+- [ ] 28. Merge squash + cleanup branch
