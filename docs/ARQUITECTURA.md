@@ -594,26 +594,31 @@ Verificar en dispositivo físico antes de commitear cambios con: `overflow`, `po
 |---|---|---|:---:|
 | **1** | `_resolveVenue` extraído + contratos en `screensConflict`/`effectiveDuration` + 18 tests | Model | ✅ merged |
 | **2** | `_getFestivalPhase` descompuesto en 3 helpers + 19 tests | Model | ✅ merged |
-| **3** | Subsistema temporal: `simNow`, `simTodayStr`, `festivalEnded`, `screeningPassed`, `dayFullyPassed`, `_festDate` + contratos + tests | Model | propuesta |
-| **4** | Schedule planning: `computeScenarios`, `scoreFilm`, `sortScreensByStrategy`, `isScreeningBlocked`, RNG helpers + contratos + tests | Model | propuesta |
-| **5** | State container + storage adapter: consolidar los ~12 globals en `state.js` con `update()`/`subscribe()`. Migrar Model functions a recibir state por parámetro (pureza real, no contrato implícito) | Model | propuesta |
-| **6** | View extraction: convertir cada `renderXxx` en función pura `(state, deps) → HTML string`. Mover componentes (sheet, modal, toast, badges, poster) a `view/components/` | View | propuesta |
-| **7** | Controller layer: migrar inline `onclick` a `addEventListener` en `controller/*.js`. Cada handler = Model update + View rerender | Controller | propuesta |
-| **8** | File split: mover Model/View/Controller a archivos físicos `.js`. `index.html` queda como shell. Worker en archivo standalone. CSS modularizado. CI cachea estructura nueva en sw.js | Build/Deploy | propuesta |
+| **3** | Subsistema temporal: `simNow`, `simTodayStr`, `festivalEnded`, `screeningPassed`, `dayFullyPassed`, `_festDate` + contratos + 21 tests | Model | ✅ merged |
+| **4** | Schedule planning: `computeScenarios`, `scoreFilm`, `sortScreensByStrategy`, `isScreeningBlocked`, RNG helpers + contratos + 26 tests (property-based para `computeScenarios`) | Model | ✅ merged |
+| **5** | Storage adapter: encapsular I/O de `localStorage` en namespace `storage` (24 métodos, 9 user-state + 3 global). Validate check `[storage-encapsulation]` enforza zero `localStorage.*` inline. 19 tests | Model | ✅ merged |
+| **5.5** | State container mirror: 19 globals espejados via namespace `state` con `set/update/batchUpdate/subscribe/snapshot` + lazy fallback. **Solo canaliza escrituras** — readers siguen yendo al global. `loadFestival` en 3 batches atómicos. Validate check `[state-mirror]`. 28 tests | Model | ✅ merged |
+| ~~5.6~~ | ~~Migrar readers a `state.get(k)`~~ | — | ❌ skip (los readers se migran bundled con Fase 6/7 cuando se necesita el shape `function(state){...}`; el mirror invariante permite que el doble-truth coexista hasta entonces) |
+| **6** | View extraction: convertir cada `renderXxx` en función pura `(state, deps) → HTML string`. Readers de los Views migran de globals a `state.snapshot()` destructure al inicio. Mover componentes (sheet, modal, toast, badges, poster) a `view/components/` lógicamente (split físico es Fase 8) | View | propuesta — siguiente |
+| **7** | Controller layer: migrar inline `onclick` a `addEventListener` en `controller/*.js`. Cada handler = Model update + View rerender. Readers de handlers (toggleWL, togglePriority, etc.) migran a `state.get(k)`. `subscribe()` se conecta al rerender pipeline | Controller | propuesta |
+| **8** | File split: mover Model/View/Controller a archivos físicos `.js`. `index.html` queda como shell. Worker en archivo standalone. CSS modularizado. CI cachea estructura nueva en sw.js. **Mirror global eliminado** — state queda como single source of truth | Build/Deploy | propuesta |
 
 ### 16.6 Dependencias entre fases
 
 ```
-Fase 1 ── Fase 2 ── Fase 3 ── Fase 4 ──┐
-                                       ├── Fase 5 ── Fase 6 ── Fase 7 ── Fase 8
-                                       │
-                            (Model completo es prereq de State container)
+Fase 1 ── Fase 2 ── Fase 3 ── Fase 4 ── Fase 5 ── Fase 5.5 ──┐
+                                                             ├── Fase 6 ── Fase 7 ── Fase 8
+                                                             │
+                                          (State container es prereq de Views puras)
 ```
 
 - Fases 1–4 completan la **capa Model** (extracción + contratos + tests, todavía en index.html)
-- Fase 5 introduce **State explícito**, prerequisito para Views puras
-- Fases 6–7 mueven la lógica de UI a su capa correspondiente (aún en index.html)
-- Fase 8 hace el **split físico** una vez todas las capas están limpias internamente
+- Fase 5 encapsula **I/O de storage** (sin tocar runtime state)
+- Fase 5.5 introduce **state container con mirror** — escrituras canalizadas, readers no migrados (intencional)
+- ~~Fase 5.6~~ skip: la migración masiva de readers no aporta valor sin Views puras. Se hace per-feature en Fase 6/7
+- Fase 6 hace los **Views puros** — readers de Views migran a snapshot destructure como parte del cambio de shape
+- Fase 7 hace los **Controllers explícitos** — readers de handlers migran a `state.get`, `subscribe` se conecta
+- Fase 8 hace el **split físico** y **elimina el mirror** (state como única fuente de verdad)
 
 ### 16.7 Lo que NO cambia en el destino
 

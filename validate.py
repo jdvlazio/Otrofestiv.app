@@ -865,6 +865,123 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar state mirror: {_e}')
 
+# ── [view-purity] ─────────────────────────────────────────────────────────────
+# Verifica que las Views Tier 1 (Fase 6a) cumplan el contrato de función pura:
+#   - Reciben state como primer parámetro
+#   - Hacen destructure de state.snapshot() al inicio
+#   - NO leen globals del roster directamente (deben estar en el destructure)
+#   - NO tienen side effects: innerHTML=, outerHTML=, classList.X(), appendChild,
+#     insertAdjacentHTML, setTimeout, requestAnimationFrame
+# Nivel: WARNING (Fase 6a). Promote a FAIL en Fase 7 cuando Controllers migren.
+check = 'view-purity'
+try:
+    import re as _re
+    _html = open('index.html').read()
+    _lines = _html.split('\n')
+    TIER1_FNS = [
+        'makeProgramPoster', 'makeEventPoster',
+        'renderUnconfirmed', '_renderSavedAgendaHTML',
+        'renderContextualHeader', 'renderMiPlanCalendar',
+    ]
+    ROSTER = ['_activeFestId', 'FILMS', 'FESTIVAL_DATES', 'FESTIVAL_END',
+              'FESTIVAL_STORAGE_KEY', 'PRIO_LIMIT', 'TZ_OFFSET', 'FESTIVAL_TRANSPORT',
+              'watchlist', 'watched', 'prioritized', 'filmRatings', 'filmDelays',
+              'filmDelaysHistory', 'savedAgenda', 'availability', 'lastRemovedSlots',
+              '_lang', '_simTime']
+
+    def _find_fn_body(name):
+        """Returns (start_line_idx, end_line_idx, body_lines) o None."""
+        for i, line in enumerate(_lines):
+            if _re.match(r'^\s*(?:async\s+)?function\s+' + _re.escape(name) + r'\s*\(', line):
+                # Walk braces from the first { after the signature
+                depth = 0
+                started = False
+                for j in range(i, len(_lines)):
+                    for ch in _lines[j]:
+                        if ch == '{':
+                            depth += 1
+                            started = True
+                        elif ch == '}':
+                            depth -= 1
+                            if started and depth == 0:
+                                return (i, j, _lines[i:j+1])
+        return None
+
+    def _strip_strings_and_comments(line):
+        """Remove single/double/backtick strings, // comments, /* */ from a line."""
+        out = []
+        i = 0
+        in_str = None
+        while i < len(line):
+            ch = line[i]
+            if in_str:
+                if ch == '\\' and i+1 < len(line):
+                    i += 2
+                    continue
+                if ch == in_str:
+                    in_str = None
+                i += 1
+                continue
+            if ch == '/' and i+1 < len(line) and line[i+1] == '/':
+                break  # rest is comment
+            if ch in ('"', "'", '`'):
+                in_str = ch
+                i += 1
+                continue
+            out.append(ch)
+            i += 1
+        return ''.join(out)
+
+    _warnings_collected = []
+    for _fn in TIER1_FNS:
+        _result = _find_fn_body(_fn)
+        if not _result:
+            _warnings_collected.append(f'{_fn}: NOT FOUND en index.html')
+            continue
+        _start, _end, _body = _result
+
+        # Stripped body sin strings/comments (para análisis sintáctico real)
+        _stripped = '\n'.join(_strip_strings_and_comments(l) for l in _body)
+
+        # 1. Buscar destructure de state.snapshot() en las primeras N líneas
+        _destruct_m = _re.search(r'const\s*\{([^}]+)\}\s*=\s*state\.snapshot\(\)',
+                                  '\n'.join(_body[:6]))
+        _destructured_keys = set()
+        if _destruct_m:
+            _destructured_keys = {k.strip().split(':')[0].strip()
+                                  for k in _destruct_m.group(1).split(',') if k.strip()}
+
+        # 2. Para cada roster global referenciado en el body stripped:
+        #    si NO está en destructure → warning
+        for _g in ROSTER:
+            # busca refs al global en el código real (no strings)
+            if _re.search(r'(?<![.\w])' + _re.escape(_g) + r'\b', _stripped):
+                if _g not in _destructured_keys:
+                    _warnings_collected.append(
+                        f'{_fn}: read directo de "{_g}" — usar state.snapshot() destructure')
+
+        # 3. Side effects
+        _se_patterns = [
+            (r'\.innerHTML\s*=(?!=)', 'innerHTML='),
+            (r'\.outerHTML\s*=(?!=)', 'outerHTML='),
+            (r'\.classList\.(add|remove|toggle|replace)\(', 'classList mutation'),
+            (r'\.appendChild\(', 'appendChild'),
+            (r'insertAdjacentHTML\(', 'insertAdjacentHTML'),
+            (r'\bsetTimeout\(', 'setTimeout'),
+            (r'\brequestAnimationFrame\(', 'requestAnimationFrame'),
+        ]
+        for _pat, _kind in _se_patterns:
+            if _re.search(_pat, _stripped):
+                _warnings_collected.append(f'{_fn}: side-effect "{_kind}" — Tier 1 debe ser pura')
+
+    if _warnings_collected:
+        for _w in _warnings_collected:
+            warn(check, _w)
+    else:
+        ok(check, f'Tier 1 puras ({len(TIER1_FNS)} fns): state param + destructure + cero side effects')
+except Exception as _e:
+    warn(check, f'no se pudo verificar view purity: {_e}')
+
 # ── Report ────────────────────────────────────────────────────────────────────
 print()
 print('═' * 60)

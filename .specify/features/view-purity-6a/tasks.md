@@ -1,0 +1,26 @@
+# Tasks — View Purity Fase 6a (Tier 1, 8 funciones)
+
+- [x] 1. `python3 validate.py` → 22/23 (1 warning de tasks-sync esperado) + `node --test tests/unit/*.test.js` 131/131
+- [x] 2. Crear branch `refactor/view-purity-6a`
+- [x] 3. Re-verificar lista de 8 Tier 1 functions — cero drift en el set de globals leídos por función. Spec corregido: renderContextualHeader lee 8 globals (NO 9 — FESTIVAL_DATES era error del spec). Call sites totales: 27 (8 mE + 7 mP + 1 rG + 2 rU + 1 rN + 2 rS + 2 rM + 4 rC)
+- [x] 4. QA browser PRE — DOM CRC baseline capturado: agView=1379689571, programaList=-373827060, savedAgendaHTML=1383044747
+- [x] 5. Migrar `makeEventPoster` (25 líneas) — añadir `state` + destructure `{_activeFestId, _lang}` + 6 callers actualizados. Extra: `arguments[3]` (section fallback) convertido a param explícito `section`
+- [x] 6. Migrar `makeProgramPoster` (48 líneas) — añadir `state` + destructure `{FILMS}` + 4 callers actualizados. `typeof FILMS!=='undefined'` guard removido (innecesario post-state)
+- [x] 7. **CLEANUP**: `renderGapOptions` removido como dead code (cero callers, orphaned). Función no migrada — eliminada (~42 líneas)
+- [x] 8. Migrar `renderUnconfirmed` (52 líneas) — añadir `state` + destructure `{watched, FESTIVAL_DATES}` + 1 caller actualizado
+- [x] 9. **CLEANUP**: `renderNextStrip` removido como dead code (cero callers, orphaned por commit 73448cb — "delay controls integrados en ctx-header"). Función no migrada — eliminada (~87 líneas)
+- [x] 10. Migrar `_renderSavedAgendaHTML` (144 líneas) — añadir `state` + destructure de 5 globals + caller (`renderSavedAgendaHTML` Tier 2 wrapper) actualizado para pasar `state` (free var module-level)
+- [x] 11. Migrar `renderMiPlanCalendar` (220 líneas) — añadir `state` + destructure `{savedAgenda, FILMS, prioritized, FESTIVAL_DATES}` + 1 caller actualizado
+- [x] 12. Migrar `renderContextualHeader` (244 líneas) — añadir `state` + destructure de 8 globals + 2 callers actualizados
+- [x] 13. Check `[view-purity]` añadido a validate.py — detecta 7 patrones (read directo del roster + 6 tipos side effect: innerHTML/outerHTML/classList/appendChild/insertAdjacent/setTimeout/rAF). Whitelist: destructure de state.snapshot() al tope. Sanity-check confirmado: inyección de innerHTML detectada
+- [x] 14. `python3 validate.py` → 24/24 (era 23/23), 0 warnings activas para las 6 Tier 1
+- [x] 15. `node --test tests/unit/*.test.js` — 131/131 pass
+- [x] 16. QA browser POST — CRCs idénticos a paso 4: agView=1379689571, programaList=-373827060, savedAgendaHTML=1383044747 (byte-identical)
+- [x] 17. QA browser — festival switch Tribeca↔Leviza atómico (FILMS 477↔24, posters renderizan correctamente). Switch-back rehidrata watchlist. shareAsImage retorna 70,146 chars con CRC match
+- [x] 18. Diff review — index.html: -187 / +variations. Cambios: solo destructure + signature param (8 puntos) + caller updates (15 puntos) + remove de 2 dead functions (-129 líneas). Cero cambios en lógica/HTML
+- [ ] 19. `python3 validate.py` → 24/24 pre-commit
+- [ ] 20. `node scripts/bump-version.js`
+- [ ] 21. Commit atómico
+- [ ] 22. Push + PR contra `main` con título `refactor(view): purity Tier 1 — 8 sub-renders take state as param (p6a)`
+- [ ] 23. Monitorear CI hasta verde
+- [ ] 24. Merge squash + cleanup branch
