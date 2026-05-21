@@ -1,0 +1,30 @@
+# Tasks — View Purity Fase 6b (Tier 2, 11 fns + 1 dead)
+
+- [ ] 1. `python3 validate.py` → 24/24 baseline + `node --test tests/unit/*.test.js` → 131/131
+- [ ] 2. Crear branch `refactor/view-purity-6b`
+- [ ] 3. Re-verificar inventario (12 candidates) contra HEAD — confirmar 4 Group A + 7 Group B + 1 dead + state reads exactos
+- [ ] 4. QA browser PRE — dump CRC de containers (ag-view, programa-list, av-row-* sample, festival selector HTML, rating stars HTML)
+- [ ] 5. **Group A — Tier 1 pattern**: migrar `renderSavedAgendaHTML(state)` wrapper + actualizar 1 caller
+- [ ] 6. Group A: migrar `renderFlowProgress(state, activeTab)` + actualizar 3 callers
+- [ ] 7. Group A: migrar `renderPrioStrip(state)` + actualizar 1 caller
+- [ ] 8. Group A: migrar `renderFilmAlternatives(state, title, day, time)` + actualizar 2 callers
+- [ ] 9. **Group B — Split**: `renderRatingStars` (9 líneas) → `renderRatingStarsHTML(state, current)` + impure caller
+- [ ] 10. Group B: `renderNoticesBanner` (20 líneas) → split + 2 callers intactos
+- [ ] 11. Group B: `renderProgramaChips` (24 líneas) → split + 1 caller intacto
+- [ ] 12. Group B: `_renderSplashDropdown` (38 líneas) → split + 4 callers intactos
+- [ ] 13. Group B: `_renderFestivalSelector` (41 líneas) → split + 4 callers intactos
+- [ ] 14. Group B: `renderAvDay` (44 líneas) → split + 2 callers intactos
+- [ ] 15. Group B: `renderFilmListHTML` (175 líneas) — pura mantiene nombre, NUEVO `_rerenderFilmList()` con setTimeout movido. 2 callers actualizados según contexto (innerHTML caller → `_rerenderFilmList`; template literal caller → `renderFilmListHTML(state)`)
+- [ ] 16. **Group C — Dead remove**: eliminar `renderSimPanel` (12 líneas, 0 callsites)
+- [ ] 17. Validate check: rename `TIER1_FNS` → `PURE_FNS` y extender lista con 4 Group A migradas + 7 Group B pure halves (total 17 funciones)
+- [ ] 18. `python3 validate.py` → 24/24, 0 warnings activas para las 17 puras
+- [ ] 19. `node --test tests/unit/*.test.js` — 131/131
+- [ ] 20. QA browser POST — CRCs match exact con paso 4 (byte-identical R2)
+- [ ] 21. QA browser — flow completo: Mi Plan (pills, prio strip, film alternatives, flow progress), Programa (chips, notices banner), Availability sheet (renderAvDay), Festival selector, Rating sheet
+- [ ] 22. Diff review — Group A: solo state param + destructure. Group B: pure half extractada correctamente + impure caller solo mutaciones. Group C: solo delete
+- [ ] 23. `python3 validate.py` → 24/24 pre-commit
+- [ ] 24. `node scripts/bump-version.js`
+- [ ] 25. Commit atómico
+- [ ] 26. Push + PR contra `main` con título `refactor(view): purity Tier 2 — 11 split/migrated + 1 dead removed (p6b)`
+- [ ] 27. Monitorear CI hasta verde
+- [ ] 28. Merge squash + cleanup branch
