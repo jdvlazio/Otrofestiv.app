@@ -1,32 +1,27 @@
 # Tasks — View Purity Fase 6c (Tier 3, 7 fns + 1 dead)
 
-- [ ] 1. `python3 validate.py` → 24/24 baseline + `node --test tests/unit/*.test.js` → 131/131
-- [ ] 2. Crear branch `refactor/view-purity-6c`
-- [ ] 3. Re-verificar inventario contra HEAD: 5 Group I + 2 Group II + 2 Group III skip + 1 Group IV dead. Confirmar state reads exactos
-- [ ] 4. QA browser PRE — dump CRC de 5 containers: ag-view, programa-list, grid, cnt, av-blocks-list
-- [ ] 5. **Group IV**: verificar git history de `renderMiPlanList` (`git log -S` + grep en strings), confirmar dead, eliminar (-44 líneas)
-- [ ] 6. **Group I.1**: `renderAvBlocks` (26 líneas) → split `renderAvBlocksHTML(state)` + impure caller (commit a av-blocks-list)
-- [ ] 7. **Group I.2**: `renderSbar` (30 líneas) → split. Pure half retorna HTML del contenido; impure caller maneja innerHTML + classList + appendChild
-- [ ] 8. **Group I.3**: `renderProgramaList` (60 líneas) → split, impure caller commit a programa-list
-- [ ] 9. **Group I.4**: `_renderExploreLista` (64 líneas) → split, impure caller commit a programa-list (mismo container que renderProgramaList — modes distintos)
-- [ ] 10. **Group I.5**: `renderPeliculaView` (101 líneas) → investigar las 3 innerHTML al implementar. Decidir pattern (a)/(b)/(c) según multi-container layout. Split según fits
-- [ ] 11. **Group II.1**: `render` (53 líneas) → state.snapshot() destructure al top con `{FILMS, _activeFestId, watched, watchlist}`. Sin signature change, sin split. Body sin más cambios
-- [ ] 12. **Group II.2**: `renderAgenda` (78 líneas) → state.snapshot() destructure al top con `{savedAgenda, FILMS, _activeFestId, watched, watchlist}`. Sin signature change, sin split. Body sin más cambios
-- [ ] 13. Validate check `[view-purity]`: añadir 5 pure halves nuevas a `PURE_FNS` (renderAvBlocksHTML, renderSbarHTML, renderProgramaListHTML, _renderExploreListaHTML, renderPeliculaViewHTML — o variantes según paso 10). Añadir comentario "Group II Tier 3 son impuros legítimos — NO en PURE_FNS"
-- [ ] 14. `python3 validate.py` → 24/24, 0 warnings activas para las 22 funciones puras tracked
-- [ ] 15. `node --test tests/unit/*.test.js` — 131/131
-- [ ] 16. JS syntax check (validate.py [js-syntax])
-- [ ] 17. QA browser POST normal — CRC pre/post match exact en 5 containers (byte-identical R2)
-- [ ] 18. QA browser — flow normal: Mi Plan tab (renderAgenda branches), Programa tab (render, renderPeliculaView, renderProgramaList, _renderExploreLista, renderSbar), Availability sheet (renderAvBlocks)
-- [ ] 19. QA browser — festival switch Tribeca↔Leviza (verifica orchestrators reactúan al state swap atómico de 5.5)
-- [ ] 20. QA browser — toggle watchlist/watched (verifica `render`, `renderAgenda`, `_reRenderIntereses` chain re-renderean correctamente con state actualizado)
-- [ ] 21. Diff review — Group I: pure halves bien extractas + impure callers solo side effects. Group II: solo destructure al top. Group IV: solo delete
-- [ ] 22. ⚠ **QA BOOT PATH OBLIGATORIO** ⚠ (F6 — paso bloqueante):
-    1. En Chrome: `localStorage.clear(); location.reload();`
-    2. Esperar a que cargue (splash o initial state)
-    3. ANTES de seleccionar festival, en console: ejecutar `showAgView(); render(); _renderProgramaContent();`
-    4. Verificar console.errors === [] (cero TypeError, cero "Cannot read properties of undefined")
-    5. Solo si paso 4 limpio → pasar a paso 23. Si fail → reabrir migrations missing state arg
+- [x] 1. `python3 validate.py` → 24/24 baseline + `node --test tests/unit/*.test.js` → 131/131
+- [x] 2. Crear branch `refactor/view-purity-6c`
+- [x] 3. Inventario contra HEAD: 5 Group I + 2 Group II + 2 Group III + 1 Group IV todos matchean spec con state reads exactos
+- [x] 4. QA browser PRE CRC: agView=1379689571, programaList=-373827060, grid=69729155, cnt=0, avBlocks=0 (cnt y avBlocks vacíos en boot — match natural)
+- [x] 5. **Group IV**: renderMiPlanList orphaned por commit 4fd007d ("refactor: Mi Plan — eliminar modos list/overview"). Cero callsites verificados. Eliminada (-45 líneas con try/catch wrapper)
+- [x] 6. **Group I.1**: `renderAvBlocks` (26 líneas) → split `renderAvBlocksHTML(state)` + impure caller
+- [x] 7. **DESVIACIÓN**: `renderSbar` reclasificada Group I → **Group II** (destructure-only). Razón: no usa innerHTML para contenido — crea botones con `createElement` + `appendChild` + handlers programáticos `.onclick = fn`. Split E1a cambiaría byte-identity del DOM (onclick attribute vs property). Migrada con `state.snapshot()` destructure al top
+- [x] 8. **Group I.3**: `renderProgramaList` → split `renderProgramaListHTML(state)` + impure caller (scrollTop reset + innerHTML)
+- [x] 9. **Group I.4**: `_renderExploreLista` → split `_renderExploreListaHTML(state)` + impure caller. try/catch en pure half ahora retorna `''` en lugar de tirar string al void
+- [x] 10. **Group I.5 + DESVIACIÓN**: `renderPeliculaView` split con **tuple return** `{html, hasEntries}`. Pure half decide branch (empty-msg vs poster-grid). Impure caller commit a 2 containers (cnt='', grid=html) + dispara rAF SOLO si hasEntries (preserva R2 — comportamiento branch-específico del original). Deviation E1a documentada en code comment
+- [x] 11. **Group II.1**: `render` migrada con state.snapshot() destructure de `{FILMS, _activeFestId, watched, watchlist}` al top. Sin signature change. Comentario en código documentando Group II
+- [x] 12. **Group II.2**: `renderAgenda` migrada con state.snapshot() destructure de `{savedAgenda, FILMS, _activeFestId, watched, watchlist}` al top. Sin signature change. Comentario documentando Group II
+- [x] 13. `PURE_FNS` extendida a 21 fns (17 pre-6c + 4 nuevas: renderAvBlocksHTML, renderProgramaListHTML, _renderExploreListaHTML, renderPeliculaViewHTML). Comentario documentando: Group II Tier 3 (renderAgenda, render) + renderSbar (reclasificada) son impuros legítimos. renderPeliculaViewHTML retorna tupla (deviation E1a en code comment)
+- [x] 14. `python3 validate.py` → 24/24, 0 warnings activas. Sanity-check: inyección de innerHTML en pure half detectada
+- [x] 15. `node --test tests/unit/*.test.js` → 131/131 pass
+- [x] 16. JS syntax check OK (validate.py [js-syntax])
+- [x] 17. QA POST CRC — **5/5 byte-identical match** (agView=1379689571, programaList=-373827060, grid=69729155, cnt=0, avBlocks=0)
+- [x] 18. QA Mi Plan flow — 3 branches de renderAgenda renderizan (seleccion=1621 chars, miplan=176 chars, planner=873 chars)
+- [x] 19. QA festival switch Tribeca↔Leviza atómico (FILMS 477↔24, watchlist rehidratada, mirror invariants OK)
+- [x] 20. QA toggle watchlist — add/remove funciona (1→2→1, render chain consistente)
+- [x] 21. Diff review — index.html +160/-95 net (Group IV -45 + Group I splits + Group II destructures). validate.py +17 (PURE_FNS +4 + comment doc)
+- [x] 22. ⚠ **QA BOOT PATH OBLIGATORIO** ⚠ PASSED: localStorage.clear() + reload + showAgView()/render()/_renderProgramaContent() con FILMS=0 (sin loadFest) → **0 errors captured**. Atrapa caller-missing-state bugs pre-CI (lección de 6b)
 - [ ] 23. `python3 validate.py` → 24/24 pre-commit
 - [ ] 24. `node scripts/bump-version.js`
 - [ ] 25. Commit atómico

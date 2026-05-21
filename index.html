@@ -4913,7 +4913,7 @@ let FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202605211231';
+const BUILD_VERSION='202605211326';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';
@@ -5946,9 +5946,9 @@ function confirmAvBlock(){
   }
 }
 
-function renderAvBlocks(){
-  const el=document.getElementById('av-blocks-list');
-  if(!el) return;
+// Pure half (p6c)
+function renderAvBlocksHTML(state){
+  const {availability} = state.snapshot();
   const items=[];
   DAY_KEYS.forEach(day=>{
     const lbl=(DAY_ABBR&&DAY_ABBR[day])||day.slice(0,3).toUpperCase();
@@ -5971,7 +5971,13 @@ function renderAvBlocks(){
       });
     }
   });
-  el.innerHTML=items.length?`<div class="av-block-list">${items.join('')}</div>`:'';
+  return items.length?`<div class="av-block-list">${items.join('')}</div>`:'';
+}
+// Impure caller (p6c)
+function renderAvBlocks(){
+  const el=document.getElementById('av-blocks-list');
+  if(!el) return;
+  el.innerHTML=renderAvBlocksHTML(state);
 }
 
 // isScreeningBlocked(s) → boolean — true si el screening cae dentro de un block de availability del usuario.
@@ -8820,6 +8826,11 @@ function _updateMiPlanBadge(){
 }
 
 function renderAgenda(){
+  // Group II Tier 3 (p6c): 3 branches (seleccion/miplan/planner) con follow-ups
+  // branch-específicos (_scrollMiPlanToNow, _updateMiPlanBadge, renderAvBlocks,
+  // _agHi.style.display, requestAnimationFrame(_fixStickyOffset)). Split impráctico
+  // — body se queda monolítico con state.snapshot() destructure al top.
+  const {savedAgenda, FILMS, _activeFestId, watched, watchlist} = state.snapshot();
   const view=document.getElementById('ag-view');
   if(activeMNav==='mnav-seleccion'){
     // ── Post-festival: redirigir a Mi Plan ──
@@ -9785,51 +9796,6 @@ function setMiPlanView(mode){
   renderAgenda();
 }
 
-function renderMiPlanList(schedule){
-  try{
-  // Vista lista compacta — mismo patrón que Hoy/Mañana en Programa
-  const upcoming=schedule
-    .filter(s=>!watched.has(s._title))
-    .sort((a,b)=>{
-      const da=_festDate(FESTIVAL_DATES[a.day],a.time);
-      const db=_festDate(FESTIVAL_DATES[b.day],b.time);
-      return da-db;
-    });
-  if(!upcoming.length) return `<div class="empty-msg-2">${t('plan_sin_proximas')}</div>`;
-  
-  // Agrupar por día
-  const byDay={};
-  upcoming.forEach(s=>{if(!byDay[s.day])byDay[s.day]=[];byDay[s.day].push(s);});
-  
-  return`<div class="mplan-list-view">${
-    DAY_KEYS.filter(d=>byDay[d]).map(day=>`
-      <div class="mplan-list-day">${dayLabel(day)}</div>
-      ${byDay[day].map(s=>{
-        const{displayTitle:dt}=parseProgramTitle(s._title||'');
-        const vc=vcfg(s.venue);
-        const _lmf=FILMS.find(fi=>fi.title===s._title&&fi.day===s.day);
-        const src=getFilmPoster(_lmf)||'';
-        const _lIsEvent=_lmf&&_lmf.type==='event';
-        const safeT=(s._title||'').replace(/'/g,"\\'");
-        const isW=watched.has(s._title);
-        const isPassed=screeningPassed(s);
-        return`<div class="mplan-list-item js-open-pel${isPassed?' past-card':''}" data-title="${s._title||''}">
-          ${src
-            ?`<img class="mplan-list-poster" src="${src}" data-title="${(s._title||"").replace(/"/g,'&quot;')}" loading="lazy" onerror="_posterErr(this)" alt="" style="${isPassed?'opacity:.35':''}">`
-            :_lIsEvent
-              ?makeEventPoster(state,_lmf.title,_lmf.duration,_lmf.event_kind).replace('<svg','<svg class="block-shrink mplan-list-poster"')
-              :`<div class="mplan-list-poster"></div>`}
-          <div class="mplan-list-info">
-            <div class="mplan-list-title" style="${isPassed?'opacity:.35':''}">${dt}</div>
-            <div class="mplan-list-meta">${s.time} · ${vc.short}${_lmf?.is_cortos?(' · '+(_lmf.section==='📺 TV'?'TV':'Cortos')):''}</div>
-          </div>
-          ${isW?`<div class="mplan-list-check">✓</div>`:''}
-        </div>`;
-      }).join('')}
-    `).join('')
-  }</div>`;
-  }catch(e){return `<div class="pad-muted">${t('error_cargar_lista')}</div>`;}
-}
 function setInteresesView(mode){
   interesesViewMode=mode;
   const _v = storage.getViewmodes(); _v.intereses = mode; storage.setViewmodes(_v);
@@ -10099,16 +10065,13 @@ function _plistPosterHtml(f, src){
   }
   return src?'<div class="plist-poster"><img src="'+src+'" loading="lazy" onerror="this.remove()" alt="" style="width:100%;height:100%;object-fit:cover;border-radius:var(--r-sm)"></div>':'<div class="plist-poster"></div>';
 }
-function renderProgramaList(){
+// Pure half (p6c)
+function renderProgramaListHTML(state){
   try{
-  // Vista lista cronológica para Hoy/Mañana
-  const el=document.getElementById('programa-list');
-  if(!el) return;
-  el.scrollTop=0;// always reset before re-render
+  const {FILMS, _activeFestId, watchlist} = state.snapshot();
   let films=FILMS.filter(f=>f.day===activeDay);
   if(activeVenue!=='all') films=films.filter(f=>vcfg(f.venue).short===activeVenue);
   if(activeSec!=='all') films=films.filter(f=>f.section===activeSec);
-  // Sort: by time (primary), then Movies→Cortos→Events within same time
   films.sort((a,b)=>{
     const td=toMin(a.time)-toMin(b.time);
     if(td!==0) return td;
@@ -10116,13 +10079,11 @@ function renderProgramaList(){
     return cat(a)-cat(b);
   });
   if(!films.length){
-    el.innerHTML=`<div class="empty-msg">Sin actividades para este filtro</div>`;
-    return;
+    return `<div class="empty-msg">Sin actividades para este filtro</div>`;
   }
-  // Agrupar por hora
   const byTime={};
   films.forEach(f=>{if(!byTime[f.time])byTime[f.time]=[];byTime[f.time].push(f);});
-  el.innerHTML=Object.entries(byTime).map(([time,fs])=>`
+  return Object.entries(byTime).map(([time,fs])=>`
     <div class="plist-time-hdr">${time}</div>
     ${fs.map(f=>{
       const inWL=watchlist.has(f.title);
@@ -10159,6 +10120,13 @@ function renderProgramaList(){
     }).join('')}
   `).join('');
   }catch(e){return `<div class="pad-muted">${t('error_funciones')}</div>`;}
+}
+// Impure caller (p6c) — scrollTop reset + innerHTML
+function renderProgramaList(){
+  const el=document.getElementById('programa-list');
+  if(!el) return;
+  el.scrollTop=0;// always reset before re-render
+  el.innerHTML=renderProgramaListHTML(state);
 }
 function _renderProgramaContent(){
   const grid=document.getElementById('grid');
@@ -10197,11 +10165,10 @@ function _renderProgramaContent(){
   }
 }
 
-function _renderExploreLista(){
+// Pure half (p6c)
+function _renderExploreListaHTML(state){
   try{
-  // Vista lista del catálogo completo (Explorar en modo lista)
-  const el=document.getElementById('programa-list');
-  if(!el) return;
+  const {FILMS, _activeFestId, watchlist} = state.snapshot();
   const titleMap={};
   FILMS.forEach(f=>{
     if(!titleMap[f.title]){titleMap[f.title]={film:f,screenings:[]};}
@@ -10223,7 +10190,6 @@ function _renderExploreLista(){
       return vcfg(s.venue).short===activeVenue;
     }));
   }
-  // Sort: cronológico puro — day_order → time → tipo (tipo solo como desempate)
   const _typeOrder=f=>f.type==='event'?2:f.is_cortos?1:0;
   entries.sort((a,b)=>{
     const do_diff=(a.film.day_order||0)-(b.film.day_order||0);
@@ -10232,8 +10198,8 @@ function _renderExploreLista(){
     if(td!==0) return td;
     return _typeOrder(a.film)-_typeOrder(b.film);
   });
-  if(!entries.length){el.innerHTML=`<div class="empty-msg">${t('filter_sin_peliculas')}</div>`;return;}
-  el.innerHTML=entries.map(({film:f,screenings})=>{
+  if(!entries.length) return `<div class="empty-msg">${t('filter_sin_peliculas')}</div>`;
+  return entries.map(({film:f,screenings})=>{
     const inWL=watchlist.has(f.title);
     const isEvent=f.type==='event';
     const safeT=f.title.replace(/\'/g,"\\'").replace(/"/g,'&quot;');
@@ -10260,7 +10226,13 @@ function _renderExploreLista(){
       <div class="plist-heart${inWL?'':' empty'}" data-title="${f.title.replace(/"/g,'&quot;')}" onclick="event.stopPropagation();_toggleWLFromList(this.dataset.title,this)">${inWL?ICONS.heartFill:ICONS.heart}</div>
     </div>`;
   }).join('');
-  }catch(e){return;}
+  }catch(e){return '';}
+}
+// Impure caller (p6c)
+function _renderExploreLista(){
+  const el=document.getElementById('programa-list');
+  if(!el) return;
+  el.innerHTML=_renderExploreListaHTML(state);
 }
 function _toggleWLFromList(title,btn){
   // Wrapper para el ♥ en la lista de Programa — usa el toggleWL existente
@@ -10281,20 +10253,19 @@ function _toggleWLFromList(title,btn){
   },50);
 }
 
-function renderPeliculaView(){
-  const grid=document.getElementById('grid');
-  const cntEl=document.getElementById('cnt');
-  if(!grid) return;
-
-  // Filtrar por día si hay uno activo
+// Pure half (p6c) — DESVIACIÓN del patrón E1a: retorna tupla {html, hasEntries}
+// en lugar de string puro. Razón: el original tiene side effect branch-específico
+// (requestAnimationFrame(scroll) solo si entries.length > 0) — la impure caller
+// necesita saber qué branch se tomó para preservar R2 byte-identity. Alternativa
+// "siempre disparar rAF" cambiaría comportamiento observable (scroll event extra
+// en empty state). Documentada como deviation en spec/plan/tasks de 6c.
+function renderPeliculaViewHTML(state){
+  const {FILMS, watched, watchlist} = state.snapshot();
   const _dayFilms = activeDay==='all' ? FILMS : FILMS.filter(f=>f.day===activeDay);
-
-  // Agrupar por título único — film representativo = el de primera función cronológica
   const titleMap={};
   _dayFilms.forEach(f=>{
     if(!titleMap[f.title]){titleMap[f.title]={film:f,screenings:[]};}
     else{
-      // Actualizar film representativo si este screening es anterior
       const cur=titleMap[f.title].film;
       const curMin=(cur.day_order||0)*1440+toMin(cur.time||'00:00');
       const newMin=(f.day_order||0)*1440+toMin(f.time||'00:00');
@@ -10302,23 +10273,16 @@ function renderPeliculaView(){
     }
     titleMap[f.title].screenings.push(f);
   });
-
-  // Aplicar filtro de sección (chip o dropdown)
   let entries=Object.values(titleMap);
   if(activeSec!=='all'){
     entries=entries.filter(e=>e.film.section===activeSec);
   }
-  // Aplicar filtro de venue — incluir film si alguna función es en ese lugar
   if(activeVenue!=='all'){
     entries=entries.filter(e=>e.screenings.some(s=>{
       if(s.screenings&&s.screenings.length) return s.screenings.some(sc=>vcfg(sc.venue).short===activeVenue);
       return vcfg(s.venue).short===activeVenue;
     }));
   }
-
-  // Sort Grid: por sección editorial (SECTION_ORDER_LIST) → cronológico dentro de sección
-  // Misma fuente de verdad que el filtro Sección. Secciones fuera de la lista van al final.
-  // Lista usa sort cronológico puro (renderProgramaList).
   const _unknownSecMap=(()=>{const m={};let i=SECTION_ORDER_LIST.length;FILMS.forEach(f=>{if(f.section&&SECTION_ORDER_LIST.indexOf(f.section)<0&&!(f.section in m))m[f.section]=i++;});return m;})();
   const _secIdx=f=>{const i=SECTION_ORDER_LIST.indexOf(f.section??'');return i>=0?i:(_unknownSecMap[f.section??'']??99999);};
   entries.sort((a,b)=>{
@@ -10330,18 +10294,11 @@ function renderPeliculaView(){
     if(do_diff!==0) return do_diff;
     return toMin(a.film.time||'00:00')-toMin(b.film.time||'00:00');
   });
-
-  // Count badge: solo cuando hay filtro de Lugar (sin chip activo muestra el count de la sección en el chip)
-  cntEl.innerHTML=''; // count visible en chip y en lugar-btn — cnt-line redundante
-
-  const DAY_ABB=['MAR','MIÉ','JUE','VIE','SÁB','DOM'];
-
   if(!entries.length){
-    grid.innerHTML=`<div class="empty-msg">${t('filter_sin_peliculas')}</div>`;
-    return;
+    return {html: `<div class="empty-msg">${t('filter_sin_peliculas')}</div>`, hasEntries: false};
   }
   let _prevSec=null;
-  grid.innerHTML=`<div class="poster-grid">${entries.map(({film:f,screenings})=>{
+  const html=`<div class="poster-grid">${entries.map(({film:f,screenings})=>{
     const inWL=watchlist.has(f.title);
     const inW=watched.has(f.title);
     const allPast=screenings.every(s=>screeningPassed(s));
@@ -10381,10 +10338,24 @@ function renderPeliculaView(){
       ${inWL?`<button class="poster-wl-dot wl-on" data-title="${f.title.replace(/"/g,'&quot;')}" onclick="event.stopPropagation();toggleWL(this.dataset.title,event)" aria-label="${t('misc_interes_label')}">${ICONS.heartFill}</button>`:''}
     </div>`
   }).join('')}</div>`;
-  requestAnimationFrame(()=>window.dispatchEvent(new Event('scroll')));// trigger lazy load
+  return {html, hasEntries: true};
+}
+// Impure caller (p6c) — 2 containers (cnt + grid) + rAF branch-específico
+function renderPeliculaView(){
+  const grid=document.getElementById('grid');
+  const cntEl=document.getElementById('cnt');
+  if(!grid) return;
+  cntEl.innerHTML=''; // count visible en chip y en lugar-btn — cnt-line redundante
+  const {html, hasEntries} = renderPeliculaViewHTML(state);
+  grid.innerHTML=html;
+  if(hasEntries) requestAnimationFrame(()=>window.dispatchEvent(new Event('scroll')));// trigger lazy load
 }
 
 function renderSbar(){
+  // Reclasificada Group II durante 6c: no usa innerHTML para contenido —
+  // crea botones con createElement + appendChild + handlers programáticos
+  // (.onclick = fn). Split E1a no aplica sin cambiar byte-identity del DOM.
+  const {FILMS} = state.snapshot();
   const panel=document.getElementById('sdr-panel');
   const trigBtn=document.getElementById('sdr-btn');
   const lbl=document.getElementById('sdr-label');
@@ -10416,6 +10387,9 @@ function renderSbar(){
   });
 }
 function render(){
+  // Group II Tier 3 (p6c): branchy multi-dispatcher con 4 early returns.
+  // Split impráctico — body se queda monolítico con state.snapshot() destructure.
+  const {FILMS, _activeFestId, watched, watchlist} = state.snapshot();
   if(activeView==='agenda') return;
   // Si estamos en Cartelera con el nuevo sistema, _renderProgramaContent lo maneja
   if(activeView==='day'&&document.getElementById('programa-mode-bar')?.style.display!=='none'){

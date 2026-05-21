@@ -880,7 +880,19 @@ try:
     _lines = _html.split('\n')
     # PURE_FNS — funciones puras tracked por el check. Renamed de TIER1_FNS en
     # p6b porque ahora cubre múltiples tiers: Tier 1 originales (6a) + Group A
-    # reclasificadas (6b) + Group B pure halves (6b, suffix HTML).
+    # reclasificadas (6b) + Group B pure halves (6b, suffix HTML) + Group I
+    # pure halves de Tier 3 (6c).
+    #
+    # NO incluidos (impure legítimos, documentado en spec 6c):
+    # - renderAgenda, render (Group II Tier 3 — branchy multi-dispatcher,
+    #   side effects branch-específicos)
+    # - renderSbar (reclasificada Group II durante 6c — usa createElement +
+    #   appendChild + handlers programáticos, no innerHTML para contenido)
+    #
+    # Caso especial: renderPeliculaViewHTML retorna TUPLA {html, hasEntries}
+    # (no string puro). Es deviation E1a documentada en code comment de la
+    # función. Sigue siendo pura — el check valida ausencia de side effects,
+    # no la forma del return.
     PURE_FNS = [
         # Tier 1 originales (Fase 6a)
         'makeProgramPoster', 'makeEventPoster',
@@ -894,6 +906,9 @@ try:
         'renderProgramaChipsHTML', '_renderSplashDropdownHTML',
         '_renderFestivalSelectorHTML', 'renderAvDayHTML',
         'renderFilmListHTML',
+        # Group I pure halves (Fase 6c — split de Tier 3 orchestrators)
+        'renderAvBlocksHTML', 'renderProgramaListHTML',
+        '_renderExploreListaHTML', 'renderPeliculaViewHTML',
     ]
     ROSTER = ['_activeFestId', 'FILMS', 'FESTIVAL_DATES', 'FESTIVAL_END',
               'FESTIVAL_STORAGE_KEY', 'PRIO_LIMIT', 'TZ_OFFSET', 'FESTIVAL_TRANSPORT',
