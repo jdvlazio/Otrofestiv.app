@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `e9b852f docs: view-purity-6c spec + plan + tasks (p6c)`
+> Último commit: `b54b10c docs: controller-pattern-7a spec + plan + tasks (p7a)`
 
 ---
 
@@ -63,6 +63,7 @@ Juan es Product Owner, diseñador y developer. Claude ejecuta; Juan audita y apr
 
 ### Features activas (desde `.specify/features/`)
 
+- `controller-pattern-7a/` — fase actual: **tasks**
 - `data-title-refactor/` — fase actual: **tasks**
 - `domain-layer-extraction/` — fase actual: **tasks**
 - `festival-phase-extraction/` — fase actual: **tasks**
