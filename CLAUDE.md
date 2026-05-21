@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `a5e1a4a docs: schedule-planning spec + plan + tasks (p4)`
+> Último commit: `833a72d chore: bundle v202605202322`
 
 ---
 
