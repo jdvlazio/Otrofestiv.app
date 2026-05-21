@@ -2752,6 +2752,67 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 <div class="ag-view" id="ag-view"></div>
 
 <script>
+// ── STORAGE ADAPTER START ────────────────────────────────────────────
+// storage — encapsula localStorage I/O para 9 user-state items + 3 global keys.
+// User-state methods usan FESTIVAL_STORAGE_KEY como prefix. Global keys NO.
+// Cada método maneja serialización por tipo (Set ↔ array, object/array identity).
+// Operaciones silent-fail en parse/quota errors (default en reads, no-op en writes) —
+//   misma semántica que los try/catch silenciados de los callsites originales.
+// NO encapsula: cloud sync (sigue via _cloudSave() en callers), TMDB poster cache,
+//   otrofestiv_hint_cambiar, otrofestiv_display_name (Supabase), orf_build (SW staged rollout).
+// Posición: este bloque se define AL INICIO de script 3 (antes de _I18N, _lang,
+//   FESTIVAL_CONFIG y FESTIVAL_STORAGE_KEY) porque init code de _lang
+//   (línea ~3433+) y bootstrap de festival (línea ~4170+) usan storage.getLang()
+//   y storage.getActiveFestId() respectivamente. User-state methods cierran sobre
+//   FESTIVAL_STORAGE_KEY vía closure — late binding, así que pueden definirse
+//   antes de que FESTIVAL_STORAGE_KEY exista.
+// Excepción única conocida: línea ~2456 (splash lang preview en script 2, anterior
+//   a script 3) — esa línea SÍ usa localStorage.getItem inline porque storage
+//   no existe cuando ese script corre. Documentada en spec.md como exception.
+// Validate.py check [storage-encapsulation]: cualquier localStorage.(get|set)Item
+//   FUERA de los marcadores START/END es un error. Si necesitás añadir un nuevo
+//   user-state item, extendé el adapter — NO inline.
+const storage = {
+  // ── User state (festival-prefixed) ──
+  getWatchlist() { try { const r=localStorage.getItem(FESTIVAL_STORAGE_KEY+'wl'); return r?new Set(JSON.parse(r)):new Set(); } catch(e) { return new Set(); } },
+  setWatchlist(s) { try { localStorage.setItem(FESTIVAL_STORAGE_KEY+'wl', JSON.stringify([...s])); } catch(e) {} },
+
+  getWatched() { try { const r=localStorage.getItem(FESTIVAL_STORAGE_KEY+'watched'); return r?new Set(JSON.parse(r)):new Set(); } catch(e) { return new Set(); } },
+  setWatched(s) { try { localStorage.setItem(FESTIVAL_STORAGE_KEY+'watched', JSON.stringify([...s])); } catch(e) {} },
+
+  getPrioritized() { try { const r=localStorage.getItem(FESTIVAL_STORAGE_KEY+'prio'); return r?new Set(JSON.parse(r)):new Set(); } catch(e) { return new Set(); } },
+  setPrioritized(s) { try { localStorage.setItem(FESTIVAL_STORAGE_KEY+'prio', JSON.stringify([...s])); } catch(e) {} },
+
+  getFilmRatings() { try { const r=localStorage.getItem(FESTIVAL_STORAGE_KEY+'ratings'); return r?JSON.parse(r):{}; } catch(e) { return {}; } },
+  setFilmRatings(o) { try { localStorage.setItem(FESTIVAL_STORAGE_KEY+'ratings', JSON.stringify(o)); } catch(e) {} },
+
+  getSavedAgenda() { try { const r=localStorage.getItem(FESTIVAL_STORAGE_KEY+'saved'); return r?JSON.parse(r):null; } catch(e) { return null; } },
+  setSavedAgenda(o) { try { localStorage.setItem(FESTIVAL_STORAGE_KEY+'saved', JSON.stringify(o)); } catch(e) {} },
+
+  getAvailability() { try { const r=localStorage.getItem(FESTIVAL_STORAGE_KEY+'av3'); return r?JSON.parse(r):{}; } catch(e) { return {}; } },
+  setAvailability(o) { try { localStorage.setItem(FESTIVAL_STORAGE_KEY+'av3', JSON.stringify(o)); } catch(e) {} },
+
+  getLastRemovedSlots() { try { const r=localStorage.getItem(FESTIVAL_STORAGE_KEY+'lastslot'); if(!r) return []; const p=JSON.parse(r); return Array.isArray(p)?p:(p?[p]:[]); } catch(e) { return []; } },
+  setLastRemovedSlots(a) { try { localStorage.setItem(FESTIVAL_STORAGE_KEY+'lastslot', JSON.stringify(a)); } catch(e) {} },
+
+  getFilmDelays() { try { const r=localStorage.getItem(FESTIVAL_STORAGE_KEY+'delays'); return r?JSON.parse(r):{}; } catch(e) { return {}; } },
+  setFilmDelays(o) { try { localStorage.setItem(FESTIVAL_STORAGE_KEY+'delays', JSON.stringify(o)); } catch(e) {} },
+
+  getViewmodes() { try { const r=localStorage.getItem(FESTIVAL_STORAGE_KEY+'viewmodes'); return r?JSON.parse(r):{}; } catch(e) { return {}; } },
+  setViewmodes(o) { try { localStorage.setItem(FESTIVAL_STORAGE_KEY+'viewmodes', JSON.stringify(o)); } catch(e) {} },
+
+  // ── Global keys (NO prefix) ──
+  getActiveFestId() { return localStorage.getItem('otrofestiv_festival'); },
+  setActiveFestId(id) { try { localStorage.setItem('otrofestiv_festival', id); } catch(e) {} },
+
+  getLang() { return localStorage.getItem('otrofestiv_lang'); },
+  setLang(l) { try { localStorage.setItem('otrofestiv_lang', l); } catch(e) {} },
+
+  getBuild() { return localStorage.getItem('otrofestiv_build'); },
+  setBuild(b) { try { localStorage.setItem('otrofestiv_build', b); } catch(e) {} },
+};
+// ── STORAGE ADAPTER END ──────────────────────────────────────────────
+
 // ── i18n — sistema de traducción ─────────────────────────────────────────
 // Idioma determinado por preferencia del usuario, persistido en localStorage.
 // Cambio de idioma: setLang(code) escribe localStorage y recarga la app.
@@ -3435,7 +3496,7 @@ const _I18N = {
 
 
 let _lang = (()=>{
-  const saved = localStorage.getItem('otrofestiv_lang');
+  const saved = storage.getLang();
   if(saved && _I18N[saved]) return saved;
   // Auto-detect por idioma del navegador — solo en primer uso
   const nav = (navigator.language || navigator.userLanguage || 'es').toLowerCase();
@@ -3456,7 +3517,7 @@ function setLang(code){
   _fadeEls.forEach(el=>el.classList.add('lang-fade'));
   setTimeout(()=>{
     _lang = code;
-    localStorage.setItem('otrofestiv_lang', code);
+    storage.setLang(code);
     _applyI18nDOM();
     // Re-render vista activa — sin branches por tab
     // showDayView y renderAgenda manejan internamente qué tab está activo
@@ -4170,7 +4231,7 @@ const _DEFAULT_FEST_ID=(()=>{
   return entries.sort((a,b)=>new Date(b[1].festivalEndStr)-new Date(a[1].festivalEndStr))[0][0];
 })();
 
-const _storedFestId=localStorage.getItem('otrofestiv_festival');
+const _storedFestId=storage.getActiveFestId();
 // Si el festival guardado ya terminó → limpiar localStorage ahora, antes de que nada más lo lea
 const _storedFestCfg=_storedFestId&&FESTIVAL_CONFIG[_storedFestId];
 const _storedFestEnded=_storedFestCfg&&_storedFestCfg.festivalEndStr&&new Date(_storedFestCfg.festivalEndStr)<new Date();
@@ -4660,27 +4721,28 @@ let PRIO_LIMIT=5; // Updated by loadFestival per festival
 /* ── Clave de almacenamiento — cambiar por edición del festival ──
    Formato: {nombre}{año}_ → prefija todas las keys de localStorage.
    Garantiza que cada edición empiece limpia sin datos residuales. */
-let FESTIVAL_STORAGE_KEY=(localStorage.getItem('otrofestiv_festival')||_DEFAULT_FEST_ID)+'_';
+let FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
+
 // ── Reset agresivo de caché — independiente del SW ────────────────
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202605201957';
+const BUILD_VERSION='202605210701';
 (function(){
-  const _vk='otrofestiv_build';
+  // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';
-  const _stored=localStorage.getItem(_vk);
+  const _stored=storage.getBuild();
   const _reloaded=sessionStorage.getItem(_sk);
   // Solo recargar si el usuario ya eligió un festival (no interrumpir primera visita)
-  const _splashSeen=localStorage.getItem('otrofestiv_festival');
+  const _splashSeen=storage.getActiveFestId();
   if(_stored && _stored!==BUILD_VERSION && !_reloaded && _splashSeen){
     sessionStorage.setItem(_sk,'1');
-    localStorage.setItem(_vk,BUILD_VERSION);
+    storage.setBuild(BUILD_VERSION);
     location.reload(true);
     return;
   }
   sessionStorage.removeItem(_sk);
-  localStorage.setItem(_vk,BUILD_VERSION);
+  storage.setBuild(BUILD_VERSION);
 })();
 
 /* ── GLOSARIO DE TÉRMINOS USER-FACING ────────────────────────────
@@ -5014,35 +5076,35 @@ function renderMiPlanCalendar(){
 /* ── STATE: persistencia en localStorage ────────────────────────────── */
 function loadState(){
   try{
-    const wl=localStorage.getItem(`${FESTIVAL_STORAGE_KEY}wl`); if(wl) watchlist=new Set(JSON.parse(wl).map(normTitle));
-    const wt=localStorage.getItem(`${FESTIVAL_STORAGE_KEY}watched`); if(wt) watched=new Set(JSON.parse(wt).map(normTitle));
-    const _rt=localStorage.getItem(`${FESTIVAL_STORAGE_KEY}ratings`); if(_rt) try{Object.assign(filmRatings,JSON.parse(_rt));}catch(e){console.warn('[loadState] ratings parse failed',e);}
-    const av=localStorage.getItem(`${FESTIVAL_STORAGE_KEY}av3`); if(av){const p=JSON.parse(av);DAY_KEYS.forEach(d=>{if(p[d]) availability[d]=p[d];});}
-    const sa=localStorage.getItem(`${FESTIVAL_STORAGE_KEY}saved`); if(sa) savedAgenda=JSON.parse(sa);
+    watchlist = new Set([...storage.getWatchlist()].map(normTitle));
+    watched = new Set([...storage.getWatched()].map(normTitle));
+    Object.assign(filmRatings, storage.getFilmRatings());
+    const _av = storage.getAvailability(); DAY_KEYS.forEach(d=>{if(_av[d]) availability[d]=_av[d];});
+    savedAgenda = storage.getSavedAgenda();
     // Normalizar venues viejos (ej: 'CC Bocagrande' → 'Plaza Bocagrande')
     if(savedAgenda&&savedAgenda.schedule){
       savedAgenda.schedule.forEach(s=>{
         if(s.venue) s.venue=s.venue.replace(/CC Bocagrande/g,'Plaza Bocagrande');
       });
     }
-    const pr=localStorage.getItem(`${FESTIVAL_STORAGE_KEY}prio`); if(pr) prioritized=new Set(JSON.parse(pr).map(normTitle));
+    prioritized = new Set([...storage.getPrioritized()].map(normTitle));
     // Heal: garantiza que todo lo que está en prioritized esté en watchlist
     prioritized.forEach(t=>{if(!watchlist.has(t)){watchlist.add(t);}});
     saveWL();
     // Restore reserved slot — persists across refresh, button shows "＋ Añadir" (not "← Restaurar")
-    const rs=localStorage.getItem(`${FESTIVAL_STORAGE_KEY}lastslot`);if(rs){try{const p=JSON.parse(rs);lastRemovedSlots=Array.isArray(p)?p:(p?[p]:[]);}catch(e){console.warn('[loadState] lastslot parse failed',e);}}
-    const fd=localStorage.getItem(`${FESTIVAL_STORAGE_KEY}delays`);if(fd){try{filmDelays=JSON.parse(fd);}catch(e){console.warn('[loadState] delays parse failed',e);}}
-    const _vm=localStorage.getItem(`${FESTIVAL_STORAGE_KEY}viewmodes`);if(_vm){try{const _v=JSON.parse(_vm);if(_v.miPlan)miPlanViewMode=_v.miPlan;if(_v.intereses)interesesViewMode=_v.intereses;}catch(e){console.warn('[loadState] viewmodes parse failed',e);}}
+    lastRemovedSlots = storage.getLastRemovedSlots();
+    filmDelays = storage.getFilmDelays();
+    const _v = storage.getViewmodes(); if(_v.miPlan) miPlanViewMode=_v.miPlan; if(_v.intereses) interesesViewMode=_v.intereses;
   }catch(e){console.warn('[loadState] failed',e);}
 }
-function saveWL(){try{localStorage.setItem(`${FESTIVAL_STORAGE_KEY}wl`,JSON.stringify([...watchlist]));}catch(e){}_cloudSave();}
-function saveWatched(){try{localStorage.setItem(`${FESTIVAL_STORAGE_KEY}watched`,JSON.stringify([...watched]));}catch(e){}_cloudSave();}
+function saveWL(){ storage.setWatchlist(watchlist); _cloudSave(); }
+function saveWatched(){ storage.setWatched(watched); _cloudSave(); }
 function saveRating(title,rating){
   if(rating>0) filmRatings[title]=rating; else delete filmRatings[title];
-  try{localStorage.setItem(`${FESTIVAL_STORAGE_KEY}ratings`,JSON.stringify(filmRatings));}catch(e){}_cloudSave();
+  storage.setFilmRatings(filmRatings); _cloudSave();
 }
-function saveAV(){try{localStorage.setItem(`${FESTIVAL_STORAGE_KEY}av3`,JSON.stringify(availability));}catch(e){}_cloudSave();}
-function saveSavedAgenda(){try{localStorage.setItem(`${FESTIVAL_STORAGE_KEY}saved`,JSON.stringify(savedAgenda));}catch(e){}_cloudSave();_scheduleNotifications();}
+function saveAV(){ storage.setAvailability(availability); _cloudSave(); }
+function saveSavedAgenda(){ storage.setSavedAgenda(savedAgenda); _cloudSave(); _scheduleNotifications(); }
 
 // ── Notificaciones locales — aviso 30 min antes de cada función ───────────
 async function _scheduleNotifications(){
@@ -5091,9 +5153,9 @@ async function _cancelNotifications(){
     if(toCancel.length) await LocalNotifications.cancel({notifications:toCancel});
   }catch(e){}
 }
-function savePrio(){try{localStorage.setItem(`${FESTIVAL_STORAGE_KEY}prio`,JSON.stringify([...prioritized]));}catch(e){}_cloudSave();}
-function saveLastSlot(){try{localStorage.setItem(`${FESTIVAL_STORAGE_KEY}lastslot`,JSON.stringify(lastRemovedSlots));}catch(e){}}
-function saveDelays(){try{localStorage.setItem(`${FESTIVAL_STORAGE_KEY}delays`,JSON.stringify(filmDelays));}catch(e){}}
+function savePrio(){ storage.setPrioritized(prioritized); _cloudSave(); }
+function saveLastSlot(){ storage.setLastRemovedSlots(lastRemovedSlots); }
+function saveDelays(){ storage.setFilmDelays(filmDelays); }
 function _delayKey(s){return(s._title||s.title||'')+'|'+(s.day||'')+'|'+(s.time||'');}
 function setDelay(title,day,time,addMins){
   const k=title+'|'+day+'|'+time;
@@ -8111,7 +8173,7 @@ function openPostViewRating(title, day, time, venue, duration){
 function savePVRating(){
   if(_pvRating>0){
     filmRatings[_pvTitle]=_pvRating;
-    localStorage.setItem(`${FESTIVAL_STORAGE_KEY}ratings`,JSON.stringify(filmRatings));
+    storage.setFilmRatings(filmRatings);
     const stars=['','★','★★','★★★','★★★★','★★★★★'];
     showToast(stars[Math.round(_pvRating)]||'★ Calificada','info');
   }
@@ -9585,7 +9647,7 @@ function openCortoSheet(title, country, duration, section, flags, director, genr
 
 function setMiPlanView(mode){
   miPlanViewMode=mode;
-  try{const _v=JSON.parse(localStorage.getItem(`${FESTIVAL_STORAGE_KEY}viewmodes`)||'{}');_v.miPlan=mode;localStorage.setItem(`${FESTIVAL_STORAGE_KEY}viewmodes`,JSON.stringify(_v));}catch(e){}
+  const _v = storage.getViewmodes(); _v.miPlan = mode; storage.setViewmodes(_v);
   renderAgenda();
 }
 
@@ -9636,7 +9698,7 @@ function renderMiPlanList(schedule){
 }
 function setInteresesView(mode){
   interesesViewMode=mode;
-  try{const _v=JSON.parse(localStorage.getItem(`${FESTIVAL_STORAGE_KEY}viewmodes`)||'{}');_v.intereses=mode;localStorage.setItem(`${FESTIVAL_STORAGE_KEY}viewmodes`,JSON.stringify(_v));}catch(e){}
+  const _v = storage.getViewmodes(); _v.intereses = mode; storage.setViewmodes(_v);
   document.getElementById('ibtn-grid')?.classList.toggle('on',mode==='grid');
   document.getElementById('ibtn-list')?.classList.toggle('on',mode==='list');
   const el=document.getElementById('ag-film-list');
@@ -10726,7 +10788,7 @@ async function loadFestival(id){
   // Re-render festival selector con el nuevo festival activo
   _renderFestivalSelector(id);
   // Persist choice
-  localStorage.setItem('otrofestiv_festival',id);
+  storage.setActiveFestId(id);
   // Render — await dos rAFs: primero renderiza, segundo confirma el paint
   closeFestivalSheet();
   switchMainNav('mnav-cartelera');

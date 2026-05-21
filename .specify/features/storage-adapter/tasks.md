@@ -1,0 +1,24 @@
+# Tasks — Storage Adapter Fase 5
+
+- [x] 1. `python3 validate.py` → 21/21 antes de tocar nada (baseline)
+- [x] 2. Crear branch `refactor/storage-adapter-p5`
+- [ ] 3. Extender `tests/lib/load-domain.js` con `extractObject` + opción `objects: [...]`
+- [ ] 4. **BLOQUEANTE**: smoke test del loader — fixture sintética con `const X = {...}`, confirmar extracción correcta antes de avanzar
+- [x] 5. Diseñar el namespace `storage` (24 métodos) e implementarlo en index.html con marcadores START/END
+- [x] 6. Bloque de contrato sobre `storage` (parte de la declaración de paso 5)
+- [x] 7. Inventario completo de callsites `localStorage.getItem`/`setItem` (documentado en `callsites.md`)
+- [x] 8. Migrar callsites — set-based items (watchlist, watched, prioritized)
+- [x] 9. Migrar callsites — object items (savedAgenda, availability, filmRatings, filmDelays, viewmodes)
+- [x] 10. Migrar callsites — array items (lastRemovedSlots)
+- [x] 11. Migrar callsites — global keys (otrofestiv_festival, otrofestiv_lang, otrofestiv_build) — storage block movido a top de script 3
+- [x] 12. `tests/unit/storage.test.js` — 19 casos con mock localStorage
+- [x] 13. Verificar `node --test tests/unit/*.test.js` — 0 fallos (103 totales)
+- [x] 14. Añadir check `[storage-encapsulation]` a `validate.py`
+- [x] 15. `python3 validate.py` → 22/22 (con el nuevo check)
+- [x] 16. Verificación JS syntax (script del SCHEMA checklist)
+- [x] 17. Diff review completo
+- [x] 18. QA browser — roundtrip de 5 items post-reload en Tribeca
+- [x] 19. QA browser — cambio de idioma persiste post-reload; festival respeta cleanup intencional de festivales ended (línea 4233 bootstrap)
+- [x] 20. `python3 validate.py` → 22/22 pre-commit
+- [x] 21. `node scripts/bump-version.js`
+- [x] 22. Commit atómico
