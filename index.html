@@ -4916,7 +4916,7 @@ let FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202605211421';
+const BUILD_VERSION='202605211452';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';
@@ -5720,7 +5720,6 @@ const emptyStateHero = (icon, title, sub='', ctaLabel='', ctaOnclick='', ctaSeco
   </div>`;
 let avAddOpen={};
 /* ── Sistema de modales de confirmación ── */
-function showDestructiveModal(title,body,label,cb){_showModal(title,body,label,cb,'destructive');}
 function showActionModal(title,body,label,cb,cancelLabel){_showModal(title,body,label,cb,'confirm',cancelLabel);}
 function _showModal(title,body,label,cb,cls,cancelLabel){
   const p=document.getElementById('conflict-modal');if(p)p.remove();
