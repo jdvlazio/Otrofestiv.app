@@ -1,0 +1,30 @@
+# Tasks — View Purity Fase 6c (Tier 3, 7 fns + 1 dead)
+
+- [x] 1. `python3 validate.py` → 24/24 baseline + `node --test tests/unit/*.test.js` → 131/131
+- [x] 2. Crear branch `refactor/view-purity-6c`
+- [x] 3. Inventario contra HEAD: 5 Group I + 2 Group II + 2 Group III + 1 Group IV todos matchean spec con state reads exactos
+- [x] 4. QA browser PRE CRC: agView=1379689571, programaList=-373827060, grid=69729155, cnt=0, avBlocks=0 (cnt y avBlocks vacíos en boot — match natural)
+- [x] 5. **Group IV**: renderMiPlanList orphaned por commit 4fd007d ("refactor: Mi Plan — eliminar modos list/overview"). Cero callsites verificados. Eliminada (-45 líneas con try/catch wrapper)
+- [x] 6. **Group I.1**: `renderAvBlocks` (26 líneas) → split `renderAvBlocksHTML(state)` + impure caller
+- [x] 7. **DESVIACIÓN**: `renderSbar` reclasificada Group I → **Group II** (destructure-only). Razón: no usa innerHTML para contenido — crea botones con `createElement` + `appendChild` + handlers programáticos `.onclick = fn`. Split E1a cambiaría byte-identity del DOM (onclick attribute vs property). Migrada con `state.snapshot()` destructure al top
+- [x] 8. **Group I.3**: `renderProgramaList` → split `renderProgramaListHTML(state)` + impure caller (scrollTop reset + innerHTML)
+- [x] 9. **Group I.4**: `_renderExploreLista` → split `_renderExploreListaHTML(state)` + impure caller. try/catch en pure half ahora retorna `''` en lugar de tirar string al void
+- [x] 10. **Group I.5 + DESVIACIÓN**: `renderPeliculaView` split con **tuple return** `{html, hasEntries}`. Pure half decide branch (empty-msg vs poster-grid). Impure caller commit a 2 containers (cnt='', grid=html) + dispara rAF SOLO si hasEntries (preserva R2 — comportamiento branch-específico del original). Deviation E1a documentada en code comment
+- [x] 11. **Group II.1**: `render` migrada con state.snapshot() destructure de `{FILMS, _activeFestId, watched, watchlist}` al top. Sin signature change. Comentario en código documentando Group II
+- [x] 12. **Group II.2**: `renderAgenda` migrada con state.snapshot() destructure de `{savedAgenda, FILMS, _activeFestId, watched, watchlist}` al top. Sin signature change. Comentario documentando Group II
+- [x] 13. `PURE_FNS` extendida a 21 fns (17 pre-6c + 4 nuevas: renderAvBlocksHTML, renderProgramaListHTML, _renderExploreListaHTML, renderPeliculaViewHTML). Comentario documentando: Group II Tier 3 (renderAgenda, render) + renderSbar (reclasificada) son impuros legítimos. renderPeliculaViewHTML retorna tupla (deviation E1a en code comment)
+- [x] 14. `python3 validate.py` → 24/24, 0 warnings activas. Sanity-check: inyección de innerHTML en pure half detectada
+- [x] 15. `node --test tests/unit/*.test.js` → 131/131 pass
+- [x] 16. JS syntax check OK (validate.py [js-syntax])
+- [x] 17. QA POST CRC — **5/5 byte-identical match** (agView=1379689571, programaList=-373827060, grid=69729155, cnt=0, avBlocks=0)
+- [x] 18. QA Mi Plan flow — 3 branches de renderAgenda renderizan (seleccion=1621 chars, miplan=176 chars, planner=873 chars)
+- [x] 19. QA festival switch Tribeca↔Leviza atómico (FILMS 477↔24, watchlist rehidratada, mirror invariants OK)
+- [x] 20. QA toggle watchlist — add/remove funciona (1→2→1, render chain consistente)
+- [x] 21. Diff review — index.html +160/-95 net (Group IV -45 + Group I splits + Group II destructures). validate.py +17 (PURE_FNS +4 + comment doc)
+- [x] 22. ⚠ **QA BOOT PATH OBLIGATORIO** ⚠ PASSED: localStorage.clear() + reload + showAgView()/render()/_renderProgramaContent() con FILMS=0 (sin loadFest) → **0 errors captured**. Atrapa caller-missing-state bugs pre-CI (lección de 6b)
+- [ ] 23. `python3 validate.py` → 24/24 pre-commit
+- [ ] 24. `node scripts/bump-version.js`
+- [ ] 25. Commit atómico
+- [ ] 26. Push + PR contra `main` con título `refactor(view): purity Tier 3 — 5 split + 2 destructure + 1 dead (p6c)`
+- [ ] 27. Monitorear CI hasta verde — Playwright T01-T10 + T32 deben pasar
+- [ ] 28. Merge squash + cleanup branch

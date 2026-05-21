@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `878f45b docs: view-purity-6b spec + plan + tasks (p6b)`
+> Último commit: `e9b852f docs: view-purity-6c spec + plan + tasks (p6c)`
 
 ---
 
@@ -81,6 +81,7 @@ Juan es Product Owner, diseñador y developer. Claude ejecuta; Juan audita y apr
 - `venue-warnings/` — fase actual: **tasks**
 - `view-purity-6a/` — fase actual: **tasks**
 - `view-purity-6b/` — fase actual: **tasks**
+- `view-purity-6c/` — fase actual: **tasks**
 
 ---
 
