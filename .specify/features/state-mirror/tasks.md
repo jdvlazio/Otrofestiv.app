@@ -1,0 +1,30 @@
+# Tasks — State Container Mirror (Fase 5.5)
+
+- [x] 1. `python3 validate.py` → 22/22 antes de tocar nada (baseline)
+- [x] 2. Crear branch `refactor/state-mirror-p55`
+- [x] 3. Re-validar inventario de mutaciones contra HEAD actual (cero drift respecto al doc previo)
+- [x] 4. Declarar `let filmDelaysHistory={};` adyacente a `let filmDelays={};` (~línea 4771)
+- [x] 5. Extender `storage` namespace: `getFilmDelaysHistory()` con fallback al `_hist` viejo + `setFilmDelaysHistory()` + ajustar `getFilmDelays()` para strippear `_hist`
+- [x] 6. Diseñar e implementar el bloque `state` namespace (~150 líneas) con marcadores `[STATE-START]`/`[STATE-END]`, ubicado inmediatamente después del bloque `storage` en script 3
+- [x] 7. **BLOQUEANTE**: `tests/unit/state.test.js` con casos de `batchUpdate` atómico, rollback, reentrada, subscribe/unsubscribe (~310 líneas, 27 tests, 100% pass)
+- [x] 8. Migrar reasignaciones simples — `_lang`, `_simTime`, `savedAgenda={schedule:..}` + `savedAgenda=null` extra (4 sitios)
+- [x] 9. Migrar Sets — watchlist/watched/prioritized (21 sitios). Cero `.add/.delete` residuales
+- [x] 10. Migrar Objects — filmRatings (incl. cloud sync merge), savedAgenda (3 filter+push combinados, 2 sort), availability (4 sitios `[d].blocks=` + 2 aliased `av.blocks.push/sort`)
+- [x] 11. Migrar Array `lastRemovedSlots` — 3 sitios. `.length=MAX` → `.slice(0,MAX_REMEMBERED_SLOTS)`
+- [x] 12. Migrar filmDelays + filmDelaysHistory — `_hist` anidado separado, `setDelay`/`undoDelay`/`clearDelay` reescritos con `batchUpdate`. `saveDelays` persiste ambos keys
+- [x] 13. Migrar `loadFestival` swap a 3 batches atómicos (transition+clear → hidrate → cfg-tail+filter). Contract docstring documenta dependencias direccionales. Validation movida pre-batch para preservar state viejo en cfg fallida
+- [x] 14. Añadir check `[state-mirror]` a `validate.py` con whitelist documentada (declaraciones iniciales + bloque state + template literals worker). 6 patrones detectados: reasignación, mutador, .length=, [k]=, delete[k], .prop=
+- [x] 15. `python3 validate.py` → 23/23 (con el nuevo check). Sanity-check: inyecté violación temporal, fue detectada correctamente
+- [x] 16. `node --test tests/unit/*.test.js` — 131/131 pass
+- [x] 17. Verificación JS syntax (validate.py [js-syntax] OK)
+- [x] 18. Diff review completo — cero cambios de comportamiento, sólo canalización
+- [x] 19. QA browser — watchlist persiste post-reload en Tribeca; filtro cross-fest valida correctamente (The Apprentice removido por no ser de Tribeca)
+- [x] 20. QA browser — festival switch atómico Tribeca↔Leviza: 8 cfg keys cambian juntas (FILMS, FESTIVAL_STORAGE_KEY, PRIO_LIMIT, TZ_OFFSET, etc.); switch-back rehidrata el state previo
+- [x] 21. QA browser — `state.set('_lang', 'es')` propaga al global + invariant OK; `applySimTime` afecta `simNow()` y persiste en `_simTime`; reset a null funciona
+- [x] 22. QA browser — `setDelay` acumula (30→45) con history `[0, 30]`; `undoDelay` pop correcto (45→30→0); storage tiene `delays` y `delays_hist` separados; migración pre-p5.5 del `_hist` anidado verificada
+- [ ] 23. `python3 validate.py` → 23/23 pre-commit
+- [ ] 24. `node scripts/bump-version.js`
+- [ ] 25. Commit atómico
+- [ ] 26. Push + PR contra `main` con título `refactor(state): mirror state container for ~19 globals (p5.5)`
+- [ ] 27. Monitorear CI hasta verde
+- [ ] 28. Merge squash + cleanup branch

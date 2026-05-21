@@ -745,6 +745,126 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar storage encapsulation: {_e}')
 
+# ── [state-mirror] ────────────────────────────────────────────────────────────
+# Verifica que las escrituras a los 19 globals del roster del state pasen
+# todas por el namespace `state` (state.set/update/batchUpdate). Detecta:
+#   - Reasignaciones `<name> = <value>` (excluyendo ==, ===, !=, !==, >=, <=, =>)
+#   - Mutaciones in-place: .add/.delete/.clear/.push/.pop/.shift/.unshift/
+#     .splice/.sort, .length = N, [k] = v, delete [k], .<prop> = v
+# Whitelist:
+#   - Declaraciones iniciales (línea con `let <name> = ...` del roster)
+#   - Bloque [STATE-START]..[STATE-END] (donde el mirror legítimamente escribe)
+#   - Template literals del worker boundary (_workerGlobals + _handler)
+#   - state.update callbacks de la forma `s => s.add(t)` — el `s` aquí es param
+#     local, no el global. Pero como nuestro código usa los helpers immutables
+#     y NO mutates s in-place, este caso no debería ocurrir. Si aparece, es bug.
+check = 'state-mirror'
+try:
+    import re as _re
+    _html = open('index.html').read()
+    _lines = _html.split('\n')
+    # Markers
+    _sm_start = _sm_end = None
+    for _i, _line in enumerate(_lines, 1):
+        if '// ── STATE MIRROR START' in _line:
+            _sm_start = _i
+        elif '// ── STATE MIRROR END' in _line:
+            _sm_end = _i
+    if _sm_start is None or _sm_end is None:
+        fail(check, 'No se encontraron marcadores STATE MIRROR START/END en index.html')
+    else:
+        # Worker template literal bounds (líneas inclusivas — son strings, no JS real)
+        # _workerGlobals = `...` y _handler = `...` — assigns dentro son contenido del string.
+        # Encontrar los rangos dinámicamente: línea con `const _workerGlobals=\`` o `const _handler=\``
+        # y la siguiente línea con `\`;` solita.
+        _worker_ranges = []
+        _i = 0
+        while _i < len(_lines):
+            _line = _lines[_i]
+            if _re.search(r'const\s+(_workerGlobals|_handler)\s*=\s*`', _line):
+                _start_line = _i + 1  # 1-indexed
+                _j = _i + 1
+                while _j < len(_lines):
+                    if _re.match(r'^\s*`\s*;', _lines[_j]):
+                        _worker_ranges.append((_start_line, _j + 1))
+                        _i = _j
+                        break
+                    _j += 1
+            _i += 1
+        # Initial declaration lines: `let <ROSTER>` o `let <ROSTER>,` (multi-decl)
+        _roster = [
+            '_activeFestId', 'FILMS', 'FESTIVAL_DATES', 'FESTIVAL_END',
+            'FESTIVAL_STORAGE_KEY', 'PRIO_LIMIT', 'TZ_OFFSET', 'FESTIVAL_TRANSPORT',
+            'watchlist', 'watched', 'prioritized', 'filmRatings', 'filmDelays',
+            'filmDelaysHistory', 'savedAgenda', 'availability', 'lastRemovedSlots',
+            '_lang', '_simTime',
+        ]
+        _initial_decl_lines = set()
+        _decl_re = _re.compile(r'^\s*let\s+(' + '|'.join(_re.escape(_n) for _n in _roster) + r')\b')
+        for _i, _line in enumerate(_lines, 1):
+            if _decl_re.match(_line):
+                _initial_decl_lines.add(_i)
+
+        def _in_worker(_ln):
+            return any(_a <= _ln <= _b for (_a, _b) in _worker_ranges)
+
+        def _in_state_block(_ln):
+            return _sm_start <= _ln <= _sm_end
+
+        def _whitelisted(_ln):
+            return _ln in _initial_decl_lines or _in_state_block(_ln) or _in_worker(_ln)
+
+        _violations = []
+        # Para cada global del roster, buscar patrones de escritura
+        for _name in _roster:
+            _esc = _re.escape(_name)
+            # Patrones de escritura:
+            #   1. Reasignación: `<name> =` (no ==, ===, !=, !==, =>)
+            #      Bordeado: empieza palabra antes (\b), no precedido por =/!/>/< ni por `.`
+            #      (excluye `obj.watchlist=` que es property access, no global). No seguido por =/>.
+            _assign_re = _re.compile(r'(?<![=!<>.\w])' + _esc + r'\s*=(?![=>])')
+            #   2. Set/Map/Array mutators: .add/.delete/.clear/.push/.pop/.shift/.unshift/.splice/.sort/.fill
+            _mut_re = _re.compile(r'\b' + _esc + r'\.(add|delete|clear|push|pop|shift|unshift|splice|sort|fill)\s*\(')
+            #   3. Length truncation: .length =
+            _len_re = _re.compile(r'\b' + _esc + r'\.length\s*=')
+            #   4. Object key write: [k] =
+            _idx_re = _re.compile(r'\b' + _esc + r'\[[^\]]+\]\s*=(?!=)')
+            #   5. Object key delete: delete <name>[k]
+            _del_re = _re.compile(r'\bdelete\s+' + _esc + r'\[')
+            #   6. Property dot write: <name>.<prop> = (excluyendo .add/.delete que ya cuentan en _mut_re)
+            _prop_re = _re.compile(r'\b' + _esc + r'\.[A-Za-z_][A-Za-z0-9_]*\s*=(?!=)')
+
+            for _i, _line in enumerate(_lines, 1):
+                if _whitelisted(_i):
+                    continue
+                # Skip lines que son sólo comments
+                _stripped = _line.lstrip()
+                if _stripped.startswith('//') or _stripped.startswith('*') or _stripped.startswith('/*'):
+                    continue
+                for _pat, _kind in (
+                    (_assign_re, 'reasignación'),
+                    (_mut_re, 'mutador'),
+                    (_len_re, '.length='),
+                    (_idx_re, '[k]='),
+                    (_del_re, 'delete[k]'),
+                    (_prop_re, '.prop='),
+                ):
+                    _m = _pat.search(_line)
+                    if _m:
+                        _violations.append(f'L{_i}: {_name} {_kind} → "{_line.strip()[:80]}"')
+                        break  # un match por línea por global
+
+        if _violations:
+            for _v in _violations[:20]:
+                fail(check, _v)
+            if len(_violations) > 20:
+                fail(check, f'... y {len(_violations) - 20} violaciones más')
+            fail(check, 'Fix: canalizar escrituras vía state.set/update/batchUpdate. Si es un caso legítimo nuevo (worker boundary, etc), añadir a whitelist en validate.py + documentar en spec.md.')
+        else:
+            ok(check, f'state block L{_sm_start}-{_sm_end}; {len(_initial_decl_lines)} decls iniciales + {len(_worker_ranges)} worker templates whitelisted; cero escrituras al roster fuera del state')
+except Exception as _e:
+    warn(check, f'no se pudo verificar state mirror: {_e}')
+
 # ── Report ────────────────────────────────────────────────────────────────────
 print()
 print('═' * 60)
