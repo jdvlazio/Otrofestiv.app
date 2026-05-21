@@ -1,0 +1,30 @@
+# Tasks — View Purity Fase 6b (Tier 2, 11 fns + 1 dead)
+
+- [x] 1. `python3 validate.py` → 24/24 baseline + `node --test tests/unit/*.test.js` → 131/131
+- [x] 2. Crear branch `refactor/view-purity-6b`
+- [x] 3. Re-verificar inventario: 12 candidates confirmados en HEAD con state reads matching spec. Contexto histórico de renderSimPanel: orphaned por commit bd97b3c (fix i18n setLang en Planear — el call site `renderSimPanel()` fue removido del handler)
+- [x] 4. QA browser PRE — CRC baseline: agView=1379689571, programaList=-373827060, savedAgendaHTML=1383044747, festivalBarHTML=534153765, ratingStarsHTML=-1332874659. Container avRow no capturado (av-sheet no abierto en boot — se verifica via Playwright T09 + manual QA)
+- [x] 5. Group A: `renderSavedAgendaHTML(state)` wrapper + 1 caller
+- [x] 6. Group A: `renderFlowProgress(state, activeTab)` + 3 callers
+- [x] 7. Group A: `renderPrioStrip(state)` + 1 caller
+- [x] 8. Group A: `renderFilmAlternatives(state, title, day, time)` + 2 callers
+- [x] 9. Group B: `renderRatingStars` → `renderRatingStarsHTML(state, current)` pure + impure caller mantiene nombre
+- [x] 10. Group B: `renderNoticesBanner` → split + 2 callers intactos
+- [x] 11. Group B: `renderProgramaChips` → split con helper `_computeProgramaChips(state)` (extracción del cómputo para que impure caller pueda mutar `_currentChips` sin duplicar). DESVIACIÓN menor reportada
+- [x] 12. Group B: `_renderSplashDropdown` → split + 4 callers intactos. Impure caller también muta 2 elementos extra (splash-sel-meta, splash-sel-name)
+- [x] 13. Group B: `_renderFestivalSelector` → split + 4 callers intactos. DESVIACIÓN menor: línea pre-existente con `container.innerHTML=html;` duplicada preservada en impure caller
+- [x] 14. Group B: `renderAvDay` → split. Impure caller maneja className + innerHTML + post-render select defaults. Pure half retorna solo innerHTML
+- [x] 15. Group B: `renderFilmListHTML` mantiene nombre como pura. Nuevo `_rerenderFilmList` con setTimeout pill updates. DESVIACIÓN: `_reRenderIntereses` ahora delega a `_rerenderFilmList` (antes solo hacía innerHTML, lo que rompía pill updates post-p6b)
+- [x] 16. Group C: `renderSimPanel` eliminado (-13 líneas con su comentario doc-string)
+- [x] 17. Validate check: `TIER1_FNS` → `PURE_FNS` renamed, lista extendida a 17 funciones (6 Tier 1 + 4 Group A + 7 Group B pure halves). Mensaje del check actualizado ("debe ser pura" en lugar de "Tier 1 debe ser pura")
+- [x] 18. `python3 validate.py` → 24/24, 0 warnings activas. Sanity-check: inyección de `innerHTML=` detectada en 5 pure halves
+- [x] 19. `node --test tests/unit/*.test.js` — 131/131
+- [x] 20. QA browser POST — 5/5 CRCs byte-identical match: agView, programaList, savedAgendaHTML, festivalBarHTML, ratingStarsHTML
+- [x] 21. QA browser — festival selector (2,970 chars), programaChips (3,353 chars + 19 chips populated), festival switch atómico Tribeca↔Leviza con rehidratación, invariantes mirror intactas
+- [x] 22. Diff review — index.html +172/-82 = +90 net (extracción pure halves + helper `_computeProgramaChips` + impure callers + dead remove renderSimPanel -13). validate.py +20 (PURE_FNS rename + extend). Cero cambios de lógica/HTML — confirmado por 5/5 CRC byte-identical
+- [ ] 23. `python3 validate.py` → 24/24 pre-commit
+- [ ] 24. `node scripts/bump-version.js`
+- [ ] 25. Commit atómico
+- [ ] 26. Push + PR contra `main` con título `refactor(view): purity Tier 2 — 11 split/migrated + 1 dead removed (p6b)`
+- [ ] 27. Monitorear CI hasta verde
+- [ ] 28. Merge squash + cleanup branch

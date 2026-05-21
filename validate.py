@@ -878,10 +878,22 @@ try:
     import re as _re
     _html = open('index.html').read()
     _lines = _html.split('\n')
-    TIER1_FNS = [
+    # PURE_FNS — funciones puras tracked por el check. Renamed de TIER1_FNS en
+    # p6b porque ahora cubre múltiples tiers: Tier 1 originales (6a) + Group A
+    # reclasificadas (6b) + Group B pure halves (6b, suffix HTML).
+    PURE_FNS = [
+        # Tier 1 originales (Fase 6a)
         'makeProgramPoster', 'makeEventPoster',
         'renderUnconfirmed', '_renderSavedAgendaHTML',
         'renderContextualHeader', 'renderMiPlanCalendar',
+        # Group A reclasificadas (Fase 6b — pure-ish, no side effects)
+        'renderSavedAgendaHTML', 'renderFlowProgress',
+        'renderPrioStrip', 'renderFilmAlternatives',
+        # Group B pure halves (Fase 6b — split de Tier 2 mixed)
+        'renderRatingStarsHTML', 'renderNoticesBannerHTML',
+        'renderProgramaChipsHTML', '_renderSplashDropdownHTML',
+        '_renderFestivalSelectorHTML', 'renderAvDayHTML',
+        'renderFilmListHTML',
     ]
     ROSTER = ['_activeFestId', 'FILMS', 'FESTIVAL_DATES', 'FESTIVAL_END',
               'FESTIVAL_STORAGE_KEY', 'PRIO_LIMIT', 'TZ_OFFSET', 'FESTIVAL_TRANSPORT',
@@ -933,7 +945,7 @@ try:
         return ''.join(out)
 
     _warnings_collected = []
-    for _fn in TIER1_FNS:
+    for _fn in PURE_FNS:
         _result = _find_fn_body(_fn)
         if not _result:
             _warnings_collected.append(f'{_fn}: NOT FOUND en index.html')
@@ -972,13 +984,13 @@ try:
         ]
         for _pat, _kind in _se_patterns:
             if _re.search(_pat, _stripped):
-                _warnings_collected.append(f'{_fn}: side-effect "{_kind}" — Tier 1 debe ser pura')
+                _warnings_collected.append(f'{_fn}: side-effect "{_kind}" — debe ser pura (return string, no DOM ops)')
 
     if _warnings_collected:
         for _w in _warnings_collected:
             warn(check, _w)
     else:
-        ok(check, f'Tier 1 puras ({len(TIER1_FNS)} fns): state param + destructure + cero side effects')
+        ok(check, f'{len(PURE_FNS)} funciones puras: state param + destructure + cero side effects')
 except Exception as _e:
     warn(check, f'no se pudo verificar view purity: {_e}')
 
