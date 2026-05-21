@@ -1136,7 +1136,8 @@ except Exception as _e:
 #   - Dead entries: ACTION_REGISTRY entries sin call site (excepto composite
 #     helpers, que son foundation up-front)
 #
-# Nivel: WARNING en 7c-1. Promote a FAIL en 7c-4 cuando onclick_count === 0.
+# Nivel: FAIL desde 7c-4 — migración completa (onclick=0). Cualquier onclick
+# inline nuevo o typo de data-action rompe el build.
 check = 'event-delegation'
 try:
     import re as _re
@@ -1152,8 +1153,15 @@ try:
         _reg_block = _html[_reg_start:_reg_end]
         # Match `keyname: ` (al inicio de línea, con indentación)
         _registry_keys = set(_re.findall(r'^\s+([_a-zA-Z][_a-zA-Z0-9]*)\s*:\s*\(', _reg_block, _re.M))
-        # data-action usados en HTML
-        _used_actions = set(_re.findall(r'data-action="([^"]+)"', _html))
+        # data-action usados en HTML. Valores dinámicos (template ternary
+        # `${cond?'fnA':'fnB'}`) se resuelven extrayendo los literales quoted —
+        # ambas ramas deben existir en el registry.
+        _used_actions = set()
+        for _a in _re.findall(r'data-action="([^"]+)"', _html):
+            if '${' in _a:
+                _used_actions.update(_re.findall(r"'([_a-zA-Z][_a-zA-Z0-9]*)'", _a))
+            else:
+                _used_actions.add(_a)
         # Typo detection
         _typos = _used_actions - _registry_keys
         # Dead entries (entries en registry sin uso en HTML)
@@ -1170,11 +1178,14 @@ try:
         if _typos:
             for _typo in sorted(_typos):
                 fail(check, f'data-action="{_typo}" usado en HTML pero NO existe en ACTION_REGISTRY')
+        elif _onclick_count > 0:
+            fail(check, f'{_onclick_count} onclick inline restantes — event-delegation '
+                        f'requiere onclick=0 (migración completa en 7c-4)')
         else:
-            ok(check, f'Migration: onclick remaining={_onclick_count}, '
+            ok(check, f'onclick=0 (migración completa), '
                       f'{len(_used_actions)} data-actions usados, '
                       f'{len(_registry_keys)} entries en registry, '
-                      f'{len(_dead_non_composite)} dead non-composite (tolerado pre-7c-4)')
+                      f'{len(_dead_non_composite)} dead non-composite')
 except Exception as _e:
     warn(check, f'no se pudo verificar event delegation: {_e}')
 

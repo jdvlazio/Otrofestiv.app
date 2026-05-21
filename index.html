@@ -2470,7 +2470,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 
 
 <!-- Bottom sheet disponibilidad -->
-<div class="av-sheet-overlay" id="av-sheet-overlay" style="display:none" onclick="if(event.target===this)closeAvSheet()">
+<div class="av-sheet-overlay" id="av-sheet-overlay" style="display:none" data-close-bg="AvSheet">
   <div class="av-sheet">
     <div class="av-sheet-handle"></div>
     <div class="av-sheet-title" data-i18n="av_no_disponible">No disponible</div>
@@ -2567,13 +2567,13 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 <div id="hdr-ag" style="display:none">
 
   <div class="ag-toggle-bar" id="ag-toggle-bar">
-    <button class="ag-sec-pill prio" id="pill-prio" onclick="(()=>{const el=document.getElementById('sec-prio');if(!el)return;const hdr=document.getElementById('hdr-ag');const off=hdr?hdr.getBoundingClientRect().bottom:0;const y=el.getBoundingClientRect().top+window.scrollY-off-8;window.scrollTo({top:y,behavior:'smooth'})})()">
+    <button class="ag-sec-pill prio" id="pill-prio" data-action="scrollToAgSec" data-target="sec-prio">
       Prioridad <span class="txt-dim-xs" id="pill-prio-cnt">—</span>
     </button>
-    <button class="ag-sec-pill int" id="pill-int" onclick="(()=>{const el=document.getElementById('sec-int');if(!el)return;const hdr=document.getElementById('hdr-ag');const off=hdr?hdr.getBoundingClientRect().bottom:0;const y=el.getBoundingClientRect().top+window.scrollY-off-8;window.scrollTo({top:y,behavior:'smooth'})})()">
+    <button class="ag-sec-pill int" id="pill-int" data-action="scrollToAgSec" data-target="sec-int">
       Intereses <span class="txt-dim-xs" id="pill-int-cnt">—</span>
     </button>
-    <button class="ag-sec-pill yv" id="pill-yv" onclick="(()=>{const el=document.getElementById('sec-yv');if(!el)return;const hdr=document.getElementById('hdr-ag');const off=hdr?hdr.getBoundingClientRect().bottom:0;const y=el.getBoundingClientRect().top+window.scrollY-off-8;window.scrollTo({top:y,behavior:'smooth'})})()">
+    <button class="ag-sec-pill yv" id="pill-yv" data-action="scrollToAgSec" data-target="sec-yv">
       Vistas <span class="txt-dim-xs" id="pill-yv-cnt">—</span>
     </button>
     <div class="ag-toggle-spacer"></div>
@@ -3001,7 +3001,7 @@ const state = (() => {
 // Componentes:
 //   1. Composite helpers (11) — encapsulan patrones multi-statement
 //      detectados durante auditoría de onclick. Usados por 7c-3
-//   2. ACTION_REGISTRY (91 entries categorías A-G) — schema completo
+//   2. ACTION_REGISTRY (97 entries categorías A-G) — schema completo
 //   3. Delegated listener + data-close-bg infra
 //
 // Decisión D4 (validate.py): foundation completa up-front. Composite
@@ -3089,8 +3089,30 @@ function _activatePlanFilm(el) {
   if (!isNaN(i)) selectMiPlanDay(i);
 }
 
+function _scrollToSuggestions() {
+  document.querySelector('.suggestion-wrap')?.scrollIntoView({behavior:'smooth', block:'start'});
+}
+
+function _removeConflictModal() {
+  document.getElementById('conflict-modal')?.remove();
+}
+
+function _scrollToTop() {
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+
+function _searchOpenFilm(title) {
+  searchClose();
+  openPelSheet(title);
+}
+
+function _searchOpenCorto(title, country, dur, section, flags) {
+  searchClose();
+  openCortoSheet(title, country, dur, section, flags);
+}
+
 // ── 2. ACTION_REGISTRY — mapping data-action → handler ────────────────
-// 91 entries totales en 7 categorías. Cada entry sabe cómo extraer args
+// 97 entries totales en 7 categorías. Cada entry sabe cómo extraer args
 // del DOM element (dataset attributes).
 // Usage en HTML: el data-action attribute identifica el handler en el
 // registry. Args adicionales via data-* attributes leídos por el handler.
@@ -3121,7 +3143,7 @@ const ACTION_REGISTRY = {
   _dismissNotice:     (el)    => _dismissNotice(el.dataset.title),
   swapPriority:       (el)    => swapPriority(el.dataset.rmtitle, el.dataset.addtitle),
 
-  // ── B: Sheets open/close (24) ──
+  // ── B: Sheets open/close (26) ──
   openAvSheet:           ()      => openAvSheet(),
   openAuthSheet:         ()      => openAuthSheet(),
   openFestivalSheet:     ()      => openFestivalSheet(),
@@ -3145,7 +3167,9 @@ const ACTION_REGISTRY = {
   openPostViewRating:    (el)    => openPostViewRating(el.dataset.title, el.dataset.day, el.dataset.time, el.dataset.venue, el.dataset.duration),
   selectSplashFest:      (el)    => selectSplashFest(el.dataset.name, el.dataset.meta, el.dataset.fest),
   selectFromDetail:      (el)    => selectFromDetail(el),
-  _openCombinedFilmSheet:(el)    => _openCombinedFilmSheet(el.dataset.title),
+  _openCombinedFilmSheet:(el)    => _openCombinedFilmSheet(JSON.parse(el.dataset.film)),
+  searchOpenFilm:        (el)    => _searchOpenFilm(el.dataset.title),
+  searchOpenCorto:       (el)    => _searchOpenCorto(el.dataset.title, el.dataset.country, el.dataset.dur, el.dataset.section, el.dataset.flags),
 
   // ── C: Navigation (12) ──
   switchMainNav:       (el)    => switchMainNav(el.dataset.nav),
@@ -3161,7 +3185,7 @@ const ACTION_REGISTRY = {
   selectAvDay:         (el)    => selectAvDay(el.dataset.day),
   navTo:               (el)    => _navTo(el.dataset.tab),
 
-  // ── D: Cartelera/Programa filters (10) ──
+  // ── D: Cartelera/Programa filters + DOM utils (13) ──
   filterBySection:     (el)    => filterBySection(el.dataset.section),
   filterByVenue:       (el)    => filterByVenue(el.dataset.venue),
   _pafClearSec:        ()      => _pafClearSec(),
@@ -3172,14 +3196,18 @@ const ACTION_REGISTRY = {
   clearProgramaChip:   ()      => clearProgramaChip(),
   runCalc:             ()      => runCalc(),
   toggleArchive:       ()      => toggleArchive(),
+  scrollToSuggestions: ()      => _scrollToSuggestions(),
+  removeConflictModal: ()      => _removeConflictModal(),
+  scrollToTop:         ()      => _scrollToTop(),
 
-  // ── E: Mi Plan / Schedule actions (9) ──
+  // ── E: Mi Plan / Schedule actions (10) ──
   jumpToScenario:        (el)    => jumpToScenario(+el.dataset.index),
   saveCurrentScenario:   ()      => saveCurrentScenario(),
   removeFilmFromScenario:(el)    => removeFilmFromScenario(el.dataset.title),
   setActivePlanFilm:     (el)    => setActivePlanFilm(el),
   toggleFilmAlternatives:(el)    => toggleFilmAlternatives(el.dataset.key, el.dataset.title, el.dataset.day, el.dataset.time),
   toggleMplanProg:       (el, e) => toggleMplanProg(el, e),
+  markWatchedFromPlan:   (el, e) => markWatchedFromPlan(el.dataset.title, el.dataset.day, el.dataset.time, el.dataset.venue, el.dataset.dur, e),
   sharePlan:             ()      => sharePlan(),
   exportICS:             ()      => exportICS(),
   loadFestival:          (el)    => loadFestival(el.dataset.fest),
@@ -3205,24 +3233,35 @@ const ACTION_REGISTRY = {
 };
 
 // ── 3. Delegated click listener + data-close-bg infra ────────────────
-// Captura clicks a nivel document. Si el target (o ancestor closest) tiene
-// data-action, busca el handler en ACTION_REGISTRY y lo invoca.
+// Captura clicks a nivel document. Walking-up manual desde el target:
+// el primer ancestor con data-action dispara su handler. Un wrapper con
+// data-stop="1" (sin data-action) encontrado ANTES bloquea el lookup del
+// action ancestro (y detiene propagation) — patrón usado por wrappers que
+// solo previenen que un handler ancestro se dispare.
 //
-// data-stop="1": llamar event.stopPropagation() ANTES del handler
+// data-stop="1": en un elemento con data-action → stopPropagation antes del
+//   handler. En un wrapper sin data-action → bloquea action ancestro + stop.
 // data-close-bg="X": si click directo en este elemento (no en hijo),
 //   dispara close<X>() (e.g., data-close-bg="AvSheet" → closeAvSheet)
 //
-// Coexistencia con onclick inline: durante migración 7c-1/2/3/4, sites
-// no migrados con onclick attribute siguen funcionando — el browser
-// ejecuta el onclick directamente. Este listener solo activa para
-// elementos con data-action attribute, sin interferir con el resto.
+// Walking-up manual (no closest()) para que un wrapper data-stop pueda
+// interceptar antes de alcanzar un data-action ancestro.
 document.addEventListener('click', function(e) {
-  const target = e.target.closest('[data-action]');
-  if (target) {
-    if (target.dataset.stop === '1') e.stopPropagation();
-    const handler = ACTION_REGISTRY[target.dataset.action];
-    if (handler) handler(target, e);
-    return;
+  let node = e.target;
+  while (node && node !== document) {
+    if (node.dataset) {
+      if (node.dataset.action) {
+        if (node.dataset.stop === '1') e.stopPropagation();
+        const handler = ACTION_REGISTRY[node.dataset.action];
+        if (handler) handler(node, e);
+        return;
+      }
+      if (node.dataset.stop === '1') {
+        e.stopPropagation();
+        return;
+      }
+    }
+    node = node.parentElement;
   }
   // close-on-background-click: solo si click directo en el overlay (no propagado de hijo)
   const bg = e.target.closest('[data-close-bg]');
@@ -4458,22 +4497,22 @@ function _isEditorialPoster(f){
 // esta función. NUNCA construir <img class="lb-poster"> directamente.
 //
 // cssClass: 'lb-poster' | 'int-item-poster' | 'prio-chip-poster'
-// onclickJs: string JS a ejecutar en click (sin event.stopPropagation — ya incluido)
 // loading:   'lazy' (default) | 'eager'
-function _posterThumb(f, cssClass, onclickJs, loading){
+// Nota (p7c-4): se eliminó el param onclickJs — los call sites que necesitan
+// abrir una sheet usan el mecanismo js-open-pel (clase + data-title).
+function _posterThumb(f, cssClass, loading){
   const p = f ? getFilmPoster(f) : null;
   const _load = loading || 'lazy';
-  const _oc = onclickJs ? ` onclick="event.stopPropagation();${onclickJs}"` : '';
 
   if(!p){
-    return `<div class="${cssClass}"${_oc}></div>`;
+    return `<div class="${cssClass}"></div>`;
   }
 
   if(f && _isEditorialPoster(f)){
     const color = _sectionColor(f.section || '');
     // Misma estructura que .poster-card.editorial en Programa Grid:
     // band (28.89%) + div flex:1 con img cover center-top
-    return `<div class="${cssClass} ${cssClass}-ed" style="background:${color}"${_oc}>`
+    return `<div class="${cssClass} ${cssClass}-ed" style="background:${color}">`
       + `<div style="height:28.89%;flex-shrink:0"></div>`
       + `<div style="flex:1;overflow:hidden;min-height:0">`
       + `<img src="${p}" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block" loading="${_load}" onerror="this.remove()" alt="">`
@@ -4482,7 +4521,7 @@ function _posterThumb(f, cssClass, onclickJs, loading){
   }
 
   const _posStyle = _posterStyle(f);
-  return `<img class="${cssClass}" src="${p}" loading="${_load}"${_posStyle}${_oc} onerror="this.remove()" alt="">`;
+  return `<img class="${cssClass}" src="${p}" loading="${_load}"${_posStyle} onerror="this.remove()" alt="">`;
 }
 // Elimina el prefijo emoji de una sección (ej. "🎬 Competencia" → "Competencia")
 // NO elimina palabras — "U.S. Narrative Competition" se mantiene intacto
@@ -5157,7 +5196,7 @@ let FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202605211813';
+const BUILD_VERSION='202605211859';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';
@@ -5420,7 +5459,7 @@ function renderMiPlanCalendar(state){
   if(!dayFilms.length){
     if(!isPastDay){
       // CTA C: día futuro sin películas — invita a explorar sugerencias o recalcular
-      listHtml+=`<div class="cta-ctx cta-ctx-c" onclick="document.querySelector('.suggestion-wrap')?.scrollIntoView({behavior:'smooth',block:'start'})">
+      listHtml+=`<div class="cta-ctx cta-ctx-c" data-action="scrollToSuggestions">
         <div class="cta-ctx-ico">${ICONS.calendar}</div>
         <div class="cta-ctx-body">
           <div class="cta-ctx-title cta-ctx-title-c">${t('plan_dia_libre')}</div>
@@ -5454,14 +5493,14 @@ function renderMiPlanCalendar(state){
       const _isEventRow=_mf&&_mf.type==='event';
       const _safeMpT=(s._title||"").replace(/'/g,"\\'");
       const _mphInner=_mp
-          ?_posterThumb(_mf,'lb-poster',null)
+          ?_posterThumb(_mf,'lb-poster')
           :_isEventRow
             ?`<img class="lb-poster" src="${makeEventPoster(state,_mf.title,_mf.duration,_mf.event_kind)}" alt="" loading="lazy" onerror="this.remove()">`
-            :_posterThumb(_mf,'lb-poster',null);
-      const _mph=`<div class="js-open-pel" data-title="${s._title||''}" style="flex-shrink:0;cursor:pointer" onclick="event.stopPropagation()">${_mphInner}</div>`
+            :_posterThumb(_mf,'lb-poster');
+      const _mph=`<div class="js-open-pel" data-title="${s._title||''}" style="flex-shrink:0;cursor:pointer" data-stop="1">${_mphInner}</div>`
       listHtml+=`<div class="mplan-row${_rowKey===_activeMiPlanFilm?' active':''}" style="cursor:pointer" data-rkey="${_safeRowKey}" data-action="selectFromDetail">
         ${_mph}
-        <div class="mplan-tc" onclick="event.stopPropagation()">
+        <div class="mplan-tc" data-stop="1">
           <div class="mplan-t1${isPast?' mp-past':''}" ${!isPast?`data-action="toggleFilmAlternatives" data-key="${(s._title||'')+(s.day||'')+(s.time||'')}" data-title="${safeT}" data-day="${s.day||''}" data-time="${s.time||''}" data-stop="1"`:''} title="${!isPast?'Cambiar horario':''}">${s.time}</div>
           <div class="mplan-t2">${mplanEndStr(s.time,dur)}${prioritized.has(s._title)?` <span class="txt-amber60-xs">★</span>`:''}${isNow?` <span class="txt-green-semi">en curso</span>`:''}</div>
         </div>
@@ -5952,12 +5991,12 @@ const emptyState = (icon, title, sub='') =>
 
 // Hero: para pantallas completas vacías — Mi Plan, Intereses, Planear
 // REGLA: CTA primario → .empty-state-cta (ámbar sólido, texto negro). Secundario → pasar ctaSecondary=true
-const emptyStateHero = (icon, title, sub='', ctaLabel='', ctaOnclick='', ctaSecondary=false) =>
+const emptyStateHero = (icon, title, sub='', ctaLabel='', ctaTab='', ctaSecondary=false) =>
   `<div class="empty-state-hero">
     <div class="empty-state-icon">${icon}</div>
     <div class="empty-state-title">${title}</div>
     ${sub ? `<div class="empty-state-sub">${sub}</div>` : ''}
-    ${ctaLabel ? `<button class="${ctaSecondary?'empty-state-cta-sec':'empty-state-cta'}" onclick="${ctaOnclick}">${ctaLabel}</button>` : ''}
+    ${ctaLabel ? `<button class="${ctaSecondary?'empty-state-cta-sec':'empty-state-cta'}" data-action="navTo" data-tab="${ctaTab}">${ctaLabel}</button>` : ''}
   </div>`;
 let avAddOpen={};
 /* ── Sistema de modales de confirmación ── */
@@ -6784,7 +6823,7 @@ function renderPrioStrip(state){
     const f=FILMS.find(fi=>fi.title===title);
     const p=getFilmPoster(f);
     const _safeChipT=title.replace(/'/g,"&#39;");
-    const img=p?_posterThumb(f,'prio-chip-poster',null):`<div class="prio-chip-ph">${ICONS.star}</div>`;
+    const img=p?_posterThumb(f,'prio-chip-poster'):`<div class="prio-chip-ph">${ICONS.star}</div>`;
     const{displayTitle,progSuffix}=parseProgramTitle(title);
     const short=displayTitle.length>24?displayTitle.slice(0,22)+'…':displayTitle;
     const allPast=!festivalEnded()&&!FILMS.some(f=>f.title===title&&!screeningPassed(f));
@@ -6817,7 +6856,7 @@ function renderFilmListHTML(state){
   const watchedList=[...watched];
 
   if(!prioList.length&&!nonPrioList.length&&!watchedList.length){
-    return emptyStateHero(ICONS.heart,t('empty_lo_que_agg'),t('empty_intereses_2'),t('plan_ir_programa'),"switchMainNav('mnav-cartelera');showDayView()");
+    return emptyStateHero(ICONS.heart,t('empty_lo_que_agg'),t('empty_intereses_2'),t('plan_ir_programa'),'mnav-cartelera');
   }
 
   // ── Próxima función futura de un film ──────────────────────────────────
@@ -6862,7 +6901,7 @@ function renderFilmListHTML(state){
     const next=_nextScreening(title);
     const conflict=_hasConflict(title);
 
-    const posterHtml=_posterThumb(f,'int-item-poster',null);
+    const posterHtml=_posterThumb(f,'int-item-poster');
     const secLabel=_secLabel(f?.section||'');
     const nextHtml=next
       ?`<div class="int-item-next">
@@ -6895,7 +6934,7 @@ function renderFilmListHTML(state){
     const f=FILMS.find(fi=>fi.title===title);
     const{displayTitle,progSuffix}=parseProgramTitle(title);
 
-    const posterHtml=_posterThumb(f,'int-item-poster',null);
+    const posterHtml=_posterThumb(f,'int-item-poster');
     const secLabel=_secLabel(f?.section||'');
     const rating=filmRatings[title]||0;
     const stars=rating>0
@@ -7032,7 +7071,7 @@ function mkAgendaRow(s, mode='saved'){
   const f=FILMS.find(fi=>fi.title===title);
   const _p=getFilmPoster(f);
   const _safePT=title.replace(/'/g,"\\'");
-  const _phInner=_posterThumb(f,'lb-poster',null);
+  const _phInner=_posterThumb(f,'lb-poster');
   const _ph=`<div class="js-open-pel" data-title="${title}" style="flex-shrink:0;cursor:pointer">${_phInner}</div>`;
   const vc2=vcfg(s.venue),sl=sala(s.venue);
   const safeT=(s._title||'').replace(/"/g,'&quot;');
@@ -7058,7 +7097,7 @@ function mkAgendaRow(s, mode='saved'){
       <div class="saved-venue">${ICONS.pin} ${vc2.short}${sl?' · '+sl:''}${s.duration?' · '+durFmt(s.duration):''}${altBadge}</div>
       ${_progBtn}
     </div>
-    ${mode==='saved'?`<button class="row-xs saved-check${isDone?' done':''}" data-title="${safeT}" data-day="${s.day||''}" data-time="${s.time||''}" data-venue="${(s.venue||'').replace(/"/g,'&quot;')}" data-dur="${s.duration||''}" onclick="${isDone?'toggleWatched(this.dataset.title,event)':'markWatchedFromPlan(this.dataset.title,this.dataset.day,this.dataset.time,this.dataset.venue,this.dataset.dur,event)'}">${ICONS.check+' '+t('cta_vista')}</button>`:''}
+    ${mode==='saved'?`<button class="row-xs saved-check${isDone?' done':''}" data-title="${safeT}" data-day="${s.day||''}" data-time="${s.time||''}" data-venue="${(s.venue||'').replace(/"/g,'&quot;')}" data-dur="${s.duration||''}" data-action="${isDone?'toggleWatched':'markWatchedFromPlan'}">${ICONS.check+' '+t('cta_vista')}</button>`:''}
   </div>${_progList}${altsHtml?`<div class="film-alts">${altsHtml}</div>`:''}`;
 }
 
@@ -7314,7 +7353,7 @@ function confirmReplace(removedTitle,newTitle,day,time){
     <div class="conflict-modal-hdr">${removedTitle?t('plan_reemplazar_funcion'):t('plan_anadir_plan')}</div>
     <div class="conflict-modal-body">${removedTitle?`${t('misc_quitar')} <b>${shortRem}</b> y ${t('misc_anadir')}`:`${t('misc_anadir')}`} <b>${shortNew}</b> al plan.</div>
     <div class="conflict-modal-btns">
-      <button class="conflict-modal-btn cancel" onclick="document.getElementById('conflict-modal').remove()">${t('search_cancelar')}</button>
+      <button class="conflict-modal-btn cancel" data-action="removeConflictModal">${t('search_cancelar')}</button>
       <button class="conflict-modal-btn confirm" id="replace-ok">${t('misc_si')}${removedTitle?', '+t('misc_si_reemplazar').split(', ')[1]:', '+t('misc_si_anadir').split(', ')[1]}</button>
     </div>
   </div>`;
@@ -7680,7 +7719,7 @@ function renderContextualHeader(state){
       const safeT=(s._title||'').replace(/'/g,"&#39;");
       const stars=r?starsText(r):'';
       return`<div class="prio-chip-wrap js-open-pel" data-title="${f.title}">
-        ${getFilmPoster(f)?_posterThumb(f,'prio-chip-poster',null):`<div class="prio-chip-ph">🎬</div>`}
+        ${getFilmPoster(f)?_posterThumb(f,'prio-chip-poster'):`<div class="prio-chip-ph">🎬</div>`}
         ${r?`<div class="prio-overlay-label">${stars}</div>`:''}
         ${!r?`<div class="prio-overlay-center">
           <button class="prio-star-pill" data-action="openPostViewRating" data-title="${safeT}" data-day="${s.day||''}" data-time="${s.time||''}" data-venue="${(s.venue||'').replace(/"/g,'&quot;')}" data-duration="${s.duration||''}" data-stop="1">★</button>
@@ -7719,9 +7758,9 @@ function _renderSavedAgendaHTML(state){
     }
     // Sin películas vistas: empty state canónico
     const _festNameMp=(FESTIVAL_CONFIG[_activeFestId]||{}).name||'El festival';
-    return emptyStateHero(ICONS.sparkles,`${_festNameMp} ${t('plan_fest_terminado')}`,t('empty_vistas'),t('plan_ir_programa'),"switchMainNav('mnav-cartelera');showDayView()");
+    return emptyStateHero(ICONS.sparkles,`${_festNameMp} ${t('plan_fest_terminado')}`,t('empty_vistas'),t('plan_ir_programa'),'mnav-cartelera');
   }
-  if(!savedAgenda||!savedAgenda.schedule.length) return emptyStateHero(ICONS.calendar,t('plan_tu_plan_empty'),t('empty_intereses'),t('cta_ir_planear'),"switchMainNav('mnav-planner');showAgView()");
+  if(!savedAgenda||!savedAgenda.schedule.length) return emptyStateHero(ICONS.calendar,t('plan_tu_plan_empty'),t('empty_intereses'),t('cta_ir_planear'),'mnav-planner');
   const all=savedAgenda.schedule;
   const planTitles=new Set(all.map(s=>s._title));
   const archive=all.filter(s=>watched.has(s._title));
@@ -7784,8 +7823,7 @@ function _renderSavedAgendaHTML(state){
         ${archByDay[day].map(s=>{
           const vc2=vcfg(s.venue),sl=sala(s.venue);
           const _af=FILMS.find(fi=>fi.title===s._title);
-          const _safeMpT2=(s._title||"").replace(/'/g,"&#39;");
-          const _aph=_posterThumb(_af,'lb-poster',`openPelSheet('${_safeMpT2}')`);
+          const _aph=`<div class="js-open-pel" data-title="${(s._title||'').replace(/"/g,'&quot;')}" style="cursor:pointer">${_posterThumb(_af,'lb-poster')}</div>`;
           return`<div class="saved-item done">
             ${_aph}
             <div class="saved-time">${s.time}</div>
@@ -7800,7 +7838,7 @@ function _renderSavedAgendaHTML(state){
         <div class="archive-out-lbl">${t('plan_vistas_fuera')}</div>
         ${watchedOutsidePlan.map(f=>{
           const _ap=getFilmPoster(f);
-          const _aphInner=_posterThumb(f,'lb-poster',null);
+          const _aphInner=_posterThumb(f,'lb-poster');
           const _aph=`<div class="js-open-pel" data-title="${f.title}" style="cursor:pointer">${_aphInner}</div>`;
           return`<div class="saved-item done">
             ${_aph}
@@ -7830,7 +7868,7 @@ function _renderSavedAgendaHTML(state){
       html+=suggsByDay[day].slice(0,4).map(f=>{
         const vc2=vcfg(f.venue),sl=sala(f.venue);
         const _sp=getFilmPoster(f);
-        const _sph=_posterThumb(f,'lb-poster',null);
+        const _sph=_posterThumb(f,'lb-poster');
         return`<div class="suggestion-item js-open-pel" data-title="${f.title}">
           ${_sph}
           <div class="suggestion-time">${f.time}</div>
@@ -8376,7 +8414,7 @@ function buildResultHTML(scenarios){
       const poster=f?getFilmPoster(f):null;
       const secLabel=f?_secLabel(f.section||''):'';
       const safeT=excTitle.replace(/'/g,"&#39;");
-      const posterHtml=_posterThumb(f,'int-item-poster',null);
+      const posterHtml=_posterThumb(f,'int-item-poster');
       // Detectar razón usando screensConflict contra el schedule activo
       const screens=FILMS.filter(fi=>fi.title===excTitle&&!screeningPassed(fi)&&!isScreeningBlocked(fi));
       let reason='',canInclude=false;
@@ -9166,7 +9204,7 @@ function renderAgenda(){
         `${_festName} ${t('plan_fest_terminado')}`,
         _hasMiPlan?t('plan_revisa_planeaste'):t('empty_programa'),
         _hasMiPlan?t('cta_mi_plan'):t('plan_ir_programa'),
-        _hasMiPlan?"switchMainNav('mnav-miplan');showAgView()":"switchMainNav('mnav-cartelera');showDayView()"
+        _hasMiPlan?'mnav-miplan':'mnav-cartelera'
       );
       return;
     }
@@ -9190,7 +9228,7 @@ function renderAgenda(){
       const _festNamePl=(FESTIVAL_CONFIG[_activeFestId]||{}).name||'El festival';
       const _agHpl=document.getElementById('hdr-ag');if(_agHpl)_agHpl.style.display='none';
       requestAnimationFrame(_fixStickyOffset);
-      view.innerHTML=emptyStateHero(ICONS.sparkles,`${_festNamePl} ${t('plan_fest_terminado')}`,t('plan_revisa_planeaste'),t('cta_mi_plan'),"switchMainNav('mnav-miplan');showAgView()");
+      view.innerHTML=emptyStateHero(ICONS.sparkles,`${_festNamePl} ${t('plan_fest_terminado')}`,t('plan_revisa_planeaste'),t('cta_mi_plan'),'mnav-miplan');
       return;
     }
     const _progressHtml=(!savedAgenda||!savedAgenda.schedule||!savedAgenda.schedule.length)?renderFlowProgress(state,'planner'):'';
@@ -9200,7 +9238,7 @@ function renderAgenda(){
     if(!pending.length&&!cachedResult){
       view.innerHTML=`${_progressHtml}
         <div class="ag-section">
-          ${emptyStateHero(ICONS.calendar,t('plan_tu_plan_empty'),t('empty_intereses_3'),t('cta_ir_intereses'),"switchMainNav('mnav-seleccion');showAgView()")}
+          ${emptyStateHero(ICONS.calendar,t('plan_tu_plan_empty'),t('empty_intereses_3'),t('cta_ir_intereses'),'mnav-seleccion')}
         </div>`;
       return;
     }
@@ -9697,11 +9735,11 @@ function openPelSheet(title){
     const _fd1=JSON.stringify(f.film_list[0]).replace(/"/g,'&quot;');
     const _fd2=JSON.stringify(f.film_list[1]).replace(/"/g,'&quot;');
     const _c1=_sp1
-      ?`<img class="psp-card psp-front" src="${_sp1}" loading="lazy" onerror="this.remove()" alt="" onclick="_openCombinedFilmSheet(JSON.parse(this.dataset.film))" data-film="${_fd1}">`
-      :`<div class="psp-card-ph" onclick="_openCombinedFilmSheet(JSON.parse(this.dataset.film))" data-film="${_fd1}">🎬</div>`;
+      ?`<img class="psp-card psp-front" src="${_sp1}" loading="lazy" onerror="this.remove()" alt="" data-action="_openCombinedFilmSheet" data-film="${_fd1}">`
+      :`<div class="psp-card-ph" data-action="_openCombinedFilmSheet" data-film="${_fd1}">🎬</div>`;
     const _c2=_sp2
-      ?`<img class="psp-card psp-back" src="${_sp2}" loading="lazy" onerror="this.remove()" alt="" onclick="_openCombinedFilmSheet(JSON.parse(this.dataset.film))" data-film="${_fd2}">`
-      :`<div class="psp-card-ph" onclick="_openCombinedFilmSheet(JSON.parse(this.dataset.film))" data-film="${_fd2}">🎬</div>`;
+      ?`<img class="psp-card psp-back" src="${_sp2}" loading="lazy" onerror="this.remove()" alt="" data-action="_openCombinedFilmSheet" data-film="${_fd2}">`
+      :`<div class="psp-card-ph" data-action="_openCombinedFilmSheet" data-film="${_fd2}">🎬</div>`;
     posterHtml=`<div class="pel-sheet-poster-stage">${_c1}${_c2}</div>`;
   } else {
     if(_isEditorialPoster(f)){
@@ -11904,15 +11942,11 @@ function searchQuery(){
       const meta=f._isCortoItem
         ?'Cortometraje'+(f._prog?' · '+parseProgramTitle(f._prog.title).displayTitle:'')
         :(_dur?_dur+' min':'')+(f.section?' · '+f.section.replace(/^[^ ]+ /,''):'');
-      const safeT=f.title.replace(/'/g,"&#39;");
-      const safeC=(f.country||'').replace(/'/g,"&#39;");
-      const safeD=_dur.replace(/'/g,"&#39;");
-      const safeS=(f.section||'').replace(/'/g,"&#39;");
-      const safeF=(f.flags||'🌍').replace(/'/g,"&#39;");
-      const onclick=f._isCortoItem
-        ?`searchClose();openCortoSheet('${safeT}','${safeC}','${safeD}','${safeS}','${safeF}')`
-        :`searchClose();openPelSheet('${safeT}')`;
-      return '<div class="search-item" onclick="'+onclick+'">'
+      const _q=s=>String(s).replace(/"/g,'&quot;');
+      const _siAttrs=f._isCortoItem
+        ?`data-action="searchOpenCorto" data-title="${_q(f.title)}" data-country="${_q(f.country||'')}" data-dur="${_q(_dur)}" data-section="${_q(f.section||'')}" data-flags="${_q(f.flags||'🌍')}"`
+        :`data-action="searchOpenFilm" data-title="${_q(f.title)}"`;
+      return '<div class="search-item" '+_siAttrs+'>'
         +(poster?'<img class="search-item-poster" src="'+poster+'" onerror="this.remove()" alt="" loading="lazy">'
                 :'<div class="search-item-poster"></div>')
         +'<div class="search-item-info">'
@@ -12107,7 +12141,7 @@ function _cortoSheetPosterErr(img){
 </script>
 
 <!-- Festival switcher bottom sheet -->
-<div class="auth-sheet" id="auth-sheet" onclick="if(event.target===this)closeAuthSheet()">
+<div class="auth-sheet" id="auth-sheet" data-close-bg="AuthSheet">
   <div class="auth-sheet-inner">
     <div id="auth-sheet-step1">
       <div class="auth-sheet-title" data-i18n="auth_titulo">Guardá tu plan</div>
@@ -12152,7 +12186,7 @@ function _cortoSheetPosterErr(img){
 
 
 
-<button id="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Volver arriba">↑</button>
+<button id="back-top" data-action="scrollToTop" aria-label="Volver arriba">↑</button>
 
 <!-- ── SEARCH OVERLAY ── position:fixed, cubre pantalla desde topbar ── -->
 <div id="search-overlay">
