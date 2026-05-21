@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `d8607da docs: storage-adapter spec + plan + tasks (p5)`
+> Último commit: `5fe171c refactor(storage): encapsulate localStorage I/O in storage adapter (p5)`
 
 ---
 

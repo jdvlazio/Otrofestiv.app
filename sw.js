@@ -1,10 +1,13 @@
-// Otrofestiv — Service Worker v14
+// Otrofestiv — Service Worker v15
 // Estrategia: HTML siempre desde red. Assets en caché.
 // v14: hadController guard en cliente (fix first-install double-reload)
 //      version.json con android/ios independientes para staged rollout
+// v15: navigate de clientes en CADA activación, no solo first-install.
+//      controllerchange en iOS WKWebView es flaky — este reload es la
+//      garantía de que HTML cacheado se descarta inmediatamente al deploy.
 
-const CACHE_NAME = 'otrofestiv-v202605210654';
-const BUILD = '202605210654';
+const CACHE_NAME = 'otrofestiv-v202605210701';
+const BUILD = '202605210701';
 
 const STATIC_ASSETS = [
   '/manifest.json',
@@ -21,20 +24,16 @@ self.addEventListener('install', () => {
 self.addEventListener('activate', event => {
   event.waitUntil(
     caches.keys().then(keys => {
-      // Si no había ninguna caché previa → primera instalación
-      const isFirstInstall = !keys.some(k => k.startsWith('otrofestiv-'));
       return Promise.all(keys.map(key => caches.delete(key)))
         .then(() => caches.open(CACHE_NAME).then(c => c.addAll(STATIC_ASSETS)))
         .then(() => self.clients.claim())
-        .then(() => {
-          // Primera instalación: recargar clientes para que el SW controle
-          // la próxima carga y sirva HTML fresco desde la red
-          if(isFirstInstall){
-            return self.clients.matchAll({type:'window'}).then(clients => {
-              clients.forEach(client => client.navigate(client.url));
-            });
-          }
-        });
+        .then(() => self.clients.matchAll({type:'window'}).then(clients => {
+          // Reload de TODOS los clientes en cada activación — invalida HTML
+          // cacheado por el browser/WKWebView. Antes solo en first-install,
+          // pero controllerchange en iOS WebView es flaky. Este navigate es
+          // la garantía dura de que el HTML viejo se reemplaza inmediatamente.
+          clients.forEach(client => client.navigate(client.url));
+        }));
     })
   );
 });
