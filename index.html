@@ -2437,7 +2437,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
   <div class="splash-action">
   <div class="splash-selector">
     <div class="splash-fest-label" data-i18n="splash_festival">¿A qué festival vas?</div>
-    <button class="splash-sel-btn" id="splash-sel-btn" onclick="toggleSplashDropdown()" aria-haspopup="listbox">
+    <button class="splash-sel-btn" id="splash-sel-btn" data-action="toggleSplashDropdown" aria-haspopup="listbox">
       <div>
         <div class="splash-sel-name" id="splash-sel-name">AFF 2026</div>
         <div class="splash-sel-meta" id="splash-sel-meta">Medellín · 21–29 ABR 2026</div>
@@ -2448,7 +2448,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
       <!-- Generado dinámicamente por _renderSplashDropdown() en init -->
     </div>
   </div>
-  <button class="splash-enter-btn" data-i18n="auth_entrar" onclick="dismissSplash()">Entrar</button>
+  <button class="splash-enter-btn" data-i18n="auth_entrar" data-action="dismissSplash">Entrar</button>
   </div>
   <div class="splash-tagline">
     <div class="splash-tagline-line" data-i18n="splash_tagline">Más de lo que crees</div>
@@ -2478,8 +2478,8 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
     <div class="av-day-chips" id="av-day-chips"></div>
     <div class="av-sheet-lbl" data-i18n="av_tipo">Tipo</div>
     <div class="av-type-row">
-      <button class="av-type-btn selected" id="av-type-hours" onclick="setAvType('hours')">Horas específicas</button>
-      <button class="av-type-btn" id="av-type-full" data-i18n="av_todo_el_dia_btn" onclick="setAvType('full')">Todo el día</button>
+      <button class="av-type-btn selected" id="av-type-hours" data-action="setAvType" data-type="hours">Horas específicas</button>
+      <button class="av-type-btn" id="av-type-full" data-i18n="av_todo_el_dia_btn" data-action="setAvType" data-type="full">Todo el día</button>
     </div>
     <div id="av-time-section">
       <div class="av-sheet-lbl" data-i18n="av_horario">Horario</div>
@@ -2489,7 +2489,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
         <select class="av-time-sel" id="av-sheet-to"></select>
       </div>
     </div>
-    <button class="av-sheet-confirm" data-i18n="av_confirmar" onclick="confirmAvBlock()">Confirmar</button>
+    <button class="av-sheet-confirm" data-i18n="av_confirmar" data-action="confirmAvBlock">Confirmar</button>
   </div>
 </div>
 
@@ -2498,18 +2498,18 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 <div class="hdr">
   <div class="hdr-top">
     <h1 class="hdr-wordmark">Otro<span>festiv</span></h1>
-    <button class="auth-btn" id="auth-btn" onclick="openAuthSheet()" title="Sincronizar entre dispositivos" aria-label="Cuenta">
+    <button class="auth-btn" id="auth-btn" data-action="openAuthSheet" title="Sincronizar entre dispositivos" aria-label="Cuenta">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/></svg>
       <span class="auth-avatar" id="auth-avatar"></span>
       <span class="sync-dot" id="sync-dot"></span>
     </button>
     <div class="lang-toggle" id="lang-toggle" aria-label="Idioma / Language">
-      <button class="lang-btn" id="lang-btn-es" onclick="setLang('es')" aria-label="Español">🇪🇸</button>
-      <button class="lang-btn" id="lang-btn-en" onclick="setLang('en')" aria-label="English">🇺🇸</button>
+      <button class="lang-btn" id="lang-btn-es" data-action="setLang" data-code="es" aria-label="Español">🇪🇸</button>
+      <button class="lang-btn" id="lang-btn-en" data-action="setLang" data-code="en" aria-label="English">🇺🇸</button>
     </div>
   </div>
   <div class="hdr-fest-bar" id="hdr-fest-bar">
-  <div class="hdr-fest-selector" onclick="openFestivalSheet()">
+  <div class="hdr-fest-selector" data-action="openFestivalSheet">
     <div class="hdr-fest-left">
       <div class="hdr-fest-dot"></div>
       <div class="hdr-fest-namedate">
@@ -2518,7 +2518,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
     </div>
     <div class="hdr-fest-chev"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg></div>
   </div>
-  <button class="hdr-search-icon" id="hdr-search-icon" onclick="searchOpen()" aria-label="Buscar">
+  <button class="hdr-search-icon" id="hdr-search-icon" data-action="searchOpen" aria-label="Buscar">
     <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"/></svg>
   </button>
 </div>
@@ -2530,20 +2530,20 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 <!-- ── Programa: barra de modos Explorar/Hoy/Mañana ── -->
 <div class="programa-mode-bar" id="programa-mode-bar" style="display:none">
 
-  <button class="pmode-tab" id="pmode-hoy" onclick="setProgramaMode('hoy')">Hoy</button>
-  <button class="pmode-tab" id="pmode-manana" onclick="setProgramaMode('manana')">Mañana</button>
+  <button class="pmode-tab" id="pmode-hoy" data-action="setProgramaMode" data-mode="hoy">Hoy</button>
+  <button class="pmode-tab" id="pmode-manana" data-action="setProgramaMode" data-mode="manana">Mañana</button>
   <div class="pmode-spacer"></div>
   <div class="pmode-controls" style="position:relative">
-    <button class="seccion-btn" id="seccion-btn" onclick="seccionToggle()">
+    <button class="seccion-btn" id="seccion-btn" data-action="seccionToggle">
       <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3c2.755 0 5.455.232 8.083.678.533.09.917.556.917 1.096v1.044a2.25 2.25 0 01-.659 1.591l-5.432 5.432a2.25 2.25 0 00-.659 1.591v2.927a2.25 2.25 0 01-1.244 2.013L9.75 21v-6.568a2.25 2.25 0 00-.659-1.591L3.659 7.409A2.25 2.25 0 013 5.818V4.774c0-.54.384-1.006.917-1.096A48.32 48.32 0 0112 3z"/></svg>
       <span id="seccion-lbl">Sección</span>
     </button>
-    <button class="lugar-btn" id="lugar-btn" onclick="lugarToggle()">
+    <button class="lugar-btn" id="lugar-btn" data-action="lugarToggle">
       <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>
       <span id="lugar-lbl">Lugar</span>
     </button>
     <!-- single toggle btn — icono refleja estado actual -->
-    <button class="view-toggle-btn" id="view-toggle-btn" onclick="toggleProgramaView()" title="Cambiar vista" aria-label="Cambiar vista">
+    <button class="view-toggle-btn" id="view-toggle-btn" data-action="toggleProgramaView" title="Cambiar vista" aria-label="Cambiar vista">
       <svg id="view-toggle-ico-grid" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
       <svg id="view-toggle-ico-list" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" style="display:none"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg>
     </button>
@@ -2578,10 +2578,10 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
     </button>
     <div class="ag-toggle-spacer"></div>
     <div class="intereses-view-switch">
-      <button class="intereses-view-btn on" id="ibtn-grid" onclick="setInteresesView('grid')">
+      <button class="intereses-view-btn on" id="ibtn-grid" data-action="setInteresesView" data-mode="grid">
         <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
       </button>
-      <button class="intereses-view-btn" id="ibtn-list" onclick="setInteresesView('list')">
+      <button class="intereses-view-btn" id="ibtn-list" data-action="setInteresesView" data-mode="list">
         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg>
       </button>
     </div>
@@ -2611,7 +2611,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 
 <div class="carta-mode-toggle" id="carta-mode-toggle" style="display:none"></div>
 <!-- ── Post-View Rating Sheet ── -->
-<div class="pv-rating-overlay" id="pv-rating-overlay" onclick="closePVRating()"></div>
+<div class="pv-rating-overlay" id="pv-rating-overlay" data-action="closePVRating"></div>
 <div class="pv-rating-sheet" id="pv-rating-sheet" style="display:none">
   <div class="pv-handle"></div>
   <div class="pv-header">
@@ -2636,12 +2636,12 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
     <input type="range" class="pv-range" id="pv-range" min="0" max="10" step="1" value="0">
   </div>
   <div class="pv-actions">
-    <button class="pv-btn-save" id="pv-btn-save" data-i18n="misc_guardar" disabled onclick="savePVRating()">Guardar</button>
-    <button class="pv-btn-later" onclick="closePVRating()" data-i18n="rating_despues">Después</button>
+    <button class="pv-btn-save" id="pv-btn-save" data-i18n="misc_guardar" disabled data-action="savePVRating">Guardar</button>
+    <button class="pv-btn-later" data-action="closePVRating" data-i18n="rating_despues">Después</button>
   </div>
 </div>
 <!-- ── Conflict Sheet ── -->
-<div class="conflict-sheet-overlay" id="conflict-sheet-overlay" onclick="closeConflictSheet()"></div>
+<div class="conflict-sheet-overlay" id="conflict-sheet-overlay" data-action="closeConflictSheet"></div>
 <div class="conflict-sheet" id="conflict-sheet">
   <div class="conflict-handle"></div>
   <div class="conflict-hdr">
@@ -2671,11 +2671,11 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
   <div class="conflict-actions">
     <button class="conflict-btn-replace" id="cs-replace-btn" data-i18n="conflict_anadir_btn">Añadir</button>
     <button class="conflict-btn-keep" id="cs-keep-btn" data-i18n="misc_conservar">Conservar</button>
-    <button class="conflict-btn-cancel" onclick="closeConflictSheet()" data-i18n="misc_cancelar">Cancelar</button>
+    <button class="conflict-btn-cancel" data-action="closeConflictSheet" data-i18n="misc_cancelar">Cancelar</button>
   </div>
 </div>
 <!-- ── Prio Limit Sheet ── -->
-<div class="prio-limit-overlay" id="prio-limit-overlay" onclick="closePrioLimit()"></div>
+<div class="prio-limit-overlay" id="prio-limit-overlay" data-action="closePrioLimit"></div>
 <div class="prio-limit-sheet" id="prio-limit-sheet">
   <div class="prio-limit-handle"></div>
   <div class="prio-limit-hdr">
@@ -2691,10 +2691,10 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
     </div>
   </div>
   <div class="prio-limit-list" id="prio-limit-list"></div>
-  <button class="prio-limit-cancel" onclick="closePrioLimit()" data-i18n="misc_cancelar">Cancelar</button>
+  <button class="prio-limit-cancel" data-action="closePrioLimit" data-i18n="misc_cancelar">Cancelar</button>
 </div>
 <!-- ── Plan Confirm Sheet ── -->
-<div class="plan-confirm-overlay" id="plan-confirm-overlay" onclick="closePlanConfirm()"></div>
+<div class="plan-confirm-overlay" id="plan-confirm-overlay" data-action="closePlanConfirm"></div>
 <div class="plan-confirm-sheet" id="plan-confirm-sheet" style="display:none">
   <div class="plan-confirm-handle"></div>
   <div class="plan-confirm-row">
@@ -2710,25 +2710,25 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
   <button class="plan-confirm-cta" data-i18n="cta_mi_plan" onclick="closePlanConfirm(true)">Ver Mi Plan</button>
 </div>
 <!-- ── Rating Sheet ── -->
-<div class="rating-overlay" id="rating-overlay" onclick="closeRatingSheet()"></div>
+<div class="rating-overlay" id="rating-overlay" data-action="closeRatingSheet"></div>
 <div class="rating-sheet" id="rating-sheet">
   <div class="rating-handle"></div>
   <div class="rating-title" data-i18n="rating_parecio">¿Qué te pareció?</div>
   <div class="rating-film" id="rating-film-title"></div>
   <div class="rating-stars" id="rating-stars-wrap"><input type="range" id="rating-range" min="0" max="10" step="1" value="0"><div class="stars-row" id="rating-stars"></div></div>
-  <button class="rating-action-btn" id="rating-action-btn" onclick="closeRatingSheet()" data-i18n="misc_omitir">Omitir</button>
+  <button class="rating-action-btn" id="rating-action-btn" data-action="closeRatingSheet" data-i18n="misc_omitir">Omitir</button>
 </div>
 <!-- ── Bottom Sheet Por Película ── -->
-<div class="pel-sheet-overlay" id="pel-overlay" onclick="closePelSheet()"></div>
+<div class="pel-sheet-overlay" id="pel-overlay" data-action="closePelSheet"></div>
 <div class="pel-sheet" id="pel-sheet">
-  <div class="pel-sheet-topbar"><div class="pel-sheet-handle"></div><button class="pel-sheet-close" onclick="closePelSheet()"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg></button></div>
+  <div class="pel-sheet-topbar"><div class="pel-sheet-handle"></div><button class="pel-sheet-close" data-action="closePelSheet"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg></button></div>
   <div class="pel-sheet-inner" id="pel-sheet-inner"></div>
 </div>
 <!-- Chips de categoría — sticky, fuera de #hdr-programa para mantener chrome uniforme (38px en todos los tabs) -->
 <div class="programa-chips hidden" id="programa-chips"></div>
 <!-- Tag activo dismissible -->
 <div class="programa-active-filter" id="programa-active-filter">
-  <div class="paf-tag" id="paf-tag" onclick="clearProgramaChip()">
+  <div class="paf-tag" id="paf-tag" data-action="clearProgramaChip">
     <span id="paf-tag-text"></span>
     <span class="txt-dim-sm">×</span>
   </div>
@@ -2992,6 +2992,238 @@ const state = (() => {
   };
 })();
 // ── STATE MIRROR END ─────────────────────────────────────────────────
+
+// ── CONTROLLER LAYER START (p7c-1) ───────────────────────────────────
+// Foundation del event delegation system. ACTION_REGISTRY mapea
+// data-action attributes a sus handlers. Delegated listener captura
+// clicks a nivel document y dispatcha.
+//
+// Componentes:
+//   1. Composite helpers (11) — encapsulan patrones multi-statement
+//      detectados durante auditoría de onclick. Usados por 7c-3
+//   2. ACTION_REGISTRY (87 entries categorías A-G) — schema completo
+//   3. Delegated listener + data-close-bg infra
+//
+// Decisión D4 (validate.py): foundation completa up-front. Composite
+// helpers + entries no consumidos hasta 7c-3/4 quedan dead-loaded
+// (validate check tolera composite helpers dead).
+
+// ── 1. Composite helpers (consumed por ACTION_REGISTRY G + 7c-3/4) ──
+
+function _scrollToAgSection(id) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  const hdr = document.getElementById('hdr-ag');
+  const off = hdr ? hdr.getBoundingClientRect().bottom : 0;
+  const y = el.getBoundingClientRect().top + window.scrollY - off - 8;
+  window.scrollTo({top: y, behavior: 'smooth'});
+}
+
+function _setExpandedFilm(val) {
+  _expandedFilm = val;
+  renderAgenda();
+}
+
+function _setAvAddOpen(day, val) {
+  avAddOpen[day] = val;
+  renderAvDay(day);
+}
+
+function _closePelAndRemove(title) {
+  closePelSheet();
+  removeFromAgenda(title);
+}
+
+function _closePelAndRate(title) {
+  closePelSheet();
+  setTimeout(() => openRatingSheet(title), 100);
+}
+
+function _navTo(tab) {
+  if (tab === 'mnav-cartelera') {
+    const _ph = _getProgramaPhase();
+    programaSubMode = _ph.default;
+    switchMainNav(tab);
+    showDayView();
+  } else {
+    switchMainNav(tab);
+    showAgView();
+  }
+}
+
+function _closeAuthAndReset() {
+  closeAuthSheet();
+  const step1 = document.getElementById('auth-sheet-step1');
+  const step2 = document.getElementById('auth-sheet-step2');
+  if (step1) step1.style.display = 'block';
+  if (step2) step2.style.display = 'none';
+}
+
+function _dismissToastAction() {
+  if (_toastActionFn) {
+    _toastActionFn();
+    _toastActionFn = null;
+    showToast('', 'info', 100);
+  }
+}
+
+function _toggleCtxOlder() {
+  const el = document.getElementById('ctx-older');
+  if (!el) return;
+  el.style.display = el.style.display === 'none' ? 'block' : 'none';
+}
+
+function _toggleWatchedAndClose(title, e) {
+  toggleWatched(title, e);
+  closePelSheet();
+}
+
+function _toggleWLAndClose(title, e) {
+  toggleWL(title, e);
+  closePelSheet();
+}
+
+// ── 2. ACTION_REGISTRY — mapping data-action → handler ────────────────
+// 87 entries totales en 7 categorías. Cada entry sabe cómo extraer args
+// del DOM element (dataset attributes).
+// Usage en HTML: el data-action attribute identifica el handler en el
+// registry. Args adicionales via data-* attributes leídos por el handler.
+// Si necesita stopPropagation: añadir data-stop="1" al elemento.
+// Note: ACTION_REGISTRY se evalúa con tiempo de definición — las funciones
+// invocadas se resuelven por nombre (late binding via global lookup).
+const ACTION_REGISTRY = {
+  // ── A: Action handlers (Fase 7a) + state mutators (21) ──
+  toggleWL:           (el, e) => toggleWL(el.dataset.title, e),
+  toggleWatched:      (el, e) => toggleWatched(el.dataset.title, e),
+  togglePriority:     (el)    => togglePriority(el.dataset.title),
+  togglePelPrio:      (el)    => togglePelPrio(el.dataset.title),
+  togglePelWL:        (el, e) => togglePelWL(el.dataset.title, e),
+  toggleFullDay:      (el)    => toggleFullDay(el.dataset.day),
+  removeBlock:        (el)    => removeBlock(el.dataset.day, el.dataset.from, el.dataset.to),
+  addBlock:           (el)    => addBlock(el.dataset.day),
+  confirmAvBlock:     ()      => confirmAvBlock(),
+  confirmReplace:     (el)    => confirmReplace(el.dataset.rmtitle, el.dataset.newtitle, el.dataset.day, el.dataset.time),
+  removeFromAgenda:   (el)    => removeFromAgenda(el.dataset.title),
+  setDelay:           (el)    => setDelay(el.dataset.title, el.dataset.day, el.dataset.time, +el.dataset.mins),
+  clearDelay:         (el)    => clearDelay(el.dataset.title, el.dataset.day, el.dataset.time),
+  undoDelay:          (el)    => undoDelay(el.dataset.title, el.dataset.day, el.dataset.time),
+  checkinLaVi:        (el)    => checkinLaVi(el.dataset.title),
+  checkinNoLaVi:      (el)    => checkinNoLaVi(el.dataset.title),
+  savePVRating:       ()      => savePVRating(),
+  setLang:            (el)    => setLang(el.dataset.code),
+  forceInclude:       (el)    => forceInclude(el.dataset.title),
+  _dismissNotice:     (el)    => _dismissNotice(el.dataset.title),
+  swapPriority:       (el)    => swapPriority(el.dataset.rmtitle, el.dataset.addtitle),
+
+  // ── B: Sheets open/close (24) ──
+  openAvSheet:           ()      => openAvSheet(),
+  openAuthSheet:         ()      => openAuthSheet(),
+  openFestivalSheet:     ()      => openFestivalSheet(),
+  openRatingSheet:       (el)    => openRatingSheet(el.dataset.title),
+  openCortoSheetFromEl:  (el, e) => openCortoSheetFromEl(el, e),
+  closePelSheet:         ()      => closePelSheet(),
+  closeAuthSheet:        ()      => closeAuthSheet(),
+  closeAvSheet:          ()      => closeAvSheet(),
+  closeConflictSheet:    ()      => closeConflictSheet(),
+  closeFestivalSheet:    ()      => closeFestivalSheet(),
+  closeRatingSheet:      ()      => closeRatingSheet(),
+  closePVRating:         ()      => closePVRating(),
+  closePlanConfirm:      ()      => closePlanConfirm(),
+  closePrioLimit:        ()      => closePrioLimit(),
+  dismissSplash:         ()      => dismissSplash(),
+  toggleSplashDropdown:  ()      => toggleSplashDropdown(),
+  searchOpen:            ()      => searchOpen(),
+  searchClose:           ()      => searchClose(),
+  _togglePastFest:       (el)    => _togglePastFest(el),
+  _togglePastFestRow:    (el)    => _togglePastFestRow(el.closest('.fs-festival-row'), el.dataset.fest),
+  openPostViewRating:    (el)    => openPostViewRating(el.dataset.title, el.dataset.day, el.dataset.time, el.dataset.venue, el.dataset.duration),
+  selectSplashFest:      (el)    => selectSplashFest(el.dataset.name, el.dataset.meta, el.dataset.fest),
+  selectFromDetail:      (el)    => selectFromDetail(el.dataset.title, el.dataset.day, el.dataset.time),
+  _openCombinedFilmSheet:(el)    => _openCombinedFilmSheet(el.dataset.title),
+
+  // ── C: Navigation (12) ──
+  switchMainNav:       (el)    => switchMainNav(el.dataset.nav),
+  miPlanNav:           (el)    => miPlanNav(el.dataset.dir),
+  selectMiPlanDay:     (el)    => selectMiPlanDay(+el.dataset.index),
+  setProgramaMode:     (el)    => setProgramaMode(el.dataset.mode),
+  setProgramaChip:     (el)    => setProgramaChip(el.dataset.chip),
+  setAvType:           (el)    => setAvType(el.dataset.type),
+  setInteresesView:    (el)    => setInteresesView(el.dataset.mode),
+  toggleProgramaView:  ()      => toggleProgramaView(),
+  lugarToggle:         ()      => lugarToggle(),
+  seccionToggle:       ()      => seccionToggle(),
+  selectAvDay:         (el)    => selectAvDay(el.dataset.day),
+  navTo:               (el)    => _navTo(el.dataset.tab),
+
+  // ── D: Cartelera/Programa filters (8) ──
+  filterBySection:     (el)    => filterBySection(el.dataset.section),
+  filterByVenue:       (el)    => filterByVenue(el.dataset.venue),
+  _pafClearSec:        ()      => _pafClearSec(),
+  _pafClearVenue:      ()      => _pafClearVenue(),
+  _toggleEveningFilms: ()      => _toggleEveningFilms(),
+  clearProgramaChip:   ()      => clearProgramaChip(),
+  runCalc:             ()      => runCalc(),
+  toggleArchive:       ()      => toggleArchive(),
+
+  // ── E: Mi Plan / Schedule actions (9) ──
+  jumpToScenario:        (el)    => jumpToScenario(+el.dataset.index),
+  saveCurrentScenario:   ()      => saveCurrentScenario(),
+  removeFilmFromScenario:(el)    => removeFilmFromScenario(el.dataset.title),
+  setActivePlanFilm:     (el)    => setActivePlanFilm(el),
+  toggleFilmAlternatives:(el)    => toggleFilmAlternatives(el.dataset.key, el.dataset.title, el.dataset.day, el.dataset.time),
+  toggleMplanProg:       (el, e) => toggleMplanProg(el, e),
+  sharePlan:             ()      => sharePlan(),
+  exportICS:             ()      => exportICS(),
+  loadFestival:          (el)    => loadFestival(el.dataset.fest),
+
+  // ── F: Auth (4) ──
+  submitAuthEmail:  ()    => submitAuthEmail(),
+  submitOTP:        ()    => submitOTP(),
+  deleteAccount:    ()    => deleteAccount(),
+  signOutAndClose:  ()    => signOutAndClose(),
+
+  // ── G: Composite helpers (Patrones A-J multi-statement) (10) ──
+  scrollToAgSec:        (el)    => _scrollToAgSection(el.dataset.target),
+  clearExpandedFilm:    ()      => _setExpandedFilm(''),
+  setAvAddOpen:         (el)    => _setAvAddOpen(el.dataset.day, el.dataset.open === '1'),
+  closePelAndRemove:    (el)    => _closePelAndRemove(el.dataset.title),
+  closePelAndRate:      (el)    => _closePelAndRate(el.dataset.title),
+  closeAuthAndReset:    ()      => _closeAuthAndReset(),
+  dismissToastAction:   ()      => _dismissToastAction(),
+  toggleCtxOlder:       ()      => _toggleCtxOlder(),
+  toggleWatchedAndClose:(el, e) => _toggleWatchedAndClose(el.dataset.title, e),
+  toggleWLAndClose:     (el, e) => _toggleWLAndClose(el.dataset.title, e),
+};
+
+// ── 3. Delegated click listener + data-close-bg infra ────────────────
+// Captura clicks a nivel document. Si el target (o ancestor closest) tiene
+// data-action, busca el handler en ACTION_REGISTRY y lo invoca.
+//
+// data-stop="1": llamar event.stopPropagation() ANTES del handler
+// data-close-bg="X": si click directo en este elemento (no en hijo),
+//   dispara close<X>() (e.g., data-close-bg="AvSheet" → closeAvSheet)
+//
+// Coexistencia con onclick inline: durante migración 7c-1/2/3/4, sites
+// no migrados con onclick attribute siguen funcionando — el browser
+// ejecuta el onclick directamente. Este listener solo activa para
+// elementos con data-action attribute, sin interferir con el resto.
+document.addEventListener('click', function(e) {
+  const target = e.target.closest('[data-action]');
+  if (target) {
+    if (target.dataset.stop === '1') e.stopPropagation();
+    const handler = ACTION_REGISTRY[target.dataset.action];
+    if (handler) handler(target, e);
+    return;
+  }
+  // close-on-background-click: solo si click directo en el overlay (no propagado de hijo)
+  const bg = e.target.closest('[data-close-bg]');
+  if (bg && e.target === bg) {
+    const closeName = 'close' + bg.dataset.closeBg;
+    const closeFn = ACTION_REGISTRY[closeName];
+    if (closeFn) closeFn();
+  }
+});
+// ── CONTROLLER LAYER END (p7c-1) ──────────────────────────────────────
 
 // ── i18n — sistema de traducción ─────────────────────────────────────────
 // Idioma determinado por preferencia del usuario, persistido en localStorage.
@@ -4916,7 +5148,7 @@ let FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202605211452';
+const BUILD_VERSION='202605211537';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';
@@ -5253,8 +5485,8 @@ function renderMiPlanCalendar(state){
       return`<div class="mplan-change-hint">${ICONS.clock} ${t('plan_hint_hora')} ${t('misc_pelicula')}</div>`;
     })()}
     <div class="mplan-bottom-actions">
-      <button class="mplan-bottom-btn" onclick="sharePlan()">${ICONS.share} ${t('plan_compartir')}</button>
-      <button class="mplan-bottom-btn" onclick="exportICS()">${ICONS.calendar} ${t('misc_calendario')}</button>
+      <button class="mplan-bottom-btn" data-action="sharePlan">${ICONS.share} ${t('plan_compartir')}</button>
+      <button class="mplan-bottom-btn" data-action="exportICS">${ICONS.calendar} ${t('misc_calendario')}</button>
     </div>
   </div>`
 }
@@ -7533,7 +7765,7 @@ function _renderSavedAgendaHTML(state){
     const totalWatched=archive.length+watchedOutsidePlan.length;
     const archByDay={};
     archive.forEach(s=>{if(!archByDay[s.day])archByDay[s.day]=[];archByDay[s.day].push(s);});
-    html+=`<div class="archive-toggle" onclick="toggleArchive()">
+    html+=`<div class="archive-toggle" data-action="toggleArchive">
       <span class="archive-toggle-lbl">${ICONS.checkCircle} ${t('plan_historial')}</span>
       <span class="row-sm"><span class="count-badge cb-neutral">${totalWatched}</span><span id="arch-arrow">${ICONS.chevronD}</span></span>
     </div>
@@ -8098,7 +8330,7 @@ function buildResultHTML(scenarios){
     navHtml=`<div class="mt-2 ag-nav">${dots}</div>`;
   }
 
-  const saveBtnHtml=`<button class="ag-save-btn" onclick="saveCurrentScenario()">${ICONS.calendar} ${t('plan_usar_plan')}</button>`;
+  const saveBtnHtml=`<button class="ag-save-btn" data-action="saveCurrentScenario">${ICONS.calendar} ${t('plan_usar_plan')}</button>`;
   let html=`<div class="ag-summary">
     <div class="ag-summary-title" style="font-size:var(--t-base);color:${isOptimo?'var(--white)':'var(--gray)'}">${planLabel} <span class="ml-1 count-badge cb-amber">${ok}/${total}</span></div>
     ${bad?`<div class="tags-row ag-summary-text"><span class="txt-gray2-sm">${bad} ${t('plan_excluidos')}</span></div>`:''}
@@ -8975,10 +9207,10 @@ function renderAgenda(){
           <div class="mb-2 sec-hdr">${ICONS.clock} ${t('av_disponibilidad')} <span class="sec-hdr-opt">${t('misc_opcional')}</span></div>
           <div class="txt-gray2-sm-lh">${t('av_no_incluir')}</div>
           <div id="av-blocks-list"></div>
-          <button class="av-add-unavail" onclick="openAvSheet()">${ICONS.plus} ${t('misc_no_disponible')}</button>
+          <button class="av-add-unavail" data-action="openAvSheet">${ICONS.plus} ${t('misc_no_disponible')}</button>
         </div>
         <div class="av-calc-wrap">
-          <button class="av-calc-btn" onclick="runCalc()">
+          <button class="av-calc-btn" data-action="runCalc">
             ${t('av_ver_opciones')}
           </button>
         </div>
@@ -10016,10 +10248,10 @@ function _updateProgramaActiveFilter(){
   let pills='';
   if(hasSec){
     const lbl=_seccionPillLabel(activeSec);
-    pills+='<div class="paf-pill" onclick="_pafClearSec()">'+lbl+'<span class="paf-pill-x">×</span></div>';
+    pills+='<div class="paf-pill" data-action="_pafClearSec">'+lbl+'<span class="paf-pill-x">×</span></div>';
   }
   if(hasVenue){
-    pills+='<div class="paf-pill" onclick="_pafClearVenue()">'+ICONS.pin+' '+activeVenue+'<span class="paf-pill-x">×</span></div>';
+    pills+='<div class="paf-pill" data-action="_pafClearVenue">'+ICONS.pin+' '+activeVenue+'<span class="paf-pill-x">×</span></div>';
   }
   af.innerHTML=pills;
   af.classList.add('visible');
@@ -11872,15 +12104,15 @@ function _cortoSheetPosterErr(img){
       <div class="auth-sheet-title" data-i18n="auth_titulo">Guardá tu plan</div>
       <div class="auth-sheet-sub" data-i18n="auth_desc">Ingresa tu email y te enviamos un código de 6 dígitos. Sin contraseña. Tu plan se sincroniza entre todos tus dispositivos.</div>
       <input class="auth-email-inp" id="auth-email-inp" type="email" placeholder="tu@email.com" data-i18n-ph="auth_email" autocomplete="email" onkeydown="if(event.key==='Enter')submitAuthEmail()">
-      <button class="auth-send-btn" id="auth-send-btn" onclick="submitAuthEmail()" data-i18n="auth_enviar">Enviar código</button>
+      <button class="auth-send-btn" id="auth-send-btn" data-action="submitAuthEmail" data-i18n="auth_enviar">Enviar código</button>
       <div class="auth-msg" id="auth-msg"></div>
-      <span class="auth-cancel" onclick="closeAuthSheet()" data-i18n="misc_cancelar">Cancelar</span>
+      <span class="auth-cancel" data-action="closeAuthSheet" data-i18n="misc_cancelar">Cancelar</span>
     </div>
     <div id="auth-sheet-step2" style="display:none">
       <div class="auth-sheet-title" data-i18n="auth_revisa">Revisá tu email</div>
       <div class="auth-sheet-sub"><span data-i18n="auth_otp_sub">Enviamos un código de 6 dígitos a</span> <span id="auth-otp-email" style="color:var(--white)"></span></div>
       <input class="pin-display auth-email-inp" id="auth-otp-inp" type="number" placeholder="123456" inputmode="numeric" maxlength="6" onkeydown="if(event.key==='Enter')submitOTP()"><!-- 16px: prevents iOS auto-zoom -->
-      <button class="auth-send-btn" data-i18n="av_confirmar" id="auth-otp-btn" onclick="submitOTP()">Confirmar</button>
+      <button class="auth-send-btn" data-i18n="av_confirmar" id="auth-otp-btn" data-action="submitOTP">Confirmar</button>
       <div class="auth-msg" id="auth-otp-msg"></div>
       <span class="auth-cancel" onclick="closeAuthSheet();document.getElementById('auth-sheet-step1').style.display='block';document.getElementById('auth-sheet-step2').style.display='none'" data-i18n="misc_cancelar">Cancelar</span>
     </div>
@@ -11889,13 +12121,13 @@ function _cortoSheetPosterErr(img){
       <div class="auth-sheet-sub" id="auth-signed-email" style="color:var(--white)"></div>
       <div class="mt-2 auth-sheet-sub"><span data-i18n="plan_sincroniza">Tu plan se sincroniza automáticamente entre todos tus dispositivos.</span></div>
       <div class="mt-2 auth-sheet-sub" data-i18n="auth_eliminar_aviso" style="color:var(--gray2);font-size:var(--t-xs)"></div>
-      <button class="auth-signout-btn" onclick="signOutAndClose()" data-i18n="auth_cerrar">Cerrar sesión</button>
-      <button class="auth-delete-btn" id="auth-delete-btn" onclick="deleteAccount()" data-i18n="auth_eliminar">Eliminar cuenta</button>
-      <span class="auth-cancel" onclick="closeAuthSheet()" data-i18n="misc_cancelar">Cancelar</span>
+      <button class="auth-signout-btn" data-action="signOutAndClose" data-i18n="auth_cerrar">Cerrar sesión</button>
+      <button class="auth-delete-btn" id="auth-delete-btn" data-action="deleteAccount" data-i18n="auth_eliminar">Eliminar cuenta</button>
+      <span class="auth-cancel" data-action="closeAuthSheet" data-i18n="misc_cancelar">Cancelar</span>
     </div>
   </div>
 </div>
-<div class="fs-overlay" id="fs-overlay" onclick="closeFestivalSheet()"></div>
+<div class="fs-overlay" id="fs-overlay" data-action="closeFestivalSheet"></div>
 <div class="fs-sheet" id="fs-sheet">
   <div class="fs-handle"></div>
   <div class="fs-header">
@@ -11920,7 +12152,7 @@ function _cortoSheetPosterErr(img){
       <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"/></svg>
       <input type="text" id="search-input" placeholder="Buscar…" data-i18n-ph="search_placeholder" oninput="searchQuery()" onkeyup="searchQuery()" onkeydown="setTimeout(searchQuery,0)" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
     </div>
-    <button class="search-cancel" onclick="searchClose()" data-i18n="misc_cancelar">Cancelar</button><span id="dbg-ver" style="position:absolute;bottom:2px;right:4px;font-size:9px;color:var(--gray2)/* exception:build-ver */;opacity:.5;pointer-events:none">202605102032</span>
+    <button class="search-cancel" data-action="searchClose" data-i18n="misc_cancelar">Cancelar</button><span id="dbg-ver" style="position:absolute;bottom:2px;right:4px;font-size:9px;color:var(--gray2)/* exception:build-ver */;opacity:.5;pointer-events:none">202605102032</span>
   </div>
   <div id="search-results"></div>
 </div>

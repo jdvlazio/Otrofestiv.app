@@ -1,0 +1,32 @@
+# Tasks — Event Delegation Foundation + Trivial Migration (Fase 7c-1)
+
+- [x] 1. `python3 validate.py` → 25/25 baseline + tests 131/131
+- [x] 2. Crear branch `refactor/event-delegation-7c1`
+- [x] 3. Schema verificado: 76/76 funciones presentes en HEAD, cero typos. 11 helpers nuevos sin colisión
+- [x] 4. QA browser PRE: trap global de errores instalado. Baseline: 142 onclick, 0 errors, festival cargado
+- [x] 5. 11 helpers compuestos añadidos post-STATE MIRROR END. Comentario "CONTROLLER LAYER START (p7c-1)" marca la sección
+- [x] 6. ACTION_REGISTRY constant añadida con **88 entries** (87 planeados + 1 extra `toggleWLAndClose` que no contabilicé en spec — útil para 7c-3 pattern J variant). Categorías A-G visibles
+- [x] 7. Delegated click listener + data-close-bg infra añadidos. Marca "CONTROLLER LAYER END (p7c-1)". Browser smoke: 0 errors. Self-induced validate false positive `onclick="..."` en mi comentario detectado y corregido
+- [x] 8. **Wave 1 — 38 sites sin args**: migración mass-replace con `re.subn(r'onclick="([a-z_][...]*)\(\)"', 'data-action="\1"')`. 38 replacements aplicados
+- [x] 9. **DESVIACIÓN**: Wave 2 inventario corregido. Conteo inicial (17) incluía interpolations `'${...}'` (defer a 7c-3). Migración estricta solo de literales puros = **8 sites**: setAvType×2, setLang×2, setProgramaMode×2, setInteresesView×2. Total 7c-1 = **Wave 1 (38) + Wave 2 (8) = 46 sites** (no 55 como spec original)
+- [x] 10. Check `[event-delegation]` añadido nivel WARNING. Reporta: onclick remaining=97 (era 142, -45 después de Wave 1+2), 36 data-actions únicos, 88 entries en registry, 41 dead non-composite (esperado pre-7c-4). Self-induced false positive `data-action="X"` en mi comentario detectado y corregido
+- [x] 11. `python3 validate.py` → **26/26**
+- [x] 12. `node --test tests/unit/*.test.js` → 131/131
+- [x] 13. JS syntax check OK
+- [x] 14. Functional equivalence (R2'): elementos migrados tienen `data-action` attribute, `onclick` removido. Botones encontrados con `data-code`/`data-type`/`data-mode` correctos. Delegated listener funcional
+- [x] 15. Playwright skip (run en CI vía push)
+- [x] 16. Festival switch Tribeca↔Leviza atómico (delegated listener funciona post-loadFestival DOM rebuild)
+- [x] 17. ⚠ **QA BOOT PATH OBLIGATORIO** ⚠ PASSED: localStorage.clear() + reload + showAgView()/render()/_renderProgramaContent() con FILMS=0 + click simulated en `[data-action="toggleSplashDropdown"]` → **0 errors captured**
+- [ ] 18. Diff review:
+    - ACTION_REGISTRY 87 entries en categorías A-G
+    - 11 helpers definidos
+    - Delegated listener + data-close-bg infra presente
+    - 55 sites con data-action attributes (38 + 17)
+    - Validate check añadido
+    - Cero cambios en signatures de las 76 funciones invocadas
+- [ ] 19. `python3 validate.py` → 26/26 pre-commit
+- [ ] 20. `node scripts/bump-version.js`
+- [ ] 21. Commit atómico
+- [ ] 22. Push + PR contra `main` con título `refactor(controller): event delegation foundation + trivial migration (p7c-1)`
+- [ ] 23. Monitorear CI hasta verde — Playwright T01-T10 + T32 deben pasar
+- [ ] 24. Merge squash + cleanup branch
