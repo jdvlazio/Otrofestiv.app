@@ -8841,7 +8841,7 @@ function renderAgenda(){
     const _progressHtml=(!savedAgenda||!savedAgenda.schedule||!savedAgenda.schedule.length)?renderFlowProgress(state,'seleccion'):'';
     view.innerHTML=`${_progressHtml}
       <div class="ag-section">
-        <div id="ag-film-list">${renderFilmListHTML()}</div>
+        <div id="ag-film-list">${renderFilmListHTML(state)}</div>
       </div>`;
 
   } else if(activeMNav==='mnav-miplan'){
