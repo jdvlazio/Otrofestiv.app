@@ -2795,8 +2795,14 @@ const storage = {
   getLastRemovedSlots() { try { const r=localStorage.getItem(FESTIVAL_STORAGE_KEY+'lastslot'); if(!r) return []; const p=JSON.parse(r); return Array.isArray(p)?p:(p?[p]:[]); } catch(e) { return []; } },
   setLastRemovedSlots(a) { try { localStorage.setItem(FESTIVAL_STORAGE_KEY+'lastslot', JSON.stringify(a)); } catch(e) {} },
 
-  getFilmDelays() { try { const r=localStorage.getItem(FESTIVAL_STORAGE_KEY+'delays'); return r?JSON.parse(r):{}; } catch(e) { return {}; } },
+  // filmDelays: post-p5.5 NO contiene _hist (separado a filmDelaysHistory).
+  // El strip de _hist en lectura permite migración suave para usuarios con storage pre-p5.5.
+  getFilmDelays() { try { const r=localStorage.getItem(FESTIVAL_STORAGE_KEY+'delays'); if(!r) return {}; const p=JSON.parse(r); const {_hist:_, ...clean}=p; return clean; } catch(e) { return {}; } },
   setFilmDelays(o) { try { localStorage.setItem(FESTIVAL_STORAGE_KEY+'delays', JSON.stringify(o)); } catch(e) {} },
+
+  // filmDelaysHistory: p5.5 key nuevo. Fallback al _hist anidado del key viejo si aún no se ha persistido el key nuevo (migración one-shot al primer save).
+  getFilmDelaysHistory() { try { const r=localStorage.getItem(FESTIVAL_STORAGE_KEY+'delays_hist'); if(r) return JSON.parse(r); const old=localStorage.getItem(FESTIVAL_STORAGE_KEY+'delays'); if(!old) return {}; const parsed=JSON.parse(old); return parsed._hist||{}; } catch(e) { return {}; } },
+  setFilmDelaysHistory(h) { try { localStorage.setItem(FESTIVAL_STORAGE_KEY+'delays_hist', JSON.stringify(h)); } catch(e) {} },
 
   getViewmodes() { try { const r=localStorage.getItem(FESTIVAL_STORAGE_KEY+'viewmodes'); return r?JSON.parse(r):{}; } catch(e) { return {}; } },
   setViewmodes(o) { try { localStorage.setItem(FESTIVAL_STORAGE_KEY+'viewmodes', JSON.stringify(o)); } catch(e) {} },
@@ -2812,6 +2818,180 @@ const storage = {
   setBuild(b) { try { localStorage.setItem('otrofestiv_build', b); } catch(e) {} },
 };
 // ── STORAGE ADAPTER END ──────────────────────────────────────────────
+
+// ── STATE MIRROR START ───────────────────────────────────────────────
+// state — contenedor central para los 19 globals que componen el estado de
+// la app. Estrategia "mirror": toda escritura va por state.set/update/batchUpdate,
+// que actualiza tanto el state interno como el global espejo. Lecturas siguen
+// yendo al global directo (sin tocar readers en p5.5 — eso es p5.6).
+//
+// Invariante: ∀k ∈ ROSTER, state.get(k) === <global k>. Enforced por
+// validate.py [state-mirror]: cualquier escritura a un global del roster fuera
+// de este bloque es un error (con whitelist documentada para declaraciones
+// iniciales y el template literal del worker boundary).
+//
+// Atomicidad: batchUpdate aplica TODO el batch al state + mirrors antes de
+// notificar cualquier subscriber. Cero estado parcial visible para subscribers.
+// Reentrada soportada (subscriber puede llamar set/update/batchUpdate). Rollback
+// si _MIRROR_TARGETS[k] throws.
+//
+// Helpers immutable expuestos (_addToSet, _delFromSet, _omit) para reemplazar
+// patrones de mutación in-place en los callsites migrados.
+//
+// Posición: justo después del storage adapter, antes de _I18N. Los globals
+// del roster (FILMS, watchlist, etc.) se declaran DESPUÉS de este bloque en
+// el flujo del script — el mirror funciona vía closure late-binding sobre
+// los let-bindings del módulo.
+const state = (() => {
+  // _MIRROR_TARGETS: setter por key → asigna al `let` del módulo.
+  // _MIRROR_READERS: getter por key → lee el `let` actual del módulo.
+  // Late-binding via closure — funciona aunque el global se declare después.
+  // _MIRROR_READERS es necesario porque mientras p5.5 está migrando, muchos
+  // globals se reasignan via legacy code (no via state.set). Lazy fallback en
+  // state.get/update/batchUpdate consulta el global vivo si _data no tiene la
+  // key todavía — preservando la invariante state.get(k) === <global k>.
+  const _MIRROR_TARGETS = {
+    _activeFestId:        v => { _activeFestId = v; },
+    FILMS:                v => { FILMS = v; },
+    FESTIVAL_DATES:       v => { FESTIVAL_DATES = v; },
+    FESTIVAL_END:         v => { FESTIVAL_END = v; },
+    FESTIVAL_STORAGE_KEY: v => { FESTIVAL_STORAGE_KEY = v; },
+    PRIO_LIMIT:           v => { PRIO_LIMIT = v; },
+    TZ_OFFSET:            v => { TZ_OFFSET = v; },
+    FESTIVAL_TRANSPORT:   v => { FESTIVAL_TRANSPORT = v; },
+    watchlist:            v => { watchlist = v; },
+    watched:              v => { watched = v; },
+    prioritized:          v => { prioritized = v; },
+    filmRatings:          v => { filmRatings = v; },
+    filmDelays:           v => { filmDelays = v; },
+    filmDelaysHistory:    v => { filmDelaysHistory = v; },
+    savedAgenda:          v => { savedAgenda = v; },
+    availability:         v => { availability = v; },
+    lastRemovedSlots:     v => { lastRemovedSlots = v; },
+    _lang:                v => { _lang = v; },
+    _simTime:             v => { _simTime = v; },
+  };
+  const _MIRROR_READERS = {
+    _activeFestId:        () => _activeFestId,
+    FILMS:                () => FILMS,
+    FESTIVAL_DATES:       () => FESTIVAL_DATES,
+    FESTIVAL_END:         () => FESTIVAL_END,
+    FESTIVAL_STORAGE_KEY: () => FESTIVAL_STORAGE_KEY,
+    PRIO_LIMIT:           () => PRIO_LIMIT,
+    TZ_OFFSET:            () => TZ_OFFSET,
+    FESTIVAL_TRANSPORT:   () => FESTIVAL_TRANSPORT,
+    watchlist:            () => watchlist,
+    watched:              () => watched,
+    prioritized:          () => prioritized,
+    filmRatings:          () => filmRatings,
+    filmDelays:           () => filmDelays,
+    filmDelaysHistory:    () => filmDelaysHistory,
+    savedAgenda:          () => savedAgenda,
+    availability:         () => availability,
+    lastRemovedSlots:     () => lastRemovedSlots,
+    _lang:                () => _lang,
+    _simTime:             () => _simTime,
+  };
+
+  function _seedKey(key) {
+    // Si _data no tiene la key, pull el valor actual del global mirror.
+    // Idempotente — después de la primera lectura, _data tiene la key y
+    // las futuras escrituras (state.set) mantienen el sync.
+    if (!(key in _data) && _MIRROR_READERS[key]) {
+      _data[key] = _MIRROR_READERS[key]();
+    }
+  }
+
+  const _data = Object.create(null);
+  const _subs = new Map();             // Map<key, Set<callback>>
+  let _batchDepth = 0;
+  const _dirty = new Set();
+
+  function _notify(key) {
+    const subs = _subs.get(key);
+    if (!subs) return;
+    // Snapshot del set para tolerar unsubscribe durante la iteración
+    [...subs].forEach(cb => { try { cb(_data[key], key); } catch(e) { console.error('[state] subscriber error:', e); } });
+  }
+
+  return {
+    // ── Lecturas ──
+    get(key) { _seedKey(key); return _data[key]; },
+    snapshot() {
+      // Seed todas las keys del roster para que el snapshot refleje los globals
+      Object.keys(_MIRROR_READERS).forEach(_seedKey);
+      return Object.assign({}, _data);
+    },
+
+    // ── Escrituras ──
+    set(key, value) {
+      if (!(key in _MIRROR_TARGETS)) throw new Error('[state] unknown key: ' + key);
+      _data[key] = value;
+      _MIRROR_TARGETS[key](value);
+      if (_batchDepth > 0) { _dirty.add(key); return; }
+      _notify(key);
+    },
+
+    update(key, fn) {
+      _seedKey(key);
+      this.set(key, fn(_data[key]));
+    },
+
+    batchUpdate(updates) {
+      const keys = Object.keys(updates);
+      if (keys.length === 0) return;
+      // Validar keys ANTES de aplicar — fail-fast sin estado parcial
+      for (const k of keys) {
+        if (!(k in _MIRROR_TARGETS)) throw new Error('[state] unknown key: ' + k);
+      }
+      // Seed pre-snapshot para que rollback restaure al global vivo si _data
+      // aún no tenía la key (no a undefined)
+      for (const k of keys) _seedKey(k);
+      // Snapshot pre-batch para rollback
+      const snapshot = {};
+      for (const k of keys) snapshot[k] = _data[k];
+
+      _batchDepth++;
+      try {
+        for (const k of keys) {
+          _data[k] = updates[k];
+          _MIRROR_TARGETS[k](updates[k]);
+          _dirty.add(k);
+        }
+      } catch (e) {
+        // Rollback: state + mirrors restaurados desde snapshot
+        for (const k of keys) {
+          _data[k] = snapshot[k];
+          _MIRROR_TARGETS[k](snapshot[k]);
+        }
+        // Remover dirty solo de claves de ESTE batch (otras pueden quedar dirty del padre)
+        for (const k of keys) _dirty.delete(k);
+        _batchDepth--;
+        throw e;
+      }
+      _batchDepth--;
+
+      if (_batchDepth === 0) {
+        const toNotify = [..._dirty];
+        _dirty.clear();
+        for (const k of toNotify) _notify(k);
+      }
+    },
+
+    // ── Subscribe ──
+    subscribe(key, cb) {
+      if (!_subs.has(key)) _subs.set(key, new Set());
+      _subs.get(key).add(cb);
+      return () => _subs.get(key)?.delete(cb);
+    },
+
+    // ── Helpers immutable (expuestos para callsites migrados) ──
+    _addToSet(s, t) { return s.has(t) ? s : new Set([...s, t]); },
+    _delFromSet(s, t) { if (!s.has(t)) return s; const n = new Set(s); n.delete(t); return n; },
+    _omit(o, k) { if (!(k in o)) return o; const { [k]:_, ...rest } = o; return rest; },
+  };
+})();
+// ── STATE MIRROR END ─────────────────────────────────────────────────
 
 // ── i18n — sistema de traducción ─────────────────────────────────────────
 // Idioma determinado por preferencia del usuario, persistido en localStorage.
@@ -3516,7 +3696,7 @@ function setLang(code){
   const _fadeEls=['programa-list','ag-view','grid'].map(id=>document.getElementById(id)).filter(Boolean);
   _fadeEls.forEach(el=>el.classList.add('lang-fade'));
   setTimeout(()=>{
-    _lang = code;
+    state.set('_lang', code);
     storage.setLang(code);
     _applyI18nDOM();
     // Re-render vista activa — sin branches por tab
@@ -4296,15 +4476,19 @@ async function _cloudLoad(){
       .eq('festival_id',_activeFestId)
       .single();
     if(error||!data) return; // Sin datos en nube — conservar local
-    // Aplicar datos de la nube (tienen prioridad sobre localStorage)
-    if(data.watchlist?.length) watchlist=new Set(data.watchlist);
-    if(data.watched?.length) watched=new Set(data.watched);
-    if(data.ratings&&Object.keys(data.ratings).length) Object.assign(filmRatings,data.ratings);
-    if(data.saved_agenda) savedAgenda=data.saved_agenda;
-    if(data.prioritized?.length) prioritized=new Set(data.prioritized);
-    if(data.availability&&Object.keys(data.availability).length){
-      DAY_KEYS.forEach(d=>{if(data.availability[d]) availability[d]=data.availability[d];});
+    // Aplicar datos de la nube (tienen prioridad sobre localStorage) — atómico
+    const _cloudUpdates = {};
+    if(data.watchlist?.length) _cloudUpdates.watchlist = new Set(data.watchlist);
+    if(data.watched?.length) _cloudUpdates.watched = new Set(data.watched);
+    if(data.ratings && Object.keys(data.ratings).length) _cloudUpdates.filmRatings = {...state.get('filmRatings'), ...data.ratings};
+    if(data.saved_agenda) _cloudUpdates.savedAgenda = data.saved_agenda;
+    if(data.prioritized?.length) _cloudUpdates.prioritized = new Set(data.prioritized);
+    if(data.availability && Object.keys(data.availability).length){
+      const _newAv = {...state.get('availability')};
+      DAY_KEYS.forEach(d=>{ if(data.availability[d]) _newAv[d] = data.availability[d]; });
+      _cloudUpdates.availability = _newAv;
     }
+    if(Object.keys(_cloudUpdates).length) state.batchUpdate(_cloudUpdates);
     // Sincronizar también en local
     saveWL();saveWatched();savePrio();saveSavedAgenda();saveAV();
   }catch(e){console.warn('Cloud load error:',e);}
@@ -4727,7 +4911,7 @@ let FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202605210701';
+const BUILD_VERSION='202605211047';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';
@@ -4769,6 +4953,8 @@ let activeMiPlanDay=null;
 let _ctaRemovedVisible=false; // CTA B: post-eliminación
 let _ctaRemovedTimer=null;    // CTA B: timer de auto-dismiss
 let filmDelays={};            // retrasos manuales: key=title|day|time, val=mins
+let filmDelaysHistory={};     // p5.5: undo stack — key=title|day|time, val=[prev1, prev2, ...]
+                              // Separado de filmDelays para inmutabilidad (era ._hist anidado pre-p5.5).
 // ── Simulation clock (dev tool) ──
 let _simTime=null; // null = real time
 // simNow() → Date — Date de "ahora" controlable para sim/QA.
@@ -5073,34 +5259,49 @@ function renderMiPlanCalendar(){
 //     loadState, saveWL, saveWatched, saveAV, saveSavedAgenda
 // ═══════════════════════════════════════════════════════════════
 
-/* ── STATE: persistencia en localStorage ────────────────────────────── */
+/* ── STATE: persistencia en localStorage ──────────────────────────────
+ * loadState — hidrate del user-state desde storage en un solo state.batchUpdate.
+ * Atomicidad: subscribers ven todo el snapshot post-hidrate, nunca parcial.
+ * Heal (prioritized ⊆ watchlist) corre POST-batch como update separado porque
+ * lee `prioritized` ya seteado; el efecto neto es 2 notifications de watchlist
+ * (hidrate + heal). Aceptable — el heal es idempotente para subscribers.
+ */
 function loadState(){
   try{
-    watchlist = new Set([...storage.getWatchlist()].map(normTitle));
-    watched = new Set([...storage.getWatched()].map(normTitle));
-    Object.assign(filmRatings, storage.getFilmRatings());
-    const _av = storage.getAvailability(); DAY_KEYS.forEach(d=>{if(_av[d]) availability[d]=_av[d];});
-    savedAgenda = storage.getSavedAgenda();
-    // Normalizar venues viejos (ej: 'CC Bocagrande' → 'Plaza Bocagrande')
-    if(savedAgenda&&savedAgenda.schedule){
-      savedAgenda.schedule.forEach(s=>{
-        if(s.venue) s.venue=s.venue.replace(/CC Bocagrande/g,'Plaza Bocagrande');
-      });
+    // Computar todos los valores hidratados (puro, sin escribir)
+    const _wl = new Set([...storage.getWatchlist()].map(normTitle));
+    const _wd = new Set([...storage.getWatched()].map(normTitle));
+    const _pr = new Set([...storage.getPrioritized()].map(normTitle));
+    const _ratings = {...state.get('filmRatings'), ...storage.getFilmRatings()};
+    const _av = storage.getAvailability();
+    const _newAv = {...state.get('availability')};
+    DAY_KEYS.forEach(d=>{ if(_av[d]) _newAv[d]=_av[d]; });
+    let _sa = storage.getSavedAgenda();
+    if(_sa && _sa.schedule){
+      // Normalizar venues viejos (ej: 'CC Bocagrande' → 'Plaza Bocagrande')
+      _sa = {..._sa, schedule: _sa.schedule.map(s => s.venue ? {...s, venue: s.venue.replace(/CC Bocagrande/g,'Plaza Bocagrande')} : s)};
     }
-    prioritized = new Set([...storage.getPrioritized()].map(normTitle));
+    state.batchUpdate({
+      watchlist: _wl,
+      watched: _wd,
+      prioritized: _pr,
+      filmRatings: _ratings,
+      availability: _newAv,
+      savedAgenda: _sa,
+      lastRemovedSlots: storage.getLastRemovedSlots(),
+      filmDelays: storage.getFilmDelays(),
+      filmDelaysHistory: storage.getFilmDelaysHistory(),
+    });
     // Heal: garantiza que todo lo que está en prioritized esté en watchlist
-    prioritized.forEach(t=>{if(!watchlist.has(t)){watchlist.add(t);}});
+    state.update('watchlist', s => { let n=s; prioritized.forEach(t=>{ if(!n.has(t)) n=state._addToSet(n,t); }); return n; });
     saveWL();
-    // Restore reserved slot — persists across refresh, button shows "＋ Añadir" (not "← Restaurar")
-    lastRemovedSlots = storage.getLastRemovedSlots();
-    filmDelays = storage.getFilmDelays();
     const _v = storage.getViewmodes(); if(_v.miPlan) miPlanViewMode=_v.miPlan; if(_v.intereses) interesesViewMode=_v.intereses;
   }catch(e){console.warn('[loadState] failed',e);}
 }
 function saveWL(){ storage.setWatchlist(watchlist); _cloudSave(); }
 function saveWatched(){ storage.setWatched(watched); _cloudSave(); }
 function saveRating(title,rating){
-  if(rating>0) filmRatings[title]=rating; else delete filmRatings[title];
+  state.update('filmRatings', o => rating>0 ? {...o, [title]: rating} : state._omit(o, title));
   storage.setFilmRatings(filmRatings); _cloudSave();
 }
 function saveAV(){ storage.setAvailability(availability); _cloudSave(); }
@@ -5155,27 +5356,36 @@ async function _cancelNotifications(){
 }
 function savePrio(){ storage.setPrioritized(prioritized); _cloudSave(); }
 function saveLastSlot(){ storage.setLastRemovedSlots(lastRemovedSlots); }
-function saveDelays(){ storage.setFilmDelays(filmDelays); }
+function saveDelays(){ storage.setFilmDelays(filmDelays); storage.setFilmDelaysHistory(filmDelaysHistory); }
 function _delayKey(s){return(s._title||s.title||'')+'|'+(s.day||'')+'|'+(s.time||'');}
 function setDelay(title,day,time,addMins){
   const k=title+'|'+day+'|'+time;
-  if(!filmDelays._hist) filmDelays._hist={};
-  if(!filmDelays._hist[k]) filmDelays._hist[k]=[];
-  filmDelays._hist[k].push(filmDelays[k]||0); // guardar valor anterior
-  const newVal=Math.max(0,(filmDelays[k]||0)+addMins);
-  if(newVal===0) delete filmDelays[k]; else filmDelays[k]=newVal;
+  const fd=state.get('filmDelays');
+  const newVal=Math.max(0,(fd[k]||0)+addMins);
+  state.batchUpdate({
+    filmDelaysHistory: (() => {
+      const h=state.get('filmDelaysHistory');
+      return {...h, [k]: [...(h[k]||[]), fd[k]||0]};
+    })(),
+    filmDelays: newVal===0 ? state._omit(fd, k) : {...fd, [k]: newVal},
+  });
   saveDelays();renderAgenda();
 }
 function undoDelay(title,day,time){
   const k=title+'|'+day+'|'+time;
-  if(!filmDelays._hist||!filmDelays._hist[k]||!filmDelays._hist[k].length) return;
-  const prev=filmDelays._hist[k].pop();
-  if(prev===0) delete filmDelays[k]; else filmDelays[k]=prev;
+  const h=state.get('filmDelaysHistory');
+  if(!h[k]||!h[k].length) return;
+  const prev=h[k][h[k].length-1];
+  const newHistArr=h[k].slice(0,-1);
+  state.batchUpdate({
+    filmDelaysHistory: newHistArr.length ? {...h, [k]: newHistArr} : state._omit(h, k),
+    filmDelays: prev===0 ? state._omit(state.get('filmDelays'), k) : {...state.get('filmDelays'), [k]: prev},
+  });
   saveDelays();renderAgenda();
 }
 function clearDelay(title,day,time){
   const k=title+'|'+day+'|'+time;
-  delete filmDelays[k];
+  state.update('filmDelays', fd => state._omit(fd, k));
   saveDelays();renderAgenda();
 }
 /* ── saveState — batching de localStorage ── */
@@ -5215,20 +5425,31 @@ function toggleWL(title,e){
       showActionModal(t('plan_quitar_intereses'),
         `<b>${title.length>36?title.slice(0,34)+'…':title}</b> ${t('plan_en_tu_plan')}<br><br>${t('plan_quitar_tmb')}`,
         t('plan_quitar_confirm'),()=>{
-          savedAgenda.schedule=savedAgenda.schedule.filter(s=>s._title!==title);
-          if(!savedAgenda.schedule.length)savedAgenda=null;
+          state.update('savedAgenda', a => ({...a, schedule: a.schedule.filter(s=>s._title!==title)}));
+          if(!savedAgenda.schedule.length)state.set('savedAgenda', null);
           saveSavedAgenda();
-          watchlist.delete(title);watched.delete(title);prioritized.delete(title);
+          state.batchUpdate({
+            watchlist: state._delFromSet(state.get('watchlist'), title),
+            watched: state._delFromSet(state.get('watched'), title),
+            prioritized: state._delFromSet(state.get('prioritized'), title),
+          });
           saveState('wl','watched');updateCardState(title);updateAgTab();
           if(activeView==='agenda'){cachedResult=null;renderAgenda();}
         });return;
     }
     // Now safe to remove from watchlist
-    watchlist.delete(title);watched.delete(title);prioritized.delete(title);
+    state.batchUpdate({
+      watchlist: state._delFromSet(state.get('watchlist'), title),
+      watched: state._delFromSet(state.get('watched'), title),
+      prioritized: state._delFromSet(state.get('prioritized'), title),
+    });
     showToast('Fuera de tus intereses','info');
   }
   else{
-    watchlist.add(title);watched.delete(title);
+    state.batchUpdate({
+      watchlist: state._addToSet(state.get('watchlist'), title),
+      watched: state._delFromSet(state.get('watched'), title),
+    });
     // ── CASO 3: todas las funciones en horario no disponible ──
     const _allScreens=FILMS.filter(f=>f.title===title&&!screeningPassed(f));
     const _allBlocked=_allScreens.length>0&&_allScreens.every(s=>isScreeningBlocked(s));
@@ -5255,8 +5476,10 @@ function toggleWatched(title,e){
   if(e) e.stopPropagation();
   if(watched.has(title)){
     // Quitar de vistas — si no está en Intereses, devolverla ahí
-    watched.delete(title);
-    if(!watchlist.has(title)) watchlist.add(title);
+    state.batchUpdate({
+      watched: state._delFromSet(state.get('watched'), title),
+      watchlist: state._addToSet(state.get('watchlist'), title),
+    });
     saveState('wl','watched');updateCardState(title);updateAgTab();
     const listEl=document.getElementById('ag-film-list');
     _reRenderIntereses();
@@ -5270,7 +5493,7 @@ function toggleWatched(title,e){
       `<b>${_short}</b><br><br>${t('modal_ya_viste_body')}`,
       t('modal_ya_viste_cta'),
       ()=>{
-        watched.add(title);
+        state.update('watched', s => state._addToSet(s, title));
         saveWatched();updateCardState(title);updateAgTab();
         cachedResult=null;
         _reRenderIntereses();
@@ -5316,9 +5539,9 @@ function removeFromAgenda(title){
   const _s=title.length>36?title.slice(0,34)+'…':title;
   showActionModal(t('plan_quitar_plan'),`<b>${_s}</b><br><br>${t('plan_restaurar_suger')}`,t('misc_quitar'),()=>{
     const rem=savedAgenda.schedule.find(s=>s._title===title);
-    if(rem){lastRemovedSlots=lastRemovedSlots.filter(r=>r._title!==rem._title);lastRemovedSlots.unshift({...rem,_isRestored:true});if(lastRemovedSlots.length>MAX_REMEMBERED_SLOTS)lastRemovedSlots.length=MAX_REMEMBERED_SLOTS;saveLastSlot();}
-    savedAgenda.schedule=savedAgenda.schedule.filter(s=>s._title!==title);
-    if(!savedAgenda.schedule.length)savedAgenda=null;
+    if(rem){state.update('lastRemovedSlots', arr => [{...rem,_isRestored:true}, ...arr.filter(r=>r._title!==rem._title)].slice(0,MAX_REMEMBERED_SLOTS));saveLastSlot();}
+    state.update('savedAgenda', a => ({...a, schedule: a.schedule.filter(s=>s._title!==title)}));
+    if(!savedAgenda.schedule.length)state.set('savedAgenda', null);
     saveSavedAgenda();
     // CTA B: mostrar aviso contextual post-eliminación
     _ctaRemovedVisible=true;
@@ -5331,11 +5554,11 @@ function addSuggestion(title,day,time){
   title=normTitle(title);
   if(festivalEnded()) return;
   // 1. Add to watchlist if not already there
-  if(!watchlist.has(title)){watchlist.add(title);watched.delete(title);saveState('wl','watched');updateCardState(title);updateAgTab();}
+  if(!watchlist.has(title)){state.batchUpdate({watchlist:state._addToSet(state.get('watchlist'),title), watched:state._delFromSet(state.get('watched'),title)});saveState('wl','watched');updateCardState(title);updateAgTab();}
   // 2. Add specific screening to saved agenda
   const screen=FILMS.find(f=>f.title===title&&f.day===day&&f.time===time);
   if(screen){
-    if(!savedAgenda) savedAgenda={schedule:[]};
+    if(!savedAgenda) state.set('savedAgenda', {schedule:[]});
     // Avoid duplicates
     if(!savedAgenda.schedule.some(s=>s._title===title)){
       // ── Re-validación en tiempo real ─────────────────────────────
@@ -5347,8 +5570,11 @@ function addSuggestion(title,day,time){
         openConflictSheet(title, screen, realConflict);
         return;
       }
-      savedAgenda.schedule.push({...screen,_title:title});
-      savedAgenda.schedule.sort((a,b)=>a.day_order!==b.day_order?a.day_order-b.day_order:toMin(a.time)-toMin(b.time));
+      state.update('savedAgenda', a => ({
+        ...a,
+        schedule: [...a.schedule, {...screen,_title:title}]
+          .sort((x,y)=>x.day_order!==y.day_order?x.day_order-y.day_order:toMin(x.time)-toMin(y.time))
+      }));
       saveSavedAgenda();
       // ── Toast informativo con día y hora ─────────────────────────
       // Informa exactamente dónde quedó la película para que el
@@ -5361,7 +5587,7 @@ function addSuggestion(title,day,time){
     }
   }
   // 3. Quitar de lista de restaurables
-  lastRemovedSlots=lastRemovedSlots.filter(r=>r._title!==title);
+  state.update('lastRemovedSlots', arr => arr.filter(r=>r._title!==title));
   saveLastSlot();
   // 4. Saltar al día de la sugerencia en el calendario
   const jumpIdx=DAY_KEYS.indexOf(day);
@@ -5493,13 +5719,11 @@ function _removePlanItem(title){
   if(!savedAgenda) return;
   const removed=savedAgenda.schedule.find(s=>s._title===title);
   if(removed){
-    lastRemovedSlots=lastRemovedSlots.filter(r=>r._title!==removed._title);
-    lastRemovedSlots.unshift({...removed,_isRestored:true});
-    if(lastRemovedSlots.length>MAX_REMEMBERED_SLOTS) lastRemovedSlots.length=MAX_REMEMBERED_SLOTS;
+    state.update('lastRemovedSlots', arr => [{...removed,_isRestored:true}, ...arr.filter(r=>r._title!==removed._title)].slice(0,MAX_REMEMBERED_SLOTS));
     saveLastSlot();
   }
-  savedAgenda.schedule=savedAgenda.schedule.filter(s=>s._title!==title);
-  if(!savedAgenda.schedule.length) savedAgenda=null;
+  state.update('savedAgenda', a => ({...a, schedule: a.schedule.filter(s=>s._title!==title)}));
+  if(!savedAgenda.schedule.length) state.set('savedAgenda', null);
   saveSavedAgenda();
 }
 
@@ -5535,7 +5759,7 @@ function showConflictModal(conflicts, onConfirm){
 }
 function toggleFullDay(day){
   if(isFullDayBlocked(day)){
-    availability[day].blocks=[];
+    state.update('availability', a => ({...a, [day]: {...a[day], blocks: []}}));
     cachedResult=null;saveAV();renderAvBlocks();invalidateCalcResult();
     _checkRecalcOpportunity();
     return;
@@ -5543,7 +5767,8 @@ function toggleFullDay(day){
   const _conflicts=checkPlanConflictsWithBlock(day,'00:00','23:59');
   const _doBlock=()=>{
     _conflicts.forEach(s=>_removePlanItem(s._title));
-    availability[day].blocks=[{from:'00:00',to:'23:59'}];avAddOpen[day]=false;
+    state.update('availability', a => ({...a, [day]: {...a[day], blocks: [{from:'00:00',to:'23:59'}]}}));
+    avAddOpen[day]=false;
     cachedResult=null;saveAV();renderAvBlocks();invalidateCalcResult();
   };
   if(_conflicts.length) setTimeout(()=>showConflictModal(_conflicts,_doBlock),50);
@@ -5559,7 +5784,10 @@ function addBlock(day){
   const _blockConflicts=checkPlanConflictsWithBlock(day,f,toVal);
   const _doAdd=()=>{
     _blockConflicts.forEach(s=>_removePlanItem(s._title));
-    av.blocks.push({from:f,to:toVal});av.blocks.sort((a,b)=>toMin(a.from)-toMin(b.from));
+    state.update('availability', a => ({
+      ...a,
+      [day]: {...a[day], blocks: [...a[day].blocks, {from:f,to:toVal}].sort((x,y)=>toMin(x.from)-toMin(y.from))}
+    }));
     avAddOpen[day]=false;
     cachedResult=null;saveAV();renderAvBlocks();invalidateCalcResult();
   };
@@ -5567,7 +5795,7 @@ function addBlock(day){
   else _doAdd();
 }
 function removeBlock(day,fromVal,toVal){
-  availability[day].blocks=availability[day].blocks.filter(b=>!(b.from===fromVal&&b.to===toVal));
+  state.update('availability', a => ({...a, [day]: {...a[day], blocks: a[day].blocks.filter(b=>!(b.from===fromVal&&b.to===toVal))}}));
   cachedResult=null;saveAV();renderAvBlocks();invalidateCalcResult();
   _checkRecalcOpportunity();
 }
@@ -5694,8 +5922,10 @@ function confirmAvBlock(){
     const _conflicts=checkPlanConflictsWithBlock(_avSheetDay,from,to);
     const _doAdd=()=>{
       _conflicts.forEach(s=>_removePlanItem(s._title));
-      av.blocks.push({from,to});
-      av.blocks.sort((a,b)=>toMin(a.from)-toMin(b.from)); // mantener orden cronológico
+      state.update('availability', a => ({
+        ...a,
+        [_avSheetDay]: {...a[_avSheetDay], blocks: [...a[_avSheetDay].blocks, {from,to}].sort((x,y)=>toMin(x.from)-toMin(y.from))}
+      }));
       cachedResult=null;saveAV();renderAvBlocks();invalidateCalcResult();
     };
     closeAvSheet();
@@ -6446,9 +6676,11 @@ function removeFilmFromScenario(title,e){
     `<b>${short}</b><br><br>${t('plan_se_quitara')}.`,
     t('misc_quitar'),
     ()=>{
-      watchlist.delete(title);
-      prioritized.delete(title);
-      watched.delete(title);
+      state.batchUpdate({
+        watchlist: state._delFromSet(state.get('watchlist'), title),
+        prioritized: state._delFromSet(state.get('prioritized'), title),
+        watched: state._delFromSet(state.get('watched'), title),
+      });
       saveState('wl','prio','watched');
       updateAgTab();
       showToast('Fuera de tus intereses','info');
@@ -6562,7 +6794,7 @@ function renderSavedAgendaHTML(){
 }
 function checkinLaVi(title){
   if(!watched.has(title)){
-    watched.add(title);saveWatched();updateCardState(title);updateAgTab();
+    state.update('watched', s => state._addToSet(s, title));saveWatched();updateCardState(title);updateAgTab();
     renderAgenda();
     const s=savedAgenda&&savedAgenda.schedule.find(e=>e._title===title);
     // Los programas de cortos no tienen calificación general
@@ -6600,11 +6832,11 @@ function updateSimLabel(val){
 }
 function applySimTime(val){
   if(val===null){
-    _simTime=null;
+    state.set('_simTime', null);
     const sl=document.getElementById('sim-slider');if(sl) sl.value=0;
     const lb=document.getElementById('sim-label');if(lb) lb.textContent='Tiempo real';
   } else {
-    _simTime=new Date(_simFestStart().getTime()+Math.round(val/1000*_SIM_TOTAL())*60000).toISOString();
+    state.set('_simTime', new Date(_simFestStart().getTime()+Math.round(val/1000*_SIM_TOTAL())*60000).toISOString());
   }
   _expandedFilm='';
   _activeMiPlanFilm='';
@@ -6853,11 +7085,13 @@ function confirmReplace(removedTitle,newTitle,day,time){
       if(removedTitle) _removePlanItem(removedTitle);
       const screen=FILMS.find(f=>f.title===newTitle&&f.day===day&&f.time===time);
       if(screen){
-        if(!savedAgenda) savedAgenda={schedule:[]};
-        if(!watchlist.has(newTitle)){watchlist.add(newTitle);saveWL();}
-        savedAgenda.schedule=savedAgenda.schedule.filter(s=>s._title!==newTitle);
-        savedAgenda.schedule.push({...screen,_title:newTitle});
-        savedAgenda.schedule.sort((a,b)=>DAY_KEYS.indexOf(a.day)-DAY_KEYS.indexOf(b.day)||toMin(a.time)-toMin(b.time));
+        if(!savedAgenda) state.set('savedAgenda', {schedule:[]});
+        if(!watchlist.has(newTitle)){state.update('watchlist', s=>state._addToSet(s,newTitle));saveWL();}
+        state.update('savedAgenda', a => ({
+          ...a,
+          schedule: [...a.schedule.filter(s=>s._title!==newTitle), {...screen,_title:newTitle}]
+            .sort((x,y)=>DAY_KEYS.indexOf(x.day)-DAY_KEYS.indexOf(y.day)||toMin(x.time)-toMin(y.time))
+        }));
         saveSavedAgenda();
       }
       _expandedFilm='';
@@ -7822,7 +8056,7 @@ function clearSavedAgenda(){
   showDestructiveModal(t('plan_borrar_titulo'),
     t('plan_borrar_confirm'),
     t('plan_borrar'),
-    ()=>{savedAgenda=null;localStorage.removeItem(`${FESTIVAL_STORAGE_KEY}saved`);renderAgenda();});
+    ()=>{state.set('savedAgenda', null);localStorage.removeItem(`${FESTIVAL_STORAGE_KEY}saved`);renderAgenda();});
 }
 
 // ── RESULT HTML ──
@@ -8021,21 +8255,21 @@ function togglePriority(title,cost){
         `<b>${short}</b><br><br>${t('plan_sigue_intereses')}`,
 
         t('plan_quitar_prioridad'),()=>{
-          prioritized.delete(title);savePrio();updateCardState(title);updateAgTab();runCalc();
+          state.update('prioritized', s=>state._delFromSet(s,title));savePrio();updateCardState(title);updateAgTab();runCalc();
           showToast(`${ICONS.star} ${t('toast_prioridad_quitada')}`,'info');
           renderAgenda();
           switchMainNav('mnav-seleccion');showAgView();
         });return;
     }
-    prioritized.delete(title);
+    state.update('prioritized', s=>state._delFromSet(s,title));
     savePrio();updateCardState(title);updateAgTab();runCalc();
     showToast(`${ICONS.star} ${t('toast_prioridad_quitada')}`,'info');
   } else {
     if(prioritized.size>=PRIO_LIMIT){
       openPrioLimit(title);return;
     }
-    prioritized.add(title);
-    if(!watchlist.has(title)){watchlist.add(title);watched.delete(title);saveWL();saveWatched();}
+    state.update('prioritized', s=>state._addToSet(s,title));
+    if(!watchlist.has(title)){state.batchUpdate({watchlist:state._addToSet(state.get('watchlist'),title), watched:state._delFromSet(state.get('watched'),title)});saveWL();saveWatched();}
     savePrio();updateCardState(title);updateAgTab();
     showToast(`${ICONS.starFill} ${t('cta_priorizada')} · ${prioritized.size}/${PRIO_LIMIT}`,'info');
     runCalc();
@@ -8172,7 +8406,7 @@ function openPostViewRating(title, day, time, venue, duration){
 
 function savePVRating(){
   if(_pvRating>0){
-    filmRatings[_pvTitle]=_pvRating;
+    state.update('filmRatings', o => ({...o, [_pvTitle]: _pvRating}));
     storage.setFilmRatings(filmRatings);
     const stars=['','★','★★','★★★','★★★★','★★★★★'];
     showToast(stars[Math.round(_pvRating)]||'★ Calificada','info');
@@ -8196,8 +8430,10 @@ function markWatchedFromPlan(title, day, time, venue, duration, e){
   if(e) e.stopPropagation();
   if(watched.has(title)){
     // Ya está vista — desmarcar
-    watched.delete(title);
-    if(!watchlist.has(title)) watchlist.add(title);
+    state.batchUpdate({
+      watched: state._delFromSet(state.get('watched'), title),
+      watchlist: state.get('watchlist').has(title) ? state.get('watchlist') : state._addToSet(state.get('watchlist'), title),
+    });
     saveState('wl','watched');
     updateCardState(title);
     updateAgTab();
@@ -8205,7 +8441,7 @@ function markWatchedFromPlan(title, day, time, venue, duration, e){
     return;
   }
   // Marcar como vista y abrir sheet de calificación
-  watched.add(title);
+  state.update('watched', s=>state._addToSet(s, title));
   saveWatched();
   updateCardState(title);
   updateAgTab();
@@ -8259,9 +8495,13 @@ function confirmConflictReplace(){
   if(!_conflictPending) return;
   const{incomingTitle, incomingScreen, existingEntry}=_conflictPending;
   // Quitar la existente e insertar la nueva
-  savedAgenda.schedule=savedAgenda.schedule.filter(s=>!(s._title===existingEntry._title&&s.day===existingEntry.day&&s.time===existingEntry.time));
-  savedAgenda.schedule.push({...incomingScreen,_title:incomingTitle});
-  savedAgenda.schedule.sort((a,b)=>a.day_order!==b.day_order?a.day_order-b.day_order:toMin(a.time)-toMin(b.time));
+  state.update('savedAgenda', a => ({
+    ...a,
+    schedule: [
+      ...a.schedule.filter(s=>!(s._title===existingEntry._title&&s.day===existingEntry.day&&s.time===existingEntry.time)),
+      {...incomingScreen,_title:incomingTitle}
+    ].sort((x,y)=>x.day_order!==y.day_order?x.day_order-y.day_order:toMin(x.time)-toMin(y.time))
+  }));
   saveSavedAgenda();
   const{displayTitle:dt}=parseProgramTitle(incomingTitle);
   closeConflictSheet();
@@ -8327,8 +8567,7 @@ function closePrioLimit(){
 }
 
 function swapPriority(removeTitle, addTitle){
-  prioritized.delete(removeTitle);
-  prioritized.add(addTitle);
+  state.update('prioritized', s => state._addToSet(state._delFromSet(s, removeTitle), addTitle));
   savePrio();
   updateCardState(removeTitle);
   updateCardState(addTitle);
@@ -8393,7 +8632,7 @@ function saveCurrentScenario(){
   const _doSave=()=>{
     const _sc=cachedResult.scenarios[cachedResult.currentIdx];
     const _squeezed=squeezeExcluded(_sc.schedule,_sc.excluded||[]);
-    savedAgenda={schedule:_squeezed};
+    state.set('savedAgenda', {schedule:_squeezed});
     saveSavedAgenda();
     openPlanConfirm(_squeezed);
   };
@@ -10543,6 +10782,39 @@ async function _autoResolveFestivalPosters(){
     requestAnimationFrame(()=>{try{render();}catch(e){console.warn('[render] rAF render failed',e);}});
   }
 }
+/**
+ * loadFestival(id) — switch al festival `id`. Post-p5.5: el swap del state
+ * roster (15 keys: 7 cfg + 8 user-state, sin `_activeFestId` que cierra
+ * el switch) se hace en 3 batches atómicos por dependencias direccionales:
+ *
+ *   ► BATCH 1 — transition + clear:
+ *     FESTIVAL_STORAGE_KEY (new), FESTIVAL_END (new),
+ *     watchlist=∅, watched=∅, prioritized=∅, filmRatings=∅, savedAgenda=null,
+ *     lastRemovedSlots=[], filmDelays=∅, filmDelaysHistory=∅,
+ *     availability=<new shape, blocks preservados>
+ *
+ *   ► BATCH 2 — hidrate (loadState):
+ *     watchlist/watched/prioritized/filmRatings/availability/savedAgenda/
+ *     lastRemovedSlots/filmDelays/filmDelaysHistory desde storage del NUEVO fest
+ *
+ *   ► BATCH 3 — cfg-tail + filter:
+ *     _activeFestId, FILMS, FESTIVAL_DATES, PRIO_LIMIT, TZ_OFFSET, FESTIVAL_TRANSPORT,
+ *     watchlist/watched/prioritized (filtered por _validTitles)
+ *
+ * Por qué 3 batches y no 1:
+ *   - Batch 2 (loadState) lee `storage.getX()` que prefija con FESTIVAL_STORAGE_KEY
+ *     → FESTIVAL_STORAGE_KEY debe estar al nuevo fest ANTES de batch 2 → batch 1
+ *   - El day-tab DOM build (entre batches 1 y 2) llama `dayFullyPassed()` que lee
+ *     FESTIVAL_END → debe estar al nuevo fest ANTES del DOM build → batch 1
+ *   - `_validTitles` para el filter se computa local de `_newFilms` (no del global
+ *     FILMS), permitiendo que FILMS y user-state filtered convivan en batch 3.
+ *
+ * Atomicidad entre batches: garantizada por JS single-thread — entre el `return`
+ * de batch N y el inicio de batch N+1 no corre código del event loop (loadState
+ * es sync, day-tab DOM build es sync). Subscribers (futuros, post-Fase 6) verán
+ * 3 snapshots discretos: post-transition, post-hidrate, post-final. Cada snapshot
+ * es internamente consistente.
+ */
 async function loadFestival(id){
   // Resetear filtros al cambiar festival
   activeVenue='all';activeSec='all';programaChip='all';_programaChipMatchFn=null;
@@ -10646,25 +10918,22 @@ async function loadFestival(id){
       return false;
     }
   }
-  _activeFestId=id;
-  // Swap globals
-  // normTitle: normaliza comillas tipográficas en títulos al cargar el festival.
-  // Punto único — todo lookup posterior hereda el título limpio.
-  FILMS=(cfg.films||[]).map(f=>({...f,title:normTitle(f.title)}));
+  // Guard: dayKeys y days son requeridos — sin ellos el UI de calendario crashea
+  // (movido pre-batch en p5.5 para que el fallo no deje state parcialmente swapeado)
+  if(!cfg.dayKeys||!cfg.days||!cfg.days.length){
+    console.error(`[loadFestival] '${id}' no tiene dayKeys/days en FESTIVAL_CONFIG.`);
+    showToast(t('error_festival_nd'),'error',6000);
+    return false;
+  }
+  // ── Non-roster cfg apply (legacy) ──────────────────────────────────
+  // Estos globals no están en el state roster (Fase 5.5). Siguen como
+  // asignaciones directas hasta Fase 8.
   POSTERS=cfg.posters;
   LB_SLUGS=cfg.lbSlugs||{};
-  FESTIVAL_DATES=cfg.festivalDates;
-  FESTIVAL_END=new Date(cfg.festivalEndStr);
-  // ⚠️  festivalEndStr se parsea como hora LOCAL del dispositivo (sin sufijo UTC).
-  // Para festivales colombianos con audiencia local esto es correcto (todos en UTC-5).
-  // Si en el futuro el festival es en otra zona o la audiencia es internacional,
-  // usar festivalEndStr con offset explícito: '2026-08-09T23:00:00-05:00'
-  FESTIVAL_STORAGE_KEY=cfg.storageKey;
   DAY_KEYS=cfg.dayKeys;
   DAY_SHORT_EN=cfg.dayShort_en||cfg.dayShort;
   // Si el festival no tiene dayShort en español (ej. Tribeca: valores en inglés),
   // construirlo desde las fechas ISO usando el día de la semana.
-  // _EN_TO_I18N ya definido más abajo — usamos el mapa directo aquí.
   const _EN_TO_ES={'SUN':'DOM','MON':'LUN','TUE':'MAR','WED':'MIÉ','THU':'JUE','FRI':'VIE','SAT':'SÁB'};
   const _needsTranslation = Object.values(cfg.dayShort||{}).some(v=>
     /^(MON|TUE|WED|THU|FRI|SAT|SUN)/.test(v)
@@ -10681,19 +10950,6 @@ async function loadFestival(id){
   } else {
     DAY_SHORT=cfg.dayShort;
   }
-  // PRIO_LIMIT: regla global por festival — round(días/2), cap [3,8]
-  // Garantiza ~8.3% de los films físicamente posibles como prioridades.
-  // Definido en cada festivals/*.json como 'prioLimit'.
-  // Si no está definido, fallback conservador = 3 (no 5 — evita over-promise).
-  const _computedPrioLimit = Math.min(8, Math.max(3, Math.round((cfg.dayKeys||[]).length / 2)));
-  PRIO_LIMIT = cfg.prioLimit || _computedPrioLimit;
-  // Guard: dayKeys y days son requeridos — sin ellos el UI de calendario crashea
-  if(!cfg.dayKeys||!cfg.days||!cfg.days.length){
-    console.error(`[loadFestival] '${id}' no tiene dayKeys/days en FESTIVAL_CONFIG.`);
-    showToast(t('error_festival_nd'),'error',6000);
-    return false;
-  }
-  // Reconstruir lookup de posters para el festival activo
   CUSTOM_POSTERS=cfg.customPosters||{};
   _CUSTOM_N=Object.fromEntries(Object.entries(CUSTOM_POSTERS).map(([k,v])=>[normKey(k),v]));
   _POSTERS_N=Object.fromEntries(Object.entries(POSTERS).map(([k,v])=>[normKey(k),v]));
@@ -10703,6 +10959,36 @@ async function loadFestival(id){
   Object.keys(DAY_ABBR).forEach(k=>delete DAY_ABBR[k]);
   Object.keys(DAY_NUM).forEach(k=>delete DAY_NUM[k]);
   cfg.days.forEach(d=>{DAY_ABBR[d.k]=d.lbl;DAY_NUM[d.k]=d.d;});
+  // PRIO_LIMIT computado para batch 3 (regla: round(días/2), cap [3,8]).
+  // Si cfg.prioLimit no está definido, fallback conservador = 3.
+  const _computedPrioLimit = Math.min(8, Math.max(3, Math.round((cfg.dayKeys||[]).length / 2)));
+
+  // ► BATCH 1 — transition + clear ───────────────────────────────────
+  // FESTIVAL_STORAGE_KEY debe estar al new fest ANTES de batch 2 (loadState
+  // lee storage prefijado). FESTIVAL_END debe estar antes del day-tab DOM
+  // build (dayFullyPassed lo lee). availability rebuilda con shape del nuevo
+  // festival, preservando blocks de días con misma key (cross-festival continuity).
+  // ⚠️  festivalEndStr se parsea como hora LOCAL del dispositivo (sin sufijo UTC).
+  // Festivales colombianos con audiencia local: correcto (todos en UTC-5).
+  // Para festivales en otra zona, usar festivalEndStr con offset explícito.
+  const _currAv = state.get('availability');
+  const _newAvShape = {};
+  cfg.dayKeys.forEach(d => {
+    _newAvShape[d] = (_currAv[d] && _currAv[d].blocks) ? _currAv[d] : {blocks:[]};
+  });
+  state.batchUpdate({
+    FESTIVAL_STORAGE_KEY: cfg.storageKey,
+    FESTIVAL_END: new Date(cfg.festivalEndStr),
+    watchlist: new Set(),
+    watched: new Set(),
+    prioritized: new Set(),
+    filmRatings: {},
+    savedAgenda: null,
+    lastRemovedSlots: [],
+    filmDelays: {},
+    filmDelaysHistory: {},
+    availability: _newAvShape,
+  });
   // Rebuild day tabs DOM
   const _dt=document.getElementById('dtabs');
   if(_dt){
@@ -10749,26 +11035,39 @@ async function loadFestival(id){
       _dt.appendChild(btn);
     });
   }
-  // Reset app state
+  // Reset UI state (non-roster, sin cambios)
   activeDay=cfg.dayKeys[0];
   activeVenue='all';activeSec='all';selectedIdx=null;
-  watchlist=new Set();watched=new Set();filmRatings={};savedAgenda=null;
-  prioritized=new Set();lastRemovedSlots=[];filmDelays={};
   cachedResult=null; // invalidar cache del festival anterior — evita mostrar escenarios de otro festival
-  // Rebuild availability for new festival days (keep blocks if already set)
-  const _newAv={};
-  DAY_KEYS.forEach(d=>{_newAv[d]=availability[d]&&availability[d].blocks?availability[d]:{blocks:[]}});
-  Object.keys(availability).forEach(k=>delete availability[k]);
-  Object.assign(availability,_newAv);
   programaSubMode='hoy';cartelaMode='horario';activeDay='all';programaViewMode='grid';
   miPlanViewStart=0;activeMiPlanDay=0;
-  // Load from new storage
+
+  // ► BATCH 2 — hidrate desde storage del nuevo fest ─────────────────
+  // loadState() internamente hace state.batchUpdate con los 9 user-state keys
+  // (watchlist/watched/prioritized/filmRatings/availability/savedAgenda/
+  // lastRemovedSlots/filmDelays/filmDelaysHistory).
   loadState();
-  // Filter watchlist/watched to current festival's films only (prevents cross-festival contamination)
-  const _validTitles=new Set(FILMS.map(f=>f.title));
-  watchlist=new Set([...watchlist].filter(t=>_validTitles.has(t)));
-  watched=new Set([...watched].filter(t=>_validTitles.has(t)));
-  prioritized=new Set([...prioritized].filter(t=>_validTitles.has(t)));
+
+  // ► BATCH 3 — cfg-tail + filter ────────────────────────────────────
+  // _newFilms y _validTitles computados local — no se leen de state.
+  // Esto permite que FILMS y los user-state filtrados estén en el MISMO
+  // batch atómico. Subscribers post-Fase 6 verán "festival activo y user-state
+  // consistente con sus films" en una sola notificación.
+  // normTitle: normaliza comillas tipográficas en títulos. Punto único.
+  const _newFilms = (cfg.films||[]).map(f=>({...f,title:normTitle(f.title)}));
+  const _validTitles = new Set(_newFilms.map(f=>f.title));
+  state.batchUpdate({
+    _activeFestId: id,
+    FILMS: _newFilms,
+    FESTIVAL_DATES: cfg.festivalDates,
+    PRIO_LIMIT: cfg.prioLimit || _computedPrioLimit,
+    TZ_OFFSET: cfg.timezoneOffset || '-05:00',
+    FESTIVAL_TRANSPORT: cfg.transport || 'transit',
+    watchlist: new Set([...state.get('watchlist')].filter(t=>_validTitles.has(t))),
+    watched: new Set([...state.get('watched')].filter(t=>_validTitles.has(t))),
+    prioritized: new Set([...state.get('prioritized')].filter(t=>_validTitles.has(t))),
+  });
+
   // Set active day to today
   const _ts=simTodayStr();
   const _ni=DAY_KEYS.findIndex(d=>FESTIVAL_DATES[d]===_ts);
@@ -10778,8 +11077,6 @@ async function loadFestival(id){
   }
   // Regla global inamovible: navegación por día específico → lista por defecto
   programaViewMode=activeDay==='all'?'grid':'list';
-  TZ_OFFSET=cfg.timezoneOffset||'-05:00';
-  FESTIVAL_TRANSPORT=cfg.transport||'transit';
   // Update fest-bar
   const _fn=document.querySelector('.hdr-fest-name');
   const _fd=document.querySelector('.hdr-fest-dates');
