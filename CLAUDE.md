@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `b54b10c docs: controller-pattern-7a spec + plan + tasks (p7a)`
+> Último commit: `740ae81 refactor(controller): 7a — 18 action handlers al pattern canónico + 2 dead removes (#10)`
 
 ---
 
