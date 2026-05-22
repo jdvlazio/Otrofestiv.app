@@ -23,12 +23,18 @@ const path = require('path');
 
 const ROOT = path.resolve(__dirname, '..', '..');
 const INDEX = path.join(ROOT, 'index.html');
+const MAIN = path.join(ROOT, 'src', 'main.js');
 
+// p8 Step 0: el código de la app se movió de los <script> inline de index.html
+// a src/main.js (módulo). readScripts concatena los scripts inline restantes
+// (Sentry, splash) + main.js (raw) para que extractFunction encuentre las fns.
 function readScripts() {
   const html = fs.readFileSync(INDEX, 'utf8');
-  return [...html.matchAll(/<script>([\s\S]*?)<\/script>/g)]
+  const inline = [...html.matchAll(/<script>([\s\S]*?)<\/script>/g)]
     .map(m => m[1])
     .join('\n');
+  const main = fs.existsSync(MAIN) ? fs.readFileSync(MAIN, 'utf8') : '';
+  return inline + '\n' + main;
 }
 
 // Returns the source of `function NAME(...) { ... }` from `source`, or null.

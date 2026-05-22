@@ -67,6 +67,17 @@ if not os.path.exists(INDEX_HTML):
     sys.exit(1)
 
 content = open(INDEX_HTML, encoding='utf-8').read()
+# p8 Step 0: el código de la app se movió a src/main.js (módulo). Para que los
+# checks (que asumen single-file: split HTML-part / script-part) sigan
+# funcionando, se inyecta main.js donde estaba el bloque inline — el `content`
+# en memoria queda "as if inline". Los checks no requieren cambios.
+_MAIN_JS = 'src/main.js'
+if os.path.exists(_MAIN_JS):
+    _main_src = open(_MAIN_JS, encoding='utf-8').read()
+    content = content.replace(
+        '<script type="module" src="/src/main.js"></script>',
+        '<script>\n' + _main_src + '\n</script>'
+    )
 script_start = content.find('<script>')
 script_end   = content.rfind('</script>')
 if script_start == -1 or script_end == -1:
@@ -676,7 +687,7 @@ except Exception as _e:
 check = 'onclick-syntax'
 try:
     import re as _re, tempfile as _tf, os as _os
-    _html = open('index.html').read()
+    _html = content  # p8: content ya incluye main.js inyectado
     _all_oc = _re.findall(r'onclick="([^"]+)"', _html)
     _static = [(i, oc) for i, oc in enumerate(_all_oc) if '${' not in oc]
     _oc_errors = []
@@ -709,7 +720,7 @@ except Exception as _e:
 check = 'storage-encapsulation'
 try:
     import re as _re
-    _html = open('index.html').read()
+    _html = content  # p8: content ya incluye main.js inyectado
     _lines = _html.split('\n')
     _start = _end = None
     for _i, _line in enumerate(_lines, 1):
@@ -764,15 +775,20 @@ except Exception as _e:
 check = 'state-mirror'
 try:
     import re as _re
-    _html = open('index.html').read()
+    _html = content  # p8: content ya incluye main.js inyectado
     _lines = _html.split('\n')
     # Markers
     _sm_start = _sm_end = None
+    _br_start = _br_end = None
     for _i, _line in enumerate(_lines, 1):
         if '// ── STATE MIRROR START' in _line:
             _sm_start = _i
         elif '// ── STATE MIRROR END' in _line:
             _sm_end = _i
+        elif '// ── TEST BRIDGE START' in _line:
+            _br_start = _i
+        elif '// ── TEST BRIDGE END' in _line:
+            _br_end = _i
     if _sm_start is None or _sm_end is None:
         fail(check, 'No se encontraron marcadores STATE MIRROR START/END en index.html')
     else:
@@ -814,8 +830,13 @@ try:
         def _in_state_block(_ln):
             return _sm_start <= _ln <= _sm_end
 
+        def _in_bridge(_ln):
+            # p8 Step 0: el test bridge re-expone slices en globalThis con setters
+            # `<roster> = v` intencionales (replica el binding global-lexical previo).
+            return _br_start is not None and _br_end is not None and _br_start <= _ln <= _br_end
+
         def _whitelisted(_ln):
-            return _ln in _initial_decl_lines or _in_state_block(_ln) or _in_worker(_ln)
+            return _ln in _initial_decl_lines or _in_state_block(_ln) or _in_worker(_ln) or _in_bridge(_ln)
 
         _violations = []
         # Para cada global del roster, buscar patrones de escritura
@@ -879,7 +900,7 @@ except Exception as _e:
 check = 'view-purity'
 try:
     import re as _re
-    _html = open('index.html').read()
+    _html = content  # p8: content ya incluye main.js inyectado
     _lines = _html.split('\n')
     # PURE_FNS — funciones puras tracked por el check. Renamed de TIER1_FNS en
     # p6b porque ahora cubre múltiples tiers: Tier 1 originales (6a) + Group A
@@ -1028,7 +1049,7 @@ except Exception as _e:
 check = 'controller-pattern'
 try:
     import re as _re
-    _html = open('index.html').read()
+    _html = content  # p8: content ya incluye main.js inyectado
     _lines = _html.split('\n')
     CONTROLLER_FNS = [
         # Pequeños (6)
@@ -1143,7 +1164,7 @@ except Exception as _e:
 check = 'event-delegation'
 try:
     import re as _re
-    _html = open('index.html').read()
+    _html = content  # p8: content ya incluye main.js inyectado
     # Onclick remaining (excluyendo el ejemplo en mi comentario del CONTROLLER LAYER block)
     _onclick_count = len(_re.findall(r'\bonclick="', _html))
     # Parsear ACTION_REGISTRY entries

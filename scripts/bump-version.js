@@ -39,16 +39,17 @@ if (sw === swBefore) {
 }
 fs.writeFileSync(swPath, sw);
 
-// ── index.html — BUILD_VERSION ────────────────────────────────────────────
-const htmlPath = path.join(ROOT, 'index.html');
-let html = fs.readFileSync(htmlPath, 'utf8');
-const htmlBefore = html;
-html = html.replace(/BUILD_VERSION='\d{12}'/, `BUILD_VERSION='${build}'`);
-if (html === htmlBefore) {
-  console.error('✗ index.html: BUILD_VERSION=\'YYYYMMDDHHMMM\' no encontrado.');
+// ── BUILD_VERSION ──────────────────────────────────────────────────────────
+// p8 Step 0: BUILD_VERSION se movió de index.html a src/main.js (módulo).
+const bvPath = path.join(ROOT, 'src', 'main.js');
+let bvFile = fs.readFileSync(bvPath, 'utf8');
+const bvBefore = bvFile;
+bvFile = bvFile.replace(/BUILD_VERSION='\d{12}'/, `BUILD_VERSION='${build}'`);
+if (bvFile === bvBefore) {
+  console.error('✗ src/main.js: BUILD_VERSION=\'YYYYMMDDHHMMM\' no encontrado.');
   process.exit(1);
 }
-fs.writeFileSync(htmlPath, html);
+fs.writeFileSync(bvPath, bvFile);
 
 // ── version.json — android bump, ios se preserva ─────────────────────────
 // Formato: { android: "BUILD", ios: "BUILD" }
@@ -68,7 +69,7 @@ fs.writeFileSync(vPath, JSON.stringify(vData, null, 2) + '\n');
 
 console.log(`✅ Build: ${build}`);
 console.log(`   sw.js        → CACHE_NAME + BUILD = ${build}`);
-console.log(`   index.html   → BUILD_VERSION = ${build}`);
+console.log(`   src/main.js  → BUILD_VERSION = ${build}`);
 console.log(`   version.json → android = ${build}, ios = ${vData.ios} (preservado)`);
 
 // Regenerar CLAUDE.md con estado actual del repo
