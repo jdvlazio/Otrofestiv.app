@@ -487,3 +487,93 @@ asumirlo.
 Con el DAG verificado sin ciclos (o con las rupturas planeadas), Fase 8 se
 ejecuta con el mismo patrón de fases acotadas + verificables que llevó
 5.5 → 7d a cero regresiones. Sin el DAG, no se escribe una línea de Fase 8.
+
+---
+
+## 12. DAG RESUELTO — verificado acíclico ✅
+
+El prerequisito bloqueante (§11) está **resuelto**. Análisis empírico sobre
+`index.html` confirma: **cero ciclos**. Fase 8 puede arrancar.
+
+### Grafo de capas (aristas verificadas)
+
+```
+                  config  (leaf — constants, FESTIVAL_CONFIG, BUILD_VERSION)
+                   ▲  ▲  ▲
+        ┌──────────┘  │  └──────────┐
+     domain         state         i18n / storage
+   (puras)        (container)
+        ▲             ▲  ▲
+        │      ┌──────┘  │
+        │   storage    i18n          storage → state ; i18n → state (t() lee _lang)
+        │             ▲
+        └────┐    ┌───┘
+           view ─┘                   view → domain, state, i18n, config
+        (render*)                    ⚠ NO view → controller (clave)
+            ▲
+        controller                   controller → view, state, domain, storage, i18n
+       (handlers, registry,
+        renderActiveView,
+        runCalc, pipeline)
+            ▲
+          main                       main → todo (bootstrap)
+```
+
+### Cero ciclos — los 3 riesgos de §11 son unidireccionales
+
+| Riesgo §11 | Verificación | Resultado |
+|---|---|---|
+| view ↔ controller | `renderAgenda`/`_renderProgramaContent` no llaman handlers/runCalc/renderActiveView; ningún render llama renderActiveView | Solo controller→view |
+| pipeline → view → controller | pipeline → renderActiveView (controller) → render* (view); view no regresa | No ciclo |
+| handlers ↔ view | handlers → surgical patches (view) + renders vía pipeline; renders no llaman handlers | Solo controller→view |
+| toast closures | `showActionToast(..., () => handler())` solo en toggleWL/_checkRecalcOpportunity/togglePelWL (todos controller) | No filtra a view |
+
+### Por qué quedó acíclico (payoff de 7c/7d/7c-4)
+
+- **7c** (event delegation): renders emiten `data-action="X"` (string), no
+  `onclick="X()"` (ref JS). El edge view→controller vía onclick desapareció.
+- **7d** (subscribe→render): handlers ya no llaman renders; el pipeline
+  (controller) dispara renderActiveView. Edge handler→view centralizado.
+- **7c-4** (emptyStateHero/_posterThumb): emiten `data-action` strings / usan
+  js-open-pel en vez de handler calls. Otro edge view→controller eliminado.
+
+Sin estas fases, el split tendría ciclos view↔controller intratables. El
+roadmap dejó la app en el único estado donde Fase 8 es acíclica.
+
+### Orden topológico de extracción (CORRIGE §7)
+
+§7 proponía `domain → state → controller → view → main`. **Invertido**:
+`controller` depende de `view`, así que view se extrae ANTES. Orden correcto
+(leaves primero — cada módulo se extrae cuando sus deps ya existen):
+
+```
+1. config       (leaf)
+2. domain       → config                        [22 unit-tested + 15 sched, ya puras]
+3. state        → config                         [elimina mirror — D-INFRA-4]
+4. storage      → state, config
+5. i18n         → state, config
+6. view         → domain, state, i18n, config    [render*, sheets, components]
+7. controller   → view, state, domain, storage   [handlers, registry, pipeline, renderActiveView, runCalc]
+8. main         → todo                            [bootstrap]
+```
+
+Sub-DAG dentro de controller (acíclico): `pipeline → registry → handlers`,
+`renderActiveView → view`. Todo hacia abajo.
+
+### Clasificaciones resueltas
+
+| Función / grupo | Capa | Razón |
+|---|---|---|
+| `renderActiveView`, `runCalc` | **controller** | Orquestación compute+dispatch; llaman renders (view) → controller→view limpio |
+| `updateCardState`, `updateAgTab`, `_reRenderIntereses`, `updateHorarioPrioBtn`, `updateRatingStars` | **view** | Surgical DOM patches; leaves de view, llamados por controller |
+| Sheets (`openPelSheet`, `closePelSheet`, `openAvSheet`, …) | **view/sheets.js** | DOM show/hide; despachados por registry (controller→view) |
+| `setLang` | **controller** | ACTION_REGISTRY entry (acción) |
+| `t()`, `_applyI18nDOM` | **i18n** | Lectura de `_lang` (state); sin llamadas a render |
+| `emptyStateHero`, `_posterThumb`, `showToast`, `ICONS` | **view/components.js** | Componentes puros (post-7c-4 emiten data-action strings) |
+| Composite helpers (`_toggleWLAndClose`, `_closePelAndRate`, …) | **controller** | Encapsulan multi-statement de handlers |
+
+### Veredicto
+
+**Prerequisito bloqueante resuelto.** Fase 8 ejecutable con extracción
+incremental en el orden topológico, cada capa validada + Playwright antes de la
+siguiente.
