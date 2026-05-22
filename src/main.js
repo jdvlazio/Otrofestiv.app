@@ -9508,7 +9508,11 @@ function _cortoSheetPosterErr(img){
   //  (b) page.evaluate de la suite Playwright.
   Object.assign(globalThis, {
     // (a) inline on* handlers — producción
+    //     en HTML generado (main.js innerHTML): onerror=_posterErr/_cortoSheetPosterErr
+    //     en markup estático (index.html): oninput/onkeyup/onkeydown=searchQuery,
+    //     onkeydown=submitAuthEmail/submitOTP (#search-input, #auth-email-inp, #auth-otp-inp)
     _posterErr, _cortoSheetPosterErr,
+    searchQuery, submitAuthEmail, submitOTP,
     // (b) page.evaluate — tests
     _renderProgramaContent, closeAuthSheet, closePelSheet, loadFestival, normTitle,
     openAuthSheet, openPelSheet, openRatingSheet, openCortoSheet, renderAgenda,
