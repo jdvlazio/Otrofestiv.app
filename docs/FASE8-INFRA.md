@@ -577,3 +577,97 @@ Sub-DAG dentro de controller (acíclico): `pipeline → registry → handlers`,
 **Prerequisito bloqueante resuelto.** Fase 8 ejecutable con extracción
 incremental en el orden topológico, cada capa validada + Playwright antes de la
 siguiente.
+
+---
+
+## 13. Inventario de extracción (Fase 0 pre-flight)
+
+Inventario read-only de `index.html` (12,266 líneas, 312 funciones top-level).
+Mapea cada sección a su módulo objetivo. Cero código tocado.
+
+### Estructura de bloques `<script>`
+
+| Bloque | Líneas | Contenido |
+|---|---|---|
+| 1 | L5–24 | Config temprana |
+| 2 | L2458–2469 | Pequeño |
+| 3 | **L2754–11697** | El grande (~9000 líneas): storage, state, controller, i18n, config, domain, view, worker |
+| 4 | L11698–12205 | Bootstrap/init |
+
+### A. Bloques con marcadores — cortes CONTIGUOS limpios
+
+| Sección | Líneas | → Módulo | Notas |
+|---|---|---|---|
+| storage adapter | L2755–2820 | `src/storage/storage.js` | + saveX/loadState dispersas (C) |
+| STATE MIRROR | L2822–3039 | `src/state/state.js` | elimina mirror Wave 3 |
+| CONTROLLER LAYER | L3041–3319 | `src/controller/registry.js` | composite helpers (11) + ACTION_REGISTRY + listener |
+| `_I18N` + i18n | L3326–4140 | `src/i18n/i18n.js` | `t`, `_applyI18nDOM`. `setLang` (L4020) → controller |
+
+### B. HALLAZGO CRÍTICO — el resto está INTERLEAVED → extraer por identidad
+
+domain, view, controller están **entremezclados** en el bloque grande, NO en
+rangos contiguos:
+- **Domain** (puras): dispersas L4164–6494 (`_festDate` L4164, `screensConflict`
+  L5179, `scoreFilm` L6422, `computeScenarios` L6494…)
+- **View** (49 render/show/update): dispersas L5300–11600
+- **Controller handlers** (26): dispersas L4020–9120 (`setDelay` L5693, `toggleWL`
+  L5765, `togglePriority` L8514, `runCalc` L9039, `renderActiveView` L10781…)
+
+**Implicación**: la extracción es **por identidad de función** (mover funciones
+nombradas), no por corte de rango. Cada wave necesita su lista exacta de
+funciones. Refuerza D8-1=A (bridge global) — sin él, mover una función
+interleaved rompe las refs de las que quedan inline.
+
+### C. Asignación por módulo
+
+| Módulo | Criterio | Miembros clave | Count |
+|---|---|---|---|
+| `config.js` | constantes/datos | FESTIVAL_CONFIG (L4689), VENUES (L5095), ICONS (L4995), SECTION_COLORS, TMDB_*, BUILD_VERSION (L5244), DAY_KEYS, límites | ~25 consts |
+| `domain/` | puras (state via param) | 22 unit-tested + 15 _SCHED_PURE_FNS + helpers | ~40 fns |
+| `state/state.js` | container | bloque STATE MIRROR | 1 bloque |
+| `storage/storage.js` | localStorage I/O | storage block + saveWL/savePrio/saveWatched/saveDelays/saveAV/saveLastSlot/saveSavedAgenda/loadState | ~12 fns |
+| `i18n/i18n.js` | traducción | `_I18N`, `t`, `_applyI18nDOM` | 3 |
+| `view/` | DOM render/patch | 49 render/show/update + sheets + components + surgical patches | ~80 fns |
+| `controller/` | acciones/dispatch | 26 handlers + composite helpers + ACTION_REGISTRY + pipeline + renderActiveView + runCalc + setLang | ~50 fns |
+| `main.js` | bootstrap | bloque 4 (L11698+) | — |
+
+### D. El worker (decisión Wave 2)
+
+```js
+// L9018-9020
+const blob = new Blob([src], {type:'application/javascript'});
+const w = new Worker(url);   // Blob worker clásico, NO module worker
+```
+`src` es template string con copias de las sched pure fns (gestionadas por
+`[worker-overlap]`). Al modularizar `domain/`, el worker no puede `import`.
+Opciones Wave 2: **module worker** (`{type:'module'}`, verificar soporte
+WKWebView) o **mantener copia inline** (status quo, cero riesgo).
+
+### E. Globals del mirror (Wave 3 — el más delicado)
+
+19 `let` globals del roster (L4143-4158, L5230-5316): watchlist, watched,
+prioritized, filmRatings, filmDelays, filmDelaysHistory, savedAgenda,
+availability, lastRemovedSlots, _lang, _simTime, FILMS, FESTIVAL_DATES,
+FESTIVAL_END, PRIO_LIMIT, TZ_OFFSET, FESTIVAL_TRANSPORT, _activeFestId,
+FESTIVAL_STORAGE_KEY.
+
+Cientos de reads directos (`watchlist.has`, `FILMS.find`). Bridge
+`Object.defineProperty(window,'watchlist',{get:()=>state.get('watchlist')})`
+(D8-1=A) redirige durante la transición; se elimina conforme cada capa migra
+sus reads a `state.get()`.
+
+### F. Side-effects al cargar (Wave 7/8 → init*())
+
+Corren al ejecutar el script (deben volverse `init*()` llamados desde main):
+- Delegated click listener (L3210ish)
+- RENDER PIPELINE registrations (L10800ish)
+- js-open-pel capture listener (L9881ish)
+- SW register + DOMContentLoaded bootstrap (bloque 4)
+
+### Hallazgos para la ejecución
+
+1. Extracción **por identidad, no por rango** (B) — cada wave lista sus fns.
+2. Worker (D) — module worker vs copia, decidir Wave 2.
+3. Mirror globals (E) — bridge defineProperty, migración gradual. Paso delicado.
+4. Side-effects (F) — convertir a init*() en main (Wave 7/8).
+5. Cortes limpios (A) — storage/state/controller-layer/i18n salen casi directo.
