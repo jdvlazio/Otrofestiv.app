@@ -1021,8 +1021,10 @@ except Exception as _e:
 # validan — son closures internas con su propia estructura. Solo el outer
 # handler nombrado se evalúa.
 #
-# Nivel: WARNING en 7a. Promote a FAIL en 7d cuando subscribe→render pipeline
-# elimina los render calls explícitos.
+# Nivel: WARNING. Promote a FAIL en 7d-2 (post-Tribeca) cuando el pipeline
+# subscribe→render cubra TODOS los slices. En 7d (scope narrow D7=A) solo 7
+# slices limpios shed sus renders; los handlers de slices diferidos (savedAgenda,
+# availability, lastRemovedSlots) conservan render manual legítimamente.
 check = 'controller-pattern'
 try:
     import re as _re

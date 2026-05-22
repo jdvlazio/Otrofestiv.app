@@ -2903,7 +2903,8 @@ const state = (() => {
   }
 
   const _data = Object.create(null);
-  const _subs = new Map();             // Map<key, Set<callback>>
+  const _subs = new Map();             // Map<key, Set<callback>>  — genérico (value, key)
+  const _renderSubs = new Map();       // Map<key, Set<renderFn>>  — pipeline render (p7d), deduped arg-less
   let _batchDepth = 0;
   const _dirty = new Set();
 
@@ -2912,6 +2913,17 @@ const state = (() => {
     if (!subs) return;
     // Snapshot del set para tolerar unsubscribe durante la iteración
     [...subs].forEach(cb => { try { cb(_data[key], key); } catch(e) { console.error('[state] subscriber error:', e); } });
+  }
+
+  // Render pipeline (p7d): colecta render fns de las keys afectadas, dedup vía
+  // Set (una render fn suscrita a N keys de un batch corre 1×), ejecuta arg-less.
+  function _runRenderSubs(keys) {
+    const fns = new Set();
+    for (const k of keys) {
+      const subs = _renderSubs.get(k);
+      if (subs) subs.forEach(fn => fns.add(fn));
+    }
+    [...fns].forEach(fn => { try { fn(); } catch(e) { console.error('[render] subscriber error:', e); } });
   }
 
   return {
@@ -2930,6 +2942,7 @@ const state = (() => {
       _MIRROR_TARGETS[key](value);
       if (_batchDepth > 0) { _dirty.add(key); return; }
       _notify(key);
+      _runRenderSubs([key]);
     },
 
     update(key, fn) {
@@ -2975,6 +2988,26 @@ const state = (() => {
         const toNotify = [..._dirty];
         _dirty.clear();
         for (const k of toNotify) _notify(k);
+        _runRenderSubs(toNotify);   // deduped a través de TODAS las dirty keys
+      }
+    },
+
+    // ── transaction (p7d) — agrupa mutaciones secuenciales ──
+    // Difiere notify + render hasta el final del fn, igual que batchUpdate pero
+    // para mutaciones SECUENCIALES con lógica intermedia (set/update/batchUpdate
+    // anidados). El pipeline render dispara 1× al cerrar. Reusa _batchDepth.
+    transaction(fn) {
+      _batchDepth++;
+      try {
+        fn();
+      } finally {
+        _batchDepth--;
+        if (_batchDepth === 0) {
+          const toNotify = [..._dirty];
+          _dirty.clear();
+          for (const k of toNotify) _notify(k);
+          _runRenderSubs(toNotify);   // deduped, 1×
+        }
       }
     },
 
@@ -2983,6 +3016,18 @@ const state = (() => {
       if (!_subs.has(key)) _subs.set(key, new Set());
       _subs.get(key).add(cb);
       return () => _subs.get(key)?.delete(cb);
+    },
+
+    // ── Subscribe render (p7d) — canal de pipeline, deduped, arg-less ──
+    // Registra una render fn contra múltiples keys. En un batch que toca varias
+    // de esas keys, la fn corre 1× (dedup). Separado del subscribe genérico
+    // para preservar su contrato (value, key).
+    subscribeRender(keys, renderFn) {
+      for (const k of keys) {
+        if (!_renderSubs.has(k)) _renderSubs.set(k, new Set());
+        _renderSubs.get(k).add(renderFn);
+      }
+      return () => keys.forEach(k => _renderSubs.get(k)?.delete(renderFn));
     },
 
     // ── Helpers immutable (expuestos para callsites migrados) ──
@@ -5196,7 +5241,7 @@ let FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202605211859';
+const BUILD_VERSION='202605212031';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';
@@ -5655,9 +5700,8 @@ function setDelay(title,day,time,addMins){
     filmDelaysHistory: {...filmDelaysHistory, [k]: [...(filmDelaysHistory[k]||[]), filmDelays[k]||0]},
     filmDelays: newVal===0 ? state._omit(filmDelays, k) : {...filmDelays, [k]: newVal},
   });
-  // 4. PERSIST + 5. RENDER
+  // 4. PERSIST (render automático vía pipeline)
   saveDelays();
-  renderAgenda();
 }
 // Controller (p7a)
 function undoDelay(title,day,time){
@@ -5673,9 +5717,8 @@ function undoDelay(title,day,time){
     filmDelaysHistory: newHistArr.length ? {...filmDelaysHistory, [k]: newHistArr} : state._omit(filmDelaysHistory, k),
     filmDelays: prev===0 ? state._omit(filmDelays, k) : {...filmDelays, [k]: prev},
   });
-  // 4. PERSIST + 5. RENDER
+  // 4. PERSIST (render automático vía pipeline)
   saveDelays();
-  renderAgenda();
 }
 // Controller (p7a)
 function clearDelay(title,day,time){
@@ -5683,9 +5726,8 @@ function clearDelay(title,day,time){
   const k=title+'|'+day+'|'+time;
   // 3. MUTATE
   state.update('filmDelays', fd => state._omit(fd, k));
-  // 4. PERSIST + 5. RENDER
+  // 4. PERSIST (render automático vía pipeline)
   saveDelays();
-  renderAgenda();
 }
 /* ── saveState — batching de localStorage ── */
 function saveState(...keys){
@@ -5730,17 +5772,18 @@ function toggleWL(title,e){
       showActionModal(t('plan_quitar_intereses'),
         `<b>${title.length>36?title.slice(0,34)+'…':title}</b> ${t('plan_en_tu_plan')}<br><br>${t('plan_quitar_tmb')}`,
         t('plan_quitar_confirm'),()=>{
-          // Modal callback variant
-          state.update('savedAgenda', a => ({...a, schedule: a.schedule.filter(s=>s._title!==title)}));
-          if(!savedAgenda.schedule.length)state.set('savedAgenda', null);
-          saveSavedAgenda();
-          state.batchUpdate({
-            watchlist: state._delFromSet(watchlist, title),
-            watched: state._delFromSet(watched, title),
-            prioritized: state._delFromSet(prioritized, title),
+          // Modal callback variant — transaction agrupa las 3 mutaciones (p7d)
+          state.transaction(() => {
+            state.update('savedAgenda', a => ({...a, schedule: a.schedule.filter(s=>s._title!==title)}));
+            if(!savedAgenda.schedule.length)state.set('savedAgenda', null);
+            state.batchUpdate({
+              watchlist: state._delFromSet(watchlist, title),
+              watched: state._delFromSet(watched, title),
+              prioritized: state._delFromSet(prioritized, title),
+            });
           });
-          saveState('wl','watched');updateCardState(title);updateAgTab();
-          if(activeView==='agenda'){cachedResult=null;renderAgenda();}
+          saveSavedAgenda();
+          saveState('wl','watched');updateCardState(title);   // render automático vía pipeline
         });return;
     }
     // Branch B: remove directo (film NO en savedAgenda)
@@ -5769,14 +5812,8 @@ function toggleWL(title,e){
       showToast(`${ICONS.heartFill} En Intereses`,'info');
     }
   }
-  // 4. PERSIST + 5. RENDER + UI EFFECTS (compartido entre branch B y C)
-  saveState('wl','watched');updateCardState(title);updateAgTab();
-  if(activeView==='agenda'){cachedResult=null;renderAgenda();}
-  else if(activeView==='day'&&activeMNav==='mnav-cartelera'){
-    // Re-renderizar solo si el pel-sheet no está abierto — preservar scroll
-    const _pelOpen=document.getElementById('pel-sheet')?.classList.contains('open');
-    if(!_pelOpen){const _sy=window.scrollY;_renderProgramaContent();window.scrollTo(0,_sy);}
-  }
+  // 4. PERSIST + surgical patch (branch B y C). Render automático vía pipeline.
+  saveState('wl','watched');updateCardState(title);
 }
 // Controller (p7a) — branchy toggle con confirm modal en branch B
 function toggleWatched(title,e){
@@ -5790,12 +5827,10 @@ function toggleWatched(title,e){
       watched: state._delFromSet(watched, title),
       watchlist: state._addToSet(watchlist, title),
     });
-    // 4. PERSIST + 5. RENDER + UI EFFECTS
+    // 4. PERSIST + surgical (render automático vía pipeline)
     saveState('wl','watched');
     updateCardState(title);
-    updateAgTab();
     _reRenderIntereses();
-    if(activeView==='agenda') renderAgenda();
     showToast(t('plan_vuelta_pendientes'),'info');
     return;
   }
@@ -5807,11 +5842,8 @@ function toggleWatched(title,e){
     t('modal_ya_viste_cta'),
     ()=>{
       state.update('watched', s => state._addToSet(s, title));
-      saveWatched();updateCardState(title);updateAgTab();
-      cachedResult=null;
+      saveWatched();updateCardState(title);
       _reRenderIntereses();
-      if(activeView==='agenda') renderAgenda();
-      if(activeMNav==='mnav-miplan') renderAgenda();
       showToast(t('toast_marcada_vista'),'info');
       if(!FILMS.find(fi=>fi.title===title)?.is_cortos) setTimeout(()=>openRatingSheet(title),350);
     }
@@ -7173,19 +7205,17 @@ function renderSavedAgendaHTML(state){
 function checkinLaVi(title){
   // 1. READ — state al top
   const {FILMS, savedAgenda, watched} = state.snapshot();
-  // 2. GUARD — si ya está watched, solo re-renderea (no-op del estado)
+  // 2. GUARD — si ya está watched, solo re-renderea (no-op del estado: sin
+  // mutación el pipeline no dispara, así que el render queda explícito)
   if(watched.has(title)){
     renderAgenda();
     return;
   }
   // 3. MUTATE
   state.update('watched', s => state._addToSet(s, title));
-  // 4. PERSIST
+  // 4. PERSIST + surgical (render automático vía pipeline)
   saveWatched();
-  // 5. RENDER + UI EFFECTS
   updateCardState(title);
-  updateAgTab();
-  renderAgenda();
   // Post-view rating modal (sólo para films, no cortos)
   const s=savedAgenda&&savedAgenda.schedule.find(e=>e._title===title);
   const _isCortos=FILMS.find(fi=>fi.title===title)?.is_cortos;
@@ -8492,29 +8522,29 @@ function togglePriority(title,cost){
       showActionModal(t('plan_quitar_prioridad'),
         `<b>${short}</b><br><br>${t('plan_sigue_intereses')}`,
         t('plan_quitar_prioridad'),()=>{
-          state.update('prioritized', s=>state._delFromSet(s,title));savePrio();updateCardState(title);updateAgTab();runCalc();
+          state.update('prioritized', s=>state._delFromSet(s,title));savePrio();updateCardState(title);
           showToast(`${ICONS.star} ${t('toast_prioridad_quitada')}`,'info');
-          renderAgenda();
-          switchMainNav('mnav-seleccion');showAgView();
+          switchMainNav('mnav-seleccion');showAgView();   // render automático vía pipeline + nav
         });return;
     }
     state.update('prioritized', s=>state._delFromSet(s,title));
-    // 4. PERSIST + 5. RENDER + UI EFFECTS
-    savePrio();updateCardState(title);updateAgTab();runCalc();
+    // 4. PERSIST + surgical (render automático vía pipeline)
+    savePrio();updateCardState(title);
     showToast(`${ICONS.star} ${t('toast_prioridad_quitada')}`,'info');
   } else {
     // Branch B: prioritize (con limit check)
     if(prioritized.size>=PRIO_LIMIT){
       openPrioLimit(title);return;
     }
-    state.update('prioritized', s=>state._addToSet(s,title));
-    if(!watchlist.has(title)){state.batchUpdate({watchlist:state._addToSet(watchlist,title), watched:state._delFromSet(watched,title)});saveWL();saveWatched();}
-    savePrio();updateCardState(title);updateAgTab();
+    const _addWL=!watchlist.has(title);
+    state.transaction(() => {
+      state.update('prioritized', s=>state._addToSet(s,title));
+      if(_addWL) state.batchUpdate({watchlist:state._addToSet(watchlist,title), watched:state._delFromSet(watched,title)});
+    });
+    savePrio();if(_addWL){saveWL();saveWatched();}updateCardState(title);
     showToast(`${ICONS.starFill} ${t('cta_priorizada')} · ${prioritized.size+1}/${PRIO_LIMIT}`,'info');
-    runCalc();
   }
-  if(activeView==='agenda') renderAgenda();
-  else if(activeView==='day') updateHorarioPrioBtn(title);
+  if(activeView==='day') updateHorarioPrioBtn(title);   // surgical: botón prio del pel-sheet
 }
 function showToast(msg,type='info',duration=2800){
   let t=document.getElementById('prio-toast');
@@ -8657,8 +8687,8 @@ function savePVRating(){
     showToast(stars[Math.round(_pvRating)]||'★ Calificada','info');
   }
   closePVRating();
-  // Re-render MI PLAN para actualizar contador de pendientes y orden de pósters
-  if(activeMNav==='mnav-miplan') renderAgenda();
+  // Render automático vía pipeline (filmRatings). Si rating=0 no hay mutación →
+  // no re-render (no-op visual: el prompt de calificar sigue igual).
 }
 
 function closePVRating(){
@@ -8682,21 +8712,18 @@ function markWatchedFromPlan(title, day, time, venue, duration, e){
       watched: state._delFromSet(watched, title),
       watchlist: watchlist.has(title) ? watchlist : state._addToSet(watchlist, title),
     });
-    // 4. PERSIST + 5. RENDER + UI EFFECTS
+    // 4. PERSIST + surgical (render automático vía pipeline)
     saveState('wl','watched');
     updateCardState(title);
-    updateAgTab();
     showToast(t('plan_vuelta_pendientes'),'info');
     return;
   }
   // Branch B: marcar como vista + post-view rating modal
   // 3. MUTATE
   state.update('watched', s=>state._addToSet(s, title));
-  // 4. PERSIST + 5. RENDER + UI EFFECTS
+  // 4. PERSIST + surgical (render automático vía pipeline)
   saveWatched();
   updateCardState(title);
-  updateAgTab();
-  renderAgenda();
   // Cortos: sin calificación general
   if(!FILMS.find(fi=>fi.title===title)?.is_cortos) setTimeout(()=>openPostViewRating(title, day, time, venue, duration), 250);
 }
@@ -10746,6 +10773,43 @@ function renderSbar(){
     mkOpt(`${sec} <span class="fdr-cnt">${cnt}</span>`,activeSec===sec,()=>{activeSec=activeSec===sec?'all':sec;selectedIdx=null;setHint(null);closeDropdowns();render();});
   });
 }
+// renderActiveView (p7d) — router del pipeline subscribe→render.
+// Llamado por los subscribers del RENDER PIPELINE tras una mutación de state.
+// Encapsula la matriz (activeView × activeMNav) + cache-bust + scroll/pel-guard
+// + runCalc-planner que antes estaba duplicada en ~20 handlers.
+// NO se llama desde navegación (esa usa render/renderAgenda directo).
+function renderActiveView(){
+  cachedResult = null;                        // state cambió → cache de schedule stale
+  if(activeView==='day' && activeMNav==='mnav-cartelera'){
+    const pelOpen = document.getElementById('pel-sheet')?.classList.contains('open');
+    if(!pelOpen){ const sy=window.scrollY; _renderProgramaContent(); window.scrollTo(0,sy); }
+    return;
+  }
+  if(activeMNav==='mnav-planner'){ runCalc(); return; }  // recompute scenarios + render
+  renderAgenda();                             // rutea internamente seleccion/miplan
+}
+
+// ── RENDER PIPELINE (p7d) ─────────────────────────────────────────────
+// Conecta state slices → renders vía subscribeRender (deduped). Reemplaza las
+// llamadas manuales de render en los handlers de los core slices. El cache-bust
+// (cachedResult=null) vive en renderActiveView — centralizado.
+//
+// SCOPE (D7=A): solo los 7 slices "limpios" cuyo render-after-mutation es
+// uniforme (re-render de vista activa). Los slices con semántica invalidate-no-
+// recompute (savedAgenda, lastRemovedSlots, availability) se DEFIEREN a 7d-2
+// post-Tribeca — sus handlers mantienen render manual (coexistencia, patrón
+// establecido desde 5.6).
+//
+// CRÍTICO: los 7 slices usan la MISMA referencia de callback (_pipelineRenderMain).
+// El dedup de _runRenderSubs colapsa por function ref — una transaction que toca
+// varios de estos slices dispara el render 1× solo si comparten la misma fn.
+const _pipelineRenderMain = () => { updateAgTab(); renderActiveView(); };
+state.subscribeRender(
+  ['watchlist', 'watched', 'prioritized', 'filmRatings',
+   'filmDelays', 'filmDelaysHistory', '_simTime'],
+  _pipelineRenderMain
+);
+
 function render(){
   // Group II Tier 3 (p6c): branchy multi-dispatcher con 4 early returns.
   // Split impráctico — body se queda monolítico con state.snapshot() destructure.

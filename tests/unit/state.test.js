@@ -448,3 +448,138 @@ test('batchUpdate de loadFestival shape: 15 keys atómicas', () => {
   assert.equal(mirror._activeFestId, 'tribeca2026');
   assert.equal(mirror.FILMS[0].title, 'Anora');
 });
+
+// ═══════════════════════════════════════════════════════════════════════
+// subscribeRender — render pipeline (p7d)
+// Canal separado del subscribe genérico: deduped, arg-less. Una render fn
+// suscrita a N keys de un batch corre EXACTAMENTE 1×.
+// ═══════════════════════════════════════════════════════════════════════
+
+test('subscribeRender: batchUpdate de 3 keys → render ejecutado exactamente 1 vez', () => {
+  const { state } = makeSandbox();
+  let count = 0;
+  state.subscribeRender(['watchlist', 'watched', 'prioritized'], () => { count++; });
+  state.batchUpdate({
+    watchlist:   new Set(['a']),
+    watched:     new Set(['b']),
+    prioritized: new Set(['c']),
+  });
+  assert.equal(count, 1, 'dedup: 3 keys del batch → render 1×');
+});
+
+test('subscribeRender: set() single key → render 1 vez', () => {
+  const { state } = makeSandbox();
+  let count = 0;
+  state.subscribeRender(['_lang'], () => { count++; });
+  state.set('_lang', 'en');
+  assert.equal(count, 1);
+});
+
+test('subscribeRender: retorna unsubscribe fn que detiene el render', () => {
+  const { state } = makeSandbox();
+  let count = 0;
+  const unsub = state.subscribeRender(['_lang'], () => { count++; });
+  state.set('_lang', 'en');
+  unsub();
+  state.set('_lang', 'es');
+  assert.equal(count, 1, 'tras unsubscribe el render no corre');
+});
+
+test('subscribeRender: renders disjuntos en un batch → cada uno 1 vez', () => {
+  const { state } = makeSandbox();
+  let a = 0, b = 0;
+  state.subscribeRender(['watchlist', 'watched'], () => { a++; });   // 2 keys del batch
+  state.subscribeRender(['availability'], () => { b++; });           // 1 key del batch
+  state.batchUpdate({
+    watchlist:    new Set(['x']),
+    watched:      new Set(['y']),
+    availability: { d1: { blocks: [] } },
+  });
+  assert.equal(a, 1, 'render A (suscrito a 2 keys del batch) corre 1×');
+  assert.equal(b, 1, 'render B (suscrito a 1 key) corre 1×');
+});
+
+test('subscribeRender: NO afecta el contrato subscribe(value, key)', () => {
+  const { state } = makeSandbox();
+  const generic = [];
+  let renderCount = 0;
+  state.subscribe('_lang', (v, k) => { generic.push([k, v]); });   // genérico (value, key)
+  state.subscribeRender(['_lang'], () => { renderCount++; });        // render arg-less
+  state.set('_lang', 'en');
+  assert.deepEqual(generic, [['_lang', 'en']], 'subscribe genérico sigue recibiendo (value, key)');
+  assert.equal(renderCount, 1, 'subscribeRender corre arg-less en paralelo');
+});
+
+test('subscribeRender: el render corre DESPUÉS del subscriber genérico', () => {
+  const { state } = makeSandbox();
+  const order = [];
+  state.subscribe('_lang', () => order.push('generic'));
+  state.subscribeRender(['_lang'], () => order.push('render'));
+  state.set('_lang', 'en');
+  assert.deepEqual(order, ['generic', 'render'], 'orden: notify genérico → render pipeline');
+});
+
+// ═══════════════════════════════════════════════════════════════════════
+// transaction — agrupa mutaciones secuenciales (p7d)
+// N mutaciones dentro de transaction → render 1×. Interacción con batchUpdate
+// anidado: el batch interno no notifica; la transaction externa cierra 1×.
+// ═══════════════════════════════════════════════════════════════════════
+
+test('transaction: N set() secuenciales → render ejecutado exactamente 1 vez', () => {
+  const { state } = makeSandbox();
+  let count = 0;
+  state.subscribeRender(['watchlist', 'watched', 'prioritized'], () => { count++; });
+  state.transaction(() => {
+    state.set('watchlist', new Set(['a']));
+    state.set('watched', new Set(['b']));
+    state.set('prioritized', new Set(['c']));
+  });
+  assert.equal(count, 1, '3 set() secuenciales en transaction → render 1×');
+});
+
+test('transaction: batchUpdate ANIDADO dentro de transaction → render 1×, todas las keys aplicadas', () => {
+  const { state, mirror } = makeSandbox();
+  let count = 0;
+  state.subscribeRender(['savedAgenda', 'watchlist', 'watched', 'prioritized'], () => { count++; });
+  state.transaction(() => {
+    state.update('savedAgenda', () => ({ schedule: [{ _title: 'X' }] }));
+    state.set('savedAgenda', null);                          // mutación condicional secuencial
+    state.batchUpdate({                                       // batch anidado
+      watchlist:   new Set(['a']),
+      watched:     new Set(['b']),
+      prioritized: new Set(['c']),
+    });
+  });
+  assert.equal(count, 1, 'set + set + batchUpdate anidado en transaction → render 1×');
+  assert.equal(mirror.savedAgenda, null);
+  assert.deepEqual([...mirror.watchlist], ['a']);
+  assert.deepEqual([...mirror.prioritized], ['c']);
+});
+
+test('transaction: subscriber genérico también dispara 1× por key dirty al cierre', () => {
+  const { state } = makeSandbox();
+  const calls = [];
+  state.subscribe('watchlist', v => calls.push(['wl', [...v]]));
+  state.transaction(() => {
+    state.set('watchlist', new Set(['a']));
+    state.set('watchlist', new Set(['a', 'b']));   // misma key 2×
+  });
+  assert.equal(calls.length, 1, 'la key dirty notifica 1× al cierre con el valor final');
+  assert.deepEqual(calls[0], ['wl', ['a', 'b']]);
+});
+
+test('transaction: throw dentro del fn NO deja _batchDepth colgado (no leak)', () => {
+  const { state } = makeSandbox();
+  let count = 0;
+  state.subscribeRender(['watchlist'], () => { count++; });
+  assert.throws(() => {
+    state.transaction(() => {
+      state.set('watchlist', new Set(['a']));
+      throw new Error('boom');
+    });
+  }, /boom/);
+  // Tras el throw, una mutación normal debe notificar (batchDepth se restauró)
+  count = 0;
+  state.set('watchlist', new Set(['z']));
+  assert.equal(count, 1, 'batchDepth se restauró tras el throw — mutaciones siguientes notifican');
+});
