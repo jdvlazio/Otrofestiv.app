@@ -25,10 +25,15 @@ try {
 
 // ── 2. Festivales desde FESTIVAL_CONFIG ───────────────────────────────────────
 // p8 Step 0: FESTIVAL_CONFIG se movió de index.html a src/main.js (módulo).
-const _mainPath = path.join(ROOT, 'src', 'main.js');
-const indexHtml = fs.existsSync(_mainPath)
-  ? fs.readFileSync(_mainPath, 'utf8')
-  : fs.readFileSync(path.join(ROOT, 'index.html'), 'utf8');
+// p8 Step 1: FESTIVAL_CONFIG se movió a src/config.js (`export const`); el regex
+//   `const FESTIVAL_CONFIG={...};// Festival` matchea igual dentro del export.
+const _configPath = path.join(ROOT, 'src', 'config.js');
+const _mainPath    = path.join(ROOT, 'src', 'main.js');
+const indexHtml = fs.existsSync(_configPath)
+  ? fs.readFileSync(_configPath, 'utf8')
+  : fs.existsSync(_mainPath)
+    ? fs.readFileSync(_mainPath, 'utf8')
+    : fs.readFileSync(path.join(ROOT, 'index.html'), 'utf8');
 
 const configBlock = indexHtml.match(/const FESTIVAL_CONFIG=\{([\s\S]*?)\};\/\/ Festival/);
 const festivals = [];
@@ -147,7 +152,7 @@ Juan es Product Owner, diseñador y developer. Claude ejecuta; Juan audita y apr
 
 ## Estado del proyecto
 
-### Festivales (desde \`FESTIVAL_CONFIG\` en \`index.html\`)
+### Festivales (desde \`FESTIVAL_CONFIG\` en \`src/config.js\`)
 
 ${festivalsTable}
 

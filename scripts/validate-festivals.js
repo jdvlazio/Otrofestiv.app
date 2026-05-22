@@ -74,14 +74,14 @@ function validateFestival(fname, data) {
   const dayKeys = cfg.dayKeys || [];
 
   // CONFIG required fields
-  // Festivales NUEVOS (desde Mujeres 2026): config en FESTIVAL_CONFIG de index.html, no en el JSON.
+  // Festivales NUEVOS (desde Mujeres 2026): config en FESTIVAL_CONFIG de src/config.js, no en el JSON.
   // GATE: config{} en el JSON es un error bloqueante desde el pipeline v2.
   if (data.config && Object.keys(data.config).length > 0) {
-    errors.push('GATE BLOQUEANTE: config{} presente en el JSON — mover a FESTIVAL_CONFIG en index.html y eliminar este bloque');
+    errors.push('GATE BLOQUEANTE: config{} presente en el JSON — mover a FESTIVAL_CONFIG en src/config.js y eliminar este bloque');
   }
   // Festivales LEGADOS (FICCI 65, Cinemancia 2025): config en el bloque config{} del JSON.
   if (!hasConfigBlock) {
-    warnings.push('Sin bloque config{} — se asume que la configuración está en FESTIVAL_CONFIG en index.html (formato nuevo ✓)');
+    warnings.push('Sin bloque config{} — se asume que la configuración está en FESTIVAL_CONFIG en src/config.js (formato nuevo ✓)');
   } else {
     // Solo verificar campos si el JSON tiene bloque config (formato legado)
     const cfgRequired = ['name','shortName','city','dates','storageKey','festivalEndStr'];
