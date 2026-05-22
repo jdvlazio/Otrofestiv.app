@@ -110,7 +110,7 @@ const generated = `# CLAUDE.md — Otrofestiv
 
 ## Qué es Otrofestiv
 
-PWA mobile-first para planear asistencia a festivales de cine. Permite explorar el programa, armar una watchlist, detectar conflictos de horario y generar un plan optimizado. Vanilla JS/HTML, single-file (\`index.html\`), sin dependencias externas. Desplegado en GitHub Pages.
+PWA mobile-first para planear asistencia a festivales de cine. Permite explorar el programa, armar una watchlist, detectar conflictos de horario y generar un plan optimizado. Vanilla JS/HTML sin dependencias externas; la app se carga como módulo ES desde \`src/main.js\` vía \`index.html\` (en migración a módulos por capas — Fase 8). Desplegado en GitHub Pages.
 
 - **Repo:** \`jdvlazio/Otrofestiv.app\`
 - **URL producción:** \`https://otrofestiv.app\`
