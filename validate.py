@@ -768,134 +768,94 @@ except Exception as _e:
     warn(check, f'no se pudo verificar storage encapsulation: {_e}')
 
 # ── [state-mirror] ────────────────────────────────────────────────────────────
-# Verifica que las escrituras a los 19 globals del roster del state pasen
-# todas por el namespace `state` (state.set/update/batchUpdate). Detecta:
-#   - Reasignaciones `<name> = <value>` (excluyendo ==, ===, !=, !==, >=, <=, =>)
-#   - Mutaciones in-place: .add/.delete/.clear/.push/.pop/.shift/.unshift/
-#     .splice/.sort, .length = N, [k] = v, delete [k], .<prop> = v
-# Whitelist:
-#   - Declaraciones iniciales (línea con `let <name> = ...` del roster)
-#   - Bloque [STATE-START]..[STATE-END] (donde el mirror legítimamente escribe)
-#   - Template literals del worker boundary (_workerGlobals + _handler)
-#   - state.update callbacks de la forma `s => s.add(t)` — el `s` aquí es param
-#     local, no el global. Pero como nuestro código usa los helpers immutables
-#     y NO mutates s in-place, este caso no debería ocurrir. Si aparece, es bug.
+# p8 Step 2 (D-INFRA-4): el MIRROR fue eliminado. state (src/state/state.js) posee
+# _data; main.js instala un STATE BRIDGE (Object.defineProperty sobre globalThis)
+# que rutea cada bare-global del roster a state.get/set. Con el bridge, TODO
+# `watchlist = x` o `watchlist.has()` atraviesa state automáticamente — el
+# invariante "writes via state" es estructural. Este check (repurposed) verifica:
+#   1. El STATE BRIDGE expone exactamente los 19 keys del roster.
+#   2. NINGÚN roster key se redeclara (let/const/var) en main.js fuera del worker
+#      (una redeclaración shadowearía el bridge → el write NO llegaría a state).
+#   3. state.js no contiene mirror (_MIRROR_TARGETS/_MIRROR_READERS).
 check = 'state-mirror'
 try:
     import re as _re
-    _html = content  # p8: content ya incluye main.js inyectado
-    _lines = _html.split('\n')
-    # Markers
-    _sm_start = _sm_end = None
-    _br_start = _br_end = None
+    _roster = [
+        '_activeFestId', 'FILMS', 'FESTIVAL_DATES', 'FESTIVAL_END',
+        'FESTIVAL_STORAGE_KEY', 'PRIO_LIMIT', 'TZ_OFFSET', 'FESTIVAL_TRANSPORT',
+        'watchlist', 'watched', 'prioritized', 'filmRatings', 'filmDelays',
+        'filmDelaysHistory', 'savedAgenda', 'availability', 'lastRemovedSlots',
+        '_lang', '_simTime',
+    ]
+    _lines = content.split('\n')
+    _problems = []
+
+    # ── 1. STATE BRIDGE markers + _BRIDGE_KEYS expone los 19 ──
+    _bs = _be = None
     for _i, _line in enumerate(_lines, 1):
-        if '// ── STATE MIRROR START' in _line:
-            _sm_start = _i
-        elif '// ── STATE MIRROR END' in _line:
-            _sm_end = _i
-        elif '// ── TEST BRIDGE START' in _line:
-            _br_start = _i
-        elif '// ── TEST BRIDGE END' in _line:
-            _br_end = _i
-    if _sm_start is None or _sm_end is None:
-        fail(check, 'No se encontraron marcadores STATE MIRROR START/END en index.html')
+        if '// ── STATE BRIDGE START' in _line: _bs = _i
+        elif '// ── STATE BRIDGE END' in _line: _be = _i
+    if _bs is None or _be is None:
+        _problems.append('No se encontraron marcadores STATE BRIDGE START/END en main.js')
     else:
-        # Worker template literal bounds (líneas inclusivas — son strings, no JS real)
-        # _workerGlobals = `...` y _handler = `...` — assigns dentro son contenido del string.
-        # Encontrar los rangos dinámicamente: línea con `const _workerGlobals=\`` o `const _handler=\``
-        # y la siguiente línea con `\`;` solita.
-        _worker_ranges = []
-        _i = 0
-        while _i < len(_lines):
-            _line = _lines[_i]
-            if _re.search(r'const\s+(_workerGlobals|_handler)\s*=\s*`', _line):
-                _start_line = _i + 1  # 1-indexed
-                _j = _i + 1
-                while _j < len(_lines):
-                    if _re.match(r'^\s*`\s*;', _lines[_j]):
-                        _worker_ranges.append((_start_line, _j + 1))
-                        _i = _j
-                        break
-                    _j += 1
-            _i += 1
-        # Initial declaration lines: `let <ROSTER>` o `let <ROSTER>,` (multi-decl)
-        _roster = [
-            '_activeFestId', 'FILMS', 'FESTIVAL_DATES', 'FESTIVAL_END',
-            'FESTIVAL_STORAGE_KEY', 'PRIO_LIMIT', 'TZ_OFFSET', 'FESTIVAL_TRANSPORT',
-            'watchlist', 'watched', 'prioritized', 'filmRatings', 'filmDelays',
-            'filmDelaysHistory', 'savedAgenda', 'availability', 'lastRemovedSlots',
-            '_lang', '_simTime',
-        ]
-        _initial_decl_lines = set()
-        _decl_re = _re.compile(r'^\s*let\s+(' + '|'.join(_re.escape(_n) for _n in _roster) + r')\b')
+        _bridge_block = '\n'.join(_lines[_bs - 1:_be])
+        _bk_keys = set(_re.findall(r"'([A-Za-z_][A-Za-z0-9_]*)'", _bridge_block))
+        for _k in _roster:
+            if _k not in _bk_keys:
+                _problems.append(f'STATE BRIDGE no expone roster key: {_k}')
+        for _k in _bk_keys:
+            if _k not in _roster:
+                _problems.append(f'STATE BRIDGE expone key NO-roster: {_k}')
+
+    # ── 2. anti-shadowing: ninguna redeclaración let/const/var de roster ──
+    # Whitelist: template literals del worker (_workerGlobals/_handler) tienen
+    # copias `let FILMS=[], ...` — contexto JS separado, sin acceso al bridge.
+    _worker_ranges = []
+    _i = 0
+    while _i < len(_lines):
+        if _re.search(r'const\s+(_workerGlobals|_handler)\s*=\s*`', _lines[_i]):
+            _start = _i + 1
+            _j = _i + 1
+            while _j < len(_lines):
+                if _re.match(r'^\s*`\s*;', _lines[_j]):
+                    _worker_ranges.append((_start, _j + 1)); _i = _j; break
+                _j += 1
+        _i += 1
+
+    def _in_worker(_ln):
+        return any(_a <= _ln <= _b for (_a, _b) in _worker_ranges)
+
+    for _name in _roster:
+        # let/const/var <name>  |  let a=.., <name>  (multi-decl, name no primero)
+        _re_decl = _re.compile(
+            r'\b(?:let|const|var)\s+(?:[\w$]+\s*(?:=[^,;]*?)?\s*,\s*)*' + _re.escape(_name) + r'\b'
+        )
         for _i, _line in enumerate(_lines, 1):
-            if _decl_re.match(_line):
-                _initial_decl_lines.add(_i)
+            _st = _line.lstrip()
+            if _st.startswith('//') or _st.startswith('*'):
+                continue
+            if _re_decl.search(_line) and not _in_worker(_i):
+                _problems.append(f'L{_i}: redeclaración de roster `{_name}` (shadowea el bridge) → "{_line.strip()[:70]}"')
 
-        def _in_worker(_ln):
-            return any(_a <= _ln <= _b for (_a, _b) in _worker_ranges)
+    # ── 3. state.js sin mirror ──
+    _state_path = 'src/state/state.js'
+    if os.path.exists(_state_path):
+        _state_src = open(_state_path, encoding='utf-8').read()
+        if _re.search(r'const\s+_MIRROR_(TARGETS|READERS)\b', _state_src):
+            _problems.append('state.js todavía declara el mirror (const _MIRROR_TARGETS/_MIRROR_READERS) — D-INFRA-4 lo elimina')
+    else:
+        _problems.append('src/state/state.js no encontrado')
 
-        def _in_state_block(_ln):
-            return _sm_start <= _ln <= _sm_end
-
-        def _in_bridge(_ln):
-            # p8 Step 0: el test bridge re-expone slices en globalThis con setters
-            # `<roster> = v` intencionales (replica el binding global-lexical previo).
-            return _br_start is not None and _br_end is not None and _br_start <= _ln <= _br_end
-
-        def _whitelisted(_ln):
-            return _ln in _initial_decl_lines or _in_state_block(_ln) or _in_worker(_ln) or _in_bridge(_ln)
-
-        _violations = []
-        # Para cada global del roster, buscar patrones de escritura
-        for _name in _roster:
-            _esc = _re.escape(_name)
-            # Patrones de escritura:
-            #   1. Reasignación: `<name> =` (no ==, ===, !=, !==, =>)
-            #      Bordeado: empieza palabra antes (\b), no precedido por =/!/>/< ni por `.`
-            #      (excluye `obj.watchlist=` que es property access, no global). No seguido por =/>.
-            _assign_re = _re.compile(r'(?<![=!<>.\w])' + _esc + r'\s*=(?![=>])')
-            #   2. Set/Map/Array mutators: .add/.delete/.clear/.push/.pop/.shift/.unshift/.splice/.sort/.fill
-            _mut_re = _re.compile(r'\b' + _esc + r'\.(add|delete|clear|push|pop|shift|unshift|splice|sort|fill)\s*\(')
-            #   3. Length truncation: .length =
-            _len_re = _re.compile(r'\b' + _esc + r'\.length\s*=')
-            #   4. Object key write: [k] =
-            _idx_re = _re.compile(r'\b' + _esc + r'\[[^\]]+\]\s*=(?!=)')
-            #   5. Object key delete: delete <name>[k]
-            _del_re = _re.compile(r'\bdelete\s+' + _esc + r'\[')
-            #   6. Property dot write: <name>.<prop> = (excluyendo .add/.delete que ya cuentan en _mut_re)
-            _prop_re = _re.compile(r'\b' + _esc + r'\.[A-Za-z_][A-Za-z0-9_]*\s*=(?!=)')
-
-            for _i, _line in enumerate(_lines, 1):
-                if _whitelisted(_i):
-                    continue
-                # Skip lines que son sólo comments
-                _stripped = _line.lstrip()
-                if _stripped.startswith('//') or _stripped.startswith('*') or _stripped.startswith('/*'):
-                    continue
-                for _pat, _kind in (
-                    (_assign_re, 'reasignación'),
-                    (_mut_re, 'mutador'),
-                    (_len_re, '.length='),
-                    (_idx_re, '[k]='),
-                    (_del_re, 'delete[k]'),
-                    (_prop_re, '.prop='),
-                ):
-                    _m = _pat.search(_line)
-                    if _m:
-                        _violations.append(f'L{_i}: {_name} {_kind} → "{_line.strip()[:80]}"')
-                        break  # un match por línea por global
-
-        if _violations:
-            for _v in _violations[:20]:
-                fail(check, _v)
-            if len(_violations) > 20:
-                fail(check, f'... y {len(_violations) - 20} violaciones más')
-            fail(check, 'Fix: canalizar escrituras vía state.set/update/batchUpdate. Si es un caso legítimo nuevo (worker boundary, etc), añadir a whitelist en validate.py + documentar en spec.md.')
-        else:
-            ok(check, f'state block L{_sm_start}-{_sm_end}; {len(_initial_decl_lines)} decls iniciales + {len(_worker_ranges)} worker templates whitelisted; cero escrituras al roster fuera del state')
+    if _problems:
+        for _p in _problems[:20]:
+            fail(check, _p)
+        if len(_problems) > 20:
+            fail(check, f'... y {len(_problems) - 20} problemas más')
+        fail(check, 'Fix: roster vive en state (bridge). NO redeclarar con let/const/var en main.js. Worker boundary: verificar markers.')
+    else:
+        ok(check, f'STATE BRIDGE expone {len(_roster)} roster keys; cero shadowing fuera de {len(_worker_ranges)} worker templates; state.js sin mirror')
 except Exception as _e:
-    warn(check, f'no se pudo verificar state mirror: {_e}')
+    warn(check, f'no se pudo verificar state bridge: {_e}')
 
 # ── [view-purity] ─────────────────────────────────────────────────────────────
 # Verifica que las Views Tier 1 (Fase 6a) cumplan el contrato de función pura:

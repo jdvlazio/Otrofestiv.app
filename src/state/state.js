@@ -1,102 +1,34 @@
-// ── src/state/state.js — Fase 8 (PREP, NO CABLEADO) ───────────────────────────────
+// ── src/state/state.js — Fase 8 Step 2 (CABLEADO) ────────────────────────────
 //
-// ⚠ ESTADO: módulo de preparación. NO importado por index.html. Cero impacto
-//   runtime/deploy/SW. Wiring real post-Tribeca.
-// ⚠ FUENTE DE VERDAD: index.html hasta el wiring. Copia fiel del bloque
-//   contiguo marcado. Si cambia en index.html antes del wiring, re-generar.
+// ESTADO: importado por src/main.js (Step 2). Contenedor central de los 19
+//   globals del roster. Fuente única de verdad: `_data` (propio del container).
 //
-// ⚠⚠ D-INFRA-4: este bloque incluye el MIRROR de globals (_MIRROR_TARGETS /
-//   _MIRROR_READERS + late-binding a los 19 let globals). El WIRING (Wave 3)
-//   ELIMINA el mirror — el container pasa a poseer _data directamente y los
-//   reads migran a state.get(). Esta copia es FIEL al estado actual (con
-//   mirror); NO es la forma final. El mirror referencia los 19 globals
-//   (watchlist, FILMS, etc.) como ambient — sin definir aquí (unwired, no
-//   ejecuta). Exports: subscribe, subscribeRender, transaction, set, update,
-//   batchUpdate, get, snapshot.
+// D-INFRA-4 (Wave 3): el MIRROR fue ELIMINADO. Antes el container espejaba a
+//   19 `let` globals (setters/readers espejo + lazy-seeding). Ahora el
+//   container POSEE `_data` directamente; main.js instala un bridge
+//   (Object.defineProperty sobre globalThis) que rutea cada bare-global del
+//   roster a state.get/set. Una sola dirección: bare-global → state.
+//
+// Auto-contenido: cero referencias ambient. Importable/testeable directo.
+//
+// Exports: state — { get, snapshot, set, update, batchUpdate, transaction,
+//   subscribe, subscribeRender, _addToSet, _delFromSet, _omit }.
 
-// ── STATE MIRROR START ───────────────────────────────────────────────
-// state — contenedor central para los 19 globals que componen el estado de
-// la app. Estrategia "mirror": toda escritura va por state.set/update/batchUpdate,
-// que actualiza tanto el state interno como el global espejo. Lecturas siguen
-// yendo al global directo (sin tocar readers en p5.5 — eso es p5.6).
-//
-// Invariante: ∀k ∈ ROSTER, state.get(k) === <global k>. Enforced por
-// validate.py [state-mirror]: cualquier escritura a un global del roster fuera
-// de este bloque es un error (con whitelist documentada para declaraciones
-// iniciales y el template literal del worker boundary).
-//
-// Atomicidad: batchUpdate aplica TODO el batch al state + mirrors antes de
-// notificar cualquier subscriber. Cero estado parcial visible para subscribers.
-// Reentrada soportada (subscriber puede llamar set/update/batchUpdate). Rollback
-// si _MIRROR_TARGETS[k] throws.
-//
-// Helpers immutable expuestos (_addToSet, _delFromSet, _omit) para reemplazar
-// patrones de mutación in-place en los callsites migrados.
-//
-// Posición: justo después del storage adapter, antes de _I18N. Los globals
-// del roster (FILMS, watchlist, etc.) se declaran DESPUÉS de este bloque en
-// el flujo del script — el mirror funciona vía closure late-binding sobre
-// los let-bindings del módulo.
+// Roster — las 19 keys de estado que el container administra. El bridge de
+// main.js expone exactamente estas como propiedades de globalThis.
+const _ROSTER = new Set([
+  '_activeFestId', 'FILMS', 'FESTIVAL_DATES', 'FESTIVAL_END',
+  'FESTIVAL_STORAGE_KEY', 'PRIO_LIMIT', 'TZ_OFFSET', 'FESTIVAL_TRANSPORT',
+  'watchlist', 'watched', 'prioritized', 'filmRatings', 'filmDelays',
+  'filmDelaysHistory', 'savedAgenda', 'availability', 'lastRemovedSlots',
+  '_lang', '_simTime',
+]);
+
 export const state = (() => {
-  // _MIRROR_TARGETS: setter por key → asigna al `let` del módulo.
-  // _MIRROR_READERS: getter por key → lee el `let` actual del módulo.
-  // Late-binding via closure — funciona aunque el global se declare después.
-  // _MIRROR_READERS es necesario porque mientras p5.5 está migrando, muchos
-  // globals se reasignan via legacy code (no via state.set). Lazy fallback en
-  // state.get/update/batchUpdate consulta el global vivo si _data no tiene la
-  // key todavía — preservando la invariante state.get(k) === <global k>.
-  const _MIRROR_TARGETS = {
-    _activeFestId:        v => { _activeFestId = v; },
-    FILMS:                v => { FILMS = v; },
-    FESTIVAL_DATES:       v => { FESTIVAL_DATES = v; },
-    FESTIVAL_END:         v => { FESTIVAL_END = v; },
-    FESTIVAL_STORAGE_KEY: v => { FESTIVAL_STORAGE_KEY = v; },
-    PRIO_LIMIT:           v => { PRIO_LIMIT = v; },
-    TZ_OFFSET:            v => { TZ_OFFSET = v; },
-    FESTIVAL_TRANSPORT:   v => { FESTIVAL_TRANSPORT = v; },
-    watchlist:            v => { watchlist = v; },
-    watched:              v => { watched = v; },
-    prioritized:          v => { prioritized = v; },
-    filmRatings:          v => { filmRatings = v; },
-    filmDelays:           v => { filmDelays = v; },
-    filmDelaysHistory:    v => { filmDelaysHistory = v; },
-    savedAgenda:          v => { savedAgenda = v; },
-    availability:         v => { availability = v; },
-    lastRemovedSlots:     v => { lastRemovedSlots = v; },
-    _lang:                v => { _lang = v; },
-    _simTime:             v => { _simTime = v; },
-  };
-  const _MIRROR_READERS = {
-    _activeFestId:        () => _activeFestId,
-    FILMS:                () => FILMS,
-    FESTIVAL_DATES:       () => FESTIVAL_DATES,
-    FESTIVAL_END:         () => FESTIVAL_END,
-    FESTIVAL_STORAGE_KEY: () => FESTIVAL_STORAGE_KEY,
-    PRIO_LIMIT:           () => PRIO_LIMIT,
-    TZ_OFFSET:            () => TZ_OFFSET,
-    FESTIVAL_TRANSPORT:   () => FESTIVAL_TRANSPORT,
-    watchlist:            () => watchlist,
-    watched:              () => watched,
-    prioritized:          () => prioritized,
-    filmRatings:          () => filmRatings,
-    filmDelays:           () => filmDelays,
-    filmDelaysHistory:    () => filmDelaysHistory,
-    savedAgenda:          () => savedAgenda,
-    availability:         () => availability,
-    lastRemovedSlots:     () => lastRemovedSlots,
-    _lang:                () => _lang,
-    _simTime:             () => _simTime,
-  };
-
-  function _seedKey(key) {
-    // Si _data no tiene la key, pull el valor actual del global mirror.
-    // Idempotente — después de la primera lectura, _data tiene la key y
-    // las futuras escrituras (state.set) mantienen el sync.
-    if (!(key in _data) && _MIRROR_READERS[key]) {
-      _data[key] = _MIRROR_READERS[key]();
-    }
-  }
-
+  // Single source of truth — el container posee los valores. Sembrado vía el
+  // bridge: las (ex-)declaraciones `let X = init` de main.js pasaron a ser
+  // `X = init` bare → globalThis.X setter → state.set('X', init). Así cada key
+  // se puebla cuando su línea de init ejecuta (timing idéntico al previo).
   const _data = Object.create(null);
   const _subs = new Map();             // Map<key, Set<callback>>  — genérico (value, key)
   const _renderSubs = new Map();       // Map<key, Set<renderFn>>  — pipeline render (p7d), deduped arg-less
@@ -123,25 +55,19 @@ export const state = (() => {
 
   return {
     // ── Lecturas ──
-    get(key) { _seedKey(key); return _data[key]; },
-    snapshot() {
-      // Seed todas las keys del roster para que el snapshot refleje los globals
-      Object.keys(_MIRROR_READERS).forEach(_seedKey);
-      return Object.assign({}, _data);
-    },
+    get(key) { return _data[key]; },
+    snapshot() { return Object.assign({}, _data); },
 
     // ── Escrituras ──
     set(key, value) {
-      if (!(key in _MIRROR_TARGETS)) throw new Error('[state] unknown key: ' + key);
+      if (!_ROSTER.has(key)) throw new Error('[state] unknown key: ' + key);
       _data[key] = value;
-      _MIRROR_TARGETS[key](value);
       if (_batchDepth > 0) { _dirty.add(key); return; }
       _notify(key);
       _runRenderSubs([key]);
     },
 
     update(key, fn) {
-      _seedKey(key);
       this.set(key, fn(_data[key]));
     },
 
@@ -150,11 +76,8 @@ export const state = (() => {
       if (keys.length === 0) return;
       // Validar keys ANTES de aplicar — fail-fast sin estado parcial
       for (const k of keys) {
-        if (!(k in _MIRROR_TARGETS)) throw new Error('[state] unknown key: ' + k);
+        if (!_ROSTER.has(k)) throw new Error('[state] unknown key: ' + k);
       }
-      // Seed pre-snapshot para que rollback restaure al global vivo si _data
-      // aún no tenía la key (no a undefined)
-      for (const k of keys) _seedKey(k);
       // Snapshot pre-batch para rollback
       const snapshot = {};
       for (const k of keys) snapshot[k] = _data[k];
@@ -163,15 +86,11 @@ export const state = (() => {
       try {
         for (const k of keys) {
           _data[k] = updates[k];
-          _MIRROR_TARGETS[k](updates[k]);
           _dirty.add(k);
         }
       } catch (e) {
-        // Rollback: state + mirrors restaurados desde snapshot
-        for (const k of keys) {
-          _data[k] = snapshot[k];
-          _MIRROR_TARGETS[k](snapshot[k]);
-        }
+        // Rollback: state restaurado desde snapshot
+        for (const k of keys) _data[k] = snapshot[k];
         // Remover dirty solo de claves de ESTE batch (otras pueden quedar dirty del padre)
         for (const k of keys) _dirty.delete(k);
         _batchDepth--;
@@ -231,4 +150,3 @@ export const state = (() => {
     _omit(o, k) { if (!(k in o)) return o; const { [k]:_, ...rest } = o; return rest; },
   };
 })();
-// ── STATE MIRROR END ─────────────────────────────────────────────────

@@ -1,7 +1,7 @@
 // ── src/main.js — Fase 8 (módulo ES) ─────────────────────────────────────────
 // Relocación de los blocks 3+4 de index.html (app + bootstrap).
 // Step 0 = relocación a módulo. Steps 1-5 extraen las capas e importan los
-// módulos (config ✓ Step 1 · state/storage/i18n/domain → Steps 2-5).
+// módulos (config ✓ Step 1 · state ✓ Step 2 · storage/i18n/domain → Steps 3-5).
 // Cargado vía <script type="module" src="/src/main.js"> en index.html.
 // SW: regla network-first /src/ garantiza que el deploy propaga (D-INFRA-1=B).
 
@@ -12,6 +12,9 @@ import {
   SECTION_ORDER_LIST, FILM_CATEGORY_ORDER, FILM_CATEGORY_LABEL, SECTION_COLORS,
   NOTICES, FESTIVAL_CONFIG, VENUES,
 } from './config.js';
+
+// ── Step 2: state.js (import + bridge — D-INFRA-4: mirror eliminado) ──────────
+import { state } from './state/state.js';
 
 // ── STORAGE ADAPTER START ────────────────────────────────────────────
 // storage — encapsula localStorage I/O para 9 user-state items + 3 global keys.
@@ -80,224 +83,31 @@ const storage = {
 };
 // ── STORAGE ADAPTER END ──────────────────────────────────────────────
 
-// ── STATE MIRROR START ───────────────────────────────────────────────
-// state — contenedor central para los 19 globals que componen el estado de
-// la app. Estrategia "mirror": toda escritura va por state.set/update/batchUpdate,
-// que actualiza tanto el state interno como el global espejo. Lecturas siguen
-// yendo al global directo (sin tocar readers en p5.5 — eso es p5.6).
-//
-// Invariante: ∀k ∈ ROSTER, state.get(k) === <global k>. Enforced por
-// validate.py [state-mirror]: cualquier escritura a un global del roster fuera
-// de este bloque es un error (con whitelist documentada para declaraciones
-// iniciales y el template literal del worker boundary).
-//
-// Atomicidad: batchUpdate aplica TODO el batch al state + mirrors antes de
-// notificar cualquier subscriber. Cero estado parcial visible para subscribers.
-// Reentrada soportada (subscriber puede llamar set/update/batchUpdate). Rollback
-// si _MIRROR_TARGETS[k] throws.
-//
-// Helpers immutable expuestos (_addToSet, _delFromSet, _omit) para reemplazar
-// patrones de mutación in-place en los callsites migrados.
-//
-// Posición: justo después del storage adapter, antes de _I18N. Los globals
-// del roster (FILMS, watchlist, etc.) se declaran DESPUÉS de este bloque en
-// el flujo del script — el mirror funciona vía closure late-binding sobre
-// los let-bindings del módulo.
-const state = (() => {
-  // _MIRROR_TARGETS: setter por key → asigna al `let` del módulo.
-  // _MIRROR_READERS: getter por key → lee el `let` actual del módulo.
-  // Late-binding via closure — funciona aunque el global se declare después.
-  // _MIRROR_READERS es necesario porque mientras p5.5 está migrando, muchos
-  // globals se reasignan via legacy code (no via state.set). Lazy fallback en
-  // state.get/update/batchUpdate consulta el global vivo si _data no tiene la
-  // key todavía — preservando la invariante state.get(k) === <global k>.
-  const _MIRROR_TARGETS = {
-    _activeFestId:        v => { _activeFestId = v; },
-    FILMS:                v => { FILMS = v; },
-    FESTIVAL_DATES:       v => { FESTIVAL_DATES = v; },
-    FESTIVAL_END:         v => { FESTIVAL_END = v; },
-    FESTIVAL_STORAGE_KEY: v => { FESTIVAL_STORAGE_KEY = v; },
-    PRIO_LIMIT:           v => { PRIO_LIMIT = v; },
-    TZ_OFFSET:            v => { TZ_OFFSET = v; },
-    FESTIVAL_TRANSPORT:   v => { FESTIVAL_TRANSPORT = v; },
-    watchlist:            v => { watchlist = v; },
-    watched:              v => { watched = v; },
-    prioritized:          v => { prioritized = v; },
-    filmRatings:          v => { filmRatings = v; },
-    filmDelays:           v => { filmDelays = v; },
-    filmDelaysHistory:    v => { filmDelaysHistory = v; },
-    savedAgenda:          v => { savedAgenda = v; },
-    availability:         v => { availability = v; },
-    lastRemovedSlots:     v => { lastRemovedSlots = v; },
-    _lang:                v => { _lang = v; },
-    _simTime:             v => { _simTime = v; },
-  };
-  const _MIRROR_READERS = {
-    _activeFestId:        () => _activeFestId,
-    FILMS:                () => FILMS,
-    FESTIVAL_DATES:       () => FESTIVAL_DATES,
-    FESTIVAL_END:         () => FESTIVAL_END,
-    FESTIVAL_STORAGE_KEY: () => FESTIVAL_STORAGE_KEY,
-    PRIO_LIMIT:           () => PRIO_LIMIT,
-    TZ_OFFSET:            () => TZ_OFFSET,
-    FESTIVAL_TRANSPORT:   () => FESTIVAL_TRANSPORT,
-    watchlist:            () => watchlist,
-    watched:              () => watched,
-    prioritized:          () => prioritized,
-    filmRatings:          () => filmRatings,
-    filmDelays:           () => filmDelays,
-    filmDelaysHistory:    () => filmDelaysHistory,
-    savedAgenda:          () => savedAgenda,
-    availability:         () => availability,
-    lastRemovedSlots:     () => lastRemovedSlots,
-    _lang:                () => _lang,
-    _simTime:             () => _simTime,
-  };
-
-  function _seedKey(key) {
-    // Si _data no tiene la key, pull el valor actual del global mirror.
-    // Idempotente — después de la primera lectura, _data tiene la key y
-    // las futuras escrituras (state.set) mantienen el sync.
-    if (!(key in _data) && _MIRROR_READERS[key]) {
-      _data[key] = _MIRROR_READERS[key]();
-    }
-  }
-
-  const _data = Object.create(null);
-  const _subs = new Map();             // Map<key, Set<callback>>  — genérico (value, key)
-  const _renderSubs = new Map();       // Map<key, Set<renderFn>>  — pipeline render (p7d), deduped arg-less
-  let _batchDepth = 0;
-  const _dirty = new Set();
-
-  function _notify(key) {
-    const subs = _subs.get(key);
-    if (!subs) return;
-    // Snapshot del set para tolerar unsubscribe durante la iteración
-    [...subs].forEach(cb => { try { cb(_data[key], key); } catch(e) { console.error('[state] subscriber error:', e); } });
-  }
-
-  // Render pipeline (p7d): colecta render fns de las keys afectadas, dedup vía
-  // Set (una render fn suscrita a N keys de un batch corre 1×), ejecuta arg-less.
-  function _runRenderSubs(keys) {
-    const fns = new Set();
-    for (const k of keys) {
-      const subs = _renderSubs.get(k);
-      if (subs) subs.forEach(fn => fns.add(fn));
-    }
-    [...fns].forEach(fn => { try { fn(); } catch(e) { console.error('[render] subscriber error:', e); } });
-  }
-
-  return {
-    // ── Lecturas ──
-    get(key) { _seedKey(key); return _data[key]; },
-    snapshot() {
-      // Seed todas las keys del roster para que el snapshot refleje los globals
-      Object.keys(_MIRROR_READERS).forEach(_seedKey);
-      return Object.assign({}, _data);
-    },
-
-    // ── Escrituras ──
-    set(key, value) {
-      if (!(key in _MIRROR_TARGETS)) throw new Error('[state] unknown key: ' + key);
-      _data[key] = value;
-      _MIRROR_TARGETS[key](value);
-      if (_batchDepth > 0) { _dirty.add(key); return; }
-      _notify(key);
-      _runRenderSubs([key]);
-    },
-
-    update(key, fn) {
-      _seedKey(key);
-      this.set(key, fn(_data[key]));
-    },
-
-    batchUpdate(updates) {
-      const keys = Object.keys(updates);
-      if (keys.length === 0) return;
-      // Validar keys ANTES de aplicar — fail-fast sin estado parcial
-      for (const k of keys) {
-        if (!(k in _MIRROR_TARGETS)) throw new Error('[state] unknown key: ' + k);
-      }
-      // Seed pre-snapshot para que rollback restaure al global vivo si _data
-      // aún no tenía la key (no a undefined)
-      for (const k of keys) _seedKey(k);
-      // Snapshot pre-batch para rollback
-      const snapshot = {};
-      for (const k of keys) snapshot[k] = _data[k];
-
-      _batchDepth++;
-      try {
-        for (const k of keys) {
-          _data[k] = updates[k];
-          _MIRROR_TARGETS[k](updates[k]);
-          _dirty.add(k);
-        }
-      } catch (e) {
-        // Rollback: state + mirrors restaurados desde snapshot
-        for (const k of keys) {
-          _data[k] = snapshot[k];
-          _MIRROR_TARGETS[k](snapshot[k]);
-        }
-        // Remover dirty solo de claves de ESTE batch (otras pueden quedar dirty del padre)
-        for (const k of keys) _dirty.delete(k);
-        _batchDepth--;
-        throw e;
-      }
-      _batchDepth--;
-
-      if (_batchDepth === 0) {
-        const toNotify = [..._dirty];
-        _dirty.clear();
-        for (const k of toNotify) _notify(k);
-        _runRenderSubs(toNotify);   // deduped a través de TODAS las dirty keys
-      }
-    },
-
-    // ── transaction (p7d) — agrupa mutaciones secuenciales ──
-    // Difiere notify + render hasta el final del fn, igual que batchUpdate pero
-    // para mutaciones SECUENCIALES con lógica intermedia (set/update/batchUpdate
-    // anidados). El pipeline render dispara 1× al cerrar. Reusa _batchDepth.
-    transaction(fn) {
-      _batchDepth++;
-      try {
-        fn();
-      } finally {
-        _batchDepth--;
-        if (_batchDepth === 0) {
-          const toNotify = [..._dirty];
-          _dirty.clear();
-          for (const k of toNotify) _notify(k);
-          _runRenderSubs(toNotify);   // deduped, 1×
-        }
-      }
-    },
-
-    // ── Subscribe ──
-    subscribe(key, cb) {
-      if (!_subs.has(key)) _subs.set(key, new Set());
-      _subs.get(key).add(cb);
-      return () => _subs.get(key)?.delete(cb);
-    },
-
-    // ── Subscribe render (p7d) — canal de pipeline, deduped, arg-less ──
-    // Registra una render fn contra múltiples keys. En un batch que toca varias
-    // de esas keys, la fn corre 1× (dedup). Separado del subscribe genérico
-    // para preservar su contrato (value, key).
-    subscribeRender(keys, renderFn) {
-      for (const k of keys) {
-        if (!_renderSubs.has(k)) _renderSubs.set(k, new Set());
-        _renderSubs.get(k).add(renderFn);
-      }
-      return () => keys.forEach(k => _renderSubs.get(k)?.delete(renderFn));
-    },
-
-    // ── Helpers immutable (expuestos para callsites migrados) ──
-    _addToSet(s, t) { return s.has(t) ? s : new Set([...s, t]); },
-    _delFromSet(s, t) { if (!s.has(t)) return s; const n = new Set(s); n.delete(t); return n; },
-    _omit(o, k) { if (!(k in o)) return o; const { [k]:_, ...rest } = o; return rest; },
-  };
-})();
-// ── STATE MIRROR END ─────────────────────────────────────────────────
+// ── STATE BRIDGE START (p8 Step 2) ───────────────────────────────────
+// D-INFRA-4: el mirror fue ELIMINADO (ver src/state/state.js). El container
+// `state` (importado) posee _data; este bridge expone los 19 globals del roster
+// como propiedades de globalThis respaldadas por state.get/set. Una dirección:
+//   read  `watchlist.has(x)`  → globalThis.watchlist getter → state.get('watchlist')
+//   write `watchlist = nuevo` → globalThis.watchlist setter → state.set('watchlist', …)
+//                               → dispara subscribers + render pipeline (7d)
+// Instalado TEMPRANO (antes de cualquier init del roster): las (ex-)decls
+// `let X = init` pasaron a `X = init` bare, que rutean por aquí.
+// ⚠ El bridge DEBE preceder a la primera asignación bare del roster — en módulo
+//   ESM (strict), `X = v` sin declaración requiere que globalThis.X exista.
+// validate.py [state-mirror]: verifica que estos 19 keys estén bridged y que
+//   ningún roster key se redeclare (let/const/var) en main.js (anti-shadowing).
+const _BRIDGE_KEYS = [
+  'watchlist', 'watched', 'prioritized', 'filmRatings', 'filmDelays',
+  'filmDelaysHistory', 'savedAgenda', 'availability', 'lastRemovedSlots',
+  '_lang', '_simTime', 'FILMS', 'FESTIVAL_DATES', 'FESTIVAL_END', 'PRIO_LIMIT',
+  'TZ_OFFSET', 'FESTIVAL_TRANSPORT', '_activeFestId', 'FESTIVAL_STORAGE_KEY',
+];
+_BRIDGE_KEYS.forEach(k => Object.defineProperty(globalThis, k, {
+  get: () => state.get(k),
+  set: v => state.set(k, v),
+  configurable: true,
+}));
+// ── STATE BRIDGE END (p8 Step 2) ─────────────────────────────────────
 
 // ── CONTROLLER LAYER START (p7c-1) ───────────────────────────────────
 // Foundation del event delegation system. ACTION_REGISTRY mapea
@@ -1261,7 +1071,7 @@ const _I18N = {
 };
 
 
-let _lang = (()=>{
+_lang = (()=>{
   const saved = storage.getLang();
   if(saved && _I18N[saved]) return saved;
   // Auto-detect por idioma del navegador — solo en primer uso
@@ -1401,7 +1211,7 @@ if(window.Capacitor?.Plugins?.CapacitorUpdater){
 // 1 · DATOS DEL FESTIVAL
 //     FILMS, POSTERS, CUSTOM_POSTERS
 // ═══════════════════════════════════════════════════════════════
-let FILMS=[];
+FILMS=[];
 let POSTERS={};
 let CUSTOM_POSTERS={};
 
@@ -1409,11 +1219,11 @@ let CUSTOM_POSTERS={};
 // TZ_OFFSET se actualiza en loadFestival() desde cfg.timezoneOffset.
 // Default '-05:00' = Colombia. Festivals internacionales usan su propio offset.
 // Ejemplo: Tribeca NYC junio = '-04:00'
-let TZ_OFFSET='-05:00';
+TZ_OFFSET='-05:00';
 // FESTIVAL_TRANSPORT: modo de movilización del festival activo.
 // Valores: 'transit' (Uber/Metro) · 'walking' (a pie) · 'mixed' (depende de la sede)
 // Afecta el texto de aviso de viaje en Mi Plan. Se actualiza en loadFestival().
-let FESTIVAL_TRANSPORT='transit';
+FESTIVAL_TRANSPORT='transit';
 // _festDate(dateStr, time) → Date — construye Date con TZ_OFFSET explícito.
 // Lee (contrato implícito): TZ_OFFSET (offset del festival activo, e.g. '-05:00').
 // Inputs: dateStr en formato YYYY-MM-DD, time en formato HH:mm.
@@ -1871,7 +1681,7 @@ const _storedFestId=storage.getActiveFestId();
 const _storedFestCfg=_storedFestId&&FESTIVAL_CONFIG[_storedFestId];
 const _storedFestEnded=_storedFestCfg&&_storedFestCfg.festivalEndStr&&new Date(_storedFestCfg.festivalEndStr)<new Date();
 if(_storedFestEnded) localStorage.removeItem('otrofestiv_festival');
-let _activeFestId=(_storedFestId&&!_storedFestEnded)?_storedFestId:_DEFAULT_FEST_ID;
+_activeFestId=(_storedFestId&&!_storedFestEnded)?_storedFestId:_DEFAULT_FEST_ID;
 
 // ═══════════════════════════════════════════════════════════════
 // SUPABASE — Auth + Cloud Sync
@@ -2147,12 +1957,12 @@ const ICONS={
 // 3 · CONFIGURACIÓN
 //     FESTIVAL_DATES, VENUES, PRIO_LIMIT, constantes Mi Plan
 // ═══════════════════════════════════════════════════════════════
-let FESTIVAL_DATES={
+FESTIVAL_DATES={
   'Martes':'2026-04-14','Miércoles':'2026-04-15','Jueves':'2026-04-16',
   'Viernes':'2026-04-17','Sábado':'2026-04-18','Domingo':'2026-04-19'
 };
 // Fin del festival — última función del Domingo + margen
-let FESTIVAL_END=new Date('2026-04-20T02:00:00');
+FESTIVAL_END=new Date('2026-04-20T02:00:00');
 // festivalEnded() → boolean — true si el festival ya terminó.
 // Lee (contrato implícito): FESTIVAL_END (mutable, swapeada por loadFestival).
 // Llama: simNow().
@@ -2343,21 +2153,21 @@ function normTitle(t){
 //     watchlist, watched, prioritized, savedAgenda, availability
 // ═══════════════════════════════════════════════════════════════
 // ── STATE ──
-let watchlist=new Set();
-let filmRatings={}; // {title: 0.5..5} medias estrellas Letterboxd-style
-let watched=new Set();
-let prioritized=new Set();
-let PRIO_LIMIT=5; // Updated by loadFestival per festival
+watchlist=new Set();
+filmRatings={}; // {title: 0.5..5} medias estrellas Letterboxd-style
+watched=new Set();
+prioritized=new Set();
+PRIO_LIMIT=5; // Updated by loadFestival per festival
 /* ── Clave de almacenamiento — cambiar por edición del festival ──
    Formato: {nombre}{año}_ → prefija todas las keys de localStorage.
    Garantiza que cada edición empiece limpia sin datos residuales. */
-let FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
+FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 
 // ── Reset agresivo de caché — independiente del SW ────────────────
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202605220937';
+const BUILD_VERSION='202605221058';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';
@@ -2392,17 +2202,17 @@ const BUILD_VERSION='202605220937';
    Elegir           confirmar un plan       Guardar, Aceptar
    ────────────────────────────────────────────────── */
 // FESTIVAL_BUFFER → src/config.js (Step 1).
-let savedAgenda=null;
-let lastRemovedSlots=[]; // tracks up to 5 recently removed films
+savedAgenda=null;
+lastRemovedSlots=[]; // tracks up to 5 recently removed films
 // MAX_REMEMBERED_SLOTS → src/config.js (Step 1).
 let activeMiPlanDay=null;
 let _ctaRemovedVisible=false; // CTA B: post-eliminación
 let _ctaRemovedTimer=null;    // CTA B: timer de auto-dismiss
-let filmDelays={};            // retrasos manuales: key=title|day|time, val=mins
-let filmDelaysHistory={};     // p5.5: undo stack — key=title|day|time, val=[prev1, prev2, ...]
+filmDelays={};            // retrasos manuales: key=title|day|time, val=mins
+filmDelaysHistory={};     // p5.5: undo stack — key=title|day|time, val=[prev1, prev2, ...]
                               // Separado de filmDelays para inmutabilidad (era ._hist anidado pre-p5.5).
 // ── Simulation clock (dev tool) ──
-let _simTime=null; // null = real time
+_simTime=null; // null = real time
 // simNow() → Date — Date de "ahora" controlable para sim/QA.
 // Lee (contrato implícito): _simTime (null = tiempo real; string ISO = override).
 // Returns: new Date(_simTime) si _simTime es truthy, sino new Date() (tiempo real).
@@ -2429,7 +2239,7 @@ let miPlanViewStart=0; // 0-4, step 1, shows 2 days
 // Sin esta inicialización, Planear lanza TypeError al acceder a
 // availability[day].blocks y la pestaña no renderiza.
 // ─────────────────────────────────────────────────────────────────────────────
-let availability={
+availability={
   'Martes':{blocks:[]},'Miércoles':{blocks:[]},'Jueves':{blocks:[]},
   'Viernes':{blocks:[]},'Sábado':{blocks:[]},'Domingo':{blocks:[]}
 };
@@ -9320,27 +9130,17 @@ function _cortoSheetPosterErr(img){
 // En el classic <script>, los const/let/function top-level vivían en el global
 // lexical scope (visibles a page.evaluate de Playwright + otros scripts). Al
 // modularizar quedan module-scoped. Este bloque re-expone en globalThis los
-// símbolos que la suite Playwright accede (read/write), backed por los module
-// bindings — replica el binding global-lexical previo. Precursor del bridge
-// defineProperty de Wave 3 (state slices); se consolida con el bridge real en
-// Steps siguientes. NOTA: los setters de slices son writes intencionales al
-// roster — whitelisted en validate.py [state-mirror] vía estos markers.
+// símbolos NO-roster que la suite Playwright accede (read/write), backed por los
+// module bindings.
+// p8 Step 2: los 12 slices del roster (FILMS, watchlist, watched, prioritized,
+// filmRatings, savedAgenda, availability, _simTime, FESTIVAL_DATES, FESTIVAL_END,
+// _activeFestId, PRIO_LIMIT) se MOVIERON al STATE BRIDGE real (arriba, backed por
+// state). Aquí quedan solo los NO administrados por state: view-state, DAY_KEYS,
+// cachedResult, auth/splash.
 (() => {
   const _lets = {
-    FILMS:          [() => FILMS,          v => { FILMS = v; }],
-    watchlist:      [() => watchlist,      v => { watchlist = v; }],
-    watched:        [() => watched,        v => { watched = v; }],
-    prioritized:    [() => prioritized,    v => { prioritized = v; }],
-    filmRatings:    [() => filmRatings,    v => { filmRatings = v; }],
-    savedAgenda:    [() => savedAgenda,    v => { savedAgenda = v; }],
-    availability:   [() => availability,   v => { availability = v; }],
-    _simTime:       [() => _simTime,       v => { _simTime = v; }],
-    FESTIVAL_DATES: [() => FESTIVAL_DATES, v => { FESTIVAL_DATES = v; }],
-    FESTIVAL_END:   [() => FESTIVAL_END,   v => { FESTIVAL_END = v; }],
     DAY_KEYS:       [() => DAY_KEYS,       v => { DAY_KEYS = v; }],
     cachedResult:   [() => cachedResult,   v => { cachedResult = v; }],
-    _activeFestId:  [() => _activeFestId,  v => { _activeFestId = v; }],
-    PRIO_LIMIT:     [() => PRIO_LIMIT,     v => { PRIO_LIMIT = v; }],
     // view-state (los tests/helpers escriben activeDay + programaViewMode vía
     // page.evaluate; en classic eran global-lexical, ahora module-scoped).
     activeDay:        [() => activeDay,        v => { activeDay = v; }],
