@@ -671,3 +671,181 @@ Corren al ejecutar el script (deben volverse `init*()` llamados desde main):
 3. Mirror globals (E) — bridge defineProperty, migración gradual. Paso delicado.
 4. Side-effects (F) — convertir a init*() en main (Wave 7/8).
 5. Cortes limpios (A) — storage/state/controller-layer/i18n salen casi directo.
+
+---
+
+## 14. Plan de wiring detallado — bridge defineProperty + activación de módulos
+
+Estado: 5 módulos prep-eados como copias byte-fieles, **no cableados**
+(`src/config.js`, `src/domain/{time,film,schedule,festival}.js`,
+`src/state/state.js`, `src/storage/storage.js`, `src/i18n/i18n.js`). Este §
+detalla cómo el wiring real (post-Tribeca) los activa.
+
+### 14.1 El problema que el bridge resuelve
+
+Los módulos prep referencian globals como **ambient** (free variables):
+`FILMS`, `watchlist`, `TZ_OFFSET`, `FESTIVAL_STORAGE_KEY`, `DEFAULT_DURATION_MIN`,
+etc. Hoy en index.html esos son `let` léxicos de module-scope del bloque grande,
+sincronizados con el state container vía el mirror (p5.5).
+
+Cuando el bloque grande se vuelve un módulo (`main.js`) y se extraen capas:
+- Los `let FILMS` léxicos de main.js **NO** son visibles para otros módulos
+  (los módulos ES no comparten scope léxico).
+- Un `FILMS` bare en `domain/schedule.js` resuelve a `globalThis.FILMS`, no al
+  `let FILMS` de main.js.
+
+→ Sin un puente, los módulos extraídos leerían `undefined`.
+
+### 14.2 El bridge — `defineProperty` sobre globalThis respaldado por state
+
+El bridge expone cada slice de estado como una propiedad de `globalThis`
+respaldada por el container. Una sola fuente de verdad (state); las lecturas
+bare-global de CUALQUIER módulo (o del inline restante) la atraviesan:
+
+```js
+// Instalado en main.js, DESPUÉS de crear el state container (Wave 3).
+const _BRIDGE_KEYS = [
+  'watchlist','watched','prioritized','filmRatings','filmDelays',
+  'filmDelaysHistory','savedAgenda','availability','lastRemovedSlots',
+  '_lang','_simTime','FILMS','FESTIVAL_DATES','FESTIVAL_END','PRIO_LIMIT',
+  'TZ_OFFSET','FESTIVAL_TRANSPORT','_activeFestId','FESTIVAL_STORAGE_KEY',
+];
+_BRIDGE_KEYS.forEach(k => Object.defineProperty(globalThis, k, {
+  get: () => state.get(k),
+  set: v => state.set(k, v),
+  configurable: true,
+}));
+```
+
+Mecánica:
+- `FILMS` bare en `domain/schedule.js` → `globalThis.FILMS` → getter →
+  `state.get('FILMS')`. ✓
+- `watchlist = nuevo` (donde quede legacy) → setter → `state.set('watchlist', …)`
+  → dispara subscribers + render pipeline (7d). ✓
+- ⚠ En módulos ESM (strict mode) asignar a un global NO declarado lanza
+  ReferenceError — PERO el bridge define la propiedad, así que `globalThis.X = v`
+  funciona. Las escrituras bare en módulos deben ser a keys bridged.
+
+### 14.3 Pre-requisito: eliminar el mirror (D-INFRA-4) ANTES del bridge
+
+El mirror (p5.5) hace lo INVERSO: sincroniza state→`let` globals. Si coexiste
+con el bridge, hay doble sincronización (loop). Por eso Wave 3:
+1. **Eliminar** `_MIRROR_TARGETS`/`_MIRROR_READERS` de state.js — el container
+   posee `_data` directamente, sembrado con los valores iniciales.
+2. **Eliminar** las declaraciones `let FILMS, watchlist, …` de index.html/main.js.
+3. **Instalar el bridge** (14.2). Ahora bare-global → state (una dirección).
+
+### 14.4 Secuencia de activación (qué paso activa cada módulo)
+
+```
+Step 0 — Bootstrap a módulo
+  index.html: <script> grande → <script type="module" src="/src/main.js">
+  main.js = el bloque inline COMPLETO movido verbatim a un módulo (aún sin
+    imports). App idéntica. Riesgos: strict mode (verificar sloppy-mode refs),
+    defer timing (DOMContentLoaded sigue ok), scope (onclick=0 → nada externo
+    lee los globals; supabase CDN se lee como global, ok).
+  Verificar: app funciona idéntica como módulo. ESTE es el cambio de deploy.
+
+Step 1 — config.js (estático, import directo, SIN bridge)
+  main.js: import { DEFAULT_DURATION_MIN, FESTIVAL_BUFFER, SECTION_COLORS, … }
+    from './config.js'
+  Eliminar esas const de main.js. (Constantes estáticas → import directo, no
+    necesitan bridge.) Mover FESTIVAL_CONFIG/VENUES/NOTICES aquí AHORA (el
+    riesgo de drift desaparece al cablear — single source).
+
+Step 2 — state.js + eliminar mirror + INSTALAR BRIDGE (Wave 3, el delicado)
+  state.js: eliminar mirror; container posee _data inicial.
+  main.js: eliminar let-globals; import { state }; instalar bridge (14.2).
+  Ahora todos los bare-global (main.js inline + módulos futuros) → state.
+  Verificar: toggles, render pipeline, persistencia funcionan vía bridge.
+
+Step 3 — storage.js (usa FESTIVAL_STORAGE_KEY vía bridge)
+  main.js: import { storage }; eliminar bloque storage inline.
+  saveX/loadState (dispersas) se mueven aquí; leen state vía bridge.
+
+Step 4 — i18n.js
+  main.js: import { _I18N, t, _applyI18nDOM } from './i18n/i18n.js'
+  ⚠ _lang: pasa a ser slice de state (ya está en _BRIDGE_KEYS). t() lee
+    state.get('_lang') (o bare _lang vía bridge). El export-let-_lang del prep
+    se reemplaza por lectura desde state. setLang (controller) hace
+    state.set('_lang', …). Eliminar inline _I18N/t/_applyI18nDOM.
+
+Step 5 — domain/ (import config + state-globals vía bridge)
+  main.js: import { computeScenarios, screensConflict, … } from './domain/…'
+  Eliminar las fns puras inline. domain importa config (DEFAULT_DURATION_MIN,
+    FESTIVAL_BUFFER); lee FILMS/watched/etc. vía bridge.
+  ⚠ WORKER: el Blob worker (L~8950) tiene copias en su template string. Decidir:
+    (a) module worker `new Worker(url,{type:'module'})` + el worker importa
+        domain/schedule.js (verificar soporte WKWebView target), o
+    (b) mantener la copia worker-local (status quo; el worker es un mundo
+        aparte, sus copias se sincronizan manualmente — [worker-overlap] valida).
+    Recomendación: (b) en el primer wiring (menor riesgo), evaluar (a) después.
+```
+
+Patrón por módulo (Steps 3-5): `import` en main.js → eliminar la definición
+duplicada del inline → validate + Playwright. El bridge mantiene el inline
+restante funcionando mientras se vacía.
+
+### 14.5 Lo que queda para view / controller / main
+
+Estos NO son prep-only (referencian state/domain/i18n que el bridge/imports
+resuelven solo tras Steps 2-5). Se extraen DESPUÉS:
+
+```
+Wave 6 — view/ (programa, agenda, miplan, sheets, components)
+  ~80 fns: render*, sheets, components, surgical patches (updateCardState,
+    updateAgTab, _reRenderIntereses, updateHorarioPrioBtn, updateRatingStars).
+  import: domain (computeScenarios…), state (bridge o state.get), i18n (t),
+    config (SECTION_COLORS, ICONS si va aquí).
+  Sub-split por archivo según tamaño (D8-3, evaluar al llegar). Mapear sub-DAG.
+
+Wave 7 — controller/ (registry, pipeline, handlers)
+  26 handlers + ACTION_REGISTRY + delegated listener + composite helpers +
+    RENDER PIPELINE + renderActiveView + runCalc + setLang.
+  import: view (renderAgenda…), state, domain, storage, i18n.
+  ⚠ Side-effects al cargar → exportar como init*():
+    - initListener()  (delegated click listener)
+    - initPipeline()  (subscribeRender registrations)
+    - initJsOpenPel() (capture listener)
+  Llamados desde main.js bootstrap (NO side-effects al import — R5).
+
+Wave 8 — main.js (bootstrap) + cleanup
+  - Bootstrap explícito: DOMContentLoaded → loadFestival inicial →
+    initListener() → initPipeline() → initJsOpenPel() → SW register.
+    Orden de init controlado (R4: módulos definen, no ejecutan side-effects).
+  - ELIMINAR EL BRIDGE: migrar las lecturas bare-global restantes a state.get()
+    / destructure de state.snapshot(). Decisión:
+      (a) Migración completa de reads → ESM puro (muchos sitios, incremental), o
+      (b) Mantener el bridge como capa de compat permanente (funciona, no es
+          ESM puro). Recomendación: (a) incremental — el bridge se reduce
+          conforme cada read migra; lo que quede al final se elimina.
+  - sw.js: regla network-first /src/ (D-INFRA-1=B).
+  - playwright.yml paths + src/**; bundle.yml + cp -r src/. www/src/.
+  - validate.py: checks leen src/**; eliminar markers de sección obsoletos.
+```
+
+### 14.6 Orden de cleanup del bridge
+
+El bridge es scaffolding de transición. Vida útil:
+- **Nace**: Step 2 (Wave 3), cuando se elimina el mirror.
+- **Pico de uso**: Steps 3-7, mientras inline + módulos coexisten leyendo
+  bare-globals.
+- **Muere**: Wave 8, cuando todo es módulo. Cada read bare-global migra a
+  `state.get()`; el `_BRIDGE_KEYS` se reduce hasta vaciarse. Lo último que use
+  el bridge (si algo) se documenta como compat explícita o se migra.
+
+### 14.7 Resumen — 5 módulos prep listos, qué falta
+
+| Capa | Prep | Activación (wiring) |
+|---|---|---|
+| config | ✅ byte-fiel | Step 1 — import directo (+ mover FESTIVAL_CONFIG/VENUES/NOTICES) |
+| state | ✅ (con mirror) | Step 2 — eliminar mirror + instalar bridge |
+| storage | ✅ byte-fiel | Step 3 — import + mover saveX/loadState |
+| i18n | ✅ (excl. setLang) | Step 4 — import + _lang→state |
+| domain | ✅ byte-fiel | Step 5 — import config + bridge + decisión worker |
+| view | ⬜ | Wave 6 — extraer ~80 fns |
+| controller | ⬜ | Wave 7 — extraer + init*() |
+| main | ⬜ | Wave 8 — bootstrap + eliminar bridge + sw/CI |
+
+El prep cubre las 5 capas leaf/base. El wiring real (Steps 0-5 + Waves 6-8)
+arranca post-Tribeca — Step 0 (bootstrap a módulo) es el que cambia el deploy.
