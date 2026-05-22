@@ -1,12 +1,17 @@
-// ── src/storage/storage.js — Fase 8 (PREP, NO CABLEADO) ───────────────────────────────
+// ── src/storage/storage.js — Fase 8 Step 3 (CABLEADO) ─────────────────────────
 //
-// ⚠ ESTADO: módulo de preparación. NO importado por index.html. Cero impacto
-//   runtime/deploy/SW. Wiring real post-Tribeca.
-// ⚠ FUENTE DE VERDAD: index.html hasta el wiring. Copia fiel del bloque
-//   contiguo marcado. Si cambia en index.html antes del wiring, re-generar.
+// ESTADO: importado por src/main.js (Step 3). Encapsula TODO el I/O de
+//   localStorage de la app. Único namespace de persistencia.
 //
-// DEPS EXTERNAS (wiring): festival-state FESTIVAL_STORAGE_KEY (keys scoped por
-//   festival). state es Wave 3 — aquí queda ambient.
+// DEPS: FESTIVAL_STORAGE_KEY (prefix de los user-state keys, scoped por festival)
+//   se lee como bare-global → resuelto por el STATE BRIDGE de main.js (Step 2)
+//   → state.get('FESTIVAL_STORAGE_KEY'). Late-binding: los métodos cierran sobre
+//   el nombre, así que funcionan aunque el bridge/valor existan al call-time.
+// NO encapsula (se quedan inline en main.js, vía _cloudSave/excepciones): cloud
+//   sync, TMDB poster cache, otrofestiv_hint_cambiar, otrofestiv_display_name,
+//   orf_build (SW staged rollout), splash lang preview (index.html, pre-módulo).
+// Las wrappers saveX/loadState (orquestan storage + _cloudSave + notifications)
+//   NO viven aquí — son controller-level (→ Wave 7).
 
 // ── STORAGE ADAPTER START ────────────────────────────────────────────
 // storage — encapsula localStorage I/O para 9 user-state items + 3 global keys.
