@@ -23,7 +23,7 @@
  *   - Inválido: Mujeres2026 (mayúscula), mujeres-2026 (guión), mujeres26 (año corto)
  *   El nombre del archivo JSON se deriva del id: mujeres2026 → festivals/mujeres-2026.json
  *
- * Salida: bloque JS listo para pegar en FESTIVAL_CONFIG en index.html.
+ * Salida: bloque JS listo para pegar en FESTIVAL_CONFIG en src/config.js.
  * Copia la salida entre los comentarios de inserción.
  */
 
@@ -165,12 +165,12 @@ validate(opts);
 const days   = buildDays(opts.start, parseInt(opts.days));
 const output = formatConfig(opts, days);
 
-console.log('\n// ── Pegar en FESTIVAL_CONFIG en index.html (antes del cierre }; ) ──────────\n');
+console.log('\n// ── Pegar en FESTIVAL_CONFIG en src/config.js (antes del cierre }; ) ──────────\n');
 console.log(output);
 console.log('\n// ─────────────────────────────────────────────────────────────────────────────');
 console.log(`\n✅  ${opts.id} generado — ${days.length} días (${days[0].key} → ${days[days.length-1].key})`);
 console.log(`   Próximos pasos:`);
-console.log(`   1. Pegar el bloque en FESTIVAL_CONFIG en index.html`);
+console.log(`   1. Pegar el bloque en FESTIVAL_CONFIG en src/config.js`);
 console.log(`   2. Crear festivals/${opts.id.replace(/([a-z]+)(\d+)/, '$1-$2')}.json`);
 console.log(`   3. node scripts/validate-festivals.js ${opts.id.replace(/([a-z]+)(\d+)/, '$1-$2')}`);
 console.log(`   4. QA visual P1-P7\n`);

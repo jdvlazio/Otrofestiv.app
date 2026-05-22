@@ -3,13 +3,13 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `978912b docs: Fase 8 §14 — plan de wiring detallado (bridge defineProperty + activación)`
+> Último commit: `cfe151f refactor(fase8): Step 1 — cablear config.js (import directo, sin bridge)`
 
 ---
 
 ## Qué es Otrofestiv
 
-PWA mobile-first para planear asistencia a festivales de cine. Permite explorar el programa, armar una watchlist, detectar conflictos de horario y generar un plan optimizado. Vanilla JS/HTML, single-file (`index.html`), sin dependencias externas. Desplegado en GitHub Pages.
+PWA mobile-first para planear asistencia a festivales de cine. Permite explorar el programa, armar una watchlist, detectar conflictos de horario y generar un plan optimizado. Vanilla JS/HTML sin dependencias externas; la app se carga como módulo ES desde `src/main.js` vía `index.html` (en migración a módulos por capas — Fase 8). Desplegado en GitHub Pages.
 
 - **Repo:** `jdvlazio/Otrofestiv.app`
 - **URL producción:** `https://otrofestiv.app`
@@ -51,7 +51,7 @@ Juan es Product Owner, diseñador y developer. Claude ejecuta; Juan audita y apr
 
 ## Estado del proyecto
 
-### Festivales (desde `FESTIVAL_CONFIG` en `index.html`)
+### Festivales (desde `FESTIVAL_CONFIG` en `src/config.js`)
 
 | ID | Nombre | Ciudad | Fechas | Estado |
 |---|---|---|---|---|

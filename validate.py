@@ -78,6 +78,11 @@ if os.path.exists(_MAIN_JS):
         '<script type="module" src="/src/main.js"></script>',
         '<script>\n' + _main_src + '\n</script>'
     )
+# p8 Step 1: FESTIVAL_CONFIG/VENUES/NOTICES + constantes estáticas se movieron a
+# src/config.js (`export const`, importado por main.js). CHECK 5 (bootstrap) lo
+# busca ahí. Se lee aparte para NO contaminar los checks que escanean `content`.
+_CONFIG_JS = 'src/config.js'
+_config_src = open(_CONFIG_JS, encoding='utf-8').read() if os.path.exists(_CONFIG_JS) else ''
 script_start = content.find('<script>')
 script_end   = content.rfind('</script>')
 if script_start == -1 or script_end == -1:
@@ -255,12 +260,15 @@ else:
 # Cada entrada en FESTIVAL_CONFIG debe tener los campos que el splash necesita
 # antes del fetch (name, city, dates, dates_en, year, storageKey, festivalEndStr).
 check = 'fc-bootstrap'
-fc_start = content.find('const FESTIVAL_CONFIG={')
+# p8 Step 1: FESTIVAL_CONFIG vive en src/config.js. Fallback a `content` por si
+# algún festival legacy lo dejara inline (transición).
+_fc_source = _config_src if 'const FESTIVAL_CONFIG={' in _config_src else content
+fc_start = _fc_source.find('const FESTIVAL_CONFIG={')
 if fc_start == -1:
-    fail(check, 'FESTIVAL_CONFIG no encontrado en index.html')
+    fail(check, 'FESTIVAL_CONFIG no encontrado en src/config.js')
 else:
-    fc_end = content.find('};', fc_start) + 2
-    fc_block = content[fc_start:fc_end]
+    fc_end = _fc_source.find('};', fc_start) + 2
+    fc_block = _fc_source[fc_start:fc_end]
     # Extract festival IDs
     fest_ids = re.findall(r"'([a-z0-9]+)':\s*\{", fc_block)
     fc_errors = 0
