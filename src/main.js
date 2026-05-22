@@ -9454,13 +9454,15 @@ function _cortoSheetPosterErr(img){
   img.parentNode?.replaceChild(ph,img);
 }
 
-// ── p8 Step 0: test/debug bridge ─────────────────────────────────────────────
-// En el classic <script>, los const/let top-level vivían en el global lexical
-// scope (visibles a page.evaluate de Playwright + otros scripts). Al modularizar
-// quedan module-scoped. Este bloque re-expone en globalThis los símbolos que la
-// suite Playwright accede (read/write), backed por los module bindings — replica
-// el binding global-lexical previo. Precursor del bridge defineProperty de
-// Wave 3 (state slices); se consolida con el bridge real en Steps siguientes.
+// ── TEST BRIDGE START (p8 Step 0) ────────────────────────────────────────────
+// En el classic <script>, los const/let/function top-level vivían en el global
+// lexical scope (visibles a page.evaluate de Playwright + otros scripts). Al
+// modularizar quedan module-scoped. Este bloque re-expone en globalThis los
+// símbolos que la suite Playwright accede (read/write), backed por los module
+// bindings — replica el binding global-lexical previo. Precursor del bridge
+// defineProperty de Wave 3 (state slices); se consolida con el bridge real en
+// Steps siguientes. NOTA: los setters de slices son writes intencionales al
+// roster — whitelisted en validate.py [state-mirror] vía estos markers.
 (() => {
   const _lets = {
     FILMS:          [() => FILMS,          v => { FILMS = v; }],
@@ -9484,6 +9486,14 @@ function _cortoSheetPosterErr(img){
   for (const [k, val] of Object.entries({ state, FESTIVAL_CONFIG, ACTION_REGISTRY })) {
     Object.defineProperty(globalThis, k, { get: () => val, configurable: true });
   }
-  globalThis.loadFestival = loadFestival;
-  globalThis.renderAgenda = renderAgenda;
+  // Funciones que la suite Playwright invoca vía page.evaluate.
+  Object.assign(globalThis, {
+    _renderProgramaContent, closeAuthSheet, closePelSheet, loadFestival, normTitle,
+    openAuthSheet, openPelSheet, openRatingSheet, openCortoSheet, renderAgenda,
+    render, saveSavedAgenda, saveState, savePrio, saveWL, saveWatched, searchOpen,
+    searchClose, selectSplashFest, dismissSplash, showAgView, showDayView,
+    simNow, simTodayStr, switchMainNav, runCalc, _getFestivalPhase,
+    toggleWL, togglePriority, addBlock,
+  });
 })();
+// ── TEST BRIDGE END (p8 Step 0) ──────────────────────────────────────────────

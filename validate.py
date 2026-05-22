@@ -779,11 +779,16 @@ try:
     _lines = _html.split('\n')
     # Markers
     _sm_start = _sm_end = None
+    _br_start = _br_end = None
     for _i, _line in enumerate(_lines, 1):
         if '// ── STATE MIRROR START' in _line:
             _sm_start = _i
         elif '// ── STATE MIRROR END' in _line:
             _sm_end = _i
+        elif '// ── TEST BRIDGE START' in _line:
+            _br_start = _i
+        elif '// ── TEST BRIDGE END' in _line:
+            _br_end = _i
     if _sm_start is None or _sm_end is None:
         fail(check, 'No se encontraron marcadores STATE MIRROR START/END en index.html')
     else:
@@ -825,8 +830,13 @@ try:
         def _in_state_block(_ln):
             return _sm_start <= _ln <= _sm_end
 
+        def _in_bridge(_ln):
+            # p8 Step 0: el test bridge re-expone slices en globalThis con setters
+            # `<roster> = v` intencionales (replica el binding global-lexical previo).
+            return _br_start is not None and _br_end is not None and _br_start <= _ln <= _br_end
+
         def _whitelisted(_ln):
-            return _ln in _initial_decl_lines or _in_state_block(_ln) or _in_worker(_ln)
+            return _ln in _initial_decl_lines or _in_state_block(_ln) or _in_worker(_ln) or _in_bridge(_ln)
 
         _violations = []
         # Para cada global del roster, buscar patrones de escritura
