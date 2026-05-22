@@ -9479,6 +9479,18 @@ function _cortoSheetPosterErr(img){
     cachedResult:   [() => cachedResult,   v => { cachedResult = v; }],
     _activeFestId:  [() => _activeFestId,  v => { _activeFestId = v; }],
     PRIO_LIMIT:     [() => PRIO_LIMIT,     v => { PRIO_LIMIT = v; }],
+    // view-state (los tests/helpers escriben activeDay + programaViewMode vía
+    // page.evaluate; en classic eran global-lexical, ahora module-scoped).
+    activeDay:        [() => activeDay,        v => { activeDay = v; }],
+    activeView:       [() => activeView,       v => { activeView = v; }],
+    activeVenue:      [() => activeVenue,      v => { activeVenue = v; }],
+    activeSec:        [() => activeSec,        v => { activeSec = v; }],
+    activeMNav:       [() => activeMNav,       v => { activeMNav = v; }],
+    programaSubMode:  [() => programaSubMode,  v => { programaSubMode = v; }],
+    programaViewMode: [() => programaViewMode, v => { programaViewMode = v; }],
+    cartelaMode:      [() => cartelaMode,      v => { cartelaMode = v; }],
+    interesesViewMode:[() => interesesViewMode,v => { interesesViewMode = v; }],
+    miPlanViewMode:   [() => miPlanViewMode,   v => { miPlanViewMode = v; }],
   };
   for (const [k, [get, set]] of Object.entries(_lets)) {
     Object.defineProperty(globalThis, k, { get, set, configurable: true });
@@ -9486,8 +9498,15 @@ function _cortoSheetPosterErr(img){
   for (const [k, val] of Object.entries({ state, FESTIVAL_CONFIG, ACTION_REGISTRY })) {
     Object.defineProperty(globalThis, k, { get: () => val, configurable: true });
   }
-  // Funciones que la suite Playwright invoca vía page.evaluate.
+  // Funciones invocadas desde:
+  //  (a) handlers inline on* en HTML generado (onerror=_posterErr/_cortoSheetPosterErr)
+  //      — corren en GLOBAL scope, no module scope → DEBEN estar en globalThis
+  //      (correctness de producción, no solo tests; onerror no se migró en 7c).
+  //  (b) page.evaluate de la suite Playwright.
   Object.assign(globalThis, {
+    // (a) inline on* handlers — producción
+    _posterErr, _cortoSheetPosterErr,
+    // (b) page.evaluate — tests
     _renderProgramaContent, closeAuthSheet, closePelSheet, loadFestival, normTitle,
     openAuthSheet, openPelSheet, openRatingSheet, openCortoSheet, renderAgenda,
     render, saveSavedAgenda, saveState, savePrio, saveWL, saveWatched, searchOpen,
