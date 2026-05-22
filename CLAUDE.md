@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `7013560 docs: event-delegation-7c3 spec + plan + tasks (p7c-3)`
+> Último commit: `c147c32 docs: event-delegation-7c4 spec + plan + tasks (p7c-4)`
 
 ---
 
@@ -69,6 +69,7 @@ Juan es Product Owner, diseñador y developer. Claude ejecuta; Juan audita y apr
 - `event-delegation-7c1/` — fase actual: **tasks**
 - `event-delegation-7c2/` — fase actual: **tasks**
 - `event-delegation-7c3/` — fase actual: **tasks**
+- `event-delegation-7c4/` — fase actual: **tasks**
 - `festival-phase-extraction/` — fase actual: **tasks**
 - `grid-section-separators/` — fase actual: **tasks**
 - `i18n-films-audit/` — fase actual: **tasks**
