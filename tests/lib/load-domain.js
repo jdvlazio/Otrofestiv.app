@@ -24,17 +24,22 @@ const path = require('path');
 const ROOT = path.resolve(__dirname, '..', '..');
 const INDEX = path.join(ROOT, 'index.html');
 const MAIN = path.join(ROOT, 'src', 'main.js');
+const STORAGE = path.join(ROOT, 'src', 'storage', 'storage.js');
 
 // p8 Step 0: el código de la app se movió de los <script> inline de index.html
 // a src/main.js (módulo). readScripts concatena los scripts inline restantes
 // (Sentry, splash) + main.js (raw) para que extractFunction encuentre las fns.
+// p8 Step 3: el adapter `storage` se movió a src/storage/storage.js. Se concatena
+// también — extractObject('storage') matchea `const storage={` dentro de
+// `export const storage={` (el match arranca en `const`, sin el `export`).
 function readScripts() {
   const html = fs.readFileSync(INDEX, 'utf8');
   const inline = [...html.matchAll(/<script>([\s\S]*?)<\/script>/g)]
     .map(m => m[1])
     .join('\n');
   const main = fs.existsSync(MAIN) ? fs.readFileSync(MAIN, 'utf8') : '';
-  return inline + '\n' + main;
+  const storageSrc = fs.existsSync(STORAGE) ? fs.readFileSync(STORAGE, 'utf8') : '';
+  return inline + '\n' + main + '\n' + storageSrc;
 }
 
 // Returns the source of `function NAME(...) { ... }` from `source`, or null.

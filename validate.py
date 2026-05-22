@@ -717,53 +717,51 @@ except Exception as _e:
     warn(check, f'no se pudo verificar onclicks: {_e}')
 
 # ── Storage encapsulation ────────────────────────────────────────────────────
-# Toda lectura/escritura a localStorage debe pasar por el namespace `storage`
-# definido entre los marcadores // ── STORAGE ADAPTER START / END.
-# Excepciones documentadas (Fase 5 spec.md):
-#   - 'otrofestiv_hint_cambiar'  → onboarding flag
-#   - 'otrofestiv_display_name'  → Supabase user feature
-#   - _BUILD_KEY                 → SW staged rollout (clave 'orf_build', distinta de 'otrofestiv_build')
-#   - cacheKey                   → caches dinámicos (poster TMDB, etc.)
-#   - 'otrofestiv_lang' antes del storage block → splash preview en script 2 (storage no existe ahí)
+# Toda lectura/escritura a localStorage debe pasar por el namespace `storage`.
+# p8 Step 3: el adapter `storage` se movió a src/storage/storage.js (importado por
+# main.js). Los markers STORAGE ADAPTER START/END viven AHÍ — salieron de `content`
+# (index.html + main.js inyectado). Este check (actualizado) verifica:
+#   1. Los markers STORAGE ADAPTER existen en src/storage/storage.js.
+#   2. En `content` (main.js + index.html) NO hay localStorage.* salvo excepciones
+#      documentadas (el adapter ya no vive ahí: cualquier localStorage en content
+#      debe ser una excepción explícita).
+# Excepciones (Fase 5 spec.md):
+#   - 'otrofestiv_hint_cambiar', 'otrofestiv_display_name'  → onboarding/Supabase
+#   - _BUILD_KEY    → SW staged rollout (clave 'orf_build')
+#   - cacheKey      → caches dinámicos (poster TMDB)
+#   - 'otrofestiv_lang' → splash preview (index.html, pre-módulo; storage no existe)
 check = 'storage-encapsulation'
 try:
     import re as _re
-    _html = content  # p8: content ya incluye main.js inyectado
-    _lines = _html.split('\n')
-    _start = _end = None
-    for _i, _line in enumerate(_lines, 1):
-        if '// ── STORAGE ADAPTER START' in _line:
-            _start = _i
-        elif '// ── STORAGE ADAPTER END' in _line:
-            _end = _i
-    if _start is None or _end is None:
-        fail(check, 'No se encontraron marcadores STORAGE ADAPTER START/END en index.html')
+    # 1. adapter markers en storage.js
+    _storage_path = 'src/storage/storage.js'
+    _storage_src = open(_storage_path, encoding='utf-8').read() if os.path.exists(_storage_path) else ''
+    if '// ── STORAGE ADAPTER START' not in _storage_src or '// ── STORAGE ADAPTER END' not in _storage_src:
+        fail(check, 'No se encontraron marcadores STORAGE ADAPTER START/END en src/storage/storage.js')
     else:
+        # 2. localStorage en content — todo debe ser excepción whitelisted
+        _lines = content.split('\n')
         _ls_call = _re.compile(r'localStorage\.(getItem|setItem)\(([^,)]*)')
         _allowed_args = {
             "'otrofestiv_hint_cambiar'",
             "'otrofestiv_display_name'",
             '_BUILD_KEY',
             'cacheKey',
+            "'otrofestiv_lang'",
         }
         _violations = []
         for _i, _line in enumerate(_lines, 1):
-            if _start <= _i <= _end:
-                continue  # dentro del adapter, OK
             for _m in _ls_call.finditer(_line):
                 _arg = _m.group(2).strip()
                 if _arg in _allowed_args:
                     continue
-                # Splash exception: lectura de 'otrofestiv_lang' antes del adapter
-                if _arg == "'otrofestiv_lang'" and _i < _start:
-                    continue
-                _violations.append(f'L{_i}: localStorage.{_m.group(1)}({_arg[:50]}) fuera del storage block')
+                _violations.append(f'L{_i}: localStorage.{_m.group(1)}({_arg[:50]}) fuera del adapter (storage.js)')
         if _violations:
             for _v in _violations:
                 fail(check, _v)
-            fail(check, 'Fix: usar storage.getXxx()/setXxx(). Si es un caso legítimo nuevo, añadir a whitelist en validate.py + documentar en spec.md.')
+            fail(check, 'Fix: usar storage.getXxx()/setXxx() (src/storage/storage.js). Si es excepción legítima, añadir a whitelist en validate.py + spec.md.')
         else:
-            ok(check, f'storage block L{_start}-{_end}; cero localStorage fuera del block (excepciones whitelisted)')
+            ok(check, f'adapter en storage.js; cero localStorage en content fuera de las {len(_allowed_args)} excepciones whitelisted')
 except Exception as _e:
     warn(check, f'no se pudo verificar storage encapsulation: {_e}')
 
