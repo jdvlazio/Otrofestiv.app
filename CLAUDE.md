@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `d3a88f7 docs: subscribe-render-7d spec + plan + tasks (p7d)`
+> Último commit: `978912b docs: Fase 8 §14 — plan de wiring detallado (bridge defineProperty + activación)`
 
 ---
 
@@ -71,6 +71,7 @@ Juan es Product Owner, diseñador y developer. Claude ejecuta; Juan audita y apr
 - `event-delegation-7c3/` — fase actual: **tasks**
 - `event-delegation-7c4/` — fase actual: **tasks**
 - `festival-phase-extraction/` — fase actual: **tasks**
+- `file-split-8/` — fase actual: **tasks**
 - `grid-section-separators/` — fase actual: **tasks**
 - `i18n-films-audit/` — fase actual: **tasks**
 - `i18n-planner-audit/` — fase actual: **tasks**

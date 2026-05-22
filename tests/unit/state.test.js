@@ -16,16 +16,21 @@ const fs = require('fs');
 const path = require('path');
 
 const INDEX = path.resolve(__dirname, '..', '..', 'index.html');
+const MAIN = path.resolve(__dirname, '..', '..', 'src', 'main.js');
 
+// p8 Step 0: el bloque STATE MIRROR se movió a src/main.js. Busca en main.js
+// (con fallback a index.html para compat pre-Step-0).
 function extractStateBlock() {
-  const html = fs.readFileSync(INDEX, 'utf8');
   const startMarker = '// ── STATE MIRROR START';
   const endMarker = '// ── STATE MIRROR END';
-  const startIdx = html.indexOf(startMarker);
-  const endIdx = html.indexOf(endMarker);
-  if (startIdx < 0 || endIdx < 0) throw new Error('STATE markers not found in index.html');
-  // Devuelve el bloque incluyendo la declaración `const state = (()=>{...})();`
-  return html.slice(startIdx, endIdx);
+  for (const file of [MAIN, INDEX]) {
+    if (!fs.existsSync(file)) continue;
+    const src = fs.readFileSync(file, 'utf8');
+    const startIdx = src.indexOf(startMarker);
+    const endIdx = src.indexOf(endMarker);
+    if (startIdx >= 0 && endIdx >= 0) return src.slice(startIdx, endIdx);
+  }
+  throw new Error('STATE markers not found in src/main.js ni index.html');
 }
 
 // Construye un sandbox fresco — cada test debería llamar esto para aislamiento.

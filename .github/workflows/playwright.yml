@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - 'index.html'
+      - 'src/**'
       - 'sw.js'
       - 'festivals/**.json'
       - 'tests/**.spec.js'
@@ -12,6 +13,7 @@ on:
   pull_request:
     paths:
       - 'index.html'
+      - 'src/**'
       - 'tests/**.spec.js'
       - 'tests/helpers.js'
 

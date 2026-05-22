@@ -6,8 +6,8 @@
 //      controllerchange en iOS WKWebView es flaky — este reload es la
 //      garantía de que HTML cacheado se descarta inmediatamente al deploy.
 
-const CACHE_NAME = 'otrofestiv-v202605212031';
-const BUILD = '202605212031';
+const CACHE_NAME = 'otrofestiv-v202605220814';
+const BUILD = '202605220814';
 
 const STATIC_ASSETS = [
   '/manifest.json',
@@ -57,6 +57,22 @@ self.addEventListener('fetch', event => {
         .catch(() => caches.match(request)
           .then(c => c || new Response(OFFLINE_HTML, {headers:{'Content-Type':'text/html;charset=utf-8'}}))
         )
+    );
+    return;
+  }
+
+  // Módulos de la app (/src/) → network-first como el HTML (p8 Step 0,
+  // D-INFRA-1=B). El código vive en src/main.js + futuros src/*.js; deben
+  // propagar en cada deploy igual que el HTML (no quedarse cacheados stale).
+  // Fallback a caché para offline.
+  if (url.pathname.startsWith('/src/')) {
+    event.respondWith(
+      fetch(new Request(request, { cache: 'no-store' }))
+        .then(res => {
+          if (res.ok) { const clone = res.clone(); caches.open(CACHE_NAME).then(c => c.put(request, clone)); }
+          return res;
+        })
+        .catch(() => caches.match(request))
     );
     return;
   }

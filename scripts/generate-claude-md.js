@@ -24,7 +24,11 @@ try {
 } catch (_) {}
 
 // ── 2. Festivales desde FESTIVAL_CONFIG ───────────────────────────────────────
-const indexHtml = fs.readFileSync(path.join(ROOT, 'index.html'), 'utf8');
+// p8 Step 0: FESTIVAL_CONFIG se movió de index.html a src/main.js (módulo).
+const _mainPath = path.join(ROOT, 'src', 'main.js');
+const indexHtml = fs.existsSync(_mainPath)
+  ? fs.readFileSync(_mainPath, 'utf8')
+  : fs.readFileSync(path.join(ROOT, 'index.html'), 'utf8');
 
 const configBlock = indexHtml.match(/const FESTIVAL_CONFIG=\{([\s\S]*?)\};\/\/ Festival/);
 const festivals = [];

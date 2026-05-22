@@ -25,9 +25,10 @@ jobs:
 
       - name: Build www folder from repo root
         run: |
-          mkdir -p www/festivals www/i18n www/assets/leviza
+          mkdir -p www/festivals www/i18n www/assets/leviza www/src
           # Estampar BUILD_VERSION con timestamp del deploy — fuerza SW cache bust
-          sed -i "s/const BUILD_VERSION='[^']*'/const BUILD_VERSION='${{ steps.build.outputs.number }}'/" index.html
+          # p8 Step 0: BUILD_VERSION vive en src/main.js (no index.html).
+          sed -i "s/const BUILD_VERSION='[^']*'/const BUILD_VERSION='${{ steps.build.outputs.number }}'/" src/main.js
           cp index.html www/
           cp sw.js www/
           cp manifest.json www/
@@ -38,6 +39,9 @@ jobs:
           cp -r festivals/. www/festivals/ 2>/dev/null || true
           cp -r i18n/. www/i18n/ 2>/dev/null || true
           cp -r assets/. www/assets/ 2>/dev/null || true
+          # p8 Step 0: el código vive en src/ (módulos ES). Sin esto la app
+          # nativa (Capgo) carga HTML que importa /src/main.js inexistente.
+          cp -r src/. www/src/ 2>/dev/null || true
           echo "www contents:"
           ls -la www/
 
