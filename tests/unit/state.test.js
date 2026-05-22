@@ -1,94 +1,39 @@
-// state.test.js — p5.5 state container mirror tests
+// state.test.js — state container tests (p8 Step 2: sin mirror)
 //
-// La invariante crítica de Fase 5.5 es: state.set(k,v) → state.get(k)===v
-// Y simultáneamente el global mirror también ===v. Plus: batchUpdate aplica
-// TODO el batch antes de notificar a subscribers (atomicidad).
+// La invariante crítica: state.set(k,v) → state.get(k)===v; batchUpdate aplica
+// TODO el batch antes de notificar (atomicidad); subscribeRender/transaction
+// dedupen el render.
 //
-// Estrategia de carga: el bloque `const state = (() => {...})()` vive en
-// index.html y closures sobre los 19 globals del roster. Para testear sin
-// arrancar el browser, extraemos el bloque entre los marcadores STATE START/END
-// y lo eval en un sandbox que pre-declara los globals + expone getters para
-// inspección desde los tests.
+// p8 Step 2 (D-INFRA-4): el MIRROR fue eliminado. state.js es un módulo ESM
+// auto-contenido (export const state) que POSEE _data. Para testear sin browser
+// extraemos el módulo quitando `export ` y lo evaluamos en un sandbox fresco por
+// test (aislamiento). NO hay globals que pre-declarar. El "mirror" de un roster
+// key ES state.get(key) — eso es lo que el bridge de main.js garantiza
+// (globalThis.key → state.get(key)); el shim `mirror` lo refleja.
 
 const { test } = require('node:test');
 const assert = require('node:assert/strict');
 const fs = require('fs');
 const path = require('path');
 
-const INDEX = path.resolve(__dirname, '..', '..', 'index.html');
-const MAIN = path.resolve(__dirname, '..', '..', 'src', 'main.js');
+const STATE = path.resolve(__dirname, '..', '..', 'src', 'state', 'state.js');
 
-// p8 Step 0: el bloque STATE MIRROR se movió a src/main.js. Busca en main.js
-// (con fallback a index.html para compat pre-Step-0).
-function extractStateBlock() {
-  const startMarker = '// ── STATE MIRROR START';
-  const endMarker = '// ── STATE MIRROR END';
-  for (const file of [MAIN, INDEX]) {
-    if (!fs.existsSync(file)) continue;
-    const src = fs.readFileSync(file, 'utf8');
-    const startIdx = src.indexOf(startMarker);
-    const endIdx = src.indexOf(endMarker);
-    if (startIdx >= 0 && endIdx >= 0) return src.slice(startIdx, endIdx);
-  }
-  throw new Error('STATE markers not found in src/main.js ni index.html');
+function extractStateModule() {
+  const src = fs.readFileSync(STATE, 'utf8');
+  // Quita `export ` de las decls top-level para evaluar como const planas.
+  return src.replace(/^export\s+/gm, '');
 }
 
-// Construye un sandbox fresco — cada test debería llamar esto para aislamiento.
+// Construye un sandbox fresco — cada test lo llama para aislamiento.
 function makeSandbox() {
-  const stateBlock = extractStateBlock();
-  // Pre-declarar los 19 globals con valores neutros. El IIFE `const state = ...`
-  // capturará estas bindings via closure y los mirror setters podrán reasignarlas.
-  // Los `get` accessors del objeto retornado permiten al test leer el valor actual.
-  const src = `(function () {
-    let _activeFestId = null;
-    let FILMS = [];
-    let FESTIVAL_DATES = {};
-    let FESTIVAL_END = null;
-    let FESTIVAL_STORAGE_KEY = '';
-    let PRIO_LIMIT = 0;
-    let TZ_OFFSET = '';
-    let FESTIVAL_TRANSPORT = '';
-    let watchlist = new Set();
-    let watched = new Set();
-    let prioritized = new Set();
-    let filmRatings = {};
-    let filmDelays = {};
-    let filmDelaysHistory = {};
-    let savedAgenda = null;
-    let availability = {};
-    let lastRemovedSlots = [];
-    let _lang = '';
-    let _simTime = null;
-
-    ${stateBlock}
-
-    return {
-      state,
-      mirror: {
-        get _activeFestId() { return _activeFestId; },
-        get FILMS() { return FILMS; },
-        get FESTIVAL_DATES() { return FESTIVAL_DATES; },
-        get FESTIVAL_END() { return FESTIVAL_END; },
-        get FESTIVAL_STORAGE_KEY() { return FESTIVAL_STORAGE_KEY; },
-        get PRIO_LIMIT() { return PRIO_LIMIT; },
-        get TZ_OFFSET() { return TZ_OFFSET; },
-        get FESTIVAL_TRANSPORT() { return FESTIVAL_TRANSPORT; },
-        get watchlist() { return watchlist; },
-        get watched() { return watched; },
-        get prioritized() { return prioritized; },
-        get filmRatings() { return filmRatings; },
-        get filmDelays() { return filmDelays; },
-        get filmDelaysHistory() { return filmDelaysHistory; },
-        get savedAgenda() { return savedAgenda; },
-        get availability() { return availability; },
-        get lastRemovedSlots() { return lastRemovedSlots; },
-        get _lang() { return _lang; },
-        get _simTime() { return _simTime; },
-      },
-    };
-  })();`;
+  const code = extractStateModule();
+  // code define `const _ROSTER = ...` y `const state = (()=>{...})()`.
   // eslint-disable-next-line no-eval
-  return eval(src);
+  const { state } = eval(`(function () {\n${code}\nreturn { state };\n})();`);
+  // mirror — shim que lee state.get(k). Post-Step-2 representa el bare-global
+  // bridged (globalThis.k → state.get(k)). Preserva las aserciones mirror.X.
+  const mirror = new Proxy({}, { get: (_t, k) => state.get(k) });
+  return { state, mirror };
 }
 
 // ═══════════════════════════════════════════════════════════════════════
@@ -101,7 +46,7 @@ test('set único: state.get retorna el valor seteado', () => {
   assert.equal(state.get('_lang'), 'en');
 });
 
-test('set único: mirror al global también se actualiza', () => {
+test('set único: el bare-global bridged (state.get) también refleja', () => {
   const { state, mirror } = makeSandbox();
   state.set('_lang', 'en');
   assert.equal(mirror._lang, 'en');
@@ -112,15 +57,14 @@ test('set con key inválida: throw con mensaje claro', () => {
   assert.throws(() => state.set('NOT_A_KEY', 'x'), /unknown key.*NOT_A_KEY/);
 });
 
-test('get sin previo set retorna el valor actual del global mirror (lazy seed)', () => {
-  // Invariante: state.get(k) === <global k> en TODO momento, incluso antes
-  // de cualquier state.set explícito. Esto soporta migración incremental
-  // (Fase 5.5 mirror): mientras readers no migran, escrituras legacy a globals
-  // siguen pasando, y state.get refleja el global actual.
+test('get sin previo set retorna undefined (sin lazy-seed; el bridge siembra al init)', () => {
+  // p8 Step 2: el mirror/lazy-seed se eliminó (D-INFRA-4). _data arranca vacío.
+  // En la app real, el bridge siembra cada key cuando su (ex-)decl `X = init`
+  // ejecuta. Aquí, sin sets previos, get retorna undefined.
   const { state } = makeSandbox();
-  assert.equal(state.get('_lang'), '');           // sandbox initial
-  assert.deepEqual([...state.get('watchlist')], []); // sandbox initial Set
-  assert.equal(state.get('PRIO_LIMIT'), 0);
+  assert.equal(state.get('_lang'), undefined);
+  assert.equal(state.get('watchlist'), undefined);
+  assert.equal(state.get('PRIO_LIMIT'), undefined);
 });
 
 // ═══════════════════════════════════════════════════════════════════════
@@ -135,12 +79,13 @@ test('update: fn recibe el valor actual y retorna el nuevo', () => {
   assert.deepEqual([...mirror.watchlist].sort(), ['a','b','c']);
 });
 
-test('update sin previo set: fn recibe el valor del global mirror (no undefined)', () => {
-  // Caso real Fase 5.5: legacy code asigna `watchlist = new Set([...]); ` y
-  // luego un callsite migrado hace state.update('watchlist', s => addTo(s, t)).
-  // Si la update no leyera del mirror, fn recibiría undefined y crashearía.
+test('update sin previo set: fn recibe undefined (sin lazy-seed post-Step-2)', () => {
+  // p8 Step 2: sin mirror, update sobre una key no seteada pasa undefined a fn.
+  // En la app el bridge siembra al init, así que update siempre ve el valor real.
   const { state, mirror } = makeSandbox();
-  state.update('watchlist', s => new Set([...s, 'x']));
+  let received = 'unset';
+  state.update('watchlist', s => { received = s; return new Set(['x']); });
+  assert.equal(received, undefined);
   assert.deepEqual([...state.get('watchlist')], ['x']);
   assert.deepEqual([...mirror.watchlist], ['x']);
 });
@@ -264,7 +209,7 @@ test('batchUpdate: aplica TODAS las keys antes de notificar', () => {
   assert.equal(observedSnapshot.PRIO_LIMIT, 7);
 });
 
-test('batchUpdate: mirror al global se actualiza para TODAS las keys antes de notify', () => {
+test('batchUpdate: el bare-global bridged refleja TODAS las keys antes de notify', () => {
   const { state, mirror } = makeSandbox();
   let observed = null;
   state.subscribe('_activeFestId', () => {
@@ -325,7 +270,8 @@ test('batchUpdate: subscriber que llama batchUpdate anidado funciona', () => {
 test('batchUpdate: key inválida → throw, ningún cambio aplicado', () => {
   const { state, mirror } = makeSandbox();
   state.set('_lang', 'es');
-  // PRIO_LIMIT pre-batch es el global initial (0), no undefined post-lazy-seed
+  // PRIO_LIMIT pre-batch: undefined (sin lazy-seed post-Step-2). El test verifica
+  // que el batch fallido no lo cambie (sigue === prioBefore).
   const prioBefore = state.get('PRIO_LIMIT');
   assert.throws(() => state.batchUpdate({
     _lang: 'en',
@@ -347,14 +293,12 @@ test('batchUpdate: vacío → no-op, no notify', () => {
   assert.equal(notified, false);
 });
 
-test('batchUpdate: rollback en error de _MIRROR_TARGETS', () => {
-  // Forzar un mirror setter que throwee es complicado vía API pública.
-  // En la práctica esto solo pasa si el global es no-asignable (e.g., const).
-  // Test alternativo: keyValidation en pre-loop garantiza fail-fast. Ya cubierto
-  // arriba. Aquí verifico que un throw DENTRO de un mirror setter rollbackea —
-  // monkey-patching el setter requeriría exponer _MIRROR_TARGETS. Skip por ahora.
-  // TODO: si extendemos state con un hook de mirror, añadir test concreto.
-  assert.ok(true); // placeholder
+test('batchUpdate: fail-fast (sin mirror, el rollback queda como salvaguarda)', () => {
+  // p8 Step 2: el mirror se eliminó. La validación de keys (pre-loop) garantiza
+  // fail-fast (cubierto en el test de key inválida). El bloque de rollback de
+  // batchUpdate queda como salvaguarda estructural; ya no hay setter de mirror
+  // que pueda throwear a mitad del batch. Placeholder.
+  assert.ok(true);
 });
 
 // ═══════════════════════════════════════════════════════════════════════
@@ -392,10 +336,10 @@ test('_omit: borra propiedad de object, retorna mismo si no existe', () => {
 });
 
 // ═══════════════════════════════════════════════════════════════════════
-// Mirror invariant — los 19 keys
+// Roster invariant — los 19 keys (state.get refleja el set; el bridge expone)
 // ═══════════════════════════════════════════════════════════════════════
 
-test('mirror invariant: los 19 keys del roster espejean al global', () => {
+test('roster invariant: state.get refleja el set para los 19 keys', () => {
   const { state, mirror } = makeSandbox();
   const cases = {
     _activeFestId: 'tribeca2026',

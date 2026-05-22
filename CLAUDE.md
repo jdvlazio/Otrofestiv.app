@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `cfe151f refactor(fase8): Step 1 — cablear config.js (import directo, sin bridge)`
+> Último commit: `02ca03e chore: bundle v202605221459`
 
 ---
 
