@@ -9491,6 +9491,9 @@ function _cortoSheetPosterErr(img){
     cartelaMode:      [() => cartelaMode,      v => { cartelaMode = v; }],
     interesesViewMode:[() => interesesViewMode,v => { interesesViewMode = v; }],
     miPlanViewMode:   [() => miPlanViewMode,   v => { miPlanViewMode = v; }],
+    // auth/splash state que los tests leen/escriben (deleteAccount guard, splash sel)
+    _sbUser:              [() => _sbUser,              v => { _sbUser = v; }],
+    _splashSelectedFestId:[() => _splashSelectedFestId, v => { _splashSelectedFestId = v; }],
   };
   for (const [k, [get, set]] of Object.entries(_lets)) {
     Object.defineProperty(globalThis, k, { get, set, configurable: true });
@@ -9513,6 +9516,7 @@ function _cortoSheetPosterErr(img){
     searchClose, selectSplashFest, dismissSplash, showAgView, showDayView,
     simNow, simTodayStr, switchMainNav, runCalc, _getFestivalPhase,
     toggleWL, togglePriority, addBlock,
+    setProgramaView, openConflictSheet, deleteAccount,
   });
 })();
 // ── TEST BRIDGE END (p8 Step 0) ──────────────────────────────────────────────
