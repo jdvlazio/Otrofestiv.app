@@ -9453,3 +9453,37 @@ function _cortoSheetPosterErr(img){
   ph.textContent='🎬';
   img.parentNode?.replaceChild(ph,img);
 }
+
+// ── p8 Step 0: test/debug bridge ─────────────────────────────────────────────
+// En el classic <script>, los const/let top-level vivían en el global lexical
+// scope (visibles a page.evaluate de Playwright + otros scripts). Al modularizar
+// quedan module-scoped. Este bloque re-expone en globalThis los símbolos que la
+// suite Playwright accede (read/write), backed por los module bindings — replica
+// el binding global-lexical previo. Precursor del bridge defineProperty de
+// Wave 3 (state slices); se consolida con el bridge real en Steps siguientes.
+(() => {
+  const _lets = {
+    FILMS:          [() => FILMS,          v => { FILMS = v; }],
+    watchlist:      [() => watchlist,      v => { watchlist = v; }],
+    watched:        [() => watched,        v => { watched = v; }],
+    prioritized:    [() => prioritized,    v => { prioritized = v; }],
+    filmRatings:    [() => filmRatings,    v => { filmRatings = v; }],
+    savedAgenda:    [() => savedAgenda,    v => { savedAgenda = v; }],
+    availability:   [() => availability,   v => { availability = v; }],
+    _simTime:       [() => _simTime,       v => { _simTime = v; }],
+    FESTIVAL_DATES: [() => FESTIVAL_DATES, v => { FESTIVAL_DATES = v; }],
+    FESTIVAL_END:   [() => FESTIVAL_END,   v => { FESTIVAL_END = v; }],
+    DAY_KEYS:       [() => DAY_KEYS,       v => { DAY_KEYS = v; }],
+    cachedResult:   [() => cachedResult,   v => { cachedResult = v; }],
+    _activeFestId:  [() => _activeFestId,  v => { _activeFestId = v; }],
+    PRIO_LIMIT:     [() => PRIO_LIMIT,     v => { PRIO_LIMIT = v; }],
+  };
+  for (const [k, [get, set]] of Object.entries(_lets)) {
+    Object.defineProperty(globalThis, k, { get, set, configurable: true });
+  }
+  for (const [k, val] of Object.entries({ state, FESTIVAL_CONFIG, ACTION_REGISTRY })) {
+    Object.defineProperty(globalThis, k, { get: () => val, configurable: true });
+  }
+  globalThis.loadFestival = loadFestival;
+  globalThis.renderAgenda = renderAgenda;
+})();
