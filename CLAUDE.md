@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `2b449cb chore: bundle v202605231500`
+> Último commit: `52b6db7 refactor(fase8): Step 6g commit 1 — relocar TEST BRIDGE antes del bootstrap`
 
 ---
 
