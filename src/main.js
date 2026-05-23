@@ -32,6 +32,17 @@ import { _djb2, _titleSeed, _mulberry32, shuffle, scoreFilm, effectiveDuration, 
 import { screensConflict, isScreeningBlocked, sortScreensByStrategy, computeScenarios } from './domain/schedule.js';
 import { _resolveVenue, _gapSuggestion, _getFestivalPhase, venueTravelMins, travelMins } from './domain/festival.js';
 
+// ── Step 6a: view/components.js — capa presentacional foundational de Wave 6
+//   (posters, builders HTML puros, helpers sección/rating/festival). ──────────
+import {
+  ICONS, CHECK_SVG, DAY_ABBR, DAY_NUM,
+  makeProgramPoster, makeEventPoster, makeSorpresaPoster, _buildPosterV16,
+  _secLabel, _sectionColor, renderRatingStarsHTML, starSVG,
+  _renderSplashDropdownHTML, _renderFestivalSelectorHTML, _classifyFestival,
+  _sortFestivals, renderAvBlocksHTML, isFullDayBlocked, renderFlowProgress,
+  buildResultHTML,
+} from './view/components.js';
+
 // storage (adapter de localStorage) → src/storage/storage.js (Step 3).
 // Importado al top del módulo. Usa FESTIVAL_STORAGE_KEY vía el STATE BRIDGE.
 
@@ -517,56 +528,7 @@ function _buildPosterSVG(o){
   return `data:image/svg+xml,${encodeURIComponent(svg)}`;
 }
 
-function makeProgramPoster(state, title, duration, section){
-  const {FILMS} = state.snapshot();
-  const filmSec=section||(FILMS.find(f=>f.title===title)?.section)||'';
-  const sec=filmSec.toLowerCase();
-
-  // ── Paleta de 6 colores canónicos — asignados por hash de sección ──
-  // Consistente: misma sección → mismo color en cualquier festival
-  const ACCENT_PALETTE=['#F59E0B','#3AAA6E','#E5A020','#E05252','#378ADD','#3A8E8E'];
-  const _hash=s=>[...s].reduce((h,c)=>(Math.imul(31,h)+c.charCodeAt(0))|0,0);
-  const accent=ACCENT_PALETTE[Math.abs(_hash(sec))%ACCENT_PALETTE.length];
-
-  // Header: sección limpia de emoji, uppercase, sin truncar vocablos
-  const cleanSection=filmSec
-    .replace(/\p{Emoji}/gu,'')
-    .replace(/[^\w\sáéíóúüñÁÉÍÓÚÜÑ¿!?()·\-]/gu,'')
-    .trim()
-    .toUpperCase();
-  const headerLabel=cleanSection||'PROGRAMA';
-
-  // Número — patrones: "Prog. 4", "Prog. 1 · 16mm", "Voces 2", número al final
-  const numMatch=title.match(/(?:Prog\.\s*|Programa\s+)(\d+)|(?:—\s*|:\s*|Prog\.\s*)(\d+)\s*(?:·|$)|\s(\d+)\s*$/);
-  const num=numMatch?(numMatch[1]||numMatch[2]||numMatch[3]):null;
-
-  // Día — extrae nombre de día al final del título ("— Jueves" → "JUE")
-  // Solo aplica cuando no hay número (los programas numerados ya tienen su diferenciador)
-  const _dayNameMap={'lunes':'LUN','martes':'MAR','miércoles':'MIÉ','miercoles':'MIÉ',
-    'jueves':'JUE','viernes':'VIE','sábado':'SÁB','sabado':'SÁB','domingo':'DOM'};
-  const _dayMatch=!num&&title.match(/[—\-]\s*([a-záéíóúüñ]+)\s*$/i);
-  const dayAbbr=_dayMatch?(_dayNameMap[_dayMatch[1].toLowerCase()]||null):null;
-
-  // Body: siempre vacío cuando hay número (el header + número son suficientes)
-  // Sin número: extraer solo la parte distintiva
-  let bodyTitle='';
-  if(!num){
-    const secBase=filmSec.replace(/\p{Emoji}/gu,'').replace(/[^\w\sáéíóúüñÁÉÍÓÚÜÑ¿!()·\-]/gu,'').trim();
-    bodyTitle=title
-      .replace(/—?\s*Prog\.\s*(?:de\s+)?Cortos\s*$/i,'')
-      .replace(/—?\s*Prog\.\s*Cortometrajes\s*—?\s*/i,'')
-      .replace(new RegExp('^'+secBase.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+'\\s*—?\\s*','i'),'')
-      .replace(/^Cortos:\s*/i,'')
-      .replace(/^Programa\s+/i,'')
-      .replace(/^Competencia\s+/i,'')
-      .trim();
-    // Si lo que queda es subcadena del header, no vale la pena mostrarlo
-    if(!bodyTitle||headerLabel.includes(bodyTitle.toUpperCase())||bodyTitle.toUpperCase().includes(headerLabel)||/^[^a-zA-ZáéíóúüñÁÉÍÓÚÜÑ0-9]+$/.test(bodyTitle))
-      bodyTitle='';
-  }
-
-  return _buildPosterV16({accent, headerLabel, title:bodyTitle, num:num||dayAbbr||null});
-}
+// makeProgramPoster → src/view/components.js (Step 6a). Importado.
 /* ══════════════════════════════════════════════════════
    SISTEMA DE PÓSTERS — fuente unificada y normalizada
    ─────────────────────────────────────────────────────
@@ -646,14 +608,7 @@ function getFilmPoster(f){
     num: null
   });
 }
-function makeSorpresaPoster(){
-  return _buildPosterV16({
-    accent:'#F59E0B',
-    headerLabel:'PROYECCIÓN SORPRESA',
-    title:'?',
-    num:null
-  });
-}
+// makeSorpresaPoster → src/view/components.js (Step 6a). Importado.
 
 // Para cortos individuales dentro de un film_list (no tienen objeto film completo)
 function getCortoItemPoster(item){
@@ -704,7 +659,7 @@ function lbLink(title,film){
 
 // SECTION_ORDER_LIST, FILM_CATEGORY_ORDER, FILM_CATEGORY_LABEL, SECTION_COLORS
 // → src/config.js (Step 1). Importados al top del módulo.
-function _sectionColor(sec){return SECTION_COLORS[sec]||'#2C2C2A';}
+// _sectionColor → src/view/components.js (Step 6a). Importado.
 // Detecta si un poster viene de una fuente editorial (imagen 16:9 del festival)
 // Usa el campo explícito posterSource si existe, si no, fallback a detección por URL.
 // Regla: nuevos festivales deben usar posterSource en el JSON — no depender de la URL.
@@ -752,102 +707,9 @@ function _posterThumb(f, cssClass, loading){
 }
 // Elimina el prefijo emoji de una sección (ej. "🎬 Competencia" → "Competencia")
 // NO elimina palabras — "U.S. Narrative Competition" se mantiene intacto
-function _secLabel(sec){
-  if(!sec) return '';
-  const first=sec.split(' ')[0];
-  const isEmoji=/^\p{Emoji}/u.test(first)&&!/^[A-Za-z0-9.]/u.test(first);
-  return isEmoji?sec.slice(first.length).trim():sec;
-}
-function _buildPosterV16({accent, headerLabel, title, num}){
-  // ── Motor de poster tipográfico v16 ──────────────────────────
-  // Sistema único para eventos, programas, sorpresa.
-  // Header sólido en accent (~52/180px) + body surf-2.
-  // Variante A (num!=null): título arriba + número en accent abajo.
-  // Variante B (num===null): título expande desde abajo.
-  // ─────────────────────────────────────────────────────────────
-  const VW=120,VH=180,HDR=52,PAD=8;
-
-  function wrap(str,maxCh){
-    if(!str)return[''];
-    const words=str.split(' '),lines=[];let cur='';
-    for(const w of words){if(cur&&(cur+' '+w).length>maxCh){lines.push(cur);cur=w;}else cur=cur?cur+' '+w:w;}
-    if(cur)lines.push(cur);return lines;
-  }
-
-  // Header label
-  const hLines=wrap(headerLabel||'',15);
-  const hFS=6.5,hLD=9;
-  const hTotalH=hLines.length*hLD;
-  const hStartY=(HDR-hTotalH)/2+hFS;
-  const headerText=hLines.map((l,i)=>
-    `<text x="${PAD}" y="${hStartY+i*hLD}" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="${hFS}" font-weight="800" letter-spacing="0.7" fill="#0A0A0A">${l}</text>`
-  ).join('');
-
-  // Body
-  let bodyContent='';
-  const cleanTitle=(title||'').replace(/\s+\d+\s*$/,'').trim();
-
-  if(num!==null&&num!==undefined){
-    // Variante A — número como elemento principal
-    const bodyH=VH-HDR;
-    const numFS=32;
-    const numY=HDR+(bodyH/2)+(numFS/3); // centrado vertical en el body
-    const titleText=cleanTitle
-      ? (()=>{
-          const tLines=wrap(cleanTitle,12);
-          const tFS=11,tLD=14;
-          return tLines.map((l,i)=>
-            `<text x="${PAD}" y="${HDR+PAD+tFS+i*tLD}" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="${tFS}" font-weight="800" letter-spacing="-0.3" fill="#F0EDE8">${l}</text>`
-          ).join('');
-        })()
-      : '';
-    bodyContent=titleText+`<text x="${VW/2}" y="${numY}" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="${numFS}" font-weight="800" letter-spacing="-1" fill="${accent}" text-anchor="middle">${num}</text>`;
-  } else {
-    // Variante B — título anclado abajo
-    const tLines=wrap(cleanTitle,12);
-    const tFS=11,tLD=14;
-    const totalH=tLines.length*tLD;
-    const startY=VH-PAD-totalH+tLD;
-    bodyContent=tLines.map((l,i)=>
-      `<text x="${PAD}" y="${startY+i*tLD}" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="${tFS}" font-weight="800" letter-spacing="-0.3" fill="#F0EDE8">${l}</text>`
-    ).join('');
-  }
-
-  const svg=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${VW} ${VH}">
-    <rect width="${VW}" height="${VH}" fill="#1A1A1A"/>
-    <rect width="${VW}" height="${HDR}" fill="${accent}"/>
-    ${headerText}
-    ${bodyContent}
-  </svg>`;
-  return `data:image/svg+xml,${encodeURIComponent(svg)}`;
-}
-function makeEventPoster(state,title,duration,eventKind,section){
-  const {_activeFestId, _lang} = state.snapshot();
-  const festCfg=(FESTIVAL_CONFIG&&FESTIVAL_CONFIG[_activeFestId])||Object.values(FESTIVAL_CONFIG||{})[0]||{};
-  const _kindMapES={
-    'ponencia':     {accent:'#F59E0B', headerLabel:'PONENCIA'},
-    'masterclass':  {accent:'#7F77DD', headerLabel:'MASTERCLASS'},
-    'encuentro':    {accent:'#378ADD', headerLabel:'ENCUENTRO'},
-    'cineconcierto':{accent:'#D85A30', headerLabel:'CINECONCIERTO'},
-    'awards':       {accent:'#BA7517', headerLabel:'AWARDS SCREENINGS'},
-  };
-  const _kindMapEN={
-    'ponencia':     {accent:'#F59E0B', headerLabel:'TALK'},
-    'masterclass':  {accent:'#7F77DD', headerLabel:'MASTERCLASS'},
-    'encuentro':    {accent:'#378ADD', headerLabel:'MEETING'},
-    'cineconcierto':{accent:'#D85A30', headerLabel:'FILM CONCERT'},
-    'awards':       {accent:'#BA7517', headerLabel:'AWARDS SCREENINGS'},
-  };
-  const _kindMap=_lang==='en'?_kindMapEN:_kindMapES;
-  const kind=_kindMap[eventKind];
-  if(kind) return _buildPosterV16({...kind, title, num:null});
-  // Fallback — usa la sección del film si existe, sino eventPosterLabel del config
-  const _secFallback=section?_secLabel(section):'';
-  const lbl=_secFallback?[_secFallback]:((festCfg.eventPosterLabel)||['EVENTO','']);
-  const headerLabel=lbl.filter(Boolean).join(' ');
-  const _sectionAccent=section?_sectionColor(section):'#6B9BD1';
-  return _buildPosterV16({accent:_sectionAccent||'#6B9BD1', headerLabel, title, num:null});
-}
+// _secLabel → src/view/components.js (Step 6a). Importado.
+// _buildPosterV16 → src/view/components.js (Step 6a). Importado.
+// makeEventPoster → src/view/components.js (Step 6a). Importado.
 
 // NOTICES, FESTIVAL_CONFIG → src/config.js (Step 1). Importados al top del
 // módulo. Festival-data como single source en config.js; aquí solo se consumen.
@@ -1116,29 +978,7 @@ async function signOutAndClose(){
 const LB_SVG=`<svg class="block-shrink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="13" height="13"><rect width="64" height="64" rx="9" fill="#2C3440"/><circle cx="21" cy="32" r="12" fill="#00B020" opacity=".9"/><circle cx="32" cy="32" r="12" fill="#3CBEDB" opacity=".85"/><circle cx="43" cy="32" r="12" fill="#FF8000" opacity=".9"/></svg>`;
 
 /* ── Lucide Icons — sistema de íconos Otrofestiv ── */
-const ICONS={
-  star:     `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>`,
-  starFill: `<svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>`,
-  heart:    `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"/></svg>`,
-  heartFill:`<svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"/></svg>`,
-  x:        `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>`,
-  check:    `<svg class="block-shrink" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>`,
-  undo:     `<svg class="block-shrink" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path stroke-linecap="round" stroke-linejoin="round" d="M9 15L3 9m0 0l6-6M3 9h12a6 6 0 010 12h-3"/></svg>`,
-  switch:   `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path stroke-linecap="round" stroke-linejoin="round" d="M7.5 21L3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5"/></svg>`,
-  plus:     `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/></svg>`,
-  clock:    `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>`,
-  play:     `<svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="5 3 19 12 5 21 5 3"/></svg>`,
-  calendar: `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5"/></svg>`,
-  alert:    `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z"/></svg>`,
-  chevronR: `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"/></svg>`,
-  chevronD: `<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>`,
-  share:    `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5"/></svg>`,
-  image:    `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"/></svg>`,
-  search:   `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"/></svg>`,
-  sparkles: `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z"/></svg>`,
-  checkCircle:`<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>`,
-  pin:      `<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>`,
-};
+// ICONS → src/view/components.js (Step 6a). Importado.
 
 // Festival date map
 
@@ -1290,7 +1130,7 @@ FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202605222006';
+const BUILD_VERSION='202605230609';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';
@@ -2092,7 +1932,7 @@ function _showModal(title,body,label,cb,cls,cancelLabel){
   m.addEventListener('click',e=>{if(e.target===m)m.remove();});
 }
 
-function isFullDayBlocked(day){return availability[day].blocks.some(b=>toMin(b.from)<=0&&toMin(b.to)>=toMin('23:59'));}
+// isFullDayBlocked → src/view/components.js (Step 6a). Importado.
 function checkPlanConflictsWithBlock(day, fromStr, toStr){
   if(!savedAgenda||!savedAgenda.schedule.length) return[];
   const bFrom=toMin(fromStr), bTo=toMin(toStr);
@@ -2367,32 +2207,7 @@ function confirmAvBlock(){
 }
 
 // Pure half (p6c)
-function renderAvBlocksHTML(state){
-  const {availability} = state.snapshot();
-  const items=[];
-  DAY_KEYS.forEach(day=>{
-    const lbl=(DAY_ABBR&&DAY_ABBR[day])||day.slice(0,3).toUpperCase();
-    const num=(DAY_NUM&&DAY_NUM[day])||'';
-    const fullBlocked=isFullDayBlocked(day);
-    const visible=availability[day]?.blocks.filter(b=>!(toMin(b.from)<=0&&toMin(b.to)>=toMin('23:59')))||[];
-    if(fullBlocked){
-      items.push(`<div class="av-block-item is-full">
-        <span class="av-block-day">${lbl} ${num}</span>
-        <span class="av-block-time">${t('av_todo_el_dia')}</span>
-        <button class="av-block-rm" data-action="toggleFullDay" data-day="${day}" title="Quitar">${ICONS.x}</button>
-      </div>`);
-    } else {
-      visible.forEach(b=>{
-        items.push(`<div class="av-block-item">
-          <span class="av-block-day">${lbl} ${num}</span>
-          <span class="av-block-time">${b.from} – ${b.to}</span>
-          <button class="av-block-rm" data-action="removeBlock" data-day="${day}" data-from="${b.from}" data-to="${b.to}" title="Quitar">${ICONS.x}</button>
-        </div>`);
-      });
-    }
-  });
-  return items.length?`<div class="av-block-list">${items.join('')}</div>`:'';
-}
+// renderAvBlocksHTML → src/view/components.js (Step 6a). Importado.
 // Impure caller (p6c)
 function renderAvBlocks(){
   const el=document.getElementById('av-blocks-list');
@@ -4093,137 +3908,7 @@ function forceInclude(title){
   renderAgenda();
 }
 
-function buildResultHTML(scenarios){
-  if(!scenarios||!scenarios.length)
-    return`<div class="ag-calc-prompt">${t('plan_sin_combos')} ${t('plan_anadir_titulos')}</div>`;
-  const{currentIdx}=cachedResult;
-  const sc=scenarios[currentIdx],n=scenarios.length;
-  const pending=[...watchlist].filter(t=>!watched.has(t)&&FILMS.some(f=>f.title===t&&!screeningPassed(f)));
-  const total=pending.length,ok=sc.schedule.length,bad=sc.excluded.length;
-  const isOptimo=currentIdx===0;
-
-  // ── Header: Plan óptimo vs Variación ──
-  const isCustom=sc._custom===true;
-  const planLabel=isOptimo?t('plan_optimo'):isCustom?t('av_opcion_pers'):'';
-
-  // ── Navigation ──
-  let navHtml='';
-  if(n>1){
-    const prevLabel=currentIdx<=1?`${ICONS.calendar} ${t('plan_optimo')}`:`${t('plan_variacion')} ${currentIdx-1}`;
-    const nextLabel=currentIdx===0?`${t('plan_variacion')} 1`:`${t('plan_variacion')} ${currentIdx+1}`;
-    // Dots: un botón por opción, activo destacado
-    // Escalable: generado desde scenarios.length sin hardcodear
-    const _algCount=cachedResult._algorithmCount||n;
-    const dots=scenarios.map((sc_,di)=>{
-      const isActive=di===currentIdx;
-      const isOptimoDot=di===0;
-      const isCustom=sc_._custom===true;
-      // Dot base: algoritmo=número, personalizado=✎ para distinguirlos
-      const cls=(isOptimoDot?'ag-nav-dot optimo':'ag-nav-dot')+(isActive?' active':'');
-      const label=isOptimoDot?'★':isCustom?'✎':(di).toString();
-      const titleStr=isOptimoDot?t('plan_optimo'):isCustom?'Opción personalizada':'Opción '+di;
-      return`<button class="${cls}" data-action="jumpToScenario" data-index="${di}" title="${titleStr}">${label}</button>`;
-    }).join('');
-    navHtml=`<div class="mt-2 ag-nav">${dots}</div>`;
-  }
-
-  const saveBtnHtml=`<button class="ag-save-btn" data-action="saveCurrentScenario">${ICONS.calendar} ${t('plan_usar_plan')}</button>`;
-  let html=`<div class="ag-summary">
-    <div class="ag-summary-title" style="font-size:var(--t-base);color:${isOptimo?'var(--white)':'var(--gray)'}">${planLabel} <span class="ml-1 count-badge cb-amber">${ok}/${total}</span></div>
-    ${bad?`<div class="tags-row ag-summary-text"><span class="txt-gray2-sm">${bad} ${t('plan_excluidos')}</span></div>`:''}
-    ${bad>0&&bad>=total?`<div class="ag-excl-note txt-gray2-sm">${t('plan_contexto_max')}</div>`:''}
-    ${sc.incompatiblePriorities?(()=>{
-      const pairs=sc.conflictingPriorityPairs||[];
-      const pairMsg=pairs.length
-        ?pairs.map(([a,b])=>{const{displayTitle:da}=parseProgramTitle(a);const{displayTitle:db}=parseProgramTitle(b);return`<span class="txt-white60">${da}</span> y <span class="txt-white60">${db}</span>`;}).join(', ')
-        :`algunas de tus ${t('misc_prioridades')}`;
-      return`<div class="ag-excl-incompat">${pairMsg} ${t('plan_solapan')} — revisá cuál querés priorizar.</div>`;
-    })():''}
-    ${navHtml}
-  </div>
-`;
-
-  // ── Film list by day ──
-  const byDay={};
-  sc.schedule.forEach(s=>{if(!byDay[s.day])byDay[s.day]=[];byDay[s.day].push(s);});
-  DAY_KEYS.forEach(day=>{
-    const films=byDay[day];if(!films||!films.length) return;
-    html+=`<div class="ag-day-label"><span class="ag-day-name">${dayChip(day)}</span><span class="count-badge cb-neutral">${films.length}</span></div>`;
-    films.forEach((s,i)=>{
-      if(i>0){const warn=travelWarn(films[i-1],s);if(warn) html+=`<div class="ag-warn">${warn}</div>`;}
-      html+=mkAgendaRow(s,'scenario');
-    });
-  });
-
-  // ── Películas no incluidas — lista con razón + botón Incluir ────────
-  if(sc.excluded.length){
-    const _excItems=sc.excluded.map(excTitle=>{
-      const t_=excTitle; // alias para no pisar t() i18n
-      const{displayTitle:dt}=parseProgramTitle(excTitle);
-      const f=FILMS.find(fi=>fi.title===excTitle);
-      const poster=f?getFilmPoster(f):null;
-      const secLabel=f?_secLabel(f.section||''):'';
-      const safeT=excTitle.replace(/'/g,"&#39;");
-      const posterHtml=_posterThumb(f,'int-item-poster');
-      // Detectar razón usando screensConflict contra el schedule activo
-      const screens=FILMS.filter(fi=>fi.title===excTitle&&!screeningPassed(fi)&&!isScreeningBlocked(fi));
-      let reason='',canInclude=false;
-      if(!screens.length){
-        reason=`<div class="excl-reason">${t('empty_sin_funciones')}</div>`;
-      } else {
-        // Buscar conflicto con el schedule actual
-        let conflictWith=null,conflictWhen=null;
-        for(const s of screens){
-          for(const c of sc.schedule){
-            if(screensConflict(s,c)){
-              const{displayTitle:ct}=parseProgramTitle(c._title||'');
-              conflictWith=ct;
-              const _ds=dayLabel(c.day)||c.day||'';
-              conflictWhen=_ds+(c.time?' '+c.time:'');
-              break;
-            }
-          }
-          if(conflictWith) break;
-        }
-        if(conflictWith){
-          reason=`<div class="excl-reason conflict">Choca con ${conflictWith}${conflictWhen?' · '+conflictWhen:''}</div>`;
-          canInclude=true;
-        } else if(screens.length){
-          reason=`<div class="excl-reason">${t('plan_choca')}</div>`;
-        } else {
-          reason=`<div class="excl-reason">${t('empty_sin_funciones')}</div>`;
-        }
-      }
-      const includeBtn=canInclude
-        ?`<button class="excl-include-btn" data-action="forceInclude" data-title="${safeT}" data-stop="1">+ Incluir</button>`
-        :'';
-      const opacity=!screens.length?'opacity:.45;':'';
-      return`<div class="int-item js-open-pel" style="${opacity}" data-title="${f.title}">
-        ${posterHtml}
-        <div class="int-item-info">
-          <div class="int-item-title">${dt}</div>
-          <div class="int-item-sec">${flagFmt(f?.flags)||''}${flagFmt(f?.flags)?' ':''} ${secLabel}</div>
-          ${reason}
-        </div>
-        ${includeBtn}
-      </div>`;
-    }).join('');
-    html+=`<div class="pad-flush ag-excl-block">
-      <div class="pad-sm ag-excl-eyebrow">
-        <span class="ag-excl-label">${t('plan_no_incluidas')}</span>
-        <span class="count-badge cb-neutral">${sc.excluded.length}</span>
-      </div>
-      ${_excItems}
-    </div>`;
-  }
-
-  // ── CTA repetido al final — patrón UX formulario largo ──
-  html+=`<div class="mt-4 ag-summary">
-    ${navHtml}
-    <div style="margin-top:${navHtml?'var(--sp-3)':'0'}">${saveBtnHtml}</div>
-  </div>`;
-  return html;
-}
+// buildResultHTML → src/view/components.js (Step 6a). Importado.
 
 
 // ═══════════════════════════════════════════════════════════════
@@ -4844,31 +4529,7 @@ function jumpToScenario(idx){
 }
 
 
-function renderFlowProgress(state,activeTab){
-  // activeTab: qué tab está activo ahora ('cartelera'|'seleccion'|'planner'|'miplan')
-  // Paso activo = tab actual. ✓ solo cuando hay plan guardado.
-  // Escalable: misma lógica para cualquier festival.
-  const {savedAgenda} = state.snapshot();
-  const hasPlan=savedAgenda&&savedAgenda.schedule&&savedAgenda.schedule.length>0;
-  const tabStep={'cartelera':0,'seleccion':1,'planner':2,'miplan':3};
-  const currentStep=tabStep[activeTab]||1;
-
-  const mkStep=(n,label)=>{
-    const isDone=hasPlan&&n<3;  // ✓ solo cuando plan guardado
-    const isActive=n===currentStep;
-    const cls=`flow-step${isDone?' done':isActive?' active':''}`;
-    const dotContent=isDone?'✓':n.toString();
-    return`<div class="${cls}"><div class="flow-step-dot">${dotContent}</div><span>${label}</span></div>`;
-  };
-
-  return`<div class="flow-progress">
-    ${mkStep(1,t('nav_intereses'))}
-    <div class="flow-step-sep"></div>
-    ${mkStep(2,t('nav_planear'))}
-    <div class="flow-step-sep"></div>
-    ${mkStep(3,t('nav_miplan'))}
-  </div>`;
-}
+// renderFlowProgress → src/view/components.js (Step 6a). Importado.
 // _scrollMiPlanToNow — auto-scroll del calendario de Mi Plan al tiempo actual.
 // Se llama después del render, usa requestAnimationFrame para esperar el paint.
 // Solo actúa cuando el festival está en curso (nowDayIdx >= 0).
@@ -5122,8 +4783,8 @@ const dtabs=document.getElementById('dtabs');
 // DAYS, DAY_ABBR, DAY_NUM — populated by loadFestival(), never hardcoded aquí.
 // El glitch de los días de FICCI apareciendo brevemente era causado por este bloque.
 const DAYS=[];
-const DAY_ABBR={};
-const DAY_NUM ={};
+// DAY_ABBR → src/view/components.js (Step 6a). Importado.
+// DAY_NUM → src/view/components.js (Step 6a). Importado.
 
 // Auto-posicionar en el primer día vigente al cargar
 // Los días pasados siguen accesibles con scroll hacia la izquierda
@@ -5156,28 +4817,12 @@ function updateHorarioPrioBtn(title){
 /* ── RATING SHEET ── */
 let _ratingTitle='';
 
-function starSVG(fill){
-  // fill: 'none' | 'half' | 'full'
-  const id='rs'+Math.random().toString(36).slice(2,6);
-  const grad=fill==='half'
-    ?`<defs><linearGradient id="${id}"><stop offset="50%" stop-color="var(--amber)"/><stop offset="50%" stop-color="transparent"/></linearGradient></defs>`
-    :'';
-  const fillVal=fill==='none'?'none':fill==='full'?'var(--amber)':`url(#${id})`;
-  const stroke=fill==='none'?'var(--gray)':'var(--amber)';
-  return`<svg class="block-shrink" width="28" height="28" viewBox="0 0 24 24">${grad}<polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" fill="${fillVal}" stroke="${stroke}" stroke-width="1.75" stroke-linejoin="round"/></svg>`;
-}
+// starSVG → src/view/components.js (Step 6a). Importado.
 
 // Pure half (p6b): construye el HTML de 5 estrellas según el rating actual.
 // state param incluido por uniformidad — esta vista no lee state, todo viene
 // del parámetro `current`.
-function renderRatingStarsHTML(state, current){
-  let html='';
-  for(let i=1;i<=5;i++){
-    const fill=current>=i?'full':current>=i-0.5?'half':'none';
-    html+=`<div class="touch-44">${starSVG(fill)}</div>`;
-  }
-  return html;
-}
+// renderRatingStarsHTML → src/view/components.js (Step 6a). Importado.
 // Impure caller (p6b): commit a DOM
 function renderRatingStars(current){
   const el=document.getElementById('rating-stars');
@@ -6604,39 +6249,13 @@ function toggleSplashDropdown(){
 
 // ── Genera el splash dropdown y el festival selector desde FESTIVAL_CONFIG ──
 // Agregar un festival = una entrada en FESTIVAL_CONFIG. Nada más que tocar.
-const CHECK_SVG=`<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>`;
+// CHECK_SVG → src/view/components.js (Step 6a). Importado.
 // _classifyFestival — fuente única de verdad para el estado temporal de un festival.
 // Usada en splash, sheet, y cualquier contexto futuro.
 // Retorna: 'ongoing' | 'upcoming' | 'past'
-function _classifyFestival(cfg){
-  const now=new Date();
-  const start=cfg.festivalStartStr?new Date(cfg.festivalStartStr):null;
-  const end=cfg.festivalEndStr?new Date(cfg.festivalEndStr):null;
-  if(!end) return 'upcoming';          // sin fecha de cierre → tratar como próximo
-  if(now>end) return 'past';           // ya terminó
-  if(start&&now<start) return 'upcoming'; // aún no empieza
-  return 'ongoing';                    // entre start y end → en curso
-}
+// _classifyFestival → src/view/components.js (Step 6a). Importado.
 
-function _sortFestivals(entries, activeFestId){
-  const _tier=([id,cfg])=>{
-    if(id===activeFestId) return 0;
-    const cls=_classifyFestival(cfg);
-    if(cls==='ongoing')  return 1;
-    if(cls==='upcoming') return 2;
-    return 3; // past
-  };
-  return entries.sort((a,b)=>{
-    const ta=_tier(a),tb=_tier(b);
-    if(ta!==tb) return ta-tb;
-    // ongoing: termina antes primero
-    if(ta===1) return new Date(a[1].festivalEndStr||0)-new Date(b[1].festivalEndStr||0);
-    // upcoming: empieza antes primero
-    if(ta===2) return new Date(a[1].festivalStartStr||'2099-01-01')-new Date(b[1].festivalStartStr||'2099-01-01');
-    // past: más reciente primero
-    return new Date(b[1].festivalEndStr||0)-new Date(a[1].festivalEndStr||0);
-  });
-}
+// _sortFestivals → src/view/components.js (Step 6a). Importado.
 // Toggle colapso/expansión de festival pasado en el dropdown del splash.
 // Al expandir muestra metadata completa y hace el item seleccionable.
 // Al colapsar vuelve al estado condensado.
@@ -6648,36 +6267,7 @@ function _togglePastFest(btn, name, meta, id){
 }
 
 // Pure half (p6b) — HTML del dropdown list
-function _renderSplashDropdownHTML(state, activeFestId){
-  const {_lang} = state.snapshot();
-  const entries=_sortFestivals(Object.entries(FESTIVAL_CONFIG)
-    .filter(([,cfg])=>cfg.name&&cfg.group!=='test'), activeFestId);
-  const chevSvg=`<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>`;
-  // Clasificar en tres grupos usando la fuente única de verdad
-  const ongoing  = entries.filter(([,cfg])=>_classifyFestival(cfg)==='ongoing');
-  const upcoming = entries.filter(([,cfg])=>_classifyFestival(cfg)==='upcoming');
-  const past     = entries.filter(([,cfg])=>_classifyFestival(cfg)==='past');
-  const mkItem=([id,cfg])=>{
-    const isActive=id===activeFestId;
-    const meta=`${cfg.city} · ${_lang==='en'&&cfg.dates_en?cfg.dates_en:cfg.dates} ${cfg.year||''}`.trim();
-    return`<button class="splash-drop-item${isActive?' selected':''}" data-fest="${id}" role="option" aria-selected="${isActive}" data-action="selectSplashFest" data-name="${cfg.name}" data-meta="${meta}">
-      <div><div class="splash-drop-item-name">${cfg.name}</div><div class="splash-drop-item-meta">${meta}</div></div>
-    </button>`;
-  };
-  const mkPastItem=([id,cfg])=>{
-    const meta=`${cfg.city} · ${_lang==='en'&&cfg.dates_en?cfg.dates_en:cfg.dates} ${cfg.year||''}`.trim();
-    const shortLabel=(cfg.shortName||cfg.name.split(' ')[0])+' · '+cfg.year;
-    return`<button class="splash-drop-item past" data-fest="${id}" role="option" aria-selected="false" data-action="_togglePastFest">
-      <div><div class="splash-drop-item-name">${shortLabel}</div><div class="splash-drop-item-meta">${meta}</div></div>
-      <span class="past-item-chev">${chevSvg}</span>
-    </button>`;
-  };
-  let html='';
-  if(ongoing.length)  html+=`<div class="splash-drop-sep">${t('fs_en_curso')}</div>`+ongoing.map(mkItem).join('');
-  if(upcoming.length) html+=`<div class="splash-drop-sep">${t('fs_proximos')}</div>`+upcoming.map(mkItem).join('');
-  if(past.length)     html+=`<div class="splash-drop-sep">${t('splash_anteriores')}</div>`+past.map(mkPastItem).join('');
-  return html;
-}
+// _renderSplashDropdownHTML → src/view/components.js (Step 6a). Importado.
 // Impure caller (p6b) — DOM mutations en 3 elementos del splash
 function _renderSplashDropdown(activeFestId){
   const dd=document.getElementById('splash-dropdown');
@@ -6709,46 +6299,7 @@ function _togglePastFestRow(row, id){
 }
 
 // Pure half (p6b) — HTML del festival selector list
-function _renderFestivalSelectorHTML(state, activeFestId){
-  const {_lang} = state.snapshot();
-  const entries=_sortFestivals(Object.entries(FESTIVAL_CONFIG)
-    .filter(([,cfg])=>cfg.name&&cfg.group!=='test'), activeFestId);
-  const chevSvg=`<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>`;
-  // Clasificar en tres grupos — fuente única de verdad
-  const ongoing  = entries.filter(([,cfg])=>_classifyFestival(cfg)==='ongoing');
-  const upcoming = entries.filter(([,cfg])=>_classifyFestival(cfg)==='upcoming');
-  const past     = entries.filter(([,cfg])=>_classifyFestival(cfg)==='past');
-  function mkRow([id,cfg]){
-    const isActive=id===activeFestId;
-    const meta=`${cfg.city} · ${_lang==='en'&&cfg.dates_en?cfg.dates_en:cfg.dates} ${cfg.year||''}`.trim();
-    const dotClass=`fs-fest-dot${isActive?' active':''}`;
-    return`<div class="fs-festival-row" data-fest="${id}" data-action="loadFestival">
-      <div class="${dotClass}"></div>
-      <div class="fs-fest-info">
-        <div class="fs-fest-name">${cfg.name}</div>
-        <div class="fs-fest-meta">${meta}</div>
-      </div>
-      <div class="fs-fest-check" style="display:${isActive?'':'none'}">${CHECK_SVG}</div>
-    </div>`;
-  }
-  function mkPastRow([id,cfg]){
-    const meta=`${cfg.city} · ${_lang==='en'&&cfg.dates_en?cfg.dates_en:cfg.dates} ${cfg.year||''}`.trim();
-    const shortLabel=(cfg.shortName||cfg.name.split(' ')[0])+' · '+cfg.year;
-    return`<div class="fs-festival-row past" data-fest="${id}">
-      <div class="fs-fest-dot past"></div>
-      <div class="fs-fest-info" data-action="loadFestival" data-fest="${id}" style="cursor:pointer;flex:1;min-width:0">
-        <div class="fs-fest-name">${shortLabel}</div>
-        <div class="fs-fest-meta">${meta}</div>
-      </div>
-      <span class="fs-past-chev" data-action="_togglePastFestRow" data-fest="${id}" style="padding:var(--sp-2);margin:-var(--sp-2);-webkit-tap-highlight-color:transparent">${chevSvg}</span>
-    </div>`;
-  }
-  let html='';
-  if(ongoing.length)  html+=`<div class="fs-section-lbl">${t('fs_en_curso')}</div>`+ongoing.map(mkRow).join('<div class="fs-divider"></div>');
-  if(upcoming.length) html+=`<div class="fs-section-lbl">${t('fs_proximos')}</div>`+upcoming.map(mkRow).join('<div class="fs-divider"></div>');
-  if(past.length)     html+=`<div class="fs-section-lbl">${t('splash_anteriores')}</div>`+past.map(mkPastRow).join('<div class="fs-divider"></div>');
-  return html;
-}
+// _renderFestivalSelectorHTML → src/view/components.js (Step 6a). Importado.
 // Impure caller (p6b) — DOM mutation. Preserva el doble innerHTML= pre-existente
 // (bug benign — escribe el mismo valor dos veces, sin efecto observable)
 function _renderFestivalSelector(activeFestId){
