@@ -61,6 +61,14 @@ import {
   renderProgramaChipsHTML, renderNoticesBanner,
 } from './view/programa.js';
 
+// ── Step 6e: view/helpers.js — shared view helpers (posters, labels, formato).
+//   Lets DAY_SHORT/_EN/_CUSTOM_N/_POSTERS_N viven allá (module-owned); main.js
+//   los re-popula vía setters. ──────────────────────────────────────────────
+import {
+  _posterStyle, getPosterSrc, getFilmPoster, getCortoItemPoster, _getItemPoster, _isEditorialPoster, _posterThumb, isNowShowing, isToday, vcfg, sala, travelWarn, mplanEndStr, mplanBlockType, dayChip, dayLabel, _lblLocalized, durFmt, flagFmt, _langDates, _mkCortoItemHtml, starsText, _dayChips, _metaBadges, _programaStack, _plistPosterHtml, DAY_SHORT_EN,
+  setDayShort, setDayShortEn, setPosters, setCustomPosters,
+} from './view/helpers.js';
+
 // storage (adapter de localStorage) → src/storage/storage.js (Step 3).
 // Importado al top del módulo. Usa FESTIVAL_STORAGE_KEY vía el STATE BRIDGE.
 
@@ -377,7 +385,6 @@ document.addEventListener('click', function(e) {
 // se muestra en el idioma en que está escrito en el JSON del festival.
 // _I18N (diccionarios es/en) → src/i18n/i18n.js (Step 4). Importado.
 
-
 _lang = (()=>{
   const saved = storage.getLang();
   if(saved && _I18N[saved]) return saved;
@@ -455,7 +462,6 @@ FESTIVAL_TRANSPORT='transit';
    TMDB_API_KEY en scripts/enrich-festival.py (no commit al repo público).
    Rotar key en: https://www.themoviedb.org/settings/api */
 const TMDB_API_KEY='';
-
 
 /* ── POSTER GENERATIVO — identidad Otrofestiv para programas ──────────
    REGLA CANÓNICA — nunca romper sin justificación explícita:
@@ -562,19 +568,8 @@ function _buildPosterSVG(o){
    REGLA: NUNCA acceder POSTERS/CUSTOM_POSTERS directamente
    en templates — siempre usar getPosterSrc(title, isCortos).
 ══════════════════════════════════════════════════════ */
-const normKey = s => s.replace(/[\u2018\u2019\u201A\u201B\u2032\u02BC]/g, "'");
 
 // Pre-normalizar claves de los tres diccionarios al cargar
-let _CUSTOM_N = {};
-let _POSTERS_N = Object.fromEntries(Object.entries(POSTERS).map(([k,v])=>[normKey(k),v]));
-
-function getPosterSrc(title, isCortos, section){
-  const t = normKey(title);
-  if(_CUSTOM_N[t]) return _CUSTOM_N[t];
-  if(_POSTERS_N[t]) return (_POSTERS_N[t].startsWith('http')||_POSTERS_N[t].startsWith('/assets/'))?_POSTERS_N[t]:TMDB_IMG+_POSTERS_N[t];
-  if(isCortos) return null;
-  return null;
-}
 
 // ═══════════════════════════════════════════════════════════════
 // FUENTE ÚNICA DE VERDAD — getFilmPoster(f)
@@ -592,56 +587,13 @@ function getPosterSrc(title, isCortos, section){
 // ═══════════════════════════════════════════════════════════════
 // Devuelve inline style para object-position cuando el film tiene posterPosition != 'center'
 // Aplica solo a imágenes editoriales 16:9 que necesitan crop ajustado
-function _posterStyle(f){
-  const pos=f&&f.posterPosition;
-  return (pos&&pos!=='center')?` style="object-position:${pos}"`:'';
-}
-function getFilmPoster(f){
-  if(!f) return null;
-  // 1. Custom poster siempre primero
-  const _cn=normKey(f.title||'');
-  if(_CUSTOM_N[_cn]) return _CUSTOM_N[_cn];
-  // 2. Eventos — siempre poster ámbar generativo (ignora f.poster/TMDB)
-  if(f.type==='event'){const _et=f.is_awards_screening?f.title.replace(/^Award Screening:\s*/i,''):f.title;return f.poster||makeEventPoster(state,_et,f.duration,f.event_kind,f.section);}
-  // 3. Proyección sorpresa
-  if(f.title&&f.title.toLowerCase().includes('sorpresa')) return makeSorpresaPoster();
-  // 4. Cortos
-  if(f.is_cortos) return f.poster||getPosterSrc(f.title,true)||makeProgramPoster(state,f.title,f.duration,f.section);
-  // 5. Programa combinado
-  if(f.is_programa&&f.film_list&&f.film_list.length){
-    const first=f.film_list[0];
-    if(first.poster) return (first.poster.startsWith('http')||first.poster.startsWith('/assets/'))?first.poster:TMDB_IMG+first.poster;
-    return getPosterSrc(first.title||first,false)||getPosterSrc(f.title,false)||null;
-  }
-  // 6. TMDB — poster real (prioridad sobre editorial cloudfront)
-  const _tmdb=getPosterSrc(f.title,false);
-  if(_tmdb) return _tmdb;
-  // 7. f.poster directo — editorial cloudfront o formato Jardín 2026
-  if(f.poster) return (f.poster.startsWith('http')||f.poster.startsWith('/assets/'))?f.poster:TMDB_IMG+f.poster;
-  // 8. Poster generativo
-  return _buildPosterV16({
-    accent: _sectionColor(f.section||''),
-    headerLabel: _secLabel(f.section||'')||'TRIBECA',
-    title: f.title,
-    num: null
-  });
-}
+
 // makeSorpresaPoster → src/view/components.js (Step 6a). Importado.
 
 // Para cortos individuales dentro de un film_list (no tienen objeto film completo)
-function getCortoItemPoster(item){
-  if(!item) return null;
-  // Nuevo formato (Jardín 2026+): poster directo en el objeto
-  if(item.poster) return (item.poster.startsWith('http')||item.poster.startsWith('/assets/'))?item.poster:TMDB_IMG+item.poster;
-  return getPosterSrc(item.title,true)||null;
-}
+
 // Poster de film_list item de largometraje (is_programa).
 // No genera placeholder — devuelve null si no hay poster real.
-function _getItemPoster(item){
-  if(!item) return '';
-  if(item.poster) return (item.poster.startsWith('http')||item.poster.startsWith('/assets/'))?item.poster:TMDB_IMG+item.poster;
-  return getPosterSrc((item.title||item),false)||'';
-}
 
 // ═══════════════════════════════════════════════════════════════
 // 2 · SISTEMA DE ÍCONOS
@@ -681,14 +633,6 @@ function lbLink(title,film){
 // Detecta si un poster viene de una fuente editorial (imagen 16:9 del festival)
 // Usa el campo explícito posterSource si existe, si no, fallback a detección por URL.
 // Regla: nuevos festivales deben usar posterSource en el JSON — no depender de la URL.
-function _isEditorialPoster(f){
-  if(!f) return false;
-  if(f.posterSource==='editorial') return true;
-  if(f.posterSource==='tmdb'||f.posterSource==='custom') return false;
-  // Si hay poster TMDB validado, no es editorial — son formatos incompatibles (portrait vs 16:9)
-  if(_POSTERS_N&&_POSTERS_N[normKey(f.title||'')]) return false;
-  return !!(f.poster&&f.poster.includes('cloudfront.net'));
-}
 
 // ── _posterThumb ─────────────────────────────────────────────────────────────
 // FUENTE ÚNICA DE VERDAD para posters en contexto lista/thumbnail.
@@ -700,29 +644,7 @@ function _isEditorialPoster(f){
 // loading:   'lazy' (default) | 'eager'
 // Nota (p7c-4): se eliminó el param onclickJs — los call sites que necesitan
 // abrir una sheet usan el mecanismo js-open-pel (clase + data-title).
-function _posterThumb(f, cssClass, loading){
-  const p = f ? getFilmPoster(f) : null;
-  const _load = loading || 'lazy';
 
-  if(!p){
-    return `<div class="${cssClass}"></div>`;
-  }
-
-  if(f && _isEditorialPoster(f)){
-    const color = _sectionColor(f.section || '');
-    // Misma estructura que .poster-card.editorial en Programa Grid:
-    // band (28.89%) + div flex:1 con img cover center-top
-    return `<div class="${cssClass} ${cssClass}-ed" style="background:${color}">`
-      + `<div style="height:28.89%;flex-shrink:0"></div>`
-      + `<div style="flex:1;overflow:hidden;min-height:0">`
-      + `<img src="${p}" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block" loading="${_load}" onerror="this.remove()" alt="">`
-      + `</div>`
-      + `</div>`;
-  }
-
-  const _posStyle = _posterStyle(f);
-  return `<img class="${cssClass}" src="${p}" loading="${_load}"${_posStyle} onerror="this.remove()" alt="">`;
-}
 // Elimina el prefijo emoji de una sección (ej. "🎬 Competencia" → "Competencia")
 // NO elimina palabras — "U.S. Narrative Competition" se mantiene intacto
 // _secLabel → src/view/components.js (Step 6a). Importado.
@@ -1022,20 +944,6 @@ FESTIVAL_END=new Date('2026-04-20T02:00:00');
 // Si no hay films del día (o day no existe en FESTIVAL_DATES) → retorna false.
 // Main-thread only — usado en render de chips de día y línea "now" del agenda.
 // dayFullyPassed → src/domain/time.js (Step 5). Importado.
-function isNowShowing(f){
-  const dateStr=FESTIVAL_DATES[f.day];if(!dateStr) return false;
-  const now=simNow();
-  const start=_festDate(dateStr,f.time);
-  const dur=f.duration?parseInt(f.duration):90;
-  const end=new Date(start.getTime()+dur*60000);
-  return now>=start&&now<=end;
-}
-function isToday(day){
-  const dateStr=FESTIVAL_DATES[day];
-  if(!dateStr) return false;
-  const today=simTodayStr();
-  return dateStr===today;
-}
 
 // VENUES → src/config.js (Step 1). Importado al top del módulo.
 
@@ -1052,11 +960,7 @@ function isToday(day){
 //   (ej: "Sala A Mejorada" gana sobre "Sala A").
 // _resolveVenue → src/domain/festival.js (Step 5). Importado.
 // venueTravelMins → src/domain/festival.js (Step 5). Importado.
-function vcfg(v){
-  const festVenues=(FESTIVAL_CONFIG[_activeFestId]||{}).venues||{};
-  return _resolveVenue(v,festVenues);
-}
-function sala(v){const m=v.match(/Sala\s*(\d+)/)||v.match(/Sal[oó]n\s*(\d+)/i);return m?'Sala '+m[1]:'';}
+
 /* ── UTILS: tiempo, fecha, duración ─────────────────────────────────── */
 // toMin → src/domain/time.js (Step 5). Importado.
 // parseDur → src/domain/time.js (Step 5). Importado.
@@ -1079,17 +983,6 @@ function sala(v){const m=v.match(/Sala\s*(\d+)/)||v.match(/Sal[oó]n\s*(\d+)/i);
 //   entre el fin de una y el inicio de la otra.
 // screensConflict → src/domain/schedule.js (Step 5). Importado.
 // travelMins → src/domain/festival.js (Step 5). Importado.
-function travelWarn(s1,s2){
-  if(s1.day!==s2.day) return null;
-  const travel=travelMins(s1.venue,s2.venue);
-  if(travel===0) return null;
-  const gap=toMin(s2.time)-(toMin(s1.time)+parseDur(s1.duration));
-  if(gap<travel+10){
-    const _modo=FESTIVAL_TRANSPORT==='walking'?t('warn_a_pie'):FESTIVAL_TRANSPORT==='transit'?null:t('warn_en_carro');
-    return`${ICONS.alert} ~${travel} min${_modo?' '+_modo:''} ${t('warn_entre_sedes')}`;
-  }
-  return null;
-}
 
 // Normalize text for accent-insensitive search
 function normalize(str){
@@ -1107,7 +1000,6 @@ function normTitle(t){
     .replace(/[‘’ʼʹ]/g,"'")  // comillas simples tipográficas → '
     .replace(/[“”«»]/g,'"');  // comillas dobles tipográficas → "
 }
-
 
 // ═══════════════════════════════════════════════════════════════
 // 5 · ESTADO GLOBAL
@@ -1128,7 +1020,7 @@ FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202605230741';
+const BUILD_VERSION='202605230952';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';
@@ -1199,22 +1091,10 @@ availability={
   'Viernes':{blocks:[]},'Sábado':{blocks:[]},'Domingo':{blocks:[]}
 };
 
-
 // ═══════════════════════════════════════════════════════════════
 // 6 · MI PLAN — HELPERS & RENDER
 //     mplanPx, mplanPct, renderMiPlanCalendar, selectMiPlanDay
 // ═══════════════════════════════════════════════════════════════
-
-function mplanEndStr(t,d){const m=toMin(t)+d;return String(Math.floor(m/60)%24).padStart(2,'0')+':'+String(m%60).padStart(2,'0');}
-
-function mplanBlockType(s){
-  const f=FILMS.find(fi=>fi.title===s._title);
-  if(f&&f.type==='event') return'mp-event';
-  if(prioritized.has(s._title)) return'mp-priority';
-  if(f&&f.is_cortos) return'mp-program';
-  return'mp-regular';
-}
-
 
 // REGLA: scroll a mplan-detail — mide el topbar directamente del DOM,
 // no depende de --tb-total (incorrecto en mobile por incluir nav inferior).
@@ -1465,7 +1345,6 @@ function renderMiPlanCalendar(state){
   </div>`
 }
 
-
 // ═══════════════════════════════════════════════════════════════
 // 7 · PERSISTENCIA
 //     loadState, saveWL, saveWatched, saveAV, saveSavedAgenda
@@ -1621,7 +1500,6 @@ function saveState(...keys){
   if(all||keys.includes('lastslot'))saveLastSlot();
 }
 
-
 function updateAgTab(){
   // Count: in watchlist, not watched, and has future screenings
   const future=[...watchlist].filter(t=>{
@@ -1631,7 +1509,6 @@ function updateAgTab(){
   const el=document.getElementById('ag-cnt');if(el) el.textContent=future.length;
   const tab=document.getElementById('agtab');if(tab) tab.classList.toggle('on',activeView==='agenda');
 }
-
 
 // ═══════════════════════════════════════════════════════════════
 // 8 · EVENT HANDLERS — MI LISTA
@@ -1858,37 +1735,21 @@ function addSuggestion(title,day,time){
      Uso: separadores de lista, etiquetas de sección
      Corto: DAY_SHORT[key] → 'MAR 14'    (.saved-day-lbl, .ag-day-name, .suggestion-day-lbl)
 
-
    FUENTE: todo deriva de DAYS[] (definido en el bloque de render de tabs)
 ══════════════════════════════════════════════════════ */
 let DAY_KEYS =['Martes','Miércoles','Jueves','Viernes','Sábado','Domingo'];
-let DAY_SHORT={Martes:'MAR 14',    Miércoles:'MIÉ 15',    Jueves:'JUE 16',
-                 Viernes:'VIE 17',   Sábado:'SÁB 18',       Domingo:'DOM 19'};
-let DAY_SHORT_EN={}; // swapeado por loadFestival() — valores en inglés
 
+ // swapeado por loadFestival() — valores en inglés
 
 /* dayChip(key) — componente apilado: ABREV arriba / NÚMERO abajo — FORMATO ÚNICO */
-const dayChip = key => {
-  const _ds = _lang==='en' ? DAY_SHORT_EN : DAY_SHORT;
-  const abr = (_lang==='en' ? (_ds[key]||'').split(' ')[0] : null) || DAY_ABBR[key] || (_ds[key]||'').split(' ')[0] || key;
-  const num = DAY_NUM[key]  || (_ds[key]||'').split(' ')[1] || '';
-  return `<span class="day-chip-abr">${abr}</span><span class="day-chip-num">${num}</span>`;
-};
+
 /* dayLabel/dayHeader — mantenidos para compatibilidad, internamente usan dayChip */
-const dayLabel  = key => (_lang==='en' ? DAY_SHORT_EN : DAY_SHORT)[key] || key;
+
 /* _lblLocalized: traduce abreviación de día al idioma activo.
    Resuelve el caso donde lbl viene en inglés (ej. Tribeca: 'WED')
    y el usuario está en español → debe mostrar 'MIÉ'. */
-const _EN_TO_I18N = {MON:'day_short_lun',TUE:'day_short_mar',WED:'day_short_mie',
-                     THU:'day_short_jue',FRI:'day_short_vie',SAT:'day_short_sab',SUN:'day_short_dom'};
-const _lblLocalized = lbl => {
-  if(_lang==='en') return lbl;
-  const key = _EN_TO_I18N[lbl];
-  return key ? t(key) : lbl;
-};
-const durFmt    = d   => d ? (String(d).includes('min') ? String(d) : String(d)+' min') : '';
+
 const _isoToFlag = c  => c&&c.length===2 ? String.fromCodePoint(0x1F1E6+c.toUpperCase().charCodeAt(0)-65)+String.fromCodePoint(0x1F1E6+c.toUpperCase().charCodeAt(1)-65) : '';
-const flagFmt   = fl  => fl||'';
 
 /* ══════════════════════════════════════════════════════
    emptyState(icon, title, sub) — componente vacío unificado
@@ -2071,7 +1932,6 @@ function renderAvDay(day){
   }
 }
 
-
 /* ── DISPONIBILIDAD — nueva UI ──────────────────────────────────── */
 let _avSheetType='hours';
 let _avSheetDay=null;
@@ -2223,7 +2083,6 @@ function renderAvBlocks(){
 // En _SCHED_PURE_FNS: el worker la consume vía .toString().
 // sortScreensByStrategy → src/domain/schedule.js (Step 5). Importado.
 
-
 // ═══════════════════════════════════════════════════════════════
 // 10 · LÓGICA DE NEGOCIO
 //      computeScenarios (MRV+backtracking), getSuggestions
@@ -2361,7 +2220,6 @@ function getSuggestions(){
 // Utility: extraer displayTitle y progSuffix de cualquier título de programa
 // parseProgramTitle → src/view/components.js (Step 6b). Importado.
 
-
 // _genreEN(g) — traduce género al idioma activo
 // Opera sobre strings compuestos: "Comedia, Drama" → "Comedy, Drama"
 const _GENRE_EN = {
@@ -2380,9 +2238,6 @@ function _genreEN(g) {
 // EN: title_en como principal, title como original (solo si difieren)
 // ES: title siempre, sin secundario
 // _langDates(cfg) — devuelve fechas en el idioma activo
-function _langDates(cfg) {
-  return (_lang==='en' && cfg && cfg.dates_en) ? cfg.dates_en : (cfg && cfg.dates)||'';
-}
 
 function filmDisplayTitle(f) {
   if (_lang === 'en' && f.title_en && f.title_en !== f.title) {
@@ -2390,7 +2245,6 @@ function filmDisplayTitle(f) {
   }
   return { main: f.title, original: null };
 }
-
 
 // ═══════════════════════════════════════════════════════════════
 // 11 · RENDER — MI AGENDA
@@ -2621,7 +2475,6 @@ function _rerenderFilmList(){
   },0);
 }
 
-
 // ── RENDER SAVED AGENDA ──
 // ── Componente unificado: fila de función en agenda ──
 // mode='saved'    → ✕ quita de agenda guardada
@@ -2682,7 +2535,6 @@ function mkAgendaRow(s, mode='saved'){
   </div>${_progList}${altsHtml?`<div class="film-alts">${altsHtml}</div>`:''}`;
 }
 
-
 /* ── RENDER — MI PLAN / AGENDA ──────────────────────────────────────── */
 // ── _mkCortoItemHtml ───────────────────────────────────────────────────────
 // Fuente única de verdad para el item de corto en lista.
@@ -2690,31 +2542,7 @@ function mkAgendaRow(s, mode='saved'){
 // opts.cls      → clase CSS del row (default: 'mplan-prog-item')
 // opts.section  → sección del programa padre — para poster generativo con color correcto
 // opts.ratingEl → HTML del botón de calificación (opcional)
-function _mkCortoItemHtml(item, n, {cls='mplan-prog-item', section='', ratingEl=''}={}){
-  // Mismo fallback que openCortoSheet: real → generativo. Nunca emoji.
-  const thumb=getCortoItemPoster(item)||makeProgramPoster(state,item.title,item.duration||'',section);
-  const thumbHtml=`<img src="${thumb}" class="c-film-thumb" loading="lazy" onerror="this.remove()" alt="">`;
-  // data-* attrs — nunca interpolar strings con contenido variable en onclick
-  const _dt=encodeURIComponent(item.title||'');
-  const _dc=encodeURIComponent(item.country||'');
-  const _dd=encodeURIComponent(item.duration||'');
-  const _dir=encodeURIComponent(item.director||'');
-  const _dg=encodeURIComponent(item.genre||'');
-  const _ds=encodeURIComponent((item.synopsis||'').slice(0,200));
-  // data-cp: poster resuelto en render time — viaja directo al sheet, sin re-lookup
-  const _dp=encodeURIComponent(thumb||'');
-  return`<div class="${cls}" data-ct="${_dt}" data-cc="${_dc}" data-cd="${_dd}" data-cdir="${_dir}" data-cg="${_dg}" data-cs="${_ds}" data-cp="${_dp}" data-action="openCortoSheetFromEl">
-    ${thumbHtml}
-    <div style="flex:1;min-width:0">
-      <div class="row-baseline">
-        <span class="mplan-prog-num">${n+1}</span>
-        <span class="mplan-prog-title">${item.title}</span>
-      </div>
-      <div class="indent-nested mplan-prog-dur">${item.country?item.country+' · ':''}${durFmt(item.duration)}</div>
-    </div>
-    ${ratingEl}
-  </div>`;
-}
+
 // Wrapper — lee data-* y llama openCortoSheet. Evita interpolación de apóstrofes en onclick.
 function openCortoSheetFromEl(el,e){
   if(e) e.stopPropagation();
@@ -2855,7 +2683,6 @@ function renderUnconfirmed(state,schedule){
   </div>`;
 }
 
-
 // ═══════════════════════════════════════════════════════════════
 // 12 · RENDER — PLANEAR
 //      toggleFilmAlternatives, renderFilmAlternatives
@@ -2909,7 +2736,6 @@ function renderFilmAlternatives(state,title,day,time){
     </div>
   </div>`;
 }
-
 
 // Controller (p7a) — modal builder + handler closure variant. Modal es custom
 // (no showActionModal) por requirements de styling. El handler real vive en
@@ -3398,13 +3224,6 @@ function toggleArchive(){
   if(arrow){arrow.style.transform=archiveOpen?'rotate(180deg)':'rotate(0deg)';}
 }
 
-
-
-
-
-
-
-
 /* ── Display name — cadena de prioridad para imagen compartida ──
    1. Supabase user_metadata.display_name (cuenta / app nativa)
    2. localStorage 'otrofestiv_display_name' (web sin cuenta)
@@ -3429,7 +3248,6 @@ async function _saveDisplayName(name){
     try{ await _sb.auth.updateUser({data:{display_name:n}}); }catch(e){console.warn('[auth] updateUser failed',e);}
   }
 }
-
 
 function _promptDisplayName(onSave){
   const prev=document.getElementById('display-name-sheet');if(prev)prev.remove();
@@ -3492,8 +3310,6 @@ async function sharePlan(){
     _dlDirect(dataUrl);
   }
 }
-
-
 
 /* ── SHARE/EXPORT: imagen, ICS ──────────────────────────────────────── */
 function shareAsImage(){
@@ -3792,7 +3608,6 @@ async function exportICS(){
 // ── RESULT HTML ──
 let cachedResult=null;
 
-
 // ── forceInclude — crea variante custom con la película forzada ──────
 function forceInclude(title){
   if(festivalEnded()){showToast(t('notice_fest_term'),'info');return;}
@@ -3840,7 +3655,6 @@ function forceInclude(title){
 }
 
 // buildResultHTML → src/view/components.js (Step 6a). Importado.
-
 
 // ═══════════════════════════════════════════════════════════════
 // 13 · RENDER — VISTAS PRINCIPALES
@@ -4260,7 +4074,6 @@ function invalidateCalcResult(){
   res.innerHTML='';
 }
 
-
 // ── Sprint 3: funciones puras que el Worker extrae del main thread ────────
 // Al añadir o modificar una función de scheduling en el main thread,
 // el Worker la recibe automáticamente. Sin copia manual, sin divergencia.
@@ -4442,7 +4255,6 @@ function jumpToScenario(idx){
   cachedResult.currentIdx=Math.max(0,Math.min(cachedResult.scenarios.length-1,idx));
   renderAgenda();
 }
-
 
 // renderFlowProgress → src/view/components.js (Step 6a). Importado.
 // _scrollMiPlanToNow — auto-scroll del calendario de Mi Plan al tiempo actual.
@@ -4629,12 +4441,6 @@ let expandedPelicula=''; // título expandido en vista Por Película
 /* ── BÚSQUEDA EN CARTELERA ── */
 // ── BÚSQUEDA GLOBAL ────────────────────────────────────────────────────────
 
-
-
-
-
-
-
 /* ── NAV: navegación principal entre tabs ────────────────────────────── */
 function switchMainNav(id){
   if(id==='mnav-miplan') activeMiPlanDay=null; // recalcula día actual al entrar
@@ -4715,12 +4521,7 @@ const DAYS=[];
   });
 })();
 
-
-
-
-
 /* ── RENDER — CARTELERA: filtros, grid horario, grid película ────────── */
-
 
 function updateHorarioPrioBtn(title){
   const inPrio=prioritized.has(title);
@@ -4852,12 +4653,6 @@ function closeRatingSheet(){
   }
 }
 
-function starsText(r){
-  if(!r) return '';
-  const full=Math.floor(r);
-  const half=(r%1)>=0.5;
-  return '★'.repeat(full)+(half?'½':'');
-}
 function starsDisplay(rating,size){
   // size en px para display compacto
   if(!rating) return '';
@@ -4873,7 +4668,6 @@ function starsDisplay(rating,size){
   }
   return html;
 }
-
 
 function togglePelPrio(title){
   title=normTitle(title);
@@ -4913,14 +4707,6 @@ function togglePelWL(title,e){
   }
 }
 // _dayChips — renderiza días únicos de un film como spans tappables (filtran por día)
-function _dayChips(screenings){
-  const seen=new Set();
-  return screenings
-    .map(s=>s.day)
-    .filter(d=>{if(seen.has(d))return false;seen.add(d);return true;})
-    .map(d=>`<span class="pelicula-day" data-day="${d}">${dayLabel(d)}</span>`)
-    .join('<span style="color:var(--gray2)"> · </span>');
-}
 
 function filterByVenue(venue){
   closePelSheet();
@@ -5393,7 +5179,6 @@ function _openCombinedFilmSheet(filmData){
   _psC.classList.add('open');
 }
 
-
 function openCortoSheet(title, country, duration, section, flags, director, genre, synopsis, posterOverride){
   const inner=document.getElementById('pel-sheet-inner');
   if(!inner) return;
@@ -5583,8 +5368,6 @@ function clearProgramaChip(){
   setProgramaChip('all');
 }
 
-
-
 function _pafClearSec(){
   activeSec='all';seccionClose();_updateProgramaActiveFilter();
   if(activeMNav==='mnav-cartelera')_renderProgramaContent();else render();
@@ -5626,12 +5409,7 @@ function renderProgramaChips(){
 }
 
 // ── Badges de metadata: Q&A e Inscripción previa ────────────────────────
-function _metaBadges(f){
-  let b='';
-  if(f.has_qa) b+=`<span class="meta-badge">Q&A</span>`;
-  if(f.requires_registration) b+=`<span class="meta-badge">${t('badge_inscripcion')}</span>`;
-  return b;
-}
+
 function _metaBanners(f){
   let b='';
   if(f.has_qa) b+=`<div class="meta-banner"><div class="meta-banner-dot"></div><div><div class="meta-banner-label">${t('meta_qa_label')}</div><div class="meta-banner-text">${t('notice_extension')} <span>${t('meta_qa_time')}</span></div></div></div>`;
@@ -5640,14 +5418,6 @@ function _metaBanners(f){
 }
 
 // ── Stack poster para programas combinados ───────────────────────────────
-function _programaStack(f){
-  if(!f.is_programa||!f.film_list||f.film_list.length<2) return null;
-  const p1=_getItemPoster(f.film_list[0]);
-  const p2=_getItemPoster(f.film_list[1]);
-  const imgB=p2?`<img class="ps-back" src="${p2}" loading="lazy" onerror="this.remove()" alt="">`:"<div class='ps-back'></div>";
-  const imgF=p1?`<img class="ps-front" src="${p1}" loading="lazy" onerror="this.remove()" alt="">`:"<div class='ps-front'></div>";
-  return`<div class="plist-poster-stack">${imgB}${imgF}</div>`;
-}
 
 // ── Notices: banner de funciones canceladas/reprogramadas ────────────────
 let _dismissedNotices=new Set();
@@ -5660,19 +5430,7 @@ function _dismissNotice(title){
   _dismissedNotices.add(title);
   renderNoticesBanner();
 }
-function _plistPosterHtml(f, src){
-  if(_isEditorialPoster(f)){
-    var _accent=_sectionColor(f.section||'');
-    var _imgSection=src
-      ?'<div style="flex:1;overflow:hidden;min-height:0"><img src="'+src+'" loading="lazy" onerror="this.remove()" alt="" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block"></div>'
-      :'<div style="flex:1;background:#1A1A1A"></div>';
-    return '<div class="plist-poster" style="background:'+_accent+';display:flex;flex-direction:column;overflow:hidden">'+
-      '<div style="height:28.89%;flex-shrink:0"></div>'+
-      _imgSection+
-    '</div>';
-  }
-  return src?'<div class="plist-poster"><img src="'+src+'" loading="lazy" onerror="this.remove()" alt="" style="width:100%;height:100%;object-fit:cover;border-radius:var(--r-sm)"></div>':'<div class="plist-poster"></div>';
-}
+
 // Pure half (p6c)
 function renderProgramaListHTML(state){
   try{
@@ -6079,7 +5837,6 @@ return`<div class="poster-card js-open-pel${inWL&&!inW?' in-wl':''}${inW&&!_fe?'
     </div>`;
   }).join('')+'</div>';
 
-
   // ── Cartelera: micro-CTA only (step bar removed from PROGRAMA context)
   // Flow progress bar belongs in INTERESES/PLANEAR/MI PLAN tabs, not in PROGRAMA.
   if(activeView==='day'){
@@ -6088,7 +5845,6 @@ return`<div class="poster-card js-open-pel${inWL&&!inW?' in-wl':''}${inW&&!_fe?'
     if(_cStepper) _cStepper.style.display='none';// always hidden in day/hora view
   }
 }
-
 
 /* ── Splash de primer encuentro ──────────────────────────────────
    Solo se muestra si no hay datos previos del usuario.
@@ -6183,7 +5939,6 @@ function selectSplashFest(name,meta,festId){
   if(btn) btn.classList.remove('open');
 }
 
-
 // ═══════════════════════════════════════════════════════════════════
 // AUTO-RESOLVE POSTERS — lbSlug → TMDB search → poster correcto
 // Corre en background después de cargar cada festival.
@@ -6228,7 +5983,7 @@ async function _autoResolveFestivalPosters(){
     }
   }
   if(updated>0){
-    _POSTERS_N=Object.fromEntries(Object.entries(POSTERS).map(([k,v])=>[normKey(k),v]));
+    setPosters(POSTERS);
     requestAnimationFrame(()=>{try{render();}catch(e){console.warn('[render] rAF render failed',e);}});
   }
 }
@@ -6381,7 +6136,7 @@ async function loadFestival(id){
   POSTERS=cfg.posters;
   LB_SLUGS=cfg.lbSlugs||{};
   DAY_KEYS=cfg.dayKeys;
-  DAY_SHORT_EN=cfg.dayShort_en||cfg.dayShort;
+  setDayShortEn(cfg.dayShort_en||cfg.dayShort);
   // Si el festival no tiene dayShort en español (ej. Tribeca: valores en inglés),
   // construirlo desde las fechas ISO usando el día de la semana.
   const _EN_TO_ES={'SUN':'DOM','MON':'LUN','TUE':'MAR','WED':'MIÉ','THU':'JUE','FRI':'VIE','SAT':'SÁB'};
@@ -6396,13 +6151,13 @@ async function loadFestival(id){
       const esAbb=_EN_TO_ES[enAbb]||enAbb;
       _translated[k]=num?esAbb+' '+num:esAbb;
     });
-    DAY_SHORT=_translated;
+    setDayShort(_translated);
   } else {
-    DAY_SHORT=cfg.dayShort;
+    setDayShort(cfg.dayShort);
   }
   CUSTOM_POSTERS=cfg.customPosters||{};
-  _CUSTOM_N=Object.fromEntries(Object.entries(CUSTOM_POSTERS).map(([k,v])=>[normKey(k),v]));
-  _POSTERS_N=Object.fromEntries(Object.entries(POSTERS).map(([k,v])=>[normKey(k),v]));
+  setCustomPosters(CUSTOM_POSTERS);
+  setPosters(POSTERS);
   // Mutar DAYS en sitio (const) + regenerar DAY_ABBR/DAY_NUM
   DAYS.length=0;
   cfg.days.forEach(d=>DAYS.push(d));
