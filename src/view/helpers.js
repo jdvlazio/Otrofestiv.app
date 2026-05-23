@@ -266,3 +266,27 @@ export function _plistPosterHtml(f, src){
   }
   return src?'<div class="plist-poster"><img src="'+src+'" loading="lazy" onerror="this.remove()" alt="" style="width:100%;height:100%;object-fit:cover;border-radius:var(--r-sm)"></div>':'<div class="plist-poster"></div>';
 }
+
+// ── Step 6f addendum: shared leaves (emptyState/emptyStateHero/DAYS) ───────────
+// Compartidas por agenda/programa/cartelera. Templates puros (params only).
+export const emptyState = (icon, title, sub='') =>
+  `<div class="empty-state">
+    <div class="empty-state-icon">${icon}</div>
+    <div class="empty-state-title">${title}</div>
+    ${sub ? `<div class="empty-state-sub">${sub}</div>` : ''}
+  </div>`;
+
+// Hero: para pantallas completas vacías — Mi Plan, Intereses, Planear
+// REGLA: CTA primario → .empty-state-cta (ámbar sólido, texto negro). Secundario → pasar ctaSecondary=true
+export const emptyStateHero = (icon, title, sub='', ctaLabel='', ctaTab='', ctaSecondary=false) =>
+  `<div class="empty-state-hero">
+    <div class="empty-state-icon">${icon}</div>
+    <div class="empty-state-title">${title}</div>
+    ${sub ? `<div class="empty-state-sub">${sub}</div>` : ''}
+    ${ctaLabel ? `<button class="${ctaSecondary?'empty-state-cta-sec':'empty-state-cta'}" data-action="navTo" data-tab="${ctaTab}">${ctaLabel}</button>` : ''}
+  </div>`;
+
+// DAYS — array de días del festival activo. Mutado IN-PLACE por loadFestival
+// (main.js): DAYS.length=0; cfg.days.forEach(d=>DAYS.push(d)). El binding
+// importado refleja la mutación (mismo objeto array). No reasignar.
+export const DAYS=[];

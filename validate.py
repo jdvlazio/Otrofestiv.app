@@ -83,6 +83,15 @@ if os.path.exists(_MAIN_JS):
 # busca ahí. Se lee aparte para NO contaminar los checks que escanean `content`.
 _CONFIG_JS = 'src/config.js'
 _config_src = open(_CONFIG_JS, encoding='utf-8').read() if os.path.exists(_CONFIG_JS) else ''
+# p8 Wave 6: HTML generado por innerHTML migró a src/view/*.js. Para checks que
+# escanean markup generado (html-divs), se concatena el surface de view aparte
+# (NO en `content` — contaminaría shadow-t/state-mirror que asumen main-only).
+_VIEW_DIR = os.path.join('src', 'view')
+_view_all = ''
+if os.path.isdir(_VIEW_DIR):
+    for _f in sorted(os.listdir(_VIEW_DIR)):
+        if _f.endswith('.js'):
+            _view_all += '\n' + open(os.path.join(_VIEW_DIR, _f), encoding='utf-8').read()
 script_start = content.find('<script>')
 script_end   = content.rfind('</script>')
 if script_start == -1 or script_end == -1:
@@ -299,7 +308,7 @@ else:
 check = 'html-divs'
 div_errors = 0
 for div in CRITICAL_DIVS:
-    if div not in content:
+    if div not in content and div not in _view_all:
         fail(check, f'div faltante: {div}')
         div_errors += 1
 if div_errors == 0:
@@ -883,7 +892,7 @@ try:
     # p8 Step 6a/6c: PURE_FNS movidos a src/view/*.js (components, programa). Se
     # concatenan para que _find_fn_body los halle ahí (regex acepta `export`).
     _components_src = ''
-    for _vp in ('components.js', 'programa.js'):
+    for _vp in ('components.js', 'programa.js', 'helpers.js', 'agenda.js'):
         _vpath = os.path.join('src', 'view', _vp)
         if os.path.exists(_vpath):
             _components_src += '\n' + open(_vpath, encoding='utf-8').read()
