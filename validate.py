@@ -880,7 +880,13 @@ except Exception as _e:
 check = 'view-purity'
 try:
     import re as _re
-    _html = content  # p8: content ya incluye main.js inyectado
+    # p8 Step 6a: parte de los PURE_FNS se movió a src/view/components.js. Se
+    # concatena para que _find_fn_body los halle ahí (regex acepta `export`).
+    _components_src = ''
+    _cp6a = os.path.join('src', 'view', 'components.js')
+    if os.path.exists(_cp6a):
+        _components_src = '\n' + open(_cp6a, encoding='utf-8').read()
+    _html = content + _components_src
     _lines = _html.split('\n')
     # PURE_FNS — funciones puras tracked por el check. Renamed de TIER1_FNS en
     # p6b porque ahora cubre múltiples tiers: Tier 1 originales (6a) + Group A
@@ -923,7 +929,7 @@ try:
     def _find_fn_body(name):
         """Returns (start_line_idx, end_line_idx, body_lines) o None."""
         for i, line in enumerate(_lines):
-            if _re.match(r'^\s*(?:async\s+)?function\s+' + _re.escape(name) + r'\s*\(', line):
+            if _re.match(r'^\s*(?:export\s+)?(?:async\s+)?function\s+' + _re.escape(name) + r'\s*\(', line):
                 # Walk braces from the first { after the signature
                 depth = 0
                 started = False
