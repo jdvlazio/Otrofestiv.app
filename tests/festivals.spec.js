@@ -8,7 +8,8 @@ test('T08 — festival selector: Leviza aparece antes que Tribeca', async ({ pag
   await page.goto('/');
   await page.waitForSelector('#splash-sel-btn', { timeout: 15000 });
   await page.locator('#splash-sel-btn').click();
-  await page.waitForSelector('#splash-dropdown', { state: 'visible', timeout: 5000 });
+  await page.waitForSelector('#splash-dropdown', { state: 'visible', timeout: 15000 });
+  await page.waitForSelector('.splash-drop-item[data-fest]', { state: 'visible', timeout: 15000 });
   const items = page.locator('.splash-drop-item[data-fest]');
   expect(await items.count()).toBeGreaterThan(1);
   // Tribeca es el festival próximo — aparece primero en la lista (upcoming > past)

@@ -40,7 +40,8 @@ test('M02 — selector tiene al menos un festival', async ({ page }) => {
   await page.goto('/');
   await page.waitForSelector('#splash-sel-btn', { timeout: 15000 });
   await page.locator('#splash-sel-btn').click();
-  await page.waitForSelector('#splash-dropdown', { state: 'visible', timeout: 5000 });
+  await page.waitForSelector('#splash-dropdown', { state: 'visible', timeout: 15000 });
+  await page.waitForSelector('.splash-drop-item[data-fest]', { state: 'visible', timeout: 15000 });
   const count = await page.locator('.splash-drop-item[data-fest]').count();
   expect(count).toBeGreaterThan(0);
 });

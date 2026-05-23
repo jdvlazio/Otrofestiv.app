@@ -8,7 +8,9 @@ const LEVIZA_SIMTIME = '2026-05-14T00:00:00-05:00';
 
 async function selectFestival(page, festId) {
   await page.locator('#splash-sel-btn').click();
-  await page.waitForSelector('#splash-dropdown', { state: 'visible', timeout: 5000 });
+  await page.waitForSelector('#splash-dropdown', { state: 'visible', timeout: 15000 });
+  // Señal robusta: esperar a que los items estén renderizados/visibles, no solo el contenedor.
+  await page.waitForSelector('.splash-drop-item[data-fest]', { state: 'visible', timeout: 15000 });
   // Si el item está en "Anteriores" puede estar colapsado — expandirlo primero
   const item = page.locator(`.splash-drop-item[data-fest="${festId}"]`);
   const isPast = await item.evaluate(el => el.classList.contains('past')).catch(() => false);

@@ -9,30 +9,11 @@
  * Cuándo NO falla: si algo se ve diferente visualmente — eso se audita manual.
  */
 const { test, expect } = require('@playwright/test');
-const LEVIZA_SIMTIME = '2026-05-14T00:00:00-05:00';
-
-async function freezeSimTime(page, isoStr) {
-  await page.evaluate((t) => { _simTime = t; }, isoStr);
-}
-
-async function enterFestival(page, festId) {
-  await page.goto('/');
-  await page.waitForSelector('#splash-sel-btn', { timeout: 10000 });
-  const current = await page.evaluate(() => _splashSelectedFestId);
-  if (current !== festId) {
-    await page.locator('#splash-sel-btn').click();
-    await page.waitForSelector('.splash-drop-item', { timeout: 5000 });
-    await page.locator(`.splash-drop-item[data-id="${festId}"]`).click();
-    await page.waitForTimeout(300);
-  }
-  await page.locator('.splash-enter-btn').click();
-  await page.waitForSelector('.poster-card, .plist-item, .dtab', { timeout: 15000 });
-}
+const { LEVIZA_SIMTIME, enterFestival } = require('./helpers');
 
 test.describe('Visual audit — Leviza', () => {
   test.beforeEach(async ({ page }) => {
-    await enterFestival(page, 'leviza2026');
-    await freezeSimTime(page, LEVIZA_SIMTIME);
+    await enterFestival(page, 'leviza2026', LEVIZA_SIMTIME);
   });
 
   test('01 — Programa JUE 14 (lista)', async ({ page }) => {
