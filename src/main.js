@@ -5219,6 +5219,85 @@ document.addEventListener('click', function(e){
   }
 });
 
+// (Relocado en p8 Step 6g: instalado ANTES del bootstrap eval-time para que
+//  fns de view movidas que leen viewstate vía bridge en el render inicial no
+//  fallen — causa raíz de 6d. El bloque referencia solo bindings hoisted/lazy.)
+// ── TEST BRIDGE START (p8 Step 0) ────────────────────────────────────────────
+// En el classic <script>, los const/let/function top-level vivían en el global
+// lexical scope (visibles a page.evaluate de Playwright + otros scripts). Al
+// modularizar quedan module-scoped. Este bloque re-expone en globalThis los
+// símbolos NO-roster que la suite Playwright accede (read/write), backed por los
+// module bindings.
+// p8 Step 2: los 12 slices del roster (FILMS, watchlist, watched, prioritized,
+// filmRatings, savedAgenda, availability, _simTime, FESTIVAL_DATES, FESTIVAL_END,
+// _activeFestId, PRIO_LIMIT) se MOVIERON al STATE BRIDGE real (arriba, backed por
+// state). Aquí quedan solo los NO administrados por state: view-state, DAY_KEYS,
+// cachedResult, auth/splash.
+(() => {
+  const _lets = {
+    DAY_KEYS:       [() => DAY_KEYS,       v => { DAY_KEYS = v; }],
+    cachedResult:   [() => cachedResult,   v => { cachedResult = v; }],
+    // view-state (los tests/helpers escriben activeDay + programaViewMode vía
+    // page.evaluate; en classic eran global-lexical, ahora module-scoped).
+    activeDay:        [() => activeDay,        v => { activeDay = v; }],
+    activeView:       [() => activeView,       v => { activeView = v; }],
+    activeVenue:      [() => activeVenue,      v => { activeVenue = v; }],
+    activeSec:        [() => activeSec,        v => { activeSec = v; }],
+    activeMNav:       [() => activeMNav,       v => { activeMNav = v; }],
+    programaSubMode:  [() => programaSubMode,  v => { programaSubMode = v; }],
+    programaViewMode: [() => programaViewMode, v => { programaViewMode = v; }],
+    cartelaMode:      [() => cartelaMode,      v => { cartelaMode = v; }],
+    interesesViewMode:[() => interesesViewMode,v => { interesesViewMode = v; }],
+    miPlanViewMode:   [() => miPlanViewMode,   v => { miPlanViewMode = v; }],
+    // auth/splash state que los tests leen/escriben (deleteAccount guard, splash sel)
+    _sbUser:              [() => _sbUser,              v => { _sbUser = v; }],
+    _splashSelectedFestId:[() => _splashSelectedFestId, v => { _splashSelectedFestId = v; }],
+    // p8 Step 6c (D-6C-1): view-state de programa, bridgeado para view/programa.js.
+    // Los lets viven en main.js (escritos por setProgramaChip/_dismissNotice).
+    programaChip:         [() => programaChip,         v => { programaChip = v; }],
+    _programaChipMatchFn: [() => _programaChipMatchFn,  v => { _programaChipMatchFn = v; }],
+    _dismissedNotices:    [() => _dismissedNotices,     v => { _dismissedNotices = v; }],
+    // p8 Step 6f (D-6F-1): view-state de agenda/miplan, bridgeado para view/agenda.js.
+    // Los lets viven en main.js (escritos por handlers: setActivePlanFilm,
+    // selectFromDetail, _setExpandedFilm, toggleFilmAlternatives, selectMiPlanDay,
+    // miPlanNav, jumpToScenario, switchMainNav, toggleArchive, loadFestival).
+    _activeMiPlanFilm:    [() => _activeMiPlanFilm,    v => { _activeMiPlanFilm = v; }],
+    _expandedFilm:        [() => _expandedFilm,        v => { _expandedFilm = v; }],
+    activeMiPlanDay:      [() => activeMiPlanDay,      v => { activeMiPlanDay = v; }],
+    miPlanViewStart:      [() => miPlanViewStart,      v => { miPlanViewStart = v; }],
+    _ctaRemovedVisible:   [() => _ctaRemovedVisible,   v => { _ctaRemovedVisible = v; }],
+    archiveOpen:          [() => archiveOpen,          v => { archiveOpen = v; }],
+  };
+  for (const [k, [get, set]] of Object.entries(_lets)) {
+    Object.defineProperty(globalThis, k, { get, set, configurable: true });
+  }
+  for (const [k, val] of Object.entries({ state, FESTIVAL_CONFIG, ACTION_REGISTRY })) {
+    Object.defineProperty(globalThis, k, { get: () => val, configurable: true });
+  }
+  // Funciones invocadas desde:
+  //  (a) handlers inline on* en HTML generado (onerror=_posterErr/_cortoSheetPosterErr)
+  //      — corren en GLOBAL scope, no module scope → DEBEN estar en globalThis
+  //      (correctness de producción, no solo tests; onerror no se migró en 7c).
+  //  (b) page.evaluate de la suite Playwright.
+  Object.assign(globalThis, {
+    // (a) inline on* handlers — producción
+    //     en HTML generado (main.js innerHTML): onerror=_posterErr/_cortoSheetPosterErr
+    //     en markup estático (index.html): oninput/onkeyup/onkeydown=searchQuery,
+    //     onkeydown=submitAuthEmail/submitOTP (#search-input, #auth-email-inp, #auth-otp-inp)
+    _posterErr, _cortoSheetPosterErr,
+    searchQuery, submitAuthEmail, submitOTP,
+    // (b) page.evaluate — tests
+    _renderProgramaContent, closeAuthSheet, closePelSheet, loadFestival, normTitle,
+    openAuthSheet, openPelSheet, openRatingSheet, openCortoSheet, renderAgenda,
+    render, saveSavedAgenda, saveState, savePrio, saveWL, saveWatched, searchOpen,
+    searchClose, selectSplashFest, dismissSplash, showAgView, showDayView,
+    simNow, simTodayStr, switchMainNav, runCalc, _getFestivalPhase,
+    toggleWL, togglePriority, addBlock,
+    setProgramaView, openConflictSheet, deleteAccount,
+  });
+})();
+// ── TEST BRIDGE END (p8 Step 0) ──────────────────────────────────────────────
+
 /* ── Re-render automático cada 60s ───────────────────────────
    Actualiza estados temporales (AHORA, Ya pasó, días pasados)
    sin depender de que el usuario navegue entre tabs.
@@ -5823,78 +5902,3 @@ function _cortoSheetPosterErr(img){
   img.parentNode?.replaceChild(ph,img);
 }
 
-// ── TEST BRIDGE START (p8 Step 0) ────────────────────────────────────────────
-// En el classic <script>, los const/let/function top-level vivían en el global
-// lexical scope (visibles a page.evaluate de Playwright + otros scripts). Al
-// modularizar quedan module-scoped. Este bloque re-expone en globalThis los
-// símbolos NO-roster que la suite Playwright accede (read/write), backed por los
-// module bindings.
-// p8 Step 2: los 12 slices del roster (FILMS, watchlist, watched, prioritized,
-// filmRatings, savedAgenda, availability, _simTime, FESTIVAL_DATES, FESTIVAL_END,
-// _activeFestId, PRIO_LIMIT) se MOVIERON al STATE BRIDGE real (arriba, backed por
-// state). Aquí quedan solo los NO administrados por state: view-state, DAY_KEYS,
-// cachedResult, auth/splash.
-(() => {
-  const _lets = {
-    DAY_KEYS:       [() => DAY_KEYS,       v => { DAY_KEYS = v; }],
-    cachedResult:   [() => cachedResult,   v => { cachedResult = v; }],
-    // view-state (los tests/helpers escriben activeDay + programaViewMode vía
-    // page.evaluate; en classic eran global-lexical, ahora module-scoped).
-    activeDay:        [() => activeDay,        v => { activeDay = v; }],
-    activeView:       [() => activeView,       v => { activeView = v; }],
-    activeVenue:      [() => activeVenue,      v => { activeVenue = v; }],
-    activeSec:        [() => activeSec,        v => { activeSec = v; }],
-    activeMNav:       [() => activeMNav,       v => { activeMNav = v; }],
-    programaSubMode:  [() => programaSubMode,  v => { programaSubMode = v; }],
-    programaViewMode: [() => programaViewMode, v => { programaViewMode = v; }],
-    cartelaMode:      [() => cartelaMode,      v => { cartelaMode = v; }],
-    interesesViewMode:[() => interesesViewMode,v => { interesesViewMode = v; }],
-    miPlanViewMode:   [() => miPlanViewMode,   v => { miPlanViewMode = v; }],
-    // auth/splash state que los tests leen/escriben (deleteAccount guard, splash sel)
-    _sbUser:              [() => _sbUser,              v => { _sbUser = v; }],
-    _splashSelectedFestId:[() => _splashSelectedFestId, v => { _splashSelectedFestId = v; }],
-    // p8 Step 6c (D-6C-1): view-state de programa, bridgeado para view/programa.js.
-    // Los lets viven en main.js (escritos por setProgramaChip/_dismissNotice).
-    programaChip:         [() => programaChip,         v => { programaChip = v; }],
-    _programaChipMatchFn: [() => _programaChipMatchFn,  v => { _programaChipMatchFn = v; }],
-    _dismissedNotices:    [() => _dismissedNotices,     v => { _dismissedNotices = v; }],
-    // p8 Step 6f (D-6F-1): view-state de agenda/miplan, bridgeado para view/agenda.js.
-    // Los lets viven en main.js (escritos por handlers: setActivePlanFilm,
-    // selectFromDetail, _setExpandedFilm, toggleFilmAlternatives, selectMiPlanDay,
-    // miPlanNav, jumpToScenario, switchMainNav, toggleArchive, loadFestival).
-    _activeMiPlanFilm:    [() => _activeMiPlanFilm,    v => { _activeMiPlanFilm = v; }],
-    _expandedFilm:        [() => _expandedFilm,        v => { _expandedFilm = v; }],
-    activeMiPlanDay:      [() => activeMiPlanDay,      v => { activeMiPlanDay = v; }],
-    miPlanViewStart:      [() => miPlanViewStart,      v => { miPlanViewStart = v; }],
-    _ctaRemovedVisible:   [() => _ctaRemovedVisible,   v => { _ctaRemovedVisible = v; }],
-    archiveOpen:          [() => archiveOpen,          v => { archiveOpen = v; }],
-  };
-  for (const [k, [get, set]] of Object.entries(_lets)) {
-    Object.defineProperty(globalThis, k, { get, set, configurable: true });
-  }
-  for (const [k, val] of Object.entries({ state, FESTIVAL_CONFIG, ACTION_REGISTRY })) {
-    Object.defineProperty(globalThis, k, { get: () => val, configurable: true });
-  }
-  // Funciones invocadas desde:
-  //  (a) handlers inline on* en HTML generado (onerror=_posterErr/_cortoSheetPosterErr)
-  //      — corren en GLOBAL scope, no module scope → DEBEN estar en globalThis
-  //      (correctness de producción, no solo tests; onerror no se migró en 7c).
-  //  (b) page.evaluate de la suite Playwright.
-  Object.assign(globalThis, {
-    // (a) inline on* handlers — producción
-    //     en HTML generado (main.js innerHTML): onerror=_posterErr/_cortoSheetPosterErr
-    //     en markup estático (index.html): oninput/onkeyup/onkeydown=searchQuery,
-    //     onkeydown=submitAuthEmail/submitOTP (#search-input, #auth-email-inp, #auth-otp-inp)
-    _posterErr, _cortoSheetPosterErr,
-    searchQuery, submitAuthEmail, submitOTP,
-    // (b) page.evaluate — tests
-    _renderProgramaContent, closeAuthSheet, closePelSheet, loadFestival, normTitle,
-    openAuthSheet, openPelSheet, openRatingSheet, openCortoSheet, renderAgenda,
-    render, saveSavedAgenda, saveState, savePrio, saveWL, saveWatched, searchOpen,
-    searchClose, selectSplashFest, dismissSplash, showAgView, showDayView,
-    simNow, simTodayStr, switchMainNav, runCalc, _getFestivalPhase,
-    toggleWL, togglePriority, addBlock,
-    setProgramaView, openConflictSheet, deleteAccount,
-  });
-})();
-// ── TEST BRIDGE END (p8 Step 0) ──────────────────────────────────────────────
