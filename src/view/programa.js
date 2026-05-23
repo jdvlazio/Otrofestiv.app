@@ -10,9 +10,13 @@
 //   programaChip, _programaChipMatchFn (bridgeados en main.js TEST BRIDGE, D-6C-1).
 //   Los handlers _dismissNotice/setProgramaChip (data-action) viven en main.js.
 
-import { state } from "../state/state.js";
-import { t } from "../i18n/i18n.js";
-import { NOTICES } from "../config.js";
+import { NOTICES, SECTION_ORDER_LIST, _DEFAULT_FEST_ID } from '../config.js';
+import { ICONS, _secLabel, _sectionColor, makeEventPoster, parseProgramTitle } from './components.js';
+import { _dayChips, _getItemPoster, _isEditorialPoster, _metaBadges, _plistPosterHtml, _programaStack, dayLabel, durFmt, getFilmPoster, isNowShowing, sala, vcfg } from './helpers.js';
+import { festivalEnded, toMin } from '../domain/time.js';
+import { screeningPassed } from '../domain/film.js';
+import { state } from '../state/state.js';
+import { t } from '../i18n/i18n.js';
 
 export function _computeProgramaChips(state){
   const {FILMS} = state.snapshot();
@@ -81,4 +85,274 @@ export function renderNoticesBanner(){
   const el=document.getElementById('notices-banner');
   if(!el) return;
   el.innerHTML=renderNoticesBannerHTML(state);
+}
+
+
+// ── Step 6g: render dispatchers programa + pelicula (8 fns). ──────────────────
+export function renderProgramaList(){
+  const el=document.getElementById('programa-list');
+  if(!el) return;
+  el.scrollTop=0;// always reset before re-render
+  el.innerHTML=renderProgramaListHTML(state);
+}
+
+export function renderProgramaListHTML(state){
+  try{
+  const {FILMS, _activeFestId, watchlist} = state.snapshot();
+  let films=FILMS.filter(f=>f.day===activeDay);
+  if(activeVenue!=='all') films=films.filter(f=>vcfg(f.venue).short===activeVenue);
+  if(activeSec!=='all') films=films.filter(f=>f.section===activeSec);
+  films.sort((a,b)=>{
+    const td=toMin(a.time)-toMin(b.time);
+    if(td!==0) return td;
+    const cat=f=>f.type==='event'?2:f.is_cortos?1:0;
+    return cat(a)-cat(b);
+  });
+  if(!films.length){
+    return `<div class="empty-msg">Sin actividades para este filtro</div>`;
+  }
+  const byTime={};
+  films.forEach(f=>{if(!byTime[f.time])byTime[f.time]=[];byTime[f.time].push(f);});
+  return Object.entries(byTime).map(([time,fs])=>`
+    <div class="plist-time-hdr">${time}</div>
+    ${fs.map(f=>{
+      const inWL=watchlist.has(f.title);
+      const passed=screeningPassed(f);
+      const isNow=isNowShowing(f);
+
+      const _isPrograma=f.is_programa&&f.film_list&&f.film_list.length>=2;
+      const{displayTitle:_rawDt}=parseProgramTitle(f.title);
+      const dt=_isPrograma
+        ?(_rawDt+'<span class="film-count-badge">+1</span>')
+        :_rawDt;
+      const vc=vcfg(f.venue);
+      const src=getFilmPoster(f)||'';
+      const _isEdList=_isEditorialPoster(f);
+      const nowBadge=isNow?`<span class="film-check-badge">${t('misc_ahora')}</span>`:'';
+      const notice=NOTICES.find(n=>n.title===f.title&&n.festival===((_activeFestId||_DEFAULT_FEST_ID)));
+      const noticeBadge=notice?`<span class="notice-badge">${notice.type==='cancelled'?t('notice_cancelada'):t('notice_reprog_short')}</span>`:'';
+      const noticeNote=notice&&notice.type==='cancelled'?`<div class="notice-detail-amber">${t('plan_fecha_pendiente')}</div>`:
+        notice&&notice.type==='rescheduled'&&notice.newTime?`<div class="notice-detail-green">${notice.newDay||''} · ${notice.newTime}${notice.newVenue?' · '+notice.newVenue:''}</div>`:'';
+      const cancelStyle=notice&&notice.type==='cancelled'?'opacity:.5':'';
+      const pastStyle=passed&&!isNow&&!festivalEnded()?'opacity:.45':'';
+      const itemStyle=[pastStyle,cancelStyle].filter(Boolean).join(';');
+      const safeT=f.title.replace(/'/g,"&#39;").replace(/"/g,'&quot;');
+      const _stk=_programaStack(f);
+      return`<div class="plist-item js-open-pel" style="${itemStyle}" data-title="${f.title}">
+        ${_stk||_plistPosterHtml(f,src)}
+        <div class="plist-info">
+          <div class="plist-title">${noticeBadge}<span class="plist-title-txt">${dt}</span>${_metaBadges(f)}${nowBadge}</div>
+          <div class="plist-meta" style="${notice&&notice.type==='cancelled'?'text-decoration:line-through':''}">${vc.short}${sala(f.venue)?' · '+sala(f.venue):''}${f.duration?' · '+durFmt(f.duration):''}</div>
+          ${noticeNote||`<div class="plist-sec">${f.section||''}</div>`}
+        </div>
+        <div class="plist-heart${inWL?'':' empty'}" data-title="${f.title.replace(/"/g,'&quot;')}" data-action="_toggleWLFromList" data-stop="1">${inWL?ICONS.heartFill:ICONS.heart}</div>
+      </div>`;
+    }).join('')}
+  `).join('');
+  }catch(e){return `<div class="pad-muted">${t('error_funciones')}</div>`;}
+}
+
+export function _renderProgramaContent(){
+  const grid=document.getElementById('grid');
+  const lista=document.getElementById('programa-list');
+  const cntEl=document.getElementById('cnt');
+  if(!grid||!lista) return;
+  renderNoticesBanner();
+  if(activeDay==='all'){
+    requestAnimationFrame(()=>{
+      const _pg2=grid.querySelector('.poster-grid');
+      if(_pg2) _pg2.style.opacity='1';
+      lista.style.opacity='1';
+    });
+    if(programaViewMode==='grid'){
+      lista.classList.remove('visible');
+      grid.style.display='';
+      renderPeliculaView();
+    } else {
+      grid.style.display='none';
+      lista.classList.add('visible');
+      _renderExploreLista();
+    }
+  } else {
+    // Día específico seleccionado
+    if(programaViewMode==='grid'){
+      lista.classList.remove('visible');
+      grid.style.display='';
+      renderPeliculaView(); // muestra grilla de posters filtrada por activeDay
+    } else {
+      grid.style.display='none';
+      lista.classList.add('visible');
+      renderProgramaList();
+      lista.scrollTop=0;
+      window.scrollTo({top:0,behavior:'instant'});
+    }
+  }
+}
+
+export function renderProgramaChips(){
+  const el=document.getElementById('programa-chips');
+  if(!el) return;
+  _currentChips=_computeProgramaChips(state);
+  el.innerHTML=renderProgramaChipsHTML(state);
+}
+
+export function _renderExploreLista(){
+  const el=document.getElementById('programa-list');
+  if(!el) return;
+  el.innerHTML=_renderExploreListaHTML(state);
+}
+
+export function _renderExploreListaHTML(state){
+  try{
+  const {FILMS, _activeFestId, watchlist} = state.snapshot();
+  const titleMap={};
+  FILMS.forEach(f=>{
+    if(!titleMap[f.title]){titleMap[f.title]={film:f,screenings:[]};}
+    else{
+      const cur=titleMap[f.title].film;
+      const curMin=(cur.day_order||0)*1440+toMin(cur.time||'00:00');
+      const newMin=(f.day_order||0)*1440+toMin(f.time||'00:00');
+      if(newMin<curMin) titleMap[f.title].film=f;
+    }
+    titleMap[f.title].screenings.push(f);
+  });
+  let entries=Object.values(titleMap);
+  if(activeSec!=='all'){
+    entries=entries.filter(e=>e.film.section===activeSec);
+  }
+  if(activeVenue!=='all'){
+    entries=entries.filter(e=>e.screenings.some(s=>{
+      if(s.screenings&&s.screenings.length) return s.screenings.some(sc=>vcfg(sc.venue).short===activeVenue);
+      return vcfg(s.venue).short===activeVenue;
+    }));
+  }
+  const _typeOrder=f=>f.type==='event'?2:f.is_cortos?1:0;
+  entries.sort((a,b)=>{
+    const do_diff=(a.film.day_order||0)-(b.film.day_order||0);
+    if(do_diff!==0) return do_diff;
+    const td=(a.film.time||'').localeCompare(b.film.time||'');
+    if(td!==0) return td;
+    return _typeOrder(a.film)-_typeOrder(b.film);
+  });
+  if(!entries.length) return `<div class="empty-msg">${t('filter_sin_peliculas')}</div>`;
+  return entries.map(({film:f,screenings})=>{
+    const inWL=watchlist.has(f.title);
+    const isEvent=f.type==='event';
+    const safeT=f.title.replace(/\'/g,"\\'").replace(/"/g,'&quot;');
+    const{displayTitle:dt}=parseProgramTitle(f.title);
+    const src=isEvent?'':getFilmPoster(f)||'';
+    const allPast=screenings.every(s=>screeningPassed(s));
+    const days=[...new Set(screenings.map(s=>dayLabel(s.day)||s.day))].join(' · ');
+    const daysHtml=_dayChips(screenings);
+    if(isEvent) return`<div class="plist-item plist-event js-open-pel" style="${allPast?'opacity:.35':''}" data-title="${f.title}">
+      <img class="plist-poster" src="${makeEventPoster(state,dt,f.duration,f.event_kind)}" alt="${dt}" loading="lazy">
+      <div class="plist-info">
+        <div class="plist-title">${dt}</div>
+        <div class="plist-meta">${days?`${daysHtml} · `:''}${durFmt(f.duration)}</div>
+        <div class="plist-sec">${f.section||''}</div>
+      </div>
+      <div class="plist-heart${inWL?'':' empty'}" data-title="${f.title.replace(/"/g,'&quot;')}" data-action="_toggleWLFromList" data-stop="1">${inWL?ICONS.heartFill:ICONS.heart}</div>
+    </div>`;
+    const _stk2=_programaStack(f);
+    return`<div class="plist-item js-open-pel${allPast?' past-card':''}" data-title="${f.title}">
+      ${_stk2||_plistPosterHtml(f,src)}
+      <div class="plist-info">
+        ${(()=>{const n=NOTICES.find(nx=>nx.title===f.title&&nx.festival===((_activeFestId||_DEFAULT_FEST_ID)));const nb=n?`<span class="notice-badge">${n.type==='cancelled'?t('notice_cancelada'):t('notice_reprog_short')}</span>`:'';const nn=n&&n.type==='cancelled'?`<div class="notice-detail-amber">${t('plan_fecha_pendiente')}</div>`:n&&n.type==='rescheduled'&&n.newTime?`<div class="notice-detail-green">${n.newDay||''} · ${n.newTime}${n.newVenue?' · '+n.newVenue:''}</div>`:'';return`<div class="plist-title" style="${allPast?'opacity:.5':''}">${nb}${dt}</div><div class="plist-meta" style="${n&&n.type==='cancelled'?'text-decoration:line-through':''}${allPast?';opacity:.5':''}">${daysHtml?`${daysHtml} · `:''}${durFmt(f.duration)}${_metaBadges(f)?` · ${_metaBadges(f)}`:''}</div>${nn||`<div class="plist-sec">${f.section||''}</div>`}`;})()}
+      </div>
+      <div class="plist-heart${inWL?'':' empty'}" data-title="${f.title.replace(/"/g,'&quot;')}" data-action="_toggleWLFromList" data-stop="1">${inWL?ICONS.heartFill:ICONS.heart}</div>
+    </div>`;
+  }).join('');
+  }catch(e){return '';}
+}
+
+export function renderPeliculaView(){
+  const grid=document.getElementById('grid');
+  const cntEl=document.getElementById('cnt');
+  if(!grid) return;
+  cntEl.innerHTML=''; // count visible en chip y en lugar-btn — cnt-line redundante
+  const {html, hasEntries} = renderPeliculaViewHTML(state);
+  grid.innerHTML=html;
+  if(hasEntries) requestAnimationFrame(()=>window.dispatchEvent(new Event('scroll')));// trigger lazy load
+}
+
+export function renderPeliculaViewHTML(state){
+  const {FILMS, watched, watchlist} = state.snapshot();
+  const _dayFilms = activeDay==='all' ? FILMS : FILMS.filter(f=>f.day===activeDay);
+  const titleMap={};
+  _dayFilms.forEach(f=>{
+    if(!titleMap[f.title]){titleMap[f.title]={film:f,screenings:[]};}
+    else{
+      const cur=titleMap[f.title].film;
+      const curMin=(cur.day_order||0)*1440+toMin(cur.time||'00:00');
+      const newMin=(f.day_order||0)*1440+toMin(f.time||'00:00');
+      if(newMin<curMin) titleMap[f.title].film=f;
+    }
+    titleMap[f.title].screenings.push(f);
+  });
+  let entries=Object.values(titleMap);
+  if(activeSec!=='all'){
+    entries=entries.filter(e=>e.film.section===activeSec);
+  }
+  if(activeVenue!=='all'){
+    entries=entries.filter(e=>e.screenings.some(s=>{
+      if(s.screenings&&s.screenings.length) return s.screenings.some(sc=>vcfg(sc.venue).short===activeVenue);
+      return vcfg(s.venue).short===activeVenue;
+    }));
+  }
+  const _unknownSecMap=(()=>{const m={};let i=SECTION_ORDER_LIST.length;FILMS.forEach(f=>{if(f.section&&SECTION_ORDER_LIST.indexOf(f.section)<0&&!(f.section in m))m[f.section]=i++;});return m;})();
+  const _secIdx=f=>{const i=SECTION_ORDER_LIST.indexOf(f.section??'');return i>=0?i:(_unknownSecMap[f.section??'']??99999);};
+  entries.sort((a,b)=>{
+    const so=_secIdx(a.film)-_secIdx(b.film);
+    if(so!==0) return so;
+    const da=DAY_KEYS.indexOf(a.film.day),db=DAY_KEYS.indexOf(b.film.day);
+    if(da!==db) return da-db;
+    const do_diff=(a.film.day_order||0)-(b.film.day_order||0);
+    if(do_diff!==0) return do_diff;
+    return toMin(a.film.time||'00:00')-toMin(b.film.time||'00:00');
+  });
+  if(!entries.length){
+    return {html: `<div class="empty-msg">${t('filter_sin_peliculas')}</div>`, hasEntries: false};
+  }
+  let _prevSec=null;
+  const html=`<div class="poster-grid">${entries.map(({film:f,screenings})=>{
+    const inWL=watchlist.has(f.title);
+    const inW=watched.has(f.title);
+    const allPast=screenings.every(s=>screeningPassed(s));
+    const posterSrc=getFilmPoster(f);
+    const safeT=f.title.replace(/'/g,"&#39;").replace(/"/g,'&quot;');
+    const{displayTitle}=parseProgramTitle(f.title);
+    const progBadge='';//REMOVED: no count badge
+    const _ended=festivalEnded();
+    const _isPrograma=f.is_programa&&f.film_list&&f.film_list.length>=2;
+    let posterImg,_cardBg='';
+    if(_isPrograma){
+      const _p1=_getItemPoster(f.film_list[0]);
+      const _p2=_getItemPoster(f.film_list[1]);
+      const _ib=_p2?`<img class="pcs-back" src="${_p2}" loading="lazy" onerror="this.remove()" alt="">`:`<div class="pcs-back"></div>`;
+      const _if=_p1?`<img class="pcs-front" src="${_p1}" loading="lazy" onerror="this.remove()" alt="">`:`<div class="pcs-front"></div>`;
+      posterImg=`<div class="poster-card-stack">${_ib}${_if}</div>`;
+    } else {
+      _cardBg='';
+      _cardBg='';
+      const _opacity=allPast&&!_ended?';opacity:.45':'';
+      const _isEditorial=_isEditorialPoster(f);
+      if(_isEditorial){
+        const _accent=_sectionColor(f.section||'');
+        const _edSecLbl=_secLabel(f.section||'');
+        const _edBodyTitle=(()=>{const pfx=_edSecLbl+' - ';if(displayTitle.startsWith(pfx))return displayTitle.slice(pfx.length);const sPfx='Storytellers - ';if(displayTitle.startsWith(sPfx))return displayTitle.slice(sPfx.length);return displayTitle;})();
+        posterImg=`<div class="ed-hdr" style="background:${_accent}"><div class="ed-lbl">${_edSecLbl}</div></div><div class="ed-img"><img src="${posterSrc}" loading="lazy" onerror="this.remove()" alt="" onload="this.style.opacity='1'"></div><div class="ed-body"><div class="ed-title">${_edBodyTitle}</div></div>`;
+      } else {
+        posterImg=posterSrc
+          ?`<img src="${posterSrc}" loading="lazy" data-title="${f.title.replace(/"/g,'&quot;')}" style="width:100%;height:100%;object-fit:cover${_opacity};display:block;opacity:0;transition:opacity 250ms ease" onload="this.style.opacity='1'" onerror="_posterErr(this)" alt="">`
+          :``;
+      }
+    }
+    const _sep=activeDay==='all'&&f.section&&f.section!==_prevSec?`<div class="poster-grid-sep">${(f.section||'').replace(/^[\p{Emoji}\s]+/u,'').trim()}</div>`:'';_prevSec=f.section||_prevSec;
+    return _sep+`<div class="bg-surf-2 poster-card js-open-pel${inWL&&!inW?' in-wl':''}${inW&&!_ended?' in-watched':''}${(_isPrograma?false:_isEditorialPoster(f))?' editorial':''}" data-title="${f.title}"${_isPrograma?'':_cardBg}>
+      ${posterImg}
+      ${progBadge}
+      ${inWL?`<button class="poster-wl-dot wl-on" data-title="${f.title.replace(/"/g,'&quot;')}" data-action="toggleWL" data-stop="1" aria-label="${t('misc_interes_label')}">${ICONS.heartFill}</button>`:''}
+    </div>`
+  }).join('')}</div>`;
+  return {html, hasEntries: true};
 }

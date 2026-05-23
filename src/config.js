@@ -174,3 +174,12 @@ export const VENUES={
   'Unibac':             {short:'Unibac'},
   'AECID':              {short:'AECID'},
 };
+
+// _DEFAULT_FEST_ID — festival más reciente por festivalEndStr (no por inserción).
+// Deriva puro de FESTIVAL_CONFIG. p8 Step 6g: movido aquí desde main.js para que
+// view/programa.js lo importe (lookups de NOTICES) sin ciclo. main.js lo importa.
+export const _DEFAULT_FEST_ID=(()=>{
+  const entries=Object.entries(FESTIVAL_CONFIG).filter(([,c])=>c.festivalEndStr);
+  if(!entries.length) return Object.keys(FESTIVAL_CONFIG)[0]||'aff2026';
+  return entries.sort((a,b)=>new Date(b[1].festivalEndStr)-new Date(a[1].festivalEndStr))[0][0];
+})();
