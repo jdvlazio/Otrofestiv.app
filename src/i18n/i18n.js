@@ -1,23 +1,14 @@
-// ── src/i18n/i18n.js — Fase 8 (PREP, NO CABLEADO) ───────────────────────────────
+// ── src/i18n/i18n.js — Fase 8 Step 4 (CABLEADO) ──────────────────────────────
 //
-// ⚠ ESTADO: módulo de preparación. NO importado por index.html. Cero impacto
-//   runtime/deploy/SW. Wiring real post-Tribeca.
-// ⚠ FUENTE DE VERDAD: index.html hasta el wiring. Copia fiel del bloque
-//   contiguo marcado. Si cambia en index.html antes del wiring, re-generar.
+// ESTADO: importado por src/main.js (Step 4). i18n puro: _I18N (diccionarios
+//   es/en), t (lookup + interpolación), _applyI18nDOM (aplica al DOM).
 //
-// EXCLUYE setLang (L4020 index.html) — es controller (ACTION_REGISTRY entry),
-//   va a src/controller. Aquí solo lo i18n-puro: _I18N, _lang, t, _applyI18nDOM.
+// _lang: NO vive aquí. Es slice del roster en state (D-INFRA-4); t() y
+//   _applyI18nDOM lo leen como bare-global → STATE BRIDGE → state.get('_lang').
+//   El init de _lang (detección storage/navegador) vive en main.js (siembra
+//   state vía bridge). setLang (controller, → Wave 7) hace state.set('_lang').
 //
-// DEPS / WIRING:
-//   - import storage (para _lang detection — storage.getLang) ↓
-//   - ⚠ _lang es `let` mutable. Hoy setLang lo escribe vía state.set(_lang)
-//     + mirror. Al wiring (D-INFRA-4): _lang vive en state; t() leerá
-//     state.get(_lang). setLang (controller) hará la mutación. ESM no permite
-//     reasignar un binding importado → el wiring necesita un setter o mover
-//     _lang a state. Aquí queda como copia fiel (export let).
-//   - _applyI18nDOM lee el DOM (data-i18n) + t() — sin llamar renders.
-
-import { storage } from "../storage/storage.js";
+// Sin imports: t/_applyI18nDOM solo usan _I18N (propio), _lang (bridge) y el DOM.
 
 export const _I18N = {
   es: {
@@ -695,14 +686,8 @@ export const _I18N = {
   }
 };
 
-export let _lang = (()=>{
-  const saved = storage.getLang();
-  if(saved && _I18N[saved]) return saved;
-  // Auto-detect por idioma del navegador — solo en primer uso
-  const nav = (navigator.language || navigator.userLanguage || 'es').toLowerCase();
-  return nav.startsWith('en') ? 'en' : 'es';
-})();
-
+// _lang vive en state (roster bridged). El init (storage.getLang + detección de
+// navegador) y setLang viven en main.js. Aquí t() lo lee como bare-global → bridge.
 
 export function t(key, params){
   let str = (_I18N[_lang] && _I18N[_lang][key]) || (_I18N['es'][key]) || key;

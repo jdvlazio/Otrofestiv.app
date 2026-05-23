@@ -373,18 +373,22 @@ except Exception as e:
 # Verifica que todas las keys usadas en t('key') existan en AMBOS diccionarios ES y EN.
 check = 'i18n-complete'
 try:
-    # Extract _I18N block
-    i18n_start = content.find('const _I18N = {')
+    # p8 Step 4: el _I18N se movió a src/i18n/i18n.js (export const). Se lee de ahí
+    # (el find 'const _I18N = {' matchea dentro de 'export const _I18N = {').
+    _i18n_path = 'src/i18n/i18n.js'
+    _i18n_src = open(_i18n_path, encoding='utf-8').read() if os.path.exists(_i18n_path) else ''
+    # Extract _I18N block desde i18n.js
+    i18n_start = _i18n_src.find('const _I18N = {')
     depth = 0
     end = i18n_start
-    for i, ch in enumerate(content[i18n_start:]):
+    for i, ch in enumerate(_i18n_src[i18n_start:]):
         if ch == '{': depth += 1
         elif ch == '}':
             depth -= 1
             if depth == 0:
                 end = i18n_start + i + 1
                 break
-    i18n_block = content[i18n_start:end]
+    i18n_block = _i18n_src[i18n_start:end]
 
     def _parse_i18n(block):
         import re as _re
@@ -406,9 +410,10 @@ try:
     es_keys = _parse_i18n(_extract_lang_block(i18n_block, 'es'))
     en_keys = _parse_i18n(_extract_lang_block(i18n_block, 'en'))
 
-    # All t('key') calls in the script
+    # All t('key') calls — en el script (main.js inyectado) Y en i18n.js
+    # (_applyI18nDOM llama t() con keys hardcodeadas).
     script_part = content[content.find('<script>'):content.rfind('</script>')]
-    all_t_calls = set(re.findall(r"t\('([a-z][a-z0-9_]+)'\)", script_part))
+    all_t_calls = set(re.findall(r"t\('([a-z][a-z0-9_]+)'\)", script_part + '\n' + _i18n_src))
     # Filter out non-i18n false positives (CSS selectors, HTML tags, etc.)
     NON_KEYS = {'div','span','button','img','input','p','a','svg','ul','li','err','ok'}
     real_keys = {k for k in all_t_calls if k not in NON_KEYS and len(k) > 3 and '_' in k}
@@ -433,15 +438,14 @@ except Exception as e:
 
 # ── CHECK: i18n-hardcoded ─────────────────────────────────────────────────────
 # Detecta strings de UI conocidos hardcodeados en JS sin pasar por t().
-# La búsqueda excluye la zona de los diccionarios i18n (antes de "function t(key")
-# para evitar falsos positivos — esos strings aparecen legítimamente en los dicts.
-# Cada string encontrado en auditoría Chrome debe añadirse aquí.
+# p8 Step 4: _I18N y t() se movieron a src/i18n/i18n.js. Se escanea SOLO el código
+# de app (main.js) — NO el HTML estático de index.html, que usa data-i18n con texto
+# fallback legítimo (ej. <button data-i18n="av_confirmar">Confirmar</button>), ni
+# los diccionarios (ya fuera de main.js). _main_src se leyó al inicio.
+# Cada string encontrado en auditoría Chrome debe añadirse a la lista.
 check = 'i18n-hardcoded'
 try:
-    script_full = content[content.find('<script>'):content.rfind('</script>')]
-    # Boundary: todo DESPUÉS de la definición de t() es código de app
-    t_fn_idx = script_full.find('function t(key')
-    code_only = script_full[t_fn_idx:] if t_fn_idx > 0 else script_full
+    code_only = _main_src if os.path.exists(_MAIN_JS) else ''
 
     # Strings de UI que deben ir siempre por t() — nunca hardcodeados
     # Fuente: auditorías Chrome EN/ES. Añadir aquí cada nuevo hallazgo.
