@@ -1,26 +1,22 @@
-// ── src/domain/schedule.js — Fase 8 Wave 2 (PREP, NO CABLEADO) ──────────────────
+// ── src/domain/schedule.js — Fase 8 Step 5 (CABLEADO) ───────────────────────
 //
-// ⚠ ESTADO: módulo de preparación. NO importado por index.html. Cero impacto
-//   runtime/deploy/SW. Wiring real en Wave 2 post-Tribeca.
-// ⚠ FUENTE DE VERDAD: index.html hasta el wiring. Copia fiel (byte-faithful,
-//   generada vía extractFunction). Si cambia en index.html antes del wiring,
-//   re-generar.
+// ESTADO: importado por src/main.js (Step 5). Conflicto + scheduling engine.
 //
-// DEPS EXTERNAS (a inyectar/importar en el wiring — NO resueltas aquí):
+// DEPS:
 //   - domain/time: toMin, parseDur (imports ↓)
-//   - domain/film: effectiveDuration, screeningPassed, shuffle, scoreFilm (imports ↓)
-//   - config: FESTIVAL_BUFFER (screensConflict)
-//   - festival-state: availability (isScreeningBlocked), FILMS + watched +
-//     prioritized (computeScenarios)
+//   - domain/film: effectiveDuration, screeningPassed, shuffle, scoreFilm (↓)
+//   - domain/festival: travelMins (screensConflict) — import directo (↓)
+//   - config: FESTIVAL_BUFFER (screensConflict) — import directo.
+//   - festival-state vía STATE BRIDGE: availability (isScreeningBlocked),
+//     FILMS + watched + prioritized (computeScenarios).
 //
-// WORKER: las sched pure fns tienen COPIAS en el template string del calc
-//   worker (Blob worker clásico, index.html L~8950). El worker NO puede
-//   `import`. Al cablear: decidir module worker vs mantener la copia
-//   worker-local (status quo, validado por [worker-overlap]). Mientras, este
-//   módulo y la copia worker DEBEN mantenerse sincronizados.
+// WORKER: las sched pure fns tienen COPIAS en el template del calc worker; el
+//   worker las consume vía eval(name).toString(). [worker-overlap] valida.
 
+import { FESTIVAL_BUFFER } from "../config.js";
 import { toMin, parseDur } from "./time.js";
 import { effectiveDuration, screeningPassed, shuffle, scoreFilm } from "./film.js";
+import { travelMins } from "./festival.js";
 export function screensConflict(a,b){
   if(a.day!==b.day) return false;
   // effectiveDuration: suma 30 min si has_qa:true (Q&A extiende la función)

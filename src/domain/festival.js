@@ -1,29 +1,26 @@
-// ── src/domain/festival.js — Fase 8 Wave 2 (PREP, NO CABLEADO) ──────────────────
+// ── src/domain/festival.js — Fase 8 Step 5 (CABLEADO) ───────────────────────
 //
-// ⚠ ESTADO: módulo de preparación. NO importado por index.html. Cero impacto
-//   runtime/deploy/SW. Wiring real en Wave 2 post-Tribeca.
-// ⚠ FUENTE DE VERDAD: index.html hasta el wiring. Copia fiel (byte-faithful,
-//   generada vía extractFunction). Si cambia en index.html antes del wiring,
-//   re-generar.
+// ESTADO: importado por src/main.js (Step 5). Venue travel + festival phase.
 //
-// DEPS EXTERNAS (a inyectar/importar en el wiring — NO resueltas aquí):
+// DEPS:
 //   - domain/time: toMin, simNow, simTodayStr, festivalEnded (imports ↓)
-//   - domain/film: screeningPassed, _classifyTodayScreenings (imports ↓)
-//   - config: DEFAULT_DURATION_MIN (_gapSuggestion, _getFestivalPhase)
-//   - festival-state: FILMS, savedAgenda, watched, FESTIVAL_DATES, DAY_KEYS
+//   - domain/film: screeningPassed, _classifyTodayScreenings, _endedStats (↓)
+//   - config: FESTIVAL_CONFIG (venueTravelMins), DEFAULT_DURATION_MIN
+//     (_gapSuggestion, _getFestivalPhase) — import directo.
+//   - festival-state vía STATE BRIDGE: _activeFestId + FESTIVAL_TRANSPORT
+//     (venueTravelMins), FILMS, savedAgenda, watched, FESTIVAL_DATES, DAY_KEYS.
 //
-// NOTA DAG: _getFestivalPhase + _gapSuggestion se ubican aquí (no en time.js
-//   como sugería §13) para ROMPER el micro-ciclo time↔schedule detectado en
-//   pre-flight. Aquí: festival → time + film (sólo hacia abajo, acíclico).
+// NOTA DAG: _getFestivalPhase + _gapSuggestion se ubican aquí (no en time.js)
+//   para romper el micro-ciclo time↔schedule. festival → time + film + config;
+//   schedule → festival (travelMins). Acíclico.
 //
-// WORKER: las sched pure fns tienen COPIAS en el template string del calc
-//   worker (Blob worker clásico, index.html L~8950). El worker NO puede
-//   `import`. Al cablear: decidir module worker vs mantener la copia
-//   worker-local (status quo, validado por [worker-overlap]). Mientras, este
-//   módulo y la copia worker DEBEN mantenerse sincronizados.
+// WORKER: venueTravelMins/travelMins tienen COPIAS worker-local (leen
+//   _venueCoords/_transport). Las sched pure fns se consumen vía
+//   eval(name).toString(). [worker-overlap] valida.
 
+import { FESTIVAL_CONFIG, DEFAULT_DURATION_MIN } from "../config.js";
 import { toMin, simNow, simTodayStr, festivalEnded } from "./time.js";
-import { screeningPassed, _classifyTodayScreenings } from "./film.js";
+import { screeningPassed, _classifyTodayScreenings, _endedStats } from "./film.js";
 export function _resolveVenue(name,venues){
   if(!name) return{short:''};
   if(!venues) return{short:name};
@@ -32,6 +29,28 @@ export function _resolveVenue(name,venues){
   const nl=name.toLowerCase();
   const k=sorted.find(k=>name.startsWith(k)||name.includes(k)||nl.startsWith(k.toLowerCase())||nl.includes(k.toLowerCase()));
   return k?venues[k]:{short:name};
+}
+
+// venueTravelMins/travelMins (main-thread): tiempo de viaje entre sedes vía
+// coords del festival activo. Leen FESTIVAL_CONFIG (config) + _activeFestId /
+// FESTIVAL_TRANSPORT (bridge). El worker mantiene SUS copias (lee _venueCoords/
+// _transport worker-local). screensConflict (schedule.js) importa travelMins.
+export function venueTravelMins(v1,v2){
+  // Data-driven: uses coords from active festival's venues JSON
+  const festVenues=(FESTIVAL_CONFIG[_activeFestId]||{}).venues||{};
+  const c1=_resolveVenue(v1,festVenues),c2=_resolveVenue(v2,festVenues);
+  const lat1=c1.lat,lng1=c1.lng??c1.lon,lat2=c2.lat,lng2=c2.lng??c2.lon;
+  if(!lat1||!lng1||!lat2||!lng2) return 0;
+  const dlat=(lat1-lat2)*111,dlon=(lng1-lng2)*111*Math.cos(lat1*Math.PI/180);
+  const km=Math.sqrt(dlat*dlat+dlon*dlon);
+  if(km<0.15) return 0;
+  // Velocidad efectiva por modo de transporte (km/h, incluye overhead puerta-a-puerta)
+  const spd=FESTIVAL_TRANSPORT==='walking'?4:FESTIVAL_TRANSPORT==='transit'?10:12;
+  return Math.max(5,Math.round(km/spd*60/5)*5);
+}
+export function travelMins(venueA,venueB){
+  // Coordinate-based — all festivals provide venues with lat+lng
+  return venueTravelMins(venueA,venueB);
 }
 
 export function _gapSuggestion(todayDay,gapFromMin,gapToMin){
