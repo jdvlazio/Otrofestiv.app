@@ -513,3 +513,27 @@ export function _renderFestivalSelectorHTML(state, activeFestId){
   if(past.length)     html+=`<div class="fs-section-lbl">${t('splash_anteriores')}</div>`+past.map(mkPastRow).join('<div class="fs-divider"></div>');
   return html;
 }
+
+// p8 Step 6b (D-6B-2): util de título compartida (usada por feedback/programa/agenda).
+export function parseProgramTitle(t){
+  let displayTitle=t, progSuffix='';
+  const f=FILMS.find(fi=>fi.title===t);
+  if(f?.is_awards_screening){
+    displayTitle=t.replace(/^Award Screening:\s*/i,'');
+  } else if(f?.is_cortos){
+    // "Cortos: Familia 12+" → displayTitle="Familia 12+"
+    if(t.match(/^Cortos:\s*/i)){
+      displayTitle=t.replace(/^Cortos:\s*/i,'');
+    } else if(t.match(/^Shorts:\s*/i)){
+      displayTitle=t.replace(/^Shorts:\s*/i,'');
+    } else if(t.startsWith('Prog.')){
+      const m=t.match(/^(Prog\.[^—–]+)\s*[—–]\s*(.+)$/);
+      if(m){displayTitle=m[2].trim();progSuffix=m[1].trim();}
+    } else {
+      const m=t.match(/^(.+?)\s*[—–]\s*(Prog\..*)$/);
+      if(m){displayTitle=m[1];progSuffix=m[2];}
+    }
+    if(progSuffix&&!/\d/.test(progSuffix)) progSuffix='';
+  }
+  return{displayTitle,progSuffix};
+}

@@ -40,8 +40,19 @@ import {
   _secLabel, _sectionColor, renderRatingStarsHTML, starSVG,
   _renderSplashDropdownHTML, _renderFestivalSelectorHTML, _classifyFestival,
   _sortFestivals, renderAvBlocksHTML, isFullDayBlocked, renderFlowProgress,
-  buildResultHTML,
+  buildResultHTML, parseProgramTitle,
 } from './view/components.js';
+
+// ── Step 6b: view/sheets.js (lifecycle de paneles) + view/feedback.js
+//   (notificaciones: toasts/modales/sim-label). ───────────────────────────────
+import {
+  openAuthSheet, closeAuthSheet, closeAvSheet, openFestivalSheet,
+  closeFestivalSheet, closePVRating, closePrioLimit, _showSignedInSheet,
+} from './view/sheets.js';
+import {
+  _SIM_TOTAL, _showModal, _simFestStart, _simFestEnd,
+  showToast, showActionModal, showConflictModal, updateSimLabel,
+} from './view/feedback.js';
 
 // storage (adapter de localStorage) → src/storage/storage.js (Step 3).
 // Importado al top del módulo. Usa FESTIVAL_STORAGE_KEY vía el STATE BRIDGE.
@@ -865,21 +876,8 @@ function _renderAfterSync(){
 }
 
 // Abrir sheet de login
-function openAuthSheet(){
-  if(_sbUser){_showSignedInSheet();return;}
-  const s=document.getElementById('auth-sheet');
-  if(s){
-    s.style.display='flex';
-    setTimeout(()=>s.classList.add('open'),10);
-    // Aplicar i18n al abrir — garantiza subtítulos en el idioma activo
-    s.querySelectorAll('[data-i18n]').forEach(el=>{el.textContent=t(el.dataset.i18n);});
-    s.querySelectorAll('[data-i18n-ph]').forEach(el=>{el.placeholder=t(el.dataset.i18nPh);});
-  }
-}
-function closeAuthSheet(){
-  const s=document.getElementById('auth-sheet');
-  if(s){s.classList.remove('open');setTimeout(()=>s.style.display='none',300);}
-}
+// openAuthSheet → src/view/sheets.js (Step 6b). Importado.
+// closeAuthSheet → src/view/sheets.js (Step 6b). Importado.
 async function submitAuthEmail(){
   const inp=document.getElementById('auth-email-inp');
   const btn=document.getElementById('auth-send-btn');
@@ -925,14 +923,7 @@ async function submitOTP(){
     btn.disabled=false;btn.textContent=t('av_confirmar');
   }
 }
-function _showSignedInSheet(){
-  const s=document.getElementById('auth-sheet');
-  document.getElementById('auth-sheet-step1').style.display='none';
-  document.getElementById('auth-sheet-step2').style.display='none';
-  document.getElementById('auth-sheet-step3').style.display='block';
-  document.getElementById('auth-signed-email').textContent=_sbUser?.email||'';
-  if(s){s.style.display='flex';setTimeout(()=>s.classList.add('open'),10);}
-}
+// _showSignedInSheet → src/view/sheets.js (Step 6b). Importado.
 async function deleteAccount(){
   if(!_sb||!_sbUser) return;
   const btn=document.getElementById('auth-delete-btn');
@@ -1130,7 +1121,7 @@ FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202605230609';
+const BUILD_VERSION='202605230653';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';
@@ -1915,22 +1906,8 @@ const emptyStateHero = (icon, title, sub='', ctaLabel='', ctaTab='', ctaSecondar
   </div>`;
 let avAddOpen={};
 /* ── Sistema de modales de confirmación ── */
-function showActionModal(title,body,label,cb,cancelLabel){_showModal(title,body,label,cb,'confirm',cancelLabel);}
-function _showModal(title,body,label,cb,cls,cancelLabel){
-  const p=document.getElementById('conflict-modal');if(p)p.remove();
-  const m=document.createElement('div');m.id='conflict-modal';m.className='conflict-modal';
-  m.innerHTML=`<div class="conflict-modal-box">
-    <div class="conflict-modal-hdr">${title}</div>
-    <div class="conflict-modal-body">${body}</div>
-    <div class="conflict-modal-btns">
-      <button class="conflict-modal-btn cancel" id="cm-c">${cancelLabel||t('misc_cancelar')}</button>
-      <button class="conflict-modal-btn ${cls}" id="cm-ok">${label}</button>
-    </div></div>`;
-  document.body.appendChild(m);
-  document.getElementById('cm-c').onclick=()=>m.remove();
-  document.getElementById('cm-ok').onclick=()=>{m.remove();cb();};
-  m.addEventListener('click',e=>{if(e.target===m)m.remove();});
-}
+// showActionModal → src/view/feedback.js (Step 6b). Importado.
+// _showModal → src/view/feedback.js (Step 6b). Importado.
 
 // isFullDayBlocked → src/view/components.js (Step 6a). Importado.
 function checkPlanConflictsWithBlock(day, fromStr, toStr){
@@ -1974,32 +1951,7 @@ function _removePlanItem(title){
 // 9 · DISPONIBILIDAD
 //     showConflictModal, toggleFullDay, addBlock, renderAvDay
 // ═══════════════════════════════════════════════════════════════
-function showConflictModal(conflicts, onConfirm){
-  const existing=document.getElementById('conflict-modal');if(existing) existing.remove();
-  const names=conflicts.map(s=>{
-    const{displayTitle}=parseProgramTitle(s._title||'');
-    return`<b>${s.time} ${displayTitle.length>30?displayTitle.slice(0,28)+'…':displayTitle}</b>`;
-  }).join('<br>');
-  const modal=document.createElement('div');
-  modal.id='conflict-modal';modal.className='conflict-modal';
-  modal.innerHTML=`<div class="conflict-modal-box">
-    <div class="conflict-modal-hdr">Conflicto con tu plan</div>
-    <div class="conflict-modal-body">
-      Este horario choca con:<br>${names}<br><br>
-      ${t('plan_continuar_quitar')}
-    </div>
-    <div class="conflict-modal-btns">
-      <button class="conflict-modal-btn cancel" id="conflict-cancel">${t('search_cancelar')}</button>
-      <button class="conflict-modal-btn confirm" id="conflict-ok">${t('plan_quitar_continuar')}</button>
-    </div>
-  </div>`;
-  document.body.appendChild(modal);
-  document.getElementById('conflict-cancel').onclick=()=>modal.remove();
-  document.getElementById('conflict-ok').onclick=()=>{
-    modal.remove();
-    onConfirm();
-  };
-}
+// showConflictModal → src/view/feedback.js (Step 6b). Importado.
 // Controller (p7a) — branchy: si día ya bloqueado, libera; si no, bloquea con conflict modal opcional
 function toggleFullDay(day){
   // 1. READ — UI state (isFullDayBlocked lee availability via free var)
@@ -2146,10 +2098,7 @@ function openAvSheet(){
   ov.style.display='flex';
 }
 
-function closeAvSheet(){
-  const ov=document.getElementById('av-sheet-overlay');
-  if(ov) ov.style.display='none';
-}
+// closeAvSheet → src/view/sheets.js (Step 6b). Importado.
 
 function selectAvDay(day){
   _avSheetDay=day;
@@ -2403,28 +2352,7 @@ function getSuggestions(){
 
 // ── RENDER FILM LIST ──
 // Utility: extraer displayTitle y progSuffix de cualquier título de programa
-function parseProgramTitle(t){
-  let displayTitle=t, progSuffix='';
-  const f=FILMS.find(fi=>fi.title===t);
-  if(f?.is_awards_screening){
-    displayTitle=t.replace(/^Award Screening:\s*/i,'');
-  } else if(f?.is_cortos){
-    // "Cortos: Familia 12+" → displayTitle="Familia 12+"
-    if(t.match(/^Cortos:\s*/i)){
-      displayTitle=t.replace(/^Cortos:\s*/i,'');
-    } else if(t.match(/^Shorts:\s*/i)){
-      displayTitle=t.replace(/^Shorts:\s*/i,'');
-    } else if(t.startsWith('Prog.')){
-      const m=t.match(/^(Prog\.[^—–]+)\s*[—–]\s*(.+)$/);
-      if(m){displayTitle=m[2].trim();progSuffix=m[1].trim();}
-    } else {
-      const m=t.match(/^(.+?)\s*[—–]\s*(Prog\..*)$/);
-      if(m){displayTitle=m[1];progSuffix=m[2];}
-    }
-    if(progSuffix&&!/\d/.test(progSuffix)) progSuffix='';
-  }
-  return{displayTitle,progSuffix};
-}
+// parseProgramTitle → src/view/components.js (Step 6b). Importado.
 
 
 // _genreEN(g) — traduce género al idioma activo
@@ -2840,14 +2768,10 @@ function checkinNoLaVi(title){
   renderAgenda();
 }
 // Sim panel dates derive from active festival — never hardcoded
-function _simFestStart(){const k=DAY_KEYS[0];const d=FESTIVAL_DATES[k];return d?new Date(d+'T09:00:00'):new Date();}
-function _simFestEnd(){return FESTIVAL_END||new Date();}
-const _SIM_TOTAL=()=>((_simFestEnd()-_simFestStart())/60000)||1;
-function updateSimLabel(val){
-  const d=new Date(_simFestStart().getTime()+Math.round(val/1000*_SIM_TOTAL())*60000);
-  const el=document.getElementById('sim-label');
-  if(el) el.textContent=d.toLocaleString(_lang==='en'?'en-US':'es',{weekday:'short',day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'});
-}
+// _simFestStart → src/view/feedback.js (Step 6b). Importado.
+// _simFestEnd → src/view/feedback.js (Step 6b). Importado.
+// _SIM_TOTAL → src/view/feedback.js (Step 6b). Importado.
+// updateSimLabel → src/view/feedback.js (Step 6b). Importado.
 let _expandedFilm=''; // key: title+day+time — which film has alternatives open
 let _activeMiPlanFilm=''; // key: title+time — highlighted from calendar click
 function toggleMplanProg(btn,e){
@@ -3951,12 +3875,7 @@ function togglePriority(title,cost){
   }
   if(activeView==='day') updateHorarioPrioBtn(title);   // surgical: botón prio del pel-sheet
 }
-function showToast(msg,type='info',duration=2800){
-  let t=document.getElementById('prio-toast');
-  if(!t){t=document.createElement('div');t.id='prio-toast';document.body.appendChild(t);}
-  t.className='prio-toast '+type;t.innerHTML=msg;t.style.opacity='1';t.style.pointerEvents='none';
-  clearTimeout(t._to);t._to=setTimeout(()=>{t.style.opacity='0';},duration);
-}
+// showToast → src/view/feedback.js (Step 6b). Importado.
 let _toastActionFn=null;
 function showActionToast(msg,actionLabel,actionFn,duration=4000){
   _toastActionFn=actionFn;
@@ -4096,15 +4015,7 @@ function savePVRating(){
   // no re-render (no-op visual: el prompt de calificar sigue igual).
 }
 
-function closePVRating(){
-  const overlay=document.getElementById('pv-rating-overlay');
-  const sheet=document.getElementById('pv-rating-sheet');
-  if(overlay) overlay.classList.remove('open');
-  if(sheet){
-    sheet.classList.remove('open');
-    setTimeout(()=>{ if(!sheet.classList.contains('open')) sheet.style.display='none'; },350);
-  }
-}
+// closePVRating → src/view/sheets.js (Step 6b). Importado.
 
 // Controller (p7a) — branchy toggle desde Mi Plan
 function markWatchedFromPlan(title, day, time, venue, duration, e){
@@ -4247,10 +4158,7 @@ function openPrioLimit(newTitle){
   document.getElementById('prio-limit-sheet').classList.add('open');
 }
 
-function closePrioLimit(){
-  document.getElementById('prio-limit-overlay').classList.remove('open');
-  document.getElementById('prio-limit-sheet').classList.remove('open');
-}
+// closePrioLimit → src/view/sheets.js (Step 6b). Importado.
 
 function swapPriority(removeTitle, addTitle){
   state.update('prioritized', s => state._addToSet(state._delFromSet(s, removeTitle), addTitle));
@@ -6919,18 +6827,8 @@ setTimeout(()=>{
   }
 }, 400);
 
-function openFestivalSheet(){
-  const ov=document.getElementById('fs-overlay');
-  const sh=document.getElementById('fs-sheet');
-  if(ov) ov.classList.add('open');
-  if(sh) sh.classList.add('open');
-}
-function closeFestivalSheet(){
-  const ov=document.getElementById('fs-overlay');
-  const sh=document.getElementById('fs-sheet');
-  if(ov) ov.classList.remove('open');
-  if(sh) sh.classList.remove('open');
-}
+// openFestivalSheet → src/view/sheets.js (Step 6b). Importado.
+// closeFestivalSheet → src/view/sheets.js (Step 6b). Importado.
 
 /* ── _fixStickyOffset: correct sticky positions for desktop gap ─────────
    Measures actual topbar height so #hdr-programa sticks precisely.
