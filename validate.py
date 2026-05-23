@@ -880,12 +880,13 @@ except Exception as _e:
 check = 'view-purity'
 try:
     import re as _re
-    # p8 Step 6a: parte de los PURE_FNS se movió a src/view/components.js. Se
-    # concatena para que _find_fn_body los halle ahí (regex acepta `export`).
+    # p8 Step 6a/6c: PURE_FNS movidos a src/view/*.js (components, programa). Se
+    # concatenan para que _find_fn_body los halle ahí (regex acepta `export`).
     _components_src = ''
-    _cp6a = os.path.join('src', 'view', 'components.js')
-    if os.path.exists(_cp6a):
-        _components_src = '\n' + open(_cp6a, encoding='utf-8').read()
+    for _vp in ('components.js', 'programa.js'):
+        _vpath = os.path.join('src', 'view', _vp)
+        if os.path.exists(_vpath):
+            _components_src += '\n' + open(_vpath, encoding='utf-8').read()
     _html = content + _components_src
     _lines = _html.split('\n')
     # PURE_FNS — funciones puras tracked por el check. Renamed de TIER1_FNS en
