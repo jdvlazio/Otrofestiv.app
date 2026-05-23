@@ -1,23 +1,17 @@
-// ── src/domain/film.js — Fase 8 Wave 2 (PREP, NO CABLEADO) ──────────────────
+// ── src/domain/film.js — Fase 8 Step 5 (CABLEADO) ───────────────────────────
 //
-// ⚠ ESTADO: módulo de preparación. NO importado por index.html. Cero impacto
-//   runtime/deploy/SW. Wiring real en Wave 2 post-Tribeca.
-// ⚠ FUENTE DE VERDAD: index.html hasta el wiring. Copia fiel (byte-faithful,
-//   generada vía extractFunction). Si cambia en index.html antes del wiring,
-//   re-generar.
+// ESTADO: importado por src/main.js (Step 5). Funciones puras de film/scoring.
 //
-// DEPS EXTERNAS (a inyectar/importar en el wiring — NO resueltas aquí):
+// DEPS:
 //   - domain/time: parseDur, _festDate, simNow, festivalEnded, toMin (imports ↓)
-//   - config: DEFAULT_DURATION_MIN (_classifyTodayScreenings)
-//   - festival-state: FESTIVAL_DATES (screeningPassed), FILMS + savedAgenda
-//     (_endedStats), FILMS + watchlist (scoreFilm)
+//   - config: DEFAULT_DURATION_MIN (_classifyTodayScreenings) — import directo.
+//   - festival-state vía STATE BRIDGE: FESTIVAL_DATES (screeningPassed), FILMS +
+//     savedAgenda (_endedStats), FILMS + watched/filmRatings (scoreFilm).
 //
-// WORKER: las sched pure fns tienen COPIAS en el template string del calc
-//   worker (Blob worker clásico, index.html L~8950). El worker NO puede
-//   `import`. Al cablear: decidir module worker vs mantener la copia
-//   worker-local (status quo, validado por [worker-overlap]). Mientras, este
-//   módulo y la copia worker DEBEN mantenerse sincronizados.
+// WORKER: las sched pure fns tienen COPIAS en el template del calc worker; el
+//   worker las consume vía eval(name).toString(). [worker-overlap] valida.
 
+import { DEFAULT_DURATION_MIN } from "../config.js";
 import { parseDur, _festDate, simNow, festivalEnded, toMin } from "./time.js";
 export function _djb2(str){
   let h=5381;

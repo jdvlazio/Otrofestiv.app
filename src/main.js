@@ -24,6 +24,14 @@ import { storage } from './storage/storage.js';
 //   (bridge); su init y setLang se quedan en main.js. ──────────────────────────
 import { _I18N, t, _applyI18nDOM } from './i18n/i18n.js';
 
+// ── Step 5: domain/ (funciones puras). Importan config (DEFAULT_DURATION_MIN,
+//   FESTIVAL_BUFFER, FESTIVAL_CONFIG) y leen festival-state vía bridge. El worker
+//   las consume vía eval(name).toString(); sus copias worker-local se quedan. ──
+import { toMin, parseDur, minToStr, _festDate, simNow, simTodayStr, dayFullyPassed, festivalEnded } from './domain/time.js';
+import { _djb2, _titleSeed, _mulberry32, shuffle, scoreFilm, effectiveDuration, screeningPassed, _classifyTodayScreenings, _endedStats } from './domain/film.js';
+import { screensConflict, isScreeningBlocked, sortScreensByStrategy, computeScenarios } from './domain/schedule.js';
+import { _resolveVenue, _gapSuggestion, _getFestivalPhase, venueTravelMins, travelMins } from './domain/festival.js';
+
 // storage (adapter de localStorage) → src/storage/storage.js (Step 3).
 // Importado al top del módulo. Usa FESTIVAL_STORAGE_KEY vía el STATE BRIDGE.
 
@@ -412,9 +420,7 @@ FESTIVAL_TRANSPORT='transit';
 // Inputs: dateStr en formato YYYY-MM-DD, time en formato HH:mm.
 // Returns: Date object cuyo valor representa dateStr+time en la TZ del festival.
 // En _SCHED_PURE_FNS: el worker la consume vía .toString() con la misma TZ_OFFSET inyectada.
-function _festDate(dateStr,time){
-  return new Date(dateStr+'T'+time+':00'+TZ_OFFSET);
-}
+// _festDate → src/domain/time.js (Step 5). Importado.
 /* TMDB: key vacía en producción — las funciones de enriquecimiento
    degradan silenciosamente. Para enriquecer posters localmente:
    TMDB_API_KEY en scripts/enrich-festival.py (no commit al repo público).
@@ -1153,7 +1159,7 @@ FESTIVAL_END=new Date('2026-04-20T02:00:00');
 // NO en _SCHED_PURE_FNS — el worker define su propia copia (línea ~8297) con
 //   FESTIVAL_END_TS (timestamp ms) en vez de FESTIVAL_END (Date). Artefacto del
 //   mecanismo .toString(); se elimina en Fase 8 del destino.
-function festivalEnded(){ return simNow()>FESTIVAL_END; }
+// festivalEnded → src/domain/time.js (Step 5). Importado.
 
 // Check if a screening has passed (with 10 min grace)
 
@@ -1169,14 +1175,7 @@ function festivalEnded(){ return simNow()>FESTIVAL_END; }
 // Grace: suma 10 min al startTime antes de comparar — un screening que arrancó
 //   hace 5 min todavía cuenta como "no pasado" (el usuario aún puede llegar).
 // En _SCHED_PURE_FNS: el worker la consume vía .toString().
-function screeningPassed(s){
-  if(festivalEnded()) return false; // festival terminado — todo vuelve a plena opacidad
-  const dateStr=FESTIVAL_DATES[s.day];
-  if(!dateStr) return false;
-  const screeningTime=_festDate(dateStr,s.time);
-  screeningTime.setMinutes(screeningTime.getMinutes()+10); // 10 min grace
-  return simNow()>screeningTime;
-}
+// screeningPassed → src/domain/film.js (Step 5). Importado.
 // dayFullyPassed(day) → boolean — true si la última función del día ya pasó.
 // Lee (contrato implícito): FESTIVAL_DATES, FILMS.
 // Llama: _festDate(), simNow().
@@ -1184,17 +1183,7 @@ function screeningPassed(s){
 //   y aplica el mismo grace de 10 min que screeningPassed.
 // Si no hay films del día (o day no existe en FESTIVAL_DATES) → retorna false.
 // Main-thread only — usado en render de chips de día y línea "now" del agenda.
-function dayFullyPassed(day){
-  const dateStr=FESTIVAL_DATES[day];
-  if(!dateStr) return false;
-  // Day passed if last function of that day has passed
-  const dayFilms=FILMS.filter(f=>f.day===day);
-  if(!dayFilms.length) return false;
-  const lastTime=dayFilms.reduce((max,f)=>f.time>max?f.time:max,'00:00');
-  const lastScreen=_festDate(dateStr,lastTime);
-  lastScreen.setMinutes(lastScreen.getMinutes()+10);
-  return simNow()>lastScreen;
-}
+// dayFullyPassed → src/domain/time.js (Step 5). Importado.
 function isNowShowing(f){
   const dateStr=FESTIVAL_DATES[f.day];if(!dateStr) return false;
   const now=simNow();
@@ -1223,58 +1212,23 @@ function isToday(day){
 // Match: exacto → prefix/includes case-insensitive, longest-key-first.
 //   El longest-first garantiza determinismo cuando un name matchea múltiples keys
 //   (ej: "Sala A Mejorada" gana sobre "Sala A").
-function _resolveVenue(name,venues){
-  if(!name) return{short:''};
-  if(!venues) return{short:name};
-  if(venues[name]) return venues[name];
-  const sorted=Object.keys(venues).sort((a,b)=>b.length-a.length);
-  const nl=name.toLowerCase();
-  const k=sorted.find(k=>name.startsWith(k)||name.includes(k)||nl.startsWith(k.toLowerCase())||nl.includes(k.toLowerCase()));
-  return k?venues[k]:{short:name};
-}
-function venueTravelMins(v1,v2){
-  // Data-driven: uses coords from active festival's venues JSON
-  const festVenues=(FESTIVAL_CONFIG[_activeFestId]||{}).venues||{};
-  const c1=_resolveVenue(v1,festVenues),c2=_resolveVenue(v2,festVenues);
-  const lat1=c1.lat,lng1=c1.lng??c1.lon,lat2=c2.lat,lng2=c2.lng??c2.lon;
-  if(!lat1||!lng1||!lat2||!lng2) return 0;
-  const dlat=(lat1-lat2)*111,dlon=(lng1-lng2)*111*Math.cos(lat1*Math.PI/180);
-  const km=Math.sqrt(dlat*dlat+dlon*dlon);
-  if(km<0.15) return 0;
-  // Velocidad efectiva por modo de transporte (km/h, incluye overhead puerta-a-puerta)
-  const spd=FESTIVAL_TRANSPORT==='walking'?4:FESTIVAL_TRANSPORT==='transit'?10:12;
-  return Math.max(5,Math.round(km/spd*60/5)*5);
-}
+// _resolveVenue → src/domain/festival.js (Step 5). Importado.
+// venueTravelMins → src/domain/festival.js (Step 5). Importado.
 function vcfg(v){
   const festVenues=(FESTIVAL_CONFIG[_activeFestId]||{}).venues||{};
   return _resolveVenue(v,festVenues);
 }
 function sala(v){const m=v.match(/Sala\s*(\d+)/)||v.match(/Sal[oó]n\s*(\d+)/i);return m?'Sala '+m[1]:'';}
 /* ── UTILS: tiempo, fecha, duración ─────────────────────────────────── */
-function toMin(t){
-  if(!t) return 0;
-  const isPM=/ PM$/i.test(t), isAM=/ AM$/i.test(t);
-  const clean=t.replace(/ [AP]M$/i,'').trim();
-  const[h,m]=(clean+':0').split(':').map(Number);
-  if(isNaN(h)||isNaN(m)) return 0;
-  if(isPM||isAM){
-    // 12h format: 12 AM=0, 12 PM=720, 1 PM=780
-    const h24=isPM?(h===12?12:h+12):(h===12?0:h);
-    return h24*60+m;
-  }
-  return h*60+m; // 24h format
-}
-function parseDur(d){const s=d!=null?String(d):'';const m=s&&s.replace('~','').match(/(\d+)/);return m?parseInt(m[1]):DEFAULT_DURATION_MIN;}
+// toMin → src/domain/time.js (Step 5). Importado.
+// parseDur → src/domain/time.js (Step 5). Importado.
 // effectiveDuration — duración total de una función incluyendo Q&A.
 // Pura (contrato implícito): lee DEFAULT_DURATION_MIN vía parseDur. El worker
 //   define la misma constante en _workerGlobals → comportamiento idéntico.
 // Asume: f.duration es string parseable a int ("90 min", "~95 min");
 //   f.has_qa boolean. Si has_qa, suma 30 min (Q&A extiende la función).
-function effectiveDuration(f){return parseDur(f&&f.duration)+(f&&f.has_qa?30:0);}
-function minToStr(m){
-  const h=Math.floor(((m%1440)+1440)%1440/60),mn=((m%1440)+1440)%1440%60;
-  return`${String(h).padStart(2,'0')}:${String(mn).padStart(2,'0')}`;
-}
+// effectiveDuration → src/domain/film.js (Step 5). Importado.
+// minToStr → src/domain/time.js (Step 5). Importado.
 
 /* ── CONFLICTS: detección de solapamientos entre funciones ──────────── */
 // screensConflict — true si dos funciones a y b no pueden ambas asistirse.
@@ -1285,22 +1239,8 @@ function minToStr(m){
 // Lógica: días distintos → no conflicto. Mismo día → suman effectiveDuration
 //   (Q&A incluido) y exigen gap ≥ max(FESTIVAL_BUFFER, travel+FESTIVAL_BUFFER)
 //   entre el fin de una y el inicio de la otra.
-function screensConflict(a,b){
-  if(a.day!==b.day) return false;
-  // effectiveDuration: suma 30 min si has_qa:true (Q&A extiende la función)
-  const aS=toMin(a.time), aE=aS+effectiveDuration(a);
-  const bS=toMin(b.time), bE=bS+effectiveDuration(b);
-  // Gap requerido: tiempo de viaje entre sedes + buffer mínimo
-  const travel=(a.venue&&b.venue)?travelMins(a.venue,b.venue):0;
-  const minGap=Math.max(FESTIVAL_BUFFER, travel+FESTIVAL_BUFFER);
-  if(aE<=bS) return (bS-aE)<minGap; // a antes que b
-  if(bE<=aS) return (aS-bE)<minGap; // b antes que a
-  return true; // solapamiento directo
-}
-function travelMins(venueA,venueB){
-  // Coordinate-based — all festivals provide venues with lat+lng
-  return venueTravelMins(venueA,venueB);
-}
+// screensConflict → src/domain/schedule.js (Step 5). Importado.
+// travelMins → src/domain/festival.js (Step 5). Importado.
 function travelWarn(s1,s2){
   if(s1.day!==s2.day) return null;
   const travel=travelMins(s1.venue,s2.venue);
@@ -1350,7 +1290,7 @@ FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202605221249';
+const BUILD_VERSION='202605222006';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';
@@ -1401,20 +1341,14 @@ _simTime=null; // null = real time
 // Returns: new Date(_simTime) si _simTime es truthy, sino new Date() (tiempo real).
 // NO en _SCHED_PURE_FNS — el worker define su propia copia (línea ~8296) con
 //   SIM_TIME en vez de _simTime (artefacto del .toString(); resuelto en Fase 8).
-function simNow(){return _simTime?new Date(_simTime):new Date();}
+// simNow → src/domain/time.js (Step 5). Importado.
 // simTodayStr() → 'YYYY-MM-DD' — fecha local de simNow().
 // Llama: simNow().
 // Usa getFullYear/getMonth/getDate (TZ local del runtime). NO toISOString —
 //   éste devuelve UTC y produciría el día siguiente después de las 7 PM en
 //   Colombia (UTC-5), rompiendo la línea "ahora" en agenda y header.
 // Main-thread only.
-function simTodayStr(){
-  // Usa fecha LOCAL (no UTC) para consistencia con getHours()/getMinutes()
-  // toISOString() devuelve UTC — en Colombia (UTC-5) esto da el día siguiente
-  // después de las 7 PM, causando que la línea "ahora" aparezca en el día incorrecto
-  const d=simNow();
-  return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
-}
+// simTodayStr → src/domain/time.js (Step 5). Importado.
 let miPlanViewStart=0; // 0-4, step 1, shows 2 days
 // ─────────────────────────────────────────────────────────────────────────────
 // ⚠️  FIX CRÍTICO — NO REMOVER (Apr 2026)
@@ -2472,12 +2406,7 @@ function renderAvBlocks(){
 // Solapamiento estricto: sStart<bTo && sEnd>bFrom — un screening que termina
 //   exactamente cuando empieza el block NO se considera bloqueado (boundary OK).
 // En _SCHED_PURE_FNS: el worker la consume vía .toString() con su propio availability.
-function isScreeningBlocked(s){
-  const av=availability[s.day];if(!av) return false;
-  const sStart=toMin(s.time),sEnd=sStart+parseDur(s.duration);
-  // Chequeo de solapamiento completo: excluye funciones que ocurran durante el bloque
-  return av.blocks.some(b=>sStart<toMin(b.to)&&sEnd>toMin(b.from));
-}
+// isScreeningBlocked → src/domain/schedule.js (Step 5). Importado.
 
 // ── ALGORITHM — exhaustive max + MRV + random restarts ──
 // _djb2 / _titleSeed / _mulberry32 — RNG determinista.
@@ -2490,34 +2419,15 @@ function isScreeningBlocked(s){
 // NOTA: computeScenarios NO usa estos helpers — usa Math.random directo en
 // sus shuffles internos, por design (random restarts dan diversidad). Para
 // forzar reproducibilidad: shuffle(arr, _mulberry32(_titleSeed(titles))).
-function _djb2(str){
-  let h=5381;
-  for(let i=0;i<str.length;i++) h=(Math.imul(31,h)+str.charCodeAt(i))|0;
-  return h;
-}
-function _titleSeed(titles){
-  return _djb2([...titles].sort().join('|'));
-}
-function _mulberry32(seed){
-  let s=seed|0;
-  return function(){
-    s=s+0x6D2B79F5|0;
-    let t=Math.imul(s^s>>>15,1|s);
-    t=t+Math.imul(t^t>>>7,61|t)^t;
-    return((t^t>>>14)>>>0)/4294967296;
-  };
-}
+// _djb2 → src/domain/film.js (Step 5). Importado.
+// _titleSeed → src/domain/film.js (Step 5). Importado.
+// _mulberry32 → src/domain/film.js (Step 5). Importado.
 // shuffle(arr, rand) → array — Fisher-Yates.
 // Pura cuando se pasa `rand`. Impure con Math.random (default).
 // NO muta input — clona con [...arr] y retorna el clon.
 // `rand` debe retornar valor en [0, 1) (compatible con _mulberry32).
 // En _SCHED_PURE_FNS: el worker la consume vía .toString().
-function shuffle(arr,rand){
-  const a=[...arr];
-  const r=rand||Math.random.bind(Math);
-  for(let i=a.length-1;i>0;i--){const j=Math.floor(r()*(i+1));[a[i],a[j]]=[a[j],a[i]];}
-  return a;
-}
+// shuffle → src/domain/film.js (Step 5). Importado.
 
 // ── Mejora 1: Scoring por película ──
 // Pondera cuánto vale incluir una película según rareza, sección y duración
@@ -2528,27 +2438,7 @@ function shuffle(arr,rand){
 //   long-form +10 (duración del primer screening > 150 min).
 // Usada por computeScenarios para el MRV ordering.
 // En _SCHED_PURE_FNS: el worker la consume vía .toString().
-function scoreFilm(title, screens, isPriority, allTitles){
-  let score=0;
-  // Prioridad explícita: peso máximo
-  if(isPriority) score+=100;
-  // Unicidad: menos funciones = más difícil de ver = mayor peso
-  const n=screens.length;
-  if(n===1) score+=40;
-  else if(n===2) score+=20;
-  else score+=5;
-  // Sección única: si es la única película de su sección en la watchlist
-  const mySection=screens[0]?.section||'';
-  const siblingsInSection=allTitles.filter(t=>{
-    if(t===title) return false;
-    return FILMS.some(f=>f.title===t&&f.section===mySection);
-  });
-  if(siblingsInSection.length===0) score+=15;
-  // Duración larga: película de >150 min es un compromiso grande, priorizar
-  const dur=parseInt(screens[0]?.duration)||0;
-  if(dur>150) score+=10;
-  return score;
-}
+// scoreFilm → src/domain/film.js (Step 5). Importado.
 
 // ── Mejora 2: Interval Scheduling — ordenar funciones por conflictos mínimos + fin temprano ──
 // Para cada película con múltiples funciones, prioriza la que:
@@ -2560,20 +2450,7 @@ function scoreFilm(title, screens, isPriority, allTitles){
 // Criterio: 1) fewest-conflicts contra screenings de OTROS grupos primero;
 //   2) tiebreak por earliest-finish-time.
 // En _SCHED_PURE_FNS: el worker la consume vía .toString().
-function sortScreensByStrategy(screens, allGroups){
-  // Precalcular todas las funciones de todas las otras películas
-  const allOtherScreenings=allGroups.flatMap(g=>g.screens);
-  return [...screens].sort((a,b)=>{
-    // Contar cuántas funciones ajenas conflictan con cada opción
-    const conflA=allOtherScreenings.filter(s=>s!==a&&screensConflict(a,s)).length;
-    const conflB=allOtherScreenings.filter(s=>s!==b&&screensConflict(b,s)).length;
-    if(conflA!==conflB) return conflA-conflB; // menos conflictos primero
-    // Si empatan, earliest finish time (termina antes = deja más espacio)
-    const endA=toMin(a.time)+parseDur(a.duration);
-    const endB=toMin(b.time)+parseDur(b.duration);
-    return endA-endB;
-  });
-}
+// sortScreensByStrategy → src/domain/schedule.js (Step 5). Importado.
 
 
 // ═══════════════════════════════════════════════════════════════
@@ -2600,194 +2477,7 @@ function sortScreensByStrategy(screens, allGroups){
 //   Por design — random restarts dan diversidad. Para reproducibilidad ver
 //   contrato de _mulberry32 / _titleSeed.
 // En _SCHED_PURE_FNS: el worker la consume vía .toString().
-function computeScenarios(titles){
-  const pending=titles.filter(t=>!watched.has(t));
-  const allPendingTitles=pending; // for section uniqueness check
-  const baseGroups=pending.map(t=>{
-    const screens=FILMS.filter(f=>f.title===t&&!isScreeningBlocked(f)&&!screeningPassed(f));
-    const isPrio=prioritized.has(t);
-    const sc=scoreFilm(t,screens,isPrio,allPendingTitles);
-    const isRec=screens.length>0&&!!screens[0].is_recurring;
-    return{title:t,screens,priority:isPrio,score:sc,is_recurring:isRec};
-  }).filter(g=>g.screens.length>0);
-  if(!baseGroups.length) return[];
-
-  // Aplicar Mejora 2: ordenar las funciones de cada película por estrategia
-  baseGroups.forEach(g=>{
-    if(g.screens.length>1) g.screens=sortScreensByStrategy(g.screens,baseGroups);
-  });
-
-  // MRV + Score: restaurado (DP con grupos requiere formulación diferente)
-  const mrvGroups=[...baseGroups].sort((a,b)=>{
-    if(b.score!==a.score) return b.score-a.score;
-    return a.screens.length-b.screens.length;
-  });
-
-  // ─────────────────────────────────────────────────────────────────────────
-  // ⚠️  FIX CRÍTICO — NO REMOVER (Apr 2026)
-  // MAX_NODES_PER_CALL debe aplicarse a AMBAS funciones: findMax/bb y collectAt
-  // Sin este límite en findMax, el motor JS de mobile corta la recursión antes
-  // que desktop → trueMax diferente entre dispositivos → opciones inconsistentes
-  // (ej: desktop muestra 8 películas por opción, mobile solo 2)
-  // Valor 80000: suficiente para watchlists de hasta ~25 películas en mobile.
-  // DEBE declararse ANTES de findMax — const tiene zona muerta temporal (TDZ).
-  // ─────────────────────────────────────────────────────────────────────────
-  const MAX_NODES_PER_CALL=80000;
-
-  function findMax(groups, mustIncludeAll){
-    let best=0;
-    let nodes=0;
-    const _bbMax=groups.map(g=>g.is_recurring?g.screens.length:1);
-    const _bbRem=[];let _s=0;for(let i=_bbMax.length-1;i>=0;i--){_s+=_bbMax[i];_bbRem[i]=_s;}
-    function bb(idx,chosen){
-      if(++nodes>MAX_NODES_PER_CALL) return;
-      const remaining=idx<groups.length?_bbRem[idx]:0;
-      if(chosen.length+remaining<=best) return;
-      if(idx===groups.length){
-        if(!mustIncludeAll){
-          if(chosen.length>best) best=chosen.length;
-        } else {
-          const chosenTitles=new Set(chosen.map(s=>s._title));
-          const allPrioritiesIn=groups.every(g=>!g.priority||chosenTitles.has(g.title));
-          if(allPrioritiesIn&&chosen.length>best) best=chosen.length;
-        }
-        return;
-      }
-      const g=groups[idx];
-      if(g.is_recurring){
-        const allFit=g.screens.every(s=>!chosen.some(c=>screensConflict(c,s)));
-        if(allFit){
-          g.screens.forEach(s=>chosen.push({...s,_title:g.title}));
-          bb(idx+1,chosen);
-          g.screens.forEach(()=>chosen.pop());
-        }
-        if(!g.priority) bb(idx+1,chosen);
-      } else {
-        for(const s of g.screens){
-          if(!chosen.some(c=>screensConflict(c,s))){
-            chosen.push({...s,_title:g.title});bb(idx+1,chosen);chosen.pop();
-          }
-        }
-        if(!g.priority) bb(idx+1,chosen);
-        else bb(idx+1,chosen);
-      }
-    }
-    bb(0,[]);
-    return best;
-  }
-
-  const trueMax=findMax(mrvGroups,false);
-  const hasPriorities=baseGroups.some(g=>g.priority);
-  const maxWithPriorities=hasPriorities?findMax(mrvGroups,true):trueMax;
-  const priorityCost=trueMax-maxWithPriorities;
-
-  const seenKeys=new Set();const allScenarios=[];
-  let incompatiblePriorities=false;
-
-  function collectAt(groups,targetCount,enforcePriority){
-    let nodes=0;
-    const _btMax=groups.map(g=>g.is_recurring?g.screens.length:1);
-    const _btRem=[];let _rs=0;for(let i=_btMax.length-1;i>=0;i--){_rs+=_btMax[i];_btRem[i]=_rs;}
-    function backtrack(idx,chosen){
-      if(allScenarios.length>=8) return;
-      if(++nodes>MAX_NODES_PER_CALL) return; // mismo límite en todos los dispositivos
-      if(chosen.length+(idx<groups.length?_btRem[idx]:0)<targetCount) return;
-      if(idx===groups.length){
-        if(chosen.length===targetCount){
-          if(enforcePriority){
-            const ct=new Set(chosen.map(s=>s._title));
-            if(!groups.every(g=>!g.priority||ct.has(g.title))) return;
-          }
-          const key=chosen.map(s=>s._title+'@'+s.day+s.time).sort().join('|');
-          if(!seenKeys.has(key)){seenKeys.add(key);allScenarios.push(chosen.map(c=>({...c})));}
-        }
-        return;
-      }
-      const g=groups[idx];
-      if(g.is_recurring){
-        const allFit=g.screens.every(s=>!chosen.some(c=>screensConflict(c,s)));
-        if(allFit){
-          g.screens.forEach(s=>chosen.push({...s,_title:g.title}));
-          backtrack(idx+1,chosen);
-          g.screens.forEach(()=>chosen.pop());
-          if(allScenarios.length>=8) return;
-        }
-        if(!enforcePriority||!g.priority) backtrack(idx+1,chosen);
-      } else {
-        for(const s of g.screens){
-          if(!chosen.some(c=>screensConflict(c,s))){
-            chosen.push({...s,_title:g.title});backtrack(idx+1,chosen);chosen.pop();
-            if(allScenarios.length>=8) return;
-          }
-        }
-        if(!enforcePriority||!g.priority) backtrack(idx+1,chosen);
-      }
-    }
-    backtrack(0,[]);
-  }
-
-  const prioritySorted=[...baseGroups].sort((a,b)=>{
-    if(a.priority&&!b.priority) return -1;
-    if(!a.priority&&b.priority) return 1;
-    return a.screens.length-b.screens.length;
-  });
-
-  // Phase 1: scenarios WITH priorities — max 4 slots to leave room for diversity
-  if(hasPriorities&&maxWithPriorities>0){
-    collectAt(prioritySorted,maxWithPriorities,true);
-    for(let i=0;i<20&&allScenarios.length<4;i++) collectAt(shuffle(baseGroups),maxWithPriorities,true);
-  }
-
-  // Phase 2: if still no scenarios (priorities all conflict with each other), fall back
-  if(!allScenarios.length&&hasPriorities){
-    incompatiblePriorities=true;
-    collectAt(prioritySorted,trueMax,false);
-    for(let i=0;i<20&&allScenarios.length<4;i++) collectAt(shuffle(baseGroups),trueMax,false);
-  }
-
-  // Phase 3: fill remaining slots with diverse no-priority scenarios
-  for(let i=0;i<30&&allScenarios.length<8;i++) collectAt(shuffle(baseGroups),trueMax,false);
-
-  allScenarios.forEach(sc=>sc.sort((a,b)=>a.day_order!==b.day_order?a.day_order-b.day_order:toMin(a.time)-toMin(b.time)));
-
-  // ── Mejora 3: Balanceo por día ──
-  // Calcular desviación estándar de películas por día — menor = más balanceado
-  function dayBalance(sc){
-    const counts={};
-    sc.forEach(s=>{counts[s.day]=(counts[s.day]||0)+1;});
-    const vals=Object.values(counts);
-    if(vals.length<=1) return 0;
-    const mean=vals.reduce((a,b)=>a+b,0)/vals.length;
-    const variance=vals.reduce((a,v)=>a+Math.pow(v-mean,2),0)/vals.length;
-    return Math.sqrt(variance); // 0 = perfectamente balanceado
-  }
-  // Ordenar: primero los más balanceados (menor desviación estándar)
-  allScenarios.sort((a,b)=>dayBalance(a)-dayBalance(b));
-  const conflictingPriorityPairs=[];
-  if(incompatiblePriorities){
-    const prioGroups=baseGroups.filter(g=>g.priority);
-    for(let i=0;i<prioGroups.length;i++){
-      for(let j=i+1;j<prioGroups.length;j++){
-        const allConflict=prioGroups[i].screens.every(s1=>prioGroups[j].screens.every(s2=>screensConflict(s1,s2)));
-        if(allConflict) conflictingPriorityPairs.push([prioGroups[i].title,prioGroups[j].title]);
-      }
-    }
-  }
-
-  return allScenarios.map(sc=>{
-    const included=new Set(sc.map(s=>s._title));
-    return{
-      schedule:sc,
-      excluded:pending.filter(t=>!included.has(t)),
-      incompatiblePriorities,
-      conflictingPriorityPairs,
-      trueMax,
-      maxWithPriorities,
-      priorityCost,
-      dayBalance:Math.round(dayBalance(sc)*10)/10
-    };
-  });
-}
+// computeScenarios → src/domain/schedule.js (Step 5). Importado.
 
 // ── SUGGESTIONS after saved agenda ──
 function getSuggestions(){
@@ -3534,32 +3224,14 @@ function confirmReplace(removedTitle,newTitle,day,time){
 //   Cuenta solo películas regulares (excluye is_cortos y type==='event'):
 //   los cortos son contenedores y los eventos no tienen rating mechanism.
 // Returns: { totalWatched, totalPlanned, pendingRatings }.
-function _endedStats(){
-  const _isRegular=t=>{const f=FILMS.find(fi=>fi.title===t);return f&&!f.is_cortos&&f.type!=='event';};
-  const totalWatched=[...watched].filter(_isRegular).length;
-  const totalPlanned=savedAgenda&&savedAgenda.schedule?savedAgenda.schedule.length:0;
-  const pendingRatings=[...watched].filter(t=>_isRegular(t)&&!filmRatings[t]).length;
-  return{totalWatched,totalPlanned,pendingRatings};
-}
+// _endedStats → src/domain/film.js (Step 5). Importado.
 
 // _classifyTodayScreenings(screenings, nowMin) → {done, active, future}.
 // Particiona funciones de hoy por su relación con nowMin (minutos del día).
 // Pura (contrato implícito): lee DEFAULT_DURATION_MIN. Usa parseInt(s.duration),
 //   NO parseDur — para fidelidad byte-a-byte con el código inline original
 //   (tilde-prefixed durations caen al fallback de DEFAULT_DURATION_MIN).
-function _classifyTodayScreenings(screenings,nowMin){
-  const done=screenings.filter(s=>{
-    const dur=parseInt(s.duration)||DEFAULT_DURATION_MIN;
-    return toMin(s.time)+dur<=nowMin;
-  });
-  const active=screenings.filter(s=>{
-    const dur=parseInt(s.duration)||DEFAULT_DURATION_MIN;
-    const start=toMin(s.time);
-    return start<=nowMin&&start+dur>nowMin;
-  });
-  const future=screenings.filter(s=>toMin(s.time)>nowMin);
-  return{done,active,future};
-}
+// _classifyTodayScreenings → src/domain/film.js (Step 5). Importado.
 
 // _gapSuggestion(todayDay, gapFromMin, gapToMin) → Film | null.
 // Busca una film del día que quepa en el hueco entre dos funciones planeadas.
@@ -3567,17 +3239,7 @@ function _classifyTodayScreenings(screenings,nowMin){
 // Excluye films de otro día, ya watched, ya en savedAgenda, o screeningPassed=true.
 // Slack +10 min en gapToMin: la film puede terminar hasta 10 min después del
 //   cierre nominal del hueco (margen práctico).
-function _gapSuggestion(todayDay,gapFromMin,gapToMin){
-  return FILMS.filter(f=>{
-    if(f.day!==todayDay) return false;
-    if(watched.has(f.title)) return false;
-    if(savedAgenda.schedule.some(s=>s._title===f.title)) return false;
-    if(screeningPassed(f)) return false;
-    const fStart=toMin(f.time);
-    const fEnd=fStart+(parseInt(f.duration)||DEFAULT_DURATION_MIN);
-    return fStart>=gapFromMin&&fEnd<=gapToMin+10;
-  })[0]||null;
-}
+// _gapSuggestion → src/domain/festival.js (Step 5). Importado.
 
 // _getFestivalPhase — devuelve {phase, ...derived} o `null`.
 // Composer thin: delega a _endedStats (post-festival), _classifyTodayScreenings
@@ -3587,57 +3249,7 @@ function _gapSuggestion(todayDay,gapFromMin,gapToMin){
 // 5 fases posibles: ended | before | evening | between | next.
 // `null`: sin agenda, sin día actual en DAY_KEYS, o sin screenings hoy.
 // Caller único: renderContextualHeader().
-function _getFestivalPhase(){
-  if(festivalEnded()) return{phase:'ended',..._endedStats()};
-  if(!savedAgenda||!savedAgenda.schedule||!savedAgenda.schedule.length) return null;
-
-  const now=simNow();
-  const _fsDStr=DAY_KEYS[0]?FESTIVAL_DATES[DAY_KEYS[0]]||'':'';
-  const FESTIVAL_START=_fsDStr?new Date(_fsDStr+'T00:00:00'):new Date(0);
-  if(now<FESTIVAL_START) return{phase:'before',daysDiff:Math.ceil((FESTIVAL_START-now)/86400000)};
-
-  const todayStr=simTodayStr();
-  const todayDay=DAY_KEYS.find(d=>FESTIVAL_DATES[d]===todayStr);
-  if(!todayDay) return null;
-  const todayScreenings=savedAgenda.schedule
-    .filter(s=>s.day===todayDay)
-    .sort((a,b)=>toMin(a.time)-toMin(b.time));
-  if(!todayScreenings.length) return null;
-
-  const nowMin=now.getHours()*60+now.getMinutes();
-  const {done,active,future}=_classifyTodayScreenings(todayScreenings,nowMin);
-
-  // EVENING: todas las funciones del día terminaron
-  if(!active.length&&!future.length){
-    const todayWatched=todayScreenings.filter(s=>watched.has(s._title)||screeningPassed(s));
-    return{phase:'evening',todayScreenings,todayWatched};
-  }
-
-  const next=active.length?active[0]:future[0];
-  const nextStartMin=toMin(next.time);
-  const minsUntil=Math.max(0,nextStartMin-nowMin);
-  const lastDone=done[done.length-1];
-
-  // BETWEEN: hueco > 45 min entre función terminada y la próxima
-  if(lastDone&&!active.length&&minsUntil>45){
-    const lastDoneDur=parseInt(lastDone.duration)||DEFAULT_DURATION_MIN;
-    const gapFromMin=toMin(lastDone.time)+lastDoneDur;
-    const gapToMin=nextStartMin;
-    return{
-      phase:'between',
-      next,
-      lastDone,
-      gapMin:gapToMin-gapFromMin,
-      gapFromMin,
-      gapToMin,
-      gapSuggestion:_gapSuggestion(todayDay,gapFromMin,gapToMin),
-      minsUntil
-    };
-  }
-
-  // NEXT: próxima función en ≤ 45 min, o función en curso
-  return{phase:'next',next,minsUntil,isNow:active.length>0};
-}
+// _getFestivalPhase → src/domain/festival.js (Step 5). Importado.
 
 function renderContextualHeader(state){
   const {savedAgenda, FILMS, watched, prioritized, filmRatings, filmDelays, _activeFestId, _lang} = state.snapshot();

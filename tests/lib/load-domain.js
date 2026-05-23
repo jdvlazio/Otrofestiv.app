@@ -25,6 +25,8 @@ const ROOT = path.resolve(__dirname, '..', '..');
 const INDEX = path.join(ROOT, 'index.html');
 const MAIN = path.join(ROOT, 'src', 'main.js');
 const STORAGE = path.join(ROOT, 'src', 'storage', 'storage.js');
+const DOMAIN = ['time', 'film', 'schedule', 'festival']
+  .map(m => path.join(ROOT, 'src', 'domain', `${m}.js`));
 
 // p8 Step 0: el código de la app se movió de los <script> inline de index.html
 // a src/main.js (módulo). readScripts concatena los scripts inline restantes
@@ -32,6 +34,10 @@ const STORAGE = path.join(ROOT, 'src', 'storage', 'storage.js');
 // p8 Step 3: el adapter `storage` se movió a src/storage/storage.js. Se concatena
 // también — extractObject('storage') matchea `const storage={` dentro de
 // `export const storage={` (el match arranca en `const`, sin el `export`).
+// p8 Step 5: las 24 fns puras + venueTravelMins/travelMins se movieron a
+// src/domain/*.js. Se concatenan — extractFunction matchea `function NAME(`
+// dentro de `export function NAME(`. Los imports ESM se ignoran (extractFunction
+// solo extrae bodies por nombre; los deps se inyectan como globals en cada test).
 function readScripts() {
   const html = fs.readFileSync(INDEX, 'utf8');
   const inline = [...html.matchAll(/<script>([\s\S]*?)<\/script>/g)]
@@ -39,7 +45,12 @@ function readScripts() {
     .join('\n');
   const main = fs.existsSync(MAIN) ? fs.readFileSync(MAIN, 'utf8') : '';
   const storageSrc = fs.existsSync(STORAGE) ? fs.readFileSync(STORAGE, 'utf8') : '';
-  return inline + '\n' + main + '\n' + storageSrc;
+  const domainSrc = DOMAIN.filter(fs.existsSync).map(f => fs.readFileSync(f, 'utf8')).join('\n');
+  // domainSrc ANTES de main: las fns de dominio (main-thread, src/domain/) deben
+  // matchearse antes que las COPIAS worker-local (en backtick strings dentro de
+  // main.js, ej. `function simNow(){return SIM_TIME...}`). extractFunction
+  // devuelve el primer match en orden de documento → la versión main-thread.
+  return inline + '\n' + domainSrc + '\n' + main + '\n' + storageSrc;
 }
 
 // Returns the source of `function NAME(...) { ... }` from `source`, or null.

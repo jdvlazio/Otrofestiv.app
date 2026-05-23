@@ -149,12 +149,22 @@ else:
     sched_end = content.find('];', sched_start)
     sched_block = content[sched_start:sched_end]
     fn_names = re.findall(r"'(\w+)'", sched_block)
-    missing_fns = [f for f in fn_names if f'function {f}(' not in content]
+    # p8 Step 5: las pure fns se movieron a src/domain/*.js (import en main.js). El
+    # worker las consume vía eval(name).toString() — el binding importado debe ser
+    # resoluble en main. Se buscan en content + módulos domain. `export function
+    # NAME(` contiene `function NAME(`.
+    _domain_src = ''
+    for _dm in ('time', 'film', 'schedule', 'festival'):
+        _dp = os.path.join('src', 'domain', f'{_dm}.js')
+        if os.path.exists(_dp):
+            _domain_src += '\n' + open(_dp, encoding='utf-8').read()
+    _haystack = content + _domain_src
+    missing_fns = [f for f in fn_names if f'function {f}(' not in _haystack]
     if missing_fns:
         for f in missing_fns:
-            fail(check, f"'{f}' en _SCHED_PURE_FNS pero no definida en main thread")
+            fail(check, f"'{f}' en _SCHED_PURE_FNS pero no definida en main thread ni domain")
     else:
-        ok(check, f'todas las {len(fn_names)} funciones de _SCHED_PURE_FNS existen en main')
+        ok(check, f'todas las {len(fn_names)} funciones de _SCHED_PURE_FNS existen (main + domain)')
 
 # ── CHECK 3: Worker-local no duplica _SCHED_PURE_FNS ─────────────────────────
 # Si una función está en ambos lados, el worker-local gana y el main thread

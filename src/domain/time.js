@@ -1,21 +1,18 @@
-// ── src/domain/time.js — Fase 8 Wave 2 (PREP, NO CABLEADO) ──────────────────
+// ── src/domain/time.js — Fase 8 Step 5 (CABLEADO) ───────────────────────────
 //
-// ⚠ ESTADO: módulo de preparación. NO importado por index.html. Cero impacto
-//   runtime/deploy/SW. Wiring real en Wave 2 post-Tribeca.
-// ⚠ FUENTE DE VERDAD: index.html hasta el wiring. Copia fiel (byte-faithful,
-//   generada vía extractFunction). Si cambia en index.html antes del wiring,
-//   re-generar.
+// ESTADO: importado por src/main.js (Step 5). Funciones puras de tiempo/fecha.
 //
-// DEPS EXTERNAS (a inyectar/importar en el wiring — NO resueltas aquí):
-//   - config: DEFAULT_DURATION_MIN (parseDur)
-//   - festival-state: TZ_OFFSET (_festDate), _simTime (simNow),
-//     FESTIVAL_DATES + FILMS (dayFullyPassed), FESTIVAL_END (festivalEnded)
+// DEPS:
+//   - config: DEFAULT_DURATION_MIN (parseDur) — import directo.
+//   - festival-state vía STATE BRIDGE (bare-global → state.get): TZ_OFFSET
+//     (_festDate), _simTime (simNow), FESTIVAL_DATES + FILMS (dayFullyPassed),
+//     FESTIVAL_END (festivalEnded).
 //
-// WORKER: las sched pure fns tienen COPIAS en el template string del calc
-//   worker (Blob worker clásico, index.html L~8950). El worker NO puede
-//   `import`. Al cablear: decidir module worker vs mantener la copia
-//   worker-local (status quo, validado por [worker-overlap]). Mientras, este
-//   módulo y la copia worker DEBEN mantenerse sincronizados.
+// WORKER: las sched pure fns tienen COPIAS en el template del calc worker (Blob
+//   clásico). El worker las consume vía eval(name).toString() — su source es
+//   portable. Las copias worker-local (FESTIVAL_BUFFER, etc.) se mantienen en
+//   main.js; [worker-overlap] valida.
+import { DEFAULT_DURATION_MIN } from "../config.js";
 export function toMin(t){
   if(!t) return 0;
   const isPM=/ PM$/i.test(t), isAM=/ AM$/i.test(t);
