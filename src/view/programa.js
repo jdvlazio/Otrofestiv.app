@@ -12,7 +12,7 @@
 
 import { NOTICES, SECTION_ORDER_LIST, _DEFAULT_FEST_ID } from '../config.js';
 import { ICONS, _secLabel, _sectionColor, makeEventPoster, parseProgramTitle } from './components.js';
-import { _dayChips, _getItemPoster, _isEditorialPoster, _metaBadges, _plistPosterHtml, _programaStack, dayLabel, durFmt, getFilmPoster, isNowShowing, sala, vcfg } from './helpers.js';
+import { _dayChips, _getItemPoster, _isEditorialPoster, _metaBadges, _plistPosterHtml, _programaStack, dayLabel, durFmt, emptyState, getFilmPoster, isNowShowing, sala, vcfg } from './helpers.js';
 import { festivalEnded, toMin } from '../domain/time.js';
 import { screeningPassed } from '../domain/film.js';
 import { state } from '../state/state.js';
@@ -355,4 +355,118 @@ export function renderPeliculaViewHTML(state){
     </div>`
   }).join('')}</div>`;
   return {html, hasEntries: true};
+}
+
+
+// ── Step 6h: render dispatcher cartelera/horario + sub-nav + lugar overlay. ───
+export function render(){
+  // Group II Tier 3 (p6c): branchy multi-dispatcher con 4 early returns.
+  // Split impráctico — body se queda monolítico con state.snapshot() destructure.
+  const {FILMS, _activeFestId, watched, watchlist} = state.snapshot();
+  if(activeView==='agenda') return;
+  // Si estamos en Cartelera con el nuevo sistema, _renderProgramaContent lo maneja
+  if(activeView==='day'&&document.getElementById('programa-mode-bar')?.style.display!=='none'){
+    if(activeDay==='all'){renderSbar();renderPeliculaView();return;}
+    // Hoy/Mañana — forzar cartelaMode horario para que render() use la vista por día
+    cartelaMode='horario';
+  }
+  if(cartelaMode==='pelicula'){renderSbar();renderPeliculaView();return;}
+  lugarClose(); // refresh label if open
+  let films=FILMS.filter(f=>f.day===activeDay);
+  if(activeVenue!=='all') films=films.filter(f=>vcfg(f.venue).short===activeVenue);
+  if(activeSec!=='all') films=films.filter(f=>f.section===activeSec);
+  films.sort((a,b)=>toMin(a.time)-toMin(b.time));
+  const cntEl=document.getElementById('cnt');
+  cntEl.innerHTML=''; // count eliminado — redundante con lugar-btn y chips
+  const grid=document.getElementById('grid');
+  if(!films.length){grid.innerHTML=emptyState(ICONS.search,t('plan_sin_actividades'),t('empty_filtros'));return;}
+  // ── Vista horario: poster-grid 3 col + overlay de hora ──
+  grid.innerHTML='<div class="poster-grid">'+films.map((f,i)=>{
+    const isProg=f.is_cortos;
+    const isEvent=f.type==='event';
+    const passed=screeningPassed(f);
+    const inWL=watchlist.has(f.title),inW=watched.has(f.title);
+    const isNow=isNowShowing(f);
+    const safeT=f.title.replace(/'/g,"&#39;");
+    const posterSrc=getFilmPoster(f);
+    const _cardBg2='';
+    const posterImg=posterSrc
+      ?`<img class="img-cover" src="${posterSrc}" loading="lazy" data-title="${f.title.replace(/"/g,'&quot;')}" onerror="_posterErr(this)" alt="">`
+      :``;
+    const progBadge='';//REMOVED
+    const nowBadge=isNow?`<div class="poster-now">${t('misc_ahora')}</div>`:'';
+    const _notice=NOTICES.find(n=>n.title===f.title&&n.festival===(_activeFestId||_DEFAULT_FEST_ID));
+    const pastBadge=_notice?`<div class="badge-past poster-past-badge">${_notice.type==='cancelled'?t('notice_cancelada_short'):t('notice_reprog_short')}</div>`:'';
+
+    const _fe=festivalEnded();
+return`<div class="poster-card js-open-pel${inWL&&!inW?' in-wl':''}${inW&&!_fe?' in-watched':''}${passed&&!_fe?' past-card':''}" data-title="${f.title}"${_cardBg2}>
+      ${posterImg}
+      <div class="poster-time">${f.time}</div>
+      ${nowBadge||pastBadge||progBadge}
+      ${inWL?`<button class="poster-wl-dot wl-on" data-title="${f.title.replace(/"/g,'&quot;')}" data-action="toggleWL" data-stop="1" aria-label="Interés">${ICONS.heartFill}</button>`:''}
+    </div>`;
+  }).join('')+'</div>';
+
+  // ── Cartelera: micro-CTA only (step bar removed from PROGRAMA context)
+  // Flow progress bar belongs in INTERESES/PLANEAR/MI PLAN tabs, not in PROGRAMA.
+  if(activeView==='day'){
+    const _cStepper=document.getElementById('cartelera-stepper');
+    const _cCta=document.getElementById('cartelera-cta');
+    if(_cStepper) _cStepper.style.display='none';// always hidden in day/hora view
+  }
+}
+
+export function renderSbar(){
+  // Reclasificada Group II durante 6c: no usa innerHTML para contenido —
+  // crea botones con createElement + appendChild + handlers programáticos
+  // (.onclick = fn). Split E1a no aplica sin cambiar byte-identity del DOM.
+  const {FILMS} = state.snapshot();
+  const panel=document.getElementById('sdr-panel');
+  const trigBtn=document.getElementById('sdr-btn');
+  const lbl=document.getElementById('sdr-label');
+  if(!panel) return;
+  panel.innerHTML='';
+  const isExplorar=activeDay==='all';
+  let dayF=isExplorar?FILMS:FILMS.filter(f=>f.day===activeDay);
+  if(activeVenue!=='all') dayF=dayF.filter(f=>vcfg(f.venue).short===activeVenue);
+  const secs=[...new Set(dayF.map(f=>f.section))].sort((a,b)=>{
+    const ia=SECTION_ORDER_LIST.indexOf(a),ib=SECTION_ORDER_LIST.indexOf(b);
+    if(ia>=0&&ib>=0) return ia-ib;
+    if(ia>=0) return -1;
+    if(ib>=0) return 1;
+    return a.localeCompare(b);
+  });
+  if(lbl) lbl.textContent=activeSec==='all'||activeSec==='_chip_'?t('bar_seccion'):(activeSec.length>18?activeSec.slice(0,16)+'…':activeSec);
+  if(trigBtn) trigBtn.classList.toggle('active',activeSec!=='all'&&activeSec!=='_chip_');
+  const mkOpt=(html,isOn,cb)=>{
+    const b=document.createElement('button');
+    b.className='fdr-opt'+(isOn?' on':'');
+    b.innerHTML=html;
+    b.onclick=e=>{e.stopPropagation();cb();};
+    panel.appendChild(b);
+  };
+  mkOpt(`Todas las categorías <span class="fdr-cnt">${dayF.length}</span>`,activeSec==='all',()=>{activeSec='all';selectedIdx=null;setHint(null);closeDropdowns();render();});
+  secs.forEach(sec=>{
+    const cnt=dayF.filter(f=>f.section===sec).length;
+    mkOpt(`${sec} <span class="fdr-cnt">${cnt}</span>`,activeSec===sec,()=>{activeSec=activeSec===sec?'all':sec;selectedIdx=null;setHint(null);closeDropdowns();render();});
+  });
+}
+
+export function lugarClose(){
+  const drop = document.getElementById('lugar-drop');
+  if(drop) drop.remove();
+  document.removeEventListener('click', lugarOutside);
+  window.removeEventListener('scroll', lugarClose);
+  const btn = document.getElementById('lugar-btn');
+  if(btn) btn.classList.toggle('active', activeVenue!=='all');
+  const lbl = document.getElementById('lugar-lbl');
+  if(lbl) lbl.textContent = t('bar_lugar');
+}
+
+export function lugarOutside(e){
+  const drop = document.getElementById('lugar-drop');
+  const btn = document.getElementById('lugar-btn');
+  if(drop && !drop.contains(e.target) && e.target!==btn && !btn?.contains(e.target)){
+    lugarClose();
+  }
 }
