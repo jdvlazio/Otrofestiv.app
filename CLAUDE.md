@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `f18b9a1 refactor(fase8): Step 6h — view/programa.js cartelera render (cierra Wave 6)`
+> Último commit: `2159bc1 chore: bundle v202605242252`
 
 ---
 

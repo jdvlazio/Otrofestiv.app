@@ -92,6 +92,10 @@ if os.path.isdir(_VIEW_DIR):
     for _f in sorted(os.listdir(_VIEW_DIR)):
         if _f.endswith('.js'):
             _view_all += '\n' + open(os.path.join(_VIEW_DIR, _f), encoding='utf-8').read()
+# p8 Step 7a: el worker (_SCHED_PURE_FNS + _mkCalcWorker) migró a
+# src/controller/calc.js. Los checks sched-pure-fns/worker-overlap lo escanean ahí.
+_CALC_JS = os.path.join('src', 'controller', 'calc.js')
+_calc_src = open(_CALC_JS, encoding='utf-8').read() if os.path.exists(_CALC_JS) else ''
 script_start = content.find('<script>')
 script_end   = content.rfind('</script>')
 if script_start == -1 or script_end == -1:
@@ -151,12 +155,13 @@ else:
 # Si una función se renombra o elimina del main thread pero sigue en la lista,
 # el Worker se construye con un fragmento undefined.
 check = 'sched-pure-fns'
-sched_start = content.find('const _SCHED_PURE_FNS = [')
+_sched_hay = content + _calc_src  # p8 7a: _SCHED_PURE_FNS vive en controller/calc.js
+sched_start = _sched_hay.find('const _SCHED_PURE_FNS = [')
 if sched_start == -1:
-    fail(check, '_SCHED_PURE_FNS no encontrado en index.html')
+    fail(check, '_SCHED_PURE_FNS no encontrado (main ni controller/calc.js)')
 else:
-    sched_end = content.find('];', sched_start)
-    sched_block = content[sched_start:sched_end]
+    sched_end = _sched_hay.find('];', sched_start)
+    sched_block = _sched_hay[sched_start:sched_end]
     fn_names = re.findall(r"'(\w+)'", sched_block)
     # p8 Step 5: las pure fns se movieron a src/domain/*.js (import en main.js). El
     # worker las consume vía eval(name).toString() — el binding importado debe ser
@@ -179,14 +184,14 @@ else:
 # Si una función está en ambos lados, el worker-local gana y el main thread
 # queda ignorado — exactamente el bug que Sprint 3 resolvió.
 check = 'worker-overlap'
-mk_pos = content.find('function _mkCalcWorker()')
+mk_pos = _sched_hay.find('function _mkCalcWorker()')  # p8 7a: en controller/calc.js
 if mk_pos == -1:
-    fail(check, '_mkCalcWorker() no encontrado en index.html')
+    fail(check, '_mkCalcWorker() no encontrado (main ni controller/calc.js)')
 else:
-    mk_end_search = content.find('\n// Worker activo', mk_pos)
+    mk_end_search = _sched_hay.find('\n// Worker activo', mk_pos)
     if mk_end_search == -1:
         mk_end_search = mk_pos + 4000
-    mk_body = content[mk_pos:mk_end_search]
+    mk_body = _sched_hay[mk_pos:mk_end_search]
     worker_local_fns = set(re.findall(r'function (\w+)\s*\(', mk_body))
     if sched_start != -1:
         overlap = worker_local_fns & set(fn_names)
