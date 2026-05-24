@@ -32,7 +32,13 @@ async function selectFestival(page, festId) {
 
 async function enterFestival(page, festId, simTime) {
   await page.goto('/');
-  await page.waitForSelector('#splash-sel-btn', { timeout: 15000 });
+  // Gate de readiness JS (no DOM estático): esperar a que el bootstrap async
+  // haya renderizado los items del splash (_renderSplashDropdown). Garantiza que
+  // el listener delegado está adjunto + #splash-sel-name poblado ANTES de
+  // cualquier interacción. Cierra la race del flaky #splash-dropdown (la cadena
+  // async de bootstrap termina después del evento `load`; el split a 13+ módulos
+  // ESM ensanchó esa ventana). #splash-sel-btn es estático → no es señal válida.
+  await page.waitForSelector('.splash-drop-item[data-fest]', { state: 'attached', timeout: 15000 });
 
   const selName = await page.locator('#splash-sel-name').textContent().catch(() => '');
   if (!selName.toLowerCase().includes(festId.replace(/\d+/g, '').toLowerCase())) {

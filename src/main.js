@@ -1029,7 +1029,7 @@ FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202605241722';
+const BUILD_VERSION='202605241749';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';
@@ -5018,6 +5018,13 @@ document.addEventListener('visibilitychange', function(){
 // html2canvas eliminado — Canvas API puro
 // lugar click-outside handled by lugarOutside()
 updateAgTab();render();
+
+// ── p8: marcador de readiness ────────────────────────────────────────────────
+// Bootstrap síncrono completo: módulo evaluado, STATE/TEST BRIDGE + listener
+// delegado instalados, render inicial hecho. Los tests esperan
+// [data-app-ready="1"] para sincronizar contra JS-ready (no DOM estático),
+// cerrando races de interacción-antes-de-bootstrap (ej. flaky #splash-dropdown).
+document.documentElement.dataset.appReady = '1';
 
 // ── Auto-navegar a Mi Plan si hay función próxima ──────────────
 // Si el usuario tiene un plan guardado y hay una función
