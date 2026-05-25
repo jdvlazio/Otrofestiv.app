@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="es" style="background:#0A0A0A">
 <head>
+<!-- Content-Security-Policy — debe ir ANTES de cualquier <script> para aplicar.
+     Hosting estático (GitHub Pages) → solo vía <meta> (sin headers, sin nonces).
+     script-src incluye 'unsafe-inline' (35+ inline on*= handlers + scripts inline)
+     y 'unsafe-eval' (calc blob worker). Endurece supply-chain (allowlist de CDNs)
+     + limita exfiltración (connect-src), NO bloquea XSS de inline-handler.
+     worker-src blob: para el worker del Planner. frame-ancestors/report-* se
+     ignoran en <meta> (requieren header). -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net https://js.sentry-cdn.com https://browser.sentry-cdn.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https:; font-src 'self'; connect-src 'self' https://eytxrvbnwzxuedbmnnqr.supabase.co wss://eytxrvbnwzxuedbmnnqr.supabase.co https://*.ingest.sentry.io https://api.themoviedb.org; worker-src 'self' blob:; manifest-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
 <!-- Sentry error monitoring — captura errores JS en producción en tiempo real -->
 <script>
 window.sentryOnLoad = function() {
