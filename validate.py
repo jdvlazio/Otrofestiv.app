@@ -96,6 +96,14 @@ if os.path.isdir(_VIEW_DIR):
 # src/controller/calc.js. Los checks sched-pure-fns/worker-overlap lo escanean ahí.
 _CALC_JS = os.path.join('src', 'controller', 'calc.js')
 _calc_src = open(_CALC_JS, encoding='utf-8').read() if os.path.exists(_CALC_JS) else ''
+# p8 Wave 7: handlers/controller migran a src/controller/*.js. Checks que buscan
+# cuerpos de fns de controller (controller-pattern) los escanean ahí.
+_CTRL_DIR = os.path.join('src', 'controller')
+_controller_all = ''
+if os.path.isdir(_CTRL_DIR):
+    for _f in sorted(os.listdir(_CTRL_DIR)):
+        if _f.endswith('.js'):
+            _controller_all += '\n' + open(os.path.join(_CTRL_DIR, _f), encoding='utf-8').read()
 script_start = content.find('<script>')
 script_end   = content.rfind('</script>')
 if script_start == -1 or script_end == -1:
@@ -901,7 +909,9 @@ try:
         _vpath = os.path.join('src', 'view', _vp)
         if os.path.exists(_vpath):
             _components_src += '\n' + open(_vpath, encoding='utf-8').read()
-    _html = content + _components_src
+    # p8 Step 7d-1: renderAvDayHTML (pure builder que lee avAddOpen UI-state) vive
+    # en controller/sheets-controller.js → escanear controller/* para hallarlo.
+    _html = content + _components_src + _controller_all
     _lines = _html.split('\n')
     # PURE_FNS — funciones puras tracked por el check. Renamed de TIER1_FNS en
     # p6b porque ahora cubre múltiples tiers: Tier 1 originales (6a) + Group A
@@ -1050,7 +1060,8 @@ except Exception as _e:
 check = 'controller-pattern'
 try:
     import re as _re
-    _html = content  # p8: content ya incluye main.js inyectado
+    # p8 Wave 7: content (main.js) + controller/*.js (handlers migrados ahí).
+    _html = content + _controller_all
     _lines = _html.split('\n')
     CONTROLLER_FNS = [
         # Pequeños (6)
@@ -1074,7 +1085,8 @@ try:
     STATE_MUTATIONS = _re.compile(r'\bstate\.(set|update|batchUpdate)\s*\(')
 
     def _find_fn_body_7a(name):
-        pat = _re.compile(rf'^(?:async\s+)?function\s+{_re.escape(name)}\s*\(')
+        # p8 Wave 7: acepta `export function` (handlers migrados a controller/*.js).
+        pat = _re.compile(rf'^(?:export\s+)?(?:async\s+)?function\s+{_re.escape(name)}\s*\(')
         for _i, _line in enumerate(_lines):
             if pat.match(_line):
                 depth = 0; started = False
