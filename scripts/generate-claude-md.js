@@ -185,6 +185,7 @@ ${featuresSection}
 - **Regex en index.html:** prohibido para transformaciones estructurales de >10 ocurrencias.
 - **Timezone:** Colombia (UTC-5). Nunca \`toISOString()\` para lógica de fechas.
 - **i18n:** toda string nueva va a \`es.json\` + \`en.json\` + \`strings-reference.json\`.
+- **Splash placeholder:** el markup estático de \`#splash-sel-name\`/\`#splash-sel-meta\` en \`index.html\` debe reflejar el festival activo actual (= \`detectActiveFest()\`/\`_DEFAULT_FEST_ID\`). Es solo placeholder pre-JS, pero si queda stale el selector "brinca" del festival viejo al detectado al cargar. **Actualizarlo en cada cambio de festival activo.**
 
 ---
 
