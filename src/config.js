@@ -26,6 +26,12 @@
 export const TMDB_IMG = "https://image.tmdb.org/t/p/w185";
 export const TMDB_API_BASE = 'https://api.themoviedb.org/3';
 export const TMDB_POSTER_BASE = 'https://image.tmdb.org/t/p/w500';
+// TMDB_API_KEY: vacía en producción — las funciones de enriquecimiento degradan
+// silenciosamente (el guard `if(!TMDB_API_KEY) return` corta). Para enriquecer
+// posters localmente: setear key en scripts/enrich-festival.py (no commit al
+// repo público). Rotar en https://www.themoviedb.org/settings/api
+// Importada por controller/festival.js + poster-err.js (binding real, NO global).
+export const TMDB_API_KEY = '';
 export const _POSTER_CACHE_PFX = 'orf_poster_v1_';
 
 // ── Constantes numéricas de scheduling ───────────────────────────────────────

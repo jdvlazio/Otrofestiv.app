@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `645cceb Merge pull request #37 from jdvlazio/fix/flaky-splash-direct-tests`
+> Último commit: `635ab81 Merge pull request #38 from jdvlazio/refactor/file-split-8-step8a`
 
 ---
 

@@ -1,7 +1,7 @@
 // ── src/controller/festival.js ────────────────────────────────────────────────────
 // p8 Step 7e — Lifecycle de splash/selector de festival + auto-resolve posters. POSTERS/CUSTOM_POSTERS vía bridge.
 
-import { FESTIVAL_CONFIG, TMDB_API_BASE, TMDB_POSTER_BASE, _DEFAULT_FEST_ID, _POSTER_CACHE_PFX } from '../config.js';
+import { FESTIVAL_CONFIG, TMDB_API_BASE, TMDB_API_KEY, TMDB_POSTER_BASE, _DEFAULT_FEST_ID, _POSTER_CACHE_PFX } from '../config.js';
 import { _renderFestivalSelectorHTML, _renderSplashDropdownHTML } from '../view/components.js';
 import { _langDates, setPosters } from '../view/helpers.js';
 import { render } from '../view/programa.js';
