@@ -24,13 +24,14 @@ async function selectFestival(page, festId) {
 
 async function enterFestival(page, festId, simTime) {
   await page.goto('/');
-  // Gate de readiness JS (no DOM estático): esperar a que el bootstrap async
-  // haya renderizado los items del splash (_renderSplashDropdown). Garantiza que
-  // el listener delegado está adjunto + #splash-sel-name poblado ANTES de
-  // cualquier interacción. Cierra la race del flaky #splash-dropdown (la cadena
-  // async de bootstrap termina después del evento `load`; el split a 13+ módulos
-  // ESM ensanchó esa ventana). #splash-sel-btn es estático → no es señal válida.
-  await page.waitForSelector('.splash-drop-item[data-fest]', { state: 'attached', timeout: 15000 });
+  // Gate de readiness JS DEFINITIVO: el marcador [data-app-ready="1"] se setea al
+  // FINAL del bootstrap síncrono (main.js) — módulo evaluado, STATE/TEST BRIDGE
+  // instalado (FESTIVAL_CONFIG/selectSplashFest expuestos en globalThis), listener
+  // delegado adjunto, render inicial hecho. El proxy anterior (.splash-drop-item
+  // attached) se renderiza ANTES del bridge → bajo runners lentos de CI, evaluate
+  // veía "FESTIVAL_CONFIG is not defined". appReady cierra esa ventana de forma
+  // garantizada. #splash-sel-btn (estático) nunca fue señal válida.
+  await page.waitForSelector('html[data-app-ready="1"]', { state: 'attached', timeout: 15000 });
 
   const selName = await page.locator('#splash-sel-name').textContent().catch(() => '');
   if (!selName.toLowerCase().includes(festId.replace(/\d+/g, '').toLowerCase())) {
