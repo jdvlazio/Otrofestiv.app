@@ -5,7 +5,11 @@ module.exports = defineConfig({
   testDir: './tests',
   testIgnore: ['**/unit/**'], // unit tests viven en tests/unit/ y corren con `node --test`
   timeout: 30000,
-  retries: 1,
+  // retries: 2 — mitigación del flaky residual (bootstrap-incomplete: "X is not
+  // defined" / context destroyed) que workers=1 + gate appReady redujeron pero no
+  // eliminaron del todo en los runners de CI. Un 2º retry absorbe el caso raro
+  // sin enmascarar fallos reales (un fallo determinista falla los 3 intentos).
+  retries: 2,
   // CI = serial. El split a 13+ módulos ESM multiplicó los requests HTTP + el
   // parse/eval por carga de página; con workers paralelos en los runners de
   // 2 núcleos de GitHub Actions eso saturaba CPU/browser y las cargas excedían

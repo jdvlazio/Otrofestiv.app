@@ -398,11 +398,10 @@ FESTIVAL_TRANSPORT='transit';
 // Returns: Date object cuyo valor representa dateStr+time en la TZ del festival.
 // En _SCHED_PURE_FNS: el worker la consume vía .toString() con la misma TZ_OFFSET inyectada.
 // _festDate → src/domain/time.js (Step 5). Importado.
-/* TMDB: key vacía en producción — las funciones de enriquecimiento
-   degradan silenciosamente. Para enriquecer posters localmente:
-   TMDB_API_KEY en scripts/enrich-festival.py (no commit al repo público).
-   Rotar key en: https://www.themoviedb.org/settings/api */
-const TMDB_API_KEY='';
+// p8 (fix): TMDB_API_KEY se movió a config.js (export const), importado por
+// controller/festival.js + poster-err.js como binding real. Antes era un const
+// module-local aquí que esos módulos leían como global fantasma (undefined en
+// globalThis → ReferenceError, enmascarado sólo por el .catch del auto-resolve).
 
 /* ── POSTER GENERATIVO — identidad Otrofestiv para programas ──────────
    REGLA CANÓNICA — nunca romper sin justificación explícita:
@@ -732,7 +731,7 @@ FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202605250810';
+const BUILD_VERSION='202605250826';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';

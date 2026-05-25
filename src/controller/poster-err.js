@@ -1,7 +1,7 @@
 // ── src/controller/poster-err.js ──────────────────────────────────────────────────
 // p8 Step 7e — Handlers de error de posters (onerror en HTML generado, expuestos vía bridge).
 
-import { TMDB_API_BASE, TMDB_IMG, _POSTER_CACHE_PFX } from '../config.js';
+import { TMDB_API_BASE, TMDB_API_KEY, TMDB_IMG, _POSTER_CACHE_PFX } from '../config.js';
 import { _buildPosterV16, _secLabel, _sectionColor, makeEventPoster, makeProgramPoster, makeSorpresaPoster } from '../view/components.js';
 import { state } from '../state/state.js';
 
