@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `62b1d6e Merge pull request #48 from jdvlazio/fix/intereses-sec-remove-flags`
+> Último commit: `9c7ee4b Merge pull request #49 from jdvlazio/fix/programa-grid-top-gap`
 
 ---
 
