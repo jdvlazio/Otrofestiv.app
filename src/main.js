@@ -46,7 +46,7 @@ import {
   _secLabel, _sectionColor, renderRatingStarsHTML, starSVG,
   _renderSplashDropdownHTML, _renderFestivalSelectorHTML, _classifyFestival,
   _sortFestivals, renderAvBlocksHTML, isFullDayBlocked, renderFlowProgress,
-  buildResultHTML, parseProgramTitle,
+  parseProgramTitle,
 } from './view/components.js';
 
 // ── Step 6b: view/sheets.js (lifecycle de paneles) + view/feedback.js
@@ -629,7 +629,7 @@ FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202605251138';
+const BUILD_VERSION='202605251154';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';
