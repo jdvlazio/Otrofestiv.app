@@ -46,16 +46,18 @@ test('T06 — scroll se mantiene después de toggle corazón', async ({ page }) 
   await enterFestival(page, 'leviza2026', LEVIZA_SIMTIME);
   await page.locator('.dtab[data-day="VIE 15"]').click();
   await page.waitForSelector('.plist-item', { timeout: 8000 });
-  await page.evaluate(() => window.scrollTo(0, 300));
-  await page.waitForTimeout(300);
-  const scrollBefore = await page.evaluate(() => window.scrollY);
   const items = page.locator('.plist-item');
   const count = await items.count();
   if (count > 2) {
+    // Centrar el item objetivo en el viewport — lo deja despejado del header
+    // sticky para que el click de Playwright no dispare auto-scroll de actionability.
+    await page.evaluate(() => document.querySelectorAll('.plist-item')[2].scrollIntoView({ block: 'center' }));
+    await page.waitForTimeout(300);
+    const scrollBefore = await page.evaluate(() => window.scrollY);
     await items.nth(2).locator('.plist-heart').click();
     await page.waitForTimeout(400);
     const scrollAfter = await page.evaluate(() => window.scrollY);
-    expect(Math.abs(scrollAfter - scrollBefore)).toBeLessThan(150);
+    expect(Math.abs(scrollAfter - scrollBefore)).toBeLessThan(50); // scroll preservado tras toggle
   }
 });
 
