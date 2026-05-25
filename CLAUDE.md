@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `be625ea Merge pull request #53 from jdvlazio/refactor/tier1-action-keys-no-underscore`
+> Último commit: `6c79501 chore: bundle v202605252106`
 
 ---
 

@@ -152,7 +152,9 @@ export function renderProgramaListHTML(state){
   }catch(e){return `<div class="pad-muted">${t('error_funciones')}</div>`;}
 }
 
-export function _renderProgramaContent(){
+export function _renderProgramaContent(resetScroll=false){
+  // resetScroll: true solo en navegación (cambio de día/filtro/vista). En re-renders
+  // por estado (toggle WL/prio, sync nube) queda false → preserva el scroll del usuario.
   const grid=document.getElementById('grid');
   const lista=document.getElementById('programa-list');
   const cntEl=document.getElementById('cnt');
@@ -183,8 +185,10 @@ export function _renderProgramaContent(){
       grid.style.display='none';
       lista.classList.add('visible');
       renderProgramaList();
-      lista.scrollTop=0;
-      window.scrollTo({top:0,behavior:'instant'});
+      if(resetScroll){
+        lista.scrollTop=0;
+        window.scrollTo({top:0,behavior:'instant'});
+      }
     }
   }
 }
