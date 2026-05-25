@@ -825,14 +825,23 @@ try:
     _problems = []
 
     # ── 1. STATE BRIDGE markers + _BRIDGE_KEYS expone los 19 ──
+    # p8 Step 8a: el STATE BRIDGE se reubicó a src/state/state-bridge.js (Wave 8:
+    # relocate). Los markers + _BRIDGE_KEYS viven allá; este check los escanea ahí.
+    _bridge_path = 'src/state/state-bridge.js'
+    _bridge_lines = (
+        open(_bridge_path, encoding='utf-8').read().split('\n')
+        if os.path.exists(_bridge_path) else []
+    )
+    if not _bridge_lines:
+        _problems.append(f'{_bridge_path} no encontrado (STATE BRIDGE)')
     _bs = _be = None
-    for _i, _line in enumerate(_lines, 1):
+    for _i, _line in enumerate(_bridge_lines, 1):
         if '// ── STATE BRIDGE START' in _line: _bs = _i
         elif '// ── STATE BRIDGE END' in _line: _be = _i
     if _bs is None or _be is None:
-        _problems.append('No se encontraron marcadores STATE BRIDGE START/END en main.js')
+        _problems.append(f'No se encontraron marcadores STATE BRIDGE START/END en {_bridge_path}')
     else:
-        _bridge_block = '\n'.join(_lines[_bs - 1:_be])
+        _bridge_block = '\n'.join(_bridge_lines[_bs - 1:_be])
         _bk_keys = set(_re.findall(r"'([A-Za-z_][A-Za-z0-9_]*)'", _bridge_block))
         for _k in _roster:
             if _k not in _bk_keys:
