@@ -1078,5 +1078,20 @@
     "es": "Marcar como pendiente",
     "en": "Mark as unwatched",
     "context": "i18n audit — hardcoded Spanish fix"
+  },
+  "ics_success": {
+    "es": "{n} eventos agregados a tu Calendario",
+    "en": "{n} events added to your Calendar",
+    "context": "Toast de éxito tras agregar el plan a Calendario (iOS EventKit / export ICS). {n} = cantidad de funciones."
+  },
+  "ics_permission_denied": {
+    "es": "Permite el acceso en Ajustes > Privacidad > Calendarios",
+    "en": "Allow access in Settings > Privacy > Calendars",
+    "context": "Toast cuando el usuario denegó el permiso de calendario en iOS."
+  },
+  "ics_downloading": {
+    "es": "Descargando calendario...",
+    "en": "Downloading calendar...",
+    "context": "Toast transitorio mientras se genera/descarga el archivo de calendario."
   }
 }
