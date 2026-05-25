@@ -13,7 +13,7 @@ import { toMin, parseDur, _festDate, festivalEnded } from '../domain/time.js';
 import { _resolveVenue } from '../domain/festival.js';
 import { effectiveDuration, screeningPassed, _djb2, _titleSeed, _mulberry32, shuffle, scoreFilm } from '../domain/film.js';
 import { screensConflict, isScreeningBlocked, sortScreensByStrategy, computeScenarios } from '../domain/schedule.js';
-import { buildResultHTML } from '../view/components.js';
+import { buildResultHTML } from '../view/agenda.js';
 import { showToast } from '../view/feedback.js';
 import { t } from '../i18n/i18n.js';
 
