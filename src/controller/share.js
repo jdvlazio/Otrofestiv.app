@@ -293,7 +293,10 @@ export function _dlDirect(dataUrl){
 export async function exportICS(){
   if(!savedAgenda||!savedAgenda.schedule.length){showToast(t('plan_sin_plan'),'warn');return;}
   const pad=n=>String(n).padStart(2,'0');
-  const fmt=dt=>`${dt.getFullYear()}${pad(dt.getMonth()+1)}${pad(dt.getDate())}T${pad(dt.getHours())}${pad(dt.getMinutes())}00`;
+  // UTC con sufijo Z — instante absoluto. El Date se construye con el offset del
+  // festival (_festDate usa TZ_OFFSET); aquí lo serializamos en UTC para que cada
+  // calendario lo convierta a la tz local del usuario sin ambigüedad.
+  const fmt=dt=>`${dt.getUTCFullYear()}${pad(dt.getUTCMonth()+1)}${pad(dt.getUTCDate())}T${pad(dt.getUTCHours())}${pad(dt.getUTCMinutes())}${pad(dt.getUTCSeconds())}Z`;
   // Convierte tiempo 12h (8:00 PM) → 24h (20:00) para _festDate
   const to24h=t=>{if(!t)return'12:00';const m=t.match(/(\d+):(\d+)\s*(AM|PM)/i);if(!m)return t;let h=parseInt(m[1]),mn=m[2],ap=m[3].toUpperCase();if(ap==='PM'&&h!==12)h+=12;if(ap==='AM'&&h===12)h=0;return pad(h)+':'+mn;};
   const _icsCfg=FESTIVAL_CONFIG[_activeFestId]||{};
@@ -337,7 +340,11 @@ export async function exportICS(){
     }
   } else {
     const blob=new Blob([icsText],{type:'text/calendar;charset=utf-8'});
-    const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=fileName;a.click();
+    const url=URL.createObjectURL(blob);
+    const a=document.createElement('a');a.href=url;a.download=fileName;
+    a.style.cssText='position:fixed;top:-999px;left:-999px;opacity:0';
+    document.body.appendChild(a);a.click();
+    setTimeout(()=>{document.body.removeChild(a);URL.revokeObjectURL(url);},200);
   }
   showToast(t('misc_calendario_listo'),'info');
 }
