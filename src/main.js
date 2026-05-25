@@ -108,6 +108,11 @@ import {
   seccionClose, seccionToggle, searchOpen, searchClose, searchPositionOverlay, searchQuery, lugarOpen, lugarToggle,
 } from './controller/overlays.js';
 
+// ── Step 7d-3: controller/handlers.js — mutators+filters+composites. ─────────
+import {
+  toggleWL, toggleWatched, togglePelPrio, togglePelWL, setDelay, undoDelay, clearDelay, removeFromAgenda, addSuggestion, checkinLaVi, checkinNoLaVi, forceInclude, togglePriority, swapPriority, markWatchedFromPlan, confirmReplace, removeFilmFromScenario, _dismissNotice, selectMiPlanDay, miPlanNav, toggleMplanProg, setActivePlanFilm, selectFromDetail, toggleFilmAlternatives, toggleArchive, _toggleEveningFilms, filterByVenue, filterByDay, filterBySection, setInteresesView, setProgramaMode, toggleProgramaView, setProgramaView, setProgramaChip, clearProgramaChip, _pafClearSec, _pafClearVenue, _toggleWLFromList, saveCurrentScenario, jumpToScenario, _scrollToAgSection, _setExpandedFilm, _closePelAndRemove, _closePelAndRate, _navTo, _closeAuthAndReset, _toggleCtxOlder, _toggleWatchedAndClose, _toggleWLAndClose, _activatePlanFilm, _scrollToSuggestions, _removeConflictModal, _scrollToTop, _searchOpenFilm, _searchOpenCorto,
+} from './controller/handlers.js';
+
 // storage (adapter de localStorage) → src/storage/storage.js (Step 3).
 // Importado al top del módulo. Usa FESTIVAL_STORAGE_KEY vía el STATE BRIDGE.
 
@@ -153,94 +158,6 @@ _BRIDGE_KEYS.forEach(k => Object.defineProperty(globalThis, k, {
 // (validate check tolera composite helpers dead).
 
 // ── 1. Composite helpers (consumed por ACTION_REGISTRY G + 7c-3/4) ──
-
-function _scrollToAgSection(id) {
-  const el = document.getElementById(id);
-  if (!el) return;
-  const hdr = document.getElementById('hdr-ag');
-  const off = hdr ? hdr.getBoundingClientRect().bottom : 0;
-  const y = el.getBoundingClientRect().top + window.scrollY - off - 8;
-  window.scrollTo({top: y, behavior: 'smooth'});
-}
-
-function _setExpandedFilm(val) {
-  _expandedFilm = val;
-  renderAgenda();
-}
-
-function _closePelAndRemove(title) {
-  closePelSheet();
-  removeFromAgenda(title);
-}
-
-function _closePelAndRate(title) {
-  closePelSheet();
-  setTimeout(() => openRatingSheet(title), 100);
-}
-
-function _navTo(tab) {
-  if (tab === 'mnav-cartelera') {
-    const _ph = _getProgramaPhase();
-    programaSubMode = _ph.default;
-    switchMainNav(tab);
-    showDayView();
-  } else {
-    switchMainNav(tab);
-    showAgView();
-  }
-}
-
-function _closeAuthAndReset() {
-  closeAuthSheet();
-  const step1 = document.getElementById('auth-sheet-step1');
-  const step2 = document.getElementById('auth-sheet-step2');
-  if (step1) step1.style.display = 'block';
-  if (step2) step2.style.display = 'none';
-}
-
-function _toggleCtxOlder() {
-  const el = document.getElementById('ctx-older');
-  if (!el) return;
-  el.style.display = el.style.display === 'none' ? 'block' : 'none';
-}
-
-function _toggleWatchedAndClose(title, e) {
-  toggleWatched(title, e);
-  closePelSheet();
-}
-
-function _toggleWLAndClose(title, e) {
-  toggleWL(title, e);
-  closePelSheet();
-}
-
-function _activatePlanFilm(el) {
-  setActivePlanFilm(el);
-  const i = parseInt(el.dataset.dayIndex, 10);
-  if (!isNaN(i)) selectMiPlanDay(i);
-}
-
-function _scrollToSuggestions() {
-  document.querySelector('.suggestion-wrap')?.scrollIntoView({behavior:'smooth', block:'start'});
-}
-
-function _removeConflictModal() {
-  document.getElementById('conflict-modal')?.remove();
-}
-
-function _scrollToTop() {
-  window.scrollTo({top:0, behavior:'smooth'});
-}
-
-function _searchOpenFilm(title) {
-  searchClose();
-  openPelSheet(title);
-}
-
-function _searchOpenCorto(title, country, dur, section, flags) {
-  searchClose();
-  openCortoSheet(title, country, dur, section, flags);
-}
 
 // ── 2. ACTION_REGISTRY — mapping data-action → handler ────────────────
 // 97 entries totales en 7 categorías. Cada entry sabe cómo extraer args
@@ -846,7 +763,7 @@ FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202605241948';
+const BUILD_VERSION='202605242000';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';
@@ -886,7 +803,7 @@ lastRemovedSlots=[]; // tracks up to 5 recently removed films
 // MAX_REMEMBERED_SLOTS → src/config.js (Step 1).
 let activeMiPlanDay=null;
 let _ctaRemovedVisible=false; // CTA B: post-eliminación
-let _ctaRemovedTimer=null;    // CTA B: timer de auto-dismiss
+    // CTA B: timer de auto-dismiss
 filmDelays={};            // retrasos manuales: key=title|day|time, val=mins
 filmDelaysHistory={};     // p5.5: undo stack — key=title|day|time, val=[prev1, prev2, ...]
                               // Separado de filmDelays para inmutabilidad (era ._hist anidado pre-p5.5).
@@ -925,28 +842,6 @@ availability={
 // REGLA: scroll a mplan-detail — mide el topbar directamente del DOM,
 // no depende de --tb-total (incorrecto en mobile por incluir nav inferior).
 // Usar esta función en TODOS los contextos que necesiten bajar al detalle.
-function _scrollToMplanDetail(){
-  const el=document.getElementById('mplan-detail');
-  if(!el) return;
-  const tb=document.querySelector('.topbar');
-  const tbH=tb?Math.ceil(tb.getBoundingClientRect().height):86;
-  window.scrollTo({top:Math.max(0,el.getBoundingClientRect().top+window.scrollY-tbH-8),behavior:'smooth'});
-}
-
-function selectMiPlanDay(idx){
-  activeMiPlanDay=idx;
-  if(idx<miPlanViewStart||idx>=miPlanViewStart+2) miPlanViewStart=Math.min(idx,DAY_KEYS.length-2);
-  renderAgenda();
-  // Scroll to detail section below calendar
-  setTimeout(()=>{
-    _scrollToMplanDetail();
-  },80);
-}
-function miPlanNav(dir){
-  miPlanViewStart=Math.max(0,Math.min(DAY_KEYS.length-2,miPlanViewStart+dir));
-  if(activeMiPlanDay<miPlanViewStart||activeMiPlanDay>=miPlanViewStart+2) activeMiPlanDay=miPlanViewStart;
-  renderAgenda();
-}
 
 // ═══════════════════════════════════════════════════════════════
 // 7 · PERSISTENCIA
@@ -964,45 +859,11 @@ function miPlanNav(dir){
 // ── Notificaciones locales — aviso 30 min antes de cada función ───────────
 
 // Controller (p7a)
-function setDelay(title,day,time,addMins){
-  // 1. READ — state + args
-  const {filmDelays, filmDelaysHistory} = state.snapshot();
-  const k=title+'|'+day+'|'+time;
-  const newVal=Math.max(0, (filmDelays[k]||0)+addMins);
-  // 3. MUTATE
-  state.batchUpdate({
-    filmDelaysHistory: {...filmDelaysHistory, [k]: [...(filmDelaysHistory[k]||[]), filmDelays[k]||0]},
-    filmDelays: newVal===0 ? state._omit(filmDelays, k) : {...filmDelays, [k]: newVal},
-  });
-  // 4. PERSIST (render automático vía pipeline)
-  saveDelays();
-}
+
 // Controller (p7a)
-function undoDelay(title,day,time){
-  // 1. READ — state + args
-  const {filmDelays, filmDelaysHistory} = state.snapshot();
-  const k=title+'|'+day+'|'+time;
-  // 2. GUARD — no history para esta key
-  if(!filmDelaysHistory[k]||!filmDelaysHistory[k].length) return;
-  const prev=filmDelaysHistory[k][filmDelaysHistory[k].length-1];
-  const newHistArr=filmDelaysHistory[k].slice(0,-1);
-  // 3. MUTATE
-  state.batchUpdate({
-    filmDelaysHistory: newHistArr.length ? {...filmDelaysHistory, [k]: newHistArr} : state._omit(filmDelaysHistory, k),
-    filmDelays: prev===0 ? state._omit(filmDelays, k) : {...filmDelays, [k]: prev},
-  });
-  // 4. PERSIST (render automático vía pipeline)
-  saveDelays();
-}
+
 // Controller (p7a)
-function clearDelay(title,day,time){
-  // 1. READ — args local
-  const k=title+'|'+day+'|'+time;
-  // 3. MUTATE
-  state.update('filmDelays', fd => state._omit(fd, k));
-  // 4. PERSIST (render automático vía pipeline)
-  saveDelays();
-}
+
 /* ── saveState — batching de localStorage ── */
 
 // ═══════════════════════════════════════════════════════════════
@@ -1015,174 +876,18 @@ function clearDelay(title,day,time){
 //   A: remove con confirm modal (film en savedAgenda)
 //   B: remove directo (film NO en savedAgenda)
 //   C: add (con detección de "todas funciones bloqueadas" + UI variants)
-function toggleWL(title,e){
-  if(e) e.stopPropagation();
-  // 1. READ
-  const {FILMS, prioritized, savedAgenda, watched, watchlist} = state.snapshot();
-  // 2. GUARD + 3. MUTATE — branch A: remove con modal si en savedAgenda
-  if(watchlist.has(title)){
-    if(savedAgenda&&savedAgenda.schedule.some(s=>s._title===title)){
-      showActionModal(t('plan_quitar_intereses'),
-        `<b>${title.length>36?title.slice(0,34)+'…':title}</b> ${t('plan_en_tu_plan')}<br><br>${t('plan_quitar_tmb')}`,
-        t('plan_quitar_confirm'),()=>{
-          // Modal callback variant — transaction agrupa las 3 mutaciones (p7d)
-          state.transaction(() => {
-            state.update('savedAgenda', a => ({...a, schedule: a.schedule.filter(s=>s._title!==title)}));
-            if(!savedAgenda.schedule.length)state.set('savedAgenda', null);
-            state.batchUpdate({
-              watchlist: state._delFromSet(watchlist, title),
-              watched: state._delFromSet(watched, title),
-              prioritized: state._delFromSet(prioritized, title),
-            });
-          });
-          saveSavedAgenda();
-          saveState('wl','watched');updateCardState(title);   // render automático vía pipeline
-        });return;
-    }
-    // Branch B: remove directo (film NO en savedAgenda)
-    state.batchUpdate({
-      watchlist: state._delFromSet(watchlist, title),
-      watched: state._delFromSet(watched, title),
-      prioritized: state._delFromSet(prioritized, title),
-    });
-    showToast('Fuera de tus intereses','info');
-  }
-  else{
-    // Branch C: add — con detección "todas funciones bloqueadas" + UI variants
-    state.batchUpdate({
-      watchlist: state._addToSet(watchlist, title),
-      watched: state._delFromSet(watched, title),
-    });
-    const _allScreens=FILMS.filter(f=>f.title===title&&!screeningPassed(f));
-    const _allBlocked=_allScreens.length>0&&_allScreens.every(s=>isScreeningBlocked(s));
-    if(_allBlocked){
-      const{displayTitle}=parseProgramTitle(title);
-      const _short=displayTitle.length>28?displayTitle.slice(0,26)+'…':displayTitle;
-      setTimeout(()=>showToast(`"${_short}" ${t('plan_bloqueado_disp')}`,'warn',5000),300);
-    } else if(activeMNav==='mnav-cartelera'||activeMNav==='mnav-seleccion'){
-      showActionToast(`${ICONS.heartFill} ${t('cta_en_intereses')}`,`${ICONS.star} ${t('cta_priorizar')}`,()=>togglePriority(title));
-    } else {
-      showToast(`${ICONS.heartFill} En Intereses`,'info');
-    }
-  }
-  // 4. PERSIST + surgical patch (branch B y C). Render automático vía pipeline.
-  saveState('wl','watched');updateCardState(title);
-}
+
 // Controller (p7a) — branchy toggle con confirm modal en branch B
-function toggleWatched(title,e){
-  title=normTitle(title);
-  if(e) e.stopPropagation();
-  // 1. READ
-  const {FILMS, watched, watchlist} = state.snapshot();
-  // 2. GUARD + 3. MUTATE — branch A: ya watched, desmarcar y devolver a Intereses
-  if(watched.has(title)){
-    state.batchUpdate({
-      watched: state._delFromSet(watched, title),
-      watchlist: state._addToSet(watchlist, title),
-    });
-    // 4. PERSIST + surgical (render automático vía pipeline)
-    saveState('wl','watched');
-    updateCardState(title);
-    _reRenderIntereses();
-    showToast(t('plan_vuelta_pendientes'),'info');
-    return;
-  }
-  // Branch B: marcar como vista — modal confirm (closure variant)
-  const _short=title.length>36?title.slice(0,34)+'…':title;
-  showActionModal(
-    t('modal_ya_viste_titulo'),
-    `<b>${_short}</b><br><br>${t('modal_ya_viste_body')}`,
-    t('modal_ya_viste_cta'),
-    ()=>{
-      state.update('watched', s => state._addToSet(s, title));
-      saveWatched();updateCardState(title);
-      _reRenderIntereses();
-      showToast(t('toast_marcada_vista'),'info');
-      if(!FILMS.find(fi=>fi.title===title)?.is_cortos) setTimeout(()=>openRatingSheet(title),350);
-    }
-  );
-}
 
 // ── FUZZY SEARCH — accent insensitive ──
 
 // Controller (p7a) — modal callback contiene el handler real (closure variant)
-function removeFromAgenda(title){
-  // 1. READ + 2. GUARD — el outer handler solo abre el modal de confirmación
-  const {savedAgenda} = state.snapshot();
-  if(!savedAgenda) return;
-  const _s=title.length>36?title.slice(0,34)+'…':title;
-  showActionModal(t('plan_quitar_plan'),`<b>${_s}</b><br><br>${t('plan_restaurar_suger')}`,t('misc_quitar'),()=>{
-    // Modal callback — el handler real (variant aceptada en spec)
-    const rem=savedAgenda.schedule.find(s=>s._title===title);
-    if(rem){state.update('lastRemovedSlots', arr => [{...rem,_isRestored:true}, ...arr.filter(r=>r._title!==rem._title)].slice(0,MAX_REMEMBERED_SLOTS));saveLastSlot();}
-    state.update('savedAgenda', a => ({...a, schedule: a.schedule.filter(s=>s._title!==title)}));
-    if(!savedAgenda.schedule.length)state.set('savedAgenda', null);
-    saveSavedAgenda();
-    // CTA B: mostrar aviso contextual post-eliminación
-    _ctaRemovedVisible=true;
-    if(_ctaRemovedTimer) clearTimeout(_ctaRemovedTimer);
-    _ctaRemovedTimer=setTimeout(()=>{_ctaRemovedVisible=false;renderAgenda();},6000);
-    renderAgenda();showToast('Fuera de tu plan','info');
-  });
-}
+
 // Controller (p7a) — multi-step: add to watchlist + add to plan + cleanup
 // lastRemovedSlots + jump al día. NO usa modal (excepto conflict sheet en
 // rama de error). NOTE: state snapshot re-leído tras mutaciones interleaved
 // porque condicionalmente openConflictSheet sale temprano y necesita state
 // fresh para el branch.
-function addSuggestion(title,day,time){
-  title=normTitle(title);
-  // 1. READ
-  const {FILMS, _activeFestId, savedAgenda, watchlist, watched} = state.snapshot();
-  // 2. GUARD
-  if(festivalEnded()) return;
-  // 3. MUTATE (step 1): Add to watchlist if not already there
-  if(!watchlist.has(title)){
-    state.batchUpdate({
-      watchlist:state._addToSet(watchlist,title),
-      watched:state._delFromSet(watched,title),
-    });
-    saveState('wl','watched');updateCardState(title);updateAgTab();
-  }
-  // 3. MUTATE (step 2): Add specific screening to saved agenda
-  const screen=FILMS.find(f=>f.title===title&&f.day===day&&f.time===time);
-  if(screen){
-    if(!savedAgenda) state.set('savedAgenda', {schedule:[]});
-    // Avoid duplicates (re-read state porque pudo haber sido seteado arriba)
-    const sa=state.get('savedAgenda');
-    if(!sa.schedule.some(s=>s._title===title)){
-      // ── Re-validación en tiempo real ─────────────────────────────
-      // getSuggestions verificó el hueco al renderizar, pero el plan
-      // pudo haber cambiado desde entonces (otra sugerencia añadida
-      // en la misma sesión). Revalidamos contra el estado actual.
-      const realConflict=sa.schedule.find(s=>s.day===day&&screensConflict(s,screen));
-      if(realConflict){
-        openConflictSheet(title, screen, realConflict);
-        return;
-      }
-      state.update('savedAgenda', a => ({
-        ...a,
-        schedule: [...a.schedule, {...screen,_title:title}]
-          .sort((x,y)=>x.day_order!==y.day_order?x.day_order-y.day_order:toMin(x.time)-toMin(y.time))
-      }));
-      saveSavedAgenda();
-      // 5. UI EFFECT: toast informativo con día y hora
-      const{displayTitle:dt}=parseProgramTitle(title);
-      const shortT=dt.length>20?dt.slice(0,18)+'…':dt;
-      const _dayShortMap=(FESTIVAL_CONFIG[_activeFestId]||{}).dayShort||{};
-      const dayShort=_dayShortMap[day]||day||'';
-      showToast(`${ICONS.calendar} ${shortT} · ${dayShort} · ${time}`,'info');
-    }
-  }
-  // 3. MUTATE (step 3): Quitar de lista de restaurables
-  state.update('lastRemovedSlots', arr => arr.filter(r=>r._title!==title));
-  // 4. PERSIST
-  saveLastSlot();
-  // 5. RENDER + UI EFFECTS: jump al día de la sugerencia + re-render
-  const jumpIdx=DAY_KEYS.indexOf(day);
-  if(jumpIdx>=0) activeMiPlanDay=jumpIdx;
-  renderAgenda();
-}
 
 // ── AVAILABILITY ──
 // ─────────────────────────────────────────────────────────────────────────────
@@ -1376,26 +1081,6 @@ const _isoToFlag = c  => c&&c.length===2 ? String.fromCodePoint(0x1F1E6+c.toUppe
 // ── Componente unificado: fila de función en agenda ──
 // mode='saved'    → ✕ quita de agenda guardada
 // mode='scenario' → ✕ quita de watchlist, muestra badge de alternativas
-function removeFilmFromScenario(title,e){
-  if(e) e.stopPropagation();
-  const short=title.length>36?title.slice(0,34)+'…':title;
-  showActionModal(
-    t('plan_quitar_intereses'),
-    `<b>${short}</b><br><br>${t('plan_se_quitara')}.`,
-    t('misc_quitar'),
-    ()=>{
-      state.batchUpdate({
-        watchlist: state._delFromSet(state.get('watchlist'), title),
-        prioritized: state._delFromSet(state.get('prioritized'), title),
-        watched: state._delFromSet(state.get('watched'), title),
-      });
-      saveState('wl','prio','watched');
-      updateAgTab();
-      showToast('Fuera de tus intereses','info');
-      runCalc(); // recalcula directamente, no borra la vista
-    }
-  );
-}
 
 /* ── RENDER — MI PLAN / AGENDA ──────────────────────────────────────── */
 // ── _mkCortoItemHtml ───────────────────────────────────────────────────────
@@ -1408,29 +1093,7 @@ function removeFilmFromScenario(title,e){
 // Wrapper — lee data-* y llama openCortoSheet. Evita interpolación de apóstrofes en onclick.
 
 // Controller (p7a) — branchy: si NO está watched, marca + post-view rating modal
-function checkinLaVi(title){
-  // 1. READ — state al top
-  const {FILMS, savedAgenda, watched} = state.snapshot();
-  // 2. GUARD — si ya está watched, solo re-renderea (no-op del estado: sin
-  // mutación el pipeline no dispara, así que el render queda explícito)
-  if(watched.has(title)){
-    renderAgenda();
-    return;
-  }
-  // 3. MUTATE
-  state.update('watched', s => state._addToSet(s, title));
-  // 4. PERSIST + surgical (render automático vía pipeline)
-  saveWatched();
-  updateCardState(title);
-  // Post-view rating modal (sólo para films, no cortos)
-  const s=savedAgenda&&savedAgenda.schedule.find(e=>e._title===title);
-  const _isCortos=FILMS.find(fi=>fi.title===title)?.is_cortos;
-  if(!_isCortos) setTimeout(()=>openPostViewRating(title, s?.day, s?.time, s?.venue, s?.duration), 250);
-}
-function checkinNoLaVi(title){
-  _removePlanItem(title);
-  renderAgenda();
-}
+
 // Sim panel dates derive from active festival — never hardcoded
 // _simFestStart → src/view/feedback.js (Step 6b). Importado.
 // _simFestEnd → src/view/feedback.js (Step 6b). Importado.
@@ -1438,86 +1101,16 @@ function checkinNoLaVi(title){
 // updateSimLabel → src/view/feedback.js (Step 6b). Importado.
 let _expandedFilm=''; // key: title+day+time — which film has alternatives open
 let _activeMiPlanFilm=''; // key: title+time — highlighted from calendar click
-function toggleMplanProg(btn,e){
-  e.stopPropagation();
-  const row=btn.closest('.mplan-row')||btn.closest('.saved-item');
-  const list=row?.nextElementSibling;
-  if(!list||!list.classList.contains('mplan-prog-list')) return;
-  const open=list.classList.toggle('open');
-  btn.innerHTML=(open?ICONS.chevronD:ICONS.chevronR)+' '+t('label_programa');
-}
-function setActivePlanFilm(el){_activeMiPlanFilm=el.dataset.fkey||'';}
-function selectFromDetail(el){
-  _activeMiPlanFilm=el.dataset.rkey||'';
-  // Scroll to the matching calendar block
-  setTimeout(()=>{
-    const block=document.querySelector(`.mplan-wk-block[data-fkey="${CSS.escape(_activeMiPlanFilm)}"]`);
-    if(block) block.scrollIntoView({behavior:'smooth',block:'center'});
-  },50);
-  renderAgenda();
-}
 
 // ═══════════════════════════════════════════════════════════════
 // 12 · RENDER — PLANEAR
 //      toggleFilmAlternatives, renderFilmAlternatives
 //      toggleArchive, runCalc, saveCurrentScenario, renderAgenda
 // ═══════════════════════════════════════════════════════════════
-function toggleFilmAlternatives(key,title,day,time){
-  if(_expandedFilm===key){_expandedFilm='';renderAgenda();return;}
-  _expandedFilm=key;
-  // Marcar hint como visto la primera vez que se usa
-  if(!localStorage.getItem('otrofestiv_hint_cambiar')){
-    localStorage.setItem('otrofestiv_hint_cambiar','1');
-  }
-  renderAgenda();
-}
 
 // Controller (p7a) — modal builder + handler closure variant. Modal es custom
 // (no showActionModal) por requirements de styling. El handler real vive en
 // el `btn.onclick` closure adentro del setTimeout.
-function confirmReplace(removedTitle,newTitle,day,time){
-  // 1. READ — args + state (snapshot del state se hace dentro del closure
-  // porque el handler se ejecuta tras el user click, no inmediato)
-  const{displayTitle:dt}=parseProgramTitle(newTitle);
-  const shortNew=dt.length>22?dt.slice(0,20)+'…':dt;
-  const{displayTitle:dr}=parseProgramTitle(removedTitle||'');
-  const shortRem=dr.length>22?dr.slice(0,20)+'…':dr;
-  const existing=document.getElementById('conflict-modal');if(existing) existing.remove();
-  const modal=document.createElement('div');
-  modal.id='conflict-modal';modal.className='conflict-modal';
-  modal.innerHTML=`<div class="conflict-modal-box">
-    <div class="conflict-modal-hdr">${removedTitle?t('plan_reemplazar_funcion'):t('plan_anadir_plan')}</div>
-    <div class="conflict-modal-body">${removedTitle?`${t('misc_quitar')} <b>${shortRem}</b> y ${t('misc_anadir')}`:`${t('misc_anadir')}`} <b>${shortNew}</b> al plan.</div>
-    <div class="conflict-modal-btns">
-      <button class="conflict-modal-btn cancel" data-action="removeConflictModal">${t('search_cancelar')}</button>
-      <button class="conflict-modal-btn confirm" id="replace-ok">${t('misc_si')}${removedTitle?', '+t('misc_si_reemplazar').split(', ')[1]:', '+t('misc_si_anadir').split(', ')[1]}</button>
-    </div>
-  </div>`;
-  document.body.appendChild(modal);
-  setTimeout(()=>{
-    const btn=document.getElementById('replace-ok');
-    if(btn) btn.onclick=()=>{
-      // Handler real — fresh snapshot al ejecutarse (post user-click)
-      const {FILMS, savedAgenda, watchlist} = state.snapshot();
-      modal.remove();
-      if(removedTitle) _removePlanItem(removedTitle);
-      const screen=FILMS.find(f=>f.title===newTitle&&f.day===day&&f.time===time);
-      if(screen){
-        if(!savedAgenda) state.set('savedAgenda', {schedule:[]});
-        if(!watchlist.has(newTitle)){state.update('watchlist', s=>state._addToSet(s,newTitle));saveWL();}
-        state.update('savedAgenda', a => ({
-          ...a,
-          schedule: [...a.schedule.filter(s=>s._title!==newTitle), {...screen,_title:newTitle}]
-            .sort((x,y)=>DAY_KEYS.indexOf(x.day)-DAY_KEYS.indexOf(y.day)||toMin(x.time)-toMin(y.time))
-        }));
-        saveSavedAgenda();
-      }
-      _expandedFilm='';
-      showToast(removedTitle?`${t('plan_reemplazada_por')} ${shortNew}`:`${shortNew} ${t('plan_anadida_al_plan')}`,'info');
-      renderAgenda();
-    };
-  },50);
-}
 
 // ─────────────────────────────────────────────────────────────
 // HEADER CONTEXTUAL DE MI PLAN
@@ -1559,13 +1152,6 @@ function confirmReplace(removedTitle,newTitle,day,time){
 // _getFestivalPhase → src/domain/festival.js (Step 5). Importado.
 
 let archiveOpen=false;
-function toggleArchive(){
-  archiveOpen=!archiveOpen;
-  const body=document.getElementById('archive-body');
-  const arrow=document.getElementById('arch-arrow');
-  if(body) body.classList.toggle('open',archiveOpen);
-  if(arrow){arrow.style.transform=archiveOpen?'rotate(180deg)':'rotate(0deg)';}
-}
 
 /* ── Display name — cadena de prioridad para imagen compartida ──
    1. Supabase user_metadata.display_name (cuenta / app nativa)
@@ -1952,50 +1538,6 @@ async function exportICS(){
 let cachedResult=null;
 
 // ── forceInclude — crea variante custom con la película forzada ──────
-function forceInclude(title){
-  if(festivalEnded()){showToast(t('notice_fest_term'),'info');return;}
-  if(!cachedResult||!cachedResult.scenarios.length) return;
-  const sc=cachedResult.scenarios[cachedResult.currentIdx];
-
-  // Intentar encajar la película en el schedule actual
-  const newSchedule=squeezeExcluded(sc.schedule,[title]);
-  const included=newSchedule.find(s=>s._title===title&&s._squeezed);
-
-  if(!included){
-    showToast(t('plan_sin_horario'),'info');
-    return;
-  }
-
-  // Construir nuevo escenario custom
-  const includedTitles=new Set(newSchedule.map(s=>s._title));
-  const pending=[...watchlist].filter(t=>!watched.has(t));
-  const newScenario={
-    schedule:newSchedule,
-    excluded:pending.filter(t=>!includedTitles.has(t)),
-    _custom:true,
-    incompatiblePriorities:sc.incompatiblePriorities,
-    trueMax:sc.trueMax,
-    maxWithPriorities:sc.maxWithPriorities,
-    priorityCost:sc.priorityCost,
-    dayBalance:sc.dayBalance
-  };
-
-  // Deduplicar — si ya existe un escenario idéntico, saltar a él
-  const newKey=newSchedule.map(s=>(s._title||'')+'@'+s.day+s.time).sort().join('|');
-  const existingIdx=cachedResult.scenarios.findIndex(s=>{
-    const k=s.schedule.map(x=>(x._title||'')+'@'+x.day+x.time).sort().join('|');
-    return k===newKey;
-  });
-
-  if(existingIdx>-1){
-    cachedResult.currentIdx=existingIdx;
-    showToast('Escenario ya existente','info');
-  } else {
-    cachedResult.scenarios.push(newScenario);
-    cachedResult.currentIdx=cachedResult.scenarios.length-1;
-  }
-  renderAgenda();
-}
 
 // buildResultHTML → src/view/components.js (Step 6a). Importado.
 
@@ -2004,41 +1546,7 @@ function forceInclude(title){
 //      renderCartelera, togglePriority, showToast, renderAgenda
 // ═══════════════════════════════════════════════════════════════
 // Controller (p7a) — branchy: prioritize/unprioritize con prio limit + modal confirm en Planear
-function togglePriority(title,cost){
-  // 1. READ
-  const {prioritized, watchlist, watched, PRIO_LIMIT} = state.snapshot();
-  // 2. GUARD + 3. MUTATE — branch A: unprioritize
-  if(prioritized.has(title)){
-    // Si estamos en Planear, confirmar antes de quitar (modal callback variant)
-    if(activeMNav==='mnav-planner'){
-      const short=title.length>40?title.slice(0,38)+'…':title;
-      showActionModal(t('plan_quitar_prioridad'),
-        `<b>${short}</b><br><br>${t('plan_sigue_intereses')}`,
-        t('plan_quitar_prioridad'),()=>{
-          state.update('prioritized', s=>state._delFromSet(s,title));savePrio();updateCardState(title);
-          showToast(`${ICONS.star} ${t('toast_prioridad_quitada')}`,'info');
-          switchMainNav('mnav-seleccion');showAgView();   // render automático vía pipeline + nav
-        });return;
-    }
-    state.update('prioritized', s=>state._delFromSet(s,title));
-    // 4. PERSIST + surgical (render automático vía pipeline)
-    savePrio();updateCardState(title);
-    showToast(`${ICONS.star} ${t('toast_prioridad_quitada')}`,'info');
-  } else {
-    // Branch B: prioritize (con limit check)
-    if(prioritized.size>=PRIO_LIMIT){
-      openPrioLimit(title);return;
-    }
-    const _addWL=!watchlist.has(title);
-    state.transaction(() => {
-      state.update('prioritized', s=>state._addToSet(s,title));
-      if(_addWL) state.batchUpdate({watchlist:state._addToSet(watchlist,title), watched:state._delFromSet(watched,title)});
-    });
-    savePrio();if(_addWL){saveWL();saveWatched();}updateCardState(title);
-    showToast(`${ICONS.starFill} ${t('cta_priorizada')} · ${prioritized.size+1}/${PRIO_LIMIT}`,'info');
-  }
-  if(activeView==='day') updateHorarioPrioBtn(title);   // surgical: botón prio del pel-sheet
-}
+
 // showToast → src/view/feedback.js (Step 6b). Importado.
 
 // ── POST-SELECTION SQUEEZE ──
@@ -2046,26 +1554,6 @@ function togglePriority(title,cost){
 // que quepan en los huecos reales del plan elegido (usando screensConflict ±10 min).
 // Puede superar trueMax porque ese era el máximo dentro del árbol explorado,
 // no el máximo real del calendario.
-function squeezeExcluded(schedule, excludedTitles){
-  const result=[...schedule];
-  // Ordenar excluidas por score descendente — misma lógica que el algoritmo
-  const scored=excludedTitles.map(t=>{
-    const screens=FILMS.filter(f=>f.title===t&&!screeningPassed(f)&&!isScreeningBlocked(f));
-    return{title:t,screens,score:scoreFilm(t,screens,prioritized.has(t),[...watchlist])};
-  }).filter(g=>g.screens.length>0).sort((a,b)=>b.score-a.score);
-
-  scored.forEach(({title,screens})=>{
-    // Ordenar funciones por estrategia — menos conflictos + fin temprano
-    const sorted=sortScreensByStrategy(screens,[...scored]);
-    for(const s of sorted){
-      if(!result.some(c=>screensConflict(c,s))){
-        result.push({...s,_title:title,_squeezed:true});
-        break; // encontró slot, pasar al siguiente título
-      }
-    }
-  });
-  return result;
-}
 
 /* ── POST-VIEW RATING SHEET ── */
 
@@ -2074,31 +1562,6 @@ function squeezeExcluded(schedule, excludedTitles){
 // closePVRating → src/view/sheets.js (Step 6b). Importado.
 
 // Controller (p7a) — branchy toggle desde Mi Plan
-function markWatchedFromPlan(title, day, time, venue, duration, e){
-  if(e) e.stopPropagation();
-  // 1. READ
-  const {FILMS, watched, watchlist} = state.snapshot();
-  // 2. GUARD + 3. MUTATE — branch A: desmarcar (ya watched)
-  if(watched.has(title)){
-    state.batchUpdate({
-      watched: state._delFromSet(watched, title),
-      watchlist: watchlist.has(title) ? watchlist : state._addToSet(watchlist, title),
-    });
-    // 4. PERSIST + surgical (render automático vía pipeline)
-    saveState('wl','watched');
-    updateCardState(title);
-    showToast(t('plan_vuelta_pendientes'),'info');
-    return;
-  }
-  // Branch B: marcar como vista + post-view rating modal
-  // 3. MUTATE
-  state.update('watched', s=>state._addToSet(s, title));
-  // 4. PERSIST + surgical (render automático vía pipeline)
-  saveWatched();
-  updateCardState(title);
-  // Cortos: sin calificación general
-  if(!FILMS.find(fi=>fi.title===title)?.is_cortos) setTimeout(()=>openPostViewRating(title, day, time, venue, duration), 250);
-}
 
 /* ── CONFLICT SHEET ── */
  // {title, day, time, screen, existingTitle}
@@ -2107,47 +1570,7 @@ function markWatchedFromPlan(title, day, time, venue, duration, e){
 
 // closePrioLimit → src/view/sheets.js (Step 6b). Importado.
 
-function swapPriority(removeTitle, addTitle){
-  state.update('prioritized', s => state._addToSet(state._delFromSet(s, removeTitle), addTitle));
-  savePrio();
-  updateCardState(removeTitle);
-  updateCardState(addTitle);
-  updateAgTab();
-  closePrioLimit();
-  const{displayTitle}=parseProgramTitle(addTitle);
-  showToast(`${ICONS.starFill} ${displayTitle} priorizada`,'info');
-}
-
-function saveCurrentScenario(){
-  if(!cachedResult||!cachedResult.scenarios.length) return;
-  const _doSave=()=>{
-    const _sc=cachedResult.scenarios[cachedResult.currentIdx];
-    const _squeezed=squeezeExcluded(_sc.schedule,_sc.excluded||[]);
-    state.set('savedAgenda', {schedule:_squeezed});
-    saveSavedAgenda();
-    openPlanConfirm(_squeezed);
-  };
-  // Si ya hay un plan guardado, pedir confirmación antes de reemplazarlo
-  if(savedAgenda&&savedAgenda.schedule&&savedAgenda.schedule.length){
-    const n=savedAgenda.schedule.length;
-    showActionModal(
-      `${ICONS.calendar} ${t('plan_reemplazar_plan')}`,
-      `${t('notice_ya_tenes')} un plan con <b>${n} película${n!==1?'s':''}</b>.<br><br>${t('plan_reemplazar')}.`,
-      t('misc_si_reemplazar'),
-      _doSave,
-      'Conservar mi plan actual'
-    );
-  } else {
-    _doSave();
-  }
-}
-
 // runCalc + worker → src/controller/calc.js (Step 7a). Importado.
-function jumpToScenario(idx){
-  if(!cachedResult) return;
-  cachedResult.currentIdx=Math.max(0,Math.min(cachedResult.scenarios.length-1,idx));
-  renderAgenda();
-}
 
 // renderFlowProgress → src/view/components.js (Step 6a). Importado.
 // _scrollMiPlanToNow — auto-scroll del calendario de Mi Plan al tiempo actual.
@@ -2160,13 +1583,6 @@ function jumpToScenario(idx){
 // Se llama al final de renderAgenda() y cuando cambia watched.
 // _toggleEveningFilms — muestra/oculta posters adicionales en EVENING.
 // Sin CSS nuevo — usa hscroll-strip existente y link-gray-xs.
-function _toggleEveningFilms(btn){
-  const extra=document.getElementById('eve-films-extra');
-  if(!extra) return;
-  const open=extra.style.display!=='none';
-  extra.style.display=open?'none':'contents';
-  btn.style.display='none'; // ocultar el botón al expandir — ya no hace falta
-}
 
 // ── CALENDAR VIEW ──
 let activeView='day',activeDay='Martes',activeVenue='all',activeSec='all',selectedIdx=null,activeMNav='mnav-cartelera';
@@ -2180,25 +1596,7 @@ let _programaChipMatchFn=null;  // función de match activa para filtrar
 let _currentChips=[];           // chips dinámicos del festival activo
 
 // Definición de chips de categoría — agrupan las secciones reales de FICCI
-const PROGRAMA_CHIPS=[
-  {id:'all',      label:'Todo',              match:null},
-  {id:'colombia', label:'🇨🇴 Colombia',     match:s=>s.includes('Colombia')},
-  {id:'ibero',    label:'🌎 Iberoamérica',  match:s=>s.includes('Iberoamérica')},
-  {id:'inter',    label:'🌍 Internacional',  match:s=>s.includes('Internacional')},
-  {id:'spaces',   label:'⏳ (s)paces',      match:s=>s.includes('paces')},
-  {id:'afro',     label:'✊ Afro',           match:s=>s.includes('Afro')},
-  {id:'indigena', label:'🪶 Indígena',       match:s=>s.includes('Indígena')},
-  {id:'barrios',  label:'🏆 Barrios',        match:s=>s.includes('Barrios')},
-  {id:'costas',   label:'🌊 Costas',         match:s=>s.includes('Costas')},
-  {id:'rivers',   label:'🎖️ Ben Rivers',    match:s=>s.includes('Rivers')},
-  {id:'retro',    label:'📽️ Retrospectiva', match:s=>s.includes('Retrospectiva')},
-  {id:'midnight', label:'🌙 Medianoche',    match:s=>s.includes('Medianoche')},
-  {id:'españa',   label:'🇪🇸 Muestra España',  match:s=>s.includes('España')},
-  {id:'suiza',    label:'🇨🇭 Muestra Suiza',   match:s=>s.includes('Suiza')},
-  {id:'argentina',label:'🇦🇷 Muestra Argentina',match:s=>s.includes('Argentina')},
-  {id:'brasil',   label:'🇧🇷 Casa Brasil',      match:s=>s.includes('Brasil')},
-  {id:'especial', label:'⭐ Especiales',     match:s=>s.includes('Especiales')||s.includes('Animación')||s.includes('Indias')},
-];
+
 let expandedPelicula=''; // título expandido en vista Por Película
 
 /* ── BÚSQUEDA EN CARTELERA ── */
@@ -2242,107 +1640,15 @@ const dtabs=document.getElementById('dtabs');
 // Pointer Events API — unificado mouse+touch, con setPointerCapture
 // para que el drag funcione correctamente en iOS dentro de transforms
 
-function togglePelPrio(title){
-  title=normTitle(title);
-  togglePriority(title);
-  const btn=document.getElementById('pel-prio-btn')||document.getElementById('corto-prio-btn');
-  if(!btn) return;
-  const inPrio=prioritized.has(title);
-  btn.innerHTML=(inPrio?ICONS.starFill:ICONS.star)+' '+(inPrio?t('cta_priorizada'):t('cta_priorizar'));
-  btn.className='pel-sheet-action-btn'+(inPrio?' act-prio':' btn-secondary');
-  // Priorizar auto-añade a watchlist — sincronizar el botón de Intereses
-  const inWL=watchlist.has(title);
-  const pelWlBtn=document.getElementById('pel-wl-btn');
-  if(pelWlBtn){
-    pelWlBtn.innerHTML=(inWL?ICONS.heartFill:ICONS.heart)+' '+(inWL?t('cta_en_intereses'):t('cta_intereses'));
-    pelWlBtn.className='pel-sheet-action-btn'+(inWL?' act-on btn-primary':' btn-primary');
-  }
-  const cortoWlBtn=document.getElementById('corto-wl-btn');
-  if(cortoWlBtn){
-    cortoWlBtn.innerHTML=(inWL?ICONS.heartFill:ICONS.heart)+' '+(inWL?t('cta_en_intereses'):t('cta_intereses'));
-    cortoWlBtn.className='pel-sheet-action-btn'+(inWL?' act-on btn-primary':' btn-primary');
-  }
-}
-
 /* ── BOTTOM SHEET: apertura, cierre, acciones ───────────────────────── */
-function togglePelWL(title,e){
-  title=normTitle(title);
-  const wasInWL=watchlist.has(title);
-  toggleWL(title,e);
-  const btn=document.getElementById('pel-wl-btn');
-  if(!btn) return;
-  const inWL=watchlist.has(title);
-  btn.innerHTML=(inWL?ICONS.heartFill:ICONS.heart)+' '+(inWL?t('cta_en_intereses'):t('cta_intereses'));
-  btn.className='pel-sheet-action-btn'+(inWL?' act-on btn-primary':' btn-primary');
-  if(wasInWL&&!inWL) closePelSheet(); // quitar de intereses → cerrar sheet
-  if(!wasInWL&&inWL){
-    showActionToast(`${ICONS.heartFill} ${t('cta_en_intereses')}`,`${ICONS.star} ${t('cta_priorizar')}`,()=>togglePriority(title));
-  }
-}
+
 // _dayChips — renderiza días únicos de un film como spans tappables (filtran por día)
-
-function filterByVenue(venue){
-  closePelSheet();
-  activeVenue=venue;activeSec='all';selectedIdx=null;
-  programaSubMode='hoy';
-  programaChip='all';_programaChipMatchFn=null;
-  // Si el día activo ya pasó, ir al primer día vigente
-  if(dayFullyPassed(activeDay)){
-    const _ff=DAY_KEYS.find(d=>!dayFullyPassed(d));
-    if(_ff) activeDay=_ff;
-  }
-  // Regla global: navegación por día → lista por defecto
-  programaViewMode=activeDay==='all'?'grid':'list';
-  switchMainNav('mnav-cartelera');
-  showDayView();
-  // Actualizar label del filtro Lugar
-  lugarClose();
-}
-
-function filterByDay(day){
-  closePelSheet();
-  activeDay=day;activeVenue='all';selectedIdx=null;
-  cartelaMode='horario';
-  document.querySelectorAll('.dtab').forEach(t=>t.classList.toggle('on',t.dataset.day===day));
-  requestAnimationFrame(()=>{
-    const activeBtn=document.querySelector('.dtab.on');
-    if(activeBtn){const dt=document.getElementById('dtabs');if(dt)dt.scrollLeft=activeBtn.offsetLeft-dt.offsetLeft;}
-  });
-  switchMainNav('mnav-cartelera');
-  _renderProgramaContent();
-  _updateProgramaActiveFilter();
-}
 
 // ── pelicula-day tap → filterByDay ──────────────────────────
 document.addEventListener('click', function(e){
   const day=e.target.closest('.pelicula-day');
   if(day&&day.dataset.day) filterByDay(day.dataset.day);
 });
-
-function filterBySection(section){
-  // Navegar a Programa · Explorar con esa sección activa
-  closePelSheet();
-  activeSec=section;activeVenue='all';selectedIdx=null;
-  programaSubMode='hoy';
-  programaChip='all';
-  _programaChipMatchFn=null;
-  // Si el día activo ya pasó, ir al primer día vigente
-  if(dayFullyPassed(activeDay)){
-    const _ff=DAY_KEYS.find(d=>!dayFullyPassed(d));
-    if(_ff) activeDay=_ff;
-  }
-  // Regla global: navegación por día → lista por defecto
-  programaViewMode=activeDay==='all'?'grid':'list';
-  switchMainNav('mnav-cartelera');
-  showDayView();
-  // Actualizar chips visualmente después del render
-  setTimeout(()=>{
-    document.querySelectorAll('.pchip').forEach(el=>{
-      el.classList.toggle('on',el.dataset.chip===programaChip);
-    });
-    _updateProgramaActiveFilter();
-  },50);
-}
 
 // ═══════════════════════════════════════════════════════════════
 // ═══════════════════════════════════════════════════════════════
@@ -2468,90 +1774,6 @@ document.addEventListener('click',function(e){
 // Template: cualquier festival con is_programa + film_list enriquecido.
 // ═══════════════════════════════════════════════════════════════════
 
-function setMiPlanView(mode){
-  miPlanViewMode=mode;
-  const _v = storage.getViewmodes(); _v.miPlan = mode; storage.setViewmodes(_v);
-  renderAgenda();
-}
-
-function setInteresesView(mode){
-  interesesViewMode=mode;
-  const _v = storage.getViewmodes(); _v.intereses = mode; storage.setViewmodes(_v);
-  document.getElementById('ibtn-grid')?.classList.toggle('on',mode==='grid');
-  document.getElementById('ibtn-list')?.classList.toggle('on',mode==='list');
-  const el=document.getElementById('ag-film-list');
-  _reRenderIntereses();
-}
-
-function setProgramaMode(mode){
-  programaSubMode=mode;
-  // Reset filtros al cambiar modo y cerrar dropdowns
-  activeSec='all';activeVenue='all';selectedIdx=null;
-  programaChip='all';_programaChipMatchFn=null;
-  lugarClose();seccionClose();
-  // Set active day for hoy/mañana modes
-  const _pts=simTodayStr();
-  const _pti=DAY_KEYS.findIndex(d=>FESTIVAL_DATES[d]===_pts);
-  if(mode==='hoy'){
-    activeDay=_pti>=0?DAY_KEYS[_pti]:DAY_KEYS[0];
-  } else if(mode==='manana'){
-    activeDay=_pti>=0&&_pti<DAY_KEYS.length-1?DAY_KEYS[_pti+1]:DAY_KEYS[DAY_KEYS.length-1];
-  }
-  // filter-row visibility handled by initProgramaModeBar() below
-  // filter updates handled by lugarOpen()
-  _updateProgramaActiveFilter();
-  initProgramaModeBar();
-  _renderProgramaContent();
-}
-
-function toggleProgramaView(){
-  setProgramaView(programaViewMode==='grid'?'list':'grid');
-}
-function setProgramaView(view){
-  programaViewMode=view;
-  document.getElementById('pmode-grid').classList.toggle('on',view==='grid');
-  document.getElementById('pmode-list').classList.toggle('on',view==='list');
-  // Sync single toggle icon
-  const icoG=document.getElementById('view-toggle-ico-grid');
-  const icoL=document.getElementById('view-toggle-ico-list');
-  if(icoG) icoG.style.display=view==='grid'?'':'none';
-  if(icoL) icoL.style.display=view==='list'?'':'none';
-  _renderProgramaContent();
-}
-
-function setProgramaChip(chipId){
-  // Toggle: tap active chip → deselect back to 'all'
-  if(chipId!=='all'&&chipId===programaChip) chipId='all';
-  programaChip=chipId;
-  // Actualizar chips visuales
-  document.querySelectorAll('.pchip').forEach(el=>{
-    el.classList.toggle('on',el.dataset.chip===chipId);
-  });
-  // Guardar la función de match — soporta múltiples secciones
-  const chip=(_currentChips.length?_currentChips:PROGRAMA_CHIPS).find(c=>c.id===chipId);
-  // Chips ocultos — activeSec siempre directo
-  _programaChipMatchFn=null;
-  activeSec='all';
-  _updateProgramaActiveFilter();
-  _renderProgramaContent();
-}
-
-function clearProgramaChip(){
-  _programaChipMatchFn=null;
-  activeVenue='all';
-  lugarClose();
-  setProgramaChip('all');
-}
-
-function _pafClearSec(){
-  activeSec='all';seccionClose();_updateProgramaActiveFilter();
-  if(activeMNav==='mnav-cartelera')_renderProgramaContent();else render();
-}
-function _pafClearVenue(){
-  activeVenue='all';lugarClose();_updateProgramaActiveFilter();
-  if(activeMNav==='mnav-cartelera')_renderProgramaContent();else render();
-}
-
 // Helper compartido entre la pure half (renderProgramaChipsHTML) y el impure
 // caller (renderProgramaChips, que muta _currentChips). Extraído para evitar
 // duplicar el cómputo o mezclar la mutación al state UI ephemeral con la pureza.
@@ -2571,10 +1793,6 @@ let _dismissedNotices=new Set();
 // renderNoticesBannerHTML → src/view/programa.js (Step 6c). Importado.
 // Impure caller (p6b)
 // renderNoticesBanner → src/view/programa.js (Step 6c). Importado.
-function _dismissNotice(title){
-  _dismissedNotices.add(title);
-  renderNoticesBanner();
-}
 
 // Pure half (p6c)
 
@@ -2583,25 +1801,6 @@ function _dismissNotice(title){
 // Pure half (p6c)
 
 // Impure caller (p6c)
-
-function _toggleWLFromList(title,btn){
-  // Wrapper para el ♥ en la lista de Programa — usa el toggleWL existente
-  const wasIn=watchlist.has(title);
-  toggleWL(title,{stopPropagation:()=>{}});
-  // Actualizar el botón visualmente después del toggle
-  // Spring pop al agregar
-  if(!wasIn){
-    btn.style.transform='scale(1.25)';
-    setTimeout(()=>btn.style.transform='',200);
-  }
-  setTimeout(()=>{
-    const isIn=watchlist.has(title);
-    if(btn){
-      btn.innerHTML=isIn?ICONS.heartFill:ICONS.heart;
-      btn.classList.toggle('empty',!isIn);
-    }
-  },50);
-}
 
 // Pure half (p6c) — DESVIACIÓN del patrón E1a: retorna tupla {html, hasEntries}
 // en lugar de string puro. Razón: el original tiene side effect branch-específico
