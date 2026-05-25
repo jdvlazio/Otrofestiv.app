@@ -629,7 +629,7 @@ FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202605251041';
+const BUILD_VERSION='202605251054';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';
@@ -1629,6 +1629,14 @@ updateAgTab();render();
 // [data-app-ready="1"] para sincronizar contra JS-ready (no DOM estático),
 // cerrando races de interacción-antes-de-bootstrap (ej. flaky #splash-dropdown).
 document.documentElement.dataset.appReady = '1';
+
+// iOS nativo (Capacitor): ocultar el splash nativo recién cuando la app ya pintó
+// (oscura) → evita el flash blanco de la WebView durante la carga remota de
+// server.url. requestAnimationFrame asegura un frame pintado antes de ocultar.
+// ⚠ REQUIERE launchAutoHide:false en capacitor.config.json (plugins.SplashScreen);
+// si no, el splash nativo ya se auto-ocultó y este hide() es no-op. Guard ?. →
+// inofensivo en web/PWA o si el plugin @capacitor/splash-screen no está instalado.
+requestAnimationFrame(() => window.Capacitor?.Plugins?.SplashScreen?.hide?.());
 
 // ── Auto-navegar a Mi Plan si hay función próxima ──────────────
 // Si el usuario tiene un plan guardado y hay una función
