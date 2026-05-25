@@ -24,6 +24,54 @@ export function normTitle(t){
     .replace(/[“”«»]/g,'"');  // comillas dobles tipográficas → "
 }
 
+// validateFilm — VALIDACIÓN DE DATOS (pura · sin side-effects · sin imports del
+// bridge). Valida un film YA exploded (flat) contra dayKeys + venues del festival,
+// recibidos como PARÁMETROS (no lee globalThis) → testeable en aislamiento.
+// Returns { valid, drop, errors, warnings }:
+//   drop=true  → film inutilizable (sin title) → el caller lo EXCLUYE de FILMS.
+//   errors[]   → bugs de datos graves (day∉dayKeys, time inválido). El caller
+//                CONSERVA el film pero logea error (no dropea contenido en silencio).
+//   warnings[] → degradación con fallback (section/venue/duration).
+//   valid = !drop && errors.length===0  (film "perfecto").
+export function validateFilm(f, dayKeys, venues){
+  const errors=[], warnings=[];
+  // title — HARD: es la clave primaria (Sets keyed-by-title + normTitle).
+  // Sin un title string no vacío, el film corrompe state → drop.
+  if(!f || typeof f.title!=='string' || !f.title.trim()){
+    return { valid:false, drop:true, errors:['title faltante, vacío o no-string (film inutilizable)'], warnings };
+  }
+  const isEvent = f.type==='event';
+  // day — ERROR (keep): debe ser clave exacta de dayKeys (FESTIVAL_DATES[day] +
+  // agrupación por día). day inválido → film invisible / mal-agrupado.
+  if(Array.isArray(dayKeys) && dayKeys.length){
+    if(f.day==null || !dayKeys.includes(f.day)){
+      errors.push(`day "${f.day}" no está en dayKeys`);
+    }
+  }
+  // time — ERROR (keep) en films no-event: toMin(falsy)→0 → se agendaría a las 00:00.
+  if(!isEvent){
+    if(typeof f.time!=='string' || !f.time.trim()){
+      errors.push('time faltante (se agendaría a medianoche)');
+    } else if(!/\d/.test(f.time)){
+      errors.push(`time "${f.time}" no parece una hora válida`);
+    }
+  }
+  // section — WARN+default '' (caller/render ya tolera con fallback).
+  if(typeof f.section!=='string' || !f.section.trim()){
+    warnings.push('section faltante (default "")');
+  }
+  // venue — WARN: si hay venues{} y no es clave exacta (igual hay fuzzy-match,
+  // pero sin coords no se calcula travel → buffer de viaje perdido).
+  if(f.venue && venues && typeof venues==='object' && Object.keys(venues).length && !venues[f.venue]){
+    warnings.push(`venue "${f.venue}" no es clave exacta de venues{} (fuzzy-match / sin travel)`);
+  }
+  // duration — WARN: presente pero sin dígitos (parseDur igual defaultea seguro).
+  if(f.duration!=null && !/\d/.test(String(f.duration))){
+    warnings.push(`duration "${f.duration}" no numérica (usará duración por defecto)`);
+  }
+  return { valid: errors.length===0, drop:false, errors, warnings };
+}
+
 export function _djb2(str){
   let h=5381;
   for(let i=0;i<str.length;i++) h=(Math.imul(31,h)+str.charCodeAt(i))|0;

@@ -17,7 +17,7 @@ import { _updateProgramaActiveFilter, initProgramaModeBar, showDayView, switchMa
 import { seccionClose } from './overlays.js';
 import { setProgramaView } from './handlers.js';
 import { dayFullyPassed, simTodayStr } from '../domain/time.js';
-import { normTitle } from '../domain/film.js';
+import { normTitle, validateFilm } from '../domain/film.js';
 import { state } from '../state/state.js';
 import { storage } from '../storage/storage.js';
 import { t } from '../i18n/i18n.js';
@@ -130,6 +130,20 @@ export async function loadFestival(id){
   // (movido pre-batch en p5.5 para que el fallo no deje state parcialmente swapeado)
   if(!cfg.dayKeys||!cfg.days||!cfg.days.length){
     console.error(`[loadFestival] '${id}' no tiene dayKeys/days en FESTIVAL_CONFIG.`);
+    showToast(t('error_festival_nd'),'error',6000);
+    return false;
+  }
+  // Guard: festivalDates ({dayKey:isoDate}) → FESTIVAL_DATES. Sin él screeningPassed
+  // y el match de día se rompen (FESTIVAL_DATES[day]=undefined en todo).
+  if(!cfg.festivalDates||typeof cfg.festivalDates!=='object'){
+    console.error(`[loadFestival] '${id}' no tiene festivalDates en FESTIVAL_CONFIG.`);
+    showToast(t('error_festival_nd'),'error',6000);
+    return false;
+  }
+  // Guard: festivalEndStr → FESTIVAL_END (new Date). Inválido → Invalid Date →
+  // festivalEnded() y toda la lógica temporal se rompen silenciosamente.
+  if(!cfg.festivalEndStr||isNaN(new Date(cfg.festivalEndStr).getTime())){
+    console.error(`[loadFestival] '${id}' no tiene festivalEndStr válido en FESTIVAL_CONFIG.`);
     showToast(t('error_festival_nd'),'error',6000);
     return false;
   }
@@ -262,7 +276,24 @@ export async function loadFestival(id){
   // batch atómico. Subscribers post-Fase 6 verán "festival activo y user-state
   // consistente con sus films" en una sola notificación.
   // normTitle: normaliza comillas tipográficas en títulos. Punto único.
-  const _newFilms = (cfg.films||[]).map(f=>({...f,title:normTitle(f.title)}));
+  const _mapped = (cfg.films||[]).map(f=>({...f,title:normTitle(f.title)}));
+  // ── Validación de datos (domain puro: validateFilm) — particiona drop/keep ──
+  // drop (sin title) → excluido de FILMS. errors (day/time) → conservado + logeado.
+  // warnings (section/venue/duration) → conservado + default. Diagnóstico agregado
+  // SIEMPRE (incluso si todo OK) para no procesar datos malformados en silencio.
+  const _newFilms=[]; let _dropCount=0; const _filmErrors=[], _filmWarnings=[];
+  for(const f of _mapped){
+    const v=validateFilm(f, cfg.dayKeys, cfg.venues);
+    if(v.drop){ _dropCount++; console.error(`[loadFestival/${id}] film DROP:`, f, v.errors); continue; }
+    if(v.errors.length) _filmErrors.push({title:f.title, errors:v.errors});
+    if(v.warnings.length) _filmWarnings.push({title:f.title, warnings:v.warnings});
+    _newFilms.push(f);
+  }
+  console.group(`[loadFestival] ${id} — validación de ${_mapped.length} films`);
+  console.log(`OK: ${_newFilms.length-_filmErrors.length} · con errores (conservados): ${_filmErrors.length} · con warnings: ${_filmWarnings.length} · dropeados: ${_dropCount}`);
+  if(_filmErrors.length) console.error('Films con errores de datos:', _filmErrors);
+  if(_filmWarnings.length) console.warn('Films con warnings:', _filmWarnings);
+  console.groupEnd();
   const _validTitles = new Set(_newFilms.map(f=>f.title));
   state.batchUpdate({
     _activeFestId: id,

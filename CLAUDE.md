@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `f9eb87d Merge pull request #50 from jdvlazio/fix/active-filter-no-bar`
+> Último commit: `6d17f9b Merge pull request #51 from jdvlazio/fix/plist-card-hierarchy-parity`
 
 ---
 
