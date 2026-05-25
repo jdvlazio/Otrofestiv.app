@@ -14,7 +14,10 @@ const { test, expect } = require('@playwright/test');
 // Helper: entra al primer festival disponible en producción
 async function enterFirstFestival(page) {
   await page.goto('/');
-  await page.waitForSelector('#splash-sel-btn', { timeout: 15000 });
+  // Gate de readiness JS: los items del splash sólo existen tras
+  // _renderSplashDropdown → el bootstrap (incl. wiring del listener delegado)
+  // ya corrió. #splash-sel-btn es estático → no es señal válida (flaky).
+  await page.waitForSelector('.splash-drop-item[data-fest]', { state: 'attached', timeout: 15000 });
   // Esperar que el botón sea visible (la animación puede tardar hasta 1.1s)
   await page.waitForSelector('.splash-enter-btn', { state: 'visible', timeout: 10000 });
   await page.locator('.splash-enter-btn').click({ force: true });
@@ -38,7 +41,9 @@ test('M01 — app carga sin errores JS', async ({ page }) => {
 // M02 — El selector de festival tiene al menos un festival
 test('M02 — selector tiene al menos un festival', async ({ page }) => {
   await page.goto('/');
-  await page.waitForSelector('#splash-sel-btn', { timeout: 15000 });
+  // Gate de readiness JS antes de click en #splash-sel-btn (estático): garantiza
+  // que el listener delegado del bootstrap está adjunto (flaky #splash-dropdown).
+  await page.waitForSelector('.splash-drop-item[data-fest]', { state: 'attached', timeout: 15000 });
   await page.locator('#splash-sel-btn').click();
   await page.waitForSelector('#splash-dropdown', { state: 'visible', timeout: 15000 });
   await page.waitForSelector('.splash-drop-item[data-fest]', { state: 'visible', timeout: 15000 });
