@@ -900,6 +900,74 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar state bridge: {_e}')
 
+# ── [viewstate-shadow] ────────────────────────────────────────────────────────
+# p8 Step 8b (Wave 8: relocate): los 29 lets NO-roster (view-state + festival-data
+# + calc-cache + auth/splash/posters) se reubicaron a src/state/viewstate.js, que
+# instala el `_lets` bridge (Object.defineProperty sobre globalThis) en import-phase.
+# main.js + módulos los leen/escriben vía globalThis. Este check verifica:
+#   1. viewstate.js expone exactamente estos 29 keys (markers VIEWSTATE BRIDGE).
+#   2. NINGUNO se redeclara (let/const/var) en main.js (una redecl shadowearía el
+#      bridge → el write de main.js NO llegaría a los demás módulos).
+check = 'viewstate-shadow'
+try:
+    import re as _re
+    _vs_keys = [
+        'DAY_KEYS', 'cachedResult', 'activeDay', 'activeView', 'activeVenue',
+        'activeSec', 'selectedIdx', 'activeMNav', 'programaSubMode',
+        'programaViewMode', 'cartelaMode', 'interesesViewMode', 'miPlanViewMode',
+        '_sbUser', '_sb', 'LB_SLUGS', 'POSTERS', 'CUSTOM_POSTERS',
+        '_splashSelectedFestId', 'programaChip', '_programaChipMatchFn',
+        '_dismissedNotices', '_currentChips', '_activeMiPlanFilm', '_expandedFilm',
+        'activeMiPlanDay', 'miPlanViewStart', '_ctaRemovedVisible', 'archiveOpen',
+    ]
+    _problems = []
+
+    # ── 1. viewstate.js expone los 29 keys (entre markers) ──
+    _vs_path = 'src/state/viewstate.js'
+    _vs_lines = (
+        open(_vs_path, encoding='utf-8').read().split('\n')
+        if os.path.exists(_vs_path) else []
+    )
+    if not _vs_lines:
+        _problems.append(f'{_vs_path} no encontrado (VIEWSTATE BRIDGE)')
+    _vbs = _vbe = None
+    for _i, _line in enumerate(_vs_lines, 1):
+        if '// ── VIEWSTATE BRIDGE START' in _line: _vbs = _i
+        elif '// ── VIEWSTATE BRIDGE END' in _line: _vbe = _i
+    if _vbs is None or _vbe is None:
+        _problems.append(f'No se encontraron marcadores VIEWSTATE BRIDGE START/END en {_vs_path}')
+    else:
+        _vblock = '\n'.join(_vs_lines[_vbs - 1:_vbe])
+        # keys del _lets: aparecen como `<key>:` en el objeto + en defineProperty
+        _exposed = set(_re.findall(r"^\s*([A-Za-z_][A-Za-z0-9_]*)\s*:\s*\[", _vblock, _re.M))
+        for _k in _vs_keys:
+            if _k not in _exposed:
+                _problems.append(f'VIEWSTATE BRIDGE no expone key: {_k}')
+
+    # ── 2. anti-shadowing: ninguna redeclaración let/const/var en main.js ──
+    _main_lines = _main_src.split('\n')
+    for _name in _vs_keys:
+        _re_decl = _re.compile(
+            r'\b(?:let|const|var)\s+(?:[\w$]+\s*(?:=[^,;]*?)?\s*,\s*)*' + _re.escape(_name) + r'\b'
+        )
+        for _i, _line in enumerate(_main_lines, 1):
+            _st = _line.lstrip()
+            if _st.startswith('//') or _st.startswith('*'):
+                continue
+            if _re_decl.search(_line):
+                _problems.append(f'main.js L{_i}: redeclaración de viewstate `{_name}` (shadowea el bridge) → "{_line.strip()[:70]}"')
+
+    if _problems:
+        for _p in _problems[:20]:
+            fail(check, _p)
+        if len(_problems) > 20:
+            fail(check, f'... y {len(_problems) - 20} problemas más')
+        fail(check, 'Fix: viewstate vive en state/viewstate.js (bridge). NO redeclarar con let/const/var en main.js.')
+    else:
+        ok(check, f'VIEWSTATE BRIDGE expone {len(_vs_keys)} keys; cero shadowing en main.js')
+except Exception as _e:
+    warn(check, f'no se pudo verificar viewstate bridge: {_e}')
+
 # ── [view-purity] ─────────────────────────────────────────────────────────────
 # Verifica que las Views Tier 1 (Fase 6a) cumplan el contrato de función pura:
 #   - Reciben state como primer parámetro
