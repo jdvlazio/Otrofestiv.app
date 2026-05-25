@@ -160,7 +160,7 @@ sección / hora) en contextos distintos. Valores **canónicos aprobados**:
 | `.plist-meta` | **`font-size:var(--t-sm); font-weight:var(--w-thin); color:var(--gray)`**; `margin-bottom:var(--sp-1)` |
 | `.plist-sec` | **`font-size:var(--t-label); font-weight:var(--w-semi); color:var(--white-60)`**; `margin-top:2px; letter-spacing:.2px` |
 | `.plist-heart` | `font-size:var(--t-icon); color:var(--amber); padding:6px; border-radius:50%; align-self:center` |
-| `.plist-time-hdr` | **`font-size:var(--t-label); font-weight:var(--w-bold); color:var(--amber)`**; `padding:var(--sp-1) var(--sp-3) var(--sp-1); border-top:1px solid var(--bdr); letter-spacing:.5px; position:sticky` — **sin background, sin border-bottom** |
+| `.plist-time-hdr` | **`font-size:var(--t-label); font-weight:var(--w-bold); color:var(--amber)`**; `padding:var(--sp-1) var(--sp-3) var(--sp-1); background:var(--surf); border-top:1px solid var(--bdr); letter-spacing:.5px; position:sticky` — **sin border-bottom**. `background:var(--surf)` **requerido por `position:sticky`** — sin él el texto flota sobre posters al scrollear |
 
 ### 2.2 · `.int-item` — Intereses
 
@@ -216,7 +216,7 @@ Aprobadas por el PO. Ya reflejadas en §2 y aplicadas en `index.html`.
 | 5 | `.int-item-sec` | `t-label` 10px / `white-60` / `w-semi` (sube de `t-xs` a `t-label`) |
 | 6 | `.saved-venue` | `gray` / `w-thin` 400 **explícito** / `t-sm` 11px |
 | 7 | `.plist-poster` bg | `var(--surf-2)` (antes `surf-3`) — paridad con `.int-item-poster` |
-| 8 | `.plist-time-hdr` | sin `background`, sin `border-bottom`, `border-top:1px solid var(--bdr)`, `font-weight:var(--w-bold)` (700, antes 800) |
+| 8 | `.plist-time-hdr` | `background:var(--surf)` (requerido por `position:sticky`), sin `border-bottom`, `border-top:1px solid var(--bdr)`, `font-weight:var(--w-bold)` (700, antes 800) |
 | 9 | `.mplan-wk-venue` | **EXCEPCIÓN** — contexto calendario denso, valores propios (`t-xs`) |
 | 10 | `.mplan-wk-time` | **EXCEPCIÓN** — `gray` sobre fondo amber-tinted |
 
@@ -244,8 +244,9 @@ Reglas universales:
 - **Texto terciario (sección):** `--white-60` / `--w-semi` / `--t-label` — universal
   donde aplique.
 - **Placeholder de póster:** `--surf-2` siempre (thumbnail principal de lista).
-- **Separadores de hora:** sin background, `border-top:1px solid var(--bdr)`,
-  `font-weight:var(--w-bold)`.
+- **Separadores de hora:** `background:var(--surf)` (requerido por `position:sticky`
+  — sin él el texto flota sobre posters al scrollear), `border-top:1px solid var(--bdr)`,
+  sin `border-bottom`, `font-weight:var(--w-bold)`.
 
 ---
 
