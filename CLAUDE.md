@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `9c7ee4b Merge pull request #49 from jdvlazio/fix/programa-grid-top-gap`
+> Último commit: `f9eb87d Merge pull request #50 from jdvlazio/fix/active-filter-no-bar`
 
 ---
 
