@@ -15,6 +15,9 @@ import {
 
 // ── Step 2: state.js (import + bridge — D-INFRA-4: mirror eliminado) ──────────
 import { state } from './state/state.js';
+// p8 Step 8a: STATE BRIDGE reubicado a state/state-bridge.js (side-effect import).
+// Instala el bridge en la fase de import (antes del body de main.js).
+import './state/state-bridge.js';
 
 // ── Step 3: storage.js (import — adapter de localStorage; usa el bridge para
 //   FESTIVAL_STORAGE_KEY). saveX/loadState orquestadoras se quedan en main.js. ──
@@ -135,32 +138,7 @@ import {
 
 // storage (adapter de localStorage) → src/storage/storage.js (Step 3).
 // Importado al top del módulo. Usa FESTIVAL_STORAGE_KEY vía el STATE BRIDGE.
-
-// ── STATE BRIDGE START (p8 Step 2) ───────────────────────────────────
-// D-INFRA-4: el mirror fue ELIMINADO (ver src/state/state.js). El container
-// `state` (importado) posee _data; este bridge expone los 19 globals del roster
-// como propiedades de globalThis respaldadas por state.get/set. Una dirección:
-//   read  `watchlist.has(x)`  → globalThis.watchlist getter → state.get('watchlist')
-//   write `watchlist = nuevo` → globalThis.watchlist setter → state.set('watchlist', …)
-//                               → dispara subscribers + render pipeline (7d)
-// Instalado TEMPRANO (antes de cualquier init del roster): las (ex-)decls
-// `let X = init` pasaron a `X = init` bare, que rutean por aquí.
-// ⚠ El bridge DEBE preceder a la primera asignación bare del roster — en módulo
-//   ESM (strict), `X = v` sin declaración requiere que globalThis.X exista.
-// validate.py [state-mirror]: verifica que estos 19 keys estén bridged y que
-//   ningún roster key se redeclare (let/const/var) en main.js (anti-shadowing).
-const _BRIDGE_KEYS = [
-  'watchlist', 'watched', 'prioritized', 'filmRatings', 'filmDelays',
-  'filmDelaysHistory', 'savedAgenda', 'availability', 'lastRemovedSlots',
-  '_lang', '_simTime', 'FILMS', 'FESTIVAL_DATES', 'FESTIVAL_END', 'PRIO_LIMIT',
-  'TZ_OFFSET', 'FESTIVAL_TRANSPORT', '_activeFestId', 'FESTIVAL_STORAGE_KEY',
-];
-_BRIDGE_KEYS.forEach(k => Object.defineProperty(globalThis, k, {
-  get: () => state.get(k),
-  set: v => state.set(k, v),
-  configurable: true,
-}));
-// ── STATE BRIDGE END (p8 Step 2) ─────────────────────────────────────
+// p8 Step 8a: el STATE BRIDGE vive ahora en state/state-bridge.js (import L20).
 
 // ── CONTROLLER LAYER START (p7c-1) ───────────────────────────────────
 // Foundation del event delegation system. ACTION_REGISTRY mapea
@@ -754,7 +732,7 @@ FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202605242028';
+const BUILD_VERSION='202605250810';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';

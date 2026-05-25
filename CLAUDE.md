@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `1ce1fdc refactor(fase8): Step 7e — controller peripherals (auth/share/festival/poster-err)`
+> Último commit: `645cceb Merge pull request #37 from jdvlazio/fix/flaky-splash-direct-tests`
 
 ---
 
