@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `ce9637d chore: bundle v202605250051`
+> Último commit: `1ce1fdc refactor(fase8): Step 7e — controller peripherals (auth/share/festival/poster-err)`
 
 ---
 

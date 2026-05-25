@@ -113,6 +113,26 @@ import {
   toggleWL, toggleWatched, togglePelPrio, togglePelWL, setDelay, undoDelay, clearDelay, removeFromAgenda, addSuggestion, checkinLaVi, checkinNoLaVi, forceInclude, togglePriority, swapPriority, markWatchedFromPlan, confirmReplace, removeFilmFromScenario, _dismissNotice, selectMiPlanDay, miPlanNav, toggleMplanProg, setActivePlanFilm, selectFromDetail, toggleFilmAlternatives, toggleArchive, _toggleEveningFilms, filterByVenue, filterByDay, filterBySection, setInteresesView, setProgramaMode, toggleProgramaView, setProgramaView, setProgramaChip, clearProgramaChip, _pafClearSec, _pafClearVenue, _toggleWLFromList, saveCurrentScenario, jumpToScenario, _scrollToAgSection, _setExpandedFilm, _closePelAndRemove, _closePelAndRate, _navTo, _closeAuthAndReset, _toggleCtxOlder, _toggleWatchedAndClose, _toggleWLAndClose, _activatePlanFilm, _scrollToSuggestions, _removeConflictModal, _scrollToTop, _searchOpenFilm, _searchOpenCorto,
 } from './controller/handlers.js';
 
+// ── Step 7e: controller/festival.js ────────────────────────────────────────────
+import {
+  toggleSplashDropdown, _togglePastFest, _renderSplashDropdown, _togglePastFestRow, _renderFestivalSelector, selectSplashFest, _autoResolveFestivalPosters,
+} from './controller/festival.js';
+
+// ── Step 7e: controller/auth.js ────────────────────────────────────────────
+import {
+  _sbInit,
+} from './controller/auth.js';
+
+// ── Step 7e: controller/share.js ────────────────────────────────────────────
+import {
+  sharePlan, exportICS,
+} from './controller/share.js';
+
+// ── Step 7e: controller/poster-err.js ────────────────────────────────────────────
+import {
+  _posterErr, _cortoSheetPosterErr,
+} from './controller/poster-err.js';
+
 // storage (adapter de localStorage) → src/storage/storage.js (Step 3).
 // Importado al top del módulo. Usa FESTIVAL_STORAGE_KEY vía el STATE BRIDGE.
 
@@ -592,34 +612,11 @@ const _storedFestEnded=_storedFestCfg&&_storedFestCfg.festivalEndStr&&new Date(_
 if(_storedFestEnded) localStorage.removeItem('otrofestiv_festival');
 _activeFestId=(_storedFestId&&!_storedFestEnded)?_storedFestId:_DEFAULT_FEST_ID;
 
-// ═══════════════════════════════════════════════════════════════
-// SUPABASE — Auth + Cloud Sync
-// ═══════════════════════════════════════════════════════════════
-const _SB_URL='https://eytxrvbnwzxuedbmnnqr.supabase.co';
-const _SB_KEY='sb_publishable_-edEGNPRmpsRy7ThJMWtdw_bs6IVZSC';
-let _sb=null,_sbUser=null,_sbReady=false;
+// SUPABASE — _sb/_sbUser: backing del STATE BRIDGE (leídos/escritos por
+// controller/{auth,persistence}.js vía globalThis). _SB_URL/_SB_KEY → auth.js.
+let _sb=null, _sbUser=null;
 
 // Init — llamado una vez al arrancar
-function _sbInit(){
-  if(typeof supabase==='undefined'){window.addEventListener('load',_sbInit,{once:true});return;}
-  try{
-    _sb=supabase.createClient(_SB_URL,_SB_KEY);
-    _sb.auth.onAuthStateChange(async(event,session)=>{
-      _sbUser=session?.user??null;
-      _sbUpdateUI();
-      if(event==='SIGNED_IN'){
-        await _cloudLoad();
-        _renderAfterSync();
-      }
-      if(event==='SIGNED_OUT') _sbUpdateUI();
-    });
-    _sb.auth.getSession().then(({data:{session}})=>{
-      _sbUser=session?.user??null;
-      _sbReady=true;
-      _sbUpdateUI();
-    });
-  }catch(e){console.warn('Supabase init error:',e);}
-}
 
 // Magic Link — envía email de acceso
 
@@ -629,12 +626,6 @@ function _sbInit(){
 // _cloudSaveTimer (debounce de _cloudSave) → controller/persistence.js (Step 7b).
 
 // UI helpers
-
-function _renderAfterSync(){
-  // Re-renderiza la vista activa después de cargar datos de la nube
-  if(typeof showDayView==='function') showDayView();
-  if(typeof _renderProgramaContent==='function') _renderProgramaContent();
-}
 
 // Abrir sheet de login
 // openAuthSheet → src/view/sheets.js (Step 6b). Importado.
@@ -763,7 +754,7 @@ FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202605242000';
+const BUILD_VERSION='202605242028';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';
@@ -1159,381 +1150,11 @@ let archiveOpen=false;
    3. Email prefix (fallback con cuenta)
    4. null (anónimo)
 */
-function _getDisplayName(){
-  if(_sbUser){
-    const meta=_sbUser.user_metadata||{};
-    if(meta.display_name) return meta.display_name;
-  }
-  const local=localStorage.getItem('otrofestiv_display_name');
-  if(local) return local;
-  if(_sbUser&&_sbUser.email) return _sbUser.email.split('@')[0];
-  return null;
-}
-async function _saveDisplayName(name){
-  const n=name.trim().slice(0,30);
-  if(!n) return;
-  localStorage.setItem('otrofestiv_display_name',n);
-  if(_sb&&_sbUser){
-    try{ await _sb.auth.updateUser({data:{display_name:n}}); }catch(e){console.warn('[auth] updateUser failed',e);}
-  }
-}
-
-function _promptDisplayName(onSave){
-  const prev=document.getElementById('display-name-sheet');if(prev)prev.remove();
-  const el=document.createElement('div');
-  el.id='display-name-sheet';
-  el.style.cssText='position:fixed;inset:0;background:var(--overlay-70);z-index:9999;display:flex;align-items:flex-end;justify-content:center';
-  el.innerHTML=`<div class="auth-sheet-body">
-    <div class="sheet-handle-bar"></div>
-    <div class="sheet-title">${t('export_como_aparecer')}</div>
-    <div class="sheet-subtitle">${t('export_aparecera')}</div>
-    <input class="sheet-input" id="dname-input" type="text" maxlength="30" placeholder="${t('auth_nombre')}" autocomplete="name">
-    <button class="sheet-cta" id="dname-save">${t('export_guardar_compartir')}</button>
-  </div>`;
-  document.body.appendChild(el);
-  const input=document.getElementById('dname-input');
-  input.focus();
-  document.getElementById('dname-save').onclick=async()=>{
-    const v=input.value.trim();
-    if(!v){input.style.borderColor='var(--red)';return;}
-    await _saveDisplayName(v);
-    el.remove();
-    if(onSave) onSave();
-  };
-  el.addEventListener('click',e=>{if(e.target===el)el.remove();});
-}
 
 /* ── SHARE/EXPORT: imagen, ICS ──────────────────────────────────────── */
-async function sharePlan(){
-  if(!savedAgenda||!savedAgenda.schedule||!savedAgenda.schedule.length){
-    showToast(t('plan_sin_plan'),'warn');return;
-  }
-  // Pedir nombre si no existe — solo la primera vez
-  if(!_getDisplayName()){
-    _promptDisplayName(()=>sharePlan());
-    return;
-  }
-  let canvas,dataUrl;
-  try{
-    canvas=_buildAgendaCanvas();
-    dataUrl=canvas.toDataURL('image/png');
-    if(!dataUrl||dataUrl==='data:,') throw new Error('canvas vacío');
-  }catch(e){showToast('Error al generar imagen','err');return;}
-
-  // Web Share API con archivo (iOS Safari 15+, Chrome Android 86+)
-  if(navigator.share&&navigator.canShare){
-    canvas.toBlob(async blob=>{
-      if(!blob){_dlDirect(dataUrl);return;}
-      const cfg=FESTIVAL_CONFIG[_activeFestId]||{};
-      const fname=`otrofestiv-${(cfg.shortName||'plan').toLowerCase().replace(/\s+/g,'-')}.png`;
-      const file=new File([blob],fname,{type:'image/png'});
-      if(navigator.canShare({files:[file]})){
-        try{
-          await navigator.share({files:[file],title:`Mi Plan · ${cfg.name||'Otrofestiv'}`});
-          showToast('Compartido ✓','info');
-        }catch(e){if(e.name!=='AbortError') _dlDirect(dataUrl);}
-      }else{_dlDirect(dataUrl);}
-    },'image/png');
-  }else{
-    // Fallback desktop: descarga directa
-    _dlDirect(dataUrl);
-  }
-}
 
 /* ── SHARE/EXPORT: imagen, ICS ──────────────────────────────────────── */
-function shareAsImage(){
-  if(!savedAgenda||!savedAgenda.schedule||!savedAgenda.schedule.length){
-    showToast(t('plan_sin_plan'),'warn'); return;
-  }
 
-  // ── Guardia de integridad del plan ────────────────────────────
-  // Antes de generar la imagen verificamos tres condiciones:
-  // 1. Que todas las películas del plan siguen en la watchlist
-  // 2. Que no hay conflictos internos entre funciones del plan
-  // 3. Que al menos una función no ha pasado ya
-  const issues=[];
-
-  // 1. Películas del plan ya no en watchlist
-  const notInWL=savedAgenda.schedule.filter(s=>!watchlist.has(s._title));
-  if(notInWL.length){
-    const names=notInWL.map(s=>s._title.length>20?s._title.slice(0,18)+'…':s._title).join(', ');
-    issues.push(`${notInWL.length} película${notInWL.length>1?'s':''} ${t('plan_no_intereses')}: ${names}`);
-  }
-
-  // 2. Conflictos internos entre funciones del plan
-  const sched=savedAgenda.schedule;
-  const conflicting=[];
-  for(let i=0;i<sched.length;i++){
-    for(let j=i+1;j<sched.length;j++){
-      if(sched[i].day===sched[j].day && screensConflict(sched[i],sched[j])){
-        conflicting.push(sched[i]._title);
-      }
-    }
-  }
-  if(conflicting.length){
-    const names=[...new Set(conflicting)].map(t=>t.length>20?t.slice(0,18)+'…':t).join(', ');
-    issues.push(`Hay actividades con horario solapado: ${names}`);
-  }
-
-  // 3. Plan completamente pasado
-  const stillActive=savedAgenda.schedule.some(s=>!screeningPassed(s));
-  if(!stillActive) issues.push('Todas las actividades de tu plan ya pasaron');
-
-  // Si hay problemas: mostrar advertencia con opción de continuar igual
-  if(issues.length){
-    const msg=`<b>${t('plan_desactualizado')}</b><br><br>`
-      +issues.map(i=>`• ${i}`).join('<br>')
-      +`<br><br>¿Compartir la imagen de todas formas?`;
-    showActionModal(
-      `${ICONS.share} Compartir imagen`,
-      msg,
-      'Compartir igual',
-      ()=>{_generateAndShare();},
-      'Revisar plan primero'
-    );
-    return;
-  }
-
-  _generateAndShare();
-}
-
-function _generateAndShare(){
-  let canvas,dataUrl;
-  try{
-    canvas=_buildAgendaCanvas();
-    dataUrl=canvas.toDataURL('image/png');
-    if(!dataUrl||dataUrl==='data:,') throw new Error('canvas vacío');
-  }catch(e){
-    showToast('Error al generar imagen','err'); return;
-  }
-  _showImageModal(dataUrl,canvas);
-}
-
-function _buildAgendaCanvas(){
-  const cfg=FESTIVAL_CONFIG[_activeFestId]||{};
-  const festDays=cfg.days||DAY_KEYS.map(k=>({k,lbl:k.slice(0,3).toUpperCase(),d:parseInt(k.slice(-2))||''}));
-  const DAYS=festDays.map(d=>d.k);
-  const DS=festDays.map(d=>d.lbl);
-  const DN=festDays.map(d=>String(d.d));
-  const byDay={};
-  DAYS.forEach(d=>{byDay[d]=[];});
-  (savedAgenda.schedule||[]).forEach(s=>{if(byDay[s.day])byDay[s.day].push(s);});
-  DAYS.forEach(d=>{byDay[d].sort((a,b)=>a.time.localeCompare(b.time));});
-  const active=DAYS; // Todos los días del festival — registro completo independiente del plan
-  const nC=active.length||1;
-  // DPR adaptativo: iOS limita canvas a ~4096px por dimensión — calcular tras conocer nC
-  const _W_RAW=48+nC*200-10; // PAD*2 + nC*CW + (nC-1)*CGAP
-  const DPR=Math.max(1,Math.min(window.devicePixelRatio||2,3,Math.floor(4096/_W_RAW)));
-  const cleanDur=s=>String(s.duration||'').replace(/\s*min\s*min/i,'min').trim();
-  const PAD=24,HDR=72,COL_HDR=46,CW=190,CGAP=10,CARD_PAD=12,CARD_R=8,CARD_GAP=8;
-  const FONT_T=12,LINE_T=16,MAX_TL=3,CARD_MIN=90;
-  const cv0=document.createElement('canvas');
-  const c0=cv0.getContext('2d');
-  c0.font=`600 ${FONT_T}px system-ui,-apple-system,sans-serif`;
-  const cHts={};
-  active.forEach(day=>{
-    cHts[day]=byDay[day].map(s=>{
-      const tl=_measureLines(c0,s._title||'',CW-CARD_PAD*2-6,MAX_TL);
-      return Math.max(CARD_PAD+18+4+tl*LINE_T+4+14+CARD_PAD,CARD_MIN);
-    });
-  });
-  const maxColH=active.reduce((mx,day)=>{
-    const h=cHts[day].reduce((s,h)=>s+h+CARD_GAP,0)-CARD_GAP;
-    return Math.max(mx,h);
-  },0);
-  const W=PAD*2+nC*CW+(nC-1)*CGAP;
-  const H=HDR+PAD+COL_HDR+CARD_GAP+Math.max(0,maxColH)+PAD*2;
-  const cv=document.createElement('canvas');
-  cv.width=W*DPR;cv.height=H*DPR;
-  const c=cv.getContext('2d');
-  c.scale(DPR,DPR);
-  c.fillStyle='#0A0A0A';c.fillRect(0,0,W,H);
-  // Banner: --surf-2 (#1A1A1A) — gris sobrio de la paleta
-  c.fillStyle='#1A1A1A';c.fillRect(0,0,W,HDR);
-  // Wordmark: "Otro" blanco + "festiv" ámbar — igual que en la app
-  c.font='800 22px system-ui,-apple-system,sans-serif';
-  c.textBaseline='alphabetic';
-  c.fillStyle='#FFFFFF';
-  const otroW=c.measureText('Otro').width;
-  c.fillText('Otro',PAD,HDR/2+4);
-  c.fillStyle='#D4900A';
-  c.fillText('festiv',PAD+otroW,HDR/2+4);
-  // Subtítulo: --gray (#888888)
-  c.fillStyle='#888888';
-  c.font='500 11px system-ui,-apple-system,sans-serif';
-  const _dn=_getDisplayName();
-  const _sub=(_dn?_dn+' · ':'')+'Mi Plan · '+(cfg.name||'Festival')+' · '+active.length+' día'+(active.length!==1?'s':'');
-  c.fillText(_sub,PAD,HDR/2+20);
-  active.forEach((day,ci)=>{
-    const x=PAD+ci*(CW+CGAP);
-    const di=DAYS.indexOf(day);
-    const films=byDay[day];
-    const hy=HDR+PAD;
-    c.fillStyle='rgba(212,144,10,0.12)';_rr(c,x,hy,CW,COL_HDR,8);c.fill();
-    c.fillStyle='rgba(212,144,10,0.5)';c.fillRect(x,hy+COL_HDR-1,CW,1);
-    c.fillStyle='#D4900A';
-    c.font='700 9px system-ui,-apple-system,sans-serif';
-    c.textBaseline='top';c.fillText(DS[di],x+12,hy+9);
-    c.fillStyle='#FFFFFF';
-    c.font='700 20px system-ui,-apple-system,sans-serif';
-    c.fillText(DN[di],x+12,hy+20);
-    let cardY=hy+COL_HDR+CARD_GAP;
-    films.forEach((s,fi)=>{
-      const ch=cHts[day][fi];
-      const prio=prioritized&&prioritized.has&&prioritized.has(s._title);
-      const dur=cleanDur(s);
-      c.fillStyle=prio?'rgba(212,144,10,0.18)':'rgba(255,255,255,0.06)';
-      _rr(c,x,cardY,CW,ch,CARD_R);c.fill();
-      c.fillStyle=prio?'#D4900A':'rgba(212,144,10,0.35)';
-      _rr(c,x,cardY,4,ch,CARD_R);c.fill();
-      const tx=x+CARD_PAD+6;let ty=cardY+CARD_PAD;
-      c.fillStyle='#D4900A';
-      c.font='700 14px system-ui,-apple-system,sans-serif';
-      c.textBaseline='top';c.fillText(s.time,tx,ty);
-      if(dur){const hw=c.measureText(s.time).width;c.fillStyle='#666';c.font='400 10px system-ui,-apple-system,sans-serif';c.fillText(' · '+dur,tx+hw,ty+2);}
-      ty+=22;
-      c.fillStyle='#FFF';c.font=`600 ${FONT_T}px system-ui,-apple-system,sans-serif`;
-      ty=_drawWrapped(c,s._title||'',tx,ty,CW-CARD_PAD*2-6,LINE_T,MAX_TL);
-      if(s.venue){const _vc=vcfg(s.venue);const _vraw=_vc.short||s.venue;const v=_vraw.length>30?_vraw.slice(0,28)+'…':_vraw;c.fillStyle='#5A5A5A';c.font='400 10px system-ui,-apple-system,sans-serif';c.textBaseline='top';c.fillText(v,tx,cardY+ch-CARD_PAD-11);}
-      cardY+=ch+CARD_GAP;
-    });
-  });
-  c.fillStyle='rgba(212,144,10,0.2)';c.fillRect(0,H-1,W,1);
-  return cv;
-}
-
-function _measureLines(c,text,maxW,maxLines){
-  const words=text.split(' ');let line='',lines=1;
-  for(let i=0;i<words.length;i++){
-    const t=line?line+' '+words[i]:words[i];
-    if(c.measureText(t).width>maxW&&line){if(lines>=maxLines)return maxLines;lines++;line=words[i];}
-    else{line=t;}
-  }
-  return lines;
-}
-
-function _drawWrapped(c,text,x,y,maxW,lh,maxLines){
-  c.textBaseline='top';
-  const words=text.split(' ');let line='',ln=0;
-  for(let i=0;i<words.length;i++){
-    const t=line?line+' '+words[i]:words[i];
-    if(c.measureText(t).width>maxW&&line){
-      if(ln>=maxLines-1){c.fillText(line+'…',x,y+ln*lh);return y+ln*lh+lh;}
-      c.fillText(line,x,y+ln*lh);line=words[i];ln++;
-    }else{line=t;}
-  }
-  if(line)c.fillText(line,x,y+ln*lh);
-  return y+ln*lh+lh;
-}
-
-function _rr(c,x,y,w,h,r){
-  r=Math.min(r,w/2,h/2);
-  c.beginPath();c.moveTo(x+r,y);c.lineTo(x+w-r,y);c.quadraticCurveTo(x+w,y,x+w,y+r);
-  c.lineTo(x+w,y+h-r);c.quadraticCurveTo(x+w,y+h,x+w-r,y+h);
-  c.lineTo(x+r,y+h);c.quadraticCurveTo(x,y+h,x,y+h-r);
-  c.lineTo(x,y+r);c.quadraticCurveTo(x,y,x+r,y);c.closePath();
-}
-
-function _showImageModal(dataUrl,canvas){
-  const prev=document.getElementById('img-share-modal');if(prev)prev.remove();
-  const isIOS=/iPad|iPhone|iPod/.test(navigator.userAgent);
-  const ov=document.createElement('div');
-  ov.id='img-share-modal';
-  ov.style.cssText='position:fixed;inset:0;background:var(--overlay-92);z-index:9999;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px;box-sizing:border-box;gap:var(--sp-btn)';
-  const hint=document.createElement('p');
-  hint.style.cssText='color:var(--gray);font-size:var(--t-caption);font-family:system-ui;text-align:center;margin:0;line-height:1.6';
-  hint.textContent=isIOS?t('misc_mantener'):t('misc_descargar_guardar');
-  ov.appendChild(hint);
-  const img=document.createElement('img');
-  img.src=dataUrl;
-  img.style.cssText='max-width:100%;max-height:62vh;border-radius:var(--r);display:block;box-shadow:0 8px 32px var(--overlay-70)';
-  ov.appendChild(img);
-  const row=document.createElement('div');
-  row.style.cssText='display:flex;gap:10px;width:100%;max-width:320px';
-  if(!isIOS){
-    const btnDl=document.createElement('button');
-    btnDl.textContent='⬇ Descargar';
-    btnDl.style.cssText='flex:1;padding:var(--sp-btn);background:var(--amber);color:var(--black);border:none;border-radius:var(--r-md);font-size:var(--t-base);font-family:system-ui;font-weight:var(--w-bold);cursor:pointer';
-    btnDl.onclick=function(){
-      if(navigator.share&&navigator.canShare){
-        canvas.toBlob(blob=>{
-          if(!blob){_dlDirect(dataUrl);return;}
-          const file=new File([blob],'otrofestiv-miplan.png',{type:'image/png'});
-          if(navigator.canShare({files:[file]})){navigator.share({files:[file]}).then(()=>{ov.remove();showToast('Compartido ✓','info');}).catch(()=>_dlDirect(dataUrl));}
-          else{_dlDirect(dataUrl);}
-        },'image/png');
-      }else{_dlDirect(dataUrl);}
-    };
-    row.appendChild(btnDl);
-  }
-  const btnX=document.createElement('button');
-  btnX.textContent=t('misc_cerrar');
-  btnX.style.cssText=(isIOS?'flex:1;':'')+'padding:var(--sp-btn) var(--sp-5);background:rgba(255,255,255,0.08);color:var(--gray2);border:none;border-radius:var(--r-md);font-size:var(--t-base);font-family:system-ui;cursor:pointer';
-  btnX.onclick=()=>ov.remove();
-  row.appendChild(btnX);
-  ov.appendChild(row);
-  ov.addEventListener('click',e=>{if(e.target===ov)ov.remove();});
-  document.body.appendChild(ov);
-}
-
-function _dlDirect(dataUrl){
-  const a=document.createElement('a');
-  a.href=dataUrl;a.download='otrofestiv-miplan.png';
-  a.style.cssText='position:fixed;top:-999px;left:-999px;opacity:0';
-  document.body.appendChild(a);a.click();
-  setTimeout(()=>{document.body.removeChild(a);showToast('Imagen guardada ✓','info');},200);
-}
-async function exportICS(){
-  if(!savedAgenda||!savedAgenda.schedule.length){showToast(t('plan_sin_plan'),'warn');return;}
-  const pad=n=>String(n).padStart(2,'0');
-  const fmt=dt=>`${dt.getFullYear()}${pad(dt.getMonth()+1)}${pad(dt.getDate())}T${pad(dt.getHours())}${pad(dt.getMinutes())}00`;
-  // Convierte tiempo 12h (8:00 PM) → 24h (20:00) para _festDate
-  const to24h=t=>{if(!t)return'12:00';const m=t.match(/(\d+):(\d+)\s*(AM|PM)/i);if(!m)return t;let h=parseInt(m[1]),mn=m[2],ap=m[3].toUpperCase();if(ap==='PM'&&h!==12)h+=12;if(ap==='AM'&&h===12)h=0;return pad(h)+':'+mn;};
-  const _icsCfg=FESTIVAL_CONFIG[_activeFestId]||{};
-  const _icsId=(_icsCfg.shortName||'festival').toLowerCase().replace(/\s+/g,'');
-  const lines=['BEGIN:VCALENDAR','VERSION:2.0',`PRODID:-//Otrofestiv//${_icsId}//ES`,'CALSCALE:GREGORIAN','METHOD:PUBLISH'];
-  savedAgenda.schedule.forEach(s=>{
-    const dateStr=FESTIVAL_DATES[s.day];if(!dateStr) return;
-    const start=_festDate(dateStr,to24h(s.time));
-    if(isNaN(start.getTime())) return; // skip si fecha inválida
-    const dur=s.duration?parseInt(String(s.duration)):90;
-    const end=new Date(start.getTime()+(isNaN(dur)?90:dur)*60000);
-    const clean=str=>(str||'').replace(/[\r\n,;\\]/g,' ').trim();
-    lines.push('BEGIN:VEVENT',
-      `DTSTART:${fmt(start)}`,`DTEND:${fmt(end)}`,
-      `SUMMARY:${clean(s._title)}`,
-      `LOCATION:${clean(s.venue)}`,
-      `DESCRIPTION:${clean(_icsCfg.name||'Festival')} - ${clean(s.section)} - ${clean(s.duration)}`,
-      `UID:otrofestiv-${_icsId}-${s._title?.replace(/\s/g,'')}-${fmt(start)}@otrofestiv.app`,
-      'END:VEVENT');
-  });
-  lines.push('END:VCALENDAR');
-  const icsText=lines.join('\r\n');
-  const fileName=`otrofestiv-${_icsId}.ics`;
-  // Capacitor nativo: Filesystem + Share para invocar Calendar.app
-  if(window.Capacitor?.isNativePlatform()){
-    const b64=btoa(unescape(encodeURIComponent(icsText)));
-    try{
-      const {Filesystem,Share}=window.Capacitor.Plugins;
-      const result=await Filesystem.writeFile({
-        path:fileName,
-        data:b64,
-        directory:'CACHE'
-      });
-      await Share.share({
-        title:'Otrofestiv — Mi Plan',
-        files:[result.uri]
-      });
-    }catch(e){
-      console.error('ICS share error:',e);
-      showToast('No se pudo abrir Calendario','warn');
-    }
-  } else {
-    const blob=new Blob([icsText],{type:'text/calendar;charset=utf-8'});
-    const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=fileName;a.click();
-  }
-  showToast(t('misc_calendario_listo'),'info');
-}
 // ── RESULT HTML ──
 let cachedResult=null;
 
@@ -1842,14 +1463,6 @@ state.subscribeRender(
    Solo se muestra si no hay datos previos del usuario.
    Auto-dismiss en 2.5s o al tocar.
 ────────────────────────────────────────────────────────────────── */
-function toggleSplashDropdown(){
-  const dd=document.getElementById('splash-dropdown');
-  const btn=document.getElementById('splash-sel-btn');
-  if(!dd||!btn) return;
-  const open=dd.style.display==='none';
-  dd.style.display=open?'block':'none';
-  btn.classList.toggle('open',open);
-}
 
 // ── Genera el splash dropdown y el festival selector desde FESTIVAL_CONFIG ──
 // Agregar un festival = una entrada en FESTIVAL_CONFIG. Nada más que tocar.
@@ -1863,73 +1476,24 @@ function toggleSplashDropdown(){
 // Toggle colapso/expansión de festival pasado en el dropdown del splash.
 // Al expandir muestra metadata completa y hace el item seleccionable.
 // Al colapsar vuelve al estado condensado.
-function _togglePastFest(btn, name, meta, id){
-  // Toggle colapso/expansión — siempre. Nunca selecciona.
-  const isOpen=btn.classList.contains('past-open');
-  btn.classList.toggle('past-open', !isOpen);
-  btn.setAttribute('aria-selected', isOpen ? 'false' : 'true');
-}
 
 // Pure half (p6b) — HTML del dropdown list
 // _renderSplashDropdownHTML → src/view/components.js (Step 6a). Importado.
 // Impure caller (p6b) — DOM mutations en 3 elementos del splash
-function _renderSplashDropdown(activeFestId){
-  const dd=document.getElementById('splash-dropdown');
-  if(!dd) return;
-  dd.innerHTML=_renderSplashDropdownHTML(state, activeFestId);
-  // Update selected button meta with language-aware dates
-  const _activeCfg=FESTIVAL_CONFIG[activeFestId];
-  const _selMeta=document.getElementById('splash-sel-meta');
-  const _selName=document.getElementById('splash-sel-name');
-  if(_activeCfg && _selMeta){
-    _selMeta.textContent=`${_activeCfg.city} · ${_langDates(_activeCfg)} ${_activeCfg.year||''}`.trim();
-  }
-  if(_activeCfg && _selName) _selName.textContent=_activeCfg.name;
-}
 
 // Toggle colapso/expansión de festival pasado en el sheet in-app.
 // Idéntico en comportamiento a _togglePastFest del splash.
 // Primer tap: expande mostrando metadata completa.
 // Segundo tap: selecciona el festival vía loadFestival.
-function _togglePastFestRow(row, id){
-  // Toggle colapso/expansión — siempre. Nunca carga el festival.
-  const isOpen=row.classList.contains('past-open');
-  if(!isOpen){
-    // Colapsar cualquier otro abierto antes de expandir
-    document.querySelectorAll('.fs-festival-row.past.past-open')
-      .forEach(el=>el.classList.remove('past-open'));
-  }
-  row.classList.toggle('past-open', !isOpen);
-}
 
 // Pure half (p6b) — HTML del festival selector list
 // _renderFestivalSelectorHTML → src/view/components.js (Step 6a). Importado.
 // Impure caller (p6b) — DOM mutation. Preserva el doble innerHTML= pre-existente
 // (bug benign — escribe el mismo valor dos veces, sin efecto observable)
-function _renderFestivalSelector(activeFestId){
-  const container=document.getElementById('fs-festival-list');
-  if(!container) return;
-  const html=_renderFestivalSelectorHTML(state, activeFestId);
-  container.innerHTML=html;
-  container.innerHTML=html;
-}
+
 // ─────────────────────────────────────────────────────────────────────────────
 
 let _splashSelectedFestId=_DEFAULT_FEST_ID;
-function selectSplashFest(name,meta,festId){
-  _splashSelectedFestId=festId||_DEFAULT_FEST_ID;
-  const n=document.getElementById('splash-sel-name');
-  const m=document.getElementById('splash-sel-meta');
-  if(n) n.textContent=name;
-  if(m) m.textContent=meta;
-  document.querySelectorAll('.splash-drop-item').forEach(el=>el.classList.remove('selected'));
-  const active=document.querySelector('.splash-drop-item[data-fest="'+_splashSelectedFestId+'"]');
-  if(active) active.classList.add('selected');
-  const dd=document.getElementById('splash-dropdown');
-  const btn=document.getElementById('splash-sel-btn');
-  if(dd) dd.style.display='none';
-  if(btn) btn.classList.remove('open');
-}
 
 // ═══════════════════════════════════════════════════════════════════
 // AUTO-RESOLVE POSTERS — lbSlug → TMDB search → poster correcto
@@ -1937,48 +1501,7 @@ function selectSplashFest(name,meta,festId){
 // Usa localStorage como caché para evitar llamadas TMDB repetidas.
 // Sobreescribe entradas en POSTERS (no en CUSTOM_POSTERS).
 // ═══════════════════════════════════════════════════════════════════
-async function _autoResolveFestivalPosters(){
-  if(!LB_SLUGS||!TMDB_API_KEY) return;
-  const seen=new Set();
-  const candidates=[];
-  for(const f of FILMS){
-    if(seen.has(f.title)) continue;
-    if(f.type==='event'||f.is_cortos) continue;
-    if(!LB_SLUGS[f.title]) continue;
-    if(CUSTOM_POSTERS&&CUSTOM_POSTERS[f.title]) continue; // customPosters tienen prioridad
-    seen.add(f.title);
-    candidates.push(f);
-  }
-  if(!candidates.length) return;
-  let updated=0;
-  for(const film of candidates){
-    const slug=LB_SLUGS[film.title];
-    const cacheKey=_POSTER_CACHE_PFX+slug;
-    let posterPath=null;
-    try{posterPath=localStorage.getItem(cacheKey);}catch(e){}
-    if(!posterPath){
-      try{
-        const q=encodeURIComponent(film.title_en||film.title);
-        const yr=film.year?'&year='+film.year:'';
-        const url=TMDB_API_BASE+'/search/movie?api_key='+TMDB_API_KEY+'&query='+q+yr+'&language=en-US';
-        const resp=await fetch(url);
-        if(!resp.ok) continue;
-        const data=await resp.json();
-        posterPath=data.results?.[0]?.poster_path||null;
-        if(posterPath){try{localStorage.setItem(cacheKey,posterPath);}catch(e){}}
-      }catch(e){continue;}
-      await new Promise(r=>setTimeout(r,120)); // rate limit ~8 req/s
-    }
-    if(posterPath){
-      const fullUrl=TMDB_POSTER_BASE+posterPath;
-      if(POSTERS[film.title]!==fullUrl){POSTERS[film.title]=fullUrl;updated++;}
-    }
-  }
-  if(updated>0){
-    setPosters(POSTERS);
-    requestAnimationFrame(()=>{try{render();}catch(e){console.warn('[render] rAF render failed',e);}});
-  }
-}
+
 /**
  * loadFestival(id) — switch al festival `id`. Post-p5.5: el swap del state
  * roster (15 keys: 7 cfg + 8 user-state, sin `_activeFestId` que cierra
@@ -2351,7 +1874,6 @@ if(window.Capacitor?.Plugins?.CapacitorUpdater){
     }
   })();
 }
-_sbInit();
 (function(){
   // Detecta el festival en curso por fecha. Prioridad:
   // 1. Festival que está sucediendo hoy · 2. El próximo más cercano · 3. El más reciente
@@ -2476,6 +1998,10 @@ document.addEventListener('click', function(e){
     // p8 Step 7d-1: LB_SLUGS — slugs Letterboxd, escrito por loadFestival (main.js,
     // hasta W8), leído por lbUrl en controller/sheets-controller.js.
     LB_SLUGS:             [() => LB_SLUGS,             v => { LB_SLUGS = v; }],
+    // p8 Step 7e: POSTERS/CUSTOM_POSTERS — escritos por loadFestival (main.js, W8),
+    // leídos/escritos por _autoResolveFestivalPosters en controller/festival.js.
+    POSTERS:              [() => POSTERS,              v => { POSTERS = v; }],
+    CUSTOM_POSTERS:       [() => CUSTOM_POSTERS,       v => { CUSTOM_POSTERS = v; }],
     _splashSelectedFestId:[() => _splashSelectedFestId, v => { _splashSelectedFestId = v; }],
     // p8 Step 6c (D-6C-1): view-state de programa, bridgeado para view/programa.js.
     // Los lets viven en main.js (escritos por setProgramaChip/_dismissNotice).
@@ -2525,6 +2051,12 @@ document.addEventListener('click', function(e){
   });
 })();
 // ── TEST BRIDGE END (p8 Step 0) ──────────────────────────────────────────────
+
+// p8 Step 7e: _sbInit() DESPUÉS del TEST BRIDGE. _sbInit vive en controller/auth.js
+// y escribe _sb/_sbUser como globales bridgeados (bare assignment en módulo strict).
+// El defineProperty(globalThis,'_sb') del bridge debe existir antes, o el assignment
+// lanza ReferenceError (silenciado por el try/catch interno) y _sb queda null.
+_sbInit();
 
 /* ── Re-render automático cada 60s ───────────────────────────
    Actualiza estados temporales (AHORA, Ya pasó, días pasados)
@@ -2732,58 +2264,6 @@ if(window.visualViewport){
 // 3. Si TMDB responde, reemplaza el generativo con el poster real
 // 4. Cachea el resultado en localStorage para no repetir la búsqueda
 
-function _posterGenFallback(img, f){
-  if(!f){ img.style.display='none'; return; }
-  let gen;
-  if(f.title&&f.title.toLowerCase().includes('sorpresa')) gen=makeSorpresaPoster();
-  else if(f.type==='event') gen=makeEventPoster(state,f.title,f.duration,f.event_kind);
-  else if(f.is_cortos) gen=makeProgramPoster(state,f.title,f.duration,f.section);
-  else gen=_buildPosterV16({
-    accent: _sectionColor(f.section||''),
-    headerLabel: _secLabel(f.section||'')||'FESTIVAL',
-    title: f.title,
-    num: null
-  });
-  if(gen) img.src=gen; else img.style.display='none';
-}
-
-function _posterErr(img){
-  img.onerror=null;
-  const title=img.dataset.title||'';
-  const f=title?FILMS.find(fi=>fi.title===title):null;
-  if(!f){img.style.display='none';return;}
-
-  // Check localStorage cache first
-  const cacheKey=_POSTER_CACHE_PFX+'err_'+title;
-  const cached=localStorage.getItem(cacheKey);
-  if(cached){img.src=cached;return;}
-
-  // Show generative immediately
-  _posterGenFallback(img,f);
-
-  // Search TMDB async for real poster (only if key available — not in production bundle)
-  if(!TMDB_API_KEY) return;
-  const query=encodeURIComponent(f.title_en||f.title);
-  const yearParam=f.year?'&year='+f.year:'';
-  fetch(`${TMDB_API_BASE}/search/movie?api_key=${TMDB_API_KEY}&query=${query}${yearParam}&language=es`)
-    .then(r=>r.json())
-    .then(data=>{
-      const path=data.results?.[0]?.poster_path;
-      if(path&&img.isConnected){
-        const url=TMDB_IMG+path;
-        img.src=url;
-        try{localStorage.setItem(cacheKey,url);}catch(e){}
-      }
-    })
-    .catch(()=>{});
-}
 // Fallback para poster en openCortoSheet: los cortos no están en FILMS top-level,
 // por lo que _posterErr no puede encontrarlos y los oculta. Esto muestra el placeholder.
-function _cortoSheetPosterErr(img){
-  img.onerror=null;
-  const ph=document.createElement('div');
-  ph.className='pel-sheet-poster-ph';
-  ph.textContent='🎬';
-  img.parentNode?.replaceChild(ph,img);
-}
 
