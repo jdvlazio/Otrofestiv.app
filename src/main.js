@@ -27,7 +27,7 @@ import './state/viewstate.js';
 import { storage } from './storage/storage.js';
 
 // ── Step 4: i18n.js (import — _I18N + t + _applyI18nDOM). _lang vive en state
-//   (bridge); su init y setLang se quedan en main.js. ──────────────────────────
+//   (bridge); la init eval-time de _lang se queda en main.js, setLang → pipeline.js (8d-3).
 import { _I18N, t, _applyI18nDOM } from './i18n/i18n.js';
 
 // ── Step 5: domain/ (funciones puras). Importan config (DEFAULT_DURATION_MIN,
@@ -101,7 +101,7 @@ import {
 
 // ── Step 7c: controller/pipeline.js — render dispatchers. ────────────────────
 import {
-  renderActiveView, switchMainNav, showDayView, showAgView, updateAgTab, _reRenderIntereses, _rerenderFilmList, _getProgramaPhase, _updateProgramaActiveFilter, initProgramaModeBar,
+  renderActiveView, switchMainNav, showDayView, showAgView, updateAgTab, _reRenderIntereses, _rerenderFilmList, _getProgramaPhase, _updateProgramaActiveFilter, initProgramaModeBar, setLang,
 } from './controller/pipeline.js';
 
 // ── Step 7d-1: controller/sheets-controller.js — sheets+rating+AV+toast+utils. ──
@@ -339,33 +339,9 @@ _lang = (()=>{
 
 // t(key, params) → src/i18n/i18n.js (Step 4). Importado.
 
-// Controller (p7a) — VARIANT aceptada: fade animation + delayed mutate dentro
-// del setTimeout. Pattern 5-pasos NO se aplica literal (mutate diferido tras
-// fade-out animation). Documentada como variant en spec/plan.
-function setLang(code){
-  // 1. READ + 2. GUARD
-  const {_lang, _activeFestId} = state.snapshot();
-  if(!_I18N[code]) return;
-  if(code === _lang) return;
-  // Fade out content containers (UI effect inmediato)
-  const _fadeEls=['programa-list','ag-view','grid'].map(id=>document.getElementById(id)).filter(Boolean);
-  _fadeEls.forEach(el=>el.classList.add('lang-fade'));
-  setTimeout(()=>{
-    // 3. MUTATE (diferido tras fade-out)
-    state.set('_lang', code);
-    // 4. PERSIST
-    storage.setLang(code);
-    // 5. RENDER + UI EFFECTS — full DOM refresh + componentes dinámicos
-    _applyI18nDOM();
-    if(activeView === 'day') { typeof showDayView === 'function' && showDayView(); }
-    else                     { typeof renderAgenda === 'function' && renderAgenda(); }
-    _renderSplashDropdown(_splashSelectedFestId||_DEFAULT_FEST_ID);
-    _renderFestivalSelector(_activeFestId);
-    requestAnimationFrame(()=>{
-      _fadeEls.forEach(el=>el.classList.remove('lang-fade'));
-    });
-  }, 200); // --tr-smooth = 200ms
-}
+// p8 Step 8d-3: setLang → controller/pipeline.js (orquestador mutate→render).
+// Importado de vuelta (arriba) para ACTION_REGISTRY. La init eval-time de _lang
+// (arriba) se queda en main.js (bootstrap).
 
 // ── Fin i18n ──────────────────────────────────────────────────────────────
 
@@ -648,7 +624,7 @@ FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202605250955';
+const BUILD_VERSION='202605251009';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';

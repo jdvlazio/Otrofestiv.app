@@ -4,15 +4,17 @@
 // (runCalc). Cero lets unbridged (todo viewstate ya bridgeado). Sin ciclos:
 // view no importa controller; calc es leaf.
 
-import { FESTIVAL_CONFIG } from '../config.js';
+import { FESTIVAL_CONFIG, _DEFAULT_FEST_ID } from '../config.js';
 import { ICONS } from '../view/components.js';
 import { _renderProgramaContent, renderProgramaChips } from '../view/programa.js';
 import { _fixStickyOffset, renderAgenda, renderFilmListHTML } from '../view/agenda.js';
 import { runCalc } from './calc.js';
+import { _renderSplashDropdown, _renderFestivalSelector } from './festival.js';
 import { dayFullyPassed, festivalEnded, simNow, simTodayStr } from '../domain/time.js';
 import { screeningPassed } from '../domain/film.js';
 import { state } from '../state/state.js';
-import { t } from '../i18n/i18n.js';
+import { storage } from '../storage/storage.js';
+import { t, _I18N, _applyI18nDOM } from '../i18n/i18n.js';
 
 export function renderActiveView(){
   cachedResult = null;                        // state cambió → cache de schedule stale
@@ -192,4 +194,32 @@ export function initProgramaModeBar(){
   });
   // tag dismissible
   _updateProgramaActiveFilter();
+}
+
+// p8 Step 8d-3: setLang reubicado desde main.js. Orquestador mutate→render del
+// cambio de idioma. Lee activeView/_splashSelectedFestId/_activeFestId vía bridge
+// (globalThis). main.js lo importa de vuelta para ACTION_REGISTRY (data-action).
+export function setLang(code){
+  // 1. READ + 2. GUARD
+  const {_lang, _activeFestId} = state.snapshot();
+  if(!_I18N[code]) return;
+  if(code === _lang) return;
+  // Fade out content containers (UI effect inmediato)
+  const _fadeEls=['programa-list','ag-view','grid'].map(id=>document.getElementById(id)).filter(Boolean);
+  _fadeEls.forEach(el=>el.classList.add('lang-fade'));
+  setTimeout(()=>{
+    // 3. MUTATE (diferido tras fade-out)
+    state.set('_lang', code);
+    // 4. PERSIST
+    storage.setLang(code);
+    // 5. RENDER + UI EFFECTS — full DOM refresh + componentes dinámicos
+    _applyI18nDOM();
+    if(activeView === 'day') { typeof showDayView === 'function' && showDayView(); }
+    else                     { typeof renderAgenda === 'function' && renderAgenda(); }
+    _renderSplashDropdown(_splashSelectedFestId||_DEFAULT_FEST_ID);
+    _renderFestivalSelector(_activeFestId);
+    requestAnimationFrame(()=>{
+      _fadeEls.forEach(el=>el.classList.remove('lang-fade'));
+    });
+  }, 200); // --tr-smooth = 200ms
 }
