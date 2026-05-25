@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `6c2a164 Merge pull request #41 from jdvlazio/refactor/file-split-8-step8d12`
+> Último commit: `b5808f7 Merge pull request #42 from jdvlazio/refactor/file-split-8-step8d3`
 
 ---
 
