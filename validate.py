@@ -968,6 +968,36 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar viewstate bridge: {_e}')
 
+# ── [validate-film-tests] ─────────────────────────────────────────────────────
+# Gate de cobertura: si domain/film.js exporta validateFilm (validación de datos
+# del JSON de festival), DEBE estar cubierta por ≥5 tests en tests/. Sin esto, no
+# mergear — la validación es crítica y debe tener red de seguridad.
+check = 'validate-film-tests'
+try:
+    import glob as _glob
+    _film_path = 'src/domain/film.js'
+    _film_src = open(_film_path, encoding='utf-8').read() if os.path.exists(_film_path) else ''
+    if 'export function validateFilm' not in _film_src:
+        ok(check, 'validateFilm no exportada — sin requisito de tests')
+    else:
+        _vf_test_src = ''
+        for _tf in _glob.glob('tests/**/*.js', recursive=True):
+            try:
+                _s = open(_tf, encoding='utf-8').read()
+            except Exception:
+                continue
+            if 'validateFilm' in _s:
+                _vf_test_src += '\n' + _s
+        _n_tests = _vf_test_src.count('test(')
+        if 'validateFilm' not in _vf_test_src:
+            fail(check, 'validateFilm está exportada pero NO tiene tests en tests/ — no mergear')
+        elif _n_tests < 5:
+            fail(check, f'validateFilm cubierta por solo {_n_tests} test() (mínimo 5 requerido) — no mergear')
+        else:
+            ok(check, f'validateFilm cubierta por {_n_tests} tests')
+except Exception as _e:
+    warn(check, f'no se pudo verificar tests de validateFilm: {_e}')
+
 # ── [view-purity] ─────────────────────────────────────────────────────────────
 # Verifica que las Views Tier 1 (Fase 6a) cumplan el contrato de función pura:
 #   - Reciben state como primer parámetro
