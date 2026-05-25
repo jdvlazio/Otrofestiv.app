@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `adc9697 chore: bundle v202605252247`
+> Último commit: `93e559a fix(ics): timezone UTC-Z + Tribeca offset + descarga web robusta (#60)`
 
 ---
 
