@@ -998,6 +998,32 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar tests de validateFilm: {_e}')
 
+# ── [no-underscore-actions] ───────────────────────────────────────────────────
+# Convención (Tier-1): el nombre público de toda acción es la KEY de data-action,
+# y NUNCA empieza con `_` (el prefijo `_` = interno, no entry-point de HTML). La
+# función detrás puede conservar `_` (es impl); el arrow del registry da el alias
+# público limpio. Este check bloquea regresiones: cero `data-action="_..."` en src/.
+check = 'no-underscore-actions'
+try:
+    import glob as _glob, re as _re2
+    _ua_hits = []
+    for _f in sorted(_glob.glob('src/**/*.js', recursive=True)):
+        try:
+            _lines = open(_f, encoding='utf-8').read().split('\n')
+        except Exception:
+            continue
+        for _i, _ln in enumerate(_lines, 1):
+            if _re2.search(r'data-action="_', _ln):
+                _ua_hits.append(f'{_f}:{_i}')
+    if _ua_hits:
+        for _h in _ua_hits[:20]:
+            fail(check, f'data-action con prefijo `_` (entry point público no debe tener `_`): {_h}')
+        fail(check, 'Fix: quitar `_` de la key del data-action (la fn interna puede conservarlo).')
+    else:
+        ok(check, 'cero data-action="_..." en src/ — entry points públicos sin prefijo `_`')
+except Exception as _e:
+    warn(check, f'no se pudo verificar data-action: {_e}')
+
 # ── [view-purity] ─────────────────────────────────────────────────────────────
 # Verifica que las Views Tier 1 (Fase 6a) cumplan el contrato de función pura:
 #   - Reciben state como primer parámetro

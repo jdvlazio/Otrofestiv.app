@@ -76,7 +76,7 @@ export function renderNoticesBannerHTML(state){
         <div class="notice-banner-label">AVISO DEL FESTIVAL</div>
         <div class="notice-banner-text"><b class="txt-white60-semi">${safeTitle}</b> · <span>${label.toLowerCase()}</span>. ${msg}</div>
       </div>
-      <button class="notice-banner-close" data-action="_dismissNotice" data-title="${n.title.replace(/"/g,'&quot;')}">✕</button>
+      <button class="notice-banner-close" data-action="dismissNotice" data-title="${n.title.replace(/"/g,'&quot;')}">✕</button>
     </div>`;
   }).join('');
 }
@@ -145,7 +145,7 @@ export function renderProgramaListHTML(state){
           <div class="plist-meta" style="${notice&&notice.type==='cancelled'?'text-decoration:line-through':''}">${vc.short}${sala(f.venue)?' · '+sala(f.venue):''}${f.duration?' · '+durFmt(f.duration):''}</div>
           ${noticeNote||`<div class="plist-sec">${f.section||''}</div>`}
         </div>
-        <div class="plist-heart${inWL?'':' empty'}" data-title="${f.title.replace(/"/g,'&quot;')}" data-action="_toggleWLFromList" data-stop="1">${inWL?ICONS.heartFill:ICONS.heart}</div>
+        <div class="plist-heart${inWL?'':' empty'}" data-title="${f.title.replace(/"/g,'&quot;')}" data-action="toggleWLFromList" data-stop="1">${inWL?ICONS.heartFill:ICONS.heart}</div>
       </div>`;
     }).join('')}
   `).join('');
@@ -251,7 +251,7 @@ export function _renderExploreListaHTML(state){
         <div class="plist-meta">${days?`${daysHtml} · `:''}${durFmt(f.duration)}</div>
         <div class="plist-sec">${f.section||''}</div>
       </div>
-      <div class="plist-heart${inWL?'':' empty'}" data-title="${f.title.replace(/"/g,'&quot;')}" data-action="_toggleWLFromList" data-stop="1">${inWL?ICONS.heartFill:ICONS.heart}</div>
+      <div class="plist-heart${inWL?'':' empty'}" data-title="${f.title.replace(/"/g,'&quot;')}" data-action="toggleWLFromList" data-stop="1">${inWL?ICONS.heartFill:ICONS.heart}</div>
     </div>`;
     const _stk2=_programaStack(f);
     return`<div class="plist-item js-open-pel${allPast?' past-card':''}" data-title="${f.title}">
@@ -259,7 +259,7 @@ export function _renderExploreListaHTML(state){
       <div class="plist-info">
         ${(()=>{const n=NOTICES.find(nx=>nx.title===f.title&&nx.festival===((_activeFestId||_DEFAULT_FEST_ID)));const nb=n?`<span class="notice-badge">${n.type==='cancelled'?t('notice_cancelada'):t('notice_reprog_short')}</span>`:'';const nn=n&&n.type==='cancelled'?`<div class="notice-detail-amber">${t('plan_fecha_pendiente')}</div>`:n&&n.type==='rescheduled'&&n.newTime?`<div class="notice-detail-green">${n.newDay||''} · ${n.newTime}${n.newVenue?' · '+n.newVenue:''}</div>`:'';return`<div class="plist-title" style="${allPast?'opacity:.5':''}">${nb}${dt}</div><div class="plist-meta" style="${n&&n.type==='cancelled'?'text-decoration:line-through':''}${allPast?';opacity:.5':''}">${daysHtml?`${daysHtml} · `:''}${durFmt(f.duration)}${_metaBadges(f)?` · ${_metaBadges(f)}`:''}</div>${nn||`<div class="plist-sec">${f.section||''}</div>`}`;})()}
       </div>
-      <div class="plist-heart${inWL?'':' empty'}" data-title="${f.title.replace(/"/g,'&quot;')}" data-action="_toggleWLFromList" data-stop="1">${inWL?ICONS.heartFill:ICONS.heart}</div>
+      <div class="plist-heart${inWL?'':' empty'}" data-title="${f.title.replace(/"/g,'&quot;')}" data-action="toggleWLFromList" data-stop="1">${inWL?ICONS.heartFill:ICONS.heart}</div>
     </div>`;
   }).join('');
   }catch(e){return '';}

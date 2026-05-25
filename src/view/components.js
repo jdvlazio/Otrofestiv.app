@@ -332,7 +332,7 @@ export function _renderSplashDropdownHTML(state, activeFestId){
   const mkPastItem=([id,cfg])=>{
     const meta=`${cfg.city} · ${_lang==='en'&&cfg.dates_en?cfg.dates_en:cfg.dates} ${cfg.year||''}`.trim();
     const shortLabel=(cfg.shortName||cfg.name.split(' ')[0])+' · '+cfg.year;
-    return`<button class="splash-drop-item past" data-fest="${id}" role="option" aria-selected="false" data-action="_togglePastFest">
+    return`<button class="splash-drop-item past" data-fest="${id}" role="option" aria-selected="false" data-action="togglePastFest">
       <div><div class="splash-drop-item-name">${shortLabel}</div><div class="splash-drop-item-meta">${meta}</div></div>
       <span class="past-item-chev">${chevSvg}</span>
     </button>`;
@@ -375,7 +375,7 @@ export function _renderFestivalSelectorHTML(state, activeFestId){
         <div class="fs-fest-name">${shortLabel}</div>
         <div class="fs-fest-meta">${meta}</div>
       </div>
-      <span class="fs-past-chev" data-action="_togglePastFestRow" data-fest="${id}" style="padding:var(--sp-2);margin:-var(--sp-2);-webkit-tap-highlight-color:transparent">${chevSvg}</span>
+      <span class="fs-past-chev" data-action="togglePastFestRow" data-fest="${id}" style="padding:var(--sp-2);margin:-var(--sp-2);-webkit-tap-highlight-color:transparent">${chevSvg}</span>
     </div>`;
   }
   let html='';

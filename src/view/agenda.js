@@ -666,7 +666,7 @@ export function renderContextualHeader(state){
       ?`<span id="eve-films-extra" style="display:none">${allWatched.slice(MAX_VISIBLE).map(mkChip).join('')}</span>`
       :'';
     const verTodas=allWatched.length>MAX_VISIBLE
-      ?`<div class="sim-hdr-pad"><button class="link-gray-xs" data-action="_toggleEveningFilms">${t('misc_ver_todo')} (${allWatched.length})</button></div>`
+      ?`<div class="sim-hdr-pad"><button class="link-gray-xs" data-action="toggleEveningFilms">${t('misc_ver_todo')} (${allWatched.length})</button></div>`
       :'';
     const dayName=DAY_A[todayScreenings[0]?.day]||'Hoy';
     return`<div class="ctx-header">
