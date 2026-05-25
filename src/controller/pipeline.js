@@ -153,10 +153,10 @@ export function _updateProgramaActiveFilter(){
   let pills='';
   if(hasSec){
     const lbl=_seccionPillLabel(activeSec);
-    pills+='<div class="paf-pill" data-action="_pafClearSec">'+lbl+'<span class="paf-pill-x">×</span></div>';
+    pills+='<div class="paf-pill" data-action="pafClearSec">'+lbl+'<span class="paf-pill-x">×</span></div>';
   }
   if(hasVenue){
-    pills+='<div class="paf-pill" data-action="_pafClearVenue">'+ICONS.pin+' '+activeVenue+'<span class="paf-pill-x">×</span></div>';
+    pills+='<div class="paf-pill" data-action="pafClearVenue">'+ICONS.pin+' '+activeVenue+'<span class="paf-pill-x">×</span></div>';
   }
   af.innerHTML=pills;
   af.classList.add('visible');

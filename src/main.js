@@ -194,7 +194,7 @@ const ACTION_REGISTRY = {
   savePVRating:       ()      => savePVRating(),
   setLang:            (el)    => setLang(el.dataset.code),
   forceInclude:       (el)    => forceInclude(el.dataset.title),
-  _dismissNotice:     (el)    => _dismissNotice(el.dataset.title),
+  dismissNotice:      (el)    => _dismissNotice(el.dataset.title),
   swapPriority:       (el)    => swapPriority(el.dataset.rmtitle, el.dataset.addtitle),
 
   // ── B: Sheets open/close (26) ──
@@ -216,12 +216,12 @@ const ACTION_REGISTRY = {
   toggleSplashDropdown:  ()      => toggleSplashDropdown(),
   searchOpen:            ()      => searchOpen(),
   searchClose:           ()      => searchClose(),
-  _togglePastFest:       (el)    => _togglePastFest(el),
-  _togglePastFestRow:    (el)    => _togglePastFestRow(el.closest('.fs-festival-row'), el.dataset.fest),
+  togglePastFest:        (el)    => _togglePastFest(el),
+  togglePastFestRow:     (el)    => _togglePastFestRow(el.closest('.fs-festival-row'), el.dataset.fest),
   openPostViewRating:    (el)    => openPostViewRating(el.dataset.title, el.dataset.day, el.dataset.time, el.dataset.venue, el.dataset.duration),
   selectSplashFest:      (el)    => selectSplashFest(el.dataset.name, el.dataset.meta, el.dataset.fest),
   selectFromDetail:      (el)    => selectFromDetail(el),
-  _openCombinedFilmSheet:(el)    => _openCombinedFilmSheet(JSON.parse(el.dataset.film)),
+  openCombinedFilmSheet: (el)    => _openCombinedFilmSheet(JSON.parse(el.dataset.film)),
   searchOpenFilm:        (el)    => _searchOpenFilm(el.dataset.title),
   searchOpenCorto:       (el)    => _searchOpenCorto(el.dataset.title, el.dataset.country, el.dataset.dur, el.dataset.section, el.dataset.flags),
 
@@ -242,10 +242,10 @@ const ACTION_REGISTRY = {
   // ── D: Cartelera/Programa filters + DOM utils (13) ──
   filterBySection:     (el)    => filterBySection(el.dataset.section),
   filterByVenue:       (el)    => filterByVenue(el.dataset.venue),
-  _pafClearSec:        ()      => _pafClearSec(),
-  _pafClearVenue:      ()      => _pafClearVenue(),
-  _toggleEveningFilms: (el)    => _toggleEveningFilms(el),
-  _toggleWLFromList:   (el)    => _toggleWLFromList(el.dataset.title, el),
+  pafClearSec:         ()      => _pafClearSec(),
+  pafClearVenue:       ()      => _pafClearVenue(),
+  toggleEveningFilms:  (el)    => _toggleEveningFilms(el),
+  toggleWLFromList:    (el)    => _toggleWLFromList(el.dataset.title, el),
   addSuggestion:       (el)    => addSuggestion(el.dataset.title, el.dataset.day, el.dataset.time),
   clearProgramaChip:   ()      => clearProgramaChip(),
   runCalc:             ()      => runCalc(),
@@ -629,7 +629,7 @@ FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202605251307';
+const BUILD_VERSION='202605251445';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';

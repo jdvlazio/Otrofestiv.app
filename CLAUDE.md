@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `6d17f9b Merge pull request #51 from jdvlazio/fix/plist-card-hierarchy-parity`
+> Último commit: `ae75711 Merge pull request #52 from jdvlazio/feat/domain-film-validation`
 
 ---
 
