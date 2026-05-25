@@ -59,6 +59,35 @@ test('T06 — scroll se mantiene después de toggle corazón', async ({ page }) 
   }
 });
 
+// T45 — Scroll-preservation: re-render por estado preserva scroll; cambio de día resetea
+test('T45 — scroll: toggle preserva posición, cambio de día resetea al tope', async ({ page }) => {
+  await enterFestival(page, 'leviza2026', LEVIZA_SIMTIME);
+  await page.locator('.dtab[data-day="VIE 15"]').click();
+  await page.waitForSelector('.plist-item', { timeout: 8000 });
+
+  // (A) Toggle de watchlist (re-render por estado) NO debe mover el scroll
+  await page.evaluate(() => window.scrollTo(0, 250));
+  await page.waitForTimeout(200);
+  const before = await page.evaluate(() => window.scrollY);
+  await page.locator('.plist-item').nth(2).locator('.plist-heart').click();
+  await page.waitForFunction(() => watchlist.size > 0, { timeout: 5000 });
+  await page.waitForTimeout(300);
+  const afterToggle = await page.evaluate(() => window.scrollY);
+  expect(Math.abs(afterToggle - before)).toBeLessThan(20); // scroll preservado
+
+  // (B) Cambiar de día (navegación) SÍ resetea al tope
+  const otherDay = await page.evaluate(() =>
+    [...document.querySelectorAll('.dtab[data-day]')]
+      .map(t => t.dataset.day)
+      .find(d => d !== 'all' && d !== 'VIE 15') || null
+  );
+  expect(otherDay).toBeTruthy();
+  await page.locator(`.dtab[data-day="${otherDay}"]`).click();
+  await page.waitForTimeout(400);
+  const afterDayChange = await page.evaluate(() => window.scrollY);
+  expect(afterDayChange).toBe(0); // scroll reseteado en cambio de día
+});
+
 // T10 — Poster editorial sin truncar en carga inicial
 test('T10 — poster editorial: sección completa sin truncar', async ({ page }) => {
   await enterFestival(page, 'leviza2026', LEVIZA_SIMTIME);

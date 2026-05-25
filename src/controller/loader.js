@@ -226,7 +226,7 @@ export async function loadFestival(id){
         cartelaMode='horario';
         setProgramaView('grid'); // TODO → siempre Grid
         document.querySelectorAll('.dtab').forEach(t=>t.classList.toggle('on',t.dataset.day==='all'));
-        _renderProgramaContent();
+        _renderProgramaContent(true); // cambio de día (TODO) → scroll al tope
         _updateProgramaActiveFilter();
         if(activeMNav!=='mnav-cartelera') switchMainNav('mnav-cartelera');
       };
@@ -250,7 +250,7 @@ export async function loadFestival(id){
         activeDay=day.k;activeVenue='all';selectedIdx=null;
         setProgramaView('list'); // día específico → siempre Lista (horarios/planificación)
         document.querySelectorAll('.dtab').forEach(t=>t.classList.toggle('on',t.dataset.day===day.k));
-        _renderProgramaContent();
+        _renderProgramaContent(true); // cambio de día específico → scroll al tope
         _updateProgramaActiveFilter();
         if(activeMNav!=='mnav-cartelera') switchMainNav('mnav-cartelera');
       };

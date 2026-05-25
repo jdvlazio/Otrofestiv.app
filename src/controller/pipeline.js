@@ -20,7 +20,7 @@ export function renderActiveView(){
   cachedResult = null;                        // state cambió → cache de schedule stale
   if(activeView==='day' && activeMNav==='mnav-cartelera'){
     const pelOpen = document.getElementById('pel-sheet')?.classList.contains('open');
-    if(!pelOpen){ const sy=window.scrollY; _renderProgramaContent(); window.scrollTo(0,sy); }
+    if(!pelOpen) _renderProgramaContent(); // re-render por estado → resetScroll=false preserva scroll
     return;
   }
   if(activeMNav==='mnav-planner'){ runCalc(); return; }  // recompute scenarios + render
@@ -57,7 +57,7 @@ export function showDayView(){
   document.getElementById('agtab').classList.remove('on');
   // Inicializar el sistema de modos
   initProgramaModeBar();
-  _renderProgramaContent();
+  _renderProgramaContent(true); // entrar a vista día → scroll al tope
   requestAnimationFrame(_fixStickyOffset); // actualiza altura del chrome-blur
 }
 

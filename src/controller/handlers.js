@@ -588,7 +588,7 @@ export function filterByDay(day){
     if(activeBtn){const dt=document.getElementById('dtabs');if(dt)dt.scrollLeft=activeBtn.offsetLeft-dt.offsetLeft;}
   });
   switchMainNav('mnav-cartelera');
-  _renderProgramaContent();
+  _renderProgramaContent(true); // cambio de día → scroll al tope
   _updateProgramaActiveFilter();
 }
 
@@ -650,7 +650,7 @@ export function setProgramaMode(mode){
   // filter updates handled by lugarOpen()
   _updateProgramaActiveFilter();
   initProgramaModeBar();
-  _renderProgramaContent();
+  _renderProgramaContent(true); // cambio de modo (hoy/mañana) → scroll al tope
 }
 
 export function toggleProgramaView(){
@@ -666,7 +666,7 @@ export function setProgramaView(view){
   const icoL=document.getElementById('view-toggle-ico-list');
   if(icoG) icoG.style.display=view==='grid'?'':'none';
   if(icoL) icoL.style.display=view==='list'?'':'none';
-  _renderProgramaContent();
+  _renderProgramaContent(true); // toggle grid/list → scroll al tope
 }
 
 export function setProgramaChip(chipId){
@@ -683,7 +683,7 @@ export function setProgramaChip(chipId){
   _programaChipMatchFn=null;
   activeSec='all';
   _updateProgramaActiveFilter();
-  _renderProgramaContent();
+  _renderProgramaContent(true); // filtro chip → scroll al tope
 }
 
 export function clearProgramaChip(){
@@ -695,12 +695,12 @@ export function clearProgramaChip(){
 
 export function _pafClearSec(){
   activeSec='all';seccionClose();_updateProgramaActiveFilter();
-  if(activeMNav==='mnav-cartelera')_renderProgramaContent();else render();
+  if(activeMNav==='mnav-cartelera')_renderProgramaContent(true);else render(); // limpiar filtro sección → scroll al tope
 }
 
 export function _pafClearVenue(){
   activeVenue='all';lugarClose();_updateProgramaActiveFilter();
-  if(activeMNav==='mnav-cartelera')_renderProgramaContent();else render();
+  if(activeMNav==='mnav-cartelera')_renderProgramaContent(true);else render(); // limpiar filtro lugar → scroll al tope
 }
 
 export function _toggleWLFromList(title,btn){

@@ -74,7 +74,7 @@ export function seccionOpen(){
     activeSec=(s==='all'||s===activeSec)?'all':s;
     _programaChipMatchFn=null; programaChip='all';
     seccionClose(); _updateProgramaActiveFilter();
-    if(activeMNav==='mnav-cartelera') _renderProgramaContent(); else render();
+    if(activeMNav==='mnav-cartelera') _renderProgramaContent(true); else render(); // selección sección → scroll al tope
   });
   document.body.appendChild(drop);
   btn.classList.add('active');
@@ -319,7 +319,7 @@ export function lugarOpen(){
     activeVenue = (v==='all'||v===activeVenue)?'all':v;
     lugarClose();
     _updateProgramaActiveFilter();
-    if(activeMNav==='mnav-cartelera') _renderProgramaContent(); else render();
+    if(activeMNav==='mnav-cartelera') _renderProgramaContent(true); else render(); // selección lugar → scroll al tope
   });
 
   document.body.appendChild(drop);
