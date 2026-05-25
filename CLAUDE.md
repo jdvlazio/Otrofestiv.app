@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `c8158c9 Merge pull request #46 from jdvlazio/feat/intereses-card-hierarchy`
+> Último commit: `614187c Merge pull request #47 from jdvlazio/fix/buildresulthtml-relocate-planner`
 
 ---
 
