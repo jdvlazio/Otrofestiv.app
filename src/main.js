@@ -34,7 +34,7 @@ import { _I18N, t, _applyI18nDOM } from './i18n/i18n.js';
 //   FESTIVAL_BUFFER, FESTIVAL_CONFIG) y leen festival-state vía bridge. El worker
 //   las consume vía eval(name).toString(); sus copias worker-local se quedan. ──
 import { toMin, parseDur, minToStr, _festDate, simNow, simTodayStr, dayFullyPassed, festivalEnded } from './domain/time.js';
-import { _djb2, _titleSeed, _mulberry32, shuffle, scoreFilm, effectiveDuration, screeningPassed, _classifyTodayScreenings, _endedStats } from './domain/film.js';
+import { _djb2, _titleSeed, _mulberry32, shuffle, scoreFilm, effectiveDuration, screeningPassed, _classifyTodayScreenings, _endedStats, normTitle } from './domain/film.js';
 import { screensConflict, isScreeningBlocked, sortScreensByStrategy, computeScenarios } from './domain/schedule.js';
 import { _resolveVenue, _gapSuggestion, _getFestivalPhase, venueTravelMins, travelMins } from './domain/festival.js';
 
@@ -42,7 +42,7 @@ import { _resolveVenue, _gapSuggestion, _getFestivalPhase, venueTravelMins, trav
 //   (posters, builders HTML puros, helpers sección/rating/festival). ──────────
 import {
   ICONS, CHECK_SVG, DAY_ABBR, DAY_NUM,
-  makeProgramPoster, makeEventPoster, makeSorpresaPoster, _buildPosterV16,
+  makeProgramPoster, makeEventPoster, makeSorpresaPoster,
   _secLabel, _sectionColor, renderRatingStarsHTML, starSVG,
   _renderSplashDropdownHTML, _renderFestivalSelectorHTML, _classifyFestival,
   _sortFestivals, renderAvBlocksHTML, isFullDayBlocked, renderFlowProgress,
@@ -405,94 +405,20 @@ FESTIVAL_TRANSPORT='transit';
 // module-local aquí que esos módulos leían como global fantasma (undefined en
 // globalThis → ReferenceError, enmascarado sólo por el .catch del auto-resolve).
 
-/* ── POSTER GENERATIVO — identidad Otrofestiv para programas ──────────
-   REGLA CANÓNICA — nunca romper sin justificación explícita:
-
+/* ── POSTER GENERATIVO — identidad Otrofestiv (regla canónica) ────────
    PRIORIDAD DE POSTER (en todo contexto — grilla, card, Mi Plan):
      1. Poster real (CUSTOM_POSTERS > POSTERS/TMDB)
      2. Poster generativo (solo si no hay real)
      3. Placeholder vacío (surf-2) — nunca negro
-
-   TIPOS DE POSTER GENERATIVO — mismo _buildPosterSVG, misma plantilla:
-     · Competencia cortos → header teal  · l1:'COMPETENCIA' · l2:'CORTOMETRAJES'
-     · Programa cortos   → header teal  · l1:'PROGRAMA'    · l2:'CORTOMETRAJES'
-     · Evento/Industry   → header ámbar · l1:'INDUSTRY'    · l2:'DAYS'
-
    REGLA DE DETECCIÓN:
      f.type === 'event'  → makeEventPoster()
      f.is_cortos === true → getPosterSrc(title,true) || makeProgramPoster(title,dur,section)
      resto               → getPosterSrc(title,false) || null
-
    ONERROR: siempre this.remove() — nunca this.style.opacity=0
-   TÍTULO: limpiar prefijos redundantes en makeProgramPoster()
+   p8 Step 8d-2: el builder generativo vive en view/components.js
+   (_buildPosterV16 + make*Poster). El antiguo _buildPosterSVG de main.js
+   era dead code (cero callers) → eliminado.
 ────────────────────────────────────────────────────────────────────── */
-function _buildPosterSVG(o){
-  // ── Poster generativo 120×180px — guía de diseño ────────────────────
-  // Canvas: 120×180 · fondo #1E1B17
-  // Header: h=38px · 1 línea y=22 centrado · 2 líneas y=15/y=27
-  // Header font: 8px bold · letter-spacing 0.8 · color: ht token
-  // Separador: y=38 h=1px · color: sep token
-  // Inner box: x=10 y=46 w=100 h=124 rx=3 · padding lateral 10px
-  // Título: adaptativo 10px(≤3L LD13) 9px(≤5L LD12) 8px(≤9L LD11)
-  //   split guiones: "Investigación-Creación" → "Investigación-"+"Creación"
-  //   max chars/línea: 10px→13 · 9px→15 · 8px→17
-  // Duración: y=158 fijo · 8px · color: accent token
-  // Footer: y=164 h=16 fondo #161310 · festival name y=175 6px color #5A4E40
-  const VW=120,VH=180,HDR_H=38,BX=10,BY=46,BW=VW-20,BH=VH-56,FY=VH-16,DUR_Y=158;
-
-  // 1. Split hyphenated compounds: "Investigación-Creación" → ["Investigación-","Creación"]
-  const rawWords=(o.title||'').split(/\s+/);
-  const words=[];
-  rawWords.forEach(w=>{
-    const parts=w.split(/-(?=\S)/);
-    parts.forEach((p,i)=>words.push(i<parts.length-1?p+'-':p));
-  });
-  // 2. Adaptive font — try smallest MAX first, step up if lines exceed budget
-  const fontConfigs=[{MAX:13,fs:10,ld:13,maxLines:3},{MAX:15,fs:9,ld:12,maxLines:5},{MAX:17,fs:8,ld:11,maxLines:9}];
-  let ls=[],FS=10,LD=13;
-  for(const cfg of fontConfigs){
-    const raw=[];let c='';
-    for(const w of words){
-      if(c&&(c+' '+w).length>cfg.MAX){raw.push(c);c=w;}
-      else c=c?c+' '+w:w;
-    }
-    if(c)raw.push(c);
-    ls=[];
-    raw.forEach(l=>{
-      if(l.length>cfg.MAX){for(let i=0;i<l.length;i+=cfg.MAX)ls.push(l.slice(i,i+cfg.MAX));}
-      else ls.push(l);
-    });
-    FS=cfg.fs;LD=cfg.ld;
-    if(ls.length<=cfg.maxLines||cfg.fs===8)break;
-  }
-
-  // 3. Centre title block in fixed zone
-  const TITLE_ZONE_TOP=54,TITLE_ZONE_BOT=o.duration?148:158;
-  const tzc=Math.round((TITLE_ZONE_TOP+TITLE_ZONE_BOT)/2);
-  const sY=tzc-Math.round(ls.length*LD/2)+LD-4;
-  const tl=ls.map((l,i)=>`<text x="${VW/2}" y="${sY+i*LD}" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="${FS}" font-weight="700" fill="#F0EBE0">${l}</text>`).join('');
-  const dT=o.duration?`<text x="${VW/2}" y="${DUR_Y}" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="8" font-weight="500" fill="${o.accent}">${o.duration}</text>`:'';
-
-  // 4. Header: centre l1 vertically when l2 is absent
-  const hasL2=o.l2&&o.l2.trim();
-  const l1y=hasL2?15:22;
-  const l2el=hasL2?`<text x="${VW/2}" y="27" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="8" font-weight="700" fill="${o.ht}" letter-spacing="0.8">${o.l2}</text>`:'';
-
-  const svg=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${VW} ${VH}">
-    <rect width="${VW}" height="${VH}" fill="#1E1B17"/>
-    <rect x="0" y="0" width="${VW}" height="${HDR_H}" fill="${o.hc}"/>
-    <rect x="0" y="${HDR_H}" width="${VW}" height="1" fill="${o.sep}"/>
-    <text x="${VW/2}" y="${l1y}" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="8" font-weight="700" fill="${o.ht}" letter-spacing="0.8">${o.l1}</text>
-    ${l2el}
-    <rect x="${BX}" y="${BY}" width="${BW}" height="${BH}" rx="3" fill="${o.bf}" stroke="${o.bs}" stroke-width="1"/>
-    ${tl}
-    ${dT}
-    <rect x="0" y="${FY}" width="${VW}" height="16" fill="#161310"/>
-    <text x="${VW/2}" y="${VH-5}" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="6" font-weight="500" fill="#5A4E40" letter-spacing="1">${o.ft}</text>
-  </svg>`;
-
-  return `data:image/svg+xml,${encodeURIComponent(svg)}`;
-}
 
 // makeProgramPoster → src/view/components.js (Step 6a). Importado.
 /* ══════════════════════════════════════════════════════
@@ -572,7 +498,6 @@ function _buildPosterSVG(o){
 // Elimina el prefijo emoji de una sección (ej. "🎬 Competencia" → "Competencia")
 // NO elimina palabras — "U.S. Narrative Competition" se mantiene intacto
 // _secLabel → src/view/components.js (Step 6a). Importado.
-// _buildPosterV16 → src/view/components.js (Step 6a). Importado.
 // makeEventPoster → src/view/components.js (Step 6a). Importado.
 
 // NOTICES, FESTIVAL_CONFIG → src/config.js (Step 1). Importados al top del
@@ -701,18 +626,8 @@ FESTIVAL_END=new Date('2026-04-20T02:00:00');
 
 // Normalize text for accent-insensitive search
 
-// ── normTitle ─────────────────────────────────────────────────────────────────
-// Normaliza comillas tipográficas → ASCII en títulos de festival.
-// U+2019 ' U+2018 ' U+201C " U+201D " → ' ' " "
-// Punto único de verdad: se aplica en loadFestival sobre FILMS.
-// Todo lookup derivado (watchlist, prioritized, openPelSheet) hereda
-// el título normalizado sin cambios adicionales.
-function normTitle(t){
-  if(!t) return t;
-  return t
-    .replace(/[‘’ʼʹ]/g,"'")  // comillas simples tipográficas → '
-    .replace(/[“”«»]/g,'"');  // comillas dobles tipográficas → "
-}
+// p8 Step 8d-1: normTitle → domain/film.js (puro). Importado + re-expuesto global
+// (Object.assign) para los lectores bare (controller/{persistence,handlers,overlays}).
 
 // ═══════════════════════════════════════════════════════════════
 // 5 · ESTADO GLOBAL
@@ -733,7 +648,7 @@ FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202605250928';
+const BUILD_VERSION='202605250955';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';

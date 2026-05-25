@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `bccb9be Merge pull request #39 from jdvlazio/fix/tmdb-phantom-global-and-retries`
+> Último commit: `eee90d5 Merge pull request #40 from jdvlazio/refactor/file-split-8-step8b`
 
 ---
 

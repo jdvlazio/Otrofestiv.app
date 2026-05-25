@@ -13,6 +13,17 @@
 
 import { DEFAULT_DURATION_MIN } from "../config.js";
 import { parseDur, _festDate, simNow, festivalEnded, toMin } from "./time.js";
+
+// p8 Step 8d-1: normTitle — normaliza comillas tipográficas en títulos (punto
+// único). Puro. Reubicado desde main.js; main.js lo re-importa + re-expone global
+// (leído bare por controller/{persistence,handlers,overlays}.js vía globalThis).
+export function normTitle(t){
+  if(!t) return t;
+  return t
+    .replace(/[‘’ʼʹ]/g,"'")  // comillas simples tipográficas → '
+    .replace(/[“”«»]/g,'"');  // comillas dobles tipográficas → "
+}
+
 export function _djb2(str){
   let h=5381;
   for(let i=0;i<str.length;i++) h=(Math.imul(31,h)+str.charCodeAt(i))|0;
