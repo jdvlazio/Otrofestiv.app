@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `7bbd135 Merge pull request #43 from jdvlazio/refactor/file-split-8-step8d4`
+> Último commit: `c4c2ec3 Merge pull request #44 from jdvlazio/fix/ios-splash-white-glitch-and-fest-flash`
 
 ---
 
