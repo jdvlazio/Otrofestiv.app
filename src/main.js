@@ -754,7 +754,7 @@ FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202605242014';
+const BUILD_VERSION='202605242028';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';
@@ -1874,7 +1874,6 @@ if(window.Capacitor?.Plugins?.CapacitorUpdater){
     }
   })();
 }
-_sbInit();
 (function(){
   // Detecta el festival en curso por fecha. Prioridad:
   // 1. Festival que está sucediendo hoy · 2. El próximo más cercano · 3. El más reciente
@@ -2052,6 +2051,12 @@ document.addEventListener('click', function(e){
   });
 })();
 // ── TEST BRIDGE END (p8 Step 0) ──────────────────────────────────────────────
+
+// p8 Step 7e: _sbInit() DESPUÉS del TEST BRIDGE. _sbInit vive en controller/auth.js
+// y escribe _sb/_sbUser como globales bridgeados (bare assignment en módulo strict).
+// El defineProperty(globalThis,'_sb') del bridge debe existir antes, o el assignment
+// lanza ReferenceError (silenciado por el try/catch interno) y _sb queda null.
+_sbInit();
 
 /* ── Re-render automático cada 60s ───────────────────────────
    Actualiza estados temporales (AHORA, Ya pasó, días pasados)
