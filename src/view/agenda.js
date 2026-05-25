@@ -13,7 +13,7 @@ import {
   ICONS, _secLabel, _sectionColor, buildResultHTML, makeEventPoster, parseProgramTitle, renderAvBlocksHTML, renderFlowProgress,
 } from './components.js';
 import {
-  DAYS, DAY_SHORT_EN, _isEditorialPoster, _langDates, _lblLocalized, _mkCortoItemHtml, _posterThumb, dayChip, dayLabel, durFmt, emptyState, emptyStateHero, flagFmt, getFilmPoster, isToday, mplanBlockType, mplanEndStr, sala, starsText, travelWarn, vcfg,
+  DAYS, DAY_SHORT_EN, _dayChips, _isEditorialPoster, _langDates, _lblLocalized, _mkCortoItemHtml, _posterThumb, dayChip, dayLabel, durFmt, emptyState, emptyStateHero, flagFmt, getFilmPoster, isToday, mplanBlockType, mplanEndStr, sala, starsText, travelWarn, vcfg,
 } from './helpers.js';
 import {
   _festDate, festivalEnded, minToStr, parseDur, simNow, simTodayStr, toMin,
@@ -754,18 +754,17 @@ export function renderFilmListHTML(state){
     const f=FILMS.find(fi=>fi.title===title);
     const{displayTitle,progSuffix}=parseProgramTitle(title);
     const isPrio=prioritized.has(title);
-    const isWatched=watched.has(title);
     const next=_nextScreening(title);
     const conflict=_hasConflict(title);
 
     const posterHtml=_posterThumb(f,'int-item-poster');
     const secLabel=_secLabel(f?.section||'');
-    const nextHtml=next
-      ?`<div class="int-item-next">
-          <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          ${_relDayLabel(next)}
-        </div>`
-      :`<div class="int-item-gone">${t('empty_sin_funciones')}</div>`;
+    // p8: jerarquía aprobada (mismo orden que Programa lista) — Título / Días
+    // disponibles (ámbar) / Venue·Duración (gris) / Sección+flags (blanco 60%).
+    const future=FILMS.filter(fi=>fi.title===title&&!screeningPassed(fi)); // días disponibles = futuras
+    const daysHtml=_dayChips(future);                                       // ámbar "THU 4 · FRI 5"
+    const venueStr=next?vcfg(next.venue).short:'';                          // venue de la próxima función
+    const durStr=durFmt(f?.duration);                                       // solo f.duration
     const conflictHtml=conflict
       ?`<div class="int-item-conflict">
           <svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z"/></svg>
@@ -776,8 +775,9 @@ export function renderFilmListHTML(state){
       ${posterHtml}
       <div class="int-item-info">
         <div class="int-item-title">${displayTitle}${progSuffix?` <span class="txt-amber-xs">${progSuffix}</span>`:''}</div>
+        ${next?`<div class="int-item-days">${daysHtml}</div>`:`<div class="int-item-gone">${t('empty_sin_funciones')}</div>`}
+        <div class="int-item-meta">${venueStr}${venueStr&&durStr?' · ':''}${durStr}</div>
         <div class="int-item-sec">${flagFmt(f?.flags)||''}${flagFmt(f?.flags)?' ':''} ${secLabel}</div>
-        ${nextHtml}
         ${conflictHtml}
       </div>
       <div class="int-item-actions">
