@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `ae75711 Merge pull request #52 from jdvlazio/feat/domain-film-validation`
+> Último commit: `be625ea Merge pull request #53 from jdvlazio/refactor/tier1-action-keys-no-underscore`
 
 ---
 
