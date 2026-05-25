@@ -18,6 +18,9 @@ import { state } from './state/state.js';
 // p8 Step 8a: STATE BRIDGE reubicado a state/state-bridge.js (side-effect import).
 // Instala el bridge en la fase de import (antes del body de main.js).
 import './state/state-bridge.js';
+// p8 Step 8b: TEST BRIDGE viewstate (29 lets) → state/viewstate.js (side-effect).
+// Instala en import-phase → neutraliza el gotcha de eval-time writes de main.js.
+import './state/viewstate.js';
 
 // ── Step 3: storage.js (import — adapter de localStorage; usa el bridge para
 //   FESTIVAL_STORAGE_KEY). saveX/loadState orquestadoras se quedan en main.js. ──
@@ -380,8 +383,7 @@ if(window.Capacitor?.Plugins?.CapacitorUpdater){
 //     FILMS, POSTERS, CUSTOM_POSTERS
 // ═══════════════════════════════════════════════════════════════
 FILMS=[];
-let POSTERS={};
-let CUSTOM_POSTERS={};
+// p8 8b: POSTERS/CUSTOM_POSTERS → state/viewstate.js (bridge)
 
 // ── Timezone helper — festival-aware date construction ────────────────────
 // TZ_OFFSET se actualiza en loadFestival() desde cfg.timezoneOffset.
@@ -545,7 +547,7 @@ function _buildPosterSVG(o){
    Sin inferencias. Sin suposiciones.
    Replicable: extraer desde la lista oficial del festival en LB.
 ──────────────────────────────────────────────────────────────── */
-let LB_SLUGS={};
+// p8 8b: LB_SLUGS → state/viewstate.js (bridge)
 
 // Nuevo formato: lee lbSlug directamente del objeto film si existe
 
@@ -589,9 +591,9 @@ const _storedFestEnded=_storedFestCfg&&_storedFestCfg.festivalEndStr&&new Date(_
 if(_storedFestEnded) localStorage.removeItem('otrofestiv_festival');
 _activeFestId=(_storedFestId&&!_storedFestEnded)?_storedFestId:_DEFAULT_FEST_ID;
 
-// SUPABASE — _sb/_sbUser: backing del STATE BRIDGE (leídos/escritos por
+// SUPABASE — _sb/_sbUser: backing del bridge (leídos/escritos por
 // controller/{auth,persistence}.js vía globalThis). _SB_URL/_SB_KEY → auth.js.
-let _sb=null, _sbUser=null;
+// p8 8b: _sb/_sbUser → state/viewstate.js (bridge)
 
 // Init — llamado una vez al arrancar
 
@@ -731,7 +733,7 @@ FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202605250826';
+const BUILD_VERSION='202605250928';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';
@@ -769,8 +771,7 @@ const BUILD_VERSION='202605250826';
 savedAgenda=null;
 lastRemovedSlots=[]; // tracks up to 5 recently removed films
 // MAX_REMEMBERED_SLOTS → src/config.js (Step 1).
-let activeMiPlanDay=null;
-let _ctaRemovedVisible=false; // CTA B: post-eliminación
+// p8 8b: activeMiPlanDay/_ctaRemovedVisible → state/viewstate.js (bridge)
     // CTA B: timer de auto-dismiss
 filmDelays={};            // retrasos manuales: key=title|day|time, val=mins
 filmDelaysHistory={};     // p5.5: undo stack — key=title|day|time, val=[prev1, prev2, ...]
@@ -790,7 +791,7 @@ _simTime=null; // null = real time
 //   Colombia (UTC-5), rompiendo la línea "ahora" en agenda y header.
 // Main-thread only.
 // simTodayStr → src/domain/time.js (Step 5). Importado.
-let miPlanViewStart=0; // 0-4, step 1, shows 2 days
+// p8 8b: miPlanViewStart → state/viewstate.js (bridge)
 // ─────────────────────────────────────────────────────────────────────────────
 // ⚠️  FIX CRÍTICO — NO REMOVER (Apr 2026)
 // availability debe inicializarse aquí con los 6 días del festival.
@@ -879,7 +880,7 @@ availability={
 
    FUENTE: todo deriva de DAYS[] (definido en el bloque de render de tabs)
 ══════════════════════════════════════════════════════ */
-let DAY_KEYS =['Martes','Miércoles','Jueves','Viernes','Sábado','Domingo'];
+// p8 8b: DAY_KEYS → state/viewstate.js (bridge)
 
  // swapeado por loadFestival() — valores en inglés
 
@@ -1067,8 +1068,7 @@ const _isoToFlag = c  => c&&c.length===2 ? String.fromCodePoint(0x1F1E6+c.toUppe
 // _simFestEnd → src/view/feedback.js (Step 6b). Importado.
 // _SIM_TOTAL → src/view/feedback.js (Step 6b). Importado.
 // updateSimLabel → src/view/feedback.js (Step 6b). Importado.
-let _expandedFilm=''; // key: title+day+time — which film has alternatives open
-let _activeMiPlanFilm=''; // key: title+time — highlighted from calendar click
+// p8 8b: _expandedFilm/_activeMiPlanFilm → state/viewstate.js (bridge)
 
 // ═══════════════════════════════════════════════════════════════
 // 12 · RENDER — PLANEAR
@@ -1119,7 +1119,7 @@ let _activeMiPlanFilm=''; // key: title+time — highlighted from calendar click
 // Caller único: renderContextualHeader().
 // _getFestivalPhase → src/domain/festival.js (Step 5). Importado.
 
-let archiveOpen=false;
+// p8 8b: archiveOpen → state/viewstate.js (bridge)
 
 /* ── Display name — cadena de prioridad para imagen compartida ──
    1. Supabase user_metadata.display_name (cuenta / app nativa)
@@ -1133,7 +1133,7 @@ let archiveOpen=false;
 /* ── SHARE/EXPORT: imagen, ICS ──────────────────────────────────────── */
 
 // ── RESULT HTML ──
-let cachedResult=null;
+// p8 8b: cachedResult → state/viewstate.js (bridge)
 
 // ── forceInclude — crea variante custom con la película forzada ──────
 
@@ -1183,15 +1183,10 @@ let cachedResult=null;
 // Sin CSS nuevo — usa hscroll-strip existente y link-gray-xs.
 
 // ── CALENDAR VIEW ──
-let activeView='day',activeDay='Martes',activeVenue='all',activeSec='all',selectedIdx=null,activeMNav='mnav-cartelera';
-let cartelaMode='pelicula'; // 'horario' | 'pelicula' (interno)
-let programaSubMode='hoy'; // 'hoy' | 'manana' (explorar eliminado — activeDay==='all' lo reemplaza)
-let interesesViewMode='grid';   // 'grid' | 'list' para Intereses
-let miPlanViewMode='calendar';  // 'calendar' | 'list' para Mi Plan
-let programaViewMode='grid';    // 'grid' | 'list'
-let programaChip='all';         // chip activo en Explorar
-let _programaChipMatchFn=null;  // función de match activa para filtrar
-let _currentChips=[];           // chips dinámicos del festival activo
+// p8 8b: view-state (activeView/activeDay/activeVenue/activeSec/selectedIdx/
+// activeMNav/cartelaMode/programaSubMode/interesesViewMode/miPlanViewMode/
+// programaViewMode/programaChip/_programaChipMatchFn/_currentChips) →
+// state/viewstate.js (bridge). main.js los lee/escribe vía globalThis.
 
 // Definición de chips de categoría — agrupan las secciones reales de FICCI
 
@@ -1385,7 +1380,7 @@ document.addEventListener('click',function(e){
 // ── Stack poster para programas combinados ───────────────────────────────
 
 // ── Notices: banner de funciones canceladas/reprogramadas ────────────────
-let _dismissedNotices=new Set();
+// p8 8b: _dismissedNotices → state/viewstate.js (bridge)
 // getActiveNotices → src/view/programa.js (Step 6c). Importado.
 // Pure half (p6b)
 // renderNoticesBannerHTML → src/view/programa.js (Step 6c). Importado.
@@ -1470,7 +1465,7 @@ state.subscribeRender(
 
 // ─────────────────────────────────────────────────────────────────────────────
 
-let _splashSelectedFestId=_DEFAULT_FEST_ID;
+// p8 8b: _splashSelectedFestId → state/viewstate.js (bridge)
 
 // ═══════════════════════════════════════════════════════════════════
 // AUTO-RESOLVE POSTERS — lbSlug → TMDB search → poster correcto
@@ -1949,59 +1944,10 @@ document.addEventListener('click', function(e){
 // state). Aquí quedan solo los NO administrados por state: view-state, DAY_KEYS,
 // cachedResult, auth/splash.
 (() => {
-  const _lets = {
-    DAY_KEYS:       [() => DAY_KEYS,       v => { DAY_KEYS = v; }],
-    cachedResult:   [() => cachedResult,   v => { cachedResult = v; }],
-    // view-state (los tests/helpers escriben activeDay + programaViewMode vía
-    // page.evaluate; en classic eran global-lexical, ahora module-scoped).
-    activeDay:        [() => activeDay,        v => { activeDay = v; }],
-    activeView:       [() => activeView,       v => { activeView = v; }],
-    activeVenue:      [() => activeVenue,      v => { activeVenue = v; }],
-    activeSec:        [() => activeSec,        v => { activeSec = v; }],
-    // p8 Step 6h: selectedIdx (hermano viewstate) — leído por render (view/
-    // programa.js), escrito por filterByVenue/Day/Section + nav (handlers en main.js).
-    selectedIdx:      [() => selectedIdx,      v => { selectedIdx = v; }],
-    activeMNav:       [() => activeMNav,       v => { activeMNav = v; }],
-    programaSubMode:  [() => programaSubMode,  v => { programaSubMode = v; }],
-    programaViewMode: [() => programaViewMode, v => { programaViewMode = v; }],
-    cartelaMode:      [() => cartelaMode,      v => { cartelaMode = v; }],
-    interesesViewMode:[() => interesesViewMode,v => { interesesViewMode = v; }],
-    miPlanViewMode:   [() => miPlanViewMode,   v => { miPlanViewMode = v; }],
-    // auth/splash state que los tests leen/escriben (deleteAccount guard, splash sel)
-    _sbUser:              [() => _sbUser,              v => { _sbUser = v; }],
-    // p8 Step 7b: cliente Supabase — creado por _sbInit (main.js), leído/escrito
-    // por controller/persistence.js (_cloudSave/_cloudLoad/auth).
-    _sb:                  [() => _sb,                  v => { _sb = v; }],
-    // p8 Step 7d-1: LB_SLUGS — slugs Letterboxd, escrito por loadFestival (main.js,
-    // hasta W8), leído por lbUrl en controller/sheets-controller.js.
-    LB_SLUGS:             [() => LB_SLUGS,             v => { LB_SLUGS = v; }],
-    // p8 Step 7e: POSTERS/CUSTOM_POSTERS — escritos por loadFestival (main.js, W8),
-    // leídos/escritos por _autoResolveFestivalPosters en controller/festival.js.
-    POSTERS:              [() => POSTERS,              v => { POSTERS = v; }],
-    CUSTOM_POSTERS:       [() => CUSTOM_POSTERS,       v => { CUSTOM_POSTERS = v; }],
-    _splashSelectedFestId:[() => _splashSelectedFestId, v => { _splashSelectedFestId = v; }],
-    // p8 Step 6c (D-6C-1): view-state de programa, bridgeado para view/programa.js.
-    // Los lets viven en main.js (escritos por setProgramaChip/_dismissNotice).
-    programaChip:         [() => programaChip,         v => { programaChip = v; }],
-    _programaChipMatchFn: [() => _programaChipMatchFn,  v => { _programaChipMatchFn = v; }],
-    _dismissedNotices:    [() => _dismissedNotices,     v => { _dismissedNotices = v; }],
-    // p8 Step 6g (D-6G): _currentChips escrito por renderProgramaChips (view/
-    // programa.js) y leído por setProgramaChip (handler en main.js).
-    _currentChips:        [() => _currentChips,        v => { _currentChips = v; }],
-    // p8 Step 6f (D-6F-1): view-state de agenda/miplan, bridgeado para view/agenda.js.
-    // Los lets viven en main.js (escritos por handlers: setActivePlanFilm,
-    // selectFromDetail, _setExpandedFilm, toggleFilmAlternatives, selectMiPlanDay,
-    // miPlanNav, jumpToScenario, switchMainNav, toggleArchive, loadFestival).
-    _activeMiPlanFilm:    [() => _activeMiPlanFilm,    v => { _activeMiPlanFilm = v; }],
-    _expandedFilm:        [() => _expandedFilm,        v => { _expandedFilm = v; }],
-    activeMiPlanDay:      [() => activeMiPlanDay,      v => { activeMiPlanDay = v; }],
-    miPlanViewStart:      [() => miPlanViewStart,      v => { miPlanViewStart = v; }],
-    _ctaRemovedVisible:   [() => _ctaRemovedVisible,   v => { _ctaRemovedVisible = v; }],
-    archiveOpen:          [() => archiveOpen,          v => { archiveOpen = v; }],
-  };
-  for (const [k, [get, set]] of Object.entries(_lets)) {
-    Object.defineProperty(globalThis, k, { get, set, configurable: true });
-  }
+  // p8 Step 8b: el bloque `_lets` (29 viewstate/festival-data/auth) se reubicó a
+  // state/viewstate.js (side-effect import, instala en import-phase). Aquí queda
+  // solo la exposición de {state, FESTIVAL_CONFIG, ACTION_REGISTRY} + las fns
+  // (inline on* de producción + page.evaluate de tests) → 8c.
   for (const [k, val] of Object.entries({ state, FESTIVAL_CONFIG, ACTION_REGISTRY })) {
     Object.defineProperty(globalThis, k, { get: () => val, configurable: true });
   }
