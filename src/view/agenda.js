@@ -758,7 +758,6 @@ export function renderFilmListHTML(state){
     const conflict=_hasConflict(title);
 
     const posterHtml=_posterThumb(f,'int-item-poster');
-    const secLabel=_secLabel(f?.section||'');
     // p8: jerarquía aprobada (mismo orden que Programa lista) — Título / Días
     // disponibles (ámbar) / Venue·Duración (gris) / Sección+flags (blanco 60%).
     const future=FILMS.filter(fi=>fi.title===title&&!screeningPassed(fi)); // días disponibles = futuras
@@ -777,7 +776,7 @@ export function renderFilmListHTML(state){
         <div class="int-item-title">${displayTitle}${progSuffix?` <span class="txt-amber-xs">${progSuffix}</span>`:''}</div>
         ${next?`<div class="int-item-days">${daysHtml}</div>`:`<div class="int-item-gone">${t('empty_sin_funciones')}</div>`}
         <div class="int-item-meta">${venueStr}${venueStr&&durStr?' · ':''}${durStr}</div>
-        <div class="int-item-sec">${flagFmt(f?.flags)||''}${flagFmt(f?.flags)?' ':''} ${secLabel}</div>
+        <div class="int-item-sec">${f?.section||''}</div>
         ${conflictHtml}
       </div>
       <div class="int-item-actions">
@@ -792,7 +791,6 @@ export function renderFilmListHTML(state){
     const{displayTitle,progSuffix}=parseProgramTitle(title);
 
     const posterHtml=_posterThumb(f,'int-item-poster');
-    const secLabel=_secLabel(f?.section||'');
     const rating=filmRatings[title]||0;
     const stars=rating>0
       ?'★'.repeat(Math.floor(rating))+(rating%1?'½':'')
@@ -804,7 +802,7 @@ export function renderFilmListHTML(state){
       ${posterHtml}
       <div class="int-item-info">
         <div class="int-item-title">${displayTitle}${progSuffix?` <span class="txt-amber-xs">${progSuffix}</span>`:''}</div>
-        <div class="int-item-sec">${flagFmt(f?.flags)||''}${flagFmt(f?.flags)?' ':''} ${secLabel}</div>
+        <div class="int-item-sec">${f?.section||''}</div>
         ${ratingHtml}
       </div>
       <div class="int-item-actions">
