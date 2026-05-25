@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `93e559a fix(ics): timezone UTC-Z + Tribeca offset + descarga web robusta (#60)`
+> Último commit: `64a240e i18n(ics): strings para B1 (alta a Calendario iOS) (#61)`
 
 ---
 
