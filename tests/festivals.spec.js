@@ -6,7 +6,10 @@ const { LEVIZA_SIMTIME, enterFestival } = require('./helpers');
 // T08 — Festival selector: Leviza aparece antes que Tribeca
 test('T08 — festival selector: Leviza aparece antes que Tribeca', async ({ page }) => {
   await page.goto('/');
-  await page.waitForSelector('#splash-sel-btn', { timeout: 15000 });
+  // Gate de readiness JS DEFINITIVO: [data-app-ready="1"] (fin del bootstrap
+  // síncrono → listener delegado adjunto) antes de click en #splash-sel-btn
+  // (estático). Sin esto el click llega antes del wiring → el dropdown no abre.
+  await page.waitForSelector('html[data-app-ready="1"]', { state: 'attached', timeout: 15000 });
   await page.locator('#splash-sel-btn').click();
   await page.waitForSelector('#splash-dropdown', { state: 'visible', timeout: 15000 });
   await page.waitForSelector('.splash-drop-item[data-fest]', { state: 'visible', timeout: 15000 });

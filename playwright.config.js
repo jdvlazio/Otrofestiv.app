@@ -6,6 +6,12 @@ module.exports = defineConfig({
   testIgnore: ['**/unit/**'], // unit tests viven en tests/unit/ y corren con `node --test`
   timeout: 30000,
   retries: 1,
+  // CI = serial. El split a 13+ módulos ESM multiplicó los requests HTTP + el
+  // parse/eval por carga de página; con workers paralelos en los runners de
+  // 2 núcleos de GitHub Actions eso saturaba CPU/browser y las cargas excedían
+  // los timeouts → flaky (#splash-dropdown, FESTIVAL_CONFIG undefined, etc.).
+  // Serial = 83/83 determinista. Local conserva paralelismo (undefined → auto).
+  workers: process.env.CI ? 1 : undefined,
   reporter: [
     ['html', { open: 'never' }],
     ['list'],
@@ -22,7 +28,13 @@ module.exports = defineConfig({
     { name: 'chromium', use: { ...devices['Desktop Chrome'] } },
   ],
   webServer: {
-    command: 'python3 -m http.server 3000',
+    // Servidor CONCURRENTE (ThreadingHTTPServer). El `python3 -m http.server`
+    // por defecto es single-thread: con el split a 13+ módulos ESM, cada carga
+    // de página dispara 13+ requests HTTP que se encolan contra un único hilo;
+    // bajo los workers paralelos de Playwright eso saturaba el server y las
+    // cargas superaban el timeout → flaky (#splash-dropdown y otros). Threading
+    // sirve los módulos en paralelo y elimina la contención.
+    command: 'python3 -c "from http.server import ThreadingHTTPServer, SimpleHTTPRequestHandler; ThreadingHTTPServer((\'\', 3000), SimpleHTTPRequestHandler).serve_forever()"',
     url: 'http://localhost:3000',
     reuseExistingServer: !process.env.CI,
     timeout: 10000,

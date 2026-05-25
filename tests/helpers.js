@@ -7,38 +7,31 @@
 const LEVIZA_SIMTIME = '2026-05-14T00:00:00-05:00';
 
 async function selectFestival(page, festId) {
-  await page.locator('#splash-sel-btn').click();
-  await page.waitForSelector('#splash-dropdown', { state: 'visible', timeout: 15000 });
-  // Señal robusta: esperar a que los items estén renderizados/visibles, no solo el contenedor.
-  await page.waitForSelector('.splash-drop-item[data-fest]', { state: 'visible', timeout: 15000 });
-  // Si el item está en "Anteriores" puede estar colapsado — expandirlo primero
-  const item = page.locator(`.splash-drop-item[data-fest="${festId}"]`);
-  const isPast = await item.evaluate(el => el.classList.contains('past')).catch(() => false);
-  if (isPast) {
-    await item.click(); // primer click expande el past-item
-    await page.waitForTimeout(200);
-    // segundo click confirma la selección (si _togglePastFest requiere doble acción)
-    // o bien usamos evaluate para forzar la selección directamente
-    await page.evaluate((id) => {
-      const cfg = FESTIVAL_CONFIG[id] || {};
-      const meta = `${cfg.city} · ${cfg.dates} ${cfg.year||''}`.trim();
-      selectSplashFest(cfg.name, meta, id);
-    }, festId);
-  } else {
-    await item.click();
-  }
-  await page.waitForTimeout(300);
+  // Selección DETERMINISTA vía selectSplashFest (no via toggle del dropdown).
+  // Este es un helper de SETUP — su objetivo es entrar al festival, no probar la
+  // UI del selector (eso lo cubren T08/M02 con click real). El click dance sobre
+  // #splash-sel-btn era flaky bajo carga: las animaciones del splash interceptan
+  // el click transitoriamente → el dropdown no abre → timeout. Además, para
+  // festivales "past" (ej. leviza2026) el código ya terminaba llamando a
+  // selectSplashFest por evaluate de todos modos. Ir directo elimina la race.
+  await page.evaluate((id) => {
+    const cfg = FESTIVAL_CONFIG[id] || {};
+    const meta = `${cfg.city} · ${cfg.dates} ${cfg.year || ''}`.trim();
+    selectSplashFest(cfg.name, meta, id);
+  }, festId);
+  await page.waitForTimeout(100);
 }
 
 async function enterFestival(page, festId, simTime) {
   await page.goto('/');
-  // Gate de readiness JS (no DOM estático): esperar a que el bootstrap async
-  // haya renderizado los items del splash (_renderSplashDropdown). Garantiza que
-  // el listener delegado está adjunto + #splash-sel-name poblado ANTES de
-  // cualquier interacción. Cierra la race del flaky #splash-dropdown (la cadena
-  // async de bootstrap termina después del evento `load`; el split a 13+ módulos
-  // ESM ensanchó esa ventana). #splash-sel-btn es estático → no es señal válida.
-  await page.waitForSelector('.splash-drop-item[data-fest]', { state: 'attached', timeout: 15000 });
+  // Gate de readiness JS DEFINITIVO: el marcador [data-app-ready="1"] se setea al
+  // FINAL del bootstrap síncrono (main.js) — módulo evaluado, STATE/TEST BRIDGE
+  // instalado (FESTIVAL_CONFIG/selectSplashFest expuestos en globalThis), listener
+  // delegado adjunto, render inicial hecho. El proxy anterior (.splash-drop-item
+  // attached) se renderiza ANTES del bridge → bajo runners lentos de CI, evaluate
+  // veía "FESTIVAL_CONFIG is not defined". appReady cierra esa ventana de forma
+  // garantizada. #splash-sel-btn (estático) nunca fue señal válida.
+  await page.waitForSelector('html[data-app-ready="1"]', { state: 'attached', timeout: 15000 });
 
   const selName = await page.locator('#splash-sel-name').textContent().catch(() => '');
   if (!selName.toLowerCase().includes(festId.replace(/\d+/g, '').toLowerCase())) {
