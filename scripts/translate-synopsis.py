@@ -1,4 +1,9 @@
 #!/usr/bin/env python3
+# DEPRECATED — no usar en producción.
+# Las traducciones se generan directamente en el chat
+# (Claude lee synopsis PT/EN y produce ES inline).
+# Este script requiere ANTHROPIC_API_KEY externa y no
+# refleja el método real del pipeline. Ver PIPELINE.md.
 """
 translate-synopsis.py — Genera synopsis_es faltantes via Claude API
 Fuente: synopsis (idioma de origen, ej. PT) con fallback a synopsis_en.

@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `685beb1 docs(pipeline): reconciliar PROTOCOLO.md con PIPELINE.md (landmine Tribeca) (#68)`
+> Último commit: `24e7f1a feat(festival): Olhar de Cinema 2026 — 80 films, método A2 (SPA client-rendered)`
 
 ---
 

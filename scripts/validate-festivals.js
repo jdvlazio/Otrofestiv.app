@@ -220,6 +220,64 @@ function validateFestival(fname, data) {
       });
     }
   }
+  // ════════ CHECKS DE CORRUPCIÓN (revisión crítica Olhar — detectan dato MALO, no solo ausente) ════════
+  // [posters-duplicados] ERROR — dos films distintos con exactamente la misma URL de poster
+  {
+    const seen = new Map();
+    for (const f of films) {
+      const p = (f.poster || '').trim();
+      if (!p) continue;
+      if (seen.has(p)) errors.push(`[posters-duplicados] "${(f.title||'?').slice(0,40)}" comparte poster con "${seen.get(p).slice(0,40)}" — dato corrupto`);
+      else seen.set(p, f.title || '?');
+    }
+  }
+  // [sinopsis-duplicada] ERROR — dos films distintos con exactamente la misma synopsis o synopsis_en
+  for (const fld of ['synopsis', 'synopsis_en']) {
+    const seen = new Map();
+    for (const f of films) {
+      const s = (f[fld] || '').trim();
+      if (!s) continue;
+      if (seen.has(s)) errors.push(`[sinopsis-duplicada] "${(f.title||'?').slice(0,40)}" comparte ${fld} con "${seen.get(s).slice(0,40)}" — cross-contaminación`);
+      else seen.set(s, f.title || '?');
+    }
+  }
+  // [year-sospechoso] WARNING — year > festival_year+1 y el film no es clásico/retro declarado
+  {
+    const festYear = data.year || 0;
+    for (const f of films) {
+      if (typeof f.year === 'number' && festYear && f.year > festYear + 1) {
+        const isClassic = /cl[aá]ssic|retro|classic/i.test(f.section || '');
+        if (!isClassic) warnings.push(`[year-sospechoso] "${(f.title||'?').slice(0,40)}": year=${f.year} > ${festYear+1} y sección no es clásico/retro — posible outlier`);
+      }
+    }
+  }
+  // [slot-sin-agrupar] WARNING — ≥2 films distintos en el mismo (day,time,venue) sin is_cortos/is_programa
+  {
+    const slotMap = {};
+    for (const f of films) {
+      const isProg = !!(f.is_cortos || f.is_programa);
+      const scr = (Array.isArray(f.screenings) && f.screenings.length)
+        ? f.screenings : [{ day: f.day, time: f.time, venue: f.venue }];
+      for (const s of scr) {
+        const key = `${s.day||''}|${s.time||''}|${s.venue||''}`;
+        if (key === '||') continue;
+        (slotMap[key] = slotMap[key] || []).push({ t: f.title || '?', isProg });
+      }
+    }
+    for (const [key, list] of Object.entries(slotMap)) {
+      const uniq = [...new Set(list.map(x => x.t))];
+      if (uniq.length >= 2 && !list.some(x => x.isProg)) {
+        warnings.push(`[slot-sin-agrupar] ${uniq.length} films comparten slot (${key}) sin is_cortos/is_programa: ${uniq.slice(0,4).map(t=>t.slice(0,22)).join(', ')} — posible programa sin modelar`);
+      }
+    }
+  }
+  // [sinopsis-truncada] WARNING — exactamente 200 chars (huella de og:description truncada — trampa A2)
+  for (const f of films) {
+    for (const fld of ['synopsis', 'synopsis_en']) {
+      if ((f[fld] || '').length === 200) warnings.push(`[sinopsis-truncada] "${(f.title||'?').slice(0,40)}": ${fld} tiene exactamente 200 chars — posible og:description truncada`);
+    }
+  }
+
   const venuesDef = data.venues || {};
   const venueKeys = Object.keys(venuesDef);
   for (const [vname, vdata] of Object.entries(venuesDef)) {

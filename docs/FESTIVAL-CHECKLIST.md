@@ -1,0 +1,52 @@
+# Festival pre-commit checklist
+
+> Toda revisión pre-commit de un festival nuevo debe pasar **todos** estos ítems.
+> Derivado de la revisión crítica del onboarding de Olhar de Cinema 2026 y del
+> historial de incidentes (Tribeca: 134 posters falsos, 107 sinopsis de films
+> distintos, year corrupto en 37 films, lbSlugs inferidos incorrectos).
+
+## Checklist bloqueante
+
+- [ ] `node scripts/validate-festivals.js <id>` → **0 errores**
+- [ ] `python3 validate.py` → **OK para push**
+- [ ] **Posters**: 0 duplicados entre films + binding verificado por id/uuid
+      (si el CDN/og:image embebe el id del film en el path, confirmar `poster.includes(filmId)`)
+- [ ] **Year**: 0 outliers no explicados (los clásicos/retro conservan su año original; los contemporáneos ≤ año_festival + 1)
+- [ ] **0 sinopsis duplicadas** entre films (synopsis y synopsis_en)
+- [ ] **Slots compartidos**: todos los (day, time, venue) con ≥2 films declarados `is_cortos:true` o `is_programa:true`
+- [ ] **Config en el JSON**: `dayKeys`, `days`, `festivalDates`, `timezoneOffset`, `prioLimit`, `name`, `storageKey`, `festivalEndStr`
+- [ ] **Entrada en `src/config.js`** (`FESTIVAL_CONFIG`) creada (id sin guion: `[a-z0-9]+`)
+- [ ] **Secciones**: emoji único por sección + orden curatorial definido
+- [ ] **`synopsis_es`** presente para todos los films solos
+- [ ] **`synopsis_lang`** declarado en cada film
+- [ ] **Títulos de programas** son nombres editoriales reales del sitio
+      (no artefactos del proceso como "PGM 01" sin contexto, ni placeholders)
+- [ ] **Venues con `lat`/`lng`** (geocoding corrido y verificado contra el mapa)
+- [ ] **`tools/enricher.html`** actualizado con el festival (lista FESTIVALS)
+- [ ] **`tasks.md`** actualizado con estado y deuda downstream
+- [ ] `node scripts/bump-version.js` corrido
+- [ ] **CI verde** antes del merge (validate-festivals + validate.py + Playwright)
+
+## Checks automáticos de corrupción (en validate-festivals.js)
+
+Estos labels, si aparecen, bloquean o advierten — no ignorarlos:
+
+| Label | Nivel | Qué detecta |
+|---|---|---|
+| `[posters-duplicados]` | ERROR | dos films con la misma URL de poster |
+| `[sinopsis-duplicada]` | ERROR | cross-contaminación de synopsis/synopsis_en |
+| `[year-sospechoso]` | WARNING | year > festival+1 sin ser clásico/retro |
+| `[slot-sin-agrupar]` | WARNING | programa de cortos sin modelar |
+| `[sinopsis-truncada]` | WARNING | huella de og:description truncada (200 chars, trampa A2) |
+
+## Deuda downstream aceptable
+
+Estos campos **pueden quedar para después del primer commit** sin bloquear el merge:
+
+- **`genre`** — enriquecimiento TMDB estricto (los 4 criterios; year debe estar verificado antes).
+- **`lbSlug`** — Letterboxd (método Chrome tab, verificar cada slug individualmente; nunca inferir del título).
+- **Section emoji final** — la asignación curatorial de emoji + orden puede afinarse post-commit (Content-Designer).
+- **Posters de programas** (`is_cortos`/`is_programa`) — poster generativo/editorial.
+
+> Regla: la deuda aceptable es la que NO afecta integridad de datos ni rompe el
+> planner. Posters/sinopsis/year/slots NO son deuda aceptable — son bloqueantes.

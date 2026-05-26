@@ -14,11 +14,12 @@ Curitiba, Brasil · 4–13 jun 2026 · 80 films · 58 entries (46 films + 12 pro
 - [x] Agrupación de cortos/programas: 12 programas (11 `is_cortos` + 1 `is_programa`), 0 slots compartidos
 - [x] Títulos de programa = nombres oficiales del sitio (8 PGM exactos; 3 Acessibilidade desambiguadas por familia; 1 doble construido)
 - [x] Geocoding 6/6 sedes (verificado en Curitiba)
-- [x] `FESTIVAL_CONFIG['olhar-2026']` en `src/config.js` + config root en el JSON
+- [x] `FESTIVAL_CONFIG['olhar2026']` en `src/config.js` + config root en el JSON
+- [x] `synopsis_es` 46/46 films solos (traducción PT→ES inline en chat, gate aprobado)
+- [x] 5 checks de corrupción en `validate-festivals.js` (+ negative tests) · `docs/FESTIVAL-CHECKLIST.md` · `festival-template.json` reconciliado · `tools/enricher.html` actualizado
 - [x] `validate-festivals.js` 0 errores · `validate.py` OK para push
 
 ### Downstream (no bloqueante) ⏳
-- [ ] `synopsis_es` (0/58) — `translate-synopsis.py` PT→ES; requiere `ANTHROPIC_API_KEY`
 - [ ] `genre` (0/47) — enriquecimiento TMDB estricto (year confiable → matching seguro)
 - [ ] `lbSlug` — Letterboxd (método Chrome tab, verificar cada slug)
 - [ ] Section emoji + orden curatorial (Fase 2/5, Content-Designer)
