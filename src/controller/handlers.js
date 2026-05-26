@@ -13,7 +13,7 @@ import { _renderProgramaContent, lugarClose, render, renderNoticesBanner } from 
 import { renderAgenda, updateCardState, updateHorarioPrioBtn } from '../view/agenda.js';
 import { runCalc } from './calc.js';
 import { saveDelays, saveLastSlot, savePrio, saveSavedAgenda, saveState, saveWL, saveWatched } from './persistence.js';
-import { _getProgramaPhase, _reRenderIntereses, _updateProgramaActiveFilter, initProgramaModeBar, showAgView, showDayView, switchMainNav, updateAgTab } from './pipeline.js';
+import { _getProgramaPhase, _reRenderIntereses, _updateProgramaActiveFilter, initProgramaModeBar, showAgView, showDayView, switchMainNav, updateAgTab, _markPreserveResult } from './pipeline.js';
 import { searchClose, seccionClose } from './overlays.js';
 import { dayFullyPassed, festivalEnded, simTodayStr, toMin } from '../domain/time.js';
 import { scoreFilm, screeningPassed } from '../domain/film.js';
@@ -359,17 +359,9 @@ export function togglePriority(title,cost){
   const {prioritized, watchlist, watched, PRIO_LIMIT} = state.snapshot();
   // 2. GUARD + 3. MUTATE — branch A: unprioritize
   if(prioritized.has(title)){
-    // Si estamos en Planear, confirmar antes de quitar (modal callback variant)
-    if(activeMNav==='mnav-planner'){
-      const short=title.length>40?title.slice(0,38)+'…':title;
-      showActionModal(t('plan_quitar_prioridad'),
-        `<b>${short}</b><br><br>${t('plan_sigue_intereses')}`,
-        t('plan_quitar_prioridad'),()=>{
-          state.update('prioritized', s=>state._delFromSet(s,title));savePrio();updateCardState(title);
-          showToast(`${ICONS.star} ${t('toast_prioridad_quitada')}`,'info');
-          switchMainNav('mnav-seleccion');showAgView();   // render automático vía pipeline + nav
-        });return;
-    }
+    // D3: quitar in-strip se queda en el tab actual (sin modal ni navegación) — el
+    // toast alcanza. Preservar el resultado del Planear → detección de estado stale.
+    _markPreserveResult();
     state.update('prioritized', s=>state._delFromSet(s,title));
     // 4. PERSIST + surgical (render automático vía pipeline)
     savePrio();updateCardState(title);
@@ -379,6 +371,7 @@ export function togglePriority(title,cost){
     if(prioritized.size>=PRIO_LIMIT){
       openPrioLimit(title);return;
     }
+    _markPreserveResult();
     const _addWL=!watchlist.has(title);
     state.transaction(() => {
       state.update('prioritized', s=>state._addToSet(s,title));

@@ -688,6 +688,16 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .prio-pill{display:inline-flex;align-items:center;gap:var(--sp-2);background:var(--amber-12);border:1px solid var(--amber-30);border-radius:var(--r);padding:2px var(--sp-2) 2px var(--sp-2);font-size:var(--t-sm);color:var(--white);margin:2px;cursor:pointer}
 .prio-pill:hover{background:var(--amber-20)}
 .prio-pill-rm{color:var(--amber);font-size:var(--t-xs);margin-left:2px}
+/* Prio strip — 3 estados en Planear (corpus line + resolución ✓/✗ + stale) */
+.prio-corpus{font-size:var(--t-sm);font-weight:var(--w-semi);color:var(--gray);margin-bottom:var(--sp-2)}
+.prio-corpus b{color:var(--green);font-weight:var(--w-bold)}
+.group-label{display:inline-flex;align-items:center;gap:var(--sp-1);font-size:var(--t-label);font-weight:var(--w-bold);letter-spacing:.06em;text-transform:uppercase;margin-bottom:var(--sp-2)}
+.group-label.ok{color:var(--green)}
+.group-label.fail{color:var(--gray2)}
+.prio-chip-past-lbl{font-size:var(--t-badge);color:var(--gray2);text-align:center;line-height:1.2;margin-top:2px}
+.prio-stale{display:flex;align-items:center;gap:var(--sp-2);padding:var(--sp-2) var(--sp-3);background:var(--amber-08);border:1px solid var(--amber-20);border-radius:var(--r-md);margin-bottom:var(--sp-3);font-size:var(--t-sm);color:var(--white);line-height:1.4}
+.prio-stale-cta{margin-left:auto;flex-shrink:0;background:none;border:none;color:var(--amber);font-family:var(--font);font-size:var(--t-sm);font-weight:var(--w-bold);cursor:pointer;white-space:nowrap}
+#ag-result-wrap.stale{opacity:.5}
 
 /* ── Pulse "en curso" ── */
 @keyframes pulse-green{0%,100%{box-shadow:0 0 0 0 var(--green-20)}60%{box-shadow:0 0 0 5px var(--green-00)}}
