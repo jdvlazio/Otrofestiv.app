@@ -51,6 +51,21 @@ if (bvFile === bvBefore) {
 }
 fs.writeFileSync(bvPath, bvFile);
 
+// ── index.html → ?v= en el <script src de main.js> ──────────────────────
+// El sub-recurso /src/main.js debe versionarse: el fix de auto-update iOS (#85)
+// recarga index.html con ?v=, pero sin ?v= en el <script src> WKWebView puede
+// seguir sirviendo el main.js viejo desde caché HTTP. Debe coincidir con
+// BUILD_VERSION en cada build.
+const idxPath = path.join(ROOT, 'index.html');
+let idx = fs.readFileSync(idxPath, 'utf8');
+const idxBefore = idx;
+idx = idx.replace(/(src="\/src\/main\.js\?v=)\d{12}(")/, `$1${build}$2`);
+if (idx === idxBefore) {
+  console.error('✗ index.html: src="/src/main.js?v=YYYYMMDDHHMM" no encontrado.');
+  process.exit(1);
+}
+fs.writeFileSync(idxPath, idx);
+
 // ── version.json — android e ios al MISMO build ──────────────────────────
 // Formato: { android: "BUILD", ios: "BUILD" }
 // El wrapper nativo (WKWebView) no cambia entre deploys — solo el contenido web —,
@@ -66,6 +81,7 @@ fs.writeFileSync(vPath, JSON.stringify(vData, null, 2) + '\n');
 console.log(`✅ Build: ${build}`);
 console.log(`   sw.js        → CACHE_NAME + BUILD = ${build}`);
 console.log(`   src/main.js  → BUILD_VERSION = ${build}`);
+console.log(`   index.html   → main.js?v= = ${build}`);
 console.log(`   version.json → android = ${build}, ios = ${vData.ios} (misma cadencia)`);
 
 // Regenerar CLAUDE.md con estado actual del repo

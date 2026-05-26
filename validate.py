@@ -74,9 +74,13 @@ content = open(INDEX_HTML, encoding='utf-8').read()
 _MAIN_JS = 'src/main.js'
 if os.path.exists(_MAIN_JS):
     _main_src = open(_MAIN_JS, encoding='utf-8').read()
-    content = content.replace(
-        '<script type="module" src="/src/main.js"></script>',
-        '<script>\n' + _main_src + '\n</script>'
+    # El src de main.js lleva ?v=BUILD (cache-busting del fix iOS) — matchear con o
+    # sin el query para que la inyección siga funcionando en cada build. Replacement
+    # como función para no interpretar backslashes del código JS como group refs.
+    content = re.sub(
+        r'<script type="module" src="/src/main\.js(?:\?v=\d+)?"></script>',
+        lambda _m: '<script>\n' + _main_src + '\n</script>',
+        content
     )
 # p8 Step 1: FESTIVAL_CONFIG/VENUES/NOTICES + constantes estáticas se movieron a
 # src/config.js (`export const`, importado por main.js). CHECK 5 (bootstrap) lo
