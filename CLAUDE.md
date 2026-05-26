@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `b5c87b5 feat(validate): gate [i18n-content-coverage] — detección de huecos de traducción de contenido (#91)`
+> Último commit: `344c28c fix(i18n): poster editorial header vía _secLabel (lang-aware)`
 
 ---
 

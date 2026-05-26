@@ -5,7 +5,7 @@
 // globalThis bridge. Roster/viewstate vía bridge.
 
 import { FILM_CATEGORY_LABEL, FILM_CATEGORY_ORDER, SECTION_ORDER_LIST } from '../config.js';
-import { ICONS, parseProgramTitle } from '../view/components.js';
+import { ICONS, _secLabelFull, parseProgramTitle } from '../view/components.js';
 import { emptyState, getFilmPoster, vcfg } from '../view/helpers.js';
 import { _renderProgramaContent, lugarClose, lugarOutside, render } from '../view/programa.js';
 import { t } from '../i18n/i18n.js';
@@ -39,8 +39,9 @@ export function seccionOpen(){
   });
   const total=Object.keys(titleSet).length;
 
+  // data-s SIEMPRE = section ES (clave de filtro/orden); solo el <span> visible se localiza.
   const _opt=(s,cnt,isActive)=>'<div class="lugar-opt'+(isActive?' on':'')+'" data-s="'+s.replace(/"/g,'&quot;')+'">'
-    +'<span>'+s+'</span><span class="lugar-cnt">'+cnt+'</span>'+(isActive?'<span class="txt-amber-ml">✓</span>':'')+'</div>';
+    +'<span>'+_secLabelFull(s)+'</span><span class="lugar-cnt">'+cnt+'</span>'+(isActive?'<span class="txt-amber-ml">✓</span>':'')+'</div>';
 
   let html='<div class="lugar-opt'+(activeSec==='all'?' on':'')+'" data-s="all">'
     +'<span>'+t('filter_todo_programa')+'</span><span class="lugar-cnt">'+total+'</span>'
