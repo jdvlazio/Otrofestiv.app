@@ -15,6 +15,11 @@
       Verificar también `synopsis` por idioma en vivo: ES→`synopsis_es`, EN→`synopsis_en`, fallback→`synopsis` (origen).
 - [ ] **Posters**: 0 duplicados entre films + binding verificado por id/uuid
       (si el CDN/og:image embebe el id del film en el path, confirmar `poster.includes(filmId)`)
+- [ ] **Posters TMDB** (si se enriquecen):
+      - [ ] Búsqueda TMDB intentada con **título original Y `title_en`** (no descartar hasta probar ambos)
+      - [ ] Solo `poster_path` (portrait 2:3) — **nunca `backdrop_path`** (landscape)
+      - [ ] **Verificación visual** vía galería Chrome tab (`gallery.html` + `http.server`) — **obligatoria** antes de escribir
+      - [ ] Overrides por transliteración (3/4 criterios + visual) **documentados en el PR** como `override: transliteración`
 - [ ] **Year**: 0 outliers no explicados (los clásicos/retro conservan su año original; los contemporáneos ≤ año_festival + 1)
 - [ ] **0 sinopsis duplicadas** entre films (synopsis y synopsis_en)
 - [ ] **Slots compartidos**: todos los (day, time, venue) con ≥2 films declarados `is_cortos:true` o `is_programa:true`

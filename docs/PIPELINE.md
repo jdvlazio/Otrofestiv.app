@@ -151,6 +151,43 @@ Columnas del CSV — **clase organizador** (lo que solo el festival sabe):
 - Verificar que el campo `year` del scraping es correcto para una muestra de 10+ films
 - Si hay World Premieres con year < año_del_festival - 1 → el scraping está corrupto, no correr TMDB
 
+#### Posters TMDB — lecciones de Olhar de Cinema 2026
+
+> Contexto: 11/14 clásicos matchearon al primer intento; 2 más (Wajda) se
+> recuperaron buscando por título original; 1 (Salhab) se incluyó por override
+> de transliteración. 13–14 de 14 con poster portrait verificado visualmente.
+
+1. **Orden de búsqueda TMDB: original primero, luego EN.**
+   Buscar por **título original** y *después* por `title_en`. **No descartar un
+   film hasta haber intentado ambos.** El search en inglés rankea mal los títulos
+   no-ingleses: para `Dyrygent` (Wajda) y `Ziemia obiecana` (Wajda), la búsqueda
+   por "The Conductor"/"The Promised Land" devolvía films distintos (remake danés
+   2024, film 2023); la búsqueda por el título polaco directo trajo el correcto.
+
+2. **Override por transliteración.**
+   Si el ÚNICO criterio que falla es el de **título**, y la causa es
+   transliteración / caracteres no-latinos (árabe, cirílico, etc.), y los **otros
+   3 criterios pasan** (año ±1, apellido director, país) **+ la verificación
+   visual confirma el film correcto** → **override explícito permitido**.
+   Documentarlo en el PR como `override: transliteración`. Ejemplo: *Ashbah
+   Beyrouth* (Salhab) — título "Ashbah Beyrouth" vs TMDB "Beirut Phantom"/أشباح بيروت
+   (sim 0.5), pero año/director/país exactos + poster confirma "un film de Ghassan
+   Salhab". **No es un falso match** — es el film correcto con métrica de string
+   inaplicable. (Sigue siendo override; nunca aplicar sin verificación visual.)
+
+3. **Verificación visual — método Chrome tab (gate, no opcional).**
+   Antes de escribir cualquier poster TMDB al JSON: crear un `gallery.html`
+   temporal con los `poster_path` candidatos (`https://image.tmdb.org/t/p/w342{path}`)
+   + título + director + año; servirlo con `python3 -m http.server <port>` desde
+   `/tmp`; abrirlo en el Chrome tab; **confirmar visualmente que cada poster
+   corresponde al film correcto y es portrait**; cerrar el server (`pkill -f
+   "http.server <port>"`). Es el mismo nivel de gate que el snippet de Letterboxd.
+
+4. **`poster_path` vs `backdrop_path` — usar SIEMPRE `poster_path`.**
+   En TMDB, **`poster_path` es siempre portrait (2:3)** — el formato que el sistema
+   espera. **`backdrop_path` es landscape (16:9). NUNCA usar `backdrop_path`.**
+   Usar `poster_path` garantiza el aspecto correcto sin medir píxeles.
+
 ---
 
 ### Fase 3b · Letterboxd slugs `[Data Engineer — Chrome tab obligatorio]`
