@@ -3,6 +3,12 @@
 Este documento describe el proceso estándar para montar un festival en la app.
 Siempre el mismo proceso — solo cambian los datos.
 
+> ⚠️ **AUTORIDAD: para enrichment (TMDB / posters / synopsis_en / Letterboxd), `docs/PIPELINE.md` manda.**
+> Es el proceso endurecido tras los incidentes de Tribeca 2026 (134 posters falsos, 107 synopsis_en
+> de films distintos, slugs LB inferidos mal). Este PROTOCOLO describe el flujo general y los inputs;
+> ante cualquier conflicto sobre qué se acepta de TMDB/LB, **PIPELINE.md prevalece**. Los scripts
+> (`enrich-festival.py`, `tools/enricher.html`) **proponen** datos — no son verdad sin verificación humana.
+
 ---
 
 ## Lo que necesito de ti para comenzar
@@ -24,12 +30,13 @@ Pide al organizador que llene el archivo `/pipeline/csv-template.csv`. Si no es 
 
 ## Regla de arquitectura — Configuración de festival
 
-La configuración de un festival (nombre, fechas, días, storageKey, etc.) vive en **dos lugares sincronizados**:
+La configuración de un festival (nombre, fechas, días, storageKey, etc.) vive en **un solo lugar**:
 
-1. `FESTIVAL_CONFIG` en `index.html` — para carga inicial antes del fetch del JSON
-2. `config{}` dentro del JSON del festival — generado automáticamente por `generate-config.js`
+- **`FESTIVAL_CONFIG` en `src/config.js`** — generado por `generate-config.js`, pegado a mano.
 
-`generate-config.js` produce ambas. No editar ninguna a mano. El pipeline garantiza la sincronía.
+**El JSON del festival NO lleva bloque `config{}` — nunca.** `validate-festivals.js` lo bloquea como
+gate (config{} en el JSON = error). El engine ignora silenciosamente cualquier config dentro del JSON.
+(Corrige una versión vieja de este doc que decía "config{} en el JSON, sincronizado" — eso ya no aplica.)
 
 ## El pipeline — siempre en este orden
 
@@ -57,14 +64,21 @@ pip install requests
 export TMDB_API_KEY=tu_key_de_tmdb
 python3 scripts/enrich-festival.py festivals/<id>.json
 ```
-El script rellena `director`, `genre`, `year`, `synopsis`, **`poster`** (URL TMDB completa) sin sobreescribir datos existentes. También enriquece `film_list` items de programas de cortos.
+El script **propone** datos de TMDB. Pero **no todo lo que propone es confiable** — regla de PIPELINE.md (Fase 3), tras los incidentes de Tribeca:
 
-> **`lbSlug` se resuelve en el mismo script** — el enricher obtiene el slug de Letterboxd automáticamente via `letterboxd.com/tmdb/{id}/`. Films no encontrados en Letterboxd quedan con `⚠️ LB PENDIENTE` en el JSON — buscarlos manualmente y reemplazar el valor.
+| Campo | Regla (PIPELINE.md manda) |
+|---|---|
+| `genre`, `year` | Aceptables de TMDB **solo si vacíos** y tras verificar que el `year` del scraping es correcto (el match usa `year`; un año corrupto asigna datos de OTRO film). |
+| **`poster`** | ❌ **PROHIBIDO confiar en TMDB sin verificación visual humana.** 134 posters falsos en Tribeca. Fuente confiable: `og:image` del sitio oficial. El poster de TMDB que escriba el script **se verifica o se vacía**. |
+| **`synopsis_en`** | ❌ **PROHIBIDO de TMDB sin verificar que describe el film correcto.** 107 synopsis_en de Tribeca eran de otra película. |
+| `director`, `country`, `language` | Solo del scraping de primera fuente — **no** de TMDB. |
+
+> **`lbSlug`** — el script lo resuelve vía `letterboxd.com/tmdb/{id}/`, pero **cada slug se verifica individualmente** (visitar la URL, comparar director+año) antes de aceptarlo. Inferir slugs apunta a films distintos (ver PIPELINE.md Fase 3b). `⚠️ LB PENDIENTE` = buscar y verificar a mano.
 
 **Opción B — Enricher web:**
-Abrir `otrofestiv.app/tools/enricher.html`, cargar los films, correr TMDB automáticamente, y resolver slugs de Letterboxd desde la tab del browser.
+Abrir `otrofestiv.app/tools/enricher.html`, cargar los films, correr TMDB, resolver slugs LB desde el browser. **Mismas reglas de verificación** — poster/synopsis_en no se confían sin revisión humana.
 
-**Tú produces:** JSON con `posters{}`, `lbSlugs{}`, `director`, `genre`, `year`, `synopsis` listos.
+**Tú produces:** JSON con `director`, `genre`, `year`, `synopsis` enriquecidos y **`poster`/`lbSlug` verificados** (los campos van en cada objeto film: `film.poster`, `film.lbSlug` — no en mapas `posters{}`/`lbSlugs{}` al nivel raíz).
 
 > Sin este paso: las cards de películas quedan sin director, año ni sinopsis. No deploy.
 
