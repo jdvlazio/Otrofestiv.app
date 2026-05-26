@@ -26,12 +26,11 @@ export function makeProgramPoster(state, title, duration, section){
   const _hash=s=>[...s].reduce((h,c)=>(Math.imul(31,h)+c.charCodeAt(0))|0,0);
   const accent=ACCENT_PALETTE[Math.abs(_hash(sec))%ACCENT_PALETTE.length];
 
-  // Header: sección limpia de emoji, uppercase, sin truncar vocablos
-  const cleanSection=filmSec
-    .replace(/\p{Emoji}/gu,'')
-    .replace(/[^\w\sáéíóúüñÁÉÍÓÚÜÑ¿!?()·\-]/gu,'')
-    .trim()
-    .toUpperCase();
+  // Header: sección localizada vía _secLabel (lang-aware: EN→SECTION_EN,
+  // ES→original sin emoji), uppercase. Así el poster editorial coincide con el
+  // separador del grid en cada idioma — antes horneaba f.section crudo y se
+  // quedaba en español aunque la UI estuviera en EN.
+  const cleanSection=_secLabel(filmSec).toUpperCase();
   const headerLabel=cleanSection||'PROGRAMA';
 
   // Número — patrones: "Prog. 4", "Prog. 1 · 16mm", "Voces 2", número al final

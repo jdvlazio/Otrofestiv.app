@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `d5a6dda chore(tribeca): synopsis_es = synopsis (la traducción ES ya existía en synopsis) (#93)`
+> Último commit: `61e2cc2 feat(i18n): section_en — display EN de secciones de festival`
 
 ---
 
