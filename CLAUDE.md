@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `3a96f27 chore: bundle v202605262025`
+> Último commit: `bfb65dd fix(update): iOS auto-update stuck — comparar contra BUILD_VERSION, no localStorage (#85)`
 
 ---
 
