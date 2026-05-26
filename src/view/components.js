@@ -97,6 +97,14 @@ export function makeSorpresaPoster(){
 
 export function _sectionColor(sec){return SECTION_COLORS[sec]||'#2C2C2A';}
 
+// ── REGLA INAMOVIBLE DE ARQUITECTURA ─────────────────────────────────────────
+// Todo display de nombre de sección DEBE pasar por _secLabel() (o _secLabelFull()
+// si se necesita preservar el emoji). NUNCA usar `f.section` directamente en
+// templates o componentes visuales — quedaría en español aunque la UI esté en EN.
+// `f.section` crudo es SOLO para lógica/clave: SECTION_ORDER_LIST.indexOf(),
+// SECTION_COLORS[], data-s=, comparaciones de filtro. El check validate.py
+// [section-display-raw] enforcea esta regla.
+// ─────────────────────────────────────────────────────────────────────────────
 // Etiqueta de sección SIN emoji, localizada. En EN devuelve SECTION_EN[sec] si
 // existe (display-only; la clave de orden/color/filtro sigue siendo `sec`); si no,
 // cae al string ES con el emoji líder removido. `_lang` vía STATE BRIDGE (como el

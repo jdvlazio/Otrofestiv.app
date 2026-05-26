@@ -10,7 +10,7 @@ import {
   DEFAULT_DURATION_MIN, FESTIVAL_BUFFER, FESTIVAL_CONFIG,
 } from '../config.js';
 import {
-  ICONS, _secLabel, _sectionColor, makeEventPoster, parseProgramTitle, renderAvBlocksHTML, renderFlowProgress,
+  ICONS, _secLabel, _secLabelFull, _sectionColor, makeEventPoster, parseProgramTitle, renderAvBlocksHTML, renderFlowProgress,
 } from './components.js';
 import {
   DAYS, DAY_SHORT_EN, _dayChips, _isEditorialPoster, _langDates, _lblLocalized, _mkCortoItemHtml, _posterThumb, dayChip, dayLabel, durFmt, emptyState, emptyStateHero, flagFmt, getFilmPoster, isToday, mplanBlockType, mplanEndStr, sala, starsText, travelWarn, vcfg,
@@ -814,7 +814,7 @@ export function renderFilmListHTML(state){
         <div class="int-item-title">${displayTitle}${progSuffix?` <span class="txt-amber-xs">${progSuffix}</span>`:''}</div>
         ${next?`<div class="int-item-days">${daysHtml}</div>`:`<div class="int-item-gone">${t('empty_sin_funciones')}</div>`}
         <div class="int-item-meta">${venueStr}${venueStr&&durStr?' · ':''}${durStr}</div>
-        <div class="int-item-sec">${f?.section||''}</div>
+        <div class="int-item-sec">${_secLabelFull(f?.section||'')}</div>
         ${conflictHtml}
       </div>
       <div class="int-item-actions">
@@ -840,7 +840,7 @@ export function renderFilmListHTML(state){
       ${posterHtml}
       <div class="int-item-info">
         <div class="int-item-title">${displayTitle}${progSuffix?` <span class="txt-amber-xs">${progSuffix}</span>`:''}</div>
-        <div class="int-item-sec">${f?.section||''}</div>
+        <div class="int-item-sec">${_secLabelFull(f?.section||'')}</div>
         ${ratingHtml}
       </div>
       <div class="int-item-actions">
@@ -1051,7 +1051,7 @@ export function _renderSavedAgendaHTML(state){
           <div class="suggestion-time">${f.time}</div>
           <div class="suggestion-info">
             <div class="suggestion-title">${(()=>{const{displayTitle:_dt}=parseProgramTitle(f.title);return _dt;})()}</div>
-            <div class="suggestion-sec">${f.section||''}</div>
+            <div class="suggestion-sec">${_secLabelFull(f.section||'')}</div>
             <div class="suggestion-meta">${durFmt(f.duration)}${vc2.short?' · '+vc2.short+(sl?' · '+sl:''):''}</div>
           </div>
           <button class="suggestion-add" data-action="addSuggestion" data-title="${f.title.replace(/"/g,'&quot;')}" data-day="${f.day}" data-time="${f.time}" data-stop="1" style="${f._isRestored?'border-color:var(--amber);color:var(--amber);background:var(--amber-10)':''}">

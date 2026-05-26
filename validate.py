@@ -1399,6 +1399,67 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar event delegation: {_e}')
 
+# ── CHECK: [section-display-raw] ──────────────────────────────────────────────
+# REGLA INAMOVIBLE: todo display de nombre de sección pasa por _secLabel()/
+# _secLabelFull(). Flagea `X.section` (incl. optional chaining `X?.section`)
+# interpolado como TEXTO VISIBLE de HTML — es decir, dentro de `>${ ... }` (texto
+# de un elemento) — cuando NO va envuelto en _secLabel. Los usos como CLAVE
+# (SECTION_COLORS[f.section], indexOf, data-s="${f.section}", f.section===x) no
+# matchean porque no están en posición de texto (no van precedidos de `>`).
+check = 'section-display-raw'
+try:
+    # Detector puro (testeable): interpolación `>${...X.section...}` sin _secLabel.
+    _SEC_DISPLAY_RE = re.compile(r'>\s*\$\{([^{}]*\b\w+\??\.section\b[^{}]*)\}')
+    def _scan_section_display_raw(text):
+        hits = []
+        for m in _SEC_DISPLAY_RE.finditer(text):
+            expr = m.group(1)
+            if '_secLabel' in expr:            # _secLabel() o _secLabelFull() → OK
+                continue
+            hits.append((m.start(), expr.strip()))
+        return hits
+
+    # ── Negative test OBLIGATORIO: el detector DEBE disparar en el caso malo y
+    #    NO disparar en los correctos. Si falla, no se confía en el check. ──────
+    _BAD       = '<div class="plist-sec">${f.section||\'\'}</div>'          # debe disparar
+    _BAD_OPT   = '<div class="int-item-sec">${f?.section||\'\'}</div>'      # optional chaining → debe disparar
+    _GOOD_WRAP = '<div class="plist-sec">${_secLabelFull(f.section||\'\')}</div>'  # envuelto → NO
+    _GOOD_KEY  = 'const c=SECTION_COLORS[f.section]; if(f.section===activeSec){}'  # clave → NO
+    _GOOD_ATTR = '<div data-s="${f.section}" class="x">hola</div>'          # atributo (clave) → NO
+    _self_ok = (
+        len(_scan_section_display_raw(_BAD))     >= 1 and
+        len(_scan_section_display_raw(_BAD_OPT)) >= 1 and
+        len(_scan_section_display_raw(_GOOD_WRAP))  == 0 and
+        len(_scan_section_display_raw(_GOOD_KEY))   == 0 and
+        len(_scan_section_display_raw(_GOOD_ATTR))  == 0
+    )
+    if not _self_ok:
+        fail(check, 'SELF-TEST FALLÓ — el detector no distingue display vs clave; '
+                    'no se confía en este check hasta arreglarlo')
+    else:
+        # Escanear los archivos de display reales (view + controller), por archivo
+        # para reportar file:line.
+        _scan_dirs = [os.path.join('src', 'view'), os.path.join('src', 'controller')]
+        _raw_hits = []
+        for _d in _scan_dirs:
+            if not os.path.isdir(_d):
+                continue
+            for _fn in sorted(os.listdir(_d)):
+                if not _fn.endswith('.js'):
+                    continue
+                _p = os.path.join(_d, _fn)
+                _txt = open(_p, encoding='utf-8').read()
+                for _off, _expr in _scan_section_display_raw(_txt):
+                    _ln = _txt.count('\n', 0, _off) + 1
+                    _raw_hits.append(f'{_p}:{_ln} → {_expr}')
+        if _raw_hits:
+            warn(check, f'{len(_raw_hits)} display(s) de sección sin _secLabel '
+                        f'(usar _secLabel/_secLabelFull): ' + ' | '.join(_raw_hits))
+        else:
+            ok(check, 'self-test OK; 0 displays de sección crudos (todos vía _secLabel/_secLabelFull)')
+except Exception as _e:
+    warn(check, f'no se pudo verificar section-display-raw: {_e}')
+
 # ── Report ────────────────────────────────────────────────────────────────────
 print()
 print('═' * 60)
