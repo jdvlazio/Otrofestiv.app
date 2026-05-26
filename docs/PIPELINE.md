@@ -11,6 +11,37 @@
 
 **Objetivo:** JSON del festival con todos los campos poblados desde el origen.
 
+**Entradas canónicas:**
+- **Opción A — Scraping web** (festivales con página por film): pasos 1–5 abajo + patrón `og:image`.
+- **Opción B — `pipeline/csv-template.csv`** (entrada estándar del organizador): una fila por **función**. El organizador llena solo los campos que conoce; el enrichment se hace downstream.
+
+Columnas del CSV — **clase organizador** (lo que solo el festival sabe):
+
+| Columna | Qué es |
+|---|---|
+| `title` | título original (idioma de origen) |
+| `title_es` | título en español si difiere del original (vacío si coinciden) |
+| `type` | `film` · `event` · `short` |
+| `director` | director(es) |
+| `country` | país de producción (ej. `Argentina`, `Colombia`) |
+| `language` | idioma original del film (ej. `Español`, `Portugués`) |
+| `year` | año |
+| `duration` | duración (ej. `147 min`) |
+| `premiere` | estreno si aplica (`World Premiere` / `International Premiere` / `Estreno Nacional`); vacío si no lo es |
+| `section` | sección curatorial |
+| `flags` | bandera(s) del país (emoji) |
+| `synopsis_source` | sinopsis en su idioma de origen (entrecomillar si tiene comas) |
+| `synopsis_lang` | idioma de `synopsis_source` — default `es`; `pt`/`en` para festivales en otro idioma |
+| `day` | clave de día (debe coincidir con `dayKeys`) |
+| `date` | número de día del mes |
+| `time` | hora 24h (ej. `17:00`) |
+| `venue` | nombre exacto de la sede (clave de `venues{}`) |
+| `has_qa` | `TRUE`/`FALSE` |
+| `requires_registration` | `TRUE`/`FALSE` |
+
+> Misma película con dos horarios = **dos filas** con igual `title`, distinto `day`/`time`/`venue`.
+> Campos de **enrichment** (`poster`, `synopsis_en`, `lbSlug`, `genre`, `year` verificado) **NO** van en el CSV — se rellenan downstream (`enrich-festival.py` + verificación humana). El CSV captura solo lo del organizador.
+
 1. Scraping de la web oficial del festival  
    - Campos obligatorios: `title`, `slug`, `section`, `type`, `director`, `country`, `year`, `synopsis`, `screenings`, `language`, `premiere`  
    - Campos deseables: `filmType`, `genre`, `duration`
