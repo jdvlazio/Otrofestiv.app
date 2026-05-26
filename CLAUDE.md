@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `5728e14 chore: sincronizar BUILD_VERSION en src/main.js con version.json (#81)`
+> Último commit: `d05b076 chore: bundle v202605261956`
 
 ---
 

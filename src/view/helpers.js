@@ -94,13 +94,20 @@ export function _getItemPoster(item){
   return getPosterSrc((item.title||item),false)||'';
 }
 
+// Una URL de poster es "editorial con imagen" (landscape 16:9 que va DENTRO del
+// frame editorial, no recortado) si proviene de un CDN de stills oficiales del
+// festival. Hosts conocidos: cloudfront.net (Tribeca), supabase.co (Olhar+).
+export function _isEditorialImageUrl(url){
+  return !!(url && (url.includes('cloudfront.net') || url.includes('supabase.co')));
+}
+
 export function _isEditorialPoster(f){
   if(!f) return false;
   if(f.posterSource==='editorial') return true;
   if(f.posterSource==='tmdb'||f.posterSource==='custom') return false;
   // Si hay poster TMDB validado, no es editorial — son formatos incompatibles (portrait vs 16:9)
   if(_POSTERS_N&&_POSTERS_N[normKey(f.title||'')]) return false;
-  return !!(f.poster&&f.poster.includes('cloudfront.net'));
+  return _isEditorialImageUrl(f.poster);
 }
 
 export function _posterThumb(f, cssClass, loading){
