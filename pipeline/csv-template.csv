@@ -1,5 +1,5 @@
-title,title_es,director,year,duration,section,flags,day,date,time,venue,has_qa,requires_registration
-Eureka,,Lisandro Alonso,2023,147 min,Proyecciones especiales,🇦🇷,VIE 12,12,17:00,Biblioteca Juan Carlos Montoya - Sabaneta,FALSE,FALSE
-Eureka,,Lisandro Alonso,2023,147 min,Proyecciones especiales,🇦🇷,SÁB 13,13,19:00,Teatro Baggenuff II - Copacabana,FALSE,FALSE
-Memoria,,Apichatpong Weerasethakul,2021,136 min,¿Qué es la ficción?,🇨🇴,DOM 14,14,18:00,Colombo Americano - Medellín,TRUE,FALSE
-Laboratorio de sonido,,—,—,120 min,Programación académica,,LUN 15,15,09:00,Estudio Archipiélago Sonoro - Medellín,FALSE,TRUE
+title,title_es,type,director,country,language,year,duration,premiere,section,flags,synopsis_source,synopsis_lang,day,date,time,venue,has_qa,requires_registration
+Eureka,,film,Lisandro Alonso,Argentina,Español,2023,147 min,,Proyecciones especiales,🇦🇷,"Tres relatos, un mismo pulso temporal.",es,VIE 12,12,17:00,Biblioteca Juan Carlos Montoya - Sabaneta,FALSE,FALSE
+Eureka,,film,Lisandro Alonso,Argentina,Español,2023,147 min,,Proyecciones especiales,🇦🇷,"Tres relatos, un mismo pulso temporal.",es,SÁB 13,13,19:00,Teatro Baggenuff II - Copacabana,FALSE,FALSE
+Memoria,,film,Apichatpong Weerasethakul,Colombia,Español,2021,136 min,,¿Qué es la ficción?,🇨🇴,,es,DOM 14,14,18:00,Colombo Americano - Medellín,TRUE,FALSE
+Laboratorio de sonido,,event,—,—,Español,—,120 min,—,Programación académica,,,es,LUN 15,15,09:00,Estudio Archipiélago Sonoro - Medellín,FALSE,TRUE
