@@ -8,7 +8,7 @@
 
 import { FESTIVAL_CONFIG, MAX_REMEMBERED_SLOTS, NOTICES, TMDB_IMG, _DEFAULT_FEST_ID } from '../config.js';
 import { DAY_ABBR, DAY_NUM, ICONS, _secLabel, _sectionColor, isFullDayBlocked, makeProgramPoster, parseProgramTitle, renderRatingStarsHTML } from '../view/components.js';
-import { _getItemPoster, _isEditorialPoster, _mkCortoItemHtml, _posterStyle, dayLabel, durFmt, flagFmt, getCortoItemPoster, getFilmPoster, getPosterSrc, sala, starsText, vcfg } from '../view/helpers.js';
+import { _getItemPoster, _isEditorialImageUrl, _isEditorialPoster, _mkCortoItemHtml, _posterStyle, dayLabel, durFmt, flagFmt, getCortoItemPoster, getFilmPoster, getPosterSrc, sala, starsText, vcfg } from '../view/helpers.js';
 import { closeAvSheet, closePVRating, closePrioLimit } from '../view/sheets.js';
 import { showConflictModal, showToast } from '../view/feedback.js';
 import { renderAgenda, renderAvBlocks } from '../view/agenda.js';
@@ -306,7 +306,7 @@ export function openCortoSheet(title, country, duration, section, flags, directo
   const dur=duration||(richItem&&richItem.duration)||'';
   const flgs=flags||countryToFlags(ctry)||'🌐';
   const posterUrl=posterOverride||(richItem&&getCortoItemPoster(richItem))||getPosterSrc(title,true)||null;
-  const _isEd3=posterUrl&&posterUrl.includes('cloudfront.net');
+  const _isEd3=_isEditorialImageUrl(posterUrl);
   const posterHtml=_isEd3
     ?`<div class="psp-editorial"><div class="psp-ed-hdr" style="background:${_sectionColor(section||'')}"><span>${_secLabel(section||'').toUpperCase()}</span></div><div class="psp-ed-img"><img src="${posterUrl}" loading="lazy" onerror="this.parentElement.style.display='none'" alt=""></div></div>`
     :posterUrl
@@ -378,7 +378,7 @@ export function _openCombinedFilmSheet(filmData){
   }
   const{title='',director='',year='',duration='',flags='🌐',country='',synopsis='',synopsis_en='',synopsis_es='',lbSlug='',poster:_fPoster=''}=filmData;
   const posterUrl=_fPoster?((_fPoster.startsWith('http')||_fPoster.startsWith('/assets/'))?_fPoster:TMDB_IMG+_fPoster):getPosterSrc(title,false)||null;
-  const _isEd4=posterUrl&&posterUrl.includes('cloudfront.net');
+  const _isEd4=_isEditorialImageUrl(posterUrl);
   const _sec4=(()=>{const _p=FILMS.find(f=>f.film_list&&f.film_list.some(c=>c.title===title));return _p?.section||'';})();
   const posterHtml=_isEd4
     ?`<div class="psp-editorial"><div class="psp-ed-hdr" style="background:${_sectionColor(_sec4)}"><span>${_secLabel(_sec4).toUpperCase()}</span></div><div class="psp-ed-img"><img src="${posterUrl}" loading="lazy" onerror="this.parentElement.style.display='none'" alt=""></div></div>`

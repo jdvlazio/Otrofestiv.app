@@ -188,18 +188,16 @@ Columnas del CSV — **clase organizador** (lo que solo el festival sabe):
    espera. **`backdrop_path` es landscape (16:9). NUNCA usar `backdrop_path`.**
    Usar `poster_path` garantiza el aspecto correcto sin medir píxeles.
 
-**Regla de fallback de poster (orden de prioridad):**
-1. Poster **portrait de TMDB** verificado visualmente → usar.
-2. Poster **portrait de fuente oficial** del festival → usar.
-3. Sin portrait confiable → **poster editorial generado** (`poster: ""`).
+**Jerarquía de poster — orden de prioridad (TODO film individual, incluidos cortos en `film_list`):**
+1. **Portrait 2:3 de TMDB** — verificado visualmente → usar (`poster: "/path.jpg"`).
+2. **Portrait 2:3 de Letterboxd** — verificado visualmente (no el `empty-poster` placeholder) → usar (`poster: "<og:image url>"`).
+3. **Portrait 2:3 del sitio oficial** del festival → usar.
+4. **Landscape 16:9 del sitio oficial** (CDN: cloudfront/supabase) → escribir la URL en `poster`. El sistema la renderiza **DENTRO** del poster editorial como imagen de fondo (header de sección + imagen) — el "**poster editorial con imagen**", como en Tribeca. **NO se descarta.** La detección la hace `_isEditorialImageUrl(url)` (`helpers.js`) por host conocido (cloudfront.net, supabase.co).
+5. **Poster editorial SIN imagen** (`poster: ""`) — único y exclusivamente cuando **no existe ninguna imagen en ninguna fuente** (TMDB ni LB ni oficial). Último recurso, nunca el segundo.
 
-❌ **Nunca dejar un poster landscape del CDN del festival como poster final.**
-`object-fit:cover` no es una solución — es un workaround que recorta y degrada
-la experiencia visual. Si la única fuente es landscape y no hay portrait
-confiable (TMDB ni oficial), vaciar el campo (`poster: ""`) y dejar que el
-sistema genere el poster editorial. *(Precedente Olhar 2026: 19 films sin match
-TMDB confiable — 18 brasileños contemporáneos + 1 con director discordante —
-pasaron de Supabase landscape a `poster: ""` → editorial.)*
+⚠️ **`poster: ""` (editorial sin imagen) es EXCLUSIVO para programas** (`is_cortos`/`is_programa`) sin poster propio. **NUNCA** para films individuales ni cortometrajes: si un film/corto tiene cualquier imagen (aunque sea landscape), va en el campo `poster` y se renderiza como editorial-con-imagen (nivel 4). El landscape **no** se vacía — eso recorta/degrada y pierde la imagen.
+
+*(Precedente Olhar 2026: los 34 cortos y Segunda Pele recibieron 30 TMDB portrait + 5 landscape Supabase editorial-con-imagen → 0 con `poster: ""`. Corrige el error previo de vaciar landscapes a editorial-sin-imagen.)*
 
 **Poster editorial de programas (`is_cortos` / `is_programa`) — el body no repite la sección.**
 El poster editorial generado tiene dos zonas: **header** = nombre de la sección,
