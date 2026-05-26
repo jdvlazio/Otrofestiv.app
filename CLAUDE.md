@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `750e506 fix(posters): body editorial = identificador del programa, nunca descriptor de sección (#88)`
+> Último commit: `4fdf66d fix(cortos): el sheet del corto muestra Letterboxd, año y sinopsis localizada — igual que un film (#89)`
 
 ---
 
