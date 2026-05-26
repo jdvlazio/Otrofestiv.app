@@ -332,9 +332,15 @@ export function renderPeliculaViewHTML(state){
     if(_isPrograma){
       const _p1=_getItemPoster(f.film_list[0]);
       const _p2=_getItemPoster(f.film_list[1]);
-      const _ib=_p2?`<img class="pcs-back" src="${_p2}" loading="lazy" onerror="this.remove()" alt="">`:`<div class="pcs-back"></div>`;
-      const _if=_p1?`<img class="pcs-front" src="${_p1}" loading="lazy" onerror="this.remove()" alt="">`:`<div class="pcs-front"></div>`;
-      posterImg=`<div class="poster-card-stack">${_ib}${_if}</div>`;
+      if(!_p1&&!_p2){
+        // Ningún item del programa tiene poster real → poster editorial del
+        // programa (evita el stack de divs vacíos / card en blanco)
+        posterImg=`<img src="${getFilmPoster(f)||''}" loading="lazy" data-title="${f.title.replace(/"/g,'&quot;')}" style="width:100%;height:100%;object-fit:cover;display:block;opacity:0;transition:opacity 250ms ease" onload="this.style.opacity='1'" onerror="_posterErr(this)" alt="">`;
+      } else {
+        const _ib=_p2?`<img class="pcs-back" src="${_p2}" loading="lazy" onerror="this.remove()" alt="">`:`<div class="pcs-back"></div>`;
+        const _if=_p1?`<img class="pcs-front" src="${_p1}" loading="lazy" onerror="this.remove()" alt="">`:`<div class="pcs-front"></div>`;
+        posterImg=`<div class="poster-card-stack">${_ib}${_if}</div>`;
+      }
     } else {
       _cardBg='';
       _cardBg='';

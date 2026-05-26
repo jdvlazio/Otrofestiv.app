@@ -57,8 +57,12 @@ export function makeProgramPoster(state, title, duration, section){
       .replace(/^Programa\s+/i,'')
       .replace(/^Competencia\s+/i,'')
       .trim();
-    // Si lo que queda es subcadena del header, no vale la pena mostrarlo
-    if(!bodyTitle||headerLabel.includes(bodyTitle.toUpperCase())||bodyTitle.toUpperCase().includes(headerLabel)||/^[^a-zA-ZáéíóúüñÁÉÍÓÚÜÑ0-9]+$/.test(bodyTitle))
+    // Descartar el body solo si NO aporta diferenciación: vacío, subcadena del
+    // header, o solo símbolos. (Antes también se descartaba cuando el body
+    // CONTENÍA el header — eso vaciaba "PGM 05 Mirada Paranaense" dejando dos
+    // programas con poster idéntico. Se conserva el título completo, igual que
+    // "PGM 07 Pequenos Olhares".)
+    if(!bodyTitle||headerLabel.includes(bodyTitle.toUpperCase())||/^[^a-zA-ZáéíóúüñÁÉÍÓÚÜÑ0-9]+$/.test(bodyTitle))
       bodyTitle='';
   }
 
