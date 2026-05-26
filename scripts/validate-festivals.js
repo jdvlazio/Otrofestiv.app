@@ -221,24 +221,28 @@ function validateFestival(fname, data) {
     }
   }
   // ════════ CHECKS DE CORRUPCIÓN (revisión crítica Olhar — detectan dato MALO, no solo ausente) ════════
-  // [posters-duplicados] ERROR — dos films distintos con exactamente la misma URL de poster
+  // [posters-duplicados] ERROR — dos films con TÍTULO DISTINTO y misma URL de poster.
+  // (El mismo título repetido = misma película en formato 1-entrada-por-función, legítimo.
+  //  La comparación de título es case-insensitive: difiere solo en mayúsculas = mismo film.)
   {
+    const norm = t => (t || '?').trim().toLowerCase();
     const seen = new Map();
     for (const f of films) {
       const p = (f.poster || '').trim();
       if (!p) continue;
-      if (seen.has(p)) errors.push(`[posters-duplicados] "${(f.title||'?').slice(0,40)}" comparte poster con "${seen.get(p).slice(0,40)}" — dato corrupto`);
-      else seen.set(p, f.title || '?');
+      if (seen.has(p) && seen.get(p).n !== norm(f.title)) errors.push(`[posters-duplicados] "${(f.title||'?').slice(0,40)}" comparte poster con "${seen.get(p).t.slice(0,40)}" (título distinto) — dato corrupto`);
+      else if (!seen.has(p)) seen.set(p, { n: norm(f.title), t: f.title || '?' });
     }
   }
-  // [sinopsis-duplicada] ERROR — dos films distintos con exactamente la misma synopsis o synopsis_en
+  // [sinopsis-duplicada] ERROR — dos films con TÍTULO DISTINTO y misma synopsis o synopsis_en.
   for (const fld of ['synopsis', 'synopsis_en']) {
+    const norm = t => (t || '?').trim().toLowerCase();
     const seen = new Map();
     for (const f of films) {
       const s = (f[fld] || '').trim();
       if (!s) continue;
-      if (seen.has(s)) errors.push(`[sinopsis-duplicada] "${(f.title||'?').slice(0,40)}" comparte ${fld} con "${seen.get(s).slice(0,40)}" — cross-contaminación`);
-      else seen.set(s, f.title || '?');
+      if (seen.has(s) && seen.get(s).n !== norm(f.title)) errors.push(`[sinopsis-duplicada] "${(f.title||'?').slice(0,40)}" comparte ${fld} con "${seen.get(s).t.slice(0,40)}" (título distinto) — cross-contaminación`);
+      else if (!seen.has(s)) seen.set(s, { n: norm(f.title), t: f.title || '?' });
     }
   }
   // [year-sospechoso] WARNING — year > festival_year+1 y el film no es clásico/retro declarado
