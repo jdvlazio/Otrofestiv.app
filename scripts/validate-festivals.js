@@ -367,6 +367,52 @@ function validateFestival(fname, data) {
     }
   }
 
+  // ── [i18n-content-coverage] WARNING — cobertura de traducción de CONTENIDO ──
+  // Detecta huecos de localización en el contenido del festival (no en strings de
+  // UI). Solo WARNING, no bloquea. Reporta conteos por festival. No corrige nada.
+  {
+    const solos = (data.films || []).filter(f =>
+      f.type !== 'event' && !f.is_cortos && !f.is_programa);
+    const withSyn = solos.filter(f => f.synopsis);
+
+    // (a) synopsis_es faltante cuando el origen no es español (synopsis_lang !== 'es')
+    const needEs = withSyn.filter(f => (f.synopsis_lang || '') !== 'es');
+    const missEs = needEs.filter(f => !f.synopsis_es);
+    if (missEs.length) {
+      const langs = [...new Set(needEs.map(f => f.synopsis_lang || '(no declarado)'))];
+      const note = langs.length === 1 && langs[0] !== '(no declarado)'
+        ? `origen ${langs[0]} — requiere traducción ES`
+        : `synopsis_lang ${langs.join('/')} — verificar idioma de origen`;
+      warnings.push(`[i18n-content-coverage] ${missEs.length}/${needEs.length} films sin synopsis_es (${note})`);
+    } else if (needEs.length) {
+      warnings.push(`[i18n-content-coverage] synopsis_es: 0/${needEs.length} films sin synopsis_es ✓`);
+    }
+
+    // (b) synopsis_en faltante cuando existe synopsis
+    const missEn = withSyn.filter(f => !f.synopsis_en);
+    if (missEn.length) {
+      warnings.push(`[i18n-content-coverage] ${missEn.length}/${withSyn.length} films sin synopsis_en`);
+    }
+
+    // (c) title_en faltante cuando el festival usa title_en (tiene al menos uno)
+    const festUsesTitleEn = solos.some(f => f.title_en);
+    if (festUsesTitleEn) {
+      const missTitleEn = solos.filter(f => !f.title_en);
+      if (missTitleEn.length) {
+        warnings.push(`[i18n-content-coverage] ${missTitleEn.length}/${solos.length} films sin title_en (el festival usa title_en)`);
+      }
+    }
+
+    // (d) secciones sin section_en — informativo (no bloqueante todavía)
+    const secs = [...new Set((data.films || [])
+      .map(f => (f.section || '').replace(/^[\p{Emoji}️\s]+/u, '').trim())
+      .filter(Boolean))];
+    const secsSinEn = secs.filter(() => true); // ningún festival tiene section_en aún
+    if (secsSinEn.length) {
+      warnings.push(`[i18n-content-coverage] ${secsSinEn.length} secciones sin traducción (section_en) [info]: ${secsSinEn.join(' · ')}`);
+    }
+  }
+
   return { errors, warnings };
 }
 

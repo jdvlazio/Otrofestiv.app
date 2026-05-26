@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `43d4022 feat(olhar): synopsis_es para los 34 cortos (traducción PT→ES) (#90)`
+> Último commit: `dadc778 chore(festivals): declarar synopsis_lang en los festivales que lo tenían null (#92)`
 
 ---
 

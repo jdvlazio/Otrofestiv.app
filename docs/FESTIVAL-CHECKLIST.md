@@ -36,6 +36,9 @@
 - [ ] **Secciones**: emoji único por sección + orden curatorial definido
 - [ ] **`synopsis_es`** presente para todos los films solos
 - [ ] **`synopsis_lang`** declarado en cada film
+- [ ] **Localización de contenido** (traducción del contenido del festival, no de UI):
+      - [ ] **Chrome live audit en EN** — verificar que **secciones, país y sinopsis** no quedan en el idioma de origen.
+      - [ ] **`validate-festivals.js [i18n-content-coverage]`** pasa sin warnings inesperados antes del merge (films sin `synopsis_es`/`synopsis_en`/`title_en`, secciones sin `section_en`).
 - [ ] **Títulos de programas** son nombres editoriales reales del sitio
       (no artefactos del proceso como "PGM 01" sin contexto, ni placeholders)
 - [ ] **Venues con `lat`/`lng`** (geocoding corrido y verificado contra el mapa)
