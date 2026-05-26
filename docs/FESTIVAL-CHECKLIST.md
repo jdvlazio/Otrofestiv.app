@@ -9,6 +9,10 @@
 
 - [ ] `node scripts/validate-festivals.js <id>` → **0 errores**
 - [ ] `python3 validate.py` → **OK para push**
+- [ ] **Chrome live audit del splash** (gate bloqueante): servir el repo (`python3 -m http.server`),
+      abrir el selector y confirmar que la entrada del festival se ve **igual que un festival de referencia**
+      (ej. Tribeca): nombre **sin año** + fechas en formato **MES día–día AÑO** (`JUN 4–13 2026`).
+      Verificar también `synopsis` por idioma en vivo: ES→`synopsis_es`, EN→`synopsis_en`, fallback→`synopsis` (origen).
 - [ ] **Posters**: 0 duplicados entre films + binding verificado por id/uuid
       (si el CDN/og:image embebe el id del film en el path, confirmar `poster.includes(filmId)`)
 - [ ] **Year**: 0 outliers no explicados (los clásicos/retro conservan su año original; los contemporáneos ≤ año_festival + 1)

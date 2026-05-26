@@ -190,7 +190,7 @@ export function openPelSheet(title){
     <div class="pel-sheet-screenings">${rows}</div>
     ${f.synopsis?`<div class="pel-sheet-divider"></div>
     <div class="pel-sheet-section-lbl">${f.type==='event'?t('label_descripcion'):t('label_sinopsis')}</div>
-    <div class="pel-sheet-synopsis">${(_lang==='en'&&f.synopsis_en?f.synopsis_en:f.synopsis).replace(/^⚠️\s*INGLÉS\s*[—-]\s*/,'')}</div>`:''}
+    <div class="pel-sheet-synopsis">${(_lang==='en'&&f.synopsis_en?f.synopsis_en:_lang==='es'&&f.synopsis_es?f.synopsis_es:f.synopsis).replace(/^⚠️\s*INGLÉS\s*[—-]\s*/,'')}</div>`:''}
     ${cortosHtml}
     ${(!f.is_cortos&&!f.is_programa&&f.type!=='event')?lbLink(f.title,f):''}
     <div class="pel-sheet-divider"></div>
@@ -372,7 +372,7 @@ export function _openCombinedFilmSheet(filmData){
   if(pelSheet&&pelSheet.classList.contains('open')){
     _cortoParentHtml=inner.innerHTML;
   }
-  const{title='',director='',year='',duration='',flags='🌐',country='',synopsis='',synopsis_en='',lbSlug='',poster:_fPoster=''}=filmData;
+  const{title='',director='',year='',duration='',flags='🌐',country='',synopsis='',synopsis_en='',synopsis_es='',lbSlug='',poster:_fPoster=''}=filmData;
   const posterUrl=_fPoster?((_fPoster.startsWith('http')||_fPoster.startsWith('/assets/'))?_fPoster:TMDB_IMG+_fPoster):getPosterSrc(title,false)||null;
   const _isEd4=posterUrl&&posterUrl.includes('cloudfront.net');
   const _sec4=(()=>{const _p=FILMS.find(f=>f.film_list&&f.film_list.some(c=>c.title===title));return _p?.section||'';})();
@@ -398,7 +398,7 @@ export function _openCombinedFilmSheet(filmData){
     </div>
     <div class="pel-sheet-divider"></div>
     <div class="pel-sheet-section-lbl">${t('label_sinopsis')}</div>
-    <div class="pel-sheet-synopsis">${_lang==='en'&&synopsis_en?synopsis_en:(synopsis||'')}</div>
+    <div class="pel-sheet-synopsis">${_lang==='en'&&synopsis_en?synopsis_en:_lang==='es'&&synopsis_es?synopsis_es:(synopsis||'')}</div>
     <a class="c-lb pel-sheet-lb" href="${lbHref}" target="_blank" rel="noopener">${LB_SVG}<span class="c-lb-text pel-sheet-lb-text">Letterboxd</span></a>
     <div class="pel-sheet-divider"></div>
   `;
