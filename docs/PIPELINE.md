@@ -188,6 +188,19 @@ Columnas del CSV — **clase organizador** (lo que solo el festival sabe):
    espera. **`backdrop_path` es landscape (16:9). NUNCA usar `backdrop_path`.**
    Usar `poster_path` garantiza el aspecto correcto sin medir píxeles.
 
+**Regla de fallback de poster (orden de prioridad):**
+1. Poster **portrait de TMDB** verificado visualmente → usar.
+2. Poster **portrait de fuente oficial** del festival → usar.
+3. Sin portrait confiable → **poster editorial generado** (`poster: ""`).
+
+❌ **Nunca dejar un poster landscape del CDN del festival como poster final.**
+`object-fit:cover` no es una solución — es un workaround que recorta y degrada
+la experiencia visual. Si la única fuente es landscape y no hay portrait
+confiable (TMDB ni oficial), vaciar el campo (`poster: ""`) y dejar que el
+sistema genere el poster editorial. *(Precedente Olhar 2026: 19 films sin match
+TMDB confiable — 18 brasileños contemporáneos + 1 con director discordante —
+pasaron de Supabase landscape a `poster: ""` → editorial.)*
+
 ---
 
 ### Fase 3b · Letterboxd slugs `[Data Engineer — Chrome tab obligatorio]`
