@@ -48,6 +48,8 @@ export const SECTION_ORDER_LIST = [
   '🌙 Escape From Tribeca','📽️ Reunions & Retrospectives','🗣️ Talks',
   '🎙️ Podcasts','⭐ Special Events','📱 NOW','📺 TV','🎨 Shorts Programs',
   '🌿 Free Outdoor Screenings',
+  // Olhar de Cinema 2026 (orden curatorial)
+  '🎬 Apertura','🏆 Competencia Brasil','🌍 Competencia Internacional','👁️ Nuevas Perspectivas','🌱 Pequeñas Perspectivas','🏞️ Mirada Paranaense','✨ Proyecciones Especiales','🎞️ Clásicos','🏛️ Retrospectiva','🌟 Clausura',
   // Sin emoji (festivales legacy)
   'Gala','Spotlight+','U.S. Narrative Competition',
   'International Narrative Competition','Documentary Competition',
