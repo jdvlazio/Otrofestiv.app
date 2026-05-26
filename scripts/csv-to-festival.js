@@ -19,6 +19,16 @@
  *     vacío, día inválido, venue sin coords, duplicados, ALLCAPS.
  *   - NO escribe enrichment: poster, synopsis_en, lbSlug, genre. Eso es downstream.
  *   - NO escribe config{}: la config va a src/config.js vía generate-config.js.
+ *
+ * LÍMITE CONOCIDO — programas con film_list:
+ *   El CSV es PLANO (una fila por función) y no puede anidar sub-películas. Por eso
+ *   este convertidor maneja films (Tipo 1/1b) y eventos (Tipo 4), pero NO expresa
+ *   programas de cortos (`is_cortos` + `film_list`) ni programas combinados
+ *   (`is_programa`). Verificado contra cinemancia-2025: sus 19 programas de cortos y
+ *   5 combinados saldrían como films planos SIN sus sub-películas.
+ *   → Esos programas se autorían a mano en el JSON (Tipo 2/3 de festival-template.json)
+ *     DESPUÉS de correr el convertidor. El convertidor cubre el caso común (films +
+ *     eventos + multi-función); los programas anidados quedan fuera de su alcance.
  */
 
 const fs = require('fs');
