@@ -320,6 +320,36 @@ export async function exportICS(){
   lines.push('END:VCALENDAR');
   const icsText=lines.join('\r\n');
   const fileName=`otrofestiv-${_icsId}.ics`;
+  // iOS nativo (SwiftUI WKWebView + EventKit): alta directa al Calendario,
+  // sin hoja de compartir. El puente Swift expone messageHandler 'calendar'.
+  // Mandamos instantes absolutos en epoch ms (ya correctos: offset del festival).
+  const _wk=window.webkit?.messageHandlers?.calendar;
+  if(_wk){
+    const _clean=str=>(str||'').replace(/[\r\n]/g,' ').trim();
+    const events=[];
+    savedAgenda.schedule.forEach(s=>{
+      const dateStr=FESTIVAL_DATES[s.day]; if(!dateStr) return;
+      const start=_festDate(dateStr,to24h(s.time));
+      if(isNaN(start.getTime())) return;
+      const dur=s.duration?parseInt(String(s.duration)):90;
+      const end=new Date(start.getTime()+(isNaN(dur)?90:dur)*60000);
+      events.push({
+        title:_clean(s._title),
+        start:start.getTime(),
+        end:end.getTime(),
+        location:_clean(vcfg(s.venue).short||s.venue),
+        notes:`${_clean(_icsCfg.name||'Festival')}${s.section?(' · '+_clean(s.section)):''}`
+      });
+    });
+    if(!events.length){ showToast(t('plan_sin_plan'),'warn'); return; }
+    // Swift llama esto vía evaluateJavaScript con el resultado.
+    window.__otfCalResult=res=>{
+      if(res&&res.status==='added') showToast(t('ics_success').replace('{n}',res.count),'info');
+      else showToast(t('ics_permission_denied'),'warn',5000); // denied | error → mismo aviso accionable
+    };
+    _wk.postMessage({events});
+    return;
+  }
   // Capacitor nativo: Filesystem + Share para invocar Calendar.app
   if(window.Capacitor?.isNativePlatform()){
     const b64=btoa(unescape(encodeURIComponent(icsText)));
