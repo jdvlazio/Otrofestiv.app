@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `24e7f1a feat(festival): Olhar de Cinema 2026 — 80 films, método A2 (SPA client-rendered)`
+> Último commit: `256a764 chore: bundle v202605261445`
 
 ---
 
@@ -60,7 +60,7 @@ Juan es Product Owner, diseñador y developer. Claude ejecuta; Juan audita y apr
 | `tribeca2026` | Tribeca Festival | New York | JUN 3–14 | **Próximo / activo** |
 | `cinemancia2025` | Cinemancia 2025 | Valle de Aburrá | 11–20 SEP | Archivado |
 | `leviza2026` | Leviza - Festival de Cine y Audiovisuales | Zapatoca | 14–17 MAY | Recién terminado |
-| `olhar2026` | Olhar de Cinema 2026 | Curitiba | 4–13 JUN | **Próximo / activo** |
+| `olhar2026` | Olhar de Cinema | Curitiba | JUN 4–13 | **Próximo / activo** |
 
 ### Features activas (desde `.specify/features/`)
 
