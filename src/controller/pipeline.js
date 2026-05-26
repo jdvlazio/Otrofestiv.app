@@ -239,3 +239,50 @@ export function setLang(code){
     });
   }, 200); // --tr-smooth = 200ms
 }
+
+// ── Lang toggle dropdown ──────────────────────────────────────────────────
+// Shell de UI sobre setLang: abre/cierra el desplegable y delega el cambio de
+// idioma en setLang(). No modifica setLang ni _applyI18nDOM. El highlight de
+// la opción activa lo mantiene _applyI18nDOM (toggle .active en #lang-btn-es/en).
+export function toggleLangDropdown(){
+  const tog=document.getElementById('lang-toggle');
+  const trg=document.getElementById('lang-trigger');
+  if(!tog) return;
+  const open=!tog.classList.contains('open');
+  tog.classList.toggle('open', open);
+  if(trg) trg.setAttribute('aria-expanded', open?'true':'false');
+  if(open) setTimeout(()=>{ document.addEventListener('click', langOutside); }, 0);
+  else document.removeEventListener('click', langOutside);
+}
+
+export function closeLangDropdown(){
+  const tog=document.getElementById('lang-toggle');
+  const trg=document.getElementById('lang-trigger');
+  if(tog) tog.classList.remove('open');
+  if(trg) trg.setAttribute('aria-expanded', 'false');
+  document.removeEventListener('click', langOutside);
+}
+
+export function langOutside(e){
+  const tog=document.getElementById('lang-toggle');
+  if(tog && !tog.contains(e.target)) closeLangDropdown();
+}
+
+export function selectLang(el){
+  const code=el && el.dataset ? el.dataset.code : null;
+  if(!code) return;
+  // Reflejar la bandera en el trigger cerrado (inmediato, sin depender de _applyI18nDOM)
+  const flag=el.querySelector('.lang-opt-flag');
+  const trgFlag=document.getElementById('lang-trigger-flag');
+  if(flag && trgFlag) trgFlag.textContent=flag.textContent;
+  closeLangDropdown();
+  setLang(code);
+}
+
+// Inicializa la bandera del trigger desde la opción activa (marcada por
+// _applyI18nDOM en boot). Llamado una vez en el bootstrap.
+export function _syncLangTrigger(){
+  const active=document.querySelector('#lang-dropdown .lang-opt.active .lang-opt-flag');
+  const trgFlag=document.getElementById('lang-trigger-flag');
+  if(active && trgFlag) trgFlag.textContent=active.textContent;
+}

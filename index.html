@@ -365,10 +365,17 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .sync-dot{position:absolute;bottom:0;right:0;width:7px;height:7px;border-radius:50%;border:1.5px solid var(--surf);display:none}
 .sync-dot.sync-ok{display:block;background:var(--amber)}
 .sync-dot.sync-err{display:block;background:#e05}
-.lang-toggle{display:flex;align-items:center;gap:var(--sp-1);margin-left:var(--sp-2);flex-shrink:0}
-.lang-btn{background:none;border:none;cursor:pointer;font-size:var(--t-md);line-height:1;padding:var(--sp-1) var(--sp-1);border-radius:var(--r-sm);opacity:.55;-webkit-tap-highlight-color:transparent;transition:opacity var(--tr-base);position:relative}
-.lang-btn::after{content:'';position:absolute;inset:-14px}
-.lang-btn.active{opacity:1}
+.lang-toggle{position:relative;margin-left:var(--sp-2);flex-shrink:0}
+.lang-trigger{display:flex;align-items:center;gap:var(--sp-1);background:none;border:none;cursor:pointer;padding:var(--sp-1);border-radius:var(--r-sm);-webkit-tap-highlight-color:transparent}
+.lang-trigger-flag{font-size:var(--t-md);line-height:1}
+.lang-trigger-chev{display:flex;align-items:center;color:var(--gray2);transition:transform var(--tr-base)}
+.lang-toggle.open .lang-trigger-chev{transform:rotate(180deg)}
+.lang-dropdown{position:absolute;top:calc(100% + var(--sp-1));right:0;z-index:201;min-width:148px;background:var(--card-a);border:1px solid var(--bdr);border-radius:var(--r-md);overflow:hidden;display:none}
+.lang-toggle.open .lang-dropdown{display:block}
+.lang-opt{display:flex;align-items:center;gap:var(--sp-2);width:100%;background:none;border:none;cursor:pointer;padding:var(--sp-2) var(--sp-3);font-family:var(--font);font-size:var(--t-sm);font-weight:var(--w-semi);color:var(--white);text-align:left;-webkit-tap-highlight-color:transparent;transition:background var(--tr-base),color var(--tr-base)}
+.lang-opt:not(:last-child){border-bottom:1px solid var(--bdr-l)}
+.lang-opt-flag{font-size:var(--t-md);line-height:1}
+.lang-opt.active{color:var(--amber);background:rgba(245,158,11,.06)}
 /* Fila wordmark + account */
 .hdr-top{display:flex;align-items:center;padding:var(--sp-2) var(--sp-4);min-height:36px;width:100%}
 .hdr-top .hdr-wordmark{flex:none;margin:0}
@@ -2525,8 +2532,14 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
       <span class="sync-dot" id="sync-dot"></span>
     </button>
     <div class="lang-toggle" id="lang-toggle" aria-label="Idioma / Language">
-      <button class="lang-btn" id="lang-btn-es" data-action="setLang" data-code="es" aria-label="Español">🇪🇸</button>
-      <button class="lang-btn" id="lang-btn-en" data-action="setLang" data-code="en" aria-label="English">🇺🇸</button>
+      <button class="lang-trigger" id="lang-trigger" data-action="toggleLangDropdown" aria-haspopup="listbox" aria-expanded="false" aria-label="Idioma / Language">
+        <span class="lang-trigger-flag" id="lang-trigger-flag" aria-hidden="true">🇪🇸</span>
+        <span class="lang-trigger-chev" aria-hidden="true"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg></span>
+      </button>
+      <div class="lang-dropdown" id="lang-dropdown" role="listbox">
+        <button class="lang-btn lang-opt" id="lang-btn-es" data-action="selectLang" data-code="es" role="option" aria-label="Español"><span class="lang-opt-flag" aria-hidden="true">🇪🇸</span><span class="lang-opt-name">Español</span></button>
+        <button class="lang-btn lang-opt" id="lang-btn-en" data-action="selectLang" data-code="en" role="option" aria-label="English"><span class="lang-opt-flag" aria-hidden="true">🇺🇸</span><span class="lang-opt-name">English</span></button>
+      </div>
     </div>
   </div>
   <div class="hdr-fest-bar" id="hdr-fest-bar">
