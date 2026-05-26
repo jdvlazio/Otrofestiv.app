@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `545551e feat(ics): puente EventKit iOS — alta directa al Calendario (lado web) (#62)`
+> Último commit: `248e9e8 feat(planear): prio strip — 3 estados (intención / resolución / stale) (#63)`
 
 ---
 
@@ -115,7 +115,7 @@ Juan es Product Owner, diseñador y developer. Claude ejecuta; Juan audita y apr
 - **Tokens:** todo valor de spacing, tipografía y radio usa `var(--)`. Cero valores raw.
 - **Regex en index.html:** prohibido para transformaciones estructurales de >10 ocurrencias.
 - **Timezone:** Colombia (UTC-5). Nunca `toISOString()` para lógica de fechas.
-- **i18n:** toda string nueva va a `es.json` + `en.json` + `strings-reference.json`.
+- **i18n:** la fuente de verdad es `src/i18n/i18n.js` (bloque `_I18N`, es+en). Toda string nueva va ahí — es lo que lee `t()` y lo que valida `validate.py [i18n-complete]`. Los `i18n/*.json` quedaron desincronizados y NO se consumen en runtime (legacy); no son la fuente. El `sync-i18n.py` fue retirado (apuntaba a un `_I18N` en `index.html` que la Fase 8 movió a `src/i18n/i18n.js`).
 - **Splash placeholder:** el markup estático de `#splash-sel-name`/`#splash-sel-meta` en `index.html` debe reflejar el festival activo actual (= `detectActiveFest()`/`_DEFAULT_FEST_ID`). Es solo placeholder pre-JS, pero si queda stale el selector "brinca" del festival viejo al detectado al cargar. **Actualizarlo en cada cambio de festival activo.**
 
 ---
