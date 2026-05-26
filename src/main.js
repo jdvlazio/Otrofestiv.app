@@ -632,7 +632,7 @@ FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202605261522';
+const BUILD_VERSION='202605261539';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';
@@ -1711,23 +1711,30 @@ if('serviceWorker' in navigator){
       .then(function(r){ return r.json(); })
       .then(function(v){
         var serverBuild = v[_isIOS ? 'ios' : 'android'] || '';
-        var localBuild  = localStorage.getItem(_BUILD_KEY) || '';
-        if(serverBuild){
-          if(serverBuild !== localBuild && !_reloading){
-            // Versión distinta (incluye primera instalación con localBuild vacío):
-            // guardar primero para evitar loop, luego recargar solo si había versión previa
-            var wasFirstInstall = !localBuild;
+        if(!serverBuild) return;
+        // Comparar contra BUILD_VERSION (horneado en el bundle que REALMENTE está
+        // corriendo) — único indicador confiable de qué código se cargó. NO contra
+        // localStorage, que solo refleja "vi este version.json", no "cargué este JS".
+        if(serverBuild === BUILD_VERSION){
+          // El bundle cargado ya es el del servidor → recién ahora marcar como
+          // actualizado. (Antes se escribía ANTES de recargar → en iOS el reload
+          // servía el bundle viejo desde caché y el marcador quedaba "actualizado"
+          // para siempre, deshabilitando el trigger.)
+          if(localStorage.getItem(_BUILD_KEY) !== serverBuild){
             localStorage.setItem(_BUILD_KEY, serverBuild);
-            if(!wasFirstInstall){
-              // Update real: recargar para tomar la nueva versión
-              _reloading = true;
-              location.reload();
-            }
-            // En primera instalación: el SW ya tomó control (skipWaiting+claim),
-            // el próximo visibilitychange o cold-start traerá contenido fresco.
           }
-          // misma versión: no hacer nada
+          return;
         }
+        // serverBuild !== BUILD_VERSION → hay un bundle nuevo que todavía no cargó.
+        // Recargar con cache-busting REAL del documento (?v=serverBuild) para
+        // bypassear la caché HTTP de WKWebView que causaba el stuck en iOS.
+        // Guard de loop: si ya estamos en ?v=serverBuild, no re-navegar (el
+        // sub-recurso pudo quedar en caché) — se reintenta en el próximo cold-start.
+        if(!_reloading && location.href.indexOf('v=' + serverBuild) === -1){
+          _reloading = true;
+          location.href = location.href.split('?')[0].split('#')[0] + '?v=' + serverBuild;
+        }
+        // NO se escribe orf_build aquí: el bundle nuevo aún no cargó.
       })
       .catch(function(){});
   }
