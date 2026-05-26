@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `dadc778 chore(festivals): declarar synopsis_lang en los festivales que lo tenían null (#92)`
+> Último commit: `b5c87b5 feat(validate): gate [i18n-content-coverage] — detección de huecos de traducción de contenido (#91)`
 
 ---
 
