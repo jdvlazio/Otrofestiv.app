@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `dd44688 feat(i18n): selector de idioma desplegable (#79)`
+> Último commit: `5d20c07 chore: bundle v202605261937`
 
 ---
 
