@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `18053a2 fix(olhar2026): nombre sin año + formato de fechas MES día–día`
+> Último commit: `c668033 chore: bundle v202605261508`
 
 ---
 

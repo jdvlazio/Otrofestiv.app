@@ -51,26 +51,22 @@ if (bvFile === bvBefore) {
 }
 fs.writeFileSync(bvPath, bvFile);
 
-// ── version.json — android bump, ios se preserva ─────────────────────────
+// ── version.json — android e ios al MISMO build ──────────────────────────
 // Formato: { android: "BUILD", ios: "BUILD" }
-// iOS solo se actualiza via "Promover a iOS" en GitHub Actions.
+// El wrapper nativo (WKWebView) no cambia entre deploys — solo el contenido web —,
+// así que iOS se actualiza en la misma cadencia que Android. Sin staged rollout:
+// el poll de version.json en el cliente recarga iOS en la próxima reapertura.
+// (El SW no es confiable en WKWebView sin App-Bound Domains → version.json es el
+//  canal de update de iOS, por eso ambos campos deben avanzar juntos.)
+// NOTA: promote-ios.yml queda obsoleto con este cambio.
 const vPath = path.join(ROOT, 'version.json');
-let vData = { android: build, ios: build }; // default si no existe
-if (fs.existsSync(vPath)) {
-  try {
-    const existing = JSON.parse(fs.readFileSync(vPath, 'utf8'));
-    // Preservar ios tal como está — solo bumpeamos android
-    vData = { android: build, ios: existing.ios || build };
-  } catch (_) {
-    // JSON corrupto → resetear ambos
-  }
-}
+const vData = { android: build, ios: build };
 fs.writeFileSync(vPath, JSON.stringify(vData, null, 2) + '\n');
 
 console.log(`✅ Build: ${build}`);
 console.log(`   sw.js        → CACHE_NAME + BUILD = ${build}`);
 console.log(`   src/main.js  → BUILD_VERSION = ${build}`);
-console.log(`   version.json → android = ${build}, ios = ${vData.ios} (preservado)`);
+console.log(`   version.json → android = ${build}, ios = ${vData.ios} (misma cadencia)`);
 
 // Regenerar CLAUDE.md con estado actual del repo
 try { require('./generate-claude-md'); } catch (_) {}
