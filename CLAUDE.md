@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `4992e89 feat(olhar2026): 27 posters TMDB portrait (clásicos + internacionales)`
+> Último commit: `4dc895f feat(olhar2026): 19 films sin TMDB → poster editorial (poster:"")`
 
 ---
 
