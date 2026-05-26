@@ -33,6 +33,10 @@ const _GENRE_EN = {
   'Romance':'Romance','Sátira':'Satire','Terror':'Horror','Thriller':'Thriller',
   'Animación':'Animation','Ciencia Ficción':'Science Fiction',
   'Fantasía':'Fantasy','Misterio':'Mystery','Musical':'Musical',
+  // Nombres canónicos TMDB es-ES (también usados por festivales legacy)
+  'Ciencia ficción':'Science Fiction','Música':'Music','Crimen':'Crime',
+  'Historia':'History','Suspense':'Thriller','Bélica':'War','Familia':'Family',
+  'Película de TV':'TV Movie','Western':'Western',
 };
 let _toastActionFn=null;
 let _pvTitle='', _pvRating=0;
