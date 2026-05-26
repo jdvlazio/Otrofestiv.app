@@ -468,6 +468,43 @@ try:
 except Exception as e:
     warn(check, f'no se pudo verificar i18n: {e}')
 
+# ── CHECK: i18n-parity ────────────────────────────────────────────────────────
+# Paridad ES/EN en el runtime (src/i18n/i18n.js, fuente de verdad — NO los JSON).
+# Falla si una key existe en un idioma y no en el otro. Sin esto el desync crece
+# en silencio (el fallback de t() a ES enmascara keys EN faltantes).
+check = 'i18n-parity'
+try:
+    _src = open('src/i18n/i18n.js', encoding='utf-8').read()
+    _b0 = _src.find('const _I18N = {')
+    _depth = 0; _end = _b0
+    for _i, _ch in enumerate(_src[_b0:]):
+        if _ch == '{': _depth += 1
+        elif _ch == '}':
+            _depth -= 1
+            if _depth == 0: _end = _b0 + _i + 1; break
+    _blk = _src[_b0:_end]
+    def _lang_block(block, lang):
+        m = re.search(rf'{lang}\s*:\s*{{', block)
+        if not m: return ''
+        pos = m.end() - 1; d = 0
+        for i, ch in enumerate(block[pos:], pos):
+            if ch == '{': d += 1
+            elif ch == '}':
+                d -= 1
+                if d == 0: return block[pos+1:i]
+        return ''
+    _es = set(re.findall(r'"([^"]+)":', _lang_block(_blk, 'es')))
+    _en = set(re.findall(r'"([^"]+)":', _lang_block(_blk, 'en')))
+    _es_only = sorted(_es - _en); _en_only = sorted(_en - _es)
+    for _k in _es_only:
+        fail(check, f"key '{_k}' en ES pero falta en EN (src/i18n/i18n.js)")
+    for _k in _en_only:
+        fail(check, f"key '{_k}' en EN pero falta en ES (src/i18n/i18n.js)")
+    if not _es_only and not _en_only:
+        ok(check, f'paridad ES/EN OK — {len(_es)} keys en ambos (src/i18n/i18n.js)')
+except Exception as e:
+    warn(check, f'no se pudo verificar paridad i18n: {e}')
+
 # ── CHECK: i18n-hardcoded ─────────────────────────────────────────────────────
 # Detecta strings de UI conocidos hardcodeados en JS sin pasar por t().
 # p8 Step 4: _I18N y t() se movieron a src/i18n/i18n.js. Se escanea SOLO el código

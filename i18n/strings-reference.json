@@ -1128,5 +1128,200 @@
     "es": "Sin funciones disponibles",
     "en": "No upcoming screenings",
     "context": "Chip de prioridad cuyas funciones ya pasaron (estado .past)."
+  },
+  "auth_eliminando": {
+    "es": "Eliminando…",
+    "en": "Deleting…",
+    "context": "Backfill runtime→referencia (Paso 2 i18n). Grupo auth."
+  },
+  "auth_eliminar": {
+    "es": "Eliminar cuenta",
+    "en": "Delete account",
+    "context": "Backfill runtime→referencia (Paso 2 i18n). Grupo auth."
+  },
+  "auth_eliminar_aviso": {
+    "es": "Al eliminar tu cuenta se borrará tu plan guardado.",
+    "en": "Deleting your account will remove your saved plan.",
+    "context": "Backfill runtime→referencia (Paso 2 i18n). Grupo auth."
+  },
+  "auth_eliminar_btn": {
+    "es": "Sí, eliminar",
+    "en": "Yes, delete",
+    "context": "Backfill runtime→referencia (Paso 2 i18n). Grupo auth."
+  },
+  "auth_eliminar_confirm": {
+    "es": "Tocá de nuevo para confirmar",
+    "en": "Tap again to confirm",
+    "context": "Backfill runtime→referencia (Paso 2 i18n). Grupo auth."
+  },
+  "auth_eliminar_desc": {
+    "es": "Se eliminarán tu cuenta y tu plan guardado. Esta acción no se puede deshacer.",
+    "en": "Your account and saved plan will be deleted. This cannot be undone.",
+    "context": "Backfill runtime→referencia (Paso 2 i18n). Grupo auth."
+  },
+  "auth_otp_sub": {
+    "es": "Enviamos un código de 6 dígitos a",
+    "en": "We sent a 6-digit code to",
+    "context": "Backfill runtime→referencia (Paso 2 i18n). Grupo auth."
+  },
+  "auth_verificando": {
+    "es": "Verificando…",
+    "en": "Verifying…",
+    "context": "Backfill runtime→referencia (Paso 2 i18n). Grupo auth."
+  },
+  "export_guardar_compartir": {
+    "es": "Guardar y compartir",
+    "en": "Save and share",
+    "context": "Backfill runtime→referencia (Paso 2 i18n). Grupo export."
+  },
+  "fs_cambiar": {
+    "es": "Cambiar festival",
+    "en": "Change festival",
+    "context": "Backfill runtime→referencia (Paso 2 i18n). Grupo fs."
+  },
+  "fs_en_curso": {
+    "es": "En curso",
+    "en": "Ongoing",
+    "context": "Backfill runtime→referencia (Paso 2 i18n). Grupo fs."
+  },
+  "fs_festivales": {
+    "es": "Festivales",
+    "en": "Festivals",
+    "context": "Backfill runtime→referencia (Paso 2 i18n). Grupo fs."
+  },
+  "fs_proximos": {
+    "es": "Próximos",
+    "en": "Upcoming",
+    "context": "Backfill runtime→referencia (Paso 2 i18n). Grupo fs."
+  },
+  "label_anterior": {
+    "es": "anterior",
+    "en": "earlier",
+    "context": "Backfill runtime→referencia (Paso 2 i18n). Grupo label."
+  },
+  "label_anteriores": {
+    "es": "anteriores",
+    "en": "earlier",
+    "context": "Backfill runtime→referencia (Paso 2 i18n). Grupo label."
+  },
+  "label_de_dias": {
+    "es": "de",
+    "en": "of",
+    "context": "Backfill runtime→referencia (Paso 2 i18n). Grupo label."
+  },
+  "label_dia_prog": {
+    "es": "Día",
+    "en": "Day",
+    "context": "Backfill runtime→referencia (Paso 2 i18n). Grupo label."
+  },
+  "label_en_curso": {
+    "es": "En curso",
+    "en": "Now showing",
+    "context": "Backfill runtime→referencia (Paso 2 i18n). Grupo label."
+  },
+  "label_sin_confirmar": {
+    "es": "sin confirmar",
+    "en": "unconfirmed",
+    "context": "Backfill runtime→referencia (Paso 2 i18n). Grupo label."
+  },
+  "label_vista": {
+    "es": "vista",
+    "en": "seen",
+    "context": "Backfill runtime→referencia (Paso 2 i18n). Grupo label."
+  },
+  "label_vistas": {
+    "es": "vistas",
+    "en": "seen",
+    "context": "Backfill runtime→referencia (Paso 2 i18n). Grupo label."
+  },
+  "misc_ahora": {
+    "es": "AHORA",
+    "en": "NOW",
+    "context": "Backfill runtime→referencia (Paso 2 i18n). Grupo misc."
+  },
+  "misc_descargar_guardar": {
+    "es": "Tocá Descargar para guardar",
+    "en": "Tap Download to save",
+    "context": "Backfill runtime→referencia (Paso 2 i18n). Grupo misc."
+  },
+  "misc_interes_label": {
+    "es": "Interés",
+    "en": "Interest",
+    "context": "Backfill runtime→referencia (Paso 2 i18n). Grupo misc."
+  },
+  "misc_luego": {
+    "es": "Luego",
+    "en": "Later",
+    "context": "Backfill runtime→referencia (Paso 2 i18n). Grupo misc."
+  },
+  "misc_retraso": {
+    "es": "retraso",
+    "en": "delay",
+    "context": "Backfill runtime→referencia (Paso 2 i18n). Grupo misc."
+  },
+  "plan_borrar_confirm": {
+    "es": "Se eliminará tu plan completo. Esta acción no se puede deshacer.",
+    "en": "Your entire plan will be deleted. This action cannot be undone.",
+    "context": "Backfill runtime→referencia (Paso 2 i18n). Grupo plan."
+  },
+  "plan_borrar_titulo": {
+    "es": "Borrar plan",
+    "en": "Delete plan",
+    "context": "Backfill runtime→referencia (Paso 2 i18n). Grupo plan."
+  },
+  "plan_cabe_hueco": {
+    "es": "Cabe en tu hueco",
+    "en": "Fits in your gap",
+    "context": "Backfill runtime→referencia (Paso 2 i18n). Grupo plan."
+  },
+  "plan_en_min": {
+    "es": "En",
+    "en": "In",
+    "context": "Backfill runtime→referencia (Paso 2 i18n). Grupo plan."
+  },
+  "plan_fest_hoy": {
+    "es": "¡Hoy empieza!",
+    "en": "It starts today!",
+    "context": "Backfill runtime→referencia (Paso 2 i18n). Grupo plan."
+  },
+  "plan_fest_manana": {
+    "es": "Empieza mañana",
+    "en": "Starts tomorrow",
+    "context": "Backfill runtime→referencia (Paso 2 i18n). Grupo plan."
+  },
+  "plan_quitar_confirm": {
+    "es": "Sí, quitar de todo",
+    "en": "Yes, remove from everything",
+    "context": "Backfill runtime→referencia (Paso 2 i18n). Grupo plan."
+  },
+  "plan_retraso": {
+    "es": "¿Retraso?",
+    "en": "Delay?",
+    "context": "Backfill runtime→referencia (Paso 2 i18n). Grupo plan."
+  },
+  "plan_termina": {
+    "es": "termina",
+    "en": "ends",
+    "context": "Backfill runtime→referencia (Paso 2 i18n). Grupo plan."
+  },
+  "plan_termina_en": {
+    "es": "Termina en",
+    "en": "Ends in",
+    "context": "Backfill runtime→referencia (Paso 2 i18n). Grupo plan."
+  },
+  "plan_termino_hace": {
+    "es": "Terminó hace",
+    "en": "Ended",
+    "context": "Backfill runtime→referencia (Paso 2 i18n). Grupo plan."
+  },
+  "plan_tu_dia_en": {
+    "es": "Tu {dia} en",
+    "en": "Your {dia} at",
+    "context": "Backfill runtime→referencia (Paso 2 i18n). Grupo plan."
+  },
+  "splash_anteriores": {
+    "es": "Anteriores",
+    "en": "Previous",
+    "context": "Backfill runtime→referencia (Paso 2 i18n). Grupo splash."
   }
 }
