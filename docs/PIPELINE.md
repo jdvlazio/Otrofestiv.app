@@ -201,6 +201,18 @@ sistema genere el poster editorial. *(Precedente Olhar 2026: 19 films sin match
 TMDB confiable — 18 brasileños contemporáneos + 1 con director discordante —
 pasaron de Supabase landscape a `poster: ""` → editorial.)*
 
+**Poster editorial de programas (`is_cortos` / `is_programa`) — el body no repite la sección.**
+El poster editorial generado tiene dos zonas: **header** = nombre de la sección,
+**body** = título diferenciador del programa. El body **nunca** debe repetir el
+nombre de la sección. `makeProgramPoster` (`src/view/components.js`) lo limpia
+automáticamente: quita del título cualquier coincidencia con el nombre de la
+sección (case-insensitive, sin emojis) y usa el resto como body; si lo limpio
+queda vacío o <3 chars, conserva el título completo (mejor repetir que no mostrar
+nada). Así dos programas de la misma sección nunca quedan con poster idéntico.
+*(Precedente Olhar 2026: "PGM 05 Mirada Paranaense" y "PGM 06 …" en sección
+"Mirada Paranaense" salían ambos solo "MIRADA PARANAENSE"; ahora "PGM 05" / "PGM
+06". Aplica a todos los festivales.)*
+
 ---
 
 ### Fase 3b · Letterboxd slugs `[Data Engineer — Chrome tab obligatorio]`
