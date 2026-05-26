@@ -20,7 +20,11 @@
       - [ ] Solo `poster_path` (portrait 2:3) — **nunca `backdrop_path`** (landscape)
       - [ ] **Verificación visual** vía galería Chrome tab (`gallery.html` + `http.server`) — **obligatoria** antes de escribir
       - [ ] Overrides por transliteración (3/4 criterios + visual) **documentados en el PR** como `override: transliteración`
-- [ ] **Posters de programas** (`is_cortos`/`is_programa`): ninguno muestra el nombre de la sección en el body — verificar visualmente en Chrome para **cada sección con más de un programa** (que no queden dos posters idénticos). `makeProgramPoster` lo limpia automáticamente, pero confirmar en vivo.
+- [ ] **Posters de programas** (`is_cortos`/`is_programa`) — REGLA INAMOVIBLE:
+      - [ ] El **body** es el **identificador único** del programa: el **número/código** (`PGM 05`) para numerados, el **nombre propio** para los nombrados. **Nunca** el descriptor de sección suelto.
+      - [ ] El texto sale del **título original** (`f.title`), nunca de la traducción de UI (`f.section`). **No mezcla de idiomas** (un código es neutro; un nombre propio va en su idioma).
+      - [ ] **`node scripts/validate-festivals.js` → 0 errores** en `[poster-editorial-unique]` (ningún par de programas con poster editorial idéntico). El check no da falsos positivos: si falla, es real.
+      - [ ] Confirmar en Chrome (ES y EN) en cada sección con >1 programa.
 - [ ] **Films individuales y cortos**: ninguno con `poster: ""` salvo que se hayan agotado las **5 fuentes** (TMDB portrait → LB portrait → portrait oficial → landscape oficial → editorial sin imagen). `poster: ""` es exclusivo de programas.
 - [ ] **Landscape 16:9 del CDN** (cloudfront/supabase): va **dentro** del poster editorial (editorial-con-imagen vía `_isEditorialImageUrl`), no se descarta ni se vacía.
 - [ ] **Verificar en Chrome** que los cortos en `film_list` muestran imagen en el sheet del programa (portrait TMDB/LB o editorial-con-imagen para landscapes).

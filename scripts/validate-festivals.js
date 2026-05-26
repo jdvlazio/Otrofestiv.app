@@ -466,28 +466,63 @@ if (skErrors.length) {
   for (const e of skErrors) console.log(`  ✗ ERROR:   ${e}`);
 }
 
-// ── Output ───────────────────────────────────────────────────────────────────
-for (const { fname, errors, warnings } of results) {
-  if (errors.length === 0 && warnings.length === 0) {
-    console.log(`✓ ${fname}`);
-    continue;
+// ── [poster-editorial-unique] + Output (async: importa makeProgramPoster ESM) ──
+(async () => {
+  // [poster-editorial-unique] ERROR — dos programas (is_cortos/is_programa) del
+  // MISMO festival que renderizan un poster editorial generativo IDÉNTICO.
+  // Usa la función REAL makeProgramPoster (no una réplica) → cero falsos positivos:
+  // si dos programas se ven iguales, es un error real. Solo aplica a programas SIN
+  // poster propio (los que efectivamente rinden el editorial generativo).
+  let makeProgramPoster = null;
+  try {
+    const _cu = require('url').pathToFileURL(path.join(__dirname, '..', 'src', 'view', 'components.js')).href;
+    ({ makeProgramPoster } = await import(_cu));
+  } catch (e) {
+    console.error(`⚠ [poster-editorial-unique] no se pudo importar makeProgramPoster: ${e.message}`);
   }
-  hasIssues = true;
-  console.log(`\n── ${fname} ──`);
-  for (const e of errors)   console.log(`  ✗ ERROR:   ${e}`);
-  for (const w of warnings) console.log(`  ⚠ WARNING: ${w}`);
-}
+  if (makeProgramPoster) {
+    const _mockState = { snapshot: () => ({ FILMS: [] }) };
+    for (const r of results) {
+      let data;
+      try { data = JSON.parse(fs.readFileSync(path.join(festivalsDir, r.fname), 'utf8')); } catch (e) { continue; }
+      const progs = (data.films || []).filter(f => (f.is_cortos || f.is_programa) && !f.poster);
+      const seen = {}; // svg → Set(títulos)
+      for (const p of progs) {
+        const svg = makeProgramPoster(_mockState, p.title, p.duration || '', p.section || '');
+        (seen[svg] = seen[svg] || new Set()).add(p.title);
+      }
+      for (const titles of Object.values(seen)) {
+        if (titles.size > 1) {
+          r.errors.push(`[poster-editorial-unique] ${titles.size} programas con poster editorial idéntico: ${[...titles].join(' | ')}`);
+          totalErrors++;
+        }
+      }
+    }
+  }
 
-console.log(`\n${'─'.repeat(50)}`);
-console.log(`Festivales: ${files.length} | Errores: ${totalErrors} | Warnings: ${totalWarnings}`);
+  // ── Output ───────────────────────────────────────────────────────────────────
+  for (const { fname, errors, warnings } of results) {
+    if (errors.length === 0 && warnings.length === 0) {
+      console.log(`✓ ${fname}`);
+      continue;
+    }
+    hasIssues = true;
+    console.log(`\n── ${fname} ──`);
+    for (const e of errors)   console.log(`  ✗ ERROR:   ${e}`);
+    for (const w of warnings) console.log(`  ⚠ WARNING: ${w}`);
+  }
 
-if (totalErrors > 0) {
-  console.log('\n✗ Validación fallida — corregir errores antes de commit\n');
-  process.exit(1);
-} else if (totalWarnings > 0) {
-  console.log('\n⚠ Validación OK con warnings — revisar antes de publicar\n');
-  process.exit(0);
-} else {
-  console.log('\n✓ Validación completa — todos los festivales OK\n');
-  process.exit(0);
-}
+  console.log(`\n${'─'.repeat(50)}`);
+  console.log(`Festivales: ${files.length} | Errores: ${totalErrors} | Warnings: ${totalWarnings}`);
+
+  if (totalErrors > 0) {
+    console.log('\n✗ Validación fallida — corregir errores antes de commit\n');
+    process.exit(1);
+  } else if (totalWarnings > 0) {
+    console.log('\n⚠ Validación OK con warnings — revisar antes de publicar\n');
+    process.exit(0);
+  } else {
+    console.log('\n✓ Validación completa — todos los festivales OK\n');
+    process.exit(0);
+  }
+})();

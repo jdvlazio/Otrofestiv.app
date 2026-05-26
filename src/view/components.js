@@ -48,6 +48,17 @@ export function makeProgramPoster(state, title, duration, section){
   // Sin número: extraer solo la parte distintiva
   let bodyTitle='';
   if(!num){
+    // ── REGLA INAMOVIBLE: el body = identificador único del programa ──────
+    // Para programas con código "PGM N" el código ES el identificador → body.
+    // Se extrae del TÍTULO (no se matchea contra la sección): idioma-agnóstico
+    // y sin string-matching frágil. El descriptor del festival que sigue al
+    // código (ej. "Competitiva BR/INT", "Pequenos Olhares") desaparece del body.
+    //   "PGM 01 Competitiva BR/INT" → "PGM 01"   "PGM 05 Mirada Paranaense" → "PGM 05"
+    // Ver docs/PIPELINE.md (posters editoriales).
+    const _code=title.match(/\bPGM\s*\d+/i);
+    if(_code){
+      bodyTitle=_code[0].replace(/\s+/g,' ').trim().toUpperCase();
+    } else {
     const secBase=filmSec.replace(/\p{Emoji}/gu,'').replace(/[^\w\sáéíóúüñÁÉÍÓÚÜÑ¿!()·\-]/gu,'').trim();
     bodyTitle=title
       .replace(/—?\s*Prog\.\s*(?:de\s+)?Cortos\s*$/i,'')
@@ -57,25 +68,19 @@ export function makeProgramPoster(state, title, duration, section){
       .replace(/^Programa\s+/i,'')
       .replace(/^Competencia\s+/i,'')
       .trim();
-    // ── REGLA PERMANENTE (todos los festivales) ──────────────────────────
-    // El body del poster de programa NUNCA debe repetir el nombre de la
-    // sección: ya está en el header. Se quita el nombre de sección dondequiera
-    // que aparezca (case-insensitive), conservando solo el diferenciador.
-    //   "PGM 05 Mirada Paranaense" / secc "Mirada Paranaense" → "PGM 05"
-    //   "Sessão … na Tela — Mirada Paranaense"               → "Sessão … na Tela"
-    //   "PGM 07 Pequenos Olhares"  / secc "Pequeñas Persp…"  → sin cambios
-    // Ver docs/PIPELINE.md (posters editoriales).
+    // Programas con nombre propio (sin código): quitar el nombre de sección si
+    // aparece literal (el body es el identificador, nunca el descriptor de
+    // sección — ya está en el header).
     if(secBase){
       const _secRe=new RegExp('\\s*[—\\-:·]?\\s*'+secBase.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+'\\s*','gi');
       const _stripped=bodyTitle.replace(_secRe,' ').replace(/\s+/g,' ').trim();
-      // Si lo limpio queda vacío o muy corto (<3 chars), conservar el título
-      // completo (mejor repetir la sección que no mostrar nada).
       if(_stripped.length>=3) bodyTitle=_stripped;
     }
     // Descartar el body solo si NO aporta diferenciación: vacío, subcadena del
     // header, o solo símbolos.
     if(!bodyTitle||headerLabel.includes(bodyTitle.toUpperCase())||/^[^a-zA-ZáéíóúüñÁÉÍÓÚÜÑ0-9]+$/.test(bodyTitle))
       bodyTitle='';
+    }
   }
 
   return _buildPosterV16({accent, headerLabel, title:bodyTitle, num:num||dayAbbr||null});

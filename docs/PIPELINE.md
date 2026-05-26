@@ -199,17 +199,33 @@ Columnas del CSV — **clase organizador** (lo que solo el festival sabe):
 
 *(Precedente Olhar 2026: los 34 cortos y Segunda Pele recibieron 30 TMDB portrait + 5 landscape Supabase editorial-con-imagen → 0 con `poster: ""`. Corrige el error previo de vaciar landscapes a editorial-sin-imagen.)*
 
-**Poster editorial de programas (`is_cortos` / `is_programa`) — el body no repite la sección.**
-El poster editorial generado tiene dos zonas: **header** = nombre de la sección,
-**body** = título diferenciador del programa. El body **nunca** debe repetir el
-nombre de la sección. `makeProgramPoster` (`src/view/components.js`) lo limpia
-automáticamente: quita del título cualquier coincidencia con el nombre de la
-sección (case-insensitive, sin emojis) y usa el resto como body; si lo limpio
-queda vacío o <3 chars, conserva el título completo (mejor repetir que no mostrar
-nada). Así dos programas de la misma sección nunca quedan con poster idéntico.
-*(Precedente Olhar 2026: "PGM 05 Mirada Paranaense" y "PGM 06 …" en sección
-"Mirada Paranaense" salían ambos solo "MIRADA PARANAENSE"; ahora "PGM 05" / "PGM
-06". Aplica a todos los festivales.)*
+**Poster editorial de programas (`is_cortos` / `is_programa`) — REGLA INAMOVIBLE.**
+El poster editorial generado tiene dos zonas: **header** = sección (con color de
+acento) y **body** = **identificador único del programa**.
+
+1. **El body es el identificador del programa — nunca el descriptor de la sección.**
+   - **Programas numerados** (`PGM 01`, `Prog. 4`, `Cortos: … 2`…): el body es el
+     **número/código** (ej. `PGM 05`). El descriptor del festival que acompaña al
+     código (ej. "Competitiva BR/INT", "Pequenos Olhares") **desaparece** del body.
+     `makeProgramPoster` extrae el código del **título** (`f.title`), no lo matchea
+     contra la sección → idioma-agnóstico, sin string-matching frágil.
+   - **Programas con nombre propio** (retrospectivas, sesiones especiales,
+     combinados): el body es **el nombre propio** del programa, tal cual el título
+     original. Es correcto que ese nombre incluya o repita la sección si ese ES su
+     nombre real (ej. "Ewelina Rosińska" bajo la sección homónima; "Sessão com
+     Acessibilidade na Tela — Pequenos Olhares"). No es un echo accidental.
+2. **El texto sale del título original (`f.title`), nunca de la traducción de UI**
+   (`f.section` solo aporta el color de acento). Así el body no mezcla idiomas:
+   un código (`PGM 05`) es neutro; un nombre propio va en su idioma original.
+3. **Todo programa produce un poster único.** Dos programas del mismo festival no
+   pueden tener poster editorial idéntico. Lo blinda el check
+   `[poster-editorial-unique]` en `validate-festivals.js` (corre el `makeProgramPoster`
+   real sobre cada programa sin poster propio y falla si dos coinciden) — **ERROR,
+   sin falsos positivos**.
+
+*(Precedente Olhar 2026: los 6 programas numerados mostraban "PGM 0X Competitiva
+BR/INT" / "Pequenos Olhares" — descriptor del festival ≈ sección traducida, mezcla
+PT/ES. Ahora "PGM 0X" a secas, consistente con Mirada. Aplica a todos los festivales.)*
 
 ---
 
