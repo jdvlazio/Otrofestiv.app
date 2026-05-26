@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `bfb65dd fix(update): iOS auto-update stuck — comparar contra BUILD_VERSION, no localStorage (#85)`
+> Último commit: `21b4f13 fix(cache): versionar el <script src> de main.js con ?v=BUILD (#86)`
 
 ---
 

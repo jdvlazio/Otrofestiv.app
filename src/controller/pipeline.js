@@ -247,25 +247,45 @@ export function setLang(code){
 export function toggleLangDropdown(){
   const tog=document.getElementById('lang-toggle');
   const trg=document.getElementById('lang-trigger');
-  if(!tog) return;
+  const dd=document.getElementById('lang-dropdown');
+  if(!tog||!trg||!dd) return;
   const open=!tog.classList.contains('open');
-  tog.classList.toggle('open', open);
-  if(trg) trg.setAttribute('aria-expanded', open?'true':'false');
-  if(open) setTimeout(()=>{ document.addEventListener('click', langOutside); }, 0);
-  else document.removeEventListener('click', langOutside);
+  if(!open){ closeLangDropdown(); return; }
+  tog.classList.add('open');
+  trg.setAttribute('aria-expanded', 'true');
+  // El topbar (position:sticky; z-index:200) crea un stacking context que atrapa
+  // al dropdown — su z-index:201 es local y la barra de filtros (z-index:201 a
+  // nivel root) pinta encima. Para escapar: mover el dropdown al <body> y
+  // posicionarlo fixed bajo el trigger — mismo patrón que seccion-drop/lugar-drop.
+  const r=trg.getBoundingClientRect();
+  dd.style.position='fixed';
+  dd.style.top=(r.bottom+4)+'px';
+  dd.style.right=(window.innerWidth-r.right)+'px';
+  dd.style.zIndex='9999';
+  dd.style.display='block'; // el selector CSS .lang-toggle.open ya no aplica en <body>
+  document.body.appendChild(dd);
+  setTimeout(()=>{ document.addEventListener('click', langOutside); }, 0);
 }
 
 export function closeLangDropdown(){
   const tog=document.getElementById('lang-toggle');
   const trg=document.getElementById('lang-trigger');
+  const dd=document.getElementById('lang-dropdown');
   if(tog) tog.classList.remove('open');
   if(trg) trg.setAttribute('aria-expanded', 'false');
+  if(dd && tog){
+    dd.removeAttribute('style');   // limpia position/top/right/zIndex/display inline
+    tog.appendChild(dd);            // re-parent dentro del toggle (vuelve a display:none por CSS)
+  }
   document.removeEventListener('click', langOutside);
 }
 
 export function langOutside(e){
-  const tog=document.getElementById('lang-toggle');
-  if(tog && !tog.contains(e.target)) closeLangDropdown();
+  // El dropdown vive en <body> mientras está abierto, no dentro de .lang-toggle:
+  // chequear contra el dropdown y el trigger directamente.
+  const dd=document.getElementById('lang-dropdown');
+  const trg=document.getElementById('lang-trigger');
+  if(dd && !dd.contains(e.target) && trg && !trg.contains(e.target)) closeLangDropdown();
 }
 
 export function selectLang(el){
