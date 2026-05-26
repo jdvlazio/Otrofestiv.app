@@ -37,14 +37,15 @@ export function seccionOpen(){
       if(s){ secMap[s]=(secMap[s]||0)+1; if(f.filmCategory) secCatMap[s]=f.filmCategory; }
     }
   });
-  const total=Object.keys(titleSet).length;
 
   // data-s SIEMPRE = section ES (clave de filtro/orden); solo el <span> visible se localiza.
   const _opt=(s,cnt,isActive)=>'<div class="lugar-opt'+(isActive?' on':'')+'" data-s="'+s.replace(/"/g,'&quot;')+'">'
     +'<span>'+_secLabelFull(s)+'</span><span class="lugar-cnt">'+cnt+'</span>'+(isActive?'<span class="txt-amber-ml">✓</span>':'')+'</div>';
 
+  // La opción "todo el programa" NO lleva conteo: el total general sin contexto
+  // confunde (no hay referencia). Las opciones individuales sí lo mantienen.
   let html='<div class="lugar-opt'+(activeSec==='all'?' on':'')+'" data-s="all">'
-    +'<span>'+t('filter_todo_programa')+'</span><span class="lugar-cnt">'+total+'</span>'
+    +'<span>'+t('filter_todo_programa')+'</span>'
     +'</div>';
 
   const hasCategories=Object.keys(secCatMap).length>0;
@@ -309,7 +310,9 @@ export function lugarOpen(){
     return '<div class="lugar-opt'+(isActive?' on':'')+'" data-v="'+v.short+'">'
       +(v.short!=='all'?'<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>':'')
       +'<span>'+v.label+'</span>'
-      +'<span class="lugar-cnt">'+v.count+'</span>'
+      // "todos los lugares" sin conteo (total general sin referencia confunde);
+      // los venues individuales sí muestran su número.
+      +(v.short!=='all'?'<span class="lugar-cnt">'+v.count+'</span>':'')
       +'</div>';
   }).join('');
 

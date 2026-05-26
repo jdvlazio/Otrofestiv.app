@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `344c28c fix(i18n): poster editorial header vía _secLabel (lang-aware)`
+> Último commit: `e82b156 feat(i18n): section_en — display EN de secciones de festival (#94)`
 
 ---
 
