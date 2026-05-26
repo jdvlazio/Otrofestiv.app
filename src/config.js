@@ -166,6 +166,20 @@ export const FESTIVAL_CONFIG={
     dayShort_en:{'JUE 14':'THU 14','VIE 15':'FRI 15','SÁB 16':'SAT 16','DOM 17':'SUN 17'},
     prioLimit:5,
     films:null,posters:null,lbSlugs:{}
+  },
+  'olhar2026':{
+    name:'Olhar de Cinema 2026',shortName:'OLHAR',
+    city:'Curitiba',country:'BR',
+    dates:'4–13 JUN',dates_en:'JUN 4–13',year:2026,timezoneOffset:'-03:00',
+    storageKey:'olhar2026_',festivalStartStr:'2026-06-04T00:00:00',festivalEndStr:'2026-06-13T23:59:00',
+    festivalDates:{'2026-06-04':'2026-06-04','2026-06-05':'2026-06-05','2026-06-06':'2026-06-06','2026-06-07':'2026-06-07','2026-06-08':'2026-06-08','2026-06-09':'2026-06-09','2026-06-10':'2026-06-10','2026-06-11':'2026-06-11','2026-06-12':'2026-06-12','2026-06-13':'2026-06-13'},
+    days:[{k:'2026-06-04',d:4,lbl:'JUE'},{k:'2026-06-05',d:5,lbl:'VIE'},{k:'2026-06-06',d:6,lbl:'SÁB'},{k:'2026-06-07',d:7,lbl:'DOM'},{k:'2026-06-08',d:8,lbl:'LUN'},{k:'2026-06-09',d:9,lbl:'MAR'},{k:'2026-06-10',d:10,lbl:'MIÉ'},{k:'2026-06-11',d:11,lbl:'JUE'},{k:'2026-06-12',d:12,lbl:'VIE'},{k:'2026-06-13',d:13,lbl:'SÁB'}],
+    dayKeys:['2026-06-04','2026-06-05','2026-06-06','2026-06-07','2026-06-08','2026-06-09','2026-06-10','2026-06-11','2026-06-12','2026-06-13'],
+    dayShort:{'2026-06-04':'JUE 4','2026-06-05':'VIE 5','2026-06-06':'SÁB 6','2026-06-07':'DOM 7','2026-06-08':'LUN 8','2026-06-09':'MAR 9','2026-06-10':'MIÉ 10','2026-06-11':'JUE 11','2026-06-12':'VIE 12','2026-06-13':'SÁB 13'},
+    dayShort_en:{'2026-06-04':'THU 4','2026-06-05':'FRI 5','2026-06-06':'SAT 6','2026-06-07':'SUN 7','2026-06-08':'MON 8','2026-06-09':'TUE 9','2026-06-10':'WED 10','2026-06-11':'THU 11','2026-06-12':'FRI 12','2026-06-13':'SAT 13'},
+    dayLong:{'2026-06-04':'Jueves 4 de junio','2026-06-05':'Viernes 5 de junio','2026-06-06':'Sábado 6 de junio','2026-06-07':'Domingo 7 de junio','2026-06-08':'Lunes 8 de junio','2026-06-09':'Martes 9 de junio','2026-06-10':'Miércoles 10 de junio','2026-06-11':'Jueves 11 de junio','2026-06-12':'Viernes 12 de junio','2026-06-13':'Sábado 13 de junio'},
+    prioLimit:5,
+    films:null,posters:null,lbSlugs:{}
   }
 };// Festival data loaded async from festivals/<id>.json via loadFestival()
 

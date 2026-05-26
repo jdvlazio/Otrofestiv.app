@@ -1,9 +1,15 @@
 #!/usr/bin/env python3
+# DEPRECATED — no usar en producción.
+# Las traducciones se generan directamente en el chat
+# (Claude lee synopsis PT/EN y produce ES inline).
+# Este script requiere ANTHROPIC_API_KEY externa y no
+# refleja el método real del pipeline. Ver PIPELINE.md.
 """
-translate-synopsis.py — Traduce sinopsis faltantes via Claude API
-Uso: python3 scripts/translate-synopsis.py festivals/aff-2026.json
-      python3 scripts/translate-synopsis.py festivals/ficci-65.json
-      python3 scripts/translate-synopsis.py festivals/cinemancia-2025.json
+translate-synopsis.py — Genera synopsis_es faltantes via Claude API
+Fuente: synopsis (idioma de origen, ej. PT) con fallback a synopsis_en.
+Destino: synopsis_es (español neutro latinoamericano).
+Uso: python3 scripts/translate-synopsis.py festivals/olhar-2026.json
+      python3 scripts/translate-synopsis.py festivals/aff-2026.json
 Requiere: ANTHROPIC_API_KEY en entorno o argumento --key
 """
 import json, sys, time, urllib.request, urllib.parse, argparse, os
@@ -11,8 +17,8 @@ import json, sys, time, urllib.request, urllib.parse, argparse, os
 ANTHROPIC_URL = 'https://api.anthropic.com/v1/messages'
 MODEL         = 'claude-haiku-4-5-20251001'  # rápido y económico para traducción
 
-SYSTEM = """You are a film synopsis translator specializing in Latin American and world cinema. 
-Translate the given Spanish film synopsis to natural, engaging English. 
+SYSTEM = """You are a film synopsis translator specializing in Latin American and world cinema.
+Translate the given film synopsis (source may be Portuguese or English) to natural, engaging neutral Latin American Spanish.
 Rules:
 - Preserve proper nouns, character names, and place names as-is
 - Keep the same tone (dramatic, poetic, factual) as the original
@@ -20,12 +26,12 @@ Rules:
 - Output only the translated text, no preamble or explanation
 - Keep it concise — same length as the original"""
 
-def translate(synopsis_es, api_key, festival_name=''):
+def translate(source_text, api_key, festival_name=''):
     payload = {
         'model': MODEL,
         'max_tokens': 400,
         'system': SYSTEM,
-        'messages': [{'role': 'user', 'content': f'Translate this film synopsis to English:\n\n{synopsis_es}'}]
+        'messages': [{'role': 'user', 'content': f'Translate this film synopsis to Spanish:\n\n{source_text}'}]
     }
     req = urllib.request.Request(
         ANTHROPIC_URL,
@@ -45,17 +51,19 @@ def run(fest_path, api_key, dry_run=False):
     data  = json.load(open(fest_path, encoding='utf-8'))
     films = data.get('films', [])
 
+    # Fuente: synopsis (idioma de origen, ej. PT) con fallback a synopsis_en.
+    # Destino: synopsis_es (campo nuevo). Solo films sin synopsis_es aún.
     to_translate = [
         f for f in films
-        if f.get('synopsis')
-        and not f.get('synopsis_en')
+        if (f.get('synopsis') or f.get('synopsis_en'))
+        and not f.get('synopsis_es')
         and f.get('type') != 'event'
         and not f.get('is_cortos')
     ]
 
     print(f"Festival: {fest_path}")
-    print(f"Films con synopsis: {sum(1 for f in films if f.get('synopsis'))}")
-    print(f"Sin synopsis_en:    {len(to_translate)}")
+    print(f"Films con fuente (synopsis/synopsis_en): {sum(1 for f in films if f.get('synopsis') or f.get('synopsis_en'))}")
+    print(f"Sin synopsis_es:    {len(to_translate)}")
     print(f"Modo:               {'DRY RUN' if dry_run else 'LIVE'}\n")
 
     ok = 0; errors = []
@@ -65,10 +73,11 @@ def run(fest_path, api_key, dry_run=False):
             if dry_run:
                 print(f"  [DRY] {title[:50]}")
                 continue
-            synopsis_en = translate(f['synopsis'], api_key)
-            f['synopsis_en'] = synopsis_en
+            source_text = f.get('synopsis') or f.get('synopsis_en')
+            synopsis_es = translate(source_text, api_key)
+            f['synopsis_es'] = synopsis_es
             ok += 1
-            print(f"  ✓ {title[:45]:45} → {synopsis_en[:70]}…")
+            print(f"  ✓ {title[:45]:45} → {synopsis_es[:70]}…")
             time.sleep(0.3)
         except Exception as e:
             errors.append(title)
@@ -99,17 +108,17 @@ if __name__ == '__main__':
 
 # ─── FLUJO RECOMENDADO PARA FUTURAS CORRIDAS ────────────────────────
 #
-# 1. TMDB (automático, para películas con distribución internacional):
-#    python3 scripts/enrich-festival.py festivals/jardin-2026.json
-#    → Añade synopsis_en donde TMDB tiene overview en inglés
+# 1. Ensamblar el JSON del festival con synopsis (origen) + synopsis_en si existe.
 #
-# 2. Claude API (para el resto):
-#    ANTHROPIC_API_KEY=sk-... python3 scripts/translate-synopsis.py festivals/jardin-2026.json
-#    → Traduce sinopsis_es→en via Claude Haiku (rápido y económico)
+# 2. Claude API (genera synopsis_es desde synopsis/synopsis_en):
+#    ANTHROPIC_API_KEY=sk-... python3 scripts/translate-synopsis.py festivals/olhar-2026.json
+#    → Traduce a español neutro vía Claude Haiku (rápido y económico)
 #
 # 3. Manual (para casos especiales o corrección de calidad):
 #    Editar directamente el JSON del festival
 #
-# NOTA: El engine en index.html ya está listo:
-#    _lang==='en' && f.synopsis_en ? f.synopsis_en : f.synopsis
-#    Fallback silencioso a español si synopsis_en está vacío.
+# NOTA ENGINE: para festivales no-español (synopsis_lang != 'es'), el display
+#    en ES debe preferir synopsis_es. La de-binarización del engine
+#    (_lang==='en' ? synopsis_en : synopsis  →  3 vías es/pt/en) es deuda
+#    pendiente: hasta resolverla, synopsis_es no se muestra solo. No asumir
+#    que el fallback actual cubre el caso PT→ES.

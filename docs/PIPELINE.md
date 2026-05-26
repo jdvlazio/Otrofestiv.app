@@ -12,8 +12,23 @@
 **Objetivo:** JSON del festival con todos los campos poblados desde el origen.
 
 **Entradas canónicas:**
-- **Opción A — Scraping web** (festivales con página por film): pasos 1–5 abajo + patrón `og:image`.
+- **Opción A1 — Scraping web server-rendered** (HTML fetch-able, página por film): `fetch` + parse `og:*` y DOM estático. Pasos 1–5 abajo + patrón `og:image`.
+- **Opción A2 — SPA client-rendered** (Tribeca, Olhar, y la mayoría de sitios modernos): ver método abajo. **`fetch` devuelve un shell vacío** — solo el DOM renderizado tiene los datos.
 - **Opción B — `pipeline/csv-template.csv`** (entrada estándar del organizador): una fila por **función**. El organizador llena solo los campos que conoce; el enrichment se hace downstream.
+
+#### Método A2 — SPA client-rendered (reproducible sin contexto previo)
+
+**Detección:** hacer `fetch()` de una página de film. Si el body vuelve vacío (shell de SPA, sin la sinopsis ni el `og:image` del film), es A2 → ir al loop por DOM renderizado. **No reintentar fetch.**
+
+1. **Listado → IDs base.** Extraer del listado los identificadores por film (slug/uuid) + datos de tarjeta (título, título_en, director, país, año, sección). Guardar en `localStorage` como acumulador.
+2. **Loop auto-avanzante.** Por cada `/{ruta}/{id}`: leer el DOM renderizado, guardar en `localStorage[done][id]`, y `location.href`-navegar al siguiente pendiente. Usar **flags por-campo** (`en_done`, `pt_full`, `info_done`) para soportar múltiples pasadas sin re-extraer.
+3. **Sinopsis: del CUERPO, no de `og:description`.** El `og:description` viene **truncado** (~200 chars, corta a media palabra) y a veces es la descripción genérica del festival (el "último" og es ambiguo). Leer la sección de sinopsis del cuerpo (heading `SINOPSE`/`SYNOPSIS`) → texto completo del propio film. Stripear sufijos de UI (`TRAILER`).
+4. **Multi-idioma = pasadas separadas** controladas por la key de idioma en `localStorage` (ej. `olhar-language`) + reload. El toggle del nav puede no responder a `.click()` sintético — ir por la key de storage. Festival bilingüe nativo (PT+EN en el sitio) → `synopsis` + `synopsis_en` **ambos de primera fuente**, sin traducción ni TMDB.
+5. **Assert de readiness** antes de leer: confirmar que el DOM ya renderizó el film esperado (ej. `document.title`/heading == título esperado, o `og:image` contiene el id del film). Sin esto, una SPA lenta da el dato del film **anterior** (riesgo silencioso de A2).
+6. **Verificación poster↔film por id.** Si el `og:image`/CDN embebe el id del film en el path (caso Olhar/Supabase), validar que `poster.includes(filmId)` para los N films — caza stale-render sin revisión visual. (Lo que a Tribeca le faltó: 134 posters falsos por matching TMDB.)
+7. **Content filter en evals:** los `eval` del navegador pueden bloquear devolver URLs/UUIDs/JWTs → devolver escalares (counts/longitudes/booleanos) y stashear el detalle a `localStorage`; exfiltrar el dataset final por descarga byte-exacta (verificar con hash).
+
+**Prioridad de poster (universal):** `og:image`/CDN de primera fuente del festival **primero** (es el póster oficial) → TMDB vertical **solo con verificación visual humana** → editorial generado. *(Corrige el orden viejo "TMDB→og:image": la fuente del festival manda sobre TMDB.)*
 
 Columnas del CSV — **clase organizador** (lo que solo el festival sabe):
 
