@@ -20,6 +20,7 @@
       - [ ] Solo `poster_path` (portrait 2:3) — **nunca `backdrop_path`** (landscape)
       - [ ] **Verificación visual** vía galería Chrome tab (`gallery.html` + `http.server`) — **obligatoria** antes de escribir
       - [ ] Overrides por transliteración (3/4 criterios + visual) **documentados en el PR** como `override: transliteración`
+- [ ] **Posters de programas** (`is_cortos`/`is_programa`): ninguno muestra el nombre de la sección en el body — verificar visualmente en Chrome para **cada sección con más de un programa** (que no queden dos posters idénticos). `makeProgramPoster` lo limpia automáticamente, pero confirmar en vivo.
 - [ ] **Year**: 0 outliers no explicados (los clásicos/retro conservan su año original; los contemporáneos ≤ año_festival + 1)
 - [ ] **0 sinopsis duplicadas** entre films (synopsis y synopsis_en)
 - [ ] **Slots compartidos**: todos los (day, time, venue) con ≥2 films declarados `is_cortos:true` o `is_programa:true`

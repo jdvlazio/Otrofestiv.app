@@ -57,11 +57,23 @@ export function makeProgramPoster(state, title, duration, section){
       .replace(/^Programa\s+/i,'')
       .replace(/^Competencia\s+/i,'')
       .trim();
+    // ── REGLA PERMANENTE (todos los festivales) ──────────────────────────
+    // El body del poster de programa NUNCA debe repetir el nombre de la
+    // sección: ya está en el header. Se quita el nombre de sección dondequiera
+    // que aparezca (case-insensitive), conservando solo el diferenciador.
+    //   "PGM 05 Mirada Paranaense" / secc "Mirada Paranaense" → "PGM 05"
+    //   "Sessão … na Tela — Mirada Paranaense"               → "Sessão … na Tela"
+    //   "PGM 07 Pequenos Olhares"  / secc "Pequeñas Persp…"  → sin cambios
+    // Ver docs/PIPELINE.md (posters editoriales).
+    if(secBase){
+      const _secRe=new RegExp('\\s*[—\\-:·]?\\s*'+secBase.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+'\\s*','gi');
+      const _stripped=bodyTitle.replace(_secRe,' ').replace(/\s+/g,' ').trim();
+      // Si lo limpio queda vacío o muy corto (<3 chars), conservar el título
+      // completo (mejor repetir la sección que no mostrar nada).
+      if(_stripped.length>=3) bodyTitle=_stripped;
+    }
     // Descartar el body solo si NO aporta diferenciación: vacío, subcadena del
-    // header, o solo símbolos. (Antes también se descartaba cuando el body
-    // CONTENÍA el header — eso vaciaba "PGM 05 Mirada Paranaense" dejando dos
-    // programas con poster idéntico. Se conserva el título completo, igual que
-    // "PGM 07 Pequenos Olhares".)
+    // header, o solo símbolos.
     if(!bodyTitle||headerLabel.includes(bodyTitle.toUpperCase())||/^[^a-zA-ZáéíóúüñÁÉÍÓÚÜÑ0-9]+$/.test(bodyTitle))
       bodyTitle='';
   }
@@ -114,7 +126,12 @@ export function _buildPosterV16({accent, headerLabel, title, num}){
 
   // Body
   let bodyContent='';
-  const cleanTitle=(title||'').replace(/\s+\d+\s*$/,'').trim();
+  // El strip de número final solo aplica en Variante A (num se muestra aparte,
+  // evita duplicarlo). En Variante B el título se muestra tal cual — si no, un
+  // body como "PGM 05" perdería el "05" y dejaría dos programas indistinguibles.
+  const cleanTitle=(num!==null&&num!==undefined)
+    ? (title||'').replace(/\s+\d+\s*$/,'').trim()
+    : (title||'').trim();
 
   if(num!==null&&num!==undefined){
     // Variante A — número como elemento principal
