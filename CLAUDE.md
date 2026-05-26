@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `4fdf66d fix(cortos): el sheet del corto muestra Letterboxd, año y sinopsis localizada — igual que un film (#89)`
+> Último commit: `43d4022 feat(olhar): synopsis_es para los 34 cortos (traducción PT→ES) (#90)`
 
 ---
 
