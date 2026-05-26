@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `a33b415 chore: bundle v202605261740`
+> Último commit: `0c3db36 feat(olhar): lbSlug + pósters TMDB + géneros para Olhar de Cinema 2026 (#78)`
 
 ---
 

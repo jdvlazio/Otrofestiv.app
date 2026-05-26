@@ -102,6 +102,7 @@ import {
 // ── Step 7c: controller/pipeline.js — render dispatchers. ────────────────────
 import {
   renderActiveView, switchMainNav, showDayView, showAgView, updateAgTab, _reRenderIntereses, _rerenderFilmList, _getProgramaPhase, _updateProgramaActiveFilter, initProgramaModeBar, setLang,
+  toggleLangDropdown, selectLang, closeLangDropdown, _syncLangTrigger,
 } from './controller/pipeline.js';
 
 // ── Step 7d-1: controller/sheets-controller.js — sheets+rating+AV+toast+utils. ──
@@ -193,6 +194,8 @@ const ACTION_REGISTRY = {
   checkinNoLaVi:      (el)    => checkinNoLaVi(el.dataset.title),
   savePVRating:       ()      => savePVRating(),
   setLang:            (el)    => setLang(el.dataset.code),
+  toggleLangDropdown: ()      => toggleLangDropdown(),
+  selectLang:         (el)    => selectLang(el),
   forceInclude:       (el)    => forceInclude(el.dataset.title),
   dismissNotice:      (el)    => _dismissNotice(el.dataset.title),
   swapPriority:       (el)    => swapPriority(el.dataset.rmtitle, el.dataset.addtitle),
@@ -629,7 +632,7 @@ FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202605261322';
+const BUILD_VERSION='202605261344';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';
@@ -1192,6 +1195,7 @@ document.addEventListener('keydown',function(e){
   let _startY=0,_dragging=false;
   document.addEventListener('DOMContentLoaded',()=>{
   _applyI18nDOM();
+  _syncLangTrigger();
 });
 // ── Event delegation para js-open-pel → openPelSheet ──────────────────────
 // capture:true garantiza que el evento llega antes del stopPropagation

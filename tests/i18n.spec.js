@@ -3,16 +3,25 @@
 const { test, expect } = require('@playwright/test');
 const { LEVIZA_SIMTIME, enterFestival } = require('./helpers');
 
-// I01 — Botones de idioma están presentes en el topbar
-test('I01 — botones de idioma ES y EN presentes', async ({ page }) => {
+// Abre el dropdown de idioma (las opciones están ocultas hasta abrir el trigger).
+async function openLangDropdown(page) {
+  await page.locator('#lang-trigger').click();
+  await expect(page.locator('#lang-btn-en')).toBeVisible({ timeout: 3000 });
+}
+
+// I01 — Selector de idioma presente; al abrir muestra opciones ES y EN
+test('I01 — selector de idioma con opciones ES y EN', async ({ page }) => {
   await enterFestival(page, 'leviza2026', LEVIZA_SIMTIME);
-  await expect(page.locator('#lang-btn-es')).toBeVisible({ timeout: 5000 });
-  await expect(page.locator('#lang-btn-en')).toBeVisible({ timeout: 5000 });
+  await expect(page.locator('#lang-trigger')).toBeVisible({ timeout: 5000 });
+  await openLangDropdown(page);
+  await expect(page.locator('#lang-btn-es')).toBeVisible();
+  await expect(page.locator('#lang-btn-en')).toBeVisible();
 });
 
 // I02 — Cambiar a EN activa el botón EN y desactiva ES
 test('I02 — cambiar a EN activa el botón correcto', async ({ page }) => {
   await enterFestival(page, 'leviza2026', LEVIZA_SIMTIME);
+  await openLangDropdown(page);
   await page.locator('#lang-btn-en').click();
   await page.waitForFunction(() => document.getElementById('lang-btn-en')?.classList.contains('active'), { timeout: 3000 });
   const enActive = await page.locator('#lang-btn-en.active').count();
@@ -24,6 +33,7 @@ test('I02 — cambiar a EN activa el botón correcto', async ({ page }) => {
 // I03 — En EN los tabs del nav muestran texto en inglés
 test('I03 — tabs en EN muestran texto inglés', async ({ page }) => {
   await enterFestival(page, 'leviza2026', LEVIZA_SIMTIME);
+  await openLangDropdown(page);
   await page.locator('#lang-btn-en').click();
   await page.waitForFunction(() => document.getElementById('lang-btn-en')?.classList.contains('active'), { timeout: 3000 });
   const navText = await page.locator('.main-nav-tab').allTextContents();
@@ -35,8 +45,10 @@ test('I03 — tabs en EN muestran texto inglés', async ({ page }) => {
 // I04 — Volver a ES restaura strings en español
 test('I04 — volver a ES restaura strings español', async ({ page }) => {
   await enterFestival(page, 'leviza2026', LEVIZA_SIMTIME);
+  await openLangDropdown(page);
   await page.locator('#lang-btn-en').click();
   await page.waitForFunction(() => document.getElementById('lang-btn-en')?.classList.contains('active'), { timeout: 3000 });
+  await openLangDropdown(page);
   await page.locator('#lang-btn-es').click();
   await page.waitForFunction(() => document.getElementById('lang-btn-es')?.classList.contains('active'), { timeout: 3000 });
   const navText = await page.locator('.main-nav-tab').allTextContents();
@@ -49,8 +61,10 @@ test('I05 — cambio de idioma sin errores JS', async ({ page }) => {
   await enterFestival(page, 'leviza2026', LEVIZA_SIMTIME);
   const errors = [];
   page.on('pageerror', e => errors.push(e.message));
+  await openLangDropdown(page);
   await page.locator('#lang-btn-en').click();
   await page.waitForFunction(() => document.getElementById('lang-btn-en')?.classList.contains('active'), { timeout: 3000 });
+  await openLangDropdown(page);
   await page.locator('#lang-btn-es').click();
   await page.waitForFunction(() => document.getElementById('lang-btn-es')?.classList.contains('active'), { timeout: 3000 });
   await page.waitForTimeout(200);
