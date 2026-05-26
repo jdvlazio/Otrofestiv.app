@@ -1093,5 +1093,40 @@
     "es": "Descargando calendario...",
     "en": "Downloading calendar...",
     "context": "Toast transitorio mientras se genera/descarga el archivo de calendario."
+  },
+  "prio_corpus_pre": {
+    "es": "{n} en tu lista para planear",
+    "en": "{n} in your list to plan",
+    "context": "Planear: línea de corpus encima del prio strip, pre-cálculo. {n} = funciones en la watchlist planificables."
+  },
+  "prio_corpus_post": {
+    "es": "{n} en tu lista · {m} en tu plan",
+    "en": "{n} in your list · {m} in your plan",
+    "context": "Planear: línea de corpus post-cálculo. {n} = lista; {m} = cuántas entraron al plan (verde)."
+  },
+  "prio_in": {
+    "es": "Entró",
+    "en": "In",
+    "context": "Overlay verde en chip de prioridad: la película entró al plan calculado."
+  },
+  "prio_out": {
+    "es": "No entró",
+    "en": "Out",
+    "context": "Overlay rojo en chip de prioridad: la película no entró al plan."
+  },
+  "prio_stale_banner": {
+    "es": "Tus prioridades cambiaron — recalculá para actualizar",
+    "en": "Your priorities changed — recalculate to update",
+    "context": "Planear: banner cuando se quitó una prioridad después de calcular (resultado invalidado)."
+  },
+  "prio_stale_cta": {
+    "es": "Recalculá →",
+    "en": "Recalculate →",
+    "context": "Planear: CTA del banner stale para volver a correr el cálculo."
+  },
+  "prio_past": {
+    "es": "Sin funciones disponibles",
+    "en": "No upcoming screenings",
+    "context": "Chip de prioridad cuyas funciones ya pasaron (estado .past)."
   }
 }

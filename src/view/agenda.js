@@ -39,7 +39,7 @@ export function renderAgenda(){
   // branch-específicos (_scrollMiPlanToNow, _updateMiPlanBadge, renderAvBlocks,
   // _agHi.style.display, requestAnimationFrame(_fixStickyOffset)). Split impráctico
   // — body se queda monolítico con state.snapshot() destructure al top.
-  const {savedAgenda, FILMS, _activeFestId, watched, watchlist} = state.snapshot();
+  const {savedAgenda, FILMS, _activeFestId, watched, watchlist, prioritized} = state.snapshot();
   const view=document.getElementById('ag-view');
   if(activeMNav==='mnav-seleccion'){
     // ── Post-festival: redirigir a Mi Plan ──
@@ -93,12 +93,28 @@ export function renderAgenda(){
     }
 
     // ── Estado B: con Intereses — herramienta completa ──
+    // 3 estados del prio strip: intención (pre) / resolución (post) / stale.
+    const _sc=cachedResult?(cachedResult.scenarios[cachedResult.currentIdx]||null):null;
+    const _included=_sc?new Set(_sc.schedule.map(s=>s._title)):null;
+    const _snap=cachedResult&&cachedResult._prioSnapshot;
+    const _stale=!!cachedResult&&Array.isArray(_snap)&&(_snap.length!==prioritized.size||!_snap.every(x=>prioritized.has(x)));
+    const _fresh=!!cachedResult&&!_stale;
+    const _n=pending.length, _m=_included?_included.size:0;
+    const _corpus=`<div class="prio-corpus">${_fresh
+      ?t('prio_corpus_post',{n:_n,m:`<b>${_m}</b>`})
+      :t('prio_corpus_pre',{n:_n})}</div>`;
+    const _stripHtml=renderPrioStrip(state,_fresh?{mode:'resolved',included:_included}:{mode:'intent'});
+    const _staleBanner=_stale
+      ?`<div class="prio-stale">${ICONS.star} ${t('prio_stale_banner')}<button class="prio-stale-cta" data-action="runCalc">${t('prio_stale_cta')}</button></div>`
+      :'';
     const resultContent=cachedResult
       ?buildResultHTML(cachedResult.scenarios)
       :'';
     view.innerHTML=`${_progressHtml}
       <div class="ag-section">
-        ${renderPrioStrip(state)}
+        ${_corpus}
+        ${_stripHtml}
+        ${_staleBanner}
         <div class="section-div">
           <div class="mb-2 sec-hdr">${ICONS.clock} ${t('av_disponibilidad')} <span class="sec-hdr-opt">${t('misc_opcional')}</span></div>
           <div class="txt-gray2-sm-lh">${t('av_no_incluir')}</div>
@@ -111,7 +127,7 @@ export function renderAgenda(){
           </button>
         </div>
       </div>
-      <div class="amber-border-top ag-section" id="ag-result-wrap"${cachedResult?'':' style="display:none"'}>
+      <div class="amber-border-top ag-section${_stale?' stale':''}" id="ag-result-wrap"${cachedResult?'':' style="display:none"'}>
         <div class="txt-amber60 sec-hdr">${ICONS.switch} ${t('plan_opciones')}</div>
         <div id="ag-result">${resultContent}</div>
       </div>`;
@@ -683,23 +699,45 @@ export function renderContextualHeader(state){
   return '';
 }
 
-export function renderPrioStrip(state){
+export function renderPrioStrip(state, opts={}){
   const {FILMS, PRIO_LIMIT, prioritized} = state.snapshot();
   if(!prioritized.size) return '';
-  const chips=[...prioritized].map(title=>{
+  const mode = opts.mode || 'intent';          // 'intent' (Estado 1/3) | 'resolved' (Estado 2)
+  const included = opts.included;              // Set<title> de funciones en el plan (mode resolved)
+  // Chip individual. rm: botón quitar (solo intent, no en .past). dim: opacity .4
+  // (grupo "No entró"). grayTitle: título en var(--gray) (grupo "Entró").
+  const _chip=(title,{rm=false,dim=false,grayTitle=false}={})=>{
     const f=FILMS.find(fi=>fi.title===title);
     const p=getFilmPoster(f);
-    const _safeChipT=title.replace(/'/g,"&#39;");
     const img=p?_posterThumb(f,'prio-chip-poster'):`<div class="prio-chip-ph">${ICONS.star}</div>`;
     const{displayTitle,progSuffix}=parseProgramTitle(title);
     const short=displayTitle.length>24?displayTitle.slice(0,22)+'…':displayTitle;
     const allPast=!festivalEnded()&&!FILMS.some(f=>f.title===title&&!screeningPassed(f));
-    return`<div class="prio-chip${allPast?' past':''}">
-      ${img}
-      <button class="prio-chip-rm" data-title="${title.replace(/"/g,'&quot;')}" data-action="togglePriority" data-stop="1" title="${t('aria_quitar_prio')}">${ICONS.x}</button>
-      <div class="prio-chip-title">${short}${progSuffix?`<span class="poster-label-amber">${progSuffix}</span>`:''}</div>
+    const safeT=title.replace(/"/g,'&quot;');
+    const rmBtn=(rm&&!allPast)?`<button class="prio-chip-rm" data-title="${safeT}" data-action="togglePriority" data-stop="1" title="${t('aria_quitar_prio')}">${ICONS.x}</button>`:'';
+    const pastLbl=allPast?`<div class="prio-chip-past-lbl">${t('prio_past')}</div>`:'';
+    const titleStyle=grayTitle?' style="color:var(--gray)"':'';
+    return`<div class="prio-chip${allPast?' past':''}"${dim?' style="opacity:.4"':''}>
+      ${img}${rmBtn}${pastLbl}
+      <div class="prio-chip-title"${titleStyle}>${short}${progSuffix?`<span class="poster-label-amber">${progSuffix}</span>`:''}</div>
     </div>`;
-  }).join('');
+  };
+  // ── Estado 2: agrupado en "Entró" / "No entró" (sin overlays en el póster) ──
+  if(mode==='resolved'){
+    const list=[...prioritized];
+    const inT=list.filter(x=>included&&included.has(x));
+    const outT=list.filter(x=>!(included&&included.has(x)));
+    let body='';
+    if(inT.length) body+=`<div class="group-label ok">${ICONS.checkCircle} ${t('prio_in')}</div><div class="prio-strip-row">${inT.map(x=>_chip(x,{grayTitle:true})).join('')}</div>`;
+    if(inT.length&&outT.length) body+=`<div class="hr-bdr"></div>`;
+    if(outT.length) body+=`<div class="group-label fail">${ICONS.x} ${t('prio_out')}</div><div class="prio-strip-row">${outT.map(x=>_chip(x,{dim:true})).join('')}</div>`;
+    return`<div class="prio-strip">
+      <div class="sec-hdr">${ICONS.star} ${t('lbl_prioridades')}</div>
+      ${body}
+    </div>`;
+  }
+  // ── Estado 1 / 3: intención (chips con botón quitar) ──
+  const chips=[...prioritized].map(x=>_chip(x,{rm:true})).join('');
   return`<div class="prio-strip">
     <div class="sec-hdr">${ICONS.star} ${t('lbl_prioridades')} <span class="ml-1 count-badge cb-amber">${prioritized.size}/${PRIO_LIMIT}</span></div>
     <div class="prio-strip-row">${chips}</div>

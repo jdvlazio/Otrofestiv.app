@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `64a240e i18n(ics): strings para B1 (alta a Calendario iOS) (#61)`
+> Último commit: `545551e feat(ics): puente EventKit iOS — alta directa al Calendario (lado web) (#62)`
 
 ---
 
@@ -77,6 +77,7 @@ Juan es Product Owner, diseñador y developer. Claude ejecuta; Juan audita y apr
 - `i18n-planner-audit/` — fase actual: **tasks**
 - `lista-todo-sort/` — fase actual: **tasks**
 - `normtitle/` — fase actual: **tasks**
+- `prio-strip-three-states/` — fase actual: **tasks**
 - `schedule-planning/` — fase actual: **tasks**
 - `splash-animation/` — fase actual: **tasks**
 - `state-mirror/` — fase actual: **tasks**
