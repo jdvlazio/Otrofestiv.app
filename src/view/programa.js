@@ -11,7 +11,7 @@
 //   Los handlers _dismissNotice/setProgramaChip (data-action) viven en main.js.
 
 import { NOTICES, SECTION_ORDER_LIST, _DEFAULT_FEST_ID } from '../config.js';
-import { ICONS, _secLabel, _sectionColor, makeEventPoster, parseProgramTitle } from './components.js';
+import { ICONS, _secLabel, _secLabelFull, _sectionColor, makeEventPoster, parseProgramTitle } from './components.js';
 import { _dayChips, _getItemPoster, _isEditorialPoster, _metaBadges, _plistPosterHtml, _programaStack, dayLabel, durFmt, emptyState, getFilmPoster, isNowShowing, sala, vcfg } from './helpers.js';
 import { festivalEnded, toMin } from '../domain/time.js';
 import { screeningPassed } from '../domain/film.js';
@@ -143,7 +143,7 @@ export function renderProgramaListHTML(state){
         <div class="plist-info">
           <div class="plist-title">${noticeBadge}<span class="plist-title-txt">${dt}</span>${_metaBadges(f)}${nowBadge}</div>
           <div class="plist-meta" style="${notice&&notice.type==='cancelled'?'text-decoration:line-through':''}">${vc.short}${sala(f.venue)?' · '+sala(f.venue):''}${f.duration?' · '+durFmt(f.duration):''}</div>
-          ${noticeNote||`<div class="plist-sec">${f.section||''}</div>`}
+          ${noticeNote||`<div class="plist-sec">${_secLabelFull(f.section||'')}</div>`}
         </div>
         <div class="plist-heart${inWL?'':' empty'}" data-title="${f.title.replace(/"/g,'&quot;')}" data-action="toggleWLFromList" data-stop="1">${inWL?ICONS.heartFill:ICONS.heart}</div>
       </div>`;
@@ -253,7 +253,7 @@ export function _renderExploreListaHTML(state){
       <div class="plist-info">
         <div class="plist-title">${dt}</div>
         <div class="plist-meta">${days?`${daysHtml} · `:''}${durFmt(f.duration)}</div>
-        <div class="plist-sec">${f.section||''}</div>
+        <div class="plist-sec">${_secLabelFull(f.section||'')}</div>
       </div>
       <div class="plist-heart${inWL?'':' empty'}" data-title="${f.title.replace(/"/g,'&quot;')}" data-action="toggleWLFromList" data-stop="1">${inWL?ICONS.heartFill:ICONS.heart}</div>
     </div>`;
@@ -261,7 +261,7 @@ export function _renderExploreListaHTML(state){
     return`<div class="plist-item js-open-pel${allPast?' past-card':''}" data-title="${f.title}">
       ${_stk2||_plistPosterHtml(f,src)}
       <div class="plist-info">
-        ${(()=>{const n=NOTICES.find(nx=>nx.title===f.title&&nx.festival===((_activeFestId||_DEFAULT_FEST_ID)));const nb=n?`<span class="notice-badge">${n.type==='cancelled'?t('notice_cancelada'):t('notice_reprog_short')}</span>`:'';const nn=n&&n.type==='cancelled'?`<div class="notice-detail-amber">${t('plan_fecha_pendiente')}</div>`:n&&n.type==='rescheduled'&&n.newTime?`<div class="notice-detail-green">${n.newDay||''} · ${n.newTime}${n.newVenue?' · '+n.newVenue:''}</div>`:'';return`<div class="plist-title" style="${allPast?'opacity:.5':''}">${nb}${dt}</div><div class="plist-meta" style="${n&&n.type==='cancelled'?'text-decoration:line-through':''}${allPast?';opacity:.5':''}">${daysHtml?`${daysHtml} · `:''}${durFmt(f.duration)}${_metaBadges(f)?` · ${_metaBadges(f)}`:''}</div>${nn||`<div class="plist-sec">${f.section||''}</div>`}`;})()}
+        ${(()=>{const n=NOTICES.find(nx=>nx.title===f.title&&nx.festival===((_activeFestId||_DEFAULT_FEST_ID)));const nb=n?`<span class="notice-badge">${n.type==='cancelled'?t('notice_cancelada'):t('notice_reprog_short')}</span>`:'';const nn=n&&n.type==='cancelled'?`<div class="notice-detail-amber">${t('plan_fecha_pendiente')}</div>`:n&&n.type==='rescheduled'&&n.newTime?`<div class="notice-detail-green">${n.newDay||''} · ${n.newTime}${n.newVenue?' · '+n.newVenue:''}</div>`:'';return`<div class="plist-title" style="${allPast?'opacity:.5':''}">${nb}${dt}</div><div class="plist-meta" style="${n&&n.type==='cancelled'?'text-decoration:line-through':''}${allPast?';opacity:.5':''}">${daysHtml?`${daysHtml} · `:''}${durFmt(f.duration)}${_metaBadges(f)?` · ${_metaBadges(f)}`:''}</div>${nn||`<div class="plist-sec">${_secLabelFull(f.section||'')}</div>`}`;})()}
       </div>
       <div class="plist-heart${inWL?'':' empty'}" data-title="${f.title.replace(/"/g,'&quot;')}" data-action="toggleWLFromList" data-stop="1">${inWL?ICONS.heartFill:ICONS.heart}</div>
     </div>`;
@@ -357,7 +357,7 @@ export function renderPeliculaViewHTML(state){
           :``;
       }
     }
-    const _sep=activeDay==='all'&&f.section&&f.section!==_prevSec?`<div class="poster-grid-sep">${(f.section||'').replace(/^[\p{Emoji}\s]+/u,'').trim()}</div>`:'';_prevSec=f.section||_prevSec;
+    const _sep=activeDay==='all'&&f.section&&f.section!==_prevSec?`<div class="poster-grid-sep">${_secLabel(f.section||'')}</div>`:'';_prevSec=f.section||_prevSec;
     return _sep+`<div class="bg-surf-2 poster-card js-open-pel${inWL&&!inW?' in-wl':''}${inW&&!_ended?' in-watched':''}${(_isPrograma?false:_isEditorialPoster(f))?' editorial':''}" data-title="${f.title}"${_isPrograma?'':_cardBg}>
       ${posterImg}
       ${progBadge}
@@ -446,7 +446,7 @@ export function renderSbar(){
     if(ib>=0) return 1;
     return a.localeCompare(b);
   });
-  if(lbl) lbl.textContent=activeSec==='all'||activeSec==='_chip_'?t('bar_seccion'):(activeSec.length>18?activeSec.slice(0,16)+'…':activeSec);
+  if(lbl){const _al=_secLabelFull(activeSec);lbl.textContent=activeSec==='all'||activeSec==='_chip_'?t('bar_seccion'):(_al.length>18?_al.slice(0,16)+'…':_al);}
   if(trigBtn) trigBtn.classList.toggle('active',activeSec!=='all'&&activeSec!=='_chip_');
   const mkOpt=(html,isOn,cb)=>{
     const b=document.createElement('button');
@@ -458,7 +458,7 @@ export function renderSbar(){
   mkOpt(`Todas las categorías <span class="fdr-cnt">${dayF.length}</span>`,activeSec==='all',()=>{activeSec='all';selectedIdx=null;setHint(null);closeDropdowns();render();});
   secs.forEach(sec=>{
     const cnt=dayF.filter(f=>f.section===sec).length;
-    mkOpt(`${sec} <span class="fdr-cnt">${cnt}</span>`,activeSec===sec,()=>{activeSec=activeSec===sec?'all':sec;selectedIdx=null;setHint(null);closeDropdowns();render();});
+    mkOpt(`${_secLabelFull(sec)} <span class="fdr-cnt">${cnt}</span>`,activeSec===sec,()=>{activeSec=activeSec===sec?'all':sec;selectedIdx=null;setHint(null);closeDropdowns();render();});
   });
 }
 

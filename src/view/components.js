@@ -10,9 +10,10 @@
 //   savedAgenda,DAY_KEYS). DAY_ABBR/DAY_NUM: objetos mutados por loadFestival via
 //   el binding importado (mutacion de objeto, OK en ESM).
 
-import { FESTIVAL_CONFIG, SECTION_COLORS } from "../config.js";
+import { FESTIVAL_CONFIG, SECTION_COLORS, SECTION_EN } from "../config.js";
 import { toMin } from "../domain/time.js";
 import { t } from "../i18n/i18n.js";
+import { state } from "../state/state.js";
 
 export function makeProgramPoster(state, title, duration, section){
   const {FILMS} = state.snapshot();
@@ -97,11 +98,28 @@ export function makeSorpresaPoster(){
 
 export function _sectionColor(sec){return SECTION_COLORS[sec]||'#2C2C2A';}
 
+// Etiqueta de sección SIN emoji, localizada. En EN devuelve SECTION_EN[sec] si
+// existe (display-only; la clave de orden/color/filtro sigue siendo `sec`); si no,
+// cae al string ES con el emoji líder removido. `_lang` vía STATE BRIDGE (como el
+// resto de la capa view) → cero cambios en los call sites.
 export function _secLabel(sec){
   if(!sec) return '';
+  const {_lang} = state.snapshot();
+  if(_lang==='en' && SECTION_EN[sec]) return SECTION_EN[sec];
   const first=sec.split(' ')[0];
   const isEmoji=/^\p{Emoji}/u.test(first)&&!/^[A-Za-z0-9.]/u.test(first);
   return isEmoji?sec.slice(first.length).trim():sec;
+}
+
+// Igual que _secLabel pero PRESERVANDO el emoji líder (para listas que hoy
+// muestran `f.section` crudo, p.ej. plist-sec / dropdown de filtro). En ES
+// reproduce el string original; en EN devuelve "<emoji> <label EN>".
+export function _secLabelFull(sec){
+  if(!sec) return '';
+  const first=sec.split(' ')[0];
+  const isEmoji=/^\p{Emoji}/u.test(first)&&!/^[A-Za-z0-9.]/u.test(first);
+  const label=_secLabel(sec);
+  return isEmoji?`${first} ${label}`:label;
 }
 
 export function _buildPosterV16({accent, headerLabel, title, num}){

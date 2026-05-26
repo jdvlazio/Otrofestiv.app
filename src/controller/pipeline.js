@@ -5,7 +5,7 @@
 // view no importa controller; calc es leaf.
 
 import { FESTIVAL_CONFIG, _DEFAULT_FEST_ID } from '../config.js';
-import { ICONS } from '../view/components.js';
+import { ICONS, _secLabelFull } from '../view/components.js';
 import { _renderProgramaContent, renderProgramaChips } from '../view/programa.js';
 import { _fixStickyOffset, renderAgenda, renderFilmListHTML } from '../view/agenda.js';
 import { runCalc } from './calc.js';
@@ -155,9 +155,9 @@ export function _getProgramaPhase(){
 }
 
 export function _seccionPillLabel(sec){
-  // Pill: nombre completo tal como viene en el JSON — ya incluye emoji
+  // Pill: emoji + label localizado (EN→SECTION_EN, ES→original con emoji).
   if(!sec||sec==='all') return sec;
-  return sec;
+  return _secLabelFull(sec);
 }
 
 export function _updateProgramaActiveFilter(){

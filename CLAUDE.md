@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `b5c87b5 feat(validate): gate [i18n-content-coverage] — detección de huecos de traducción de contenido (#91)`
+> Último commit: `d5a6dda chore(tribeca): synopsis_es = synopsis (la traducción ES ya existía en synopsis) (#93)`
 
 ---
 

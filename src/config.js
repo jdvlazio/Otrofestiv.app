@@ -111,6 +111,65 @@ export const SECTION_COLORS = {
   'Shorts':'#888780',
 };
 
+// ── Display EN de secciones (solo display; la clave sigue siendo `section` ES) ─
+// Mismo patrón que SECTION_COLORS/SECTION_ORDER_LIST: keyed por el string ES con
+// emoji. Valor = etiqueta EN SIN emoji (igual que el output de _secLabel en ES).
+// REGLAS:
+//  · Olhar tiene sitio EN oficial → se usan SUS nombres (Opening Film, Young
+//    Views, …). Verificado en olhardecinema.com.br/en.
+//  · Secciones de marca / nombre propio se OMITEN → fallback al original ES:
+//    Mirada Paranaense (Olhar); Costas, Casa Brasil, De Indias, Animación Porosa,
+//    Retrospectiva ojoboca, (s)paces of Time (FICCI); Campo indómito…, Según la
+//    palabra…, Fragmentos del cielo… (Cinemancia).
+//  · Tribeca se omite entero: sus secciones ya están en inglés.
+//  · "Impact Hits"/"Industry Days" (AFF) ya están en inglés → se omiten.
+export const SECTION_EN = {
+  // Olhar de Cinema (nombres oficiales del sitio EN)
+  '🎬 Apertura':'Opening Film',
+  '🌟 Clausura':'Closing Film',
+  '🏆 Competencia Brasil':'Brazilian Competition',
+  '🌍 Competencia Internacional':'International Competition',
+  '👁️ Nuevas Perspectivas':'New Perspectives',
+  '🌱 Pequeñas Perspectivas':'Young Views',
+  '🎞️ Clásicos':'Classics',
+  '🏛️ Retrospectiva':'Retrospective',
+  // Compartida Olhar + Cinemancia (mismo string con ✨)
+  '✨ Proyecciones Especiales':'Special Screenings',
+  // Cinemancia (sin sitio EN — traducción mecánica aprobada)
+  '⭐ Inauguración':'Opening',
+  '🎭 ¿Qué es la ficción?':'What Is Fiction?',
+  '🎞️ Competencia de cortometrajes':'Short Film Competition',
+  '🏆 Competencia central':'Main Competition',
+  '💡 Iluminaciones':'Illuminations',
+  '🌱 Competencia Nuevas Voces':'New Voices Competition',
+  '🎬 Clausura':'Closing',
+  // FICCI (sin sitio EN — traducción mecánica aprobada)
+  '🏆 Comp. Cine en los Barrios':'Neighborhood Cinema Competition',
+  '📽️ Retrospectiva FICCI Años 60':'FICCI 60s Retrospective',
+  '🌎 Comp. Iberoamérica':'Ibero-American Competition',
+  '🌍 Internacional':'International',
+  '🇨🇴 Comp. Colombia':'Colombia Competition',
+  '🇨🇭 Muestra Suiza':'Swiss Showcase',
+  '🇪🇸 Muestra España':'Spain Showcase',
+  '🇦🇷 Muestra Argentina':'Argentine Showcase',
+  '🪶 Cine Indígena':'Indigenous Cinema',
+  '✊ Cine Afro':'Afro Cinema',
+  '📽️ Retrospectiva Ruth Beckermann':'Ruth Beckermann Retrospective',
+  '🎖️ Tributo Ben Rivers':'Ben Rivers Tribute',
+  '📽️ Retrospectiva Clásicos – Ópera Prima':'Classics Retrospective – First Films',
+  '🌙 Medianoche':'Midnight',
+  '⭐ Proyecciones Especiales':'Special Screenings',
+  // AFF (solo competencias; Impact Hits / Industry Days ya en inglés)
+  '🏆 Competencia Largometrajes':'Feature Film Competition',
+  '🎬 Competencia Cortometrajes':'Short Film Competition',
+  // Leviza (sin sitio EN — traducción mecánica aprobada)
+  '🎬 Inauguración':'Opening',
+  '🎞️ Proyecciones':'Screenings',
+  '🏆 Competencia Nacional de Ficción':'National Fiction Competition',
+  '⭐ Clausura':'Closing',
+  '🎓 Talleres':'Workshops',
+};
+
 // ── NOTICES ──────────────────────────────────────────────────────────────────
 // date: 'YYYY-MM-DD' de la función original — el banner desaparece al día siguiente
 // Para 'rescheduled': añadir newDay, newTime, newVenue

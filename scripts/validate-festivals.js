@@ -13,6 +13,18 @@
 const fs = require('fs');
 const path = require('path');
 
+// ── SECTION_EN: claves del mapa de display EN (src/config.js, ESM) ─────────────
+// El validador es CommonJS y config.js es ESM → no se puede require(). Se parsean
+// las CLAVES (strings ES con emoji) del bloque `export const SECTION_EN = {…}`
+// para que el check de cobertura [i18n-content-coverage] reconozca qué secciones
+// ya tienen traducción de display. Guardado: si falla, el Set queda vacío.
+const SECTION_EN_KEYS = new Set();
+try {
+  const _cfgSrc = fs.readFileSync(path.join(__dirname, '..', 'src', 'config.js'), 'utf8');
+  const _m = _cfgSrc.match(/export const SECTION_EN\s*=\s*\{([\s\S]*?)\n\};/);
+  if (_m) for (const km of _m[1].matchAll(/'([^']*)'\s*:/g)) SECTION_EN_KEYS.add(km[1]);
+} catch (e) { /* Set vacío → el check informa 0 cobertura */ }
+
 // ── Mapa de países → emoji bandera ───────────────────────────────────────────
 const FLAGS_MAP = {
   'Colombia':'🇨🇴','UK':'🇬🇧','Chile':'🇨🇱','Brasil':'🇧🇷','Bolivia':'🇧🇴',
@@ -403,13 +415,19 @@ function validateFestival(fname, data) {
       }
     }
 
-    // (d) secciones sin section_en — informativo (no bloqueante todavía)
-    const secs = [...new Set((data.films || [])
-      .map(f => (f.section || '').replace(/^[\p{Emoji}️\s]+/u, '').trim())
-      .filter(Boolean))];
-    const secsSinEn = secs.filter(() => true); // ningún festival tiene section_en aún
+    // (d) cobertura de section_en — informativo (no bloqueante).
+    // Se compara la sección COMPLETA (string ES con emoji = clave del mapa) contra
+    // SECTION_EN. Las que no tienen entrada son intencionales: inglés nativo
+    // (Tribeca, "Impact Hits"/"Industry Days") o nombre de marca que se mantiene
+    // en el idioma original (Mirada Paranaense, Costas, Campo indómito…). Por eso
+    // es [info] y no un gap: no se inventan traducciones de marca.
+    const secsFull = [...new Set((data.films || []).map(f => f.section || '').filter(Boolean))];
+    const secsSinEn = secsFull.filter(s => !SECTION_EN_KEYS.has(s));
+    const _cov = secsFull.length - secsSinEn.length;
     if (secsSinEn.length) {
-      warnings.push(`[i18n-content-coverage] ${secsSinEn.length} secciones sin traducción (section_en) [info]: ${secsSinEn.join(' · ')}`);
+      warnings.push(`[i18n-content-coverage] section_en: ${_cov}/${secsFull.length} secciones con display EN — ${secsSinEn.length} sin entrada (inglés nativo o marca intencional) [info]: ${secsSinEn.join(' · ')}`);
+    } else if (secsFull.length) {
+      warnings.push(`[i18n-content-coverage] section_en: ${secsFull.length}/${secsFull.length} secciones con display EN ✓`);
     }
   }
 
