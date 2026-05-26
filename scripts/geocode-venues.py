@@ -65,7 +65,7 @@ def geocode(query, country_code='co'):
         print(f"    Error: {e}")
     return None
 
-def build_query(venue_name, venue_cfg, festival_city):
+def build_query(venue_name, venue_cfg, festival_city, country_name='Colombia'):
     """
     Construye la query de búsqueda en orden de precisión:
     1. Nombre + dirección + ciudad (más preciso)
@@ -74,12 +74,12 @@ def build_query(venue_name, venue_cfg, festival_city):
     """
     city = venue_cfg.get('city') or festival_city or ''
     address = venue_cfg.get('address', '')
-    
-    if address:
-        return f"{venue_name}, {address}, {city}, Colombia"
-    return f"{venue_name}, {city}, Colombia"
 
-def main(filepath):
+    if address:
+        return f"{venue_name}, {address}, {city}, {country_name}"
+    return f"{venue_name}, {city}, {country_name}"
+
+def main(filepath, country_code='co', country_name='Colombia'):
     print(f"\n{'═'*60}")
     print(f"  Otrofestiv — Geocodificador de venues (Nominatim/OSM)")
     print(f"{'═'*60}")
@@ -97,8 +97,8 @@ def main(filepath):
         print("  Ver pipeline/festival-template.json para el formato.")
         sys.exit(1)
 
-    # Filtrar venues sin coordenadas
-    to_geocode = {k: v for k, v in venues.items() if 'lat' not in v or 'lng' not in v}
+    # Filtrar venues sin coordenadas (lat/lng ausente O null)
+    to_geocode = {k: v for k, v in venues.items() if not v.get('lat') or not v.get('lng')}
     
     print(f"\n  Festival  : {festival_name}")
     print(f"  Venues    : {len(venues)} total | {len(to_geocode)} sin coordenadas")
@@ -112,8 +112,8 @@ def main(filepath):
     found, not_found, manual_needed = 0, [], []
 
     for name, venue_cfg in to_geocode.items():
-        query = build_query(name, venue_cfg, festival_city)
-        result = geocode(query)
+        query = build_query(name, venue_cfg, festival_city, country_name)
+        result = geocode(query, country_code)
         time.sleep(DELAY)
 
         if result:
@@ -125,8 +125,8 @@ def main(filepath):
         else:
             # Retry con query más simple (solo nombre + ciudad)
             city = venue_cfg.get('city', festival_city)
-            simple_query = f"{name}, {city}, Colombia"
-            result2 = geocode(simple_query)
+            simple_query = f"{name}, {city}, {country_name}"
+            result2 = geocode(simple_query, country_code)
             time.sleep(DELAY)
 
             if result2:
@@ -163,6 +163,11 @@ def main(filepath):
 if __name__ == '__main__':
     if len(sys.argv) < 2:
         print(__doc__)
-        print("Uso: python3 geocode-venues.py festivals/cinemancia-2025.json")
+        print("Uso: python3 geocode-venues.py festivals/cinemancia-2025.json [country_code]")
+        print("     country_code opcional (default 'co'). Ej: br, ar, mx, us")
         sys.exit(1)
-    main(sys.argv[1])
+    # Mapa ISO-2 → nombre de país para la query Nominatim (default Colombia, backward-compatible)
+    COUNTRY = {'co':'Colombia','br':'Brasil','ar':'Argentina','mx':'México',
+               'us':'Estados Unidos','cl':'Chile','pe':'Perú','uy':'Uruguay'}
+    code = sys.argv[2].lower() if len(sys.argv) > 2 else 'co'
+    main(sys.argv[1], code, COUNTRY.get(code, 'Colombia'))
