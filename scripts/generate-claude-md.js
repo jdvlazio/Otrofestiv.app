@@ -114,7 +114,7 @@ PWA mobile-first para planear asistencia a festivales de cine. Permite explorar 
 
 - **Repo:** \`jdvlazio/Otrofestiv.app\`
 - **URL producción:** \`https://otrofestiv.app\`
-- **Deploy:** drag-and-drop manual en GitHub web interface
+- **Deploy:** automático — GitHub Pages sirve la raíz de \`main\` (build legacy). Cada push/merge a \`main\` dispara el deploy. No hay paso manual.
 
 ---
 
@@ -211,7 +211,7 @@ ${featuresSection}
 
 - **bump-and-validate.yml:** solo corre \`python3 validate.py\`. El bump de versión es responsabilidad local — correr \`node scripts/bump-version.js\` antes de cada push.
 - **playwright.yml:** tests de regresión T01–T10, viewport 390×844 (iPhone 14), simTime frozen para festivales activos.
-- **promote-ios.yml:** workflow manual para promover \`version.json.android → .ios\` (staged rollout).
+- **Update iOS/Android:** \`bump-version.js\` avanza \`version.json.ios\` junto con \`.android\` (mismo build, sin staged rollout). El cliente recarga vía poll de \`version.json\` en cada reapertura.
 
 ---
 
