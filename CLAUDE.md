@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `ab51b67 chore: bundle v202605262138`
+> Último commit: `750e506 fix(posters): body editorial = identificador del programa, nunca descriptor de sección (#88)`
 
 ---
 

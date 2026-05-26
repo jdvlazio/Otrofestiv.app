@@ -301,9 +301,18 @@ export function openCortoSheet(title, country, duration, section, flags, directo
   }
   const dir=director||(richItem&&richItem.director)||'';
   const gnr=_genreEN(genre||(richItem&&richItem.genre)||'');
-  const syn=synopsis||(richItem&&richItem.synopsis)||'';
+  const yr=(richItem&&richItem.year)?String(richItem.year):'';
+  // Sinopsis localizada igual que el sheet de película (no la versión truncada
+  // a 200 chars que llega por data-attr): ES→synopsis_es, EN→synopsis_en, fallback→synopsis.
+  const syn=richItem
+    ?(_lang==='en'&&richItem.synopsis_en?richItem.synopsis_en:_lang==='es'&&richItem.synopsis_es?richItem.synopsis_es:(richItem.synopsis||''))
+    :(synopsis||'');
   const ctry=country||(richItem&&richItem.country)||'';
   const dur=duration||(richItem&&richItem.duration)||'';
+  // Letterboxd: el slug del corto vive en richItem.lbSlug (item de film_list),
+  // NO en el mapa lbSlugs del festival → usar lbUrlForFilm(richItem). lbUrl(title)
+  // (por título contra el mapa) fallaba y dejaba el enlace oculto.
+  const lbHref=(richItem&&lbUrlForFilm(richItem))||lbUrl(title);
   const flgs=flags||countryToFlags(ctry)||'🌐';
   const posterUrl=posterOverride||(richItem&&getCortoItemPoster(richItem))||getPosterSrc(title,true)||null;
   const _isEd3=_isEditorialImageUrl(posterUrl);
@@ -326,13 +335,13 @@ export function openCortoSheet(title, country, duration, section, flags, directo
       <div class="pel-sheet-meta">
         <div class="pel-sheet-title">${title}</div>
         <div class="pel-sheet-flags-dur">${flgs}${dur?` · ${dur}`:''}</div>
-        ${(dir||gnr)?`<div class="pel-sheet-metaline">${[dir,gnr].filter(Boolean).join(' · ')}</div>`:''}
+        ${(dir||gnr||yr)?`<div class="pel-sheet-metaline">${[dir,gnr,yr].filter(Boolean).join(' · ')}</div>`:''}
         ${secLabel?`<div class="pel-sheet-sec">${secLabel}</div>`:''}
       </div>
     </div>
     <div class="pel-sheet-divider"></div>
     ${syn?`<div class="pel-sheet-section-lbl">${t('label_sinopsis')}</div><div class="pel-sheet-synopsis">${syn}</div><div class="pel-sheet-divider"></div>`:''}
-    <a class="c-lb pel-sheet-lb" href="${lbUrl(title)||'#'}" target="_blank" rel="noopener"${!lbUrl(title)?' style="display:none"':''}>${LB_SVG}<span class="c-lb-text pel-sheet-lb-text">Letterboxd</span></a>
+    <a class="c-lb pel-sheet-lb" href="${lbHref||'#'}" target="_blank" rel="noopener"${!lbHref?' style="display:none"':''}>${LB_SVG}<span class="c-lb-text pel-sheet-lb-text">Letterboxd</span></a>
     <div class="pel-sheet-divider"></div>
     ${parentTitle?`<div class="meta-xs-gray">${t('meta_corto_incluye')}</div>`:''}
     <div class="flex-gap1-mt1">
