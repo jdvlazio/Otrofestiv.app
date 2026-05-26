@@ -65,7 +65,7 @@ export function getFilmPoster(f){
   if(f.is_programa&&f.film_list&&f.film_list.length){
     const first=f.film_list[0];
     if(first.poster) return (first.poster.startsWith('http')||first.poster.startsWith('/assets/'))?first.poster:TMDB_IMG+first.poster;
-    return getPosterSrc(first.title||first,false)||getPosterSrc(f.title,false)||null;
+    return getPosterSrc(first.title||first,false)||getPosterSrc(f.title,false)||makeProgramPoster(state,f.title,f.duration,f.section);
   }
   // 6. TMDB — poster real (prioridad sobre editorial cloudfront)
   const _tmdb=getPosterSrc(f.title,false);

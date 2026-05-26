@@ -110,10 +110,10 @@ export function openPelSheet(title){
     const _fd2=JSON.stringify(f.film_list[1]).replace(/"/g,'&quot;');
     const _c1=_sp1
       ?`<img class="psp-card psp-front" src="${_sp1}" loading="lazy" onerror="this.remove()" alt="" data-action="openCombinedFilmSheet" data-film="${_fd1}">`
-      :`<div class="psp-card-ph" data-action="openCombinedFilmSheet" data-film="${_fd1}">🎬</div>`;
+      :`<img class="psp-card psp-front" src="${makeProgramPoster(state,f.film_list[0].title,f.film_list[0].duration||'',f.section||'')}" loading="lazy" alt="" data-action="openCombinedFilmSheet" data-film="${_fd1}">`;
     const _c2=_sp2
       ?`<img class="psp-card psp-back" src="${_sp2}" loading="lazy" onerror="this.remove()" alt="" data-action="openCombinedFilmSheet" data-film="${_fd2}">`
-      :`<div class="psp-card-ph" data-action="openCombinedFilmSheet" data-film="${_fd2}">🎬</div>`;
+      :`<img class="psp-card psp-back" src="${makeProgramPoster(state,f.film_list[1].title,f.film_list[1].duration||'',f.section||'')}" loading="lazy" alt="" data-action="openCombinedFilmSheet" data-film="${_fd2}">`;
     posterHtml=`<div class="pel-sheet-poster-stage">${_c1}${_c2}</div>`;
   } else {
     if(_isEditorialPoster(f)){

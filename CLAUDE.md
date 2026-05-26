@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `0c3db36 feat(olhar): lbSlug + pósters TMDB + géneros para Olhar de Cinema 2026 (#78)`
+> Último commit: `dd44688 feat(i18n): selector de idioma desplegable (#79)`
 
 ---
 
