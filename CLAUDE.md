@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `248e9e8 feat(planear): prio strip — 3 estados (intención / resolución / stale) (#63)`
+> Último commit: `45fc0d4 chore(i18n): retirar sync-i18n.py + corregir fuente de verdad en CLAUDE.md (#64)`
 
 ---
 
