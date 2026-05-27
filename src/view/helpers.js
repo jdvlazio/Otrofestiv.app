@@ -23,7 +23,7 @@ let DAY_SHORT_PT={}; // swapeado por loadFestival() — valores en pt-BR
 let _CUSTOM_N = {};
 let _POSTERS_N = {}; // re-poblado vía setPosters(POSTERS) — POSTERS vive en main.js
 
-export { DAY_SHORT_EN };
+export { DAY_SHORT_EN, DAY_SHORT_PT };
 
 // normKey — privado del módulo
 const normKey = s => s.replace(/[\u2018\u2019\u201A\u201B\u2032\u02BC]/g, "'");
@@ -182,8 +182,9 @@ export function mplanBlockType(s){
 }
 
 export const dayChip = key => {
-  const _ds = _lang==='en' ? DAY_SHORT_EN : DAY_SHORT;
-  const abr = (_lang==='en' ? (_ds[key]||'').split(' ')[0] : null) || DAY_ABBR[key] || (_ds[key]||'').split(' ')[0] || key;
+  const _ds = _lang==='pt' ? DAY_SHORT_PT : _lang==='en' ? DAY_SHORT_EN : DAY_SHORT;
+  // pt/en: abreviatura del set lang-específico (no DAY_ABBR, que es ES); es: DAY_ABBR.
+  const abr = (_lang!=='es' ? (_ds[key]||'').split(' ')[0] : null) || DAY_ABBR[key] || (_ds[key]||'').split(' ')[0] || key;
   const num = DAY_NUM[key]  || (_ds[key]||'').split(' ')[1] || '';
   return `<span class="day-chip-abr">${abr}</span><span class="day-chip-num">${num}</span>`;
 };

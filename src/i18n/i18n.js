@@ -1153,7 +1153,7 @@ export function _applyI18nDOM(){
       lbl=_lang==='en'?_DOW_EN[dow]:_lang==='pt'?_DOW_PT[dow]:_DOW_ES[dow];
     } else {
       // Fallback: usar data-lbl-es/en del DOM (formato legado Leviza/FICCI)
-      lbl=_lang==='en'?(btn.dataset.lblEn||btn.dataset.lblEs):btn.dataset.lblEs||'';
+      lbl=_lang==='en'?(btn.dataset.lblEn||btn.dataset.lblEs):_lang==='pt'?(btn.dataset.lblPt||btn.dataset.lblEs):btn.dataset.lblEs||'';
     }
     if(lbl) dateSpan.textContent=lbl;
   });

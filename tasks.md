@@ -46,14 +46,20 @@ enrutado por `dayLabel()` lang-aware con `DAY_SHORT_PT` (mapa ES→PT en `loader
 Header → `t('plan_tu_dia_en',{dia})` + nombre del festival; fallback `'Hoy'` → `t('bar_hoy')`.
 Bonus: `DAY_A` nunca matcheaba festivales con claves ISO → ahora funciona para todos.
 
-## Deuda i18n — `dayChip()` cae a ES en PT (PENDIENTE · PR propio)
+## Deuda i18n — ternarios binarios ES/EN que caen a ES en PT (RESUELTA ✅)
 
-`dayChip()` (`helpers.js:182`) tiene el mismo patrón binario que tenía `dayLabel()`:
-`_ds = _lang==='en' ? DAY_SHORT_EN : DAY_SHORT` → en PT cae a `DAY_SHORT` (ES) y además
-prioriza `DAY_ABBR[key]` (la abreviatura ES del festival). Resultado: los day-chips
-muestran abreviatura ES en PT (MIÉ en vez de QUA). No se incluyó en el refactor de
-`DAY_A`→`dayLabel()` (fuera de scope). Fix: hacer `dayChip()` 3-way usando `DAY_SHORT_PT`
-(ya existe el setter/let), análogo a `dayLabel()`.
+Tres últimos leaks de hardcode/ternario que no pasaban por `t()` y caían a ES en PT,
+arreglados en un PR combinado (`feat/fix-lang-ternarios`):
 
-> El leak del **countdown** (`misc_days`) sí se arregló por separado (PR del countdown).
-> Este frente es solo el header + `DAY_A`.
+1. **`dayChip()`** (`helpers.js`) tenía el mismo patrón binario que tenía `dayLabel()`:
+   `_ds = _lang==='en' ? DAY_SHORT_EN : DAY_SHORT` → en PT caía a `DAY_SHORT` (ES) y además
+   priorizaba `DAY_ABBR[key]` (abreviatura ES del festival). Day-chips mostraban abreviatura
+   ES en PT (MIÉ en vez de QUA). Fix: 3-way usando `DAY_SHORT_PT`, análogo a `dayLabel()`.
+2. **dtab labels** (`loader.js`): el build del dtab era binario (`_dtabLbl=_lang==='en'?...`)
+   y el fallback legado de `_applyI18nDOM` (`i18n.js`) solo leía `lblEn`/`lblEs`. Fix:
+   `_dtabLblPT` + `dataset.lblPt` + ramas PT en ambos sitios.
+3. **`_kindMap`** (`components.js`): `_lang==='en'?_kindMapEN:_kindMapES` → PT caía a ES.
+   Fix: `_lang==='es'?_kindMapES:_kindMapEN` (PT reutiliza EN, términos internacionales).
+
+> El leak del **countdown** (`misc_days`) se arregló en el PR del countdown (#116) y el del
+> header + `DAY_A` en el refactor `dayLabel()` (#117).
