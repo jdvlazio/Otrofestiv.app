@@ -106,11 +106,18 @@ Columnas del CSV — **clase organizador** (lo que solo el festival sabe):
 
 3. Emojis de sección aprobados por PM + Content Designer.
 
+4. **Ticketing (obligatorio evaluar en cada festival).** En el root del JSON:
+   - `ticket_url` (`https://`) + `ticketing_model` (`"paid"` o `"mixed"`) si el festival cobra entrada o es mixto.
+   - Festival 100% gratuito → omitir ambos campos.
+   - Festival `"mixed"` → marcar `is_free: true` en cada screening gratuito (verificar contra el sitio oficial de entradas).
+   - Recordar: `ticket_url`/`ticketing_model` ya están en el whitelist `_cfgFields` de `loader.js`. `is_free` ya pasa por la explosión de screenings.
+
 **Gates de salida (bloqueantes):**
 - [ ] JSON sin `config{}`
 - [ ] `storageKey` único (verificar contra todos los festivales)
 - [ ] `festivalEndStr` presente y correcto
 - [ ] `country` presente (necesario para `flagFmt`)
+- [ ] Ticketing evaluado: `ticket_url` + `ticketing_model` presentes (o ambos ausentes si es gratuito); `is_free` marcado en funciones gratuitas si es `"mixed"`
 
 ---
 
@@ -307,6 +314,9 @@ node scripts/validate-festivals.js [festival-id]
 - `config{}` presente en el JSON
 - Título con 3+ palabras en ALLCAPS
 - Cobertura de poster = 0%
+- `ticket_url` presente sin `ticketing_model` válido (`"paid"`/`"mixed"`)
+- `ticket_url` que no empieza con `https://`
+- `ticketing_model` presente sin `ticket_url`
 
 **Warnings (no bloquean pero requieren revisión antes del deploy):**
 - Cobertura de poster < 95%

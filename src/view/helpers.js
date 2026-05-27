@@ -251,6 +251,9 @@ export function _metaBadges(f){
   let b='';
   if(f.has_qa) b+=`<span class="meta-badge">Q&A</span>`;
   if(f.requires_registration) b+=`<span class="meta-badge">${t('badge_inscripcion')}</span>`;
+  // Festival mixto: marcar función gratuita (discrimina — solo las gratis, no todas).
+  if((FESTIVAL_CONFIG[_activeFestId]||{}).ticketing_model==='mixed'&&f.is_free===true)
+    b+=`<span class="meta-badge">${t('badge_gratis')}</span>`;
   return b;
 }
 

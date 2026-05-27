@@ -70,7 +70,8 @@ export async function loadFestival(id){
             exploded.push(Object.assign({},base,{
               day:s.day||s.date,date:s.date||s.day,time:s.time,venue:s.venue||'',
               day_order:s.day_order!==undefined?s.day_order:i,
-              sala:s.sala||''
+              sala:s.sala||'',
+              ...(s.is_free!=null?{is_free:s.is_free}:{}) // por-función (festivales mixed)
             }));
           });
         } else {
@@ -98,7 +99,7 @@ export async function loadFestival(id){
       // Estos campos se mergean si existen en el JSON — nunca pisan storageKey.
       const _cfgFields=['name','shortName','city','dates','dates_en','year',
         'timezoneOffset','festivalDates','days','dayKeys','dayShort','dayShort_en',
-        'dayLong','prioLimit','eventPosterLabel','group'];
+        'dayLong','prioLimit','eventPosterLabel','group','ticket_url','ticketing_model'];
       _cfgFields.forEach(k=>{ if(data[k]!=null) cfg[k]=data[k]; });
       // ── LEGADO: festivales anteriores con bloque config{} en el JSON ──────
       // Festivales nuevos (desde Mujeres 2026) NO deben incluir config{} en el JSON —

@@ -20,11 +20,19 @@ Documento normativo. Toda discrepancia entre este archivo y el código es un bug
   "customPosters": { ... },
   "lbSlugs": { ... },
   "prioLimit": 5,
+  "ticket_url": "string — URL https:// de entradas (opcional)",
+  "ticketing_model": "string — 'paid' | 'mixed' (obligatorio si ticket_url existe)",
   "films": [ ... ]
 }
 ```
 
 **Nota formato:** Los festivales desde Jardín 2026 no incluyen `config{}` en el JSON — la configuración vive en `FESTIVAL_CONFIG` de `index.html`. Los festivales legacy (FICCI 65, Cinemancia 2025) sí incluyen `config{}`.
+
+**Ticketing (campos opcionales del root):**
+- `ticket_url` — URL `https://` de la página oficial de entradas. Si existe, el sheet de función muestra un bloque con link (oculto cuando `festivalEnded()`). Ausencia de `ticket_url` = festival gratuito (no muestra nada).
+- `ticketing_model` — `"paid"` (todo pago, ej. Tribeca → link "Comprá tu entrada →") o `"mixed"` (pago + gratis, ej. Olhar → meta-banner "Funciones pagas y gratuitas"). **Obligatorio si `ticket_url` existe.**
+- En festivales `"mixed"`, marcar funciones gratuitas con `is_free: true` por screening (ver Screenings). El card muestra badge "GRATIS"; el sheet oculta el bloque solo si **todas** las funciones del film son gratuitas.
+- Ambos campos se absorben vía el whitelist `_cfgFields` en `loader.js` — un campo root nuevo que no esté ahí se descarta en silencio.
 
 ---
 
@@ -100,10 +108,13 @@ Usado cuando un film tiene múltiples funciones en días/horarios/venues distint
     "date": "string — ISO date '2026-06-03' (requerido)",
     "day": "string — KEY del dayKeys (opcional, se deriva de date si falta)",
     "time": "string — '10:30 AM'",
-    "venue": "string — clave exacta de venues{}"
+    "venue": "string — clave exacta de venues{}",
+    "is_free": "boolean — opcional, solo festivales 'mixed': marca función gratuita"
   }
 ]
 ```
+
+`is_free` se absorbe en la explosión de screenings (whitelist en `loader.js`). Solo aplica a festivales con `ticketing_model: "mixed"`.
 
 **Regla de explosión:** el sistema convierte `screenings[]` en objetos film planos usando:
 ```javascript
