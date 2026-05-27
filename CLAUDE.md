@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `5d9cb8e Merge pull request #119 from jdvlazio/feat/fix-lang-ternarios`
+> Último commit: `9954ddb feat: ticket info en sheet + badge gratuito (Olhar/Tribeca)`
 
 ---
 
