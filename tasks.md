@@ -39,19 +39,21 @@ las consumía (0 usos de `t()`/`data-i18n`). **Borradas de es/en** en el PR de
 limpieza tras cerrar PT. Nunca se tradujeron a PT (habría sido copy invisible).
 Resultado: `_I18N` queda en 340 keys es/en/pt — paridad total, 100% pt-BR.
 
-## Deuda i18n — `DAY_A` + header "Tu {día} en" (PENDIENTE · PR propio)
+## Deuda i18n — `DAY_A` + header "Tu {día} en" (RESUELTA ✅)
 
-Detectada en el QA de producción pt-BR. El header del Plan ("Tu {día} en {fest}",
-`agenda.js:691`) interpola un día que **no es lang-aware**: viene de un mapa
-hardcodeado en español `DAY_A = {Martes:'MAR', Miércoles:'MIÉ', …}` (`agenda.js:459`),
-keyed por el `f.day` crudo del JSON (español) → devuelve abreviaturas ES (MAR/MIÉ/JUE…).
-En PT el header mostraría "Seu **jue** em …" (día en español). Fallback `'Hoy'` también
-hardcodeado (`agenda.js:687`).
+`DAY_A` hardcodeado (4 sitios: `agenda.js` + 3× `sheets-controller.js`) eliminado y
+enrutado por `dayLabel()` lang-aware con `DAY_SHORT_PT` (mapa ES→PT en `loader.js`).
+Header → `t('plan_tu_dia_en',{dia})` + nombre del festival; fallback `'Hoy'` → `t('bar_hoy')`.
+Bonus: `DAY_A` nunca matcheaba festivales con claves ISO → ahora funciona para todos.
 
-Scope propio porque `DAY_A` está **duplicado en 4 sitios**: `agenda.js:459` +
-`sheets-controller.js:433/516/597`. Fix correcto: derivar el día de una fuente i18n
-(reusar `_DOW_PT`/`day_short_*` de `i18n.js`, que ya calcula SEG/TER/QUA/QUI/SEX desde
-la fecha ISO) y eliminar el fallback `'Hoy'` hardcodeado.
+## Deuda i18n — `dayChip()` cae a ES en PT (PENDIENTE · PR propio)
+
+`dayChip()` (`helpers.js:182`) tiene el mismo patrón binario que tenía `dayLabel()`:
+`_ds = _lang==='en' ? DAY_SHORT_EN : DAY_SHORT` → en PT cae a `DAY_SHORT` (ES) y además
+prioriza `DAY_ABBR[key]` (la abreviatura ES del festival). Resultado: los day-chips
+muestran abreviatura ES en PT (MIÉ en vez de QUA). No se incluyó en el refactor de
+`DAY_A`→`dayLabel()` (fuera de scope). Fix: hacer `dayChip()` 3-way usando `DAY_SHORT_PT`
+(ya existe el setter/let), análogo a `dayLabel()`.
 
 > El leak del **countdown** (`misc_days`) sí se arregló por separado (PR del countdown).
 > Este frente es solo el header + `DAY_A`.
