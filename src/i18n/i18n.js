@@ -763,6 +763,28 @@ export const _I18N = {
     "toast_conexion": "Não foi possível carregar o festival. Verifique sua conexão.",
     "toast_prioridad_quitada": "Prioridade removida",
     "toast_marcada_vista": "Movido para Já vistos",
+    // ── Lote 6: autenticación ──
+    "auth_entrar": "Entrar",
+    "auth_cuenta": "Conta",
+    "auth_email": "seu@email.com",
+    "auth_nombre": "Seu nome",
+    "auth_enviar_cod": "Enviar código",
+    "auth_enviando": "Enviando…",
+    "auth_cod_hint": "Digite o código de 6 dígitos.",
+    "auth_email_hint": "Digite um email válido.",
+    "auth_titulo": "Salve seu plano",
+    "auth_otp_sub": "Enviamos um código de 6 dígitos para",
+    "auth_verificando": "Verificando…",
+    "auth_desc": "Digite seu email e enviamos um código de 6 dígitos. Sem senha.",
+    "auth_enviar": "Enviar código",
+    "auth_revisa": "Confira seu email",
+    "auth_cerrar": "Sair",
+    "auth_eliminar": "Excluir conta",
+    "auth_eliminar_confirm": "Toque de novo para confirmar",
+    "auth_eliminar_desc": "Sua conta e seu plano salvo serão excluídos. Esta ação não pode ser desfeita.",
+    "auth_eliminar_btn": "Sim, excluir",
+    "auth_eliminar_aviso": "Ao excluir sua conta, seu plano salvo será apagado.",
+    "auth_eliminando": "Excluindo…",
   }
 };
 
