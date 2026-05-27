@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `5731b7f feat(i18n): pt-BR Lote 10b — plan tiempo real + estado del día (20 keys) (#109)`
+> Último commit: `703fefa feat(i18n): pt-BR Lote 10c — plan confirmaciones + advertencias + estados (43 keys) (#110)`
 
 ---
 
