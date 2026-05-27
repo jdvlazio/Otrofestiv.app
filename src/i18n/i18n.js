@@ -735,6 +735,8 @@ export const _I18N = {
     "label_en_curso": "Em exibição",
     "label_programa": "Programa",
     "label_cortos": "Curtas-metragens",
+    // tab "Tudo" de la barra de días (loader.js:223 → t('bar_todo'))
+    "bar_todo": "Tudo",
   }
 };
 
