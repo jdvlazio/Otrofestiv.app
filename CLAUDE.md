@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `4458cbe feat(i18n): pt-BR Lote 6 — auth (21 keys) (#103)`
+> Último commit: `0104bec feat(i18n): pt-BR Lote 7 — disponibilidad (19 keys) (#104)`
 
 ---
 
