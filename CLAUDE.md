@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `2136d18 fix(filtros): quitar conteo de "Todo el programa" / "Todos los lugares" (#95)`
+> Último commit: `2002344 chore: bundle v202605270009`
 
 ---
 
