@@ -904,6 +904,27 @@ export const _I18N = {
     "plan_opciones": "Opções de Plano",
     "plan_variacion": "Variação",
     "plan_usar_plan": "Usar este plano",
+    // ── Lote 10b: plan — tiempo real + estado del día ──
+    "plan_empty_dia": "Não há sessões para este dia. Adicione em Sugestões.",
+    "plan_nada_dia": "Nada no seu plano neste dia",
+    "plan_en_tu_plan": "está no seu plano.",
+    "plan_empty_hueco": "Não há sessões disponíveis para este intervalo.",
+    "plan_en_curso": "EM EXIBIÇÃO · começou há",
+    "plan_termina_en": "Termina em",
+    "plan_en_min": "Em",
+    "plan_retraso": "Atraso?",
+    "plan_termina": "termina",
+    "plan_cabe_hueco": "Cabe no seu intervalo",
+    "plan_tu_dia_en": "Seu {dia} em",
+    "plan_termino_hace": "Terminou há",
+    "plan_otra_cosa": "Quer colocar outra coisa aí?",
+    "plan_sin_combos": "Não há combinações possíveis. Ajuste sua disponibilidade.",
+    "plan_choca": "Conflita com outros filmes do seu plano",
+    "plan_sin_proximas": "Você não tem próximas sessões",
+    "plan_sin_horario": "Sem horário disponível",
+    "plan_fest_empieza": "Começa em",
+    "plan_fest_manana": "Começa amanhã",
+    "plan_fest_hoy": "Começa hoje!",
   }
 };
 
