@@ -31,15 +31,10 @@ Curitiba, Brasil · 4–13 jun 2026 · 80 films · 58 entries (46 films + 12 pro
 - `festival-template.json` dice JSON={venues,films}-only, pero `validate.py` + loader exigen config en el JSON → reconciliar el template.
 - `has_qa` es film-level (el loader no transporta Q&A por-función) → Olhar perdió granularidad.
 
-## Deuda i18n — keys muertas (limpieza, no urgente · PR aparte)
+## Deuda i18n — keys muertas (RESUELTA ✅)
 
-Detectadas durante el onboarding de PT (Lote 3). Existen en `_I18N` (es **y** en)
-pero **ningún código las consume** (verificado: grep de `t('...')` + `data-i18n`
-en todo `src/` e `index.html` → 0 usos). Candidatas a borrar de los 3 bloques.
-
-- `label_director` — el sheet muestra el director inline en la metaline, sin label.
-- `label_synopsis` — el sheet usa `label_sinopsis` (minúscula); esta nunca se llama.
-- `label_duracion` — la duración sale como "NN min" inline, sin label.
-- `label_valoracion` — el sheet usa el CTA "Calificar"; no hay label "Tu valoración".
-
-> No se tradujeron a PT (sería copy invisible). Al borrarlas, tocar es/en/pt juntos.
+Detectadas durante el onboarding de PT (Lote 3): `label_director`, `label_synopsis`,
+`label_duracion`, `label_valoracion` existían en `_I18N` (es+en) pero ningún código
+las consumía (0 usos de `t()`/`data-i18n`). **Borradas de es/en** en el PR de
+limpieza tras cerrar PT. Nunca se tradujeron a PT (habría sido copy invisible).
+Resultado: `_I18N` queda en 340 keys es/en/pt — paridad total, 100% pt-BR.

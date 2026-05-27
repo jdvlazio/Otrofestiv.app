@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `73b9c58 fix(i18n): dtab bar_todo responde al language switch (#113)`
+> Último commit: `8d4c53c feat(i18n): pt-BR Lote 13 — cierre completo (54 keys) (#114)`
 
 ---
 
