@@ -220,7 +220,7 @@ export async function loadFestival(id){
       todoBtn.className='dtab on';
       todoBtn.dataset.day='all';
       todoBtn.style.cssText='display:flex;align-items:center;justify-content:center;padding:0 14px';
-      todoBtn.innerHTML='<span style="font-size:var(--t-sm);font-weight:700;letter-spacing:.08em;text-transform:uppercase">'+t('bar_todo')+'</span>';
+      todoBtn.innerHTML='<span data-i18n="bar_todo" style="font-size:var(--t-sm);font-weight:700;letter-spacing:.08em;text-transform:uppercase">'+t('bar_todo')+'</span>';
       todoBtn.onclick=()=>{
         activeDay='all';activeVenue='all';activeSec='all';selectedIdx=null;
         cartelaMode='horario';
