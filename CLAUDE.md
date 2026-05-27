@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `055a67b feat(i18n): pt-BR Lote 1 — navegación (4 keys) (#98)`
+> Último commit: `a746ff9 feat(i18n): pt-BR Lote 2 — barra de filtros + CTAs (10 keys) (#99)`
 
 ---
 
