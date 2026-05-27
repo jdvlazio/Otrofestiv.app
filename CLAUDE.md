@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `59320df feat(i18n): pt-BR Lote 11 — notice + warn + error (21 keys) (#111)`
+> Último commit: `48f3e39 feat(i18n): pt-BR Lote 12 — labels UI + CTAs (19 keys) (#112)`
 
 ---
 
