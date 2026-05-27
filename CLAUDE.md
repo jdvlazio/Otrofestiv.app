@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `c4c7af0 chore: bundle v202605271318`
+> Último commit: `5731b7f feat(i18n): pt-BR Lote 10b — plan tiempo real + estado del día (20 keys) (#109)`
 
 ---
 
