@@ -342,7 +342,9 @@ _lang = (()=>{
   if(saved && _I18N[saved]) return saved;
   // Auto-detect por idioma del navegador — solo en primer uso
   const nav = (navigator.language || navigator.userLanguage || 'es').toLowerCase();
-  return nav.startsWith('en') ? 'en' : 'es';
+  if(nav.startsWith('en')) return 'en';
+  if(nav.startsWith('pt')) return 'pt';
+  return 'es';
 })();
 
 // t(key, params) → src/i18n/i18n.js (Step 4). Importado.
@@ -632,7 +634,7 @@ FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202605261905';
+const BUILD_VERSION='202605261930';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';

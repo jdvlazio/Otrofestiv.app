@@ -703,7 +703,11 @@ export const _I18N = {
     "error_cargar_lista": "Error loading the list.",
     "plan_fecha_pendiente": "Date pending.",
     "cartelera_hint_sfx": "on any title to add it to Interests",
-  }
+  },
+  // pt: stub vacío (Paso 1 andamiaje). Sin traducciones aún → t() cae a ES vía
+  // el fallback `_I18N['es'][key]`. setLang('pt') no retorna early porque
+  // _I18N['pt'] existe. Las 344 keys PT llegan en el Paso 2 (editorial).
+  pt: {}
 };
 
 // _lang vive en state (roster bridged). El init (storage.getLang + detección de
@@ -736,6 +740,7 @@ export function _applyI18nDOM(){
   // 2. Lang toggle — mark active button
   document.getElementById('lang-btn-es')?.classList.toggle('active', _lang==='es');
   document.getElementById('lang-btn-en')?.classList.toggle('active', _lang==='en');
+  document.getElementById('lang-btn-pt')?.classList.toggle('active', _lang==='pt');
   // 3. data-i18n elements — translate textContent (nunca script/style)
   document.querySelectorAll('[data-i18n]').forEach(el=>{
     if(el.tagName==='SCRIPT'||el.tagName==='STYLE') return;
@@ -781,6 +786,7 @@ export function _applyI18nDOM(){
   // Se calculan desde el ISO date del día, sin depender de datos del festival
   const _DOW_ES=['DOM','LUN','MAR','MIÉ','JUE','VIE','SÁB'];
   const _DOW_EN=['SUN','MON','TUE','WED','THU','FRI','SAT'];
+  const _DOW_PT=['DOM','SEG','TER','QUA','QUI','SEX','SÁB'];
   document.querySelectorAll('.dtab[data-day]').forEach(btn=>{
     const dayKey=btn.dataset.day;
     const dateSpan=btn.querySelector('.dtab-date');
@@ -790,7 +796,7 @@ export function _applyI18nDOM(){
     let lbl='';
     if(isoMatch){
       const dow=new Date(dayKey+'T12:00:00').getDay();
-      lbl=_lang==='en'?_DOW_EN[dow]:_DOW_ES[dow];
+      lbl=_lang==='en'?_DOW_EN[dow]:_lang==='pt'?_DOW_PT[dow]:_DOW_ES[dow];
     } else {
       // Fallback: usar data-lbl-es/en del DOM (formato legado Leviza/FICCI)
       lbl=_lang==='en'?(btn.dataset.lblEn||btn.dataset.lblEs):btn.dataset.lblEs||'';
