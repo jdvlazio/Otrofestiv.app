@@ -46,14 +46,12 @@ enrutado por `dayLabel()` lang-aware con `DAY_SHORT_PT` (mapa ES→PT en `loader
 Header → `t('plan_tu_dia_en',{dia})` + nombre del festival; fallback `'Hoy'` → `t('bar_hoy')`.
 Bonus: `DAY_A` nunca matcheaba festivales con claves ISO → ahora funciona para todos.
 
-## Deuda i18n — `dayChip()` cae a ES en PT (PENDIENTE · PR propio)
+## Deuda i18n — `dayChip()` cae a ES en PT (RESUELTA ✅)
 
-`dayChip()` (`helpers.js:182`) tiene el mismo patrón binario que tenía `dayLabel()`:
-`_ds = _lang==='en' ? DAY_SHORT_EN : DAY_SHORT` → en PT cae a `DAY_SHORT` (ES) y además
-prioriza `DAY_ABBR[key]` (la abreviatura ES del festival). Resultado: los day-chips
-muestran abreviatura ES en PT (MIÉ en vez de QUA). No se incluyó en el refactor de
-`DAY_A`→`dayLabel()` (fuera de scope). Fix: hacer `dayChip()` 3-way usando `DAY_SHORT_PT`
-(ya existe el setter/let), análogo a `dayLabel()`.
+`dayChip()` (`helpers.js`) ahora es 3-way: `_ds = pt?DAY_SHORT_PT:en?DAY_SHORT_EN:DAY_SHORT`,
+y la abreviatura sale del set lang-específico para pt/en (no de `DAY_ABBR`, que es ES);
+`es` mantiene `DAY_ABBR`. Verificado: PT Martes→"TER", Jueves→"QUI". Cierra el último
+sibling del frente de días — el chrome de días queda 100% lang-aware en los 3 idiomas.
 
 > El leak del **countdown** (`misc_days`) sí se arregló por separado (PR del countdown).
 > Este frente es solo el header + `DAY_A`.

@@ -182,8 +182,10 @@ export function mplanBlockType(s){
 }
 
 export const dayChip = key => {
-  const _ds = _lang==='en' ? DAY_SHORT_EN : DAY_SHORT;
-  const abr = (_lang==='en' ? (_ds[key]||'').split(' ')[0] : null) || DAY_ABBR[key] || (_ds[key]||'').split(' ')[0] || key;
+  const _ds = _lang==='pt' ? DAY_SHORT_PT : _lang==='en' ? DAY_SHORT_EN : DAY_SHORT;
+  // pt/en: la abreviatura sale del set lang-específico (DAY_SHORT_PT/EN), no de
+  // DAY_ABBR (que es la abreviatura ES del festival). es: mantiene DAY_ABBR.
+  const abr = (_lang!=='es' ? (_ds[key]||'').split(' ')[0] : null) || DAY_ABBR[key] || (_ds[key]||'').split(' ')[0] || key;
   const num = DAY_NUM[key]  || (_ds[key]||'').split(' ')[1] || '';
   return `<span class="day-chip-abr">${abr}</span><span class="day-chip-num">${num}</span>`;
 };
