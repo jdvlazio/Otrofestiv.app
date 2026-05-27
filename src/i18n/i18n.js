@@ -969,6 +969,28 @@ export const _I18N = {
     "plan_sin_actividades": "Não há atividades disponíveis para este horário.",
     "plan_no_incluidas": "Não incluídas",
     "plan_fecha_pendiente": "Nova data pendente.",
+    // ── Lote 11: alertas del sistema — notice + warn + error ──
+    "notice_funcion_canc": "Sessão cancelada · Nova data pendente",
+    "notice_extension": "A sessão pode se estender",
+    "notice_fest_term": "O festival já terminou",
+    "notice_ya_tenes": "você já tem",
+    "notice_cancelada": "CANCELADA",
+    "notice_reprogramada": "REPROGRAMADA",
+    "notice_cancelada_short": "Cancelada",
+    "notice_reprog_short": "Reprog.",
+    "notice_nueva_funcion": "Nova sessão:",
+    "warn_sin_tiempo": "Não dá tempo de chegar",
+    "warn_min_hasta_sig": "min até a próxima",
+    "warn_qa_no_llega": "Q&A · se você ficar não chega à próxima",
+    "warn_qa_tiempo": "Q&A · se você ficar tem ~{n} min",
+    "warn_a_pie": "a pé",
+    "warn_en_carro": "de carro",
+    "warn_entre_sedes": "entre estes locais",
+    "error_funciones": "Erro ao carregar sessões",
+    "error_festival_nd": "Este festival ainda não está disponível.",
+    "error_cargar_miplan": "Erro ao carregar Meu Plano:",
+    "error_calcular": "Erro ao calcular:",
+    "error_cargar_lista": "Erro ao carregar a lista.",
   }
 };
 
