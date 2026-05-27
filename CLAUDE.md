@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `e94ca0a feat(i18n): pt-BR Lote 9 — misc (41 keys) (#106)`
+> Último commit: `c4c7af0 chore: bundle v202605271318`
 
 ---
 
