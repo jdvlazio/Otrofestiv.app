@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `2002344 chore: bundle v202605270009`
+> Último commit: `16d7643 feat(i18n): andamiaje PT — idioma seleccionable (sin traducciones aún) (#97)`
 
 ---
 
