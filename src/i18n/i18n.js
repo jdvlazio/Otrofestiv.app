@@ -785,6 +785,26 @@ export const _I18N = {
     "auth_eliminar_btn": "Sim, excluir",
     "auth_eliminar_aviso": "Ao excluir sua conta, seu plano salvo será apagado.",
     "auth_eliminando": "Excluindo…",
+    // ── Lote 7: disponibilidad ──
+    "av_inicio": "hora de início",
+    "av_fin": "hora de término",
+    "av_seleccionar": "Selecione a hora de início e término",
+    "av_eliminar": "Remover bloco",
+    "av_todo_el_dia": "Dia inteiro",
+    "av_horario": "Horário",
+    "av_confirmar": "Confirmar",
+    "av_tipo": "Tipo",
+    "av_dia": "Dia",
+    "av_horas": "Horários específicos",
+    "av_opcion_pers": "Opção personalizada",
+    "av_disponibilidad": "Disponibilidade",
+    "av_no_incluir": "Seu plano não incluirá sessões nesses horários.",
+    "av_hora_invalida": "A hora de início deve ser anterior à de término",
+    "av_liberar_dia": "Liberar o dia",
+    "av_todo_el_dia_btn": "Dia inteiro",
+    "av_no_disponible": "Indisponível",
+    "av_horas_especificas": "Horários específicos",
+    "av_ver_opciones": "Ver opções",
   }
 };
 
