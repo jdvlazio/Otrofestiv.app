@@ -754,6 +754,15 @@ export const _I18N = {
     "search_sin_res": "Nenhum resultado",
     "search_sin_res_para": "Nenhum resultado para",
     "search_resultados": "Resultados",
+    // ── Lote 5: toasts ──
+    "toast_algo_mal": "Algo deu errado. Tente de novo.",
+    "toast_cod_mal": "Código incorreto ou expirado. Tente de novo.",
+    "toast_envio_err": "Erro ao enviar. Tente de novo.",
+    "toast_calif_elim": "Avaliação removida",
+    "toast_horario_lib": "Horário liberado — talvez caibam mais títulos",
+    "toast_conexion": "Não foi possível carregar o festival. Verifique sua conexão.",
+    "toast_prioridad_quitada": "Prioridade removida",
+    "toast_marcada_vista": "Movido para Já vistos",
   }
 };
 
