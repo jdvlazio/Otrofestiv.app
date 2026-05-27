@@ -777,7 +777,7 @@ export const _I18N = {
     "auth_verificando": "Verificando…",
     "auth_desc": "Digite seu email e enviamos um código de 6 dígitos. Sem senha.",
     "auth_enviar": "Enviar código",
-    "auth_revisa": "Confira seu e-mail",
+    "auth_revisa": "Confira seu email",
     "auth_cerrar": "Sair",
     "auth_eliminar": "Excluir conta",
     "auth_eliminar_confirm": "Toque de novo para confirmar",
