@@ -989,7 +989,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .pel-sheet-wl-btn:active{background:var(--amber-20)}
 .pel-sheet-wl-btn.in-wl{background:rgba(39,174,96,.1);border-color:rgba(39,174,96,.3);color:var(--green)}
 /* ── Rating sheet ── */
-.rating-overlay{position:fixed;inset:0;background:var(--overlay-50);z-index:9100;opacity:0;transition:opacity var(--tr-smooth);pointer-events:none}
+.rating-overlay{position:fixed;inset:0;background:var(--overlay-50);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);z-index:9100;opacity:0;transition:opacity var(--tr-smooth);pointer-events:none}
 .rating-overlay.open{opacity:1;pointer-events:all}
 .rating-sheet{position:fixed;bottom:0;left:0;right:0;background:var(--surf-2);border-radius:var(--r-sheet) var(--r-sheet) 0 0;z-index:9101;padding:16px 20px 40px;transform:translateY(100%);transition:transform .28s cubic-bezier(.32,0,.67,0)}
 .rating-sheet.open{transform:translateY(0)}
@@ -1084,7 +1084,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .prio-limit-swap{background:none;border:1px solid var(--bdr);border-radius:var(--r-pill);color:var(--gray);font-family:var(--font);font-size:var(--t-sm);font-weight:var(--w-semi);padding:5px 11px;cursor:pointer;white-space:nowrap;flex-shrink:0;transition:all var(--tr-base)}
 .prio-limit-swap:active{border-color:var(--amber-30);color:var(--amber);background:var(--amber-10)}
 .prio-limit-cancel{width:calc(100% - 40px);margin:8px 20px 44px;background:none;border:none;color:var(--gray);font-family:var(--font);font-size:var(--t-sm);font-weight:var(--w-semi);padding:10px;cursor:pointer;display:block;text-align:center}
-.plan-confirm-overlay{position:fixed;inset:0;background:var(--overlay-55);z-index:9200;opacity:0;pointer-events:none;transition:opacity .25s}
+.plan-confirm-overlay{position:fixed;inset:0;background:var(--overlay-55);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);z-index:9200;opacity:0;pointer-events:none;transition:opacity .25s}
 .plan-confirm-overlay.open{opacity:1;pointer-events:all}
 .plan-confirm-sheet{position:fixed;bottom:0;left:0;right:0;background:var(--surf-2);border-top:1px solid var(--bdr);border-radius:var(--r-sheet) var(--r-sheet) 0 0;z-index:9201;padding:8px 20px 44px;display:none;transition:transform .32s cubic-bezier(.32,0,.67,0)}
 .plan-confirm-sheet.open{display:block;transform:translateY(0)}
@@ -1645,7 +1645,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 }
 
 /* ── FESTIVAL BOTTOM SHEET ── */
-.fs-overlay{position:fixed;inset:0;background:var(--overlay-60);z-index:2000;opacity:0;transition:opacity var(--tr-smooth);pointer-events:none}
+.fs-overlay{position:fixed;inset:0;background:var(--overlay-60);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);z-index:2000;opacity:0;transition:opacity var(--tr-smooth);pointer-events:none}
 .fs-overlay.open{opacity:1;pointer-events:all}
 .fs-sheet{position:fixed;bottom:0;left:0;right:0;background:var(--surf);border-radius:var(--r) var(--r) 0 0;z-index:2001;padding:0 0 env(safe-area-inset-bottom);transform:translateY(100%);transition:transform var(--tr-enter) cubic-bezier(.32,1,.23,1)}
 .fs-sheet.open{transform:translateY(0)}
@@ -2785,7 +2785,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 <!-- ── Intereses / Planear: header unificado — fuera de ag-view ── -->
 <div class="ag-view" id="ag-view"></div>
 
-<script type="module" src="/src/main.js?v=202605261843"></script>
+<script type="module" src="/src/main.js?v=202605261905"></script>
 
 <!-- Festival switcher bottom sheet -->
 <div class="auth-sheet" id="auth-sheet" data-close-bg="AuthSheet">
