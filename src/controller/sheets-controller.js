@@ -430,7 +430,6 @@ export function _findParentProgram(cortoTitle){
 export function openConflictSheet(incomingTitle, incomingScreen, existingEntry){
   const{displayTitle:inDT}=parseProgramTitle(incomingTitle);
   const{displayTitle:exDT}=parseProgramTitle(existingEntry._title||'');
-  const DAY_A={Martes:'MAR',Miércoles:'MIÉ',Jueves:'JUE',Viernes:'VIE',Sábado:'SÁB',Domingo:'DOM'};
 
   // Pósters
   const inF=FILMS.find(f=>f.title===incomingTitle&&f.day===incomingScreen.day&&f.time===incomingScreen.time);
@@ -446,9 +445,9 @@ export function openConflictSheet(incomingTitle, incomingScreen, existingEntry){
   // Nombres y horarios
   const setEl=(id,txt)=>{const el=document.getElementById(id);if(el)el.textContent=txt;};
   setEl('cs-incoming-name', inDT);
-  setEl('cs-incoming-when', `${DAY_A[incomingScreen.day]||''} · ${incomingScreen.time} · ${inF?.duration||''}`);
+  setEl('cs-incoming-when', `${(dayLabel(incomingScreen.day)||'').split(' ')[0]} · ${incomingScreen.time} · ${inF?.duration||''}`);
   setEl('cs-existing-name', exDT);
-  const exWhen=existingEntry.day?`${DAY_A[existingEntry.day]||''} · ${existingEntry.time} · ${exF?.duration||''}`:'';
+  const exWhen=existingEntry.day?`${(dayLabel(existingEntry.day)||'').split(' ')[0]} · ${existingEntry.time} · ${exF?.duration||''}`:'';
   setEl('cs-existing-when', exWhen);
 
   // Botón de reemplazo con nombre exacto
@@ -513,11 +512,10 @@ export function openPrioLimit(newTitle){
   // Lista de prioritarias actuales
   const list=document.getElementById('prio-limit-list');
   if(list){
-    const DAY_A={Martes:'MAR',Miércoles:'MIÉ',Jueves:'JUE',Viernes:'VIE',Sábado:'SÁB',Domingo:'DOM'};
     const items=[...prioritized].map(t=>{
       const{displayTitle:dt}=parseProgramTitle(t);
       const f=FILMS.find(fi=>fi.title===t&&!screeningPassed(fi));
-      const when=f?`${DAY_A[f.day]||f.day} · ${f.time}`:'';
+      const when=f?`${(dayLabel(f.day)||f.day).split(' ')[0]} · ${f.time}`:'';
       const poster=getFilmPoster(f)||'';
       const safeSwap=t.replace(/'/g,"&#39;");
       const safeNew=newTitle.replace(/'/g,"&#39;");
@@ -594,7 +592,6 @@ export function openPostViewRating(title, day, time, venue, duration){
 
   const{displayTitle}=parseProgramTitle(title);
   const f=FILMS.find(fi=>fi.title===title);
-  const DAY_A={Martes:'MAR',Miércoles:'MIÉ',Jueves:'JUE',Viernes:'VIE',Sábado:'SÁB',Domingo:'DOM'};
 
   // Poster
   const poster=document.getElementById('pv-poster');
@@ -612,7 +609,7 @@ export function openPostViewRating(title, day, time, venue, duration){
   const ctx=document.getElementById('pv-context');
   if(ctx){
     const parts=[];
-    if(day) parts.push(DAY_A[day]||day);
+    if(day) parts.push((dayLabel(day)||day).split(' ')[0]);
     if(venue) parts.push(venue.split('·')[0].trim().split('‒')[0].trim());
     if(duration) parts.push(duration);
     ctx.textContent=parts.join(' · ');

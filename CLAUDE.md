@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `38b60aa chore: bundle v202605271446`
+> Último commit: `309a3b3 fix(i18n): countdown del Plan usa t('misc_days') (leak ES en PT) (#116)`
 
 ---
 
