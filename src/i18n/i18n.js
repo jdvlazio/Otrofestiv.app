@@ -712,6 +712,17 @@ export const _I18N = {
     "nav_intereses": "INTERESSES",
     "nav_planear": "PLANEJAR",
     "nav_miplan": "MEU PLANO",
+    // ── Lote 2: barra de filtros + CTAs principales ──
+    "bar_hoy": "Hoje",
+    "bar_manana": "Amanhã",
+    "bar_todas": "Todas",
+    "bar_seccion": "Seção",
+    "bar_lugar": "Local",
+    "cta_intereses": "Interesse",
+    "cta_priorizar": "Priorizar",
+    "cta_vista": "Visto",
+    "cta_calificar": "Avaliar",
+    "cta_anadir": "Adicionar aos Interesses",
   }
 };
 
