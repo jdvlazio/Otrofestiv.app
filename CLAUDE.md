@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `9f10675 feat(i18n): pt-BR Lote 3 — labels del sheet/agenda/dropdowns (9 keys reales)`
+> Último commit: `d9fde2e feat(i18n): pt-BR Lote 3 — labels del sheet/agenda/dropdowns (9 keys) (#100)`
 
 ---
 
