@@ -704,10 +704,15 @@ export const _I18N = {
     "plan_fecha_pendiente": "Date pending.",
     "cartelera_hint_sfx": "on any title to add it to Interests",
   },
-  // pt: stub vacío (Paso 1 andamiaje). Sin traducciones aún → t() cae a ES vía
-  // el fallback `_I18N['es'][key]`. setLang('pt') no retorna early porque
-  // _I18N['pt'] existe. Las 344 keys PT llegan en el Paso 2 (editorial).
-  pt: {}
+  // pt-BR (Paso 2, editorial por lotes con sign-off de Content Designer). Las
+  // keys aún sin traducir caen a ES vía el fallback `_I18N['es'][key]` de t().
+  pt: {
+    // ── Lote 1: navegación (bottom nav) ──
+    "nav_programa": "PROGRAMAÇÃO",
+    "nav_intereses": "INTERESSES",
+    "nav_planear": "PLANEJAR",
+    "nav_miplan": "MEU PLANO",
+  }
 };
 
 // _lang vive en state (roster bridged). El init (storage.getLang + detección de
