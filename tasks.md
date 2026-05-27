@@ -38,3 +38,20 @@ Detectadas durante el onboarding de PT (Lote 3): `label_director`, `label_synops
 las consumía (0 usos de `t()`/`data-i18n`). **Borradas de es/en** en el PR de
 limpieza tras cerrar PT. Nunca se tradujeron a PT (habría sido copy invisible).
 Resultado: `_I18N` queda en 340 keys es/en/pt — paridad total, 100% pt-BR.
+
+## Deuda i18n — `DAY_A` + header "Tu {día} en" (PENDIENTE · PR propio)
+
+Detectada en el QA de producción pt-BR. El header del Plan ("Tu {día} en {fest}",
+`agenda.js:691`) interpola un día que **no es lang-aware**: viene de un mapa
+hardcodeado en español `DAY_A = {Martes:'MAR', Miércoles:'MIÉ', …}` (`agenda.js:459`),
+keyed por el `f.day` crudo del JSON (español) → devuelve abreviaturas ES (MAR/MIÉ/JUE…).
+En PT el header mostraría "Seu **jue** em …" (día en español). Fallback `'Hoy'` también
+hardcodeado (`agenda.js:687`).
+
+Scope propio porque `DAY_A` está **duplicado en 4 sitios**: `agenda.js:459` +
+`sheets-controller.js:433/516/597`. Fix correcto: derivar el día de una fuente i18n
+(reusar `_DOW_PT`/`day_short_*` de `i18n.js`, que ya calcula SEG/TER/QUA/QUI/SEX desde
+la fecha ISO) y eliminar el fallback `'Hoy'` hardcodeado.
+
+> El leak del **countdown** (`misc_days`) sí se arregló por separado (PR del countdown).
+> Este frente es solo el header + `DAY_A`.

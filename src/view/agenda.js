@@ -528,7 +528,7 @@ export function renderContextualHeader(state){
     }).join('');
     // Countdown line — discreta, sin repetir info del topbar
     const _daysLeft=ph.daysDiff||0;
-    const _countdownLabel=_daysLeft<=0?t('plan_fest_hoy'):_daysLeft===1?t('plan_fest_manana'):`${t('plan_fest_empieza')} ${_daysLeft} ${_lang==='en'?'days':'días'}`;
+    const _countdownLabel=_daysLeft<=0?t('plan_fest_hoy'):_daysLeft===1?t('plan_fest_manana'):`${t('plan_fest_empieza')} ${_daysLeft} ${t('misc_days')}`;
     return`<div style="text-align:center;padding:var(--sp-2) 0 var(--sp-1);color:var(--gray2);font-size:var(--t-sm)">${_countdownLabel}</div>
       ${prioHtml?`<div class="ctx-prio-row" style="margin-bottom:var(--sp-3)">${prioHtml}</div>`:''}`;
   }
