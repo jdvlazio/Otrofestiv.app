@@ -456,7 +456,6 @@ export function renderContextualHeader(state){
   const {savedAgenda, FILMS, watched, prioritized, filmRatings, filmDelays, _activeFestId, _lang} = state.snapshot();
   const ph=_getFestivalPhase();
   if(!ph) return '';
-  const DAY_A={Martes:'MAR',Miércoles:'MIÉ',Jueves:'JUE',Viernes:'VIE',Sábado:'SÁB',Domingo:'DOM'};
   const _dayAbbr=k=>(dayLabel(k)||k).split(' ')[0]||'';
 
   // ── ENDED ─────────────────────────────────────────────────
@@ -684,11 +683,11 @@ export function renderContextualHeader(state){
     const verTodas=allWatched.length>MAX_VISIBLE
       ?`<div class="sim-hdr-pad"><button class="link-gray-xs" data-action="toggleEveningFilms">${t('misc_ver_todo')} (${allWatched.length})</button></div>`
       :'';
-    const dayName=DAY_A[todayScreenings[0]?.day]||'Hoy';
+    const dayName=(dayLabel(todayScreenings[0]?.day)||'').split(' ')[0]||t('bar_hoy');
     return`<div class="ctx-header">
       <div class="ctx-eyebrow" style="color:var(--gray)">
         <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z"/></svg>
-        ${_lang==='en'?t('plan_tu_dia_en',{dia:dayName}):('Tu '+dayName.toLowerCase()+' en '+((FESTIVAL_CONFIG[_activeFestId]||{}).name||'el festival'))}
+        ${t('plan_tu_dia_en',{dia:dayName.toLowerCase()})} ${(FESTIVAL_CONFIG[_activeFestId]||{}).name||''}
       </div>
       <div class="ctx-main-title">${total} ${t('misc_pelicula')}${total!==1?'s':''} ${total===1?t('plan_vista_hoy'):t('plan_vistas_hoy')}</div>
       ${pendingRating.length?`<div class="mb-3 ctx-sub">${pendingRating.length===1?t('plan_una_pendiente'):t('empty_calificar')}</div>`:`<div class="mb-3"></div>`}

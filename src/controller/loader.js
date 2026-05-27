@@ -7,7 +7,7 @@
 
 import { FESTIVAL_CONFIG } from '../config.js';
 import { DAY_ABBR, DAY_NUM } from '../view/components.js';
-import { DAYS, DAY_SHORT_EN, setCustomPosters, setDayShort, setDayShortEn, setPosters } from '../view/helpers.js';
+import { DAYS, DAY_SHORT_EN, setCustomPosters, setDayShort, setDayShortEn, setDayShortPt, setPosters } from '../view/helpers.js';
 import { closeFestivalSheet } from '../view/sheets.js';
 import { showToast } from '../view/feedback.js';
 import { _renderProgramaContent, lugarClose } from '../view/programa.js';
@@ -160,6 +160,7 @@ export async function loadFestival(id){
   const _needsTranslation = Object.values(cfg.dayShort||{}).some(v=>
     /^(MON|TUE|WED|THU|FRI|SAT|SUN)/.test(v)
   );
+  let _esShort;
   if(_needsTranslation){
     const _translated={};
     Object.entries(cfg.dayShort||{}).forEach(([k,v])=>{
@@ -168,10 +169,23 @@ export async function loadFestival(id){
       const esAbb=_EN_TO_ES[enAbb]||enAbb;
       _translated[k]=num?esAbb+' '+num:esAbb;
     });
-    setDayShort(_translated);
+    _esShort=_translated;
   } else {
-    setDayShort(cfg.dayShort);
+    _esShort=cfg.dayShort||{};
   }
+  setDayShort(_esShort);
+  // pt-BR: traducir las abreviaturas ES → PT (mismo patrón que _EN_TO_ES).
+  // Lang-independiente (no usa t(), que devolvería el idioma activo): opera sobre
+  // el DAY_SHORT ES recién armado, por eso es correcto sin importar _lang.
+  const _ES_TO_PT={'LUN':'SEG','MAR':'TER','MIÉ':'QUA','JUE':'QUI','VIE':'SEX','SÁB':'SÁB','DOM':'DOM'};
+  const _ptShort={};
+  Object.entries(_esShort).forEach(([k,v])=>{
+    const ab=v.split(' ')[0];
+    const num=v.split(' ')[1]||'';
+    const pt=_ES_TO_PT[ab]||ab;
+    _ptShort[k]=num?pt+' '+num:pt;
+  });
+  setDayShortPt(_ptShort);
   CUSTOM_POSTERS=cfg.customPosters||{};
   setCustomPosters(CUSTOM_POSTERS);
   setPosters(POSTERS);
