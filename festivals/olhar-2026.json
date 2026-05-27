@@ -10,6 +10,8 @@
   "storageKey": "olhar2026_",
   "festivalStartStr": "2026-06-04T00:00:00",
   "festivalEndStr": "2026-06-13T23:59:00",
+  "ticket_url": "https://olhardecinema.com.br/ingressos",
+  "ticketing_model": "mixed",
   "festivalDates": {
     "2026-06-04": "2026-06-04",
     "2026-06-05": "2026-06-05",
@@ -1727,14 +1729,16 @@
           "date": "2026-06-06",
           "time": "17:00",
           "venue": "Teatro da Vila",
-          "day_order": 2
+          "day_order": 2,
+          "is_free": true
         },
         {
           "day": "2026-06-07",
           "date": "2026-06-07",
           "time": "16:00",
           "venue": "MON - Poty Lazzarotto",
-          "day_order": 3
+          "day_order": 3,
+          "is_free": true
         }
       ],
       "day": "2026-06-05",
@@ -2376,14 +2380,16 @@
           "date": "2026-06-06",
           "time": "14:30",
           "venue": "MON - Poty Lazzarotto",
-          "day_order": 2
+          "day_order": 2,
+          "is_free": true
         },
         {
           "day": "2026-06-07",
           "date": "2026-06-07",
           "time": "15:30",
           "venue": "Teatro da Vila",
-          "day_order": 3
+          "day_order": 3,
+          "is_free": true
         }
       ],
       "flags": "🇧🇷🇪🇸",
@@ -2472,14 +2478,16 @@
           "date": "2026-06-06",
           "time": "15:30",
           "venue": "Teatro da Vila",
-          "day_order": 2
+          "day_order": 2,
+          "is_free": true
         },
         {
           "day": "2026-06-07",
           "date": "2026-06-07",
           "time": "14:30",
           "venue": "MON - Poty Lazzarotto",
-          "day_order": 3
+          "day_order": 3,
+          "is_free": true
         }
       ],
       "flags": "🇧🇷",
@@ -2552,14 +2560,16 @@
           "date": "2026-06-09",
           "time": "20:00",
           "venue": "Cinemateca",
-          "day_order": 5
+          "day_order": 5,
+          "is_free": true
         },
         {
           "day": "2026-06-10",
           "date": "2026-06-10",
           "time": "15:45",
           "venue": "Cinemateca",
-          "day_order": 6
+          "day_order": 6,
+          "is_free": true
         }
       ],
       "flags": "🇫🇷🇧🇷🇮🇹",
@@ -2661,14 +2671,16 @@
           "date": "2026-06-10",
           "time": "19:45",
           "venue": "Cinemateca",
-          "day_order": 6
+          "day_order": 6,
+          "is_free": true
         },
         {
           "day": "2026-06-11",
           "date": "2026-06-11",
           "time": "15:15",
           "venue": "Cinemateca",
-          "day_order": 7
+          "day_order": 7,
+          "is_free": true
         }
       ],
       "flags": "🇩🇪🇧🇷🇦🇹🇦🇱",
@@ -2756,14 +2768,16 @@
           "date": "2026-06-11",
           "time": "19:45",
           "venue": "Cinemateca",
-          "day_order": 7
+          "day_order": 7,
+          "is_free": true
         },
         {
           "day": "2026-06-12",
           "date": "2026-06-12",
           "time": "17:45",
           "venue": "Cinemateca",
-          "day_order": 8
+          "day_order": 8,
+          "is_free": true
         }
       ],
       "flags": "🇧🇷🇨🇺🇸🇴🇦🇹🇩🇪",
@@ -2851,14 +2865,16 @@
           "date": "2026-06-12",
           "time": "19:45",
           "venue": "Cinemateca",
-          "day_order": 8
+          "day_order": 8,
+          "is_free": true
         },
         {
           "day": "2026-06-13",
           "date": "2026-06-13",
           "time": "13:15",
           "venue": "Cinemateca",
-          "day_order": 9
+          "day_order": 9,
+          "is_free": true
         }
       ],
       "flags": "🇫🇷🇧🇴🇲🇽🇧🇷",
@@ -2946,14 +2962,16 @@
           "date": "2026-06-06",
           "time": "18:30",
           "venue": "Cinemateca",
-          "day_order": 2
+          "day_order": 2,
+          "is_free": true
         },
         {
           "day": "2026-06-08",
           "date": "2026-06-08",
           "time": "16:30",
           "venue": "Cinemateca",
-          "day_order": 4
+          "day_order": 4,
+          "is_free": true
         }
       ],
       "flags": "🇧🇷🇨🇺",
@@ -3042,14 +3060,16 @@
           "date": "2026-06-07",
           "time": "16:00",
           "venue": "Cinemateca",
-          "day_order": 3
+          "day_order": 3,
+          "is_free": true
         },
         {
           "day": "2026-06-09",
           "date": "2026-06-09",
           "time": "16:30",
           "venue": "Cinemateca",
-          "day_order": 5
+          "day_order": 5,
+          "is_free": true
         }
       ],
       "flags": "🇧🇷",
@@ -3138,7 +3158,8 @@
           "date": "2026-06-06",
           "time": "16:00",
           "venue": "MON - Poty Lazzarotto",
-          "day_order": 2
+          "day_order": 2,
+          "is_free": true
         }
       ],
       "flags": "🇧🇷",

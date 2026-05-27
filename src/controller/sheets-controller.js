@@ -192,6 +192,19 @@ export function openPelSheet(title){
     ${(()=>{const _n=NOTICES.find(n=>n.title===f.title&&n.festival===(_activeFestId||_DEFAULT_FEST_ID));if(!_n)return'';const _msg=_n.type==='cancelled'?t('notice_funcion_canc'):`Reprogramada → ${_n.newDay||''} ${_n.newTime||''}${_n.newVenue?' · '+_n.newVenue:''}`;return`<div class="notice-banner-row"><span class="notice-badge">${_n.type==='cancelled'?t('notice_cancelada'):t('notice_reprog_short')}</span><span class="notice-banner-txt">${_msg}</span></div>`;})()}
     ${_metaBanners(f)}
     <div class="pel-sheet-screenings">${rows}</div>
+    ${(()=>{
+      const _tk=FESTIVAL_CONFIG[_activeFestId]||{};
+      if(!_tk.ticket_url||festivalEnded()) return '';
+      if(_tk.ticketing_model==='paid')
+        return `<a class="pel-sheet-ticket-link" href="${_tk.ticket_url}" target="_blank" rel="noopener">${ICONS.ticket} ${t('ticket_comprar_paid')}</a>`;
+      if(_tk.ticketing_model==='mixed'){
+        // Festival mixto: ocultar solo si TODAS las funciones del film son gratuitas.
+        const _allFree=screenings.length>0&&screenings.every(s=>s.is_free===true);
+        if(_allFree) return '';
+        return `<div class="meta-banner"><div class="meta-banner-dot"></div><div><div class="meta-banner-text">${t('ticket_mixed_body')}</div><a class="pel-sheet-ticket-link" href="${_tk.ticket_url}" target="_blank" rel="noopener">${ICONS.ticket} ${t('ticket_mixed_link')}</a></div></div>`;
+      }
+      return '';
+    })()}
     ${f.synopsis?`<div class="pel-sheet-divider"></div>
     <div class="pel-sheet-section-lbl">${f.type==='event'?t('label_descripcion'):t('label_sinopsis')}</div>
     <div class="pel-sheet-synopsis">${(_lang==='en'&&f.synopsis_en?f.synopsis_en:_lang==='es'&&f.synopsis_es?f.synopsis_es:f.synopsis).replace(/^⚠️\s*INGLÉS\s*[—-]\s*/,'')}</div>`:''}

@@ -102,6 +102,16 @@ function validateFestival(fname, data) {
     }
   }
 
+  // ── Ticketing (campos opcionales del root) ──────────────────────────────────
+  if (data.ticket_url != null) {
+    if (!data.ticketing_model || !['paid','mixed'].includes(data.ticketing_model))
+      errors.push(`ticket_url presente pero ticketing_model falta o no es "paid"/"mixed" (valor: ${JSON.stringify(data.ticketing_model)})`);
+    if (typeof data.ticket_url !== 'string' || !data.ticket_url.startsWith('https://'))
+      errors.push(`ticket_url debe empezar con https:// (valor: ${JSON.stringify(data.ticket_url)})`);
+  } else if (data.ticketing_model != null) {
+    errors.push(`ticketing_model presente sin ticket_url — eliminar ticketing_model o agregar ticket_url`);
+  }
+
   // dayKeys must match festivalDates (solo si el JSON define config)
   const festDates = cfg.festivalDates || {};
   for (const k of dayKeys) {

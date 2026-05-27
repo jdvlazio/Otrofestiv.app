@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `9c16d26 fix(i18n): DAY_A → dayLabel() con soporte PT (#117)`
+> Último commit: `9954ddb feat: ticket info en sheet + badge gratuito (Olhar/Tribeca)`
 
 ---
 
