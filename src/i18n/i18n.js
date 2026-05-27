@@ -723,6 +723,20 @@ export const _I18N = {
     "cta_vista": "Visto",
     "cta_calificar": "Avaliar",
     "cta_anadir": "Adicionar aos Interesses",
+    // ── Lote 3: labels del sheet + agenda + dropdowns (keys realmente consumidas) ──
+    // Minúsculas (label_sinopsis/funcion/funciones_pl/descripcion): el CSS las
+    // pone en MAYÚSCULA en el header del sheet — se guardan en minúscula.
+    "label_sinopsis": "sinopse",
+    "label_funcion": "sessão",
+    "label_funciones_pl": "sessões",
+    "label_descripcion": "descrição",
+    "label_funciones": "Sessões",
+    "label_seccion": "Seção",
+    "label_en_curso": "Em exibição",
+    "label_programa": "Programa",
+    "label_cortos": "Curtas-metragens",
+    // tab "Tudo" de la barra de días (loader.js:223 → t('bar_todo'))
+    "bar_todo": "Tudo",
   }
 };
 
