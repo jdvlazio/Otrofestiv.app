@@ -737,6 +737,23 @@ export const _I18N = {
     "label_cortos": "Curtas-metragens",
     // tab "Tudo" de la barra de días (loader.js:223 → t('bar_todo'))
     "bar_todo": "Tudo",
+    // ── Lote 4: estados vacíos + búsqueda ──
+    "empty_intereses": "Adicione o que te interessa para montar seu plano.",
+    "empty_intereses_2": "Adicione o que te interessa.",
+    "empty_intereses_3": "Adicione o que você não quer perder. Quando tiver sua lista, montamos seu plano.",
+    "empty_lo_que_agg": "O que você adicionar aparece aqui.",
+    "empty_vistas": "Nenhum filme marcado como visto ainda.",
+    "empty_calificar": "Você pode avaliá-los agora.",
+    "empty_todo_calif": "Tudo avaliado",
+    "empty_programa": "Explore a programação completa do festival.",
+    "empty_prox_fest": "Explore a programação do próximo festival",
+    "empty_filtros": "Tente ajustar os filtros de seção ou local.",
+    "empty_sin_funciones": "Sem sessões disponíveis",
+    "search_placeholder": "Buscar…",
+    "search_cancelar": "Cancelar",
+    "search_sin_res": "Nenhum resultado",
+    "search_sin_res_para": "Nenhum resultado para",
+    "search_resultados": "Resultados",
   }
 };
 
