@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `9954ddb feat: ticket info en sheet + badge gratuito (Olhar/Tribeca)`
+> Último commit: `61b2181 chore: bundle v202605271818`
 
 ---
 
