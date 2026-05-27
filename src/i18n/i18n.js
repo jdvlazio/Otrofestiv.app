@@ -991,6 +991,27 @@ export const _I18N = {
     "error_cargar_miplan": "Erro ao carregar Meu Plano:",
     "error_calcular": "Erro ao calcular:",
     "error_cargar_lista": "Erro ao carregar a lista.",
+    // ── Lote 12: labels UI + CTAs + lbl + bar (las 4 label_* muertas se saltean
+    //    a propósito — se borran en el PR de limpieza de keys muertas) ──
+    "label_sin_confirmar": "a confirmar",
+    "label_anterior": "anterior",
+    "label_anteriores": "anteriores",
+    "label_min": "min",
+    "label_dia_prog": "Dia",
+    "label_de_dias": "de",
+    "label_vista": "visto",
+    "label_vistas": "vistos",
+    "label_horario": "horário",
+    "cta_en_intereses": "Em Interesses",
+    "cta_priorizada": "Priorizado",
+    "cta_asistio": "Compareci",
+    "cta_mi_plan": "Ver Meu Plano",
+    "cta_ir_planear": "Ir para Planejar",
+    "cta_ir_intereses": "Ir para Interesses",
+    "cta_no_vista": "Não visto",
+    "lbl_prioridades": "Prioridades",
+    "lbl_intereses": "Interesses",
+    "bar_explorar": "Explorar",
   }
 };
 
