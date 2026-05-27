@@ -215,7 +215,7 @@ export function makeEventPoster(state,title,duration,eventKind,section){
     'cineconcierto':{accent:'#D85A30', headerLabel:'FILM CONCERT'},
     'awards':       {accent:'#BA7517', headerLabel:'AWARDS SCREENINGS'},
   };
-  const _kindMap=_lang==='en'?_kindMapEN:_kindMapES;
+  const _kindMap=_lang==='es'?_kindMapES:_kindMapEN; // PT reutiliza EN (términos internacionales)
   const kind=_kindMap[eventKind];
   if(kind) return _buildPosterV16({...kind, title, num:null});
   // Fallback — usa la sección del film si existe, sino eventPosterLabel del config
