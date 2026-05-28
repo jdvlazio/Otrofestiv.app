@@ -1549,9 +1549,16 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
    a 0.5px y padding compacto (sp-2). Día landmark con menos peso visual. */
 #ag-result .lb-poster,
 #ag-result .lb-poster-ph{width:54px;height:80px;border-radius:var(--r-lg)}
+#ag-result .ag-summary{
+  background:none;
+  border:none;
+  border-radius:0;
+  padding:var(--sp-2) 0 var(--sp-3);
+  margin-bottom:0;
+}
 #ag-result .saved-item{
-  padding:var(--sp-2) 0;
-  border-bottom:0.5px solid var(--bdr-l);
+  padding:var(--sp-3) 0;
+  border-bottom:none;
   gap:var(--sp-3);
   align-items:flex-start;
 }
@@ -2826,7 +2833,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 <!-- ── Intereses / Planear: header unificado — fuera de ag-view ── -->
 <div class="ag-view" id="ag-view"></div>
 
-<script type="module" src="/src/main.js?v=202605281127"></script>
+<script type="module" src="/src/main.js?v=202605281131"></script>
 
 <!-- Festival switcher bottom sheet -->
 <div class="auth-sheet" id="auth-sheet" data-close-bg="AuthSheet">

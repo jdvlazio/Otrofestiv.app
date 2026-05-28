@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `96f544a Merge pull request #128 from jdvlazio/feat/planear-plan-layout-vertical`
+> Último commit: `bf73b6f fix(planear): hora 13px > título 11px > venue 9px — jerarquía tipográfica`
 
 ---
 
