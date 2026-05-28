@@ -420,7 +420,7 @@ export function markWatchedFromPlan(title, day, time, venue, duration, e){
   if(!FILMS.find(fi=>fi.title===title)?.is_cortos) setTimeout(()=>openPostViewRating(title, day, time, venue, duration), 250);
 }
 
-export function confirmReplace(removedTitle,newTitle,day,time){
+export function confirmReplace(removedTitle,newTitle,day,time,isScenario){
   // 1. READ — args + state (snapshot del state se hace dentro del closure
   // porque el handler se ejecuta tras el user click, no inmediato)
   const{displayTitle:dt}=parseProgramTitle(newTitle);
@@ -445,9 +445,34 @@ export function confirmReplace(removedTitle,newTitle,day,time){
       // Handler real — fresh snapshot al ejecutarse (post user-click)
       const {FILMS, savedAgenda, watchlist} = state.snapshot();
       modal.remove();
-      if(removedTitle) _removePlanItem(removedTitle);
       const screen=FILMS.find(f=>f.title===newTitle&&f.day===day&&f.time===time);
-      if(screen){
+      if(!screen){
+        _expandedFilm='';
+        renderAgenda();
+        return;
+      }
+      if(isScenario){
+        // Planear = espacio de exploración: muta SOLO cachedResult, no toca
+        // savedAgenda ni watchlist. El commit ocurre al tocar "Usar este Plan".
+        if(cachedResult&&cachedResult.scenarios&&cachedResult.scenarios.length){
+          const idx=cachedResult.currentIdx||0;
+          const sc=cachedResult.scenarios[idx];
+          let newSchedule=sc.schedule;
+          if(removedTitle) newSchedule=newSchedule.filter(s=>s._title!==removedTitle);
+          // Quitar cualquier screening conflictiva con la nueva.
+          newSchedule=newSchedule.filter(s=>!screensConflict(s,screen)&&s._title!==newTitle);
+          newSchedule=[...newSchedule,{...screen,_title:newTitle}]
+            .sort((x,y)=>DAY_KEYS.indexOf(x.day)-DAY_KEYS.indexOf(y.day)||toMin(x.time)-toMin(y.time));
+          let newExcluded=(sc.excluded||[]).filter(t=>t!==newTitle);
+          if(removedTitle&&!newSchedule.some(s=>s._title===removedTitle)&&watchlist.has(removedTitle)&&!newExcluded.includes(removedTitle)){
+            newExcluded.push(removedTitle);
+          }
+          cachedResult.scenarios[idx]={...sc,schedule:newSchedule,excluded:newExcluded};
+          cachedResult._prioSnapshot=[...state.get('prioritized')];
+        }
+      } else {
+        // Mi Plan (saved): comportamiento histórico — escribe a savedAgenda.
+        if(removedTitle) _removePlanItem(removedTitle);
         if(!savedAgenda) state.set('savedAgenda', {schedule:[]});
         if(!watchlist.has(newTitle)){state.update('watchlist', s=>state._addToSet(s,newTitle));saveWL();}
         state.update('savedAgenda', a => ({
