@@ -1225,12 +1225,20 @@ export function mkAgendaRow(s, mode='saved'){
     ?`<button class="film-switch${isExpanded?' open':''}" data-action="toggleFilmAlternatives" data-key="${filmKey}" data-title="${safeT}" data-day="${s.day||''}" data-time="${s.time||''}" data-stop="1">Cambiar</button>`
     :'';
   const altsHtml=isExpanded&&mode==='saved'?renderFilmAlternatives(state,title,s.day,s.time):'';
+  // Programa expandible (cortos con film_list): se renderiza en ambos modos
+  // (saved Y scenario). El handler toggleMplanProg opera por DOM sibling
+  // (.saved-item → .mplan-prog-list) y no depende del contexto Mi Plan.
   const _progBtn=(()=>{const _mf=f;if(!_mf||!_mf.is_cortos||!_mf.film_list||!_mf.film_list.length)return'';return`<button class="row-xs mplan-prog-toggle" data-action="toggleMplanProg">${ICONS.chevronR} ${t('label_programa')}</button>`;})();
   const _progList=(()=>{const _mf=f;if(!_mf||!_mf.is_cortos||!_mf.film_list||!_mf.film_list.length)return'';return`<div class="mplan-prog-list">${_mf.film_list.map((item,n)=>_mkCortoItemHtml(item,n,{section:_mf.section||''})).join('')}</div>`;})();
+  // Layout: en Planear (scenario) la hora vive ARRIBA del título dentro de .saved-info
+  // (jerarquía vertical: hora → título → venue). En Mi Plan (saved) la hora sigue como
+  // columna lateral (layout familiar para usuarios del plan guardado).
+  const _timeHTML=`<div class="saved-time">${s.time}</div>`;
   return`<div class="saved-item${isDone?' done':''}">
     ${_ph}
-    <div class="saved-time">${s.time}</div>
+    ${mode==='saved'?_timeHTML:''}
     <div class="saved-info">
+      ${mode==='scenario'?_timeHTML:''}
       <div class="saved-title">${displayTitle}</div>${progSuffix?`<div class="film-sub-label">${progSuffix}</div>`:''}
       <div class="saved-venue">${ICONS.pin} ${vc2.short}${sl?' · '+sl:''}${s.duration?' · '+durFmt(s.duration):''}</div>
       ${_progBtn}
