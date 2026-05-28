@@ -1126,7 +1126,8 @@ export function buildResultHTML(scenarios){
     const _h=Math.floor(_totalMin/60), _m=_totalMin%60;
     const _totalStr=_h?(_m?`${_h}h ${_m}min`:`${_h}h`):`${_m}min`;
     const _filmsLbl=`${films.length} ${t('misc_pelicula')}${films.length!==1?'s':''}`;
-    html+=`<div class="ag-day-label"><span class="ag-day-name">${_dayName} ${_dayNum}</span><span class="ag-day-stats">${_filmsLbl} · ${_totalStr}</span></div>`;
+    // Split tipográfico: cantidad de films en ámbar bold, duración total en gray.
+    html+=`<div class="ag-day-label"><span class="ag-day-name">${_dayName} ${_dayNum}</span><span class="ag-day-stats"><span class="ag-day-films">${_filmsLbl}</span> · ${_totalStr}</span></div>`;
     films.forEach((s,i)=>{
       if(i>0){const warn=travelWarn(films[i-1],s);if(warn) html+=`<div class="ag-warn">${warn}</div>`;}
       html+=mkAgendaRow(s,'scenario');
