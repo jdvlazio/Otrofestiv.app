@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `3c72e66 chore: bundle v202605280115`
+> Último commit: `c674107 docs(tasks): corregir hallazgo scoreFilm — vivo en squeezeExcluded, no muerto`
 
 ---
 
