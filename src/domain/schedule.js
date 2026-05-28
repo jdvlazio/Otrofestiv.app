@@ -15,7 +15,7 @@
 
 import { FESTIVAL_BUFFER } from "../config.js";
 import { toMin, parseDur } from "./time.js";
-import { effectiveDuration, screeningPassed, shuffle, scoreFilm } from "./film.js";
+import { effectiveDuration, screeningPassed, shuffle, scoreFilm, _titleSeed, _mulberry32 } from "./film.js";
 import { travelMins } from "./festival.js";
 export function screensConflict(a,b){
   if(a.day!==b.day) return false;
@@ -53,6 +53,10 @@ export function sortScreensByStrategy(screens, allGroups){
 }
 
 export function computeScenarios(titles){
+  // Fix bug #2: RNG sembrado por la watchlist → output determinístico (misma
+  // watchlist = mismo seed = misma secuencia de shuffles = mismos escenarios).
+  // _titleSeed ordena internamente → independiente del orden de los títulos.
+  const _rand=_mulberry32(_titleSeed(titles));
   const pending=titles.filter(t=>!watched.has(t));
   const allPendingTitles=pending; // for section uniqueness check
   const baseGroups=pending.map(t=>{
@@ -187,18 +191,18 @@ export function computeScenarios(titles){
   // Phase 1: scenarios WITH priorities — max 4 slots to leave room for diversity
   if(hasPriorities&&maxWithPriorities>0){
     collectAt(prioritySorted,maxWithPriorities,true);
-    for(let i=0;i<20&&allScenarios.length<4;i++) collectAt(shuffle(baseGroups),maxWithPriorities,true);
+    for(let i=0;i<20&&allScenarios.length<4;i++) collectAt(shuffle(baseGroups,_rand),maxWithPriorities,true);
   }
 
   // Phase 2: if still no scenarios (priorities all conflict with each other), fall back
   if(!allScenarios.length&&hasPriorities){
     incompatiblePriorities=true;
     collectAt(prioritySorted,trueMax,false);
-    for(let i=0;i<20&&allScenarios.length<4;i++) collectAt(shuffle(baseGroups),trueMax,false);
+    for(let i=0;i<20&&allScenarios.length<4;i++) collectAt(shuffle(baseGroups,_rand),trueMax,false);
   }
 
   // Phase 3: fill remaining slots with diverse no-priority scenarios
-  for(let i=0;i<30&&allScenarios.length<8;i++) collectAt(shuffle(baseGroups),trueMax,false);
+  for(let i=0;i<30&&allScenarios.length<8;i++) collectAt(shuffle(baseGroups,_rand),trueMax,false);
 
   allScenarios.forEach(sc=>sc.sort((a,b)=>a.day_order!==b.day_order?a.day_order-b.day_order:toMin(a.time)-toMin(b.time)));
 
