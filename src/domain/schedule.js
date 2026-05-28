@@ -213,8 +213,19 @@ export function computeScenarios(titles){
     const variance=vals.reduce((a,v)=>a+Math.pow(v-mean,2),0)/vals.length;
     return Math.sqrt(variance); // 0 = perfectamente balanceado
   }
-  // Ordenar: primero los más balanceados (menor desviación estándar)
-  allScenarios.sort((a,b)=>dayBalance(a)-dayBalance(b));
+  // Ordenar: (1) planes que respetan TODAS las prioridades schedulables primero,
+  // (2) entre iguales, menor dayBalance. Fix bug #1: antes ordenaba solo por
+  // dayBalance, y un plan de Fase 3 de mayor cardinalidad SIN la prioridad podía
+  // ganar el índice 0 ("óptimo"). Prioridades sin funciones (no en baseGroups) no
+  // se exigen; si las prioridades son mutuamente incompatibles, ningún plan las
+  // respeta todas → degrada a dayBalance (comportamiento previo).
+  const _prioTitles=baseGroups.filter(g=>g.priority).map(g=>g.title);
+  const _respectsPrios=sc=>{const inSc=new Set(sc.map(s=>s._title));return _prioTitles.every(t=>inSc.has(t));};
+  allScenarios.sort((a,b)=>{
+    const ra=_respectsPrios(a),rb=_respectsPrios(b);
+    if(ra!==rb) return ra?-1:1;
+    return dayBalance(a)-dayBalance(b);
+  });
   const conflictingPriorityPairs=[];
   if(incompatiblePriorities){
     const prioGroups=baseGroups.filter(g=>g.priority);
