@@ -32,7 +32,10 @@ export function screensConflict(a,b){
 
 export function isScreeningBlocked(s){
   const av=availability[s.day];if(!av) return false;
-  const sStart=toMin(s.time),sEnd=sStart+parseDur(s.duration);
+  // effectiveDuration (no parseDur): incluye los +30 de Q&A, consistente con
+  // screensConflict. Sin esto, el Q&A de una función podía correr dentro de un
+  // bloque de no-disponibilidad sin ser detectado. (has_qa:false → idéntico a parseDur.)
+  const sStart=toMin(s.time),sEnd=sStart+effectiveDuration(s);
   // Chequeo de solapamiento completo: excluye funciones que ocurran durante el bloque
   return av.blocks.some(b=>sStart<toMin(b.to)&&sEnd>toMin(b.from));
 }
