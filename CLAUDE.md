@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `f21df4a fix(miplan): unificar día landmark a formato largo (igual a Planear)`
+> Último commit: `1e85769 fix(planear): confirmReplace bifurcado por contexto — scenario no toca savedAgenda`
 
 ---
 
