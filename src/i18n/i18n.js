@@ -319,7 +319,6 @@ export const _I18N = {
     "modal_ya_viste_cta": "Sí, ya la vi",
     "toast_marcada_vista": "Movida a Ya vistas",
     "av_ver_opciones": "Calcular mi plan",
-    "plan_en_intereses": "en Intereses",
     "plan_prio_todas": "Todas tus prioridades",
     "plan_prio_parcial": "{n} de {m} prioridades",
     "search_resultados": "Resultados",
@@ -669,7 +668,6 @@ export const _I18N = {
     "modal_ya_viste_cta": "Yes, I've seen it",
     "toast_marcada_vista": "Moved to Already Seen",
     "av_ver_opciones": "Calculate my plan",
-    "plan_en_intereses": "in Interests",
     "plan_prio_todas": "All your priorities",
     "plan_prio_parcial": "{n} of {m} priorities",
     "search_resultados": "Results",
@@ -811,7 +809,6 @@ export const _I18N = {
     "av_no_disponible": "Indisponível",
     "av_horas_especificas": "Horários específicos",
     "av_ver_opciones": "Calcular meu plano",
-    "plan_en_intereses": "em Interesses",
     "plan_prio_todas": "Todas as suas prioridades",
     "plan_prio_parcial": "{n} de {m} prioridades",
     // ── Lote 8: días + aria-labels ──

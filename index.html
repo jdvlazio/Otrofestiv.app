@@ -1552,7 +1552,8 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
   display:flex;align-items:baseline;justify-content:space-between;gap:var(--sp-2);
   margin:var(--sp-5) 0 var(--sp-2);padding-bottom:var(--sp-2);
   border-bottom:1px solid var(--bdr-l);
-  position:sticky;top:0;background:var(--bg);z-index:1;
+  /* Sticky: top con offset del topbar (mismo patrón que #hdr-programa/#hdr-ag). */
+  position:sticky;top:var(--sticky-top-carta);background:var(--bg);z-index:1;
 }
 #ag-result .ag-day-name{
   display:block;font-size:var(--t-lg);font-weight:var(--w-bold);color:var(--white);
@@ -2800,7 +2801,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 <!-- ── Intereses / Planear: header unificado — fuera de ag-view ── -->
 <div class="ag-view" id="ag-view"></div>
 
-<script type="module" src="/src/main.js?v=202605281027"></script>
+<script type="module" src="/src/main.js?v=202605281044"></script>
 
 <!-- Festival switcher bottom sheet -->
 <div class="auth-sheet" id="auth-sheet" data-close-bg="AuthSheet">

@@ -93,19 +93,15 @@ export function renderAgenda(){
     }
 
     // ── Estado B: con Intereses — herramienta completa ──
-    // Pre-cálculo: línea compacta de prios + Intereses (sin strip de posters).
+    // Pre-cálculo limpio: solo stepper + Disponibilidad + botón Calcular.
     // Stale + resumen post-cálculo viven en buildResultHTML.
     const _snap=cachedResult&&cachedResult._prioSnapshot;
     const _stale=!!cachedResult&&Array.isArray(_snap)&&(_snap.length!==prioritized.size||!_snap.every(x=>prioritized.has(x)));
-    const _compactLine=prioritized.size>0
-      ?`<div class="prio-corpus"><b>${prioritized.size} ${t('misc_prioridades')}</b> · ${pending.length} ${t('plan_en_intereses')}</div>`
-      :'';
     const resultContent=cachedResult
       ?buildResultHTML(cachedResult.scenarios)
       :'';
     view.innerHTML=`${_progressHtml}
       <div class="ag-section">
-        ${_compactLine}
         <div class="section-div">
           <div class="mb-2 sec-hdr">${ICONS.clock} ${t('av_disponibilidad')} <span class="sec-hdr-opt">${t('misc_opcional')}</span></div>
           <div class="txt-gray2-sm-lh">${t('av_no_incluir')}</div>
