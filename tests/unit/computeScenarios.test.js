@@ -27,7 +27,7 @@ function loadPlanner(opts = {}) {
       DEFAULT_DURATION_MIN: 90,
       _simTime: '2026-06-05T08:00:00Z',
       FESTIVAL_END: new Date('2099-01-01'),
-      FESTIVAL_DATES: { 'MAR 21': '2026-06-05' },
+      FESTIVAL_DATES: opts.FESTIVAL_DATES || { 'MAR 21': '2026-06-05' },
       TZ_OFFSET: '-05:00',
     },
   });
@@ -104,6 +104,37 @@ test('excluded and included partition the watchlist (∩=∅, ∪=titles)', () =
     const union = [...new Set([...included, ...excluded])].sort();
     assert.deepStrictEqual(union, [...titles].sort(), `scenario[${idx}] union does not match titles`);
   });
+});
+
+test('priorityCost>0 → index 0 always includes the prioritized film (bug #1 regression)', () => {
+  // A (priorizada) solapa B y C en D1; D y E en D2 son compatibles entre sí.
+  //   trueMax            = {B,C,D,E} = 4  → balanceado 2/2 (dayBalance 0) pero SIN A
+  //   maxWithPriorities  = {A,D,E}   = 3  → 1/2 (dayBalance 0.5), CON A
+  // Pre-fix: el sort final solo miraba dayBalance → el plan mayor sin A ganaba el
+  // índice 0 ("Tu plan"), dejando la prioridad en "no incluidas". El fix antepone
+  // los planes que respetan TODAS las prioridades. El índice 0 debe incluir A.
+  const films = [
+    { title: 'A', day: 'D1', time: '10:00 AM', duration: '180 min', venue: 'Sala A', section: 'S1' },
+    { title: 'B', day: 'D1', time: '10:00 AM', duration: '60 min',  venue: 'Sala A', section: 'S2' },
+    { title: 'C', day: 'D1', time: '11:30 AM', duration: '60 min',  venue: 'Sala A', section: 'S3' },
+    { title: 'D', day: 'D2', time: '10:00 AM', duration: '90 min',  venue: 'Sala A', section: 'S4' },
+    { title: 'E', day: 'D2', time: '2:00 PM',  duration: '90 min',  venue: 'Sala A', section: 'S5' },
+  ];
+  // La enumeración usa Math.random (no determinística por design): el invariante
+  // debe cumplirse en TODAS las corridas.
+  for (let run = 0; run < 10; run++) {
+    const { computeScenarios } = loadPlanner({
+      FILMS: films,
+      prioritized: new Set(['A']),
+      FESTIVAL_DATES: { D1: '2026-06-05', D2: '2026-06-06' },
+    });
+    const scenarios = computeScenarios(['A', 'B', 'C', 'D', 'E']);
+    assert.ok(scenarios.length > 0, `run ${run}: expected scenarios`);
+    // Precondición: el fixture realmente ejercita el bug (prioridad cuesta cardinalidad).
+    assert.strictEqual(scenarios[0].priorityCost, 1, `run ${run}: expected priorityCost=1 (fixture inválido si no)`);
+    const idx0 = scenarios[0].schedule.map(s => s._title);
+    assert.ok(idx0.includes('A'), `run ${run}: index 0 debe incluir la priorizada A, fue [${idx0.join(',')}]`);
+  }
 });
 
 test('all films compatible → each scenario includes all of them', () => {
