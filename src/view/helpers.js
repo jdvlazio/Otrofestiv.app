@@ -191,6 +191,17 @@ export const dayChip = key => {
 
 export const dayLabel  = key => (_lang==='pt' ? DAY_SHORT_PT : _lang==='en' ? DAY_SHORT_EN : DAY_SHORT)[key] || key;
 
+// dayLabelLong — formato largo "Viernes 5" / "Friday 5" / "Sexta 5". Mismo
+// patrón que Planear (buildResultHTML). Pensado para el landmark del día en
+// Mi Plan, unificando la lectura entre tabs.
+export const dayLabelLong = key => {
+  const dow = ['day_dom','day_lun','day_mar','day_mie','day_jue','day_vie','day_sab'];
+  const iso = FESTIVAL_DATES[key] || key;
+  const d = new Date(iso + 'T12:00:00');
+  if(isNaN(d.getTime())) return key;
+  return `${t(dow[d.getDay()])} ${d.getDate()}`;
+};
+
 export const _lblLocalized = lbl => {
   if(_lang==='en') return lbl;
   const key = _EN_TO_I18N[lbl];
