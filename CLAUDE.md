@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `9d6a6a0 feat(planear): rediseño visual del Plan — poster + día landmark`
+> Último commit: `88c615e Merge pull request #127 from jdvlazio/feat/planear-rediseno-plan`
 
 ---
 
