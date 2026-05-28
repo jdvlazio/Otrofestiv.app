@@ -116,6 +116,24 @@ Cualquiera de los dos exige test red-green con fixture de cruce de medianoche.
 - **`MAX_NODES_PER_CALL=80000`:** "Tu plan" es best-effort (no óptimo garantizado) para
   watchlists densas — el branch-and-bound corta a 80k nodos. Aceptable, pero el label no
   refleja el caso cap.
-- **Divergencia main/worker en venue/time fns:** reescritas a mano en el template del
-  worker (calc.js) vs `festival.js` (ej. `lng??lon` solo en main). Mitigada en parte por
-  el determinismo del Bug #2 (mismo seed), pero la divergencia de coords sigue latente.
+- **Divergencia main/worker en venue/time fns (DIFERIDA · deuda estructural):**
+  `venueTravelMins`/`travelMins`/`simNow`/`festivalEnded`/`_workerFindCoords` están
+  reescritas a mano en el template string del Worker (`calc.js` `_venueFns`) en vez de
+  extraerse por `.toString()` como las `_SCHED_PURE_FNS`. Drift concreta ya presente:
+  `festival.js` usa `c1.lng??c1.lon` (fallback `lon`) y el coord-builder (`calc.js:128`)
+  `if(v.lat&&v.lng)` + la copia del worker leen solo `.lng` → un venue con `lon` daría
+  travel en main y 0 en worker.
+  **NO alcanzable hoy:** los 15 venues (Tribeca 9 + Olhar 6) usan `lng`, ninguno sin
+  coords → worker y main dan travel idéntico.
+  **`[worker-overlap]` NO lo cubre:** solo verifica que ninguna fn worker-local esté
+  también en `_SCHED_PURE_FNS` (ambigüedad de nombre), no que las copias coincidan en
+  contenido. La drift es invisible al validador.
+  **Decisión (impacto 0):** diferir. Dos fixes candidatos cuando aplique:
+  (a) *minimal* — normalizar `lon→lng` en el coord-builder (`{lat,lng:v.lng??v.lon}`) +
+  el `??lon` en la copia del worker. ~2 líneas, cero riesgo, cierra la drift concreta;
+  no resuelve la duplicación. (b) *estructural* — unificar `venueTravelMins` para que lea
+  una global `_venueCoords` que main y worker pueblen igual, moverla a `_SCHED_PURE_FNS`
+  (fuente única vía `.toString()`), sacarla del template del worker. Resuelve la
+  duplicación pero toca el path de travel (alto blast-radius) + la bridge + el validador.
+  Obstáculo de test: la copia del worker vive en un Blob string → no hay red-green limpio
+  en Node; habría que testear el boundary (coord-builder) por separado.
