@@ -204,8 +204,11 @@ export function computeScenarios(titles){
     for(let i=0;i<20&&allScenarios.length<4;i++) collectAt(shuffle(baseGroups,_rand),trueMax,false);
   }
 
-  // Phase 3: fill remaining slots with diverse no-priority scenarios
-  for(let i=0;i<30&&allScenarios.length<8;i++) collectAt(shuffle(baseGroups,_rand),trueMax,false);
+  // Phase 3 removida (modelo de "plan único" — sin enumeración de variaciones).
+  // Caso sin prioridades: Phase 1 y 2 no corrieron → garantizamos ≥1 plan con
+  // una sola pasada por collectAt(trueMax,false). El sort final deja el mejor
+  // (menor dayBalance) en índice 0; la UI muestra solo ese.
+  if(!hasPriorities) collectAt(prioritySorted,trueMax,false);
 
   allScenarios.forEach(sc=>sc.sort((a,b)=>a.day_order!==b.day_order?a.day_order-b.day_order:toMin(a.time)-toMin(b.time)));
 

@@ -739,12 +739,6 @@ export function saveCurrentScenario(){
   }
 }
 
-export function jumpToScenario(idx){
-  if(!cachedResult) return;
-  cachedResult.currentIdx=Math.max(0,Math.min(cachedResult.scenarios.length-1,idx));
-  renderAgenda();
-}
-
 export function squeezeExcluded(schedule, excludedTitles){
   const result=[...schedule];
   // Ordenar excluidas por score descendente — misma lógica que el algoritmo

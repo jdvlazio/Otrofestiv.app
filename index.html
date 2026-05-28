@@ -1135,7 +1135,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 
 /* Agenda */
 .ag-card-btn:active,.ag-fi-btn:active,.ag-save-btn:active,
-.ag-nav-dot:active,.agbar-btn:active,.ag-sr-add:active{opacity:.6;transform:scale(.95)}
+.agbar-btn:active,.ag-sr-add:active{opacity:.6;transform:scale(.95)}
 
 /* Disponibilidad */
 .av-add-btn:active,.av-plus-btn:active,.av-full-btn:active,
@@ -1322,17 +1322,6 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .ag-summary-text b{color:var(--white)}
 .ag-save-btn{width:100%;margin-top:var(--sp-3);padding:var(--sp-btn);border-radius:var(--r-pill);background:var(--amber);border:none;color:#000;font-size:var(--t-base);font-weight:var(--w-bold);cursor:pointer;font-family:var(--font);transition:opacity var(--tr-base)}
 .ag-save-btn:hover{opacity:.88}
-.ag-nav{display:flex;align-items:center;justify-content:center;gap:var(--sp-1);margin-top:var(--sp-3);flex-wrap:wrap}
-/* ── Dot navigation para opciones de plan ─────────────────────────
-   Un botón por opción, activo destacado con fondo ámbar.
-   El usuario ve cuántas hay y en cuál está de un vistazo.
-   Escalable: generado dinámicamente desde scenarios.length */
-.ag-nav-dot{width:32px;height:32px;border-radius:50%;border:1px solid var(--bdr);background:none;color:var(--gray);font-size:var(--t-xs);font-weight:var(--w-bold);cursor:pointer;transition:all var(--tr-base);display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.ag-nav-dot:hover:not(.active){border-color:var(--amber);color:var(--amber)}
-.ag-nav-dot.active{background:var(--amber-10);border-color:var(--amber);color:var(--amber)}
-.ag-nav-dot.optimo{border-color:var(--amber-30);color:var(--amber)}
-.ag-nav-dot.optimo.active{background:var(--amber);border-color:var(--amber);color:#000}
-.ag-nav-pos{display:none}
 .ag-conflicts{background:var(--surf);border:1px solid var(--bdr);border-radius:var(--r);padding:var(--sp-3);margin-bottom:var(--sp-4)}
 .ag-conflict-item{display:flex;align-items:flex-start;justify-content:space-between;gap:var(--sp-2);font-size:var(--t-sm);color:var(--gray);line-height:1.5;padding:var(--sp-2) 0;border-bottom:1px solid var(--white-05)}
 .ag-conflict-item:last-child{border-bottom:none}
@@ -2791,7 +2780,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 <!-- ── Intereses / Planear: header unificado — fuera de ag-view ── -->
 <div class="ag-view" id="ag-view"></div>
 
-<script type="module" src="/src/main.js?v=202605280724"></script>
+<script type="module" src="/src/main.js?v=202605280943"></script>
 
 <!-- Festival switcher bottom sheet -->
 <div class="auth-sheet" id="auth-sheet" data-close-bg="AuthSheet">
