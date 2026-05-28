@@ -1544,16 +1544,16 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 
 /* ── Plan en Planear (#ag-result): rediseño visual ──
    Override scoped al contexto del plan calculado, sin afectar Mi Plan.
-   Layout: jerarquía vertical en la columna derecha — la hora vive ARRIBA del
-   título dentro de .saved-info (no como columna lateral). Separadores reducidos
-   a 0.5px y padding compacto (sp-2). Día landmark con menos peso visual. */
+   Anclado al sistema de diseño real (tokens existentes + plist-item del
+   Programa como referencia de jerarquía). El separador entre días vive en
+   el ag-day-label; los items dentro de un día respiran solo con padding. */
 #ag-result .lb-poster,
-#ag-result .lb-poster-ph{width:54px;height:80px;border-radius:var(--r-lg)}
+#ag-result .lb-poster-ph{width:56px;height:84px;border-radius:var(--r-sm)}
 #ag-result .ag-summary{
   background:none;
   border:none;
   border-radius:0;
-  padding:var(--sp-2) 0 var(--sp-3);
+  padding:var(--sp-2) 0 var(--sp-4);
   margin-bottom:0;
 }
 #ag-result .saved-item{
@@ -1563,36 +1563,43 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
   align-items:flex-start;
 }
 #ag-result .saved-time{
-  font-size:var(--t-base);
+  font-size:var(--t-md);
   font-weight:var(--w-bold);
-  min-width:0;
-  letter-spacing:.3px;
+  color:var(--amber);
   margin-bottom:2px;
+  min-width:0;
+  letter-spacing:normal;
 }
 #ag-result .saved-title{
-  font-size:var(--t-sm);
-  font-weight:var(--w-semi);
+  font-size:var(--t-base);
+  font-weight:var(--w-bold);
   color:var(--white);
-  line-height:1.3;
 }
 #ag-result .saved-venue{
-  font-size:var(--t-xs);
-  color:var(--gray2);
+  font-size:var(--t-sm);
+  font-weight:var(--w-thin);
+  color:var(--gray);
   margin-top:2px;
 }
 #ag-result .ag-day-label{
-  display:flex;align-items:baseline;justify-content:space-between;gap:var(--sp-2);
-  margin:var(--sp-4) 0 var(--sp-2);padding-bottom:var(--sp-2);
+  display:flex;
+  align-items:baseline;
+  justify-content:space-between;
+  margin:var(--sp-4) 0 var(--sp-2);
+  padding-bottom:var(--sp-2);
   border-bottom:1px solid var(--bdr-l);
   /* Sticky: top con offset del topbar (mismo patrón que #hdr-programa/#hdr-ag). */
-  position:sticky;top:var(--sticky-top-carta);background:var(--bg);z-index:1;
+  position:sticky;
+  top:var(--sticky-top-carta);
+  background:var(--bg);
+  z-index:1;
 }
 #ag-result .ag-day-name{
-  display:block;font-size:var(--t-lg);font-weight:var(--w-bold);color:var(--white);
+  font-size:var(--t-lg);
+  font-weight:var(--w-bold);
+  color:var(--white);
 }
-#ag-result .ag-day-stats{
-  font-size:var(--t-sm);color:var(--gray2);flex-shrink:0;
-}
+#ag-result .ag-day-stats{flex-shrink:0;font-size:var(--t-sm)}
 
 /* Progress festival */
 .festival-progress{padding:var(--sp-2) 0;margin-bottom:var(--sp-1)}
@@ -2833,7 +2840,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 <!-- ── Intereses / Planear: header unificado — fuera de ag-view ── -->
 <div class="ag-view" id="ag-view"></div>
 
-<script type="module" src="/src/main.js?v=202605281145"></script>
+<script type="module" src="/src/main.js?v=202605281217"></script>
 
 <!-- Festival switcher bottom sheet -->
 <div class="auth-sheet" id="auth-sheet" data-close-bg="AuthSheet">

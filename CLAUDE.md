@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `3f7b9d9 Merge pull request #129 from jdvlazio/fix/planear-tipografia-hora`
+> Último commit: `033a4e0 chore: bundle v202605281646`
 
 ---
 
