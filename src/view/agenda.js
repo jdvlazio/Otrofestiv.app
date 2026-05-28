@@ -1095,27 +1095,10 @@ export function buildResultHTML(scenarios){
   const isCustom=sc._custom===true;
   const planLabel=isOptimo?t('plan_optimo'):isCustom?t('av_opcion_pers'):'';
 
-  // ── Navigation ──
-  let navHtml='';
-  if(n>1){
-    const prevLabel=currentIdx<=1?`${ICONS.calendar} ${t('plan_optimo')}`:`${t('plan_variacion')} ${currentIdx-1}`;
-    const nextLabel=currentIdx===0?`${t('plan_variacion')} 1`:`${t('plan_variacion')} ${currentIdx+1}`;
-    // Dots: un botón por opción, activo destacado
-    // Escalable: generado desde scenarios.length sin hardcodear
-    const _algCount=cachedResult._algorithmCount||n;
-    const dots=scenarios.map((sc_,di)=>{
-      const isActive=di===currentIdx;
-      const isOptimoDot=di===0;
-      const isCustom=sc_._custom===true;
-      // Dot base: algoritmo=número, personalizado=✎ para distinguirlos
-      const cls=(isOptimoDot?'ag-nav-dot optimo':'ag-nav-dot')+(isActive?' active':'');
-      const label=isOptimoDot?'★':isCustom?'✎':(di).toString();
-      const titleStr=isOptimoDot?t('plan_optimo'):isCustom?'Opción personalizada':'Opción '+di;
-      return`<button class="${cls}" data-action="jumpToScenario" data-index="${di}" title="${titleStr}">${label}</button>`;
-    }).join('');
-    navHtml=`<div class="mt-2 ag-nav">${dots}</div>`;
-  }
-
+  // Modelo de "plan único": sin dots ni navegación entre variaciones.
+  // Si existen escenarios custom (forceInclude), `cachedResult.currentIdx` puede
+  // apuntar a uno; rendereamos ese. La navegación entre múltiples scenarios la
+  // sacamos junto con la Phase 3 del motor.
   const saveBtnHtml=`<button class="ag-save-btn" data-action="saveCurrentScenario">${ICONS.calendar} ${t('plan_usar_plan')}</button>`;
   let html=`${_staleBanner}<div class="ag-summary">
     <div class="ag-summary-title" style="font-size:var(--t-base);color:${isOptimo?'var(--white)':'var(--gray)'}">${planLabel} · ${ok} ${t('misc_pelicula')}${ok!==1?'s':''}</div>
@@ -1129,7 +1112,6 @@ export function buildResultHTML(scenarios){
         :`algunas de tus ${t('misc_prioridades')}`;
       return`<div class="ag-excl-incompat">${pairMsg} ${t('plan_solapan')} — revisá cuál querés priorizar.</div>`;
     })():''}
-    ${navHtml}
   </div>
 `;
 
@@ -1207,10 +1189,9 @@ export function buildResultHTML(scenarios){
     </div>`;
   }
 
-  // ── CTA repetido al final — patrón UX formulario largo ──
+  // ── CTA al pie — patrón UX formulario largo ──
   html+=`<div class="mt-4 ag-summary">
-    ${navHtml}
-    <div style="margin-top:${navHtml?'var(--sp-3)':'0'}">${saveBtnHtml}</div>
+    ${saveBtnHtml}
   </div>`;
   return html;
 }
