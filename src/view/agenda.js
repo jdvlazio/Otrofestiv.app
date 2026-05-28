@@ -118,96 +118,7 @@ export function renderAgenda(){
         <div id="ag-result">${resultContent}</div>
       </div>`;
     renderAvBlocks();
-    // Post-render Planear: inicializar gestos de swipe (idempotente) + peek 1ª vez.
-    _initAgScenarioGestures();
-    if(cachedResult&&sessionStorage.getItem('otrofestiv_planear_peek_shown')!=='1'){
-      const _first=document.querySelector('#ag-result .saved-item');
-      if(_first){
-        _first.classList.add('peek');
-        sessionStorage.setItem('otrofestiv_planear_peek_shown','1');
-        setTimeout(()=>_first.classList.remove('peek'),600);
-      }
-    }
   }
-}
-
-// ── Swipe-left gesture en #ag-result (mode='scenario') ──
-// Bind delegado a document — idempotente vía flag módulo-local. Toca solo
-// elementos dentro de #ag-result; no afecta Mi Plan ni el resto de la app.
-let _agSwipeInit=false;
-let _agSwipeOpenEl=null;        // .saved-item actualmente abierto (max 1)
-let _agSwipeTarget=null;        // .saved-item siendo arrastrado en este touch
-let _agSwipeStartX=0;
-let _agSwipeStartY=0;
-let _agSwipeDx=0;
-let _agSwipeLocked=false;       // true si decidimos que es swipe horizontal
-function _initAgScenarioGestures(){
-  if(_agSwipeInit) return;
-  _agSwipeInit=true;
-  const OPEN_PX=140;          // ancho del panel de acciones
-  const THRESH_OPEN=50;       // px de drag para abrir
-  const THRESH_CLOSE=80;      // px restantes para mantener abierto
-  document.addEventListener('touchstart',(e)=>{
-    const item=e.target.closest('#ag-result .saved-item');
-    if(!item) return;
-    if(e.target.closest('.swipe-btn')) return;  // dejar al botón
-    _agSwipeTarget=item;
-    _agSwipeStartX=e.touches[0].clientX;
-    _agSwipeStartY=e.touches[0].clientY;
-    _agSwipeDx=0;
-    _agSwipeLocked=false;
-    item.style.transition='none';
-  },{passive:true});
-  document.addEventListener('touchmove',(e)=>{
-    if(!_agSwipeTarget) return;
-    const dx=e.touches[0].clientX-_agSwipeStartX;
-    const dy=e.touches[0].clientY-_agSwipeStartY;
-    if(!_agSwipeLocked){
-      // Decidir orientación tras 8px de movimiento.
-      if(Math.abs(dx)>8||Math.abs(dy)>8){
-        if(Math.abs(dx)>Math.abs(dy)){_agSwipeLocked=true;}
-        else{_agSwipeTarget.style.transition='';_agSwipeTarget=null;return;}
-      }
-    }
-    if(!_agSwipeLocked) return;
-    const wasOpen=_agSwipeTarget.classList.contains('swiped');
-    const base=wasOpen?-OPEN_PX:0;
-    _agSwipeDx=Math.max(-OPEN_PX,Math.min(0,base+dx));
-    _agSwipeTarget.style.transform=`translateX(${_agSwipeDx}px)`;
-  },{passive:true});
-  document.addEventListener('touchend',()=>{
-    if(!_agSwipeTarget) return;
-    const t=_agSwipeTarget;
-    t.style.transition='';
-    t.style.transform='';
-    if(_agSwipeLocked){
-      const wasOpen=t.classList.contains('swiped');
-      if(wasOpen){
-        // Cerrar solo si el usuario lo arrastró >THRESH_CLOSE hacia la derecha.
-        if(_agSwipeDx>-OPEN_PX+THRESH_CLOSE){
-          t.classList.remove('swiped');
-          if(_agSwipeOpenEl===t) _agSwipeOpenEl=null;
-        }
-      } else {
-        if(_agSwipeDx<-THRESH_OPEN){
-          if(_agSwipeOpenEl&&_agSwipeOpenEl!==t) _agSwipeOpenEl.classList.remove('swiped');
-          t.classList.add('swiped');
-          _agSwipeOpenEl=t;
-        }
-      }
-    }
-    _agSwipeTarget=null;
-    _agSwipeDx=0;
-    _agSwipeLocked=false;
-  });
-  // Tap fuera del item abierto → cerrar.
-  document.addEventListener('click',(e)=>{
-    if(!_agSwipeOpenEl) return;
-    if(_agSwipeOpenEl.contains(e.target)) return;
-    if(e.target.closest('.swipe-btn')) return; // el handler del botón lo decide
-    _agSwipeOpenEl.classList.remove('swiped');
-    _agSwipeOpenEl=null;
-  },true);
 }
 
 export function renderMiPlanCalendar(state){
@@ -1317,15 +1228,17 @@ export function mkAgendaRow(s, mode='saved'){
   // (jerarquía vertical: hora → título → venue). En Mi Plan (saved) la hora sigue como
   // columna lateral (layout familiar para usuarios del plan guardado).
   const _timeHTML=`<div class="saved-time">${s.time}</div>`;
-  // Swipe actions (Cambiar/Quitar) — solo en scenario. En Mi Plan los affordances
-  // ya viven en .mplan-row, no en .saved-item.
-  const _swipeActions=mode==='scenario'
-    ?`<div class="saved-swipe-actions" aria-hidden="true">
-        <button class="swipe-btn cambiar" data-action="toggleFilmAlternatives" data-key="${filmKey}" data-title="${safeT}" data-day="${s.day||''}" data-time="${s.time||''}" data-stop="1">${t('misc_cambiar')}</button>
-        <button class="swipe-btn quitar" data-action="removeFilmFromScenario" data-title="${safeT}" data-stop="1">${t('misc_quitar')}</button>
+  // Affordances Cambiar/Quitar — botones visibles al final del item en Planear
+  // (mode='scenario'). Mismo patrón que .mplan-row en Mi Plan: .col-end con
+  // .icon-btn-circle .ag-fi-btn (Cambiar, switch icon) + .ag-fi-btn.del (Quitar,
+  // x icon). Solo si el festival no terminó.
+  const _scenarioActions=mode==='scenario'&&!festivalEnded()
+    ?`<div class="col-end">
+        <button class="icon-btn-circle ag-fi-btn" data-action="toggleFilmAlternatives" data-key="${filmKey}" data-title="${safeT}" data-day="${s.day||''}" data-time="${s.time||''}" data-stop="1" title="${t('misc_cambiar')}">${ICONS.switch}</button>
+        <button class="icon-btn-circle ag-fi-btn del" data-action="removeFilmFromScenario" data-title="${safeT}" data-day="${s.day||''}" data-time="${s.time||''}" data-stop="1" title="${t('misc_quitar')}">${ICONS.x}</button>
       </div>`
     :'';
-  const _row=`<div class="saved-item${isDone?' done':''}">
+  return`<div class="saved-item${isDone?' done':''}">
     ${_ph}
     ${mode==='saved'?_timeHTML:''}
     <div class="saved-info">
@@ -1335,12 +1248,8 @@ export function mkAgendaRow(s, mode='saved'){
       ${_progBtn}
     </div>
     ${mode==='saved'?`<button class="row-xs saved-check${isDone?' done':''}" data-title="${safeT}" data-day="${s.day||''}" data-time="${s.time||''}" data-venue="${(s.venue||'').replace(/"/g,'&quot;')}" data-dur="${s.duration||''}" data-action="${isDone?'toggleWatched':'markWatchedFromPlan'}">${ICONS.check+' '+t('cta_vista')}</button>`:''}
-  </div>`;
-  // En scenario envolvemos en .saved-item-wrap para alojar el panel de swipe.
-  const _wrapped=mode==='scenario'
-    ?`<div class="saved-item-wrap" data-fkey="${filmKey}">${_swipeActions}${_row}</div>`
-    :_row;
-  return`${_wrapped}${_progList}${altsHtml?`<div class="film-alts">${altsHtml}</div>`:''}`;
+    ${_scenarioActions}
+  </div>${_progList}${altsHtml?`<div class="film-alts">${altsHtml}</div>`:''}`;
 }
 
 export function updateCardState(title){
