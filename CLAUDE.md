@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `9e73e6e chore: bundle v202605281256`
+> Último commit: `70e49ad chore: bundle v202605281450`
 
 ---
 

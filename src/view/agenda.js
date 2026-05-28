@@ -1116,11 +1116,21 @@ export function buildResultHTML(scenarios){
 `;
 
   // ── Film list by day ──
+  // Day landmark: nombre completo lang-aware + stats (n films · total min)
+  const _dowKeys=['day_dom','day_lun','day_mar','day_mie','day_jue','day_vie','day_sab'];
   const byDay={};
   sc.schedule.forEach(s=>{if(!byDay[s.day])byDay[s.day]=[];byDay[s.day].push(s);});
   DAY_KEYS.forEach(day=>{
     const films=byDay[day];if(!films||!films.length) return;
-    html+=`<div class="ag-day-label"><span class="ag-day-name">${dayChip(day)}</span><span class="count-badge cb-neutral">${films.length}</span></div>`;
+    const _isoDate=FESTIVAL_DATES[day]||day;
+    const _d=new Date(_isoDate+'T12:00:00');
+    const _dayName=t(_dowKeys[_d.getDay()]);
+    const _dayNum=_d.getDate();
+    const _totalMin=films.reduce((acc,f)=>acc+parseDur(f.duration),0);
+    const _h=Math.floor(_totalMin/60), _m=_totalMin%60;
+    const _totalStr=_h?(_m?`${_h}h ${_m}min`:`${_h}h`):`${_m}min`;
+    const _filmsLbl=`${films.length} ${t('misc_pelicula')}${films.length!==1?'s':''}`;
+    html+=`<div class="ag-day-label"><span class="ag-day-name">${_dayName} ${_dayNum}</span><span class="ag-day-stats">${_filmsLbl} · ${_totalStr}</span></div>`;
     films.forEach((s,i)=>{
       if(i>0){const warn=travelWarn(films[i-1],s);if(warn) html+=`<div class="ag-warn">${warn}</div>`;}
       html+=mkAgendaRow(s,'scenario');
@@ -1207,8 +1217,9 @@ export function mkAgendaRow(s, mode='saved'){
   const vc2=vcfg(s.venue),sl=sala(s.venue);
   const safeT=(s._title||'').replace(/"/g,'&quot;');
   const isDone=watched.has(title);
-  const alts=mode==='scenario'?FILMS.filter(fi=>fi.title===title&&!isScreeningBlocked(fi)&&!screeningPassed(fi)&&!(fi.day===s.day&&fi.time===s.time)):[];
-  const altBadge=alts.length?`<span class="ag-alts">${alts.length} ${t('plan_alt')}</span>`:'';
+  // altBadge ("X alt.") eliminado del template — rediseño visual: las
+  // alternativas son un affordance de interacción (PR de editabilidad),
+  // no info pasiva en la venue line.
   const filmKey=(s._title||'')+(s.day||'')+(s.time||'');
   const isExpanded=_expandedFilm===filmKey;
   const actionBtn=mode==='saved'
@@ -1225,7 +1236,7 @@ export function mkAgendaRow(s, mode='saved'){
     <div class="saved-time">${s.time}</div>
     <div class="saved-info">
       <div class="saved-title">${displayTitle}</div>${progSuffix?`<div class="film-sub-label">${progSuffix}</div>`:''}
-      <div class="saved-venue">${ICONS.pin} ${vc2.short}${sl?' · '+sl:''}${s.duration?' · '+durFmt(s.duration):''}${altBadge}</div>
+      <div class="saved-venue">${ICONS.pin} ${vc2.short}${sl?' · '+sl:''}${s.duration?' · '+durFmt(s.duration):''}</div>
       ${_progBtn}
     </div>
     ${mode==='saved'?`<button class="row-xs saved-check${isDone?' done':''}" data-title="${safeT}" data-day="${s.day||''}" data-time="${s.time||''}" data-venue="${(s.venue||'').replace(/"/g,'&quot;')}" data-dur="${s.duration||''}" data-action="${isDone?'toggleWatched':'markWatchedFromPlan'}">${ICONS.check+' '+t('cta_vista')}</button>`:''}
