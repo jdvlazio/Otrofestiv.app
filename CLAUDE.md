@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `1b528a1 Merge pull request #132 from jdvlazio/feat/planear-editable`
+> Último commit: `6bad648 chore: bundle v202605281819`
 
 ---
 

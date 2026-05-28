@@ -310,48 +310,34 @@ export function checkinNoLaVi(title){
 }
 
 export function forceInclude(title){
+  // El botón "+ Incluir" en la sección No Incluidas solo se renderiza cuando
+  // hay un conflicto con el schedule actual (ver agenda.js: canInclude=true
+  // sii conflictWith != null). Reusamos el modal de confirmReplace con
+  // isScenario=true: muta cachedResult, no toca savedAgenda. El commit ocurre
+  // solo con "Usar este Plan".
+  //
+  // IMPORTANTE: matchear el mismo loop que la vista usa para detectar
+  // conflictWith (agenda.js _excItems) — sin sortScreensByStrategy — para que
+  // el (screening del excluido, conflicto) que muestra el modal coincida con
+  // el que dice la razón en la UI ("Choca con X · DÍA HORA").
   if(festivalEnded()){showToast(t('notice_fest_term'),'info');return;}
   if(!cachedResult||!cachedResult.scenarios.length) return;
-  const sc=cachedResult.scenarios[cachedResult.currentIdx];
-
-  // Intentar encajar la película en el schedule actual
-  const newSchedule=squeezeExcluded(sc.schedule,[title]);
-  const included=newSchedule.find(s=>s._title===title&&s._squeezed);
-
-  if(!included){
-    showToast(t('plan_sin_horario'),'info');
-    return;
+  const sc=cachedResult.scenarios[cachedResult.currentIdx||0];
+  const screens=FILMS.filter(f=>f.title===title&&!screeningPassed(f)&&!isScreeningBlocked(f));
+  if(!screens.length){showToast(t('plan_sin_horario'),'info');return;}
+  // Buscar el primer (screening del excluido, conflicto en schedule) y delegar.
+  for(const s of screens){
+    for(const c of sc.schedule){
+      if(screensConflict(s,c)){
+        confirmReplace(c._title, title, s.day, s.time, true);
+        return;
+      }
+    }
   }
-
-  // Construir nuevo escenario custom
-  const includedTitles=new Set(newSchedule.map(s=>s._title));
-  const pending=[...watchlist].filter(t=>!watched.has(t));
-  const newScenario={
-    schedule:newSchedule,
-    excluded:pending.filter(t=>!includedTitles.has(t)),
-    _custom:true,
-    incompatiblePriorities:sc.incompatiblePriorities,
-    trueMax:sc.trueMax,
-    maxWithPriorities:sc.maxWithPriorities,
-    priorityCost:sc.priorityCost,
-    dayBalance:sc.dayBalance
-  };
-
-  // Deduplicar — si ya existe un escenario idéntico, saltar a él
-  const newKey=newSchedule.map(s=>(s._title||'')+'@'+s.day+s.time).sort().join('|');
-  const existingIdx=cachedResult.scenarios.findIndex(s=>{
-    const k=s.schedule.map(x=>(x._title||'')+'@'+x.day+x.time).sort().join('|');
-    return k===newKey;
-  });
-
-  if(existingIdx>-1){
-    cachedResult.currentIdx=existingIdx;
-    showToast('Escenario ya existente','info');
-  } else {
-    cachedResult.scenarios.push(newScenario);
-    cachedResult.currentIdx=cachedResult.scenarios.length-1;
-  }
-  renderAgenda();
+  // Edge case: ninguna función conflictúa. El planner debería haberla
+  // incluido — pero por consistencia mostramos toast en lugar de fallar
+  // silenciosamente.
+  showToast(t('plan_sin_horario'),'info');
 }
 
 export function togglePriority(title,cost){
