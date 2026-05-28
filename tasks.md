@@ -63,3 +63,54 @@ arreglados en un PR combinado (`feat/fix-lang-ternarios`):
 
 > El leak del **countdown** (`misc_days`) se arregló en el PR del countdown (#116) y el del
 > header + `DAY_A` en el refactor `dayLabel()` (#117).
+
+## Auditoría de Planear — hallazgos
+
+Auditoría formal de `computeScenarios` + `screensConflict` (el feature core, nunca
+revisado antes). 3 bugs principales + secundarios.
+
+### Bug #1 — el índice 0 ("Tu plan") podía omitir una prioridad (RESUELTA ✅ · PR #122)
+Cuando `priorityCost>0`, el sort final ordenaba solo por `dayBalance` → un plan de
+Fase 3 de mayor cardinalidad **sin** la película priorizada podía ganar el índice 0.
+Fix: el sort antepone los planes que respetan TODAS las prioridades schedulables;
+empate → `dayBalance`. Test red-green permanente en `computeScenarios.test.js`.
+Bonus: label `plan_optimo` Óptimo/Best/Melhor → **Tu plan/Your plan/Seu plano**.
+
+### Bug #2 — output no determinístico (RESUELTA ✅ · PR #123)
+`computeScenarios` llamaba `shuffle(baseGroups)` sin seed → `Math.random` → misma
+watchlist daba "Tu plan" distinto entre recálculos. Fix: `_mulberry32(_titleSeed(titles))`
+sembrado por la watchlist (el RNG ya existía en `film.js`, no estaba cableado). Test
+red-green (8 corridas). Bonus: worker y fallback sync ahora dan output idéntico.
+
+### Bug #3 — cruce de medianoche en `screensConflict` (DIFERIDA · deuda latente)
+**Defecto real confirmado** (repro): `screensConflict` da falso-negativo cuando dos
+funciones se solapan cruzando medianoche. Dos manifestaciones:
+- `if(a.day!==b.day) return false` corta el caso distinto-día (peli D1 23:30→01:30 D2
+  vs peli D2 00:30).
+- `toMin` topea en 24h sin wrap → mismo-día con time after-midnight mal comparado.
+
+**NO alcanzable en datos actuales:** Tribeca función más tardía 9:15 PM, Olhar 21:15;
+0 funciones cruzan medianoche, 0 funciones 00:00–05:00. Bug latente, no observable.
+
+**Decisión (aprobada):** diferir. Modificar `screensConflict` —la función de mayor
+blast-radius del planner— para un caso que no ocurre tiene riesgo > beneficio.
+
+**Fix candidato (cuando algún festival lo requiera):** tiempo absoluto
+`day_order*1440 + toMin(time)` en vez de `toMin` + el short-circuit por día.
+Verificado: `day_order` es índice de día global (Tribeca/Olhar) e idéntico al código
+actual para todo dato sin cruce. **Precondición/riesgo:** depende de que cada screening
+tenga `day_order` global; si falta, el loader cae a índice de screening (no global) →
+posible falso conflicto cross-day. Alternativa robusta: pasar el orden de días
+(`DAY_KEYS`/`FESTIVAL_DATES`) a `screensConflict` (cambia firma + template del worker).
+Cualquiera de los dos exige test red-green con fixture de cruce de medianoche.
+
+### Secundarios (no bloqueantes, sin PR)
+- **`scoreFilm` desconectado de la selección:** los pesos de rareza/sección/duración se
+  calculan pero no entran al objetivo (cardinalidad + `dayBalance` + prioridad). Solo
+  `priority` influye en qué entra. O se cablea al objetivo o se deja de calcular.
+- **`MAX_NODES_PER_CALL=80000`:** "Tu plan" es best-effort (no óptimo garantizado) para
+  watchlists densas — el branch-and-bound corta a 80k nodos. Aceptable, pero el label no
+  refleja el caso cap.
+- **Divergencia main/worker en venue/time fns:** reescritas a mano en el template del
+  worker (calc.js) vs `festival.js` (ej. `lng??lon` solo en main). Mitigada en parte por
+  el determinismo del Bug #2 (mismo seed), pero la divergencia de coords sigue latente.
