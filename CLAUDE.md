@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `1e85769 fix(planear): confirmReplace bifurcado por contexto — scenario no toca savedAgenda`
+> Último commit: `1b528a1 Merge pull request #132 from jdvlazio/feat/planear-editable`
 
 ---
 

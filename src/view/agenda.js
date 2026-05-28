@@ -115,7 +115,6 @@ export function renderAgenda(){
         </div>
       </div>
       <div class="amber-border-top ag-section${_stale?' stale':''}" id="ag-result-wrap"${cachedResult?'':' style="display:none"'}>
-        <div class="txt-amber60 sec-hdr">${ICONS.switch} ${t('plan_opciones')}</div>
         <div id="ag-result">${resultContent}</div>
       </div>`;
     renderAvBlocks();
