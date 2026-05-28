@@ -105,9 +105,14 @@ posible falso conflicto cross-day. Alternativa robusta: pasar el orden de días
 Cualquiera de los dos exige test red-green con fixture de cruce de medianoche.
 
 ### Secundarios (no bloqueantes, sin PR)
-- **`scoreFilm` desconectado de la selección:** los pesos de rareza/sección/duración se
-  calculan pero no entran al objetivo (cardinalidad + `dayBalance` + prioridad). Solo
-  `priority` influye en qué entra. O se cablea al objetivo o se deja de calcular.
+- **`scoreFilm` — NO es código muerto (auditoría corregida):** revisado en cadena
+  completa, `scoreFilm` está vivo en dos consumidores reales: (1) `squeezeExcluded`
+  (`handlers.js:748`) ordena por score qué excluidas meter en los huecos — usado en
+  `saveCurrentScenario` (al guardar "Tu plan") y en `forceInclude` (botón "+ Incluir"),
+  ambos user-facing; (2) `mrvGroups` (`schedule.js`) como heurística de traversal de
+  `findMax` bajo el cap de 80k nodos. Lo único cierto del hallazgo original: score **no
+  desempata** en la *selección* del plan mostrado (eso lo hacen cardinalidad + `dayBalance`
+  + prioridad). Opcional marginal: sumarlo como último tiebreaker del sort. No se tocó.
 - **`MAX_NODES_PER_CALL=80000`:** "Tu plan" es best-effort (no óptimo garantizado) para
   watchlists densas — el branch-and-bound corta a 80k nodos. Aceptable, pero el label no
   refleja el caso cap.
