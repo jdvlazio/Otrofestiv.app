@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `e463070 feat(planear): layout vertical en plan calculado — hora dentro de info, separadores reducidos`
+> Último commit: `96f544a Merge pull request #128 from jdvlazio/feat/planear-plan-layout-vertical`
 
 ---
 
