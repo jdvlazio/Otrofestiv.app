@@ -598,6 +598,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .count-badge.cb-amber{background:var(--amber-10);color:var(--amber);border:1px solid var(--amber-30)}
 .count-badge.cb-red{background:rgba(224,85,85,.1);color:var(--red);border:1px solid rgba(224,85,85,.25)}
 .count-badge.cb-gray2{background:var(--surf-2);color:var(--gray2);border:1px solid var(--bdr-l)}
+.count-badge.cb-green{background:var(--green-12);color:var(--green);border:1px solid var(--green-20)}
 .meta-banner{display:flex;align-items:flex-start;gap:var(--sp-2);padding:var(--sp-2) var(--sp-3);background:var(--surf-2);border-radius:var(--r-sm);margin-bottom:var(--sp-2)}
 .meta-banner-dot{width:6px;height:6px;border-radius:50%;background:var(--amber);flex-shrink:0;margin-top:var(--sp-1)}
 .meta-banner-label{font-size:var(--t-xs);font-weight:var(--w-display);color:var(--amber);letter-spacing:.5px;text-transform:uppercase}
@@ -1557,6 +1558,9 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
   padding:var(--sp-2) 0 var(--sp-4);
   margin-bottom:0;
 }
+/* Summary del plan = filas-header (mismo componente que Intereses), pero flush
+   horizontalmente para alinear con los items del plan (que no tienen padding-x). */
+#ag-result .int-section-hdr{padding:var(--sp-1) 0}
 #ag-result .saved-item{
   padding:var(--sp-3) 0;
   border-bottom:none;
@@ -1586,51 +1590,33 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
   display:flex;
   align-items:baseline;
   justify-content:space-between;
-  margin:var(--sp-4) 0 var(--sp-2);
-  padding-bottom:var(--sp-2);
-  border-bottom:1px solid var(--bdr-l);
+  /* El divisor separa días: vive ARRIBA del header del día (entre las
+     funciones del día anterior y el header del siguiente). Reseteamos el
+     border-bottom de la regla base .ag-day-label (no separa día↔función). */
+  margin:0 0 var(--sp-2);
+  padding-top:var(--sp-4);
+  padding-bottom:0;
+  border-top:1px solid var(--bdr-l);
+  border-bottom:none;
   /* Sticky: top con offset del topbar (mismo patrón que #hdr-programa/#hdr-ag). */
   position:sticky;
   top:var(--sticky-top-carta);
   background:var(--bg);
   z-index:1;
 }
+#ag-result .ag-day-label.first{
+  border-top:none;
+  padding-top:0;
+}
 #ag-result .ag-day-name{
   font-size:var(--t-md);
   font-weight:var(--w-semi);
   color:var(--white);
 }
-/* Swipe-left editable items (mode='scenario'): el wrapper aloja el panel de
-   acciones (Cambiar/Quitar) detrás del .saved-item, revelado al arrastrar. */
-#ag-result .saved-item-wrap{position:relative;overflow:hidden}
-#ag-result .saved-item-wrap .saved-item{
-  background:var(--bg);
-  position:relative;
-  transition:transform 200ms ease;
-  will-change:transform;
-}
-#ag-result .saved-item-wrap .saved-item.swiped{transform:translateX(-140px)}
-#ag-result .saved-item-wrap .saved-item.peek{animation:ag-peek 600ms ease-out 200ms}
-@keyframes ag-peek{
-  0%,100%{transform:translateX(0)}
-  35%{transform:translateX(-24px)}
-  70%{transform:translateX(-4px)}
-}
-#ag-result .saved-swipe-actions{
-  position:absolute;right:0;top:0;bottom:0;
-  display:flex;z-index:0;
-}
-#ag-result .swipe-btn{
-  width:70px;border:none;
-  font-family:var(--font);font-size:var(--t-sm);font-weight:var(--w-bold);
-  color:var(--white);cursor:pointer;
-  display:flex;align-items:center;justify-content:center;
-  padding:0 var(--sp-2);
-  -webkit-tap-highlight-color:transparent;
-}
-#ag-result .swipe-btn.cambiar{background:#2563eb}
-#ag-result .swipe-btn.quitar{background:#dc2626}
-#ag-result .swipe-btn:active{filter:brightness(.85)}
+/* Botones de acción por fila (mobile-only): sin hover, la semántica de color
+   vive en reposo. Quitar = rojo (destructivo, legible sin interacción).
+   Cambiar = neutro (no-destructivo; evita colisión con el ámbar de la hora). */
+#ag-result .col-end .ag-fi-btn.del{color:var(--red);opacity:.7}
 
 /* Progress festival */
 .festival-progress{padding:var(--sp-2) 0;margin-bottom:var(--sp-1)}
@@ -2871,7 +2857,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 <!-- ── Intereses / Planear: header unificado — fuera de ag-view ── -->
 <div class="ag-view" id="ag-view"></div>
 
-<script type="module" src="/src/main.js?v=202605281720"></script>
+<script type="module" src="/src/main.js?v=202605281831"></script>
 
 <!-- Festival switcher bottom sheet -->
 <div class="auth-sheet" id="auth-sheet" data-close-bg="AuthSheet">

@@ -39,7 +39,7 @@ export function renderAgenda(){
   // branch-específicos (_scrollMiPlanToNow, _updateMiPlanBadge, renderAvBlocks,
   // _agHi.style.display, requestAnimationFrame(_fixStickyOffset)). Split impráctico
   // — body se queda monolítico con state.snapshot() destructure al top.
-  const {savedAgenda, FILMS, _activeFestId, watched, watchlist, prioritized} = state.snapshot();
+  const {savedAgenda, FILMS, _activeFestId, watched, watchlist, prioritized, availability} = state.snapshot();
   const view=document.getElementById('ag-view');
   if(activeMNav==='mnav-seleccion'){
     // ── Post-festival: redirigir a Mi Plan ──
@@ -100,21 +100,34 @@ export function renderAgenda(){
     const resultContent=cachedResult
       ?buildResultHTML(cachedResult.scenarios)
       :'';
+    // Disponibilidad colapsable — colapsada por defecto, abierta si hay bloques.
+    const _hasAvBlocks=!!(availability&&DAY_KEYS.some(d=>availability[d]&&availability[d].blocks&&availability[d].blocks.length));
+    const _avOpenAttr=_hasAvBlocks?' open':'';
     view.innerHTML=`${_progressHtml}
+      <style>
+        .ag-av-details{padding:var(--sp-3) var(--sp-4)}
+        .ag-av-details>summary{cursor:pointer;list-style:none;display:flex;align-items:center;margin-bottom:0;-webkit-tap-highlight-color:transparent}
+        .ag-av-details>summary::-webkit-details-marker,
+        .ag-av-details>summary::marker{display:none}
+        .ag-av-details>summary .ag-av-chevron{margin-left:auto;transition:transform 200ms ease;color:var(--gray2);display:inline-flex;align-items:center}
+        .ag-av-details[open]>summary .ag-av-chevron{transform:rotate(180deg)}
+        .ag-av-details>summary .sec-hdr-opt{margin-left:4px}
+        .ag-av-details>.txt-gray2-sm-lh{margin-top:var(--sp-2)}
+      </style>
       <div class="ag-section">
-        <div class="section-div">
-          <div class="mb-2 sec-hdr">${ICONS.clock} ${t('av_disponibilidad')} <span class="sec-hdr-opt">${t('misc_opcional')}</span></div>
+        <details class="section-div ag-av-details"${_avOpenAttr}>
+          <summary class="sec-hdr">${ICONS.clock} ${t('av_disponibilidad')} <span class="sec-hdr-opt">${t('misc_opcional')}</span><span class="ag-av-chevron">${ICONS.chevronD}</span></summary>
           <div class="txt-gray2-sm-lh">${t('av_no_incluir')}</div>
           <div id="av-blocks-list"></div>
           <button class="av-add-unavail" data-action="openAvSheet">${ICONS.plus} ${t('misc_no_disponible')}</button>
-        </div>
+        </details>
         <div class="av-calc-wrap">
           <button class="av-calc-btn" data-action="runCalc">
             ${t('av_ver_opciones')}
           </button>
         </div>
       </div>
-      <div class="amber-border-top ag-section${_stale?' stale':''}" id="ag-result-wrap"${cachedResult?'':' style="display:none"'}>
+      <div class="ag-section${_stale?' stale':''}" id="ag-result-wrap"${cachedResult?'':' style="display:none"'}>
         <div id="ag-result">${resultContent}</div>
       </div>`;
     renderAvBlocks();
@@ -1079,27 +1092,37 @@ export function buildResultHTML(scenarios){
   const _staleBanner=_stale
     ?`<div class="prio-stale">${ICONS.star} ${t('prio_stale_banner')}<button class="prio-stale-cta" data-action="runCalc">${t('prio_stale_cta')}</button></div>`
     :'';
-  // Resumen de prioridades (post-cálculo): verde si todas entraron, ámbar si parciales.
+  // Resumen de prioridades (post-cálculo): badge verde si todas entraron,
+  // ámbar si parciales. Mismo lenguaje visual que el header de Intereses.
   const _included=new Set(sc.schedule.map(s=>s._title));
   const _prioCnt=[...prioritized].filter(p=>_included.has(p)).length;
-  const _prioLine=prioritized.size===0?''
-    :_prioCnt===prioritized.size
-      ?`<div class="plan-prio-ok">✓ ${t('plan_prio_todas')}</div>`
-      :`<div class="plan-prio-partial">⚠ ${t('plan_prio_parcial',{n:_prioCnt,m:prioritized.size})}</div>`;
+  const _prioBadgeCls=_prioCnt===prioritized.size?'cb-green':'cb-amber';
+  const _prioRow=prioritized.size===0?''
+    :`<div class="int-section-hdr">
+        <span class="int-section-hdr-ico">${ICONS.star}</span>
+        <span class="int-section-hdr-lbl">${t('lbl_prioridades')}</span>
+        <span class="count-badge ${_prioBadgeCls}">${_prioCnt}/${prioritized.size}</span>
+      </div>`;
 
   // ── Header: Plan óptimo vs Variación ──
   const isCustom=sc._custom===true;
-  const planLabel=isOptimo?t('plan_optimo'):isCustom?t('av_opcion_pers'):'';
+  const planLabel=isOptimo?t('plan_optimo'):isCustom?t('av_opcion_pers'):t('plan_optimo');
 
   // Modelo de "plan único": sin dots ni navegación entre variaciones.
   // Si existen escenarios custom (forceInclude), `cachedResult.currentIdx` puede
   // apuntar a uno; rendereamos ese. La navegación entre múltiples scenarios la
   // sacamos junto con la Phase 3 del motor.
   const saveBtnHtml=`<button class="ag-save-btn" data-action="saveCurrentScenario">${ICONS.calendar} ${t('plan_usar_plan')}</button>`;
+  // Summary como filas-header (patrón Intereses): icono + label + count-badge.
+  // El conteo de films y el estado de prioridades viven en badges, no en prosa.
+  // "X no incluidas" se omite — ya vive en el header de la sección No Incluidas.
   let html=`${_staleBanner}<div class="ag-summary">
-    <div class="ag-summary-title" style="font-size:var(--t-base);color:${isOptimo?'var(--white)':'var(--gray)'}">${planLabel} · ${ok} ${t('misc_pelicula')}${ok!==1?'s':''}</div>
-    ${_prioLine}
-    ${bad?`<div class="tags-row ag-summary-text"><span class="txt-gray2-sm">${bad} ${t('plan_excluidos')}</span></div>`:''}
+    <div class="int-section-hdr">
+      <span class="int-section-hdr-ico">${ICONS.calendar}</span>
+      <span class="int-section-hdr-lbl">${planLabel}</span>
+      <span class="count-badge cb-neutral">${ok}</span>
+    </div>
+    ${_prioRow}
     ${bad>0&&bad>=total?`<div class="ag-excl-note txt-gray2-sm">${t('plan_contexto_max')}</div>`:''}
     ${sc.incompatiblePriorities?(()=>{
       const pairs=sc.conflictingPriorityPairs||[];
@@ -1118,13 +1141,16 @@ export function buildResultHTML(scenarios){
   const _dowKeys=['day_dom','day_lun','day_mar','day_mie','day_jue','day_vie','day_sab'];
   const byDay={};
   sc.schedule.forEach(s=>{if(!byDay[s.day])byDay[s.day]=[];byDay[s.day].push(s);});
+  let _firstDay=true;
   DAY_KEYS.forEach(day=>{
     const films=byDay[day];if(!films||!films.length) return;
     const _isoDate=FESTIVAL_DATES[day]||day;
     const _d=new Date(_isoDate+'T12:00:00');
     const _dayName=t(_dowKeys[_d.getDay()]);
     const _dayNum=_d.getDate();
-    html+=`<div class="ag-day-label"><span class="ag-day-name">${_dayName} ${_dayNum}</span><span class="count-badge cb-neutral">${films.length}</span></div>`;
+    // El divisor (border-top) separa días: el primero no lo lleva.
+    html+=`<div class="ag-day-label${_firstDay?' first':''}"><span class="ag-day-name">${_dayName} ${_dayNum}</span><span class="count-badge cb-neutral">${films.length}</span></div>`;
+    _firstDay=false;
     films.forEach((s,i)=>{
       if(i>0){const warn=travelWarn(films[i-1],s);if(warn) html+=`<div class="ag-warn">${warn}</div>`;}
       html+=mkAgendaRow(s,'scenario');
