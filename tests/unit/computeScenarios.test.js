@@ -137,6 +137,33 @@ test('priorityCost>0 → index 0 always includes the prioritized film (bug #1 re
   }
 });
 
+test('same watchlist → deterministic output across runs (bug #2 regression)', () => {
+  // A conflicta con B; C compatible con ambos. trueMax=2 → {A,C} o {B,C},
+  // ambos dayBalance 0, sin prioridad. Pre-fix: shuffle usaba Math.random →
+  // el índice 0 alternaba entre {A,C} y {B,C} entre corridas. Con el RNG
+  // sembrado por la watchlist (_mulberry32(_titleSeed(titles))) el output es
+  // estable: misma watchlist = mismo seed = mismos escenarios en el mismo orden.
+  const films = [
+    { title: 'A', day: 'D1', time: '10:00 AM', duration: '90 min', venue: 'Sala A', section: 'S1' },
+    { title: 'B', day: 'D1', time: '10:30 AM', duration: '90 min', venue: 'Sala A', section: 'S2' }, // conflicta A
+    { title: 'C', day: 'D1', time: '2:00 PM',  duration: '90 min', venue: 'Sala A', section: 'S3' }, // compatible
+  ];
+  const sig = () => {
+    const { computeScenarios } = loadPlanner({ FILMS: films, FESTIVAL_DATES: { D1: '2026-06-05' } });
+    return computeScenarios(['A', 'B', 'C'])
+      .map(sc => sc.schedule.map(s => s._title).sort().join(','))
+      .join(' | ');
+  };
+  // 8 corridas (no las 3 del spec): en estado-buggy cada corrida es ~50/50 entre
+  // {A,C}/{B,C}, así que 3 corridas falsearían-pasan ~25% de las veces. Con 8 la
+  // probabilidad de falso-pase del guard cae a <1%.
+  const base = sig();
+  assert.ok(base.length > 0, 'expected at least one scenario');
+  for (let run = 2; run <= 8; run++) {
+    assert.strictEqual(sig(), base, `corrida ${run} difiere de la 1: output no determinístico`);
+  }
+});
+
 test('all films compatible → each scenario includes all of them', () => {
   // 3 films separated by hours, same venue → zero conflicts
   const films = [
