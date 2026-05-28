@@ -194,6 +194,7 @@ window.sentryOnLoad = function() {
   /* ── Layout — radios ── */
   --r-sm:   4px;
   --r-md:   8px;
+  --r-lg:   12px;
   --r:      12px;
   --r-sheet:20px;
   --r-handle:2px;
@@ -1541,6 +1542,26 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .saved-check:hover{border-color:var(--bdr);color:var(--gray)}
 .saved-check.done:hover{border-color:var(--bdr);color:var(--gray2)}
 
+/* ── Plan en Planear (#ag-result): rediseño visual ──
+   Override scoped al contexto del plan calculado, sin afectar Mi Plan. */
+#ag-result .lb-poster,
+#ag-result .lb-poster-ph{width:54px;height:80px;border-radius:var(--r-lg)}
+#ag-result .saved-time{font-weight:var(--w-bold)}
+#ag-result .saved-venue{color:var(--gray2)}
+#ag-result .ag-day-label{
+  display:flex;align-items:baseline;justify-content:space-between;gap:var(--sp-2);
+  margin:var(--sp-5) 0 var(--sp-2);padding-bottom:var(--sp-2);
+  border-bottom:1px solid var(--bdr-l);
+  /* Sticky: top con offset del topbar (mismo patrón que #hdr-programa/#hdr-ag). */
+  position:sticky;top:var(--sticky-top-carta);background:var(--bg);z-index:1;
+}
+#ag-result .ag-day-name{
+  display:block;font-size:var(--t-lg);font-weight:var(--w-bold);color:var(--white);
+}
+#ag-result .ag-day-stats{
+  font-size:var(--t-sm);color:var(--gray2);flex-shrink:0;
+}
+
 /* Progress festival */
 .festival-progress{padding:var(--sp-2) 0;margin-bottom:var(--sp-1)}
 /* ── Header contextual de Mi Plan ── */
@@ -2780,7 +2801,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 <!-- ── Intereses / Planear: header unificado — fuera de ag-view ── -->
 <div class="ag-view" id="ag-view"></div>
 
-<script type="module" src="/src/main.js?v=202605280943"></script>
+<script type="module" src="/src/main.js?v=202605281044"></script>
 
 <!-- Festival switcher bottom sheet -->
 <div class="auth-sheet" id="auth-sheet" data-close-bg="AuthSheet">
