@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `6623664 feat(planear): botones visibles Cambiar/Quitar en lugar de swipe gesture`
+> Último commit: `bb1289b chore: bundle v202605282148`
 
 ---
 
