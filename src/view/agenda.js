@@ -1113,7 +1113,9 @@ export function buildResultHTML(scenarios){
 `;
 
   // ── Film list by day ──
-  // Day landmark: nombre completo lang-aware + stats (n films · total min)
+  // Day landmark: nombre completo lang-aware + badge con cantidad de films.
+  // Mismo patrón que Mi Plan (.mplan-list-hdr): nombre del día + count-badge
+  // cb-neutral. Sin total de horas — info no relevante y potencialmente abrumadora.
   const _dowKeys=['day_dom','day_lun','day_mar','day_mie','day_jue','day_vie','day_sab'];
   const byDay={};
   sc.schedule.forEach(s=>{if(!byDay[s.day])byDay[s.day]=[];byDay[s.day].push(s);});
@@ -1123,12 +1125,7 @@ export function buildResultHTML(scenarios){
     const _d=new Date(_isoDate+'T12:00:00');
     const _dayName=t(_dowKeys[_d.getDay()]);
     const _dayNum=_d.getDate();
-    const _totalMin=films.reduce((acc,f)=>acc+parseDur(f.duration),0);
-    const _h=Math.floor(_totalMin/60), _m=_totalMin%60;
-    const _totalStr=_h?(_m?`${_h}h ${_m}min`:`${_h}h`):`${_m}min`;
-    const _filmsLbl=`${films.length} ${t('misc_pelicula')}${films.length!==1?'s':''}`;
-    // Split tipográfico: cantidad de films en ámbar bold, duración total en gray2.
-    html+=`<div class="ag-day-label"><span class="ag-day-name">${_dayName} ${_dayNum}</span><span class="ag-day-stats"><span style="color:var(--amber);font-weight:var(--w-bold)">${_filmsLbl}</span><span style="color:var(--gray2)"> · ${_totalStr}</span></span></div>`;
+    html+=`<div class="ag-day-label"><span class="ag-day-name">${_dayName} ${_dayNum}</span><span class="count-badge cb-neutral">${films.length}</span></div>`;
     films.forEach((s,i)=>{
       if(i>0){const warn=travelWarn(films[i-1],s);if(warn) html+=`<div class="ag-warn">${warn}</div>`;}
       html+=mkAgendaRow(s,'scenario');
