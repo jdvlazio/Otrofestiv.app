@@ -93,28 +93,19 @@ export function renderAgenda(){
     }
 
     // ── Estado B: con Intereses — herramienta completa ──
-    // 3 estados del prio strip: intención (pre) / resolución (post) / stale.
-    const _sc=cachedResult?(cachedResult.scenarios[cachedResult.currentIdx]||null):null;
-    const _included=_sc?new Set(_sc.schedule.map(s=>s._title)):null;
+    // Pre-cálculo: línea compacta de prios + Intereses (sin strip de posters).
+    // Stale + resumen post-cálculo viven en buildResultHTML.
     const _snap=cachedResult&&cachedResult._prioSnapshot;
     const _stale=!!cachedResult&&Array.isArray(_snap)&&(_snap.length!==prioritized.size||!_snap.every(x=>prioritized.has(x)));
-    const _fresh=!!cachedResult&&!_stale;
-    const _n=pending.length, _m=_included?_included.size:0;
-    const _corpus=`<div class="prio-corpus">${_fresh
-      ?t('prio_corpus_post',{n:_n,m:`<b>${_m}</b>`})
-      :t('prio_corpus_pre',{n:_n})}</div>`;
-    const _stripHtml=renderPrioStrip(state,_fresh?{mode:'resolved',included:_included}:{mode:'intent'});
-    const _staleBanner=_stale
-      ?`<div class="prio-stale">${ICONS.star} ${t('prio_stale_banner')}<button class="prio-stale-cta" data-action="runCalc">${t('prio_stale_cta')}</button></div>`
+    const _compactLine=prioritized.size>0
+      ?`<div class="prio-corpus"><b>${prioritized.size} ${t('misc_prioridades')}</b> · ${pending.length} ${t('plan_en_intereses')}</div>`
       :'';
     const resultContent=cachedResult
       ?buildResultHTML(cachedResult.scenarios)
       :'';
     view.innerHTML=`${_progressHtml}
       <div class="ag-section">
-        ${_corpus}
-        ${_stripHtml}
-        ${_staleBanner}
+        ${_compactLine}
         <div class="section-div">
           <div class="mb-2 sec-hdr">${ICONS.clock} ${t('av_disponibilidad')} <span class="sec-hdr-opt">${t('misc_opcional')}</span></div>
           <div class="txt-gray2-sm-lh">${t('av_no_incluir')}</div>
@@ -1086,6 +1077,19 @@ export function buildResultHTML(scenarios){
   const pending=[...watchlist].filter(t=>!watched.has(t)&&FILMS.some(f=>f.title===t&&!screeningPassed(f)));
   const total=pending.length,ok=sc.schedule.length,bad=sc.excluded.length;
   const isOptimo=currentIdx===0;
+  // Stale banner (movido aquí desde pre-cálculo): se calcula a partir de cachedResult._prioSnapshot vs prioritized actual.
+  const _snap=cachedResult._prioSnapshot;
+  const _stale=Array.isArray(_snap)&&(_snap.length!==prioritized.size||!_snap.every(x=>prioritized.has(x)));
+  const _staleBanner=_stale
+    ?`<div class="prio-stale">${ICONS.star} ${t('prio_stale_banner')}<button class="prio-stale-cta" data-action="runCalc">${t('prio_stale_cta')}</button></div>`
+    :'';
+  // Resumen de prioridades (post-cálculo): verde si todas entraron, ámbar si parciales.
+  const _included=new Set(sc.schedule.map(s=>s._title));
+  const _prioCnt=[...prioritized].filter(p=>_included.has(p)).length;
+  const _prioLine=prioritized.size===0?''
+    :_prioCnt===prioritized.size
+      ?`<div class="plan-prio-ok">✓ ${t('plan_prio_todas')}</div>`
+      :`<div class="plan-prio-partial">⚠ ${t('plan_prio_parcial',{n:_prioCnt,m:prioritized.size})}</div>`;
 
   // ── Header: Plan óptimo vs Variación ──
   const isCustom=sc._custom===true;
@@ -1113,8 +1117,9 @@ export function buildResultHTML(scenarios){
   }
 
   const saveBtnHtml=`<button class="ag-save-btn" data-action="saveCurrentScenario">${ICONS.calendar} ${t('plan_usar_plan')}</button>`;
-  let html=`<div class="ag-summary">
-    <div class="ag-summary-title" style="font-size:var(--t-base);color:${isOptimo?'var(--white)':'var(--gray)'}">${planLabel} <span class="ml-1 count-badge cb-amber">${ok}/${total}</span></div>
+  let html=`${_staleBanner}<div class="ag-summary">
+    <div class="ag-summary-title" style="font-size:var(--t-base);color:${isOptimo?'var(--white)':'var(--gray)'}">${planLabel} · ${ok} ${t('misc_pelicula')}${ok!==1?'s':''}</div>
+    ${_prioLine}
     ${bad?`<div class="tags-row ag-summary-text"><span class="txt-gray2-sm">${bad} ${t('plan_excluidos')}</span></div>`:''}
     ${bad>0&&bad>=total?`<div class="ag-excl-note txt-gray2-sm">${t('plan_contexto_max')}</div>`:''}
     ${sc.incompatiblePriorities?(()=>{
