@@ -480,7 +480,27 @@ export function removeFilmFromScenario(title,e){
       saveState('wl','prio','watched');
       updateAgTab();
       showToast('Fuera de tus intereses','info');
-      runCalc(); // recalcula directamente, no borra la vista
+      // Mutación local del cachedResult (evita rerun del worker ~1-2s):
+      // 1) quitar el título del schedule, 2) sacarlo de excluded, 3) re-squeeze
+      // las restantes en el slot liberado, 4) re-renderizar. Sin spinner.
+      if(cachedResult&&cachedResult.scenarios&&cachedResult.scenarios.length){
+        const idx=cachedResult.currentIdx||0;
+        const sc=cachedResult.scenarios[idx];
+        const filtered=sc.schedule.filter(s=>s._title!==title);
+        const excludedLeft=(sc.excluded||[]).filter(t=>t!==title);
+        const newSchedule=squeezeExcluded(filtered,excludedLeft);
+        const inSched=new Set(newSchedule.map(s=>s._title));
+        cachedResult.scenarios[idx]={
+          ...sc,
+          schedule:newSchedule,
+          excluded:excludedLeft.filter(t=>!inSched.has(t))
+        };
+        // Snapshot de prioridades para el flag stale.
+        cachedResult._prioSnapshot=[...state.get('prioritized')];
+        renderAgenda();
+      } else {
+        runCalc();
+      }
     }
   );
 }

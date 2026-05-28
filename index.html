@@ -1600,6 +1600,37 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
   font-weight:var(--w-bold);
   color:var(--white);
 }
+/* Swipe-left editable items (mode='scenario'): el wrapper aloja el panel de
+   acciones (Cambiar/Quitar) detrás del .saved-item, revelado al arrastrar. */
+#ag-result .saved-item-wrap{position:relative;overflow:hidden}
+#ag-result .saved-item-wrap .saved-item{
+  background:var(--bg);
+  position:relative;
+  transition:transform 200ms ease;
+  will-change:transform;
+}
+#ag-result .saved-item-wrap .saved-item.swiped{transform:translateX(-140px)}
+#ag-result .saved-item-wrap .saved-item.peek{animation:ag-peek 600ms ease-out 200ms}
+@keyframes ag-peek{
+  0%,100%{transform:translateX(0)}
+  35%{transform:translateX(-24px)}
+  70%{transform:translateX(-4px)}
+}
+#ag-result .saved-swipe-actions{
+  position:absolute;right:0;top:0;bottom:0;
+  display:flex;z-index:0;
+}
+#ag-result .swipe-btn{
+  width:70px;border:none;
+  font-family:var(--font);font-size:var(--t-sm);font-weight:var(--w-bold);
+  color:var(--white);cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  padding:0 var(--sp-2);
+  -webkit-tap-highlight-color:transparent;
+}
+#ag-result .swipe-btn.cambiar{background:#2563eb}
+#ag-result .swipe-btn.quitar{background:#dc2626}
+#ag-result .swipe-btn:active{filter:brightness(.85)}
 
 /* Progress festival */
 .festival-progress{padding:var(--sp-2) 0;margin-bottom:var(--sp-1)}
