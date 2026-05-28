@@ -13,7 +13,7 @@ import {
   ICONS, _secLabel, _secLabelFull, _sectionColor, makeEventPoster, parseProgramTitle, renderAvBlocksHTML, renderFlowProgress,
 } from './components.js';
 import {
-  DAYS, DAY_SHORT_EN, _dayChips, _isEditorialPoster, _langDates, _lblLocalized, _mkCortoItemHtml, _posterThumb, dayChip, dayLabel, durFmt, emptyState, emptyStateHero, flagFmt, getFilmPoster, isToday, mplanBlockType, mplanEndStr, sala, starsText, travelWarn, vcfg,
+  DAYS, DAY_SHORT_EN, _dayChips, _isEditorialPoster, _langDates, _lblLocalized, _mkCortoItemHtml, _posterThumb, dayChip, dayLabel, dayLabelLong, durFmt, emptyState, emptyStateHero, flagFmt, getFilmPoster, isToday, mplanBlockType, mplanEndStr, sala, starsText, travelWarn, vcfg,
 } from './helpers.js';
 import {
   _festDate, festivalEnded, minToStr, parseDur, simNow, simTodayStr, toMin,
@@ -261,7 +261,8 @@ export function renderMiPlanCalendar(state){
   const dayFilms=schedule.filter(s=>s.day===activeKey).sort((a,b)=>toMin(a.time)-toMin(b.time));
   const isPastDay=nowDayIdx>=0&&activeMiPlanDay<nowDayIdx;
 
-  let listHtml=`<div class="mplan-list" id="mplan-detail"><div class="mplan-list-hdr">${dayChip(activeKey)}${dayFilms.length?`<span class="count-badge cb-neutral">${dayFilms.length}</span>`:''}</div>`;
+  // Día landmark en formato largo (mismo patrón que Planear/buildResultHTML).
+  let listHtml=`<div class="mplan-list" id="mplan-detail"><div class="mplan-list-hdr"><span class="mplan-day-name">${dayLabelLong(activeKey)}</span>${dayFilms.length?`<span class="count-badge cb-neutral">${dayFilms.length}</span>`:''}</div>`;
   if(!dayFilms.length){
     if(!isPastDay){
       // CTA C: día futuro sin películas — invita a explorar sugerencias o recalcular

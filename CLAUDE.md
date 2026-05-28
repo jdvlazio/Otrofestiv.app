@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `90bcacc feat(planear): alinear #ag-result al sistema de diseño real`
+> Último commit: `3769a19 chore: bundle v202605281722`
 
 ---
 
