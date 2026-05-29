@@ -345,6 +345,8 @@ export function renderMiPlanCalendar(state){
 
   // El calendario semanal queda en su card (.mplan-wrap). La lista del día
   // detalle sale del card → lista plana alineada con los otros tabs (poster 16px).
+  // Orden: calendario (card) → acciones (Compartir/Calendario, cierran el
+  // calendario) → lista del día → hint. El divisor solo vive antes de Sugerencias.
   return `<div class="mplan-wrap">
     ${navHtml}
     <div class="mplan-wk-outer" style="height:${PHDR+TOTAL}px">
@@ -354,17 +356,17 @@ export function renderMiPlanCalendar(state){
       </div>
     </div>
   </div>
+  <div class="mplan-bottom-actions">
+    <button class="mplan-bottom-btn" data-action="sharePlan">${ICONS.share} ${t('plan_compartir')}</button>
+    <button class="mplan-bottom-btn" data-action="exportICS">${ICONS.calendar} ${t('misc_calendario')}</button>
+  </div>
   ${listHtml}
   ${(()=>{
     const _hintSeen=localStorage.getItem('otrofestiv_hint_cambiar');
     const _hasFuture=savedAgenda&&savedAgenda.schedule.some(s=>!screeningPassed(s));
     if(_hintSeen||!_hasFuture) return '';
     return`<div class="mplan-change-hint">${ICONS.clock} ${t('plan_hint_hora')} ${t('misc_pelicula')}</div>`;
-  })()}
-  <div class="mplan-bottom-actions">
-    <button class="mplan-bottom-btn" data-action="sharePlan">${ICONS.share} ${t('plan_compartir')}</button>
-    <button class="mplan-bottom-btn" data-action="exportICS">${ICONS.calendar} ${t('misc_calendario')}</button>
-  </div>`
+  })()}`
 }
 
 export function renderUnconfirmed(state,schedule){
