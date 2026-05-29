@@ -6,8 +6,8 @@
 //      controllerchange en iOS WKWebView es flaky — este reload es la
 //      garantía de que HTML cacheado se descarta inmediatamente al deploy.
 
-const CACHE_NAME = 'otrofestiv-v202605282049';
-const BUILD = '202605282049';
+const CACHE_NAME = 'otrofestiv-v202605290558';
+const BUILD = '202605290558';
 
 const STATIC_ASSETS = [
   '/manifest.json',
