@@ -1047,8 +1047,8 @@ export function _renderSavedAgendaHTML(state){
         const _sph=_posterThumb(f,'lb-poster');
         return`<div class="suggestion-item js-open-pel" data-title="${f.title}">
           ${_sph}
-          <div class="suggestion-time">${f.time}</div>
           <div class="suggestion-info">
+            <div class="suggestion-time">${f.time}</div>
             <div class="suggestion-title">${(()=>{const{displayTitle:_dt}=parseProgramTitle(f.title);return _dt;})()}</div>
             <div class="suggestion-sec">${_secLabelFull(f.section||'')}</div>
             <div class="suggestion-meta">${durFmt(f.duration)}${vc2.short?' · '+vc2.short+(sl?' · '+sl:''):''}</div>

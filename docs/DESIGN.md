@@ -169,6 +169,7 @@ controladas por contexto**.
 | **`--interests`** (`.int-item`) | — (no aplica; muestra días/próxima) | ★ priorizar + ✓ vista | `border-bottom` por item |
 | **`--plan-edit`** (`#ag-result .saved-item`, Planear) | **protagonista en info**: `t-md`/`w-bold`/`amber`, dentro de `.saved-info` arriba del título | Cambiar (switch, gris) + Quitar (X, rojo) | **sin divisor por item** — agrupa por día (border-top en day landmark) |
 | **`--plan-saved`** (`.mplan-row`, Mi Plan) | **protagonista en info**: `t-md`/`w-bold`/`amber`, dentro de `.mplan-ri` arriba del título (tappable, sin subrayado) | Quitar (X, rojo) | **sin divisor por item** — agrupa por día |
+| **`--plan-saved`** (`.suggestion-item`, Sugerencias en Mi Plan) | **protagonista en info**: `t-md`/`w-bold`/`amber`, dentro de `.suggestion-info` arriba del título | + Añadir / ↩ Restaurar (`.suggestion-add`, pill) | `border-bottom` por item (sub-lista corta, no agrupa por día) |
 
 > **Decisiones A–D (PR sistema unificado, aprobadas por el PO):**
 > - **A — Hora:** Planear y Mi Plan unifican a `t-md`/`w-bold`/`amber` dentro de info, arriba del título. Mi Plan pierde el subrayado punteado de la hora — sigue tappable (`toggleFilmAlternatives`); el affordance es el contexto, no el subrayado.

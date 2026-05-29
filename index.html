@@ -664,13 +664,15 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 /* ── Sugerencias ── */
 .suggestion-wrap{margin-top:var(--sp-5);padding-top:var(--sp-3);border-top:1px solid var(--bdr-l)}
 .suggestion-day-lbl,.saved-day-lbl{display:flex;flex-direction:column;align-items:flex-start;gap:var(--sp-1);margin:var(--sp-3) 0 var(--sp-2);padding-left:2px}
-.suggestion-item{display:flex;align-items:center;gap:var(--sp-3);padding:var(--sp-2) 0;border-bottom:1px solid var(--bdr-l);opacity:.9}
+/* Sugerencias = variante film-list-item (--plan-saved): hora protagonista
+   DENTRO de .suggestion-info arriba del título; mismo núcleo canónico. */
+.suggestion-item{display:flex;align-items:flex-start;gap:var(--sp-3);padding:var(--sp-2) 0;border-bottom:1px solid var(--bdr-l);opacity:.9}
 .suggestion-item:last-child{border-bottom:none}
 .suggestion-item:hover{opacity:1}
-.suggestion-time{font-family:var(--font);font-size:var(--t-md);color:var(--amber);letter-spacing:.5px;flex-shrink:0;min-width:46px}
+.suggestion-time{font-family:var(--font);font-size:var(--t-md);font-weight:var(--w-bold);color:var(--amber);letter-spacing:normal;margin-bottom:2px}
 .suggestion-info{flex:1;min-width:0}
-.suggestion-title{font-size:var(--t-base);color:var(--white);font-weight:var(--w-semi);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.suggestion-meta{font-size:var(--t-sm);color:var(--gray2);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.suggestion-title{font-size:var(--t-base);color:var(--white);font-weight:var(--w-bold);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.suggestion-meta{font-size:var(--t-sm);font-weight:var(--w-thin);color:var(--gray);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .suggestion-sec{font-size:var(--t-label);color:var(--white-60);font-weight:var(--w-semi);margin-bottom:2px;letter-spacing:.2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .suggestion-add{background:none;border:1px solid var(--bdr);border-radius:var(--r-pill);color:var(--gray);font-size:var(--t-sm);padding:4px var(--sp-2);cursor:pointer;font-family:var(--font);transition:background var(--tr-base),color var(--tr-base);white-space:nowrap;flex-shrink:0;touch-action:manipulation;-webkit-tap-highlight-color:transparent;min-width:76px;text-align:center;display:inline-flex;align-items:center;justify-content:center;gap:3px}
 .suggestion-add:hover{border-color:var(--amber);color:var(--amber)}
@@ -2863,7 +2865,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 <!-- ── Intereses / Planear: header unificado — fuera de ag-view ── -->
 <div class="ag-view" id="ag-view"></div>
 
-<script type="module" src="/src/main.js?v=202605281918"></script>
+<script type="module" src="/src/main.js?v=202605281933"></script>
 
 <!-- Festival switcher bottom sheet -->
 <div class="auth-sheet" id="auth-sheet" data-close-bg="AuthSheet">
