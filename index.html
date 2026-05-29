@@ -1626,9 +1626,10 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
   color:var(--white);
 }
 /* Botones de acción por fila (mobile-only): sin hover, la semántica de color
-   vive en reposo. Quitar = rojo (destructivo, legible sin interacción).
-   Cambiar = neutro (no-destructivo; evita colisión con el ámbar de la hora). */
-#ag-result .col-end .ag-fi-btn.del{color:var(--red);opacity:.7}
+   vive en reposo. Quitar = rojo (destructivo, legible sin interacción) — igual
+   en Planear y Mi Plan. Cambiar = neutro (no-destructivo; evita colisión con el
+   ámbar de la hora). La jerarquía/estado va por color sólido, nunca por opacity. */
+.ag-fi-btn.del{color:var(--red)}
 
 /* Progress festival */
 .festival-progress{padding:var(--sp-2) 0;margin-bottom:var(--sp-1)}
@@ -2862,7 +2863,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 <!-- ── Intereses / Planear: header unificado — fuera de ag-view ── -->
 <div class="ag-view" id="ag-view"></div>
 
-<script type="module" src="/src/main.js?v=202605290713"></script>
+<script type="module" src="/src/main.js?v=202605290718"></script>
 
 <!-- Festival switcher bottom sheet -->
 <div class="auth-sheet" id="auth-sheet" data-close-bg="AuthSheet">
