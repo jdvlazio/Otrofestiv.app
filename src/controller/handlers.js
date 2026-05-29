@@ -523,7 +523,8 @@ export function _dismissNotice(title){
 
 export function selectMiPlanDay(idx){
   activeMiPlanDay=idx;
-  if(idx<miPlanViewStart||idx>=miPlanViewStart+2) miPlanViewStart=Math.min(idx,DAY_KEYS.length-2);
+  // Clamp a [0, len-2] para que vs+1 (la 2ª columna de la nav) nunca desborde.
+  if(idx<miPlanViewStart||idx>=miPlanViewStart+2) miPlanViewStart=Math.max(0,Math.min(idx,DAY_KEYS.length-2));
   renderAgenda();
   // Scroll to detail section below calendar
   setTimeout(()=>{
@@ -532,7 +533,12 @@ export function selectMiPlanDay(idx){
 }
 
 export function miPlanNav(dir){
-  miPlanViewStart=Math.max(0,Math.min(DAY_KEYS.length-2,miPlanViewStart+dir));
+  // dir llega como string desde data-dir ("-1"/"1"). Coercionar a número: sin
+  // esto, `miPlanViewStart + "-1"` concatena strings → "N-1" → NaN → DAYS[NaN]
+  // crashea Mi Plan al navegar al día anterior.
+  const _d=Number(dir)||0;
+  const _cur=Number.isFinite(miPlanViewStart)?miPlanViewStart:0;
+  miPlanViewStart=Math.max(0,Math.min(DAY_KEYS.length-2,_cur+_d));
   if(activeMiPlanDay<miPlanViewStart||activeMiPlanDay>=miPlanViewStart+2) activeMiPlanDay=miPlanViewStart;
   renderAgenda();
 }

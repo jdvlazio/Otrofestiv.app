@@ -156,8 +156,17 @@ export function renderMiPlanCalendar(state){
   // Si los días visibles están vacíos, fallback al plan completo.
   // Buffer 30min en cada extremo, snapped a hora entera.
   // Límites absolutos: nunca antes de las 9:00, nunca después de las 26:00.
-  const vs=miPlanViewStart;
-  const ve=vs+1;
+  // Clamp defensivo: vs/ve siempre dentro de [0, DAYS.length-1]. Si
+  // miPlanViewStart quedó fuera de rango (festival más corto, estado restaurado,
+  // race en el switch), no debe romper la pantalla. ve colapsa a vs en el último
+  // día / festivales de 1 día → se renderiza un solo label de navegación.
+  if(!DAYS.length) return '';
+  const _maxDay=DAYS.length-1;
+  // Coercionar a número finito: si miPlanViewStart quedó NaN/null/fuera de rango
+  // (dir string, estado restaurado, festival más corto), no debe romper el render.
+  const _mvs=Number.isFinite(miPlanViewStart)?miPlanViewStart:0;
+  const vs=Math.max(0,Math.min(_mvs,_maxDay));
+  const ve=Math.min(vs+1,_maxDay);
   const _visDays=new Set([DAY_KEYS[vs],DAY_KEYS[ve]]);
   const _visSched=schedule.filter(s=>_visDays.has(s.day));
   const _src=_visSched.length?_visSched:schedule;
@@ -197,14 +206,14 @@ export function renderMiPlanCalendar(state){
         <div class="mplan-nav-day-num${vs===activeMiPlanDay?' wk-active-num':''}">${DAYS[vs].d}</div>
         ${vs===activeMiPlanDay?'<div class="mplan-nav-day-arrow"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><path d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg></div>':''}
       </div>
-      <div class="mplan-nav-day${isPastVe?' past':''}" data-action="selectMiPlanDay" data-index="${ve}">
+      ${ve!==vs?`<div class="mplan-nav-day${isPastVe?' past':''}" data-action="selectMiPlanDay" data-index="${ve}">
         <div class="mplan-nav-day-name">${_lblLocalized((DAY_SHORT_EN[DAYS[ve].k]||DAYS[ve].lbl).split(' ')[0])}</div>
         <div class="mplan-nav-day-num${ve===activeMiPlanDay?' wk-active-num':''}">${DAYS[ve].d}</div>
         ${ve===activeMiPlanDay?'<div class="mplan-nav-day-arrow"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><path d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg></div>':''}
-      </div>
+      </div>`:''}
     </div>
     <div class="mplan-nav-btn-wrap right">
-      <button class="mplan-nav-btn" data-action="miPlanNav" data-dir="1" ${ve>=DAY_KEYS.length-1?'disabled':''}>${ICONS.chevronR}</button>
+      <button class="mplan-nav-btn" data-action="miPlanNav" data-dir="1" ${ve>=_maxDay?'disabled':''}>${ICONS.chevronR}</button>
     </div>
   </div>`;
 
