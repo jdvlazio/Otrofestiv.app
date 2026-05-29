@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `fa8acf7 fix(planear): quitar divisor arriba de Disponibilidad`
+> Último commit: `5960e1b chore: bundle v202605291114`
 
 ---
 
