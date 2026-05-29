@@ -503,33 +503,11 @@ export function renderContextualHeader(state){
   }
 
   // ── BEFORE ─────────────────────────────────────────────────
+  // Pre-festival: sin card de prioridad ni countdown. La zona arranca directo
+  // con el calendario, que ya comunica qué viene primero. (La cuenta regresiva
+  // ya vive en el topbar; la prio flotante mezclaba "prioridades" con "Mi Plan".)
   if(ph.phase==='before'){
-    const label=ph.daysDiff===1?t('misc_manana'):`${t('misc_in')} ${ph.daysDiff} ${t('misc_days')}`;
-    const prios=[...prioritized]
-      .map(prioTitle=>{
-        const f=FILMS.filter(fi=>fi.title===prioTitle&&!screeningPassed(fi))
-          .sort((a,b)=>a.day_order-b.day_order||toMin(a.time)-toMin(b.time))[0];
-        return f?{t:prioTitle,f}:null;
-      })
-      .filter(Boolean)
-      .slice(0,1);
-    const prioHtml=prios.map(({t:title,f})=>{
-      const{displayTitle:dt}=parseProgramTitle(title);
-      const src=getFilmPoster(f)||'';
-      return`<div class="ctx-prio-chip">
-        ${src?`<img class="ctx-prio-thumb" src="${src}" onerror="this.remove()" alt="" loading="lazy">`:
-              `<div class="ctx-prio-thumb"></div>`}
-        <div style="flex:1;min-width:0">
-          <div class="ctx-prio-name">${dt}</div>
-          <div class="ctx-prio-when">${_dayAbbr(f.day)} · ${f.time}</div>
-        </div>
-      </div>`;
-    }).join('');
-    // Countdown line — discreta, sin repetir info del topbar
-    const _daysLeft=ph.daysDiff||0;
-    const _countdownLabel=_daysLeft<=0?t('plan_fest_hoy'):_daysLeft===1?t('plan_fest_manana'):`${t('plan_fest_empieza')} ${_daysLeft} ${t('misc_days')}`;
-    return`<div style="text-align:center;padding:var(--sp-2) 0 var(--sp-1);color:var(--gray2);font-size:var(--t-sm)">${_countdownLabel}</div>
-      ${prioHtml?`<div class="ctx-prio-row" style="margin-bottom:var(--sp-3)">${prioHtml}</div>`:''}`;
+    return '';
   }
 
   // ── NEXT ────────────────────────────────────────────────────
