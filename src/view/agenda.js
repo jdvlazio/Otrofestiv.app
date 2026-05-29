@@ -1199,8 +1199,8 @@ export function buildResultHTML(scenarios){
         ${includeBtn}
       </div>`;
     }).join('');
-    html+=`<div class="pad-flush ag-excl-block">
-      <div class="pad-sm ag-excl-eyebrow">
+    html+=`<div class="ag-excl-block">
+      <div class="ag-excl-eyebrow">
         <span class="ag-excl-label">${t('plan_no_incluidas')}</span>
         <span class="count-badge cb-neutral">${sc.excluded.length}</span>
       </div>
