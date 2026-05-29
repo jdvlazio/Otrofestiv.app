@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `bfc6ca3 Merge pull request #144 from jdvlazio/feat/miplan-actions-under-calendar`
+> Último commit: `fa8acf7 fix(planear): quitar divisor arriba de Disponibilidad`
 
 ---
 
