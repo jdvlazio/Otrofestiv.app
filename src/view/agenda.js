@@ -319,11 +319,9 @@ export function renderMiPlanCalendar(state){
       const _mph=`<div class="js-open-pel" data-title="${s._title||''}" style="flex-shrink:0;cursor:pointer" data-stop="1">${_mphInner}</div>`
       listHtml+=`<div class="mplan-row${_rowKey===_activeMiPlanFilm?' active':''}" style="cursor:pointer" data-rkey="${_safeRowKey}" data-action="selectFromDetail">
         ${_mph}
-        <div class="mplan-tc" data-stop="1">
+        <div class="mplan-ri">
           <div class="mplan-t1${isPast?' mp-past':''}" ${!isPast?`data-action="toggleFilmAlternatives" data-key="${(s._title||'')+(s.day||'')+(s.time||'')}" data-title="${safeT}" data-day="${s.day||''}" data-time="${s.time||''}" data-stop="1"`:''} title="${!isPast?'Cambiar horario':''}">${s.time}</div>
           <div class="mplan-t2">${mplanEndStr(s.time,dur)}${prioritized.has(s._title)?` <span class="txt-amber60-xs">★</span>`:''}${isNow?` <span class="txt-green-semi">en curso</span>`:''}</div>
-        </div>
-        <div class="mplan-ri">
           <div>${(()=>{const{displayTitle:_dt,progSuffix:_ps}=parseProgramTitle(s._title||'');const _mfqa=FILMS.find(fi=>fi.title===s._title&&fi.day===s.day&&fi.time===s.time);const _qab=_mfqa?.has_qa?`<span class="meta-badge sm">Q&A</span>`:'';return`<div class="mplan-rtitle${_isEventRow?' mp-event-title':''}">${_dt}${_qab}</div>${_ps?`<div class="prog-suffix">${_ps}</div>`:''}`;})()} </div>
           <div class="mplan-rvenue${_isEventRow?' mp-event-venue':''}">${ICONS.pin} ${vcfg(s.venue).short}${sala(s.venue)?' \u00b7 '+sala(s.venue):''}</div>
           ${(()=>{const _mf=FILMS.find(fi=>fi.title===s._title&&fi.day===s.day&&fi.time===s.time);if(!_mf||!_mf.is_cortos||!_mf.film_list||!_mf.film_list.length) return'';return`<button class="row-xs mplan-prog-toggle" data-action="toggleMplanProg">${ICONS.chevronR} ${t('label_programa')}</button>`;})()}
@@ -336,6 +334,8 @@ export function renderMiPlanCalendar(state){
   }
   listHtml+='</div>';
 
+  // El calendario semanal queda en su card (.mplan-wrap). La lista del día
+  // detalle sale del card → lista plana alineada con los otros tabs (poster 16px).
   return `<div class="mplan-wrap">
     ${navHtml}
     <div class="mplan-wk-outer" style="height:${PHDR+TOTAL}px">
@@ -344,17 +344,17 @@ export function renderMiPlanCalendar(state){
         <div class="mplan-wk-cols">${colsHtml}</div>
       </div>
     </div>
-    ${listHtml}
-    ${(()=>{
-      const _hintSeen=localStorage.getItem('otrofestiv_hint_cambiar');
-      const _hasFuture=savedAgenda&&savedAgenda.schedule.some(s=>!screeningPassed(s));
-      if(_hintSeen||!_hasFuture) return '';
-      return`<div class="mplan-change-hint">${ICONS.clock} ${t('plan_hint_hora')} ${t('misc_pelicula')}</div>`;
-    })()}
-    <div class="mplan-bottom-actions">
-      <button class="mplan-bottom-btn" data-action="sharePlan">${ICONS.share} ${t('plan_compartir')}</button>
-      <button class="mplan-bottom-btn" data-action="exportICS">${ICONS.calendar} ${t('misc_calendario')}</button>
-    </div>
+  </div>
+  ${listHtml}
+  ${(()=>{
+    const _hintSeen=localStorage.getItem('otrofestiv_hint_cambiar');
+    const _hasFuture=savedAgenda&&savedAgenda.schedule.some(s=>!screeningPassed(s));
+    if(_hintSeen||!_hasFuture) return '';
+    return`<div class="mplan-change-hint">${ICONS.clock} ${t('plan_hint_hora')} ${t('misc_pelicula')}</div>`;
+  })()}
+  <div class="mplan-bottom-actions">
+    <button class="mplan-bottom-btn" data-action="sharePlan">${ICONS.share} ${t('plan_compartir')}</button>
+    <button class="mplan-bottom-btn" data-action="exportICS">${ICONS.calendar} ${t('misc_calendario')}</button>
   </div>`
 }
 
