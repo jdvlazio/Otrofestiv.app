@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `efdc0d8 Merge pull request #137 from jdvlazio/feat/day-landmark-lighter`
+> Último commit: `0059e80 chore: bundle v202605282336`
 
 ---
 

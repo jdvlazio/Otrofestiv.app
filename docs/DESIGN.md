@@ -143,10 +143,42 @@ Familias análogas para green / red / yellow / event-blue / overlay.
 
 ---
 
-## 2 · Componentes de lista — anatomía canónica
+## 2 · Componente canónico `film-list-item`
 
-Cuatro componentes muestran la misma información (título / venue·duración /
-sección / hora) en contextos distintos. Valores **canónicos aprobados**:
+Cuatro contextos muestran una película en lista (Programa, Intereses, Planear,
+Mi Plan). Comparten un **núcleo canónico** y difieren solo en **variantes
+controladas por contexto**.
+
+### 2.0 · Núcleo constante (los 4 contextos)
+
+| Elemento | Valor canónico |
+|---|---|
+| **Poster** | `56×84` (`--poster-xs`) · `border-radius:var(--r-sm)` · `background:var(--surf-2)` |
+| **Título** | `font-size:var(--t-base)` · `font-weight:var(--w-bold)` · `color:var(--white)` |
+| **Venue/meta** | `font-size:var(--t-sm)` · `font-weight:var(--w-thin)` · `color:var(--gray)` |
+| **Sección** (donde aplique) | `font-size:var(--t-label)` · `font-weight:var(--w-semi)` · `color:var(--white-60)` |
+| **gap interno** | `var(--sp-3)` |
+| **align-items** | `flex-start` |
+| **Offset horizontal del poster** | **16px** desde el borde de pantalla en los 4 (vía padding del item o del contenedor — ver §2.6) |
+
+### 2.0.1 · Variantes por contexto
+
+| Variante | Hora | Acciones | Divisor |
+|---|---|---|---|
+| **`--program`** (`.plist-item`) | header sticky agrupador (`.plist-time-hdr`, `t-label`/`w-bold`/`amber`) — agrupa funciones del mismo slot | ♥ corazón (toggle watchlist) | `border-bottom` por item |
+| **`--interests`** (`.int-item`) | — (no aplica; muestra días/próxima) | ★ priorizar + ✓ vista | `border-bottom` por item |
+| **`--plan-edit`** (`#ag-result .saved-item`, Planear) | **protagonista en info**: `t-md`/`w-bold`/`amber`, dentro de `.saved-info` arriba del título | Cambiar (switch, gris) + Quitar (X, rojo) | **sin divisor por item** — agrupa por día (border-top en day landmark) |
+| **`--plan-saved`** (`.mplan-row`, Mi Plan) | **protagonista en info**: `t-md`/`w-bold`/`amber`, dentro de `.mplan-ri` arriba del título (tappable, sin subrayado) | Quitar (X, rojo) | **sin divisor por item** — agrupa por día |
+
+> **Decisiones A–D (PR sistema unificado, aprobadas por el PO):**
+> - **A — Hora:** Planear y Mi Plan unifican a `t-md`/`w-bold`/`amber` dentro de info, arriba del título. Mi Plan pierde el subrayado punteado de la hora — sigue tappable (`toggleFilmAlternatives`); el affordance es el contexto, no el subrayado.
+> - **B — Offset horizontal:** **16px** en los 4. Programa y Planear ya estaban; Intereses bajó 32→16 (item flush, `.ag-view` aporta los 16) y Mi Plan 29→16 (la lista del día salió del card `.mplan-wrap`).
+> - **C — align-items:** `flex-start` en los 4 (Mi Plan dejó de ser `center`).
+> - **D — Divisor:** Planear y Mi Plan **agrupan por día sin divisor por item**. Programa e Intereses mantienen `border-bottom` por item (no agrupan).
+
+### 2.1–2.5 · Anatomía por contexto
+
+Valores **canónicos aprobados** por contexto:
 
 ### 2.1 · `.plist-item` — Programa día (lista de horarios)
 
@@ -175,21 +207,48 @@ sección / hora) en contextos distintos. Valores **canónicos aprobados**:
 | `.int-item-sec` | **`font-size:var(--t-label); font-weight:var(--w-semi); color:var(--white-60)`**; `margin-bottom:var(--sp-1)` |
 | `.int-item-actions` | `display:flex; flex-direction:column; align-items:center; align-self:center` |
 
-### 2.3 · `.saved-item` — Mi Plan (lista)
+### 2.3 · `#ag-result .saved-item` — **Planear** (plan calculado, variante `--plan-edit`)
+
+> ⚠️ `.saved-item` se renderiza vía `mkAgendaRow` **solo en Planear** (`#ag-result`),
+> NO en Mi Plan. Mi Plan usa `.mplan-row` (§2.5). Los valores abajo son los
+> overrides scoped a `#ag-result`; la regla base `.saved-item` (sin scope) es legado.
+
+| Clase | Propiedades canónicas (`#ag-result`) |
+|---|---|
+| `.saved-item` | `display:flex; align-items:flex-start; gap:var(--sp-3); padding:var(--sp-3) 0; border-bottom:none` (agrupa por día) |
+| `.saved-time` (hora, dentro de `.saved-info`) | **`font-size:var(--t-md); font-weight:var(--w-bold); color:var(--amber)`**; `margin-bottom:2px; letter-spacing:normal` |
+| `.saved-info` | `flex:1; min-width:0` |
+| `.saved-title` | **`font-size:var(--t-base); font-weight:var(--w-bold); color:var(--white)`** |
+| `.saved-venue` | **`font-size:var(--t-sm); font-weight:var(--w-thin); color:var(--gray)`**; `margin-top:2px` |
+| `.lb-poster`/`-ph` | `56×84; border-radius:var(--r-sm)` |
+| `.col-end` acciones | Cambiar (`.ag-fi-btn`, switch, gris) + Quitar (`.ag-fi-btn.del`, X, `color:var(--red); opacity:.7`) |
+| `.ag-day-label` (day landmark) | `border-top:1px solid var(--bdr-l)` (separa días); `.first` sin border; nombre `t-md`/`w-semi`/`white` + `count-badge` |
+
+### 2.5 · `.mplan-row` — **Mi Plan** (lista del día, variante `--plan-saved`)
+
+> La lista del día vive **fuera** del card `.mplan-wrap` (que conserva solo el
+> calendario semanal) → lista plana alineada con los otros tabs (poster a 16px).
 
 | Clase | Propiedades canónicas |
 |---|---|
-| `.saved-item` | `display:flex; align-items:center; gap:var(--sp-2); padding:var(--sp-3) 0; border-bottom:1px solid var(--bdr-l)` |
-| `.saved-time` | `font-size:var(--t-md); color:var(--amber); letter-spacing:.5px; min-width:40px` |
-| `.saved-info` | `flex:1; min-width:0` |
-| `.saved-title` | **`font-size:var(--t-base); font-weight:var(--w-bold); color:var(--white)`**; `line-height:1.3` |
-| `.saved-venue` | **`font-size:var(--t-sm); font-weight:var(--w-thin); color:var(--gray)`** (peso declarado explícito); `margin-top:1px` |
+| `.mplan-row` | `display:flex; align-items:flex-start; gap:var(--sp-3); padding:var(--sp-3) 0; border-bottom:none` (agrupa por día) |
+| `.mplan-row.active` | `background:var(--amber-08)` (sin border-left que desplace) |
+| `.mplan-ri` (info) | `flex:1; min-width:0` — contiene hora → endtime → título → venue |
+| `.mplan-t1` (hora, tappable) | **`font-size:var(--t-md); font-weight:var(--w-bold); color:var(--amber)`**; `margin-bottom:2px`; **sin subrayado**; `data-action="toggleFilmAlternatives"` (Cambiar) |
+| `.mplan-t2` (endtime/★/en curso) | `font-size:var(--t-xs); color:var(--gray2)` |
+| `.mplan-rtitle` | **`font-size:var(--t-base); font-weight:var(--w-bold); color:var(--white)`** |
+| `.mplan-rvenue` | **`font-size:var(--t-sm); color:var(--gray)`** |
+| `.col-end` acción | Quitar (`.ag-fi-btn.del`, X) |
+| `.mplan-list-hdr` (day landmark) | `align-items:baseline; justify-content:space-between; padding:var(--sp-2) 0`; sin borde (Mi Plan muestra un solo día); nombre `t-md`/`w-semi`/`white` (`.mplan-day-name`) + `count-badge` |
 
-> `.saved-item` usa `align-items:center` y `gap:var(--sp-2)` por su layout (hora a la
-> izquierda como columna fija). El padding lateral es `0` porque vive dentro de un
-> contenedor con padding propio. No se considera desviación del canónico de texto.
+### 2.6 · Mecánica del offset de 16px
 
-### 2.4 · `.mplan-wk-block` — Mi Plan, calendario semanal (EXCEPCIÓN — ver §5)
+El poster queda a 16px del borde en los 4, pero la fuente del inset difiere:
+- **Programa**: contenedor `.programa-list` flush (0) + item `padding-left:var(--sp-4)` = 16.
+- **Intereses / Planear / Mi Plan**: viven dentro de `.ag-view` (`padding-x:var(--sp-4)` = 16); el item va flush (`padding-x:0`) y hereda los 16 del contenedor.
+- Mi Plan: la lista se sacó del card `.mplan-wrap` para no sumar el borde del card al inset.
+
+### 2.7 · `.mplan-wk-block` — Mi Plan, calendario semanal (EXCEPCIÓN — ver §5)
 
 Bloque posicionado en absoluto sobre una timeline px-precisa, con fondo teñido.
 **No sigue el canónico de listas planas** por su contexto de densidad.

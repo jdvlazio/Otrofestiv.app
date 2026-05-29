@@ -1439,7 +1439,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .mplan-nowdot-detail{position:absolute;left:-3px;top:-3px;width:7px;height:7px;border-radius:50%;background:var(--amber)}
 
 /* Lista de detalle */
-.mplan-list{border-top:1px solid var(--bdr-l)}
+.mplan-list{margin-top:var(--sp-4)}
 .mplan-empty{padding:var(--sp-3) var(--sp-3) var(--sp-2);font-size:var(--t-sm);color:var(--gray2);letter-spacing:.01em}
 .mplan-row-actions{display:flex;flex-direction:column;align-items:flex-end;gap:var(--sp-1);flex-shrink:0}
 .mplan-row-btns{display:flex;gap:var(--sp-1)}
@@ -1448,10 +1448,15 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .conflict-modal-btn.destructive{background:var(--red);color:var(--white)}
 :focus-visible{outline:2px solid var(--amber);outline-offset:2px}
 
-.mplan-list-hdr{display:flex;flex-direction:row;align-items:center;gap:var(--sp-2);padding:var(--sp-3) var(--sp-3) var(--sp-2);border-bottom:1px solid var(--bdr-l);background:var(--surf)}
+/* Day landmark de Mi Plan — mismo patrón que Planear (.ag-day-label): nombre
+   + badge a los lados, flush horizontal, sin border-bottom (no separa header
+   de sus funciones). Mi Plan muestra un solo día, así que no lleva border-top. */
+.mplan-list-hdr{display:flex;flex-direction:row;align-items:baseline;justify-content:space-between;gap:var(--sp-2);padding:var(--sp-2) 0}
 .mplan-day-name{font-size:var(--t-md);font-weight:var(--w-semi);color:var(--white);line-height:1}
-.mplan-row{display:flex;align-items:center;gap:var(--sp-3);padding:var(--sp-2) var(--sp-3);border-bottom:1px solid var(--bdr-l);transition:background var(--tr-smooth);cursor:pointer}
-.mplan-row.active{background:var(--amber-08);border-left:2px solid var(--amber);padding-left:var(--sp-3)}
+/* film-list-item: flush horizontal (16px vía .ag-view), flex-start, sin
+   divisor por item (agrupa por día, igual que Planear). */
+.mplan-row{display:flex;align-items:flex-start;gap:var(--sp-3);padding:var(--sp-3) 0;transition:background var(--tr-smooth);cursor:pointer}
+.mplan-row.active{background:var(--amber-08)}
 .mplan-prog-list{display:none;padding:var(--sp-2) var(--sp-3)}
 .mplan-prog-list.open{display:block}
 .mplan-prog-item{display:flex;align-items:center;gap:var(--sp-2);padding:var(--sp-3) 0;border-bottom:1px solid var(--bdr-l);cursor:pointer;transition:background var(--tr-fast)}.mplan-prog-item:active{background:var(--surf-2)}
@@ -1461,11 +1466,12 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .mplan-prog-dur{font-size:var(--t-sm);color:var(--gray);flex-shrink:0}
 .mplan-prog-toggle{background:none;border:none;color:var(--amber);font-size:var(--t-sm);font-weight:var(--w-semi);cursor:pointer;font-family:var(--font);padding:0;margin-top:var(--sp-1);display:inline-flex;align-items:center;gap:var(--sp-1);touch-action:manipulation;line-height:1}
 .mplan-prog-toggle:active{color:var(--amber)}
-.mplan-row:last-child{border-bottom:none}
-.mplan-tc{flex-shrink:0;min-width:50px}
-.mplan-t1{font-family:var(--font);font-size:var(--t-md);color:var(--amber);line-height:1;cursor:pointer;border-radius:var(--r-sm);padding:2px 0;transition:opacity var(--tr-base);text-decoration:underline;text-decoration-style:dotted;text-decoration-color:rgba(200,150,62,.4);text-underline-offset:3px}
+/* Hora protagonista dentro de .mplan-ri (igual que Planear .saved-time):
+   t-md / w-bold / amber, sin subrayado. Sigue tappable (toggleFilmAlternatives)
+   pero el affordance visual lo da el contexto, no el subrayado. */
+.mplan-t1{font-family:var(--font);font-size:var(--t-md);font-weight:var(--w-bold);color:var(--amber);line-height:1;cursor:pointer;padding:2px 0;margin-bottom:2px;transition:opacity var(--tr-base);letter-spacing:normal}
 .mplan-t1:active{opacity:.6}
-.mplan-t1.mp-past{color:var(--gray2);cursor:default;text-decoration:none}
+.mplan-t1.mp-past{color:var(--gray2);cursor:default}
 .mplan-change-hint{font-size:var(--t-sm);color:var(--gray);padding:6px 0 10px;text-align:center;letter-spacing:.2px}
 .mplan-t2{font-size:var(--t-xs);color:var(--gray2);margin-top:2px;display:flex;align-items:center;gap:3px}
 .mplan-ri{flex:1;min-width:0}
@@ -2399,10 +2405,10 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 /* ── INTERESES — vista lista ─────────────────────────────────────────────
    Reemplaza el grid de posters por lista de decisión con metadata
    completa: próxima función, conflicto, acciones inline.             */
-.int-section-hdr{display:flex;align-items:center;gap:var(--sp-2);padding:var(--sp-3) var(--sp-4) var(--sp-2)}
+.int-section-hdr{display:flex;align-items:center;gap:var(--sp-2);padding:var(--sp-3) 0 var(--sp-2)}
 .int-section-hdr-ico{color:var(--gray2);flex-shrink:0}
 .int-section-hdr-lbl{font-size:var(--t-base);font-weight:var(--w-bold);color:var(--white-60);flex:1}
-.int-item{display:flex;align-items:flex-start;gap:var(--sp-3);padding:var(--sp-2) var(--sp-4);border-bottom:1px solid var(--bdr-l);cursor:pointer;transition:background var(--tr-base);-webkit-tap-highlight-color:transparent}
+.int-item{display:flex;align-items:flex-start;gap:var(--sp-3);padding:var(--sp-2) 0;border-bottom:1px solid var(--bdr-l);cursor:pointer;transition:background var(--tr-base);-webkit-tap-highlight-color:transparent}
 .int-item:last-child{border-bottom:none}
 .int-item.gone{opacity:.4}
 .int-item-rating{display:inline-flex;align-items:center;font-size:var(--t-xs);font-weight:var(--w-bold);color:var(--amber)}
@@ -2857,7 +2863,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 <!-- ── Intereses / Planear: header unificado — fuera de ag-view ── -->
 <div class="ag-view" id="ag-view"></div>
 
-<script type="module" src="/src/main.js?v=202605281831"></script>
+<script type="module" src="/src/main.js?v=202605281918"></script>
 
 <!-- Festival switcher bottom sheet -->
 <div class="auth-sheet" id="auth-sheet" data-close-bg="AuthSheet">
