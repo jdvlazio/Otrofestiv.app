@@ -265,14 +265,14 @@ export function renderAvBlocksHTML(state){
       items.push(`<div class="av-block-item is-full">
         <span class="av-block-day">${lbl} ${num}</span>
         <span class="av-block-time">${t('av_todo_el_dia')}</span>
-        <button class="av-block-rm" data-action="toggleFullDay" data-day="${day}" title="Quitar">${ICONS.x}</button>
+        <button class="av-block-rm" data-action="toggleFullDay" data-day="${day}" title="${t('misc_quitar')}">${ICONS.x}</button>
       </div>`);
     } else {
       visible.forEach(b=>{
         items.push(`<div class="av-block-item">
           <span class="av-block-day">${lbl} ${num}</span>
           <span class="av-block-time">${b.from} – ${b.to}</span>
-          <button class="av-block-rm" data-action="removeBlock" data-day="${day}" data-from="${b.from}" data-to="${b.to}" title="Quitar">${ICONS.x}</button>
+          <button class="av-block-rm" data-action="removeBlock" data-day="${day}" data-from="${b.from}" data-to="${b.to}" title="${t('misc_quitar')}">${ICONS.x}</button>
         </div>`);
       });
     }
