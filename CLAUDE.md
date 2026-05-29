@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `5960e1b chore: bundle v202605291114`
+> Último commit: `ac5b961 fix(i18n): migrar strings hardcodeadas de buildResultHTML a i18n`
 
 ---
 

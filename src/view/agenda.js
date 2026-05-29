@@ -1116,9 +1116,9 @@ export function buildResultHTML(scenarios){
     ${sc.incompatiblePriorities?(()=>{
       const pairs=sc.conflictingPriorityPairs||[];
       const pairMsg=pairs.length
-        ?pairs.map(([a,b])=>{const{displayTitle:da}=parseProgramTitle(a);const{displayTitle:db}=parseProgramTitle(b);return`<span class="txt-white60">${da}</span> y <span class="txt-white60">${db}</span>`;}).join(', ')
-        :`algunas de tus ${t('misc_prioridades')}`;
-      return`<div class="ag-excl-incompat">${pairMsg} ${t('plan_solapan')} — revisá cuál querés priorizar.</div>`;
+        ?pairs.map(([a,b])=>{const{displayTitle:da}=parseProgramTitle(a);const{displayTitle:db}=parseProgramTitle(b);return`<span class="txt-white60">${da}</span> ${t('misc_y')} <span class="txt-white60">${db}</span>`;}).join(', ')
+        :t('plan_incompat_generico');
+      return`<div class="ag-excl-incompat">${pairMsg} ${t('plan_solapan')} — ${t('plan_incompat_cta')}</div>`;
     })():''}
   </div>
 `;
@@ -1177,7 +1177,7 @@ export function buildResultHTML(scenarios){
           if(conflictWith) break;
         }
         if(conflictWith){
-          reason=`<div class="excl-reason conflict">Choca con ${conflictWith}${conflictWhen?' · '+conflictWhen:''}</div>`;
+          reason=`<div class="excl-reason conflict">${t('plan_choca_con',{title:conflictWith})}${conflictWhen?' · '+conflictWhen:''}</div>`;
           canInclude=true;
         } else if(screens.length){
           reason=`<div class="excl-reason">${t('plan_choca')}</div>`;
@@ -1186,7 +1186,7 @@ export function buildResultHTML(scenarios){
         }
       }
       const includeBtn=canInclude
-        ?`<button class="excl-include-btn" data-action="forceInclude" data-title="${safeT}" data-stop="1">+ Incluir</button>`
+        ?`<button class="excl-include-btn" data-action="forceInclude" data-title="${safeT}" data-stop="1">+ ${t('plan_incluir')}</button>`
         :'';
       const opacity=!screens.length?'opacity:.45;':'';
       return`<div class="int-item js-open-pel" style="${opacity}" data-title="${f.title}">
