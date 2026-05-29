@@ -233,6 +233,12 @@ export const _I18N = {
     "misc_y": "y",
     "plan_incompat_generico": "algunas de tus prioridades",
     "plan_incompat_cta": "revisá cuál querés priorizar.",
+    "aria_cuenta": "Cuenta",
+    "ag_pill_prioridad": "Prioridad",
+    "ag_pill_intereses": "Intereses",
+    "ag_pill_vistas": "Vistas",
+    "conflict_eyebrow": "Conflicto de horario",
+    "conflict_ya_plan": "Ya en tu plan",
     "chip_todo": "Todo",
     "notice_banner_label": "AVISO DEL FESTIVAL",
     "filter_sin_actividades": "Sin actividades para este filtro",
@@ -623,6 +629,12 @@ export const _I18N = {
     "misc_y": "and",
     "plan_incompat_generico": "some of your priorities",
     "plan_incompat_cta": "review which one to prioritize.",
+    "aria_cuenta": "Account",
+    "ag_pill_prioridad": "Priority",
+    "ag_pill_intereses": "Interests",
+    "ag_pill_vistas": "Watched",
+    "conflict_eyebrow": "Schedule conflict",
+    "conflict_ya_plan": "Already in your plan",
     "chip_todo": "All",
     "notice_banner_label": "FESTIVAL NOTICE",
     "filter_sin_actividades": "No activities for this filter",
@@ -1028,6 +1040,12 @@ export const _I18N = {
     "misc_y": "e",
     "plan_incompat_generico": "algumas das suas prioridades",
     "plan_incompat_cta": "decida qual priorizar.",
+    "aria_cuenta": "Conta",
+    "ag_pill_prioridad": "Prioridade",
+    "ag_pill_intereses": "Interesses",
+    "ag_pill_vistas": "Vistas",
+    "conflict_eyebrow": "Conflito de horário",
+    "conflict_ya_plan": "Já no seu plano",
     "chip_todo": "Tudo",
     "notice_banner_label": "AVISO DO FESTIVAL",
     "filter_sin_actividades": "Sem atividades para este filtro",
@@ -1261,6 +1279,7 @@ export function _applyI18nDOM(){
     'main-nav'        :['aria_nav_ppal',  ['ariaLabel']],
     'auth-btn'        :['aria_sincronizar',['title']],
     'back-top'        :['aria_volver_arriba',['ariaLabel']],
+    'otrofestiv-splash':['aria_bienvenida',['ariaLabel']],
   };
   // Prio-limit static HTML elements — patch on init and lang switch
   const _prioElIds={
@@ -1279,6 +1298,9 @@ export function _applyI18nDOM(){
     if(attrs.includes('ariaLabel')) el.setAttribute('aria-label',val);
     if(attrs.includes('title'))     el.title=val;
   }
+  // auth-btn: title y aria-label son labels distintos (sincronizar vs cuenta)
+  const _authBtn=document.getElementById('auth-btn');
+  if(_authBtn) _authBtn.setAttribute('aria-label',t('aria_cuenta'));
   // 6. dtab labels — los 7 días de la semana son constantes universales
   // Se calculan desde el ISO date del día, sin depender de datos del festival
   const _DOW_ES=['DOM','LUN','MAR','MIÉ','JUE','VIE','SÁB'];
