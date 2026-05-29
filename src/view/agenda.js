@@ -44,7 +44,7 @@ export function renderAgenda(){
   if(activeMNav==='mnav-seleccion'){
     // ── Post-festival: redirigir a Mi Plan ──
     if(festivalEnded()){
-      const _festName=(FESTIVAL_CONFIG[_activeFestId]||{}).name||'El festival';
+      const _festName=(FESTIVAL_CONFIG[_activeFestId]||{}).name||t('misc_festival_default');
       const _hasMiPlan=watched.size>0||(savedAgenda&&savedAgenda.schedule&&savedAgenda.schedule.length>0);
       const _agHi=document.getElementById('hdr-ag');if(_agHi)_agHi.style.display='none';
       requestAnimationFrame(_fixStickyOffset);
@@ -74,7 +74,7 @@ export function renderAgenda(){
     // ── Planear: stepper de progreso + prio strip + disponibilidad + opciones ──
     if(festivalEnded()){
       // Post-festival: Planear no tiene función — redirigir a Mi Plan
-      const _festNamePl=(FESTIVAL_CONFIG[_activeFestId]||{}).name||'El festival';
+      const _festNamePl=(FESTIVAL_CONFIG[_activeFestId]||{}).name||t('misc_festival_default');
       const _agHpl=document.getElementById('hdr-ag');if(_agHpl)_agHpl.style.display='none';
       requestAnimationFrame(_fixStickyOffset);
       view.innerHTML=emptyStateHero(ICONS.sparkles,`${_festNamePl} ${t('plan_fest_terminado')}`,t('plan_revisa_planeaste'),t('cta_mi_plan'),'mnav-miplan');
@@ -329,8 +329,8 @@ export function renderMiPlanCalendar(state){
       listHtml+=`<div class="mplan-row${_rowKey===_activeMiPlanFilm?' active':''}" style="cursor:pointer" data-rkey="${_safeRowKey}" data-action="selectFromDetail">
         ${_mph}
         <div class="mplan-ri">
-          <div class="mplan-t1${isPast?' mp-past':''}" ${!isPast?`data-action="toggleFilmAlternatives" data-key="${(s._title||'')+(s.day||'')+(s.time||'')}" data-title="${safeT}" data-day="${s.day||''}" data-time="${s.time||''}" data-stop="1"`:''} title="${!isPast?'Cambiar horario':''}">${s.time}</div>
-          <div class="mplan-t2">${mplanEndStr(s.time,dur)}${prioritized.has(s._title)?` <span class="txt-amber60-xs">★</span>`:''}${isNow?` <span class="txt-green-semi">en curso</span>`:''}</div>
+          <div class="mplan-t1${isPast?' mp-past':''}" ${!isPast?`data-action="toggleFilmAlternatives" data-key="${(s._title||'')+(s.day||'')+(s.time||'')}" data-title="${safeT}" data-day="${s.day||''}" data-time="${s.time||''}" data-stop="1"`:''} title="${!isPast?t('tooltip_cambiar_horario'):''}">${s.time}</div>
+          <div class="mplan-t2">${mplanEndStr(s.time,dur)}${prioritized.has(s._title)?` <span class="txt-amber60-xs">★</span>`:''}${isNow?` <span class="txt-green-semi">${t('label_en_curso_min')}</span>`:''}</div>
           <div>${(()=>{const{displayTitle:_dt,progSuffix:_ps}=parseProgramTitle(s._title||'');const _mfqa=FILMS.find(fi=>fi.title===s._title&&fi.day===s.day&&fi.time===s.time);const _qab=_mfqa?.has_qa?`<span class="meta-badge sm">Q&A</span>`:'';return`<div class="mplan-rtitle${_isEventRow?' mp-event-title':''}">${_dt}${_qab}</div>${_ps?`<div class="prog-suffix">${_ps}</div>`:''}`;})()} </div>
           <div class="mplan-rvenue${_isEventRow?' mp-event-venue':''}">${ICONS.pin} ${vcfg(s.venue).short}${sala(s.venue)?' \u00b7 '+sala(s.venue):''}</div>
           ${(()=>{const _mf=FILMS.find(fi=>fi.title===s._title&&fi.day===s.day&&fi.time===s.time);if(!_mf||!_mf.is_cortos||!_mf.film_list||!_mf.film_list.length) return'';return`<button class="row-xs mplan-prog-toggle" data-action="toggleMplanProg">${ICONS.chevronR} ${t('label_programa')}</button>`;})()}
@@ -500,8 +500,8 @@ export function renderContextualHeader(state){
         ?`${pendingRatings} ${t('plan_sin_calificar')}`
         :t('empty_todo_calif');
     const mainTitle=totalWatched===0
-      ?((FESTIVAL_CONFIG[_activeFestId]||{}).name||'El festival')+` ${t('plan_fest_terminado')}`
-      :`${t('plan_viste_n')} ${totalWatched} ${totalWatched!==1?(t('misc_pelicula')+'s'):t('misc_pelicula')}`;
+      ?((FESTIVAL_CONFIG[_activeFestId]||{}).name||t('misc_festival_default'))+` ${t('plan_fest_terminado')}`
+      :`${t('plan_viste_n')} ${totalWatched} ${totalWatched!==1?t('misc_peliculas'):t('misc_pelicula')}`;
     return`<div class="pad-sm">
       <div class="ctx-eyebrow">
         <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
@@ -554,7 +554,7 @@ export function renderContextualHeader(state){
           <span class="delay-lbl">+${delayMins} min</span>
           ${[10,15,20,30].map(m=>`<button class="delay-btn" data-action="setDelay" data-title="${safeT}" data-day="${next.day}" data-time="${next.time}" data-mins="${m}" title="+${m} min">+${m}</button>`).join('')}
           <button class="delay-clear" data-action="undoDelay" data-title="${safeT}" data-day="${next.day}" data-time="${next.time}" title="${t('aria_deshacer')}">${ICONS.undo}</button>
-          <button class="delay-clear" data-action="clearDelay" data-title="${safeT}" data-day="${next.day}" data-time="${next.time}" title="Quitar retraso">${ICONS.x}</button>
+          <button class="delay-clear" data-action="clearDelay" data-title="${safeT}" data-day="${next.day}" data-time="${next.time}" title="${t('aria_quitar_retraso')}">${ICONS.x}</button>
         </div>`;
         // Warning si el retraso come el buffer
         const schedule=savedAgenda&&savedAgenda.schedule||[];
@@ -569,15 +569,15 @@ export function renderContextualHeader(state){
           const{displayTitle:nt}=parseProgramTitle(nextFilm._title||'');
           const nShort=nt.length>26?nt.slice(0,24)+'…':nt;
           if(margin<0){
-            warnHtml=`<div class="delay-warn"><span class="delay-warn-ico">${ICONS.alert}</span><span>Con el retraso terminas ~${minToStr(effectiveEndMin)}. Solo quedan <b>${toMin(nextFilm.time)-effectiveEndMin} min</b> antes de <b>${nShort}</b>${travel>0?` (${travel} min de viaje)`:''}</span></div>`;
+            warnHtml=`<div class="delay-warn"><span class="delay-warn-ico">${ICONS.alert}</span><span>${t('plan_delay_warn_critico',{end:minToStr(effectiveEndMin),min:`<b>${toMin(nextFilm.time)-effectiveEndMin}</b>`,film:`<b>${nShort}</b>`,travel:travel>0?t('plan_delay_travel',{n:travel}):''})}</span></div>`;
           }else if(margin<15){
-            warnHtml=`<div class="delay-warn warn-amber"><span class="delay-warn-ico">${ICONS.alert}</span><span>Terminas ~${minToStr(effectiveEndMin)}. Margen ajustado: <b>${margin} min</b> hasta <b>${nShort}</b>.</span></div>`;
+            warnHtml=`<div class="delay-warn warn-amber"><span class="delay-warn-ico">${ICONS.alert}</span><span>${t('plan_delay_warn_ajustado',{end:minToStr(effectiveEndMin),margin:`<b>${margin}</b>`,film:`<b>${nShort}</b>`})}</span></div>`;
           }
         }
       }else{
         delayHtml=`<div class="delay-row">
           <span class="delay-lbl">${t('plan_retraso')}</span>
-          ${[10,15,20,30].map(m=>`<button class="delay-btn" data-action="setDelay" data-title="${safeT}" data-day="${next.day}" data-time="${next.time}" data-mins="${m}" title="Reportar +${m} min">+${m}</button>`).join('')}
+          ${[10,15,20,30].map(m=>`<button class="delay-btn" data-action="setDelay" data-title="${safeT}" data-day="${next.day}" data-time="${next.time}" data-mins="${m}" title="${t('aria_reportar_retraso',{m})}">+${m}</button>`).join('')}
         </div>`;
       }
     }
@@ -678,7 +678,7 @@ export function renderContextualHeader(state){
         <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z"/></svg>
         ${t('plan_tu_dia_en',{dia:dayName.toLowerCase()})} ${(FESTIVAL_CONFIG[_activeFestId]||{}).name||''}
       </div>
-      <div class="ctx-main-title">${total} ${t('misc_pelicula')}${total!==1?'s':''} ${total===1?t('plan_vista_hoy'):t('plan_vistas_hoy')}</div>
+      <div class="ctx-main-title">${total} ${total!==1?t('misc_peliculas'):t('misc_pelicula')} ${total===1?t('plan_vista_hoy'):t('plan_vistas_hoy')}</div>
       ${pendingRating.length?`<div class="mb-3 ctx-sub">${pendingRating.length===1?t('plan_una_pendiente'):t('empty_calificar')}</div>`:`<div class="mb-3"></div>`}
       <div class="hscroll-strip">${filmRows}</div>
     </div>`;
@@ -922,7 +922,7 @@ export function _renderSavedAgendaHTML(state){
       return _eh?`<div class="saved-agenda">${_eh}</div>`:'';
     }
     // Sin películas vistas: empty state canónico
-    const _festNameMp=(FESTIVAL_CONFIG[_activeFestId]||{}).name||'El festival';
+    const _festNameMp=(FESTIVAL_CONFIG[_activeFestId]||{}).name||t('misc_festival_default');
     return emptyStateHero(ICONS.sparkles,`${_festNameMp} ${t('plan_fest_terminado')}`,t('empty_vistas'),t('plan_ir_programa'),'mnav-cartelera');
   }
   if(!savedAgenda||!savedAgenda.schedule.length) return emptyStateHero(ICONS.calendar,t('plan_tu_plan_empty'),t('empty_intereses'),t('cta_ir_planear'),'mnav-planner');
@@ -966,7 +966,7 @@ export function _renderSavedAgendaHTML(state){
       <div class="flex-center cta-ctx-ico">${ICONS.undo}</div>
       <div class="cta-ctx-body">
         <div class="cta-ctx-title cta-ctx-title-b">${t('plan_otra_cosa')}</div>
-        <div class="cta-ctx-sub">Hay sugerencias abajo que caben en ese hueco, o recalcula en Planear.</div>
+        <div class="cta-ctx-sub">${t('plan_cta_removido_sub')}</div>
       </div>
       <div class="cta-ctx-arr cta-ctx-arr-b">${ICONS.chevronR}</div>
     </div>`;
@@ -1043,7 +1043,7 @@ export function _renderSavedAgendaHTML(state){
             <div class="suggestion-meta">${durFmt(f.duration)}${vc2.short?' · '+vc2.short+(sl?' · '+sl:''):''}</div>
           </div>
           <button class="suggestion-add" data-action="addSuggestion" data-title="${f.title.replace(/"/g,'&quot;')}" data-day="${f.day}" data-time="${f.time}" data-stop="1" style="${f._isRestored?'border-color:var(--amber);color:var(--amber);background:var(--amber-10)':''}">
-            ${f._isRestored?`${ICONS.undo} Restaurar`:`${ICONS.plus} ${t('misc_anadir')}`}
+            ${f._isRestored?`${ICONS.undo} ${t('misc_restaurar')}`:`${ICONS.plus} ${t('misc_anadir')}`}
           </button>
         </div>`;
       }).join('');
@@ -1292,7 +1292,7 @@ export function updateHorarioPrioBtn(title){
   const inPrio=prioritized.has(title);
   document.querySelectorAll('.horario-prio-btn[data-title="'+CSS.escape(title)+'"]').forEach(btn=>{
     btn.className='card-strip-btn horario-prio-btn'+(inPrio?' prio-on':'');
-    btn.innerHTML=(inPrio?ICONS.starFill:ICONS.star)+' Prio.';
+    btn.innerHTML=(inPrio?ICONS.starFill:ICONS.star)+' '+t('lbl_prio_corto');
   });
 }
 
