@@ -151,3 +151,14 @@ indicadores de affordance dentro de un target mayor (`.paf-pill-x`, `.hdr-fest-c
 overlays ni inputs invisibles. Referencia canónica: `.int-prio-btn` (estrella de
 Prioridades). Decisión documentada en `constitution.md` → "Opacidad: feedback y estado,
 no jerarquía". Check nuevo en `validate.py` diferido (decisión de tooling aparte).
+
+**Follow-up — unificar el control Quitar (rojo en ambos contextos):** durante el audit
+visual se detectó un 2º caso en reposo: `#ag-result .col-end .ag-fi-btn.del` (Planear)
+llevaba `opacity:.7` (viola el principio) apilado sobre `color:var(--red)` (deliberado, ver
+comentario en CSS). Además había inconsistencia entre pantallas: Planear Quitar = rojo,
+Mi Plan Quitar = neutro white-60. Como la app es mobile-only (sin hover), la señal
+destructiva tiene que vivir en reposo → el rojo es correcto. Fix: regla global
+`.ag-fi-btn.del{color:var(--red)}` (rojo en reposo en Planear y Mi Plan), se elimina el
+override `#ag-result .col-end` con su `opacity:.7`. Resultado: Quitar rojo sólido
+`opacity:1` y consistente entre pantallas; Cambiar sigue neutro. Principle-compliant
+(jerarquía/estado por color, no por opacity).
