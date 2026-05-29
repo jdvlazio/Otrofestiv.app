@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `281bb81 chore: bundle v202605290022`
+> Último commit: `f59886c Merge pull request #140 from jdvlazio/feat/suggestions-film-list-item`
 
 ---
 
