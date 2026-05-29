@@ -137,3 +137,17 @@ Cualquiera de los dos exige test red-green con fixture de cruce de medianoche.
   duplicación pero toca el path de travel (alto blast-radius) + la bridge + el validador.
   Obstáculo de test: la copia del worker vive en un Blob string → no hay red-green limpio
   en Node; habría que testear el boundary (coord-builder) por separado.
+
+## Design system — opacidad: feedback/estado, no jerarquía (en revisión · sign-off visual pendiente)
+
+`.icon-btn-circle` (botones Cambiar/Quitar en Planear, Quitar en Mi Plan) llevaba
+`opacity:.5` en reposo apilado sobre `color:var(--white-60)` → ícono efectivo a ~0.3 de
+alfa, se leía como deshabilitado. Único outlier real de una auditoría de `opacity` en el
+CSS inline (`index.html` raíz; `www/` lo genera el CI). Fix: quitar `opacity:.5` de la
+regla — la jerarquía secundaria ya la expresa el token de color sólido. El feedback de
+toque queda intacto (`.ag-fi-btn:active{opacity:.6;transform:scale(.95)}`). NO se tocaron
+indicadores de affordance dentro de un target mayor (`.paf-pill-x`, `.hdr-fest-chev`,
+`.pel-sheet-sec-arrow`), placeholders, estados de contenido (`past`/`watched`/`conflict`),
+overlays ni inputs invisibles. Referencia canónica: `.int-prio-btn` (estrella de
+Prioridades). Decisión documentada en `constitution.md` → "Opacidad: feedback y estado,
+no jerarquía". Check nuevo en `validate.py` diferido (decisión de tooling aparte).

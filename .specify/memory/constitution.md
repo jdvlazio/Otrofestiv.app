@@ -34,6 +34,9 @@ Un solo pack, inline SVG, sin dependencias. Los emojis de país (flags) y emojis
 ### Pósters: cadena de prioridad unificada
 La función `getFilmPoster(f)` encapsula toda la lógica de resolución de poster (custom override → inline → legado → generativo → null). Llamar directamente a `getPosterSrc()` o `makeProgramPoster()` desde templates está prohibido porque rompe la cadena y crea inconsistencias silenciosas.
 
+### Opacidad: feedback y estado, no jerarquía
+Un control interactivo en reposo expresa jerarquía secundaria mediante token de color sólido, nunca mediante `opacity`. La opacidad se reserva para: (a) feedback `:active`, (b) `:disabled` real, (c) des-énfasis de estado de contenido (past/watched/conflict), (d) transiciones de overlay, (e) placeholders decorativos. Distinción clave: un indicador de affordance (chevron, ×, flecha) dentro de un target mayor que ya lee como interactivo puede ir tenue; la regla solo aplica cuando el elemento atenuado ES el control. Referencia canónica: `.int-prio-btn` (estrella de Prioridades) — `#555` apagado, `--amber` encendido, `opacity:1`; `.6`+`scale` solo en `:active`.
+
 ---
 
 ## Decisiones de proceso
