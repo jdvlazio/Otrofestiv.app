@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `3ad7dd0 design-system: opacidad solo para feedback/estado, no jerarquía en reposo`
+> Último commit: `a9d026f design-system: unificar Quitar a rojo sólido en Planear y Mi Plan`
 
 ---
 
