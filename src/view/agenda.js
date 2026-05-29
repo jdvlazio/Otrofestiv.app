@@ -105,7 +105,7 @@ export function renderAgenda(){
     const _avOpenAttr=_hasAvBlocks?' open':'';
     view.innerHTML=`${_progressHtml}
       <style>
-        .ag-av-details{padding:var(--sp-3) var(--sp-4)}
+        .ag-av-details{padding:var(--sp-3) var(--sp-4);margin-top:var(--sp-4)}
         .ag-av-details>summary{cursor:pointer;list-style:none;display:flex;align-items:center;margin-bottom:0;-webkit-tap-highlight-color:transparent}
         .ag-av-details>summary::-webkit-details-marker,
         .ag-av-details>summary::marker{display:none}
@@ -115,7 +115,7 @@ export function renderAgenda(){
         .ag-av-details>.txt-gray2-sm-lh{margin-top:var(--sp-2)}
       </style>
       <div class="ag-section">
-        <details class="section-div ag-av-details"${_avOpenAttr}>
+        <details class="ag-av-details"${_avOpenAttr}>
           <summary class="sec-hdr">${ICONS.clock} ${t('av_disponibilidad')} <span class="sec-hdr-opt">${t('misc_opcional')}</span><span class="ag-av-chevron">${ICONS.chevronD}</span></summary>
           <div class="txt-gray2-sm-lh">${t('av_no_incluir')}</div>
           <div id="av-blocks-list"></div>
