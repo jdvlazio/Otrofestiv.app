@@ -323,6 +323,60 @@ Desviaciones **intencionales** del canónico, con razón explícita. Aprobadas p
 
 ---
 
+## 7 · Capitalización (sistema de 4 categorías)
+
+Toda string de UI cae en una de 4 categorías. La capitalización se decide por
+**ROL**, no por idioma — la misma key usa la misma categoría en es/en/pt.
+
+| Categoría | Regla | Cuándo | Ejemplos |
+|---|---|---|---|
+| **ALLCAPS** | TODO MAYÚSCULAS | navegación (bottom nav), días abreviados, badges de estado | PROGRAMA · LUN · GRATIS · CANCELADA · REPROG. · AHORA · Q&A · EQUIPO PRESENTE |
+| **Title Case** | Cada Palabra Mayúscula | nombres propios de la app, días largos, premieres | Tu Plan · Mi Plan · Intereses · Prioridades · Viernes · World Premiere |
+| **Sentence case** | Solo Primera mayúscula | headers de sección, CTAs, descripciones, toasts, mensajes | Disponibilidad · Sugerencias · Añadir · "Tu plan puede estar desactualizado" |
+| **minúscula** | todo minúscula | fragmentos que se concatenan en oraciones | min · anterior · función · "está en tu plan." |
+
+### 7.1 · Distinción clave: metadata (ALLCAPS) vs headers de app (Title/Sentence)
+
+La decisión de diseño (opción B) mantiene **dos lenguajes visuales** separados:
+
+- **Metadata / estado / navegación** → **ALLCAPS**. Son etiquetas de sistema:
+  badges (GRATIS, CANCELADA, PASADO), nav (PROGRAMA), días-chip (LUN), estado
+  en vivo (AHORA, EN CURSO).
+- **Headers de la app** → **NO ALLCAPS** (Title o Sentence). Son títulos de
+  sección que el usuario lee como contenido: Disponibilidad, Sugerencias,
+  Prioridades, Intereses, Tu Plan. Render vía `.sec-hdr` / `.int-section-hdr-lbl`
+  — **sin** `text-transform`.
+
+### 7.2 · Secciones de festival (caso especial)
+
+Las **secciones del programa del festival** (Spotlight+, Gala, U.S. Narrative
+Competition…) vienen del **JSON del festival**, no de i18n. Se muestran en
+**ALLCAPS vía `text-transform:uppercase`** en CSS (`.carta-sr-section`,
+`.poster-grid-sep`) — el string original conserva su capitalización editorial.
+Esto las agrupa visualmente con la metadata sin alterar el dato fuente.
+
+### 7.3 · Reglas de borde
+
+- **"Plan" / "Mi Plan" / "Tu Plan"** son nombre propio → siempre Title Case,
+  incluso dentro de oraciones y CTAs ("Calcular mi Plan", "Tu Plan aparece aquí").
+- **Nombres de tab/sección** (Intereses, Prioridades, Sugerencias, Ya vistas,
+  Programa) → Title Case incluso mid-sentence ("Se moverá a Ya vistas en Intereses").
+- **Premieres** (World / International / U.S. / New York Premiere) → término de
+  industria de festivales; **se mantiene en inglés en los 3 idiomas** (decisión
+  intencional, no traducir).
+- **Días**: cortos ALLCAPS (chips de nav: LUN/MON/SEG), largos Title Case
+  (landmarks: Lunes/Monday/Segunda).
+- **Badges con `·`**: la parte tras el símbolo sigue la regla del badge (ALLCAPS).
+- **Labels del sheet header** (sinopsis/función/descripción): se guardan en
+  **minúscula**; el CSS aplica `text-transform:uppercase` en el header del sheet.
+  No capitalizar en la string.
+- **Nombres de idioma** (`lang_es`="Español"): en su propio idioma, en los 3.
+- **Badges "short"**: cuando un badge tiene variante corta para chips compactos
+  (notice_reprog_short = "REPROG."), sigue siendo ALLCAPS como el full. No hay
+  variante Title Case de un badge.
+
+---
+
 ## 6 · Relación con CLAUDE.md
 
 - `CLAUDE.md` → contrato de **arquitectura** (capas, patrones, reglas de proceso).

@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `f59886c Merge pull request #140 from jdvlazio/feat/suggestions-film-list-item`
+> Último commit: `defcc11 Merge pull request #141 from jdvlazio/fix/miplan-prefestival-clean`
 
 ---
 

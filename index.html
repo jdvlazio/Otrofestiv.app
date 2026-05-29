@@ -664,6 +664,10 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 /* ── Sugerencias ── */
 .suggestion-wrap{margin-top:var(--sp-5);padding-top:var(--sp-3);border-top:1px solid var(--bdr-l)}
 .suggestion-day-lbl,.saved-day-lbl{display:flex;flex-direction:column;align-items:flex-start;gap:var(--sp-1);margin:var(--sp-3) 0 var(--sp-2);padding-left:2px}
+/* Sugerencias en formato largo ("Viernes 5") — igual que el day landmark de
+   Mi Plan/Planear (t-md/w-semi/white). El archive (.saved-day-lbl) sigue con
+   dayChip: sus spans internos (.day-chip-*) tienen font propio y no se afectan. */
+.suggestion-day-lbl{font-size:var(--t-md);font-weight:var(--w-semi);color:var(--white)}
 /* Sugerencias = variante film-list-item (--plan-saved): hora protagonista
    DENTRO de .suggestion-info arriba del título; mismo núcleo canónico. */
 .suggestion-item{display:flex;align-items:flex-start;gap:var(--sp-3);padding:var(--sp-2) 0;border-bottom:1px solid var(--bdr-l);opacity:.9}
@@ -2860,7 +2864,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 <!-- ── Intereses / Planear: header unificado — fuera de ag-view ── -->
 <div class="ag-view" id="ag-view"></div>
 
-<script type="module" src="/src/main.js?v=202605281944"></script>
+<script type="module" src="/src/main.js?v=202605282011"></script>
 
 <!-- Festival switcher bottom sheet -->
 <div class="auth-sheet" id="auth-sheet" data-close-bg="AuthSheet">
