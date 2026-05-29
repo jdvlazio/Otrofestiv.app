@@ -16,7 +16,7 @@ import { t } from "../i18n/i18n.js";
 import { state } from "../state/state.js";
 
 export function makeProgramPoster(state, title, duration, section){
-  const {FILMS} = state.snapshot();
+  const {FILMS, _lang} = state.snapshot();
   const filmSec=section||(FILMS.find(f=>f.title===title)?.section)||'';
   const sec=filmSec.toLowerCase();
 
@@ -31,7 +31,7 @@ export function makeProgramPoster(state, title, duration, section){
   // separador del grid en cada idioma — antes horneaba f.section crudo y se
   // quedaba en español aunque la UI estuviera en EN.
   const cleanSection=_secLabel(filmSec).toUpperCase();
-  const headerLabel=cleanSection||'PROGRAMA';
+  const headerLabel=cleanSection||t('poster_programa');
 
   // Número — patrones: "Prog. 4", "Prog. 1 · 16mm", "Voces 2", número al final
   const numMatch=title.match(/(?:Prog\.\s*|Programa\s+)(\d+)|(?:—\s*|:\s*|Prog\.\s*)(\d+)\s*(?:·|$)|\s(\d+)\s*$/);
@@ -39,10 +39,15 @@ export function makeProgramPoster(state, title, duration, section){
 
   // Día — extrae nombre de día al final del título ("— Jueves" → "JUE")
   // Solo aplica cuando no hay número (los programas numerados ya tienen su diferenciador)
-  const _dayNameMap={'lunes':'LUN','martes':'MAR','miércoles':'MIÉ','miercoles':'MIÉ',
-    'jueves':'JUE','viernes':'VIE','sábado':'SÁB','sabado':'SÁB','domingo':'DOM'};
+  // Día: input ES desde el título del festival → índice DOW → abreviatura lang-aware
+  const _dayIdx={'lunes':1,'martes':2,'miércoles':3,'miercoles':3,
+    'jueves':4,'viernes':5,'sábado':6,'sabado':6,'domingo':0};
+  const _DOW_ABBR={es:['DOM','LUN','MAR','MIÉ','JUE','VIE','SÁB'],
+    en:['SUN','MON','TUE','WED','THU','FRI','SAT'],
+    pt:['DOM','SEG','TER','QUA','QUI','SEX','SÁB']};
   const _dayMatch=!num&&title.match(/[—\-]\s*([a-záéíóúüñ]+)\s*$/i);
-  const dayAbbr=_dayMatch?(_dayNameMap[_dayMatch[1].toLowerCase()]||null):null;
+  const _di=_dayMatch?_dayIdx[_dayMatch[1].toLowerCase()]:undefined;
+  const dayAbbr=_di!=null?(_DOW_ABBR[_lang]||_DOW_ABBR.es)[_di]:null;
 
   // Body: siempre vacío cuando hay número (el header + número son suficientes)
   // Sin número: extraer solo la parte distintiva
@@ -89,7 +94,7 @@ export function makeProgramPoster(state, title, duration, section){
 export function makeSorpresaPoster(){
   return _buildPosterV16({
     accent:'#F59E0B',
-    headerLabel:'PROYECCIÓN SORPRESA',
+    headerLabel:t('poster_sorpresa'),
     title:'?',
     num:null
   });
@@ -220,7 +225,7 @@ export function makeEventPoster(state,title,duration,eventKind,section){
   if(kind) return _buildPosterV16({...kind, title, num:null});
   // Fallback — usa la sección del film si existe, sino eventPosterLabel del config
   const _secFallback=section?_secLabel(section):'';
-  const lbl=_secFallback?[_secFallback]:((festCfg.eventPosterLabel)||['EVENTO','']);
+  const lbl=_secFallback?[_secFallback]:((festCfg.eventPosterLabel)||[t('poster_evento'),'']);
   const headerLabel=lbl.filter(Boolean).join(' ');
   const _sectionAccent=section?_sectionColor(section):'#6B9BD1';
   return _buildPosterV16({accent:_sectionAccent||'#6B9BD1', headerLabel, title, num:null});
