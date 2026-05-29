@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `79da589 Merge pull request #142 from jdvlazio/feat/capitalization-system`
+> Último commit: `6a0779d chore: sync index.html main.js?v= a 202605282038 (faltó en PR #143)`
 
 ---
 
