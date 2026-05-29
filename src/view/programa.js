@@ -406,7 +406,7 @@ export function render(){
     const progBadge='';//REMOVED
     const nowBadge=isNow?`<div class="poster-now">${t('misc_ahora')}</div>`:'';
     const _notice=NOTICES.find(n=>n.title===f.title&&n.festival===(_activeFestId||_DEFAULT_FEST_ID));
-    const pastBadge=_notice?`<div class="badge-past poster-past-badge">${_notice.type==='cancelled'?t('notice_cancelada_short'):t('notice_reprog_short')}</div>`:'';
+    const pastBadge=_notice?`<div class="badge-past poster-past-badge">${_notice.type==='cancelled'?t('notice_cancelada'):t('notice_reprog_short')}</div>`:'';
 
     const _fe=festivalEnded();
 return`<div class="poster-card js-open-pel${inWL&&!inW?' in-wl':''}${inW&&!_fe?' in-watched':''}${passed&&!_fe?' past-card':''}" data-title="${f.title}"${_cardBg2}>

@@ -1018,7 +1018,7 @@ export function _renderSavedAgendaHTML(state){
     <div class="mb-2 sec-hdr">${ICONS.sparkles} ${t('misc_sugerencias')}</div>`;
   if(suggDays.length){
     suggDays.forEach(day=>{
-      html+=`<div class="suggestion-day-lbl">${dayChip(day)}</div>`;
+      html+=`<div class="suggestion-day-lbl">${dayLabelLong(day)}</div>`;
       html+=suggsByDay[day].slice(0,4).map(f=>{
         const vc2=vcfg(f.venue),sl=sala(f.venue);
         const _sp=getFilmPoster(f);
