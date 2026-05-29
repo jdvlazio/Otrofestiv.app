@@ -241,13 +241,13 @@ export async function deleteAccount(){
     if(error) throw error;
     await _sbSignOut();
     closeAuthSheet();
-    showToast(t('auth_eliminar'),'✓');
+    showToast(t('toast_cuenta_eliminada'),'info');
   }catch(e){
     btn.disabled=false;
     btn.textContent=t('auth_eliminar');
     delete btn.dataset.confirmed;
     btn.style.fontWeight='';
-    showToast('Error: '+e.message,'✗');
+    showToast(t('toast_error_generico',{msg:e.message}),'err');
   }
 }
 
