@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `fe60e54 fix(design-system): font-weight/font-size raw → tokens en index.html (6 reemplazos)`
+> Último commit: `02e1fd5 fix(design-system): quitar 3 !important superfluos en index.html (punto 3)`
 
 ---
 
