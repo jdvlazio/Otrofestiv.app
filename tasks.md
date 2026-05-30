@@ -253,3 +253,26 @@ Un-stick de headers en un `@media`. Las líneas **1908/1909 hacen el mismo un-st
 (475/476, misma especificidad de ID). NO trivial: requiere mapear las condiciones de los
 `@media` que se solapan + QA del comportamiento sticky (load-bearing visual). **Diferido a
 tarea aparte con su propio análisis.**
+
+## Design system — botones: padding/sizing raw → tokens (punto 4 · en revisión)
+
+Audit de selectores btn/pill/chip (tokens spacing: `--sp-1`=4 … `--sp-btn`=14, `--sp-5`=24…px).
+
+**Aplicado (3, match exacto):**
+- `.suggestion-add` — `min-width:76px` → `fit-content` (debloat aprobado por PO; el `76px` inflaba el botón) **+** `padding:4px var(--sp-2)` → `padding:var(--sp-1) var(--sp-2)` (4px=`--sp-1`). Chrome: width 76px→54px (al contenido), padding intacto.
+- `.seccion-btn` · `.lugar-btn` — `padding:4px 0` → `padding:var(--sp-1) 0` (4px=`--sp-1`, valor idéntico, cero cambio). Encontrados en el barrido (no estaban en los candidatos originales).
+
+**No reemplazados (motivo):**
+- Sin token: `10px` (`.conflict-modal-btn.cancel`, `.conflict-btn-cancel`), `2px` (`.prio-pill`, `.ended-rate-btn`, `.corto-rate-btn`), `3px`/`6px` (`.paf-pill` asimétrico, `.ended-rate-btn`), `9px` (`.delay-btn`).
+- **Heights** (`28/30/32/34/36/38/44px`, etc.): `--sp-*` es escala de **espaciado**, no de dimensión; usar un spacing token como `height` acopla semánticas distintas → no se tokeniza.
+- **Gaps** `1px`/`3px`/`5px`: sin token.
+- `.prio-chip-rm` (`top/right:4px; width/height:18px`): posicionamiento absoluto de control → legítimo (no es escala de spacing).
+- `#rating-stars{padding:4px 0}`: fuera de scope (no es btn/pill/chip).
+
+### Decisión pendiente — shorthands mixtos con UN valor on-scale
+`.delay-btn` (`4px 9px`), `.mplan-bottom-btn` (`4px 10px`), `.pel-sheet-action-btn[.btn-*]`
+(`11/13px 4px`), `.corto-rate-btn` (`2px 8px`): tienen un eje con token exacto (4px/8px) y el
+otro off-scale. Tokenizar deja un shorthand token+raw (`var(--sp-1) 9px`). **Hay precedente
+en el código** (`.prio-pill`, `.ag-fi-btn`, `.btn-tertiary` ya mezclan), así que es defensible,
+pero expande más allá de los candidatos nombrados → **a decisión de PO** (lote follow-up si se
+quiere). No aplicado en este PR.
