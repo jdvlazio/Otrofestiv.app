@@ -230,7 +230,7 @@ export function searchQuery(){
       const poster=getFilmPoster(f)||'';
       const _dur=f.duration!=null?String(f.duration):'';
       const meta=f._isCortoItem
-        ?'Cortometraje'+(f._prog?' · '+parseProgramTitle(f._prog.title).displayTitle:'')
+        ?t('label_cortometraje')+(f._prog?' · '+parseProgramTitle(f._prog.title).displayTitle:'')
         :(_dur?_dur+' min':'')+(f.section?' · '+f.section.replace(/^[^ ]+ /,''):'');
       const _q=s=>String(s).replace(/"/g,'&quot;');
       const _siAttrs=f._isCortoItem

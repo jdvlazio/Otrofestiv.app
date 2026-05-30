@@ -189,7 +189,7 @@ export function openPelSheet(title){
     </div>
     <div class="pel-sheet-divider"></div>
     <div class="pel-sheet-section-lbl">${f.type==='event'?t('label_horario'):allScr.length===1?t('label_funcion'):t('label_funciones_pl')}${totalFn>1&&f.type!=='event'?`<span class="ml-2 count-badge cb-neutral">${totalFn}</span>`:''}</div>
-    ${(()=>{const _n=NOTICES.find(n=>n.title===f.title&&n.festival===(_activeFestId||_DEFAULT_FEST_ID));if(!_n)return'';const _msg=_n.type==='cancelled'?t('notice_funcion_canc'):`Reprogramada → ${_n.newDay||''} ${_n.newTime||''}${_n.newVenue?' · '+_n.newVenue:''}`;return`<div class="notice-banner-row"><span class="notice-badge">${_n.type==='cancelled'?t('notice_cancelada'):t('notice_reprog_short')}</span><span class="notice-banner-txt">${_msg}</span></div>`;})()}
+    ${(()=>{const _n=NOTICES.find(n=>n.title===f.title&&n.festival===(_activeFestId||_DEFAULT_FEST_ID));if(!_n)return'';const _info=`${_n.newDay||''} ${_n.newTime||''}${_n.newVenue?' · '+_n.newVenue:''}`.trim();const _msg=_n.type==='cancelled'?t('notice_funcion_canc'):t('notice_reprog_a',{info:_info});return`<div class="notice-banner-row"><span class="notice-badge">${_n.type==='cancelled'?t('notice_cancelada'):t('notice_reprog_short')}</span><span class="notice-banner-txt">${_msg}</span></div>`;})()}
     ${_metaBanners(f)}
     <div class="pel-sheet-screenings">${rows}</div>
     ${(()=>{
@@ -213,7 +213,7 @@ export function openPelSheet(title){
     <div class="pel-sheet-divider"></div>
     ${inW?`<div class="pel-sheet-ctas-watched">
         <button data-title="${f.title}" data-action="toggleWatchedAndClose" class="pel-sheet-action-btn act-on">${ICONS.check} ${t('cta_vista')}</button>
-        ${!f.is_cortos?`<button data-title="${f.title}" data-action="closePelAndRate" class="pel-sheet-action-btn btn-secondary">${ICONS.star} ${filmRatings[f.title]?'Cambiar':t('cta_calificar')}</button>`:``}
+        ${!f.is_cortos?`<button data-title="${f.title}" data-action="closePelAndRate" class="pel-sheet-action-btn btn-secondary">${ICONS.star} ${filmRatings[f.title]?t('misc_cambiar'):t('cta_calificar')}</button>`:``}
       </div>`
     :`<div class="pel-sheet-ctas">
         <button id="pel-wl-btn" class="row-center-xs pel-sheet-action-btn${inWL?' act-on btn-primary':' btn-primary'}" data-title="${f.title}" data-action="togglePelWL">${inWL?ICONS.heartFill:ICONS.heart} ${inWL?t('cta_en_intereses'):t('cta_intereses')}</button>
@@ -360,7 +360,7 @@ export function openCortoSheet(title, country, duration, section, flags, directo
     <div class="flex-gap1-mt1">
       <button id="corto-wl-btn" class="row-center-xs pel-sheet-action-btn${inWL?' act-on btn-primary':' btn-primary'}" data-title="${parentTitle||title}" data-action="toggleWL">${inWL?ICONS.heartFill:ICONS.heart} ${inWL?t('cta_en_intereses'):t('cta_intereses')}</button>
       <button id="corto-prio-btn" class="row-center-xs pel-sheet-action-btn${inPrio?' act-prio':' btn-secondary'}" data-title="${parentTitle||title}" data-action="togglePelPrio">${inPrio?ICONS.starFill:ICONS.star} ${inPrio?t('cta_priorizada'):t('cta_priorizar')}</button>
-      <button class="row-center-xs pel-sheet-action-btn${filmRatings[title]?' act-on':' btn-secondary'}" data-title="${title}" data-action="closePelAndRate">${ICONS.star} ${filmRatings[title]?'Cambiar':t('cta_calificar')}</button>
+      <button class="row-center-xs pel-sheet-action-btn${filmRatings[title]?' act-on':' btn-secondary'}" data-title="${title}" data-action="closePelAndRate">${ICONS.star} ${filmRatings[title]?t('misc_cambiar'):t('cta_calificar')}</button>
     </div>
   `;
   const _psReset2=document.getElementById('pel-sheet');
@@ -499,7 +499,7 @@ export function confirmConflictReplace(){
   saveSavedAgenda();
   const{displayTitle:dt}=parseProgramTitle(incomingTitle);
   closeConflictSheet();
-  showToast(`${ICONS.calendar} ${dt.length>22?dt.slice(0,20)+'…':dt} en tu plan`,'info');
+  showToast(`${ICONS.calendar} ${t('toast_en_tu_plan',{title:dt.length>22?dt.slice(0,20)+'…':dt})}`,'info');
   renderAgenda();
 }
 
@@ -507,7 +507,7 @@ export function openPrioLimit(newTitle){
   // Eyebrow con contador
   const eyebrow=document.getElementById('prio-limit-eyebrow-txt');
   const count=document.getElementById('prio-limit-count');
-  if(eyebrow) eyebrow.textContent=`Prioridades · ${PRIO_LIMIT}/${PRIO_LIMIT}`;
+  if(eyebrow) eyebrow.textContent=`${t('lbl_prioridades')} · ${PRIO_LIMIT}/${PRIO_LIMIT}`;
   if(count) count.textContent=PRIO_LIMIT;
   // i18n patches for static prio-limit elements
   const _yaTenes=document.getElementById('prio-limit-ya-tenes-txt');
@@ -538,7 +538,7 @@ export function openPrioLimit(newTitle){
           <div class="prio-limit-name">${dt}</div>
           <div class="prio-limit-when">${when}</div>
         </div>
-        <button class="prio-limit-swap" data-action="swapPriority" data-rmtitle="${safeSwap}" data-addtitle="${safeNew}">Cambiar</button>
+        <button class="prio-limit-swap" data-action="swapPriority" data-rmtitle="${safeSwap}" data-addtitle="${safeNew}">${t('misc_cambiar')}</button>
       </div>`;
     }).join('');
     list.innerHTML=items;
@@ -782,7 +782,7 @@ export function _pvRenderStars(val){
   // Hint y botón
   const hint=document.getElementById('pv-hint');
   const btn=document.getElementById('pv-btn-save');
-  if(hint) hint.textContent=val>0?`${val} de 5`:t('misc_deslizar');
+  if(hint) hint.textContent=val>0?t('pv_de_5',{val}):t('misc_deslizar');
   if(hint) hint.style.color=val>0?'var(--amber)':'var(--gray)';
   if(btn)  btn.disabled=val===0;
 }
@@ -868,7 +868,7 @@ export function confirmAvBlock(){
   if(from>=to){showToast(t('av_hora_invalida'),'warn');return;}
   const av=availability[_avSheetDay];
   if(av.blocks.some(b=>toMin(from)<toMin(b.to)&&toMin(to)>toMin(b.from))){
-    showToast('Este horario coincide con otro bloque','warn');return;
+    showToast(t('av_solapa_bloque'),'warn');return;
   }
   // 3. MUTATE — diferido via conflict modal si hay conflictos
   const _conflicts=checkPlanConflictsWithBlock(_avSheetDay,from,to);
@@ -947,7 +947,7 @@ export function addBlock(day){
   if(!f||!toVal){showToast(t('av_seleccionar'),'warn');return;}
   if(toMin(f)>=toMin(toVal)){showToast(t('av_hora_invalida'),'warn');return;}
   const av=availability[day];
-  if(av.blocks.some(b=>toMin(f)<toMin(b.to)&&toMin(toVal)>toMin(b.from))){showToast('Este horario coincide con otro bloque','warn');return;}
+  if(av.blocks.some(b=>toMin(f)<toMin(b.to)&&toMin(toVal)>toMin(b.from))){showToast(t('av_solapa_bloque'),'warn');return;}
   // 3. MUTATE — diferida via conflict modal si hay conflictos
   const _blockConflicts=checkPlanConflictsWithBlock(day,f,toVal);
   const _doAdd=()=>{
@@ -1123,7 +1123,7 @@ export function savePVRating(){
     storage.setFilmRatings(filmRatings);
     // 5. RENDER + UI EFFECTS — toast
     const stars=['','★','★★','★★★','★★★★','★★★★★'];
-    showToast(stars[Math.round(_pvRating)]||'★ Calificada','info');
+    showToast(stars[Math.round(_pvRating)]||t('toast_calificada'),'info');
   }
   closePVRating();
   // Render automático vía pipeline (filmRatings). Si rating=0 no hay mutación →

@@ -181,3 +181,32 @@ tienen tokens ambiguos (2 c/u) pero solo aparecen en definiciones, sin uso raw.
 
 Verificado: `validate.py` 30/31 (`tasks-sync` preexistente); Playwright sin fallos reales
 (T06 flaky confirmado aislado); Chrome ES/EN sin cambio visual. Bump pendiente post-sign-off.
+
+## Barrido i18n — eliminar mezcla de idiomas (en revisión · sign-off visual pendiente)
+
+Auditoría profunda (5 agentes en paralelo) de leaks i18n en todos los estados del
+festival (pre/durante/post/global). Causa raíz: el check `[i18n-hardcoded]` de
+`validate.py` solo escanea `main.js` (casi vacío tras el refactor por capas) contra una
+whitelist de 13 strings → nunca miró los módulos `src/view/*` ni `src/controller/*` donde
+vive el UI. Pasaban ~55 leaks. El diccionario `i18n.js` en sí estaba limpio (paridad
+es/en/pt perfecta); todos los leaks eran literales hardcodeados o concatenación (pegar un
+`t()` con texto ES fijo, lo que producía "You already have un plan con N películas" en EN).
+
+Corregido en 8 lotes (commit por lote), **55 keys nuevas** en es/en/pt (i18n.js: 345→400),
+copy aprobado por Juan:
+- **A `share.js`** (15): flujo compartir/exportar completo a t().
+- **B `handlers.js`** (8): toasts + modal Reemplazar plan + `confirmReplace` (quitado el hack `.split(', ')[1]`).
+- **C `sheets-controller.js`** (5): Cambiar/reprogramada/prioridades/rating.
+- **D `agenda.js`** (11): Mi Plan durante festival (retraso, en curso), sugerencias, fallback "El festival" post-festival, pluralización (`misc_peliculas`).
+- **E `programa.js`+`components.js`** (4): chip "Todo", banner aviso, filtros, "Quitar".
+- **F `index.html`** (6): píldoras/conflicto vía `data-i18n` + wiring por ID (aria Cuenta).
+- **G `overlays.js`+`persistence.js`** (3): "Cortometraje" + toasts (+ fix args `✓`/`✗` mal usados como tipo).
+- **H pósters SVG** (3): PROGRAMA/EVENTO/PROYECCIÓN SORPRESA + abreviaturas de día lang-aware.
+
+Decisiones: términos universales (min/h/Q&A/vs) y meta/OG/SEO estático se dejan (no son
+leaks de runtime); endónimos del selector se quedan en su idioma.
+
+### Deuda pendiente — endurecer `validate.py [i18n-hardcoded]`
+El check quedó ciego (solo main.js + whitelist). Pendiente (decisión de tooling aparte):
+escanear `src/view/*` + `src/controller/*` y detectar concatenación `t()`+literal y
+literales de UI ES/EN, para que estos leaks no reaparezcan en silencio.

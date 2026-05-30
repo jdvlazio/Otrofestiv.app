@@ -31,7 +31,7 @@ export function _computeProgramaChips(state){
       id:'sec_'+sec.replace(/[^a-zA-Z0-9]/g,'_').slice(0,30),
       label:sec, match:s=>s===sec, count:cnt
     }));
-  return [{id:'all',label:'Todo',match:null,count:allFilms.length},...secChips];
+  return [{id:'all',label:t('chip_todo'),match:null,count:allFilms.length},...secChips];
 }
 
 export function renderProgramaChipsHTML(state){
@@ -73,7 +73,7 @@ export function renderNoticesBannerHTML(state){
     return`<div class="notice-banner">
       <div class="notice-banner-dot"></div>
       <div class="notice-banner-body">
-        <div class="notice-banner-label">AVISO DEL FESTIVAL</div>
+        <div class="notice-banner-label">${t('notice_banner_label')}</div>
         <div class="notice-banner-text"><b class="txt-white60-semi">${safeTitle}</b> · <span>${label.toLowerCase()}</span>. ${msg}</div>
       </div>
       <button class="notice-banner-close" data-action="dismissNotice" data-title="${n.title.replace(/"/g,'&quot;')}">✕</button>
@@ -109,7 +109,7 @@ export function renderProgramaListHTML(state){
     return cat(a)-cat(b);
   });
   if(!films.length){
-    return `<div class="empty-msg">Sin actividades para este filtro</div>`;
+    return `<div class="empty-msg">${t('filter_sin_actividades')}</div>`;
   }
   const byTime={};
   films.forEach(f=>{if(!byTime[f.time])byTime[f.time]=[];byTime[f.time].push(f);});
@@ -413,7 +413,7 @@ return`<div class="poster-card js-open-pel${inWL&&!inW?' in-wl':''}${inW&&!_fe?'
       ${posterImg}
       <div class="poster-time">${f.time}</div>
       ${nowBadge||pastBadge||progBadge}
-      ${inWL?`<button class="poster-wl-dot wl-on" data-title="${f.title.replace(/"/g,'&quot;')}" data-action="toggleWL" data-stop="1" aria-label="Interés">${ICONS.heartFill}</button>`:''}
+      ${inWL?`<button class="poster-wl-dot wl-on" data-title="${f.title.replace(/"/g,'&quot;')}" data-action="toggleWL" data-stop="1" aria-label="${t('misc_interes_label')}">${ICONS.heartFill}</button>`:''}
     </div>`;
   }).join('')+'</div>';
 
@@ -455,7 +455,7 @@ export function renderSbar(){
     b.onclick=e=>{e.stopPropagation();cb();};
     panel.appendChild(b);
   };
-  mkOpt(`Todas las categorías <span class="fdr-cnt">${dayF.length}</span>`,activeSec==='all',()=>{activeSec='all';selectedIdx=null;setHint(null);closeDropdowns();render();});
+  mkOpt(`${t('sbar_todas_categorias')} <span class="fdr-cnt">${dayF.length}</span>`,activeSec==='all',()=>{activeSec='all';selectedIdx=null;setHint(null);closeDropdowns();render();});
   secs.forEach(sec=>{
     const cnt=dayF.filter(f=>f.section===sec).length;
     mkOpt(`${_secLabelFull(sec)} <span class="fdr-cnt">${cnt}</span>`,activeSec===sec,()=>{activeSec=activeSec===sec?'all':sec;selectedIdx=null;setHint(null);closeDropdowns();render();});

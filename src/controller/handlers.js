@@ -75,7 +75,7 @@ export function toggleWL(title,e){
       watched: state._delFromSet(watched, title),
       prioritized: state._delFromSet(prioritized, title),
     });
-    showToast('Fuera de tus intereses','info');
+    showToast(t('toast_fuera_intereses'),'info');
   }
   else{
     // Branch C: add — con detección "todas funciones bloqueadas" + UI variants
@@ -92,7 +92,7 @@ export function toggleWL(title,e){
     } else if(activeMNav==='mnav-cartelera'||activeMNav==='mnav-seleccion'){
       showActionToast(`${ICONS.heartFill} ${t('cta_en_intereses')}`,`${ICONS.star} ${t('cta_priorizar')}`,()=>togglePriority(title));
     } else {
-      showToast(`${ICONS.heartFill} En Intereses`,'info');
+      showToast(`${ICONS.heartFill} ${t('cta_en_intereses')}`,'info');
     }
   }
   // 4. PERSIST + surgical patch (branch B y C). Render automático vía pipeline.
@@ -226,7 +226,7 @@ export function removeFromAgenda(title){
     _ctaRemovedVisible=true;
     if(_ctaRemovedTimer) clearTimeout(_ctaRemovedTimer);
     _ctaRemovedTimer=setTimeout(()=>{_ctaRemovedVisible=false;renderAgenda();},6000);
-    renderAgenda();showToast('Fuera de tu plan','info');
+    renderAgenda();showToast(t('toast_fuera_plan'),'info');
   });
 }
 
@@ -377,7 +377,7 @@ export function swapPriority(removeTitle, addTitle){
   updateAgTab();
   closePrioLimit();
   const{displayTitle}=parseProgramTitle(addTitle);
-  showToast(`${ICONS.starFill} ${displayTitle} priorizada`,'info');
+  showToast(`${ICONS.starFill} ${t('toast_priorizada',{title:displayTitle})}`,'info');
 }
 
 export function markWatchedFromPlan(title, day, time, venue, duration, e){
@@ -418,10 +418,10 @@ export function confirmReplace(removedTitle,newTitle,day,time,isScenario){
   modal.id='conflict-modal';modal.className='conflict-modal';
   modal.innerHTML=`<div class="conflict-modal-box">
     <div class="conflict-modal-hdr">${removedTitle?t('plan_reemplazar_funcion'):t('plan_anadir_plan')}</div>
-    <div class="conflict-modal-body">${removedTitle?`${t('misc_quitar')} <b>${shortRem}</b> y ${t('misc_anadir')}`:`${t('misc_anadir')}`} <b>${shortNew}</b> al plan.</div>
+    <div class="conflict-modal-body">${removedTitle?t('plan_reemplazar_funcion_body',{old:`<b>${shortRem}</b>`,new:`<b>${shortNew}</b>`}):t('plan_anadir_plan_body',{new:`<b>${shortNew}</b>`})}</div>
     <div class="conflict-modal-btns">
       <button class="conflict-modal-btn cancel" data-action="removeConflictModal">${t('search_cancelar')}</button>
-      <button class="conflict-modal-btn confirm" id="replace-ok">${t('misc_si')}${removedTitle?', '+t('misc_si_reemplazar').split(', ')[1]:', '+t('misc_si_anadir').split(', ')[1]}</button>
+      <button class="conflict-modal-btn confirm" id="replace-ok">${removedTitle?t('misc_si_reemplazar'):t('misc_si_anadir')}</button>
     </div>
   </div>`;
   document.body.appendChild(modal);
@@ -490,7 +490,7 @@ export function removeFilmFromScenario(title,e){
       });
       saveState('wl','prio','watched');
       updateAgTab();
-      showToast('Fuera de tus intereses','info');
+      showToast(t('toast_fuera_intereses'),'info');
       // Mutación local del cachedResult (evita rerun del worker ~1-2s):
       // 1) quitar el título del schedule, 2) sacarlo de excluded, 3) re-squeeze
       // las restantes en el slot liberado, 4) re-renderizar. Sin spinner.
@@ -766,10 +766,10 @@ export function saveCurrentScenario(){
     const n=savedAgenda.schedule.length;
     showActionModal(
       `${ICONS.calendar} ${t('plan_reemplazar_plan')}`,
-      `${t('notice_ya_tenes')} un plan con <b>${n} película${n!==1?'s':''}</b>.<br><br>${t('plan_reemplazar')}.`,
+      `${t('plan_ya_tenes_n',{count:`<b>${n} ${n!==1?t('misc_peliculas'):t('misc_pelicula')}</b>`})}<br><br>${t('plan_reemplazar')}.`,
       t('misc_si_reemplazar'),
       _doSave,
-      'Conservar mi plan actual'
+      t('plan_conservar_actual')
     );
   } else {
     _doSave();

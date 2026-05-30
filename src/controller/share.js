@@ -25,7 +25,7 @@ export async function sharePlan(){
     canvas=_buildAgendaCanvas();
     dataUrl=canvas.toDataURL('image/png');
     if(!dataUrl||dataUrl==='data:,') throw new Error('canvas vacío');
-  }catch(e){showToast('Error al generar imagen','err');return;}
+  }catch(e){showToast(t('toast_err_imagen'),'err');return;}
 
   // Web Share API con archivo (iOS Safari 15+, Chrome Android 86+)
   if(navigator.share&&navigator.canShare){
@@ -36,8 +36,8 @@ export async function sharePlan(){
       const file=new File([blob],fname,{type:'image/png'});
       if(navigator.canShare({files:[file]})){
         try{
-          await navigator.share({files:[file],title:`Mi Plan · ${cfg.name||'Otrofestiv'}`});
-          showToast('Compartido ✓','info');
+          await navigator.share({files:[file],title:`${t('share_mi_plan')} · ${cfg.name||'Otrofestiv'}`});
+          showToast(t('toast_compartido'),'info');
         }catch(e){if(e.name!=='AbortError') _dlDirect(dataUrl);}
       }else{_dlDirect(dataUrl);}
     },'image/png');
@@ -63,7 +63,7 @@ export function shareAsImage(){
   const notInWL=savedAgenda.schedule.filter(s=>!watchlist.has(s._title));
   if(notInWL.length){
     const names=notInWL.map(s=>s._title.length>20?s._title.slice(0,18)+'…':s._title).join(', ');
-    issues.push(`${notInWL.length} película${notInWL.length>1?'s':''} ${t('plan_no_intereses')}: ${names}`);
+    issues.push(t('share_no_intereses',{names}));
   }
 
   // 2. Conflictos internos entre funciones del plan
@@ -78,24 +78,24 @@ export function shareAsImage(){
   }
   if(conflicting.length){
     const names=[...new Set(conflicting)].map(t=>t.length>20?t.slice(0,18)+'…':t).join(', ');
-    issues.push(`Hay actividades con horario solapado: ${names}`);
+    issues.push(t('share_solapadas',{names}));
   }
 
   // 3. Plan completamente pasado
   const stillActive=savedAgenda.schedule.some(s=>!screeningPassed(s));
-  if(!stillActive) issues.push('Todas las actividades de tu plan ya pasaron');
+  if(!stillActive) issues.push(t('share_todas_pasaron'));
 
   // Si hay problemas: mostrar advertencia con opción de continuar igual
   if(issues.length){
     const msg=`<b>${t('plan_desactualizado')}</b><br><br>`
       +issues.map(i=>`• ${i}`).join('<br>')
-      +`<br><br>¿Compartir la imagen de todas formas?`;
+      +`<br><br>${t('share_compartir_igual_q')}`;
     showActionModal(
-      `${ICONS.share} Compartir imagen`,
+      `${ICONS.share} ${t('share_compartir_imagen')}`,
       msg,
-      'Compartir igual',
+      t('share_compartir_igual'),
       ()=>{_generateAndShare();},
-      'Revisar plan primero'
+      t('share_revisar_plan')
     );
     return;
   }
@@ -110,7 +110,7 @@ export function _generateAndShare(){
     dataUrl=canvas.toDataURL('image/png');
     if(!dataUrl||dataUrl==='data:,') throw new Error('canvas vacío');
   }catch(e){
-    showToast('Error al generar imagen','err'); return;
+    showToast(t('toast_err_imagen'),'err'); return;
   }
   _showImageModal(dataUrl,canvas);
 }
@@ -168,7 +168,7 @@ export function _buildAgendaCanvas(){
   c.fillStyle='#888888';
   c.font='500 11px system-ui,-apple-system,sans-serif';
   const _dn=_getDisplayName();
-  const _sub=(_dn?_dn+' · ':'')+'Mi Plan · '+(cfg.name||'Festival')+' · '+active.length+' día'+(active.length!==1?'s':'');
+  const _sub=(_dn?_dn+' · ':'')+t('share_mi_plan')+' · '+(cfg.name||'Festival')+' · '+active.length+' '+(active.length!==1?t('misc_dias'):t('misc_dia'));
   c.fillText(_sub,PAD,HDR/2+20);
   active.forEach((day,ci)=>{
     const x=PAD+ci*(CW+CGAP);
@@ -258,14 +258,14 @@ export function _showImageModal(dataUrl,canvas){
   row.style.cssText='display:flex;gap:10px;width:100%;max-width:320px';
   if(!isIOS){
     const btnDl=document.createElement('button');
-    btnDl.textContent='⬇ Descargar';
+    btnDl.textContent='⬇ '+t('misc_descargar');
     btnDl.style.cssText='flex:1;padding:var(--sp-btn);background:var(--amber);color:var(--black);border:none;border-radius:var(--r-md);font-size:var(--t-base);font-family:system-ui;font-weight:var(--w-bold);cursor:pointer';
     btnDl.onclick=function(){
       if(navigator.share&&navigator.canShare){
         canvas.toBlob(blob=>{
           if(!blob){_dlDirect(dataUrl);return;}
           const file=new File([blob],'otrofestiv-miplan.png',{type:'image/png'});
-          if(navigator.canShare({files:[file]})){navigator.share({files:[file]}).then(()=>{ov.remove();showToast('Compartido ✓','info');}).catch(()=>_dlDirect(dataUrl));}
+          if(navigator.canShare({files:[file]})){navigator.share({files:[file]}).then(()=>{ov.remove();showToast(t('toast_compartido'),'info');}).catch(()=>_dlDirect(dataUrl));}
           else{_dlDirect(dataUrl);}
         },'image/png');
       }else{_dlDirect(dataUrl);}
@@ -287,7 +287,7 @@ export function _dlDirect(dataUrl){
   a.href=dataUrl;a.download='otrofestiv-miplan.png';
   a.style.cssText='position:fixed;top:-999px;left:-999px;opacity:0';
   document.body.appendChild(a);a.click();
-  setTimeout(()=>{document.body.removeChild(a);showToast('Imagen guardada ✓','info');},200);
+  setTimeout(()=>{document.body.removeChild(a);showToast(t('toast_imagen_guardada'),'info');},200);
 }
 
 export async function exportICS(){
@@ -361,12 +361,12 @@ export async function exportICS(){
         directory:'CACHE'
       });
       await Share.share({
-        title:'Otrofestiv — Mi Plan',
+        title:'Otrofestiv — '+t('share_mi_plan'),
         files:[result.uri]
       });
     }catch(e){
       console.error('ICS share error:',e);
-      showToast('No se pudo abrir Calendario','warn');
+      showToast(t('toast_cal_err'),'warn');
     }
   } else {
     const blob=new Blob([icsText],{type:'text/calendar;charset=utf-8'});
