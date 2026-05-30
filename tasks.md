@@ -162,3 +162,22 @@ destructiva tiene que vivir en reposo → el rojo es correcto. Fix: regla global
 override `#ag-result .col-end` con su `opacity:.7`. Resultado: Quitar rojo sólido
 `opacity:1` y consistente entre pantallas; Cambiar sigue neutro. Principle-compliant
 (jerarquía/estado por color, no por opacity).
+
+## Design system — colores hex raw → tokens (punto 1 de auditoría · en revisión)
+
+Audit de `index.html`: 48 ocurrencias de hex; mapeadas a `{hex → token → uso}`. **18
+reemplazos** aplicados (solo match exacto + contexto de uso CSS):
+- `#000` → `var(--black)` ×12 (color/border-top-color de CTAs amber + spinner + html bg)
+- `#0A0A0A` → `var(--bg)` ×4 (texto oscuro en badges/posters editoriales)
+- `#F0EDE8` → `var(--white)` ×1 (ed-title)
+- `#1A1A1A` → `var(--surf-2)` ×1 (psp-editorial bg)
+
+Valores idénticos (cero cambio visual; confirmado en Chrome: tokens resuelven a su hex
+exacto). NO tocados (documentado): inline `<html style>` y `<meta theme-color>` (pre-CSS /
+no-CSS, var() no disponible); `#e05` (#ee0055, sin token ≠ `--red`); `#1C1C1C` (sin token);
+`var(--surf-3,#1A1A1A)` (fallback explícito); `stroke="#fff"`/`stroke="#3AAA6E"` en SVG
+(atributo de presentación — var() no resuelve ahí); `rgba(0,0,0,.25)`. `#141414`/`#1E1E1E`
+tienen tokens ambiguos (2 c/u) pero solo aparecen en definiciones, sin uso raw.
+
+Verificado: `validate.py` 30/31 (`tasks-sync` preexistente); Playwright sin fallos reales
+(T06 flaky confirmado aislado); Chrome ES/EN sin cambio visual. Bump pendiente post-sign-off.
