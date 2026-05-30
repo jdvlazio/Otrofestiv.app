@@ -230,3 +230,26 @@ exacto; `.sec-drop-hdr` fw=700, `.tab-badge` fs=9px). NO reemplazados (documenta
 
 Verificado: `validate.py` 30/31 (`tasks-sync` preexistente); Playwright sin fallos reales
 (T08 flaky confirmado aislado); Chrome ES/EN sin cambio visual. Bump pendiente post-sign-off.
+
+## Design system — auditoría de `!important` (punto 3 · en revisión)
+
+22 `!important` en `index.html`: 6 `display:none` (toggles legítimos) + 16 raw en 8 sitios
+lógicos. Clasificación por especificidad (qué regla previa los obliga):
+
+**Intencionales (override real, NO tocar):**
+- `.card.selected` (border/box-shadow) — debe ganarle al `@media(hover){.card:not(.conflict):hover}` que es más específico (0,3,0 vs 0,2,0).
+- `@media reduced-motion *{...}` — patrón a11y canónico; `!important` sobre `*` es obligatorio.
+- `.lugar-cnt{flex:none}` — debe ganarle a `.lugar-opt span{flex:1}` (0,1,1 > 0,1,0).
+- `.card.program{background}` — pisa el zebra-striping `:nth-child`; gana por orden de fuente, el `!important` lo hace robusto. **Decisión PO: se queda** (intencional, no vale el riesgo por limpieza cosmética).
+
+**Parches superfluos REMOVIDOS (el `!important` no hacía trabajo, render idéntico):**
+- `.hint.active{padding}` — `.active` ya gana por especificidad.
+- `.c-lb{flex-shrink:0}` — nadie más setea flex-shrink ni shorthand.
+- `.wl-btn.wl-on{opacity:1}` — el `:not(.wl-on)` lo excluye; el `:hover` setea el mismo valor.
+
+### Deuda pendiente — `#hdr-programa`/`#hdr-ag` `position:relative!important;top:auto` (1721/1723)
+Un-stick de headers en un `@media`. Las líneas **1908/1909 hacen el mismo un-stick SIN
+`!important`** → el `!important` huele a parche de orden de fuente sobre el base `position:sticky`
+(475/476, misma especificidad de ID). NO trivial: requiere mapear las condiciones de los
+`@media` que se solapan + QA del comportamiento sticky (load-bearing visual). **Diferido a
+tarea aparte con su propio análisis.**
