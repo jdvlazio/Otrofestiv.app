@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `46e702b fix(i18n): · en toast_en_tu_plan + ag_pill_vistas PT → Assistidas`
+> Último commit: `fe60e54 fix(design-system): font-weight/font-size raw → tokens en index.html (6 reemplazos)`
 
 ---
 
