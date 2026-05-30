@@ -210,3 +210,23 @@ leaks de runtime); endónimos del selector se quedan en su idioma.
 El check quedó ciego (solo main.js + whitelist). Pendiente (decisión de tooling aparte):
 escanear `src/view/*` + `src/controller/*` y detectar concatenación `t()`+literal y
 literales de UI ES/EN, para que estos leaks no reaparezcan en silencio.
+
+## Design system — font-weight/font-size raw → tokens (punto 2 de auditoría · en revisión)
+
+Audit de `index.html` (`--w-*` 400-800, `--t-*` 8-30px). **6 reemplazos** (solo match exacto):
+- `font-weight:800` → `var(--w-display)` ×3 (posters editoriales: `.ed-lbl`, `.ed-title`, `.psp-ed-hdr span`)
+- `font-weight:700` → `var(--w-bold)` ×1 (`.sec-drop-hdr`)
+- `font-size:9px` → `var(--t-xs)` ×1 (`.main-nav-tab .tab-badge`)
+- `font-size:16px` → `var(--t-md)` ×1 (`.int-prio-btn`)
+
+Valores idénticos → cero cambio visual (confirmado en Chrome: tokens resuelven a su valor
+exacto; `.sec-drop-hdr` fw=700, `.tab-badge` fs=9px). NO reemplazados (documentado):
+- `@font-face` (74-78, `font-weight` 400-800): descriptores del archivo de fuente, no uso; `var()` no aplica.
+- Inputs `font-size:16px` (`.auth-email-inp`, `.sheet-input`, `.pin-display`): anti-zoom iOS (contexto especial; aunque 16px=`--t-md` exacto, tokenizar acopla el comportamiento iOS al token).
+- Sin token: `32px` (×2), `28px`, `23px`.
+- `font-size` en `cqi` (posters editoriales): unidades container-query, sin token.
+- `#dbg-ver` (`font-size:9px` inline, debug): fuera del scope de `<style>`.
+- `20px` (`--t-lg`/`--t-wordmark-d`, ambiguo): sin uso raw.
+
+Verificado: `validate.py` 30/31 (`tasks-sync` preexistente); Playwright sin fallos reales
+(T08 flaky confirmado aislado); Chrome ES/EN sin cambio visual. Bump pendiente post-sign-off.
