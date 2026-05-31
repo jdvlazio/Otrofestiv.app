@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `b454034 fix(design-system): botones padding/min-width raw → tokens + fit-content (punto 4)`
+> Último commit: `a7d54da chore(design-system): remove dead CSS from MVC layered refactor`
 
 ---
 
