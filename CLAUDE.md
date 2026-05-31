@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `02e1fd5 fix(design-system): quitar 3 !important superfluos en index.html (punto 3)`
+> Último commit: `b454034 fix(design-system): botones padding/min-width raw → tokens + fit-content (punto 4)`
 
 ---
 
