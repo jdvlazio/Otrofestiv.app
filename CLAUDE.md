@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `a7d54da chore(design-system): remove dead CSS from MVC layered refactor`
+> Último commit: `62da9ea chore: bundle v202605311507`
 
 ---
 

@@ -518,7 +518,10 @@ except Exception as e:
 # Cada string encontrado en auditoría Chrome debe añadirse a la lista.
 check = 'i18n-hardcoded'
 try:
-    code_only = _main_src if os.path.exists(_MAIN_JS) else ''
+    # p8 Wave 8: la UI renderizada migró a src/view + src/controller (main.js conserva
+    # wiring/constantes). Se escanean los 3 — NO src/i18n/i18n.js (fuente de verdad) ni
+    # el HTML estático de index.html (data-i18n con fallback legítimo).
+    code_only = (_main_src if os.path.exists(_MAIN_JS) else '') + '\n' + _view_all + '\n' + _controller_all
 
     # Strings de UI que deben ir siempre por t() — nunca hardcodeados
     # Fuente: auditorías Chrome EN/ES. Añadir aquí cada nuevo hallazgo.
@@ -548,11 +551,56 @@ try:
         if in_single or in_double or in_template:
             hardcoded_found.append(s)
 
-    if hardcoded_found:
-        for s in hardcoded_found:
-            fail(check, f"'{s}' hardcodeado en JS — debe usar t()")
-    else:
-        ok(check, f'{len(UI_STRINGS_MUST_USE_T)} strings de UI verificados — ninguno hardcodeado')
+    for s in hardcoded_found:
+        fail(check, f"'{s}' hardcodeado en JS — debe usar t()")
+
+    # ── Reverse-dictionary check (primario): un VALOR ES del diccionario que
+    # aparece como literal hardcodeado en view/controller = leak (alguien escribió
+    # el texto en vez de llamar t()). Captura español CON y SIN acentos — el
+    # diccionario es la verdad de terreno. Solo multi-palabra (≥1 espacio, ≥6 chars)
+    # para evitar colisiones con identificadores de modo / keys de 1 palabra.
+    # Excluye object-keys ('x':) y fallbacks legítimos (t(...)||'x').
+    _es_vals = {}
+    try:
+        _b = _i18n_src.find('const _I18N = {'); _d = 0; _e = _b
+        for _i, _c in enumerate(_i18n_src[_b:]):
+            if _c == '{': _d += 1
+            elif _c == '}':
+                _d -= 1
+                if _d == 0: _e = _b + _i + 1; break
+        _blk = _i18n_src[_b:_e]
+        _ms = re.search(r'es\s*:\s*{', _blk); _p = _ms.end() - 1; _d2 = 0; _esb = ''
+        for _i, _c in enumerate(_blk[_p:], _p):
+            if _c == '{': _d2 += 1
+            elif _c == '}':
+                _d2 -= 1
+                if _d2 == 0: _esb = _blk[_p+1:_i]; break
+        for _k, _v in re.findall(r'"([^"]+)"\s*:\s*"((?:[^"\\]|\\.)*)"', _esb):
+            _es_vals[_v.replace('\\"', '"')] = _k
+    except Exception:
+        pass
+
+    reverse_leaks = []
+    for _val, _key in _es_vals.items():
+        if ' ' not in _val or len(_val) < 6:
+            continue
+        for _pat in (f'>{_val}<', f'>{_val} ', f"'{_val}'", f'"{_val}"', f'`{_val}`'):
+            _idx = code_no_comments.find(_pat)
+            if _idx < 0:
+                continue
+            _before = code_no_comments[max(0, _idx - 4):_idx]
+            _after = code_no_comments[_idx + len(_pat) - 1: _idx + len(_pat) + 1]
+            if _before.rstrip().endswith('||'):
+                continue  # t(...)||'fallback' — t() sí se usa
+            if _pat[0] in "'\"" and _after.startswith(':'):
+                continue  # 'valor': — key de objeto, no UI
+            reverse_leaks.append((_key, _val))
+            break
+    for _key, _val in reverse_leaks:
+        fail(check, f"valor i18n '{_val[:50]}' hardcodeado en view/controller — usar t('{_key}')")
+
+    if not hardcoded_found and not reverse_leaks:
+        ok(check, f'{len(UI_STRINGS_MUST_USE_T)} whitelist + {len(_es_vals)} valores i18n verificados — sin hardcode')
 
     # ── Check dinámico: strings JS con español fuera de t() ──────────────────
     # Produce warnings (no falla el deploy) — puede tener falsos positivos
@@ -561,10 +609,12 @@ try:
         'includes(', 'PROGRAMA_CHIPS', 'FESTIVAL_DATES', 'DAY_SHORT',
         'DAYS_ES', 'DAYS_EN', 'var(--', 'replace(', 'toLowerCase(',
         'normTitle', '.json', 'regex', 'RegExp', 'https://',
+        'console.', # mensajes a consola (developer-facing, no UI)
         'Adolfo', 'SÁB 16', 'MIÉ 15', # venue/date literals en FESTIVAL_DATES Leviza
         'canvas vacío', # error interno, no UI visible
         'PROYECCIÓN SORPRESA', 'Valle de Aburrá', 'Plaza Proclamación', # venue/nombres Leviza
-        'Ciencia Ficción', 'Animación', # géneros PROGRAMA_CHIPS FICCI
+        'Ciencia Ficción', 'Ciencia ficción', 'Película de TV', 'Animación', # géneros TMDB / PROGRAMA_CHIPS
+        'Iberoamérica', 'Indígena', 'Muestra España', # chips de sección (data de festival)
         'Opción personalizada', # ya usa t() — falso positivo del dict
         'SÁB 18', # fecha FESTIVAL_DATES Leviza
     ]
@@ -589,6 +639,8 @@ try:
                 continue
             if ' ' not in text:
                 continue  # likely a key, not UI text
+            if text in _es_vals:
+                continue  # ya en diccionario — lo cubre el reverse-check (FAIL)
             # Skip if t() appears right before the quote
             pos = m.start()
             before = line[max(0, pos-3):pos]

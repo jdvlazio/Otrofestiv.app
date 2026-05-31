@@ -206,10 +206,8 @@ copy aprobado por Juan:
 Decisiones: términos universales (min/h/Q&A/vs) y meta/OG/SEO estático se dejan (no son
 leaks de runtime); endónimos del selector se quedan en su idioma.
 
-### Deuda pendiente — endurecer `validate.py [i18n-hardcoded]`
-El check quedó ciego (solo main.js + whitelist). Pendiente (decisión de tooling aparte):
-escanear `src/view/*` + `src/controller/*` y detectar concatenación `t()`+literal y
-literales de UI ES/EN, para que estos leaks no reaparezcan en silencio.
+### Deuda pendiente — endurecer `validate.py [i18n-hardcoded]` (RESUELTA ✅ · punto 6)
+~~El check quedó ciego (solo main.js + whitelist).~~ Resuelto: ver "Design system — punto 6" al final.
 
 ## Design system — font-weight/font-size raw → tokens (punto 2 de auditoría · en revisión)
 
@@ -318,3 +316,40 @@ toda remoción de CSS exige un gate de liveness, no solo de sintaxis.
 **Verificación:** brace-balance 0 · 0 malformados · validate.py 30/31 · Playwright 68 passed
 (16 flaky conocidos, pasan en retry) · smoke visual Chrome EN+ES en las 4 tabs (Programa,
 Intereses, Planear, Mi Plan) + ficha + estados WL/prio/`in-wl`/`count-badge`/timeline `mplan-wk-*`.
+
+## Design system — endurecer validate.py [i18n-hardcoded] (punto 6 · en revisión · sign-off pendiente)
+
+**Gap raíz:** el check `[i18n-hardcoded]` solo escaneaba `main.js` (la UI migró a `src/view/`
++ `src/controller/` en el refactor MVC) contra una whitelist de 13 strings + un heurístico
+solo-acentos. Por eso pasaron ~55 leaks en #152.
+
+**Fix (3 partes):**
+1. **Scope ampliado:** el check ahora escanea `_view_all` + `_controller_all` + `_main_src`
+   (NO `i18n.js` = fuente de verdad, NO el HTML estático = `data-i18n` con fallback legítimo).
+2. **Reverse-dictionary check (NUEVO, primario, FAIL):** un VALOR ES del diccionario que
+   aparece como literal hardcodeado = leak. Captura español CON y SIN acentos (el diccionario
+   es la verdad de terreno — esto es lo que habría cazado #152). Solo multi-palabra (≥1 espacio,
+   ≥6 chars); excluye object-keys (`'x':`) y fallbacks (`t()||'x'`). **0 falsos positivos empíricos.**
+3. **Heurístico de acentos (WARN):** ahora sobre view+controller, con `SAFE_MARKERS` ampliado
+   (géneros TMDB, chips de sección, `console.`) + skip de valores ya en diccionario (los cubre
+   el reverse-check). Caza español NUEVO aún no en el diccionario.
+
+**Leak real detectado y corregido** (lo encontró el reverse-check durante el audit): modal de
+conflicto en `src/view/feedback.js` tenía 2 strings ES hardcodeadas mientras el resto del modal
+usaba `t()`. Copy aprobado por Content Designer:
+- `conflict_plan_titulo` — ES "Conflicto con tu plan" · EN "Conflicts with your plan" · PT "Conflito com seu plano"
+- `conflict_choca_intro` — ES "Esta función choca con:" · EN "This screening conflicts with:" · PT "Esta sessão conflita com:"
+  (terminología "función" por consistencia con el resto de la app)
+
+**Decisión sobre check `[dead-css]`:** NO se añade (over-engineering — el CSS muerto es
+inofensivo, alto riesgo de FP por construcción dinámica de clases). El gate de liveness de #157
+se preserva como herramienta puntual de refactor, no como check de CI.
+
+**Verificación:** node --check (i18n.js + feedback.js) · validate.py 30/31 (`[i18n-hardcoded]`:
+13 whitelist + 378 valores i18n verificados, sin hardcode · paridad 402 keys ES/EN) ·
+Playwright 68 passed · modal renderizado vía import dinámico con copy correcto (DOM-verificado ES).
+
+### Deuda relacionada (no en scope) — `[i18n-complete]` también solo mira main.js+i18n.js
+`t('key')` usados en `src/view`/`src/controller` no se validan contra el diccionario. Un
+`t('typo_key')` en un módulo no se detectaría. Mismo patrón de fix (ampliar scope al corpus)
+si se quiere cerrar — follow-up menor.
