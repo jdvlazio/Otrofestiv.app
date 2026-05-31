@@ -29,9 +29,9 @@ export function showConflictModal(conflicts, onConfirm){
   const modal=document.createElement('div');
   modal.id='conflict-modal';modal.className='conflict-modal';
   modal.innerHTML=`<div class="conflict-modal-box">
-    <div class="conflict-modal-hdr">Conflicto con tu plan</div>
+    <div class="conflict-modal-hdr">${t('conflict_plan_titulo')}</div>
     <div class="conflict-modal-body">
-      Este horario choca con:<br>${names}<br><br>
+      ${t('conflict_choca_intro')}<br>${names}<br><br>
       ${t('plan_continuar_quitar')}
     </div>
     <div class="conflict-modal-btns">
