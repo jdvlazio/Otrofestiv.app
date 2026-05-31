@@ -245,12 +245,8 @@ lógicos. Clasificación por especificidad (qué regla previa los obliga):
 - `.c-lb{flex-shrink:0}` — nadie más setea flex-shrink ni shorthand.
 - `.wl-btn.wl-on{opacity:1}` — el `:not(.wl-on)` lo excluye; el `:hover` setea el mismo valor.
 
-### Deuda pendiente — `#hdr-programa`/`#hdr-ag` `position:relative!important;top:auto` (1721/1723)
-Un-stick de headers en un `@media`. Las líneas **1908/1909 hacen el mismo un-stick SIN
-`!important`** → el `!important` huele a parche de orden de fuente sobre el base `position:sticky`
-(475/476, misma especificidad de ID). NO trivial: requiere mapear las condiciones de los
-`@media` que se solapan + QA del comportamiento sticky (load-bearing visual). **Diferido a
-tarea aparte con su propio análisis.**
+### Deuda pendiente — `#hdr-programa`/`#hdr-ag` `position:relative!important;top:auto` (RESUELTA ✅ · punto 7)
+Un-stick de headers en un `@media`. ~~Diferido a tarea aparte.~~ Resuelto: ver "Design system — punto 7" abajo.
 
 ## Design system — botones: padding/sizing raw → tokens (punto 4 · en revisión)
 
@@ -353,3 +349,24 @@ Playwright 68 passed · modal renderizado vía import dinámico con copy correct
 `t('key')` usados en `src/view`/`src/controller` no se validan contra el diccionario. Un
 `t('typo_key')` en un módulo no se detectaría. Mismo patrón de fix (ampliar scope al corpus)
 si se quiere cerrar — follow-up menor.
+
+## Design system — quitar !important sticky #hdr-programa/#hdr-ag (punto 7 · en revisión · sign-off pendiente)
+
+Cierra la deuda diferida del punto 3. Los headers tenían `position:relative!important;top:auto!important`
+en `@media(max-width:768px)` para des-stickearse (mobile: `.topbar` es el único sticky).
+
+**Veredicto del audit: `!important` superfluo (3 pruebas convergentes):**
+1. **Orden de fuente ya gana** — base (`#hdr-*{position:sticky}`) y el bloque mobile tienen idéntica
+   especificidad de ID (1,0,0); el `@media` no añade peso; el bloque va después en el source → gana
+   sin `!important`. Los dos `@media` (max-768 / min-768) son mutuamente excluyentes.
+2. **Gemelo desktop** — el bloque `@media(min-width:768px)` hace el mismo un-stick
+   (`position:relative;top:auto`) sobre los mismos IDs, contra la misma base, **sin `!important`**, y funciona.
+3. **Sin inline que vencer** — `_fixStickyOffset` solo setea variables CSS en `:root`; el único inline
+   en esos headers es `display:none`. No hay selector más específico que reponga `sticky`.
+
+**Fix:** quitar los 4 `!important` (2 en `#hdr-programa`, 2 en `#hdr-ag`) → idéntico al gemelo desktop.
+Cero cambios a padding/background/border.
+
+**Verificación (sticky es load-bearing):** brace-balance 0 · validate.py 30/31 · `getComputedStyle` en
+**2 breakpoints** — mobile 375: `.topbar` sticky, headers `relative` ✓ · desktop 1280: `.topbar` +
+`.programa-mode-bar` sticky, headers `relative` ✓ · scroll-test mobile: chrome pegado en top:0 sin gap.
