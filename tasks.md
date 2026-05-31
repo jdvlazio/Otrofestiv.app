@@ -279,3 +279,42 @@ pero expande más allá de los candidatos nombrados.
 hubiera regla → no es razón para expandirlo. Si en algún momento se crean tokens de sizing
 vertical (`--sp-btn-v` o similar), se hace el barrido completo. Hasta entonces queda como
 **deuda conocida documentada**, no follow-up inmediato.
+
+## Design system — dead-CSS removal (punto 5 · en revisión · sign-off visual pendiente)
+
+Eliminación de CSS muerto heredado del refactor MVC por capas (Wave 6-7).
+
+**Enfoque (corregido tras incidente de integridad):**
+1. **Set autoritativo dead-safe** = clases definidas en el CSS cuyo token NO aparece con
+   límites estrictos `(?<![\w-])X(?![\w-])` en NINGÚN `src/*.js`/`.html` ni en el markup
+   (post-`</style>`). Captura `class="..."`, `classList`, `closest/querySelector`, **y clases
+   pasadas como argumento a helpers** (`_posterThumb(f,'int-item-poster')`) — esto último era
+   el punto ciego del set-diff original. Resultado: **244 dead-safe** de 912 definidas.
+2. **Procesador per-part**: por cada regla, elimina solo los selectores-coma cuyos
+   required-classes ∈ dead_safe (ese selector no matchea nada); conserva miembros vivos; quita
+   la regla entera solo si TODOS sus selectores mueren. Preserva comentarios (enmascarados),
+   respeta `@media`/`:not()`/`[attr]`. **Seguro por construcción**: nunca quita estilo de un
+   elemento vivo. → **329 reglas removidas, 12 selectores recortados** (miembros vivos intactos).
+3. Cleanup de artefactos: `@media` vacíos eliminados, runs de líneas en blanco colapsados.
+4. **Gate de integridad** (la red que faltaba): `net-removed ∩ used == 0`. Verificado.
+
+**Conservador a propósito:** clases muertas pero referenciadas defensivamente (`querySelector('.card,.poster-card')`)
+o mencionadas en comentarios (`card`, `selected`, `conflict`, `program`) quedan como token
+"usado" → se **conservan** (se deja algo de CSS muerto antes que arriesgar regresión).
+
+**Comentarios huérfanos:** NO se tocan (no son CSS muerto; distinguir header-de-sección de
+header-padre no es automatizable con seguridad → fuera de scope quirúrgico).
+
+### Incidente de integridad (detectado y revertido antes de cualquier push)
+Un primer intento por lotes usó un `dead_all.txt` mal generado (el set de "usados" no barría
+`src/*.js` correctamente) + un error manual mío (quitar `ag-fi-btn` vivo como colateral de
+grupos multi-clase en el lote ag-*). Resultado: **31 clases vivas borradas** (regresiones
+confirmadas: `ag-fi-btn` feedback/touch-action, `int-item-poster`, `sync-dot`, `count-badge.cb-*`,
+estados `wl-on`/`w-on`/`prio-on`, etc.). El safety-net de entonces (brace-balance + validate.py)
+solo cubría **sintaxis**, no **liveness** → pasó silencioso. **Recuperación:** reset a base +
+re-ejecución con el enfoque autoritativo de arriba + gate de integridad. Lección incorporada:
+toda remoción de CSS exige un gate de liveness, no solo de sintaxis.
+
+**Verificación:** brace-balance 0 · 0 malformados · validate.py 30/31 · Playwright 68 passed
+(16 flaky conocidos, pasan en retry) · smoke visual Chrome EN+ES en las 4 tabs (Programa,
+Intereses, Planear, Mi Plan) + ficha + estados WL/prio/`in-wl`/`count-badge`/timeline `mplan-wk-*`.
