@@ -274,5 +274,8 @@ Audit de selectores btn/pill/chip (tokens spacing: `--sp-1`=4 … `--sp-btn`=14,
 (`11/13px 4px`), `.corto-rate-btn` (`2px 8px`): tienen un eje con token exacto (4px/8px) y el
 otro off-scale. Tokenizar deja un shorthand token+raw (`var(--sp-1) 9px`). **Hay precedente
 en el código** (`.prio-pill`, `.ag-fi-btn`, `.btn-tertiary` ya mezclan), así que es defensible,
-pero expande más allá de los candidatos nombrados → **a decisión de PO** (lote follow-up si se
-quiere). No aplicado en este PR.
+pero expande más allá de los candidatos nombrados.
+**DECISIÓN (Senior Dev + PO):** NO por ahora. El precedente de mezcla existía antes de que
+hubiera regla → no es razón para expandirlo. Si en algún momento se crean tokens de sizing
+vertical (`--sp-btn-v` o similar), se hace el barrido completo. Hasta entonces queda como
+**deuda conocida documentada**, no follow-up inmediato.
