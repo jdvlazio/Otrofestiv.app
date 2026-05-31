@@ -492,8 +492,6 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 
 /* .agbar-lbl — estilos compartidos en .fbar-lbl,.agbar-lbl */
 
-/* ── Búsqueda ── */
-
 /* ── Modal de conflictos ── */
 .conflict-modal{position:fixed;top:0;left:0;right:0;bottom:0;background:var(--overlay-70);z-index:9999;display:flex;align-items:center;justify-content:center;padding:var(--sp-5)}
 .conflict-modal-box{background:var(--surf-2);border:1px solid var(--bdr);border-radius:var(--r);max-width:320px;width:100%;overflow:hidden}
@@ -714,10 +712,6 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
   
 }
 
-/* Card body — layout de poster + contenido */
-
-/* Card tipografía */
-
 /* ── Toggle Por Horario / Por Película — mismo sistema que fdr-btn ── */
 .carta-mode-toggle{display:none} /* reemplazado por programa-mode-bar */
 /* ── Programa: mode bar Explorar/Hoy/Mañana ── */
@@ -770,8 +764,6 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .plist-heart{font-size:var(--t-icon);color:var(--amber);flex-shrink:0;cursor:pointer;padding:6px;border-radius:50%;transition:background var(--tr-base),transform 200ms cubic-bezier(.34,1.56,.64,1)/* bounce intencional */;display:flex;align-items:center;justify-content:center;align-self:center}
 /* Mi Plan — modo lista compacta */
 
-/* Switch en progress bar */
-
 .plist-heart.empty{color:var(--gray)}
 .plist-heart:active{background:var(--amber-10)}
 /* ── Grid Por Película ── */
@@ -812,15 +804,9 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 /* Indicador ♥ en lista */
 .poster-wl-dot{position:absolute;bottom:5px;right:5px;font-size:var(--t-base);line-height:1;color:var(--white);filter:drop-shadow(0 1px 2px rgba(0,0,0,.8));background:none;border:none;padding:0;cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
 .poster-wl-dot:active{opacity:.6;transform:scale(.88)}
-/* Badge CORTOS */
-
 /* Badge AHORA / Ya pasó */
 .poster-now{position:absolute;top:5px;left:5px;background:var(--green);color:var(--black);font-size:var(--t-badge);font-weight:var(--w-display);letter-spacing:.5px;padding:2px 5px;border-radius:var(--r-sm);line-height:1.4}
 .poster-past-badge{position:absolute;top:5px;left:5px;background:var(--overlay-60);color:var(--gray2);font-size:var(--t-badge);font-weight:var(--w-bold);padding:2px 4px;border-radius:var(--r-sm);line-height:1.4}
-/* ── Vista horario compacta — grid 2 columnas ── */
-
-/* ── Franja de acciones en tarjetas ── */
-
 /* ── Expansión inline de funciones ── */
 .pelicula-day{font-size:var(--t-label);font-weight:var(--w-bold);color:var(--amber);letter-spacing:.8px;text-transform:uppercase;white-space:nowrap;cursor:pointer;-webkit-tap-highlight-color:transparent;transition:opacity var(--tr-base);flex-shrink:0;width:48px}
 .pelicula-day:active{opacity:.6}
@@ -888,7 +874,6 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .rating-action-btn{width:100%;border:none;border-radius:var(--r-pill);font-family:var(--font);font-size:var(--t-base);font-weight:var(--w-bold);padding:var(--sp-btn) 0;cursor:pointer;transition:all var(--tr-smooth)}
 /* ── Sheet de confirmación de plan ── */
 /* ── Sheet límite de prioridades ── */
-/* ── Sheet añadir a Intereses desde Programa ── */
 /* ── Sheet conflicto de horario ── */
 /* ── Sheet rating post-función desde Mi Plan ── */
 .pv-rating-overlay{position:fixed;inset:0;background:var(--overlay-blur-78);backdrop-filter:blur(12px);z-index:9300;opacity:0;pointer-events:none;transition:opacity .25s}
@@ -1668,10 +1653,6 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
   
   .poster-grid{grid-template-columns:repeat(6,1fr)}
   .pg-miplan{grid-template-columns:repeat(6,1fr)}
-
-  /* Intereses hover */
-
-  
 
   /* Cards hover */
   .card:hover:not(.conflict){
@@ -2552,7 +2533,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 <!-- ── Intereses / Planear: header unificado — fuera de ag-view ── -->
 <div class="ag-view" id="ag-view"></div>
 
-<script type="module" src="/src/main.js?v=202605311821"></script>
+<script type="module" src="/src/main.js?v=202605311852"></script>
 
 <!-- Festival switcher bottom sheet -->
 <div class="auth-sheet" id="auth-sheet" data-close-bg="AuthSheet">

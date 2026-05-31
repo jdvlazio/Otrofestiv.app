@@ -296,8 +296,8 @@ Eliminación de CSS muerto heredado del refactor MVC por capas (Wave 6-7).
 o mencionadas en comentarios (`card`, `selected`, `conflict`, `program`) quedan como token
 "usado" → se **conservan** (se deja algo de CSS muerto antes que arriesgar regresión).
 
-**Comentarios huérfanos:** NO se tocan (no son CSS muerto; distinguir header-de-sección de
-header-padre no es automatizable con seguridad → fuera de scope quirúrgico).
+**Comentarios huérfanos:** diferidos aquí (no son CSS muerto; distinguir header-de-sección de
+header-padre no es automatizable con seguridad). **Resueltos en el punto 8** (abajo).
 
 ### Incidente de integridad (detectado y revertido antes de cualquier push)
 Un primer intento por lotes usó un `dead_all.txt` mal generado (el set de "usados" no barría
@@ -370,3 +370,27 @@ Cero cambios a padding/background/border.
 **Verificación (sticky es load-bearing):** brace-balance 0 · validate.py 30/31 · `getComputedStyle` en
 **2 breakpoints** — mobile 375: `.topbar` sticky, headers `relative` ✓ · desktop 1280: `.topbar` +
 `.programa-mode-bar` sticky, headers `relative` ✓ · scroll-test mobile: chrome pegado en top:0 sin gap.
+
+## Design system — limpiar comentarios huérfanos en CSS (punto 8 · en revisión · sign-off pendiente)
+
+Cierra la deuda diferida del punto 5: headers de sección que quedaron sin reglas tras el dead-CSS de #157.
+
+**Metodología (conservadora, evidencia > adivinanza):** el caso peligroso es borrar un header-padre
+legítimo o una nota deliberada. Las 31 candidatas (comentario seguido de comentario) NO se distinguen
+por estructura, así que **clasifiqué cada tópico contra la existencia real de sus clases** (`grep`):
+un header se elimina **solo si su tópico tiene 0 reglas en TODO el CSS**.
+
+**Eliminados — 9 huérfanos confirmados (0 reglas):**
+`── Búsqueda ──`, `Card body — layout`, `Card tipografía`, `Switch en progress bar`, `Badge CORTOS`,
+`── Vista horario compacta ──`, `── Franja de acciones en tarjetas ──`, `── Sheet añadir a Intereses
+desde Programa ──`, `Intereses hover`. (19 líneas: 9 comentarios + blancos colaterales.)
+
+**Conservados a propósito:** notas de estilos compartidos (`.agbar-lbl`, `.ag-section-lbl`, `.saved-day-lbl`),
+decisiones (`--orange eliminado`), headers multi-línea que sí encabezan reglas (`Buscador unificado`,
+`Grid Por Película`, `EMPTY-STATE`, `DESKTOP TOPBAR`), y tópicos con reglas vivas en otro lado
+(`Filtros sección`:1, `Badges`/`Notices`:meta-badge, `Utilidades`:21, `Sheet confirmación`:2,
+`Sheet límite prioridades`:37, `Mi Plan modo lista`:plist-*16, `Saved items`:saved-item). Ante la duda, conservar.
+
+**Verificación:** diff **0 insertions / 19 deletions, solo comentarios + blancos** (ninguna regla tocada) ·
+brace-balance 0 · validate.py 30/31 · Playwright 69 passed. Cambio inerte por construcción (los comentarios
+CSS no renderizan).
