@@ -22,4 +22,7 @@ Thumbs.db
 # Playwright
 playwright-report/
 test-results/
-test-results/
+test-results.json
+
+# Claude Code (config local de harness, no del proyecto)
+.claude/
