@@ -486,6 +486,22 @@ camino deja opacity en 0.
 visibilityState:hidden: CSSOM confirma keyframe opacity 0→1 + transform juntos y timings 0/700/1400ms;
 step1 (animación throttled) → opacity:0, step2 (floor) → opacity:1. Selector = Tribeca (sin brinco).
 
+## fix(during-festival #2): _festDate parsea AM/PM (screeningPassed/dayFullyPassed)
+
+**Bug:** `_festDate(dateStr,time)` armaba la fecha por concatenación (`dateStr+'T'+time+':00'+TZ_OFFSET`),
+válido solo con "HH:MM" 24h. Tribeca trae las 476 funciones en AM/PM ("8:00 PM") → Invalid Date.
+`screeningPassed` (film.js) y `dayFullyPassed` (time.js) llamaban `_festDate` con la hora cruda →
+`simNow()>InvalidDate` = siempre false → funciones pasadas nunca se atenúan, días pasados nunca se
+grisean/auto-avanzan. Solo en curso, solo Tribeca (único festival activo con AM/PM; share.js/
+persistence.js ya envolvían con to24h, los demás call-sites no).
+
+**Fix (1 punto):** `_festDate` normaliza AM/PM→24h internamente (`minToStr(toMin(time))`), cubre TODOS
+los callers. 24h y los que pre-convierten pasan sin cambio (regex no matchea "20:00").
+
+**Evidencia:** node — _festDate("8:00 PM") ahora válido (antes INVALID). Playwright fresh-import del
+módulo servido: dayFullyPassed('2026-06-06')=true, ('2026-06-07')=false, ('2026-06-03')=true a NYC
+jun7 19:30 (exacto). validate.py 30/31. Regression 69 passed (T11 flaky conocido, pasa aislado).
+
 ## fix(during-festival #1): anclar "ahora" del modo en-curso a la zona del festival
 
 **Bug:** la lógica minuto-del-día (now-line, contador, "en curso", clasificación done/active/future,
@@ -509,5 +525,3 @@ no se tocan (ya correctas vía _festDate+offset).
 19:30: festNowMin=1170 + simToday=2026-06-07 + isNowPlaying=true IDÉNTICOS en las 3 (device-local
 daba 1170/1110/1410). EN/PT/ES: Programa en-curso renderiza traducido (Today/Hoje, Tomorrow/Amanhã),
 sin keys crudas ni errores JS. node --check x4 · validate 30/31 · regression 72 passed.
-
-Nota: independiente de #2 (AM/PM); ambos tocan time.js (funciones distintas) → mergear #2 luego #1.
