@@ -395,3 +395,28 @@ ausencia de `el.animate` (presente en iOS 13.4+), y auto-dismiss del splash en C
 **Verificación:** node --check · validate.py 30/31 · Playwright 69 passed (0 fail) · smoke web:
 los 3 bloques del splash llegan a `opacity:1, transform:none` (path onfinish confirmado en navegador).
 Confirmación final pendiente en iPhone (build/OTA + Web Inspector).
+
+## fix(splash): blanco + brinco de idioma en WKWebView — fix integral (2 bugs, mismo origen)
+
+Ambos bugs son de "primer paint antes de que JS inicialice" en la app nativa (Capacitor/WKWebView).
+Web (Chrome/Safari) no los exhibía.
+
+**Bug 1 — splash invisible.** La entrada hacía `el.style.opacity='0'` inline + `el.animate(…,{fill:'forwards'})`,
+gated tras doble-rAF. Si el timeline de la animación está throttled (vista tras el launch-screen nativo)
+o WebKit no persiste `fill:'forwards'`, los elementos quedaban atascados en `opacity:0` → splash vacío.
+PR #162 (onfinish/oncancel/setTimeout) no bastó: el fallback vivía DENTRO del rAF throttleable.
+**Fix:** entrada 100% CSS y **opacity NUNCA se anima** — `.splash-*{opacity:1}` fijo, la animación CSS
+mueve SOLO `transform` (slide-up). Peor caso: contenido visible sin deslizarse. JS ya no toca opacity.
+(Iteración cazada en smoke web: un primer intento animaba opacity con `fill-mode:both` y seguía
+quedando en 0 bajo throttle → se quitó opacity de la animación.)
+
+**Bug 2 — brinco de idioma.** El parche inline pre-paint solo cubría `localStorage==='en'` → en install
+fresca con sistema en EN/PT (sin lang guardado) mostraba ES hardcodeado y luego saltaba al idioma del
+sistema. **Fix:** el parche inline ahora replica la detección de main.js (`lang guardado OR
+navigator.language → es/en/pt`) con el copy exacto del diccionario (incl. PT) → primer paint ya correcto.
+
+**Diagnóstico temporal incluido (quitar tras confirmar en iPhone):** console.logs `[splash i18n] lang=…`,
+`[splash] init · _lang=… · build=…`, `[splash] opacity tras paint → …`.
+
+**Verificación:** node --check · validate.py 30/31 · Playwright 72 passed · smoke web: opacity de los 3
+bloques = 1 (visible) bajo throttle headless + parche EN aplicado al primer paint. Confirmación final en iPhone (OTA + Web Inspector).
