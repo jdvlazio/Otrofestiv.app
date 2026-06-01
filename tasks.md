@@ -370,3 +370,28 @@ Cero cambios a padding/background/border.
 **Verificación (sticky es load-bearing):** brace-balance 0 · validate.py 30/31 · `getComputedStyle` en
 **2 breakpoints** — mobile 375: `.topbar` sticky, headers `relative` ✓ · desktop 1280: `.topbar` +
 `.programa-mode-bar` sticky, headers `relative` ✓ · scroll-test mobile: chrome pegado en top:0 sin gap.
+
+## fix(splash): animación de entrada no revela en WKWebView (Capacitor) — RESUELTO
+
+**Síntoma:** en la app nativa (Capacitor/WKWebView) el splash se veía en blanco/vacío "sin
+animación"; en Chrome/Safari (web) funcionaba. El resto de la app (OTA incluido) funcionaba bien.
+
+**Causa raíz:** la entrada del splash (`src/main.js`) hacía `el.style.opacity='0'` inline y luego
+`el.animate([0→1], {fill:'forwards'})`. La visibilidad final dependía 100% de que `fill:'forwards'`
+persistiera. **WebKit no persiste `fill:'forwards'` de forma fiable sobre un `opacity:0` inline**
+(+ posible throttling de rAF/animaciones mientras la vista está tras el launch-screen nativo) →
+wordmark + tagline + selector + botón Entrar quedaban atascados en `opacity:0` → splash vacío.
+Blink (Chrome) sí persiste → por eso web funcionaba. El resto de la app no usa este patrón.
+
+**Fix:** `_reveal()` robusto — la visibilidad ya NO depende de `fill:'forwards'`:
+- `onfinish` + `oncancel` fijan el estado visible al terminar la animación.
+- `setTimeout(delay+duration+400)` como red de seguridad si WKWebView throttlea y onfinish no dispara.
+- guards: `prefers-reduced-motion` o `el.animate` ausente/lanza → mostrar directo.
+Cuando la animación funciona, la entrada es idéntica; peor caso pasa de "invisible" a "sin animación".
+
+**Descartado en el diagnóstico:** prefers-reduced-motion (su rama hace visible, no invisible),
+ausencia de `el.animate` (presente en iOS 13.4+), y auto-dismiss del splash en Capacitor (no existe).
+
+**Verificación:** node --check · validate.py 30/31 · Playwright 69 passed (0 fail) · smoke web:
+los 3 bloques del splash llegan a `opacity:1, transform:none` (path onfinish confirmado en navegador).
+Confirmación final pendiente en iPhone (build/OTA + Web Inspector).
