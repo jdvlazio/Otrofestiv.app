@@ -462,3 +462,26 @@ del subsistema splash). reduce-motion: estado final visible, sin animar.
 **Verificación:** node --check · validate.py 30/31 · Playwright 69 passed · smoke web: los 3 bloques
 llegan a `opacity:1` AUN con `visibilityState:hidden` (throttle) · selector muestra "Tribeca Festival"
 (no placeholder) en estado visible.
+
+## fix(splash): fade+slide juntos + delays largos (0/700/1400) con hard-floor anti-invisible
+
+**Ajuste 1 — delays:** wordmark 0ms · selector 700ms · tagline 1400ms, 600ms c/u (~2s total).
+**Ajuste 2 — opacity + transform animan JUNTOS** (`@keyframes splashIn{0%{opacity:0;translateY(16px)} 100%{opacity:1;none}}`).
+
+**Veredicto técnico (clave):** animar opacity en `@keyframes` CSS NO es throttle-safe — el throttle es
+del document timeline (pausa CSS Animations Y WAAPI por igual bajo visibilityState:hidden). Mientras
+cualquier fase de la animación aplica (active o fill) PISA la regla de reposo `opacity:1` (origen CSS
+Animations > author normal). Ningún fill-mode lo salva: `both/backwards` → from{0} durante el delay;
+`forwards/none` → flash + atasco en la fase activa. Verificado esta sesión (la versión opacity-both dio 0).
+
+**Solución (CSS cosmético + hard-floor JS):** el `@keyframes` hace el fade+slide; una regla estática
+`.splash-anim-in{opacity:1}` es el reposo visible; un hard-floor JS (main.js, relativo al inicio real
+de la animación: último delay 1400 + 600 dur + 200 margen = 2200ms) hace `style.animation='none'` →
+la animación deja de aplicar → cae a la regla estática → opacity:1 garantizado. El visual NUNCA depende
+de JS (distinto del fiasco WAAPI). En foreground el doc nunca throttlea → el fade siempre se ve; el floor
+es no-op (mismos valores). El fallback inline (main.js no corre) trae su propio hard-floor → ningún
+camino deja opacity en 0.
+
+**Verificación:** node --check · validate.py 30/31 · Playwright 73 passed · smoke determinístico bajo
+visibilityState:hidden: CSSOM confirma keyframe opacity 0→1 + transform juntos y timings 0/700/1400ms;
+step1 (animación throttled) → opacity:0, step2 (floor) → opacity:1. Selector = Tribeca (sin brinco).

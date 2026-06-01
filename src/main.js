@@ -633,7 +633,7 @@ FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202606010908';
+const BUILD_VERSION='202606010945';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';
@@ -1472,7 +1472,22 @@ if(window.Capacitor?.Plugins?.CapacitorUpdater){
   // el cambio placeholder→activo ocurre tras opacity:0 (invisible). Doble rAF
   // asegura que el contenido poblado se commitee antes de animar la entrada.
   const _spEl=document.getElementById('otrofestiv-splash');
-  if(_spEl){ requestAnimationFrame(function(){requestAnimationFrame(function(){_spEl.classList.add('splash-anim-in');});}); }
+  if(_spEl){
+    requestAnimationFrame(function(){requestAnimationFrame(function(){
+      _spEl.classList.add('splash-anim-in');
+      // Hard-floor anti-invisible (lección del subsistema splash): la entrada anima
+      // opacity con fill:both → bajo throttle del timeline (doc oculto) se quedaría
+      // en from{opacity:0}. Tras la ventana total (último delay 1400 + 600 dur = 2000,
+      // +200 margen) quitar la animación → cae a la regla estática .splash-anim-in →
+      // opacity:1. En foreground la animación ya terminó: no-op (mismos valores). Es
+      // relativo al inicio real de la animación (este rAF) → nunca corta el fade.
+      setTimeout(function(){
+        ['.splash-wordmark','.splash-action','.splash-tagline'].forEach(function(s){
+          var el=_spEl.querySelector(s); if(el) el.style.animation='none';
+        });
+      },2200);
+    });});
+  }
 })();
 
 // ── Init: el splash siempre se muestra ─────────────────────────────
