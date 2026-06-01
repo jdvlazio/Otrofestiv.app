@@ -440,3 +440,25 @@ Resueltas las tres:
 - Como el SwiftUI carga producción directo (no @capgo), **los fixes web (capa 3) llegan vía producción en el próximo cold-launch — sin OTA.** El launch screen + WKWebView (capas 1-2) requieren **rebuild de Xcode** (no OTA).
 
 **Diagnóstico:** los `console.log` temporales `[splash …]` se quitaron tras confirmar en iPhone (este PR).
+
+## fix(splash): entrada escalonada + gate del selector (sin brinco de festival)
+
+**Brinco:** `splash-sel-name`/`splash-sel-meta` traen placeholder estático en el HTML y main.js
+los sobrescribe con el festival activo (síncrono, FESTIVAL_CONFIG estático) → el cambio era visible.
+
+**Fix (gate por clase):** los 3 bloques (wordmark/action/tagline) arrancan `opacity:0`. main.js
+puebla el selector y RECIÉN ahí (doble rAF) agrega `.splash-anim-in` al `#otrofestiv-splash` → el
+cambio placeholder→activo ocurre tras opacity:0 (invisible). Fallback inline (1.5s) por si main.js
+no corre. Entrada escalonada: wordmark 0ms · selector 250ms · tagline 500ms (slide-up 500ms, ease
+cubic-bezier(.22,1,.36,1)).
+
+**Decisión de robustez (clave):** la OPACITY se revela con **regla estática** disparada por la clase
+(instantánea, jamás animada); la animación CSS mueve **solo `transform`**. Razón: animar opacity con
+`fill:both` la deja en 0 si el timeline se throttlea (verificado en smoke: con `visibilityState:hidden`
+la versión con opacity animada quedaba en 0; la estática da opacity:1 siempre). Trade-off: la aparición
+es instantánea + slide escalonado, no un fade gradual de opacity — pero **nunca invisible** (la lección
+del subsistema splash). reduce-motion: estado final visible, sin animar.
+
+**Verificación:** node --check · validate.py 30/31 · Playwright 69 passed · smoke web: los 3 bloques
+llegan a `opacity:1` AUN con `visibilityState:hidden` (throttle) · selector muestra "Tribeca Festival"
+(no placeholder) en estado visible.
