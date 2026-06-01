@@ -633,7 +633,7 @@ FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202606010821';
+const BUILD_VERSION='202606010908';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';
@@ -1468,6 +1468,11 @@ if(window.Capacitor?.Plugins?.CapacitorUpdater){
     if(n) n.textContent=cfg.name;
     if(m) m.textContent=`${cfg.city} · ${_langDates(cfg)}${cfg.year?' '+cfg.year:''}`.trimEnd();
   }
+  // Revelar el splash recién cuando el selector YA tiene el festival correcto:
+  // el cambio placeholder→activo ocurre tras opacity:0 (invisible). Doble rAF
+  // asegura que el contenido poblado se commitee antes de animar la entrada.
+  const _spEl=document.getElementById('otrofestiv-splash');
+  if(_spEl){ requestAnimationFrame(function(){requestAnimationFrame(function(){_spEl.classList.add('splash-anim-in');});}); }
 })();
 
 // ── Init: el splash siempre se muestra ─────────────────────────────
