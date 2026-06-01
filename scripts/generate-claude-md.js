@@ -209,7 +209,7 @@ ${featuresSection}
 
 ## CI — GitHub Actions
 
-- **bump-and-validate.yml:** solo corre \`python3 validate.py\`. El bump de versión es responsabilidad local — correr \`node scripts/bump-version.js\` antes de cada push.
+- **bump-and-validate.yml:** corre \`python3 validate.py\` **y** los unit tests de dominio (\`node --test tests/unit/*.test.js\`) — ambos deben pasar para que el job quede verde. (Pese al nombre, NO hace bump: el bump de versión es responsabilidad local — correr \`node scripts/bump-version.js\` antes de cada push.) Ojo: cambiar la firma/deps de una fn de dominio (ej. un nuevo \`import\` interno) suele requerir actualizar \`tests/lib/load-domain.js\` (DEFAULT_FNS) además del test.
 - **playwright.yml:** tests de regresión T01–T10, viewport 390×844 (iPhone 14), simTime frozen para festivales activos.
 - **Update iOS/Android:** \`bump-version.js\` avanza \`version.json.ios\` junto con \`.android\` (mismo build, sin staged rollout). El cliente recarga vía poll de \`version.json\` en cada reapertura.
 
