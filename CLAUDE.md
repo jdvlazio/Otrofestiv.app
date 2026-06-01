@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `bd626d9 fix(during-festival): anclar el tiempo en-curso a la zona del festival (#169)`
+> Último commit: `0aa8353 data(olhar): genre de Como Todo Mortal y Es domāju par kaķi (FilmAffinity verificado)`
 
 ---
 
