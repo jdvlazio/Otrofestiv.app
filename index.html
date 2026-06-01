@@ -1753,12 +1753,25 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
   visibility:hidden;
   pointer-events:none;
 }
-/* ── Splash entrada: elementos ocultos inicialmente ────────
-   La animación se controla desde JS via Web Animations API
-   para garantizar compatibilidad con WKWebView/Capacitor.
-──────────────────────────────────────────────────────────── */
-/* opacity:0 inicial se aplica via JS antes de animar — no via CSS
-   para que en CI/headless los elementos sean visibles por defecto */
+/* ── Splash entrada — 100% CSS (fiable en WKWebView) ───────
+   El contenido es VISIBLE por default (opacity:1). La entrada es una
+   animación CSS @keyframes aditiva con fill-mode:both: el timeline CSS
+   arranca cuando el contenido realmente se pinta (sincronizado con la
+   visibilidad), así nunca queda atascado invisible. Si la animación no
+   corre (reduced-motion, CI/headless), el estado de reposo es visible.
+   JS ya NO toca opacity — eso causaba el splash en blanco en WKWebView. */
+.splash-wordmark,.splash-tagline,.splash-action{opacity:1}
+/* La entrada anima SOLO transform (slide-up) — NUNCA opacity. Así el contenido
+   es siempre visible (opacity:1 fijo) aunque el timeline de la animación esté
+   throttled (tab en background / WKWebView tras el launch-screen): en el peor
+   caso el bloque queda visible, sólo sin deslizarse. Esto elimina el "splash
+   en blanco" de raíz — la visibilidad ya no depende de ninguna animación. */
+@keyframes splashUp{from{transform:translateY(14px)}to{transform:none}}
+@media (prefers-reduced-motion:no-preference){
+  #otrofestiv-splash .splash-wordmark{animation:splashUp .6s cubic-bezier(.22,1,.36,1) .15s both}
+  #otrofestiv-splash .splash-tagline {animation:splashUp .55s ease .65s both}
+  #otrofestiv-splash .splash-action  {animation:splashUp .6s cubic-bezier(.22,1,.36,1) 1.05s both}
+}
 .splash-wordmark{
   font-size:23px;letter-spacing:-.03em;color:var(--white);
   font-weight:var(--w-display);line-height:1;
@@ -2250,12 +2263,19 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
   </div>
 </div>
 <script>
-// Aplicar idioma al splash antes del primer paint — sin eventos, sin delay
+// Aplicar idioma al splash ANTES del primer paint — misma detección que main.js
+// (lang guardado OR navigator.language → es/en/pt). Evita el flash ES→sistema.
 (function(){
-  var l=localStorage.getItem('otrofestiv_lang');
-  if(l!=='en') return;
-  var m={'splash_festival':'Which festival?','auth_entrar':'Enter',
-         'splash_tagline':'More than you think','splash_tagline_2':'possible.'};
+  var s=localStorage.getItem('otrofestiv_lang');
+  var n=(navigator.language||'es').toLowerCase();
+  var l=(s==='es'||s==='en'||s==='pt')?s:(n.indexOf('en')===0?'en':n.indexOf('pt')===0?'pt':'es');
+  try{console.log('[splash i18n] lang='+l+' (saved='+s+', nav='+n+')');}catch(e){}
+  if(l==='es') return; // ES = default del HTML
+  var M={
+    en:{splash_festival:'Which festival?',auth_entrar:'Enter',splash_tagline:'More than you think',splash_tagline_2:'possible.'},
+    pt:{splash_festival:'Para qual festival você vai?',auth_entrar:'Entrar',splash_tagline:'Mais do que você imagina',splash_tagline_2:'possível.'}
+  };
+  var m=M[l]; if(!m) return;
   document.querySelectorAll('#otrofestiv-splash [data-i18n]').forEach(function(el){
     var v=m[el.getAttribute('data-i18n')];if(v)el.textContent=v;
   });
@@ -2552,7 +2572,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 <!-- ── Intereses / Planear: header unificado — fuera de ag-view ── -->
 <div class="ag-view" id="ag-view"></div>
 
-<script type="module" src="/src/main.js?v=202605312014"></script>
+<script type="module" src="/src/main.js?v=202606010655"></script>
 
 <!-- Festival switcher bottom sheet -->
 <div class="auth-sheet" id="auth-sheet" data-close-bg="AuthSheet">

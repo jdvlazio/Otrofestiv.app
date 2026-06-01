@@ -633,7 +633,7 @@ FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202605312014';
+const BUILD_VERSION='202606010655';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';
@@ -1457,35 +1457,16 @@ if(window.Capacitor?.Plugins?.CapacitorUpdater){
   _splashSelectedFestId=activeFest;
   // Render dinámico — agregar festival = solo FESTIVAL_CONFIG, nada más
   _renderSplashDropdown(activeFest);
-  // Splash entrada — Web Animations API (fiable en WKWebView/Capacitor)
-  // Doble rAF garantiza que el compositor iOS procese el estado opacity:0 antes de animar
-  requestAnimationFrame(()=>requestAnimationFrame(()=>{
-    const _sp=document.getElementById('otrofestiv-splash');
-    if(!_sp||_sp.classList.contains('fade-out')) return;
-    const _prefersReduced=window.matchMedia('(prefers-reduced-motion:reduce)').matches;
-    const _ease='cubic-bezier(.22,1,.36,1)';
-    // Reveal robusto para WKWebView: la visibilidad final NO depende de
-    // fill:'forwards' — WebKit no lo persiste de forma fiable sobre un
-    // opacity:0 inline, dejando los elementos atascados invisibles (splash
-    // "en blanco / sin animación"). onfinish/oncancel + setTimeout + guards
-    // garantizan que el elemento termine visible aunque la animación no corra.
-    const _reveal=(el,keyframes,opts)=>{
-      if(!el) return;
-      const _show=()=>{el.style.opacity='1';el.style.transform='none';};
-      if(_prefersReduced||typeof el.animate!=='function'){_show();return;}
-      el.style.opacity='0'; // estado inicial vía JS — no vía CSS
-      let _a;
-      try{ _a=el.animate(keyframes,opts); }catch(e){ _show(); return; }
-      if(_a){ _a.onfinish=_show; _a.oncancel=_show; }else{ _show(); return; }
-      // red de seguridad: si WKWebView throttlea y onfinish nunca dispara
-      setTimeout(_show,(opts.delay||0)+(opts.duration||0)+400);
-    };
-    const _kUp=[{opacity:0,transform:'translateY(14px)'},{opacity:1,transform:'none'}];
-    const _kFade=[{opacity:0},{opacity:1}];
-    _reveal(_sp.querySelector('.splash-wordmark'),_kUp,{duration:600,delay:150,fill:'forwards',easing:_ease});
-    _reveal(_sp.querySelector('.splash-tagline'),_kFade,{duration:550,delay:650,fill:'forwards',easing:'ease'});
-    _reveal(_sp.querySelector('.splash-action'),_kUp,{duration:600,delay:1050,fill:'forwards',easing:_ease});
-  }));
+  // Splash entrada: la animación ahora es 100% CSS (@keyframes en index.html).
+  // El contenido es visible por default y JS NO toca opacity → imposible que
+  // quede atascado invisible en WKWebView (Bug 1 se resuelve en la capa CSS).
+  // ── Diagnóstico temporal (quitar tras confirmar en iPhone) ──
+  try{console.log('[splash] init · _lang='+_lang+' · build='+(typeof BUILD_VERSION!=='undefined'?BUILD_VERSION:'?'));}catch(e){}
+  setTimeout(function(){
+    var _sp=document.getElementById('otrofestiv-splash'); if(!_sp) return;
+    var _op=function(sel){var e=_sp.querySelector(sel);return e?getComputedStyle(e).opacity:'no-el';};
+    try{console.log('[splash] opacity tras paint → wordmark:'+_op('.splash-wordmark')+' · tagline:'+_op('.splash-tagline')+' · action:'+_op('.splash-action'));}catch(e){}
+  },1800);
   _renderFestivalSelector(activeFest);
   const cfg=FESTIVAL_CONFIG[activeFest];
   if(cfg){
