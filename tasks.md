@@ -21,7 +21,8 @@ Curitiba, Brasil · 4–13 jun 2026 · 80 films · 58 entries (46 films + 12 pro
 
 ### Downstream (no bloqueante) ⏳
 > Auditado 2026-06-01 contra `festivals/olhar-2026.json` (58 entries: 46 films solos + 11 `is_cortos` + 1 `is_programa`).
-- [ ] `genre` (0/47) — enriquecimiento TMDB estricto (year confiable → matching seguro)
+- [x] `genre` (40/46 — 2 llenados vía FilmAffinity verificado + 6 techo seguro verificado por Chrome tab LB/FA/TMDB). Verificación real (no inferencia): `Como Todo Mortal`→`Documental, Ciencia ficción` y `Es domāju par kaķi.`→`Documental, Drama` (gate director+year confirmado en FA; grafía canónica de los 38). Los otros 6 (A Holandesinha, Adulto/Homem, Maxita, O Mez da Grippe, Olhe para Mim, Reparação) sin género en ninguna fuente — A Holandesinha lo confirma: TMDB marca "Genres" como dato faltante. 0/12 programas (TMDB no aplica a cortos/combinados).
+- [ ] `genre` i18n — almacenado solo en ES; usuarios EN/PT ven el género en español (aplica a los 40, no bloqueante, post-festival).
 - [ ] `lbSlug` — **cobertura completa: 46/46 films solos traen campo `lbSlug`** (0 vacíos; lo consume el sheet vía `sheets-controller.js`). Pendiente: verificación per-slug (método Chrome tab) — la correctitud de cada slug no está verificada. Nota: el objeto root `lbSlugs` está vacío (la fuente real es el campo per-film).
 - [x] Section emoji + orden curatorial — 10/10 secciones del JSON traen emoji + las 10 están en `SECTION_ORDER_LIST` (`src/config.js:52`) en orden curatorial. Presente y completo.
 - [x] `tools/enricher.html` — `olhar2026` está en el objeto `FESTIVALS` (`enricher.html:121`). Entrada de datos presente.
