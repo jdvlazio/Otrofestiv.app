@@ -633,7 +633,7 @@ FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202606010655';
+const BUILD_VERSION='202606010821';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';
@@ -1457,16 +1457,9 @@ if(window.Capacitor?.Plugins?.CapacitorUpdater){
   _splashSelectedFestId=activeFest;
   // Render dinámico — agregar festival = solo FESTIVAL_CONFIG, nada más
   _renderSplashDropdown(activeFest);
-  // Splash entrada: la animación ahora es 100% CSS (@keyframes en index.html).
-  // El contenido es visible por default y JS NO toca opacity → imposible que
-  // quede atascado invisible en WKWebView (Bug 1 se resuelve en la capa CSS).
-  // ── Diagnóstico temporal (quitar tras confirmar en iPhone) ──
-  try{console.log('[splash] init · _lang='+_lang+' · build='+(typeof BUILD_VERSION!=='undefined'?BUILD_VERSION:'?'));}catch(e){}
-  setTimeout(function(){
-    var _sp=document.getElementById('otrofestiv-splash'); if(!_sp) return;
-    var _op=function(sel){var e=_sp.querySelector(sel);return e?getComputedStyle(e).opacity:'no-el';};
-    try{console.log('[splash] opacity tras paint → wordmark:'+_op('.splash-wordmark')+' · tagline:'+_op('.splash-tagline')+' · action:'+_op('.splash-action'));}catch(e){}
-  },1800);
+  // Splash entrada: la animación es 100% CSS (@keyframes en index.html). El
+  // contenido es visible por default y JS NO toca opacity → imposible que quede
+  // atascado invisible en WKWebView (Bug 1 se resuelve en la capa CSS).
   _renderFestivalSelector(activeFest);
   const cfg=FESTIVAL_CONFIG[activeFest];
   if(cfg){

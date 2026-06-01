@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `87c49ac Merge pull request #162 from jdvlazio/fix/splash-wkwebview-reveal`
+> Último commit: `1ce22a0 chore: bundle v202606011200`
 
 ---
 

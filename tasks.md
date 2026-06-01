@@ -420,3 +420,23 @@ navigator.language → es/en/pt`) con el copy exacto del diccionario (incl. PT) 
 
 **Verificación:** node --check · validate.py 30/31 · Playwright 72 passed · smoke web: opacity de los 3
 bloques = 1 (visible) bajo throttle headless + parche EN aplicado al primer paint. Confirmación final en iPhone (OTA + Web Inspector).
+
+## Subsistema splash iOS — CERRADO ✅ (flash blanco + brinco de idioma)
+
+El "flash blanco al abrir" tenía **3 capas** de primer-paint, cada una en un lugar distinto.
+Resueltas las tres:
+
+| Capa | Qué | Dónde se arregló |
+|---|---|---|
+| **1 · Launch screen nativo** | iOS pintaba blanco por default (`UILaunchScreen_Generation=YES` → vacío) | **Proyecto iOS** (SwiftUI iCloud): `UILaunchScreen` dict con `UIColorName=LaunchBackground` (#0A0A0A), **sin logo** (evita doble-marca ícono→wordmark); `Generation=NO` en pbxproj. |
+| **2 · Fondo del WKWebView** | el WebView nace **opaco y blanco**, visible mientras carga otrofestiv.app | **Proyecto iOS** `ContentView.swift`: `isOpaque=false` + `backgroundColor`/`scrollView.backgroundColor`=#0A0A0A + capa SwiftUI oscura detrás. (Se quitó el `alpha:0`/reveal-on-didFinish: hacía que la animación de entrada corriera oculta → "sin animar". Ahora el contenido pinta directo sobre fondo oscuro → animación siempre visible, sin depender de la red.) |
+| **3 · Primer paint del HTML** | splash web invisible (opacity:0 + WAAPI `fill:forwards` no persiste en WKWebView) + brinco de idioma ES→sistema | **Repo web** (PR #163): entrada 100% CSS animando **solo `transform`** (opacity:1 fijo → nunca invisible); parche inline pre-paint con detección `navigator.language` (es/en/pt) → idioma correcto al primer frame. |
+
+**Resultado:** cadena 100% oscura — launch screen → WKWebView → splash web — con la animación de entrada (slide-up) visible. Cero blanco, cero brinco de idioma.
+
+### ⚠️ Nota crítica — el proyecto iOS real es el SwiftUI de iCloud, NO el Capacitor
+- **Real / activo:** `/Users/Juanda/Library/Mobile Documents/com~apple~CloudDocs/Otrofestiv/10_iOS/Otrofestiv/` — app **SwiftUI** (`OtrofestivApp.swift` + `ContentView.swift` con `WKWebView` que carga `https://otrofestiv.app` fresco cada launch). **Aquí van los fixes nativos + el rebuild de Xcode.** Las capas 1 y 2 viven aquí (gitignored-friendly: el proyecto es su propio repo git).
+- **Abandonado:** `/Users/Juanda/Otrofestiv.app/` (Capacitor + @capgo, May 19). Un fix temprano del LaunchScreen.storyboard fue a parar aquí por error — inofensivo, no se compila. **No usar.**
+- Como el SwiftUI carga producción directo (no @capgo), **los fixes web (capa 3) llegan vía producción en el próximo cold-launch — sin OTA.** El launch screen + WKWebView (capas 1-2) requieren **rebuild de Xcode** (no OTA).
+
+**Diagnóstico:** los `console.log` temporales `[splash …]` se quitaron tras confirmar en iPhone (este PR).
