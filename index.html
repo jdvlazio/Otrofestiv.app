@@ -1782,9 +1782,11 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 #otrofestiv-splash.splash-anim-in .splash-tagline{opacity:1;transform:none}
 @keyframes splashIn{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
 @media (prefers-reduced-motion:no-preference){
-  #otrofestiv-splash.splash-anim-in .splash-wordmark{animation:splashIn 600ms cubic-bezier(.22,1,.36,1) 0ms both}
-  #otrofestiv-splash.splash-anim-in .splash-action  {animation:splashIn 600ms cubic-bezier(.22,1,.36,1) 700ms both}
-  #otrofestiv-splash.splash-anim-in .splash-tagline {animation:splashIn 600ms cubic-bezier(.22,1,.36,1) 1400ms both}
+  /* easeOutExpo aprox — arranca rápido, desacelera muy gradualmente: aterrizaje suave.
+     alt más suave/lujoso: cubic-bezier(.19,1,.22,1) */
+  #otrofestiv-splash.splash-anim-in .splash-wordmark{animation:splashIn 600ms cubic-bezier(.16,1,.3,1) 0ms both}
+  #otrofestiv-splash.splash-anim-in .splash-action  {animation:splashIn 600ms cubic-bezier(.16,1,.3,1) 700ms both}
+  #otrofestiv-splash.splash-anim-in .splash-tagline {animation:splashIn 600ms cubic-bezier(.16,1,.3,1) 1400ms both}
 }
 .splash-wordmark{
   font-size:23px;letter-spacing:-.03em;color:var(--white);
@@ -2599,7 +2601,7 @@ setTimeout(function(){
 <!-- ── Intereses / Planear: header unificado — fuera de ag-view ── -->
 <div class="ag-view" id="ag-view"></div>
 
-<script type="module" src="/src/main.js?v=202606010945"></script>
+<script type="module" src="/src/main.js?v=202606011039"></script>
 
 <!-- Festival switcher bottom sheet -->
 <div class="auth-sheet" id="auth-sheet" data-close-bg="AuthSheet">
