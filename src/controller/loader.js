@@ -205,9 +205,11 @@ export async function loadFestival(id){
   // lee storage prefijado). FESTIVAL_END debe estar antes del day-tab DOM
   // build (dayFullyPassed lo lee). availability rebuilda con shape del nuevo
   // festival, preservando blocks de días con misma key (cross-festival continuity).
-  // ⚠️  festivalEndStr se parsea como hora LOCAL del dispositivo (sin sufijo UTC).
-  // Festivales colombianos con audiencia local: correcto (todos en UTC-5).
-  // Para festivales en otra zona, usar festivalEndStr con offset explícito.
+  // festivalEndStr ('…T23:59:00') se ancla a la zona del festival vía
+  // cfg.timezoneOffset → FESTIVAL_END es un instante ABSOLUTO correcto desde
+  // cualquier dispositivo (festivalEnded compara contra simNow absoluto). Sin
+  // offset (festivales viejos sin el campo) cae a hora local — equivalente para
+  // audiencia en la misma zona del festival.
   const _currAv = state.get('availability');
   const _newAvShape = {};
   cfg.dayKeys.forEach(d => {
@@ -215,7 +217,7 @@ export async function loadFestival(id){
   });
   state.batchUpdate({
     FESTIVAL_STORAGE_KEY: cfg.storageKey,
-    FESTIVAL_END: new Date(cfg.festivalEndStr),
+    FESTIVAL_END: new Date(cfg.festivalEndStr+(cfg.timezoneOffset||'')),
     watchlist: new Set(),
     watched: new Set(),
     prioritized: new Set(),

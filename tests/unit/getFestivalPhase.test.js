@@ -19,6 +19,7 @@ function load(opts = {}) {
       DAY_KEYS: opts.DAY_KEYS || [],
       FESTIVAL_DATES: opts.FESTIVAL_DATES || {},
       DEFAULT_DURATION_MIN: 90,
+      TZ_OFFSET: opts.TZ_OFFSET || '-05:00',
       festivalEnded: opts.festivalEnded || (() => false),
       simNow: opts.simNow || (() => new Date()),
       simTodayStr: opts.simTodayStr || (() => ''),
@@ -61,7 +62,7 @@ test('now < FESTIVAL_START → phase:"before" con daysDiff', () => {
     savedAgenda: { schedule: [{ day: 'MAR 21', time: '10:00 AM' }] },
     DAY_KEYS: ['MAR 21'],
     FESTIVAL_DATES: { 'MAR 21': '2026-06-03' },
-    simNow: () => new Date('2026-06-01T10:00:00'),
+    simNow: () => new Date('2026-06-01T10:00:00-05:00'),
   });
   const r = _getFestivalPhase();
   assert.strictEqual(r.phase, 'before');
@@ -81,7 +82,7 @@ test('día con screenings todas pasadas → phase:"evening"', () => {
     },
     DAY_KEYS: [todayKey],
     FESTIVAL_DATES: { [todayKey]: today },
-    simNow: () => new Date(`${today}T20:00:00`),
+    simNow: () => new Date(`${today}T20:00:00-05:00`),
     simTodayStr: () => today,
   });
   const r = _getFestivalPhase();
@@ -98,7 +99,7 @@ test('próxima función en ≤ 45 min → phase:"next"', () => {
     savedAgenda: { schedule: [f1] },
     DAY_KEYS: [todayKey],
     FESTIVAL_DATES: { [todayKey]: today },
-    simNow: () => new Date(`${today}T18:30:00`),
+    simNow: () => new Date(`${today}T18:30:00-05:00`),
     simTodayStr: () => today,
   });
   const r = _getFestivalPhase();
@@ -120,7 +121,7 @@ test('gap > 45 min entre función pasada y próxima → phase:"between" con gapS
     savedAgenda: { schedule: [f1, f2] },
     DAY_KEYS: [todayKey],
     FESTIVAL_DATES: { [todayKey]: today },
-    simNow: () => new Date(`${today}T12:30:00`),
+    simNow: () => new Date(`${today}T12:30:00-05:00`),
     simTodayStr: () => today,
   });
   const r = _getFestivalPhase();

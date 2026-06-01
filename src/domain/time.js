@@ -45,12 +45,27 @@ export function _festDate(dateStr,time){
 
 export function simNow(){return _simTime?new Date(_simTime):new Date();}
 
+// Offset de TZ_OFFSET ("-04:00"/"+05:30") a minutos. Default Colombia (-05:00).
+function _tzOffsetMin(off){
+  const m=/^([+-])(\d{2}):(\d{2})$/.exec(off||'-05:00');
+  return m?(m[1]==='-'?-1:1)*(parseInt(m[2],10)*60+parseInt(m[3],10)):-300;
+}
+// "Ahora" en hora LOCAL DEL FESTIVAL. El modo en-curso (now-line, contador, "en
+// curso", clasificación done/active/future, "hoy") se ancla a la zona del festival
+// —no a la del dispositivo— porque el horario ya está en hora del venue ("8:00 PM"
+// = NYC). Se desplaza el instante por TZ_OFFSET y se leen getters UTC → reloj de
+// pared del festival, sin importar dónde esté el usuario. Las comparaciones
+// ABSOLUTAS (screeningPassed/festivalEnded vía _festDate+offset) ya son correctas.
+export function _festNow(){ return new Date(simNow().getTime()+_tzOffsetMin(TZ_OFFSET)*60000); }
+export function _festNowMin(){ const d=_festNow(); return d.getUTCHours()*60+d.getUTCMinutes(); }
+
 export function simTodayStr(){
-  // Usa fecha LOCAL (no UTC) para consistencia con getHours()/getMinutes()
-  // toISOString() devuelve UTC — en Colombia (UTC-5) esto da el día siguiente
-  // después de las 7 PM, causando que la línea "ahora" aparezca en el día incorrecto
-  const d=simNow();
-  return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
+  // Fecha "hoy" EN HORA DEL FESTIVAL (no del dispositivo ni UTC): _festNow()+getUTC*
+  // sobre el instante desplazado → día local del festival. Así "hoy" coincide con el
+  // día del horario para un usuario en cualquier zona (ej: tester en Colombia durante
+  // Tribeca en NYC). Antes usaba getHours/getDate locales → hasta 1 día / 1 hora off.
+  const d=_festNow();
+  return d.getUTCFullYear()+'-'+String(d.getUTCMonth()+1).padStart(2,'0')+'-'+String(d.getUTCDate()).padStart(2,'0');
 }
 
 export function dayFullyPassed(day){

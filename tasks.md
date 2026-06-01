@@ -501,3 +501,27 @@ los callers. 24h y los que pre-convierten pasan sin cambio (regex no matchea "20
 **Evidencia:** node — _festDate("8:00 PM") ahora válido (antes INVALID). Playwright fresh-import del
 módulo servido: dayFullyPassed('2026-06-06')=true, ('2026-06-07')=false, ('2026-06-03')=true a NYC
 jun7 19:30 (exacto). validate.py 30/31. Regression 69 passed (T11 flaky conocido, pasa aislado).
+
+## fix(during-festival #1): anclar "ahora" del modo en-curso a la zona del festival
+
+**Bug:** la lógica minuto-del-día (now-line, contador, "en curso", clasificación done/active/future,
+fases next/between/evening, "hoy") usaba `now.getHours()` LOCAL DEL DISPOSITIVO, mientras el horario
+está en hora del venue (toMin("8:00 PM")=1200, NYC). Para un tester fuera de NYC los dos marcos no
+coinciden → error continuo = delta TZ (Bogotá 60min, UTC 240min). Demostrado: función en curso se
+mostraba como "en 30 min, isNow=false".
+
+**Decisión de producto:** anclar el tiempo del modo en-curso a la ZONA DEL FESTIVAL (lugar físico),
+no al dispositivo. Un festival es ligado a un lugar; el programa oficial está en hora del venue;
+asistir es físico. El horario ya se muestra en hora-festival → "ahora" debe estar en el mismo marco.
+Estándar de apps de eventos. Correcto para asistente en NYC y espectador remoto por igual.
+
+**Fix:** time.js: `_festNow()`/`_festNowMin()` desplazan simNow() por TZ_OFFSET y leen getters UTC →
+reloj de pared del festival; `simTodayStr()` reescrito igual. festival.js: nowMin→`_festNowMin()`,
+FESTIVAL_START con offset. agenda.js: 5 sitios minuto-del-día → `_festNowMin()`. loader.js:
+FESTIVAL_END anclado con cfg.timezoneOffset. Comparaciones ABSOLUTAS (screeningPassed/festivalEnded)
+no se tocan (ya correctas vía _festDate+offset).
+
+**Evidencia:** Playwright fresh-import bajo 3 timezones (NY/Bogotá/UTC) al mismo instante NYC jun7
+19:30: festNowMin=1170 + simToday=2026-06-07 + isNowPlaying=true IDÉNTICOS en las 3 (device-local
+daba 1170/1110/1410). EN/PT/ES: Programa en-curso renderiza traducido (Today/Hoje, Tomorrow/Amanhã),
+sin keys crudas ni errores JS. node --check x4 · validate 30/31 · regression 72 passed.
