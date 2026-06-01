@@ -160,7 +160,7 @@ function extractObject(source, name) {
 }
 
 const DEFAULT_FNS = [
-  'toMin', 'parseDur', 'effectiveDuration',
+  'toMin', 'minToStr', 'parseDur', 'effectiveDuration',
   '_resolveVenue', 'venueTravelMins', 'travelMins',
   'screensConflict',
   // Fase 2 — festival phase helpers
