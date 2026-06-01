@@ -1769,18 +1769,22 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
    clase — NO depende de que la animación corra → nunca queda invisible
    (reduce-motion ve el estado final, sin animar). */
 .splash-wordmark,.splash-action,.splash-tagline{opacity:0}
-/* La OPACITY la da una regla estática disparada por .splash-anim-in (instantánea,
-   nunca animada) → bulletproof: ni el throttle del timeline ni reduce-motion la
-   pueden dejar en 0. El @keyframes mueve SÓLO transform (slide escalonado) — si
-   se throttlea, el bloque queda visible (opacity:1) sólo sin deslizarse. */
+/* Reposo VISIBLE: regla estática disparada por .splash-anim-in. Gana cuando la
+   animación termina (foreground) o cuando el hard-floor JS la quita
+   (style.animation='none' tras la ventana total). El @keyframes anima opacity +
+   transform JUNTOS (fade + slide). Bajo throttle del timeline (visibilityState:
+   hidden) la animación con fill:both se quedaría en from{opacity:0} — pisa esta
+   regla mientras aplica. Por eso main.js (y el fallback inline) corre un hard-floor
+   que quita la animación → cae aquí → opacity:1 garantizado en tiempo acotado.
+   El doc visible nunca throttlea, así que en foreground el fade siempre se ve. */
 #otrofestiv-splash.splash-anim-in .splash-wordmark,
 #otrofestiv-splash.splash-anim-in .splash-action,
-#otrofestiv-splash.splash-anim-in .splash-tagline{opacity:1}
-@keyframes splashIn{from{transform:translateY(16px)}to{transform:none}}
+#otrofestiv-splash.splash-anim-in .splash-tagline{opacity:1;transform:none}
+@keyframes splashIn{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
 @media (prefers-reduced-motion:no-preference){
-  #otrofestiv-splash.splash-anim-in .splash-wordmark{animation:splashIn .5s cubic-bezier(.22,1,.36,1) 0ms both}
-  #otrofestiv-splash.splash-anim-in .splash-action  {animation:splashIn .5s cubic-bezier(.22,1,.36,1) 250ms both}
-  #otrofestiv-splash.splash-anim-in .splash-tagline {animation:splashIn .5s cubic-bezier(.22,1,.36,1) 500ms both}
+  #otrofestiv-splash.splash-anim-in .splash-wordmark{animation:splashIn 600ms cubic-bezier(.22,1,.36,1) 0ms both}
+  #otrofestiv-splash.splash-anim-in .splash-action  {animation:splashIn 600ms cubic-bezier(.22,1,.36,1) 700ms both}
+  #otrofestiv-splash.splash-anim-in .splash-tagline {animation:splashIn 600ms cubic-bezier(.22,1,.36,1) 1400ms both}
 }
 .splash-wordmark{
   font-size:23px;letter-spacing:-.03em;color:var(--white);
@@ -2289,10 +2293,20 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
     var v=m[el.getAttribute('data-i18n')];if(v)el.textContent=v;
   });
 })();
-// Fallback de seguridad: el reveal del splash lo dispara main.js (.splash-anim-in)
-// tras poblar el selector. Si por lo que sea main.js no corre, revelar igual a los
-// 1.5s para no dejar el splash oculto. Idempotente (classList.add no duplica).
-setTimeout(function(){var s=document.getElementById('otrofestiv-splash');if(s)s.classList.add('splash-anim-in');},1500);
+// Fallback de seguridad: el reveal del splash lo dispara main.js (.splash-anim-in
+// + hard-floor) tras poblar el selector. Si por lo que sea main.js no corre, este
+// fallback (independiente del módulo) revela a los 1.5s Y trae su propio hard-floor
+// (quita la animación → cae a la regla estática opacity:1) para que NINGÚN camino
+// deje el splash oculto. Idempotente: si main.js ya reveló, no hace nada.
+setTimeout(function(){
+  var s=document.getElementById('otrofestiv-splash'); if(!s||s.classList.contains('splash-anim-in')) return;
+  s.classList.add('splash-anim-in');
+  setTimeout(function(){
+    ['.splash-wordmark','.splash-action','.splash-tagline'].forEach(function(q){
+      var el=s.querySelector(q); if(el) el.style.animation='none';
+    });
+  },2200);
+},1500);
 </script>
 
 
@@ -2585,7 +2599,7 @@ setTimeout(function(){var s=document.getElementById('otrofestiv-splash');if(s)s.
 <!-- ── Intereses / Planear: header unificado — fuera de ag-view ── -->
 <div class="ag-view" id="ag-view"></div>
 
-<script type="module" src="/src/main.js?v=202606010908"></script>
+<script type="module" src="/src/main.js?v=202606010945"></script>
 
 <!-- Festival switcher bottom sheet -->
 <div class="auth-sheet" id="auth-sheet" data-close-bg="AuthSheet">
