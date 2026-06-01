@@ -20,11 +20,13 @@ Curitiba, Brasil · 4–13 jun 2026 · 80 films · 58 entries (46 films + 12 pro
 - [x] `validate-festivals.js` 0 errores · `validate.py` OK para push
 
 ### Downstream (no bloqueante) ⏳
+> Auditado 2026-06-01 contra `festivals/olhar-2026.json` (58 entries: 46 films solos + 11 `is_cortos` + 1 `is_programa`).
 - [ ] `genre` (0/47) — enriquecimiento TMDB estricto (year confiable → matching seguro)
-- [ ] `lbSlug` — Letterboxd (método Chrome tab, verificar cada slug)
-- [ ] Section emoji + orden curatorial (Fase 2/5, Content-Designer)
-- [ ] `tools/enricher.html` — agregar `olhar-2026` a la lista FESTIVALS
-- [ ] Posters de los 12 programas (generativo/editorial)
+- [ ] `lbSlug` — **cobertura completa: 46/46 films solos traen campo `lbSlug`** (0 vacíos; lo consume el sheet vía `sheets-controller.js`). Pendiente: verificación per-slug (método Chrome tab) — la correctitud de cada slug no está verificada. Nota: el objeto root `lbSlugs` está vacío (la fuente real es el campo per-film).
+- [x] Section emoji + orden curatorial — 10/10 secciones del JSON traen emoji + las 10 están en `SECTION_ORDER_LIST` (`src/config.js:52`) en orden curatorial. Presente y completo.
+- [x] `tools/enricher.html` — `olhar2026` está en el objeto `FESTIVALS` (`enricher.html:121`). Entrada de datos presente.
+- [ ] `tools/enricher.html` — agregar chip UI `data-fest="olhar2026"` (chips hardcodeados, ver tribeca L64). **Polish post-festival, no bloqueante**: el flujo canónico de enrichment es CLI (`scripts/enrich-festival.py`, Fase 3); el chip es solo conveniencia de la UI.
+- [ ] Pósters editoriales de los 12 programas — **NO BLOQUEANTE** (12/12 ya resueltos vía generativo `makeProgramPoster`/`_buildPosterV16`, ninguno roto). 0/12 con póster explícito en el JSON; editorial/custom es opcional.
 
 ### Deuda de pipeline detectada
 - `geocode-venues.py`: falla en nombres de sublocal (Nominatim) → necesita campo `geo_query` override.
