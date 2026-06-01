@@ -633,7 +633,7 @@ FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202605311821';
+const BUILD_VERSION='202605312014';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';
@@ -1464,27 +1464,27 @@ if(window.Capacitor?.Plugins?.CapacitorUpdater){
     if(!_sp||_sp.classList.contains('fade-out')) return;
     const _prefersReduced=window.matchMedia('(prefers-reduced-motion:reduce)').matches;
     const _ease='cubic-bezier(.22,1,.36,1)';
-    const _animUp=(el,delay)=>{
+    // Reveal robusto para WKWebView: la visibilidad final NO depende de
+    // fill:'forwards' — WebKit no lo persiste de forma fiable sobre un
+    // opacity:0 inline, dejando los elementos atascados invisibles (splash
+    // "en blanco / sin animación"). onfinish/oncancel + setTimeout + guards
+    // garantizan que el elemento termine visible aunque la animación no corra.
+    const _reveal=(el,keyframes,opts)=>{
       if(!el) return;
-      if(_prefersReduced){el.style.opacity='1';return;}
-      el.style.opacity='0'; // set initial state via JS — no via CSS
-      el.animate(
-        [{opacity:0,transform:'translateY(14px)'},{opacity:1,transform:'none'}],
-        {duration:600,delay,fill:'forwards',easing:_ease}
-      );
+      const _show=()=>{el.style.opacity='1';el.style.transform='none';};
+      if(_prefersReduced||typeof el.animate!=='function'){_show();return;}
+      el.style.opacity='0'; // estado inicial vía JS — no vía CSS
+      let _a;
+      try{ _a=el.animate(keyframes,opts); }catch(e){ _show(); return; }
+      if(_a){ _a.onfinish=_show; _a.oncancel=_show; }else{ _show(); return; }
+      // red de seguridad: si WKWebView throttlea y onfinish nunca dispara
+      setTimeout(_show,(opts.delay||0)+(opts.duration||0)+400);
     };
-    const _animFade=(el,delay)=>{
-      if(!el) return;
-      if(_prefersReduced){el.style.opacity='1';return;}
-      el.style.opacity='0'; // set initial state via JS — no via CSS
-      el.animate(
-        [{opacity:0},{opacity:1}],
-        {duration:550,delay,fill:'forwards',easing:'ease'}
-      );
-    };
-    _animUp(_sp.querySelector('.splash-wordmark'),150);
-    _animFade(_sp.querySelector('.splash-tagline'),650);
-    _animUp(_sp.querySelector('.splash-action'),1050);
+    const _kUp=[{opacity:0,transform:'translateY(14px)'},{opacity:1,transform:'none'}];
+    const _kFade=[{opacity:0},{opacity:1}];
+    _reveal(_sp.querySelector('.splash-wordmark'),_kUp,{duration:600,delay:150,fill:'forwards',easing:_ease});
+    _reveal(_sp.querySelector('.splash-tagline'),_kFade,{duration:550,delay:650,fill:'forwards',easing:'ease'});
+    _reveal(_sp.querySelector('.splash-action'),_kUp,{duration:600,delay:1050,fill:'forwards',easing:_ease});
   }));
   _renderFestivalSelector(activeFest);
   const cfg=FESTIVAL_CONFIG[activeFest];
