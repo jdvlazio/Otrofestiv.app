@@ -16,7 +16,7 @@ import {
   DAYS, DAY_SHORT_EN, _dayChips, _isEditorialPoster, _langDates, _lblLocalized, _mkCortoItemHtml, _posterThumb, dayChip, dayLabel, dayLabelLong, durFmt, emptyState, emptyStateHero, flagFmt, getFilmPoster, isToday, mplanBlockType, mplanEndStr, sala, starsText, travelWarn, vcfg,
 } from './helpers.js';
 import {
-  _festDate, festivalEnded, minToStr, parseDur, simNow, simTodayStr, toMin,
+  _festDate, _festNowMin, festivalEnded, minToStr, parseDur, simNow, simTodayStr, toMin,
 } from '../domain/time.js';
 import {
   screeningPassed,
@@ -140,7 +140,7 @@ export function renderMiPlanCalendar(state){
   const schedule=savedAgenda.schedule;
   const todayStr=simTodayStr();
   const nowDayIdx=DAY_KEYS.findIndex(d=>FESTIVAL_DATES[d]===todayStr);
-  const nowMin=simNow().getHours()*60+simNow().getMinutes();
+  const nowMin=_festNowMin();
   if(activeMiPlanDay===null){
     const firstDayWithFilm=DAY_KEYS.findIndex(d=>schedule.some(s=>s.day===d));
     activeMiPlanDay=nowDayIdx>=0?nowDayIdx:Math.max(0,firstDayWithFilm);
@@ -384,7 +384,7 @@ export function renderUnconfirmed(state,schedule){
     return db-da;
   });
   if(!past.length) return'';
-  const nowMin=now.getHours()*60+now.getMinutes();
+  const nowMin=_festNowMin();
   const todayStr=simTodayStr();
   const todayKey=DAY_KEYS.find(d=>FESTIVAL_DATES[d]===todayStr);
   const latest=past[0];const older=past.slice(1);
@@ -532,7 +532,7 @@ export function renderContextualHeader(state){
     //   ✅ "Termina en X min"— tiempo restante en curso; eyebrow solo dice "En curso"
     //   ❌ "Ahora"           — redundante con eyebrow
     //   Todo estado nuevo debe pasar este filtro antes de añadir badge.
-    const _nowMin=simNow().getHours()*60+simNow().getMinutes();
+    const _nowMin=_festNowMin();
     const _endMin=toMin(next.time)+parseDur(next.duration)+(filmDelays[_delayKey(next)]||0);
     const _leftMin=Math.max(0,_endMin-_nowMin);
     const badge=isNow
@@ -612,8 +612,7 @@ export function renderContextualHeader(state){
     const gapLabel=h>0?(m>0?`${h}h ${m}min`:`${h}h`):`${m} min`;
     const fromStr=`${String(Math.floor(gapFromMin/60)).padStart(2,'0')}:${String(gapFromMin%60).padStart(2,'0')}`;
     const toStr=`${String(Math.floor(gapToMin/60)).padStart(2,'0')}:${String(gapToMin%60).padStart(2,'0')}`;
-    const now=simNow();
-    const nowMin=now.getHours()*60+now.getMinutes();
+    const nowMin=_festNowMin();
     const fillPct=gapMin>0?Math.min(100,Math.round((nowMin-gapFromMin)/gapMin*100)):0;
     const suggest=gapSuggestion?(()=>{
       const{displayTitle:dt}=parseProgramTitle(gapSuggestion.title);
@@ -1442,7 +1441,7 @@ export function _scrollMiPlanToNow(){
     const todayStr = simTodayStr();
     const nowDayIdx = DAY_KEYS.findIndex(d => FESTIVAL_DATES[d] === todayStr);
     if(nowDayIdx < 0) return; // festival no en curso — no scrollear
-    const nowMin = simNow().getHours() * 60 + simNow().getMinutes();
+    const nowMin = _festNowMin();
     // Calcular SH igual que renderMiPlanCalendar (usamos plan completo como fallback)
     if(!savedAgenda || !savedAgenda.schedule.length) return;
     const allMins = savedAgenda.schedule.flatMap(s => {

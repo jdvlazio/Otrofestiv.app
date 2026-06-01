@@ -485,3 +485,29 @@ camino deja opacity en 0.
 **Verificación:** node --check · validate.py 30/31 · Playwright 73 passed · smoke determinístico bajo
 visibilityState:hidden: CSSOM confirma keyframe opacity 0→1 + transform juntos y timings 0/700/1400ms;
 step1 (animación throttled) → opacity:0, step2 (floor) → opacity:1. Selector = Tribeca (sin brinco).
+
+## fix(during-festival #1): anclar "ahora" del modo en-curso a la zona del festival
+
+**Bug:** la lógica minuto-del-día (now-line, contador, "en curso", clasificación done/active/future,
+fases next/between/evening, "hoy") usaba `now.getHours()` LOCAL DEL DISPOSITIVO, mientras el horario
+está en hora del venue (toMin("8:00 PM")=1200, NYC). Para un tester fuera de NYC los dos marcos no
+coinciden → error continuo = delta TZ (Bogotá 60min, UTC 240min). Demostrado: función en curso se
+mostraba como "en 30 min, isNow=false".
+
+**Decisión de producto:** anclar el tiempo del modo en-curso a la ZONA DEL FESTIVAL (lugar físico),
+no al dispositivo. Un festival es ligado a un lugar; el programa oficial está en hora del venue;
+asistir es físico. El horario ya se muestra en hora-festival → "ahora" debe estar en el mismo marco.
+Estándar de apps de eventos. Correcto para asistente en NYC y espectador remoto por igual.
+
+**Fix:** time.js: `_festNow()`/`_festNowMin()` desplazan simNow() por TZ_OFFSET y leen getters UTC →
+reloj de pared del festival; `simTodayStr()` reescrito igual. festival.js: nowMin→`_festNowMin()`,
+FESTIVAL_START con offset. agenda.js: 5 sitios minuto-del-día → `_festNowMin()`. loader.js:
+FESTIVAL_END anclado con cfg.timezoneOffset. Comparaciones ABSOLUTAS (screeningPassed/festivalEnded)
+no se tocan (ya correctas vía _festDate+offset).
+
+**Evidencia:** Playwright fresh-import bajo 3 timezones (NY/Bogotá/UTC) al mismo instante NYC jun7
+19:30: festNowMin=1170 + simToday=2026-06-07 + isNowPlaying=true IDÉNTICOS en las 3 (device-local
+daba 1170/1110/1410). EN/PT/ES: Programa en-curso renderiza traducido (Today/Hoje, Tomorrow/Amanhã),
+sin keys crudas ni errores JS. node --check x4 · validate 30/31 · regression 72 passed.
+
+Nota: independiente de #2 (AM/PM); ambos tocan time.js (funciones distintas) → mergear #2 luego #1.

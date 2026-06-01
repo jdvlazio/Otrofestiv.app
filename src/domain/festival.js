@@ -19,7 +19,7 @@
 //   eval(name).toString(). [worker-overlap] valida.
 
 import { FESTIVAL_CONFIG, DEFAULT_DURATION_MIN } from "../config.js";
-import { toMin, simNow, simTodayStr, festivalEnded } from "./time.js";
+import { toMin, simNow, simTodayStr, festivalEnded, _festNowMin } from "./time.js";
 import { screeningPassed, _classifyTodayScreenings, _endedStats } from "./film.js";
 export function _resolveVenue(name,venues){
   if(!name) return{short:''};
@@ -71,7 +71,7 @@ export function _getFestivalPhase(){
 
   const now=simNow();
   const _fsDStr=DAY_KEYS[0]?FESTIVAL_DATES[DAY_KEYS[0]]||'':'';
-  const FESTIVAL_START=_fsDStr?new Date(_fsDStr+'T00:00:00'):new Date(0);
+  const FESTIVAL_START=_fsDStr?new Date(_fsDStr+'T00:00:00'+(TZ_OFFSET||'')):new Date(0);
   if(now<FESTIVAL_START) return{phase:'before',daysDiff:Math.ceil((FESTIVAL_START-now)/86400000)};
 
   const todayStr=simTodayStr();
@@ -82,7 +82,7 @@ export function _getFestivalPhase(){
     .sort((a,b)=>toMin(a.time)-toMin(b.time));
   if(!todayScreenings.length) return null;
 
-  const nowMin=now.getHours()*60+now.getMinutes();
+  const nowMin=_festNowMin();
   const {done,active,future}=_classifyTodayScreenings(todayScreenings,nowMin);
 
   // EVENING: todas las funciones del día terminaron
