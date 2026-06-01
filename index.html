@@ -2269,7 +2269,6 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
   var s=localStorage.getItem('otrofestiv_lang');
   var n=(navigator.language||'es').toLowerCase();
   var l=(s==='es'||s==='en'||s==='pt')?s:(n.indexOf('en')===0?'en':n.indexOf('pt')===0?'pt':'es');
-  try{console.log('[splash i18n] lang='+l+' (saved='+s+', nav='+n+')');}catch(e){}
   if(l==='es') return; // ES = default del HTML
   var M={
     en:{splash_festival:'Which festival?',auth_entrar:'Enter',splash_tagline:'More than you think',splash_tagline_2:'possible.'},
@@ -2572,7 +2571,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 <!-- ── Intereses / Planear: header unificado — fuera de ag-view ── -->
 <div class="ag-view" id="ag-view"></div>
 
-<script type="module" src="/src/main.js?v=202606010655"></script>
+<script type="module" src="/src/main.js?v=202606010821"></script>
 
 <!-- Festival switcher bottom sheet -->
 <div class="auth-sheet" id="auth-sheet" data-close-bg="AuthSheet">
