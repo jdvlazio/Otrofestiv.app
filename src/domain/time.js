@@ -35,7 +35,12 @@ export function minToStr(m){
 }
 
 export function _festDate(dateStr,time){
-  return new Date(dateStr+'T'+time+':00'+TZ_OFFSET);
+  // Normaliza AM/PM→24h: Tribeca trae "8:00 PM" y la concatenación directa daría
+  // Invalid Date (rompía screeningPassed/dayFullyPassed silenciosamente). Punto
+  // único — cubre todos los callers; 24h y los que ya pre-convierten (share/
+  // persistence) pasan sin cambio (el regex no matchea "20:00").
+  const t24=/[AP]M/i.test(time)?minToStr(toMin(time)):time;
+  return new Date(dateStr+'T'+t24+':00'+TZ_OFFSET);
 }
 
 export function simNow(){return _simTime?new Date(_simTime):new Date();}
