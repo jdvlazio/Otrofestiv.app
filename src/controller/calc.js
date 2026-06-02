@@ -9,7 +9,7 @@
 // DEBEN importarse aquí aunque el AST no las vea (están en strings de eval).
 
 import { FESTIVAL_CONFIG } from '../config.js';
-import { toMin, parseDur, _festDate, festivalEnded } from '../domain/time.js';
+import { toMin, minToStr, parseDur, _festDate, festivalEnded } from '../domain/time.js';
 import { _resolveVenue } from '../domain/festival.js';
 import { effectiveDuration, screeningPassed, _djb2, _titleSeed, _mulberry32, shuffle, scoreFilm } from '../domain/film.js';
 import { screensConflict, isScreeningBlocked, sortScreensByStrategy, computeScenarios } from '../domain/schedule.js';
@@ -24,7 +24,7 @@ import { t } from '../i18n/i18n.js';
 // diferente en worker scope (_simTime→SIM_TIME, FESTIVAL_END→FESTIVAL_END_TS).
 // Estas se proveen como worker-local en _mkCalcWorker._venueFns.
 const _SCHED_PURE_FNS = [
-  'toMin','parseDur','_festDate','_resolveVenue',
+  'toMin','minToStr','parseDur','_festDate','_resolveVenue',
   'effectiveDuration','screensConflict','screeningPassed',
   'isScreeningBlocked','_djb2','_titleSeed','_mulberry32',
   'shuffle','scoreFilm','sortScreensByStrategy','computeScenarios'
