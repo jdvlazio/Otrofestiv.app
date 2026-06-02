@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `0aa8353 data(olhar): genre de Como Todo Mortal y Es domāju par kaķi (FilmAffinity verificado)`
+> Último commit: `2c9ede1 fix(planner): worker incluye minToStr (rompía Calcular mi Plan en Tribeca)`
 
 ---
 
