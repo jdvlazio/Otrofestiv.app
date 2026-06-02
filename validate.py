@@ -213,6 +213,82 @@ else:
         else:
             ok(check, f'sin overlap entre worker-local ({len(worker_local_fns)} fns) y _SCHED_PURE_FNS')
 
+# ── CHECK 3.5: worker-deps — cierre de dependencias del Worker ───────────────
+# El Worker corre SOLO con _SCHED_PURE_FNS (extraídas vía .toString()) + las fns
+# worker-local. Si una pure fn llama a OTRA función de dominio que no está en ese
+# conjunto, el Worker lanza ReferenceError en runtime — caso real (jun 2026):
+# _festDate ganó una llamada a minToStr (fix AM/PM) que no estaba en _SCHED_PURE_FNS
+# → "Calcular mi Plan" roto en Tribeca. [worker-overlap] solo valida unicidad de
+# nombres, no dependencias; este check cierra ese hueco: toda fn de dominio llamada
+# por una pure fn debe estar disponible en el Worker.
+def _extract_fn_src(src, name):
+    """Devuelve el source de `function NAME(...){...}` balanceando llaves
+    (saltando strings y comentarios). None si no existe."""
+    m = re.search(r'\bfunction\s+' + re.escape(name) + r'\s*\(', src)
+    if not m:
+        return None
+    i = src.index('(', m.start()); depth = 1; i += 1
+    while i < len(src) and depth > 0:
+        if src[i] == '(': depth += 1
+        elif src[i] == ')': depth -= 1
+        i += 1
+    while i < len(src) and src[i] != '{':
+        i += 1
+    if i >= len(src):
+        return None
+    depth = 0
+    while i < len(src):
+        c = src[i]; n = src[i + 1] if i + 1 < len(src) else ''
+        if c == '/' and n == '*':
+            i += 2
+            while i < len(src) - 1 and not (src[i] == '*' and src[i + 1] == '/'):
+                i += 1
+            i += 2; continue
+        if c == '/' and n == '/':
+            while i < len(src) and src[i] != '\n':
+                i += 1
+            continue
+        if c in ('"', "'", '`'):
+            q = c; i += 1
+            while i < len(src):
+                if src[i] == '\\':
+                    i += 2; continue
+                if src[i] == q:
+                    i += 1; break
+                i += 1
+            continue
+        if c == '{':
+            depth += 1
+        elif c == '}':
+            depth -= 1
+            if depth == 0:
+                return src[m.start():i + 1]
+        i += 1
+    return None
+
+check = 'worker-deps'
+if sched_start != -1 and mk_pos != -1:
+    # Solo funciones de NIVEL MÓDULO (columna 0): `export function NAME` o `function NAME`
+    # al inicio de línea. Las anidadas (helpers dentro de otra fn, ej. backtrack/bb
+    # dentro de computeScenarios) viajan con su padre vía .toString() → no son deps
+    # externas y no deben contarse.
+    domain_fn_names = set(re.findall(r'^(?:export\s+)?function (\w+)\s*\(', _domain_src, re.M))
+    worker_available = set(fn_names) | worker_local_fns
+    dep_problems = []
+    for f in fn_names:
+        body = _extract_fn_src(_haystack, f)
+        if not body:
+            continue
+        inner = body[body.find('{'):]  # saltar la firma (no contar el nombre propio)
+        called = set(re.findall(r'\b(\w+)\s*\(', inner))
+        for missing_fn in sorted((called & domain_fn_names) - worker_available):
+            dep_problems.append((f, missing_fn))
+    if dep_problems:
+        for caller, missing_fn in dep_problems:
+            fail(check, f"'{caller}' (pure fn del Worker) llama a '{missing_fn}' — fn de dominio NO disponible en el Worker (ni en _SCHED_PURE_FNS ni worker-local) → ReferenceError en runtime. Agregá '{missing_fn}' a _SCHED_PURE_FNS + su import en calc.js.")
+    else:
+        ok(check, f'cierre de deps OK — las {len(fn_names)} pure fns solo llaman fns disponibles en el Worker')
+
 # ── CHECK 4: JSON festival fields ─────────────────────────────────────────────
 # Cada festivals/*.json debe tener todos los campos de config.
 # Añadir festival nuevo sin estos campos rompe el tab de días y el cálculo.
