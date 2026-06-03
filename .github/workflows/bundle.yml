@@ -52,7 +52,14 @@ jobs:
 
       - name: Update update.json
         run: |
-          echo "{\"version\":\"${{ steps.build.outputs.number }}\",\"url\":\"https://github.com/jdvlazio/Otrofestiv.app/releases/download/v${{ steps.build.outputs.number }}/bundle.zip\"}" > update.json
+          TS="${{ steps.build.outputs.number }}"
+          # @capgo compara versiones como semver; el SW usa el timestamp crudo para
+          # cache-bust (BUILD_VERSION/CACHE_NAME) y el poll de version.json. Derivamos
+          # el semver del MISMO timestamp — una sola fuente de verdad, monótona por
+          # construcción: YYYYMMDDHHMM -> YYYY.MMDD.HHMM (10# fuerza base-10 y elimina
+          # ceros a la izquierda, que semver prohíbe). El tag/url siguen en timestamp.
+          SEMVER="${TS:0:4}.$((10#${TS:4:4})).$((10#${TS:8:4}))"
+          echo "{\"version\":\"${SEMVER}\",\"url\":\"https://github.com/jdvlazio/Otrofestiv.app/releases/download/v${TS}/bundle.zip\"}" > update.json
           cat update.json
 
       - name: Commit update.json
