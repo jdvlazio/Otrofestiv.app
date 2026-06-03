@@ -11,16 +11,43 @@
 
 const { test, expect } = require('@playwright/test');
 
-// Helper: entra al primer festival disponible en producción
+// Helper: entra al primer festival disponible en producción.
+//
+// TOLERA un reload del Service Worker mid-test. En la primera carga de un contexto
+// fresco (lo que el monitor siempre usa, y lo que vive un visitante nuevo), el SW
+// instala y al tomar control dispara `controllerchange` → `location.reload()`
+// (main.js:1691-1700). Si ese reload cae DESPUÉS del click en "Entrar", la app
+// reinicia al splash y el contenido del festival nunca aparece en esa navegación.
+// Antes el helper asumía UNA sola navegación → timeout 20s ("navigation to finish")
+// → falso rojo del synthetic monitor (no un break de producto; ver diagnóstico).
+//
+// Fix: no asumir una navegación única. Reintentar el "entrar" (re-esperar
+// data-app-ready + re-click si volvimos al splash) hasta que el contenido del
+// festival quede ESTABLE. El reload del SW ocurre una vez por contexto, así que el
+// loop converge; el presupuesto total acota el peor caso.
 async function enterFirstFestival(page) {
   await page.goto('/');
-  // Gate de readiness JS DEFINITIVO: [data-app-ready="1"] (fin del bootstrap
-  // síncrono). #splash-sel-btn es estático → no es señal válida (flaky).
-  await page.waitForSelector('html[data-app-ready="1"]', { state: 'attached', timeout: 15000 });
-  // Esperar que el botón sea visible (la animación puede tardar hasta 1.1s)
-  await page.waitForSelector('.splash-enter-btn', { state: 'visible', timeout: 10000 });
-  await page.locator('.splash-enter-btn').click({ force: true });
-  await page.waitForSelector('.poster-card, .plist-item, .dtab', { timeout: 20000 });
+  const deadline = Date.now() + 45000;
+  while (Date.now() < deadline) {
+    // (re)esperar fin del bootstrap — tras un reload del SW, el nuevo bootstrap
+    // vuelve a setear data-app-ready. #splash-sel-btn es estático → no es señal válida.
+    await page.waitForSelector('html[data-app-ready="1"]', { state: 'attached', timeout: 15000 });
+    // Si seguimos/volvimos al splash, entrar. (La animación puede tardar ~1.1s en
+    // hacer visible el botón; isVisible no espera, así que damos un waitForSelector corto.)
+    const enterBtn = page.locator('.splash-enter-btn');
+    await page.waitForSelector('.splash-enter-btn', { state: 'visible', timeout: 10000 }).catch(() => {});
+    if (await enterBtn.isVisible().catch(() => false)) {
+      await enterBtn.click({ force: true }).catch(() => {});
+    }
+    // ¿Contenido del festival estable? Si un reload del SW cae después del click,
+    // esta espera corta falla → el loop reintenta (re-espera ready + re-entra).
+    try {
+      await page.waitForSelector('.poster-card, .plist-item, .dtab', { state: 'visible', timeout: 6000 });
+      return; // entramos y el contenido es estable
+    } catch { /* probable reload del SW → reintentar */ }
+  }
+  // Garantía final: si de verdad no hay contenido, que el assert del test lo reporte.
+  await page.waitForSelector('.poster-card, .plist-item, .dtab', { state: 'visible', timeout: 10000 });
 }
 
 // M01 — La app carga sin errores JS críticos
