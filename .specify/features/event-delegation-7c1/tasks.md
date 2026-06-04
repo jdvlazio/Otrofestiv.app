@@ -17,16 +17,16 @@
 - [x] 15. Playwright skip (run en CI vía push)
 - [x] 16. Festival switch Tribeca↔Leviza atómico (delegated listener funciona post-loadFestival DOM rebuild)
 - [x] 17. ⚠ **QA BOOT PATH OBLIGATORIO** ⚠ PASSED: localStorage.clear() + reload + showAgView()/render()/_renderProgramaContent() con FILMS=0 + click simulated en `[data-action="toggleSplashDropdown"]` → **0 errors captured**
-- [ ] 18. Diff review:
+- [x] 18. Diff review:
     - ACTION_REGISTRY 87 entries en categorías A-G
     - 11 helpers definidos
     - Delegated listener + data-close-bg infra presente
     - 55 sites con data-action attributes (38 + 17)
     - Validate check añadido
     - Cero cambios en signatures de las 76 funciones invocadas
-- [ ] 19. `python3 validate.py` → 26/26 pre-commit
-- [ ] 20. `node scripts/bump-version.js`
-- [ ] 21. Commit atómico
-- [ ] 22. Push + PR contra `main` con título `refactor(controller): event delegation foundation + trivial migration (p7c-1)`
-- [ ] 23. Monitorear CI hasta verde — Playwright T01-T10 + T32 deben pasar
-- [ ] 24. Merge squash + cleanup branch
+- [x] 19. `python3 validate.py` → 26/26 pre-commit
+- [x] 20. `node scripts/bump-version.js`
+- [x] 21. Commit atómico
+- [x] 22. Push + PR contra `main` con título `refactor(controller): event delegation foundation + trivial migration (p7c-1)`
+- [x] 23. Monitorear CI hasta verde — Playwright T01-T10 + T32 deben pasar
+- [x] 24. Merge squash + cleanup branch

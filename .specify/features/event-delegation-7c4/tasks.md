@@ -102,16 +102,16 @@
       - localStorage.clear() + reload + FILMS=0 → 0 errors
       - Click delegated en: scrollToAgSec, _openCombinedFilmSheet, navTo (emptyStateHero), search-item
       - 0 errors captured
-- [ ] 23. Diff review:
+- [x] 23. Diff review:
       - Listener rewrite (loop manual)
       - 5 helpers + 6 entries + 1 fix + 2 view-helper refactors
       - 97 entries
       - 18 sites migrados → onclick = 0
       - Check promovido a FAIL
       - Cero cambios en signatures de funciones de dominio
-- [ ] 24. `python3 validate.py` → 26/26 pre-commit
-- [ ] 25. `node scripts/bump-version.js`
-- [ ] 26. Commit atómico (mensaje según plan.md sección "Commit message draft")
-- [ ] 27. Push + PR contra `main` con título `refactor(controller): event delegation wave 4 — final + listener rewrite, onclick=0 (p7c-4)`
-- [ ] 28. Monitorear CI hasta verde — Playwright T01-T10 + T32 deben pasar
-- [ ] 29. Merge squash + cleanup branch
+- [x] 24. `python3 validate.py` → 26/26 pre-commit
+- [x] 25. `node scripts/bump-version.js`
+- [x] 26. Commit atómico (mensaje según plan.md sección "Commit message draft")
+- [x] 27. Push + PR contra `main` con título `refactor(controller): event delegation wave 4 — final + listener rewrite, onclick=0 (p7c-4)`
+- [x] 28. Monitorear CI hasta verde — Playwright T01-T10 + T32 deben pasar
+- [x] 29. Merge squash + cleanup branch

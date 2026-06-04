@@ -2,8 +2,8 @@
 
 - [x] 1. `python3 validate.py` → 21/21 antes de tocar nada (baseline)
 - [x] 2. Crear branch `refactor/storage-adapter-p5`
-- [ ] 3. Extender `tests/lib/load-domain.js` con `extractObject` + opción `objects: [...]`
-- [ ] 4. **BLOQUEANTE**: smoke test del loader — fixture sintética con `const X = {...}`, confirmar extracción correcta antes de avanzar
+- [x] 3. Extender `tests/lib/load-domain.js` con `extractObject` + opción `objects: [...]`
+- [x] 4. **BLOQUEANTE**: smoke test del loader — fixture sintética con `const X = {...}`, confirmar extracción correcta antes de avanzar
 - [x] 5. Diseñar el namespace `storage` (24 métodos) e implementarlo en index.html con marcadores START/END
 - [x] 6. Bloque de contrato sobre `storage` (parte de la declaración de paso 5)
 - [x] 7. Inventario completo de callsites `localStorage.getItem`/`setItem` (documentado en `callsites.md`)
