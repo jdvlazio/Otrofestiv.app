@@ -664,7 +664,8 @@ const BUILD_VERSION='202606021627';
    Opciones         resultados del alg.     Escenarios, Variantes
    Prioridad        ★ película destacada    Favorita, Top
    Disponibilidad   bloques de tiempo libre Horario, Agenda libre
-   Añadir           acción de ♥             Guardar, Seleccionar
+   Añadir           acción de Plan (función específica)  Guardar, Seleccionar
+   Interés          acción de ♥ — añadir a la colección  Favorito, Me gusta
    Elegir           confirmar un plan       Guardar, Aceptar
    ────────────────────────────────────────────────── */
 // FESTIVAL_BUFFER → src/config.js (Step 1).

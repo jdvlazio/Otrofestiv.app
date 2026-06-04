@@ -250,19 +250,27 @@ export function addSuggestion(title,day,time){
     if(!savedAgenda) state.set('savedAgenda', {schedule:[]});
     // Avoid duplicates (re-read state porque pudo haber sido seteado arriba)
     const sa=state.get('savedAgenda');
-    if(!sa.schedule.some(s=>s._title===title)){
+    // Mitad B (pin-funcion): add / swap / no-op. El sheet de película usa esta
+    // misma acción para "Añadir esta función". Si el título ya está en OTRA
+    // función → swap; si ya está en ESA misma → sin acción (cae al render final).
+    const existing=sa.schedule.find(s=>s._title===title);
+    if(!(existing&&existing.day===day&&existing.time===time)){
       // ── Re-validación en tiempo real ─────────────────────────────
       // getSuggestions verificó el hueco al renderizar, pero el plan
       // pudo haber cambiado desde entonces (otra sugerencia añadida
-      // en la misma sesión). Revalidamos contra el estado actual.
-      const realConflict=sa.schedule.find(s=>s.day===day&&screensConflict(s,screen));
+      // en la misma sesión). Revalidamos contra el estado actual. En swap,
+      // EXCLUIMOS la función vieja del propio título (s._title!==title) para
+      // no dar un falso positivo de conflicto consigo misma.
+      const realConflict=sa.schedule.find(s=>s._title!==title&&s.day===day&&screensConflict(s,screen));
       if(realConflict){
         openConflictSheet(title, screen, realConflict);
         return;
       }
+      // filter(s._title!==title): no-opea en add (título ausente), quita la
+      // función vieja en swap (título presente en otra función).
       state.update('savedAgenda', a => ({
         ...a,
-        schedule: [...a.schedule, {...screen,_title:title}]
+        schedule: [...a.schedule.filter(s=>s._title!==title), {...screen,_title:title}]
           .sort((x,y)=>x.day_order!==y.day_order?x.day_order-y.day_order:toMin(x.time)-toMin(y.time))
       }));
       saveSavedAgenda();
@@ -282,6 +290,10 @@ export function addSuggestion(title,day,time){
   const jumpIdx=DAY_KEYS.indexOf(day);
   if(jumpIdx>=0) activeMiPlanDay=jumpIdx;
   renderAgenda();
+  // Mitad B: si se añadió desde el sheet de película (abierto), re-renderizarlo
+  // para que la fila pase a "En tu Plan". Desde Sugerencias el sheet no está
+  // abierto → el guard lo salta.
+  if(document.getElementById('pel-sheet')?.classList.contains('open')) openPelSheet(title);
 }
 
 export function checkinLaVi(title){
