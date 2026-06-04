@@ -27,31 +27,30 @@ export async function sharePlan(){
     if(!dataUrl||dataUrl==='data:,') throw new Error('canvas vacío');
   }catch(e){showToast(t('toast_err_imagen'),'err');return;}
 
-  // Construir el File de forma SÍNCRONA desde el dataUrl ya generado. En iOS,
-  // navigator.share exige activación de usuario; canvas.toBlob es async → su
-  // callback corre como tarea nueva, pierde el gesto, y share lanza NotAllowedError
-  // sin abrir el sheet nativo (no aparece "Guardar imagen"). Convertir el dataURL
-  // (síncrono, ya calculado) a File mantiene el share dentro del gesto.
   const cfg=FESTIVAL_CONFIG[_activeFestId]||{};
   const fname=`otrofestiv-${(cfg.shortName||'plan').toLowerCase().replace(/\s+/g,'-')}.png`;
-  let file=null;
-  try{
-    const _bin=atob(dataUrl.split(',')[1]);
-    const _arr=new Uint8Array(_bin.length);
-    for(let i=0;i<_bin.length;i++) _arr[i]=_bin.charCodeAt(i);
-    file=new File([_arr],fname,{type:'image/png'});
-  }catch(e){file=null;}
-
+  // El File DEBE venir de un Blob real de canvas.toBlob — NO de un Uint8Array/atob:
+  // en iOS un File hecho de bytes crudos NO se reconoce como imagen guardable →
+  // el sheet solo ofrece "Guardar en Archivos", nunca "Guardar imagen". Con un Blob
+  // de toBlob, iOS sí lo trata como imagen y aparece "Guardar imagen". Patrón
+  // idéntico al de la-primada, verificado mostrando "Save Image" en el mismo iOS.
+  // (toBlob async NO rompe la activación de usuario — la-primada lo confirma.)
   // Web Share API con archivo (iOS Safari 15+, Chrome Android 86+)
-  if(file&&navigator.share&&navigator.canShare&&navigator.canShare({files:[file]})){
-    try{
+  try{
+    const blob=await new Promise(r=>canvas.toBlob(r,'image/png'));
+    if(!blob) throw new Error('blob vacío');
+    const file=new File([blob],fname,{type:'image/png'});
+    if(navigator.share&&navigator.canShare&&navigator.canShare({files:[file]})){
       await navigator.share({files:[file],title:`${t('share_mi_plan')} · ${cfg.name||'Otrofestiv'}`});
       showToast(t('toast_compartido'),'info');
-    }catch(e){if(e.name!=='AbortError') _dlDirect(dataUrl);}  // AbortError = usuario cerró el sheet
-  }else{
-    // Fallback: descarga directa (desktop, sin file-share, o conversión fallida)
-    _dlDirect(dataUrl);
+      return;
+    }
+  }catch(e){
+    if(e&&e.name==='AbortError') return;  // el usuario cerró el sheet — no es error
+    // cualquier otro error cae al fallback de descarga
   }
+  // Fallback: descarga directa (desktop, sin file-share, o conversión/share fallida)
+  _dlDirect(dataUrl);
 }
 
 export function shareAsImage(){
