@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `cef0fb1 feat(sheet): añadir función específica al Plan desde el pel-sheet`
+> Último commit: `c1112a7 fix(share): File síncrono para que el sheet nativo abra en iOS (Save Image)`
 
 ---
 
@@ -78,7 +78,7 @@ Juan es Product Owner, diseñador y developer. Claude ejecuta; Juan audita y apr
 - `i18n-planner-audit/` — fase actual: **tasks**
 - `lista-todo-sort/` — fase actual: **tasks**
 - `normtitle/` — fase actual: **tasks**
-- `pin-funcion/` — fase actual: **spec**
+- `pin-funcion/` — fase actual: **tasks**
 - `prio-strip-three-states/` — fase actual: **tasks**
 - `schedule-planning/` — fase actual: **tasks**
 - `splash-animation/` — fase actual: **tasks**
