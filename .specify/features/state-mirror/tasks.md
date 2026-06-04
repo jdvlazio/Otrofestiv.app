@@ -22,9 +22,9 @@
 - [x] 20. QA browser — festival switch atómico Tribeca↔Leviza: 8 cfg keys cambian juntas (FILMS, FESTIVAL_STORAGE_KEY, PRIO_LIMIT, TZ_OFFSET, etc.); switch-back rehidrata el state previo
 - [x] 21. QA browser — `state.set('_lang', 'es')` propaga al global + invariant OK; `applySimTime` afecta `simNow()` y persiste en `_simTime`; reset a null funciona
 - [x] 22. QA browser — `setDelay` acumula (30→45) con history `[0, 30]`; `undoDelay` pop correcto (45→30→0); storage tiene `delays` y `delays_hist` separados; migración pre-p5.5 del `_hist` anidado verificada
-- [ ] 23. `python3 validate.py` → 23/23 pre-commit
-- [ ] 24. `node scripts/bump-version.js`
-- [ ] 25. Commit atómico
-- [ ] 26. Push + PR contra `main` con título `refactor(state): mirror state container for ~19 globals (p5.5)`
-- [ ] 27. Monitorear CI hasta verde
-- [ ] 28. Merge squash + cleanup branch
+- [x] 23. `python3 validate.py` → 23/23 pre-commit
+- [x] 24. `node scripts/bump-version.js`
+- [x] 25. Commit atómico
+- [x] 26. Push + PR contra `main` con título `refactor(state): mirror state container for ~19 globals (p5.5)`
+- [x] 27. Monitorear CI hasta verde
+- [x] 28. Merge squash + cleanup branch

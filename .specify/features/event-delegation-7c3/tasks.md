@@ -117,7 +117,7 @@
        - Click delegated en al menos: navTo, closePelAndRate, addSuggestion,
          activatePlanFilm, closePlanConfirm (fix activado)
        - 0 errors captured
-- [ ] 21. Diff review:
+- [x] 21. Diff review:
        - 1 helper nuevo (`_activatePlanFilm`)
        - 4 ediciones al ACTION_REGISTRY (2 fixes + 2 adds)
        - 91 entries totales
@@ -125,10 +125,10 @@
        - Sin cambios al listener (D1=B defer Pattern H)
        - Cero cambios en signatures de las 18+ funciones invocadas
        - Cero cambios en validate.py (a menos que false positive emerja)
-- [ ] 22. `python3 validate.py` → 26/26 pre-commit
-- [ ] 23. `node scripts/bump-version.js`
-- [ ] 24. Commit atómico (mensaje según plan.md sección "Commit message draft")
-- [ ] 25. Push + PR contra `main` con título
+- [x] 22. `python3 validate.py` → 26/26 pre-commit
+- [x] 23. `node scripts/bump-version.js`
+- [x] 24. Commit atómico (mensaje según plan.md sección "Commit message draft")
+- [x] 25. Push + PR contra `main` con título
        `refactor(controller): event delegation wave 3 — multi-statement + interpolations (p7c-3)`
-- [ ] 26. Monitorear CI hasta verde — Playwright T01-T10 + T32 deben pasar
-- [ ] 27. Merge squash + cleanup branch
+- [x] 26. Monitorear CI hasta verde — Playwright T01-T10 + T32 deben pasar
+- [x] 27. Merge squash + cleanup branch

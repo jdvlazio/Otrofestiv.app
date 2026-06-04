@@ -4,8 +4,8 @@
 - [x] 2. Crear branch `refactor/controller-pattern-7a`
 - [x] 3. Inventario: **DESVIACIÓN** — 2 de los 20 handlers son DEAD code: `clearSavedAgenda` (orphaned por commit 7219918 "Borrar eliminado") y `applySimTime` (orphaned por mi commit de Fase 6c que removió renderSimPanel). 18 handlers activos + 2 dead. `confirmConflictReplace` confirmada activa (llamada via `btn.onclick = confirmConflictReplace` en L8380)
 - [x] 4. QA browser PRE CRC: agView=-1912954484, programaList=802164011, avBlocks=0
-- [ ] 5a. **Dead removes (-18 líneas)**: eliminar `clearSavedAgenda` (orphaned por 7219918) y `applySimTime` (orphaned por mi commit 5574800 de Fase 6c renderSimPanel removal)
-- [ ] 5b. **Pequeños activos (4-15 líneas, 6 fns)**: `removeBlock`, `clearDelay`, `setDelay`, `undoDelay`, `checkinLaVi`, `savePVRating`. Aplicar pattern: read top → guard → mutate → persist → render
+- [x] 5a. **Dead removes (-18 líneas)**: eliminar `clearSavedAgenda` (orphaned por 7219918) y `applySimTime` (orphaned por mi commit 5574800 de Fase 6c renderSimPanel removal)
+- [x] 5b. **Pequeños activos (4-15 líneas, 6 fns)**: `removeBlock`, `clearDelay`, `setDelay`, `undoDelay`, `checkinLaVi`, `savePVRating`. Aplicar pattern: read top → guard → mutate → persist → render
 - [x] 6. **Medianos (8 fns)**: pattern aplicado con variantes documentadas. setLang con fade animation marcado como VARIANT en code. togglePriority: corregido `prioritized.size` (snapshot stale post-mutation) → `prioritized.size+1` para preservar semántica del toast original
 - [x] 7. **Grandes (4 fns)**: toggleWatched + confirmReplace (custom modal builder con closure handler) + addSuggestion (multi-step con re-snapshot tras mutaciones interleaved) + toggleWL (3 branches A/B/C). Modal callbacks documentados como closure variant
 - [x] 8. Check `[controller-pattern]` añadido nivel WARNING. Detecta: state.set/update AFTER render call (con excepción de `return;` entre ambos = branches mutuamente exclusivos). Whitelist: modal callbacks (showActionModal/Destructive/Conflict + btn.onclick closures) stripped antes del análisis
@@ -17,9 +17,9 @@
 - [x] 14. QA festival switch Tribeca↔Leviza atómico (FILMS 477↔24), watchlist rehidratada
 - [x] 15. Diff review: index.html +340/-149 = +191 net (refactor de 18 handlers con comentarios pattern + 2 dead removes). validate.py +116 (check [controller-pattern])
 - [x] 16. ⚠ **QA BOOT PATH OBLIGATORIO** ⚠ PASSED: localStorage.clear() + reload + invocar showAgView()/render()/_renderProgramaContent() con FILMS=0 → **0 errors captured**
-- [ ] 17. `python3 validate.py` → 25/25 pre-commit
-- [ ] 18. `node scripts/bump-version.js`
-- [ ] 19. Commit atómico
-- [ ] 20. Push + PR contra `main` con título `refactor(controller): 7a — 20 action handlers al pattern canónico`
-- [ ] 21. Monitorear CI hasta verde — Playwright T01-T10 + T32 deben pasar
-- [ ] 22. Merge squash + cleanup branch
+- [x] 17. `python3 validate.py` → 25/25 pre-commit
+- [x] 18. `node scripts/bump-version.js`
+- [x] 19. Commit atómico
+- [x] 20. Push + PR contra `main` con título `refactor(controller): 7a — 20 action handlers al pattern canónico`
+- [x] 21. Monitorear CI hasta verde — Playwright T01-T10 + T32 deben pasar
+- [x] 22. Merge squash + cleanup branch

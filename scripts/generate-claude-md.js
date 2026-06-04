@@ -199,8 +199,8 @@ ${featuresSection}
 ## Android APK (Play Store)
 
 - **Track:** Closed testing — Alpha
-- **versionCode actual:** 3 (subido MAY 14, 2026)
-- **Próximo versionCode:** **4** — nunca reutilizar un code ya publicado
+- **versionCode actual:** 7 (subido JUN 4, 2026)
+- **Próximo versionCode:** **8** — nunca reutilizar un code ya publicado
 - **server.url:** \`https://otrofestiv.app\` — la app carga desde producción, no desde bundle local
 - **Para compilar:** Android Studio → Build → Generate Signed Bundle → versionCode en \`android/app/build.gradle\`
 - **Para subir:** Play Console → Testing → Closed testing → Alpha → Create new release

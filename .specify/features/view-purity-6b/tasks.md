@@ -22,9 +22,9 @@
 - [x] 20. QA browser POST — 5/5 CRCs byte-identical match: agView, programaList, savedAgendaHTML, festivalBarHTML, ratingStarsHTML
 - [x] 21. QA browser — festival selector (2,970 chars), programaChips (3,353 chars + 19 chips populated), festival switch atómico Tribeca↔Leviza con rehidratación, invariantes mirror intactas
 - [x] 22. Diff review — index.html +172/-82 = +90 net (extracción pure halves + helper `_computeProgramaChips` + impure callers + dead remove renderSimPanel -13). validate.py +20 (PURE_FNS rename + extend). Cero cambios de lógica/HTML — confirmado por 5/5 CRC byte-identical
-- [ ] 23. `python3 validate.py` → 24/24 pre-commit
-- [ ] 24. `node scripts/bump-version.js`
-- [ ] 25. Commit atómico
-- [ ] 26. Push + PR contra `main` con título `refactor(view): purity Tier 2 — 11 split/migrated + 1 dead removed (p6b)`
-- [ ] 27. Monitorear CI hasta verde
-- [ ] 28. Merge squash + cleanup branch
+- [x] 23. `python3 validate.py` → 24/24 pre-commit
+- [x] 24. `node scripts/bump-version.js`
+- [x] 25. Commit atómico
+- [x] 26. Push + PR contra `main` con título `refactor(view): purity Tier 2 — 11 split/migrated + 1 dead removed (p6b)`
+- [x] 27. Monitorear CI hasta verde
+- [x] 28. Merge squash + cleanup branch

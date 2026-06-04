@@ -22,9 +22,9 @@
 - [x] 20. QA toggle watchlist — add/remove funciona (1→2→1, render chain consistente)
 - [x] 21. Diff review — index.html +160/-95 net (Group IV -45 + Group I splits + Group II destructures). validate.py +17 (PURE_FNS +4 + comment doc)
 - [x] 22. ⚠ **QA BOOT PATH OBLIGATORIO** ⚠ PASSED: localStorage.clear() + reload + showAgView()/render()/_renderProgramaContent() con FILMS=0 (sin loadFest) → **0 errors captured**. Atrapa caller-missing-state bugs pre-CI (lección de 6b)
-- [ ] 23. `python3 validate.py` → 24/24 pre-commit
-- [ ] 24. `node scripts/bump-version.js`
-- [ ] 25. Commit atómico
-- [ ] 26. Push + PR contra `main` con título `refactor(view): purity Tier 3 — 5 split + 2 destructure + 1 dead (p6c)`
-- [ ] 27. Monitorear CI hasta verde — Playwright T01-T10 + T32 deben pasar
-- [ ] 28. Merge squash + cleanup branch
+- [x] 23. `python3 validate.py` → 24/24 pre-commit
+- [x] 24. `node scripts/bump-version.js`
+- [x] 25. Commit atómico
+- [x] 26. Push + PR contra `main` con título `refactor(view): purity Tier 3 — 5 split + 2 destructure + 1 dead (p6c)`
+- [x] 27. Monitorear CI hasta verde — Playwright T01-T10 + T32 deben pasar
+- [x] 28. Merge squash + cleanup branch

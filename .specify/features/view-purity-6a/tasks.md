@@ -18,9 +18,9 @@
 - [x] 16. QA browser POST — CRCs idénticos a paso 4: agView=1379689571, programaList=-373827060, savedAgendaHTML=1383044747 (byte-identical)
 - [x] 17. QA browser — festival switch Tribeca↔Leviza atómico (FILMS 477↔24, posters renderizan correctamente). Switch-back rehidrata watchlist. shareAsImage retorna 70,146 chars con CRC match
 - [x] 18. Diff review — index.html: -187 / +variations. Cambios: solo destructure + signature param (8 puntos) + caller updates (15 puntos) + remove de 2 dead functions (-129 líneas). Cero cambios en lógica/HTML
-- [ ] 19. `python3 validate.py` → 24/24 pre-commit
-- [ ] 20. `node scripts/bump-version.js`
-- [ ] 21. Commit atómico
-- [ ] 22. Push + PR contra `main` con título `refactor(view): purity Tier 1 — 8 sub-renders take state as param (p6a)`
-- [ ] 23. Monitorear CI hasta verde
-- [ ] 24. Merge squash + cleanup branch
+- [x] 19. `python3 validate.py` → 24/24 pre-commit
+- [x] 20. `node scripts/bump-version.js`
+- [x] 21. Commit atómico
+- [x] 22. Push + PR contra `main` con título `refactor(view): purity Tier 1 — 8 sub-renders take state as param (p6a)`
+- [x] 23. Monitorear CI hasta verde
+- [x] 24. Merge squash + cleanup branch

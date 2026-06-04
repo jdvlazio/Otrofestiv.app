@@ -88,7 +88,7 @@
          (e.g., `[data-action="toggleWatched"]`, `[data-action="togglePriority"][data-stop="1"]`,
          `[data-action="selectFromDetail"]`)
        - **0 errors captured**
-- [ ] 17. Diff review:
+- [x] 17. Diff review:
        - 5 atributos renombrados (7 ediciones en HTML)
        - ACTION_REGISTRY 89 entries (88 + `_toggleWLFromList`); `selectFromDetail`
          entry corregido
@@ -96,10 +96,10 @@
        - 10 sites con `data-stop="1"` añadido
        - Cero cambios en signatures de las 14 funciones invocadas
        - Cero cambios en validate.py
-- [ ] 18. `python3 validate.py` → 26/26 pre-commit
-- [ ] 19. `node scripts/bump-version.js`
-- [ ] 20. Commit atómico (mensaje según plan.md sección "Commit message draft")
-- [ ] 21. Push + PR contra `main` con título
+- [x] 18. `python3 validate.py` → 26/26 pre-commit
+- [x] 19. `node scripts/bump-version.js`
+- [x] 20. Commit atómico (mensaje según plan.md sección "Commit message draft")
+- [x] 21. Push + PR contra `main` con título
        `refactor(controller): event delegation wave 2 — dataset + stopPropagation (p7c-2)`
-- [ ] 22. Monitorear CI hasta verde — Playwright T01-T10 + T32 deben pasar
-- [ ] 23. Merge squash + cleanup branch
+- [x] 22. Monitorear CI hasta verde — Playwright T01-T10 + T32 deben pasar
+- [x] 23. Merge squash + cleanup branch

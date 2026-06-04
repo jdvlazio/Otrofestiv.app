@@ -76,7 +76,7 @@
       addBlock, removeBlock, toggleFullDay, confirmAvBlock. Quitar
       renderAvBlocks/runCalc manuales.
 - [x] 12. `python3 validate.py` → verificar [controller-pattern] (aún WARNING en este punto, se actualiza en paso 13). Reformular self-induced false positives.
-- [ ] 13. **Actualizar check `[controller-pattern]`** en validate.py:
+- [x] 13. **Actualizar check `[controller-pattern]`** en validate.py:
       - Nuevo shape: read → guard → mutate → persist (NO render en handler)
       - Verificar que los core-slice handlers NO contengan render calls directos
       - Promote WARNING → FAIL
@@ -92,14 +92,14 @@
 - [x] 18. **No double-render** — browser eval con render counter: batchUpdate
       multi-key (e.g. removeFromAgenda que toca watchlist+watched+prioritized)
       → renderActiveView ejecuta exactamente 1×, no N×.
-- [ ] 19. Playwright skip local (run en CI)
+- [x] 19. Playwright skip local (run en CI)
 - [x] 20. Festival switch Tribeca↔Leviza atómico — subscribers sobreviven loadFestival
       (NOTA: festival load es out-of-scope, sigue render manual — verificar coexistencia)
 - [x] 21. ⚠ **QA BOOT PATH OBLIGATORIO** ⚠:
       - localStorage.clear() + reload + FILMS=0 → 0 errors
       - Mutar un slice (toggleWL) → renderActiveView dispara sin error con FILMS=0
       - 0 errors captured
-- [ ] 22. Diff review:
+- [x] 22. Diff review:
       - subscribeRender + _runRenderSubs en state container (+ integración set/batch)
       - subscribe(value,key) genérico INTACTO (state.test.js L176 verde)
       - renderActiveView router + 3 pipeline registrations
@@ -107,9 +107,9 @@
       - Surgical patches preservados
       - [controller-pattern] nuevo shape + FAIL
       - Cero cambios en signatures de funciones de render/dominio
-- [ ] 23. `python3 validate.py` → 26/26 pre-commit
-- [ ] 24. `node scripts/bump-version.js`
-- [ ] 25. Commit atómico (mensaje según plan.md "Commit message draft")
-- [ ] 26. Push + PR contra `main` con título `refactor(controller): subscribe→render pipeline (p7d)`
-- [ ] 27. Monitorear CI hasta verde — Playwright T01-T10 + T32 + unit tests deben pasar
-- [ ] 28. Merge squash + cleanup branch
+- [x] 23. `python3 validate.py` → 26/26 pre-commit
+- [x] 24. `node scripts/bump-version.js`
+- [x] 25. Commit atómico (mensaje según plan.md "Commit message draft")
+- [x] 26. Push + PR contra `main` con título `refactor(controller): subscribe→render pipeline (p7d)`
+- [x] 27. Monitorear CI hasta verde — Playwright T01-T10 + T32 + unit tests deben pasar
+- [x] 28. Merge squash + cleanup branch
