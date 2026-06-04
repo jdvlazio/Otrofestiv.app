@@ -38,9 +38,8 @@ export async function sharePlan(){
   // Web Share API con archivo (iOS Safari 15+, Chrome Android 86+)
   try{
     const blob=await new Promise(r=>canvas.toBlob(r,'image/png'));
-    if(!blob) throw new Error('blob vacío');
-    const file=new File([blob],fname,{type:'image/png'});
-    if(navigator.share&&navigator.canShare&&navigator.canShare({files:[file]})){
+    const file=blob?new File([blob],fname,{type:'image/png'}):null;
+    if(file&&navigator.share&&navigator.canShare&&navigator.canShare({files:[file]})){
       await navigator.share({files:[file],title:`${t('share_mi_plan')} · ${cfg.name||'Otrofestiv'}`});
       showToast(t('toast_compartido'),'info');
       return;
