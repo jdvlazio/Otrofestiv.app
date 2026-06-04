@@ -15,10 +15,12 @@ test('T08 — festival selector: Leviza aparece antes que Tribeca', async ({ pag
   await page.waitForSelector('.splash-drop-item[data-fest]', { state: 'visible', timeout: 15000 });
   const items = page.locator('.splash-drop-item[data-fest]');
   expect(await items.count()).toBeGreaterThan(1);
-  // Tribeca es el festival próximo — aparece primero en la lista (upcoming > past)
-  // Leviza terminó el 17 MAY y aparece en Anteriores, después de los próximos
+  // Tribeca (JUN 3–14) y Olhar (JUN 4–13) están EN CURSO simultáneamente → el
+  // primero del selector es uno de los dos activos, antes que los pasados.
+  // Leviza terminó el 17 MAY y aparece en Anteriores. (Date-sensitive: sigue el
+  // calendario de festivales en curso; antes del 4 JUN el primero era Tribeca.)
   const firstFestId = await items.first().getAttribute('data-fest');
-  expect(firstFestId).toContain('tribeca');
+  expect(['tribeca', 'olhar'].some(id => (firstFestId || '').includes(id))).toBe(true);
   const allIds = await items.evaluateAll(els => els.map(el => el.getAttribute('data-fest')));
   expect(allIds.some(id => id.includes('leviza'))).toBe(true);
 });
