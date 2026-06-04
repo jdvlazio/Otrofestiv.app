@@ -633,7 +633,7 @@ FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202606021627';
+const BUILD_VERSION='202606041121';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';
@@ -664,7 +664,8 @@ const BUILD_VERSION='202606021627';
    Opciones         resultados del alg.     Escenarios, Variantes
    Prioridad        ★ película destacada    Favorita, Top
    Disponibilidad   bloques de tiempo libre Horario, Agenda libre
-   Añadir           acción de ♥             Guardar, Seleccionar
+   Añadir           acción de Plan (función específica)  Guardar, Seleccionar
+   Interés          acción de ♥ — añadir a la colección  Favorito, Me gusta
    Elegir           confirmar un plan       Guardar, Aceptar
    ────────────────────────────────────────────────── */
 // FESTIVAL_BUFFER → src/config.js (Step 1).

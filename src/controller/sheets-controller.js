@@ -140,10 +140,24 @@ export function openPelSheet(title){
     const _festCity=(FESTIVAL_CONFIG[_activeFestId]||{}).city||'';
     const _city=_festCity&&vc.city&&vc.city!==_festCity?vc.city:'';
     const isPast=screeningPassed(s)&&!festivalEnded();
+    // Mitad B (pin-funcion): control "Añadir esta función al Plan" por fila.
+    // Recurrentes: sin control (informativo). Si esta función ya está en el
+    // Plan → indicador "En tu Plan"; si no, y la función no pasó ni terminó el
+    // festival → botón "Añadir" (reusa addSuggestion, que decide add vs swap).
+    let _addCtrl='';
+    if(!f.is_recurring){
+      const _isPlannedFn=savedAgenda&&savedAgenda.schedule.some(e=>e._title===f.title&&e.day===s.day&&e.time===s.time);
+      if(_isPlannedFn){
+        _addCtrl=`<span class="screening-inplan">${ICONS.check} ${t('plan_en_tu_plan')}</span>`;
+      }else if(!festivalEnded()&&!screeningPassed(s)){
+        _addCtrl=`<button class="suggestion-add" data-action="addSuggestion" data-title="${f.title.replace(/"/g,'&quot;')}" data-day="${s.day}" data-time="${s.time}" data-stop="1">${ICONS.plus} ${t('misc_anadir')}</button>`;
+      }
+    }
     return`<div class="pel-sheet-screening"${isPast?' style="opacity:.4"':''}>
       <span class="pelicula-day" data-day="${s.day}">${dayAbb}</span>
       <span class="pelicula-time">${s.time}</span>
       <span class="pelicula-venue" data-venue="${vc.short.replace(/"/g,'&quot;')}" data-action="filterByVenue">${ICONS.pin} <span class="venue-text">${vc.short}${sl?' · '+sl:''}${_city?`<span class="venue-municipio">${_city}</span>`:''}</span></span>
+      ${_addCtrl}
     </div>`;
   }).join('');
   // Lista de cortos si es programa

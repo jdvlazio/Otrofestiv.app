@@ -134,3 +134,69 @@ test('V04 — rating sheet muestra estrellas', async ({ page }) => {
   // El área de estrellas debe estar presente
   await expect(page.locator('.rating-stars')).toBeVisible({ timeout: 3000 });
 });
+
+// ─── AÑADIR FUNCIÓN AL PLAN DESDE EL SHEET (Mitad B · pin-funcion) ─────────────
+
+const TRIBECA_SIMTIME = '2026-06-03T09:00:00-05:00';
+
+// Helper: primer título con ≥minN funciones futuras NO recurrentes.
+async function _titleWithFutureScreenings(page, minN) {
+  return page.evaluate((minN) => {
+    const byTitle = {};
+    FILMS.forEach(f => { (byTitle[f.title] = byTitle[f.title] || []).push(f); });
+    let best = null, bestN = 0;
+    for (const [t, scr] of Object.entries(byTitle)) {
+      if (scr[0].is_recurring) continue;            // recurrentes: sin botón por fila
+      if (scr.length >= minN && scr.length > bestN) { best = t; bestN = scr.length; }
+    }
+    return best;                                     // el de MÁS funciones (≥minN)
+  }, minN);
+}
+
+// AF01 — Añadir función desde el sheet crea entrada en el Plan (sin plan previo)
+test('AF01 — añadir función desde el sheet crea entrada en el Plan', async ({ page }) => {
+  await enterFestival(page, 'leviza2026', LEVIZA_SIMTIME);
+  await page.evaluate(() => { state.set('savedAgenda', null); });
+  const title = await _titleWithFutureScreenings(page, 1);
+  expect(title).toBeTruthy();
+  await page.evaluate((t) => openPelSheet(t), title);
+  await page.waitForSelector('#pel-sheet.open', { timeout: 8000 });
+  await page.waitForSelector('.pel-sheet-screening .suggestion-add', { state: 'visible', timeout: 5000 });
+  await page.locator('.pel-sheet-screening .suggestion-add').first().click();
+  await page.waitForFunction(() => savedAgenda && savedAgenda.schedule.length === 1, { timeout: 5000 });
+  const len = await page.evaluate(() => savedAgenda.schedule.length);
+  expect(len).toBe(1);
+});
+
+// AF02 — La función añadida muestra el indicador "En tu Plan"
+test('AF02 — la función añadida muestra "En tu Plan"', async ({ page }) => {
+  await enterFestival(page, 'leviza2026', LEVIZA_SIMTIME);
+  await page.evaluate(() => { state.set('savedAgenda', null); });
+  const title = await _titleWithFutureScreenings(page, 1);
+  expect(title).toBeTruthy();
+  await page.evaluate((t) => openPelSheet(t), title);
+  await page.waitForSelector('#pel-sheet.open', { timeout: 8000 });
+  await page.locator('.pel-sheet-screening .suggestion-add').first().click();
+  // Tras añadir, la fila planeada muestra el indicador (no botón) "En tu Plan".
+  await expect(page.locator('.pel-sheet-screening .screening-inplan')).toHaveCount(1, { timeout: 5000 });
+});
+
+// AF03 — Añadir otra función del mismo título hace swap (no duplica)
+test('AF03 — añadir otra función del mismo título hace swap', async ({ page }) => {
+  await enterFestival(page, 'tribeca2026', TRIBECA_SIMTIME);
+  await page.evaluate(() => { state.set('savedAgenda', null); });
+  const title = await _titleWithFutureScreenings(page, 2);
+  if (!title) { console.log('AF03: sin título multi-función no-recurrente, skip'); return; }
+  await page.evaluate((t) => openPelSheet(t), title);
+  await page.waitForSelector('#pel-sheet.open', { timeout: 8000 });
+  const nBtns = await page.locator('.pel-sheet-screening .suggestion-add').count();
+  if (nBtns < 2) { console.log('AF03: <2 funciones futuras con botón, skip'); return; }
+  await page.locator('.pel-sheet-screening .suggestion-add').first().click();
+  // El sheet se re-renderiza: la función añadida pasa a "En tu Plan".
+  await page.waitForSelector('.pel-sheet-screening .screening-inplan', { timeout: 5000 });
+  // Queda ≥1 .suggestion-add (otra función) → clic = swap, no duplicado.
+  await page.locator('.pel-sheet-screening .suggestion-add').first().click();
+  await page.waitForTimeout(400);
+  const len = await page.evaluate(() => savedAgenda.schedule.length);
+  expect(len).toBe(1);
+});
