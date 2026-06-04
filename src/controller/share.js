@@ -27,22 +27,29 @@ export async function sharePlan(){
     if(!dataUrl||dataUrl==='data:,') throw new Error('canvas vacío');
   }catch(e){showToast(t('toast_err_imagen'),'err');return;}
 
+  // Construir el File de forma SÍNCRONA desde el dataUrl ya generado. En iOS,
+  // navigator.share exige activación de usuario; canvas.toBlob es async → su
+  // callback corre como tarea nueva, pierde el gesto, y share lanza NotAllowedError
+  // sin abrir el sheet nativo (no aparece "Guardar imagen"). Convertir el dataURL
+  // (síncrono, ya calculado) a File mantiene el share dentro del gesto.
+  const cfg=FESTIVAL_CONFIG[_activeFestId]||{};
+  const fname=`otrofestiv-${(cfg.shortName||'plan').toLowerCase().replace(/\s+/g,'-')}.png`;
+  let file=null;
+  try{
+    const _bin=atob(dataUrl.split(',')[1]);
+    const _arr=new Uint8Array(_bin.length);
+    for(let i=0;i<_bin.length;i++) _arr[i]=_bin.charCodeAt(i);
+    file=new File([_arr],fname,{type:'image/png'});
+  }catch(e){file=null;}
+
   // Web Share API con archivo (iOS Safari 15+, Chrome Android 86+)
-  if(navigator.share&&navigator.canShare){
-    canvas.toBlob(async blob=>{
-      if(!blob){_dlDirect(dataUrl);return;}
-      const cfg=FESTIVAL_CONFIG[_activeFestId]||{};
-      const fname=`otrofestiv-${(cfg.shortName||'plan').toLowerCase().replace(/\s+/g,'-')}.png`;
-      const file=new File([blob],fname,{type:'image/png'});
-      if(navigator.canShare({files:[file]})){
-        try{
-          await navigator.share({files:[file],title:`${t('share_mi_plan')} · ${cfg.name||'Otrofestiv'}`});
-          showToast(t('toast_compartido'),'info');
-        }catch(e){if(e.name!=='AbortError') _dlDirect(dataUrl);}
-      }else{_dlDirect(dataUrl);}
-    },'image/png');
+  if(file&&navigator.share&&navigator.canShare&&navigator.canShare({files:[file]})){
+    try{
+      await navigator.share({files:[file],title:`${t('share_mi_plan')} · ${cfg.name||'Otrofestiv'}`});
+      showToast(t('toast_compartido'),'info');
+    }catch(e){if(e.name!=='AbortError') _dlDirect(dataUrl);}  // AbortError = usuario cerró el sheet
   }else{
-    // Fallback desktop: descarga directa
+    // Fallback: descarga directa (desktop, sin file-share, o conversión fallida)
     _dlDirect(dataUrl);
   }
 }
