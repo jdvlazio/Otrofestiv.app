@@ -2,35 +2,54 @@
 """
 Otrofestiv — TMDB + Letterboxd Enricher
 Uso: python3 scripts/enrich-festival.py festivals/<id>.json
+     python3 scripts/enrich-festival.py --selftest   # valida match_ok offline
 
-Enriquece todos los campos de cada film en dos fases:
+Enriquece cada film en dos fases:
 
   Fase 1 — TMDB (requiere TMDB_API_KEY en el entorno):
-    director, genre, year, synopsis, poster
+    SOLO `genre` y `year` (campos verificables, no críticos si vacíos).
+    El match exige los 4 criterios del PIPELINE (docs/PIPELINE.md, Fase 3):
+    título sim>0.6 + año ±1 + apellido de director + país — y rechaza en miss.
+    ❌ NUNCA escribe `synopsis`/`synopsis_en`/`poster`/`director`/`country`:
+       esos van de la fuente oficial del festival con verificación humana
+       (gate film-por-film). Ver docs/PIPELINE.md. Lección Brujo/Tribeca 2026:
+       el match "primer resultado por título" asignaba sinopsis/póster de OTRA
+       película. El gate de 4 criterios + corroboración ≥2 lo previene.
 
   Fase 2 — Letterboxd (sin API key, vía letterboxd.com/tmdb/{id}/):
-    lbSlug → slug canónico del film en Letterboxd
+    lbSlug → slug canónico (solo para matches que pasaron el gate de Fase 1).
 
 Comportamiento:
-  - No sobreescribe campos que ya tienen valor.
+  - No sobreescribe campos con valor.
   - Enriquece también los items de film_list (cortos y programas combinados).
   - Films con type:'event' se saltan siempre.
   - lbSlug no resuelto se marca con ⚠️ LB PENDIENTE para revisión manual.
+  - Los rechazos de TMDB se loguean al final para revisión manual.
 
 Requiere: pip install requests
 """
-import json, time, re, requests, sys, os
+import json, time, re, sys, os, difflib, unicodedata
+
+# `requests` solo se necesita para la red (Fase 1/2). El gate match_ok y el
+# --selftest son puros → import lazy para correrlos sin la dependencia instalada.
+try:
+    import requests
+except ImportError:
+    requests = None
 
 # ── TMDB ──────────────────────────────────────────────────────────────────────
-TMDB_KEY = os.environ.get('TMDB_API_KEY', '')
-if not TMDB_KEY:
-    print('⚠️  TMDB_API_KEY no definida. Exportala antes de correr:')
-    print('   export TMDB_API_KEY=tu_key_de_tmdb')
-    print('   Obtené una en: https://www.themoviedb.org/settings/api')
-    sys.exit(1)
-
+TMDB_KEY  = os.environ.get('TMDB_API_KEY', '')
 TMDB_BASE = 'https://api.themoviedb.org/3'
-TMDB_IMG  = 'https://image.tmdb.org/t/p/w185'
+
+def require_runtime():
+    if requests is None:
+        print('⚠️  Falta la dependencia `requests`: pip install requests')
+        sys.exit(1)
+    if not TMDB_KEY:
+        print('⚠️  TMDB_API_KEY no definida. Exportala antes de correr:')
+        print('   export TMDB_API_KEY=tu_key_de_tmdb')
+        print('   Obtené una en: https://www.themoviedb.org/settings/api')
+        sys.exit(1)
 
 LB_HEADERS = {
     'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
@@ -38,58 +57,134 @@ LB_HEADERS = {
     'Accept-Language': 'en-US,en;q=0.9',
 }
 
+GENRE_ES = {
+    'Drama': 'Drama', 'Comedy': 'Comedia', 'Thriller': 'Thriller', 'Horror': 'Terror',
+    'Action': 'Acción', 'Romance': 'Romance', 'Documentary': 'Documental',
+    'Animation': 'Animación', 'Science Fiction': 'Ciencia Ficción', 'Fantasy': 'Fantasía',
+    'Mystery': 'Misterio', 'Crime': 'Crimen', 'History': 'Historia', 'Adventure': 'Aventura',
+    'Family': 'Familia', 'Music': 'Música', 'War': 'Guerra', 'Western': 'Western', 'TV Movie': 'TV',
+}
+
+# ── Normalización + similitud (puro, sin red) ───────────────────────────────────
+def _norm(s):
+    s = unicodedata.normalize('NFKD', (s or '')).encode('ascii', 'ignore').decode().lower()
+    return re.sub(r'[^a-z0-9]+', ' ', s).strip()
+
+def title_sim(a, b):
+    a, b = _norm(a), _norm(b)
+    if not a or not b:
+        return 0.0
+    return difflib.SequenceMatcher(None, a, b).ratio()
+
+def _surnames(name):
+    """Apellido (último token) de cada director en un campo multi-director."""
+    out = set()
+    for part in re.split(r'[,/&]| y | and ', name or ''):
+        toks = _norm(part).split()
+        if toks:
+            out.add(toks[-1])
+    return out
+
+def _countries(s):
+    return {c for c in (_norm(x) for x in re.split(r'[,/&]', s or '')) if c}
+
+def _country_match(fc, cc):
+    """Match laxo por substring (United States ⊂ United States of America)."""
+    return any(a in b or b in a for a in fc for b in cc)
+
+# ── Gate de match — 4 criterios del PIPELINE (PURO, testeable offline) ───────────
+def match_ok(film, det):
+    """
+    film: objeto del JSON (title, title_en, year, director, country).
+    det : detalle TMDB normalizado (title, original_title, release_date,
+          directors[list], countries[list]).
+    Devuelve (bool, reason). Regla:
+      - Título sim>0.6 OBLIGATORIO.
+      - Cualquier criterio EVALUABLE (ambos lados con dato) que NO pase → rechazo.
+      - Corroboración mínima: ≥2 de {año, director, país} evaluables y aprobados.
+        (El título solo NUNCA alcanza — esto es lo que cazó a Brujo.)
+    """
+    ftitles = [film.get('title', ''), film.get('title_en', '')]
+    ctitles = [det.get('title', ''), det.get('original_title', '')]
+    sims = [title_sim(a, b) for a in ftitles if a for b in ctitles if b]
+    tsim = max(sims) if sims else 0.0
+    if tsim <= 0.6:
+        return (False, f'título sim {tsim:.2f}≤0.6')
+
+    fy = str(film.get('year') or '')[:4]
+    cy = (det.get('release_date') or '')[:4]
+    year_ev = fy.isdigit() and cy.isdigit()
+    year_ok = year_ev and abs(int(fy) - int(cy)) <= 1
+
+    fdir = _surnames(film.get('director', ''))
+    cdir = {s for n in det.get('directors', []) for s in _surnames(n)}
+    dir_ev = bool(fdir and cdir)
+    dir_ok = dir_ev and bool(fdir & cdir)
+
+    fc = _countries(film.get('country', ''))
+    cc = {_norm(c) for c in det.get('countries', []) if _norm(c)}
+    co_ev = bool(fc and cc)
+    co_ok = co_ev and _country_match(fc, cc)
+
+    for nm, ev, ok in (('año', year_ev, year_ok), ('director', dir_ev, dir_ok), ('país', co_ev, co_ok)):
+        if ev and not ok:
+            return (False, f'{nm} no coincide (título {tsim:.2f})')
+
+    corrob = sum(1 for ev, ok in ((year_ev, year_ok), (dir_ev, dir_ok), (co_ev, co_ok)) if ev and ok)
+    if corrob < 2:
+        return (False, f'solo {corrob} criterio(s) corroborante(s) <2 (título {tsim:.2f})')
+    return (True, f'ok (título {tsim:.2f}, {corrob} corrob.)')
+
 # ── TMDB functions ─────────────────────────────────────────────────────────────
-def tmdb_search(title, year=None):
-    params = {'api_key': TMDB_KEY, 'query': title, 'language': 'es-MX'}
-    if year:
-        params['year'] = year
-    r = requests.get(f'{TMDB_BASE}/search/movie', params=params, timeout=8)
-    results = r.json().get('results', [])
-    if not results and year:
-        del params['year']
-        r = requests.get(f'{TMDB_BASE}/search/movie', params=params, timeout=8)
-        results = r.json().get('results', [])
-    return results[0] if results else None
+def _search(media, query):
+    params = {'api_key': TMDB_KEY, 'query': query, 'language': 'en-US'}
+    r = requests.get(f'{TMDB_BASE}/search/{media}', params=params, timeout=8)
+    return r.json().get('results', [])
 
-def tmdb_details(tmdb_id):
-    params = {'api_key': TMDB_KEY, 'language': 'es-MX', 'append_to_response': 'credits'}
-    r = requests.get(f'{TMDB_BASE}/movie/{tmdb_id}', params=params, timeout=8)
-    return r.json()
+def candidates_for(film, max_each=3):
+    """Hasta `max_each` resultados por (media × título). Original primero, luego EN."""
+    titles = []
+    for k in ('title', 'title_en'):
+        v = film.get(k)
+        if v and v not in titles:
+            titles.append(v)
+    seen, out = set(), []
+    for media in ('movie', 'tv'):
+        for q in titles:
+            try:
+                results = _search(media, q)
+            except Exception:
+                results = []
+            for res in results[:max_each]:
+                key = (media, res.get('id'))
+                if key not in seen:
+                    seen.add(key)
+                    out.append((media, res))
+    return out
 
-def get_director(credits):
-    crew = credits.get('crew', [])
-    dirs = [p['name'] for p in crew if p.get('job') == 'Director']
-    return dirs[0] if dirs else ''
+def fetch_details(media, cid):
+    """Detalle TMDB normalizado a un shape común (en-US para que país/título matcheen)."""
+    params = {'api_key': TMDB_KEY, 'language': 'en-US', 'append_to_response': 'credits'}
+    d = requests.get(f'{TMDB_BASE}/{media}/{cid}', params=params, timeout=8).json()
+    if media == 'tv':
+        directors = [p['name'] for p in d.get('created_by', [])] + \
+                    [p['name'] for p in d.get('credits', {}).get('crew', []) if p.get('job') in ('Director', 'Series Director')]
+        countries = [c.get('name', '') for c in d.get('production_countries', [])] + d.get('origin_country', [])
+        return dict(title=d.get('name', ''), original_title=d.get('original_name', ''),
+                    release_date=d.get('first_air_date', ''), genres=d.get('genres', []),
+                    directors=directors, countries=countries)
+    directors = [p['name'] for p in d.get('credits', {}).get('crew', []) if p.get('job') == 'Director']
+    countries = [c.get('name', '') for c in d.get('production_countries', [])]
+    return dict(title=d.get('title', ''), original_title=d.get('original_title', ''),
+                release_date=d.get('release_date', ''), genres=d.get('genres', []),
+                directors=directors, countries=countries)
 
-def get_genres(details):
-    genres = details.get('genres', [])
-    mapping = {
-        'Drama': 'Drama', 'Comedia': 'Comedia', 'Thriller': 'Thriller',
-        'Terror': 'Terror', 'Acción': 'Acción', 'Romance': 'Romance',
-        'Documental': 'Documental', 'Animación': 'Animación',
-        'Ciencia ficción': 'Ciencia Ficción', 'Fantasía': 'Fantasía',
-        'Misterio': 'Misterio', 'Crimen': 'Crimen', 'Historia': 'Historia',
-        'Aventura': 'Aventura', 'Familia': 'Familia', 'Música': 'Música',
-        'Guerra': 'Guerra', 'Western': 'Western',
-    }
-    names = [mapping.get(g['name'], g['name']) for g in genres[:2]]
-    return ', '.join(names)
-
-def is_likely_english(text):
-    if not text:
-        return False
-    t = text.lower()
-    en = sum(t.count(m) for m in [' the ',' and ',' of the ',' in the ',' is ',' are ',' was ',' were ',' his ',' her '])
-    es = sum(t.count(m) for m in [' la ',' el ',' los ',' las ',' una ',' que ',' de ',' en ',' se ',' del '])
-    return en > es + 2
+def get_genres(genres):
+    return ', '.join(GENRE_ES.get(g.get('name', ''), g.get('name', '')) for g in genres[:2])
 
 # ── Letterboxd slug resolution ─────────────────────────────────────────────────
 def get_lb_slug(tmdb_id):
-    """
-    Resuelve el slug de Letterboxd a partir del TMDB ID.
-    Fetcha letterboxd.com/tmdb/{id}/ y extrae el slug del og:url en el HTML.
-    Devuelve el slug (str) o None si el film no está en Letterboxd.
-    """
+    """Resuelve el slug de Letterboxd desde el TMDB ID (og:url / canonical)."""
     if not tmdb_id:
         return None
     url = f'https://letterboxd.com/tmdb/{tmdb_id}/'
@@ -97,18 +192,10 @@ def get_lb_slug(tmdb_id):
         r = requests.get(url, headers=LB_HEADERS, timeout=10, allow_redirects=True)
         if r.status_code != 200:
             return None
-        # og:url es la fuente canónica — siempre presente en páginas de film
-        m = re.search(
-            r'<meta\s+property="og:url"\s+content="https://letterboxd\.com/film/([^/"]+)/"',
-            r.text
-        )
+        m = re.search(r'<meta\s+property="og:url"\s+content="https://letterboxd\.com/film/([^/"]+)/"', r.text)
         if m:
             return m.group(1)
-        # Fallback: canonical link
-        m = re.search(
-            r'<link\s+rel="canonical"\s+href="https://letterboxd\.com/film/([^/"]+)/"',
-            r.text
-        )
+        m = re.search(r'<link\s+rel="canonical"\s+href="https://letterboxd\.com/film/([^/"]+)/"', r.text)
         if m:
             return m.group(1)
         return None
@@ -117,32 +204,34 @@ def get_lb_slug(tmdb_id):
 
 # ── Film enrichment ────────────────────────────────────────────────────────────
 def enrich_film_obj(film):
-    """Fase 1: TMDB. Devuelve dict con campos + _tmdb_id, o None si no se encuentra."""
-    title_en = film.get('title_en') or film.get('title', '')
-    result = tmdb_search(title_en, film.get('year') or None)
-    if not result:
-        return None
-    tmdb_id = result['id']
-    details = tmdb_details(tmdb_id)
-    director = get_director(details.get('credits', {}))
-    genre = get_genres(details)
-    year = result.get('release_date', '')[:4] or ''
-    synopsis = details.get('overview', '')
-    if not synopsis:
-        params = {'api_key': TMDB_KEY, 'language': 'en-US', 'append_to_response': 'credits'}
-        r2 = requests.get(f'{TMDB_BASE}/movie/{tmdb_id}', params=params, timeout=8)
-        synopsis = r2.json().get('overview', '')
-    poster_path = result.get('poster_path', '')
-    poster = (TMDB_IMG + poster_path) if poster_path else ''
-    return {
-        'director': director, 'genre': genre, 'year': year,
-        'synopsis': synopsis, 'poster': poster, '_tmdb_id': tmdb_id,
-    }
+    """
+    Fase 1: TMDB con gate de 4 criterios.
+    Devuelve dict {genre, year, _tmdb_id, _reason} del PRIMER candidato que pasa
+    el gate, o {'_reason': ...} si ninguno pasa (sin _tmdb_id).
+    SOLO genre/year — nunca synopsis/poster/director (van de fuente oficial).
+    """
+    last = 'sin candidatos'
+    for media, res in candidates_for(film):
+        try:
+            det = fetch_details(media, res['id'])
+        except Exception as e:
+            last = f'error detalle ({e})'
+            continue
+        ok, reason = match_ok(film, det)
+        if ok:
+            return {
+                'genre': get_genres(det.get('genres', [])),
+                'year': (det.get('release_date') or '')[:4],
+                '_tmdb_id': res['id'],
+                '_reason': reason,
+            }
+        last = reason
+    return {'_reason': last}
 
 def apply_enrichment(film, data):
-    """Aplica campos TMDB sin sobreescribir los existentes."""
+    """Aplica SOLO genre/year (campos aceptados de TMDB), sin sobreescribir."""
     changed = False
-    for field in ('director', 'genre', 'year', 'synopsis', 'poster'):
+    for field in ('genre', 'year'):
         if not film.get(field) and data.get(field):
             film[field] = data[field]
             changed = True
@@ -151,7 +240,7 @@ def apply_enrichment(film, data):
 def resolve_lb(film, tmdb_id, stats):
     """Fase 2: Letterboxd. Actualiza film['lbSlug'] en el lugar."""
     if film.get('lbSlug') and film['lbSlug'] != '⚠️ LB PENDIENTE':
-        return  # ya resuelto
+        return
     time.sleep(0.3)
     slug = get_lb_slug(tmdb_id)
     if slug:
@@ -163,13 +252,40 @@ def resolve_lb(film, tmdb_id, stats):
         stats['lb_pending'] += 1
         print('⚠️LB', end=' ', flush=True)
 
+def _needs_tmdb(obj):
+    return not all([obj.get('genre'), obj.get('year')])
+
+def _needs_lb(obj):
+    return not obj.get('lbSlug') or obj.get('lbSlug') == '⚠️ LB PENDIENTE'
+
 # ── Main ───────────────────────────────────────────────────────────────────────
 def enrich_festival(path):
+    require_key()
     with open(path, encoding='utf-8') as f:
         data = json.load(f)
 
     films = data['films']
-    stats = {'tmdb': 0, 'lb': 0, 'lb_pending': 0, 'not_found': 0, 'skipped': 0}
+    stats = {'tmdb': 0, 'lb': 0, 'lb_pending': 0, 'not_found': 0, 'skipped': 0, 'considered': 0}
+    rejects = []
+
+    def do_tmdb(obj, label):
+        stats['considered'] += 1
+        try:
+            found = enrich_film_obj(obj)
+        except Exception as e:
+            stats['not_found'] += 1
+            rejects.append((label, f'excepción ({e})'))
+            print('✗TMDB', end=' ', flush=True)
+            return obj.get('_last_tmdb_id')
+        if found.get('_tmdb_id'):
+            apply_enrichment(obj, found)
+            stats['tmdb'] += 1
+            print(f'✓TMDB:{found.get("year","—")}·{found.get("genre","—")[:18]}', end=' ', flush=True)
+            return found['_tmdb_id']
+        stats['not_found'] += 1
+        rejects.append((label, found.get('_reason', 'sin match')))
+        print('✗TMDB', end=' ', flush=True)
+        return None
 
     for i, film in enumerate(films):
         if film.get('type') == 'event':
@@ -177,68 +293,38 @@ def enrich_festival(path):
             continue
 
         title = film.get('title', '')
-        needs_tmdb = not all([film.get('director'), film.get('year'), film.get('synopsis')])
-        needs_lb   = not film.get('lbSlug') or film.get('lbSlug') == '⚠️ LB PENDIENTE'
-        list_items = [item for item in film.get('film_list', [])
-                      if not all([item.get('director'), item.get('year'), item.get('synopsis')])
-                      or not item.get('lbSlug') or item.get('lbSlug') == '⚠️ LB PENDIENTE']
+        needs_tmdb = _needs_tmdb(film)
+        needs_lb = _needs_lb(film)
+        list_items = [it for it in film.get('film_list', []) if _needs_tmdb(it) or _needs_lb(it)]
 
         if not needs_tmdb and not needs_lb and not list_items:
             stats['skipped'] += 1
             continue
 
         print(f'[{i+1}/{len(films)}] {title[:48]}', end=' ', flush=True)
-
         tmdb_id = None
 
-        # Fase 1 — TMDB
         if needs_tmdb:
-            try:
-                found = enrich_film_obj(film)
-                if found:
-                    tmdb_id = found.pop('_tmdb_id', None)
-                    apply_enrichment(film, found)
-                    stats['tmdb'] += 1
-                    lang = ' ⚠️INGLÉS' if is_likely_english(found.get('synopsis', '')) else ''
-                    print(f'✓TMDB:{found.get("director","—")}·{found.get("year","—")}{lang}', end=' ', flush=True)
-                else:
-                    stats['not_found'] += 1
-                    print('✗TMDB', end=' ', flush=True)
-            except Exception as e:
-                stats['not_found'] += 1
-                print(f'✗TMDB({e})', end=' ', flush=True)
+            tmdb_id = do_tmdb(film, title)
         elif needs_lb:
-            # Necesita LB pero ya tiene TMDB — buscar solo el ID
-            try:
-                result = tmdb_search(
-                    film.get('title_en') or film.get('title', ''),
-                    film.get('year') or None
-                )
-                if result:
-                    tmdb_id = result['id']
-            except Exception:
-                pass
+            # Ya tiene genre/year pero falta LB: buscar el ID con el gate igual
+            found = enrich_film_obj(film)
+            tmdb_id = found.get('_tmdb_id')
 
-        # Fase 2 — Letterboxd
         if needs_lb:
             resolve_lb(film, tmdb_id, stats)
 
-        # film_list items
         for item in film.get('film_list', []):
-            item_needs_tmdb = not all([item.get('director'), item.get('year'), item.get('synopsis')])
-            item_needs_lb   = not item.get('lbSlug') or item.get('lbSlug') == '⚠️ LB PENDIENTE'
-            if not item_needs_tmdb and not item_needs_lb:
+            if not (_needs_tmdb(item) or _needs_lb(item)):
                 continue
-            item_tmdb_id = None
-            try:
-                item_data = enrich_film_obj(item)
-                if item_data:
-                    item_tmdb_id = item_data.pop('_tmdb_id', None)
-                    apply_enrichment(item, item_data)
-            except Exception:
-                pass
-            if item_needs_lb:
-                resolve_lb(item, item_tmdb_id, stats)
+            it_id = None
+            if _needs_tmdb(item):
+                it_id = do_tmdb(item, f'  {item.get("title","")} (en {title})')
+            elif _needs_lb(item):
+                found = enrich_film_obj(item)
+                it_id = found.get('_tmdb_id')
+            if _needs_lb(item):
+                resolve_lb(item, it_id, stats)
             time.sleep(0.2)
 
         print()
@@ -248,22 +334,79 @@ def enrich_festival(path):
         json.dump(data, f, ensure_ascii=False, indent=2)
 
     print(f'\n{"─"*55}')
-    print(f'✓ TMDB: {stats["tmdb"]}  |  ✓ LB: {stats["lb"]}  |  ⚠️ LB pendiente: {stats["lb_pending"]}  |  ✗ No encontrados: {stats["not_found"]}  |  — Saltados: {stats["skipped"]}')
+    print(f'✓ TMDB: {stats["tmdb"]}  |  ✓ LB: {stats["lb"]}  |  ⚠️ LB pendiente: {stats["lb_pending"]}  |  ✗ Sin match: {stats["not_found"]}  |  — Saltados: {stats["skipped"]}')
+
+    # Sanidad del match rate (docs/PIPELINE.md: >60% permisivo, <20% revisar búsqueda)
+    if stats['considered']:
+        rate = stats['tmdb'] / stats['considered']
+        if rate > 0.6:
+            print(f'⚠️  match rate {rate:.0%} (>60%) — el algoritmo puede estar permisivo, revisar.')
+        elif rate < 0.2:
+            print(f'⚠️  match rate {rate:.0%} (<20%) — revisar búsqueda o datos de entrada.')
+
+    if rejects:
+        print(f'\nRechazos TMDB — revisar manualmente (NO se asignó ningún dato):')
+        for label, reason in rejects:
+            print(f'  · {label}: {reason}')
+
     if stats['lb_pending']:
         pending = []
-        for f in films:
-            if f.get('lbSlug') == '⚠️ LB PENDIENTE':
-                pending.append(f['title'])
-            for item in f.get('film_list', []):
+        for fobj in films:
+            if fobj.get('lbSlug') == '⚠️ LB PENDIENTE':
+                pending.append(fobj['title'])
+            for item in fobj.get('film_list', []):
                 if item.get('lbSlug') == '⚠️ LB PENDIENTE':
-                    pending.append(f'  {item["title"]} (en {f["title"]})')
+                    pending.append(f'  {item["title"]} (en {fobj["title"]})')
         print(f'\nFilms sin slug LB — completar manualmente en el JSON:')
         for t in pending:
             print(f'  · {t}')
     print(f'\nJSON guardado: {path}')
 
+# ── Self-test offline (sin red, sin API key) ────────────────────────────────────
+def selftest():
+    cases = [
+        # (nombre, film, det, esperado)
+        ('Brujo — match equivocado (año+dir+país no coinciden)',
+         {'title': 'Brujo', 'year': '2025', 'director': 'Juan Zuleta', 'country': 'Colombia'},
+         {'title': 'Brujo', 'original_title': 'Brujo', 'release_date': '2008-01-01',
+          'directors': ['Guillermo Gómez-Peña'], 'countries': ['Mexico']},
+         False),
+        ('Dante — match válido (año+dir+país coinciden)',
+         {'title': 'Dante', 'year': '2026', 'director': 'Hugo Ruíz', 'country': 'Spain'},
+         {'title': 'Dante', 'original_title': 'Dante', 'release_date': '2026-05-01',
+          'directors': ['Hugo Ruíz'], 'countries': ['Spain']},
+         True),
+        ('Título-solo — sin corroboración (rechaza)',
+         {'title': 'Unidentified', 'year': '', 'director': '', 'country': ''},
+         {'title': 'Unidentified', 'original_title': 'Unidentified', 'release_date': '2021-01-01',
+          'directors': ['Some One'], 'countries': ['United States of America']},
+         False),
+        ('Año ausente pero dir+país corroboran (acepta)',
+         {'title': 'Pale Sun', 'director': 'Adrian Moyse Dullin', 'country': 'France'},
+         {'title': 'Pale Sun', 'original_title': 'Soleil Pâle', 'release_date': '',
+          'directors': ['Adrian Moyse Dullin'], 'countries': ['France']},
+         True),
+        ('País laxo: United States ⊂ United States of America (acepta)',
+         {'title': 'Listen', 'year': '2026', 'director': 'Jane Doe', 'country': 'United States'},
+         {'title': 'Listen', 'original_title': 'Listen', 'release_date': '2026-01-01',
+          'directors': ['Jane Doe'], 'countries': ['United States of America']},
+         True),
+    ]
+    ok = True
+    for name, film, det, expected in cases:
+        got, reason = match_ok(film, det)
+        status = '✓' if got == expected else '✗ FALLO'
+        if got != expected:
+            ok = False
+        print(f'  {status}  {name}\n        → {got} ({reason})')
+    print('\n' + ('PASS — match_ok OK' if ok else 'FAIL — revisar match_ok'))
+    sys.exit(0 if ok else 1)
+
 if __name__ == '__main__':
-    if len(sys.argv) < 2:
+    if len(sys.argv) >= 2 and sys.argv[1] == '--selftest':
+        selftest()
+    if len(sys.argv) < 2 or sys.argv[1] in ('-h', '--help'):
         print('Uso: python3 scripts/enrich-festival.py festivals/<id>.json')
-        sys.exit(1)
+        print('     python3 scripts/enrich-festival.py --selftest')
+        sys.exit(0 if (len(sys.argv) >= 2 and sys.argv[1] in ('-h', '--help')) else 1)
     enrich_festival(sys.argv[1])
