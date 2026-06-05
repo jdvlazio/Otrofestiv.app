@@ -140,6 +140,7 @@ Columnas del CSV — **clase organizador** (lo que solo el festival sabe):
 - Los rechazos se loguean para revisión manual
 - Se consultan hasta 3 resultados de búsqueda por film antes de descartar
 - Se prueban `movie` y `tv` en ese orden
+- **Implementado y testeado:** `enrich-festival.py` aplica este gate (función pura `match_ok`) + **corroboración mínima de 2 criterios** entre {año, director, país} — el título solo **nunca** alcanza (es lo que dejó pasar a Brujo) — + log de rechazos. Validar con `python3 scripts/enrich-festival.py --selftest`. El script escribe **solo `genre` y `year`**.
 
 **Campos aceptados de TMDB (solo si vacíos en el JSON):**
 - `genre` → campo en el objeto film (si vacío) — error tolerable, no visible como dato crítico
@@ -149,6 +150,19 @@ Columnas del CSV — **clase organizador** (lo que solo el festival sabe):
 - ❌ `poster` / `posters{}` → **NUNCA desde TMDB sin verificación visual manual**
 - ❌ `synopsis_en` → **NUNCA desde TMDB sin verificación que describe el film correcto**
 - ❌ `director`, `country`, `language` → solo desde el scraping de primera fuente
+
+#### Sinopsis (`synopsis` / `synopsis_en`) — gate film-por-film (gate, no opcional)
+
+> ⚠️ **Lección Brujo / Tribeca 2026.** La sinopsis es el campo de **mayor riesgo de match equivocado**: un corto extranjero con título corto ("Brujo") suele estar ausente de TMDB → el match por título traía la sinopsis de **otra película**. La auditoría retroactiva halló **9 casos además de Brujo** (PR #181: *Summer War*, *Unidentified*, *I Spy With My Little Eye*, *Memorizu*, *Seven O'Clock Breakfast Club*, *Found&Lost*, *The Barbershop*, *32 B*, *Odessa*). Mismo nivel de gate que pósters y slugs — **no es opcional**.
+
+1. **Fuente: la página oficial del film en el sitio del festival, verbatim.**
+   La sinopsis sale de **primera fuente** (igual que el póster: la fuente del festival manda sobre TMDB). Festival bilingüe nativo → `synopsis` + `synopsis_en` **ambos de primera fuente**. Festival en un solo idioma → `synopsis_en` por **traducción manual con pase de Content Design**. **TMDB jamás** llena `synopsis_en` (`enrich-festival.py` ya no lo escribe).
+
+2. **Verificación por anclas — director · país · duración (gate).**
+   Para **cada** film, confirmar que la sinopsis describe la película de **ese** director, **ese** país y **esa** duración. Si la premisa no encaja con las tres anclas → es match equivocado, **rechazar**. *(Así se cazaron* Summer War *—directora chilena con sinopsis de un documental finlandés de la 2ªGM— y* Unidentified *—directora saudí con sinopsis de sci-fi en Nevada.)*
+
+3. **Prioridad de escrutinio — el "perfil-Brujo" primero.**
+   Cortos de origen **no-anglo** + título de una o dos palabras + presencia débil en TMDB son los de mayor riesgo de colisión. Verificarlos primero. Para festivales ya onboardeados con el método sin afinar, correr la auditoría retroactiva sobre esta clase (rankear → traer verbatim oficial → comparar contra anclas → veredicto).
 
 **Nota sobre match rate:**
 - Match rate > 60% → sospechoso, el algoritmo puede ser demasiado permisivo
