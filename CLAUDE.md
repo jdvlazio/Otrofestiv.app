@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `b3185f4 fix(share): File desde Blob (toBlob) para que iOS muestre "Guardar imagen"`
+> Último commit: `bc29cec fix(data): corregir sinopsis de "Brujo" (Dark Web) — era de otro film`
 
 ---
 
