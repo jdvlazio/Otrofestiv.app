@@ -445,13 +445,14 @@ export function renderFilmAlternatives(state,title,day,time){
     const{displayTitle}=parseProgramTitle(f.title);
     const short=displayTitle.length>28?displayTitle.slice(0,26)+'…':displayTitle;
     const safeTNew=f.title.replace(/'/g,"&#39;");
-    return`<div class="checkin-opt" data-action="confirmReplace" data-rmtitle="${safeT}" data-newtitle="${safeTNew}" data-day="${f.day}" data-time="${f.time}">
+    return`<div class="checkin-opt">
+      <div class="js-open-pel" data-title="${safeTNew}" data-stop="1" style="flex-shrink:0;cursor:pointer">${_posterThumb(f,'lb-poster')}</div>
       <div class="checkin-opt-info">
         <div class="checkin-opt-time">${f.time} · ${durFmt(f.duration)}</div>
         <div class="checkin-opt-title">${short}</div>
         <div class="checkin-opt-venue">${ICONS.pin} ${vc2.short}</div>
       </div>
-      <div class="checkin-opt-add">${ICONS.plus}</div>
+      <div class="checkin-opt-add" data-action="confirmReplace" data-rmtitle="${safeT}" data-newtitle="${safeTNew}" data-day="${f.day}" data-time="${f.time}">${ICONS.plus}</div>
     </div>`;
   }).join('');
 
