@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `bc29cec fix(data): corregir sinopsis de "Brujo" (Dark Web) — era de otro film`
+> Último commit: `75d1266 feat(plan): póster por alternativa abre el sheet; + confirma el reemplazo`
 
 ---
 
