@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `bed8f79 chore: bundle v202606061531`
+> Último commit: `b77c57c ci: gate que exige bump de version.json cuando cambia app-code (#187)`
 
 ---
 

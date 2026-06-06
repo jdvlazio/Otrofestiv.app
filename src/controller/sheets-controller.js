@@ -156,7 +156,7 @@ export function openPelSheet(title){
     return`<div class="pel-sheet-screening"${isPast?' style="opacity:.4"':''}>
       <span class="pelicula-day" data-day="${s.day}">${dayAbb}</span>
       <span class="pelicula-time">${s.time}</span>
-      <span class="pelicula-venue" data-venue="${vc.short.replace(/"/g,'&quot;')}" data-action="filterByVenue">${ICONS.pin} <span class="venue-text">${vc.short}${sl?' · '+sl:''}${_city?`<span class="venue-municipio">${_city}</span>`:''}</span></span>
+      <span class="pelicula-venue" data-venue="${s.venue.replace(/"/g,'&quot;')}" data-action="openVenueSheet">${ICONS.pin} <span class="venue-text">${vc.short}${sl?' · '+sl:''}${_city?`<span class="venue-municipio">${_city}</span>`:''}</span></span>
       ${_addCtrl}
     </div>`;
   }).join('');
@@ -300,8 +300,54 @@ export function _pushSheetState(){
   try{history.pushState({sheet:true},'','');}catch(e){console.warn('[sheet] pushState failed',e);}
 }
 
+// ── Venue Sheet — se abre desde el nombre de venue en el pel-sheet ──────────
+// Se superpone (z-index mayor); back/overlay vuelve al pel-sheet debajo.
+export function openVenueSheet(venueName){
+  if(!venueName) return;
+  const _d=document.createElement('textarea');_d.innerHTML=venueName;venueName=_d.value;
+  const v=vcfg(venueName)||{};
+  const name=v.name||venueName;
+  const _festCity=(FESTIVAL_CONFIG[_activeFestId]||{}).city||'';
+  const _addr=[v.address||''];
+  if(v.city&&v.city!==_festCity&&!(v.address||'').includes(v.city)) _addr.push(v.city);
+  const addr=_addr.filter(Boolean).join(' · ');
+  const hasGeo=v.lat!=null&&v.lng!=null;
+  const _day=(typeof activeDay!=='undefined'&&activeDay&&activeDay!=='all')?activeDay:null;
+  const fns=FILMS.filter(f=>f.venue===venueName&&(!_day||f.day===_day))
+    .sort((a,b)=>(a.day_order-b.day_order)||(toMin(a.time)-toMin(b.time)));
+  const rows=fns.length?fns.map(f=>{
+    const _inPlan=savedAgenda&&savedAgenda.schedule.some(e=>e._title===f.title&&e.day===f.day&&e.time===f.time);
+    return`<div class="venue-fn-row" data-action="openPelFromVenue" data-title="${f.title.replace(/"/g,'&quot;')}">
+      <span class="venue-fn-time">${f.time}</span>
+      <span class="venue-fn-title">${filmDisplayTitle(f).main}</span>
+      ${_inPlan?`<span class="venue-fn-badge">${ICONS.check} ${t('plan_en_tu_plan')}</span>`:''}
+    </div>`;
+  }).join(''):`<div class="venue-fn-empty">${t('venue_sin_funciones')}</div>`;
+  const inner=document.getElementById('venue-sheet-inner');
+  if(!inner) return;
+  inner.innerHTML=`
+    <div class="venue-sheet-name">${name}</div>
+    ${addr?`<div class="venue-sheet-addr">${addr}</div>`:''}
+    ${hasGeo?`<div class="venue-sheet-map">${ICONS.pin}</div>
+    <button class="venue-sheet-dir" data-action="venueDirections" data-lat="${v.lat}" data-lng="${v.lng}">${ICONS.pin} ${t('venue_directions')}</button>`:''}
+    <div class="pel-sheet-divider"></div>
+    <div class="pel-sheet-section-lbl">${t('label_funciones')}</div>
+    ${rows}`;
+  const vs=document.getElementById('venue-sheet');
+  if(vs) vs.scrollTop=0;
+  _pushSheetState();
+  document.getElementById('venue-overlay').classList.add('open');
+  vs.classList.add('open');
+}
+
+export function closeVenueSheet(){
+  document.getElementById('venue-overlay')?.classList.remove('open');
+  document.getElementById('venue-sheet')?.classList.remove('open');
+}
+
 export function _closeTopSheet(){
   // Cerrar en orden de prioridad (el más reciente primero)
+  if(document.getElementById('venue-sheet')?.classList.contains('open')){closeVenueSheet();return true;}
   if(document.getElementById('pv-rating-sheet')?.classList.contains('open')){closePVRating();return true;}
   if(document.getElementById('conflict-sheet')?.classList.contains('open')){closeConflictSheet();return true;}
   if(document.getElementById('prio-limit-sheet')?.classList.contains('open')){closePrioLimit();return true;}

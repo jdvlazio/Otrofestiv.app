@@ -107,7 +107,7 @@ import {
 
 // ── Step 7d-1: controller/sheets-controller.js — sheets+rating+AV+toast+utils. ──
 import {
-  openPelSheet, closePelSheet, _closeTopSheet, openCortoSheet, openCortoSheetFromEl, _openCombinedFilmSheet, _findParentProgram, openConflictSheet, closeConflictSheet, openPrioLimit, openPlanConfirm, closePlanConfirm, openPostViewRating, openRatingSheet, closeRatingSheet, openAvSheet, selectAvDay, setAvType, confirmAvBlock, renderAvDay, addBlock, removeBlock, toggleFullDay, _setAvAddOpen, showActionToast, _dismissToastAction, countryToFlags, filmDisplayTitle, _genreEN, _removePlanItem, savePVRating,
+  openPelSheet, closePelSheet, _closeTopSheet, openCortoSheet, openCortoSheetFromEl, _openCombinedFilmSheet, _findParentProgram, openConflictSheet, closeConflictSheet, openPrioLimit, openPlanConfirm, closePlanConfirm, openPostViewRating, openRatingSheet, closeRatingSheet, openAvSheet, selectAvDay, setAvType, confirmAvBlock, renderAvDay, addBlock, removeBlock, toggleFullDay, _setAvAddOpen, showActionToast, _dismissToastAction, countryToFlags, filmDisplayTitle, _genreEN, _removePlanItem, savePVRating, openVenueSheet, closeVenueSheet,
 } from './controller/sheets-controller.js';
 
 // ── Step 7d-2: controller/overlays.js — seccion/search/lugar dropdowns. ──────
@@ -245,6 +245,10 @@ const ACTION_REGISTRY = {
   // ── D: Cartelera/Programa filters + DOM utils (13) ──
   filterBySection:     (el)    => filterBySection(el.dataset.section),
   filterByVenue:       (el)    => filterByVenue(el.dataset.venue),
+  openVenueSheet:      (el)    => openVenueSheet(el.dataset.venue),
+  closeVenueSheet:     ()      => closeVenueSheet(),
+  openPelFromVenue:    (el)    => { closeVenueSheet(); openPelSheet(el.dataset.title); },
+  venueDirections:     (el)    => window.open('https://maps.apple.com/?q='+el.dataset.lat+','+el.dataset.lng,'_blank'),
   pafClearSec:         ()      => _pafClearSec(),
   pafClearVenue:       ()      => _pafClearVenue(),
   toggleEveningFilms:  (el)    => _toggleEveningFilms(el),
@@ -626,7 +630,7 @@ FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202606061050';
+const BUILD_VERSION='202606061157';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';

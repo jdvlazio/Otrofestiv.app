@@ -872,6 +872,22 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .pel-sheet-screenings .pel-sheet-screening:last-child{border-bottom:none}
 .screening-inplan{font-size:var(--t-sm);font-weight:var(--w-semi);color:var(--amber);display:inline-flex;align-items:center;gap:var(--sp-1);flex-shrink:0;white-space:nowrap}
 .pel-sheet-synopsis{font-size:var(--t-base);color:var(--white-65);line-height:1.6}
+/* ── Venue Sheet (reusa chrome .pel-sheet; se superpone por encima) ── */
+.venue-sheet-overlay{z-index:9100}
+.venue-sheet{z-index:9101}
+.venue-sheet-name{font-size:var(--t-lg);font-weight:var(--w-bold);color:var(--white);line-height:1.25}
+.venue-sheet-addr{font-size:var(--t-caption);color:var(--gray);margin-top:var(--sp-1)}
+.venue-sheet-map{position:relative;height:150px;background:var(--surf-3);border-radius:var(--r);margin-top:var(--sp-4);display:flex;align-items:center;justify-content:center;overflow:hidden}
+.venue-sheet-map svg{width:34px;height:34px;color:var(--amber)}
+.venue-sheet-dir{display:flex;align-items:center;justify-content:center;gap:var(--sp-2);width:100%;margin-top:var(--sp-3);padding:var(--sp-btn);background:var(--amber);color:var(--black);border:none;border-radius:var(--r-md);font-family:var(--font);font-size:var(--t-base);font-weight:var(--w-bold);cursor:pointer}
+.venue-sheet-dir:active{background:var(--amber-d)}
+.venue-sheet-dir svg{width:15px;height:15px}
+.venue-fn-row{display:flex;align-items:center;gap:var(--sp-3);padding:var(--sp-3) 0;border-bottom:1px solid var(--bdr-l);cursor:pointer}
+.venue-fn-row:last-child{border-bottom:none}
+.venue-fn-time{color:var(--amber);font-weight:var(--w-bold);font-size:var(--t-caption);flex-shrink:0;min-width:46px}
+.venue-fn-title{flex:1;min-width:0;color:var(--white);font-size:var(--t-base);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.venue-fn-badge{flex-shrink:0;font-size:var(--t-xs);font-weight:var(--w-bold);color:var(--green)}
+.venue-fn-empty{font-size:var(--t-base);color:var(--gray);padding:var(--sp-2) 0}
 
 /* ── Rating sheet ── */
 .rating-overlay{position:fixed;inset:0;background:var(--overlay-50);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);z-index:9100;opacity:0;transition:opacity var(--tr-smooth);pointer-events:none}
@@ -2575,6 +2591,12 @@ setTimeout(function(){
   <div class="pel-sheet-topbar"><div class="pel-sheet-handle"></div><button class="pel-sheet-close" data-action="closePelSheet"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg></button></div>
   <div class="pel-sheet-inner" id="pel-sheet-inner"></div>
 </div>
+<!-- Venue Sheet — se superpone al pel-sheet (z-index mayor), reusa el chrome .pel-sheet -->
+<div class="pel-sheet-overlay venue-sheet-overlay" id="venue-overlay" data-action="closeVenueSheet"></div>
+<div class="pel-sheet venue-sheet" id="venue-sheet">
+  <div class="pel-sheet-topbar"><div class="pel-sheet-handle"></div><button class="pel-sheet-close" data-action="closeVenueSheet"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg></button></div>
+  <div class="pel-sheet-inner" id="venue-sheet-inner"></div>
+</div>
 <!-- Chips de categoría — sticky, fuera de #hdr-programa para mantener chrome uniforme (38px en todos los tabs) -->
 <div class="programa-chips hidden" id="programa-chips"></div>
 <!-- Tag activo dismissible -->
@@ -2602,7 +2624,7 @@ setTimeout(function(){
 <!-- ── Intereses / Planear: header unificado — fuera de ag-view ── -->
 <div class="ag-view" id="ag-view"></div>
 
-<script type="module" src="/src/main.js?v=202606061050"></script>
+<script type="module" src="/src/main.js?v=202606061157"></script>
 
 <!-- Festival switcher bottom sheet -->
 <div class="auth-sheet" id="auth-sheet" data-close-bg="AuthSheet">
