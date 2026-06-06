@@ -455,10 +455,10 @@ export function renderSbar(){
     b.onclick=e=>{e.stopPropagation();cb();};
     panel.appendChild(b);
   };
-  mkOpt(`${t('sbar_todas_categorias')} <span class="fdr-cnt">${dayF.length}</span>`,activeSec==='all',()=>{activeSec='all';selectedIdx=null;setHint(null);closeDropdowns();render();});
+  mkOpt(`${t('sbar_todas_categorias')} <span class="fdr-cnt">${dayF.length}</span>`,activeSec==='all',()=>{activeSec='all';selectedIdx=null;render();});
   secs.forEach(sec=>{
     const cnt=dayF.filter(f=>f.section===sec).length;
-    mkOpt(`${_secLabelFull(sec)} <span class="fdr-cnt">${cnt}</span>`,activeSec===sec,()=>{activeSec=activeSec===sec?'all':sec;selectedIdx=null;setHint(null);closeDropdowns();render();});
+    mkOpt(`${_secLabelFull(sec)} <span class="fdr-cnt">${cnt}</span>`,activeSec===sec,()=>{activeSec=activeSec===sec?'all':sec;selectedIdx=null;render();});
   });
 }
 
