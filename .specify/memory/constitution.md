@@ -60,6 +60,12 @@ El validador chequea JS syntax, divs críticos, CSS corruption y patrones prohib
 ### CI = solo validar (bump es local)
 El workflow `bump-and-validate.yml` en GitHub Actions solo corre `python3 validate.py`. El bump de versión (`node scripts/bump-version.js`) es responsabilidad del developer local, justo antes de cada push. El auto-bump en CI fue eliminado porque `bump-version.js` fallaba con exit code 1 en el runner de GitHub Actions (causa exacta nunca identificada). El nombre del workflow es histórico — el comportamiento actual es validar-only.
 
+### Actualización de la app — live-load, sin Capgo/OTA
+La app se actualiza por **carga live + poll de `version.json`**, no por OTA de bundles:
+- **Web** (GitHub Pages) y **nativos** (Android Capacitor con `server.url: https://otrofestiv.app`; iOS = WKWebView SwiftUI) cargan el sitio en vivo. `_checkVersionJson()` compara `version.json` contra `BUILD_VERSION` y recarga con cache-bust (`?v=`). El versionado lo estampa `bump-version.js` local.
+- **Capgo fue decomisionado (JUN 2026).** Era maquinaria vestigial: `bundle.yml` construía bundles + GitHub releases que **ningún build consumía** — el plugin runtime `@capgo/capacitor-updater` **nunca se compiló en un APK** (verificado en `capacitor.settings.gradle`: solo filesystem/local-notifications/share). El CLI `@capgo` además pasó a ser de pago.
+- **No reintroducir un path de OTA por bundles.** Forzar actualización = `version.json` + `bump-version.js`. Removidos: `.github/workflows/bundle.yml`, `update.json`, y los bloques `CapacitorUpdater` de `src/main.js`. En el proyecto nativo queda por limpiar `@capgo/cli` + el script `deploy` (pago, solo manual).
+
 ### iOS non-scrollable page bug (patrón conocido)
 Cuando el contenido total de la página es menor que el alto del viewport (página sin scroll), iOS calcula `position:fixed;bottom:0` relativo al fondo del documento en lugar del fondo del viewport. El nav principal aparece flotando en el centro de la pantalla. Se corrige con el primer tap del usuario.
 
@@ -104,3 +110,4 @@ Los festivales colombianos operan en hora local. `toISOString()` devuelve UTC, l
 | May 2026 | `day` en formato ISO (`YYYY-MM-DD`) desde Tribeca 2026 | Elimina ambigüedad de formato localizado; el validator lo enforcea |
 | May 2026 | Grid/TODO ordena por sección (cronológico dentro de cada sección) | Grid es modo de descubrimiento, no de planificación. Ordenar por sección crea clusters visuales coherentes con la identidad editorial del festival. Cronológico ya está cubierto por Lista. |
 | May 2026 | Orden de secciones en Grid = orden de primera aparición en `films[]` | El JSON se construye con orden editorial intencional desde Fase 1 del pipeline. Primera aparición = posición en el Grid. Sin configuración extra; el orden vive donde viven los datos. |
+| JUN 2026 | Decomisionar Capgo/OTA — updates por live-load + `version.json` | El plugin runtime nunca se compiló en ningún APK (nada consumía los bundles) y el CLI pasó a ser de pago. Removidos `bundle.yml`, `update.json` y los bloques `CapacitorUpdater`. No reintroducir OTA por bundles. |

@@ -356,13 +356,6 @@ _lang = (()=>{
 
 // _applyI18nDOM() → src/i18n/i18n.js (Step 4). Importado.
 
-// ── Capgo: confirma que el bundle cargó correctamente ──────────
-// Sin esta llamada, Capgo hace rollback automático a los 10s.
-// El guard ?. asegura que en web (GitHub Pages) no hay error.
-if(window.Capacitor?.Plugins?.CapacitorUpdater){
-  window.Capacitor.Plugins.CapacitorUpdater.notifyAppReady();
-}
-
 // ═══════════════════════════════════════════════════════════════
 // 1 · DATOS DEL FESTIVAL
 //     FILMS, POSTERS, CUSTOM_POSTERS
@@ -633,7 +626,7 @@ FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202606051129';
+const BUILD_VERSION='202606061050';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';
@@ -1410,30 +1403,6 @@ state.subscribeRender(
  * es internamente consistente.
  */
 
-// Inicializar Supabase al cargar la página
-// Capgo OTA — notifica que la app arrancó correctamente (Cap 6)
-// Sin esta llamada, el updater hace rollback automático al bundle anterior.
-if(window.Capacitor?.Plugins?.CapacitorUpdater){
-  const _cu=window.Capacitor.Plugins.CapacitorUpdater;
-  _cu.notifyAppReady();
-  // Auto-update: revisa update.json y descarga bundle nuevo si hay versión distinta
-  (async()=>{
-    try{
-      const res=await fetch('/update.json',{cache:'no-store'});
-      const data=await res.json();
-      const current=await _cu.current();
-      const currentVer=current?.bundle?.version||'';
-      if(data.version&&data.url&&data.version!==currentVer){
-        const bundle=await _cu.download({url:data.url,version:data.version});
-        await _cu.next(bundle);
-        // El bundle nuevo se aplica en el próximo lanzamiento de la app
-        console.log('[Capgo] Bundle nuevo descargado:',data.version);
-      }
-    }catch(e){
-      // Silencioso — no interrumpir la app si falla la actualización
-    }
-  })();
-}
 (function(){
   // Detecta el festival en curso por fecha. Prioridad:
   // 1. Festival que está sucediendo hoy · 2. El próximo más cercano · 3. El más reciente
