@@ -621,7 +621,7 @@ export function renderContextualHeader(state){
       const dur=parseInt(gapSuggestion.duration)||DEFAULT_DURATION_MIN;
       const safeT=gapSuggestion.title.replace(/'/g,"&#39;");
       return`<div class="txt-gray-sm-mb1">${t('plan_cabe_hueco')}</div>
-        <div class="ctx-suggest-card js-open-pel" data-title="${f.title}" style="cursor:pointer">
+        <div class="ctx-suggest-card js-open-pel" data-title="${gapSuggestion.title.replace(/"/g,'&quot;')}" style="cursor:pointer">
           <div class="ctx-suggest-badge">${gapSuggestion.time}<br>${dur}m</div>
           <div class="ctx-suggest-info">
             <div class="ctx-suggest-title">${dt.length>26?dt.slice(0,24)+'…':dt}</div>

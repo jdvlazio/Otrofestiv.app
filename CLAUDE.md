@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `d6dab12 feat(venue): venue sheet desde el tap de venue en el pel-sheet (#188)`
+> Último commit: `e3b4b85 fix(venue): agrupar screenings por día en el venue sheet (#189)`
 
 ---
 
