@@ -1,0 +1,38 @@
+name: Lint (no-undef)
+
+# Cinturón de seguridad: caza referencias a variables NO declaradas (ej. el `f`
+# suelto que crasheó My Plan, o llamadas a funciones removidas en un refactor)
+# estáticamente, en todos los paths, ANTES del merge — algo que node --check
+# (syntax-only), validate.py (estructural) y Playwright (cobertura parcial) no ven.
+# El gate corre SOLO la regla no-undef (eslint.config.js); los globals del
+# STATE/VIEWSTATE BRIDGE están declarados ahí para no dar falsos positivos.
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'src/**'
+      - 'eslint.config.js'
+      - 'package.json'
+      - 'package-lock.json'
+      - '.github/workflows/lint.yml'
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    name: ESLint no-undef sobre src/
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install deps
+        run: npm ci
+
+      - name: ESLint
+        run: npm run lint

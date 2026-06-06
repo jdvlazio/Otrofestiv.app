@@ -680,7 +680,8 @@ export function renderContextualHeader(state){
       </div>
       <div class="ctx-main-title">${total} ${total!==1?t('misc_peliculas'):t('misc_pelicula')} ${total===1?t('plan_vista_hoy'):t('plan_vistas_hoy')}</div>
       ${pendingRating.length?`<div class="mb-3 ctx-sub">${pendingRating.length===1?t('plan_una_pendiente'):t('empty_calificar')}</div>`:`<div class="mb-3"></div>`}
-      <div class="hscroll-strip">${filmRows}</div>
+      <div class="hscroll-strip">${visible}${hidden}</div>
+      ${verTodas}
     </div>`;
   }
 
