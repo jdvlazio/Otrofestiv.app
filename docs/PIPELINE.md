@@ -5,6 +5,35 @@
 
 ---
 
+## 0 · Secuencia de herramientas (referencia rápida)
+
+Orden canónico para montar un festival. Cada paso mapea a una fase de abajo.
+
+| # | Paso | Hace | Fase |
+|---|---|---|---|
+| 1 | `node scripts/csv-to-festival.js <in.csv> festivals/<id>.json` | CSV del organizador → JSON base `{venues, films}` | 1 |
+| 2 | `TMDB_API_KEY=… python3 scripts/enrich-festival.py festivals/<id>.json` | llena **solo `genre`/`year`** (gate de 4 criterios; rechaza en miss) | 3 |
+| 3 | **`synopsis_es` → traducción inline de Claude** (lee PT/EN → ES) + **pase de Content Design** | localización de contenido | 3b / 5 |
+| 4 | `python3 scripts/geocode-venues.py …` | lat/lng de venues (Nominatim) | 2 |
+| 5 | `node scripts/generate-config.js …` → pegar en `src/config.js` | entrada de `FESTIVAL_CONFIG` | 2 |
+| 6 | `python3 validate.py` + `node scripts/validate-festivals.js <id>` | gates bloqueantes (0 errores) | 4 |
+| 7 | `node scripts/bump-version.js` | stamp de build antes de deploy | 6 |
+
+> **`scripts/translate-synopsis.py` está DEPRECADO** — la traducción de sinopsis se hace inline (Claude) + pase humano de Content Design, no por script.
+>
+> **TMDB jamás llena `poster`/`synopsis_en` (lección Brujo/Tribeca 2026):** esos campos salen de la fuente oficial del festival con **verificación humana film-por-film** (ver Fase 3 y `docs/FESTIVAL-CHECKLIST.md`).
+
+### Roles — *Claude ejecuta · Juan audita y aprueba*
+
+| Tarea | Ejecuta | Aprueba |
+|---|---|---|
+| Extracción · enrich · geocode · config · validación | **Claude** | Juan en los gates |
+| `synopsis_*` / copy / strings de UI | Claude propone | **Juan (Content Design)** |
+| Pósters (verificación visual) | Claude propone | **Juan** |
+| Merge · arquitectura · borrar ramas | Claude propone/ejecuta | **Juan (OK explícito)** |
+
+---
+
 ## Fases en orden obligatorio
 
 ### Fase 1 · Extracción `[Data Engineer]`

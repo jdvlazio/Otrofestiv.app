@@ -1,6 +1,6 @@
 # OTROFESTIV — Documento de Arquitectura
 > Referencia canónica para implementación. Leer antes de tocar código.
-> Última actualización: MAY 2026 · `index.html` @ commit `6a4d9be` · ~10.150 líneas
+> Última actualización: JUN 2026 · app modular ESM en `src/` (Fase 8 completada) · `index.html` = shell
 
 ---
 
@@ -8,36 +8,38 @@
 
 ```
 /
-├── index.html                  ← App completa (~10.150 líneas, single-file, fuente única)
-├── sw.js                       ← Service Worker (actualizar con bump-version.js antes de deploy)
+├── index.html                  ← Shell HTML: <head> + skeleton + carga `src/main.js` como módulo ESM
+├── sw.js                       ← Service Worker (CACHE_NAME/BUILD stampeado por bump-version.js)
 ├── manifest.json               ← PWA manifest
-├── version.json                ← Build timestamp — sincronizado por bump-version.js
-├── tools/enricher.html         ← Herramienta de enriquecimiento TMDB
-├── docs/ARQUITECTURA.md        ← Este documento
-├── i18n/
-│   ├── es.json                 ← Strings en español (fuente de verdad)
-│   ├── en.json                 ← Strings en inglés
-│   └── strings-reference.json ← Inventario completo con contexto
-├── festivals/
-│   ├── ficci-65.json           ← FICCI 65 (archivado)
-│   ├── aff-2026.json           ← AFF 2026 (archivado)
-│   ├── cinemancia-2025.json    ← Cinemancia 2025 (test)
-│   └── tribeca-2026.json       ← Tribeca 2026 (draft — no en FESTIVAL_CONFIG aún)
-├── pipeline/
-│   ├── PROTOCOLO.md            ← Proceso completo para montar un festival
-│   ├── festival-template.json  ← Plantilla JSON para festival nuevo
-│   └── csv-template.csv        ← Template para organizadores
-├── scripts/
-│   ├── bump-version.js         ← Actualiza sw.js y version.json — correr antes de cada deploy
-│   ├── generate-config.js      ← Genera entrada FESTIVAL_CONFIG
-│   ├── validate-festivals.js   ← Validador (corre en CI)
-│   ├── enrich-festival.py      ← Enricher TMDB (CLI)
-│   └── geocode-venues.py       ← Geocodifica venues via Nominatim
-└── assets/
-    └── proyeccion-sorpresa.svg ← Poster especial Cinemancia
+├── version.json                ← Build timestamp (android+ios) — sincronizado por bump-version.js
+├── src/                        ← App modular ESM (Fase 8). Mapa detallado de módulos en §16.2
+│   ├── main.js                 ← Bootstrap + STATE/VIEWSTATE bridge; importa el resto
+│   ├── config.js               ← FESTIVAL_CONFIG · VENUES · NOTICES · taxonomía/colores de sección
+│   ├── i18n/i18n.js            ← Bloque _I18N (es/en/pt) — FUENTE DE VERDAD de strings (la lee t())
+│   ├── domain/                 ← Funciones puras: time · film · schedule · festival · conflict · venues
+│   ├── controller/             ← Handlers, pipeline, persistence, festival, sheets, calc
+│   ├── view/                   ← Render puro: agenda · programa · components · helpers
+│   ├── state/                  ← state container + viewstate (bridge)
+│   └── storage/                ← adapter de localStorage
+├── festivals/                  ← Un JSON por festival (films[] con poster/lbSlug inline)
+│   ├── ficci-65 · aff-2026 · cinemancia-2025      ← archivados / test
+│   └── leviza-2026 · olhar-2026 · tribeca-2026    ← recientes (Tribeca activo)
+├── scripts/                    ← Pipeline CLI — secuencia canónica en docs/PIPELINE.md §0
+│   ├── csv-to-festival.js · enrich-festival.py · translate-synopsis.py
+│   ├── generate-config.js · validate-festivals.js · geocode-venues.py
+│   └── bump-version.js · generate-claude-md.js · normalize-festival-titles.py
+├── tests/                      ← Playwright (*.spec.js) + unit (node:test sobre domain/) + helpers
+├── docs/                       ← ARQUITECTURA · PIPELINE · SCHEMA · FESTIVAL-CHECKLIST · DESIGN
+├── pipeline/                   ← PROTOCOLO.md + templates (festival-template.json, csv-template.csv)
+├── tools/                      ← enricher.html · smoke-test.html · audit.sh
+└── assets/                     ← proyeccion-sorpresa.svg + assets por festival
 ```
 
 Los datos de cada festival viven en su propio JSON, **no** en `index.html`. Se cargan en `loadFestival(id)` la primera vez y se cachean en `FESTIVAL_CONFIG[id].films`.
+
+> **i18n — fuente de verdad:** `src/i18n/i18n.js` (bloque `_I18N`, es+en+pt) — es lo que lee `t()` y lo que valida `validate.py`. Los `i18n/*.json` de la raíz quedaron desincronizados y **no** se consumen en runtime (legacy).
+>
+> **Nota:** las secciones 1–15 documentan el código actual (modular ESM); la §16 documenta el modelo MVC y su roadmap (Fases 1–8, ya completadas).
 
 ---
 

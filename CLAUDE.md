@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `7418257 feat(plan): póster en alternativas abre el sheet; + confirma reemplazo (#180)`
+> Último commit: `79e5476 chore: bundle v202606060352`
 
 ---
 
@@ -64,34 +64,7 @@ Juan es Product Owner, diseñador y developer. Claude ejecuta; Juan audita y apr
 
 ### Features activas (desde `.specify/features/`)
 
-- `controller-pattern-7a/` — fase actual: **tasks**
-- `data-title-refactor/` — fase actual: **tasks**
-- `domain-layer-extraction/` — fase actual: **tasks**
-- `event-delegation-7c1/` — fase actual: **tasks**
-- `event-delegation-7c2/` — fase actual: **tasks**
-- `event-delegation-7c3/` — fase actual: **tasks**
-- `event-delegation-7c4/` — fase actual: **tasks**
-- `festival-phase-extraction/` — fase actual: **tasks**
-- `file-split-8/` — fase actual: **tasks**
-- `grid-section-separators/` — fase actual: **tasks**
-- `i18n-films-audit/` — fase actual: **tasks**
-- `i18n-planner-audit/` — fase actual: **tasks**
-- `lista-todo-sort/` — fase actual: **tasks**
-- `normtitle/` — fase actual: **tasks**
-- `pin-funcion/` — fase actual: **tasks**
-- `prio-strip-three-states/` — fase actual: **tasks**
-- `schedule-planning/` — fase actual: **tasks**
-- `splash-animation/` — fase actual: **tasks**
-- `state-mirror/` — fase actual: **tasks**
-- `storage-adapter/` — fase actual: **tasks**
-- `subscribe-render-7d/` — fase actual: **tasks**
-- `sugerencias-watchlist/` — fase actual: **tasks**
-- `temporal-subsystem/` — fase actual: **tasks**
-- `title-truncation/` — fase actual: **tasks**
-- `venue-warnings/` — fase actual: **tasks**
-- `view-purity-6a/` — fase actual: **tasks**
-- `view-purity-6b/` — fase actual: **tasks**
-- `view-purity-6c/` — fase actual: **tasks**
+_Sin features activas en `.specify/features/`._
 
 ---
 
