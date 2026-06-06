@@ -260,7 +260,7 @@ def _needs_lb(obj):
 
 # ── Main ───────────────────────────────────────────────────────────────────────
 def enrich_festival(path):
-    require_key()
+    require_runtime()
     with open(path, encoding='utf-8') as f:
         data = json.load(f)
 
