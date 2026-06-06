@@ -312,17 +312,23 @@ export function openVenueSheet(venueName){
   if(v.city&&v.city!==_festCity&&!(v.address||'').includes(v.city)) _addr.push(v.city);
   const addr=_addr.filter(Boolean).join(' · ');
   const hasGeo=v.lat!=null&&v.lng!=null;
-  const _day=(typeof activeDay!=='undefined'&&activeDay&&activeDay!=='all')?activeDay:null;
-  const fns=FILMS.filter(f=>f.venue===venueName&&(!_day||f.day===_day))
+  const fns=FILMS.filter(f=>f.venue===venueName)
     .sort((a,b)=>(a.day_order-b.day_order)||(toMin(a.time)-toMin(b.time)));
-  const rows=fns.length?fns.map(f=>{
+  const _fnRow=f=>{
     const _inPlan=savedAgenda&&savedAgenda.schedule.some(e=>e._title===f.title&&e.day===f.day&&e.time===f.time);
     return`<div class="venue-fn-row" data-action="openPelFromVenue" data-title="${f.title.replace(/"/g,'&quot;')}">
       <span class="venue-fn-time">${f.time}</span>
       <span class="venue-fn-title">${filmDisplayTitle(f).main}</span>
       ${_inPlan?`<span class="venue-fn-badge">${ICONS.check} ${t('plan_en_tu_plan')}</span>`:''}
     </div>`;
-  }).join(''):`<div class="venue-fn-empty">${t('venue_sin_funciones')}</div>`;
+  };
+  // Agrupado por día (discrimina días: misma hora en días distintos ya no se
+  // confunde). Orden cronológico por day_order; encabezado de día por grupo.
+  const _byDay=[];
+  fns.forEach(f=>{ let g=_byDay.find(x=>x.day===f.day); if(!g){g={day:f.day,items:[]};_byDay.push(g);} g.items.push(f); });
+  const rows=fns.length
+    ? _byDay.map(g=>`<div class="venue-day-hdr">${dayLabel(g.day)||g.day}</div>${g.items.map(_fnRow).join('')}`).join('')
+    : `<div class="venue-fn-empty">${t('venue_sin_funciones')}</div>`;
   const inner=document.getElementById('venue-sheet-inner');
   if(!inner) return;
   inner.innerHTML=`
