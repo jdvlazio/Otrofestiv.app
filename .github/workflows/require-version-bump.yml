@@ -1,0 +1,46 @@
+name: Require version bump
+
+# Cinturón de seguridad: si un PR cambia app-code (src/, index.html, sw.js) sin
+# actualizar version.json, las clientes ACTIVAS no recargan el código nuevo — el
+# poll de _checkVersionJson() compara version.json vs BUILD_VERSION y solo dispara
+# reload cuando difieren. Sin bump → quedan corriendo JS viejo indefinidamente.
+# Este gate lo previene. Rationale: .specify/memory/constitution.md.
+#
+# Festivals/** NO está acá a propósito: el SW los sirve network-first y se
+# re-fetchean en cada load → no dependen del bump para frescura.
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'index.html'
+      - 'src/**'
+      - 'sw.js'
+
+jobs:
+  require-bump:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: App-code change must include a version.json bump
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          CHANGED=$(git diff --name-only "$BASE_SHA...$HEAD_SHA")
+          echo "Archivos cambiados en el PR:"
+          echo "$CHANGED"
+          echo "---"
+          APP=$(printf '%s\n' "$CHANGED" | grep -E '^(src/|index\.html$|sw\.js$)' || true)
+          if [ -z "$APP" ]; then
+            echo "✓ Sin cambios de app-code — bump no requerido."
+            exit 0
+          fi
+          if printf '%s\n' "$CHANGED" | grep -qx 'version.json'; then
+            echo "✓ App-code cambió y version.json fue actualizado — OK."
+            exit 0
+          fi
+          echo "::error::App-code cambió (src/, index.html o sw.js) sin actualizar version.json. Las clientes activas no recargarán el código nuevo. Corré 'node scripts/bump-version.js' y commiteá el resultado."
+          exit 1
