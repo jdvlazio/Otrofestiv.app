@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `cd91dfe fix(miplan): crash "Can't find variable: f" en fase between con sugerencia (#190)`
+> Último commit: `f7a6ff0 chore(ci): gate ESLint no-undef + fixes que destapó (sdr muerto, filmRows) (#191)`
 
 ---
 
