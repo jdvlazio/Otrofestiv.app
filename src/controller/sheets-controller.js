@@ -8,7 +8,7 @@
 
 import { FESTIVAL_CONFIG, MAX_REMEMBERED_SLOTS, NOTICES, TMDB_IMG, _DEFAULT_FEST_ID } from '../config.js';
 import { DAY_ABBR, DAY_NUM, ICONS, _secLabel, _sectionColor, isFullDayBlocked, makeProgramPoster, parseProgramTitle, renderRatingStarsHTML } from '../view/components.js';
-import { _getItemPoster, _isEditorialImageUrl, _isEditorialPoster, _mkCortoItemHtml, _posterStyle, dayLabel, durFmt, flagFmt, getCortoItemPoster, getFilmPoster, getPosterSrc, sala, starsText, vcfg } from '../view/helpers.js';
+import { _edHdrSVG, _getItemPoster, _isEditorialImageUrl, _isEditorialPoster, _mkCortoItemHtml, _posterStyle, dayLabel, durFmt, flagFmt, getCortoItemPoster, getFilmPoster, getPosterSrc, sala, starsText, vcfg } from '../view/helpers.js';
 import { closeAvSheet, closePVRating, closePrioLimit } from '../view/sheets.js';
 import { showConflictModal, showToast } from '../view/feedback.js';
 import { renderAgenda, renderAvBlocks } from '../view/agenda.js';
@@ -119,7 +119,7 @@ export function openPelSheet(title){
     if(_isEditorialPoster(f)){
       const _accent=_sectionColor(f.section||'');
       const _secLbl=_secLabel(f.section||'');
-      posterHtml=`<div class="psp-editorial"><div class="psp-ed-hdr" style="background:${_accent}"><span>${_secLbl}</span></div><div class="psp-ed-img"><img src="${posterSrc}" loading="lazy" onerror="this.parentElement.style.display='none'" alt=""></div></div>`;
+      posterHtml=`<div class="psp-editorial"><div class="psp-ed-hdr" style="background:${_accent}">${_edHdrSVG(_secLbl)}</div><div class="psp-ed-img"><img src="${posterSrc}" loading="lazy" onerror="this.parentElement.style.display='none'" alt=""></div></div>`;
     } else {
       posterHtml=posterSrc
         ?`<img class="pel-sheet-poster"${_posterStyle(f)} src="${posterSrc}" data-title="${f.title.replace(/"/g,'&quot;')}" loading="lazy" onerror="_posterErr(this)" alt="">`
@@ -396,7 +396,7 @@ export function openCortoSheet(title, country, duration, section, flags, directo
   const posterUrl=posterOverride||(richItem&&getCortoItemPoster(richItem))||getPosterSrc(title,true)||null;
   const _isEd3=_isEditorialImageUrl(posterUrl);
   const posterHtml=_isEd3
-    ?`<div class="psp-editorial"><div class="psp-ed-hdr" style="background:${_sectionColor(section||'')}"><span>${_secLabel(section||'').toUpperCase()}</span></div><div class="psp-ed-img"><img src="${posterUrl}" loading="lazy" onerror="this.parentElement.style.display='none'" alt=""></div></div>`
+    ?`<div class="psp-editorial"><div class="psp-ed-hdr" style="background:${_sectionColor(section||'')}">${_edHdrSVG(_secLabel(section||''))}</div><div class="psp-ed-img"><img src="${posterUrl}" loading="lazy" onerror="this.parentElement.style.display='none'" alt=""></div></div>`
     :posterUrl
       ?`<img class="pel-sheet-poster" src="${posterUrl}" data-title="${(title||"").replace(/"/g,'&quot;')}" loading="lazy" onerror="_cortoSheetPosterErr(this)" alt="">`
       :`<img class="pel-sheet-poster" src="${makeProgramPoster(state,title,dur,section||'')||''}" alt="" loading="lazy">`;
@@ -469,7 +469,7 @@ export function _openCombinedFilmSheet(filmData){
   const _isEd4=_isEditorialImageUrl(posterUrl);
   const _sec4=(()=>{const _p=FILMS.find(f=>f.film_list&&f.film_list.some(c=>c.title===title));return _p?.section||'';})();
   const posterHtml=_isEd4
-    ?`<div class="psp-editorial"><div class="psp-ed-hdr" style="background:${_sectionColor(_sec4)}"><span>${_secLabel(_sec4).toUpperCase()}</span></div><div class="psp-ed-img"><img src="${posterUrl}" loading="lazy" onerror="this.parentElement.style.display='none'" alt=""></div></div>`
+    ?`<div class="psp-editorial"><div class="psp-ed-hdr" style="background:${_sectionColor(_sec4)}">${_edHdrSVG(_secLabel(_sec4))}</div><div class="psp-ed-img"><img src="${posterUrl}" loading="lazy" onerror="this.parentElement.style.display='none'" alt=""></div></div>`
     :posterUrl
       ?`<img class="pel-sheet-poster" src="${posterUrl}" data-title="${(title||"").replace(/"/g,'&quot;')}" loading="lazy" onerror="_cortoSheetPosterErr(this)" alt="">`
       :`<div class="pel-sheet-poster-ph">🎬</div>`;

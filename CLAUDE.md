@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `f7a6ff0 chore(ci): gate ESLint no-undef + fixes que destapó (sdr muerto, filmRows) (#191)`
+> Último commit: `5f7934d fix(poster): fallback px para font-size cqi del poster editorial (Android viejo) (#192)`
 
 ---
 

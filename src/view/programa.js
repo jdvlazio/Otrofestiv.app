@@ -12,7 +12,7 @@
 
 import { NOTICES, SECTION_ORDER_LIST, _DEFAULT_FEST_ID } from '../config.js';
 import { ICONS, _secLabel, _secLabelFull, _sectionColor, makeEventPoster, parseProgramTitle } from './components.js';
-import { _dayChips, _getItemPoster, _isEditorialPoster, _metaBadges, _plistPosterHtml, _programaStack, dayLabel, durFmt, emptyState, getFilmPoster, isNowShowing, sala, vcfg } from './helpers.js';
+import { _dayChips, _edHdrSVG, _getItemPoster, _isEditorialPoster, _metaBadges, _plistPosterHtml, _programaStack, dayLabel, durFmt, emptyState, getFilmPoster, isNowShowing, sala, vcfg } from './helpers.js';
 import { festivalEnded, toMin } from '../domain/time.js';
 import { screeningPassed } from '../domain/film.js';
 import { state } from '../state/state.js';
@@ -350,7 +350,7 @@ export function renderPeliculaViewHTML(state){
         const _accent=_sectionColor(f.section||'');
         const _edSecLbl=_secLabel(f.section||'');
         const _edBodyTitle=(()=>{const pfx=_edSecLbl+' - ';if(displayTitle.startsWith(pfx))return displayTitle.slice(pfx.length);const sPfx='Storytellers - ';if(displayTitle.startsWith(sPfx))return displayTitle.slice(sPfx.length);return displayTitle;})();
-        posterImg=`<div class="ed-hdr" style="background:${_accent}"><div class="ed-lbl">${_edSecLbl}</div></div><div class="ed-img"><img src="${posterSrc}" loading="lazy" onerror="this.remove()" alt="" onload="this.style.opacity='1'"></div><div class="ed-body"><div class="ed-title">${_edBodyTitle}</div></div>`;
+        posterImg=`<div class="ed-hdr" style="background:${_accent}">${_edHdrSVG(_edSecLbl)}</div><div class="ed-img"><img src="${posterSrc}" loading="lazy" onerror="this.remove()" alt="" onload="this.style.opacity='1'"></div><div class="ed-body"><div class="ed-title">${_edBodyTitle}</div></div>`;
       } else {
         posterImg=posterSrc
           ?`<img src="${posterSrc}" loading="lazy" data-title="${f.title.replace(/"/g,'&quot;')}" style="width:100%;height:100%;object-fit:cover${_opacity};display:block;opacity:0;transition:opacity 250ms ease" onload="this.style.opacity='1'" onerror="_posterErr(this)" alt="">`
