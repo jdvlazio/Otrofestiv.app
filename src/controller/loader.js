@@ -23,6 +23,31 @@ import { storage } from '../storage/storage.js';
 import { t } from '../i18n/i18n.js';
 import { _autoResolveFestivalPosters, _renderFestivalSelector } from './festival.js';
 
+// Fetch del JSON de festival con timeout + reintentos (AbortController).
+// GitHub Pages a veces entrega los headers (200) pero el cuerpo se cuelga → el
+// r.json() nunca resuelve y loadFestival queda colgado con FILMS=0: grid vacío,
+// sin error ni 404 (cazado por synthetic monitoring, ~10-20% de cargas en frío).
+// El timeout aborta el cuerpo colgado y reintenta. cache:'no-store' se mantiene
+// (datos siempre frescos); el reintento cubre el stall transitorio del CDN.
+async function _fetchFestivalJson(url, tries=3, timeoutMs=6000){
+  let lastErr;
+  for(let i=0;i<tries;i++){
+    const ctrl=new AbortController();
+    const to=setTimeout(function(){ ctrl.abort(); }, timeoutMs);
+    try{
+      const r=await fetch(url,{cache:'no-store',signal:ctrl.signal});
+      if(!r.ok) throw new Error('HTTP '+r.status+' — '+url);
+      const json=await r.json(); // bajo el mismo timeout: si el cuerpo se cuelga, aborta
+      clearTimeout(to);
+      return json;
+    }catch(e){
+      clearTimeout(to);
+      lastErr=e; // reintentar salvo en el último intento
+    }
+  }
+  throw lastErr;
+}
+
 export async function loadFestival(id){
   // Resetear filtros al cambiar festival
   activeVenue='all';activeSec='all';programaChip='all';_programaChipMatchFn=null;
@@ -47,10 +72,7 @@ export async function loadFestival(id){
     const festFile=id.replace(/([a-zA-Z]+)(\d+)$/,'$1-$2');
     try{
       const _festUrl='festivals/'+festFile+'.json';
-      const data=await fetch(_festUrl,{cache:'no-store'}).then(r=>{
-        if(!r.ok)throw new Error('HTTP '+r.status+' — '+_festUrl);
-        return r.json();
-      }).catch(e=>{
+      const data=await _fetchFestivalJson(_festUrl).catch(e=>{
         // Banner de diagnóstico visible en pantalla
         const dbg=document.createElement('div');
         dbg.style.cssText='position:fixed;top:0;left:0;right:0;background:#c0392b;color:#fff;padding:14px 16px;z-index:99999;font-size:13px;font-family:monospace/* exception:debug-banner */;line-height:1.4';
