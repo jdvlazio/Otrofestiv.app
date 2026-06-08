@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `5f7934d fix(poster): fallback px para font-size cqi del poster editorial (Android viejo) (#192)`
+> Último commit: `b58495c fix(poster): header editorial como SVG inline — inmune al piso de font-size de Android (#193)`
 
 ---
 
