@@ -53,7 +53,7 @@ export function toggleWL(title,e){
   if(watchlist.has(title)){
     if(savedAgenda&&savedAgenda.schedule.some(s=>s._title===title)){
       showActionModal(t('plan_quitar_intereses'),
-        `<b>${title.length>36?title.slice(0,34)+'…':title}</b> ${t('plan_en_tu_plan')}<br><br>${t('plan_quitar_tmb')}`,
+        `<b>${title.length>36?title.slice(0,34)+'…':title}</b> ${t('plan_esta_en_tu_plan')}<br><br>${t('plan_quitar_tmb')}`,
         t('plan_quitar_confirm'),()=>{
           // Modal callback variant — transaction agrupa las 3 mutaciones (p7d)
           state.transaction(() => {

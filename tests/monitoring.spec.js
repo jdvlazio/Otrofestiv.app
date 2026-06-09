@@ -11,6 +11,12 @@
 
 const { test, expect } = require('@playwright/test');
 
+// Presupuesto ampliado vs el global (30s): el loader reintenta el fetch del
+// JSON de festival hasta 3×6s (#194) ante stalls del CDN de GitHub Pages —
+// peor caso ~18s ANTES de que el grid pueda renderizar. Con 30s/20s el monitor
+// cortaba justo donde la app todavía se estaba autorrecuperando.
+test.describe.configure({ timeout: 45000 });
+
 // Helper: entra al primer festival disponible en producción
 async function enterFirstFestival(page) {
   await page.goto('/');
@@ -20,7 +26,8 @@ async function enterFirstFestival(page) {
   // Esperar que el botón sea visible (la animación puede tardar hasta 1.1s)
   await page.waitForSelector('.splash-enter-btn', { state: 'visible', timeout: 10000 });
   await page.locator('.splash-enter-btn').click({ force: true });
-  await page.waitForSelector('.poster-card, .plist-item, .dtab', { timeout: 20000 });
+  // 30s > 18s del peor caso de retries del loader + render
+  await page.waitForSelector('.poster-card, .plist-item, .dtab', { timeout: 30000 });
 }
 
 // M01 — La app carga sin errores JS críticos
