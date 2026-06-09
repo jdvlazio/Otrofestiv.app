@@ -654,6 +654,9 @@ export function renderContextualHeader(state){
     const mkChip=s=>{
       const{displayTitle:dt}=parseProgramTitle(s._title||'');
       const f=FILMS.find(fi=>fi.title===s._title);
+      // El plan guardado puede referenciar títulos que ya no existen en FILMS
+      // (JSON del festival corregido/renombrado post-guardado) — sin chip, sin crash.
+      if(!f) return '';
       const r=filmRatings[s._title];
       const safeT=(s._title||'').replace(/'/g,"&#39;");
       const stars=r?starsText(r):'';

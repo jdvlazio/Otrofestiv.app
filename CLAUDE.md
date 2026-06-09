@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `b58495c fix(poster): header editorial como SVG inline — inmune al piso de font-size de Android (#193)`
+> Último commit: `9a32653 fix(loader): timeout + reintento en fetch del JSON de festival (#194)`
 
 ---
 
@@ -110,6 +110,29 @@ _Sin features activas en `.specify/features/`._
 - **server.url:** `https://otrofestiv.app` — la app carga desde producción, no desde bundle local
 - **Para compilar:** Android Studio → Build → Generate Signed Bundle → versionCode en `android/app/build.gradle`
 - **Para subir:** Play Console → Testing → Closed testing → Alpha → Create new release
+
+### Checklist OBLIGATORIO antes de cada build de APK (lección del v6/v7 congelado)
+
+El repo nativo (`~/Otrofestiv.app`) empaqueta una copia de la web en `www/` →
+`android/app/src/main/assets/public/`. **Esa copia NO se sincroniza sola**: el
+v6/v7 de Play Store se compiló con un bundle de JUN 2 y los testers quedaron
+congelados en código viejo pese a los deploys web. Antes de CADA build:
+
+1. **Refrescar `www/`** con la web actual (desde el repo web en `main` limpio):
+   copiar `index.html`, `sw.js`, `version.json`, `manifest.json`, iconos, y
+   rsync `src/`, `festivals/`, `i18n/`, `assets/`.
+2. **`npx cap copy android`** (regenera `assets/public/` + `assets/capacitor.config.json`).
+3. **Verificar el bundle compilado:** `grep 'main.js?v=' android/app/src/main/assets/public/index.html`
+   debe coincidir con el build de `version.json` en producción.
+4. **Verificar server.url compilado:** `android/app/src/main/assets/capacitor.config.json`
+   debe contener `"url": "https://otrofestiv.app"`. Sin él, el APK sirve el
+   bundle local para siempre, sin ningún mecanismo de update (Capgo fue
+   eliminado — `.specify/memory/constitution.md`).
+5. **Subir versionCode** en `android/app/build.gradle` (nunca reutilizar).
+
+> ⚠️ El repo nativo comparte remote con el repo web — **NUNCA commitear/pushear
+> desde `~/Otrofestiv.app`** (clobbearía `main` de producción). Su config vive
+> solo en working tree; `build.js` del nativo es legacy pre-Fase 8 (no usar).
 
 ---
 
