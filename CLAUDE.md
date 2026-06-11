@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `9a32653 fix(loader): timeout + reintento en fetch del JSON de festival (#194)`
+> Último commit: `e1d2099 fix(audit): P1 de la auditoría — guard mkChip, split plan_en_tu_plan, budget monitor, checklist APK (#195)`
 
 ---
 
