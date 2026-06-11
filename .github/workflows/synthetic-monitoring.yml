@@ -27,10 +27,22 @@ jobs:
       - name: Install Playwright browsers
         run: npx playwright install --with-deps chromium
 
-      - name: Run monitoring tests contra producción
-        run: npx playwright test tests/monitoring.spec.js
+      # Confirmación de falla: el monitor solo debe alertar ante degradación
+      # SOSTENIDA, no ante blips transitorios del CDN de GitHub Pages (que se
+      # autosanan en segundos). Si la primera pasada falla, espera 60s y reintenta
+      # la suite completa; el job solo queda rojo si la SEGUNDA pasada también
+      # falla. (Playwright ya reintenta cada test 2× dentro de cada pasada.)
+      - name: Run monitoring tests contra producción (con confirmación)
         env:
           BASE_URL: https://otrofestiv.app
+        run: |
+          if npx playwright test tests/monitoring.spec.js; then
+            echo "✓ Monitor verde en la primera pasada."
+            exit 0
+          fi
+          echo "::warning::Primera pasada falló — reintentando en 60s para descartar blip transitorio del CDN."
+          sleep 60
+          npx playwright test tests/monitoring.spec.js
 
       - name: Upload reporte si falla
         if: failure()

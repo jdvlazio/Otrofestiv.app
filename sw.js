@@ -6,8 +6,8 @@
 //      controllerchange en iOS WKWebView es flaky — este reload es la
 //      garantía de que HTML cacheado se descarta inmediatamente al deploy.
 
-const CACHE_NAME = 'otrofestiv-v202606091637';
-const BUILD = '202606091637';
+const CACHE_NAME = 'otrofestiv-v202606110803';
+const BUILD = '202606110803';
 
 const STATIC_ASSETS = [
   '/manifest.json',
@@ -94,10 +94,19 @@ self.addEventListener('fetch', event => {
     return;
   }
 
-  // JSONs de festivales → siempre desde red (datos pueden cambiar)
+  // JSONs de festivales → network-first CON fallback a último-bueno en caché.
+  // El fetch no-store preserva frescura (datos pueden cambiar); el caché solo
+  // entra si la red falla. Resiliencia para quien vuelve: si el edge del CDN
+  // se cuelga, sirve la última copia buena en vez de quedar con films=0 (grid
+  // vacío). Solo se cachean respuestas ok — un cuerpo colgado nunca completa el
+  // put, así que no envenena el caché.
   if (url.pathname.startsWith('/festivals/')) {
     event.respondWith(
       fetch(new Request(request, { cache: 'no-store' }))
+        .then(res => {
+          if (res.ok) { const clone = res.clone(); caches.open(CACHE_NAME).then(c => c.put(request, clone)); }
+          return res;
+        })
         .catch(() => caches.match(request))
     );
     return;
