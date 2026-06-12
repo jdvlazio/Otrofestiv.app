@@ -370,6 +370,13 @@ export async function loadFestival(id){
   closeFestivalSheet();
   switchMainNav('mnav-cartelera');
   await new Promise(resolve=>requestAnimationFrame(()=>{showDayView();requestAnimationFrame(resolve);}));
+  // Posicionar la barra de días en el día activo (hoy, durante el festival).
+  // El render fija activeDay + la clase .on, pero no scrollea #dtabs → sin esto
+  // la barra arranca en el día 1 con el día de hoy fuera de pantalla. Corre tras
+  // el doble-rAF (barra ya pintada y medible). Mismo patrón que filterByDay.
+  const _dtabs=document.getElementById('dtabs');
+  const _onDtab=_dtabs&&_dtabs.querySelector('.dtab.on');
+  if(_dtabs&&_onDtab) _dtabs.scrollLeft=_onDtab.offsetLeft-_dtabs.offsetLeft;
   // Resolver posters via TMDB en background — no bloquea la UI
   _autoResolveFestivalPosters().catch(()=>{});
 }
