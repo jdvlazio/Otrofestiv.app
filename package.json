@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Festival scheduling PWA",
   "private": true,
+  "license": "UNLICENSED",
   "scripts": {
     "test": "playwright test",
     "test:headed": "playwright test --headed",
