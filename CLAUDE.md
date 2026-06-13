@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `a6871c6 fix(monitor+sw): confirmar falla antes de alertar (B) + SW cachea /festivals/ last-good (C) (#196)`
+> Último commit: `5642b62 chore(legal): LICENSE propietario (all rights reserved) + package.json UNLICENSED (#198)`
 
 ---
 

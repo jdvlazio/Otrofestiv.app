@@ -16,11 +16,11 @@ export function toggleSplashDropdown(){
   btn.classList.toggle('open',open);
 }
 
-export function _togglePastFest(btn, name, meta, id){
-  // Toggle colapso/expansión — siempre. Nunca selecciona.
-  const isOpen=btn.classList.contains('past-open');
-  btn.classList.toggle('past-open', !isOpen);
-  btn.setAttribute('aria-selected', isOpen ? 'false' : 'true');
+export function _togglePastFest(item){
+  // Solo el chevron llega acá → toggle colapso/expansión del item pasado.
+  // El tap en el título/cuerpo dispara selectSplashFest (no esto).
+  if(!item) return;
+  item.classList.toggle('past-open');
 }
 
 export function _renderSplashDropdown(activeFestId){
