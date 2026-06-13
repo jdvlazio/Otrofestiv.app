@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `5642b62 chore(legal): LICENSE propietario (all rights reserved) + package.json UNLICENSED (#198)`
+> Último commit: `24e3fce fix(splash): permitir entrar a festivales pasados tocando el título del item (#199)`
 
 ---
 

@@ -1874,7 +1874,13 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .splash-drop-item.past.past-open{opacity:.75}
 .splash-drop-item.past.past-open .splash-drop-item-meta{display:block}
 /* Chevron del item pasado */
-.past-item-chev{color:var(--gray2);display:flex;transition:transform .2s ease;flex-shrink:0}
+.past-item-chev{
+  color:var(--gray2);display:flex;align-items:center;flex-shrink:0;
+  align-self:stretch;                          /* zona de toque de altura completa → estable al expandir */
+  margin:-10px calc(-1 * var(--sp-4)) -10px 0; /* extiende la zona a los bordes del item (anula su padding) */
+  padding:10px var(--sp-4) 10px var(--sp-3);   /* restaura el inset visual del ícono + ensancha el área tocable */
+  transition:transform .2s ease;
+}
 .splash-drop-item.past.past-open .past-item-chev{transform:rotate(180deg)}
 .splash-enter-btn{
   width:100%;max-width:300px;
@@ -2627,7 +2633,7 @@ setTimeout(function(){
 <!-- ── Intereses / Planear: header unificado — fuera de ag-view ── -->
 <div class="ag-view" id="ag-view"></div>
 
-<script type="module" src="/src/main.js?v=202606131219"></script>
+<script type="module" src="/src/main.js?v=202606131231"></script>
 
 <!-- Festival switcher bottom sheet -->
 <div class="auth-sheet" id="auth-sheet" data-close-bg="AuthSheet">
