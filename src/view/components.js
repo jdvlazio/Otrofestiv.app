@@ -389,9 +389,12 @@ export function _renderSplashDropdownHTML(state, activeFestId){
   const mkPastItem=([id,cfg])=>{
     const meta=`${cfg.city} · ${_lang==='en'&&cfg.dates_en?cfg.dates_en:cfg.dates} ${cfg.year||''}`.trim();
     const shortLabel=(cfg.shortName||cfg.name.split(' ')[0])+' · '+cfg.year;
-    return`<button class="splash-drop-item past" data-fest="${id}" role="option" aria-selected="false" data-action="togglePastFest">
+    // Tap en el cuerpo/título → selecciona el festival (igual que los activos);
+    // tap en el chevron → expande/colapsa. La delegación dispara el primer
+    // data-action subiendo desde el target, así que el chevron no selecciona.
+    return`<button class="splash-drop-item past" data-fest="${id}" role="option" aria-selected="false" data-action="selectSplashFest" data-name="${cfg.name}" data-meta="${meta}">
       <div><div class="splash-drop-item-name">${shortLabel}</div><div class="splash-drop-item-meta">${meta}</div></div>
-      <span class="past-item-chev">${chevSvg}</span>
+      <span class="past-item-chev" data-action="togglePastFest">${chevSvg}</span>
     </button>`;
   };
   let html='';
