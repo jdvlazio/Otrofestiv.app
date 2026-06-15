@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `24e3fce fix(splash): permitir entrar a festivales pasados tocando el título del item (#199)`
+> Último commit: `4580194 fix(splash): área de toque del chevron de festival pasado — abre y cierra (#200)`
 
 ---
 
@@ -57,10 +57,10 @@ Juan es Product Owner, diseñador y developer. Claude ejecuta; Juan audita y apr
 |---|---|---|---|---|
 | `ficci65` | FICCI 65 | Cartagena | 14–19 ABR | Archivado |
 | `aff2026` | AFF 2026 | Medellín | 21–29 ABR | Archivado |
-| `tribeca2026` | Tribeca Festival | New York | JUN 3–14 | **Próximo / activo** |
+| `tribeca2026` | Tribeca Festival | New York | JUN 3–14 | Recién terminado |
 | `cinemancia2025` | Cinemancia 2025 | Valle de Aburrá | 11–20 SEP | Archivado |
 | `leviza2026` | Leviza - Festival de Cine y Audiovisuales | Zapatoca | 14–17 MAY | Recién terminado |
-| `olhar2026` | Olhar de Cinema | Curitiba | JUN 4–13 | **Próximo / activo** |
+| `olhar2026` | Olhar de Cinema | Curitiba | JUN 4–13 | Recién terminado |
 
 ### Features activas (desde `.specify/features/`)
 
@@ -91,7 +91,7 @@ _Sin features activas en `.specify/features/`._
 - **Regex en index.html:** prohibido para transformaciones estructurales de >10 ocurrencias.
 - **Timezone:** Colombia (UTC-5). Nunca `toISOString()` para lógica de fechas.
 - **i18n:** la fuente de verdad es `src/i18n/i18n.js` (bloque `_I18N`, es+en). Toda string nueva va ahí — es lo que lee `t()` y lo que valida `validate.py [i18n-complete]`. Los `i18n/*.json` quedaron desincronizados y NO se consumen en runtime (legacy); no son la fuente. El `sync-i18n.py` fue retirado (apuntaba a un `_I18N` en `index.html` que la Fase 8 movió a `src/i18n/i18n.js`).
-- **Splash placeholder:** el markup estático de `#splash-sel-name`/`#splash-sel-meta` en `index.html` debe reflejar el festival activo actual (= `detectActiveFest()`/`_DEFAULT_FEST_ID`). Es solo placeholder pre-JS, pero si queda stale el selector "brinca" del festival viejo al detectado al cargar. **Actualizarlo en cada cambio de festival activo.**
+- **Splash selector:** el selector NO se pre-rellena con ningún festival — arranca SIEMPRE en el placeholder `splash_elegi` ("Elegí uno") y el usuario elige (regla uniforme, haya festival activo o no). El markup estático de `#splash-sel-name` es el placeholder fijo (`data-i18n="splash_elegi"`, gris vía `.splash-sel-btn.placeholder`); `#splash-sel-meta` arranca vacío. "Entrar" (`#splash-enter-btn`) arranca `disabled` y `selectSplashFest()` lo habilita al elegir. Ya NO hay que sincronizar el markup con el festival activo (no existe "brinco"). El bootstrap pasa `_renderSplashDropdown(null)` → ningún item marcado `.selected`, orden por tier.
 
 ---
 

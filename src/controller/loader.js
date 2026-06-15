@@ -382,6 +382,10 @@ export async function loadFestival(id){
 }
 
 export function dismissSplash(){
+  // Sin festival elegido no hay a dónde entrar. El botón "Entrar" está disabled
+  // hasta que se elige (selectSplashFest lo habilita); guard defensivo por si
+  // el click llega igual.
+  if(!_splashSelectedFestId) return;
   const s=document.getElementById('otrofestiv-splash');
   const btn=document.querySelector('.splash-enter-btn');
   if(btn) btn.classList.add('loading');

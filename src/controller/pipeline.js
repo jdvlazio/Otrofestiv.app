@@ -4,7 +4,7 @@
 // (runCalc). Cero lets unbridged (todo viewstate ya bridgeado). Sin ciclos:
 // view no importa controller; calc es leaf.
 
-import { FESTIVAL_CONFIG, _DEFAULT_FEST_ID } from '../config.js';
+import { FESTIVAL_CONFIG } from '../config.js';
 import { ICONS, _secLabelFull } from '../view/components.js';
 import { _renderProgramaContent, renderProgramaChips } from '../view/programa.js';
 import { _fixStickyOffset, renderAgenda, renderFilmListHTML } from '../view/agenda.js';
@@ -232,7 +232,10 @@ export function setLang(code){
     _applyI18nDOM();
     if(activeView === 'day') { typeof showDayView === 'function' && showDayView(); }
     else                     { typeof renderAgenda === 'function' && renderAgenda(); }
-    _renderSplashDropdown(_splashSelectedFestId||_DEFAULT_FEST_ID);
+    // Sin festival elegido (placeholder) → null: re-renderiza el dropdown con las
+    // secciones en el nuevo idioma pero NO rellena el selector (el placeholder
+    // "Elegí uno" lo re-traduce _applyI18nDOM). Con festival elegido → localiza fechas.
+    _renderSplashDropdown(_splashSelectedFestId);
     _renderFestivalSelector(_activeFestId);
     requestAnimationFrame(()=>{
       _fadeEls.forEach(el=>el.classList.remove('lang-fade'));
