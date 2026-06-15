@@ -23,6 +23,15 @@ async function enterFirstFestival(page) {
   // Gate de readiness JS DEFINITIVO: [data-app-ready="1"] (fin del bootstrap
   // síncrono). #splash-sel-btn es estático → no es señal válida (flaky).
   await page.waitForSelector('html[data-app-ready="1"]', { state: 'attached', timeout: 15000 });
+  // El selector arranca SIN festival pre-elegido (placeholder "Elegí uno"): hay que
+  // elegir uno para habilitar "Entrar". Tomamos el primero disponible de forma
+  // determinista (contrato: festival-agnóstico, no hardcodear IDs). Los items existen
+  // en el DOM aunque el dropdown esté cerrado (render en el bootstrap).
+  await page.waitForSelector('.splash-drop-item[data-fest]', { state: 'attached', timeout: 15000 });
+  await page.evaluate(() => {
+    const first = document.querySelector('.splash-drop-item[data-fest]');
+    if (first) selectSplashFest(first.dataset.name, first.dataset.meta, first.dataset.fest);
+  });
   // Esperar que el botón sea visible (la animación puede tardar hasta 1.1s)
   await page.waitForSelector('.splash-enter-btn', { state: 'visible', timeout: 10000 });
   await page.locator('.splash-enter-btn').click({ force: true });

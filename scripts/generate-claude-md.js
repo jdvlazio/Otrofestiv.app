@@ -185,7 +185,7 @@ ${featuresSection}
 - **Regex en index.html:** prohibido para transformaciones estructurales de >10 ocurrencias.
 - **Timezone:** Colombia (UTC-5). Nunca \`toISOString()\` para lógica de fechas.
 - **i18n:** la fuente de verdad es \`src/i18n/i18n.js\` (bloque \`_I18N\`, es+en). Toda string nueva va ahí — es lo que lee \`t()\` y lo que valida \`validate.py [i18n-complete]\`. Los \`i18n/*.json\` quedaron desincronizados y NO se consumen en runtime (legacy); no son la fuente. El \`sync-i18n.py\` fue retirado (apuntaba a un \`_I18N\` en \`index.html\` que la Fase 8 movió a \`src/i18n/i18n.js\`).
-- **Splash placeholder:** el markup estático de \`#splash-sel-name\`/\`#splash-sel-meta\` en \`index.html\` debe reflejar el festival activo actual (= \`detectActiveFest()\`/\`_DEFAULT_FEST_ID\`). Es solo placeholder pre-JS, pero si queda stale el selector "brinca" del festival viejo al detectado al cargar. **Actualizarlo en cada cambio de festival activo.**
+- **Splash selector:** el selector NO se pre-rellena con ningún festival — arranca SIEMPRE en el placeholder \`splash_elegi\` ("Elegí uno") y el usuario elige (regla uniforme, haya festival activo o no). El markup estático de \`#splash-sel-name\` es el placeholder fijo (\`data-i18n="splash_elegi"\`, gris vía \`.splash-sel-btn.placeholder\`); \`#splash-sel-meta\` arranca vacío. "Entrar" (\`#splash-enter-btn\`) arranca \`disabled\` y \`selectSplashFest()\` lo habilita al elegir. Ya NO hay que sincronizar el markup con el festival activo (no existe "brinco"). El bootstrap pasa \`_renderSplashDropdown(null)\` → ningún item marcado \`.selected\`, orden por tier.
 
 ---
 

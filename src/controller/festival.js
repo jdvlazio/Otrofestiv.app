@@ -60,7 +60,9 @@ export function selectSplashFest(name,meta,festId){
   _splashSelectedFestId=festId||_DEFAULT_FEST_ID;
   const n=document.getElementById('splash-sel-name');
   const m=document.getElementById('splash-sel-meta');
-  if(n) n.textContent=name;
+  // Quitar data-i18n: ya no es placeholder, es el nombre elegido. Sin esto,
+  // un re-_applyI18nDOM (ej. cambio de idioma en el splash) lo pisaría con "Elegí uno".
+  if(n){ n.textContent=name; n.removeAttribute('data-i18n'); }
   if(m) m.textContent=meta;
   document.querySelectorAll('.splash-drop-item').forEach(el=>el.classList.remove('selected'));
   const active=document.querySelector('.splash-drop-item[data-fest="'+_splashSelectedFestId+'"]');
@@ -68,7 +70,11 @@ export function selectSplashFest(name,meta,festId){
   const dd=document.getElementById('splash-dropdown');
   const btn=document.getElementById('splash-sel-btn');
   if(dd) dd.style.display='none';
-  if(btn) btn.classList.remove('open');
+  // Quitar 'placeholder' → el nombre pasa de gris a blanco bold (regla CSS).
+  if(btn){ btn.classList.remove('open'); btn.classList.remove('placeholder'); }
+  // Habilitar "Entrar" — ya hay un festival elegido.
+  const enterBtn=document.getElementById('splash-enter-btn');
+  if(enterBtn) enterBtn.disabled=false;
 }
 
 export async function _autoResolveFestivalPosters(){

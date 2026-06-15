@@ -630,7 +630,7 @@ FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202606131231';
+const BUILD_VERSION='202606151745';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';
@@ -1428,20 +1428,19 @@ state.subscribeRender(
     return inProgress||nextUp||mostRecent||_DEFAULT_FEST_ID;
   }
   const activeFest=detectActiveFest();
-  _splashSelectedFestId=activeFest;
-  // Render dinámico — agregar festival = solo FESTIVAL_CONFIG, nada más
-  _renderSplashDropdown(activeFest);
+  // No pre-seleccionar festival: el selector arranca en placeholder ("Elegí uno")
+  // y el usuario elige SIEMPRE (regla uniforme, haya festival activo o no).
+  // detectActiveFest se sigue usando para el orden del dropdown y el render del
+  // selector in-app, pero ya no rellena el selector del splash.
+  _splashSelectedFestId=null;
+  // Sin festival seleccionado → ningún item marcado .selected; orden por tier.
+  _renderSplashDropdown(null);
   // Splash entrada: la animación es 100% CSS (@keyframes en index.html). El
   // contenido es visible por default y JS NO toca opacity → imposible que quede
   // atascado invisible en WKWebView (Bug 1 se resuelve en la capa CSS).
   _renderFestivalSelector(activeFest);
-  const cfg=FESTIVAL_CONFIG[activeFest];
-  if(cfg){
-    const n=document.getElementById('splash-sel-name');
-    const m=document.getElementById('splash-sel-meta');
-    if(n) n.textContent=cfg.name;
-    if(m) m.textContent=`${cfg.city} · ${_langDates(cfg)}${cfg.year?' '+cfg.year:''}`.trimEnd();
-  }
+  // El selector del splash NO se rellena — queda el placeholder del markup
+  // (data-i18n="splash_elegi"). "Entrar" arranca disabled hasta que se elige.
   // Revelar el splash recién cuando el selector YA tiene el festival correcto:
   // el cambio placeholder→activo ocurre tras opacity:0 (invisible). Doble rAF
   // asegura que el contenido poblado se commitee antes de animar la entrada.
