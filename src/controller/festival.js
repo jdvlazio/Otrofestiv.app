@@ -70,8 +70,9 @@ export function selectSplashFest(name,meta,festId){
   const dd=document.getElementById('splash-dropdown');
   const btn=document.getElementById('splash-sel-btn');
   if(dd) dd.style.display='none';
-  // Quitar 'placeholder' → el nombre pasa de gris a blanco bold (regla CSS).
-  if(btn){ btn.classList.remove('open'); btn.classList.remove('placeholder'); }
+  // Quitar 'placeholder' (gris→blanco bold) y 'compact' (la barra mínima crece y
+  // muestra el nombre elegido). Ambas reglas viven en el CSS del selector.
+  if(btn){ btn.classList.remove('open'); btn.classList.remove('placeholder'); btn.classList.remove('compact'); }
   // Habilitar "Entrar" — ya hay un festival elegido.
   const enterBtn=document.getElementById('splash-enter-btn');
   if(enterBtn) enterBtn.disabled=false;
