@@ -11,11 +11,21 @@
 
 const { test, expect } = require('@playwright/test');
 
+// Bloquear el Service Worker SOLO en el monitor. El SW de prod (sw.js v15) hace
+// clients.navigate(client.url) en cada activate → recarga la página al instalarse.
+// En el runner frío de CI esa recarga dispara un SEGUNDO cold-load (13 módulos ESM
+// + JSON 452 KB) que se cuelga, y waitForSelector queda esperando "navigation to
+// finish" hasta el timeout (causa raíz de los falsos positivos #133–#137). Sin SW
+// el monitor hace UNA carga determinista desde red — que es justo lo que valida:
+// "prod sirve una app que arranca y carga el festival". La cobertura del SW vive
+// en la suite de regresión (playwright.yml), no acá.
+test.use({ serviceWorkers: 'block' });
+
 // Presupuesto ampliado vs el global (30s): el loader reintenta el fetch del
 // JSON de festival hasta 3×6s (#194) ante stalls del CDN de GitHub Pages —
-// peor caso ~18s ANTES de que el grid pueda renderizar. 60s absorbe el cold-load
-// del runner de CI (HTML + 13 módulos ESM + JSON 452 KB + reload del SW en su
-// primera instalación) bajo latencia elevada del edge, sin tapar lentitud real.
+// peor caso ~18s ANTES de que el grid pueda renderizar. 60s da margen al cold-load
+// del runner de CI (HTML + 13 módulos ESM + JSON 452 KB) bajo latencia del edge,
+// sin tapar lentitud real.
 test.describe.configure({ timeout: 60000 });
 
 // Helper: entra al primer festival disponible en producción
