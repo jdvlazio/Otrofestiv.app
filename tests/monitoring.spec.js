@@ -13,13 +13,18 @@ const { test, expect } = require('@playwright/test');
 
 // Presupuesto ampliado vs el global (30s): el loader reintenta el fetch del
 // JSON de festival hasta 3×6s (#194) ante stalls del CDN de GitHub Pages —
-// peor caso ~18s ANTES de que el grid pueda renderizar. Con 30s/20s el monitor
-// cortaba justo donde la app todavía se estaba autorrecuperando.
-test.describe.configure({ timeout: 45000 });
+// peor caso ~18s ANTES de que el grid pueda renderizar. 60s absorbe el cold-load
+// del runner de CI (HTML + 13 módulos ESM + JSON 452 KB + reload del SW en su
+// primera instalación) bajo latencia elevada del edge, sin tapar lentitud real.
+test.describe.configure({ timeout: 60000 });
 
 // Helper: entra al primer festival disponible en producción
 async function enterFirstFestival(page) {
-  await page.goto('/');
+  // waitUntil:'domcontentloaded' — no esperar a TODOS los subrecursos ni al settle
+  // del reload del SW (que en runner frío puede colgar el evento 'load' → "navigation
+  // to finish" nunca resuelve, el fallo observado en prod). El gate real de readiness
+  // es [data-app-ready], que se espera abajo.
+  await page.goto('/', { waitUntil: 'domcontentloaded' });
   // Gate de readiness JS DEFINITIVO: [data-app-ready="1"] (fin del bootstrap
   // síncrono). #splash-sel-btn es estático → no es señal válida (flaky).
   await page.waitForSelector('html[data-app-ready="1"]', { state: 'attached', timeout: 15000 });
@@ -35,8 +40,9 @@ async function enterFirstFestival(page) {
   // Esperar que el botón sea visible (la animación puede tardar hasta 1.1s)
   await page.waitForSelector('.splash-enter-btn', { state: 'visible', timeout: 10000 });
   await page.locator('.splash-enter-btn').click({ force: true });
-  // 30s > 18s del peor caso de retries del loader + render
-  await page.waitForSelector('.poster-card, .plist-item, .dtab', { timeout: 30000 });
+  // 40s: 18s del peor caso de retries del loader (#194) + render, con margen para
+  // el cold-load del runner bajo latencia del edge de Pages.
+  await page.waitForSelector('.poster-card, .plist-item, .dtab', { timeout: 40000 });
 }
 
 // M01 — La app carga sin errores JS críticos
@@ -55,7 +61,7 @@ test('M01 — app carga sin errores JS', async ({ page }) => {
 
 // M02 — El selector de festival tiene al menos un festival
 test('M02 — selector tiene al menos un festival', async ({ page }) => {
-  await page.goto('/');
+  await page.goto('/', { waitUntil: 'domcontentloaded' });  // ver enterFirstFestival
   // Gate de readiness JS DEFINITIVO antes de click en #splash-sel-btn (estático).
   await page.waitForSelector('html[data-app-ready="1"]', { state: 'attached', timeout: 15000 });
   await page.locator('#splash-sel-btn').click();
