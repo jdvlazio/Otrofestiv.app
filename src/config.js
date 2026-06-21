@@ -168,6 +168,14 @@ export const SECTION_EN = {
   '🏆 Competencia Nacional de Ficción':'National Fiction Competition',
   '⭐ Clausura':'Closing',
   '🎓 Talleres':'Workshops',
+  // FICMontañas (sin sitio EN — traducción mecánica, pendiente pase Content Design)
+  '🎬 Apertura & Galas':'Opening & Galas',
+  '🇨🇺 Cine Cubano':'Cuban Cinema',
+  '🎞️ Retrospectiva Leonardo Favio':'Leonardo Favio Retrospective',
+  '🏔️ Cóndor Andino':'Andean Condor Competition',
+  '🌎 Largometraje Latinoamericano':'Latin American Feature',
+  '✨ Exhibiciones Especiales':'Special Screenings',
+  '💬 Conversatorios & Masterclass':'Talks & Masterclasses',
 };
 
 // ── NOTICES ──────────────────────────────────────────────────────────────────
@@ -240,6 +248,20 @@ export const FESTIVAL_CONFIG={
     dayShort_en:{'2026-06-04':'THU 4','2026-06-05':'FRI 5','2026-06-06':'SAT 6','2026-06-07':'SUN 7','2026-06-08':'MON 8','2026-06-09':'TUE 9','2026-06-10':'WED 10','2026-06-11':'THU 11','2026-06-12':'FRI 12','2026-06-13':'SAT 13'},
     dayLong:{'2026-06-04':'Jueves 4 de junio','2026-06-05':'Viernes 5 de junio','2026-06-06':'Sábado 6 de junio','2026-06-07':'Domingo 7 de junio','2026-06-08':'Lunes 8 de junio','2026-06-09':'Martes 9 de junio','2026-06-10':'Miércoles 10 de junio','2026-06-11':'Jueves 11 de junio','2026-06-12':'Viernes 12 de junio','2026-06-13':'Sábado 13 de junio'},
     prioLimit:5,
+    films:null,posters:null,lbSlugs:{}
+  },
+  'ficmontanas2026':{
+    name:'Festival Internacional de Cine en las Montañas',shortName:'FICMONTAÑAS',
+    city:'Salento',country:'CO',
+    dates:'JUL 1–5',dates_en:'JUL 1–5',year:2026,timezoneOffset:'-05:00',
+    storageKey:'ficmontanas2026_',festivalStartStr:'2026-06-30T00:00:00',festivalEndStr:'2026-07-05T20:00:00',
+    festivalDates:{'2026-06-30':'2026-06-30','2026-07-01':'2026-07-01','2026-07-02':'2026-07-02','2026-07-03':'2026-07-03','2026-07-04':'2026-07-04','2026-07-05':'2026-07-05'},
+    days:[{k:'2026-06-30',d:30,lbl:'MAR'},{k:'2026-07-01',d:1,lbl:'MIÉ'},{k:'2026-07-02',d:2,lbl:'JUE'},{k:'2026-07-03',d:3,lbl:'VIE'},{k:'2026-07-04',d:4,lbl:'SÁB'},{k:'2026-07-05',d:5,lbl:'DOM'}],
+    dayKeys:['2026-06-30','2026-07-01','2026-07-02','2026-07-03','2026-07-04','2026-07-05'],
+    dayShort:{'2026-06-30':'MAR 30','2026-07-01':'MIÉ 1','2026-07-02':'JUE 2','2026-07-03':'VIE 3','2026-07-04':'SÁB 4','2026-07-05':'DOM 5'},
+    dayShort_en:{'2026-06-30':'TUE 30','2026-07-01':'WED 1','2026-07-02':'THU 2','2026-07-03':'FRI 3','2026-07-04':'SAT 4','2026-07-05':'SUN 5'},
+    dayLong:{'2026-06-30':'Martes 30 de junio','2026-07-01':'Miércoles 1 de julio','2026-07-02':'Jueves 2 de julio','2026-07-03':'Viernes 3 de julio','2026-07-04':'Sábado 4 de julio','2026-07-05':'Domingo 5 de julio'},
+    prioLimit:3,
     films:null,posters:null,lbSlugs:{}
   }
 };// Festival data loaded async from festivals/<id>.json via loadFestival()
