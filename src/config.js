@@ -109,6 +109,17 @@ export const SECTION_COLORS = {
   'Shorts Programs':'#1D9E75',
   'Free Outdoor Screenings':'#97C459',
   'Shorts':'#888780',
+  // FICMontañas 2026 — colores por categoría (paleta del póster oficial)
+  '🎬 Apertura & Galas':'#EF9F27',
+  '🇨🇺 Cine Cubano':'#E24B4A',
+  '🎞️ Retrospectiva Leonardo Favio':'#888780',
+  '🏔️ Largometraje Cóndor Andino':'#378ADD',
+  '🌎 Largometraje Latinoamericano':'#D85A30',
+  '🌿 Cine al Natural':'#639922',
+  '✨ Exhibiciones Especiales':'#5DCAA5',
+  '💬 Conversatorios & Masterclass':'#7F77DD',
+  '📽️ Cortometrajes':'#FAC775',
+  '🎉 Eventos Especiales':'#E0418A',
 };
 
 // ── Display EN de secciones (solo display; la clave sigue siendo `section` ES) ─
@@ -177,7 +188,7 @@ export const SECTION_EN = {
   '🌿 Cine al Natural':'Nature Cinema',
   '✨ Exhibiciones Especiales':'Special Screenings',
   '💬 Conversatorios & Masterclass':'Talks & Masterclasses',
-  '📽️ Cortometrajes en Competencia':'Short Film Competition',
+  '📽️ Cortometrajes':'Short Films',
   '🎉 Eventos Especiales':'Special Events',
 };
 
@@ -257,7 +268,7 @@ export const FESTIVAL_CONFIG={
     name:'Festival Internacional de Cine en las Montañas',shortName:'FICMONTAÑAS',
     city:'Salento',country:'CO',
     dates:'JUL 1–5',dates_en:'JUL 1–5',year:2026,timezoneOffset:'-05:00',
-    storageKey:'ficmontanas2026_',festivalStartStr:'2026-06-30T00:00:00',festivalEndStr:'2026-07-05T20:00:00',
+    storageKey:'ficmontanas2026_',festivalStartStr:'2026-06-30T00:00:00',festivalEndStr:'2026-07-05T22:00:00',
     festivalDates:{'2026-06-30':'2026-06-30','2026-07-01':'2026-07-01','2026-07-02':'2026-07-02','2026-07-03':'2026-07-03','2026-07-04':'2026-07-04','2026-07-05':'2026-07-05'},
     days:[{k:'2026-06-30',d:30,lbl:'MAR'},{k:'2026-07-01',d:1,lbl:'MIÉ'},{k:'2026-07-02',d:2,lbl:'JUE'},{k:'2026-07-03',d:3,lbl:'VIE'},{k:'2026-07-04',d:4,lbl:'SÁB'},{k:'2026-07-05',d:5,lbl:'DOM'}],
     dayKeys:['2026-06-30','2026-07-01','2026-07-02','2026-07-03','2026-07-04','2026-07-05'],
