@@ -174,8 +174,11 @@ export const SECTION_EN = {
   '🎞️ Retrospectiva Leonardo Favio':'Leonardo Favio Retrospective',
   '🏔️ Largometraje Cóndor Andino':'Cóndor Andino Feature',
   '🌎 Largometraje Latinoamericano':'Latin American Feature',
+  '🌿 Cine al Natural':'Nature Cinema',
   '✨ Exhibiciones Especiales':'Special Screenings',
   '💬 Conversatorios & Masterclass':'Talks & Masterclasses',
+  '📽️ Cortometrajes en Competencia':'Short Film Competition',
+  '🎉 Eventos Especiales':'Special Events',
 };
 
 // ── NOTICES ──────────────────────────────────────────────────────────────────
