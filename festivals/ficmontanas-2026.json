@@ -1,5 +1,5 @@
 {
-  "_status": "Montaje staged (rama feat/ficmontanas-2026) — NO publicado. Programa de galas/exhibiciones/eventos según la PROGRAMACIÓN OFICIAL (imagen). Competencia (49 cortos + 7 largos sin hora pública) PAUSADA. Sinopsis ES = borrador pendiente de pase Content Design. Pósters: 9 puestos (pendiente verificación visual), 4 pendientes de poster pass. EN/lbSlugs/genre = pases downstream.",
+  "_status": "Montaje staged (rama feat/ficmontanas-2026) — NO publicado. Programa de galas/exhibiciones/eventos según la PROGRAMACIÓN OFICIAL (imagen). Competencia (49 cortos + 7 largos sin hora pública) PAUSADA. Pósters: 11/13 verificados visualmente (faltan Cinco historias y Titón — sin fuente portrait verificable). lbSlugs 12/13 (falta Cuando la palabra — sin página LB). Géneros 13/13. Sinopsis ES = borrador pendiente de pase Content Design; synopsis_en 7/13 (pendiente traducción). Un nuevo amanecer usa fotograma still (no afiche gráfico).",
   "_source": "https://cineenlasmontanas.com (Selección Oficial 2026, page_id=1311) + PROGRAMACION-FICMONTANAS-2026.jpeg + research pre-Fase1 + TMDB/Letterboxd",
   "_extracted": "2026-06-20",
   "_total": 13,
@@ -106,7 +106,13 @@
     "Soñar, soñar": "sonar-sonar",
     "Gatica, el mono": "gatica-the-monkey",
     "Fresa y chocolate": "strawberry-and-chocolate",
-    "Un poeta": "a-poet"
+    "Un poeta": "a-poet",
+    "La hija del cóndor": "the-condor-daughter",
+    "Balada para niños muertos": "balada-para-ninos-muertos",
+    "Cada voz lleva su angustia": "cada-voz-lleva-su-angustia",
+    "Titón, de la Habana a Guantanamera": "titon-from-havana-to-guantanamera-1928-1996",
+    "Un nuevo amanecer": "un-nuevo-amanecer-2024",
+    "Cinco historias de amor y un bolerón desesperado": "5-historias-de-amor-y-un-boleron-desesperado"
   },
   "films": [
     {
@@ -129,7 +135,8 @@
       "time": "16:00",
       "venue": "Cinemateca de Salento",
       "synopsis_lang": "es",
-      "day_order": 2
+      "day_order": 2,
+      "genre": "Drama"
     },
     {
       "title": "Inauguración Oficial · 12ª edición",
@@ -185,7 +192,8 @@
       "time": "20:00",
       "venue": "Cinemateca de Salento",
       "synopsis_lang": "es",
-      "day_order": 6
+      "day_order": 6,
+      "genre": "Comedia dramática"
     },
     {
       "title": "Monólogo en vivo · Fresa y Chocolate",
@@ -217,7 +225,8 @@
       "time": "20:00",
       "venue": "Cinemateca de Salento",
       "synopsis_lang": "es",
-      "day_order": 6
+      "day_order": 6,
+      "genre": "Comedia romántica"
     },
     {
       "title": "Titón, de la Habana a Guantanamera",
@@ -236,7 +245,8 @@
       "time": "14:00",
       "venue": "Cinemateca de Salento",
       "synopsis_lang": "es",
-      "day_order": 0
+      "day_order": 0,
+      "genre": "Documental"
     },
     {
       "title": "Crónica de un niño solo",
@@ -256,7 +266,8 @@
       "time": "14:00",
       "venue": "Cinemateca de Salento",
       "synopsis_lang": "es",
-      "day_order": 0
+      "day_order": 0,
+      "genre": "Drama"
     },
     {
       "title": "Nazareno Cruz y el lobo",
@@ -276,7 +287,8 @@
       "time": "14:00",
       "venue": "Cinemateca de Salento",
       "synopsis_lang": "es",
-      "day_order": 1
+      "day_order": 1,
+      "genre": "Drama fantástico"
     },
     {
       "title": "Soñar, soñar",
@@ -296,7 +308,8 @@
       "time": "14:00",
       "venue": "Cinemateca de Salento",
       "synopsis_lang": "es",
-      "day_order": 3
+      "day_order": 3,
+      "genre": "Comedia dramática"
     },
     {
       "title": "Gatica, el mono",
@@ -316,7 +329,8 @@
       "time": "14:00",
       "venue": "Cinemateca de Salento",
       "synopsis_lang": "es",
-      "day_order": 3
+      "day_order": 3,
+      "genre": "Drama biográfico"
     },
     {
       "title": "Lanzamiento del libro · Leonardo Favio. Nadie Puede Olvidarlo",
@@ -351,7 +365,8 @@
       "time": "20:00",
       "venue": "Cinemateca de Salento",
       "synopsis_lang": "es",
-      "day_order": 5
+      "day_order": 5,
+      "genre": "Comedia dramática"
     },
     {
       "title": "Cuando la palabra se hace búsqueda",
@@ -369,7 +384,8 @@
       "time": "14:00",
       "venue": "Cinemateca de Salento",
       "synopsis_lang": "es",
-      "day_order": 2
+      "day_order": 2,
+      "genre": "Documental"
     },
     {
       "title": "Un nuevo amanecer",
@@ -381,7 +397,7 @@
       "year": 2025,
       "duration": "96 min",
       "synopsis": "Documental sobre cinco mujeres excombatientes firmantes del acuerdo de paz, y lo que significó habitar un cuerpo femenino en la guerra y en el desarme.",
-      "poster": "",
+      "poster": "https://www.proimagenescolombia.com/photos/302478_625__imagen_400_570.jpg",
       "flags": "🇨🇴",
       "has_qa": true,
       "day": "2026-07-02",
@@ -389,7 +405,8 @@
       "time": "10:00",
       "venue": "Cinemateca de Salento",
       "synopsis_lang": "es",
-      "day_order": 1
+      "day_order": 1,
+      "genre": "Documental"
     },
     {
       "title": "Balada para niños muertos",
@@ -409,7 +426,8 @@
       "time": "10:00",
       "venue": "Cinemateca de Salento",
       "synopsis_lang": "es",
-      "day_order": 1
+      "day_order": 1,
+      "genre": "Documental"
     },
     {
       "title": "Cada voz lleva su angustia",
@@ -420,14 +438,15 @@
       "language": "Español",
       "year": 1965,
       "synopsis": "Ficción ambientada en los Andes colombianos: el hallazgo de unos cuerpos desata un relato donde la tierra y el campesino son los verdaderos protagonistas. Primera producción colombiana presente en la Berlinale (1965).",
-      "poster": "",
+      "poster": "https://patrimoniofilmico.org.co/wp-content/uploads/2021/08/Cada-voz-lleva-su-angustia-2.jpg",
       "flags": "🇨🇴🇲🇽",
       "day": "2026-07-02",
       "date": "2026-07-02",
       "time": "16:00",
       "venue": "Cinemateca de Salento",
       "synopsis_lang": "es",
-      "day_order": 4
+      "day_order": 4,
+      "genre": "Drama"
     },
     {
       "title": "Retina Latina · Muestra de Cortometrajes",
