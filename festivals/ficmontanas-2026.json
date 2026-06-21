@@ -193,7 +193,8 @@
       "venue": "Cinemateca de Salento",
       "synopsis_lang": "es",
       "day_order": 6,
-      "genre": "Comedia dramática"
+      "genre": "Comedia dramática",
+      "has_qa": true
     },
     {
       "title": "Monólogo en vivo · Fresa y Chocolate",
@@ -386,8 +387,7 @@
       "venue": "Cinemateca de Salento",
       "synopsis_lang": "es",
       "day_order": 2,
-      "genre": "Documental",
-      "has_qa": true
+      "genre": "Documental"
     },
     {
       "title": "Un nuevo amanecer",
