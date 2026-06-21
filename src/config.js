@@ -172,7 +172,7 @@ export const SECTION_EN = {
   '🎬 Apertura & Galas':'Opening & Galas',
   '🇨🇺 Cine Cubano':'Cuban Cinema',
   '🎞️ Retrospectiva Leonardo Favio':'Leonardo Favio Retrospective',
-  '🏔️ Cóndor Andino':'Andean Condor Competition',
+  '🏔️ Largometraje Cóndor Andino':'Cóndor Andino Feature',
   '🌎 Largometraje Latinoamericano':'Latin American Feature',
   '✨ Exhibiciones Especiales':'Special Screenings',
   '💬 Conversatorios & Masterclass':'Talks & Masterclasses',
