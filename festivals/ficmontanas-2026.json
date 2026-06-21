@@ -216,7 +216,7 @@
       "language": "Español",
       "year": 2025,
       "duration": "90 min",
-      "premiere": "Estreno",
+      "premiere": "Estreno Nacional",
       "synopsis": "Relato coral en La Habana: cinco historias de amor y desamor se entrelazan en torno a Yenny, una consejera amorosa que sueña con la Torre Eiffel y con reencontrar a un viejo amor.",
       "poster": "",
       "flags": "🇨🇺",
@@ -246,7 +246,8 @@
       "venue": "Cinemateca de Salento",
       "synopsis_lang": "es",
       "day_order": 0,
-      "genre": "Documental"
+      "genre": "Documental",
+      "has_qa": true
     },
     {
       "title": "Crónica de un niño solo",
@@ -385,7 +386,8 @@
       "venue": "Cinemateca de Salento",
       "synopsis_lang": "es",
       "day_order": 2,
-      "genre": "Documental"
+      "genre": "Documental",
+      "has_qa": true
     },
     {
       "title": "Un nuevo amanecer",
