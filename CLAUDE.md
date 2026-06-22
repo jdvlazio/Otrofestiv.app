@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `0e03fa6 feat(posters): consolidación del subsistema de pósters editoriales`
+> Último commit: `f7d0a54 content(ficmontanas): pase de Content Design de sinopsis`
 
 ---
 
