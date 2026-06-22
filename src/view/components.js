@@ -142,6 +142,10 @@ export function _buildPosterV16({accent, headerLabel, title, num}){
   // Variante B (num===null): título expande desde abajo.
   // ─────────────────────────────────────────────────────────────
   const VW=120,VH=180,HDR=52,PAD=8;
+  // Escapar XML: el header/título van dentro de <text> de un SVG data-URI.
+  // Sin esto, un '&' (ej. "Apertura & Galas" / "Reunions & Retrospectives")
+  // rompe el XML y el poster no renderiza (naturalWidth 0).
+  const esc=s=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
 
   function wrap(str,maxCh){
     if(!str)return[''];
@@ -156,7 +160,7 @@ export function _buildPosterV16({accent, headerLabel, title, num}){
   const hTotalH=hLines.length*hLD;
   const hStartY=(HDR-hTotalH)/2+hFS;
   const headerText=hLines.map((l,i)=>
-    `<text x="${PAD}" y="${hStartY+i*hLD}" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="${hFS}" font-weight="800" letter-spacing="0.7" fill="#0A0A0A">${l}</text>`
+    `<text x="${PAD}" y="${hStartY+i*hLD}" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="${hFS}" font-weight="800" letter-spacing="0.7" fill="#0A0A0A">${esc(l)}</text>`
   ).join('');
 
   // Body
@@ -178,11 +182,11 @@ export function _buildPosterV16({accent, headerLabel, title, num}){
           const tLines=wrap(cleanTitle,12);
           const tFS=11,tLD=14;
           return tLines.map((l,i)=>
-            `<text x="${PAD}" y="${HDR+PAD+tFS+i*tLD}" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="${tFS}" font-weight="800" letter-spacing="-0.3" fill="#F0EDE8">${l}</text>`
+            `<text x="${PAD}" y="${HDR+PAD+tFS+i*tLD}" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="${tFS}" font-weight="800" letter-spacing="-0.3" fill="#F0EDE8">${esc(l)}</text>`
           ).join('');
         })()
       : '';
-    bodyContent=titleText+`<text x="${VW/2}" y="${numY}" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="${numFS}" font-weight="800" letter-spacing="-1" fill="${accent}" text-anchor="middle">${num}</text>`;
+    bodyContent=titleText+`<text x="${VW/2}" y="${numY}" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="${numFS}" font-weight="800" letter-spacing="-1" fill="${accent}" text-anchor="middle">${esc(num)}</text>`;
   } else {
     // Variante B — título anclado abajo
     const tLines=wrap(cleanTitle,12);
@@ -190,7 +194,7 @@ export function _buildPosterV16({accent, headerLabel, title, num}){
     const totalH=tLines.length*tLD;
     const startY=VH-PAD-totalH+tLD;
     bodyContent=tLines.map((l,i)=>
-      `<text x="${PAD}" y="${startY+i*tLD}" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="${tFS}" font-weight="800" letter-spacing="-0.3" fill="#F0EDE8">${l}</text>`
+      `<text x="${PAD}" y="${startY+i*tLD}" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="${tFS}" font-weight="800" letter-spacing="-0.3" fill="#F0EDE8">${esc(l)}</text>`
     ).join('');
   }
 
