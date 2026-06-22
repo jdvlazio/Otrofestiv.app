@@ -134,6 +134,12 @@ export function _secLabelFull(sec){
   return isEmoji?`${first} ${label}`:label;
 }
 
+// Escape XML único para todo texto que va dentro de un <text> de SVG data-URI
+// (pósters generativos). Sin esto, un '&' (ej. "Apertura & Galas" / "Reunions &
+// Retrospectives") o '<'/'>' rompe el XML y el SVG no decodifica (naturalWidth 0).
+// Lo reusa _edHdrSVG (helpers.js). Cubierto por tests/unit/poster.test.js.
+export function escXML(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+
 export function _buildPosterV16({accent, headerLabel, title, num}){
   // ── Motor de poster tipográfico v16 ──────────────────────────
   // Sistema único para eventos, programas, sorpresa.
@@ -142,10 +148,7 @@ export function _buildPosterV16({accent, headerLabel, title, num}){
   // Variante B (num===null): título expande desde abajo.
   // ─────────────────────────────────────────────────────────────
   const VW=120,VH=180,HDR=52,PAD=8;
-  // Escapar XML: el header/título van dentro de <text> de un SVG data-URI.
-  // Sin esto, un '&' (ej. "Apertura & Galas" / "Reunions & Retrospectives")
-  // rompe el XML y el poster no renderiza (naturalWidth 0).
-  const esc=s=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+  const esc=escXML;  // ver escXML (arriba) — fuente única de escape XML
 
   function wrap(str,maxCh){
     if(!str)return[''];

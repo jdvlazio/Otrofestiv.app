@@ -142,7 +142,7 @@ import {
 
 // ── Step 7e: controller/poster-err.js ────────────────────────────────────────────
 import {
-  _posterErr, _cortoSheetPosterErr,
+  _posterErr, _cortoSheetPosterErr, _edPosterErr,
 } from './controller/poster-err.js';
 
 // storage (adapter de localStorage) → src/storage/storage.js (Step 3).
@@ -1526,7 +1526,7 @@ document.addEventListener('click', function(e){
     //     en HTML generado (main.js innerHTML): onerror=_posterErr/_cortoSheetPosterErr
     //     en markup estático (index.html): oninput/onkeyup/onkeydown=searchQuery,
     //     onkeydown=submitAuthEmail/submitOTP (#search-input, #auth-email-inp, #auth-otp-inp)
-    _posterErr, _cortoSheetPosterErr,
+    _posterErr, _cortoSheetPosterErr, _edPosterErr,
     searchQuery, submitAuthEmail, submitOTP,
     // (b) page.evaluate — tests
     _renderProgramaContent, closeAuthSheet, closePelSheet, loadFestival, normTitle,

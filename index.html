@@ -218,6 +218,9 @@ window.sentryOnLoad = function() {
   --poster-md-h: 108px;
   --poster-lg-w: 96px;   /* card descubrimiento: Programa / sheet          */
   --poster-lg-h: 144px;
+  --ed-hdr-ratio: 28.89%;/* alto de la banda de sección del póster editorial
+                            = 52/180 (header V16). UNA fuente — antes hardcodeado
+                            en CSS y JS inline. Ver .poster-ed / editorialFrame. */
 
   /* ── Tipografía — escala ── */
   --t-badge:    8px;
@@ -542,11 +545,9 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 /* ── Poster ── */
 .lb-poster{width:var(--poster-xs-w);height:var(--poster-xs-h);object-fit:cover;border-radius:var(--r-sm);flex-shrink:0;display:block;background:var(--surf-2)}
 
-/* Editorial variants — activados por _posterThumb cuando _isEditorialPoster(f)
-   Misma estructura que .poster-card.editorial:
-   contenedor flex-column + band 28.89% + div flex:1 con img cover */
-
-/* int-item-poster ya tiene width/height — los -ed heredan dimensiones y añaden flex layout */
+/* Editorial en thumbs (_posterThumb): el contenedor lleva su clase de tamaño +
+   `poster-ed` + `--ed-accent`; el marco lo pinta .poster-ed (ver editorialFrame).
+   Ya no hay reglas .X-ed ni estilos inline — todo el layout es .poster-ed. */
 
 /* ── Check-in ── */
 .checkin-wrap{background:var(--card-a);border:1px solid var(--bdr);border-radius:var(--r);margin-bottom:var(--sp-3);overflow:hidden}
@@ -781,14 +782,19 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .poster-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--sp-2);padding:10px 20px calc(var(--nav-h,56px) + max(env(safe-area-inset-bottom),20px) + 16px) 10px;transition:opacity var(--tr-fast)}
 .poster-grid-sep{grid-column:1/-1;padding:var(--sp-4) var(--sp-2) var(--sp-1);font-size:var(--t-label);font-weight:var(--w-display);letter-spacing:.08em;color:var(--gray2);text-transform:uppercase;pointer-events:none;user-select:none}
 .poster-card{position:relative;border-radius:var(--r);overflow:hidden;cursor:pointer;background:var(--surf-2);background-size:cover;background-position:center;aspect-ratio:2/3;display:block;container-type:inline-size}
-.poster-card.editorial{background:var(--surf-3,#1A1A1A);display:flex;flex-direction:column}
-.poster-card.editorial .ed-hdr{height:28.89%;flex-shrink:0;display:flex;flex-direction:column;justify-content:center;padding:0 8px}
 .ed-hdr-svg{display:block;width:100%;height:100%}
-.poster-card.editorial .ed-hdr .ed-lbl{font-family:-apple-system,BlinkMacSystemFont,sans-serif;font-size:6px;font-size:5.4cqi;font-weight:var(--w-display);letter-spacing:.05em;color:var(--bg);line-height:1.35;text-transform:uppercase}
-.poster-card.editorial .ed-img{width:100%;flex:1;overflow:hidden;min-height:0}
-.poster-card.editorial .ed-img img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block;opacity:0;transition:opacity 250ms ease}
-.poster-card.editorial .ed-body{flex:1;display:flex;flex-direction:column;justify-content:flex-end;padding:0 8px 8px}
-.poster-card.editorial .ed-body .ed-title{font-family:-apple-system,BlinkMacSystemFont,sans-serif;font-size:10px;font-size:9.2cqi;font-weight:var(--w-display);letter-spacing:-.02em;color:var(--white);line-height:1.27;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+/* (Las reglas .poster-card.editorial .ed-* se consolidaron en .poster-ed — ver abajo.) */
+/* ── Póster editorial — COMPONENTE ÚNICO (grid · sheet · lista · thumb) ───────
+   Un still 16:9 dentro de un marco: banda de sección (--ed-accent) + header SVG
+   opcional + imagen + cuerpo opcional. El TAMAÑO lo da el contenedor (poster-card,
+   psp-editorial, plist-poster…); el alto del header es var(--ed-hdr-ratio).
+   Lo construye editorialFrame() (helpers.js). Sustituye a las 7 copias bespoke. */
+.poster-ed{display:flex;flex-direction:column;overflow:hidden;background:var(--ed-accent,var(--surf-3));container-type:inline-size}
+.poster-ed .ed-hdr{height:var(--ed-hdr-ratio);flex-shrink:0;display:flex;flex-direction:column;justify-content:center;padding:0 8px;background:var(--ed-accent)}
+.poster-ed .ed-img{flex:1;width:100%;overflow:hidden;min-height:0}
+.poster-ed .ed-img img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block;opacity:0;transition:opacity 250ms ease}
+.poster-ed .ed-body{flex:1;display:flex;flex-direction:column;justify-content:flex-end;padding:0 8px 8px}
+.poster-ed .ed-body .ed-title{font-family:-apple-system,BlinkMacSystemFont,sans-serif;font-size:10px;font-size:9.2cqi;font-weight:var(--w-display);letter-spacing:-.02em;color:var(--white);line-height:1.27;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
 .poster-card-stack{width:100%;height:100%;display:flex;gap:1px;background:var(--bdr)}
 .pcs-back,.pcs-front{flex:1;height:100%;object-fit:cover;object-position:center;display:block;min-width:0}
 .pel-sheet-poster-stage{display:flex;gap:1px;background:var(--bdr);flex-shrink:0;width:var(--poster-lg-w);height:var(--poster-lg-h);border-radius:var(--r-md);overflow:hidden}
@@ -847,12 +853,9 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .pel-sheet-inner{padding:var(--sp-btn) var(--sp-4) var(--sp-6)}
 .pel-sheet-poster{width:var(--poster-lg-w);height:var(--poster-lg-h);object-fit:cover;border-radius:var(--r-md);flex-shrink:0;display:block;background:var(--surf-2);object-position:center top}
 .pel-sheet-poster-ph{width:var(--poster-lg-w);height:var(--poster-lg-h);border-radius:var(--r-md);background:var(--surf-2);flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:var(--t-display)}
-/* Poster editorial en sheet: sólido de sección + imagen 16:9 — misma regla que el card de grilla */
-.psp-editorial{width:var(--poster-lg-w);height:var(--poster-lg-h);border-radius:var(--r-md);overflow:hidden;flex-shrink:0;display:flex;flex-direction:column;background:var(--surf-2);justify-content:flex-start;container-type:inline-size}
-.psp-editorial .psp-ed-hdr{height:28.89%;flex-shrink:0;display:flex;align-items:center;padding:0 6px}
-.psp-editorial .psp-ed-hdr span{font-size:6px;font-size:5.4cqi;font-weight:var(--w-display);letter-spacing:.7px;color:var(--bg);text-transform:uppercase;line-height:1.3}
-.psp-editorial .psp-ed-img{width:100%;flex:1;overflow:hidden;min-height:0}
-.psp-editorial .psp-ed-img img{width:100%;height:100%;object-fit:cover;display:block;object-position:center top}
+/* Poster editorial en sheet: SOLO aporta tamaño/radio; el marco (banda+img) lo
+   pinta .poster-ed (clase añadida en el markup, ver editorialFrame). */
+.psp-editorial{width:var(--poster-lg-w);height:var(--poster-lg-h);border-radius:var(--r-md);overflow:hidden;flex-shrink:0;container-type:inline-size}
 .pel-sheet.compact .psp-editorial{width:72px;height:108px}
 .pel-sheet-header{display:flex;gap:var(--sp-btn);margin-bottom:var(--sp-4)}
 /* Modo compacto: films con 3+ funciones reducen el poster para que CTAs sean visibles */

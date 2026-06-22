@@ -72,7 +72,7 @@ Documento normativo. Toda discrepancia entre este archivo y el código es un bug
   "language": "string",
   "premiere": "string — 'World Premiere' | 'International Premiere' | ...",
   "synopsis": "string",
-  "poster": "string — URL completa (https://...) o path TMDB (/path.jpg)",
+  "poster": "string — URL completa (https://...), path de assets (/assets/<id>/x.png) o path TMDB (/x.jpg). Prioridad, cobertura y reglas: docs/POSTERS.md",
   "posterPosition": "string — 'center' | 'top' | 'bottom' (default: 'center')",
   "genre": "string",
   "year": "number",
@@ -235,8 +235,8 @@ Las funciones duplicadas en `index.html` son del Web Worker (scope separado, leg
 
 **ARCH-R2 — Detección de poster editorial.**
 Usar `_isEditorialPoster(f)` en todo el código. Esta función lee `f.posterSource` primero.
-Nuevos festivales deben incluir `posterSource: 'editorial'` en el campo del film cuando la imagen es editorial.
-No detectar por URL — frágil si el CDN cambia.
+Nuevos festivales **deberían** incluir `posterSource: 'editorial'` cuando la imagen es editorial.
+Estado real y deuda (hoy la detección operativa es por host vía `_isEditorialImageUrl`; `posterSource` está sin adoptar): ver `docs/POSTERS.md §5`.
 
 **ARCH-R3 — Constantes de módulo, no locales.**
 `SECTION_COLORS`, `SECTION_ORDER_LIST`, `_sectionColor()`, `_secLabel()`, `_isEditorialPoster()` viven al nivel de módulo, antes de `_buildPosterV16`. No redefinir dentro de funciones.

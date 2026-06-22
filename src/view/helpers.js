@@ -8,7 +8,7 @@
 import { FESTIVAL_CONFIG, TMDB_IMG } from '../config.js';
 import {
   DAY_ABBR, DAY_NUM, ICONS, _buildPosterV16, _secLabel, _sectionColor,
-  makeProgramPoster, makeEventPoster, makeSorpresaPoster,
+  makeProgramPoster, makeEventPoster, makeSorpresaPoster, escXML,
 } from './components.js';
 import { toMin, parseDur, simNow, simTodayStr, _festDate } from '../domain/time.js';
 import { _resolveVenue, travelMins } from '../domain/festival.js';
@@ -98,16 +98,25 @@ export function _getItemPoster(item){
 
 // Una URL de poster es "editorial con imagen" (landscape 16:9 que va DENTRO del
 // frame editorial, no recortado) si proviene de un CDN de stills oficiales del
-// festival. Hosts conocidos: cloudfront.net (Tribeca), supabase.co (Olhar+).
+// festival. Añadir un CDN nuevo = UNA línea en EDITORIAL_CDN_HOSTS. Lo robusto a
+// largo plazo es declarar posterSource en el JSON (gana sobre el host); ver
+// _isEditorialPoster + docs/POSTERS.md §5.
+const EDITORIAL_CDN_HOSTS=['cloudfront.net','supabase.co']; // Tribeca, Olhar+
 export function _isEditorialImageUrl(url){
-  return !!(url && (url.includes('cloudfront.net') || url.includes('supabase.co')));
+  return !!(url && EDITORIAL_CDN_HOSTS.some(h=>url.includes(h)));
 }
 
+// Detección HÍBRIDA con default fail-safe (ver docs/POSTERS.md §5):
+//   1. posterSource explícito gana (editorial→sí; tmdb/custom→no).
+//   2. Si hay poster TMDB validado (map _POSTERS_N) → no (portrait, no 16:9).
+//   3. Si no, auto por host CDN conocido.
+// Default fail-safe: lo desconocido cae a NO-editorial → posterModel lo trata
+// como image. Nunca se asume editorial sin señal, así que jamás se mete a la
+// fuerza un 16:9 en un marco que no le corresponde por adivinanza.
 export function _isEditorialPoster(f){
   if(!f) return false;
   if(f.posterSource==='editorial') return true;
   if(f.posterSource==='tmdb'||f.posterSource==='custom') return false;
-  // Si hay poster TMDB validado, no es editorial — son formatos incompatibles (portrait vs 16:9)
   if(_POSTERS_N&&_POSTERS_N[normKey(f.title||'')]) return false;
   return _isEditorialImageUrl(f.poster);
 }
@@ -125,8 +134,7 @@ export function _edHdrSVG(label){
   for(const w of words){ if(cur&&(cur+' '+w).length>14){lines.push(cur);cur=w;} else cur=cur?cur+' '+w:w; }
   if(cur) lines.push(cur);
   const FS=5.4, LH=7, PAD=2, VW=100, VH=lines.length*LH+4, y0=FS+2;
-  const esc=t=>t.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
-  const txt=lines.map((l,i)=>`<text x="${PAD}" y="${y0+i*LH}" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="${FS}" font-weight="800" letter-spacing="0.5" fill="#0A0A0A">${esc(l)}</text>`).join('');
+  const txt=lines.map((l,i)=>`<text x="${PAD}" y="${y0+i*LH}" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="${FS}" font-weight="800" letter-spacing="0.5" fill="#0A0A0A">${escXML(l)}</text>`).join('');
   return `<svg class="ed-hdr-svg" viewBox="0 0 ${VW} ${VH}" preserveAspectRatio="xMidYMid meet">${txt}</svg>`;
 }
 
@@ -139,19 +147,58 @@ export function _posterThumb(f, cssClass, loading){
   }
 
   if(f && _isEditorialPoster(f)){
-    const color = _sectionColor(f.section || '');
-    // Misma estructura que .poster-card.editorial en Programa Grid:
-    // band (28.89%) + div flex:1 con img cover center-top
-    return `<div class="${cssClass} ${cssClass}-ed" style="background:${color}">`
-      + `<div style="height:28.89%;flex-shrink:0"></div>`
-      + `<div style="flex:1;overflow:hidden;min-height:0">`
-      + `<img src="${p}" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block" loading="${_load}" onerror="this.remove()" alt="">`
-      + `</div>`
+    // Marco editorial único (thumb = banda + img, sin label). El contenedor
+    // aporta tamaño (cssClass) + color (--ed-accent) + clase poster-ed.
+    return `<div class="${cssClass} poster-ed" style="--ed-accent:${_sectionColor(f.section||'')}">`
+      + editorialFrame({src:p, title:f.title, loading:_load})
       + `</div>`;
   }
 
   const _posStyle = _posterStyle(f);
   return `<img class="${cssClass}" src="${p}" loading="${_load}"${_posStyle} onerror="this.remove()" alt="">`;
+}
+
+// ── Modelo único de póster (unión discriminada) ───────────────────────────────
+// Único lugar que decide "qué tipo de póster es este". Los call sites hacen
+// switch sobre `kind` en vez de re-derivar flags. Ver docs/POSTERS.md.
+//   image      → imagen real portrait: <img object-fit:cover>
+//   editorial  → still landscape 16:9: marco editorial (banda + header + img)
+//   generative → SVG generativo (el data-URI YA es un póster completo): <img>
+//   empty      → sin imagen: placeholder
+// `kind:'generative'` se distingue por el prefijo data-URI que producen los
+// generadores; `editorial` por _isEditorialPoster (detección híbrida: posterSource
+// gana, si falta auto por host). El default es seguro: lo que no es editorial ni
+// generativo es image; sin src es empty — nunca se mete un 16:9 en un marco 2:3.
+export function posterModel(f){
+  if(!f) return {kind:'empty'};
+  const src=getFilmPoster(f);
+  if(!src) return {kind:'empty'};
+  if(src.startsWith('data:image/svg+xml')) return {kind:'generative', src};
+  if(_isEditorialPoster(f)) return {kind:'editorial', src, accent:_sectionColor(f.section||''), header:_secLabel(f.section||''), title:f.title||''};
+  return {kind:'image', src, objectPosition:(f.posterPosition&&f.posterPosition!=='center')?f.posterPosition:'', title:f.title||''};
+}
+
+// ── Builder ÚNICO del marco editorial-con-imagen ──────────────────────────────
+// Sustituye las 7 copias bespoke (grid/sheet/lista/thumb/agenda). Devuelve los
+// HIJOS del marco (header SVG opcional + img + cuerpo opcional); el CONTENEDOR
+// aporta tamaño y color: debe llevar la clase `poster-ed` y `style="--ed-accent:…"`
+// (separación de responsabilidades — el contenedor es color/tamaño, el frame es
+// contenido). Patrón: `<div class="<sizer> poster-ed" style="--ed-accent:${m.accent}">
+// ${editorialFrame(m)}</div>`. `title` alimenta data-title para el fallback de
+// error (_edPosterErr → póster generativo de toda la pieza). Todo texto va por
+// escXML/_edHdrSVG. Ver docs/POSTERS.md.
+export function editorialFrame({header, body, src, title, loading}={}){
+  const _l=loading||'lazy';
+  const _dt=title?` data-title="${escXML(title)}"`:'';
+  const hdr=`<div class="ed-hdr">${header?_edHdrSVG(header):''}</div>`;
+  const img=src
+    ? `<div class="ed-img"><img src="${src}"${_dt} loading="${_l}" onload="this.style.opacity='1'" onerror="_edPosterErr(this)" alt=""></div>`
+    : `<div class="ed-img"></div>`;
+  // body: undefined → sin zona (thumb/lista/sheet); '' → zona vacía que reserva
+  // espacio (ended-poster: footer sobre la banda, no sobre la imagen); con texto
+  // → título (grid). El reserve mantiene la imagen ~16:9 en vez de estirarla.
+  const bod=(body==null)?'':(body?`<div class="ed-body"><div class="ed-title">${escXML(body)}</div></div>`:`<div class="ed-body"></div>`);
+  return `${hdr}${img}${bod}`;
 }
 
 export function isNowShowing(f){
@@ -297,13 +344,10 @@ export function _programaStack(f){
 
 export function _plistPosterHtml(f, src){
   if(_isEditorialPoster(f)){
-    var _accent=_sectionColor(f.section||'');
-    var _imgSection=src
-      ?'<div style="flex:1;overflow:hidden;min-height:0"><img src="'+src+'" loading="lazy" onerror="this.remove()" alt="" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block"></div>'
-      :'<div style="flex:1;background:#1A1A1A"></div>';
-    return '<div class="plist-poster" style="background:'+_accent+';display:flex;flex-direction:column;overflow:hidden">'+
-      '<div style="height:28.89%;flex-shrink:0"></div>'+
-      _imgSection+
+    // Marco editorial único (lista = banda + img, sin label). Contenedor
+    // .plist-poster aporta tamaño; poster-ed el flex; --ed-accent el color.
+    return '<div class="plist-poster poster-ed" style="--ed-accent:'+_sectionColor(f.section||'')+'">'+
+      editorialFrame({src, title:f.title})+
     '</div>';
   }
   return src?'<div class="plist-poster"><img src="'+src+'" loading="lazy" onerror="this.remove()" alt="" style="width:100%;height:100%;object-fit:cover;border-radius:var(--r-sm)"></div>':'<div class="plist-poster"></div>';

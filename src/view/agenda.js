@@ -13,7 +13,7 @@ import {
   ICONS, _secLabel, _secLabelFull, _sectionColor, makeEventPoster, parseProgramTitle, renderAvBlocksHTML, renderFlowProgress,
 } from './components.js';
 import {
-  DAYS, DAY_SHORT_EN, _dayChips, _edHdrSVG, _isEditorialPoster, _langDates, _lblLocalized, _mkCortoItemHtml, _posterThumb, dayChip, dayLabel, dayLabelLong, durFmt, emptyState, emptyStateHero, flagFmt, getFilmPoster, isToday, mplanBlockType, mplanEndStr, sala, starsText, travelWarn, vcfg,
+  DAYS, DAY_SHORT_EN, _dayChips, editorialFrame, _isEditorialPoster, _langDates, _lblLocalized, _mkCortoItemHtml, _posterThumb, dayChip, dayLabel, dayLabelLong, durFmt, emptyState, emptyStateHero, flagFmt, getFilmPoster, isToday, mplanBlockType, mplanEndStr, sala, starsText, travelWarn, vcfg,
 } from './helpers.js';
 import {
   _festDate, _festNowMin, festivalEnded, minToStr, parseDur, simNow, simTodayStr, toMin,
@@ -484,9 +484,9 @@ export function renderContextualHeader(state){
       const safeT=t.replace(/'/g,"&#39;");
       const stars=r?starsText(r):'';
       // Posters grandes, plena opacidad — pensado para screenshot
-      return`<div class="poster-card ended-poster js-open-pel${_isEdList?' editorial':''}" data-title="${f.title}">
+      return`<div class="poster-card ended-poster js-open-pel${_isEdList?' poster-ed':''}" data-title="${f.title}"${_isEdList?` style="--ed-accent:${_sectionColor(f.section||'')}"`:''}>
         ${_isEdList
-          ?`<div class="ed-hdr" style="background:${_sectionColor(f.section||'')}">${_edHdrSVG(_secLabel(f.section||''))}</div><div class="ed-img"><img src="${src}" onerror="this.remove()" alt="" loading="lazy"></div><div class="ed-body"></div>`
+          ?editorialFrame({header:_secLabel(f.section||''), body:'', src, title:f.title})
           :src?`<img class="img-cover" src="${src}" loading="lazy" onerror="this.remove()" alt="">`:``}
         <div class="ended-poster-footer">
           ${r?`<div class="label-track-amber">${stars}</div>`

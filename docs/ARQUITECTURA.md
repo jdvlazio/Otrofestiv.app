@@ -326,12 +326,16 @@ getCortoItemPoster(item)  // para cortos individuales en film_list
 ```
 Nunca llamar `getPosterSrc()`, `makeProgramPoster()` o `makeEventPoster()` directamente.
 
-Prioridad interna:
-1. `CUSTOM_POSTERS[title]`
-2. `f.poster` (nuevo formato)
-3. `POSTERS[title]` (legado)
-4. Poster generativo (solo si `is_cortos` o `type === 'event'`)
-5. `null` → no render (nunca fondo negro, usar `--surf-2`)
+Prioridad interna real de `getFilmPoster` (caso film normal; ver `docs/POSTERS.md §4`
+para el árbol completo con ramas event/sorpresa/cortos/programa):
+1. `customPosters[normKey(title)]`
+2. `posters[normKey(title)]` (map legado / TMDB) — **antes** que `f.poster`
+3. `f.poster` (formato inline) — editorial-con-imagen o assets propios
+4. Poster generativo `_buildPosterV16`
+
+> Detalle que se documentaba al revés: el map `posters{}` gana sobre `f.poster`
+> inline (helpers.js: "TMDB — prioridad sobre editorial cloudfront"). **Prioridad,
+> cobertura, trim y reglas editoriales: `docs/POSTERS.md` (fuente única).**
 
 ---
 
