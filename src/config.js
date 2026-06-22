@@ -265,7 +265,7 @@ export const FESTIVAL_CONFIG={
     films:null,posters:null,lbSlugs:{}
   },
   'ficmontanas2026':{
-    name:'Festival Internacional de Cine en las Montañas',shortName:'FICMONTAÑAS',
+    name:'Ficmontañas',shortName:'FICMONTAÑAS',
     city:'Salento',country:'CO',
     dates:'JUL 1–5',dates_en:'JUL 1–5',year:2026,timezoneOffset:'-05:00',
     storageKey:'ficmontanas2026_',festivalStartStr:'2026-06-30T00:00:00',festivalEndStr:'2026-07-05T22:00:00',
