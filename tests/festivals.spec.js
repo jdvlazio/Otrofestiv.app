@@ -3,8 +3,8 @@
 const { test, expect } = require('@playwright/test');
 const { LEVIZA_SIMTIME, enterFestival } = require('./helpers');
 
-// T08 — Festival selector: Leviza aparece antes que Tribeca
-test('T08 — festival selector: Leviza aparece antes que Tribeca', async ({ page }) => {
+// T08 — Festival selector: el próximo festival encabeza; los pasados van en Anteriores
+test('T08 — festival selector: el próximo festival encabeza', async ({ page }) => {
   await page.goto('/');
   // Gate de readiness JS DEFINITIVO: [data-app-ready="1"] (fin del bootstrap
   // síncrono → listener delegado adjunto) antes de click en #splash-sel-btn
@@ -15,12 +15,11 @@ test('T08 — festival selector: Leviza aparece antes que Tribeca', async ({ pag
   await page.waitForSelector('.splash-drop-item[data-fest]', { state: 'visible', timeout: 15000 });
   const items = page.locator('.splash-drop-item[data-fest]');
   expect(await items.count()).toBeGreaterThan(1);
-  // Tribeca (JUN 3–14) y Olhar (JUN 4–13) están EN CURSO simultáneamente → el
-  // primero del selector es uno de los dos activos, antes que los pasados.
-  // Leviza terminó el 17 MAY y aparece en Anteriores. (Date-sensitive: sigue el
-  // calendario de festivales en curso; antes del 4 JUN el primero era Tribeca.)
+  // FICMontañas (JUN 30–JUL 5) es el próximo festival → encabeza el selector
+  // (tier en-curso/próximo > pasados). Tribeca/Olhar/Leviza ya terminaron y van
+  // en Anteriores. (Date-sensitive: válido mientras FICMontañas no haya pasado.)
   const firstFestId = await items.first().getAttribute('data-fest');
-  expect(['tribeca', 'olhar'].some(id => (firstFestId || '').includes(id))).toBe(true);
+  expect((firstFestId || '').includes('ficmontanas')).toBe(true);
   const allIds = await items.evaluateAll(els => els.map(el => el.getAttribute('data-fest')));
   expect(allIds.some(id => id.includes('leviza'))).toBe(true);
 });
