@@ -161,7 +161,8 @@
       "time": "19:00",
       "venue": "Cinemateca de Salento",
       "synopsis_lang": "es",
-      "day_order": 4
+      "day_order": 4,
+      "duration": "120 min"
     },
     {
       "title": "Inauguración · Exposición Luces, Cámara y Comunidad (DACMI)",
@@ -173,7 +174,8 @@
       "time": "18:30",
       "venue": "Cinemateca de Salento",
       "synopsis_lang": "es",
-      "day_order": 3
+      "day_order": 3,
+      "info": true
     },
     {
       "title": "Recorrido en Bicicleta · Comparsa Cultural",
@@ -185,7 +187,8 @@
       "time": "18:00",
       "venue": "Cinemateca de Salento",
       "synopsis_lang": "es",
-      "day_order": 1
+      "day_order": 1,
+      "info": true
     },
     {
       "title": "Fresa y chocolate",
@@ -219,7 +222,8 @@
       "time": "19:30",
       "venue": "Cinemateca de Salento",
       "synopsis_lang": "es",
-      "day_order": 5
+      "day_order": 5,
+      "duration": "30 min"
     },
     {
       "title": "Cinco historias de amor y un bolerón desesperado",
@@ -358,7 +362,8 @@
       "time": "13:00",
       "venue": "Cinemateca de Salento",
       "synopsis_lang": "es",
-      "day_order": 0
+      "day_order": 0,
+      "duration": "60 min"
     },
     {
       "title": "Un poeta",
@@ -473,7 +478,8 @@
       "time": "19:00",
       "venue": "Cinemateca de Salento",
       "synopsis_lang": "es",
-      "day_order": 2
+      "day_order": 2,
+      "duration": "90 min"
     },
     {
       "title": "Señal Memoria · Muestra de archivo",
@@ -485,7 +491,8 @@
       "time": "16:00",
       "venue": "Cinemateca de Salento",
       "synopsis_lang": "es",
-      "day_order": 4
+      "day_order": 4,
+      "duration": "60 min"
     },
     {
       "title": "Visitas Guiadas · Exposición Luces, Cámara y Comunidad",
@@ -509,7 +516,8 @@
         }
       ],
       "synopsis_lang": "es",
-      "day_order": 1
+      "day_order": 1,
+      "info": true
     },
     {
       "title": "Exhibiciones Especiales · Colectivos Comunitarios",
@@ -533,7 +541,8 @@
         }
       ],
       "synopsis_lang": "es",
-      "day_order": 3
+      "day_order": 3,
+      "info": true
     },
     {
       "title": "Masterclass · Mirada Documental",
@@ -546,7 +555,8 @@
       "time": "09:00",
       "venue": "Cinemateca de Salento",
       "synopsis_lang": "es",
-      "day_order": 0
+      "day_order": 0,
+      "duration": "120 min"
     },
     {
       "title": "Panel · Retina Latina: Experiencias de Circulación",
@@ -559,7 +569,8 @@
       "time": "13:00",
       "venue": "Cinemateca de Salento",
       "synopsis_lang": "es",
-      "day_order": 2
+      "day_order": 2,
+      "duration": "60 min"
     },
     {
       "title": "Conversatorio · Fundación Patrimonio Fílmico Colombiano",
@@ -572,7 +583,8 @@
       "time": "17:30",
       "venue": "Cinemateca de Salento",
       "synopsis_lang": "es",
-      "day_order": 5
+      "day_order": 5,
+      "duration": "60 min"
     },
     {
       "title": "Masterclass · Estéticas del Cine Documental",
@@ -585,7 +597,8 @@
       "time": "09:00",
       "venue": "Cinemateca de Salento",
       "synopsis_lang": "es",
-      "day_order": 0
+      "day_order": 0,
+      "duration": "120 min"
     },
     {
       "title": "Masterclass · Archivos Fílmicos y Memoria",
@@ -598,7 +611,8 @@
       "time": "13:00",
       "venue": "Cinemateca de Salento",
       "synopsis_lang": "es",
-      "day_order": 2
+      "day_order": 2,
+      "duration": "120 min"
     },
     {
       "title": "Premiación y Cierre Oficial · 12ª edición",
@@ -610,7 +624,8 @@
       "date": "2026-07-05",
       "time": "19:00",
       "venue": "Carpa Cinema - Parque Salento",
-      "day_order": 7
+      "day_order": 7,
+      "duration": "120 min"
     },
     {
       "title": "Fiesta Caliwood · DJ Jorge Navas",
@@ -622,7 +637,8 @@
       "date": "2026-07-04",
       "time": "22:00",
       "venue": "Carpa Cinema - Parque Salento",
-      "day_order": 10
+      "day_order": 10,
+      "info": true
     },
     {
       "title": "Presentación y saludo virtual · Stephania Piñeros",
@@ -634,7 +650,8 @@
       "date": "2026-07-05",
       "time": "09:00",
       "venue": "Carpa Cinema - Parque Salento",
-      "day_order": 0
+      "day_order": 0,
+      "info": true
     },
     {
       "title": "Presentación Especial Salento · Performance Estatus Cumbia",
@@ -646,7 +663,8 @@
       "date": "2026-07-05",
       "time": "20:00",
       "venue": "Carpa Cinema - Parque Salento",
-      "day_order": 8
+      "day_order": 8,
+      "info": true
     },
     {
       "title": "Concierto de Cierre · Artistas Sorpresa",
@@ -658,7 +676,8 @@
       "date": "2026-07-05",
       "time": "20:30",
       "venue": "Carpa Cinema - Parque Salento",
-      "day_order": 9
+      "day_order": 9,
+      "info": true
     },
     {
       "title": "Competencia Nacional — Jueves",
@@ -670,7 +689,8 @@
       "date": "2026-07-02",
       "time": "18:00",
       "venue": "Cinemateca de Salento",
-      "day_order": 6
+      "day_order": 6,
+      "duration": "120 min"
     },
     {
       "title": "Competencia Nacional — Viernes",
@@ -682,7 +702,8 @@
       "date": "2026-07-03",
       "time": "17:00",
       "venue": "Cinemateca de Salento",
-      "day_order": 5
+      "day_order": 5,
+      "duration": "180 min"
     },
     {
       "title": "Competencia Internacional — Sábado",
@@ -694,7 +715,8 @@
       "date": "2026-07-04",
       "time": "16:00",
       "venue": "Carpa Cinema - Parque Salento",
-      "day_order": 7
+      "day_order": 7,
+      "duration": "120 min"
     },
     {
       "title": "Competencia Nacional — Domingo",
@@ -706,7 +728,8 @@
       "date": "2026-07-05",
       "time": "15:00",
       "venue": "Carpa Cinema - Parque Salento",
-      "day_order": 5
+      "day_order": 5,
+      "duration": "120 min"
     },
     {
       "title": "Herencia: los cantos de la tierra",

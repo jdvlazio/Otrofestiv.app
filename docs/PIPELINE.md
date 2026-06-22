@@ -414,6 +414,7 @@ node scripts/validate-festivals.js [festival-id]
 | Validate antes de push | `validate-festivals.js` no es opcional. Un push que falla se revierte |
 | Arquitectura antes de ejecución | El algoritmo de matching, la prioridad de posters y el schema de datos se aprueban antes de implementar |
 | Cero decisiones de arquitectura en ejecución | El Data Engineer no decide el criterio de matching — lo aprueba el Senior Dev antes de correr el script |
+| Eventos: planificable vs informativo | `type:event` con horario que el asistente "reserva" (masterclass, conversatorio, panel, gala, bloque de cortos) → `duration` (estimada si no se publica). Drop-in / sin hora fija (exposición, visita guiada, recorrido, fiesta, concierto, performance) → `info:true`: no entra al plan ni a conflictos. **El default es planificar** — somos planificadores, `info` es la excepción mínima. Ver `docs/SCHEMA.md` (campo `info`). |
 
 ---
 

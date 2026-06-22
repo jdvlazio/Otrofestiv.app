@@ -81,9 +81,27 @@ Documento normativo. Toda discrepancia entre este archivo y el código es un bug
   "date": "string — ISO date '2026-06-03' (requerido si screenings[] existe)",
   "time": "string — '10:30 AM' formato 12h",
   "venue": "string — debe ser clave exacta de venues{}",
+  "info": "boolean — opcional, SOLO type:event — evento informativo (ver abajo)",
   "screenings": [ ... ]
 }
 ```
+
+### Campo `info` — eventos informativos (no planificables)
+
+`info: true` (solo en `type:'event'`) marca un evento **drop-in / sin hora fija**
+cuya duración no es controlable: exposiciones, visitas guiadas, recorridos,
+fiestas, conciertos, performances, presentaciones virtuales.
+
+- **Aparece en el programa** como cualquier evento, pero **NO entra al plan ni a
+  conflictos:** `screensConflict` lo ignora y `computeScenarios` lo excluye del
+  plan generado (ambos en `domain/schedule.js`, guard aditivo por `f.info`).
+- **El default es planificar.** La app es un **planificador**, no un tablón
+  informativo — `info` es la **excepción mínima**. Un evento con hora fija
+  (masterclass, conversatorio, panel, gala, bloque de cortos) NO lleva `info`:
+  lleva `duration` (estimada si hace falta) y SÍ se planifica.
+- Regla de clasificación al montar: *¿el asistente "reserva" ese horario?* Sí →
+  `duration` (planificable). No (entra/sale cuando quiere) → `info: true`.
+- `info` se propaga a los screenings exploded vía el `Object.assign` del loader.
 
 ### Campo `day` — regla crítica
 

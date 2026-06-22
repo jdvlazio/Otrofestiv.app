@@ -18,6 +18,9 @@ import { toMin, parseDur } from "./time.js";
 import { effectiveDuration, screeningPassed, shuffle, scoreFilm, _titleSeed, _mulberry32 } from "./film.js";
 import { travelMins } from "./festival.js";
 export function screensConflict(a,b){
+  // Eventos informativos (info:true) — drop-in / sin hora fija: nunca generan
+  // conflicto (no se planifican). Ver docs/SCHEMA.md.
+  if((a&&a.info)||(b&&b.info)) return false;
   if(a.day!==b.day) return false;
   // effectiveDuration: suma 30 min si has_qa:true (Q&A extiende la función)
   const aS=toMin(a.time), aE=aS+effectiveDuration(a);
@@ -60,7 +63,8 @@ export function computeScenarios(titles){
   // watchlist = mismo seed = misma secuencia de shuffles = mismos escenarios).
   // _titleSeed ordena internamente → independiente del orden de los títulos.
   const _rand=_mulberry32(_titleSeed(titles));
-  const pending=titles.filter(t=>!watched.has(t));
+  // Excluir eventos informativos (info:true): no entran al plan generado.
+  const pending=titles.filter(t=>!watched.has(t)&&!FILMS.some(f=>f.title===t&&f.info));
   const allPendingTitles=pending; // for section uniqueness check
   const baseGroups=pending.map(t=>{
     const screens=FILMS.filter(f=>f.title===t&&!isScreeningBlocked(f)&&!screeningPassed(f));
