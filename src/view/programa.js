@@ -12,7 +12,7 @@
 
 import { NOTICES, SECTION_ORDER_LIST, _DEFAULT_FEST_ID } from '../config.js';
 import { ICONS, _secLabel, _secLabelFull, _sectionColor, makeEventPoster, parseProgramTitle } from './components.js';
-import { _dayChips, _edHdrSVG, _getItemPoster, _isEditorialPoster, _metaBadges, _plistPosterHtml, _programaStack, dayLabel, durFmt, emptyState, getFilmPoster, isNowShowing, sala, vcfg } from './helpers.js';
+import { _dayChips, editorialFrame, _getItemPoster, _isEditorialPoster, _metaBadges, _plistPosterHtml, _programaStack, dayLabel, durFmt, emptyState, getFilmPoster, isNowShowing, sala, vcfg } from './helpers.js';
 import { festivalEnded, toMin } from '../domain/time.js';
 import { screeningPassed } from '../domain/film.js';
 import { state } from '../state/state.js';
@@ -328,7 +328,7 @@ export function renderPeliculaViewHTML(state){
     const progBadge='';//REMOVED: no count badge
     const _ended=festivalEnded();
     const _isPrograma=f.is_programa&&f.film_list&&f.film_list.length>=2;
-    let posterImg,_cardBg='';
+    let posterImg,_cardBg='',_edAccent='';
     if(_isPrograma){
       const _p1=_getItemPoster(f.film_list[0]);
       const _p2=_getItemPoster(f.film_list[1]);
@@ -347,10 +347,10 @@ export function renderPeliculaViewHTML(state){
       const _opacity=allPast&&!_ended?';opacity:.45':'';
       const _isEditorial=_isEditorialPoster(f);
       if(_isEditorial){
-        const _accent=_sectionColor(f.section||'');
+        _edAccent=_sectionColor(f.section||'');
         const _edSecLbl=_secLabel(f.section||'');
         const _edBodyTitle=(()=>{const pfx=_edSecLbl+' - ';if(displayTitle.startsWith(pfx))return displayTitle.slice(pfx.length);const sPfx='Storytellers - ';if(displayTitle.startsWith(sPfx))return displayTitle.slice(sPfx.length);return displayTitle;})();
-        posterImg=`<div class="ed-hdr" style="background:${_accent}">${_edHdrSVG(_edSecLbl)}</div><div class="ed-img"><img src="${posterSrc}" loading="lazy" onerror="this.remove()" alt="" onload="this.style.opacity='1'"></div><div class="ed-body"><div class="ed-title">${_edBodyTitle}</div></div>`;
+        posterImg=editorialFrame({header:_edSecLbl, body:_edBodyTitle, src:posterSrc, title:f.title});
       } else {
         posterImg=posterSrc
           ?`<img src="${posterSrc}" loading="lazy" data-title="${f.title.replace(/"/g,'&quot;')}" style="width:100%;height:100%;object-fit:cover${_opacity};display:block;opacity:0;transition:opacity 250ms ease" onload="this.style.opacity='1'" onerror="_posterErr(this)" alt="">`
@@ -358,7 +358,7 @@ export function renderPeliculaViewHTML(state){
       }
     }
     const _sep=activeDay==='all'&&f.section&&f.section!==_prevSec?`<div class="poster-grid-sep">${_secLabel(f.section||'')}</div>`:'';_prevSec=f.section||_prevSec;
-    return _sep+`<div class="bg-surf-2 poster-card js-open-pel${inWL&&!inW?' in-wl':''}${inW&&!_ended?' in-watched':''}${(_isPrograma?false:_isEditorialPoster(f))?' editorial':''}" data-title="${f.title}"${_isPrograma?'':_cardBg}>
+    return _sep+`<div class="bg-surf-2 poster-card js-open-pel${inWL&&!inW?' in-wl':''}${inW&&!_ended?' in-watched':''}${_edAccent?' poster-ed':''}" data-title="${f.title}"${_edAccent?` style="--ed-accent:${_edAccent}"`:(_isPrograma?'':_cardBg)}>
       ${posterImg}
       ${progBadge}
       ${inWL?`<button class="poster-wl-dot wl-on" data-title="${f.title.replace(/"/g,'&quot;')}" data-action="toggleWL" data-stop="1" aria-label="${t('misc_interes_label')}">${ICONS.heartFill}</button>`:''}

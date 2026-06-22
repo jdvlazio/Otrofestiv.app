@@ -475,20 +475,42 @@ for (const fname of files) {
   const { errors, warnings } = validateFestival(fname, data);
 
   // ── Poster coverage check ─────────────────────────────────────────────────
-  // Un festival sin posters reales sale con todos los placeholders generativos.
-  // Esto no es un error (generativo es el fallback válido) pero sí es un warning.
+  // Un film tiene poster REAL (no generativo) si getFilmPoster (helpers.js) lo
+  // resolvería a una imagen — es decir, si se cumple CUALQUIERA de la misma
+  // prioridad del runtime: customPosters{} → posters{} → f.poster, todos
+  // casados por título apóstrofe-normalizado (normKey). Antes el cálculo sumaba
+  // f.poster + el COUNT crudo de posters{} e IGNORABA customPosters{}, por lo
+  // que festivales que hospedan los posters ahí (FICCI, AFF, Cinemancia,
+  // Tribeca) reportaban cobertura falsa-baja (FICCI 63% siendo 100%). Ver
+  // docs/POSTERS.md — fuente única de la regla de cobertura.
+  const _normKey = s => String(s || '').replace(/[‘’‚‛′ʼ]/g, "'");
+  const _coveredKeys = new Set(
+    [...Object.keys(data.customPosters || {}), ...Object.keys(data.posters || {})].map(_normKey)
+  );
   const filmableFilms = (data.films || []).filter(f =>
     f.type !== 'event' && !f.is_cortos
   );
-  const filmsWithPoster = filmableFilms.filter(f => f.poster && f.poster !== '');
-  const legacyPosters   = Object.keys(data.posters || {}).length;
-  const totalPosters    = filmsWithPoster.length + legacyPosters;
+  const _isCovered = f => (f.poster && f.poster !== '') || _coveredKeys.has(_normKey(f.title));
+  const totalPosters = filmableFilms.filter(_isCovered).length;
   if (filmableFilms.length > 0) {
     const _pPct = Math.round(totalPosters / filmableFilms.length * 100);
     if (totalPosters === 0) {
       errors.push(`GATE BLOQUEANTE: cobertura de poster 0% — ${filmableFilms.length} films sin imagen. Ejecutar scraping og:image + TMDB estricto.`);
     } else if (_pPct < 95) {
       warnings.push(`Cobertura de poster: ${_pPct}% (${totalPosters}/${filmableFilms.length}) — recomendado ≥95%. Revisar films sin imagen.`);
+    }
+  }
+
+  // ── [poster-empty-film] — poster:"" explícito en film real ─────────────────
+  // poster:"" (string vacío deliberado) en un film NO-programa/NO-cortos que
+  // tampoco está en posters{}/customPosters{} = ERROR: lo deja en placeholder
+  // generativo de forma silenciosa. Distinto de poster AUSENTE (festivales que
+  // resuelven vía posters{}). La intención correcta es imagen real o no poner el
+  // campo — nunca string vacío. Ver docs/POSTERS.md.
+  for (const f of filmableFilms) {
+    if (f.is_programa) continue;
+    if (f.poster === '' && !_coveredKeys.has(_normKey(f.title))) {
+      errors.push(`[poster-empty-film] '${(f.title || '').slice(0, 50)}' tiene poster:"" y no está en posters{}/customPosters{} — usar imagen real o quitar el campo (no string vacío).`);
     }
   }
 

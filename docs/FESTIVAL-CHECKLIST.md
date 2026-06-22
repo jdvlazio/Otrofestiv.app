@@ -4,6 +4,9 @@
 > Derivado de la revisión crítica del onboarding de Olhar de Cinema 2026 y del
 > historial de incidentes (Tribeca: 134 posters falsos, 107 sinopsis de films
 > distintos, year corrupto en 37 films, lbSlugs inferidos incorrectos).
+>
+> **Pósters:** los ítems de abajo son los *gates*; la *regla* completa (prioridad,
+> trim, cobertura, editorial) vive en **`docs/POSTERS.md`** (fuente única).
 
 ## Checklist bloqueante
 

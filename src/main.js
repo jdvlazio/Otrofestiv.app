@@ -142,7 +142,7 @@ import {
 
 // ── Step 7e: controller/poster-err.js ────────────────────────────────────────────
 import {
-  _posterErr, _cortoSheetPosterErr,
+  _posterErr, _cortoSheetPosterErr, _edPosterErr,
 } from './controller/poster-err.js';
 
 // storage (adapter de localStorage) → src/storage/storage.js (Step 3).
@@ -630,7 +630,7 @@ FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202606151802';
+const BUILD_VERSION='202606220928';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';
@@ -1526,7 +1526,7 @@ document.addEventListener('click', function(e){
     //     en HTML generado (main.js innerHTML): onerror=_posterErr/_cortoSheetPosterErr
     //     en markup estático (index.html): oninput/onkeyup/onkeydown=searchQuery,
     //     onkeydown=submitAuthEmail/submitOTP (#search-input, #auth-email-inp, #auth-otp-inp)
-    _posterErr, _cortoSheetPosterErr,
+    _posterErr, _cortoSheetPosterErr, _edPosterErr,
     searchQuery, submitAuthEmail, submitOTP,
     // (b) page.evaluate — tests
     _renderProgramaContent, closeAuthSheet, closePelSheet, loadFestival, normTitle,

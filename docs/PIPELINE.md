@@ -57,7 +57,7 @@ Orden canónico para montar un festival. Cada paso mapea a una fase de abajo.
 6. **Verificación poster↔film por id.** Si el `og:image`/CDN embebe el id del film en el path (caso Olhar/Supabase), validar que `poster.includes(filmId)` para los N films — caza stale-render sin revisión visual. (Lo que a Tribeca le faltó: 134 posters falsos por matching TMDB.)
 7. **Content filter en evals:** los `eval` del navegador pueden bloquear devolver URLs/UUIDs/JWTs → devolver escalares (counts/longitudes/booleanos) y stashear el detalle a `localStorage`; exfiltrar el dataset final por descarga byte-exacta (verificar con hash).
 
-**Prioridad de poster (universal):** `og:image`/CDN de primera fuente del festival **primero** (es el póster oficial) → TMDB vertical **solo con verificación visual humana** → editorial generado. *(Corrige el orden viejo "TMDB→og:image": la fuente del festival manda sobre TMDB.)*
+**Prioridad de poster:** ver **`docs/POSTERS.md`** — fuente única. (Regla en una línea: identidad primero — TMDB/LB solo con verificación visual; entre correctos, portrait 2:3 sobre landscape oficial; el landscape no se vacía.)
 
 Columnas del CSV — **clase organizador** (lo que solo el festival sabe):
 
@@ -238,44 +238,13 @@ Columnas del CSV — **clase organizador** (lo que solo el festival sabe):
    espera. **`backdrop_path` es landscape (16:9). NUNCA usar `backdrop_path`.**
    Usar `poster_path` garantiza el aspecto correcto sin medir píxeles.
 
-**Jerarquía de poster — orden de prioridad (TODO film individual, incluidos cortos en `film_list`):**
-1. **Portrait 2:3 de TMDB** — verificado visualmente → usar (`poster: "/path.jpg"`).
-2. **Portrait 2:3 de Letterboxd** — verificado visualmente (no el `empty-poster` placeholder) → usar (`poster: "<og:image url>"`).
-3. **Portrait 2:3 del sitio oficial** del festival → usar.
-4. **Landscape 16:9 del sitio oficial** (CDN: cloudfront/supabase) → escribir la URL en `poster`. El sistema la renderiza **DENTRO** del poster editorial como imagen de fondo (header de sección + imagen) — el "**poster editorial con imagen**", como en Tribeca. **NO se descarta.** La detección la hace `_isEditorialImageUrl(url)` (`helpers.js`) por host conocido (cloudfront.net, supabase.co).
-5. **Poster editorial SIN imagen** (`poster: ""`) — único y exclusivamente cuando **no existe ninguna imagen en ninguna fuente** (TMDB ni LB ni oficial). Último recurso, nunca el segundo.
-
-⚠️ **`poster: ""` (editorial sin imagen) es EXCLUSIVO para programas** (`is_cortos`/`is_programa`) sin poster propio. **NUNCA** para films individuales ni cortometrajes: si un film/corto tiene cualquier imagen (aunque sea landscape), va en el campo `poster` y se renderiza como editorial-con-imagen (nivel 4). El landscape **no** se vacía — eso recorta/degrada y pierde la imagen.
-
-*(Precedente Olhar 2026: los 34 cortos y Segunda Pele recibieron 30 TMDB portrait + 5 landscape Supabase editorial-con-imagen → 0 con `poster: ""`. Corrige el error previo de vaciar landscapes a editorial-sin-imagen.)*
-
-**Poster editorial de programas (`is_cortos` / `is_programa`) — REGLA INAMOVIBLE.**
-El poster editorial generado tiene dos zonas: **header** = sección (con color de
-acento) y **body** = **identificador único del programa**.
-
-1. **El body es el identificador del programa — nunca el descriptor de la sección.**
-   - **Programas numerados** (`PGM 01`, `Prog. 4`, `Cortos: … 2`…): el body es el
-     **número/código** (ej. `PGM 05`). El descriptor del festival que acompaña al
-     código (ej. "Competitiva BR/INT", "Pequenos Olhares") **desaparece** del body.
-     `makeProgramPoster` extrae el código del **título** (`f.title`), no lo matchea
-     contra la sección → idioma-agnóstico, sin string-matching frágil.
-   - **Programas con nombre propio** (retrospectivas, sesiones especiales,
-     combinados): el body es **el nombre propio** del programa, tal cual el título
-     original. Es correcto que ese nombre incluya o repita la sección si ese ES su
-     nombre real (ej. "Ewelina Rosińska" bajo la sección homónima; "Sessão com
-     Acessibilidade na Tela — Pequenos Olhares"). No es un echo accidental.
-2. **El texto sale del título original (`f.title`), nunca de la traducción de UI**
-   (`f.section` solo aporta el color de acento). Así el body no mezcla idiomas:
-   un código (`PGM 05`) es neutro; un nombre propio va en su idioma original.
-3. **Todo programa produce un poster único.** Dos programas del mismo festival no
-   pueden tener poster editorial idéntico. Lo blinda el check
-   `[poster-editorial-unique]` en `validate-festivals.js` (corre el `makeProgramPoster`
-   real sobre cada programa sin poster propio y falla si dos coinciden) — **ERROR,
-   sin falsos positivos**.
-
-*(Precedente Olhar 2026: los 6 programas numerados mostraban "PGM 0X Competitiva
-BR/INT" / "Pequenos Olhares" — descriptor del festival ≈ sección traducida, mezcla
-PT/ES. Ahora "PGM 0X" a secas, consistente con Mirada. Aplica a todos los festivales.)*
+**Jerarquía de poster + póster editorial de programas → `docs/POSTERS.md`** (fuente
+única). Resumen: la adquisición sigue las 5 fuentes (TMDB/LB portrait verificados
+→ portrait oficial → landscape oficial editorial-con-imagen → editorial sin
+imagen), el landscape no se vacía, `poster: ""` es exclusivo de programas, y el
+body del póster de programa es el identificador único (código `PGM 05` o nombre
+propio) sacado del título original. Gates: `[poster-editorial-unique]` y
+`[poster-empty-film]` en `validate-festivals.js`.
 
 ---
 
@@ -414,6 +383,7 @@ node scripts/validate-festivals.js [festival-id]
 | Validate antes de push | `validate-festivals.js` no es opcional. Un push que falla se revierte |
 | Arquitectura antes de ejecución | El algoritmo de matching, la prioridad de posters y el schema de datos se aprueban antes de implementar |
 | Cero decisiones de arquitectura en ejecución | El Data Engineer no decide el criterio de matching — lo aprueba el Senior Dev antes de correr el script |
+| Eventos: planificable vs informativo | `type:event` con horario que el asistente "reserva" (masterclass, conversatorio, panel, gala, bloque de cortos) → `duration` (estimada si no se publica). Drop-in / sin hora fija (exposición, visita guiada, recorrido, fiesta, concierto, performance) → `info:true`: no entra al plan ni a conflictos. **El default es planificar** — somos planificadores, `info` es la excepción mínima. Ver `docs/SCHEMA.md` (campo `info`). |
 
 ---
 

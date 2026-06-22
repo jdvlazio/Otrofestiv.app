@@ -71,6 +71,15 @@ test('has_qa extends a → conflict that would not exist without Q&A', () => {
   assert.strictEqual(screensConflict(a, b), true);
 });
 
+test('info event (info:true) never conflicts, even with direct overlap', () => {
+  // a is informational (drop-in / sin hora fija) → never blocks the plan, even
+  // though a 10:00–11:30 vs b 10:30–12:00 would otherwise overlap directly.
+  const a = { day: sameDay, time: '10:00 AM', duration: '90 min', venue: 'Sala A', info: true };
+  const b = { day: sameDay, time: '10:30 AM', duration: '90 min', venue: 'Sala A' };
+  assert.strictEqual(screensConflict(a, b), false);
+  assert.strictEqual(screensConflict(b, a), false); // commutative — b vs info a
+});
+
 test('reversed argument order returns the same result (commutative)', () => {
   const a = { day: sameDay, time: '10:00 AM', duration: '90 min', venue: 'Sala A' };
   const b = { day: sameDay, time: '11:00 AM', duration: '90 min', venue: 'Sala A' };
