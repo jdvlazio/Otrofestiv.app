@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `ad09b46 Merge: selector festival label consistente (#217)`
+> Último commit: `de8b3e5 Merge pull request #218 from jdvlazio/ux/selector-fullname`
 
 ---
 
