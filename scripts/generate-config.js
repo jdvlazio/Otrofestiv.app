@@ -5,7 +5,8 @@
  * Uso:
  *   node scripts/generate-config.js \
  *     --id        mujeres2026           \
- *     --name      "Mujeres Film Festival" \
+ *     --name      "Mujeres Film Festival" \   (nombre común/marca — el display usa la 1ª palabra)
+ *     --fullname  "Festival Internacional de Cine de Mujeres" \  (nombre OFICIAL completo, verificado en fuente)
  *     --short     MUJERES               \
  *     --city      Circasia              \
  *     --start     2026-08-05            \
@@ -45,7 +46,7 @@ const MONTH_EN = {
 function parseArgs() {
   const args = process.argv.slice(2);
   const opts = {
-    id: null, name: null, short: null, city: null,
+    id: null, name: null, fullname: null, short: null, city: null,
     start: null, days: null, storage: null,
     priolimit: 5, event: 'EVENTO,', tz: '-05:00',
     endtime: '23:00:00', test: false,
@@ -60,13 +61,14 @@ function parseArgs() {
 
 // ── Validate ──────────────────────────────────────────────────────────────────
 function validate(opts) {
-  const required = ['id','name','short','city','start','days','storage'];
+  const required = ['id','name','fullname','short','city','start','days','storage'];
   const missing = required.filter(k => !opts[k]);
   if (missing.length) {
     console.error('❌  Faltan argumentos obligatorios: ' + missing.map(k => '--'+k).join(', '));
     console.error('\nUso:');
     console.error('  node scripts/generate-config.js \\');
-    console.error('    --id mujeres2026 --name "Mujeres Film Festival" --short MUJERES \\');
+    console.error('    --id mujeres2026 --name "Mujeres Film Festival" \\');
+    console.error('    --fullname "Festival Internacional de Cine de Mujeres" --short MUJERES \\');
     console.error('    --city Circasia --start 2026-08-05 --days 5 --storage mujeres2026_');
     process.exit(1);
   }
@@ -145,7 +147,7 @@ function formatConfig(opts, days) {
 
   return [
     `'${opts.id}': {`,
-    `  name:'${opts.name}',shortName:'${opts.short}',city:'${opts.city}',`,
+    `  name:'${opts.name}',fullName:'${opts.fullname}',shortName:'${opts.short}',city:'${opts.city}',`,
     `  dates:'${datesStr}',dates_en:'${datesStrEN}',year:${year},timezoneOffset:'${opts.tz}',`,
     `  storageKey:'${opts.storage}',festivalEndStr:'${endStr}',${group}`,
     `  festivalDates:{${fd}},`,

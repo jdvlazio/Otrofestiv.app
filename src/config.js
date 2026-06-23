@@ -217,28 +217,28 @@ export const FESTIVAL_CONFIG={
   // Todo lo demás (dayKeys, days, venues, posters, etc.) viene del JSON
   // y se mergea en loadFestival() — el JSON es la fuente única de verdad.
   'ficci65':{
-    name:'FICCI 65',city:'Cartagena',dates:'14–19 ABR',dates_en:'APR 14–19',year:2026,
+    name:'FICCI 65',fullName:'Festival Internacional de Cine de Cartagena de Indias',city:'Cartagena',dates:'14–19 ABR',dates_en:'APR 14–19',year:2026,
     storageKey:'ficci65_',festivalStartStr:'2026-04-14T00:00:00',festivalEndStr:'2026-04-20T02:00:00',
     films:null,posters:null,lbSlugs:{}
   },
   'aff2026':{
-    name:'AFF 2026',city:'Medellín',dates:'21–29 ABR',dates_en:'APR 21–29',year:2026,
+    name:'AFF 2026',fullName:'Alternativa Film Festival',city:'Medellín',dates:'21–29 ABR',dates_en:'APR 21–29',year:2026,
     storageKey:'aff2026_',festivalStartStr:'2026-04-21T00:00:00',festivalEndStr:'2026-04-29T23:00:00',
     films:null,posters:null,lbSlugs:{}
   },
   'tribeca2026':{
-    name:'Tribeca Festival',city:'New York',dates:'JUN 3–14',dates_en:'JUN 3–14',year:2026,timezoneOffset:'-04:00',
+    name:'Tribeca Festival',fullName:'Tribeca Festival',city:'New York',dates:'JUN 3–14',dates_en:'JUN 3–14',year:2026,timezoneOffset:'-04:00',
     storageKey:'tribeca2026_',festivalStartStr:'2026-06-03T00:00:00',festivalEndStr:'2026-06-14T23:59:00',
     films:null,posters:null,lbSlugs:{}
   },
   'cinemancia2025':{
-    name:'Cinemancia 2025',city:'Valle de Aburrá',dates:'11–20 SEP',dates_en:'SEP 11–20',year:2025,
+    name:'Cinemancia 2025',fullName:'Cinemancia Festival Metropolitano de Cine',city:'Valle de Aburrá',dates:'11–20 SEP',dates_en:'SEP 11–20',year:2025,
     storageKey:'cinemancia2025_',festivalStartStr:'2025-09-11T00:00:00',festivalEndStr:'2025-09-20T23:00:00',
     group:'test', // datos preservados como guía para sep 2025 — no visible en splash
     films:null,posters:null,lbSlugs:{}
   },
   'leviza2026':{
-    name:'Leviza - Festival de Cine y Audiovisuales',shortName:'LEVIZA',
+    name:'Leviza - Festival de Cine y Audiovisuales',fullName:'Festival de Cine y Audiovisuales Leviza',shortName:'LEVIZA',
     city:'Zapatoca',country:'CO',
     dates:'14–17 MAY',dates_en:'MAY 14–17',year:2026,timezoneOffset:'-05:00',
     storageKey:'leviza2026_',festivalStartStr:'2026-05-14T00:00:00',festivalEndStr:'2026-05-17T23:00:00',
@@ -251,7 +251,7 @@ export const FESTIVAL_CONFIG={
     films:null,posters:null,lbSlugs:{}
   },
   'olhar2026':{
-    name:'Olhar de Cinema',shortName:'OLHAR',
+    name:'Olhar de Cinema',fullName:'Olhar de Cinema – Festival Internacional de Curitiba',shortName:'OLHAR',
     city:'Curitiba',country:'BR',
     dates:'JUN 4–13',dates_en:'JUN 4–13',year:2026,timezoneOffset:'-03:00',
     storageKey:'olhar2026_',festivalStartStr:'2026-06-04T00:00:00',festivalEndStr:'2026-06-13T23:59:00',
@@ -265,7 +265,7 @@ export const FESTIVAL_CONFIG={
     films:null,posters:null,lbSlugs:{}
   },
   'ficmontanas2026':{
-    name:'Ficmontañas',shortName:'FICMONTAÑAS',
+    name:'Ficmontañas',fullName:'Festival Internacional de Cine en las Montañas',shortName:'FICMONTAÑAS',
     city:'Salento',country:'CO',
     dates:'JUL 1–5',dates_en:'JUL 1–5',year:2026,timezoneOffset:'-05:00',
     storageKey:'ficmontanas2026_',festivalStartStr:'2026-06-30T00:00:00',festivalEndStr:'2026-07-05T22:00:00',

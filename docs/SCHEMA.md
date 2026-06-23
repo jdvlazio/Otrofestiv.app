@@ -151,8 +151,9 @@ Campos requeridos por festival:
 
 ```javascript
 {
-  name: 'Nombre completo',
-  shortName: 'ABREVIACIÓN',
+  name: 'Nombre común/marca',   // display = 1ª palabra + ' · ' + year (festivalLabel)
+  fullName: 'Nombre oficial completo',  // OBLIGATORIO — verificado en fuente; visible al expandir el selector
+  shortName: 'ABREVIACIÓN',     // deprecado para display
   city: 'Ciudad',
   dates: 'FEB 3–14',        // ES
   dates_en: 'FEB 3–14',     // EN

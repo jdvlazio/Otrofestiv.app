@@ -1498,6 +1498,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .fs-fest-dot{width:6px;height:6px;border-radius:50%;background:var(--amber);flex-shrink:0}
 .fs-fest-info{flex:1;min-width:0}
 .fs-fest-name{font-size:var(--t-base);font-weight:var(--w-semi);color:var(--white);line-height:1.2}
+.fs-fest-full{font-size:var(--t-sm);color:var(--white-60);margin-top:2px;line-height:1.3}
 .fs-fest-meta{font-size:var(--t-sm);color:var(--gray);margin-top:2px}
 .fs-fest-check{color:var(--amber);flex-shrink:0}
 /* Festivales pasados en el sheet — colapsados por defecto, idéntico al splash */
@@ -1505,10 +1506,12 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .fs-festival-row.past .fs-fest-name{
   font-size:var(--t-sm);font-weight:var(--w-med);
 }
-.fs-festival-row.past .fs-fest-meta{display:none}
+.fs-festival-row.past .fs-fest-meta,
+.fs-festival-row.past .fs-fest-full{display:none}
 .fs-festival-row.past .fs-fest-dot{opacity:.5}
 .fs-festival-row.past.past-open{opacity:.75}
-.fs-festival-row.past.past-open .fs-fest-meta{display:block}
+.fs-festival-row.past.past-open .fs-fest-meta,
+.fs-festival-row.past.past-open .fs-fest-full{display:block}
 /* Chevron del item pasado en el sheet */
 .fs-past-chev{color:var(--gray2);display:flex;margin-left:auto;transition:transform .2s ease;flex-shrink:0}
 .fs-festival-row.past.past-open .fs-past-chev{transform:rotate(180deg)}
@@ -1862,6 +1865,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 
 .splash-drop-item-name{font-size:var(--t-base);font-weight:var(--w-bold);color:var(--white)}
 .splash-drop-item.selected .splash-drop-item-name{color:var(--amber)}
+.splash-drop-item-full{font-size:var(--t-sm);color:var(--white-60);margin-top:2px;line-height:1.3}
 .splash-drop-item-meta{font-size:var(--t-sm);color:var(--gray2);margin-top:1px}
 
 /* Separador "Anteriores" en el dropdown del splash */
@@ -1876,9 +1880,11 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .splash-drop-item.past .splash-drop-item-name{
   font-size:var(--t-sm);font-weight:var(--w-med);
 }
-.splash-drop-item.past .splash-drop-item-meta{display:none}
+.splash-drop-item.past .splash-drop-item-meta,
+.splash-drop-item.past .splash-drop-item-full{display:none}
 .splash-drop-item.past.past-open{opacity:.75}
-.splash-drop-item.past.past-open .splash-drop-item-meta{display:block}
+.splash-drop-item.past.past-open .splash-drop-item-meta,
+.splash-drop-item.past.past-open .splash-drop-item-full{display:block}
 /* Chevron del item pasado */
 .past-item-chev{
   color:var(--gray2);display:flex;align-items:center;flex-shrink:0;
@@ -2641,7 +2647,7 @@ setTimeout(function(){
 <!-- ── Intereses / Planear: header unificado — fuera de ag-view ── -->
 <div class="ag-view" id="ag-view"></div>
 
-<script type="module" src="/src/main.js?v=202606231405"></script>
+<script type="module" src="/src/main.js?v=202606231446"></script>
 
 <!-- Festival switcher bottom sheet -->
 <div class="auth-sheet" id="auth-sheet" data-close-bg="AuthSheet">
