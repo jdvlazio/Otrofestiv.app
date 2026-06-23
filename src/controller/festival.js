@@ -14,6 +14,15 @@ export function toggleSplashDropdown(){
   const open=dd.style.display==='none';
   dd.style.display=open?'block':'none';
   btn.classList.toggle('open',open);
+  if(open){
+    // Acotar la altura al espacio disponible bajo el botón → scroll interno.
+    // Sin esto, los nombres oficiales + el expand de "anteriores" hacen crecer el
+    // dropdown más allá del viewport (el splash es position:fixed, no scrollea) y
+    // los items de abajo quedan inalcanzables. La barra-padre no cambia de top al
+    // expandir un item, así que basta calcular una vez al abrir.
+    const top=dd.getBoundingClientRect().top;
+    dd.style.maxHeight=Math.max(160, window.innerHeight - top - 16)+'px';
+  }
 }
 
 export function _togglePastFest(item){

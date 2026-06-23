@@ -1487,7 +1487,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 /* ── FESTIVAL BOTTOM SHEET ── */
 .fs-overlay{position:fixed;inset:0;background:var(--overlay-60);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);z-index:2000;opacity:0;transition:opacity var(--tr-smooth);pointer-events:none}
 .fs-overlay.open{opacity:1;pointer-events:all}
-.fs-sheet{position:fixed;bottom:0;left:0;right:0;background:var(--surf);border-radius:var(--r) var(--r) 0 0;z-index:2001;padding:0 0 env(safe-area-inset-bottom);transform:translateY(100%);transition:transform var(--tr-enter) cubic-bezier(.32,1,.23,1)}
+.fs-sheet{position:fixed;bottom:0;left:0;right:0;background:var(--surf);border-radius:var(--r) var(--r) 0 0;z-index:2001;padding:0 0 env(safe-area-inset-bottom);max-height:85dvh;overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;transform:translateY(100%);transition:transform var(--tr-enter) cubic-bezier(.32,1,.23,1)}
 .fs-sheet.open{transform:translateY(0)}
 .fs-handle{width:36px;height:4px;background:var(--bdr);border-radius:var(--r-handle);margin:var(--sp-3) auto 0}
 .fs-header{padding:var(--sp-5) var(--sp-5) var(--sp-3);border-bottom:1px solid var(--bdr-l)}
@@ -1851,7 +1851,8 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .splash-dropdown{
   position:absolute;top:calc(100% + 6px);left:0;right:0;
   background:var(--surf-2);border:1px solid var(--bdr);border-radius:var(--r);
-  overflow:hidden;z-index:10;
+  overflow-y:auto;overflow-x:hidden;z-index:10;
+  overscroll-behavior:contain;-webkit-overflow-scrolling:touch;
   box-shadow:0 16px 40px var(--overlay-60);
 }
 .splash-drop-item{
@@ -2647,7 +2648,7 @@ setTimeout(function(){
 <!-- ── Intereses / Planear: header unificado — fuera de ag-view ── -->
 <div class="ag-view" id="ag-view"></div>
 
-<script type="module" src="/src/main.js?v=202606231457"></script>
+<script type="module" src="/src/main.js?v=202606231509"></script>
 
 <!-- Festival switcher bottom sheet -->
 <div class="auth-sheet" id="auth-sheet" data-close-bg="AuthSheet">
