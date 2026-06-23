@@ -377,6 +377,15 @@ export function _sortFestivals(entries, activeFestId){
   });
 }
 
+// Etiqueta unificada de festival para selector + header. Primera palabra del
+// `name` (case correcto: siglas en MAYÚS, marcas en Title Case) + año. UNA fuente
+// de verdad → activos, anteriores, header y botón cerrado muestran lo MISMO.
+// Reemplaza el uso de `shortName` (que estaba en MAYÚSCULA, inconsistente con la
+// primera-palabra Title Case de otros). El año va en el título (es fundamental);
+// el subtítulo queda solo ciudad · fechas.
+export function festivalShortName(cfg){ return (cfg.name||'').split(' ')[0]; }
+export function festivalLabel(cfg){ const n=festivalShortName(cfg); return cfg.year?`${n} · ${cfg.year}`:n; }
+
 export function _renderSplashDropdownHTML(state, activeFestId){
   const {_lang} = state.snapshot();
   const entries=_sortFestivals(Object.entries(FESTIVAL_CONFIG)
@@ -388,19 +397,20 @@ export function _renderSplashDropdownHTML(state, activeFestId){
   const past     = entries.filter(([,cfg])=>_classifyFestival(cfg)==='past');
   const mkItem=([id,cfg])=>{
     const isActive=id===activeFestId;
-    const meta=`${cfg.city} · ${_lang==='en'&&cfg.dates_en?cfg.dates_en:cfg.dates} ${cfg.year||''}`.trim();
-    return`<button class="splash-drop-item${isActive?' selected':''}" data-fest="${id}" role="option" aria-selected="${isActive}" data-action="selectSplashFest" data-name="${cfg.name}" data-meta="${meta}">
-      <div><div class="splash-drop-item-name">${cfg.name}</div><div class="splash-drop-item-meta">${meta}</div></div>
+    const meta=`${cfg.city} · ${_lang==='en'&&cfg.dates_en?cfg.dates_en:cfg.dates}`;
+    const label=festivalLabel(cfg);
+    return`<button class="splash-drop-item${isActive?' selected':''}" data-fest="${id}" role="option" aria-selected="${isActive}" data-action="selectSplashFest" data-name="${label}" data-meta="${meta}">
+      <div><div class="splash-drop-item-name">${label}</div><div class="splash-drop-item-meta">${meta}</div></div>
     </button>`;
   };
   const mkPastItem=([id,cfg])=>{
-    const meta=`${cfg.city} · ${_lang==='en'&&cfg.dates_en?cfg.dates_en:cfg.dates} ${cfg.year||''}`.trim();
-    const shortLabel=(cfg.shortName||cfg.name.split(' ')[0])+' · '+cfg.year;
+    const meta=`${cfg.city} · ${_lang==='en'&&cfg.dates_en?cfg.dates_en:cfg.dates}`;
+    const label=festivalLabel(cfg);
     // Tap en el cuerpo/título → selecciona el festival (igual que los activos);
     // tap en el chevron → expande/colapsa. La delegación dispara el primer
     // data-action subiendo desde el target, así que el chevron no selecciona.
-    return`<button class="splash-drop-item past" data-fest="${id}" role="option" aria-selected="false" data-action="selectSplashFest" data-name="${cfg.name}" data-meta="${meta}">
-      <div><div class="splash-drop-item-name">${shortLabel}</div><div class="splash-drop-item-meta">${meta}</div></div>
+    return`<button class="splash-drop-item past" data-fest="${id}" role="option" aria-selected="false" data-action="selectSplashFest" data-name="${label}" data-meta="${meta}">
+      <div><div class="splash-drop-item-name">${label}</div><div class="splash-drop-item-meta">${meta}</div></div>
       <span class="past-item-chev" data-action="togglePastFest">${chevSvg}</span>
     </button>`;
   };
@@ -422,24 +432,23 @@ export function _renderFestivalSelectorHTML(state, activeFestId){
   const past     = entries.filter(([,cfg])=>_classifyFestival(cfg)==='past');
   function mkRow([id,cfg]){
     const isActive=id===activeFestId;
-    const meta=`${cfg.city} · ${_lang==='en'&&cfg.dates_en?cfg.dates_en:cfg.dates} ${cfg.year||''}`.trim();
+    const meta=`${cfg.city} · ${_lang==='en'&&cfg.dates_en?cfg.dates_en:cfg.dates}`;
     const dotClass=`fs-fest-dot${isActive?' active':''}`;
     return`<div class="fs-festival-row" data-fest="${id}" data-action="loadFestival">
       <div class="${dotClass}"></div>
       <div class="fs-fest-info">
-        <div class="fs-fest-name">${cfg.name}</div>
+        <div class="fs-fest-name">${festivalLabel(cfg)}</div>
         <div class="fs-fest-meta">${meta}</div>
       </div>
       <div class="fs-fest-check" style="display:${isActive?'':'none'}">${CHECK_SVG}</div>
     </div>`;
   }
   function mkPastRow([id,cfg]){
-    const meta=`${cfg.city} · ${_lang==='en'&&cfg.dates_en?cfg.dates_en:cfg.dates} ${cfg.year||''}`.trim();
-    const shortLabel=(cfg.shortName||cfg.name.split(' ')[0])+' · '+cfg.year;
+    const meta=`${cfg.city} · ${_lang==='en'&&cfg.dates_en?cfg.dates_en:cfg.dates}`;
     return`<div class="fs-festival-row past" data-fest="${id}">
       <div class="fs-fest-dot past"></div>
       <div class="fs-fest-info" data-action="loadFestival" data-fest="${id}" style="cursor:pointer;flex:1;min-width:0">
-        <div class="fs-fest-name">${shortLabel}</div>
+        <div class="fs-fest-name">${festivalLabel(cfg)}</div>
         <div class="fs-fest-meta">${meta}</div>
       </div>
       <span class="fs-past-chev" data-action="togglePastFestRow" data-fest="${id}" style="padding:var(--sp-2);margin:-var(--sp-2);-webkit-tap-highlight-color:transparent">${chevSvg}</span>
