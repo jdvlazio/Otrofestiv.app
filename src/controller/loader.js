@@ -6,7 +6,7 @@
 // detección-festival). Escribe bridge globals en runtime (no eval-time).
 
 import { FESTIVAL_CONFIG } from '../config.js';
-import { DAY_ABBR, DAY_NUM } from '../view/components.js';
+import { DAY_ABBR, DAY_NUM, festivalShortName } from '../view/components.js';
 import { DAYS, DAY_SHORT_EN, DAY_SHORT_PT, setCustomPosters, setDayShort, setDayShortEn, setDayShortPt, setPosters } from '../view/helpers.js';
 import { closeFestivalSheet } from '../view/sheets.js';
 import { showToast } from '../view/feedback.js';
@@ -360,8 +360,8 @@ export async function loadFestival(id){
   // Update fest-bar
   const _fn=document.querySelector('.hdr-fest-name');
   const _fd=document.querySelector('.hdr-fest-dates');
-  if(_fn) _fn.textContent=cfg.name;
-  if(_fd) _fd.textContent=' · '+(_lang==='en'&&cfg.dates_en?cfg.dates_en:cfg.dates);
+  if(_fn) _fn.textContent=festivalShortName(cfg);
+  if(_fd) _fd.textContent=' · '+(_lang==='en'&&cfg.dates_en?cfg.dates_en:cfg.dates)+(cfg.year?' '+cfg.year:'');
   // Re-render festival selector con el nuevo festival activo
   _renderFestivalSelector(id);
   // Persist choice
