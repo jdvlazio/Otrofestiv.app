@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `f7d0a54 content(ficmontanas): pase de Content Design de sinopsis`
+> Último commit: `a9db3f8 ux(splash): selector compacto siempre (sin "Elegí uno")`
 
 ---
 
