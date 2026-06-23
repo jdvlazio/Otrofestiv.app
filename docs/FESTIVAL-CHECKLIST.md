@@ -36,6 +36,7 @@
 - [ ] **Slots compartidos**: todos los (day, time, venue) con ≥2 films declarados `is_cortos:true` o `is_programa:true`
 - [ ] **Config en el JSON**: `dayKeys`, `days`, `festivalDates`, `timezoneOffset`, `prioLimit`, `name`, `storageKey`, `festivalEndStr`
 - [ ] **Entrada en `src/config.js`** (`FESTIVAL_CONFIG`) creada (id sin guion: `[a-z0-9]+`)
+- [ ] **`fullName`** (nombre oficial completo, **verificado en la fuente oficial del festival**) presente en la entrada de `FESTIVAL_CONFIG` — se muestra al expandir el selector. `generate-config.js` lo exige vía `--fullname`.
 - [ ] **Secciones**: emoji único por sección + orden curatorial definido
 - [ ] **`synopsis_es`** presente para todos los films solos
 - [ ] **`synopsis_lang`** declarado en cada film

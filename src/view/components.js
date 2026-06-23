@@ -400,7 +400,7 @@ export function _renderSplashDropdownHTML(state, activeFestId){
     const meta=`${cfg.city} · ${_lang==='en'&&cfg.dates_en?cfg.dates_en:cfg.dates}`;
     const label=festivalLabel(cfg);
     return`<button class="splash-drop-item${isActive?' selected':''}" data-fest="${id}" role="option" aria-selected="${isActive}" data-action="selectSplashFest" data-name="${label}" data-meta="${meta}">
-      <div><div class="splash-drop-item-name">${label}</div><div class="splash-drop-item-meta">${meta}</div></div>
+      <div><div class="splash-drop-item-name">${label}</div><div class="splash-drop-item-full">${cfg.fullName||cfg.name}</div><div class="splash-drop-item-meta">${meta}</div></div>
     </button>`;
   };
   const mkPastItem=([id,cfg])=>{
@@ -410,7 +410,7 @@ export function _renderSplashDropdownHTML(state, activeFestId){
     // tap en el chevron → expande/colapsa. La delegación dispara el primer
     // data-action subiendo desde el target, así que el chevron no selecciona.
     return`<button class="splash-drop-item past" data-fest="${id}" role="option" aria-selected="false" data-action="selectSplashFest" data-name="${label}" data-meta="${meta}">
-      <div><div class="splash-drop-item-name">${label}</div><div class="splash-drop-item-meta">${meta}</div></div>
+      <div><div class="splash-drop-item-name">${label}</div><div class="splash-drop-item-full">${cfg.fullName||cfg.name}</div><div class="splash-drop-item-meta">${meta}</div></div>
       <span class="past-item-chev" data-action="togglePastFest">${chevSvg}</span>
     </button>`;
   };
@@ -438,6 +438,7 @@ export function _renderFestivalSelectorHTML(state, activeFestId){
       <div class="${dotClass}"></div>
       <div class="fs-fest-info">
         <div class="fs-fest-name">${festivalLabel(cfg)}</div>
+        <div class="fs-fest-full">${cfg.fullName||cfg.name}</div>
         <div class="fs-fest-meta">${meta}</div>
       </div>
       <div class="fs-fest-check" style="display:${isActive?'':'none'}">${CHECK_SVG}</div>
@@ -449,6 +450,7 @@ export function _renderFestivalSelectorHTML(state, activeFestId){
       <div class="fs-fest-dot past"></div>
       <div class="fs-fest-info" data-action="loadFestival" data-fest="${id}" style="cursor:pointer;flex:1;min-width:0">
         <div class="fs-fest-name">${festivalLabel(cfg)}</div>
+        <div class="fs-fest-full">${cfg.fullName||cfg.name}</div>
         <div class="fs-fest-meta">${meta}</div>
       </div>
       <span class="fs-past-chev" data-action="togglePastFestRow" data-fest="${id}" style="padding:var(--sp-2);margin:-var(--sp-2);-webkit-tap-highlight-color:transparent">${chevSvg}</span>

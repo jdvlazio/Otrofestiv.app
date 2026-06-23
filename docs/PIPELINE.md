@@ -117,8 +117,9 @@ Columnas del CSV — **clase organizador** (lo que solo el festival sabe):
    ```js
    'festival-id': {
      id: 'festival-id',
-     name: 'Nombre completo',
-     name_short: 'Nombre corto',
+     name: 'Nombre común/marca',     // el display (selector + header) usa la 1ª palabra
+     fullName: 'Nombre OFICIAL completo',  // OBLIGATORIO — verificado en fuente; se muestra al expandir el selector
+     shortName: 'ABREV',             // deprecado para display; histórico
      city: 'Ciudad',
      country: 'XX',           // ISO-2, usado por flagFmt() para supresión de banderas
      storageKey: 'otrofestiv_festival_id',
@@ -130,6 +131,13 @@ Columnas del CSV — **clase organizador** (lo que solo el festival sabe):
      dayLong: { 'YYYY-MM-DD': 'Day, Month D', ... },
    }
    ```
+
+   > **Regla de nombres (obligatoria).** Cada festival lleva **tres** identidades:
+   > - `name` — nombre **común/marca**. El display en TODA la app (selector del splash, selector in-app, header) deriva de aquí: `festivalLabel()` = 1ª palabra de `name` + ` · ` + `year`. Ej.: `'Ficmontañas'` → "Ficmontañas · 2026".
+   > - `fullName` — nombre **oficial completo**, **verificado en la fuente oficial del festival** (sitio propio, no Wikipedia ni terceros). Se muestra **al expandir** el item en el selector. Ej.: `'Festival Internacional de Cine en las Montañas'`. **No fabricar** — si la fuente no lo da con claridad, parar y consultar.
+   > - `shortName` — **deprecado para display** (era una sigla en MAYÚS). Se conserva por compatibilidad; no usar en render.
+   >
+   > `generate-config.js` exige `--fullname` como argumento obligatorio. Onboarding sin `fullName` no pasa.
 
 2. El JSON del festival **no lleva bloque `config{}`** — nunca.
 
