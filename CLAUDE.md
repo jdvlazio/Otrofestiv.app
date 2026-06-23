@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `de8b3e5 Merge pull request #218 from jdvlazio/ux/selector-fullname`
+> Último commit: `d28ce33 Merge pull request #219 from jdvlazio/ux/selector-meta-uppercase`
 
 ---
 

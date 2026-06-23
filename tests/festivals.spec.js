@@ -24,6 +24,38 @@ test('T08 — festival selector: el próximo festival encabeza', async ({ page }
   expect(allIds.some(id => id.includes('leviza'))).toBe(true);
 });
 
+// T40 — El dropdown del selector nunca se sale del viewport y permite alcanzar el
+// último item, incluso con TODOS los "anteriores" expandidos (peor caso de altura).
+// Regresión del bug introducido al sumar fullName + expand sin acotar la altura:
+// el splash es position:fixed (no scrollea) → sin max-height/overflow los items de
+// abajo quedaban inalcanzables. Invariante robusto (independiente del alto de pantalla):
+// fondo del dropdown ≤ viewport, y el último item visible tras scrollear al fondo.
+test('T40 — selector dropdown: dentro del viewport y último item alcanzable (todo expandido)', async ({ page }) => {
+  await page.goto('/');
+  await page.waitForSelector('html[data-app-ready="1"]', { state: 'attached', timeout: 15000 });
+  await page.locator('#splash-sel-btn').click();
+  await page.waitForSelector('#splash-dropdown', { state: 'visible', timeout: 15000 });
+  await page.waitForSelector('.splash-drop-item[data-fest]', { state: 'visible', timeout: 15000 });
+  // Expandir todos los items de "anteriores" → la altura máxima posible.
+  await page.locator('.splash-drop-item.past .past-item-chev')
+    .evaluateAll(els => els.forEach(c => c.click()));
+  const geo = await page.evaluate(() => {
+    const dd = document.getElementById('splash-dropdown');
+    const items = document.querySelectorAll('.splash-drop-item');
+    const last = items[items.length - 1];
+    const r = dd.getBoundingClientRect();          // rect estable: el scroll interno no lo mueve
+    dd.scrollTop = dd.scrollHeight;                // scrollear al fondo
+    const lr = last.getBoundingClientRect();
+    return {
+      ddBottom: r.bottom,
+      innerHeight: window.innerHeight,
+      lastReachable: lr.bottom <= r.bottom + 1 && lr.top >= r.top - 1,
+    };
+  });
+  expect(geo.ddBottom).toBeLessThanOrEqual(geo.innerHeight + 2);
+  expect(geo.lastReachable).toBe(true);
+});
+
 // T37 — Cambiar de festival actualiza el topbar
 test('T37 — cambiar de festival actualiza el topbar', async ({ page }) => {
   await enterFestival(page, 'leviza2026', LEVIZA_SIMTIME);
