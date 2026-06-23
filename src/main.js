@@ -1435,16 +1435,15 @@ state.subscribeRender(
   _splashSelectedFestId=null;
   // Sin festival seleccionado → ningún item marcado .selected; orden por tier.
   _renderSplashDropdown(null);
-  // Modo compacto del selector: cuando NO hay festival en curso ni próximo (todo
-  // en "Anteriores"), el selector se reduce a una barra mínima SIN texto — solo el
-  // chevron — que se expande al tocar. Con festival activo/próximo se mantiene el
-  // placeholder "Elegí uno". Se aplica ANTES del reveal (splash aún invisible) → sin
-  // flash. Al elegir, selectSplashFest quita .compact y la barra crece con el nombre.
-  const _anyActiveFest=Object.values(FESTIVAL_CONFIG).some(cfg=>cfg&&cfg.name&&cfg.group!=='test'&&_classifyFestival(cfg)!=='past');
+  // Modo compacto SIEMPRE: el selector es una barra mínima SIN texto — solo el
+  // chevron — que se expande al tocar (decisión de diseño: nunca "Elegí uno",
+  // haya festival próximo o no). Se aplica ANTES del reveal (splash aún invisible)
+  // → sin flash. Al elegir, selectSplashFest quita .compact y la barra crece con
+  // el nombre del festival.
   const _selBtn=document.getElementById('splash-sel-btn');
   if(_selBtn){
-    _selBtn.classList.toggle('compact',!_anyActiveFest);
-    _selBtn.classList.toggle('placeholder',_anyActiveFest);
+    _selBtn.classList.add('compact');
+    _selBtn.classList.remove('placeholder');
   }
   // Splash entrada: la animación es 100% CSS (@keyframes en index.html). El
   // contenido es visible por default y JS NO toca opacity → imposible que quede
