@@ -13,6 +13,7 @@ import { _renderProgramaContent, lugarClose, render, renderNoticesBanner } from 
 import { renderAgenda, updateCardState, updateHorarioPrioBtn } from '../view/agenda.js';
 import { runCalc } from './calc.js';
 import { saveDelays, saveLastSlot, savePrio, saveSavedAgenda, saveState, saveWL, saveWatched } from './persistence.js';
+import { cloudReportDelay, cloudClearDelay, cloudScreeningKey } from './delays-cloud.js';
 import { _getProgramaPhase, _reRenderIntereses, _updateProgramaActiveFilter, initProgramaModeBar, showAgView, showDayView, switchMainNav, updateAgTab, _markPreserveResult } from './pipeline.js';
 import { searchClose, seccionClose } from './overlays.js';
 import { dayFullyPassed, festivalEnded, simTodayStr, toMin } from '../domain/time.js';
@@ -170,7 +171,7 @@ export function togglePelWL(title,e){
   }
 }
 
-export function setDelay(title,day,time,addMins){
+export function setDelay(title,day,time,addMins,venue){
   // 1. READ — state + args
   const {filmDelays, filmDelaysHistory} = state.snapshot();
   const k=title+'|'+day+'|'+time;
@@ -182,9 +183,12 @@ export function setDelay(title,day,time,addMins){
   });
   // 4. PERSIST (render automático vía pipeline)
   saveDelays();
+  // 5. DUAL-WRITE colaborativo (Fase A) — reflejar mi retraso de esta función en la nube
+  const sk=cloudScreeningKey(title,day,time,venue);
+  if(newVal>0) cloudReportDelay(sk,newVal); else cloudClearDelay(sk);
 }
 
-export function undoDelay(title,day,time){
+export function undoDelay(title,day,time,venue){
   // 1. READ — state + args
   const {filmDelays, filmDelaysHistory} = state.snapshot();
   const k=title+'|'+day+'|'+time;
@@ -199,15 +203,20 @@ export function undoDelay(title,day,time){
   });
   // 4. PERSIST (render automático vía pipeline)
   saveDelays();
+  // 5. DUAL-WRITE colaborativo (Fase A) — reflejar el valor revertido en la nube
+  const sk=cloudScreeningKey(title,day,time,venue);
+  if(prev>0) cloudReportDelay(sk,prev); else cloudClearDelay(sk);
 }
 
-export function clearDelay(title,day,time){
+export function clearDelay(title,day,time,venue){
   // 1. READ — args local
   const k=title+'|'+day+'|'+time;
   // 3. MUTATE
   state.update('filmDelays', fd => state._omit(fd, k));
   // 4. PERSIST (render automático vía pipeline)
   saveDelays();
+  // 5. DUAL-WRITE colaborativo (Fase A) — borrar mi reporte en la nube
+  cloudClearDelay(cloudScreeningKey(title,day,time,venue));
 }
 
 export function removeFromAgenda(title){

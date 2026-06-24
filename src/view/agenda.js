@@ -548,14 +548,15 @@ export function renderContextualHeader(state){
     let warnHtml='';
     if(isNow){
       const safeT=(next._title||'').replace(/'/g,"&#39;");
+      const safeV=(next.venue||'').replace(/"/g,'&quot;');
       const _dk=_delayKey(next);
       const delayMins=filmDelays[_dk]||0;
       if(delayMins>0){
         delayHtml=`<div class="delay-row">
           <span class="delay-lbl">+${delayMins} min</span>
-          ${[10,15,20,30].map(m=>`<button class="delay-btn" data-action="setDelay" data-title="${safeT}" data-day="${next.day}" data-time="${next.time}" data-mins="${m}" title="+${m} min">+${m}</button>`).join('')}
-          <button class="delay-clear" data-action="undoDelay" data-title="${safeT}" data-day="${next.day}" data-time="${next.time}" title="${t('aria_deshacer')}">${ICONS.undo}</button>
-          <button class="delay-clear" data-action="clearDelay" data-title="${safeT}" data-day="${next.day}" data-time="${next.time}" title="${t('aria_quitar_retraso')}">${ICONS.x}</button>
+          ${[10,15,20,30].map(m=>`<button class="delay-btn" data-action="setDelay" data-title="${safeT}" data-day="${next.day}" data-time="${next.time}" data-venue="${safeV}" data-mins="${m}" title="+${m} min">+${m}</button>`).join('')}
+          <button class="delay-clear" data-action="undoDelay" data-title="${safeT}" data-day="${next.day}" data-time="${next.time}" data-venue="${safeV}" title="${t('aria_deshacer')}">${ICONS.undo}</button>
+          <button class="delay-clear" data-action="clearDelay" data-title="${safeT}" data-day="${next.day}" data-time="${next.time}" data-venue="${safeV}" title="${t('aria_quitar_retraso')}">${ICONS.x}</button>
         </div>`;
         // Warning si el retraso come el buffer
         const schedule=savedAgenda&&savedAgenda.schedule||[];
@@ -578,7 +579,7 @@ export function renderContextualHeader(state){
       }else{
         delayHtml=`<div class="delay-row">
           <span class="delay-lbl">${t('plan_retraso')}</span>
-          ${[10,15,20,30].map(m=>`<button class="delay-btn" data-action="setDelay" data-title="${safeT}" data-day="${next.day}" data-time="${next.time}" data-mins="${m}" title="${t('aria_reportar_retraso',{m})}">+${m}</button>`).join('')}
+          ${[10,15,20,30].map(m=>`<button class="delay-btn" data-action="setDelay" data-title="${safeT}" data-day="${next.day}" data-time="${next.time}" data-venue="${safeV}" data-mins="${m}" title="${t('aria_reportar_retraso',{m})}">+${m}</button>`).join('')}
         </div>`;
       }
     }
