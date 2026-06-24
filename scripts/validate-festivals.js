@@ -441,6 +441,23 @@ function validateFestival(fname, data) {
     }
   }
 
+  // ── [synopsis-length] WARNING — sinopsis inusualmente larga ──
+  // Sin tope DURO: Olhar/Tribeca tienen sinopsis largas por diseño (no hay regla
+  // ~270 a nivel proyecto). Warn GENEROSO (>600) para cazar lo egregio — un copy
+  // sin condensar o un dump de 1000+ chars — sin spamear. Silencioso cuando está
+  // limpio (no infla el conteo de warnings; Ficmontañas, máx 269, da 0).
+  const _SYN_MAX = 600;
+  const _longSyn = [];
+  for (const f of (data.films || [])) {
+    for (const fld of ['synopsis', 'synopsis_en']) {
+      const v = f[fld] || '';
+      if (v.length > _SYN_MAX) _longSyn.push(`${(f.title || '?').slice(0, 36)}·${fld}=${v.length}`);
+    }
+  }
+  if (_longSyn.length) {
+    warnings.push(`[synopsis-length] ${_longSyn.length} sinopsis > ${_SYN_MAX} chars (revisar/condensar): ${_longSyn.slice(0, 4).join(', ')}${_longSyn.length > 4 ? ` +${_longSyn.length - 4} más` : ''}`);
+  }
+
   return { errors, warnings };
 }
 
