@@ -914,7 +914,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 /* ── Sheet añadir a Intereses desde Programa ── */
 /* ── Sheet conflicto de horario ── */
 /* ── Sheet rating post-función desde Mi Plan ── */
-.pv-rating-overlay{position:fixed;inset:0;background:var(--overlay-blur-78);backdrop-filter:blur(12px);z-index:9300;opacity:0;pointer-events:none;transition:opacity .25s}
+.pv-rating-overlay{position:fixed;inset:0;background:var(--overlay-blur-78);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);z-index:9300;opacity:0;pointer-events:none;transition:opacity .25s}
 .pv-rating-overlay.open{opacity:1;pointer-events:all}
 .pv-rating-sheet{position:fixed;bottom:0;left:0;right:0;background:var(--surf-2);border-top:1px solid var(--bdr);border-radius:var(--r-sheet) var(--r-sheet) 0 0;z-index:9301;display:none;transition:transform .32s cubic-bezier(.32,0,.67,0);overflow:hidden}
 .pv-rating-sheet.open{display:flex;flex-direction:column;transform:translateY(0)}
@@ -938,7 +938,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .pv-btn-save{flex:2;background:var(--amber);color:var(--black);border:none;border-radius:var(--r-pill);font-family:var(--font);font-size:var(--t-base);font-weight:var(--w-display);padding:var(--sp-btn);cursor:pointer;transition:opacity var(--tr-base)}
 .pv-btn-save:disabled{opacity:.3;cursor:default}
 .pv-btn-later{flex:1;background:none;border:1px solid var(--bdr);border-radius:var(--r-pill);color:var(--gray);font-family:var(--font);font-size:var(--t-base);font-weight:var(--w-semi);padding:var(--sp-btn);cursor:pointer;white-space:nowrap}
-.conflict-sheet-overlay{position:fixed;inset:0;background:var(--overlay-blur-72);backdrop-filter:blur(10px);z-index:9180;opacity:0;pointer-events:none;transition:opacity .25s}
+.conflict-sheet-overlay{position:fixed;inset:0;background:var(--overlay-blur-72);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);z-index:9180;opacity:0;pointer-events:none;transition:opacity .25s}
 .conflict-sheet-overlay.open{opacity:1;pointer-events:all}
 .conflict-sheet{position:fixed;bottom:0;left:0;right:0;background:var(--surf-2);border-top:1px solid var(--bdr);border-radius:var(--r-sheet) var(--r-sheet) 0 0;z-index:9181;transform:translateY(100%);transition:transform .32s cubic-bezier(.32,0,.67,0)}
 .conflict-sheet.open{transform:translateY(0)}
@@ -968,7 +968,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .conflict-btn-keep{width:100%;background:none;border:1px solid var(--bdr);border-radius:var(--r-pill);color:var(--white-60);font-family:var(--font);font-size:var(--t-sm);font-weight:var(--w-semi);padding:var(--sp-btn);cursor:pointer}
 .conflict-btn-cancel{width:100%;background:none;border:none;color:var(--gray);font-family:var(--font);font-size:var(--t-sm);font-weight:var(--w-semi);padding:10px;cursor:pointer}
 
-.prio-limit-overlay{position:fixed;inset:0;background:var(--overlay-blur-75);backdrop-filter:blur(8px);z-index:9200;opacity:0;pointer-events:none;transition:opacity .25s}
+.prio-limit-overlay{position:fixed;inset:0;background:var(--overlay-blur-75);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);z-index:9200;opacity:0;pointer-events:none;transition:opacity .25s}
 .prio-limit-overlay.open{opacity:1;pointer-events:all}
 .prio-limit-sheet{position:fixed;bottom:0;left:0;right:0;background:var(--surf-2);border-top:1px solid var(--bdr);border-radius:var(--r-sheet) var(--r-sheet) 0 0;z-index:9201;transform:translateY(100%);transition:transform .32s cubic-bezier(.32,0,.67,0)}
 .prio-limit-sheet.open{transform:translateY(0)}
@@ -1096,7 +1096,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .ag-film-item{position:relative;border-radius:var(--r-md);overflow:hidden;background:var(--card-a);border:1px solid var(--bdr);cursor:pointer;transition:opacity var(--tr-smooth)}
 .ag-film-item:active{opacity:.85}
 
-.ag-fi-btn{background:var(--overlay-55);border:1px solid var(--white-15);border-radius:var(--r-pill);cursor:pointer;font-size:var(--t-sm);padding:var(--sp-1) var(--sp-2);color:var(--white-60);line-height:1;backdrop-filter:blur(4px);transition:color var(--tr-base),border-color var(--tr-base);display:inline-flex;align-items:center;justify-content:center}
+.ag-fi-btn{background:var(--overlay-55);border:1px solid var(--white-15);border-radius:var(--r-pill);cursor:pointer;font-size:var(--t-sm);padding:var(--sp-1) var(--sp-2);color:var(--white-60);line-height:1;-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px);transition:color var(--tr-base),border-color var(--tr-base);display:inline-flex;align-items:center;justify-content:center}
 .ag-fi-btn:hover{border-color:var(--amber);color:var(--amber)}
 .ag-fi-btn.w-on{color:var(--green);border-color:var(--green-20)}
 
@@ -2653,7 +2653,7 @@ setTimeout(function(){
 <!-- ── Intereses / Planear: header unificado — fuera de ag-view ── -->
 <div class="ag-view" id="ag-view"></div>
 
-<script type="module" src="/src/main.js?v=202606232315"></script>
+<script type="module" src="/src/main.js?v=202606240713"></script>
 
 <!-- Festival switcher bottom sheet -->
 <div class="auth-sheet" id="auth-sheet" data-close-bg="AuthSheet">

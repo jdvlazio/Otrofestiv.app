@@ -1588,6 +1588,35 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar section-display-raw: {_e}')
 
+# ── CHECK: [responsive-contract] ──────────────────────────────────────────────
+# Guard cross-engine (WebKit/iOS vs Blink/Android). Caza la CLASE de bug que rompía
+# la consistencia iOS/Android, de forma determinista en cada PR:
+#   1. backdrop-filter sin -webkit- pareado → blur muerto en WKWebView viejo.
+#   2. 100vh → shift al scrollear en mobile (usar dvh).
+#   3. woff2 de @font-face que no existe en disco → el 404 que hacía caer la fuente
+#      al fallback (Arial en iOS, Roboto en Android) → divergencia visual.
+check = 'responsive-contract'
+try:
+    import re as _re_rc
+    _rc = []
+    _std = len(_re_rc.findall(r'(?<!-webkit-)backdrop-filter:[a-z]', content))
+    _wk  = len(_re_rc.findall(r'-webkit-backdrop-filter:[a-z]', content))
+    if _std != _wk:
+        _rc.append(f'backdrop-filter sin -webkit- pareado ({_std} estándar vs {_wk} -webkit-)')
+    _vh = _re_rc.findall(r'\b100vh\b', content)
+    if _vh:
+        _rc.append(f'{len(_vh)} uso(s) de 100vh — usar dvh (evita el shift mobile)')
+    _fonts = sorted(set(_re_rc.findall(r'/fonts/[A-Za-z0-9._-]+\.woff2', content)))
+    for _fp in _fonts:
+        if not os.path.exists('.' + _fp):
+            _rc.append(f'woff2 referenciado no existe en disco: {_fp}')
+    if _rc:
+        fail(check, '; '.join(_rc))
+    else:
+        ok(check, f'cross-engine OK — backdrop-filter pareado ({_wk}×), 0×100vh, {len(_fonts)} woff2 self-hosted presentes')
+except Exception as _e:
+    warn(check, f'no se pudo verificar responsive-contract: {_e}')
+
 # ── Report ────────────────────────────────────────────────────────────────────
 print()
 print('═' * 60)
