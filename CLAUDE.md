@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `4eec8ad Merge pull request #225 from jdvlazio/ci/responsive-contract-guard`
+> Último commit: `8880ddd Merge pull request #226 from jdvlazio/test/responsive-cross-engine`
 
 ---
 
