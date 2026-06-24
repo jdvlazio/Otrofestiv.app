@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `0903b3e Merge pull request #222 from jdvlazio/feat/retraso-colaborativo-fase-b`
+> Último commit: `5dc3f11 Merge pull request #223 from jdvlazio/test/badge-consenso-guard`
 
 ---
 
