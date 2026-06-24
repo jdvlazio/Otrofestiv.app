@@ -18,7 +18,9 @@ export function _sbInit(){
     _sb.auth.onAuthStateChange(async(event,session)=>{
       _sbUser=session?.user??null;
       _sbUpdateUI();
-      if(event==='SIGNED_IN'){
+      // Sesión anónima (retraso colaborativo): NO dispara cloud-load ni re-render
+      // — es solo identidad de dispositivo, no un login de usuario.
+      if(event==='SIGNED_IN' && !session?.user?.is_anonymous){
         await _cloudLoad();
         _renderAfterSync();
       }
@@ -28,6 +30,9 @@ export function _sbInit(){
       _sbUser=session?.user??null;
       _sbReady=true;
       _sbUpdateUI();
+      // Identidad de dispositivo para el retraso colaborativo: sin sesión → abrir
+      // una anónima (sin login). Invisible para la UI de cuenta y el sync de plan.
+      if(!session) _sb.auth.signInAnonymously().catch(function(e){console.warn('anon sign-in:',e);});
     });
   }catch(e){console.warn('Supabase init error:',e);}
 }

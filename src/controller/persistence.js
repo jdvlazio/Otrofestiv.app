@@ -79,7 +79,7 @@ export function loadState(){
 }
 
 export function _cloudSave(){
-  if(!_sb||!_sbUser) return;
+  if(!_sb||!_sbUser||_sbUser.is_anonymous) return; // anon = solo identidad de reportes, no sync de plan
   clearTimeout(_cloudSaveTimer);
   _cloudSaveTimer=setTimeout(async()=>{
     try{
@@ -150,7 +150,7 @@ export function _sbUpdateUI(){
   const btn=document.getElementById('auth-btn');
   const av=document.getElementById('auth-avatar');
   if(!btn) return;
-  if(_sbUser){
+  if(_sbUser && !_sbUser.is_anonymous){
     const initial=(_sbUser.email||'?')[0].toUpperCase();
     if(av) av.textContent=initial;
     btn.title=_sbUser.email;
