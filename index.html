@@ -1295,6 +1295,11 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .delay-warn{background:var(--red-08);border-top:1px solid var(--red-12);padding:var(--sp-2) var(--sp-3);font-size:var(--t-sm);color:var(--red);line-height:1.45;display:flex;gap:var(--sp-1);align-items:flex-start}
 .delay-warn-ico{flex-shrink:0;margin-top:1px}
 .delay-warn.warn-amber{color:var(--amber);background:var(--amber-06);border-color:var(--amber-20)}
+/* Retraso colaborativo (Fase B) — badge informativo de consenso ("solo informa") */
+.delay-consensus{padding:var(--sp-2) var(--sp-3);border-top:1px solid var(--bdr);font-size:var(--t-sm);line-height:1.45;display:flex;gap:var(--sp-1);align-items:flex-start}
+.delay-consensus.confirmed{background:var(--amber-06);border-top-color:var(--amber-20);color:var(--amber);font-weight:var(--w-semi)}
+.delay-consensus.tentative{color:var(--gray);border-top-style:dashed}
+.delay-consensus-src{display:block;font-size:var(--t-xs);color:var(--gray2);font-weight:var(--w-regular);margin-top:1px}
 /* ── CTAs contextuales Mi Plan ── */
 .cta-ctx{border-radius:var(--r-md);padding:var(--sp-3) var(--sp-4);display:flex;align-items:center;gap:var(--sp-3);cursor:pointer;margin-bottom:var(--sp-2)}
 
@@ -2648,7 +2653,7 @@ setTimeout(function(){
 <!-- ── Intereses / Planear: header unificado — fuera de ag-view ── -->
 <div class="ag-view" id="ag-view"></div>
 
-<script type="module" src="/src/main.js?v=202606231947"></script>
+<script type="module" src="/src/main.js?v=202606232038"></script>
 
 <!-- Festival switcher bottom sheet -->
 <div class="auth-sheet" id="auth-sheet" data-close-bg="AuthSheet">

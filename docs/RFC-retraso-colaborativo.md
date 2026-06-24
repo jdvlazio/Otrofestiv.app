@@ -119,8 +119,13 @@ El rol posee la verificación en vivo, no solo el diseño:
 **Fase A — recolección, riesgo CERO de cara al usuario (IMPLEMENTADA 23 jun 2026):**
 Anon auth + tabla + RLS + grants + **dual-write** en `setDelay`/`undoDelay`/`clearDelay` → `screening_reports` (con `sede` en la clave). **Sin quórum, sin badge, sin suscripción Realtime** (sería código muerto sin badge que actualizar). Corre en **Ficmontañas (JUL 1–5)** como banco de pruebas real para **recolectar reportes y calibrar** los umbrales de la Fase B; un reporte equivocado solo te afecta a vos, igual que hoy. Auditor repetible: `scripts/verify-delays-cloud.mjs`. *(Nota: la sesión anónima da un `uid` por dispositivo — NO sincroniza tus reportes entre tus dispositivos; eso es exclusivo del login con email.)*
 
-**Fase B — consenso + tiempo real, calibrado (se enciende con evidencia):**
-**Suscripción Realtime** (la que se difirió de A) + máquina de estados + quórum adaptativo afinado con los datos de A + badge "confirmado"/"tentativo" público ("solo informa") + endurecimiento Trust & Safety (anomalías) + verificación con 2 sesiones. Se lanza **después** de calibrar — no se apuesta un consenso a medio hornear en un festival en vivo.
+**Fase B — consenso + tiempo real (IMPLEMENTADA 23 jun 2026, defaults seguros para Ficmontañas):**
+- **Función pura** `deriveDelayConsensus` (`src/domain/delays.js`): none/tentativo/confirmado + mediana + decaimiento 120 min + quórum por identidades distintas. 8 unit tests.
+- **Suscripción Realtime** + caché + `getConsensusMap` (`delays-cloud.js`); `loader.js` (re)suscribe por festival; `main.js` repinta Mi Plan al llegar cambios.
+- **Badge** en la tira de Mi Plan ("Va atrasada · ~{min} min" confirmado ámbar; "Posible retraso · sin confirmar" tentativo punteado; disclaimer "reportado por asistentes · no oficial"). i18n es+en+pt. Pasado como **parámetro** a las funciones puras del view (no rompe `[view-purity]`). "Solo informa": no toca el plan.
+- Verificado e2e en vivo: 2 sesiones anónimas → confirmado, mediana 25, 2 reporters.
+
+**Defaults conservadores (no "calibrados" aún):** quórum fijo ≥2, decaimiento 120 min. Ficmontañas (JUL 1–5) es el banco de pruebas real; con sus datos se afinan los umbrales y se suma el **quórum adaptativo + peso por confianza + anomalías** (refinación post-festival). El estado tentativo etiquetado da valor aún a baja densidad sin mentir.
 
 ## 14. Copy / i18n
 Todo string nuevo es **artefacto de Content Design** → va a `src/i18n/i18n.js` (es+en+pt) con paridad COPY‑R4.
