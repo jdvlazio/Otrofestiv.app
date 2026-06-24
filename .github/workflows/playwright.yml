@@ -36,7 +36,10 @@ jobs:
         run: npm ci
 
       - name: Install Playwright browsers
-        run: npx playwright install --with-deps chromium
+        # webkit = motor de iOS para el spec responsive cross-engine (proyecto
+        # ios-mobile). chromium cubre la suite de comportamiento + el proyecto
+        # android-small (Blink@360).
+        run: npx playwright install --with-deps chromium webkit
 
       - name: Smoke tests
         run: npx playwright test tests/smoke.spec.js
@@ -46,6 +49,13 @@ jobs:
 
       - name: Feature tests
         run: npx playwright test tests/auth.spec.js tests/search.spec.js tests/i18n.spec.js
+
+      - name: Cross-engine responsive tests
+        # Invariantes de layout deterministas bajo WebKit@390 (ios-mobile) +
+        # Blink@360 (android-small). El filtro de archivo sólo matchea esos dos
+        # proyectos (chromium tiene testIgnore sobre responsive.spec.js); la suite
+        # de comportamiento de arriba sigue corriendo SÓLO en chromium@390.
+        run: npx playwright test tests/responsive.spec.js
 
       - name: Run visual audit
         run: |

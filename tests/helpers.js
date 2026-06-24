@@ -33,6 +33,18 @@ async function enterFestival(page, festId, simTime) {
   // garantizada. #splash-sel-btn (estático) nunca fue señal válida.
   await page.waitForSelector('html[data-app-ready="1"]', { state: 'attached', timeout: 15000 });
 
+  // Gate extra para WebKit (motor de iOS, más lento en arrancar que Blink): el
+  // marcador data-app-ready se setea al cerrar el bootstrap síncrono, pero bajo
+  // WebKit el TEST BRIDGE (FESTIVAL_CONFIG/selectSplashFest en globalThis) puede
+  // aún no estar visible para el primer evaluate → "FESTIVAL_CONFIG is not
+  // defined". Esperar a que ambos símbolos existan cierra esa ventana sin un
+  // timeout fijo (probado: elimina el race bajo el proyecto ios-mobile).
+  await page.waitForFunction(
+    () => typeof FESTIVAL_CONFIG !== 'undefined' && typeof selectSplashFest === 'function',
+    null,
+    { timeout: 15000 }
+  );
+
   const selName = await page.locator('#splash-sel-name').textContent().catch(() => '');
   if (!selName.toLowerCase().includes(festId.replace(/\d+/g, '').toLowerCase())) {
     await selectFestival(page, festId);

@@ -29,7 +29,29 @@ module.exports = defineConfig({
     locale: 'es-CO',                              // idioma determinista — evita variaciones de CI runner
   },
   projects: [
-    { name: 'chromium', use: { ...devices['Desktop Chrome'] } },
+    // Suite de comportamiento (T01–T10, smoke, features…) — sigue corriendo SOLO
+    // en Blink/desktop @390. testIgnore excluye el spec responsive: éste se
+    // ejecuta exclusivamente bajo los proyectos cross-engine de abajo, no aquí.
+    {
+      name: 'chromium',
+      use: { ...devices['Desktop Chrome'] },
+      testIgnore: /responsive\.spec\.js/,
+    },
+    // ── Proyectos cross-engine: SOLO el spec responsive (testMatch acota) ──────
+    // Razón de ser del Paso 2 del plan de robustez (memoria
+    // responsive-robustness-plan): cubrir los 2 motores reales (WebKit/iOS +
+    // Blink/Android) × tamaños extremos sin tener los dispositivos. No tocan la
+    // suite de comportamiento — sólo miden invariantes de layout deterministas.
+    {
+      name: 'ios-mobile',      // WebKit @390 — motor de iOS (Safari/WKWebView)
+      testMatch: /responsive\.spec\.js/,
+      use: { ...devices['iPhone 14'] },
+    },
+    {
+      name: 'android-small',   // Blink @360 — viewport clase Redmi 8 / gama baja
+      testMatch: /responsive\.spec\.js/,
+      use: { ...devices['Pixel 7'], viewport: { width: 360, height: 640 } },
+    },
   ],
   webServer: {
     // Servidor CONCURRENTE (ThreadingHTTPServer). El `python3 -m http.server`
