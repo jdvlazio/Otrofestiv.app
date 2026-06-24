@@ -236,6 +236,17 @@ export function travelWarn(s1,s2){
   return null;
 }
 
+// Retraso colaborativo (Fase B) — badge informativo desde el consenso derivado.
+// Pure string-builder. con = {state:'none'|'tentative'|'confirmed', delayMin, reporters}.
+// "Solo informa": no toca el plan. Testeado en delayConsensusBadge.test.js.
+export function delayConsensusBadge(con){
+  if(!con || con.state==='none') return '';
+  if(con.state==='confirmed'){
+    return `<div class="delay-consensus confirmed"><span class="delay-warn-ico">${ICONS.alert}</span><span>${t('delay_consensus_confirmed',{min:con.delayMin})} · ${t('delay_consensus_reporters',{n:con.reporters})}<span class="delay-consensus-src">${t('delay_consensus_src')}</span></span></div>`;
+  }
+  return `<div class="delay-consensus tentative"><span>${t('delay_consensus_tentative')}<span class="delay-consensus-src">${t('delay_consensus_src')}</span></span></div>`;
+}
+
 export function mplanEndStr(t,d){const m=toMin(t)+d;return String(Math.floor(m/60)%24).padStart(2,'0')+':'+String(m%60).padStart(2,'0');}
 
 export function mplanBlockType(s){

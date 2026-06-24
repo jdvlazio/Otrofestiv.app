@@ -13,7 +13,7 @@ import {
   ICONS, _secLabel, _secLabelFull, _sectionColor, makeEventPoster, parseProgramTitle, renderAvBlocksHTML, renderFlowProgress,
 } from './components.js';
 import {
-  DAYS, DAY_SHORT_EN, _dayChips, editorialFrame, _isEditorialPoster, _langDates, _lblLocalized, _mkCortoItemHtml, _posterThumb, dayChip, dayLabel, dayLabelLong, durFmt, emptyState, emptyStateHero, flagFmt, getFilmPoster, isToday, mplanBlockType, mplanEndStr, sala, starsText, travelWarn, vcfg,
+  DAYS, DAY_SHORT_EN, _dayChips, editorialFrame, _isEditorialPoster, _langDates, _lblLocalized, _mkCortoItemHtml, _posterThumb, dayChip, dayLabel, dayLabelLong, durFmt, emptyState, emptyStateHero, flagFmt, getFilmPoster, isToday, mplanBlockType, mplanEndStr, sala, starsText, travelWarn, vcfg, delayConsensusBadge,
 } from './helpers.js';
 import {
   _festDate, _festNowMin, festivalEnded, minToStr, parseDur, simNow, simTodayStr, toMin,
@@ -558,11 +558,7 @@ export function renderContextualHeader(state, consensus){
       // Consenso colaborativo (Fase B) — informativo, NO toca el plan ("solo informa").
       // Se muestra aunque uno no haya reportado: es la señal de los demás asistentes.
       const _con = consensus && consensus[cloudScreeningKey(next._title, next.day, next.time, next.venue)];
-      if(_con && _con.state==='confirmed'){
-        consensusHtml=`<div class="delay-consensus confirmed"><span class="delay-warn-ico">${ICONS.alert}</span><span>${t('delay_consensus_confirmed',{min:_con.delayMin})} · ${t('delay_consensus_reporters',{n:_con.reporters})}<span class="delay-consensus-src">${t('delay_consensus_src')}</span></span></div>`;
-      }else if(_con && _con.state==='tentative'){
-        consensusHtml=`<div class="delay-consensus tentative"><span>${t('delay_consensus_tentative')}<span class="delay-consensus-src">${t('delay_consensus_src')}</span></span></div>`;
-      }
+      consensusHtml = delayConsensusBadge(_con);
       if(delayMins>0){
         delayHtml=`<div class="delay-row">
           <span class="delay-lbl">+${delayMins} min</span>
