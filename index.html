@@ -341,7 +341,15 @@ window.sentryOnLoad = function() {
    2 · RESET & BASE
 ════════════════════════════════════════════════════════ */
 *{box-sizing:border-box;margin:0;padding:0}
-html,body{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+/* overflow-x:clip — la app es mobile-first y NUNCA debe scrollear en horizontal.
+   Sin esto, los expansores de tap-target (::after{position:absolute;inset:-6px})
+   de los botones pegados al borde derecho (hdr-search-icon, view-toggle-btn…)
+   sangran 6px más allá del viewport; WebKit/iOS los cuenta en scrollWidth (Blink
+   los recorta) → 6px de overflow horizontal sólo en iOS. Va en html+body: WebKit
+   NO propaga `clip` de body al viewport (sí lo hace con hidden/auto/scroll), así
+   que clipear el root es lo que recorta el scroll del documento. `clip` (no
+   `hidden`) no crea contenedor de scroll: overflow-y sigue `visible`, sticky ok. */
+html,body{-webkit-text-size-adjust:100%;text-size-adjust:100%;overflow-x:clip}
 html{-webkit-tap-highlight-color:transparent}
 body{background:var(--bg);color:var(--white);font-family:var(--font),'Plus Jakarta Sans Fallback',system-ui,sans-serif;min-height:100dvh;touch-action:pan-y;overscroll-behavior-x:none}
 
@@ -2653,7 +2661,7 @@ setTimeout(function(){
 <!-- ── Intereses / Planear: header unificado — fuera de ag-view ── -->
 <div class="ag-view" id="ag-view"></div>
 
-<script type="module" src="/src/main.js?v=202606240713"></script>
+<script type="module" src="/src/main.js?v=202606240829"></script>
 
 <!-- Festival switcher bottom sheet -->
 <div class="auth-sheet" id="auth-sheet" data-close-bg="AuthSheet">
