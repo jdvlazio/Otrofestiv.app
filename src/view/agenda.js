@@ -18,6 +18,9 @@ import {
 import {
   _festDate, _festNowMin, festivalEnded, minToStr, parseDur, simNow, simTodayStr, toMin,
 } from '../domain/time.js';
+// Consenso colaborativo de retraso (Fase B): renderAgenda (impura/exenta) lo lee
+// del controller y lo pasa como dato a las funciones puras del view.
+import { getConsensusMap, cloudScreeningKey } from '../controller/delays-cloud.js';
 import {
   screeningPassed,
 } from '../domain/film.js';
@@ -67,7 +70,7 @@ export function renderAgenda(){
   } else if(activeMNav==='mnav-miplan'){
     // ── Mi Plan: stepper de progreso + calendario + sugerencias ──
     const _progressHtmlPlan=(!festivalEnded()&&(!savedAgenda||!savedAgenda.schedule||!savedAgenda.schedule.length))?renderFlowProgress(state,'miplan'):'';
-    view.innerHTML=_progressHtmlPlan+renderSavedAgendaHTML(state);
+    view.innerHTML=_progressHtmlPlan+renderSavedAgendaHTML(state, getConsensusMap());
     _scrollMiPlanToNow();
     _updateMiPlanBadge();
   } else {
@@ -464,7 +467,7 @@ export function renderFilmAlternatives(state,title,day,time){
   </div>`;
 }
 
-export function renderContextualHeader(state){
+export function renderContextualHeader(state, consensus){
   const {savedAgenda, FILMS, watched, prioritized, filmRatings, filmDelays, _activeFestId, _lang} = state.snapshot();
   const ph=_getFestivalPhase();
   if(!ph) return '';
@@ -546,11 +549,20 @@ export function renderContextualHeader(state){
     // ── Delay controls — solo cuando está en curso ──
     let delayHtml='';
     let warnHtml='';
+    let consensusHtml='';
     if(isNow){
       const safeT=(next._title||'').replace(/'/g,"&#39;");
       const safeV=(next.venue||'').replace(/"/g,'&quot;');
       const _dk=_delayKey(next);
       const delayMins=filmDelays[_dk]||0;
+      // Consenso colaborativo (Fase B) — informativo, NO toca el plan ("solo informa").
+      // Se muestra aunque uno no haya reportado: es la señal de los demás asistentes.
+      const _con = consensus && consensus[cloudScreeningKey(next._title, next.day, next.time, next.venue)];
+      if(_con && _con.state==='confirmed'){
+        consensusHtml=`<div class="delay-consensus confirmed"><span class="delay-warn-ico">${ICONS.alert}</span><span>${t('delay_consensus_confirmed',{min:_con.delayMin})} · ${t('delay_consensus_reporters',{n:_con.reporters})}<span class="delay-consensus-src">${t('delay_consensus_src')}</span></span></div>`;
+      }else if(_con && _con.state==='tentative'){
+        consensusHtml=`<div class="delay-consensus tentative"><span>${t('delay_consensus_tentative')}<span class="delay-consensus-src">${t('delay_consensus_src')}</span></span></div>`;
+      }
       if(delayMins>0){
         delayHtml=`<div class="delay-row">
           <span class="delay-lbl">+${delayMins} min</span>
@@ -603,7 +615,7 @@ export function renderContextualHeader(state){
           <div class="ctx-next-detail">${next.time} · ${vc.short}</div>
         </div>
       </div>
-      ${delayHtml}${warnHtml}
+      ${consensusHtml}${delayHtml}${warnHtml}
     </div>`;
   }
 
@@ -903,12 +915,12 @@ export function renderFilmListHTML(state){
   return html;
 }
 
-export function renderSavedAgendaHTML(state){
+export function renderSavedAgendaHTML(state, consensus){
   // ⚠️ FIX CRÍTICO — NO REMOVER (Apr 2026)
   // try/catch permanente: un error en renderMiPlanCalendar u otras subfunciones
   // causaba que Mi Agenda quedara en blanco sin ningún mensaje de error visible.
   // Este wrapper aísla el fallo y muestra el error en pantalla en lugar de silencio.
-  try{ return _renderSavedAgendaHTML(state); }
+  try{ return _renderSavedAgendaHTML(state, consensus); }
   catch(err){
     /* renderSavedAgendaHTML error — silent in production */
     return`<div class="error-box">
@@ -918,12 +930,12 @@ export function renderSavedAgendaHTML(state){
   }
 }
 
-export function _renderSavedAgendaHTML(state){
+export function _renderSavedAgendaHTML(state, consensus){
   const {savedAgenda, FILMS, watched, _activeFestId, FESTIVAL_DATES} = state.snapshot();
   if(festivalEnded()){
     // Con películas vistas: poster grid via renderContextualHeader
     if(watched.size>0){
-      const _eh=renderContextualHeader(state);
+      const _eh=renderContextualHeader(state, consensus);
       return _eh?`<div class="saved-agenda">${_eh}</div>`:'';
     }
     // Sin películas vistas: empty state canónico
@@ -957,7 +969,7 @@ export function _renderSavedAgendaHTML(state){
     </div>
   </div>`:'';
 
-  const _ctxHeader=renderContextualHeader(state);
+  const _ctxHeader=renderContextualHeader(state, consensus);
   const _nextStrip=''; // delay controls integrated into ctx-header
   const _unconfirmed=renderUnconfirmed(state,all);
   let html=`<div class="saved-agenda">

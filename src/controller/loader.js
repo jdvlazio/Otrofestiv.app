@@ -13,6 +13,7 @@ import { showToast } from '../view/feedback.js';
 import { _renderProgramaContent, lugarClose } from '../view/programa.js';
 import { _fixStickyOffset } from '../view/agenda.js';
 import { loadState } from './persistence.js';
+import { subscribeDelaysCloud } from './delays-cloud.js';
 import { _updateProgramaActiveFilter, initProgramaModeBar, showDayView, switchMainNav } from './pipeline.js';
 import { seccionClose } from './overlays.js';
 import { setProgramaView } from './handlers.js';
@@ -366,6 +367,9 @@ export async function loadFestival(id){
   _renderFestivalSelector(id);
   // Persist choice
   storage.setActiveFestId(id);
+  // Retraso colaborativo (Fase B): (re)suscribir a los reportes de este festival.
+  // Fire-and-forget — no bloquea el render; el badge se pinta al llegar datos.
+  subscribeDelaysCloud();
   // Render — await dos rAFs: primero renderiza, segundo confirma el paint
   closeFestivalSheet();
   switchMainNav('mnav-cartelera');

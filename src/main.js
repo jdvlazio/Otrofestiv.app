@@ -119,6 +119,7 @@ import {
 import {
   toggleWL, toggleWatched, togglePelPrio, togglePelWL, setDelay, undoDelay, clearDelay, removeFromAgenda, addSuggestion, checkinLaVi, checkinNoLaVi, forceInclude, togglePriority, swapPriority, markWatchedFromPlan, confirmReplace, removeFilmFromScenario, _dismissNotice, selectMiPlanDay, miPlanNav, toggleMplanProg, setActivePlanFilm, selectFromDetail, toggleFilmAlternatives, toggleArchive, _toggleEveningFilms, filterByVenue, filterByDay, filterBySection, setInteresesView, setProgramaMode, toggleProgramaView, setProgramaView, setProgramaChip, clearProgramaChip, _pafClearSec, _pafClearVenue, _toggleWLFromList, saveCurrentScenario, _scrollToAgSection, _setExpandedFilm, _closePelAndRemove, _closePelAndRate, _navTo, _closeAuthAndReset, _toggleCtxOlder, _toggleWatchedAndClose, _toggleWLAndClose, _activatePlanFilm, _scrollToSuggestions, _removeConflictModal, _scrollToTop, _searchOpenFilm, _searchOpenCorto,
 } from './controller/handlers.js';
+import { setDelaysRerender } from './controller/delays-cloud.js';
 
 // ── Step 8d-4: controller/loader.js (loadFestival + dismissSplash) ───────────
 import {
@@ -630,7 +631,7 @@ FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202606231947';
+const BUILD_VERSION='202606232038';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';
@@ -1575,6 +1576,12 @@ const _msToNextMin=(60-new Date().getSeconds())*1000;
 setTimeout(function(){ _startTickLoop(); }, _msToNextMin);
 // Mientras tanto, tick inmediato para estado inicial correcto
 updateAgTab();
+
+// Retraso colaborativo (Fase B): al llegar un cambio por Realtime, repintar Mi Plan
+// (donde vive el badge). Targeted — solo si esa vista está activa.
+setDelaysRerender(function(){
+  if(activeMNav==='mnav-miplan' && activeView==='agenda') renderAgenda();
+});
 
 // ── Reactivar al volver al primer plano ──────────────────────
 // iOS/Android suspenden setInterval cuando la app va a background.
