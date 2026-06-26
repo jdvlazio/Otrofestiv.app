@@ -738,6 +738,392 @@
       "duration": "120 min"
     },
     {
+      "title": "Cortometraje Ficción",
+      "section": "📽️ Cortometrajes",
+      "type": "event",
+      "is_cortos": true,
+      "info": true,
+      "unscheduled": true,
+      "flags": "🇨🇴🇫🇷🇲🇽🇧🇷🇪🇨🇪🇸🇺🇸",
+      "film_list": [
+        {
+          "title": "Refracción",
+          "director": "Isabella Palacio Mesa",
+          "country": "Colombia",
+          "genre": "Ficción",
+          "duration": "11 min"
+        },
+        {
+          "title": "La Mona",
+          "director": "Laura Gutiérrez Ardila",
+          "country": "Colombia",
+          "genre": "Ficción"
+        },
+        {
+          "title": "Kanekalon",
+          "director": "Sara J. Asprilla",
+          "country": "Colombia",
+          "genre": "Ficción",
+          "duration": "12 min"
+        },
+        {
+          "title": "A las 9 es la cita",
+          "director": "Carlos Ospina",
+          "country": "Colombia",
+          "genre": "Ficción",
+          "duration": "18 min"
+        },
+        {
+          "title": "Gabriel",
+          "director": "Edwin Daniel Díaz",
+          "country": "Colombia",
+          "genre": "Ficción"
+        },
+        {
+          "title": "La gran hazaña",
+          "director": "Luber Yesid Zúñiga Ordóñez",
+          "country": "Colombia",
+          "genre": "Ficción",
+          "duration": "14 min"
+        },
+        {
+          "title": "Sukua",
+          "director": "Omar E. Ospina Giraldo",
+          "country": "Colombia",
+          "genre": "Ficción",
+          "duration": "16 min"
+        },
+        {
+          "title": "Sofiane",
+          "director": "Fabien Ara",
+          "country": "Francia",
+          "genre": "Ficción"
+        },
+        {
+          "title": "Lo que se guarda",
+          "director": "Chava Méndez",
+          "country": "México",
+          "genre": "Ficción",
+          "duration": "18 min"
+        },
+        {
+          "title": "Favela Amarela",
+          "director": "Thiago Tuchu + Nicolas Lobato",
+          "country": "Brasil",
+          "genre": "Ficción",
+          "duration": "20 min"
+        },
+        {
+          "title": "El mejor chocolate del mundo",
+          "director": "John Agudelo Cluño",
+          "country": "Colombia",
+          "genre": "Ficción"
+        },
+        {
+          "title": "Malicia",
+          "director": "Edward Gómez",
+          "country": "Colombia",
+          "genre": "Ficción"
+        },
+        {
+          "title": "Época de Plagas",
+          "director": "Gabriela Calvache",
+          "country": "Ecuador/España/Estados Unidos",
+          "genre": "Ficción",
+          "duration": "19 min"
+        }
+      ]
+    },
+    {
+      "title": "Cortometraje Documental",
+      "section": "📽️ Cortometrajes",
+      "type": "event",
+      "is_cortos": true,
+      "info": true,
+      "unscheduled": true,
+      "flags": "🇨🇴🇫🇷🇪🇸",
+      "film_list": [
+        {
+          "title": "Madres de nacimiento",
+          "director": "Gloria Isabel Gómez Ceballos",
+          "country": "Colombia/Francia",
+          "genre": "Documental"
+        },
+        {
+          "title": "Tejiendo un árbol",
+          "director": "Álvaro Cardona",
+          "country": "Colombia",
+          "genre": "Documental",
+          "duration": "18 min"
+        },
+        {
+          "title": "Campesinos de ciudad",
+          "director": "Tomás Antonio Madrid + José Santiago Correa",
+          "country": "Colombia",
+          "genre": "Documental"
+        },
+        {
+          "title": "ADI, Filla da luz",
+          "director": "Horacio Cabilla",
+          "country": "España/Malí",
+          "genre": "Documental"
+        },
+        {
+          "title": "Sombras en la niebla",
+          "director": "Pedro Pablo Vega",
+          "country": "Colombia",
+          "genre": "Documental",
+          "duration": "25 min"
+        },
+        {
+          "title": "La asociación",
+          "director": "Juan Camilo Muñoz Quintero",
+          "country": "Colombia",
+          "genre": "Documental"
+        }
+      ]
+    },
+    {
+      "title": "Animación",
+      "section": "📽️ Cortometrajes",
+      "type": "event",
+      "is_cortos": true,
+      "info": true,
+      "unscheduled": true,
+      "flags": "🇨🇴🇪🇸🇵🇪🇫🇷🇩🇪",
+      "film_list": [
+        {
+          "title": "Replay",
+          "director": "Gaby Nivia Moncayo",
+          "country": "Colombia",
+          "genre": "Animación"
+        },
+        {
+          "title": "Mundo Pecera",
+          "director": "Marco Toledo",
+          "country": "España",
+          "genre": "Animación"
+        },
+        {
+          "title": "Tuktu, Padre Maíz",
+          "director": "Mauricio Prieto Muriel",
+          "country": "Colombia",
+          "genre": "Animación",
+          "duration": "13 min"
+        },
+        {
+          "title": "Memoria Colectiva",
+          "director": "Cristina Colmenares",
+          "country": "Perú/Francia",
+          "genre": "Animación",
+          "duration": "12 min"
+        },
+        {
+          "title": "Zizuma",
+          "director": "Fátima Correa",
+          "country": "Colombia",
+          "genre": "Animación"
+        },
+        {
+          "title": "Dino Mates",
+          "director": "Manuel Martínez Arcos",
+          "country": "Alemania",
+          "genre": "Animación"
+        },
+        {
+          "title": "Emechiche",
+          "director": "Juan Camilo González Moreno",
+          "country": "Colombia",
+          "genre": "Animación",
+          "duration": "11 min"
+        },
+        {
+          "title": "The devil room",
+          "director": "Duban Pinzón",
+          "country": "Colombia",
+          "genre": "Animación"
+        },
+        {
+          "title": "Self Loathing",
+          "director": "Maria Jaramillo Ramírez",
+          "country": "Colombia",
+          "genre": "Animación"
+        },
+        {
+          "title": "Mi Casa es su Casa",
+          "director": "Joan Mayorga",
+          "country": "Colombia",
+          "genre": "Animación",
+          "duration": "5 min"
+        },
+        {
+          "title": "Relatos del camino",
+          "director": "Daniel Prieto Muriel",
+          "country": "Colombia",
+          "genre": "Animación",
+          "duration": "12 min"
+        }
+      ]
+    },
+    {
+      "title": "Siembra Cine",
+      "section": "📽️ Cortometrajes",
+      "type": "event",
+      "is_cortos": true,
+      "info": true,
+      "unscheduled": true,
+      "flags": "🇨🇴",
+      "film_list": [
+        {
+          "title": "Voces que quedan",
+          "director": "Ingrid Bonilla Rodríguez",
+          "country": "Colombia",
+          "genre": "Siembra Cine"
+        },
+        {
+          "title": "Encontré Lo Que Buscaba",
+          "director": "Ana Cristina Zapata",
+          "country": "Colombia",
+          "genre": "Siembra Cine"
+        },
+        {
+          "title": "Sonidos de la resistencia",
+          "director": "Juan Ruiz",
+          "country": "Colombia",
+          "genre": "Siembra Cine"
+        },
+        {
+          "title": "Doña Lidia en la montaña",
+          "director": "Andrés Fernando Cuervo",
+          "country": "Colombia",
+          "genre": "Siembra Cine"
+        },
+        {
+          "title": "Co-madres",
+          "director": "Ingryd Ríos Tamayo",
+          "country": "Colombia",
+          "genre": "Siembra Cine"
+        }
+      ]
+    },
+    {
+      "title": "Eco Corto",
+      "section": "📽️ Cortometrajes",
+      "type": "event",
+      "is_cortos": true,
+      "info": true,
+      "unscheduled": true,
+      "flags": "🇨🇴🇫🇷🇧🇷",
+      "film_list": [
+        {
+          "title": "RENACER",
+          "director": "Sangría Films / Muriel Barra",
+          "country": "Colombia/Francia",
+          "genre": "Eco Corto"
+        },
+        {
+          "title": "Donde Nace el Nombre",
+          "director": "Juan Vanegas",
+          "country": "Colombia",
+          "genre": "Eco Corto"
+        },
+        {
+          "title": "Barro Ancestral",
+          "director": "Guilherme Bacalhao",
+          "country": "Brasil",
+          "genre": "Eco Corto"
+        },
+        {
+          "title": "La grandiosa",
+          "director": "Viviana Reinoso C.",
+          "country": "Colombia",
+          "genre": "Eco Corto"
+        },
+        {
+          "title": "Selva Nublada",
+          "director": "Viviana Sánchez Prada",
+          "country": "Colombia",
+          "genre": "Eco Corto"
+        },
+        {
+          "title": "Arde Berlín",
+          "director": "Mario Mantilla",
+          "country": "Colombia",
+          "genre": "Eco Corto"
+        }
+      ]
+    },
+    {
+      "title": "Naturaleza",
+      "section": "📽️ Cortometrajes",
+      "type": "event",
+      "is_cortos": true,
+      "info": true,
+      "unscheduled": true,
+      "flags": "🇨🇴🇫🇷🇲🇽🇵🇪",
+      "film_list": [
+        {
+          "title": "El Canto de Las Aves",
+          "director": "Muriel Barra",
+          "country": "Colombia/Francia",
+          "genre": "Naturaleza"
+        },
+        {
+          "title": "Chichakg",
+          "director": "Juan Manuel Díaz García",
+          "country": "México",
+          "genre": "Naturaleza"
+        },
+        {
+          "title": "Armadillos, la voz bajo el suelo",
+          "director": "Alejandro Calderón",
+          "country": "Colombia",
+          "genre": "Naturaleza",
+          "duration": "10 min"
+        },
+        {
+          "title": "Endémicos",
+          "director": "Gustavo Carrasco Zúñiga",
+          "country": "Perú",
+          "genre": "Naturaleza"
+        },
+        {
+          "title": "El legado del tapir",
+          "director": "Gustavo Carrasco Zúñiga",
+          "country": "Perú",
+          "genre": "Naturaleza"
+        }
+      ]
+    },
+    {
+      "title": "Ventana Regional",
+      "section": "📽️ Cortometrajes",
+      "type": "event",
+      "is_cortos": true,
+      "info": true,
+      "unscheduled": true,
+      "flags": "🇨🇴",
+      "film_list": [
+        {
+          "title": "La voz del río Tatayamba",
+          "director": "Jean López",
+          "country": "Colombia",
+          "genre": "Ventana Regional"
+        },
+        {
+          "title": "Custodias",
+          "director": "Daniela Suárez",
+          "country": "Colombia",
+          "genre": "Ventana Regional"
+        },
+        {
+          "title": "De caciques y poetas",
+          "country": "Colombia",
+          "genre": "Ventana Regional"
+        }
+      ]
+    },
+    {
       "title": "Herencia: los cantos de la tierra",
       "section": "🌎 Largometraje Latinoamericano",
       "director": "Iván Acosta",

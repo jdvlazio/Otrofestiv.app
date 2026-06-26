@@ -52,6 +52,20 @@ test('event sin time → NO genera error de time', () => {
   assert.ok(!r.errors.some(e => e.includes('time')));
 });
 
+test('catálogo de cortos (is_cortos+unscheduled+film_list) sin day/time → válido, sin errors', () => {
+  const r = validateFilm({ title: 'Cortometraje Ficción', type: 'event', is_cortos: true, unscheduled: true,
+    section: '📽️ Cortometrajes', film_list: [{ title: 'Madres de nacimiento', country: 'Colombia' }] }, DAYS, VENUES);
+  assert.strictEqual(r.valid, true);
+  assert.strictEqual(r.drop, false);
+  assert.deepStrictEqual(r.errors, []);
+});
+
+test('exención es NARROW: is_cortos sin unscheduled y sin day → SÍ error de day', () => {
+  const r = validateFilm({ title: 'Bloque', type: 'event', is_cortos: true,
+    section: 'X', film_list: [{ title: 'x' }] }, DAYS, VENUES);
+  assert.ok(r.errors.some(e => e.includes('day')));
+});
+
 test('section faltante → warning, sigue válido (no error)', () => {
   const r = validateFilm({ title: 'A', day: '2026-06-03', time: '10:30 AM' }, DAYS, VENUES);
   assert.strictEqual(r.valid, true);

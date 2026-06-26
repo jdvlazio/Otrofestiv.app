@@ -131,8 +131,13 @@ export function openPelSheet(title){
   const totalFn=FILMS.filter(fi=>fi.title===f.title).length;
   const unica=totalFn===1;
   const DAY_ABB=['MAR','MIÉ','JUE','VIE','SÁB','DOM'];
-  const future=screenings.filter(s=>!screeningPassed(s)).sort((a,b)=>a.day_order-b.day_order||toMin(a.time)-toMin(b.time));
-  const past=screenings.filter(s=>screeningPassed(s));
+  // Solo funciones AGENDADAS (con día/hora/sede) generan fila de screening. Un
+  // bloque-catálogo de cortos sin sesión asignada (is_cortos+unscheduled) no tiene
+  // función → 0 filas (abajo se muestra su lista de cortos). Los films normales
+  // siempre traen día/hora/sede (validateFilm lo exige) → no se filtran.
+  const scheduled=screenings.filter(s=>s.day&&s.time&&s.venue);
+  const future=scheduled.filter(s=>!screeningPassed(s)).sort((a,b)=>a.day_order-b.day_order||toMin(a.time)-toMin(b.time));
+  const past=scheduled.filter(s=>screeningPassed(s));
   const allScr=[...future,...past];
   const rows=allScr.map(s=>{
     const dayAbb=dayLabel(s.day)||s.day;
@@ -202,10 +207,10 @@ export function openPelSheet(title){
       </div>
     </div>
     <div class="pel-sheet-divider"></div>
-    <div class="pel-sheet-section-lbl">${f.type==='event'?t('label_horario'):allScr.length===1?t('label_funcion'):t('label_funciones_pl')}${totalFn>1&&f.type!=='event'?`<span class="ml-2 count-badge cb-neutral">${totalFn}</span>`:''}</div>
+    ${allScr.length>0?`<div class="pel-sheet-section-lbl">${f.type==='event'?t('label_horario'):allScr.length===1?t('label_funcion'):t('label_funciones_pl')}${totalFn>1&&f.type!=='event'?`<span class="ml-2 count-badge cb-neutral">${totalFn}</span>`:''}</div>`:''}
     ${(()=>{const _n=NOTICES.find(n=>n.title===f.title&&n.festival===(_activeFestId||_DEFAULT_FEST_ID));if(!_n)return'';const _info=`${_n.newDay||''} ${_n.newTime||''}${_n.newVenue?' · '+_n.newVenue:''}`.trim();const _msg=_n.type==='cancelled'?t('notice_funcion_canc'):t('notice_reprog_a',{info:_info});return`<div class="notice-banner-row"><span class="notice-badge">${_n.type==='cancelled'?t('notice_cancelada'):t('notice_reprog_short')}</span><span class="notice-banner-txt">${_msg}</span></div>`;})()}
     ${_metaBanners(f)}
-    <div class="pel-sheet-screenings">${rows}</div>
+    ${allScr.length>0?`<div class="pel-sheet-screenings">${rows}</div>`:''}
     ${(()=>{
       const _tk=FESTIVAL_CONFIG[_activeFestId]||{};
       if(!_tk.ticket_url||festivalEnded()) return '';

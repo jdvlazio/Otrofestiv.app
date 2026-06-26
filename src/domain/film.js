@@ -41,9 +41,14 @@ export function validateFilm(f, dayKeys, venues){
     return { valid:false, drop:true, errors:['title faltante, vacío o no-string (film inutilizable)'], warnings };
   }
   const isEvent = f.type==='event';
+  // Catálogo de cortos SIN sesión asignada (is_cortos + unscheduled + film_list):
+  // vive en buscador/Explorar sin día/hora hasta que el festival publique la
+  // jornada. NO es un bug de datos → exento de los chequeos day/time.
+  const isUnscheduledCatalog = !!f.is_cortos && !!f.unscheduled
+    && Array.isArray(f.film_list) && f.film_list.length>0;
   // day — ERROR (keep): debe ser clave exacta de dayKeys (FESTIVAL_DATES[day] +
   // agrupación por día). day inválido → film invisible / mal-agrupado.
-  if(Array.isArray(dayKeys) && dayKeys.length){
+  if(!isUnscheduledCatalog && Array.isArray(dayKeys) && dayKeys.length){
     if(f.day==null || !dayKeys.includes(f.day)){
       errors.push(`day "${f.day}" no está en dayKeys`);
     }
