@@ -146,8 +146,11 @@ function validateFestival(fname, data) {
     }
 
     // ── RULE 2: is_cortos must have film_list ─────────────────────────────
+    // GUARD anti-recaída (jun 2026): un bloque is_cortos VACÍO es una cáscara que
+    // invisibiliza cortos que SÍ están en el festival (pasó con los 49 cortos
+    // "pausados"). Error bloqueante: o trae su film_list, o no lleva is_cortos.
     if (isCortos && (!film.film_list || film.film_list.length === 0)) {
-      warnings.push(`"${title}": is_cortos:true pero film_list vacío`);
+      errors.push(`"${title}": is_cortos:true pero film_list vacío (cáscara — agregar los cortos o quitar is_cortos)`);
     }
 
     // ── RULE 3: is_cortos flags must be derived from film_list ────────────
@@ -186,11 +189,17 @@ function validateFestival(fname, data) {
     }
 
     // ── RULE 5: required film fields ──────────────────────────────────────
-    if (!film.day) errors.push(`"${title}": campo 'day' requerido`);
-    if (!film.time) errors.push(`"${title}": campo 'time' requerido`);
-    if (!film.venue) warnings.push(`"${title}": campo 'venue' vacío`);
+    // Excepción CATÁLOGO: un bloque is_cortos marcado `unscheduled` con su
+    // film_list vive en buscador/Explorar SIN día/hora — la jornada se asigna
+    // cuando el festival publique la programación. No exige day/time/venue/day_order.
+    const isUnscheduledCatalog = isCortos && film.unscheduled && film.film_list && film.film_list.length > 0;
+    if (!isUnscheduledCatalog) {
+      if (!film.day) errors.push(`"${title}": campo 'day' requerido`);
+      if (!film.time) errors.push(`"${title}": campo 'time' requerido`);
+      if (!film.venue) warnings.push(`"${title}": campo 'venue' vacío`);
+      if (film.day_order === undefined) warnings.push(`"${title}": falta 'day_order'`);
+    }
     if (!film.section) warnings.push(`"${title}": campo 'section' vacío`);
-    if (film.day_order === undefined) warnings.push(`"${title}": falta 'day_order'`);
 
     // ── RULE 5a: duplicado real (mismo título+día+hora) ──────────────────
     if (film.title) {

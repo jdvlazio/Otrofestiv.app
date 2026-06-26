@@ -337,14 +337,19 @@ node scripts/validate-festivals.js [festival-id]
 - `ticket_url` presente sin `ticketing_model` válido (`"paid"`/`"mixed"`)
 - `ticket_url` que no empieza con `https://`
 - `ticketing_model` presente sin `ticket_url`
+- `is_cortos: true` con `film_list` vacío (cáscara — invisibiliza cortos reales)
 
 **Warnings (no bloquean pero requieren revisión antes del deploy):**
 - Cobertura de poster < 95%
 - Cobertura de género < 80%
 - Duración ≤ 0 o > 400 min
 - Venue vacío
-- `is_cortos: true` sin `film_list`
+- Sinopsis > 600 chars (condensar)
 - Emoji de sección duplicado (salvo retrospectivas)
+
+> **Cortos sin horario:** NO se pausan fuera del JSON. Se montan como **catálogo
+> vivo** (`is_cortos` + `unscheduled` + `film_list`, sin `day`/`time`) — buscables
+> en el acto; la jornada se asigna cuando el festival la publique. Ver `docs/SCHEMA.md`.
 
 ---
 

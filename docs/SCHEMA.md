@@ -103,6 +103,34 @@ fiestas, conciertos, performances, presentaciones virtuales.
   `duration` (planificable). No (entra/sale cuando quiere) → `info: true`.
 - `info` se propaga a los screenings exploded vía el `Object.assign` del loader.
 
+### Bloques de cortos: `is_cortos` + `film_list` (+ `unscheduled`)
+
+Un **bloque de cortos** agrupa varios cortometrajes que se proyectan juntos:
+
+```jsonc
+{ "title": "Cortometraje Documental", "section": "📽️ Cortometrajes",
+  "type": "event", "is_cortos": true, "flags": "<derivado>",
+  "film_list": [ { "title": "Madres de nacimiento", "director": "...",
+                   "country": "Colombia/Francia", "genre": "Documental",
+                   "duration": "18 min" }, ... ] }
+```
+
+- `is_cortos: true` **requiere** `film_list` no vacío (guard bloqueante en
+  `validate-festivals.js` — un bloque vacío invisibiliza cortos que sí están).
+- Cada item del `film_list` es **buscable como card propia** (`_searchAll` los
+  indexa; `_searchOpenCorto` abre su detalle). `flags` del bloque se **deriva**
+  de los países del `film_list`. Póster por item vía `getCortoItemPoster` (sin
+  póster → fallback editorial). Sinopsis = pase de Content Design aparte.
+
+**`unscheduled: true`** — catálogo de cortos **sin sesión asignada todavía**: el
+corto está EN el festival pero el festival aún no publicó en qué jornada va. Vive
+en **buscador + Explorar**, NO bajo un día concreto. Es la única excepción a la
+regla day/time de abajo: `is_cortos + unscheduled + film_list` **no exige
+`day`/`time`/`venue`** (exento en `validate-festivals.js` y en `validateFilm`).
+Cuando el festival publique la programación, se le asigna `day`/`time`/`venue` y
+deja de ser `unscheduled`. **Regla de criterio:** un corto sin horario se monta
+igual (catálogo) — nunca se "pausa" fuera del JSON.
+
 ### Campo `day` — regla crítica
 
 `day` debe ser una clave exacta de `FESTIVAL_CONFIG[id].dayKeys`.
