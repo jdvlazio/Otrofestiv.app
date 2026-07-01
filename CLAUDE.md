@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `f32bd95 Merge pull request #229 from jdvlazio/fix/marketing-slides-bg-0a0a0a`
+> Último commit: `90d2373 Merge pull request #230 from jdvlazio/content/ficmontanas-cortos-catalogo`
 
 ---
 
