@@ -158,10 +158,10 @@
       "synopsis": "Apertura oficial de la 12ª edición con música en vivo y homenaje a los 60 años del Quindío. Entrega de reconocimientos.",
       "day": "2026-07-01",
       "date": "2026-07-01",
-      "time": "19:00",
+      "time": "19:30",
       "venue": "Cinemateca de Salento",
       "synopsis_lang": "es",
-      "day_order": 4,
+      "day_order": 5,
       "duration": "30 min"
     },
     {
@@ -174,7 +174,7 @@
       "time": "18:30",
       "venue": "Cinemateca de Salento",
       "synopsis_lang": "es",
-      "day_order": 3,
+      "day_order": 4,
       "info": true
     },
     {
@@ -211,19 +211,6 @@
       "day_order": 6,
       "genre": "Comedia dramática",
       "has_qa": true
-    },
-    {
-      "title": "Monólogo en vivo · Fresa y Chocolate",
-      "section": "🇨🇺 Cine Cubano",
-      "type": "event",
-      "synopsis": "Monólogo en vivo como antesala a la presentación de Fresa y Chocolate.",
-      "day": "2026-07-01",
-      "date": "2026-07-01",
-      "time": "19:30",
-      "venue": "Cinemateca de Salento",
-      "synopsis_lang": "es",
-      "day_order": 5,
-      "info": true
     },
     {
       "title": "Cinco historias de amor y un bolerón desesperado",
@@ -643,7 +630,7 @@
       "date": "2026-07-04",
       "time": "22:00",
       "venue": "Carpa Cinema - Parque Salento",
-      "day_order": 10,
+      "day_order": 11,
       "info": true
     },
     {
@@ -775,7 +762,7 @@
       "language": "Español",
       "synopsis_lang": "es",
       "venue": "Carpa Cinema - Parque Salento",
-      "day_order": 8
+      "day_order": 9
     },
     {
       "title": "Santa María",
@@ -797,7 +784,7 @@
       "language": "Español",
       "synopsis_lang": "es",
       "venue": "Carpa Cinema - Parque Salento",
-      "day_order": 9
+      "day_order": 10
     },
     {
       "title": "Me Dicen el Panzer",
@@ -1034,7 +1021,7 @@
       "time": "16:00",
       "venue": "Cinemateca de Salento",
       "duration": "120 min",
-      "day_order": 0,
+      "day_order": 7,
       "flags": "🇨🇴🇲🇽",
       "film_list": [
         {
@@ -1104,7 +1091,7 @@
       "time": "16:00",
       "venue": "Carpa Cinema - Parque Salento",
       "duration": "120 min",
-      "day_order": 0,
+      "day_order": 8,
       "flags": "🇫🇷🇲🇽🇪🇸🇧🇷🇵🇪🇩🇪🇨🇴",
       "film_list": [
         {
@@ -1176,7 +1163,7 @@
       "time": "16:00",
       "venue": "Cinemateca de Salento",
       "duration": "120 min",
-      "day_order": 1,
+      "day_order": 5,
       "flags": "🇨🇴🇫🇷",
       "film_list": [
         {
@@ -1347,6 +1334,20 @@
           "genre": "Ventana Regional"
         }
       ]
+    },
+    {
+      "title": "Conversatorio · Álvaro Olmos Torrico",
+      "section": "💬 Conversatorios & Masterclass",
+      "type": "event",
+      "director": "Álvaro Olmos Torrico",
+      "synopsis": "Foro Latinoamericano: conversatorio con Álvaro Olmos Torrico, director de La hija del cóndor.",
+      "synopsis_lang": "es",
+      "day": "2026-07-01",
+      "date": "2026-07-01",
+      "time": "17:30",
+      "venue": "Cinemateca de Salento",
+      "duration": "60 min",
+      "day_order": 3
     }
   ]
 }
