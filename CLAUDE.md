@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `982df62 Merge pull request #231 from jdvlazio/content/ficmontanas-cortos-programacion`
+> Último commit: `368c13d Merge pull request #232 from jdvlazio/content/ficmontanas-dia2-oficial`
 
 ---
 

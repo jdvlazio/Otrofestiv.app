@@ -315,7 +315,7 @@
       "time": "14:00",
       "venue": "Cinemateca de Salento",
       "synopsis_lang": "es",
-      "day_order": 3,
+      "day_order": 4,
       "genre": "Drama biográfico"
     },
     {
@@ -376,28 +376,6 @@
       "genre": "Documental"
     },
     {
-      "title": "Balada para niños muertos",
-      "section": "✨ Exhibiciones Especiales",
-      "type": "film",
-      "director": "Jorge Navas",
-      "country": "Colombia",
-      "language": "Español",
-      "year": 2020,
-      "duration": "80 min",
-      "synopsis": "Retrato del escritor y guionista caleño Andrés Caicedo y su obsesión por el cine y la literatura de terror —el 'gótico tropical'— a través de testimonios, archivo y fragmentos de sus diarios.",
-      "synopsis_en": "A portrait of Cali writer and screenwriter Andrés Caicedo and his obsession with horror cinema and literature —the 'tropical gothic'— through testimonies, archival material and fragments of his diaries.",
-      "poster": "/6gMOupmPYkrHhhCtZC9d02laxug.jpg",
-      "flags": "🇨🇴",
-      "has_qa": true,
-      "day": "2026-07-03",
-      "date": "2026-07-03",
-      "time": "10:00",
-      "venue": "Cinemateca de Salento",
-      "synopsis_lang": "es",
-      "day_order": 1,
-      "genre": "Documental"
-    },
-    {
       "title": "Cada voz lleva su angustia",
       "section": "✨ Exhibiciones Especiales",
       "type": "film",
@@ -440,7 +418,7 @@
       "time": "16:00",
       "venue": "Cinemateca de Salento",
       "synopsis_lang": "es",
-      "day_order": 4,
+      "day_order": 5,
       "duration": "60 min"
     },
     {
@@ -506,34 +484,6 @@
       "synopsis_lang": "es",
       "day_order": 4,
       "duration": "60 min"
-    },
-    {
-      "title": "Masterclass · Estéticas del Cine Documental",
-      "section": "💬 Conversatorios & Masterclass",
-      "type": "event",
-      "director": "Jorge Navas",
-      "synopsis": "Masterclass sobre las estéticas del cine documental, con Jorge Navas.",
-      "day": "2026-07-03",
-      "date": "2026-07-03",
-      "time": "09:00",
-      "venue": "Cinemateca de Salento",
-      "synopsis_lang": "es",
-      "day_order": 0,
-      "duration": "120 min"
-    },
-    {
-      "title": "Masterclass · Archivos Fílmicos y Memoria",
-      "section": "💬 Conversatorios & Masterclass",
-      "type": "event",
-      "director": "Jorge Mario Vera",
-      "synopsis": "Masterclass sobre archivos fílmicos y memoria: usos, desafíos y posibilidades en la creación cinematográfica. Fundación Patrimonio Fílmico.",
-      "day": "2026-07-03",
-      "date": "2026-07-03",
-      "time": "13:00",
-      "venue": "Cinemateca de Salento",
-      "synopsis_lang": "es",
-      "day_order": 2,
-      "duration": "120 min"
     },
     {
       "title": "Premiación y Cierre Oficial · 12ª edición",
@@ -903,7 +853,7 @@
       "time": "17:00",
       "venue": "Cinemateca de Salento",
       "duration": "180 min",
-      "day_order": 5,
+      "day_order": 6,
       "flags": "🇨🇴🇫🇷",
       "film_list": [
         {
@@ -1304,23 +1254,20 @@
       "venue": "Cinemateca de Salento",
       "duration": "60 min",
       "day_order": 1
-    }
-  ],
-  "_parked": [
+    },
     {
       "title": "Masterclass · Mirada Documental",
       "section": "💬 Conversatorios & Masterclass",
       "type": "event",
       "director": "Priscila Padilla",
       "synopsis": "Masterclass sobre la mirada documental, con la cineasta Priscila Padilla.",
-      "day": "2026-07-02",
-      "date": "2026-07-02",
+      "day": "2026-07-03",
+      "date": "2026-07-03",
       "time": "09:00",
       "venue": "Cinemateca de Salento",
       "synopsis_lang": "es",
       "day_order": 0,
-      "duration": "120 min",
-      "_parked_reason": "removido del Día 2 (2 jul) — no está en el post oficial de programación del Día 2; reubicar si aparece en el post de otro día"
+      "duration": "120 min"
     },
     {
       "title": "Un nuevo amanecer",
@@ -1336,14 +1283,13 @@
       "poster": "/assets/ficmontanas/un-nuevo-amanecer.png",
       "flags": "🇨🇴",
       "has_qa": true,
-      "day": "2026-07-02",
-      "date": "2026-07-02",
+      "day": "2026-07-03",
+      "date": "2026-07-03",
       "time": "10:00",
       "venue": "Cinemateca de Salento",
       "synopsis_lang": "es",
       "day_order": 1,
-      "genre": "Documental",
-      "_parked_reason": "removido del Día 2 (2 jul) — no está en el post oficial de programación del Día 2; reubicar si aparece en el post de otro día"
+      "genre": "Documental"
     },
     {
       "title": "Panel · Retina Latina: Experiencias de Circulación",
@@ -1351,14 +1297,13 @@
       "type": "event",
       "director": "Invitada: Yenny Chaverra",
       "synopsis": "Panel conversatorio sobre experiencias de circulación, con la plataforma Retina Latina.",
-      "day": "2026-07-02",
-      "date": "2026-07-02",
+      "day": "2026-07-03",
+      "date": "2026-07-03",
       "time": "13:00",
       "venue": "Cinemateca de Salento",
       "synopsis_lang": "es",
-      "day_order": 2,
-      "duration": "60 min",
-      "_parked_reason": "removido del Día 2 (2 jul) — no está en el post oficial de programación del Día 2; reubicar si aparece en el post de otro día"
+      "day_order": 3,
+      "duration": "60 min"
     },
     {
       "title": "Cinco historias de amor y un bolerón desesperado",
@@ -1374,14 +1319,81 @@
       "synopsis_en": "An ensemble tale set in Havana: five stories of love and heartbreak intertwine around Yenny, a love advisor who dreams of the Eiffel Tower and of rekindling an old romance.",
       "poster": "/assets/ficmontanas/cinco-historias.png",
       "flags": "🇨🇺",
-      "day": "2026-07-02",
-      "date": "2026-07-02",
+      "day": "2026-07-03",
+      "date": "2026-07-03",
       "time": "20:00",
       "venue": "Cinemateca de Salento",
       "synopsis_lang": "es",
       "day_order": 7,
-      "genre": "Comedia romántica",
-      "_parked_reason": "removido del Día 2 (2 jul) — no está en el post oficial de programación del Día 2; reubicar si aparece en el post de otro día"
+      "genre": "Comedia romántica"
+    },
+    {
+      "title": "Conversatorio · Diálogo con el público",
+      "section": "💬 Conversatorios & Masterclass",
+      "type": "event",
+      "synopsis": "Diálogo abierto con el público tras la proyección de Un nuevo amanecer (Priscila Padilla).",
+      "synopsis_lang": "es",
+      "day": "2026-07-03",
+      "date": "2026-07-03",
+      "time": "11:30",
+      "venue": "Cinemateca de Salento",
+      "duration": "60 min",
+      "day_order": 2
+    }
+  ],
+  "_parked": [
+    {
+      "title": "Masterclass · Estéticas del Cine Documental",
+      "section": "💬 Conversatorios & Masterclass",
+      "type": "event",
+      "director": "Jorge Navas",
+      "synopsis": "Masterclass sobre las estéticas del cine documental, con Jorge Navas.",
+      "day": "2026-07-03",
+      "date": "2026-07-03",
+      "time": "09:00",
+      "venue": "Cinemateca de Salento",
+      "synopsis_lang": "es",
+      "day_order": 0,
+      "duration": "120 min",
+      "_parked_reason": "removido del Día 3 (3 jul) — no está en el post oficial del Día 3; reubicar si aparece en el post de otro día"
+    },
+    {
+      "title": "Balada para niños muertos",
+      "section": "✨ Exhibiciones Especiales",
+      "type": "film",
+      "director": "Jorge Navas",
+      "country": "Colombia",
+      "language": "Español",
+      "year": 2020,
+      "duration": "80 min",
+      "synopsis": "Retrato del escritor y guionista caleño Andrés Caicedo y su obsesión por el cine y la literatura de terror —el 'gótico tropical'— a través de testimonios, archivo y fragmentos de sus diarios.",
+      "synopsis_en": "A portrait of Cali writer and screenwriter Andrés Caicedo and his obsession with horror cinema and literature —the 'tropical gothic'— through testimonies, archival material and fragments of his diaries.",
+      "poster": "/6gMOupmPYkrHhhCtZC9d02laxug.jpg",
+      "flags": "🇨🇴",
+      "has_qa": true,
+      "day": "2026-07-03",
+      "date": "2026-07-03",
+      "time": "10:00",
+      "venue": "Cinemateca de Salento",
+      "synopsis_lang": "es",
+      "day_order": 1,
+      "genre": "Documental",
+      "_parked_reason": "removido del Día 3 (3 jul) — no está en el post oficial del Día 3; reubicar si aparece en el post de otro día"
+    },
+    {
+      "title": "Masterclass · Archivos Fílmicos y Memoria",
+      "section": "💬 Conversatorios & Masterclass",
+      "type": "event",
+      "director": "Jorge Mario Vera",
+      "synopsis": "Masterclass sobre archivos fílmicos y memoria: usos, desafíos y posibilidades en la creación cinematográfica. Fundación Patrimonio Fílmico.",
+      "day": "2026-07-03",
+      "date": "2026-07-03",
+      "time": "13:00",
+      "venue": "Cinemateca de Salento",
+      "synopsis_lang": "es",
+      "day_order": 2,
+      "duration": "120 min",
+      "_parked_reason": "removido del Día 3 (3 jul) — no está en el post oficial del Día 3; reubicar si aparece en el post de otro día"
     }
   ]
 }
