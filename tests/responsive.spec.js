@@ -99,4 +99,26 @@ test.describe('Responsive — invariantes de layout cross-engine', () => {
     await settleLayout(page);
     expect(await horizontalOverflow(page)).toBeLessThanOrEqual(1);
   });
+
+  // R5 — Contrato dual del bottom-sheet (regla ≥768px de index.html): en móvil
+  // (<768) el sheet ocupa TODO el ancho; en tablet (≥768) se centra a max-width
+  // 560px en vez de estirarse de borde a borde. Un solo test protege ambos
+  // comportamientos según el viewport del proyecto (390/360 vs tablet@768).
+  test('R5 — pel-sheet: full-width en móvil, centrado ≤560px en tablet', async ({ page }) => {
+    await page.evaluate(() => {
+      const f = FILMS.find(x => x.type !== 'event') || FILMS[0];
+      openPelSheet(f.title);
+    });
+    await page.waitForSelector('#pel-sheet.open', { state: 'attached', timeout: 8000 });
+    await settleLayout(page);
+    const r = await rectOf(page, '#pel-sheet');
+    const vp = page.viewportSize();
+    expect(r).not.toBeNull();
+    if (vp.width >= 768) {
+      expect(r.width).toBeLessThanOrEqual(562);                                 // max-width 560 (+2 subpíxel)
+      expect(Math.abs(r.left - (vp.width - r.right))).toBeLessThanOrEqual(2);   // centrado
+    } else {
+      expect(r.width).toBeGreaterThanOrEqual(vp.width - 2);                     // full-width intacto
+    }
+  });
 });
