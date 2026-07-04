@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `37ac46c Merge pull request #234 from jdvlazio/db/harden-delays`
+> Último commit: `57ea5df Merge pull request #236 from jdvlazio/test/responsive-tablet-guard`
 
 ---
 
