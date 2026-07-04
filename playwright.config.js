@@ -52,6 +52,11 @@ module.exports = defineConfig({
       testMatch: /responsive\.spec\.js/,
       use: { ...devices['Pixel 7'], viewport: { width: 360, height: 640 } },
     },
+    {
+      name: 'tablet',          // WebKit @768 — iPad; ejercita el media query ≥768px
+      testMatch: /responsive\.spec\.js/,
+      use: { ...devices['iPad Mini'], viewport: { width: 768, height: 1024 } },
+    },
   ],
   webServer: {
     // Servidor CONCURRENTE (ThreadingHTTPServer). El `python3 -m http.server`
