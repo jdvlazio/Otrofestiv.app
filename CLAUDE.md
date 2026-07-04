@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `368c13d Merge pull request #232 from jdvlazio/content/ficmontanas-dia2-oficial`
+> Último commit: `37ac46c Merge pull request #234 from jdvlazio/db/harden-delays`
 
 ---
 

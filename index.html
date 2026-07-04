@@ -351,7 +351,7 @@ window.sentryOnLoad = function() {
    `hidden`) no crea contenedor de scroll: overflow-y sigue `visible`, sticky ok. */
 html,body{-webkit-text-size-adjust:100%;text-size-adjust:100%;overflow-x:clip}
 html{-webkit-tap-highlight-color:transparent}
-body{background:var(--bg);color:var(--white);font-family:var(--font),'Plus Jakarta Sans Fallback',system-ui,sans-serif;min-height:100dvh;touch-action:pan-y;overscroll-behavior-x:none}
+body{background:var(--bg);color:var(--white);font-family:var(--font),'Plus Jakarta Sans Fallback',system-ui,sans-serif;min-height:100dvh;touch-action:pan-y;overscroll-behavior-x:none;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 
 /* ════════════════════════════════════════════════════════
    3 · LAYOUT
@@ -852,7 +852,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 /* ── Bottom Sheet ── */
 .pel-sheet-overlay{position:fixed;inset:0;background:var(--overlay-blur-70);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);z-index:9000;opacity:0;transition:opacity var(--tr-smooth);pointer-events:none}
 .pel-sheet-overlay.open{opacity:1;pointer-events:all}
-.pel-sheet{position:fixed;bottom:0;left:0;right:0;background:var(--surf-2);border-radius:var(--r-sheet) var(--r-sheet) 0 0;z-index:9001;max-height:88vh;overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;transform:translateY(100%);transition:transform .3s cubic-bezier(.32,0,.67,0)}
+.pel-sheet{position:fixed;bottom:0;left:0;right:0;background:var(--surf-2);border-radius:var(--r-sheet) var(--r-sheet) 0 0;z-index:9001;max-height:88dvh;overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;transform:translateY(100%);transition:transform .3s cubic-bezier(.32,0,.67,0)}
 .pel-sheet.open{transform:translateY(0);transition:transform .38s cubic-bezier(.34,1.56,.64,1)}
 .pel-sheet-topbar{display:flex;align-items:center;justify-content:center;padding:var(--sp-btn) var(--sp-4) var(--sp-2);position:relative;flex-shrink:0;cursor:grab;touch-action:none}
 .pel-sheet-handle{width:36px;height:4px;background:var(--bdr);border-radius:var(--r-handle)}
@@ -1137,7 +1137,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .av-pill-rm:hover{color:var(--red)}
 .av-row-btns{display:flex;align-items:center;gap:var(--sp-2);flex-wrap:wrap}
 .av-inline-form{display:flex;align-items:center;gap:var(--sp-2);flex-wrap:wrap;margin-bottom:var(--sp-2)}
-.av-time-input{background:var(--surf);border:1px solid var(--bdr);border-radius:var(--r-md);color:var(--white);font-size:var(--t-base);padding:var(--sp-2) var(--sp-2);font-family:var(--font);width:88px;cursor:pointer;appearance:none;-webkit-appearance:none}
+.av-time-input{background:var(--surf);border:1px solid var(--bdr);border-radius:var(--r-md);color:var(--white);font-size:var(--t-md);/* 16px — iOS auto-zoomea inputs <16px al enfocar */padding:var(--sp-2) var(--sp-2);font-family:var(--font);width:88px;cursor:pointer;appearance:none;-webkit-appearance:none}
 .av-time-input:focus{outline:none;border-color:var(--amber)}
 .av-sep{font-size:var(--t-sm);color:var(--gray2)}
 .av-add-btn{background:var(--amber-10);border:1px solid var(--amber-30);border-radius:var(--r-pill);color:var(--amber);font-size:var(--t-sm);font-weight:var(--w-semi);padding:var(--sp-2) var(--sp-3);cursor:pointer;font-family:var(--font);transition:background var(--tr-base)}
@@ -1537,6 +1537,10 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 
 @media(min-width:768px){
 
+  /* Sheets bottom-anchored: en tablet no se estiran de borde a borde — se centran
+     (left:0+right:0+margin:auto centra un fixed con max-width; translateY intacto). */
+  .pel-sheet,.fs-sheet,.rating-sheet,.pv-rating-sheet,.conflict-sheet,.prio-limit-sheet,.plan-confirm-sheet{max-width:560px;margin:0 auto;border-radius:var(--r-sheet) var(--r-sheet) 0 0}
+
   :root{
     --content-w:960px;
     --content-pad:var(--sp-5);
@@ -1780,7 +1784,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
   display:flex;flex-direction:column;
   align-items:center;justify-content:space-between;
   z-index:99999;
-  padding:calc(env(safe-area-inset-top) + 14vh) 32px calc(env(safe-area-inset-bottom) + 10vh);
+  padding:calc(env(safe-area-inset-top) + 14dvh) 32px calc(env(safe-area-inset-bottom) + 10dvh);
   text-align:center;
   transition:opacity .55s ease,
              filter .55s ease,
@@ -2661,7 +2665,7 @@ setTimeout(function(){
 <!-- ── Intereses / Planear: header unificado — fuera de ag-view ── -->
 <div class="ag-view" id="ag-view"></div>
 
-<script type="module" src="/src/main.js?v=202607030922"></script>
+<script type="module" src="/src/main.js?v=202607031954"></script>
 
 <!-- Festival switcher bottom sheet -->
 <div class="auth-sheet" id="auth-sheet" data-close-bg="AuthSheet">
