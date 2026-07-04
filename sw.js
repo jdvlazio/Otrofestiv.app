@@ -6,8 +6,12 @@
 //      controllerchange en iOS WKWebView es flaky — este reload es la
 //      garantía de que HTML cacheado se descarta inmediatamente al deploy.
 
-const CACHE_NAME = 'otrofestiv-v202607031954';
-const BUILD = '202607031954';
+const CACHE_NAME = 'otrofestiv-v202607040935';
+const BUILD = '202607040935';
+// Caché PERSISTENTE de assets inmutables (pósters, iconos, fonts): NO se borra
+// en activate. Durante un festival deployamos a diario; sin esto, cada deploy
+// obligaba a re-descargar ~8MB de pósters ya vistos (señal rural en sede).
+const ASSETS_CACHE = 'otrofestiv-assets-v1';
 
 const STATIC_ASSETS = [
   '/manifest.json',
@@ -24,7 +28,8 @@ self.addEventListener('install', () => {
 self.addEventListener('activate', event => {
   event.waitUntil(
     caches.keys().then(keys => {
-      return Promise.all(keys.map(key => caches.delete(key)))
+      // Se borran los cachés versionados; ASSETS_CACHE (inmutables) sobrevive deploys.
+      return Promise.all(keys.filter(key => key !== ASSETS_CACHE).map(key => caches.delete(key)))
         .then(() => caches.open(CACHE_NAME).then(c => c.addAll(STATIC_ASSETS)))
         .then(() => self.clients.claim())
         .then(() => self.clients.matchAll({type:'window'}).then(clients => {
@@ -50,10 +55,12 @@ self.addEventListener('fetch', event => {
   const url = new URL(request.url);
   if (url.origin !== location.origin) return;
 
-  // HTML → siempre desde red, sin caché
+  // HTML → siempre desde red. no-cache (no no-store): revalida con ETag contra
+  // el servidor — 304 de ~cientos de bytes cuando no cambió, cuerpo completo
+  // cuando sí. Misma garantía de frescura por deploy, ~97% menos datos por apertura.
   if (request.destination === 'document') {
     event.respondWith(
-      fetch(new Request(request, { cache: 'no-store' }))
+      fetch(new Request(request, { cache: 'no-cache' }))
         .catch(() => caches.match(request)
           .then(c => c || new Response(OFFLINE_HTML, {headers:{'Content-Type':'text/html;charset=utf-8'}}))
         )
@@ -67,7 +74,7 @@ self.addEventListener('fetch', event => {
   // Fallback a caché para offline.
   if (url.pathname.startsWith('/src/')) {
     event.respondWith(
-      fetch(new Request(request, { cache: 'no-store' }))
+      fetch(new Request(request, { cache: 'no-cache' }))
         .then(res => {
           if (res.ok) { const clone = res.clone(); caches.open(CACHE_NAME).then(c => c.put(request, clone)); }
           return res;
@@ -102,7 +109,7 @@ self.addEventListener('fetch', event => {
   // put, así que no envenena el caché.
   if (url.pathname.startsWith('/festivals/')) {
     event.respondWith(
-      fetch(new Request(request, { cache: 'no-store' }))
+      fetch(new Request(request, { cache: 'no-cache' }))
         .then(res => {
           if (res.ok) { const clone = res.clone(); caches.open(CACHE_NAME).then(c => c.put(request, clone)); }
           return res;
@@ -112,8 +119,15 @@ self.addEventListener('fetch', event => {
     return;
   }
 
-  // Assets estáticos → caché primero
+  // Assets estáticos (pósters, iconos, fonts — inmutables) → caché primero,
+  // guardados en ASSETS_CACHE que sobrevive deploys (ver arriba).
   event.respondWith(
-    caches.match(request).then(cached => cached || fetch(request))
+    caches.match(request).then(cached => cached || fetch(request).then(res => {
+      if (res.ok && (url.pathname.startsWith('/assets/') || url.pathname.startsWith('/fonts/'))) {
+        const clone = res.clone();
+        caches.open(ASSETS_CACHE).then(c => c.put(request, clone));
+      }
+      return res;
+    }))
   );
 });
