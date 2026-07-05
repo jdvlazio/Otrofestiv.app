@@ -512,32 +512,6 @@
       "info": true
     },
     {
-      "title": "Presentación y saludo virtual · Stephania Piñeros",
-      "section": "🎉 Eventos Especiales",
-      "type": "event",
-      "synopsis": "Presentación y saludo virtual de Stephania Piñeros, antesala de MU-KI-RA.",
-      "synopsis_lang": "es",
-      "day": "2026-07-05",
-      "date": "2026-07-05",
-      "time": "09:00",
-      "venue": "Carpa Cinema - Parque Salento",
-      "day_order": 0,
-      "info": true
-    },
-    {
-      "title": "Presentación Especial Salento · Performance Estatus Cumbia",
-      "section": "🎉 Eventos Especiales",
-      "type": "event",
-      "synopsis": "Performance en vivo: Estatus Cumbia.",
-      "synopsis_lang": "es",
-      "day": "2026-07-05",
-      "date": "2026-07-05",
-      "time": "20:00",
-      "venue": "Carpa Cinema - Parque Salento",
-      "day_order": 8,
-      "info": true
-    },
-    {
       "title": "Concierto de Cierre · Artistas Sorpresa",
       "section": "🎉 Eventos Especiales",
       "type": "event",
@@ -668,7 +642,7 @@
       "title": "Me Dicen el Panzer",
       "section": "🌎 Largometraje Latinoamericano",
       "director": "Rodrigo Quintero",
-      "country": "Panamá-España",
+      "country": "Panamá",
       "year": 2024,
       "duration": "90 min",
       "genre": "Drama biográfico",
@@ -1100,6 +1074,28 @@
           "director": "Sangría Films / Muriel Barra",
           "country": "Colombia/Francia",
           "genre": "Eco Corto"
+        },
+        {
+          "title": "La voz del río Tatayamba",
+          "director": "Jean López",
+          "country": "Colombia",
+          "genre": "Ventana Regional"
+        },
+        {
+          "title": "Custodias",
+          "director": "Daniela Suárez",
+          "country": "Colombia",
+          "genre": "Ventana Regional"
+        },
+        {
+          "title": "De caciques y poetas: una historieta del Quindío",
+          "country": "Colombia",
+          "genre": "Ventana Regional"
+        },
+        {
+          "title": "Saberes comunitarios y agroalimentarios en el Quindío · Proyectos PANNC para las Paces",
+          "country": "Colombia",
+          "genre": "Ventana Regional"
         }
       ]
     },
@@ -1208,6 +1204,11 @@
         },
         {
           "title": "De caciques y poetas",
+          "country": "Colombia",
+          "genre": "Ventana Regional"
+        },
+        {
+          "title": "Saberes comunitarios y agroalimentarios en el Quindío · Proyectos PANNC para las Paces",
           "country": "Colombia",
           "genre": "Ventana Regional"
         }
@@ -1339,6 +1340,58 @@
       "venue": "Cinemateca de Salento",
       "duration": "60 min",
       "day_order": 2
+    },
+    {
+      "section": "📽️ Cortometrajes",
+      "type": "event",
+      "is_cortos": true,
+      "date": "2026-07-04",
+      "day_order": 8,
+      "flags": "🇫🇷🇲🇽🇪🇸🇧🇷🇵🇪🇩🇪🇨🇴",
+      "title": "Competencia — Día 5 · Domingo (Carpa Cinema)",
+      "day": "2026-07-05",
+      "time": "15:00",
+      "duration": "120 min",
+      "venue": "Carpa Cinema - Parque Salento",
+      "film_list": [
+        {
+          "title": "El legado del tapir",
+          "director": "Gustavo Carrasco Zúñiga",
+          "country": "Perú",
+          "genre": "Naturaleza"
+        },
+        {
+          "title": "Favela Amarela",
+          "director": "Thiago Tuchu + Nicolas Lobato",
+          "country": "Brasil",
+          "genre": "Ficción"
+        },
+        {
+          "title": "Época de Plagas",
+          "director": "Gabriela Calvache",
+          "country": "Ecuador/España/Estados Unidos",
+          "genre": "Ficción",
+          "duration": "19 min"
+        },
+        {
+          "title": "Arde Berlín",
+          "director": "Mario Mantilla",
+          "country": "Colombia",
+          "genre": "Eco Corto"
+        },
+        {
+          "title": "La grandiosa",
+          "director": "Viviana Reinoso C.",
+          "country": "Colombia",
+          "genre": "Eco Corto"
+        },
+        {
+          "title": "Zizuma, nuestra casa de agua y nubes",
+          "director": "Fátima Correa",
+          "country": "Colombia",
+          "genre": "Animación"
+        }
+      ]
     }
   ],
   "_parked": [
@@ -1394,6 +1447,32 @@
       "day_order": 2,
       "duration": "120 min",
       "_parked_reason": "removido del Día 3 (3 jul) — no está en el post oficial del Día 3; reubicar si aparece en el post de otro día"
+    },
+    {
+      "title": "Presentación y saludo virtual · Stephania Piñeros",
+      "section": "🎉 Eventos Especiales",
+      "type": "event",
+      "synopsis": "Presentación y saludo virtual de Stephania Piñeros, antesala de MU-KI-RA.",
+      "synopsis_lang": "es",
+      "day": "2026-07-05",
+      "date": "2026-07-05",
+      "time": "09:00",
+      "venue": "Carpa Cinema - Parque Salento",
+      "day_order": 0,
+      "info": true
+    },
+    {
+      "title": "Presentación Especial Salento · Performance Estatus Cumbia",
+      "section": "🎉 Eventos Especiales",
+      "type": "event",
+      "synopsis": "Performance en vivo: Estatus Cumbia.",
+      "synopsis_lang": "es",
+      "day": "2026-07-05",
+      "date": "2026-07-05",
+      "time": "20:00",
+      "venue": "Carpa Cinema - Parque Salento",
+      "day_order": 8,
+      "info": true
     }
   ]
 }
