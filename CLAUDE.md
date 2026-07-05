@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `263c865 Merge pull request #239 from jdvlazio/fix/search-corto-duration-min`
+> Último commit: `21461c8 Merge pull request #240 from jdvlazio/polish/empty-states-vcenter`
 
 ---
 
