@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `b340ab1 Merge pull request #256 from jdvlazio/polish/store-badges-original-look`
+> Último commit: `5263c49 Merge pull request #257 from jdvlazio/polish/favicon-transparent`
 
 ---
 
