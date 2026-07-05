@@ -2712,13 +2712,19 @@ setTimeout(function(){
   var isDev = ['localhost','127.0.0.1'].indexOf(location.hostname) >= 0;
   var hasCapacitor = !!(window.Capacitor && window.Capacitor.isNativePlatform && window.Capacitor.isNativePlatform());
   var isIOSDevice = /iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
-  var iosWebView = isIOSDevice && (!/Safari\//.test(ua) || !!(window.webkit && window.webkit.messageHandlers));
+  // iOS: la ÚNICA señal confiable es la ausencia del token "Safari/" en el UA —
+  // el WKWebView embebido de la app no lo lleva; Safari/Chrome/Firefox/Edge de
+  // iOS lo llevan todos. OJO: NO usar window.webkit.messageHandlers como señal —
+  // los navegadores de terceros en iOS son ellos mismos WKWebViews (mandato de
+  // Apple) y exponen sus propios handlers → falso positivo (bug cazado por Juan:
+  // Firefox iOS recibía la app en vez de la landing, incluso en incógnito).
+  var iosWebView = isIOSDevice && !/Safari\//.test(ua);
   var androidWebView = /Android/.test(ua) && (/; wv\)/.test(ua) || /Version\/\d/.test(ua));
   var isApp = hasCapacitor || iosWebView || androidWebView;
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202607051509";
+    s.src="/src/main.js?v=202607051520";
     document.body.appendChild(s);
   }
   if (isApp || isDev) { bootApp(); return; }
