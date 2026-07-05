@@ -2718,7 +2718,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202607051413";
+    s.src="/src/main.js?v=202607051430";
     document.body.appendChild(s);
   }
   if (isApp || isDev) { bootApp(); return; }
@@ -2732,15 +2732,25 @@ setTimeout(function(){
     var isMobile = isIOS || isAndroid;
     var sub = es ? 'Tu agenda personal para festivales de cine.' : 'Your personal film festival agenda.';
     var scan = es ? 'Escaneá para descargar' : 'Scan to download';
-    // Diseño (auditoría Juan, 5 jul): grilla de 8px, tokens del sistema, SIN
-    // jerarquía de tienda. Badges al MISMO alto exacto (48px, PNGs de Play
-    // recortados). Dos layouts medidos, nunca wrap accidental:
-    //   ≥560px: fila  [badge · sep vertical 1×32 · badge], gaps 24
-    //   <560px: columna [badge / sep horizontal 32×1 / badge], gaps 16
-    // Ritmo vertical (grilla 8): wordmark @22dvh · tagline +16 · badges +48 ·
-    // QR +56. Todo centrado en un solo eje — simetría total.
-    var badgeA = '<a class="sg-badge" href="' + APPSTORE + '"><img src="/assets/store/appstore-' + (es?'es':'en') + '.svg" alt="App Store"></a>';
-    var badgeG = '<a class="sg-badge" href="' + PLAY + '"><img src="/assets/store/googleplay-' + (es?'es':'en') + '.png" alt="Google Play"></a>';
+    // Diseño (auditoría Juan, 5 jul — iteración "armonía pura"): los badges
+    // OFICIALES tienen proporciones distintas (Apple 2.99:1 vs Play 3.36:1) —
+    // simetría exacta imposible con ellos. Solución de design system: DOS
+    // BOTONES PROPIOS IDÉNTICOS (210×56 exactos: mismo borde, radio, tipografía
+    // y kicker) con los logos oficiales dentro (play-icon.png EXTRAÍDO del arte
+    // oficial de Google, no redibujado; manzana = path estándar en blanco).
+    //   ≥560px: fila  [botón · sep vertical 1×32 · botón], gap 24
+    //   <560px: columna [botón / sep horizontal 32×1 / botón], gap 16
+    // Ritmo vertical (grilla 8): wordmark @22dvh · tagline +16 · botones +48 ·
+    // QR +56. Todo centrado en un solo eje — simetría medida, no estimada.
+    var kick = es ? 'Descargá en' : 'Download on';
+    var appleIco = '<svg class="sg-ico" viewBox="0 0 384 512" fill="var(--white,#F0EDE8)"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>';
+    var playIco = '<img class="sg-ico" src="/assets/store/play-icon.png" alt="">';
+    function sgBtn(href, ico, name){
+      return '<a class="sg-btn" href="' + href + '">' + ico +
+        '<span class="sg-btn-txt"><span class="sg-kick">' + kick + '</span><span class="sg-name">' + name + '</span></span></a>';
+    }
+    var badgeA = sgBtn(APPSTORE, appleIco, 'App Store');
+    var badgeG = sgBtn(PLAY, playIco, 'Google Play');
     document.body.innerHTML =
       '<style>' +
         '.sg-wrap{min-height:100dvh;display:flex;flex-direction:column;align-items:center;padding:24px;box-sizing:border-box;text-align:center;background:var(--bg,#0A0A0A);font-family:var(--font,sans-serif)}' +
@@ -2748,7 +2758,12 @@ setTimeout(function(){
         '.sg-wm{font-size:44px;font-weight:800;letter-spacing:-1px;line-height:1}' +
         '.sg-sub{color:var(--gray,#888);font-size:16px;max-width:320px;line-height:1.5;margin:16px auto 0}' +
         '.sg-badges{display:flex;align-items:center;justify-content:center;margin-top:48px}' +
-        '.sg-badge{line-height:0}.sg-badge img{height:48px;display:block}' +
+        '.sg-btn{width:210px;height:56px;box-sizing:border-box;display:flex;align-items:center;justify-content:flex-start;gap:14px;padding:0 0 0 22px;border:1px solid var(--bdr,#2A2A2A);border-radius:14px;background:#000;text-decoration:none;transition:border-color .15s}' +
+        '.sg-btn:hover{border-color:var(--gray2,#555)}' +
+        '.sg-ico{width:26px;height:26px;flex-shrink:0;display:block}' +
+        '.sg-btn-txt{display:flex;flex-direction:column;align-items:flex-start;line-height:1}' +
+        '.sg-kick{font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--gray,#888)}' +
+        '.sg-name{font-size:17px;font-weight:700;color:var(--white,#F0EDE8);margin-top:4px}' +
         '.sg-sep{background:var(--bdr,#2A2A2A);flex-shrink:0}' +
         '@media(min-width:560px){.sg-badges{flex-direction:row;gap:24px}.sg-sep{width:1px;height:32px}}' +
         '@media(max-width:559px){.sg-badges{flex-direction:column;gap:16px}.sg-sep{width:32px;height:1px}}' +
