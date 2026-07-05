@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `d078932 Merge pull request #253 from jdvlazio/feat/splash-autoselect-ongoing`
+> Último commit: `23d6255 Merge pull request #254 from jdvlazio/polish/store-landing-spacing`
 
 ---
 
