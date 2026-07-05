@@ -2703,7 +2703,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202607051024";
+    s.src="/src/main.js?v=202607051245";
     document.body.appendChild(s);
   }
   if (isNative || isDev) { bootApp(); return; }
@@ -2717,20 +2717,31 @@ setTimeout(function(){
     var isMobile = isIOS || isAndroid;
     var sub = es ? 'Tu agenda personal para festivales de cine.' : 'Your personal film festival agenda.';
     var scan = es ? 'Escaneá para descargar' : 'Scan to download';
-    var badgeA = '<a href="' + APPSTORE + '"><img src="/assets/store/appstore-' + (es?'es':'en') + '.svg" alt="App Store" style="height:52px"></a>';
-    var badgeG = '<a href="' + PLAY + '"><img src="/assets/store/googleplay-' + (es?'es':'en') + '.png" alt="Google Play" style="height:76px;margin:-12px"></a>';
-    // Móvil: la tienda de SU plataforma primero; desktop: ambas + QR.
-    var badges = isIOS ? badgeA + badgeG : isAndroid ? badgeG + badgeA : badgeA + badgeG;
+    // Auditoría de diseño (Juan, 5 jul): tokens del sistema (var(--)), SIN
+    // jerarquía de tienda (mismo orden y mismo alto en todas las plataformas),
+    // badges lado a lado con separador de 1px (var(--bdr)), wordmark más grande
+    // y arriba del centro óptico. Los PNG de Play van recortados (sin margen
+    // transparente) para que ambos badges midan exactamente igual.
+    var badgeA = '<a href="' + APPSTORE + '" style="line-height:0"><img src="/assets/store/appstore-' + (es?'es':'en') + '.svg" alt="App Store" style="height:48px;display:block"></a>';
+    var badgeG = '<a href="' + PLAY + '" style="line-height:0"><img src="/assets/store/googleplay-' + (es?'es':'en') + '.png" alt="Google Play" style="height:48px;display:block"></a>';
+    var sep = '<div style="width:1px;height:28px;background:var(--bdr)"></div>';
     document.body.innerHTML =
-      '<div style="min-height:100dvh;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:28px;padding:24px;box-sizing:border-box;text-align:center;background:#0A0A0A">' +
-        '<div style="font-size:34px;font-weight:800;letter-spacing:-.5px"><span style="color:#F0EDE8">Otro</span><span style="color:#F59E0B">festiv</span></div>' +
-        '<div style="color:#9CA3AF;font-size:16px;max-width:300px;line-height:1.5">' + sub + '</div>' +
-        '<div style="display:flex;flex-direction:column;align-items:center;gap:14px">' + badges + '</div>' +
-        (!isMobile ? '<div style="display:flex;flex-direction:column;align-items:center;gap:10px;margin-top:8px">' +
-          '<div style="background:#F0EDE8;border-radius:12px;padding:10px;line-height:0"><img src="/assets/store/qr-get.svg" alt="QR" style="width:140px;height:140px"></div>' +
-          '<div style="color:#6B7280;font-size:13px">' + scan + '</div></div>' : '') +
+      '<div style="min-height:100dvh;display:flex;flex-direction:column;align-items:center;padding:24px;box-sizing:border-box;text-align:center;background:var(--bg,#0A0A0A);font-family:var(--font,sans-serif)">' +
+        '<div style="margin-top:22dvh">' +
+          '<div style="font-size:44px;font-weight:800;letter-spacing:-1px;line-height:1"><span style="color:var(--white,#F0EDE8)">Otro</span><span style="color:var(--amber,#F59E0B)">festiv</span></div>' +
+          '<div style="color:var(--gray,#888);font-size:16px;max-width:320px;line-height:1.5;margin:18px auto 0">' + sub + '</div>' +
+        '</div>' +
+        '<div style="display:flex;align-items:center;gap:20px;flex-wrap:wrap;justify-content:center;margin-top:52px">' + badgeA + sep + badgeG + '</div>' +
+        (!isMobile ? '<div style="display:flex;flex-direction:column;align-items:center;gap:12px;margin-top:56px">' +
+          '<div style="background:var(--white,#F0EDE8);border-radius:12px;padding:10px;line-height:0"><img src="/assets/store/qr-get.svg" alt="QR" style="width:132px;height:132px"></div>' +
+          '<div style="color:var(--gray2,#555);font-size:13px">' + scan + '</div></div>' : '') +
       '</div>';
     document.body.style.background = '#0A0A0A';
+    // Landing limpia: neutralizar el marco 960px del layout desktop de la app
+    // (bordes laterales + max-width del body) que la landing heredaría.
+    document.body.style.border = 'none';
+    document.body.style.maxWidth = 'none';
+    document.documentElement.style.background = '#0A0A0A';
   }
   fetch('/version.json?sg=' + Date.now())
     .then(function(r){ return r.json(); })
