@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>Otrofestiv — Descargá la app</title>
+<!-- /get — router de descarga (patrón industria: URL única que decide por dispositivo).
+     Es el destino del QR de la landing. SOLO navegadores llegan aquí: la app nativa
+     jamás navega a /get. Por eso el redirect duro es seguro en esta página.
+     iOS → App Store · Android → Play Store · desktop/otros → raíz (landing). -->
+<style>
+  body{margin:0;background:#0A0A0A;color:#F0EDE8;font-family:system-ui;display:flex;
+       align-items:center;justify-content:center;min-height:100vh}
+  p{color:#888;font-size:14px}
+</style>
+</head>
+<body>
+<p>Redirigiendo…</p>
+<script>
+(function(){
+  var APPSTORE = 'https://apps.apple.com/app/id6769367002';
+  var PLAY     = 'https://play.google.com/store/apps/details?id=app.otrofestiv.mobile';
+  var ua = navigator.userAgent;
+  // iPadOS moderno se reporta como Mac — el touch lo delata.
+  var isIOS     = /iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
+  var isAndroid = /Android/.test(ua);
+  location.replace(isIOS ? APPSTORE : isAndroid ? PLAY : '/');
+})();
+</script>
+</body>
+</html>

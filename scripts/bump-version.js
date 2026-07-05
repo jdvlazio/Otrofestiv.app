@@ -75,7 +75,12 @@ fs.writeFileSync(idxPath, idx);
 //  canal de update de iOS, por eso ambos campos deben avanzar juntos.)
 // NOTA: promote-ios.yml queda obsoleto con este cambio.
 const vPath = path.join(ROOT, 'version.json');
-const vData = { android: build, ios: build };
+// MERGE, no overwrite: version.json puede llevar flags de runtime además de los
+// builds (ej. storeGate — kill-switch de la landing de tiendas). Reescribir el
+// objeto completo destruiría esos flags en cada deploy.
+let vPrev = {};
+try { vPrev = JSON.parse(fs.readFileSync(vPath, 'utf8')); } catch (_) {}
+const vData = { ...vPrev, android: build, ios: build };
 fs.writeFileSync(vPath, JSON.stringify(vData, null, 2) + '\n');
 
 console.log(`✅ Build: ${build}`);
