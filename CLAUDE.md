@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `bd2adad Merge pull request #255 from jdvlazio/fix/store-gate-v3-fxios`
+> Último commit: `b340ab1 Merge pull request #256 from jdvlazio/polish/store-badges-original-look`
 
 ---
 

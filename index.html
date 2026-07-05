@@ -54,8 +54,13 @@ window.sentryOnLoad = function() {
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Otrofestiv">
 <link rel="apple-touch-icon" href="/icon-192.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/icon-192.png">
-<link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
+<!-- Favicon dedicado ≠ ícono de app: solo la marca dorada sobre TRANSPARENCIA.
+     El ícono opaco #0A0A0A hacía que Safari le pintara un backdrop blanco de
+     contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
+     en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
+     home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -2724,7 +2729,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202607051544";
+    s.src="/src/main.js?v=202607051557";
     document.body.appendChild(s);
   }
   if (isApp || isDev) { bootApp(); return; }
