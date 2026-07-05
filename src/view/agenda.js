@@ -1312,7 +1312,12 @@ export function updateHorarioPrioBtn(title){
 export function getSuggestions(){
   if(!savedAgenda||!savedAgenda.schedule.length) return{};
   const saved=savedAgenda.schedule.filter(s=>!screeningPassed(s));
-  if(!saved.length) return{};
+  // OJO: NO early-return si saved quedó vacío. "Todo mi plan ya pasó" ≠ "no tengo
+  // plan": en el último día de festival, con el plan de días anteriores ya cumplido,
+  // el return {} dejaba CERO sugerencias (y el copy "plan cubierto" mintiendo)
+  // mientras el Programa del día estaba lleno. Con saved vacío el resto del código
+  // hace lo correcto: cada día futuro queda como slot "Día libre" completo y sin
+  // conflictos → se sugiere todo lo que aún se puede ver.
 
   const savedTitles=new Set(saved.map(s=>s._title));
   const byDay={};

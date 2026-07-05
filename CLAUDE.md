@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `21461c8 Merge pull request #240 from jdvlazio/polish/empty-states-vcenter`
+> Último commit: `be662ae Merge pull request #241 from jdvlazio/polish/card-title-2lines`
 
 ---
 
