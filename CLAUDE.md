@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `3d669c9 Merge pull request #249 from jdvlazio/hotfix/storegate-off`
+> Último commit: `7a7d2fb Merge pull request #250 from jdvlazio/fix/store-gate-v2`
 
 ---
 
