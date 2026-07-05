@@ -2684,29 +2684,44 @@ setTimeout(function(){
 <!-- ── Intereses / Planear: header unificado — fuera de ag-view ── -->
 <div class="ag-view" id="ag-view"></div>
 
-<!-- ── STORE GATE — "las tiendas son el hogar" (decisión 5 jul 2026) ──────────
-     La app YA NO se bootea con un tag estático: este loader decide primero.
-       · WebView de las apps (window.Capacitor, bridge inyectado nativamente
-         ANTES de cualquier JS de página) → app completa, idéntica a siempre.
-       · localhost/127.0.0.1 (CI Playwright, previews) → app completa.
-       · Cualquier navegador real → LANDING de tiendas (sin escape a la web;
-         decisión de Juan: App Store / Play Store son el único hogar).
-     Kill-switch: "storeGate": false en version.json → todos vuelven a la app
-     sin tocar código. Si el fetch de version.json falla, gana la landing
-     (estática, sin dependencias — fail-safe del objetivo, inofensivo).
+<!-- ── STORE GATE v2 — "las tiendas son el hogar" (5 jul 2026) ─────────────────
+     LECCIÓN DEL INCIDENTE v1 (la app iOS mostró la landing): window.Capacitor NO
+     es confiable con server.url remoto — el bridge no siempre se inyecta, y menos
+     con Service Worker de por medio (Capacitor issues #7269 y #5278). El gate v1
+     detectaba "app" y por default mostraba landing → falso negativo = app rota.
+
+     v2 INVIERTE la carga de la prueba: la landing solo aparece con CONFIRMACIÓN
+     POSITIVA de navegador real; cualquier ambigüedad → app (fail-open hacia la
+     app: el peor caso pasa a ser "un navegador raro ve la app", nunca "la app ve
+     la landing"). Señales de WebView (cualquiera → app):
+       · window.Capacitor (cuando el bridge sí llega)
+       · iOS/iPadOS SIN token "Safari/" en el UA — el WKWebView embebido no lo
+         lleva; Safari/Chrome/Firefox/Edge de iOS sí lo llevan todos
+       · window.webkit.messageHandlers — WKWebView con handlers nativos
+         (Capacitor los registra a nivel nativo aunque no inyecte su JS)
+       · Android con "; wv)" o token "Version/x" — WebView Android; los browsers
+         reales de Android no los llevan
+     Costo aceptado: browsers in-app (Instagram, etc.) ven la web app.
+     Kill-switch: "storeGate": false en version.json. Si el fetch de version.json
+     falla, gana la APP (v2 también invierte esto — proteger la app > el push).
      El s.src de abajo DEBE conservar el formato src="/src/main.js?v=NNNN"
      (bump-version.js lo reescribe por regex). -->
 <script>
 (function(){
-  var isNative = !!(window.Capacitor && window.Capacitor.isNativePlatform && window.Capacitor.isNativePlatform());
+  var ua = navigator.userAgent;
   var isDev = ['localhost','127.0.0.1'].indexOf(location.hostname) >= 0;
+  var hasCapacitor = !!(window.Capacitor && window.Capacitor.isNativePlatform && window.Capacitor.isNativePlatform());
+  var isIOSDevice = /iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
+  var iosWebView = isIOSDevice && (!/Safari\//.test(ua) || !!(window.webkit && window.webkit.messageHandlers));
+  var androidWebView = /Android/.test(ua) && (/; wv\)/.test(ua) || /Version\/\d/.test(ua));
+  var isApp = hasCapacitor || iosWebView || androidWebView;
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202607051245";
+    s.src="/src/main.js?v=202607051259";
     document.body.appendChild(s);
   }
-  if (isNative || isDev) { bootApp(); return; }
+  if (isApp || isDev) { bootApp(); return; }
   function showLanding(){
     var es = (navigator.language || 'es').toLowerCase().indexOf('en') !== 0;
     var APPSTORE = 'https://apps.apple.com/app/id6769367002';
@@ -2743,10 +2758,12 @@ setTimeout(function(){
     document.body.style.maxWidth = 'none';
     document.documentElement.style.background = '#0A0A0A';
   }
+  // v2: la landing exige confirmación positiva DOBLE (navegador confirmado arriba
+  // + flag storeGate===true legible). Fetch fallido o flag ausente → APP.
   fetch('/version.json?sg=' + Date.now())
     .then(function(r){ return r.json(); })
-    .then(function(v){ if (v && v.storeGate === false) bootApp(); else showLanding(); })
-    .catch(showLanding);
+    .then(function(v){ if (v && v.storeGate === true) showLanding(); else bootApp(); })
+    .catch(bootApp);
 })();
 </script>
 
