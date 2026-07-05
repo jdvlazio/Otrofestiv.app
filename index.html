@@ -2718,7 +2718,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202607051259";
+    s.src="/src/main.js?v=202607051413";
     document.body.appendChild(s);
   }
   if (isApp || isDev) { bootApp(); return; }
@@ -2732,24 +2732,40 @@ setTimeout(function(){
     var isMobile = isIOS || isAndroid;
     var sub = es ? 'Tu agenda personal para festivales de cine.' : 'Your personal film festival agenda.';
     var scan = es ? 'Escaneá para descargar' : 'Scan to download';
-    // Auditoría de diseño (Juan, 5 jul): tokens del sistema (var(--)), SIN
-    // jerarquía de tienda (mismo orden y mismo alto en todas las plataformas),
-    // badges lado a lado con separador de 1px (var(--bdr)), wordmark más grande
-    // y arriba del centro óptico. Los PNG de Play van recortados (sin margen
-    // transparente) para que ambos badges midan exactamente igual.
-    var badgeA = '<a href="' + APPSTORE + '" style="line-height:0"><img src="/assets/store/appstore-' + (es?'es':'en') + '.svg" alt="App Store" style="height:48px;display:block"></a>';
-    var badgeG = '<a href="' + PLAY + '" style="line-height:0"><img src="/assets/store/googleplay-' + (es?'es':'en') + '.png" alt="Google Play" style="height:48px;display:block"></a>';
-    var sep = '<div style="width:1px;height:28px;background:var(--bdr)"></div>';
+    // Diseño (auditoría Juan, 5 jul): grilla de 8px, tokens del sistema, SIN
+    // jerarquía de tienda. Badges al MISMO alto exacto (48px, PNGs de Play
+    // recortados). Dos layouts medidos, nunca wrap accidental:
+    //   ≥560px: fila  [badge · sep vertical 1×32 · badge], gaps 24
+    //   <560px: columna [badge / sep horizontal 32×1 / badge], gaps 16
+    // Ritmo vertical (grilla 8): wordmark @22dvh · tagline +16 · badges +48 ·
+    // QR +56. Todo centrado en un solo eje — simetría total.
+    var badgeA = '<a class="sg-badge" href="' + APPSTORE + '"><img src="/assets/store/appstore-' + (es?'es':'en') + '.svg" alt="App Store"></a>';
+    var badgeG = '<a class="sg-badge" href="' + PLAY + '"><img src="/assets/store/googleplay-' + (es?'es':'en') + '.png" alt="Google Play"></a>';
     document.body.innerHTML =
-      '<div style="min-height:100dvh;display:flex;flex-direction:column;align-items:center;padding:24px;box-sizing:border-box;text-align:center;background:var(--bg,#0A0A0A);font-family:var(--font,sans-serif)">' +
-        '<div style="margin-top:22dvh">' +
-          '<div style="font-size:44px;font-weight:800;letter-spacing:-1px;line-height:1"><span style="color:var(--white,#F0EDE8)">Otro</span><span style="color:var(--amber,#F59E0B)">festiv</span></div>' +
-          '<div style="color:var(--gray,#888);font-size:16px;max-width:320px;line-height:1.5;margin:18px auto 0">' + sub + '</div>' +
+      '<style>' +
+        '.sg-wrap{min-height:100dvh;display:flex;flex-direction:column;align-items:center;padding:24px;box-sizing:border-box;text-align:center;background:var(--bg,#0A0A0A);font-family:var(--font,sans-serif)}' +
+        '.sg-hero{margin-top:22dvh}' +
+        '.sg-wm{font-size:44px;font-weight:800;letter-spacing:-1px;line-height:1}' +
+        '.sg-sub{color:var(--gray,#888);font-size:16px;max-width:320px;line-height:1.5;margin:16px auto 0}' +
+        '.sg-badges{display:flex;align-items:center;justify-content:center;margin-top:48px}' +
+        '.sg-badge{line-height:0}.sg-badge img{height:48px;display:block}' +
+        '.sg-sep{background:var(--bdr,#2A2A2A);flex-shrink:0}' +
+        '@media(min-width:560px){.sg-badges{flex-direction:row;gap:24px}.sg-sep{width:1px;height:32px}}' +
+        '@media(max-width:559px){.sg-badges{flex-direction:column;gap:16px}.sg-sep{width:32px;height:1px}}' +
+        '.sg-qr{display:flex;flex-direction:column;align-items:center;gap:16px;margin-top:56px}' +
+        '.sg-qr-card{background:var(--white,#F0EDE8);border-radius:12px;padding:10px;line-height:0}' +
+        '.sg-qr-card img{width:128px;height:128px}' +
+        '.sg-scan{color:var(--gray2,#555);font-size:13px}' +
+      '</style>' +
+      '<div class="sg-wrap">' +
+        '<div class="sg-hero">' +
+          '<div class="sg-wm"><span style="color:var(--white,#F0EDE8)">Otro</span><span style="color:var(--amber,#F59E0B)">festiv</span></div>' +
+          '<div class="sg-sub">' + sub + '</div>' +
         '</div>' +
-        '<div style="display:flex;align-items:center;gap:20px;flex-wrap:wrap;justify-content:center;margin-top:52px">' + badgeA + sep + badgeG + '</div>' +
-        (!isMobile ? '<div style="display:flex;flex-direction:column;align-items:center;gap:12px;margin-top:56px">' +
-          '<div style="background:var(--white,#F0EDE8);border-radius:12px;padding:10px;line-height:0"><img src="/assets/store/qr-get.svg" alt="QR" style="width:132px;height:132px"></div>' +
-          '<div style="color:var(--gray2,#555);font-size:13px">' + scan + '</div></div>' : '') +
+        '<div class="sg-badges">' + badgeA + '<div class="sg-sep"></div>' + badgeG + '</div>' +
+        (!isMobile ? '<div class="sg-qr">' +
+          '<div class="sg-qr-card"><img src="/assets/store/qr-get.svg" alt="QR"></div>' +
+          '<div class="sg-scan">' + scan + '</div></div>' : '') +
       '</div>';
     document.body.style.background = '#0A0A0A';
     // Landing limpia: neutralizar el marco 960px del layout desktop de la app
