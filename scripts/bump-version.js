@@ -64,6 +64,10 @@ if (idx === idxBefore) {
   console.error('✗ index.html: src="/src/main.js?v=YYYYMMDDHHMM" no encontrado.');
   process.exit(1);
 }
+// Favicons: versionar el ?v= para bustear la caché de favicons de Safari (DB
+// local que sobrevive al reload — no cede sin cambio de URL). href sin ?v= o con
+// ?v= viejo → se estampa el build actual.
+idx = idx.replace(/(href="\/favicon(?:-192)?\.png)(?:\?v=\d{12})?(")/g, `$1?v=${build}$2`);
 fs.writeFileSync(idxPath, idx);
 
 // ── version.json — android e ios al MISMO build ──────────────────────────
