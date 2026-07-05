@@ -231,7 +231,7 @@ export function searchQuery(){
       const _dur=f.duration!=null?String(f.duration):'';
       const meta=f._isCortoItem
         ?t('label_cortometraje')+(f._prog?' · '+parseProgramTitle(f._prog.title).displayTitle:'')
-        :(_dur?_dur+' min':'')+(f.section?' · '+f.section.replace(/^[^ ]+ /,''):'');
+        :(_dur?_dur.replace(/\s*min\s*$/i,'')+' min':'')+(f.section?' · '+f.section.replace(/^[^ ]+ /,''):'');
       const _q=s=>String(s).replace(/"/g,'&quot;');
       const _siAttrs=f._isCortoItem
         ?`data-action="searchOpenCorto" data-title="${_q(f.title)}" data-country="${_q(f.country||'')}" data-dur="${_q(_dur)}" data-section="${_q(f.section||'')}" data-flags="${_q(f.flags||'🌍')}"`
