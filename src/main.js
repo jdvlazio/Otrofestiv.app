@@ -631,7 +631,7 @@ FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202607051430';
+const BUILD_VERSION='202607051444';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';
@@ -1429,22 +1429,33 @@ state.subscribeRender(
     return inProgress||nextUp||mostRecent||_DEFAULT_FEST_ID;
   }
   const activeFest=detectActiveFest();
-  // No pre-seleccionar festival: el selector arranca en placeholder ("Elegí uno")
-  // y el usuario elige SIEMPRE (regla uniforme, haya festival activo o no).
-  // detectActiveFest se sigue usando para el orden del dropdown y el render del
-  // selector in-app, pero ya no rellena el selector del splash.
-  _splashSelectedFestId=null;
-  // Sin festival seleccionado → ningún item marcado .selected; orden por tier.
-  _renderSplashDropdown(null);
-  // Modo compacto SIEMPRE: el selector es una barra mínima SIN texto — solo el
-  // chevron — que se expande al tocar (decisión de diseño: nunca "Elegí uno",
-  // haya festival próximo o no). Se aplica ANTES del reveal (splash aún invisible)
-  // → sin flash. Al elegir, selectSplashFest quita .compact y la barra crece con
-  // el nombre del festival.
+  // Regla del selector (decisión Juan, 5 jul 2026):
+  //   · EXACTAMENTE 1 festival en curso → se pre-selecciona SOLO: barra con el
+  //     nombre, "Entrar" habilitado, cero interacción necesaria.
+  //   · 0 o 2+ en curso → acordeón cerrado (.compact): barra mínima solo con el
+  //     chevron, el usuario elige. (Reemplaza la regla anterior "el usuario
+  //     elige siempre".)
+  // Se decide ANTES del reveal (splash aún invisible) → sin flash ni brinco.
+  const _ongoingIds=Object.entries(FESTIVAL_CONFIG)
+    .filter(([,c])=>_classifyFestival(c)==='ongoing').map(([id])=>id);
   const _selBtn=document.getElementById('splash-sel-btn');
-  if(_selBtn){
-    _selBtn.classList.add('compact');
-    _selBtn.classList.remove('placeholder');
+  if(_ongoingIds.length===1){
+    _renderSplashDropdown(_ongoingIds[0]);
+    const _autoItem=document.querySelector('.splash-drop-item[data-fest="'+_ongoingIds[0]+'"]');
+    if(_autoItem){
+      selectSplashFest(_autoItem.dataset.name,_autoItem.dataset.meta,_ongoingIds[0]);
+    } else if(_selBtn){
+      // fallback defensivo: sin item renderizado, volver al acordeón
+      _selBtn.classList.add('compact'); _selBtn.classList.remove('placeholder');
+    }
+  } else {
+    _splashSelectedFestId=null;
+    // Sin festival seleccionado → ningún item marcado .selected; orden por tier.
+    _renderSplashDropdown(null);
+    if(_selBtn){
+      _selBtn.classList.add('compact');
+      _selBtn.classList.remove('placeholder');
+    }
   }
   // Splash entrada: la animación es 100% CSS (@keyframes en index.html). El
   // contenido es visible por default y JS NO toca opacity → imposible que quede

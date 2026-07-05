@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `4272908 Merge pull request #251 from jdvlazio/polish/store-landing-v3-grid`
+> Último commit: `c1d9ff0 Merge pull request #252 from jdvlazio/polish/store-landing-v4-symmetric`
 
 ---
 
@@ -92,7 +92,7 @@ _Sin features activas en `.specify/features/`._
 - **Regex en index.html:** prohibido para transformaciones estructurales de >10 ocurrencias.
 - **Timezone:** Colombia (UTC-5). Nunca `toISOString()` para lógica de fechas.
 - **i18n:** la fuente de verdad es `src/i18n/i18n.js` (bloque `_I18N`, es+en). Toda string nueva va ahí — es lo que lee `t()` y lo que valida `validate.py [i18n-complete]`. Los `i18n/*.json` quedaron desincronizados y NO se consumen en runtime (legacy); no son la fuente. El `sync-i18n.py` fue retirado (apuntaba a un `_I18N` en `index.html` que la Fase 8 movió a `src/i18n/i18n.js`).
-- **Splash selector:** el selector NO se pre-rellena con ningún festival — el usuario elige siempre. Dos modos según el estado, decididos en el bootstrap por `_classifyFestival`: (a) **con festival en curso o próximo** → placeholder `splash_elegi` ("Elegí uno", gris vía `.splash-sel-btn.placeholder`); (b) **sin ninguno activo** (todo en "Anteriores") → modo `.compact`: barra de alto mínimo SIN texto, solo el chevron centrado, que se expande al tocar. `#splash-sel-meta` arranca vacío. "Entrar" (`#splash-enter-btn`) arranca `disabled`; `selectSplashFest()` quita `.placeholder`/`.compact` (la barra crece con el nombre en blanco), llena el meta y habilita "Entrar". Ya NO hay que sincronizar el markup estático con el festival activo (no existe "brinco"). El bootstrap pasa `_renderSplashDropdown(null)` → ningún item `.selected`, orden por tier.
+- **Splash selector (regla 5 jul 2026):** con EXACTAMENTE 1 festival en curso (`_classifyFestival`==="ongoing"), el splash lo **pre-selecciona solo**: barra con nombre+meta, item `.selected`, "Entrar" habilitado — cero interacción. Con 0 o 2+ en curso → acordeón cerrado (`.compact`): barra mínima solo con el chevron, el usuario elige; `#splash-sel-meta` vacío y "Entrar" `disabled` hasta elegir. `selectSplashFest()` quita `.placeholder`/`.compact`, llena nombre/meta y habilita "Entrar".
 
 ---
 
