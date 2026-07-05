@@ -82,6 +82,17 @@ if os.path.exists(_MAIN_JS):
         lambda _m: '<script>\n' + _main_src + '\n</script>',
         content
     )
+    # Store gate (5 jul 2026): el tag estático fue reemplazado por un loader
+    # inline que inyecta el módulo dinámicamente (s.src="/src/main.js?v=...").
+    # Si el patrón viejo no matcheó, inyectar main.js en el punto del s.src —
+    # queda dentro del <script> del loader, y los checks single-file siguen
+    # viendo el JS de la app como antes.
+    if _main_src not in content:
+        content = re.sub(
+            r's\.src="/src/main\.js\?v=\d+";',
+            lambda _m: '\n' + _main_src + '\n',
+            content
+        )
 # p8 Step 1: FESTIVAL_CONFIG/VENUES/NOTICES + constantes estáticas se movieron a
 # src/config.js (`export const`, importado por main.js). CHECK 5 (bootstrap) lo
 # busca ahí. Se lee aparte para NO contaminar los checks que escanean `content`.

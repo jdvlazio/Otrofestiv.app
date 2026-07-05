@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `f4746f6 Merge pull request #244 from jdvlazio/data/ficmontanas-block-titles`
+> Último commit: `7ef0bec Merge pull request #245 from jdvlazio/feat/store-home-paso1`
 
 ---
 
