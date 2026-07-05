@@ -656,7 +656,13 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
    .empty-state-cta      → CTA primario: ámbar sólido, texto negro (regla del sistema)
 ══════════════════════════════════════════════════════ */
 .empty-state{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:var(--sp-6) var(--sp-5);gap:var(--sp-2)}
-.empty-state-hero{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:var(--sp-7) var(--sp-5);gap:var(--sp-2)}
+/* min-height: llena la banda visible (100dvh − chrome ~128px − nav ~72px) para que
+   justify-content:center centre el contenido verticalmente en vistas 100%-vacías
+   (Intereses/Planear/Mi Plan) en vez de pegarlo arriba con la mitad inferior muerta.
+   dvh (no vh) por el contrato responsive. En pantallas cortas el contenido excede el
+   floor y degrada a alto natural sin overflow. Solo aplica a -hero (empties de vista
+   completa); .empty-state inline —búsqueda, "plan cubierto"— queda intacto. */
+.empty-state-hero{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:var(--sp-7) var(--sp-5);gap:var(--sp-2);min-height:calc(100dvh - 200px)}
 .empty-state-icon{color:var(--amber-60);display:flex;align-items:center;justify-content:center;margin-bottom:var(--sp-1)}
 .empty-state-icon svg{width:20px;height:20px}
 .empty-state-hero .empty-state-icon svg{width:24px;height:24px}
@@ -2669,7 +2675,7 @@ setTimeout(function(){
 <!-- ── Intereses / Planear: header unificado — fuera de ag-view ── -->
 <div class="ag-view" id="ag-view"></div>
 
-<script type="module" src="/src/main.js?v=202607040935"></script>
+<script type="module" src="/src/main.js?v=202607050815"></script>
 
 <!-- Festival switcher bottom sheet -->
 <div class="auth-sheet" id="auth-sheet" data-close-bg="AuthSheet">

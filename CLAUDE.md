@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `bdbd0ec Merge pull request #238 from jdvlazio/data/ficmontanas-d4-official-story`
+> Último commit: `263c865 Merge pull request #239 from jdvlazio/fix/search-corto-duration-min`
 
 ---
 
