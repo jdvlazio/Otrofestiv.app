@@ -7,6 +7,19 @@
   "display": "standalone",
   "background_color": "#0A0A0A",
   "theme_color": "#0A0A0A",
+  "prefer_related_applications": true,
+  "related_applications": [
+    {
+      "platform": "play",
+      "id": "app.otrofestiv.mobile",
+      "url": "https://play.google.com/store/apps/details?id=app.otrofestiv.mobile"
+    },
+    {
+      "platform": "itunes",
+      "id": "6769367002",
+      "url": "https://apps.apple.com/app/id6769367002"
+    }
+  ],
   "icons": [
     {
       "src": "/icon-192.png",

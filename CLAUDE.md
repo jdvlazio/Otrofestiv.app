@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `be662ae Merge pull request #241 from jdvlazio/polish/card-title-2lines`
+> Último commit: `f4746f6 Merge pull request #244 from jdvlazio/data/ficmontanas-block-titles`
 
 ---
 

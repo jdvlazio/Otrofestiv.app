@@ -47,6 +47,9 @@ window.sentryOnLoad = function() {
 <meta http-equiv="expires" content="0">
 <link rel="manifest" href="/manifest.json">
 <meta name="theme-color" content="#0A0A0A">
+<!-- Smart App Banner (Safari iOS): banner nativo de Apple hacia la app en App Store.
+     Solo lo interpreta Safari en navegación normal — el WKWebView de la app lo ignora. -->
+<meta name="apple-itunes-app" content="app-id=6769367002">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Otrofestiv">
@@ -2681,7 +2684,7 @@ setTimeout(function(){
 <!-- ── Intereses / Planear: header unificado — fuera de ag-view ── -->
 <div class="ag-view" id="ag-view"></div>
 
-<script type="module" src="/src/main.js?v=202607050826"></script>
+<script type="module" src="/src/main.js?v=202607050956"></script>
 
 <!-- Festival switcher bottom sheet -->
 <div class="auth-sheet" id="auth-sheet" data-close-bg="AuthSheet">
