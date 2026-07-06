@@ -21,6 +21,16 @@ const { test, expect } = require('@playwright/test');
 // en la suite de regresión (playwright.yml), no acá.
 test.use({ serviceWorkers: 'block' });
 
+// STORE GATE (5 jul 2026): otrofestiv.app sirve la LANDING de tiendas a todo
+// navegador; la app completa solo al WebView de las apps (detectado por UA iOS
+// sin token "Safari/" — gate v3). El monitor valida LA APP — lo que ven los
+// usuarios reales de iOS/Android — así que navega con el UA del WKWebView.
+// (Causa raíz del fallo del monitor del 6 jul: con UA de navegador recibía la
+// landing y [data-app-ready] nunca aparecía.) La landing tiene su propio check
+// abajo (M06) con UA de navegador.
+const WKWEBVIEW_UA = 'Mozilla/5.0 (iPhone; CPU iPhone OS 17_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148';
+test.use({ userAgent: WKWEBVIEW_UA });
+
 // Presupuesto ampliado vs el global (30s): el loader reintenta el fetch del
 // JSON de festival hasta 3×6s (#194) ante stalls del CDN de GitHub Pages —
 // peor caso ~18s ANTES de que el grid pueda renderizar. 60s da margen al cold-load
@@ -117,4 +127,21 @@ test('M05 — topbar muestra nombre del festival', async ({ page }) => {
   await page.waitForSelector('.hdr-fest-name', { timeout: 5000 });
   const name = await page.locator('.hdr-fest-name').textContent();
   expect(name?.trim().length).toBeGreaterThan(0);
+});
+
+// M06 — La LANDING de tiendas (lo que ve un navegador) está viva: dos botones
+// de tienda con sus hrefs correctos y la ruta /get del QR responde. UA de
+// navegador de escritorio → toma el camino landing del gate.
+test.describe('landing de tiendas', () => {
+  test.use({ userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36' });
+  test('M06 — navegador recibe la landing con badges y /get vivo', async ({ page }) => {
+    await page.goto('/', { waitUntil: 'domcontentloaded' });
+    await page.waitForSelector('.sg-btn', { timeout: 15000 });
+    const hrefs = await page.$$eval('.sg-btn', els => els.map(e => e.href));
+    expect(hrefs).toHaveLength(2);
+    expect(hrefs.some(h => h.includes('apps.apple.com'))).toBe(true);
+    expect(hrefs.some(h => h.includes('play.google.com'))).toBe(true);
+    const res = await page.request.get('/get/');
+    expect(res.status()).toBe(200);
+  });
 });
