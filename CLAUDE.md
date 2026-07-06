@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `5263c49 Merge pull request #257 from jdvlazio/polish/favicon-transparent`
+> Último commit: `0bbc448 docs(rfc): Modo Recuerdo — copy auditado (UX Writer) + decisiones cerradas (PM)`
 
 ---
 
@@ -61,7 +61,7 @@ Juan es Product Owner, diseñador y developer. Claude ejecuta; Juan audita y apr
 | `cinemancia2025` | Cinemancia 2025 | Valle de Aburrá | 11–20 SEP | Archivado |
 | `leviza2026` | Leviza - Festival de Cine y Audiovisuales | Zapatoca | 14–17 MAY | Archivado |
 | `olhar2026` | Olhar de Cinema | Curitiba | JUN 4–13 | Recién terminado |
-| `ficmontanas2026` | Ficmontañas | Salento | JUL 1–5 | **Próximo / activo** |
+| `ficmontanas2026` | Ficmontañas | Salento | JUL 1–5 | Recién terminado |
 
 ### Features activas (desde `.specify/features/`)
 

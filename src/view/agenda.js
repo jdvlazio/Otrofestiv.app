@@ -45,19 +45,39 @@ export function renderAgenda(){
   const {savedAgenda, FILMS, _activeFestId, watched, watchlist, prioritized, availability} = state.snapshot();
   const view=document.getElementById('ag-view');
   if(activeMNav==='mnav-seleccion'){
-    // ── Post-festival: redirigir a Mi Plan ──
+    // ── Modo Recuerdo (RFC docs/RFC-modo-recuerdo.md): Intereses deja de ser
+    // redirect — watchlist partida en "Vistas" (con estrellas, arriba) y
+    // "Te quedaste con ganas" (abajo, atenuadas, con marca Vista retroactiva
+    // reutilizando toggleWatched — el par Vista/Luego ya aprendido). ──
     if(festivalEnded()){
-      const _festName=(FESTIVAL_CONFIG[_activeFestId]||{}).name||t('misc_festival_default');
-      const _hasMiPlan=watched.size>0||(savedAgenda&&savedAgenda.schedule&&savedAgenda.schedule.length>0);
       const _agHi=document.getElementById('hdr-ag');if(_agHi)_agHi.style.display='none';
       requestAnimationFrame(_fixStickyOffset);
-      view.innerHTML=emptyStateHero(
-        ICONS.sparkles,
-        `${_festName} ${t('plan_fest_terminado')}`,
-        _hasMiPlan?t('plan_revisa_planeaste'):t('empty_programa'),
-        _hasMiPlan?t('cta_mi_plan'):t('plan_ir_programa'),
-        _hasMiPlan?'mnav-miplan':'mnav-cartelera'
-      );
+      const {filmRatings}=state.snapshot();
+      const _wl=[...watchlist];
+      if(!_wl.length){
+        view.innerHTML=emptyStateHero(ICONS.heart,t('empty_lo_que_agg'),t('empty_intereses_2'),t('plan_ir_programa'),'mnav-cartelera');
+        return;
+      }
+      const _row=(title,seen)=>{
+        const f=FILMS.find(x=>x.title===title);
+        const stars=seen&&filmRatings&&filmRatings[title]?`<span class="txt-amber-sm">${starsText(filmRatings[title])}</span>`:'';
+        const meta=seen?(stars||t('cta_vista')):_secLabelFull((f&&f.section)||'');
+        const poster=f?`<div class="js-open-pel" data-title="${title.replace(/"/g,'&quot;')}" style="cursor:pointer">${_posterThumb(f,'lb-poster')}</div>`:'';
+        return`<div class="saved-item${seen?' done':''}"${seen?'':' style="opacity:.65"'}>
+          ${poster}
+          <div class="saved-info">
+            <div class="saved-title">${title}</div>
+            <div class="saved-venue">${meta}</div>
+          </div>
+          <button class="saved-check${seen?' done':''}" data-title="${title.replace(/"/g,'&quot;')}" data-action="toggleWatched">${seen?ICONS.check+' '+t('cta_vista'):t('cta_vista')}</button>
+        </div>`;
+      };
+      const _vistas=_wl.filter(x=>watched.has(x));
+      const _ganas=_wl.filter(x=>!watched.has(x));
+      view.innerHTML=`<div class="ag-section">
+        ${_vistas.length?`<div class="int-section-hdr">${t('int_vistas_hdr')}</div>${_vistas.map(x=>_row(x,true)).join('')}`:''}
+        ${_ganas.length?`<div class="int-section-hdr">${t('int_ganas')}</div>${_ganas.map(x=>_row(x,false)).join('')}`:''}
+      </div>`;
       return;
     }
     // ── Mi Lista: buscador + lista de películas ──
@@ -80,7 +100,9 @@ export function renderAgenda(){
       const _festNamePl=(FESTIVAL_CONFIG[_activeFestId]||{}).name||t('misc_festival_default');
       const _agHpl=document.getElementById('hdr-ag');if(_agHpl)_agHpl.style.display='none';
       requestAnimationFrame(_fixStickyOffset);
-      view.innerHTML=emptyStateHero(ICONS.sparkles,`${_festNamePl} ${t('plan_fest_terminado')}`,t('plan_revisa_planeaste'),t('cta_mi_plan'),'mnav-miplan');
+      // Modo Recuerdo (RFC docs/RFC-modo-recuerdo.md): el planeador se retira
+      // con gracia — copy de cierre con la voz del splash.
+      view.innerHTML=emptyStateHero(ICONS.sparkles,`${_festNamePl} ${t('plan_fest_terminado')}`,t('planear_descansa'),t('cta_mi_plan'),'mnav-miplan');
       return;
     }
     const _progressHtml=(!savedAgenda||!savedAgenda.schedule||!savedAgenda.schedule.length)?renderFlowProgress(state,'planner'):'';
@@ -929,12 +951,43 @@ export function renderSavedAgendaHTML(state, consensus){
 export function _renderSavedAgendaHTML(state, consensus){
   const {savedAgenda, FILMS, watched, _activeFestId, FESTIVAL_DATES} = state.snapshot();
   if(festivalEnded()){
-    // Con películas vistas: poster grid via renderContextualHeader
-    if(watched.size>0){
-      const _eh=renderContextualHeader(state, consensus);
-      return _eh?`<div class="saved-agenda">${_eh}</div>`:'';
+    // ── Modo Recuerdo (RFC docs/RFC-modo-recuerdo.md) ──
+    // El plan vivido NO desaparece: recap (si hay vistas) + calendario read-only
+    // con marca Vista retroactiva por ítem (toggleWatched — par ya aprendido).
+    const _plan=(savedAgenda&&savedAgenda.schedule)?savedAgenda.schedule:[];
+    // Con vistas: hero recap existente (pósters + estrellas)
+    const _recap=watched.size>0?(renderContextualHeader(state, consensus)||''):'';
+    // Sin vistas pero con plan: hero "Tu festival" invitando a marcar
+    const _hero=(!_recap&&_plan.length)?`<div class="ag-section">
+      <div class="mb-2 sec-hdr">${ICONS.sparkles} ${t('recap_tu_festival')}</div>
+      <div class="hint">${t('recap_marca_sub')}</div>
+    </div>`:'';
+    // Plan vivido: agrupado por día, cada ítem con su marca Vista
+    let _vivido='';
+    if(_plan.length){
+      const _byDay={};
+      [..._plan].sort((a,b)=>String(a.day).localeCompare(String(b.day))||toMin(a.time)-toMin(b.time))
+        .forEach(s=>{(_byDay[s.day]=_byDay[s.day]||[]).push(s);});
+      _vivido='<div class="ag-section">'+Object.keys(_byDay).map(day=>`
+        <div class="saved-day-lbl">${dayChip(day)}</div>
+        ${_byDay[day].map(s=>{
+          const _vc=vcfg(s.venue),_sl=sala(s.venue);
+          const _f=FILMS.find(fi=>fi.title===s._title);
+          const _seen=watched.has(s._title);
+          const _ph=_f?`<div class="js-open-pel" data-title="${(s._title||'').replace(/"/g,'&quot;')}" style="cursor:pointer">${_posterThumb(_f,'lb-poster')}</div>`:'';
+          return`<div class="saved-item${_seen?' done':''}">
+            ${_ph}
+            <div class="saved-time">${s.time}</div>
+            <div class="saved-info">
+              <div class="saved-title">${s._title}</div>
+              <div class="saved-venue">${ICONS.pin} ${_vc.short}${_sl?' · '+_sl:''}</div>
+            </div>
+            <button class="saved-check${_seen?' done':''}" data-title="${(s._title||'').replace(/"/g,'&quot;')}" data-action="toggleWatched">${_seen?ICONS.check+' '+t('cta_vista'):t('cta_vista')}</button>
+          </div>`;
+        }).join('')}`).join('')+'</div>';
     }
-    // Sin películas vistas: empty state canónico
+    if(_recap||_vivido) return`<div class="saved-agenda">${_recap}${_hero}${_vivido}</div>`;
+    // Sin vistas NI plan: empty state canónico
     const _festNameMp=(FESTIVAL_CONFIG[_activeFestId]||{}).name||t('misc_festival_default');
     return emptyStateHero(ICONS.sparkles,`${_festNameMp} ${t('plan_fest_terminado')}`,t('empty_vistas'),t('plan_ir_programa'),'mnav-cartelera');
   }
