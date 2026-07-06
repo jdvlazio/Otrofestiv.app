@@ -49,13 +49,27 @@
 - **F2 (brillo):** compartir recap como imagen + badge palmarés (depende del campo `award` y fuente oficial). ~1 sesión.
 - Guards: los gates son `festivalEnded()` (ya testeado); tests nuevos para la matriz de estados (mismo patrón del QA de dominio).
 
-## 5. Copy (borrador — TODO pase Content Design de Juan)
+## 5. Copy — auditado (UX Writer, 6 jul; delegado por Juan)
 
-Todas las strings nuevas van a `_I18N` (es+en). Marcadas: "Tu plan de {festival}" · "Marcá lo que llegaste a ver" · "¿La viste?" · "Te quedaste con ganas" · "El planeador descansa hasta el próximo festival" · "Compartir mi festival". **Ninguna se codifica sin aprobación.**
+Principios aplicados: voseo de la casa ("Marcá", "Escaneá") · no repetir info visible · reusar vocabulario ya aprendido por los usuarios antes que inventar.
 
-## 6. Preguntas abiertas para Juan
+| Contexto | ES (final) | EN (final) | Nota UX |
+|---|---|---|---|
+| Hero Mi Plan (0 vistas) | **"Tu festival"** / sub: "Marcá lo que llegaste a ver y calificalo." | "Your festival" / "Mark what you got to see and rate it." | El nombre del festival ya está en el header — no se repite (regla de no-redundancia) |
+| Marca retroactiva | **Se reutiliza el par existente "Vista" / "Luego"** | "Seen" / "Later" | Vocabulario ya aprendido en "Funciones sin confirmar"; cero strings nuevas; se descarta "¿La viste?" (introducía una segunda forma para el mismo acto) |
+| Sección Intereses (no vistas) | **"Te quedaste con ganas"** | "The ones that got away" | Cálido, voz de marca |
+| Sección Intereses (vistas) | **"Vistas"** | "Seen" | Reuso |
+| Planear post-festival | **"El planeador descansa hasta el próximo festival."** | "The planner rests until the next festival." | Cierre con la voz del splash ("More than you think possible") |
+| Compartir | **"Compartir mi festival"** | "Share my festival" | — |
+| Tabs | **Sin cambios de nombre por fase** | — | Los tabs son anclas de navegación; solo cambia su contenido ("Lo que te llamó" descartado como título) |
 
-1. ¿"Modo recuerdo" arranca al terminar el festival o tras X horas de gracia (la gente marca vistas la misma noche)?
-2. ¿El "¿La viste?" retroactivo expira (p. ej. 30 días) o queda para siempre?
-3. ¿Compartir (F2) entra ya o después del RFC de retraso colaborativo?
-4. Nombre interno del feature: ¿"Modo Recuerdo"? (aparecería solo en docs, no en UI).
+Todas las strings nuevas → `_I18N` (es+en), validadas por `[i18n-complete]`.
+
+## 6. Decisiones (Product Manager, 6 jul; delegado por Juan)
+
+1. **Sin período de gracia.** El modo entra con `festivalEnded()` — el propio modo permite marcar Vista y calificar, así que no hay nada que "esperar". Menos estados, menos bugs.
+2. **La marca retroactiva no expira.** Es memoria del usuario; los festivales archivados siguen consultables y el costo es cero.
+3. **Compartir = F2, ya** — independiente del RFC de retraso colaborativo (no comparten backend; el share reutiliza el flujo nativo existente).
+4. **Nombre interno: "Modo Recuerdo"** (solo docs, nunca UI).
+
+**Estado: RFC cerrado — listo para implementar F1.** El visual final de cada pantalla lo audita Juan sobre la implementación (como la landing).
