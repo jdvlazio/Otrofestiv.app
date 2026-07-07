@@ -631,7 +631,7 @@ FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202607071256';
+const BUILD_VERSION='202607071422';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';
@@ -1595,11 +1595,11 @@ setDelaysRerender(function(){
 });
 
 // Sync del plan EN VIVO (F0.5): al llegar un cambio de OTRO dispositivo por Realtime,
-// repintar la vista activa (watchlist/watched/agenda cambiaron). showDayView +
-// _renderProgramaContent cubren Programa/Intereses/Mi Plan sin importar dónde estés.
+// repintar la vista ACTIVA sin navegar. renderActiveView() rutea internamente
+// (cartelera/seleccion/miplan/planner) — NO usar showDayView, que fuerza el tab
+// Programa y hace "brincar" de vista al recibir un cambio.
 setPlanRerender(function(){
-  showDayView();
-  _renderProgramaContent();
+  renderActiveView();
 });
 
 // ── Reactivar al volver al primer plano ──────────────────────

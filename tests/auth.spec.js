@@ -26,7 +26,7 @@ test('A03 — auth sheet tiene campo de email', async ({ page }) => {
   await enterFestival(page, 'leviza2026', LEVIZA_SIMTIME);
   await page.evaluate(() => openAuthSheet());
   await page.waitForSelector('#auth-sheet.open', { timeout: 5000 });
-  const emailInput = page.locator('#auth-sheet input[type="email"], #auth-sheet input[type="text"]');
+  const emailInput = page.locator('#auth-email-inp'); // campo de email específico — el selector amplio input[type=text] chocaba con el OTP (one-time-code)
   await expect(emailInput).toBeVisible({ timeout: 5000 });
 });
 

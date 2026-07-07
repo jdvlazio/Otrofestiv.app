@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `0e19b6e feat(sync): plan en vivo por Realtime (F0.5) + fix carrera boot-load + anti-clobber`
+> Último commit: `96327e1 fix(realtime): setAuth del JWT al socket — el sync en vivo del plan no entregaba nada`
 
 ---
 
