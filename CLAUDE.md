@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `532d9ea Merge pull request #265 from jdvlazio/polish/recuerdo-copy`
+> Último commit: `3087f3f Merge pull request #267 from jdvlazio/feat/f0-cloud-sync-bootload`
 
 ---
 
