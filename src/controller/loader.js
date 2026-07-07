@@ -12,7 +12,7 @@ import { closeFestivalSheet } from '../view/sheets.js';
 import { showToast } from '../view/feedback.js';
 import { _renderProgramaContent, lugarClose } from '../view/programa.js';
 import { _fixStickyOffset } from '../view/agenda.js';
-import { loadState } from './persistence.js';
+import { loadState, _cloudLoad } from './persistence.js';
 import { subscribeDelaysCloud } from './delays-cloud.js';
 import { _updateProgramaActiveFilter, initProgramaModeBar, showDayView, switchMainNav } from './pipeline.js';
 import { seccionClose } from './overlays.js';
@@ -383,6 +383,15 @@ export async function loadFestival(id){
   if(_dtabs&&_onDtab) _dtabs.scrollLeft=_onDtab.offsetLeft-_dtabs.offsetLeft;
   // Resolver posters via TMDB en background — no bloquea la UI
   _autoResolveFestivalPosters().catch(()=>{});
+  // F0 sync multi-dispositivo: si el usuario está firmado (no anónimo), bajar el
+  // plan de la nube para ESTE festival con guard (no pisa ediciones locales sin
+  // subir ni datos ya frescos — ver _cloudLoad). Boot y cambio de festival pasan
+  // por acá → cubre "edito en el iPhone, abro en el iPad/Watch y veo lo último".
+  // Fire-and-forget; re-renderiza la vista activa al aplicar la nube.
+  const _u=state.get('_sbUser');
+  if(_u&&!_u.is_anonymous){
+    _cloudLoad({guard:true}).then(()=>{ showDayView(); _renderProgramaContent(); }).catch(()=>{});
+  }
 }
 
 export function dismissSplash(){

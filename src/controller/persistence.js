@@ -80,9 +80,12 @@ export function loadState(){
 
 export function _cloudSave(){
   if(!_sb||!_sbUser||_sbUser.is_anonymous) return; // anon = solo identidad de reportes, no sync de plan
+  // Hay mutación local pendiente de subir → dirty. El boot-load no debe pisarla.
+  storage.setCloudDirty(true);
   clearTimeout(_cloudSaveTimer);
   _cloudSaveTimer=setTimeout(async()=>{
     try{
+      const _ts=new Date().toISOString();
       await _sb.from('user_festival_state').upsert({
         user_id:_sbUser.id,
         festival_id:_activeFestId,
@@ -92,18 +95,39 @@ export function _cloudSave(){
         saved_agenda:savedAgenda,
         prioritized:[...prioritized],
         availability,
-        updated_at:new Date().toISOString()
+        updated_at:_ts
       },{onConflict:'user_id,festival_id'});
+      // Éxito: este dispositivo está al día con _ts; ya no hay pendientes.
+      storage.setCloudSyncedAt(_ts);
+      storage.setCloudDirty(false);
       _sbShowSyncDot('ok');
     }catch(e){
       console.warn('Cloud save error:',e);
-      _sbShowSyncDot('err');
+      _sbShowSyncDot('err'); // queda dirty → reintenta en la próxima mutación/boot
     }
   },2000);
 }
 
-export async function _cloudLoad(){
+// _cloudGuardSkip — decisión PURA del boot-load multi-dispositivo. true = NO
+// aplicar la nube. Aislada para testear la matriz de conflictos sin Supabase.
+//   guard=false (SIGN-IN) → nunca skip: la nube gana (restaurar cuenta).
+//   guard=true (BOOT):
+//     · dirty (ediciones locales sin subir) → skip (que _cloudSave las empuje).
+//     · local ya al día/adelante (cloudUpdatedAt <= localSyncedAt) → skip.
+//     · si no hay localSyncedAt (primera vez) o la nube es más nueva → aplicar.
+export function _cloudGuardSkip({guard, dirty, cloudUpdatedAt, localSyncedAt}){
+  if(!guard) return false;
+  if(dirty) return true;
+  if(localSyncedAt && cloudUpdatedAt && cloudUpdatedAt<=localSyncedAt) return true;
+  return false;
+}
+
+// _cloudLoad — baja el plan de la nube.
+//   opts.guard=true (BOOT): multi-dispositivo. Ver _cloudGuardSkip.
+//   Sin guard (SIGN-IN): la nube gana siempre — el usuario firma para restaurar.
+export async function _cloudLoad(opts){
   if(!_sb||!_sbUser) return;
+  const _guard = !!(opts&&opts.guard);
   try{
     const{data,error}=await _sb
       .from('user_festival_state')
@@ -112,6 +136,7 @@ export async function _cloudLoad(){
       .eq('festival_id',_activeFestId)
       .single();
     if(error||!data) return; // Sin datos en nube — conservar local
+    if(_cloudGuardSkip({guard:_guard, dirty:storage.getCloudDirty(), cloudUpdatedAt:data.updated_at, localSyncedAt:storage.getCloudSyncedAt()})) return;
     // Aplicar datos de la nube (tienen prioridad sobre localStorage) — atómico
     const _cloudUpdates = {};
     if(data.watchlist?.length) _cloudUpdates.watchlist = new Set(data.watchlist);
@@ -125,8 +150,16 @@ export async function _cloudLoad(){
       _cloudUpdates.availability = _newAv;
     }
     if(Object.keys(_cloudUpdates).length) state.batchUpdate(_cloudUpdates);
-    // Sincronizar también en local
-    saveWL();saveWatched();savePrio();saveSavedAgenda();saveAV();
+    // Persistir en local SIN eco a la nube (no llamar saveX → _cloudSave): lo que
+    // acabamos de bajar ya vive en la nube. Quedamos en sync con data.updated_at.
+    storage.setWatchlist(watchlist);storage.setWatched(watched);
+    storage.setPrioritized(prioritized);storage.setSavedAgenda(savedAgenda);
+    storage.setAvailability(availability);storage.setFilmRatings(filmRatings);
+    storage.setCloudSyncedAt(data.updated_at||new Date().toISOString());
+    storage.setCloudDirty(false);
+    // Reprogramar notificaciones locales del plan bajado (lo hacía saveSavedAgenda
+    // en la versión con eco). Idempotente: cancela y reprograma.
+    _scheduleNotifications();
   }catch(e){console.warn('Cloud load error:',e);}
 }
 
