@@ -17,6 +17,13 @@ export function _sbInit(){
     _sb=supabase.createClient(_SB_URL,_SB_KEY);
     _sb.auth.onAuthStateChange(async(event,session)=>{
       _sbUser=session?.user??null;
+      // CRÍTICO para el sync en vivo: pasar el JWT al socket de Realtime. supabase-js
+      // SOLO auto-setea en SIGNED_IN/TOKEN_REFRESHED, NO en INITIAL_SESSION — y al
+      // reabrir la app con sesión persistida (WKWebView) el evento es INITIAL_SESSION.
+      // Sin el token, el socket queda anónimo → la RLS auth.uid()=user_id de
+      // user_festival_state no matchea → CERO eventos del plan (los retrasos, con
+      // USING(true), tapaban el bug). Ref: supabase-js #1304 + docs Realtime Authorization.
+      if(session?.access_token) try{ _sb.realtime.setAuth(session.access_token); }catch(e){}
       _sbUpdateUI();
       // Sign-in fresco: la nube gana (guard=false). Si está vacía Y hay plan local,
       // subirlo (primera vez). Anti-clobber: NO subir un plan vacío → un dispositivo
@@ -40,6 +47,7 @@ export function _sbInit(){
     });
     _sb.auth.getSession().then(({data:{session}})=>{
       _sbUser=session?.user??null;
+      if(session?.access_token) try{ _sb.realtime.setAuth(session.access_token); }catch(e){} // token al socket de Realtime (cold start)
       _sbReady=true;
       _sbUpdateUI();
       // Sin auth anónima (Camino A). La identidad es SOLO la sesión de email (opt-in).

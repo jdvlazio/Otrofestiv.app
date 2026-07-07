@@ -200,13 +200,18 @@ export function _shouldApplyRealtimeRow({rowUpdatedAt, localSyncedAt, dirty}){
 //   own_select (auth.uid()=user_id) ya scope las filas al usuario; el handler filtra
 //   además por festival activo. Idempotente por (user, festival). Requiere email.
 //   Lo llaman loader.js (al cargar festival) y auth.js (INITIAL_SESSION/SIGNED_IN).
-export function subscribePlanCloud(){
+export async function subscribePlanCloud(){
   if(!_sb||!_sbUser||_sbUser.is_anonymous||!_activeFestId) return;
   const key=_sbUser.id+'|'+_activeFestId;
   if(_planChannelKey===key && _planChannel) return; // ya suscrito a este (user,festival)
   if(_planChannel){ try{ _sb.removeChannel(_planChannel); }catch(e){ /* noop */ } _planChannel=null; }
   _planChannelKey=key;
   const fest=_activeFestId, uid=_sbUser.id;
+  // CRÍTICO: el socket de Realtime necesita el JWT ANTES de suscribir, o la RLS
+  // auth.uid()=user_id lo trata como anónimo y entrega CERO eventos (docs: "set the
+  // token before connecting to a Channel"). setAuth aquí garantiza el orden aunque el
+  // handler de auth aún no haya corrido (carrera de arranque en WKWebView).
+  try{ const{data:{session}}=await _sb.auth.getSession(); if(session?.access_token) await _sb.realtime.setAuth(session.access_token); }catch(e){ /* noop */ }
   _planChannel=_sb.channel('ufs-'+key)
     .on('postgres_changes',
       { event:'*', schema:'public', table:'user_festival_state', filter:'user_id=eq.'+uid },

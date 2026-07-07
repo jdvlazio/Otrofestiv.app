@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `ea8b5e0 Merge pull request #270 from jdvlazio/fix/remove-anon-auth`
+> Último commit: `0e19b6e feat(sync): plan en vivo por Realtime (F0.5) + fix carrera boot-load + anti-clobber`
 
 ---
 
