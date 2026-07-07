@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `0bbc448 docs(rfc): Modo Recuerdo — copy auditado (UX Writer) + decisiones cerradas (PM)`
+> Último commit: `c54a19a Merge pull request #264 from jdvlazio/feat/modo-recuerdo-f1`
 
 ---
 
