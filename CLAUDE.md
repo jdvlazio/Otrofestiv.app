@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `c54a19a Merge pull request #264 from jdvlazio/feat/modo-recuerdo-f1`
+> Último commit: `532d9ea Merge pull request #265 from jdvlazio/polish/recuerdo-copy`
 
 ---
 

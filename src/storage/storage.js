@@ -68,6 +68,15 @@ export const storage = {
   getViewmodes() { try { const r=localStorage.getItem(FESTIVAL_STORAGE_KEY+'viewmodes'); return r?JSON.parse(r):{}; } catch(e) { return {}; } },
   setViewmodes(o) { try { localStorage.setItem(FESTIVAL_STORAGE_KEY+'viewmodes', JSON.stringify(o)); } catch(e) {} },
 
+  // ── Cloud-sync metadata (F0 — multi-dispositivo) ──
+  // cloud_synced_at: el updated_at de la última fila que este dispositivo empujó
+  //   o bajó con éxito. cloud_dirty: hay mutaciones locales aún sin subir.
+  // El boot-load usa ambos para no pisar ediciones locales ni datos ya frescos.
+  getCloudSyncedAt() { try { return localStorage.getItem(FESTIVAL_STORAGE_KEY+'cloud_at')||null; } catch(e) { return null; } },
+  setCloudSyncedAt(ts) { try { localStorage.setItem(FESTIVAL_STORAGE_KEY+'cloud_at', ts); } catch(e) {} },
+  getCloudDirty() { try { return localStorage.getItem(FESTIVAL_STORAGE_KEY+'cloud_dirty')==='1'; } catch(e) { return false; } },
+  setCloudDirty(v) { try { localStorage.setItem(FESTIVAL_STORAGE_KEY+'cloud_dirty', v?'1':'0'); } catch(e) {} },
+
   // ── Global keys (NO prefix) ──
   getActiveFestId() { return localStorage.getItem('otrofestiv_festival'); },
   setActiveFestId(id) { try { localStorage.setItem('otrofestiv_festival', id); } catch(e) {} },
