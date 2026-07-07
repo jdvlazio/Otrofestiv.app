@@ -6,9 +6,11 @@
 // alimente el consenso en la Fase B. Fase A = solo RECOLECTA: escribe y borra el
 // reporte propio; no deriva estado ni pinta badge a terceros.
 //
-// Identidad = sesión anónima del dispositivo (auth.js). `reporter_id` lo completa
-// el servidor con auth.uid() (default de la columna), y la RLS garantiza que solo
-// se toca la fila propia. Fire-and-forget: nunca bloquea ni rompe el flujo local.
+// Identidad = sesión de email del usuario (Camino A; ya no hay auth anónima). Sin
+// sesión, los guards `!_sbUser` de report/clear son no-op → el retraso queda solo
+// local. `reporter_id` lo completa el servidor con auth.uid() (default de la
+// columna), y la RLS garantiza que solo se toca la fila propia. Fire-and-forget:
+// nunca bloquea ni rompe el flujo local.
 //
 // _sb / _sbUser / _activeFestId son globals del STATE/VIEWSTATE BRIDGE.
 //

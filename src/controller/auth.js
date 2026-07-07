@@ -35,9 +35,13 @@ export function _sbInit(){
       _sbUser=session?.user??null;
       _sbReady=true;
       _sbUpdateUI();
-      // Identidad de dispositivo para el retraso colaborativo: sin sesión → abrir
-      // una anónima (sin login). Invisible para la UI de cuenta y el sync de plan.
-      if(!session) _sb.auth.signInAnonymously().catch(function(e){console.warn('anon sign-in:',e);});
+      // Sin auth anónima (Camino A). La identidad es SOLO la sesión de email (opt-in).
+      // Antes, signInAnonymously() abría una sesión de dispositivo que pisaba el slot
+      // ÚNICO de sesión del cliente Supabase → clobbeaba la sesión de email → _cloudSave
+      // quedaba gateado por is_anonymous y el plan NUNCA sincronizaba (user_festival_state
+      // 0 filas pese a usuarios con email). Y en cada arranque sin sesión inundaba
+      // /auth/v1/signup → 429 (rate-limit por IP) → 401 en todo REST. El plan/programa
+      // funcionan sin sesión (local); el retraso colaborativo requiere firmar con email.
     });
   }catch(e){console.warn('Supabase init error:',e);}
 }
