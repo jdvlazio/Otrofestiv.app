@@ -12,7 +12,7 @@ import { closeFestivalSheet } from '../view/sheets.js';
 import { showToast } from '../view/feedback.js';
 import { _renderProgramaContent, lugarClose } from '../view/programa.js';
 import { _fixStickyOffset } from '../view/agenda.js';
-import { loadState, _cloudLoad } from './persistence.js';
+import { loadState, _cloudLoad, subscribePlanCloud } from './persistence.js';
 import { subscribeDelaysCloud } from './delays-cloud.js';
 import { _updateProgramaActiveFilter, initProgramaModeBar, showDayView, switchMainNav } from './pipeline.js';
 import { seccionClose } from './overlays.js';
@@ -391,6 +391,9 @@ export async function loadFestival(id){
   const _u=state.get('_sbUser');
   if(_u&&!_u.is_anonymous){
     _cloudLoad({guard:true}).then(()=>{ showDayView(); _renderProgramaContent(); }).catch(()=>{});
+    // F0.5: sync EN VIVO — al cambiar el plan en otro dispositivo (o el Watch),
+    // aplicar el cambio sin reabrir. Idempotente por (user, festival).
+    subscribePlanCloud();
   }
 }
 

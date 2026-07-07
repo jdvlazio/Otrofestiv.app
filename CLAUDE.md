@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `7afad1a Merge pull request #269 from jdvlazio/chore/migration-0003-grant`
+> Último commit: `ea8b5e0 Merge pull request #270 from jdvlazio/fix/remove-anon-auth`
 
 ---
 
