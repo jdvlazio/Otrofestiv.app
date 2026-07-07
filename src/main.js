@@ -96,7 +96,7 @@ import { runCalc } from './controller/calc.js';
 
 // ── Step 7b: controller/persistence.js — saves + cloud sync + Supabase auth. ──
 import {
-  saveWL, saveWatched, saveRating, saveAV, saveSavedAgenda, savePrio, saveLastSlot, saveDelays, saveState, loadState, _cloudLoad, _sbUpdateUI, submitAuthEmail, submitOTP, deleteAccount, signOutAndClose,
+  saveWL, saveWatched, saveRating, saveAV, saveSavedAgenda, savePrio, saveLastSlot, saveDelays, saveState, loadState, _cloudLoad, _sbUpdateUI, submitAuthEmail, submitOTP, deleteAccount, signOutAndClose, setPlanRerender,
 } from './controller/persistence.js';
 
 // ── Step 7c: controller/pipeline.js — render dispatchers. ────────────────────
@@ -631,7 +631,7 @@ FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202607071134';
+const BUILD_VERSION='202607071222';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';
@@ -1592,6 +1592,14 @@ updateAgTab();
 // (donde vive el badge). Targeted — solo si esa vista está activa.
 setDelaysRerender(function(){
   if(activeMNav==='mnav-miplan' && activeView==='agenda') renderAgenda();
+});
+
+// Sync del plan EN VIVO (F0.5): al llegar un cambio de OTRO dispositivo por Realtime,
+// repintar la vista activa (watchlist/watched/agenda cambiaron). showDayView +
+// _renderProgramaContent cubren Programa/Intereses/Mi Plan sin importar dónde estés.
+setPlanRerender(function(){
+  showDayView();
+  _renderProgramaContent();
 });
 
 // ── Reactivar al volver al primer plano ──────────────────────

@@ -2,7 +2,7 @@
 // p8 Step 7e — Auth-UI Supabase: init + re-render post-sync + display name. _sbReady module-local; _sb vía bridge.
 
 import { _renderProgramaContent } from '../view/programa.js';
-import { _cloudLoad, _cloudSave, _sbUpdateUI } from './persistence.js';
+import { _cloudLoad, _cloudSave, _sbUpdateUI, subscribePlanCloud, _hasLocalPlan } from './persistence.js';
 import { showDayView } from './pipeline.js';
 import { t } from '../i18n/i18n.js';
 
@@ -18,15 +18,22 @@ export function _sbInit(){
     _sb.auth.onAuthStateChange(async(event,session)=>{
       _sbUser=session?.user??null;
       _sbUpdateUI();
-      // Sesión anónima (retraso colaborativo): NO dispara cloud-load ni re-render
-      // — es solo identidad de dispositivo, no un login de usuario.
+      // Sign-in fresco: la nube gana (guard=false). Si está vacía Y hay plan local,
+      // subirlo (primera vez). Anti-clobber: NO subir un plan vacío → un dispositivo
+      // vacío no debe plantar una fila vacía que pise datos buenos de otro (F0.5).
       if(event==='SIGNED_IN' && !session?.user?.is_anonymous){
         const _applied=await _cloudLoad();
-        // Nube vacía (primera vez que firma este usuario) → SUBIR el plan local que
-        // venía armando como anónimo. Sin esto, el plan nunca llega a la nube hasta
-        // la próxima mutación → multi-dispositivo/watch no ve nada (bug real: tabla
-        // user_festival_state vacía pese a usuarios con email). Ver F0.
-        if(!_applied) _cloudSave();
+        if(!_applied && _hasLocalPlan()) _cloudSave();
+        subscribePlanCloud();      // sync EN VIVO desde ya
+        _renderAfterSync();
+      }
+      // INITIAL_SESSION (arranque con sesión restaurada): cubre la CARRERA del
+      // boot-load — loader.js puede correr antes de que getSession resuelva _sbUser,
+      // saltándose la bajada. Acá, con la sesión ya lista, bajamos con guard y
+      // suscribimos en vivo. No-op si el festival aún no cargó (loader lo hará).
+      if(event==='INITIAL_SESSION' && session?.user && !session.user.is_anonymous){
+        await _cloudLoad({guard:true});
+        subscribePlanCloud();
         _renderAfterSync();
       }
       if(event==='SIGNED_OUT') _sbUpdateUI();

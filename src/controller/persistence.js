@@ -15,6 +15,8 @@ import { t } from '../i18n/i18n.js';
 
 // Debounce timer de _cloudSave — module-local (solo _cloudSave lo usa).
 let _cloudSaveTimer=null;
+// Canal Realtime del sync del plan EN VIVO (F0.5) — module-local.
+let _planChannel=null, _planChannelKey=null, _planRerenderCb=null;
 
 export function saveWL(){ storage.setWatchlist(watchlist); _cloudSave(); }
 
@@ -139,31 +141,89 @@ export async function _cloudLoad(opts){
       .single();
     if(error||!data) return false; // Sin datos en nube — conservar local (y, en sign-in, subir)
     if(_cloudGuardSkip({guard:_guard, dirty:storage.getCloudDirty(), cloudUpdatedAt:data.updated_at, localSyncedAt:storage.getCloudSyncedAt()})) return false;
-    // Aplicar datos de la nube (tienen prioridad sobre localStorage) — atómico
-    const _cloudUpdates = {};
-    if(data.watchlist?.length) _cloudUpdates.watchlist = new Set(data.watchlist);
-    if(data.watched?.length) _cloudUpdates.watched = new Set(data.watched);
-    if(data.ratings && Object.keys(data.ratings).length) _cloudUpdates.filmRatings = {...state.get('filmRatings'), ...data.ratings};
-    if(data.saved_agenda) _cloudUpdates.savedAgenda = data.saved_agenda;
-    if(data.prioritized?.length) _cloudUpdates.prioritized = new Set(data.prioritized);
-    if(data.availability && Object.keys(data.availability).length){
-      const _newAv = {...state.get('availability')};
-      DAY_KEYS.forEach(d=>{ if(data.availability[d]) _newAv[d] = data.availability[d]; });
-      _cloudUpdates.availability = _newAv;
-    }
-    if(Object.keys(_cloudUpdates).length) state.batchUpdate(_cloudUpdates);
-    // Persistir en local SIN eco a la nube (no llamar saveX → _cloudSave): lo que
-    // acabamos de bajar ya vive en la nube. Quedamos en sync con data.updated_at.
-    storage.setWatchlist(watchlist);storage.setWatched(watched);
-    storage.setPrioritized(prioritized);storage.setSavedAgenda(savedAgenda);
-    storage.setAvailability(availability);storage.setFilmRatings(filmRatings);
-    storage.setCloudSyncedAt(data.updated_at||new Date().toISOString());
-    storage.setCloudDirty(false);
-    // Reprogramar notificaciones locales del plan bajado (lo hacía saveSavedAgenda
-    // en la versión con eco). Idempotente: cancela y reprograma.
-    _scheduleNotifications();
-    return true; // aplicó datos de la nube
+    // Boot/sign-in: aplicar solo campos NO vacíos (defensivo — una fila incompleta
+    // no debe borrar datos locales). El Realtime usa wholesale (ver _applyCloudRow).
+    return _applyCloudRow(data, {wholesale:false});
   }catch(e){console.warn('Cloud load error:',e);return false;}
+}
+
+// _applyCloudRow — aplica una fila de user_festival_state al estado local y persiste
+//   SIN eco a la nube (no llama saveX → _cloudSave). Deja el dispositivo en sync con
+//   data.updated_at.
+//   wholesale=false (boot/sign-in): solo pisa campos NO vacíos — una fila incompleta
+//     no borra datos locales.
+//   wholesale=true (Realtime): la fila es el estado AUTORITATIVO del otro dispositivo
+//     → refleja también los borrados (campos que quedaron vacíos).
+export function _applyCloudRow(data, opts){
+  if(!data) return false;
+  const whole=!!(opts&&opts.wholesale);
+  const _u={};
+  if(whole||data.watchlist?.length) _u.watchlist=new Set(data.watchlist||[]);
+  if(whole||data.watched?.length) _u.watched=new Set(data.watched||[]);
+  if(whole||(data.ratings&&Object.keys(data.ratings).length)) _u.filmRatings=whole?(data.ratings||{}):{...state.get('filmRatings'),...data.ratings};
+  if(whole||data.saved_agenda) _u.savedAgenda=data.saved_agenda||null;
+  if(whole||data.prioritized?.length) _u.prioritized=new Set(data.prioritized||[]);
+  if(whole||(data.availability&&Object.keys(data.availability).length)){
+    if(whole){ _u.availability=data.availability||{}; }
+    else { const _newAv={...state.get('availability')}; DAY_KEYS.forEach(d=>{ if(data.availability[d]) _newAv[d]=data.availability[d]; }); _u.availability=_newAv; }
+  }
+  if(Object.keys(_u).length) state.batchUpdate(_u);
+  // Persistir en local (identidad de arrays/Sets vía globals bridgeados).
+  storage.setWatchlist(watchlist);storage.setWatched(watched);
+  storage.setPrioritized(prioritized);storage.setSavedAgenda(savedAgenda);
+  storage.setAvailability(availability);storage.setFilmRatings(filmRatings);
+  storage.setCloudSyncedAt(data.updated_at||new Date().toISOString());
+  storage.setCloudDirty(false);
+  // Reprogramar notificaciones locales del plan aplicado. Idempotente.
+  _scheduleNotifications();
+  return true;
+}
+
+// ── Sync del plan EN VIVO (F0.5) — Realtime de user_festival_state ─────────────
+// Base para festival en tiempo real + Apple Watch. Espeja el patrón de delays-cloud.
+
+export function setPlanRerender(cb){ _planRerenderCb=cb; }
+function _planRerender(){ if(typeof _planRerenderCb==='function'){ try{ _planRerenderCb(); }catch(e){ /* noop */ } } }
+
+// _shouldApplyRealtimeRow — decisión PURA para un evento Realtime entrante. true =
+//   aplicar la fila. Evita el eco de la propia escritura y filas viejas, y NO pisa
+//   ediciones locales sin subir (dirty → la nuestra gana y se sube en su debounce).
+//   Aislada para testear sin Supabase (como _cloudGuardSkip).
+export function _shouldApplyRealtimeRow({rowUpdatedAt, localSyncedAt, dirty}){
+  if(!rowUpdatedAt) return false;
+  if(dirty) return false;                                        // edición local pendiente → no pisar
+  if(localSyncedAt && rowUpdatedAt<=localSyncedAt) return false; // eco propio / fila vieja
+  return true;
+}
+
+// subscribePlanCloud — (re)suscribe a los cambios del plan del propio usuario. La RLS
+//   own_select (auth.uid()=user_id) ya scope las filas al usuario; el handler filtra
+//   además por festival activo. Idempotente por (user, festival). Requiere email.
+//   Lo llaman loader.js (al cargar festival) y auth.js (INITIAL_SESSION/SIGNED_IN).
+export function subscribePlanCloud(){
+  if(!_sb||!_sbUser||_sbUser.is_anonymous||!_activeFestId) return;
+  const key=_sbUser.id+'|'+_activeFestId;
+  if(_planChannelKey===key && _planChannel) return; // ya suscrito a este (user,festival)
+  if(_planChannel){ try{ _sb.removeChannel(_planChannel); }catch(e){ /* noop */ } _planChannel=null; }
+  _planChannelKey=key;
+  const fest=_activeFestId, uid=_sbUser.id;
+  _planChannel=_sb.channel('ufs-'+key)
+    .on('postgres_changes',
+      { event:'*', schema:'public', table:'user_festival_state', filter:'user_id=eq.'+uid },
+      (payload)=>{
+        const row=payload.new;
+        if(!row||row.festival_id!==fest) return; // otro festival del mismo usuario
+        if(!_shouldApplyRealtimeRow({rowUpdatedAt:row.updated_at, localSyncedAt:storage.getCloudSyncedAt(), dirty:storage.getCloudDirty()})) return;
+        if(_applyCloudRow(row,{wholesale:true})) _planRerender();
+      })
+    .subscribe();
+}
+
+// _hasLocalPlan — ¿hay algo en el plan local? Anti-clobber: en el primer sign-in NO
+//   subimos un plan vacío (evita plantar una fila vacía que pise datos buenos de otro
+//   dispositivo — el bug del "dispositivo vacío gana").
+export function _hasLocalPlan(){
+  return watchlist.size>0 || watched.size>0 || prioritized.size>0 || !!(savedAgenda&&savedAgenda.schedule&&savedAgenda.schedule.length);
 }
 
 export async function _sbSignIn(email){
