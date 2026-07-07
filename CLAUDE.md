@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `96327e1 fix(realtime): setAuth del JWT al socket — el sync en vivo del plan no entregaba nada`
+> Último commit: `78618b3 Merge pull request #273 from jdvlazio/fix/otp-autofill-tab-jump`
 
 ---
 
