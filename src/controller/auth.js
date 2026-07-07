@@ -2,7 +2,7 @@
 // p8 Step 7e — Auth-UI Supabase: init + re-render post-sync + display name. _sbReady module-local; _sb vía bridge.
 
 import { _renderProgramaContent } from '../view/programa.js';
-import { _cloudLoad, _sbUpdateUI } from './persistence.js';
+import { _cloudLoad, _cloudSave, _sbUpdateUI } from './persistence.js';
 import { showDayView } from './pipeline.js';
 import { t } from '../i18n/i18n.js';
 
@@ -21,7 +21,12 @@ export function _sbInit(){
       // Sesión anónima (retraso colaborativo): NO dispara cloud-load ni re-render
       // — es solo identidad de dispositivo, no un login de usuario.
       if(event==='SIGNED_IN' && !session?.user?.is_anonymous){
-        await _cloudLoad();
+        const _applied=await _cloudLoad();
+        // Nube vacía (primera vez que firma este usuario) → SUBIR el plan local que
+        // venía armando como anónimo. Sin esto, el plan nunca llega a la nube hasta
+        // la próxima mutación → multi-dispositivo/watch no ve nada (bug real: tabla
+        // user_festival_state vacía pese a usuarios con email). Ver F0.
+        if(!_applied) _cloudSave();
         _renderAfterSync();
       }
       if(event==='SIGNED_OUT') _sbUpdateUI();

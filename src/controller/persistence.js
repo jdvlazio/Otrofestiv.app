@@ -122,11 +122,13 @@ export function _cloudGuardSkip({guard, dirty, cloudUpdatedAt, localSyncedAt}){
   return false;
 }
 
-// _cloudLoad — baja el plan de la nube.
+// _cloudLoad — baja el plan de la nube. Devuelve true SI aplicó datos de la nube,
+//   false si no había fila (nube vacía), hubo error, o el guard saltó. El caller
+//   de sign-in usa el false de "nube vacía" para SUBIR el plan local (primera vez).
 //   opts.guard=true (BOOT): multi-dispositivo. Ver _cloudGuardSkip.
 //   Sin guard (SIGN-IN): la nube gana siempre — el usuario firma para restaurar.
 export async function _cloudLoad(opts){
-  if(!_sb||!_sbUser) return;
+  if(!_sb||!_sbUser) return false;
   const _guard = !!(opts&&opts.guard);
   try{
     const{data,error}=await _sb
@@ -135,8 +137,8 @@ export async function _cloudLoad(opts){
       .eq('user_id',_sbUser.id)
       .eq('festival_id',_activeFestId)
       .single();
-    if(error||!data) return; // Sin datos en nube — conservar local
-    if(_cloudGuardSkip({guard:_guard, dirty:storage.getCloudDirty(), cloudUpdatedAt:data.updated_at, localSyncedAt:storage.getCloudSyncedAt()})) return;
+    if(error||!data) return false; // Sin datos en nube — conservar local (y, en sign-in, subir)
+    if(_cloudGuardSkip({guard:_guard, dirty:storage.getCloudDirty(), cloudUpdatedAt:data.updated_at, localSyncedAt:storage.getCloudSyncedAt()})) return false;
     // Aplicar datos de la nube (tienen prioridad sobre localStorage) — atómico
     const _cloudUpdates = {};
     if(data.watchlist?.length) _cloudUpdates.watchlist = new Set(data.watchlist);
@@ -160,7 +162,8 @@ export async function _cloudLoad(opts){
     // Reprogramar notificaciones locales del plan bajado (lo hacía saveSavedAgenda
     // en la versión con eco). Idempotente: cancela y reprograma.
     _scheduleNotifications();
-  }catch(e){console.warn('Cloud load error:',e);}
+    return true; // aplicó datos de la nube
+  }catch(e){console.warn('Cloud load error:',e);return false;}
 }
 
 export async function _sbSignIn(email){
