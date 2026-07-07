@@ -2,7 +2,7 @@
 // p8 Step 7e — Auth-UI Supabase: init + re-render post-sync + display name. _sbReady module-local; _sb vía bridge.
 
 import { _renderProgramaContent } from '../view/programa.js';
-import { _cloudLoad, _cloudSave, _sbUpdateUI, subscribePlanCloud, _hasLocalPlan } from './persistence.js';
+import { _cloudLoad, _cloudSave, _sbUpdateUI, subscribePlanCloud, unsubscribePlanCloud, _hasLocalPlan } from './persistence.js';
 import { showDayView } from './pipeline.js';
 import { t } from '../i18n/i18n.js';
 
@@ -43,7 +43,7 @@ export function _sbInit(){
         subscribePlanCloud();
         _renderAfterSync();
       }
-      if(event==='SIGNED_OUT') _sbUpdateUI();
+      if(event==='SIGNED_OUT'){ unsubscribePlanCloud(); _sbUpdateUI(); }
     });
     _sb.auth.getSession().then(({data:{session}})=>{
       _sbUser=session?.user??null;

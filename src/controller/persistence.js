@@ -16,7 +16,8 @@ import { t } from '../i18n/i18n.js';
 // Debounce timer de _cloudSave — module-local (solo _cloudSave lo usa).
 let _cloudSaveTimer=null;
 // Canal Realtime del sync del plan EN VIVO (F0.5) — module-local.
-let _planChannel=null, _planChannelKey=null, _planRerenderCb=null;
+// _planLive: el canal está SUBSCRIBED → alimenta el estado base del sync-dot.
+let _planChannel=null, _planChannelKey=null, _planRerenderCb=null, _planLive=false;
 
 export function saveWL(){ storage.setWatchlist(watchlist); _cloudSave(); }
 
@@ -84,6 +85,7 @@ export function _cloudSave(){
   if(!_sb||!_sbUser||_sbUser.is_anonymous) return; // anon = solo identidad de reportes, no sync de plan
   // Hay mutación local pendiente de subir → dirty. El boot-load no debe pisarla.
   storage.setCloudDirty(true);
+  _sbShowSyncDot('dirty'); // ámbar mientras hay cambio local sin subir
   clearTimeout(_cloudSaveTimer);
   _cloudSaveTimer=setTimeout(async()=>{
     try{
@@ -221,7 +223,19 @@ export async function subscribePlanCloud(){
         if(!_shouldApplyRealtimeRow({rowUpdatedAt:row.updated_at, localSyncedAt:storage.getCloudSyncedAt(), dirty:storage.getCloudDirty()})) return;
         if(_applyCloudRow(row,{wholesale:true})) _planRerender();
       })
-    .subscribe();
+    .subscribe((status)=>{
+      // Estado del canal → sync-dot: verde fijo solo mientras está SUBSCRIBED.
+      // realtime-js reintenta solo tras TIMED_OUT/CLOSED; el punto refleja cada transición.
+      _planLive=(status==='SUBSCRIBED');
+      _sbShowSyncDot('live');
+    });
+}
+
+// unsubscribePlanCloud — teardown del canal (sign-out). Apaga el punto.
+export function unsubscribePlanCloud(){
+  if(_planChannel){ try{ _sb.removeChannel(_planChannel); }catch(e){ /* noop */ } }
+  _planChannel=null; _planChannelKey=null; _planLive=false;
+  _sbShowSyncDot('live'); // recomputa el base → oculto (sin canal)
 }
 
 // _hasLocalPlan — ¿hay algo en el plan local? Anti-clobber: en el primer sign-in NO
@@ -263,11 +277,16 @@ export function _sbUpdateUI(){
   }
 }
 
+// _sbShowSyncDot — punto de estado en el botón de cuenta (F0.5).
+//   'live' (verde) = canal Realtime conectado · 'dirty' (ámbar) = cambio local
+//   pendiente de subir · 'err' (rojo) = la última subida falló · 'ok' = subida
+//   exitosa → vuelve al estado BASE (verde si el canal sigue vivo, oculto si no).
+//   _planLive lo mantiene el status callback de subscribePlanCloud.
 export function _sbShowSyncDot(state){
   const dot=document.getElementById('sync-dot');
   if(!dot) return;
+  if(state==='ok'||state==='live'){ dot.className=_planLive?'sync-dot sync-live':'sync-dot'; return; }
   dot.className='sync-dot sync-'+state;
-  if(state==='ok') setTimeout(()=>{dot.className='sync-dot';},3000);
 }
 
 export async function submitAuthEmail(){
