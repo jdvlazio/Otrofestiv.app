@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `d7f15dd docs: plan Apple Watch F1 — arquitectura de auth verificada + fases`
+> Último commit: `d410fd4 Merge branch 'main' of https://github.com/jdvlazio/Otrofestiv.app into docs/plan-apple-watch-f1`
 
 ---
 
