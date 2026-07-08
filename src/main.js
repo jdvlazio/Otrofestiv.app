@@ -1599,11 +1599,11 @@ setDelaysRerender(function(){
 });
 
 // Sync del plan EN VIVO (F0.5): al llegar un cambio de OTRO dispositivo por Realtime,
-// repintar la vista activa (watchlist/watched/agenda cambiaron). showDayView +
-// _renderProgramaContent cubren Programa/Intereses/Mi Plan sin importar dónde estés.
+// repintar la vista ACTIVA sin navegar. renderActiveView() rutea internamente
+// (cartelera/seleccion/miplan/planner) — NO usar showDayView, que fuerza el tab
+// Programa y hace "brincar" de vista al recibir un cambio.
 setPlanRerender(function(){
-  showDayView();
-  _renderProgramaContent();
+  renderActiveView();
 });
 
 // ── Reactivar al volver al primer plano ──────────────────────

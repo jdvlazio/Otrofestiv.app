@@ -382,6 +382,10 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .auth-btn .auth-avatar{display:none;width:28px;height:28px;border-radius:50%;background:var(--amber);align-items:center;justify-content:center;font-size:var(--t-caption);font-weight:var(--w-bold);color:var(--black);letter-spacing:0}
 .auth-btn.signed-in .auth-avatar{display:flex}
 .sync-dot{position:absolute;bottom:0;right:0;width:7px;height:7px;border-radius:50%;border:1.5px solid var(--surf);display:none}
+/* Estados del sync-dot (F0.5). Antes _sbShowSyncDot seteaba sync-ok/sync-err sin CSS → el punto nunca fue visible. */
+.sync-dot.sync-live{display:block;background:var(--green)}   /* canal Realtime conectado: sync en vivo */
+.sync-dot.sync-dirty{display:block;background:var(--amber)}  /* cambio local pendiente de subir */
+.sync-dot.sync-err{display:block;background:var(--red)}      /* la última subida falló */
 
 .lang-toggle{position:relative;margin-left:var(--sp-2);flex-shrink:0}
 .lang-trigger{display:flex;align-items:center;gap:var(--sp-1);background:none;border:none;cursor:pointer;padding:var(--sp-1);border-radius:var(--r-sm);-webkit-tap-highlight-color:transparent}
@@ -2829,7 +2833,7 @@ setTimeout(function(){
     <div id="auth-sheet-step2" style="display:none">
       <div class="auth-sheet-title" data-i18n="auth_revisa">Revisá tu email</div>
       <div class="auth-sheet-sub"><span data-i18n="auth_otp_sub">Enviamos un código de 6 dígitos a</span> <span id="auth-otp-email" style="color:var(--white)"></span></div>
-      <input class="pin-display auth-email-inp" id="auth-otp-inp" type="number" placeholder="123456" inputmode="numeric" maxlength="6" onkeydown="if(event.key==='Enter')submitOTP()"><!-- 16px: prevents iOS auto-zoom -->
+      <input class="pin-display auth-email-inp" id="auth-otp-inp" type="text" placeholder="123456" inputmode="numeric" autocomplete="one-time-code" maxlength="6" onkeydown="if(event.key==='Enter')submitOTP()"><!-- one-time-code: iOS autofill del código desde el correo; type=text no bloquea el autofill y respeta maxlength. 16px: prevents iOS auto-zoom -->
       <button class="auth-send-btn" data-i18n="av_confirmar" id="auth-otp-btn" data-action="submitOTP">Confirmar</button>
       <div class="auth-msg" id="auth-otp-msg"></div>
       <span class="auth-cancel" data-action="closeAuthAndReset" data-i18n="misc_cancelar">Cancelar</span>
