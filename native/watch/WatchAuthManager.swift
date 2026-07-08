@@ -14,6 +14,7 @@
 // (valida el JWT del teléfono; el email jamás viaja como parámetro).
 
 import Foundation
+import Combine            // @Published / ObservableObject (sin esto no compila en watchOS)
 import WatchConnectivity
 import Supabase
 
