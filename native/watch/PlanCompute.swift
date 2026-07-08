@@ -7,6 +7,25 @@ import Foundation
 enum PlanCompute {
     static let tz = TimeZone(identifier: "America/Bogota") ?? TimeZone(secondsFromGMT: -5 * 3600)!
 
+    // ── URL del poster ────────────────────────────────────────────────────────
+    // Espeja la resolución del web (getFilmPoster): URL completa → tal cual;
+    // "/assets/…" → dominio de producción; cualquier otro path ("/xxx.jpg") es
+    // TMDB → base de imágenes de TMDB. tmdbSize: w185 (fila) / w342 (detalle).
+    static func posterURL(_ path: String?, tmdbSize: String = "w185") -> URL? {
+        guard let p = path, !p.isEmpty else { return nil }
+        if p.hasPrefix("http") { return URL(string: p) }
+        if p.hasPrefix("/assets/") { return URL(string: "https://otrofestiv.app" + p) }
+        return URL(string: "https://image.tmdb.org/t/p/\(tmdbSize)" + p)
+    }
+
+    // Editorial = still landscape 16:9 de un CDN oficial (espeja EDITORIAL_CDN_HOSTS
+    // del web). Se renderiza sin recortar; el resto es póster 2:3.
+    static let editorialHosts = ["cloudfront.net", "supabase.co"]
+    static func isEditorial(_ path: String?) -> Bool {
+        guard let p = path, let host = URL(string: p)?.host else { return false }
+        return editorialHosts.contains { host.hasSuffix($0) }
+    }
+
     static func startDate(_ item: ScheduleItem) -> Date? {
         guard let dayStr = item.dayStr, let timeStr = item.time else { return nil }
         let d = dayStr.split(separator: "-"); let t = timeStr.split(separator: ":")

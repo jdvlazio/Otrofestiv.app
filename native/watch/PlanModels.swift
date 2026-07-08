@@ -17,7 +17,7 @@ struct SavedAgenda: Decodable {
     let schedule: [ScheduleItem]
 }
 
-struct ScheduleItem: Decodable, Identifiable {
+struct ScheduleItem: Decodable, Identifiable, Hashable {
     let title: String
     let day: String?
     let date: String?
