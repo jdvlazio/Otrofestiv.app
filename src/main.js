@@ -120,6 +120,7 @@ import {
   toggleWL, toggleWatched, togglePelPrio, togglePelWL, setDelay, undoDelay, clearDelay, removeFromAgenda, addSuggestion, checkinLaVi, checkinNoLaVi, forceInclude, togglePriority, swapPriority, markWatchedFromPlan, confirmReplace, removeFilmFromScenario, _dismissNotice, selectMiPlanDay, miPlanNav, toggleMplanProg, setActivePlanFilm, selectFromDetail, toggleFilmAlternatives, toggleArchive, _toggleEveningFilms, filterByVenue, filterByDay, filterBySection, setInteresesView, setProgramaMode, toggleProgramaView, setProgramaView, setProgramaChip, clearProgramaChip, _pafClearSec, _pafClearVenue, _toggleWLFromList, saveCurrentScenario, _scrollToAgSection, _setExpandedFilm, _closePelAndRemove, _closePelAndRate, _navTo, _closeAuthAndReset, _toggleCtxOlder, _toggleWatchedAndClose, _toggleWLAndClose, _activatePlanFilm, _scrollToSuggestions, _removeConflictModal, _scrollToTop, _searchOpenFilm, _searchOpenCorto,
 } from './controller/handlers.js';
 import { setDelaysRerender } from './controller/delays-cloud.js';
+import { initWatchBridge } from './controller/watch-bridge.js';
 
 // ── Step 8d-4: controller/loader.js (loadFestival + dismissSplash) ───────────
 import {
@@ -631,7 +632,7 @@ FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202607071556';
+const BUILD_VERSION='202607072104';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';
@@ -1556,6 +1557,9 @@ document.addEventListener('click', function(e){
 // El defineProperty(globalThis,'_sb') del bridge debe existir antes, o el assignment
 // lanza ReferenceError (silenciado por el try/catch interno) y _sb queda null.
 _sbInit();
+// F1.0 Apple Watch: listener del handoff de identidad (no-op fuera de la app iOS
+// con el plugin WatchBridge). Después de _sbInit — usa _sb/_sbUser bridgeados.
+initWatchBridge();
 
 /* ── Re-render automático cada 60s ───────────────────────────
    Actualiza estados temporales (AHORA, Ya pasó, días pasados)

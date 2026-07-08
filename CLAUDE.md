@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `78618b3 Merge pull request #273 from jdvlazio/fix/otp-autofill-tab-jump`
+> Último commit: `d410fd4 Merge branch 'main' of https://github.com/jdvlazio/Otrofestiv.app into docs/plan-apple-watch-f1`
 
 ---
 
