@@ -18,7 +18,7 @@ final class PlanStore: ObservableObject {
     @Published var state: State = .idle
     @Published var festival: String = ""
     @Published var items: [ScheduleItem] = []     // todo el plan, ordenado por hora
-    @Published var next: ScheduleItem?             // próxima función (nil si el festival pasó)
+    @Published var hero: ScheduleItem?             // en curso, si no la próxima (nil si el festival pasó)
     @Published var today: [ScheduleItem] = []      // funciones de hoy
 
     func load() async {
@@ -38,7 +38,7 @@ final class PlanStore: ObservableObject {
             let now = Date()
             festival = row.festivalId
             items = PlanCompute.sortedByStart(schedule)
-            next  = PlanCompute.next(schedule, now: now)
+            hero  = PlanCompute.currentOrNext(schedule, now: now)
             today = PlanCompute.today(schedule, now: now)
             state = .loaded
         } catch {

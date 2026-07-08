@@ -28,6 +28,7 @@ struct ScheduleItem: Decodable, Identifiable {
     let time: String?
     let venue: String?
     let type: String?
+    let duration: String?   // "124 min" → para calcular fin / estado "AHORA"
 
     var dayStr: String? { day ?? date }
     var id: String { (dayStr ?? "") + (time ?? "") + title }

@@ -44,4 +44,38 @@ enum PlanCompute {
             return cal.isDate(s, inSameDayAs: now)
         }
     }
+
+    // ── Estado en vivo (verde "AHORA") ────────────────────────────────────────
+    static func durationMinutes(_ item: ScheduleItem) -> Int? {
+        guard let d = item.duration else { return nil }
+        let n = d.filter { $0.isNumber }
+        return Int(n)
+    }
+
+    static func endDate(_ item: ScheduleItem) -> Date? {
+        guard let s = startDate(item) else { return nil }
+        let mins = durationMinutes(item) ?? 120
+        return s.addingTimeInterval(TimeInterval(mins * 60))
+    }
+
+    static func isLive(_ item: ScheduleItem, now: Date) -> Bool {
+        guard let s = startDate(item), let e = endDate(item) else { return false }
+        return s <= now && now < e
+    }
+
+    /// Lo que sigue: la función en curso si hay, si no la próxima que aún no empezó.
+    static func currentOrNext(_ items: [ScheduleItem], now: Date) -> ScheduleItem? {
+        if let live = sortedByStart(items).first(where: { isLive($0, now: now) }) { return live }
+        return next(items, now: now)
+    }
+
+    /// "en 25 min" / "en 2 h 10 min" / "ahora". nil si ya pasó.
+    static func relative(to start: Date, now: Date) -> String? {
+        let mins = Int((start.timeIntervalSince(now) / 60).rounded())
+        if mins < 0 { return nil }
+        if mins == 0 { return "ahora" }
+        if mins < 60 { return "en \(mins) min" }
+        let h = mins / 60, m = mins % 60
+        return m == 0 ? "en \(h) h" : "en \(h) h \(m) min"
+    }
 }
