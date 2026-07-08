@@ -1,68 +1,74 @@
 # native/ — Apple Watch F1: integración en Xcode (checklist para Juan)
 
-> **Fuente canónica del Swift = este directorio del repo web.** El repo nativo
-> (`~/Otrofestiv.app`) NO admite commits (constitución) — los archivos se COPIAN
-> al proyecto Xcode, igual que el flujo `www/` del APK.
+> **Proyecto correcto (confirmado 8 jul 2026):** el iOS de producción es la app SwiftUI
+> **"Otrofestiv"** (`app.otrofestiv.mobile` para iOS), un envoltorio WKWebView. NO es
+> Capacitor (ese quedó en v1.2, solo para Android). Todo el trabajo del reloj va acá.
 > Plan y arquitectura: `docs/PLAN-apple-watch-F1.md`.
+>
+> **Fuente canónica del Swift = este repo web.** Se COPIA/AGREGA al proyecto Otrofestiv.
 
-## Estado del server-side (ya hecho, verificable sin Xcode)
+## Estado server-side (hecho, sin Xcode)
 
-- ✅ Edge Function **`watch-auth`** desplegado (v1, `verify_jwt` on). Rechazos verificados:
-  sin JWT → 401 de plataforma; JWT no-usuario → `{"error":"invalid token"}` 401.
-- ✅ Capa web: `src/controller/watch-bridge.js` responde al evento del plugin
-  llamando `functions.invoke('watch-auth')` (no-op fuera de la app iOS).
+- ✅ Edge Function **`watch-auth`** desplegado (verify_jwt on). Rechazos verificados
+  (sin JWT → 401; sin sesión de usuario → 401).
+- ✅ Web: `src/controller/watch-bridge.js` define `window.__otfWatchAuthRequest` →
+  llama `functions.invoke('watch-auth')` → responde por `webkit.messageHandlers.watchAuth`.
+  Inerte en web/Android. **Desplegado en otrofestiv.app.**
 
-## Checklist Xcode — F1.0 (puente de identidad)
+## A. Puente nativo en el envoltorio (target iOS "Otrofestiv")
 
-### A. Plugin en el target iOS existente
-1. Abrir `~/Otrofestiv.app/ios/App/App.xcworkspace` en Xcode.
-2. Arrastrar `native/ios-plugin/WatchBridgePlugin.swift` al grupo `App/App`
-   (✓ "Copy items if needed", target **App**).
-3. **Registrar el plugin (Capacitor 6):** si no existe ya un ViewController custom,
-   crear `MyViewController.swift` en `App/App`:
+1. Abrí el proyecto **Otrofestiv** (el SwiftUI real).
+2. Arrastrá `native/ios-wrapper/WatchAuthBridge.swift` al grupo del proyecto
+   (junto a `ContentView.swift`) — ✓ "Copy files to destination", Target: **Otrofestiv**.
+3. **Editar `ContentView.swift`** — 4 líneas, calcadas del puente de calendario:
+
+   En la clase `Coordinator`, agregá una propiedad:
    ```swift
-   import UIKit
-   import Capacitor
-
-   class MyViewController: CAPBridgeViewController {
-       override open func capacitorDidLoad() {
-           bridge?.registerPluginInstance(WatchBridgePlugin())
-       }
-   }
+   let watchAuth = WatchAuthBridge()   // ← NUEVO
    ```
-   y en `App/App/Base.lproj/Main.storyboard`, seleccionar el ViewController y en
-   Identity Inspector cambiar la clase `CAPBridgeViewController` → `MyViewController`
-   (Module: App).
-4. Build del target **App** (⌘B) — debe compilar sin errores.
 
-### B. Target watchOS nuevo
-1. File → New → Target… → **watchOS → App**.
-   - Product Name: `OtrofestivWatch` · Interface: SwiftUI · "Watch App for Existing iOS App" (companion de **App**).
-   - Minimum Deployment: **watchOS 10.0**.
-2. Reemplazar los archivos generados por los canónicos de `native/watch/`:
+   En `makeUIView(context:)`, junto a `add(context.coordinator, name: "calendar")`:
+   ```swift
+   config.userContentController.add(context.coordinator.watchAuth, name: "watchAuth")  // ← NUEVO
+   ```
+
+   Y después de `context.coordinator.webView = webView`:
+   ```swift
+   context.coordinator.watchAuth.webView = webView   // ← NUEVO
+   context.coordinator.watchAuth.activate()          // ← NUEVO
+   ```
+4. Build del target **Otrofestiv** (⌘B) → debe compilar.
+
+## B. Target watchOS
+
+1. En el navegador, seleccioná el **proyecto azul "Otrofestiv"** (arriba de todo) para
+   que el nuevo target se cree en ESTE proyecto.
+2. File → New → Target… → **watchOS → App** → Next.
+   - Product Name: `OtrofestivWatch` · Interface: SwiftUI · watchOS 10.0 mínimo.
+   - **"Watch App for Existing iOS App"** → en el desplegable elegí **`Otrofestiv`**
+     (ahora sí aparece, porque el target creador es el correcto).
+   - ✅ Señal de OK: el Bundle Identifier cuelga de `app.otrofestiv.mobile`.
+3. Reemplazá los archivos generados por los de `native/watch/`:
    `OtrofestivWatchApp.swift`, `WatchAuthManager.swift`, `ContentView.swift`.
-3. **Agregar supabase-swift al target del reloj:** File → Add Package Dependencies…
-   → `https://github.com/supabase/supabase-swift` → Add. En "Add to Target",
-   producto **Supabase** → target `OtrofestivWatch`.
-4. Build del target `OtrofestivWatch` (⌘B).
+   *(Ojo: el reloj tiene su propio `ContentView.swift` — no confundir con el del iPhone.)*
+4. Agregar **supabase-swift** al target del reloj: File → Add Package Dependencies… →
+   `https://github.com/supabase/supabase-swift` → producto **Supabase** → target
+   `OtrofestivWatch`.
+5. Build del target `OtrofestivWatch` (⌘B).
 
-### C. Prueba del circuito completo (simuladores emparejados)
-1. Scheme `App` → correr en un simulador de iPhone. **Firmarse con tu email** en la app.
-2. Scheme `OtrofestivWatch` → correr en el Apple Watch emparejado a ese iPhone
-   (Xcode crea el par; verificar en Devices que estén emparejados).
-3. En el reloj: debe pasar `waiting for iPhone…` → **✓ verde con tu email** ("session OK — F1.0 ✓").
-4. Si falla con "iPhone no alcanzable": asegurarse de que la app del iPhone esté
-   **abierta y en primer plano**, y Retry en el reloj.
+## C. Prueba del circuito (simuladores emparejados)
 
-### Qué reportar de vuelta
-- Captura del reloj con el ✓ verde (o el error exacto si falla).
-- Con eso cerramos F1.0 y arranca F1.1 (datos del plan en el reloj).
+1. Scheme `Otrofestiv` → simulador de iPhone. **Firmá con tu email** en la app.
+2. Scheme `OtrofestivWatch` → Apple Watch emparejado a ese iPhone.
+3. En el reloj: `waiting for iPhone…` → **✓ verde con tu email** ("session OK — F1.0 ✓").
+4. Si "iPhone no alcanzable": la app del iPhone tiene que estar **abierta en primer
+   plano**; Retry en el reloj.
 
-## Notas de seguridad (por qué es así)
+**Reportá:** captura del reloj con el ✓ verde (o el error). Con eso cerramos F1.0.
 
-- El reloj **jamás** recibe la sesión del teléfono: recibe un **pase de un solo uso**
-  (`token_hash`) y lo canjea por SU propia sesión (cadena de refresh independiente).
-  Compartir una sesión entre dos dispositivos dispararía la detección de reuso de
-  refresh tokens de Supabase y **cerraría la sesión en ambos**.
-- La service-role key vive SOLO en el Edge Function (server-side).
-- El Edge Function solo emite pases para el email del **propio** caller autenticado.
+## Notas
+
+- El reloj recibe un **pase de un solo uso**, no la sesión del teléfono → obtiene SU
+  propia sesión (cadena de refresh propia). Compartir la sesión revocaría ambas.
+- Cabo abierto a revisar: bundle iOS = `app.otrofestiv.mobile` (correcto); Mac/visionOS
+  usan `app.otrofestiv.Otrofestiv`. El reloj cuelga del iOS → `.mobile`.
