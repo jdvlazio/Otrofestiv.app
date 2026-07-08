@@ -1,11 +1,9 @@
-// ── PlanModels.swift — modelos del plan para el reloj (F1.1) ──────────────────
+// ── PlanModels.swift — modelos del plan para el reloj (F1.2) ──────────────────
 // FUENTE CANÓNICA: repo web, native/watch/. Espejo de user_festival_state.saved_agenda.
-// El schedule ya viene con title/time/venue/day → el reloj NO necesita el JSON del
-// festival para "próxima función" + "agenda de hoy". Campos extra del item se ignoran.
+// El schedule trae title/time/venue/day/poster/duration → suficiente para Mi Plan por día.
 
 import Foundation
 
-// Fila de user_festival_state (solo lo que el reloj usa).
 struct UserFestivalRow: Decodable {
     let festivalId: String
     let savedAgenda: SavedAgenda?
@@ -19,8 +17,6 @@ struct SavedAgenda: Decodable {
     let schedule: [ScheduleItem]
 }
 
-// Un ítem del plan. day="2026-07-02", time="20:00" (24h). Lenient: campos opcionales
-// para que un ítem raro no rompa la decodificación del arreglo entero.
 struct ScheduleItem: Decodable, Identifiable {
     let title: String
     let day: String?
@@ -28,8 +24,16 @@ struct ScheduleItem: Decodable, Identifiable {
     let time: String?
     let venue: String?
     let type: String?
-    let duration: String?   // "124 min" → para calcular fin / estado "AHORA"
+    let duration: String?   // "124 min" → estado en vivo
+    let poster: String?     // "/assets/ficmontanas/un-poeta.png" (puede faltar en eventos)
 
     var dayStr: String? { day ?? date }
     var id: String { (dayStr ?? "") + (time ?? "") + title }
+}
+
+// Un día del plan (una página en el reloj).
+struct DaySection: Identifiable {
+    let id: String       // dayStr "2026-07-03"
+    let label: String    // "VIE 3 JUL"
+    let items: [ScheduleItem]
 }

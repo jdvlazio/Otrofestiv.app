@@ -1,19 +1,15 @@
-// ── PlanCompute.swift — cómputo puro del plan (F1.1) ──────────────────────────
-// FUENTE CANÓNICA: repo web, native/watch/. Funciones PURAS (testables sin red):
-// próxima función + agenda de hoy. Zona horaria Colombia (UTC−5), igual que el web
-// (que nunca usa toISOString para lógica de fechas — ver CLAUDE.md).
+// ── PlanCompute.swift — cómputo puro del plan (F1.2) ──────────────────────────
+// FUENTE CANÓNICA: repo web, native/watch/. Puro/testable. Zona Colombia (UTC−5),
+// igual que el web. Agrupa el plan por día para la navegación paginada del reloj.
 
 import Foundation
 
 enum PlanCompute {
-    // America/Bogota es UTC−5 todo el año (sin DST) → coincide con el offset fijo del web.
     static let tz = TimeZone(identifier: "America/Bogota") ?? TimeZone(secondsFromGMT: -5 * 3600)!
 
-    /// day "2026-07-02" + time "20:00" → Date en zona Colombia. nil si el ítem es inválido.
     static func startDate(_ item: ScheduleItem) -> Date? {
         guard let dayStr = item.dayStr, let timeStr = item.time else { return nil }
-        let d = dayStr.split(separator: "-")
-        let t = timeStr.split(separator: ":")
+        let d = dayStr.split(separator: "-"); let t = timeStr.split(separator: ":")
         guard d.count == 3, t.count >= 2,
               let y = Int(d[0]), let mo = Int(d[1]), let da = Int(d[2]),
               let h = Int(t[0]), let mi = Int(t[1]) else { return nil }
@@ -22,60 +18,60 @@ enum PlanCompute {
         return Calendar(identifier: .gregorian).date(from: c)
     }
 
-    /// Todos los ítems con fecha válida, ordenados por hora de inicio.
     static func sortedByStart(_ items: [ScheduleItem]) -> [ScheduleItem] {
-        items.compactMap { i in startDate(i).map { ($0, i) } }
-            .sorted { $0.0 < $1.0 }
-            .map { $0.1 }
-    }
-
-    /// La próxima función que aún no empezó (start >= now). nil si el festival ya pasó.
-    static func next(_ items: [ScheduleItem], now: Date) -> ScheduleItem? {
-        items.compactMap { i in startDate(i).map { ($0, i) } }
-            .filter { $0.0 >= now }
-            .min { $0.0 < $1.0 }?.1
-    }
-
-    /// Ítems de HOY (mismo día en zona Colombia), ordenados por hora.
-    static func today(_ items: [ScheduleItem], now: Date) -> [ScheduleItem] {
-        var cal = Calendar(identifier: .gregorian); cal.timeZone = tz
-        return sortedByStart(items).filter { i in
-            guard let s = startDate(i) else { return false }
-            return cal.isDate(s, inSameDayAs: now)
-        }
+        items.compactMap { i in startDate(i).map { ($0, i) } }.sorted { $0.0 < $1.0 }.map { $0.1 }
     }
 
     // ── Estado en vivo (verde "AHORA") ────────────────────────────────────────
     static func durationMinutes(_ item: ScheduleItem) -> Int? {
         guard let d = item.duration else { return nil }
-        let n = d.filter { $0.isNumber }
-        return Int(n)
+        return Int(d.filter { $0.isNumber })
     }
-
     static func endDate(_ item: ScheduleItem) -> Date? {
         guard let s = startDate(item) else { return nil }
-        let mins = durationMinutes(item) ?? 120
-        return s.addingTimeInterval(TimeInterval(mins * 60))
+        return s.addingTimeInterval(TimeInterval((durationMinutes(item) ?? 120) * 60))
     }
-
     static func isLive(_ item: ScheduleItem, now: Date) -> Bool {
         guard let s = startDate(item), let e = endDate(item) else { return false }
         return s <= now && now < e
     }
 
-    /// Lo que sigue: la función en curso si hay, si no la próxima que aún no empezó.
-    static func currentOrNext(_ items: [ScheduleItem], now: Date) -> ScheduleItem? {
-        if let live = sortedByStart(items).first(where: { isLive($0, now: now) }) { return live }
-        return next(items, now: now)
+    // ── Agrupación por día (páginas de Mi Plan) ───────────────────────────────
+    static func groupedByDay(_ items: [ScheduleItem]) -> [DaySection] {
+        var order: [String] = []
+        var map: [String: [ScheduleItem]] = [:]
+        for i in sortedByStart(items) {
+            guard let d = i.dayStr else { continue }
+            if map[d] == nil { order.append(d); map[d] = [] }
+            map[d]?.append(i)
+        }
+        return order.map { DaySection(id: $0, label: dayLabel($0), items: map[$0] ?? []) }
     }
 
-    /// "en 25 min" / "en 2 h 10 min" / "ahora". nil si ya pasó.
-    static func relative(to start: Date, now: Date) -> String? {
-        let mins = Int((start.timeIntervalSince(now) / 60).rounded())
-        if mins < 0 { return nil }
-        if mins == 0 { return "ahora" }
-        if mins < 60 { return "en \(mins) min" }
-        let h = mins / 60, m = mins % 60
-        return m == 0 ? "en \(h) h" : "en \(h) h \(m) min"
+    /// "2026-07-03" → "VIE 3 JUL" (ALLCAPS, es).
+    static func dayLabel(_ dayStr: String) -> String {
+        let parse = DateFormatter()
+        parse.locale = Locale(identifier: "es_CO"); parse.timeZone = tz
+        parse.dateFormat = "yyyy-MM-dd"
+        guard let date = parse.date(from: dayStr) else { return dayStr }
+        let out = DateFormatter()
+        out.locale = Locale(identifier: "es_CO"); out.timeZone = tz
+        out.dateFormat = "EEE d MMM"
+        return out.string(from: date).uppercased().replacingOccurrences(of: ".", with: "")
+    }
+
+    /// Página inicial: hoy si el plan lo tiene; si no, el primer día futuro; si el festival
+    /// ya pasó, el último día (recap).
+    static func defaultDayIndex(_ sections: [DaySection], now: Date) -> Int {
+        var cal = Calendar(identifier: .gregorian); cal.timeZone = tz
+        if let i = sections.firstIndex(where: { s in
+            guard let f = s.items.first, let d = startDate(f) else { return false }
+            return cal.isDate(d, inSameDayAs: now)
+        }) { return i }
+        if let i = sections.firstIndex(where: { s in
+            guard let f = s.items.first, let d = startDate(f) else { return false }
+            return d >= cal.startOfDay(for: now)
+        }) { return i }
+        return max(0, sections.count - 1)
     }
 }

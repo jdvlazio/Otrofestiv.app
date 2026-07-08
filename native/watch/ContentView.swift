@@ -1,8 +1,9 @@
 // ── ContentView.swift — UI del reloj (F1.2) ───────────────────────────────────
-// Estructura: TabView vertical paginado (corona) — Página 1 "Lo que sigue" (hero),
-// Página 2 "Hoy / Tu plan" (List nativa). Marca por color + jerarquía (OTStyle),
-// SF Compact para todo el texto (Dynamic Type). Fondo true black.
-// Diseño: docs/PLAN-apple-watch-F1-2.md. Copy es artefacto de diseño (aprobado con Juan).
+// Mi Plan = objetivo principal. Navegación PAGINADA POR DÍA (swipe/corona = "flechas").
+// Cada fila: poster chico (color/marca, como Mi Plan del teléfono) + hora ámbar + título
+// + sede. Función en curso → "AHORA" verde. Marca por color+jerarquía (OTStyle), SF
+// Compact (Dynamic Type), fondo true black. La "próxima función" (glance) vive en la
+// complication (F1.3). Diseño: docs/PLAN-apple-watch-F1-2.md. Copy aprobado con Juan.
 
 import SwiftUI
 
@@ -12,109 +13,58 @@ struct ContentView: View {
 
     var body: some View {
         switch auth.status {
-        case .authenticated:      RootTabs()
-        case .checking:           StatusScreen(icon: nil, text: "abriendo…")
-        case .waitingForPhone:    StatusScreen(icon: nil, text: "conectando con tu iPhone…")
+        case .authenticated:      MiPlan()
+        case .checking:           StatusScreen(text: "abriendo…")
+        case .waitingForPhone:    StatusScreen(text: "conectando con tu iPhone…")
         case .failed(let reason): FailScreen(reason: reason) { Task { await auth.requestHandoffFromPhone() } }
         }
     }
 }
 
-// ── Contenedor de las dos páginas ─────────────────────────────────────────────
-private struct RootTabs: View {
+// ── Mi Plan · paginado por día ────────────────────────────────────────────────
+private struct MiPlan: View {
     @EnvironmentObject var plan: PlanStore
+    @State private var day = 0
+
     var body: some View {
-        TabView {
-            NavigationStack { NextPage() }
-            NavigationStack { TodayPage() }
+        Group {
+            switch plan.state {
+            case .idle, .loading:
+                ProgressView().tint(OT.amber)
+            case .error(let e):
+                MessageView(title: "No se pudo cargar", detail: e)
+            case .empty:
+                MessageView(title: "Sin plan", detail: "Armá tu plan en el teléfono.")
+            case .loaded:
+                if plan.sections.isEmpty {
+                    MessageView(title: "Sin plan", detail: "Armá tu plan en el teléfono.")
+                } else {
+                    TabView(selection: $day) {
+                        ForEach(Array(plan.sections.enumerated()), id: \.element.id) { idx, section in
+                            DayPage(section: section).tag(idx)
+                        }
+                    }
+                    .tabViewStyle(.page)
+                    .tint(OT.amber)
+                }
+            }
         }
-        .tabViewStyle(.verticalPage)
-        .tint(OT.amber)
-        .task { if case .idle = plan.state { await plan.load() } }
+        .task {
+            if case .idle = plan.state { await plan.load() }
+        }
+        .onChange(of: plan.defaultDay) { _, new in day = new }
     }
 }
 
-// ── Página 1 · Lo que sigue (hero) ────────────────────────────────────────────
-private struct NextPage: View {
-    @EnvironmentObject var plan: PlanStore
-    var body: some View {
-        content
-            .containerBackground(OT.amber.opacity(0.12).gradient, for: .navigation)
-    }
-    @ViewBuilder private var content: some View {
-        switch plan.state {
-        case .idle, .loading: ProgressView().tint(OT.amber)
-        case .error(let e):   MessageView(title: "No se pudo cargar", detail: e)
-        case .empty:          MessageView(title: "Sin plan", detail: "Armá tu plan en el teléfono.")
-        case .loaded:
-            if let item = plan.hero {
-                Hero(item: item)
-            } else {
-                MessageView(title: "El festival terminó", detail: "Este fue tu plan.")
-            }
-        }
-    }
-}
-
-private struct Hero: View {
-    let item: ScheduleItem
-    private var live: Bool { PlanCompute.isLive(item, now: Date()) }
-    private var relative: String? {
-        guard let s = PlanCompute.startDate(item) else { return nil }
-        return PlanCompute.relative(to: s, now: Date())
-    }
-    var body: some View {
-        VStack(alignment: .leading, spacing: 3) {
-            Text(live ? "AHORA" : "PRÓXIMA")
-                .font(.caption2).fontWeight(.semibold).tracking(1.3)
-                .foregroundStyle(live ? OT.green : OT.faint)
-            Text(item.time ?? "—")
-                .font(.system(.largeTitle, design: .rounded)).fontWeight(.bold)
-                .monospacedDigit().foregroundStyle(OT.amber)
-            if !live, let rel = relative {
-                Text(rel).font(.caption).foregroundStyle(OT.secondary)
-            }
-            Text(item.title)
-                .font(.title3).fontWeight(.semibold)
-                .foregroundStyle(OT.warm).lineLimit(3).padding(.top, 3)
-            if let venue = item.venue {
-                Label(venue, systemImage: "mappin.and.ellipse")
-                    .font(.caption).foregroundStyle(OT.secondary).lineLimit(2)
-                    .padding(.top, 1)
-            }
-        }
-        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
-    }
-}
-
-// ── Página 2 · Hoy / Tu plan (lista) ──────────────────────────────────────────
-private struct TodayPage: View {
-    @EnvironmentObject var plan: PlanStore
-    var body: some View {
-        switch plan.state {
-        case .loaded:
-            if !plan.today.isEmpty {
-                PlanList(header: "HOY", items: plan.today)
-            } else if !plan.items.isEmpty {
-                PlanList(header: "TU PLAN", items: plan.items)   // festival sin funciones hoy → recap
-            } else {
-                MessageView(title: "Día libre", detail: "Hoy no tenés funciones.")
-            }
-        case .idle, .loading: ProgressView().tint(OT.amber)
-        default: MessageView(title: "Sin plan", detail: nil)
-        }
-    }
-}
-
-private struct PlanList: View {
-    let header: String
-    let items: [ScheduleItem]
+private struct DayPage: View {
+    let section: DaySection
     var body: some View {
         List {
             Section {
-                ForEach(items) { PlanRow(item: $0) }
+                ForEach(section.items) { PlanRow(item: $0) }
             } header: {
-                Text(header).font(.caption2).fontWeight(.semibold).tracking(1.3)
+                Text(section.label)
+                    .font(.caption2).fontWeight(.semibold).tracking(1.2)
                     .foregroundStyle(OT.faint)
             }
         }
@@ -125,19 +75,16 @@ private struct PlanRow: View {
     let item: ScheduleItem
     private var live: Bool { PlanCompute.isLive(item, now: Date()) }
     var body: some View {
-        HStack(alignment: .top, spacing: 9) {
-            if live {
-                Capsule().fill(OT.green).frame(width: 3)
-            }
-            Text(item.time ?? "—")
-                .font(.headline).monospacedDigit().foregroundStyle(OT.amber)
+        HStack(alignment: .top, spacing: 8) {
+            PosterThumb(path: item.poster)
             VStack(alignment: .leading, spacing: 2) {
-                Text(item.title).font(.headline).foregroundStyle(OT.warm).lineLimit(2)
-                if let v = item.venue {
-                    Text(v).font(.caption).foregroundStyle(OT.secondary).lineLimit(1)
+                HStack(spacing: 6) {
+                    Text(item.time ?? "—").font(.headline).monospacedDigit().foregroundStyle(OT.amber)
+                    if live { Text("AHORA").font(.caption2).fontWeight(.bold).foregroundStyle(OT.green) }
                 }
-                if live {
-                    Text("AHORA").font(.caption2).fontWeight(.bold).foregroundStyle(OT.green)
+                Text(item.title).font(.subheadline).foregroundStyle(OT.warm).lineLimit(2)
+                if let v = item.venue {
+                    Text(v).font(.caption2).foregroundStyle(OT.secondary).lineLimit(1)
                 }
             }
         }
@@ -145,24 +92,50 @@ private struct PlanRow: View {
     }
 }
 
+// Poster chico (2:3) — color/marca, como Mi Plan del teléfono. Placeholder para eventos.
+private struct PosterThumb: View {
+    let path: String?
+    private var url: URL? {
+        guard let p = path, !p.isEmpty else { return nil }
+        return URL(string: "https://otrofestiv.app" + p)
+    }
+    var body: some View {
+        Group {
+            if let url {
+                AsyncImage(url: url) { phase in
+                    if let img = phase.image {
+                        img.resizable().scaledToFill()
+                    } else {
+                        placeholder
+                    }
+                }
+            } else {
+                placeholder
+            }
+        }
+        .frame(width: 30, height: 45)
+        .clipShape(RoundedRectangle(cornerRadius: 4, style: .continuous))
+    }
+    private var placeholder: some View {
+        Rectangle().fill(OT.warm.opacity(0.08))
+            .overlay(Image(systemName: "film").font(.caption2).foregroundStyle(OT.faint))
+    }
+}
+
 // ── Estados auxiliares ────────────────────────────────────────────────────────
 private struct MessageView: View {
-    let title: String
-    let detail: String?
+    let title: String; let detail: String?
     var body: some View {
         VStack(spacing: 6) {
             Text(title).font(.headline).foregroundStyle(OT.warm).multilineTextAlignment(.center)
             if let d = detail {
                 Text(d).font(.caption).foregroundStyle(OT.secondary).multilineTextAlignment(.center)
             }
-        }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .padding()
+        }.frame(maxWidth: .infinity, maxHeight: .infinity).padding()
     }
 }
 
 private struct StatusScreen: View {
-    let icon: String?
     let text: String
     var body: some View {
         VStack(spacing: 8) {
@@ -173,8 +146,7 @@ private struct StatusScreen: View {
 }
 
 private struct FailScreen: View {
-    let reason: String
-    let retry: () -> Void
+    let reason: String; let retry: () -> Void
     var body: some View {
         VStack(spacing: 8) {
             Image(systemName: "exclamationmark.triangle.fill").foregroundStyle(OT.amber).font(.title3)

@@ -1,11 +1,10 @@
-// ── PlanStore.swift — carga del plan en el reloj (F1.1) ───────────────────────
+// ── PlanStore.swift — carga del plan en el reloj (F1.2) ───────────────────────
 // FUENTE CANÓNICA: repo web, native/watch/. Usa la sesión propia del reloj (F1.0)
-// para leer user_festival_state por PostgREST (la RLS own_select ya lo scope al
-// usuario), decodifica saved_agenda y computa próxima función + agenda.
+// para leer user_festival_state por PostgREST (RLS own_select), decodifica
+// saved_agenda y lo agrupa por día para la navegación paginada.
 //
-// Festival activo (spike): la fila MÁS RECIENTE por updated_at — el festival que el
-// usuario editó último. Suficiente para el spike; el refinamiento (el teléfono empuja
-// el festival activo por WCSession) queda para el hardening de F1.1.
+// Festival activo (spike): la fila MÁS RECIENTE por updated_at. El refinamiento
+// (el teléfono empuja el festival activo por WCSession) queda para el hardening.
 
 import Foundation
 import Combine
@@ -17,9 +16,8 @@ final class PlanStore: ObservableObject {
 
     @Published var state: State = .idle
     @Published var festival: String = ""
-    @Published var items: [ScheduleItem] = []     // todo el plan, ordenado por hora
-    @Published var hero: ScheduleItem?             // en curso, si no la próxima (nil si el festival pasó)
-    @Published var today: [ScheduleItem] = []      // funciones de hoy
+    @Published var sections: [DaySection] = []   // el plan agrupado por día
+    @Published var defaultDay: Int = 0            // página inicial (hoy / recap)
 
     func load() async {
         state = .loading
@@ -35,11 +33,9 @@ final class PlanStore: ObservableObject {
                   let schedule = row.savedAgenda?.schedule, !schedule.isEmpty else {
                 state = .empty; return
             }
-            let now = Date()
             festival = row.festivalId
-            items = PlanCompute.sortedByStart(schedule)
-            hero  = PlanCompute.currentOrNext(schedule, now: now)
-            today = PlanCompute.today(schedule, now: now)
+            sections = PlanCompute.groupedByDay(schedule)
+            defaultDay = PlanCompute.defaultDayIndex(sections, now: Date())
             state = .loaded
         } catch {
             state = .error(error.localizedDescription)
