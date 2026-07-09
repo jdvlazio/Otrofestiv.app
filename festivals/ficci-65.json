@@ -90,7 +90,8 @@
       "director": "Allan Deberton",
       "year": 2026,
       "synopsis_en": "Twelve-year-old Gugu grows up in a small community on the banks of the Araújo-Lima reservoir, whose waters are slowly receding to reveal the ruins of a submerged town. He lives with his grandmother Dilma, surrounded by tenderness, mischief, and afternoons of football.",
-      "synopsis_lang": "es"
+      "synopsis_lang": "es",
+      "posterSource": "tmdb"
     },
     {
       "title": "Queimada",
@@ -110,7 +111,8 @@
       "director": "Sébastien Vaniček",
       "year": 2026,
       "synopsis_en": "Made in 1969 by Gillo Pontecorvo, Burn! offers one of modern cinema's most incisive representations of colonialism.",
-      "synopsis_lang": "es"
+      "synopsis_lang": "es",
+      "posterSource": "tmdb"
     },
     {
       "title": "O Riso e a Faca",
@@ -131,7 +133,8 @@
       "year": 2025,
       "synopsis_en": "Pedro Filipe Marques builds an intimate portrait of a Portuguese family in Lisbon, observing with delicacy the generational tensions and silences that define their bonds.",
       "genre": "Drama",
-      "synopsis_lang": "es"
+      "synopsis_lang": "es",
+      "posterSource": "tmdb"
     },
     {
       "title": "Vetre, pričaj sa mnom",
@@ -152,7 +155,8 @@
       "year": 2025,
       "synopsis_en": "The sound of the trees seems to ease the restlessness that inhabits Stefan. The need to face the pain of his mother's death drives him to return to his hometown.",
       "genre": "Familia, Drama",
-      "synopsis_lang": "es"
+      "synopsis_lang": "es",
+      "posterSource": "tmdb"
     },
     {
       "title": "Geu Jayeoni Nege Mworago Hani",
@@ -172,7 +176,8 @@
       "director": "Hong Sang-soo",
       "year": 2025,
       "synopsis_en": "Hong Sang-soo returns to the Berlin Film Festival with a black-and-white film following a director who travels to the beach with her family and, in conversations with strangers, reflects on love, art, and human nature.",
-      "synopsis_lang": "es"
+      "synopsis_lang": "es",
+      "posterSource": "tmdb"
     },
     {
       "title": "Costas — Prog. 4",
@@ -191,17 +196,20 @@
         {
           "title": "Comunicado de Argentina",
           "country": "Argentina/EEUU",
-          "duration": "40 min"
+          "duration": "40 min",
+          "posterSource": "custom"
         },
         {
           "title": "Nicaragua, semilla de soles",
           "country": "México/Nicaragua",
-          "duration": "57 min"
+          "duration": "57 min",
+          "posterSource": "custom"
         },
         {
           "title": "Palestina, otro Vietnam",
           "country": "Argentina/Italia/Palestina",
-          "duration": "22 min"
+          "duration": "22 min",
+          "posterSource": "custom"
         }
       ]
     },
@@ -221,7 +229,8 @@
       "film_list": [],
       "synopsis": "Lejos de Anserma, Pacho continuó su vida escapando de la violencia. A sus 15 años, su única alternativa lo obligó a desconectarse de su origen.",
       "synopsis_en": "Far from Anserma, Pacho continued his life fleeing violence. At 15, his only alternative forced him to sever ties with his origins.",
-      "synopsis_lang": "es"
+      "synopsis_lang": "es",
+      "posterSource": "tmdb"
     },
     {
       "title": "Lolita en Honda",
@@ -239,7 +248,8 @@
       "film_list": [],
       "synopsis": "Lolita en Honda es un viaje íntimo hacia la memoria familiar, donde Daniel Torres explora la infancia de su abuela para desentrañar las marcas del abandono y la violencia internalizada que moldearon su carácter.",
       "synopsis_en": "Lolita en Honda is an intimate journey into family memory, in which Daniel Torres explores his grandmother's childhood to unravel the marks of abandonment and internalized violence that shaped her character.",
-      "synopsis_lang": "es"
+      "synopsis_lang": "es",
+      "posterSource": "tmdb"
     },
     {
       "title": "Prog. Cortometrajes — Jorge Cadena",
@@ -258,32 +268,38 @@
         {
           "title": "El cuento de Antonia",
           "country": "Suiza",
-          "duration": "30 min"
+          "duration": "30 min",
+          "posterSource": "tmdb"
         },
         {
           "title": "Flores del otro patio",
           "country": "Suiza/Colombia",
-          "duration": "16 min"
+          "duration": "16 min",
+          "posterSource": "tmdb"
         },
         {
           "title": "Les Trois Hirondelles",
           "country": "Suiza",
-          "duration": "17 min"
+          "duration": "17 min",
+          "posterSource": "custom"
         },
         {
           "title": "Mapalé",
           "country": "Suiza",
-          "duration": "6 min"
+          "duration": "6 min",
+          "posterSource": "custom"
         },
         {
           "title": "Soeurs Jarariju",
           "country": "Suiza",
-          "duration": "21 min"
+          "duration": "21 min",
+          "posterSource": "custom"
         },
         {
           "title": "Sonali",
           "country": "Suiza",
-          "duration": "8 min"
+          "duration": "8 min",
+          "posterSource": "custom"
         }
       ]
     },
@@ -305,7 +321,8 @@
       "director": "Eliza Capai",
       "year": 2026,
       "synopsis_en": "Play is one of the central pillars of this documentary by Eliza Capai. Set in the city of Guaribas in northeastern Brazil, the film follows a group of girls invited to imagine how they see themselves in the future.",
-      "synopsis_lang": "es"
+      "synopsis_lang": "es",
+      "posterSource": "tmdb"
     },
     {
       "title": "Die papierene Brücke",
@@ -326,7 +343,8 @@
       "year": 1987,
       "synopsis_en": "Ruth Beckermann traces her Jewish family's trajectory between Austria and Israel, weaving together testimonies, archives, and journeys to build an intimate portrait of memory, identity, and exile.",
       "genre": "Documental",
-      "synopsis_lang": "es"
+      "synopsis_lang": "es",
+      "posterSource": "tmdb"
     },
     {
       "title": "Si no ardemos, cómo iluminar la noche",
@@ -347,7 +365,8 @@
       "year": 2025,
       "synopsis_en": "This coming-of-age story that moves between fable and chronicle follows Laura, a 13-year-old who moves to a rural area of Costa Rica.",
       "genre": "Drama",
-      "synopsis_lang": "es"
+      "synopsis_lang": "es",
+      "posterSource": "tmdb"
     },
     {
       "title": "Iván & Hadoum",
@@ -367,7 +386,8 @@
       "director": "Ian de la Rosa",
       "year": 2026,
       "synopsis_en": "Iván works at an agricultural company and aspires to a promotion that would improve his family's financial situation.",
-      "synopsis_lang": "es"
+      "synopsis_lang": "es",
+      "posterSource": "tmdb"
     },
     {
       "title": "Cine Indígena — Prog. 2",
@@ -386,12 +406,14 @@
         {
           "title": "Tu mañana será mi canto",
           "country": "Chile/EEUU",
-          "duration": "14 min"
+          "duration": "14 min",
+          "posterSource": "custom"
         },
         {
           "title": "Runa Simi",
           "country": "Perú",
-          "duration": "85 min"
+          "duration": "85 min",
+          "posterSource": "custom"
         }
       ]
     },
@@ -412,7 +434,8 @@
       "synopsis": "Entre 1950 y 1960, miembros del Opus Dei llegaron a Colombia para expandir su influencia en América Latina, amparados por la sombra de la dictadura franquista.",
       "synopsis_en": "Between 1950 and 1960, members of Opus Dei arrived in Colombia to expand their influence in Latin America, sheltered by the shadow of Franco's dictatorship.",
       "year": 2026,
-      "synopsis_lang": "es"
+      "synopsis_lang": "es",
+      "posterSource": "tmdb"
     },
     {
       "title": "Las corrientes",
@@ -432,7 +455,8 @@
       "director": "Zhedan Deng",
       "year": 2024,
       "synopsis_en": "Lina is 34, a fashion designer who has just received an award. Shortly after the ceremony, she locks herself in a bathroom, runs out, and throws herself into an icy river. She survives.",
-      "synopsis_lang": "es"
+      "synopsis_lang": "es",
+      "posterSource": "tmdb"
     },
     {
       "title": "ojoboca — Prog. 1 · 16mm",
@@ -451,17 +475,20 @@
         {
           "title": "A Running Woman (1, 2, 3)",
           "country": "Alemania",
-          "duration": "12 min"
+          "duration": "12 min",
+          "posterSource": "custom"
         },
         {
           "title": "Instant Life",
           "country": "EEUU/Alemania",
-          "duration": "27 min"
+          "duration": "27 min",
+          "posterSource": "custom"
         },
         {
           "title": "Wolkenschatten",
           "country": "Alemania",
-          "duration": "17 min"
+          "duration": "17 min",
+          "posterSource": "custom"
         }
       ]
     },
@@ -481,7 +508,8 @@
       "film_list": [],
       "synopsis": "Esta película propone un viaje a Teyuna, la Ciudad Perdida de los tayronas, el sitio arqueológico más emblemático de Colombia. Se trata de un recorrido que se despliega en varios niveles: espacial, temporal y narrativo.",
       "synopsis_en": "This film proposes a journey to Teyuna, the Lost City of the Tairona people, Colombia's most emblematic archaeological site. It unfolds across multiple levels: spatial, temporal, and narrative.",
-      "synopsis_lang": "es"
+      "synopsis_lang": "es",
+      "posterSource": "tmdb"
     },
     {
       "title": "(s)paces Cortos — Prog. 1",
@@ -500,27 +528,32 @@
         {
           "title": "Atado",
           "country": "España",
-          "duration": "27 min"
+          "duration": "27 min",
+          "posterSource": "custom"
         },
         {
           "title": "Pequeno Jogo",
           "country": "Brasil",
-          "duration": "12 min"
+          "duration": "12 min",
+          "posterSource": "custom"
         },
         {
           "title": "Trưa Lịm",
           "country": "Francia/Vietnam",
-          "duration": "16 min"
+          "duration": "16 min",
+          "posterSource": "custom"
         },
         {
           "title": "Warnungen an die ferne Zukunft",
           "country": "Alemania/Reino Unido",
-          "duration": "19 min"
+          "duration": "19 min",
+          "posterSource": "custom"
         },
         {
           "title": "3cm of Complexity",
           "country": "Austria/Grecia",
-          "duration": "21 min"
+          "duration": "21 min",
+          "posterSource": "custom"
         }
       ]
     },
@@ -543,7 +576,8 @@
       "year": 2025,
       "synopsis_en": "Twelve-year-old Yeka loves and admires her brother, an emerging reggaeton singer who promises her and their family a way out of the precarious conditions they live in.",
       "genre": "Drama",
-      "synopsis_lang": "es"
+      "synopsis_lang": "es",
+      "posterSource": "tmdb"
     },
     {
       "title": "Esa otra selva blanca",
@@ -564,7 +598,8 @@
       "year": 2025,
       "synopsis_en": "Butterflies are bioindicators of ecosystem health: their appearance after a fire allows us to measure how long it takes a forest to recover.",
       "genre": "Documental",
-      "synopsis_lang": "es"
+      "synopsis_lang": "es",
+      "posterSource": "tmdb"
     },
     {
       "title": "Chicas tristes",
@@ -585,7 +620,8 @@
       "year": 2026,
       "synopsis_en": "Say 'tenderness' and many things come to mind: honey, embrace, laughter. Friend, blood, heat. Paula and La Maestra are both 16, both swimmers, preparing for the Junior Pan American Swimming Championship.",
       "genre": "Drama",
-      "synopsis_lang": "es"
+      "synopsis_lang": "es",
+      "posterSource": "tmdb"
     },
     {
       "title": "Frío metal",
@@ -605,7 +641,8 @@
       "director": "Clemente Castor Reyes",
       "year": 2025,
       "synopsis_en": "How do you write a story that detaches from life? One that hangs loose, like a piece of skin—a photosensitive surface with light recorded in its folds.",
-      "synopsis_lang": "es"
+      "synopsis_lang": "es",
+      "posterSource": "tmdb"
     },
     {
       "title": "Aro berria",
@@ -625,7 +662,8 @@
       "director": "Farah Khan",
       "year": 2014,
       "synopsis_en": "In a gesture of rebellion and poetry, a group of workers begins a silent strike. Yet the impact of this small revolution goes unnoticed: the collective does not share the ideals of the younger generation.",
-      "synopsis_lang": "es"
+      "synopsis_lang": "es",
+      "posterSource": "tmdb"
     },
     {
       "title": "Bosque arriba en la montaña",
@@ -646,7 +684,8 @@
       "year": 2026,
       "synopsis_en": "In 2017, Rafael Nahuel, a young Mapuche man, was killed by the Argentine Naval Prefecture in the Andean forest of Villa Mascardi, Patagonia.",
       "genre": "Documental",
-      "synopsis_lang": "es"
+      "synopsis_lang": "es",
+      "posterSource": "tmdb"
     },
     {
       "title": "Puntos de fuga",
@@ -666,7 +705,8 @@
       "director": "Leo Schatzl",
       "year": 2005,
       "synopsis_en": "Lina Rodriguez interweaves her mother's story with her own, interlacing them with episodes from Colombia's history.",
-      "synopsis_lang": "es"
+      "synopsis_lang": "es",
+      "posterSource": "tmdb"
     },
     {
       "title": "Feito Pipa",
@@ -705,27 +745,32 @@
         {
           "title": "Ako počúvať fontány",
           "country": "Eslovaquia",
-          "duration": "10 min"
+          "duration": "10 min",
+          "posterSource": "custom"
         },
         {
           "title": "Evacuations",
           "country": "Estados Unidos",
-          "duration": "7 min"
+          "duration": "7 min",
+          "posterSource": "tmdb"
         },
         {
           "title": "La baraja de Myriam",
           "country": "Chile",
-          "duration": "14 min"
+          "duration": "14 min",
+          "posterSource": "custom"
         },
         {
           "title": "Luna Rossa",
           "country": "Estonia/Francia",
-          "duration": "32 min"
+          "duration": "32 min",
+          "posterSource": "tmdb"
         },
         {
           "title": "Venezia Diorama",
           "country": "Bélgica",
-          "duration": "6 min"
+          "duration": "6 min",
+          "posterSource": "custom"
         }
       ]
     },
@@ -746,7 +791,8 @@
         {
           "title": "Riochiquito",
           "country": "Francia",
-          "duration": "19 min"
+          "duration": "19 min",
+          "posterSource": "custom"
         }
       ]
     },
@@ -768,7 +814,8 @@
       "director": "Matthew Murdoch",
       "year": 2019,
       "synopsis_en": "Surrounded by São Paulo's sophisticated culinary scene, Isabel, a sommelier at an exclusive restaurant, thrives on reinventing norms, pushing limits, and defying established rules. A passion that overflows into the night.",
-      "synopsis_lang": "es"
+      "synopsis_lang": "es",
+      "posterSource": "custom"
     },
     {
       "title": "Tóc, Giấy và Nước…",
@@ -789,7 +836,8 @@
       "year": 2026,
       "synopsis_en": "Through three elements — hair, paper, and water — the film interweaves stories of women in Vietnam, Belgium, and France, exploring memory, the body, and cultural heritage in a visual poetry of great delicacy.",
       "genre": "Drama, Documental",
-      "synopsis_lang": "es"
+      "synopsis_lang": "es",
+      "posterSource": "tmdb"
     },
     {
       "title": "Queen at Sea",
@@ -809,7 +857,8 @@
       "director": "Lance Hammer",
       "year": 2026,
       "synopsis_en": "Leslie has advanced dementia and lives with Martin, her husband and primary caregiver. Amanda, Leslie's daughter, has just moved to London for a sabbatical year to be closer to her mother.",
-      "synopsis_lang": "es"
+      "synopsis_lang": "es",
+      "posterSource": "tmdb"
     },
     {
       "title": "Piedras preciosas",
@@ -829,7 +878,8 @@
       "director": "Sriram Raja",
       "year": 2019,
       "synopsis_en": "Machado, a young Colombian immigrant, works harvesting grapes in the French countryside.",
-      "synopsis_lang": "es"
+      "synopsis_lang": "es",
+      "posterSource": "tmdb"
     },
     {
       "title": "Blue Heron",
@@ -850,7 +900,8 @@
       "year": 2026,
       "synopsis_en": "Violeta Parra sang that after living a century, one can be seventeen again.",
       "genre": "Drama",
-      "synopsis_lang": "es"
+      "synopsis_lang": "es",
+      "posterSource": "tmdb"
     },
     {
       "title": "Jóhanna af örk",
@@ -870,7 +921,8 @@
       "director": "Luc Besson",
       "year": 1999,
       "synopsis_en": "Hlynur Pálmason reinterprets the Joan of Arc myth set in the present day. A young woman rides alone on horseback across Iceland in a journey that oscillates between the spiritual and the physical.",
-      "synopsis_lang": "es"
+      "synopsis_lang": "es",
+      "posterSource": "tmdb"
     },
     {
       "title": "Internacional — Prog. de Cortos",
@@ -889,27 +941,32 @@
         {
           "title": "Cul-De-Sac!",
           "country": "Bélgica/Francia",
-          "duration": "17 min"
+          "duration": "17 min",
+          "posterSource": "tmdb"
         },
         {
           "title": "Ein Unfall",
           "country": "Austria",
-          "duration": "30 min"
+          "duration": "30 min",
+          "posterSource": "tmdb"
         },
         {
           "title": "Force Times Displacement",
           "country": "Taiwán",
-          "duration": "11 min"
+          "duration": "11 min",
+          "posterSource": "tmdb"
         },
         {
           "title": "Intersecting Memory",
           "country": "Palestina/Francia",
-          "duration": "20 min"
+          "duration": "20 min",
+          "posterSource": "editorial"
         },
         {
           "title": "Daria's Night Flowers",
           "country": "Irán/UK/Francia",
-          "duration": "16 min"
+          "duration": "16 min",
+          "posterSource": "tmdb"
         }
       ]
     },
@@ -932,7 +989,8 @@
       "year": 1990,
       "synopsis_en": "In 1990, a fundamental shift occurred in Colombian independent cinema.",
       "genre": "Crimen, Drama",
-      "synopsis_lang": "es"
+      "synopsis_lang": "es",
+      "posterSource": "tmdb"
     },
     {
       "title": "Khmeli Potoli",
@@ -952,7 +1010,8 @@
       "director": "Alexandre Koberidze",
       "year": 2026,
       "synopsis_en": "Alexandre Koberidze films in Georgia and Germany a love story built from observation and slow time, in which two people meet and lose each other in the everyday texture of their days.",
-      "synopsis_lang": "es"
+      "synopsis_lang": "es",
+      "posterSource": "tmdb"
     },
     {
       "title": "A Fabulosa Máquina do Tempo",
@@ -991,17 +1050,20 @@
         {
           "title": "Como Nasce um Rio",
           "country": "Brasil",
-          "duration": "8 min"
+          "duration": "8 min",
+          "posterSource": "custom"
         },
         {
           "title": "Taxi Moto",
           "country": "Suiza/Francia",
-          "duration": "21 min"
+          "duration": "21 min",
+          "posterSource": "custom"
         },
         {
           "title": "Voz, Zov, Zvo",
           "country": "Brasil",
-          "duration": "52 min"
+          "duration": "52 min",
+          "posterSource": "custom"
         }
       ]
     },
@@ -1043,7 +1105,8 @@
       "director": "Dmitry Peskov",
       "year": null,
       "synopsis_en": "André Novais Oliveira constructs a family elegy about loss and memory through intimate images of his own family in Brazil.",
-      "synopsis_lang": "es"
+      "synopsis_lang": "es",
+      "posterSource": "tmdb"
     },
     {
       "title": "Anoche conquisté Tebas",
@@ -1064,7 +1127,8 @@
       "year": 2025,
       "synopsis_en": "A group of young Portuguese cross the border to spend a night at ancient thermal springs amid the ruins of a Roman fort.",
       "genre": "Drama",
-      "synopsis_lang": "es"
+      "synopsis_lang": "es",
+      "posterSource": "tmdb"
     },
     {
       "title": "El príncipe de Nanawa",
@@ -1085,7 +1149,8 @@
       "year": 2025,
       "synopsis_en": "The passage from childhood to adulthood is a powerful theme, and Clarisa Navas's resonant documentary invites us to witness it through a charismatic and talkative boy in a border town between Argentina and Paraguay.",
       "genre": "Documental",
-      "synopsis_lang": "es"
+      "synopsis_lang": "es",
+      "posterSource": "tmdb"
     },
     {
       "title": "Risa y la cabina del viento",
@@ -1106,7 +1171,8 @@
       "year": 2026,
       "synopsis_en": "The landscapes of Tierra del Fuego have a moving quality in their austerity, even more so when viewed from the lush tropics.",
       "genre": "Drama, Fantasía",
-      "synopsis_lang": "es"
+      "synopsis_lang": "es",
+      "posterSource": "tmdb"
     },
     {
       "title": "Cortos Colombia — Prog. 1",
@@ -1125,32 +1191,38 @@
         {
           "title": "Decaer",
           "country": "Colombia",
-          "duration": "7 min"
+          "duration": "7 min",
+          "posterSource": "custom"
         },
         {
           "title": "La garganta del diablo",
           "country": "Colombia",
-          "duration": "15 min"
+          "duration": "15 min",
+          "posterSource": "custom"
         },
         {
           "title": "Las formas de la magia",
           "country": "Colombia",
-          "duration": "16 min"
+          "duration": "16 min",
+          "posterSource": "custom"
         },
         {
           "title": "Madres de nacimiento",
           "country": "Francia",
-          "duration": "8 min"
+          "duration": "8 min",
+          "posterSource": "custom"
         },
         {
           "title": "Todas las manos que solté",
           "country": "Colombia/Francia",
-          "duration": "23 min"
+          "duration": "23 min",
+          "posterSource": "custom"
         },
         {
           "title": "Ya se ven los tigres en la lluvia",
           "country": "Colombia/Canadá",
-          "duration": "15 min"
+          "duration": "15 min",
+          "posterSource": "custom"
         }
       ]
     },
@@ -1170,7 +1242,8 @@
       "film_list": [],
       "synopsis": "La larga trayectoria de la cineasta colombiana Marta Rodríguez demuestra un compromiso por documentar la historia de represión y lucha de  los pueblos originarios y marginalizados.",
       "synopsis_en": "The long career of Colombian filmmaker Marta Rodríguez demonstrates a commitment to documenting the history of repression and struggle of indigenous and marginalized peoples.",
-      "synopsis_lang": "es"
+      "synopsis_lang": "es",
+      "posterSource": "tmdb"
     },
     {
       "title": "Dao",
@@ -1191,7 +1264,8 @@
       "year": 2026,
       "synopsis_en": "'DAO is the perpetual circular movement that flows through everything and unites the world.' The film opens with the concept that gives it its name, drawing the viewer into the audiovisual rhythm that follows.",
       "genre": "Drama",
-      "synopsis_lang": "es"
+      "synopsis_lang": "es",
+      "posterSource": "tmdb"
     },
     {
       "title": "Historias del buen valle",
@@ -1212,7 +1286,8 @@
       "year": 2025,
       "synopsis_en": "Once again, José Luis Guerín delivers a masterclass in documentary filmmaking, as recognized by the San Sebastián Film Festival jury, which awarded him its Special Prize.",
       "genre": "Documental",
-      "synopsis_lang": "es"
+      "synopsis_lang": "es",
+      "posterSource": "tmdb"
     },
     {
       "title": "Two Years at Sea",
@@ -1232,7 +1307,8 @@
       "director": "Ben Rivers",
       "year": 2012,
       "synopsis_en": "Deep in the Scottish forest, a man sets his own rules in relation to the land.",
-      "synopsis_lang": "es"
+      "synopsis_lang": "es",
+      "posterSource": "custom"
     },
     {
       "title": "ojoboca — Prog. 2 · 16mm",
@@ -1251,17 +1327,20 @@
         {
           "title": "Come and Dance with Me",
           "country": "Alemania",
-          "duration": "4 min"
+          "duration": "4 min",
+          "posterSource": "custom"
         },
         {
           "title": "Gente perra",
           "country": "Colombia/Alemania",
-          "duration": "25 min"
+          "duration": "25 min",
+          "posterSource": "custom"
         },
         {
           "title": "The Masked Monkeys",
           "country": "Alemania",
-          "duration": "32 min"
+          "duration": "32 min",
+          "posterSource": "custom"
         }
       ]
     },
@@ -1284,7 +1363,8 @@
       "year": 2026,
       "synopsis_en": "Milo, a charismatic boy who dances malambo, runs away from home and travels to Buenos Aires in search of a new life, in this fascinating film where the documentary and the absurd coexist in perfect harmony.",
       "genre": "Drama, Fantasía",
-      "synopsis_lang": "es"
+      "synopsis_lang": "es",
+      "posterSource": "tmdb"
     },
     {
       "title": "Iván & Hadoum",
@@ -1323,22 +1403,26 @@
         {
           "title": "La forma y la raíz",
           "country": "Colombia/Cuba",
-          "duration": "14 min"
+          "duration": "14 min",
+          "posterSource": "custom"
         },
         {
           "title": "Montaña luminosa",
           "country": "Colombia",
-          "duration": "25 min"
+          "duration": "25 min",
+          "posterSource": "custom"
         },
         {
           "title": "Pawa",
           "country": "Colombia",
-          "duration": "22 min"
+          "duration": "22 min",
+          "posterSource": "custom"
         },
         {
           "title": "Sombras en la niebla",
           "country": "Colombia",
-          "duration": "25 min"
+          "duration": "25 min",
+          "posterSource": "custom"
         }
       ]
     },
@@ -1360,7 +1444,8 @@
       "director": "Mustafa Uzuner",
       "year": 2025,
       "synopsis_en": "Mustafa Uzuner follows a group of musicians traveling through Turkey and Canada, preserving sonic traditions at risk of disappearing.",
-      "synopsis_lang": "es"
+      "synopsis_lang": "es",
+      "posterSource": "tmdb"
     },
     {
       "title": "Staatsschutz",
@@ -1380,7 +1465,8 @@
       "director": "Billy Wilder",
       "year": 1957,
       "synopsis_en": "Faraz Shariat constructs a political thriller in Germany about a young Iranian lawyer who defends asylum seekers while confronting his own identity and the contradictions of the European legal system.",
-      "synopsis_lang": "es"
+      "synopsis_lang": "es",
+      "posterSource": "tmdb"
     },
     {
       "title": "Crocodile",
@@ -1400,7 +1486,8 @@
       "director": "Peter Faiman",
       "year": 1986,
       "synopsis_en": "A documentary about the rise of Nigerian cinema Nollywood and its global impact, filmed between Lagos and Auckland.",
-      "synopsis_lang": "es"
+      "synopsis_lang": "es",
+      "posterSource": "tmdb"
     },
     {
       "title": "Señoritas",
@@ -1420,7 +1507,8 @@
       "director": "Fernando Méndez",
       "year": 1959,
       "synopsis_en": "In Señoritas, Lina Rodríguez follows Alejandra, a young woman from Bogotá who inhabits her city between the domestic intimacy of her apartment with her mother and a nocturnal life shared with a close, intense, and sometimes contradictory circle.",
-      "synopsis_lang": "es"
+      "synopsis_lang": "es",
+      "posterSource": "custom"
     },
     {
       "title": "Piedras preciosas",
@@ -1460,7 +1548,8 @@
       "director": "Simon Payne",
       "year": 2017,
       "synopsis_en": "Los Cruces starts from a simple and enigmatic premise: the search for a dream.",
-      "synopsis_lang": "es"
+      "synopsis_lang": "es",
+      "posterSource": "tmdb"
     },
     {
       "title": "Mare's Nest",
@@ -1481,7 +1570,8 @@
       "year": 2026,
       "synopsis_en": "Moon picks up a turtle from the road. Moments before, she had swerved to avoid it while driving, emerging completely unscathed from an accident that introduces us to this — perhaps utopian — world without adults.",
       "genre": "Ciencia ficción, Drama",
-      "synopsis_lang": "es"
+      "synopsis_lang": "es",
+      "posterSource": "tmdb"
     },
     {
       "title": "Cine Indígena — Prog. 2",
@@ -1527,7 +1617,8 @@
       "director": "Jack Benjamin Gill",
       "year": 2019,
       "synopsis_en": "The ghost of a national economic project is destabilized by a man who, instead of looking for work, stays playing in the street and keeps living with his mother.",
-      "synopsis_lang": "es"
+      "synopsis_lang": "es",
+      "posterSource": "tmdb"
     },
     {
       "title": "Costas — Prog. 2",
@@ -1546,12 +1637,14 @@
         {
           "title": "¡Aysa!",
           "country": "Bolivia",
-          "duration": "20 min"
+          "duration": "20 min",
+          "posterSource": "custom"
         },
         {
           "title": "No les pedimos un viaje a la luna",
           "country": "México",
-          "duration": "86 min"
+          "duration": "86 min",
+          "posterSource": "custom"
         }
       ]
     },
@@ -1574,7 +1667,8 @@
       "year": 2026,
       "synopsis_en": "In an old apartment in Vienna, the material and emotional memories of Al Cook accumulate — an 80-year-old man who has devoted his life to blues and country, to the evocative melancholy of Robert Johnson and Elvis Presley.",
       "genre": "Música, Drama",
-      "synopsis_lang": "es"
+      "synopsis_lang": "es",
+      "posterSource": "tmdb"
     },
     {
       "title": "Sehnsucht in Sangerhausen",
@@ -1594,7 +1688,8 @@
       "director": "Julian Radlmaier",
       "year": 2025,
       "synopsis_en": "Julian Radlmaier films at a German luxury resort a Marxist comedy of errors in which tourists, workers, and ghosts coexist in a summer that never ends.",
-      "synopsis_lang": "es"
+      "synopsis_lang": "es",
+      "posterSource": "tmdb"
     },
     {
       "title": "Tehran Bedoune Mojavez",
@@ -1614,7 +1709,8 @@
       "director": "Sepideh Farsi",
       "year": 2025,
       "synopsis_en": "Sepideh Farsi documents everyday life in Gaza through images filmed by its own inhabitants, building a collective testimony of resistance and humanity.",
-      "synopsis_lang": "es"
+      "synopsis_lang": "es",
+      "posterSource": "tmdb"
     },
     {
       "title": "Dracula",
@@ -1634,7 +1730,8 @@
       "director": "Luc Besson",
       "year": 2025,
       "synopsis_en": "Radu Jude adapts the Dracula myth as a Romanian political comedy, interrogating history, power, and corruption with his characteristic radical irony.",
-      "synopsis_lang": "es"
+      "synopsis_lang": "es",
+      "posterSource": "tmdb"
     },
     {
       "title": "Planas, testimonio de un etnocidio",
@@ -1655,7 +1752,8 @@
       "year": 1971,
       "synopsis_en": "Marta Rodríguez and Jorge Silva document the violence inflicted upon indigenous communities in the Colombian Llano in the 1970s, in one of Latin American political cinema's foundational works.",
       "genre": "Documental",
-      "synopsis_lang": "es"
+      "synopsis_lang": "es",
+      "posterSource": "tmdb"
     },
     {
       "title": "Campesinos",
@@ -1675,7 +1773,8 @@
       "director": "Ken Jacobs",
       "year": 1975,
       "synopsis_en": "Drawing from the denunciation of the land ownership gap in the country, and through a portrait and follow-up of anti-latifundist social movements, Martha Rodríguez and Jorge Silva weave a complex manifesto of voices, data, and records.",
-      "synopsis_lang": "es"
+      "synopsis_lang": "es",
+      "posterSource": "tmdb"
     },
     {
       "title": "Ben Rivers — Prog. 1",
@@ -1694,17 +1793,20 @@
         {
           "title": "Ghost Strata",
           "country": "Reino Unido",
-          "duration": "46 min"
+          "duration": "46 min",
+          "posterSource": "custom"
         },
         {
           "title": "The Shape of Things",
           "country": "Reino Unido",
-          "duration": "2 min"
+          "duration": "2 min",
+          "posterSource": "custom"
         },
         {
           "title": "Things",
           "country": "Reino Unido",
-          "duration": "21 min"
+          "duration": "21 min",
+          "posterSource": "custom"
         }
       ]
     },
@@ -1788,7 +1890,8 @@
       "director": "Ujkan Hysaj",
       "year": 2016,
       "synopsis_en": "Zé and Rosa, a peasant couple, arrive in a mid-sized city at dawn. The man carries a cross, and both have been walking for hours.",
-      "synopsis_lang": "es"
+      "synopsis_lang": "es",
+      "posterSource": "tmdb"
     },
     {
       "title": "Prog. Cortometrajes — Jorge Cadena",
@@ -1912,27 +2015,32 @@
         {
           "title": "El cazador",
           "country": "Colombia",
-          "duration": "13 min"
+          "duration": "13 min",
+          "posterSource": "custom"
         },
         {
           "title": "Filme Pin",
           "country": "Colombia/Portugal",
-          "duration": "7 min"
+          "duration": "7 min",
+          "posterSource": "custom"
         },
         {
           "title": "Futuros luminosos",
           "country": "Colombia",
-          "duration": "25 min"
+          "duration": "25 min",
+          "posterSource": "custom"
         },
         {
           "title": "Lejanía",
           "country": "Colombia/Chile",
-          "duration": "17 min"
+          "duration": "17 min",
+          "posterSource": "custom"
         },
         {
           "title": "Winter Blumen Garten",
           "country": "Austria/Colombia",
-          "duration": "27 min"
+          "duration": "27 min",
+          "posterSource": "custom"
         }
       ]
     },
@@ -1954,7 +2062,8 @@
       "director": "Robert Schwentke",
       "year": 2009,
       "synopsis_en": "David Bingong follows a group of Cameroonian immigrants in Spain, intimately portraying their lives, dreams, and the weight of displacement.",
-      "synopsis_lang": "es"
+      "synopsis_lang": "es",
+      "posterSource": "custom"
     },
     {
       "title": "Nuit Obscure - Ain't I a Child?",
@@ -1975,7 +2084,8 @@
       "year": 2025,
       "synopsis_en": "Sylvain George films young migrants in Calais over several years, building a visual poem about resistance, the body, and the border.",
       "genre": "Documental",
-      "synopsis_lang": "es"
+      "synopsis_lang": "es",
+      "posterSource": "tmdb"
     },
     {
       "title": "Tehran Bedoune Mojavez",
@@ -2015,7 +2125,8 @@
       "director": "Joyce Trozzo",
       "year": 2016,
       "synopsis_en": "There are many everyday ways in which light makes us participants in its miracle: the kitchen stove, stars in the sky, the reflection of shapes on water.",
-      "synopsis_lang": "es"
+      "synopsis_lang": "es",
+      "posterSource": "tmdb"
     },
     {
       "title": "Nuestra tierra",
@@ -2035,7 +2146,8 @@
       "director": "",
       "year": 1997,
       "synopsis_en": "Argentine director Lucrecia Martel is one of the masters of contemporary cinema, and her capacity to bring together images and sounds to achieve unexpected, often unsettling effects shines in her first feature-length documentary.",
-      "synopsis_lang": "es"
+      "synopsis_lang": "es",
+      "posterSource": "tmdb"
     },
     {
       "title": "Anoche conquisté Tebas",
@@ -2145,27 +2257,32 @@
         {
           "title": "Belleza letal",
           "country": "Colombia",
-          "duration": "27 min"
+          "duration": "27 min",
+          "posterSource": "custom"
         },
         {
           "title": "Consagración",
           "country": "Colombia/Alemania",
-          "duration": "17 min"
+          "duration": "17 min",
+          "posterSource": "custom"
         },
         {
           "title": "Mi amigo, el arquitecto",
           "country": "Colombia",
-          "duration": "15 min"
+          "duration": "15 min",
+          "posterSource": "custom"
         },
         {
           "title": "Sirena mecánica",
           "country": "España/Colombia",
-          "duration": "9 min"
+          "duration": "9 min",
+          "posterSource": "custom"
         },
         {
           "title": "Suite intercontinental",
           "country": "Colombia",
-          "duration": "24 min"
+          "duration": "24 min",
+          "posterSource": "custom"
         }
       ]
     },
@@ -2186,12 +2303,14 @@
         {
           "title": "Apotnojushi La casa del viento",
           "country": "Colombia",
-          "duration": "12 min"
+          "duration": "12 min",
+          "posterSource": "custom"
         },
         {
           "title": "La Raya",
           "country": "México",
-          "duration": "80 min"
+          "duration": "80 min",
+          "posterSource": "custom"
         }
       ]
     },
@@ -2214,7 +2333,8 @@
       "year": 2018,
       "synopsis_en": "Ruth Beckermann documents the political scandal that erupted in Austria when Kurt Waldheim's Nazi past was revealed during his 1986 presidential campaign.",
       "genre": "Documental",
-      "synopsis_lang": "es"
+      "synopsis_lang": "es",
+      "posterSource": "tmdb"
     },
     {
       "title": "Historias del buen valle",
@@ -2256,7 +2376,8 @@
       "year": 2025,
       "synopsis_en": "This is a cinephile comedy shot through with crisis — simultaneously solitary and solidary.",
       "genre": "Drama",
-      "synopsis_lang": "es"
+      "synopsis_lang": "es",
+      "posterSource": "tmdb"
     },
     {
       "title": "Tóc, Giấy và Nước…",
@@ -2296,7 +2417,8 @@
         {
           "title": "Abortion Party",
           "country": "España",
-          "duration": "13 min"
+          "duration": "13 min",
+          "posterSource": "custom"
         },
         {
           "title": "A donde nos lleva la fe de José Gerónimo",
@@ -2306,37 +2428,44 @@
         {
           "title": "Agua fría",
           "country": "Chile",
-          "duration": "18 min"
+          "duration": "18 min",
+          "posterSource": "custom"
         },
         {
           "title": "Fim de Rodovia",
           "country": "Brasil/EEUU",
-          "duration": "13 min"
+          "duration": "13 min",
+          "posterSource": "custom"
         },
         {
           "title": "Quem se Move",
           "country": "Brasil/Portugal",
-          "duration": "20 min"
+          "duration": "20 min",
+          "posterSource": "custom"
         },
         {
           "title": "Samba Infinito",
           "country": "Brasil/Francia",
-          "duration": "15 min"
+          "duration": "15 min",
+          "posterSource": "custom"
         },
         {
           "title": "En otra Palestina",
           "country": "Alemania/Perú",
-          "duration": "10 min"
+          "duration": "10 min",
+          "posterSource": "custom"
         },
         {
           "title": "Fuente alemana",
           "country": "Chile",
-          "duration": "15 min"
+          "duration": "15 min",
+          "posterSource": "custom"
         },
         {
           "title": "Los peces no se ahogan",
           "country": "Cuba/Italia",
-          "duration": "17 min"
+          "duration": "17 min",
+          "posterSource": "custom"
         }
       ]
     },
@@ -2358,7 +2487,8 @@
       "director": "Deimer Quintero Vertel",
       "year": 2026,
       "synopsis_en": "Deimer Quintero Vertel documents the memories of Colombian communities displaced by violence, who attempt to reconstruct their identity and roots in lands that no longer belong to them.",
-      "synopsis_lang": "es"
+      "synopsis_lang": "es",
+      "posterSource": "tmdb"
     },
     {
       "title": "Se Eu Fosse Vivo… Vivia",
@@ -2398,7 +2528,8 @@
       "director": "",
       "year": 2005,
       "synopsis_en": "Helena moves to Brasília with her children, ages 15 and 7. Each copes in their own way with their father's absence, as he remains on an open-ended business trip.",
-      "synopsis_lang": "es"
+      "synopsis_lang": "es",
+      "posterSource": "tmdb"
     },
     {
       "title": "Cine Afro — Prog. de Cortos",
@@ -2449,7 +2580,8 @@
       "director": "Aitor Arregi",
       "year": 2025,
       "synopsis_en": "Amid the growing openness of cinema to LGBTIQ+ stories, a narrative about homosexuality in old age remains rare.",
-      "synopsis_lang": "es"
+      "synopsis_lang": "es",
+      "posterSource": "custom"
     },
     {
       "title": "Jóhanna af örk",
@@ -2530,7 +2662,8 @@
       "director": "Hank Hoffman",
       "year": 2021,
       "synopsis_en": "With this film, writer-director Ralitza Petrova constructs a closed and distant universe of fractured relationships, frustrated emotions, and existential melancholy.",
-      "synopsis_lang": "es"
+      "synopsis_lang": "es",
+      "posterSource": "tmdb"
     },
     {
       "title": "AnyMart",
@@ -2550,7 +2683,8 @@
       "director": "Iwasaki Yusuke",
       "year": 2026,
       "synopsis_en": "Convenience stores in Japan (known as konbini) are a fundamental part of the urban fabric: open 24 hours, with hygienically packaged ready-to-serve food and a range of additional services including mail and stationery.",
-      "synopsis_lang": "es"
+      "synopsis_lang": "es",
+      "posterSource": "custom"
     },
     {
       "title": "Alborada en Cartagena",
@@ -2569,7 +2703,8 @@
       "synopsis": "Película colombiana de 1966 que reconstruye la historia colonial de Cartagena de Indias, primera producción de largo aliento rodada en la ciudad.",
       "synopsis_en": "A 1966 Colombian film that reconstructs the colonial history of Cartagena de Indias, the first major production shot in the city.",
       "year": 1968,
-      "synopsis_lang": "es"
+      "synopsis_lang": "es",
+      "posterSource": "tmdb"
     },
     {
       "title": "Lolita en Honda",
@@ -2660,17 +2795,20 @@
         {
           "title": "An Incomplete Calendar",
           "country": "Canadá/Irán/Venezuela/Turquía",
-          "duration": "77 min"
+          "duration": "77 min",
+          "posterSource": "custom"
         },
         {
           "title": "Fuego en el mar",
           "country": "Argentina",
-          "duration": "15 min"
+          "duration": "15 min",
+          "posterSource": "custom"
         },
         {
           "title": "Petrolita",
           "country": "Argentina",
-          "duration": "2 min"
+          "duration": "2 min",
+          "posterSource": "custom"
         }
       ]
     },
@@ -2692,7 +2830,8 @@
       "director": "Sally El Hosaini",
       "year": 2022,
       "synopsis_en": "In the cracks of a civilized city — one that was born dead from the start — collapse breathes.",
-      "synopsis_lang": "es"
+      "synopsis_lang": "es",
+      "posterSource": "tmdb"
     },
     {
       "title": "Crocodile",
@@ -2798,12 +2937,14 @@
         {
           "title": "O Mapa em que Estão os Meus Pés",
           "country": "Brasil",
-          "duration": "14 min"
+          "duration": "14 min",
+          "posterSource": "custom"
         },
         {
           "title": "Pajuyuk",
           "country": "Ecuador",
-          "duration": "18 min"
+          "duration": "18 min",
+          "posterSource": "custom"
         },
         {
           "title": "Trizas",
@@ -2831,7 +2972,8 @@
       "year": 2020,
       "synopsis_en": "In Ethiopian culture, Wax & Gold refers to the ambiguity of language: its literal meaning and its symbolic dimension.",
       "genre": "Documental",
-      "synopsis_lang": "es"
+      "synopsis_lang": "es",
+      "posterSource": "tmdb"
     },
     {
       "title": "De Indias — Ángeles somos",
@@ -2850,32 +2992,38 @@
         {
           "title": "Ángeles somos",
           "country": "Colombia",
-          "duration": "9 min"
+          "duration": "9 min",
+          "posterSource": "custom"
         },
         {
           "title": "El reportaje",
           "country": "Colombia",
-          "duration": "4 min"
+          "duration": "4 min",
+          "posterSource": "custom"
         },
         {
           "title": "Héroes del silencio",
           "country": "Colombia",
-          "duration": "13 min"
+          "duration": "13 min",
+          "posterSource": "custom"
         },
         {
           "title": "Kuagro",
           "country": "Colombia",
-          "duration": "12 min"
+          "duration": "12 min",
+          "posterSource": "custom"
         },
         {
           "title": "La tinaja",
           "country": "Colombia/Argentina",
-          "duration": "13 min"
+          "duration": "13 min",
+          "posterSource": "custom"
         },
         {
           "title": "Piratas de La Boquilla",
           "country": "Colombia",
-          "duration": "~6 min"
+          "duration": "~6 min",
+          "posterSource": "custom"
         }
       ]
     },
@@ -2978,7 +3126,8 @@
       "director": "Zev Robinson",
       "year": 2012,
       "synopsis_en": "At a congested intersection, vehicles seem to dance to the rhythm of Teresa's cello, composing an incessant melody where the noise never fades. Teresa lends her home to Rosa for the recording of a television interview.",
-      "synopsis_lang": "es"
+      "synopsis_lang": "es",
+      "posterSource": "tmdb"
     },
     {
       "title": "La noche está marchándose ya",
@@ -3181,12 +3330,14 @@
         {
           "title": "A Flea's Skin Would Be Too Big for You",
           "country": "Alemania",
-          "duration": "47 min"
+          "duration": "47 min",
+          "posterSource": "custom"
         },
         {
           "title": "Eigenheim",
           "country": "Alemania",
-          "duration": "16 min"
+          "duration": "16 min",
+          "posterSource": "custom"
         }
       ]
     },
@@ -3329,7 +3480,8 @@
       "director": "Ben Rivers",
       "year": 2015,
       "synopsis_en": "Ben Rivers films in Morocco during the shooting of an Arturo Ripstein film, creating an essay about cinema, power, and the colonial gaze.",
-      "synopsis_lang": "es"
+      "synopsis_lang": "es",
+      "posterSource": "tmdb"
     },
     {
       "title": "The Chronology of Water",
@@ -3350,7 +3502,8 @@
       "year": 2025,
       "synopsis_en": "Kristen Stewart's directorial debut adapts the autobiographical bestseller by former swimmer Lidia Yuknavitch — a woman carrying the scars of an abuse-marked childhood and a youth defined by addiction and loss, who finds her voice through literature.",
       "genre": "Drama",
-      "synopsis_lang": "es"
+      "synopsis_lang": "es",
+      "posterSource": "tmdb"
     },
     {
       "title": "Blue Heron",
@@ -3391,7 +3544,8 @@
       "director": "Juan Ibáñez",
       "year": 1967,
       "synopsis_en": "Paloma and Jaime, a young wealthy couple, want to keep partying when the dull late-night gathering with their bourgeois friends ends early.",
-      "synopsis_lang": "es"
+      "synopsis_lang": "es",
+      "posterSource": "tmdb"
     },
     {
       "title": "Matapanki",
@@ -3412,7 +3566,8 @@
       "year": 2025,
       "synopsis_en": "There is something sparkling in this debut by Chilean filmmaker Diego Fuentes — something like a party that got out of hand, like a powerful mosh pit that shakes the walls, like the strange energy of joyful rage.",
       "genre": "Drama, Fantasía",
-      "synopsis_lang": "es"
+      "synopsis_lang": "es",
+      "posterSource": "tmdb"
     },
     {
       "title": "A la salida nos vemos",
@@ -3432,7 +3587,8 @@
       "synopsis_en": "Sweet biscuits with soda at recess, skirts below the knee, cold showers, pasodobles in the courtyard, twenty boys in catechism.",
       "genre": "Drama, Comedia",
       "year": 1986,
-      "synopsis_lang": "es"
+      "synopsis_lang": "es",
+      "posterSource": "tmdb"
     },
     {
       "title": "Cortos Colombia — Prog. 3",
@@ -3538,12 +3694,14 @@
         {
           "title": "Ali au pays des merveilles",
           "country": "Francia",
-          "duration": "59 min"
+          "duration": "59 min",
+          "posterSource": "custom"
         },
         {
           "title": "Viaje a la explotación",
           "country": "España",
-          "duration": "19 min"
+          "duration": "19 min",
+          "posterSource": "custom"
         }
       ]
     },
@@ -3652,7 +3810,8 @@
       "director": "Tatiana Huezo",
       "year": 2011,
       "synopsis_en": "Tatiana Huezo documents the life of a small Salvadoran village rebuilding its community after the civil war, through voices that narrate trauma and collective memory.",
-      "synopsis_lang": "es"
+      "synopsis_lang": "es",
+      "posterSource": "tmdb"
     },
     {
       "title": "Mu-Ki-Ra",
@@ -3672,7 +3831,8 @@
       "director": "",
       "year": null,
       "synopsis_en": "Beyond the walls that protect the village stretches a magical and mysterious jungle, inhabited by creatures considered dangerous. For years, the villagers have trained as warriors from a young age.",
-      "synopsis_lang": "es"
+      "synopsis_lang": "es",
+      "posterSource": "tmdb"
     },
     {
       "title": "Frío metal",
@@ -3711,22 +3871,26 @@
         {
           "title": "This Is My Land",
           "country": "Reino Unido",
-          "duration": "14 min"
+          "duration": "14 min",
+          "posterSource": "custom"
         },
         {
           "title": "Ah, Liberty!",
           "country": "Reino Unido",
-          "duration": "19 min"
+          "duration": "19 min",
+          "posterSource": "custom"
         },
         {
           "title": "Origin of the Species",
           "country": "Reino Unido",
-          "duration": "16 min"
+          "duration": "16 min",
+          "posterSource": "custom"
         },
         {
           "title": "A World Rattled of Habit",
           "country": "Reino Unido",
-          "duration": "10 min"
+          "duration": "10 min",
+          "posterSource": "custom"
         }
       ]
     },
@@ -3861,7 +4025,8 @@
       "year": 1969,
       "synopsis_en": "Fernández is a grown man who seems to have no purpose in life. He has worked for 25 years in the same hardware store alongside Don Vila, a lonely and equally weary old man who has promised to leave him everything when he dies.",
       "genre": "Drama",
-      "synopsis_lang": "es"
+      "synopsis_lang": "es",
+      "posterSource": "tmdb"
     },
     {
       "title": "Geu Jayeoni Nege Mworago Hani",
@@ -3960,17 +4125,20 @@
         {
           "title": "Slow Action",
           "country": "Reino Unido",
-          "duration": "45 min"
+          "duration": "45 min",
+          "posterSource": "custom"
         },
         {
           "title": "Look Then Below",
           "country": "Reino Unido",
-          "duration": "21 min"
+          "duration": "21 min",
+          "posterSource": "custom"
         },
         {
           "title": "Urth",
           "country": "Reino Unido",
-          "duration": "20 min"
+          "duration": "20 min",
+          "posterSource": "custom"
         }
       ]
     },

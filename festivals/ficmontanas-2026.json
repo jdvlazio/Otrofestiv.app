@@ -149,7 +149,8 @@
       "venue": "Cinemateca de Salento",
       "synopsis_lang": "es",
       "day_order": 2,
-      "genre": "Drama"
+      "genre": "Drama",
+      "posterSource": "custom"
     },
     {
       "title": "Inauguración Oficial · 12ª edición",
@@ -210,7 +211,8 @@
       "synopsis_lang": "es",
       "day_order": 6,
       "genre": "Comedia dramática",
-      "has_qa": true
+      "has_qa": true,
+      "posterSource": "tmdb"
     },
     {
       "title": "Titón, de la Habana a Guantanamera",
@@ -232,7 +234,8 @@
       "synopsis_lang": "es",
       "day_order": 4,
       "genre": "Documental",
-      "has_qa": true
+      "has_qa": true,
+      "posterSource": "custom"
     },
     {
       "title": "Crónica de un niño solo",
@@ -253,7 +256,8 @@
       "venue": "Cinemateca de Salento",
       "synopsis_lang": "es",
       "day_order": 0,
-      "genre": "Drama"
+      "genre": "Drama",
+      "posterSource": "tmdb"
     },
     {
       "title": "Nazareno Cruz y el lobo",
@@ -274,7 +278,8 @@
       "venue": "Cinemateca de Salento",
       "synopsis_lang": "es",
       "day_order": 1,
-      "genre": "Drama fantástico"
+      "genre": "Drama fantástico",
+      "posterSource": "tmdb"
     },
     {
       "title": "Soñar, soñar",
@@ -295,7 +300,8 @@
       "venue": "Cinemateca de Salento",
       "synopsis_lang": "es",
       "day_order": 2,
-      "genre": "Comedia dramática"
+      "genre": "Comedia dramática",
+      "posterSource": "tmdb"
     },
     {
       "title": "Gatica, el mono",
@@ -316,7 +322,8 @@
       "venue": "Cinemateca de Salento",
       "synopsis_lang": "es",
       "day_order": 4,
-      "genre": "Drama biográfico"
+      "genre": "Drama biográfico",
+      "posterSource": "tmdb"
     },
     {
       "title": "Lanzamiento del libro · Leonardo Favio. Nadie Puede Olvidarlo",
@@ -353,7 +360,8 @@
       "venue": "Cinemateca de Salento",
       "synopsis_lang": "es",
       "day_order": 6,
-      "genre": "Comedia dramática"
+      "genre": "Comedia dramática",
+      "posterSource": "custom"
     },
     {
       "title": "Cuando la palabra se hace búsqueda",
@@ -373,7 +381,8 @@
       "venue": "Cinemateca de Salento",
       "synopsis_lang": "es",
       "day_order": 5,
-      "genre": "Documental"
+      "genre": "Documental",
+      "posterSource": "custom"
     },
     {
       "title": "Cada voz lleva su angustia",
@@ -393,7 +402,8 @@
       "venue": "Cinemateca de Salento",
       "synopsis_lang": "es",
       "day_order": 3,
-      "genre": "Drama"
+      "genre": "Drama",
+      "posterSource": "custom"
     },
     {
       "title": "Retina Latina · Muestra de Cortometrajes",
@@ -545,7 +555,8 @@
       "language": "Español",
       "synopsis_lang": "es",
       "venue": "Carpa Cinema - Parque Salento",
-      "day_order": 2
+      "day_order": 2,
+      "posterSource": "custom"
     },
     {
       "title": "Trashumantes. Suso & Eliseo",
@@ -568,7 +579,8 @@
       "language": "Español",
       "synopsis_lang": "es",
       "venue": "Carpa Cinema - Parque Salento",
-      "day_order": 4
+      "day_order": 4,
+      "posterSource": "custom"
     },
     {
       "title": "Nunkui",
@@ -591,7 +603,8 @@
       "language": "Español",
       "synopsis_lang": "es",
       "venue": "Carpa Cinema - Parque Salento",
-      "day_order": 6
+      "day_order": 6,
+      "posterSource": "tmdb"
     },
     {
       "title": "Neurótica Anónima",
@@ -614,7 +627,8 @@
       "language": "Español",
       "synopsis_lang": "es",
       "venue": "Carpa Cinema - Parque Salento",
-      "day_order": 9
+      "day_order": 9,
+      "posterSource": "custom"
     },
     {
       "title": "Santa María",
@@ -636,7 +650,8 @@
       "language": "Español",
       "synopsis_lang": "es",
       "venue": "Carpa Cinema - Parque Salento",
-      "day_order": 10
+      "day_order": 10,
+      "posterSource": "custom"
     },
     {
       "title": "Me Dicen el Panzer",
@@ -659,7 +674,8 @@
       "language": "Español",
       "synopsis_lang": "es",
       "venue": "Carpa Cinema - Parque Salento",
-      "day_order": 2
+      "day_order": 2,
+      "posterSource": "custom"
     },
     {
       "title": "El Huaquero",
@@ -680,7 +696,8 @@
       "language": "Español",
       "synopsis_lang": "es",
       "venue": "Carpa Cinema - Parque Salento",
-      "day_order": 3
+      "day_order": 3,
+      "posterSource": "custom"
     },
     {
       "title": "Lactar",
@@ -703,7 +720,8 @@
       "language": "Español",
       "synopsis_lang": "es",
       "venue": "Carpa Cinema - Parque Salento",
-      "day_order": 6
+      "day_order": 6,
+      "posterSource": "custom"
     },
     {
       "title": "Chiribiquete: un viaje a la memoria ancestral de América",
@@ -724,7 +742,8 @@
       "language": "Español",
       "synopsis_lang": "es",
       "venue": "Carpa Cinema - Parque Salento",
-      "day_order": 0
+      "day_order": 0,
+      "posterSource": "custom"
     },
     {
       "title": "MU-KI-RA",
@@ -746,7 +765,8 @@
       "language": "Español",
       "synopsis_lang": "es",
       "venue": "Carpa Cinema - Parque Salento",
-      "day_order": 1
+      "day_order": 1,
+      "posterSource": "tmdb"
     },
     {
       "title": "Competencia — Día 2",
@@ -1290,7 +1310,8 @@
       "venue": "Cinemateca de Salento",
       "synopsis_lang": "es",
       "day_order": 1,
-      "genre": "Documental"
+      "genre": "Documental",
+      "posterSource": "custom"
     },
     {
       "title": "Panel · Retina Latina: Experiencias de Circulación",
@@ -1326,7 +1347,8 @@
       "venue": "Cinemateca de Salento",
       "synopsis_lang": "es",
       "day_order": 7,
-      "genre": "Comedia romántica"
+      "genre": "Comedia romántica",
+      "posterSource": "custom"
     },
     {
       "title": "Conversatorio · Diálogo con el público",
@@ -1431,7 +1453,8 @@
       "synopsis_lang": "es",
       "day_order": 1,
       "genre": "Documental",
-      "_parked_reason": "removido del Día 3 (3 jul) — no está en el post oficial del Día 3; reubicar si aparece en el post de otro día"
+      "_parked_reason": "removido del Día 3 (3 jul) — no está en el post oficial del Día 3; reubicar si aparece en el post de otro día",
+      "posterSource": "tmdb"
     },
     {
       "title": "Masterclass · Archivos Fílmicos y Memoria",
