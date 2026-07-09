@@ -367,6 +367,8 @@ export async function loadFestival(id){
   _renderFestivalSelector(id);
   // Persist choice
   storage.setActiveFestId(id);
+  // Avisar al reloj el festival en curso (F1.6). Inerte fuera del wrapper iOS.
+  window.__otfPushWatchFestival?.();
   // Retraso colaborativo (Fase B): (re)suscribir a los reportes de este festival.
   // Fire-and-forget — no bloquea el render; el badge se pinta al llegar datos.
   subscribeDelaysCloud();

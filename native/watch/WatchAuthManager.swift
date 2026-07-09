@@ -36,10 +36,17 @@ final class WatchAuthManager: NSObject, ObservableObject {
         supabaseKey: "sb_publishable_-edEGNPRmpsRy7ThJMWtdw_bs6IVZSC"
     )
 
+    // El teléfono empuja el festival en curso por applicationContext (F1.6).
+    // PlanStore lo lee para consultar ESE festival en vez de la fila más reciente.
+    static let activeFestivalKey = "otf.activeFestival"
+
     private var authRequestContinuation: CheckedContinuation<String, Error>?
 
     // ── 1. Arranque ───────────────────────────────────────────────────────────
     func bootstrap() async {
+        // Activar WCSession SIEMPRE (aunque ya haya sesión) para recibir el
+        // festival activo que empuja el teléfono por applicationContext.
+        activateWCSession()
         // ¿Sesión persistida en el keychain del reloj? (supabase-swift la maneja)
         if let session = try? await Self.supabase.auth.session {
             status = .authenticated(session.user.email ?? "?")
@@ -48,13 +55,19 @@ final class WatchAuthManager: NSObject, ObservableObject {
         await requestHandoffFromPhone()
     }
 
+    private func activateWCSession() {
+        guard WCSession.isSupported() else { return }
+        let s = WCSession.default
+        s.delegate = self
+        if s.activationState != .activated { s.activate() }
+    }
+
     // ── 2. Handoff desde el iPhone ────────────────────────────────────────────
     func requestHandoffFromPhone() async {
         status = .waitingForPhone
         guard WCSession.isSupported() else { status = .failed("WCSession no soportado"); return }
+        activateWCSession()
         let session = WCSession.default
-        session.delegate = self
-        if session.activationState != .activated { session.activate() }
         // Espera corta a que la sesión active (activate es async sin await nativo).
         for _ in 0..<20 where session.activationState != .activated {
             try? await Task.sleep(for: .milliseconds(100))
@@ -104,5 +117,20 @@ enum WatchAuthError: LocalizedError {
 extension WatchAuthManager: WCSessionDelegate {
     nonisolated func session(_ session: WCSession,
                              activationDidCompleteWith activationState: WCSessionActivationState,
-                             error: Error?) {}
+                             error: Error?) {
+        // Al activar, leer el contexto ya recibido (última vez que el teléfono lo empujó).
+        Self.storeActiveFestival(from: session.receivedApplicationContext)
+    }
+
+    // El teléfono empujó el festival en curso → persistir para PlanStore.
+    nonisolated func session(_ session: WCSession,
+                             didReceiveApplicationContext applicationContext: [String: Any]) {
+        Self.storeActiveFestival(from: applicationContext)
+    }
+
+    nonisolated private static func storeActiveFestival(from ctx: [String: Any]) {
+        if let fid = ctx["activeFestival"] as? String, !fid.isEmpty {
+            UserDefaults.standard.set(fid, forKey: activeFestivalKey)
+        }
+    }
 }

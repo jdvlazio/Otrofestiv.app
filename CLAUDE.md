@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `8a337bb Merge pull request #276 from jdvlazio/feat/watch-bridge-wrapper`
+> Último commit: `f5352c9 Merge pull request #280 from jdvlazio/feat/watch-i18n`
 
 ---
 

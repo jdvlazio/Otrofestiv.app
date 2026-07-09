@@ -22,9 +22,14 @@ final class PlanStore: ObservableObject {
     func load() async {
         state = .loading
         do {
-            let rows: [UserFestivalRow] = try await WatchAuthManager.supabase
+            // Festival en curso que empujó el teléfono (F1.6). Si aún no llegó,
+            // fallback a la fila más reciente por updated_at.
+            let fid = UserDefaults.standard.string(forKey: WatchAuthManager.activeFestivalKey)
+            let base = WatchAuthManager.supabase
                 .from("user_festival_state")
                 .select("festival_id, saved_agenda")
+            let filtered = (fid?.isEmpty == false) ? base.eq("festival_id", value: fid!) : base
+            let rows: [UserFestivalRow] = try await filtered
                 .order("updated_at", ascending: false)
                 .limit(1)
                 .execute()

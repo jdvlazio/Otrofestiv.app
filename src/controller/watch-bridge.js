@@ -14,6 +14,8 @@
 // Dormido en web/Android: nadie llama __otfWatchAuthRequest ahí. _sb/_sbUser vía
 // STATE BRIDGE (se leen al momento de la invocación, ya inicializados).
 
+import { storage } from '../storage/storage.js';
+
 export function initWatchBridge(){
   // Definir SIEMPRE el handler global — es inerte hasta que el envoltorio nativo lo llame.
   window.__otfWatchAuthRequest = async (requestId) => {
@@ -31,4 +33,16 @@ export function initWatchBridge(){
       reply({ requestId, error: String(e?.message || e) }); // el reloj muestra el motivo y reintenta
     }
   };
+
+  // Empujar el festival EN CURSO al reloj (mismo canal watchAuth, multiplexado por
+  // type). El wrapper lo guarda con updateApplicationContext; el reloj consulta ESE
+  // festival en vez de adivinar por la fila más reciente. Se llama al boot y cada
+  // vez que se cambia de festival (loader.switchFestival). Inerte en web/Android.
+  window.__otfPushWatchFestival = () => {
+    try{
+      const fid = storage.getActiveFestId();
+      if(fid) window.webkit?.messageHandlers?.watchAuth?.postMessage({ type:'festival', id: fid });
+    }catch(e){ /* no-op */ }
+  };
+  window.__otfPushWatchFestival();
 }
