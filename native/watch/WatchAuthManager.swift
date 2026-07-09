@@ -40,6 +40,9 @@ final class WatchAuthManager: NSObject, ObservableObject {
     // PlanStore lo lee para consultar ESE festival en vez de la fila más reciente.
     static let activeFestivalKey = "otf.activeFestival"
 
+    // Festival activo publicado → ContentView recarga el plan al cambiar (live-reload).
+    @Published var activeFestival: String?
+
     private var authRequestContinuation: CheckedContinuation<String, Error>?
 
     // ── 1. Arranque ───────────────────────────────────────────────────────────
@@ -119,18 +122,19 @@ extension WatchAuthManager: WCSessionDelegate {
                              activationDidCompleteWith activationState: WCSessionActivationState,
                              error: Error?) {
         // Al activar, leer el contexto ya recibido (última vez que el teléfono lo empujó).
-        Self.storeActiveFestival(from: session.receivedApplicationContext)
+        applyActiveFestival(from: session.receivedApplicationContext)
     }
 
-    // El teléfono empujó el festival en curso → persistir para PlanStore.
+    // El teléfono empujó el festival en curso.
     nonisolated func session(_ session: WCSession,
                              didReceiveApplicationContext applicationContext: [String: Any]) {
-        Self.storeActiveFestival(from: applicationContext)
+        applyActiveFestival(from: applicationContext)
     }
 
-    nonisolated private static func storeActiveFestival(from ctx: [String: Any]) {
-        if let fid = ctx["activeFestival"] as? String, !fid.isEmpty {
-            UserDefaults.standard.set(fid, forKey: activeFestivalKey)
-        }
+    // Persistir (para el load inicial de PlanStore) + publicar (para el live-reload).
+    nonisolated private func applyActiveFestival(from ctx: [String: Any]) {
+        guard let fid = ctx["activeFestival"] as? String, !fid.isEmpty else { return }
+        UserDefaults.standard.set(fid, forKey: Self.activeFestivalKey)
+        Task { @MainActor in self.activeFestival = fid }
     }
 }
