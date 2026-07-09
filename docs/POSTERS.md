@@ -231,8 +231,24 @@ imagen en ninguna fuente**. Último recurso, nunca el segundo.
 - **Cobertura ≥ 95 %** — un film cuenta como cubierto si `f.poster` no vacío **o**
   su título (normKey) está en `posters{}`/`customPosters{}`. (El cálculo viejo
   ignoraba `customPosters{}` → FICCI reportaba 63 % siendo 100 %.)
+- **`[poster-source]`** (ERROR) — un poster inline **sin `posterSource`**. Obliga a
+  correr el clasificador por aspecto (abajo) — así ningún landscape se cuela como
+  portrait recortado. La detección editorial deja de depender del host (§5.3);
+  `posterSource` explícito manda (§5.1).
+- **`[poster-host]`** (WARNING) — poster http fuera de la whitelist
+  (`image.tmdb.org` · `d13jj08vfqimqg.cloudfront.net` · `*.supabase.co`). Fuentes
+  frágiles (hotlink bloqueado, links muertos) → **descargar y re-hostear en
+  `/assets/<id>/`**. Regla de hosting: **2 fuentes** — TMDB (portrait, se
+  referencia) + `/assets/` (todo lo demás, incluidas stills 16:9 re-hosteadas).
 - **`[poster-empty-film]`** — §7.
 - **`[poster-editorial-unique]`** — §6.2.
+
+> **Clasificador de aspecto — `scripts/classify-posters.py`** (paso de onboarding):
+> descarga cada poster, mide el aspecto real y escribe `posterSource` en cada
+> film/corto (`editorial` si landscape ≥ 1.2, si no `tmdb`/`custom`). Caza rotos
+> (403/404) al montar, no en producción. `--apply` escribe; sin flag = dry-run.
+> Reemplaza la detección frágil por-host: el runtime ya honra `posterSource`
+> primero. **Correrlo en cada festival nuevo** — el gate `[poster-source]` lo exige.
 - **Binding por id** — si el CDN/og:image embebe el id del film en el path,
   confirmar `poster.includes(filmId)` (caza stale-render — lección Tribeca).
 - **Verificación visual** (galería Chrome) — obligatoria antes de escribir TMDB/LB.

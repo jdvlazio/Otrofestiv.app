@@ -265,6 +265,40 @@ function validateFestival(fname, data) {
       else if (!seen.has(p)) seen.set(p, { n: norm(f.title), t: f.title || '?' });
     }
   }
+  // ── Gates de posters (estrategia editorial, POSTERS.md §5/§8) ─────────────
+  // Poster-holders = films top-level + cortos anidados en film_list.
+  const posterHolders = [];
+  for (const f of films) {
+    posterHolders.push(f);
+    if (Array.isArray(f.film_list)) for (const s of f.film_list) if (s && typeof s === 'object') posterHolders.push(s);
+  }
+  // [poster-source] ERROR — poster inline sin posterSource. Obliga a correr el
+  // clasificador por aspecto (classify-posters.py) → ningún landscape se cuela
+  // como portrait recortado ni ningún roto llega a producción sin detectarse.
+  {
+    for (const f of posterHolders) {
+      const p = (f.poster || '').trim();
+      if (p && !f.posterSource) {
+        errors.push(`[poster-source] "${(f.title||'?').slice(0,40)}" tiene poster sin posterSource — correr: python3 scripts/classify-posters.py <id> --apply`);
+      }
+    }
+  }
+  // [poster-host] WARNING — poster http fuera de la whitelist (fuentes frágiles:
+  // hotlink bloqueado / links muertos). Descargar y re-hostear en /assets/<id>/.
+  {
+    const ALLOWED = ['image.tmdb.org', 'd13jj08vfqimqg.cloudfront.net', 'supabase.co'];
+    const check = (title, p) => {
+      if (!p || !String(p).startsWith('http')) return;
+      let host = ''; try { host = new URL(p).host; } catch { return; }
+      if (!ALLOWED.some(a => host === a || host.endsWith('.' + a) || host.endsWith(a))) {
+        warnings.push(`[poster-host] "${(title||'?').slice(0,40)}": host '${host}' fuera de whitelist (tmdb/cloudfront/supabase) — re-hostear en /assets/<id>/`);
+      }
+    };
+    for (const f of posterHolders) check(f.title, f.poster);
+    const maps = { ...(data.posters || {}), ...(data.customPosters || {}) };
+    for (const [k, v] of Object.entries(maps)) check(k, v);
+  }
+
   // [sinopsis-duplicada] ERROR — dos films con TÍTULO DISTINTO y misma synopsis o synopsis_en.
   for (const fld of ['synopsis', 'synopsis_en']) {
     const norm = t => (t || '?').trim().toLowerCase();
