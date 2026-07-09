@@ -255,6 +255,22 @@ imagen en ninguna fuente**. Último recurso, nunca el segundo.
 
 ---
 
+## 8b. Color de sección — paleta por arquetipo (unificada)
+
+El color de la banda editorial **significa**: las 78 secciones de los 7 festivales
+colapsan en **9 arquetipos** (Gala, Competencia, Clausura, Especiales, Retrospectiva,
+Muestra/País, Perspectivas, Cortos, Charlas), cada uno con **un** color de marca
+reusado en todos los festivales (misma Competencia = mismo naranja en cualquier lado).
+
+- **`ARCHETYPE_COLORS`** (9) + **`SECTION_ARCHETYPES`** (sección→arquetipo) en `config.js`.
+- **`_sectionColor(sec)`** resuelve vía arquetipo (gana), luego `SECTION_COLORS` legacy,
+  luego gris `#2C2C2A` (que el gate debería impedir).
+- **`_contrastText(hex)`** (`components.js`): el texto de la banda elige negro/blanco por
+  **máximo contraste real** (WCAG), no por umbral. Usado en `_edHdrSVG` (editorial) y
+  `_buildPosterV16` (generativo) → banda legible sobre cualquier color. Antes: 51 secciones
+  caían al gris con texto negro (contraste 2.49, ilegible).
+- Sección nueva sin arquetipo → cae a gris → **debería** cazarla un gate (pendiente).
+
 ## 9. Resumen de un vistazo
 
 - Identidad antes que aspecto. TMDB/LB **solo verificados**; festival = identidad segura.

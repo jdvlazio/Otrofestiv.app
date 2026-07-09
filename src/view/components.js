@@ -10,7 +10,7 @@
 //   savedAgenda,DAY_KEYS). DAY_ABBR/DAY_NUM: objetos mutados por loadFestival via
 //   el binding importado (mutacion de objeto, OK en ESM).
 
-import { FESTIVAL_CONFIG, SECTION_COLORS, SECTION_EN } from "../config.js";
+import { FESTIVAL_CONFIG, SECTION_COLORS, SECTION_EN, ARCHETYPE_COLORS, SECTION_ARCHETYPES } from "../config.js";
 import { toMin } from "../domain/time.js";
 import { t } from "../i18n/i18n.js";
 import { state } from "../state/state.js";
@@ -100,7 +100,23 @@ export function makeSorpresaPoster(){
   });
 }
 
-export function _sectionColor(sec){return SECTION_COLORS[sec]||'#2C2C2A';}
+// Sección → color por ARQUETIPO (paleta unificada, POSTERS.md). El arquetipo gana;
+// fallback al mapa viejo, y a gris solo si no hay nada (lo caza el gate).
+export function _sectionColor(sec){
+  if(!sec) return '#2C2C2A';
+  const arch = SECTION_ARCHETYPES[sec];
+  if(arch && ARCHETYPE_COLORS[arch]) return ARCHETYPE_COLORS[arch];
+  return SECTION_COLORS[sec] || '#2C2C2A';
+}
+// Texto legible sobre un color: negro o blanco por MÁXIMO contraste real (WCAG),
+// no por umbral. Garantiza banda legible sobre cualquier color de sección.
+export function _contrastText(hex){
+  const c = String(hex||'').replace('#','');
+  if(c.length < 6) return '#0A0A0A';
+  const r=parseInt(c.slice(0,2),16)/255, g=parseInt(c.slice(2,4),16)/255, b=parseInt(c.slice(4,6),16)/255;
+  const L = 0.2126*r + 0.7152*g + 0.0722*b;
+  return ((L+0.05)/0.05) >= (1.05/(L+0.05)) ? '#0A0A0A' : '#FFFFFF';
+}
 
 // ── REGLA INAMOVIBLE DE ARQUITECTURA ─────────────────────────────────────────
 // Todo display de nombre de sección DEBE pasar por _secLabel() (o _secLabelFull()
@@ -162,8 +178,9 @@ export function _buildPosterV16({accent, headerLabel, title, num}){
   const hFS=6.5,hLD=9;
   const hTotalH=hLines.length*hLD;
   const hStartY=(HDR-hTotalH)/2+hFS;
+  const _hdrTxt=_contrastText(accent);  // auto-contraste sobre la banda de sección
   const headerText=hLines.map((l,i)=>
-    `<text x="${PAD}" y="${hStartY+i*hLD}" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="${hFS}" font-weight="800" letter-spacing="0.7" fill="#0A0A0A">${esc(l)}</text>`
+    `<text x="${PAD}" y="${hStartY+i*hLD}" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="${hFS}" font-weight="800" letter-spacing="0.7" fill="${_hdrTxt}">${esc(l)}</text>`
   ).join('');
 
   // Body
