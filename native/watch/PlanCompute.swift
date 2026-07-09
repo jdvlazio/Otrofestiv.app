@@ -67,15 +67,17 @@ enum PlanCompute {
         return order.map { DaySection(id: $0, label: dayLabel($0), items: map[$0] ?? []) }
     }
 
-    /// "2026-07-03" → "VIE 3 JUL" (ALLCAPS, es).
+    /// "2026-07-03" → "VIE 3 JUL" (es) / "FRI JUL 3" (en). ALLCAPS, según idioma.
     static func dayLabel(_ dayStr: String) -> String {
+        let en = Lang.current == .en
+        let loc = Locale(identifier: en ? "en_US" : "es_CO")
         let parse = DateFormatter()
-        parse.locale = Locale(identifier: "es_CO"); parse.timeZone = tz
+        parse.locale = loc; parse.timeZone = tz
         parse.dateFormat = "yyyy-MM-dd"
         guard let date = parse.date(from: dayStr) else { return dayStr }
         let out = DateFormatter()
-        out.locale = Locale(identifier: "es_CO"); out.timeZone = tz
-        out.dateFormat = "EEE d MMM"
+        out.locale = loc; out.timeZone = tz
+        out.dateFormat = en ? "EEE MMM d" : "EEE d MMM"
         return out.string(from: date).uppercased().replacingOccurrences(of: ".", with: "")
     }
 

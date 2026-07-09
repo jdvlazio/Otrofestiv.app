@@ -26,7 +26,7 @@ struct FilmDetail: View {
                 HStack { Spacer(); PosterLarge(path: item.poster); Spacer() }
 
                 if live {
-                    Text("AHORA")
+                    Text(L.now)
                         .font(.caption2).fontWeight(.bold).foregroundStyle(OT.green)
                 }
 
