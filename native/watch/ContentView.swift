@@ -24,6 +24,7 @@ struct ContentView: View {
 // ── Mi Plan · paginado por día ────────────────────────────────────────────────
 private struct MiPlan: View {
     @EnvironmentObject var plan: PlanStore
+    @EnvironmentObject var auth: WatchAuthManager
     @State private var day = 0
 
     var body: some View {
@@ -51,6 +52,11 @@ private struct MiPlan: View {
         }
         .task { if case .idle = plan.state { await plan.load() } }
         .onChange(of: plan.defaultDay) { _, new in day = new }
+        // Live-reload: el teléfono cambió el festival en curso → recargar el plan.
+        .onChange(of: auth.activeFestival) { _, new in
+            guard let new, !new.isEmpty, new != plan.festival else { return }
+            Task { await plan.load() }
+        }
     }
 }
 
