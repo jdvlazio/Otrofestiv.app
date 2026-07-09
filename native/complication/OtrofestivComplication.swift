@@ -64,7 +64,7 @@ struct OtrofestivComplicationEntryView: View {
         ZStack {
             AccessoryWidgetBackground()
             VStack(spacing: 1) {
-                Image("otmark").resizable().scaledToFit().frame(height: 11)
+                Image("otmark").resizable().scaledToFit().frame(height: 13)
                 if let n = entry.next {
                     Text(n.time).font(.system(size: 13, weight: .semibold)).widgetAccentable()
                 }
@@ -74,7 +74,7 @@ struct OtrofestivComplicationEntryView: View {
 
     // Esquina: ícono + etiqueta curva
     private var corner: some View {
-        Image("otmark").resizable().scaledToFit().frame(width: 13, height: 16)
+        Image("otmark").resizable().scaledToFit().frame(width: 15, height: 15)
             .widgetLabel {
                 Text(entry.next.map { "\($0.time)  \($0.title)" } ?? "Otrofestiv")
             }
