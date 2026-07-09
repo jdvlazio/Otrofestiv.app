@@ -70,7 +70,11 @@ def classify_film(f, poster):
         return ('custom', 'path no-medible→custom')
     kind, val = measure(url)
     if kind == 'BROKEN':
-        return (None, f'ROTO {val}')
+        # No dejar el poster sin posterSource (lo exige el gate). Adivina por host;
+        # se reporta ROTO igual → Fase A.2 lo re-hostea (y ahí se re-mide).
+        host = urlparse(poster).netloc if poster.startswith('http') else ''
+        guess = 'editorial' if any(host.endswith(e) for e in ('cloudfront.net', 'supabase.co')) else 'custom'
+        return (guess, f'ROTO {val}')
     if kind == 'editorial':
         return ('editorial', f'landscape r={val}')
     return ('custom', f'portrait r={val}')
@@ -94,7 +98,9 @@ def process(fp, apply):
             counts['skip'] += 1; continue
         src, note = classify_film(f, p)
         if src is None:
-            broken.append((f.get('title', ''), note)); counts['skip'] += 1; continue
+            counts['skip'] += 1; continue
+        if note and 'ROTO' in note:
+            broken.append((f.get('title', ''), note))   # reportar, pero igual setear posterSource
         counts[src] += 1
         handled.add(id(f))
         if f.get('posterSource') != src:

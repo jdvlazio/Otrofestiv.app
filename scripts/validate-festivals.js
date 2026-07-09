@@ -91,6 +91,15 @@ function validateFestival(fname, data) {
   if (data.config && Object.keys(data.config).length > 0) {
     errors.push('GATE BLOQUEANTE: config{} presente en el JSON — mover a FESTIVAL_CONFIG en src/config.js y eliminar este bloque');
   }
+
+  // GATE [poster-map-legacy]: el modelo dual posters{}/customPosters{} murió en Fase A.1.
+  // Un film = un `poster` inline. Si reaparece un map, el pipeline regresó al modelo viejo.
+  for (const mapKey of ['posters', 'customPosters']) {
+    if (data[mapKey] && Object.keys(data[mapKey]).length > 0) {
+      errors.push(`GATE BLOQUEANTE [poster-map-legacy]: ${mapKey}{} presente — el modelo map murió en Fase A.1. Inline el poster en cada film (scripts/migrate-posters-inline.py) y elimina el mapa.`);
+    }
+  }
+
   // Festivales LEGADOS (FICCI 65, Cinemancia 2025): config en el bloque config{} del JSON.
   if (!hasConfigBlock) {
     warnings.push('Sin bloque config{} — se asume que la configuración está en FESTIVAL_CONFIG en src/config.js (formato nuevo ✓)');
