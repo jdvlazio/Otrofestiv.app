@@ -81,6 +81,13 @@ enum PlanCompute {
 
     /// Página inicial: hoy si el plan lo tiene; si no, el primer día futuro; si el festival
     /// ya pasó, el último día (recap).
+    // Próxima función del plan: la que está en curso, o la primera futura.
+    static func nextUpcoming(_ items: [ScheduleItem], now: Date) -> ScheduleItem? {
+        let sorted = sortedByStart(items)
+        if let live = sorted.first(where: { isLive($0, now: now) }) { return live }
+        return sorted.first(where: { (startDate($0) ?? .distantPast) >= now })
+    }
+
     static func defaultDayIndex(_ sections: [DaySection], now: Date) -> Int {
         var cal = Calendar(identifier: .gregorian); cal.timeZone = tz
         if let i = sections.firstIndex(where: { s in
