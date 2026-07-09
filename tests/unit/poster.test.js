@@ -108,13 +108,15 @@ test('_buildPosterV16: escapa headerLabel, title y num (ambas variantes)', () =>
 });
 
 // ── Regresión específica: "Opening & Galas" ──────────────────────────────────
+// La banda va en MAYÚSCULA (unificación Fase B: una sola caja tipográfica); el
+// & sigue escapado. El header queda "OPENING &amp; GALAS" en una línea.
 test('regresión: el ampersand de "Opening & Galas" queda como &amp;', () => {
   const svg = assertWellFormed(
     C._buildPosterV16({ accent: '#F59E0B', headerLabel: 'Opening & Galas', title: 'Opening & Galas', num: null }),
     'opening-galas'
   );
-  assert.ok(svg.includes('Opening &amp; Galas'), 'el & debe renderizarse escapado como &amp;');
-  assert.ok(!/Opening & Galas/.test(svg), 'no debe quedar ningún "& " crudo en el SVG');
+  assert.ok(svg.includes('OPENING &amp; GALAS'), 'el & de la banda debe renderizarse escapado como &amp;');
+  assert.ok(!/OPENING & GALAS/.test(svg), 'no debe quedar ningún "& " crudo en la banda');
 });
 
 // ── posterModel: unión discriminada (un solo lugar clasifica el póster) ───────

@@ -156,6 +156,36 @@ export function _secLabelFull(sec){
 // Lo reusa _edHdrSVG (helpers.js). Cubierto por tests/unit/poster.test.js.
 export function escXML(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
 
+// ── Banda de sección: FUENTE ÚNICA del texto (Fase B) ─────────────────────────
+// Editorial (_edHdrSVG, vw=100) y generativo (_buildPosterV16, vw=120) comparten
+// ESTE builder: wrap, auto-contraste, escape XML, peso y métricas viven acá una
+// sola vez. Antes eran dos implementaciones casi-idénticas que divergían (padding
+// 2 vs 8, wrap 14 vs 15, spacing 0.5 vs 0.7) — esa duplicación ERA la inconsistencia.
+// Las métricas son ratio de `vw` calibrado para que a vw=120 dé EXACTO lo del
+// generativo (FS 6.5, LH 9, padX 8, ls 0.7) → el generativo no cambia y el
+// editorial adopta el mismo look. Devuelve {text,lines,lh,fs}: `text` = los <text>;
+// el caller compone el <svg> (y, en generativo, el <rect> de banda).
+//   mode 'center' → centrado vertical en una banda de alto `bandH` (generativo).
+//   mode 'top'    → anclado arriba, para el <svg> propio del editorial.
+// wrap a 15ch mantiene la línea más ancha ≤15; secciones que superan 2 líneas
+// exigen `sectionShort` (gate [seccion-larga]).
+const _BAND_FS=0.0542, _BAND_LH=0.075, _BAND_PADX=0.0667, _BAND_LS=0.00583;
+export function _bandTextSVG(label, accent, vw, {mode='center', bandH=0}={}){
+  const s=String(label||'').trim().toUpperCase();
+  const fs=vw*_BAND_FS, lh=vw*_BAND_LH, padX=vw*_BAND_PADX, ls=vw*_BAND_LS;
+  if(!s) return {text:'', lines:0, lh, fs};
+  const words=s.split(/\s+/), L=[]; let cur='';
+  for(const w of words){ if(cur&&(cur+' '+w).length>15){L.push(cur);cur=w;} else cur=cur?cur+' '+w:w; }
+  if(cur) L.push(cur);
+  const fill=_contrastText(accent);  // auto-contraste sobre la banda de sección
+  const y0 = mode==='center' ? (bandH-L.length*lh)/2+fs : fs+vw*0.02;
+  const round=n=>+n.toFixed(2);
+  const text=L.map((l,i)=>
+    `<text x="${round(padX)}" y="${round(y0+i*lh)}" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="${round(fs)}" font-weight="800" letter-spacing="${round(ls)}" fill="${fill}">${escXML(l)}</text>`
+  ).join('');
+  return {text, lines:L.length, lh, fs};
+}
+
 export function _buildPosterV16({accent, headerLabel, title, num}){
   // ── Motor de poster tipográfico v16 ──────────────────────────
   // Sistema único para eventos, programas, sorpresa.
@@ -173,15 +203,8 @@ export function _buildPosterV16({accent, headerLabel, title, num}){
     if(cur)lines.push(cur);return lines;
   }
 
-  // Header label
-  const hLines=wrap(headerLabel||'',15);
-  const hFS=6.5,hLD=9;
-  const hTotalH=hLines.length*hLD;
-  const hStartY=(HDR-hTotalH)/2+hFS;
-  const _hdrTxt=_contrastText(accent);  // auto-contraste sobre la banda de sección
-  const headerText=hLines.map((l,i)=>
-    `<text x="${PAD}" y="${hStartY+i*hLD}" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="${hFS}" font-weight="800" letter-spacing="0.7" fill="${_hdrTxt}">${esc(l)}</text>`
-  ).join('');
+  // Header label — banda única (misma fuente que el editorial). Ver _bandTextSVG.
+  const headerText=_bandTextSVG(headerLabel||'', accent, VW, {mode:'center', bandH:HDR}).text;
 
   // Body
   let bodyContent='';

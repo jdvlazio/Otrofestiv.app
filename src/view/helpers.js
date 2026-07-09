@@ -7,7 +7,7 @@
 
 import { FESTIVAL_CONFIG, TMDB_IMG } from '../config.js';
 import {
-  DAY_ABBR, DAY_NUM, ICONS, _buildPosterV16, _secLabel, _sectionColor, _contrastText,
+  DAY_ABBR, DAY_NUM, ICONS, _buildPosterV16, _bandTextSVG, _secLabel, _sectionColor,
   makeProgramPoster, makeEventPoster, makeSorpresaPoster, escXML,
 } from './components.js';
 import { toMin, parseDur, simNow, simTodayStr, _festDate } from '../domain/time.js';
@@ -128,15 +128,12 @@ export function _isEditorialPoster(f){
 // viewBox igual que el cqi anterior → mismo tamaño en navegadores modernos,
 // sin regresión, y robusto donde el piso de font-size rompía el HTML.
 export function _edHdrSVG(label, accent){
-  const s=(label||'').toString().trim().toUpperCase();
-  if(!s) return '';
-  const words=s.split(/\s+/), lines=[]; let cur='';
-  for(const w of words){ if(cur&&(cur+' '+w).length>14){lines.push(cur);cur=w;} else cur=cur?cur+' '+w:w; }
-  if(cur) lines.push(cur);
-  const FS=5.4, LH=7, PAD=2, VW=100, VH=lines.length*LH+4, y0=FS+2;
-  const _fill=_contrastText(accent);  // auto-contraste sobre la banda de sección
-  const txt=lines.map((l,i)=>`<text x="${PAD}" y="${y0+i*LH}" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="${FS}" font-weight="800" letter-spacing="0.5" fill="${_fill}">${escXML(l)}</text>`).join('');
-  return `<svg class="ed-hdr-svg" viewBox="0 0 ${VW} ${VH}" preserveAspectRatio="xMidYMid meet">${txt}</svg>`;
+  if(!String(label||'').trim()) return '';
+  // Banda única (misma fuente que el generativo): vw=100, anclado arriba, y el
+  // <svg> propio del editorial escala vía CSS (.ed-hdr-svg / --ed-hdr-ratio).
+  const {text, lines, lh}=_bandTextSVG(label, accent, 100, {mode:'top'});
+  const VH=+(lines*lh+4).toFixed(2);
+  return `<svg class="ed-hdr-svg" viewBox="0 0 100 ${VH}" preserveAspectRatio="xMidYMid meet">${text}</svg>`;
 }
 
 export function _posterThumb(f, cssClass, loading){
