@@ -169,14 +169,54 @@ export function escXML(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&
 //   mode 'top'    → anclado arriba, para el <svg> propio del editorial.
 // wrap a 15ch mantiene la línea más ancha ≤15; secciones que superan 2 líneas
 // exigen `sectionShort` (gate [seccion-larga]).
-const _BAND_FS=0.0542, _BAND_LH=0.075, _BAND_PADX=0.0667, _BAND_LS=0.00583;
+const _BAND_FS=0.0542, _BAND_LH=0.075, _BAND_PADX=0.0667, _BAND_LS=0.00583, _BAND_MAXCH=16;
+
+// ── Regla de lecturabilidad del corte de línea (regla de Juan) ────────────────
+// Cada línea debe tener sentido por sí sola y NINGUNA línea (salvo la última)
+// termina en palabra débil: conjunción, preposición o artículo. Esas arrastran
+// a la línea siguiente junto al sustantivo que introducen. Ej.:
+//   "Competencia De Cortometrajes" → [Competencia / De Cortometrajes]  (no "…De /")
+//   "Tributo Ben Rivers"           → [Tributo / Ben Rivers]            (nombre junto)
+//   "¿Qué es la ficción?"          → [¿Qué es / la ficción?]          (no "…la /")
+// Acentos normalizados (según→segun, qué→que) para el match; "que" NO es débil
+// (interrogativo/relativo válido a fin de línea). Reemplaza el corte greedy que
+// partía donde cayera. Elige el corte con menos líneas, sin débiles al final y
+// más balanceado (búsqueda exhaustiva — las etiquetas tienen pocas palabras).
+const _BAND_WEAK=new Set(['el','la','lo','los','las','un','una','unos','unas','y','e','o','u','ni',
+  'de','del','al','a','ante','bajo','con','contra','desde','en','entre','hacia','hasta','para','por',
+  'segun','sin','sobre','tras','the','an','of','and','or','nor','to','in','on','at','for','with','by','from','into','over','under']);
+export function _bandWrap(s, maxCh=_BAND_MAXCH){
+  const words=s.split(/\s+/), n=words.length;
+  if(n<=1) return words;
+  const norm=w=>w.toLowerCase().replace(/[^\p{L}]/gu,'').normalize('NFD').replace(/[̀-ͯ]/g,'');
+  // débil = conjunción/preposición/artículo O un guión separador suelto (–—-):
+  // ninguno puede colgar al final de línea; bindean hacia el sustantivo que sigue.
+  const isWeak=w=>/^[–—-]+$/.test(w)||_BAND_WEAK.has(norm(w));
+  if(n>13){ // guard: partición exhaustiva sólo para etiquetas normales
+    const L=[]; let cur=''; for(const w of words){ if(cur&&(cur+' '+w).length>maxCh){L.push(cur);cur=w;} else cur=cur?cur+' '+w:w; } if(cur)L.push(cur); return L;
+  }
+  let best=null;
+  for(let mask=0; mask<(1<<(n-1)); mask++){
+    const lines=[]; let cur=[words[0]];
+    for(let i=1;i<n;i++){ if(mask&(1<<(i-1))){lines.push(cur);cur=[words[i]];} else cur.push(words[i]); }
+    lines.push(cur);
+    const lens=lines.map(l=>l.join(' ').length);
+    let overflow=0, weak=0;
+    for(const L of lens) if(L>maxCh) overflow+=L-maxCh;
+    for(let i=0;i<lines.length-1;i++) if(isWeak(lines[i][lines[i].length-1])) weak++;
+    const imbal=Math.max(...lens)-Math.min(...lens);
+    // débil (regla dura) pesa más que una línea extra; overflow evita reventar el ancho.
+    const score=lines.length*1000 + weak*1500 + overflow*400 + imbal;
+    if(!best || score<best.score) best={score, texts:lines.map(l=>l.join(' '))};
+  }
+  return best.texts;
+}
+
 export function _bandTextSVG(label, accent, vw, {mode='center', bandH=0}={}){
   const s=String(label||'').trim().toUpperCase();
   const fs=vw*_BAND_FS, lh=vw*_BAND_LH, padX=vw*_BAND_PADX, ls=vw*_BAND_LS;
   if(!s) return {text:'', lines:0, lh, fs};
-  const words=s.split(/\s+/), L=[]; let cur='';
-  for(const w of words){ if(cur&&(cur+' '+w).length>15){L.push(cur);cur=w;} else cur=cur?cur+' '+w:w; }
-  if(cur) L.push(cur);
+  const L=_bandWrap(s, _BAND_MAXCH);
   const fill=_contrastText(accent);  // auto-contraste sobre la banda de sección
   const y0 = mode==='center' ? (bandH-L.length*lh)/2+fs : fs+vw*0.02;
   const round=n=>+n.toFixed(2);
