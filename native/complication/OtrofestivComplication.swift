@@ -88,8 +88,8 @@ struct OtrofestivComplicationEntryView: View {
                 Text("\(n.dayLabel) · \(n.time)")
                     .font(.caption2).lineLimit(1).widgetAccentable()
             } else {
-                Text("Sin plan").font(.headline)
-                Text("Armá tu plan en el teléfono.")
+                Text(L.noPlanTitle).font(.headline)
+                Text(L.noPlanDetail)
                     .font(.caption2).foregroundStyle(.secondary).lineLimit(2)
             }
         }
@@ -105,8 +105,8 @@ struct OtrofestivComplication: Widget {
             OtrofestivComplicationEntryView(entry: entry)
                 .containerBackground(for: .widget) { Color.clear }
         }
-        .configurationDisplayName("Próxima función")
-        .description("Tu próxima película del festival.")
+        .configurationDisplayName(L.complicationName)
+        .description(L.complicationDesc)
         .supportedFamilies([.accessoryInline, .accessoryCircular, .accessoryCorner, .accessoryRectangular])
     }
 }

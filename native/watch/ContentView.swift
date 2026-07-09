@@ -14,8 +14,8 @@ struct ContentView: View {
     var body: some View {
         switch auth.status {
         case .authenticated:      MiPlan()
-        case .checking:           StatusScreen(text: "abriendo…")
-        case .waitingForPhone:    StatusScreen(text: "conectando con tu iPhone…")
+        case .checking:           StatusScreen(text: L.opening)
+        case .waitingForPhone:    StatusScreen(text: L.connectingPhone)
         case .failed(let reason): FailScreen(reason: reason) { Task { await auth.requestHandoffFromPhone() } }
         }
     }
@@ -30,11 +30,11 @@ private struct MiPlan: View {
         Group {
             switch plan.state {
             case .idle, .loading: ProgressView().tint(OT.amber)
-            case .error(let e):   MessageView(title: "No se pudo cargar", detail: e)
-            case .empty:          MessageView(title: "Sin plan", detail: "Armá tu plan en el teléfono.")
+            case .error(let e):   MessageView(title: L.loadFailed, detail: e)
+            case .empty:          MessageView(title: L.noPlanTitle, detail: L.noPlanDetail)
             case .loaded:
                 if plan.sections.isEmpty {
-                    MessageView(title: "Sin plan", detail: "Armá tu plan en el teléfono.")
+                    MessageView(title: L.noPlanTitle, detail: L.noPlanDetail)
                 } else {
                     NavigationStack {
                         TabView(selection: $day) {
@@ -88,7 +88,7 @@ private struct PlanRow: View {
                         .font(.caption).monospacedDigit().fontWeight(.semibold)
                         .foregroundStyle(OT.amber)
                     if live {
-                        Text("AHORA").font(.caption2).fontWeight(.bold).foregroundStyle(OT.green)
+                        Text(L.now).font(.caption2).fontWeight(.bold).foregroundStyle(OT.green)
                     }
                     if let v = item.venue {
                         Text("·").font(.caption2).foregroundStyle(OT.faint)

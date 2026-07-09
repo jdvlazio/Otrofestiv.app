@@ -54,7 +54,7 @@ struct FailScreen: View {
         VStack(spacing: 8) {
             Image(systemName: "exclamationmark.triangle.fill").foregroundStyle(OT.amber).font(.title3)
             Text(reason).font(.caption2).foregroundStyle(OT.secondary).multilineTextAlignment(.center)
-            Button("Reintentar", action: retry).font(.footnote).tint(OT.amber)
+            Button(L.retry, action: retry).font(.footnote).tint(OT.amber)
         }.padding()
     }
 }
