@@ -31,14 +31,32 @@ final class PlanStore: ObservableObject {
                 .value
             guard let row = rows.first,
                   let schedule = row.savedAgenda?.schedule, !schedule.isEmpty else {
+                SharedPlan.save(nil)
                 state = .empty; return
             }
             festival = row.festivalId
             sections = PlanCompute.groupedByDay(schedule)
             defaultDay = PlanCompute.defaultDayIndex(sections, now: Date())
+            publishNextUp()
             state = .loaded
         } catch {
             state = .error(error.localizedDescription)
         }
+    }
+
+    // Escribe la próxima función al App Group para que la lea la complication.
+    private func publishNextUp() {
+        let flat = sections.flatMap { $0.items }
+        guard let n = PlanCompute.nextUpcoming(flat, now: Date()),
+              let start = PlanCompute.startDate(n) else {
+            SharedPlan.save(nil); return
+        }
+        SharedPlan.save(NextUp(
+            title: n.title,
+            time: n.time ?? "",
+            venue: n.venue,
+            dayLabel: n.dayStr.map { PlanCompute.dayLabel($0) } ?? "",
+            startEpoch: start.timeIntervalSince1970
+        ))
     }
 }
