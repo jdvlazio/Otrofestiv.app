@@ -52,7 +52,7 @@ struct OtrofestivComplicationEntryView: View {
     private var inline: some View {
         Group {
             if let n = entry.next {
-                Label("\(n.time)  \(n.title)", systemImage: "film")
+                Label("\(n.time)  \(n.title)", image: "otmark")
             } else {
                 Text("Otrofestiv")
             }
@@ -64,7 +64,7 @@ struct OtrofestivComplicationEntryView: View {
         ZStack {
             AccessoryWidgetBackground()
             VStack(spacing: 1) {
-                Image(systemName: "film.fill").font(.system(size: 10))
+                Image("otmark").resizable().scaledToFit().frame(height: 11)
                 if let n = entry.next {
                     Text(n.time).font(.system(size: 13, weight: .semibold)).widgetAccentable()
                 }
@@ -74,7 +74,7 @@ struct OtrofestivComplicationEntryView: View {
 
     // Esquina: ícono + etiqueta curva
     private var corner: some View {
-        Image(systemName: "film.fill")
+        Image("otmark").resizable().scaledToFit().frame(width: 13, height: 16)
             .widgetLabel {
                 Text(entry.next.map { "\($0.time)  \($0.title)" } ?? "Otrofestiv")
             }
@@ -112,12 +112,20 @@ struct OtrofestivComplication: Widget {
 }
 
 // ── Preview (canvas de Xcode — datos de muestra) ──────────────────────────────
-#Preview(as: .accessoryRectangular) {
+private let _sample = NextUp(
+    title: "Herencia: los cantos de la tierra",
+    time: "10:00", venue: "Carpa Cinemateca",
+    dayLabel: "SÁB 4 JUL", startEpoch: 0)
+
+#Preview("Rectangular", as: .accessoryRectangular) {
     OtrofestivComplication()
 } timeline: {
-    NextUpEntry(date: .now, next: NextUp(
-        title: "Herencia: los cantos de la tierra",
-        time: "10:00", venue: "Carpa Cinemateca",
-        dayLabel: "SÁB 4 JUL", startEpoch: 0))
+    NextUpEntry(date: .now, next: _sample)
     NextUpEntry(date: .now, next: nil)
+}
+
+#Preview("Circular", as: .accessoryCircular) {
+    OtrofestivComplication()
+} timeline: {
+    NextUpEntry(date: .now, next: _sample)
 }
