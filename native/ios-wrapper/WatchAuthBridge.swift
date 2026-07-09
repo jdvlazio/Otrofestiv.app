@@ -52,8 +52,14 @@ final class WatchAuthBridge: NSObject, WCSessionDelegate, WKScriptMessageHandler
     func userContentController(_ uc: WKUserContentController,
                                didReceive message: WKScriptMessage) {
         guard message.name == "watchAuth",
-              let body = message.body as? [String: Any],
-              let requestId = body["requestId"] as? String else { return }
+              let body = message.body as? [String: Any] else { return }
+        // Festival activo (multiplexado por el mismo canal): guardarlo como el
+        // último estado que el reloj lee al abrir (F1.6).
+        if (body["type"] as? String) == "festival", let fid = body["id"] as? String, !fid.isEmpty {
+            try? WCSession.default.updateApplicationContext(["activeFestival": fid])
+            return
+        }
+        guard let requestId = body["requestId"] as? String else { return }
         var reply: (([String: Any]) -> Void)?
         q.sync { reply = pending.removeValue(forKey: requestId) }
         guard let reply = reply else { return } // ya expiró / desconocido
