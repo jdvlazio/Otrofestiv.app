@@ -68,8 +68,8 @@ enum PlanCompute {
     }
 
     /// "2026-07-03" → "VIE 3 JUL" (es) / "FRI JUL 3" (en). ALLCAPS, según idioma.
-    static func dayLabel(_ dayStr: String) -> String {
-        let en = Lang.current == .en
+    static func dayLabel(_ dayStr: String, lang: Lang = Lang.current) -> String {
+        let en = lang == .en
         let loc = Locale(identifier: en ? "en_US" : "es_CO")
         let parse = DateFormatter()
         parse.locale = loc; parse.timeZone = tz
