@@ -119,6 +119,25 @@ test('regresión: el ampersand de "Opening & Galas" queda como &amp;', () => {
   assert.ok(!/OPENING & GALAS/.test(svg), 'no debe quedar ningún "& " crudo en la banda');
 });
 
+// ── Clamp de título largo (Netflix/Spotify): ≤4 líneas + elipsis en generativo ─
+// Líneas del body = <text> con y>52 (fuera de la banda HDR). Antes un título de
+// 80 chars daba 9 líneas minúsculas que llenaban el póster.
+function bodyLines(dataUri) {
+  const svg = decodeURIComponent(dataUri.replace('data:image/svg+xml,', ''));
+  return [...svg.matchAll(/<text[^>]*y="([\d.]+)"[^>]*>([^<]*)<\/text>/g)]
+    .filter(m => +m[1] > 52).map(m => m[2]);
+}
+test('_buildPosterV16: título largo se clampa a ≤4 líneas + "…"', () => {
+  const long = 'Tribeca at 25: A Conversation With Co-Founders Jane Rosenthal and Robert De Niro';
+  const lines = bodyLines(C._buildPosterV16({ accent: '#EF9F27', headerLabel: 'Gala', title: long, num: null }));
+  assert.ok(lines.length <= 4, `body ≤4 líneas (fue ${lines.length})`);
+  assert.ok(lines[lines.length - 1].endsWith('…'), 'la última línea truncada termina en "…"');
+});
+test('_buildPosterV16: título corto NO se toca (sin elipsis)', () => {
+  const lines = bodyLines(C._buildPosterV16({ accent: '#EF9F27', headerLabel: 'Gala', title: 'Noga', num: null }));
+  assert.deepStrictEqual(lines, ['Noga'], 'título corto = una línea, sin truncar');
+});
+
 // ── Regla de lecturabilidad del corte de línea de la banda (regla de Juan) ────
 // Cada línea con sentido propio; NINGUNA línea (salvo la última) termina en
 // palabra débil (conjunción/preposición/artículo) ni en guión suelto.

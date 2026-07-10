@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `ee4698c feat(posters): gate [seccion-sin-arquetipo] — sella el gris ilegible`
+> Último commit: `6362d9c Merge #288 — fix still editorial recortado (16:9)`
 
 ---
 

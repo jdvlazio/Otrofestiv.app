@@ -242,6 +242,15 @@ export function _buildPosterV16({accent, headerLabel, title, num}){
     for(const w of words){if(cur&&(cur+' '+w).length>maxCh){lines.push(cur);cur=w;}else cur=cur?cur+' '+w:w;}
     if(cur)lines.push(cur);return lines;
   }
+  // Clamp de líneas + elipsis (estilo Netflix/Spotify): los títulos larguísimos
+  // (ej. "Tribeca at 25: A Conversation With…", 80 chars = 9 líneas minúsculas)
+  // se truncan a N líneas con "…" en vez de llenar el póster. Los cortos no cambian.
+  function clamp(lines,maxLines){
+    if(lines.length<=maxLines) return lines;
+    const k=lines.slice(0,maxLines);
+    k[maxLines-1]=k[maxLines-1].replace(/[\s.,;:–—-]+$/,'')+'…';
+    return k;
+  }
 
   // Header label — banda única (misma fuente que el editorial). Ver _bandTextSVG.
   const headerText=_bandTextSVG(headerLabel||'', accent, VW, {mode:'center', bandH:HDR}).text;
@@ -262,7 +271,7 @@ export function _buildPosterV16({accent, headerLabel, title, num}){
     const numY=HDR+(bodyH/2)+(numFS/3); // centrado vertical en el body
     const titleText=cleanTitle
       ? (()=>{
-          const tLines=wrap(cleanTitle,12);
+          const tLines=clamp(wrap(cleanTitle,12),3); // variante A: título comparte espacio con el número
           const tFS=11,tLD=14;
           return tLines.map((l,i)=>
             `<text x="${PAD}" y="${HDR+PAD+tFS+i*tLD}" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="${tFS}" font-weight="800" letter-spacing="-0.3" fill="#F0EDE8">${esc(l)}</text>`
@@ -271,8 +280,8 @@ export function _buildPosterV16({accent, headerLabel, title, num}){
       : '';
     bodyContent=titleText+`<text x="${VW/2}" y="${numY}" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="${numFS}" font-weight="800" letter-spacing="-1" fill="${accent}" text-anchor="middle">${esc(num)}</text>`;
   } else {
-    // Variante B — título anclado abajo
-    const tLines=wrap(cleanTitle,12);
+    // Variante B — título anclado abajo, clampeado a 4 líneas + elipsis
+    const tLines=clamp(wrap(cleanTitle,12),4);
     const tFS=11,tLD=14;
     const totalH=tLines.length*tLD;
     const startY=VH-PAD-totalH+tLD;
