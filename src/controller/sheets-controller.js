@@ -217,14 +217,20 @@ export function openPelSheet(title){
     ${allScr.length>0?`<div class="pel-sheet-screenings">${rows}</div>`:''}
     ${(()=>{
       const _tk=FESTIVAL_CONFIG[_activeFestId]||{};
-      if(!_tk.ticket_url||festivalEnded()) return '';
+      // ticket_url por FILM pisa al global (Tercer Tiempo 2026: cada sesión tiene
+      // su checkout directo de tuboleta en el PDF oficial). Fallback: el del festival.
+      const _turl=(f.ticket_url&&/^https:\/\//.test(f.ticket_url))?f.ticket_url:_tk.ticket_url;
+      if(!_turl||festivalEnded()) return '';
       if(_tk.ticketing_model==='paid')
-        return `<a class="pel-sheet-ticket-link" href="${_tk.ticket_url}" target="_blank" rel="noopener">${ICONS.ticket} ${t('ticket_comprar_paid')}</a>`;
+        return `<a class="pel-sheet-ticket-link" href="${_turl}" target="_blank" rel="noopener">${ICONS.ticket} ${t('ticket_comprar_paid')}</a>`;
       if(_tk.ticketing_model==='mixed'){
         // Festival mixto: ocultar solo si TODAS las funciones del film son gratuitas.
         const _allFree=screenings.length>0&&screenings.every(s=>s.is_free===true);
         if(_allFree) return '';
-        return `<div class="meta-banner"><div class="meta-banner-dot"></div><div><div class="meta-banner-text">${t('ticket_mixed_body')}</div><a class="pel-sheet-ticket-link" href="${_tk.ticket_url}" target="_blank" rel="noopener">${ICONS.ticket} ${t('ticket_mixed_link')}</a></div></div>`;
+        // Con link directo por film, CTA directo (sin banner genérico de mixto).
+        if(f.ticket_url&&_turl===f.ticket_url)
+          return `<a class="pel-sheet-ticket-link" href="${_turl}" target="_blank" rel="noopener">${ICONS.ticket} ${t('ticket_comprar_paid')}</a>`;
+        return `<div class="meta-banner"><div class="meta-banner-dot"></div><div><div class="meta-banner-text">${t('ticket_mixed_body')}</div><a class="pel-sheet-ticket-link" href="${_turl}" target="_blank" rel="noopener">${ICONS.ticket} ${t('ticket_mixed_link')}</a></div></div>`;
       }
       return '';
     })()}

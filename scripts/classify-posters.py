@@ -38,7 +38,12 @@ def films_of(d):
 def resolve_url(p):
     if not p: return None
     if p.startswith('http'): return p
-    if p.startswith('/assets/'): return PROD + p
+    if p.startswith('/assets/'):
+        # Local primero (onboarding: el asset existe en el repo antes del deploy —
+        # medir contra PROD daba ROTO 404; hallazgo del test pipeline v2).
+        local = p.lstrip('/')
+        if os.path.exists(local): return 'file://' + os.path.abspath(local)
+        return PROD + p
     # path TMDB (/xxx.jpg) → no hace falta medir, es portrait por construcción
     return None
 
