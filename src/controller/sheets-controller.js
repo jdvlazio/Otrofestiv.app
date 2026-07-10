@@ -8,7 +8,7 @@
 
 import { FESTIVAL_CONFIG, MAX_REMEMBERED_SLOTS, NOTICES, TMDB_IMG, _DEFAULT_FEST_ID } from '../config.js';
 import { DAY_ABBR, DAY_NUM, ICONS, _secLabel, _sectionColor, isFullDayBlocked, makeProgramPoster, parseProgramTitle, renderRatingStarsHTML } from '../view/components.js';
-import { editorialFrame, _getItemPoster, _isEditorialImageUrl, _isEditorialPoster, _mkCortoItemHtml, _posterStyle, dayLabel, durFmt, flagFmt, getCortoItemPoster, getFilmPoster, getPosterSrc, sala, starsText, vcfg } from '../view/helpers.js';
+import { editorialFrame, _getItemPoster, _isEditorialImageUrl, _isEditorialPoster, _mkCortoItemHtml, _posterStyle, dayLabel, durFmt, flagFmt, getCortoItemPoster, getFilmPoster, getFilmPosterUntitled, getPosterSrc, sala, starsText, vcfg } from '../view/helpers.js';
 import { closeAvSheet, closePVRating, closePrioLimit } from '../view/sheets.js';
 import { showConflictModal, showToast } from '../view/feedback.js';
 import { renderAgenda, renderAvBlocks } from '../view/agenda.js';
@@ -121,8 +121,12 @@ export function openPelSheet(title){
       const _secLbl=_secLabel(f.section||'');
       posterHtml=`<div class="psp-editorial poster-ed" style="--ed-accent:${_accent}">${editorialFrame({header:_secLbl, src:posterSrc, title:f.title})}</div>`;
     } else {
-      posterHtml=posterSrc
-        ?`<img class="pel-sheet-poster"${_posterStyle(f)} src="${posterSrc}" data-title="${f.title.replace(/"/g,'&quot;')}" loading="lazy" onerror="_posterErr(this)" alt="">`
+      // Regla anti-repetición del sheet: el título vive en la cabecera → el
+      // generativo se re-genera SIN cuerpo (banda/num intactos). Originales
+      // pasan tal cual (getFilmPosterUntitled solo toca data-URIs generativos).
+      const _sheetSrc=posterSrc?getFilmPosterUntitled(f):null;
+      posterHtml=_sheetSrc
+        ?`<img class="pel-sheet-poster"${_posterStyle(f)} src="${_sheetSrc}" data-title="${f.title.replace(/"/g,'&quot;')}" loading="lazy" onerror="_posterErr(this)" alt="">`
         :`<div class="pel-sheet-poster-ph">🎬</div>`;
     }
   }

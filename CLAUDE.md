@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `e410e11 Merge #289 — clamp de título largo en el generativo`
+> Último commit: `3885a80 Merge #290 — regla de corte unificada (banda + cuerpo)`
 
 ---
 

@@ -15,7 +15,7 @@ import { toMin } from "../domain/time.js";
 import { t } from "../i18n/i18n.js";
 import { state } from "../state/state.js";
 
-export function makeProgramPoster(state, title, duration, section){
+export function makeProgramPoster(state, title, duration, section, opts){
   const {FILMS, _lang} = state.snapshot();
   const filmSec=section||(FILMS.find(f=>f.title===title)?.section)||'';
   const sec=filmSec.toLowerCase();
@@ -88,7 +88,9 @@ export function makeProgramPoster(state, title, duration, section){
     }
   }
 
-  return _buildPosterV16({accent, headerLabel, title:bodyTitle, num:num||dayAbbr||null});
+  // opts.untitled (regla anti-repetición del sheet): cuerpo vacío — el título ya
+  // está en la cabecera del sheet. El num/día SE CONSERVA (identidad visual).
+  return _buildPosterV16({accent, headerLabel, title:(opts&&opts.untitled)?'':bodyTitle, num:num||dayAbbr||null});
 }
 
 export function makeSorpresaPoster(){
@@ -297,7 +299,7 @@ export function _buildPosterV16({accent, headerLabel, title, num}){
   return `data:image/svg+xml,${encodeURIComponent(svg)}`;
 }
 
-export function makeEventPoster(state,title,duration,eventKind,section){
+export function makeEventPoster(state,title,duration,eventKind,section,opts){
   const {_activeFestId, _lang} = state.snapshot();
   const festCfg=(FESTIVAL_CONFIG&&FESTIVAL_CONFIG[_activeFestId])||Object.values(FESTIVAL_CONFIG||{})[0]||{};
   const _kindMapES={
@@ -315,14 +317,17 @@ export function makeEventPoster(state,title,duration,eventKind,section){
     'awards':       {accent:'#BA7517', headerLabel:'AWARDS SCREENINGS'},
   };
   const _kindMap=_lang==='es'?_kindMapES:_kindMapEN; // PT reutiliza EN (términos internacionales)
+  // opts.untitled (regla anti-repetición del sheet): cuerpo vacío — el título ya
+  // está en la cabecera del sheet. La banda de kind/sección se conserva.
+  const _bodyTitle=(opts&&opts.untitled)?'':title;
   const kind=_kindMap[eventKind];
-  if(kind) return _buildPosterV16({...kind, title, num:null});
+  if(kind) return _buildPosterV16({...kind, title:_bodyTitle, num:null});
   // Fallback — usa la sección del film si existe, sino eventPosterLabel del config
   const _secFallback=section?_secLabel(section):'';
   const lbl=_secFallback?[_secFallback]:((festCfg.eventPosterLabel)||[t('poster_evento'),'']);
   const headerLabel=lbl.filter(Boolean).join(' ');
   const _sectionAccent=section?_sectionColor(section):'#6B9BD1';
-  return _buildPosterV16({accent:_sectionAccent||'#6B9BD1', headerLabel, title, num:null});
+  return _buildPosterV16({accent:_sectionAccent||'#6B9BD1', headerLabel, title:_bodyTitle, num:null});
 }
 
 export const ICONS={
