@@ -15,11 +15,22 @@ test('T08 — festival selector: el próximo festival encabeza', async ({ page }
   await page.waitForSelector('.splash-drop-item[data-fest]', { state: 'visible', timeout: 15000 });
   const items = page.locator('.splash-drop-item[data-fest]');
   expect(await items.count()).toBeGreaterThan(1);
-  // FICMontañas (JUN 30–JUL 5) es el próximo festival → encabeza el selector
-  // (tier en-curso/próximo > pasados). Tribeca/Olhar/Leviza ya terminaron y van
-  // en Anteriores. (Date-sensitive: válido mientras FICMontañas no haya pasado.)
+  // El que encabeza debe ser el festival VIGENTE (en curso o el próximo por
+  // empezar): festivalEndStr >= hoy y el de fin más cercano. Derivado de
+  // FESTIVAL_CONFIG en runtime — antes se hardcodeaba el nombre y el test se
+  // vencía con cada festival nuevo (rotó con Tribeca→FICMontañas→TercerTiempo).
+  const expectedFirst = await page.evaluate(async () => {
+    const { FESTIVAL_CONFIG } = await import('/src/config.js');
+    const now = new Date();
+    const vigentes = Object.values(FESTIVAL_CONFIG)
+      .filter(c => new Date(c.festivalEndStr) >= now)
+      .sort((a, b) => new Date(a.festivalEndStr) - new Date(b.festivalEndStr));
+    return vigentes.length ? vigentes[0].id || vigentes[0].storageKey.replace(/_$/, '') : null;
+  });
   const firstFestId = await items.first().getAttribute('data-fest');
-  expect((firstFestId || '').includes('ficmontanas')).toBe(true);
+  if (expectedFirst) {
+    expect(firstFestId).toBe(expectedFirst);
+  } // sin festival vigente (todos pasados): no hay expectativa de cabecera — solo orden por tiers
   const allIds = await items.evaluateAll(els => els.map(el => el.getAttribute('data-fest')));
   expect(allIds.some(id => id.includes('leviza'))).toBe(true);
 });
