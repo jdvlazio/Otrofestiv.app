@@ -83,6 +83,26 @@ export function getFilmPoster(f){
   });
 }
 
+// Variante SIN TÍTULO para el sheet expandido (regla anti-repetición de Juan:
+// el póster lleva el título solo cuando nadie más lo dice; en el sheet el título
+// es la cabecera). Solo re-genera los GENERATIVOS con cuerpo vacío — la banda
+// (y el num/día de programa, que es identidad) se conserva. Originales y
+// editoriales pasan tal cual (el editorial ya omite el scrim sin body).
+// Sorpresa queda intacta ("?" es marca, no eco del título).
+export function getFilmPosterUntitled(f){
+  const src=getFilmPoster(f);
+  if(!src||!src.startsWith('data:image/svg+xml')) return src;      // no-generativo → tal cual
+  if(f.title&&f.title.toLowerCase().includes('sorpresa')) return src;
+  if(f.type==='event'){const _et=f.is_awards_screening?f.title.replace(/^Award Screening:\s*/i,''):f.title;return makeEventPoster(state,_et,f.duration,f.event_kind,f.section,{untitled:true});}
+  if(f.is_cortos||(f.is_programa&&f.film_list&&f.film_list.length)) return makeProgramPoster(state,f.title,f.duration,f.section,{untitled:true});
+  return _buildPosterV16({
+    accent: _sectionColor(f.section||''),
+    headerLabel: _secLabel(f.section||'')||'TRIBECA', // mismo fallback que getFilmPoster #8
+    title: '',
+    num: null
+  });
+}
+
 export function getCortoItemPoster(item){
   if(!item) return null;
   // Nuevo formato (Jardín 2026+): poster directo en el objeto
