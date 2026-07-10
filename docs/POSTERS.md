@@ -34,23 +34,21 @@ Por eso:
 
 ## 1. Modelo de datos
 
-Dos formas de guardar el póster de un film. **La inline es la canónica** para
-festivales nuevos.
-
-| Modelo | Forma | Festivales |
-|---|---|---|
-| **Inline (canónico)** | campo `poster` en cada film | Leviza, Olhar, Tribeca, FICMontañas, Jardín+ |
-| **Map (legacy, soportado)** | `posters{}` / `customPosters{}` a nivel raíz, **clave = título** | FICCI, AFF, Cinemancia |
+**Un film = un `poster` inline. Fuente única, sin excepciones.** El modelo dual
+`posters{}` / `customPosters{}` a nivel raíz **murió** (Fase A.1): los 7
+festivales se migraron a inline (`scripts/migrate-posters-inline.py`) y el gate
+**`[poster-map-legacy]`** bloquea cualquier map que reaparezca.
 
 - **`poster`** (inline): URL completa (`https://…`), path de assets propios
   (`/assets/<id>/slug.png`) o path TMDB (`/abc.jpg`). La resolución:
   `startsWith('http') || startsWith('/assets/')` → directo; si no → `TMDB_IMG + path`.
-- **`posters{}` / `customPosters{}`** (map): la clave es el **título
-  apóstrofe-normalizado** (`normKey` — solo unifica variantes de apóstrofe
-  `‘’‚‛′ʼ` → `'`). `customPosters` gana sobre `posters`.
+- **`posterSource`** (inline, junto al `poster`): `'editorial'` | `'tmdb'` |
+  `'custom'`. Es la **señal explícita** que decide el render (§5); lo escribe el
+  clasificador por aspecto (`scripts/classify-posters.py`) y lo exige el gate
+  `[poster-source]`. Un poster inline sin `posterSource` es ERROR.
 
-`normKey` es lo único que normaliza la clave — no hay lowercasing ni strip de
-acentos. El título del film y la clave deben coincidir salvo por el apóstrofe.
+> Legacy: `getFilmPoster` conserva el paso del map (§4 #6) por compatibilidad,
+> pero **ningún festival tiene map** — ese paso es código muerto defensivo.
 
 ---
 
@@ -131,10 +129,9 @@ lugar**, `_isEditorialPoster(f)` (`helpers.js`), y es **híbrida** con default
 seguro:
 
 1. **`posterSource` explícito gana** — `'editorial'` → sí; `'tmdb'`/`'custom'` → no.
-   Es la forma robusta y recomendada para festivales nuevos.
-2. **Si hay póster TMDB validado** (clave en el map `posters{}`) → no (es portrait,
-   no 16:9).
-3. **Si no, auto por host CDN** — `_isEditorialImageUrl(url)` contra
+   Es la forma robusta y recomendada, y hoy la de **todos** los festivales (el
+   clasificador lo escribió en cada film; el gate `[poster-source]` lo exige).
+2. **Si no, auto por host CDN** — `_isEditorialImageUrl(url)` contra
    **`EDITORIAL_CDN_HOSTS`** (`['cloudfront.net','supabase.co']` — Tribeca, Olhar+).
    **Añadir un CDN nuevo = una línea** en esa constante.
 
@@ -157,10 +154,16 @@ Un solo camino para pintar cualquier póster — los call sites NO re-derivan fl
   por el prefijo data-URI; el default es `image` (fail-safe, §5).
 - **`editorialFrame({header, body, src, title, loading})`** (`helpers.js`) → el
   **único** builder del marco editorial-con-imagen. Devuelve los **hijos**
-  (`.ed-hdr` + `.ed-img` + `.ed-body`); el **contenedor** aporta tamaño y color
-  vía la clase **`poster-ed`** + `style="--ed-accent:…"`. `body`: `undefined`
-  omite la zona (thumb/sheet), `''` reserva zona vacía (ended-poster), con texto
-  pone el título (grid).
+  (`.ed-hdr` + `.ed-img`); el **contenedor** aporta tamaño y color vía la clase
+  **`poster-ed`** + `style="--ed-accent:…"`.
+- **Anatomía A3 de `.ed-img`** (Fase C) — respeta el **16:9 completo** (el
+  cover-crop decapitaba composiciones con gente a los lados):
+  - `.ed-blur` — blur-fill del mismo still, de fondo (decorativo, `aria-hidden`).
+  - `.ed-still` — el still **16:9 al ras del banner**, sin recortar (`aspect-ratio:16/9`,
+    top-flush). Lleva `data-title` y el `onerror` que cae a generativo.
+  - `.ed-scrim` — degradado inferior con el **título**, solo cuando `body` trae
+    texto (grid). `undefined`/`''` → sin scrim (thumb/sheet/ended-poster, que
+    muestran el título aparte). Murió la zona `.ed-body`.
 - **CSS `.poster-ed`** (`index.html`) — **un** componente; el alto de la banda es
   `var(--ed-hdr-ratio)` (una fuente, antes `28.89%` hardcodeado en CSS y JS).
 - **`onerror` unificado** — los marcos editoriales usan **`_edPosterErr`**
@@ -189,7 +192,28 @@ Todo texto de usuario que entra a un `<text>` SVG **debe** pasar por
 - Guardarraíl: `tests/unit/poster.test.js` corre los 4 generadores con entradas
   adversarias (`&`, `<`, `>`, `"`, emoji, vacío) y exige XML bien formado.
 - **No** crear helpers de escape locales (`const esc=t=>t.replace(...)`) — eran la
-  causa de la fragilidad. Reusar `escXML` (lo hace `_edHdrSVG` en `helpers.js`).
+  causa de la fragilidad. Reusar `escXML` (lo hace `_bandTextSVG`).
+
+### 6.1b Banda de sección — builder único `_bandTextSVG`
+
+La banda (etiqueta de sección) es **una sola implementación** (`_bandTextSVG` en
+`components.js`), compartida por el editorial (`_edHdrSVG`, `vw=100`) y el
+generativo (`_buildPosterV16`, `vw=120`). Antes eran **dos** builders casi
+idénticos que divergían (padding 2 vs 8, wrap 14 vs 15, spacing 0.5 vs 0.7, case)
+— esa duplicación **era** la inconsistencia. Métricas ratio de `vw` calibradas
+para que a `vw=120` dé exacto lo del generativo. Toda banda va en **MAYÚSCULA** y
+con **auto-contraste** (`_contrastText`: negro/blanco por máximo contraste real,
+no umbral) sobre el color de arquetipo (§8b).
+
+**Regla de lecturabilidad del corte de línea** (`_bandWrap`, restricción dura):
+cada línea debe tener sentido por sí sola y **ninguna línea (salvo la última)
+termina en palabra débil** — conjunción, preposición, artículo ni guión suelto;
+esas bajan a la línea siguiente con el sustantivo que introducen.
+
+- `"Competencia De Cortometrajes"` → `[Competencia / De Cortometrajes]`.
+- `"¿Qué es la ficción?"` → `[¿Qué es / la ficción?]`.
+- Guardarraíl: `tests/unit/poster.test.js` (ejemplos canónicos + invariante
+  "sin palabra débil al final" sobre las secciones reales).
 
 ### 6.2 Body de pósters de programas — REGLA INAMOVIBLE
 
@@ -228,16 +252,54 @@ imagen en ninguna fuente**. Último recurso, nunca el segundo.
 
 `node scripts/validate-festivals.js <id>` → **0 errores**. Checks de pósters:
 
-- **Cobertura ≥ 95 %** — un film cuenta como cubierto si `f.poster` no vacío **o**
-  su título (normKey) está en `posters{}`/`customPosters{}`. (El cálculo viejo
-  ignoraba `customPosters{}` → FICCI reportaba 63 % siendo 100 %.)
+- **Cobertura ≥ 95 %** — un film cuenta como cubierto si `f.poster` no está vacío.
+- **`[poster-map-legacy]`** (ERROR) — `posters{}` o `customPosters{}` presente a
+  nivel raíz. El modelo dual murió (§1, Fase A.1); un map que reaparezca significa
+  que el pipeline regresó al modelo viejo. Inline el poster en cada film
+  (`scripts/migrate-posters-inline.py`) y elimina el map.
+- **`[seccion-sin-arquetipo]`** (ERROR) — una `section` (film o corto anidado) sin
+  entrada en `SECTION_ARCHETYPES` (§8b). Sin arquetipo, `_sectionColor` cae a gris
+  ilegible `#2C2C2A`. Caza las secciones nuevas de un festival recién montado
+  **antes** de publicar — asignales uno de los 9 arquetipos en `src/config.js`.
+- **`[poster-source]`** (ERROR) — un poster inline **sin `posterSource`**. Obliga a
+  correr el clasificador por aspecto (abajo) — así ningún landscape se cuela como
+  portrait recortado. La detección editorial deja de depender del host (§5.3);
+  `posterSource` explícito manda (§5.1).
+- **`[poster-host]`** (WARNING) — poster http fuera de la whitelist
+  (`image.tmdb.org` · `d13jj08vfqimqg.cloudfront.net` · `*.supabase.co`). Fuentes
+  frágiles (hotlink bloqueado, links muertos) → **descargar y re-hostear en
+  `/assets/<id>/`**. Regla de hosting: **2 fuentes** — TMDB (portrait, se
+  referencia) + `/assets/` (todo lo demás, incluidas stills 16:9 re-hosteadas).
 - **`[poster-empty-film]`** — §7.
 - **`[poster-editorial-unique]`** — §6.2.
+
+> **Clasificador de aspecto — `scripts/classify-posters.py`** (paso de onboarding):
+> descarga cada poster, mide el aspecto real y escribe `posterSource` en cada
+> film/corto (`editorial` si landscape ≥ 1.2, si no `tmdb`/`custom`). Caza rotos
+> (403/404) al montar, no en producción. `--apply` escribe; sin flag = dry-run.
+> Reemplaza la detección frágil por-host: el runtime ya honra `posterSource`
+> primero. **Correrlo en cada festival nuevo** — el gate `[poster-source]` lo exige.
 - **Binding por id** — si el CDN/og:image embebe el id del film en el path,
   confirmar `poster.includes(filmId)` (caza stale-render — lección Tribeca).
 - **Verificación visual** (galería Chrome) — obligatoria antes de escribir TMDB/LB.
 
 ---
+
+## 8b. Color de sección — paleta por arquetipo (unificada)
+
+El color de la banda editorial **significa**: las 78 secciones de los 7 festivales
+colapsan en **9 arquetipos** (Gala, Competencia, Clausura, Especiales, Retrospectiva,
+Muestra/País, Perspectivas, Cortos, Charlas), cada uno con **un** color de marca
+reusado en todos los festivales (misma Competencia = mismo naranja en cualquier lado).
+
+- **`ARCHETYPE_COLORS`** (9) + **`SECTION_ARCHETYPES`** (sección→arquetipo) en `config.js`.
+- **`_sectionColor(sec)`** resuelve vía arquetipo (gana), luego `SECTION_COLORS` legacy,
+  luego gris `#2C2C2A` (que el gate debería impedir).
+- **`_contrastText(hex)`** (`components.js`): el texto de la banda elige negro/blanco por
+  **máximo contraste real** (WCAG), no por umbral. Usado en `_edHdrSVG` (editorial) y
+  `_buildPosterV16` (generativo) → banda legible sobre cualquier color. Antes: 51 secciones
+  caían al gris con texto negro (contraste 2.49, ilegible).
+- Sección nueva sin arquetipo → cae a gris → **debería** cazarla un gate (pendiente).
 
 ## 9. Resumen de un vistazo
 

@@ -108,13 +108,44 @@ test('_buildPosterV16: escapa headerLabel, title y num (ambas variantes)', () =>
 });
 
 // ── Regresión específica: "Opening & Galas" ──────────────────────────────────
+// La banda va en MAYÚSCULA (unificación Fase B: una sola caja tipográfica); el
+// & sigue escapado. El header queda "OPENING &amp; GALAS" en una línea.
 test('regresión: el ampersand de "Opening & Galas" queda como &amp;', () => {
   const svg = assertWellFormed(
     C._buildPosterV16({ accent: '#F59E0B', headerLabel: 'Opening & Galas', title: 'Opening & Galas', num: null }),
     'opening-galas'
   );
-  assert.ok(svg.includes('Opening &amp; Galas'), 'el & debe renderizarse escapado como &amp;');
-  assert.ok(!/Opening & Galas/.test(svg), 'no debe quedar ningún "& " crudo en el SVG');
+  assert.ok(svg.includes('OPENING &amp; GALAS'), 'el & de la banda debe renderizarse escapado como &amp;');
+  assert.ok(!/OPENING & GALAS/.test(svg), 'no debe quedar ningún "& " crudo en la banda');
+});
+
+// ── Regla de lecturabilidad del corte de línea de la banda (regla de Juan) ────
+// Cada línea con sentido propio; NINGUNA línea (salvo la última) termina en
+// palabra débil (conjunción/preposición/artículo) ni en guión suelto.
+const _WEAK_END = /\b(?:de|del|la|el|los|las|un|una|y|e|o|u|con|para|por|en|the|of|and|or|to|in|for)$|[–—-]$/i;
+test('banda: el corte respeta los ejemplos canónicos de Juan', () => {
+  const cases = [
+    ['Competencia De Cortometrajes', ['COMPETENCIA', 'DE CORTOMETRAJES']],
+    ['¿Qué es la ficción?',          ['¿QUÉ ES', 'LA FICCIÓN?']],
+    ['Competencia Nacional de Ficción', ['COMPETENCIA', 'NACIONAL', 'DE FICCIÓN']],
+  ];
+  for (const [input, expected] of cases) {
+    assert.deepStrictEqual(C._bandWrap(input.toUpperCase()), expected, `corte de "${input}"`);
+  }
+});
+test('banda: ninguna línea (salvo la última) termina en palabra débil', () => {
+  const labels = [
+    'Competencia De Cortometrajes', 'Tributo Ben Rivers', '¿Qué es la ficción?',
+    'Competencia Nacional de Ficción', 'International Narrative Competition',
+    'Retrospectiva Clásicos – Ópera Prima', 'Según la palabra. El cine de Olivier Godin',
+    'Apertura & Galas', 'Awards Screenings', 'Perspectivas',
+  ];
+  for (const label of labels) {
+    const lines = C._bandWrap(label.toUpperCase());
+    for (let i = 0; i < lines.length - 1; i++) {
+      assert.ok(!_WEAK_END.test(lines[i]), `"${label}" línea ${i + 1} ("${lines[i]}") no debe terminar en palabra débil`);
+    }
+  }
 });
 
 // ── posterModel: unión discriminada (un solo lugar clasifica el póster) ───────
@@ -134,28 +165,33 @@ test('posterModel fail-safe: host desconocido NO se marca editorial (no se mete 
   assert.strictEqual(m.kind, 'image');
 });
 
-// ── editorialFrame: builder único del marco editorial-con-imagen ─────────────
+// ── editorialFrame: builder único del marco editorial-con-imagen (anatomía A3) ─
 // Devuelve los HIJOS del marco; el contenedor aporta poster-ed + --ed-accent.
-test('editorialFrame: emite las 3 zonas cuando hay header/img/body', () => {
+// Zona imagen = blur-fill (.ed-blur) + still 16:9 al ras (.ed-still) + scrim
+// opcional (.ed-scrim con .ed-title). El título va en el scrim, no en un ed-body.
+test('editorialFrame: emite banda + imagen (blur+still) + scrim con título', () => {
   const html = H.editorialFrame({ header: 'Cine Cubano', body: 'La Peli', src: 'https://x/y.jpg', title: 'La Peli' });
-  assert.ok(html.includes('class="ed-hdr"') && html.includes('class="ed-img"') && html.includes('class="ed-body"'), 'incluye las 3 zonas');
-  assert.ok(html.includes('_edPosterErr(this)'), 'usa el onerror unificado editorial');
+  assert.ok(html.includes('class="ed-hdr"') && html.includes('class="ed-img"'), 'incluye banda + imagen');
+  assert.ok(html.includes('class="ed-blur"') && html.includes('class="ed-still"'), 'imagen = blur-fill + still 16:9');
+  assert.ok(html.includes('class="ed-scrim"') && html.includes('class="ed-title"'), 'título va en el scrim');
+  assert.ok(!html.includes('ed-body'), 'ya no hay zona ed-body (fusionada en el scrim)');
+  assert.ok(html.includes('_edPosterErr(this)'), 'usa el onerror unificado editorial (en el still)');
   assert.ok(!html.includes('poster-ed'), 'NO incluye el wrapper — eso lo pone el contenedor');
 });
 
-test('editorialFrame: omite header/body/img vacíos (thumb = banda + img sin label)', () => {
+test('editorialFrame: omite header/scrim/img vacíos (thumb = banda + img sin título)', () => {
   const thumb = H.editorialFrame({ src: 'https://x/y.jpg', title: 'T' }); // sin header ni body
   assert.ok(thumb.includes('<div class="ed-hdr"></div>'), 'header vacío = banda sin texto');
-  assert.ok(!thumb.includes('ed-body'), 'sin body cuando no se pasa');
+  assert.ok(thumb.includes('class="ed-still"') && !thumb.includes('ed-scrim'), 'still sí, scrim no (sin body)');
   const noImg = H.editorialFrame({ header: 'Sec' }); // sin src
   assert.ok(noImg.includes('<div class="ed-img"></div>'), 'ed-img vacío cuando no hay src');
 });
 
-test('editorialFrame: body undefined=omite · ""=reserva vacío · texto=título', () => {
-  assert.ok(!H.editorialFrame({ src: 'x' }).includes('ed-body'), 'undefined → sin zona body');
-  const reserved = H.editorialFrame({ src: 'x', body: '' }); // ended-poster
-  assert.ok(reserved.includes('<div class="ed-body"></div>'), '"" → zona vacía que reserva espacio');
-  assert.ok(H.editorialFrame({ src: 'x', body: 'Peli' }).includes('<div class="ed-title">Peli</div>'), 'texto → título');
+test('editorialFrame: body undefined/"" → sin scrim · texto → título en scrim', () => {
+  assert.ok(!H.editorialFrame({ src: 'x' }).includes('ed-scrim'), 'undefined → sin scrim');
+  assert.ok(!H.editorialFrame({ src: 'x', body: '' }).includes('ed-scrim'), '"" (ended-poster) → sin scrim');
+  const titled = H.editorialFrame({ src: 'x', body: 'Peli' });
+  assert.ok(titled.includes('<div class="ed-scrim"><div class="ed-title">Peli</div></div>'), 'texto → título en scrim');
 });
 
 test('editorialFrame: escapa body, header y data-title (sin & crudo)', () => {

@@ -19,11 +19,17 @@ const path = require('path');
 // para que el check de cobertura [i18n-content-coverage] reconozca qué secciones
 // ya tienen traducción de display. Guardado: si falla, el Set queda vacío.
 const SECTION_EN_KEYS = new Set();
+// [seccion-sin-arquetipo]: claves de SECTION_ARCHETYPES (src/config.js). Toda
+// sección DEBE tener arquetipo o _sectionColor cae a gris ilegible #2C2C2A (el
+// bug que reaparece con cada festival nuevo). Guardado: si falla, Set vacío.
+const SECTION_ARCHETYPE_KEYS = new Set();
 try {
   const _cfgSrc = fs.readFileSync(path.join(__dirname, '..', 'src', 'config.js'), 'utf8');
   const _m = _cfgSrc.match(/export const SECTION_EN\s*=\s*\{([\s\S]*?)\n\};/);
   if (_m) for (const km of _m[1].matchAll(/'([^']*)'\s*:/g)) SECTION_EN_KEYS.add(km[1]);
-} catch (e) { /* Set vacío → el check informa 0 cobertura */ }
+  const _ma = _cfgSrc.match(/export const SECTION_ARCHETYPES\s*=\s*\{([\s\S]*?)\n\};/);
+  if (_ma) for (const km of _ma[1].matchAll(/'([^']*)'\s*:/g)) SECTION_ARCHETYPE_KEYS.add(km[1]);
+} catch (e) { /* Sets vacíos → los checks informan 0 cobertura */ }
 
 // ── Mapa de países → emoji bandera ───────────────────────────────────────────
 const FLAGS_MAP = {
@@ -91,6 +97,34 @@ function validateFestival(fname, data) {
   if (data.config && Object.keys(data.config).length > 0) {
     errors.push('GATE BLOQUEANTE: config{} presente en el JSON — mover a FESTIVAL_CONFIG en src/config.js y eliminar este bloque');
   }
+
+  // GATE [poster-map-legacy]: el modelo dual posters{}/customPosters{} murió en Fase A.1.
+  // Un film = un `poster` inline. Si reaparece un map, el pipeline regresó al modelo viejo.
+  for (const mapKey of ['posters', 'customPosters']) {
+    if (data[mapKey] && Object.keys(data[mapKey]).length > 0) {
+      errors.push(`GATE BLOQUEANTE [poster-map-legacy]: ${mapKey}{} presente — el modelo map murió en Fase A.1. Inline el poster en cada film (scripts/migrate-posters-inline.py) y elimina el mapa.`);
+    }
+  }
+
+  // GATE [seccion-sin-arquetipo]: toda sección usada (films + cortos anidados)
+  // debe tener arquetipo en SECTION_ARCHETYPES o _sectionColor cae a gris ilegible
+  // #2C2C2A. Caza secciones nuevas de un festival recién montado ANTES de publicar.
+  if (SECTION_ARCHETYPE_KEYS.size > 0) {
+    const _secs = new Set();
+    (function collect(x) {
+      if (Array.isArray(x)) x.forEach(collect);
+      else if (x && typeof x === 'object') {
+        if (x.section) _secs.add(x.section);
+        for (const v of Object.values(x)) collect(v);
+      }
+    })(data);
+    for (const sec of _secs) {
+      if (!SECTION_ARCHETYPE_KEYS.has(sec)) {
+        errors.push(`GATE BLOQUEANTE [seccion-sin-arquetipo]: sección "${sec}" no está en SECTION_ARCHETYPES (src/config.js) → cae a gris ilegible #2C2C2A. Asignale uno de los 9 arquetipos.`);
+      }
+    }
+  }
+
   // Festivales LEGADOS (FICCI 65, Cinemancia 2025): config en el bloque config{} del JSON.
   if (!hasConfigBlock) {
     warnings.push('Sin bloque config{} — se asume que la configuración está en FESTIVAL_CONFIG en src/config.js (formato nuevo ✓)');
@@ -265,6 +299,40 @@ function validateFestival(fname, data) {
       else if (!seen.has(p)) seen.set(p, { n: norm(f.title), t: f.title || '?' });
     }
   }
+  // ── Gates de posters (estrategia editorial, POSTERS.md §5/§8) ─────────────
+  // Poster-holders = films top-level + cortos anidados en film_list.
+  const posterHolders = [];
+  for (const f of films) {
+    posterHolders.push(f);
+    if (Array.isArray(f.film_list)) for (const s of f.film_list) if (s && typeof s === 'object') posterHolders.push(s);
+  }
+  // [poster-source] ERROR — poster inline sin posterSource. Obliga a correr el
+  // clasificador por aspecto (classify-posters.py) → ningún landscape se cuela
+  // como portrait recortado ni ningún roto llega a producción sin detectarse.
+  {
+    for (const f of posterHolders) {
+      const p = (f.poster || '').trim();
+      if (p && !f.posterSource) {
+        errors.push(`[poster-source] "${(f.title||'?').slice(0,40)}" tiene poster sin posterSource — correr: python3 scripts/classify-posters.py <id> --apply`);
+      }
+    }
+  }
+  // [poster-host] WARNING — poster http fuera de la whitelist (fuentes frágiles:
+  // hotlink bloqueado / links muertos). Descargar y re-hostear en /assets/<id>/.
+  {
+    const ALLOWED = ['image.tmdb.org', 'd13jj08vfqimqg.cloudfront.net', 'supabase.co'];
+    const check = (title, p) => {
+      if (!p || !String(p).startsWith('http')) return;
+      let host = ''; try { host = new URL(p).host; } catch { return; }
+      if (!ALLOWED.some(a => host === a || host.endsWith('.' + a) || host.endsWith(a))) {
+        warnings.push(`[poster-host] "${(title||'?').slice(0,40)}": host '${host}' fuera de whitelist (tmdb/cloudfront/supabase) — re-hostear en /assets/<id>/`);
+      }
+    };
+    for (const f of posterHolders) check(f.title, f.poster);
+    const maps = { ...(data.posters || {}), ...(data.customPosters || {}) };
+    for (const [k, v] of Object.entries(maps)) check(k, v);
+  }
+
   // [sinopsis-duplicada] ERROR — dos films con TÍTULO DISTINTO y misma synopsis o synopsis_en.
   for (const fld of ['synopsis', 'synopsis_en']) {
     const norm = t => (t || '?').trim().toLowerCase();

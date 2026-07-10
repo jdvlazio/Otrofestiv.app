@@ -7,7 +7,7 @@
 
 import { FESTIVAL_CONFIG, TMDB_IMG } from '../config.js';
 import {
-  DAY_ABBR, DAY_NUM, ICONS, _buildPosterV16, _secLabel, _sectionColor,
+  DAY_ABBR, DAY_NUM, ICONS, _buildPosterV16, _bandTextSVG, _secLabel, _sectionColor,
   makeProgramPoster, makeEventPoster, makeSorpresaPoster, escXML,
 } from './components.js';
 import { toMin, parseDur, simNow, simTodayStr, _festDate } from '../domain/time.js';
@@ -127,15 +127,13 @@ export function _isEditorialPoster(f){
 // posters generativos (_buildPosterV16), el texto va en SVG y escala con el
 // viewBox igual que el cqi anterior → mismo tamaño en navegadores modernos,
 // sin regresión, y robusto donde el piso de font-size rompía el HTML.
-export function _edHdrSVG(label){
-  const s=(label||'').toString().trim().toUpperCase();
-  if(!s) return '';
-  const words=s.split(/\s+/), lines=[]; let cur='';
-  for(const w of words){ if(cur&&(cur+' '+w).length>14){lines.push(cur);cur=w;} else cur=cur?cur+' '+w:w; }
-  if(cur) lines.push(cur);
-  const FS=5.4, LH=7, PAD=2, VW=100, VH=lines.length*LH+4, y0=FS+2;
-  const txt=lines.map((l,i)=>`<text x="${PAD}" y="${y0+i*LH}" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="${FS}" font-weight="800" letter-spacing="0.5" fill="#0A0A0A">${escXML(l)}</text>`).join('');
-  return `<svg class="ed-hdr-svg" viewBox="0 0 ${VW} ${VH}" preserveAspectRatio="xMidYMid meet">${txt}</svg>`;
+export function _edHdrSVG(label, accent){
+  if(!String(label||'').trim()) return '';
+  // Banda única (misma fuente que el generativo): vw=100, anclado arriba, y el
+  // <svg> propio del editorial escala vía CSS (.ed-hdr-svg / --ed-hdr-ratio).
+  const {text, lines, lh}=_bandTextSVG(label, accent, 100, {mode:'top'});
+  const VH=+(lines*lh+4).toFixed(2);
+  return `<svg class="ed-hdr-svg" viewBox="0 0 100 ${VH}" preserveAspectRatio="xMidYMid meet">${text}</svg>`;
 }
 
 export function _posterThumb(f, cssClass, loading){
@@ -187,18 +185,26 @@ export function posterModel(f){
 // ${editorialFrame(m)}</div>`. `title` alimenta data-title para el fallback de
 // error (_edPosterErr → póster generativo de toda la pieza). Todo texto va por
 // escXML/_edHdrSVG. Ver docs/POSTERS.md.
-export function editorialFrame({header, body, src, title, loading}={}){
+//
+// Anatomía A3 (Fase C): la zona de imagen es un blur-fill de fondo + el still
+// 16:9 AL RAS del banner, SIN recortar (respeta composiciones con gente a los
+// lados; el cover-crop las decapitaba) + un scrim con el título opcional. El
+// blur es decorativo (aria-hidden); el still lleva data-title y el onerror que
+// cae a generativo. `body` con texto → scrim con título (grid); undefined/''  →
+// sin scrim (thumb/lista/sheet y ended-poster, que trae su propio footer).
+export function editorialFrame({header, body, src, title, loading, accent}={}){
   const _l=loading||'lazy';
   const _dt=title?` data-title="${escXML(title)}"`:'';
-  const hdr=`<div class="ed-hdr">${header?_edHdrSVG(header):''}</div>`;
+  const hdr=`<div class="ed-hdr">${header?_edHdrSVG(header, accent):''}</div>`;
+  const _ttl=(body!=null && String(body).trim()) ? String(body) : '';
   const img=src
-    ? `<div class="ed-img"><img src="${src}"${_dt} loading="${_l}" onload="this.style.opacity='1'" onerror="_edPosterErr(this)" alt=""></div>`
+    ? `<div class="ed-img">`
+      + `<img class="ed-blur" src="${src}" loading="${_l}" aria-hidden="true" onerror="this.remove()" alt="">`
+      + `<img class="ed-still" src="${src}"${_dt} loading="${_l}" onload="this.style.opacity='1'" onerror="_edPosterErr(this)" alt="">`
+      + (_ttl?`<div class="ed-scrim"><div class="ed-title">${escXML(_ttl)}</div></div>`:'')
+      + `</div>`
     : `<div class="ed-img"></div>`;
-  // body: undefined → sin zona (thumb/lista/sheet); '' → zona vacía que reserva
-  // espacio (ended-poster: footer sobre la banda, no sobre la imagen); con texto
-  // → título (grid). El reserve mantiene la imagen ~16:9 en vez de estirarla.
-  const bod=(body==null)?'':(body?`<div class="ed-body"><div class="ed-title">${escXML(body)}</div></div>`:`<div class="ed-body"></div>`);
-  return `${hdr}${img}${bod}`;
+  return `${hdr}${img}`;
 }
 
 export function isNowShowing(f){
