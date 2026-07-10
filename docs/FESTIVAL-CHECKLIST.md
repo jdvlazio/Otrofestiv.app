@@ -12,6 +12,8 @@
 
 - [ ] `node scripts/validate-festivals.js <id>` → **0 errores**
 - [ ] `python3 validate.py` → **OK para push**
+- [ ] **Procedencia (pipeline v2)**: `_provenance: true` en el root + `_src: {url, date}` en cada film (gate `[sin-procedencia]`). Dato sin fuente = dato no confiable.
+- [ ] **`tools/audit.html?fest=<id>`** revisado: filtro "Solo problemas" en **0** o cada hallazgo justificado explícitamente ante Juan (una pasada visual cubre póster·metadata·sinopsis·procedencia·LB).
 - [ ] **Chrome live audit del splash** (gate bloqueante): servir el repo (`python3 -m http.server`),
       abrir el selector y confirmar que la entrada del festival se ve **igual que un festival de referencia**
       (ej. Tribeca): nombre **sin año** + fechas en formato **MES día–día AÑO** (`JUN 4–13 2026`).
@@ -62,6 +64,7 @@ Estos labels, si aparecen, bloquean o advierten — no ignorarlos:
 | `[poster-map-legacy]` | ERROR | `posters{}`/`customPosters{}` a nivel raíz (modelo muerto jul 2026) |
 | `[poster-source]` | ERROR | póster inline sin `posterSource` (correr classify-posters) |
 | `[seccion-sin-arquetipo]` | ERROR | sección sin entrada en `SECTION_ARCHETYPES` (banda gris ilegible) |
+| `[sin-procedencia]` | ERROR | film sin `_src:{url,date}` en festival con `_provenance:true` (pipeline v2) |
 | `[poster-host]` | WARNING | póster en host fuera de whitelist (re-hostear en `/assets/`) |
 | `[year-sospechoso]` | WARNING | year > festival+1 sin ser clásico/retro |
 | `[slot-sin-agrupar]` | WARNING | programa de cortos sin modelar |

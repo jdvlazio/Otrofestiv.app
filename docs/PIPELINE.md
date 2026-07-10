@@ -19,7 +19,8 @@ Orden canónico para montar un festival. Cada paso mapea a una fase de abajo.
 | 6 | **Secciones nuevas → `src/config.js`**: emoji único + entrada `SECTION_EN` + arquetipo en `SECTION_ARCHETYPES` (uno de los 9) | display EN + color de banda (sin arquetipo = ERROR `[seccion-sin-arquetipo]`) | 2 |
 | 7 | `python3 scripts/classify-posters.py <id> --apply` | mide el aspecto real de cada póster y escribe **`posterSource`** (`editorial`/`tmdb`/`custom`) — lo exige el gate `[poster-source]`; caza rotos al montar | 3 |
 | 8 | `python3 validate.py` + `node scripts/validate-festivals.js <id>` | gates bloqueantes (0 errores) | 4 |
-| 9 | `node scripts/bump-version.js` | stamp de build antes de deploy | 6 |
+| 9 | **`tools/audit.html?fest=<id>`** (servir el repo + abrir en Chrome) | dashboard de auditoría: UNA pasada visual cubre póster·metadata·sinopsis·procedencia·LB; filtro "Solo problemas" | 5 |
+| 10 | `node scripts/bump-version.js` | stamp de build antes de deploy | 6 |
 
 > **`scripts/translate-synopsis.py` está DEPRECADO** — la traducción de sinopsis se hace inline (Claude) + pase humano de Content Design, no por script.
 >
@@ -460,6 +461,17 @@ producción durante FICMontañas 2026:
    coincide). En pósters: si el CDN embebe el id del film, verificar
    `poster.includes(filmId)`. La lectura sin assert produce el dato del film
    anterior — el error más silencioso del método.
+
+8. **Procedencia obligatoria — la doctrina hecha verificable (pipeline v2).**
+   Todo festival nuevo declara **`_provenance: true`** en el root del JSON, y
+   **cada film top-level lleva `_src: {url, date}`** — la URL de la fuente
+   oficial de la que salieron sus datos y la fecha de extracción (los cortos de
+   `film_list` heredan el `_src` del bloque salvo `_src` propio). El gate
+   **`[sin-procedencia]`** (ERROR) bloquea films sin fuente declarada: dato sin
+   fuente = dato no confiable. Así la auditoría deja de "verificar el mundo" y
+   pasa a **muestrear contra la fuente declarada** — y el dashboard
+   (`tools/audit.html`) enlaza cada film a su fuente con un clic. La app ignora
+   `_src` (prefijo `_`, no se renderiza).
 
 ---
 

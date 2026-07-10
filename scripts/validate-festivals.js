@@ -125,6 +125,26 @@ function validateFestival(fname, data) {
     }
   }
 
+  // GATE [sin-procedencia] (opt-in): la doctrina "leer, no inventar" hecha
+  // verificable. Un festival montado con el pipeline v2 declara `_provenance:true`
+  // en el root → TODO film top-level debe llevar `_src: {url, date}` que registra
+  // de dónde salió (URL de la fuente oficial + fecha de extracción). Sin fuente
+  // declarada = dato no confiable = ERROR. Los cortos de film_list heredan el
+  // _src del bloque salvo que traigan el propio. Festivales pre-v2 (sin el flag)
+  // no se ven afectados. La app ignora _src (prefijo _, no se renderiza).
+  if (data._provenance === true) {
+    const _sinSrc = [];
+    for (const f of films) {
+      const s = f._src;
+      if (!s || typeof s.url !== 'string' || !/^https?:\/\//.test(s.url) || !s.date) {
+        _sinSrc.push(f.title || '(sin título)');
+      }
+    }
+    if (_sinSrc.length) {
+      errors.push(`GATE BLOQUEANTE [sin-procedencia]: ${_sinSrc.length} film(s) sin _src:{url,date} válido (el festival declara _provenance:true — todo dato lleva fuente): ${_sinSrc.slice(0, 5).join(' · ')}${_sinSrc.length > 5 ? ` … +${_sinSrc.length - 5}` : ''}`);
+    }
+  }
+
   // Festivales LEGADOS (FICCI 65, Cinemancia 2025): config en el bloque config{} del JSON.
   if (!hasConfigBlock) {
     warnings.push('Sin bloque config{} — se asume que la configuración está en FESTIVAL_CONFIG en src/config.js (formato nuevo ✓)');
