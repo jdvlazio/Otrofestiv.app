@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607091940">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607091940">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607092005">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607092005">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -831,7 +831,10 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
    recortar) + scrim de título opcional. El blur es decorativo; el still es el 16:9. */
 .poster-ed .ed-img{flex:1;width:100%;overflow:hidden;min-height:0;position:relative;background:#0c0c0c}
 .poster-ed .ed-blur{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.3);filter:blur(18px) brightness(.5) saturate(1.15)}
-.poster-ed .ed-still{position:absolute;top:0;left:0;width:100%;aspect-ratio:16/9;object-fit:cover;display:block;opacity:0;transition:opacity 250ms ease}
+/* height:auto explícito — gana a `.poster-card img{height:100%}` (el card editorial
+   del grid lleva ambas clases); sin esto el height:100% anula el aspect-ratio y el
+   still llena el alto = cover-crop/zoom. Con height:auto manda el 16:9 → al ras. */
+.poster-ed .ed-still{position:absolute;top:0;left:0;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;display:block;opacity:0;transition:opacity 250ms ease}
 .poster-ed .ed-scrim{position:absolute;left:0;right:0;bottom:0;padding:26px 8px 8px;background:linear-gradient(to top,rgba(0,0,0,.92),rgba(0,0,0,.35) 60%,transparent)}
 .poster-ed .ed-scrim .ed-title{font-family:-apple-system,BlinkMacSystemFont,sans-serif;font-size:10px;font-size:9.2cqi;font-weight:var(--w-display);letter-spacing:-.02em;color:var(--white);line-height:1.27;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
 .poster-card-stack{width:100%;height:100%;display:flex;gap:1px;background:var(--bdr)}
@@ -2736,7 +2739,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202607091940";
+    s.src="/src/main.js?v=202607092005";
     document.body.appendChild(s);
   }
   if (isApp || isDev) { bootApp(); return; }
