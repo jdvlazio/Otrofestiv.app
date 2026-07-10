@@ -16,8 +16,10 @@ Orden canónico para montar un festival. Cada paso mapea a una fase de abajo.
 | 3 | **`synopsis_es` → traducción inline de Claude** (lee PT/EN → ES) + **pase de Content Design** | localización de contenido | 3b / 5 |
 | 4 | `python3 scripts/geocode-venues.py …` | lat/lng de venues (Nominatim) | 2 |
 | 5 | `node scripts/generate-config.js …` → pegar en `src/config.js` | entrada de `FESTIVAL_CONFIG` | 2 |
-| 6 | `python3 validate.py` + `node scripts/validate-festivals.js <id>` | gates bloqueantes (0 errores) | 4 |
-| 7 | `node scripts/bump-version.js` | stamp de build antes de deploy | 6 |
+| 6 | **Secciones nuevas → `src/config.js`**: emoji único + entrada `SECTION_EN` + arquetipo en `SECTION_ARCHETYPES` (uno de los 9) | display EN + color de banda (sin arquetipo = ERROR `[seccion-sin-arquetipo]`) | 2 |
+| 7 | `python3 scripts/classify-posters.py <id> --apply` | mide el aspecto real de cada póster y escribe **`posterSource`** (`editorial`/`tmdb`/`custom`) — lo exige el gate `[poster-source]`; caza rotos al montar | 3 |
+| 8 | `python3 validate.py` + `node scripts/validate-festivals.js <id>` | gates bloqueantes (0 errores) | 4 |
+| 9 | `node scripts/bump-version.js` | stamp de build antes de deploy | 6 |
 
 > **`scripts/translate-synopsis.py` está DEPRECADO** — la traducción de sinopsis se hace inline (Claude) + pase humano de Content Design, no por script.
 >
@@ -113,7 +115,7 @@ Columnas del CSV — **clase organizador** (lo que solo el festival sabe):
 
 **Objetivo:** El festival existe en la app con su configuración completa.
 
-1. Crear entrada en `FESTIVAL_CONFIG` dentro de `index.html`:
+1. Crear entrada en `FESTIVAL_CONFIG` dentro de **`src/config.js`** (post-Fase 8; el bloque salió de `index.html`). `generate-config.js` genera el bloque listo para pegar:
    ```js
    'festival-id': {
      id: 'festival-id',
@@ -142,6 +144,11 @@ Columnas del CSV — **clase organizador** (lo que solo el festival sabe):
 2. El JSON del festival **no lleva bloque `config{}`** — nunca.
 
 3. Emojis de sección aprobados por PM + Content Designer.
+
+3b. **Secciones nuevas — TRES registros en `src/config.js` (obligatorio):**
+   - **Emoji único** líder en el string de sección (el string CON emoji es la clave en todos los mapas).
+   - **`SECTION_EN`** — display en inglés (warning `[i18n-content-coverage]` si falta).
+   - **`SECTION_ARCHETYPES`** — asignar uno de los **9 arquetipos** (Gala, Competencia, Clausura, Especiales, Retrospectiva, Muestra/País, Perspectivas/Miradas, Industria/Formación, Cortos). Sin arquetipo, `_sectionColor` cae a gris ilegible `#2C2C2A` → **ERROR bloqueante `[seccion-sin-arquetipo]`**. La paleta y el auto-contraste viven en `docs/POSTERS.md` §8b.
 
 4. **Ticketing (obligatorio evaluar en cada festival).** En el root del JSON:
    - `ticket_url` (`https://`) + `ticketing_model` (`"paid"` o `"mixed"`) si el festival cobra entrada o es mixto.
@@ -184,7 +191,7 @@ Columnas del CSV — **clase organizador** (lo que solo el festival sabe):
 - `year` → campo en el objeto film (si vacío) — solo si el año del scraping fue verificado primero
 
 **Campos PROHIBIDOS desde TMDB sin verificación humana:**
-- ❌ `poster` / `posters{}` → **NUNCA desde TMDB sin verificación visual manual**
+- ❌ `poster` → **NUNCA desde TMDB sin verificación visual manual**
 - ❌ `synopsis_en` → **NUNCA desde TMDB sin verificación que describe el film correcto**
 - ❌ `director`, `country`, `language` → solo desde el scraping de primera fuente
 
@@ -338,6 +345,10 @@ node scripts/validate-festivals.js [festival-id]
 - `ticket_url` que no empieza con `https://`
 - `ticketing_model` presente sin `ticket_url`
 - `is_cortos: true` con `film_list` vacío (cáscara — invisibiliza cortos reales)
+- **`[poster-map-legacy]`** — `posters{}`/`customPosters{}` a nivel raíz (el modelo map murió en jul 2026; un film = un `poster` inline)
+- **`[poster-source]`** — póster inline sin `posterSource` (correr `classify-posters.py --apply`)
+- **`[seccion-sin-arquetipo]`** — sección usada sin entrada en `SECTION_ARCHETYPES` (caería a gris ilegible)
+- `[poster-editorial-unique]` / `[poster-empty-film]` / `[posters-duplicados]` / `[sinopsis-duplicada]` — ver `docs/POSTERS.md` §8 y `FESTIVAL-CHECKLIST.md`
 
 **Warnings (no bloquean pero requieren revisión antes del deploy):**
 - Cobertura de poster < 95%
@@ -387,9 +398,9 @@ node scripts/validate-festivals.js [festival-id]
 
 | Regla | Detalle |
 |-------|---------|
-| `config{}` prohibido en JSON | La configuración vive en `FESTIVAL_CONFIG` en `index.html` siempre |
+| `config{}` prohibido en JSON | La configuración vive en `FESTIVAL_CONFIG` en `src/config.js` siempre |
 | Matching TMDB estricto | Los 4 criterios simultáneos — pero solo válido si los datos de entrada fueron verificados primero |
-| TMDB para poster: prohibido | `posters{}` solo desde verificación visual humana — nunca automatizado |
+| TMDB para poster: prohibido | `poster` (inline; el modelo map murió) solo desde verificación visual humana — nunca automatizado |
 | TMDB para synopsis_en: prohibido | synopsis_en solo desde traducción manual o fuente verificada — 64/107 de Tribeca eran de films distintos |
 | `og:image` en fase 1 | Se captura en extracción, no como parche posterior |
 | Day keys ISO | `YYYY-MM-DD` desde Tribeca 2026. Los festivales legacy mantienen su formato pero no se replica |
@@ -400,16 +411,55 @@ node scripts/validate-festivals.js [festival-id]
 
 ---
 
-## Deuda técnica por festival
+## Doctrina de fuentes — leer, no inventar (probada en FICMontañas 2026)
 
-| Festival | Género | Poster | Sinopsis ES | Pendiente |
-|----------|--------|--------|-------------|-----------|
-| FICCI 65 | 37% | 74% | 75% | Verificar year del scraping antes de TMDB |
-| Cinemancia 2025 | 93% | 95% | 100% | — |
-| AFF 2026 | 100% | 100% | 100% | — |
-| Tribeca 2026 | 93% | 44%* | 90% | *poster: solo cloudfront verificado. TMDB requiere verificación visual |
+La regla madre del onboarding: **cada dato sale de una fuente oficial leída
+página a página; lo que la fuente no da, NO se fabrica** — se para y se
+consulta a Juan. De esa regla derivan estos mecanismos, todos probados en
+producción durante FICMontañas 2026:
 
-*Tribeca: 134 cloudfront (tribecafilm.com primera fuente) + 87 poster editorial. TMDB vaciado hasta verificación humana.
+1. **Jerarquía de verdad: el último post/PDF oficial DETALLADO manda.**
+   Cuando el festival publica el cronograma definitivo (post de IG, PDF de
+   programación), ese documento es la fuente de verdad. **Lo provisional que
+   difiera, cambió** — no se promedia ni se conserva "por si acaso". Cada día
+   publicado se reconcilia EXACTO al oficial (hora, sede, orden).
+
+2. **`_parked` — provisionales guardados, no borrados.** Un evento del research
+   que NO aparece en el post oficial del día se mueve al array top-level
+   `d._parked`: invisible para la app (que lee `films`) y exento del validador,
+   pero recuperable si reaparece en el post de otro día. Nunca borrar datos de
+   research; nunca mostrarlos sin confirmación oficial.
+
+3. **`unscheduled` — catálogo vivo, no pausa.** Films/cortos confirmados en el
+   programa pero sin horario publicado NO se dejan fuera del JSON: se montan
+   como catálogo (`is_cortos` + `film_list` + `unscheduled:true`, sin
+   `day`/`time`) — buscables desde el día 1; la jornada se asigna cuando el
+   festival la publique. Ver `docs/SCHEMA.md`.
+
+4. **Sinopsis: VERBATIM verificado contra el DOM.** La sinopsis se extrae de la
+   página oficial y se verifica contra el DOM real (fetch/Chrome) — **nunca de
+   la memoria del modelo**, aunque "conozca" el film. Después el pase de
+   Content Design condensa/traduce (aprobación de Juan). Caso testigo: El
+   Huaquero (film inédito — la única fuente en el mundo era la página del
+   festival).
+
+5. **Instagram se lee por PÍXELES, no por metadata.** El CDN de IG no permite
+   descarga directa (URLs firmadas) y el alt-text OCR no es confiable →
+   navegar el post con Chrome MCP, avanzar slide por slide (flecha, no
+   deep-links `?img_index=`), screenshot y leer píxeles. Extraer TODOS los
+   slides antes de modelar.
+
+6. **Nombres oficiales exactos.** Secciones, títulos y sedes usan la taxonomía
+   del sitio/afiche oficial verbatim (con sus tildes y mayúsculas). Si el
+   afiche y el sitio difieren, gana el más reciente y se anota el conflicto.
+   `fullName` del festival: verificado en la fuente oficial — **no fabricar;
+   si no está claro, parar y consultar**.
+
+7. **Assert antes de leer, binding después de escribir.** En SPAs: confirmar
+   que el DOM renderizó el film esperado antes de extraer (título/og:image
+   coincide). En pósters: si el CDN embebe el id del film, verificar
+   `poster.includes(filmId)`. La lectura sin assert produce el dato del film
+   anterior — el error más silencioso del método.
 
 ---
 
