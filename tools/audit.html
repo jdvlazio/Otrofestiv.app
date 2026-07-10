@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Otrofestiv — Auditoría de festival</title>
+<!--
+  tools/audit.html — Dashboard de auditoría de onboarding (pipeline v2, #2).
+  UNA pasada visual cubre lo que antes eran rituales separados (galería de
+  pósters, check de sinopsis, slugs, procedencia). Uso:
+    python3 -m http.server 8765   (desde la raíz del repo)
+    http://localhost:8765/tools/audit.html?fest=<id>
+  Solo lectura: fetch del JSON del festival; cero dependencias.
+-->
+<style>
+:root{--bg:#111;--surf:#1b1b1d;--bdr:#2c2c2e;--fg:#f0ede8;--mut:#9a968f;--amber:#f0a828;--red:#e05252;--green:#3aaa6e;--blue:#378add}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:14px/1.45 -apple-system,BlinkMacSystemFont,system-ui,sans-serif;padding:18px}
+h1{font-size:18px;margin:0 0 2px}
+.sub{color:var(--mut);font-size:12px;margin:0 0 14px}
+.bar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:14px}
+input[type=text],select{background:var(--surf);border:1px solid var(--bdr);color:var(--fg);border-radius:8px;padding:7px 10px;font:inherit;font-size:13px}
+button,.chipbtn{background:var(--surf);border:1px solid var(--bdr);color:var(--fg);border-radius:8px;padding:7px 12px;font:inherit;font-size:13px;cursor:pointer}
+button.on{background:var(--amber);color:#111;border-color:var(--amber);font-weight:700}
+.stats{display:flex;gap:14px;flex-wrap:wrap;margin:0 0 16px;font-size:12.5px;color:var(--mut)}
+.stats b{color:var(--fg);font-size:15px;display:block}
+.stats .bad b{color:var(--red)}
+.card{display:flex;gap:14px;background:var(--surf);border:1px solid var(--bdr);border-radius:12px;padding:12px;margin-bottom:10px}
+.card.prob{border-color:var(--red)}
+.pst{width:92px;height:138px;flex-shrink:0;border-radius:6px;background:#0c0c0c;object-fit:cover;display:block}
+.pst-ph{width:92px;height:138px;flex-shrink:0;border-radius:6px;background:#0c0c0c;display:flex;align-items:center;justify-content:center;color:var(--mut);font-size:10px;text-align:center;padding:6px;border:1px dashed var(--bdr)}
+.meta{flex:1;min-width:0}
+.ttl{font-weight:700;font-size:15px;margin:0 0 1px}
+.ttl small{color:var(--mut);font-weight:400}
+.row{color:var(--mut);font-size:12.5px;margin:1px 0}
+.row b{color:var(--fg);font-weight:600}
+.chips{display:flex;gap:5px;flex-wrap:wrap;margin:6px 0 4px}
+.chip{font-size:10.5px;font-weight:700;letter-spacing:.03em;padding:2px 7px;border-radius:99px;border:1px solid var(--bdr);color:var(--mut)}
+.chip.ok{color:var(--green);border-color:var(--green)}
+.chip.warn{color:var(--amber);border-color:var(--amber)}
+.chip.err{color:var(--red);border-color:var(--red)}
+.chip a{color:inherit;text-decoration:none}
+.syn{font-size:12.5px;color:var(--mut);margin-top:5px;max-width:78ch}
+.syn b{color:var(--fg);font-size:11px;letter-spacing:.05em}
+details summary{cursor:pointer;color:var(--blue);font-size:12px}
+.shorts{margin-top:8px;border-top:1px dashed var(--bdr);padding-top:8px}
+.short{display:flex;gap:10px;margin:6px 0;align-items:flex-start}
+.short img,.short .pst-ph{width:44px;height:66px}
+.short .meta{font-size:12px}
+.sechdr{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--mut);margin:22px 0 8px;font-weight:700}
+.err-banner{background:#3a1414;border:1px solid var(--red);border-radius:10px;padding:12px;margin-bottom:14px}
+a{color:var(--blue)}
+</style>
+</head>
+<body>
+<h1>Auditoría de festival</h1>
+<p class="sub">Una pasada visual: identidad de póster · metadata · sinopsis · procedencia (<code>_src</code>) · Letterboxd. Reglas: <code>docs/POSTERS.md</code> · <code>docs/PIPELINE.md</code>.</p>
+<div class="bar">
+  <select id="fsel"><option value="">— festival —</option></select>
+  <input type="text" id="q" placeholder="Buscar título / director…" size="26">
+  <select id="ssel"><option value="">Todas las secciones</option></select>
+  <button id="probBtn">Solo problemas</button>
+</div>
+<div class="stats" id="stats"></div>
+<div id="out"></div>
+
+<script>
+const TMDB='https://image.tmdb.org/t/p/w185';
+const qs=new URLSearchParams(location.search);
+let DATA=null, PROV=false, onlyProb=false;
+
+// ── carga del selector de festivales desde config.js (regex sobre el fuente) ──
+async function loadFestList(){
+  try{
+    const src=await (await fetch('../src/config.js')).text();
+    const ids=[...src.matchAll(/'([a-z0-9]+)'\s*:\s*\{\s*\n?\s*id:\s*'([^']+)'/g)].map(m=>m[1]);
+    // los archivos usan id-con-guion; probar variantes conocidas por convención <name>-<año>
+    const files=[...new Set(ids)];
+    const sel=document.getElementById('fsel');
+    for(const id of files){const o=document.createElement('option');o.value=id;o.textContent=id;sel.appendChild(o);}
+  }catch(e){/* selector queda manual */}
+}
+
+// id de config (tribeca2026) → archivo (tribeca-2026.json): probar ambos
+async function fetchFest(id){
+  const cands=[id, id.replace(/(\d{4})$/,'-$1')];
+  for(const c of cands){
+    try{const r=await fetch(`../festivals/${c}.json`);if(r.ok)return await r.json();}catch(e){}
+  }
+  throw new Error(`No se pudo cargar festivals/${cands.join('.json ni ')}.json`);
+}
+
+function posterUrl(p){
+  if(!p) return null;
+  if(p.startsWith('http')) return p;
+  if(p.startsWith('/assets/')) return '..'+p;
+  if(/^\/[A-Za-z0-9]+\.(jpg|png|jpeg)$/.test(p)) return TMDB+p;
+  return null;
+}
+
+function issuesOf(f, isShort){
+  const iss=[];
+  if(!isShort){
+    if(!f.poster && !f.type && !f.is_cortos && !f.is_programa) iss.push('sin póster (→ generativo)');
+    if(f.poster && !f.posterSource) iss.push('sin posterSource');
+    if(!f.section) iss.push('sin sección');
+    if(!f.synopsis_es && !f.synopsis) iss.push('sin sinopsis ES');
+    if(!f.synopsis_en && !f.type) iss.push('sin sinopsis EN');
+    if(PROV && !(f._src&&/^https?:/.test(f._src.url||'')&&f._src.date)) iss.push('SIN PROCEDENCIA');
+  }
+  if(!f.director && !f.type && !f.is_cortos && !f.is_programa) iss.push('sin director');
+  if(!f.year && !f.type && !f.is_cortos && !f.is_programa) iss.push('sin year');
+  const syn=f.synopsis_es||f.synopsis||'';
+  if(syn.length>600) iss.push(`sinopsis ${syn.length} chars (>600)`);
+  return iss;
+}
+
+function chip(txt,cls,href){
+  const inner=href?`<a href="${href}" target="_blank" rel="noopener">${txt} ↗</a>`:txt;
+  return `<span class="chip ${cls||''}">${inner}</span>`;
+}
+
+function filmCard(f){
+  const iss=issuesOf(f,false);
+  const pu=posterUrl(f.poster);
+  const kind=f.type==='event'?'EVENT':(f.is_cortos||f.is_programa)?'PROGRAMA':(f.poster?({editorial:'EDITORIAL',tmdb:'ORIGINAL·TMDB',custom:'ORIGINAL'}[f.posterSource]||'IMG'):'GENERATIVO');
+  const poster=pu?`<img class="pst" loading="lazy" src="${pu}" onerror="this.outerHTML='<div class=pst-ph>PÓSTER ROTO<br>404</div>'">`
+               :`<div class="pst-ph">${kind}</div>`;
+  const src=f._src?chip(`fuente · ${f._src.date||'?'}`,'ok',f._src.url)
+           :(PROV?chip('SIN FUENTE','err'):'');
+  const lb=f.lbSlug?chip('letterboxd','ok',`https://letterboxd.com/film/${f.lbSlug}/`):'';
+  const sched=f.unscheduled?chip('unscheduled','warn'):(f.day?chip(`${f.day} ${f.time||''} · ${f.venue||'?'}`,''):'');
+  const synES=f.synopsis_es||f.synopsis||'', synEN=f.synopsis_en||'';
+  const shorts=(f.film_list||[]).map(s=>{
+    const spu=posterUrl(s.poster);const si=issuesOf(s,true);
+    return `<div class="short">${spu?`<img class="pst" loading="lazy" src="${spu}" onerror="this.outerHTML='<div class=pst-ph>ROTO</div>'">`:'<div class="pst-ph">—</div>'}
+      <div class="meta"><b>${s.title||'?'}</b> <span class="row">${s.director||'—'} · ${s.country||'—'} · ${s.duration||'—'}</span>
+      ${si.length?`<div>${si.map(i=>chip(i,'warn')).join(' ')}</div>`:''}</div></div>`;
+  }).join('');
+  return `<div class="card${iss.length?' prob':''}" data-sec="${(f.section||'').replace(/"/g,'&quot;')}" data-q="${((f.title||'')+' '+(f.director||'')).toLowerCase().replace(/"/g,'&quot;')}" data-prob="${iss.length?1:0}">
+    ${poster}
+    <div class="meta">
+      <div class="ttl">${f.title||'(sin título)'} ${f.title_en&&f.title_en!==f.title?`<small>· ${f.title_en}</small>`:''}</div>
+      <div class="row"><b>${f.director||'—'}</b> · ${f.year||'—'} · ${f.country||'—'} · ${f.duration||'—'}</div>
+      <div class="row">${f.section||'<span style="color:var(--red)">SIN SECCIÓN</span>'}</div>
+      <div class="chips">${chip(kind, kind==='GENERATIVO'?'warn':'')}${src}${lb}${sched}${iss.map(i=>chip(i,'err')).join('')}</div>
+      ${synES?`<div class="syn"><b>ES ${synES.length}c</b> — ${synES}</div>`:''}
+      ${synEN?`<details><summary>EN ${synEN.length}c</summary><div class="syn">${synEN}</div></details>`:''}
+      ${shorts?`<div class="shorts">${shorts}</div>`:''}
+    </div>
+  </div>`;
+}
+
+function render(){
+  const films=DATA.films||[];
+  const secs=[...new Set(films.map(f=>f.section).filter(Boolean))];
+  const ssel=document.getElementById('ssel');
+  if(ssel.options.length<=1) for(const s of secs){const o=document.createElement('option');o.value=s;o.textContent=s;ssel.appendChild(o);}
+  // stats
+  const n=films.length;
+  const withPoster=films.filter(f=>f.poster).length;
+  const withSyn=films.filter(f=>f.synopsis_es||f.synopsis).length;
+  const withEN=films.filter(f=>f.synopsis_en).length;
+  const withSrc=films.filter(f=>f._src&&f._src.url).length;
+  const probs=films.filter(f=>issuesOf(f,false).length).length;
+  const parked=(DATA._parked||[]).length;
+  document.getElementById('stats').innerHTML=
+    `<div><b>${n}</b>films</div>
+     <div><b>${withPoster}/${n}</b>con póster</div>
+     <div><b>${withSyn}/${n}</b>sinopsis ES</div>
+     <div><b>${withEN}/${n}</b>sinopsis EN</div>
+     <div><b>${withSrc}/${n}</b>con _src ${PROV?'(gate ON)':'(gate off)'}</div>
+     <div class="${probs?'bad':''}"><b>${probs}</b>con problemas</div>
+     ${parked?`<div><b>${parked}</b>_parked</div>`:''}`;
+  // cards agrupadas por sección en orden de aparición
+  let html='',lastSec=null;
+  for(const f of films){
+    if((f.section||'')!==lastSec){lastSec=f.section||'';html+=`<div class="sechdr">${lastSec||'(sin sección)'}</div>`;}
+    html+=filmCard(f);
+  }
+  document.getElementById('out').innerHTML=html;
+  applyFilters();
+}
+
+function applyFilters(){
+  const q=document.getElementById('q').value.toLowerCase();
+  const sec=document.getElementById('ssel').value;
+  document.querySelectorAll('.card').forEach(c=>{
+    const vis=(!q||c.dataset.q.includes(q))&&(!sec||c.dataset.sec===sec)&&(!onlyProb||c.dataset.prob==='1');
+    c.style.display=vis?'':'none';
+  });
+  document.querySelectorAll('.sechdr').forEach(h=>{
+    let el=h.nextElementSibling,any=false;
+    while(el&&!el.classList.contains('sechdr')){if(el.style.display!=='none')any=true;el=el.nextElementSibling;}
+    h.style.display=any?'':'none';
+  });
+}
+
+document.getElementById('q').addEventListener('input',applyFilters);
+document.getElementById('ssel').addEventListener('change',applyFilters);
+document.getElementById('probBtn').addEventListener('click',e=>{onlyProb=!onlyProb;e.target.classList.toggle('on',onlyProb);applyFilters();});
+document.getElementById('fsel').addEventListener('change',e=>{if(e.target.value)location.search='?fest='+e.target.value;});
+
+(async()=>{
+  await loadFestList();
+  const id=qs.get('fest');
+  if(!id) return;
+  document.getElementById('fsel').value=id;
+  try{
+    DATA=await fetchFest(id);
+    PROV=DATA._provenance===true;
+    document.title=`Auditoría — ${id}`;
+    render();
+  }catch(e){
+    document.getElementById('out').innerHTML=`<div class="err-banner">${e.message}</div>`;
+  }
+})();
+</script>
+</body>
+</html>

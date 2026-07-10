@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `d3dd904 Merge #291 — anti-repetición del sheet en generativos`
+> Último commit: `43efcd7 Merge #292 — pipeline v2 + doctrina de fuentes`
 
 ---
 
