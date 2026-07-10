@@ -138,6 +138,21 @@ test('_buildPosterV16: título corto NO se toca (sin elipsis)', () => {
   assert.deepStrictEqual(lines, ['Noga'], 'título corto = una línea, sin truncar');
 });
 
+// ── El CUERPO usa el mismo cortador que la banda (regla de Juan, unificada) ───
+// "Recorrido en Bicicleta · Comparsa Cultural" era la regresión: cortaba
+// "Recorrido en / Bicicleta" (línea terminando en preposición).
+test('_buildPosterV16: el cuerpo respeta la regla de corte (sin débil al final)', () => {
+  const cases = [
+    ['Recorrido en Bicicleta · Comparsa Cultural', ['Recorrido', 'en Bicicleta', '· Comparsa', 'Cultural']],
+    ['Programa de cortos 4', ['Programa', 'de cortos 4']],
+    ['¿Qué es la ficción?', ['¿Qué es', 'la ficción?']],
+  ];
+  for (const [title, expected] of cases) {
+    const lines = bodyLines(C._buildPosterV16({ accent: '#378ADD', headerLabel: 'Sec', title, num: null }));
+    assert.deepStrictEqual(lines, expected, `corte del cuerpo de "${title}"`);
+  }
+});
+
 // ── Regla de lecturabilidad del corte de línea de la banda (regla de Juan) ────
 // Cada línea con sentido propio; NINGUNA línea (salvo la última) termina en
 // palabra débil (conjunción/preposición/artículo) ni en guión suelto.

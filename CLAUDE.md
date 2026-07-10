@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `6362d9c Merge #288 — fix still editorial recortado (16:9)`
+> Último commit: `e410e11 Merge #289 — clamp de título largo en el generativo`
 
 ---
 

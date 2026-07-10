@@ -191,7 +191,7 @@ export function _bandWrap(s, maxCh=_BAND_MAXCH){
   const norm=w=>w.toLowerCase().replace(/[^\p{L}]/gu,'').normalize('NFD').replace(/[̀-ͯ]/g,'');
   // débil = conjunción/preposición/artículo O un guión separador suelto (–—-):
   // ninguno puede colgar al final de línea; bindean hacia el sustantivo que sigue.
-  const isWeak=w=>/^[–—-]+$/.test(w)||_BAND_WEAK.has(norm(w));
+  const isWeak=w=>/^[·–—-]+$/.test(w)||_BAND_WEAK.has(norm(w));
   if(n>13){ // guard: partición exhaustiva sólo para etiquetas normales
     const L=[]; let cur=''; for(const w of words){ if(cur&&(cur+' '+w).length>maxCh){L.push(cur);cur=w;} else cur=cur?cur+' '+w:w; } if(cur)L.push(cur); return L;
   }
@@ -236,12 +236,10 @@ export function _buildPosterV16({accent, headerLabel, title, num}){
   const VW=120,VH=180,HDR=52,PAD=8;
   const esc=escXML;  // ver escXML (arriba) — fuente única de escape XML
 
-  function wrap(str,maxCh){
-    if(!str)return[''];
-    const words=str.split(' '),lines=[];let cur='';
-    for(const w of words){if(cur&&(cur+' '+w).length>maxCh){lines.push(cur);cur=w;}else cur=cur?cur+' '+w:w;}
-    if(cur)lines.push(cur);return lines;
-  }
+  // El cuerpo usa el MISMO cortador que la banda (_bandWrap): cada línea con
+  // sentido propio, ninguna termina en palabra débil ni separador (·/–). Una
+  // sola regla de corte para TODO texto dentro de pósters no-originales.
+  const wrap=(str,maxCh)=>str?_bandWrap(str,maxCh):[''];
   // Clamp de líneas + elipsis (estilo Netflix/Spotify): los títulos larguísimos
   // (ej. "Tribeca at 25: A Conversation With…", 80 chars = 9 líneas minúsculas)
   // se truncan a N líneas con "…" en vez de llenar el póster. Los cortos no cambian.
