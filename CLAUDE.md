@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `f5352c9 Merge pull request #280 from jdvlazio/feat/watch-i18n`
+> Último commit: `b2949e3 feat(posters): Fase C — anatomía A3 del editorial (respeta el 16:9)`
 
 ---
 
