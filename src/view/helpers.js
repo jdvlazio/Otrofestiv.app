@@ -185,18 +185,26 @@ export function posterModel(f){
 // ${editorialFrame(m)}</div>`. `title` alimenta data-title para el fallback de
 // error (_edPosterErr → póster generativo de toda la pieza). Todo texto va por
 // escXML/_edHdrSVG. Ver docs/POSTERS.md.
+//
+// Anatomía A3 (Fase C): la zona de imagen es un blur-fill de fondo + el still
+// 16:9 AL RAS del banner, SIN recortar (respeta composiciones con gente a los
+// lados; el cover-crop las decapitaba) + un scrim con el título opcional. El
+// blur es decorativo (aria-hidden); el still lleva data-title y el onerror que
+// cae a generativo. `body` con texto → scrim con título (grid); undefined/''  →
+// sin scrim (thumb/lista/sheet y ended-poster, que trae su propio footer).
 export function editorialFrame({header, body, src, title, loading, accent}={}){
   const _l=loading||'lazy';
   const _dt=title?` data-title="${escXML(title)}"`:'';
   const hdr=`<div class="ed-hdr">${header?_edHdrSVG(header, accent):''}</div>`;
+  const _ttl=(body!=null && String(body).trim()) ? String(body) : '';
   const img=src
-    ? `<div class="ed-img"><img src="${src}"${_dt} loading="${_l}" onload="this.style.opacity='1'" onerror="_edPosterErr(this)" alt=""></div>`
+    ? `<div class="ed-img">`
+      + `<img class="ed-blur" src="${src}" loading="${_l}" aria-hidden="true" onerror="this.remove()" alt="">`
+      + `<img class="ed-still" src="${src}"${_dt} loading="${_l}" onload="this.style.opacity='1'" onerror="_edPosterErr(this)" alt="">`
+      + (_ttl?`<div class="ed-scrim"><div class="ed-title">${escXML(_ttl)}</div></div>`:'')
+      + `</div>`
     : `<div class="ed-img"></div>`;
-  // body: undefined → sin zona (thumb/lista/sheet); '' → zona vacía que reserva
-  // espacio (ended-poster: footer sobre la banda, no sobre la imagen); con texto
-  // → título (grid). El reserve mantiene la imagen ~16:9 en vez de estirarla.
-  const bod=(body==null)?'':(body?`<div class="ed-body"><div class="ed-title">${escXML(body)}</div></div>`:`<div class="ed-body"></div>`);
-  return `${hdr}${img}${bod}`;
+  return `${hdr}${img}`;
 }
 
 export function isNowShowing(f){
