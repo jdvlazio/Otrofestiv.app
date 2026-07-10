@@ -257,6 +257,10 @@ imagen en ninguna fuente**. Último recurso, nunca el segundo.
   nivel raíz. El modelo dual murió (§1, Fase A.1); un map que reaparezca significa
   que el pipeline regresó al modelo viejo. Inline el poster en cada film
   (`scripts/migrate-posters-inline.py`) y elimina el map.
+- **`[seccion-sin-arquetipo]`** (ERROR) — una `section` (film o corto anidado) sin
+  entrada en `SECTION_ARCHETYPES` (§8b). Sin arquetipo, `_sectionColor` cae a gris
+  ilegible `#2C2C2A`. Caza las secciones nuevas de un festival recién montado
+  **antes** de publicar — asignales uno de los 9 arquetipos en `src/config.js`.
 - **`[poster-source]`** (ERROR) — un poster inline **sin `posterSource`**. Obliga a
   correr el clasificador por aspecto (abajo) — así ningún landscape se cuela como
   portrait recortado. La detección editorial deja de depender del host (§5.3);

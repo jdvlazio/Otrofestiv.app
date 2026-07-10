@@ -19,11 +19,17 @@ const path = require('path');
 // para que el check de cobertura [i18n-content-coverage] reconozca qué secciones
 // ya tienen traducción de display. Guardado: si falla, el Set queda vacío.
 const SECTION_EN_KEYS = new Set();
+// [seccion-sin-arquetipo]: claves de SECTION_ARCHETYPES (src/config.js). Toda
+// sección DEBE tener arquetipo o _sectionColor cae a gris ilegible #2C2C2A (el
+// bug que reaparece con cada festival nuevo). Guardado: si falla, Set vacío.
+const SECTION_ARCHETYPE_KEYS = new Set();
 try {
   const _cfgSrc = fs.readFileSync(path.join(__dirname, '..', 'src', 'config.js'), 'utf8');
   const _m = _cfgSrc.match(/export const SECTION_EN\s*=\s*\{([\s\S]*?)\n\};/);
   if (_m) for (const km of _m[1].matchAll(/'([^']*)'\s*:/g)) SECTION_EN_KEYS.add(km[1]);
-} catch (e) { /* Set vacío → el check informa 0 cobertura */ }
+  const _ma = _cfgSrc.match(/export const SECTION_ARCHETYPES\s*=\s*\{([\s\S]*?)\n\};/);
+  if (_ma) for (const km of _ma[1].matchAll(/'([^']*)'\s*:/g)) SECTION_ARCHETYPE_KEYS.add(km[1]);
+} catch (e) { /* Sets vacíos → los checks informan 0 cobertura */ }
 
 // ── Mapa de países → emoji bandera ───────────────────────────────────────────
 const FLAGS_MAP = {
@@ -97,6 +103,25 @@ function validateFestival(fname, data) {
   for (const mapKey of ['posters', 'customPosters']) {
     if (data[mapKey] && Object.keys(data[mapKey]).length > 0) {
       errors.push(`GATE BLOQUEANTE [poster-map-legacy]: ${mapKey}{} presente — el modelo map murió en Fase A.1. Inline el poster en cada film (scripts/migrate-posters-inline.py) y elimina el mapa.`);
+    }
+  }
+
+  // GATE [seccion-sin-arquetipo]: toda sección usada (films + cortos anidados)
+  // debe tener arquetipo en SECTION_ARCHETYPES o _sectionColor cae a gris ilegible
+  // #2C2C2A. Caza secciones nuevas de un festival recién montado ANTES de publicar.
+  if (SECTION_ARCHETYPE_KEYS.size > 0) {
+    const _secs = new Set();
+    (function collect(x) {
+      if (Array.isArray(x)) x.forEach(collect);
+      else if (x && typeof x === 'object') {
+        if (x.section) _secs.add(x.section);
+        for (const v of Object.values(x)) collect(v);
+      }
+    })(data);
+    for (const sec of _secs) {
+      if (!SECTION_ARCHETYPE_KEYS.has(sec)) {
+        errors.push(`GATE BLOQUEANTE [seccion-sin-arquetipo]: sección "${sec}" no está en SECTION_ARCHETYPES (src/config.js) → cae a gris ilegible #2C2C2A. Asignale uno de los 9 arquetipos.`);
+      }
     }
   }
 

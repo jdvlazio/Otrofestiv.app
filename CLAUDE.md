@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `b2949e3 feat(posters): Fase C — anatomía A3 del editorial (respeta el 16:9)`
+> Último commit: `e4680b8 docs(posters): Fase D — POSTERS.md al día + bump para deploy`
 
 ---
 
