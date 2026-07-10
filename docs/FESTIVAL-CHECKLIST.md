@@ -28,9 +28,9 @@
       - [ ] El texto sale del **título original** (`f.title`), nunca de la traducción de UI (`f.section`). **No mezcla de idiomas** (un código es neutro; un nombre propio va en su idioma).
       - [ ] **`node scripts/validate-festivals.js` → 0 errores** en `[poster-editorial-unique]` (ningún par de programas con poster editorial idéntico). El check no da falsos positivos: si falla, es real.
       - [ ] Confirmar en Chrome (ES y EN) en cada sección con >1 programa.
-- [ ] **Films individuales y cortos**: ninguno con `poster: ""` salvo que se hayan agotado las **5 fuentes** (TMDB portrait → LB portrait → portrait oficial → landscape oficial → editorial sin imagen). `poster: ""` es exclusivo de programas.
-- [ ] **Landscape 16:9 del CDN** (cloudfront/supabase): va **dentro** del poster editorial (editorial-con-imagen vía `_isEditorialImageUrl`), no se descarta ni se vacía.
-- [ ] **Verificar en Chrome** que los cortos en `film_list` muestran imagen en el sheet del programa (portrait TMDB/LB o editorial-con-imagen para landscapes).
+- [ ] **`posterSource` clasificado**: `python3 scripts/classify-posters.py <id> --apply` corrido tras cargar los pósters — todo póster inline lleva `posterSource` (gate `[poster-source]`) y el modelo map NO existe (gate `[poster-map-legacy]`). Adquisición/anatomía/reglas → **`docs/POSTERS.md`** (no re-decidir acá).
+- [ ] **Secciones nuevas registradas en `src/config.js`**: emoji único + `SECTION_EN` + arquetipo en `SECTION_ARCHETYPES` (gate `[seccion-sin-arquetipo]` — sin arquetipo la banda cae a gris ilegible).
+- [ ] **Verificar en Chrome** que los cortos en `film_list` muestran imagen en el sheet del programa (portrait o editorial-con-imagen para landscapes). `poster: ""` exclusivo de programas; el landscape no se vacía — regla completa en `docs/POSTERS.md`.
 - [ ] **Year**: 0 outliers no explicados (los clásicos/retro conservan su año original; los contemporáneos ≤ año_festival + 1)
 - [ ] **0 sinopsis duplicadas** entre films (synopsis y synopsis_en)
 - [ ] **Slots compartidos**: todos los (day, time, venue) con ≥2 films declarados `is_cortos:true` o `is_programa:true`
@@ -59,6 +59,10 @@ Estos labels, si aparecen, bloquean o advierten — no ignorarlos:
 |---|---|---|
 | `[posters-duplicados]` | ERROR | dos films con la misma URL de poster |
 | `[sinopsis-duplicada]` | ERROR | cross-contaminación de synopsis/synopsis_en |
+| `[poster-map-legacy]` | ERROR | `posters{}`/`customPosters{}` a nivel raíz (modelo muerto jul 2026) |
+| `[poster-source]` | ERROR | póster inline sin `posterSource` (correr classify-posters) |
+| `[seccion-sin-arquetipo]` | ERROR | sección sin entrada en `SECTION_ARCHETYPES` (banda gris ilegible) |
+| `[poster-host]` | WARNING | póster en host fuera de whitelist (re-hostear en `/assets/`) |
 | `[year-sospechoso]` | WARNING | year > festival+1 sin ser clásico/retro |
 | `[slot-sin-agrupar]` | WARNING | programa de cortos sin modelar |
 | `[sinopsis-truncada]` | WARNING | huella de og:description truncada (200 chars, trampa A2) |
