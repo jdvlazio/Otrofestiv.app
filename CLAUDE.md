@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `b6ff538 Merge #293 — procedencia + dashboard de auditoría`
+> Último commit: `170cb82 Merge #294 — Tercer Tiempo Fest Bogotá 2026 (pipeline v2)`
 
 ---
 

@@ -135,9 +135,21 @@ export const SECTION_COLORS = {
 //  · Tribeca se omite entero: sus secciones ya están en inglés.
 //  · "Impact Hits"/"Industry Days" (AFF) ya están en inglés → se omiten.
 export const SECTION_EN = {
-  '🎬 Selección Oficial': 'Official Selection',
+  '🌱 Raíces del Juego': 'Roots of the Game',
+  '🧠 Juego Mental': 'Mind Game',
+  '👟 El Rey Puma': 'El Rey Puma',
+  '🏅 Más allá del Fútbol': 'Beyond Football',
+  '🔥 Barrio Caliente': 'Barrio Caliente',
+  '🚴 Pedal y Resistencia': 'Pedal & Resistance',
+  '✍️ Fútbol Poético': 'Poetic Football',
+  '🏟️ Refugio en la Cancha': 'Refuge on the Pitch',
+  '💪 Contra Todo': 'Against All Odds',
+  '🔟 El Diego': 'El Diego',
+  '⚽ Juegan como Niñas': 'Juegan como Niñas',
+  '🗺️ Territorios en Juego': 'Territories at Play',
+  '🇧🇷 Brasil: Juego, memoria y pasión': 'Brazil: Game, Memory & Passion',
   '🏘️ Cinematecas Locales': 'Local Cinematheques',
-  '⚽ Fan Zone': 'Fan Zone',
+  '🎉 Fan Zone': 'Fan Zone',
   // Olhar de Cinema (nombres oficiales del sitio EN)
   '🎬 Apertura':'Opening Film',
   '🌟 Clausura':'Closing Film',
@@ -335,9 +347,21 @@ export const ARCHETYPE_COLORS = {
 // Cada sección de cada festival → su arquetipo. Generado por scripts/classify-posters
 // (arquetipos) + decisiones de diseño. Sección nueva sin entrada → gate lo caza.
 export const SECTION_ARCHETYPES = {
-  '🎬 Selección Oficial': 'Competencia',
+  '🌱 Raíces del Juego': 'Perspectivas / Miradas',
+  '🧠 Juego Mental': 'Perspectivas / Miradas',
+  '👟 El Rey Puma': 'Apertura / Gala',
+  '🏅 Más allá del Fútbol': 'Muestra / País',
+  '🔥 Barrio Caliente': 'Muestra / País',
+  '🚴 Pedal y Resistencia': 'Perspectivas / Miradas',
+  '✍️ Fútbol Poético': 'Perspectivas / Miradas',
+  '🏟️ Refugio en la Cancha': 'Muestra / País',
+  '💪 Contra Todo': 'Perspectivas / Miradas',
+  '🔟 El Diego': 'Retrospectiva / Tributo',
+  '⚽ Juegan como Niñas': 'Apertura / Gala',
+  '🗺️ Territorios en Juego': 'Muestra / País',
+  '🇧🇷 Brasil: Juego, memoria y pasión': 'Muestra / País',
   '🏘️ Cinematecas Locales': 'Muestra / País',
-  '⚽ Fan Zone': 'Especiales / Eventos',
+  '🎉 Fan Zone': 'Especiales / Eventos',
   '⏳ (s)paces of Time': 'Perspectivas / Miradas',
   '✊ Cine Afro': 'Muestra / País',
   '✨ Exhibiciones Especiales': 'Especiales / Eventos',
