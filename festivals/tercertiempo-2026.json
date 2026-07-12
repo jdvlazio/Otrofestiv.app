@@ -35,13 +35,6 @@
       "city": "Bogotá",
       "lat": 4.5718773,
       "lng": -74.1341131
-    },
-    "Los Ángeles FC": {
-      "short": "Los Ángeles FC",
-      "city": "Bogotá",
-      "address": "CC Los Ángeles, Calle 19 # 4-71, Piso 3",
-      "lat": 4.603776,
-      "lng": -74.0697442
     }
   },
   "films": [
@@ -818,22 +811,6 @@
       "flags": "🇨🇴",
       "day_order": 2,
       "synopsis_en": "Ximena, a Venezuelan teenager newly arrived in Colombia, defies prejudice and social barriers to form a women's football team and compete in the neighborhood league."
-    }
-  ],
-  "_parked": [
-    {
-      "title": "Fan Zone — Tercer Tiempo Fest & Los Ángeles FC",
-      "type": "event",
-      "info": true,
-      "day": "2026-07-18",
-      "venue": "Los Ángeles FC",
-      "section": "🎉 Fan Zone",
-      "synopsis": "Pantalla gigante · Asado argentino · Selección especial de cortometrajes · Premios y activaciones · Fútbol, memoria y coleccionismo · Feria de camisetas · Transmisión de la Copa del Mundo · Hora feliz · Música en vivo · Fiesta de la cultura de fútbol.",
-      "_src": {
-        "url": "https://assets.zyrosite.com/YBgeNxN2QVtL1B3j/ttf_2026_programa-bogota-.pdf-YvbyN0sIYAyjVije.pdf",
-        "date": "2026-07-10"
-      },
-      "_pendiente": "PDF no publica horario del Fan Zone (18 y 19 jul) — confirmar horas antes de activar"
     }
   ],
   "name": "TercerTiempo Fest",
