@@ -48,7 +48,7 @@
     {
       "title": "Raíces del Juego",
       "is_cortos": true,
-      "poster": "",
+      "poster": "/assets/tercertiempo/sesion-raices-del-juego.jpg",
       "duration": "105 min",
       "film_list": [
         {
@@ -103,12 +103,13 @@
       "ticket_url": "https://idartes.checkout.tuboleta.com/selection/event/date?productId=10230505466234",
       "flags": "🇪🇸🇨🇴🇲🇽",
       "country": "España, Colombia, México",
-      "day_order": 1
+      "day_order": 1,
+      "posterSource": "custom"
     },
     {
       "title": "Juego Mental",
       "is_cortos": true,
-      "poster": "",
+      "poster": "/assets/tercertiempo/sesion-juego-mental.jpg",
       "duration": "81 min",
       "film_list": [
         {
@@ -166,7 +167,8 @@
       "ticket_url": "https://idartes.checkout.tuboleta.com/selection/event/date?productId=10230505466235",
       "flags": "🇵🇹🇮🇹🇪🇸",
       "country": "Portugal, Italia, España",
-      "day_order": 2
+      "day_order": 2,
+      "posterSource": "custom"
     },
     {
       "title": "El Rey Puma",
@@ -195,7 +197,7 @@
     {
       "title": "Más allá del Fútbol",
       "is_cortos": true,
-      "poster": "",
+      "poster": "/assets/tercertiempo/sesion-mas-alla-del-futbol.jpg",
       "duration": "50 min",
       "film_list": [
         {
@@ -276,12 +278,13 @@
       "ticket_url": "https://idartes.checkout.tuboleta.com/selection/event/date?productId=10230505466237",
       "flags": "🇪🇸🇨🇴🇨🇱",
       "country": "España, Colombia, Chile",
-      "day_order": 1
+      "day_order": 1,
+      "posterSource": "custom"
     },
     {
       "title": "Barrio Caliente",
       "is_cortos": true,
-      "poster": "",
+      "poster": "/assets/tercertiempo/sesion-barrio-caliente.jpg",
       "duration": "118 min",
       "film_list": [
         {
@@ -325,12 +328,13 @@
       "ticket_url": "https://idartes.checkout.tuboleta.com/selection/event/date?productId=10230505466238",
       "flags": "🇵🇷🇲🇽",
       "country": "Puerto Rico, México",
-      "day_order": 2
+      "day_order": 2,
+      "posterSource": "custom"
     },
     {
       "title": "Pedal y Resistencia",
       "is_cortos": true,
-      "poster": "",
+      "poster": "/assets/tercertiempo/sesion-pedal-y-resistencia.jpg",
       "duration": "71 min",
       "film_list": [
         {
@@ -372,12 +376,13 @@
       "ticket_url": "https://idartes.checkout.tuboleta.com/selection/event/date?productId=10230505466239",
       "flags": "🇪🇸🇲🇽",
       "country": "España, México",
-      "day_order": 3
+      "day_order": 3,
+      "posterSource": "custom"
     },
     {
       "title": "Fútbol Poético",
       "is_cortos": true,
-      "poster": "",
+      "poster": "/assets/tercertiempo/sesion-futbol-poetico.jpg",
       "duration": "81 min",
       "film_list": [
         {
@@ -419,12 +424,13 @@
       "ticket_url": "https://idartes.checkout.tuboleta.com/selection/event/date?productId=10230505466240",
       "flags": "🇨🇴🇲🇽",
       "country": "Colombia, México",
-      "day_order": 1
+      "day_order": 1,
+      "posterSource": "custom"
     },
     {
       "title": "Refugio en la Cancha",
       "is_cortos": true,
-      "poster": "",
+      "poster": "/assets/tercertiempo/sesion-refugio-en-la-cancha.jpg",
       "duration": "131 min",
       "film_list": [
         {
@@ -480,12 +486,13 @@
       "ticket_url": "https://idartes.checkout.tuboleta.com/selection/event/date?productId=10230505466241",
       "flags": "🇪🇸🇺🇸🇸🇳",
       "country": "España, Estados Unidos, Senegal",
-      "day_order": 2
+      "day_order": 2,
+      "posterSource": "custom"
     },
     {
       "title": "Contra Todo",
       "is_cortos": true,
-      "poster": "",
+      "poster": "/assets/tercertiempo/sesion-contra-todo.jpg",
       "duration": "115 min",
       "film_list": [
         {
@@ -528,12 +535,13 @@
       "ticket_url": "https://idartes.checkout.tuboleta.com/selection/event/date?productId=10230505466242",
       "flags": "🇺🇸🇲🇽",
       "country": "Estados Unidos, México",
-      "day_order": 1
+      "day_order": 1,
+      "posterSource": "custom"
     },
     {
       "title": "El Diego",
       "is_cortos": true,
-      "poster": "",
+      "poster": "/assets/tercertiempo/sesion-el-diego.jpg",
       "duration": "110 min",
       "film_list": [
         {
@@ -589,7 +597,8 @@
       "is_free": true,
       "flags": "🇦🇷🇮🇹",
       "country": "Argentina, Italia",
-      "day_order": 3
+      "day_order": 3,
+      "posterSource": "custom"
     },
     {
       "title": "Juegan como niñas",
@@ -618,7 +627,7 @@
     {
       "title": "Territorios en Juego",
       "is_cortos": true,
-      "poster": "",
+      "poster": "/assets/tercertiempo/sesion-territorios-en-juego.jpg",
       "duration": "57 min",
       "film_list": [
         {
@@ -661,12 +670,13 @@
       "ticket_url": "https://idartes.checkout.tuboleta.com/selection/event/date?productId=10230505466244",
       "flags": "🇵🇹🇪🇸🇨🇷🇫🇷",
       "country": "Portugal, España, Costa Rica, Francia",
-      "day_order": 3
+      "day_order": 3,
+      "posterSource": "custom"
     },
     {
       "title": "Brasil: Juego, memoria y pasión",
       "is_cortos": true,
-      "poster": "",
+      "poster": "/assets/tercertiempo/sesion-brasil.jpg",
       "duration": "108 min",
       "film_list": [
         {
@@ -723,12 +733,13 @@
       "ticket_url": "https://idartes.checkout.tuboleta.com/selection/event/date?productId=10230505466245",
       "flags": "🇧🇷",
       "country": "Brasil",
-      "day_order": 4
+      "day_order": 4,
+      "posterSource": "custom"
     },
     {
       "title": "Programa de cortos: Raíces del juego",
       "is_cortos": true,
-      "poster": "",
+      "poster": "/assets/tercertiempo/sesion-raices-locales.jpg",
       "duration": "105 min",
       "film_list": [
         {
@@ -782,7 +793,8 @@
       "_pendiente": "PROVISIONAL: PDF dice ambas CEFEs 17-18; ficha Cinemateca solo existe en Fontanar → El Tunal pendiente de confirmación",
       "flags": "🇪🇸🇨🇴🇲🇽",
       "country": "España, Colombia, México",
-      "day_order": 2
+      "day_order": 2,
+      "posterSource": "custom"
     },
     {
       "title": "Juegan como niñas",

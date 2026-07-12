@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `1a3f7fa Merge #295 — secciones oficiales Tercer Tiempo + EN`
+> Último commit: `2174be5 Merge #296 — enrich TMDB Tercer Tiempo (2 verificados)`
 
 ---
 
