@@ -214,6 +214,14 @@ export async function subscribePlanCloud(){
   // token before connecting to a Channel"). setAuth aquí garantiza el orden aunque el
   // handler de auth aún no haya corrido (carrera de arranque en WKWebView).
   try{ const{data:{session}}=await _sb.auth.getSession(); if(session?.access_token) await _sb.realtime.setAuth(session.access_token); }catch(e){ /* noop */ }
+  // CARRERA (mismo patrón que delays-cloud, cazado por T39): si (user,festival)
+  // cambió durante el await, abortar — si no, quedaba un canal zombie suscrito y
+  // el próximo _sb.channel() del mismo topic fallaba con ".on() after subscribe()".
+  if(_planChannelKey!==key) return;
+  try{
+    const _zombie=_sb.getChannels && _sb.getChannels().find(c=>c.topic==='realtime:ufs-'+key);
+    if(_zombie) _sb.removeChannel(_zombie);
+  }catch(e){ /* noop */ }
   _planChannel=_sb.channel('ufs-'+key)
     .on('postgres_changes',
       { event:'*', schema:'public', table:'user_festival_state', filter:'user_id=eq.'+uid },
