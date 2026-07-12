@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `49eb6a2 Merge #300 — i18n unificado (mecanismo único + LANGS + detección única, es/en) + content pass TT`
+> Último commit: `ae47b0d Merge #301 — enricher gate v2: Letterboxd 2→12 en Tercer Tiempo`
 
 ---
 

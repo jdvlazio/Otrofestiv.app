@@ -579,7 +579,7 @@
         },
         {
           "title": "El documental del 10",
-          "director": "Damian Originario",
+          "director": "Lucas Costa, Damián Originario",
           "year": 2025,
           "country": "Argentina",
           "duration": "92 min",
@@ -588,7 +588,8 @@
           "poster": "/assets/tercertiempo/el-documental-del-10.jpg",
           "posterSource": "custom",
           "flags": "🇦🇷",
-          "synopsis_en": "A cultural and deeply human look at the life of Diego Maradona, told through music, literature, poetry and the arts. More than forty artists reflect on the mark El Diez left on their work and their lives."
+          "synopsis_en": "A cultural and deeply human look at the life of Diego Maradona, told through music, literature, poetry and the arts. More than forty artists reflect on the mark El Diez left on their work and their lives.",
+          "lbSlug": "el-documental-del-10"
         }
       ],
       "day": "2026-07-17",
