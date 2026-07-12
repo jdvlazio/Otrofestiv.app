@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `b2509ad Merge #299 — fix coherencia de idioma al arranque`
+> Último commit: `aded81e refactor(i18n): mecanismo estático único + helper de sinopsis + detección única + retiro de PT`
 
 ---
 

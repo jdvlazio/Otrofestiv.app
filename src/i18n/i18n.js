@@ -1291,6 +1291,13 @@ export const _I18N = {
 // _lang vive en state (roster bridged). El init (storage.getLang + detección de
 // navegador) y setLang viven en main.js. Aquí t() lo lee como bare-global → bridge.
 
+// LANGS — lista canónica de idiomas ACTIVOS. Es la ÚNICA fuente para validar un
+// código de idioma (init de main.js, guard de setLang). Nota: _I18N puede tener
+// más bloques (pt quedó inerte para el futuro) — tener diccionario NO es estar
+// activo; validar contra _I18N fue la puerta de atrás por la que un 'pt' zombi
+// guardado en localStorage podía reactivarse.
+export const LANGS = ['es', 'en'];
+
 export function t(key, params){
   let str = (_I18N[_lang] && _I18N[_lang][key]) || (_I18N['es'][key]) || key;
   if(params) str = str.replace(/\{(\w+)\}/g, (_,k) => params[k] !== undefined ? params[k] : `{${k}}`);
@@ -1338,9 +1345,15 @@ export function _applyI18nDOM(){
     const val=t(key);
     if(val && val!==key) el.title=val;
   });
-  // Lang toggle — marcar botón activo
+  // Lang toggle — marcar botón activo Y reflejar su bandera en el trigger cerrado.
+  // La bandera se sincroniza AQUÍ (no en una función aparte que haya que acordarse
+  // de llamar — ese patrón fue la causa del bug de mezcla al arranque): _applyI18nDOM
+  // es el único responsable de que TODO el estado visual de idioma sea coherente.
   document.getElementById('lang-btn-es')?.classList.toggle('active', _lang==='es');
   document.getElementById('lang-btn-en')?.classList.toggle('active', _lang==='en');
+  const _activeFlag=document.querySelector('#lang-dropdown .lang-opt.active .lang-opt-flag');
+  const _trgFlag=document.getElementById('lang-trigger-flag');
+  if(_activeFlag && _trgFlag) _trgFlag.textContent=_activeFlag.textContent;
   // dtab labels — los 7 días de la semana son constantes universales
   // Se calculan desde el ISO date del día, sin depender de datos del festival
   const _DOW_ES=['DOM','LUN','MAR','MIÉ','JUE','VIE','SÁB'];

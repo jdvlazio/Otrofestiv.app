@@ -14,7 +14,7 @@ import { dayFullyPassed, festivalEnded, simNow, simTodayStr } from '../domain/ti
 import { screeningPassed } from '../domain/film.js';
 import { state } from '../state/state.js';
 import { storage } from '../storage/storage.js';
-import { t, _I18N, _applyI18nDOM } from '../i18n/i18n.js';
+import { t, LANGS, _applyI18nDOM } from '../i18n/i18n.js';
 
 // Sentinel: toggles de prioridad NO deben nular cachedResult ni auto-recalcular
 // — el resultado se preserva para detectar "stale" (prio strip Estado 3).
@@ -218,7 +218,7 @@ export function initProgramaModeBar(){
 export function setLang(code){
   // 1. READ + 2. GUARD
   const {_lang, _activeFestId} = state.snapshot();
-  if(!_I18N[code]) return;
+  if(!LANGS.includes(code)) return; // solo idiomas ACTIVOS (no todo bloque de _I18N)
   if(code === _lang) return;
   // Fade out content containers (UI effect inmediato)
   const _fadeEls=['programa-list','ag-view','grid'].map(id=>document.getElementById(id)).filter(Boolean);
@@ -302,10 +302,6 @@ export function selectLang(el){
   setLang(code);
 }
 
-// Inicializa la bandera del trigger desde la opción activa (marcada por
-// _applyI18nDOM en boot). Llamado una vez en el bootstrap.
-export function _syncLangTrigger(){
-  const active=document.querySelector('#lang-dropdown .lang-opt.active .lang-opt-flag');
-  const trgFlag=document.getElementById('lang-trigger-flag');
-  if(active && trgFlag) trgFlag.textContent=active.textContent;
-}
+// _syncLangTrigger fue absorbido por _applyI18nDOM (i18n.js): la bandera del
+// trigger se sincroniza en el mismo pase que marca .active — una función menos
+// que acordarse de llamar en el boot.

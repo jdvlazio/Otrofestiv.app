@@ -487,7 +487,7 @@ export function _openCombinedFilmSheet(filmData){
       ?`<img class="pel-sheet-poster" src="${posterUrl}" data-title="${(title||"").replace(/"/g,'&quot;')}" loading="lazy" onerror="_cortoSheetPosterErr(this)" alt="">`
       :`<div class="pel-sheet-poster-ph">🎬</div>`;
   const metaLine=[director,year].filter(Boolean).join(' · ');
-  const lbHref=lbSlug?`https://letterboxd.com/film/${lbSlug}/`:lbUrl(title);
+  const lbHref=lbUrlForFilm({title,lbSlug}); // guard de slugs incluido (marcador ⚠ jamás llega al href)
   const ps=document.getElementById('pel-sheet');
   if(ps) ps.scrollTop=0;
   _pushSheetState();
@@ -504,7 +504,7 @@ export function _openCombinedFilmSheet(filmData){
     <div class="pel-sheet-divider"></div>
     <div class="pel-sheet-section-lbl">${t('label_sinopsis')}</div>
     <div class="pel-sheet-synopsis">${locSynopsis(filmData)}</div>
-    <a class="c-lb pel-sheet-lb" href="${lbHref}" target="_blank" rel="noopener">${LB_SVG}<span class="c-lb-text pel-sheet-lb-text">Letterboxd</span></a>
+    <a class="c-lb pel-sheet-lb" href="${lbHref||'#'}" target="_blank" rel="noopener"${!lbHref?' style="display:none"':''}>${LB_SVG}<span class="c-lb-text pel-sheet-lb-text">Letterboxd</span></a>
     <div class="pel-sheet-divider"></div>
   `;
   const _psReset=document.getElementById('pel-sheet');
@@ -1110,7 +1110,10 @@ export function lbUrl(title){
 
 export function lbUrlForFilm(f){
   if(!f) return null;
-  if(f.lbSlug) return f.lbSlug.startsWith('http')?f.lbSlug:`https://letterboxd.com/film/${f.lbSlug}/`;
+  // Guard: el pipeline marca slugs sin resolver con "⚠️ LB PENDIENTE" — un marcador
+  // NUNCA es un slug (produciría un href roto). Solo se acepta un slug plausible.
+  const s=f.lbSlug;
+  if(s && !s.startsWith('⚠') && /^[\w:/.-]+$/.test(s)) return s.startsWith('http')?s:`https://letterboxd.com/film/${s}/`;
   return lbUrl(f.title);
 }
 

@@ -29,7 +29,7 @@ import { onDomReady } from './util/ready.js';
 
 // ── Step 4: i18n.js (import — _I18N + t + _applyI18nDOM). _lang vive en state
 //   (bridge); la init eval-time de _lang se queda en main.js, setLang → pipeline.js (8d-3).
-import { _I18N, t, _applyI18nDOM } from './i18n/i18n.js';
+import { LANGS, t, _applyI18nDOM } from './i18n/i18n.js';
 
 // ── Step 5: domain/ (funciones puras). Importan config (DEFAULT_DURATION_MIN,
 //   FESTIVAL_BUFFER, FESTIVAL_CONFIG) y leen festival-state vía bridge. El worker
@@ -103,7 +103,7 @@ import {
 // ── Step 7c: controller/pipeline.js — render dispatchers. ────────────────────
 import {
   renderActiveView, switchMainNav, showDayView, showAgView, updateAgTab, _reRenderIntereses, _rerenderFilmList, _getProgramaPhase, _updateProgramaActiveFilter, initProgramaModeBar, setLang,
-  toggleLangDropdown, selectLang, closeLangDropdown, _syncLangTrigger,
+  toggleLangDropdown, selectLang, closeLangDropdown,
 } from './controller/pipeline.js';
 
 // ── Step 7d-1: controller/sheets-controller.js — sheets+rating+AV+toast+utils. ──
@@ -346,10 +346,11 @@ document.addEventListener('click', function(e) {
 _lang = (()=>{
   // Fuente ÚNICA: la detección pre-paint del HTML publica window.__otfLang (lang
   // guardado → navigator.language, es/en). Acá sólo la consumimos, validada contra
-  // el diccionario. Fallback defensivo por si el módulo corre sin el inline (nunca
-  // debería): storage.getLang() → 'es'.
+  // LANGS (idiomas ACTIVOS — no contra _I18N, que conserva bloques inertes como pt
+  // y reactivaría un 'pt' zombi guardado). Fallback defensivo por si el módulo
+  // corre sin el inline (nunca debería): storage.getLang() → 'es'.
   const detected = (typeof window!=='undefined' && window.__otfLang) || storage.getLang();
-  if(detected && _I18N[detected]) return detected;
+  if(detected && LANGS.includes(detected)) return detected;
   return 'es';
 })();
 
@@ -633,7 +634,7 @@ FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202607121620';
+const BUILD_VERSION='202607121643';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';
@@ -1204,8 +1205,7 @@ document.addEventListener('keydown',function(e){
   // está listo. NUNCA usar addEventListener('DOMContentLoaded') desnudo en src/
   // (lo prohíbe validate.py [dom-ready-guard]).
   onDomReady(()=>{
-    _applyI18nDOM();
-    _syncLangTrigger();
+    _applyI18nDOM(); // incluye la bandera del trigger (absorbió _syncLangTrigger)
   });
 // ── Event delegation para js-open-pel → openPelSheet ──────────────────────
 // capture:true garantiza que el evento llega antes del stopPropagation
