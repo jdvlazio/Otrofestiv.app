@@ -103,6 +103,29 @@ Columnas del CSV — **clase organizador** (lo que solo el festival sabe):
 
 5. **Orden editorial de secciones** — el orden en que las secciones aparecen por primera vez en `films[]` define el orden de display en el Grid. Organizar el array con intención curatorial: secciones principales primero, eventos y shorts al final. Primera aparición = posición en el Grid.
 
+#### Reglas de Fase 1 probadas en Tercer Tiempo 2026 (fuente = PDF + fichas web)
+
+1. **Sección = NOMBRE OFICIAL, jamás inventado.** Si el festival nombra sus
+   sesiones/secciones ("Juego Mental", "Refugio en la Cancha"), esos nombres SON
+   las secciones de la app. Agrupar bajo etiquetas genéricas propias ("Selección
+   Oficial") viola la doctrina de fuentes — costó un re-seccionado completo en TT
+   (PR #295, cazado por Juan).
+2. **Inventariar TODAS las imágenes de cada ficha, no solo el texto.** Cada ficha
+   de la Cinemateca publica el **afiche oficial de la sesión** (título + stills):
+   ese afiche es la fuente canónica del póster de bloque (`is_cortos`). Un
+   extractor que solo lee texto se los pierde (pasó en TT; 12 afiches recuperados
+   en pase posterior, PR #297). Gate: por cada ficha leída, listar sus
+   `<img>`/`og:image` y clasificarlas (afiche de sesión / still / logo) antes de
+   cerrar la Fase 1.
+3. **Funciones provisionales → `_pendiente`.** Cuando la fuente operativa
+   (fichas/boletas) no confirma algo que otra fuente anuncia (ej. PDF dice "ambas
+   CEFEs", fichas solo publican una), se modela SOLO lo confirmado y el resto se
+   marca `_pendiente: "<qué falta y contra qué fuente se resuelve>"` — visible en
+   tools/audit.html, re-sondeable durante el festival.
+4. **Ticketing por función.** Si el material oficial trae link de compra por
+   sesión (ej. URIs en anotaciones del PDF, mapeadas por página), poblar
+   `ticket_url` POR FILM — pisa al global en el CTA del sheet.
+
 **Gates de salida (bloqueantes):**
 - [ ] Cero films sin `slug`
 - [ ] Cero títulos en ALLCAPS (3+ palabras consecutivas en mayúsculas)
@@ -172,20 +195,24 @@ Columnas del CSV — **clase organizador** (lo que solo el festival sabe):
 
 > ⚠️ **Lección aprendida (Tribeca 2026):** El algoritmo de matching usa `year` como criterio de validación. Si `year` viene corrupto del scraping (como ocurrió con 37 films de Tribeca), la validación falla silenciosamente y TMDB asigna datos de un film completamente distinto. `synopsis_en` de 64/107 films describía otra película. Ningún campo de TMDB puede considerarse verificado sin revisión humana previa.
 
-**Algoritmo de matching estricto — los 4 criterios deben cumplirse simultáneamente:**
+**Algoritmo de matching estricto — gate v2 (afinado con los 32 casos reales de Tercer Tiempo 2026, PR #301):**
 
-| Criterio | Regla |
+| Criterio | Regla v2 |
 |----------|-------|
-| Título | Similitud > 0.6 con título TMDB o título original |
-| Año | Diferencia ≤ 1 año (si ambos disponibles) |
-| Director | Al menos un apellido coincide con crew[job=Director] |
-| País | Al menos un país coincide con `production_countries` |
+| Título | Similitud > 0.6 con título TMDB o título original (obligatorio siempre) |
+| Año | Diferencia ≤ 1; hasta ≤ 2 **solo si** el director corrobora (año de festival vs año de estreno difieren con frecuencia) |
+| Director | Intersección de **tokens de nombres completos** exigiendo apellido exacto de un lado como token del otro — `Guareño` matchea `Guareño Genesta` (apellidos compuestos), `Costa` NO matchea `Originario` |
+| País | Match laxo por substring **tras normalizar ES→EN** (`CTY_ES2EN`: nuestro JSON guarda 'España', TMDB en-US responde 'Spain' — sin el mapa, jamás coincidían) |
 
-- Si algún criterio falla → el film queda **sin TMDB** (no se asigna ningún dato)
-- Los rechazos se loguean para revisión manual
-- Se consultan hasta 3 resultados de búsqueda por film antes de descartar
-- Se prueban `movie` y `tv` en ese orden
-- **Implementado y testeado:** `enrich-festival.py` aplica este gate (función pura `match_ok`) + **corroboración mínima de 2 criterios** entre {año, director, país} — el título solo **nunca** alcanza (es lo que dejó pasar a Brujo) — + log de rechazos. Validar con `python3 scripts/enrich-festival.py --selftest`. El script escribe **solo `genre` y `year`**.
+- Corroboración mínima: **≥2 de {año, director, país}** evaluables y aprobados — el título solo **nunca** alcanza (caso Brujo). Excepción única: **registro TMDB escaso** (cine nicho sin año/país cargados) se acepta con 1 corroborante SOLO si es el director Y título ≥0.9 (director+título casi exacto no es el caso Brujo).
+- Si un criterio evaluable falla → el film queda **sin TMDB** (no se asigna ningún dato); los rechazos se loguean.
+- Búsqueda con variantes cuando la query literal da 0 candidatos: sin comillas tipográficas, sin subtítulo tras `: . —`.
+- Se consultan hasta 3 resultados por (media × query); `movie` y `tv` en ese orden.
+- **Implementado y testeado:** `enrich-festival.py` (función pura `match_ok`). `python3 scripts/enrich-festival.py --selftest` corre 14 fixtures — incluidos los 4 falsos rechazos de TT que deben pasar y los 4 homónimos genuinos que deben seguir fallando. El script escribe **solo `genre`, `year` y `lbSlug`**.
+
+**Doctrina de rechazos (lección TT 2026 — dos veces):**
+1. **Un rechazo del gate NO es evidencia de ausencia en TMDB/LB.** Antes de concluir "no existe", auditar los rechazos cuyo candidato tiene título ~1.0: en TT, 10 de esos "rechazos" eran la película correcta con el gate viejo defectuoso.
+2. **Rechazo por director ⇒ verificar el crédito de la FUENTE contra el registro canónico** (TMDB/LB + prensa). En TT, la ficha de la Cinemateca acreditaba al guionista como director (*El documental del 10*): el gate rechazaba "correctamente" un dato equivocado. El fix es corregir el dato, no aflojar el gate.
 
 **Campos aceptados de TMDB (solo si vacíos en el JSON):**
 - `genre` → campo en el objeto film (si vacío) — error tolerable, no visible como dato crítico
@@ -264,11 +291,31 @@ propio) sacado del título original. Gates: `[poster-editorial-unique]` y
 
 ---
 
-### Fase 3b · Letterboxd slugs `[Data Engineer — Chrome tab obligatorio]`
+### Fase 3b · Letterboxd slugs `[Data Engineer]`
 
-**Objetivo:** Poblar `lbSlugs{}` en el JSON del festival para que cada film muestre enlace a Letterboxd.
+**Objetivo:** Poblar `lbSlug` por film para que cada film muestre enlace a Letterboxd.
 
-> ⚠️ **Regla absoluta:** Los slugs de Letterboxd NUNCA se infieren desde el título. El slug se extrae directamente del DOM de Letterboxd y se verifica individualmente. Inferir slugs produce errores silenciosos — un slug plausible puede apuntar a un film completamente distinto.
+> ⚠️ **Regla absoluta:** Los slugs de Letterboxd NUNCA se infieren desde el título. El slug se resuelve desde un identificador verificado (TMDB id que pasó el gate) o se extrae del DOM de Letterboxd y se verifica individualmente. Inferir slugs produce errores silenciosos — un slug plausible puede apuntar a un film completamente distinto.
+
+#### Método PRIMARIO — vía enricher (automático, desde TT 2026)
+
+`enrich-festival.py` Fase 2 resuelve el slug canónico vía `letterboxd.com/tmdb/{id}/`
+(redirect → og:url) **solo para matches que pasaron el gate v2** — la verificación
+identidad-película ya la hizo el gate. Comportamiento:
+- Sin match → el campo `lbSlug` queda **AUSENTE** (la UI oculta el link). El
+  marcador `⚠️ LB PENDIENTE` **ya no se escribe al JSON** (viajó a prod en TT y
+  habría producido hrefs rotos); los pendientes salen solo en el log del run.
+- **Verificación final obligatoria:** por cada slug nuevo, GET a
+  `letterboxd.com/film/{slug}/` → 200 + director de la página coincide con el
+  nuestro (en TT: 12/12 verificados así antes del merge).
+
+#### Método de RESCATE — Chrome tab / manual (para sin-match que se encuentren a mano)
+
+Cuando alguien encuentra en LB un film que el enricher no resolvió: primero
+auditar POR QUÉ (¿falso rechazo del gate? ¿crédito equivocado en la fuente? —
+ver doctrina de rechazos en Fase 3); corregir la causa raíz y re-correr. Solo si
+el film genuinamente no está en TMDB, insertar el slug a mano con la
+verificación individual de abajo.
 
 #### Paso 1 — Extraer slugs desde listas de Letterboxd
 
@@ -486,3 +533,8 @@ producción durante FICMontañas 2026:
 | Títulos en ALLCAPS | ALEJANDRO SANZ, MOUTH FULL OF GOLDS visibles en producción | Gate bloqueante en validator |
 | `synopsis_en` de TMDB sin validar | Sinopsis de films incorrectos aparecen en la UI | Misma validación estricta que posters |
 | lbSlugs inferidos desde título | Slugs plausibles apuntando a films distintos (ej: `cotton-fever-1` existía pero era otro film; `ascension-2026` no existía; `against-the-flow` era un film diferente al de Tribeca) | Método Chrome tab obligatorio: extraer del DOM de listas LB + verificar cada URL individualmente |
+| Secciones inventadas (TT 2026) | "Selección Oficial" agrupaba sesiones que el festival nombra una a una — re-seccionado completo (PR #295) | Regla Fase 1: sección = nombre oficial de sesión, jamás etiqueta propia |
+| Extractor solo-texto ignoró afiches de sesión (TT 2026) | 12 pósters de bloque oficiales no vistos; se recuperaron en pase posterior (PR #297) | Gate Fase 1: inventariar y clasificar TODAS las imágenes de cada ficha |
+| Gate TMDB con falsos rechazos estructurales (TT 2026) | 10 películas con match título-1.00 rechazadas (país ES vs EN, apellidos compuestos, registro escaso, año festival vs estreno) → concluimos "no existen en LB" y era falso (lo cazó Juan) | Gate v2 (PR #301) + fixtures reales en `--selftest` + doctrina: rechazo ≠ ausencia, auditar rechazos con título ~1.0 |
+| Marcador `⚠️ LB PENDIENTE` escrito al JSON (TT 2026) | Viajó a prod; habría producido hrefs rotos a Letterboxd | El enricher ya no escribe marcadores (pendientes solo en log) + guard en `lbUrlForFilm` |
+| Crédito de la fuente equivocado (TT 2026) | Ficha Cinemateca acreditaba al guionista como director (*El documental del 10*) → el gate rechazaba "bien" un dato malo | Doctrina: rechazo por director ⇒ verificar crédito contra registro canónico (TMDB/LB + prensa) y corregir el DATO, no aflojar el gate (PR #302) |
