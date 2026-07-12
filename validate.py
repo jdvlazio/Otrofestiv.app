@@ -1538,6 +1538,37 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar event delegation: {_e}')
 
+# ── CHECK: [dom-ready-guard] ──────────────────────────────────────────────────
+# main.js se INYECTA como módulo (store-gate) → DOMContentLoaded/load ya
+# dispararon cuando el módulo evalúa. Un addEventListener('DOMContentLoaded'|'load')
+# DESNUDO registra para un evento pasado → nunca corre (fue el bug de idioma:
+# UI estática en ES mientras el contenido salía en el idioma real). El patrón
+# correcto es onDomReady/onWindowLoad (src/util/ready.js), que ejecutan ya si el
+# DOM alcanzó el estado. Este check prohíbe el listener desnudo en src/.
+check = 'dom-ready-guard'
+try:
+    import re as _re2
+    _READY_RE = _re2.compile(r"addEventListener\(\s*['\"](?:DOMContentLoaded|load)['\"]")
+    _offenders = []
+    for _root, _dirs, _files in os.walk('src'):
+        for _fn in _files:
+            if not _fn.endswith('.js'): continue
+            _fp = os.path.join(_root, _fn)
+            if _fp.replace('\\', '/') == 'src/util/ready.js': continue  # la casa de los helpers
+            _txt = open(_fp, encoding='utf-8').read()
+            for _m in _READY_RE.finditer(_txt):
+                _lstart = _txt.rfind('\n', 0, _m.start()) + 1
+                _prefix = _txt[_lstart:_m.start()]
+                if '//' in _prefix or '*' in _prefix: continue  # match dentro de comentario
+                _ln = _txt[:_m.start()].count('\n') + 1
+                _offenders.append(f'{_fp}:{_ln}')
+    if _offenders:
+        fail(check, 'addEventListener(DOMContentLoaded|load) desnudo — usar onDomReady/onWindowLoad (src/util/ready.js), el módulo se inyecta tarde: ' + ', '.join(_offenders))
+    else:
+        ok(check, 'sin listeners DOMContentLoaded/load desnudos en src/ (usan los guards de ready.js)')
+except Exception as _e:
+    warn(check, f'no se pudo verificar dom-ready-guard: {_e}')
+
 # ── CHECK: [section-display-raw] ──────────────────────────────────────────────
 # REGLA INAMOVIBLE: todo display de nombre de sección pasa por _secLabel()/
 # _secLabelFull(). Flagea `X.section` (incl. optional chaining `X?.section`)

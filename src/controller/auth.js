@@ -5,6 +5,7 @@ import { _renderProgramaContent } from '../view/programa.js';
 import { _cloudLoad, _cloudSave, _sbUpdateUI, subscribePlanCloud, unsubscribePlanCloud, _hasLocalPlan } from './persistence.js';
 import { showDayView } from './pipeline.js';
 import { t } from '../i18n/i18n.js';
+import { onWindowLoad } from '../util/ready.js';
 
 // _sb/_sbUser viven en main.js (backing del STATE BRIDGE); aquí solo el flag interno.
 let _sbReady=false;
@@ -12,7 +13,10 @@ const _SB_URL='https://eytxrvbnwzxuedbmnnqr.supabase.co';
 const _SB_KEY='sb_publishable_-edEGNPRmpsRy7ThJMWtdw_bs6IVZSC';
 
 export function _sbInit(){
-  if(typeof supabase==='undefined'){window.addEventListener('load',_sbInit,{once:true});return;}
+  // Mismo bug de timing que el i18n: si el módulo se evalúa tras 'load', un
+  // addEventListener('load') nunca corre y supabase no inicializa. onWindowLoad
+  // reintenta ya si la página ya cargó. Ver src/util/ready.js.
+  if(typeof supabase==='undefined'){onWindowLoad(_sbInit);return;}
   try{
     _sb=supabase.createClient(_SB_URL,_SB_KEY);
     _sb.auth.onAuthStateChange(async(event,session)=>{

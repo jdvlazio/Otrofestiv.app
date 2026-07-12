@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `8dca9fd Merge #297 — afiches oficiales de sesión Tercer Tiempo`
+> Último commit: `7e5f9fc Merge #298 — Tercer Tiempo sin Fan Zone (solo cine)`
 
 ---
 
