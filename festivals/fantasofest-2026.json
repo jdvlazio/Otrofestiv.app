@@ -1,0 +1,489 @@
+{
+  "_provenance": true,
+  "ticket_url": "https://fantasolab.com/fantasofest/",
+  "ticketing_model": "mixed",
+  "venues": {
+    "Cinemateca Sala Capital": {
+      "short": "Cinemateca de Bogotá",
+      "city": "Bogotá",
+      "address": "Carrera 3 No. 19-10",
+      "lat": 4.6032463,
+      "lng": -74.06758
+    },
+    "Cinemateca Sala 2": {
+      "short": "Cinemateca de Bogotá",
+      "city": "Bogotá",
+      "address": "Carrera 3 No. 19-10",
+      "lat": 4.6032463,
+      "lng": -74.06758
+    },
+    "Cinemateca Sala 3": {
+      "short": "Cinemateca de Bogotá",
+      "city": "Bogotá",
+      "address": "Carrera 3 No. 19-10",
+      "lat": 4.6032463,
+      "lng": -74.06758
+    }
+  },
+  "films": [
+    {
+      "title": "Gaua",
+      "director": "Paul Urkijo Alijo",
+      "year": 2025,
+      "country": "España",
+      "duration": "93 min",
+      "synopsis": "Montañas vascas, siglo XVII. En plena caza de brujas, Kattalin huye de su marido, abandonando el caserío en mitad de la noche. Perdida en la negrura del bosque, siente una presencia que la persigue. En su camino, se topa con tres mujeres que, mientras lavan la ropa junto al río, comparten cuentos de miedo y habladurías del pueblo. Para su asombro, Kattalin acabará convirtiéndose en parte de esas mismas historias.",
+      "synopsis_lang": "es",
+      "day": "2026-07-13",
+      "time": "16:30",
+      "venue": "Cinemateca Sala Capital",
+      "section": "🎬 Largometrajes",
+      "_src": {
+        "url": "https://fantasolab.com/fantasofest/",
+        "date": "2026-07-14"
+      },
+      "ticket_url": "https://compras.tuboleta.com/selection/event/date?productId=10230505466246",
+      "poster": "/assets/fantasofest/gaua.jpg",
+      "posterSource": "custom",
+      "flags": "🇪🇸",
+      "day_order": 1,
+      "genre": "Drama, Terror",
+      "lbSlug": "gaua-the-night",
+      "synopsis_en": "Basque mountains, 17th century. At the height of the witch hunts, Kattalin flees her husband, abandoning the farmhouse in the dead of night. Lost in the blackness of the forest, she senses a presence stalking her. Along the way she comes upon three women who, washing clothes by the river, trade ghost stories and village gossip. To her astonishment, Kattalin will end up becoming part of those very tales."
+    },
+    {
+      "title": "Gaua",
+      "director": "Paul Urkijo Alijo",
+      "year": 2025,
+      "country": "España",
+      "duration": "93 min",
+      "synopsis": "Montañas vascas, siglo XVII. En plena caza de brujas, Kattalin huye de su marido, abandonando el caserío en mitad de la noche. Perdida en la negrura del bosque, siente una presencia que la persigue. En su camino, se topa con tres mujeres que, mientras lavan la ropa junto al río, comparten cuentos de miedo y habladurías del pueblo. Para su asombro, Kattalin acabará convirtiéndose en parte de esas mismas historias.",
+      "synopsis_lang": "es",
+      "day": "2026-07-19",
+      "time": "19:30",
+      "venue": "Cinemateca Sala 3",
+      "section": "🎬 Largometrajes",
+      "_src": {
+        "url": "https://fantasolab.com/fantasofest/",
+        "date": "2026-07-14"
+      },
+      "ticket_url": "https://compras.tuboleta.com/selection/event/date?productId=10230505466246",
+      "poster": "/assets/fantasofest/gaua.jpg",
+      "posterSource": "custom",
+      "flags": "🇪🇸",
+      "day_order": 7,
+      "genre": "Drama, Terror",
+      "lbSlug": "gaua-the-night",
+      "synopsis_en": "Basque mountains, 17th century. At the height of the witch hunts, Kattalin flees her husband, abandoning the farmhouse in the dead of night. Lost in the blackness of the forest, she senses a presence stalking her. Along the way she comes upon three women who, washing clothes by the river, trade ghost stories and village gossip. To her astonishment, Kattalin will end up becoming part of those very tales."
+    },
+    {
+      "title": "El Ritual del Nahual",
+      "director": "Carlos Matienzo Serment",
+      "year": 2026,
+      "country": "México",
+      "duration": "80 min",
+      "synopsis": "Ambientada en los espesos bosques de San Luis Potosí, narra la historia de Gabriel, un forajido herido que es rescatado por dos curanderas en una aldea marcada por el miedo. Mientras un agente federal investiga una serie de asesinatos infantiles, una fuerza ancestral despierta: Tekenchu, una criatura mística —mitad hombre, mitad bestia— que no solo observa, sino que juzga y castiga.",
+      "synopsis_lang": "es",
+      "day": "2026-07-15",
+      "time": "19:30",
+      "venue": "Cinemateca Sala Capital",
+      "section": "🎬 Largometrajes",
+      "_src": {
+        "url": "https://fantasolab.com/fantasofest/",
+        "date": "2026-07-14"
+      },
+      "ticket_url": "https://compras.tuboleta.com/selection/event/date?productId=10230505466247",
+      "poster": "/assets/fantasofest/el-ritual-del-nahual.jpg",
+      "posterSource": "custom",
+      "flags": "🇲🇽",
+      "day_order": 3,
+      "genre": "Fantasía, Terror",
+      "lbSlug": "tekenchu-the-rite-of-the-nahuales",
+      "synopsis_en": "Set in the dense forests of San Luis Potosí, it follows Gabriel, a wounded outlaw rescued by two healers in a village gripped by fear. As a federal agent investigates a string of child murders, an ancestral force awakens: Tekenchu, a mystical creature —half man, half beast— that does not merely watch, but judges and punishes."
+    },
+    {
+      "title": "El Ritual del Nahual",
+      "director": "Carlos Matienzo Serment",
+      "year": 2026,
+      "country": "México",
+      "duration": "80 min",
+      "synopsis": "Ambientada en los espesos bosques de San Luis Potosí, narra la historia de Gabriel, un forajido herido que es rescatado por dos curanderas en una aldea marcada por el miedo. Mientras un agente federal investiga una serie de asesinatos infantiles, una fuerza ancestral despierta: Tekenchu, una criatura mística —mitad hombre, mitad bestia— que no solo observa, sino que juzga y castiga.",
+      "synopsis_lang": "es",
+      "day": "2026-07-16",
+      "time": "16:00",
+      "venue": "Cinemateca Sala 2",
+      "section": "🎬 Largometrajes",
+      "_src": {
+        "url": "https://fantasolab.com/fantasofest/",
+        "date": "2026-07-14"
+      },
+      "ticket_url": "https://compras.tuboleta.com/selection/event/date?productId=10230505466247",
+      "poster": "/assets/fantasofest/el-ritual-del-nahual.jpg",
+      "posterSource": "custom",
+      "flags": "🇲🇽",
+      "day_order": 4,
+      "genre": "Fantasía, Terror",
+      "lbSlug": "tekenchu-the-rite-of-the-nahuales",
+      "synopsis_en": "Set in the dense forests of San Luis Potosí, it follows Gabriel, a wounded outlaw rescued by two healers in a village gripped by fear. As a federal agent investigates a string of child murders, an ancestral force awakens: Tekenchu, a mystical creature —half man, half beast— that does not merely watch, but judges and punishes."
+    },
+    {
+      "title": "El Susurro",
+      "director": "Gustavo Hernández Ibáñez",
+      "year": 2025,
+      "country": "Uruguay, Argentina",
+      "duration": "100 min",
+      "synopsis": "Lucía y Adrián, dos hermanos que huyen de la oscura herencia de su padre vampiro, llegan a una casona aislada en el bosque, buscando refugio del pasado. Su intento de olvidar se interrumpe cuando un gato les trae un dedo humano, lo que revela un secreto aterrador: sus vecinos forman parte de una red criminal que secuestra adolescentes para producir películas snuff, y planean deshacerse de ellos. Mientras Lucía lucha por proteger a su hermano, deberá enfrentar una oscura maldición familiar que los persigue en su aparente refugio.",
+      "synopsis_lang": "es",
+      "day": "2026-07-17",
+      "time": "17:30",
+      "venue": "Cinemateca Sala Capital",
+      "section": "🎬 Largometrajes",
+      "_src": {
+        "url": "https://fantasolab.com/fantasofest/",
+        "date": "2026-07-14"
+      },
+      "ticket_url": "https://compras.tuboleta.com/selection/event/date?productId=10230505466249",
+      "poster": "/assets/fantasofest/el-susurro.jpg",
+      "posterSource": "custom",
+      "flags": "🇺🇾🇦🇷",
+      "day_order": 5,
+      "genre": "Terror",
+      "lbSlug": "the-whisper-2025",
+      "synopsis_en": "Lucía and Adrián, two siblings fleeing the dark legacy of their vampire father, arrive at an isolated house in the woods seeking refuge from the past. Their attempt to forget is shattered when a cat brings them a human finger, revealing a terrifying secret: their neighbors belong to a criminal ring that abducts teenagers to produce snuff films, and they plan to get rid of them too. As Lucía fights to protect her brother, she must face a dark family curse that follows them into their supposed sanctuary."
+    },
+    {
+      "title": "El Susurro",
+      "director": "Gustavo Hernández Ibáñez",
+      "year": 2025,
+      "country": "Uruguay, Argentina",
+      "duration": "100 min",
+      "synopsis": "Lucía y Adrián, dos hermanos que huyen de la oscura herencia de su padre vampiro, llegan a una casona aislada en el bosque, buscando refugio del pasado. Su intento de olvidar se interrumpe cuando un gato les trae un dedo humano, lo que revela un secreto aterrador: sus vecinos forman parte de una red criminal que secuestra adolescentes para producir películas snuff, y planean deshacerse de ellos. Mientras Lucía lucha por proteger a su hermano, deberá enfrentar una oscura maldición familiar que los persigue en su aparente refugio.",
+      "synopsis_lang": "es",
+      "day": "2026-07-19",
+      "time": "19:00",
+      "venue": "Cinemateca Sala 2",
+      "section": "🎬 Largometrajes",
+      "_src": {
+        "url": "https://fantasolab.com/fantasofest/",
+        "date": "2026-07-14"
+      },
+      "ticket_url": "https://compras.tuboleta.com/selection/event/date?productId=10230505466249",
+      "poster": "/assets/fantasofest/el-susurro.jpg",
+      "posterSource": "custom",
+      "flags": "🇺🇾🇦🇷",
+      "day_order": 7,
+      "genre": "Terror",
+      "lbSlug": "the-whisper-2025",
+      "synopsis_en": "Lucía and Adrián, two siblings fleeing the dark legacy of their vampire father, arrive at an isolated house in the woods seeking refuge from the past. Their attempt to forget is shattered when a cat brings them a human finger, revealing a terrifying secret: their neighbors belong to a criminal ring that abducts teenagers to produce snuff films, and they plan to get rid of them too. As Lucía fights to protect her brother, she must face a dark family curse that follows them into their supposed sanctuary."
+    },
+    {
+      "title": "Apps",
+      "director": "Sandra Arriagada, Camilo León, Lucio A. Rojas, José Miguel Zúñiga, Samot Márquez",
+      "year": 2021,
+      "country": "Chile, Argentina",
+      "duration": "91 min",
+      "synopsis": "Cinco historias en donde una APP, abrirá las puertas a la fantasía y al horror. Una joven en las manos de un grupo de pervertidos, pertenecientes a una siniestra red de transmisiones online.Un voyerista que descubrirá que sus vecinos esconden oscuros secretos que desearía nunca haber…escuchado. Una joven mujer en una misteriosa app de citas. Un grupo de amigos en camino un festival de música, caerán en las manos de un siniestro grupo ocultista rural. Un pequeño niño, usado por su padre para concretar citas amorosas online, descubrirá un enorme poder para defenderse.",
+      "synopsis_lang": "es",
+      "day": "2026-07-18",
+      "time": "16:00",
+      "venue": "Cinemateca Sala 2",
+      "section": "🎬 Largometrajes",
+      "_src": {
+        "url": "https://fantasolab.com/fantasofest/",
+        "date": "2026-07-14"
+      },
+      "ticket_url": "https://compras.tuboleta.com/selection/event/date?productId=10230505466251",
+      "poster": "/assets/fantasofest/apps.jpg",
+      "posterSource": "custom",
+      "flags": "🇨🇱🇦🇷",
+      "day_order": 6,
+      "genre": "Ciencia Ficción, Terror",
+      "lbSlug": "apps",
+      "synopsis_en": "Five stories in which an app opens the door to fantasy and horror. A young woman in the hands of a group of predators from a sinister online broadcasting ring. A voyeur who discovers that his neighbors hide dark secrets he wishes he had never… heard. A young woman on a mysterious dating app. A group of friends heading to a music festival who fall into the hands of a sinister rural occult group. And a little boy, used by his father to line up online dates, who discovers an enormous power to defend himself."
+    },
+    {
+      "title": "La Virgen de la Tosquera",
+      "director": "Laura Casabé",
+      "year": 2025,
+      "country": "Argentina, México, España",
+      "duration": "95 min",
+      "synopsis": "Natalia, Mariela y Josefina son tres inseparables amigas que viven en las afueras de Buenos Aires y están locamente enamoradas de Diego, su amigo de la infancia. En un verano caluroso de 2001, tras el estallido de violencia que terminó en una profunda crisis económica y social, aparece Silvia, más mayor y más mundana, que cautiva a Diego.",
+      "synopsis_lang": "es",
+      "day": "2026-07-18",
+      "time": "18:00",
+      "venue": "Cinemateca Sala Capital",
+      "section": "🎬 Largometrajes",
+      "_src": {
+        "url": "https://fantasolab.com/fantasofest/",
+        "date": "2026-07-14"
+      },
+      "ticket_url": "https://compras.tuboleta.com/selection/event/date?productId=10230505466252",
+      "poster": "/assets/fantasofest/la-virgen-de-la-tosquera.jpg",
+      "posterSource": "custom",
+      "flags": "🇦🇷🇲🇽🇪🇸",
+      "day_order": 6,
+      "title_en": "The Virgin of the Quarry Lake",
+      "genre": "Terror, Thriller",
+      "lbSlug": "the-virgin-of-the-quarry-lake",
+      "synopsis_en": "Natalia, Mariela and Josefina are three inseparable friends who live on the outskirts of Buenos Aires and are madly in love with Diego, their childhood friend. In the sweltering summer of 2001, after the eruption of violence that spiraled into a deep economic and social crisis, Silvia appears —older and more worldly— and captivates Diego."
+    },
+    {
+      "title": "La Virgen de la Tosquera",
+      "director": "Laura Casabé",
+      "year": 2025,
+      "country": "Argentina, México, España",
+      "duration": "95 min",
+      "synopsis": "Natalia, Mariela y Josefina son tres inseparables amigas que viven en las afueras de Buenos Aires y están locamente enamoradas de Diego, su amigo de la infancia. En un verano caluroso de 2001, tras el estallido de violencia que terminó en una profunda crisis económica y social, aparece Silvia, más mayor y más mundana, que cautiva a Diego.",
+      "synopsis_lang": "es",
+      "day": "2026-07-19",
+      "time": "17:00",
+      "venue": "Cinemateca Sala 3",
+      "section": "🎬 Largometrajes",
+      "_src": {
+        "url": "https://fantasolab.com/fantasofest/",
+        "date": "2026-07-14"
+      },
+      "ticket_url": "https://compras.tuboleta.com/selection/event/date?productId=10230505466252",
+      "poster": "/assets/fantasofest/la-virgen-de-la-tosquera.jpg",
+      "posterSource": "custom",
+      "flags": "🇦🇷🇲🇽🇪🇸",
+      "day_order": 7,
+      "title_en": "The Virgin of the Quarry Lake",
+      "genre": "Terror, Thriller",
+      "lbSlug": "the-virgin-of-the-quarry-lake",
+      "synopsis_en": "Natalia, Mariela and Josefina are three inseparable friends who live on the outskirts of Buenos Aires and are madly in love with Diego, their childhood friend. In the sweltering summer of 2001, after the eruption of violence that spiraled into a deep economic and social crisis, Silvia appears —older and more worldly— and captivates Diego."
+    },
+    {
+      "title": "Muestra de Cortometrajes",
+      "year": 2026,
+      "country": "Iberoamérica",
+      "duration": "",
+      "synopsis": "FantasoFest presenta una muestra de 10 cortometrajes iberoamericanos de género fantástico —ciencia ficción, fantasía y terror—: Chaika, Only Snuff, La prueba de los ancestros, El monstruo de ningún lado, Peephole, Mutante, El gato cósmico al final, El Chucur, Policía Depravado y Zombie YA!",
+      "synopsis_lang": "es",
+      "day": "2026-07-17",
+      "time": "17:00",
+      "venue": "Cinemateca Sala 3",
+      "section": "🎞️ Cortometrajes",
+      "_src": {
+        "url": "https://fantasolab.com/wp-content/uploads/2026/06/Comunicado-de-prensa-FantasoFest-V2026.pdf",
+        "date": "2026-06-30"
+      },
+      "ticket_url": "https://compras.tuboleta.com/selection/event/date?productId=10230505466248",
+      "poster": "/assets/fantasofest/cortos.jpg",
+      "posterSource": "custom",
+      "flags": "🌎",
+      "day_order": 5,
+      "is_cortos": true,
+      "film_list": [
+        {
+          "title": "Chaika",
+          "director": "Ingrid Bonilla Rodríguez",
+          "year": 2025,
+          "lbSlug": "chaika-2026"
+        },
+        {
+          "title": "Only Snuff",
+          "director": "Andrea Segarra Bueno",
+          "year": 2024,
+          "genre": "Thriller",
+          "lbSlug": "only-snuff"
+        },
+        {
+          "title": "La prueba de los ancestros",
+          "director": "Reyson Velasquez",
+          "year": 2022
+        },
+        {
+          "title": "El monstruo de ningún lado",
+          "director": "Juano Gómez",
+          "year": 2025
+        },
+        {
+          "title": "Peephole",
+          "director": "Sebastián Sarmiento Bazzani",
+          "year": 2020
+        },
+        {
+          "title": "Mutante",
+          "director": "Héctor Tabares Rodríguez, Carolina Martínez Tolosa",
+          "year": 2022
+        },
+        {
+          "title": "El gato cósmico al final",
+          "director": "Francisco Pavanetto",
+          "year": 2013,
+          "genre": "Fantasía",
+          "lbSlug": "el-gato-cosmico-al-final"
+        },
+        {
+          "title": "El Chucur",
+          "director": "Jairo Tarapuez Jaramillo",
+          "year": 2024,
+          "genre": "Animación",
+          "lbSlug": "el-chucur"
+        },
+        {
+          "title": "Policía Depravado",
+          "director": "Vera Porcel, Rocío Vazquez, Belén Macua, Juana Russo, Anabella Bergoglio, Agustina Macua, Alejandro Lagos, Brayant Manrique y Emilio López",
+          "year": 2025,
+          "genre": "Terror, Thriller",
+          "lbSlug": "policia-depravado"
+        },
+        {
+          "title": "Zombie YA!",
+          "director": "Luciano Alvarez Curti, Joaquín Fernandez, Damian Ramos, Agustina Martínez Duranti, Catalina Moreno, Jazmin Levitán, Rodrigo Tintel, Julia Gouvert y Emilio López",
+          "year": 2024
+        }
+      ]
+    },
+    {
+      "title": "Muestra de Cortometrajes",
+      "year": 2026,
+      "country": "Iberoamérica",
+      "duration": "",
+      "synopsis": "FantasoFest presenta una muestra de 10 cortometrajes iberoamericanos de género fantástico —ciencia ficción, fantasía y terror—: Chaika, Only Snuff, La prueba de los ancestros, El monstruo de ningún lado, Peephole, Mutante, El gato cósmico al final, El Chucur, Policía Depravado y Zombie YA!",
+      "synopsis_lang": "es",
+      "day": "2026-07-18",
+      "time": "14:00",
+      "venue": "Cinemateca Sala 3",
+      "section": "🎞️ Cortometrajes",
+      "_src": {
+        "url": "https://fantasolab.com/wp-content/uploads/2026/06/Comunicado-de-prensa-FantasoFest-V2026.pdf",
+        "date": "2026-06-30"
+      },
+      "ticket_url": "https://compras.tuboleta.com/selection/event/date?productId=10230505466248",
+      "poster": "/assets/fantasofest/cortos.jpg",
+      "posterSource": "custom",
+      "flags": "🌎",
+      "day_order": 6,
+      "is_cortos": true,
+      "film_list": [
+        {
+          "title": "Chaika",
+          "director": "Ingrid Bonilla Rodríguez",
+          "year": 2025,
+          "lbSlug": "chaika-2026"
+        },
+        {
+          "title": "Only Snuff",
+          "director": "Andrea Segarra Bueno",
+          "year": 2024,
+          "genre": "Thriller",
+          "lbSlug": "only-snuff"
+        },
+        {
+          "title": "La prueba de los ancestros",
+          "director": "Reyson Velasquez",
+          "year": 2022
+        },
+        {
+          "title": "El monstruo de ningún lado",
+          "director": "Juano Gómez",
+          "year": 2025
+        },
+        {
+          "title": "Peephole",
+          "director": "Sebastián Sarmiento Bazzani",
+          "year": 2020
+        },
+        {
+          "title": "Mutante",
+          "director": "Héctor Tabares Rodríguez, Carolina Martínez Tolosa",
+          "year": 2022
+        },
+        {
+          "title": "El gato cósmico al final",
+          "director": "Francisco Pavanetto",
+          "year": 2013,
+          "genre": "Fantasía",
+          "lbSlug": "el-gato-cosmico-al-final"
+        },
+        {
+          "title": "El Chucur",
+          "director": "Jairo Tarapuez Jaramillo",
+          "year": 2024,
+          "genre": "Animación",
+          "lbSlug": "el-chucur"
+        },
+        {
+          "title": "Policía Depravado",
+          "director": "Vera Porcel, Rocío Vazquez, Belén Macua, Juana Russo, Anabella Bergoglio, Agustina Macua, Alejandro Lagos, Brayant Manrique y Emilio López",
+          "year": 2025,
+          "genre": "Terror, Thriller",
+          "lbSlug": "policia-depravado"
+        },
+        {
+          "title": "Zombie YA!",
+          "director": "Luciano Alvarez Curti, Joaquín Fernandez, Damian Ramos, Agustina Martínez Duranti, Catalina Moreno, Jazmin Levitán, Rodrigo Tintel, Julia Gouvert y Emilio López",
+          "year": 2024
+        }
+      ]
+    }
+  ],
+  "name": "FantasoFest",
+  "shortName": "FANTASO",
+  "city": "Bogotá",
+  "country": "CO",
+  "dates": "13–19 JUL",
+  "dates_en": "JUL 13–19",
+  "year": 2026,
+  "timezoneOffset": "-05:00",
+  "storageKey": "fantasofest2026_",
+  "festivalEndStr": "2026-07-19T23:00:00",
+  "festivalDates": {
+    "2026-07-13": "2026-07-13",
+    "2026-07-14": "2026-07-14",
+    "2026-07-15": "2026-07-15",
+    "2026-07-16": "2026-07-16",
+    "2026-07-17": "2026-07-17",
+    "2026-07-18": "2026-07-18",
+    "2026-07-19": "2026-07-19"
+  },
+  "days": [
+    {
+      "k": "2026-07-13",
+      "d": 13,
+      "lbl": "LUN"
+    },
+    {
+      "k": "2026-07-14",
+      "d": 14,
+      "lbl": "MAR"
+    },
+    {
+      "k": "2026-07-15",
+      "d": 15,
+      "lbl": "MIÉ"
+    },
+    {
+      "k": "2026-07-16",
+      "d": 16,
+      "lbl": "JUE"
+    },
+    {
+      "k": "2026-07-17",
+      "d": 17,
+      "lbl": "VIE"
+    },
+    {
+      "k": "2026-07-18",
+      "d": 18,
+      "lbl": "SÁB"
+    },
+    {
+      "k": "2026-07-19",
+      "d": 19,
+      "lbl": "DOM"
+    }
+  ],
+  "dayKeys": [
+    "2026-07-13",
+    "2026-07-14",
+    "2026-07-15",
+    "2026-07-16",
+    "2026-07-17",
+    "2026-07-18",
+    "2026-07-19"
+  ],
+  "prioLimit": 4
+}
