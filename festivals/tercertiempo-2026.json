@@ -122,7 +122,9 @@
           "poster": "/assets/tercertiempo/master-bruno.jpg",
           "posterSource": "custom",
           "flags": "🇵🇹",
-          "synopsis_en": "Master Bruno lives immersed in a fantastic universe where football, magic and imagination intertwine. Through an adventure full of humor and unexpected situations, he must face the mysterious Macumbas of the Ball, discovering that true power lies in friendship, courage and passion for the game."
+          "synopsis_en": "Master Bruno lives immersed in a fantastic universe where football, magic and imagination intertwine. Through an adventure full of humor and unexpected situations, he must face the mysterious Macumbas of the Ball, discovering that true power lies in friendship, courage and passion for the game.",
+          "genre": "Comedia",
+          "lbSlug": "master-bruno-and-the-perfidious-macumbas"
         },
         {
           "title": "Entrenador de locos",
@@ -306,7 +308,9 @@
           "poster": "/assets/tercertiempo/angeles-fc.jpg",
           "posterSource": "custom",
           "flags": "🇲🇽",
-          "synopsis_en": "The story of a team that defies social and cultural barriers to prove that football can become a tool for collective transformation."
+          "synopsis_en": "The story of a team that defies social and cultural barriers to prove that football can become a tool for collective transformation.",
+          "genre": "Documental, Drama",
+          "lbSlug": "angeles-fc"
         }
       ],
       "day": "2026-07-15",
