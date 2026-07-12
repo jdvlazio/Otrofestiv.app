@@ -85,8 +85,33 @@ def _surnames(name):
             out.add(toks[-1])
     return out
 
+# País ES→EN — nuestro JSON guarda países en ESPAÑOL; TMDB (en-US) responde en
+# inglés. Sin esta normalización, 'España' vs 'Spain' NUNCA matcheaba y el gate
+# rechazaba matches perfectos (falso rechazo masivo cazado en Tercer Tiempo 2026:
+# Polígono X, El Rey Puma, Mounir, El juego de su vida — título 1.00 + director
+# exacto, rechazados por "país no coincide"). Claves ya normalizadas vía _norm.
+CTY_ES2EN = {
+    'espana': 'spain', 'italia': 'italy', 'brasil': 'brazil',
+    'estados unidos': 'united states', 'francia': 'france', 'alemania': 'germany',
+    'reino unido': 'united kingdom', 'japon': 'japan', 'corea del sur': 'south korea',
+    'marruecos': 'morocco', 'sudafrica': 'south africa', 'suiza': 'switzerland',
+    'belgica': 'belgium', 'paises bajos': 'netherlands', 'holanda': 'netherlands',
+    'suecia': 'sweden', 'noruega': 'norway', 'dinamarca': 'denmark',
+    'finlandia': 'finland', 'grecia': 'greece', 'turquia': 'turkey',
+    'polonia': 'poland', 'rusia': 'russia', 'ucrania': 'ukraine',
+    'irlanda': 'ireland', 'hungria': 'hungary', 'republica checa': 'czech republic',
+    'nueva zelanda': 'new zealand', 'egipto': 'egypt', 'iran': 'iran',
+    'irak': 'iraq', 'libano': 'lebanon', 'arabia saudita': 'saudi arabia',
+    'catar': 'qatar', 'kenia': 'kenya', 'etiopia': 'ethiopia',
+    'argelia': 'algeria', 'tunez': 'tunisia',
+}
+
 def _countries(s):
-    return {c for c in (_norm(x) for x in re.split(r'[,/&]', s or '')) if c}
+    out = set()
+    for c in (_norm(x) for x in re.split(r'[,/&]', s or '')):
+        if c:
+            out.add(CTY_ES2EN.get(c, c))
+    return out
 
 def _country_match(fc, cc):
     """Match laxo por substring (United States ⊂ United States of America)."""
@@ -111,15 +136,26 @@ def match_ok(film, det):
     if tsim <= 0.6:
         return (False, f'título sim {tsim:.2f}≤0.6')
 
+    # Director PRIMERO (el año ±2 depende de él). Apellidos por INTERSECCIÓN DE
+    # TOKENS de los nombres completos, no solo el último token: 'Diego Guareño'
+    # vs 'Diego Guareño Genesta' comparaba guareno↔genesta y rechazaba a la
+    # misma persona (apellido compuesto — falso rechazo cazado en TT 2026).
+    # Sigue exigiendo que un APELLIDO exacto de un lado aparezca como token del otro.
+    fdir = _surnames(film.get('director', ''))
+    cdir = {s for n in det.get('directors', []) for s in _surnames(n)}
+    ftoks = {t for part in re.split(r'[,/&]| y | and ', film.get('director', '') or '') for t in _norm(part).split()}
+    ctoks = {t for n in det.get('directors', []) for t in _norm(n).split()}
+    dir_ev = bool(fdir and cdir)
+    dir_ok = dir_ev and bool((fdir & ctoks) or (cdir & ftoks))
+
+    # Año: ±1 normal; hasta ±2 SOLO si el director corrobora (año de festival vs
+    # año de estreno TMDB difieren con frecuencia en cine de festival — caso
+    # 'La herencia de Chico': mismo director exacto, TMDB 2023 vs festival 2025).
     fy = str(film.get('year') or '')[:4]
     cy = (det.get('release_date') or '')[:4]
     year_ev = fy.isdigit() and cy.isdigit()
-    year_ok = year_ev and abs(int(fy) - int(cy)) <= 1
-
-    fdir = _surnames(film.get('director', ''))
-    cdir = {s for n in det.get('directors', []) for s in _surnames(n)}
-    dir_ev = bool(fdir and cdir)
-    dir_ok = dir_ev and bool(fdir & cdir)
+    ydiff = abs(int(fy) - int(cy)) if year_ev else 99
+    year_ok = year_ev and (ydiff <= 1 or (ydiff <= 2 and dir_ok))
 
     fc = _countries(film.get('country', ''))
     cc = {_norm(c) for c in det.get('countries', []) if _norm(c)}
@@ -132,6 +168,11 @@ def match_ok(film, det):
 
     corrob = sum(1 for ev, ok in ((year_ev, year_ok), (dir_ev, dir_ok), (co_ev, co_ok)) if ev and ok)
     if corrob < 2:
+        # Registro TMDB escaso (cine nicho: sin fecha ni país cargados). El caso
+        # Brujo era TÍTULO SOLO; director aprobado + título casi exacto es una
+        # señal de otra clase — se acepta con 1 corroborante SOLO en ese combo.
+        if dir_ok and tsim >= 0.9:
+            return (True, f'ok (título {tsim:.2f}, director corrobora, registro TMDB escaso)')
         return (False, f'solo {corrob} criterio(s) corroborante(s) <2 (título {tsim:.2f})')
     return (True, f'ok (título {tsim:.2f}, {corrob} corrob.)')
 
@@ -141,25 +182,46 @@ def _search(media, query):
     r = requests.get(f'{TMDB_BASE}/search/{media}', params=params, timeout=8)
     return r.json().get('results', [])
 
+def _query_variants(title):
+    """Variantes de búsqueda para títulos que la query literal no encuentra:
+    comillas tipográficas/rectas fuera, y versión sin subtítulo (tras : . —)
+    cuando el tramo principal es sustancial. Caso TT 2026: 'Cantos al juego de
+    "Bolar"' y 'El equipo del pueblo. Un sueño, Atlante' → 0 candidatos literales."""
+    out = [title]
+    stripped = re.sub(r'[\"“”‘’\']', '', title).strip()
+    if stripped and stripped != title:
+        out.append(stripped)
+    m = re.split(r'\s*[:.—–]\s+', stripped or title, maxsplit=1)
+    if len(m) == 2 and len(_norm(m[0])) >= 8:
+        out.append(m[0])
+    return out
+
 def candidates_for(film, max_each=3):
-    """Hasta `max_each` resultados por (media × título). Original primero, luego EN."""
+    """Hasta `max_each` resultados por (media × query). Título original primero,
+    luego EN, luego variantes sin comillas/subtítulo (solo si lo literal dio 0)."""
     titles = []
     for k in ('title', 'title_en'):
         v = film.get(k)
         if v and v not in titles:
             titles.append(v)
     seen, out = set(), []
-    for media in ('movie', 'tv'):
-        for q in titles:
-            try:
-                results = _search(media, q)
-            except Exception:
-                results = []
-            for res in results[:max_each]:
-                key = (media, res.get('id'))
-                if key not in seen:
-                    seen.add(key)
-                    out.append((media, res))
+    def _run(queries):
+        for media in ('movie', 'tv'):
+            for q in queries:
+                try:
+                    results = _search(media, q)
+                except Exception:
+                    results = []
+                for res in results[:max_each]:
+                    key = (media, res.get('id'))
+                    if key not in seen:
+                        seen.add(key)
+                        out.append((media, res))
+    _run(titles)
+    if not out:
+        variants = [v for t in titles for v in _query_variants(t) if v not in titles]
+        if variants:
+            _run(variants)
     return out
 
 def fetch_details(media, cid):
@@ -238,7 +300,10 @@ def apply_enrichment(film, data):
     return changed
 
 def resolve_lb(film, tmdb_id, stats):
-    """Fase 2: Letterboxd. Actualiza film['lbSlug'] en el lugar."""
+    """Fase 2: Letterboxd. Actualiza film['lbSlug'] en el lugar SOLO si resuelve.
+    Sin match NO se escribe marcador en el JSON (el "⚠️ LB PENDIENTE" viajó a
+    prod en TT 2026 y habría producido hrefs rotos): el pendiente se reporta en
+    el log final del run, y la UI simplemente no muestra el link."""
     if film.get('lbSlug') and film['lbSlug'] != '⚠️ LB PENDIENTE':
         return
     time.sleep(0.3)
@@ -248,9 +313,10 @@ def resolve_lb(film, tmdb_id, stats):
         stats['lb'] += 1
         print(f'✓LB:{slug}', end=' ', flush=True)
     else:
-        film['lbSlug'] = '⚠️ LB PENDIENTE'
+        film.pop('lbSlug', None)  # limpia también marcadores heredados de runs viejos
         stats['lb_pending'] += 1
-        print('⚠️LB', end=' ', flush=True)
+        stats.setdefault('lb_pending_titles', []).append(film.get('title', '?'))
+        print('—LB', end=' ', flush=True)
 
 def _needs_tmdb(obj):
     return not all([obj.get('genre'), obj.get('year')])
@@ -349,16 +415,9 @@ def enrich_festival(path):
         for label, reason in rejects:
             print(f'  · {label}: {reason}')
 
-    if stats['lb_pending']:
-        pending = []
-        for fobj in films:
-            if fobj.get('lbSlug') == '⚠️ LB PENDIENTE':
-                pending.append(fobj['title'])
-            for item in fobj.get('film_list', []):
-                if item.get('lbSlug') == '⚠️ LB PENDIENTE':
-                    pending.append(f'  {item["title"]} (en {fobj["title"]})')
-        print(f'\nFilms sin slug LB — completar manualmente en el JSON:')
-        for t in pending:
+    if stats.get('lb_pending_titles'):
+        print(f'\nFilms sin slug LB (no se escribe marcador en el JSON — completar a mano si existen):')
+        for t in stats['lb_pending_titles']:
             print(f'  · {t}')
     print(f'\nJSON guardado: {path}')
 
@@ -391,6 +450,52 @@ def selftest():
          {'title': 'Listen', 'original_title': 'Listen', 'release_date': '2026-01-01',
           'directors': ['Jane Doe'], 'countries': ['United States of America']},
          True),
+        # ── Fixtures REALES de Tercer Tiempo 2026 (auditoría 12 jul) ──────────
+        ('TT/Polígono X — país ES vs EN: España↔Spain (acepta)',
+         {'title': 'Polígono X', 'year': '2025', 'director': 'Néstor López', 'country': 'España'},
+         {'title': 'Polígono X', 'original_title': 'Polígono X', 'release_date': '2025-11-28',
+          'directors': ['Néstor López'], 'countries': ['Spain']},
+         True),
+        ('TT/El fin de los tiempos — apellido compuesto: Guareño↔Guareño Genesta (acepta)',
+         {'title': 'El fin de los tiempos', 'year': '2025', 'director': 'Diego Guareño', 'country': 'México'},
+         {'title': 'The End of Times', 'original_title': 'El Fin de los Tiempos', 'release_date': '2025-10-10',
+          'directors': ['Diego Guareño Genesta'], 'countries': ['Mexico']},
+         True),
+        ('TT/Con un pie en la gloria — registro TMDB escaso, dir+título 1.0 (acepta)',
+         {'title': 'Con un pie en la gloria', 'year': '2025', 'director': 'Eduardo Esparza', 'country': 'México'},
+         {'title': 'Con un pie en la gloria', 'original_title': 'Con un pie en la gloria', 'release_date': '',
+          'directors': ['José Eduardo Esparza'], 'countries': []},
+         True),
+        ('TT/La herencia de Chico — año festival vs estreno ±2 con dir exacto (acepta)',
+         {'title': 'La herencia de Chico', 'year': '2025', 'director': 'Jefferson Rodrigues', 'country': 'Brasil'},
+         {'title': 'A Herança de Chico', 'original_title': 'A Herança de Chico', 'release_date': '2023-05-01',
+          'directors': ['Jefferson Rodrigues'], 'countries': []},
+         True),
+        ('TT/Pambelé — telenovela 2017 homónima, sin dir/país (rechaza)',
+         {'title': 'Pambelé', 'year': '2024', 'director': 'Augusto Pinilla', 'country': 'España, Colombia'},
+         {'title': 'Pambelé', 'original_title': 'Pambelé', 'release_date': '2017-07-10',
+          'directors': [], 'countries': []},
+         False),
+        ('TT/Grand Slam — film homónimo 1978 de otro director (rechaza)',
+         {'title': 'Grand slam', 'year': '2023', 'director': 'Galar Egüén', 'country': 'España'},
+         {'title': 'Grand Slam', 'original_title': 'Grand Slam', 'release_date': '1978-03-17',
+          'directors': ['John Hefin'], 'countries': ['United Kingdom']},
+         False),
+        ('TT/Al son que me toquen bailo — homónima colombiana 2019 de otro dir (rechaza)',
+         {'title': 'Al son que me toquen bailo', 'year': '2024', 'director': 'Deyaneira González', 'country': 'Puerto Rico'},
+         {'title': 'Al son que me toquen bailo', 'original_title': 'Al son que me toquen bailo', 'release_date': '2019-12-25',
+          'directors': ['Juan Carlos Mazo'], 'countries': ['Colombia']},
+         False),
+        ('TT/El documental del 10 — mismo título, director distinto (rechaza)',
+         {'title': 'El documental del 10', 'year': '2025', 'director': 'Damian Originario', 'country': 'Argentina'},
+         {'title': 'El documental del 10', 'original_title': 'El documental del 10', 'release_date': '2024-10-08',
+          'directors': ['Lucas Costa'], 'countries': []},
+         False),
+        ('Anti-Brujo sigue: título 1.0 solo, registro escaso SIN director nuestro (rechaza)',
+         {'title': 'Unidentified', 'year': '', 'director': '', 'country': ''},
+         {'title': 'Unidentified', 'original_title': 'Unidentified', 'release_date': '',
+          'directors': ['Some One'], 'countries': []},
+         False),
     ]
     ok = True
     for name, film, det, expected in cases:
