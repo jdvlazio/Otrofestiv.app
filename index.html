@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607121322">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607121322">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607121643">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607121643">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -2347,7 +2347,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 </head>
 <body>
 <!-- Splash siempre visible — se pre-selecciona el festival en curso por fecha. -->
-<div id="otrofestiv-splash" role="dialog" aria-label="Bienvenida" aria-modal="true">
+<div id="otrofestiv-splash" role="dialog" data-i18n-aria="aria_bienvenida" aria-label="Bienvenida" aria-modal="true">
   <div class="splash-wordmark">Otro<span>festiv</span></div>
   <div class="splash-action">
   <div class="splash-selector">
@@ -2371,17 +2371,17 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
   </div>
 </div>
 <script>
-// Aplicar idioma al splash ANTES del primer paint — misma detección que main.js
-// (lang guardado OR navigator.language → es/en/pt). Evita el flash ES→sistema.
+// DETECCIÓN ÚNICA de idioma (es/en) — corre antes del primer paint y publica
+// window.__otfLang, la ÚNICA fuente que consumen main.js y la landing de tiendas.
+// Prioridad: lang guardado → navigator.language. Aplica también el idioma al
+// splash acá mismo para evitar el flash ES→sistema.
 (function(){
   var s=localStorage.getItem('otrofestiv_lang');
   var n=(navigator.language||'es').toLowerCase();
-  var l=(s==='es'||s==='en'||s==='pt')?s:(n.indexOf('en')===0?'en':n.indexOf('pt')===0?'pt':'es');
+  var l=(s==='es'||s==='en')?s:(n.indexOf('en')===0?'en':'es');
+  window.__otfLang=l;
   if(l==='es') return; // ES = default del HTML
-  var M={
-    en:{splash_festival:'Which festival?',splash_elegi:'Choose one',auth_entrar:'Enter',splash_tagline:'More than you think',splash_tagline_2:'possible.'},
-    pt:{splash_festival:'Para qual festival você vai?',splash_elegi:'Escolha um',auth_entrar:'Entrar',splash_tagline:'Mais do que você imagina',splash_tagline_2:'possível.'}
-  };
+  var M={en:{splash_festival:'Which festival?',splash_elegi:'Choose one',auth_entrar:'Enter',splash_tagline:'More than you think',splash_tagline_2:'possible.'}};
   var m=M[l]; if(!m) return;
   document.querySelectorAll('#otrofestiv-splash [data-i18n]').forEach(function(el){
     var v=m[el.getAttribute('data-i18n')];if(v)el.textContent=v;
@@ -2413,7 +2413,7 @@ setTimeout(function(){
     <div class="av-day-chips" id="av-day-chips"></div>
     <div class="av-sheet-lbl" data-i18n="av_tipo">Tipo</div>
     <div class="av-type-row">
-      <button class="av-type-btn selected" id="av-type-hours" data-action="setAvType" data-type="hours">Horas específicas</button>
+      <button class="av-type-btn selected" id="av-type-hours" data-i18n="av_horas" data-action="setAvType" data-type="hours">Horas específicas</button>
       <button class="av-type-btn" id="av-type-full" data-i18n="av_todo_el_dia_btn" data-action="setAvType" data-type="full">Todo el día</button>
     </div>
     <div id="av-time-section">
@@ -2433,7 +2433,7 @@ setTimeout(function(){
 <div class="hdr">
   <div class="hdr-top">
     <h1 class="hdr-wordmark">Otro<span>festiv</span></h1>
-    <button class="auth-btn" id="auth-btn" data-action="openAuthSheet" title="Sincronizar entre dispositivos" aria-label="Cuenta">
+    <button class="auth-btn" id="auth-btn" data-action="openAuthSheet" data-i18n-title="aria_sincronizar" data-i18n-aria="aria_cuenta" title="Sincronizar entre dispositivos" aria-label="Cuenta">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/></svg>
       <span class="auth-avatar" id="auth-avatar"></span>
       <span class="sync-dot" id="sync-dot"></span>
@@ -2446,7 +2446,6 @@ setTimeout(function(){
       <div class="lang-dropdown" id="lang-dropdown" role="listbox">
         <button class="lang-btn lang-opt" id="lang-btn-es" data-action="selectLang" data-code="es" role="option" aria-label="Español"><span class="lang-opt-flag" aria-hidden="true">🇪🇸</span><span class="lang-opt-name">Español</span></button>
         <button class="lang-btn lang-opt" id="lang-btn-en" data-action="selectLang" data-code="en" role="option" aria-label="English"><span class="lang-opt-flag" aria-hidden="true">🇺🇸</span><span class="lang-opt-name">English</span></button>
-        <button class="lang-btn lang-opt" id="lang-btn-pt" data-action="selectLang" data-code="pt" role="option" aria-label="Português"><span class="lang-opt-flag" aria-hidden="true">🇧🇷</span><span class="lang-opt-name">Português</span></button>
       </div>
     </div>
   </div>
@@ -2460,7 +2459,7 @@ setTimeout(function(){
     </div>
     <div class="hdr-fest-chev"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg></div>
   </div>
-  <button class="hdr-search-icon" id="hdr-search-icon" data-action="searchOpen" aria-label="Buscar">
+  <button class="hdr-search-icon" id="hdr-search-icon" data-action="searchOpen" data-i18n-aria="aria_buscar" data-i18n-title="aria_buscar" aria-label="Buscar">
     <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"/></svg>
   </button>
 </div>
@@ -2472,20 +2471,20 @@ setTimeout(function(){
 <!-- ── Programa: barra de modos Explorar/Hoy/Mañana ── -->
 <div class="programa-mode-bar" id="programa-mode-bar" style="display:none">
 
-  <button class="pmode-tab" id="pmode-hoy" data-action="setProgramaMode" data-mode="hoy">Hoy</button>
-  <button class="pmode-tab" id="pmode-manana" data-action="setProgramaMode" data-mode="manana">Mañana</button>
+  <button class="pmode-tab" id="pmode-hoy" data-i18n="bar_hoy" data-action="setProgramaMode" data-mode="hoy">Hoy</button>
+  <button class="pmode-tab" id="pmode-manana" data-i18n="bar_manana" data-action="setProgramaMode" data-mode="manana">Mañana</button>
   <div class="pmode-spacer"></div>
   <div class="pmode-controls" style="position:relative">
     <button class="seccion-btn" id="seccion-btn" data-action="seccionToggle">
       <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3c2.755 0 5.455.232 8.083.678.533.09.917.556.917 1.096v1.044a2.25 2.25 0 01-.659 1.591l-5.432 5.432a2.25 2.25 0 00-.659 1.591v2.927a2.25 2.25 0 01-1.244 2.013L9.75 21v-6.568a2.25 2.25 0 00-.659-1.591L3.659 7.409A2.25 2.25 0 013 5.818V4.774c0-.54.384-1.006.917-1.096A48.32 48.32 0 0112 3z"/></svg>
-      <span id="seccion-lbl">Sección</span>
+      <span id="seccion-lbl" data-i18n="bar_seccion">Sección</span>
     </button>
     <button class="lugar-btn" id="lugar-btn" data-action="lugarToggle">
       <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>
-      <span id="lugar-lbl">Lugar</span>
+      <span id="lugar-lbl" data-i18n="bar_lugar">Lugar</span>
     </button>
     <!-- single toggle btn — icono refleja estado actual -->
-    <button class="view-toggle-btn" id="view-toggle-btn" data-action="toggleProgramaView" title="Cambiar vista" aria-label="Cambiar vista">
+    <button class="view-toggle-btn" id="view-toggle-btn" data-action="toggleProgramaView" data-i18n-aria="aria_cambiar_vista" data-i18n-title="aria_cambiar_vista" title="Cambiar vista" aria-label="Cambiar vista">
       <svg id="view-toggle-ico-grid" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
       <svg id="view-toggle-ico-list" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" style="display:none"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg>
     </button>
@@ -2530,23 +2529,23 @@ setTimeout(function(){
   </div>
 </div>
 </div><!-- /topbar -->
-<div class="main-nav" id="main-nav" role="navigation" aria-label="Navegación principal">
+<div class="main-nav" id="main-nav" role="navigation" data-i18n-aria="aria_nav_ppal" aria-label="Navegación principal">
   <button class="main-nav-tab on" id="mnav-cartelera" data-action="navTo" data-tab="mnav-cartelera">
     <span class="main-nav-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="2.18"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="2" y1="7" x2="7" y2="7"/><line x1="2" y1="17" x2="7" y2="17"/><line x1="17" y1="17" x2="22" y2="17"/><line x1="17" y1="7" x2="22" y2="7"/></svg></span>
-    <span class="main-nav-lbl" id="lbl-nav-programa">PROGRAMA</span>
+    <span class="main-nav-lbl" id="lbl-nav-programa" data-i18n="nav_programa">PROGRAMA</span>
   </button>
   <button class="main-nav-tab" id="mnav-seleccion" data-action="navTo" data-tab="mnav-seleccion">
     <span class="main-nav-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"/></svg></span>
-    <span class="main-nav-lbl" id="lbl-nav-intereses">INTERESES</span>
+    <span class="main-nav-lbl" id="lbl-nav-intereses" data-i18n="nav_intereses">INTERESES</span>
   </button>
   <button class="main-nav-tab" id="mnav-planner" data-action="navTo" data-tab="mnav-planner">
     <span class="main-nav-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="21" x2="4" y2="14"/><line x1="4" y1="10" x2="4" y2="3"/><line x1="12" y1="21" x2="12" y2="12"/><line x1="12" y1="8" x2="12" y2="3"/><line x1="20" y1="21" x2="20" y2="16"/><line x1="20" y1="12" x2="20" y2="3"/><line x1="1" y1="14" x2="7" y2="14"/><line x1="9" y1="8" x2="15" y2="8"/><line x1="17" y1="16" x2="23" y2="16"/></svg></span>
-    <span class="main-nav-lbl" id="lbl-nav-planear">PLANEAR</span>
+    <span class="main-nav-lbl" id="lbl-nav-planear" data-i18n="nav_planear">PLANEAR</span>
   </button>
   <button class="main-nav-tab" id="mnav-miplan" data-action="navTo" data-tab="mnav-miplan">
     <span class="tab-badge" id="miplan-badge"></span>
     <span class="main-nav-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5"/></svg></span>
-    <span class="main-nav-lbl" id="lbl-nav-miplan">MI PLAN</span>
+    <span class="main-nav-lbl" id="lbl-nav-miplan" data-i18n="nav_miplan">MI PLAN</span>
   </button>
 </div>
 
@@ -2588,7 +2587,7 @@ setTimeout(function(){
   <div class="conflict-handle"></div>
   <div class="conflict-hdr">
     <div class="conflict-eyebrow"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z"/></svg><span data-i18n="conflict_eyebrow">Conflicto de horario</span></div>
-    <div class="conflict-title" id="conflict-title-el">Se solapan en el mismo tramo</div>
+    <div class="conflict-title" id="conflict-title-el" data-i18n="conflict_titulo">Se solapan en el mismo tramo</div>
     <div class="conflict-sub" data-i18n="conflict_cual">¿Cuál querés en tu plan?</div>
   </div>
   <div class="conflict-arena">
@@ -2622,13 +2621,13 @@ setTimeout(function(){
   <div class="prio-limit-handle"></div>
   <div class="prio-limit-hdr">
     <div class="prio-limit-eyebrow"><svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.75"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg><span id="prio-limit-eyebrow-txt"></span></div>
-    <div class="prio-limit-title" id="prio-limit-ya-tenes"><span id="prio-limit-ya-tenes-txt">Ya tenés</span> <span id="prio-limit-count"></span> <span id="prio-limit-prio-word">prioridades</span></div>
+    <div class="prio-limit-title" id="prio-limit-ya-tenes"><span id="prio-limit-ya-tenes-txt" data-i18n="plan_ya_tenes_prio">Ya tenés</span> <span id="prio-limit-count"></span> <span id="prio-limit-prio-word" data-i18n="misc_prioridades">prioridades</span></div>
     <div class="prio-limit-sub" data-i18n="conflict_cambiar">Cambiá una para priorizar esta ${t('misc_pelicula')}</div>
   </div>
   <div class="prio-limit-new" id="prio-limit-new-bar">
     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
     <div style="flex:1;min-width:0">
-      <div class="prio-limit-new-lbl" id="prio-limit-quieres">Querés priorizar</div>
+      <div class="prio-limit-new-lbl" id="prio-limit-quieres" data-i18n="plan_quieres_prio">Querés priorizar</div>
       <div class="prio-limit-new-title" id="prio-limit-new-title"></div>
     </div>
   </div>
@@ -2739,12 +2738,12 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202607121322";
+    s.src="/src/main.js?v=202607121643";
     document.body.appendChild(s);
   }
   if (isApp || isDev) { bootApp(); return; }
   function showLanding(){
-    var es = (navigator.language || 'es').toLowerCase().indexOf('en') !== 0;
+    var es = (window.__otfLang || 'es') !== 'en';
     var APPSTORE = 'https://apps.apple.com/app/id6769367002';
     var PLAY = 'https://play.google.com/store/apps/details?id=app.otrofestiv.mobile';
     var ua = navigator.userAgent;
@@ -2871,7 +2870,7 @@ setTimeout(function(){
 
 
 
-<button id="back-top" data-action="scrollToTop" aria-label="Volver arriba">↑</button>
+<button id="back-top" data-action="scrollToTop" data-i18n-aria="aria_volver_arriba" aria-label="Volver arriba">↑</button>
 
 <!-- ── SEARCH OVERLAY ── position:fixed, cubre pantalla desde topbar ── -->
 <div id="search-overlay">

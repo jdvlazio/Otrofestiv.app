@@ -20,7 +20,7 @@ import { screeningPassed } from '../domain/film.js';
 import { isScreeningBlocked } from '../domain/schedule.js';
 import { state } from '../state/state.js';
 import { storage } from '../storage/storage.js';
-import { t } from '../i18n/i18n.js';
+import { t, locSynopsis } from '../i18n/i18n.js';
 
 // ── UI-state module-local + consts privados ──────────────────────────────────
 const LB_SVG=`<svg class="block-shrink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="13" height="13"><rect width="64" height="64" rx="9" fill="#2C3440"/><circle cx="21" cy="32" r="12" fill="#00B020" opacity=".9"/><circle cx="32" cy="32" r="12" fill="#3CBEDB" opacity=".85"/><circle cx="43" cy="32" r="12" fill="#FF8000" opacity=".9"/></svg>`;
@@ -236,7 +236,7 @@ export function openPelSheet(title){
     })()}
     ${f.synopsis?`<div class="pel-sheet-divider"></div>
     <div class="pel-sheet-section-lbl">${f.type==='event'?t('label_descripcion'):t('label_sinopsis')}</div>
-    <div class="pel-sheet-synopsis">${(_lang==='en'&&f.synopsis_en?f.synopsis_en:_lang==='es'&&f.synopsis_es?f.synopsis_es:f.synopsis).replace(/^⚠️\s*INGLÉS\s*[—-]\s*/,'')}</div>`:''}
+    <div class="pel-sheet-synopsis">${locSynopsis(f).replace(/^⚠️\s*INGLÉS\s*[—-]\s*/,'')}</div>`:''}
     ${cortosHtml}
     ${(!f.is_cortos&&!f.is_programa&&f.type!=='event')?lbLink(f.title,f):''}
     <div class="pel-sheet-divider"></div>
@@ -396,11 +396,9 @@ export function openCortoSheet(title, country, duration, section, flags, directo
   const dir=director||(richItem&&richItem.director)||'';
   const gnr=_genreEN(genre||(richItem&&richItem.genre)||'');
   const yr=(richItem&&richItem.year)?String(richItem.year):'';
-  // Sinopsis localizada igual que el sheet de película (no la versión truncada
-  // a 200 chars que llega por data-attr): ES→synopsis_es, EN→synopsis_en, fallback→synopsis.
-  const syn=richItem
-    ?(_lang==='en'&&richItem.synopsis_en?richItem.synopsis_en:_lang==='es'&&richItem.synopsis_es?richItem.synopsis_es:(richItem.synopsis||''))
-    :(synopsis||'');
+  // Sinopsis localizada vía locSynopsis (mismo helper que el sheet de película),
+  // no la versión truncada a 200 chars que llega por data-attr.
+  const syn=richItem ? locSynopsis(richItem) : (synopsis||'');
   const ctry=country||(richItem&&richItem.country)||'';
   const dur=duration||(richItem&&richItem.duration)||'';
   // Letterboxd: el slug del corto vive en richItem.lbSlug (item de film_list),
@@ -479,7 +477,7 @@ export function _openCombinedFilmSheet(filmData){
   if(pelSheet&&pelSheet.classList.contains('open')){
     _cortoParentHtml=inner.innerHTML;
   }
-  const{title='',director='',year='',duration='',flags='🌐',country='',synopsis='',synopsis_en='',synopsis_es='',lbSlug='',poster:_fPoster=''}=filmData;
+  const{title='',director='',year='',duration='',flags='🌐',country='',lbSlug='',poster:_fPoster=''}=filmData;
   const posterUrl=_fPoster?((_fPoster.startsWith('http')||_fPoster.startsWith('/assets/'))?_fPoster:TMDB_IMG+_fPoster):getPosterSrc(title,false)||null;
   const _isEd4=_isEditorialImageUrl(posterUrl);
   const _sec4=(()=>{const _p=FILMS.find(f=>f.film_list&&f.film_list.some(c=>c.title===title));return _p?.section||'';})();
@@ -489,7 +487,7 @@ export function _openCombinedFilmSheet(filmData){
       ?`<img class="pel-sheet-poster" src="${posterUrl}" data-title="${(title||"").replace(/"/g,'&quot;')}" loading="lazy" onerror="_cortoSheetPosterErr(this)" alt="">`
       :`<div class="pel-sheet-poster-ph">🎬</div>`;
   const metaLine=[director,year].filter(Boolean).join(' · ');
-  const lbHref=lbSlug?`https://letterboxd.com/film/${lbSlug}/`:lbUrl(title);
+  const lbHref=lbUrlForFilm({title,lbSlug}); // guard de slugs incluido (marcador ⚠ jamás llega al href)
   const ps=document.getElementById('pel-sheet');
   if(ps) ps.scrollTop=0;
   _pushSheetState();
@@ -505,8 +503,8 @@ export function _openCombinedFilmSheet(filmData){
     </div>
     <div class="pel-sheet-divider"></div>
     <div class="pel-sheet-section-lbl">${t('label_sinopsis')}</div>
-    <div class="pel-sheet-synopsis">${_lang==='en'&&synopsis_en?synopsis_en:_lang==='es'&&synopsis_es?synopsis_es:(synopsis||'')}</div>
-    <a class="c-lb pel-sheet-lb" href="${lbHref}" target="_blank" rel="noopener">${LB_SVG}<span class="c-lb-text pel-sheet-lb-text">Letterboxd</span></a>
+    <div class="pel-sheet-synopsis">${locSynopsis(filmData)}</div>
+    <a class="c-lb pel-sheet-lb" href="${lbHref||'#'}" target="_blank" rel="noopener"${!lbHref?' style="display:none"':''}>${LB_SVG}<span class="c-lb-text pel-sheet-lb-text">Letterboxd</span></a>
     <div class="pel-sheet-divider"></div>
   `;
   const _psReset=document.getElementById('pel-sheet');
@@ -1112,7 +1110,10 @@ export function lbUrl(title){
 
 export function lbUrlForFilm(f){
   if(!f) return null;
-  if(f.lbSlug) return f.lbSlug.startsWith('http')?f.lbSlug:`https://letterboxd.com/film/${f.lbSlug}/`;
+  // Guard: el pipeline marca slugs sin resolver con "⚠️ LB PENDIENTE" — un marcador
+  // NUNCA es un slug (produciría un href roto). Solo se acepta un slug plausible.
+  const s=f.lbSlug;
+  if(s && !s.startsWith('⚠') && /^[\w:/.-]+$/.test(s)) return s.startsWith('http')?s:`https://letterboxd.com/film/${s}/`;
   return lbUrl(f.title);
 }
 

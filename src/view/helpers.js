@@ -19,11 +19,10 @@ import { t } from '../i18n/i18n.js';
 let DAY_SHORT={Martes:'MAR 14',    Miércoles:'MIÉ 15',    Jueves:'JUE 16',
                  Viernes:'VIE 17',   Sábado:'SÁB 18',       Domingo:'DOM 19'};
 let DAY_SHORT_EN={}; // swapeado por loadFestival() — valores en inglés
-let DAY_SHORT_PT={}; // swapeado por loadFestival() — valores en pt-BR
 let _CUSTOM_N = {};
 let _POSTERS_N = {}; // re-poblado vía setPosters(POSTERS) — POSTERS vive en main.js
 
-export { DAY_SHORT_EN, DAY_SHORT_PT };
+export { DAY_SHORT_EN };
 
 // normKey — privado del módulo
 const normKey = s => s.replace(/[\u2018\u2019\u201A\u201B\u2032\u02BC]/g, "'");
@@ -34,7 +33,6 @@ const _EN_TO_I18N = {MON:'day_short_lun',TUE:'day_short_mar',WED:'day_short_mie'
 // ── Setters (main.js muta el estado de festival vía estas) ────────────────────
 export function setDayShort(m){ DAY_SHORT = m; }
 export function setDayShortEn(m){ DAY_SHORT_EN = m; }
-export function setDayShortPt(m){ DAY_SHORT_PT = m; }
 export function setPosters(p){ _POSTERS_N = Object.fromEntries(Object.entries(p||{}).map(([k,v])=>[normKey(k),v])); }
 export function setCustomPosters(c){ _CUSTOM_N = Object.fromEntries(Object.entries(c||{}).map(([k,v])=>[normKey(k),v])); }
 
@@ -284,14 +282,14 @@ export function mplanBlockType(s){
 }
 
 export const dayChip = key => {
-  const _ds = _lang==='pt' ? DAY_SHORT_PT : _lang==='en' ? DAY_SHORT_EN : DAY_SHORT;
-  // pt/en: abreviatura del set lang-específico (no DAY_ABBR, que es ES); es: DAY_ABBR.
+  const _ds = _lang==='en' ? DAY_SHORT_EN : DAY_SHORT;
+  // en: abreviatura del set lang-específico (no DAY_ABBR, que es ES); es: DAY_ABBR.
   const abr = (_lang!=='es' ? (_ds[key]||'').split(' ')[0] : null) || DAY_ABBR[key] || (_ds[key]||'').split(' ')[0] || key;
   const num = DAY_NUM[key]  || (_ds[key]||'').split(' ')[1] || '';
   return `<span class="day-chip-abr">${abr}</span><span class="day-chip-num">${num}</span>`;
 };
 
-export const dayLabel  = key => (_lang==='pt' ? DAY_SHORT_PT : _lang==='en' ? DAY_SHORT_EN : DAY_SHORT)[key] || key;
+export const dayLabel  = key => (_lang==='en' ? DAY_SHORT_EN : DAY_SHORT)[key] || key;
 
 // dayLabelLong — formato largo "Viernes 5" / "Friday 5" / "Sexta 5". Mismo
 // patrón que Planear (buildResultHTML). Pensado para el landmark del día en

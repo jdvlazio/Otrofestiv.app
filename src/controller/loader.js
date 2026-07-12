@@ -7,7 +7,7 @@
 
 import { FESTIVAL_CONFIG } from '../config.js';
 import { DAY_ABBR, DAY_NUM, festivalShortName } from '../view/components.js';
-import { DAYS, DAY_SHORT_EN, DAY_SHORT_PT, setCustomPosters, setDayShort, setDayShortEn, setDayShortPt, setPosters } from '../view/helpers.js';
+import { DAYS, DAY_SHORT_EN, setCustomPosters, setDayShort, setDayShortEn, setPosters } from '../view/helpers.js';
 import { closeFestivalSheet } from '../view/sheets.js';
 import { showToast } from '../view/feedback.js';
 import { _renderProgramaContent, lugarClose } from '../view/programa.js';
@@ -198,18 +198,6 @@ export async function loadFestival(id){
     _esShort=cfg.dayShort||{};
   }
   setDayShort(_esShort);
-  // pt-BR: traducir las abreviaturas ES → PT (mismo patrón que _EN_TO_ES).
-  // Lang-independiente (no usa t(), que devolvería el idioma activo): opera sobre
-  // el DAY_SHORT ES recién armado, por eso es correcto sin importar _lang.
-  const _ES_TO_PT={'LUN':'SEG','MAR':'TER','MIÉ':'QUA','JUE':'QUI','VIE':'SEX','SÁB':'SÁB','DOM':'DOM'};
-  const _ptShort={};
-  Object.entries(_esShort).forEach(([k,v])=>{
-    const ab=v.split(' ')[0];
-    const num=v.split(' ')[1]||'';
-    const pt=_ES_TO_PT[ab]||ab;
-    _ptShort[k]=num?pt+' '+num:pt;
-  });
-  setDayShortPt(_ptShort);
   CUSTOM_POSTERS=cfg.customPosters||{};
   setCustomPosters(CUSTOM_POSTERS);
   setPosters(POSTERS);
@@ -282,11 +270,9 @@ export async function loadFestival(id){
       btn.dataset.day=day.k;
       const _dtabLblES=day.lbl;
       const _dtabLblEN=(DAY_SHORT_EN[day.k]||'').split(' ')[0]||day.lbl;
-      const _dtabLblPT=(DAY_SHORT_PT[day.k]||'').split(' ')[0]||_dtabLblES;
-      const _dtabLbl=_lang==='en'?_dtabLblEN:_lang==='pt'?_dtabLblPT:_dtabLblES;
+      const _dtabLbl=_lang==='en'?_dtabLblEN:_dtabLblES;
       btn.dataset.lblEs=_dtabLblES;
       btn.dataset.lblEn=_dtabLblEN;
-      btn.dataset.lblPt=_dtabLblPT;
       btn.innerHTML=`<span class="dtab-date">${_dtabLbl}</span><span class="dtab-name">${day.d}</span>`;
       btn.onclick=()=>{
         activeDay=day.k;activeVenue='all';selectedIdx=null;
