@@ -945,7 +945,7 @@ except Exception as _e:
 #   - 'otrofestiv_hint_cambiar', 'otrofestiv_display_name'  → onboarding/Supabase
 #   - _BUILD_KEY    → SW staged rollout (clave 'orf_build')
 #   - cacheKey      → caches dinámicos (poster TMDB)
-#   - 'otrofestiv_lang' → splash preview (index.html, pre-módulo; storage no existe)
+#   - 'otrofestiv_lang_v2' → detección de idioma pre-paint (index.html, pre-módulo; storage no existe)
 check = 'storage-encapsulation'
 try:
     import re as _re
@@ -963,7 +963,7 @@ try:
             "'otrofestiv_display_name'",
             '_BUILD_KEY',
             'cacheKey',
-            "'otrofestiv_lang'",
+            "'otrofestiv_lang_v2'",
         }
         _violations = []
         for _i, _line in enumerate(_lines, 1):

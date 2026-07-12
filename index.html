@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607121730">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607121730">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607121749">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607121749">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -2376,7 +2376,11 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 // Prioridad: lang guardado → navigator.language. Aplica también el idioma al
 // splash acá mismo para evitar el flash ES→sistema.
 (function(){
-  var s=localStorage.getItem('otrofestiv_lang');
+  // Clave v2: la vieja 'otrofestiv_lang' se IGNORA (overrides accidentales de la
+  // era del bug de mezcla persistían para siempre y pisaban el idioma del
+  // celular) — el dispositivo manda salvo elección explícita posterior en el
+  // toggle. Ver storage.js getLang/setLang.
+  var s=localStorage.getItem('otrofestiv_lang_v2');
   var n=(navigator.language||'es').toLowerCase();
   var l=(s==='es'||s==='en')?s:(n.indexOf('en')===0?'en':'es');
   window.__otfLang=l;
@@ -2738,7 +2742,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202607121730";
+    s.src="/src/main.js?v=202607121749";
     document.body.appendChild(s);
   }
   if (isApp || isDev) { bootApp(); return; }

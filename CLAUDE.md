@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `ae47b0d Merge #301 — enricher gate v2: Letterboxd 2→12 en Tercer Tiempo`
+> Último commit: `a6f081a Merge #302 — El documental del 10: Letterboxd + crédito de dirección`
 
 ---
 
