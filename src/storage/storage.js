@@ -81,8 +81,14 @@ export const storage = {
   getActiveFestId() { return localStorage.getItem('otrofestiv_festival'); },
   setActiveFestId(id) { try { localStorage.setItem('otrofestiv_festival', id); } catch(e) {} },
 
-  getLang() { return localStorage.getItem('otrofestiv_lang'); },
-  setLang(l) { try { localStorage.setItem('otrofestiv_lang', l); } catch(e) {} },
+  // Idioma: clave v2 (12 jul 2026). La clave vieja 'otrofestiv_lang' se IGNORA
+  // a propósito: quedó contaminada por la era del bug de mezcla (toques al
+  // selector para "arreglar" la mezcla dejaban un override accidental
+  // persistido para siempre, pisando el idioma del celular — el default
+  // correcto). Regla: el idioma del DISPOSITIVO manda en el arranque; solo una
+  // elección explícita POSTERIOR en el toggle (que escribe v2) lo pisa.
+  getLang() { return localStorage.getItem('otrofestiv_lang_v2'); },
+  setLang(l) { try { localStorage.setItem('otrofestiv_lang_v2', l); localStorage.removeItem('otrofestiv_lang'); } catch(e) {} },
 
   getBuild() { return localStorage.getItem('otrofestiv_build'); },
   setBuild(b) { try { localStorage.setItem('otrofestiv_build', b); } catch(e) {} },

@@ -157,7 +157,7 @@ test('global keys NO toman FESTIVAL_STORAGE_KEY como prefix', () => {
   storage.setLang('es');
   storage.setBuild('xyz');
   assert.strictEqual(ls.getItem('otrofestiv_festival'), 'aff2026');
-  assert.strictEqual(ls.getItem('otrofestiv_lang'), 'es');
+  assert.strictEqual(ls.getItem('otrofestiv_lang_v2'), 'es');
   assert.strictEqual(ls.getItem('otrofestiv_build'), 'xyz');
   // Y no aparecen con prefix
   assert.strictEqual(ls.getItem('tribeca2026_otrofestiv_festival'), null);
