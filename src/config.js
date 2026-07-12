@@ -149,7 +149,6 @@ export const SECTION_EN = {
   '🗺️ Territorios en Juego': 'Territories at Play',
   '🇧🇷 Brasil: Juego, memoria y pasión': 'Brazil: Game, Memory & Passion',
   '🏘️ Cinematecas Locales': 'Local Cinematheques',
-  '🎉 Fan Zone': 'Fan Zone',
   // Olhar de Cinema (nombres oficiales del sitio EN)
   '🎬 Apertura':'Opening Film',
   '🌟 Clausura':'Closing Film',
@@ -361,7 +360,6 @@ export const SECTION_ARCHETYPES = {
   '🗺️ Territorios en Juego': 'Muestra / País',
   '🇧🇷 Brasil: Juego, memoria y pasión': 'Muestra / País',
   '🏘️ Cinematecas Locales': 'Muestra / País',
-  '🎉 Fan Zone': 'Especiales / Eventos',
   '⏳ (s)paces of Time': 'Perspectivas / Miradas',
   '✊ Cine Afro': 'Muestra / País',
   '✨ Exhibiciones Especiales': 'Especiales / Eventos',
