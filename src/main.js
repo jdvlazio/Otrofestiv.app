@@ -25,6 +25,7 @@ import './state/viewstate.js';
 // ── Step 3: storage.js (import — adapter de localStorage; usa el bridge para
 //   FESTIVAL_STORAGE_KEY). saveX/loadState orquestadoras se quedan en main.js. ──
 import { storage } from './storage/storage.js';
+import { onDomReady } from './util/ready.js';
 
 // ── Step 4: i18n.js (import — _I18N + t + _applyI18nDOM). _lang vive en state
 //   (bridge); la init eval-time de _lang se queda en main.js, setLang → pipeline.js (8d-3).
@@ -632,7 +633,7 @@ FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202607121220';
+const BUILD_VERSION='202607121322';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';
@@ -1194,10 +1195,18 @@ document.addEventListener('keydown',function(e){
 });
 (function(){
   let _startY=0,_dragging=false;
-  document.addEventListener('DOMContentLoaded',()=>{
-  _applyI18nDOM();
-  _syncLangTrigger();
-});
+  // BUG DE TIMING (store-gate): main.js se inyecta como <script type=module>
+  // dinámico (bootApp en index.html) → NO bloquea DOMContentLoaded, que ya
+  // disparó cuando este módulo evalúa. Un listener 'DOMContentLoaded' aquí
+  // registra para un evento pasado y NUNCA corre → la UI estática (tabs, bandera
+  // del toggle) se queda en el HTML hardcodeado (ES) mientras el contenido
+  // dinámico sale en el idioma real → MEZCLA. onDomReady ejecuta ya si el DOM
+  // está listo. NUNCA usar addEventListener('DOMContentLoaded') desnudo en src/
+  // (lo prohíbe validate.py [dom-ready-guard]).
+  onDomReady(()=>{
+    _applyI18nDOM();
+    _syncLangTrigger();
+  });
 // ── Event delegation para js-open-pel → openPelSheet ──────────────────────
 // capture:true garantiza que el evento llega antes del stopPropagation
 // de _posterThumb. data-title contiene el título sin encoding.
