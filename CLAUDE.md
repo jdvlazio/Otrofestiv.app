@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `7e5f9fc Merge #298 — Tercer Tiempo sin Fan Zone (solo cine)`
+> Último commit: `b2509ad Merge #299 — fix coherencia de idioma al arranque`
 
 ---
 

@@ -1569,6 +1569,32 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar dom-ready-guard: {_e}')
 
+# ── CHECK: [synopsis-helper] ──────────────────────────────────────────────────
+# REGLA: la sinopsis localizada se resuelve SOLO vía locSynopsis(f) (src/i18n/i18n.js).
+# Prohibido rehacer a mano el ternario `_lang==='en'?...synopsis_en...` en view/
+# controller — era una de las fuentes de inconsistencia de idioma (misma lógica
+# copiada en 3 sitios que divergían). Flagea cualquier línea de src/ que combine
+# `_lang` con `synopsis_en|synopsis_es`, salvo la casa del helper (i18n.js).
+check = 'synopsis-helper'
+try:
+    import re as _re3
+    _SYN_RE = _re3.compile(r"synopsis_(?:en|es)")
+    _offenders = []
+    for _root, _dirs, _files in os.walk('src'):
+        for _fn in _files:
+            if not _fn.endswith('.js'): continue
+            _fp = os.path.join(_root, _fn).replace('\\', '/')
+            if _fp == 'src/i18n/i18n.js': continue  # la casa de locSynopsis
+            for _i, _line in enumerate(open(_fp, encoding='utf-8'), 1):
+                if _SYN_RE.search(_line) and '_lang' in _line:
+                    _offenders.append(f'{_fp}:{_i}')
+    if _offenders:
+        fail(check, 'ternario de sinopsis a mano — usar locSynopsis(f) de i18n.js: ' + ', '.join(_offenders))
+    else:
+        ok(check, 'sinopsis localizada solo vía locSynopsis (sin ternarios _lang+synopsis_* a mano)')
+except Exception as _e:
+    warn(check, f'no se pudo verificar synopsis-helper: {_e}')
+
 # ── CHECK: [section-display-raw] ──────────────────────────────────────────────
 # REGLA INAMOVIBLE: todo display de nombre de sección pasa por _secLabel()/
 # _secLabelFull(). Flagea `X.section` (incl. optional chaining `X?.section`)

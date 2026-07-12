@@ -1297,78 +1297,54 @@ export function t(key, params){
   return str;
 }
 
+// locSynopsis(f) — HELPER ÚNICO de sinopsis localizada. Fallback: idioma activo
+// (synopsis_en/synopsis_es) → `synopsis` base. Prohibido rehacer este ternario a
+// mano en view/controller (lo enforcea validate.py [synopsis-helper]). NO limpia
+// marcadores de procedencia (ej. "⚠️ INGLÉS —"): de eso se encarga quien renderiza.
+export function locSynopsis(f){
+  if(!f) return '';
+  if(_lang==='en' && f.synopsis_en) return f.synopsis_en;
+  if(_lang==='es' && f.synopsis_es) return f.synopsis_es;
+  return f.synopsis || '';
+}
+
 export function _applyI18nDOM(){
-  // 1. Nav labels + static UI elements with known IDs
-  const ids={
-    'lbl-nav-programa' :'nav_programa',
-    'lbl-nav-intereses' :'nav_intereses',
-    'lbl-nav-planear'  :'nav_planear',
-    'lbl-nav-miplan'   :'nav_miplan',
-    'pmode-hoy'        :'bar_hoy',
-    'pmode-manana'     :'bar_manana',
-    'seccion-lbl'      :'bar_seccion',
-    'lugar-lbl'        :'bar_lugar',
-    'av-type-hours'    :'av_horas',
-    'av-type-full'     :'av_todo_el_dia_btn',
-  };
-  for(const[id,key] of Object.entries(ids)){
-    const el=document.getElementById(id);
-    if(el) el.textContent=t(key);
-  }
-  // 2. Lang toggle — mark active button
-  document.getElementById('lang-btn-es')?.classList.toggle('active', _lang==='es');
-  document.getElementById('lang-btn-en')?.classList.toggle('active', _lang==='en');
-  document.getElementById('lang-btn-pt')?.classList.toggle('active', _lang==='pt');
-  // 3. data-i18n elements — translate textContent (nunca script/style)
+  // Mecanismo ÚNICO y genérico: TODA string estática del HTML se marca con un
+  // atributo data-i18n* y se traduce acá recorriendo el DOM. Cero listas de IDs
+  // que mantener — un elemento nuevo se traduce con sólo ponerle el atributo.
+  //   data-i18n       → textContent
+  //   data-i18n-ph    → placeholder
+  //   data-i18n-aria  → aria-label
+  //   data-i18n-title → title
+  // (auth-btn usa aria + title distintos: los dos atributos conviven en el HTML.)
   document.querySelectorAll('[data-i18n]').forEach(el=>{
     if(el.tagName==='SCRIPT'||el.tagName==='STYLE') return;
     const key=el.getAttribute('data-i18n');
     const val=t(key);
     if(val && val!==key) el.textContent=val;
   });
-  // 4. data-i18n-ph elements — translate placeholder attribute
   document.querySelectorAll('[data-i18n-ph]').forEach(el=>{
     const key=el.getAttribute('data-i18n-ph');
     const val=t(key);
     if(val && val!==key) el.placeholder=val;
   });
-  // 5. Aria-label + title patches via known element IDs
-  // Conflict title patch
-  const _conflictTitle=document.getElementById('conflict-title-el');
-  if(_conflictTitle) _conflictTitle.textContent=t('conflict_titulo');
-  const ariaIds={
-    'hdr-search-icon' :['aria_buscar',    ['ariaLabel','title']],
-    'view-toggle-btn' :['aria_cambiar_vista',['ariaLabel','title']],
-    'main-nav'        :['aria_nav_ppal',  ['ariaLabel']],
-    'auth-btn'        :['aria_sincronizar',['title']],
-    'back-top'        :['aria_volver_arriba',['ariaLabel']],
-    'otrofestiv-splash':['aria_bienvenida',['ariaLabel']],
-  };
-  // Prio-limit static HTML elements — patch on init and lang switch
-  const _prioElIds={
-    'prio-limit-ya-tenes-txt':'plan_ya_tenes_prio',
-    'prio-limit-prio-word':'misc_prioridades',
-    'prio-limit-quieres':'plan_quieres_prio',
-  };
-  for(const[id,key] of Object.entries(_prioElIds)){
-    const el=document.getElementById(id);
-    if(el) el.textContent=t(key);
-  }
-  for(const[id,[key,attrs]] of Object.entries(ariaIds)){
-    const el=document.getElementById(id);
-    if(!el) continue;
+  document.querySelectorAll('[data-i18n-aria]').forEach(el=>{
+    const key=el.getAttribute('data-i18n-aria');
     const val=t(key);
-    if(attrs.includes('ariaLabel')) el.setAttribute('aria-label',val);
-    if(attrs.includes('title'))     el.title=val;
-  }
-  // auth-btn: title y aria-label son labels distintos (sincronizar vs cuenta)
-  const _authBtn=document.getElementById('auth-btn');
-  if(_authBtn) _authBtn.setAttribute('aria-label',t('aria_cuenta'));
-  // 6. dtab labels — los 7 días de la semana son constantes universales
+    if(val && val!==key) el.setAttribute('aria-label',val);
+  });
+  document.querySelectorAll('[data-i18n-title]').forEach(el=>{
+    const key=el.getAttribute('data-i18n-title');
+    const val=t(key);
+    if(val && val!==key) el.title=val;
+  });
+  // Lang toggle — marcar botón activo
+  document.getElementById('lang-btn-es')?.classList.toggle('active', _lang==='es');
+  document.getElementById('lang-btn-en')?.classList.toggle('active', _lang==='en');
+  // dtab labels — los 7 días de la semana son constantes universales
   // Se calculan desde el ISO date del día, sin depender de datos del festival
   const _DOW_ES=['DOM','LUN','MAR','MIÉ','JUE','VIE','SÁB'];
   const _DOW_EN=['SUN','MON','TUE','WED','THU','FRI','SAT'];
-  const _DOW_PT=['DOM','SEG','TER','QUA','QUI','SEX','SÁB'];
   document.querySelectorAll('.dtab[data-day]').forEach(btn=>{
     const dayKey=btn.dataset.day;
     const dateSpan=btn.querySelector('.dtab-date');
@@ -1378,10 +1354,10 @@ export function _applyI18nDOM(){
     let lbl='';
     if(isoMatch){
       const dow=new Date(dayKey+'T12:00:00').getDay();
-      lbl=_lang==='en'?_DOW_EN[dow]:_lang==='pt'?_DOW_PT[dow]:_DOW_ES[dow];
+      lbl=_lang==='en'?_DOW_EN[dow]:_DOW_ES[dow];
     } else {
       // Fallback: usar data-lbl-es/en del DOM (formato legado Leviza/FICCI)
-      lbl=_lang==='en'?(btn.dataset.lblEn||btn.dataset.lblEs):_lang==='pt'?(btn.dataset.lblPt||btn.dataset.lblEs):btn.dataset.lblEs||'';
+      lbl=_lang==='en'?(btn.dataset.lblEn||btn.dataset.lblEs):btn.dataset.lblEs||'';
     }
     if(lbl) dateSpan.textContent=lbl;
   });

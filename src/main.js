@@ -344,12 +344,12 @@ document.addEventListener('click', function(e) {
 // _I18N (diccionarios es/en) → src/i18n/i18n.js (Step 4). Importado.
 
 _lang = (()=>{
-  const saved = storage.getLang();
-  if(saved && _I18N[saved]) return saved;
-  // Auto-detect por idioma del navegador — solo en primer uso
-  const nav = (navigator.language || navigator.userLanguage || 'es').toLowerCase();
-  if(nav.startsWith('en')) return 'en';
-  if(nav.startsWith('pt')) return 'pt';
+  // Fuente ÚNICA: la detección pre-paint del HTML publica window.__otfLang (lang
+  // guardado → navigator.language, es/en). Acá sólo la consumimos, validada contra
+  // el diccionario. Fallback defensivo por si el módulo corre sin el inline (nunca
+  // debería): storage.getLang() → 'es'.
+  const detected = (typeof window!=='undefined' && window.__otfLang) || storage.getLang();
+  if(detected && _I18N[detected]) return detected;
   return 'es';
 })();
 
@@ -633,7 +633,7 @@ FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202607121322';
+const BUILD_VERSION='202607121620';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';

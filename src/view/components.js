@@ -43,8 +43,7 @@ export function makeProgramPoster(state, title, duration, section, opts){
   const _dayIdx={'lunes':1,'martes':2,'miércoles':3,'miercoles':3,
     'jueves':4,'viernes':5,'sábado':6,'sabado':6,'domingo':0};
   const _DOW_ABBR={es:['DOM','LUN','MAR','MIÉ','JUE','VIE','SÁB'],
-    en:['SUN','MON','TUE','WED','THU','FRI','SAT'],
-    pt:['DOM','SEG','TER','QUA','QUI','SEX','SÁB']};
+    en:['SUN','MON','TUE','WED','THU','FRI','SAT']};
   const _dayMatch=!num&&title.match(/[—\-]\s*([a-záéíóúüñ]+)\s*$/i);
   const _di=_dayMatch?_dayIdx[_dayMatch[1].toLowerCase()]:undefined;
   const dayAbbr=_di!=null?(_DOW_ABBR[_lang]||_DOW_ABBR.es)[_di]:null;
