@@ -81,7 +81,9 @@
           "poster": "/assets/tercertiempo/el-fin-de-los-tiempos.jpg",
           "posterSource": "custom",
           "flags": "🇲🇽",
-          "synopsis_en": "In a community marked by uncertainty, football becomes an emotional refuge and a form of resistance against the changes threatening everyday life."
+          "synopsis_en": "In a community marked by uncertainty, football becomes an emotional refuge and a form of resistance against the changes threatening everyday life.",
+          "genre": "Drama",
+          "lbSlug": "the-end-of-times"
         }
       ],
       "day": "2026-07-13",
@@ -132,7 +134,9 @@
           "posterSource": "custom",
           "flags": "🇮🇹",
           "synopsis_en": "In Dakar, a coach brings together a football team made up of people with mental disorders. Amid poverty, exclusion and social stigma, the players find in sport a chance to build community and chase a dream that will take them all the way to Italy.",
-          "title_en": "The Madmen Coach"
+          "title_en": "The Madmen Coach",
+          "genre": "Documental",
+          "lbSlug": "the-madmen-coach"
         },
         {
           "title": "Polígono X",
@@ -145,7 +149,8 @@
           "poster": "/assets/tercertiempo/poligono-x.jpg",
           "posterSource": "custom",
           "flags": "🇪🇸",
-          "synopsis_en": "After years of defeats against the Brazilian team from the neighboring barrio, Rana and his friends are determined to win at any cost. What begins as a football match reveals tensions, prejudice and conflicts of coexistence within a diverse community."
+          "synopsis_en": "After years of defeats against the Brazilian team from the neighboring barrio, Rana and his friends are determined to win at any cost. What begins as a football match reveals tensions, prejudice and conflicts of coexistence within a diverse community.",
+          "lbSlug": "poligono-x"
         }
       ],
       "day": "2026-07-13",
@@ -185,7 +190,9 @@
       "posterSource": "custom",
       "flags": "🇪🇸",
       "day_order": 3,
-      "synopsis_en": "The story of Rudolf Dassler and the birth of Puma, one of the most influential sports brands in the world, and its impact on the evolution of modern football."
+      "synopsis_en": "The story of Rudolf Dassler and the birth of Puma, one of the most influential sports brands in the world, and its impact on the evolution of modern football.",
+      "genre": "Documental",
+      "lbSlug": "el-rey-puma"
     },
     {
       "title": "Más allá del Fútbol",
@@ -217,7 +224,9 @@
           "poster": "/assets/tercertiempo/el-juego-de-su-vida.jpg",
           "posterSource": "custom",
           "flags": "🇪🇸",
-          "synopsis_en": "Sport emerges as a unique opportunity to transform the fate of those who find in the game a reason to keep going."
+          "synopsis_en": "Sport emerges as a unique opportunity to transform the fate of those who find in the game a reason to keep going.",
+          "genre": "Comedia",
+          "lbSlug": "el-juego-de-su-vida"
         },
         {
           "title": "Pambelé",
@@ -354,7 +363,8 @@
           "poster": "/assets/tercertiempo/el-gran-giro.jpg",
           "posterSource": "custom",
           "flags": "🇲🇽",
-          "synopsis_en": "After more than thirty years as a professional cyclist, Ismael devotes his life to training new riders and running a workshop that has become a gathering point for his region's cycling community. A story about legacy, passion and endurance."
+          "synopsis_en": "After more than thirty years as a professional cyclist, Ismael devotes his life to training new riders and running a workshop that has become a gathering point for his region's cycling community. A story about legacy, passion and endurance.",
+          "lbSlug": "el-gran-giro"
         }
       ],
       "day": "2026-07-15",
@@ -437,7 +447,9 @@
           "poster": "/assets/tercertiempo/mounir.jpg",
           "posterSource": "custom",
           "flags": "🇪🇸",
-          "synopsis_en": "While fighting to obtain a residence permit, Mounir tries to build a stable life in Spain without giving up his roots or the family ties that bind him to Morocco."
+          "synopsis_en": "While fighting to obtain a residence permit, Mounir tries to build a stable life in Spain without giving up his roots or the family ties that bind him to Morocco.",
+          "genre": "Drama",
+          "lbSlug": "mounir"
         },
         {
           "title": "Más que Imparables",
@@ -513,7 +525,8 @@
           "poster": "/assets/tercertiempo/con-un-pie-en-la-gloria.jpg",
           "posterSource": "custom",
           "flags": "🇲🇽",
-          "synopsis_en": "The inspiring story of amputee footballers who defy physical and social limits to compete at the highest level."
+          "synopsis_en": "The inspiring story of amputee footballers who defy physical and social limits to compete at the highest level.",
+          "lbSlug": "con-un-pie-en-la-gloria"
         }
       ],
       "day": "2026-07-17",
@@ -697,7 +710,8 @@
           "posterSource": "custom",
           "flags": "🇧🇷",
           "synopsis_en": "A nostalgic look at childhood, the neighborhoods and the experiences that build the relationship between football, identity and memory.",
-          "title_en": "Memória de Pivete"
+          "title_en": "Memória de Pivete",
+          "lbSlug": "memoria-de-pivete"
         },
         {
           "title": "La herencia de Chico",
@@ -711,7 +725,8 @@
           "posterSource": "custom",
           "flags": "🇧🇷",
           "synopsis_en": "A tale of family tradition, football passion and a legacy that runs through generations in a Brazilian community.",
-          "title_en": "A Herança de Chico"
+          "title_en": "A Herança de Chico",
+          "lbSlug": "a-heranca-de-chico"
         }
       ],
       "day": "2026-07-18",
@@ -772,7 +787,9 @@
           "poster": "/assets/tercertiempo/el-fin-de-los-tiempos.jpg",
           "posterSource": "custom",
           "flags": "🇲🇽",
-          "synopsis_en": "In a community marked by uncertainty, football becomes an emotional refuge and a form of resistance against the changes threatening everyday life."
+          "synopsis_en": "In a community marked by uncertainty, football becomes an emotional refuge and a form of resistance against the changes threatening everyday life.",
+          "genre": "Drama",
+          "lbSlug": "the-end-of-times"
         }
       ],
       "day": "2026-07-17",
