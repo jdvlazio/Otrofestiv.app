@@ -61,7 +61,8 @@
           "synopsis_lang": "es",
           "poster": "/assets/tercertiempo/buscalavida-y-milikua.jpg",
           "posterSource": "custom",
-          "flags": "🇪🇸"
+          "flags": "🇪🇸",
+          "synopsis_en": "Two communities united by football face social and cultural challenges while finding in sport a tool to strengthen collective identity, coexistence and hope."
         },
         {
           "title": "La fiesta del fútbol popular",
@@ -73,7 +74,8 @@
           "synopsis_lang": "es",
           "poster": "/assets/tercertiempo/la-fiesta-del-futbol-popular.jpg",
           "posterSource": "custom",
-          "flags": "🇨🇴"
+          "flags": "🇨🇴",
+          "synopsis_en": "A journey through the popular expressions of Colombian football, where passion, celebration and community ownership turn the game into a cultural phenomenon that transcends the pitch."
         },
         {
           "title": "El fin de los tiempos",
@@ -85,13 +87,14 @@
           "synopsis_lang": "es",
           "poster": "/assets/tercertiempo/el-fin-de-los-tiempos.jpg",
           "posterSource": "custom",
-          "flags": "🇲🇽"
+          "flags": "🇲🇽",
+          "synopsis_en": "In a community marked by uncertainty, football becomes an emotional refuge and a form of resistance against the changes threatening everyday life."
         }
       ],
       "day": "2026-07-13",
       "time": "13:00",
       "venue": "Cinemateca Sala 2",
-      "section": "🎬 Selección Oficial",
+      "section": "🌱 Raíces del Juego",
       "_src": {
         "url": "https://cinematecadebogota.gov.co/node/peliculas/2562?sede=11",
         "date": "2026-07-10"
@@ -118,7 +121,8 @@
           "synopsis_lang": "es",
           "poster": "/assets/tercertiempo/master-bruno.jpg",
           "posterSource": "custom",
-          "flags": "🇵🇹"
+          "flags": "🇵🇹",
+          "synopsis_en": "Master Bruno lives immersed in a fantastic universe where football, magic and imagination intertwine. Through an adventure full of humor and unexpected situations, he must face the mysterious Macumbas of the Ball, discovering that true power lies in friendship, courage and passion for the game."
         },
         {
           "title": "Entrenador de locos",
@@ -130,7 +134,9 @@
           "synopsis_lang": "es",
           "poster": "/assets/tercertiempo/entrenador-de-locos.jpg",
           "posterSource": "custom",
-          "flags": "🇮🇹"
+          "flags": "🇮🇹",
+          "synopsis_en": "In Dakar, a coach brings together a football team made up of people with mental disorders. Amid poverty, exclusion and social stigma, the players find in sport a chance to build community and chase a dream that will take them all the way to Italy.",
+          "title_en": "The Madmen Coach"
         },
         {
           "title": "Polígono X",
@@ -142,13 +148,14 @@
           "synopsis_lang": "es",
           "poster": "/assets/tercertiempo/poligono-x.jpg",
           "posterSource": "custom",
-          "flags": "🇪🇸"
+          "flags": "🇪🇸",
+          "synopsis_en": "After years of defeats against the Brazilian team from the neighboring barrio, Rana and his friends are determined to win at any cost. What begins as a football match reveals tensions, prejudice and conflicts of coexistence within a diverse community."
         }
       ],
       "day": "2026-07-13",
       "time": "17:00",
       "venue": "Cinemateca Sala 3",
-      "section": "🎬 Selección Oficial",
+      "section": "🧠 Juego Mental",
       "_src": {
         "url": "https://cinematecadebogota.gov.co/node/peliculas/2563?sede=11",
         "date": "2026-07-10"
@@ -165,12 +172,12 @@
       "year": 2025,
       "country": "España",
       "duration": "91 min",
-      "synopsis": "El desconocido que cambió el fútbol para siempre.",
+      "synopsis": "La historia de Rudolf Dassler y el nacimiento de Puma, una de las marcas deportivas más influyentes del mundo, y su impacto en la evolución del fútbol moderno.",
       "synopsis_lang": "es",
       "day": "2026-07-13",
       "time": "19:00",
       "venue": "Cinemateca Sala Capital",
-      "section": "🎬 Selección Oficial",
+      "section": "👟 El Rey Puma",
       "_src": {
         "url": "https://cinematecadebogota.gov.co/node/peliculas/2564?sede=11",
         "date": "2026-07-10"
@@ -180,7 +187,8 @@
       "poster": "/assets/tercertiempo/el-rey-puma.jpg",
       "posterSource": "custom",
       "flags": "🇪🇸",
-      "day_order": 3
+      "day_order": 3,
+      "synopsis_en": "The story of Rudolf Dassler and the birth of Puma, one of the most influential sports brands in the world, and its impact on the evolution of modern football."
     },
     {
       "title": "Más allá del Fútbol",
@@ -198,7 +206,8 @@
           "synopsis_lang": "es",
           "poster": "/assets/tercertiempo/grand-slam.jpg",
           "posterSource": "custom",
-          "flags": "🇪🇸"
+          "flags": "🇪🇸",
+          "synopsis_en": "A reflection on perseverance and sporting passion through a story where competition becomes a profoundly human experience."
         },
         {
           "title": "El juego de su vida",
@@ -210,7 +219,8 @@
           "synopsis_lang": "es",
           "poster": "/assets/tercertiempo/el-juego-de-su-vida.jpg",
           "posterSource": "custom",
-          "flags": "🇪🇸"
+          "flags": "🇪🇸",
+          "synopsis_en": "Sport appears as a unique opportunity to transform the fate of those who find in the game a reason to keep going."
         },
         {
           "title": "Pambelé",
@@ -222,7 +232,8 @@
           "synopsis_lang": "es",
           "poster": "/assets/tercertiempo/pambele.jpg",
           "posterSource": "custom",
-          "flags": "🇪🇸🇨🇴"
+          "flags": "🇪🇸🇨🇴",
+          "synopsis_en": "An audiovisual tribute to Antonio Cervantes \"Kid Pambelé\", one of the most important figures in the history of Colombian sport."
         },
         {
           "title": "Break",
@@ -234,7 +245,8 @@
           "synopsis_lang": "es",
           "poster": "/assets/tercertiempo/break.jpg",
           "posterSource": "custom",
-          "flags": "🇪🇸"
+          "flags": "🇪🇸",
+          "synopsis_en": "Michael goes through a breakup as if it were a tennis final. Between humor, emotions and decisive points, the film turns love and heartbreak into a match nobody wants to lose."
         },
         {
           "title": "Desde abajo",
@@ -246,13 +258,14 @@
           "synopsis_lang": "es",
           "poster": "/assets/tercertiempo/desde-abajo.jpg",
           "posterSource": "custom",
-          "flags": "🇨🇱"
+          "flags": "🇨🇱",
+          "synopsis_en": "A look at the stories born far from the spotlight that find in sport an opportunity to transform realities."
         }
       ],
       "day": "2026-07-15",
       "time": "13:00",
       "venue": "Cinemateca Sala 2",
-      "section": "🎬 Selección Oficial",
+      "section": "🏅 Más allá del Fútbol",
       "_src": {
         "url": "https://cinematecadebogota.gov.co/node/peliculas/2565?sede=11",
         "date": "2026-07-10"
@@ -279,7 +292,8 @@
           "synopsis_lang": "es",
           "poster": "/assets/tercertiempo/al-son-que-me-toquen-bailo.jpg",
           "posterSource": "custom",
-          "flags": "🇵🇷"
+          "flags": "🇵🇷",
+          "synopsis_en": "Brian, a young footballer, must decide between chasing his dreams or staying with the community that raised him. In a night that will change his life forever, he faces a decision that will test his identity, his bonds and his future."
         },
         {
           "title": "Ángeles FC",
@@ -291,13 +305,14 @@
           "synopsis_lang": "es",
           "poster": "/assets/tercertiempo/angeles-fc.jpg",
           "posterSource": "custom",
-          "flags": "🇲🇽"
+          "flags": "🇲🇽",
+          "synopsis_en": "The story of a team that defies social and cultural barriers to prove that football can become a tool for collective transformation."
         }
       ],
       "day": "2026-07-15",
       "time": "16:30",
       "venue": "Cinemateca Sala 3",
-      "section": "🎬 Selección Oficial",
+      "section": "🔥 Barrio Caliente",
       "_src": {
         "url": "https://cinematecadebogota.gov.co/node/peliculas/2566?sede=11",
         "date": "2026-07-10"
@@ -324,7 +339,8 @@
           "synopsis_lang": "es",
           "poster": "/assets/tercertiempo/bejaranos.jpg",
           "posterSource": "custom",
-          "flags": "🇪🇸"
+          "flags": "🇪🇸",
+          "synopsis_en": "There is a place in Spain called Béjar where children didn't dream of being footballers, but cyclists. Some reached glory, like Laudelino Cubino and Roberto Heras. Others met the harshest side of the sport. A moving portrait of a community shaped by the bicycle and its heroes."
         },
         {
           "title": "El gran giro",
@@ -336,13 +352,14 @@
           "synopsis_lang": "es",
           "poster": "/assets/tercertiempo/el-gran-giro.jpg",
           "posterSource": "custom",
-          "flags": "🇲🇽"
+          "flags": "🇲🇽",
+          "synopsis_en": "After more than thirty years as a professional cyclist, Ismael devotes his life to training new riders and running a workshop that has become a gathering point for his region's cycling community. A story about legacy, passion and endurance."
         }
       ],
       "day": "2026-07-15",
       "time": "19:30",
       "venue": "Cinemateca Sala 3",
-      "section": "🎬 Selección Oficial",
+      "section": "🚴 Pedal y Resistencia",
       "_src": {
         "url": "https://cinematecadebogota.gov.co/node/peliculas/2567?sede=11",
         "date": "2026-07-10"
@@ -369,7 +386,8 @@
           "synopsis_lang": "es",
           "poster": "/assets/tercertiempo/cantos-al-juego-de-bolar.jpg",
           "posterSource": "custom",
-          "flags": "🇨🇴"
+          "flags": "🇨🇴",
+          "synopsis_en": "A poetic audiovisual essay on childhood, the ball and the essence of play. A reflection on football as freedom, imagination and collective encounter."
         },
         {
           "title": "El equipo del pueblo. Un sueño, Atlante",
@@ -381,13 +399,14 @@
           "synopsis_lang": "es",
           "poster": "/assets/tercertiempo/el-equipo-del-pueblo.jpg",
           "posterSource": "custom",
-          "flags": "🇲🇽"
+          "flags": "🇲🇽",
+          "synopsis_en": "The story of one of Mexican football's most beloved clubs and the emotional bond it keeps with generations of fans."
         }
       ],
       "day": "2026-07-16",
       "time": "13:00",
       "venue": "Cinemateca Sala 2",
-      "section": "🎬 Selección Oficial",
+      "section": "✍️ Fútbol Poético",
       "_src": {
         "url": "https://cinematecadebogota.gov.co/node/peliculas/2568?sede=11",
         "date": "2026-07-10"
@@ -414,7 +433,8 @@
           "synopsis_lang": "es",
           "poster": "/assets/tercertiempo/mounir.jpg",
           "posterSource": "custom",
-          "flags": "🇪🇸"
+          "flags": "🇪🇸",
+          "synopsis_en": "While fighting to obtain a residence permit, Mounir tries to build a stable life in Spain without giving up his roots or the family ties that bind him to Morocco."
         },
         {
           "title": "Más que Imparables",
@@ -426,7 +446,9 @@
           "synopsis_lang": "es",
           "poster": "/assets/tercertiempo/mas-que-imparables.jpg",
           "posterSource": "custom",
-          "flags": "🇺🇸"
+          "flags": "🇺🇸",
+          "synopsis_en": "A young Somali refugee finds hope through football by joining a team led by another immigrant teenager. Sport becomes a tool of resilience and transformation.",
+          "title_en": "Beyond Unstoppable"
         },
         {
           "title": "Internacional. Un equipo diferente",
@@ -438,13 +460,14 @@
           "synopsis_lang": "es",
           "poster": "/assets/tercertiempo/internacional.jpg",
           "posterSource": "custom",
-          "flags": "🇪🇸🇸🇳"
+          "flags": "🇪🇸🇸🇳",
+          "synopsis_en": "The story of a football team created to bring together people of different nationalities in Spain. In the face of prejudice, racism and cultural barriers, the project shows how sport can build coexistence, inclusion and a sense of belonging."
         }
       ],
       "day": "2026-07-16",
       "time": "19:00",
       "venue": "Cinemateca Sala 2",
-      "section": "🎬 Selección Oficial",
+      "section": "🏟️ Refugio en la Cancha",
       "_src": {
         "url": "https://cinematecadebogota.gov.co/node/peliculas/2569?sede=11",
         "date": "2026-07-10"
@@ -471,7 +494,9 @@
           "synopsis_lang": "es",
           "poster": "/assets/tercertiempo/el-remate.jpg",
           "posterSource": "custom",
-          "flags": "🇺🇸"
+          "flags": "🇺🇸",
+          "synopsis_en": "An animated tale exploring the dreams, challenges and emotions surrounding football's simplest and most universal act: kicking a ball.",
+          "title_en": "The Kick"
         },
         {
           "title": "Con un pie en la gloria",
@@ -483,13 +508,14 @@
           "synopsis_lang": "es",
           "poster": "/assets/tercertiempo/con-un-pie-en-la-gloria.jpg",
           "posterSource": "custom",
-          "flags": "🇲🇽"
+          "flags": "🇲🇽",
+          "synopsis_en": "The inspiring story of amputee footballers who defy physical and social limits to compete at the highest level."
         }
       ],
       "day": "2026-07-17",
       "time": "13:00",
       "venue": "Cinemateca Sala 2",
-      "section": "🎬 Selección Oficial",
+      "section": "💪 Contra Todo",
       "_src": {
         "url": "https://cinematecadebogota.gov.co/node/peliculas/2570?sede=11",
         "date": "2026-07-10"
@@ -516,7 +542,8 @@
           "synopsis_lang": "es",
           "poster": "/assets/tercertiempo/v1ctor.jpg",
           "posterSource": "custom",
-          "flags": "🇦🇷"
+          "flags": "🇦🇷",
+          "synopsis_en": "An intimate portrait of Víctor Tujschnaider and his relationship with Argentina's football memory."
         },
         {
           "title": "Los murales del campeón",
@@ -528,7 +555,9 @@
           "synopsis_lang": "es",
           "poster": "/assets/tercertiempo/los-murales-del-campeon.jpg",
           "posterSource": "custom",
-          "flags": "🇮🇹"
+          "flags": "🇮🇹",
+          "synopsis_en": "A journey through the murals dedicated to Diego Maradona and the cultural legacy still alive in the streets.",
+          "title_en": "Il murales del campione"
         },
         {
           "title": "El documental del 10",
@@ -540,13 +569,14 @@
           "synopsis_lang": "es",
           "poster": "/assets/tercertiempo/el-documental-del-10.jpg",
           "posterSource": "custom",
-          "flags": "🇦🇷"
+          "flags": "🇦🇷",
+          "synopsis_en": "A cultural and deeply human look at the life of Diego Maradona, told through music, literature, poetry and the arts. More than forty artists reflect on the mark El Diez left on their work and their lives."
         }
       ],
       "day": "2026-07-17",
       "time": "20:00",
       "venue": "Cinemateca Sala Capital",
-      "section": "🎬 Selección Oficial",
+      "section": "🔟 El Diego",
       "_src": {
         "url": "https://cinematecadebogota.gov.co/node/peliculas/2571?sede=11",
         "date": "2026-07-10"
@@ -568,7 +598,7 @@
       "day": "2026-07-18",
       "time": "13:00",
       "venue": "Cinemateca Sala 2",
-      "section": "🎬 Selección Oficial",
+      "section": "⚽ Juegan como Niñas",
       "_src": {
         "url": "https://cinematecadebogota.gov.co/node/peliculas/2572?sede=11",
         "date": "2026-07-10"
@@ -578,7 +608,8 @@
       "poster": "/assets/tercertiempo/juegan-como-ninas.jpg",
       "posterSource": "custom",
       "flags": "🇨🇴",
-      "day_order": 1
+      "day_order": 1,
+      "synopsis_en": "Ximena, a Venezuelan teenager newly arrived in Colombia, defies prejudice and social barriers to form a women's football team and compete in the neighborhood league."
     },
     {
       "title": "Territorios en Juego",
@@ -596,7 +627,9 @@
           "synopsis_lang": "es",
           "poster": "/assets/tercertiempo/patada-inicial.jpg",
           "posterSource": "custom",
-          "flags": "🇵🇹"
+          "flags": "🇵🇹",
+          "synopsis_en": "A story about identity, community and belonging, where football works as a meeting point between generations.",
+          "title_en": "Kickoff"
         },
         {
           "title": "Voces del territorio: Cuerpos en camino",
@@ -608,13 +641,14 @@
           "synopsis_lang": "es",
           "poster": "/assets/tercertiempo/voces-del-territorio.jpg",
           "posterSource": "custom",
-          "flags": "🇪🇸🇨🇷🇫🇷"
+          "flags": "🇪🇸🇨🇷🇫🇷",
+          "synopsis_en": "A journey through communities and territories where movement, sport and collective memory become tools for social transformation."
         }
       ],
       "day": "2026-07-18",
       "time": "17:00",
       "venue": "Cinemateca Sala 3",
-      "section": "🎬 Selección Oficial",
+      "section": "🗺️ Territorios en Juego",
       "_src": {
         "url": "https://cinematecadebogota.gov.co/node/peliculas/2573?sede=11",
         "date": "2026-07-10"
@@ -641,7 +675,8 @@
           "synopsis_lang": "es",
           "poster": "/assets/tercertiempo/doval-el-loco.jpg",
           "posterSource": "custom",
-          "flags": "🇧🇷"
+          "flags": "🇧🇷",
+          "synopsis_en": "The life of one of Brazilian football's most singular characters and the legacy he left on and off the pitch."
         },
         {
           "title": "Memorias de infancia",
@@ -653,7 +688,9 @@
           "synopsis_lang": "es",
           "poster": "/assets/tercertiempo/memorias-de-infancia.jpg",
           "posterSource": "custom",
-          "flags": "🇧🇷"
+          "flags": "🇧🇷",
+          "synopsis_en": "A nostalgic look at childhood, the neighborhoods and the experiences that build the relationship between football, identity and memory.",
+          "title_en": "Memória de Pivete"
         },
         {
           "title": "La herencia de Chico",
@@ -665,13 +702,15 @@
           "synopsis_lang": "es",
           "poster": "/assets/tercertiempo/la-herencia-de-chico.jpg",
           "posterSource": "custom",
-          "flags": "🇧🇷"
+          "flags": "🇧🇷",
+          "synopsis_en": "A tale of family tradition, football passion and a legacy that runs through generations in a Brazilian community.",
+          "title_en": "A Herança de Chico"
         }
       ],
       "day": "2026-07-18",
       "time": "19:00",
       "venue": "Cinemateca Sala 2",
-      "section": "🎬 Selección Oficial",
+      "section": "🇧🇷 Brasil: Juego, memoria y pasión",
       "_src": {
         "url": "https://cinematecadebogota.gov.co/node/peliculas/2574?sede=11",
         "date": "2026-07-10"
@@ -698,7 +737,8 @@
           "synopsis_lang": "es",
           "poster": "/assets/tercertiempo/buscalavida-y-milikua.jpg",
           "posterSource": "custom",
-          "flags": "🇪🇸"
+          "flags": "🇪🇸",
+          "synopsis_en": "Two communities united by football face social and cultural challenges while finding in sport a tool to strengthen collective identity, coexistence and hope."
         },
         {
           "title": "La fiesta del fútbol popular",
@@ -710,7 +750,8 @@
           "synopsis_lang": "es",
           "poster": "/assets/tercertiempo/la-fiesta-del-futbol-popular.jpg",
           "posterSource": "custom",
-          "flags": "🇨🇴"
+          "flags": "🇨🇴",
+          "synopsis_en": "A journey through the popular expressions of Colombian football, where passion, celebration and community ownership turn the game into a cultural phenomenon that transcends the pitch."
         },
         {
           "title": "El fin de los tiempos",
@@ -722,7 +763,8 @@
           "synopsis_lang": "es",
           "poster": "/assets/tercertiempo/el-fin-de-los-tiempos.jpg",
           "posterSource": "custom",
-          "flags": "🇲🇽"
+          "flags": "🇲🇽",
+          "synopsis_en": "In a community marked by uncertainty, football becomes an emotional refuge and a form of resistance against the changes threatening everyday life."
         }
       ],
       "day": "2026-07-17",
@@ -758,7 +800,8 @@
       "poster": "/assets/tercertiempo/juegan-como-ninas.jpg",
       "posterSource": "custom",
       "flags": "🇨🇴",
-      "day_order": 2
+      "day_order": 2,
+      "synopsis_en": "Ximena, a Venezuelan teenager newly arrived in Colombia, defies prejudice and social barriers to form a women's football team and compete in the neighborhood league."
     }
   ],
   "_parked": [
@@ -768,7 +811,7 @@
       "info": true,
       "day": "2026-07-18",
       "venue": "Los Ángeles FC",
-      "section": "⚽ Fan Zone",
+      "section": "🎉 Fan Zone",
       "synopsis": "Pantalla gigante · Asado argentino · Selección especial de cortometrajes · Premios y activaciones · Fútbol, memoria y coleccionismo · Feria de camisetas · Transmisión de la Copa del Mundo · Hora feliz · Música en vivo · Fiesta de la cultura de fútbol.",
       "_src": {
         "url": "https://assets.zyrosite.com/YBgeNxN2QVtL1B3j/ttf_2026_programa-bogota-.pdf-YvbyN0sIYAyjVije.pdf",
