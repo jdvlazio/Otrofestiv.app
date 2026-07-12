@@ -47,7 +47,7 @@ function parseArgs() {
   const args = process.argv.slice(2);
   const opts = {
     id: null, name: null, fullname: null, short: null, city: null,
-    start: null, days: null, storage: null,
+    country: 'CO', start: null, days: null, storage: null,
     priolimit: 5, event: 'EVENTO,', tz: '-05:00',
     endtime: '23:00:00', test: false,
   };
@@ -137,24 +137,33 @@ function formatConfig(opts, days) {
   const ep0      = (epParts[0] || 'EVENTO').trim();
   const ep1      = (epParts[1] !== undefined ? epParts[1] : '').trim();
 
-  const fd  = days.map(d => `'${d.key}':'${d.iso}'`).join(',');
-  const da  = days.map(d => `{k:'${d.key}',d:${d.num},lbl:'${d.lbl}'}`).join(',');
-  const dk  = days.map(d => `'${d.key}'`).join(',');
-  const ds    = days.map(d => `'${d.key}':'${d.key}'`).join(',');
-  const dsen  = days.map(d => `'${d.key}':'${d.lblEn} ${d.num}'`).join(',');
+  // Day keys ISO (YYYY-MM-DD) — único formato desde Tribeca 2026 (docs/PIPELINE.md
+  // "Reglas inmutables"). El formato legacy 'LUN 13' se emitía hasta jul 2026 —
+  // descubierto desalineado en el test del pipeline v2 (Tercer Tiempo).
+  const MONTH_LONG = {'01':'enero','02':'febrero','03':'marzo','04':'abril','05':'mayo','06':'junio',
+    '07':'julio','08':'agosto','09':'septiembre','10':'octubre','11':'noviembre','12':'diciembre'};
+  const fd  = days.map(d => `'${d.iso}':'${d.iso}'`).join(',');
+  const da  = days.map(d => `{k:'${d.iso}',d:${d.num},lbl:'${d.lbl}'}`).join(',');
+  const dk  = days.map(d => `'${d.iso}'`).join(',');
+  const ds    = days.map(d => `'${d.iso}':'${d.lbl} ${d.num}'`).join(',');
+  const dsen  = days.map(d => `'${d.iso}':'${d.lblEn} ${d.num}'`).join(',');
+  const dlong = days.map(d => `'${d.iso}':'${d.long} ${d.num} de ${MONTH_LONG[d.iso.slice(5,7)]}'`).join(',');
+  const startStr = `${days[0].iso}T00:00:00`;
 
   const group = opts.test ? "\n  group:'test'," : '';
 
   return [
     `'${opts.id}': {`,
-    `  name:'${opts.name}',fullName:'${opts.fullname}',shortName:'${opts.short}',city:'${opts.city}',`,
+    `  name:'${opts.name}',fullName:'${opts.fullname}',shortName:'${opts.short}',`,
+    `  city:'${opts.city}',country:'${opts.country}',`,
     `  dates:'${datesStr}',dates_en:'${datesStrEN}',year:${year},timezoneOffset:'${opts.tz}',`,
-    `  storageKey:'${opts.storage}',festivalEndStr:'${endStr}',${group}`,
+    `  storageKey:'${opts.storage}',festivalStartStr:'${startStr}',festivalEndStr:'${endStr}',${group}`,
     `  festivalDates:{${fd}},`,
     `  days:[${da}],`,
     `  dayKeys:[${dk}],`,
     `  dayShort:{${ds}},`,
     `  dayShort_en:{${dsen}},`,
+    `  dayLong:{${dlong}},`,
     `  prioLimit:${parseInt(opts.priolimit)||5},eventPosterLabel:['${ep0}','${ep1}'],`,
     `  films:null,posters:null,lbSlugs:{}`,
     `},`,

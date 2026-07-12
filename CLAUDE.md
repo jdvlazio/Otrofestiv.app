@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `43efcd7 Merge #292 — pipeline v2 + doctrina de fuentes`
+> Último commit: `b6ff538 Merge #293 — procedencia + dashboard de auditoría`
 
 ---
 
@@ -61,6 +61,7 @@ Juan es Product Owner, diseñador y developer. Claude ejecuta; Juan audita y apr
 | `cinemancia2025` | Cinemancia 2025 | Valle de Aburrá | 11–20 SEP | Archivado |
 | `leviza2026` | Leviza - Festival de Cine y Audiovisuales | Zapatoca | 14–17 MAY | Archivado |
 | `olhar2026` | Olhar de Cinema | Curitiba | JUN 4–13 | Recién terminado |
+| `tercertiempo2026` | TercerTiempo Fest | Bogotá | 13–19 JUL | **Próximo / activo** |
 | `ficmontanas2026` | Ficmontañas | Salento | JUL 1–5 | Recién terminado |
 
 ### Features activas (desde `.specify/features/`)

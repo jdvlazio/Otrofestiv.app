@@ -135,6 +135,9 @@ export const SECTION_COLORS = {
 //  · Tribeca se omite entero: sus secciones ya están en inglés.
 //  · "Impact Hits"/"Industry Days" (AFF) ya están en inglés → se omiten.
 export const SECTION_EN = {
+  '🎬 Selección Oficial': 'Official Selection',
+  '🏘️ Cinematecas Locales': 'Local Cinematheques',
+  '⚽ Fan Zone': 'Fan Zone',
   // Olhar de Cinema (nombres oficiales del sitio EN)
   '🎬 Apertura':'Opening Film',
   '🌟 Clausura':'Closing Film',
@@ -264,6 +267,20 @@ export const FESTIVAL_CONFIG={
     prioLimit:5,
     films:null,posters:null,lbSlugs:{}
   },
+  'tercertiempo2026': {
+    name:'TercerTiempo Fest',fullName:'Tercer Tiempo Fest — Festival Mundial de Cine de Fútbol y Deportes',shortName:'TTF',
+    city:'Bogotá',country:'CO',
+    dates:'13–19 JUL',dates_en:'JUL 13–19',year:2026,timezoneOffset:'-05:00',
+    storageKey:'tercertiempo2026_',festivalStartStr:'2026-07-13T00:00:00',festivalEndStr:'2026-07-19T23:00:00',
+    festivalDates:{'2026-07-13':'2026-07-13','2026-07-14':'2026-07-14','2026-07-15':'2026-07-15','2026-07-16':'2026-07-16','2026-07-17':'2026-07-17','2026-07-18':'2026-07-18','2026-07-19':'2026-07-19'},
+    days:[{k:'2026-07-13',d:13,lbl:'LUN'},{k:'2026-07-14',d:14,lbl:'MAR'},{k:'2026-07-15',d:15,lbl:'MIÉ'},{k:'2026-07-16',d:16,lbl:'JUE'},{k:'2026-07-17',d:17,lbl:'VIE'},{k:'2026-07-18',d:18,lbl:'SÁB'},{k:'2026-07-19',d:19,lbl:'DOM'}],
+    dayKeys:['2026-07-13','2026-07-14','2026-07-15','2026-07-16','2026-07-17','2026-07-18','2026-07-19'],
+    dayShort:{'2026-07-13':'LUN 13','2026-07-14':'MAR 14','2026-07-15':'MIÉ 15','2026-07-16':'JUE 16','2026-07-17':'VIE 17','2026-07-18':'SÁB 18','2026-07-19':'DOM 19'},
+    dayShort_en:{'2026-07-13':'MON 13','2026-07-14':'TUE 14','2026-07-15':'WED 15','2026-07-16':'THU 16','2026-07-17':'FRI 17','2026-07-18':'SAT 18','2026-07-19':'SUN 19'},
+    dayLong:{'2026-07-13':'Lunes 13 de julio','2026-07-14':'Martes 14 de julio','2026-07-15':'Miércoles 15 de julio','2026-07-16':'Jueves 16 de julio','2026-07-17':'Viernes 17 de julio','2026-07-18':'Sábado 18 de julio','2026-07-19':'Domingo 19 de julio'},
+    prioLimit:5,eventPosterLabel:['EVENTO',''],
+    films:null,posters:null,lbSlugs:{}
+  },
   'ficmontanas2026':{
     name:'Ficmontañas',fullName:'Festival Internacional de Cine en las Montañas',shortName:'FICMONTAÑAS',
     city:'Salento',country:'CO',
@@ -318,6 +335,9 @@ export const ARCHETYPE_COLORS = {
 // Cada sección de cada festival → su arquetipo. Generado por scripts/classify-posters
 // (arquetipos) + decisiones de diseño. Sección nueva sin entrada → gate lo caza.
 export const SECTION_ARCHETYPES = {
+  '🎬 Selección Oficial': 'Competencia',
+  '🏘️ Cinematecas Locales': 'Muestra / País',
+  '⚽ Fan Zone': 'Especiales / Eventos',
   '⏳ (s)paces of Time': 'Perspectivas / Miradas',
   '✊ Cine Afro': 'Muestra / País',
   '✨ Exhibiciones Especiales': 'Especiales / Eventos',

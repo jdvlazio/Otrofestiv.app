@@ -84,6 +84,17 @@ export async function subscribeDelaysCloud(){
       .eq('festival_id', fest);
     if(_channelFest === fest){ (data || []).forEach(r => _applyRow(r, false)); _rerender(); }
   }catch(e){ console.warn('[delays-cloud] carga inicial:', e.message); }
+  // CARRERA (cazada por T39 al iterar festivales rápido): si el festival cambió
+  // durante el await de arriba, abortar — crear el canal igual dejaba un zombie
+  // suscrito, y al volver a este festival _sb.channel() devolvía ese zombie →
+  // "cannot add postgres_changes callbacks ... after subscribe()".
+  if(_channelFest !== fest) return;
+  // Cinturón: si quedó un canal vivo con este topic (carrera previa), removerlo
+  // antes de re-crear — nunca hacer .on() sobre un canal ya suscrito.
+  try{
+    const _zombie = _sb.getChannels && _sb.getChannels().find(c => c.topic === 'realtime:sr-' + fest);
+    if(_zombie) _sb.removeChannel(_zombie);
+  }catch(e){ /* noop */ }
   // Suscripción a cambios de este festival.
   _channel = _sb.channel('sr-' + fest)
     .on('postgres_changes',
