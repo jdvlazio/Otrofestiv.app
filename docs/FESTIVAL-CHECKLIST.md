@@ -40,6 +40,10 @@
 - [ ] **Entrada en `src/config.js`** (`FESTIVAL_CONFIG`) creada (id sin guion: `[a-z0-9]+`)
 - [ ] **`fullName`** (nombre oficial completo, **verificado en la fuente oficial del festival**) presente en la entrada de `FESTIVAL_CONFIG` — se muestra al expandir el selector. `generate-config.js` lo exige vía `--fullname`.
 - [ ] **Secciones**: emoji único por sección + orden curatorial definido
+- [ ] **Secciones = nombres OFICIALES** de la fuente (jamás etiquetas propias tipo "Selección Oficial" — lección TT 2026, PR #295)
+- [ ] **Imágenes de cada ficha inventariadas** (afiche oficial de sesión = póster de bloque; no leer solo texto — lección TT 2026, PR #297)
+- [ ] **Funciones no confirmadas por la fuente operativa** marcadas `_pendiente` (no modelar lo anunciado sin ficha/boleta)
+- [ ] **`ticket_url` por film** si el material oficial trae link de compra por sesión
 - [ ] **`synopsis_es`** presente para todos los films solos
 - [ ] **`synopsis_lang`** declarado en cada film
 - [ ] **Localización de contenido** (traducción del contenido del festival, no de UI):
@@ -74,8 +78,7 @@ Estos labels, si aparecen, bloquean o advierten — no ignorarlos:
 
 Estos campos **pueden quedar para después del primer commit** sin bloquear el merge:
 
-- **`genre`** — enriquecimiento TMDB estricto (los 4 criterios; year debe estar verificado antes).
-- **`lbSlug`** — Letterboxd (método Chrome tab, verificar cada slug individualmente; nunca inferir del título).
+- **`genre` + `lbSlug`** — `enrich-festival.py` (gate v2 con `--selftest`; year verificado antes). El slug sale del TMDB id que pasó el gate; verificación final = GET a la página LB (200 + director coincide). Rechazos con título ~1.0 se auditan (rechazo ≠ ausencia); método Chrome tab solo como rescate para films fuera de TMDB.
 - **Section emoji final** — la asignación curatorial de emoji + orden puede afinarse post-commit (Content-Designer).
 - **Posters de programas** (`is_cortos`/`is_programa`) — poster generativo/editorial.
 

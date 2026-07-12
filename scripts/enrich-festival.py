@@ -23,7 +23,8 @@ Comportamiento:
   - No sobreescribe campos con valor.
   - Enriquece también los items de film_list (cortos y programas combinados).
   - Films con type:'event' se saltan siempre.
-  - lbSlug no resuelto se marca con ⚠️ LB PENDIENTE para revisión manual.
+  - lbSlug no resuelto queda AUSENTE del JSON (la UI oculta el link); los
+    pendientes se listan solo en el log del run.
   - Los rechazos de TMDB se loguean al final para revisión manual.
 
 Requiere: pip install requests
