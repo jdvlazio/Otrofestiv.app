@@ -297,7 +297,7 @@ export const FESTIVAL_CONFIG={
     dayShort_en:{'2026-07-13':'MON 13','2026-07-14':'TUE 14','2026-07-15':'WED 15','2026-07-16':'THU 16','2026-07-17':'FRI 17','2026-07-18':'SAT 18','2026-07-19':'SUN 19'},
     dayLong:{'2026-07-13':'Lunes 13 de julio','2026-07-14':'Martes 14 de julio','2026-07-15':'Miércoles 15 de julio','2026-07-16':'Jueves 16 de julio','2026-07-17':'Viernes 17 de julio','2026-07-18':'Sábado 18 de julio','2026-07-19':'Domingo 19 de julio'},
     prioLimit:5,eventPosterLabel:['EVENTO',''],
-    keyArt:'/assets/keyart/tercertiempo2026.jpg',keyArtPos:'left',
+    keyArt:'/assets/keyart/tercertiempo2026.jpg',keyArtPos:'30%',
     films:null,posters:null,lbSlugs:{}
   },
   'fantasofest2026': {

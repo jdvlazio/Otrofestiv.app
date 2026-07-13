@@ -85,12 +85,39 @@ function _fillSplashInfo(festId){
   }
 }
 
+// _selectCenteredCard — tras el scroll-snap, selecciona la card más cercana al
+// centro del riel (el gesto de arrastrar = elegir). Ignora el divisor (no es card).
+function _selectCenteredCard(rail){
+  const mid=rail.getBoundingClientRect().left+rail.clientWidth/2;
+  let best=null,bd=Infinity;
+  rail.querySelectorAll('.splash-card').forEach(c=>{
+    const r=c.getBoundingClientRect();
+    const d=Math.abs(r.left+r.width/2-mid);
+    if(d<bd){bd=d;best=c;}
+  });
+  const cur=rail.querySelector('.splash-card.on')?.dataset.fest;
+  if(best && best.dataset.fest!==cur){
+    selectSplashFest(best.dataset.name,best.dataset.meta,best.dataset.fest);
+  }
+}
+
 // _renderSplashRail — renderiza el riel de afiches + puebla el info. `activeFestId`
 // = el marcado .on (preselección); si es null, el info muestra el PRIMER festival
 // del riel como preview (sin selección → "Entrar" sigue disabled: regla 5 jul).
+// Cablea (idempotente) el scroll-snap: al soltar el riel, la card centrada se elige.
 export function _renderSplashRail(activeFestId){
   const rail=document.getElementById('splash-rail');
-  if(rail) rail.innerHTML=_renderSplashRailHTML(state, activeFestId);
+  if(rail){
+    rail.innerHTML=_renderSplashRailHTML(state, activeFestId);
+    if(!rail.dataset.snapWired){
+      rail.dataset.snapWired='1';
+      let _tmo;
+      rail.addEventListener('scroll',()=>{
+        clearTimeout(_tmo);
+        _tmo=setTimeout(()=>_selectCenteredCard(rail),90);
+      },{passive:true});
+    }
+  }
   const previewId=activeFestId || document.querySelector('.splash-card')?.dataset.fest || null;
   _fillSplashInfo(previewId);
 }

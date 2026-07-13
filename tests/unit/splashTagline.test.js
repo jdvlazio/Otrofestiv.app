@@ -62,7 +62,7 @@ test('_renderSplashRailHTML — activo marcado, keyArt + object-position', () =>
   assert.match(html, /data-fest="tercertiempo2026"[^>]*aria-selected="true"/, 'activo aria-selected');
   assert.match(html, /class="splash-card[^"]*\bon\b/, 'activo lleva clase on');
   assert.ok(html.includes('/assets/keyart/tercertiempo2026.jpg'), 'usa keyArt');
-  assert.ok(html.includes('object-position:left'), 'aplica keyArtPos de TT');
+  assert.ok(html.includes('object-position:30%'), 'aplica keyArtPos de TT (30%: conserva "10" e "CINE")');
 });
 
 test('_renderSplashRailHTML — data-name/data-meta preservan firma de selectSplashFest', () => {
