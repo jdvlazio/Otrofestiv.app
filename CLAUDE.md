@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `41a4e6a feat(fantasofest): onboarding FantasoFest 2026 — 5 largos + muestra de cortos`
+> Último commit: `ca9ff92 feat(fantasofest): stills oficiales para 8 de los 10 cortos + fix editorial local`
 
 ---
 
