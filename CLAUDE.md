@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `3a657c2 Merge #304 — retro TT: pipeline v2.1 (Fase 1, gate v2, LB vía enricher)`
+> Último commit: `41a4e6a feat(fantasofest): onboarding FantasoFest 2026 — 5 largos + muestra de cortos`
 
 ---
 

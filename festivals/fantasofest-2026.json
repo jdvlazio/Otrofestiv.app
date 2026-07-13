@@ -286,17 +286,23 @@
           "director": "Andrea Segarra Bueno",
           "year": 2024,
           "genre": "Thriller",
-          "lbSlug": "only-snuff"
+          "lbSlug": "only-snuff",
+          "poster": "/assets/fantasofest/corto-only-snuff.jpg",
+          "posterSource": "editorial"
         },
         {
           "title": "La prueba de los ancestros",
           "director": "Reyson Velasquez",
-          "year": 2022
+          "year": 2022,
+          "poster": "/assets/fantasofest/corto-la-prueba.jpg",
+          "posterSource": "editorial"
         },
         {
           "title": "El monstruo de ningún lado",
           "director": "Juano Gómez",
-          "year": 2025
+          "year": 2025,
+          "poster": "/assets/fantasofest/corto-el-monstruo.jpg",
+          "posterSource": "editorial"
         },
         {
           "title": "Peephole",
@@ -306,33 +312,43 @@
         {
           "title": "Mutante",
           "director": "Héctor Tabares Rodríguez, Carolina Martínez Tolosa",
-          "year": 2022
+          "year": 2022,
+          "poster": "/assets/fantasofest/corto-mutante.jpg",
+          "posterSource": "editorial"
         },
         {
           "title": "El gato cósmico al final",
           "director": "Francisco Pavanetto",
           "year": 2013,
           "genre": "Fantasía",
-          "lbSlug": "el-gato-cosmico-al-final"
+          "lbSlug": "el-gato-cosmico-al-final",
+          "poster": "/assets/fantasofest/corto-el-gato-cosmico.jpg",
+          "posterSource": "editorial"
         },
         {
           "title": "El Chucur",
           "director": "Jairo Tarapuez Jaramillo",
           "year": 2024,
           "genre": "Animación",
-          "lbSlug": "el-chucur"
+          "lbSlug": "el-chucur",
+          "poster": "/assets/fantasofest/corto-el-chucur.jpg",
+          "posterSource": "editorial"
         },
         {
           "title": "Policía Depravado",
           "director": "Vera Porcel, Rocío Vazquez, Belén Macua, Juana Russo, Anabella Bergoglio, Agustina Macua, Alejandro Lagos, Brayant Manrique y Emilio López",
           "year": 2025,
           "genre": "Terror, Thriller",
-          "lbSlug": "policia-depravado"
+          "lbSlug": "policia-depravado",
+          "poster": "/assets/fantasofest/corto-policia-depravado.jpg",
+          "posterSource": "editorial"
         },
         {
           "title": "Zombie YA!",
           "director": "Luciano Alvarez Curti, Joaquín Fernandez, Damian Ramos, Agustina Martínez Duranti, Catalina Moreno, Jazmin Levitán, Rodrigo Tintel, Julia Gouvert y Emilio López",
-          "year": 2024
+          "year": 2024,
+          "poster": "/assets/fantasofest/corto-zombie-ya.jpg",
+          "posterSource": "editorial"
         }
       ]
     },
@@ -369,17 +385,23 @@
           "director": "Andrea Segarra Bueno",
           "year": 2024,
           "genre": "Thriller",
-          "lbSlug": "only-snuff"
+          "lbSlug": "only-snuff",
+          "poster": "/assets/fantasofest/corto-only-snuff.jpg",
+          "posterSource": "editorial"
         },
         {
           "title": "La prueba de los ancestros",
           "director": "Reyson Velasquez",
-          "year": 2022
+          "year": 2022,
+          "poster": "/assets/fantasofest/corto-la-prueba.jpg",
+          "posterSource": "editorial"
         },
         {
           "title": "El monstruo de ningún lado",
           "director": "Juano Gómez",
-          "year": 2025
+          "year": 2025,
+          "poster": "/assets/fantasofest/corto-el-monstruo.jpg",
+          "posterSource": "editorial"
         },
         {
           "title": "Peephole",
@@ -389,33 +411,43 @@
         {
           "title": "Mutante",
           "director": "Héctor Tabares Rodríguez, Carolina Martínez Tolosa",
-          "year": 2022
+          "year": 2022,
+          "poster": "/assets/fantasofest/corto-mutante.jpg",
+          "posterSource": "editorial"
         },
         {
           "title": "El gato cósmico al final",
           "director": "Francisco Pavanetto",
           "year": 2013,
           "genre": "Fantasía",
-          "lbSlug": "el-gato-cosmico-al-final"
+          "lbSlug": "el-gato-cosmico-al-final",
+          "poster": "/assets/fantasofest/corto-el-gato-cosmico.jpg",
+          "posterSource": "editorial"
         },
         {
           "title": "El Chucur",
           "director": "Jairo Tarapuez Jaramillo",
           "year": 2024,
           "genre": "Animación",
-          "lbSlug": "el-chucur"
+          "lbSlug": "el-chucur",
+          "poster": "/assets/fantasofest/corto-el-chucur.jpg",
+          "posterSource": "editorial"
         },
         {
           "title": "Policía Depravado",
           "director": "Vera Porcel, Rocío Vazquez, Belén Macua, Juana Russo, Anabella Bergoglio, Agustina Macua, Alejandro Lagos, Brayant Manrique y Emilio López",
           "year": 2025,
           "genre": "Terror, Thriller",
-          "lbSlug": "policia-depravado"
+          "lbSlug": "policia-depravado",
+          "poster": "/assets/fantasofest/corto-policia-depravado.jpg",
+          "posterSource": "editorial"
         },
         {
           "title": "Zombie YA!",
           "director": "Luciano Alvarez Curti, Joaquín Fernandez, Damian Ramos, Agustina Martínez Duranti, Catalina Moreno, Jazmin Levitán, Rodrigo Tintel, Julia Gouvert y Emilio López",
-          "year": 2024
+          "year": 2024,
+          "poster": "/assets/fantasofest/corto-zombie-ya.jpg",
+          "posterSource": "editorial"
         }
       ]
     }

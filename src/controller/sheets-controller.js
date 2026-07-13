@@ -407,7 +407,9 @@ export function openCortoSheet(title, country, duration, section, flags, directo
   const lbHref=(richItem&&lbUrlForFilm(richItem))||lbUrl(title);
   const flgs=flags||countryToFlags(ctry)||'🌐';
   const posterUrl=posterOverride||(richItem&&getCortoItemPoster(richItem))||getPosterSrc(title,true)||null;
-  const _isEd3=_isEditorialImageUrl(posterUrl);
+  // Editorial por posterSource (still 16:9 local del festival) O por CDN-URL. Sin
+  // el chequeo de posterSource, un still local caía a <img> recortado 2:3.
+  const _isEd3=(richItem&&richItem.posterSource==='editorial')||_isEditorialImageUrl(posterUrl);
   const posterHtml=_isEd3
     ?`<div class="psp-editorial poster-ed" style="--ed-accent:${_sectionColor(section||'')}">${editorialFrame({header:_secLabel(section||''), src:posterUrl, title})}</div>`
     :posterUrl
@@ -477,9 +479,9 @@ export function _openCombinedFilmSheet(filmData){
   if(pelSheet&&pelSheet.classList.contains('open')){
     _cortoParentHtml=inner.innerHTML;
   }
-  const{title='',director='',year='',duration='',flags='🌐',country='',lbSlug='',poster:_fPoster=''}=filmData;
+  const{title='',director='',year='',duration='',flags='🌐',country='',lbSlug='',poster:_fPoster='',posterSource:_fPS=''}=filmData;
   const posterUrl=_fPoster?((_fPoster.startsWith('http')||_fPoster.startsWith('/assets/'))?_fPoster:TMDB_IMG+_fPoster):getPosterSrc(title,false)||null;
-  const _isEd4=_isEditorialImageUrl(posterUrl);
+  const _isEd4=_fPS==='editorial'||_isEditorialImageUrl(posterUrl);
   const _sec4=(()=>{const _p=FILMS.find(f=>f.film_list&&f.film_list.some(c=>c.title===title));return _p?.section||'';})();
   const posterHtml=_isEd4
     ?`<div class="psp-editorial poster-ed" style="--ed-accent:${_sectionColor(_sec4)}">${editorialFrame({header:_secLabel(_sec4), src:posterUrl, title})}</div>`
