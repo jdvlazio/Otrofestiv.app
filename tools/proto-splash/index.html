@@ -125,7 +125,7 @@ const F=[
  {k:'fantaso', name:'FantasoFest', tag:'Muestra Iberoamericana de Cine Fantástico',
   city:'Bogotá', dates:'13–19 JUL', live:true, img:'/assets/keyart/fantasofest2026.jpg', fit:'cover'},
  {k:'tt', name:'TercerTiempo', tag:'Festival Mundial de Cine de Fútbol y Deportes',
-  city:'Bogotá', dates:'13–19 JUL', live:true, img:'/assets/keyart/tercertiempo2026.jpg', fit:'cover'},
+  city:'Bogotá', dates:'13–19 JUL', live:true, img:'/assets/keyart/tercertiempo2026.jpg', fit:'cover', pos:'left'},
  {div:'Anteriores'},
  {k:'ficmont', name:'Ficmontañas', tag:'Festival Internacional de Cine en las Montañas',
   city:'Salento', dates:'JUL 1–5 · 2026', img:'/assets/keyart/ficmontanas2026.jpg', fit:'cover', past:true},
@@ -149,10 +149,11 @@ F.forEach(f=>{
       `<div class="state-div"><div class="bar"></div><div class="y">${f.div}</div><div class="bar"></div></div>`);
     return;
   }
+  const posStyle=f.pos?` style="object-position:${f.pos}"`:'';
   const art=f.img
     ? (f.fit==='blur'
-        ? `<img class="fill" src="${f.img}" alt=""><img class="art" src="${f.img}" alt="">`
-        : `<img class="art" src="${f.img}" alt="">`)
+        ? `<img class="fill" src="${f.img}" alt=""><img class="art" src="${f.img}" alt=""${posStyle}>`
+        : `<img class="art" src="${f.img}" alt=""${posStyle}>`)
     : `<span class="fb">${f.name}</span>`;
   rail.insertAdjacentHTML('beforeend',
     `<div class="card${f.past?' past':''}" data-k="${f.k}">
