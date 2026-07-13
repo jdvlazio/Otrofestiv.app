@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Proto v4 — Splash: un riel, divisor-año, grid armónico</title>
+<style>
+@font-face{font-family:'Plus Jakarta Sans';src:url('/fonts/plus-jakarta-sans-latin-400-normal.woff2') format('woff2');font-weight:400}
+@font-face{font-family:'Plus Jakarta Sans';src:url('/fonts/plus-jakarta-sans-latin-600-normal.woff2') format('woff2');font-weight:600}
+@font-face{font-family:'Plus Jakarta Sans';src:url('/fonts/plus-jakarta-sans-latin-700-normal.woff2') format('woff2');font-weight:700}
+@font-face{font-family:'Plus Jakarta Sans';src:url('/fonts/plus-jakarta-sans-latin-800-normal.woff2') format('woff2');font-weight:800}
+:root{
+  --bg:#0A0A0A; --surf:#141414; --surf-2:#1A1A1A; --bdr:#2A2A2A; --bdr-l:#1E1E1E;
+  --amber:#F59E0B; --white:#F0EDE8; --gray:#888; --gray2:#555; --green:#3AAA6E;
+  --t-xs:9px; --t-sm:11px; --t-base:13px; --t-md:16px; --t-lg:20px;
+  --w-med:600; --w-bold:700; --w-black:800;
+  --r:12px; --sp-1:4px; --sp-2:8px; --sp-3:12px; --sp-4:16px; --sp-5:24px;
+  --font:'Plus Jakarta Sans',sans-serif;
+  /* ── grid del splash: póster manda, el resto se deriva ── */
+  --poster-h:clamp(200px, 30dvh, 280px);
+  --poster-w:calc(var(--poster-h) * 2 / 3);
+}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{height:100%}
+body{background:var(--bg);font-family:var(--font);color:var(--white)}
+
+/* ── RITMO VERTICAL v5 (calcado del splash actual): 3 actores —
+     wordmark · CLÚSTER (label+riel+info+CTA, ritmo interno apretado) · tagline —
+     y 4 gutters flexibles IGUALES alrededor → composición condensada al centro ── */
+.screen{max-width:430px;margin:0 auto;height:100vh;height:100dvh;display:flex;flex-direction:column;
+  align-items:center;padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom)}
+.gut{flex:1 1 0;min-height:var(--sp-3)}
+.cluster{width:100%;display:flex;flex-direction:column;align-items:center}
+
+.splash-wordmark{font-size:26px;font-weight:var(--w-black);letter-spacing:-.5px}
+.splash-wordmark span{color:var(--amber)}
+
+.zone-sel{width:100%}
+.splash-q{font-size:var(--t-sm);color:var(--gray);text-transform:uppercase;letter-spacing:1px;
+  text-align:center;margin-bottom:var(--sp-4)}
+
+/* ── UN riel: vigentes brillantes · divisor-año · anteriores atenuados ── */
+.rail{display:flex;width:100%;gap:var(--sp-4);overflow-x:auto;scroll-snap-type:x mandatory;
+  padding:2px calc(50% - var(--poster-w)/2);scrollbar-width:none;align-items:center}
+.rail::-webkit-scrollbar{display:none}
+.card{flex:none;width:var(--poster-w);scroll-snap-align:center;cursor:pointer;
+  transition:transform .25s,opacity .25s,filter .25s}
+.tpl{width:var(--poster-w);height:var(--poster-h);border-radius:var(--r);background:#000;
+  border:1px solid var(--bdr);position:relative;overflow:hidden;
+  transition:border-color .25s,box-shadow .25s}
+.tpl img.art{position:relative;z-index:1;width:100%;height:100%;object-fit:contain;display:block}
+.tpl img.fill{position:absolute;inset:-8%;width:116%;height:116%;object-fit:cover;
+  filter:blur(14px) brightness(.5);z-index:0}
+.tpl.cover img.art{object-fit:cover}
+.card:not(.on){transform:scale(.92);opacity:.5}
+.card.past:not(.on){opacity:.32;filter:grayscale(.6)}
+.card.on .tpl{border-color:var(--amber);box-shadow:0 0 0 1px var(--amber)}
+.tpl .fb{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+  font-size:var(--t-base);font-weight:var(--w-black);color:var(--gray2);text-transform:uppercase;
+  letter-spacing:-.3px;text-align:center;padding:0 var(--sp-3);z-index:1}
+
+/* divisor SEMÁNTICO dentro del riel — marca el cambio de estado, no el año
+   (mismo lenguaje del .splash-drop-sep: t-xs uppercase letterspacing) */
+.state-div{flex:none;display:flex;flex-direction:column;align-items:center;gap:var(--sp-2);
+  scroll-snap-align:none;align-self:center}
+.state-div .bar{width:1px;height:calc(var(--poster-h)*.36);background:var(--bdr)}
+.state-div .y{font-size:var(--t-xs);color:var(--gray2);letter-spacing:.6px;font-weight:var(--w-bold);
+  text-transform:uppercase;writing-mode:vertical-rl;transform:rotate(180deg)}
+
+/* ── fórmula 4 líneas: Nombre / tagline / CIUDAD / FECHAS (·AÑO solo en pasados) ── */
+.info{text-align:center;padding:var(--sp-3) var(--sp-5) 0;width:100%}
+.info .name{font-size:var(--t-lg);font-weight:var(--w-black);letter-spacing:-.3px}
+.info .tag{font-size:var(--t-sm);color:var(--gray);margin-top:2px;line-height:1.45;min-height:16px}
+.info .city{font-size:var(--t-sm);color:var(--gray2);text-transform:uppercase;letter-spacing:.4px;margin-top:var(--sp-2)}
+.info .city .dot-live{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--green);
+  margin-right:5px;vertical-align:1px}
+.info .dates{font-size:var(--t-sm);color:var(--gray2);text-transform:uppercase;letter-spacing:.4px;margin-top:2px}
+
+.enter-btn{width:calc(100% - var(--sp-5)*2);max-width:300px;background:var(--amber);border:none;color:#0A0A0A;
+  font-family:var(--font);font-size:var(--t-base);font-weight:var(--w-bold);padding:14px 0;
+  border-radius:var(--r);letter-spacing:.3px;cursor:pointer}
+.splash-tagline{text-align:center;font-size:var(--t-md);color:var(--gray);line-height:1.5}
+.splash-tagline b{color:var(--amber);font-weight:var(--w-bold)}
+
+/* ── RULER (toggle: tecla G o triple-tap wordmark) ── */
+#ruler{position:fixed;inset:0;pointer-events:none;display:none;z-index:99}
+#ruler.on{display:block}
+#ruler .g8{position:absolute;inset:0;
+  background-image:linear-gradient(rgba(245,158,11,.07) 1px,transparent 1px);
+  background-size:100% 8px}
+#ruler .zone{position:absolute;left:0;right:0;border-top:1px dashed rgba(245,158,11,.5)}
+#ruler .zone i{position:absolute;right:4px;top:2px;font-style:normal;font-size:9px;color:var(--amber);
+  font-family:var(--font)}
+</style>
+</head>
+<body>
+<div class="screen" id="screen">
+  <div class="gut"></div>
+  <div class="splash-wordmark" id="wm">Otro<span>festiv</span></div>
+  <div class="gut"></div>
+
+  <div class="cluster">
+    <div class="splash-q">¿A qué festival vas?</div>
+    <div class="rail" id="rail"></div>
+    <div class="info">
+      <div class="name" id="i-name"></div>
+      <div class="tag" id="i-tag"></div>
+      <div class="city" id="i-city"></div>
+      <div class="dates" id="i-dates"></div>
+    </div>
+    <button class="enter-btn" style="margin-top:var(--sp-4)">Entrar</button>
+  </div>
+  <div class="gut"></div>
+
+  <div class="splash-tagline">Más de lo que crees<br><b>posible.</b></div>
+  <div class="gut"></div>
+</div>
+
+<div id="ruler"><div class="g8"></div></div>
+
+<script>
+/* keyArt: fit=contain (default, afiche intacto) · cover (desvío ≤6%: micro-crop
+   imperceptible, igual que el Grid) · blur (outlier 4:5: relleno ed-blur) */
+const F=[
+ {k:'fantaso', name:'FantasoFest', tag:'Muestra Iberoamericana de Cine Fantástico',
+  city:'Bogotá', dates:'13–19 JUL', live:true, img:'/assets/keyart/fantasofest2026.jpg', fit:'cover'},
+ {k:'tt', name:'TercerTiempo', tag:'Festival Mundial de Cine de Fútbol y Deportes',
+  city:'Bogotá', dates:'13–19 JUL', live:true, img:'/assets/keyart/tercertiempo2026.jpg', fit:'cover'},
+ {div:'Anteriores'},
+ {k:'ficmont', name:'Ficmontañas', tag:'Festival Internacional de Cine en las Montañas',
+  city:'Salento', dates:'JUL 1–5 · 2026', img:'/assets/keyart/ficmontanas2026.jpg', fit:'cover', past:true},
+ {k:'olhar', name:'Olhar de Cinema', tag:'Festival Internacional de Curitiba',
+  city:'Curitiba', dates:'JUN 4–13 · 2026', img:'/assets/keyart/olhar2026.jpg', fit:'cover', past:true},
+ {k:'tribeca', name:'Tribeca', tag:'Tribeca Film Festival',
+  city:'New York', dates:'JUN 3–14 · 2026', img:'/assets/keyart/tribeca2026.jpg', fit:'cover', past:true},
+ {k:'leviza', name:'Leviza', tag:'Festival de Cine y Audiovisuales',
+  city:'Zapatoca', dates:'14–17 MAY · 2026', img:'/assets/keyart/leviza2026.jpg', fit:'cover', past:true},
+ {k:'aff', name:'AFF', tag:'Alternativa Film Festival',
+  city:'Medellín', dates:'21–29 ABR · 2026', img:'/assets/keyart/aff2026.jpg', fit:'cover', past:true},
+ {k:'ficci', name:'FICCI 65', tag:'Festival Internacional de Cine de Cartagena de Indias',
+  city:'Cartagena', dates:'14–19 ABR · 2026', img:'/assets/keyart/ficci65.jpg', fit:'cover', past:true},
+ {k:'cinemancia', name:'Cinemancia', tag:'Festival Metropolitano de Cine',
+  city:'Valle de Aburrá', dates:'11–20 SEP · 2025', img:null, past:true},
+];
+const rail=document.getElementById('rail');
+F.forEach(f=>{
+  if(f.div){
+    rail.insertAdjacentHTML('beforeend',
+      `<div class="state-div"><div class="bar"></div><div class="y">${f.div}</div><div class="bar"></div></div>`);
+    return;
+  }
+  const art=f.img
+    ? (f.fit==='blur'
+        ? `<img class="fill" src="${f.img}" alt=""><img class="art" src="${f.img}" alt="">`
+        : `<img class="art" src="${f.img}" alt="">`)
+    : `<span class="fb">${f.name}</span>`;
+  rail.insertAdjacentHTML('beforeend',
+    `<div class="card${f.past?' past':''}" data-k="${f.k}">
+       <div class="tpl${f.fit==='cover'?' cover':''}">${art}</div>
+     </div>`);
+});
+const cards=[...rail.querySelectorAll('.card')];
+const DATA=Object.fromEntries(F.filter(f=>f.k).map(f=>[f.k,f]));
+function show(k){
+  const d=DATA[k];
+  document.getElementById('i-name').textContent=d.name;
+  const tag=document.getElementById('i-tag');
+  tag.textContent=d.tag; tag.style.visibility=d.tag?'visible':'hidden';
+  document.getElementById('i-city').innerHTML=(d.live?'<span class="dot-live"></span>':'')+d.city.toUpperCase();
+  document.getElementById('i-dates').textContent=d.dates;
+}
+function mark(card){
+  cards.forEach(c=>c.classList.toggle('on',c===card));
+  show(card.dataset.k);
+}
+cards.forEach(c=>c.addEventListener('click',()=>{mark(c);
+  c.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});}));
+let t;
+rail.addEventListener('scroll',()=>{clearTimeout(t);t=setTimeout(()=>{
+  const mid=rail.getBoundingClientRect().left+rail.clientWidth/2;
+  let best=null,bd=1e9;
+  cards.forEach(c=>{const r=c.getBoundingClientRect();
+    const d=Math.abs(r.left+r.width/2-mid);if(d<bd){bd=d;best=c;}});
+  if(best&&!best.classList.contains('on')) mark(best);
+},80);});
+history.scrollRestoration='manual';
+rail.scrollLeft=0;
+mark(cards[0]);
+
+/* ruler */
+const ruler=document.getElementById('ruler');
+function drawZones(){
+  ruler.querySelectorAll('.zone').forEach(z=>z.remove());
+  const names=['wordmark','clúster','tagline'];
+  [...document.querySelectorAll('.splash-wordmark,.cluster,.splash-tagline')]
+    .forEach((el,i)=>{
+      const r=el.getBoundingClientRect();
+      ruler.insertAdjacentHTML('beforeend',
+        `<div class="zone" style="top:${r.top}px;height:${r.height}px;border-bottom:1px dashed rgba(245,158,11,.5)"><i>${names[i]} · ${Math.round(r.height)}px</i></div>`);
+    });
+}
+function toggleRuler(){ruler.classList.toggle('on');if(ruler.classList.contains('on'))drawZones();}
+addEventListener('keydown',e=>{if(e.key==='g')toggleRuler();});
+let taps=0,tt2;
+document.getElementById('wm').addEventListener('click',()=>{
+  taps++;clearTimeout(tt2);tt2=setTimeout(()=>taps=0,500);
+  if(taps>=3){taps=0;toggleRuler();}
+});
+addEventListener('resize',()=>{if(ruler.classList.contains('on'))drawZones();});
+</script>
+</body>
+</html>
