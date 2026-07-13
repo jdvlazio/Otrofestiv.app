@@ -179,7 +179,7 @@ export const _I18N = {
     "plan_sin_proximas": "No tenés funciones próximas",
     "error_funciones": "Error al cargar funciones",
     "planear_peliculas": "Películas",
-    "splash_festival": "¿A qué festival vas?",
+    "splash_festival": "¿A cuál festival vas?",
     "splash_elegi": "Elegí uno",
     "splash_tagline": "Más de lo que crees",
     "splash_proximamente": "Más festivales en camino…",
