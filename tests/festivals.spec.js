@@ -68,6 +68,78 @@ test('T40 — splash: cabe sin scroll vertical (360×640) y el riel alcanza la �
   expect(geo.lastReachable).toBe(true);
 });
 
+// T41 — Splash en LANDSCAPE de teléfono (844×390): mismo invariante que T40 pero
+// en el peor caso de ALTO. El piso duro de 184px del póster empujaba "Entrar" bajo
+// el fold e inalcanzable (position:fixed sin scroll). La media query (max-height:480px)
+// baja el póster y comprime el padding → el splash entra completo y "Entrar" es visible.
+test('T41 — splash: cabe en landscape (844×390) y "Entrar" es alcanzable', async ({ page }) => {
+  await page.setViewportSize({ width: 844, height: 390 });
+  // Reduced-motion → el reveal es instantáneo (sin el transitorio translateY(16px)
+  // del @keyframes splashIn que infla scrollHeight mid-animación). Mide el REPOSO.
+  await page.emulateMedia({ reducedMotion: 'reduce' });
+  await page.goto('/');
+  await page.waitForSelector('html[data-app-ready="1"]', { state: 'attached', timeout: 15000 });
+  await page.waitForSelector('.splash-card[data-fest]', { state: 'attached', timeout: 15000 });
+  const geo = await page.evaluate(() => {
+    const splash = document.getElementById('otrofestiv-splash');
+    const btn = document.getElementById('splash-enter-btn');
+    return {
+      noVScroll: splash.scrollHeight <= splash.clientHeight + 1,
+      innerHeight: window.innerHeight,
+      btnBottom: btn.getBoundingClientRect().bottom,
+    };
+  });
+  expect(geo.noVScroll).toBe(true);
+  // "Entrar" completamente dentro del viewport (no bajo el fold)
+  expect(geo.btnBottom).toBeLessThanOrEqual(geo.innerHeight + 1);
+});
+
+// T42b — Selección-por-scroll GATEADA por gesto: un scroll SIN pointer/touch previo
+// (re-snap programático del render, focus-scroll del teclado al tabear) NO debe
+// cambiar la selección; solo un arrastre real del usuario elige por scroll. Guarda
+// dos bugs: auto-selección con 0 vigentes (divisor descentra → snap dispara scroll)
+// y el override de la selección al navegar con teclado hacia "Entrar".
+test('T42b — el scroll sin gesto de usuario no auto-selecciona (gate)', async ({ page }) => {
+  await page.goto('/');
+  await page.waitForSelector('html[data-app-ready="1"]', { state: 'attached', timeout: 15000 });
+  await page.waitForSelector('.splash-card[data-fest]', { state: 'attached', timeout: 15000 });
+  // Estado inicial en 2 festivales en curso: sin preselección, "Entrar" disabled.
+  const before = await page.evaluate(() => ({
+    on: document.querySelector('.splash-card.on')?.dataset.fest || null,
+    disabled: document.getElementById('splash-enter-btn').disabled,
+  }));
+  // Scroll PROGRAMÁTICO (sin pointerdown/touchstart) → dispara 'scroll' pero el gate
+  // no está armado → no debe seleccionar nada tras el debounce.
+  const afterProgrammatic = await page.evaluate(async () => {
+    const rail = document.getElementById('splash-rail');
+    rail.scrollLeft = rail.scrollWidth; // centra otra card
+    rail.dispatchEvent(new Event('scroll'));
+    await new Promise(r => setTimeout(r, 200)); // > 90ms del debounce
+    return {
+      on: document.querySelector('.splash-card.on')?.dataset.fest || null,
+      disabled: document.getElementById('splash-enter-btn').disabled,
+    };
+  });
+  // Ahora un ARRASTRE real (pointerdown sobre el riel → arma el gate → scroll elige).
+  const afterGesture = await page.evaluate(async () => {
+    const rail = document.getElementById('splash-rail');
+    rail.dispatchEvent(new PointerEvent('pointerdown', { bubbles: true }));
+    rail.scrollLeft = rail.scrollWidth;
+    rail.dispatchEvent(new Event('scroll'));
+    await new Promise(r => setTimeout(r, 200));
+    return {
+      on: document.querySelector('.splash-card.on')?.dataset.fest || null,
+      disabled: document.getElementById('splash-enter-btn').disabled,
+    };
+  });
+  // Sin gesto: la selección no cambió (sigue sin .on, "Entrar" disabled).
+  expect(afterProgrammatic.on).toBe(before.on);
+  expect(afterProgrammatic.disabled).toBe(true);
+  // Con gesto: sí eligió (hay .on, "Entrar" habilitado).
+  expect(afterGesture.on).not.toBeNull();
+  expect(afterGesture.disabled).toBe(false);
+});
+
 // T37 — Cambiar de festival actualiza el topbar
 test('T37 — cambiar de festival actualiza el topbar', async ({ page }) => {
   await enterFestival(page, 'leviza2026', LEVIZA_SIMTIME);

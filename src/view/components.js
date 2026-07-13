@@ -514,18 +514,25 @@ export function _renderSplashRailHTML(state, activeFestId){
     .filter(([,cfg])=>cfg.name&&cfg.group!=='test'), null);
   const current = entries.filter(([,cfg])=>_classifyFestival(cfg)!=='past');
   const past    = entries.filter(([,cfg])=>_classifyFestival(cfg)==='past');
-  const mkCard=([id,cfg])=>{
+  // isPast se pasa desde la partición (una sola clasificación por festival) — no
+  // re-clasificar dentro de mkCard: evita que la card caiga en un grupo y se pinte
+  // con la clase del otro en un boundary de fecha.
+  const mkCard=([id,cfg],isPast)=>{
     const isActive=id===activeFestId;
-    const isPast=_classifyFestival(cfg)==='past';
     const meta=`${cfg.city} · ${_lang==='en'&&cfg.dates_en?cfg.dates_en:cfg.dates}`;
     const label=festivalLabel(cfg);
+    // keyArtPos → custom property --kap (no inline style raw: ARQUITECTURA §10.3);
+    // onerror=this.remove() degrada al template negro si el afiche 404ea (§10.2).
     const art=cfg.keyArt
-      ? `<img class="splash-card-art" src="${cfg.keyArt}" alt="" loading="lazy"${cfg.keyArtPos?` style="object-position:${cfg.keyArtPos}"`:''}>`
+      ? `<img class="splash-card-art" src="${cfg.keyArt}" alt="" loading="lazy" onerror="this.remove()"${cfg.keyArtPos?` style="--kap:${cfg.keyArtPos}"`:''}>`
       : `<span class="splash-card-fb">${festivalShortName(cfg)}</span>`;
     return`<button class="splash-card${isPast?' past':''}${isActive?' on':''}" data-fest="${id}" role="option" aria-selected="${isActive}" data-action="selectSplashFest" data-name="${label}" data-meta="${meta}"><span class="splash-card-tpl">${art}</span></button>`;
   };
-  let html=current.map(mkCard).join('');
-  if(past.length) html+=`<span class="splash-rail-div" aria-hidden="true"><span class="srd-bar"></span><span class="srd-lbl">${t('splash_anteriores')}</span><span class="srd-bar"></span></span>`+past.map(mkCard).join('');
+  let html=current.map(e=>mkCard(e,false)).join('');
+  // Divisor "ANTERIORES" solo separa DOS grupos: si no hay vigentes (todos pasados)
+  // no se emite (colgar de primero descentra el snap inicial → auto-selección).
+  if(current.length && past.length) html+=`<span class="splash-rail-div" aria-hidden="true"><span class="srd-bar"></span><span class="srd-lbl">${t('splash_anteriores')}</span><span class="srd-bar"></span></span>`;
+  html+=past.map(e=>mkCard(e,true)).join('');
   return html;
 }
 

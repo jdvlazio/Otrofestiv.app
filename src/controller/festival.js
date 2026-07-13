@@ -65,23 +65,32 @@ function _selectCenteredCard(rail){
 // _renderSplashRail — renderiza el riel de afiches + puebla el info. `activeFestId`
 // = el marcado .on (preselección); si es null, el info muestra el PRIMER festival
 // del riel como preview (sin selección → "Entrar" sigue disabled: regla 5 jul).
-// Cablea (idempotente) el scroll-snap: al soltar el riel, la card centrada se elige.
+// Cablea (idempotente) la selección-por-scroll GATEADA por gesto de usuario.
 export function _renderSplashRail(activeFestId){
   const rail=document.getElementById('splash-rail');
   if(rail){
     rail.innerHTML=_renderSplashRailHTML(state, activeFestId);
     // Re-render con selección (p.ej. setLang): re-centrar la card .on para que
-    // el centro del scroll y la selección queden alineados — si divergen, el
-    // próximo gesto de scroll (_selectCenteredCard) pisaría la selección.
-    // Instant (sin behavior:'smooth'): snap mandatory pelea el smooth programático.
+    // el centro del scroll y la selección queden alineados. selectSplashFest ya
+    // centra, pero aquí la marca .on vino del HTML (activeFestId), no de un tap.
     const onCard=rail.querySelector('.splash-card.on');
     if(onCard) onCard.scrollIntoView({inline:'center',block:'nearest'});
     if(!rail.dataset.snapWired){
       rail.dataset.snapWired='1';
-      let _tmo;
+      // GATE DE GESTO: solo un ARRASTRE real del usuario (pointer/touch sobre el
+      // riel) puede elegir por scroll. Sin esto, el re-snap programático del
+      // render (0 vigentes → divisor descentra → snap mandatory dispara scroll)
+      // auto-seleccionaba sin interacción, y el focus-scroll del teclado (Tab
+      // entre cards) pisaba la selección explícita. El teclado elige activando la
+      // card enfocada (Enter → selectSplashFest), no por scroll.
+      let _tmo, _armed=false;
+      const _arm=()=>{ _armed=true; };
+      rail.addEventListener('pointerdown',_arm,{passive:true});
+      rail.addEventListener('touchstart',_arm,{passive:true});
       rail.addEventListener('scroll',()=>{
+        if(!_armed) return;
         clearTimeout(_tmo);
-        _tmo=setTimeout(()=>_selectCenteredCard(rail),90);
+        _tmo=setTimeout(()=>{ _armed=false; _selectCenteredCard(rail); },90);
       },{passive:true});
     }
   }
@@ -90,13 +99,21 @@ export function _renderSplashRail(activeFestId){
 }
 
 // selectSplashFest — el usuario (o la preselección) elige un festival. Marca la
-// card, puebla el info y habilita "Entrar". name/meta se conservan en la firma
-// (dispatcher data-action + TEST BRIDGE + tests) aunque el info se deriva del festId.
+// card, la centra en el riel, puebla el info y habilita "Entrar". CENTRAR vive
+// aquí (única dueña de la selección): así todo caller —tap, preselección de boot,
+// TEST BRIDGE, futuros deep-links— deja el centro del scroll alineado con la .on
+// sin tener que recordarlo (si divergen, el próximo scroll pisaría la selección).
+// name/meta se conservan en la firma (dispatcher data-action + TEST BRIDGE + tests)
+// aunque el info se deriva del festId.
 export function selectSplashFest(name,meta,festId){
   _splashSelectedFestId=festId||_DEFAULT_FEST_ID;
   document.querySelectorAll('.splash-card').forEach(el=>{el.classList.remove('on');el.setAttribute('aria-selected','false');});
   const card=document.querySelector('.splash-card[data-fest="'+_splashSelectedFestId+'"]');
-  if(card){ card.classList.add('on'); card.setAttribute('aria-selected','true'); }
+  if(card){
+    card.classList.add('on'); card.setAttribute('aria-selected','true');
+    // Instant (sin behavior:'smooth'): snap mandatory pelea el smooth programático.
+    card.scrollIntoView({inline:'center',block:'nearest'});
+  }
   _fillSplashInfo(_splashSelectedFestId);
   const enterBtn=document.getElementById('splash-enter-btn');
   if(enterBtn) enterBtn.disabled=false;

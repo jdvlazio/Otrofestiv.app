@@ -223,7 +223,7 @@ const ACTION_REGISTRY = {
   searchClose:           ()      => searchClose(),
   togglePastFestRow:     (el)    => _togglePastFestRow(el.closest('.fs-festival-row'), el.dataset.fest),
   openPostViewRating:    (el)    => openPostViewRating(el.dataset.title, el.dataset.day, el.dataset.time, el.dataset.venue, el.dataset.duration),
-  selectSplashFest:      (el)    => { selectSplashFest(el.dataset.name, el.dataset.meta, el.dataset.fest); if(el.classList&&el.classList.contains('splash-card')) el.scrollIntoView({inline:'center',block:'nearest'}); },
+  selectSplashFest:      (el)    => selectSplashFest(el.dataset.name, el.dataset.meta, el.dataset.fest),
   selectFromDetail:      (el)    => selectFromDetail(el),
   openCombinedFilmSheet: (el)    => _openCombinedFilmSheet(JSON.parse(el.dataset.film)),
   searchOpenFilm:        (el)    => _searchOpenFilm(el.dataset.title),
@@ -632,7 +632,7 @@ FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202607131529';
+const BUILD_VERSION='202607131829';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';

@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `d165f3e chore(splash) paso 6: bump-version + CLAUDE.md al modelo carrusel`
+> Último commit: `af086e8 fix(splash): orden estable del riel — la selección no reordena las cards`
 
 ---
 

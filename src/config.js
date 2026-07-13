@@ -230,6 +230,10 @@ export const FESTIVAL_CONFIG={
   //   name, city, dates, dates_en, year, keyArt → _renderSplashRail()
   //   storageKey                        → identificar localStorage
   //   festivalEndStr                    → _DEFAULT_FEST_ID
+  // keyArt es WRITE-ONCE: el SW cachea /assets/ cache-first para siempre (sobrevive
+  // deploys, sin ?v=). Para cambiar el afiche de un festival, usar un filename NUEVO
+  // (p.ej. tercertiempo2026-v2.jpg) y actualizar este path — nunca sobreescribir el
+  // archivo in-place, o los usuarios recurrentes verán el afiche viejo indefinidamente.
   // Todo lo demás (dayKeys, days, venues, posters, etc.) viene del JSON
   // y se mergea en loadFestival() — el JSON es la fuente única de verdad.
   'ficci65':{

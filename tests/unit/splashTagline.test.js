@@ -57,12 +57,15 @@ test('_renderSplashRailHTML — cards de los 8 festivales visibles + divisor', (
   assert.ok(!html.includes('cinemancia2025'), 'excluye group:test');
 });
 
-test('_renderSplashRailHTML — activo marcado, keyArt + object-position', () => {
+test('_renderSplashRailHTML — activo marcado, keyArt + keyArtPos + onerror', () => {
   const html = C._renderSplashRailHTML(fakeState(), 'tercertiempo2026');
   assert.match(html, /data-fest="tercertiempo2026"[^>]*aria-selected="true"/, 'activo aria-selected');
   assert.match(html, /class="splash-card[^"]*\bon\b/, 'activo lleva clase on');
   assert.ok(html.includes('/assets/keyart/tercertiempo2026.jpg'), 'usa keyArt');
-  assert.ok(html.includes('object-position:30%'), 'aplica keyArtPos de TT (30%: conserva "10" e "CINE")');
+  // keyArtPos vía custom property --kap (no inline style raw: ARQUITECTURA §10.3)
+  assert.ok(html.includes('--kap:30%'), 'aplica keyArtPos de TT (30%: conserva "10" e "CINE")');
+  // toda <img> degrada si el afiche 404ea (§10.2)
+  assert.ok(html.includes('onerror="this.remove()"'), 'la img de keyArt lleva onerror');
 });
 
 // INVARIANTE (bug cazado en QA 13 jul): el orden del riel es ESTABLE — no depende
