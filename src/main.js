@@ -130,7 +130,7 @@ import {
 
 // ── Step 7e: controller/festival.js ────────────────────────────────────────────
 import {
-  toggleSplashDropdown, _togglePastFest, _renderSplashDropdown, _togglePastFestRow, _renderFestivalSelector, selectSplashFest, _autoResolveFestivalPosters,
+  toggleSplashDropdown, _togglePastFest, _renderSplashDropdown, _renderSplashRail, _togglePastFestRow, _renderFestivalSelector, selectSplashFest, _autoResolveFestivalPosters,
 } from './controller/festival.js';
 
 // ── Step 7e: controller/auth.js ────────────────────────────────────────────
@@ -1448,24 +1448,16 @@ state.subscribeRender(
   // Se decide ANTES del reveal (splash aún invisible) → sin flash ni brinco.
   const _ongoingIds=Object.entries(FESTIVAL_CONFIG)
     .filter(([,c])=>_classifyFestival(c)==='ongoing').map(([id])=>id);
-  const _selBtn=document.getElementById('splash-sel-btn');
   if(_ongoingIds.length===1){
-    _renderSplashDropdown(_ongoingIds[0]);
-    const _autoItem=document.querySelector('.splash-drop-item[data-fest="'+_ongoingIds[0]+'"]');
-    if(_autoItem){
-      selectSplashFest(_autoItem.dataset.name,_autoItem.dataset.meta,_ongoingIds[0]);
-    } else if(_selBtn){
-      // fallback defensivo: sin item renderizado, volver al acordeón
-      _selBtn.classList.add('compact'); _selBtn.classList.remove('placeholder');
-    }
+    // Preselección automática: card .on + "Entrar" habilitado, cero interacción.
+    _renderSplashRail(_ongoingIds[0]);
+    selectSplashFest(null,null,_ongoingIds[0]);
   } else {
+    // 0 o 2+ en curso → el usuario elige. El riel arranca centrado en el primer
+    // festival y el info lo muestra como PREVIEW; ninguna card .on, "Entrar"
+    // disabled hasta un tap (regla 5 jul preservada).
     _splashSelectedFestId=null;
-    // Sin festival seleccionado → ningún item marcado .selected; orden por tier.
-    _renderSplashDropdown(null);
-    if(_selBtn){
-      _selBtn.classList.add('compact');
-      _selBtn.classList.remove('placeholder');
-    }
+    _renderSplashRail(null);
   }
   // Splash entrada: la animación es 100% CSS (@keyframes en index.html). El
   // contenido es visible por default y JS NO toca opacity → imposible que quede

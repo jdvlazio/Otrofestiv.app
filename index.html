@@ -1882,6 +1882,52 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
   font-size:var(--t-label);color:var(--gray);letter-spacing:1.2px;
   text-transform:uppercase;margin-bottom:var(--sp-2);
 }
+
+/* ── Selector-splash con afiches (riel center-snap) ──────────────────────────
+   El póster manda; el ancho se deriva 2:3. clamp responsivo: entra en 360×640
+   sin romper la distribución space-between del splash. */
+#otrofestiv-splash{--poster-h:clamp(184px,26dvh,264px);--poster-w:calc(var(--poster-h) * 2 / 3)}
+.splash-rail{
+  display:flex;width:100%;gap:var(--sp-3);align-items:center;
+  overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;
+  padding:2px calc(50% - var(--poster-w)/2);margin:var(--sp-3) 0 var(--sp-2);
+}
+.splash-rail::-webkit-scrollbar{display:none}
+.splash-card{
+  flex:none;width:var(--poster-w);scroll-snap-align:center;cursor:pointer;
+  background:none;border:none;padding:0;font-family:var(--font);
+  transition:transform .25s ease,opacity .25s ease,filter .25s ease;
+}
+.splash-card-tpl{
+  display:flex;align-items:center;justify-content:center;
+  width:var(--poster-w);height:var(--poster-h);
+  border-radius:var(--r);background:#000;border:1px solid var(--bdr);overflow:hidden;
+  transition:border-color .25s ease,box-shadow .25s ease;
+}
+.splash-card-art{width:100%;height:100%;object-fit:cover;display:block}
+.splash-card-fb{
+  font-size:var(--t-icon);font-weight:var(--w-display);color:var(--gray2);
+  text-transform:uppercase;text-align:center;padding:0 var(--sp-3);letter-spacing:-.02em;
+}
+.splash-card:not(.on){transform:scale(.9);opacity:.5}
+.splash-card.past:not(.on){opacity:.32;filter:grayscale(.6)}
+.splash-card.on .splash-card-tpl{border-color:var(--amber);box-shadow:0 0 0 1px var(--amber)}
+/* divisor "ANTERIORES" — vertical, lenguaje del splash-drop-sep */
+.splash-rail-div{
+  flex:none;display:flex;flex-direction:column;align-items:center;gap:var(--sp-2);align-self:center;
+}
+.splash-rail-div .srd-bar{width:1px;height:calc(var(--poster-h) * .36);background:var(--bdr)}
+.splash-rail-div .srd-lbl{
+  font-size:var(--t-label);color:var(--gray2);letter-spacing:.6px;text-transform:uppercase;
+  writing-mode:vertical-rl;transform:rotate(180deg);
+}
+/* Bloque de info: Nombre / tagline / CIUDAD / FECHAS (·AÑO en pasados) */
+.splash-info{text-align:center;min-height:78px;padding:0 var(--sp-4);margin-bottom:var(--sp-4)}
+.splash-info-name{font-size:var(--t-lg);font-weight:var(--w-display);color:var(--white);letter-spacing:-.02em;line-height:1.15}
+.splash-info-tag{font-size:var(--t-sm);color:var(--gray);margin-top:3px;line-height:1.4}
+.splash-info-city{font-size:var(--t-sm);color:var(--gray2);text-transform:uppercase;letter-spacing:.4px;margin-top:var(--sp-2)}
+.splash-info-city .live-dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--green);margin-right:5px;vertical-align:1px}
+.splash-info-dates{font-size:var(--t-sm);color:var(--gray2);text-transform:uppercase;letter-spacing:.4px;margin-top:2px}
 .splash-selector{
   width:100%;max-width:300px;position:relative;margin-bottom:var(--sp-3);
 }
@@ -2350,20 +2396,17 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 <div id="otrofestiv-splash" role="dialog" data-i18n-aria="aria_bienvenida" aria-label="Bienvenida" aria-modal="true">
   <div class="splash-wordmark">Otro<span>festiv</span></div>
   <div class="splash-action">
-  <div class="splash-selector">
     <div class="splash-fest-label" data-i18n="splash_festival">¿A cuál festival vas?</div>
-    <button class="splash-sel-btn compact" id="splash-sel-btn" data-action="toggleSplashDropdown" aria-haspopup="listbox">
-      <div>
-        <div class="splash-sel-name" id="splash-sel-name" data-i18n="splash_elegi">Elegí uno</div>
-        <div class="splash-sel-meta" id="splash-sel-meta"></div>
-      </div>
-      <div class="splash-sel-chev"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg></div>
-    </button>
-    <div class="splash-dropdown" id="splash-dropdown" style="display:none" role="listbox">
-      <!-- Generado dinámicamente por _renderSplashDropdown() en init -->
+    <div class="splash-rail" id="splash-rail" role="listbox" data-i18n-aria="splash_festival" aria-label="¿A cuál festival vas?">
+      <!-- Generado dinámicamente por _renderSplashRail() en init -->
     </div>
-  </div>
-  <button class="splash-enter-btn" id="splash-enter-btn" data-i18n="auth_entrar" data-action="dismissSplash" disabled>Entrar</button>
+    <div class="splash-info" id="splash-info">
+      <div class="splash-info-name" id="splash-info-name"></div>
+      <div class="splash-info-tag" id="splash-info-tag"></div>
+      <div class="splash-info-city" id="splash-info-city"></div>
+      <div class="splash-info-dates" id="splash-info-dates"></div>
+    </div>
+    <button class="splash-enter-btn" id="splash-enter-btn" data-i18n="auth_entrar" data-action="dismissSplash" disabled>Entrar</button>
   </div>
   <div class="splash-tagline">
     <div class="splash-tagline-line" data-i18n="splash_tagline">Más de lo que crees</div>
