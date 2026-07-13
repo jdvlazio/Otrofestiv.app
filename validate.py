@@ -1251,7 +1251,7 @@ try:
         'renderPrioStrip', 'renderFilmAlternatives',
         # Group B pure halves (Fase 6b — split de Tier 2 mixed)
         'renderRatingStarsHTML', 'renderNoticesBannerHTML',
-        'renderProgramaChipsHTML', '_renderSplashDropdownHTML',
+        'renderProgramaChipsHTML', '_renderSplashRailHTML',
         '_renderFestivalSelectorHTML', 'renderAvDayHTML',
         'renderFilmListHTML',
         # Group I pure halves (Fase 6c — split de Tier 3 orchestrators)

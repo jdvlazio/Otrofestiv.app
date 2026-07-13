@@ -477,38 +477,62 @@ export function _sortFestivals(entries, activeFestId){
 export function festivalShortName(cfg){ return (cfg.name||'').split(' ')[0]; }
 export function festivalLabel(cfg){ const n=festivalShortName(cfg); return cfg.year?`${n} · ${cfg.year}`:n; }
 
-export function _renderSplashDropdownHTML(state, activeFestId){
+// festivalTagline — el descriptor del festival para la 2ª línea del selector-splash,
+// DERIVADO de `fullName` (fuente única; sin campo aparte que mantener). Reglas,
+// verificadas contra los 9 festivales reales (unit test splashTagline):
+//   1. `tagline` explícito en config → gana (escape hatch para casos raros).
+//   2. fullName vacío, o fullName === name → '' (el nombre ya lo dice: Tribeca).
+//   3. fullName con separador em/en-dash → el descriptor es la parte tras el dash
+//      (FantasoFest — Muestra… → "Muestra…"; Olhar de Cinema – Festival… → "Festival…").
+//   4. Sin dash → quitar el shortName del inicio o fin (Leviza al final, Cinemancia
+//      al inicio). Si el shortName no aparece → fullName tal cual (FICCI, AFF).
+export function festivalTagline(cfg){
+  if(cfg.tagline!==undefined) return cfg.tagline;
+  const full=(cfg.fullName||'').trim(), name=(cfg.name||'').trim();
+  if(!full || full===name) return '';
+  const parts=full.split(/\s*[—–]\s*/);
+  if(parts.length===2) return parts[1].trim();
+  const sh=festivalShortName(cfg).replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+  return full.replace(new RegExp('^'+sh+'\\b[\\s,:–—-]*','i'),'')
+             .replace(new RegExp('[\\s,:–—-]*\\b'+sh+'$','i'),'').trim() || full;
+}
+
+// _renderSplashRailHTML — carrusel de afiches del selector-splash (reemplaza el
+// dropdown vertical). VIGENTES (en curso + próximos, brillo pleno) → divisor
+// "ANTERIORES" → PASADOS (atenuados). Cada card lleva data-name/data-meta para
+// preservar la firma de selectSplashFest(name,meta,festId).
+// Sin afiche (keyArt) → fallback tipográfico con el shortName.
+// ORDEN ESTABLE: _sortFestivals recibe null — el tier 0 "seleccionado primero"
+// era semántica del dropdown; en un carrusel posicional, reordenar en un
+// re-render (p.ej. setLang) teletransporta las cards y desalinea el centro del
+// scroll con la selección (bug cazado en QA: la card centrada dejaba de ser la
+// .on → el próximo gesto de scroll pisaba la selección). activeFestId aquí solo
+// marca .on/aria-selected.
+export function _renderSplashRailHTML(state, activeFestId){
   const {_lang} = state.snapshot();
   const entries=_sortFestivals(Object.entries(FESTIVAL_CONFIG)
-    .filter(([,cfg])=>cfg.name&&cfg.group!=='test'), activeFestId);
-  const chevSvg=`<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>`;
-  // Clasificar en tres grupos usando la fuente única de verdad
-  const ongoing  = entries.filter(([,cfg])=>_classifyFestival(cfg)==='ongoing');
-  const upcoming = entries.filter(([,cfg])=>_classifyFestival(cfg)==='upcoming');
-  const past     = entries.filter(([,cfg])=>_classifyFestival(cfg)==='past');
-  const mkItem=([id,cfg])=>{
+    .filter(([,cfg])=>cfg.name&&cfg.group!=='test'), null);
+  const current = entries.filter(([,cfg])=>_classifyFestival(cfg)!=='past');
+  const past    = entries.filter(([,cfg])=>_classifyFestival(cfg)==='past');
+  // isPast se pasa desde la partición (una sola clasificación por festival) — no
+  // re-clasificar dentro de mkCard: evita que la card caiga en un grupo y se pinte
+  // con la clase del otro en un boundary de fecha.
+  const mkCard=([id,cfg],isPast)=>{
     const isActive=id===activeFestId;
     const meta=`${cfg.city} · ${_lang==='en'&&cfg.dates_en?cfg.dates_en:cfg.dates}`;
     const label=festivalLabel(cfg);
-    return`<button class="splash-drop-item${isActive?' selected':''}" data-fest="${id}" role="option" aria-selected="${isActive}" data-action="selectSplashFest" data-name="${label}" data-meta="${meta}">
-      <div><div class="splash-drop-item-name">${label}</div><div class="splash-drop-item-full">${cfg.fullName||cfg.name}</div><div class="splash-drop-item-meta">${meta}</div></div>
-    </button>`;
+    // keyArtPos → custom property --kap (no inline style raw: ARQUITECTURA §10.3);
+    // onerror=this.remove() degrada al template negro si el afiche 404ea (§10.2).
+    const art=cfg.keyArt
+      ? `<img class="splash-card-art" src="${cfg.keyArt}" alt="" loading="lazy" onerror="this.remove()"${cfg.keyArtPos?` style="--kap:${cfg.keyArtPos}"`:''}>`
+      : `<span class="splash-card-fb">${festivalShortName(cfg)}</span>`;
+    return`<button class="splash-card${isPast?' past':''}${isActive?' on':''}" data-fest="${id}" role="option" aria-selected="${isActive}" data-action="selectSplashFest" data-name="${label}" data-meta="${meta}"><span class="splash-card-tpl">${art}</span></button>`;
   };
-  const mkPastItem=([id,cfg])=>{
-    const meta=`${cfg.city} · ${_lang==='en'&&cfg.dates_en?cfg.dates_en:cfg.dates}`;
-    const label=festivalLabel(cfg);
-    // Tap en el cuerpo/título → selecciona el festival (igual que los activos);
-    // tap en el chevron → expande/colapsa. La delegación dispara el primer
-    // data-action subiendo desde el target, así que el chevron no selecciona.
-    return`<button class="splash-drop-item past" data-fest="${id}" role="option" aria-selected="false" data-action="selectSplashFest" data-name="${label}" data-meta="${meta}">
-      <div><div class="splash-drop-item-name">${label}</div><div class="splash-drop-item-full">${cfg.fullName||cfg.name}</div><div class="splash-drop-item-meta">${meta}</div></div>
-      <span class="past-item-chev" data-action="togglePastFest">${chevSvg}</span>
-    </button>`;
-  };
-  let html='';
-  if(ongoing.length)  html+=`<div class="splash-drop-sep">${t('fs_en_curso')}</div>`+ongoing.map(mkItem).join('');
-  if(upcoming.length) html+=`<div class="splash-drop-sep">${t('fs_proximos')}</div>`+upcoming.map(mkItem).join('');
-  if(past.length)     html+=`<div class="splash-drop-sep">${t('splash_anteriores')}</div>`+past.map(mkPastItem).join('');
+  let html=current.map(e=>mkCard(e,false)).join('');
+  // Divisor "ANTERIORES" solo separa DOS grupos: si no hay vigentes (todos pasados)
+  // no se emite (colgar de primero descentra el snap inicial → auto-selección).
+  if(current.length && past.length) html+=`<span class="splash-rail-div" aria-hidden="true"><span class="srd-bar"></span><span class="srd-lbl">${t('splash_anteriores')}</span><span class="srd-bar"></span></span>`;
+  html+=past.map(e=>mkCard(e,true)).join('');
   return html;
 }
 

@@ -2,49 +2,10 @@
 // p8 Step 7e — Lifecycle de splash/selector de festival + auto-resolve posters. POSTERS/CUSTOM_POSTERS vía bridge.
 
 import { FESTIVAL_CONFIG, TMDB_API_BASE, TMDB_API_KEY, TMDB_POSTER_BASE, _DEFAULT_FEST_ID, _POSTER_CACHE_PFX } from '../config.js';
-import { _renderFestivalSelectorHTML, _renderSplashDropdownHTML } from '../view/components.js';
+import { _renderFestivalSelectorHTML, _renderSplashRailHTML, _classifyFestival, festivalShortName, festivalTagline } from '../view/components.js';
 import { _langDates, setPosters } from '../view/helpers.js';
 import { render } from '../view/programa.js';
 import { state } from '../state/state.js';
-
-export function toggleSplashDropdown(){
-  const dd=document.getElementById('splash-dropdown');
-  const btn=document.getElementById('splash-sel-btn');
-  if(!dd||!btn) return;
-  const open=dd.style.display==='none';
-  dd.style.display=open?'block':'none';
-  btn.classList.toggle('open',open);
-  if(open){
-    // Acotar la altura al espacio disponible bajo el botón → scroll interno.
-    // Sin esto, los nombres oficiales + el expand de "anteriores" hacen crecer el
-    // dropdown más allá del viewport (el splash es position:fixed, no scrollea) y
-    // los items de abajo quedan inalcanzables. La barra-padre no cambia de top al
-    // expandir un item, así que basta calcular una vez al abrir.
-    const top=dd.getBoundingClientRect().top;
-    dd.style.maxHeight=Math.max(160, window.innerHeight - top - 16)+'px';
-  }
-}
-
-export function _togglePastFest(item){
-  // Solo el chevron llega acá → toggle colapso/expansión del item pasado.
-  // El tap en el título/cuerpo dispara selectSplashFest (no esto).
-  if(!item) return;
-  item.classList.toggle('past-open');
-}
-
-export function _renderSplashDropdown(activeFestId){
-  const dd=document.getElementById('splash-dropdown');
-  if(!dd) return;
-  dd.innerHTML=_renderSplashDropdownHTML(state, activeFestId);
-  // Update selected button meta with language-aware dates
-  const _activeCfg=FESTIVAL_CONFIG[activeFestId];
-  const _selMeta=document.getElementById('splash-sel-meta');
-  const _selName=document.getElementById('splash-sel-name');
-  if(_activeCfg && _selMeta){
-    _selMeta.textContent=`${_activeCfg.city} · ${_langDates(_activeCfg)} ${_activeCfg.year||''}`.trim();
-  }
-  if(_activeCfg && _selName) _selName.textContent=_activeCfg.name;
-}
 
 export function _togglePastFestRow(row, id){
   // Toggle colapso/expansión — siempre. Nunca carga el festival.
@@ -65,24 +26,95 @@ export function _renderFestivalSelector(activeFestId){
   container.innerHTML=html;
 }
 
+// _fillSplashInfo — puebla el bloque de info del selector-splash (4 líneas:
+// nombre / tagline / CIUDAD / FECHAS · AÑO-si-pasado) desde el festId. El punto
+// verde marca "en curso". Fuente única: FESTIVAL_CONFIG + festivalTagline.
+function _fillSplashInfo(festId){
+  const cfg=festId&&FESTIVAL_CONFIG[festId];
+  const nameEl=document.getElementById('splash-info-name');
+  const tagEl=document.getElementById('splash-info-tag');
+  const cityEl=document.getElementById('splash-info-city');
+  const datesEl=document.getElementById('splash-info-dates');
+  if(!cfg){ [nameEl,tagEl,cityEl,datesEl].forEach(el=>{if(el)el.textContent='';}); return; }
+  const cls=_classifyFestival(cfg);
+  if(nameEl) nameEl.textContent=festivalShortName(cfg);
+  if(tagEl){ const t=festivalTagline(cfg); tagEl.textContent=t; tagEl.style.display=t?'':'none'; }
+  if(cityEl) cityEl.innerHTML=(cls==='ongoing'?'<span class="live-dot"></span>':'')+String(cfg.city||'').toUpperCase();
+  if(datesEl){
+    const dates=_langDates(cfg);
+    datesEl.textContent=(dates+(cls==='past'&&cfg.year?' · '+cfg.year:'')).toUpperCase();
+  }
+}
+
+// _selectCenteredCard — tras el scroll-snap, selecciona la card más cercana al
+// centro del riel (el gesto de arrastrar = elegir). Ignora el divisor (no es card).
+function _selectCenteredCard(rail){
+  const mid=rail.getBoundingClientRect().left+rail.clientWidth/2;
+  let best=null,bd=Infinity;
+  rail.querySelectorAll('.splash-card').forEach(c=>{
+    const r=c.getBoundingClientRect();
+    const d=Math.abs(r.left+r.width/2-mid);
+    if(d<bd){bd=d;best=c;}
+  });
+  const cur=rail.querySelector('.splash-card.on')?.dataset.fest;
+  if(best && best.dataset.fest!==cur){
+    selectSplashFest(best.dataset.name,best.dataset.meta,best.dataset.fest);
+  }
+}
+
+// _renderSplashRail — renderiza el riel de afiches + puebla el info. `activeFestId`
+// = el marcado .on (preselección); si es null, el info muestra el PRIMER festival
+// del riel como preview (sin selección → "Entrar" sigue disabled: regla 5 jul).
+// Cablea (idempotente) la selección-por-scroll GATEADA por gesto de usuario.
+export function _renderSplashRail(activeFestId){
+  const rail=document.getElementById('splash-rail');
+  if(rail){
+    rail.innerHTML=_renderSplashRailHTML(state, activeFestId);
+    // Re-render con selección (p.ej. setLang): re-centrar la card .on para que
+    // el centro del scroll y la selección queden alineados. selectSplashFest ya
+    // centra, pero aquí la marca .on vino del HTML (activeFestId), no de un tap.
+    const onCard=rail.querySelector('.splash-card.on');
+    if(onCard) onCard.scrollIntoView({inline:'center',block:'nearest'});
+    if(!rail.dataset.snapWired){
+      rail.dataset.snapWired='1';
+      // GATE DE GESTO: solo un ARRASTRE real del usuario (pointer/touch sobre el
+      // riel) puede elegir por scroll. Sin esto, el re-snap programático del
+      // render (0 vigentes → divisor descentra → snap mandatory dispara scroll)
+      // auto-seleccionaba sin interacción, y el focus-scroll del teclado (Tab
+      // entre cards) pisaba la selección explícita. El teclado elige activando la
+      // card enfocada (Enter → selectSplashFest), no por scroll.
+      let _tmo, _armed=false;
+      const _arm=()=>{ _armed=true; };
+      rail.addEventListener('pointerdown',_arm,{passive:true});
+      rail.addEventListener('touchstart',_arm,{passive:true});
+      rail.addEventListener('scroll',()=>{
+        if(!_armed) return;
+        clearTimeout(_tmo);
+        _tmo=setTimeout(()=>{ _armed=false; _selectCenteredCard(rail); },90);
+      },{passive:true});
+    }
+  }
+  const previewId=activeFestId || document.querySelector('.splash-card')?.dataset.fest || null;
+  _fillSplashInfo(previewId);
+}
+
+// selectSplashFest — el usuario (o la preselección) elige un festival. Marca la
+// card, la centra en el riel, puebla el info y habilita "Entrar". CENTRAR vive
+// aquí (única dueña de la selección): así todo caller —tap, preselección de boot,
+// TEST BRIDGE, futuros deep-links— deja el centro del scroll alineado con la .on
+// sin tener que recordarlo (si divergen, el próximo scroll pisaría la selección).
+// name/meta se conservan en la firma (dispatcher data-action + TEST BRIDGE + tests)
+// aunque el info se deriva del festId.
 export function selectSplashFest(name,meta,festId){
   _splashSelectedFestId=festId||_DEFAULT_FEST_ID;
-  const n=document.getElementById('splash-sel-name');
-  const m=document.getElementById('splash-sel-meta');
-  // Quitar data-i18n: ya no es placeholder, es el nombre elegido. Sin esto,
-  // un re-_applyI18nDOM (ej. cambio de idioma en el splash) lo pisaría con "Elegí uno".
-  if(n){ n.textContent=name; n.removeAttribute('data-i18n'); }
-  if(m) m.textContent=meta;
-  document.querySelectorAll('.splash-drop-item').forEach(el=>el.classList.remove('selected'));
-  const active=document.querySelector('.splash-drop-item[data-fest="'+_splashSelectedFestId+'"]');
-  if(active) active.classList.add('selected');
-  const dd=document.getElementById('splash-dropdown');
-  const btn=document.getElementById('splash-sel-btn');
-  if(dd) dd.style.display='none';
-  // Quitar 'placeholder' (gris→blanco bold) y 'compact' (la barra mínima crece y
-  // muestra el nombre elegido). Ambas reglas viven en el CSS del selector.
-  if(btn){ btn.classList.remove('open'); btn.classList.remove('placeholder'); btn.classList.remove('compact'); }
-  // Habilitar "Entrar" — ya hay un festival elegido.
+  document.querySelectorAll('.splash-card').forEach(el=>{el.classList.remove('on');el.setAttribute('aria-selected','false');});
+  const card=document.querySelector('.splash-card[data-fest="'+_splashSelectedFestId+'"]');
+  if(card){
+    card.classList.add('on'); card.setAttribute('aria-selected','true');
+    // Instant (sin behavior:'smooth'): snap mandatory pelea el smooth programático.
+    card.scrollIntoView({inline:'center',block:'nearest'});
+  }
+  _fillSplashInfo(_splashSelectedFestId);
   const enterBtn=document.getElementById('splash-enter-btn');
   if(enterBtn) enterBtn.disabled=false;
 }

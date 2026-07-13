@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607130820">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607130820">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607131829">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607131829">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -1066,7 +1066,6 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .pchip:active,.prio-chip:active,.av-day-chip:active,.av-type-btn:active,.prio-star-pill:active,.av-pill-rm:active,.prio-chip-rm:active{opacity:.6;transform:scale(.94)}
 
 /* Splash */
-.splash-drop-item:active,.splash-sel-btn:active{opacity:.7}
 
 /* Búsqueda */
 .search-cancel:active{opacity:.6}
@@ -1095,7 +1094,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .auth-cancel:active,.auth-signout-btn:active,.auth-send-btn:active{opacity:.7}
 
 /* touch-action:manipulation — elimina delay 300ms iOS en elementos de alta frecuencia */
-.lugar-opt,.fdr-opt,.pchip,.prio-chip,.av-day-chip,.av-type-btn,.dtab,.ag-fi-btn,.int-prio-btn,.int-seen-btn,.conflict-btn-cancel,.conflict-btn-keep,.conflict-btn-replace,.conflict-modal-btn,.splash-drop-item,.pmode-tab,.av-add-btn,.av-plus-btn,.corto-rate-btn,.rating-action-btn,.toast-action-btn,.checkin-btn,.checkin-result-btn{
+.lugar-opt,.fdr-opt,.pchip,.prio-chip,.av-day-chip,.av-type-btn,.dtab,.ag-fi-btn,.int-prio-btn,.int-seen-btn,.conflict-btn-cancel,.conflict-btn-keep,.conflict-btn-replace,.conflict-modal-btn,.pmode-tab,.av-add-btn,.av-plus-btn,.corto-rate-btn,.rating-action-btn,.toast-action-btn,.checkin-btn,.checkin-result-btn{
   touch-action:manipulation
 }
 .pel-sheet-action-btn.act-on{background:rgba(39,174,96,.08);border-color:rgba(39,174,96,.25);color:var(--green)}
@@ -1795,7 +1794,6 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
   /* Splash */
   #otrofestiv-splash{padding:var(--sp-6) var(--sp-7)}
   .splash-tagline{max-width:560px}
-  .splash-selector{max-width:400px}
 }
 /* Touch devices — overlay always visible regardless of screen width */
 /* ── prefers-reduced-motion ─────────────────────────────────────
@@ -1882,70 +1880,53 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
   font-size:var(--t-label);color:var(--gray);letter-spacing:1.2px;
   text-transform:uppercase;margin-bottom:var(--sp-2);
 }
-.splash-selector{
-  width:100%;max-width:300px;position:relative;margin-bottom:var(--sp-3);
-}
-.splash-sel-btn{
-  width:100%;background:var(--surf);border:1px solid var(--bdr);
-  border-radius:var(--r);padding:var(--sp-btn) var(--sp-4);cursor:pointer;
-  display:flex;align-items:center;justify-content:space-between;
-  font-family:var(--font);transition:border-color .2s;
-}
-.splash-sel-btn.open{border-color:var(--amber-30)}
-.splash-sel-name{font-size:var(--t-icon);font-weight:var(--w-bold);color:var(--white);text-align:left}
-.splash-sel-meta{font-size:var(--t-sm);color:var(--gray2);margin-top:2px;text-align:left;text-transform:uppercase}
-.splash-sel-btn.placeholder .splash-sel-name{color:var(--gray);font-weight:var(--w-regular)}
-.splash-sel-btn.compact{justify-content:center}
-.splash-sel-btn.compact>div:first-child{display:none}
-.splash-sel-chev{font-size:var(--t-caption);color:var(--gray);transition:transform .2s,color .2s}
-.splash-sel-btn.open .splash-sel-chev{transform:rotate(180deg);color:var(--amber)}
-.splash-dropdown{
-  position:absolute;top:calc(100% + 6px);left:0;right:0;
-  background:var(--surf-2);border:1px solid var(--bdr);border-radius:var(--r);
-  overflow-y:auto;overflow-x:hidden;z-index:10;
-  overscroll-behavior:contain;-webkit-overflow-scrolling:touch;
-  box-shadow:0 16px 40px var(--overlay-60);
-}
-.splash-drop-item{
-  width:100%;background:none;border:none;border-bottom:1px solid var(--bdr);
-  padding:var(--sp-3) var(--sp-4);cursor:pointer;font-family:var(--font);
-  display:flex;align-items:center;justify-content:space-between;
-  transition:background var(--tr-base);text-align:left;
-}
-.splash-drop-item:last-child{border-bottom:none}
-.splash-drop-item.selected{background:var(--amber-10)}
 
-.splash-drop-item-name{font-size:var(--t-base);font-weight:var(--w-bold);color:var(--white)}
-.splash-drop-item.selected .splash-drop-item-name{color:var(--amber)}
-.splash-drop-item-full{font-size:var(--t-sm);color:var(--white-60);margin-top:2px;line-height:1.3}
-.splash-drop-item-meta{font-size:var(--t-sm);color:var(--gray2);margin-top:1px;text-transform:uppercase}
-
-/* Separador "Anteriores" en el dropdown del splash */
-.splash-drop-sep{
-  padding:6px var(--sp-4) 4px;font-size:var(--t-xs);color:var(--gray2);
-  letter-spacing:.6px;text-transform:uppercase;
-  border-top:1px solid var(--bdr);border-bottom:none;
-  background:none;font-family:var(--font);
+/* ── Selector-splash con afiches (riel center-snap) ──────────────────────────
+   El póster manda; el ancho se deriva 2:3. clamp responsivo: entra en 360×640
+   sin romper la distribución space-between del splash. */
+#otrofestiv-splash{--poster-h:clamp(184px,26dvh,264px);--poster-w:calc(var(--poster-h) * 2 / 3)}
+.splash-rail{
+  display:flex;width:100%;gap:var(--sp-3);align-items:center;
+  overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;
+  padding:2px calc(50% - var(--poster-w)/2);margin:var(--sp-3) 0 var(--sp-2);
 }
-/* Items de festivales pasados — colapsados por defecto */
-.splash-drop-item.past{opacity:.55;padding:10px var(--sp-4)}
-.splash-drop-item.past .splash-drop-item-name{
-  font-size:var(--t-sm);font-weight:var(--w-med);
+.splash-rail::-webkit-scrollbar{display:none}
+.splash-card{
+  flex:none;width:var(--poster-w);scroll-snap-align:center;cursor:pointer;
+  background:none;border:none;padding:0;font-family:var(--font);
+  touch-action:manipulation; /* iOS: sin double-tap-zoom sobre el afiche */
+  transition:transform .25s ease,opacity .25s ease,filter .25s ease;
 }
-.splash-drop-item.past .splash-drop-item-meta,
-.splash-drop-item.past .splash-drop-item-full{display:none}
-.splash-drop-item.past.past-open{opacity:.75}
-.splash-drop-item.past.past-open .splash-drop-item-meta,
-.splash-drop-item.past.past-open .splash-drop-item-full{display:block}
-/* Chevron del item pasado */
-.past-item-chev{
-  color:var(--gray2);display:flex;align-items:center;flex-shrink:0;
-  align-self:stretch;                          /* zona de toque de altura completa → estable al expandir */
-  margin:-10px calc(-1 * var(--sp-4)) -10px 0; /* extiende la zona a los bordes del item (anula su padding) */
-  padding:10px var(--sp-4) 10px var(--sp-3);   /* restaura el inset visual del ícono + ensancha el área tocable */
-  transition:transform .2s ease;
+.splash-card-tpl{
+  display:flex;align-items:center;justify-content:center;
+  width:var(--poster-w);height:var(--poster-h);
+  border-radius:var(--r);background:#000;border:1px solid var(--bdr);overflow:hidden;
+  transition:border-color .25s ease,box-shadow .25s ease;
 }
-.splash-drop-item.past.past-open .past-item-chev{transform:rotate(180deg)}
+.splash-card-art{width:100%;height:100%;object-fit:cover;object-position:var(--kap,center);display:block}
+.splash-card-fb{
+  font-size:var(--t-icon);font-weight:var(--w-display);color:var(--gray2);
+  text-transform:uppercase;text-align:center;padding:0 var(--sp-3);letter-spacing:-.02em;
+}
+.splash-card:not(.on){transform:scale(.9);opacity:.5}
+.splash-card.past:not(.on){opacity:.32;filter:grayscale(.6)}
+.splash-card.on .splash-card-tpl{border-color:var(--amber);box-shadow:0 0 0 1px var(--amber)}
+/* divisor "ANTERIORES" — vertical, separa festivales en curso de pasados en el riel */
+.splash-rail-div{
+  flex:none;display:flex;flex-direction:column;align-items:center;gap:var(--sp-2);align-self:center;
+}
+.splash-rail-div .srd-bar{width:1px;height:calc(var(--poster-h) * .36);background:var(--bdr)}
+.splash-rail-div .srd-lbl{
+  font-size:var(--t-label);color:var(--gray2);letter-spacing:.6px;text-transform:uppercase;
+  writing-mode:vertical-rl;transform:rotate(180deg);
+}
+/* Bloque de info: Nombre / tagline / CIUDAD / FECHAS (·AÑO en pasados) */
+.splash-info{text-align:center;min-height:78px;padding:0 var(--sp-4);margin-bottom:var(--sp-4)}
+.splash-info-name{font-size:var(--t-lg);font-weight:var(--w-display);color:var(--white);letter-spacing:-.02em;line-height:1.15}
+.splash-info-tag{font-size:var(--t-sm);color:var(--gray);margin-top:3px;line-height:1.4}
+.splash-info-city{font-size:var(--t-sm);color:var(--gray2);text-transform:uppercase;letter-spacing:.4px;margin-top:var(--sp-2)}
+.splash-info-city .live-dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--green);margin-right:5px;vertical-align:1px}
+.splash-info-dates{font-size:var(--t-sm);color:var(--gray2);text-transform:uppercase;letter-spacing:.4px;margin-top:2px}
 .splash-enter-btn{
   width:100%;max-width:300px;
   background:var(--amber);border:none;
@@ -1967,6 +1948,19 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
   animation:splashSpin .7s linear infinite;
 }
 @keyframes splashSpin{to{transform:rotate(360deg)}}
+
+/* ── Splash en viewport corto (landscape de teléfono / alturas ≤480px) ──────
+   #otrofestiv-splash es position:fixed sin scroll; en portrait el clamp del
+   póster + info + padding dvh caben, pero en landscape (~390px de alto) el piso
+   duro de 184px empujaba "Entrar" bajo el fold e inalcanzable. Aquí bajamos el
+   piso del póster, achicamos el padding dvh y el min-height del info para que
+   los 3 actores del splash entren completos en una pantalla. */
+@media (max-height:480px){
+  #otrofestiv-splash{--poster-h:clamp(92px,18dvh,184px)}
+  #otrofestiv-splash{padding:calc(env(safe-area-inset-top) + 4dvh) 32px calc(env(safe-area-inset-bottom) + 3dvh)}
+  .splash-info{min-height:0;margin-bottom:0}
+  .splash-rail{margin:var(--sp-1) 0}
+}
 
 /* ── Volver arriba — mobile only ─── */
 #back-top{
@@ -2350,20 +2344,17 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 <div id="otrofestiv-splash" role="dialog" data-i18n-aria="aria_bienvenida" aria-label="Bienvenida" aria-modal="true">
   <div class="splash-wordmark">Otro<span>festiv</span></div>
   <div class="splash-action">
-  <div class="splash-selector">
-    <div class="splash-fest-label" data-i18n="splash_festival">¿A qué festival vas?</div>
-    <button class="splash-sel-btn compact" id="splash-sel-btn" data-action="toggleSplashDropdown" aria-haspopup="listbox">
-      <div>
-        <div class="splash-sel-name" id="splash-sel-name" data-i18n="splash_elegi">Elegí uno</div>
-        <div class="splash-sel-meta" id="splash-sel-meta"></div>
-      </div>
-      <div class="splash-sel-chev"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg></div>
-    </button>
-    <div class="splash-dropdown" id="splash-dropdown" style="display:none" role="listbox">
-      <!-- Generado dinámicamente por _renderSplashDropdown() en init -->
+    <div class="splash-fest-label" data-i18n="splash_festival">¿A cuál festival vas?</div>
+    <div class="splash-rail" id="splash-rail" role="listbox" data-i18n-aria="splash_festival" aria-label="¿A cuál festival vas?">
+      <!-- Generado dinámicamente por _renderSplashRail() en init -->
     </div>
-  </div>
-  <button class="splash-enter-btn" id="splash-enter-btn" data-i18n="auth_entrar" data-action="dismissSplash" disabled>Entrar</button>
+    <div class="splash-info" id="splash-info">
+      <div class="splash-info-name" id="splash-info-name"></div>
+      <div class="splash-info-tag" id="splash-info-tag"></div>
+      <div class="splash-info-city" id="splash-info-city"></div>
+      <div class="splash-info-dates" id="splash-info-dates"></div>
+    </div>
+    <button class="splash-enter-btn" id="splash-enter-btn" data-i18n="auth_entrar" data-action="dismissSplash" disabled>Entrar</button>
   </div>
   <div class="splash-tagline">
     <div class="splash-tagline-line" data-i18n="splash_tagline">Más de lo que crees</div>
@@ -2742,7 +2733,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202607130820";
+    s.src="/src/main.js?v=202607131829";
     document.body.appendChild(s);
   }
   if (isApp || isDev) { bootApp(); return; }

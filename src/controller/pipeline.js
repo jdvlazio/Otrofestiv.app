@@ -9,7 +9,7 @@ import { ICONS, _secLabelFull } from '../view/components.js';
 import { _renderProgramaContent, renderProgramaChips } from '../view/programa.js';
 import { _fixStickyOffset, renderAgenda, renderFilmListHTML } from '../view/agenda.js';
 import { runCalc } from './calc.js';
-import { _renderSplashDropdown, _renderFestivalSelector } from './festival.js';
+import { _renderSplashRail, _renderFestivalSelector } from './festival.js';
 import { dayFullyPassed, festivalEnded, simNow, simTodayStr } from '../domain/time.js';
 import { screeningPassed } from '../domain/film.js';
 import { state } from '../state/state.js';
@@ -232,10 +232,9 @@ export function setLang(code){
     _applyI18nDOM();
     if(activeView === 'day') { typeof showDayView === 'function' && showDayView(); }
     else                     { typeof renderAgenda === 'function' && renderAgenda(); }
-    // Sin festival elegido (placeholder) → null: re-renderiza el dropdown con las
-    // secciones en el nuevo idioma pero NO rellena el selector (el placeholder
-    // "Elegí uno" lo re-traduce _applyI18nDOM). Con festival elegido → localiza fechas.
-    _renderSplashDropdown(_splashSelectedFestId);
+    // Re-renderiza el riel del splash con el idioma nuevo (divisor "Anteriores" +
+    // fechas del info localizadas). Preserva la selección (_splashSelectedFestId).
+    _renderSplashRail(_splashSelectedFestId);
     _renderFestivalSelector(_activeFestId);
     requestAnimationFrame(()=>{
       _fadeEls.forEach(el=>el.classList.remove('lang-fade'));

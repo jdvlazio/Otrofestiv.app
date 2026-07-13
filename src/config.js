@@ -227,24 +227,31 @@ export const NOTICES=[
 export const FESTIVAL_CONFIG={
   // ── Bootstrap mínimo por festival ────────────────────────────────────────
   // Campos requeridos ANTES del fetch (usados por splash y _DEFAULT_FEST_ID):
-  //   name, city, dates, dates_en, year → _renderSplashDropdown()
+  //   name, city, dates, dates_en, year, keyArt → _renderSplashRail()
   //   storageKey                        → identificar localStorage
   //   festivalEndStr                    → _DEFAULT_FEST_ID
+  // keyArt es WRITE-ONCE: el SW cachea /assets/ cache-first para siempre (sobrevive
+  // deploys, sin ?v=). Para cambiar el afiche de un festival, usar un filename NUEVO
+  // (p.ej. tercertiempo2026-v2.jpg) y actualizar este path — nunca sobreescribir el
+  // archivo in-place, o los usuarios recurrentes verán el afiche viejo indefinidamente.
   // Todo lo demás (dayKeys, days, venues, posters, etc.) viene del JSON
   // y se mergea en loadFestival() — el JSON es la fuente única de verdad.
   'ficci65':{
     name:'FICCI 65',fullName:'Festival Internacional de Cine de Cartagena de Indias',city:'Cartagena',dates:'14–19 ABR',dates_en:'APR 14–19',year:2026,
     storageKey:'ficci65_',festivalStartStr:'2026-04-14T00:00:00',festivalEndStr:'2026-04-20T02:00:00',
+    keyArt:'/assets/keyart/ficci65.jpg',
     films:null,posters:null,lbSlugs:{}
   },
   'aff2026':{
     name:'AFF 2026',fullName:'Alternativa Film Festival',city:'Medellín',dates:'21–29 ABR',dates_en:'APR 21–29',year:2026,
     storageKey:'aff2026_',festivalStartStr:'2026-04-21T00:00:00',festivalEndStr:'2026-04-29T23:00:00',
+    keyArt:'/assets/keyart/aff2026.jpg',
     films:null,posters:null,lbSlugs:{}
   },
   'tribeca2026':{
     name:'Tribeca Festival',fullName:'Tribeca Festival',city:'New York',dates:'JUN 3–14',dates_en:'JUN 3–14',year:2026,timezoneOffset:'-04:00',
     storageKey:'tribeca2026_',festivalStartStr:'2026-06-03T00:00:00',festivalEndStr:'2026-06-14T23:59:00',
+    keyArt:'/assets/keyart/tribeca2026.jpg',
     films:null,posters:null,lbSlugs:{}
   },
   'cinemancia2025':{
@@ -264,6 +271,7 @@ export const FESTIVAL_CONFIG={
     dayShort:{'JUE 14':'JUE 14','VIE 15':'VIE 15','SÁB 16':'SÁB 16','DOM 17':'DOM 17'},
     dayShort_en:{'JUE 14':'THU 14','VIE 15':'FRI 15','SÁB 16':'SAT 16','DOM 17':'SUN 17'},
     prioLimit:5,
+    keyArt:'/assets/keyart/leviza2026.jpg',
     films:null,posters:null,lbSlugs:{}
   },
   'olhar2026':{
@@ -278,6 +286,7 @@ export const FESTIVAL_CONFIG={
     dayShort_en:{'2026-06-04':'THU 4','2026-06-05':'FRI 5','2026-06-06':'SAT 6','2026-06-07':'SUN 7','2026-06-08':'MON 8','2026-06-09':'TUE 9','2026-06-10':'WED 10','2026-06-11':'THU 11','2026-06-12':'FRI 12','2026-06-13':'SAT 13'},
     dayLong:{'2026-06-04':'Jueves 4 de junio','2026-06-05':'Viernes 5 de junio','2026-06-06':'Sábado 6 de junio','2026-06-07':'Domingo 7 de junio','2026-06-08':'Lunes 8 de junio','2026-06-09':'Martes 9 de junio','2026-06-10':'Miércoles 10 de junio','2026-06-11':'Jueves 11 de junio','2026-06-12':'Viernes 12 de junio','2026-06-13':'Sábado 13 de junio'},
     prioLimit:5,
+    keyArt:'/assets/keyart/olhar2026.jpg',
     films:null,posters:null,lbSlugs:{}
   },
   'tercertiempo2026': {
@@ -292,6 +301,7 @@ export const FESTIVAL_CONFIG={
     dayShort_en:{'2026-07-13':'MON 13','2026-07-14':'TUE 14','2026-07-15':'WED 15','2026-07-16':'THU 16','2026-07-17':'FRI 17','2026-07-18':'SAT 18','2026-07-19':'SUN 19'},
     dayLong:{'2026-07-13':'Lunes 13 de julio','2026-07-14':'Martes 14 de julio','2026-07-15':'Miércoles 15 de julio','2026-07-16':'Jueves 16 de julio','2026-07-17':'Viernes 17 de julio','2026-07-18':'Sábado 18 de julio','2026-07-19':'Domingo 19 de julio'},
     prioLimit:5,eventPosterLabel:['EVENTO',''],
+    keyArt:'/assets/keyart/tercertiempo2026.jpg',keyArtPos:'30%',
     films:null,posters:null,lbSlugs:{}
   },
   'fantasofest2026': {
@@ -306,6 +316,7 @@ export const FESTIVAL_CONFIG={
     dayShort_en:{'2026-07-13':'MON 13','2026-07-14':'TUE 14','2026-07-15':'WED 15','2026-07-16':'THU 16','2026-07-17':'FRI 17','2026-07-18':'SAT 18','2026-07-19':'SUN 19'},
     dayLong:{'2026-07-13':'Lunes 13 de julio','2026-07-14':'Martes 14 de julio','2026-07-15':'Miércoles 15 de julio','2026-07-16':'Jueves 16 de julio','2026-07-17':'Viernes 17 de julio','2026-07-18':'Sábado 18 de julio','2026-07-19':'Domingo 19 de julio'},
     prioLimit:4,
+    keyArt:'/assets/keyart/fantasofest2026.jpg',
     films:null,posters:null,lbSlugs:{}
   },
   'ficmontanas2026':{
@@ -320,6 +331,7 @@ export const FESTIVAL_CONFIG={
     dayShort_en:{'2026-06-30':'TUE 30','2026-07-01':'WED 1','2026-07-02':'THU 2','2026-07-03':'FRI 3','2026-07-04':'SAT 4','2026-07-05':'SUN 5'},
     dayLong:{'2026-06-30':'Martes 30 de junio','2026-07-01':'Miércoles 1 de julio','2026-07-02':'Jueves 2 de julio','2026-07-03':'Viernes 3 de julio','2026-07-04':'Sábado 4 de julio','2026-07-05':'Domingo 5 de julio'},
     prioLimit:3,
+    keyArt:'/assets/keyart/ficmontanas2026.jpg',
     films:null,posters:null,lbSlugs:{}
   }
 };// Festival data loaded async from festivals/<id>.json via loadFestival()

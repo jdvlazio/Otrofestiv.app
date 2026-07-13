@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `b359ac9 Merge #305 — FantasoFest 2026: 5 largos + muestra de cortos (stills 9/10)`
+> Último commit: `af086e8 fix(splash): orden estable del riel — la selección no reordena las cards`
 
 ---
 
@@ -94,7 +94,7 @@ _Sin features activas en `.specify/features/`._
 - **Regex en index.html:** prohibido para transformaciones estructurales de >10 ocurrencias.
 - **Timezone:** Colombia (UTC-5). Nunca `toISOString()` para lógica de fechas.
 - **i18n:** la fuente de verdad es `src/i18n/i18n.js` (bloque `_I18N`, es+en). Toda string nueva va ahí — es lo que lee `t()` y lo que valida `validate.py [i18n-complete]`. Los `i18n/*.json` quedaron desincronizados y NO se consumen en runtime (legacy); no son la fuente. El `sync-i18n.py` fue retirado (apuntaba a un `_I18N` en `index.html` que la Fase 8 movió a `src/i18n/i18n.js`).
-- **Splash selector (regla 5 jul 2026):** con EXACTAMENTE 1 festival en curso (`_classifyFestival`==="ongoing"), el splash lo **pre-selecciona solo**: barra con nombre+meta, item `.selected`, "Entrar" habilitado — cero interacción. Con 0 o 2+ en curso → acordeón cerrado (`.compact`): barra mínima solo con el chevron, el usuario elige; `#splash-sel-meta` vacío y "Entrar" `disabled` hasta elegir. `selectSplashFest()` quita `.placeholder`/`.compact`, llena nombre/meta y habilita "Entrar".
+- **Splash selector — carrusel de afiches (rediseño jul 2026):** el splash elige festival desde un **riel horizontal de pósters** (`#splash-rail`, cards `.splash-card[data-fest]` con `keyArt` de `FESTIVAL_CONFIG`), no un dropdown. Orden: vigentes primero (brillo pleno) → divisor `.splash-rail-div` "ANTERIORES" → pasados (atenuados). El bloque `#splash-info` muestra 4 líneas derivadas del festival centrado/elegido: nombre / tagline (`festivalTagline`, derivado de `fullName`) / CIUDAD (punto verde si en curso) / FECHAS·AÑO. **Regla de preselección (5 jul 2026, preservada):** con EXACTAMENTE 1 festival en curso (`_classifyFestival`==="ongoing") el riel lo **pre-selecciona** (card `.on`, "Entrar" habilitado). Con 0 o 2+ en curso → sin selección: el info muestra el primer festival como preview y "Entrar" queda `disabled` hasta que el usuario elija (scroll-snap centra → `_selectCenteredCard`, o tap → `selectSplashFest()` marca `.on`, llena el info y habilita "Entrar"). Riel + info viven dentro de `.splash-action` (uno de los 3 actores animados) → la animación del splash no cambia.
 
 ---
 
