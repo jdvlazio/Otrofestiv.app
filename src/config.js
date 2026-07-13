@@ -135,8 +135,8 @@ export const SECTION_COLORS = {
 //  · Tribeca se omite entero: sus secciones ya están en inglés.
 //  · "Impact Hits"/"Industry Days" (AFF) ya están en inglés → se omiten.
 export const SECTION_EN = {
-  '🎬 Largometrajes': 'Feature Films',
-  '🎞️ Cortometrajes': 'Short Films',
+  '🔮 Largometrajes': 'Feature Films',
+  '🌙 Cortometrajes': 'Short Films',
   '🌱 Raíces del Juego': 'Roots of the Game',
   '🧠 Juego Mental': 'Mind Game',
   '👟 El Rey Puma': 'El Rey Puma',
@@ -362,8 +362,8 @@ export const ARCHETYPE_COLORS = {
 // Cada sección de cada festival → su arquetipo. Generado por scripts/classify-posters
 // (arquetipos) + decisiones de diseño. Sección nueva sin entrada → gate lo caza.
 export const SECTION_ARCHETYPES = {
-  '🎬 Largometrajes': 'Muestra / País',
-  '🎞️ Cortometrajes': 'Cortos / Programas',
+  '🔮 Largometrajes': 'Muestra / País',
+  '🌙 Cortometrajes': 'Cortos / Programas',
   '🌱 Raíces del Juego': 'Perspectivas / Miradas',
   '🧠 Juego Mental': 'Perspectivas / Miradas',
   '👟 El Rey Puma': 'Apertura / Gala',
