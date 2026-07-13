@@ -497,41 +497,6 @@ export function festivalTagline(cfg){
              .replace(new RegExp('[\\s,:–—-]*\\b'+sh+'$','i'),'').trim() || full;
 }
 
-export function _renderSplashDropdownHTML(state, activeFestId){
-  const {_lang} = state.snapshot();
-  const entries=_sortFestivals(Object.entries(FESTIVAL_CONFIG)
-    .filter(([,cfg])=>cfg.name&&cfg.group!=='test'), activeFestId);
-  const chevSvg=`<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>`;
-  // Clasificar en tres grupos usando la fuente única de verdad
-  const ongoing  = entries.filter(([,cfg])=>_classifyFestival(cfg)==='ongoing');
-  const upcoming = entries.filter(([,cfg])=>_classifyFestival(cfg)==='upcoming');
-  const past     = entries.filter(([,cfg])=>_classifyFestival(cfg)==='past');
-  const mkItem=([id,cfg])=>{
-    const isActive=id===activeFestId;
-    const meta=`${cfg.city} · ${_lang==='en'&&cfg.dates_en?cfg.dates_en:cfg.dates}`;
-    const label=festivalLabel(cfg);
-    return`<button class="splash-drop-item${isActive?' selected':''}" data-fest="${id}" role="option" aria-selected="${isActive}" data-action="selectSplashFest" data-name="${label}" data-meta="${meta}">
-      <div><div class="splash-drop-item-name">${label}</div><div class="splash-drop-item-full">${cfg.fullName||cfg.name}</div><div class="splash-drop-item-meta">${meta}</div></div>
-    </button>`;
-  };
-  const mkPastItem=([id,cfg])=>{
-    const meta=`${cfg.city} · ${_lang==='en'&&cfg.dates_en?cfg.dates_en:cfg.dates}`;
-    const label=festivalLabel(cfg);
-    // Tap en el cuerpo/título → selecciona el festival (igual que los activos);
-    // tap en el chevron → expande/colapsa. La delegación dispara el primer
-    // data-action subiendo desde el target, así que el chevron no selecciona.
-    return`<button class="splash-drop-item past" data-fest="${id}" role="option" aria-selected="false" data-action="selectSplashFest" data-name="${label}" data-meta="${meta}">
-      <div><div class="splash-drop-item-name">${label}</div><div class="splash-drop-item-full">${cfg.fullName||cfg.name}</div><div class="splash-drop-item-meta">${meta}</div></div>
-      <span class="past-item-chev" data-action="togglePastFest">${chevSvg}</span>
-    </button>`;
-  };
-  let html='';
-  if(ongoing.length)  html+=`<div class="splash-drop-sep">${t('fs_en_curso')}</div>`+ongoing.map(mkItem).join('');
-  if(upcoming.length) html+=`<div class="splash-drop-sep">${t('fs_proximos')}</div>`+upcoming.map(mkItem).join('');
-  if(past.length)     html+=`<div class="splash-drop-sep">${t('splash_anteriores')}</div>`+past.map(mkPastItem).join('');
-  return html;
-}
-
 // _renderSplashRailHTML — carrusel de afiches del selector-splash (reemplaza el
 // dropdown vertical). VIGENTES (en curso + próximos, brillo pleno) → divisor
 // "ANTERIORES" → PASADOS (atenuados). Mismo orden/tiers que el dropdown

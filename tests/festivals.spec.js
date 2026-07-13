@@ -3,18 +3,17 @@
 const { test, expect } = require('@playwright/test');
 const { LEVIZA_SIMTIME, enterFestival } = require('./helpers');
 
-// T08 — Festival selector: el próximo festival encabeza; los pasados van en Anteriores
-test('T08 — festival selector: el próximo festival encabeza', async ({ page }) => {
+// T08 — Selector-carrusel: el festival vigente encabeza el riel; los pasados van
+// tras el divisor "ANTERIORES". El riel siempre está visible (sin toggle) — se
+// elige por poster (.splash-card). Derivado de FESTIVAL_CONFIG en runtime.
+test('T08 — selector-carrusel: el festival vigente encabeza el riel', async ({ page }) => {
   await page.goto('/');
   // Gate de readiness JS DEFINITIVO: [data-app-ready="1"] (fin del bootstrap
-  // síncrono → listener delegado adjunto) antes de click en #splash-sel-btn
-  // (estático). Sin esto el click llega antes del wiring → el dropdown no abre.
+  // síncrono → riel poblado por _renderSplashRail) antes de leer las cards.
   await page.waitForSelector('html[data-app-ready="1"]', { state: 'attached', timeout: 15000 });
-  await page.locator('#splash-sel-btn').click();
-  await page.waitForSelector('#splash-dropdown', { state: 'visible', timeout: 15000 });
-  await page.waitForSelector('.splash-drop-item[data-fest]', { state: 'visible', timeout: 15000 });
-  const items = page.locator('.splash-drop-item[data-fest]');
-  expect(await items.count()).toBeGreaterThan(1);
+  await page.waitForSelector('.splash-card[data-fest]', { state: 'attached', timeout: 15000 });
+  const cards = page.locator('.splash-card[data-fest]');
+  expect(await cards.count()).toBeGreaterThan(1);
   // El que encabeza debe ser el festival VIGENTE (en curso o el próximo por
   // empezar): festivalEndStr >= hoy y el de fin más cercano. Derivado de
   // FESTIVAL_CONFIG en runtime — antes se hardcodeaba el nombre y el test se
@@ -27,43 +26,45 @@ test('T08 — festival selector: el próximo festival encabeza', async ({ page }
       .sort((a, b) => new Date(a.festivalEndStr) - new Date(b.festivalEndStr));
     return vigentes.length ? vigentes[0].id || vigentes[0].storageKey.replace(/_$/, '') : null;
   });
-  const firstFestId = await items.first().getAttribute('data-fest');
+  const firstFestId = await cards.first().getAttribute('data-fest');
   if (expectedFirst) {
     expect(firstFestId).toBe(expectedFirst);
   } // sin festival vigente (todos pasados): no hay expectativa de cabecera — solo orden por tiers
-  const allIds = await items.evaluateAll(els => els.map(el => el.getAttribute('data-fest')));
+  // El divisor "ANTERIORES" separa vigentes de pasados; leviza (pasado) queda tras él.
+  await expect(page.locator('.splash-rail-div')).toBeAttached();
+  const allIds = await cards.evaluateAll(els => els.map(el => el.getAttribute('data-fest')));
   expect(allIds.some(id => id.includes('leviza'))).toBe(true);
 });
 
-// T40 — El dropdown del selector nunca se sale del viewport y permite alcanzar el
-// último item, incluso con TODOS los "anteriores" expandidos (peor caso de altura).
-// Regresión del bug introducido al sumar fullName + expand sin acotar la altura:
-// el splash es position:fixed (no scrollea) → sin max-height/overflow los items de
-// abajo quedaban inalcanzables. Invariante robusto (independiente del alto de pantalla):
-// fondo del dropdown ≤ viewport, y el último item visible tras scrollear al fondo.
-test('T40 — selector dropdown: dentro del viewport y último item alcanzable (todo expandido)', async ({ page }) => {
+// T40 — El splash entra COMPLETO sin scroll vertical en una pantalla chica
+// (360×640, peor caso), y el riel horizontal alcanza la última card. El splash es
+// position:fixed → si el contenido excede el alto, los actores de abajo ("Entrar")
+// quedan inalcanzables. Invariante robusto (independiente del contenido): el splash
+// no desborda verticalmente, y el riel scrollea en X hasta revelar la última card.
+test('T40 — splash: cabe sin scroll vertical (360×640) y el riel alcanza la última card', async ({ page }) => {
+  await page.setViewportSize({ width: 360, height: 640 });
   await page.goto('/');
   await page.waitForSelector('html[data-app-ready="1"]', { state: 'attached', timeout: 15000 });
-  await page.locator('#splash-sel-btn').click();
-  await page.waitForSelector('#splash-dropdown', { state: 'visible', timeout: 15000 });
-  await page.waitForSelector('.splash-drop-item[data-fest]', { state: 'visible', timeout: 15000 });
-  // Expandir todos los items de "anteriores" → la altura máxima posible.
-  await page.locator('.splash-drop-item.past .past-item-chev')
-    .evaluateAll(els => els.forEach(c => c.click()));
+  await page.waitForSelector('.splash-card[data-fest]', { state: 'attached', timeout: 15000 });
   const geo = await page.evaluate(() => {
-    const dd = document.getElementById('splash-dropdown');
-    const items = document.querySelectorAll('.splash-drop-item');
-    const last = items[items.length - 1];
-    const r = dd.getBoundingClientRect();          // rect estable: el scroll interno no lo mueve
-    dd.scrollTop = dd.scrollHeight;                // scrollear al fondo
+    const splash = document.getElementById('otrofestiv-splash');
+    const rail = document.getElementById('splash-rail');
+    const cards = rail.querySelectorAll('.splash-card');
+    const last = cards[cards.length - 1];
+    // Riel: scrollear al fondo horizontal → la última card debe quedar dentro del viewport.
+    rail.scrollLeft = rail.scrollWidth;
+    const rr = rail.getBoundingClientRect();
     const lr = last.getBoundingClientRect();
     return {
-      ddBottom: r.bottom,
+      // sin scroll vertical: el contenido del splash no excede su alto fijo
+      noVScroll: splash.scrollHeight <= splash.clientHeight + 1,
       innerHeight: window.innerHeight,
-      lastReachable: lr.bottom <= r.bottom + 1 && lr.top >= r.top - 1,
+      splashBottom: splash.getBoundingClientRect().bottom,
+      lastReachable: lr.left >= rr.left - 1 && lr.right <= rr.right + 1,
     };
   });
-  expect(geo.ddBottom).toBeLessThanOrEqual(geo.innerHeight + 2);
+  expect(geo.noVScroll).toBe(true);
+  expect(geo.splashBottom).toBeLessThanOrEqual(geo.innerHeight + 2);
   expect(geo.lastReachable).toBe(true);
 });
 

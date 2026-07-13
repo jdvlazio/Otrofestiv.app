@@ -2,49 +2,10 @@
 // p8 Step 7e — Lifecycle de splash/selector de festival + auto-resolve posters. POSTERS/CUSTOM_POSTERS vía bridge.
 
 import { FESTIVAL_CONFIG, TMDB_API_BASE, TMDB_API_KEY, TMDB_POSTER_BASE, _DEFAULT_FEST_ID, _POSTER_CACHE_PFX } from '../config.js';
-import { _renderFestivalSelectorHTML, _renderSplashDropdownHTML, _renderSplashRailHTML, _classifyFestival, festivalShortName, festivalTagline } from '../view/components.js';
+import { _renderFestivalSelectorHTML, _renderSplashRailHTML, _classifyFestival, festivalShortName, festivalTagline } from '../view/components.js';
 import { _langDates, setPosters } from '../view/helpers.js';
 import { render } from '../view/programa.js';
 import { state } from '../state/state.js';
-
-export function toggleSplashDropdown(){
-  const dd=document.getElementById('splash-dropdown');
-  const btn=document.getElementById('splash-sel-btn');
-  if(!dd||!btn) return;
-  const open=dd.style.display==='none';
-  dd.style.display=open?'block':'none';
-  btn.classList.toggle('open',open);
-  if(open){
-    // Acotar la altura al espacio disponible bajo el botón → scroll interno.
-    // Sin esto, los nombres oficiales + el expand de "anteriores" hacen crecer el
-    // dropdown más allá del viewport (el splash es position:fixed, no scrollea) y
-    // los items de abajo quedan inalcanzables. La barra-padre no cambia de top al
-    // expandir un item, así que basta calcular una vez al abrir.
-    const top=dd.getBoundingClientRect().top;
-    dd.style.maxHeight=Math.max(160, window.innerHeight - top - 16)+'px';
-  }
-}
-
-export function _togglePastFest(item){
-  // Solo el chevron llega acá → toggle colapso/expansión del item pasado.
-  // El tap en el título/cuerpo dispara selectSplashFest (no esto).
-  if(!item) return;
-  item.classList.toggle('past-open');
-}
-
-export function _renderSplashDropdown(activeFestId){
-  const dd=document.getElementById('splash-dropdown');
-  if(!dd) return;
-  dd.innerHTML=_renderSplashDropdownHTML(state, activeFestId);
-  // Update selected button meta with language-aware dates
-  const _activeCfg=FESTIVAL_CONFIG[activeFestId];
-  const _selMeta=document.getElementById('splash-sel-meta');
-  const _selName=document.getElementById('splash-sel-name');
-  if(_activeCfg && _selMeta){
-    _selMeta.textContent=`${_activeCfg.city} · ${_langDates(_activeCfg)} ${_activeCfg.year||''}`.trim();
-  }
-  if(_activeCfg && _selName) _selName.textContent=_activeCfg.name;
-}
 
 export function _togglePastFestRow(row, id){
   // Toggle colapso/expansión — siempre. Nunca carga el festival.

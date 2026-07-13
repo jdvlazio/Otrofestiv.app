@@ -227,7 +227,7 @@ export const NOTICES=[
 export const FESTIVAL_CONFIG={
   // ── Bootstrap mínimo por festival ────────────────────────────────────────
   // Campos requeridos ANTES del fetch (usados por splash y _DEFAULT_FEST_ID):
-  //   name, city, dates, dates_en, year → _renderSplashDropdown()
+  //   name, city, dates, dates_en, year, keyArt → _renderSplashRail()
   //   storageKey                        → identificar localStorage
   //   festivalEndStr                    → _DEFAULT_FEST_ID
   // Todo lo demás (dayKeys, days, venues, posters, etc.) viene del JSON

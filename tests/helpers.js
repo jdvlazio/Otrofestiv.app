@@ -7,13 +7,10 @@
 const LEVIZA_SIMTIME = '2026-05-14T00:00:00-05:00';
 
 async function selectFestival(page, festId) {
-  // Selección DETERMINISTA vía selectSplashFest (no via toggle del dropdown).
+  // Selección DETERMINISTA vía selectSplashFest (no via gesto de scroll del riel).
   // Este es un helper de SETUP — su objetivo es entrar al festival, no probar la
-  // UI del selector (eso lo cubren T08/M02 con click real). El click dance sobre
-  // #splash-sel-btn era flaky bajo carga: las animaciones del splash interceptan
-  // el click transitoriamente → el dropdown no abre → timeout. Además, para
-  // festivales "past" (ej. leviza2026) el código ya terminaba llamando a
-  // selectSplashFest por evaluate de todos modos. Ir directo elimina la race.
+  // UI del selector-carrusel (eso lo cubre festivals.spec.js con click real sobre
+  // .splash-card). Ir directo a selectSplashFest elimina la race del scroll-snap.
   await page.evaluate((id) => {
     const cfg = FESTIVAL_CONFIG[id] || {};
     const meta = `${cfg.city} · ${cfg.dates} ${cfg.year || ''}`.trim();
@@ -27,10 +24,10 @@ async function enterFestival(page, festId, simTime) {
   // Gate de readiness JS DEFINITIVO: el marcador [data-app-ready="1"] se setea al
   // FINAL del bootstrap síncrono (main.js) — módulo evaluado, STATE/TEST BRIDGE
   // instalado (FESTIVAL_CONFIG/selectSplashFest expuestos en globalThis), listener
-  // delegado adjunto, render inicial hecho. El proxy anterior (.splash-drop-item
+  // delegado adjunto, render inicial hecho. El proxy anterior (.splash-card
   // attached) se renderiza ANTES del bridge → bajo runners lentos de CI, evaluate
   // veía "FESTIVAL_CONFIG is not defined". appReady cierra esa ventana de forma
-  // garantizada. #splash-sel-btn (estático) nunca fue señal válida.
+  // garantizada.
   await page.waitForSelector('html[data-app-ready="1"]', { state: 'attached', timeout: 15000 });
 
   // Gate extra para WebKit (motor de iOS, más lento en arrancar que Blink): el
@@ -45,10 +42,9 @@ async function enterFestival(page, festId, simTime) {
     { timeout: 15000 }
   );
 
-  const selName = await page.locator('#splash-sel-name').textContent().catch(() => '');
-  if (!selName.toLowerCase().includes(festId.replace(/\d+/g, '').toLowerCase())) {
-    await selectFestival(page, festId);
-  }
+  // Selección determinista del festival objetivo (independiente de la preselección
+  // del riel: con 1 solo festival en curso viene preseleccionado, con 0/2+ no).
+  await selectFestival(page, festId);
 
   await page.locator('.splash-enter-btn').click();
   await page.waitForSelector('.poster-card, .plist-item, .dtab', { timeout: 15000 });

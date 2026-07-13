@@ -46,15 +46,13 @@ async function enterFirstFestival(page) {
   // es [data-app-ready], que se espera abajo.
   await page.goto('/', { waitUntil: 'domcontentloaded' });
   // Gate de readiness JS DEFINITIVO: [data-app-ready="1"] (fin del bootstrap
-  // síncrono). #splash-sel-btn es estático → no es señal válida (flaky).
+  // síncrono → riel poblado). No dependemos de la preselección: elegimos el
+  // primer festival del riel de forma determinista (contrato festival-agnóstico).
   await page.waitForSelector('html[data-app-ready="1"]', { state: 'attached', timeout: 15000 });
-  // El selector arranca SIN festival pre-elegido (placeholder "Elegí uno"): hay que
-  // elegir uno para habilitar "Entrar". Tomamos el primero disponible de forma
-  // determinista (contrato: festival-agnóstico, no hardcodear IDs). Los items existen
-  // en el DOM aunque el dropdown esté cerrado (render en el bootstrap).
-  await page.waitForSelector('.splash-drop-item[data-fest]', { state: 'attached', timeout: 15000 });
+  // Las cards existen en el DOM tras el bootstrap (render en _renderSplashRail).
+  await page.waitForSelector('.splash-card[data-fest]', { state: 'attached', timeout: 15000 });
   await page.evaluate(() => {
-    const first = document.querySelector('.splash-drop-item[data-fest]');
+    const first = document.querySelector('.splash-card[data-fest]');
     if (first) selectSplashFest(first.dataset.name, first.dataset.meta, first.dataset.fest);
   });
   // Esperar que el botón sea visible (la animación puede tardar hasta 1.1s)
@@ -79,15 +77,13 @@ test('M01 — app carga sin errores JS', async ({ page }) => {
   expect(critical).toHaveLength(0);
 });
 
-// M02 — El selector de festival tiene al menos un festival
+// M02 — El selector-carrusel tiene al menos un festival
 test('M02 — selector tiene al menos un festival', async ({ page }) => {
   await page.goto('/', { waitUntil: 'domcontentloaded' });  // ver enterFirstFestival
-  // Gate de readiness JS DEFINITIVO antes de click en #splash-sel-btn (estático).
+  // Gate de readiness JS DEFINITIVO: el riel se puebla al cierre del bootstrap.
   await page.waitForSelector('html[data-app-ready="1"]', { state: 'attached', timeout: 15000 });
-  await page.locator('#splash-sel-btn').click();
-  await page.waitForSelector('#splash-dropdown', { state: 'visible', timeout: 15000 });
-  await page.waitForSelector('.splash-drop-item[data-fest]', { state: 'visible', timeout: 15000 });
-  const count = await page.locator('.splash-drop-item[data-fest]').count();
+  await page.waitForSelector('.splash-card[data-fest]', { state: 'attached', timeout: 15000 });
+  const count = await page.locator('.splash-card[data-fest]').count();
   expect(count).toBeGreaterThan(0);
 });
 

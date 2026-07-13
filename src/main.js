@@ -45,7 +45,7 @@ import {
   ICONS, CHECK_SVG, DAY_ABBR, DAY_NUM,
   makeProgramPoster, makeEventPoster, makeSorpresaPoster,
   _secLabel, _sectionColor, renderRatingStarsHTML, starSVG,
-  _renderSplashDropdownHTML, _renderFestivalSelectorHTML, _classifyFestival,
+  _renderFestivalSelectorHTML, _classifyFestival,
   _sortFestivals, renderAvBlocksHTML, isFullDayBlocked, renderFlowProgress,
   parseProgramTitle,
 } from './view/components.js';
@@ -130,7 +130,7 @@ import {
 
 // ── Step 7e: controller/festival.js ────────────────────────────────────────────
 import {
-  toggleSplashDropdown, _togglePastFest, _renderSplashDropdown, _renderSplashRail, _togglePastFestRow, _renderFestivalSelector, selectSplashFest, _autoResolveFestivalPosters,
+  _renderSplashRail, _togglePastFestRow, _renderFestivalSelector, selectSplashFest, _autoResolveFestivalPosters,
 } from './controller/festival.js';
 
 // ── Step 7e: controller/auth.js ────────────────────────────────────────────
@@ -219,10 +219,8 @@ const ACTION_REGISTRY = {
   closePlanConfirm:      (el)    => closePlanConfirm(el.dataset.force === '1'),
   closePrioLimit:        ()      => closePrioLimit(),
   dismissSplash:         ()      => dismissSplash(),
-  toggleSplashDropdown:  ()      => toggleSplashDropdown(),
   searchOpen:            ()      => searchOpen(),
   searchClose:           ()      => searchClose(),
-  togglePastFest:        (el)    => _togglePastFest(el.closest('.splash-drop-item.past')),
   togglePastFestRow:     (el)    => _togglePastFestRow(el.closest('.fs-festival-row'), el.dataset.fest),
   openPostViewRating:    (el)    => openPostViewRating(el.dataset.title, el.dataset.day, el.dataset.time, el.dataset.venue, el.dataset.duration),
   selectSplashFest:      (el)    => { selectSplashFest(el.dataset.name, el.dataset.meta, el.dataset.fest); if(el.classList&&el.classList.contains('splash-card')) el.scrollIntoView({inline:'center',block:'nearest'}); },
@@ -1346,7 +1344,7 @@ state.subscribeRender(
    Auto-dismiss en 2.5s o al tocar.
 ────────────────────────────────────────────────────────────────── */
 
-// ── Genera el splash dropdown y el festival selector desde FESTIVAL_CONFIG ──
+// ── Genera el splash rail y el festival selector desde FESTIVAL_CONFIG ──
 // Agregar un festival = una entrada en FESTIVAL_CONFIG. Nada más que tocar.
 // CHECK_SVG → src/view/components.js (Step 6a). Importado.
 // _classifyFestival — fuente única de verdad para el estado temporal de un festival.
@@ -1355,16 +1353,11 @@ state.subscribeRender(
 // _classifyFestival → src/view/components.js (Step 6a). Importado.
 
 // _sortFestivals → src/view/components.js (Step 6a). Importado.
-// Toggle colapso/expansión de festival pasado en el dropdown del splash.
-// Al expandir muestra metadata completa y hace el item seleccionable.
-// Al colapsar vuelve al estado condensado.
 
-// Pure half (p6b) — HTML del dropdown list
-// _renderSplashDropdownHTML → src/view/components.js (Step 6a). Importado.
-// Impure caller (p6b) — DOM mutations en 3 elementos del splash
+// _renderSplashRailHTML → src/view/components.js. Caller impuro _renderSplashRail
+// (DOM: puebla #splash-rail + info) → src/controller/festival.js.
 
 // Toggle colapso/expansión de festival pasado en el sheet in-app.
-// Idéntico en comportamiento a _togglePastFest del splash.
 // Primer tap: expande mostrando metadata completa.
 // Segundo tap: selecciona el festival vía loadFestival.
 
