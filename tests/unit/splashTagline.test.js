@@ -1,0 +1,73 @@
+// Unit test — festivalTagline + _renderSplashRailHTML (src/view/components.js).
+//
+// POR QUÉ EXISTE: el tagline del nuevo selector-splash se DERIVA de `fullName`
+// (fuente única, sin campo aparte). La derivación tiene casos delicados —
+// separador em/en-dash, nombre al inicio vs al final, fullName===name (Tribeca) —
+// que deben dar EXACTAMENTE el descriptor correcto para los 9 festivales reales.
+// Este test congela la fórmula contra esos 9 + edge cases sintéticos.
+//
+// Carga: import() dinámico del ESM real (mismo patrón que poster.test.js).
+
+const { test, before } = require('node:test');
+const assert = require('node:assert');
+
+let C, CFG;
+before(async () => {
+  globalThis._lang = 'es'; // t() lee _lang como bare-global (bridge)
+  C = await import('../../src/view/components.js');
+  CFG = (await import('../../src/config.js')).FESTIVAL_CONFIG;
+});
+
+// ── festivalTagline: los 9 festivales reales ──
+const EXPECTED = {
+  ficci65:          'Festival Internacional de Cine de Cartagena de Indias',
+  aff2026:          'Alternativa Film Festival',
+  tribeca2026:      '',                                              // fullName === name
+  cinemancia2025:   'Festival Metropolitano de Cine',               // nombre al inicio
+  leviza2026:       'Festival de Cine y Audiovisuales',             // nombre al final
+  olhar2026:        'Festival Internacional de Curitiba',           // separador –
+  tercertiempo2026: 'Festival Mundial de Cine de Fútbol y Deportes',// separador —
+  fantasofest2026:  'Muestra Iberoamericana de Cine Fantástico',    // separador —
+  ficmontanas2026:  'Festival Internacional de Cine en las Montañas',// nombre ausente en fullName
+};
+
+test('festivalTagline deriva el descriptor correcto de los 9 festivales', () => {
+  for (const [id, want] of Object.entries(EXPECTED)) {
+    assert.strictEqual(C.festivalTagline(CFG[id]), want, `tagline de ${id}`);
+  }
+});
+
+test('festivalTagline — edge cases', () => {
+  assert.strictEqual(C.festivalTagline({}), '', 'sin fullName → vacío');
+  assert.strictEqual(C.festivalTagline({name:'X', fullName:'X'}), '', 'fullName===name → vacío');
+  assert.strictEqual(C.festivalTagline({name:'X', fullName:'X — Desc'}), 'Desc', 'separador');
+  assert.strictEqual(C.festivalTagline({name:'X', fullName:'X', tagline:'override'}), 'override', 'override explícito gana');
+  assert.strictEqual(C.festivalTagline({name:'X', fullName:'X — Desc', tagline:''}), '', 'override vacío gana sobre derivación');
+});
+
+// ── _renderSplashRailHTML: estructura ──
+const fakeState = (lang='es') => ({ snapshot: () => ({ _lang: lang }) });
+
+test('_renderSplashRailHTML — cards de los 8 festivales visibles + divisor', () => {
+  const html = C._renderSplashRailHTML(fakeState(), 'fantasofest2026');
+  const cards = (html.match(/data-fest=/g) || []).length;
+  assert.strictEqual(cards, 8, '8 cards (cinemancia es group:test → excluido)');
+  assert.ok(html.includes('splash-rail-div'), 'divisor ANTERIORES presente');
+  assert.ok(html.includes('data-fest="fantasofest2026"'), 'incluye el festival activo');
+  assert.ok(!html.includes('cinemancia2025'), 'excluye group:test');
+});
+
+test('_renderSplashRailHTML — activo marcado, keyArt + object-position', () => {
+  const html = C._renderSplashRailHTML(fakeState(), 'tercertiempo2026');
+  assert.match(html, /data-fest="tercertiempo2026"[^>]*aria-selected="true"/, 'activo aria-selected');
+  assert.match(html, /class="splash-card[^"]*\bon\b/, 'activo lleva clase on');
+  assert.ok(html.includes('/assets/keyart/tercertiempo2026.jpg'), 'usa keyArt');
+  assert.ok(html.includes('object-position:left'), 'aplica keyArtPos de TT');
+});
+
+test('_renderSplashRailHTML — data-name/data-meta preservan firma de selectSplashFest', () => {
+  const html = C._renderSplashRailHTML(fakeState('en'), 'fantasofest2026');
+  // en EN la meta usa dates_en
+  assert.match(html, /data-fest="fantasofest2026"[^>]*data-name="[^"]+"[^>]*data-meta="Bogotá · JUL 13–19"/,
+    'card con data-name + data-meta (dates_en en inglés)');
+});
