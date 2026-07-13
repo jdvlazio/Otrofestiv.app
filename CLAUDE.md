@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `a6f081a Merge #302 — El documental del 10: Letterboxd + crédito de dirección`
+> Último commit: `ca9ff92 feat(fantasofest): stills oficiales para 8 de los 10 cortos + fix editorial local`
 
 ---
 
@@ -62,6 +62,7 @@ Juan es Product Owner, diseñador y developer. Claude ejecuta; Juan audita y apr
 | `leviza2026` | Leviza - Festival de Cine y Audiovisuales | Zapatoca | 14–17 MAY | Archivado |
 | `olhar2026` | Olhar de Cinema | Curitiba | JUN 4–13 | Recién terminado |
 | `tercertiempo2026` | TercerTiempo Fest | Bogotá | 13–19 JUL | **Próximo / activo** |
+| `fantasofest2026` | FantasoFest | Bogotá | 13–19 JUL | **Próximo / activo** |
 | `ficmontanas2026` | Ficmontañas | Salento | JUL 1–5 | Recién terminado |
 
 ### Features activas (desde `.specify/features/`)
