@@ -126,6 +126,38 @@ Columnas del CSV — **clase organizador** (lo que solo el festival sabe):
    sesión (ej. URIs en anotaciones del PDF, mapeadas por página), poblar
    `ticket_url` POR FILM — pisa al global en el CTA del sheet.
 
+#### Reglas de Fase 1 probadas en FantasoFest 2026 (CMS WordPress + PDF de prensa)
+
+1. **Cazar contenido RECICLADO de ediciones pasadas (CMS que reusa páginas).**
+   La web de FantasoFest mostraba 10 largos; 5 eran **fantasmas de la edición
+   2022** dejados en el WordPress. Cómo se cazó — y el gate que queda:
+   - **Cruzar SIEMPRE contra la fuente oficial de convocatoria** (PDF/comunicado
+     de prensa). El PDF decía "5 largos, 9 funciones"; la web tenía 10. El PDF
+     manda para el CANON de qué está en el programa.
+   - **Validar el par día-de-semana ↔ fecha contra el AÑO del festival.** Las
+     funciones fantasma decían "Martes 19 de julio", "Sábado 23 de julio" — y
+     esos weekdays cuadran con **2022**, no 2026. Un weekday que no matchea el
+     calendario del año = dato de otra edición.
+   - **Fecha fuera de la ventana oficial = bandera roja.** Funciones el 20–27 jul
+     cuando el festival es 13–19 → no modelar sin confirmar.
+   - La fuente a veces se autodelata: el bloque fantasma estaba rotulado
+     "Proyecciones en FantasoFest **2022**:". Leerlo, no ignorarlo.
+2. **El póster pertenece a ESTE film (director con varias obras).** La Virgen de
+   la Tosquera (Casabé, 2025) NO usa `AFICHE-Lqv` — ése es "Los Que Vuelven"
+   (Casabé, 2019, otra película). El correcto (`LaVirgenDeLaTosquera_Web_Cartel`)
+   se halló **buscando el título en los uploads**, no por cercanía/orden en la
+   grilla. Regla: cuando un director tiene >1 film, verificar que el asset de
+   póster corresponde a ESE título (buscar por título), nunca por proximidad.
+3. **Stills de cortos sin etiqueta → mapear con una CLAVE, nunca adivinar.** La
+   página oficial (popups Popup Maker) tenía 9 stills limpios 16:9 pero SIN
+   etiqueta (9 para 10 cortos; el orden DOM no corresponde a la lista). Instagram
+   sí mapeaba (título pegado en cada slide) pero tras login wall. Se usó IG como
+   **clave de mapeo, confirmada por el PO** (P#→título). Mis hipótesis visuales
+   previas estaban casi todas mal → **confirmar con el PO, no adivinar**. Un still
+   16:9 LOCAL va con `poster` + `posterSource:'editorial'` (recibe la banda; el
+   sheet ya lo honra, no solo por CDN-URL). Sin mapeo certero → generativo, jamás
+   un still equivocado.
+
 **Gates de salida (bloqueantes):**
 - [ ] Cero films sin `slug`
 - [ ] Cero títulos en ALLCAPS (3+ palabras consecutivas en mayúsculas)
@@ -210,9 +242,10 @@ Columnas del CSV — **clase organizador** (lo que solo el festival sabe):
 - Se consultan hasta 3 resultados por (media × query); `movie` y `tv` en ese orden.
 - **Implementado y testeado:** `enrich-festival.py` (función pura `match_ok`). `python3 scripts/enrich-festival.py --selftest` corre 14 fixtures — incluidos los 4 falsos rechazos de TT que deben pasar y los 4 homónimos genuinos que deben seguir fallando. El script escribe **solo `genre`, `year` y `lbSlug`**.
 
-**Doctrina de rechazos (lección TT 2026 — dos veces):**
+**Doctrina de rechazos (lección TT 2026 — dos veces + FantasoFest):**
 1. **Un rechazo del gate NO es evidencia de ausencia en TMDB/LB.** Antes de concluir "no existe", auditar los rechazos cuyo candidato tiene título ~1.0: en TT, 10 de esos "rechazos" eran la película correcta con el gate viejo defectuoso.
 2. **Rechazo por director ⇒ verificar el crédito de la FUENTE contra el registro canónico** (TMDB/LB + prensa). En TT, la ficha de la Cinemateca acreditaba al guionista como director (*El documental del 10*): el gate rechazaba "correctamente" un dato equivocado. El fix es corregir el dato, no aflojar el gate.
+3. **Confirmar la AUSENCIA con búsqueda directa en LB — y rechazar homónimos.** Si tras auditar el rechazo el film sigue sin match, buscarlo **directo en `letterboxd.com/search/films/<título>/`** para confirmar que genuinamente no está (no solo confiar en que el enricher no lo halló). En FantasoFest, *Peephole* (Sarmiento Bazzani, 2020) y *Mutante* (Tabares/Martínez, 2022) tienen MUCHOS homónimos en LB (Peephole 1993/2004/2015/2018/2025…) pero NINGUNO es el nuestro → **quedan sin `lbSlug`, y eso es correcto**. Adjuntar un homónimo (`peephole-2018`) sería el error. Ausencia real verificada = sin link es el estado honesto; la UI oculta el botón.
 
 **Campos aceptados de TMDB (solo si vacíos en el JSON):**
 - `genre` → campo en el objeto film (si vacío) — error tolerable, no visible como dato crítico
@@ -235,6 +268,27 @@ Columnas del CSV — **clase organizador** (lo que solo el festival sabe):
 
 3. **Prioridad de escrutinio — el "perfil-Brujo" primero.**
    Cortos de origen **no-anglo** + título de una o dos palabras + presencia débil en TMDB son los de mayor riesgo de colisión. Verificarlos primero. Para festivales ya onboardeados con el método sin afinar, correr la auditoría retroactiva sobre esta clase (rankear → traer verbatim oficial → comparar contra anclas → veredicto).
+
+#### `title_en` vs `synopsis_en` — buscar el oficial vs traducir (regla FantasoFest 2026)
+
+Asimetría clave, misma doctrina "leer, no inventar":
+
+- **`title_en` = título internacional OFICIAL, buscado y verificado. NUNCA
+  máquina-traducción.** Un título es una decisión creativa del realizador/
+  distribuidor, no un texto traducible: "La Virgen de la Tosquera" → el oficial
+  es **"The Virgin of the Quarry Lake"** (Sundance/Sitges), no "…of the Gravel
+  Pit"; "El Ritual del Nahual" → **"Tekenchu: The Rite of the Nahuales"**, no
+  "The Ritual of the Nahual". Se busca en Letterboxd / circuito de festivales /
+  IMDb y se verifica (200 + director/año). **Si el film no tiene título en inglés
+  registrado, se deja el español tal cual (sin `title_en`)** — nunca inventar uno.
+- **`synopsis_en` = traducción SOLO cuando no existe una oficial.** Festival
+  bilingüe nativo → ambas de primera fuente. Festival hispano sin sinopsis EN
+  oficial → se produce por traducción fiel con pase de Content Design (no hay
+  artefacto oficial que buscar). Por eso las `synopsis_en` son traducción propia
+  y los `title_en` no.
+
+Regla mnemónica: **si el dato oficial existe (título de circuito), se busca;
+si no existe (sinopsis EN de festival hispano), se produce con cuidado.**
 
 **Nota sobre match rate:**
 - Match rate > 60% → sospechoso, el algoritmo puede ser demasiado permisivo
@@ -538,3 +592,7 @@ producción durante FICMontañas 2026:
 | Gate TMDB con falsos rechazos estructurales (TT 2026) | 10 películas con match título-1.00 rechazadas (país ES vs EN, apellidos compuestos, registro escaso, año festival vs estreno) → concluimos "no existen en LB" y era falso (lo cazó Juan) | Gate v2 (PR #301) + fixtures reales en `--selftest` + doctrina: rechazo ≠ ausencia, auditar rechazos con título ~1.0 |
 | Marcador `⚠️ LB PENDIENTE` escrito al JSON (TT 2026) | Viajó a prod; habría producido hrefs rotos a Letterboxd | El enricher ya no escribe marcadores (pendientes solo en log) + guard en `lbUrlForFilm` |
 | Crédito de la fuente equivocado (TT 2026) | Ficha Cinemateca acreditaba al guionista como director (*El documental del 10*) → el gate rechazaba "bien" un dato malo | Doctrina: rechazo por director ⇒ verificar crédito contra registro canónico (TMDB/LB + prensa) y corregir el DATO, no aflojar el gate (PR #302) |
+| Contenido reciclado de edición pasada en el CMS (FantasoFest 2026) | La web mostraba 10 largos; 5 eran fantasmas de 2022 (fechas 20–27 jul con weekday de 2022, bloque rotulado "…2022") — modelar la web sola habría metido 5 films inexistentes | Cruzar contra el PDF/comunicado oficial (canon de qué está en el programa) + validar weekday↔fecha contra el año + fecha fuera de ventana = bandera roja (regla Fase 1 FantasoFest) |
+| Póster de otra película del mismo director (FantasoFest 2026) | `AFICHE-Lqv` era "Los Que Vuelven" (Casabé 2019), NO "La Virgen de la Tosquera" (Casabé 2025) | Buscar el asset por TÍTULO en los uploads, no por proximidad/orden en la grilla; verificar que el póster corresponde a ESE film |
+| `title_en` traducido a mano en vez del oficial (riesgo, evitado) | Traducir "La Virgen de la Tosquera" daría "…Gravel Pit"; el oficial es "The Virgin of the Quarry Lake" | Regla: `title_en` = título internacional OFICIAL buscado+verificado (LB/circuito/IMDb), nunca máquina-traducción; sin oficial → sin `title_en` |
+| Still local 16:9 no recibía la banda editorial (FantasoFest 2026) | El sheet del corto detectaba editorial solo por CDN-URL, ignorando `posterSource` → still local caía a `<img>` recortado 2:3 | `_isEd3`/`_isEd4` honran `posterSource:'editorial'` (PR #305); still local de festival va con `poster`+`posterSource:'editorial'` |

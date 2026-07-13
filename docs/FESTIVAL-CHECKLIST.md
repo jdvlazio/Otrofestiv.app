@@ -40,8 +40,11 @@
 - [ ] **Entrada en `src/config.js`** (`FESTIVAL_CONFIG`) creada (id sin guion: `[a-z0-9]+`)
 - [ ] **`fullName`** (nombre oficial completo, **verificado en la fuente oficial del festival**) presente en la entrada de `FESTIVAL_CONFIG` — se muestra al expandir el selector. `generate-config.js` lo exige vía `--fullname`.
 - [ ] **Secciones**: emoji único por sección + orden curatorial definido
+- [ ] **Programa cruzado contra la fuente oficial de convocatoria** (PDF/comunicado): coincide el conteo de films/funciones; **weekday↔fecha validado contra el año**; funciones fuera de la ventana = bandera roja (contenido reciclado de edición pasada — lección FantasoFest 2026)
 - [ ] **Secciones = nombres OFICIALES** de la fuente (jamás etiquetas propias tipo "Selección Oficial" — lección TT 2026, PR #295)
 - [ ] **Imágenes de cada ficha inventariadas** (afiche oficial de sesión = póster de bloque; no leer solo texto — lección TT 2026, PR #297)
+- [ ] **Póster corresponde a ESE film** cuando el director tiene varias obras (buscar el asset por título; `AFICHE-Lqv`≠La Virgen — lección FantasoFest)
+- [ ] **`title_en` = título internacional OFICIAL** verificado (LB/circuito), NUNCA traducido; sin oficial → sin `title_en`. (`synopsis_en` sí se traduce si no hay oficial.)
 - [ ] **Funciones no confirmadas por la fuente operativa** marcadas `_pendiente` (no modelar lo anunciado sin ficha/boleta)
 - [ ] **`ticket_url` por film** si el material oficial trae link de compra por sesión
 - [ ] **`synopsis_es`** presente para todos los films solos
