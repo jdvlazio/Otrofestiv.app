@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `af086e8 fix(splash): orden estable del riel — la selección no reordena las cards`
+> Último commit: `bdee668 Merge #310 — Splash: selector de festival por carrusel de afiches`
 
 ---
 
