@@ -70,6 +70,12 @@ export function _renderSplashRail(activeFestId){
   const rail=document.getElementById('splash-rail');
   if(rail){
     rail.innerHTML=_renderSplashRailHTML(state, activeFestId);
+    // Re-render con selección (p.ej. setLang): re-centrar la card .on para que
+    // el centro del scroll y la selección queden alineados — si divergen, el
+    // próximo gesto de scroll (_selectCenteredCard) pisaría la selección.
+    // Instant (sin behavior:'smooth'): snap mandatory pelea el smooth programático.
+    const onCard=rail.querySelector('.splash-card.on');
+    if(onCard) onCard.scrollIntoView({inline:'center',block:'nearest'});
     if(!rail.dataset.snapWired){
       rail.dataset.snapWired='1';
       let _tmo;

@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `9f347b3 feat(splash) paso 5: limpieza dropdown muerto + guards al modelo carrusel`
+> Último commit: `d165f3e chore(splash) paso 6: bump-version + CLAUDE.md al modelo carrusel`
 
 ---
 

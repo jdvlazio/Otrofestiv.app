@@ -65,6 +65,24 @@ test('_renderSplashRailHTML — activo marcado, keyArt + object-position', () =>
   assert.ok(html.includes('object-position:30%'), 'aplica keyArtPos de TT (30%: conserva "10" e "CINE")');
 });
 
+// INVARIANTE (bug cazado en QA 13 jul): el orden del riel es ESTABLE — no depende
+// de qué festival esté seleccionado. El tier 0 "seleccionado primero" era del
+// dropdown; en el carrusel, reordenar en un re-render (setLang) teletransporta
+// las cards y desalinea el centro del scroll con la selección → el próximo
+// gesto pisaba la selección. activeFestId solo marca .on/aria-selected.
+test('_renderSplashRailHTML — orden estable: no reordena por selección', () => {
+  const orderOf = html => [...html.matchAll(/data-fest="([^"]+)"/g)].map(m => m[1]).join(',');
+  const base = orderOf(C._renderSplashRailHTML(fakeState(), null));
+  // ficci65 es 'past' (última del riel): con tier 0 saltaría al frente de su grupo.
+  assert.strictEqual(orderOf(C._renderSplashRailHTML(fakeState(), 'ficci65')), base,
+    'seleccionar un pasado no lo reordena');
+  assert.strictEqual(orderOf(C._renderSplashRailHTML(fakeState(), 'tercertiempo2026')), base,
+    'seleccionar un vigente no reordena');
+  // La selección sí queda marcada (sin reordenar)
+  assert.match(C._renderSplashRailHTML(fakeState(), 'ficci65'),
+    /data-fest="ficci65"[^>]*aria-selected="true"/, 'ficci65 marcado .on donde está');
+});
+
 test('_renderSplashRailHTML — data-name/data-meta preservan firma de selectSplashFest', () => {
   const html = C._renderSplashRailHTML(fakeState('en'), 'fantasofest2026');
   // en EN la meta usa dates_en

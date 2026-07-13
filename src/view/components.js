@@ -499,14 +499,19 @@ export function festivalTagline(cfg){
 
 // _renderSplashRailHTML — carrusel de afiches del selector-splash (reemplaza el
 // dropdown vertical). VIGENTES (en curso + próximos, brillo pleno) → divisor
-// "ANTERIORES" → PASADOS (atenuados). Mismo orden/tiers que el dropdown
-// (_sortFestivals). Cada card lleva data-name/data-meta para preservar la firma
-// de selectSplashFest(name,meta,festId) — el controller (paso 4) no la cambia.
+// "ANTERIORES" → PASADOS (atenuados). Cada card lleva data-name/data-meta para
+// preservar la firma de selectSplashFest(name,meta,festId).
 // Sin afiche (keyArt) → fallback tipográfico con el shortName.
+// ORDEN ESTABLE: _sortFestivals recibe null — el tier 0 "seleccionado primero"
+// era semántica del dropdown; en un carrusel posicional, reordenar en un
+// re-render (p.ej. setLang) teletransporta las cards y desalinea el centro del
+// scroll con la selección (bug cazado en QA: la card centrada dejaba de ser la
+// .on → el próximo gesto de scroll pisaba la selección). activeFestId aquí solo
+// marca .on/aria-selected.
 export function _renderSplashRailHTML(state, activeFestId){
   const {_lang} = state.snapshot();
   const entries=_sortFestivals(Object.entries(FESTIVAL_CONFIG)
-    .filter(([,cfg])=>cfg.name&&cfg.group!=='test'), activeFestId);
+    .filter(([,cfg])=>cfg.name&&cfg.group!=='test'), null);
   const current = entries.filter(([,cfg])=>_classifyFestival(cfg)!=='past');
   const past    = entries.filter(([,cfg])=>_classifyFestival(cfg)==='past');
   const mkCard=([id,cfg])=>{
