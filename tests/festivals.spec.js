@@ -1,7 +1,7 @@
 // @ts-check
 // festivals.spec.js — Selector de festival, cambio de festival, validaciones cross-festival.
 const { test, expect } = require('@playwright/test');
-const { LEVIZA_SIMTIME, enterFestival } = require('./helpers');
+const { LEVIZA_SIMTIME, enterFestival, festivalTestIds } = require('./helpers');
 
 // T08 — Selector-carrusel: los festivales VIGENTES (en curso/próximos) encabezan el
 // riel; los pasados van tras el divisor "ANTERIORES". Invariante derivado de
@@ -186,10 +186,12 @@ test('T42 — onclick handlers tienen JS válido', async ({ page }) => {
 });
 
 // ─── PARAMETRIZADOS test.each ────────────────────────────────────────────────
-// Mismo invariante corriendo contra todos los festivales principales.
-// 1 definición → N test runs. Patrón correcto para cobertura cross-festival.
+// Mismo invariante corriendo contra TODOS los festivales con datos. 1 definición →
+// N test runs. DERIVADO de config + JSON en disco (festivalTestIds) — un festival
+// nuevo (septiembre) entra a la cobertura de smoke solo al agregar su config + JSON,
+// sin tocar specs. Antes: hardcodeado a ['leviza2026','tribeca2026'].
 
-const MAIN_FESTIVALS = ['leviza2026', 'tribeca2026'];
+const MAIN_FESTIVALS = festivalTestIds();
 
 // P01 — Festival tiene films (parametrizado)
 for (const festId of MAIN_FESTIVALS) {
