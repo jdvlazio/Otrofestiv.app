@@ -8,6 +8,7 @@
 
 import { FESTIVAL_CONFIG } from '../config.js';
 import { report } from '../telemetry.js';
+import { deriveHydrate } from '../state/festival-context.js';
 import { closeAuthSheet } from '../view/sheets.js';
 import { showToast } from '../view/feedback.js';
 import { state } from '../state/state.js';
@@ -51,35 +52,16 @@ export function saveState(...keys){
 
 export function loadState(){
   try{
-    // Computar todos los valores hidratados (puro, sin escribir)
-    const _wl = new Set([...storage.getWatchlist()].map(normTitle));
-    const _wd = new Set([...storage.getWatched()].map(normTitle));
-    const _pr = new Set([...storage.getPrioritized()].map(normTitle));
-    const _ratings = {...state.get('filmRatings'), ...storage.getFilmRatings()};
-    const _av = storage.getAvailability();
-    const _newAv = {...state.get('availability')};
-    DAY_KEYS.forEach(d=>{ if(_av[d]) _newAv[d]=_av[d]; });
-    let _sa = storage.getSavedAgenda();
-    if(_sa && _sa.schedule){
-      // Normalizar venues viejos (ej: 'CC Bocagrande' → 'Plaza Bocagrande')
-      _sa = {..._sa, schedule: _sa.schedule.map(s => s.venue ? {...s, venue: s.venue.replace(/CC Bocagrande/g,'Plaza Bocagrande')} : s)};
-    }
-    state.batchUpdate({
-      watchlist: _wl,
-      watched: _wd,
-      prioritized: _pr,
-      filmRatings: _ratings,
-      availability: _newAv,
-      savedAgenda: _sa,
-      lastRemovedSlots: storage.getLastRemovedSlots(),
-      filmDelays: storage.getFilmDelays(),
-      filmDelaysHistory: storage.getFilmDelaysHistory(),
-    });
+    // Los 9 estados por-festival se hidratan DERIVADOS de FESTIVAL_STATE
+    // (festival-context.js): cada hydrate captura su lógica fina (normTitle en los
+    // Sets, merge de ratings, merge por-día de availability, normalización de
+    // venues). batchUpdate atómico. Fuente única con el clear de batch1.
+    state.batchUpdate(deriveHydrate());
     // Heal: garantiza que todo lo que está en prioritized esté en watchlist
     state.update('watchlist', s => { let n=s; prioritized.forEach(t=>{ if(!n.has(t)) n=state._addToSet(n,t); }); return n; });
     saveWL();
     const _v = storage.getViewmodes(); if(_v.miPlan) miPlanViewMode=_v.miPlan; if(_v.intereses) interesesViewMode=_v.intereses;
-  }catch(e){console.warn('[loadState] failed',e);}
+  }catch(e){report(e,'loadState');}
 }
 
 export function _cloudSave(){
