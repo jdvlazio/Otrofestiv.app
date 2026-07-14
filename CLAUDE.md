@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `402ee78 feat(selector): mini-póster del festival en cada fila (unidad con el splash)`
+> Último commit: `47766a8 Merge #317 — Festivales simultáneos: guard de carga + T08 robusto`
 
 ---
 

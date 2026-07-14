@@ -9,7 +9,7 @@ import { FESTIVAL_CONFIG, MAX_REMEMBERED_SLOTS } from '../config.js';
 import { ICONS, parseProgramTitle } from '../view/components.js';
 import { closeAuthSheet, closePrioLimit } from '../view/sheets.js';
 import { showActionModal, showToast } from '../view/feedback.js';
-import { _renderProgramaContent, lugarClose, render, renderNoticesBanner } from '../view/programa.js';
+import { _renderProgramaContent, lugarClose, render, renderNoticesBanner, _noticeKey } from '../view/programa.js';
 import { renderAgenda, updateCardState, updateHorarioPrioBtn } from '../view/agenda.js';
 import { runCalc } from './calc.js';
 import { saveDelays, saveLastSlot, savePrio, saveSavedAgenda, saveState, saveWL, saveWatched } from './persistence.js';
@@ -538,7 +538,7 @@ export function removeFilmFromScenario(title,e){
 }
 
 export function _dismissNotice(title){
-  _dismissedNotices.add(title);
+  _dismissedNotices.add(_noticeKey(title)); // clave POR FESTIVAL (no oculta homónimos de otro)
   renderNoticesBanner();
 }
 
