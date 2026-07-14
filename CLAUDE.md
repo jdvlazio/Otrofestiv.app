@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `a5da478 Merge #314 — Splash+selector: año consistente + no repetir nombre en subtítulo`
+> Último commit: `21ee3c9 Merge #315 — Selector: nombre oficial + año una sola vez en el header`
 
 ---
 

@@ -570,6 +570,13 @@ export function _renderFestivalSelectorHTML(state, activeFestId){
   // oficial; solo muestra su año si difiere de la temporada (desambiguación).
   const season=festivalSeasonYear();
   const rowTitle=cfg=>festivalShortName(cfg)+(cfg.year&&cfg.year!==season?` · ${cfg.year}`:'');
+  // Mini-póster de festival (reemplaza el punto ámbar → unidad visual con el
+  // carrusel del splash). Mismo vocabulario: cover + --kap + onerror=this.remove().
+  // El estado se lee por color (activo) vs grayscale (pasado, vía CSS) + el ✓.
+  // keyArt ya está cacheado por el splash (mismos URLs) → cero red extra.
+  const mkArt=cfg=>cfg.keyArt
+    ? `<span class="fs-fest-art"><img src="${cfg.keyArt}" alt="" loading="lazy" onerror="this.remove()"${cfg.keyArtPos?` style="--kap:${cfg.keyArtPos}"`:''}></span>`
+    : `<span class="fs-fest-art fs-fest-art-fb">${festivalShortName(cfg)}</span>`;
   // Clasificar en tres grupos — fuente única de verdad
   const ongoing  = entries.filter(([,cfg])=>_classifyFestival(cfg)==='ongoing');
   const upcoming = entries.filter(([,cfg])=>_classifyFestival(cfg)==='upcoming');
@@ -577,9 +584,8 @@ export function _renderFestivalSelectorHTML(state, activeFestId){
   function mkRow([id,cfg]){
     const isActive=id===activeFestId;
     const meta=`${cfg.city} · ${_lang==='en'&&cfg.dates_en?cfg.dates_en:cfg.dates}`;
-    const dotClass=`fs-fest-dot${isActive?' active':''}`;
     return`<div class="fs-festival-row" data-fest="${id}" data-action="loadFestival">
-      <div class="${dotClass}"></div>
+      ${mkArt(cfg)}
       <div class="fs-fest-info">
         <div class="fs-fest-name">${rowTitle(cfg)}</div>
         <div class="fs-fest-full">${festivalTagline(cfg,_lang)||cfg.fullName||cfg.name}</div>
@@ -591,7 +597,7 @@ export function _renderFestivalSelectorHTML(state, activeFestId){
   function mkPastRow([id,cfg]){
     const meta=`${cfg.city} · ${_lang==='en'&&cfg.dates_en?cfg.dates_en:cfg.dates}`;
     return`<div class="fs-festival-row past" data-fest="${id}">
-      <div class="fs-fest-dot past"></div>
+      ${mkArt(cfg)}
       <div class="fs-fest-info" data-action="loadFestival" data-fest="${id}" style="cursor:pointer;flex:1;min-width:0">
         <div class="fs-fest-name">${rowTitle(cfg)}</div>
         <div class="fs-fest-full">${festivalTagline(cfg,_lang)||cfg.fullName||cfg.name}</div>
