@@ -480,14 +480,19 @@ export function festivalLabel(cfg){ const n=festivalShortName(cfg); return cfg.y
 // festivalTagline — el descriptor del festival para la 2ª línea del selector-splash,
 // DERIVADO de `fullName` (fuente única; sin campo aparte que mantener). Reglas,
 // verificadas contra los 9 festivales reales (unit test splashTagline):
-//   1. `tagline` explícito en config → gana (escape hatch para casos raros).
+//   1. `tagline` explícito en config → gana (escape hatch para casos raros). Puede
+//      ser string, o un objeto {es,en} para taglines localizados (Tribeca: descriptor
+//      ES + nombre original EN). El lang cae a 'es' si no se pasa o no hay variante.
 //   2. fullName vacío, o fullName === name → '' (el nombre ya lo dice: Tribeca).
 //   3. fullName con separador em/en-dash → el descriptor es la parte tras el dash
 //      (FantasoFest — Muestra… → "Muestra…"; Olhar de Cinema – Festival… → "Festival…").
 //   4. Sin dash → quitar el shortName del inicio o fin (Leviza al final, Cinemancia
 //      al inicio). Si el shortName no aparece → fullName tal cual (FICCI, AFF).
-export function festivalTagline(cfg){
-  if(cfg.tagline!==undefined) return cfg.tagline;
+export function festivalTagline(cfg, lang='es'){
+  if(cfg.tagline!==undefined){
+    const tg=cfg.tagline;
+    return (tg && typeof tg==='object') ? (tg[lang] ?? tg.es ?? '') : tg;
+  }
   const full=(cfg.fullName||'').trim(), name=(cfg.name||'').trim();
   if(!full || full===name) return '';
   const parts=full.split(/\s*[—–]\s*/);

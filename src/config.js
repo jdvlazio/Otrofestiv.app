@@ -249,7 +249,7 @@ export const FESTIVAL_CONFIG={
     films:null,posters:null,lbSlugs:{}
   },
   'tribeca2026':{
-    name:'Tribeca Festival',fullName:'Tribeca Festival',city:'New York',dates:'JUN 3–14',dates_en:'JUN 3–14',year:2026,timezoneOffset:'-04:00',
+    name:'Tribeca Festival',fullName:'Tribeca Festival',tagline:{es:'Festival de Cine de Tribeca',en:'Tribeca Film Festival'},city:'New York',dates:'JUN 3–14',dates_en:'JUN 3–14',year:2026,timezoneOffset:'-04:00',
     storageKey:'tribeca2026_',festivalStartStr:'2026-06-03T00:00:00',festivalEndStr:'2026-06-14T23:59:00',
     keyArt:'/assets/keyart/tribeca2026.jpg',
     films:null,posters:null,lbSlugs:{}
