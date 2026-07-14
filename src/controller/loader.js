@@ -12,7 +12,7 @@ import { closeFestivalSheet } from '../view/sheets.js';
 import { showToast } from '../view/feedback.js';
 import { _renderProgramaContent, lugarClose } from '../view/programa.js';
 import { _fixStickyOffset } from '../view/agenda.js';
-import { loadState, _cloudLoad, subscribePlanCloud } from './persistence.js';
+import { loadState, _cloudLoad, subscribePlanCloud, _flushCloudSave } from './persistence.js';
 import { subscribeDelaysCloud } from './delays-cloud.js';
 import { _updateProgramaActiveFilter, initProgramaModeBar, showDayView, switchMainNav } from './pipeline.js';
 import { seccionClose } from './overlays.js';
@@ -49,7 +49,20 @@ async function _fetchFestivalJson(url, tries=3, timeoutMs=6000){
   throw lastErr;
 }
 
+// Token de generación de carga: cada loadFestival incrementa _loadGen y captura el
+// suyo. Tras cada await se re-verifica _gen===_loadGen; si una carga MÁS NUEVA
+// arrancó mientras esperábamos (fetch del JSON en red lenta de cine, o el rAF), la
+// vieja ABORTA antes de swapear estado o suscribir la nube. Sin esto, "gana el
+// último en RESOLVER, no el último tap": elegís B, A resuelve tarde y pisa todo.
+// Bug cazado en la auditoría de festivales simultáneos.
+let _loadGen=0;
+
 export async function loadFestival(id){
+  const _gen=++_loadGen;
+  // Subir YA cualquier edición pendiente del festival que estás dejando (con sus
+  // globals, aún los actuales) antes de swapear el estado — si no, el debounce
+  // dispararía luego con los globals del festival nuevo y la edición vieja se perdía.
+  _flushCloudSave();
   // Resetear filtros al cambiar festival
   activeVenue='all';activeSec='all';programaChip='all';_programaChipMatchFn=null;
   lugarClose();
@@ -149,6 +162,9 @@ export async function loadFestival(id){
       showToast(t('toast_conexion'),'error',5000);
       return false;
     }
+    // El fetch pudo tardar (red del festival): si otra carga arrancó mientras tanto,
+    // abortar ANTES de swapear cualquier estado — la carga nueva ya está en curso.
+    if(_gen!==_loadGen) return false;
   }
   // Guard: dayKeys y days son requeridos — sin ellos el UI de calendario crashea
   // (movido pre-batch en p5.5 para que el fallo no deje state parcialmente swapeado)
@@ -362,6 +378,9 @@ export async function loadFestival(id){
   closeFestivalSheet();
   switchMainNav('mnav-cartelera');
   await new Promise(resolve=>requestAnimationFrame(()=>{showDayView();requestAnimationFrame(resolve);}));
+  // Si otra carga arrancó durante el doble-rAF, abortar antes de disparar el trabajo
+  // async de nube (_cloudLoad/subscribePlanCloud) — sería del festival equivocado.
+  if(_gen!==_loadGen) return false;
   // Posicionar la barra de días en el día activo (hoy, durante el festival).
   // El render fija activeDay + la clase .on, pero no scrollea #dtabs → sin esto
   // la barra arranca en el día 1 con el día de hoy fuera de pantalla. Corre tras

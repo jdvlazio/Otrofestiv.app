@@ -3,37 +3,43 @@
 const { test, expect } = require('@playwright/test');
 const { LEVIZA_SIMTIME, enterFestival } = require('./helpers');
 
-// T08 — Selector-carrusel: el festival vigente encabeza el riel; los pasados van
-// tras el divisor "ANTERIORES". El riel siempre está visible (sin toggle) — se
-// elige por poster (.splash-card). Derivado de FESTIVAL_CONFIG en runtime.
-test('T08 — selector-carrusel: el festival vigente encabeza el riel', async ({ page }) => {
+// T08 — Selector-carrusel: los festivales VIGENTES (en curso/próximos) encabezan el
+// riel; los pasados van tras el divisor "ANTERIORES". Invariante derivado de
+// FESTIVAL_CONFIG en runtime, robusto a fechas (no hardcodea nombres).
+test('T08 — selector-carrusel: vigentes encabezan, divisor separa grupos', async ({ page }) => {
   await page.goto('/');
   // Gate de readiness JS DEFINITIVO: [data-app-ready="1"] (fin del bootstrap
   // síncrono → riel poblado por _renderSplashRail) antes de leer las cards.
   await page.waitForSelector('html[data-app-ready="1"]', { state: 'attached', timeout: 15000 });
   await page.waitForSelector('.splash-card[data-fest]', { state: 'attached', timeout: 15000 });
-  const cards = page.locator('.splash-card[data-fest]');
-  expect(await cards.count()).toBeGreaterThan(1);
-  // El que encabeza debe ser el festival VIGENTE (en curso o el próximo por
-  // empezar): festivalEndStr >= hoy y el de fin más cercano. Derivado de
-  // FESTIVAL_CONFIG en runtime — antes se hardcodeaba el nombre y el test se
-  // vencía con cada festival nuevo (rotó con Tribeca→FICMontañas→TercerTiempo).
-  const expectedFirst = await page.evaluate(async () => {
+  // TODO en UN evaluate → una sola lectura de reloj: evita el skew goto↔evaluate en
+  // el borde exacto de fin de festival (ej. 19 JUL 23:00, cuando 2 vigentes pasan a
+  // 'past'). Clasifica con la MISMA fn (_classifyFestival) que usó el riel.
+  const r = await page.evaluate(async () => {
+    const { _classifyFestival } = await import('/src/view/components.js');
     const { FESTIVAL_CONFIG } = await import('/src/config.js');
-    const now = new Date();
-    const vigentes = Object.values(FESTIVAL_CONFIG)
-      .filter(c => new Date(c.festivalEndStr) >= now)
-      .sort((a, b) => new Date(a.festivalEndStr) - new Date(b.festivalEndStr));
-    return vigentes.length ? vigentes[0].id || vigentes[0].storageKey.replace(/_$/, '') : null;
+    const ids = [...document.querySelectorAll('.splash-card[data-fest]')].map(c => c.dataset.fest);
+    const cls = ids.map(id => _classifyFestival(FESTIVAL_CONFIG[id]));
+    const firstPastIdx = cls.indexOf('past');
+    const lastCurrentIdx = cls.reduce((mx, c, i) => (c !== 'past' ? i : mx), -1);
+    return {
+      count: ids.length,
+      hasCurrent: cls.some(c => c !== 'past'),
+      hasPast: cls.some(c => c === 'past'),
+      // invariante de tiering: ningún vigente aparece DESPUÉS de un pasado
+      tieringOk: firstPastIdx === -1 || lastCurrentIdx < firstPastIdx,
+      firstIsCurrent: cls[0] !== 'past',
+      dividerPresent: !!document.querySelector('.splash-rail-div'),
+      leviza: ids.some(id => id.includes('leviza')),
+    };
   });
-  const firstFestId = await cards.first().getAttribute('data-fest');
-  if (expectedFirst) {
-    expect(firstFestId).toBe(expectedFirst);
-  } // sin festival vigente (todos pasados): no hay expectativa de cabecera — solo orden por tiers
-  // El divisor "ANTERIORES" separa vigentes de pasados; leviza (pasado) queda tras él.
-  await expect(page.locator('.splash-rail-div')).toBeAttached();
-  const allIds = await cards.evaluateAll(els => els.map(el => el.getAttribute('data-fest')));
-  expect(allIds.some(id => id.includes('leviza'))).toBe(true);
+  expect(r.count).toBeGreaterThan(1);
+  expect(r.leviza).toBe(true); // leviza (pasado) presente en el riel
+  expect(r.tieringOk).toBe(true); // vigentes siempre antes que pasados
+  if (r.hasCurrent) expect(r.firstIsCurrent).toBe(true); // un vigente encabeza
+  // El divisor "ANTERIORES" existe EXACTAMENTE cuando hay AMBOS grupos (si todos
+  // los festivales ya pasaron, p.ej. tras el 19 JUL, no se emite → no falla el CI).
+  expect(r.dividerPresent).toBe(r.hasCurrent && r.hasPast);
 });
 
 // T40 — El splash entra COMPLETO sin scroll vertical en una pantalla chica

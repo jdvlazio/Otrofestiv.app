@@ -87,29 +87,46 @@ export function _cloudSave(){
   storage.setCloudDirty(true);
   _sbShowSyncDot('dirty'); // ámbar mientras hay cambio local sin subir
   clearTimeout(_cloudSaveTimer);
-  _cloudSaveTimer=setTimeout(async()=>{
-    try{
-      const _ts=new Date().toISOString();
-      await _sb.from('user_festival_state').upsert({
-        user_id:_sbUser.id,
-        festival_id:_activeFestId,
-        watchlist:[...watchlist],
-        watched:[...watched],
-        ratings:filmRatings,
-        saved_agenda:savedAgenda,
-        prioritized:[...prioritized],
-        availability,
-        updated_at:_ts
-      },{onConflict:'user_id,festival_id'});
-      // Éxito: este dispositivo está al día con _ts; ya no hay pendientes.
-      storage.setCloudSyncedAt(_ts);
-      storage.setCloudDirty(false);
-      _sbShowSyncDot('ok');
-    }catch(e){
-      console.warn('Cloud save error:',e);
-      _sbShowSyncDot('err'); // queda dirty → reintenta en la próxima mutación/boot
-    }
-  },2000);
+  _cloudSaveTimer=setTimeout(_doCloudSave,2000);
+}
+
+// _doCloudSave — sube el plan del festival ACTIVO AL MOMENTO de invocarse. El
+// festival_id y los arrays (watchlist/…) se capturan síncronamente al construir el
+// objeto (antes del primer await) → si se llama con los globals correctos, sube esos.
+async function _doCloudSave(){
+  if(!_sb||!_sbUser||_sbUser.is_anonymous) return;
+  try{
+    const _ts=new Date().toISOString();
+    await _sb.from('user_festival_state').upsert({
+      user_id:_sbUser.id,
+      festival_id:_activeFestId,
+      watchlist:[...watchlist],
+      watched:[...watched],
+      ratings:filmRatings,
+      saved_agenda:savedAgenda,
+      prioritized:[...prioritized],
+      availability,
+      updated_at:_ts
+    },{onConflict:'user_id,festival_id'});
+    storage.setCloudSyncedAt(_ts);
+    storage.setCloudDirty(false);
+    _sbShowSyncDot('ok');
+  }catch(e){
+    console.warn('Cloud save error:',e);
+    _sbShowSyncDot('err'); // queda dirty → reintenta en la próxima mutación/boot
+  }
+}
+
+// _flushCloudSave — dispara YA el save pendiente (si hay timer armado) con los
+// globals ACTUALES. Se llama al TOPE de loadFestival, antes de swapear el estado:
+// así una edición del festival que estás dejando se sube a SU fila y no se pierde
+// (el debounce de 2s dispararía luego con los globals del festival nuevo → subía
+// una fila redundante y la edición vieja quedaba sin subir). Bug cazado en la
+// auditoría de festivales simultáneos.
+export function _flushCloudSave(){
+  if(!_cloudSaveTimer) return;
+  clearTimeout(_cloudSaveTimer); _cloudSaveTimer=null;
+  _doCloudSave(); // captura festival_id + arrays actuales (aún los del festival saliente)
 }
 
 // _cloudGuardSkip — decisión PURA del boot-load multi-dispositivo. true = NO
@@ -134,13 +151,19 @@ export function _cloudGuardSkip({guard, dirty, cloudUpdatedAt, localSyncedAt}){
 export async function _cloudLoad(opts){
   if(!_sb||!_sbUser) return false;
   const _guard = !!(opts&&opts.guard);
+  // Festival al momento de disparar la consulta. Se re-verifica tras el await: si el
+  // usuario cambió de festival mientras la nube respondía (red lenta de cine), NO
+  // aplicar — si no, el plan del festival A se escribiría bajo las claves del B.
+  // Bug cazado en la auditoría de festivales simultáneos (mismo guard que delays-cloud).
+  const _fest=_activeFestId;
   try{
     const{data,error}=await _sb
       .from('user_festival_state')
       .select('*')
       .eq('user_id',_sbUser.id)
-      .eq('festival_id',_activeFestId)
+      .eq('festival_id',_fest)
       .single();
+    if(_fest!==_activeFestId) return false; // el usuario cambió de festival durante el await
     if(error||!data) return false; // Sin datos en nube — conservar local (y, en sign-in, subir)
     if(_cloudGuardSkip({guard:_guard, dirty:storage.getCloudDirty(), cloudUpdatedAt:data.updated_at, localSyncedAt:storage.getCloudSyncedAt()})) return false;
     // Boot/sign-in: aplicar solo campos NO vacíos (defensivo — una fila incompleta
@@ -228,6 +251,10 @@ export async function subscribePlanCloud(){
       (payload)=>{
         const row=payload.new;
         if(!row||row.festival_id!==fest) return; // otro festival del mismo usuario
+        // El canal es de `fest`; si ese festival ya NO es el activo (el usuario cambió
+        // y este canal viejo aún no se tumbó), NO aplicar — _applyCloudRow persiste con
+        // las claves del festival ACTIVO → escribiría datos de `fest` bajo otro festival.
+        if(fest!==_activeFestId) return;
         if(!_shouldApplyRealtimeRow({rowUpdatedAt:row.updated_at, localSyncedAt:storage.getCloudSyncedAt(), dirty:storage.getCloudDirty()})) return;
         if(_applyCloudRow(row,{wholesale:true})) _planRerender();
       })
