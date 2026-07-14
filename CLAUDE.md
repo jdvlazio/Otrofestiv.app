@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `20d894b fix(P2.1) coherencia de config + fitness functions para onboarding multi-festival`
+> Último commit: `b91e728 refactor(P2.2) secciones data-driven: un festival declara sus secciones en su JSON`
 
 ---
 

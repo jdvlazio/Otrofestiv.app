@@ -6,6 +6,30 @@
 
 const LEVIZA_SIMTIME = '2026-05-14T00:00:00-05:00';
 
+// festivalTestIds() — IDs de festival para la cobertura CROSS-FESTIVAL, DERIVADOS de
+// src/config.js (no hardcodeados): todo festival con `name`, con JSON en disco, y que
+// NO sea group:'test'. Así los festivales nuevos (septiembre) entran a la suite de
+// smoke automáticamente al agregar su entrada de config + su JSON — cero edición de
+// specs. Antes MAIN_FESTIVALS=['leviza2026','tribeca2026'] hardcodeado. Sync (fs) para
+// poder usarse en el `for` de registro de tests (collection time).
+function festivalTestIds() {
+  const fs = require('fs'), path = require('path');
+  const src = fs.readFileSync(path.join(__dirname, '../src/config.js'), 'utf8');
+  const body = src.slice(src.indexOf('FESTIVAL_CONFIG'));
+  const re = /\n {2}'([a-z0-9]+)':\s*\{/g; // entradas de festival (2-space, id [a-z0-9])
+  const found = [];
+  let m;
+  while ((m = re.exec(body))) found.push({ id: m[1], idx: m.index });
+  const ids = [];
+  for (let i = 0; i < found.length; i++) {
+    const block = body.slice(found[i].idx, i + 1 < found.length ? found[i + 1].idx : found[i].idx + 2000);
+    if (/group\s*:\s*['"]test['"]/.test(block)) continue; // excluir group:'test'
+    const file = path.join(__dirname, '../festivals/', found[i].id.replace(/([a-zA-Z]+)(\d+)$/, '$1-$2') + '.json');
+    if (fs.existsSync(file)) ids.push(found[i].id);
+  }
+  return ids;
+}
+
 async function selectFestival(page, festId) {
   // Selección DETERMINISTA vía selectSplashFest (no via gesto de scroll del riel).
   // Este es un helper de SETUP — su objetivo es entrar al festival, no probar la
@@ -88,4 +112,4 @@ async function goToPlanear(page) {
   await page.waitForSelector('.av-calc-btn', { timeout: 8000 });
 }
 
-module.exports = { LEVIZA_SIMTIME, enterFestival, freezeSimTime, addToWatchlist, goToPlanear };
+module.exports = { LEVIZA_SIMTIME, festivalTestIds, enterFestival, freezeSimTime, addToWatchlist, goToPlanear };
