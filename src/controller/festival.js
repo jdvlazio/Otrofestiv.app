@@ -2,7 +2,7 @@
 // p8 Step 7e — Lifecycle de splash/selector de festival + auto-resolve posters. POSTERS/CUSTOM_POSTERS vía bridge.
 
 import { FESTIVAL_CONFIG, TMDB_API_BASE, TMDB_API_KEY, TMDB_POSTER_BASE, _DEFAULT_FEST_ID, _POSTER_CACHE_PFX } from '../config.js';
-import { _renderFestivalSelectorHTML, _renderSplashRailHTML, _classifyFestival, festivalShortName, festivalTagline } from '../view/components.js';
+import { _renderFestivalSelectorHTML, _renderSplashRailHTML, _classifyFestival, festivalShortName, festivalTagline, festivalSeasonYear } from '../view/components.js';
 import { _langDates, setPosters } from '../view/helpers.js';
 import { render } from '../view/programa.js';
 import { state } from '../state/state.js';
@@ -21,9 +21,10 @@ export function _togglePastFestRow(row, id){
 export function _renderFestivalSelector(activeFestId){
   const container=document.getElementById('fs-festival-list');
   if(!container) return;
-  const html=_renderFestivalSelectorHTML(state, activeFestId);
-  container.innerHTML=html;
-  container.innerHTML=html;
+  container.innerHTML=_renderFestivalSelectorHTML(state, activeFestId);
+  // Año de temporada: ancla única en el header del sheet (no repetido por fila).
+  const seasonEl=document.getElementById('fs-season');
+  if(seasonEl){ const y=festivalSeasonYear(); seasonEl.textContent=y?String(y):''; }
 }
 
 // _fillSplashInfo — puebla el bloque de info del selector-splash (4 líneas:

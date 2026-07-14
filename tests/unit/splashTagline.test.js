@@ -102,3 +102,27 @@ test('_renderSplashRailHTML — data-name/data-meta preservan firma de selectSpl
   assert.match(html, /data-fest="fantasofest2026"[^>]*data-name="[^"]+"[^>]*data-meta="Bogotá · JUL 13–19"/,
     'card con data-name + data-meta (dates_en en inglés)');
 });
+
+// ── festivalShortName: nombre oficial (Olhar de Cinema, no "Olhar") ──
+test('festivalShortName — respeta el nombre oficial vía displayName', () => {
+  assert.strictEqual(C.festivalShortName(CFG.olhar2026), 'Olhar de Cinema', 'Olhar completo, no truncado');
+  assert.strictEqual(C.festivalShortName(CFG.tercertiempo2026), 'Tercer Tiempo Fest', 'TT completo');
+  assert.strictEqual(C.festivalShortName(CFG.ficci65), 'FICCI', 'sigla se mantiene (primer token)');
+  assert.strictEqual(C.festivalShortName(CFG.fantasofest2026), 'FantasoFest', 'una palabra intacta');
+});
+
+// ── festivalSeasonYear + selector: el año vive UNA sola vez en el header ──
+test('festivalSeasonYear — año vigente de la temporada', () => {
+  // todos los festivales reales son 2026 (cinemancia 2025 es group:test → excluido)
+  assert.strictEqual(C.festivalSeasonYear(), 2026, 'temporada 2026');
+});
+
+test('_renderFestivalSelectorHTML — filas sin año repetido (todos = temporada)', () => {
+  const html = C._renderFestivalSelectorHTML(fakeState(), 'tercertiempo2026');
+  // ninguna fila-título repite "· 2026" (todos son la temporada vigente)
+  const names = [...html.matchAll(/class="fs-fest-name">([^<]*)</g)].map(m => m[1]);
+  assert.ok(names.length >= 8, 'todas las filas presentes');
+  assert.ok(names.every(n => !/·\s*20\d\d/.test(n)), 'ninguna fila muestra el año');
+  assert.ok(names.includes('Olhar de Cinema'), 'Olhar con nombre oficial');
+  assert.ok(names.includes('Tercer Tiempo Fest'), 'TT sin año en el título');
+});

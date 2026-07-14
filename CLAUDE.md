@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `cbbddac Merge #313 — Splash: "Tercer Tiempo Fest" separado (no pegado)`
+> Último commit: `a5da478 Merge #314 — Splash+selector: año consistente + no repetir nombre en subtítulo`
 
 ---
 
