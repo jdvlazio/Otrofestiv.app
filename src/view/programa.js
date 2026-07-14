@@ -45,12 +45,19 @@ export function renderProgramaChipsHTML(state){
   }).join('');
 }
 
+// _noticeKey — clave de descarte POR FESTIVAL (festId + título). Antes _dismissedNotices
+// guardaba solo el título: descartar un aviso en un festival ocultaba avisos homónimos
+// en otro (TT y FantasoFest la misma semana pueden compartir título de corto/programa).
+// El add (_dismissNotice) y el check (getActiveNotices) usan ESTE helper → no divergen.
+// Separador NUL (imposible en un festId [a-z0-9]) evita colisiones festId-titulo.
+export function _noticeKey(title){ return (_activeFestId||_DEFAULT_FEST_ID)+String.fromCharCode(0)+title; }
+
 export function getActiveNotices(){
   const festId=(_activeFestId||_DEFAULT_FEST_ID);
   const today=new Date(); today.setHours(0,0,0,0);
   return NOTICES.filter(n=>{
     if(n.festival!==festId) return false;
-    if(_dismissedNotices.has(n.title)) return false;
+    if(_dismissedNotices.has(_noticeKey(n.title))) return false;
     // Banner desaparece al día siguiente de la función cancelada
     if(n.date){
       const funcDate=new Date(n.date+'T00:00:00');

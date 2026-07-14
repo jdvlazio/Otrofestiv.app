@@ -230,18 +230,19 @@ export async function loadFestival(id){
   // ► BATCH 1 — transition + clear ───────────────────────────────────
   // FESTIVAL_STORAGE_KEY debe estar al new fest ANTES de batch 2 (loadState
   // lee storage prefijado). FESTIVAL_END debe estar antes del day-tab DOM
-  // build (dayFullyPassed lo lee). availability rebuilda con shape del nuevo
-  // festival, preservando blocks de días con misma key (cross-festival continuity).
-  // festivalEndStr ('…T23:59:00') se ancla a la zona del festival vía
-  // cfg.timezoneOffset → FESTIVAL_END es un instante ABSOLUTO correcto desde
-  // cualquier dispositivo (festivalEnded compara contra simNow absoluto). Sin
-  // offset (festivales viejos sin el campo) cae a hora local — equivalente para
-  // audiencia en la misma zona del festival.
-  const _currAv = state.get('availability');
+  // build (dayFullyPassed lo lee). festivalEndStr ('…T23:59:00') se ancla a la
+  // zona del festival vía cfg.timezoneOffset → FESTIVAL_END es un instante
+  // ABSOLUTO correcto desde cualquier dispositivo (festivalEnded compara contra
+  // simNow absoluto). Sin offset (festivales viejos) cae a hora local — equivalente
+  // para audiencia en la misma zona.
+  //
+  // availability es POR-FESTIVAL: seed vacío por día; loadState (batch 2) hidrata
+  // desde el storage prefijado del festival. NO se heredan blocks del festival
+  // anterior — antes, dos festivales con dayKeys idénticos (TT y FantasoFest:
+  // 13–19 JUL) sangraban disponibilidad entre sí y luego divergían al persistir.
+  // Auditoría de festivales simultáneos.
   const _newAvShape = {};
-  cfg.dayKeys.forEach(d => {
-    _newAvShape[d] = (_currAv[d] && _currAv[d].blocks) ? _currAv[d] : {blocks:[]};
-  });
+  cfg.dayKeys.forEach(d => { _newAvShape[d] = {blocks:[]}; });
   state.batchUpdate({
     FESTIVAL_STORAGE_KEY: cfg.storageKey,
     FESTIVAL_END: new Date(cfg.festivalEndStr+(cfg.timezoneOffset||'')),

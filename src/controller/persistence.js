@@ -414,6 +414,17 @@ export async function signOutAndClose(){
   document.getElementById('auth-sheet-step3').style.display='none';
 }
 
+// _notifBase — rango de IDs de notificación PROPIO de cada festival (bloque de 100).
+// Antes todos compartían 1000–1999 → guardar el plan de un festival CANCELABA los
+// recordatorios del otro (auditoría de festivales simultáneos). El índice en
+// FESTIVAL_CONFIG (orden de declaración, estable) da un base determinista y sin
+// colisión hasta ~90 festivales. Fuera del wrapper nativo esto es inerte.
+const _NOTIF_SLOT=100;
+function _notifBase(festId){
+  const idx=Object.keys(FESTIVAL_CONFIG).indexOf(festId);
+  return 1000+(idx<0?0:idx)*_NOTIF_SLOT; // festId desconocido → base 1000 (defensivo)
+}
+
 export async function _scheduleNotifications(){
   if(!window.Capacitor?.isNativePlatform()) return;
   try{
@@ -421,14 +432,16 @@ export async function _scheduleNotifications(){
     // Solicitar permiso si no se tiene
     const perm=await LocalNotifications.requestPermissions();
     if(perm.display!=='granted') return;
-    // Cancelar notificaciones anteriores del plan
+    // Cancelar solo los recordatorios de ESTE festival (no los del otro simultáneo)
     await _cancelNotifications();
     if(!savedAgenda?.schedule?.length) return;
+    const _base=_notifBase(_activeFestId);
     // Convertir tiempo 12h→24h (mismo helper que exportICS)
     const pad=n=>String(n).padStart(2,'0');
     const to24h=t=>{if(!t)return'12:00';const m=t.match(/(\d+):(\d+)\s*(AM|PM)/i);if(!m)return t;let h=parseInt(m[1]),mn=m[2],ap=m[3].toUpperCase();if(ap==='PM'&&h!==12)h+=12;if(ap==='AM'&&h===12)h=0;return pad(h)+':'+mn;};
     const notifications=[];
     savedAgenda.schedule.forEach((s,i)=>{
+      if(i>=_NOTIF_SLOT) return; // no desbordar al rango del siguiente festival (nunca alcanzable: <60 slots/semana)
       const dateStr=FESTIVAL_DATES[s.day];if(!dateStr) return;
       const [h,min]=to24h(s.time).split(':').map(Number);
       const tz=FESTIVAL_CONFIG[_activeFestId]?.timezoneOffset??-5;
@@ -438,7 +451,7 @@ export async function _scheduleNotifications(){
       const notify=new Date(start.getTime()-30*60000);
       if(notify<=new Date()) return; // ya pasó
       notifications.push({
-        id:1000+i,
+        id:_base+i,
         title:'Otrofestiv',
         body:`${s._title} · ${s.venue||''} · ${s.time}`,
         schedule:{at:notify,allowWhileIdle:true},
@@ -456,7 +469,9 @@ export async function _cancelNotifications(){
   try{
     const {LocalNotifications}=window.Capacitor.Plugins;
     const pending=await LocalNotifications.getPending();
-    const toCancel=pending.notifications.filter(n=>n.id>=1000&&n.id<2000);
+    // Solo el rango de ESTE festival — no tocar los recordatorios de otro simultáneo.
+    const _base=_notifBase(_activeFestId);
+    const toCancel=pending.notifications.filter(n=>n.id>=_base&&n.id<_base+_NOTIF_SLOT);
     if(toCancel.length) await LocalNotifications.cancel({notifications:toCancel});
   }catch(e){}
 }
