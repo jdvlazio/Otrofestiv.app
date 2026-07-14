@@ -8,7 +8,7 @@
 
 import { FESTIVAL_CONFIG } from '../config.js';
 import { report } from '../telemetry.js';
-import { deriveHydrate } from '../state/festival-context.js';
+import { deriveHydrate, deriveCloudSave, deriveCloudApply } from '../state/festival-context.js';
 import { closeAuthSheet } from '../view/sheets.js';
 import { showToast } from '../view/feedback.js';
 import { state } from '../state/state.js';
@@ -86,15 +86,12 @@ async function _doCloudSave(){
   const _fest=_activeFestId, _sk=FESTIVAL_CONFIG[_fest]?.storageKey;
   try{
     const _ts=new Date().toISOString();
+    // Campos de la fila DERIVADOS de FESTIVAL_STATE (festival-context.js) — se
+    // capturan síncronamente acá (antes del await) leyendo los globals actuales.
     await _sb.from('user_festival_state').upsert({
       user_id:_sbUser.id,
       festival_id:_fest,
-      watchlist:[...watchlist],
-      watched:[...watched],
-      ratings:filmRatings,
-      saved_agenda:savedAgenda,
-      prioritized:[...prioritized],
-      availability,
+      ...deriveCloudSave(),
       updated_at:_ts
     },{onConflict:'user_id,festival_id'});
     storage.setCloudSyncedAt(_ts, _sk);
@@ -171,16 +168,10 @@ export async function _cloudLoad(opts){
 export function _applyCloudRow(data, opts){
   if(!data) return false;
   const whole=!!(opts&&opts.wholesale);
-  const _u={};
-  if(whole||data.watchlist?.length) _u.watchlist=new Set(data.watchlist||[]);
-  if(whole||data.watched?.length) _u.watched=new Set(data.watched||[]);
-  if(whole||(data.ratings&&Object.keys(data.ratings).length)) _u.filmRatings=whole?(data.ratings||{}):{...state.get('filmRatings'),...data.ratings};
-  if(whole||data.saved_agenda) _u.savedAgenda=data.saved_agenda||null;
-  if(whole||data.prioritized?.length) _u.prioritized=new Set(data.prioritized||[]);
-  if(whole||(data.availability&&Object.keys(data.availability).length)){
-    if(whole){ _u.availability=data.availability||{}; }
-    else { const _newAv={...state.get('availability')}; DAY_KEYS.forEach(d=>{ if(data.availability[d]) _newAv[d]=data.availability[d]; }); _u.availability=_newAv; }
-  }
+  // Qué aplicar DERIVADO de FESTIVAL_STATE (festival-context.js): cada entrada con
+  // cloud decide su valor según whole (Realtime autoritativo) vs parcial (boot: solo
+  // no-vacíos, con merge para ratings/availability). Mismo comportamiento previo.
+  const _u=deriveCloudApply(data, whole);
   if(Object.keys(_u).length) state.batchUpdate(_u);
   // Persistir en local (identidad de arrays/Sets vía globals bridgeados).
   storage.setWatchlist(watchlist);storage.setWatched(watched);

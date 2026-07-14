@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `b801c78 refactor(P1.1) FestivalContext declarativo: fuente única del estado por-festival + fitness function`
+> Último commit: `ad1386a refactor(P1.2) FestivalContext: derivar el hydrate de loadState desde la tabla`
 
 ---
 
