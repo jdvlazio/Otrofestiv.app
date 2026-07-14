@@ -18,9 +18,8 @@
 //   - _DEFAULT_FEST_ID / DAY_KEYS / FESTIVAL_DATES → derivados / festival-state
 //     (se quedan en main.js; leen FESTIVAL_CONFIG vía el import).
 //
-// NOTA: incluye un bug pre-existente conocido en SECTION_COLORS ('Talks'
-//   duplicado) — NO se corrige aquí (el fix, si se decide, es trabajo aparte
-//   con discusión de diseño).
+// (El 'Talks' duplicado en SECTION_COLORS se removió en P2.1 — la 2ª entrada
+//   #85B7EB ya ganaba, se eliminó la 1ª muerta sin cambio de render.)
 
 // ── TMDB (URLs estáticas) ────────────────────────────────────────────────────
 export const TMDB_IMG = "https://image.tmdb.org/t/p/w185";
@@ -100,7 +99,6 @@ export const SECTION_COLORS = {
   'Escape From Tribeca':'#E24B4A',
   'Reunions & Retrospectives':'#888780',
   'Storytellers':'#FAC775',
-  'Talks':'#FAC775',
   'Talks':'#85B7EB',
   'NOW':'#5DCAA5',
   'TV':'#B4B2A9',

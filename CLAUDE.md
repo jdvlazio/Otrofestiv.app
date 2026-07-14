@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `ad1386a refactor(P1.2) FestivalContext: derivar el hydrate de loadState desde la tabla`
+> Último commit: `02ee3bc refactor(P1.3) FestivalContext: derivar la NUBE — cierra la inversión de arquitectura`
 
 ---
 
