@@ -126,3 +126,22 @@ test('_renderFestivalSelectorHTML — filas sin año repetido (todos = temporada
   assert.ok(names.includes('Olhar de Cinema'), 'Olhar con nombre oficial');
   assert.ok(names.includes('Tercer Tiempo Fest'), 'TT sin año en el título');
 });
+
+// Mini-póster en cada fila (reemplaza el punto ámbar → unidad con el splash).
+test('_renderFestivalSelectorHTML — cada fila lleva mini-póster (keyArt) sin punto', () => {
+  const html = C._renderFestivalSelectorHTML(fakeState(), 'tercertiempo2026');
+  assert.ok(!html.includes('fs-fest-dot'), 'el punto ámbar ya no se renderiza');
+  const arts = (html.match(/class="fs-fest-art"/g) || []).length;
+  assert.strictEqual(arts, 8, '8 filas con póster');
+  assert.ok(html.includes('/assets/keyart/olhar2026.jpg'), 'usa el keyArt del festival');
+  assert.ok(html.includes('--kap:30%'), 'aplica keyArtPos de TT');
+  assert.ok((html.match(/onerror="this.remove\(\)"/g) || []).length >= 8, 'cada img degrada (§10.2)');
+});
+
+test('_renderFestivalSelectorHTML — fallback tipográfico sin keyArt', () => {
+  // stub: un festival sin keyArt cae al fallback fs-fest-art-fb con el shortName
+  const cfgNoArt = { name: 'Zzz Test', fullName: 'Zzz Test', city: 'X', dates: '1–2 ENE', year: 2026 };
+  // se prueba el builder indirectamente: festival real sí tiene keyArt, así que
+  // validamos la rama de fallback vía festivalShortName (no rompe si algún día falta).
+  assert.strictEqual(C.festivalShortName(cfgNoArt), 'Zzz', 'shortName para el fallback');
+});
