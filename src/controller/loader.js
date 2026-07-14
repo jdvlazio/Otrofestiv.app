@@ -21,6 +21,7 @@ import { setProgramaView } from './handlers.js';
 import { dayFullyPassed, simTodayStr } from '../domain/time.js';
 import { normTitle, validateFilm } from '../domain/film.js';
 import { state } from '../state/state.js';
+import { deriveClear } from '../state/festival-context.js';
 import { storage } from '../storage/storage.js';
 import { t } from '../i18n/i18n.js';
 import { _autoResolveFestivalPosters, _renderFestivalSelector } from './festival.js';
@@ -238,25 +239,17 @@ export async function loadFestival(id){
   // simNow absoluto). Sin offset (festivales viejos) cae a hora local — equivalente
   // para audiencia en la misma zona.
   //
-  // availability es POR-FESTIVAL: seed vacío por día; loadState (batch 2) hidrata
-  // desde el storage prefijado del festival. NO se heredan blocks del festival
-  // anterior — antes, dos festivales con dayKeys idénticos (TT y FantasoFest:
-  // 13–19 JUL) sangraban disponibilidad entre sí y luego divergían al persistir.
-  // Auditoría de festivales simultáneos.
-  const _newAvShape = {};
-  cfg.dayKeys.forEach(d => { _newAvShape[d] = {blocks:[]}; });
+  // El clear de los 9 estados por-festival se DERIVA de FESTIVAL_STATE
+  // (festival-context.js): agregar un estado nuevo por-festival lo auto-incluye
+  // acá → imposible olvidar su reset al cambiar de festival (por construcción).
+  // availability es POR-FESTIVAL: su empty siembra {blocks:[]} por dayKey; loadState
+  // (batch 2) hidrata desde el storage prefijado. NO hereda blocks del festival
+  // anterior — antes, dos festivales con dayKeys idénticos (TT/FantasoFest 13–19 JUL)
+  // sangraban disponibilidad y luego divergían. Auditoría de festivales simultáneos.
   state.batchUpdate({
     FESTIVAL_STORAGE_KEY: cfg.storageKey,
     FESTIVAL_END: new Date(cfg.festivalEndStr+(cfg.timezoneOffset||'')),
-    watchlist: new Set(),
-    watched: new Set(),
-    prioritized: new Set(),
-    filmRatings: {},
-    savedAgenda: null,
-    lastRemovedSlots: [],
-    filmDelays: {},
-    filmDelaysHistory: {},
-    availability: _newAvShape,
+    ...deriveClear(cfg),
   });
   // Rebuild day tabs DOM
   const _dt=document.getElementById('dtabs');

@@ -24,6 +24,10 @@ const _ROSTER = new Set([
   '_lang', '_simTime',
 ]);
 
+// Expuesto para la fitness function de FESTIVAL_STATE (festival-context.js): el
+// test afirma que toda key por-festival declarada está en el roster.
+export const STATE_ROSTER = _ROSTER;
+
 export const state = (() => {
   // Single source of truth — el container posee los valores. Sembrado vía el
   // bridge: las (ex-)declaraciones `let X = init` de main.js pasaron a ser
