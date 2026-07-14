@@ -22,7 +22,7 @@ before(async () => {
 const EXPECTED = {
   ficci65:          'Festival Internacional de Cine de Cartagena de Indias',
   aff2026:          'Alternativa Film Festival',
-  tribeca2026:      '',                                              // fullName === name
+  tribeca2026:      'Festival de Cine de Tribeca',                   // tagline localizado {es,en}, default es
   cinemancia2025:   'Festival Metropolitano de Cine',               // nombre al inicio
   leviza2026:       'Festival de Cine y Audiovisuales',             // nombre al final
   olhar2026:        'Festival Internacional de Curitiba',           // separador –
@@ -43,6 +43,16 @@ test('festivalTagline — edge cases', () => {
   assert.strictEqual(C.festivalTagline({name:'X', fullName:'X — Desc'}), 'Desc', 'separador');
   assert.strictEqual(C.festivalTagline({name:'X', fullName:'X', tagline:'override'}), 'override', 'override explícito gana');
   assert.strictEqual(C.festivalTagline({name:'X', fullName:'X — Desc', tagline:''}), '', 'override vacío gana sobre derivación');
+});
+
+test('festivalTagline — tagline localizado {es,en}', () => {
+  const cfg = { name:'X', fullName:'X', tagline:{es:'Descriptor ES', en:'Original EN'} };
+  assert.strictEqual(C.festivalTagline(cfg, 'es'), 'Descriptor ES', 'lang es → variante es');
+  assert.strictEqual(C.festivalTagline(cfg, 'en'), 'Original EN', 'lang en → variante en');
+  assert.strictEqual(C.festivalTagline(cfg), 'Descriptor ES', 'sin lang → default es');
+  assert.strictEqual(C.festivalTagline({tagline:{es:'Solo ES'}}, 'en'), 'Solo ES', 'sin variante en → cae a es');
+  // Tribeca real: ES descriptor, EN nombre original
+  assert.strictEqual(C.festivalTagline(CFG.tribeca2026, 'en'), 'Tribeca Film Festival', 'Tribeca EN = nombre original');
 });
 
 // ── _renderSplashRailHTML: estructura ──

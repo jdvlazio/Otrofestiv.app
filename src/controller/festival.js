@@ -38,9 +38,10 @@ function _fillSplashInfo(festId){
   if(!cfg){ [nameEl,tagEl,cityEl,datesEl].forEach(el=>{if(el)el.textContent='';}); return; }
   const cls=_classifyFestival(cfg);
   if(nameEl) nameEl.textContent=festivalShortName(cfg);
-  // El slot del tagline se mantiene SIEMPRE en flujo (aunque vacío: Tribeca) — su
-  // min-height reserva una línea para que CIUDAD/FECHA no brinquen entre festivales.
-  if(tagEl) tagEl.textContent=festivalTagline(cfg);
+  // El slot del tagline se mantiene SIEMPRE en flujo (aunque vacío) — su min-height
+  // reserva una línea para que CIUDAD/FECHA no brinquen entre festivales. Se pasa el
+  // idioma para los taglines localizados (Tribeca: ES descriptor / EN nombre original).
+  if(tagEl) tagEl.textContent=festivalTagline(cfg, state.snapshot()._lang);
   if(cityEl) cityEl.innerHTML=(cls==='ongoing'?'<span class="live-dot"></span>':'')+String(cfg.city||'').toUpperCase();
   if(datesEl){
     const dates=_langDates(cfg);

@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `bdee668 Merge #310 — Splash: selector de festival por carrusel de afiches`
+> Último commit: `6078732 Merge #311 — Splash: sin borde ámbar + posición estable del info (Tribeca)`
 
 ---
 
@@ -57,7 +57,7 @@ Juan es Product Owner, diseñador y developer. Claude ejecuta; Juan audita y apr
 |---|---|---|---|---|
 | `ficci65` | FICCI 65 | Cartagena | 14–19 ABR | Archivado |
 | `aff2026` | AFF 2026 | Medellín | 21–29 ABR | Archivado |
-| `tribeca2026` | Tribeca Festival | New York | JUN 3–14 | Recién terminado |
+| `tribeca2026` | Tribeca Festival |  |  | desconocido |
 | `cinemancia2025` | Cinemancia 2025 | Valle de Aburrá | 11–20 SEP | Archivado |
 | `leviza2026` | Leviza - Festival de Cine y Audiovisuales | Zapatoca | 14–17 MAY | Archivado |
 | `olhar2026` | Olhar de Cinema | Curitiba | JUN 4–13 | Recién terminado |
