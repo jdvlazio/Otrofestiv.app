@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `a5aac6c Merge #318 — Festivales simultáneos lote 2: availability por-festival + notices/notif namespaced`
+> Último commit: `0dfc848 fix(P0) robustez de sync + estabilidad para multi-festival (auditoría de arquitectura)`
 
 ---
 
