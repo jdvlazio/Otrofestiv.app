@@ -7,6 +7,7 @@
 // Roster (watchlist/watched/…) vía bridge.
 
 import { FESTIVAL_CONFIG } from '../config.js';
+import { report } from '../telemetry.js';
 import { closeAuthSheet } from '../view/sheets.js';
 import { showToast } from '../view/feedback.js';
 import { state } from '../state/state.js';
@@ -95,11 +96,17 @@ export function _cloudSave(){
 // objeto (antes del primer await) → si se llama con los globals correctos, sube esos.
 async function _doCloudSave(){
   if(!_sb||!_sbUser||_sbUser.is_anonymous) return;
+  // Capturar festival + su storageKey ANTES del await. El upsert async puede
+  // resolver tras un cambio de festival (garantizado por _flushCloudSave, que
+  // dispara esto al tope de loadFestival). Los flags cloud_at/cloud_dirty se
+  // escriben al festival QUE SE GUARDÓ (_sk), no al activo actual — si no, se
+  // marcaba el festival equivocado y el otro quedaba dirty para siempre.
+  const _fest=_activeFestId, _sk=FESTIVAL_CONFIG[_fest]?.storageKey;
   try{
     const _ts=new Date().toISOString();
     await _sb.from('user_festival_state').upsert({
       user_id:_sbUser.id,
-      festival_id:_activeFestId,
+      festival_id:_fest,
       watchlist:[...watchlist],
       watched:[...watched],
       ratings:filmRatings,
@@ -108,12 +115,12 @@ async function _doCloudSave(){
       availability,
       updated_at:_ts
     },{onConflict:'user_id,festival_id'});
-    storage.setCloudSyncedAt(_ts);
-    storage.setCloudDirty(false);
-    _sbShowSyncDot('ok');
+    storage.setCloudSyncedAt(_ts, _sk);
+    storage.setCloudDirty(false, _sk);
+    if(_fest===_activeFestId) _sbShowSyncDot('ok'); // el dot refleja el festival visible
   }catch(e){
-    console.warn('Cloud save error:',e);
-    _sbShowSyncDot('err'); // queda dirty → reintenta en la próxima mutación/boot
+    report(e,'cloudSave');
+    if(_fest===_activeFestId) _sbShowSyncDot('err'); // queda dirty → reintenta en la próxima mutación/boot
   }
 }
 
@@ -169,7 +176,7 @@ export async function _cloudLoad(opts){
     // Boot/sign-in: aplicar solo campos NO vacíos (defensivo — una fila incompleta
     // no debe borrar datos locales). El Realtime usa wholesale (ver _applyCloudRow).
     return _applyCloudRow(data, {wholesale:false});
-  }catch(e){console.warn('Cloud load error:',e);return false;}
+  }catch(e){report(e,'cloudLoad');return false;}
 }
 
 // _applyCloudRow — aplica una fila de user_festival_state al estado local y persiste
