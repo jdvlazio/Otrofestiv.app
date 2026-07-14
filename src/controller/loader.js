@@ -12,7 +12,8 @@ import { closeFestivalSheet } from '../view/sheets.js';
 import { showToast } from '../view/feedback.js';
 import { _renderProgramaContent, lugarClose } from '../view/programa.js';
 import { _fixStickyOffset } from '../view/agenda.js';
-import { loadState, _cloudLoad, subscribePlanCloud, _flushCloudSave } from './persistence.js';
+import { loadState, _cloudLoad, _cloudSave, subscribePlanCloud, _flushCloudSave } from './persistence.js';
+import { report } from '../telemetry.js';
 import { subscribeDelaysCloud } from './delays-cloud.js';
 import { _updateProgramaActiveFilter, initProgramaModeBar, showDayView, switchMainNav } from './pipeline.js';
 import { seccionClose } from './overlays.js';
@@ -43,7 +44,11 @@ async function _fetchFestivalJson(url, tries=3, timeoutMs=6000){
       return json;
     }catch(e){
       clearTimeout(to);
-      lastErr=e; // reintentar salvo en el último intento
+      lastErr=e;
+      // Backoff con jitter entre reintentos (no tras el último): si no, los 3
+      // intentos caen en la MISMA ventana de congestión de la red del cine y
+      // fallan juntos. ~0.6s, ~1.2s + jitter → cruzan la ventana sin alargar de más.
+      if(i<tries-1) await new Promise(r=>setTimeout(r, 600*Math.pow(2,i)+Math.random()*400));
     }
   }
   throw lastErr;
@@ -86,14 +91,10 @@ export async function loadFestival(id){
     const festFile=id.replace(/([a-zA-Z]+)(\d+)$/,'$1-$2');
     try{
       const _festUrl='festivals/'+festFile+'.json';
-      const data=await _fetchFestivalJson(_festUrl).catch(e=>{
-        // Banner de diagnóstico visible en pantalla
-        const dbg=document.createElement('div');
-        dbg.style.cssText='position:fixed;top:0;left:0;right:0;background:#c0392b;color:#fff;padding:14px 16px;z-index:99999;font-size:13px;font-family:monospace/* exception:debug-banner */;line-height:1.4';
-        dbg.textContent='ERROR cargando festival: '+e.message;
-        document.body.appendChild(dbg);
-        throw e;
-      });
+      // Sin banner de error: el catch externo muestra el toast y reporta a Sentry.
+      // (El banner rojo fixed nunca se removía → quedaba tapando el topbar tras un
+      // retry exitoso.)
+      const data=await _fetchFestivalJson(_festUrl);
       // ── Explosión de screenings[] → objetos planos por función ──
       // Si un film tiene screenings[], genera un objeto por función.
       // Compatibilidad total con el formato plano existente (day/time/venue).
@@ -159,6 +160,7 @@ export async function loadFestival(id){
       if(data.transport) cfg.transport=data.transport;
     }catch(e){
       console.error('Error cargando festival '+id+':',e);
+      report(e,'loadFestival:'+id); // visible en Sentry (antes se tragaba en silencio)
       showToast(t('toast_conexion'),'error',5000);
       return false;
     }
@@ -398,7 +400,14 @@ export async function loadFestival(id){
   // Fire-and-forget; re-renderiza la vista activa al aplicar la nube.
   const _u=state.get('_sbUser');
   if(_u&&!_u.is_anonymous){
-    _cloudLoad({guard:true}).then(()=>{ showDayView(); _renderProgramaContent(); }).catch(()=>{});
+    _cloudLoad({guard:true}).then((applied)=>{
+      // Si el boot-load NO aplicó nube y hay edición local sin subir (dirty —
+      // p.ej. el upsert falló offline en la sala), re-empujarla AHORA. Antes
+      // quedaba pendiente hasta que el usuario mutara algo de nuevo, y mientras
+      // tanto este dispositivo también ignoraba el Realtime entrante.
+      if(!applied && storage.getCloudDirty()) _cloudSave();
+      showDayView(); _renderProgramaContent();
+    }).catch(()=>{});
     // F0.5: sync EN VIVO — al cambiar el plan en otro dispositivo (o el Watch),
     // aplicar el cambio sin reabrir. Idempotente por (user, festival).
     subscribePlanCloud();

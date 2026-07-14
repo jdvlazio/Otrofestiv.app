@@ -72,10 +72,13 @@ export const storage = {
   // cloud_synced_at: el updated_at de la última fila que este dispositivo empujó
   //   o bajó con éxito. cloud_dirty: hay mutaciones locales aún sin subir.
   // El boot-load usa ambos para no pisar ediciones locales ni datos ya frescos.
-  getCloudSyncedAt() { try { return localStorage.getItem(FESTIVAL_STORAGE_KEY+'cloud_at')||null; } catch(e) { return null; } },
-  setCloudSyncedAt(ts) { try { localStorage.setItem(FESTIVAL_STORAGE_KEY+'cloud_at', ts); } catch(e) {} },
-  getCloudDirty() { try { return localStorage.getItem(FESTIVAL_STORAGE_KEY+'cloud_dirty')==='1'; } catch(e) { return false; } },
-  setCloudDirty(v) { try { localStorage.setItem(FESTIVAL_STORAGE_KEY+'cloud_dirty', v?'1':'0'); } catch(e) {} },
+  // `key` opcional: escribe/lee los flags de un festival ESPECÍFICO (no el activo).
+  // _doCloudSave lo usa para no marcar el festival equivocado cuando el upsert async
+  // resuelve tras un cambio de festival. Default = FESTIVAL_STORAGE_KEY (activo).
+  getCloudSyncedAt(key) { try { return localStorage.getItem((key||FESTIVAL_STORAGE_KEY)+'cloud_at')||null; } catch(e) { return null; } },
+  setCloudSyncedAt(ts, key) { try { localStorage.setItem((key||FESTIVAL_STORAGE_KEY)+'cloud_at', ts); } catch(e) {} },
+  getCloudDirty(key) { try { return localStorage.getItem((key||FESTIVAL_STORAGE_KEY)+'cloud_dirty')==='1'; } catch(e) { return false; } },
+  setCloudDirty(v, key) { try { localStorage.setItem((key||FESTIVAL_STORAGE_KEY)+'cloud_dirty', v?'1':'0'); } catch(e) {} },
 
   // ── Global keys (NO prefix) ──
   getActiveFestId() { return localStorage.getItem('otrofestiv_festival'); },
