@@ -546,6 +546,10 @@ export function _renderSplashRailHTML(state, activeFestId){
   return html;
 }
 
+// REGLA (no repetir el nombre dos veces): el subtítulo `fs-fest-full` muestra el
+// DESCRIPTOR (festivalTagline, que ya trae el nombre removido), no el fullName —
+// que empezaba repitiendo el nombre ya visible en `fs-fest-name` ("Tercer Tiempo
+// Fest · 2026" arriba, "Tercer Tiempo Fest — …" abajo). Aplica a todo título+subtítulo.
 export function _renderFestivalSelectorHTML(state, activeFestId){
   const {_lang} = state.snapshot();
   const entries=_sortFestivals(Object.entries(FESTIVAL_CONFIG)
@@ -563,7 +567,7 @@ export function _renderFestivalSelectorHTML(state, activeFestId){
       <div class="${dotClass}"></div>
       <div class="fs-fest-info">
         <div class="fs-fest-name">${festivalLabel(cfg)}</div>
-        <div class="fs-fest-full">${cfg.fullName||cfg.name}</div>
+        <div class="fs-fest-full">${festivalTagline(cfg,_lang)||cfg.fullName||cfg.name}</div>
         <div class="fs-fest-meta">${meta}</div>
       </div>
       <div class="fs-fest-check" style="display:${isActive?'':'none'}">${CHECK_SVG}</div>
@@ -575,7 +579,7 @@ export function _renderFestivalSelectorHTML(state, activeFestId){
       <div class="fs-fest-dot past"></div>
       <div class="fs-fest-info" data-action="loadFestival" data-fest="${id}" style="cursor:pointer;flex:1;min-width:0">
         <div class="fs-fest-name">${festivalLabel(cfg)}</div>
-        <div class="fs-fest-full">${cfg.fullName||cfg.name}</div>
+        <div class="fs-fest-full">${festivalTagline(cfg,_lang)||cfg.fullName||cfg.name}</div>
         <div class="fs-fest-meta">${meta}</div>
       </div>
       <span class="fs-past-chev" data-action="togglePastFestRow" data-fest="${id}" style="padding:var(--sp-2);margin:-var(--sp-2);-webkit-tap-highlight-color:transparent">${chevSvg}</span>

@@ -44,8 +44,10 @@ function _fillSplashInfo(festId){
   if(tagEl) tagEl.textContent=festivalTagline(cfg, state.snapshot()._lang);
   if(cityEl) cityEl.innerHTML=(cls==='ongoing'?'<span class="live-dot"></span>':'')+String(cfg.city||'').toUpperCase();
   if(datesEl){
+    // El año va SIEMPRE al final de la fecha (vigentes y pasados por igual) →
+    // posición consistente e integrada, no aparece/desaparece según el estado.
     const dates=_langDates(cfg);
-    datesEl.textContent=(dates+(cls==='past'&&cfg.year?' · '+cfg.year:'')).toUpperCase();
+    datesEl.textContent=(dates+(cfg.year?' · '+cfg.year:'')).toUpperCase();
   }
 }
 
