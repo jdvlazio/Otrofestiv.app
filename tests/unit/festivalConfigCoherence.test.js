@@ -13,8 +13,8 @@
 const { test, before } = require('node:test');
 const assert = require('node:assert');
 
-let CFG;
-before(async () => { CFG = (await import('../../src/config.js')).FESTIVAL_CONFIG; });
+let CFG, C;
+before(async () => { C = await import('../../src/config.js'); CFG = C.FESTIVAL_CONFIG; });
 
 const dateOnly = (s) => new Date(String(s).slice(0, 10) + 'T12:00:00');
 
@@ -58,4 +58,31 @@ test('FESTIVAL_CONFIG — storageKey único y con formato <id>_', () => {
     assert.ok(!seen.has(c.storageKey), `storageKey '${c.storageKey}' duplicado entre ${seen.get(c.storageKey)} y ${id}`);
     seen.set(c.storageKey, id);
   }
+});
+
+// ── P2.2: secciones data-driven (mergeFestivalSections) ──
+test('mergeFestivalSections — mergea metadata del festival en los 4 mapas', () => {
+  const before = C.SECTION_ORDER_LIST.length;
+  C.mergeFestivalSections({
+    '🧪 Test Alpha': { en: 'Alpha EN', color: '#ABCDEF', archetype: 'Cortos / Programas', order: 2 },
+    '🧪 Test Beta':  { en: 'Beta EN',  color: '#123456', archetype: 'Apertura / Gala',    order: 1 },
+  });
+  assert.strictEqual(C.SECTION_COLORS['🧪 Test Alpha'], '#ABCDEF', 'color mergeado');
+  assert.strictEqual(C.SECTION_EN['🧪 Test Beta'], 'Beta EN', 'en mergeado');
+  assert.strictEqual(C.SECTION_ARCHETYPES['🧪 Test Alpha'], 'Cortos / Programas', 'archetype mergeado');
+  // order: Beta (1) antes que Alpha (2) en ORDER_LIST
+  assert.ok(C.SECTION_ORDER_LIST.indexOf('🧪 Test Beta') < C.SECTION_ORDER_LIST.indexOf('🧪 Test Alpha'),
+    'ORDER_LIST respeta el campo order');
+  assert.strictEqual(C.SECTION_ORDER_LIST.length, before + 2, 'agrega 2 al ORDER_LIST');
+  // idempotente: re-merge no duplica en ORDER_LIST
+  C.mergeFestivalSections({ '🧪 Test Alpha': { en: 'X', color: '#000000', archetype: 'Y', order: 2 } });
+  assert.strictEqual(C.SECTION_ORDER_LIST.filter(s => s === '🧪 Test Alpha').length, 1, 'idempotente');
+});
+
+test('mergeFestivalSections — no-op defensivo sin sections', () => {
+  const b = C.SECTION_ORDER_LIST.length;
+  C.mergeFestivalSections(undefined);
+  C.mergeFestivalSections(null);
+  C.mergeFestivalSections('x');
+  assert.strictEqual(C.SECTION_ORDER_LIST.length, b, 'sin sections no toca nada');
 });

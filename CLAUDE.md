@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `02ee3bc refactor(P1.3) FestivalContext: derivar la NUBE — cierra la inversión de arquitectura`
+> Último commit: `20d894b fix(P2.1) coherencia de config + fitness functions para onboarding multi-festival`
 
 ---
 
