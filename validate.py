@@ -1685,6 +1685,39 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar responsive-contract: {_e}')
 
+# ── [section-map-dupes] claves duplicadas en los mapas de sección ──────────────
+# Un objeto JS con una clave repetida NO es error: la 2ª pisa a la 1ª en silencio
+# (el bug 'Talks' de SECTION_COLORS, arreglado en P2.1). Con secciones de 3
+# festivales nuevos en septiembre el riesgo se multiplica → este check lo caza.
+check = 'section-map-dupes'
+try:
+    _cfg = open('src/config.js', encoding='utf-8').read()
+    _dupes = []
+    for _name in ['SECTION_COLORS', 'SECTION_EN', 'SECTION_ARCHETYPES']:
+        _m = re.search(_name + r'\s*=\s*\{([^}]*)\}', _cfg, re.S)
+        if not _m:
+            continue
+        _keys = re.findall(r"'([^']+)'\s*:", _m.group(1))
+        _seen = set()
+        for _k in _keys:
+            if _k in _seen:
+                _dupes.append(f"{_name}: '{_k}'")
+            _seen.add(_k)
+    _m = re.search(r"SECTION_ORDER_LIST\s*=\s*\[([^\]]*)\]", _cfg, re.S)
+    if _m:
+        _items = re.findall(r"'([^']+)'", _m.group(1))
+        _seen = set()
+        for _k in _items:
+            if _k in _seen:
+                _dupes.append(f"SECTION_ORDER_LIST: '{_k}'")
+            _seen.add(_k)
+    if _dupes:
+        fail(check, 'clave(s) de sección duplicada(s) — una pisa a la otra en silencio: ' + '; '.join(_dupes))
+    else:
+        ok(check, 'sin claves de sección duplicadas en los 4 mapas')
+except Exception as _e:
+    warn(check, f'no se pudo verificar section-map-dupes: {_e}')
+
 # ── Report ────────────────────────────────────────────────────────────────────
 print()
 print('═' * 60)
