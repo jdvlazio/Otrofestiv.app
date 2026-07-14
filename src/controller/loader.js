@@ -6,6 +6,7 @@
 // detección-festival). Escribe bridge globals en runtime (no eval-time).
 
 import { FESTIVAL_CONFIG, mergeFestivalSections } from '../config.js';
+import { lruTouch } from '../lru.js';
 import { DAY_ABBR, DAY_NUM, festivalShortName } from '../view/components.js';
 import { DAYS, DAY_SHORT_EN, setCustomPosters, setDayShort, setDayShortEn, setPosters } from '../view/helpers.js';
 import { closeFestivalSheet } from '../view/sheets.js';
@@ -62,6 +63,28 @@ async function _fetchFestivalJson(url, tries=3, timeoutMs=6000){
 // último en RESOLVER, no el último tap": elegís B, A resuelve tarde y pisa todo.
 // Bug cazado en la auditoría de festivales simultáneos.
 let _loadGen=0;
+
+// ── LRU del cache de festivales en memoria ─────────────────────────────────────
+// cfg.films/posters/customPosters/lbSlugs se cachean por sesión (~80KB c/u) para no
+// re-fetchear al volver. Sin cota, un usuario que recorre MUCHOS festivales en una
+// sesión acumula memoria sin límite (riesgo en iPhone viejo / WKWebView). El LRU
+// mantiene hasta _FEST_CACHE_CAP festivales cacheados y evicta el menos-usado
+// (limpia su cfg.films → re-fetch al volver). El festival activo (recién tocado a
+// MRU) NUNCA se evicta. Esto quita el "techo de 3": los festivales EN CURSO /
+// mostrados son ilimitados; solo se acota cuántos JSON viven en RAM a la vez.
+const _FEST_CACHE_CAP = 8;
+let _festCacheOrder = [];
+
+// _touchFestivalCache — aplica el LRU (decisión pura en src/lru.js): registra `id`
+// como recién usado y limpia el cache en memoria de los festivales evictados.
+function _touchFestivalCache(id){
+  const { order, evict } = lruTouch(_festCacheOrder, id, _FEST_CACHE_CAP);
+  _festCacheOrder = order;
+  for(const vid of evict){
+    const v = FESTIVAL_CONFIG[vid];
+    if(v){ v.films=null; v.posters=null; v.customPosters=null; v.lbSlugs=null; }
+  }
+}
 
 export async function loadFestival(id){
   const _gen=++_loadGen;
@@ -191,6 +214,9 @@ export async function loadFestival(id){
     showToast(t('error_festival_nd'),'error',6000);
     return false;
   }
+  // LRU del cache: este festival pasa a MRU; si se excede el cap, evicta el menos
+  // usado (nunca este). cfg.films ya está seteado (fetch o cache) llegados acá.
+  _touchFestivalCache(id);
   // Secciones data-driven (P2.2): si el festival trae `sections` en su JSON,
   // mergear su metadata (color/en/archetype/order) en los mapas globales antes de
   // renderizar. Idempotente. Festivales viejos sin `sections` no cambian nada.
