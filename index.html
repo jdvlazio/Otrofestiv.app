@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607140759">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607140759">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607140829">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607140829">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -1536,8 +1536,10 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .fs-sheet{position:fixed;bottom:0;left:0;right:0;background:var(--surf);border-radius:var(--r) var(--r) 0 0;z-index:2001;padding:0 0 env(safe-area-inset-bottom);max-height:85dvh;overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;transform:translateY(100%);transition:transform var(--tr-enter) cubic-bezier(.32,1,.23,1)}
 .fs-sheet.open{transform:translateY(0)}
 .fs-handle{width:36px;height:4px;background:var(--bdr);border-radius:var(--r-handle);margin:var(--sp-3) auto 0}
-.fs-header{padding:var(--sp-5) var(--sp-5) var(--sp-3);border-bottom:1px solid var(--bdr-l)}
+.fs-header{padding:var(--sp-5) var(--sp-5) var(--sp-3);border-bottom:1px solid var(--bdr-l);display:flex;align-items:baseline;justify-content:space-between;gap:var(--sp-3)}
 .fs-title{font-size:var(--t-sm);font-weight:var(--w-bold);letter-spacing:.1em;text-transform:uppercase;color:var(--gray)}
+/* Año de temporada — ancla única (minimalismo: no repetir el año en cada fila) */
+.fs-season{font-size:var(--t-sm);font-weight:var(--w-bold);letter-spacing:.06em;color:var(--amber);font-variant-numeric:tabular-nums}
 .fs-section-lbl{font-size:var(--t-xs);font-weight:var(--w-bold);letter-spacing:.1em;text-transform:uppercase;color:var(--gray2);padding:var(--sp-5) var(--sp-5) var(--sp-2)}
 .fs-festival-row{display:flex;align-items:center;gap:var(--sp-3);padding:var(--sp-3) var(--sp-5);cursor:pointer;transition:background var(--tr-base)}
 .fs-festival-row:active{background:var(--surf-2)}
@@ -2734,7 +2736,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202607140759";
+    s.src="/src/main.js?v=202607140829";
     document.body.appendChild(s);
   }
   if (isApp || isDev) { bootApp(); return; }
@@ -2855,6 +2857,7 @@ setTimeout(function(){
   <div class="fs-handle"></div>
   <div class="fs-header">
     <div class="fs-title" data-i18n="fs_cambiar">Cambiar festival</div>
+    <span class="fs-season" id="fs-season"></span>
   </div>
   <!-- Generado dinámicamente por _renderFestivalSelector() en init -->
   <div id="fs-festival-list"></div>

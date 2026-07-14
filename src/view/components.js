@@ -482,6 +482,17 @@ export function _sortFestivals(entries, activeFestId){
 export function festivalShortName(cfg){ return cfg.displayName || (cfg.name||'').split(' ')[0]; }
 export function festivalLabel(cfg){ const n=festivalShortName(cfg); return cfg.year?`${n} · ${cfg.year}`:n; }
 
+// festivalSeasonYear — el año "vigente" que ancla el header del selector UNA sola
+// vez (minimalismo: no repetir 2026 en cada fila). Es el año más reciente entre
+// los festivales vigentes (en curso + próximos); si todo es pasado, el más reciente
+// del conjunto. Las filas cuyo año difiera de este SÍ muestran el suyo (desambiguar).
+export function festivalSeasonYear(){
+  const entries=Object.entries(FESTIVAL_CONFIG).filter(([,c])=>c.name&&c.group!=='test');
+  const vigentes=entries.filter(([,c])=>_classifyFestival(c)!=='past');
+  const pool=vigentes.length?vigentes:entries;
+  return pool.reduce((mx,[,c])=>(c.year>mx?c.year:mx),0)||null;
+}
+
 // festivalTagline — el descriptor del festival para la 2ª línea del selector-splash,
 // DERIVADO de `fullName` (fuente única; sin campo aparte que mantener). Reglas,
 // verificadas contra los 9 festivales reales (unit test splashTagline):
@@ -555,6 +566,10 @@ export function _renderFestivalSelectorHTML(state, activeFestId){
   const entries=_sortFestivals(Object.entries(FESTIVAL_CONFIG)
     .filter(([,cfg])=>cfg.name&&cfg.group!=='test'), activeFestId);
   const chevSvg=`<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>`;
+  // El año vive UNA vez en el header (fs-season). El título de fila es el nombre
+  // oficial; solo muestra su año si difiere de la temporada (desambiguación).
+  const season=festivalSeasonYear();
+  const rowTitle=cfg=>festivalShortName(cfg)+(cfg.year&&cfg.year!==season?` · ${cfg.year}`:'');
   // Clasificar en tres grupos — fuente única de verdad
   const ongoing  = entries.filter(([,cfg])=>_classifyFestival(cfg)==='ongoing');
   const upcoming = entries.filter(([,cfg])=>_classifyFestival(cfg)==='upcoming');
@@ -566,7 +581,7 @@ export function _renderFestivalSelectorHTML(state, activeFestId){
     return`<div class="fs-festival-row" data-fest="${id}" data-action="loadFestival">
       <div class="${dotClass}"></div>
       <div class="fs-fest-info">
-        <div class="fs-fest-name">${festivalLabel(cfg)}</div>
+        <div class="fs-fest-name">${rowTitle(cfg)}</div>
         <div class="fs-fest-full">${festivalTagline(cfg,_lang)||cfg.fullName||cfg.name}</div>
         <div class="fs-fest-meta">${meta}</div>
       </div>
@@ -578,7 +593,7 @@ export function _renderFestivalSelectorHTML(state, activeFestId){
     return`<div class="fs-festival-row past" data-fest="${id}">
       <div class="fs-fest-dot past"></div>
       <div class="fs-fest-info" data-action="loadFestival" data-fest="${id}" style="cursor:pointer;flex:1;min-width:0">
-        <div class="fs-fest-name">${festivalLabel(cfg)}</div>
+        <div class="fs-fest-name">${rowTitle(cfg)}</div>
         <div class="fs-fest-full">${festivalTagline(cfg,_lang)||cfg.fullName||cfg.name}</div>
         <div class="fs-fest-meta">${meta}</div>
       </div>
