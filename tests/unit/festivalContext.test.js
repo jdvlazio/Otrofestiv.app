@@ -10,10 +10,12 @@
 const { test, before } = require('node:test');
 const assert = require('node:assert');
 
-let FC, STATE_ROSTER, storage;
+let FC, STATE_ROSTER, storage, state;
 before(async () => {
   FC = await import('../../src/state/festival-context.js');
-  STATE_ROSTER = (await import('../../src/state/state.js')).STATE_ROSTER;
+  const S = await import('../../src/state/state.js');
+  STATE_ROSTER = S.STATE_ROSTER;
+  state = S.state;
   storage = (await import('../../src/storage/storage.js')).storage;
 });
 
@@ -65,4 +67,57 @@ test('deriveClear — produce TODAS las keys por-festival con vacíos correctos'
 test('deriveClear — availability vacía sin dayKeys (defensivo)', () => {
   assert.deepStrictEqual(FC.deriveClear({}).availability, {}, 'sin dayKeys → {}');
   assert.deepStrictEqual(FC.deriveClear().availability, {}, 'sin cfg → {}');
+});
+
+// ── P1.3: nube (deriveCloudSave / deriveCloudApply) ──
+// Reemplazan la cobertura live (no QA-eable sin Supabase). Congelan la lógica
+// wholesale-vs-parcial de _applyCloudRow y la serialización de _doCloudSave.
+
+test('deriveCloudSave — fila desde el state (Set→array, solo columnas cloud)', () => {
+  state.set('watchlist', new Set(['A', 'B']));
+  state.set('watched', new Set(['C']));
+  state.set('prioritized', new Set(['A']));
+  state.set('filmRatings', { A: 5 });
+  state.set('savedAgenda', { schedule: [] });
+  state.set('availability', { d1: { blocks: [1] } });
+  const row = FC.deriveCloudSave();
+  assert.deepStrictEqual([...row.watchlist].sort(), ['A', 'B'], 'watchlist Set→array');
+  assert.deepStrictEqual(row.watched, ['C']);
+  assert.deepStrictEqual(row.prioritized, ['A']);
+  assert.deepStrictEqual(row.ratings, { A: 5 }, 'columna ratings ← filmRatings');
+  assert.deepStrictEqual(row.saved_agenda, { schedule: [] }, 'columna saved_agenda');
+  assert.deepStrictEqual(row.availability, { d1: { blocks: [1] } });
+  // los 3 estados local-only (cloud:null) NO van a la fila
+  assert.ok(!('lastRemovedSlots' in row) && !('filmDelays' in row) && !('filmDelaysHistory' in row),
+    'cloud:null no se suben');
+});
+
+test('deriveCloudApply — wholesale (Realtime): reemplaza, aplica hasta vacíos', () => {
+  state.set('filmRatings', { OLD: 1 });
+  state.set('availability', { d1: { blocks: ['x'] }, d2: { blocks: [] } });
+  const data = { watchlist: ['A'], watched: [], prioritized: ['A'], ratings: { B: 3 },
+                 saved_agenda: { s: 1 }, availability: { d1: { blocks: ['new'] } } };
+  const u = FC.deriveCloudApply(data, true);
+  assert.deepStrictEqual([...u.watchlist], ['A'], 'watchlist array→Set');
+  assert.ok(u.watched instanceof Set && u.watched.size === 0, 'watched vacío SÍ aplica (whole)');
+  assert.deepStrictEqual(u.filmRatings, { B: 3 }, 'ratings REEMPLAZA (no mergea)');
+  assert.deepStrictEqual(u.savedAgenda, { s: 1 });
+  assert.deepStrictEqual(u.availability, { d1: { blocks: ['new'] } }, 'availability reemplaza entero');
+  assert.ok(!('lastRemovedSlots' in u) && !('filmDelays' in u), 'cloud:null nunca en el apply');
+});
+
+test('deriveCloudApply — parcial (boot): solo no-vacíos + merge de ratings/availability', () => {
+  state.set('filmRatings', { A: 5 });
+  state.set('availability', { d1: { blocks: ['keep'] }, d2: { blocks: ['keep2'] } });
+  const data = { watchlist: ['X'], watched: [], prioritized: [], ratings: { B: 3 },
+                 saved_agenda: null, availability: { d2: { blocks: ['newd2'] }, d3: { blocks: ['stray'] } } };
+  const u = FC.deriveCloudApply(data, false);
+  assert.deepStrictEqual([...u.watchlist], ['X'], 'no-vacío → aplica');
+  assert.ok(!('watched' in u), 'watched vacío → NO aplica (gate parcial)');
+  assert.ok(!('prioritized' in u), 'prioritized vacío → NO aplica');
+  assert.deepStrictEqual(u.filmRatings, { A: 5, B: 3 }, 'ratings MERGEA con el actual');
+  assert.ok(!('savedAgenda' in u), 'saved_agenda null → NO aplica');
+  // availability parcial: d1 conserva (no venía), d2 pisado, d3 IGNORADO (no es dayKey del festival)
+  assert.deepStrictEqual(u.availability, { d1: { blocks: ['keep'] }, d2: { blocks: ['newd2'] } },
+    'merge por-día; días fuera de los dayKeys se ignoran');
 });
