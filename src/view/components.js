@@ -474,7 +474,12 @@ export function _sortFestivals(entries, activeFestId){
 // Reemplaza el uso de `shortName` (que estaba en MAYÚSCULA, inconsistente con la
 // primera-palabra Title Case de otros). El año va en el título (es fundamental);
 // el subtítulo queda solo ciudad · fechas.
-export function festivalShortName(cfg){ return (cfg.name||'').split(' ')[0]; }
+// festivalShortName — la etiqueta compacta de la marca (splash, topbar, selector).
+// Heurístico: primer token del name (FICCI 65→FICCI, Tribeca Festival→Tribeca,
+// FantasoFest→FantasoFest). Para marcas multi-palabra que el primer token parte
+// mal (Tercer Tiempo Fest), el config pone un `displayName` explícito. NO confundir
+// con `shortName` (slug MAYÚSCULA para nombres de archivo en share.js).
+export function festivalShortName(cfg){ return cfg.displayName || (cfg.name||'').split(' ')[0]; }
 export function festivalLabel(cfg){ const n=festivalShortName(cfg); return cfg.year?`${n} · ${cfg.year}`:n; }
 
 // festivalTagline — el descriptor del festival para la 2ª línea del selector-splash,
