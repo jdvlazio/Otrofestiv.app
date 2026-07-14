@@ -5,7 +5,7 @@
 // app. Sink puro (solo main.js lo importa: ACTION_REGISTRY + Object.assign + IIFE
 // detección-festival). Escribe bridge globals en runtime (no eval-time).
 
-import { FESTIVAL_CONFIG } from '../config.js';
+import { FESTIVAL_CONFIG, mergeFestivalSections } from '../config.js';
 import { DAY_ABBR, DAY_NUM, festivalShortName } from '../view/components.js';
 import { DAYS, DAY_SHORT_EN, setCustomPosters, setDayShort, setDayShortEn, setPosters } from '../view/helpers.js';
 import { closeFestivalSheet } from '../view/sheets.js';
@@ -137,7 +137,8 @@ export async function loadFestival(id){
       // Estos campos se mergean si existen en el JSON — nunca pisan storageKey.
       const _cfgFields=['name','shortName','city','dates','dates_en','year',
         'timezoneOffset','festivalDates','days','dayKeys','dayShort','dayShort_en',
-        'dayLong','prioLimit','eventPosterLabel','group','ticket_url','ticketing_model'];
+        'dayLong','prioLimit','eventPosterLabel','group','ticket_url','ticketing_model',
+        'sections']; // P2.2 — secciones data-driven desde el JSON del festival
       _cfgFields.forEach(k=>{ if(data[k]!=null) cfg[k]=data[k]; });
       // ── LEGADO: festivales anteriores con bloque config{} en el JSON ──────
       // Festivales nuevos (desde Mujeres 2026) NO deben incluir config{} en el JSON —
@@ -190,6 +191,10 @@ export async function loadFestival(id){
     showToast(t('error_festival_nd'),'error',6000);
     return false;
   }
+  // Secciones data-driven (P2.2): si el festival trae `sections` en su JSON,
+  // mergear su metadata (color/en/archetype/order) en los mapas globales antes de
+  // renderizar. Idempotente. Festivales viejos sin `sections` no cambian nada.
+  mergeFestivalSections(cfg.sections);
   // ── Non-roster cfg apply (legacy) ──────────────────────────────────
   // Estos globals no están en el state roster (Fase 5.5). Siguen como
   // asignaciones directas hasta Fase 8.

@@ -467,3 +467,28 @@ export const SECTION_ARCHETYPES = {
   '🥇 Awards Screenings': 'Especiales / Eventos',
   '🪶 Cine Indígena': 'Muestra / País'
 };
+
+// mergeFestivalSections(sections) — DATA-DRIVEN (P2.2): un festival declara sus
+// secciones en SU JSON (`sections`), no en los 4 mapas de arriba. loadFestival
+// llama a esto al cargar → mergea la metadata del festival en los mapas globales,
+// SIN tocar los consumidores (siguen leyendo SECTION_COLORS/EN/ARCHETYPES/ORDER_LIST).
+// Un festival nuevo = su bloque `sections` en el JSON, cero código.
+//   sections: { "🎃 Nombre": { en, color, archetype, order } }
+//   - archetype: CLAVE del color (paleta unificada ARCHETYPE_COLORS, POSTERS.md) +
+//     del póster editorial. Usar una de las keys existentes de SECTION_ARCHETYPES.
+//   - color: SOLO fallback para secciones sin archetype (_sectionColor prioriza el
+//     color del arquetipo). en: label EN. order: posición en el programa.
+// Idempotente (se puede llamar en cada load). Los festivales viejos sin `sections`
+// conservan sus entradas hardcodeadas de arriba (no se re-onboardean).
+export function mergeFestivalSections(sections){
+  if(!sections || typeof sections!=='object') return;
+  // Insertar en ORDER_LIST respetando `order` (los que ya están no se duplican).
+  const byOrder=Object.entries(sections).sort((a,b)=>(a[1]?.order??9999)-(b[1]?.order??9999));
+  for(const [name, meta] of byOrder){
+    if(!meta) continue;
+    if(meta.color)     SECTION_COLORS[name]=meta.color;
+    if(meta.en)        SECTION_EN[name]=meta.en;
+    if(meta.archetype) SECTION_ARCHETYPES[name]=meta.archetype;
+    if(!SECTION_ORDER_LIST.includes(name)) SECTION_ORDER_LIST.push(name);
+  }
+}
