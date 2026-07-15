@@ -107,6 +107,33 @@ export function deriveCloudSave(){
   return row;
 }
 
+// deriveCloudMerge(local, remote, dirtyKeys) — la fila A SUBIR que preserva escrituras
+// CONCURRENTES a campos distintos. Sin timestamps por-campo en Supabase, un upsert de
+// la fila entera es last-write-wins: si el iPhone bloquea availability y el iPad agrega
+// a watchlist casi a la vez, el segundo upsert pisaba el campo del primero con su copia
+// vieja (edición perdida). Aquí, antes de subir se relee la fila remota y se mergea POR
+// CAMPO: un campo que este dispositivo editó (su state key está en dirtyKeys) sube el
+// valor LOCAL (la intención del usuario); un campo NO tocado localmente conserva el valor
+// REMOTO (no lo pisa con una copia vieja → la edición del otro dispositivo sobrevive).
+//   remote=null (fila inexistente, o el fetch de merge falló) → todo local (degrada al
+//   comportamiento previo: nunca se pierde la edición local por un fallo de red).
+//   Merge a nivel de CAMPO, no de elemento: no resucita ítems borrados (a diferencia de
+//   una unión de Sets) — un borrado local marca el campo dirty → sube el Set local ya
+//   sin el ítem. Residual conocido: dos dispositivos editando EL MISMO campo en la misma
+//   ventana de debounce siguen siendo last-write-wins (necesitaría timestamps por-campo).
+//   Puro y testeable sin Supabase (tests/unit/festivalContext.test.js).
+export function deriveCloudMerge(local, remote, dirtyKeys){
+  if(!remote) return local;
+  const out={};
+  for(const e of FESTIVAL_STATE){
+    if(!e.cloud) continue;
+    const col=e.cloud, r=remote[col];
+    out[col] = dirtyKeys.has(e.key) ? local[col]
+             : (r!==undefined && r!==null) ? r : local[col];
+  }
+  return out;
+}
+
 // deriveCloudApply(data, whole) — el objeto de state.batchUpdate al aplicar una
 // fila de la nube. whole=true (Realtime, autoritativo) vs false (boot/sign-in:
 // solo campos no-vacíos, con merge para ratings/availability). Puro (lee state.get

@@ -121,3 +121,46 @@ test('deriveCloudApply — parcial (boot): solo no-vacíos + merge de ratings/av
   assert.deepStrictEqual(u.availability, { d1: { blocks: ['keep'] }, d2: { blocks: ['newd2'] } },
     'merge por-día; días fuera de los dayKeys se ignoran');
 });
+
+// ── P3.3 #5: merge por-campo antes de subir (deriveCloudMerge) ──
+// Congela la resolución de escrituras concurrentes a campos distintos: campo dirty →
+// sube local; campo limpio → conserva remoto. Sin esto, el upsert de fila entera era
+// last-write-wins y una edición concurrente se perdía.
+
+test('deriveCloudMerge — campo dirty sube LOCAL, campo limpio conserva REMOTO', () => {
+  // iPhone editó availability (dirty); watchlist NO lo tocó (el iPad la editó en la nube)
+  const local  = { watchlist: ['viejo'], watched: [], prioritized: [], ratings: {},
+                   saved_agenda: null, availability: { d1: { blocks: ['bloqueo iphone'] } } };
+  const remote = { watchlist: ['nuevo del ipad'], watched: ['R'], prioritized: [], ratings: { X: 4 },
+                   saved_agenda: { s: 1 }, availability: { d1: { blocks: [] } } };
+  const merged = FC.deriveCloudMerge(local, remote, new Set(['availability']));
+  assert.deepStrictEqual(merged.availability, { d1: { blocks: ['bloqueo iphone'] } },
+    'availability (dirty) → valor local');
+  assert.deepStrictEqual(merged.watchlist, ['nuevo del ipad'],
+    'watchlist (limpio) → conserva el remoto, NO lo pisa con la copia local vieja');
+  assert.deepStrictEqual(merged.watched, ['R'], 'watched limpio → remoto');
+  assert.deepStrictEqual(merged.ratings, { X: 4 }, 'ratings limpio → remoto');
+  assert.deepStrictEqual(merged.saved_agenda, { s: 1 }, 'saved_agenda limpio → remoto');
+});
+
+test('deriveCloudMerge — borrado local NO se resucita (merge por campo, no unión)', () => {
+  // El usuario quitó 'Y' de watchlist en este dispositivo → watchlist dirty, local sin Y.
+  const local  = { watchlist: ['X'], watched: [], prioritized: [], ratings: {}, saved_agenda: null, availability: {} };
+  const remote = { watchlist: ['X', 'Y'], watched: [], prioritized: [], ratings: {}, saved_agenda: null, availability: {} };
+  const merged = FC.deriveCloudMerge(local, remote, new Set(['watchlist']));
+  assert.deepStrictEqual(merged.watchlist, ['X'], "dirty → sube local sin 'Y' (no reaparece)");
+});
+
+test('deriveCloudMerge — remote null (fila nueva o fetch caído) → todo local', () => {
+  const local = { watchlist: ['A'], watched: [], prioritized: [], ratings: {}, saved_agenda: null, availability: {} };
+  assert.strictEqual(FC.deriveCloudMerge(local, null, new Set()), local,
+    'sin remoto → sube local entero (nunca pierde la edición por fallo de red)');
+});
+
+test('deriveCloudMerge — remoto sin la columna (undefined/null) cae a local', () => {
+  const local  = { watchlist: ['A'], watched: ['B'], prioritized: [], ratings: {}, saved_agenda: null, availability: {} };
+  const remote = { watchlist: undefined, watched: null }; // fila remota parcial/vieja
+  const merged = FC.deriveCloudMerge(local, remote, new Set());
+  assert.deepStrictEqual(merged.watchlist, ['A'], 'columna remota undefined → local');
+  assert.deepStrictEqual(merged.watched, ['B'], 'columna remota null → local');
+});
