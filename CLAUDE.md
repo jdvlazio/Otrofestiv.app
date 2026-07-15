@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `b91e728 refactor(P2.2) secciones data-driven: un festival declara sus secciones en su JSON`
+> Último commit: `b7ecb4e test(P2.3) cobertura cross-festival festival-agnóstica (derivada de config)`
 
 ---
 
