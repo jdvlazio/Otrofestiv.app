@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607150958">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607150958">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607151015">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607151015">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -1928,19 +1928,6 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
   font-size:var(--t-label);color:var(--gray2);letter-spacing:.6px;text-transform:uppercase;
   writing-mode:vertical-rl;transform:rotate(180deg);
 }
-/* Encabezado de TEMPORADA: el año como paraguas horizontal SOBRE el riel (no un
-   divisor vertical que competiría con "ANTERIORES"). Mismo vocabulario de barras que
-   el divisor, pero acostadas y flanqueando el año → jerarquía clara: 2026 abarca todo
-   (vigentes + anteriores), "ANTERIORES" es solo una subdivisión adentro del riel. */
-.splash-season{
-  display:flex;align-items:center;justify-content:center;gap:var(--sp-2);
-  color:var(--amber);font-size:var(--t-label);font-weight:var(--w-bold);
-  letter-spacing:.16em;font-variant-numeric:tabular-nums;
-  margin-bottom:var(--sp-1);
-}
-.splash-season::before,.splash-season::after{
-  content:'';height:1px;width:26px;background:var(--bdr);
-}
 /* Bloque de info: Nombre / tagline / CIUDAD / FECHAS (·AÑO en pasados).
    Ritmo vertical aireado: nombre y tagline se separan del par CIUDAD/FECHA (que
    quedan agrupados, misma familia de dato) y el bloque respira antes de "Entrar"
@@ -1981,28 +1968,17 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
    duro de 184px empujaba "Entrar" bajo el fold e inalcanzable. Aquí bajamos el
    piso del póster, achicamos el padding dvh y el min-height del info para que
    los 3 actores del splash entren completos en una pantalla. */
-/* Medianas-cortas (SE 667, Android chico 640, landscape): el ritmo aireado del info
-   y de la tagline cede a compacto para hacerle lugar al encabezado de temporada
-   (#splash-season) SIN desbordar el splash — invariante T40/T41 (cabe sin scroll,
-   "Entrar" alcanzable, incluso durante el transitorio del reveal). El año permanece
-   visible en todos los tamaños; lo que se ajusta es el aire, no el contenido. */
-@media (max-height:740px){
-  .splash-info{min-height:0;margin-bottom:var(--sp-3)}
-  .splash-info-tag{margin-top:3px}
-  .splash-info-city{margin-top:var(--sp-1)}
-  .splash-info-dates{margin-top:2px}
-  .splash-rail{margin:var(--sp-2) 0}
-  .splash-tagline{margin-top:var(--sp-2)}
-}
-/* Landscape / alturas mínimas: además, achicar el póster y comprimir el padding +
-   colapsar del todo los márgenes (el encabezado de temporada aún cabe). */
 @media (max-height:480px){
   #otrofestiv-splash{--poster-h:clamp(92px,18dvh,184px)}
   #otrofestiv-splash{padding:calc(env(safe-area-inset-top) + 4dvh) 32px calc(env(safe-area-inset-bottom) + 3dvh)}
-  .splash-info{margin-bottom:0}
+  .splash-info{min-height:0;margin-bottom:0}
   .splash-rail{margin:var(--sp-1) 0}
+  /* En altura escasa, el ritmo aireado del info cede a compacto: cada línea vuelve
+     a su margen mínimo para que los 3 actores + "Entrar" entren completos. */
+  .splash-info-tag{margin-top:3px}
+  .splash-info-city{margin-top:var(--sp-1)}
+  .splash-info-dates{margin-top:2px}
   .splash-tagline{margin-top:0}
-  .splash-season{margin-bottom:0}
 }
 
 /* ── Volver arriba — mobile only ─── */
@@ -2387,7 +2363,6 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 <div id="otrofestiv-splash" role="dialog" data-i18n-aria="aria_bienvenida" aria-label="Bienvenida" aria-modal="true">
   <div class="splash-wordmark">Otro<span>festiv</span></div>
   <div class="splash-action">
-    <div class="splash-season" id="splash-season" aria-hidden="true"></div>
     <div class="splash-fest-label" data-i18n="splash_festival">¿A cuál festival vas?</div>
     <div class="splash-rail" id="splash-rail" role="listbox" data-i18n-aria="splash_festival" aria-label="¿A cuál festival vas?">
       <!-- Generado dinámicamente por _renderSplashRail() en init -->
@@ -2777,7 +2752,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202607150958";
+    s.src="/src/main.js?v=202607151015";
     document.body.appendChild(s);
   }
   if (isApp || isDev) { bootApp(); return; }

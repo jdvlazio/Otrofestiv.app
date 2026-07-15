@@ -549,9 +549,11 @@ export function _renderSplashRailHTML(state, activeFestId){
       : `<span class="splash-card-fb">${festivalShortName(cfg)}</span>`;
     return`<button class="splash-card${isPast?' past':''}${isActive?' on':''}" data-fest="${id}" role="option" aria-selected="${isActive}" data-action="selectSplashFest" data-name="${label}" data-meta="${meta}"><span class="splash-card-tpl">${art}</span></button>`;
   };
-  // El año de temporada NO va dentro del riel (competía con "ANTERIORES" como si fueran
-  // pares; en realidad 2026 abarca TODO, incluidos los anteriores). Vive como encabezado
-  // horizontal SOBRE el riel (#splash-season, poblado por _renderSplashRail) → paraguas.
+  // El año de temporada NO se muestra cuando todos los festivales comparten año (hoy,
+  // todos 2026 → repetirlo no suma; minimalismo). El único lugar donde aparece es la
+  // FECHA del info, y solo si el año de ESE festival DIFIERE de la temporada
+  // (festivalSeasonYear) — ver _fillSplashInfo. A FUTURO, cuando el riel mezcle años,
+  // acá cabría un divisor de año (mismo patrón que "ANTERIORES", agrupando por año).
   let html=current.map(e=>mkCard(e,false)).join('');
   // Divisor "ANTERIORES" solo separa DOS grupos: si no hay vigentes (todos pasados)
   // no se emite (colgar de primero descentra el snap inicial → auto-selección).
