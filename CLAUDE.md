@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `b7ecb4e test(P2.3) cobertura cross-festival festival-agnóstica (derivada de config)`
+> Último commit: `b2b5265 feat(P3.1) LRU del cache de festivales — quita el techo de capacidad simultánea`
 
 ---
 
