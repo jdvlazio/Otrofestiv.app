@@ -1718,6 +1718,44 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar section-map-dupes: {_e}')
 
+# ── [module-size] ningún módulo crece en silencio ─────────────────────────────
+# La modularidad se degrada cuando un archivo se vuelve un cajón de sastre. Este
+# check pone un techo: los módulos nuevos deben quedar <800 líneas; los grandes
+# actuales están grandfathered a su tamaño de HOY (allowlist) y solo pueden ENCOGER
+# — crecerlos exige subir su techo acá, una decisión consciente y revisada, no un
+# derrape silencioso. "Medir, no suponer" automatizado (auditoría jul 2026).
+check = 'module-size'
+try:
+    import glob as _glob
+    _CAP = 800
+    # techos grandfathered (líneas de HOY). Bajar cuando el archivo encoja; subir SOLO
+    # como decisión explícita y justificada en el PR. Cohesivos-pero-grandes conocidos:
+    #   agenda.js (render agenda+miplan) · main.js (composición/bootstrap) ·
+    #   i18n.js (diccionarios es/en, es DATA) · sheets-controller.js · handlers.js
+    _ALLOW = {
+        'src/view/agenda.js': 1554,
+        'src/main.js': 1538,
+        'src/i18n/i18n.js': 1378,
+        'src/controller/sheets-controller.js': 1215,
+        'src/controller/handlers.js': 915,
+    }
+    _over = []
+    for _f in _glob.glob('src/**/*.js', recursive=True):
+        _f = _f.replace('\\', '/')
+        _n = sum(1 for _ in open(_f, encoding='utf-8'))
+        _ceil = _ALLOW.get(_f, _CAP)
+        if _n > _ceil:
+            if _f in _ALLOW:
+                _over.append(f"{_f}: {_n} líneas > techo {_ceil} (creció — bajá el techo si es intencional)")
+            else:
+                _over.append(f"{_f}: {_n} líneas > {_CAP} (módulo nuevo demasiado grande — partir o allowlist con justificación)")
+    if _over:
+        fail(check, 'módulo(s) sobre su techo de líneas: ' + '; '.join(_over))
+    else:
+        ok(check, f'ningún módulo sobre su techo (nuevos <{_CAP}; {len(_ALLOW)} grandes grandfathered no crecieron)')
+except Exception as _e:
+    warn(check, f'no se pudo verificar module-size: {_e}')
+
 # ── [layer-direction] las dependencias apuntan hacia adentro ───────────────────
 # La modularidad por capas solo se sostiene si las dependencias van en UNA
 # dirección: domain (puro) ← state/storage ← controller/view ← main. Una capa
