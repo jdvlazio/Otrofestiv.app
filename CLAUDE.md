@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `17c1aba style(splash): separar la tagline de marca del CTA (asimetría intencional)`
+> Último commit: `639d4d9 style(splash): año como divisor de temporada + CIUDAD, PAÍS`
 
 ---
 
