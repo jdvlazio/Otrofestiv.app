@@ -235,25 +235,25 @@ export const FESTIVAL_CONFIG={
   // Todo lo demás (dayKeys, days, venues, posters, etc.) viene del JSON
   // y se mergea en loadFestival() — el JSON es la fuente única de verdad.
   'ficci65':{
-    name:'FICCI 65',fullName:'Festival Internacional de Cine de Cartagena de Indias',city:'Cartagena',dates:'14–19 ABR',dates_en:'APR 14–19',year:2026,
+    name:'FICCI 65',fullName:'Festival Internacional de Cine de Cartagena de Indias',city:'Cartagena',country:'CO',dates:'14–19 ABR',dates_en:'APR 14–19',year:2026,
     storageKey:'ficci65_',festivalStartStr:'2026-04-14T00:00:00',festivalEndStr:'2026-04-20T02:00:00',
     keyArt:'/assets/keyart/ficci65.jpg',
     films:null,posters:null,lbSlugs:{}
   },
   'aff2026':{
-    name:'AFF 2026',fullName:'Alternativa Film Festival',city:'Medellín',dates:'21–29 ABR',dates_en:'APR 21–29',year:2026,
+    name:'AFF 2026',fullName:'Alternativa Film Festival',city:'Medellín',country:'CO',dates:'21–29 ABR',dates_en:'APR 21–29',year:2026,
     storageKey:'aff2026_',festivalStartStr:'2026-04-21T00:00:00',festivalEndStr:'2026-04-29T23:00:00',
     keyArt:'/assets/keyart/aff2026.jpg',
     films:null,posters:null,lbSlugs:{}
   },
   'tribeca2026':{
-    name:'Tribeca Festival',fullName:'Tribeca Festival',tagline:{es:'Festival de Cine de Tribeca',en:'Tribeca Film Festival'},city:'New York',dates:'JUN 3–14',dates_en:'JUN 3–14',year:2026,timezoneOffset:'-04:00',
+    name:'Tribeca Festival',fullName:'Tribeca Festival',tagline:{es:'Festival de Cine de Tribeca',en:'Tribeca Film Festival'},city:'New York',country:'US',dates:'JUN 3–14',dates_en:'JUN 3–14',year:2026,timezoneOffset:'-04:00',
     storageKey:'tribeca2026_',festivalStartStr:'2026-06-03T00:00:00',festivalEndStr:'2026-06-14T23:59:00',
     keyArt:'/assets/keyart/tribeca2026.jpg',
     films:null,posters:null,lbSlugs:{}
   },
   'cinemancia2025':{
-    name:'Cinemancia 2025',fullName:'Cinemancia Festival Metropolitano de Cine',city:'Valle de Aburrá',dates:'11–20 SEP',dates_en:'SEP 11–20',year:2025,
+    name:'Cinemancia 2025',fullName:'Cinemancia Festival Metropolitano de Cine',city:'Valle de Aburrá',country:'CO',dates:'11–20 SEP',dates_en:'SEP 11–20',year:2025,
     storageKey:'cinemancia2025_',festivalStartStr:'2025-09-11T00:00:00',festivalEndStr:'2025-09-20T23:00:00',
     group:'test', // datos preservados como guía para sep 2025 — no visible en splash
     films:null,posters:null,lbSlugs:{}
@@ -480,6 +480,21 @@ export const SECTION_ARCHETYPES = {
 //     color del arquetipo). en: label EN. order: posición en el programa.
 // Idempotente (se puede llamar en cada load). Los festivales viejos sin `sections`
 // conservan sus entradas hardcodeadas de arriba (no se re-onboardean).
+// COUNTRY_NAMES — ISO-3166 alpha-2 → nombre localizado, para la línea CIUDAD, PAÍS del
+// splash. Set acotado a los países con festival (crece 1 línea por país nuevo). Se eligió
+// texto sobre bandera: 100% responsive y consistente en todo dispositivo (los emoji de
+// bandera no renderizan en Windows; ver deuda opcional de migrar a SVG por ISO).
+export const COUNTRY_NAMES = {
+  CO: { es:'Colombia',       en:'Colombia' },
+  BR: { es:'Brasil',         en:'Brazil' },
+  US: { es:'Estados Unidos', en:'United States' },
+};
+// countryName(iso, lang) — nombre del país o '' si no hay dato / ISO desconocido. Puro.
+export function countryName(iso, lang='es'){
+  const e = iso && COUNTRY_NAMES[iso];
+  return e ? (e[lang] ?? e.es) : '';
+}
+
 export function mergeFestivalSections(sections){
   if(!sections || typeof sections!=='object') return;
   // Insertar en ORDER_LIST respetando `order` (los que ya están no se duplican).

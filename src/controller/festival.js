@@ -1,7 +1,7 @@
 // ── src/controller/festival.js ────────────────────────────────────────────────────
 // p8 Step 7e — Lifecycle de splash/selector de festival + auto-resolve posters. POSTERS/CUSTOM_POSTERS vía bridge.
 
-import { FESTIVAL_CONFIG, TMDB_API_BASE, TMDB_API_KEY, TMDB_POSTER_BASE, _DEFAULT_FEST_ID, _POSTER_CACHE_PFX } from '../config.js';
+import { FESTIVAL_CONFIG, TMDB_API_BASE, TMDB_API_KEY, TMDB_POSTER_BASE, _DEFAULT_FEST_ID, _POSTER_CACHE_PFX, countryName } from '../config.js';
 import { _renderFestivalSelectorHTML, _renderSplashRailHTML, _classifyFestival, festivalShortName, festivalTagline, festivalSeasonYear } from '../view/components.js';
 import { _langDates, setPosters } from '../view/helpers.js';
 import { render } from '../view/programa.js';
@@ -43,12 +43,21 @@ function _fillSplashInfo(festId){
   // reserva una línea para que CIUDAD/FECHA no brinquen entre festivales. Se pasa el
   // idioma para los taglines localizados (Tribeca: ES descriptor / EN nombre original).
   if(tagEl) tagEl.textContent=festivalTagline(cfg, state.snapshot()._lang);
-  if(cityEl) cityEl.innerHTML=(cls==='ongoing'?'<span class="live-dot"></span>':'')+String(cfg.city||'').toUpperCase();
+  if(cityEl){
+    // CIUDAD, PAÍS — el país se resuelve por ISO (config.countryName) y se localiza.
+    const _lang=state.snapshot()._lang;
+    const _pais=countryName(cfg.country,_lang);
+    const _loc=cfg.city ? (_pais ? `${cfg.city}, ${_pais}` : String(cfg.city)) : '';
+    cityEl.innerHTML=(cls==='ongoing'?'<span class="live-dot"></span>':'')+_loc.toUpperCase();
+  }
   if(datesEl){
-    // El año va SIEMPRE al final de la fecha (vigentes y pasados por igual) →
-    // posición consistente e integrada, no aparece/desaparece según el estado.
+    // El año NO se repite en cada fecha: vive UNA vez como divisor de temporada en el
+    // riel (festivalSeasonYear). La fecha solo muestra su año si DIFIERE de la temporada
+    // (desambiguar un pasado de otro año). Misma regla que el título de fila del selector.
     const dates=_langDates(cfg);
-    datesEl.textContent=(dates+(cfg.year?' · '+cfg.year:'')).toUpperCase();
+    const _season=festivalSeasonYear();
+    const _showYear=cfg.year && cfg.year!==_season;
+    datesEl.textContent=(dates+(_showYear?' · '+cfg.year:'')).toUpperCase();
   }
 }
 
