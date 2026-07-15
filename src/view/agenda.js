@@ -20,7 +20,11 @@ import {
 } from '../domain/time.js';
 // Consenso colaborativo de retraso (Fase B): renderAgenda (impura/exenta) lo lee
 // del controller y lo pasa como dato a las funciones puras del view.
-import { getConsensusMap, cloudScreeningKey } from '../controller/delays-cloud.js';
+import { cloudScreeningKey } from '../domain/delays.js';
+// getConsensusMap lee el cache vivo de la suscripción Realtime (controller-owned):
+// es una lectura de estado derivado view→controller, no una llamada a orquestador.
+// Es la ÚNICA dependencia view→controller permitida (fijada en validate.py [view-purity]).
+import { getConsensusMap } from '../controller/delays-cloud.js';
 import {
   screeningPassed,
 } from '../domain/film.js';

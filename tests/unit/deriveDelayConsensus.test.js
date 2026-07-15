@@ -16,6 +16,16 @@ test('sin reportes → none', () => {
   assert.deepStrictEqual(D.deriveDelayConsensus(null), { state: 'none', delayMin: 0, reporters: 0 });
 });
 
+test('cloudScreeningKey — título|día|hora|sede, tolerante a faltantes', () => {
+  assert.strictEqual(D.cloudScreeningKey('Film', 'Mar', '18:00', 'Teatro'), 'Film|Mar|18:00|Teatro');
+  assert.strictEqual(D.cloudScreeningKey('Film', 'Mar', '18:00'), 'Film|Mar|18:00|', 'sede faltante → vacía');
+  assert.strictEqual(D.cloudScreeningKey(), '|||', 'todo faltante → separadores intactos');
+  // la sede desambigua misma peli/día/hora en salas distintas
+  assert.notStrictEqual(
+    D.cloudScreeningKey('F', 'L', '20:00', 'Sala A'),
+    D.cloudScreeningKey('F', 'L', '20:00', 'Sala B'));
+});
+
 test('1 reporte → tentative (sin confirmar)', () => {
   const r = D.deriveDelayConsensus([{ reporterId: 'a', delayMin: 20, ageMin: 5 }]);
   assert.equal(r.state, 'tentative');

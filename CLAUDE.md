@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `6ac867c fix(P3.3/#5) merge por-campo antes de subir: sobrevive escrituras concurrentes`
+> Último commit: `30efe6a test(L3) fitness function [module-size]: ningún módulo crece en silencio`
 
 ---
 

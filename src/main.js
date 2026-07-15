@@ -378,117 +378,7 @@ TZ_OFFSET='-05:00';
 // Valores: 'transit' (Uber/Metro) · 'walking' (a pie) · 'mixed' (depende de la sede)
 // Afecta el texto de aviso de viaje en Mi Plan. Se actualiza en loadFestival().
 FESTIVAL_TRANSPORT='transit';
-// _festDate(dateStr, time) → Date — construye Date con TZ_OFFSET explícito.
-// Lee (contrato implícito): TZ_OFFSET (offset del festival activo, e.g. '-05:00').
-// Inputs: dateStr en formato YYYY-MM-DD, time en formato HH:mm.
-// Returns: Date object cuyo valor representa dateStr+time en la TZ del festival.
-// En _SCHED_PURE_FNS: el worker la consume vía .toString() con la misma TZ_OFFSET inyectada.
-// _festDate → src/domain/time.js (Step 5). Importado.
-// p8 (fix): TMDB_API_KEY se movió a config.js (export const), importado por
-// controller/festival.js + poster-err.js como binding real. Antes era un const
-// module-local aquí que esos módulos leían como global fantasma (undefined en
-// globalThis → ReferenceError, enmascarado sólo por el .catch del auto-resolve).
-
-/* ── POSTER GENERATIVO — identidad Otrofestiv (regla canónica) ────────
-   PRIORIDAD DE POSTER (en todo contexto — grilla, card, Mi Plan):
-     1. Poster real (CUSTOM_POSTERS > POSTERS/TMDB)
-     2. Poster generativo (solo si no hay real)
-     3. Placeholder vacío (surf-2) — nunca negro
-   REGLA DE DETECCIÓN:
-     f.type === 'event'  → makeEventPoster()
-     f.is_cortos === true → getPosterSrc(title,true) || makeProgramPoster(title,dur,section)
-     resto               → getPosterSrc(title,false) || null
-   ONERROR: siempre this.remove() — nunca this.style.opacity=0
-   p8 Step 8d-2: el builder generativo vive en view/components.js
-   (_buildPosterV16 + make*Poster). El antiguo _buildPosterSVG de main.js
-   era dead code (cero callers) → eliminado.
-────────────────────────────────────────────────────────────────────── */
-
-// makeProgramPoster → src/view/components.js (Step 6a). Importado.
-/* ══════════════════════════════════════════════════════
-   SISTEMA DE PÓSTERS — fuente unificada y normalizada
-   ─────────────────────────────────────────────────────
-   FUENTES (en orden de prioridad):
-     1. CUSTOM_POSTERS  — URLs manuales por festival (posters de cortos individuales incluidos)
-     2. POSTERS         — features: URLs completas (TMDB o CDN propio)
-
-   NORMALIZACIÓN:
-     normKey(s) → convierte apostrofes Unicode → ASCII (U+0027)
-     Se aplica a AMBOS lados (claves y título buscado).
-     Previene mismatch entre U+2019 (tipográfico) y U+0027 (ASCII).
-
-   REGLA: NUNCA acceder POSTERS/CUSTOM_POSTERS directamente
-   en templates — siempre usar getPosterSrc(title, isCortos).
-══════════════════════════════════════════════════════ */
-
-// Pre-normalizar claves de los tres diccionarios al cargar
-
-// ═══════════════════════════════════════════════════════════════
-// FUENTE ÚNICA DE VERDAD — getFilmPoster(f)
-// ───────────────────────────────────────────────────────────────
-// Recibe el objeto film completo. Devuelve siempre el poster
-// correcto según el tipo. Nunca tomar esta decisión en otro lugar.
-//
-// TIPOS Y REGLAS:
-//   f.type === 'event'   → poster ámbar generativo
-//   f.is_cortos === true → poster real si existe, teal generativo si no
-//   corto individual     → getPosterSrc(title, true) — busca en CUSTOM_POSTERS del festival
-//   película             → poster real si existe, null si no
-//
-// USO: getFilmPoster(f) en TODOS los contextos — grilla, card, lista, Mi Plan
-// ═══════════════════════════════════════════════════════════════
-// Devuelve inline style para object-position cuando el film tiene posterPosition != 'center'
-// Aplica solo a imágenes editoriales 16:9 que necesitan crop ajustado
-
-// makeSorpresaPoster → src/view/components.js (Step 6a). Importado.
-
-// Para cortos individuales dentro de un film_list (no tienen objeto film completo)
-
-// Poster de film_list item de largometraje (is_programa).
-// No genera placeholder — devuelve null si no hay poster real.
-
-// ═══════════════════════════════════════════════════════════════
-// 2 · SISTEMA DE ÍCONOS
-//     LB_SVG (Letterboxd), ICONS (Lucide)
-// ═══════════════════════════════════════════════════════════════
-/* ── Letterboxd slugs — FUENTE ÚNICA: lista oficial FICCI 65 ───
-   https://letterboxd.com/ficcifestival/list/ficci-65/detail/
-   Extraídos directamente del DOM con Claude in Chrome.
-   Sin inferencias. Sin suposiciones.
-   Replicable: extraer desde la lista oficial del festival en LB.
-──────────────────────────────────────────────────────────────── */
-// p8 8b: LB_SLUGS → state/viewstate.js (bridge)
-
-// Nuevo formato: lee lbSlug directamente del objeto film si existe
-
-// SECTION_ORDER_LIST, FILM_CATEGORY_ORDER, FILM_CATEGORY_LABEL, SECTION_COLORS
-// → src/config.js (Step 1). Importados al top del módulo.
-// _sectionColor → src/view/components.js (Step 6a). Importado.
-// Detecta si un poster viene de una fuente editorial (imagen 16:9 del festival)
-// Usa el campo explícito posterSource si existe, si no, fallback a detección por URL.
-// Regla: nuevos festivales deben usar posterSource en el JSON — no depender de la URL.
-
-// ── _posterThumb ─────────────────────────────────────────────────────────────
-// FUENTE ÚNICA DE VERDAD para posters en contexto lista/thumbnail.
-// Aplica tratamiento editorial (color de sección + 16:9) cuando corresponde.
-// Todos los contextos (Intereses, Planear, Mi Plan, Sugerencias) deben usar
-// esta función. NUNCA construir <img class="lb-poster"> directamente.
-//
-// cssClass: 'lb-poster' | 'int-item-poster' | 'prio-chip-poster'
-// loading:   'lazy' (default) | 'eager'
-// Nota (p7c-4): se eliminó el param onclickJs — los call sites que necesitan
-// abrir una sheet usan el mecanismo js-open-pel (clase + data-title).
-
-// Elimina el prefijo emoji de una sección (ej. "🎬 Competencia" → "Competencia")
-// NO elimina palabras — "U.S. Narrative Competition" se mantiene intacto
-// _secLabel → src/view/components.js (Step 6a). Importado.
-// makeEventPoster → src/view/components.js (Step 6a). Importado.
-
-// NOTICES, FESTIVAL_CONFIG → src/config.js (Step 1). Importados al top del
-// módulo. Festival-data como single source en config.js; aquí solo se consumen.
-// FESTIVAL_CONFIG[id]={...} (mutación de loadFestival) opera sobre el objeto
-// importado — permitido en ESM (mutación ≠ reasignación del binding).
-
+// (funciones/constantes movidas a módulos; ver imports arriba, L8-149)
 // Festival por defecto — primer festival registrado en FESTIVAL_CONFIG.
 // Usado como fallback cuando localStorage está vacío o no hay festival en rango de fechas.
 // Al agregar un nuevo festival como primero en el config, este fallback se actualiza solo.
@@ -536,87 +426,7 @@ FESTIVAL_DATES={
 };
 // Fin del festival — última función del Domingo + margen
 FESTIVAL_END=new Date('2026-04-20T02:00:00');
-// festivalEnded() → boolean — true si el festival ya terminó.
-// Lee (contrato implícito): FESTIVAL_END (mutable, swapeada por loadFestival).
-// Llama: simNow().
-// Comparación estricta (>): simNow === FESTIVAL_END retorna false.
-// NO en _SCHED_PURE_FNS — el worker define su propia copia (línea ~8297) con
-//   FESTIVAL_END_TS (timestamp ms) en vez de FESTIVAL_END (Date). Artefacto del
-//   mecanismo .toString(); se elimina en Fase 8 del destino.
-// festivalEnded → src/domain/time.js (Step 5). Importado.
-
-// Check if a screening has passed (with 10 min grace)
-
-// ═══════════════════════════════════════════════════════════════
-// 4 · UTILIDADES
-//     Funciones puras: fechas, tiempo, conflictos, normalización
-// ═══════════════════════════════════════════════════════════════
-// screeningPassed(s) → boolean — true si el screening ya pasó (con 10 min de grace).
-// Lee (contrato implícito): FESTIVAL_DATES (mapa dayKey → ISO date).
-// Llama: festivalEnded(), _festDate(), simNow().
-// Gate: si festivalEnded()=true → retorna false (post-festival, todo vuelve a
-//   opacidad plena; no se marca nada como "pasado").
-// Grace: suma 10 min al startTime antes de comparar — un screening que arrancó
-//   hace 5 min todavía cuenta como "no pasado" (el usuario aún puede llegar).
-// En _SCHED_PURE_FNS: el worker la consume vía .toString().
-// screeningPassed → src/domain/film.js (Step 5). Importado.
-// dayFullyPassed(day) → boolean — true si la última función del día ya pasó.
-// Lee (contrato implícito): FESTIVAL_DATES, FILMS.
-// Llama: _festDate(), simNow().
-// Computa "última función" tomando max(FILMS[].time) para films con f.day===day,
-//   y aplica el mismo grace de 10 min que screeningPassed.
-// Si no hay films del día (o day no existe en FESTIVAL_DATES) → retorna false.
-// Main-thread only — usado en render de chips de día y línea "now" del agenda.
-// dayFullyPassed → src/domain/time.js (Step 5). Importado.
-
-// VENUES → src/config.js (Step 1). Importado al top del módulo.
-
-/* ── VENUES: configuración, salas, tiempos de viaje ─────────────────── */
-// Las coordenadas de sedes viven en festivals/*.json bajo venues{}.
-// venueTravelMins() las lee directamente de FESTIVAL_CONFIG[id].venues.
-// _resolveVenue — name + venues → entrada de venues{} o {short:name} (fallback).
-// Pura: no lee globals. Es la única de las _SCHED_PURE_FNS que es genuinamente
-//   pura — las demás leen FESTIVAL_BUFFER, FESTIVAL_TRANSPORT, etc. como contrato
-//   implícito. Se inyecta al worker vía .toString(); el worker pasa _venueCoords
-//   como segundo arg (mismo shape).
-// Match: exacto → prefix/includes case-insensitive, longest-key-first.
-//   El longest-first garantiza determinismo cuando un name matchea múltiples keys
-//   (ej: "Sala A Mejorada" gana sobre "Sala A").
-// _resolveVenue → src/domain/festival.js (Step 5). Importado.
-// venueTravelMins → src/domain/festival.js (Step 5). Importado.
-
-/* ── UTILS: tiempo, fecha, duración ─────────────────────────────────── */
-// toMin → src/domain/time.js (Step 5). Importado.
-// parseDur → src/domain/time.js (Step 5). Importado.
-// effectiveDuration — duración total de una función incluyendo Q&A.
-// Pura (contrato implícito): lee DEFAULT_DURATION_MIN vía parseDur. El worker
-//   define la misma constante en _workerGlobals → comportamiento idéntico.
-// Asume: f.duration es string parseable a int ("90 min", "~95 min");
-//   f.has_qa boolean. Si has_qa, suma 30 min (Q&A extiende la función).
-// effectiveDuration → src/domain/film.js (Step 5). Importado.
-// minToStr → src/domain/time.js (Step 5). Importado.
-
-/* ── CONFLICTS: detección de solapamientos entre funciones ──────────── */
-// screensConflict — true si dos funciones a y b no pueden ambas asistirse.
-// Pura (contrato implícito): lee FESTIVAL_BUFFER (gap mínimo entre funciones),
-//   FESTIVAL_TRANSPORT y FESTIVAL_CONFIG[_activeFestId].venues vía travelMins.
-//   El worker define equivalentes (FESTIVAL_BUFFER, _transport, _venueCoords)
-//   en _workerGlobals → comportamiento idéntico.
-// Lógica: días distintos → no conflicto. Mismo día → suman effectiveDuration
-//   (Q&A incluido) y exigen gap ≥ max(FESTIVAL_BUFFER, travel+FESTIVAL_BUFFER)
-//   entre el fin de una y el inicio de la otra.
-// screensConflict → src/domain/schedule.js (Step 5). Importado.
-// travelMins → src/domain/festival.js (Step 5). Importado.
-
-// Normalize text for accent-insensitive search
-
-// p8 Step 8d-1: normTitle → domain/film.js (puro). Importado + re-expuesto global
-// (Object.assign) para los lectores bare (controller/{persistence,handlers,overlays}).
-
-// ═══════════════════════════════════════════════════════════════
-// 5 · ESTADO GLOBAL
-//     watchlist, watched, prioritized, savedAgenda, availability
-// ═══════════════════════════════════════════════════════════════
+// (funciones/constantes movidas a módulos; ver imports arriba, L8-149)
 // ── STATE ──
 watchlist=new Set();
 filmRatings={}; // {title: 0.5..5} medias estrellas Letterboxd-style
@@ -632,7 +442,7 @@ FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202607142007';
+const BUILD_VERSION='202607142027';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';
@@ -703,62 +513,7 @@ availability={
   'Viernes':{blocks:[]},'Sábado':{blocks:[]},'Domingo':{blocks:[]}
 };
 
-// ═══════════════════════════════════════════════════════════════
-// 6 · MI PLAN — HELPERS & RENDER
-//     mplanPx, mplanPct, renderMiPlanCalendar, selectMiPlanDay
-// ═══════════════════════════════════════════════════════════════
 
-// REGLA: scroll a mplan-detail — mide el topbar directamente del DOM,
-// no depende de --tb-total (incorrecto en mobile por incluir nav inferior).
-// Usar esta función en TODOS los contextos que necesiten bajar al detalle.
-
-// ═══════════════════════════════════════════════════════════════
-// 7 · PERSISTENCIA
-//     loadState, saveWL, saveWatched, saveAV, saveSavedAgenda
-// ═══════════════════════════════════════════════════════════════
-
-/* ── STATE: persistencia en localStorage ──────────────────────────────
- * loadState — hidrate del user-state desde storage en un solo state.batchUpdate.
- * Atomicidad: subscribers ven todo el snapshot post-hidrate, nunca parcial.
- * Heal (prioritized ⊆ watchlist) corre POST-batch como update separado porque
- * lee `prioritized` ya seteado; el efecto neto es 2 notifications de watchlist
- * (hidrate + heal). Aceptable — el heal es idempotente para subscribers.
- */
-
-// ── Notificaciones locales — aviso 30 min antes de cada función ───────────
-
-// Controller (p7a)
-
-// Controller (p7a)
-
-// Controller (p7a)
-
-/* ── saveState — batching de localStorage ── */
-
-// ═══════════════════════════════════════════════════════════════
-// 8 · EVENT HANDLERS — MI LISTA
-//     toggleWL, toggleWatched, removeFromAgenda
-// ═══════════════════════════════════════════════════════════════
-
-/* ── ACTIONS: watchlist, prioridades, vistas, retraso ───────────────── */
-// Controller (p7a) — el más branchy de los handlers. 3 branches:
-//   A: remove con confirm modal (film en savedAgenda)
-//   B: remove directo (film NO en savedAgenda)
-//   C: add (con detección de "todas funciones bloqueadas" + UI variants)
-
-// Controller (p7a) — branchy toggle con confirm modal en branch B
-
-// ── FUZZY SEARCH — accent insensitive ──
-
-// Controller (p7a) — modal callback contiene el handler real (closure variant)
-
-// Controller (p7a) — multi-step: add to watchlist + add to plan + cleanup
-// lastRemovedSlots + jump al día. NO usa modal (excepto conflict sheet en
-// rama de error). NOTE: state snapshot re-leído tras mutaciones interleaved
-// porque condicionalmente openConflictSheet sale temprano y necesita state
-// fresh para el branch.
-
-// ── AVAILABILITY ──
 // ─────────────────────────────────────────────────────────────────────────────
 // ⚠️  FIX CRÍTICO — NO REMOVER (Apr 2026)
 // DAY_KEYS debe estar declarada aquí, antes de cualquier función que la use.
@@ -780,18 +535,6 @@ availability={
 
    FUENTE: todo deriva de DAYS[] (definido en el bloque de render de tabs)
 ══════════════════════════════════════════════════════ */
-// p8 8b: DAY_KEYS → state/viewstate.js (bridge)
-
- // swapeado por loadFestival() — valores en inglés
-
-/* dayChip(key) — componente apilado: ABREV arriba / NÚMERO abajo — FORMATO ÚNICO */
-
-/* dayLabel/dayHeader — mantenidos para compatibilidad, internamente usan dayChip */
-
-/* _lblLocalized: traduce abreviación de día al idioma activo.
-   Resuelve el caso donde lbl viene en inglés (ej. Tribeca: 'WED')
-   y el usuario está en español → debe mostrar 'MIÉ'. */
-
 const _isoToFlag = c  => c&&c.length===2 ? String.fromCodePoint(0x1F1E6+c.toUpperCase().charCodeAt(0)-65)+String.fromCodePoint(0x1F1E6+c.toUpperCase().charCodeAt(1)-65) : '';
 
 /* ══════════════════════════════════════════════════════

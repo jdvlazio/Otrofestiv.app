@@ -1718,6 +1718,89 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar section-map-dupes: {_e}')
 
+# ── [module-size] ningún módulo crece en silencio ─────────────────────────────
+# La modularidad se degrada cuando un archivo se vuelve un cajón de sastre. Este
+# check pone un techo: los módulos nuevos deben quedar <800 líneas; los grandes
+# actuales están grandfathered a su tamaño de HOY (allowlist) y solo pueden ENCOGER
+# — crecerlos exige subir su techo acá, una decisión consciente y revisada, no un
+# derrape silencioso. "Medir, no suponer" automatizado (auditoría jul 2026).
+check = 'module-size'
+try:
+    import glob as _glob
+    _CAP = 800
+    # techos grandfathered (líneas de HOY). Bajar cuando el archivo encoja; subir SOLO
+    # como decisión explícita y justificada en el PR. Cohesivos-pero-grandes conocidos:
+    #   agenda.js (render agenda+miplan) · main.js (composición/bootstrap) ·
+    #   i18n.js (diccionarios es/en, es DATA) · sheets-controller.js · handlers.js
+    _ALLOW = {
+        'src/view/agenda.js': 1554,
+        'src/main.js': 1538,
+        'src/i18n/i18n.js': 1378,
+        'src/controller/sheets-controller.js': 1215,
+        'src/controller/handlers.js': 915,
+    }
+    _over = []
+    for _f in _glob.glob('src/**/*.js', recursive=True):
+        _f = _f.replace('\\', '/')
+        _n = sum(1 for _ in open(_f, encoding='utf-8'))
+        _ceil = _ALLOW.get(_f, _CAP)
+        if _n > _ceil:
+            if _f in _ALLOW:
+                _over.append(f"{_f}: {_n} líneas > techo {_ceil} (creció — bajá el techo si es intencional)")
+            else:
+                _over.append(f"{_f}: {_n} líneas > {_CAP} (módulo nuevo demasiado grande — partir o allowlist con justificación)")
+    if _over:
+        fail(check, 'módulo(s) sobre su techo de líneas: ' + '; '.join(_over))
+    else:
+        ok(check, f'ningún módulo sobre su techo (nuevos <{_CAP}; {len(_ALLOW)} grandes grandfathered no crecieron)')
+except Exception as _e:
+    warn(check, f'no se pudo verificar module-size: {_e}')
+
+# ── [layer-direction] las dependencias apuntan hacia adentro ───────────────────
+# La modularidad por capas solo se sostiene si las dependencias van en UNA
+# dirección: domain (puro) ← state/storage ← controller/view ← main. Una capa
+# interna que importa de una externa invierte el flujo y reintroduce el
+# acoplamiento que la migración a módulos (Fase 6-8) eliminó. Este check congela
+# esa dirección como contrato: medir, no suponer (auditoría jul 2026).
+#   · domain/ no importa de controller/ ni view/  (0)
+#   · state/ y storage/ no importan de controller/ ni view/  (0)
+#   · view/ no importa de controller/  EXCEPTO la allowlist de lecturas de estado
+#     derivado (getConsensusMap: cache vivo de la suscripción Realtime, controller-owned).
+check = 'layer-direction'
+try:
+    import glob as _glob
+    # (símbolo, módulo) permitidos como lectura view→controller. Estado derivado que
+    # el controller posee y el view solo LEE — no es llamada a orquestador. Crecer
+    # esta lista es una decisión consciente y revisada, no un accidente silencioso.
+    _VIEW_CTRL_ALLOW = {('getConsensusMap', 'delays-cloud')}
+    _viol = []
+    def _imports_from(_src, _layers):
+        # devuelve lista de (símbolos, módulo-base) importados de esas capas hermanas
+        out = []
+        for _m in re.finditer(r"import\s+(?:\{([^}]*)\}|[\w*]+)\s+from\s+'\.\./(" + '|'.join(_layers) + r")/([\w-]+)\.js'", _src):
+            syms = [s.strip().split(' as ')[0].strip() for s in (_m.group(1) or '').split(',') if s.strip()]
+            out.append((syms, _m.group(3)))
+        return out
+    # domain, state, storage → NO controller/view
+    for _layer in ['domain', 'state', 'storage']:
+        for _f in _glob.glob(f'src/{_layer}/*.js'):
+            _s = open(_f, encoding='utf-8').read()
+            if _imports_from(_s, ['controller', 'view']):
+                _viol.append(f"{_f} importa de controller/view (capa interna → externa)")
+    # view → controller solo lo allowlisted
+    for _f in _glob.glob('src/view/*.js'):
+        _s = open(_f, encoding='utf-8').read()
+        for _syms, _mod in _imports_from(_s, ['controller']):
+            for _sym in _syms:
+                if (_sym, _mod) not in _VIEW_CTRL_ALLOW:
+                    _viol.append(f"{os.path.basename(_f)} importa '{_sym}' de controller/{_mod} (no allowlisted)")
+    if _viol:
+        fail(check, 'dependencia contra la dirección de capas: ' + '; '.join(_viol))
+    else:
+        ok(check, 'dependencias apuntan hacia adentro (domain←state/storage←controller/view; view→controller solo allowlist)')
+except Exception as _e:
+    warn(check, f'no se pudo verificar layer-direction: {_e}')
+
 # ── Report ────────────────────────────────────────────────────────────────────
 print()
 print('═' * 60)
