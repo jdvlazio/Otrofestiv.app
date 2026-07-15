@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `726b8f0 feat(miplan): Sugerencias sin tope — mostrar todas las del día`
+> Último commit: `00b3522 i18n(vocab): unificar el paraguas en "actividad" (funciones + eventos + talleres)`
 
 ---
 
