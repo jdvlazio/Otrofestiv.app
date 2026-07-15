@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `6b1873b docs(ARQUITECTURA): documentar FestivalContext, sync por-campo, LRU y fitness functions`
+> Último commit: `4b0f73f chore: bump (limpieza de código muerto + docs)`
 
 ---
 
