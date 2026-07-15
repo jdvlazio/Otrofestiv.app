@@ -1094,7 +1094,10 @@ export function _renderSavedAgendaHTML(state, consensus){
   // Sugerencias solo durante el festival
   if(!festivalEnded()){
   const suggsByDay=getSuggestions();
-  const suggDays=DAY_KEYS.filter(d=>suggsByDay[d]&&suggsByDay[d].length>0);
+  // Sugerencias SOLO del día donde el usuario está parado (activeMiPlanDay), no de la
+  // semana entera: menos ruido y se lee como "más para este día", no como otro plan.
+  const _selKey=DAY_KEYS[activeMiPlanDay];
+  const suggDays=(_selKey&&suggsByDay[_selKey]&&suggsByDay[_selKey].length>0)?[_selKey]:[];
   html+=`<div class="suggestion-wrap">
     <div class="mb-2 sec-hdr">${ICONS.sparkles} ${t('misc_sugerencias')}</div>`;
   if(suggDays.length){

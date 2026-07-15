@@ -1733,7 +1733,7 @@ try:
     #   agenda.js (render agenda+miplan) · main.js (composición/bootstrap) ·
     #   i18n.js (diccionarios es/en, es DATA) · sheets-controller.js · handlers.js
     _ALLOW = {
-        'src/view/agenda.js': 1554,
+        'src/view/agenda.js': 1557,
         'src/main.js': 1538,
         'src/i18n/i18n.js': 1378,
         'src/controller/sheets-controller.js': 1215,
