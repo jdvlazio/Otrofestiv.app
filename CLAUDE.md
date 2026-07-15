@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `f5ff36e fix(P3.2/#10) SW deploy-safe: cachear el último index.html bueno`
+> Último commit: `6ac867c fix(P3.3/#5) merge por-campo antes de subir: sobrevive escrituras concurrentes`
 
 ---
 

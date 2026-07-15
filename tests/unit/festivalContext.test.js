@@ -157,6 +157,20 @@ test('deriveCloudMerge — remote null (fila nueva o fetch caído) → todo loca
     'sin remoto → sube local entero (nunca pierde la edición por fallo de red)');
 });
 
+test('deriveCloudMerge — TODAS las keys dirty (push de fila entera) → todo local', () => {
+  // El contrato del re-push al boot (_cloudSave sin campo): _dirtyFields en memoria se
+  // pierde al recargar; el caller marca TODOS los campos cloud dirty → sube el plan
+  // local entero aunque exista fila remota (si no, el merge devolvía el remoto para
+  // todo, la subida era un no-op y el flag dirty se limpiaba → edición offline perdida).
+  const local  = { watchlist: ['offline-edit'], watched: ['W'], prioritized: [], ratings: { A: 5 },
+                   saved_agenda: { s: 2 }, availability: { d1: { blocks: ['b'] } } };
+  const remote = { watchlist: ['stale'], watched: [], prioritized: ['P'], ratings: {},
+                   saved_agenda: null, availability: {} };
+  const allDirty = new Set(FC.FESTIVAL_STATE.filter(e => e.cloud).map(e => e.key));
+  const merged = FC.deriveCloudMerge(local, remote, allDirty);
+  assert.deepStrictEqual(merged, local, 'fila entera dirty → el local gana en TODAS las columnas');
+});
+
 test('deriveCloudMerge — remoto sin la columna (undefined/null) cae a local', () => {
   const local  = { watchlist: ['A'], watched: ['B'], prioritized: [], ratings: {}, saved_agenda: null, availability: {} };
   const remote = { watchlist: undefined, watched: null }; // fila remota parcial/vieja

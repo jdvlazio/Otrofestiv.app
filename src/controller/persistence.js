@@ -8,7 +8,7 @@
 
 import { FESTIVAL_CONFIG } from '../config.js';
 import { report } from '../telemetry.js';
-import { deriveHydrate, deriveCloudSave, deriveCloudApply, deriveCloudMerge } from '../state/festival-context.js';
+import { FESTIVAL_STATE, deriveHydrate, deriveCloudSave, deriveCloudApply, deriveCloudMerge } from '../state/festival-context.js';
 import { closeAuthSheet } from '../view/sheets.js';
 import { showToast } from '../view/feedback.js';
 import { state } from '../state/state.js';
@@ -71,7 +71,14 @@ export function loadState(){
 }
 
 export function _cloudSave(field){
-  if(field) _dirtyFields.add(field); // qué campo cambió → merge por-campo en la subida
+  // Qué campo cambió → merge por-campo en la subida. SIN campo = push de fila entera
+  // (sign-in con nube vacía, o re-push al boot con cloudDirty persistido): la intención
+  // del caller es "el plan local es la verdad" → TODOS los campos cloud quedan dirty.
+  // CRÍTICO para el re-push: _dirtyFields vive en memoria y tras un reload está vacío;
+  // sin esto, el merge tomaba el remoto para todo, subía la fila sin cambios y LIMPIABA
+  // el flag dirty → ediciones offline perdidas en silencio (regresión cazada en auditoría).
+  if(field) _dirtyFields.add(field);
+  else FESTIVAL_STATE.forEach(e=>{ if(e.cloud) _dirtyFields.add(e.key); });
   if(!_sb||!_sbUser||_sbUser.is_anonymous) return; // anon = solo identidad de reportes, no sync de plan
   // Hay mutación local pendiente de subir → dirty. El boot-load no debe pisarla.
   storage.setCloudDirty(true);
