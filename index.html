@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607150800">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607150800">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607150825">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607150825">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -1822,7 +1822,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
   display:flex;flex-direction:column;
   align-items:center;justify-content:space-between;
   z-index:99999;
-  padding:calc(env(safe-area-inset-top) + 14dvh) 32px calc(env(safe-area-inset-bottom) + 10dvh);
+  padding:calc(env(safe-area-inset-top) + 14dvh) 32px calc(env(safe-area-inset-bottom) + 7dvh);
   text-align:center;
   transition:opacity .55s ease,
              filter .55s ease,
@@ -1876,7 +1876,10 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 
 .splash-action{width:100%;display:flex;flex-direction:column;align-items:center}
 .splash-wordmark span{color:var(--amber)}
-.splash-tagline{text-align:center;margin-bottom:var(--sp-6)}
+/* La tagline es firma de marca, no parte del cluster de acción: se separa del CTA
+   pesado con margin-top (asimetría intencional vs el gap wordmark→póster) y se ancla
+   como pie. En altura escasa el margin-top cede (media query max-height:480px). */
+.splash-tagline{text-align:center;margin-top:var(--sp-6);margin-bottom:var(--sp-6)}
 .splash-tagline-line{
   font-size:var(--t-md);font-weight:var(--w-semi);
   color:var(--gray);line-height:1.2;letter-spacing:-.01em;
@@ -1975,6 +1978,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
   .splash-info-tag{margin-top:3px}
   .splash-info-city{margin-top:var(--sp-1)}
   .splash-info-dates{margin-top:2px}
+  .splash-tagline{margin-top:0}
 }
 
 /* ── Volver arriba — mobile only ─── */
@@ -2748,7 +2752,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202607150800";
+    s.src="/src/main.js?v=202607150825";
     document.body.appendChild(s);
   }
   if (isApp || isDev) { bootApp(); return; }

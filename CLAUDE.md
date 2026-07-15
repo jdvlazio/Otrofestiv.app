@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `4b0f73f chore: bump (limpieza de código muerto + docs)`
+> Último commit: `4800ae7 style(splash): airear el ritmo vertical del bloque de info`
 
 ---
 
