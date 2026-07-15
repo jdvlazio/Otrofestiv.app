@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `b2b5265 feat(P3.1) LRU del cache de festivales — quita el techo de capacidad simultánea`
+> Último commit: `f5ff36e fix(P3.2/#10) SW deploy-safe: cachear el último index.html bueno`
 
 ---
 

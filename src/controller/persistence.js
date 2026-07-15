@@ -8,7 +8,7 @@
 
 import { FESTIVAL_CONFIG } from '../config.js';
 import { report } from '../telemetry.js';
-import { deriveHydrate, deriveCloudSave, deriveCloudApply } from '../state/festival-context.js';
+import { deriveHydrate, deriveCloudSave, deriveCloudApply, deriveCloudMerge } from '../state/festival-context.js';
 import { closeAuthSheet } from '../view/sheets.js';
 import { showToast } from '../view/feedback.js';
 import { state } from '../state/state.js';
@@ -17,24 +17,30 @@ import { t } from '../i18n/i18n.js';
 
 // Debounce timer de _cloudSave — module-local (solo _cloudSave lo usa).
 let _cloudSaveTimer=null;
+// Campos (state keys) editados localmente desde la última subida exitosa. El upsert
+// mergea POR CAMPO contra la fila remota (deriveCloudMerge): estos suben su valor local,
+// los demás conservan el remoto → no se pisa la edición concurrente de otro dispositivo.
+// Se limpia al confirmar la subida (solo los campos subidos; una edición durante el await
+// queda dirty y se sube en el próximo ciclo).
+let _dirtyFields=new Set();
 // Canal Realtime del sync del plan EN VIVO (F0.5) — module-local.
 // _planLive: el canal está SUBSCRIBED → alimenta el estado base del sync-dot.
 let _planChannel=null, _planChannelKey=null, _planRerenderCb=null, _planLive=false;
 
-export function saveWL(){ storage.setWatchlist(watchlist); _cloudSave(); }
+export function saveWL(){ storage.setWatchlist(watchlist); _cloudSave('watchlist'); }
 
-export function saveWatched(){ storage.setWatched(watched); _cloudSave(); }
+export function saveWatched(){ storage.setWatched(watched); _cloudSave('watched'); }
 
 export function saveRating(title,rating){
   state.update('filmRatings', o => rating>0 ? {...o, [title]: rating} : state._omit(o, title));
-  storage.setFilmRatings(filmRatings); _cloudSave();
+  storage.setFilmRatings(filmRatings); _cloudSave('filmRatings');
 }
 
-export function saveAV(){ storage.setAvailability(availability); _cloudSave(); }
+export function saveAV(){ storage.setAvailability(availability); _cloudSave('availability'); }
 
-export function saveSavedAgenda(){ storage.setSavedAgenda(savedAgenda); _cloudSave(); _scheduleNotifications(); }
+export function saveSavedAgenda(){ storage.setSavedAgenda(savedAgenda); _cloudSave('savedAgenda'); _scheduleNotifications(); }
 
-export function savePrio(){ storage.setPrioritized(prioritized); _cloudSave(); }
+export function savePrio(){ storage.setPrioritized(prioritized); _cloudSave('prioritized'); }
 
 export function saveLastSlot(){ storage.setLastRemovedSlots(lastRemovedSlots); }
 
@@ -64,7 +70,8 @@ export function loadState(){
   }catch(e){report(e,'loadState');}
 }
 
-export function _cloudSave(){
+export function _cloudSave(field){
+  if(field) _dirtyFields.add(field); // qué campo cambió → merge por-campo en la subida
   if(!_sb||!_sbUser||_sbUser.is_anonymous) return; // anon = solo identidad de reportes, no sync de plan
   // Hay mutación local pendiente de subir → dirty. El boot-load no debe pisarla.
   storage.setCloudDirty(true);
@@ -84,16 +91,38 @@ async function _doCloudSave(){
   // escriben al festival QUE SE GUARDÓ (_sk), no al activo actual — si no, se
   // marcaba el festival equivocado y el otro quedaba dirty para siempre.
   const _fest=_activeFestId, _sk=FESTIVAL_CONFIG[_fest]?.storageKey;
+  // Snapshot SÍNCRONO (antes de todo await): la fila local y qué campos venían dirty.
+  // Un edit durante el await NO entra en este snapshot → re-marca _dirtyFields y sube en
+  // el próximo ciclo (no se pierde, no se limpia de más).
+  const _localRow=deriveCloudSave();
+  // Capturar el SET vivo (no solo su binding): _flushCloudSave lo reasigna a uno nuevo en
+  // la frontera de festival → la limpieza-al-éxito de esta subida saliente debe tocar SU
+  // set, no el del festival entrante (si no, borraba un campo que el entrante acaba de marcar).
+  const _dirtySet=_dirtyFields;
+  const _dirtySnap=new Set(_dirtySet);
   try{
     const _ts=new Date().toISOString();
-    // Campos de la fila DERIVADOS de FESTIVAL_STATE (festival-context.js) — se
-    // capturan síncronamente acá (antes del await) leyendo los globals actuales.
+    // Merge por-campo contra la fila remota fresca: releer lo que hay en la nube y subir
+    // local solo en los campos que ESTE dispositivo tocó; los demás conservan el valor
+    // remoto → una edición concurrente de otro dispositivo a OTRO campo no se pisa. Si el
+    // fetch falla, se sube todo local (deriveCloudMerge con remote=null): nunca se pierde
+    // la edición local por un fallo de red.
+    let _remote=null;
+    try{
+      const{data}=await _sb.from('user_festival_state').select('*')
+        .eq('user_id',_sbUser.id).eq('festival_id',_fest).single();
+      _remote=data||null;
+    }catch(e){ /* fila inexistente o red caída → merge degrada a todo-local */ }
+    const _row=deriveCloudMerge(_localRow, _remote, _dirtySnap);
     await _sb.from('user_festival_state').upsert({
       user_id:_sbUser.id,
       festival_id:_fest,
-      ...deriveCloudSave(),
+      ..._row,
       updated_at:_ts
     },{onConflict:'user_id,festival_id'});
+    // Subida OK → limpiar solo los campos que subimos, del set CAPTURADO (un edit durante
+    // el await queda dirty; un cambio de festival ya reasignó _dirtyFields → no lo tocamos).
+    _dirtySnap.forEach(f=>_dirtySet.delete(f));
     storage.setCloudSyncedAt(_ts, _sk);
     storage.setCloudDirty(false, _sk);
     if(_fest===_activeFestId) _sbShowSyncDot('ok'); // el dot refleja el festival visible
@@ -110,9 +139,14 @@ async function _doCloudSave(){
 // una fila redundante y la edición vieja quedaba sin subir). Bug cazado en la
 // auditoría de festivales simultáneos.
 export function _flushCloudSave(){
-  if(!_cloudSaveTimer) return;
-  clearTimeout(_cloudSaveTimer); _cloudSaveTimer=null;
-  _doCloudSave(); // captura festival_id + arrays actuales (aún los del festival saliente)
+  if(_cloudSaveTimer){
+    clearTimeout(_cloudSaveTimer); _cloudSaveTimer=null;
+    _doCloudSave(); // captura festival_id + arrays + _dirtySet actuales (aún los del saliente)
+  }
+  // Slate limpio de campos dirty para el festival entrante. La subida saliente en vuelo
+  // ya capturó SU set (arriba) → esta reasignación no la afecta. Se corre siempre (aun sin
+  // timer), para no arrastrar dirty de un upload saliente fallido al festival entrante.
+  _dirtyFields=new Set();
 }
 
 // _cloudGuardSkip — decisión PURA del boot-load multi-dispositivo. true = NO
