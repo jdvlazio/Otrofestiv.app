@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `9ce719a style(splash): quitar el encabezado de año (minimalismo) — divisor de año diferido`
+> Último commit: `9a38c24 fix(splash): padTop 14dvh→7dvh — el prompt bajaba pegado al wordmark en iPhone con notch`
 
 ---
 
