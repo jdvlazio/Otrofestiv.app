@@ -82,10 +82,6 @@ function _selectCenteredCard(rail){
 // del riel como preview (sin selección → "Entrar" sigue disabled: regla 5 jul).
 // Cablea (idempotente) la selección-por-scroll GATEADA por gesto de usuario.
 export function _renderSplashRail(activeFestId){
-  // Encabezado de temporada: el año (festivalSeasonYear) como paraguas SOBRE el riel,
-  // abarcando vigentes + anteriores. Se oculta si no hay año (defensivo).
-  const seasonEl=document.getElementById('splash-season');
-  if(seasonEl){ const y=festivalSeasonYear(); seasonEl.textContent=y?String(y):''; seasonEl.style.display=y?'':'none'; }
   const rail=document.getElementById('splash-rail');
   if(rail){
     rail.innerHTML=_renderSplashRailHTML(state, activeFestId);
