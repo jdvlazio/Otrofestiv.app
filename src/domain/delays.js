@@ -5,6 +5,14 @@
 // El estado "confirmado" NO se almacena: se deriva acá del conjunto de reportes
 // vigentes (estilo CRDT convergente — cada cliente computa lo mismo).
 
+// cloudScreeningKey(title,day,time,venue) → clave compartida de una función:
+// título|día|hora|sede. La sede desambigua funciones repetidas (el _delayKey local
+// es solo título|día|hora). PURA — antes vivía en controller/delays-cloud.js, pero la
+// consume tanto el view (agenda) como el controller (handlers); su lugar es el dominio.
+export function cloudScreeningKey(title, day, time, venue){
+  return (title||'') + '|' + (day||'') + '|' + (time||'') + '|' + (venue||'');
+}
+
 // reports: [{ reporterId, delayMin, ageMin }]
 //   ageMin = minutos desde que se creó/actualizó el reporte (decaimiento).
 // Reglas:

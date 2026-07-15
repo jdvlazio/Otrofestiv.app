@@ -17,13 +17,10 @@
 // Fase B: además, nos SUSCRIBIMOS a los reportes del festival (Realtime), los
 // cacheamos y exponemos getDelayConsensus() para que el badge derive el estado.
 
-import { deriveDelayConsensus } from '../domain/delays.js';
-
-// screening_key compartida = título|día|hora|sede (la sede desambigua funciones
-// repetidas; el _delayKey local es solo título|día|hora).
-export function cloudScreeningKey(title, day, time, venue){
-  return (title||'') + '|' + (day||'') + '|' + (time||'') + '|' + (venue||'');
-}
+// cloudScreeningKey (constructor de clave, PURO) vive ahora en domain/delays.js.
+// Se re-exporta acá para no romper a handlers.js, que lo importa desde este módulo.
+import { deriveDelayConsensus, cloudScreeningKey } from '../domain/delays.js';
+export { cloudScreeningKey };
 
 // Upsert del reporte propio con el total de minutos vigente para esa función.
 export function cloudReportDelay(screeningKey, delayMin){
