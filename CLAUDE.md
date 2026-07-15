@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `30efe6a test(L3) fitness function [module-size]: ningún módulo crece en silencio`
+> Último commit: `6b1873b docs(ARQUITECTURA): documentar FestivalContext, sync por-campo, LRU y fitness functions`
 
 ---
 

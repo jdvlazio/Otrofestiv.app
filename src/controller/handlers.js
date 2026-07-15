@@ -668,12 +668,6 @@ export function filterBySection(section){
   },50);
 }
 
-export function setMiPlanView(mode){
-  miPlanViewMode=mode;
-  const _v = storage.getViewmodes(); _v.miPlan = mode; storage.setViewmodes(_v);
-  renderAgenda();
-}
-
 export function setInteresesView(mode){
   interesesViewMode=mode;
   const _v = storage.getViewmodes(); _v.intereses = mode; storage.setViewmodes(_v);

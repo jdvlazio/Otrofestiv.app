@@ -2,12 +2,9 @@
 // p8 Step 7e — Compartir plan (canvas/imagen) + export ICS.
 
 import { FESTIVAL_CONFIG } from '../config.js';
-import { ICONS } from '../view/components.js';
 import { DAYS, vcfg } from '../view/helpers.js';
-import { showActionModal, showToast } from '../view/feedback.js';
+import { showToast } from '../view/feedback.js';
 import { _festDate } from '../domain/time.js';
-import { screeningPassed } from '../domain/film.js';
-import { screensConflict } from '../domain/schedule.js';
 import { t } from '../i18n/i18n.js';
 import { _getDisplayName, _promptDisplayName } from './auth.js';  // share→auth (sharePlan pide nombre)
 
@@ -50,74 +47,6 @@ export async function sharePlan(){
   }
   // Fallback: descarga directa (desktop, sin file-share, o conversión/share fallida)
   _dlDirect(dataUrl);
-}
-
-export function shareAsImage(){
-  if(!savedAgenda||!savedAgenda.schedule||!savedAgenda.schedule.length){
-    showToast(t('plan_sin_plan'),'warn'); return;
-  }
-
-  // ── Guardia de integridad del plan ────────────────────────────
-  // Antes de generar la imagen verificamos tres condiciones:
-  // 1. Que todas las películas del plan siguen en la watchlist
-  // 2. Que no hay conflictos internos entre funciones del plan
-  // 3. Que al menos una función no ha pasado ya
-  const issues=[];
-
-  // 1. Películas del plan ya no en watchlist
-  const notInWL=savedAgenda.schedule.filter(s=>!watchlist.has(s._title));
-  if(notInWL.length){
-    const names=notInWL.map(s=>s._title.length>20?s._title.slice(0,18)+'…':s._title).join(', ');
-    issues.push(t('share_no_intereses',{names}));
-  }
-
-  // 2. Conflictos internos entre funciones del plan
-  const sched=savedAgenda.schedule;
-  const conflicting=[];
-  for(let i=0;i<sched.length;i++){
-    for(let j=i+1;j<sched.length;j++){
-      if(sched[i].day===sched[j].day && screensConflict(sched[i],sched[j])){
-        conflicting.push(sched[i]._title);
-      }
-    }
-  }
-  if(conflicting.length){
-    const names=[...new Set(conflicting)].map(t=>t.length>20?t.slice(0,18)+'…':t).join(', ');
-    issues.push(t('share_solapadas',{names}));
-  }
-
-  // 3. Plan completamente pasado
-  const stillActive=savedAgenda.schedule.some(s=>!screeningPassed(s));
-  if(!stillActive) issues.push(t('share_todas_pasaron'));
-
-  // Si hay problemas: mostrar advertencia con opción de continuar igual
-  if(issues.length){
-    const msg=`<b>${t('plan_desactualizado')}</b><br><br>`
-      +issues.map(i=>`• ${i}`).join('<br>')
-      +`<br><br>${t('share_compartir_igual_q')}`;
-    showActionModal(
-      `${ICONS.share} ${t('share_compartir_imagen')}`,
-      msg,
-      t('share_compartir_igual'),
-      ()=>{_generateAndShare();},
-      t('share_revisar_plan')
-    );
-    return;
-  }
-
-  _generateAndShare();
-}
-
-export function _generateAndShare(){
-  let canvas,dataUrl;
-  try{
-    canvas=_buildAgendaCanvas();
-    dataUrl=canvas.toDataURL('image/png');
-    if(!dataUrl||dataUrl==='data:,') throw new Error('canvas vacío');
-  }catch(e){
-    showToast(t('toast_err_imagen'),'err'); return;
-  }
-  _showImageModal(dataUrl,canvas);
 }
 
 export function _buildAgendaCanvas(){
@@ -243,48 +172,6 @@ export function _rr(c,x,y,w,h,r){
   c.lineTo(x+w,y+h-r);c.quadraticCurveTo(x+w,y+h,x+w-r,y+h);
   c.lineTo(x+r,y+h);c.quadraticCurveTo(x,y+h,x,y+h-r);
   c.lineTo(x,y+r);c.quadraticCurveTo(x,y,x+r,y);c.closePath();
-}
-
-export function _showImageModal(dataUrl,canvas){
-  const prev=document.getElementById('img-share-modal');if(prev)prev.remove();
-  const isIOS=/iPad|iPhone|iPod/.test(navigator.userAgent);
-  const ov=document.createElement('div');
-  ov.id='img-share-modal';
-  ov.style.cssText='position:fixed;inset:0;background:var(--overlay-92);z-index:9999;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px;box-sizing:border-box;gap:var(--sp-btn)';
-  const hint=document.createElement('p');
-  hint.style.cssText='color:var(--gray);font-size:var(--t-caption);font-family:system-ui;text-align:center;margin:0;line-height:1.6';
-  hint.textContent=isIOS?t('misc_mantener'):t('misc_descargar_guardar');
-  ov.appendChild(hint);
-  const img=document.createElement('img');
-  img.src=dataUrl;
-  img.style.cssText='max-width:100%;max-height:62vh;border-radius:var(--r);display:block;box-shadow:0 8px 32px var(--overlay-70)';
-  ov.appendChild(img);
-  const row=document.createElement('div');
-  row.style.cssText='display:flex;gap:10px;width:100%;max-width:320px';
-  if(!isIOS){
-    const btnDl=document.createElement('button');
-    btnDl.textContent='⬇ '+t('misc_descargar');
-    btnDl.style.cssText='flex:1;padding:var(--sp-btn);background:var(--amber);color:var(--black);border:none;border-radius:var(--r-md);font-size:var(--t-base);font-family:system-ui;font-weight:var(--w-bold);cursor:pointer';
-    btnDl.onclick=function(){
-      if(navigator.share&&navigator.canShare){
-        canvas.toBlob(blob=>{
-          if(!blob){_dlDirect(dataUrl);return;}
-          const file=new File([blob],'otrofestiv-miplan.png',{type:'image/png'});
-          if(navigator.canShare({files:[file]})){navigator.share({files:[file]}).then(()=>{ov.remove();showToast(t('toast_compartido'),'info');}).catch(()=>_dlDirect(dataUrl));}
-          else{_dlDirect(dataUrl);}
-        },'image/png');
-      }else{_dlDirect(dataUrl);}
-    };
-    row.appendChild(btnDl);
-  }
-  const btnX=document.createElement('button');
-  btnX.textContent=t('misc_cerrar');
-  btnX.style.cssText=(isIOS?'flex:1;':'')+'padding:var(--sp-btn) var(--sp-5);background:rgba(255,255,255,0.08);color:var(--gray2);border:none;border-radius:var(--r-md);font-size:var(--t-base);font-family:system-ui;cursor:pointer';
-  btnX.onclick=()=>ov.remove();
-  row.appendChild(btnX);
-  ov.appendChild(row);
-  ov.addEventListener('click',e=>{if(e.target===ov)ov.remove();});
-  document.body.appendChild(ov);
 }
 
 export function _dlDirect(dataUrl){
