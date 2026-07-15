@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `bc48ed1 fix(watch): reintentar el push del festival — no aterrizaba desde el splash al boot`
+> Último commit: `9202540 feat(miplan): Sugerencias solo del día seleccionado (menos ruido, no otro plan)`
 
 ---
 

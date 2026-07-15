@@ -1103,7 +1103,7 @@ export function _renderSavedAgendaHTML(state, consensus){
   if(suggDays.length){
     suggDays.forEach(day=>{
       html+=`<div class="suggestion-day-lbl">${dayLabelLong(day)}</div>`;
-      html+=suggsByDay[day].slice(0,4).map(f=>{
+      html+=suggsByDay[day].map(f=>{
         const vc2=vcfg(f.venue),sl=sala(f.venue);
         const _sp=getFilmPoster(f);
         const _sph=_posterThumb(f,'lb-poster');
