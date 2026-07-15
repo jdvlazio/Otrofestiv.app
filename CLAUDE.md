@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `74c1ae6 style(splash): el año como encabezado de temporada (paraguas), no divisor en el riel`
+> Último commit: `9ce719a style(splash): quitar el encabezado de año (minimalismo) — divisor de año diferido`
 
 ---
 
