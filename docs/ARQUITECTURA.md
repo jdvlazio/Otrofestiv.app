@@ -1,6 +1,7 @@
 # OTROFESTIV — Documento de Arquitectura
 > Referencia canónica para implementación. Leer antes de tocar código.
-> Última actualización: JUN 2026 · app modular ESM en `src/` (Fase 8 completada) · `index.html` = shell
+> Última actualización: JUL 2026 · app modular ESM en `src/` (Fase 8 completada) · `index.html` = shell
+> · MVC migrado; invariantes de capas y estado protegidos por fitness functions (§15.4)
 
 ---
 
@@ -13,13 +14,15 @@
 ├── manifest.json               ← PWA manifest
 ├── version.json                ← Build timestamp (android+ios) — sincronizado por bump-version.js
 ├── src/                        ← App modular ESM (Fase 8). Mapa detallado de módulos en §16.2
-│   ├── main.js                 ← Bootstrap + STATE/VIEWSTATE bridge; importa el resto
-│   ├── config.js               ← FESTIVAL_CONFIG · VENUES · NOTICES · taxonomía/colores de sección
+│   ├── main.js                 ← Bootstrap + STATE/VIEWSTATE bridge + ACTION_REGISTRY; importa el resto
+│   ├── config.js               ← FESTIVAL_CONFIG · VENUES · NOTICES · taxonomía/colores de sección + mergeFestivalSections()
+│   ├── telemetry.js            ← report(err, ctx) → Sentry (captura no bloqueante)
+│   ├── lru.js                  ← lruTouch() — decisión PURA del LRU del cache de festivales (§8.3)
 │   ├── i18n/i18n.js            ← Bloque _I18N (es/en/pt) — FUENTE DE VERDAD de strings (la lee t())
-│   ├── domain/                 ← Funciones puras: time · film · schedule · festival · conflict · venues
-│   ├── controller/             ← Handlers, pipeline, persistence, festival, sheets, calc
+│   ├── domain/                 ← Funciones puras: time · film · schedule · festival · conflict · venues · delays
+│   ├── controller/             ← Handlers, pipeline, persistence, festival, sheets, calc, loader, delays-cloud
 │   ├── view/                   ← Render puro: agenda · programa · components · helpers
-│   ├── state/                  ← state container + viewstate (bridge)
+│   ├── state/                  ← state container + viewstate (bridge) + festival-context (§8.1)
 │   └── storage/                ← adapter de localStorage
 ├── festivals/                  ← Un JSON por festival (films[] con poster/lbSlug inline)
 │   ├── ficci-65 · aff-2026 · cinemancia-2025      ← archivados / test
@@ -358,6 +361,23 @@ otrofestiv_lang       ← idioma activo: 'es' | 'en'
 otrofestiv_build      ← build version (para invalidación de cache)
 ```
 
+### 8.1 FestivalContext — fuente única del estado por-festival
+
+`src/state/festival-context.js` declara **qué estado es por-festival** en UNA tabla (`FESTIVAL_STATE`, 9 entradas). Antes esa definición vivía IMPLÍCITA en 4 listas paralelas mantenidas a mano (el clear al cambiar de festival, el hidrate desde storage, los campos que suben a la nube, las ramas al aplicar la nube). Agregar un estado por-festival exigía tocar ~9 sitios; olvidar UNO producía sangrado silencioso entre festivales (el bug de `availability`).
+
+Cada entrada declara: `key` (nombre en el roster de state) · `empty(cfg)` (valor fresco al cambiar de festival) · `hydrate()` (valor desde storage) · `storage` (sufijo get/set) · `cloud` (columna en Supabase, o `null`) · `toCloud`/`fromCloud` (serialización). Los 4 consumidores se **DERIVAN** de la tabla: `deriveClear` · `deriveHydrate` · `deriveCloudSave` · `deriveCloudApply`. **Agregar estado por-festival = 1 entrada** (+ 1 columna Supabase si se sincroniza). La fitness function `festivalContext.test.js` afirma completitud vs. el roster y storage (§15.4).
+
+### 8.2 Sync a la nube (Supabase `user_festival_state`)
+
+- **Token de generación** (`loadFestival`): cada carga captura un `_loadGen`; tras cada `await` se re-verifica → una carga más nueva aborta la vieja (evita que el plan del festival A se escriba bajo las claves del B en redes lentas).
+- **`_flushCloudSave`** al tope de `loadFestival`: sube la edición del festival saliente a SU fila antes de swapear el estado.
+- **Merge POR CAMPO antes de subir** (`deriveCloudMerge`): el upsert de la fila entera es last-write-wins. Antes de subir se relee la fila remota; un campo que ESTE dispositivo editó (`_dirtyFields`) sube su valor local, un campo no tocado conserva el remoto → dos dispositivos editando campos distintos no se pisan. Merge a nivel de **campo**, no de elemento (no resucita borrados). `_cloudSave()` **sin** argumento = "el plan local es la verdad" = todos los campos dirty (re-push al boot: `_dirtyFields` está vacío tras un reload). Residual conocido: mismo campo + misma ventana de debounce sigue siendo last-write-wins (necesitaría timestamps por-campo).
+- **Realtime** (`subscribePlanCloud`): aplica cambios entrantes con `wholesale=true` (autoritativo), guardado por festival activo + `_shouldApplyRealtimeRow` (no pisa ediciones locales dirty).
+
+### 8.3 Cache de festivales en memoria (LRU)
+
+`FESTIVAL_CONFIG[id].films/posters/…` se cachean tras la primera carga. `src/lru.js` (`lruTouch`, puro) mantiene hasta `_FEST_CACHE_CAP=8` festivales cacheados y evicta el menos-usado; el festival activo nunca se evicta. Quita el techo de capacidad simultánea sin acumular memoria sin cota.
+
 ---
 
 ## 9. CONFLICTOS DE HORARIO
@@ -461,13 +481,30 @@ Verificar en dispositivo físico antes de commitear cambios con: `overflow`, `po
 | Modificar `aria-label` en `role="dialog"` activo | puede triggear reposicionamiento de foco |
 | `data-i18n` en `<script>` o `<style>` | nunca — `_applyI18nDOM` tiene guard pero la regla es no hacerlo |
 
+### 15.4 Fitness functions — invariantes de arquitectura verificadas en CI
+
+Las invariantes de arquitectura **no se documentan y confía**: se verifican. `validate.py` (37+ checks) y los unit tests (`node --test tests/unit/*.test.js`) corren en el CI (`bump-and-validate.yml`); ambos deben pasar. Los que protegen la modularidad:
+
+| Check / test | Qué congela |
+|---|---|
+| `[layer-direction]` (validate.py) | Las dependencias apuntan hacia adentro: `domain/` no importa de controller/view; `state`/`storage` tampoco; `view/` no importa de controller salvo una **allowlist** (`getConsensusMap` — lectura de estado derivado). Antes era medición manual. |
+| `[module-size]` (validate.py) | Techo de 800 líneas para módulos nuevos; los grandes actuales grandfathered a su tamaño (allowlist) → solo pueden encoger. Crecerlos exige subir el techo en el código (decisión revisada). |
+| `[section-map-dupes]` | Claves duplicadas en los mapas de sección (una pisa a la otra en silencio). |
+| `festivalContext.test.js` | Completitud de `FESTIVAL_STATE` (§8.1) vs. el roster de state + pares get/set de storage → imposible olvidar registrar un estado por-festival. Congela también el merge por-campo (`deriveCloudMerge`) y wholesale-vs-parcial. |
+| `festivalConfigCoherence.test.js` | Coherencia de `FESTIVAL_CONFIG` + `mergeFestivalSections` (secciones data-driven desde el JSON del festival). |
+| `lruCache.test.js` | La decisión pura del LRU (§8.3): mueve a MRU, evicta el menos-usado, nunca el activo. |
+
+> Regla: al cambiar la firma/deps de una función de dominio (ej. un `import` interno nuevo) suele haber que actualizar `tests/lib/load-domain.js` (`DEFAULT_FNS`) además del test.
+
 ---
 
 ## 16. ARQUITECTURA OBJETIVO — MVC vanilla JS
 
-> **DESTINO, NO ESTADO ACTUAL.** Las secciones 1–15 documentan el código tal como existe hoy. Esta sección documenta hacia dónde estamos migrando. Las Fases 1 y 2 ya están en producción (capa Model parcialmente extraída con tests). El resto del roadmap está propuesto.
+> **MIGRACIÓN COMPLETADA (JUL 2026).** El roadmap MVC (Fases 1–8) ya está en producción: las capas están separadas (`domain/` = Model puro, `view/` = render puro, `controller/` = orquestación, `state`+`storage` = estado) y su dirección de dependencia la protege una fitness function (§15.4). Esta sección se conserva como registro del diseño objetivo y su rationale.
 >
-> Si tocás código siguiendo esta sección, declarar explícitamente que estás avanzando una Fase del roadmap. Para el comportamiento actual, mirar 1–15.
+> **Diferencias de nombre vs. lo real:** el destino abajo dice `model/`; la implementación usa `domain/` (funciones puras) + `state/` + `storage/`. La estructura viva es §1.
+>
+> **Deuda residual conocida:** el STATE/VIEWSTATE **bridge** (estado expuesto como globals bare para que los módulos lo lean sin importarlo) sigue vigente — contenido (6 puntos de `globalThis`, centralizados) y protegido por `[layer-direction]`. Migrarlo a imports explícitos es trabajo grande de bajo retorno; diferido a cuando duela.
 
 ### 16.1 Principios
 
