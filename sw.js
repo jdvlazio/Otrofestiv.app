@@ -1,13 +1,16 @@
-// Otrofestiv — Service Worker v15
+// Otrofestiv — Service Worker v16
 // Estrategia: HTML siempre desde red. Assets en caché.
 // v14: hadController guard en cliente (fix first-install double-reload)
 //      version.json con android/ios independientes para staged rollout
 // v15: navigate de clientes en CADA activación, no solo first-install.
 //      controllerchange en iOS WKWebView es flaky — este reload es la
 //      garantía de que HTML cacheado se descarta inmediatamente al deploy.
+// v16: DEPLOY-SAFE — se cachea el último index.html bueno; si la red falla durante
+//      el reload forzado por deploy, se sirve ese HTML en vez de OFFLINE_HTML (una
+//      sesión viva ya no se destruye por un deploy con señal mala). Audit P3 #10.
 
-const CACHE_NAME = 'otrofestiv-v202607141856';
-const BUILD = '202607141856';
+const CACHE_NAME = 'otrofestiv-v202607141917';
+const BUILD = '202607141917';
 // Caché PERSISTENTE de assets inmutables (pósters, iconos, fonts): NO se borra
 // en activate. Durante un festival deployamos a diario; sin esto, cada deploy
 // obligaba a re-descargar ~8MB de pósters ya vistos (señal rural en sede).
@@ -58,10 +61,21 @@ self.addEventListener('fetch', event => {
   // HTML → siempre desde red. no-cache (no no-store): revalida con ETag contra
   // el servidor — 304 de ~cientos de bytes cuando no cambió, cuerpo completo
   // cuando sí. Misma garantía de frescura por deploy, ~97% menos datos por apertura.
+  // DEPLOY-SAFE: se cachea el último HTML bueno. El activate fuerza navigate(reload)
+  // de todos los clientes en CADA deploy; si la red falla EN ESE instante (señal
+  // rural en sede, deploys diarios en septiembre), sin caché el reload mataba una
+  // sesión que funcionaba → OFFLINE_HTML. Ahora sirve el último index.html cacheado
+  // y la sesión sobrevive. El caché es del build actual (CACHE_NAME se purga en
+  // activate y se re-puebla al primer fetch ok), así que nunca sirve HTML stale.
   if (request.destination === 'document') {
     event.respondWith(
       fetch(new Request(request, { cache: 'no-cache' }))
-        .catch(() => caches.match(request)
+        .then(res => {
+          if (res.ok) { const clone = res.clone(); caches.open(CACHE_NAME).then(c => c.put(request, clone)); }
+          return res;
+        })
+        .catch(() => caches.match(request, { ignoreSearch: true })
+          .then(c => c || caches.match('/', { ignoreSearch: true }))
           .then(c => c || new Response(OFFLINE_HTML, {headers:{'Content-Type':'text/html;charset=utf-8'}}))
         )
     );
