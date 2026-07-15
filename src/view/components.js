@@ -549,7 +549,14 @@ export function _renderSplashRailHTML(state, activeFestId){
       : `<span class="splash-card-fb">${festivalShortName(cfg)}</span>`;
     return`<button class="splash-card${isPast?' past':''}${isActive?' on':''}" data-fest="${id}" role="option" aria-selected="${isActive}" data-action="selectSplashFest" data-name="${label}" data-meta="${meta}"><span class="splash-card-tpl">${art}</span></button>`;
   };
-  let html=current.map(e=>mkCard(e,false)).join('');
+  // Divisor de TEMPORADA: el año (festivalSeasonYear) vive UNA vez encabezando los
+  // vigentes, con el mismo vocabulario que "ANTERIORES" (bar/label/bar) → deja de
+  // repetirse en cada fecha del info. Solo si hay vigentes (si todo es pasado, el año
+  // no ancla nada y colgar un divisor de primero descentraría el snap).
+  const season=festivalSeasonYear();
+  let html='';
+  if(current.length && season) html+=`<span class="splash-rail-div splash-rail-year" aria-hidden="true"><span class="srd-bar"></span><span class="srd-lbl srd-year">${season}</span><span class="srd-bar"></span></span>`;
+  html+=current.map(e=>mkCard(e,false)).join('');
   // Divisor "ANTERIORES" solo separa DOS grupos: si no hay vigentes (todos pasados)
   // no se emite (colgar de primero descentra el snap inicial → auto-selección).
   if(current.length && past.length) html+=`<span class="splash-rail-div" aria-hidden="true"><span class="srd-bar"></span><span class="srd-lbl">${t('splash_anteriores')}</span><span class="srd-bar"></span></span>`;
