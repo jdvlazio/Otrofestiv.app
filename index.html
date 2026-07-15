@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607150721">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607150721">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607150800">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607150800">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -1894,7 +1894,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .splash-rail{
   display:flex;width:100%;gap:var(--sp-3);align-items:center;
   overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;
-  padding:2px calc(50% - var(--poster-w)/2);margin:var(--sp-3) 0 var(--sp-2);
+  padding:2px calc(50% - var(--poster-w)/2);margin:var(--sp-3) 0 var(--sp-4);
 }
 .splash-rail::-webkit-scrollbar{display:none}
 .splash-card{
@@ -1925,15 +1925,18 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
   font-size:var(--t-label);color:var(--gray2);letter-spacing:.6px;text-transform:uppercase;
   writing-mode:vertical-rl;transform:rotate(180deg);
 }
-/* Bloque de info: Nombre / tagline / CIUDAD / FECHAS (·AÑO en pasados) */
-.splash-info{text-align:center;min-height:78px;padding:0 var(--sp-4);margin-bottom:var(--sp-4)}
+/* Bloque de info: Nombre / tagline / CIUDAD / FECHAS (·AÑO en pasados).
+   Ritmo vertical aireado: nombre y tagline se separan del par CIUDAD/FECHA (que
+   quedan agrupados, misma familia de dato) y el bloque respira antes de "Entrar"
+   (margin-bottom sp-6). El @media (max-height:480px) colapsa estos márgenes. */
+.splash-info{text-align:center;min-height:92px;padding:0 var(--sp-4);margin-bottom:var(--sp-6)}
 .splash-info-name{font-size:var(--t-lg);font-weight:var(--w-display);color:var(--white);letter-spacing:-.02em;line-height:1.15}
 /* min-height reserva una línea aunque el tagline esté vacío (Tribeca: fullName===name)
    → CIUDAD y FECHA no brincan de posición al cambiar de festival. */
-.splash-info-tag{font-size:var(--t-sm);color:var(--gray);margin-top:3px;line-height:1.4;min-height:calc(var(--t-sm) * 1.4)}
-.splash-info-city{font-size:var(--t-sm);color:var(--gray2);text-transform:uppercase;letter-spacing:.4px;margin-top:var(--sp-2)}
+.splash-info-tag{font-size:var(--t-sm);color:var(--gray);margin-top:var(--sp-2);line-height:1.4;min-height:calc(var(--t-sm) * 1.4)}
+.splash-info-city{font-size:var(--t-sm);color:var(--gray2);text-transform:uppercase;letter-spacing:.4px;margin-top:var(--sp-3)}
 .splash-info-city .live-dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--green);margin-right:5px;vertical-align:1px}
-.splash-info-dates{font-size:var(--t-sm);color:var(--gray2);text-transform:uppercase;letter-spacing:.4px;margin-top:2px}
+.splash-info-dates{font-size:var(--t-sm);color:var(--gray2);text-transform:uppercase;letter-spacing:.4px;margin-top:var(--sp-1)}
 .splash-enter-btn{
   width:100%;max-width:300px;
   background:var(--amber);border:none;
@@ -1967,6 +1970,11 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
   #otrofestiv-splash{padding:calc(env(safe-area-inset-top) + 4dvh) 32px calc(env(safe-area-inset-bottom) + 3dvh)}
   .splash-info{min-height:0;margin-bottom:0}
   .splash-rail{margin:var(--sp-1) 0}
+  /* En altura escasa, el ritmo aireado del info cede a compacto: cada línea vuelve
+     a su margen mínimo para que los 3 actores + "Entrar" entren completos. */
+  .splash-info-tag{margin-top:3px}
+  .splash-info-city{margin-top:var(--sp-1)}
+  .splash-info-dates{margin-top:2px}
 }
 
 /* ── Volver arriba — mobile only ─── */
@@ -2740,7 +2748,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202607150721";
+    s.src="/src/main.js?v=202607150800";
     document.body.appendChild(s);
   }
   if (isApp || isDev) { bootApp(); return; }
