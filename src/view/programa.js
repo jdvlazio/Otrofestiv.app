@@ -396,7 +396,7 @@ export function render(){
   const cntEl=document.getElementById('cnt');
   cntEl.innerHTML=''; // count eliminado — redundante con lugar-btn y chips
   const grid=document.getElementById('grid');
-  if(!films.length){grid.innerHTML=emptyState(ICONS.search,t('plan_sin_actividades'),t('empty_filtros'));return;}
+  if(!films.length){grid.innerHTML=emptyState(ICONS.search,t('filter_sin_actividades'),t('empty_filtros'));return;}
   // ── Vista horario: poster-grid 3 col + overlay de hora ──
   grid.innerHTML='<div class="poster-grid">'+films.map((f,i)=>{
     const isProg=f.is_cortos;
