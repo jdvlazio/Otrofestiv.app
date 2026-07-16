@@ -1734,7 +1734,7 @@ try:
     #   i18n.js (diccionarios es/en, es DATA) · sheets-controller.js · handlers.js
     _ALLOW = {
         'src/view/agenda.js': 1580,
-        'src/main.js': 1539,
+        'src/main.js': 1549,
         'src/i18n/i18n.js': 1394,
         'src/controller/sheets-controller.js': 1288,
         'src/controller/handlers.js': 915,

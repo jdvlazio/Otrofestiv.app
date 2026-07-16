@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `06effd0 feat(conflictos): distinguir solape de desplazamiento — 🕐 reloj vs 🗺️ ruta`
+> Último commit: `7a4bab1 feat(rating): programas se califican OBRA POR OBRA + las estrellas post-vista suben a la nube`
 
 ---
 
