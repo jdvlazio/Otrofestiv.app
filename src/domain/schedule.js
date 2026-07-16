@@ -33,6 +33,36 @@ export function screensConflict(a,b){
   return true; // solapamiento directo
 }
 
+// screensConflictReason(a,b) — el MOTIVO del conflicto, para poder explicarlo.
+// screensConflict() responde sí/no (la consumen el planeador y su worker); ésta dice
+// POR QUÉ, reusando esa misma regla como fuente (no la duplica) → nunca divergen.
+// NO va en _SCHED_PURE_FNS: es para explicar en la UI, el worker no la necesita.
+//
+// Devuelve null si no hay conflicto, o:
+//   {kind:'solape'}                     — las horas se pisan. Es un DATO (tenemos las
+//                                         horas) → la UI puede AFIRMARLO.
+//   {kind:'viaje', travel, gap, bFirst} — NO se pisan, pero el hueco < viaje+buffer
+//                                         entre sedes distintas. `travel` es una
+//                                         ESTIMACIÓN (heurística km/h) → la UI SUGIERE,
+//                                         no afirma, y muestra los minutos.
+//   {kind:'ajustado', gap, bFirst}      — misma sede, hueco < buffer (sin viaje).
+// bFirst: true si `b` termina antes de que empiece `a` (para decir "desde X" vs "hasta X").
+//
+// Motivo: "Choca con X" era el mismo mensaje para dos problemas distintos y no decía
+// ninguno — el usuario buscaba un solape inexistente (caso real TT: Contra Todo
+// 13:00–14:55 en Cinemateca → Raíces del juego 16:00 en Fontanar: 65 min de hueco,
+// 17,6 km de por medio).
+export function screensConflictReason(a,b){
+  if(!screensConflict(a,b)) return null;
+  const aS=toMin(a.time), aE=aS+effectiveDuration(a);
+  const bS=toMin(b.time), bE=bS+effectiveDuration(b);
+  if(aE>bS && bE>aS) return {kind:'solape'}; // ninguno termina antes de que arranque el otro
+  const bFirst = bE<=aS;
+  const gap = bFirst ? (aS-bE) : (bS-aE);
+  const travel = (a.venue&&b.venue) ? travelMins(a.venue,b.venue) : 0;
+  return travel>0 ? {kind:'viaje', travel, gap, bFirst} : {kind:'ajustado', gap, bFirst};
+}
+
 export function isScreeningBlocked(s){
   const av=availability[s.day];if(!av) return false;
   // effectiveDuration (no parseDur): incluye los +30 de Q&A, consistente con

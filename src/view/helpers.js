@@ -310,6 +310,14 @@ export const _lblLocalized = lbl => {
 
 export const durFmt    = d   => d ? (String(d).includes('min') ? String(d) : String(d)+' min') : '';
 
+// _minFmt(m) — minutos (número) → "1 h 45" / "45 min". Para los detalles del conflicto
+// por desplazamiento ("~1 h 45 de viaje · 1 h 05 de hueco"). durFmt formatea la duración
+// de una actividad (string del JSON); esto formatea un cómputo nuestro.
+export const _minFmt   = m   => {
+  const _m=Math.max(0,Math.round(m||0)), h=Math.floor(_m/60), mn=_m%60;
+  return h ? `${h} h${mn?' '+String(mn).padStart(2,'0'):''}` : `${mn} ${t('label_min')}`;
+};
+
 export const flagFmt   = fl  => fl||'';
 
 export function _langDates(cfg) {

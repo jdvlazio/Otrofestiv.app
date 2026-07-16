@@ -13,7 +13,7 @@ import {
   ICONS, _secLabel, _secLabelFull, _sectionColor, makeEventPoster, parseProgramTitle, renderAvBlocksHTML, renderFlowProgress,
 } from './components.js';
 import {
-  DAYS, DAY_SHORT_EN, _dayChips, editorialFrame, _isEditorialPoster, _langDates, _lblLocalized, _mkCortoItemHtml, _posterThumb, dayChip, dayLabel, dayLabelLong, durFmt, emptyState, emptyStateHero, flagFmt, getFilmPoster, isToday, mplanBlockType, mplanEndStr, sala, starsText, travelWarn, vcfg, delayConsensusBadge,
+  DAYS, DAY_SHORT_EN, _dayChips, editorialFrame, _isEditorialPoster, _langDates, _lblLocalized, _minFmt, _mkCortoItemHtml, _posterThumb, dayChip, dayLabel, dayLabelLong, durFmt, emptyState, emptyStateHero, flagFmt, getFilmPoster, isToday, mplanBlockType, mplanEndStr, sala, starsText, travelWarn, vcfg, delayConsensusBadge,
 } from './helpers.js';
 import {
   _festDate, _festNowMin, festivalEnded, minToStr, parseDur, simNow, simTodayStr, toMin,
@@ -29,7 +29,7 @@ import {
   screeningPassed,
 } from '../domain/film.js';
 import {
-  isScreeningBlocked, screensConflict,
+  isScreeningBlocked, screensConflict, screensConflictReason,
 } from '../domain/schedule.js';
 import {
   _getFestivalPhase, travelMins,
@@ -1237,11 +1237,14 @@ export function buildResultHTML(scenarios){
       } else {
         // Buscar conflicto con el schedule actual
         let conflictWith=null,conflictWhen=null;
+        let conflictReason=null;
         for(const s of screens){
           for(const c of sc.schedule){
-            if(screensConflict(s,c)){
+            const _r=screensConflictReason(s,c);
+            if(_r){
               const{displayTitle:ct}=parseProgramTitle(c._title||'');
               conflictWith=ct;
+              conflictReason=_r;
               const _ds=dayLabel(c.day)||c.day||'';
               conflictWhen=_ds+(c.time?' '+c.time:'');
               break;
@@ -1250,7 +1253,19 @@ export function buildResultHTML(scenarios){
           if(conflictWith) break;
         }
         if(conflictWith){
-          reason=`<div class="excl-reason conflict">${t('plan_choca_con',{title:conflictWith})}${conflictWhen?' · '+conflictWhen:''}</div>`;
+          // Convención: 🕐 solape (dato → afirmamos) · 🗺️ viaje (estimación → sugerimos
+          // y mostramos los minutos, que el usuario juzgue). Antes ambos decían "Choca
+          // con X" — mismo mensaje para dos problemas distintos, y no decía ninguno.
+          const _k=conflictReason?conflictReason.kind:'solape';
+          const _ico=_k==='viaje'?ICONS.route:ICONS.clock;
+          const _msg=_k==='solape'
+            ? t('conflict_solapa',{title:conflictWith})
+            : t(conflictReason.bFirst?'conflict_justo_desde':'conflict_justo_hasta',{title:conflictWith});
+          const _det=_k==='viaje'
+            ? t('conflict_viaje_det',{travel:_minFmt(conflictReason.travel), gap:_minFmt(conflictReason.gap)})
+            : _k==='ajustado' ? t('conflict_hueco_det',{gap:_minFmt(conflictReason.gap)}) : '';
+          reason=`<div class="excl-reason conflict">${_ico} ${_msg}${conflictWhen?' · '+conflictWhen:''}</div>`
+            +(_det?`<div class="excl-reason-det">${_det}</div>`:'');
           canInclude=true;
         } else if(screens.length){
           reason=`<div class="excl-reason">${t('plan_choca')}</div>`;
