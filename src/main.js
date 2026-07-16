@@ -26,6 +26,7 @@ import './state/viewstate.js';
 //   FESTIVAL_STORAGE_KEY). saveX/loadState orquestadoras se quedan en main.js. ──
 import { storage } from './storage/storage.js';
 import { onDomReady } from './util/ready.js';
+import { report } from './telemetry.js';
 
 // ── Step 4: i18n.js (import — _I18N + t + _applyI18nDOM). _lang vive en state
 //   (bridge); la init eval-time de _lang se queda en main.js, setLang → pipeline.js (8d-3).
@@ -443,7 +444,7 @@ FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202607161659';
+const BUILD_VERSION='202607161820';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';
@@ -1307,22 +1308,24 @@ initWatchBridge();
 ────────────────────────────────────────────────────────────── */
 // Sincronizar el primer tick con el siguiente minuto del reloj del sistema
 // Así el contador avanza exactamente cuando cambia el minuto — no con retraso
-function _startTickLoop(){
-  setInterval(function(){
-    // Planear
-    if(activeMNav==='mnav-planner' && activeView==='agenda'){
-      renderAgenda();
-    }
-    // Cartelera
-    if(activeView==='day'){
-      render();
-    }
-    // Mi Plan — contador de minutos next-film-strip
-    if(activeMNav==='mnav-miplan' && activeView==='agenda'){
+// _tickRender — repinta la vista ACTIVA (liviano: sin invalidar cachés ni recomputar
+// el planner). Rutea por activeMNav, NO por conjunciones estrechas de (mnav && view):
+// el bug del contador congelado ("4h 39min" quieto por horas, cazado por Juan en TT)
+// era esta clase — cualquier combinación de estado fuera de las 3 contempladas dejaba
+// los headers sensibles al tiempo (TIEMPO LIBRE, AHORA, Ya pasó) sin repintar jamás.
+// renderAgenda() rutea internamente seleccion/miplan/planner.
+function _tickRender(){
+  try{
+    if(activeMNav==='mnav-cartelera'){
+      if(activeView==='day') render();
+    }else{
       renderAgenda();
     }
     updateAgTab();
-  }, 60000);
+  }catch(e){ report(e,'tickRender'); }
+}
+function _startTickLoop(){
+  setInterval(_tickRender, 60000);
 }
 // Esperar al próximo minuto exacto antes de iniciar el loop
 const _msToNextMin=(60-new Date().getSeconds())*1000;
@@ -1357,17 +1360,24 @@ setPlanRerender(function(){
 })();
 document.addEventListener('visibilitychange', function(){
   if(document.visibilityState!=='visible') return;
-  // Al volver al primer plano: si hay función en los próximos 30min → Mi Plan
-  if(_checkNavigateToMiPlan()&&activeMNav!=='mnav-miplan'){
-    switchMainNav('mnav-miplan');
-    showAgView();
-  } else {
-    if(activeMNav==='mnav-miplan'&&activeView==='agenda') renderAgenda();
-    else if(activeMNav==='mnav-planner'&&activeView==='agenda') renderAgenda();
-    else if(activeView==='day') render();
-  }
-  updateAgTab();
+  // Al volver al primer plano: si hay función en los próximos 30min → Mi Plan.
+  // try/catch: si el check lanza, el refresh de abajo DEBE correr igual — un throw
+  // acá dejaba la vista congelada con datos de hace horas (contador de TIEMPO LIBRE).
+  try{
+    if(_checkNavigateToMiPlan()&&activeMNav!=='mnav-miplan'){
+      switchMainNav('mnav-miplan');
+      showAgView();
+      updateAgTab();
+      return;
+    }
+  }catch(e){ report(e,'visNavigate'); }
+  // Repintar la vista activa SEA CUAL SEA (iOS suspende el setInterval en background;
+  // al volver, el usuario no debe ver tiempos viejos ni por un segundo).
+  _tickRender();
 }); // visibilitychange
+// pageshow — cinturón para el wrapper iOS/WKWebView: al restaurar desde bfcache o al
+// resumir la app, visibilitychange puede no disparar; pageshow sí. Refresh idempotente.
+window.addEventListener('pageshow', function(){ _tickRender(); });
 
 // html2canvas eliminado — Canvas API puro
 // lugar click-outside handled by lugarOutside()
