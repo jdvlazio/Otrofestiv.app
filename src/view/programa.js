@@ -11,7 +11,7 @@
 //   Los handlers _dismissNotice/setProgramaChip (data-action) viven en main.js.
 
 import { NOTICES, SECTION_ORDER_LIST, _DEFAULT_FEST_ID } from '../config.js';
-import { ICONS, _secLabel, _secLabelFull, _sectionColor, makeEventPoster, parseProgramTitle } from './components.js';
+import { ICONS, _secLabel, _secLabelFull, _sectionColor, escXML, makeEventPoster, parseProgramTitle } from './components.js';
 import { _dayChips, editorialFrame, _getItemPoster, _isEditorialPoster, _metaBadges, _plistPosterHtml, _programaStack, dayLabel, durFmt, emptyState, getFilmPoster, isNowShowing, sala, vcfg } from './helpers.js';
 import { festivalEnded, toMin } from '../domain/time.js';
 import { screeningPassed } from '../domain/film.js';
@@ -143,9 +143,9 @@ export function renderProgramaListHTML(state){
       const cancelStyle=notice&&notice.type==='cancelled'?'opacity:.5':'';
       const pastStyle=passed&&!isNow&&!festivalEnded()?'opacity:.45':'';
       const itemStyle=[pastStyle,cancelStyle].filter(Boolean).join(';');
-      const safeT=f.title.replace(/'/g,"&#39;").replace(/"/g,'&quot;');
+      const safeT=f.title.replace(/"/g,'&quot;').replace(/'/g,"&#39;");
       const _stk=_programaStack(f);
-      return`<div class="plist-item js-open-pel" style="${itemStyle}" data-title="${f.title}">
+      return`<div class="plist-item js-open-pel" style="${itemStyle}" data-title="${escXML(f.title)}">
         ${_stk||_plistPosterHtml(f,src)}
         <div class="plist-info">
           <div class="plist-title">${noticeBadge}<span class="plist-title-txt">${dt}</span>${_metaBadges(f)}${nowBadge}</div>
@@ -255,7 +255,7 @@ export function _renderExploreListaHTML(state){
     const allPast=screenings.every(s=>screeningPassed(s));
     const days=[...new Set(screenings.map(s=>dayLabel(s.day)||s.day))].join(' · ');
     const daysHtml=_dayChips(screenings);
-    if(isEvent) return`<div class="plist-item plist-event js-open-pel" style="${allPast?'opacity:.35':''}" data-title="${f.title}">
+    if(isEvent) return`<div class="plist-item plist-event js-open-pel" style="${allPast?'opacity:.35':''}" data-title="${escXML(f.title)}">
       <img class="plist-poster" src="${makeEventPoster(state,dt,f.duration,f.event_kind)}" alt="${dt}" loading="lazy">
       <div class="plist-info">
         <div class="plist-title">${dt}</div>
@@ -265,7 +265,7 @@ export function _renderExploreListaHTML(state){
       <div class="plist-heart${inWL?'':' empty'}" data-title="${f.title.replace(/"/g,'&quot;')}" data-action="toggleWLFromList" data-stop="1">${inWL?ICONS.heartFill:ICONS.heart}</div>
     </div>`;
     const _stk2=_programaStack(f);
-    return`<div class="plist-item js-open-pel${allPast?' past-card':''}" data-title="${f.title}">
+    return`<div class="plist-item js-open-pel${allPast?' past-card':''}" data-title="${escXML(f.title)}">
       ${_stk2||_plistPosterHtml(f,src)}
       <div class="plist-info">
         ${(()=>{const n=NOTICES.find(nx=>nx.title===f.title&&nx.festival===((_activeFestId||_DEFAULT_FEST_ID)));const nb=n?`<span class="notice-badge">${n.type==='cancelled'?t('notice_cancelada'):t('notice_reprog_short')}</span>`:'';const nn=n&&n.type==='cancelled'?`<div class="notice-detail-amber">${t('plan_fecha_pendiente')}</div>`:n&&n.type==='rescheduled'&&n.newTime?`<div class="notice-detail-green">${n.newDay||''} · ${n.newTime}${n.newVenue?' · '+n.newVenue:''}</div>`:'';return`<div class="plist-title" style="${allPast?'opacity:.5':''}">${nb}${dt}</div><div class="plist-meta" style="${n&&n.type==='cancelled'?'text-decoration:line-through':''}${allPast?';opacity:.5':''}">${daysHtml?`${daysHtml} · `:''}${durFmt(f.duration)}${_metaBadges(f)?` · ${_metaBadges(f)}`:''}</div>${nn||`<div class="plist-sec">${_secLabelFull(f.section||'')}</div>`}`;})()}
@@ -330,7 +330,7 @@ export function renderPeliculaViewHTML(state){
     const inW=watched.has(f.title);
     const allPast=screenings.every(s=>screeningPassed(s));
     const posterSrc=getFilmPoster(f);
-    const safeT=f.title.replace(/'/g,"&#39;").replace(/"/g,'&quot;');
+    const safeT=f.title.replace(/"/g,'&quot;').replace(/'/g,"&#39;");
     const{displayTitle}=parseProgramTitle(f.title);
     const progBadge='';//REMOVED: no count badge
     const _ended=festivalEnded();
@@ -365,7 +365,7 @@ export function renderPeliculaViewHTML(state){
       }
     }
     const _sep=activeDay==='all'&&f.section&&f.section!==_prevSec?`<div class="poster-grid-sep">${_secLabel(f.section||'')}</div>`:'';_prevSec=f.section||_prevSec;
-    return _sep+`<div class="bg-surf-2 poster-card js-open-pel${inWL&&!inW?' in-wl':''}${inW&&!_ended?' in-watched':''}${_edAccent?' poster-ed':''}" data-title="${f.title}"${_edAccent?` style="--ed-accent:${_edAccent}"`:(_isPrograma?'':_cardBg)}>
+    return _sep+`<div class="bg-surf-2 poster-card js-open-pel${inWL&&!inW?' in-wl':''}${inW&&!_ended?' in-watched':''}${_edAccent?' poster-ed':''}" data-title="${escXML(f.title)}"${_edAccent?` style="--ed-accent:${_edAccent}"`:(_isPrograma?'':_cardBg)}>
       ${posterImg}
       ${progBadge}
       ${inWL?`<button class="poster-wl-dot wl-on" data-title="${f.title.replace(/"/g,'&quot;')}" data-action="toggleWL" data-stop="1" aria-label="${t('misc_interes_label')}">${ICONS.heartFill}</button>`:''}
@@ -404,7 +404,7 @@ export function render(){
     const passed=screeningPassed(f);
     const inWL=watchlist.has(f.title),inW=watched.has(f.title);
     const isNow=isNowShowing(f);
-    const safeT=f.title.replace(/'/g,"&#39;");
+    const safeT=f.title.replace(/"/g,'&quot;').replace(/'/g,"&#39;");
     const posterSrc=getFilmPoster(f);
     const _cardBg2='';
     const posterImg=posterSrc
@@ -416,7 +416,7 @@ export function render(){
     const pastBadge=_notice?`<div class="badge-past poster-past-badge">${_notice.type==='cancelled'?t('notice_cancelada'):t('notice_reprog_short')}</div>`:'';
 
     const _fe=festivalEnded();
-return`<div class="poster-card js-open-pel${inWL&&!inW?' in-wl':''}${inW&&!_fe?' in-watched':''}${passed&&!_fe?' past-card':''}" data-title="${f.title}"${_cardBg2}>
+return`<div class="poster-card js-open-pel${inWL&&!inW?' in-wl':''}${inW&&!_fe?' in-watched':''}${passed&&!_fe?' past-card':''}" data-title="${escXML(f.title)}"${_cardBg2}>
       ${posterImg}
       <div class="poster-time">${f.time}</div>
       ${nowBadge||pastBadge||progBadge}

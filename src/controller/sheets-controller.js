@@ -7,7 +7,7 @@
 // (lo escribe loadFestival). Roster/viewstate vía bridge.
 
 import { FESTIVAL_CONFIG, MAX_REMEMBERED_SLOTS, NOTICES, TMDB_IMG, _DEFAULT_FEST_ID } from '../config.js';
-import { DAY_ABBR, DAY_NUM, ICONS, _secLabel, _sectionColor, isFullDayBlocked, makeProgramPoster, parseProgramTitle, renderRatingStarsHTML } from '../view/components.js';
+import { DAY_ABBR, DAY_NUM, ICONS, _secLabel, _sectionColor, escXML, isFullDayBlocked, makeProgramPoster, parseProgramTitle, renderRatingStarsHTML } from '../view/components.js';
 import { editorialFrame, _getItemPoster, _isEditorialImageUrl, _isEditorialPoster, _mkCortoItemHtml, _posterStyle, dayLabel, durFmt, flagFmt, getCortoItemPoster, getFilmPoster, getFilmPosterUntitled, getPosterSrc, sala, starsText, vcfg } from '../view/helpers.js';
 import { closeAvSheet, closePVRating, closePrioLimit } from '../view/sheets.js';
 import { showConflictModal, showToast } from '../view/feedback.js';
@@ -181,7 +181,7 @@ export function openPelSheet(title){
       const r=filmRatings[item.title]||0;
       const ratingEl=r
         ?`<span class="corto-rating-stars">${starsText(r)}</span>`
-:`<button class="corto-rate-btn" data-title="${item.title||''}" data-action="closePelAndRate" data-stop="1">★</button>`;
+:`<button class="corto-rate-btn" data-title="${escXML(item.title||'')}" data-action="closePelAndRate" data-stop="1">★</button>`;
       return _mkCortoItemHtml(item,n,{
         cls:'pel-sheet-corto-item',
         section:f.section||'',
@@ -246,15 +246,15 @@ export function openPelSheet(title){
     ${(!f.is_cortos&&!f.is_programa&&f.type!=='event')?lbLink(f.title,f):''}
     <div class="pel-sheet-divider"></div>
     ${inW?`<div class="pel-sheet-ctas-watched">
-        <button data-title="${f.title}" data-action="toggleWatchedAndClose" class="pel-sheet-action-btn act-on">${ICONS.check} ${t('cta_vista')}</button>
-        ${!f.is_cortos?`<button data-title="${f.title}" data-action="closePelAndRate" class="pel-sheet-action-btn btn-secondary">${ICONS.star} ${filmRatings[f.title]?t('misc_cambiar'):t('cta_calificar')}</button>`:``}
+        <button data-title="${escXML(f.title)}" data-action="toggleWatchedAndClose" class="pel-sheet-action-btn act-on">${ICONS.check} ${t('cta_vista')}</button>
+        ${!f.is_cortos?`<button data-title="${escXML(f.title)}" data-action="closePelAndRate" class="pel-sheet-action-btn btn-secondary">${ICONS.star} ${filmRatings[f.title]?t('misc_cambiar'):t('cta_calificar')}</button>`:``}
       </div>`
     :`<div class="pel-sheet-ctas">
-        <button id="pel-wl-btn" class="row-center-xs pel-sheet-action-btn${inWL?' act-on btn-primary':' btn-primary'}" data-title="${f.title}" data-action="togglePelWL">${inWL?ICONS.heartFill:ICONS.heart} ${inWL?t('cta_en_intereses'):t('cta_intereses')}</button>
-        <button id="pel-prio-btn" class="row-center-xs pel-sheet-action-btn${inPrio?' act-prio':' btn-secondary'}" data-title="${f.title}" data-action="togglePelPrio">${inPrio?ICONS.starFill:ICONS.star} ${inPrio?t('cta_priorizada'):t('cta_priorizar')}</button>
-        <button id="pel-vista-btn" class="row-center-xs pel-sheet-action-btn btn-tertiary" data-title="${f.title}" data-action="toggleWatched">${ICONS.check} ${f.type==='event'?t('cta_asistio'):t('cta_vista')}</button>
+        <button id="pel-wl-btn" class="row-center-xs pel-sheet-action-btn${inWL?' act-on btn-primary':' btn-primary'}" data-title="${escXML(f.title)}" data-action="togglePelWL">${inWL?ICONS.heartFill:ICONS.heart} ${inWL?t('cta_en_intereses'):t('cta_intereses')}</button>
+        <button id="pel-prio-btn" class="row-center-xs pel-sheet-action-btn${inPrio?' act-prio':' btn-secondary'}" data-title="${escXML(f.title)}" data-action="togglePelPrio">${inPrio?ICONS.starFill:ICONS.star} ${inPrio?t('cta_priorizada'):t('cta_priorizar')}</button>
+        <button id="pel-vista-btn" class="row-center-xs pel-sheet-action-btn btn-tertiary" data-title="${escXML(f.title)}" data-action="toggleWatched">${ICONS.check} ${f.type==='event'?t('cta_asistio'):t('cta_vista')}</button>
       </div>`}
-    ${_inPlan&&activeView==='agenda'?`<button data-title="${f.title}" data-action="closePelAndRemove" class="pel-sheet-remove-plan">${ICONS.x} ${t('plan_quitar_plan')}</button>`:''}
+    ${_inPlan&&activeView==='agenda'?`<button data-title="${escXML(f.title)}" data-action="closePelAndRemove" class="pel-sheet-remove-plan">${ICONS.x} ${t('plan_quitar_plan')}</button>`:''}
   `;
   document.getElementById('pel-overlay').classList.add('open');
   _ps.classList.add('open');
@@ -444,9 +444,9 @@ export function openCortoSheet(title, country, duration, section, flags, directo
     <div class="pel-sheet-divider"></div>
     ${parentTitle?`<div class="meta-xs-gray">${t('meta_corto_incluye')}</div>`:''}
     <div class="flex-gap1-mt1">
-      <button id="corto-wl-btn" class="row-center-xs pel-sheet-action-btn${inWL?' act-on btn-primary':' btn-primary'}" data-title="${parentTitle||title}" data-action="toggleWL">${inWL?ICONS.heartFill:ICONS.heart} ${inWL?t('cta_en_intereses'):t('cta_intereses')}</button>
-      <button id="corto-prio-btn" class="row-center-xs pel-sheet-action-btn${inPrio?' act-prio':' btn-secondary'}" data-title="${parentTitle||title}" data-action="togglePelPrio">${inPrio?ICONS.starFill:ICONS.star} ${inPrio?t('cta_priorizada'):t('cta_priorizar')}</button>
-      <button class="row-center-xs pel-sheet-action-btn${filmRatings[title]?' act-on':' btn-secondary'}" data-title="${title}" data-action="closePelAndRate">${ICONS.star} ${filmRatings[title]?t('misc_cambiar'):t('cta_calificar')}</button>
+      <button id="corto-wl-btn" class="row-center-xs pel-sheet-action-btn${inWL?' act-on btn-primary':' btn-primary'}" data-title="${escXML(parentTitle||title)}" data-action="toggleWL">${inWL?ICONS.heartFill:ICONS.heart} ${inWL?t('cta_en_intereses'):t('cta_intereses')}</button>
+      <button id="corto-prio-btn" class="row-center-xs pel-sheet-action-btn${inPrio?' act-prio':' btn-secondary'}" data-title="${escXML(parentTitle||title)}" data-action="togglePelPrio">${inPrio?ICONS.starFill:ICONS.star} ${inPrio?t('cta_priorizada'):t('cta_priorizar')}</button>
+      <button class="row-center-xs pel-sheet-action-btn${filmRatings[title]?' act-on':' btn-secondary'}" data-title="${escXML(title)}" data-action="closePelAndRate">${ICONS.star} ${filmRatings[title]?t('misc_cambiar'):t('cta_calificar')}</button>
     </div>
   `;
   const _psReset2=document.getElementById('pel-sheet');
@@ -616,8 +616,8 @@ export function openPrioLimit(newTitle){
       const f=FILMS.find(fi=>fi.title===t&&!screeningPassed(fi));
       const when=f?`${(dayLabel(f.day)||f.day).split(' ')[0]} · ${f.time}`:'';
       const poster=getFilmPoster(f)||'';
-      const safeSwap=t.replace(/'/g,"&#39;");
-      const safeNew=newTitle.replace(/'/g,"&#39;");
+      const safeSwap=t.replace(/"/g,'&quot;').replace(/'/g,"&#39;");
+      const safeNew=newTitle.replace(/"/g,'&quot;').replace(/'/g,"&#39;");
       return`<div class="prio-limit-item">
         ${poster?`<img class="prio-limit-thumb" src="${poster}" onerror="this.remove()" alt="" loading="lazy">`:'<div class="prio-limit-thumb"></div>'}
         <div class="prio-limit-info">
