@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `00b3522 i18n(vocab): unificar el paraguas en "actividad" (funciones + eventos + talleres)`
+> Último commit: `71d74ed i18n(copy): Intereses vacío — subtítulo deja de repetir el título`
 
 ---
 

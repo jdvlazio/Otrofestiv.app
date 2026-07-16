@@ -73,7 +73,11 @@ export function dayFullyPassed(day){
   if(!dateStr) return false;
   // Day passed if last function of that day has passed
   const dayFilms=FILMS.filter(f=>f.day===day);
-  if(!dayFilms.length) return false;
+  // Día SIN programación: no hay "última función" que mirar → el día pasó cuando
+  // terminó su FECHA. Antes devolvía false SIEMPRE, así que un día vacío nunca se
+  // atenuaba (bug: MAR sin programación en TT seguía en opacidad alta) y peor: se
+  // colaba como "primer día futuro" en la navegación y en la hoja de Disponibilidad.
+  if(!dayFilms.length) return simNow()>_festDate(dateStr,'23:59');
   const lastTime=dayFilms.reduce((max,f)=>f.time>max?f.time:max,'00:00');
   const lastScreen=_festDate(dateStr,lastTime);
   lastScreen.setMinutes(lastScreen.getMinutes()+10);
