@@ -678,8 +678,16 @@ export function renderContextualHeader(state, consensus){
   // ── EVENING ─────────────────────────────────────────────────
   if(ph.phase==='evening'){
     const{todayScreenings}=ph;
-    const pendingRating=todayScreenings.filter(s=>watched.has(s._title)&&!filmRatings[s._title]);
-    const rated=todayScreenings.filter(s=>watched.has(s._title)&&filmRatings[s._title]);
+    // "Calificado": film suelto → su rating; PROGRAMA → alguna de sus obras calificada
+    // (las estrellas van por obra, no al paquete — el aviso no debe quedar pegado
+    // para siempre en un programa cuyo usuario ya calificó/omitió obra por obra).
+    const _isRated=s=>{
+      if(filmRatings[s._title]) return true;
+      const f=FILMS.find(fi=>fi.title===s._title);
+      return !!(f&&f.is_cortos&&f.film_list&&f.film_list.some(it=>filmRatings[it.title]));
+    };
+    const pendingRating=todayScreenings.filter(s=>watched.has(s._title)&&!_isRated(s));
+    const rated=todayScreenings.filter(s=>watched.has(s._title)&&_isRated(s));
     const total=todayScreenings.filter(s=>watched.has(s._title)).length;
     if(!total) return '';
     // Máximo 2 posters visibles — el resto se expande con "Ver todo (N)"

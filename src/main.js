@@ -108,7 +108,7 @@ import {
 
 // ── Step 7d-1: controller/sheets-controller.js — sheets+rating+AV+toast+utils. ──
 import {
-  openPelSheet, closePelSheet, _closeTopSheet, openCortoSheet, openCortoSheetFromEl, _openCombinedFilmSheet, _findParentProgram, openConflictSheet, closeConflictSheet, openPrioLimit, openPlanConfirm, closePlanConfirm, openPostViewRating, openRatingSheet, closeRatingSheet, openAvSheet, selectAvDay, setAvType, confirmAvBlock, renderAvDay, addBlock, removeBlock, toggleFullDay, _setAvAddOpen, showActionToast, _dismissToastAction, countryToFlags, filmDisplayTitle, _genreEN, _removePlanItem, savePVRating, openVenueSheet, closeVenueSheet,
+  openPelSheet, closePelSheet, _closeTopSheet, openCortoSheet, openCortoSheetFromEl, _openCombinedFilmSheet, _findParentProgram, openConflictSheet, closeConflictSheet, openPrioLimit, openPlanConfirm, closePlanConfirm, openPostViewRating, openRatingSheet, closeRatingSheet, openAvSheet, selectAvDay, setAvType, confirmAvBlock, renderAvDay, addBlock, removeBlock, toggleFullDay, _setAvAddOpen, showActionToast, _dismissToastAction, countryToFlags, filmDisplayTitle, _genreEN, _removePlanItem, savePVRating, pvLater, openVenueSheet, closeVenueSheet,
 } from './controller/sheets-controller.js';
 
 // ── Step 7d-2: controller/overlays.js — seccion/search/lugar dropdowns. ──────
@@ -216,6 +216,7 @@ const ACTION_REGISTRY = {
   closeFestivalSheet:    ()      => closeFestivalSheet(),
   closeRatingSheet:      ()      => closeRatingSheet(),
   closePVRating:         ()      => closePVRating(),
+  pvLater:               ()      => pvLater(),
   closePlanConfirm:      (el)    => closePlanConfirm(el.dataset.force === '1'),
   closePrioLimit:        ()      => closePrioLimit(),
   dismissSplash:         ()      => dismissSplash(),
@@ -442,7 +443,7 @@ FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202607161450';
+const BUILD_VERSION='202607161659';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';

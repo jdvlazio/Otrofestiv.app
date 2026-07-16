@@ -40,6 +40,11 @@ const _GENRE_EN = {
 };
 let _toastActionFn=null;
 let _pvTitle='', _pvRating=0;
+// Cola post-vista de un PROGRAMA: se califica OBRA POR OBRA (paso a paso). La Vista
+// queda marcada al programa entero (una función, una asistencia); las estrellas van a
+// cada película del film_list — una estrella "de paquete" no dice nada (caso real:
+// Fútbol Poético = corto de 8 min + largo de 73). null = film suelto (flujo de siempre).
+let _pvQueue=null, _pvQueueIdx=0, _pvRatedCount=0, _pvSection='';
 let _conflictPending=null;
 let _ratingTitle='';
 let _currentRating=0;
@@ -680,12 +685,21 @@ export function closePlanConfirm(goToPlan){
 }
 
 export function openPostViewRating(title, day, time, venue, duration){
+  const f=FILMS.find(fi=>fi.title===title);
+  // PROGRAMA → cola paso a paso por obra. Guardar/Después operan sobre la obra visible;
+  // cerrar el sheet descarta las que falten (calificar es opcional, salir siempre es libre).
+  if(f&&f.is_cortos&&f.film_list&&f.film_list.length){
+    _pvQueue=f.film_list; _pvQueueIdx=0; _pvRatedCount=0; _pvSection=f.section||'';
+    _pushSheetState();
+    _pvShowCurrent();
+    return;
+  }
+  _pvQueue=null;
   _pvTitle=title;
   _pushSheetState();
   _pvRating=filmRatings[title]||0;
 
   const{displayTitle}=parseProgramTitle(title);
-  const f=FILMS.find(fi=>fi.title===title);
 
   // Poster
   const poster=document.getElementById('pv-poster');
@@ -709,7 +723,35 @@ export function openPostViewRating(title, day, time, venue, duration){
     ctx.textContent=parts.join(' · ');
   }
 
-  // Estrellas y rango
+  _pvMountAndOpen();
+}
+
+// _pvShowCurrent — pinta la obra actual de la cola en el MISMO sheet post-vista:
+// su póster (real → generativo del programa), su título, y el paso "1 de 2 · dur · país".
+function _pvShowCurrent(){
+  const item=_pvQueue[_pvQueueIdx], total=_pvQueue.length;
+  _pvTitle=item.title;
+  _pvRating=filmRatings[item.title]||0;
+  const poster=document.getElementById('pv-poster');
+  if(poster){
+    poster.style.opacity='';
+    poster.src=getCortoItemPoster(item)||makeProgramPoster(state,item.title,item.duration||'',_pvSection);
+    poster.onerror=()=>{poster.style.opacity='0';};
+  }
+  const titleEl=document.getElementById('pv-film-title');
+  if(titleEl) titleEl.textContent=item.title;
+  const ctx=document.getElementById('pv-context');
+  if(ctx){
+    const parts=[t('pv_paso',{n:_pvQueueIdx+1,total})];
+    if(item.duration) parts.push(durFmt(item.duration));
+    if(item.country) parts.push(item.country);
+    ctx.textContent=parts.join(' · ');
+  }
+  _pvMountAndOpen();
+}
+
+// _pvMountAndOpen — tail compartido (film suelto y cola): estrellas + range + apertura.
+function _pvMountAndOpen(){
   const range=document.getElementById('pv-range');
   if(range){
     range.value=Math.round(_pvRating*2);
@@ -1201,15 +1243,46 @@ export function savePVRating(){
   // 1. READ — UI state ephemeral (_pvRating, _pvTitle son module-level)
   // 2. GUARD — solo guardar si rating válido
   if(_pvRating>0){
-    // 3. MUTATE
-    state.update('filmRatings', o => ({...o, [_pvTitle]: _pvRating}));
-    // 4. PERSIST
-    storage.setFilmRatings(filmRatings);
-    // 5. RENDER + UI EFFECTS — toast
-    const stars=['','★','★★','★★★','★★★★','★★★★★'];
-    showToast(stars[Math.round(_pvRating)]||t('toast_calificada'),'info');
+    // 3. MUTATE + 4. PERSIST — saveRating es el camino canónico: persiste Y sube a la
+    // nube (_cloudSave). Antes esto escribía storage directo → las calificaciones
+    // post-vista quedaban SOLO locales (no llegaban a la nube ni al Watch). Dato
+    // valioso del cinéfilo: siempre sincroniza.
+    saveRating(_pvTitle,_pvRating);
+    if(_pvQueue){ _pvRatedCount++; }
+    else{
+      const stars=['','★','★★','★★★','★★★★','★★★★★'];
+      showToast(stars[Math.round(_pvRating)]||t('toast_calificada'),'info');
+    }
   }
-  closePVRating();
+  // Cola de programa: avanzar a la siguiente obra; el toast del conteo va al final.
+  if(_pvQueue&&_pvQueueIdx<_pvQueue.length-1){
+    _pvQueueIdx++;
+    _pvShowCurrent();
+    return;
+  }
+  _pvFinish();
   // Render automático vía pipeline (filmRatings). Si rating=0 no hay mutación →
   // no re-render (no-op visual: el prompt de calificar sigue igual).
+}
+
+// pvLater — el botón "Después". En cola: SALTA la obra actual sin calificar (quizás
+// no querés calificar la 1 pero sí la 2) y avanza; en la última, cierra. Film suelto:
+// cierra como siempre. La salida total sigue libre: tap afuera / back cierran todo.
+export function pvLater(){
+  if(_pvQueue&&_pvQueueIdx<_pvQueue.length-1){
+    _pvQueueIdx++;
+    _pvShowCurrent();
+    return;
+  }
+  _pvFinish();
+}
+
+// _pvFinish — cierre de la cola (o del film suelto): toast con el conteo si se
+// calificó algo ("2 películas calificadas") y reset del estado de cola.
+function _pvFinish(){
+  if(_pvQueue&&_pvRatedCount>0){
+    showToast(_pvRatedCount===1?t('pv_calif_1'):t('pv_calif_n',{n:_pvRatedCount}),'info');
+  }
+  _pvQueue=null;
+  closePVRating();
 }
