@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `91a6d1a fix(domain): un día SIN programación ahora sí "pasa" cuando termina su fecha`
+> Último commit: `06effd0 feat(conflictos): distinguir solape de desplazamiento — 🕐 reloj vs 🗺️ ruta`
 
 ---
 
