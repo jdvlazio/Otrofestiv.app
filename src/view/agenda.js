@@ -10,7 +10,7 @@ import {
   DEFAULT_DURATION_MIN, FESTIVAL_BUFFER, FESTIVAL_CONFIG,
 } from '../config.js';
 import {
-  ICONS, _secLabel, _secLabelFull, _sectionColor, makeEventPoster, parseProgramTitle, renderAvBlocksHTML, renderFlowProgress,
+  ICONS, _secLabel, _secLabelFull, _sectionColor, escXML, makeEventPoster, parseProgramTitle, renderAvBlocksHTML, renderFlowProgress,
 } from './components.js';
 import {
   DAYS, DAY_SHORT_EN, _dayChips, editorialFrame, _isEditorialPoster, _langDates, _lblLocalized, _minFmt, _mkCortoItemHtml, _posterThumb, dayChip, dayLabel, dayLabelLong, durFmt, emptyState, emptyStateHero, flagFmt, getFilmPoster, isToday, mplanBlockType, mplanEndStr, sala, starsText, travelWarn, vcfg, delayConsensusBadge,
@@ -354,7 +354,7 @@ export function renderMiPlanCalendar(state){
           :_isEventRow
             ?`<img class="lb-poster" src="${makeEventPoster(state,_mf.title,_mf.duration,_mf.event_kind)}" alt="" loading="lazy" onerror="this.remove()">`
             :_posterThumb(_mf,'lb-poster');
-      const _mph=`<div class="js-open-pel" data-title="${s._title||''}" style="flex-shrink:0;cursor:pointer" data-stop="1">${_mphInner}</div>`
+      const _mph=`<div class="js-open-pel" data-title="${escXML(s._title||'')}" style="flex-shrink:0;cursor:pointer" data-stop="1">${_mphInner}</div>`
       listHtml+=`<div class="mplan-row${_rowKey===_activeMiPlanFilm?' active':''}" style="cursor:pointer" data-rkey="${_safeRowKey}" data-action="selectFromDetail">
         ${_mph}
         <div class="mplan-ri">
@@ -422,13 +422,13 @@ export function renderUnconfirmed(state,schedule){
   const endMs=_festDate(FESTIVAL_DATES[latest.day],latest.time).getTime()+parseDur(latest.duration)*60000;
   const minsAgo=Math.round((now.getTime()-endMs)/60000);
   const timeDesc=minsAgo<120?`${t('plan_termino_hace')} ${minsAgo} min`:`${dayLabel(latest.day)} · ${latest.time}`;
-  const safeLast=latest._title.replace(/'/g,"&#39;");
+  const safeLast=latest._title.replace(/"/g,'&quot;').replace(/'/g,"&#39;");
   const olderHtml=older.length?`
     <div id="ctx-older" style="display:none">
       ${older.map(s=>{
         const{displayTitle:dt}=parseProgramTitle(s._title||'');
         const sh=dt.length>26?dt.slice(0,24)+'…':dt;
-        const st=s._title.replace(/'/g,"&#39;");
+        const st=s._title.replace(/"/g,'&quot;').replace(/'/g,"&#39;");
         return`<div class="checkin-item">
           <div class="checkin-info"><div class="checkin-title">${sh}</div><div class="checkin-time">${dayLabel(s.day)} · ${s.time}</div></div>
           <div class="checkin-btns"><button class="row-xs checkin-btn yes" data-action="checkinLaVi" data-title="${st}">${ICONS.check} ${t('cta_vista')}</button><button class="checkin-btn no" data-action="checkinNoLaVi" data-title="${st}">${t('misc_luego')}</button></div>
@@ -456,7 +456,7 @@ export function renderUnconfirmed(state,schedule){
 export function renderFilmAlternatives(state,title,day,time){
   const {FILMS, watched, savedAgenda} = state.snapshot();
   const fStart=toMin(time);
-  const safeT=title.replace(/'/g,"&#39;");
+  const safeT=title.replace(/"/g,'&quot;').replace(/'/g,"&#39;");
   const plannedTitles=new Set(savedAgenda?savedAgenda.schedule.map(s=>s._title):[]);
   // ±15 min window — direct competition in the same slot
   const WINDOW=15;
@@ -473,7 +473,7 @@ export function renderFilmAlternatives(state,title,day,time){
     const vc2=vcfg(f.venue);
     const{displayTitle}=parseProgramTitle(f.title);
     const short=displayTitle.length>28?displayTitle.slice(0,26)+'…':displayTitle;
-    const safeTNew=f.title.replace(/'/g,"&#39;");
+    const safeTNew=f.title.replace(/"/g,'&quot;').replace(/'/g,"&#39;");
     return`<div class="checkin-opt">
       <div class="js-open-pel" data-title="${safeTNew}" data-stop="1" style="flex-shrink:0;cursor:pointer">${_posterThumb(f,'lb-poster')}</div>
       <div class="checkin-opt-info">
@@ -510,10 +510,10 @@ export function renderContextualHeader(state, consensus){
       const{displayTitle:dt}=parseProgramTitle(t);
       const src=getFilmPoster(f)||'';
       const _isEdList=_isEditorialPoster(f);
-      const safeT=t.replace(/'/g,"&#39;");
+      const safeT=t.replace(/"/g,'&quot;').replace(/'/g,"&#39;");
       const stars=r?starsText(r):'';
       // Posters grandes, plena opacidad — pensado para screenshot
-      return`<div class="poster-card ended-poster js-open-pel${_isEdList?' poster-ed':''}" data-title="${f.title}"${_isEdList?` style="--ed-accent:${_sectionColor(f.section||'')}"`:''}>
+      return`<div class="poster-card ended-poster js-open-pel${_isEdList?' poster-ed':''}" data-title="${escXML(f.title)}"${_isEdList?` style="--ed-accent:${_sectionColor(f.section||'')}"`:''}>
         ${_isEdList
           ?editorialFrame({header:_secLabel(f.section||''), body:'', src, title:f.title})
           :src?`<img class="img-cover" src="${src}" loading="lazy" onerror="this.remove()" alt="">`:``}
@@ -577,7 +577,7 @@ export function renderContextualHeader(state, consensus){
     let warnHtml='';
     let consensusHtml='';
     if(isNow){
-      const safeT=(next._title||'').replace(/'/g,"&#39;");
+      const safeT=(next._title||'').replace(/"/g,'&quot;').replace(/'/g,"&#39;");
       const safeV=(next.venue||'').replace(/"/g,'&quot;');
       const _dk=_delayKey(next);
       const delayMins=filmDelays[_dk]||0;
@@ -623,7 +623,7 @@ export function renderContextualHeader(state, consensus){
         <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
         ${eyebrowLabel}
       </div>
-      <div class="ctx-next-row js-open-pel" data-title="${next._title||''}" style="cursor:pointer">
+      <div class="ctx-next-row js-open-pel" data-title="${escXML(next._title||'')}" style="cursor:pointer">
         ${src
           ?`<img class="ctx-next-poster" src="${src}" data-title="${(next._title||'').replace(/"/g,'&quot;')}" onerror="_posterErr(this)" alt="" loading="lazy">`
           :_isEvent
@@ -654,7 +654,7 @@ export function renderContextualHeader(state, consensus){
       const{displayTitle:dt}=parseProgramTitle(gapSuggestion.title);
       const vc2=vcfg(gapSuggestion.venue);
       const dur=parseInt(gapSuggestion.duration)||DEFAULT_DURATION_MIN;
-      const safeT=gapSuggestion.title.replace(/'/g,"&#39;");
+      const safeT=gapSuggestion.title.replace(/"/g,'&quot;').replace(/'/g,"&#39;");
       return`<div class="txt-gray-sm-mb1">${t('plan_cabe_hueco')}</div>
         <div class="ctx-suggest-card js-open-pel" data-title="${gapSuggestion.title.replace(/"/g,'&quot;')}" style="cursor:pointer">
           <div class="ctx-suggest-badge">${gapSuggestion.time}<br>${dur}m</div>
@@ -701,9 +701,9 @@ export function renderContextualHeader(state, consensus){
       // (JSON del festival corregido/renombrado post-guardado) — sin chip, sin crash.
       if(!f) return '';
       const r=filmRatings[s._title];
-      const safeT=(s._title||'').replace(/'/g,"&#39;");
+      const safeT=(s._title||'').replace(/"/g,'&quot;').replace(/'/g,"&#39;");
       const stars=r?starsText(r):'';
-      return`<div class="prio-chip-wrap js-open-pel" data-title="${f.title}">
+      return`<div class="prio-chip-wrap js-open-pel" data-title="${escXML(f.title)}">
         ${getFilmPoster(f)?_posterThumb(f,'prio-chip-poster'):`<div class="prio-chip-ph">🎬</div>`}
         ${r?`<div class="prio-overlay-label">${stars}</div>`:''}
         ${!r?`<div class="prio-overlay-center">
@@ -843,7 +843,7 @@ export function renderFilmListHTML(state){
           ${t('conflict_con')} ${conflict}
         </div>`
       :'';
-    return`<div class="int-item js-open-pel${!next?' gone':''}" style="${!next&&!festivalEnded()?'opacity:.35':''}" data-title="${title}">
+    return`<div class="int-item js-open-pel${!next?' gone':''}" style="${!next&&!festivalEnded()?'opacity:.35':''}" data-title="${escXML(title)}">
       ${posterHtml}
       <div class="int-item-info">
         <div class="int-item-title">${displayTitle}${progSuffix?` <span class="txt-amber-xs">${progSuffix}</span>`:''}</div>
@@ -853,7 +853,7 @@ export function renderFilmListHTML(state){
         ${conflictHtml}
       </div>
       <div class="int-item-actions">
-        <button class="int-prio-btn${isPrio?' on':''}" data-title="${title}" data-action="togglePriority" data-stop="1" aria-label="${t('aria_priorizar')}">★</button>
+        <button class="int-prio-btn${isPrio?' on':''}" data-title="${escXML(title)}" data-action="togglePriority" data-stop="1" aria-label="${t('aria_priorizar')}">★</button>
       </div>
     </div>`;
   }
@@ -870,8 +870,8 @@ export function renderFilmListHTML(state){
       :'';
     const ratingHtml=stars
       ?`<div class="int-item-rating">${stars}</div>`
-      :`<div class="int-item-rating-empty" data-title="${title}" data-action="openRatingSheet" data-stop="1">${t('cta_calificar')} →</div>`;
-    return`<div class="int-item js-open-pel" data-title="${title}">
+      :`<div class="int-item-rating-empty" data-title="${escXML(title)}" data-action="openRatingSheet" data-stop="1">${t('cta_calificar')} →</div>`;
+    return`<div class="int-item js-open-pel" data-title="${escXML(title)}">
       ${posterHtml}
       <div class="int-item-info">
         <div class="int-item-title">${displayTitle}${progSuffix?` <span class="txt-amber-xs">${progSuffix}</span>`:''}</div>
@@ -879,7 +879,7 @@ export function renderFilmListHTML(state){
         ${ratingHtml}
       </div>
       <div class="int-item-actions">
-        <button class="int-seen-btn on" data-title="${title}" data-action="toggleWatched" aria-label="${t('aria_quitar_vista')}">✓</button>
+        <button class="int-seen-btn on" data-title="${escXML(title)}" data-action="toggleWatched" aria-label="${t('aria_quitar_vista')}">✓</button>
       </div>
     </div>`;
   }
@@ -1082,7 +1082,7 @@ export function _renderSavedAgendaHTML(state, consensus){
         ${watchedOutsidePlan.map(f=>{
           const _ap=getFilmPoster(f);
           const _aphInner=_posterThumb(f,'lb-poster');
-          const _aph=`<div class="js-open-pel" data-title="${f.title}" style="cursor:pointer">${_aphInner}</div>`;
+          const _aph=`<div class="js-open-pel" data-title="${escXML(f.title)}" style="cursor:pointer">${_aphInner}</div>`;
           return`<div class="saved-item done">
             ${_aph}
             <div class="saved-time">${flagFmt(f.flags)||''}</div>
@@ -1115,7 +1115,7 @@ export function _renderSavedAgendaHTML(state, consensus){
         const vc2=vcfg(f.venue),sl=sala(f.venue);
         const _sp=getFilmPoster(f);
         const _sph=_posterThumb(f,'lb-poster');
-        return`<div class="suggestion-item js-open-pel" data-title="${f.title}">
+        return`<div class="suggestion-item js-open-pel" data-title="${escXML(f.title)}">
           ${_sph}
           <div class="suggestion-info">
             <div class="suggestion-time">${f.time}</div>
@@ -1235,7 +1235,7 @@ export function buildResultHTML(scenarios){
       const f=FILMS.find(fi=>fi.title===excTitle);
       const poster=f?getFilmPoster(f):null;
       const secLabel=f?_secLabel(f.section||''):'';
-      const safeT=excTitle.replace(/'/g,"&#39;");
+      const safeT=excTitle.replace(/"/g,'&quot;').replace(/'/g,"&#39;");
       const posterHtml=_posterThumb(f,'int-item-poster');
       // Detectar razón usando screensConflict contra el schedule activo
       const screens=FILMS.filter(fi=>fi.title===excTitle&&!screeningPassed(fi)&&!isScreeningBlocked(fi));
@@ -1285,7 +1285,7 @@ export function buildResultHTML(scenarios){
         ?`<button class="excl-include-btn" data-action="forceInclude" data-title="${safeT}" data-stop="1">+ ${t('plan_incluir')}</button>`
         :'';
       const opacity=!screens.length?'opacity:.45;':'';
-      return`<div class="int-item js-open-pel" style="${opacity}" data-title="${f.title}">
+      return`<div class="int-item js-open-pel" style="${opacity}" data-title="${escXML(f.title)}">
         ${posterHtml}
         <div class="int-item-info">
           <div class="int-item-title">${dt}</div>
@@ -1318,7 +1318,7 @@ export function mkAgendaRow(s, mode='saved'){
   const _p=getFilmPoster(f);
   const _safePT=title.replace(/'/g,"\\'");
   const _phInner=_posterThumb(f,'lb-poster');
-  const _ph=`<div class="js-open-pel" data-title="${title}" style="flex-shrink:0;cursor:pointer">${_phInner}</div>`;
+  const _ph=`<div class="js-open-pel" data-title="${escXML(title)}" style="flex-shrink:0;cursor:pointer">${_phInner}</div>`;
   const vc2=vcfg(s.venue),sl=sala(s.venue);
   const safeT=(s._title||'').replace(/"/g,'&quot;');
   const isDone=watched.has(title);

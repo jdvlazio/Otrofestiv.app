@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `7a4bab1 feat(rating): programas se califican OBRA POR OBRA + las estrellas post-vista suben a la nube`
+> Último commit: `5150208 fix(tick): el contador de TIEMPO LIBRE no avanzaba — repintar SIEMPRE la vista activa`
 
 ---
 
