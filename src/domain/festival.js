@@ -18,7 +18,7 @@
 //   _venueCoords/_transport). Las sched pure fns se consumen vía
 //   eval(name).toString(). [worker-overlap] valida.
 
-import { FESTIVAL_CONFIG, DEFAULT_DURATION_MIN } from "../config.js";
+import { FESTIVAL_CONFIG, DEFAULT_DURATION_MIN, FESTIVAL_BUFFER } from "../config.js";
 import { toMin, simNow, simTodayStr, festivalEnded, _festNowMin } from "./time.js";
 import { screeningPassed, _classifyTodayScreenings, _endedStats } from "./film.js";
 export function _resolveVenue(name,venues){
@@ -53,7 +53,16 @@ export function travelMins(venueA,venueB){
   return venueTravelMins(venueA,venueB);
 }
 
-export function _gapSuggestion(todayDay,gapFromMin,gapToMin){
+export function _gapSuggestion(todayDay,gapFromMin,gapToMin,lastDone,next){
+  // MISMO criterio de alcanzabilidad que screensConflict (schedule.js): no basta
+  // que quepa por tiempo — hay que poder VIAJAR desde la función anterior
+  // (lastDone) y alcanzar la siguiente (next). Usa el mismo primitivo travelMins,
+  // así el hueco "Cabe en tu hueco" y la lista de Sugerencias nunca divergen.
+  // (lastDone/next opcionales → sin ellos se comporta como antes: solo tiempo.)
+  const _reachOK=(fromVenue,toVenue,availMin)=>{
+    if(!fromVenue||!toVenue) return true;
+    return availMin>=Math.max(FESTIVAL_BUFFER, travelMins(fromVenue,toVenue)+FESTIVAL_BUFFER);
+  };
   return FILMS.filter(f=>{
     if(f.day!==todayDay) return false;
     if(watched.has(f.title)) return false;
@@ -61,7 +70,11 @@ export function _gapSuggestion(todayDay,gapFromMin,gapToMin){
     if(screeningPassed(f)) return false;
     const fStart=toMin(f.time);
     const fEnd=fStart+(parseInt(f.duration)||DEFAULT_DURATION_MIN);
-    return fStart>=gapFromMin&&fEnd<=gapToMin+10;
+    if(!(fStart>=gapFromMin&&fEnd<=gapToMin+10)) return false;
+    // Viaje desde la anterior y hacia la siguiente (si las hay).
+    if(lastDone&&!_reachOK(lastDone.venue,f.venue,fStart-gapFromMin)) return false;
+    if(next&&!_reachOK(f.venue,next.venue,gapToMin-fEnd)) return false;
+    return true;
   })[0]||null;
 }
 
@@ -108,7 +121,7 @@ export function _getFestivalPhase(){
       gapMin:gapToMin-gapFromMin,
       gapFromMin,
       gapToMin,
-      gapSuggestion:_gapSuggestion(todayDay,gapFromMin,gapToMin),
+      gapSuggestion:_gapSuggestion(todayDay,gapFromMin,gapToMin,lastDone,next),
       minsUntil
     };
   }

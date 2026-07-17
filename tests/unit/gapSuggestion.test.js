@@ -58,3 +58,42 @@ test('film already in savedAgenda → excluded → null', () => {
   });
   assert.strictEqual(_gapSuggestion('MAR 21', 600, 720), null);
 });
+
+// ── Alcanzabilidad (mismo criterio que screensConflict) — bug 17 jul 2026 ──────
+// Dos sedes lejanas: cabe por TIEMPO pero NO por VIAJE. El "Cabe en tu hueco" no
+// puede sugerir algo que no alcanzás a llegar desde la función anterior.
+function loadWithVenues(opts) {
+  return loadDomain({
+    globals: {
+      FILMS: opts.FILMS,
+      watched: new Set(),
+      savedAgenda: { schedule: [] },
+      DEFAULT_DURATION_MIN: 90,
+      FESTIVAL_BUFFER: 15,
+      screeningPassed: () => false,
+      _activeFestId: 'F',
+      FESTIVAL_TRANSPORT: null, // → 12 km/h (auto)
+      FESTIVAL_CONFIG: { F: { venues: {
+        A: { lat: 4.6032463, lng: -74.06758, short: 'A' },   // Cinemateca
+        B: { lat: 4.754983,  lng: -74.1126869, short: 'B' },  // CEFE (~17.5 km ≈ 90 min)
+      } } },
+    },
+  });
+}
+
+test('cabe por tiempo pero el viaje no alcanza → excluido', () => {
+  // lastDone en A termina a las 895 (14:55). Candidato en B empieza 960 (16:00) →
+  // hueco de viaje 65 min < travel(90)+buffer(15)=105 → NO se puede sugerir.
+  const f = { title: 'CORTOS', day: 'D', time: '16:00', duration: '105 min', venue: 'B' };
+  const { _gapSuggestion } = loadWithVenues({ FILMS: [f] });
+  const gap = _gapSuggestion('D', 895, 1200, { venue: 'A' }, { venue: 'A', time: '20:00' });
+  assert.strictEqual(gap, null);
+});
+
+test('mismo hueco con margen de viaje suficiente → se sugiere', () => {
+  // Candidato en B empieza 1050 (17:30): hueco de viaje 155 min ≥ 105 → OK.
+  const f = { title: 'CORTOS', day: 'D', time: '17:30', duration: '60 min', venue: 'B' };
+  const { _gapSuggestion } = loadWithVenues({ FILMS: [f] });
+  const gap = _gapSuggestion('D', 895, 1300, { venue: 'A' }, { venue: 'A', time: '21:40' });
+  assert.strictEqual(gap && gap.title, 'CORTOS');
+});
