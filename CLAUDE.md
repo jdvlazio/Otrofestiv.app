@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `d40e891 design(headers): consolidar ~20 clases en 2 componentes canónicos (sec-hdr / ctx-eyebrow) + cero divisores sueltos`
+> Último commit: `2e64a8f fix(headers+share): ritmo/justificación unificados del sec-hdr + nombre oficial TT en exports`
 
 ---
 

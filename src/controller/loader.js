@@ -154,15 +154,24 @@ export async function loadFestival(id){
       cfg.posters=data.posters||{};
       cfg.customPosters=data.customPosters||{};
       cfg.lbSlugs=data.lbSlugs||{};
-      // ── Sprint 2: absorber campos de config desde JSON raíz ─────────────
-      // Fuente única de verdad: el JSON de cada festival contiene toda su config.
-      // FESTIVAL_CONFIG en index.html solo mantiene storageKey + festivalEndStr como bootstrap.
-      // Estos campos se mergean si existen en el JSON — nunca pisan storageKey.
-      const _cfgFields=['name','shortName','city','dates','dates_en','year',
-        'timezoneOffset','festivalDates','days','dayKeys','dayShort','dayShort_en',
+      // ── Un solo dueño por tipo de dato (17 jul 2026) ────────────────────
+      // IDENTIDAD (nombre, ciudad, fechas…): el dueño es FESTIVAL_CONFIG
+      // (src/config.js) — el JSON solo RELLENA huecos de festivales legacy y
+      // nunca pisa un valor que config ya tiene. Motivo: el JSON con
+      // "TercerTiempo" pegado pisaba el nombre oficial en todo lo runtime
+      // (export del Diario, share, ICS) aunque config estuviera bien.
+      // CONTENIDO (días, secciones, ticketing…): el dueño es el JSON.
+      // Gate: validate.py [festival-name-parity]. Nada pisa storageKey.
+      const _identFields=['name','shortName','city','dates','dates_en','year',
+        'timezoneOffset','festivalDates'];
+      const _contentFields=['days','dayKeys','dayShort','dayShort_en',
         'dayLong','prioLimit','eventPosterLabel','group','ticket_url','ticketing_model',
         'sections']; // P2.2 — secciones data-driven desde el JSON del festival
-      _cfgFields.forEach(k=>{ if(data[k]!=null) cfg[k]=data[k]; });
+      _contentFields.forEach(k=>{ if(data[k]!=null) cfg[k]=data[k]; });
+      _identFields.forEach(k=>{ if(data[k]!=null&&cfg[k]==null) cfg[k]=data[k]; });
+      // Snapshot de identidad ya resuelta — el bloque config{} legacy de abajo
+      // tampoco puede pisarla (solo rellenar lo que siga faltando).
+      const _identSnap={}; _identFields.forEach(k=>{ if(cfg[k]!=null) _identSnap[k]=cfg[k]; });
       // ── LEGADO: festivales anteriores con bloque config{} en el JSON ──────
       // Festivales nuevos (desde Mujeres 2026) NO deben incluir config{} en el JSON —
       // toda la configuración va en FESTIVAL_CONFIG en index.html.
@@ -174,6 +183,7 @@ export async function loadFestival(id){
         } else {
           Object.assign(cfg, data.config);
           // Restaurar campos críticos — Object.assign puede pisarlos si config los tiene vacíos
+          Object.assign(cfg, _identSnap); // identidad: config.js sigue mandando
           cfg.films=exploded;
           cfg.lbSlugs=data.lbSlugs||cfg.lbSlugs||{};
           cfg.posters=data.posters||cfg.posters||{};

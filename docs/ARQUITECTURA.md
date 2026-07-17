@@ -40,7 +40,7 @@
 
 Los datos de cada festival viven en su propio JSON, **no** en `index.html`. Se cargan en `loadFestival(id)` la primera vez y se cachean en `FESTIVAL_CONFIG[id].films`.
 
-> **i18n — fuente de verdad:** `src/i18n/i18n.js` (bloque `_I18N`, es+en+pt) — es lo que lee `t()` y lo que valida `validate.py`. Los `i18n/*.json` de la raíz quedaron desincronizados y **no** se consumen en runtime (legacy).
+> **i18n — fuente de verdad:** `src/i18n/i18n.js` (bloque `_I18N`, es+en+pt) — es lo que lee `t()` y lo que valida `validate.py`. Los `i18n/*.json` legacy de la raíz fueron **eliminados** (17 jul 2026).
 >
 > **Nota:** las secciones 1–15 documentan el código actual (modular ESM); la §16 documenta el modelo MVC y su roadmap (Fases 1–8, ya completadas).
 
@@ -180,8 +180,10 @@ Los datos de cada festival viven en su propio JSON, **no** en `index.html`. Se c
 }
 ```
 
-La configuración del festival (nombre, fechas, días, storageKey, etc.) vive en:
-- `FESTIVAL_CONFIG` en `index.html` — para carga inicial antes del fetch del JSON
+La configuración del festival tiene **un solo dueño por tipo de dato** (17 jul 2026, loader.js):
+- **Identidad** (`name/shortName/city/dates/dates_en/year/timezoneOffset/festivalDates`): dueño = `FESTIVAL_CONFIG` (src/config.js). El JSON solo rellena huecos legacy, **nunca pisa** un valor de config. Gate: `validate.py [festival-name-parity]`.
+- **Contenido** (films, days, sections, venues, ticketing…): dueño = el JSON del festival.
+- `FESTIVAL_CONFIG` en `src/config.js` — para carga inicial antes del fetch del JSON
 - `config{}` dentro del JSON del festival — generado por `generate-config.js`
 
 Ambas fuentes deben estar sincronizadas. Usar `generate-config.js` para producir la entrada de `FESTIVAL_CONFIG`. **No editar ninguna de las dos a mano.**
@@ -224,10 +226,12 @@ _applyI18nDOM()    // parchea elementos del DOM estático (nav labels, filtros, 
 
 ### Archivos de strings
 ```
-i18n/es.json                ← fuente de verdad para español
-i18n/en.json                ← strings en inglés
-i18n/strings-reference.json ← inventario completo con contexto — leer antes de wiring
+src/i18n/i18n.js  ← FUENTE ÚNICA: bloque _I18N (es+en) — lo que lee t() y valida
+                    validate.py [i18n-complete]/[i18n-parity]
 ```
+> Los `i18n/*.json` legacy (es/en/strings-reference) fueron ELIMINADOS (17 jul
+> 2026): llevaban meses desincronizados y no se consumían en runtime — solo
+> invitaban a editar el archivo equivocado.
 
 ### Cómo conectar un string nuevo
 1. Verificar que la key existe en `es.json` y `en.json`
@@ -683,7 +687,7 @@ Fase 1 ── Fase 2 ── Fase 3 ── Fase 4 ── Fase 5 ── Fase 5.5 �
 ### 16.7 Lo que NO cambia en el destino
 
 - Festival JSON schema (`docs/SCHEMA.md`)
-- i18n JSON schema (`es.json`, `en.json`, `strings-reference.json`)
+- i18n: bloque `_I18N` en `src/i18n/i18n.js` (los JSON legacy ya no existen)
 - Design tokens (las mismas `--*` CSS vars, solo extraídas a `styles/tokens.css`)
 - TMDB / Lucide / Plus Jakarta Sans (siguen vía CDN)
 - Manifest / PWA / Android shell

@@ -1703,22 +1703,29 @@ try:
         _n = re.search(r"\bname:'([^']+)'", _blk)
         _s = re.search(r"\bshortName:'([^']+)'", _blk)
         if _n:
-            _pairs.append((_id, _n.group(1), _s.group(1) if _s else None))
+            _pairs.append((_id, _blk, _n.group(1), _s.group(1) if _s else None))
     _mism = []
-    for _id, _name, _short in _pairs:
+    for _id, _blk2, _name, _short in _pairs:
+        _city = re.search(r"\bcity:'([^']*)'", _blk2)
+        _dates = re.search(r"\bdates:'([^']*)'", _blk2)
+        _year = re.search(r"\byear:(\d+)", _blk2)
+        _fields = [('name', _name), ('shortName', _short),
+                   ('city', _city.group(1) if _city else None),
+                   ('dates', _dates.group(1) if _dates else None),
+                   ('year', int(_year.group(1)) if _year else None)]
         _file = 'festivals/' + re.sub(r'([a-zA-Z]+)(\d+)$', r'\1-\2', _id) + '.json'
         try:
             _d = _json.load(open(_file, encoding='utf-8'))
         except FileNotFoundError:
             continue
-        for _k, _cv in (('name', _name), ('shortName', _short)):
+        for _k, _cv in _fields:
             _jv = _d.get(_k)
             if _cv is not None and _jv is not None and _jv != _cv:
                 _mism.append(f"{_file} {_k}={_jv!r} != config {_cv!r}")
     if _mism:
         fail(check, 'JSON pisa FESTIVAL_CONFIG en runtime con otro nombre: ' + '; '.join(_mism))
     else:
-        ok(check, f'name/shortName consistentes en {len(_pairs)} festivales (JSON == config)')
+        ok(check, f'identidad (name/shortName/city/dates/year) consistente en {len(_pairs)} festivales (JSON == config)')
 except Exception as _e:
     warn(check, f'no se pudo verificar festival-name-parity: {_e}')
 
