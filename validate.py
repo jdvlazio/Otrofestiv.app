@@ -1685,6 +1685,46 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar responsive-contract: {_e}')
 
+# ── [activity-duration] toda actividad de un festival activo tiene duración ────
+# Valor central de la app: TODA actividad (película, evento único o programa
+# múltiple) muestra su duración — alimenta el cálculo del plan y la decisión del
+# usuario. Bug detonante (17 jul 2026): "Muestra de Cortometrajes" de FantasoFest
+# sin duración (contenedor '' + cortos sin minutaje; el PDF de prensa no publica
+# runtimes). Enforce SOLO festivales activos/próximos (los archivados quedan como
+# histórico). Excepción documentada = dato que la organización aún no entregó.
+check = 'activity-duration'
+try:
+    import json as _json
+    _ACTIVE = ['tercertiempo-2026', 'fantasofest-2026']   # activos/próximos hoy
+    # (festival_file, título) cuyo dato de duración la organización NO publicó.
+    # Al recibir el minutaje real: llenar el JSON y BORRAR la línea de aquí.
+    _PENDING = {
+        ('fantasofest-2026', 'Muestra de Cortometrajes'),  # PDF prensa sin runtimes; pedido a FantasoLab
+    }
+    _viol = []
+    for _fname in _ACTIVE:
+        _fp = 'festivals/' + _fname + '.json'
+        try:
+            _fd = _json.load(open(_fp, encoding='utf-8'))
+        except FileNotFoundError:
+            continue
+        _seen = set()
+        for _a in _fd.get('films', []):
+            _tt = _a.get('title')
+            if _tt in _seen:
+                continue
+            _seen.add(_tt)
+            if not str(_a.get('duration', '')).strip():
+                if (_fname, _tt) not in _PENDING:
+                    _viol.append(f"{_fname}: '{_tt}'")
+    if _viol:
+        fail(check, 'actividad(es) sin duración en festival activo (obligatoria — alimenta el plan): ' + '; '.join(_viol))
+    else:
+        _pend = len(_PENDING)
+        ok(check, f'toda actividad de festivales activos tiene duración' + (f' ({_pend} excepción(es) pendiente(s) de dato de la organización)' if _pend else ''))
+except Exception as _e:
+    warn(check, f'no se pudo verificar activity-duration: {_e}')
+
 # ── [festival-name-parity] name/shortName del JSON == FESTIVAL_CONFIG ─────────
 # loadFestival mergea name/shortName/city/dates del JSON SOBRE FESTIVAL_CONFIG
 # (loader.js _cfgFields): si el JSON trae el nombre mal escrito, toda superficie
