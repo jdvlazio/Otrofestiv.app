@@ -390,8 +390,9 @@
       "film_list": [
         {
           "title": "Cantos al juego de \"Bolar\"",
-          "director": "Ivan Sierra",
-          "year": 2026,
+          "director": "Iván Sierra",
+          "year": 2025,
+          "genre": "Animación",
           "country": "Colombia",
           "duration": "8 min",
           "synopsis": "Un ensayo audiovisual y poético sobre la infancia, el balón y la esencia del juego. Una reflexión sobre el fútbol como libertad, imaginación y encuentro colectivo.",
@@ -405,6 +406,7 @@
           "title": "El equipo del pueblo. Un sueño, Atlante",
           "director": "Rafael Aparicio",
           "year": 2025,
+          "genre": "Documental",
           "country": "México",
           "duration": "73 min",
           "synopsis": "La historia de uno de los clubes más queridos del fútbol mexicano y el vínculo emocional que mantiene con generaciones de aficionados.",
@@ -438,8 +440,8 @@
       "film_list": [
         {
           "title": "Mounir",
-          "director": "Javier Rúa, Xosé Dopazo",
-          "year": 2025,
+          "director": "Xabier Rúa, Xosé Dopazo",
+          "year": 2024,
           "country": "España",
           "duration": "14 min",
           "synopsis": "Mientras lucha por obtener un permiso de residencia, Mounir intenta construir una vida estable en España sin renunciar a sus raíces ni a los lazos familiares que lo unen a Marruecos.",
@@ -467,8 +469,9 @@
         },
         {
           "title": "Internacional. Un equipo diferente",
-          "director": "Alejandro Miñarro",
-          "year": 2025,
+          "director": "Jaime Cobo",
+          "year": 2026,
+          "genre": "Documental",
           "country": "España, Senegal",
           "duration": "96 min",
           "synopsis": "La historia de un equipo de fútbol creado para integrar personas de distintas nacionalidades en España. Frente a prejuicios, racismo y barreras culturales, el proyecto demuestra cómo el deporte puede construir convivencia, inclusión y sentido de pertenencia.",
