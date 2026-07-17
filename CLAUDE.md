@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `7e64dd0 data(tt): corregir metadata de obras del JUE contra TMDB (cargas de Juan, 16 jul)`
+> Último commit: `e12e9d7 fix(diario): la vista es de PELÍCULAS — el programa se disuelve en sus obras`
 
 ---
 
