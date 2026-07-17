@@ -130,6 +130,20 @@ export function itemPosterParts(item, section, imgClass, {header=false}={}){
     inner:src?`<img class="${imgClass}" src="${src}" loading="lazy" onerror="this.remove()" alt="">`:''};
 }
 
+// ── posterParts — puente RENDER de posterModel (films) ────────────────────────
+// posterModel(f) es LA decisión (kind/src/accent); posterParts la vuelve HTML de
+// la rama editorial. Análogo de itemPosterParts para films: toda superficie que
+// pinte un film editorial DEBE pasar por aquí — nadie re-deriva _isEditorialPoster
+// ni llama editorialFrame directo (guardián [poster-single-owner]). La rama
+// `image`/`generative` conserva su <img> por superficie (clases/transiciones
+// propias) usando .src — la DECISIÓN ya viene tomada.
+export function posterParts(f,{header=false,body='',loading}={}){
+  const m=posterModel(f);
+  if(m.kind!=='editorial') return m;                       // {kind,src,...} decidido
+  return {...m, ed:true,
+    inner:editorialFrame({header:header?m.header:undefined, body, src:m.src, title:m.title, loading})};
+}
+
 export function _getItemPoster(item){
   if(!item) return '';
   if(item.poster) return (item.poster.startsWith('http')||item.poster.startsWith('/assets/'))?item.poster:TMDB_IMG+item.poster;
@@ -184,12 +198,10 @@ export function _posterThumb(f, cssClass, loading){
     return `<div class="${cssClass}"></div>`;
   }
 
-  if(f && _isEditorialPoster(f)){
-    // Marco editorial único (thumb = banda + img, sin label). El contenedor
-    // aporta tamaño (cssClass) + color (--ed-accent) + clase poster-ed.
-    return `<div class="${cssClass} poster-ed" style="--ed-accent:${_sectionColor(f.section||'')}">`
-      + editorialFrame({src:p, title:f.title, loading:_load})
-      + `</div>`;
+  const _pp=posterParts(f,{loading:_load});
+  if(_pp.ed){
+    // Marco editorial único (thumb = banda + img, sin label) vía posterParts.
+    return `<div class="${cssClass} poster-ed" style="--ed-accent:${_pp.accent}">${_pp.inner}</div>`;
   }
 
   const _posStyle = _posterStyle(f);
@@ -251,8 +263,8 @@ export function isNowShowing(f){
   const dateStr=FESTIVAL_DATES[f.day];if(!dateStr) return false;
   const now=simNow();
   const start=_festDate(dateStr,f.time);
-  const dur=f.duration?parseInt(f.duration):90;
-  const end=new Date(start.getTime()+dur*60000);
+  // effectiveDuration (Q&A incluido) — mismo fin de función que el planificador.
+  const end=new Date(start.getTime()+effectiveDuration(f)*60000);
   return now>=start&&now<=end;
 }
 
@@ -414,12 +426,10 @@ export function _programaStack(f){
 }
 
 export function _plistPosterHtml(f, src){
-  if(_isEditorialPoster(f)){
-    // Marco editorial único (lista = banda + img, sin label). Contenedor
-    // .plist-poster aporta tamaño; poster-ed el flex; --ed-accent el color.
-    return '<div class="plist-poster poster-ed" style="--ed-accent:'+_sectionColor(f.section||'')+'">'+
-      editorialFrame({src, title:f.title})+
-    '</div>';
+  const _pp=posterParts(f);
+  if(_pp.ed){
+    // Marco editorial único (lista = banda + img, sin label) vía posterParts.
+    return '<div class="plist-poster poster-ed" style="--ed-accent:'+_pp.accent+'">'+_pp.inner+'</div>';
   }
   return src?'<div class="plist-poster"><img src="'+src+'" loading="lazy" onerror="this.remove()" alt="" style="width:100%;height:100%;object-fit:cover;border-radius:var(--r-sm)"></div>':'<div class="plist-poster"></div>';
 }

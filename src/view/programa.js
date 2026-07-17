@@ -12,7 +12,7 @@
 
 import { NOTICES, SECTION_ORDER_LIST, _DEFAULT_FEST_ID } from '../config.js';
 import { ICONS, _secLabel, _secLabelFull, _sectionColor, escXML, makeEventPoster, parseProgramTitle } from './components.js';
-import { _dayChips, editorialFrame, _getItemPoster, _isEditorialPoster, _metaBadges, _plistPosterHtml, _programaStack, dayLabel, durFmt, emptyState, getFilmPoster, isNowShowing, sala, vcfg } from './helpers.js';
+import { _dayChips, _getItemPoster, _metaBadges, _plistPosterHtml, _programaStack, dayLabel, durFmt, emptyState, getFilmPoster, isNowShowing, posterParts, sala, vcfg } from './helpers.js';
 import { festivalEnded, toMin } from '../domain/time.js';
 import { screeningPassed } from '../domain/film.js';
 import { state } from '../state/state.js';
@@ -134,7 +134,6 @@ export function renderProgramaListHTML(state){
         :_rawDt;
       const vc=vcfg(f.venue);
       const src=getFilmPoster(f)||'';
-      const _isEdList=_isEditorialPoster(f);
       const nowBadge=isNow?`<span class="film-check-badge">${t('misc_ahora')}</span>`:'';
       const notice=NOTICES.find(n=>n.title===f.title&&n.festival===((_activeFestId||_DEFAULT_FEST_ID)));
       const noticeBadge=notice?`<span class="notice-badge">${notice.type==='cancelled'?t('notice_cancelada'):t('notice_reprog_short')}</span>`:'';
@@ -352,12 +351,12 @@ export function renderPeliculaViewHTML(state){
       _cardBg='';
       _cardBg='';
       const _opacity=allPast&&!_ended?';opacity:.45':'';
-      const _isEditorial=_isEditorialPoster(f);
-      if(_isEditorial){
-        _edAccent=_sectionColor(f.section||'');
-        const _edSecLbl=_secLabel(f.section||'');
-        const _edBodyTitle=(()=>{const pfx=_edSecLbl+' - ';if(displayTitle.startsWith(pfx))return displayTitle.slice(pfx.length);const sPfx='Storytellers - ';if(displayTitle.startsWith(sPfx))return displayTitle.slice(sPfx.length);return displayTitle;})();
-        posterImg=editorialFrame({header:_edSecLbl, body:_edBodyTitle, src:posterSrc, title:f.title});
+      const _edSecLbl=_secLabel(f.section||'');
+      const _edBodyTitle=(()=>{const pfx=_edSecLbl+' - ';if(displayTitle.startsWith(pfx))return displayTitle.slice(pfx.length);const sPfx='Storytellers - ';if(displayTitle.startsWith(sPfx))return displayTitle.slice(sPfx.length);return displayTitle;})();
+      const _pp=posterParts(f,{header:true,body:_edBodyTitle}); // decisión única (posterModel)
+      if(_pp.ed){
+        _edAccent=_pp.accent;
+        posterImg=_pp.inner;
       } else {
         posterImg=posterSrc
           ?`<img src="${posterSrc}" loading="lazy" data-title="${f.title.replace(/"/g,'&quot;')}" style="width:100%;height:100%;object-fit:cover${_opacity};display:block;opacity:0;transition:opacity 250ms ease" onload="this.style.opacity='1'" onerror="_posterErr(this)" alt="">`

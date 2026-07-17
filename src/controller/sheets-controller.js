@@ -8,7 +8,7 @@
 
 import { FESTIVAL_CONFIG, MAX_REMEMBERED_SLOTS, NOTICES, TMDB_IMG, _DEFAULT_FEST_ID } from '../config.js';
 import { DAY_ABBR, DAY_NUM, ICONS, _secLabel, _sectionColor, escXML, isFullDayBlocked, makeProgramPoster, parseProgramTitle, renderRatingStarsHTML } from '../view/components.js';
-import { editorialFrame, _getItemPoster, _isEditorialImageUrl, _isEditorialPoster, _mkCortoItemHtml, _posterStyle, dayLabel, durFmt, flagFmt, getCortoItemPoster, getFilmPoster, getFilmPosterUntitled, getPosterSrc, sala, starsText, vcfg } from '../view/helpers.js';
+import { _getItemPoster, _mkCortoItemHtml, _posterStyle, dayLabel, durFmt, flagFmt, getCortoItemPoster, getFilmPoster, getFilmPosterUntitled, getPosterSrc, itemPosterParts, posterParts, sala, starsText, vcfg } from '../view/helpers.js';
 import { closeAvSheet, closePVRating, closePrioLimit } from '../view/sheets.js';
 import { showConflictModal, showToast } from '../view/feedback.js';
 import { renderAgenda, renderAvBlocks, renderDiaryHTML } from '../view/agenda.js';
@@ -121,10 +121,9 @@ export function openPelSheet(title){
       :`<img class="psp-card psp-back" src="${makeProgramPoster(state,f.film_list[1].title,f.film_list[1].duration||'',f.section||'')}" loading="lazy" alt="" data-action="openCombinedFilmSheet" data-film="${_fd2}">`;
     posterHtml=`<div class="pel-sheet-poster-stage">${_c1}${_c2}</div>`;
   } else {
-    if(_isEditorialPoster(f)){
-      const _accent=_sectionColor(f.section||'');
-      const _secLbl=_secLabel(f.section||'');
-      posterHtml=`<div class="psp-editorial poster-ed" style="--ed-accent:${_accent}">${editorialFrame({header:_secLbl, src:posterSrc, title:f.title})}</div>`;
+    const _ppF=posterParts(f,{header:true}); // decisión única (posterModel)
+    if(_ppF.ed){
+      posterHtml=`<div class="psp-editorial poster-ed" style="--ed-accent:${_ppF.accent}">${_ppF.inner}</div>`;
     } else {
       // Regla anti-repetición del sheet: el título vive en la cabecera → el
       // generativo se re-genera SIN cuerpo (banda/num intactos). Originales
@@ -444,9 +443,9 @@ export function openCortoSheet(title, country, duration, section, flags, directo
   const posterUrl=posterOverride||(richItem&&getCortoItemPoster(richItem))||getPosterSrc(title,true)||null;
   // Editorial por posterSource (still 16:9 local del festival) O por CDN-URL. Sin
   // el chequeo de posterSource, un still local caía a <img> recortado 2:3.
-  const _isEd3=(richItem&&richItem.posterSource==='editorial')||_isEditorialImageUrl(posterUrl);
-  const posterHtml=_isEd3
-    ?`<div class="psp-editorial poster-ed" style="--ed-accent:${_sectionColor(section||'')}">${editorialFrame({header:_secLabel(section||''), src:posterUrl, title})}</div>`
+  const _pp3=itemPosterParts({title, poster:posterUrl, posterSource:richItem&&richItem.posterSource}, section||'', 'pel-sheet-poster', {header:true});
+  const posterHtml=_pp3.ed
+    ?`<div class="psp-editorial poster-ed" style="--ed-accent:${_pp3.accent}">${_pp3.inner}</div>`
     :posterUrl
       ?`<img class="pel-sheet-poster" src="${posterUrl}" data-title="${(title||"").replace(/"/g,'&quot;')}" loading="lazy" onerror="_cortoSheetPosterErr(this)" alt="">`
       :`<img class="pel-sheet-poster" src="${makeProgramPoster(state,title,dur,section||'')||''}" alt="" loading="lazy">`;
@@ -514,10 +513,10 @@ export function _openCombinedFilmSheet(filmData){
   }
   const{title='',director='',year='',duration='',flags='🌐',country='',lbSlug='',poster:_fPoster='',posterSource:_fPS=''}=filmData;
   const posterUrl=_fPoster?((_fPoster.startsWith('http')||_fPoster.startsWith('/assets/'))?_fPoster:TMDB_IMG+_fPoster):getPosterSrc(title,false)||null;
-  const _isEd4=_fPS==='editorial'||_isEditorialImageUrl(posterUrl);
   const _sec4=(()=>{const _p=FILMS.find(f=>f.film_list&&f.film_list.some(c=>c.title===title));return _p?.section||'';})();
-  const posterHtml=_isEd4
-    ?`<div class="psp-editorial poster-ed" style="--ed-accent:${_sectionColor(_sec4)}">${editorialFrame({header:_secLabel(_sec4), src:posterUrl, title})}</div>`
+  const _pp4=itemPosterParts({title, poster:posterUrl, posterSource:_fPS}, _sec4, 'pel-sheet-poster', {header:true});
+  const posterHtml=_pp4.ed
+    ?`<div class="psp-editorial poster-ed" style="--ed-accent:${_pp4.accent}">${_pp4.inner}</div>`
     :posterUrl
       ?`<img class="pel-sheet-poster" src="${posterUrl}" data-title="${(title||"").replace(/"/g,'&quot;')}" loading="lazy" onerror="_cortoSheetPosterErr(this)" alt="">`
       :`<div class="pel-sheet-poster-ph">🎬</div>`;
