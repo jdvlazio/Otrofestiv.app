@@ -2,11 +2,58 @@
 // p8 Step 7e — Compartir plan (canvas/imagen) + export ICS.
 
 import { FESTIVAL_CONFIG } from '../config.js';
-import { DAYS, vcfg } from '../view/helpers.js';
+import { DAYS, dayLabel, starsText, vcfg } from '../view/helpers.js';
+import { parseProgramTitle } from '../view/components.js';
 import { showToast } from '../view/feedback.js';
 import { _festDate } from '../domain/time.js';
 import { t } from '../i18n/i18n.js';
 import { _getDisplayName, _promptDisplayName } from './auth.js';  // share→auth (sharePlan pide nombre)
+
+// ── shareDiary (F3 del Diario, 17 jul) — el diario como imagen compartible.
+// Lista tipográfica (día · estrellas · título), tokens de la casa: fondo #0A0A0A,
+// ámbar #F59E0B, blanco #F0EDE8. Mismo flujo de compartir que sharePlan
+// (canvas → toBlob → Web Share API → fallback descarga).
+export async function shareDiary(){
+  const sched=(savedAgenda&&savedAgenda.schedule)||[];
+  const _seen=new Set(); const rows=[];
+  sched.forEach(sc=>{ if(watched.has(sc._title)&&!_seen.has(sc._title)){ _seen.add(sc._title); rows.push({day:sc.day,title:sc._title,r:filmRatings[sc._title]||0}); } });
+  [...watched].forEach(tt=>{ if(!_seen.has(tt)&&FILMS.some(f=>f.title===tt)){ _seen.add(tt); rows.push({day:null,title:tt,r:filmRatings[tt]||0}); } });
+  if(!rows.length){ showToast(t('diary_vacio'),'warn'); return; }
+  const cfg=FESTIVAL_CONFIG[_activeFestId]||{};
+  const W=1080,PAD=72,ROW=76,HDR=210,FOOT=110;
+  const c=document.createElement('canvas'); c.width=W; c.height=HDR+rows.length*ROW+FOOT;
+  const x=c.getContext('2d');
+  x.fillStyle='#0A0A0A'; x.fillRect(0,0,W,c.height);
+  x.fillStyle='#F59E0B'; x.font='700 30px system-ui'; x.fillText((t('diary_eyebrow')||'Diario').toUpperCase(),PAD,PAD);
+  x.fillStyle='#F0EDE8'; x.font='800 54px system-ui';
+  const _fn=(cfg.name||''); x.fillText(_fn.length>30?_fn.slice(0,28)+'…':_fn,PAD,PAD+62);
+  x.fillStyle='#8A8A8A'; x.font='500 30px system-ui';
+  x.fillText(`${rows.length} ${rows.length===1?t('label_vista'):t('label_vistas')}`,PAD,PAD+108);
+  let y=HDR+46;
+  rows.forEach(rw=>{
+    const dl=rw.day?String((dayLabel(rw.day)||rw.day)).toUpperCase():'—';
+    x.fillStyle='#8A8A8A'; x.font='600 26px system-ui'; x.fillText(dl,PAD,y);
+    x.fillStyle='#F59E0B'; x.font='600 30px system-ui'; x.fillText(rw.r?starsText(rw.r):'·',PAD+150,y);
+    const{displayTitle:dt}=parseProgramTitle(rw.title);
+    x.fillStyle='#EDEDED'; x.font='600 34px system-ui'; x.fillText(dt.length>36?dt.slice(0,34)+'…':dt,PAD+340,y);
+    y+=ROW;
+  });
+  x.font='800 34px system-ui';
+  x.fillStyle='#F0EDE8'; const _w1=x.measureText('Otro').width;
+  x.fillText('Otro',PAD,c.height-52);
+  x.fillStyle='#F59E0B'; x.fillText('festiv',PAD+_w1,c.height-52);
+  const fname=`otrofestiv-diario-${(cfg.shortName||'fest').toLowerCase().replace(/\s+/g,'-')}.png`;
+  try{
+    const blob=await new Promise(r=>c.toBlob(r,'image/png'));
+    const file=blob?new File([blob],fname,{type:'image/png'}):null;
+    if(file&&navigator.share&&navigator.canShare&&navigator.canShare({files:[file]})){
+      await navigator.share({files:[file],title:`${t('diary_eyebrow')} · ${cfg.name||'Otrofestiv'}`});
+      showToast(t('toast_compartido'),'info');
+      return;
+    }
+  }catch(e){ if(e&&e.name==='AbortError') return; }
+  _dlDirect(c.toDataURL('image/png'));
+}
 
 export async function sharePlan(){
   if(!savedAgenda||!savedAgenda.schedule||!savedAgenda.schedule.length){

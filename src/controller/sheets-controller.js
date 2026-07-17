@@ -11,7 +11,7 @@ import { DAY_ABBR, DAY_NUM, ICONS, _secLabel, _sectionColor, escXML, isFullDayBl
 import { editorialFrame, _getItemPoster, _isEditorialImageUrl, _isEditorialPoster, _mkCortoItemHtml, _posterStyle, dayLabel, durFmt, flagFmt, getCortoItemPoster, getFilmPoster, getFilmPosterUntitled, getPosterSrc, sala, starsText, vcfg } from '../view/helpers.js';
 import { closeAvSheet, closePVRating, closePrioLimit } from '../view/sheets.js';
 import { showConflictModal, showToast } from '../view/feedback.js';
-import { renderAgenda, renderAvBlocks } from '../view/agenda.js';
+import { renderAgenda, renderAvBlocks, renderDiaryHTML } from '../view/agenda.js';
 import { runCalc } from './calc.js';
 import { saveAV, saveLastSlot, saveRating, saveSavedAgenda } from './persistence.js';
 import { _reRenderIntereses, showAgView, switchMainNav, updateAgTab } from './pipeline.js';
@@ -371,6 +371,40 @@ export function closeVenueSheet(){
   document.getElementById('venue-sheet')?.classList.remove('open');
 }
 
+// ── DIARIO (17 jul) — lo visto como destino propio (patrón Letterboxd/Things).
+// Se abre desde el chip "N vistas" del progreso de Mi Plan. El contenido lo arma
+// renderDiaryHTML (misma card del recap de Modo Recuerdo). z 8901: bajo pel-sheet,
+// así tocar una card abre la película ENCIMA del Diario.
+export function openDiary(){
+  const body=document.getElementById('diary-body');
+  if(body) body.innerHTML=renderDiaryHTML(state);
+  const cfg=FESTIVAL_CONFIG[_activeFestId]||{};
+  const titleEl=document.getElementById('diary-title');
+  if(titleEl) titleEl.textContent=cfg.name||'';
+  const countEl=document.getElementById('diary-count');
+  if(countEl){
+    const n=(body?body.querySelectorAll('.ended-poster').length:0);
+    countEl.textContent=n?`${n} ${n===1?t('label_vista'):t('label_vistas')}`:'';
+  }
+  _pushSheetState();
+  document.getElementById('diary-overlay')?.classList.add('open');
+  document.getElementById('diary-sheet')?.classList.add('open');
+}
+
+export function closeDiary(){
+  document.getElementById('diary-overlay')?.classList.remove('open');
+  document.getElementById('diary-sheet')?.classList.remove('open');
+}
+
+// Si el Diario está abierto detrás (calificaste desde una card), repintarlo para que
+// las estrellas nuevas aparezcan al volver — el sheet no participa del pipeline.
+export function _refreshDiaryIfOpen(){
+  const sheet=document.getElementById('diary-sheet');
+  if(!sheet||!sheet.classList.contains('open')) return;
+  const body=document.getElementById('diary-body');
+  if(body) body.innerHTML=renderDiaryHTML(state);
+}
+
 export function _closeTopSheet(){
   // Cerrar en orden de prioridad (el más reciente primero)
   if(document.getElementById('venue-sheet')?.classList.contains('open')){closeVenueSheet();return true;}
@@ -379,6 +413,7 @@ export function _closeTopSheet(){
   if(document.getElementById('prio-limit-sheet')?.classList.contains('open')){closePrioLimit();return true;}
   if(document.getElementById('rating-overlay')?.classList.contains('open')){closeRatingSheet();return true;}
   if(document.getElementById('pel-sheet')?.classList.contains('open')){closePelSheet();return true;}
+  if(document.getElementById('diary-sheet')?.classList.contains('open')){closeDiary();return true;}
   // Action modal dinámico
   const modal=document.querySelector('.conflict-modal');
   if(modal){modal.remove();return true;}
@@ -802,6 +837,7 @@ export function openRatingSheet(title){
 export function closeRatingSheet(){
   if(_currentRating>0){
     saveRating(_ratingTitle,_currentRating);
+    _refreshDiaryIfOpen();
     const _stars=starsDisplay(_currentRating,11);
     showToast(`<span class="row-xs">${_stars}</span>`,'info');
   } else {
@@ -1285,4 +1321,5 @@ function _pvFinish(){
   }
   _pvQueue=null;
   closePVRating();
+  _refreshDiaryIfOpen();
 }

@@ -1098,7 +1098,7 @@ try:
         '_sbUser', '_sb', 'LB_SLUGS', 'POSTERS', 'CUSTOM_POSTERS',
         '_splashSelectedFestId', 'programaChip', '_programaChipMatchFn',
         '_dismissedNotices', '_currentChips', '_activeMiPlanFilm', '_expandedFilm',
-        'activeMiPlanDay', 'miPlanViewStart', '_ctaRemovedVisible', 'archiveOpen',
+        'activeMiPlanDay', 'miPlanViewStart', '_ctaRemovedVisible',
     ]
     _problems = []
 
@@ -1733,10 +1733,10 @@ try:
     #   agenda.js (render agenda+miplan) · main.js (composición/bootstrap) ·
     #   i18n.js (diccionarios es/en, es DATA) · sheets-controller.js · handlers.js
     _ALLOW = {
-        'src/view/agenda.js': 1580,
-        'src/main.js': 1549,
-        'src/i18n/i18n.js': 1394,
-        'src/controller/sheets-controller.js': 1288,
+        'src/view/agenda.js': 1581,
+        'src/main.js': 1551,
+        'src/i18n/i18n.js': 1397,
+        'src/controller/sheets-controller.js': 1325,
         'src/controller/handlers.js': 915,
     }
     _over = []
