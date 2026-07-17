@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `0dca381 design(poster+hdr): un solo póster propio en TODA superficie de cortos + iconos en FUNCIÓN/PROGRAMA`
+> Último commit: `ed8a5f9 design(hdr): iconos en TODOS los encabezados con línea — unidad completa`
 
 ---
 
