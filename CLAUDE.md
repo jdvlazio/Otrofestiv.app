@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `d032261 unify(color+duración): póster generativo usa _sectionColor · contador de hueco usa _minFmt`
+> Último commit: `1725b07 unify(menores): mplanEndStr delega en minToStr · fallback del stack de programas unificado`
 
 ---
 

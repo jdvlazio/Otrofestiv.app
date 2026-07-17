@@ -1708,6 +1708,30 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar poster-editorial-parity: {_e}')
 
+# ── [poster-single-owner] decisión y marco editorial SOLO en view/helpers.js ──
+# posterModel/posterParts (films) e itemPosterParts (obras) son los ÚNICOS dueños
+# de la decisión editorial-vs-imagen y del marco. Si _isEditorialPoster( o
+# editorialFrame( aparece en otro módulo de src/, alguien re-derivó la decisión
+# a mano — el patrón que causó 7 copias divergentes del marco (jul 2026).
+check = 'poster-single-owner'
+try:
+    import glob as _glob
+    _off = []
+    for _sf in _glob.glob('src/**/*.js', recursive=True):
+        if _sf.endswith('view/helpers.js'):
+            continue
+        _c = open(_sf, encoding='utf-8').read()
+        for _tok in ('_isEditorialPoster(', 'editorialFrame('):
+            for _i, _ln in enumerate(_c.splitlines(), 1):
+                if _tok in _ln and not _ln.strip().startswith('//') and 'import' not in _ln:
+                    _off.append(f"{_sf}:{_i} {_tok[:-1]}")
+    if _off:
+        fail(check, 'decisión/marco editorial fuera de la fuente única (usar posterParts/itemPosterParts): ' + '; '.join(_off[:6]))
+    else:
+        ok(check, 'decisión y marco editorial construidos solo en view/helpers.js')
+except Exception as _e:
+    warn(check, f'no se pudo verificar poster-single-owner: {_e}')
+
 # ── [activity-duration] toda actividad de un festival activo tiene duración ────
 # Valor central de la app: TODA actividad (película, evento único o programa
 # múltiple) muestra su duración — alimenta el cálculo del plan y la decisión del

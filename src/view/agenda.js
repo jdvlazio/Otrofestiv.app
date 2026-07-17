@@ -13,7 +13,7 @@ import {
   ICONS, _secLabel, _secLabelFull, _sectionColor, escXML, makeEventPoster, makeProgramPoster, parseProgramTitle, renderAvBlocksHTML, renderFlowProgress,
 } from './components.js';
 import {
-  DAYS, DAY_SHORT_EN, _dayChips, editorialFrame, _isEditorialPoster, _langDates, _lblLocalized, _minFmt, _mkCortoItemHtml, _posterThumb, getCortoItemPoster, itemPosterParts, dayChip, dayLabel, dayLabelLong, durFmt, emptyState, emptyStateHero, flagFmt, getFilmPoster, isToday, mplanBlockType, mplanEndStr, sala, starsText, travelWarn, vcfg, delayConsensusBadge,
+  DAYS, DAY_SHORT_EN, _dayChips, _langDates, _lblLocalized, _minFmt, _mkCortoItemHtml, _posterThumb, getCortoItemPoster, itemPosterParts, posterParts, dayChip, dayLabel, dayLabelLong, durFmt, emptyState, emptyStateHero, flagFmt, getFilmPoster, isToday, mplanBlockType, mplanEndStr, sala, starsText, travelWarn, vcfg, delayConsensusBadge,
 } from './helpers.js';
 import {
   _festDate, _festNowMin, festivalEnded, minToStr, parseDur, simNow, simTodayStr, toMin,
@@ -26,7 +26,7 @@ import { cloudScreeningKey } from '../domain/delays.js';
 // Es la ÚNICA dependencia view→controller permitida (fijada en validate.py [view-purity]).
 import { getConsensusMap } from '../controller/delays-cloud.js';
 import {
-  screeningPassed,
+  screeningPassed, screeningEnded, screeningNow, effectiveDuration,
 } from '../domain/film.js';
 import {
   isScreeningBlocked, screensConflict, screensConflictReason,
@@ -274,8 +274,8 @@ export function renderMiPlanCalendar(state){
       const fMin=toMin(s.time),dur=parseDur(s.duration);
       const top=PHDR+toPx(fMin);
       const blockH=Math.max(dur/60*PPH-4,20);
-      const isPast=isPastDay||(isToday&&fMin+dur<nowMin);
-      const isNow=isToday&&fMin<=nowMin&&fMin+dur>nowMin;
+      const isPast=isPastDay||(isToday&&screeningEnded(s,nowMin));
+      const isNow=isToday&&screeningNow(s,nowMin);
       const type=mplanBlockType(s);
       const filmKey=(s._title||'')+s.time;
       const isActive=filmKey===_activeMiPlanFilm;
@@ -330,8 +330,8 @@ export function renderMiPlanCalendar(state){
   } else {
     dayFilms.forEach((s,idx)=>{
       const fMin=toMin(s.time),dur=parseDur(s.duration);
-      const isPast=isPastDay||(activeMiPlanDay===nowDayIdx&&fMin+dur<nowMin);
-      const isNow=activeMiPlanDay===nowDayIdx&&fMin<=nowMin&&fMin+dur>nowMin;
+      const isPast=isPastDay||(activeMiPlanDay===nowDayIdx&&screeningEnded(s,nowMin));
+      const isNow=activeMiPlanDay===nowDayIdx&&screeningNow(s,nowMin);
       // F1 (Diario, 17 jul): el estado Vista vive EN LA FILA (in-situ, modelo
       // calendario) — atenuada + ✓ verde + estrellas. El Historial colapsable que
       // duplicaba esto se retiró; el repaso cross-día es el Diario (openDiary).
@@ -412,7 +412,7 @@ export function renderUnconfirmed(state,schedule){
     if(watched.has(s._title)) return false;
     const dateStr=FESTIVAL_DATES[s.day];if(!dateStr) return false;
     const end=_festDate(dateStr,s.time);
-    end.setMinutes(end.getMinutes()+parseDur(s.duration));
+    end.setMinutes(end.getMinutes()+effectiveDuration(s)); // fin canónico (Q&A incluido)
     return end<now;
   }).sort((a,b)=>{
     const da=_festDate(FESTIVAL_DATES[a.day],a.time);
@@ -511,12 +511,12 @@ function _recapPosterCard(state,title){
   if(!f) return '';
   const r=filmRatings[title];
   const{displayTitle:dt}=parseProgramTitle(title);
-  const src=getFilmPoster(f)||'';
-  const _isEdList=_isEditorialPoster(f);
+  const _pp=posterParts(f,{header:true,body:''}); // decisión única (posterModel)
+  const src=_pp.src||'';
   const safeT=title.replace(/"/g,'&quot;').replace(/'/g,"&#39;");
-  return`<div class="poster-card ended-poster js-open-pel${_isEdList?' poster-ed':''}" data-title="${escXML(f.title)}"${_isEdList?` style="--ed-accent:${_sectionColor(f.section||'')}"`:''}>
-    ${_isEdList
-      ?editorialFrame({header:_secLabel(f.section||''), body:'', src, title:f.title})
+  return`<div class="poster-card ended-poster js-open-pel${_pp.ed?' poster-ed':''}" data-title="${escXML(f.title)}"${_pp.ed?` style="--ed-accent:${_pp.accent}"`:''}>
+    ${_pp.ed
+      ?_pp.inner
       :src?`<img class="img-cover" src="${src}" loading="lazy" onerror="this.remove()" alt="">`:``}
     <div class="ended-poster-footer">
       ${r?`<div class="label-track-amber">${starsText(r)}</div>`
@@ -1596,7 +1596,7 @@ export function _updateMiPlanBadge(){
     if(watched.has(s._title)) return false;
     const dateStr=FESTIVAL_DATES[s.day]; if(!dateStr) return false;
     const end=_festDate(dateStr,s.time);
-    end.setMinutes(end.getMinutes()+parseDur(s.duration));
+    end.setMinutes(end.getMinutes()+effectiveDuration(s)); // fin canónico (Q&A incluido)
     return end<now;
   }).length;
   if(count>0){

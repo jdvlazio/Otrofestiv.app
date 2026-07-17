@@ -4,14 +4,12 @@
 //
 // DEPS:
 //   - domain/time: parseDur, _festDate, simNow, festivalEnded, toMin (imports ↓)
-//   - config: DEFAULT_DURATION_MIN (_classifyTodayScreenings) — import directo.
 //   - festival-state vía STATE BRIDGE: FESTIVAL_DATES (screeningPassed), FILMS +
 //     savedAgenda (_endedStats), FILMS + watched/filmRatings (scoreFilm).
 //
 // WORKER: las sched pure fns tienen COPIAS en el template del calc worker; el
 //   worker las consume vía eval(name).toString(). [worker-overlap] valida.
 
-import { DEFAULT_DURATION_MIN } from "../config.js";
 import { parseDur, _festDate, simNow, festivalEnded, toMin } from "./time.js";
 
 // p8 Step 8d-1: normTitle — normaliza comillas tipográficas en títulos (punto
@@ -137,16 +135,19 @@ export function screeningPassed(s){
   return simNow()>screeningTime;
 }
 
+// ── Predicados CANÓNICOS de fase de una función (fuente única) ────────────────
+// "terminó" y "en curso" estaban reimplementados inline en 5 sitios (aquí,
+// isNowShowing, agenda.js ×2, _updateMiPlanBadge), cada uno con parseInt y SIN
+// el Q&A (+30) que el planificador sí cuenta. Todo fin de función sale de
+// screeningEndMin (effectiveDuration = parseDur + Q&A). NOTA: screeningPassed
+// (arriba) es OTRO concepto — "ya no llegás" (arranque+10 de gracia), no "terminó".
+export function screeningEndMin(s){ return toMin(s.time)+effectiveDuration(s); }
+export function screeningEnded(s,nowMin){ return screeningEndMin(s)<=nowMin; }
+export function screeningNow(s,nowMin){ return toMin(s.time)<=nowMin&&!screeningEnded(s,nowMin); }
+
 export function _classifyTodayScreenings(screenings,nowMin){
-  const done=screenings.filter(s=>{
-    const dur=parseInt(s.duration)||DEFAULT_DURATION_MIN;
-    return toMin(s.time)+dur<=nowMin;
-  });
-  const active=screenings.filter(s=>{
-    const dur=parseInt(s.duration)||DEFAULT_DURATION_MIN;
-    const start=toMin(s.time);
-    return start<=nowMin&&start+dur>nowMin;
-  });
+  const done=screenings.filter(s=>screeningEnded(s,nowMin));
+  const active=screenings.filter(s=>screeningNow(s,nowMin));
   const future=screenings.filter(s=>toMin(s.time)>nowMin);
   return{done,active,future};
 }
