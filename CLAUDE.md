@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `94287ff unify(lote A): conflicto/bloque/título/día → fuente única`
+> Último commit: `1725b07 unify(menores): mplanEndStr delega en minToStr · fallback del stack de programas unificado`
 
 ---
 
