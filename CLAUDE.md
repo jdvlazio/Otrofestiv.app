@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `e3d0905 fix(rating): la cola obra-por-obra era INALCANZABLE — los 3 caminos de Vista la saltaban`
+> Último commit: `3284685 chore: bump (landing Mi Plan + fix cola rating alcanzable)`
 
 ---
 

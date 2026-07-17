@@ -39,7 +39,6 @@ let _expandedFilm='';            // key: title+day+time — which film has alter
 let activeMiPlanDay=null;
 let miPlanViewStart=0;           // 0-4, step 1, shows 2 days
 let _ctaRemovedVisible=false;    // CTA B: post-eliminación
-let archiveOpen=false;
 // auth / splash / posters
 let _sb=null, _sbUser=null;
 let LB_SLUGS={};
@@ -76,7 +75,6 @@ const _lets = {
   activeMiPlanDay:    [() => activeMiPlanDay,    v => { activeMiPlanDay = v; }],
   miPlanViewStart:    [() => miPlanViewStart,    v => { miPlanViewStart = v; }],
   _ctaRemovedVisible: [() => _ctaRemovedVisible, v => { _ctaRemovedVisible = v; }],
-  archiveOpen:        [() => archiveOpen,        v => { archiveOpen = v; }],
 };
 for (const [k, [get, set]] of Object.entries(_lets)) {
   Object.defineProperty(globalThis, k, { get, set, configurable: true });

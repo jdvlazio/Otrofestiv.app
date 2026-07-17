@@ -2,7 +2,7 @@
 // p8 Step 6f — Render de agenda + miplan (selección/planner/Mi Plan).
 // 18 fns. Closure AST = 20 (incl. emptyState/emptyStateHero/DAYS → helpers.js).
 // View-state lets (_activeMiPlanFilm/_expandedFilm/activeMiPlanDay/miPlanViewStart/
-// _ctaRemovedVisible/archiveOpen) viven en main.js, leídos/escritos vía STATE
+// _ctaRemovedVisible) viven en main.js, leídos/escritos vía STATE
 // BRIDGE (globalThis) — patrón 6c (D-6F-1). Roster (FILMS/watchlist/...) idem.
 // runCalc NO es dep de este árbol (va a Wave 7 controller).
 
@@ -164,7 +164,7 @@ export function renderAgenda(){
 }
 
 export function renderMiPlanCalendar(state){
-  const {savedAgenda, FILMS, prioritized, FESTIVAL_DATES} = state.snapshot();
+  const {savedAgenda, FILMS, prioritized, watched, filmRatings, FESTIVAL_DATES} = state.snapshot();
   if(!savedAgenda||!savedAgenda.schedule.length) return'';
   const schedule=savedAgenda.schedule;
   const todayStr=simTodayStr();
@@ -332,6 +332,11 @@ export function renderMiPlanCalendar(state){
       const fMin=toMin(s.time),dur=parseDur(s.duration);
       const isPast=isPastDay||(activeMiPlanDay===nowDayIdx&&fMin+dur<nowMin);
       const isNow=activeMiPlanDay===nowDayIdx&&fMin<=nowMin&&fMin+dur>nowMin;
+      // F1 (Diario, 17 jul): el estado Vista vive EN LA FILA (in-situ, modelo
+      // calendario) — atenuada + ✓ verde + estrellas. El Historial colapsable que
+      // duplicaba esto se retiró; el repaso cross-día es el Diario (openDiary).
+      const isSeen=watched.has(s._title);
+      const _rowStars=(isSeen&&filmRatings[s._title])?starsText(filmRatings[s._title]):'';
       const safeT=(s._title||'').replace(/"/g,'&quot;');
       if(idx>0){
         const prev=dayFilms[idx-1];
@@ -355,19 +360,21 @@ export function renderMiPlanCalendar(state){
             ?`<img class="lb-poster" src="${makeEventPoster(state,_mf.title,_mf.duration,_mf.event_kind)}" alt="" loading="lazy" onerror="this.remove()">`
             :_posterThumb(_mf,'lb-poster');
       const _mph=`<div class="js-open-pel" data-title="${escXML(s._title||'')}" style="flex-shrink:0;cursor:pointer" data-stop="1">${_mphInner}</div>`
-      listHtml+=`<div class="mplan-row${_rowKey===_activeMiPlanFilm?' active':''}" style="cursor:pointer" data-rkey="${_safeRowKey}" data-action="selectFromDetail">
+      listHtml+=`<div class="mplan-row${_rowKey===_activeMiPlanFilm?' active':''}${isSeen?' mp-seen':''}" style="cursor:pointer" data-rkey="${_safeRowKey}" data-action="selectFromDetail">
         ${_mph}
         <div class="mplan-ri">
           <div class="mplan-t1${isPast?' mp-past':''}" ${!isPast?`data-action="toggleFilmAlternatives" data-key="${(s._title||'')+(s.day||'')+(s.time||'')}" data-title="${safeT}" data-day="${s.day||''}" data-time="${s.time||''}" data-stop="1"`:''} title="${!isPast?t('tooltip_cambiar_horario'):''}">${s.time}</div>
-          <div class="mplan-t2">${mplanEndStr(s.time,dur)}${prioritized.has(s._title)?` <span class="txt-amber60-xs">★</span>`:''}${isNow?` <span class="txt-green-semi">${t('label_en_curso_min')}</span>`:''}</div>
+          <div class="mplan-t2">${mplanEndStr(s.time,dur)}${prioritized.has(s._title)?` <span class="txt-amber60-xs">★</span>`:''}${_rowStars?` <span class="txt-amber-sm">${_rowStars}</span>`:''}${isNow?` <span class="txt-green-semi">${t('label_en_curso_min')}</span>`:''}</div>
           <div>${(()=>{const{displayTitle:_dt,progSuffix:_ps}=parseProgramTitle(s._title||'');const _mfqa=FILMS.find(fi=>fi.title===s._title&&fi.day===s.day&&fi.time===s.time);const _qab=_mfqa?.has_qa?`<span class="meta-badge sm">Q&A</span>`:'';return`<div class="mplan-rtitle${_isEventRow?' mp-event-title':''}">${_dt}${_qab}</div>${_ps?`<div class="prog-suffix">${_ps}</div>`:''}`;})()} </div>
           <div class="mplan-rvenue${_isEventRow?' mp-event-venue':''}">${ICONS.pin} ${vcfg(s.venue).short}${sala(s.venue)?' \u00b7 '+sala(s.venue):''}</div>
           ${(()=>{const _mf=FILMS.find(fi=>fi.title===s._title&&fi.day===s.day&&fi.time===s.time);if(!_mf||!_mf.is_cortos||!_mf.film_list||!_mf.film_list.length) return'';return`<button class="row-xs mplan-prog-toggle" data-action="toggleMplanProg">${ICONS.chevronR} ${t('label_programa')}</button>`;})()}
         </div>
         <div class="col-end">
-          <button class="icon-btn-circle ag-fi-btn del" data-title="${safeT}" data-action="removeFromAgenda" data-stop="1">${ICONS.x}</button>
+          ${isSeen
+            ?`<button class="icon-btn-circle ag-fi-btn seen" data-title="${safeT}" data-day="${s.day||''}" data-time="${s.time||''}" data-venue="${(s.venue||'').replace(/"/g,'&quot;')}" data-dur="${s.duration||''}" data-action="markWatchedFromPlan" data-stop="1" aria-label="${t('aria_quitar_vista')}">${ICONS.check}</button>`
+            :`<button class="icon-btn-circle ag-fi-btn del" data-title="${safeT}" data-action="removeFromAgenda" data-stop="1">${ICONS.x}</button>`}
         </div>
-      </div>${_expandedFilm===(s._title||'')+(s.day||'')+(s.time||'')?`<div class="film-alts">${renderFilmAlternatives(state,s._title,s.day,s.time)}</div>`:''}${(()=>{const _mf=FILMS.find(fi=>fi.title===s._title&&fi.day===s.day&&fi.time===s.time);if(!_mf||!_mf.is_cortos||!_mf.film_list||!_mf.film_list.length) return'';return`<div class="mplan-prog-list">${_mf.film_list.map((item,n)=>_mkCortoItemHtml(item,n,{section:_mf.section||''})).join('')}</div>`;})()}`;
+      </div>${_expandedFilm===(s._title||'')+(s.day||'')+(s.time||'')?`<div class="film-alts">${renderFilmAlternatives(state,s._title,s.day,s.time)}</div>`:''}${(()=>{const _mf=FILMS.find(fi=>fi.title===s._title&&fi.day===s.day&&fi.time===s.time);if(!_mf||!_mf.is_cortos||!_mf.film_list||!_mf.film_list.length) return'';return`<div class="mplan-prog-list">${_mf.film_list.map((item,n)=>_mkCortoItemHtml(item,n,{section:_mf.section||'',ratingEl:filmRatings[item.title]?`<span class="corto-rating-stars">${starsText(filmRatings[item.title])}</span>`:''})).join('')}</div>`;})()}`;
     });
   }
   listHtml+='</div>';
@@ -493,6 +500,56 @@ export function renderFilmAlternatives(state,title,day,time){
   </div>`;
 }
 
+// _recapPosterCard — card de póster grande con estado de calificación (estrellas, o ★
+// que abre el post-vista: film suelto → rating directo; programa → cola obra por obra).
+// FUENTE ÚNICA del Diario (durante el festival) y del recap de Modo Recuerdo (después):
+// la misma card en los dos momentos — un componente, cero divergencia. Pensada para
+// screenshot: pósters grandes, plena opacidad.
+function _recapPosterCard(state,title){
+  const {FILMS, filmRatings} = state.snapshot();
+  const f=FILMS.find(fi=>fi.title===title);
+  if(!f) return '';
+  const r=filmRatings[title];
+  const{displayTitle:dt}=parseProgramTitle(title);
+  const src=getFilmPoster(f)||'';
+  const _isEdList=_isEditorialPoster(f);
+  const safeT=title.replace(/"/g,'&quot;').replace(/'/g,"&#39;");
+  return`<div class="poster-card ended-poster js-open-pel${_isEdList?' poster-ed':''}" data-title="${escXML(f.title)}"${_isEdList?` style="--ed-accent:${_sectionColor(f.section||'')}"`:''}>
+    ${_isEdList
+      ?editorialFrame({header:_secLabel(f.section||''), body:'', src, title:f.title})
+      :src?`<img class="img-cover" src="${src}" loading="lazy" onerror="this.remove()" alt="">`:``}
+    <div class="ended-poster-footer">
+      ${r?`<div class="label-track-amber">${starsText(r)}</div>`
+         :`<button class="ended-rate-btn" data-action="openPostViewRating" data-title="${safeT}" data-stop="1">★</button>`}
+      <div class="ended-poster-title">${dt}</div>
+    </div>
+  </div>`;
+}
+
+// renderDiaryHTML — el DIARIO del festival (patrón Letterboxd/Things, aprobado 17 jul):
+// lo visto como destino propio, cronológico por día, con la misma card del recap.
+// Incluye lo visto FUERA del plan (su única otra casa era el Historial retirado).
+// Lo abre openDiary desde el chip "N vistas" de la barra de progreso de Mi Plan.
+export function renderDiaryHTML(state){
+  const {savedAgenda, watched, FILMS} = state.snapshot();
+  const all=(savedAgenda&&savedAgenda.schedule)||[];
+  const planTitles=new Set(all.map(s=>s._title));
+  const _seen=new Set();
+  const byDay={};
+  all.forEach(s=>{ if(watched.has(s._title)&&!_seen.has(s._title)){ _seen.add(s._title); (byDay[s.day]=byDay[s.day]||[]).push(s._title); } });
+  const outside=[...watched].filter(tt=>!planTitles.has(tt)&&FILMS.some(f=>f.title===tt));
+  let html='';
+  DAY_KEYS.filter(d=>byDay[d]).forEach(day=>{
+    html+=`<div class="saved-day-lbl">${dayChip(day)}</div>
+    <div class="poster-grid pg-miplan">${byDay[day].map(tt=>_recapPosterCard(state,tt)).join('')}</div>`;
+  });
+  if(outside.length){
+    html+=`<div class="archive-out-lbl">${t('plan_vistas_fuera')}</div>
+    <div class="poster-grid pg-miplan">${outside.map(tt=>_recapPosterCard(state,tt)).join('')}</div>`;
+  }
+  return html||`<div class="hint">${t('diary_vacio')}</div>`;
+}
+
 export function renderContextualHeader(state, consensus){
   const {savedAgenda, FILMS, watched, prioritized, filmRatings, filmDelays, _activeFestId, _lang} = state.snapshot();
   const ph=_getFestivalPhase();
@@ -504,26 +561,7 @@ export function renderContextualHeader(state, consensus){
     const{totalWatched,totalPlanned,pendingRatings}=ph;
     // Películas vistas con su calificación
     // Ordenar: calificadas primero (descendente), sin calificar al final
-    const watchedFilms=[...watched].sort((a,b)=>((filmRatings[b]||0)-(filmRatings[a]||0))).map(t=>{
-      const f=FILMS.find(fi=>fi.title===t);
-      const r=filmRatings[t];
-      const{displayTitle:dt}=parseProgramTitle(t);
-      const src=getFilmPoster(f)||'';
-      const _isEdList=_isEditorialPoster(f);
-      const safeT=t.replace(/"/g,'&quot;').replace(/'/g,"&#39;");
-      const stars=r?starsText(r):'';
-      // Posters grandes, plena opacidad — pensado para screenshot
-      return`<div class="poster-card ended-poster js-open-pel${_isEdList?' poster-ed':''}" data-title="${escXML(f.title)}"${_isEdList?` style="--ed-accent:${_sectionColor(f.section||'')}"`:''}>
-        ${_isEdList
-          ?editorialFrame({header:_secLabel(f.section||''), body:'', src, title:f.title})
-          :src?`<img class="img-cover" src="${src}" loading="lazy" onerror="this.remove()" alt="">`:``}
-        <div class="ended-poster-footer">
-          ${r?`<div class="label-track-amber">${stars}</div>`
-             :`<button class="ended-rate-btn" data-action="openPostViewRating" data-title="${safeT}" data-stop="1">★</button>`}
-          <div class="ended-poster-title">${dt}</div>
-        </div>
-      </div>`;
-    }).join('');
+    const watchedFilms=[...watched].sort((a,b)=>((filmRatings[b]||0)-(filmRatings[a]||0))).map(t=>_recapPosterCard(state,t)).join('');
     const subMsg=totalWatched===0
       ?t('empty_prox_fest')
       :pendingRatings>0
@@ -1006,7 +1044,6 @@ export function _renderSavedAgendaHTML(state, consensus){
   if(!savedAgenda||!savedAgenda.schedule.length) return emptyStateHero(ICONS.calendar,t('plan_tu_plan_empty'),t('empty_intereses'),t('cta_ir_planear'),'mnav-planner');
   const all=savedAgenda.schedule;
   const planTitles=new Set(all.map(s=>s._title));
-  const archive=all.filter(s=>watched.has(s._title));
   // Películas marcadas vistas FUERA del plan — en watched pero no en savedAgenda
   const watchedOutsidePlan=[...watched]
     .filter(t=>!planTitles.has(t))
@@ -1023,10 +1060,14 @@ export function _renderSavedAgendaHTML(state, consensus){
   const currentDayNum=dayIdx>=0?dayIdx+1:null;
   const totalDays=Math.max(1,DAY_KEYS.length);
   const viewedCount=all.filter(s=>watched.has(s._title)).length;
+  // Total del Diario: vistas del plan + vistas fuera del plan (títulos únicos).
+  const _diaryCount=new Set([...all.filter(s=>watched.has(s._title)).map(s=>s._title),...watchedOutsidePlan.map(f=>f.title)]).size;
   const progressPct=dayIdx>=0?Math.round((dayIdx/(totalDays-1))*100):0;
   const progressBar=currentDayNum?`<div class="row-sm festival-progress">
     <div style="flex:1">
-      <div class="festival-progress-text"><span>${t('label_dia_prog')} <b>${currentDayNum}</b> ${t('label_de_dias')} ${totalDays}</span><span style="color:var(--amber);display:flex;align-items:center;gap:4px">${viewedCount} ${viewedCount===1?t('label_vista'):t('label_vistas')} ${ICONS.check}</span></div>
+      <div class="festival-progress-text"><span>${t('label_dia_prog')} <b>${currentDayNum}</b> ${t('label_de_dias')} ${totalDays}</span>${_diaryCount>0
+        ?`<button class="diary-chip" data-action="openDiary" data-stop="1">${_diaryCount} ${_diaryCount===1?t('label_vista'):t('label_vistas')} ${ICONS.check}${ICONS.chevronR}</button>`
+        :`<span style="color:var(--amber);display:flex;align-items:center;gap:4px">0 ${t('label_vistas')} ${ICONS.check}</span>`}</div>
     </div>
   </div>`:'';
 
@@ -1052,49 +1093,9 @@ export function _renderSavedAgendaHTML(state, consensus){
 
     html+=renderMiPlanCalendar(state);
 
-  if(archive.length||watchedOutsidePlan.length){
-    const totalWatched=archive.length+watchedOutsidePlan.length;
-    const archByDay={};
-    archive.forEach(s=>{if(!archByDay[s.day])archByDay[s.day]=[];archByDay[s.day].push(s);});
-    html+=`<div class="archive-toggle" data-action="toggleArchive">
-      <span class="archive-toggle-lbl">${ICONS.checkCircle} ${t('plan_historial')}</span>
-      <span class="row-sm"><span class="count-badge cb-neutral">${totalWatched}</span><span id="arch-arrow">${ICONS.chevronD}</span></span>
-    </div>
-    <div class="archive-body${archiveOpen?' open':''}" id="archive-body">
-      ${archive.length?DAY_KEYS.filter(d=>archByDay[d]).map(day=>`
-        <div class="saved-day-lbl">${dayChip(day)}</div>
-        ${archByDay[day].map(s=>{
-          const vc2=vcfg(s.venue),sl=sala(s.venue);
-          const _af=FILMS.find(fi=>fi.title===s._title);
-          const _aph=`<div class="js-open-pel" data-title="${(s._title||'').replace(/"/g,'&quot;')}" style="cursor:pointer">${_posterThumb(_af,'lb-poster')}</div>`;
-          return`<div class="saved-item done">
-            ${_aph}
-            <div class="saved-time">${s.time}</div>
-            <div class="saved-info">
-              <div class="saved-title">${s._title}</div>
-              <div class="saved-venue">${ICONS.pin} ${vc2.short}${sl?' · '+sl:''}</div>
-            </div>
-            <button class="saved-check done" data-title="${(s._title||'').replace(/"/g,'&quot;')}" data-action="toggleWatched">${ICONS.check+' '+t('cta_vista')}</button>
-          </div>`;
-        }).join('')}`).join(''):''}
-      ${watchedOutsidePlan.length?`
-        <div class="archive-out-lbl">${t('plan_vistas_fuera')}</div>
-        ${watchedOutsidePlan.map(f=>{
-          const _ap=getFilmPoster(f);
-          const _aphInner=_posterThumb(f,'lb-poster');
-          const _aph=`<div class="js-open-pel" data-title="${escXML(f.title)}" style="cursor:pointer">${_aphInner}</div>`;
-          return`<div class="saved-item done">
-            ${_aph}
-            <div class="saved-time">${flagFmt(f.flags)||''}</div>
-            <div class="saved-info">
-              <div class="saved-title">${f.title}</div>
-              <div class="saved-venue">${ICONS.clock} ${durFmt(f.duration)||'—'}</div>
-            </div>
-            <button class="saved-check done" data-title="${(f.title||'').replace(/"/g,'&quot;')}" data-action="toggleWatched" >${ICONS.check+' '+t('cta_vista')}</button>
-          </div>`;
-        }).join('')}`:''}
-    </div>`;
-  }
+  // (El Historial colapsable vivía acá: duplicaba in-situ + no tenía identidad.
+  // Retirado 17 jul — lo reemplaza el DIARIO (renderDiaryHTML/openDiary), patrón
+  // Letterboxd/Things: destino propio desde el chip "N vistas" del progreso.)
 
   // Funciones sin confirmar — después del calendario (tarea diferible)
   if(_unconfirmed) html+=_unconfirmed;

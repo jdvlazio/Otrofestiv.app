@@ -599,14 +599,6 @@ export function toggleFilmAlternatives(key,title,day,time){
   renderAgenda();
 }
 
-export function toggleArchive(){
-  archiveOpen=!archiveOpen;
-  const body=document.getElementById('archive-body');
-  const arrow=document.getElementById('arch-arrow');
-  if(body) body.classList.toggle('open',archiveOpen);
-  if(arrow){arrow.style.transform=archiveOpen?'rotate(180deg)':'rotate(0deg)';}
-}
-
 export function _toggleEveningFilms(btn){
   const extra=document.getElementById('eve-films-extra');
   if(!extra) return;

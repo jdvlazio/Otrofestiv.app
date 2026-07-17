@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607162149">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607162149">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607170607">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607170607">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -1091,7 +1091,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .pel-sheet-remove-plan:active,.corto-rate-btn:active,.rating-action-btn:active,.ended-rate-btn:active,.checkin-btn:active,.checkin-result-btn:active{opacity:.6;transform:scale(.96)}
 
 /* Miscelánea */
-.toast-action-btn:active,.prio-limit-item:active,.excl-include-btn:active,.notice-banner-close:active,.archive-toggle:active,.link-gray-xs:active{opacity:.6}
+.toast-action-btn:active,.prio-limit-item:active,.excl-include-btn:active,.notice-banner-close:active,.link-gray-xs:active{opacity:.6}
 
 /* Auth */
 .auth-cancel:active,.auth-signout-btn:active,.auth-send-btn:active{opacity:.7}
@@ -1323,10 +1323,25 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .mplan-warn-row{font-size:var(--t-xs);color:var(--amber-60);padding:4px var(--sp-3);border-bottom:1px solid var(--bdr-l);border-top:1px solid var(--amber-30);display:flex;align-items:center;gap:var(--sp-1)}
 
 /* Sección archivo */
-.archive-toggle{display:flex;align-items:center;justify-content:space-between;padding:var(--sp-2) var(--sp-3);background:var(--surf);border:1px solid var(--bdr-l);border-radius:var(--r-sm);cursor:pointer;margin-bottom:var(--sp-2);user-select:none}#arch-arrow{display:inline-flex;transition:transform var(--tr-base);flex-shrink:0}
-.archive-toggle-lbl{font-size:var(--t-sm);color:var(--white-60);font-weight:var(--w-semi);display:flex;align-items:center;gap:var(--sp-2)}.archive-out-lbl{font-size:var(--t-xs);font-weight:var(--w-bold);color:var(--gray2);text-transform:uppercase;letter-spacing:.5px;padding:var(--sp-3) 0 var(--sp-2);border-top:1px solid var(--bdr-l);margin-top:var(--sp-2)}
-.archive-body{display:none}
-.archive-body.open{display:block}
+/* archive-out-lbl sobrevive del Historial retirado: etiqueta "fuera del plan" del Diario */
+.archive-out-lbl{font-size:var(--t-xs);font-weight:var(--w-bold);color:var(--gray2);text-transform:uppercase;letter-spacing:.5px;padding:var(--sp-3) 0 var(--sp-2);border-top:1px solid var(--bdr-l);margin-top:var(--sp-2)}
+/* ── DIARIO (17 jul): lo visto como destino propio (patrón Letterboxd/Things).
+   Sheet propio bajo pel-sheet (z 9001): tocar una card abre la película ENCIMA. */
+.diary-overlay{position:fixed;inset:0;background:var(--overlay-70);z-index:8900;opacity:0;pointer-events:none;transition:opacity .25s ease}
+.diary-overlay.open{opacity:1;pointer-events:auto}
+.diary-sheet{position:fixed;bottom:0;left:0;right:0;max-height:86dvh;background:var(--surf-2);border-top:1px solid var(--bdr);border-radius:var(--r-sheet) var(--r-sheet) 0 0;z-index:8901;display:flex;flex-direction:column;transform:translateY(100%);transition:transform .32s cubic-bezier(.32,0,.67,0)}
+.diary-sheet.open{transform:translateY(0)}
+.diary-hdr{display:flex;align-items:flex-start;justify-content:space-between;gap:var(--sp-3);padding:var(--sp-1) var(--sp-4) var(--sp-3)}
+.diary-title{font-size:var(--t-lg);font-weight:var(--w-display);color:var(--white);letter-spacing:-.02em;margin-top:2px}
+.diary-count{font-size:var(--t-sm);color:var(--gray);margin-top:2px}
+.diary-body{overflow-y:auto;padding:0 var(--sp-4) calc(env(safe-area-inset-bottom) + var(--sp-6));-webkit-overflow-scrolling:touch}
+.diary-chip{display:flex;align-items:center;gap:4px;background:none;border:none;padding:0;font:inherit;color:var(--amber);cursor:pointer;-webkit-tap-highlight-color:transparent}
+.diary-chip:active{opacity:.6}
+.diary-chip svg:last-child{opacity:.7}
+/* F1 — estado Vista in-situ en la fila de Mi Plan */
+.mplan-row.mp-seen{opacity:.55}
+.mplan-row.mp-seen .lb-poster{filter:grayscale(.25)}
+.ag-fi-btn.seen{color:var(--green);border-color:var(--green-30)}
 
 /* Banners contextuales */
 
@@ -2574,6 +2589,23 @@ setTimeout(function(){
 <div class="carta-mode-toggle" id="carta-mode-toggle" style="display:none"></div>
 <!-- ── Post-View Rating Sheet ── -->
 <div class="pv-rating-overlay" id="pv-rating-overlay" data-action="closePVRating"></div>
+<!-- ── Diario (lo visto, destino propio — patrón Letterboxd/Things) ── -->
+<div class="diary-overlay" id="diary-overlay" data-action="closeDiary"></div>
+<div class="diary-sheet" id="diary-sheet">
+  <div class="pv-handle"></div>
+  <div class="diary-hdr">
+    <div style="min-width:0">
+      <div class="ctx-eyebrow" style="color:var(--amber)"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg> <span data-i18n="diary_eyebrow">Diario</span></div>
+      <div class="diary-title" id="diary-title"></div>
+      <div class="diary-count" id="diary-count"></div>
+    </div>
+    <div class="row-sm">
+      <button class="icon-btn-circle" data-action="shareDiary" data-stop="1" data-i18n-aria="plan_compartir" aria-label="Compartir"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5"/></svg></button>
+      <button class="icon-btn-circle" data-action="closeDiary" data-i18n-aria="misc_cerrar" aria-label="Cerrar"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg></button>
+    </div>
+  </div>
+  <div class="diary-body" id="diary-body"></div>
+</div>
 <div class="pv-rating-sheet" id="pv-rating-sheet" style="display:none">
   <div class="pv-handle"></div>
   <div class="pv-header">
@@ -2759,7 +2791,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202607162149";
+    s.src="/src/main.js?v=202607170607";
     document.body.appendChild(s);
   }
   if (isApp || isDev) { bootApp(); return; }
