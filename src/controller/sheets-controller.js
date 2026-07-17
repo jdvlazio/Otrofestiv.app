@@ -188,7 +188,7 @@ export function openPelSheet(title){
         ratingEl
       });
     }).join('');
-    cortosHtml=`      <div class="sec-hdr sm">${t('label_programa')} <span class="count-badge cb-neutral">${f.film_list.length}</span></div>
+    cortosHtml=`      <div class="sec-hdr sm">${ICONS.film} <span>${t('label_programa')}</span> <span class="count-badge cb-neutral">${f.film_list.length}</span></div>
       <div class="pel-sheet-cortos-wrap">${cortoItems}</div>`;
   }
   const wlLabel=inWL?`${ICONS.heartFill} ${t('cta_en_intereses')}`:`${ICONS.heart} ${t('nav_intereses')}`;
@@ -214,7 +214,7 @@ export function openPelSheet(title){
         ${f.section?`<div class="pel-sheet-sec" data-section="${f.section.replace(/"/g,'&quot;')}" data-action="filterBySection">${secLabel} <span class="pel-sheet-sec-arrow">›</span></div>`:''}
       </div>
     </div>
-        ${allScr.length>0?`<div class="sec-hdr sm">${f.type==='event'?t('label_horario'):allScr.length===1?t('label_funcion'):t('label_funciones_pl')}${totalFn>1&&f.type!=='event'?`<span class="count-badge cb-neutral">${totalFn}</span>`:''}</div>`:''}
+        ${allScr.length>0?`<div class="sec-hdr sm">${ICONS.clock} <span>${f.type==='event'?t('label_horario'):allScr.length===1?t('label_funcion'):t('label_funciones_pl')}</span>${totalFn>1&&f.type!=='event'?`<span class="count-badge cb-neutral">${totalFn}</span>`:''}</div>`:''}
     ${(()=>{const _n=NOTICES.find(n=>n.title===f.title&&n.festival===(_activeFestId||_DEFAULT_FEST_ID));if(!_n)return'';const _info=`${_n.newDay||''} ${_n.newTime||''}${_n.newVenue?' · '+_n.newVenue:''}`.trim();const _msg=_n.type==='cancelled'?t('notice_funcion_canc'):t('notice_reprog_a',{info:_info});return`<div class="notice-banner-row"><span class="notice-badge">${_n.type==='cancelled'?t('notice_cancelada'):t('notice_reprog_short')}</span><span class="notice-banner-txt">${_msg}</span></div>`;})()}
     ${_metaBanners(f)}
     ${allScr.length>0?`<div class="pel-sheet-screenings">${rows}</div>`:''}

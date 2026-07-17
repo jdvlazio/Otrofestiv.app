@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `339ff35 data(tt): Letterboxd para El Remate (TMDB 1733100 → the-kick-1)`
+> Último commit: `ab07ad5 guard(validate): [activity-duration] — duración obligatoria en festivales activos`
 
 ---
 

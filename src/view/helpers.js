@@ -346,12 +346,14 @@ export function _langDates(cfg) {
 }
 
 export function _mkCortoItemHtml(item, n, {cls='mplan-prog-item', section='', ratingEl=''}={}){
-  // Thumbnail de lista: imagen recortada (patrón estándar de fila-lista). El
-  // póster con sistema de diseño (marco editorial) vive en las CARDS —
-  // _obraPosterCard (grid Diario/Mi Plan) y el sheet individual del corto —, no
-  // en el thumb de 56px donde el marco no cabe. src por la fuente única.
-  const thumb=getCortoItemPoster(item)||makeProgramPoster(state,item.title,item.duration||'',section);
-  const thumbHtml=`<img src="${thumb}" class="c-film-thumb" loading="lazy" onerror="this.remove()" alt="">`;
+  // Póster por la fuente única: en tamaño thumb el marco va SIN texto en la
+  // banda (solo color de sección + still), como los thumbs editoriales de films
+  // (_posterThumb). UN solo póster propio en todas las superficies.
+  const _pp=itemPosterParts(item, section, 'c-film-thumb');
+  const thumb=_pp.src;
+  const thumbHtml=_pp.ed
+    ? `<div class="c-film-thumb poster-ed" style="--ed-accent:${_pp.accent}">${_pp.inner}</div>`
+    : `<img src="${thumb}" class="c-film-thumb" loading="lazy" onerror="this.remove()" alt="">`;
   // data-* attrs — nunca interpolar strings con contenido variable en onclick
   const _dt=encodeURIComponent(item.title||'');
   const _dc=encodeURIComponent(item.country||'');

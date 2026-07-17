@@ -1685,6 +1685,29 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar responsive-contract: {_e}')
 
+# ── [poster-editorial-parity] póster de obra/corto solo vía la fuente única ────
+# UN solo póster propio en todas las superficies (regla de Juan, 17 jul 2026):
+# el thumb/card de una obra se construye SOLO en view/helpers.js (itemPosterParts
+# / _mkCortoItemHtml) — si "c-film-thumb" aparece en el markup de otro módulo,
+# alguien está armando el póster a mano y reintroduce la inconsistencia
+# (still crudo sin banda) que este check entierra.
+check = 'poster-editorial-parity'
+try:
+    import glob as _glob
+    _off = []
+    for _sf in _glob.glob('src/**/*.js', recursive=True):
+        if _sf.endswith('view/helpers.js'):
+            continue
+        _c = open(_sf, encoding='utf-8').read()
+        if 'c-film-thumb' in _c:
+            _off.append(_sf)
+    if _off:
+        fail(check, 'markup de póster de corto fuera de la fuente única (usar itemPosterParts/_mkCortoItemHtml de helpers.js): ' + ', '.join(_off))
+    else:
+        ok(check, 'póster de obra/corto construido solo en view/helpers.js (fuente única)')
+except Exception as _e:
+    warn(check, f'no se pudo verificar poster-editorial-parity: {_e}')
+
 # ── [activity-duration] toda actividad de un festival activo tiene duración ────
 # Valor central de la app: TODA actividad (película, evento único o programa
 # múltiple) muestra su duración — alimenta el cálculo del plan y la decisión del
