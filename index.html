@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607170631">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607170631">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607170648">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607170648">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -1335,9 +1335,19 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .diary-title{font-size:var(--t-lg);font-weight:var(--w-display);color:var(--white);letter-spacing:-.02em;margin-top:2px}
 .diary-count{font-size:var(--t-sm);color:var(--gray);margin-top:2px}
 .diary-body{overflow-y:auto;padding:0 var(--sp-4) calc(env(safe-area-inset-bottom) + var(--sp-6));-webkit-overflow-scrolling:touch}
+/* Los grids del Diario anulan el padding-bottom de .poster-grid (~100px, pensado para
+   scrollear bajo el nav en la grilla principal) — acá era el hueco entre grupos. */
+.diary-body .poster-grid{padding:0;margin:0 0 var(--sp-3)}
 .diary-chip{display:flex;align-items:center;gap:4px;background:none;border:none;padding:0;font:inherit;color:var(--amber);cursor:pointer;-webkit-tap-highlight-color:transparent}
 .diary-chip:active{opacity:.6}
 .diary-chip svg:last-child{opacity:.7}
+/* Sub-etiqueta de programa en el Diario: el programa no es card — es el contexto
+   de sus obras (crítica de Juan 17 jul: la vista es de películas y calificaciones). */
+.diary-prog-lbl{font-size:var(--t-xs);font-weight:var(--w-bold);color:var(--gray2);text-transform:uppercase;letter-spacing:.5px;margin:var(--sp-2) 0 var(--sp-2)}
+/* Botones del header del Diario: tokens de la casa (icon-btn-circle base no define
+   fondo → botón nativo blanco/azul iOS, fuera de marca). */
+.diary-hdr .icon-btn-circle{background:var(--surf-3);border:1px solid var(--bdr);color:var(--white-60);-webkit-tap-highlight-color:transparent}
+.diary-hdr .icon-btn-circle:active{opacity:.6}
 /* F1 — estado Vista in-situ en la fila de Mi Plan */
 .mplan-row.mp-seen{opacity:.55}
 .mplan-row.mp-seen .lb-poster{filter:grayscale(.25)}
@@ -2791,7 +2801,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202607170631";
+    s.src="/src/main.js?v=202607170648";
     document.body.appendChild(s);
   }
   if (isApp || isDev) { bootApp(); return; }

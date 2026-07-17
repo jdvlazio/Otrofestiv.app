@@ -16,8 +16,15 @@ import { _getDisplayName, _promptDisplayName } from './auth.js';  // share→aut
 export async function shareDiary(){
   const sched=(savedAgenda&&savedAgenda.schedule)||[];
   const _seen=new Set(); const rows=[];
-  sched.forEach(sc=>{ if(watched.has(sc._title)&&!_seen.has(sc._title)){ _seen.add(sc._title); rows.push({day:sc.day,title:sc._title,r:filmRatings[sc._title]||0}); } });
-  [...watched].forEach(tt=>{ if(!_seen.has(tt)&&FILMS.some(f=>f.title===tt)){ _seen.add(tt); rows.push({day:null,title:tt,r:filmRatings[tt]||0}); } });
+  // Un programa se expande en sus OBRAS (lo que el usuario vio), cada una con sus estrellas.
+  const _push=(day,title)=>{
+    const f=FILMS.find(fi=>fi.title===title);
+    if(f&&f.is_cortos&&f.film_list&&f.film_list.length){
+      f.film_list.forEach(it=>rows.push({day,title:it.title,r:filmRatings[it.title]||0}));
+    } else rows.push({day,title,r:filmRatings[title]||0});
+  };
+  sched.forEach(sc=>{ if(watched.has(sc._title)&&!_seen.has(sc._title)){ _seen.add(sc._title); _push(sc.day,sc._title); } });
+  [...watched].forEach(tt=>{ if(!_seen.has(tt)&&FILMS.some(f=>f.title===tt)){ _seen.add(tt); _push(null,tt); } });
   if(!rows.length){ showToast(t('diary_vacio'),'warn'); return; }
   const cfg=FESTIVAL_CONFIG[_activeFestId]||{};
   const W=1080,PAD=72,ROW=76,HDR=210,FOOT=110;

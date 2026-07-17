@@ -10,10 +10,10 @@ import {
   DEFAULT_DURATION_MIN, FESTIVAL_BUFFER, FESTIVAL_CONFIG,
 } from '../config.js';
 import {
-  ICONS, _secLabel, _secLabelFull, _sectionColor, escXML, makeEventPoster, parseProgramTitle, renderAvBlocksHTML, renderFlowProgress,
+  ICONS, _secLabel, _secLabelFull, _sectionColor, escXML, makeEventPoster, makeProgramPoster, parseProgramTitle, renderAvBlocksHTML, renderFlowProgress,
 } from './components.js';
 import {
-  DAYS, DAY_SHORT_EN, _dayChips, editorialFrame, _isEditorialPoster, _langDates, _lblLocalized, _minFmt, _mkCortoItemHtml, _posterThumb, dayChip, dayLabel, dayLabelLong, durFmt, emptyState, emptyStateHero, flagFmt, getFilmPoster, isToday, mplanBlockType, mplanEndStr, sala, starsText, travelWarn, vcfg, delayConsensusBadge,
+  DAYS, DAY_SHORT_EN, _dayChips, editorialFrame, _isEditorialPoster, _langDates, _lblLocalized, _minFmt, _mkCortoItemHtml, _posterThumb, getCortoItemPoster, dayChip, dayLabel, dayLabelLong, durFmt, emptyState, emptyStateHero, flagFmt, getFilmPoster, isToday, mplanBlockType, mplanEndStr, sala, starsText, travelWarn, vcfg, delayConsensusBadge,
 } from './helpers.js';
 import {
   _festDate, _festNowMin, festivalEnded, minToStr, parseDur, simNow, simTodayStr, toMin,
@@ -526,26 +526,58 @@ function _recapPosterCard(state,title){
   </div>`;
 }
 
-// renderDiaryHTML — el DIARIO del festival (patrón Letterboxd/Things, aprobado 17 jul):
-// lo visto como destino propio, cronológico por día, con la misma card del recap.
-// Incluye lo visto FUERA del plan (su única otra casa era el Historial retirado).
-// Lo abre openDiary desde el chip "N vistas" de la barra de progreso de Mi Plan.
+// _obraPosterCard — card de una OBRA (película dentro de un programa) para el Diario:
+// su póster real (o el generativo del programa), sus estrellas o el ★ que abre SU
+// calificación directa, y tap → su propio sheet (mismos data-attrs que _mkCortoItemHtml).
+function _obraPosterCard(state,item,section){
+  const {filmRatings} = state.snapshot();
+  const r=filmRatings[item.title];
+  const src=getCortoItemPoster(item)||makeProgramPoster(state,item.title,item.duration||'',section||'');
+  const _dt=encodeURIComponent(item.title||''),_dc=encodeURIComponent(item.country||'');
+  const _dd=encodeURIComponent(item.duration||''),_dir=encodeURIComponent(item.director||'');
+  const _dg=encodeURIComponent(item.genre||''),_ds=encodeURIComponent((item.synopsis||'').slice(0,200));
+  const _dp=encodeURIComponent(src||'');
+  return`<div class="poster-card ended-poster" data-ct="${_dt}" data-cc="${_dc}" data-cd="${_dd}" data-cdir="${_dir}" data-cg="${_dg}" data-cs="${_ds}" data-cp="${_dp}" data-action="openCortoSheetFromEl">
+    ${src?`<img class="img-cover" src="${src}" loading="lazy" onerror="this.remove()" alt="">`:``}
+    <div class="ended-poster-footer">
+      ${r?`<div class="label-track-amber">${starsText(r)}</div>`
+         :`<button class="ended-rate-btn" data-action="openRatingSheet" data-title="${escXML(item.title||'')}" data-stop="1">★</button>`}
+      <div class="ended-poster-title">${item.title}</div>
+    </div>
+  </div>`;
+}
+
+// renderDiaryHTML — el DIARIO del festival (patrón Letterboxd/Things; rediseño 17 jul
+// por crítica de Juan): la vista es de PELÍCULAS y calificaciones — lo que el usuario
+// VIO. Un programa no es una card: se disuelve en sus obras (cada una con su póster y
+// sus estrellas, como dentro de la card de programa) y su nombre queda como
+// sub-etiqueta del grupo. Cronológico por día + "fuera del plan".
 export function renderDiaryHTML(state){
   const {savedAgenda, watched, FILMS} = state.snapshot();
   const all=(savedAgenda&&savedAgenda.schedule)||[];
   const planTitles=new Set(all.map(s=>s._title));
   const _seen=new Set();
-  const byDay={};
-  all.forEach(s=>{ if(watched.has(s._title)&&!_seen.has(s._title)){ _seen.add(s._title); (byDay[s.day]=byDay[s.day]||[]).push(s._title); } });
-  const outside=[...watched].filter(tt=>!planTitles.has(tt)&&FILMS.some(f=>f.title===tt));
+  const _entry=(title)=>{
+    // film suelto → [card]; programa → sub-etiqueta + cards de sus obras
+    const f=FILMS.find(fi=>fi.title===title);
+    if(!f) return '';
+    if(f.is_cortos&&f.film_list&&f.film_list.length){
+      const{displayTitle:_pdt}=parseProgramTitle(title);
+      return`<div class="diary-prog-lbl">${_pdt}</div>
+      <div class="poster-grid pg-miplan">${f.film_list.map(it=>_obraPosterCard(state,it,f.section||'')).join('')}</div>`;
+    }
+    return`<div class="poster-grid pg-miplan">${_recapPosterCard(state,title)}</div>`;
+  };
   let html='';
-  DAY_KEYS.filter(d=>byDay[d]).forEach(day=>{
-    html+=`<div class="saved-day-lbl">${dayChip(day)}</div>
-    <div class="poster-grid pg-miplan">${byDay[day].map(tt=>_recapPosterCard(state,tt)).join('')}</div>`;
+  DAY_KEYS.forEach(day=>{
+    const dayTitles=[];
+    all.forEach(sc=>{ if(sc.day===day&&watched.has(sc._title)&&!_seen.has(sc._title)){ _seen.add(sc._title); dayTitles.push(sc._title); } });
+    if(!dayTitles.length) return;
+    html+=`<div class="saved-day-lbl">${dayChip(day)}</div>${dayTitles.map(_entry).join('')}`;
   });
+  const outside=[...watched].filter(tt=>!planTitles.has(tt)&&FILMS.some(f=>f.title===tt));
   if(outside.length){
-    html+=`<div class="archive-out-lbl">${t('plan_vistas_fuera')}</div>
-    <div class="poster-grid pg-miplan">${outside.map(tt=>_recapPosterCard(state,tt)).join('')}</div>`;
+    html+=`<div class="archive-out-lbl">${t('plan_vistas_fuera')}</div>${outside.map(_entry).join('')}`;
   }
   return html||`<div class="hint">${t('diary_vacio')}</div>`;
 }
@@ -1060,8 +1092,14 @@ export function _renderSavedAgendaHTML(state, consensus){
   const currentDayNum=dayIdx>=0?dayIdx+1:null;
   const totalDays=Math.max(1,DAY_KEYS.length);
   const viewedCount=all.filter(s=>watched.has(s._title)).length;
-  // Total del Diario: vistas del plan + vistas fuera del plan (títulos únicos).
-  const _diaryCount=new Set([...all.filter(s=>watched.has(s._title)).map(s=>s._title),...watchedOutsidePlan.map(f=>f.title)]).size;
+  // Total del Diario en PELÍCULAS vistas: un programa cuenta por sus obras (lo que
+  // el usuario vio), un film suelto por sí mismo. Plan + fuera del plan, títulos únicos.
+  const _diaryCount=(()=>{
+    const _uniq=new Set([...all.filter(s=>watched.has(s._title)).map(s=>s._title),...watchedOutsidePlan.map(f=>f.title)]);
+    let n=0;
+    _uniq.forEach(tt=>{ const f=FILMS.find(fi=>fi.title===tt); n+=(f&&f.is_cortos&&f.film_list&&f.film_list.length)?f.film_list.length:1; });
+    return n;
+  })();
   const progressPct=dayIdx>=0?Math.round((dayIdx/(totalDays-1))*100):0;
   const progressBar=currentDayNum?`<div class="row-sm festival-progress">
     <div style="flex:1">
