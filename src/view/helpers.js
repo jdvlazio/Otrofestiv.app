@@ -11,6 +11,7 @@ import {
   makeProgramPoster, makeEventPoster, makeSorpresaPoster, escXML,
 } from './components.js';
 import { toMin, parseDur, simNow, simTodayStr, _festDate } from '../domain/time.js';
+import { effectiveDuration } from '../domain/film.js';
 import { _resolveVenue, travelMins } from '../domain/festival.js';
 import { state } from '../state/state.js';
 import { t } from '../i18n/i18n.js';
@@ -273,7 +274,8 @@ export function travelWarn(s1,s2){
   if(s1.day!==s2.day) return null;
   const travel=travelMins(s1.venue,s2.venue);
   if(travel===0) return null;
-  const gap=toMin(s2.time)-(toMin(s1.time)+parseDur(s1.duration));
+  // effectiveDuration (incluye Q&A +30) — MISMO fin de función que screensConflict.
+  const gap=toMin(s2.time)-(toMin(s1.time)+effectiveDuration(s1));
   if(gap<travel+10){
     const _modo=FESTIVAL_TRANSPORT==='walking'?t('warn_a_pie'):FESTIVAL_TRANSPORT==='transit'?null:t('warn_en_carro');
     return`${ICONS.alert} ~${travel} min${_modo?' '+_modo:''} ${t('warn_entre_sedes')}`;
