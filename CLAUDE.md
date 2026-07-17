@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `493da37 tool(pipeline): tmdb-gaps.py — reporte de obras sin ficha TMDB/Letterboxd`
+> Último commit: `339ff35 data(tt): Letterboxd para El Remate (TMDB 1733100 → the-kick-1)`
 
 ---
 
