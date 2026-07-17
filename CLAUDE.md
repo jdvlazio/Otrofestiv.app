@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `ed8a5f9 design(hdr): iconos en TODOS los encabezados con línea — unidad completa`
+> Último commit: `e32ef31 fix(sugerencias): 'Cabe en tu hueco' respeta el viaje — mismo criterio que Sugerencias`
 
 ---
 
