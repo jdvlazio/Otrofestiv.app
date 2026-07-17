@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `c7aded4 arch(data): archivos restantes del commit anterior (add abortó por pathspec i18n/)`
+> Último commit: `493da37 tool(pipeline): tmdb-gaps.py — reporte de obras sin ficha TMDB/Letterboxd`
 
 ---
 
