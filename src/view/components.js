@@ -615,9 +615,9 @@ export function _renderFestivalSelectorHTML(state, activeFestId){
     </div>`;
   }
   let html='';
-  if(ongoing.length)  html+=`<div class="fs-section-lbl">${t('fs_en_curso')}</div>`+ongoing.map(mkRow).join('<div class="fs-divider"></div>');
-  if(upcoming.length) html+=`<div class="fs-section-lbl">${t('fs_proximos')}</div>`+upcoming.map(mkRow).join('<div class="fs-divider"></div>');
-  if(past.length)     html+=`<div class="fs-section-lbl">${t('splash_anteriores')}</div>`+past.map(mkPastRow).join('<div class="fs-divider"></div>');
+  if(ongoing.length)  html+=`<div class="sec-hdr sm">${t('fs_en_curso')}</div>`+ongoing.map(mkRow).join('');
+  if(upcoming.length) html+=`<div class="sec-hdr sm">${t('fs_proximos')}</div>`+upcoming.map(mkRow).join('');
+  if(past.length)     html+=`<div class="sec-hdr sm">${t('splash_anteriores')}</div>`+past.map(mkPastRow).join('');
   return html;
 }
 

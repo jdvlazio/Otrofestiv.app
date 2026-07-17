@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607170727">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607170727">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607170926">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607170926">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -93,8 +93,6 @@ window.sentryOnLoad = function() {
 
 .ag-excl-block{background:var(--surf);border:1px solid var(--bdr);border-radius:var(--r);padding:var(--sp-3) var(--sp-4) var(--sp-4);margin-bottom:var(--sp-4);overflow:hidden}
 
-.ag-excl-eyebrow{display:flex;align-items:center;gap:var(--sp-2);margin-bottom:var(--sp-3)}
-.ag-excl-label{font-size:var(--t-label);font-weight:var(--w-bold);color:var(--gray);letter-spacing:.08em;text-transform:uppercase}
 
 </style>
 <style>
@@ -604,7 +602,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .checkin-opt-add{font-size:var(--t-lg);color:var(--amber);flex-shrink:0;padding:0 var(--sp-1)}
 
 /* ── Sugerencias ── */
-.suggestion-wrap{margin-top:var(--sp-5);padding-top:var(--sp-3);border-top:1px solid var(--bdr-l)}
+.suggestion-wrap{margin-top:var(--sp-5)}
 .suggestion-day-lbl,.saved-day-lbl{display:flex;flex-direction:column;align-items:flex-start;gap:var(--sp-1);margin:var(--sp-3) 0 var(--sp-2);padding-left:2px}
 /* Sugerencias en formato largo ("Viernes 5") — igual que el day landmark de
    Mi Plan/Planear (t-md/w-semi/white). El archive (.saved-day-lbl) sigue con
@@ -630,7 +628,27 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 
 /* ── Strip de prioridades ── */
 .prio-strip{margin-bottom:var(--sp-4)}
+/* ── sec-hdr — ENCABEZADO DE SECCIÓN canónico (estilo A, aprobado 17 jul) ─────────
+   Icono en ámbar · label · REGLA que corre hasta el borde. La regla es EL ÚNICO
+   divisor de la app (decisión: cero divisores sueltos — fs-divider, pel-sheet-divider,
+   hr-bdr retirados). `.sm` = variante sheet/sub-nivel (uppercase pequeño gris).
+   Controles al final del header (toggles, etc.) → clase .hdr-end (quedan tras la regla).
+   Su par es .ctx-eyebrow (la CEJA que corona un bloque). Docs: ARQUITECTURA §5. */
 .sec-hdr{font-size:var(--t-base);font-weight:var(--w-bold);color:var(--white-60);display:flex;align-items:center;gap:var(--sp-1);margin-bottom:var(--sp-2);width:100%}
+.sec-hdr::after{content:'';flex:1;order:1;height:1px;background:var(--bdr);margin-left:var(--sp-1)}
+.sec-hdr>svg{color:var(--amber);flex-shrink:0}
+.sec-hdr .hdr-end{order:2;margin-left:var(--sp-2)}
+.sec-hdr.sm{font-size:var(--t-xs);letter-spacing:.1em;text-transform:uppercase;color:var(--gray2)}
+/* Ritmo del pel-sheet: el espaciador pel-sheet-divider (height:0, solo margen) se
+   retiró — su aire vive ahora en el margen del encabezado. */
+.pel-sheet-inner .sec-hdr.sm{margin-top:var(--sp-5)}
+.pel-sheet-inner .sec-hdr.sm:first-child{margin-top:0}
+/* Selector de festivales: los headers de grupo conservan los gutters del sheet. */
+#fs-festival-list .sec-hdr.sm{width:auto;margin:var(--sp-5) var(--sp-5) var(--sp-2)}
+/* Cejas migradas: color semántico por contexto (antes clases propias). */
+.pv-header .ctx-eyebrow{color:var(--green);margin-bottom:5px}
+.conflict-hdr .ctx-eyebrow{color:var(--amber)}
+.prio-limit-hdr .ctx-eyebrow{color:var(--amber);margin-bottom:3px}
 
 .prio-strip-row{display:flex;gap:var(--sp-2);overflow-x:auto;padding-bottom:var(--sp-1);-webkit-overflow-scrolling:touch;scrollbar-width:none;touch-action:pan-x}
 .prio-chip{flex-shrink:0;width:var(--poster-md-w);position:relative;cursor:pointer}
@@ -915,8 +933,6 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .pel-sheet-sec::after{content:'';position:absolute;inset:-8px -4px}
 .pel-sheet-sec:active{opacity:.6}
 .pel-sheet-sec-arrow{opacity:.5;font-size:var(--t-label)}
-.pel-sheet-divider{height:0;margin:var(--sp-5) 0}
-.pel-sheet-section-lbl{font-size:var(--t-xs);letter-spacing:.12em;color:var(--white-30);text-transform:uppercase;font-weight:var(--w-bold);margin-bottom:var(--sp-3)}
 .pel-sheet-screening{display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid var(--bdr-l)}
 .pel-sheet-screenings .pel-sheet-screening:last-child{border-bottom:none}
 .screening-inplan{font-size:var(--t-sm);font-weight:var(--w-semi);color:var(--amber);display:inline-flex;align-items:center;gap:var(--sp-1);flex-shrink:0;white-space:nowrap}
@@ -968,7 +984,6 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .pv-poster-wrap{width:44px;height:66px;border-radius:var(--r-md);flex-shrink:0;position:relative;overflow:visible}
 .pv-poster-img{width:44px;height:66px;border-radius:var(--r-md);object-fit:cover;background:var(--surf-3)}
 .pv-poster-check{position:absolute;bottom:-5px;right:-5px;width:18px;height:18px;background:var(--green);border-radius:50%;display:flex;align-items:center;justify-content:center;border:2px solid var(--surf-2)}
-.pv-eyebrow{font-size:var(--t-label);font-weight:var(--w-bold);color:var(--green);letter-spacing:.5px;text-transform:uppercase;display:flex;align-items:center;gap:var(--sp-1);margin-bottom:5px}
 .pv-film-title{font-size:var(--t-md);font-weight:var(--w-display);color:var(--white);letter-spacing:-.2px;line-height:1.2;margin-bottom:5px}
 .pv-context{font-size:var(--t-sm);color:var(--gray);line-height:1.6}
 .pv-question{padding:22px 20px 6px;text-align:center}
@@ -989,7 +1004,6 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .conflict-sheet.open{transform:translateY(0)}
 .conflict-handle{width:36px;height:4px;background:rgba(255,255,255,.1);border-radius:var(--r-handle);margin:12px auto 0}
 .conflict-hdr{padding:14px 20px 12px;border-bottom:1px solid var(--bdr-l)}
-.conflict-eyebrow{font-size:var(--t-label);font-weight:var(--w-bold);color:var(--amber);letter-spacing:.06em;text-transform:uppercase;display:flex;align-items:center;gap:var(--sp-1);margin-bottom:3px;opacity:.7}
 .conflict-title{font-size:var(--t-base);font-weight:var(--w-bold);color:var(--white)}
 .conflict-sub{font-size:var(--t-base);color:var(--gray);margin-top:var(--sp-1)}
 .conflict-arena{padding:var(--sp-4) var(--sp-5);display:flex;flex-direction:column;gap:var(--sp-3)}
@@ -1019,7 +1033,6 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .prio-limit-sheet.open{transform:translateY(0)}
 .prio-limit-handle{width:36px;height:4px;background:rgba(255,255,255,.1);border-radius:var(--r-handle);margin:12px auto 0}
 .prio-limit-hdr{padding:14px 20px 12px;border-bottom:1px solid var(--bdr-l)}
-.prio-limit-eyebrow{font-size:var(--t-label);font-weight:var(--w-bold);color:var(--amber);letter-spacing:.06em;text-transform:uppercase;margin-bottom:3px;display:flex;align-items:center;gap:5px;opacity:.7}
 .prio-limit-title{font-size:var(--t-base);font-weight:var(--w-bold);color:var(--white)}
 .prio-limit-sub{font-size:var(--t-base);color:var(--gray);margin-top:5px}
 .prio-limit-new{margin:14px 20px 4px;background:var(--amber-10);border:1px solid var(--amber-30);border-radius:var(--r);padding:var(--sp-btn) var(--sp-3);display:flex;align-items:center;gap:10px;color:var(--amber)}
@@ -1323,8 +1336,6 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .mplan-warn-row{font-size:var(--t-xs);color:var(--amber-60);padding:4px var(--sp-3);border-bottom:1px solid var(--bdr-l);border-top:1px solid var(--amber-30);display:flex;align-items:center;gap:var(--sp-1)}
 
 /* Sección archivo */
-/* archive-out-lbl sobrevive del Historial retirado: etiqueta "fuera del plan" del Diario */
-.archive-out-lbl{font-size:var(--t-xs);font-weight:var(--w-bold);color:var(--gray2);text-transform:uppercase;letter-spacing:.5px;padding:var(--sp-3) 0 var(--sp-2);border-top:1px solid var(--bdr-l);margin-top:var(--sp-2)}
 /* ── DIARIO (17 jul): lo visto como destino propio (patrón Letterboxd/Things).
    Sheet propio bajo pel-sheet (z 9001): tocar una card abre la película ENCIMA. */
 .diary-overlay{position:fixed;inset:0;background:var(--overlay-70);z-index:8900;opacity:0;pointer-events:none;transition:opacity .25s ease}
@@ -1343,7 +1354,6 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .diary-chip svg:last-child{opacity:.7}
 /* Sub-etiqueta de programa en el Diario: el programa no es card — es el contexto
    de sus obras (crítica de Juan 17 jul: la vista es de películas y calificaciones). */
-.diary-prog-lbl{font-size:var(--t-xs);font-weight:var(--w-bold);color:var(--gray2);text-transform:uppercase;letter-spacing:.5px;margin:var(--sp-2) 0 var(--sp-2)}
 /* Botones del header del Diario: tokens de la casa (icon-btn-circle base no define
    fondo → botón nativo blanco/azul iOS, fuera de marca). */
 .diary-hdr .icon-btn-circle{background:var(--surf-3);border:1px solid var(--bdr);color:var(--white-60);-webkit-tap-highlight-color:transparent}
@@ -1416,7 +1426,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 }
 /* Summary del plan = filas-header (mismo componente que Intereses), pero flush
    horizontalmente para alinear con los items del plan (que no tienen padding-x). */
-#ag-result .int-section-hdr{padding:var(--sp-1) 0}
+#ag-result .sec-hdr{padding:var(--sp-1) 0;margin-bottom:0}
 #ag-result .saved-item{
   padding:var(--sp-3) 0;
   border-bottom:none;
@@ -1568,7 +1578,6 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .fs-title{font-size:var(--t-sm);font-weight:var(--w-bold);letter-spacing:.1em;text-transform:uppercase;color:var(--gray)}
 /* Año de temporada — ancla única (minimalismo: no repetir el año en cada fila) */
 .fs-season{font-size:var(--t-sm);font-weight:var(--w-bold);letter-spacing:.06em;color:var(--amber);font-variant-numeric:tabular-nums}
-.fs-section-lbl{font-size:var(--t-xs);font-weight:var(--w-bold);letter-spacing:.1em;text-transform:uppercase;color:var(--gray2);padding:var(--sp-5) var(--sp-5) var(--sp-2)}
 .fs-festival-row{display:flex;align-items:center;gap:var(--sp-3);padding:var(--sp-3) var(--sp-5);cursor:pointer;transition:background var(--tr-base)}
 .fs-festival-row:active{background:var(--surf-2)}
 /* Mini-póster del festival (reemplaza el punto ámbar) — unidad con el splash.
@@ -1596,7 +1605,6 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .fs-past-chev{color:var(--gray2);display:flex;margin-left:auto;transition:transform .2s ease;flex-shrink:0}
 .fs-festival-row.past.past-open .fs-past-chev{transform:rotate(180deg)}
 
-.fs-divider{height:1px;background:var(--bdr-l);margin:0 var(--sp-5)}
 
 /* ── DESKTOP TOPBAR — barra unificada ── */
 
@@ -2268,9 +2276,6 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 /* ── INTERESES — vista lista ─────────────────────────────────────────────
    Reemplaza el grid de posters por lista de decisión con metadata
    completa: próxima función, conflicto, acciones inline.             */
-.int-section-hdr{display:flex;align-items:center;gap:var(--sp-2);padding:var(--sp-3) 0 var(--sp-2)}
-.int-section-hdr-ico{color:var(--gray2);flex-shrink:0}
-.int-section-hdr-lbl{font-size:var(--t-base);font-weight:var(--w-bold);color:var(--white-60);flex:1}
 .int-item{display:flex;align-items:flex-start;gap:var(--sp-3);padding:var(--sp-2) 0;border-bottom:1px solid var(--bdr-l);cursor:pointer;transition:background var(--tr-base);-webkit-tap-highlight-color:transparent}
 .int-item:last-child{border-bottom:none}
 .int-item.gone{opacity:.4}
@@ -2303,7 +2308,6 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .txt-dim-xs{opacity:.6;font-size:var(--t-xs)}
 .ml-1{margin-left:var(--sp-1)}
 .txt-amber-xs{color:var(--amber);font-size:var(--t-xs)}
-.hr-bdr{height:1px;background:var(--bdr);margin:0}
 .img-cover{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
 .pad-sm{padding:var(--sp-3) var(--sp-4)}
 .mb-3{margin-bottom:var(--sp-3)}
@@ -2626,7 +2630,7 @@ setTimeout(function(){
       </div>
     </div>
     <div style="flex:1;min-width:0">
-      <div class="pv-eyebrow"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg><span data-i18n="cta_vista">Vista</span></div>
+      <div class="ctx-eyebrow"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg><span data-i18n="cta_vista">Vista</span></div>
       <div class="pv-film-title" id="pv-film-title"></div>
       <div class="pv-context" id="pv-context"></div>
     </div>
@@ -2649,7 +2653,7 @@ setTimeout(function(){
 <div class="conflict-sheet" id="conflict-sheet">
   <div class="conflict-handle"></div>
   <div class="conflict-hdr">
-    <div class="conflict-eyebrow"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z"/></svg><span data-i18n="conflict_eyebrow">Conflicto de horario</span></div>
+    <div class="ctx-eyebrow"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z"/></svg><span data-i18n="conflict_eyebrow">Conflicto de horario</span></div>
     <div class="conflict-title" id="conflict-title-el" data-i18n="conflict_titulo">Se solapan en el mismo tramo</div>
     <div class="conflict-sub" data-i18n="conflict_cual">¿Cuál querés en tu plan?</div>
   </div>
@@ -2683,7 +2687,7 @@ setTimeout(function(){
 <div class="prio-limit-sheet" id="prio-limit-sheet">
   <div class="prio-limit-handle"></div>
   <div class="prio-limit-hdr">
-    <div class="prio-limit-eyebrow"><svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.75"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg><span id="prio-limit-eyebrow-txt"></span></div>
+    <div class="ctx-eyebrow"><svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.75"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg><span id="prio-limit-eyebrow-txt"></span></div>
     <div class="prio-limit-title" id="prio-limit-ya-tenes"><span id="prio-limit-ya-tenes-txt" data-i18n="plan_ya_tenes_prio">Ya tenés</span> <span id="prio-limit-count"></span> <span id="prio-limit-prio-word" data-i18n="misc_prioridades">prioridades</span></div>
     <div class="prio-limit-sub" data-i18n="conflict_cambiar">Cambiá una para priorizar esta ${t('misc_pelicula')}</div>
   </div>
@@ -2801,7 +2805,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202607170727";
+    s.src="/src/main.js?v=202607170926";
     document.body.appendChild(s);
   }
   if (isApp || isDev) { bootApp(); return; }
