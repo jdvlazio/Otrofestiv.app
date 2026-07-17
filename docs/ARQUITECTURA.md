@@ -243,6 +243,23 @@ i18n/strings-reference.json ← inventario completo con contexto — leer antes 
 
 ## 5. COMPONENTES CSS
 
+### Encabezados de sección y cejas (consolidación jul 2026)
+Dos componentes canónicos reemplazan las ~20 clases ad-hoc de encabezados
+(`int-section-hdr`, `pel-sheet-section-lbl`, `fs-section-lbl`, `diary-prog-lbl`,
+`archive-out-lbl`, `pv/conflict/prio-limit/ag-excl-eyebrow` — todas retiradas):
+
+| Clase | Rol | Anatomía |
+|---|---|---|
+| `.sec-hdr` | **Encabezado de sección** — abre una lista de ítems | Icono Lucide (ámbar vía `.sec-hdr>svg`) + label + barra `::after` que llena el ancho + badge opcional. Variante `.sm`: uppercase `--t-xs` para sub-secciones (pel-sheet, selector, Diario). Slot `.hdr-end` para toggles al extremo derecho. |
+| `.ctx-eyebrow` | **Ceja** — corona un bloque/sheet con contexto | Icono pequeño + label uppercase, sin barra. Color por contexto vía scope del padre (`.pv-header`, `.conflict-hdr`, `.prio-limit-hdr`). |
+
+**Regla de uso:** ¿abre una lista? → `sec-hdr`. ¿Corona un bloque/sheet? → `ctx-eyebrow`.
+
+**Cero divisores sueltos (decisión Juan, jul 2026):** los únicos divisores de la
+app son las barras `::after` de los `sec-hdr`. Quedan prohibidos los divisores
+huérfanos (`hr-bdr`, `fs-divider`, `pel-sheet-divider` — retirados). Excepción:
+divisores CON palabra (`.splash-rail-div` "ANTERIORES", `.conflict-vs-line` "VS").
+
 ### Badges (inline en texto o título)
 | Clase | Descripción | Estilo |
 |---|---|---|

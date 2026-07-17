@@ -79,8 +79,8 @@ export function renderAgenda(){
       const _vistas=_wl.filter(x=>watched.has(x));
       const _ganas=_wl.filter(x=>!watched.has(x));
       view.innerHTML=`<div class="ag-section">
-        ${_vistas.length?`<div class="int-section-hdr">${t('int_vistas_hdr')}</div>${_vistas.map(x=>_row(x,true)).join('')}`:''}
-        ${_ganas.length?`<div class="int-section-hdr">${t('int_ganas')}</div>${_ganas.map(x=>_row(x,false)).join('')}`:''}
+        ${_vistas.length?`<div class="sec-hdr sm">${t('int_vistas_hdr')}</div>${_vistas.map(x=>_row(x,true)).join('')}`:''}
+        ${_ganas.length?`<div class="sec-hdr sm">${t('int_ganas')}</div>${_ganas.map(x=>_row(x,false)).join('')}`:''}
       </div>`;
       return;
     }
@@ -563,7 +563,7 @@ export function renderDiaryHTML(state){
     if(!f) return '';
     if(f.is_cortos&&f.film_list&&f.film_list.length){
       const{displayTitle:_pdt}=parseProgramTitle(title);
-      return`<div class="diary-prog-lbl">${_pdt}</div>
+      return`<div class="sec-hdr sm">${_pdt}</div>
       <div class="poster-grid pg-miplan">${f.film_list.map(it=>_obraPosterCard(state,it,f.section||'')).join('')}</div>`;
     }
     return`<div class="poster-grid pg-miplan">${_recapPosterCard(state,title)}</div>`;
@@ -577,7 +577,7 @@ export function renderDiaryHTML(state){
   });
   const outside=[...watched].filter(tt=>!planTitles.has(tt)&&FILMS.some(f=>f.title===tt));
   if(outside.length){
-    html+=`<div class="archive-out-lbl">${t('plan_vistas_fuera')}</div>${outside.map(_entry).join('')}`;
+    html+=`<div class="sec-hdr sm">${t('plan_vistas_fuera')}</div>${outside.map(_entry).join('')}`;
   }
   return html||`<div class="hint">${t('diary_vacio')}</div>`;
 }
@@ -837,7 +837,6 @@ export function renderPrioStrip(state, opts={}){
     const outT=list.filter(x=>!(included&&included.has(x)));
     let body='';
     if(inT.length) body+=`<div class="group-label ok">${ICONS.checkCircle} ${t('prio_in')}</div><div class="prio-strip-row">${inT.map(x=>_chip(x,{grayTitle:true})).join('')}</div>`;
-    if(inT.length&&outT.length) body+=`<div class="hr-bdr"></div>`;
     if(outT.length) body+=`<div class="group-label fail">${ICONS.x} ${t('prio_out')}</div><div class="prio-strip-row">${outT.map(x=>_chip(x,{dim:true})).join('')}</div>`;
     return`<div class="prio-strip">
       <div class="sec-hdr">${ICONS.star} ${t('lbl_prioridades')}</div>
@@ -977,26 +976,20 @@ export function renderFilmListHTML(state){
   let html='';
 
   if(prioList.length){
-    html+=`<div class="int-section-hdr">
-      <span class="int-section-hdr-ico">${ICONS.star}</span>
-      <span class="int-section-hdr-lbl">${t('lbl_prioridades')}</span>
+    html+=`<div class="sec-hdr">${ICONS.star} <span>${t('lbl_prioridades')}</span>
       <span class="count-badge cb-amber">${prioList.length}/${PRIO_LIMIT}</span>
     </div>
     <div>${_chronoSort(prioList).map(_mkItem).join('')}</div>`;
   }
 
   if(nonPrioList.length){
-    if(prioList.length) html+=`<div class="hr-bdr"></div>`;
-    html+=`<div class="int-section-hdr">
-      <span class="int-section-hdr-ico">${ICONS.heart}</span>
-      <span class="int-section-hdr-lbl">${t('lbl_intereses')}</span>
+    html+=`<div class="sec-hdr">${ICONS.heart} <span>${t('lbl_intereses')}</span>
       <span class="count-badge cb-neutral">${nonPrioList.length}</span>
     </div>
     <div>${_chronoSort(nonPrioList).map(_mkItem).join('')}</div>`;
   }
 
   if(watchedList.length){
-    if(prioList.length||nonPrioList.length) html+=`<div class="hr-bdr"></div>`;
     // Ya vistas: ordenar cronológicamente por la primera función del film
     const _sortedW=[...watchedList].sort((a,b)=>{
       const fA=FILMS.filter(f=>f.title===a).sort((x,y)=>(x.day_order||0)-(y.day_order||0)||toMin(x.time)-toMin(y.time))[0];
@@ -1007,9 +1000,7 @@ export function renderFilmListHTML(state){
       const dayDiff=(fA.day_order||0)-(fB.day_order||0);
       return dayDiff||toMin(fA.time)-toMin(fB.time);
     });
-    html+=`<div class="int-section-hdr">
-      <span class="int-section-hdr-ico">${ICONS.check}</span>
-      <span class="int-section-hdr-lbl">${t('misc_ya_vistas')}</span>
+    html+=`<div class="sec-hdr">${ICONS.check} <span>${t('misc_ya_vistas')}</span>
       <span class="count-badge cb-neutral">${watchedList.length}</span>
     </div>
     <div>${_sortedW.map(_mkItemWatched).join('')}</div>`;
@@ -1210,9 +1201,7 @@ export function buildResultHTML(scenarios){
   const _prioCnt=[...prioritized].filter(p=>_included.has(p)).length;
   const _prioBadgeCls=_prioCnt===prioritized.size?'cb-green':'cb-amber';
   const _prioRow=prioritized.size===0?''
-    :`<div class="int-section-hdr">
-        <span class="int-section-hdr-ico">${ICONS.star}</span>
-        <span class="int-section-hdr-lbl">${t('lbl_prioridades')}</span>
+    :`<div class="sec-hdr">${ICONS.star} <span>${t('lbl_prioridades')}</span>
         <span class="count-badge ${_prioBadgeCls}">${_prioCnt}/${prioritized.size}</span>
       </div>`;
 
@@ -1229,9 +1218,7 @@ export function buildResultHTML(scenarios){
   // El conteo de films y el estado de prioridades viven en badges, no en prosa.
   // "X no incluidas" se omite — ya vive en el header de la sección No Incluidas.
   let html=`${_staleBanner}<div class="ag-summary">
-    <div class="int-section-hdr">
-      <span class="int-section-hdr-ico">${ICONS.calendar}</span>
-      <span class="int-section-hdr-lbl">${planLabel}</span>
+    <div class="sec-hdr">${ICONS.calendar} <span>${planLabel}</span>
       <span class="count-badge cb-neutral">${ok}</span>
     </div>
     ${_prioRow}
@@ -1338,8 +1325,8 @@ export function buildResultHTML(scenarios){
       </div>`;
     }).join('');
     html+=`<div class="ag-excl-block">
-      <div class="ag-excl-eyebrow">
-        <span class="ag-excl-label">${t('plan_no_incluidas')}</span>
+      <div class="sec-hdr sm">
+        <span>${t('plan_no_incluidas')}</span>
         <span class="count-badge cb-neutral">${sc.excluded.length}</span>
       </div>
       ${_excItems}

@@ -188,8 +188,7 @@ export function openPelSheet(title){
         ratingEl
       });
     }).join('');
-    cortosHtml=`<div class="pel-sheet-divider"></div>
-      <div class="pel-sheet-section-lbl">${t('label_programa')} <span class="ml-1 count-badge cb-neutral">${f.film_list.length}</span></div>
+    cortosHtml=`      <div class="sec-hdr sm">${t('label_programa')} <span class="ml-1 count-badge cb-neutral">${f.film_list.length}</span></div>
       <div class="pel-sheet-cortos-wrap">${cortoItems}</div>`;
   }
   const wlLabel=inWL?`${ICONS.heartFill} ${t('cta_en_intereses')}`:`${ICONS.heart} ${t('nav_intereses')}`;
@@ -215,8 +214,7 @@ export function openPelSheet(title){
         ${f.section?`<div class="pel-sheet-sec" data-section="${f.section.replace(/"/g,'&quot;')}" data-action="filterBySection">${secLabel} <span class="pel-sheet-sec-arrow">›</span></div>`:''}
       </div>
     </div>
-    <div class="pel-sheet-divider"></div>
-    ${allScr.length>0?`<div class="pel-sheet-section-lbl">${f.type==='event'?t('label_horario'):allScr.length===1?t('label_funcion'):t('label_funciones_pl')}${totalFn>1&&f.type!=='event'?`<span class="ml-2 count-badge cb-neutral">${totalFn}</span>`:''}</div>`:''}
+        ${allScr.length>0?`<div class="sec-hdr sm">${f.type==='event'?t('label_horario'):allScr.length===1?t('label_funcion'):t('label_funciones_pl')}${totalFn>1&&f.type!=='event'?`<span class="ml-2 count-badge cb-neutral">${totalFn}</span>`:''}</div>`:''}
     ${(()=>{const _n=NOTICES.find(n=>n.title===f.title&&n.festival===(_activeFestId||_DEFAULT_FEST_ID));if(!_n)return'';const _info=`${_n.newDay||''} ${_n.newTime||''}${_n.newVenue?' · '+_n.newVenue:''}`.trim();const _msg=_n.type==='cancelled'?t('notice_funcion_canc'):t('notice_reprog_a',{info:_info});return`<div class="notice-banner-row"><span class="notice-badge">${_n.type==='cancelled'?t('notice_cancelada'):t('notice_reprog_short')}</span><span class="notice-banner-txt">${_msg}</span></div>`;})()}
     ${_metaBanners(f)}
     ${allScr.length>0?`<div class="pel-sheet-screenings">${rows}</div>`:''}
@@ -239,13 +237,11 @@ export function openPelSheet(title){
       }
       return '';
     })()}
-    ${f.synopsis?`<div class="pel-sheet-divider"></div>
-    <div class="pel-sheet-section-lbl">${f.type==='event'?t('label_descripcion'):t('label_sinopsis')}</div>
+    ${f.synopsis?`    <div class="sec-hdr sm">${f.type==='event'?t('label_descripcion'):t('label_sinopsis')}</div>
     <div class="pel-sheet-synopsis">${locSynopsis(f).replace(/^⚠️\s*INGLÉS\s*[—-]\s*/,'')}</div>`:''}
     ${cortosHtml}
     ${(!f.is_cortos&&!f.is_programa&&f.type!=='event')?lbLink(f.title,f):''}
-    <div class="pel-sheet-divider"></div>
-    ${inW?`<div class="pel-sheet-ctas-watched">
+        ${inW?`<div class="pel-sheet-ctas-watched">
         <button data-title="${escXML(f.title)}" data-action="toggleWatchedAndClose" class="pel-sheet-action-btn act-on">${ICONS.check} ${t('cta_vista')}</button>
         ${!f.is_cortos?`<button data-title="${escXML(f.title)}" data-action="closePelAndRate" class="pel-sheet-action-btn btn-secondary">${ICONS.star} ${filmRatings[f.title]?t('misc_cambiar'):t('cta_calificar')}</button>`:``}
       </div>`
@@ -356,8 +352,7 @@ export function openVenueSheet(venueName){
     ${addr?`<div class="venue-sheet-addr">${addr}</div>`:''}
     ${hasGeo?`<div class="venue-sheet-map">${ICONS.pin}</div>
     <button class="venue-sheet-dir" data-action="venueDirections" data-lat="${v.lat}" data-lng="${v.lng}">${ICONS.pin} ${t('venue_directions')}</button>`:''}
-    <div class="pel-sheet-divider"></div>
-    <div class="pel-sheet-section-lbl">${t('label_funciones')}</div>
+        <div class="sec-hdr sm">${t('label_funciones')}</div>
     ${rows}`;
   const vs=document.getElementById('venue-sheet');
   if(vs) vs.scrollTop=0;
@@ -473,11 +468,9 @@ export function openCortoSheet(title, country, duration, section, flags, directo
         ${secLabel?`<div class="pel-sheet-sec">${secLabel}</div>`:''}
       </div>
     </div>
-    <div class="pel-sheet-divider"></div>
-    ${syn?`<div class="pel-sheet-section-lbl">${t('label_sinopsis')}</div><div class="pel-sheet-synopsis">${syn}</div><div class="pel-sheet-divider"></div>`:''}
+        ${syn?`<div class="sec-hdr sm">${t('label_sinopsis')}</div><div class="pel-sheet-synopsis">${syn}</div>`:''}
     <a class="c-lb pel-sheet-lb" href="${lbHref||'#'}" target="_blank" rel="noopener"${!lbHref?' style="display:none"':''}>${LB_SVG}<span class="c-lb-text pel-sheet-lb-text">Letterboxd</span></a>
-    <div class="pel-sheet-divider"></div>
-    ${parentTitle?`<div class="meta-xs-gray">${t('meta_corto_incluye')}</div>`:''}
+        ${parentTitle?`<div class="meta-xs-gray">${t('meta_corto_incluye')}</div>`:''}
     <div class="flex-gap1-mt1">
       <button id="corto-wl-btn" class="row-center-xs pel-sheet-action-btn${inWL?' act-on btn-primary':' btn-primary'}" data-title="${escXML(parentTitle||title)}" data-action="toggleWL">${inWL?ICONS.heartFill:ICONS.heart} ${inWL?t('cta_en_intereses'):t('cta_intereses')}</button>
       <button id="corto-prio-btn" class="row-center-xs pel-sheet-action-btn${inPrio?' act-prio':' btn-secondary'}" data-title="${escXML(parentTitle||title)}" data-action="togglePelPrio">${inPrio?ICONS.starFill:ICONS.star} ${inPrio?t('cta_priorizada'):t('cta_priorizar')}</button>
@@ -543,12 +536,10 @@ export function _openCombinedFilmSheet(filmData){
         ${(()=>{const _parent=FILMS.find(f=>f.film_list&&f.film_list.some(c=>c.title===title));const _sec=_parent?.section;if(!_sec)return'';const _lbl=_secLabel(_sec);return`<div class="pel-sheet-sec" style="cursor:default">${_lbl}</div>`;})()}
       </div>
     </div>
-    <div class="pel-sheet-divider"></div>
-    <div class="pel-sheet-section-lbl">${t('label_sinopsis')}</div>
+        <div class="sec-hdr sm">${t('label_sinopsis')}</div>
     <div class="pel-sheet-synopsis">${locSynopsis(filmData)}</div>
     <a class="c-lb pel-sheet-lb" href="${lbHref||'#'}" target="_blank" rel="noopener"${!lbHref?' style="display:none"':''}>${LB_SVG}<span class="c-lb-text pel-sheet-lb-text">Letterboxd</span></a>
-    <div class="pel-sheet-divider"></div>
-  `;
+      `;
   const _psReset=document.getElementById('pel-sheet');
   if(_psReset){_psReset.scrollTop=0;_psReset.classList.remove('compact');}
   document.getElementById('pel-overlay').classList.add('open');

@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `14393c0 data(tt): lbSlugs de las 5 obras del JUE + país de Internacional → España`
+> Último commit: `0aadd41 chore: techo module-size agenda.js 1619→1622 (comentario del contador; el commit anterior salió con validate rojo — error de proceso mío, cadena sin gate)`
 
 ---
 
