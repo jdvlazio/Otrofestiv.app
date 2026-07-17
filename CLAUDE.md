@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `3284685 chore: bump (landing Mi Plan + fix cola rating alcanzable)`
+> Último commit: `0f7cf27 feat(diario): el Historial se convierte en el DIARIO — destino propio de lo visto`
 
 ---
 
