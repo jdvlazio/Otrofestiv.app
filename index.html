@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607171242">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607171242">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607171303">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607171303">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -639,6 +639,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .sec-hdr>svg{color:var(--amber);flex-shrink:0}
 .sec-hdr .hdr-end{order:2;margin-left:var(--sp-2);display:inline-flex;align-items:center;gap:var(--sp-1)}
 .sec-hdr.sm{font-size:var(--t-xs);letter-spacing:.1em;text-transform:uppercase;color:var(--gray2)}
+.sec-hdr.sm>svg{width:11px;height:11px}
 /* Ritmo del pel-sheet: el espaciador pel-sheet-divider (height:0, solo margen) se
    retiró — su aire vive ahora en el margen del encabezado. */
 .pel-sheet-inner .sec-hdr.sm{margin-top:var(--sp-5)}
@@ -1130,6 +1131,8 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 /* Lista de cortometrajes */
 
 .c-film-thumb{width:var(--poster-xs-w);height:var(--poster-xs-h);object-fit:cover;border-radius:var(--r-sm);flex-shrink:0;display:block}
+/* Como DIV enmarcado (poster-ed) el thumb usa el modelo flex del marco — el display:block de arriba es para el caso <img> y rompía el frame (ed-img colapsaba a 0). */
+.c-film-thumb.poster-ed{display:flex}
 .pel-sheet-corto-item:active{background:var(--surf-2)}
 .corto-rating-stars{font-size:var(--t-sm);color:var(--amber);flex-shrink:0;letter-spacing:1px}
 .corto-rate-btn{background:none;border:1px solid var(--bdr);border-radius:var(--r-pill);color:var(--gray);font-size:var(--t-label);font-weight:var(--w-bold);font-family:var(--font);padding:2px 8px;cursor:pointer;flex-shrink:0;white-space:nowrap}
@@ -2804,7 +2807,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202607171242";
+    s.src="/src/main.js?v=202607171303";
     document.body.appendChild(s);
   }
   if (isApp || isDev) { bootApp(); return; }
