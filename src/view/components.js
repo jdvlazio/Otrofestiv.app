@@ -340,6 +340,8 @@ export const ICONS={
   undo:     `<svg class="block-shrink" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path stroke-linecap="round" stroke-linejoin="round" d="M9 15L3 9m0 0l6-6M3 9h12a6 6 0 010 12h-3"/></svg>`,
   switch:   `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path stroke-linecap="round" stroke-linejoin="round" d="M7.5 21L3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5"/></svg>`,
   plus:     `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/></svg>`,
+  text:     `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M15 12H3"/><path d="M17 18H3"/><path d="M21 6H3"/></svg>`,
+  history:  `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/><path d="M12 7v5l4 2"/></svg>`,
   film:     `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 3v18"/><path d="M17 3v18"/><path d="M3 7.5h4"/><path d="M3 12h18"/><path d="M3 16.5h4"/><path d="M17 7.5h4"/><path d="M17 16.5h4"/></svg>`,
   clock:    `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>`,
   // route (Lucide) — convención del conflicto por DESPLAZAMIENTO, par del clock
@@ -616,9 +618,9 @@ export function _renderFestivalSelectorHTML(state, activeFestId){
     </div>`;
   }
   let html='';
-  if(ongoing.length)  html+=`<div class="sec-hdr sm">${t('fs_en_curso')}</div>`+ongoing.map(mkRow).join('');
-  if(upcoming.length) html+=`<div class="sec-hdr sm">${t('fs_proximos')}</div>`+upcoming.map(mkRow).join('');
-  if(past.length)     html+=`<div class="sec-hdr sm">${t('splash_anteriores')}</div>`+past.map(mkPastRow).join('');
+  if(ongoing.length)  html+=`<div class="sec-hdr sm">${ICONS.play} <span>${t('fs_en_curso')}</span></div>`+ongoing.map(mkRow).join('');
+  if(upcoming.length) html+=`<div class="sec-hdr sm">${ICONS.calendar} <span>${t('fs_proximos')}</span></div>`+upcoming.map(mkRow).join('');
+  if(past.length)     html+=`<div class="sec-hdr sm">${ICONS.history} <span>${t('splash_anteriores')}</span></div>`+past.map(mkPastRow).join('');
   return html;
 }
 

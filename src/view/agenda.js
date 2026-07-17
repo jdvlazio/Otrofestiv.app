@@ -79,8 +79,8 @@ export function renderAgenda(){
       const _vistas=_wl.filter(x=>watched.has(x));
       const _ganas=_wl.filter(x=>!watched.has(x));
       view.innerHTML=`<div class="ag-section">
-        ${_vistas.length?`<div class="sec-hdr sm">${t('int_vistas_hdr')}</div>${_vistas.map(x=>_row(x,true)).join('')}`:''}
-        ${_ganas.length?`<div class="sec-hdr sm">${t('int_ganas')}</div>${_ganas.map(x=>_row(x,false)).join('')}`:''}
+        ${_vistas.length?`<div class="sec-hdr sm">${ICONS.check} <span>${t('int_vistas_hdr')}</span></div>${_vistas.map(x=>_row(x,true)).join('')}`:''}
+        ${_ganas.length?`<div class="sec-hdr sm">${ICONS.heart} <span>${t('int_ganas')}</span></div>${_ganas.map(x=>_row(x,false)).join('')}`:''}
       </div>`;
       return;
     }
@@ -564,7 +564,7 @@ export function renderDiaryHTML(state){
     if(!f) return '';
     if(f.is_cortos&&f.film_list&&f.film_list.length){
       const{displayTitle:_pdt}=parseProgramTitle(title);
-      return`<div class="sec-hdr sm">${_pdt}</div>
+      return`<div class="sec-hdr sm">${ICONS.film} <span>${_pdt}</span></div>
       <div class="poster-grid pg-miplan">${f.film_list.map(it=>_obraPosterCard(state,it,f.section||'')).join('')}</div>`;
     }
     return`<div class="poster-grid pg-miplan">${_recapPosterCard(state,title)}</div>`;
@@ -578,7 +578,7 @@ export function renderDiaryHTML(state){
   });
   const outside=[...watched].filter(tt=>!planTitles.has(tt)&&FILMS.some(f=>f.title===tt));
   if(outside.length){
-    html+=`<div class="sec-hdr sm">${t('plan_vistas_fuera')}</div>${outside.map(_entry).join('')}`;
+    html+=`<div class="sec-hdr sm">${ICONS.check} <span>${t('plan_vistas_fuera')}</span></div>${outside.map(_entry).join('')}`;
   }
   return html||`<div class="hint">${t('diary_vacio')}</div>`;
 }
@@ -1327,7 +1327,7 @@ export function buildResultHTML(scenarios){
     }).join('');
     html+=`<div class="ag-excl-block">
       <div class="sec-hdr sm">
-        <span>${t('plan_no_incluidas')}</span>
+        ${ICONS.x} <span>${t('plan_no_incluidas')}</span>
         <span class="count-badge cb-neutral">${sc.excluded.length}</span>
       </div>
       ${_excItems}

@@ -237,7 +237,7 @@ export function openPelSheet(title){
       }
       return '';
     })()}
-    ${f.synopsis?`    <div class="sec-hdr sm">${f.type==='event'?t('label_descripcion'):t('label_sinopsis')}</div>
+    ${f.synopsis?`    <div class="sec-hdr sm">${ICONS.text} <span>${f.type==='event'?t('label_descripcion'):t('label_sinopsis')}</span></div>
     <div class="pel-sheet-synopsis">${locSynopsis(f).replace(/^⚠️\s*INGLÉS\s*[—-]\s*/,'')}</div>`:''}
     ${cortosHtml}
     ${(!f.is_cortos&&!f.is_programa&&f.type!=='event')?lbLink(f.title,f):''}
@@ -352,7 +352,7 @@ export function openVenueSheet(venueName){
     ${addr?`<div class="venue-sheet-addr">${addr}</div>`:''}
     ${hasGeo?`<div class="venue-sheet-map">${ICONS.pin}</div>
     <button class="venue-sheet-dir" data-action="venueDirections" data-lat="${v.lat}" data-lng="${v.lng}">${ICONS.pin} ${t('venue_directions')}</button>`:''}
-        <div class="sec-hdr sm">${t('label_funciones')}</div>
+        <div class="sec-hdr sm">${ICONS.clock} <span>${t('label_funciones')}</span></div>
     ${rows}`;
   const vs=document.getElementById('venue-sheet');
   if(vs) vs.scrollTop=0;
@@ -468,7 +468,7 @@ export function openCortoSheet(title, country, duration, section, flags, directo
         ${secLabel?`<div class="pel-sheet-sec">${secLabel}</div>`:''}
       </div>
     </div>
-        ${syn?`<div class="sec-hdr sm">${t('label_sinopsis')}</div><div class="pel-sheet-synopsis">${syn}</div>`:''}
+        ${syn?`<div class="sec-hdr sm">${ICONS.text} <span>${t('label_sinopsis')}</span></div><div class="pel-sheet-synopsis">${syn}</div>`:''}
     <a class="c-lb pel-sheet-lb" href="${lbHref||'#'}" target="_blank" rel="noopener"${!lbHref?' style="display:none"':''}>${LB_SVG}<span class="c-lb-text pel-sheet-lb-text">Letterboxd</span></a>
         ${parentTitle?`<div class="meta-xs-gray">${t('meta_corto_incluye')}</div>`:''}
     <div class="flex-gap1-mt1">
@@ -536,7 +536,7 @@ export function _openCombinedFilmSheet(filmData){
         ${(()=>{const _parent=FILMS.find(f=>f.film_list&&f.film_list.some(c=>c.title===title));const _sec=_parent?.section;if(!_sec)return'';const _lbl=_secLabel(_sec);return`<div class="pel-sheet-sec" style="cursor:default">${_lbl}</div>`;})()}
       </div>
     </div>
-        <div class="sec-hdr sm">${t('label_sinopsis')}</div>
+        <div class="sec-hdr sm">${ICONS.text} <span>${t('label_sinopsis')}</span></div>
     <div class="pel-sheet-synopsis">${locSynopsis(filmData)}</div>
     <a class="c-lb pel-sheet-lb" href="${lbHref||'#'}" target="_blank" rel="noopener"${!lbHref?' style="display:none"':''}>${LB_SVG}<span class="c-lb-text pel-sheet-lb-text">Letterboxd</span></a>
       `;
