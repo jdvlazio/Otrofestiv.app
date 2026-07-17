@@ -7,7 +7,7 @@
 
 import { FESTIVAL_CONFIG, mergeFestivalSections } from '../config.js';
 import { lruTouch } from '../lru.js';
-import { DAY_ABBR, DAY_NUM, festivalShortName } from '../view/components.js';
+import { DAY_ABBR, DAY_NUM, _classifyFestival, festivalShortName } from '../view/components.js';
 import { DAYS, DAY_SHORT_EN, setCustomPosters, setDayShort, setDayShortEn, setPosters } from '../view/helpers.js';
 import { closeFestivalSheet } from '../view/sheets.js';
 import { showToast } from '../view/feedback.js';
@@ -16,7 +16,7 @@ import { _fixStickyOffset } from '../view/agenda.js';
 import { loadState, _cloudLoad, _cloudSave, subscribePlanCloud, _flushCloudSave } from './persistence.js';
 import { report } from '../telemetry.js';
 import { subscribeDelaysCloud } from './delays-cloud.js';
-import { _updateProgramaActiveFilter, initProgramaModeBar, showDayView, switchMainNav } from './pipeline.js';
+import { _updateProgramaActiveFilter, initProgramaModeBar, showAgView, showDayView, switchMainNav } from './pipeline.js';
 import { seccionClose } from './overlays.js';
 import { setProgramaView } from './handlers.js';
 import { dayFullyPassed, simTodayStr } from '../domain/time.js';
@@ -415,6 +415,16 @@ export async function loadFestival(id){
   const _dtabs=document.getElementById('dtabs');
   const _onDtab=_dtabs&&_dtabs.querySelector('.dtab.on');
   if(_dtabs&&_onDtab) _dtabs.scrollLeft=_onDtab.offsetLeft-_dtabs.offsetLeft;
+  // Tab de aterrizaje contextual (regla de Juan, 17 jul): DURANTE el festival, si el
+  // usuario YA tiene plan, su pantalla de trabajo es Mi Plan — aterrizar ahí. Sin plan
+  // (o festival futuro/pasado) → Programa, como siempre: un Mi Plan vacío no invita a
+  // nada; el programa sí. Cartelera queda inicializada debajo (showDayView arriba) para
+  // que volver a ella sea instantáneo. El auto-salto de 30 min (main.js) sigue siendo
+  // un caso más fuerte de esta misma regla.
+  if(_classifyFestival(cfg)==='ongoing' && savedAgenda&&savedAgenda.schedule&&savedAgenda.schedule.length){
+    switchMainNav('mnav-miplan');
+    showAgView();
+  }
   // Resolver posters via TMDB en background — no bloquea la UI
   _autoResolveFestivalPosters().catch(()=>{});
   // F0 sync multi-dispositivo: si el usuario está firmado (no anónimo), bajar el
