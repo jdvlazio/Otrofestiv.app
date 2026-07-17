@@ -11,7 +11,7 @@
 //   Los handlers _dismissNotice/setProgramaChip (data-action) viven en main.js.
 
 import { NOTICES, SECTION_ORDER_LIST, _DEFAULT_FEST_ID } from '../config.js';
-import { ICONS, _secLabel, _secLabelFull, _sectionColor, escXML, makeEventPoster, parseProgramTitle } from './components.js';
+import { ICONS, _secLabel, _secLabelFull, _sectionColor, escXML, makeEventPoster, makeProgramPoster, parseProgramTitle } from './components.js';
 import { _dayChips, _getItemPoster, _metaBadges, _plistPosterHtml, _programaStack, dayLabel, durFmt, emptyState, getFilmPoster, isNowShowing, posterParts, sala, vcfg } from './helpers.js';
 import { festivalEnded, toMin } from '../domain/time.js';
 import { screeningPassed } from '../domain/film.js';
@@ -343,8 +343,10 @@ export function renderPeliculaViewHTML(state){
         // programa (evita el stack de divs vacíos / card en blanco)
         posterImg=`<img src="${getFilmPoster(f)||''}" loading="lazy" data-title="${f.title.replace(/"/g,'&quot;')}" style="width:100%;height:100%;object-fit:cover;display:block;opacity:0;transition:opacity 250ms ease" onload="this.style.opacity='1'" onerror="_posterErr(this)" alt="">`;
       } else {
-        const _ib=_p2?`<img class="pcs-back" src="${_p2}" loading="lazy" onerror="this.remove()" alt="">`:`<div class="pcs-back"></div>`;
-        const _if=_p1?`<img class="pcs-front" src="${_p1}" loading="lazy" onerror="this.remove()" alt="">`:`<div class="pcs-front"></div>`;
+        // Fallback unificado (como el sheet): item sin póster → generativo, no hueco.
+        const _gen=()=>makeProgramPoster(state,f.title,f.duration||'',f.section||'');
+        const _ib=`<img class="pcs-back" src="${_p2||_gen()}" loading="lazy" onerror="this.remove()" alt="">`;
+        const _if=`<img class="pcs-front" src="${_p1||_gen()}" loading="lazy" onerror="this.remove()" alt="">`;
         posterImg=`<div class="poster-card-stack">${_ib}${_if}</div>`;
       }
     } else {

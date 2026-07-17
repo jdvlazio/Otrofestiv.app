@@ -10,7 +10,7 @@ import {
   DAY_ABBR, DAY_NUM, ICONS, _buildPosterV16, _bandTextSVG, _secLabel, _sectionColor,
   makeProgramPoster, makeEventPoster, makeSorpresaPoster, escXML,
 } from './components.js';
-import { toMin, parseDur, simNow, simTodayStr, _festDate } from '../domain/time.js';
+import { toMin, minToStr, parseDur, simNow, simTodayStr, _festDate } from '../domain/time.js';
 import { effectiveDuration } from '../domain/film.js';
 import { _resolveVenue, travelMins } from '../domain/festival.js';
 import { state } from '../state/state.js';
@@ -306,7 +306,7 @@ export function delayConsensusBadge(con){
   return `<div class="delay-consensus tentative"><span>${t('delay_consensus_tentative')}<span class="delay-consensus-src">${t('delay_consensus_src')}</span></span></div>`;
 }
 
-export function mplanEndStr(t,d){const m=toMin(t)+d;return String(Math.floor(m/60)%24).padStart(2,'0')+':'+String(m%60).padStart(2,'0');}
+export function mplanEndStr(t,d){return minToStr(toMin(t)+d);} // delega en la fuente única min→HH:MM
 
 export function mplanBlockType(s){
   const f=FILMS.find(fi=>fi.title===s._title);
@@ -420,8 +420,11 @@ export function _programaStack(f){
   if(!f.is_programa||!f.film_list||f.film_list.length<2) return null;
   const p1=_getItemPoster(f.film_list[0]);
   const p2=_getItemPoster(f.film_list[1]);
-  const imgB=p2?`<img class="ps-back" src="${p2}" loading="lazy" onerror="this.remove()" alt="">`:"<div class='ps-back'></div>";
-  const imgF=p1?`<img class="ps-front" src="${p1}" loading="lazy" onerror="this.remove()" alt="">`:"<div class='ps-front'></div>";
+  // Fallback unificado (como el stack del sheet): item sin póster → generativo
+  // del programa, nunca un hueco vacío.
+  const _gen=()=>makeProgramPoster(state,f.title,f.duration||'',f.section||'');
+  const imgB=`<img class="ps-back" src="${p2||_gen()}" loading="lazy" onerror="this.remove()" alt="">`;
+  const imgF=`<img class="ps-front" src="${p1||_gen()}" loading="lazy" onerror="this.remove()" alt="">`;
   return`<div class="plist-poster-stack">${imgB}${imgF}</div>`;
 }
 
