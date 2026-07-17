@@ -134,18 +134,18 @@ export function renderAgenda(){
     const _avOpenAttr=_hasAvBlocks?' open':'';
     view.innerHTML=`${_progressHtml}
       <style>
-        .ag-av-details{padding:var(--sp-3) var(--sp-4);margin-top:var(--sp-4)}
+        .ag-av-details{padding:var(--sp-3) 0;margin-top:var(--sp-4)}
         .ag-av-details>summary{cursor:pointer;list-style:none;display:flex;align-items:center;margin-bottom:0;-webkit-tap-highlight-color:transparent}
         .ag-av-details>summary::-webkit-details-marker,
         .ag-av-details>summary::marker{display:none}
-        .ag-av-details>summary .ag-av-chevron{margin-left:auto;transition:transform 200ms ease;color:var(--gray2);display:inline-flex;align-items:center}
+        .ag-av-details>summary .ag-av-chevron{transition:transform 200ms ease;color:var(--gray2);display:inline-flex;align-items:center}
         .ag-av-details[open]>summary .ag-av-chevron{transform:rotate(180deg)}
         .ag-av-details>summary .sec-hdr-opt{margin-left:4px}
         .ag-av-details>.txt-gray2-sm-lh{margin-top:var(--sp-2)}
       </style>
       <div class="ag-section">
         <details class="ag-av-details"${_avOpenAttr}>
-          <summary class="sec-hdr">${ICONS.clock} ${t('av_disponibilidad')} <span class="sec-hdr-opt">${t('misc_opcional')}</span><span class="ag-av-chevron">${ICONS.chevronD}</span></summary>
+          <summary class="sec-hdr">${ICONS.clock} <span>${t('av_disponibilidad')}</span> <span class="hdr-end"><span class="sec-hdr-opt">${t('misc_opcional')}</span><span class="ag-av-chevron">${ICONS.chevronD}</span></span></summary>
           <div class="txt-gray2-sm-lh">${t('av_no_incluir')}</div>
           <div id="av-blocks-list"></div>
           <button class="av-add-unavail" data-action="openAvSheet">${ICONS.plus} ${t('misc_no_disponible')}</button>
