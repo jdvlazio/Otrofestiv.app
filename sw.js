@@ -9,8 +9,8 @@
 //      el reload forzado por deploy, se sirve ese HTML en vez de OFFLINE_HTML (una
 //      sesión viva ya no se destruye por un deploy con señal mala). Audit P3 #10.
 
-const CACHE_NAME = 'otrofestiv-v202607171036';
-const BUILD = '202607171036';
+const CACHE_NAME = 'otrofestiv-v202607171106';
+const BUILD = '202607171106';
 // Caché PERSISTENTE de assets inmutables (pósters, iconos, fonts): NO se borra
 // en activate. Durante un festival deployamos a diario; sin esto, cada deploy
 // obligaba a re-descargar ~8MB de pósters ya vistos (señal rural en sede).
@@ -20,8 +20,6 @@ const STATIC_ASSETS = [
   '/manifest.json',
   '/icon-192.png',
   '/icon-512.png',
-  '/i18n/es.json',
-  '/i18n/en.json',
 ];
 
 self.addEventListener('install', () => {
@@ -94,23 +92,6 @@ self.addEventListener('fetch', event => {
           return res;
         })
         .catch(() => caches.match(request))
-    );
-    return;
-  }
-
-  // i18n JSONs → cache-first (cambian solo en deploy, SW se actualiza)
-  if (url.pathname.startsWith('/i18n/')) {
-    event.respondWith(
-      caches.match(request).then(cached => {
-        const networkFetch = fetch(request).then(res => {
-          if (res.ok) {
-            const clone = res.clone();
-            caches.open(CACHE_NAME).then(c => c.put(request, clone));
-          }
-          return res;
-        });
-        return cached || networkFetch;
-      })
     );
     return;
   }
