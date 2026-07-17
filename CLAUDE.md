@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `e12e9d7 fix(diario): la vista es de PELÍCULAS — el programa se disuelve en sus obras`
+> Último commit: `14393c0 data(tt): lbSlugs de las 5 obras del JUE + país de Internacional → España`
 
 ---
 

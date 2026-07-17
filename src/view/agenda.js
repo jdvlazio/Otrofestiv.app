@@ -635,9 +635,12 @@ export function renderContextualHeader(state, consensus){
     const _nowMin=_festNowMin();
     const _endMin=toMin(next.time)+parseDur(next.duration)+(filmDelays[_delayKey(next)]||0);
     const _leftMin=Math.max(0,_endMin-_nowMin);
+    // Horas + minutos cuando pasa de 59 min ("En 5 h 35"), minutos pelados por debajo
+    // ("En 45 min") — pedir "335 min" obliga a calcular (regla de Juan, 17 jul).
+    // _minFmt es el formateador único (mismo del detalle de conflictos).
     const badge=isNow
-      ?`<span class="ctx-next-badge ending">${t('plan_termina_en')} ${_leftMin} min</span>`
-      :`<span class="ctx-next-badge">${t('plan_en_min')} ${minsUntil} min</span>`;
+      ?`<span class="ctx-next-badge ending">${t('plan_termina_en')} ${_minFmt(_leftMin)}</span>`
+      :`<span class="ctx-next-badge">${t('plan_en_min')} ${_minFmt(minsUntil)}</span>`;
     const _filmObj=FILMS.find(f=>f.title===next._title);
     const _isEvent=_filmObj&&_filmObj.type==='event';
     const eyebrowLabel=isNow?t('label_en_curso'):(_isEvent?t('misc_prox_evento'):t('misc_prox_funcion'));
