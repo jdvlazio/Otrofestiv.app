@@ -129,7 +129,9 @@ export function toggleWatched(title,e){
       saveWatched();updateCardState(title);
       _reRenderIntereses();
       showToast(t('toast_marcada_vista'),'info');
-      if(!FILMS.find(fi=>fi.title===title)?.is_cortos) setTimeout(()=>openRatingSheet(title),350);
+      const _f=FILMS.find(fi=>fi.title===title);
+      if(_f?.is_cortos&&_f.film_list?.length){ closePelSheet(); setTimeout(()=>openPostViewRating(title),350); }
+      else if(!_f?.is_cortos) setTimeout(()=>openRatingSheet(title),350);
     }
   );
 }
@@ -319,10 +321,12 @@ export function checkinLaVi(title){
   // 4. PERSIST + surgical (render automático vía pipeline)
   saveWatched();
   updateCardState(title);
-  // Post-view rating modal (sólo para films, no cortos)
+  // Post-view rating SIEMPRE — openPostViewRating rutea: programa (is_cortos con
+  // film_list) → cola obra por obra; film suelto → flujo de siempre. El skip viejo
+  // "cortos sin calificación general" era del modelo paquete y dejaba la cola
+  // INALCANZABLE (bug cazado por Juan en TT: Refugio en la Cancha sin preguntar).
   const s=savedAgenda&&savedAgenda.schedule.find(e=>e._title===title);
-  const _isCortos=FILMS.find(fi=>fi.title===title)?.is_cortos;
-  if(!_isCortos) setTimeout(()=>openPostViewRating(title, s?.day, s?.time, s?.venue, s?.duration), 250);
+  setTimeout(()=>openPostViewRating(title, s?.day, s?.time, s?.venue, s?.duration), 250);
 }
 
 export function checkinNoLaVi(title){
@@ -423,8 +427,8 @@ export function markWatchedFromPlan(title, day, time, venue, duration, e){
   // 4. PERSIST + surgical (render automático vía pipeline)
   saveWatched();
   updateCardState(title);
-  // Cortos: sin calificación general
-  if(!FILMS.find(fi=>fi.title===title)?.is_cortos) setTimeout(()=>openPostViewRating(title, day, time, venue, duration), 250);
+  // Post-view rating SIEMPRE (programa → cola obra por obra; ver checkinLaVi).
+  setTimeout(()=>openPostViewRating(title, day, time, venue, duration), 250);
 }
 
 export function confirmReplace(removedTitle,newTitle,day,time,isScenario){
