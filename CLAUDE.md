@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `2e64a8f fix(headers+share): ritmo/justificación unificados del sec-hdr + nombre oficial TT en exports`
+> Último commit: `c7aded4 arch(data): archivos restantes del commit anterior (add abortó por pathspec i18n/)`
 
 ---
 

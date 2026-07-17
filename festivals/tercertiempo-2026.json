@@ -453,8 +453,7 @@
           "posterSource": "custom",
           "flags": "🇪🇸",
           "synopsis_en": "While fighting to obtain a residence permit, Mounir tries to build a stable life in Spain without giving up his roots or the family ties that bind him to Morocco.",
-          "genre": "Drama",
-          "lbSlug": "mounir"
+          "genre": "Drama"
         },
         {
           "title": "Más que Imparables",
@@ -569,7 +568,8 @@
           "poster": "/assets/tercertiempo/v1ctor.jpg",
           "posterSource": "custom",
           "flags": "🇦🇷",
-          "synopsis_en": "An intimate portrait of Víctor Tujschnaider and his relationship with Argentina's football memory."
+          "synopsis_en": "An intimate portrait of Víctor Tujschnaider and his relationship with Argentina's football memory.",
+          "lbSlug": "v1ct0r"
         },
         {
           "title": "Los murales del campeón",
@@ -583,7 +583,8 @@
           "posterSource": "custom",
           "flags": "🇮🇹",
           "synopsis_en": "A journey through the murals dedicated to Diego Maradona and the cultural legacy still alive in the streets.",
-          "title_en": "Il murales del campione"
+          "title_en": "Il murales del campione",
+          "lbSlug": "il-murales-del-campione"
         },
         {
           "title": "El documental del 10",
