@@ -1239,18 +1239,15 @@ export function buildResultHTML(scenarios){
   // Day landmark: nombre completo lang-aware + badge con cantidad de films.
   // Mismo patrón que Mi Plan (.mplan-list-hdr): nombre del día + count-badge
   // cb-neutral. Sin total de horas — info no relevante y potencialmente abrumadora.
-  const _dowKeys=['day_dom','day_lun','day_mar','day_mie','day_jue','day_vie','day_sab'];
   const byDay={};
   sc.schedule.forEach(s=>{if(!byDay[s.day])byDay[s.day]=[];byDay[s.day].push(s);});
   let _firstDay=true;
   DAY_KEYS.forEach(day=>{
     const films=byDay[day];if(!films||!films.length) return;
-    const _isoDate=FESTIVAL_DATES[day]||day;
-    const _d=new Date(_isoDate+'T12:00:00');
-    const _dayName=t(_dowKeys[_d.getDay()]);
-    const _dayNum=_d.getDate();
+    // dayLabelLong = formateador ÚNICO del nombre largo de día (mismo de Mi Plan);
+    // antes esto reimplementaba el mismo array + new Date inline.
     // El divisor (border-top) separa días: el primero no lo lleva.
-    html+=`<div class="ag-day-label${_firstDay?' first':''}"><span class="ag-day-name">${_dayName} ${_dayNum}</span><span class="count-badge cb-neutral">${films.length}</span></div>`;
+    html+=`<div class="ag-day-label${_firstDay?' first':''}"><span class="ag-day-name">${dayLabelLong(day)}</span><span class="count-badge cb-neutral">${films.length}</span></div>`;
     _firstDay=false;
     films.forEach((s,i)=>{
       if(i>0){const warn=travelWarn(films[i-1],s);if(warn) html+=`<div class="ag-warn">${warn}</div>`;}

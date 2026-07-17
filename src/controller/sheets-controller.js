@@ -16,7 +16,7 @@ import { runCalc } from './calc.js';
 import { saveAV, saveLastSlot, saveRating, saveSavedAgenda } from './persistence.js';
 import { _reRenderIntereses, showAgView, switchMainNav, updateAgTab } from './pipeline.js';
 import { dayFullyPassed, festivalEnded, parseDur, toMin } from '../domain/time.js';
-import { screeningPassed } from '../domain/film.js';
+import { screeningPassed, effectiveDuration } from '../domain/film.js';
 import { isScreeningBlocked } from '../domain/schedule.js';
 import { state } from '../state/state.js';
 import { storage } from '../storage/storage.js';
@@ -1202,10 +1202,15 @@ export function countryToFlags(countryStr){
 }
 
 export function filmDisplayTitle(f) {
+  // Compone las DOS reglas de título en un solo resolvedor: (1) quitar prefijo de
+  // programa vía parseProgramTitle (igual que las listas — antes la ficha mostraba
+  // "Cortos: X" mientras las listas mostraban "X"); (2) swap idioma EN/original.
+  const _esMain = parseProgramTitle(f.title).displayTitle;
   if (_lang === 'en' && f.title_en && f.title_en !== f.title) {
-    return { main: f.title_en, original: f.title };
+    const _enMain = f.title_en.replace(/^(Shorts|Cortos|Award Screening):\s*/i, '');
+    return { main: _enMain, original: _esMain };
   }
-  return { main: f.title, original: null };
+  return { main: _esMain, original: null };
 }
 
 export function _genreEN(g) {
@@ -1252,7 +1257,7 @@ export function checkPlanConflictsWithBlock(day, fromStr, toStr){
   const bFrom=toMin(fromStr), bTo=toMin(toStr);
   return savedAgenda.schedule.filter(s=>{
     if(s.day!==day) return false;
-    const sStart=toMin(s.time), sEnd=sStart+parseDur(s.duration);
+    const sStart=toMin(s.time), sEnd=sStart+effectiveDuration(s); // Q&A incluido, como isScreeningBlocked
     return sStart<bTo&&sEnd>bFrom;
   });
 }
