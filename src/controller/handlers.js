@@ -768,13 +768,22 @@ export function saveCurrentScenario(){
   const _doSave=()=>{
     const _sc=cachedResult.scenarios[cachedResult.currentIdx];
     const _squeezed=squeezeExcluded(_sc.schedule,_sc.excluded||[]);
-    state.set('savedAgenda', {schedule:_squeezed});
+    // Preservar el PASADO del plan actual — recalcular es solo para los días que
+    // aún no llegan (el algoritmo ya excluye funciones pasadas). Sin esto, "Usar
+    // este plan" a mitad de festival amputaba los días cumplidos (y su marca de
+    // Vista/calificación en el contexto del plan). Dedup por función exacta.
+    const _past=(savedAgenda&&savedAgenda.schedule||[]).filter(s=>screeningPassed(s));
+    const _key=s=>`${s._title}|${s.day}|${s.time}`;
+    const _fresh=new Set(_squeezed.map(_key));
+    const _merged=[..._past.filter(s=>!_fresh.has(_key(s))),..._squeezed];
+    state.set('savedAgenda', {schedule:_merged});
     saveSavedAgenda();
-    openPlanConfirm(_squeezed);
+    openPlanConfirm(_merged);
   };
-  // Si ya hay un plan guardado, pedir confirmación antes de reemplazarlo
-  if(savedAgenda&&savedAgenda.schedule&&savedAgenda.schedule.length){
-    const n=savedAgenda.schedule.length;
+  // Si ya hay un plan FUTURO guardado, pedir confirmación (el pasado se conserva).
+  const _futureN=(savedAgenda&&savedAgenda.schedule||[]).filter(s=>!screeningPassed(s)).length;
+  if(_futureN){
+    const n=_futureN;
     showActionModal(
       `${ICONS.calendar} ${t('plan_reemplazar_plan')}`,
       `${t('plan_ya_tenes_n',{count:`<b>${n} ${n!==1?t('misc_peliculas'):t('misc_pelicula')}</b>`})}<br><br>${t('plan_reemplazar')}.`,
