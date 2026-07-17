@@ -391,6 +391,7 @@
         {
           "title": "Cantos al juego de \"Bolar\"",
           "director": "Iván Sierra",
+          "lbSlug": "cantos-al-juego-de-bolar",
           "year": 2025,
           "genre": "Animación",
           "country": "Colombia",
@@ -405,6 +406,7 @@
         {
           "title": "El equipo del pueblo. Un sueño, Atlante",
           "director": "Rafael Aparicio",
+          "lbSlug": "el-equipo-del-pueblo-un-sueno-atlante",
           "year": 2025,
           "genre": "Documental",
           "country": "México",
@@ -441,6 +443,7 @@
         {
           "title": "Mounir",
           "director": "Xabier Rúa, Xosé Dopazo",
+          "lbSlug": "mounir",
           "year": 2024,
           "country": "España",
           "duration": "14 min",
@@ -456,6 +459,7 @@
         {
           "title": "Más que Imparables",
           "director": "Korstiaan Vandiver",
+          "lbSlug": "beyond-unstoppable",
           "year": 2025,
           "country": "Estados Unidos",
           "duration": "21 min",
@@ -470,9 +474,10 @@
         {
           "title": "Internacional. Un equipo diferente",
           "director": "Jaime Cobo",
+          "lbSlug": "internacional-un-equipo-diferente",
           "year": 2026,
           "genre": "Documental",
-          "country": "España, Senegal",
+          "country": "España",
           "duration": "96 min",
           "synopsis": "La historia de un equipo de fútbol creado para integrar personas de distintas nacionalidades en España. Frente a prejuicios, racismo y barreras culturales, el proyecto demuestra cómo el deporte puede construir convivencia, inclusión y sentido de pertenencia.",
           "synopsis_lang": "es",
