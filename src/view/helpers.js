@@ -108,6 +108,27 @@ export function getCortoItemPoster(item){
   return getPosterSrc(item.title,true)||null;
 }
 
+// ── Fuente ÚNICA del póster de una OBRA (corto dentro de un programa) ──────────
+// MISMA decisión editorial que posterModel(f) para films: un still 16:9 con
+// posterSource "editorial" SIEMPRE va dentro del marco (banda + still sin
+// recortar), nunca crudo en un slot 2:3. `_isEditorialPoster` lee posterSource/
+// poster/title — campos que el item también tiene — así que la decisión es la
+// misma en toda superficie. Devuelve {ed, accent, src, inner} donde `inner` son
+// los hijos a meter en el contenedor sizer (que aporta tamaño y, si ed, la clase
+// poster-ed + --ed-accent). Ninguna superficie de cortos debe volver a construir
+// el <img> del still a mano — enforced por validate.py [poster-editorial-parity].
+export function itemPosterParts(item, section, imgClass, {header=false}={}){
+  const src=getCortoItemPoster(item)||makeProgramPoster(state,item.title,item.duration||'',section||'');
+  if(_isEditorialPoster(item)){
+    // thumb pequeño → still enmarcado SIN banda de texto (precedente _posterThumb);
+    // card grande (Diario) → con banda de sección, como _recapPosterCard.
+    return {ed:true, accent:_sectionColor(section||''), src,
+      inner:editorialFrame(header?{header:_secLabel(section||''), src, title:item.title}:{src, title:item.title})};
+  }
+  return {ed:false, accent:'', src,
+    inner:src?`<img class="${imgClass}" src="${src}" loading="lazy" onerror="this.remove()" alt="">`:''};
+}
+
 export function _getItemPoster(item){
   if(!item) return '';
   if(item.poster) return (item.poster.startsWith('http')||item.poster.startsWith('/assets/'))?item.poster:TMDB_IMG+item.poster;
@@ -325,7 +346,10 @@ export function _langDates(cfg) {
 }
 
 export function _mkCortoItemHtml(item, n, {cls='mplan-prog-item', section='', ratingEl=''}={}){
-  // Mismo fallback que openCortoSheet: real → generativo. Nunca emoji.
+  // Thumbnail de lista: imagen recortada (patrón estándar de fila-lista). El
+  // póster con sistema de diseño (marco editorial) vive en las CARDS —
+  // _obraPosterCard (grid Diario/Mi Plan) y el sheet individual del corto —, no
+  // en el thumb de 56px donde el marco no cabe. src por la fuente única.
   const thumb=getCortoItemPoster(item)||makeProgramPoster(state,item.title,item.duration||'',section);
   const thumbHtml=`<img src="${thumb}" class="c-film-thumb" loading="lazy" onerror="this.remove()" alt="">`;
   // data-* attrs — nunca interpolar strings con contenido variable en onclick

@@ -13,7 +13,7 @@ import {
   ICONS, _secLabel, _secLabelFull, _sectionColor, escXML, makeEventPoster, makeProgramPoster, parseProgramTitle, renderAvBlocksHTML, renderFlowProgress,
 } from './components.js';
 import {
-  DAYS, DAY_SHORT_EN, _dayChips, editorialFrame, _isEditorialPoster, _langDates, _lblLocalized, _minFmt, _mkCortoItemHtml, _posterThumb, getCortoItemPoster, dayChip, dayLabel, dayLabelLong, durFmt, emptyState, emptyStateHero, flagFmt, getFilmPoster, isToday, mplanBlockType, mplanEndStr, sala, starsText, travelWarn, vcfg, delayConsensusBadge,
+  DAYS, DAY_SHORT_EN, _dayChips, editorialFrame, _isEditorialPoster, _langDates, _lblLocalized, _minFmt, _mkCortoItemHtml, _posterThumb, getCortoItemPoster, itemPosterParts, dayChip, dayLabel, dayLabelLong, durFmt, emptyState, emptyStateHero, flagFmt, getFilmPoster, isToday, mplanBlockType, mplanEndStr, sala, starsText, travelWarn, vcfg, delayConsensusBadge,
 } from './helpers.js';
 import {
   _festDate, _festNowMin, festivalEnded, minToStr, parseDur, simNow, simTodayStr, toMin,
@@ -532,13 +532,14 @@ function _recapPosterCard(state,title){
 function _obraPosterCard(state,item,section){
   const {filmRatings} = state.snapshot();
   const r=filmRatings[item.title];
-  const src=getCortoItemPoster(item)||makeProgramPoster(state,item.title,item.duration||'',section||'');
+  const _pp=itemPosterParts(item, section, 'img-cover', {header:true});
+  const src=_pp.src;
   const _dt=encodeURIComponent(item.title||''),_dc=encodeURIComponent(item.country||'');
   const _dd=encodeURIComponent(item.duration||''),_dir=encodeURIComponent(item.director||'');
   const _dg=encodeURIComponent(item.genre||''),_ds=encodeURIComponent((item.synopsis||'').slice(0,200));
   const _dp=encodeURIComponent(src||'');
-  return`<div class="poster-card ended-poster" data-ct="${_dt}" data-cc="${_dc}" data-cd="${_dd}" data-cdir="${_dir}" data-cg="${_dg}" data-cs="${_ds}" data-cp="${_dp}" data-action="openCortoSheetFromEl">
-    ${src?`<img class="img-cover" src="${src}" loading="lazy" onerror="this.remove()" alt="">`:``}
+  return`<div class="poster-card ended-poster${_pp.ed?' poster-ed':''}" data-ct="${_dt}" data-cc="${_dc}" data-cd="${_dd}" data-cdir="${_dir}" data-cg="${_dg}" data-cs="${_ds}" data-cp="${_dp}" data-action="openCortoSheetFromEl"${_pp.ed?` style="--ed-accent:${_pp.accent}"`:''}>
+    ${_pp.inner}
     <div class="ended-poster-footer">
       ${r?`<div class="label-track-amber">${starsText(r)}</div>`
          :`<button class="ended-rate-btn" data-action="openRatingSheet" data-title="${escXML(item.title||'')}" data-stop="1">★</button>`}
@@ -846,7 +847,7 @@ export function renderPrioStrip(state, opts={}){
   // ── Estado 1 / 3: intención (chips con botón quitar) ──
   const chips=[...prioritized].map(x=>_chip(x,{rm:true})).join('');
   return`<div class="prio-strip">
-    <div class="sec-hdr">${ICONS.star} ${t('lbl_prioridades')} <span class="ml-1 count-badge cb-amber">${prioritized.size}/${PRIO_LIMIT}</span></div>
+    <div class="sec-hdr">${ICONS.star} ${t('lbl_prioridades')} <span class="count-badge cb-amber">${prioritized.size}/${PRIO_LIMIT}</span></div>
     <div class="prio-strip-row">${chips}</div>
   </div>`;
 }

@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607171211">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607171211">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607171242">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607171242">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -1118,8 +1118,8 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .pel-sheet-action-btn.btn-primary{background:var(--amber);border-color:var(--amber);color:var(--black);font-size:var(--t-sm);padding:13px 4px}
 .pel-sheet-action-btn.btn-secondary{background:var(--surf-3);border-color:transparent;color:rgba(255,255,255,.5);font-size:var(--t-sm);padding:13px 4px}
 .pel-sheet-action-btn.btn-tertiary{background:none;border-color:transparent;color:var(--gray2);flex:none;padding:13px var(--sp-3)}
-.pel-sheet-ctas{display:flex;gap:var(--sp-2);align-items:center}
-.pel-sheet-ctas-watched{display:flex;gap:var(--sp-2)}
+.pel-sheet-ctas{display:flex;gap:var(--sp-2);align-items:center;margin-top:var(--sp-6)}
+.pel-sheet-ctas-watched{display:flex;gap:var(--sp-2);margin-top:var(--sp-6)}
 
 .pel-sheet-lb{display:inline-flex;align-items:center;gap:6px;margin-top:var(--sp-4);opacity:.6;text-decoration:none}
 .pel-sheet-lb-text{font-size:var(--t-sm);color:var(--gray2)}
@@ -2804,7 +2804,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202607171211";
+    s.src="/src/main.js?v=202607171242";
     document.body.appendChild(s);
   }
   if (isApp || isDev) { bootApp(); return; }
