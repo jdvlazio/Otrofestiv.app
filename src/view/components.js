@@ -20,11 +20,16 @@ export function makeProgramPoster(state, title, duration, section, opts){
   const filmSec=section||(FILMS.find(f=>f.title===title)?.section)||'';
   const sec=filmSec.toLowerCase();
 
-  // ── Paleta de 6 colores canónicos — asignados por hash de sección ──
-  // Consistente: misma sección → mismo color en cualquier festival
+  // ── Color de sección — MISMA fuente que el marco editorial ────────────────
+  // El acento del generativo debe coincidir con _sectionColor() (lo que usa el
+  // marco editorial); si no, un corto CON still (verde) y otro SIN still
+  // (generativo) de la MISMA sección salían de dos colores distintos —el bug de
+  // "Peephole ámbar entre verdes". Fallback a la paleta por hash solo cuando la
+  // sección no tiene color propio definido (evita gris para secciones nuevas).
   const ACCENT_PALETTE=['#F59E0B','#3AAA6E','#E5A020','#E05252','#378ADD','#3A8E8E'];
   const _hash=s=>[...s].reduce((h,c)=>(Math.imul(31,h)+c.charCodeAt(0))|0,0);
-  const accent=ACCENT_PALETTE[Math.abs(_hash(sec))%ACCENT_PALETTE.length];
+  const _secAccent=_sectionColor(filmSec);
+  const accent=(_secAccent&&_secAccent!=='#2C2C2A')?_secAccent:ACCENT_PALETTE[Math.abs(_hash(sec))%ACCENT_PALETTE.length];
 
   // Header: sección localizada vía _secLabel (lang-aware: EN→SECTION_EN,
   // ES→original sin emoji), uppercase. Así el poster editorial coincide con el

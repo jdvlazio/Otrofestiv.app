@@ -718,8 +718,9 @@ export function renderContextualHeader(state, consensus){
   // ── BETWEEN ─────────────────────────────────────────────────
   if(ph.phase==='between'){
     const{gapMin,gapFromMin,gapToMin,gapSuggestion,next}=ph;
-    const h=Math.floor(gapMin/60),m=gapMin%60;
-    const gapLabel=h>0?(m>0?`${h}h ${m}min`:`${h}h`):`${m} min`;
+    // Formateador ÚNICO (mismo del contador "Termina en" y detalle de conflictos):
+    // "5 h 05" con horas, "45 min" sin ellas. Sin "min" cuando hay horas.
+    const gapLabel=_minFmt(gapMin);
     const fromStr=`${String(Math.floor(gapFromMin/60)).padStart(2,'0')}:${String(gapFromMin%60).padStart(2,'0')}`;
     const toStr=`${String(Math.floor(gapToMin/60)).padStart(2,'0')}:${String(gapToMin%60).padStart(2,'0')}`;
     const nowMin=_festNowMin();
