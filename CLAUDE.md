@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `d37f6f2 feat(recuerdo)+design(hdr-C): Modo Recuerdo por obra + Compartir mi festival + Prioridades fuera de Planear + encabezados a banda (estilo C)`
+> Último commit: `bfc4ecf design(hdr): UN color de palabra para todos los encabezados — white-60`
 
 ---
 

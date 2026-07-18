@@ -365,7 +365,7 @@ export function renderPeliculaViewHTML(state){
           :``;
       }
     }
-    const _sep=activeDay==='all'&&f.section&&f.section!==_prevSec?`<div class="poster-grid-sep">${_secLabel(f.section||'')}</div>`:'';_prevSec=f.section||_prevSec;
+    const _sep=activeDay==='all'&&f.section&&f.section!==_prevSec?`<div class="sec-hdr sm poster-grid-sep">${_secLabelFull(f.section||'')}</div>`:'';_prevSec=f.section||_prevSec;
     return _sep+`<div class="bg-surf-2 poster-card js-open-pel${inWL&&!inW?' in-wl':''}${inW&&!_ended?' in-watched':''}${_edAccent?' poster-ed':''}" data-title="${escXML(f.title)}"${_edAccent?` style="--ed-accent:${_edAccent}"`:(_isPrograma?'':_cardBg)}>
       ${posterImg}
       ${progBadge}
