@@ -134,7 +134,7 @@ export function renderAgenda(){
     const _avOpenAttr=_hasAvBlocks?' open':'';
     view.innerHTML=`${_progressHtml}
       <style>
-        .ag-av-details{padding:var(--sp-3) 0} /* sin margin-top: línea base G01 (56px) como los demás tabs */
+        .ag-av-details{padding:0 0 var(--sp-3)} /* FLUSH: la banda pega al chrome (G01) */
         .ag-av-details>summary{cursor:pointer;list-style:none;display:flex;align-items:center;margin-bottom:0;-webkit-tap-highlight-color:transparent}
         .ag-av-details>summary::-webkit-details-marker,
         .ag-av-details>summary::marker{display:none}
