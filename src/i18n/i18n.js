@@ -1371,8 +1371,8 @@ export function _applyI18nDOM(){
   // La bandera se sincroniza AQUÍ (no en una función aparte que haya que acordarse
   // de llamar — ese patrón fue la causa del bug de mezcla al arranque): _applyI18nDOM
   // es el único responsable de que TODO el estado visual de idioma sea coherente.
-  document.getElementById('lang-btn-es')?.classList.toggle('active', _lang==='es');
-  document.getElementById('lang-btn-en')?.classList.toggle('active', _lang==='en');
+  document.getElementById('lang-btn-es')?.classList.toggle('on', _lang==='es');
+  document.getElementById('lang-btn-en')?.classList.toggle('on', _lang==='en');
   const _activeFlag=document.querySelector('#lang-dropdown .lang-opt.active .lang-opt-flag');
   const _trgFlag=document.getElementById('lang-trigger-flag');
   if(_activeFlag && _trgFlag) _trgFlag.textContent=_activeFlag.textContent;

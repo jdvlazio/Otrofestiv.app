@@ -1914,6 +1914,40 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar sheet-meta-legible: {_e}')
 
+# ── [button-canon] botones: anatomías con regla dueña + estado .on único ───────
+# Auditoría 18 jul 2026: el primario amber tenía 9 anatomías, el cancel 4, y el
+# estado activo 3 nombres. Ahora: (1) fondo amber+texto negro de botón SOLO en
+# la regla dueña PRIMARIO; (2) w-display prohibido en botones; (3) el estado
+# activo se llama .on — classList con 'active'/'selected' en src/ = isla nueva.
+check = 'button-canon'
+try:
+    import re as _re, glob as _glob
+    _html = open('index.html', encoding='utf-8').read()
+    _errs = []
+    for _m in _re.finditer(r'([^{}]+)\{([^}]*)\}', _html):
+        _sel = _m.group(1).strip().splitlines()[-1].strip()
+        _body = _m.group(2)
+        _is_btn = ('-btn' in _sel or '-cta' in _sel or 'button' in _sel) and '::' not in _sel
+        if not _is_btn:
+            continue
+        if 'background:var(--amber);color:var(--black)' in _body.replace('\n', '').replace(' ', '') and '.splash-enter-btn' not in _sel:
+            _errs.append(f'{_sel[:60]}: primario amber fuera de la regla dueña')
+        if 'font-weight:var(--w-display)' in _body:
+            _errs.append(f'{_sel[:60]}: w-display en botón (canon: w-bold)')
+    for _sf in _glob.glob('src/**/*.js', recursive=True) + ['index.html']:
+        _c = open(_sf, encoding='utf-8').read()
+        for _i, _ln in enumerate(_c.splitlines(), 1):
+            if _ln.strip().startswith('//'):
+                continue
+            if _re.search(r"classList\.(add|toggle|remove)\(\s*['\"](active|selected)['\"]", _ln):
+                _errs.append(f'{_sf}:{_i} estado activo con nombre viejo (usar .on)')
+    if _errs:
+        fail(check, 'canon de botones roto: ' + '; '.join(_errs[:5]))
+    else:
+        ok(check, 'primario en regla dueña, sin w-display en botones, estado .on único')
+except Exception as _e:
+    warn(check, f'no se pudo verificar button-canon: {_e}')
+
 # ── [poster-single-owner] decisión y marco editorial SOLO en view/helpers.js ──
 # posterModel/posterParts (films) e itemPosterParts (obras) son los ÚNICOS dueños
 # de la decisión editorial-vs-imagen y del marco. Si _isEditorialPoster( o

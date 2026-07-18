@@ -23,9 +23,9 @@ test('I02 — cambiar a EN activa el botón correcto', async ({ page }) => {
   await enterFestival(page, 'leviza2026', LEVIZA_SIMTIME);
   await openLangDropdown(page);
   await page.locator('#lang-btn-en').click();
-  await page.waitForFunction(() => document.getElementById('lang-btn-en')?.classList.contains('active'), { timeout: 3000 });
-  const enActive = await page.locator('#lang-btn-en.active').count();
-  const esActive = await page.locator('#lang-btn-es.active').count();
+  await page.waitForFunction(() => document.getElementById('lang-btn-en')?.classList.contains('on'), { timeout: 3000 });
+  const enActive = await page.locator('#lang-btn-en.on').count();
+  const esActive = await page.locator('#lang-btn-es.on').count();
   expect(enActive).toBe(1);
   expect(esActive).toBe(0);
 });
@@ -35,7 +35,7 @@ test('I03 — tabs en EN muestran texto inglés', async ({ page }) => {
   await enterFestival(page, 'leviza2026', LEVIZA_SIMTIME);
   await openLangDropdown(page);
   await page.locator('#lang-btn-en').click();
-  await page.waitForFunction(() => document.getElementById('lang-btn-en')?.classList.contains('active'), { timeout: 3000 });
+  await page.waitForFunction(() => document.getElementById('lang-btn-en')?.classList.contains('on'), { timeout: 3000 });
   const navText = await page.locator('.main-nav-tab').allTextContents();
   const joined = navText.join(' ').toUpperCase();
   // En inglés debe haber alguno de estos strings
@@ -47,10 +47,10 @@ test('I04 — volver a ES restaura strings español', async ({ page }) => {
   await enterFestival(page, 'leviza2026', LEVIZA_SIMTIME);
   await openLangDropdown(page);
   await page.locator('#lang-btn-en').click();
-  await page.waitForFunction(() => document.getElementById('lang-btn-en')?.classList.contains('active'), { timeout: 3000 });
+  await page.waitForFunction(() => document.getElementById('lang-btn-en')?.classList.contains('on'), { timeout: 3000 });
   await openLangDropdown(page);
   await page.locator('#lang-btn-es').click();
-  await page.waitForFunction(() => document.getElementById('lang-btn-es')?.classList.contains('active'), { timeout: 3000 });
+  await page.waitForFunction(() => document.getElementById('lang-btn-es')?.classList.contains('on'), { timeout: 3000 });
   const navText = await page.locator('.main-nav-tab').allTextContents();
   const joined = navText.join(' ').toUpperCase();
   expect(joined).toMatch(/INTERESES|PLANEAR|MI PLAN|PROGRAMA/);
@@ -63,10 +63,10 @@ test('I05 — cambio de idioma sin errores JS', async ({ page }) => {
   page.on('pageerror', e => errors.push(e.message));
   await openLangDropdown(page);
   await page.locator('#lang-btn-en').click();
-  await page.waitForFunction(() => document.getElementById('lang-btn-en')?.classList.contains('active'), { timeout: 3000 });
+  await page.waitForFunction(() => document.getElementById('lang-btn-en')?.classList.contains('on'), { timeout: 3000 });
   await openLangDropdown(page);
   await page.locator('#lang-btn-es').click();
-  await page.waitForFunction(() => document.getElementById('lang-btn-es')?.classList.contains('active'), { timeout: 3000 });
+  await page.waitForFunction(() => document.getElementById('lang-btn-es')?.classList.contains('on'), { timeout: 3000 });
   await page.waitForTimeout(200);
   expect(errors).toHaveLength(0);
 });

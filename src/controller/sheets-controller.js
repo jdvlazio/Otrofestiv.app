@@ -1017,14 +1017,14 @@ export function selectAvDay(day){
 
 export function _refreshAvDayChips(){
   document.querySelectorAll('.av-day-chip').forEach(btn=>{
-    btn.classList.toggle('selected', btn.dataset.day===_avSheetDay);
+    btn.classList.toggle('on', btn.dataset.day===_avSheetDay);
   });
 }
 
 export function setAvType(type){
   _avSheetType=type;
-  document.getElementById('av-type-hours')?.classList.toggle('selected',type==='hours');
-  document.getElementById('av-type-full')?.classList.toggle('selected',type==='full');
+  document.getElementById('av-type-hours')?.classList.toggle('on',type==='hours');
+  document.getElementById('av-type-full')?.classList.toggle('on',type==='full');
   const ts=document.getElementById('av-time-section');
   if(ts) ts.style.display=type==='hours'?'':'none';
 }
@@ -1110,7 +1110,7 @@ export function renderAvDayHTML(state, day){
       ${inlineForm}
       <div class="av-row-btns" style="margin-top:${pillsHtml||addOpen?'6px':'0'}">
         ${!fullBlocked&&!addOpen?`<button class="av-plus-btn" data-action="setAvAddOpen" data-day="${day}" data-open="1">${ICONS.plus} ${t('misc_no_disp')}</button>`:''}
-        ${!addOpen?`<button class="row-xs av-full-btn${fullBlocked?' active':''}" data-action="toggleFullDay" data-day="${day}">
+        ${!addOpen?`<button class="row-xs av-full-btn${fullBlocked?' on':''}" data-action="toggleFullDay" data-day="${day}">
           ${fullBlocked?ICONS.x+' '+t('av_liberar_dia'):ICONS.plus+' '+t('av_todo_el_dia_btn')}
         </button>`:''}
       </div>

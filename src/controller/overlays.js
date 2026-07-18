@@ -79,7 +79,7 @@ export function seccionOpen(){
     if(activeMNav==='mnav-cartelera') _renderProgramaContent(true); else render(); // selección sección → scroll al tope
   });
   document.body.appendChild(drop);
-  btn.classList.add('active');
+  btn.classList.add('on');
   setTimeout(()=>{ document.addEventListener('click',seccionOutside); },0);
 }
 
@@ -88,7 +88,7 @@ export function seccionClose(){
   if(drop) drop.remove();
   document.removeEventListener('click', seccionOutside);
   const btn = document.getElementById('seccion-btn');
-  if(btn) btn.classList.toggle('active', activeSec!=='all');
+  if(btn) btn.classList.toggle('on', activeSec!=='all');
   const lbl = document.getElementById('seccion-lbl');
   if(lbl) lbl.textContent = _seccionLabel(activeSec);
 }
@@ -327,7 +327,7 @@ export function lugarOpen(){
   });
 
   document.body.appendChild(drop);
-  btn.classList.add('active');
+  btn.classList.add('on');
 
   // Close on outside click
   setTimeout(()=>{
