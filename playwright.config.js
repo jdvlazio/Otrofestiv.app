@@ -29,12 +29,14 @@ module.exports = defineConfig({
     locale: 'es-CO',                              // idioma determinista — evita variaciones de CI runner
   },
   projects: [
-    // Suite de comportamiento (T01–T10, smoke, features…) — sigue corriendo SOLO
-    // en Blink/desktop @390. testIgnore excluye el spec responsive: éste se
-    // ejecuta exclusivamente bajo los proyectos cross-engine de abajo, no aquí.
+    // Suite de comportamiento — SIEMPRE EN MÓVIL (390x844, iPhone 14).
+    // ⚠️ REGLA DURA (Juan, 17 jul 2026): la app es mobile-only; NUNCA medir ni
+    // revisar en desktop. devices['Desktop Chrome'] PISABA el viewport global
+    // (1280px) y toda la suite corrió meses en el layout equivocado — el bug de
+    // geometría de tabs se midió mal por esto. El viewport va EXPLÍCITO aquí.
     {
       name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
+      use: { ...devices['Desktop Chrome'], viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true },
       testIgnore: /responsive\.spec\.js/,
     },
     // ── Proyectos cross-engine: SOLO el spec responsive (testMatch acota) ──────
