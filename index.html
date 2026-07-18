@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607180800">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607180800">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607180815">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607180815">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -202,7 +202,7 @@ window.sentryOnLoad = function() {
   --r-md:   8px;
   --r-lg:   12px;
   --r:      12px;
-  --r-sheet:20px;
+  --r-sheet:28px; /* 20→28 (18 jul 2026): squircle generoso en los 9 sheets */
   --r-handle:2px;
   --r-pill: 999px;
 
@@ -2847,7 +2847,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202607180800";
+    s.src="/src/main.js?v=202607180815";
     document.body.appendChild(s);
   }
   if (isApp || isDev) { bootApp(); return; }
