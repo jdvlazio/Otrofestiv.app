@@ -116,7 +116,7 @@ export function renderProgramaListHTML(state){
     return cat(a)-cat(b);
   });
   if(!films.length){
-    return `<div class="empty-msg">${t('filter_sin_actividades')}</div>`;
+    return emptyState(ICONS.search, t('filter_sin_actividades'), t('empty_filtros'));
   }
   const byTime={};
   films.forEach(f=>{if(!byTime[f.time])byTime[f.time]=[];byTime[f.time].push(f);});
@@ -244,7 +244,7 @@ export function _renderExploreListaHTML(state){
     if(td!==0) return td;
     return _typeOrder(a.film)-_typeOrder(b.film);
   });
-  if(!entries.length) return `<div class="empty-msg">${t('filter_sin_peliculas')}</div>`;
+  if(!entries.length) return emptyState(ICONS.search, t('filter_sin_peliculas'), t('empty_filtros'));
   return entries.map(({film:f,screenings})=>{
     const inWL=watchlist.has(f.title);
     const isEvent=f.type==='event';
@@ -321,7 +321,7 @@ export function renderPeliculaViewHTML(state){
     return toMin(a.film.time||'00:00')-toMin(b.film.time||'00:00');
   });
   if(!entries.length){
-    return {html: `<div class="empty-msg">${t('filter_sin_peliculas')}</div>`, hasEntries: false};
+    return {html: emptyState(ICONS.search, t('filter_sin_peliculas'), t('empty_filtros')), hasEntries: false};
   }
   let _prevSec=null;
   const html=`<div class="poster-grid">${entries.map(({film:f,screenings})=>{

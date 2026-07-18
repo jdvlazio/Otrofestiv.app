@@ -325,7 +325,7 @@ export function renderMiPlanCalendar(state){
         <div class="cta-ctx-arr cta-ctx-arr-c">${ICONS.chevronD}</div>
       </div>`;
     } else {
-      listHtml+=`<div class="mplan-empty">${t('plan_nada_dia')}</div>`;
+      listHtml+=emptyState(ICONS.calendar, t('plan_nada_dia'));
     }
   } else {
     dayFilms.forEach((s,idx)=>{
@@ -600,7 +600,7 @@ export function renderDiaryHTML(state,{retro=false}={}){
   if(outside.length){
     html+=`<div class="sec-hdr sm">${ICONS.check} <span>${t('plan_vistas_fuera')}</span></div>${outside.map(_entry).join('')}`;
   }
-  return html||`<div class="hint">${t('diary_vacio')}</div>`;
+  return html||emptyState(ICONS.check, t('diary_vacio'));
 }
 
 export function renderContextualHeader(state, consensus){
@@ -1218,7 +1218,7 @@ export function buildResultHTML(scenarios){
     <div class="sec-hdr">${ICONS.calendar} <span>${planLabel}</span>
       <span class="count-badge cb-neutral">${ok}</span>
     </div>
-    ${bad>0&&bad>=total?`<div class="ag-excl-note txt-gray2-sm">${t('plan_contexto_max')}</div>`:''}
+    ${bad>0&&bad>=total?`<div class="meta-banner"><div class="meta-banner-dot"></div><div class="meta-banner-text">${t('plan_contexto_max')}</div></div>`:''}
     ${sc.incompatiblePriorities?(()=>{
       const pairs=sc.conflictingPriorityPairs||[];
       const pairMsg=pairs.length
@@ -1244,7 +1244,7 @@ export function buildResultHTML(scenarios){
     html+=`<div class="ag-day-label${_firstDay?' first':''}"><span class="ag-day-name">${dayLabelLong(day)}</span><span class="count-badge cb-neutral">${films.length}</span></div>`;
     _firstDay=false;
     films.forEach((s,i)=>{
-      if(i>0){const warn=travelWarn(films[i-1],s);if(warn) html+=`<div class="ag-warn">${warn}</div>`;}
+      if(i>0){const warn=travelWarn(films[i-1],s);if(warn) html+=`<div class="mplan-warn-row">${warn}</div>`;}
       html+=mkAgendaRow(s,'scenario');
     });
   });
