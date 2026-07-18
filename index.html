@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607181629">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607181629">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607181646">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607181646">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -1538,6 +1538,13 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 /* ctx-header FLUSH (decisión Juan, 17 jul): sin panel surf ni border-bottom — el color del chrome es solo para el chrome; el contenido jerarquiza con eyebrow+título (como el héroe del Recuerdo). Cero divisores sueltos. */
 .ctx-header{padding:var(--sp-3) var(--sp-4) var(--sp-3)}
 .ctx-eyebrow{font-size:var(--t-label);font-weight:var(--w-bold);letter-spacing:.8px;text-transform:uppercase;display:flex;align-items:center;gap:var(--sp-1);margin-bottom:6px;color:var(--amber-60)}
+/* Escala de iconos ≈ tamaño del texto vecino (auditoría iconos 18 jul): los
+   iconos de ICONS traen 13px de base; en familias de texto pequeño (t-label/
+   t-xs) se bajan a 11 para no quedar desproporcionados (antes 1.3–1.44× el
+   texto). Los micro-arrows de navegación a 9. Guardián [icon-canon]. */
+.ctx-eyebrow svg{width:11px;height:11px;flex-shrink:0}
+.mplan-warn-row svg{width:11px;height:11px;flex-shrink:0}
+.mplan-nav-day-arrow svg,.mplan-wk-col-arrow svg{width:9px;height:9px}
 .ctx-main-title{font-size:var(--t-md);font-weight:var(--w-display);color:var(--white);letter-spacing:-.2px;line-height:1.2;margin-bottom:3px}
 .ctx-sub{font-size:var(--t-base);color:var(--gray)}
 .ctx-next-row{display:flex;align-items:center;gap:var(--sp-3);margin-top:8px}
@@ -2852,7 +2859,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202607181629";
+    s.src="/src/main.js?v=202607181646";
     document.body.appendChild(s);
     // Watchdog de boot (P0 18 jul): si el grafo ESM murió en el import (caché
     // HTTP mixta tras deploys en ráfaga — main.js nuevo + módulo viejo sin el

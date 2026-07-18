@@ -1973,6 +1973,43 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar star-semantics: {_e}')
 
+# ── [icon-single-source] glifos migrados no reaparecen inline en view/controller ─
+# Auditoría iconos 18 jul: todo glifo de UI sale de ICONS (components.js). Estos
+# paths ya se migraron; un <svg> inline con ellos fuera de components.js = copia
+# reintroducida (la fuente diverge). Excepciones legítimas (NO en esta lista):
+# starSVG/rating (polígono estrella con half-fill), LB_SVG (logo marca),
+# generadores de póster — todos en components.js o con su propia identidad.
+check = 'icon-single-source'
+try:
+    import glob as _glob
+    _SIGS = {
+        'chevronD': 'M19.5 8.25l-7.5 7.5-7.5-7.5',
+        'clock': 'polyline points="12 6 12 12 16 14"',
+        'pin': 'M15 10.5a3 3 0 11-6 0',
+        'alert': 'M12 9v3.75m-9.303',
+        'moon': 'M21.752 15.002',
+        'x-close': 'M6 18L18 6M6 6l12 12',
+        'check-glyph': 'M4.5 12.75l6 6 9-13.5',
+    }
+    _hits = []
+    for _sf in _glob.glob('src/view/*.js') + _glob.glob('src/controller/*.js'):
+        if _sf.endswith('components.js'):
+            continue
+        _c = open(_sf, encoding='utf-8').read()
+        for _i, _ln in enumerate(_c.splitlines(), 1):
+            if _ln.strip().startswith('//'):
+                continue
+            if '<svg' in _ln:
+                for _name, _sig in _SIGS.items():
+                    if _sig in _ln:
+                        _hits.append(f'{_sf}:{_i} {_name} inline (usar ICONS)')
+    if _hits:
+        fail(check, 'glifo migrado reintroducido inline: ' + '; '.join(_hits[:6]))
+    else:
+        ok(check, 'glifos de ICONS no duplicados inline en view/controller')
+except Exception as _e:
+    warn(check, f'no se pudo verificar icon-single-source: {_e}')
+
 # ── [poster-single-owner] decisión y marco editorial SOLO en view/helpers.js ──
 # posterModel/posterParts (films) e itemPosterParts (obras) son los ÚNICOS dueños
 # de la decisión editorial-vs-imagen y del marco. Si _isEditorialPoster( o

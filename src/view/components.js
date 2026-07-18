@@ -370,6 +370,8 @@ export const ICONS={
   bookmarkFill:`<svg aria-hidden="true" focusable="false" width="13" height="13" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2Z"/></svg>`,
   // chevronL — par de chevronR (navegación de día); antes era SVG inline suelto.
   chevronL: `<svg aria-hidden="true" focusable="false" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"/></svg>`,
+  // moon — "tu día terminó" (fase evening del día). Antes SVG inline en agenda.
+  moon: `<svg aria-hidden="true" focusable="false" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z"/></svg>`,
 };
 
 export function isFullDayBlocked(day){return availability[day].blocks.some(b=>toMin(b.from)<=0&&toMin(b.to)>=toMin('23:59'));}
@@ -454,7 +456,6 @@ export function renderRatingStarsHTML(state, current){
   return html;
 }
 
-export const CHECK_SVG=`<svg aria-hidden="true" focusable="false" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>`;
 
 export function _classifyFestival(cfg){
   const now=new Date();
@@ -588,7 +589,6 @@ export function _renderFestivalSelectorHTML(state, activeFestId){
   const {_lang} = state.snapshot();
   const entries=_sortFestivals(Object.entries(FESTIVAL_CONFIG)
     .filter(([,cfg])=>cfg.name&&cfg.group!=='test'), activeFestId);
-  const chevSvg=`<svg aria-hidden="true" focusable="false" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>`;
   // El año vive UNA vez en el header (fs-season). El título de fila es el nombre
   // oficial; solo muestra su año si difiere de la temporada (desambiguación).
   const season=festivalSeasonYear();
@@ -614,7 +614,7 @@ export function _renderFestivalSelectorHTML(state, activeFestId){
         <div class="fs-fest-full">${festivalTagline(cfg,_lang)||cfg.fullName||cfg.name}</div>
         <div class="fs-fest-meta">${meta}</div>
       </div>
-      <div class="fs-fest-check" style="display:${isActive?'':'none'}">${CHECK_SVG}</div>
+      <div class="fs-fest-check" style="display:${isActive?'':'none'}">${ICONS.check}</div>
     </div>`;
   }
   function mkPastRow([id,cfg]){
@@ -626,7 +626,7 @@ export function _renderFestivalSelectorHTML(state, activeFestId){
         <div class="fs-fest-full">${festivalTagline(cfg,_lang)||cfg.fullName||cfg.name}</div>
         <div class="fs-fest-meta">${meta}</div>
       </div>
-      <span class="fs-past-chev" data-action="togglePastFestRow" data-fest="${id}" style="padding:var(--sp-2);margin:-var(--sp-2);-webkit-tap-highlight-color:transparent">${chevSvg}</span>
+      <span class="fs-past-chev" data-action="togglePastFestRow" data-fest="${id}" style="padding:var(--sp-2);margin:-var(--sp-2);-webkit-tap-highlight-color:transparent">${ICONS.chevronD}</span>
     </div>`;
   }
   let html='';
