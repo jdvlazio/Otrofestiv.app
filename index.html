@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607172321">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607172321">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607172346">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607172346">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -1498,7 +1498,8 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 /* Progress festival */
 .festival-progress{padding:var(--sp-2) 0;margin-bottom:var(--sp-1)}
 /* ── Header contextual de Mi Plan ── */
-.ctx-header{padding:var(--sp-3) var(--sp-4) var(--sp-3);border-bottom:1px solid var(--bdr);background:var(--surf)}
+/* ctx-header FLUSH (decisión Juan, 17 jul): sin panel surf ni border-bottom — el color del chrome es solo para el chrome; el contenido jerarquiza con eyebrow+título (como el héroe del Recuerdo). Cero divisores sueltos. */
+.ctx-header{padding:var(--sp-3) var(--sp-4) var(--sp-3)}
 .ctx-eyebrow{font-size:var(--t-label);font-weight:var(--w-bold);letter-spacing:.8px;text-transform:uppercase;display:flex;align-items:center;gap:var(--sp-1);margin-bottom:6px;color:var(--amber-60)}
 .ctx-main-title{font-size:var(--t-md);font-weight:var(--w-display);color:var(--white);letter-spacing:-.2px;line-height:1.2;margin-bottom:3px}
 .ctx-sub{font-size:var(--t-base);color:var(--gray)}
@@ -2815,7 +2816,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202607172321";
+    s.src="/src/main.js?v=202607172346";
     document.body.appendChild(s);
   }
   if (isApp || isDev) { bootApp(); return; }
