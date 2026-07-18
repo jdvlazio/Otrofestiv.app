@@ -1224,7 +1224,7 @@ export function buildResultHTML(scenarios){
       const pairMsg=pairs.length
         ?pairs.map(([a,b])=>{const{displayTitle:da}=parseProgramTitle(a);const{displayTitle:db}=parseProgramTitle(b);return`<span class="txt-white60">${da}</span> ${t('misc_y')} <span class="txt-white60">${db}</span>`;}).join(', ')
         :t('plan_incompat_generico');
-      return`<div class="ag-excl-incompat">${pairMsg} ${t('plan_solapan')} — ${t('plan_incompat_cta')}</div>`;
+      return`<div class="meta-banner" style="margin-top:var(--sp-2)"><div class="meta-banner-dot"></div><div class="meta-banner-text">${pairMsg} ${t('plan_solapan')} — ${t('plan_incompat_cta')}</div></div>`;
     })():''}
   </div>
 `;

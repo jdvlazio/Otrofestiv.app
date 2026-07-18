@@ -669,7 +669,8 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .group-label.ok{color:var(--green)}
 .group-label.fail{color:var(--gray2)}
 .prio-chip-past-lbl{font-size:var(--t-badge);color:var(--gray2);text-align:center;line-height:1.2;margin-top:2px}
-.prio-stale{display:flex;align-items:center;gap:var(--sp-2);padding:var(--sp-2) var(--sp-3);background:var(--amber-08);border:1px solid var(--amber-20);border-radius:var(--r-md);margin-bottom:var(--sp-3);font-size:var(--t-sm);color:var(--white);line-height:1.4}
+/* prio-stale = aviso FUERTE (canon notice-banner-row): amber-08, r-sm, sin borde */
+.prio-stale{display:flex;align-items:center;gap:var(--sp-2);padding:var(--sp-2) var(--sp-3);background:var(--amber-08);border-radius:var(--r-sm);margin-bottom:var(--sp-3);font-size:var(--t-sm);color:var(--white);line-height:1.4}
 .prio-stale-cta{margin-left:auto;flex-shrink:0;background:none;border:none;color:var(--amber);font-family:var(--font);font-size:var(--t-sm);font-weight:var(--w-bold);cursor:pointer;white-space:nowrap}
 
 #ag-result-wrap.stale{opacity:.5}
@@ -1383,9 +1384,10 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .delay-warn-ico{flex-shrink:0;margin-top:1px}
 .delay-warn.warn-amber{color:var(--amber);background:var(--amber-06);border-color:var(--amber-20)}
 /* Retraso colaborativo (Fase B) — badge informativo de consenso ("solo informa") */
-.delay-consensus{padding:var(--sp-2) var(--sp-3);border-top:1px solid var(--bdr);font-size:var(--t-sm);line-height:1.45;display:flex;gap:var(--sp-1);align-items:flex-start}
-.delay-consensus.confirmed{background:var(--amber-06);border-top-color:var(--amber-20);color:var(--amber);font-weight:var(--w-semi)}
-.delay-consensus.tentative{color:var(--gray);border-top-style:dashed}
+/* delay-consensus = aviso contextual (canon meta-banner): surf-2 + r-sm, sin border-top (cero divisores sueltos); el estado vive en el color del texto */
+.delay-consensus{padding:var(--sp-2) var(--sp-3);background:var(--surf-2);border-radius:var(--r-sm);font-size:var(--t-sm);line-height:1.45;display:flex;gap:var(--sp-1);align-items:flex-start;margin-top:var(--sp-2)}
+.delay-consensus.confirmed{color:var(--amber);font-weight:var(--w-semi)}
+.delay-consensus.tentative{color:var(--gray)}
 .delay-consensus-src{display:block;font-size:var(--t-xs);color:var(--gray2);font-weight:var(--w-regular);margin-top:1px}
 /* ── CTAs contextuales Mi Plan ── */
 .cta-ctx{border-radius:var(--r-md);padding:var(--sp-3) var(--sp-4);display:flex;align-items:center;gap:var(--sp-3);cursor:pointer;margin-bottom:var(--sp-2)}
@@ -2324,8 +2326,9 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .mt-2{margin-top:var(--sp-2)}
 .txt-xs{font-size:var(--t-xs)}
 .pad-muted{padding:var(--sp-4);color:var(--gray);font-size:var(--t-base)}
-.notice-detail-amber{font-size:var(--t-xs);color:var(--amber);margin-top:2px;font-weight:var(--w-semi)}
-.notice-detail-green{font-size:var(--t-xs);color:var(--green);margin-top:2px;font-weight:var(--w-semi)}
+/* notice-detail = detalle del notice-badge con contenedor del canon (no texto pelado) */
+.notice-detail-amber{font-size:var(--t-xs);color:var(--amber);font-weight:var(--w-semi);background:var(--amber-08);border-radius:var(--r-sm);padding:2px var(--sp-2);margin-top:var(--sp-1);display:inline-block}
+.notice-detail-green{font-size:var(--t-xs);color:var(--green);font-weight:var(--w-semi);background:var(--green-12);border-radius:var(--r-sm);padding:2px var(--sp-2);margin-top:var(--sp-1);display:inline-block}
 
 /* ── Utility classes (pasada 2) ─────────────────────────────────────────── */
 .stars-row{display:flex;justify-content:center;gap:2px;pointer-events:none}
@@ -2371,7 +2374,6 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .sheet-cta{width:100%;background:var(--amber);border:none;border-radius:var(--r-md);padding:var(--sp-btn) 0;font-size:var(--t-base);font-weight:var(--w-bold);color:var(--black);cursor:pointer;font-family:var(--font)}
 
 .txt-gray2-sm{font-size:var(--t-sm);color:var(--gray2)}
-.ag-excl-incompat{margin-top:var(--sp-2);font-size:var(--t-sm);color:var(--amber-60);line-height:1.5}
 .mt-4{margin-top:var(--sp-4)}
 .mr-1{margin-right:var(--sp-1)}
 .bg-gray{background:var(--gray)}
