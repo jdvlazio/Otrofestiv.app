@@ -9,8 +9,8 @@
 //      el reload forzado por deploy, se sirve ese HTML en vez de OFFLINE_HTML (una
 //      sesión viva ya no se destruye por un deploy con señal mala). Audit P3 #10.
 
-const CACHE_NAME = 'otrofestiv-v202607181300';
-const BUILD = '202607181300';
+const CACHE_NAME = 'otrofestiv-v202607181448';
+const BUILD = '202607181448';
 // Caché PERSISTENTE de assets inmutables (pósters, iconos, fonts): NO se borra
 // en activate. Durante un festival deployamos a diario; sin esto, cada deploy
 // obligaba a re-descargar ~8MB de pósters ya vistos (señal rural en sede).
@@ -103,6 +103,25 @@ self.addEventListener('fetch', event => {
   // vacío). Solo se cachean respuestas ok — un cuerpo colgado nunca completa el
   // put, así que no envenena el caché.
   if (url.pathname.startsWith('/festivals/')) {
+    event.respondWith(
+      fetch(new Request(request, { cache: 'no-cache' }))
+        .then(res => {
+          if (res.ok) { const clone = res.clone(); caches.open(CACHE_NAME).then(c => c.put(request, clone)); }
+          return res;
+        })
+        .catch(() => caches.match(request))
+    );
+    return;
+  }
+
+  // Módulos ESM (/src/) → SIEMPRE revalidar (no-cache → ETag 304, ~bytes).
+  // El grafo de imports NO lleva ?v= (solo main.js lo lleva): con la HTTP-cache
+  // laxa de Pages (max-age 600) un deploy podía servir main.js NUEVO importando
+  // helpers.js VIEJO → export inexistente → grafo ESM muerto → boot muerto
+  // (splash sin cards, bug 18 jul con 8 deploys seguidos). Igual estrategia que
+  // el HTML; fallback a caché del build solo si la red falla. Se cachea copia
+  // por CACHE_NAME (se purga en cada activate) para el fallback offline.
+  if (url.pathname.startsWith('/src/')) {
     event.respondWith(
       fetch(new Request(request, { cache: 'no-cache' }))
         .then(res => {

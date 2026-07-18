@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `b3936b3 design(líneas): fuera la familia completa de divisorias decorativas`
+> Último commit: `380f11c design(topbar): cuenta a la esquina, idioma adentro`
 
 ---
 
