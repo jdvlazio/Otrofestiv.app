@@ -42,6 +42,23 @@ el guardián `[icon-single-source]` rompe el build si reaparece un glifo migrado
 | micro-arrows de navegación | **9** | `.mplan-nav-day-arrow svg`, `.mplan-wk-col-arrow svg` |
 | icon-only (botones sin texto) | **14–16** | tamaño propio del botón |
 
+## Dónde SÍ y dónde NO lleva icono (principio)
+
+Un icono marca **QUÉ TIPO** de cosa es algo (categoría o acción): por eso los
+`sec-hdr` de sección (film, clock, bookmark…) y los botones lo llevan — cada uno
+es una clase distinta que un símbolo ayuda a distinguir.
+
+Un icono **NO** marca **posición en una escala**. Los **días** (MON 13, TUE 14…)
+y las **horas** (13:00, 14:30…) son los ejes temporales: un continuo, no
+categorías. Por eso son —correctamente— los únicos encabezados SIN icono:
+- El número YA es el símbolo y se lee solo como tiempo; un 🕐 repetido en cada
+  banda de hora sería ruido (decenas de relojes idénticos bajando por el horario)
+  que compite con la hora ámbar sin añadir información.
+- Un 📅 por día (×7 en el riel) sería absurdo por la misma razón.
+
+**Regla**: icono = categoría/acción; eje de tiempo (día/hora) = sin icono. Su
+ausencia es intencional, no un hueco del sistema.
+
 ## Semántica — un glifo, un concepto
 
 - **★ estrella = CALIFICACIÓN** (convención universal del cine). NUNCA prioridad.

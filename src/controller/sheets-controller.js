@@ -1224,7 +1224,13 @@ export function lbLink(title,film){
 
 export function countryToFlags(countryStr){
   if(!countryStr) return '🌍';
-  const parts=countryStr.split('/').map(s=>s.trim());
+  // Separadores REALES de los datos: coma ("España, Costa Rica, Francia") y barra
+  // ("España/Francia"). Antes solo partía por "/" → un string con comas quedaba
+  // como una sola clave inexistente y caía al globo pese a tener países mapeados
+  // (bug Voces del Territorio, 18 jul). NO se parte por guion: "Guinea-Bissau" es
+  // un país. Guardián [country-flags] verifica que todo país de un festival activo
+  // produzca bandera. Ver docs/ICONS.md.
+  const parts=countryStr.split(/[,/]/).map(s=>s.trim());
   const flags=parts.map(p=>_COUNTRY_FLAGS[p]||'').filter(Boolean);
   return flags.length?flags.join(''):'🌍';
 }
