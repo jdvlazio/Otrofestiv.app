@@ -2059,7 +2059,7 @@ try:
         'src/view/agenda.js': 1622,
         'src/main.js': 1551,
         'src/i18n/i18n.js': 1400,
-        'src/controller/sheets-controller.js': 1340,  # +15: hook _applyAmbient (color ambiental, 18 jul 2026)
+        'src/controller/sheets-controller.js': 1350,  # +25: hook _applyAmbient + prewarm pointerdown (color ambiental, 18 jul 2026)
         'src/controller/handlers.js': 915,
     }
     _over = []

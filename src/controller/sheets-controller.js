@@ -274,6 +274,16 @@ function _applyAmbient(ps, src, fbHex){
   });
 }
 
+// Prewarm del ambiental: al pointerdown sobre una card ya arranca el muestreo
+// (~5KB w92), unos 150–300ms antes de que el click abra la ficha — cuando el
+// sheet aparece, el color suele estar en cache y el bloom entra sin espera.
+document.addEventListener('pointerdown', (e) => {
+  const _card = e.target && e.target.closest ? e.target.closest('.poster-card[data-title]') : null;
+  if(!_card) return;
+  const _f = (typeof FILMS !== 'undefined' ? FILMS : []).find(x => x.title === _card.dataset.title);
+  if(_f) posterAmbient(getFilmPoster(_f), _sectionColor(_f.section || ''), () => {});
+}, { passive: true });
+
 export function closePelSheet(){
   // Si hay contenido padre guardado, volvemos al programa en lugar de cerrar
   if(_cortoParentHtml){
