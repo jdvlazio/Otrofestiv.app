@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `0c58b3f fix(tiempo-libre): contador desde AHORA, sin hora actual (solo función)`
+> Último commit: `ccc85e5 design(iconos) lote 4: fuente única + escala + copy + docs`
 
 ---
 

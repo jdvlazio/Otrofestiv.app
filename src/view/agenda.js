@@ -233,12 +233,12 @@ export function renderMiPlanCalendar(state){
       <div class="mplan-nav-day${isPastVs?' past':''}" data-action="selectMiPlanDay" data-index="${vs}">
         <div class="mplan-nav-day-name">${_lblLocalized((DAY_SHORT_EN[DAYS[vs].k]||DAYS[vs].lbl).split(' ')[0])}</div>
         <div class="mplan-nav-day-num${vs===activeMiPlanDay?' wk-active-num':''}">${DAYS[vs].d}</div>
-        ${vs===activeMiPlanDay?'<div class="mplan-nav-day-arrow">${ICONS.chevronD}</div>':''}
+        ${vs===activeMiPlanDay?'<div class="mplan-nav-day-arrow">'+ICONS.chevronD+'</div>':''}
       </div>
       ${ve!==vs?`<div class="mplan-nav-day${isPastVe?' past':''}" data-action="selectMiPlanDay" data-index="${ve}">
         <div class="mplan-nav-day-name">${_lblLocalized((DAY_SHORT_EN[DAYS[ve].k]||DAYS[ve].lbl).split(' ')[0])}</div>
         <div class="mplan-nav-day-num${ve===activeMiPlanDay?' wk-active-num':''}">${DAYS[ve].d}</div>
-        ${ve===activeMiPlanDay?'<div class="mplan-nav-day-arrow">${ICONS.chevronD}</div>':''}
+        ${ve===activeMiPlanDay?'<div class="mplan-nav-day-arrow">'+ICONS.chevronD+'</div>':''}
       </div>`:''}
     </div>
     <div class="mplan-nav-btn-wrap right">
@@ -297,7 +297,7 @@ export function renderMiPlanCalendar(state){
     return`<div class="${colClass}" style="height:${PHDR+TOTAL}px" data-action="selectMiPlanDay" data-index="${i}">
       <div class="mplan-wk-col-hdr">
         <div class="mplan-wk-col-day"><span class="mplan-wk-day-name">${_lblLocalized((DAY_SHORT_EN[DAYS[i].k]||DAYS[i].lbl).split(' ')[0])}</span><span class="mplan-wk-col-date${dayFilms.length?' wk-has':''}">${DAYS[i].d}</span></div>
-        ${dayFilms.length?(isActive?'<div class="mplan-wk-col-arrow">${ICONS.chevronD}</div>':'<div class="mplan-wk-col-dot"></div>'):''}
+        ${dayFilms.length?(isActive?'<div class="mplan-wk-col-arrow">'+ICONS.chevronD+'</div>':'<div class="mplan-wk-col-dot"></div>'):''}
       </div>
       ${gridHtml}${nowHtml}${blocksHtml}
     </div>`;
