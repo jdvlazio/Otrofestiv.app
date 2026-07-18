@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607180025">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607180025">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607180047">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607180047">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -118,7 +118,6 @@ window.sentryOnLoad = function() {
 
    SPACING — entre tokens (intencionales):
      · padding:10px en botones cancel      → jerarquía vs. botón primario (--sp-btn:14px)
-     · padding:10px en .poster-grid        → ritmo entre sp-2(8) y sp-3(12)
      · padding:20px en overlays JS         → entre sp-4(16) y sp-5(24)
      · gap:5px, gap:6px varios             → entre sp-1(4) y sp-2(8)
      · gap:10px varios                     → entre sp-2(8) y sp-3(12)
@@ -480,6 +479,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
   font-weight:var(--w-semi);
 }
 .cnt-line{padding:6px var(--sp-5) 4px;font-size:var(--t-sm);color:var(--gray)}
+.cnt-line:empty{display:none} /* vacío = 0px — sin relleno fantasma sobre el grid (regla FLUSH) */
 /* ── Buscador unificado (Programa, Intereses, Planear) ── */
 /* ── Buscador unificado — una sola implementación ──────────────────────
    El pill ES el contenedor flex. El ícono es hijo flex → imposible salirse.
@@ -720,6 +720,10 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 
 /* ── CARTELERA ── */
 .grid{padding:0 var(--sp-3) 60px;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:var(--sp-3);overflow:visible;grid-auto-rows:minmax(210px,auto)}
+/* Cuando .grid hospeda un poster-grid (sub-vista TODO), el gutter lo posee SOLO
+   el poster-grid (sp-4): así los márgenes -sp-4 de la banda sec-hdr cancelan
+   exacto y la banda es full-bleed, como toda banda del sistema. */
+.grid:has(> .poster-grid){display:block;padding-left:0;padding-right:0}
 
 /* Card */
 .card{border:1px solid var(--bdr);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;position:relative;cursor:pointer;transition:opacity var(--tr-smooth),border-color var(--tr-smooth),box-shadow var(--tr-smooth);align-self:stretch}
@@ -841,7 +845,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
  * Matemática: 390px - 20px padding - 16px gaps = 354px / 3 = 118px    *
  * Ratio 2:3 → 177px alto. Estándar one-sheet cinematográfico.          */
 /* padding-top 0: el grid arranca a la MISMA distancia del chrome que los demás tabs (guardián tests/geometry.spec.js) */
-.poster-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--sp-2);padding:0 20px calc(var(--nav-h,56px) + max(env(safe-area-inset-bottom),20px) + 16px) 10px;transition:opacity var(--tr-fast)}
+.poster-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--sp-2);padding:0 var(--sp-4) calc(var(--nav-h,56px) + max(env(safe-area-inset-bottom),20px) + 16px);transition:opacity var(--tr-fast)}
 /* poster-grid-sep — ahora ES un sec-hdr sm (banda del sistema); aquí solo lo grid-specific. margin-top separa de la sección anterior. */
 .poster-grid-sep{grid-column:1/-1;pointer-events:none;user-select:none;margin-top:var(--sp-3)}
 .poster-grid-sep:first-child{margin-top:0}
@@ -2814,7 +2818,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202607180025";
+    s.src="/src/main.js?v=202607180047";
     document.body.appendChild(s);
   }
   if (isApp || isDev) { bootApp(); return; }
