@@ -1783,7 +1783,11 @@ try:
     # de mode-bar y nav-row se retiraron el 18 jul — no pueden volver).
     for _name, _pat in (('programa-mode-bar', r'\.programa-mode-bar\{[^}]*\}'),
                         ('nav-row', r'\.nav-row\{[^}]*\}'),
-                        ('main-nav fixed', r'\.main-nav\{position:fixed[^}]*\}')):
+                        ('main-nav fixed', r'\.main-nav\{position:fixed[^}]*\}'),
+                        ('hdr-ag', r'#hdr-ag\{[^}]*\}'),
+                        ('fs-header', r'\.fs-header\{[^}]*\}'),
+                        ('pv-header', r'\.pv-header\{[^}]*\}'),
+                        ('search-bar', r'\.search-bar\{[^}]*\}')):
         _m = _re.search(_pat, _html, _re.S)
         if _m and _re.search(r'border(?:-top|-bottom)?:\s*1px solid var\(--bdr', _m.group(0)):
             _errs.append(f'{_name}: línea de borde reintroducida en el chrome')
@@ -1808,6 +1812,8 @@ try:
         _sel, _rule = _m.group(1).strip().splitlines()[-1].strip(), _m.group(0)
         if 'transition' in _rule and 'var(--sheet-out)' not in _rule:
             _errs.append(f'{_sel}: cierre sin var(--sheet-out)')
+        if 'border-top:1px solid var(--bdr' in _rule:
+            _errs.append(f'{_sel}: línea en el arco del sheet (retiradas 18 jul)')
     for _m in _re.finditer(r'([^{}]+)\{[^}]*transform:translateY\(0\)[^}]*\}', _html):
         _sel, _rule = _m.group(1).strip().splitlines()[-1].strip(), _m.group(0)
         if '.open' in _sel and 'var(--sheet-in)' not in _rule:
