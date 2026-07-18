@@ -227,7 +227,7 @@ export function renderMiPlanCalendar(state){
   const isPastVe=nowDayIdx>=0&&ve<nowDayIdx;
   const navHtml=`<div class="mplan-nav">
     <div class="mplan-nav-btn-wrap">
-      <button class="mplan-nav-btn" aria-label="${t('aria_dia_ant')}" data-action="miPlanNav" data-dir="-1" ${vs===0?'disabled':''}><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"/></svg></button>
+      <button class="mplan-nav-btn" aria-label="${t('aria_dia_ant')}" data-action="miPlanNav" data-dir="-1" ${vs===0?'disabled':''}>${ICONS.chevronL}</button>
     </div>
     <div class="mplan-nav-labels">
       <div class="mplan-nav-day${isPastVs?' past':''}" data-action="selectMiPlanDay" data-index="${vs}">
