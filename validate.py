@@ -1813,6 +1813,38 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar sheet-spring: {_e}')
 
+# ── [warm-neutrals] superficies con temperatura — gris neutro puro prohibido ──
+# Decisión Juan 18 jul 2026: los tokens de superficie/borde llevan sesgo cálido
+# (~1.5% hacia el ámbar, R>G>B). Un hex neutro de la paleta VIEJA reintroducido
+# = isla fría (pasó con #1C1C1C del auth sheet y los canvas de compartir).
+check = 'warm-neutrals'
+try:
+    import glob as _glob
+    _OLD = ['#0A0A0A', '#141414', '#1A1A1A', '#1C1C1C', '#1E1E1E', '#1F1F1F',
+            '#232323', '#2A2A2A', 'rgba(20,20,20', 'rgba(20, 20, 20']
+    _hits = []
+    _files = ['index.html'] + _glob.glob('src/**/*.js', recursive=True)
+    for _sf in _files:
+        _c = open(_sf, encoding='utf-8').read()
+        for _i, _ln in enumerate(_c.splitlines(), 1):
+            for _h in _OLD:
+                if _h.lower() in _ln.lower():
+                    _hits.append(f'{_sf}:{_i} {_h}')
+    if _hits:
+        fail(check, 'gris neutro de la paleta vieja reintroducido (usar el token cálido): ' + '; '.join(_hits[:5]))
+    else:
+        # sanity: los tokens deben seguir cálidos (R>G>B en --bg)
+        import re as _re
+        _html = open('index.html', encoding='utf-8').read()
+        _m = _re.search(r'--bg:\s*#([0-9A-Fa-f]{6})', _html)
+        _r, _g, _b = (int(_m.group(1)[i:i+2], 16) for i in (0, 2, 4)) if _m else (0, 0, 0)
+        if not (_m and _r >= _g >= _b and _r > _b):
+            fail(check, f'--bg perdió el sesgo cálido (R≥G≥B): {_m.group(1) if _m else "no encontrado"}')
+        else:
+            ok(check, 'paleta vieja fuera y tokens de superficie cálidos (R≥G≥B)')
+except Exception as _e:
+    warn(check, f'no se pudo verificar warm-neutrals: {_e}')
+
 # ── [poster-single-owner] decisión y marco editorial SOLO en view/helpers.js ──
 # posterModel/posterParts (films) e itemPosterParts (obras) son los ÚNICOS dueños
 # de la decisión editorial-vs-imagen y del marco. Si _isEditorialPoster( o

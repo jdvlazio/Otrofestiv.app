@@ -118,10 +118,10 @@ export function _sectionColor(sec){
 // no por umbral. Garantiza banda legible sobre cualquier color de sección.
 export function _contrastText(hex){
   const c = String(hex||'').replace('#','');
-  if(c.length < 6) return '#0A0A0A';
+  if(c.length < 6) return '#0B0A08';
   const r=parseInt(c.slice(0,2),16)/255, g=parseInt(c.slice(2,4),16)/255, b=parseInt(c.slice(4,6),16)/255;
   const L = 0.2126*r + 0.7152*g + 0.0722*b;
-  return ((L+0.05)/0.05) >= (1.05/(L+0.05)) ? '#0A0A0A' : '#FFFFFF';
+  return ((L+0.05)/0.05) >= (1.05/(L+0.05)) ? '#0B0A08' : '#FFFFFF';
 }
 
 // ── REGLA INAMOVIBLE DE ARQUITECTURA ─────────────────────────────────────────
@@ -295,7 +295,7 @@ export function _buildPosterV16({accent, headerLabel, title, num}){
   }
 
   const svg=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${VW} ${VH}">
-    <rect width="${VW}" height="${VH}" fill="#1A1A1A"/>
+    <rect width="${VW}" height="${VH}" fill="#1B1917"/>
     <rect width="${VW}" height="${HDR}" fill="${accent}"/>
     ${headerText}
     ${bodyContent}
