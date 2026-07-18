@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `a145ca6 feat(ficha): color ambiental del póster — el header respira el color de la película`
+> Último commit: `97942bb fix(ambient): MU-KI-RA ciruela — Safari CORS-cache + fórmula por área`
 
 ---
 

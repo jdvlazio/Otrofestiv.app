@@ -1877,6 +1877,29 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar poster-ambient: {_e}')
 
+# ── [sheet-meta-legible] metadata informativa nunca en --gray2 ─────────────────
+# Reporte Juan 18 jul 2026: duración/director/año de la ficha en #555 eran
+# ilegibles sobre el tinte ambiental. Regla: lo que se LEE para decidir
+# (metadata de obra) va en --gray o más claro; --gray2 es UI pasiva.
+check = 'sheet-meta-legible'
+try:
+    _html = open('index.html', encoding='utf-8').read()
+    _INFO = ['.pel-sheet-flags-dur{', '.pel-sheet-metaline{']
+    _bad = []
+    for _sel in _INFO:
+        _i = _html.find(_sel)
+        _rule = _html[_i:_html.find('}', _i)] if _i >= 0 else ''
+        if not _rule:
+            _bad.append(f'{_sel} no encontrada')
+        elif 'var(--gray2)' in _rule:
+            _bad.append(f'{_sel} en --gray2 (ilegible sobre tinte)')
+    if _bad:
+        fail(check, 'metadata informativa degradada: ' + '; '.join(_bad))
+    else:
+        ok(check, 'duración/director/año de la ficha en --gray o más claro')
+except Exception as _e:
+    warn(check, f'no se pudo verificar sheet-meta-legible: {_e}')
+
 # ── [poster-single-owner] decisión y marco editorial SOLO en view/helpers.js ──
 # posterModel/posterParts (films) e itemPosterParts (obras) son los ÚNICOS dueños
 # de la decisión editorial-vs-imagen y del marco. Si _isEditorialPoster( o

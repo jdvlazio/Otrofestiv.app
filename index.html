@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607180748">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607180748">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607180752">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607180752">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -959,8 +959,11 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 
 .pel-sheet-meta{flex:1;min-width:0;display:flex;flex-direction:column;gap:var(--sp-1);padding-top:2px}
 .pel-sheet-title{font-size:var(--t-md);font-weight:var(--w-display);color:var(--white);line-height:1.25;letter-spacing:-.02em}.pel-sheet-original{font-size:var(--t-caption);font-weight:var(--w-regular);color:var(--gray);margin-top:2px;line-height:1.4}
-.pel-sheet-flags-dur{font-size:var(--t-sm);color:var(--gray2);display:flex;align-items:center;gap:var(--sp-1);flex-wrap:wrap}
-.pel-sheet-metaline{font-size:var(--t-sm);color:var(--gray2);margin-top:2px}
+/* Metadata INFORMATIVA (duración/director/año — se lee para decidir) va en
+   --gray como el resto de metadatos; --gray2 es solo UI pasiva (chevrons,
+   cancels, pasado). Guardián [sheet-meta-legible]. */
+.pel-sheet-flags-dur{font-size:var(--t-sm);color:var(--gray);display:flex;align-items:center;gap:var(--sp-1);flex-wrap:wrap}
+.pel-sheet-metaline{font-size:var(--t-sm);color:var(--gray);margin-top:2px}
 .pel-sheet-sec{font-size:var(--t-sm);color:var(--amber);font-weight:var(--w-semi);margin-top:2px;cursor:pointer;display:inline-flex;align-items:center;gap:3px;transition:opacity var(--tr-base);touch-action:manipulation;position:relative}
 .pel-sheet-sec::after{content:'';position:absolute;inset:-8px -4px}
 .pel-sheet-sec:active{opacity:.6}
@@ -2839,7 +2842,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202607180748";
+    s.src="/src/main.js?v=202607180752";
     document.body.appendChild(s);
   }
   if (isApp || isDev) { bootApp(); return; }
