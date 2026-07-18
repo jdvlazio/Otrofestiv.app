@@ -505,11 +505,24 @@ export function renderFilmAlternatives(state,title,day,time){
 // FUENTE ÚNICA del Diario (durante el festival) y del recap de Modo Recuerdo (después):
 // la misma card en los dos momentos — un componente, cero divergencia. Pensada para
 // screenshot: pósters grandes, plena opacidad.
-function _recapPosterCard(state,title){
-  const {FILMS, filmRatings} = state.snapshot();
+function _recapPosterCard(state,title,{retro=false}={}){
+  const {FILMS, filmRatings, watched} = state.snapshot();
   const f=FILMS.find(fi=>fi.title===title);
   if(!f) return '';
   const r=filmRatings[title];
+  // Modo retro (Modo Recuerdo): ítem del plan SIN marcar — póster atenuado con
+  // ✓ para marcar Vista (toggleWatched: en programas dispara la cola por obra).
+  if(retro&&!watched.has(title)){
+    const{displayTitle:_rdt}=parseProgramTitle(title);
+    const _rpp=posterParts(f,{header:true,body:''});
+    return`<div class="poster-card ended-poster js-open-pel${_rpp.ed?' poster-ed':''}" style="opacity:.6" data-title="${escXML(f.title)}"${_rpp.ed?` style="--ed-accent:${_rpp.accent};opacity:.6"`:''}>
+      ${_rpp.ed?_rpp.inner:_rpp.src?`<img class="img-cover" src="${_rpp.src}" loading="lazy" onerror="this.remove()" alt="">`:``}
+      <div class="ended-poster-footer">
+        <button class="ended-rate-btn" data-action="toggleWatched" data-title="${escXML(title)}" data-stop="1">${ICONS.check}</button>
+        <div class="ended-poster-title">${_rdt}</div>
+      </div>
+    </div>`;
+  }
   const{displayTitle:dt}=parseProgramTitle(title);
   const _pp=posterParts(f,{header:true,body:''}); // decisión única (posterModel)
   const src=_pp.src||'';
@@ -553,13 +566,15 @@ function _obraPosterCard(state,item,section){
 // VIO. Un programa no es una card: se disuelve en sus obras (cada una con su póster y
 // sus estrellas, como dentro de la card de programa) y su nombre queda como
 // sub-etiqueta del grupo. Cronológico por día + "fuera del plan".
-export function renderDiaryHTML(state){
+export function renderDiaryHTML(state,{retro=false}={}){
   const {savedAgenda, watched, FILMS} = state.snapshot();
   const all=(savedAgenda&&savedAgenda.schedule)||[];
   const planTitles=new Set(all.map(s=>s._title));
   const _seen=new Set();
   const _entry=(title)=>{
-    // film suelto → [card]; programa → sub-etiqueta + cards de sus obras
+    // film suelto → [card]; programa → sub-etiqueta + cards de sus obras.
+    // retro: ítem del plan sin marcar → card atenuada con ✓ (no se disuelve:
+    // el usuario aún no dijo qué vio — marcar Vista dispara la cola por obra).
     const f=FILMS.find(fi=>fi.title===title);
     if(!f) return '';
     if(f.is_cortos&&f.film_list&&f.film_list.length){
@@ -572,9 +587,14 @@ export function renderDiaryHTML(state){
   let html='';
   DAY_KEYS.forEach(day=>{
     const dayTitles=[];
-    all.forEach(sc=>{ if(sc.day===day&&watched.has(sc._title)&&!_seen.has(sc._title)){ _seen.add(sc._title); dayTitles.push(sc._title); } });
+    all.forEach(sc=>{ if(sc.day===day&&(retro||watched.has(sc._title))&&!_seen.has(sc._title)){ _seen.add(sc._title); dayTitles.push(sc._title); } });
     if(!dayTitles.length) return;
-    html+=`<div class="saved-day-lbl">${dayChip(day)}</div>${dayTitles.map(_entry).join('')}`;
+    // retro: los ítems del plan SIN marcar van juntos en UN grid del día
+    // (atenuados, ✓ Vista) — no una card por fila con huecos.
+    const _watchedT=dayTitles.filter(tt=>watched.has(tt));
+    const _retroT=retro?dayTitles.filter(tt=>!watched.has(tt)):[];
+    const _retroGrid=_retroT.length?`<div class="poster-grid pg-miplan">${_retroT.map(tt=>_recapPosterCard(state,tt,{retro:true})).join('')}</div>`:'';
+    html+=`<div class="saved-day-lbl">${dayChip(day)}</div>${_watchedT.map(_entry).join('')}${_retroGrid}`;
   });
   const outside=[...watched].filter(tt=>!planTitles.has(tt)&&FILMS.some(f=>f.title===tt));
   if(outside.length){
@@ -594,7 +614,6 @@ export function renderContextualHeader(state, consensus){
     const{totalWatched,totalPlanned,pendingRatings}=ph;
     // Películas vistas con su calificación
     // Ordenar: calificadas primero (descendente), sin calificar al final
-    const watchedFilms=[...watched].sort((a,b)=>((filmRatings[b]||0)-(filmRatings[a]||0))).map(t=>_recapPosterCard(state,t)).join('');
     const subMsg=totalWatched===0
       ?t('empty_prox_fest')
       :pendingRatings>0
@@ -609,8 +628,7 @@ export function renderContextualHeader(state, consensus){
         ${(FESTIVAL_CONFIG[_activeFestId]||{}).name||''} · ${_langDates(FESTIVAL_CONFIG[_activeFestId])}
       </div>
       <div class="ctx-main-title">${mainTitle}</div>
-      <div class="ctx-sub" style="margin-bottom:${totalWatched?'12px':'0'}">${subMsg}</div>
-      ${totalWatched?`<div class="poster-grid pg-miplan">${watchedFilms}</div>`:''}
+      <div class="ctx-sub">${subMsg}</div>
     </div>`;
   }
 
@@ -1040,31 +1058,13 @@ export function _renderSavedAgendaHTML(state, consensus){
       <div class="mb-2 sec-hdr">${ICONS.sparkles} ${t('recap_tu_festival')}</div>
       <div class="hint">${t('recap_marca_sub')}</div>
     </div>`:'';
-    // Plan vivido: agrupado por día, cada ítem con su marca Vista
-    let _vivido='';
-    if(_plan.length){
-      const _byDay={};
-      [..._plan].sort((a,b)=>String(a.day).localeCompare(String(b.day))||toMin(a.time)-toMin(b.time))
-        .forEach(s=>{(_byDay[s.day]=_byDay[s.day]||[]).push(s);});
-      _vivido='<div class="ag-section">'+Object.keys(_byDay).map(day=>`
-        <div class="saved-day-lbl">${dayChip(day)}</div>
-        ${_byDay[day].map(s=>{
-          const _vc=vcfg(s.venue),_sl=sala(s.venue);
-          const _f=FILMS.find(fi=>fi.title===s._title);
-          const _seen=watched.has(s._title);
-          const _ph=_f?`<div class="js-open-pel" data-title="${(s._title||'').replace(/"/g,'&quot;')}" style="cursor:pointer">${_posterThumb(_f,'lb-poster')}</div>`:'';
-          return`<div class="saved-item${_seen?' done':''}">
-            ${_ph}
-            <div class="saved-time">${s.time}</div>
-            <div class="saved-info">
-              <div class="saved-title">${s._title}</div>
-              <div class="saved-venue">${ICONS.pin} ${_vc.short}${_sl?' · '+_sl:''}</div>
-            </div>
-            <button class="saved-check${_seen?' done':''}" data-title="${(s._title||'').replace(/"/g,'&quot;')}" data-action="toggleWatched">${_seen?ICONS.check+' '+t('cta_vista'):t('cta_vista')}</button>
-          </div>`;
-        }).join('')}`).join('')+'</div>';
-    }
-    if(_recap||_vivido) return`<div class="saved-agenda">${_recap}${_hero}${_vivido}</div>`;
+    // Cuerpo: el DIARIO en modo retro — grid de pósters con calificación (los
+    // vistos, por obra) + los del plan sin marcar (atenuados, ✓ Vista). El póster
+    // prima: mismo modelo del share del Diario.
+    const _vivido=(_plan.length||watched.size)?`<div class="ag-section">${renderDiaryHTML(state,{retro:true})}</div>`:'';
+    // Compartir mi festival (RFC F2): reutiliza el export del Diario.
+    const _shareBtn=watched.size>0?`<button class="ag-save-btn" data-action="shareDiary">${ICONS.share} ${t('recap_compartir')}</button>`:'';
+    if(_recap||_vivido) return`<div class="saved-agenda">${_recap}${_hero}${_vivido}${_shareBtn}</div>`;
     // Sin vistas NI plan: empty state canónico
     const _festNameMp=(FESTIVAL_CONFIG[_activeFestId]||{}).name||t('misc_festival_default');
     return emptyStateHero(ICONS.sparkles,`${_festNameMp} ${t('plan_fest_terminado')}`,t('empty_vistas'),t('plan_ir_programa'),'mnav-cartelera');
@@ -1197,15 +1197,10 @@ export function buildResultHTML(scenarios){
   const _staleBanner=_stale
     ?`<div class="prio-stale">${ICONS.star} ${t('prio_stale_banner')}<button class="prio-stale-cta" data-action="runCalc">${t('prio_stale_cta')}</button></div>`
     :'';
-  // Resumen de prioridades (post-cálculo): badge verde si todas entraron,
-  // ámbar si parciales. Mismo lenguaje visual que el header de Intereses.
-  const _included=new Set(sc.schedule.map(s=>s._title));
-  const _prioCnt=[...prioritized].filter(p=>_included.has(p)).length;
-  const _prioBadgeCls=_prioCnt===prioritized.size?'cb-green':'cb-amber';
-  const _prioRow=prioritized.size===0?''
-    :`<div class="sec-hdr">${ICONS.star} <span>${t('lbl_prioridades')}</span>
-        <span class="count-badge ${_prioBadgeCls}">${_prioCnt}/${prioritized.size}</span>
-      </div>`;
+  // Fila "Prioridades N/N" RETIRADA del resumen (decisión Juan, 17 jul 2026):
+  // el dato confundía — el usuario no sabe qué significa "1/1" junto al plan.
+  // El estado de prioridades ya se comunica donde importa: el banner stale y
+  // las incompatibilidades (abajo) cuando algo NO entró.
 
   // ── Header: Plan óptimo vs Variación ──
   const isCustom=sc._custom===true;
@@ -1223,7 +1218,6 @@ export function buildResultHTML(scenarios){
     <div class="sec-hdr">${ICONS.calendar} <span>${planLabel}</span>
       <span class="count-badge cb-neutral">${ok}</span>
     </div>
-    ${_prioRow}
     ${bad>0&&bad>=total?`<div class="ag-excl-note txt-gray2-sm">${t('plan_contexto_max')}</div>`:''}
     ${sc.incompatiblePriorities?(()=>{
       const pairs=sc.conflictingPriorityPairs||[];

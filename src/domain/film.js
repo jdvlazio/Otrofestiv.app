@@ -153,9 +153,21 @@ export function _classifyTodayScreenings(screenings,nowMin){
 }
 
 export function _endedStats(){
-  const _isRegular=t=>{const f=FILMS.find(fi=>fi.title===t);return f&&!f.is_cortos&&f.type!=='event';};
-  const totalWatched=[...watched].filter(_isRegular).length;
+  // Conteo POR OBRA (modelo del Diario): un programa visto cuenta por sus
+  // películas — es lo que el usuario realmente vio. Antes excluía is_cortos
+  // por completo → "Viste 0" con dos programas vistos. Eventos no cuentan.
+  let totalWatched=0, pendingRatings=0;
+  [...watched].forEach(t=>{
+    const f=FILMS.find(fi=>fi.title===t);
+    if(!f||f.type==='event') return;
+    if(f.is_cortos&&f.film_list&&f.film_list.length){
+      totalWatched+=f.film_list.length;
+      pendingRatings+=f.film_list.filter(it=>!filmRatings[it.title]).length;
+    } else {
+      totalWatched+=1;
+      if(!filmRatings[t]) pendingRatings+=1;
+    }
+  });
   const totalPlanned=savedAgenda&&savedAgenda.schedule?savedAgenda.schedule.length:0;
-  const pendingRatings=[...watched].filter(t=>_isRegular(t)&&!filmRatings[t]).length;
   return{totalWatched,totalPlanned,pendingRatings};
 }

@@ -1866,7 +1866,7 @@ try:
     _ALLOW = {
         'src/view/agenda.js': 1622,
         'src/main.js': 1551,
-        'src/i18n/i18n.js': 1397,
+        'src/i18n/i18n.js': 1400,
         'src/controller/sheets-controller.js': 1325,
         'src/controller/handlers.js': 915,
     }
