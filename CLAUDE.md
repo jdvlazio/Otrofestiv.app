@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `c323986 fix(banderas): países separados por coma → banderas, no globo + guardián`
+> Último commit: `c18aebe design(tiempo-libre): sin sugerencia = silencio, no 'No hay actividades'`
 
 ---
 
