@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `380f11c design(topbar): cuenta a la esquina, idioma adentro`
+> Último commit: `7b939ad fix(sw): P0 — módulos /src/ SIEMPRE revalidados (grafo ESM torn en deploy)`
 
 ---
 
