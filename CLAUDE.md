@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `60d8cb9 design(radios): --r-sheet 20→28 squircle + data(tt): lbSlug de Doval el loco`
+> Último commit: `534b150 design(topbar): lámina limpia — fuera las 2 líneas + activo unificado + anillo sync`
 
 ---
 
