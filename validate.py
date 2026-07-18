@@ -2010,6 +2010,42 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar icon-single-source: {_e}')
 
+# ── [country-flags] si hay país, hay bandera (regla Juan 18 jul 2026) ──────────
+# El bug Voces del Territorio: countryToFlags partía solo por "/" y el string con
+# comas caía al globo 🌍. Fix aplicado; este guardián evita la recaída a nivel de
+# DATOS: en los festivales VIVOS, todo país (partido por coma/barra) debe estar en
+# _COUNTRY_FLAGS o el film debe traer un campo `flags` autorizado. Un país nuevo sin
+# mapear se caza aquí antes de mostrar globo. Festival nuevo activo → sumarlo abajo.
+check = 'country-flags'
+try:
+    import re as _re, json as _json
+    _ACTIVE = ['festivals/tercertiempo-2026.json', 'festivals/fantasofest-2026.json']
+    _js = open('src/controller/sheets-controller.js', encoding='utf-8').read()
+    _m = _re.search(r'const _COUNTRY_FLAGS=\{(.*?)\};', _js, _re.S)
+    _mapped = set(_re.findall(r"'([^']+)':", _m.group(1))) if _m else set()
+    _bad = []
+    def _walk_films(_films, _fid):
+        for _f in _films or []:
+            _c = (_f.get('country') or '').strip()
+            if _c and not _f.get('flags'):
+                _parts = [p.strip() for p in _re.split(r'[,/]', _c) if p.strip()]
+                _unmapped = [p for p in _parts if p not in _mapped]
+                if _unmapped:
+                    _bad.append(f"{_fid}: '{_f.get('title','?')[:30]}' país sin bandera: {', '.join(_unmapped)}")
+            _walk_films(_f.get('film_list'), _fid)
+    for _af in _ACTIVE:
+        try:
+            _d = _json.load(open(_af, encoding='utf-8'))
+        except FileNotFoundError:
+            continue
+        _walk_films(_d.get('films'), _af.split('/')[-1])
+    if _bad:
+        fail(check, 'país sin bandera en festival vivo (mapear en _COUNTRY_FLAGS o añadir flags): ' + '; '.join(_bad[:6]))
+    else:
+        ok(check, 'todo país de festivales vivos produce bandera (nunca globo)')
+except Exception as _e:
+    warn(check, f'no se pudo verificar country-flags: {_e}')
+
 # ── [poster-single-owner] decisión y marco editorial SOLO en view/helpers.js ──
 # posterModel/posterParts (films) e itemPosterParts (obras) son los ÚNICOS dueños
 # de la decisión editorial-vs-imagen y del marco. Si _isEditorialPoster( o
@@ -2169,7 +2205,7 @@ try:
         'src/view/agenda.js': 1622,
         'src/main.js': 1554,  # +3: leyenda de vocabulario prioridad=bookmark (18 jul)
         'src/i18n/i18n.js': 1405,  # +5: aria_dia_sig ×3 locales (a11y iconos, 18 jul)
-        'src/controller/sheets-controller.js': 1350,  # +25: hook _applyAmbient + prewarm pointerdown (color ambiental, 18 jul 2026)
+        'src/controller/sheets-controller.js': 1356,  # +25 ambient, +6 doc countryToFlags separadores (18 jul 2026)
         'src/controller/handlers.js': 915,
     }
     _over = []

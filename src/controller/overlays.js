@@ -198,7 +198,7 @@ export function _searchAll(q){
         seen.add(item.title);
         results.push({_isCortoItem:true,_prog:prog,_score:r.score,
           title:item.title,country:item.country,duration:item.duration,
-          flags:countryToFlags(item.country||''),section:prog.section,is_cortos:false});
+          flags:item.flags||countryToFlags(item.country||''),section:prog.section,is_cortos:false});
       }
     });
   });
