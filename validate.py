@@ -1786,6 +1786,33 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar chrome-glass: {_e}')
 
+# ── [sheet-spring] TODO bottom-sheet abre spring y cierra ease-in ──────────────
+# Decisión Juan 18 jul 2026: la curva canónica vive en los tokens --sheet-in /
+# --sheet-out. Antes 7 de 8 sheets tenían curvas bespoke (el spring existía solo
+# en pel-sheet). Un sheet nuevo con cubic-bezier propio = isla reintroducida.
+# También exige el skeleton shimmer de pósters (poster-skel) presente.
+check = 'sheet-spring'
+try:
+    import re as _re
+    _html = open('index.html', encoding='utf-8').read()
+    _errs = []
+    for _m in _re.finditer(r'([^{}]+)\{[^}]*translateY\(100%\)[^}]*\}', _html):
+        _sel, _rule = _m.group(1).strip().splitlines()[-1].strip(), _m.group(0)
+        if 'transition' in _rule and 'var(--sheet-out)' not in _rule:
+            _errs.append(f'{_sel}: cierre sin var(--sheet-out)')
+    for _m in _re.finditer(r'([^{}]+)\{[^}]*transform:translateY\(0\)[^}]*\}', _html):
+        _sel, _rule = _m.group(1).strip().splitlines()[-1].strip(), _m.group(0)
+        if '.open' in _sel and 'var(--sheet-in)' not in _rule:
+            _errs.append(f'{_sel}: apertura sin var(--sheet-in)')
+    if '@keyframes poster-skel' not in _html:
+        _errs.append('falta @keyframes poster-skel (skeleton de pósters)')
+    if _errs:
+        fail(check, 'motion fuera del canon: ' + '; '.join(_errs[:6]))
+    else:
+        ok(check, 'sheets con --sheet-in/--sheet-out y skeleton de pósters presente')
+except Exception as _e:
+    warn(check, f'no se pudo verificar sheet-spring: {_e}')
+
 # ── [poster-single-owner] decisión y marco editorial SOLO en view/helpers.js ──
 # posterModel/posterParts (films) e itemPosterParts (obras) son los ÚNICOS dueños
 # de la decisión editorial-vs-imagen y del marco. Si _isEditorialPoster( o
