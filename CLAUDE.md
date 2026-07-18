@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `bfc4ecf design(hdr): UN color de palabra para todos los encabezados — white-60`
+> Último commit: `8c1f728 design(programa): separadores de sección y bandas de hora al sistema de encabezados`
 
 ---
 
