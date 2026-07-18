@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `ecb220d test(config): TODA la suite en viewport móvil 390x844 — regla dura mobile-only`
+> Último commit: `631d191 audit lote 4 + guardianes: tipografía unificada (sheets/cejas/día) + [design-banned-classes] + [i18n-voseo]`
 
 ---
 

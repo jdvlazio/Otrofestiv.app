@@ -8,7 +8,7 @@
 
 import { FESTIVAL_CONFIG, MAX_REMEMBERED_SLOTS, NOTICES, TMDB_IMG, _DEFAULT_FEST_ID } from '../config.js';
 import { DAY_ABBR, DAY_NUM, ICONS, _secLabel, _sectionColor, escXML, isFullDayBlocked, makeProgramPoster, parseProgramTitle, renderRatingStarsHTML } from '../view/components.js';
-import { _getItemPoster, _mkCortoItemHtml, _posterStyle, dayLabel, durFmt, flagFmt, getCortoItemPoster, getFilmPoster, getFilmPosterUntitled, getPosterSrc, itemPosterParts, posterParts, sala, starsText, vcfg } from '../view/helpers.js';
+import { _getItemPoster, _mkCortoItemHtml, _posterStyle, dayLabel, emptyState, durFmt, flagFmt, getCortoItemPoster, getFilmPoster, getFilmPosterUntitled, getPosterSrc, itemPosterParts, posterParts, sala, starsText, vcfg } from '../view/helpers.js';
 import { closeAvSheet, closePVRating, closePrioLimit } from '../view/sheets.js';
 import { showConflictModal, showToast } from '../view/feedback.js';
 import { renderAgenda, renderAvBlocks, renderDiaryHTML } from '../view/agenda.js';
@@ -343,7 +343,7 @@ export function openVenueSheet(venueName){
   fns.forEach(f=>{ let g=_byDay.find(x=>x.day===f.day); if(!g){g={day:f.day,items:[]};_byDay.push(g);} g.items.push(f); });
   const rows=fns.length
     ? _byDay.map(g=>`<div class="venue-day-hdr">${dayLabel(g.day)||g.day}</div>${g.items.map(_fnRow).join('')}`).join('')
-    : `<div class="venue-fn-empty">${t('venue_sin_funciones')}</div>`;
+    : emptyState(ICONS.pin, t('venue_sin_funciones'));
   const inner=document.getElementById('venue-sheet-inner');
   if(!inner) return;
   inner.innerHTML=`

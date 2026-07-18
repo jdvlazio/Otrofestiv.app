@@ -1708,6 +1708,54 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar poster-editorial-parity: {_e}')
 
+# ── [design-banned-classes] clases retiradas del sistema — no pueden volver ────
+# La auditoría del 17-18 jul migró estas anatomías huérfanas a los componentes
+# canónicos (emptyState / meta-banner / notice-banner-row / mplan-warn-row /
+# familia día). Si alguna reaparece en src/, alguien reinventó la isla.
+check = 'design-banned-classes'
+try:
+    import glob as _glob
+    _BANNED = ['empty-msg', 'venue-fn-empty', 'mplan-empty', 'ag-warn"', "ag-warn'",
+               'ag-excl-note', 'ag-excl-incompat', 'int-section-hdr', 'pel-sheet-divider',
+               'fs-divider', 'hr-bdr']
+    _hits = []
+    for _sf in _glob.glob('src/**/*.js', recursive=True):
+        _c = open(_sf, encoding='utf-8').read()
+        for _b in _BANNED:
+            for _i, _ln in enumerate(_c.splitlines(), 1):
+                if _b in _ln and not _ln.strip().startswith('//') and not _ln.strip().startswith('*'):
+                    _hits.append(f"{_sf}:{_i} '{_b}'")
+    if _hits:
+        fail(check, 'clase retirada del sistema reintroducida (usar el componente canónico): ' + '; '.join(_hits[:5]))
+    else:
+        ok(check, f'{len(_BANNED)} clases retiradas siguen fuera de src/')
+except Exception as _e:
+    warn(check, f'no se pudo verificar design-banned-classes: {_e}')
+
+# ── [i18n-voseo] la voz de la casa es voseo — tuteo prohibido en CTAs ES ───────
+# Lote 2 (18 jul) unificó el voseo; este guard caza las formas de tuteo más
+# comunes reintroducidas en el bloque ES. Lista corta y de baja falsa-alarma.
+check = 'i18n-voseo'
+try:
+    _i18n = open('src/i18n/i18n.js', encoding='utf-8').read()
+    # bloque ES = hasta la primera aparición del bloque EN ("en": {)
+    _es_end = _i18n.find('"plan_hint_opciones": "Tap')
+    _es = _i18n[:_es_end] if _es_end > 0 else _i18n
+    import re as _re
+    _TUTEO = [r'"[^"]*Ingresa', r'"[^"]*Ajusta', r'"[^"]*Permite el',
+              r'"[^"]*Agrega(?!́)', r'"[^"]*Marca(?!́)', r'"[^"]*terminas',
+              r'"[^"]*Añad', r'"[^"]*añad']
+    _v = []
+    for _pat in _TUTEO:
+        for _m in _re.finditer(_pat, _es):
+            _v.append(_m.group(0)[:50])
+    if _v:
+        fail(check, 'tuteo/vocabulario retirado en bloque ES (la casa vosea; Agregar es EL verbo): ' + '; '.join(_v[:5]))
+    else:
+        ok(check, 'bloque ES sin tuteo ni "añadir" — voseo íntegro')
+except Exception as _e:
+    warn(check, f'no se pudo verificar i18n-voseo: {_e}')
+
 # ── [poster-single-owner] decisión y marco editorial SOLO en view/helpers.js ──
 # posterModel/posterParts (films) e itemPosterParts (obras) son los ÚNICOS dueños
 # de la decisión editorial-vs-imagen y del marco. Si _isEditorialPoster( o
