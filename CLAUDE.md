@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `534b150 design(topbar): lámina limpia — fuera las 2 líneas + activo unificado + anillo sync`
+> Último commit: `b3936b3 design(líneas): fuera la familia completa de divisorias decorativas`
 
 ---
 

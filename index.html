@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607180853">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607180853">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607181300">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607181300">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -404,7 +404,8 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 /* Fila wordmark + account */
 .hdr-top{display:flex;align-items:center;padding:var(--sp-2) var(--sp-4);min-height:36px;width:100%}
 .hdr-top .hdr-wordmark{flex:none;margin:0}
-.hdr-top .auth-btn{margin-left:auto}
+.hdr-top .lang-toggle{margin-left:auto}
+.hdr-top .auth-btn{margin-left:var(--sp-2)}
 .sync-dot{position:absolute;top:2px;right:2px;width:6px;height:6px;border-radius:50%;display:none}
 
 /* Auth sheet */
@@ -2526,11 +2527,8 @@ setTimeout(function(){
 <div class="hdr">
   <div class="hdr-top">
     <h1 class="hdr-wordmark">Otro<span>festiv</span></h1>
-    <button class="auth-btn" id="auth-btn" data-action="openAuthSheet" data-i18n-title="aria_sincronizar" data-i18n-aria="aria_cuenta" title="Sincronizar entre dispositivos" aria-label="Cuenta">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/></svg>
-      <span class="auth-avatar" id="auth-avatar"></span>
-      <span class="sync-dot" id="sync-dot"></span>
-    </button>
+    <!-- Orden (18 jul 2026): idioma ADENTRO (se toca una vez en la vida),
+         cuenta en la ESQUINA (recurrente + sync-dot; convención de avatar). -->
     <div class="lang-toggle" id="lang-toggle" aria-label="Idioma / Language">
       <button class="lang-trigger" id="lang-trigger" data-action="toggleLangDropdown" aria-haspopup="listbox" aria-expanded="false" aria-label="Idioma / Language">
         <span class="lang-trigger-flag" id="lang-trigger-flag" aria-hidden="true">🇪🇸</span>
@@ -2541,6 +2539,11 @@ setTimeout(function(){
         <button class="lang-btn lang-opt" id="lang-btn-en" data-action="selectLang" data-code="en" role="option" aria-label="English"><span class="lang-opt-flag" aria-hidden="true">🇺🇸</span><span class="lang-opt-name">English</span></button>
       </div>
     </div>
+    <button class="auth-btn" id="auth-btn" data-action="openAuthSheet" data-i18n-title="aria_sincronizar" data-i18n-aria="aria_cuenta" title="Sincronizar entre dispositivos" aria-label="Cuenta">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/></svg>
+      <span class="auth-avatar" id="auth-avatar"></span>
+      <span class="sync-dot" id="sync-dot"></span>
+    </button>
   </div>
   <div class="hdr-fest-bar" id="hdr-fest-bar">
   <div class="hdr-fest-selector" data-action="openFestivalSheet">
@@ -2848,7 +2851,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202607180853";
+    s.src="/src/main.js?v=202607181300";
     document.body.appendChild(s);
   }
   if (isApp || isDev) { bootApp(); return; }
