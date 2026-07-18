@@ -254,15 +254,16 @@ Dos componentes canónicos reemplazan las ~20 clases ad-hoc de encabezados
 
 | Clase | Rol | Anatomía |
 |---|---|---|
-| `.sec-hdr` | **Encabezado de sección** — abre una lista de ítems | Icono Lucide (ámbar vía `.sec-hdr>svg`) + label + barra `::after` que llena el ancho + badge opcional. Variante `.sm`: uppercase `--t-xs` para sub-secciones (pel-sheet, selector, Diario). Slot `.hdr-end` para toggles al extremo derecho. |
+| `.sec-hdr` | **Encabezado de sección** — abre una lista de ítems | **Estilo C (17 jul 2026)**: BANDA sólida full-bleed (surf-2 sobre página; card-b dentro de sheets/cards) + icono Lucide ámbar + label + badge opcional. Variante `.sm`: uppercase `--t-xs`. Slot `.hdr-end` (margin-left:auto) para controles. Los DÍAS y HORAS (saved-day-lbl, bandas de horario) van sin banda de sec-hdr: jerarquía posicional propia. |
 | `.ctx-eyebrow` | **Ceja** — corona un bloque/sheet con contexto | Icono pequeño + label uppercase, sin barra. Color por contexto vía scope del padre (`.pv-header`, `.conflict-hdr`, `.prio-limit-hdr`). |
 
 **Regla de uso:** ¿abre una lista? → `sec-hdr`. ¿Corona un bloque/sheet? → `ctx-eyebrow`.
 
-**Cero divisores sueltos (decisión Juan, jul 2026):** los únicos divisores de la
-app son las barras `::after` de los `sec-hdr`. Quedan prohibidos los divisores
-huérfanos (`hr-bdr`, `fs-divider`, `pel-sheet-divider` — retirados). Excepción:
-divisores CON palabra (`.splash-rail-div` "ANTERIORES", `.conflict-vs-line` "VS").
+**Cero divisores sueltos (decisión Juan, jul 2026):** la separación de secciones
+la hace la BANDA del `sec-hdr` (estilo C — reemplazó a la línea del estilo A ese
+mismo día, prototipo A/B/C con datos reales). Prohibidos los divisores huérfanos
+(`hr-bdr`, `fs-divider`, `pel-sheet-divider` — retirados). Excepción: divisores
+CON palabra (`.splash-rail-div` "ANTERIORES", `.conflict-vs-line` "VS").
 
 ### Badges (inline en texto o título)
 | Clase | Descripción | Estilo |

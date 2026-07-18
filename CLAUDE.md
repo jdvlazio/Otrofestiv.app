@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `696496e chore: bump 202607171643 (commit menores del PR 366)`
+> Último commit: `3660d99 design(corto-sheet): el aviso 'incluye el programa completo' es un meta-banner, no caption de Letterboxd`
 
 ---
 
