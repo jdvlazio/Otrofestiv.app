@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es" style="background:#0A0A0A">
+<html lang="es" style="background:#0B0A08">
 <head>
 <!-- Content-Security-Policy — debe ir ANTES de cualquier <script> para aplicar.
      Hosting estático (GitHub Pages) → solo vía <meta> (sin headers, sin nonces).
@@ -46,7 +46,7 @@ window.sentryOnLoad = function() {
 <meta http-equiv="pragma" content="no-cache">
 <meta http-equiv="expires" content="0">
 <link rel="manifest" href="/manifest.json">
-<meta name="theme-color" content="#0A0A0A">
+<meta name="theme-color" content="#0B0A08">
 <!-- Smart App Banner (Safari iOS): banner nativo de Apple hacia la app en App Store.
      Solo lo interpreta Safari en navegación normal — el WKWebView de la app lo ignora. -->
 <meta name="apple-itunes-app" content="app-id=6769367002">
@@ -55,12 +55,12 @@ window.sentryOnLoad = function() {
 <meta name="apple-mobile-web-app-title" content="Otrofestiv">
 <link rel="apple-touch-icon" href="/icon-192.png">
 <!-- Favicon dedicado ≠ ícono de app: solo la marca dorada sobre TRANSPARENCIA.
-     El ícono opaco #0A0A0A hacía que Safari le pintara un backdrop blanco de
+     El ícono opaco casi-negro hacía que Safari le pintara un backdrop blanco de
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607180701">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607180701">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607180714">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607180714">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -126,19 +126,21 @@ window.sentryOnLoad = function() {
    Para auditar: ./tools/audit.sh desde la raíz del repo.
 ─────────────────────────────────────────────────────────────────────────── */
 
-  /* ── Superficies ── */
-  --bg: #0A0A0A;
-  --surf: #141414;
-  --surf-2: #1A1A1A;
-  --surf-3: #1F1F1F;   /* placeholder de pósters: entre surf-2 y card-a */
-  --card-a: #1E1E1E;
-  --card-b: #232323;
-  --card-p: #141414;
+  /* ── Superficies — negros CÁLIDOS (decisión Juan 18 jul 2026): sesgo ~1.5%
+     hacia el ámbar (R>G>B), misma luminancia. Gris neutro puro prohibido en
+     superficies — guardián [warm-neutrals] en validate.py. ── */
+  --bg: #0B0A08;
+  --surf: #151311;
+  --surf-2: #1B1917;
+  --surf-3: #201E1B;   /* placeholder de pósters: entre surf-2 y card-a */
+  --card-a: #1F1D1A;
+  --card-b: #24211E;
+  --card-p: #151311;
   /* ── Bordes — dos niveles semánticos ──
-     --bdr:   #2A2A2A  chrome estructural: nav, headers, UI interactiva
-     --bdr-l: #1E1E1E  separación de contenido: ítems de lista, filas internas */
-  --bdr: #2A2A2A;
-  --bdr-l: #1E1E1E;
+     --bdr:   #2B2825  chrome estructural: nav, headers, UI interactiva
+     --bdr-l: #1F1D1A  separación de contenido: ítems de lista, filas internas */
+  --bdr: #2B2825;
+  --bdr-l: #1F1D1A;
 
   /* ── Amber ── */
   --amber: #F59E0B;
@@ -408,7 +410,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 /* Auth sheet */
 .auth-sheet{display:none;position:fixed;inset:0;z-index:9999;background:var(--overlay-60);align-items:flex-end;justify-content:center}
 .auth-sheet.open .auth-sheet-inner{transform:translateY(0);transition:var(--sheet-in)}
-.auth-sheet-inner{background:#1C1C1C;border-radius:var(--r-sheet) var(--r-sheet) 0 0;padding:var(--sp-5) var(--sp-5) calc(var(--sp-4) + env(safe-area-inset-bottom));width:100%;max-width:480px;transform:translateY(100%);transition:var(--sheet-out)}
+.auth-sheet-inner{background:#1D1B18;border-radius:var(--r-sheet) var(--r-sheet) 0 0;padding:var(--sp-5) var(--sp-5) calc(var(--sp-4) + env(safe-area-inset-bottom));width:100%;max-width:480px;transform:translateY(100%);transition:var(--sheet-out)}
 .auth-sheet-title{font-size:var(--t-md);font-weight:var(--w-display);letter-spacing:-.02em;color:var(--white);margin-bottom:var(--sp-3);line-height:1.2}
 .auth-sheet-sub{font-size:var(--t-sm);color:var(--gray2);margin-bottom:var(--sp-5);line-height:1.6}
 .auth-email-inp{width:100%;background:var(--surf-2);border:1px solid var(--bdr);border-radius:var(--r);padding:12px 14px;font-size:16px;color:var(--white);outline:none;box-sizing:border-box;margin-bottom:var(--sp-3)}
@@ -2832,7 +2834,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202607180701";
+    s.src="/src/main.js?v=202607180714";
     document.body.appendChild(s);
   }
   if (isApp || isDev) { bootApp(); return; }
@@ -2872,7 +2874,7 @@ setTimeout(function(){
     var badgeG = sgBtn(PLAY, playIco, es ? 'DISPONIBLE EN' : 'GET IT ON', 'Google Play', true);
     document.body.innerHTML =
       '<style>' +
-        '.sg-wrap{min-height:100dvh;display:flex;flex-direction:column;align-items:center;padding:24px;box-sizing:border-box;text-align:center;background:var(--bg,#0A0A0A);font-family:var(--font,sans-serif)}' +
+        '.sg-wrap{min-height:100dvh;display:flex;flex-direction:column;align-items:center;padding:24px;box-sizing:border-box;text-align:center;background:var(--bg,#0B0A08);font-family:var(--font,sans-serif)}' +
         '.sg-hero{margin-top:22dvh}' +
         '.sg-wm{font-size:44px;font-weight:800;letter-spacing:-1px;line-height:1}' +
         '.sg-sub{color:var(--gray,#888);font-size:16px;max-width:320px;line-height:1.5;margin:16px auto 0}' +
@@ -2884,7 +2886,7 @@ setTimeout(function(){
         '.sg-kick{font-size:11px;font-weight:400;color:#fff;letter-spacing:.02em}' +
         '.sg-kick-caps{font-size:10px;letter-spacing:.09em}' +
         '.sg-name{font-size:22px;font-weight:600;color:#fff;margin-top:4px;letter-spacing:-.2px}' +
-        '.sg-sep{background:var(--bdr,#2A2A2A);flex-shrink:0}' +
+        '.sg-sep{background:var(--bdr,#2B2825);flex-shrink:0}' +
         '@media(min-width:560px){.sg-badges{flex-direction:row;gap:24px}.sg-sep{width:1px;height:32px}}' +
         '@media(max-width:559px){.sg-badges{flex-direction:column;gap:16px}.sg-sep{width:32px;height:1px}}' +
         '.sg-qr{display:flex;flex-direction:column;align-items:center;gap:16px;margin-top:80px}' +
@@ -2902,12 +2904,12 @@ setTimeout(function(){
           '<div class="sg-qr-card"><img src="/assets/store/qr-get.svg" alt="QR"></div>' +
           '<div class="sg-scan">' + scan + '</div></div>' : '') +
       '</div>';
-    document.body.style.background = '#0A0A0A';
+    document.body.style.background = '#0B0A08';
     // Landing limpia: neutralizar el marco 960px del layout desktop de la app
     // (bordes laterales + max-width del body) que la landing heredaría.
     document.body.style.border = 'none';
     document.body.style.maxWidth = 'none';
-    document.documentElement.style.background = '#0A0A0A';
+    document.documentElement.style.background = '#0B0A08';
   }
   // v2: la landing exige confirmación positiva DOBLE (navegador confirmado arriba
   // + flag storeGate===true legible). Fetch fallido o flag ausente → APP.

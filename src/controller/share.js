@@ -10,7 +10,7 @@ import { t } from '../i18n/i18n.js';
 import { _getDisplayName, _promptDisplayName } from './auth.js';  // share→auth (sharePlan pide nombre)
 
 // ── shareDiary (F3 del Diario, 17 jul) — el diario como imagen compartible.
-// Lista tipográfica (día · estrellas · título), tokens de la casa: fondo #0A0A0A,
+// Lista tipográfica (día · estrellas · título), tokens de la casa: fondo --bg cálido,
 // ámbar #F59E0B, blanco #F0EDE8. Mismo flujo de compartir que sharePlan
 // (canvas → toBlob → Web Share API → fallback descarga).
 export async function shareDiary(){
@@ -30,7 +30,7 @@ export async function shareDiary(){
   const W=1080,PAD=72,ROW=76,HDR=210,FOOT=110;
   const c=document.createElement('canvas'); c.width=W; c.height=HDR+rows.length*ROW+FOOT;
   const x=c.getContext('2d');
-  x.fillStyle='#0A0A0A'; x.fillRect(0,0,W,c.height);
+  x.fillStyle='#0B0A08'; x.fillRect(0,0,W,c.height);
   x.fillStyle='#F59E0B'; x.font='700 30px system-ui'; x.fillText((t('diary_eyebrow')||'Diario').toUpperCase(),PAD,PAD);
   x.fillStyle='#F0EDE8'; x.font='800 54px system-ui';
   const _fn=(cfg.name||''); x.fillText(_fn.length>30?_fn.slice(0,28)+'…':_fn,PAD,PAD+62);
@@ -141,9 +141,9 @@ export function _buildAgendaCanvas(){
   cv.width=W*DPR;cv.height=H*DPR;
   const c=cv.getContext('2d');
   c.scale(DPR,DPR);
-  c.fillStyle='#0A0A0A';c.fillRect(0,0,W,H);
-  // Banner: --surf-2 (#1A1A1A) — gris sobrio de la paleta
-  c.fillStyle='#1A1A1A';c.fillRect(0,0,W,HDR);
+  c.fillStyle='#0B0A08';c.fillRect(0,0,W,H);
+  // Banner: --surf-2 (#1B1917) — gris cálido de la paleta
+  c.fillStyle='#1B1917';c.fillRect(0,0,W,HDR);
   // Wordmark: "Otro" blanco + "festiv" ámbar — igual que en la app
   c.font='800 22px system-ui,-apple-system,sans-serif';
   c.textBaseline='alphabetic';
