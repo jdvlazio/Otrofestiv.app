@@ -1376,7 +1376,7 @@ export function _applyI18nDOM(){
   // es el único responsable de que TODO el estado visual de idioma sea coherente.
   document.getElementById('lang-btn-es')?.classList.toggle('on', _lang==='es');
   document.getElementById('lang-btn-en')?.classList.toggle('on', _lang==='en');
-  const _activeFlag=document.querySelector('#lang-dropdown .lang-opt.active .lang-opt-flag');
+  const _activeFlag=document.querySelector('#lang-dropdown .lang-opt.on .lang-opt-flag');
   const _trgFlag=document.getElementById('lang-trigger-flag');
   if(_activeFlag && _trgFlag) _trgFlag.textContent=_activeFlag.textContent;
   // dtab labels — los 7 días de la semana son constantes universales
