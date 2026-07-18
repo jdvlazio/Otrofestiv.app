@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `97942bb fix(ambient): MU-KI-RA ciruela — Safari CORS-cache + fórmula por área`
+> Último commit: `7f3e967 design(ficha): duración/director/año a --gray — metadata informativa legible`
 
 ---
 
