@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `1384572 design(iconos) lote 2: la estrella es CALIFICACIÓN, prioridad = bookmark`
+> Último commit: `2cf367a design(iconos) lote 3: colores/strokes al sistema + dedup + chevronL cableado`
 
 ---
 
