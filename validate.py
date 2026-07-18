@@ -1779,10 +1779,18 @@ try:
             _errs.append(f'{_name}: fondo sin alpha rgba')
         elif float(_a.group(1)) > 0.6:
             _errs.append(f'{_name}: alpha {_a.group(1)} > 0.6 (muro, no vidrio)')
+    # El chrome es UNA lámina: prohibido border opaco en sus piezas (las líneas
+    # de mode-bar y nav-row se retiraron el 18 jul — no pueden volver).
+    for _name, _pat in (('programa-mode-bar', r'\.programa-mode-bar\{[^}]*\}'),
+                        ('nav-row', r'\.nav-row\{[^}]*\}'),
+                        ('main-nav fixed', r'\.main-nav\{position:fixed[^}]*\}')):
+        _m = _re.search(_pat, _html, _re.S)
+        if _m and _re.search(r'border(?:-top|-bottom)?:\s*1px solid var\(--bdr', _m.group(0)):
+            _errs.append(f'{_name}: línea de borde reintroducida en el chrome')
     if _errs:
         fail(check, 'chrome glass roto: ' + '; '.join(_errs))
     else:
-        ok(check, 'topbar y main-nav translúcidos (alpha ≤ 0.6) con blur')
+        ok(check, 'topbar y main-nav translúcidos (alpha ≤ 0.6), blur, sin líneas de borde')
 except Exception as _e:
     warn(check, f'no se pudo verificar chrome-glass: {_e}')
 

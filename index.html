@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607180815">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607180815">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607180846">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607180846">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -384,7 +384,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .auth-btn.signed-in svg{display:none}
 .auth-btn .auth-avatar{display:none;width:28px;height:28px;border-radius:50%;background:var(--amber);align-items:center;justify-content:center;font-size:var(--t-caption);font-weight:var(--w-bold);color:var(--black);letter-spacing:0}
 .auth-btn.signed-in .auth-avatar{display:flex}
-.sync-dot{position:absolute;bottom:0;right:0;width:7px;height:7px;border-radius:50%;border:1.5px solid var(--surf);display:none}
+.sync-dot{position:absolute;bottom:0;right:0;width:7px;height:7px;border-radius:50%;border:1.5px solid transparent;display:none} /* anillo transparente: sobre glass no hay fondo sólido que imitar */
 /* Estados del sync-dot (F0.5). Antes _sbShowSyncDot seteaba sync-ok/sync-err sin CSS → el punto nunca fue visible. */
 .sync-dot.sync-live{display:block;background:var(--green)}   /* canal Realtime conectado: sync en vivo */
 .sync-dot.sync-dirty{display:block;background:var(--amber)}  /* cambio local pendiente de subir */
@@ -440,7 +440,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .hdr-fest-chev{display:flex;align-items:center;color:var(--white-60);margin-left:var(--sp-1);opacity:.7}
 
 /* Nav row (tabs de días en Planear) */
-.nav-row{display:flex;align-items:stretch;border-bottom:1px solid var(--bdr);margin-top:var(--sp-1)}
+.nav-row{display:flex;align-items:stretch;margin-top:var(--sp-1)}
 .nav-row.hidden{display:none!important}
 .nav-tabs{display:flex;flex:1;overflow-x:auto;-webkit-overflow-scrolling:touch;justify-content:flex-start;gap:0;padding:0;scrollbar-width:none;scroll-behavior:smooth;touch-action:pan-x;overscroll-behavior-x:contain}
 .nav-tabs::-webkit-scrollbar{display:none}
@@ -458,7 +458,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .dtab-date{font-size:var(--t-xs);font-weight:var(--w-bold);display:block;margin-top:var(--sp-1);letter-spacing:.5px;text-transform:uppercase}
 
 .dtab:hover{color:var(--white)}
-.dtab.on{color:var(--amber)}
+.dtab.on{color:var(--amber);border-bottom-color:var(--amber)} /* mismo lenguaje de activo que .pmode-tab.on */
 .dtab.past{opacity:.35}
 
 /* Navegación principal (bottom tabs) */
@@ -786,7 +786,9 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 /* ── Toggle Por Horario / Por Película — mismo sistema que fdr-btn ── */
 .carta-mode-toggle{display:none} /* reemplazado por programa-mode-bar */
 /* ── Programa: mode bar Explorar/Hoy/Mañana ── */
-.programa-mode-bar{display:flex;align-items:center;border-bottom:1px solid var(--bdr);padding:0 0 0 var(--sp-3);flex-shrink:0;background:var(--surf)}
+/* Chrome sin líneas (18 jul 2026): el glass es UNA lámina — separación por aire
+   y jerarquía, no bordes. Guardián [chrome-glass] veta borders opacos aquí. */
+.programa-mode-bar{display:flex;align-items:center;padding:0 0 0 var(--sp-3);flex-shrink:0;background:var(--surf)}
 .pmode-tab{padding:var(--sp-2) var(--sp-3);font-size:var(--t-sm);font-weight:var(--w-semi);color:var(--gray);border-bottom:2px solid transparent;min-height:36px;cursor:pointer;background:none;border-top:none;border-left:none;border-right:none;font-family:var(--font);transition:color var(--tr-base),border-color var(--tr-base);white-space:nowrap;display:inline-flex;align-items:center}
 .pmode-tab.on{color:var(--white);border-bottom-color:var(--amber)}
 .pmode-spacer{flex:1}
@@ -2847,7 +2849,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202607180815";
+    s.src="/src/main.js?v=202607180846";
     document.body.appendChild(s);
   }
   if (isApp || isDev) { bootApp(); return; }

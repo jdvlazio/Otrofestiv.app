@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `f099e7d design(ambient): bloom orgánico + prewarm — el color florece, no aparece`
+> Último commit: `60d8cb9 design(radios): --r-sheet 20→28 squircle + data(tt): lbSlug de Doval el loco`
 
 ---
 
