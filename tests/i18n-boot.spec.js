@@ -28,7 +28,7 @@ test.describe('coherencia al arranque (locale EN)', () => {
     await enterFestival(page, 'leviza2026', LEVIZA_SIMTIME);  // NO se toca el selector de idioma
     await expect(page.locator('#lbl-nav-miplan')).toContainText(/my plan/i); // EN presente
     await expect(page.locator('#lang-trigger-flag')).toHaveText('🇺🇸');       // bandera coincide
-    await expect(page.locator('#lang-btn-en.active')).toHaveCount(1);          // botón activo EN
+    await expect(page.locator('#lang-btn-en.on')).toHaveCount(1);          // botón activo EN
     const nav = (await page.locator('.main-nav-tab').allTextContents()).join(' ').toUpperCase();
     expect(nav).not.toContain('MI PLAN');   // sin ES mezclado
   });

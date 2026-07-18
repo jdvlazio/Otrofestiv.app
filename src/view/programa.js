@@ -455,7 +455,7 @@ export function renderSbar(){
     return a.localeCompare(b);
   });
   if(lbl){const _al=_secLabelFull(activeSec);lbl.textContent=activeSec==='all'||activeSec==='_chip_'?t('bar_seccion'):(_al.length>18?_al.slice(0,16)+'…':_al);}
-  if(trigBtn) trigBtn.classList.toggle('active',activeSec!=='all'&&activeSec!=='_chip_');
+  if(trigBtn) trigBtn.classList.toggle('on',activeSec!=='all'&&activeSec!=='_chip_');
   const mkOpt=(html,isOn,cb)=>{
     const b=document.createElement('button');
     b.className='fdr-opt'+(isOn?' on':'');
@@ -476,7 +476,7 @@ export function lugarClose(){
   document.removeEventListener('click', lugarOutside);
   window.removeEventListener('scroll', lugarClose);
   const btn = document.getElementById('lugar-btn');
-  if(btn) btn.classList.toggle('active', activeVenue!=='all');
+  if(btn) btn.classList.toggle('on', activeVenue!=='all');
   const lbl = document.getElementById('lugar-lbl');
   if(lbl) lbl.textContent = t('bar_lugar');
 }
