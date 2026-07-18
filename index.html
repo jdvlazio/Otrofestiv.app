@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607172011">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607172011">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607172210">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607172210">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -641,7 +641,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .sec-hdr{font-size:var(--t-base);font-weight:var(--w-bold);color:var(--white-60);display:flex;align-items:center;gap:var(--sp-1);margin-bottom:var(--sp-2);width:auto;background:var(--surf-2);margin-left:calc(-1*var(--sp-4));margin-right:calc(-1*var(--sp-4));padding:var(--sp-2) var(--sp-4)}
 .sec-hdr>svg{color:var(--amber);flex-shrink:0}
 .sec-hdr .hdr-end{margin-left:auto;display:inline-flex;align-items:center;gap:var(--sp-1)}
-.sec-hdr.sm{font-size:var(--t-xs);letter-spacing:.1em;text-transform:uppercase;color:var(--gray2)}
+.sec-hdr.sm{font-size:var(--t-xs);letter-spacing:.1em;text-transform:uppercase}
 .sec-hdr.sm>svg{width:11px;height:11px}
 .pel-sheet-inner .sec-hdr,.diary-sheet .sec-hdr,.ag-summary .sec-hdr{background:var(--card-b)}
 /* Ritmo del pel-sheet: el espaciador pel-sheet-divider (height:0, solo margen) se
@@ -2811,7 +2811,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202607172011";
+    s.src="/src/main.js?v=202607172210";
     document.body.appendChild(s);
   }
   if (isApp || isDev) { bootApp(); return; }
