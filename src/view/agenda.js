@@ -956,13 +956,25 @@ export function renderFilmListHTML(state){
     const{displayTitle,progSuffix}=parseProgramTitle(title);
 
     const posterHtml=_posterThumb(f,'int-item-poster');
-    const rating=filmRatings[title]||0;
-    const stars=rating>0
-      ?'★'.repeat(Math.floor(rating))+(rating%1?'½':'')
-      :'';
-    const ratingHtml=stars
-      ?`<div class="int-item-rating">${stars}</div>`
-      :`<div class="int-item-rating-empty" data-title="${escXML(title)}" data-action="openRatingSheet" data-stop="1">${t('cta_calificar')} →</div>`;
+    // Modelo POR OBRA: un programa nunca tiene rating propio — su estado es el
+    // agregado de sus obras (misma regla que _isRated del bloque nocturno y el
+    // Diario). Completo → "★ N/N". Parcial → avance + Calificar a la COLA por
+    // obra (openPostViewRating), nunca al rating del contenedor.
+    let ratingHtml;
+    if(f&&f.is_cortos&&f.film_list&&f.film_list.length){
+      const _tot=f.film_list.length;
+      const _rated=f.film_list.filter(it=>filmRatings[it.title]).length;
+      const safeT=escXML(title);
+      ratingHtml=_rated>=_tot
+        ?`<div class="int-item-rating">★ ${_rated}/${_tot}</div>`
+        :`<div class="int-item-rating-empty" data-title="${safeT}" data-day="${f.day||''}" data-time="${f.time||''}" data-venue="${escXML(f.venue||'')}" data-duration="${f.duration||''}" data-action="openPostViewRating" data-stop="1">${_rated?`★ ${_rated}/${_tot} · `:''}${t('cta_calificar')} →</div>`;
+    } else {
+      const rating=filmRatings[title]||0;
+      const stars=rating>0?'★'.repeat(Math.floor(rating))+(rating%1?'½':''):'';
+      ratingHtml=stars
+        ?`<div class="int-item-rating">${stars}</div>`
+        :`<div class="int-item-rating-empty" data-title="${escXML(title)}" data-action="openRatingSheet" data-stop="1">${t('cta_calificar')} →</div>`;
+    }
     return`<div class="int-item js-open-pel" data-title="${escXML(title)}">
       ${posterHtml}
       <div class="int-item-info">

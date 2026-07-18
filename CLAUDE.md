@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `631d191 audit lote 4 + guardianes: tipografía unificada (sheets/cejas/día) + [design-banned-classes] + [i18n-voseo]`
+> Último commit: `dbfbd1f chore: bump para el paquete de auditoría (4 lotes + 2 guardianes)`
 
 ---
 
