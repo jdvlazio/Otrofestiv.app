@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `dbfbd1f chore: bump para el paquete de auditoría (4 lotes + 2 guardianes)`
+> Último commit: `d5dd358 fix(ya-vistas): estado de calificación POR OBRA en la fila de programa`
 
 ---
 

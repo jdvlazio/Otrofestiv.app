@@ -86,9 +86,30 @@ test('G01 — el primer contenido de cada tab arranca a la misma distancia del c
     // anti-flake: un re-intento si el primer render aún no asentó
     if (gaps[tab].gap === null || gaps[tab].gap > 2) { await page.waitForTimeout(500); gaps[tab] = await measureGap(page); }
   }
+  // Sub-vista TODO del Programa (camino de render grid — lección Tribeca 18 jul):
+  // la regla FLUSH cubre TODO camino de render, no solo la puerta de cada tab.
+  await page.evaluate(() => {
+    switchMainNav('mnav-cartelera'); showDayView();
+    const chip = [...document.querySelectorAll('[data-day]')].find(e => e.dataset.day === 'all');
+    if (chip) chip.click();
+  });
+  await page.waitForTimeout(500);
+  gaps['cartelera-todo'] = await measureGap(page);
+  if (gaps['cartelera-todo'].gap === null || gaps['cartelera-todo'].gap > 2) { await page.waitForTimeout(500); gaps['cartelera-todo'] = await measureGap(page); }
+  // La banda de sección del grid debe ser FULL-BLEED simétrica (borde a borde),
+  // como toda banda sec-hdr: el padding del grid y los márgenes de la banda cancelan.
+  const sepBleed = await page.evaluate(() => {
+    const sep = document.querySelector('.poster-grid-sep');
+    if (!sep) return null;
+    const r = sep.getBoundingClientRect();
+    return { left: Math.round(r.left), rightInset: Math.round(window.innerWidth - r.right) };
+  });
+  expect(sepBleed, 'la vista TODO no renderizó ninguna banda de sección').not.toBeNull();
+  expect(Math.abs(sepBleed.left), `banda de sección con aire a la izquierda: ${JSON.stringify(sepBleed)}`).toBeLessThanOrEqual(2);
+  expect(Math.abs(sepBleed.rightInset), `banda de sección con aire a la derecha: ${JSON.stringify(sepBleed)}`).toBeLessThanOrEqual(2);
   console.log('G01 gaps:', JSON.stringify(gaps));
   const values = Object.values(gaps).map(g => g.gap).filter(g => g !== null);
-  expect(values.length).toBe(4);
+  expect(values.length).toBe(5);
   const min = Math.min(...values), max = Math.max(...values);
   // FLUSH (regla Juan 17 jul): cada tab arranca PEGADO al chrome — sin espacio.
   expect(max, `algún tab no arranca pegado al chrome: ${JSON.stringify(gaps)}`).toBeLessThanOrEqual(2);
