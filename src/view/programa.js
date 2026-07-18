@@ -83,7 +83,7 @@ export function renderNoticesBannerHTML(state){
         <div class="notice-banner-label">${t('notice_banner_label')}</div>
         <div class="notice-banner-text"><b class="txt-white60-semi">${safeTitle}</b> · <span>${label.toLowerCase()}</span>. ${msg}</div>
       </div>
-      <button class="notice-banner-close" data-action="dismissNotice" data-title="${n.title.replace(/"/g,'&quot;')}">✕</button>
+      <button class="notice-banner-close" data-action="dismissNotice" aria-label="${t('misc_cerrar')}" data-title="${n.title.replace(/"/g,'&quot;')}">✕</button>
     </div>`;
   }).join('');
 }

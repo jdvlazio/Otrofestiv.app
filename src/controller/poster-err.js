@@ -74,6 +74,7 @@ export function _cortoSheetPosterErr(img){
   img.onerror=null;
   const ph=document.createElement('div');
   ph.className='pel-sheet-poster-ph';
+  ph.setAttribute('aria-hidden','true');
   ph.textContent='🎬';
   img.parentNode?.replaceChild(ph,img);
 }

@@ -131,7 +131,7 @@ export function openPelSheet(title){
       const _sheetSrc=posterSrc?getFilmPosterUntitled(f):null;
       posterHtml=_sheetSrc
         ?`<img class="pel-sheet-poster"${_posterStyle(f)} src="${_sheetSrc}" data-title="${f.title.replace(/"/g,'&quot;')}" loading="lazy" onerror="_posterErr(this)" alt="">`
-        :`<div class="pel-sheet-poster-ph">🎬</div>`;
+        :`<div class="pel-sheet-poster-ph" aria-hidden="true">🎬</div>`;
     }
   }
   const{displayTitle}=parseProgramTitle(f.title);
@@ -547,7 +547,7 @@ export function _openCombinedFilmSheet(filmData){
     ?`<div class="psp-editorial poster-ed" style="--ed-accent:${_pp4.accent}">${_pp4.inner}</div>`
     :posterUrl
       ?`<img class="pel-sheet-poster" src="${posterUrl}" data-title="${(title||"").replace(/"/g,'&quot;')}" loading="lazy" onerror="_cortoSheetPosterErr(this)" alt="">`
-      :`<div class="pel-sheet-poster-ph">🎬</div>`;
+      :`<div class="pel-sheet-poster-ph" aria-hidden="true">🎬</div>`;
   const metaLine=[director,year].filter(Boolean).join(' · ');
   const lbHref=lbUrlForFilm({title,lbSlug}); // guard de slugs incluido (marcador ⚠ jamás llega al href)
   const ps=document.getElementById('pel-sheet');

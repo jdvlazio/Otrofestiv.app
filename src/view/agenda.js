@@ -242,7 +242,7 @@ export function renderMiPlanCalendar(state){
       </div>`:''}
     </div>
     <div class="mplan-nav-btn-wrap right">
-      <button class="mplan-nav-btn" data-action="miPlanNav" data-dir="1" ${ve>=_maxDay?'disabled':''}>${ICONS.chevronR}</button>
+      <button class="mplan-nav-btn" data-action="miPlanNav" data-dir="1" aria-label="${t('aria_dia_sig')}" ${ve>=_maxDay?'disabled':''}>${ICONS.chevronR}</button>
     </div>
   </div>`;
 
@@ -372,7 +372,7 @@ export function renderMiPlanCalendar(state){
         <div class="col-end">
           ${isSeen
             ?`<button class="icon-btn-circle ag-fi-btn seen" data-title="${safeT}" data-day="${s.day||''}" data-time="${s.time||''}" data-venue="${(s.venue||'').replace(/"/g,'&quot;')}" data-dur="${s.duration||''}" data-action="markWatchedFromPlan" data-stop="1" aria-label="${t('aria_quitar_vista')}">${ICONS.check}</button>`
-            :`<button class="icon-btn-circle ag-fi-btn del" data-title="${safeT}" data-action="removeFromAgenda" data-stop="1">${ICONS.x}</button>`}
+            :`<button class="icon-btn-circle ag-fi-btn del" data-title="${safeT}" data-action="removeFromAgenda" data-stop="1" aria-label="${t('misc_quitar')}">${ICONS.x}</button>`}
         </div>
       </div>${_expandedFilm===(s._title||'')+(s.day||'')+(s.time||'')?`<div class="film-alts">${renderFilmAlternatives(state,s._title,s.day,s.time)}</div>`:''}${(()=>{const _mf=FILMS.find(fi=>fi.title===s._title&&fi.day===s.day&&fi.time===s.time);if(!_mf||!_mf.is_cortos||!_mf.film_list||!_mf.film_list.length) return'';return`<div class="mplan-prog-list">${_mf.film_list.map((item,n)=>_mkCortoItemHtml(item,n,{section:_mf.section||'',ratingEl:filmRatings[item.title]?`<span class="corto-rating-stars">${starsText(filmRatings[item.title])}</span>`:''})).join('')}</div>`;})()}`;
     });
@@ -518,7 +518,7 @@ function _recapPosterCard(state,title,{retro=false}={}){
     return`<div class="poster-card ended-poster js-open-pel${_rpp.ed?' poster-ed':''}" style="opacity:.6" data-title="${escXML(f.title)}"${_rpp.ed?` style="--ed-accent:${_rpp.accent};opacity:.6"`:''}>
       ${_rpp.ed?_rpp.inner:_rpp.src?`<img class="img-cover" src="${_rpp.src}" loading="lazy" onerror="this.remove()" alt="">`:``}
       <div class="ended-poster-footer">
-        <button class="ended-rate-btn" data-action="toggleWatched" data-title="${escXML(title)}" data-stop="1">${ICONS.check}</button>
+        <button class="ended-rate-btn" data-action="toggleWatched" data-title="${escXML(title)}" data-stop="1" aria-label="${t('aria_marcar_vista')}">${ICONS.check}</button>
         <div class="ended-poster-title">${_rdt}</div>
       </div>
     </div>`;
@@ -533,7 +533,7 @@ function _recapPosterCard(state,title,{retro=false}={}){
       :src?`<img class="img-cover" src="${src}" loading="lazy" onerror="this.remove()" alt="">`:``}
     <div class="ended-poster-footer">
       ${r?`<div class="label-track-amber">${starsText(r)}</div>`
-         :`<button class="ended-rate-btn" data-action="openPostViewRating" data-title="${safeT}" data-stop="1">★</button>`}
+         :`<button class="ended-rate-btn" data-action="openPostViewRating" data-title="${safeT}" data-stop="1" aria-label="${t('cta_calificar')}">★</button>`}
       <div class="ended-poster-title">${dt}</div>
     </div>
   </div>`;
@@ -555,7 +555,7 @@ function _obraPosterCard(state,item,section){
     ${_pp.inner}
     <div class="ended-poster-footer">
       ${r?`<div class="label-track-amber">${starsText(r)}</div>`
-         :`<button class="ended-rate-btn" data-action="openRatingSheet" data-title="${escXML(item.title||'')}" data-stop="1">★</button>`}
+         :`<button class="ended-rate-btn" data-action="openRatingSheet" data-title="${escXML(item.title||'')}" data-stop="1" aria-label="${t('cta_calificar')}">★</button>`}
       <div class="ended-poster-title">${item.title}</div>
     </div>
   </div>`;
@@ -797,7 +797,7 @@ export function renderContextualHeader(state, consensus){
       const safeT=(s._title||'').replace(/"/g,'&quot;').replace(/'/g,"&#39;");
       const stars=r?starsText(r):'';
       return`<div class="prio-chip-wrap js-open-pel" data-title="${escXML(f.title)}">
-        ${getFilmPoster(f)?_posterThumb(f,'prio-chip-poster'):`<div class="prio-chip-ph">🎬</div>`}
+        ${getFilmPoster(f)?_posterThumb(f,'prio-chip-poster'):`<div class="prio-chip-ph" aria-hidden="true">🎬</div>`}
         ${r?`<div class="prio-overlay-label">${stars}</div>`:''}
         ${!r?`<div class="prio-overlay-center">
           <button class="prio-star-pill" data-action="openPostViewRating" data-title="${safeT}" data-day="${s.day||''}" data-time="${s.time||''}" data-venue="${(s.venue||'').replace(/"/g,'&quot;')}" data-duration="${s.duration||''}" data-stop="1">★</button>
