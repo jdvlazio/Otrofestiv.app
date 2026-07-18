@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607181515">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607181515">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607181602">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607181602">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -565,7 +565,11 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .notice-banner-label{font-size:var(--t-xs);font-weight:var(--w-display);color:var(--amber);letter-spacing:.5px;text-transform:uppercase}
 .notice-banner-text{font-size:var(--t-sm);color:var(--white);margin-top:2px;line-height:1.4}
 .notice-banner-text span{color:var(--gray)}
-.notice-banner-close{background:none;border:none;color:var(--gray2);font-size:var(--t-md);cursor:pointer;padding:0;flex-shrink:0;line-height:1;font-family:var(--font)}
+.notice-banner-close{position:relative;background:none;border:none;color:var(--gray2);font-size:var(--t-md);cursor:pointer;padding:0;flex-shrink:0;line-height:1;font-family:var(--font)}
+/* Expander táctil (auditoría iconos 18 jul): botones icon-only AISLADOS llegan a
+   ~44px de área sin agrandar su caja visual. Solo aislados — los pares adyacentes
+   no se expanden (robarían taps al vecino). Guardián [icon-touch]. */
+.notice-banner-close::after,.poster-wl-dot::after,.prio-chip-rm::after,.av-pill-rm::after{content:'';position:absolute;inset:-14px;border-radius:50%}
 
 /* ── Poster ── */
 .lb-poster{width:var(--poster-xs-w);height:var(--poster-xs-h);object-fit:cover;border-radius:var(--r-sm);flex-shrink:0;display:block;background:var(--surf-2)}
@@ -1213,7 +1217,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .av-pills:empty{margin-bottom:0}
 .av-pill{display:inline-flex;align-items:center;gap:var(--sp-2);background:var(--amber-10);border:1px solid var(--amber-30);border-radius:var(--r-md);padding:var(--sp-1) var(--sp-3);font-size:var(--t-sm);color:var(--white);font-weight:var(--w-regular)}
 .av-pill.full{background:var(--red-08);border-color:var(--red-08);color:var(--red)}
-.av-pill-rm{background:none;border:none;cursor:pointer;color:var(--gray2);font-size:var(--t-base);padding:0;line-height:1;transition:color var(--tr-base)}
+.av-pill-rm{position:relative;background:none;border:none;cursor:pointer;color:var(--gray2);font-size:var(--t-base);padding:0;line-height:1;transition:color var(--tr-base)}
 .av-pill-rm:hover{color:var(--red)}
 .av-row-btns{display:flex;align-items:center;gap:var(--sp-2);flex-wrap:wrap}
 .av-inline-form{display:flex;align-items:center;gap:var(--sp-2);flex-wrap:wrap;margin-bottom:var(--sp-2)}
@@ -2771,13 +2775,13 @@ setTimeout(function(){
 <!-- ── Bottom Sheet Por Película ── -->
 <div class="pel-sheet-overlay" id="pel-overlay" data-action="closePelSheet"></div>
 <div class="pel-sheet" id="pel-sheet">
-  <div class="pel-sheet-topbar"><div class="pel-sheet-handle"></div><button class="pel-sheet-close" data-action="closePelSheet"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg></button></div>
+  <div class="pel-sheet-topbar"><div class="pel-sheet-handle"></div><button class="pel-sheet-close" data-action="closePelSheet" data-i18n-aria="misc_cerrar" aria-label="Cerrar"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg></button></div>
   <div class="pel-sheet-inner" id="pel-sheet-inner"></div>
 </div>
 <!-- Venue Sheet — se superpone al pel-sheet (z-index mayor), reusa el chrome .pel-sheet -->
 <div class="pel-sheet-overlay venue-sheet-overlay" id="venue-overlay" data-action="closeVenueSheet"></div>
 <div class="pel-sheet venue-sheet" id="venue-sheet">
-  <div class="pel-sheet-topbar"><div class="pel-sheet-handle"></div><button class="pel-sheet-close" data-action="closeVenueSheet"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg></button></div>
+  <div class="pel-sheet-topbar"><div class="pel-sheet-handle"></div><button class="pel-sheet-close" data-action="closeVenueSheet" data-i18n-aria="misc_cerrar" aria-label="Cerrar"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg></button></div>
   <div class="pel-sheet-inner" id="venue-sheet-inner"></div>
 </div>
 <!-- Chips de categoría — sticky, fuera de #hdr-programa para mantener chrome uniforme (38px en todos los tabs) -->
@@ -2847,7 +2851,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202607181515";
+    s.src="/src/main.js?v=202607181602";
     document.body.appendChild(s);
     // Watchdog de boot (P0 18 jul): si el grafo ESM murió en el import (caché
     // HTTP mixta tras deploys en ráfaga — main.js nuevo + módulo viejo sin el

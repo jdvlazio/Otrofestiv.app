@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `0baafff fix(boot): watchdog anti grafo-ESM-muerto + limpieza de handler SW duplicado`
+> Último commit: `cbed563 design(botones): canon con regla dueña + estado .on único + nombre festival 12px`
 
 ---
 
