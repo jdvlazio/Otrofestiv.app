@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `2cf367a design(iconos) lote 3: colores/strokes al sistema + dedup + chevronL cableado`
+> Último commit: `69e0144 fix(i18n): bandera del trigger no sincronizaba en EN — querySelector .active huérfano`
 
 ---
 

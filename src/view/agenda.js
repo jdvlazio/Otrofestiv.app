@@ -736,12 +736,15 @@ export function renderContextualHeader(state, consensus){
   // ── BETWEEN ─────────────────────────────────────────────────
   if(ph.phase==='between'){
     const{gapMin,gapFromMin,gapToMin,gapSuggestion,next}=ph;
-    // Formateador ÚNICO (mismo del contador "Termina en" y detalle de conflictos):
-    // "5 h 05" con horas, "45 min" sin ellas. Sin "min" cuando hay horas.
-    const gapLabel=_minFmt(gapMin);
-    const fromStr=`${String(Math.floor(gapFromMin/60)).padStart(2,'0')}:${String(gapFromMin%60).padStart(2,'0')}`;
-    const toStr=`${String(Math.floor(gapToMin/60)).padStart(2,'0')}:${String(gapToMin%60).padStart(2,'0')}`;
+    // Cuenta regresiva DESDE AHORA hasta la siguiente actividad (decisión Juan
+    // 18 jul 2026): la etiqueta dice "hasta tu siguiente actividad" → debe medir
+    // desde ahora, NO el largo total del hueco (que arrancaba en el fin de la
+    // última función y hacía parecer "ahora = esa hora vieja"). No se muestra la
+    // hora actual —el reloj lo tiene cada quien en su celular—: solo la hora de
+    // la función y este contador. _minFmt = formateador único ("2 h 40" / "45 min").
     const nowMin=_festNowMin();
+    const untilNextMin=Math.max(0,gapToMin-nowMin);
+    const gapLabel=_minFmt(untilNextMin);
     const fillPct=gapMin>0?Math.min(100,Math.round((nowMin-gapFromMin)/gapMin*100)):0;
     const suggest=gapSuggestion?(()=>{
       const{displayTitle:dt}=parseProgramTitle(gapSuggestion.title);
@@ -763,7 +766,7 @@ export function renderContextualHeader(state, consensus){
         ${t('misc_tiempo_libre')}
       </div>
       <div class="ctx-main-title">${gapLabel} ${t('misc_hasta_sig')}</div>
-      <div class="txt-gray-sm-vm">${fromStr} → ${toStr} · ${(()=>{const{displayTitle:dt}=parseProgramTitle(next._title||'');return dt.length>28?dt.slice(0,26)+'…':dt;})()}</div>
+      <div class="txt-gray-sm-vm">${next.time} · ${(()=>{const{displayTitle:dt}=parseProgramTitle(next._title||'');return dt.length>28?dt.slice(0,26)+'…':dt;})()}</div>
       <div class="mt-3">${suggest}</div>
     </div>`;
   }
