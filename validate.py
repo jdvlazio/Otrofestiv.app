@@ -1756,6 +1756,36 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar i18n-voseo: {_e}')
 
+# ── [chrome-glass] el chrome es vidrio, no muro (decisión Juan 18 jul 2026) ────
+# .topbar::before y .main-nav (mobile fixed) llevan velo translúcido + blur para
+# que el contenido pase como color difuminado. Alpha ≤ 0.6 y backdrop-filter
+# presente — si alguien lo vuelve opaco, el glass muere en silencio (pasó: vivió
+# meses al 72/88% sin que se percibiera).
+check = 'chrome-glass'
+try:
+    import re as _re
+    _html = open('index.html', encoding='utf-8').read()
+    _errs = []
+    for _name, _pat in (('topbar::before', r'\.topbar::before\{[^}]*\}'),
+                        ('main-nav fixed', r'\.main-nav\{position:fixed[^}]*\}')):
+        _m = _re.search(_pat, _html, _re.S)
+        if not _m:
+            _errs.append(f'{_name}: regla no encontrada'); continue
+        _rule = _m.group(0)
+        if 'backdrop-filter' not in _rule:
+            _errs.append(f'{_name}: sin backdrop-filter')
+        _a = _re.search(r'background:rgba\([^)]*?,\s*(0?\.\d+|1)\)', _rule)
+        if not _a:
+            _errs.append(f'{_name}: fondo sin alpha rgba')
+        elif float(_a.group(1)) > 0.6:
+            _errs.append(f'{_name}: alpha {_a.group(1)} > 0.6 (muro, no vidrio)')
+    if _errs:
+        fail(check, 'chrome glass roto: ' + '; '.join(_errs))
+    else:
+        ok(check, 'topbar y main-nav translúcidos (alpha ≤ 0.6) con blur')
+except Exception as _e:
+    warn(check, f'no se pudo verificar chrome-glass: {_e}')
+
 # ── [poster-single-owner] decisión y marco editorial SOLO en view/helpers.js ──
 # posterModel/posterParts (films) e itemPosterParts (obras) son los ÚNICOS dueños
 # de la decisión editorial-vs-imagen y del marco. Si _isEditorialPoster( o
