@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `a439f28 geometry: los 4 tabs a la MISMA línea base (56px) + guardián G01 ACTIVO`
+> Último commit: `ecb220d test(config): TODA la suite en viewport móvil 390x844 — regla dura mobile-only`
 
 ---
 
