@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607172258">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607172258">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607172305">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607172305">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -808,7 +808,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .paf-tag{display:flex;align-items:center;gap:var(--sp-1);font-size:var(--t-sm);font-weight:var(--w-bold);color:var(--amber);background:var(--amber-10);border:1px solid var(--amber-30);border-radius:var(--r-pill);padding:3px 8px 3px 10px;cursor:pointer}
 .paf-count{font-size:var(--t-sm);color:var(--gray)}
 /* Lista Hoy/Mañana */
-.programa-list{display:none;flex-direction:column;padding-bottom:calc(72px + max(env(safe-area-inset-bottom),20px))}
+.programa-list{display:none;flex-direction:column;padding-top:var(--sp-3);padding-bottom:calc(72px + max(env(safe-area-inset-bottom),20px))} /* padding-top: línea base G01 (56px) */
 .programa-list.visible{display:flex}
 /* Banda de HORA — misma anatomía que la banda del sec-hdr (tono surf-2, ritmo sp-2/sp-4, tracking .1em; border-top retirado: cero divisores sueltos). La hora se queda ÁMBAR: es dato temporal — las horas son ámbar en toda la app. Sticky funcional intacto. */
 .plist-time-hdr{padding:var(--sp-2) var(--sp-4);font-size:var(--t-label);font-weight:var(--w-bold);color:var(--amber);letter-spacing:.1em;background:var(--surf-2);position:sticky;top:var(--sticky-top-lista,0px);z-index:2;flex-shrink:0}
@@ -2815,7 +2815,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202607172258";
+    s.src="/src/main.js?v=202607172305";
     document.body.appendChild(s);
   }
   if (isApp || isDev) { bootApp(); return; }

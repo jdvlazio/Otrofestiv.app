@@ -6,7 +6,7 @@
 // subpíxeles/bordes). Si un tab introduce un espaciador fantasma, esto lo caza
 // con número y elemento culpable.
 const { test, expect } = require('@playwright/test');
-const { enterFestival } = require('./helpers');
+const { enterFestival, LEVIZA_SIMTIME } = require('./helpers');
 
 // Mide: bottom del chrome superior visible y top del primer elemento de
 // contenido visible (>4px de alto) del view activo. Devuelve el gap y quién es.
@@ -48,12 +48,8 @@ async function measureGap(page) {
   });
 }
 
-// FIXME(18 jul): activar tras calibrar la línea base con el dispositivo real de
-// Juan (CI midió 56px uniforme en 3 tabs + cartelera 66→corregida a 56; el
-// teléfono mostraba otra distribución — sospecha: SW con CSS viejo). Al activar:
-// quitar .fixme y este comentario.
-test.fixme('G01 — el primer contenido de cada tab arranca a la misma distancia del chrome', async ({ page }) => {
-  await enterFestival(page, 'tribeca2026');
+test('G01 — el primer contenido de cada tab arranca a la misma distancia del chrome', async ({ page }) => {
+  await enterFestival(page, 'leviza2026', LEVIZA_SIMTIME); // festival EN CURSO → Planear poblado (pending>0)
   // Estado POBLADO (el de la queja real): watchlist + plan guardado — los tabs
   // vacíos centran un hero y no miden lo mismo que la vida real.
   await page.evaluate(() => {

@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `8c1f728 design(programa): separadores de sección y bandas de hora al sistema de encabezados`
+> Último commit: `9fdba86 geometry: grid de cartelera alineado a la línea base + guardián G01 (fixme hasta calibrar)`
 
 ---
 
