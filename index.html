@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607180047">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607180047">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607180636">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607180636">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -1541,7 +1541,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 @media(max-width:768px){
   .mplan-nav{display:flex}
   
-  .main-nav{position:fixed;bottom:0;left:0;right:0;top:auto;border-top:1px solid var(--bdr);border-bottom:none;z-index:1000;padding-bottom:max(env(safe-area-inset-bottom),20px);background:rgba(20,20,20,0.88);backdrop-filter:blur(20px) saturate(160%);-webkit-backdrop-filter:blur(20px) saturate(160%);will-change:transform}
+  .main-nav{position:fixed;bottom:0;left:0;right:0;top:auto;border-top:none;border-bottom:none;z-index:1000;padding-bottom:max(env(safe-area-inset-bottom),20px);background:rgba(14,13,12,0.55);backdrop-filter:blur(28px) saturate(200%);-webkit-backdrop-filter:blur(28px) saturate(200%);will-change:transform}
   .main-nav-tab{border-bottom:none;border-top:none;margin-bottom:0;margin-top:0;padding:var(--sp-2) var(--sp-1);height:52px}
   .main-nav-tab.on{background:none}
 
@@ -1570,10 +1570,13 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
      Elimina permanentemente el gap entre dos stickies con --sticky-top-carta
      calculado erróneamente por timing de fuentes/datos. */
   .topbar{position:sticky;top:0;z-index:200;background:transparent;padding-top:env(safe-area-inset-top,0px)}
+  /* Glass destapado (decisión Juan 18 jul 2026): velo ~50% para que el contenido
+     pase como color difuminado bajo el chrome. No subir de 0.6 sin decisión
+     consciente — guardián [chrome-glass] en validate.py. */
   .topbar::before{content:'';position:absolute;inset:0;z-index:-1;
-    background:rgba(20,20,20,0.72);
-    backdrop-filter:blur(24px) saturate(180%);
-    -webkit-backdrop-filter:blur(24px) saturate(180%)}
+    background:rgba(14,13,12,0.5);
+    backdrop-filter:blur(28px) saturate(200%);
+    -webkit-backdrop-filter:blur(28px) saturate(200%)}
 
   .hdr{background:transparent}
   .hdr-fest-bar{background:transparent}
@@ -2818,7 +2821,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202607180047";
+    s.src="/src/main.js?v=202607180636";
     document.body.appendChild(s);
   }
   if (isApp || isDev) { bootApp(); return; }

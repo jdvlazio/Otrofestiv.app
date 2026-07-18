@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `d5dd358 fix(ya-vistas): estado de calificación POR OBRA en la fila de programa`
+> Último commit: `d1cad2a design(programa): sub-vista TODO al sistema — FLUSH + banda full-bleed + G01 la patrulla`
 
 ---
 
