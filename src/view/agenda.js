@@ -594,7 +594,7 @@ export function renderDiaryHTML(state,{retro=false}={}){
     const _watchedT=dayTitles.filter(tt=>watched.has(tt));
     const _retroT=retro?dayTitles.filter(tt=>!watched.has(tt)):[];
     const _retroGrid=_retroT.length?`<div class="poster-grid pg-miplan">${_retroT.map(tt=>_recapPosterCard(state,tt,{retro:true})).join('')}</div>`:'';
-    html+=`<div class="saved-day-lbl">${dayChip(day)}</div>${_watchedT.map(_entry).join('')}${_retroGrid}`;
+    html+=`<div class="saved-day-lbl">${dayLabelLong(day)}</div>${_watchedT.map(_entry).join('')}${_retroGrid}`;
   });
   const outside=[...watched].filter(tt=>!planTitles.has(tt)&&FILMS.some(f=>f.title===tt));
   if(outside.length){
