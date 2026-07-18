@@ -154,6 +154,15 @@ export function posterAmbient(src,fallbackHex,cb){
   const _fb=()=>{const rgb=_hexToRgb(fallbackHex);cb(rgb?_clampAmb(...rgb):null);};
   if(!src||src.startsWith('data:')){_fb();return;}
   if(_ambCache.has(src)){const v=_ambCache.get(src);v?cb(v):_fb();return;}
+  // Safari iOS sirve del caché HTTP la entrada SIN CORS que dejó el <img> de la
+  // ficha → el pedido crossOrigin falla y caía al fallback (bug MU-KI-RA ciruela,
+  // 18 jul). URL distinta = entrada de caché propia: TMDB baja a w92 (~5KB, de
+  // sobra para 24×24); otros dominios llevan query param. Same-origin no taintea.
+  let _src=src;
+  if(/^https?:/.test(src)&&!src.startsWith(location.origin)){
+    _src=src.includes('image.tmdb.org/t/p/w')?src.replace(/\/t\/p\/w\d+/,'/t/p/w92')
+        :src+(src.includes('?')?'&':'?')+'amb=1';
+  }
   const img=new Image();img.crossOrigin='anonymous';
   img.onload=()=>{try{
     const N=24,c=document.createElement('canvas');c.width=N;c.height=N;
@@ -165,13 +174,17 @@ export function posterAmbient(src,fallbackHex,cb){
       const mx=Math.max(qr,qg,qb)/255,mn=Math.min(qr,qg,qb)/255,l=(mx+mn)/2;
       if(l<.08||l>.92)continue;
       const s=mx===mn?0:(l>.5?(mx-mn)/(2-mx-mn):(mx-mn)/(mx+mn));
-      const score=s*Math.sqrt(n);
-      if(!best||score>best[0])best=[score,qr,qg,qb];}
-    const rgb=best?_clampAmb(best[1],best[2],best[3]):null;
+      // Puntaje por ÁREA (s×n, decisión Juan 18 jul): gana el color que domina
+      // el póster, no un acento chico ultra-saturado (con √n, las letras magenta
+      // de MU-KI-RA le ganaban a la selva). Piso de saturación .12: dominante
+      // casi-gris → mejor el acento de sección que un tinte barro.
+      const score=s*n;
+      if(!best||score>best[0])best=[score,qr,qg,qb,s];}
+    const rgb=(best&&best[4]>=.12)?_clampAmb(best[1],best[2],best[3]):null;
     _ambCache.set(src,rgb);rgb?cb(rgb):_fb();
   }catch(e){_ambCache.set(src,null);_fb();}};
   img.onerror=()=>{_ambCache.set(src,null);_fb();};
-  img.src=src;
+  img.src=_src;
 }
 
 // ── posterParts — puente RENDER de posterModel (films) ────────────────────────

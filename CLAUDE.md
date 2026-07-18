@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `2eccb8f design(color): negros con temperatura — sesgo cálido ~1.5% en superficies y bordes`
+> Último commit: `a145ca6 feat(ficha): color ambiental del póster — el header respira el color de la película`
 
 ---
 
