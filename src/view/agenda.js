@@ -746,10 +746,12 @@ export function renderContextualHeader(state, consensus){
     const untilNextMin=Math.max(0,gapToMin-nowMin);
     const gapLabel=_minFmt(untilNextMin);
     const fillPct=gapMin>0?Math.min(100,Math.round((nowMin-gapFromMin)/gapMin*100)):0;
+    // Sugerencia SOLO cuando algo cabe en el hueco (decisión Juan 18 jul 2026):
+    // sin sugerencia no se dice nada — "No hay actividades disponibles" era ruido
+    // que anunciaba una ausencia. La info precisa ya está en el contador + próxima.
     const suggest=gapSuggestion?(()=>{
       const{displayTitle:dt}=parseProgramTitle(gapSuggestion.title);
       const vc2=vcfg(gapSuggestion.venue);
-      const safeT=gapSuggestion.title.replace(/"/g,'&quot;').replace(/'/g,"&#39;");
       return`<div class="txt-gray-sm-mb1">${t('plan_cabe_hueco')}</div>
         <div class="ctx-suggest-card js-open-pel" data-title="${gapSuggestion.title.replace(/"/g,'&quot;')}" style="cursor:pointer">
           <div class="ctx-suggest-badge">${gapSuggestion.time}</div>
@@ -758,7 +760,7 @@ export function renderContextualHeader(state, consensus){
             <div class="ctx-suggest-venue">${vc2.short}</div>
           </div>
         </div>`;
-    })():`<div class="txt-caption-gray">${t('plan_sin_actividades')}</div>`;
+    })():'';
     return`<div class="ctx-header">
       <div class="txt-green70 ctx-eyebrow">
         ${ICONS.clock}
@@ -766,7 +768,7 @@ export function renderContextualHeader(state, consensus){
       </div>
       <div class="ctx-main-title">${gapLabel} ${t('misc_hasta_sig')}</div>
       <div class="txt-gray-sm-vm">${next.time} · ${(()=>{const{displayTitle:dt}=parseProgramTitle(next._title||'');return dt.length>28?dt.slice(0,26)+'…':dt;})()}</div>
-      <div class="mt-3">${suggest}</div>
+      ${suggest?`<div class="mt-3">${suggest}</div>`:''}
     </div>`;
   }
 
