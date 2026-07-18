@@ -1845,6 +1845,38 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar warm-neutrals: {_e}')
 
+# ── [poster-ambient] el color ambiental sale SOLO del sampler único ────────────
+# posterAmbient (view/helpers.js) es el único que muestrea color (getImageData)
+# y el único que produce el tinte --amb, siempre DOMADO (clamp sat/lum). Un
+# getImageData en otro módulo o un --amb puesto a mano = color crudo sin domar.
+check = 'poster-ambient'
+try:
+    import glob as _glob
+    _off = []
+    for _sf in _glob.glob('src/**/*.js', recursive=True):
+        if _sf.endswith('view/helpers.js'):
+            continue
+        _c = open(_sf, encoding='utf-8').read()
+        for _i, _ln in enumerate(_c.splitlines(), 1):
+            if _ln.strip().startswith('//'):
+                continue
+            if 'getImageData' in _ln:
+                _off.append(f'{_sf}:{_i} getImageData')
+            if "setProperty('--amb'" in _ln and 'sheets-controller' not in _sf:
+                _off.append(f'{_sf}:{_i} --amb a mano')
+    _html = open('index.html', encoding='utf-8').read()
+    if '.pel-sheet.amb{' not in _html:
+        _off.append('index.html: falta la regla .pel-sheet.amb')
+    _helpers = open('src/view/helpers.js', encoding='utf-8').read()
+    if 'function posterAmbient' not in _helpers or '_clampAmb' not in _helpers:
+        _off.append('helpers.js: posterAmbient/_clampAmb ausentes')
+    if _off:
+        fail(check, 'color ambiental fuera del sampler único: ' + '; '.join(_off[:5]))
+    else:
+        ok(check, 'sampler único posterAmbient con clamp; --amb solo del hook')
+except Exception as _e:
+    warn(check, f'no se pudo verificar poster-ambient: {_e}')
+
 # ── [poster-single-owner] decisión y marco editorial SOLO en view/helpers.js ──
 # posterModel/posterParts (films) e itemPosterParts (obras) son los ÚNICOS dueños
 # de la decisión editorial-vs-imagen y del marco. Si _isEditorialPoster( o
@@ -2004,7 +2036,7 @@ try:
         'src/view/agenda.js': 1622,
         'src/main.js': 1551,
         'src/i18n/i18n.js': 1400,
-        'src/controller/sheets-controller.js': 1325,
+        'src/controller/sheets-controller.js': 1340,  # +15: hook _applyAmbient (color ambiental, 18 jul 2026)
         'src/controller/handlers.js': 915,
     }
     _over = []

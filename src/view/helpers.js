@@ -130,6 +130,50 @@ export function itemPosterParts(item, section, imgClass, {header=false}={}){
     inner:src?`<img class="${imgClass}" src="${src}" loading="lazy" onerror="this.remove()" alt="">`:''};
 }
 
+// ── posterAmbient — color ambiental del póster (decisión Juan 18 jul 2026) ────
+// ÚNICO sampler de color de la app (guardián [poster-ambient]: getImageData
+// prohibido fuera de este módulo). Extrae el color dominante VIBRANTE del póster
+// (bucket cuantizado con mejor saturación×√frecuencia, ignorando casi-negros y
+// casi-blancos) y lo DOMA a la paleta: saturación tope .55, luminancia .30–.42 —
+// nunca un neón, nunca compite con el ámbar. CORS sin permiso (CDNs ajenos, ej.
+// Tribeca) → fallback al acento de sección, mismo clamp. cb recibe [r,g,b] o
+// null (sin src ni fallback). Cache por src — un póster se muestrea una vez.
+const _ambCache=new Map();
+function _hexToRgb(h){const c=String(h||'').replace('#','');return c.length>=6?[parseInt(c.slice(0,2),16),parseInt(c.slice(2,4),16),parseInt(c.slice(4,6),16)]:null;}
+function _clampAmb(r,g,b){
+  r/=255;g/=255;b/=255;
+  const mx=Math.max(r,g,b),mn=Math.min(r,g,b);let h=0,s=0;const l=(mx+mn)/2;
+  if(mx!==mn){const d=mx-mn;s=l>.5?d/(2-mx-mn):d/(mx+mn);
+    h=mx===r?((g-b)/d+(g<b?6:0)):mx===g?((b-r)/d+2):((r-g)/d+4);h/=6;}
+  s=Math.min(s,.55);const l2=Math.max(.30,Math.min(l,.42));
+  const q=l2<.5?l2*(1+s):l2+s-l2*s,p=2*l2-q;
+  const f=t=>{t=(t%1+1)%1;return t<1/6?p+(q-p)*6*t:t<1/2?q:t<2/3?p+(q-p)*(2/3-t)*6:p;};
+  return [f(h+1/3),f(h),f(h-1/3)].map(x=>Math.round(x*255));
+}
+export function posterAmbient(src,fallbackHex,cb){
+  const _fb=()=>{const rgb=_hexToRgb(fallbackHex);cb(rgb?_clampAmb(...rgb):null);};
+  if(!src||src.startsWith('data:')){_fb();return;}
+  if(_ambCache.has(src)){const v=_ambCache.get(src);v?cb(v):_fb();return;}
+  const img=new Image();img.crossOrigin='anonymous';
+  img.onload=()=>{try{
+    const N=24,c=document.createElement('canvas');c.width=N;c.height=N;
+    const x=c.getContext('2d');x.drawImage(img,0,0,N,N);
+    const d=x.getImageData(0,0,N,N).data;const buckets=new Map();
+    for(let i=0;i<d.length;i+=4){const k=(d[i]>>5)+'.'+(d[i+1]>>5)+'.'+(d[i+2]>>5);buckets.set(k,(buckets.get(k)||0)+1);}
+    let best=null;
+    for(const[k,n]of buckets){const[qr,qg,qb]=k.split('.').map(v=>v*32+16);
+      const mx=Math.max(qr,qg,qb)/255,mn=Math.min(qr,qg,qb)/255,l=(mx+mn)/2;
+      if(l<.08||l>.92)continue;
+      const s=mx===mn?0:(l>.5?(mx-mn)/(2-mx-mn):(mx-mn)/(mx+mn));
+      const score=s*Math.sqrt(n);
+      if(!best||score>best[0])best=[score,qr,qg,qb];}
+    const rgb=best?_clampAmb(best[1],best[2],best[3]):null;
+    _ambCache.set(src,rgb);rgb?cb(rgb):_fb();
+  }catch(e){_ambCache.set(src,null);_fb();}};
+  img.onerror=()=>{_ambCache.set(src,null);_fb();};
+  img.src=src;
+}
+
 // ── posterParts — puente RENDER de posterModel (films) ────────────────────────
 // posterModel(f) es LA decisión (kind/src/accent); posterParts la vuelve HTML de
 // la rama editorial. Análogo de itemPosterParts para films: toda superficie que

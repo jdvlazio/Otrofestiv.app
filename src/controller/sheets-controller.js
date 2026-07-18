@@ -8,7 +8,7 @@
 
 import { FESTIVAL_CONFIG, MAX_REMEMBERED_SLOTS, NOTICES, TMDB_IMG, _DEFAULT_FEST_ID } from '../config.js';
 import { DAY_ABBR, DAY_NUM, ICONS, _secLabel, _sectionColor, escXML, isFullDayBlocked, makeProgramPoster, parseProgramTitle, renderRatingStarsHTML } from '../view/components.js';
-import { _getItemPoster, _mkCortoItemHtml, _posterStyle, dayLabel, emptyState, durFmt, flagFmt, getCortoItemPoster, getFilmPoster, getFilmPosterUntitled, getPosterSrc, itemPosterParts, posterParts, sala, starsText, vcfg } from '../view/helpers.js';
+import { _getItemPoster, _mkCortoItemHtml, _posterStyle, dayLabel, emptyState, durFmt, flagFmt, getCortoItemPoster, getFilmPoster, getFilmPosterUntitled, getPosterSrc, itemPosterParts, posterAmbient, posterParts, sala, starsText, vcfg } from '../view/helpers.js';
 import { closeAvSheet, closePVRating, closePrioLimit } from '../view/sheets.js';
 import { showConflictModal, showToast } from '../view/feedback.js';
 import { renderAgenda, renderAvBlocks, renderDiaryHTML } from '../view/agenda.js';
@@ -254,7 +254,24 @@ export function openPelSheet(title){
   document.getElementById('pel-overlay').classList.add('open');
   _ps.classList.add('open');
   _ps.classList.toggle('compact', totalFn>=3);
+  _applyAmbient(_ps, getFilmPoster(f), _sectionColor(f.section||''));
   _pspAttach();
+}
+
+// Color ambiental de la ficha: limpia el tinte anterior y aplica el del póster
+// actual vía posterAmbient (único sampler). El token en dataset evita que un
+// muestreo lento pinte una ficha que ya cambió (abrir A→cerrar→abrir B rápido).
+function _applyAmbient(ps, src, fbHex){
+  if(!ps) return;
+  ps.classList.remove('amb'); ps.style.removeProperty('--amb');
+  const _tok = ps.dataset.ambFor = src || fbHex || '';
+  if(!_tok) return;
+  posterAmbient(src, fbHex, rgb => {
+    if(rgb && ps.dataset.ambFor === _tok && ps.classList.contains('open')){
+      ps.style.setProperty('--amb', rgb.join(','));
+      ps.classList.add('amb');
+    }
+  });
 }
 
 export function closePelSheet(){
@@ -482,6 +499,7 @@ export function openCortoSheet(title, country, duration, section, flags, directo
   const _psCo=document.getElementById('pel-sheet');
   _psCo.scrollTop=0;
   _psCo.classList.add('open');
+  _applyAmbient(_psCo, posterUrl, _sectionColor(section||''));
 }
 
 export function openCortoSheetFromEl(el,e){
@@ -545,6 +563,7 @@ export function _openCombinedFilmSheet(filmData){
   const _psC=document.getElementById('pel-sheet');
   _psC.scrollTop=0;
   _psC.classList.add('open');
+  _applyAmbient(_psC, posterUrl, _sectionColor(_sec4));
 }
 
 export function _findParentProgram(cortoTitle){

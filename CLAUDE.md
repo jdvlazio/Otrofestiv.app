@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `a47e187 design(motion): spring canónico en los 9 sheets + skeleton shimmer de pósters`
+> Último commit: `2eccb8f design(color): negros con temperatura — sesgo cálido ~1.5% en superficies y bordes`
 
 ---
 
