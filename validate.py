@@ -1948,6 +1948,31 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar button-canon: {_e}')
 
+# ── [star-semantics] la estrella es CALIFICACIÓN; prioridad = bookmark ─────────
+# Decisión Juan 18 jul 2026: ★/ICONS.star SOLO para rating (convención cine);
+# prioridad usa ICONS.bookmark. Una línea de PRIORIDAD (togglePriority/
+# togglePelPrio/cta_priorizar/lbl_prioridades) con ICONS.star, starFill o ★
+# reintroduce la colisión que confundía prioridad con calificación.
+check = 'star-semantics'
+try:
+    import glob as _glob
+    _hits = []
+    _PRIO = ('togglePriority', 'togglePelPrio', 'cta_priorizar', 'cta_priorizada',
+             'lbl_prioridades', 'toast_priorizada', 'prio_stale_banner', 'lbl_prio_corto',
+             'toast_prioridad_quitada')
+    for _sf in _glob.glob('src/**/*.js', recursive=True):
+        for _i, _ln in enumerate(open(_sf, encoding='utf-8').read().splitlines(), 1):
+            if _ln.strip().startswith('//') or _ln.strip().startswith('*'):
+                continue
+            if any(_p in _ln for _p in _PRIO) and ('ICONS.star' in _ln or '★' in _ln):
+                _hits.append(f'{_sf}:{_i}')
+    if _hits:
+        fail(check, 'estrella en contexto de PRIORIDAD (usar ICONS.bookmark): ' + '; '.join(_hits[:6]))
+    else:
+        ok(check, 'estrella reservada a calificación; prioridad con bookmark')
+except Exception as _e:
+    warn(check, f'no se pudo verificar star-semantics: {_e}')
+
 # ── [poster-single-owner] decisión y marco editorial SOLO en view/helpers.js ──
 # posterModel/posterParts (films) e itemPosterParts (obras) son los ÚNICOS dueños
 # de la decisión editorial-vs-imagen y del marco. Si _isEditorialPoster( o
@@ -2105,7 +2130,7 @@ try:
     #   i18n.js (diccionarios es/en, es DATA) · sheets-controller.js · handlers.js
     _ALLOW = {
         'src/view/agenda.js': 1622,
-        'src/main.js': 1551,
+        'src/main.js': 1554,  # +3: leyenda de vocabulario prioridad=bookmark (18 jul)
         'src/i18n/i18n.js': 1405,  # +5: aria_dia_sig ×3 locales (a11y iconos, 18 jul)
         'src/controller/sheets-controller.js': 1350,  # +25: hook _applyAmbient + prewarm pointerdown (color ambiental, 18 jul 2026)
         'src/controller/handlers.js': 915,

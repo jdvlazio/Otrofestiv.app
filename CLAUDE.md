@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `cbed563 design(botones): canon con regla dueña + estado .on único + nombre festival 12px`
+> Último commit: `09d31e1 a11y(iconos) lote 1: aria-hidden de fábrica + 8 labels + 🎬 silenciado + táctil aislados`
 
 ---
 
