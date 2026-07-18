@@ -513,20 +513,20 @@ function _recapPosterCard(state,title,{retro=false}={}){
   // Modo retro (Modo Recuerdo): ítem del plan SIN marcar — póster atenuado con
   // ✓ para marcar Vista (toggleWatched: en programas dispara la cola por obra).
   if(retro&&!watched.has(title)){
-    const{displayTitle:_rdt}=parseProgramTitle(title);
     const _rpp=posterParts(f,{header:true,body:''});
     return`<div class="poster-card ended-poster js-open-pel${_rpp.ed?' poster-ed':''}" style="opacity:.6" data-title="${escXML(f.title)}"${_rpp.ed?` style="--ed-accent:${_rpp.accent};opacity:.6"`:''}>
       ${_rpp.ed?_rpp.inner:_rpp.src?`<img class="img-cover" src="${_rpp.src}" loading="lazy" onerror="this.remove()" alt="">`:``}
       <div class="ended-poster-footer">
         <button class="ended-rate-btn" data-action="toggleWatched" data-title="${escXML(title)}" data-stop="1" aria-label="${t('aria_marcar_vista')}">${ICONS.check}</button>
-        <div class="ended-poster-title">${_rdt}</div>
       </div>
     </div>`;
   }
-  const{displayTitle:dt}=parseProgramTitle(title);
   const _pp=posterParts(f,{header:true,body:''}); // decisión única (posterModel)
   const src=_pp.src||'';
   const safeT=title.replace(/"/g,'&quot;').replace(/'/g,"&#39;");
+  // Diario = grid de PÓSTERS con calificación (decisión Juan): sin título dentro
+  // del póster (el afiche identifica; tap abre la ficha); scrim más marcado para
+  // que las estrellas ámbar resalten. El título vive en la fila del programa.
   return`<div class="poster-card ended-poster js-open-pel${_pp.ed?' poster-ed':''}" data-title="${escXML(f.title)}"${_pp.ed?` style="--ed-accent:${_pp.accent}"`:''}>
     ${_pp.ed
       ?_pp.inner
@@ -534,7 +534,6 @@ function _recapPosterCard(state,title,{retro=false}={}){
     <div class="ended-poster-footer">
       ${r?`<div class="label-track-amber">${starsText(r)}</div>`
          :`<button class="ended-rate-btn" data-action="openPostViewRating" data-title="${safeT}" data-stop="1" aria-label="${t('cta_calificar')}">★</button>`}
-      <div class="ended-poster-title">${dt}</div>
     </div>
   </div>`;
 }
@@ -556,7 +555,6 @@ function _obraPosterCard(state,item,section){
     <div class="ended-poster-footer">
       ${r?`<div class="label-track-amber">${starsText(r)}</div>`
          :`<button class="ended-rate-btn" data-action="openRatingSheet" data-title="${escXML(item.title||'')}" data-stop="1" aria-label="${t('cta_calificar')}">★</button>`}
-      <div class="ended-poster-title">${item.title}</div>
     </div>
   </div>`;
 }
