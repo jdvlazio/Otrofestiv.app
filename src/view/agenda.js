@@ -233,12 +233,12 @@ export function renderMiPlanCalendar(state){
       <div class="mplan-nav-day${isPastVs?' past':''}" data-action="selectMiPlanDay" data-index="${vs}">
         <div class="mplan-nav-day-name">${_lblLocalized((DAY_SHORT_EN[DAYS[vs].k]||DAYS[vs].lbl).split(' ')[0])}</div>
         <div class="mplan-nav-day-num${vs===activeMiPlanDay?' wk-active-num':''}">${DAYS[vs].d}</div>
-        ${vs===activeMiPlanDay?'<div class="mplan-nav-day-arrow"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><path d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg></div>':''}
+        ${vs===activeMiPlanDay?'<div class="mplan-nav-day-arrow">${ICONS.chevronD}</div>':''}
       </div>
       ${ve!==vs?`<div class="mplan-nav-day${isPastVe?' past':''}" data-action="selectMiPlanDay" data-index="${ve}">
         <div class="mplan-nav-day-name">${_lblLocalized((DAY_SHORT_EN[DAYS[ve].k]||DAYS[ve].lbl).split(' ')[0])}</div>
         <div class="mplan-nav-day-num${ve===activeMiPlanDay?' wk-active-num':''}">${DAYS[ve].d}</div>
-        ${ve===activeMiPlanDay?'<div class="mplan-nav-day-arrow"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><path d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg></div>':''}
+        ${ve===activeMiPlanDay?'<div class="mplan-nav-day-arrow">${ICONS.chevronD}</div>':''}
       </div>`:''}
     </div>
     <div class="mplan-nav-btn-wrap right">
@@ -297,7 +297,7 @@ export function renderMiPlanCalendar(state){
     return`<div class="${colClass}" style="height:${PHDR+TOTAL}px" data-action="selectMiPlanDay" data-index="${i}">
       <div class="mplan-wk-col-hdr">
         <div class="mplan-wk-col-day"><span class="mplan-wk-day-name">${_lblLocalized((DAY_SHORT_EN[DAYS[i].k]||DAYS[i].lbl).split(' ')[0])}</span><span class="mplan-wk-col-date${dayFilms.length?' wk-has':''}">${DAYS[i].d}</span></div>
-        ${dayFilms.length?(isActive?'<div class="mplan-wk-col-arrow"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><path d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg></div>':'<div class="mplan-wk-col-dot"></div>'):''}
+        ${dayFilms.length?(isActive?'<div class="mplan-wk-col-arrow">${ICONS.chevronD}</div>':'<div class="mplan-wk-col-dot"></div>'):''}
       </div>
       ${gridHtml}${nowHtml}${blocksHtml}
     </div>`;
@@ -624,7 +624,7 @@ export function renderContextualHeader(state, consensus){
       :`${t('plan_viste_n')} ${totalWatched} ${totalWatched!==1?t('misc_peliculas'):t('misc_pelicula')}`;
     return`<div class="pad-sm">
       <div class="ctx-eyebrow">
-        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+        ${ICONS.star}
         ${(FESTIVAL_CONFIG[_activeFestId]||{}).name||''} · ${_langDates(FESTIVAL_CONFIG[_activeFestId])}
       </div>
       <div class="ctx-main-title">${mainTitle}</div>
@@ -712,7 +712,7 @@ export function renderContextualHeader(state, consensus){
 
     return`<div class="ctx-header">
       <div class="ctx-eyebrow">
-        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        ${ICONS.clock}
         ${eyebrowLabel}
       </div>
       <div class="ctx-next-row js-open-pel" data-title="${escXML(next._title||'')}" style="cursor:pointer">
@@ -749,11 +749,10 @@ export function renderContextualHeader(state, consensus){
     const suggest=gapSuggestion?(()=>{
       const{displayTitle:dt}=parseProgramTitle(gapSuggestion.title);
       const vc2=vcfg(gapSuggestion.venue);
-      const dur=parseInt(gapSuggestion.duration)||DEFAULT_DURATION_MIN;
       const safeT=gapSuggestion.title.replace(/"/g,'&quot;').replace(/'/g,"&#39;");
       return`<div class="txt-gray-sm-mb1">${t('plan_cabe_hueco')}</div>
         <div class="ctx-suggest-card js-open-pel" data-title="${gapSuggestion.title.replace(/"/g,'&quot;')}" style="cursor:pointer">
-          <div class="ctx-suggest-badge">${gapSuggestion.time}<br>${dur}m</div>
+          <div class="ctx-suggest-badge">${gapSuggestion.time}</div>
           <div class="ctx-suggest-info">
             <div class="ctx-suggest-title">${dt.length>26?dt.slice(0,24)+'…':dt}</div>
             <div class="ctx-suggest-venue">${vc2.short}</div>
@@ -762,7 +761,7 @@ export function renderContextualHeader(state, consensus){
     })():`<div class="txt-caption-gray">${t('plan_sin_actividades')}</div>`;
     return`<div class="ctx-header">
       <div class="txt-green70 ctx-eyebrow">
-        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        ${ICONS.clock}
         ${t('misc_tiempo_libre')}
       </div>
       <div class="ctx-main-title">${gapLabel} ${t('misc_hasta_sig')}</div>
@@ -817,7 +816,7 @@ export function renderContextualHeader(state, consensus){
     const dayName=(dayLabel(todayScreenings[0]?.day)||'').split(' ')[0]||t('bar_hoy');
     return`<div class="ctx-header">
       <div class="ctx-eyebrow" style="color:var(--gray)">
-        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z"/></svg>
+        ${ICONS.moon}
         ${t('plan_tu_dia_en',{dia:dayName.toLowerCase()})} ${(FESTIVAL_CONFIG[_activeFestId]||{}).name||''}
       </div>
       <div class="ctx-main-title">${total} ${total!==1?t('misc_peliculas'):t('misc_pelicula')} ${total===1?t('plan_vista_hoy'):t('plan_vistas_hoy')}</div>
@@ -934,7 +933,7 @@ export function renderFilmListHTML(state){
     const durStr=durFmt(f?.duration);                                       // solo f.duration
     const conflictHtml=conflict
       ?`<div class="int-item-conflict">
-          <svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z"/></svg>
+          ${ICONS.alert}
           ${t('conflict_con')} ${conflict}
         </div>`
       :'';

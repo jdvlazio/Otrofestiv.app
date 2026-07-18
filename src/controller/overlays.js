@@ -308,7 +308,7 @@ export function lugarOpen(){
   drop.innerHTML = opts.map(v=>{
     const isActive = (v.short==='all' && activeVenue==='all') || (activeVenue===v.short);
     return '<div class="lugar-opt'+(isActive?' on':'')+'" data-v="'+v.short+'">'
-      +(v.short!=='all'?'<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>':'')
+      +(v.short!=='all'?ICONS.pin:'')
       +'<span>'+v.label+'</span>'
       // "todos los lugares" sin conteo (total general sin referencia confunde);
       // los venues individuales sí muestran su número.

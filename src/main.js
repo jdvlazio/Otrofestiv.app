@@ -43,7 +43,7 @@ import { _resolveVenue, _gapSuggestion, _getFestivalPhase, venueTravelMins, trav
 // ── Step 6a: view/components.js — capa presentacional foundational de Wave 6
 //   (posters, builders HTML puros, helpers sección/rating/festival). ──────────
 import {
-  ICONS, CHECK_SVG, DAY_ABBR, DAY_NUM,
+  ICONS, DAY_ABBR, DAY_NUM,
   makeProgramPoster, makeEventPoster, makeSorpresaPoster,
   _secLabel, _sectionColor, renderRatingStarsHTML, starSVG,
   _renderFestivalSelectorHTML, _classifyFestival,
@@ -446,7 +446,7 @@ FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202607181629';
+const BUILD_VERSION='202607181646';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';
@@ -1095,7 +1095,6 @@ state.subscribeRender(
 
 // ── Genera el splash rail y el festival selector desde FESTIVAL_CONFIG ──
 // Agregar un festival = una entrada en FESTIVAL_CONFIG. Nada más que tocar.
-// CHECK_SVG → src/view/components.js (Step 6a). Importado.
 // _classifyFestival — fuente única de verdad para el estado temporal de un festival.
 // Usada en splash, sheet, y cualquier contexto futuro.
 // Retorna: 'ongoing' | 'upcoming' | 'past'
