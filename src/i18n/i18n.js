@@ -431,7 +431,6 @@ export const _I18N = {
     "plan_restaurar_suger": "Lo podés encontrar de nuevo en Sugerencias.",
     "error_cargar_miplan": "Error al cargar Mi Plan:",
     "plan_no_alts_horario": "No hay alternativas en este horario — revisá Sugerencias.",
-    "plan_sin_actividades": "No hay actividades disponibles para este horario.",
     "plan_no_incluidas": "No incluidas",
     "error_calcular": "Error al calcular:",
     "meta_corto_incluye": "Agregar el corto suma su programa completo.",
@@ -859,7 +858,6 @@ export const _I18N = {
     "plan_restaurar_suger": "You can find it again in Suggestions.",
     "error_cargar_miplan": "Error loading My Plan:",
     "plan_no_alts_horario": "No alternatives at this time — check Suggestions.",
-    "plan_sin_actividades": "No activities available for this slot.",
     "plan_no_incluidas": "Not included",
     "error_calcular": "Error calculating:",
     "meta_corto_incluye": "Adding the short adds its full program.",
@@ -1201,7 +1199,6 @@ export const _I18N = {
     "plan_alt": "alt.",
     "plan_restaurar_suger": "Você pode encontrá-lo de novo em Sugestões.",
     "plan_no_alts_horario": "Não há alternativas neste horário — confira Sugestões.",
-    "plan_sin_actividades": "Não há atividades disponíveis para este horário.",
     "plan_no_incluidas": "Não incluídas",
     "plan_fecha_pendiente": "Nova data pendente.",
     // ── Lote 11: alertas del sistema — notice + warn + error ──

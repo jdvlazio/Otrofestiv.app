@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `31ff522 fix(P0): ${ICONS.chevronD} literal bajo los días de Mi Plan + guardián de DOM`
+> Último commit: `c323986 fix(banderas): países separados por coma → banderas, no globo + guardián`
 
 ---
 
