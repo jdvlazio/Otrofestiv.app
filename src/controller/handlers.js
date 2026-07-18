@@ -91,7 +91,7 @@ export function toggleWL(title,e){
       const _short=displayTitle.length>28?displayTitle.slice(0,26)+'…':displayTitle;
       setTimeout(()=>showToast(`"${_short}" ${t('plan_bloqueado_disp')}`,'warn',5000),300);
     } else if(activeMNav==='mnav-cartelera'||activeMNav==='mnav-seleccion'){
-      showActionToast(`${ICONS.heartFill} ${t('cta_en_intereses')}`,`${ICONS.star} ${t('cta_priorizar')}`,()=>togglePriority(title));
+      showActionToast(`${ICONS.heartFill} ${t('cta_en_intereses')}`,`${ICONS.bookmark} ${t('cta_priorizar')}`,()=>togglePriority(title));
     } else {
       showToast(`${ICONS.heartFill} ${t('cta_en_intereses')}`,'info');
     }
@@ -142,7 +142,7 @@ export function togglePelPrio(title){
   const btn=document.getElementById('pel-prio-btn')||document.getElementById('corto-prio-btn');
   if(!btn) return;
   const inPrio=prioritized.has(title);
-  btn.innerHTML=(inPrio?ICONS.starFill:ICONS.star)+' '+(inPrio?t('cta_priorizada'):t('cta_priorizar'));
+  btn.innerHTML=(inPrio?ICONS.bookmarkFill:ICONS.bookmark)+' '+(inPrio?t('cta_priorizada'):t('cta_priorizar'));
   btn.className='pel-sheet-action-btn'+(inPrio?' act-prio':' btn-secondary');
   // Priorizar auto-añade a watchlist — sincronizar el botón de Intereses
   const inWL=watchlist.has(title);
@@ -169,7 +169,7 @@ export function togglePelWL(title,e){
   btn.className='pel-sheet-action-btn'+(inWL?' act-on btn-primary':' btn-primary');
   if(wasInWL&&!inWL) closePelSheet(); // quitar de intereses → cerrar sheet
   if(!wasInWL&&inWL){
-    showActionToast(`${ICONS.heartFill} ${t('cta_en_intereses')}`,`${ICONS.star} ${t('cta_priorizar')}`,()=>togglePriority(title));
+    showActionToast(`${ICONS.heartFill} ${t('cta_en_intereses')}`,`${ICONS.bookmark} ${t('cta_priorizar')}`,()=>togglePriority(title));
   }
 }
 
@@ -376,7 +376,7 @@ export function togglePriority(title,cost){
     state.update('prioritized', s=>state._delFromSet(s,title));
     // 4. PERSIST + surgical (render automático vía pipeline)
     savePrio();updateCardState(title);
-    showToast(`${ICONS.star} ${t('toast_prioridad_quitada')}`,'info');
+    showToast(`${ICONS.bookmark} ${t('toast_prioridad_quitada')}`,'info');
   } else {
     // Branch B: prioritize (con limit check)
     if(prioritized.size>=PRIO_LIMIT){
@@ -389,7 +389,7 @@ export function togglePriority(title,cost){
       if(_addWL) state.batchUpdate({watchlist:state._addToSet(watchlist,title), watched:state._delFromSet(watched,title)});
     });
     savePrio();if(_addWL){saveWL();saveWatched();}updateCardState(title);
-    showToast(`${ICONS.starFill} ${t('cta_priorizada')} · ${prioritized.size+1}/${PRIO_LIMIT}`,'info');
+    showToast(`${ICONS.bookmarkFill} ${t('cta_priorizada')} · ${prioritized.size+1}/${PRIO_LIMIT}`,'info');
   }
   if(activeView==='day') updateHorarioPrioBtn(title);   // surgical: botón prio del pel-sheet
 }
@@ -402,7 +402,7 @@ export function swapPriority(removeTitle, addTitle){
   updateAgTab();
   closePrioLimit();
   const{displayTitle}=parseProgramTitle(addTitle);
-  showToast(`${ICONS.starFill} ${t('toast_priorizada',{title:displayTitle})}`,'info');
+  showToast(`${ICONS.bookmarkFill} ${t('toast_priorizada',{title:displayTitle})}`,'info');
 }
 
 export function markWatchedFromPlan(title, day, time, venue, duration, e){

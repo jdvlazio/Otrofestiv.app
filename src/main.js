@@ -446,7 +446,7 @@ FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202607181602';
+const BUILD_VERSION='202607181609';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';
@@ -475,7 +475,9 @@ const BUILD_VERSION='202607181602';
    Mi Plan          agenda generada         Agenda, Calendario
    Planear          tab de generación       Algoritmo, Cálculo
    Opciones         resultados del alg.     Escenarios, Variantes
-   Prioridad        ★ película destacada    Favorita, Top
+   Prioridad        🔖 (bookmark) película destacada — NO estrella: la ★ es
+                    CALIFICACIÓN (convención cine). Prioridad = marcador.
+                                           Favorita, Top
    Disponibilidad   bloques de tiempo libre Horario, Agenda libre
    Añadir           acción de Plan (función específica)  Guardar, Seleccionar
    Interés          acción de ♥ — añadir a la colección  Favorito, Me gusta

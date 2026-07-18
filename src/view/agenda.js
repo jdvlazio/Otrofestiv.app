@@ -286,7 +286,7 @@ export function renderMiPlanCalendar(state){
       const showVenue=blockH>44;
       const vc2=vcfg(s.venue);
       return`<div class="mplan-wk-block ${type}${stateClass}" style="top:${top.toFixed(0)}px;height:${blockH.toFixed(0)}px" data-fkey="${(s._title||'')}${s.time}" data-action="activatePlanFilm" data-day-index="${i}" data-stop="1" title="${(s._title||'').replace(/"/g,'&quot;')}">
-        ${isPrio?`<div class="mplan-wk-badge">★</div>`:''}
+        ${isPrio?`<div class="mplan-wk-badge">${ICONS.bookmarkFill}</div>`:''}
         <div class="mplan-wk-time${isEvent?' mp-event-time':''}">${s.time}</div>
         <div class="mplan-wk-title${isEvent?' mp-event-title':''}">${displayTitle}</div>
         ${showVenue?`<div class="mplan-wk-venue">${ICONS.pin} ${vc2.short}</div>`:''}
@@ -364,7 +364,7 @@ export function renderMiPlanCalendar(state){
         ${_mph}
         <div class="mplan-ri">
           <div class="mplan-t1${isPast?' mp-past':''}" ${!isPast?`data-action="toggleFilmAlternatives" data-key="${(s._title||'')+(s.day||'')+(s.time||'')}" data-title="${safeT}" data-day="${s.day||''}" data-time="${s.time||''}" data-stop="1"`:''} title="${!isPast?t('tooltip_cambiar_horario'):''}">${s.time}</div>
-          <div class="mplan-t2">${mplanEndStr(s.time,dur)}${prioritized.has(s._title)?` <span class="txt-amber60-xs">★</span>`:''}${_rowStars?` <span class="txt-amber-sm">${_rowStars}</span>`:''}${isNow?` <span class="txt-green-semi">${t('label_en_curso_min')}</span>`:''}</div>
+          <div class="mplan-t2">${mplanEndStr(s.time,dur)}${prioritized.has(s._title)?` <span class="txt-amber60-xs">${ICONS.bookmarkFill}</span>`:''}${_rowStars?` <span class="txt-amber-sm">${_rowStars}</span>`:''}${isNow?` <span class="txt-green-semi">${t('label_en_curso_min')}</span>`:''}</div>
           <div>${(()=>{const{displayTitle:_dt,progSuffix:_ps}=parseProgramTitle(s._title||'');const _mfqa=FILMS.find(fi=>fi.title===s._title&&fi.day===s.day&&fi.time===s.time);const _qab=_mfqa?.has_qa?`<span class="meta-badge sm">Q&A</span>`:'';return`<div class="mplan-rtitle${_isEventRow?' mp-event-title':''}">${_dt}${_qab}</div>${_ps?`<div class="prog-suffix">${_ps}</div>`:''}`;})()} </div>
           <div class="mplan-rvenue${_isEventRow?' mp-event-venue':''}">${ICONS.pin} ${vcfg(s.venue).short}${sala(s.venue)?' \u00b7 '+sala(s.venue):''}</div>
           ${(()=>{const _mf=FILMS.find(fi=>fi.title===s._title&&fi.day===s.day&&fi.time===s.time);if(!_mf||!_mf.is_cortos||!_mf.film_list||!_mf.film_list.length) return'';return`<button class="row-xs mplan-prog-toggle" data-action="toggleMplanProg">${ICONS.chevronR} ${t('label_programa')}</button>`;})()}
@@ -837,7 +837,7 @@ export function renderPrioStrip(state, opts={}){
   const _chip=(title,{rm=false,dim=false,grayTitle=false}={})=>{
     const f=FILMS.find(fi=>fi.title===title);
     const p=getFilmPoster(f);
-    const img=p?_posterThumb(f,'prio-chip-poster'):`<div class="prio-chip-ph">${ICONS.star}</div>`;
+    const img=p?_posterThumb(f,'prio-chip-poster'):`<div class="prio-chip-ph">${ICONS.bookmark}</div>`;
     const{displayTitle,progSuffix}=parseProgramTitle(title);
     const short=displayTitle.length>24?displayTitle.slice(0,22)+'…':displayTitle;
     const allPast=!festivalEnded()&&!FILMS.some(f=>f.title===title&&!screeningPassed(f));
@@ -859,14 +859,14 @@ export function renderPrioStrip(state, opts={}){
     if(inT.length) body+=`<div class="group-label ok">${ICONS.checkCircle} ${t('prio_in')}</div><div class="prio-strip-row">${inT.map(x=>_chip(x,{grayTitle:true})).join('')}</div>`;
     if(outT.length) body+=`<div class="group-label fail">${ICONS.x} ${t('prio_out')}</div><div class="prio-strip-row">${outT.map(x=>_chip(x,{dim:true})).join('')}</div>`;
     return`<div class="prio-strip">
-      <div class="sec-hdr">${ICONS.star} ${t('lbl_prioridades')}</div>
+      <div class="sec-hdr">${ICONS.bookmark} ${t('lbl_prioridades')}</div>
       ${body}
     </div>`;
   }
   // ── Estado 1 / 3: intención (chips con botón quitar) ──
   const chips=[...prioritized].map(x=>_chip(x,{rm:true})).join('');
   return`<div class="prio-strip">
-    <div class="sec-hdr">${ICONS.star} ${t('lbl_prioridades')} <span class="count-badge cb-amber">${prioritized.size}/${PRIO_LIMIT}</span></div>
+    <div class="sec-hdr">${ICONS.bookmark} ${t('lbl_prioridades')} <span class="count-badge cb-amber">${prioritized.size}/${PRIO_LIMIT}</span></div>
     <div class="prio-strip-row">${chips}</div>
   </div>`;
 }
@@ -945,7 +945,7 @@ export function renderFilmListHTML(state){
         ${conflictHtml}
       </div>
       <div class="int-item-actions">
-        <button class="int-prio-btn${isPrio?' on':''}" data-title="${escXML(title)}" data-action="togglePriority" data-stop="1" aria-label="${t('aria_priorizar')}">★</button>
+        <button class="int-prio-btn${isPrio?' on':''}" data-title="${escXML(title)}" data-action="togglePriority" data-stop="1" aria-label="${t('aria_priorizar')}">${ICONS.bookmarkFill}</button>
       </div>
     </div>`;
   }
@@ -1008,7 +1008,7 @@ export function renderFilmListHTML(state){
   let html='';
 
   if(prioList.length){
-    html+=`<div class="sec-hdr">${ICONS.star} <span>${t('lbl_prioridades')}</span>
+    html+=`<div class="sec-hdr">${ICONS.bookmark} <span>${t('lbl_prioridades')}</span>
       <span class="count-badge cb-amber">${prioList.length}/${PRIO_LIMIT}</span>
     </div>
     <div>${_chronoSort(prioList).map(_mkItem).join('')}</div>`;
@@ -1207,7 +1207,7 @@ export function buildResultHTML(scenarios){
   const _snap=cachedResult._prioSnapshot;
   const _stale=Array.isArray(_snap)&&(_snap.length!==prioritized.size||!_snap.every(x=>prioritized.has(x)));
   const _staleBanner=_stale
-    ?`<div class="prio-stale">${ICONS.star} ${t('prio_stale_banner')}<button class="prio-stale-cta" data-action="runCalc">${t('prio_stale_cta')}</button></div>`
+    ?`<div class="prio-stale">${ICONS.bookmark} ${t('prio_stale_banner')}<button class="prio-stale-cta" data-action="runCalc">${t('prio_stale_cta')}</button></div>`
     :'';
   // Fila "Prioridades N/N" RETIRADA del resumen (decisión Juan, 17 jul 2026):
   // el dato confundía — el usuario no sabe qué significa "1/1" junto al plan.
@@ -1422,7 +1422,7 @@ export function updateHorarioPrioBtn(title){
   const inPrio=prioritized.has(title);
   document.querySelectorAll('.horario-prio-btn[data-title="'+CSS.escape(title)+'"]').forEach(btn=>{
     btn.className='card-strip-btn horario-prio-btn'+(inPrio?' prio-on':'');
-    btn.innerHTML=(inPrio?ICONS.starFill:ICONS.star)+' '+t('lbl_prio_corto');
+    btn.innerHTML=(inPrio?ICONS.bookmarkFill:ICONS.bookmark)+' '+t('lbl_prio_corto');
   });
 }
 
