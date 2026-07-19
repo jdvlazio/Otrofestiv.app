@@ -1898,7 +1898,7 @@ except Exception as _e:
 check = 'sheet-meta-legible'
 try:
     _html = open('index.html', encoding='utf-8').read()
-    _INFO = ['.pel-sheet-flags-dur{', '.pel-sheet-metaline{']
+    _INFO = ['.pel-sheet-flags-dur{', '.pel-sheet-metaline{', '.rating-title{']
     _bad = []
     for _sel in _INFO:
         _i = _html.find(_sel)
