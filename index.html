@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607181828">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607181828">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607181906">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607181906">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -957,7 +957,13 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .pel-sheet.compact .pel-sheet-header{margin-bottom:var(--sp-3)}
 
 .pel-sheet-meta{flex:1;min-width:0;display:flex;flex-direction:column;gap:var(--sp-1);padding-top:2px}
-.pel-sheet-title{font-size:var(--t-md);font-weight:var(--w-display);color:var(--white);line-height:1.25;letter-spacing:-.02em}.pel-sheet-original{font-size:var(--t-caption);font-weight:var(--w-regular);color:var(--gray);margin-top:2px;line-height:1.4}
+.pel-sheet-title{font-size:var(--t-md);font-weight:var(--w-display);color:var(--white);line-height:1.25;letter-spacing:-.02em}
+/* Le hace sitio a la X de cerrar (44px, esquina sup-der): un espaciador flotante
+   reserva SOLO la esquina superior derecha → un título largo envuelve alrededor
+   de la X en la 1ª línea y recupera el ancho completo abajo. Cero costo en
+   títulos normales. Guardián [sheet-close-clear]. */
+.pel-sheet-title::before{content:'';float:right;width:48px;height:16px}
+.pel-sheet-original{font-size:var(--t-caption);font-weight:var(--w-regular);color:var(--gray);margin-top:2px;line-height:1.4}
 /* Metadata INFORMATIVA (duración/director/año — se lee para decidir) va en
    --gray como el resto de metadatos; --gray2 es solo UI pasiva (chevrons,
    cancels, pasado). Guardián [sheet-meta-legible]. */
@@ -2858,7 +2864,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202607181828";
+    s.src="/src/main.js?v=202607181906";
     document.body.appendChild(s);
     // Watchdog de boot (P0 18 jul): si el grafo ESM murió en el import (caché
     // HTTP mixta tras deploys en ráfaga — main.js nuevo + módulo viejo sin el
