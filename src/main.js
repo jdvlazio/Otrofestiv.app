@@ -209,7 +209,7 @@ const ACTION_REGISTRY = {
   openAuthSheet:         ()      => openAuthSheet(),
   openFestivalSheet:     ()      => openFestivalSheet(),
   openRatingSheet:       (el)    => openRatingSheet(el.dataset.title),
-  openCortoSheetFromEl:  (el, e) => openCortoSheetFromEl(el, e),
+  openCortoSheetFromEl:  (el, e) => { const _m=globalThis._morphOpen; _m ? _m(el, () => openCortoSheetFromEl(el, e)) : openCortoSheetFromEl(el, e); }, // hero morph también dentro de programas (puente: _morphOpen vive en el IIFE)
   closePelSheet:         ()      => closePelSheet(),
   closeAuthSheet:        ()      => closeAuthSheet(),
   closeAvSheet:          ()      => closeAvSheet(),
@@ -446,7 +446,7 @@ FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202607191009';
+const BUILD_VERSION='202607191018';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';
@@ -962,12 +962,16 @@ document.addEventListener('keydown',function(e){
 // Degrada SOLO: sin startViewTransition (Safari<18) o reduce-motion → apertura
 // normal (spring). Guardián [poster-morph]. Un flag evita solapar transiciones.
 let _vtBusy=false;
-function _openPelMorph(cardEl, title){
+// _morphOpen(sourceEl, openFn) — dueño ÚNICO del hero morph. sourceEl contiene el
+// póster de origen (card del grid O thumb de un corto dentro de un programa);
+// openFn hace el render síncrono del destino. Reusado por la card del grid y por
+// la apertura de un corto (misma fuente única de póster → mismo gesto).
+function _morphOpen(sourceEl, openFn){
   const reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const grid = cardEl.querySelector('.ed-still, .img-cover, img');
-  if(!document.startViewTransition || reduce || _vtBusy || !grid){ openPelSheet(title); return; }
+  const src = sourceEl && sourceEl.querySelector && sourceEl.querySelector('.ed-still, .img-cover, img'); // cubre thumb simple (img) y editorial (.ed-still) de cortos también
+  if(!document.startViewTransition || reduce || _vtBusy || !src){ openFn(); return; }
   _vtBusy=true;
-  grid.style.viewTransitionName='film-poster';
+  src.style.viewTransitionName='film-poster';
   const _sheet=document.getElementById('pel-sheet');
   if(_sheet) _sheet.classList.add('vt-run'); // el VT reemplaza el spring durante el gesto
   const _clean=()=>{
@@ -977,15 +981,17 @@ function _openPelMorph(cardEl, title){
   };
   try{
     const vt=document.startViewTransition(()=>{
-      grid.style.viewTransitionName=''; // liberar el nombre para el estado nuevo
-      openPelSheet(title);              // render síncrono (innerHTML)
+      src.style.viewTransitionName=''; // liberar el nombre para el estado nuevo
+      openFn();                        // render síncrono (innerHTML)
       const sp=document.querySelector('.pel-sheet-poster, .pel-sheet-poster-stage img, .psp-editorial img, .pel-sheet .ed-still');
       if(sp) sp.style.viewTransitionName='film-poster';
       const s=document.getElementById('pel-sheet'); if(s) s.classList.add('vt-in'); // stagger + bloom
     });
     vt.finished.then(_clean, _clean);
-  }catch(_e){ _clean(); openPelSheet(title); }
+  }catch(_e){ _clean(); openFn(); }
 }
+function _openPelMorph(cardEl, title){ _morphOpen(cardEl, ()=>openPelSheet(title)); }
+globalThis._morphOpen = _morphOpen; // puente: lo usa el ACTION_REGISTRY (openCortoSheetFromEl) fuera de este IIFE
 document.addEventListener('click',function(e){
   if(e.target.closest('.plist-heart')) return; // heart toggle — no abrir sheet
   if(e.target.closest('.suggestion-add')) return; // botón Añadir — no abrir sheet
