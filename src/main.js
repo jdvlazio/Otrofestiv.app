@@ -98,7 +98,7 @@ import { runCalc } from './controller/calc.js';
 
 // ── Step 7b: controller/persistence.js — saves + cloud sync + Supabase auth. ──
 import {
-  saveWL, saveWatched, saveRating, saveAV, saveSavedAgenda, savePrio, saveLastSlot, saveDelays, saveState, loadState, _cloudLoad, _sbUpdateUI, submitAuthEmail, submitOTP, deleteAccount, signOutAndClose, setPlanRerender,
+  saveWL, saveWatched, saveRating, saveAV, saveSavedAgenda, savePrio, saveLastSlot, saveDelays, saveState, loadState, _cloudLoad, _cloudSave, _sbUpdateUI, submitAuthEmail, submitOTP, deleteAccount, signOutAndClose, setPlanRerender,
 } from './controller/persistence.js';
 
 // ── Step 7c: controller/pipeline.js — render dispatchers. ────────────────────
@@ -446,7 +446,7 @@ FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202607191033';
+const BUILD_VERSION='202607191141';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';
@@ -1473,6 +1473,17 @@ setTimeout(()=>{
 // Run after layout is complete (fonts + CSS painted)
 requestAnimationFrame(()=>requestAnimationFrame(_fixStickyOffset));
 window.addEventListener('resize',function(){requestAnimationFrame(_fixStickyOffset);});
+// ── Persistencia de almacenamiento (resiliencia offline) ──────────────────
+// Sin esto, WebKit/iOS desaloja el Cache Storage y puede purgar localStorage
+// tras ~7 días sin uso → el patrón "instalo la app, no la abro una semana, la
+// abro en el avión" dejaba a la app sin shell cacheado y sin plan. persist()
+// le pide al navegador NO desalojar este origen. Idempotente, no bloqueante y
+// silencioso si no está soportado o si el navegador lo niega (no rompe nada).
+// Corre fuera del guard de SW: es Storage API, aplica también al wrapper iOS.
+if(navigator.storage && navigator.storage.persist){
+  navigator.storage.persist().catch(function(){});
+}
+
 if('serviceWorker' in navigator){
   navigator.serviceWorker.register('/sw.js').catch(function(){});
 
@@ -1550,6 +1561,24 @@ if('serviceWorker' in navigator){
     if(document.visibilityState === 'visible' && !_reloading){
       _checkVersionJson();
       // Forzar re-check del SW contra el servidor (gap documentado en web.dev/MDN)
+      navigator.serviceWorker.ready.then(function(reg){ reg.update(); }).catch(function(){});
+    }
+  });
+
+  // ── Canal version.json #3 + flush de sync: online ────────────────────────
+  // Al recuperar conexión (aterrizar, salir del sótano del teatro): (1) subir
+  // los cambios locales que quedaron sin sincronizar mientras no había red, y
+  // (2) revalidar si hay build nuevo. El evento 'online' es optimista (señala
+  // "hay interfaz de red", no "hay Internet real"), así que ambas acciones son
+  // idempotentes y tolerantes a fallo: _cloudSave solo limpia cloud_dirty tras
+  // un upsert confirmado (nunca pierde la edición si el flush falla) y es el
+  // mismo re-push que ya dispara el boot (loader.js); _checkVersionJson va con
+  // no-store y es no-op si nada cambió. El re-push de boot permanece como red
+  // de seguridad — este listener no lo reemplaza.
+  window.addEventListener('online', function(){
+    if(storage.getCloudDirty()) _cloudSave();
+    if(!_reloading){
+      _checkVersionJson();
       navigator.serviceWorker.ready.then(function(reg){ reg.update(); }).catch(function(){});
     }
   });
