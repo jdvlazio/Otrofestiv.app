@@ -1979,6 +1979,30 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar poster-morph: {_e}')
 
+# ── [diary-poster-grid] el Diario compartible es un muro de afiches, no una lista ─
+# Decisión Juan 19 jul: shareDiary dibuja un GRID de pósters (cover-fit) con chip
+# de estrellas, no la lista tipográfica vieja. Requisitos que NO pueden desaparecer:
+# (1) resolver el afiche por obra (getCortoItemPoster) y film (getFilmPoster);
+# (2) dibujarlo (drawImage); (3) el tile generativo de fallback para pósters no
+# dibujables (CORS/CDN) vía _sectionColor — sin él, un afiche caído deja hueco negro.
+check = 'diary-poster-grid'
+try:
+    _sh = open('src/controller/share.js', encoding='utf-8').read()
+    _dia = _sh[_sh.find('function shareDiary'):_sh.find('function sharePlan')] if 'function shareDiary' in _sh else ''
+    _errs = []
+    if 'getCortoItemPoster' not in _dia or 'getFilmPoster' not in _dia:
+        _errs.append('no resuelve el afiche por obra/film (getCortoItemPoster/getFilmPoster)')
+    if 'drawImage' not in _dia:
+        _errs.append('no dibuja el póster (drawImage) — ¿regresó a la lista tipográfica?')
+    if '_sectionColor' not in _dia:
+        _errs.append('falta el tile generativo de fallback (_sectionColor) para afiches no dibujables')
+    if _errs:
+        fail(check, 'diario-grid roto: ' + '; '.join(_errs[:3]))
+    else:
+        ok(check, 'Diario compartible = grid de afiches con fallback generativo')
+except Exception as _e:
+    warn(check, f'no se pudo verificar diary-poster-grid: {_e}')
+
 # ── [button-canon] botones: anatomías con regla dueña + estado .on único ───────
 # Auditoría 18 jul 2026: el primario amber tenía 9 anatomías, el cancel 4, y el
 # estado activo 3 nombres. Ahora: (1) fondo amber+texto negro de botón SOLO en
