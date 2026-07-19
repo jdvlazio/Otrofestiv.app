@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `edf5650 feat(diario): Diario compartible = muro de afiches (grid) con estrellas`
+> Último commit: `3101b57 feat(offline): quick-wins de resiliencia — storage.persist() + flush al reconectar`
 
 ---
 

@@ -112,4 +112,4 @@ async function goToPlanear(page) {
   await page.waitForSelector('.av-calc-btn', { timeout: 8000 });
 }
 
-module.exports = { LEVIZA_SIMTIME, festivalTestIds, enterFestival, freezeSimTime, addToWatchlist, goToPlanear };
+module.exports = { LEVIZA_SIMTIME, festivalTestIds, selectFestival, enterFestival, freezeSimTime, addToWatchlist, goToPlanear };
