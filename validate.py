@@ -1914,6 +1914,23 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar sheet-meta-legible: {_e}')
 
+# ── [pressed-canon] feedback al presionar unificado (auditoría 18 jul 2026) ────
+# Había 6 escalas distintas (.88/.9/.94/.95/.96/.97) + opacidades mezcladas + un
+# duplicado de int-prio-btn. Canon: controles con caja = scale(.96); cards y
+# links = solo opacity (sin scale). Un :active con scale != .96 = isla nueva.
+check = 'pressed-canon'
+try:
+    import re as _re
+    _html = open('index.html', encoding='utf-8').read()
+    _scales = set(_re.findall(r':active\{[^}]*transform:scale\((\.\d+)\)', _html))
+    _bad = sorted(s for s in _scales if s != '.96')
+    if _bad:
+        fail(check, f'escala :active fuera del canon (.96): {", ".join(_bad)}')
+    else:
+        ok(check, 'pressed unificado: controles scale(.96), cards/links solo opacity')
+except Exception as _e:
+    warn(check, f'no se pudo verificar pressed-canon: {_e}')
+
 # ── [button-canon] botones: anatomías con regla dueña + estado .on único ───────
 # Auditoría 18 jul 2026: el primario amber tenía 9 anatomías, el cancel 4, y el
 # estado activo 3 nombres. Ahora: (1) fondo amber+texto negro de botón SOLO en
