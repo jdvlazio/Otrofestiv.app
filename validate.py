@@ -1931,6 +1931,29 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar pressed-canon: {_e}')
 
+# ── [filter-drop-canon] dropdowns de filtro con anatomía única ─────────────────
+# Auditoría overlays 18 jul: sección y lugar duplicaban ~11 líneas de cssText
+# inline que divergieron. Ahora ambos usan la clase .filter-drop; el build solo
+# aporta posición (top/right). Un dropdown que re-declare anatomía inline
+# (background/border/box-shadow en cssText de overlays.js) = isla nueva.
+check = 'filter-drop-canon'
+try:
+    _html = open('index.html', encoding='utf-8').read()
+    _ov = open('src/controller/overlays.js', encoding='utf-8').read()
+    _errs = []
+    if '.filter-drop{' not in _html:
+        _errs.append('falta la clase .filter-drop en index.html')
+    import re as _re
+    for _m in _re.finditer(r"cssText\s*=\s*\[([^\]]*)\]", _ov):
+        if 'box-shadow' in _m.group(1) or 'background:var(--surf)' in _m.group(1).replace(' ', ''):
+            _errs.append('dropdown con anatomía inline en overlays.js (usar .filter-drop)')
+    if _errs:
+        fail(check, 'filter-drop roto: ' + '; '.join(_errs[:4]))
+    else:
+        ok(check, 'sección y lugar comparten .filter-drop (sin anatomía inline)')
+except Exception as _e:
+    warn(check, f'no se pudo verificar filter-drop-canon: {_e}')
+
 # ── [button-canon] botones: anatomías con regla dueña + estado .on único ───────
 # Auditoría 18 jul 2026: el primario amber tenía 9 anatomías, el cancel 4, y el
 # estado activo 3 nombres. Ahora: (1) fondo amber+texto negro de botón SOLO en

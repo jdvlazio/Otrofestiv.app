@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `1a16655 a11y(contraste): rating-title #555→#888 (2.35→4.94, pasa WCAG AA)`
+> Último commit: `598e5f0 pwa(manifest): orientation portrait + colores cálidos (#0B0A08)`
 
 ---
 

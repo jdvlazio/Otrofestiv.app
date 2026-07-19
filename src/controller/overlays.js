@@ -17,14 +17,9 @@ export function seccionOpen(){
   const r = btn.getBoundingClientRect();
   const drop = document.createElement('div');
   drop.id = 'seccion-drop';
-  drop.style.cssText = [
-    'position:fixed','top:'+(r.bottom+4)+'px',
-    'right:'+(window.innerWidth-r.right)+'px',
-    'min-width:200px','max-width:min(300px,90vw)','max-height:55vh',
-    'overflow-y:auto','background:var(--surf)','border:1px solid var(--bdr)',
-    'border-radius:var(--r)','box-shadow:0 8px 24px rgba(0,0,0,.55)',
-    'z-index:9999','animation:lugarFadeIn .12s ease'
-  ].join(';');
+  drop.className = 'filter-drop'; // anatomía única; el build solo aporta posición
+  drop.style.top = (r.bottom+4)+'px';
+  drop.style.right = (window.innerWidth-r.right)+'px';
 
   const baseFilms = activeDay==='all' ? FILMS : FILMS.filter(f=>f.day===activeDay);
   const films = activeVenue!=='all' ? baseFilms.filter(f=>vcfg(f.venue).short===activeVenue) : baseFilms;
@@ -257,23 +252,9 @@ export function lugarOpen(){
   // Build dropdown
   const drop = document.createElement('div');
   drop.id = 'lugar-drop';
-  drop.style.cssText = [
-    'position:fixed',
-    'top:'+(r.bottom+4)+'px',
-    'right:'+(window.innerWidth-r.right)+'px',
-    'min-width:200px',
-    'max-width:min(280px,90vw)',
-    'max-height:50vh',
-    'overflow-y:auto',
-    '-webkit-overflow-scrolling:touch',
-    'overscroll-behavior:contain',
-    'background:var(--surf)',
-    'border:1px solid var(--bdr)',
-    'border-radius:var(--r)',
-    'box-shadow:0 8px 24px rgba(0,0,0,.55)',
-    'z-index:9999',
-    'animation:lugarFadeIn .12s ease'
-  ].join(';');
+  drop.className = 'filter-drop'; // anatomía única; el build solo aporta posición
+  drop.style.top = (r.bottom+4)+'px';
+  drop.style.right = (window.innerWidth-r.right)+'px';
 
   // Collect unique venues from FILMS
   // Embedded screenings[] format (Tribeca): expand all screenings, dedupe by title.
