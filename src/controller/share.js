@@ -2,53 +2,94 @@
 // p8 Step 7e — Compartir plan (canvas/imagen) + export ICS.
 
 import { FESTIVAL_CONFIG } from '../config.js';
-import { DAYS, dayLabel, starsText, vcfg } from '../view/helpers.js';
-import { parseProgramTitle } from '../view/components.js';
+import { DAYS, dayLabel, starsText, vcfg, getFilmPoster, getCortoItemPoster } from '../view/helpers.js';
+import { parseProgramTitle, _sectionColor } from '../view/components.js';
 import { showToast } from '../view/feedback.js';
 import { _festDate } from '../domain/time.js';
 import { t } from '../i18n/i18n.js';
 import { _getDisplayName, _promptDisplayName } from './auth.js';  // share→auth (sharePlan pide nombre)
 
-// ── shareDiary (F3 del Diario, 17 jul) — el diario como imagen compartible.
-// Lista tipográfica (día · estrellas · título), tokens de la casa: fondo --bg cálido,
-// ámbar #F59E0B, blanco #F0EDE8. Mismo flujo de compartir que sharePlan
-// (canvas → toBlob → Web Share API → fallback descarga).
+// ── shareDiary (F3 del Diario, rediseño 19 jul) — el diario como GRID de pósters.
+// Muro de afiches (3 col, 2:3) con chip de estrellas ámbar sobre scrim inferior.
+// Póster no dibujable (CORS/CDN) → tile generativo: fondo cálido + tinte de la
+// sección + título centrado. Tokens de la casa (fondo #0B0A08, ámbar #F59E0B,
+// blanco #F0EDE8). Mismo flujo de compartir que sharePlan (toBlob → Web Share → descarga).
 export async function shareDiary(){
   const sched=(savedAgenda&&savedAgenda.schedule)||[];
   const _seen=new Set(); const rows=[];
-  // Un programa se expande en sus OBRAS (lo que el usuario vio), cada una con sus estrellas.
-  const _push=(day,title)=>{
+  // Un programa se expande en sus OBRAS (lo que el usuario vio), cada una con su afiche + estrellas.
+  const _push=(day,title,src,section)=>rows.push({day,title,r:filmRatings[title]||0,src,section});
+  const _add=(day,title)=>{
     const f=FILMS.find(fi=>fi.title===title);
-    if(f&&f.is_cortos&&f.film_list&&f.film_list.length){
-      f.film_list.forEach(it=>rows.push({day,title:it.title,r:filmRatings[it.title]||0}));
-    } else rows.push({day,title,r:filmRatings[title]||0});
+    if(!f) return;
+    if(f.is_cortos&&f.film_list&&f.film_list.length){
+      f.film_list.forEach(it=>_push(day,it.title,getCortoItemPoster(it),f.section));
+    } else _push(day,title,getFilmPoster(f),f.section);
   };
-  sched.forEach(sc=>{ if(watched.has(sc._title)&&!_seen.has(sc._title)){ _seen.add(sc._title); _push(sc.day,sc._title); } });
-  [...watched].forEach(tt=>{ if(!_seen.has(tt)&&FILMS.some(f=>f.title===tt)){ _seen.add(tt); _push(null,tt); } });
+  sched.forEach(sc=>{ if(watched.has(sc._title)&&!_seen.has(sc._title)){ _seen.add(sc._title); _add(sc.day,sc._title); } });
+  [...watched].forEach(tt=>{ if(!_seen.has(tt)&&FILMS.some(f=>f.title===tt)){ _seen.add(tt); _add(null,tt); } });
   if(!rows.length){ showToast(t('diary_vacio'),'warn'); return; }
   const cfg=FESTIVAL_CONFIG[_activeFestId]||{};
-  const W=1080,PAD=72,ROW=76,HDR=210,FOOT=110;
-  const c=document.createElement('canvas'); c.width=W; c.height=HDR+rows.length*ROW+FOOT;
+  // ── geometría del grid ──
+  const W=1080, PAD=64, COLS=3, GAP=28, RAD=20;
+  const cw=(W-PAD*2-GAP*(COLS-1))/COLS, ch=cw*3/2;
+  const rn=Math.ceil(rows.length/COLS);
+  const HDR=232, FOOT=128;
+  const c=document.createElement('canvas'); c.width=W; c.height=HDR+rn*ch+(rn-1)*GAP+FOOT;
   const x=c.getContext('2d');
   x.fillStyle='#0B0A08'; x.fillRect(0,0,W,c.height);
-  x.fillStyle='#F59E0B'; x.font='700 30px system-ui'; x.fillText((t('diary_eyebrow')||'Diario').toUpperCase(),PAD,PAD);
-  x.fillStyle='#F0EDE8'; x.font='800 54px system-ui';
-  const _fn=(cfg.name||''); x.fillText(_fn.length>30?_fn.slice(0,28)+'…':_fn,PAD,PAD+62);
-  x.fillStyle='#8A8A8A'; x.font='500 30px system-ui';
-  x.fillText(`${rows.length} ${rows.length===1?t('label_vista'):t('label_vistas')}`,PAD,PAD+108);
-  let y=HDR+46;
-  rows.forEach(rw=>{
-    const dl=rw.day?String((dayLabel(rw.day)||rw.day)).toUpperCase():'—';
-    x.fillStyle='#8A8A8A'; x.font='600 26px system-ui'; x.fillText(dl,PAD,y);
-    x.fillStyle='#F59E0B'; x.font='600 30px system-ui'; x.fillText(rw.r?starsText(rw.r):'·',PAD+150,y);
+  // encabezado
+  x.textBaseline='alphabetic'; x.textAlign='left';
+  x.fillStyle='#F59E0B'; x.font='700 30px system-ui'; x.fillText((t('diary_eyebrow')||'Diario').toUpperCase(),PAD,84);
+  x.fillStyle='#F0EDE8'; x.font='800 56px system-ui';
+  const _fn=(cfg.name||''); x.fillText(_fn.length>28?_fn.slice(0,26)+'…':_fn,PAD,148);
+  x.fillStyle='#8A8A8A'; x.font='500 29px system-ui';
+  const _n=`${rows.length} ${rows.length===1?t('label_vista'):t('label_vistas')}`;
+  x.fillText(cfg.dates?`${_n} · ${String(cfg.dates).toUpperCase()}`:_n,PAD,192);
+  // helpers
+  const rr=(px,py,w,h,r)=>{ x.beginPath(); x.moveTo(px+r,py); x.arcTo(px+w,py,px+w,py+h,r); x.arcTo(px+w,py+h,px,py+h,r); x.arcTo(px,py+h,px,py,r); x.arcTo(px,py,px+w,py,r); x.closePath(); };
+  const load=src=>new Promise(res=>{ if(!src){res(null);return;} const im=new Image(); im.crossOrigin='anonymous'; im.onload=()=>res(im); im.onerror=()=>res(null); im.src=src; });
+  const imgs=await Promise.all(rows.map(rw=>load(rw.src)));
+  // celdas
+  for(let i=0;i<rows.length;i++){
+    const rw=rows[i], col=i%COLS, row=Math.floor(i/COLS);
+    const cx=PAD+col*(cw+GAP), cy=HDR+row*(ch+GAP);
     const{displayTitle:dt}=parseProgramTitle(rw.title);
-    x.fillStyle='#EDEDED'; x.font='600 34px system-ui'; x.fillText(dt.length>36?dt.slice(0,34)+'…':dt,PAD+340,y);
-    y+=ROW;
-  });
+    x.save(); rr(cx,cy,cw,ch,RAD); x.clip();
+    const im=imgs[i];
+    if(im&&im.width){
+      // cover: escalar al lado corto y centrar
+      const s=Math.max(cw/im.width,ch/im.height), dw=im.width*s, dh=im.height*s;
+      x.drawImage(im,cx+(cw-dw)/2,cy+(ch-dh)/2,dw,dh);
+    } else {
+      // tile generativo: cálido + tinte de sección + título
+      const acc=_sectionColor(rw.section||'')||'#3A342B';
+      x.fillStyle='#1B1917'; x.fillRect(cx,cy,cw,ch);
+      x.save(); x.globalAlpha=.20; x.fillStyle=acc; x.fillRect(cx,cy,cw,ch); x.restore();
+      x.fillStyle='#F0EDE8'; x.font='700 30px system-ui'; x.textAlign='center';
+      const _words=dt.split(/\s+/); let _ln='', _ly=cy+ch/2-18; const _lines=[];
+      _words.forEach(w=>{ const test=_ln?_ln+' '+w:w; if(x.measureText(test).width>cw-40&&_ln){_lines.push(_ln);_ln=w;}else _ln=test; });
+      if(_ln)_lines.push(_ln);
+      _lines.slice(0,4).forEach((ln,k)=>x.fillText(ln,cx+cw/2,_ly+k*38));
+      x.textAlign='left';
+    }
+    // scrim inferior + chip de estrellas
+    const g=x.createLinearGradient(0,cy+ch-140,0,cy+ch); g.addColorStop(0,'rgba(0,0,0,0)'); g.addColorStop(1,'rgba(0,0,0,.78)');
+    x.fillStyle=g; x.fillRect(cx,cy+ch-140,cw,140);
+    x.textAlign='center';
+    x.fillStyle=rw.r?'#F59E0B':'#8A8A8A'; x.font='600 30px system-ui';
+    x.fillText(rw.r?starsText(rw.r):'·',cx+cw/2,cy+ch-28);
+    x.textAlign='left';
+    x.restore();
+  }
+  // footer — wordmark
   x.font='800 34px system-ui';
+  const _fy=c.height-58;
   x.fillStyle='#F0EDE8'; const _w1=x.measureText('Otro').width;
-  x.fillText('Otro',PAD,c.height-52);
-  x.fillStyle='#F59E0B'; x.fillText('festiv',PAD+_w1,c.height-52);
+  x.fillText('Otro',PAD,_fy);
+  x.fillStyle='#F59E0B'; x.fillText('festiv',PAD+_w1,_fy);
+  x.fillStyle='#6A6A6A'; x.font='500 26px system-ui'; x.textAlign='right';
+  x.fillText('otrofestiv.app',W-PAD,_fy); x.textAlign='left';
   const fname=`otrofestiv-diario-${(cfg.shortName||'fest').toLowerCase().replace(/\s+/g,'-')}.png`;
   try{
     const blob=await new Promise(r=>c.toBlob(r,'image/png'));

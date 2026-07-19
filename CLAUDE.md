@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `e879195 fix(motion): brinco al final del hero morph — ease-out expo + handoff temprano`
+> Último commit: `f429aa5 feat(motion): hero morph también al abrir un corto dentro de un programa`
 
 ---
 
