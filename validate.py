@@ -1954,6 +1954,31 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar filter-drop-canon: {_e}')
 
+# ── [poster-morph] transición de póster compartido con degradación limpia ──────
+# Decisión Juan 19 jul: el póster del grid se transforma en el de la ficha (View
+# Transitions). Requisitos que NO pueden desaparecer: (1) el CSS del hero morph
+# en index.html; (2) el fallback en main.js — si se quita el guard de
+# startViewTransition/reduce-motion, rompe la apertura en Safari viejo.
+check = 'poster-morph'
+try:
+    _html = open('index.html', encoding='utf-8').read()
+    _mn = open('src/main.js', encoding='utf-8').read()
+    _errs = []
+    if '::view-transition-group(film-poster)' not in _html:
+        _errs.append('falta el CSS del hero morph (view-transition-group)')
+    if 'prefers-reduced-motion:reduce' not in _html.replace(' ', ''):
+        _errs.append('falta el guard @media reduce-motion del morph')
+    if '_openPelMorph' not in _mn:
+        _errs.append('falta _openPelMorph en main.js')
+    if 'document.startViewTransition' not in _mn or 'reduce' not in _mn:
+        _errs.append('falta el fallback (startViewTransition/reduce-motion) en _openPelMorph')
+    if _errs:
+        fail(check, 'poster-morph roto: ' + '; '.join(_errs[:4]))
+    else:
+        ok(check, 'hero morph del póster con degradación (Safari<18/reduce-motion → spring)')
+except Exception as _e:
+    warn(check, f'no se pudo verificar poster-morph: {_e}')
+
 # ── [button-canon] botones: anatomías con regla dueña + estado .on único ───────
 # Auditoría 18 jul 2026: el primario amber tenía 9 anatomías, el cancel 4, y el
 # estado activo 3 nombres. Ahora: (1) fondo amber+texto negro de botón SOLO en
@@ -2243,7 +2268,7 @@ try:
     #   i18n.js (diccionarios es/en, es DATA) · sheets-controller.js · handlers.js
     _ALLOW = {
         'src/view/agenda.js': 1622,
-        'src/main.js': 1554,  # +3: leyenda de vocabulario prioridad=bookmark (18 jul)
+        'src/main.js': 1582,  # +28: _openPelMorph transición de póster (19 jul 2026)
         'src/i18n/i18n.js': 1405,  # +5: aria_dia_sig ×3 locales (a11y iconos, 18 jul)
         'src/controller/sheets-controller.js': 1356,  # +25 ambient, +6 doc countryToFlags separadores (18 jul 2026)
         'src/controller/handlers.js': 915,

@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `598e5f0 pwa(manifest): orientation portrait + colores cálidos (#0B0A08)`
+> Último commit: `90da93e design(overlays): dropdowns de filtro con anatomía única .filter-drop`
 
 ---
 

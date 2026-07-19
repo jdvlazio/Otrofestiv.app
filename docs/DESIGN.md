@@ -361,6 +361,15 @@ país). En festivales vivos, todo país debe producir bandera (mapeado en
 sup-der (44px de la X de cerrar); el título largo envuelve alrededor en la 1ª
 línea. Guardián mide el TEXTO real (Range) con título largo → solape con la X = 0.
 
+### 8.10 · Transición de póster compartido — hero morph (`[poster-morph]`)
+Al abrir la ficha desde un póster del grid, el póster **se transforma** en el de
+la ficha (View Transitions API): morphea posición+forma+radio y **LLEGA desde
+blur→foco + opacidad** (no salta — enfoca al aterrizar). El contenido de la ficha
+entra con fade-up escalonado y el color ambiental (§8.3) florece sincronizado al
+aterrizaje. Cableado en `main.js` (`_openPelMorph`, envuelve `openPelSheet` en
+`startViewTransition`). **Degrada solo**: sin `startViewTransition` (Safari<18) o
+`prefers-reduced-motion` → apertura normal con spring. Curva `cubic-bezier(.22,.61,.36,1)`.
+
 ### 8.9 · Geometría FLUSH (`geometry.spec.js` G01)
 El primer contenido de cada tab —y de la sub-vista TODO— arranca PEGADO al chrome
 (gap ≤ 2px). Bandas de sección del grid full-bleed (±2px). Medición SIEMPRE en
