@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607190902">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607190902">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607190956">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607190956">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -930,6 +930,28 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .pel-sheet-overlay.open{opacity:1;pointer-events:all}
 .pel-sheet{position:fixed;bottom:0;left:0;right:0;background:var(--surf-2);border-radius:var(--r-sheet) var(--r-sheet) 0 0;z-index:9001;max-height:88dvh;overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;transform:translateY(100%);transition:var(--sheet-out)}
 .pel-sheet.open{transform:translateY(0);transition:var(--sheet-in)}
+/* ── Transición de póster compartido (hero morph, View Transitions API) ───────
+   Al abrir la ficha desde un póster del grid, el póster se transforma en el de
+   la ficha, LLEGANDO desde blur→foco + opacidad (no salta: enfoca al aterrizar).
+   El fondo enfoca en sitio (sin deslizar). Degrada solo (Safari<18/reduce-motion
+   → spring). Cableado en main.js (_openPelMorph). Guardián [poster-morph]. */
+@keyframes vtPosterIn{from{filter:blur(12px);opacity:.15}60%{filter:blur(4px);opacity:.75}to{filter:blur(0);opacity:1}}
+@keyframes vtFadeOut{from{opacity:1}to{opacity:0}}
+@keyframes vtFocusIn{from{filter:blur(8px);opacity:.3}to{filter:blur(0);opacity:1}}
+@keyframes vtRise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+::view-transition-group(film-poster){animation-duration:.48s;animation-timing-function:cubic-bezier(.22,.61,.36,1)}
+::view-transition-new(film-poster){animation:vtPosterIn .48s cubic-bezier(.22,.61,.36,1) both}
+::view-transition-old(film-poster){animation:vtFadeOut .16s ease both}
+::view-transition-old(root){animation:vtFadeOut .28s ease both}
+::view-transition-new(root){animation:vtFocusIn .32s cubic-bezier(.22,.61,.36,1) both}
+.pel-sheet.vt-run{transition:none!important}
+.pel-sheet.vt-in .pel-sheet-meta>*{animation:vtRise .42s cubic-bezier(.22,.61,.36,1) both}
+.pel-sheet.vt-in .pel-sheet-meta>*:nth-child(1){animation-delay:.18s}
+.pel-sheet.vt-in .pel-sheet-meta>*:nth-child(2){animation-delay:.23s}
+.pel-sheet.vt-in .pel-sheet-meta>*:nth-child(3){animation-delay:.28s}
+.pel-sheet.vt-in .pel-sheet-inner>*:not(.pel-sheet-header){animation:vtRise .42s cubic-bezier(.22,.61,.36,1) both;animation-delay:.26s}
+.pel-sheet.amb.vt-in{--amb-o:0}
+@media(prefers-reduced-motion:reduce){::view-transition-group(film-poster),::view-transition-new(film-poster),::view-transition-old(film-poster),::view-transition-old(root),::view-transition-new(root){animation:none}}
 /* Color ambiental (decisión Juan 18 jul 2026): el header de la ficha respira el
    color dominante del póster (muestreado y DOMADO por posterAmbient — único
    sampler, guardián [poster-ambient]) y se funde a surf-2 a los ~300px. La
@@ -2868,7 +2890,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202607190902";
+    s.src="/src/main.js?v=202607190956";
     document.body.appendChild(s);
     // Watchdog de boot (P0 18 jul): si el grafo ESM murió en el import (caché
     // HTTP mixta tras deploys en ráfaga — main.js nuevo + módulo viejo sin el

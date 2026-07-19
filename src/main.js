@@ -446,7 +446,7 @@ FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202607190902';
+const BUILD_VERSION='202607190956';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';
@@ -957,6 +957,35 @@ document.addEventListener('keydown',function(e){
 // ── Event delegation para js-open-pel → openPelSheet ──────────────────────
 // capture:true garantiza que el evento llega antes del stopPropagation
 // de _posterThumb. data-title contiene el título sin encoding.
+// Transición de póster compartido (View Transitions) — el póster del grid se
+// transforma en el póster de la ficha (hero morph, decisión Juan 19 jul 2026).
+// Degrada SOLO: sin startViewTransition (Safari<18) o reduce-motion → apertura
+// normal (spring). Guardián [poster-morph]. Un flag evita solapar transiciones.
+let _vtBusy=false;
+function _openPelMorph(cardEl, title){
+  const reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const grid = cardEl.querySelector('.ed-still, .img-cover, img');
+  if(!document.startViewTransition || reduce || _vtBusy || !grid){ openPelSheet(title); return; }
+  _vtBusy=true;
+  grid.style.viewTransitionName='film-poster';
+  const _sheet=document.getElementById('pel-sheet');
+  if(_sheet) _sheet.classList.add('vt-run'); // el VT reemplaza el spring durante el gesto
+  const _clean=()=>{
+    document.querySelectorAll('[style*="film-poster"]').forEach(el=>{ el.style.viewTransitionName=''; });
+    const s=document.getElementById('pel-sheet'); if(s) s.classList.remove('vt-in','vt-run');
+    _vtBusy=false;
+  };
+  try{
+    const vt=document.startViewTransition(()=>{
+      grid.style.viewTransitionName=''; // liberar el nombre para el estado nuevo
+      openPelSheet(title);              // render síncrono (innerHTML)
+      const sp=document.querySelector('.pel-sheet-poster, .pel-sheet-poster-stage img, .psp-editorial img, .pel-sheet .ed-still');
+      if(sp) sp.style.viewTransitionName='film-poster';
+      const s=document.getElementById('pel-sheet'); if(s) s.classList.add('vt-in'); // stagger + bloom
+    });
+    vt.finished.then(_clean, _clean);
+  }catch(_e){ _clean(); openPelSheet(title); }
+}
 document.addEventListener('click',function(e){
   if(e.target.closest('.plist-heart')) return; // heart toggle — no abrir sheet
   if(e.target.closest('.suggestion-add')) return; // botón Añadir — no abrir sheet
@@ -964,7 +993,7 @@ document.addEventListener('click',function(e){
   if(e.target.closest('.int-seen-btn')) return; // ya vista — no abrir sheet
   if(e.target.closest('.prio-chip-rm')) return; // quitar prioridad — no abrir sheet
   const el=e.target.closest('.js-open-pel');
-  if(el) openPelSheet(el.dataset.title||'');
+  if(el) _openPelMorph(el, el.dataset.title||'');
 },true);
   // Swipe-down en el topbar para cerrar el sheet
   function _initSheetSwipe(){
