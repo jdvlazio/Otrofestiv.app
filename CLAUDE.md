@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `c18aebe design(tiempo-libre): sin sugerencia = silencio, no 'No hay actividades'`
+> Último commit: `0279558 design(diario): grid de pósters limpio — sin título en la card + scrim más marcado`
 
 ---
 
