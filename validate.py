@@ -2292,7 +2292,7 @@ try:
     #   i18n.js (diccionarios es/en, es DATA) · sheets-controller.js · handlers.js
     _ALLOW = {
         'src/view/agenda.js': 1622,
-        'src/main.js': 1588,  # +34: _morphOpen reusable (grid + cortos) transición de póster (19 jul 2026)
+        'src/main.js': 1616,  # +28: quick-wins offline — storage.persist() + listener 'online' (flush cloud_dirty + revalidar versión) (19 jul 2026)
         'src/i18n/i18n.js': 1405,  # +5: aria_dia_sig ×3 locales (a11y iconos, 18 jul)
         'src/controller/sheets-controller.js': 1356,  # +25 ambient, +6 doc countryToFlags separadores (18 jul 2026)
         'src/controller/handlers.js': 915,

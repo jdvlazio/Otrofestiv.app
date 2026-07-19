@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `f429aa5 feat(motion): hero morph también al abrir un corto dentro de un programa`
+> Último commit: `edf5650 feat(diario): Diario compartible = muro de afiches (grid) con estrellas`
 
 ---
 
