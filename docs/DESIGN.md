@@ -23,6 +23,10 @@ Corolarios:
   de CLAUDE.md). Las excepciones raw existentes están listadas en §5.
 - Este documento describe el **canónico aprobado**, no el estado histórico. Si el
   código difiere, el código está mal.
+- **Fuente ejecutable de la verdad**: cada regla de diseño tiene un guardián en
+  `validate.py` (o un `.spec.js` de Playwright) que rompe el build si se viola.
+  Este doc es la referencia legible; los guardianes son la aplicación. Índice de
+  guardianes de diseño en §8 (por tema) y en los comentarios de `validate.py`.
 
 ---
 
@@ -76,26 +80,29 @@ Valores resueltos, extraídos de `:root` en `index.html`.
 | `--r-sm` | 4px |
 | `--r-md` | 8px |
 | `--r` | 12px |
-| `--r-sheet` | 20px |
+| `--r-sheet` | 28px (squircle generoso — 18 jul 2026) |
 | `--r-handle` | 2px |
 | `--r-pill` | 999px |
 
-### Color — superficies
+### Color — superficies (negros CÁLIDOS, 18 jul 2026)
+Sesgo ~1.5% hacia el ámbar (R≥G≥B), misma luminancia que la paleta neutra
+anterior — la app deja de compartir fondo con cualquier dark mode genérico.
+Gris neutro puro PROHIBIDO en superficies (guardián `[warm-neutrals]`).
 | Token | Valor |
 |---|---|
-| `--bg` | #0A0A0A |
-| `--surf` | #141414 |
-| `--surf-2` | #1A1A1A |
-| `--surf-3` | #1F1F1F |
-| `--card-a` | #1E1E1E |
-| `--card-b` | #232323 |
-| `--card-p` | #141414 |
+| `--bg` | #0B0A08 |
+| `--surf` | #151311 |
+| `--surf-2` | #1B1917 |
+| `--surf-3` | #201E1B |
+| `--card-a` | #1F1D1A |
+| `--card-b` | #24211E |
+| `--card-p` | #151311 |
 
 ### Color — bordes (dos niveles semánticos)
 | Token | Valor | Uso |
 |---|---|---|
-| `--bdr` | #2A2A2A | chrome estructural: nav, headers, separadores fuertes |
-| `--bdr-l` | #1E1E1E | separación de contenido: filas de lista |
+| `--bdr` | #2B2825 | chrome estructural: nav, headers, separadores fuertes |
+| `--bdr-l` | #1F1D1A | separación de contenido: filas de lista (el tono de TODA divisoria de lista) |
 
 ### Color — texto
 | Token | Valor | Contraste sobre `--bg` | Rol |
@@ -130,6 +137,11 @@ Familias análogas para green / red / yellow / event-blue / overlay.
 | `--tr-base` | 150ms ease | micro-interacción (botones, badges) |
 | `--tr-smooth` | 200ms ease | overlays, opacidades |
 | `--tr-enter` | 300ms ease-out | entradas al DOM |
+| `--sheet-in` | transform .38s cubic-bezier(.34,1.56,.64,1) | apertura SPRING de TODO bottom-sheet |
+| `--sheet-out` | transform .3s cubic-bezier(.32,0,.67,0) | cierre ease-in de TODO bottom-sheet |
+
+Los 9 bottom-sheets usan `--sheet-in`/`--sheet-out` (guardián `[sheet-spring]`);
+un sheet nuevo con curva propia rompe el build.
 
 ### Pósters (ratio 2:3)
 | Token | Dimensión | Uso |
@@ -284,6 +296,75 @@ Aprobadas por el PO. Ya reflejadas en §2 y aplicadas en `index.html`.
 ~2.7:1 de contraste sobre `--bg` → **falla WCAG AA** (mín. 4.5:1 para texto pequeño).
 `#888` da ~5.6:1 → **pasa AA**. A 11px + peso 400, la legibilidad pesa más que el
 de-énfasis extremo. Por eso el canónico de venue/meta es `gray`.
+
+---
+
+## 8 · Modernización visual (campaña 18 jul 2026)
+
+Rediseño aprobado por el PO, en producción, cada pieza con su guardián ejecutable.
+
+### 8.1 · Chrome de vidrio (`[chrome-glass]`)
+El chrome (topbar + nav inferior) es **una lámina de vidrio translúcido**, no un
+muro. `.topbar::before` y `.main-nav` (fixed) llevan `background:rgba(14,13,12,.5/.55)`
++ `backdrop-filter:blur(28px) saturate(200%)` → el contenido pasa como color
+difuminado bajo el chrome. Reglas: **alpha ≤ 0.6** y `backdrop-filter` presente;
+**cero `border` opaco** en las piezas del chrome (topbar, nav, mode-bar, nav-row,
+hdr-ag, fs/pv/search headers). El chrome se separa por aire y jerarquía, no por líneas.
+
+### 8.2 · Motion — sheets, skeletons, bloom (`[sheet-spring]`)
+- **Sheets**: apertura `--sheet-in` (spring con mini-rebote), cierre `--sheet-out`
+  (ease-in). Los 9 bottom-sheets suscritos; curva propia = build roto.
+- **Skeletons**: `.poster-card`/`.plist-poster`/`.c-film-thumb` muestran un shimmer
+  (`@keyframes poster-skel`, 8 ciclos, anulado por `prefers-reduced-motion`)
+  mientras carga la imagen; la imagen hace fade-in encima.
+- **Bloom ambiental**: el color de la ficha (§8.4) FLORECE con `--amb-o` (@property,
+  transición .6s), no aparece de golpe; prewarm del muestreo en `pointerdown`.
+
+### 8.3 · Color ambiental de la ficha (`[poster-ambient]`)
+El header de la ficha respira el color dominante del póster. `posterAmbient()` en
+`view/helpers.js` es el **ÚNICO sampler** (canvas 24×24, dominante por ÁREA
+`sat×frecuencia` con piso .12, clamp sat ≤.55 / lum .30–.42 a la paleta). CORS
+negado o data-URI → fallback al acento de sección. `getImageData` fuera de
+helpers.js o `--amb` a mano = build roto. Safari iOS: muestrear con URL propia
+(TMDB→w92) para no heredar la entrada de caché sin-CORS del `<img>`.
+
+### 8.4 · Botones — regla dueña única (`[button-canon]`)
+- **PRIMARIO**: UNA regla CSS dueña (amber sólido / negro / `--r-pill` / `--sp-btn`
+  / `t-base` / `w-bold` / hover .88). 10 clases suscritas; un primario nuevo se
+  SUMA al selector, no re-declara. `w-display` prohibido en botones.
+- **CANCEL**: una regla dueña (texto `--gray` `t-sm` `w-semi`, sin caja).
+- **Secundario/terciario**: outline pill 1px `--bdr`, texto informativo SIEMPRE
+  `--gray` (nunca `gray2`), radio pill.
+- **ESTADO ACTIVO**: clase `.on` ÚNICA — `.active`/`.selected` prohibidos.
+
+### 8.5 · Iconos — ver `docs/ICONS.md`
+Fuente única `ICONS` (`components.js`); `aria-hidden` de fábrica; escala icono ≈
+texto (11 en t-label/t-xs, 13 base, 14–16 icon-only); stroke 1.75 universal;
+`currentColor` (excepto ámbar de sec-hdr). Semántica: **★ = calificación**
+(`[star-semantics]`), **🔖 bookmark = prioridad**, ♥ = interés, ✓ = visto.
+**Días y horas NO llevan icono** (eje de tiempo, no categoría). Guardianes
+`[icon-single-source]`, `[star-semantics]`.
+
+### 8.6 · Divisorias — líneas solo funcionales
+Divisoria decorativa (coronar sheets, separar zonas del chrome) = PROHIBIDA. Solo
+sobreviven las **funcionales de lista** (`--bdr-l` entre ítems, con `:last-child`
+sin borde): entre películas de un programa, opciones de menú, funciones sin
+confirmar. Toda divisoria de lista usa `--bdr-l` (el tenue), nunca `--bdr`.
+
+### 8.7 · Banderas de país (`[country-flags]`)
+`countryToFlags()` parte por coma Y barra (no por guion: "Guinea-Bissau" es un
+país). En festivales vivos, todo país debe producir bandera (mapeado en
+`_COUNTRY_FLAGS` o campo `flags` autorizado) — nunca globo 🌍.
+
+### 8.8 · Ficha — el título le hace sitio a la X (`sheet-close.spec.js`)
+`.pel-sheet-title::before` es un espaciador flotante que reserva la esquina
+sup-der (44px de la X de cerrar); el título largo envuelve alrededor en la 1ª
+línea. Guardián mide el TEXTO real (Range) con título largo → solape con la X = 0.
+
+### 8.9 · Geometría FLUSH (`geometry.spec.js` G01)
+El primer contenido de cada tab —y de la sub-vista TODO— arranca PEGADO al chrome
+(gap ≤ 2px). Bandas de sección del grid full-bleed (±2px). Medición SIEMPRE en
+viewport móvil 390×844.
 
 ---
 
