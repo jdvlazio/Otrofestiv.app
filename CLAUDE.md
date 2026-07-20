@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `22d086f feat(festival): elegir festival = muro de afiches en las dos superficies`
+> Último commit: `bea83cf feat(festival): el chooser ES el riel del splash + wordmark vuelve al inicio`
 
 ---
 

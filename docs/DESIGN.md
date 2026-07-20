@@ -380,13 +380,23 @@ riel de afiches de la entrada y una lista de texto (miniaturas de 27px) en el sh
   La usan `_renderSplashRailHTML` (entrada) y `_renderFestivalSelectorHTML` (sheet).
   Lo ÚNICO que difiere es la acción: el splash **selecciona** (el usuario confirma con
   "Entrar"); el sheet **carga directo** (no hay confirmación).
-- **Rótulo bajo cada afiche** (`.fs-fest-cap`): el muro solo no basta para escanear —
-  quien no reconoce el póster necesita el nombre. Conserva la escaneabilidad de la
-  lista sin volver a ella; el afiche sigue mandando la jerarquía.
-  El rótulo usa el **nombre oficial completo** (`cfg.name`), NO el corto: bajo un
-  afiche, `festivalShortName` truncaba al primer término ("Tribeca", "Leviza", "AFF").
-  Tampoco `cfg.fullName` — el oficial largo no cabe. Mismo criterio que sentó Leviza:
-  *"crece una línea pero es más claro"*. Card a 158px y rótulo hasta 3 líneas.
+- **El sheet ES el riel del splash** (2ª iteración): `_renderFestivalSelectorHTML` ya no
+  tiene render propio — delega en `_renderSplashRailHTML` y solo cambia la acción. La 1ª
+  iteración inventó estructura propia (3 encabezados de grupo + un rótulo por card)
+  cuando el splash ya lo resolvía mejor: **un** riel con divisor vertical "ANTERIORES"
+  + el bloque `.splash-info` de 4 líneas (nombre / descriptor / CIUDAD con punto verde
+  si está en curso / FECHAS), que se actualiza con la card centrada al desplazar.
+  `_fillFestInfo(festId, scope)` sirve a las dos superficies (busca por CLASE dentro
+  del scope, no por id global, para que ambos bloques convivan).
+- **Ojo con los dos rieles:** desde este rediseño hay DOS `.splash-rail` en el DOM (el
+  del splash y el del sheet, que se renderiza en el boot). Toda query de `.splash-card`
+  debe ir **acotada a su riel** — con `document.querySelectorAll` global, elegir en el
+  splash le borraba la marca `.on` al sheet (cazado por 4 tests flaky, entre ellos T08).
+- **El wordmark vuelve al inicio** (`data-action="backToSplash"`): 2ª vía para cambiar
+  de festival, patrón de toda app web. Implementado como **reload**, no re-mostrando el
+  nodo, porque `dismissSplash()` hace `s.remove()` — el splash no queda oculto, se
+  elimina; recrearlo sería una segunda implementación del arranque. El estado vive en
+  `localStorage`, así que recargar no pierde nada.
 - **El header es un CONTROL, no un título:** nombre + chevron viven juntos dentro de
   `.hdr-fest-pill`; las fechas quedan **fuera**, como dato. Antes el nombre estaba
   tipografiado como título de pantalla y el chevron colgaba al otro extremo, pegado a

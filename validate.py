@@ -1979,14 +1979,18 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar poster-morph: {_e}')
 
-# ── [festival-chooser-canon] elegir festival = muro de afiches, en las DOS superficies ─
+# ── [festival-chooser-canon] elegir festival = LA MISMA estructura en las 2 superficies ─
 # Feedback real de usuario (20 jul 2026): "¿cómo vuelvo al menú donde estaban los
 # festivales?". Había DOS implementaciones de la misma decisión: el riel de afiches del
 # splash y una lista de texto en el sheet → no se reconocían como el mismo lugar.
+# 2ª iteración (Juan: "¿por qué no replicaste la estructura del splash?"): el sheet ya
+# ni siquiera tiene render propio — DELEGA en el riel del splash y solo cambia la acción.
 # Requisitos que NO pueden desaparecer: (1) una sola fábrica de card (_festivalCardHTML)
-# usada por ambos renderers; (2) el sheet NO vuelve a la lista de texto (fs-festival-row);
-# (3) el chevron del header va DENTRO de la píldora, junto al nombre (si se saca, el
-# nombre vuelve a leerse como título de pantalla y el control desaparece a la vista).
+# usada por el riel; (2) el sheet DELEGA en _renderSplashRailHTML (si alguien le vuelve a
+# escribir un render propio, son dos otra vez); (3) el sheet NO vuelve a la lista de texto
+# (fs-festival-row); (4) el sheet conserva su bloque de info de 4 líneas (#fs-info con las
+# clases .splash-info-*); (5) el chevron del header va DENTRO de la píldora, junto al
+# nombre (si se saca, el nombre vuelve a leerse como título y el control desaparece).
 check = 'festival-chooser-canon'
 try:
     _cmp = open('src/view/components.js', encoding='utf-8').read()
@@ -1994,16 +1998,27 @@ try:
     _errs = []
     if '_festivalCardHTML' not in _cmp:
         _errs.append('falta la fábrica única _festivalCardHTML')
-    for _fn in ('_renderSplashRailHTML', '_renderFestivalSelectorHTML'):
-        _i = _cmp.find('function ' + _fn)
-        if _i < 0:
-            _errs.append(f'falta {_fn}')
-            continue
-        _body = _cmp[_i:_i + 2600]
-        if '_festivalCardHTML' not in _body:
-            _errs.append(f'{_fn} no usa la fábrica única (card duplicada)')
+    _i = _cmp.find('function _renderSplashRailHTML')
+    if _i < 0:
+        _errs.append('falta _renderSplashRailHTML')
+    elif '_festivalCardHTML' not in _cmp[_i:_i + 2600]:
+        _errs.append('_renderSplashRailHTML no usa la fábrica única (card duplicada)')
+    _j = _cmp.find('function _renderFestivalSelectorHTML')
+    if _j < 0:
+        _errs.append('falta _renderFestivalSelectorHTML')
+    elif '_renderSplashRailHTML' not in _cmp[_j:_j + 700]:
+        _errs.append('el sheet dejó de delegar en el riel del splash (render propio = dos implementaciones)')
     if 'fs-festival-row' in _cmp:
         _errs.append('el sheet volvió a la lista de texto (fs-festival-row)')
+    _fi = _html.find('id="fs-info"')
+    if _fi < 0:
+        _errs.append('falta el bloque de info del sheet (#fs-info)')
+    else:
+        _blk = _html[_fi:_fi + 500]
+        for _cls in ('splash-info-name', 'splash-info-tag', 'splash-info-city', 'splash-info-dates'):
+            if _cls not in _blk:
+                _errs.append(f'#fs-info perdió la línea {_cls} (las 4 del splash son el canon)')
+                break
     # El chevron debe ir dentro de la píldora, pegado al nombre.
     _pill = _html.find('hdr-fest-pill')
     if _pill < 0:

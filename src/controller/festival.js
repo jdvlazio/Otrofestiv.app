@@ -7,24 +7,67 @@ import { _langDates, setPosters } from '../view/helpers.js';
 import { render } from '../view/programa.js';
 import { state } from '../state/state.js';
 
+// _renderFestivalSelector — el chooser del sheet, con la MISMA estructura del splash
+// (20 jul 2026): riel de afiches + bloque .splash-info de 4 líneas que se actualiza
+// al desplazar. Aquí NO hay "Entrar": tocar una card carga directo (data-action del
+// riel), así que el info es una PREVISUALIZACIÓN de lo centrado, no una selección.
 export function _renderFestivalSelector(activeFestId){
   const container=document.getElementById('fs-festival-list');
   if(!container) return;
-  container.innerHTML=_renderFestivalSelectorHTML(state, activeFestId);
-  // Año de temporada: ancla única en el header del sheet (no repetido por fila).
+  // _renderSplashRailHTML devuelve SOLO las cards + el divisor (en el splash, el
+  // contenedor .splash-rail es estático en el markup) → aquí hay que envolverlas
+  // para heredar el mismo scroll/snap/gutters del riel de la entrada.
+  container.innerHTML=`<div class="splash-rail" role="listbox">${_renderFestivalSelectorHTML(state, activeFestId)}</div>`;
+  const rail=container.querySelector('.splash-rail');
+  const info=document.getElementById('fs-info');
+  // Centrar la card activa (misma razón que el splash: si el centro del scroll y la
+  // marca .on divergen, el próximo gesto pisa lo que se está mostrando).
+  const onCard=rail&&rail.querySelector('.splash-card.on');
+  if(onCard) onCard.scrollIntoView({inline:'center',block:'nearest'});
+  if(info) _fillFestInfo(activeFestId||rail?.querySelector('.splash-card')?.dataset.fest||null, info);
+  // Scroll → actualizar el info con la card centrada. Mismo GATE DE GESTO del splash:
+  // solo un arrastre real del usuario cuenta, para que el re-snap programático del
+  // render no dispare un cambio de info sin interacción.
+  if(rail && info && !rail.dataset.snapWired){
+    rail.dataset.snapWired='1';
+    let _tmo, _armed=false;
+    const _arm=()=>{ _armed=true; };
+    rail.addEventListener('pointerdown',_arm,{passive:true});
+    rail.addEventListener('touchstart',_arm,{passive:true});
+    rail.addEventListener('scroll',()=>{
+      if(!_armed) return;
+      clearTimeout(_tmo);
+      _tmo=setTimeout(()=>{
+        _armed=false;
+        const mid=rail.getBoundingClientRect().left+rail.clientWidth/2;
+        let best=null,bd=Infinity;
+        rail.querySelectorAll('.splash-card').forEach(c=>{
+          const r=c.getBoundingClientRect();
+          const d=Math.abs(r.left+r.width/2-mid);
+          if(d<bd){bd=d;best=c;}
+        });
+        if(best) _fillFestInfo(best.dataset.fest, info);
+      },90);
+    },{passive:true});
+  }
+  // Año de temporada: ancla única en el header del sheet.
   const seasonEl=document.getElementById('fs-season');
   if(seasonEl){ const y=festivalSeasonYear(); seasonEl.textContent=y?String(y):''; }
 }
 
-// _fillSplashInfo — puebla el bloque de info del selector-splash (4 líneas:
-// nombre / tagline / CIUDAD / FECHAS · AÑO-si-pasado) desde el festId. El punto
-// verde marca "en curso". Fuente única: FESTIVAL_CONFIG + festivalTagline.
-function _fillSplashInfo(festId){
+// _fillFestInfo — puebla el bloque de info de UN chooser (4 líneas: nombre /
+// tagline / CIUDAD / FECHAS · AÑO-si-pasado) desde el festId. El punto verde marca
+// "en curso". Fuente única: FESTIVAL_CONFIG + festivalTagline.
+// `scope` permite reusarlo en las DOS superficies (20 jul 2026): el splash y el
+// sheet "cambiar festival" comparten las clases .splash-info-* — se busca por CLASE
+// dentro del scope, no por id global, para que ambos bloques convivan en el DOM.
+function _fillFestInfo(festId, scope){
+  const root=scope||document;
   const cfg=festId&&FESTIVAL_CONFIG[festId];
-  const nameEl=document.getElementById('splash-info-name');
-  const tagEl=document.getElementById('splash-info-tag');
-  const cityEl=document.getElementById('splash-info-city');
-  const datesEl=document.getElementById('splash-info-dates');
+  const nameEl=root.querySelector('.splash-info-name');
+  const tagEl=root.querySelector('.splash-info-tag');
+  const cityEl=root.querySelector('.splash-info-city');
+  const datesEl=root.querySelector('.splash-info-dates');
   if(!cfg){ [nameEl,tagEl,cityEl,datesEl].forEach(el=>{if(el)el.textContent='';}); return; }
   const cls=_classifyFestival(cfg);
   if(nameEl) nameEl.textContent=festivalShortName(cfg);
@@ -48,6 +91,12 @@ function _fillSplashInfo(festId){
     const _showYear=cfg.year && cfg.year!==_season;
     datesEl.textContent=(dates+(_showYear?' · '+cfg.year:'')).toUpperCase();
   }
+}
+
+// _fillSplashInfo — el info del SPLASH. Scope acotado a #otrofestiv-splash para no
+// pisar el bloque gemelo del sheet (ambos usan las clases .splash-info-*).
+function _fillSplashInfo(festId){
+  return _fillFestInfo(festId, document.getElementById('otrofestiv-splash')||document);
 }
 
 // _selectCenteredCard — tras el scroll-snap, selecciona la card más cercana al
@@ -98,7 +147,7 @@ export function _renderSplashRail(activeFestId){
       },{passive:true});
     }
   }
-  const previewId=activeFestId || document.querySelector('.splash-card')?.dataset.fest || null;
+  const previewId=activeFestId || rail?.querySelector('.splash-card')?.dataset.fest || null;
   _fillSplashInfo(previewId);
 }
 
@@ -111,8 +160,14 @@ export function _renderSplashRail(activeFestId){
 // aunque el info se deriva del festId.
 export function selectSplashFest(name,meta,festId){
   _splashSelectedFestId=festId||_DEFAULT_FEST_ID;
-  document.querySelectorAll('.splash-card').forEach(el=>{el.classList.remove('on');el.setAttribute('aria-selected','false');});
-  const card=document.querySelector('.splash-card[data-fest="'+_splashSelectedFestId+'"]');
+  // ACOTADO al riel del splash: desde el rediseño del chooser (20 jul 2026) hay DOS
+  // rieles en el DOM —el del splash y el del sheet "cambiar festival", que se renderiza
+  // en el boot—. Con querySelectorAll global, elegir en el splash le borraba la marca
+  // .on al riel del sheet (y el querySelector de la card dependía del orden del DOM).
+  // Cazado por 4 tests flaky, entre ellos T08 del carrusel.
+  const scope=document.getElementById('splash-rail')||document;
+  scope.querySelectorAll('.splash-card').forEach(el=>{el.classList.remove('on');el.setAttribute('aria-selected','false');});
+  const card=scope.querySelector('.splash-card[data-fest="'+_splashSelectedFestId+'"]');
   if(card){
     card.classList.add('on'); card.setAttribute('aria-selected','true');
     // Instant (sin behavior:'smooth'): snap mandatory pelea el smooth programático.

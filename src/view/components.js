@@ -567,7 +567,11 @@ function _festivalCardHTML([id,cfg], {isPast, isActive, action, lang}){
   return`<button class="splash-card${isPast?' past':''}${isActive?' on':''}" data-fest="${id}" role="option" aria-selected="${isActive}" data-action="${action}" data-name="${label}" data-meta="${meta}"><span class="splash-card-tpl">${art}</span></button>`;
 }
 
-export function _renderSplashRailHTML(state, activeFestId){
+// `action` parametriza la superficie (20 jul 2026): el splash SELECCIONA (confirma
+// con "Entrar"); el sheet "cambiar festival" CARGA directo. Todo lo demás —orden,
+// partición vigentes/pasados, divisor "ANTERIORES"— es idéntico, así que el riel es
+// UNO SOLO y no dos implementaciones que se desincronizan.
+export function _renderSplashRailHTML(state, activeFestId, action='selectSplashFest'){
   const {_lang} = state.snapshot();
   const entries=_sortFestivals(Object.entries(FESTIVAL_CONFIG)
     .filter(([,cfg])=>cfg.name&&cfg.group!=='test'), null);
@@ -576,7 +580,7 @@ export function _renderSplashRailHTML(state, activeFestId){
   // isPast se pasa desde la partición (una sola clasificación por festival) — no
   // re-clasificar dentro de mkCard: evita que la card caiga en un grupo y se pinte
   // con la clase del otro en un boundary de fecha.
-  const mkCard=(e,isPast)=>_festivalCardHTML(e,{isPast,isActive:e[0]===activeFestId,action:'selectSplashFest',lang:_lang});
+  const mkCard=(e,isPast)=>_festivalCardHTML(e,{isPast,isActive:e[0]===activeFestId,action,lang:_lang});
   // El año de temporada NO se muestra cuando todos los festivales comparten año (hoy,
   // todos 2026 → repetirlo no suma; minimalismo). El único lugar donde aparece es la
   // FECHA del info, y solo si el año de ESE festival DIFIERE de la temporada
@@ -590,44 +594,18 @@ export function _renderSplashRailHTML(state, activeFestId){
   return html;
 }
 
-// REGLA (no repetir el nombre dos veces): el subtítulo `fs-fest-full` muestra el
-// DESCRIPTOR (festivalTagline, que ya trae el nombre removido), no el fullName —
-// que empezaba repitiendo el nombre ya visible en `fs-fest-name` ("Tercer Tiempo
-// Fest · 2026" arriba, "Tercer Tiempo Fest — …" abajo). Aplica a todo título+subtítulo.
+// _renderFestivalSelectorHTML — el chooser del sheet ES el riel del splash.
+// Rediseño 20 jul 2026 (2ª iteración, feedback de Juan: "¿por qué no replicaste la
+// estructura del splash?"). La 1ª iteración inventó una estructura propia —tres
+// encabezados de grupo (EN CURSO/PRÓXIMOS/ANTERIORES) y un rótulo por card— cuando
+// el riel del splash YA resolvía lo mismo mejor: una sola tira con divisor vertical
+// "ANTERIORES", y el bloque .splash-info de 4 líneas (nombre / descriptor / CIUDAD
+// con punto verde si está en curso / FECHAS) que se actualiza al desplazar.
+// Ahora NO hay dos implementaciones: esta delega en el riel único y solo cambia la
+// acción (cargar directo en vez de seleccionar+"Entrar"). El info lo puebla
+// _renderFestivalSelector (controller/festival.js) reusando _fillFestInfo.
 export function _renderFestivalSelectorHTML(state, activeFestId){
-  const {_lang} = state.snapshot();
-  const entries=_sortFestivals(Object.entries(FESTIVAL_CONFIG)
-    .filter(([,cfg])=>cfg.name&&cfg.group!=='test'), activeFestId);
-  // El rótulo usa el NOMBRE OFICIAL COMPLETO (cfg.name), no el corto: bajo un afiche,
-  // "Tribeca"/"Leviza"/"AFF" se leían truncados (festivalShortName corta al primer
-  // término). Decisión de Juan (20 jul 2026) — mismo criterio que sentó el precedente
-  // de Leviza: "crece una línea pero es más claro". NO se usa cfg.fullName: el oficial
-  // largo ("Festival Internacional de Cine de Cartagena de Indias") no cabe bajo la card.
-  // El año vive UNA vez en el header (fs-season); solo se añade si difiere de la
-  // temporada Y el nombre no lo trae ya (evita "AFF 2026 · 2026").
-  const season=festivalSeasonYear();
-  const cardLabel=cfg=>{
-    const n=cfg.name||'';
-    const showYear=cfg.year&&cfg.year!==season&&!n.includes(String(cfg.year));
-    return showYear?`${n} · ${cfg.year}`:n;
-  };
-  // Clasificar en tres grupos — fuente única de verdad
-  const ongoing  = entries.filter(([,cfg])=>_classifyFestival(cfg)==='ongoing');
-  const upcoming = entries.filter(([,cfg])=>_classifyFestival(cfg)==='upcoming');
-  const past     = entries.filter(([,cfg])=>_classifyFestival(cfg)==='past');
-  // Card-afiche (fuente única con el splash) + RÓTULO. El muro de afiches solo no
-  // basta para escanear: quien no reconoce el póster necesita el nombre. El rótulo
-  // lo conserva sin volver a la lista de texto — el afiche sigue mandando la jerarquía.
-  // keyArt ya está cacheado por el splash (mismos URLs) → cero red extra.
-  const mkCell=(e,isPast)=>`<div class="fs-fest-cell">${
-    _festivalCardHTML(e,{isPast,isActive:e[0]===activeFestId,action:'loadFestival',lang:_lang})
-  }<span class="fs-fest-cap">${cardLabel(e[1])}</span></div>`;
-  const rail=(list,isPast)=>`<div class="fs-rail">${list.map(e=>mkCell(e,isPast)).join('')}</div>`;
-  let html='';
-  if(ongoing.length)  html+=`<div class="sec-hdr sm">${ICONS.play} <span>${t('fs_en_curso')}</span></div>`+rail(ongoing,false);
-  if(upcoming.length) html+=`<div class="sec-hdr sm">${ICONS.calendar} <span>${t('fs_proximos')}</span></div>`+rail(upcoming,false);
-  if(past.length)     html+=`<div class="sec-hdr sm">${ICONS.history} <span>${t('splash_anteriores')}</span></div>`+rail(past,true);
-  return html;
+  return _renderSplashRailHTML(state, activeFestId, 'loadFestival');
 }
 
 // p8 Step 6b (D-6B-2): util de título compartida (usada por feedback/programa/agenda).

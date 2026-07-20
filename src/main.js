@@ -126,7 +126,7 @@ import { initWatchBridge } from './controller/watch-bridge.js';
 
 // ── Step 8d-4: controller/loader.js (loadFestival + dismissSplash) ───────────
 import {
-  loadFestival, dismissSplash,
+  loadFestival, dismissSplash, backToSplash,
 } from './controller/loader.js';
 
 // ── Step 7e: controller/festival.js ────────────────────────────────────────────
@@ -208,6 +208,7 @@ const ACTION_REGISTRY = {
   openAvSheet:           ()      => openAvSheet(),
   openAuthSheet:         ()      => openAuthSheet(),
   openFestivalSheet:     ()      => openFestivalSheet(),
+  backToSplash:          ()      => backToSplash(),
   openRatingSheet:       (el)    => openRatingSheet(el.dataset.title),
   openCortoSheetFromEl:  (el, e) => { const _m=globalThis._morphOpen; _m ? _m(el, () => openCortoSheetFromEl(el, e)) : openCortoSheetFromEl(el, e); }, // hero morph también dentro de programas (puente: _morphOpen vive en el IIFE)
   closePelSheet:         ()      => closePelSheet(),
@@ -445,7 +446,7 @@ FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202607201145';
+const BUILD_VERSION='202607201248';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';
