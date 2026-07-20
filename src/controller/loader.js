@@ -458,6 +458,20 @@ export async function loadFestival(id){
   }
 }
 
+// backToSplash — el wordmark como "volver al inicio" (patrón de toda app web).
+// Decisión de Juan (20 jul 2026), opción A: se sale del splash con "Entrar" (que
+// pre-selecciona el festival en curso), sin botón de cancelar.
+// POR QUÉ UN RELOAD y no re-mostrar el nodo: dismissSplash() hace s.remove() — el
+// splash NO queda oculto, se elimina del DOM. Recrearlo a mano (markup + animación
+// de entrada + re-cableado del riel) sería una segunda implementación del arranque,
+// justo lo que venimos eliminando. El estado del usuario vive en localStorage
+// (saveState es síncrono), así que recargar no pierde nada, y el shell sale del
+// caché del SW. Se guarda antes por si hubiera una mutación en vuelo.
+export function backToSplash(){
+  try{ if(typeof saveState==='function') saveState(); }catch(e){ /* no bloquear la vuelta */ }
+  location.reload();
+}
+
 export function dismissSplash(){
   // Sin festival elegido no hay a dónde entrar. El botón "Entrar" está disabled
   // hasta que se elige (selectSplashFest lo habilita); guard defensivo por si

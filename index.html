@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607201145">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607201145">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607201240">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607201240">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -377,6 +377,11 @@ body{background:var(--bg);color:var(--white);font-family:var(--font),'Plus Jakar
 .hdr{display:flex;align-items:center;flex-wrap:wrap;padding:0;min-height:44px}
 h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t-lg);font-weight:var(--w-display);line-height:1;letter-spacing:-.03em;color:var(--white);flex:1}
 .hdr-wordmark span{color:var(--amber)}
+/* El wordmark vuelve al inicio (splash) — patrón de toda app web. Pedido de Juan
+   (20 jul 2026): "muchas apps usan el wordmark para volver al inicio". Es la 2ª
+   vía para cambiar de festival, junto al selector del header. */
+.hdr-wordmark[data-action]{cursor:pointer;-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+.hdr-wordmark[data-action]:active{opacity:.6}
 /* Auth button */
 .auth-btn{position:relative;width:32px;height:32px;border-radius:50%;border:none;background:transparent;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;-webkit-tap-highlight-color:transparent}.auth-btn::after{content:'';position:absolute;inset:-6px}
 .auth-btn svg{opacity:.8;transition:opacity var(--tr-smooth);stroke:var(--amber)}
@@ -1687,31 +1692,19 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .fs-title{font-size:var(--t-sm);font-weight:var(--w-bold);letter-spacing:.1em;text-transform:uppercase;color:var(--gray)}
 /* Año de temporada — ancla única (minimalismo: no repetir el año en cada fila) */
 .fs-season{font-size:var(--t-sm);font-weight:var(--w-bold);letter-spacing:.06em;color:var(--amber);font-variant-numeric:tabular-nums}
-/* ── Chooser de festival del sheet — MURO DE AFICHES ──────────────────────────
-   Rediseño 20 jul 2026 (feedback real: "¿cómo vuelvo al menú de los festivales?").
-   Antes era una lista de texto con miniaturas de 27px: no se reconocía como el
-   mismo lugar que el riel de la entrada. Ahora reusa la MISMA .splash-card
-   (fuente única: _festivalCardHTML) → reconocimiento inmediato.
-   El token --poster-h vive en #otrofestiv-splash, así que el riel del sheet
-   define el suyo (más bajo: aquí el afiche acompaña, no protagoniza). */
-.fs-rail{
-  --poster-h:158px;--poster-w:calc(var(--poster-h) * 2 / 3);
-  display:flex;gap:var(--sp-3);align-items:flex-start;
-  overflow-x:auto;scrollbar-width:none;
-  padding:var(--sp-2) var(--sp-5) var(--sp-4);
+/* ── Chooser de festival del sheet — LA ESTRUCTURA DEL SPLASH ─────────────────
+   Rediseño 20 jul 2026, 2ª iteración. La 1ª inventó estructura propia (3 grupos +
+   rótulo por card); Juan pidió replicar el splash, que ya lo resolvía mejor: UN
+   riel con divisor "ANTERIORES" + el bloque .splash-info de 4 líneas.
+   Aquí solo se define el TAMAÑO del riel (el token --poster-h vive en
+   #otrofestiv-splash); todo lo demás lo aporta .splash-rail/.splash-card. */
+#fs-festival-list .splash-rail{
+  --poster-h:186px;--poster-w:calc(var(--poster-h) * 2 / 3);
+  margin:var(--sp-3) 0 var(--sp-4);
 }
-.fs-rail::-webkit-scrollbar{display:none}
-/* Celda = afiche + rótulo. El rótulo conserva la escaneabilidad que daba la
-   lista (quien no reconoce el póster necesita el nombre) sin volver a ella. */
-.fs-fest-cell{flex:none;width:var(--poster-w);display:flex;flex-direction:column;gap:var(--sp-2);align-items:center}
-.fs-fest-cap{
-  font-size:var(--t-label);font-weight:var(--w-semi);color:var(--white-60);
-  text-align:center;line-height:1.25;width:100%;
-  /* 3 líneas: el rótulo pasó al nombre OFICIAL completo (ej. "Leviza - Festival de
-     Cine y Audiovisuales") — con 2 se truncaba justo lo que se quería recuperar. */
-  display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;
-}
-.fs-fest-cell .splash-card.on + .fs-fest-cap{color:var(--white)}
+/* El info del sheet reusa .splash-info; solo se acota el aire (el del splash está
+   calibrado para una pantalla completa, no para un sheet). */
+#fs-info{margin-bottom:var(--sp-5)}
 
 
 /* ── DESKTOP TOPBAR — barra unificada ── */
@@ -2588,7 +2581,7 @@ setTimeout(function(){
 <div class="topbar">
 <div class="hdr">
   <div class="hdr-top">
-    <h1 class="hdr-wordmark">Otro<span>festiv</span></h1>
+    <h1 class="hdr-wordmark" data-action="backToSplash" role="button" tabindex="0" data-i18n-aria="aria_inicio" aria-label="Volver al inicio">Otro<span>festiv</span></h1>
     <!-- Orden (18 jul 2026): idioma ADENTRO (se toca una vez en la vida),
          cuenta en la ESQUINA (recurrente + sync-dot; convención de avatar). -->
     <div class="lang-toggle" id="lang-toggle" aria-label="Idioma / Language">
@@ -2912,7 +2905,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202607201145";
+    s.src="/src/main.js?v=202607201240";
     document.body.appendChild(s);
     // Watchdog de boot (P0 18 jul): si el grafo ESM murió en el import (caché
     // HTTP mixta tras deploys en ráfaga — main.js nuevo + módulo viejo sin el
@@ -3052,6 +3045,15 @@ setTimeout(function(){
   </div>
   <!-- Generado dinámicamente por _renderFestivalSelector() en init -->
   <div id="fs-festival-list"></div>
+  <!-- Info del chooser: MISMA estructura y clases que el bloque del splash
+       (nombre / descriptor / CIUDAD con punto verde / FECHAS). Se puebla con la
+       card centrada del riel — ver _renderFestivalSelector. -->
+  <div class="splash-info" id="fs-info">
+    <div class="splash-info-name"></div>
+    <div class="splash-info-tag"></div>
+    <div class="splash-info-city"></div>
+    <div class="splash-info-dates"></div>
+  </div>
 
 </div>
 

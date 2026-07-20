@@ -129,14 +129,17 @@ test('festivalSeasonYear — año vigente de la temporada', () => {
   assert.strictEqual(C.festivalSeasonYear(), 2026, 'temporada 2026');
 });
 
-test('_renderFestivalSelectorHTML — rótulos sin año repetido (todos = temporada)', () => {
-  const html = C._renderFestivalSelectorHTML(fakeState(), 'tercertiempo2026');
-  // ningún rótulo de card repite "· 2026" (todos son la temporada vigente)
-  const names = [...html.matchAll(/class="fs-fest-cap">([^<]*)</g)].map(m => m[1]);
-  assert.ok(names.length >= 8, 'todas las cards presentes');
-  assert.ok(names.every(n => !/·\s*20\d\d/.test(n)), 'ningún rótulo muestra el año');
-  assert.ok(names.includes('Olhar de Cinema'), 'Olhar con nombre oficial');
-  assert.ok(names.includes('Tercer Tiempo Fest'), 'TT sin año en el rótulo');
+// El chooser del sheet ES el riel del splash (2ª iteración, 20 jul): mismo HTML,
+// solo cambia la acción. Este test fija la IDENTIDAD — si alguien le vuelve a
+// escribir un render propio al sheet, la igualdad se rompe y falla.
+test('_renderFestivalSelectorHTML — idéntico al riel del splash salvo la acción', () => {
+  const sheet  = C._renderFestivalSelectorHTML(fakeState(), 'tercertiempo2026');
+  const splash = C._renderSplashRailHTML(fakeState(), 'tercertiempo2026');
+  assert.strictEqual(
+    sheet,
+    splash.replace(/data-action="selectSplashFest"/g, 'data-action="loadFestival"'),
+    'el sheet es el riel del splash con la acción cambiada (una sola implementación)'
+  );
 });
 
 // Rediseño 20 jul: el chooser del sheet es un MURO DE AFICHES que reusa la misma

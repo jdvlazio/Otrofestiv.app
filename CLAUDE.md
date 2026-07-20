@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `22d086f feat(festival): elegir festival = muro de afiches en las dos superficies`
+> Último commit: `27f863b fix(miplan+selector): huecos de 92px entre secciones + rótulo con nombre completo`
 
 ---
 
