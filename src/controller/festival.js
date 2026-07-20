@@ -39,14 +39,17 @@ export function _renderFestivalSelector(activeFestId){
       clearTimeout(_tmo);
       _tmo=setTimeout(()=>{
         _armed=false;
-        const mid=rail.getBoundingClientRect().left+rail.clientWidth/2;
-        let best=null,bd=Infinity;
+        const best=_centeredCard(rail);
+        if(!best || best.classList.contains('on')) return;
+        // Mover la marca .on a la card centrada. NO es cosmético: el zoom+opacidad
+        // del riel salen de `.splash-card:not(.on){transform:scale(.9);opacity:.5}`,
+        // así que sin esto el sheet se sentía muerto al desplazar (solo cambiaba el
+        // texto). Aquí .on significa "lo que estás mirando", igual que en el splash.
         rail.querySelectorAll('.splash-card').forEach(c=>{
-          const r=c.getBoundingClientRect();
-          const d=Math.abs(r.left+r.width/2-mid);
-          if(d<bd){bd=d;best=c;}
+          c.classList.remove('on'); c.setAttribute('aria-selected','false');
         });
-        if(best) _fillFestInfo(best.dataset.fest, info);
+        best.classList.add('on'); best.setAttribute('aria-selected','true');
+        _fillFestInfo(best.dataset.fest, info);
       },90);
     },{passive:true});
   }
@@ -99,9 +102,10 @@ function _fillSplashInfo(festId){
   return _fillFestInfo(festId, document.getElementById('otrofestiv-splash')||document);
 }
 
-// _selectCenteredCard — tras el scroll-snap, selecciona la card más cercana al
-// centro del riel (el gesto de arrastrar = elegir). Ignora el divisor (no es card).
-function _selectCenteredCard(rail){
+// _centeredCard — la card más cercana al centro del riel. Ignora el divisor (no es
+// card). FUENTE ÚNICA para las dos superficies con riel: el splash (donde centrar =
+// elegir) y el sheet "cambiar festival" (donde centrar = previsualizar).
+function _centeredCard(rail){
   const mid=rail.getBoundingClientRect().left+rail.clientWidth/2;
   let best=null,bd=Infinity;
   rail.querySelectorAll('.splash-card').forEach(c=>{
@@ -109,6 +113,13 @@ function _selectCenteredCard(rail){
     const d=Math.abs(r.left+r.width/2-mid);
     if(d<bd){bd=d;best=c;}
   });
+  return best;
+}
+
+// _selectCenteredCard — tras el scroll-snap, selecciona la card más cercana al
+// centro del riel (el gesto de arrastrar = elegir).
+function _selectCenteredCard(rail){
+  const best=_centeredCard(rail);
   const cur=rail.querySelector('.splash-card.on')?.dataset.fest;
   if(best && best.dataset.fest!==cur){
     selectSplashFest(best.dataset.name,best.dataset.meta,best.dataset.fest);
