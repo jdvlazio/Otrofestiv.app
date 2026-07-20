@@ -58,11 +58,23 @@ test('festivalTagline — tagline localizado {es,en}', () => {
 // ── _renderSplashRailHTML: estructura ──
 const fakeState = (lang='es') => ({ snapshot: () => ({ _lang: lang }) });
 
-test('_renderSplashRailHTML — cards de los 8 festivales visibles + divisor', () => {
+// El divisor "ANTERIORES" separa DOS grupos: solo se emite si hay vigentes Y pasados.
+// ANTES este test lo exigía siempre → era una BOMBA DE TIEMPO: estalló el 20 jul 2026,
+// cuando terminó el último festival vigente y el riel pasó a ser todo-pasados (el
+// código hace lo correcto al omitirlo). Ahora la aserción es condicional a la
+// partición real, así que el test mide la REGLA y no la fecha en que se corre.
+test('_renderSplashRailHTML — cards de los 8 festivales visibles + divisor condicional', () => {
   const html = C._renderSplashRailHTML(fakeState(), 'fantasofest2026');
   const cards = (html.match(/data-fest=/g) || []).length;
   assert.strictEqual(cards, 8, '8 cards (cinemancia es group:test → excluido)');
-  assert.ok(html.includes('splash-rail-div'), 'divisor ANTERIORES presente');
+  const anyCurrent = Object.entries(CFG)
+    .filter(([, c]) => c.name && c.group !== 'test')
+    .some(([, c]) => C._classifyFestival(c) !== 'past');
+  const anyPast = Object.entries(CFG)
+    .filter(([, c]) => c.name && c.group !== 'test')
+    .some(([, c]) => C._classifyFestival(c) === 'past');
+  assert.strictEqual(html.includes('splash-rail-div'), anyCurrent && anyPast,
+    'divisor presente si y solo si hay vigentes Y pasados');
   assert.ok(html.includes('data-fest="fantasofest2026"'), 'incluye el festival activo');
   assert.ok(!html.includes('cinemancia2025'), 'excluye group:test');
 });
@@ -117,22 +129,27 @@ test('festivalSeasonYear — año vigente de la temporada', () => {
   assert.strictEqual(C.festivalSeasonYear(), 2026, 'temporada 2026');
 });
 
-test('_renderFestivalSelectorHTML — filas sin año repetido (todos = temporada)', () => {
+test('_renderFestivalSelectorHTML — rótulos sin año repetido (todos = temporada)', () => {
   const html = C._renderFestivalSelectorHTML(fakeState(), 'tercertiempo2026');
-  // ninguna fila-título repite "· 2026" (todos son la temporada vigente)
-  const names = [...html.matchAll(/class="fs-fest-name">([^<]*)</g)].map(m => m[1]);
-  assert.ok(names.length >= 8, 'todas las filas presentes');
-  assert.ok(names.every(n => !/·\s*20\d\d/.test(n)), 'ninguna fila muestra el año');
+  // ningún rótulo de card repite "· 2026" (todos son la temporada vigente)
+  const names = [...html.matchAll(/class="fs-fest-cap">([^<]*)</g)].map(m => m[1]);
+  assert.ok(names.length >= 8, 'todas las cards presentes');
+  assert.ok(names.every(n => !/·\s*20\d\d/.test(n)), 'ningún rótulo muestra el año');
   assert.ok(names.includes('Olhar de Cinema'), 'Olhar con nombre oficial');
-  assert.ok(names.includes('Tercer Tiempo Fest'), 'TT sin año en el título');
+  assert.ok(names.includes('Tercer Tiempo Fest'), 'TT sin año en el rótulo');
 });
 
-// Mini-póster en cada fila (reemplaza el punto ámbar → unidad con el splash).
-test('_renderFestivalSelectorHTML — cada fila lleva mini-póster (keyArt) sin punto', () => {
+// Rediseño 20 jul: el chooser del sheet es un MURO DE AFICHES que reusa la misma
+// .splash-card del riel de entrada (fuente única _festivalCardHTML). Este test fija
+// esa unidad: si alguien lo devuelve a lista de texto, falla.
+test('_renderFestivalSelectorHTML — muro de afiches con la card del splash', () => {
   const html = C._renderFestivalSelectorHTML(fakeState(), 'tercertiempo2026');
-  assert.ok(!html.includes('fs-fest-dot'), 'el punto ámbar ya no se renderiza');
-  const arts = (html.match(/class="fs-fest-art"/g) || []).length;
-  assert.strictEqual(arts, 8, '8 filas con póster');
+  assert.ok(!html.includes('fs-festival-row'), 'ya no renderiza filas de lista');
+  // <button class="splash-card…"> — NO contar splash-card-tpl / -art (mismo prefijo)
+  const cards = (html.match(/<button class="splash-card/g) || []).length;
+  assert.strictEqual(cards, 8, '8 cards-afiche (mismo componente que el splash)');
+  assert.ok(html.includes('data-action="loadFestival"'), 'en el sheet la card carga directo');
+  assert.ok(!html.includes('data-action="selectSplashFest"'), 'no usa la acción del splash');
   assert.ok(html.includes('/assets/keyart/olhar2026.jpg'), 'usa el keyArt del festival');
   assert.ok(html.includes('--kap:30%'), 'aplica keyArtPos de TT');
   assert.ok((html.match(/onerror="this.remove\(\)"/g) || []).length >= 8, 'cada img degrada (§10.2)');

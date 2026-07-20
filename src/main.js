@@ -131,7 +131,7 @@ import {
 
 // ── Step 7e: controller/festival.js ────────────────────────────────────────────
 import {
-  _renderSplashRail, _togglePastFestRow, _renderFestivalSelector, selectSplashFest, _autoResolveFestivalPosters,
+  _renderSplashRail, _renderFestivalSelector, selectSplashFest, _autoResolveFestivalPosters,
 } from './controller/festival.js';
 
 // ── Step 7e: controller/auth.js ────────────────────────────────────────────
@@ -223,7 +223,6 @@ const ACTION_REGISTRY = {
   dismissSplash:         ()      => dismissSplash(),
   searchOpen:            ()      => searchOpen(),
   searchClose:           ()      => searchClose(),
-  togglePastFestRow:     (el)    => _togglePastFestRow(el.closest('.fs-festival-row'), el.dataset.fest),
   openPostViewRating:    (el)    => openPostViewRating(el.dataset.title, el.dataset.day, el.dataset.time, el.dataset.venue, el.dataset.duration),
   selectSplashFest:      (el)    => selectSplashFest(el.dataset.name, el.dataset.meta, el.dataset.fest),
   selectFromDetail:      (el)    => selectFromDetail(el),
@@ -446,7 +445,7 @@ FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202607191206';
+const BUILD_VERSION='202607201118';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';

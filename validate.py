@@ -1979,6 +1979,44 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar poster-morph: {_e}')
 
+# ── [festival-chooser-canon] elegir festival = muro de afiches, en las DOS superficies ─
+# Feedback real de usuario (20 jul 2026): "¿cómo vuelvo al menú donde estaban los
+# festivales?". Había DOS implementaciones de la misma decisión: el riel de afiches del
+# splash y una lista de texto en el sheet → no se reconocían como el mismo lugar.
+# Requisitos que NO pueden desaparecer: (1) una sola fábrica de card (_festivalCardHTML)
+# usada por ambos renderers; (2) el sheet NO vuelve a la lista de texto (fs-festival-row);
+# (3) el chevron del header va DENTRO de la píldora, junto al nombre (si se saca, el
+# nombre vuelve a leerse como título de pantalla y el control desaparece a la vista).
+check = 'festival-chooser-canon'
+try:
+    _cmp = open('src/view/components.js', encoding='utf-8').read()
+    _html = open('index.html', encoding='utf-8').read()
+    _errs = []
+    if '_festivalCardHTML' not in _cmp:
+        _errs.append('falta la fábrica única _festivalCardHTML')
+    for _fn in ('_renderSplashRailHTML', '_renderFestivalSelectorHTML'):
+        _i = _cmp.find('function ' + _fn)
+        if _i < 0:
+            _errs.append(f'falta {_fn}')
+            continue
+        _body = _cmp[_i:_i + 2600]
+        if '_festivalCardHTML' not in _body:
+            _errs.append(f'{_fn} no usa la fábrica única (card duplicada)')
+    if 'fs-festival-row' in _cmp:
+        _errs.append('el sheet volvió a la lista de texto (fs-festival-row)')
+    # El chevron debe ir dentro de la píldora, pegado al nombre.
+    _pill = _html.find('hdr-fest-pill')
+    if _pill < 0:
+        _errs.append('falta la píldora del selector en el header (hdr-fest-pill)')
+    elif 'hdr-fest-chev' not in _html[_pill:_pill + 700]:
+        _errs.append('el chevron salió de la píldora (vuelve a leerse como control de fecha)')
+    if _errs:
+        fail(check, 'chooser de festival roto: ' + '; '.join(_errs[:4]))
+    else:
+        ok(check, 'elegir festival = muro de afiches con fábrica única (splash + sheet)')
+except Exception as _e:
+    warn(check, f'no se pudo verificar festival-chooser-canon: {_e}')
+
 # ── [diary-poster-grid] el Diario compartible es un muro de afiches, no una lista ─
 # Decisión Juan 19 jul: shareDiary dibuja un GRID de pósters (cover-fit) con chip
 # de estrellas, no la lista tipográfica vieja. Requisitos que NO pueden desaparecer:

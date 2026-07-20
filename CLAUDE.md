@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `3101b57 feat(offline): quick-wins de resiliencia — storage.persist() + flush al reconectar`
+> Último commit: `4ede4fb test(offline): smoke T46 — la app abre offline tras una visita online`
 
 ---
 
@@ -61,8 +61,8 @@ Juan es Product Owner, diseñador y developer. Claude ejecuta; Juan audita y apr
 | `cinemancia2025` | Cinemancia 2025 | Valle de Aburrá | 11–20 SEP | Archivado |
 | `leviza2026` | Leviza - Festival de Cine y Audiovisuales | Zapatoca | 14–17 MAY | Archivado |
 | `olhar2026` | Olhar de Cinema | Curitiba | JUN 4–13 | Archivado |
-| `tercertiempo2026` | Tercer Tiempo Fest | Bogotá | 13–19 JUL | **Próximo / activo** |
-| `fantasofest2026` | FantasoFest | Bogotá | 13–19 JUL | **Próximo / activo** |
+| `tercertiempo2026` | Tercer Tiempo Fest | Bogotá | 13–19 JUL | Recién terminado |
+| `fantasofest2026` | FantasoFest | Bogotá | 13–19 JUL | Recién terminado |
 | `ficmontanas2026` | Ficmontañas | Salento | JUL 1–5 | Recién terminado |
 
 ### Features activas (desde `.specify/features/`)

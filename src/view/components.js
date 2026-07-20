@@ -548,6 +548,25 @@ export function festivalTagline(cfg, lang='es'){
 // scroll con la selección (bug cazado en QA: la card centrada dejaba de ser la
 // .on → el próximo gesto de scroll pisaba la selección). activeFestId aquí solo
 // marca .on/aria-selected.
+// _festivalCardHTML — FUENTE ÚNICA de la card-afiche de festival. La usan las DOS
+// superficies donde se elige festival: el riel del splash y el sheet "cambiar
+// festival". Rediseño 20 jul 2026 (feedback real de usuario: "¿cómo vuelvo al menú
+// donde estaban los festivales?"): el sheet era una lista de texto con miniaturas de
+// 27px y no se reconocía como el mismo lugar que el muro de afiches de la entrada.
+// Mismo vocabulario visual en ambas → reconocimiento inmediato.
+// `action` es lo ÚNICO que difiere por superficie: en el splash SELECCIONA (el
+// usuario confirma con "Entrar"); en el sheet CARGA directo (no hay confirmación).
+// keyArtPos → custom property --kap (no inline style raw: ARQUITECTURA §10.3);
+// onerror=this.remove() degrada al template negro si el afiche 404ea (§10.2).
+function _festivalCardHTML([id,cfg], {isPast, isActive, action, lang}){
+  const meta=`${cfg.city} · ${lang==='en'&&cfg.dates_en?cfg.dates_en:cfg.dates}`;
+  const label=festivalLabel(cfg);
+  const art=cfg.keyArt
+    ? `<img class="splash-card-art" src="${cfg.keyArt}" alt="" loading="lazy" onerror="this.remove()"${cfg.keyArtPos?` style="--kap:${cfg.keyArtPos}"`:''}>`
+    : `<span class="splash-card-fb">${festivalShortName(cfg)}</span>`;
+  return`<button class="splash-card${isPast?' past':''}${isActive?' on':''}" data-fest="${id}" role="option" aria-selected="${isActive}" data-action="${action}" data-name="${label}" data-meta="${meta}"><span class="splash-card-tpl">${art}</span></button>`;
+}
+
 export function _renderSplashRailHTML(state, activeFestId){
   const {_lang} = state.snapshot();
   const entries=_sortFestivals(Object.entries(FESTIVAL_CONFIG)
@@ -557,17 +576,7 @@ export function _renderSplashRailHTML(state, activeFestId){
   // isPast se pasa desde la partición (una sola clasificación por festival) — no
   // re-clasificar dentro de mkCard: evita que la card caiga en un grupo y se pinte
   // con la clase del otro en un boundary de fecha.
-  const mkCard=([id,cfg],isPast)=>{
-    const isActive=id===activeFestId;
-    const meta=`${cfg.city} · ${_lang==='en'&&cfg.dates_en?cfg.dates_en:cfg.dates}`;
-    const label=festivalLabel(cfg);
-    // keyArtPos → custom property --kap (no inline style raw: ARQUITECTURA §10.3);
-    // onerror=this.remove() degrada al template negro si el afiche 404ea (§10.2).
-    const art=cfg.keyArt
-      ? `<img class="splash-card-art" src="${cfg.keyArt}" alt="" loading="lazy" onerror="this.remove()"${cfg.keyArtPos?` style="--kap:${cfg.keyArtPos}"`:''}>`
-      : `<span class="splash-card-fb">${festivalShortName(cfg)}</span>`;
-    return`<button class="splash-card${isPast?' past':''}${isActive?' on':''}" data-fest="${id}" role="option" aria-selected="${isActive}" data-action="selectSplashFest" data-name="${label}" data-meta="${meta}"><span class="splash-card-tpl">${art}</span></button>`;
-  };
+  const mkCard=(e,isPast)=>_festivalCardHTML(e,{isPast,isActive:e[0]===activeFestId,action:'selectSplashFest',lang:_lang});
   // El año de temporada NO se muestra cuando todos los festivales comparten año (hoy,
   // todos 2026 → repetirlo no suma; minimalismo). El único lugar donde aparece es la
   // FECHA del info, y solo si el año de ESE festival DIFIERE de la temporada
@@ -589,50 +598,26 @@ export function _renderFestivalSelectorHTML(state, activeFestId){
   const {_lang} = state.snapshot();
   const entries=_sortFestivals(Object.entries(FESTIVAL_CONFIG)
     .filter(([,cfg])=>cfg.name&&cfg.group!=='test'), activeFestId);
-  // El año vive UNA vez en el header (fs-season). El título de fila es el nombre
-  // oficial; solo muestra su año si difiere de la temporada (desambiguación).
+  // El año vive UNA vez en el header (fs-season). El rótulo de la card es el nombre
+  // corto; solo muestra su año si difiere de la temporada (desambiguación).
   const season=festivalSeasonYear();
-  const rowTitle=cfg=>festivalShortName(cfg)+(cfg.year&&cfg.year!==season?` · ${cfg.year}`:'');
-  // Mini-póster de festival (reemplaza el punto ámbar → unidad visual con el
-  // carrusel del splash). Mismo vocabulario: cover + --kap + onerror=this.remove().
-  // El estado se lee por color (activo) vs grayscale (pasado, vía CSS) + el ✓.
-  // keyArt ya está cacheado por el splash (mismos URLs) → cero red extra.
-  const mkArt=cfg=>cfg.keyArt
-    ? `<span class="fs-fest-art"><img src="${cfg.keyArt}" alt="" loading="lazy" onerror="this.remove()"${cfg.keyArtPos?` style="--kap:${cfg.keyArtPos}"`:''}></span>`
-    : `<span class="fs-fest-art fs-fest-art-fb">${festivalShortName(cfg)}</span>`;
+  const cardLabel=cfg=>festivalShortName(cfg)+(cfg.year&&cfg.year!==season?` · ${cfg.year}`:'');
   // Clasificar en tres grupos — fuente única de verdad
   const ongoing  = entries.filter(([,cfg])=>_classifyFestival(cfg)==='ongoing');
   const upcoming = entries.filter(([,cfg])=>_classifyFestival(cfg)==='upcoming');
   const past     = entries.filter(([,cfg])=>_classifyFestival(cfg)==='past');
-  function mkRow([id,cfg]){
-    const isActive=id===activeFestId;
-    const meta=`${cfg.city} · ${_lang==='en'&&cfg.dates_en?cfg.dates_en:cfg.dates}`;
-    return`<div class="fs-festival-row" data-fest="${id}" data-action="loadFestival">
-      ${mkArt(cfg)}
-      <div class="fs-fest-info">
-        <div class="fs-fest-name">${rowTitle(cfg)}</div>
-        <div class="fs-fest-full">${festivalTagline(cfg,_lang)||cfg.fullName||cfg.name}</div>
-        <div class="fs-fest-meta">${meta}</div>
-      </div>
-      <div class="fs-fest-check" style="display:${isActive?'':'none'}">${ICONS.check}</div>
-    </div>`;
-  }
-  function mkPastRow([id,cfg]){
-    const meta=`${cfg.city} · ${_lang==='en'&&cfg.dates_en?cfg.dates_en:cfg.dates}`;
-    return`<div class="fs-festival-row past" data-fest="${id}">
-      ${mkArt(cfg)}
-      <div class="fs-fest-info" data-action="loadFestival" data-fest="${id}" style="cursor:pointer;flex:1;min-width:0">
-        <div class="fs-fest-name">${rowTitle(cfg)}</div>
-        <div class="fs-fest-full">${festivalTagline(cfg,_lang)||cfg.fullName||cfg.name}</div>
-        <div class="fs-fest-meta">${meta}</div>
-      </div>
-      <span class="fs-past-chev" data-action="togglePastFestRow" data-fest="${id}" style="padding:var(--sp-2);margin:-var(--sp-2);-webkit-tap-highlight-color:transparent">${ICONS.chevronD}</span>
-    </div>`;
-  }
+  // Card-afiche (fuente única con el splash) + RÓTULO. El muro de afiches solo no
+  // basta para escanear: quien no reconoce el póster necesita el nombre. El rótulo
+  // lo conserva sin volver a la lista de texto — el afiche sigue mandando la jerarquía.
+  // keyArt ya está cacheado por el splash (mismos URLs) → cero red extra.
+  const mkCell=(e,isPast)=>`<div class="fs-fest-cell">${
+    _festivalCardHTML(e,{isPast,isActive:e[0]===activeFestId,action:'loadFestival',lang:_lang})
+  }<span class="fs-fest-cap">${cardLabel(e[1])}</span></div>`;
+  const rail=(list,isPast)=>`<div class="fs-rail">${list.map(e=>mkCell(e,isPast)).join('')}</div>`;
   let html='';
-  if(ongoing.length)  html+=`<div class="sec-hdr sm">${ICONS.play} <span>${t('fs_en_curso')}</span></div>`+ongoing.map(mkRow).join('');
-  if(upcoming.length) html+=`<div class="sec-hdr sm">${ICONS.calendar} <span>${t('fs_proximos')}</span></div>`+upcoming.map(mkRow).join('');
-  if(past.length)     html+=`<div class="sec-hdr sm">${ICONS.history} <span>${t('splash_anteriores')}</span></div>`+past.map(mkPastRow).join('');
+  if(ongoing.length)  html+=`<div class="sec-hdr sm">${ICONS.play} <span>${t('fs_en_curso')}</span></div>`+rail(ongoing,false);
+  if(upcoming.length) html+=`<div class="sec-hdr sm">${ICONS.calendar} <span>${t('fs_proximos')}</span></div>`+rail(upcoming,false);
+  if(past.length)     html+=`<div class="sec-hdr sm">${ICONS.history} <span>${t('splash_anteriores')}</span></div>`+rail(past,true);
   return html;
 }
 
