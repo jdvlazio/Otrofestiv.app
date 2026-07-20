@@ -370,6 +370,25 @@ aterrizaje. Cableado en `main.js` (`_openPelMorph`, envuelve `openPelSheet` en
 `startViewTransition`). **Degrada solo**: sin `startViewTransition` (Safari<18) o
 `prefers-reduced-motion` → apertura normal con spring. Curva `cubic-bezier(.22,.61,.36,1)`.
 
+### 8.11 · Elegir festival — muro de afiches en las DOS superficies (`[festival-chooser-canon]`)
+Origen: feedback real de un usuario (20 jul 2026) — *"¿cómo vuelvo al menú donde
+estaban los festivales?"*. Había **dos implementaciones de la misma decisión**: el
+riel de afiches de la entrada y una lista de texto (miniaturas de 27px) en el sheet
+→ no se reconocían como el mismo lugar.
+
+- **Fuente única:** `_festivalCardHTML` (`view/components.js`) construye la card-afiche.
+  La usan `_renderSplashRailHTML` (entrada) y `_renderFestivalSelectorHTML` (sheet).
+  Lo ÚNICO que difiere es la acción: el splash **selecciona** (el usuario confirma con
+  "Entrar"); el sheet **carga directo** (no hay confirmación).
+- **Rótulo bajo cada afiche** (`.fs-fest-cap`): el muro solo no basta para escanear —
+  quien no reconoce el póster necesita el nombre. Conserva la escaneabilidad de la
+  lista sin volver a ella; el afiche sigue mandando la jerarquía.
+- **El header es un CONTROL, no un título:** nombre + chevron viven juntos dentro de
+  `.hdr-fest-pill`; las fechas quedan **fuera**, como dato. Antes el nombre estaba
+  tipografiado como título de pantalla y el chevron colgaba al otro extremo, pegado a
+  las fechas → se leía como control de fecha. Sacar el chevron de la píldora revierte
+  el problema (el guardián lo bloquea).
+
 ### 8.9 · Geometría FLUSH (`geometry.spec.js` G01)
 El primer contenido de cada tab —y de la sub-vista TODO— arranca PEGADO al chrome
 (gap ≤ 2px). Bandas de sección del grid full-bleed (±2px). Medición SIEMPRE en

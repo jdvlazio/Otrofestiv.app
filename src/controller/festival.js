@@ -7,17 +7,6 @@ import { _langDates, setPosters } from '../view/helpers.js';
 import { render } from '../view/programa.js';
 import { state } from '../state/state.js';
 
-export function _togglePastFestRow(row, id){
-  // Toggle colapso/expansión — siempre. Nunca carga el festival.
-  const isOpen=row.classList.contains('past-open');
-  if(!isOpen){
-    // Colapsar cualquier otro abierto antes de expandir
-    document.querySelectorAll('.fs-festival-row.past.past-open')
-      .forEach(el=>el.classList.remove('past-open'));
-  }
-  row.classList.toggle('past-open', !isOpen);
-}
-
 export function _renderFestivalSelector(activeFestId){
   const container=document.getElementById('fs-festival-list');
   if(!container) return;

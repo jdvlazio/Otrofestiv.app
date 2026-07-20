@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607191206">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607191206">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607201118">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607201118">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -439,9 +439,19 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 
 .hdr-fest-left{display:flex;align-items:center;gap:var(--sp-2);flex:1;min-width:0}
 .hdr-fest-dot{width:5px;height:5px;border-radius:50%;background:var(--amber);flex-shrink:0}
-.hdr-fest-namedate{flex:1;min-width:0;display:flex;align-items:center;gap:var(--sp-1)}.hdr-fest-name{font-size:12px;font-weight:var(--w-bold);letter-spacing:.02em;color:var(--white);flex:1;min-width:0;overflow:hidden;white-space:nowrap;text-overflow:ellipsis} /* 12px (18 jul): el DÓNDE pesa más que el cuándo (fechas quedan en t-label) */
+.hdr-fest-namedate{flex:1;min-width:0;display:flex;align-items:center;gap:var(--sp-1)}.hdr-fest-name{font-size:12px;font-weight:var(--w-bold);letter-spacing:.02em;color:var(--white);flex:0 1 auto;min-width:0;overflow:hidden;white-space:nowrap;text-overflow:ellipsis} /* 12px (18 jul): el DÓNDE pesa más que el cuándo (fechas quedan en t-label) */
+/* PÍLDORA del selector (20 jul 2026) — feedback real: "¿cómo vuelvo al menú de
+   festivales?". El nombre estaba tipografiado como TÍTULO de pantalla y el chevron
+   vivía al otro extremo, pegado a las fechas → se leía como control de fecha, no de
+   festival. Agrupar nombre+chevron en una píldora sutil lo delata como tocable;
+   las fechas quedan afuera, como dato. min-width:0 para que el ellipsis siga vivo. */
+.hdr-fest-pill{
+  display:inline-flex;align-items:center;gap:5px;min-width:0;flex:0 1 auto;
+  background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.10);
+  border-radius:var(--r-pill,999px);padding:3px var(--sp-2) 3px 10px;
+}
 .hdr-fest-dates{font-size:var(--t-label);font-weight:var(--w-semi);letter-spacing:.05em;text-transform:uppercase;color:var(--white-60);white-space:nowrap;flex-shrink:0}
-.hdr-fest-chev{display:flex;align-items:center;color:var(--white-60);margin-left:var(--sp-1);opacity:.7}
+.hdr-fest-chev{display:flex;align-items:center;color:var(--white-60);opacity:.7;flex:none}
 
 /* Nav row (tabs de días en Planear) */
 .nav-row{display:flex;align-items:stretch;margin-top:var(--sp-1)}
@@ -1670,32 +1680,29 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .fs-title{font-size:var(--t-sm);font-weight:var(--w-bold);letter-spacing:.1em;text-transform:uppercase;color:var(--gray)}
 /* Año de temporada — ancla única (minimalismo: no repetir el año en cada fila) */
 .fs-season{font-size:var(--t-sm);font-weight:var(--w-bold);letter-spacing:.06em;color:var(--amber);font-variant-numeric:tabular-nums}
-.fs-festival-row{display:flex;align-items:center;gap:var(--sp-3);padding:var(--sp-3) var(--sp-5);cursor:pointer;transition:background var(--tr-base)}
-.fs-festival-row:active{background:var(--surf-2)}
-/* Mini-póster del festival (reemplaza el punto ámbar) — unidad con el splash.
-   40×27 (2:3), radio thumbnail. Estado por color (activo) vs grayscale (pasado). */
-.fs-fest-art{flex:none;width:27px;height:40px;border-radius:7px;overflow:hidden;background:#000;border:1px solid var(--bdr);display:flex;align-items:center;justify-content:center}
-.fs-fest-art img{width:100%;height:100%;object-fit:cover;object-position:var(--kap,center);display:block}
-.fs-fest-art-fb{font-size:var(--t-label);font-weight:var(--w-bold);color:var(--gray2);text-transform:uppercase;line-height:1;padding:0 2px;text-align:center;overflow:hidden}
-.fs-fest-info{flex:1;min-width:0}
-.fs-fest-name{font-size:var(--t-base);font-weight:var(--w-semi);color:var(--white);line-height:1.2}
-.fs-fest-full{font-size:var(--t-sm);color:var(--white-60);margin-top:2px;line-height:1.3}
-.fs-fest-meta{font-size:var(--t-sm);color:var(--gray);margin-top:2px;text-transform:uppercase}
-.fs-fest-check{color:var(--amber);flex-shrink:0}
-/* Festivales pasados en el sheet — colapsados por defecto, idéntico al splash */
-.fs-festival-row.past{opacity:.55;padding:var(--sp-2) var(--sp-5)}
-.fs-festival-row.past .fs-fest-name{
-  font-size:var(--t-sm);font-weight:var(--w-med);
+/* ── Chooser de festival del sheet — MURO DE AFICHES ──────────────────────────
+   Rediseño 20 jul 2026 (feedback real: "¿cómo vuelvo al menú de los festivales?").
+   Antes era una lista de texto con miniaturas de 27px: no se reconocía como el
+   mismo lugar que el riel de la entrada. Ahora reusa la MISMA .splash-card
+   (fuente única: _festivalCardHTML) → reconocimiento inmediato.
+   El token --poster-h vive en #otrofestiv-splash, así que el riel del sheet
+   define el suyo (más bajo: aquí el afiche acompaña, no protagoniza). */
+.fs-rail{
+  --poster-h:132px;--poster-w:calc(var(--poster-h) * 2 / 3);
+  display:flex;gap:var(--sp-3);align-items:flex-start;
+  overflow-x:auto;scrollbar-width:none;
+  padding:var(--sp-2) var(--sp-5) var(--sp-4);
 }
-.fs-festival-row.past .fs-fest-meta,
-.fs-festival-row.past .fs-fest-full{display:none}
-.fs-festival-row.past .fs-fest-art{filter:grayscale(.6)}
-.fs-festival-row.past.past-open{opacity:.75}
-.fs-festival-row.past.past-open .fs-fest-meta,
-.fs-festival-row.past.past-open .fs-fest-full{display:block}
-/* Chevron del item pasado en el sheet */
-.fs-past-chev{color:var(--gray2);display:flex;margin-left:auto;transition:transform .2s ease;flex-shrink:0}
-.fs-festival-row.past.past-open .fs-past-chev{transform:rotate(180deg)}
+.fs-rail::-webkit-scrollbar{display:none}
+/* Celda = afiche + rótulo. El rótulo conserva la escaneabilidad que daba la
+   lista (quien no reconoce el póster necesita el nombre) sin volver a ella. */
+.fs-fest-cell{flex:none;width:var(--poster-w);display:flex;flex-direction:column;gap:var(--sp-2);align-items:center}
+.fs-fest-cap{
+  font-size:var(--t-label);font-weight:var(--w-semi);color:var(--white-60);
+  text-align:center;line-height:1.25;width:100%;
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;
+}
+.fs-fest-cell .splash-card.on + .fs-fest-cap{color:var(--white)}
 
 
 /* ── DESKTOP TOPBAR — barra unificada ── */
@@ -2596,10 +2603,9 @@ setTimeout(function(){
     <div class="hdr-fest-left">
       <div class="hdr-fest-dot"></div>
       <div class="hdr-fest-namedate">
-        <span class="hdr-fest-name"></span><span class="hdr-fest-dates"></span>
+        <span class="hdr-fest-pill"><span class="hdr-fest-name"></span><span class="hdr-fest-chev"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg></span></span><span class="hdr-fest-dates"></span>
       </div>
     </div>
-    <div class="hdr-fest-chev"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg></div>
   </div>
   <button class="hdr-search-icon" id="hdr-search-icon" data-action="searchOpen" data-i18n-aria="aria_buscar" data-i18n-title="aria_buscar" aria-label="Buscar">
     <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"/></svg>
@@ -2897,7 +2903,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202607191206";
+    s.src="/src/main.js?v=202607201118";
     document.body.appendChild(s);
     // Watchdog de boot (P0 18 jul): si el grafo ESM murió en el import (caché
     // HTTP mixta tras deploys en ráfaga — main.js nuevo + módulo viejo sin el
