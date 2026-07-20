@@ -598,10 +598,19 @@ export function _renderFestivalSelectorHTML(state, activeFestId){
   const {_lang} = state.snapshot();
   const entries=_sortFestivals(Object.entries(FESTIVAL_CONFIG)
     .filter(([,cfg])=>cfg.name&&cfg.group!=='test'), activeFestId);
-  // El año vive UNA vez en el header (fs-season). El rótulo de la card es el nombre
-  // corto; solo muestra su año si difiere de la temporada (desambiguación).
+  // El rótulo usa el NOMBRE OFICIAL COMPLETO (cfg.name), no el corto: bajo un afiche,
+  // "Tribeca"/"Leviza"/"AFF" se leían truncados (festivalShortName corta al primer
+  // término). Decisión de Juan (20 jul 2026) — mismo criterio que sentó el precedente
+  // de Leviza: "crece una línea pero es más claro". NO se usa cfg.fullName: el oficial
+  // largo ("Festival Internacional de Cine de Cartagena de Indias") no cabe bajo la card.
+  // El año vive UNA vez en el header (fs-season); solo se añade si difiere de la
+  // temporada Y el nombre no lo trae ya (evita "AFF 2026 · 2026").
   const season=festivalSeasonYear();
-  const cardLabel=cfg=>festivalShortName(cfg)+(cfg.year&&cfg.year!==season?` · ${cfg.year}`:'');
+  const cardLabel=cfg=>{
+    const n=cfg.name||'';
+    const showYear=cfg.year&&cfg.year!==season&&!n.includes(String(cfg.year));
+    return showYear?`${n} · ${cfg.year}`:n;
+  };
   // Clasificar en tres grupos — fuente única de verdad
   const ongoing  = entries.filter(([,cfg])=>_classifyFestival(cfg)==='ongoing');
   const upcoming = entries.filter(([,cfg])=>_classifyFestival(cfg)==='upcoming');

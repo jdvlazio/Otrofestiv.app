@@ -383,6 +383,10 @@ riel de afiches de la entrada y una lista de texto (miniaturas de 27px) en el sh
 - **Rótulo bajo cada afiche** (`.fs-fest-cap`): el muro solo no basta para escanear —
   quien no reconoce el póster necesita el nombre. Conserva la escaneabilidad de la
   lista sin volver a ella; el afiche sigue mandando la jerarquía.
+  El rótulo usa el **nombre oficial completo** (`cfg.name`), NO el corto: bajo un
+  afiche, `festivalShortName` truncaba al primer término ("Tribeca", "Leviza", "AFF").
+  Tampoco `cfg.fullName` — el oficial largo no cabe. Mismo criterio que sentó Leviza:
+  *"crece una línea pero es más claro"*. Card a 158px y rótulo hasta 3 líneas.
 - **El header es un CONTROL, no un título:** nombre + chevron viven juntos dentro de
   `.hdr-fest-pill`; las fechas quedan **fuera**, como dato. Antes el nombre estaba
   tipografiado como título de pantalla y el chevron colgaba al otro extremo, pegado a
