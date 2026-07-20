@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `bea83cf feat(festival): el chooser ES el riel del splash + wordmark vuelve al inicio`
+> Último commit: `a705d11 fix(lint): backToSplash llamaba saveState sin importarlo (no-undef)`
 
 ---
 
