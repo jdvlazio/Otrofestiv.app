@@ -464,11 +464,12 @@ export async function loadFestival(id){
 // POR QUÉ UN RELOAD y no re-mostrar el nodo: dismissSplash() hace s.remove() — el
 // splash NO queda oculto, se elimina del DOM. Recrearlo a mano (markup + animación
 // de entrada + re-cableado del riel) sería una segunda implementación del arranque,
-// justo lo que venimos eliminando. El estado del usuario vive en localStorage
-// (saveState es síncrono), así que recargar no pierde nada, y el shell sale del
-// caché del SW. Se guarda antes por si hubiera una mutación en vuelo.
+// justo lo que venimos eliminando.
+// NO hace falta guardar antes: cada mutación ya persiste en localStorage en el
+// momento en que ocurre (saveWL/saveWatched/saveRating… escriben síncrono), así que
+// recargar no pierde nada. Una subida a la nube en vuelo tampoco se pierde: queda
+// cloud_dirty persistido y el re-push del próximo boot la sube.
 export function backToSplash(){
-  try{ if(typeof saveState==='function') saveState(); }catch(e){ /* no bloquear la vuelta */ }
   location.reload();
 }
 

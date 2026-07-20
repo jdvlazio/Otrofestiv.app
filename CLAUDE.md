@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `27f863b fix(miplan+selector): huecos de 92px entre secciones + rótulo con nombre completo`
+> Último commit: `bea83cf feat(festival): el chooser ES el riel del splash + wordmark vuelve al inicio`
 
 ---
 
