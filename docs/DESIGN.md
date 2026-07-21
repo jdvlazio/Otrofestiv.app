@@ -415,6 +415,16 @@ etiqueta "en tu plan" queda para lectores de pantalla (`.sr-only`). El botón "A
 (acción) sí permanece a la derecha; el estado (barra) no compite por el mismo espacio.
 Regla general: **estado → color/acento (costo cero); acción → control a la derecha.**
 
+### 8.13 · Header del Recuerdo — título + chip de estado (una línea)
+Mi Plan post-festival: el header es `Viste N películas` + un **chip de estado** en la
+misma línea (`.recap-hdr` > `.ctx-main-title` + `.recap-chip`), no un subtítulo suelto
+debajo. El chip reusa la paleta de `.count-badge`: **verde** (`--green-12/green/20`)
+`Todo calificado` = logrado · **ámbar** (`--amber-10/amber/30`) `N sin calificar` =
+pendiente. Sin ceja de nombre+fecha (ya lo da el selector) y **alineado al ritmo de
+los días** (`padding-left:2px` = `.saved-day-lbl`), no indentado de más. Solo 2 estados
+(el título nunca varía porque el header solo aparece con vistas>0). Decisión de Juan
+(21 jul 2026); reemplazó el `.pad-sm` + `.ctx-sub` huérfano (clase `.pad-sm` retirada).
+
 ### 8.9 · Geometría FLUSH (`geometry.spec.js` G01)
 El primer contenido de cada tab —y de la sub-vista TODO— arranca PEGADO al chrome
 (gap ≤ 2px). Bandas de sección del grid full-bleed (±2px). Medición SIEMPRE en

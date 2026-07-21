@@ -609,22 +609,22 @@ export function renderContextualHeader(state, consensus){
 
   // ── ENDED ─────────────────────────────────────────────────
   if(ph.phase==='ended'){
-    const{totalWatched,totalPlanned,pendingRatings}=ph;
-    // Películas vistas con su calificación
-    // Ordenar: calificadas primero (descendente), sin calificar al final
-    const subMsg=totalWatched===0
-      ?t('empty_prox_fest')
-      :pendingRatings>0
-        ?`${pendingRatings} ${t('plan_sin_calificar')}`
-        :t('empty_todo_calif');
+    const{totalWatched,pendingRatings}=ph;
     const mainTitle=totalWatched===0
       ?((FESTIVAL_CONFIG[_activeFestId]||{}).name||t('misc_festival_default'))+` ${t('plan_fest_terminado')}`
       :`${t('plan_viste_n')} ${totalWatched} ${totalWatched!==1?t('misc_peliculas'):t('misc_pelicula')}`;
-    // SIN eyebrow con nombre+fecha del festival: ese contexto ya lo da el selector de
-    // festival del header (decisión de Juan, 21 jul 2026) → repetirlo aquí era ruido.
-    return`<div class="pad-sm">
-      <div class="ctx-main-title">${mainTitle}</div>
-      <div class="ctx-sub">${subMsg}</div>
+    // Header del Recuerdo (rediseño 21 jul 2026): título + el estado de calificación
+    // como CHIP semántico en la MISMA línea, no un subtítulo suelto debajo. Verde
+    // "Todo calificado" (logrado) / ámbar "N sin calificar" (pendiente) — mismos tokens
+    // que .count-badge cb-green/cb-amber. SIN eyebrow de nombre+fecha (ya lo da el
+    // selector de festival) y alineado al ritmo de los días (no indentado de más).
+    // Solo se renderiza con vistas>0 (guard en _renderSavedAgendaHTML) → siempre hay chip.
+    const _chip = totalWatched===0 ? '' : (pendingRatings>0
+      ? `<span class="recap-chip pend">${pendingRatings} ${t('plan_sin_calificar')}</span>`
+      : `<span class="recap-chip done">${ICONS.check} ${t('empty_todo_calif')}</span>`);
+    return`<div class="recap-hdr">
+      <span class="ctx-main-title">${mainTitle}</span>
+      ${_chip}
     </div>`;
   }
 

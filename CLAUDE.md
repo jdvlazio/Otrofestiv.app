@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `4311b5e feat(diario): el muro compartible se ordena por calificación (mejor → peor)`
+> Último commit: `be19595 fix(recuerdo): quitar nombre+fecha redundante del header + hueco enorme antes de Compartir`
 
 ---
 
