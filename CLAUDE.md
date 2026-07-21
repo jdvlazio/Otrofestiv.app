@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `be19595 fix(recuerdo): quitar nombre+fecha redundante del header + hueco enorme antes de Compartir`
+> Último commit: `768b858 feat(recuerdo): header con chip de estado semántico, alineado (adiós subtítulo suelto)`
 
 ---
 

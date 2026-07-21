@@ -7,6 +7,7 @@
 // Roster (watchlist/watched/…) vía bridge.
 
 import { FESTIVAL_CONFIG } from '../config.js';
+import { _festDate } from '../domain/time.js';
 import { report } from '../telemetry.js';
 import { FESTIVAL_STATE, deriveHydrate, deriveCloudSave, deriveCloudApply, deriveCloudMerge } from '../state/festival-context.js';
 import { closeAuthSheet } from '../view/sheets.js';
@@ -457,16 +458,16 @@ export async function _scheduleNotifications(){
     await _cancelNotifications();
     if(!savedAgenda?.schedule?.length) return;
     const _base=_notifBase(_activeFestId);
-    // Convertir tiempo 12h→24h (mismo helper que exportICS)
-    const pad=n=>String(n).padStart(2,'0');
-    const to24h=t=>{if(!t)return'12:00';const m=t.match(/(\d+):(\d+)\s*(AM|PM)/i);if(!m)return t;let h=parseInt(m[1]),mn=m[2],ap=m[3].toUpperCase();if(ap==='PM'&&h!==12)h+=12;if(ap==='AM'&&h===12)h=0;return pad(h)+':'+mn;};
     const notifications=[];
     savedAgenda.schedule.forEach((s,i)=>{
       if(i>=_NOTIF_SLOT) return; // no desbordar al rango del siguiente festival (nunca alcanzable: <60 slots/semana)
       const dateStr=FESTIVAL_DATES[s.day];if(!dateStr) return;
-      const [h,min]=to24h(s.time).split(':').map(Number);
-      const tz=FESTIVAL_CONFIG[_activeFestId]?.timezoneOffset??-5;
-      const start=new Date(`${dateStr}T${pad(h)}:${pad(min)}:00`);
+      // Instante ABSOLUTO de la función EN LA ZONA DEL FESTIVAL. Reusa _festDate (ya
+      // aplica TZ_OFFSET del festival activo y normaliza AM/PM). Antes se construía el
+      // Date sin offset → se interpretaba en hora del DISPOSITIVO: un recordatorio
+      // sonaba corrido para quien planeaba desde otra zona (bug cazado prep. Argentina,
+      // 21 jul 2026 — el offset se calculaba pero nunca se usaba).
+      const start=_festDate(dateStr, s.time);
       if(isNaN(start.getTime())) return;
       // 30 min antes
       const notify=new Date(start.getTime()-30*60000);

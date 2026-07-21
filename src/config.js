@@ -235,13 +235,13 @@ export const FESTIVAL_CONFIG={
   // Todo lo demás (dayKeys, days, venues, posters, etc.) viene del JSON
   // y se mergea en loadFestival() — el JSON es la fuente única de verdad.
   'ficci65':{
-    name:'FICCI 65',fullName:'Festival Internacional de Cine de Cartagena de Indias',city:'Cartagena',country:'CO',dates:'14–19 ABR',dates_en:'APR 14–19',year:2026,
+    name:'FICCI 65',fullName:'Festival Internacional de Cine de Cartagena de Indias',city:'Cartagena',country:'CO',dates:'14–19 ABR',dates_en:'APR 14–19',year:2026,timezoneOffset:'-05:00',
     storageKey:'ficci65_',festivalStartStr:'2026-04-14T00:00:00',festivalEndStr:'2026-04-20T02:00:00',
     keyArt:'/assets/keyart/ficci65.jpg',
     films:null,posters:null,lbSlugs:{}
   },
   'aff2026':{
-    name:'AFF 2026',fullName:'Alternativa Film Festival',city:'Medellín',country:'CO',dates:'21–29 ABR',dates_en:'APR 21–29',year:2026,
+    name:'AFF 2026',fullName:'Alternativa Film Festival',city:'Medellín',country:'CO',dates:'21–29 ABR',dates_en:'APR 21–29',year:2026,timezoneOffset:'-05:00',
     storageKey:'aff2026_',festivalStartStr:'2026-04-21T00:00:00',festivalEndStr:'2026-04-29T23:00:00',
     keyArt:'/assets/keyart/aff2026.jpg',
     films:null,posters:null,lbSlugs:{}

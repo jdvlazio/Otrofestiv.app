@@ -2299,6 +2299,39 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar festival-name-parity: {_e}')
 
+# ── [timezone-valid] todo festival tiene timezoneOffset válido (±HH:MM) ─────────
+# Toda la lógica de "ahora" (now-line, contador, en-curso, hoy, pasó/futuro) se ancla
+# a la zona del festival vía cfg.timezoneOffset (domain/time.js _festNow/_festDate).
+# Sin él, o mal formateado, el fallback es Colombia (-05:00) → un festival en otra zona
+# queda corrido SIN error visible (prep Argentina -03:00, 21 jul 2026). generate-config
+# ya lo exige en la entrada; este guardián es la red en el OUTPUT: bloquea el merge si
+# algún festival (no group:'test') no lo trae bien. Formato: signo + HH:MM (Argentina
+# -03:00, Colombia -05:00, India +05:30). Argentina no usa DST → offset fijo correcto.
+check = 'timezone-valid'
+try:
+    _cfg = open('src/config.js', encoding='utf-8').read()
+    _entries = re.findall(r"'([a-z0-9]+)':\s*\{(.*?)\n  \}", _cfg, re.S)
+    _bad = []
+    _n_ok = 0
+    for _id, _blk in _entries:
+        if not re.search(r"\bname:'", _blk):  # entradas sin name = placeholders, se ignoran
+            continue
+        if re.search(r"group:\s*'test'", _blk):  # festivales de test no van a runtime
+            continue
+        _tz = re.search(r"\btimezoneOffset:'([^']*)'", _blk)
+        if not _tz:
+            _bad.append(f"{_id}: falta timezoneOffset")
+        elif not re.match(r'^[+-]\d{2}:\d{2}$', _tz.group(1)):
+            _bad.append(f"{_id}: timezoneOffset={_tz.group(1)!r} no es ±HH:MM")
+        else:
+            _n_ok += 1
+    if _bad:
+        fail(check, 'timezoneOffset inválido (el festival caería en hora de Colombia): ' + '; '.join(_bad[:5]))
+    else:
+        ok(check, f'{_n_ok} festivales con timezoneOffset válido (±HH:MM) — la hora se ancla al venue')
+except Exception as _e:
+    warn(check, f'no se pudo verificar timezone-valid: {_e}')
+
 # ── [section-map-dupes] claves duplicadas en los mapas de sección ──────────────
 # Un objeto JS con una clave repetida NO es error: la 2ª pisa a la 1ª en silencio
 # (el bug 'Talks' de SECTION_COLORS, arreglado en P2.1). Con secciones de 3

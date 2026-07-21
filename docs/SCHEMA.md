@@ -186,7 +186,12 @@ Campos requeridos por festival:
   dates: 'FEB 3–14',        // ES
   dates_en: 'FEB 3–14',     // EN
   year: 2026,
-  timezoneOffset: '-05:00',
+  timezoneOffset: '-05:00',  // OBLIGATORIO, ±HH:MM (validado por [timezone-valid]).
+                             // Es la zona del VENUE — ancla "ahora"/contador/pasó-futuro
+                             // a la hora del festival, no del dispositivo. Argentina -03:00,
+                             // Colombia -05:00, NYC -04:00. Sin él (o mal), el festival cae
+                             // en hora de Bogotá corrido, sin error visible → el guardián lo
+                             // bloquea. generate-config exige --tz.
   storageKey: 'id_',
   festivalEndStr: '2026-02-14T23:59:00',
   festivalDates: { dayKey: isoDate },

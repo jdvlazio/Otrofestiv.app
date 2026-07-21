@@ -37,6 +37,7 @@
 - [ ] **0 sinopsis duplicadas** entre films (synopsis y synopsis_en)
 - [ ] **Slots compartidos**: todos los (day, time, venue) con ≥2 films declarados `is_cortos:true` o `is_programa:true`
 - [ ] **Config en el JSON**: `dayKeys`, `days`, `festivalDates`, `timezoneOffset`, `prioLimit`, `name`, `storageKey`, `festivalEndStr`
+- [ ] **`timezoneOffset` = zona del VENUE** (±HH:MM). `generate-config.js` lo exige vía `--tz` y el guardián `[timezone-valid]` bloquea el merge si falta o está mal. Ej.: Argentina `-03:00`, Colombia `-05:00`, NYC `-04:00`. Sin él, el festival cae en hora de Bogotá corrido, sin error visible.
 - [ ] **Entrada en `src/config.js`** (`FESTIVAL_CONFIG`) creada (id sin guion: `[a-z0-9]+`)
 - [ ] **`fullName`** (nombre oficial completo, **verificado en la fuente oficial del festival**) presente en la entrada de `FESTIVAL_CONFIG` — se muestra al expandir el selector. `generate-config.js` lo exige vía `--fullname`.
 - [ ] **Secciones**: emoji único por sección + orden curatorial definido
