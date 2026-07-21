@@ -403,6 +403,18 @@ riel de afiches de la entrada y una lista de texto (miniaturas de 27px) en el sh
   las fechas → se leía como control de fecha. Sacar el chevron de la píldora revierte
   el problema (el guardián lo bloquea).
 
+### 8.12 · Ficha — "en tu plan" = barra de acento, no badge
+Reporte de Juan (20 jul 2026): en la fila FUNCIÓN de la ficha, el badge derecho
+"✓ En tu Plan" (`flex-shrink:0`) le robaba ancho al venue → "Cinemateca de Bogotá ·
+Sala 2" se partía en dos líneas. **El estado se marca ahora con una barra de acento
+ámbar a la izquierda de la fila** (`.pel-sheet-screening.in-plan::before`), que vive
+en el **margen** (absoluta, `margin-left` negativo compensado con `padding-left` →
+costo CERO de ancho, contenido alineado con las filas sin plan). El venue recupera
+todo el ancho y lee en una línea **hasta 360px** (medido; el badge fallaba <375). La
+etiqueta "en tu plan" queda para lectores de pantalla (`.sr-only`). El botón "Añadir"
+(acción) sí permanece a la derecha; el estado (barra) no compite por el mismo espacio.
+Regla general: **estado → color/acento (costo cero); acción → control a la derecha.**
+
 ### 8.9 · Geometría FLUSH (`geometry.spec.js` G01)
 El primer contenido de cada tab —y de la sub-vista TODO— arranca PEGADO al chrome
 (gap ≤ 2px). Bandas de sección del grid full-bleed (±2px). Medición SIEMPRE en

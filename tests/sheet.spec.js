@@ -177,8 +177,8 @@ test('AF02 — la función añadida muestra "En tu Plan"', async ({ page }) => {
   await page.evaluate((t) => openPelSheet(t), title);
   await page.waitForSelector('#pel-sheet.open', { timeout: 8000 });
   await page.locator('.pel-sheet-screening .suggestion-add').first().click();
-  // Tras añadir, la fila planeada muestra el indicador (no botón) "En tu Plan".
-  await expect(page.locator('.pel-sheet-screening .screening-inplan')).toHaveCount(1, { timeout: 5000 });
+  // Tras añadir, la fila planeada muestra el check "en tu plan" (izquierda del día).
+  await expect(page.locator('.pel-sheet-screening.in-plan')).toHaveCount(1, { timeout: 5000 });
 });
 
 // AF03 — Añadir otra función del mismo título hace swap (no duplica)
@@ -192,8 +192,8 @@ test('AF03 — añadir otra función del mismo título hace swap', async ({ page
   const nBtns = await page.locator('.pel-sheet-screening .suggestion-add').count();
   if (nBtns < 2) { console.log('AF03: <2 funciones futuras con botón, skip'); return; }
   await page.locator('.pel-sheet-screening .suggestion-add').first().click();
-  // El sheet se re-renderiza: la función añadida pasa a "En tu Plan".
-  await page.waitForSelector('.pel-sheet-screening .screening-inplan', { timeout: 5000 });
+  // El sheet se re-renderiza: la función añadida pasa a "en tu plan" (check izq).
+  await page.waitForSelector('.pel-sheet-screening.in-plan', { timeout: 5000 });
   // Queda ≥1 .suggestion-add (otra función) → clic = swap, no duplicado.
   await page.locator('.pel-sheet-screening .suggestion-add').first().click();
   await page.waitForTimeout(400);
