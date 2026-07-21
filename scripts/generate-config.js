@@ -14,7 +14,7 @@
  *     --storage   mujeres2026_          \
  *     [--priolimit 5]                   \
  *     [--event    "EVENTO,"]            \
- *     [--tz       "-05:00"]             \
+ *     --tz        "-03:00"              \  # OBLIGATORIO (±HH:MM; Argentina -03:00, Colombia -05:00)
  *     [--endtime  "23:00:00"]           \
  *     [--test]                          (marca como grupo 'test')
  *
@@ -48,7 +48,7 @@ function parseArgs() {
   const opts = {
     id: null, name: null, fullname: null, short: null, city: null,
     country: 'CO', start: null, days: null, storage: null,
-    priolimit: 5, event: 'EVENTO,', tz: '-05:00',
+    priolimit: 5, event: 'EVENTO,', tz: null,
     endtime: '23:00:00', test: false,
   };
   for (let i = 0; i < args.length; i++) {
@@ -61,7 +61,10 @@ function parseArgs() {
 
 // ── Validate ──────────────────────────────────────────────────────────────────
 function validate(opts) {
-  const required = ['id','name','fullname','short','city','start','days','storage'];
+  // --tz es OBLIGATORIO (antes tenía default '-05:00' → un festival fuera de Colombia
+  // caía silenciosamente en hora de Bogotá, corriendo todo el programa. Prep Argentina,
+  // 21 jul 2026). El guardián [timezone-valid] es la red de seguridad en el output.
+  const required = ['id','name','fullname','short','city','start','days','storage','tz'];
   const missing = required.filter(k => !opts[k]);
   if (missing.length) {
     console.error('❌  Faltan argumentos obligatorios: ' + missing.map(k => '--'+k).join(', '));
@@ -69,11 +72,15 @@ function validate(opts) {
     console.error('  node scripts/generate-config.js \\');
     console.error('    --id mujeres2026 --name "Mujeres Film Festival" \\');
     console.error('    --fullname "Festival Internacional de Cine de Mujeres" --short MUJERES \\');
-    console.error('    --city Circasia --start 2026-08-05 --days 5 --storage mujeres2026_');
+    console.error('    --city Circasia --start 2026-08-05 --days 5 --storage mujeres2026_ --tz -03:00');
     process.exit(1);
   }
   if (!/^\d{4}-\d{2}-\d{2}$/.test(opts.start)) {
     console.error('❌  --start debe tener formato YYYY-MM-DD. Ejemplo: 2026-08-05');
+    process.exit(1);
+  }
+  if (!/^[+-]\d{2}:\d{2}$/.test(opts.tz)) {
+    console.error('❌  --tz debe tener formato ±HH:MM. Ejemplos: -03:00 (Argentina), -05:00 (Colombia)');
     process.exit(1);
   }
   if (isNaN(parseInt(opts.days)) || parseInt(opts.days) < 1) {
