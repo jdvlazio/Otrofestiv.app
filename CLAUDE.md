@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `8639ce0 fix(ficha): "en tu plan" = barra de acento ámbar, no badge (venue en 1 línea)`
+> Último commit: `4311b5e feat(diario): el muro compartible se ordena por calificación (mejor → peor)`
 
 ---
 

@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607202008">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607202008">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607210809">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607210809">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -870,6 +870,13 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
    .poster-grid). Se anula en todas MENOS la última, que conserva la holgura heredada
    para no quedar tapada por la barra. */
 .poster-grid.pg-miplan:not(:last-child){padding-bottom:0;margin-bottom:var(--sp-3)}
+/* Recuerdo CON botón "Compartir mi festival": el botón va DESPUÉS de la última grid,
+   así que la holgura de la barra de tabs le toca al BOTÓN, no a la grid. Sin esto, los
+   92px de padding de la última grid abrían un hueco enorme entre pósters y botón
+   (reporte de Juan 21 jul 2026). Acotado vía :has() → solo el Recuerdo (único con
+   .ag-save-btn); el Mi Plan activo y el Programa no se tocan. */
+.saved-agenda:has(.ag-save-btn) .poster-grid.pg-miplan{padding-bottom:0}
+.saved-agenda:has(.ag-save-btn) .ag-save-btn{margin-bottom:calc(var(--nav-h,56px) + max(env(safe-area-inset-bottom),20px) + 16px)}
 .poster-grid-sep{grid-column:1/-1;pointer-events:none;user-select:none;margin-top:var(--sp-3)}
 .poster-grid-sep:first-child{margin-top:0}
 .poster-card{position:relative;border-radius:var(--r);overflow:hidden;cursor:pointer;background:var(--surf-2);background-size:cover;background-position:center;aspect-ratio:2/3;display:block;container-type:inline-size}
@@ -2914,7 +2921,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202607202008";
+    s.src="/src/main.js?v=202607210809";
     document.body.appendChild(s);
     // Watchdog de boot (P0 18 jul): si el grafo ESM murió en el import (caché
     // HTTP mixta tras deploys en ráfaga — main.js nuevo + módulo viejo sin el
