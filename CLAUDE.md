@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `a705d11 fix(lint): backToSplash llamaba saveState sin importarlo (no-undef)`
+> Último commit: `5a18fda fix(chooser): al desplazar, mover .on — sin eso no había zoom ni opacidad`
 
 ---
 

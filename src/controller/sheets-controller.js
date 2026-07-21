@@ -157,16 +157,22 @@ export function openPelSheet(title){
     // Recurrentes: sin control (informativo). Si esta función ya está en el
     // Plan → indicador "En tu Plan"; si no, y la función no pasó ni terminó el
     // festival → botón "Añadir" (reusa addSuggestion, que decide add vs swap).
-    let _addCtrl='';
+    // "En tu plan": la fila se marca con una BARRA de acento ámbar a la izquierda
+    // (.pel-sheet-screening.in-plan), no con un badge ni un check. Decisión de Juan
+    // (20 jul 2026): el badge "✓ En tu Plan" era flex-shrink:0 y le robaba ancho al
+    // venue → "Cinemateca de Bogotá · Sala 2" se partía en dos líneas. La barra vive
+    // en el margen (::before absoluto, costo CERO de ancho) → el venue recupera TODO
+    // el ancho y lee en una línea hasta 360px. El botón "Añadir" (acción) sí se queda
+    // a la derecha. La etiqueta "en tu plan" queda para lectores de pantalla (.sr-only).
+    let _addCtrl='', _planned=false;
     if(!f.is_recurring){
-      const _isPlannedFn=savedAgenda&&savedAgenda.schedule.some(e=>e._title===f.title&&e.day===s.day&&e.time===s.time);
-      if(_isPlannedFn){
-        _addCtrl=`<span class="screening-inplan">${ICONS.check} ${t('plan_en_tu_plan')}</span>`;
-      }else if(!festivalEnded()&&!screeningPassed(s)){
+      _planned=savedAgenda&&savedAgenda.schedule.some(e=>e._title===f.title&&e.day===s.day&&e.time===s.time);
+      if(!_planned&&!festivalEnded()&&!screeningPassed(s)){
         _addCtrl=`<button class="suggestion-add" data-action="addSuggestion" data-title="${f.title.replace(/"/g,'&quot;')}" data-day="${s.day}" data-time="${s.time}" data-stop="1">${ICONS.plus} ${t('misc_anadir')}</button>`;
       }
     }
-    return`<div class="pel-sheet-screening"${isPast?' style="opacity:.4"':''}>
+    return`<div class="pel-sheet-screening${_planned?' in-plan':''}"${isPast?' style="opacity:.4"':''}>
+      ${_planned?`<span class="sr-only">${t('plan_en_tu_plan')}</span>`:''}
       <span class="pelicula-day" data-day="${s.day}">${dayAbb}</span>
       <span class="pelicula-time">${s.time}</span>
       <span class="pelicula-venue" data-venue="${s.venue.replace(/"/g,'&quot;')}" data-action="openVenueSheet">${ICONS.pin} <span class="venue-text">${vc.short}${sl?' · '+sl:''}${_city?`<span class="venue-municipio">${_city}</span>`:''}</span></span>
