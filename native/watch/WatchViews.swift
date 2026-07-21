@@ -9,15 +9,12 @@ struct PosterThumb: View {
     let path: String?
     private var url: URL? { PlanCompute.posterURL(path) }
     var body: some View {
-        Group {
-            if let url {
-                AsyncImage(url: url) { phase in
-                    if let img = phase.image { img.resizable().scaledToFill() } else { placeholder }
-                }
-            } else { placeholder }
-        }
-        .frame(width: 30, height: 45)
-        .clipShape(RoundedRectangle(cornerRadius: 5, style: .continuous))
+        // RemoteImage (NSCache + caché HTTP) en vez de AsyncImage: en listas
+        // paginadas de watchOS AsyncImage cancela al deslizar y no cachea → los
+        // thumbnails cargaban solo en el día abierto (o al entrar al detalle).
+        RemoteImage(url: url) { placeholder }
+            .frame(width: 30, height: 45)
+            .clipShape(RoundedRectangle(cornerRadius: 5, style: .continuous))
     }
     private var placeholder: some View {
         Rectangle().fill(OT.warm.opacity(0.08))

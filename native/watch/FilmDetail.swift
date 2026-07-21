@@ -70,12 +70,10 @@ private struct PosterLarge: View {
         }
     }
 
-    @ViewBuilder private var image: some View {
-        if let url {
-            AsyncImage(url: url) { phase in
-                if let img = phase.image { img.resizable().scaledToFill() } else { placeholder }
-            }
-        } else { placeholder }
+    // RemoteImage comparte la NSCache con la fila → si el thumb ya cargó, el
+    // detalle aparece al instante (y viceversa); reemplaza AsyncImage (flaky).
+    private var image: some View {
+        RemoteImage(url: url) { placeholder }
     }
 
     private var placeholder: some View {
