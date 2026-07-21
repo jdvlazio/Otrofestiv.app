@@ -435,9 +435,18 @@ La clave del dict es el `title` exacto del film en el JSON (case-sensitive, apó
 
 Para films que **genuinamente no existen** en TMDB (el residuo tras enrich).
 Doctrina: la app aporta a la base de la cinefilia, no solo la consume — así cada
-obra tiene su página de Letterboxd. **Solo se dan de alta films CON póster real**
-(regla de Juan): el alta es exclusivamente para que en LB se vea bien, no para
-sembrar fichas vacías.
+obra tiene su página de Letterboxd. **Solo se dan de alta films con póster real
+de ≥500px de ancho** (regla de Juan + mínimo de TMDB): el alta es exclusivamente
+para que en LB se vea bien, no para sembrar fichas vacías ni huérfanas sin imagen.
+
+> 🚦 **GATE PRIMERO — correr `python3 scripts/tmdb-gaps.py <festival.json>` ANTES de
+> abrir cualquier alta.** El script mide cada póster y separa las obras en **APTAS**
+> (póster ≥500px) y **BLOQUEADAS** (sin póster o <500px). **No se abre el alta de una
+> obra bloqueada** — primero hay que conseguir su póster en alta. Lección del ensayo
+> «Al son que me toquen bailo» (21 jul 2026): el asset era 298px → TMDB lo rechazó
+> por resolución mínima y quedó una ficha huérfana. Casi todos nuestros pósters de
+> films son ~300px (optimizados para la app móvil) → **no sirven como fuente TMDB**;
+> el cuello de botella real de un lote es **juntar los pósters en alta**, no subir.
 
 > ⚠️ **Límite de plataforma:** la API de TMDB **no crea películas ni sube imágenes** —
 > ambas son solo por web y **requieren login**. Claude nunca escribe contraseñas:
@@ -456,11 +465,15 @@ sembrar fichas vacías.
   al país real (Colombia, etc.). Trampa fácil de pasar por alto.
 - **Fecha de estreno:** si solo se tiene el año → `AAAA-01-01`.
 - **Duración, sinopsis (original):** de la ficha del festival.
-- **Póster:** subida **también web-only**. La extensión de Chrome solo puede subir
-  **archivos que el usuario compartió con la sesión** — rechaza rutas sueltas del
-  repo o del scratchpad. Hoy → **Juan arrastra el póster**. Para automatizarlo:
-  conectar la carpeta `assets/` a la sesión (una vez) y entonces lo sube Claude.
-  El póster debe ser **portrait ~2:3**; el original vertical del festival sirve.
+- **Póster:** subida **también web-only**, y la extensión solo sube **archivos que
+  el usuario ADJUNTA al chat** — NO toma rutas del disco. Probado y descartado (21
+  jul): `assets/` con directory-grant, scratchpad y Desktop → **todas rechazadas**.
+  La barrera es *quién* introdujo el archivo (solo lo adjuntado por el usuario), no
+  *dónde* está; es una red anti-exfiltración, no un límite tonto. → **Juan adjunta
+  el póster al chat** (para un lote, un arrastre masivo de todos). Requisitos TMDB:
+  **portrait ~2:3** y **≥500px de ancho** (rechaza más chico → ver el GATE de arriba).
+  Nuestros assets están optimizados ~300px para la app → **no sirven**; hay que
+  conseguir el **original de prensa** en alta (press kit del festival / canal oficial).
 - **Equipo → Director:** en «Añadir nuevo miembro del equipo» buscar la persona.
   Si hay **homónimos** (TMDB suele mostrar varios), **no atar a un perfil existente
   sin certeza** — meter la persona equivocada ensucia una base pública. Regla de
