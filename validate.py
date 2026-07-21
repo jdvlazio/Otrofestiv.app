@@ -2049,6 +2049,9 @@ try:
         _errs.append('no dibuja el póster (drawImage) — ¿regresó a la lista tipográfica?')
     if '_sectionColor' not in _dia:
         _errs.append('falta el tile generativo de fallback (_sectionColor) para afiches no dibujables')
+    # Orden por calificación desc (decisión de Juan): el muro va de la mejor nota a la peor.
+    if 'rows.sort' not in _dia:
+        _errs.append('el muro no ordena por calificación (rows.sort — mejor nota primero)')
     if _errs:
         fail(check, 'diario-grid roto: ' + '; '.join(_errs[:3]))
     else:

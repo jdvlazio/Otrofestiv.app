@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `5a18fda fix(chooser): al desplazar, mover .on — sin eso no había zoom ni opacidad`
+> Último commit: `8639ce0 fix(ficha): "en tu plan" = barra de acento ámbar, no badge (venue en 1 línea)`
 
 ---
 
