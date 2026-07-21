@@ -291,8 +291,9 @@
       "film_list": [
         {
           "title": "Al son que me toquen bailo",
+          "title_en": "The Beat of the Game",
           "director": "Deyaneira González",
-          "year": 2024,
+          "year": 2025,
           "country": "Puerto Rico",
           "duration": "16 min",
           "synopsis": "Brian, un joven futbolista, debe decidir entre perseguir sus sueños o permanecer junto a la comunidad que lo vio crecer. En una noche que cambiará su vida para siempre, enfrentará una decisión que pondrá a prueba su identidad, sus afectos y su futuro.",
@@ -300,7 +301,8 @@
           "poster": "/assets/tercertiempo/al-son-que-me-toquen-bailo.jpg",
           "posterSource": "custom",
           "flags": "🇵🇷",
-          "synopsis_en": "Brian, a young footballer, must decide between chasing his dreams or staying with the community that raised him. In a night that will change his life forever, he faces a decision that will test his identity, his bonds and his future."
+          "synopsis_en": "Brian, a young footballer, must decide between chasing his dreams or staying with the community that raised him. In a night that will change his life forever, he faces a decision that will test his identity, his bonds and his future.",
+          "lbSlug": "al-son-que-me-toquen-bailo-1"
         },
         {
           "title": "Ángeles FC",
