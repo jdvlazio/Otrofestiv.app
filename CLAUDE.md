@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `768b858 feat(recuerdo): header con chip de estado semántico, alineado (adiós subtítulo suelto)`
+> Último commit: `221a53a feat(timezone): blindaje para festivales fuera de Colombia (prep Argentina -03:00)`
 
 ---
 

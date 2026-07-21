@@ -431,6 +431,58 @@ La clave del dict es el `title` exacto del film en el JSON (case-sensitive, apó
 - [ ] Competencias principales: cobertura 100%
 - [ ] 0 slugs inferidos sin verificación
 
+#### Método de CREACIÓN — dar de alta la película en TMDB (probado con Chist · Leviza 2026)
+
+Para films que **genuinamente no existen** en TMDB (el residuo tras enrich).
+Doctrina: la app aporta a la base de la cinefilia, no solo la consume — así cada
+obra tiene su página de Letterboxd. **Solo se dan de alta films CON póster real**
+(regla de Juan): el alta es exclusivamente para que en LB se vea bien, no para
+sembrar fichas vacías.
+
+> ⚠️ **Límite de plataforma:** la API de TMDB **no crea películas ni sube imágenes** —
+> ambas son solo por web y **requieren login**. Claude nunca escribe contraseñas:
+> **el login SIEMPRE lo hace Juan**. El alta la conduce Claude por navegador
+> (Chrome extension) una vez la sesión está autenticada.
+
+**Antes de crear — descartar que ya exista (2 formas):**
+1. Buscar en TMDB por título original **y** `title_en`. Si aparece → no crear;
+   resolver el slug con el método PRIMARIO/RESCATE.
+2. **Buscar también como SERIE.** Si existe pero como **serie**, Letterboxd **no
+   la mostrará** (LB es solo películas) → **saltar** (no forzar un alta de film).
+   Caso real: «Sin la Luz Perpetua» estaba como serie → se dejó sin `lbSlug`.
+
+**Alta (formulario `themoviedb.org/movie/new`):**
+- **País de origen:** el formulario **precarga «España»** (locale es-ES) → cambiarlo
+  al país real (Colombia, etc.). Trampa fácil de pasar por alto.
+- **Fecha de estreno:** si solo se tiene el año → `AAAA-01-01`.
+- **Duración, sinopsis (original):** de la ficha del festival.
+- **Póster:** subida **también web-only**. La extensión de Chrome solo puede subir
+  **archivos que el usuario compartió con la sesión** — rechaza rutas sueltas del
+  repo o del scratchpad. Hoy → **Juan arrastra el póster**. Para automatizarlo:
+  conectar la carpeta `assets/` a la sesión (una vez) y entonces lo sube Claude.
+  El póster debe ser **portrait ~2:3**; el original vertical del festival sirve.
+- **Equipo → Director:** en «Añadir nuevo miembro del equipo» buscar la persona.
+  Si hay **homónimos** (TMDB suele mostrar varios), **no atar a un perfil existente
+  sin certeza** — meter la persona equivocada ensucia una base pública. Regla de
+  Juan: si no hay certeza → **«Créalo»** (persona nueva con el nombre). TMDB fusiona
+  duplicados después; una atribución errada es peor. Solo atar a existente si la
+  comparación (créditos, festival hermano) lo confirma sin duda.
+
+**Tras el alta — resolver el slug:**
+- Letterboxd importa el **texto al instante** (la página `letterboxd.com/film/<slug>/`
+  ya existe), pero el **póster tarda** en propagar — normal, no reintentar.
+- Resolver el slug canónico vía el redirect `letterboxd.com/tmdb/<nuevo-id>/` y
+  escribirlo como `lbSlug` en el JSON (para ítems de `film_list`, dentro del ítem).
+- Verificación final igual que el método PRIMARIO (GET a `/film/<slug>/` → 200 +
+  director coincide).
+
+**Qué es 100% automático y qué no (para dimensionar un lote grande):**
+- **Ya existe en TMDB** (el grueso) → 100% automático vía `enrich-festival.py`. Sin
+  navegador, sin póster, sin intervención.
+- **Hay que crear** (el residuo) → alta por navegador. El póster lo sube Claude
+  **si `assets/` está conectada a la sesión**; si no, es el único arrastre de Juan.
+  Las **ambigüedades de persona** son lo único que pide criterio humano.
+
 ---
 
 ### Fase 4 · Validación automática `[automatizado — validate-festivals.js]`
