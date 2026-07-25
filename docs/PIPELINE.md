@@ -18,6 +18,7 @@ Orden canónico para montar un festival. Cada paso mapea a una fase de abajo.
 | 5 | `node scripts/generate-config.js …` → pegar en `src/config.js` | entrada de `FESTIVAL_CONFIG` | 2 |
 | 6 | **Secciones nuevas → `src/config.js`**: emoji único + entrada `SECTION_EN` + arquetipo en `SECTION_ARCHETYPES` (uno de los 9) | display EN + color de banda (sin arquetipo = ERROR `[seccion-sin-arquetipo]`) | 2 |
 | 7 | `python3 scripts/classify-posters.py <id> --apply` | mide el aspecto real de cada póster y escribe **`posterSource`** (`editorial`/`tmdb`/`custom`) — lo exige el gate `[poster-source]`; caza rotos al montar | 3 |
+| 7b | `python3 scripts/optimize-posters.py assets/<id>/` | pósters al peso de la app: redimensiona a **500px** de ancho (= mínimo TMDB → el mismo archivo sirve a la app Y a las altas); solo reemplaza si pesa menos; `--dry-run` para reporte. **Commitear antes el sidecar de URLs fuente** (`<id>-posters-src.json`) para poder re-bajar originales | 3 |
 | 8 | `python3 validate.py` + `node scripts/validate-festivals.js <id>` | gates bloqueantes (0 errores) | 4 |
 | 9 | **`tools/audit.html?fest=<id>`** (servir el repo + abrir en Chrome) | dashboard de auditoría: UNA pasada visual cubre póster·metadata·sinopsis·procedencia·LB; filtro "Solo problemas" | 5 |
 | 10 | `node scripts/bump-version.js` | stamp de build antes de deploy | 6 |
