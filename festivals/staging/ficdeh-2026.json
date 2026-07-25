@@ -98,7 +98,7 @@
       }
     },
     {
-      "title": "American Doctor (Médico estadounidense)",
+      "title": "American Doctor",
       "director": "Poh Si Teng",
       "year": "2026",
       "duration": "93 min",
@@ -111,7 +111,9 @@
       "_src": {
         "url": "https://www.ficdeh.com/produccion/american-doctor-medico-estadounidense/",
         "date": "2026-07-25"
-      }
+      },
+      "genre": "Documental",
+      "lbSlug": "american-doctor"
     },
     {
       "title": "Aminetu",
@@ -622,7 +624,7 @@
       "lbSlug": "el-valor-de-la-palabra"
     },
     {
-      "title": "El verano de Jahia (Jahia's Summer)",
+      "title": "El verano de Jahia",
       "director": "Olivier Meys",
       "year": "2025",
       "duration": "90 min",
@@ -635,7 +637,10 @@
       "_src": {
         "url": "https://www.ficdeh.com/produccion/el-verano-de-jahia-jahias-summer/",
         "date": "2026-07-25"
-      }
+      },
+      "title_en": "Jahia's Summer",
+      "genre": "Drama",
+      "lbSlug": "jahias-summer"
     },
     {
       "title": "Espeletia BK: Frailejón desarticulado",
@@ -1025,7 +1030,7 @@
       "lbSlug": "town-of-la-raya"
     },
     {
-      "title": "Los bibliotecarios (The librarians)",
+      "title": "Los bibliotecarios",
       "director": "Kim Snyder",
       "year": "2025",
       "duration": "91 min",
@@ -1038,7 +1043,8 @@
       "_src": {
         "url": "https://www.ficdeh.com/produccion/los-bibliotecarios-the-librarians/",
         "date": "2026-07-25"
-      }
+      },
+      "title_en": "The librarians"
     },
     {
       "title": "Los de abajo",
@@ -1230,7 +1236,7 @@
       }
     },
     {
-      "title": "One in a million (Una entre un millón)",
+      "title": "One in a million",
       "director": "Jack MacInnes, Itab Azzam",
       "year": "2026",
       "duration": "102 min",
@@ -1243,7 +1249,9 @@
       "_src": {
         "url": "https://www.ficdeh.com/produccion/one-in-a-million-una-entre-un-millon/",
         "date": "2026-07-25"
-      }
+      },
+      "genre": "Documental",
+      "lbSlug": "one-in-a-million-2026"
     },
     {
       "title": "Outside",
@@ -1262,7 +1270,7 @@
       }
     },
     {
-      "title": "Padamlágan (night lihgt)",
+      "title": "Padamlágan",
       "director": "Jenn Romano",
       "year": "2025",
       "duration": "80 min",
@@ -1275,7 +1283,8 @@
       "_src": {
         "url": "https://www.ficdeh.com/produccion/padamlagan-night-lihgt/",
         "date": "2026-07-25"
-      }
+      },
+      "title_en": "Night Light"
     },
     {
       "title": "Más allá",
@@ -1460,7 +1469,7 @@
       }
     },
     {
-      "title": "Silenciada (Silenced)",
+      "title": "Silenciada",
       "director": "Selina Miles",
       "year": "2026",
       "duration": "97 min",
@@ -1473,7 +1482,10 @@
       "_src": {
         "url": "https://www.ficdeh.com/produccion/silenciada-silenced/",
         "date": "2026-07-25"
-      }
+      },
+      "title_en": "Silenced",
+      "genre": "Documental",
+      "lbSlug": "silenced-2026"
     },
     {
       "title": "Soñé su nombre",
@@ -1533,7 +1545,7 @@
       "lbSlug": "a-burning-turret"
     },
     {
-      "title": "Three black men (Tres hombres negros)",
+      "title": "Three black men",
       "director": "Sienna McLean-LoGreco",
       "year": "2026",
       "duration": "99 min",
@@ -1546,7 +1558,8 @@
       "_src": {
         "url": "https://www.ficdeh.com/produccion/three-black-men-tres-hombres-negros/",
         "date": "2026-07-25"
-      }
+      },
+      "lbSlug": "three-black-men"
     },
     {
       "title": "Tierra que habla",
