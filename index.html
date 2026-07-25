@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607211625">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607211625">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607250945">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607250945">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -2890,7 +2890,7 @@ setTimeout(function(){
 <!-- ── Intereses / Planear: header unificado — fuera de ag-view ── -->
 <div class="ag-view" id="ag-view"></div>
 
-<!-- ── STORE GATE v2 — "las tiendas son el hogar" (5 jul 2026) ─────────────────
+<!-- ── STORE GATE v4 — "las tiendas son el hogar" (5 jul 2026 · v4 23 jul) ─────
      LECCIÓN DEL INCIDENTE v1 (la app iOS mostró la landing): window.Capacitor NO
      es confiable con server.url remoto — el bridge no siempre se inyecta, y menos
      con Service Worker de por medio (Capacitor issues #7269 y #5278). El gate v1
@@ -2907,7 +2907,13 @@ setTimeout(function(){
          (Capacitor los registra a nivel nativo aunque no inyecte su JS)
        · Android con "; wv)" o token "Version/x" — WebView Android; los browsers
          reales de Android no los llevan
-     Costo aceptado: browsers in-app (Instagram, etc.) ven la web app.
+     v4 (23 jul 2026, prep difusión Argentina): los in-app browsers que se
+     IDENTIFICAN en el UA (Instagram, FBAN/FBAV/FB_IAB de Facebook,
+     TwitterAndroid de X-Android) van a la LANDING — son el funnel de difusión
+     social y caían como WebView → veían la web app en vez de "descargá la
+     app". hasCapacitor gana SIEMPRE (jamás mandar la app real a la landing —
+     lección v1). Costo aceptado restante: in-app browsers SIN token (X iOS,
+     TikTok) ven la web app, hasta que los wrappers anuncien UA propio.
      Kill-switch: "storeGate": false en version.json. Si el fetch de version.json
      falla, gana la APP (v2 también invierte esto — proteger la app > el push).
      El s.src de abajo DEBE conservar el formato src="/src/main.js?v=NNNN"
@@ -2926,11 +2932,17 @@ setTimeout(function(){
   // Firefox iOS recibía la app en vez de la landing, incluso en incógnito).
   var iosWebView = isIOSDevice && !/Safari\//.test(ua);
   var androidWebView = /Android/.test(ua) && (/; wv\)/.test(ua) || /Version\/\d/.test(ua));
-  var isApp = hasCapacitor || iosWebView || androidWebView;
+  // v4: in-app browser CONOCIDO (declara token en el UA) → NO es nuestra app,
+  // aunque sea un WebView. Instagram/Facebook/X-Android son el funnel de
+  // difusión: deben ver la landing de tiendas. hasCapacitor lo sobreescribe
+  // (la app real jamás va a la landing). X/Twitter iOS NO declara token →
+  // cae como WebView (app) — único costo restante, hasta UA propio del wrapper.
+  var inAppBrowser = /\b(FBAN|FBAV|FB_IAB|Instagram|TwitterAndroid)\b/.test(ua);
+  var isApp = hasCapacitor || (!inAppBrowser && (iosWebView || androidWebView));
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202607211625";
+    s.src="/src/main.js?v=202607250945";
     document.body.appendChild(s);
     // Watchdog de boot (P0 18 jul): si el grafo ESM murió en el import (caché
     // HTTP mixta tras deploys en ráfaga — main.js nuevo + módulo viejo sin el
