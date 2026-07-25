@@ -10,12 +10,10 @@ on:
       - 'tests/**.spec.js'
       - 'tests/helpers.js'
       - 'playwright.config.js'
+  # SIN filtro de paths: check REQUERIDO por branch protection — si no corre,
+  # el PR queda inmergeable (cazado en PR #428). Costo ~8 min en PRs de docs.
   pull_request:
-    paths:
-      - 'index.html'
-      - 'src/**'
-      - 'tests/**.spec.js'
-      - 'tests/helpers.js'
+    branches: [main]
 
 jobs:
   test:
