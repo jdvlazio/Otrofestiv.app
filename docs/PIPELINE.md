@@ -18,6 +18,7 @@ Orden canónico para montar un festival. Cada paso mapea a una fase de abajo.
 | 5 | `node scripts/generate-config.js …` → pegar en `src/config.js` | entrada de `FESTIVAL_CONFIG` | 2 |
 | 6 | **Secciones nuevas → `src/config.js`**: emoji único + entrada `SECTION_EN` + arquetipo en `SECTION_ARCHETYPES` (uno de los 9) | display EN + color de banda (sin arquetipo = ERROR `[seccion-sin-arquetipo]`) | 2 |
 | 7 | `python3 scripts/classify-posters.py <id> --apply` | mide el aspecto real de cada póster y escribe **`posterSource`** (`editorial`/`tmdb`/`custom`) — lo exige el gate `[poster-source]`; caza rotos al montar | 3 |
+| 7b | `python3 scripts/optimize-posters.py assets/<id>/` | pósters al peso de la app: redimensiona a **500px** de ancho (= mínimo TMDB → el mismo archivo sirve a la app Y a las altas); solo reemplaza si pesa menos; `--dry-run` para reporte. **Commitear antes el sidecar de URLs fuente** (`<id>-posters-src.json`) para poder re-bajar originales | 3 |
 | 8 | `python3 validate.py` + `node scripts/validate-festivals.js <id>` | gates bloqueantes (0 errores) | 4 |
 | 9 | **`tools/audit.html?fest=<id>`** (servir el repo + abrir en Chrome) | dashboard de auditoría: UNA pasada visual cubre póster·metadata·sinopsis·procedencia·LB; filtro "Solo problemas" | 5 |
 | 10 | `node scripts/bump-version.js` | stamp de build antes de deploy | 6 |
@@ -164,6 +165,46 @@ Columnas del CSV — **clase organizador** (lo que solo el festival sabe):
 - [ ] `poster` ≥ 90% de films auditables
 - [ ] `node scripts/validate-festivals.js` pasa con 0 errores antes de cada push — **sin excepciones**
 - [ ] Cero funciones duplicadas (mismo título+día+hora). Múltiples funciones del mismo título en días distintos son **datos correctos, no duplicados**
+
+---
+
+### Fase 1.5 · Validación de CONTENIDO `[Data Engineer]` — retro FICDEH (26 jul 2026)
+
+Los gates de forma (Fase 4) no ven contenido corrupto: en FICDEH TODOS los
+errores (duraciones falsas por números partidos en el HTML, 92 sinopsis con
+metadata pegada, títulos bilingües que rompían TMDB, países con basura) los
+cazó un ojo humano notando que "algo huele raro". Esta fase mecaniza ese olfato
+y es OBLIGATORIA antes de dar la extracción por buena:
+
+**1. Doble lectura (regla dura).** Todo campo se extrae de DOS representaciones
+independientes de la fuente (HTML renderizado vs `og:description` vs API) y se
+DIFEAN: donde discrepan hay un bug — del parseo o de la fuente — y se resuelve
+ANTES de escribir el JSON. En FICDEH el diff contra `og:description` cazó 4
+duraciones falsas (un "largometraje de 1 min" era 102) y 2 directores perdidos
+(`Directoras:` en plural). El diff no es opcional ni a posteriori: es el
+detector de bugs del parseo.
+
+**2. Linter de contenido (ejecutable).**
+```bash
+python3 scripts/lint-catalog.py festivals/staging/<id>.json   # en pre-onboarding
+python3 scripts/lint-catalog.py --root                        # publicados (con pHash)
+```
+Gates: `[duracion-vs-seccion]` (largo <40 min = imposible) · `[sinopsis-pura]`
+(sin "Director:/Ubicación:/Hora:" dentro del texto) · `[titulo-bilingue]`
+("Silenciada (Silenced)" pegado) · `[pais-sano]` (segmentable en países
+conocidos) · `[director-persona]` · `[poster-phash-dup]` (pósters duplicados
+POR PÍXELES aunque el archivo difiera — el gate por URL no los ve; cazó un
+duplicado real en TT ya publicado). En CI corre como `[contenido-sano]` dentro
+de `validate.py` (solo texto; el pHash es del checklist de onboarding).
+
+**3. Auditar los rechazos del enrich (no solo leerlos).** El log de
+`enrich-festival.py` lista los rechazos con su similitud. Los de **título ≥0.85
+se auditan UNO A UNO** contra TMDB antes de aceptar "no existe": en FICDEH la
+mitad de los "52 sin ficha" eran títulos bilingües mal parseados (mi bug) y la
+otra mitad homónimos reales (Amalgama=Cuarón/México, Clemencia=1935) donde el
+gate acertó al rechazar. Un número de cobertura que "huele raro" (Juan lo olió)
+ES una señal — verificarla, no racionalizarla. Ojo: existen **fichas cascarón**
+en TMDB (sin fecha/director/sinopsis) — sin criterio corroborante NO se atan.
 
 ---
 
