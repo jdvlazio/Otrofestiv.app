@@ -12,10 +12,8 @@ name: Require version bump
 on:
   pull_request:
     branches: [main]
-    paths:
-      - 'index.html'
-      - 'src/**'
-      - 'sw.js'
+    # SIN filtro de paths: check REQUERIDO — sin correr, el PR queda inmergeable
+    # (cazado en PR #428). El job pasa solo cuando no hay cambios relevantes.
 
 jobs:
   require-bump:

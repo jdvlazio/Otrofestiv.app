@@ -1,6 +1,12 @@
 name: Bump version y validar
 
+# pull_request SIN filtro de paths A PROPÓSITO: este check es REQUERIDO por la
+# branch protection de main — si el workflow no corre (PR de docs/scripts/nativo
+# fuera de los paths), el check queda "pendiente" para siempre y el merge se
+# bloquea sin salida (cazado en PR #428). El job es barato (~1 min) y pasa solo.
 on:
+  pull_request:
+    branches: [main]
   push:
     paths:
       - 'index.html'

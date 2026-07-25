@@ -10,12 +10,8 @@ name: Lint (no-undef)
 on:
   pull_request:
     branches: [main]
-    paths:
-      - 'src/**'
-      - 'eslint.config.js'
-      - 'package.json'
-      - 'package-lock.json'
-      - '.github/workflows/lint.yml'
+    # SIN filtro de paths: check REQUERIDO — sin correr, el PR queda inmergeable
+    # (cazado en PR #428). El job pasa solo cuando no hay cambios relevantes.
 
 jobs:
   lint:

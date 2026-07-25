@@ -12,6 +12,7 @@
 
 - [ ] `node scripts/validate-festivals.js <id>` → **0 errores**
 - [ ] `python3 validate.py` → **OK para push**
+- [ ] **`python3 scripts/lint-catalog.py festivals/<id>.json`** → 0 errores y warnings revisados (contenido: duraciones vs sección, sinopsis puras, países, títulos bilingües, **pHash de pósters**) — ver PIPELINE Fase 1.5 (doble lectura + auditoría de rechazos del enrich)
 - [ ] **Procedencia (pipeline v2)**: `_provenance: true` en el root + `_src: {url, date}` en cada film (gate `[sin-procedencia]`). Dato sin fuente = dato no confiable.
 - [ ] **`tools/audit.html?fest=<id>`** revisado: filtro "Solo problemas" en **0** o cada hallazgo justificado explícitamente ante Juan (una pasada visual cubre póster·metadata·sinopsis·procedencia·LB).
 - [ ] **Chrome live audit del splash** (gate bloqueante): servir el repo (`python3 -m http.server`),

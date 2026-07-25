@@ -379,6 +379,26 @@ if prio_errors:
 else:
     ok(check, f'prioLimit correcto en todos los festivales (regla: round(días/2), cap [3,8])')
 
+# ── CHECK 4c: contenido sano — linter de CONTENIDO del catálogo ──────────────
+# Retro FICDEH (26 jul 2026, pedida por Juan): los gates de arriba validan la
+# FORMA del JSON; este valida el CONTENIDO extraído (duración imposible para su
+# sección, sinopsis con metadata pegada, títulos bilingües, país con basura,
+# director que no es persona). Cada regla nace de un bug REAL que solo cazó un
+# ojo humano — esto mecaniza ese olfato. El detalle vive en scripts/
+# lint-catalog.py (--ci = solo texto, sin PIL: el dedup perceptual de pósters
+# corre en el checklist de onboarding, no acá). Warnings del linter NO bloquean.
+check = 'contenido-sano'
+import subprocess as _sp
+_lint = _sp.run([sys.executable, 'scripts/lint-catalog.py', '--root', '--ci'],
+                capture_output=True, text=True)
+if _lint.returncode == 0:
+    ok(check, 'contenido de catálogos sano (duraciones/sinopsis/países/directores — lint-catalog)')
+else:
+    for line in _lint.stdout.splitlines():
+        if line.strip().startswith('✗'):
+            fail(check, line.strip().lstrip('✗ '))
+    fail(check, 'lint-catalog encontró contenido corrupto — correr: python3 scripts/lint-catalog.py --root')
+
 # ── CHECK 5: FESTIVAL_CONFIG bootstrap ───────────────────────────────────────
 # Cada entrada en FESTIVAL_CONFIG debe tener los campos que el splash necesita
 # antes del fetch (name, city, dates, dates_en, year, storageKey, festivalEndStr).
