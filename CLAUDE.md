@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `c1e57f7 feat(leviza): lbSlug de Chist (alta TMDB) + doctrina de creación en PIPELINE (#424)`
+> Último commit: `d2874d4 fix(watch): pósters de Mi Plan cargan en todos los días (RemoteImage vs AsyncImage)`
 
 ---
 
