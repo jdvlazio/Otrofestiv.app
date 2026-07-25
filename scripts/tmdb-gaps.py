@@ -118,7 +118,11 @@ def _dump_form(parent, it, poster_label):
 def report(path, day=None):
     d = json.load(open(path, encoding='utf-8'))
     films = d.get('films', d if isinstance(d, list) else [])
-    repo_root = os.path.dirname(os.path.dirname(os.path.abspath(path)))
+    # raíz del repo = subir hasta encontrar assets/ (soporta festivals/ Y
+    # festivals/staging/ — el pre-onboarding vive un nivel más adentro)
+    repo_root = os.path.dirname(os.path.abspath(path))
+    while repo_root != '/' and not os.path.isdir(os.path.join(repo_root, 'assets')):
+        repo_root = os.path.dirname(repo_root)
     total, seen = 0, set()
     aptas, bloqueadas = [], []
     for parent, it in _rows(films, day):
