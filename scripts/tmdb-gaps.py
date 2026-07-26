@@ -21,6 +21,15 @@
 # BLOQUEADAS (sin póster o chico → conseguir el original en alta ANTES de crear).
 # Medir es barato y evita crear basura en una base pública.
 #
+# ── GUARD DE PROPORCIÓN (lección de la tanda FICDEH, 25 jul 2026) ─────────────
+# TMDB también rechaza por "aspect ratio", y ese rechazo llega DESPUÉS de haber
+# creado la ficha y abierto el formulario de subida — es decir, cuando el error
+# ya cuesta caro. Evidencia medida contra el uploader real: 0.700 (700×1000) fue
+# aceptado en 6 carteles; 0.725 (1857×2560, el original de Amalgama) fue
+# rechazado, y solo pasó tras un recorte centrado a 0.700. Por eso se valida el
+# ancho Y la proporción antes de tocar la web: fuera de rango la obra queda
+# BLOQUEADA con la instrucción de recorte, no "apta con sorpresa".
+#
 # Uso:
 #   python3 scripts/tmdb-gaps.py festivals/tercertiempo-2026.json
 #   python3 scripts/tmdb-gaps.py festivals/tercertiempo-2026.json --day 2026-07-17
@@ -29,6 +38,8 @@
 import json, sys, glob, os, struct
 
 MIN_POSTER_W = 500  # mínimo de TMDB para carteles (px de ancho). Por debajo → rechazo.
+RATIO_OK = (0.66, 0.71)  # rango de w/h que el uploader acepta (medido, ver cabecera)
+RATIO_TARGET = 0.70      # a esto se recorta lo que queda fuera de rango
 
 def _rows(films, day=None):
     for f in films:
@@ -76,8 +87,34 @@ def _img_dims(fp):
     except Exception:
         return None
 
-def _poster_status(poster, repo_root):
-    """Clasifica el póster para el alta. Devuelve (apto:bool, etiqueta:str)."""
+def _src_sidecar(path):
+    """Sidecar `<festival>-posters-src.json` (URL + dims del póster ORIGINAL de la
+    fuente). Existe porque el asset del repo está optimizado para la app (~500px)
+    y NO es la copia que se sube: a TMDB va el original en alta. Devuelve {} si
+    el festival no tiene sidecar."""
+    base = os.path.splitext(path)[0]
+    for cand in (base + '-posters-src.json',):
+        if os.path.exists(cand):
+            try:
+                return json.load(open(cand, encoding='utf-8'))
+            except Exception:
+                return {}
+    return {}
+
+def _src_entry(poster, sidecar):
+    """Entrada del sidecar para este póster (clave = nombre de archivo sin extensión)."""
+    if not poster or not sidecar:
+        return None
+    key = os.path.splitext(os.path.basename(poster))[0]
+    return sidecar.get(key)
+
+def _poster_status(poster, repo_root, src=None):
+    """Clasifica el póster para el alta. Devuelve (apto:bool, etiqueta:str).
+    Si hay original en el sidecar se juzga ESE, que es el archivo que se sube."""
+    if src and src.get('w') and src.get('h'):
+        w, h = src['w'], src['h']
+        ok, label = _dims_verdict(w, h)
+        return (ok, label + ' (original de la fuente)')
     if not poster:
         return (False, '⛔ SIN PÓSTER — no dar de alta')
     if poster.startswith('http'):
@@ -90,12 +127,23 @@ def _poster_status(poster, repo_root):
     dims = _img_dims(fp)
     if not dims:
         return (False, f'⚠️  no se pudo medir ({poster})')
-    w, h = dims
+    return _dims_verdict(*dims)
+
+def _dims_verdict(w, h):
+    """Veredicto del uploader de TMDB para unas dimensiones: ancho mínimo Y
+    proporción dentro de rango. Ambas se comprueban ANTES de crear la ficha."""
     if w < MIN_POSTER_W:
         return (False, f'⛔ CHICO {w}×{h}px (<{MIN_POSTER_W}px) — conseguir póster en alta')
-    return (True, f'✅ {w}×{h}px')
+    ratio = w / h
+    if not (RATIO_OK[0] <= ratio <= RATIO_OK[1]):
+        crop_w, crop_h = int(h * RATIO_TARGET), h
+        if crop_w > w:                       # más alto que ancho: recortar arriba/abajo
+            crop_w, crop_h = w, int(w / RATIO_TARGET)
+        return (False, f'⛔ PROPORCIÓN {ratio:.3f} (fuera de {RATIO_OK[0]}–{RATIO_OK[1]}) '
+                       f'— recorte centrado a {crop_w}×{crop_h}px antes de subir')
+    return (True, f'✅ {w}×{h}px · ratio {ratio:.3f}')
 
-def _dump_form(parent, it, poster_label):
+def _dump_form(parent, it, poster_label, src=None):
     """Vuelca los campos de una obra APTA, listos para copy/paste al formulario."""
     ctx = (f"  (en «{parent['title']}» · {parent.get('day','?')} {parent.get('time','')})"
            if parent is not it else f"  ({it.get('day','?')} {it.get('time','')})")
@@ -114,6 +162,8 @@ def _dump_form(parent, it, poster_label):
     if it.get('synopsis'):
         print(f"    Overview ES:  {it['synopsis']}")
     print(f"    Poster:       {it['poster']}  {poster_label}")
+    if src and src.get('src'):
+        print(f"    Subir:        {src['src']}")
 
 def report(path, day=None):
     d = json.load(open(path, encoding='utf-8'))
@@ -123,6 +173,7 @@ def report(path, day=None):
     repo_root = os.path.dirname(os.path.abspath(path))
     while repo_root != '/' and not os.path.isdir(os.path.join(repo_root, 'assets')):
         repo_root = os.path.dirname(repo_root)
+    sidecar = _src_sidecar(path)
     total, seen = 0, set()
     aptas, bloqueadas = [], []
     for parent, it in _rows(films, day):
@@ -132,8 +183,9 @@ def report(path, day=None):
         seen.add(key); total += 1
         if it.get('lbSlug'):
             continue
-        apto, label = _poster_status(it.get('poster'), repo_root)
-        (aptas if apto else bloqueadas).append((parent, it, label))
+        src = _src_entry(it.get('poster'), sidecar)
+        apto, label = _poster_status(it.get('poster'), repo_root, src)
+        (aptas if apto else bloqueadas).append((parent, it, label, src))
 
     gaps = len(aptas) + len(bloqueadas)
     hdr = f"\n═══ {path}{' · ' + day if day else ''} — {gaps} sin ficha de {total} obras"
@@ -141,14 +193,16 @@ def report(path, day=None):
     print(hdr)
 
     if aptas:
-        print(f"\n──── APTAS PARA ALTA (póster ≥{MIN_POSTER_W}px) ────")
-        for parent, it, label in aptas:
-            _dump_form(parent, it, label)
+        print(f"\n──── APTAS PARA ALTA (≥{MIN_POSTER_W}px · ratio {RATIO_OK[0]}–{RATIO_OK[1]}) ────")
+        for parent, it, label, src in aptas:
+            _dump_form(parent, it, label, src)
     if bloqueadas:
-        print(f"\n──── BLOQUEADAS — conseguir póster en alta ANTES de crear ────")
-        for parent, it, label in bloqueadas:
+        print(f"\n──── BLOQUEADAS — arreglar el póster ANTES de crear la ficha ────")
+        for parent, it, label, src in bloqueadas:
             ctx = f"«{parent['title']}»" if parent is not it else (it.get('day') or '?')
             print(f"  ✗ {it['title']:45} {label}   ({ctx})")
+            if src and src.get('src'):
+                print(f"      original: {src['src']}")
     if not gaps:
         print("  ✓ todas las obras tienen ficha (lbSlug presente)")
     # exit-code: nº de APTAS pendientes (las bloqueadas no son accionables aún)
