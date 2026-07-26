@@ -264,7 +264,8 @@
    "_src": {
     "url": "https://www.ficdeh.com/produccion/bojaya-la-verdad-desde-adentro/",
     "date": "2026-07-25"
-   }
+   },
+   "lbSlug": "bojaya-la-verdad-desde-adentro"
   },
   {
    "title": "Carmela y los caminantes",
@@ -407,7 +408,8 @@
    "_src": {
     "url": "https://www.ficdeh.com/produccion/cuando-un-rio-se-convierte-en-mar/",
     "date": "2026-07-25"
-   }
+   },
+   "lbSlug": "cuando-un-rio-se-convierte-en-mar"
   },
   {
    "title": "Defendamos la vida",
@@ -423,7 +425,8 @@
    "_src": {
     "url": "https://www.ficdeh.com/produccion/defendamos-la-vida/",
     "date": "2026-07-25"
-   }
+   },
+   "lbSlug": "defendamos-la-vida"
   },
   {
    "title": "Del otro lado",
@@ -510,7 +513,9 @@
    "_src": {
     "url": "https://www.ficdeh.com/produccion/el-hogar-fue-sepultado-en-esa-tierra-que-nunca-pudimos-encontrar/",
     "date": "2026-07-25"
-   }
+   },
+   "lbSlug": "our-home-was-buried-in-a-land-we-could-never",
+   "title_en": "Our Home Was Buried in a Land We Could Never Find"
   },
   {
    "title": "El juego de la vida",
@@ -544,7 +549,8 @@
    "_src": {
     "url": "https://www.ficdeh.com/produccion/el-paraiso-de-ainara/",
     "date": "2026-07-25"
-   }
+   },
+   "lbSlug": "el-paraiso-de-ainara"
   },
   {
    "title": "Shelter",
@@ -560,7 +566,9 @@
    "_src": {
     "url": "https://www.ficdeh.com/produccion/el-puente-de-los-suspiros/",
     "date": "2026-07-25"
-   }
+   },
+   "lbSlug": "onderdak",
+   "title_en": "Shelter"
   },
   {
    "title": "El silencio de la tierra",
@@ -654,7 +662,8 @@
    "_src": {
     "url": "https://www.ficdeh.com/produccion/espeletia-bk-frailejon-desarticulado/",
     "date": "2026-07-25"
-   }
+   },
+   "lbSlug": "espeletia-bk-frailejon-desarticulado"
   },
   {
    "title": "Estamos en el mapa",
@@ -729,7 +738,8 @@
    "_src": {
     "url": "https://www.ficdeh.com/produccion/floresmiro/",
     "date": "2026-07-25"
-   }
+   },
+   "lbSlug": "floresmiro"
   },
   {
    "title": "Apotnojushi La Casa del viento",
@@ -1043,7 +1053,8 @@
     "url": "https://www.ficdeh.com/produccion/los-bibliotecarios-the-librarians/",
     "date": "2026-07-25"
    },
-   "title_en": "The librarians"
+   "title_en": "The Librarians",
+   "lbSlug": "the-librarians-2025"
   },
   {
    "title": "Los de abajo",
