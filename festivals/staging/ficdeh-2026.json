@@ -1,1700 +1,1704 @@
 {
- "_provenance": true,
- "_etapa": "A-catalogo (SIN funciones — no publicar)",
- "sections": {
-  "🕊️ Retrospectiva 10 Años del Acuerdo de Paz": {
-   "en": "10 Years of the Peace Agreement",
-   "archetype": "Retrospectiva / Tributo",
-   "order": 1
-  },
-  "🌍 Largometraje Documental Internacional": {
-   "en": "International Documentary Feature",
-   "archetype": "Competencia",
-   "order": 2
-  },
-  "🔍 Largometraje Documental Nacional": {
-   "en": "Colombian Documentary Feature",
-   "archetype": "Competencia",
-   "order": 3
-  },
-  "🧳 Largometraje de Ficción": {
-   "en": "International Fiction Feature",
-   "archetype": "Competencia",
-   "order": 4
-  },
-  "☕ Largometraje de Ficción Nacional": {
-   "en": "Colombian Fiction Feature",
-   "archetype": "Competencia",
-   "order": 5
-  },
-  "🎙️ Cortometraje Documental Nacional": {
-   "en": "Colombian Documentary Short",
-   "archetype": "Cortos / Programas",
-   "order": 6
-  },
-  "🪀 Cortometraje de Ficción Nacional": {
-   "en": "Colombian Fiction Short",
-   "archetype": "Cortos / Programas",
-   "order": 7
-  },
-  "🚲 Cortometraje de Ficción Internacional": {
-   "en": "International Fiction Short",
-   "archetype": "Cortos / Programas",
-   "order": 8
-  },
-  "🏘️ Cine Comunitario Nacional": {
-   "en": "Community Cinema",
-   "archetype": "Perspectivas / Miradas",
-   "order": 9
-  }
- },
- "films": [
-  {
-   "title": "1982",
-   "director": "Garcia JC",
-   "year": "2025",
-   "duration": "84 min",
-   "country": "Perú",
-   "section": "🧳 Largometraje de Ficción",
-   "synopsis": "En un pueblo andino del Perú, en 1982, Tato, un niño de 12 años, se ve forzado al exilio cuando su familia es amenazada.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/1982.jpg",
-   "posterSource": "custom",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/1982/",
-    "date": "2026-07-25"
-   },
-   "lbSlug": "1982-2025",
-   "genre": "Drama"
-  },
-  {
-   "title": "58th",
-   "director": "Carl Joseph Papa",
-   "year": "2026",
-   "duration": "86 min",
-   "country": "Filipinas",
-   "section": "🌍 Largometraje Documental Internacional",
-   "synopsis": "A pesar del dolor y el trauma que ha soportado, una hija persigue incansablemente la justicia para su padre, que sigue desaparecido y es considerado la víctima número 58 de la Masacre de Maguindanao, el ataque más mortífero contra periodistas en la historia.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/58th.jpg",
-   "posterSource": "custom",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/58th/",
-    "date": "2026-07-25"
-   },
-   "lbSlug": "58th",
-   "genre": "Animación, Drama"
-  },
-  {
-   "title": "Amalgama",
-   "director": "Alejandra Wills",
-   "year": "2019",
-   "duration": "13 min",
-   "country": "Colombia",
-   "section": "🕊️ Retrospectiva 10 Años del Acuerdo de Paz",
-   "synopsis": "Alcira y Henry son víctimas del conflicto armado rural en Colombia. Con una profunda tristeza que los une, pasar tiempo juntos es una lucha irritante y dolorosa. Aún así, lo hacen para apaciguar su dolor. Alcira necesita perdonarlo. Henry necesita su perdón.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/amalgama.jpg",
-   "posterSource": "custom",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/amalgama/",
-    "date": "2026-07-25"
-   },
-   "lbSlug": "amalgama-1"
-  },
-  {
-   "title": "American Doctor",
-   "director": "Poh Si Teng",
-   "year": "2026",
-   "duration": "93 min",
-   "country": "Estados Unidos, Palestina, Qatar, Malasia, Dinamarca",
-   "section": "🌍 Largometraje Documental Internacional",
-   "synopsis": "Cuando tres médicos estadounidenses —un palestino, un judío y un zoroastriano— entran en Gaza para salvar vidas, se ven atrapados entre la medicina y la política, arriesgándolo todo para sacar a la luz la verdad.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/american-doctor-medico-estadounidense.jpg",
-   "posterSource": "custom",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/american-doctor-medico-estadounidense/",
-    "date": "2026-07-25"
-   },
-   "genre": "Documental",
-   "lbSlug": "american-doctor"
-  },
-  {
-   "title": "Aminetu",
-   "director": "Lucía Muñoz Lucena",
-   "year": "2026",
-   "duration": "92 min",
-   "country": "España",
-   "section": "🌍 Largometraje Documental Internacional",
-   "synopsis": "En 2009, Aminetu Haidar inició en Lanzarote una huelga de hambre de 32 días tras ser expulsada del Sáhara Occidental. Su exigencia de volver a casa desencadenó una crisis diplomática sin precedentes entre España y Marruecos que situó su lucha en el centro de la atención internacional.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/aminetu.jpg",
-   "posterSource": "custom",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/aminetu/",
-    "date": "2026-07-25"
-   }
-  },
-  {
-   "title": "Amor rebelde",
-   "director": "Alejandro Bernal",
-   "year": "2021",
-   "duration": "77 min",
-   "country": "Colombia, Canadá, Brasil",
-   "section": "🕊️ Retrospectiva 10 Años del Acuerdo de Paz",
-   "synopsis": "Dos excombatientes de las FARC luchan por mantener viva su relación y construir una familia durante su tránsito a la vida civil. A lo largo de cinco años, el documental acompaña su proceso de reintegración mientras enfrentan los desafíos personales y sociales que deja el conflicto armado colombiano.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/amor-rebelde.jpg",
-   "posterSource": "custom",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/amor-rebelde/",
-    "date": "2026-07-25"
-   },
-   "genre": "Documental",
-   "lbSlug": "rebel-love-2021"
-  },
-  {
-   "title": "Andariega",
-   "director": "Raúl Soto",
-   "year": "2025",
-   "duration": "94 min",
-   "country": "Colombia",
-   "section": "🔍 Largometraje Documental Nacional",
-   "synopsis": "Cada año, Chena, de 26 años, se une a la diáspora de campesinos andariegos que se movilizan por Colombia recogiendo las cosechas de café. Viajar y trabajar son la base de su autonomía. En su equipaje carga un cuaderno escolar donde escribe reflexiones sobre su pasado y la vida que afronta como mujer y madre sosteniendo a los lejos un hogar lleno de dificultades y escasez. A pesar de su juventud, su cuerpo se está debilitando, poniendo en entredicho su propia idea de libertad.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/andariega.jpg",
-   "posterSource": "custom",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/andariega/",
-    "date": "2026-07-25"
-   },
-   "synopsis_en": "Every year, 26-year-old Chena walks hundreds of kilometers to work as a day laborer on Colombian crops. Eight years in, she has saved nothing. Her body and her will are all she has.",
-   "_inherited": {
-    "synopsis_en": "cinemancia-2025",
-    "genre": "cinemancia-2025",
-    "title_en": "cinemancia-2025"
-   },
-   "genre": "Drama",
-   "title_en": "Andariega",
-   "lbSlug": "nomad-spirit"
-  },
-  {
-   "title": "Apolo",
-   "director": "Tainá Müller, Ísis Broken",
-   "year": "2025",
-   "duration": "83 min",
-   "country": "Brasil",
-   "section": "🌍 Largometraje Documental Internacional",
-   "synopsis": "Tras concebir de forma natural a su hijo durante la pandemia de COVID-19, Isis y Lourenzo emprenden un viaje por Brasil en busca de algo poco común: una atención prenatal respetuosa y especializada. Al mismo tiempo, continúan su lucha diaria, dentro y fuera de su hogar, por los derechos de su familia en el país con la tasa más alta de asesinatos de personas trans en el mundo.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/apolo.jpg",
-   "posterSource": "custom",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/apolo/",
-    "date": "2026-07-25"
-   },
-   "genre": "Documental, Drama",
-   "lbSlug": "apolo-2025"
-  },
-  {
-   "title": "Aquí no entra luz",
-   "director": "Karol Maia",
-   "year": "2025",
-   "duration": "79 min",
-   "country": "Brasil",
-   "section": "🌍 Largometraje Documental Internacional",
-   "synopsis": "Entre recuerdos personales e investigación histórica emerge una imagen de la vida de las trabajadoras domésticas en Brasil, incluida la de la madre de la cineasta y otras mujeres que se enfrentan a este legado. La película revela cómo los espacios de vida fueron diseñados deliberadamente para segregar cuerpos y perpetuar jerarquías. Hoy, más de 6 millones de personas trabajan como empleadas domésticas en Brasil.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/aqui-no-entra-luz.jpg",
-   "posterSource": "custom",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/aqui-no-entra-luz/",
-    "date": "2026-07-25"
-   },
-   "genre": "Documental",
-   "lbSlug": "no-sunshine-in-here"
-  },
-  {
-   "title": "Bajo fuego",
-   "director": "Sjoerd van Grootheest, Irene Vélez Torres",
-   "year": "2020",
-   "duration": "84 min",
-   "country": "Colombia",
-   "section": "🕊️ Retrospectiva 10 Años del Acuerdo de Paz",
-   "synopsis": "Aunque un Acuerdo de Paz fue firmado en Colombia en el año 2016, los cocaleros que buscan la paz en el Norte del Cauca terminan viviendo una nueva ola de violencia. Filmado a lo largo de tres años, Bajo fuego es el retrato de campesinos que afrontan una compleja encrucijada: un gobierno que demora en cumplir lo que prometió, una economía familiar en crisis por la sustitución de la coca, un Estado que reprime la movilización y amenazas de muerte por parte de nuevos actores armados.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/bajo-fuego.jpg",
-   "posterSource": "custom",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/bajo-fuego/",
-    "date": "2026-07-25"
-   },
-   "genre": "Documental",
-   "lbSlug": "under-fire-2020"
-  },
-  {
-   "title": "Cayenas libertarias",
-   "director": "Javier Camilo Aranguren Montañez",
-   "year": "2025",
-   "duration": "20 min",
-   "country": "Colombia",
-   "section": "🎙️ Cortometraje Documental Nacional",
-   "synopsis": "En las llanuras de Colombia, un grupo de mujeres conserva y reinterpreta los lecos, o cantos de trabajo del llano, que durante generaciones fueron interpretados por hombres. A través de sus cantos de vaquería, resignifican su lugar en la tradición llanera, revelando su relación armónica con la naturaleza y su compleja conexión con el arraigo llanero.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/bogota-underground-hip-hop.jpg",
-   "posterSource": "custom",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/bogota-underground-hip-hop/",
-    "date": "2026-07-25"
-   },
-   "lbSlug": "cayenas-libertarias"
-  },
-  {
-   "title": "Bojayá, la verdad desde adentro",
-   "director": "Ramón Alexander Valencia Córdoba",
-   "year": "2026",
-   "duration": "105 min",
-   "country": "Colombia",
-   "section": "🔍 Largometraje Documental Nacional",
-   "synopsis": "Tres líderes de Bojayá recorren el municipio llevando el baúl de la verdad, recogiendo cuestionamientos y exigencias de la comunidad para enfrentar a los responsables del conflicto armado en su territorio. Después de su recorrido, comparten con la comunidad las respuestas encontradas y juntos construyen una verdad desde adentro.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/bojaya-la-verdad-desde-adentro.jpg",
-   "posterSource": "custom",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/bojaya-la-verdad-desde-adentro/",
-    "date": "2026-07-25"
-   },
-   "lbSlug": "bojaya-la-verdad-desde-adentro"
-  },
-  {
-   "title": "Carmela y los caminantes",
-   "director": "Esteban Coloma, Luis Herrera",
-   "year": "2025",
-   "duration": "92 min",
-   "country": "Ecuador",
-   "section": "🌍 Largometraje Documental Internacional",
-   "synopsis": "Cerca de la frontera entre Ecuador y Colombia, Carmela, una mujer afroecuatoriana, abre su casa a miles de migrantes venezolanos que cruzan Sudamérica a pie buscando una vida mejor. Durante años, ha sostenido este trabajo junto a su familia, a pesar de los escasos recursos. Con una mirada íntima y observacional, la película explora la migración, la familia y la resiliencia desde el corazón de una mujer que lo da todo.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/carmela-y-los-caminantes.jpg",
-   "posterSource": "custom",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/carmela-y-los-caminantes/",
-    "date": "2026-07-25"
-   },
-   "genre": "Documental",
-   "lbSlug": "carmela-and-the-walkers"
-  },
-  {
-   "title": "Cartas a la tierra",
-   "director": "Erika David",
-   "year": "2025",
-   "duration": "11 min",
-   "country": "Colombia",
-   "section": "🎙️ Cortometraje Documental Nacional",
-   "synopsis": "Una mujer campesina, que ha dedicado su vida a preservar el territorio mediante la agroecología, huye de su hogar por la llegada de grupos armados y encuentra refugio en Usme, el corazón rural de Bogotá. A través de cartas a mujeres de la zona, comparte su visión sobre la importancia de la tierra y el agua para sostener la vida. Este documental recorre la ruralidad Usmeña, mientras las palabras de la protagonista resuenan como un llamado a preservar el medio ambiente.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/cartas-a-la-tierra.jpg",
-   "posterSource": "custom",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/cartas-a-la-tierra/",
-    "date": "2026-07-25"
-   },
-   "lbSlug": "cartas-a-la-tierra"
-  },
-  {
-   "title": "Celeste",
-   "director": "Clemen Villamizar Acosta",
-   "year": "2025",
-   "duration": "15 min",
-   "country": "México",
-   "section": "🚲 Cortometraje de Ficción Internacional",
-   "synopsis": "Celeste desaparece una noche de la casa de trata infantil donde vive. Su hermana la busca hasta meterse en problemas. Mientras se involucra en una conspiración de otra de las chicas para acabar con su captor, se da cuenta que Celeste no volverá.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/celeste.jpg",
-   "posterSource": "custom",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/celeste/",
-    "date": "2026-07-25"
-   },
-   "lbSlug": "celeste-2"
-  },
-  {
-   "title": "Clemencia",
-   "director": "Juliana Echeverry",
-   "year": "2026",
-   "duration": "17 min",
-   "country": "Colombia",
-   "section": "🎙️ Cortometraje Documental Nacional",
-   "synopsis": "En la vereda La Esmeralda, en Acacías (Meta), la vida campesina ha estado marcada por una transformación profunda desde la llegada de la industria petrolera. A través de la voz y la cotidianidad de Clemencia Díaz, este documental recorre la historia de un territorio que alguna vez fue abundante en agua, y hoy enfrenta su escasez y contaminación.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/clemencia.jpg",
-   "posterSource": "custom",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/clemencia/",
-    "date": "2026-07-25"
-   },
-   "lbSlug": "clemencia-1"
-  },
-  {
-   "title": "Cobija de recuerdos",
-   "director": "Jacobo Albán, Carlos Zerpa, Beltrán Pérez",
-   "year": "2023",
-   "duration": "5 min",
-   "country": "Colombia, Venezuela, Francia",
-   "section": "🕊️ Retrospectiva 10 Años del Acuerdo de Paz",
-   "synopsis": "Kevin es un niño que vive con Marta, una campesina, y de vez en cuando visita a su madre Fabiola, una guerrillera. Hasta que los paramilitares antiguerrilleros irrumpen en el pueblo, matan a Marta y le obligan a desplazarse y a buscar el verdadero significado de la familia.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/cobija-de-recuerdos.jpg",
-   "posterSource": "custom",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/cobija-de-recuerdos/",
-    "date": "2026-07-25"
-   },
-   "genre": "Animación",
-   "lbSlug": "un-pedrazo-de-paz-cobija-de-recuerdos"
-  },
-  {
-   "title": "Todos los días",
-   "director": "David Rendón Peláez",
-   "year": "2024",
-   "duration": "15 min",
-   "country": "Colombia",
-   "section": "🪀 Cortometraje de Ficción Nacional",
-   "synopsis": "Ramiro es despedido del trabajo al que perteneció gran parte de su vida. En medio de su nueva y solitaria libertad conoce a tres desocupados como él, que se reúnen para matar el tiempo y hacerse compañía mientras fantasean con vengarse de sus antiguos empleadores y buscan, un pequeño triunfo a la vez, ser felices. Cada día, todos los días.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/color-piel.jpg",
-   "posterSource": "custom",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/color-piel/",
-    "date": "2026-07-25"
-   },
-   "lbSlug": "todos-los-dias"
-  },
-  {
-   "title": "Cuando la palabra se hace búsqueda",
-   "director": "Frank Benítez Peña",
-   "year": "2026",
-   "duration": "61 min",
-   "country": "Colombia",
-   "section": "🔍 Largometraje Documental Nacional",
-   "synopsis": "En Colombia, la búsqueda de personas desaparecidas ha abierto caminos inesperados de encuentro entre quienes sufren su ausencia y quienes guardan información clave sobre su paradero. Este largometraje revela el papel fundamental de los aportantes de información, en las voces de quienes participaron directa e indirectamente en las hostilidades y que, desde el compromiso, han decidido sumarse al proceso humanitario de la búsqueda liderado por la Unidad de Búsqueda de Personas dadas por Desaparecidas.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/cuando-la-palabra-se-hace-busqueda.jpg",
-   "posterSource": "custom",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/cuando-la-palabra-se-hace-busqueda/",
-    "date": "2026-07-25"
-   },
-   "synopsis_en": "A documentary on the search for the disappeared: the voices of those who search and the echo of an absence that lingers.",
-   "_inherited": {
-    "synopsis_en": "ficmontanas-2026",
-    "genre": "ficmontanas-2026"
-   },
-   "genre": "Documental",
-   "lbSlug": "cuando-la-palabra-se-hace-busqueda"
-  },
-  {
-   "title": "Cuando un río se convierte en mar",
-   "director": "Pere Vilà Barceló",
-   "year": "2026",
-   "duration": "180 min",
-   "country": "España",
-   "section": "🧳 Largometraje de Ficción",
-   "synopsis": "Tras sufrir una agresión sexual, Gaia debe convivir con el vacío, la confusión y las heridas invisibles que alteran su relación con el mundo y consigo misma. A través de su amistad con una profesora de arqueología y el apoyo de su padre, descubre cómo el trauma reconfigura su vida y a las personas que la rodean.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/cuando-un-rio-se-convierte-en-mar.jpg",
-   "posterSource": "custom",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/cuando-un-rio-se-convierte-en-mar/",
-    "date": "2026-07-25"
-   },
-   "lbSlug": "when-a-river-becomes-the-sea",
-   "title_en": "When a River Becomes the Sea"
-  },
-  {
-   "title": "Defendamos la vida",
-   "director": "César Augusto Acevedo",
-   "year": "2026",
-   "duration": "90 min",
-   "country": "Colombia",
-   "section": "☕ Largometraje de Ficción Nacional",
-   "synopsis": "“Defendamos la vida” narra la resistencia del pueblo nasa en el norte del Cauca, que, frente a la violencia armada y el abandono estatal, reafirma su compromiso con la paz y la defensa del territorio. A través de la Guardia Indígena y sus mayores, el documental recoge memorias, siembra dignidad y alza una voz colectiva por la vida, los derechos humanos y la justicia en Colombia.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/defendamos-la-vida.jpg",
-   "posterSource": "custom",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/defendamos-la-vida/",
-    "date": "2026-07-25"
-   },
-   "lbSlug": "defendamos-la-vida"
-  },
-  {
-   "title": "Del otro lado",
-   "director": "Iván Guarnizo",
-   "year": "2021",
-   "duration": "86 min",
-   "country": "Colombia, España",
-   "section": "🕊️ Retrospectiva 10 Años del Acuerdo de Paz",
-   "synopsis": "Después de los acuerdos de paz, la guerra entre las FARC y el Estado parecía haber terminado, pero la situación dista mucho de ser estable. Iván y su hermano empiezan a investigar el secuestro de su madre, ocurrido años atrás. Al encontrar el diario que escribió durante su cautiverio, descubren una relación casi materno-filial que tuvo con su captor. Ahora que la mayoría de guerrilleros han entregado sus armas, deciden buscarlo y tal vez hablar de ese tiempo oscuro en sus vidas.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/del-otro-lado.jpg",
-   "posterSource": "custom",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/del-otro-lado/",
-    "date": "2026-07-25"
-   },
-   "genre": "Documental",
-   "lbSlug": "on-the-other-side-2021-1"
-  },
-  {
-   "title": "Desierto verde",
-   "director": "Meliza Luna Venegas",
-   "year": "2025",
-   "duration": "70 min",
-   "country": "Chile",
-   "section": "🌍 Largometraje Documental Internacional",
-   "synopsis": "¿Cómo puede sobrevivir el linaje de una curandera sin un bosque? La cineasta recorre los caminos de su infancia en busca de las mujeres de su familia y de las flores que una vez brotaron en las montañas. Pero ahora, interminables hileras de pinos cubren la tierra, extraños, sedientos y a la espera de arder de nuevo.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/desierto-verde.jpg",
-   "posterSource": "custom",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/desierto-verde/",
-    "date": "2026-07-25"
-   },
-   "genre": "Documental",
-   "lbSlug": "green-desert"
-  },
-  {
-   "title": "Después del frío",
-   "director": "María Jimena Duzán",
-   "year": "2022",
-   "duration": "84 min",
-   "country": "Colombia",
-   "section": "🕊️ Retrospectiva 10 Años del Acuerdo de Paz",
-   "synopsis": "En 2016, Colombia firmó un histórico acuerdo de paz con las FARC, marcando el fin de una guerra de 60 años. ‘Después del frío’ narra las historias de tres personas: un ganadero uribista que fue secuestrado, un coronel implicado en ‘falsos positivos’ y un líder social de Siloé, en Cali. A través de entrevistas cercanas y humanas, este documental revela los desafíos y las pequeñas victorias en el camino hacia la reconciliación y la justicia en un país aún marcado por la sombra del conflicto.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/despues-del-frio.jpg",
-   "posterSource": "custom",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/despues-del-frio/",
-    "date": "2026-07-25"
-   },
-   "genre": "Documental",
-   "lbSlug": "despues-del-frio"
-  },
-  {
-   "title": "El bosque",
-   "director": "Suneesh Vadakkumbadan",
-   "year": "",
-   "duration": "81 min",
-   "country": "India",
-   "section": "🧳 Largometraje de Ficción",
-   "synopsis": "Película simbólica en malayalam que explora el vínculo entre los seres humanos y la naturaleza. Ambientada en Kerala, refleja el desplazamiento de comunidades indígenas causado por la minería. La historia sigue a Chaman, un curandero tribal profundamente conectado con el bosque, y a su nieto Thaman. Cuando el nido de pájaros que protegen es destruido por la lluvia, se refleja la fragilidad de la vida. A medida que la minería obliga a la reubicación, Chaman se niega a marcharse. Su desaparición en el bosque y el nacimiento de dos polluelos reafirman el ciclo vital de la naturaleza.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/el-bosque.jpg",
-   "posterSource": "custom",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/el-bosque/",
-    "date": "2026-07-25"
-   },
-   "lbSlug": "the-forest-3"
-  },
-  {
-   "title": "El hogar fue sepultado en esa tierra que nunca pudimos encontrar",
-   "director": "Deimer Quintero Vertel",
-   "year": "2026",
-   "duration": "92 min",
-   "country": "Colombia",
-   "section": "🔍 Largometraje Documental Nacional",
-   "synopsis": "El hogar ha desaparecido; la casa fue paraíso, pero también infierno. Aunque la guerra intentó destruirlo todo a su paso, la familia intenta volver. Entre anhelos y pesadillas crean un nuevo territorio, un refugio donde se reencuentran con sus amigos y su comunidad. Allí logran volver a la casa grande, el parque de diversiones de la infancia, ahora habitado por seres fantásticos y espectros, en donde buscan conjurar un abrazo.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/el-hogar-fue-sepultado-en-esa-tierra-que-nunca-pudimos-encontrar.jpg",
-   "posterSource": "custom",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/el-hogar-fue-sepultado-en-esa-tierra-que-nunca-pudimos-encontrar/",
-    "date": "2026-07-25"
-   },
-   "lbSlug": "our-home-was-buried-in-a-land-we-could-never",
-   "title_en": "Our Home Was Buried in a Land We Could Never Find"
-  },
-  {
-   "title": "El juego de la vida",
-   "director": "Mario Andrés Ruiz Zuluaga",
-   "year": "2026",
-   "duration": "95 min",
-   "country": "Colombia",
-   "section": "🔍 Largometraje Documental Nacional",
-   "synopsis": "Un documentalista sigue durante 14 años a cinco familias colombianas que enfrentan las desigualdades de un país donde el origen influye en las oportunidades. A través de sus decisiones, frustraciones, resiliencia y logros, revela que, aunque las reglas no son iguales para todos, la voluntad de transformar el propio destino persiste. El juego de la vida es un retrato íntimo sobre la movilidad social, la dignidad y la esperanza en Colombia.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/el-juego-de-la-vida.jpg",
-   "posterSource": "custom",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/el-juego-de-la-vida/",
-    "date": "2026-07-25"
-   },
-   "genre": "Documental",
-   "lbSlug": "the-game-of-life-2025"
-  },
-  {
-   "title": "El Paraíso de Ainara",
-   "director": "Esther Niemeier, Laura Espinel",
-   "year": "2025",
-   "duration": "14 min",
-   "country": "Colombia",
-   "section": "🎙️ Cortometraje Documental Nacional",
-   "synopsis": "En el colorido barrio El Paraíso de Bogotá, la curiosa Ainara, de 10 años, crece en Violetta, una biblioteca comunitaria fundada por su familia para les niñes del barrio. Un segundo hogar para aprender y jugar mientras los padres y las madres trabajan largas jornadas. A través del juego, el teatro y las manualidades, Ainara y sus amigues descubren la fuerza de la comunidad. El corto celebra la solidaridad y una buena dosis de girl power, mostrando cómo del cuidado colectivo pueden nacer pequeños paraísos.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/el-paraiso-de-ainara.jpg",
-   "posterSource": "custom",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/el-paraiso-de-ainara/",
-    "date": "2026-07-25"
-   },
-   "lbSlug": "el-paraiso-de-ainara"
-  },
-  {
-   "title": "Shelter",
-   "director": "Maarten Sleegers, Anna Sherstiuk",
-   "year": "2024",
-   "duration": "15 min",
-   "country": "Países Bajos",
-   "section": "🚲 Cortometraje de Ficción Internacional",
-   "synopsis": "Nikita, un niño ucraniano de 10 años se mudó a los Países Bajos con su madre. A diferencia de ella, a Nikita no le gusta vivir allí. La gente habla un idioma extranjero y él no logra hacer nuevos amigos. En secreto, idea un plan para regresar en bicicleta a Kiev. El único problema es que no sabe montar en bicicleta. Para aprender, necesitará la ayuda de uno de sus compañeros de clase neerlandeses.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/el-puente-de-los-suspiros.jpg",
-   "posterSource": "custom",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/el-puente-de-los-suspiros/",
-    "date": "2026-07-25"
-   },
-   "lbSlug": "onderdak",
-   "title_en": "Shelter"
-  },
-  {
-   "title": "El silencio de la tierra",
-   "director": "Frank Gutiérrez",
-   "year": "2026",
-   "duration": "77 min",
-   "country": "España, Francia, Bélgica",
-   "section": "🌍 Largometraje Documental Internacional",
-   "synopsis": "Berta Cáceres, Paulo Paulino Guajajara y Aldo Zamora dieron la vida por defender la tierra. Estos activistas ambientales fueron brutalmente asesinados en América Latina por enfrentarse a los intereses de grandes corporaciones multinacionales y sus aliados locales. ¿Quién está detrás de estos crímenes y por qué gozan de impunidad casi total? ¿Qué consecuencias tiene esta violencia para el planeta y el futuro de la humanidad?",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/el-silencio-de-la-tierra.jpg",
-   "posterSource": "custom",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/el-silencio-de-la-tierra/",
-    "date": "2026-07-25"
-   },
-   "genre": "Documental, Drama",
-   "lbSlug": "le-silence-de-la-terre"
-  },
-  {
-   "title": "El silencio de los palafitos",
-   "director": "Yull Núñez",
-   "year": "2024",
-   "duration": "73 min",
-   "country": "Colombia, México",
-   "section": "🧳 Largometraje de Ficción",
-   "synopsis": "Abrumado por no obtener suficientes ingresos debido a un desastre ambiental en el pueblo palafito donde vive, Elías, un joven pescador que posee una gaita heredada de su padre, pierde la cordura al fracasar en sus intentos de revivir los peces muertos de la ciénaga, aferrándose a los recuerdos de su esposa Margot, desaparecida a manos de los insurgentes. Pero el poder de la música y su tenacidad devolverán la esperanza al lugar.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/el-silencio-de-los-palafitos.jpg",
-   "posterSource": "custom",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/el-silencio-de-los-palafitos/",
-    "date": "2026-07-25"
-   },
-   "genre": "Drama",
-   "lbSlug": "el-silencio-de-los-palafitos"
-  },
-  {
-   "title": "El valor de la palabra",
-   "director": "Marta Rodríguez, Fernando Restrepo",
-   "year": "2026",
-   "duration": "79 min",
-   "country": "Colombia",
-   "section": "🔍 Largometraje Documental Nacional",
-   "synopsis": "La historia de Ángel María Torres y Napoleón Torres, líderes arhuacos de la Sierra Nevada de Santa Marta, asesinados por el ejército en 1990. A través de archivos y testimonios íntimos, el documental retrata el vacío que dejaron en sus familias y comunidad, mientras revela la cosmovisión arhuaca, donde el territorio es un ser vivo y la palabra un vínculo esencial. Más que narrar una tragedia, la película es un acto de resistencia y memoria frente a la violencia colonial persistente.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/el-valor-de-la-palabra.jpg",
-   "posterSource": "custom",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/el-valor-de-la-palabra/",
-    "date": "2026-07-25"
-   },
-   "synopsis_en": "The long career of Colombian filmmaker Marta Rodríguez demonstrates a commitment to documenting the history of repression and struggle of indigenous and marginalized peoples.",
-   "_inherited": {
-    "synopsis_en": "ficci-65",
-    "title_en": "ficci-65"
-   },
-   "title_en": "The Value of Speech",
-   "lbSlug": "el-valor-de-la-palabra"
-  },
-  {
-   "title": "El verano de Jahia",
-   "director": "Olivier Meys",
-   "year": "2025",
-   "duration": "90 min",
-   "country": "Bélgica, Francia, Luxemburgo",
-   "section": "🧳 Largometraje de Ficción",
-   "synopsis": "En un centro de acogida belga, Jahia lleva una vida tranquila y reservada junto a su madre traumatizada. Todo cambia con la llegada de la vivaz Mila. Atraídas la una por la otra, las dos jóvenes forjan un vínculo frágil que aporta calidez y resiliencia a un entorno marcado por el miedo y la incertidumbre. Jahia empieza a cocinar para consolar a su madre, mientras Mila se enfrenta al inminente veredicto que decidirá su solicitud de asilo. Su amistad se convierte en un refugio, un espacio donde la esperanza puede respirar a pesar de las sombras del exilio.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/el-verano-de-jahia-jahias-summer.jpg",
-   "posterSource": "custom",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/el-verano-de-jahia-jahias-summer/",
-    "date": "2026-07-25"
-   },
-   "title_en": "Jahia's Summer",
-   "genre": "Drama",
-   "lbSlug": "jahias-summer"
-  },
-  {
-   "title": "Espeletia BK: Frailejón desarticulado",
-   "director": "Raúl Antonio Estupiñan Pinto",
-   "year": "2019",
-   "duration": "12 min",
-   "country": "Colombia",
-   "section": "🕊️ Retrospectiva 10 Años del Acuerdo de Paz",
-   "synopsis": "Raúl Estupiñan, recorre nuevamente el Páramo de Sumapaz en donde patrulló y combatió los momentos más cruentos de la guerra colombiana. Espeletia BK ofrece una reflexión sobre las repercusiones de la guerra en los cuerpos y en el ecosistema.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/espeletia-bk-frailejon-desarticulado.jpg",
-   "posterSource": "custom",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/espeletia-bk-frailejon-desarticulado/",
-    "date": "2026-07-25"
-   },
-   "lbSlug": "espeletia-bk-frailejon-desarticulado"
-  },
-  {
-   "title": "Estamos en el mapa",
-   "director": "Santiago Rodríguez Cárdenas",
-   "year": "2024",
-   "duration": "10 min",
-   "country": "Colombia",
-   "section": "🪀 Cortometraje de Ficción Nacional",
-   "synopsis": "¿Qué significa estar en el mapa? Los habitantes del barrio “La Estrella», en la localidad de Ciudad Bolívar de Bogotá, se reúnen en torno a unas onces para compartir y recordar sus historias alrededor de la construcción y consolidación del barrio.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/estamos-en-el-mapa.jpg",
-   "posterSource": "custom",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/estamos-en-el-mapa/",
-    "date": "2026-07-25"
-   },
-   "genre": "Documental",
-   "lbSlug": "we-are-on-the-map"
-  },
-  {
-   "title": "Eva",
-   "director": "William Reyes",
-   "year": "2026",
-   "duration": "90 min",
-   "country": "Colombia, Honduras",
-   "section": "🧳 Largometraje de Ficción",
-   "synopsis": "Eva, una mujer trans, se hace cargo de su nieta tras la repentina muerte de su nuera. Mientras lidia con el duelo, intenta ayudar a su hijo a conectar emocionalmente con la bebé. Entre tensiones, reproches y silencios, madre e hijo emprenden un camino hacia la comprensión mutua y la reconstrucción de su vínculo familiar.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/eva.jpg",
-   "posterSource": "custom",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/eva/",
-    "date": "2026-07-25"
-   },
-   "lbSlug": "eva-2025"
-  },
-  {
-   "title": "Feito Pipa",
-   "director": "Allan Deberton",
-   "year": "2026",
-   "duration": "93 min",
-   "country": "Brasil",
-   "section": "🧳 Largometraje de Ficción",
-   "synopsis": "Gugu es un niño soñador y apasionado por el fútbol que vive con su abuela Dilma, una profesora jubilada que lo cría de manera libre y afectuosa. Por el contrario, la relación del niño con su padre, Batista, es difícil, marcada por ausencias, expectativas y afectos no expresados. Abuela y nieto viven solos junto a la represa de Araújo Lima que, después de años de sequía, comienza a revelar las ruinas de una antigua ciudad sumergida, sacando a la luz recuerdos que cambiaron la vida de la familia.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/feito-pipa.jpg",
-   "posterSource": "custom",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/feito-pipa/",
-    "date": "2026-07-25"
-   },
-   "synopsis_en": "Twelve-year-old Gugu grows up in a small community on the banks of the Araújo-Lima reservoir, whose waters are slowly receding to reveal the ruins of a submerged town. He lives with his grandmother Dilma, surrounded by tenderness, mischief, and afternoons of football.",
-   "_inherited": {
-    "synopsis_en": "ficci-65",
-    "title_en": "ficci-65"
-   },
-   "title_en": "Gugu's World",
-   "genre": "Drama",
-   "lbSlug": "gugus-world"
-  },
-  {
-   "title": "Floresmiro",
-   "director": "John Agudelo Suárez",
-   "year": "2025",
-   "duration": "101 min",
-   "country": "Colombia",
-   "section": "🔍 Largometraje Documental Nacional",
-   "synopsis": "En San Vicente de Chucurí, el padre Floro impulsa una planta de frutas para evitar las pérdidas causadas por la guerra. También recordamos a Floresmiro López, un sacerdote que arriesgó su vida defendiendo campesinos durante el conflicto armado. Con amor y firmeza moral, enfrentó las armas y dejó un legado de organización comunitaria clave en la región.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/floresmiro.jpg",
-   "posterSource": "custom",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/floresmiro/",
-    "date": "2026-07-25"
-   },
-   "lbSlug": "floresmiro"
-  },
-  {
-   "title": "Apotnojushi La Casa del viento",
-   "director": "Marbel Vanegas Jusayu",
-   "year": "2026",
-   "duration": "12 min",
-   "country": "Colombia",
-   "section": "🎙️ Cortometraje Documental Nacional",
-   "synopsis": "Ana Rosa Jusayu (mi madre), lideresa ancestral de la comunidad Apotnojushi ubicada en cercanias del cerro de la teta en la alta Guajira colombiana, trata de recuperar el tejido y la unión familiar que se vieron alterados por el “desarrollo sostenible” invasivo. En medio de las pocas esperanzas de sobrevivir en lo desolado de su territorio ancestral, la familia comparte su añoranza de permanecer allí, enfrentándose a las dificultades y los cambios económicos que afectan al pueblo wayuu.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/guerreras.jpg",
-   "posterSource": "custom",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/guerreras/",
-    "date": "2026-07-25"
-   },
-   "lbSlug": "the-house-of-the-wind-2026"
-  },
-  {
-   "title": "Herencia: Los cantos de la tierra",
-   "director": "Iván Acosta Rojas",
-   "year": "2026",
-   "duration": "82 min",
-   "country": "Colombia",
-   "section": "🔍 Largometraje Documental Nacional",
-   "synopsis": "La música campesina ha transmitido durante generaciones las historias, costumbres y afectos de las comunidades rurales del interior colombiano. A través de coplas, ritmos e instrumentos tradicionales, jóvenes y mayores mantienen viva una herencia cultural nacida de la tierra, el trabajo y las fusiones musicales que dieron identidad a toda una región.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/herencia-los-cantos-de-la-tierra.jpg",
-   "posterSource": "custom",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/herencia-los-cantos-de-la-tierra/",
-    "date": "2026-07-25"
-   },
-   "synopsis_en": "A documentary celebrating peasant 'carranguera' music —voices, stories and instruments like the requinto, tiple and guacharaca— as the root of rural Colombian identity.",
-   "_inherited": {
-    "synopsis_en": "ficmontanas-2026",
-    "genre": "ficmontanas-2026"
-   },
-   "genre": "Documental",
-   "lbSlug": "herencia-los-cantos-de-la-tierra"
-  },
-  {
-   "title": "Akababuru: Expresión de asombro",
-   "director": "Irati Dojura Landa Yagarí",
-   "year": "2025",
-   "duration": "13 min",
-   "country": "Colombia",
-   "section": "🪀 Cortometraje de Ficción Nacional",
-   "synopsis": "Kari es una niña indígena emberá que teme reír. Un día conoce a Kera, una joven mestiza, quien decide contarle el mito de Kiraparamia, una mujer que, según los ancianos, fue castigada por los dioses por reírse de su esposo. Kera reinterpreta el mito y le dice que, en realidad, la risa de Kiraparamia la liberó. Esta historia inspira profundamente a la pequeña Kari, quien decide confrontar a los niños que la oprimen a ella y a sus amigas mediante la risa.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/herminda.jpg",
-   "posterSource": "custom",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/herminda/",
-    "date": "2026-07-25"
-   },
-   "title_en": "Akababuru: Expression of Astonishment",
-   "_inherited": {
-    "title_en": "aff-2026"
-   },
-   "genre": "Fantasía",
-   "lbSlug": "akababuru-expresion-de-asombro"
-  },
-  {
-   "title": "Héroes del silencio",
-   "director": "Atikeinis Durán Izquierdo",
-   "year": "2026",
-   "duration": "13 min",
-   "country": "Colombia",
-   "section": "🏘️ Cine Comunitario Nacional",
-   "synopsis": "Cortometraje rodado por los niños y niñas de la comunidad indígena de Morotrwa, en la Sierra Nevada de Gonawindua. A través de sus propias fotografías y vídeos, documentan sus vidas y su territorio, eligiendo libremente qué mostrar.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/heroes-del-silencio.jpg",
-   "posterSource": "custom",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/heroes-del-silencio/",
-    "date": "2026-07-25"
-   },
-   "lbSlug": "heroes-del-silencio"
-  },
-  {
-   "title": "Hija del volcán",
-   "director": "Jenifer de la Rosa",
-   "year": "2026",
-   "duration": "109 min",
-   "country": "España, México",
-   "section": "🔍 Largometraje Documental Nacional",
-   "synopsis": "Adoptada en España tras la tragedia de Armero, Jenifer ha vivido treinta años con una pregunta que nunca ha dejado de perseguirla: ¿quién era su madre? La única pista que tiene sobre su origen la lleva de regreso a Colombia, al lugar donde la erupción del volcán Nevado del Ruiz sepultó un pueblo entero y cambió miles de vidas para siempre.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/hija-del-volcan.jpg",
-   "posterSource": "custom",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/hija-del-volcan/",
-    "date": "2026-07-25"
-   },
-   "genre": "Documental",
-   "lbSlug": "daughter-of-the-volcano"
-  },
-  {
-   "title": "Honorablé",
-   "director": "Rhadem Musawah, Francis Tanglao-Aguas",
-   "year": "2026",
-   "duration": "72 min",
-   "country": "Filipinas",
-   "section": "🌍 Largometraje Documental Internacional",
-   "synopsis": "En Filipinas, donde la creciente visibilidad LGBTQ+ contrasta con la persistencia de profundas desigualdades, dos mujeres trans se postulan a cargos públicos y desafían las lógicas del poder político. A través de sus campañas, el filme explora las tensiones entre representación, exclusión y sacrificio personal, mientras cuestiona quién puede ocupar espacios de liderazgo y ser reconocido como “honorable”.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/honorable.jpg",
-   "posterSource": "custom",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/honorable/",
-    "date": "2026-07-25"
-   },
-   "genre": "Documental",
-   "lbSlug": "honorable-2026"
-  },
-  {
-   "title": "Indiamenta",
-   "director": "Carlos Nieto",
-   "year": "2026",
-   "duration": "25 min",
-   "country": "Colombia",
-   "section": "🪀 Cortometraje de Ficción Nacional",
-   "synopsis": "Dailyn quiere cambiar el mundo. En el camino, aprende que la lucha es constante, que la perseverancia da sus frutos, que los errores se convierten en oportunidades y que el verdadero valor de la vida reside en las personas con las que la construimos.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/indiamenta.jpg",
-   "posterSource": "custom",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/indiamenta/",
-    "date": "2026-07-25"
-   },
-   "lbSlug": "indiamenta"
-  },
-  {
-   "title": "Juntas por la paz del Chocó",
-   "director": "Andrés Estefan",
-   "year": "2024",
-   "duration": "18 min",
-   "country": "Colombia",
-   "section": "🏘️ Cine Comunitario Nacional",
-   "synopsis": "¿Cómo avanza la implementación del Acuerdo de Paz entre el Gobierno Nacional y las FARC-EP? ¿Cómo han mejorado las condiciones de vida de las mujeres gracias a los compromisos de género establecidos en el Acuerdo? En 2023, en el corazón del Chocó, se creó el Comité Local de Monitoreo, un grupo de 15 lideresas defensoras de derechosn humanos que trabajan para convertir las promesas del Acuerdo en realidades tangibles para las mujeres de Bahía Solano, El Carmen de Atrato, Istmina, Medio San Juan y Quibdó.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/juntas-por-la-paz-del-choco.jpg",
-   "posterSource": "custom",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/juntas-por-la-paz-del-choco/",
-    "date": "2026-07-25"
-   },
-   "lbSlug": "juntas-por-la-paz-del-choco"
-  },
-  {
-   "title": "Kaugsankamalla: mientras vivamos",
-   "director": "Soraida Chindoy, Karoline Pelikan",
-   "year": "2026",
-   "duration": "61 min",
-   "country": "Colombia, Perú",
-   "section": "🔍 Largometraje Documental Nacional",
-   "synopsis": "«Si yo ya no puedo luchar, ¿lo harás tú?» Seguimos de cerca la vida y la lucha de Soraida Chindoy, una mujer Inga que defiende las montañas sagradas de su comunidad en Putumayo frente a una empresa minera canadiense. A través de la voz y las imágenes de Soraida, enraizadas en su profunda conexión con la Alpa Mama, la película nos muestra una lucha urgente: no solo por la supervivencia de una comunidad, sino por el futuro mismo del planeta que todos y todas compartimos.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/kaugsankamalla-mientras-vivamos.jpg",
-   "posterSource": "custom",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/kaugsankamalla-mientras-vivamos/",
-    "date": "2026-07-25"
-   },
-   "lbSlug": "kaugsankamalla-mientras-vivamos"
-  },
-  {
-   "title": "La Bonga",
-   "director": "Sebastián Pinzón Silva y Canela Reyes",
-   "year": "2023",
-   "duration": "77 min",
-   "country": "Colombia, Estados Unidos",
-   "section": "🕊️ Retrospectiva 10 Años del Acuerdo de Paz",
-   "synopsis": "Hace 20 años, el pueblo palenquero de La Bonga recibió una amenaza firmada por paramilitares. Esa misma noche, 120 familias salieron para nunca volver. Hoy, La Bonga ha sido devorada por la selva, y toda una generación solo conoce su pueblo a través de historias. María ha sido la única persona que ha regresado a vivir allá. Muchos creen que está loca y que pone en riesgo su vida. Después de dos décadas, María lidera a más de 300 personas durante el primer retorno colectivo a La Bonga, para llevar a cabo una enorme celebración. La película teje el viaje colectivo con el viaje solitario de María y su nieta, un año después de la fiesta, en el que María intenta inculcar en ella el amor por su tierra ancestral. La Bonga es un viaje simbólico por las selvas del Caribe colombiano para resucitar un lugar que sólo existe en la memoria, un ritual de despedida de un pueblo que fue y que no volverá. En un acto de resistencia, esta fiesta suelta lo perdido, lo deja ir, mientras celebra su memoria y su comunidad.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/la-bonga.jpg",
-   "posterSource": "custom",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/la-bonga/",
-    "date": "2026-07-25"
-   },
-   "genre": "Documental",
-   "lbSlug": "la-bonga"
-  },
-  {
-   "title": "La gran hazaña",
-   "director": "Luber Yesid Zúñiga Ordóñez",
-   "year": "2025",
-   "duration": "15 min",
-   "country": "Colombia",
-   "section": "🪀 Cortometraje de Ficción Nacional",
-   "synopsis": "A Pablo le encanta jugar al trompo. Cuando Don Chucho, el usurero del pueblo, retiene a Pascualina, su amiga y mascota, Pablo debe enfrentarse a Felipe, el mejor jugador de trompo de la región, para rescatarla. Pero ganar no es suficiente: los demás niños del pueblo se unirán a él en un acto de solidaridad, amistad y trabajo en equipo para lograr esta gran hazaña.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/la-gran-hazana.jpg",
-   "posterSource": "custom",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/la-gran-hazana/",
-    "date": "2026-07-25"
-   },
-   "genre": "Ficción",
-   "_inherited": {
-    "genre": "ficmontanas-2026"
-   },
-   "lbSlug": "the-great-feat"
-  },
-  {
-   "title": "La hija cóndor",
-   "director": "Álvaro Olmos Torrico",
-   "year": "2025",
-   "duration": "109 min",
-   "country": "Bolivia, Perú, Uruguay",
-   "section": "🧳 Largometraje de Ficción",
-   "synopsis": "Clara es una adolescente que vive en una comunidad indígena en los Andes. Su madre adoptiva, una partera que la acogió cuando era bebé, le ha enseñado los antiguos cantos para guiar a las mujeres en el parto. Melodías transmitidas de generación en generación y, que se cree, ayudan a traer nueva vida al mundo de manera segura. Pero, aunque su voz continúa con la tradición, sus sueños están en otro lugar: anhela dejar las montañas y convertirse en una estrella de música folclórica en la gran ciudad.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/la-hija-condor.jpg",
-   "posterSource": "custom",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/la-hija-condor/",
-    "date": "2026-07-25"
-   },
-   "synopsis_en": "Clara, a teenager in an Andean indigenous community, learns she was adopted from a sacred condor. As her eighteenth birthday approaches, she must choose between the human world she knows and the one she came from.",
-   "_inherited": {
-    "synopsis_en": "aff-2026",
-    "genre": "aff-2026",
-    "title_en": "aff-2026"
-   },
-   "genre": "Drama",
-   "title_en": "The Condor Daughter",
-   "lbSlug": "the-condor-daughter"
-  },
-  {
-   "title": "La independencia",
-   "director": "John Agudelo Suárez",
-   "year": "2025",
-   "duration": "20 min",
-   "country": "Colombia",
-   "section": "🪀 Cortometraje de Ficción Nacional",
-   "synopsis": "Cecilia, una mujer abnegada de 52 años, decide romper con su vida de sacrificios tras años de soportar la irresponsabilidad de su hijo y la ingratitud de su familia, buscando finalmente su independencia.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/la-independencia.jpg",
-   "posterSource": "custom",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/la-independencia/",
-    "date": "2026-07-25"
-   },
-   "genre": "Drama",
-   "lbSlug": "independence-2025"
-  },
-  {
-   "title": "La luz por primera vez",
-   "director": "Ibeth Rey Jerez, Frank Rodríguez",
-   "year": "2026",
-   "duration": "78 min",
-   "country": "Colombia, España",
-   "section": "🔍 Largometraje Documental Nacional",
-   "synopsis": "Natalia Pinilla, fotógrafa y activista, emprende un viaje que cruza Santander, Norte de Santander y España para descubrir la obra de Amalia Ramírez, una mujer olvidada que, a comienzos del siglo XX, capturó una de las imágenes más impactantes de la historia colombiana: la pirámide de calaveras de Palonegro, símbolo brutal de la Guerra de los Mil Días. Más de un siglo después, esa fotografía resurge y posiciona a Amalia como, quizás, la primera mujer fotógrafa de Colombia.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/la-luz-por-primera-vez.jpg",
-   "posterSource": "custom",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/la-luz-por-primera-vez/",
-    "date": "2026-07-25"
-   },
-   "genre": "Documental",
-   "lbSlug": "la-luz-por-primera-vez"
-  },
-  {
-   "title": "La luz que nos queda",
-   "director": "Gloria Isabel Gómez Ceballos",
-   "year": "2017",
-   "duration": "7 min",
-   "country": "Colombia",
-   "section": "🕊️ Retrospectiva 10 Años del Acuerdo de Paz",
-   "synopsis": "Es el dos de octubre, un día histórico para Colombia. Aunque se firmaron los acuerdos con las FARC, Luz no se atreve a mostrar su rostro pues todavía existe el grupo armado ELN. A través de sus textos, ella presenta a generaciones más jóvenes su pasado mientras se comienza a escribir el futuro de la Paz.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/la-luz-que-nos-queda.jpg",
-   "posterSource": "custom",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/la-luz-que-nos-queda/",
-    "date": "2026-07-25"
-   },
-   "lbSlug": "la-luz-que-nos-queda"
-  },
-  {
-   "title": "La Raya",
-   "director": "Yolanda Cruz",
-   "year": "2025",
-   "duration": "80 min",
-   "country": "México",
-   "section": "🧳 Largometraje de Ficción",
-   "synopsis": "La llegada de un refrigerador cambia la vida en La Raya, un pueblo abandonado en la sierra sur de Oaxaca. Sotera y su amigo Erick intentan venderlo y hacer negocio. Sin embargo, el refrigerador pronto empieza a revelar cosas misteriosas a la gente que se le acerca.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/la-raya.jpg",
-   "posterSource": "custom",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/la-raya/",
-    "date": "2026-07-25"
-   },
-   "genre": "Drama, Misterio",
-   "lbSlug": "town-of-la-raya"
-  },
-  {
-   "title": "Los bibliotecarios",
-   "director": "Kim Snyder",
-   "year": "2025",
-   "duration": "91 min",
-   "country": "Reino Unido",
-   "section": "🌍 Largometraje Documental Internacional",
-   "synopsis": "En el Estados Unidos actual, la polarización política pone a los bibliotecarios en la mira, en medio de una ola sin precedentes de prohibición de libros que se ha desatado en Texas, Florida y otros lugares. A medida que la crisis se intensifica, ellos unen sus fuerzas como defensores inesperados en la primera línea de la democracia.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/los-bibliotecarios-the-librarians.jpg",
-   "posterSource": "custom",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/los-bibliotecarios-the-librarians/",
-    "date": "2026-07-25"
-   },
-   "title_en": "The Librarians",
-   "lbSlug": "the-librarians-2025"
-  },
-  {
-   "title": "Los de abajo",
-   "director": "Alejandro Quiroga",
-   "year": "2024",
-   "duration": "83 min",
-   "country": "Bolivia, Colombia, Brasil, Argentina",
-   "section": "☕ Largometraje de Ficción Nacional",
-   "synopsis": "Gregorio es un campesino que vive frustrado en su pueblo Rosillas. Él soberbio y arrojado se propone recuperar para su familia las aguas de la vieja acequia que fueron desviadas por el Coronel Iglesias quien es un terrateniente argentino vecino, aliado en complot con el alcalde del pueblo para sus propios cultivos de vid. En su trayecto, Gregorio tiene que afrontar la desidia comunal, la corrupción y al poder socioeconómico de la élite.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/los-de-abajo.jpg",
-   "posterSource": "custom",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/los-de-abajo/",
-    "date": "2026-07-25"
-   },
-   "genre": "Drama",
-   "lbSlug": "the-ones-from-below"
-  },
-  {
-   "title": "Los pliegues de la falda",
-   "director": "Blanca Muñoz Avila",
-   "year": "2025",
-   "duration": "18 min",
-   "country": "Colombia",
-   "section": "🪀 Cortometraje de Ficción Nacional",
-   "synopsis": "Linda quiere ser la protagonista de la obra de teatro del colegio; pero, cuando Carlos descubre el rol “masculino” que su hija interpretará, intenta impedirlo. Conmovida por la tristeza de su hija, María decide ayudarla, aunque eso signifique nadar a contracorriente.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/los-pliegues-de-la-falda.jpg",
-   "posterSource": "custom",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/los-pliegues-de-la-falda/",
-    "date": "2026-07-25"
-   },
-   "lbSlug": "los-pliegues-de-la-falda"
-  },
-  {
-   "title": "Los reyes del mundo",
-   "director": "Laura Mora",
-   "year": "2022",
-   "duration": "104 min",
-   "country": "Colombia, Luxemburgo, México, Francia, Noruega",
-   "section": "🕊️ Retrospectiva 10 Años del Acuerdo de Paz",
-   "synopsis": "Rá (19), Culebro (16), Sere (14), Winny (12) Nano (13) cinco chicos de la calle de Medellín. Cinco reyes sin reino. En sus manos tienen unas viejas escrituras de una tierra heredada por Rá. Tras recibir una carta de la oficina de restitución de tierras del gobierno, notificando la devolución de los terrenos que le fueron arrebatados a su abuela, Rá decidirá emprender el viaje con sus amigos con la promesa de por fin cumplir un sueño: tener un lugar en el mundo donde ser libres, donde estar a salvo, donde construir su propio reino.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/los-reyes-del-mundo.jpg",
-   "posterSource": "custom",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/los-reyes-del-mundo/",
-    "date": "2026-07-25"
-   },
-   "genre": "Drama, Aventura",
-   "lbSlug": "kings-of-the-world"
-  },
-  {
-   "title": "Madres de nacimiento",
-   "director": "Gloria Isabel Gómez Ceballos",
-   "year": "2026",
-   "duration": "8 min",
-   "country": "Colombia",
-   "section": "🎙️ Cortometraje Documental Nacional",
-   "synopsis": "Del olvido y la oscuridad hay imágenes y sonidos que resurgen para controlar los cuerpos de las mujeres latinoamericanas, quienes desde niñas han sido consideradas madres de nacimiento. Pero en estos archivos emerge una interferencia que proviene del pasado para evocar un mensaje de lucha, memoria y libertad.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/madres-de-nacimiento.jpg",
-   "posterSource": "custom",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/madres-de-nacimiento/",
-    "date": "2026-07-25"
-   },
-   "genre": "Documental",
-   "_inherited": {
-    "genre": "ficmontanas-2026"
-   },
-   "lbSlug": "madres-de-nacimiento"
-  },
-  {
-   "title": "Y el río lloró",
-   "director": "Zumaya Mayers C., Rodrigo Cuervo J.",
-   "year": "2024",
-   "duration": "26 min",
-   "country": "Colombia",
-   "section": "🎙️ Cortometraje Documental Nacional",
-   "synopsis": "En el corazón del Pacífico colombiano, Manuel Cruz y su esposa Angy luchan por sanar las heridas de su comunidad, devastada por el conflicto armado. Lo hacen preservando sus tradiciones ancestrales y honrando la memoria de las víctimas, mientras el río, testigo silencioso, fluye como símbolo de resistencia y esperanza.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/mohanas-resistencias-memoria-y-paz.jpg",
-   "posterSource": "custom",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/mohanas-resistencias-memoria-y-paz/",
-    "date": "2026-07-25"
-   },
-   "lbSlug": "y-el-rio-lloro"
-  },
-  {
-   "title": "In four stops",
-   "director": "Elizaveta Khlomova",
-   "year": "2026",
-   "duration": "19 min",
-   "country": "Rusia",
-   "section": "🚲 Cortometraje de Ficción Internacional",
-   "synopsis": "Dos días en la vida de Max, un niño sordo con una imaginación desbordante en medio de una dura realidad.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/mother-love-amor-de-madre.jpg",
-   "posterSource": "custom",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/mother-love-amor-de-madre/",
-    "date": "2026-07-25"
-   },
-   "lbSlug": "film:1510138",
-   "title_en": "In Four Stops"
-  },
-  {
-   "title": "Muerto no",
-   "director": "Alex Reis",
-   "year": "2025",
-   "duration": "15 min",
-   "country": "Brasil",
-   "section": "🚲 Cortometraje de Ficción Internacional",
-   "synopsis": "El nacimiento del primer hijo de una joven pareja negra trae consigo felicidad, pero también agonía. El padre del recién nacido vive y expresa sus dilemas ante la llegada, la convivencia y la partida de su querido primogénito.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/muerto-no.jpg",
-   "posterSource": "custom",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/muerto-no/",
-    "date": "2026-07-25"
-   },
-   "lbSlug": "not-dead-2025",
-   "title_en": "Not Dead"
-  },
-  {
-   "title": "Mujeres modernas",
-   "director": "Hugo Santa Cruz",
-   "year": "2025",
-   "duration": "69 min",
-   "country": "Reino Unido",
-   "section": "🧳 Largometraje de Ficción",
-   "synopsis": "Lily regresa a su piso compartido después de pasar varias semanas en un hospital psiquiátrico. Ruth es una poetisa callejera sin techo. Mónica es una madre soltera que vive en un hotel. Sus historias se entrelazan enrevesadamente en esta sátira pop sobre la crisis de la vivienda en Londres.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/mujeres-modernas.jpg",
-   "posterSource": "custom",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/mujeres-modernas/",
-    "date": "2026-07-25"
-   },
-   "lbSlug": "modern-women",
-   "title_en": "Modern Women"
-  },
-  {
-   "title": "My grandmother is a skydiver",
-   "director": "Polina Piddubna",
-   "year": "2025",
-   "duration": "13 min",
-   "country": "Alemania",
-   "section": "🚲 Cortometraje de Ficción Internacional",
-   "synopsis": "Alfyia, una joven llena de vida en Tayikistán en los años sesenta, practica paracaidismo y estudia para convertirse en comadrona, cuando recibe una llamada extraordinaria de su nieta en el año 2022. Ante la invasión de Ucrania, la nieta de Alfyia está profundamente preocupada por la seguridad de su abuela. En esta conversación intergeneracional que trasciende el tiempo y el espacio, la nieta intenta replantearse la memoria familiar y romper el ciclo interminable del trauma colectivo.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/my-grandmother-is-a-skydiver.jpg",
-   "posterSource": "custom",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/my-grandmother-is-a-skydiver/",
-    "date": "2026-07-25"
-   },
-   "genre": "Animación, Documental",
-   "lbSlug": "my-grandmother-is-a-skydiver"
-  },
-  {
-   "title": "Niñxs",
-   "director": "Kani Lapuerta",
-   "year": "2025",
-   "duration": "86 min",
-   "country": "México, Alemania",
-   "section": "🌍 Largometraje Documental Internacional",
-   "synopsis": "Al pie del Tepozteco, una colina sagrada que rige los vientos y la fertilidad, se encuentra el pequeño pueblo de Tepoztlán. En este contexto, el cuerpo y la mente de Karla, de quince años, atraviesan una profunda transformación. Mientras Karla transita su proceso de transición, Kani da forma a ocho años de grabaciones, en una película conmovedora en la que ambas afrontan las vicisitudes de la adolescencia trans en el ámbito rural.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/ninxs.jpg",
-   "posterSource": "custom",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/ninxs/",
-    "date": "2026-07-25"
-   },
-   "genre": "Documental",
-   "lbSlug": "ninxs"
-  },
-  {
-   "title": "Notas sobre un destierro",
-   "director": "Gustavo Castro",
-   "year": "2025",
-   "duration": "80 min",
-   "country": "Brasil",
-   "section": "🌍 Largometraje Documental Internacional",
-   "synopsis": "Las filmaciones del encuentro con una familia brasileño-palestina en Cisjordania de 2018 son revisitadas después del 7 de octubre de 2023. Lo que iba a ser una película sobre las posibilidades de coexistencia en una tierra ocupada se transforma en una brutal reflexión sobre la colonización, el apartheid, el genocidio y la reciente proliferación de imágenes de guerra producidas por las propias víctimas de una masacre que se repite a lo largo del tiempo.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/notas-sobre-un-destierro.jpg",
-   "posterSource": "custom",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/notas-sobre-un-destierro/",
-    "date": "2026-07-25"
-   }
-  },
-  {
-   "title": "One in a million",
-   "director": "Jack MacInnes, Itab Azzam",
-   "year": "2026",
-   "duration": "102 min",
-   "country": "Reino Unido, Estados Unidos",
-   "section": "🌍 Largometraje Documental Internacional",
-   "synopsis": "Filmada a lo largo de 10 años, esta épica travesía de una niña desde Siria a Alemania y de regreso. Ella y su familia afrontan la guerra, el exilio y el dolor en una tierra extranjera, poniendo de manifiesto la complejidad de la experiencia de los refugiados.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/one-in-a-million-una-entre-un-millon.jpg",
-   "posterSource": "custom",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/one-in-a-million-una-entre-un-millon/",
-    "date": "2026-07-25"
-   },
-   "genre": "Documental",
-   "lbSlug": "one-in-a-million-2026"
-  },
-  {
-   "title": "Outside",
-   "director": "Frank van Bergen",
-   "year": "2024",
-   "duration": "17 min",
-   "country": "Países Bajos",
-   "section": "🚲 Cortometraje de Ficción Internacional",
-   "synopsis": "Narra la historia del Forastero, un hombre cuya vida cambia para siempre tras un evento catastrófico. En un mundo posapocalíptico, vacío de vida humana, lucha por sobrevivir mientras recorre calles desiertas en busca de alimento y refugio. A medida que enfrenta amenazas que evocan recuerdos de su pasado, intenta adaptarse a su nueva realidad y encontrar la paz que tanto necesita. Una reflexión inquietante sobre la supervivencia, la soledad y la resiliencia humana.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/outside.jpg",
-   "posterSource": "custom",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/outside/",
-    "date": "2026-07-25"
-   }
-  },
-  {
-   "title": "Padamlágan",
-   "director": "Jenn Romano",
-   "year": "2025",
-   "duration": "80 min",
-   "country": "Filipinas",
-   "section": "🧳 Largometraje de Ficción",
-   "synopsis": "Mientras Naga recuerda la tragedia del Puente Colgante de 1972, Doring, un devoto voyador, participa en la procesión fluvial de Peñafrancia mientras enfrenta el regreso de su hijo distanciado, Iván. Cuando el puente colapsa por la multitud, Iván desaparece entre los muertos y desaparecidos. Mientras Doring busca entre escombros, hospitales y autoridades indiferentes, se declara la Ley Marcial, convirtiendo su búsqueda en un retrato de duelo y pérdida nacional.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/padamlagan-night-lihgt.jpg",
-   "posterSource": "custom",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/padamlagan-night-lihgt/",
-    "date": "2026-07-25"
-   },
-   "title_en": "Night Light",
-   "genre": "Drama",
-   "lbSlug": "night-light-2025"
-  },
-  {
-   "title": "Más allá",
-   "director": "Bettina López Mendoza",
-   "year": "2025",
-   "duration": "16 min",
-   "country": "Venezuela, Colombia, Estados Unidos, Canadá",
-   "section": "🪀 Cortometraje de Ficción Nacional",
-   "synopsis": "Después de haber sido separada de su madre mientras intentaban cruzar la selva entre Colombia y Panamá, una pequeña migrante venezolana se ve obligada a abandonar su infancia para sobrevivir. Zuli empieza a trabajar para un coyote que guía a migrantes dentro de la selva. En uno de sus viajes descubre un portal que la transporta a una tierra mágica donde se ve impulsada a reconectar con su inocencia y su imaginación, aprendiendo a ser una niña otra vez.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/pasta-negra.jpg",
-   "posterSource": "custom",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/pasta-negra/",
-    "date": "2026-07-25"
-   },
-   "lbSlug": "beyond-2025"
-  },
-  {
-   "title": "Pawa",
-   "director": "Marbel Ina Vanegas Jusayu",
-   "year": "2026",
-   "duration": "22 min",
-   "country": "Colombia",
-   "section": "🪀 Cortometraje de Ficción Nacional",
-   "synopsis": "En una tranquila mañana en una ranchería de La Guajira, Indira da de comer a los pavos y las gallinas. Ante la sequía y el inicio de clases, Josefa, abuela de Indira, emprende un viaje junto a su nieta por las comunidades aledañas con la esperanza de vender a Taata, el pavo más grande, para comprar útiles escolares y comida.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/pawa.jpg",
-   "posterSource": "custom",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/pawa/",
-    "date": "2026-07-25"
-   },
-   "lbSlug": "pawa"
-  },
-  {
-   "title": "Por una gota de leche",
-   "director": "Esteban J. Corzo",
-   "year": "2025",
-   "duration": "59 min",
-   "country": "Colombia",
-   "section": "🏘️ Cine Comunitario Nacional",
-   "synopsis": "En 1985, varios jóvenes militantes del M-19 robaron un camión de leche para repartirla entre la población más vulnerable del sur de Bogotá. Fueron asesinados por las fuerzas del Estado colombiano tras haberse rendido. Cuarenta años después, sus familias y la comunidad cuentan su historia.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/por-una-gota-de-leche.jpg",
-   "posterSource": "custom",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/por-una-gota-de-leche/",
-    "date": "2026-07-25"
-   }
-  },
-  {
-   "title": "La Cerrillana",
-   "director": "Andrea Urquiola",
-   "year": "2025",
-   "duration": "14 min",
-   "country": "Argentina",
-   "section": "🚲 Cortometraje de Ficción Internacional",
-   "synopsis": "Una mujer comprende la transición de su hijo acercándose a otro chico trans de su pueblo. En él ve un reflejo de lo que su hijo podría alcanzar si se sintiera validado y reconocido. Este termina siendo un puente para conectarse nuevamente con su familia y consigo misma.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/remember-us-recuerdanos.jpg",
-   "posterSource": "custom",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/remember-us-recuerdanos/",
-    "date": "2026-07-25"
-   },
-   "genre": "Drama",
-   "lbSlug": "cerrillana"
-  },
-  {
-   "title": "Republic of Amnesia",
-   "director": "Kannan Arunasalam",
-   "year": "2025",
-   "duration": "78 min",
-   "country": "Reino Unido, Sri Lanka",
-   "section": "🌍 Largometraje Documental Internacional",
-   "synopsis": "Republic of Amnesia sigue el ascenso y la caída del Aragalaya (“La Lucha”), el movimiento de protesta liderado por jóvenes que obligó al presidente autoritario de Sri Lanka, Gotabaya Rajapaksa, a huir del país en 2022. En el centro de la historia están jóvenes activistas como Melani, Buwanaka y Jeana, cuyo despertar político se desarrolla en tiempo real mientras organizan manifestaciones, enfrentan arrestos y desafían un sistema político construido para resistir el cambio.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/republic-of-amnesia.jpg",
-   "posterSource": "custom",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/republic-of-amnesia/",
-    "date": "2026-07-25"
-   }
-  },
-  {
-   "title": "Chaski Pacha",
-   "director": "Ramiro Fierro",
-   "year": "2025",
-   "duration": "22 min",
-   "country": "Colombia",
-   "section": "🪀 Cortometraje de Ficción Nacional",
-   "synopsis": "José, un muchacho indígena con discapacidad intelectual, se gana la vida como mandadero en la ciudad de Ipiales, en la frontera de Colombia y Ecuador. Casi todas las tardes recibe una pequeña maleta en el lado ecuatoriano y debe entregarla a otra persona en Colombia, sin saber lo que contiene. Sin embargo, una tarde, se desatan una serie de eventos que harán que José no cumpla la siguiente cita con la maleta, se choque con una nueva realidad y descubra que no todo es como su mente se lo pinta.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/salud-mutante.jpg",
-   "posterSource": "custom",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/salud-mutante/",
-    "date": "2026-07-25"
-   }
-  },
-  {
-   "title": "Sapos por todos lados",
-   "director": "Jacobo Alban, Carlos Zerpa, Beltrán Pérez",
-   "year": "2026",
-   "duration": "6 min",
-   "country": "Colombia, Francia, Venezuela",
-   "section": "🪀 Cortometraje de Ficción Nacional",
-   "synopsis": "Natalia no encuentra trabajo hasta que un antiguo profesor le ofrece la posibilidad de trabajar con exmiembros de la guerrilla. Esa nueva experiencia la confrontará directamente con sus prejuicios.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/sapos-por-todos-lados.jpg",
-   "posterSource": "custom",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/sapos-por-todos-lados/",
-    "date": "2026-07-25"
-   }
-  },
-  {
-   "title": "Más allá de la corona",
-   "director": "Juan David Mesa",
-   "year": "2025",
-   "duration": "14 min",
-   "country": "Colombia",
-   "section": "🎙️ Cortometraje Documental Nacional",
-   "synopsis": "Ángel debe responder tres preguntas y superar una serie de obstáculos antes de lograr su sueño: ser coronada Reina Trans de Palmira, Colombia.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/sed-el-flagelo-guajiro.jpg",
-   "posterSource": "custom",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/sed-el-flagelo-guajiro/",
-    "date": "2026-07-25"
-   }
-  },
-  {
-   "title": "Selva",
-   "director": "Esteban Hoyos García ,  Juan Miguel Gelacio",
-   "year": "2025",
-   "duration": "70 min",
-   "country": "Colombia",
-   "section": "☕ Largometraje de Ficción Nacional",
-   "synopsis": "Una bandada de flamencos ha estado sobrevolando Bogotá en los últimos días. Nadie sabe de dónde llegaron los pájaros, pero está claro que están perdidos. Julián también está perdido: lleva cinco años trabajando en un call center, viviendo en piloto automático y sintiendo un desarraigo total por la vida.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/selva.jpg",
-   "posterSource": "custom",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/selva/",
-    "date": "2026-07-25"
-   },
-   "genre": "Drama",
-   "lbSlug": "jungle-2025"
-  },
-  {
-   "title": "Semillas",
-   "director": "Eliana Niño",
-   "year": "2025",
-   "duration": "100 min",
-   "country": "Colombia, España",
-   "section": "🧳 Largometraje de Ficción",
-   "synopsis": "Shaira sueña con participar en un Torneo de Coleo, sin embargo, un día su caballo desaparece. En un atardecer llanero y en medio de una gran sequía, su abuelo le dice que en el verano el cielo atrapa a los animales y que ellos solo regresan hasta el día en que vuelva a llover en la tierra. Shaira encontrará la forma de hacer volver la lluvia para traer de vuelta a su caballo Semillas.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/semillas.jpg",
-   "posterSource": "custom",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/semillas/",
-    "date": "2026-07-25"
-   },
-   "genre": "Drama",
-   "lbSlug": "semillas"
-  },
-  {
-   "title": "Si La Escombrera hablara",
-   "director": "Juan Prado",
-   "year": "2025",
-   "duration": "30 min",
-   "country": "Colombia",
-   "section": "🎙️ Cortometraje Documental Nacional",
-   "synopsis": "En la comuna 13 de Medellín se encuentra la fosa urbana más grande de América Latina: La Escombrera. Las familias de las personas víctimas de desaparición forzada la señalan como el lugar donde están muchos de los 503 desaparecidos de este territorio. TRas dos décadas de negacionismo, la búsqueda forense liderada por el colectivo Mujeres Caminando por la Verdad desencadenó en 2024, el hallazgo de cuerpos. Este acontecimiento histórico envió un mensaje muy claro a toda Colombia: la tierra ha comenzado a hablar.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/si-la-escombrera-hablara.jpg",
-   "posterSource": "custom",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/si-la-escombrera-hablara/",
-    "date": "2026-07-25"
-   }
-  },
-  {
-   "title": "Silenciada",
-   "director": "Selina Miles",
-   "year": "2026",
-   "duration": "97 min",
-   "country": "Australia",
-   "section": "🌍 Largometraje Documental Internacional",
-   "synopsis": "Después de que el movimiento #MeToo rompiera el silencio cultural sobre la violencia de género, las supervivientes se vieron rápidamente enfrentadas a un nuevo tipo de silenciamiento y miedo, a medida que las leyes contra la difamación se convertían en un arma utilizada contra las mujeres por alzar la voz.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/silenciada-silenced.jpg",
-   "posterSource": "custom",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/silenciada-silenced/",
-    "date": "2026-07-25"
-   },
-   "title_en": "Silenced",
-   "genre": "Documental",
-   "lbSlug": "silenced-2026"
-  },
-  {
-   "title": "Soñé su nombre",
-   "director": "Ángela Carabalí",
-   "year": "2026",
-   "duration": "86 min",
-   "country": "Colombia",
-   "section": "🔍 Largometraje Documental Nacional",
-   "synopsis": "Después de 30 años negando su dolor, Ángela se enfrenta a su pasado cuando su padre se le aparece en un sueño y le pide que lo busque. Junto a su hermana Juliana, emprende un viaje por Colombia hasta los terriotiros indígenas donde su padre, un agricultor afrodescendiente, fue víctima de desaparición forzada.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/sone-su-nombre.jpg",
-   "posterSource": "custom",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/sone-su-nombre/",
-    "date": "2026-07-25"
-   },
-   "genre": "Documental",
-   "lbSlug": "i-dreamed-his-name"
-  },
-  {
-   "title": "Sukua",
-   "director": "Omar E. Ospina Giraldo",
-   "year": "2025",
-   "duration": "17 min",
-   "country": "Colombia",
-   "section": "🪀 Cortometraje de Ficción Nacional",
-   "synopsis": "Pirimín, un niño kogui, recibe una pistola de agua como regalo. Esa noche, escucha a su padre manifestar su inconformidad, al recordar que unas armas similares los obligaron a abandonar sus asentamientos. Ahora Pirimín no sabe qué hacer con el juguete.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/sukua.jpg",
-   "posterSource": "custom",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/sukua/",
-    "date": "2026-07-25"
-   },
-   "genre": "Ficción",
-   "_inherited": {
-    "genre": "ficmontanas-2026"
-   },
-   "lbSlug": "sukua"
-  },
-  {
-   "title": "Una torreta en llamas",
-   "director": "Humberto Flores Jáuregui",
-   "year": "2025",
-   "duration": "22 min",
-   "country": "México",
-   "section": "🚲 Cortometraje de Ficción Internacional",
-   "synopsis": "Después de un violento enfrentamiento, un soldado herido es rescatado por Yolanda, una campesina que vive en las montañas con su nieta Alejandra. Mientras Yolanda decide si debe ayudarlo, arriesgando sus vidas, Alejandra intentará acercarse a él para confirmar sus propias sospechas.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/the-steak-el-bistec.jpg",
-   "posterSource": "custom",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/the-steak-el-bistec/",
-    "date": "2026-07-25"
-   },
-   "genre": "Drama",
-   "lbSlug": "a-burning-turret"
-  },
-  {
-   "title": "Three black men",
-   "director": "Sienna McLean-LoGreco",
-   "year": "2026",
-   "duration": "99 min",
-   "country": "Estados Unidos",
-   "section": "🌍 Largometraje Documental Internacional",
-   "synopsis": "¿Puede un viaje hacia el pasado abrir nuevas posibilidades para la Negritud? Tres hombres negros recorren a la inversa la ruta transatlántica del comercio de esclavos, de Los Ángeles (California) a Salvador de Bahía (Brasil) y, finalmente, a Accra (Ghana). En este recorrido exploran aspectos fundamentales de la historia negra y las representaciones de la migración forzosa, la supervivencia y la desaparición de los millones de personas que cruzaron el Atlántico; y brazan la identidad negra como una fuente viva de conexión, creación y renovación.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/three-black-men-tres-hombres-negros.jpg",
-   "posterSource": "custom",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/three-black-men-tres-hombres-negros/",
-    "date": "2026-07-25"
-   },
-   "lbSlug": "three-black-men"
-  },
-  {
-   "title": "Tierra que habla",
-   "director": "Ana Fraile, Lucas Scavino",
-   "year": "2026",
-   "duration": "82 min",
-   "country": "Argentina",
-   "section": "🌍 Largometraje Documental Internacional",
-   "synopsis": "Tres universos, tres cosmogonías. Solón, del pueblo Kankuamo de Colombia; Ailín, una mujer mapuche de la Patagonia; y Luciano, un biotecnólogo argentino, se unen en esta historia sobre la recuperación de la tierra y la lucha permanente entre indígenas y usurpadores. A pesar de la distancia, kankuamos y mapuches son dos pueblos unidos por las mismas circunstancias. ¿Quién puede reparar la tierra? ¿Quién la usurpa? ¿Quién la escucha?",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/tierra-que-habla.jpg",
-   "posterSource": "custom",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/tierra-que-habla/",
-    "date": "2026-07-25"
-   }
-  },
-  {
-   "title": "Trenzando caminos de paz",
-   "director": "Soraya Hidalides Bayuelo Castellar",
-   "year": "2024",
-   "duration": "19 min",
-   "country": "Colombia",
-   "section": "🏘️ Cine Comunitario Nacional",
-   "synopsis": "Narra la lucha, resistencia y liderazgo de las mujeres indígenas Zenú en la defensa de sus derechos, su territorio y su cultura. A través de sus voces y memorias, el documental muestra su papel en la implementación del enfoque de género del Acuerdo de Paz y los avances logrados en participación política, preservación de su identidad cultural y fortalecimiento comunitario.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/trenzando-caminos-de-paz.jpg",
-   "posterSource": "custom",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/trenzando-caminos-de-paz/",
-    "date": "2026-07-25"
-   }
-  },
-  {
-   "title": "Tuktu, Padre Maíz",
-   "director": "Mauricio Prieto Muriel",
-   "year": "2025",
-   "duration": "14 min",
-   "country": "Colombia",
-   "section": "🪀 Cortometraje de Ficción Nacional",
-   "synopsis": "En las montañas de Colombia, Juan, un niño mestizo de 13 años, se ve obligado a huir del monstruo de la guerra. En su travesía, la tierra misma lo protege y, guiado por las voces de sus ancestros, despierta un poder ancestral llamado Tucuna, que le permite transformarse y renacer. Convertido en Tuktu, un Taita de fuerza extraordinaria, comprende que su destino no es solo sobrevivir, sino regresar para sanar la herida de la guerra y sembrar la paz en la tierra que lo vio nacer.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/tuktu-padre-maiz.jpg",
-   "posterSource": "custom",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/tuktu-padre-maiz/",
-    "date": "2026-07-25"
-   },
-   "genre": "Animación",
-   "_inherited": {
-    "genre": "ficmontanas-2026"
-   },
-   "lbSlug": "tuktu-father-maize"
-  },
-  {
-   "title": "Un nuevo amanecer",
-   "director": "Priscila Padilla",
-   "year": "2024",
-   "duration": "94 min",
-   "country": "Colombia, Bolivia, Francia",
-   "section": "🕊️ Retrospectiva 10 Años del Acuerdo de Paz",
-   "synopsis": "Un Nuevo Amanecer narra la historia de cinco mujeres cuyos destinos fueron marcados por la guerra desde la infancia. Una de ellas logró cambiar el rumbo de su vida y, años después, decide reencontrarse con quienes sí empuñaron las armas para reconstruir, junto a ellas, un relato de memoria, amistad, amor, sororidad y esperanza. Hoy, al mirar el pasado, sus voces demuestran que la guerra dejó de ser una alternativa y que otro futuro es posible.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/un-nuevo-amanecer.jpg",
-   "posterSource": "custom",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/un-nuevo-amanecer/",
-    "date": "2026-07-25"
-   },
-   "synopsis_en": "A documentary on five former women combatants who signed Colombia's peace accord, and what it meant to inhabit a woman's body through war and disarmament.",
-   "_inherited": {
-    "synopsis_en": "ficmontanas-2026",
-    "genre": "ficmontanas-2026"
-   },
-   "genre": "Documental",
-   "lbSlug": "a-new-dawn-2024"
-  },
-  {
-   "title": "Volver a creer",
-   "director": "Paola Díaz Gómez, Nicolás Cuéllar Gempeler, Eric Marti, Nayid Lorena Herran, Gustavo Cabezas, Ismail Pang, Mumit M, María Fernanda Pinilla",
-   "year": "2025",
-   "duration": "16 min",
-   "country": "Colombia, Kenia, Bangladesh",
-   "section": "🏘️ Cine Comunitario Nacional",
-   "synopsis": "Cortometraje documental que reúne a seis equipos de producción de Colombia, Kenia y Bangladés para contar una historia común: cómo el arte fortalece a las comunidades, las conecta más allá de sus fronteras y las impulsa a recuperar la esperanza. A través de imágenes íntimas y relatos entrelazados, el filme muestra cómo la creatividad transforma las heridas de cada territorio en resistencia, encuentro y una visión compartida de futuro.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/volver-a-creer.jpg",
-   "posterSource": "custom",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/volver-a-creer/",
-    "date": "2026-07-25"
-   }
-  },
-  {
-   "title": "XIE. Defensa de la vida",
-   "director": "Adriana Bernal-Mor, Paola Zuluaga",
-   "year": "2026",
-   "duration": "70 min",
-   "country": "Colombia",
-   "section": "🔍 Largometraje Documental Nacional",
-   "synopsis": "Desde 1977, mujeres campesinas tejedoras de las montañas de Cundinamarca resisten la explotación irregular de nacimientos de agua por industrias de bebidas y ultraprocesados. Mientras el agua se convierte en un negocio, las comunidades padecen sequías y el deterioro de sus ecosistemas. Ahora, frente a una nueva concesión para embotellar agua, se organizan para defender el territorio y exigir que el agua prevalezca como un derecho, no como una mercancía.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/xie-defensa-de-la-vida.jpg",
-   "posterSource": "custom",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/xie-defensa-de-la-vida/",
-    "date": "2026-07-25"
-   }
-  }
- ]
+  "_provenance": true,
+  "_etapa": "A-catalogo (SIN funciones — no publicar)",
+  "sections": {
+    "🕊️ Retrospectiva 10 Años del Acuerdo de Paz": {
+      "en": "10 Years of the Peace Agreement",
+      "archetype": "Retrospectiva / Tributo",
+      "order": 1
+    },
+    "🌍 Largometraje Documental Internacional": {
+      "en": "International Documentary Feature",
+      "archetype": "Competencia",
+      "order": 2
+    },
+    "🔍 Largometraje Documental Nacional": {
+      "en": "Colombian Documentary Feature",
+      "archetype": "Competencia",
+      "order": 3
+    },
+    "🧳 Largometraje de Ficción": {
+      "en": "International Fiction Feature",
+      "archetype": "Competencia",
+      "order": 4
+    },
+    "☕ Largometraje de Ficción Nacional": {
+      "en": "Colombian Fiction Feature",
+      "archetype": "Competencia",
+      "order": 5
+    },
+    "🎙️ Cortometraje Documental Nacional": {
+      "en": "Colombian Documentary Short",
+      "archetype": "Cortos / Programas",
+      "order": 6
+    },
+    "🪀 Cortometraje de Ficción Nacional": {
+      "en": "Colombian Fiction Short",
+      "archetype": "Cortos / Programas",
+      "order": 7
+    },
+    "🚲 Cortometraje de Ficción Internacional": {
+      "en": "International Fiction Short",
+      "archetype": "Cortos / Programas",
+      "order": 8
+    },
+    "🏘️ Cine Comunitario Nacional": {
+      "en": "Community Cinema",
+      "archetype": "Perspectivas / Miradas",
+      "order": 9
+    }
+  },
+  "films": [
+    {
+      "title": "1982",
+      "director": "Garcia JC",
+      "year": "2025",
+      "duration": "84 min",
+      "country": "Perú",
+      "section": "🧳 Largometraje de Ficción",
+      "synopsis": "En un pueblo andino del Perú, en 1982, Tato, un niño de 12 años, se ve forzado al exilio cuando su familia es amenazada.",
+      "synopsis_lang": "es",
+      "poster": "/assets/ficdeh/1982.jpg",
+      "posterSource": "custom",
+      "_src": {
+        "url": "https://www.ficdeh.com/produccion/1982/",
+        "date": "2026-07-25"
+      },
+      "lbSlug": "1982-2025",
+      "genre": "Drama"
+    },
+    {
+      "title": "58th",
+      "director": "Carl Joseph Papa",
+      "year": "2026",
+      "duration": "86 min",
+      "country": "Filipinas",
+      "section": "🌍 Largometraje Documental Internacional",
+      "synopsis": "A pesar del dolor y el trauma que ha soportado, una hija persigue incansablemente la justicia para su padre, que sigue desaparecido y es considerado la víctima número 58 de la Masacre de Maguindanao, el ataque más mortífero contra periodistas en la historia.",
+      "synopsis_lang": "es",
+      "poster": "/assets/ficdeh/58th.jpg",
+      "posterSource": "custom",
+      "_src": {
+        "url": "https://www.ficdeh.com/produccion/58th/",
+        "date": "2026-07-25"
+      },
+      "lbSlug": "58th",
+      "genre": "Animación, Drama"
+    },
+    {
+      "title": "Amalgama",
+      "director": "Alejandra Wills",
+      "year": "2019",
+      "duration": "13 min",
+      "country": "Colombia",
+      "section": "🕊️ Retrospectiva 10 Años del Acuerdo de Paz",
+      "synopsis": "Alcira y Henry son víctimas del conflicto armado rural en Colombia. Con una profunda tristeza que los une, pasar tiempo juntos es una lucha irritante y dolorosa. Aún así, lo hacen para apaciguar su dolor. Alcira necesita perdonarlo. Henry necesita su perdón.",
+      "synopsis_lang": "es",
+      "poster": "/assets/ficdeh/amalgama.jpg",
+      "posterSource": "custom",
+      "_src": {
+        "url": "https://www.ficdeh.com/produccion/amalgama/",
+        "date": "2026-07-25"
+      },
+      "lbSlug": "amalgama-1"
+    },
+    {
+      "title": "American Doctor",
+      "director": "Poh Si Teng",
+      "year": "2026",
+      "duration": "93 min",
+      "country": "Estados Unidos, Palestina, Qatar, Malasia, Dinamarca",
+      "section": "🌍 Largometraje Documental Internacional",
+      "synopsis": "Cuando tres médicos estadounidenses —un palestino, un judío y un zoroastriano— entran en Gaza para salvar vidas, se ven atrapados entre la medicina y la política, arriesgándolo todo para sacar a la luz la verdad.",
+      "synopsis_lang": "es",
+      "poster": "/assets/ficdeh/american-doctor-medico-estadounidense.jpg",
+      "posterSource": "custom",
+      "_src": {
+        "url": "https://www.ficdeh.com/produccion/american-doctor-medico-estadounidense/",
+        "date": "2026-07-25"
+      },
+      "genre": "Documental",
+      "lbSlug": "american-doctor"
+    },
+    {
+      "title": "Aminetu",
+      "director": "Lucía Muñoz Lucena",
+      "year": "2026",
+      "duration": "92 min",
+      "country": "España",
+      "section": "🌍 Largometraje Documental Internacional",
+      "synopsis": "En 2009, Aminetu Haidar inició en Lanzarote una huelga de hambre de 32 días tras ser expulsada del Sáhara Occidental. Su exigencia de volver a casa desencadenó una crisis diplomática sin precedentes entre España y Marruecos que situó su lucha en el centro de la atención internacional.",
+      "synopsis_lang": "es",
+      "poster": "/assets/ficdeh/aminetu.jpg",
+      "posterSource": "custom",
+      "_src": {
+        "url": "https://www.ficdeh.com/produccion/aminetu/",
+        "date": "2026-07-25"
+      }
+    },
+    {
+      "title": "Amor rebelde",
+      "director": "Alejandro Bernal",
+      "year": "2021",
+      "duration": "77 min",
+      "country": "Colombia, Canadá, Brasil",
+      "section": "🕊️ Retrospectiva 10 Años del Acuerdo de Paz",
+      "synopsis": "Dos excombatientes de las FARC luchan por mantener viva su relación y construir una familia durante su tránsito a la vida civil. A lo largo de cinco años, el documental acompaña su proceso de reintegración mientras enfrentan los desafíos personales y sociales que deja el conflicto armado colombiano.",
+      "synopsis_lang": "es",
+      "poster": "/assets/ficdeh/amor-rebelde.jpg",
+      "posterSource": "custom",
+      "_src": {
+        "url": "https://www.ficdeh.com/produccion/amor-rebelde/",
+        "date": "2026-07-25"
+      },
+      "genre": "Documental",
+      "lbSlug": "rebel-love-2021"
+    },
+    {
+      "title": "Andariega",
+      "director": "Raúl Soto",
+      "year": "2025",
+      "duration": "94 min",
+      "country": "Colombia",
+      "section": "🔍 Largometraje Documental Nacional",
+      "synopsis": "Cada año, Chena, de 26 años, se une a la diáspora de campesinos andariegos que se movilizan por Colombia recogiendo las cosechas de café. Viajar y trabajar son la base de su autonomía. En su equipaje carga un cuaderno escolar donde escribe reflexiones sobre su pasado y la vida que afronta como mujer y madre sosteniendo a los lejos un hogar lleno de dificultades y escasez. A pesar de su juventud, su cuerpo se está debilitando, poniendo en entredicho su propia idea de libertad.",
+      "synopsis_lang": "es",
+      "poster": "/assets/ficdeh/andariega.jpg",
+      "posterSource": "custom",
+      "_src": {
+        "url": "https://www.ficdeh.com/produccion/andariega/",
+        "date": "2026-07-25"
+      },
+      "synopsis_en": "Every year, 26-year-old Chena walks hundreds of kilometers to work as a day laborer on Colombian crops. Eight years in, she has saved nothing. Her body and her will are all she has.",
+      "_inherited": {
+        "synopsis_en": "cinemancia-2025",
+        "genre": "cinemancia-2025",
+        "title_en": "cinemancia-2025"
+      },
+      "genre": "Drama",
+      "title_en": "Andariega",
+      "lbSlug": "nomad-spirit"
+    },
+    {
+      "title": "Apolo",
+      "director": "Tainá Müller, Ísis Broken",
+      "year": "2025",
+      "duration": "83 min",
+      "country": "Brasil",
+      "section": "🌍 Largometraje Documental Internacional",
+      "synopsis": "Tras concebir de forma natural a su hijo durante la pandemia de COVID-19, Isis y Lourenzo emprenden un viaje por Brasil en busca de algo poco común: una atención prenatal respetuosa y especializada. Al mismo tiempo, continúan su lucha diaria, dentro y fuera de su hogar, por los derechos de su familia en el país con la tasa más alta de asesinatos de personas trans en el mundo.",
+      "synopsis_lang": "es",
+      "poster": "/assets/ficdeh/apolo.jpg",
+      "posterSource": "custom",
+      "_src": {
+        "url": "https://www.ficdeh.com/produccion/apolo/",
+        "date": "2026-07-25"
+      },
+      "genre": "Documental, Drama",
+      "lbSlug": "apolo-2025"
+    },
+    {
+      "title": "Aquí no entra luz",
+      "director": "Karol Maia",
+      "year": "2025",
+      "duration": "79 min",
+      "country": "Brasil",
+      "section": "🌍 Largometraje Documental Internacional",
+      "synopsis": "Entre recuerdos personales e investigación histórica emerge una imagen de la vida de las trabajadoras domésticas en Brasil, incluida la de la madre de la cineasta y otras mujeres que se enfrentan a este legado. La película revela cómo los espacios de vida fueron diseñados deliberadamente para segregar cuerpos y perpetuar jerarquías. Hoy, más de 6 millones de personas trabajan como empleadas domésticas en Brasil.",
+      "synopsis_lang": "es",
+      "poster": "/assets/ficdeh/aqui-no-entra-luz.jpg",
+      "posterSource": "custom",
+      "_src": {
+        "url": "https://www.ficdeh.com/produccion/aqui-no-entra-luz/",
+        "date": "2026-07-25"
+      },
+      "genre": "Documental",
+      "lbSlug": "no-sunshine-in-here"
+    },
+    {
+      "title": "Bajo fuego",
+      "director": "Sjoerd van Grootheest, Irene Vélez Torres",
+      "year": "2020",
+      "duration": "84 min",
+      "country": "Colombia",
+      "section": "🕊️ Retrospectiva 10 Años del Acuerdo de Paz",
+      "synopsis": "Aunque un Acuerdo de Paz fue firmado en Colombia en el año 2016, los cocaleros que buscan la paz en el Norte del Cauca terminan viviendo una nueva ola de violencia. Filmado a lo largo de tres años, Bajo fuego es el retrato de campesinos que afrontan una compleja encrucijada: un gobierno que demora en cumplir lo que prometió, una economía familiar en crisis por la sustitución de la coca, un Estado que reprime la movilización y amenazas de muerte por parte de nuevos actores armados.",
+      "synopsis_lang": "es",
+      "poster": "/assets/ficdeh/bajo-fuego.jpg",
+      "posterSource": "custom",
+      "_src": {
+        "url": "https://www.ficdeh.com/produccion/bajo-fuego/",
+        "date": "2026-07-25"
+      },
+      "genre": "Documental",
+      "lbSlug": "under-fire-2020"
+    },
+    {
+      "title": "Cayenas libertarias",
+      "director": "Javier Camilo Aranguren Montañez",
+      "year": "2025",
+      "duration": "20 min",
+      "country": "Colombia",
+      "section": "🎙️ Cortometraje Documental Nacional",
+      "synopsis": "En las llanuras de Colombia, un grupo de mujeres conserva y reinterpreta los lecos, o cantos de trabajo del llano, que durante generaciones fueron interpretados por hombres. A través de sus cantos de vaquería, resignifican su lugar en la tradición llanera, revelando su relación armónica con la naturaleza y su compleja conexión con el arraigo llanero.",
+      "synopsis_lang": "es",
+      "poster": "/assets/ficdeh/bogota-underground-hip-hop.jpg",
+      "posterSource": "custom",
+      "_src": {
+        "url": "https://www.ficdeh.com/produccion/bogota-underground-hip-hop/",
+        "date": "2026-07-25"
+      },
+      "lbSlug": "cayenas-libertarias"
+    },
+    {
+      "title": "Bojayá, la verdad desde adentro",
+      "director": "Ramón Alexander Valencia Córdoba",
+      "year": "2026",
+      "duration": "105 min",
+      "country": "Colombia",
+      "section": "🔍 Largometraje Documental Nacional",
+      "synopsis": "Tres líderes de Bojayá recorren el municipio llevando el baúl de la verdad, recogiendo cuestionamientos y exigencias de la comunidad para enfrentar a los responsables del conflicto armado en su territorio. Después de su recorrido, comparten con la comunidad las respuestas encontradas y juntos construyen una verdad desde adentro.",
+      "synopsis_lang": "es",
+      "poster": "/assets/ficdeh/bojaya-la-verdad-desde-adentro.jpg",
+      "posterSource": "custom",
+      "_src": {
+        "url": "https://www.ficdeh.com/produccion/bojaya-la-verdad-desde-adentro/",
+        "date": "2026-07-25"
+      },
+      "lbSlug": "bojaya-la-verdad-desde-adentro"
+    },
+    {
+      "title": "Carmela y los caminantes",
+      "director": "Esteban Coloma, Luis Herrera",
+      "year": "2025",
+      "duration": "92 min",
+      "country": "Ecuador",
+      "section": "🌍 Largometraje Documental Internacional",
+      "synopsis": "Cerca de la frontera entre Ecuador y Colombia, Carmela, una mujer afroecuatoriana, abre su casa a miles de migrantes venezolanos que cruzan Sudamérica a pie buscando una vida mejor. Durante años, ha sostenido este trabajo junto a su familia, a pesar de los escasos recursos. Con una mirada íntima y observacional, la película explora la migración, la familia y la resiliencia desde el corazón de una mujer que lo da todo.",
+      "synopsis_lang": "es",
+      "poster": "/assets/ficdeh/carmela-y-los-caminantes.jpg",
+      "posterSource": "custom",
+      "_src": {
+        "url": "https://www.ficdeh.com/produccion/carmela-y-los-caminantes/",
+        "date": "2026-07-25"
+      },
+      "genre": "Documental",
+      "lbSlug": "carmela-and-the-walkers"
+    },
+    {
+      "title": "Cartas a la tierra",
+      "director": "Erika David",
+      "year": "2025",
+      "duration": "11 min",
+      "country": "Colombia",
+      "section": "🎙️ Cortometraje Documental Nacional",
+      "synopsis": "Una mujer campesina, que ha dedicado su vida a preservar el territorio mediante la agroecología, huye de su hogar por la llegada de grupos armados y encuentra refugio en Usme, el corazón rural de Bogotá. A través de cartas a mujeres de la zona, comparte su visión sobre la importancia de la tierra y el agua para sostener la vida. Este documental recorre la ruralidad Usmeña, mientras las palabras de la protagonista resuenan como un llamado a preservar el medio ambiente.",
+      "synopsis_lang": "es",
+      "poster": "/assets/ficdeh/cartas-a-la-tierra.jpg",
+      "posterSource": "custom",
+      "_src": {
+        "url": "https://www.ficdeh.com/produccion/cartas-a-la-tierra/",
+        "date": "2026-07-25"
+      },
+      "lbSlug": "cartas-a-la-tierra"
+    },
+    {
+      "title": "Celeste",
+      "director": "Clemen Villamizar Acosta",
+      "year": "2025",
+      "duration": "15 min",
+      "country": "México",
+      "section": "🚲 Cortometraje de Ficción Internacional",
+      "synopsis": "Celeste desaparece una noche de la casa de trata infantil donde vive. Su hermana la busca hasta meterse en problemas. Mientras se involucra en una conspiración de otra de las chicas para acabar con su captor, se da cuenta que Celeste no volverá.",
+      "synopsis_lang": "es",
+      "poster": "/assets/ficdeh/celeste.jpg",
+      "posterSource": "custom",
+      "_src": {
+        "url": "https://www.ficdeh.com/produccion/celeste/",
+        "date": "2026-07-25"
+      },
+      "lbSlug": "celeste-2"
+    },
+    {
+      "title": "Clemencia",
+      "director": "Juliana Echeverry",
+      "year": "2026",
+      "duration": "17 min",
+      "country": "Colombia",
+      "section": "🎙️ Cortometraje Documental Nacional",
+      "synopsis": "En la vereda La Esmeralda, en Acacías (Meta), la vida campesina ha estado marcada por una transformación profunda desde la llegada de la industria petrolera. A través de la voz y la cotidianidad de Clemencia Díaz, este documental recorre la historia de un territorio que alguna vez fue abundante en agua, y hoy enfrenta su escasez y contaminación.",
+      "synopsis_lang": "es",
+      "poster": "/assets/ficdeh/clemencia.jpg",
+      "posterSource": "custom",
+      "_src": {
+        "url": "https://www.ficdeh.com/produccion/clemencia/",
+        "date": "2026-07-25"
+      },
+      "lbSlug": "clemencia-1"
+    },
+    {
+      "title": "Cobija de recuerdos",
+      "director": "Jacobo Albán, Carlos Zerpa, Beltrán Pérez",
+      "year": "2023",
+      "duration": "5 min",
+      "country": "Colombia, Venezuela, Francia",
+      "section": "🕊️ Retrospectiva 10 Años del Acuerdo de Paz",
+      "synopsis": "Kevin es un niño que vive con Marta, una campesina, y de vez en cuando visita a su madre Fabiola, una guerrillera. Hasta que los paramilitares antiguerrilleros irrumpen en el pueblo, matan a Marta y le obligan a desplazarse y a buscar el verdadero significado de la familia.",
+      "synopsis_lang": "es",
+      "poster": "/assets/ficdeh/cobija-de-recuerdos.jpg",
+      "posterSource": "custom",
+      "_src": {
+        "url": "https://www.ficdeh.com/produccion/cobija-de-recuerdos/",
+        "date": "2026-07-25"
+      },
+      "genre": "Animación",
+      "lbSlug": "un-pedrazo-de-paz-cobija-de-recuerdos"
+    },
+    {
+      "title": "Todos los días",
+      "director": "David Rendón Peláez",
+      "year": "2024",
+      "duration": "15 min",
+      "country": "Colombia",
+      "section": "🪀 Cortometraje de Ficción Nacional",
+      "synopsis": "Ramiro es despedido del trabajo al que perteneció gran parte de su vida. En medio de su nueva y solitaria libertad conoce a tres desocupados como él, que se reúnen para matar el tiempo y hacerse compañía mientras fantasean con vengarse de sus antiguos empleadores y buscan, un pequeño triunfo a la vez, ser felices. Cada día, todos los días.",
+      "synopsis_lang": "es",
+      "poster": "/assets/ficdeh/color-piel.jpg",
+      "posterSource": "custom",
+      "_src": {
+        "url": "https://www.ficdeh.com/produccion/color-piel/",
+        "date": "2026-07-25"
+      },
+      "lbSlug": "todos-los-dias"
+    },
+    {
+      "title": "Cuando la palabra se hace búsqueda",
+      "director": "Frank Benítez Peña",
+      "year": "2026",
+      "duration": "61 min",
+      "country": "Colombia",
+      "section": "🔍 Largometraje Documental Nacional",
+      "synopsis": "En Colombia, la búsqueda de personas desaparecidas ha abierto caminos inesperados de encuentro entre quienes sufren su ausencia y quienes guardan información clave sobre su paradero. Este largometraje revela el papel fundamental de los aportantes de información, en las voces de quienes participaron directa e indirectamente en las hostilidades y que, desde el compromiso, han decidido sumarse al proceso humanitario de la búsqueda liderado por la Unidad de Búsqueda de Personas dadas por Desaparecidas.",
+      "synopsis_lang": "es",
+      "poster": "/assets/ficdeh/cuando-la-palabra-se-hace-busqueda.jpg",
+      "posterSource": "custom",
+      "_src": {
+        "url": "https://www.ficdeh.com/produccion/cuando-la-palabra-se-hace-busqueda/",
+        "date": "2026-07-25"
+      },
+      "synopsis_en": "A documentary on the search for the disappeared: the voices of those who search and the echo of an absence that lingers.",
+      "_inherited": {
+        "synopsis_en": "ficmontanas-2026",
+        "genre": "ficmontanas-2026"
+      },
+      "genre": "Documental",
+      "lbSlug": "cuando-la-palabra-se-hace-busqueda"
+    },
+    {
+      "title": "Cuando un río se convierte en mar",
+      "director": "Pere Vilà Barceló",
+      "year": "2026",
+      "duration": "180 min",
+      "country": "España",
+      "section": "🧳 Largometraje de Ficción",
+      "synopsis": "Tras sufrir una agresión sexual, Gaia debe convivir con el vacío, la confusión y las heridas invisibles que alteran su relación con el mundo y consigo misma. A través de su amistad con una profesora de arqueología y el apoyo de su padre, descubre cómo el trauma reconfigura su vida y a las personas que la rodean.",
+      "synopsis_lang": "es",
+      "poster": "/assets/ficdeh/cuando-un-rio-se-convierte-en-mar.jpg",
+      "posterSource": "custom",
+      "_src": {
+        "url": "https://www.ficdeh.com/produccion/cuando-un-rio-se-convierte-en-mar/",
+        "date": "2026-07-25"
+      },
+      "lbSlug": "when-a-river-becomes-the-sea",
+      "title_en": "When a River Becomes the Sea"
+    },
+    {
+      "title": "Defendamos la vida",
+      "director": "César Augusto Acevedo",
+      "year": "2026",
+      "duration": "90 min",
+      "country": "Colombia",
+      "section": "☕ Largometraje de Ficción Nacional",
+      "synopsis": "“Defendamos la vida” narra la resistencia del pueblo nasa en el norte del Cauca, que, frente a la violencia armada y el abandono estatal, reafirma su compromiso con la paz y la defensa del territorio. A través de la Guardia Indígena y sus mayores, el documental recoge memorias, siembra dignidad y alza una voz colectiva por la vida, los derechos humanos y la justicia en Colombia.",
+      "synopsis_lang": "es",
+      "poster": "/assets/ficdeh/defendamos-la-vida.jpg",
+      "posterSource": "custom",
+      "_src": {
+        "url": "https://www.ficdeh.com/produccion/defendamos-la-vida/",
+        "date": "2026-07-25"
+      },
+      "lbSlug": "defendamos-la-vida"
+    },
+    {
+      "title": "Del otro lado",
+      "director": "Iván Guarnizo",
+      "year": "2021",
+      "duration": "86 min",
+      "country": "Colombia, España",
+      "section": "🕊️ Retrospectiva 10 Años del Acuerdo de Paz",
+      "synopsis": "Después de los acuerdos de paz, la guerra entre las FARC y el Estado parecía haber terminado, pero la situación dista mucho de ser estable. Iván y su hermano empiezan a investigar el secuestro de su madre, ocurrido años atrás. Al encontrar el diario que escribió durante su cautiverio, descubren una relación casi materno-filial que tuvo con su captor. Ahora que la mayoría de guerrilleros han entregado sus armas, deciden buscarlo y tal vez hablar de ese tiempo oscuro en sus vidas.",
+      "synopsis_lang": "es",
+      "poster": "/assets/ficdeh/del-otro-lado.jpg",
+      "posterSource": "custom",
+      "_src": {
+        "url": "https://www.ficdeh.com/produccion/del-otro-lado/",
+        "date": "2026-07-25"
+      },
+      "genre": "Documental",
+      "lbSlug": "on-the-other-side-2021-1"
+    },
+    {
+      "title": "Desierto verde",
+      "director": "Meliza Luna Venegas",
+      "year": "2025",
+      "duration": "70 min",
+      "country": "Chile",
+      "section": "🌍 Largometraje Documental Internacional",
+      "synopsis": "¿Cómo puede sobrevivir el linaje de una curandera sin un bosque? La cineasta recorre los caminos de su infancia en busca de las mujeres de su familia y de las flores que una vez brotaron en las montañas. Pero ahora, interminables hileras de pinos cubren la tierra, extraños, sedientos y a la espera de arder de nuevo.",
+      "synopsis_lang": "es",
+      "poster": "/assets/ficdeh/desierto-verde.jpg",
+      "posterSource": "custom",
+      "_src": {
+        "url": "https://www.ficdeh.com/produccion/desierto-verde/",
+        "date": "2026-07-25"
+      },
+      "genre": "Documental",
+      "lbSlug": "green-desert"
+    },
+    {
+      "title": "Después del frío",
+      "director": "María Jimena Duzán",
+      "year": "2022",
+      "duration": "84 min",
+      "country": "Colombia",
+      "section": "🕊️ Retrospectiva 10 Años del Acuerdo de Paz",
+      "synopsis": "En 2016, Colombia firmó un histórico acuerdo de paz con las FARC, marcando el fin de una guerra de 60 años. ‘Después del frío’ narra las historias de tres personas: un ganadero uribista que fue secuestrado, un coronel implicado en ‘falsos positivos’ y un líder social de Siloé, en Cali. A través de entrevistas cercanas y humanas, este documental revela los desafíos y las pequeñas victorias en el camino hacia la reconciliación y la justicia en un país aún marcado por la sombra del conflicto.",
+      "synopsis_lang": "es",
+      "poster": "/assets/ficdeh/despues-del-frio.jpg",
+      "posterSource": "custom",
+      "_src": {
+        "url": "https://www.ficdeh.com/produccion/despues-del-frio/",
+        "date": "2026-07-25"
+      },
+      "genre": "Documental",
+      "lbSlug": "despues-del-frio"
+    },
+    {
+      "title": "El bosque",
+      "director": "Suneesh Vadakkumbadan",
+      "year": "",
+      "duration": "81 min",
+      "country": "India",
+      "section": "🧳 Largometraje de Ficción",
+      "synopsis": "Película simbólica en malayalam que explora el vínculo entre los seres humanos y la naturaleza. Ambientada en Kerala, refleja el desplazamiento de comunidades indígenas causado por la minería. La historia sigue a Chaman, un curandero tribal profundamente conectado con el bosque, y a su nieto Thaman. Cuando el nido de pájaros que protegen es destruido por la lluvia, se refleja la fragilidad de la vida. A medida que la minería obliga a la reubicación, Chaman se niega a marcharse. Su desaparición en el bosque y el nacimiento de dos polluelos reafirman el ciclo vital de la naturaleza.",
+      "synopsis_lang": "es",
+      "poster": "/assets/ficdeh/el-bosque.jpg",
+      "posterSource": "custom",
+      "_src": {
+        "url": "https://www.ficdeh.com/produccion/el-bosque/",
+        "date": "2026-07-25"
+      },
+      "lbSlug": "the-forest-3"
+    },
+    {
+      "title": "El hogar fue sepultado en esa tierra que nunca pudimos encontrar",
+      "director": "Deimer Quintero Vertel",
+      "year": "2026",
+      "duration": "92 min",
+      "country": "Colombia",
+      "section": "🔍 Largometraje Documental Nacional",
+      "synopsis": "El hogar ha desaparecido; la casa fue paraíso, pero también infierno. Aunque la guerra intentó destruirlo todo a su paso, la familia intenta volver. Entre anhelos y pesadillas crean un nuevo territorio, un refugio donde se reencuentran con sus amigos y su comunidad. Allí logran volver a la casa grande, el parque de diversiones de la infancia, ahora habitado por seres fantásticos y espectros, en donde buscan conjurar un abrazo.",
+      "synopsis_lang": "es",
+      "poster": "/assets/ficdeh/el-hogar-fue-sepultado-en-esa-tierra-que-nunca-pudimos-encontrar.jpg",
+      "posterSource": "custom",
+      "_src": {
+        "url": "https://www.ficdeh.com/produccion/el-hogar-fue-sepultado-en-esa-tierra-que-nunca-pudimos-encontrar/",
+        "date": "2026-07-25"
+      },
+      "lbSlug": "our-home-was-buried-in-a-land-we-could-never",
+      "title_en": "Our Home Was Buried in a Land We Could Never Find"
+    },
+    {
+      "title": "El juego de la vida",
+      "director": "Mario Andrés Ruiz Zuluaga",
+      "year": "2026",
+      "duration": "95 min",
+      "country": "Colombia",
+      "section": "🔍 Largometraje Documental Nacional",
+      "synopsis": "Un documentalista sigue durante 14 años a cinco familias colombianas que enfrentan las desigualdades de un país donde el origen influye en las oportunidades. A través de sus decisiones, frustraciones, resiliencia y logros, revela que, aunque las reglas no son iguales para todos, la voluntad de transformar el propio destino persiste. El juego de la vida es un retrato íntimo sobre la movilidad social, la dignidad y la esperanza en Colombia.",
+      "synopsis_lang": "es",
+      "poster": "/assets/ficdeh/el-juego-de-la-vida.jpg",
+      "posterSource": "custom",
+      "_src": {
+        "url": "https://www.ficdeh.com/produccion/el-juego-de-la-vida/",
+        "date": "2026-07-25"
+      },
+      "genre": "Documental",
+      "lbSlug": "the-game-of-life-2025"
+    },
+    {
+      "title": "El Paraíso de Ainara",
+      "director": "Esther Niemeier, Laura Espinel",
+      "year": "2025",
+      "duration": "14 min",
+      "country": "Colombia",
+      "section": "🎙️ Cortometraje Documental Nacional",
+      "synopsis": "En el colorido barrio El Paraíso de Bogotá, la curiosa Ainara, de 10 años, crece en Violetta, una biblioteca comunitaria fundada por su familia para les niñes del barrio. Un segundo hogar para aprender y jugar mientras los padres y las madres trabajan largas jornadas. A través del juego, el teatro y las manualidades, Ainara y sus amigues descubren la fuerza de la comunidad. El corto celebra la solidaridad y una buena dosis de girl power, mostrando cómo del cuidado colectivo pueden nacer pequeños paraísos.",
+      "synopsis_lang": "es",
+      "poster": "/assets/ficdeh/el-paraiso-de-ainara.jpg",
+      "posterSource": "custom",
+      "_src": {
+        "url": "https://www.ficdeh.com/produccion/el-paraiso-de-ainara/",
+        "date": "2026-07-25"
+      },
+      "lbSlug": "el-paraiso-de-ainara"
+    },
+    {
+      "title": "Shelter",
+      "director": "Maarten Sleegers, Anna Sherstiuk",
+      "year": "2024",
+      "duration": "15 min",
+      "country": "Países Bajos",
+      "section": "🚲 Cortometraje de Ficción Internacional",
+      "synopsis": "Nikita, un niño ucraniano de 10 años se mudó a los Países Bajos con su madre. A diferencia de ella, a Nikita no le gusta vivir allí. La gente habla un idioma extranjero y él no logra hacer nuevos amigos. En secreto, idea un plan para regresar en bicicleta a Kiev. El único problema es que no sabe montar en bicicleta. Para aprender, necesitará la ayuda de uno de sus compañeros de clase neerlandeses.",
+      "synopsis_lang": "es",
+      "poster": "/assets/ficdeh/el-puente-de-los-suspiros.jpg",
+      "posterSource": "custom",
+      "_src": {
+        "url": "https://www.ficdeh.com/produccion/el-puente-de-los-suspiros/",
+        "date": "2026-07-25"
+      },
+      "lbSlug": "onderdak",
+      "title_en": "Shelter"
+    },
+    {
+      "title": "El silencio de la tierra",
+      "director": "Frank Gutiérrez",
+      "year": "2026",
+      "duration": "77 min",
+      "country": "España, Francia, Bélgica",
+      "section": "🌍 Largometraje Documental Internacional",
+      "synopsis": "Berta Cáceres, Paulo Paulino Guajajara y Aldo Zamora dieron la vida por defender la tierra. Estos activistas ambientales fueron brutalmente asesinados en América Latina por enfrentarse a los intereses de grandes corporaciones multinacionales y sus aliados locales. ¿Quién está detrás de estos crímenes y por qué gozan de impunidad casi total? ¿Qué consecuencias tiene esta violencia para el planeta y el futuro de la humanidad?",
+      "synopsis_lang": "es",
+      "poster": "/assets/ficdeh/el-silencio-de-la-tierra.jpg",
+      "posterSource": "custom",
+      "_src": {
+        "url": "https://www.ficdeh.com/produccion/el-silencio-de-la-tierra/",
+        "date": "2026-07-25"
+      },
+      "genre": "Documental, Drama",
+      "lbSlug": "le-silence-de-la-terre"
+    },
+    {
+      "title": "El silencio de los palafitos",
+      "director": "Yull Núñez",
+      "year": "2024",
+      "duration": "73 min",
+      "country": "Colombia, México",
+      "section": "🧳 Largometraje de Ficción",
+      "synopsis": "Abrumado por no obtener suficientes ingresos debido a un desastre ambiental en el pueblo palafito donde vive, Elías, un joven pescador que posee una gaita heredada de su padre, pierde la cordura al fracasar en sus intentos de revivir los peces muertos de la ciénaga, aferrándose a los recuerdos de su esposa Margot, desaparecida a manos de los insurgentes. Pero el poder de la música y su tenacidad devolverán la esperanza al lugar.",
+      "synopsis_lang": "es",
+      "poster": "/assets/ficdeh/el-silencio-de-los-palafitos.jpg",
+      "posterSource": "custom",
+      "_src": {
+        "url": "https://www.ficdeh.com/produccion/el-silencio-de-los-palafitos/",
+        "date": "2026-07-25"
+      },
+      "genre": "Drama",
+      "lbSlug": "el-silencio-de-los-palafitos"
+    },
+    {
+      "title": "El valor de la palabra",
+      "director": "Marta Rodríguez, Fernando Restrepo",
+      "year": "2026",
+      "duration": "79 min",
+      "country": "Colombia",
+      "section": "🔍 Largometraje Documental Nacional",
+      "synopsis": "La historia de Ángel María Torres y Napoleón Torres, líderes arhuacos de la Sierra Nevada de Santa Marta, asesinados por el ejército en 1990. A través de archivos y testimonios íntimos, el documental retrata el vacío que dejaron en sus familias y comunidad, mientras revela la cosmovisión arhuaca, donde el territorio es un ser vivo y la palabra un vínculo esencial. Más que narrar una tragedia, la película es un acto de resistencia y memoria frente a la violencia colonial persistente.",
+      "synopsis_lang": "es",
+      "poster": "/assets/ficdeh/el-valor-de-la-palabra.jpg",
+      "posterSource": "custom",
+      "_src": {
+        "url": "https://www.ficdeh.com/produccion/el-valor-de-la-palabra/",
+        "date": "2026-07-25"
+      },
+      "synopsis_en": "The long career of Colombian filmmaker Marta Rodríguez demonstrates a commitment to documenting the history of repression and struggle of indigenous and marginalized peoples.",
+      "_inherited": {
+        "synopsis_en": "ficci-65",
+        "title_en": "ficci-65"
+      },
+      "title_en": "The Value of Speech",
+      "lbSlug": "el-valor-de-la-palabra"
+    },
+    {
+      "title": "El verano de Jahia",
+      "director": "Olivier Meys",
+      "year": "2025",
+      "duration": "90 min",
+      "country": "Bélgica, Francia, Luxemburgo",
+      "section": "🧳 Largometraje de Ficción",
+      "synopsis": "En un centro de acogida belga, Jahia lleva una vida tranquila y reservada junto a su madre traumatizada. Todo cambia con la llegada de la vivaz Mila. Atraídas la una por la otra, las dos jóvenes forjan un vínculo frágil que aporta calidez y resiliencia a un entorno marcado por el miedo y la incertidumbre. Jahia empieza a cocinar para consolar a su madre, mientras Mila se enfrenta al inminente veredicto que decidirá su solicitud de asilo. Su amistad se convierte en un refugio, un espacio donde la esperanza puede respirar a pesar de las sombras del exilio.",
+      "synopsis_lang": "es",
+      "poster": "/assets/ficdeh/el-verano-de-jahia-jahias-summer.jpg",
+      "posterSource": "custom",
+      "_src": {
+        "url": "https://www.ficdeh.com/produccion/el-verano-de-jahia-jahias-summer/",
+        "date": "2026-07-25"
+      },
+      "title_en": "Jahia's Summer",
+      "genre": "Drama",
+      "lbSlug": "jahias-summer"
+    },
+    {
+      "title": "Espeletia BK: Frailejón desarticulado",
+      "director": "Raúl Antonio Estupiñan Pinto",
+      "year": "2019",
+      "duration": "12 min",
+      "country": "Colombia",
+      "section": "🕊️ Retrospectiva 10 Años del Acuerdo de Paz",
+      "synopsis": "Raúl Estupiñan, recorre nuevamente el Páramo de Sumapaz en donde patrulló y combatió los momentos más cruentos de la guerra colombiana. Espeletia BK ofrece una reflexión sobre las repercusiones de la guerra en los cuerpos y en el ecosistema.",
+      "synopsis_lang": "es",
+      "poster": "/assets/ficdeh/espeletia-bk-frailejon-desarticulado.jpg",
+      "posterSource": "custom",
+      "_src": {
+        "url": "https://www.ficdeh.com/produccion/espeletia-bk-frailejon-desarticulado/",
+        "date": "2026-07-25"
+      },
+      "lbSlug": "espeletia-bk-frailejon-desarticulado"
+    },
+    {
+      "title": "Estamos en el mapa",
+      "director": "Santiago Rodríguez Cárdenas",
+      "year": "2024",
+      "duration": "10 min",
+      "country": "Colombia",
+      "section": "🪀 Cortometraje de Ficción Nacional",
+      "synopsis": "¿Qué significa estar en el mapa? Los habitantes del barrio “La Estrella», en la localidad de Ciudad Bolívar de Bogotá, se reúnen en torno a unas onces para compartir y recordar sus historias alrededor de la construcción y consolidación del barrio.",
+      "synopsis_lang": "es",
+      "poster": "/assets/ficdeh/estamos-en-el-mapa.jpg",
+      "posterSource": "custom",
+      "_src": {
+        "url": "https://www.ficdeh.com/produccion/estamos-en-el-mapa/",
+        "date": "2026-07-25"
+      },
+      "genre": "Documental",
+      "lbSlug": "we-are-on-the-map"
+    },
+    {
+      "title": "Eva",
+      "director": "William Reyes",
+      "year": "2026",
+      "duration": "90 min",
+      "country": "Colombia, Honduras",
+      "section": "🧳 Largometraje de Ficción",
+      "synopsis": "Eva, una mujer trans, se hace cargo de su nieta tras la repentina muerte de su nuera. Mientras lidia con el duelo, intenta ayudar a su hijo a conectar emocionalmente con la bebé. Entre tensiones, reproches y silencios, madre e hijo emprenden un camino hacia la comprensión mutua y la reconstrucción de su vínculo familiar.",
+      "synopsis_lang": "es",
+      "poster": "/assets/ficdeh/eva.jpg",
+      "posterSource": "custom",
+      "_src": {
+        "url": "https://www.ficdeh.com/produccion/eva/",
+        "date": "2026-07-25"
+      },
+      "lbSlug": "eva-2025"
+    },
+    {
+      "title": "Feito Pipa",
+      "director": "Allan Deberton",
+      "year": "2026",
+      "duration": "93 min",
+      "country": "Brasil",
+      "section": "🧳 Largometraje de Ficción",
+      "synopsis": "Gugu es un niño soñador y apasionado por el fútbol que vive con su abuela Dilma, una profesora jubilada que lo cría de manera libre y afectuosa. Por el contrario, la relación del niño con su padre, Batista, es difícil, marcada por ausencias, expectativas y afectos no expresados. Abuela y nieto viven solos junto a la represa de Araújo Lima que, después de años de sequía, comienza a revelar las ruinas de una antigua ciudad sumergida, sacando a la luz recuerdos que cambiaron la vida de la familia.",
+      "synopsis_lang": "es",
+      "poster": "/assets/ficdeh/feito-pipa.jpg",
+      "posterSource": "custom",
+      "_src": {
+        "url": "https://www.ficdeh.com/produccion/feito-pipa/",
+        "date": "2026-07-25"
+      },
+      "synopsis_en": "Twelve-year-old Gugu grows up in a small community on the banks of the Araújo-Lima reservoir, whose waters are slowly receding to reveal the ruins of a submerged town. He lives with his grandmother Dilma, surrounded by tenderness, mischief, and afternoons of football.",
+      "_inherited": {
+        "synopsis_en": "ficci-65",
+        "title_en": "ficci-65"
+      },
+      "title_en": "Gugu's World",
+      "genre": "Drama",
+      "lbSlug": "gugus-world"
+    },
+    {
+      "title": "Floresmiro",
+      "director": "John Agudelo Suárez",
+      "year": "2025",
+      "duration": "101 min",
+      "country": "Colombia",
+      "section": "🔍 Largometraje Documental Nacional",
+      "synopsis": "En San Vicente de Chucurí, el padre Floro impulsa una planta de frutas para evitar las pérdidas causadas por la guerra. También recordamos a Floresmiro López, un sacerdote que arriesgó su vida defendiendo campesinos durante el conflicto armado. Con amor y firmeza moral, enfrentó las armas y dejó un legado de organización comunitaria clave en la región.",
+      "synopsis_lang": "es",
+      "poster": "/assets/ficdeh/floresmiro.jpg",
+      "posterSource": "custom",
+      "_src": {
+        "url": "https://www.ficdeh.com/produccion/floresmiro/",
+        "date": "2026-07-25"
+      },
+      "lbSlug": "floresmiro"
+    },
+    {
+      "title": "Apotnojushi La Casa del viento",
+      "director": "Marbel Vanegas Jusayu",
+      "year": "2026",
+      "duration": "12 min",
+      "country": "Colombia",
+      "section": "🎙️ Cortometraje Documental Nacional",
+      "synopsis": "Ana Rosa Jusayu (mi madre), lideresa ancestral de la comunidad Apotnojushi ubicada en cercanias del cerro de la teta en la alta Guajira colombiana, trata de recuperar el tejido y la unión familiar que se vieron alterados por el “desarrollo sostenible” invasivo. En medio de las pocas esperanzas de sobrevivir en lo desolado de su territorio ancestral, la familia comparte su añoranza de permanecer allí, enfrentándose a las dificultades y los cambios económicos que afectan al pueblo wayuu.",
+      "synopsis_lang": "es",
+      "poster": "/assets/ficdeh/guerreras.jpg",
+      "posterSource": "custom",
+      "_src": {
+        "url": "https://www.ficdeh.com/produccion/guerreras/",
+        "date": "2026-07-25"
+      },
+      "lbSlug": "the-house-of-the-wind-2026"
+    },
+    {
+      "title": "Herencia: Los cantos de la tierra",
+      "director": "Iván Acosta Rojas",
+      "year": "2026",
+      "duration": "82 min",
+      "country": "Colombia",
+      "section": "🔍 Largometraje Documental Nacional",
+      "synopsis": "La música campesina ha transmitido durante generaciones las historias, costumbres y afectos de las comunidades rurales del interior colombiano. A través de coplas, ritmos e instrumentos tradicionales, jóvenes y mayores mantienen viva una herencia cultural nacida de la tierra, el trabajo y las fusiones musicales que dieron identidad a toda una región.",
+      "synopsis_lang": "es",
+      "poster": "/assets/ficdeh/herencia-los-cantos-de-la-tierra.jpg",
+      "posterSource": "custom",
+      "_src": {
+        "url": "https://www.ficdeh.com/produccion/herencia-los-cantos-de-la-tierra/",
+        "date": "2026-07-25"
+      },
+      "synopsis_en": "A documentary celebrating peasant 'carranguera' music —voices, stories and instruments like the requinto, tiple and guacharaca— as the root of rural Colombian identity.",
+      "_inherited": {
+        "synopsis_en": "ficmontanas-2026",
+        "genre": "ficmontanas-2026"
+      },
+      "genre": "Documental",
+      "lbSlug": "herencia-los-cantos-de-la-tierra"
+    },
+    {
+      "title": "Akababuru: Expresión de asombro",
+      "director": "Irati Dojura Landa Yagarí",
+      "year": "2025",
+      "duration": "13 min",
+      "country": "Colombia",
+      "section": "🪀 Cortometraje de Ficción Nacional",
+      "synopsis": "Kari es una niña indígena emberá que teme reír. Un día conoce a Kera, una joven mestiza, quien decide contarle el mito de Kiraparamia, una mujer que, según los ancianos, fue castigada por los dioses por reírse de su esposo. Kera reinterpreta el mito y le dice que, en realidad, la risa de Kiraparamia la liberó. Esta historia inspira profundamente a la pequeña Kari, quien decide confrontar a los niños que la oprimen a ella y a sus amigas mediante la risa.",
+      "synopsis_lang": "es",
+      "poster": "/assets/ficdeh/herminda.jpg",
+      "posterSource": "custom",
+      "_src": {
+        "url": "https://www.ficdeh.com/produccion/herminda/",
+        "date": "2026-07-25"
+      },
+      "title_en": "Akababuru: Expression of Astonishment",
+      "_inherited": {
+        "title_en": "aff-2026"
+      },
+      "genre": "Fantasía",
+      "lbSlug": "akababuru-expresion-de-asombro"
+    },
+    {
+      "title": "Héroes del silencio",
+      "director": "Atikeinis Durán Izquierdo",
+      "year": "2026",
+      "duration": "13 min",
+      "country": "Colombia",
+      "section": "🏘️ Cine Comunitario Nacional",
+      "synopsis": "Cortometraje rodado por los niños y niñas de la comunidad indígena de Morotrwa, en la Sierra Nevada de Gonawindua. A través de sus propias fotografías y vídeos, documentan sus vidas y su territorio, eligiendo libremente qué mostrar.",
+      "synopsis_lang": "es",
+      "poster": "/assets/ficdeh/heroes-del-silencio.jpg",
+      "posterSource": "custom",
+      "_src": {
+        "url": "https://www.ficdeh.com/produccion/heroes-del-silencio/",
+        "date": "2026-07-25"
+      },
+      "lbSlug": "heroes-del-silencio"
+    },
+    {
+      "title": "Hija del volcán",
+      "director": "Jenifer de la Rosa",
+      "year": "2026",
+      "duration": "109 min",
+      "country": "España, México",
+      "section": "🔍 Largometraje Documental Nacional",
+      "synopsis": "Adoptada en España tras la tragedia de Armero, Jenifer ha vivido treinta años con una pregunta que nunca ha dejado de perseguirla: ¿quién era su madre? La única pista que tiene sobre su origen la lleva de regreso a Colombia, al lugar donde la erupción del volcán Nevado del Ruiz sepultó un pueblo entero y cambió miles de vidas para siempre.",
+      "synopsis_lang": "es",
+      "poster": "/assets/ficdeh/hija-del-volcan.jpg",
+      "posterSource": "custom",
+      "_src": {
+        "url": "https://www.ficdeh.com/produccion/hija-del-volcan/",
+        "date": "2026-07-25"
+      },
+      "genre": "Documental",
+      "lbSlug": "daughter-of-the-volcano"
+    },
+    {
+      "title": "Honorablé",
+      "director": "Rhadem Musawah, Francis Tanglao-Aguas",
+      "year": "2026",
+      "duration": "72 min",
+      "country": "Filipinas",
+      "section": "🌍 Largometraje Documental Internacional",
+      "synopsis": "En Filipinas, donde la creciente visibilidad LGBTQ+ contrasta con la persistencia de profundas desigualdades, dos mujeres trans se postulan a cargos públicos y desafían las lógicas del poder político. A través de sus campañas, el filme explora las tensiones entre representación, exclusión y sacrificio personal, mientras cuestiona quién puede ocupar espacios de liderazgo y ser reconocido como “honorable”.",
+      "synopsis_lang": "es",
+      "poster": "/assets/ficdeh/honorable.jpg",
+      "posterSource": "custom",
+      "_src": {
+        "url": "https://www.ficdeh.com/produccion/honorable/",
+        "date": "2026-07-25"
+      },
+      "genre": "Documental",
+      "lbSlug": "honorable-2026"
+    },
+    {
+      "title": "Indiamenta",
+      "director": "Carlos Nieto",
+      "year": "2026",
+      "duration": "25 min",
+      "country": "Colombia",
+      "section": "🪀 Cortometraje de Ficción Nacional",
+      "synopsis": "Dailyn quiere cambiar el mundo. En el camino, aprende que la lucha es constante, que la perseverancia da sus frutos, que los errores se convierten en oportunidades y que el verdadero valor de la vida reside en las personas con las que la construimos.",
+      "synopsis_lang": "es",
+      "poster": "/assets/ficdeh/indiamenta.jpg",
+      "posterSource": "custom",
+      "_src": {
+        "url": "https://www.ficdeh.com/produccion/indiamenta/",
+        "date": "2026-07-25"
+      },
+      "lbSlug": "indiamenta"
+    },
+    {
+      "title": "Juntas por la paz del Chocó",
+      "director": "Andrés Estefan",
+      "year": "2024",
+      "duration": "18 min",
+      "country": "Colombia",
+      "section": "🏘️ Cine Comunitario Nacional",
+      "synopsis": "¿Cómo avanza la implementación del Acuerdo de Paz entre el Gobierno Nacional y las FARC-EP? ¿Cómo han mejorado las condiciones de vida de las mujeres gracias a los compromisos de género establecidos en el Acuerdo? En 2023, en el corazón del Chocó, se creó el Comité Local de Monitoreo, un grupo de 15 lideresas defensoras de derechosn humanos que trabajan para convertir las promesas del Acuerdo en realidades tangibles para las mujeres de Bahía Solano, El Carmen de Atrato, Istmina, Medio San Juan y Quibdó.",
+      "synopsis_lang": "es",
+      "poster": "/assets/ficdeh/juntas-por-la-paz-del-choco.jpg",
+      "posterSource": "custom",
+      "_src": {
+        "url": "https://www.ficdeh.com/produccion/juntas-por-la-paz-del-choco/",
+        "date": "2026-07-25"
+      },
+      "lbSlug": "juntas-por-la-paz-del-choco"
+    },
+    {
+      "title": "Kaugsankamalla: mientras vivamos",
+      "director": "Soraida Chindoy, Karoline Pelikan",
+      "year": "2026",
+      "duration": "61 min",
+      "country": "Colombia, Perú",
+      "section": "🔍 Largometraje Documental Nacional",
+      "synopsis": "«Si yo ya no puedo luchar, ¿lo harás tú?» Seguimos de cerca la vida y la lucha de Soraida Chindoy, una mujer Inga que defiende las montañas sagradas de su comunidad en Putumayo frente a una empresa minera canadiense. A través de la voz y las imágenes de Soraida, enraizadas en su profunda conexión con la Alpa Mama, la película nos muestra una lucha urgente: no solo por la supervivencia de una comunidad, sino por el futuro mismo del planeta que todos y todas compartimos.",
+      "synopsis_lang": "es",
+      "poster": "/assets/ficdeh/kaugsankamalla-mientras-vivamos.jpg",
+      "posterSource": "custom",
+      "_src": {
+        "url": "https://www.ficdeh.com/produccion/kaugsankamalla-mientras-vivamos/",
+        "date": "2026-07-25"
+      },
+      "lbSlug": "kaugsankamalla-mientras-vivamos"
+    },
+    {
+      "title": "La Bonga",
+      "director": "Sebastián Pinzón Silva y Canela Reyes",
+      "year": "2023",
+      "duration": "77 min",
+      "country": "Colombia, Estados Unidos",
+      "section": "🕊️ Retrospectiva 10 Años del Acuerdo de Paz",
+      "synopsis": "Hace 20 años, el pueblo palenquero de La Bonga recibió una amenaza firmada por paramilitares. Esa misma noche, 120 familias salieron para nunca volver. Hoy, La Bonga ha sido devorada por la selva, y toda una generación solo conoce su pueblo a través de historias. María ha sido la única persona que ha regresado a vivir allá. Muchos creen que está loca y que pone en riesgo su vida. Después de dos décadas, María lidera a más de 300 personas durante el primer retorno colectivo a La Bonga, para llevar a cabo una enorme celebración. La película teje el viaje colectivo con el viaje solitario de María y su nieta, un año después de la fiesta, en el que María intenta inculcar en ella el amor por su tierra ancestral. La Bonga es un viaje simbólico por las selvas del Caribe colombiano para resucitar un lugar que sólo existe en la memoria, un ritual de despedida de un pueblo que fue y que no volverá. En un acto de resistencia, esta fiesta suelta lo perdido, lo deja ir, mientras celebra su memoria y su comunidad.",
+      "synopsis_lang": "es",
+      "poster": "/assets/ficdeh/la-bonga.jpg",
+      "posterSource": "custom",
+      "_src": {
+        "url": "https://www.ficdeh.com/produccion/la-bonga/",
+        "date": "2026-07-25"
+      },
+      "genre": "Documental",
+      "lbSlug": "la-bonga"
+    },
+    {
+      "title": "La gran hazaña",
+      "director": "Luber Yesid Zúñiga Ordóñez",
+      "year": "2025",
+      "duration": "15 min",
+      "country": "Colombia",
+      "section": "🪀 Cortometraje de Ficción Nacional",
+      "synopsis": "A Pablo le encanta jugar al trompo. Cuando Don Chucho, el usurero del pueblo, retiene a Pascualina, su amiga y mascota, Pablo debe enfrentarse a Felipe, el mejor jugador de trompo de la región, para rescatarla. Pero ganar no es suficiente: los demás niños del pueblo se unirán a él en un acto de solidaridad, amistad y trabajo en equipo para lograr esta gran hazaña.",
+      "synopsis_lang": "es",
+      "poster": "/assets/ficdeh/la-gran-hazana.jpg",
+      "posterSource": "custom",
+      "_src": {
+        "url": "https://www.ficdeh.com/produccion/la-gran-hazana/",
+        "date": "2026-07-25"
+      },
+      "genre": "Ficción",
+      "_inherited": {
+        "genre": "ficmontanas-2026"
+      },
+      "lbSlug": "the-great-feat"
+    },
+    {
+      "title": "La hija cóndor",
+      "director": "Álvaro Olmos Torrico",
+      "year": "2025",
+      "duration": "109 min",
+      "country": "Bolivia, Perú, Uruguay",
+      "section": "🧳 Largometraje de Ficción",
+      "synopsis": "Clara es una adolescente que vive en una comunidad indígena en los Andes. Su madre adoptiva, una partera que la acogió cuando era bebé, le ha enseñado los antiguos cantos para guiar a las mujeres en el parto. Melodías transmitidas de generación en generación y, que se cree, ayudan a traer nueva vida al mundo de manera segura. Pero, aunque su voz continúa con la tradición, sus sueños están en otro lugar: anhela dejar las montañas y convertirse en una estrella de música folclórica en la gran ciudad.",
+      "synopsis_lang": "es",
+      "poster": "/assets/ficdeh/la-hija-condor.jpg",
+      "posterSource": "custom",
+      "_src": {
+        "url": "https://www.ficdeh.com/produccion/la-hija-condor/",
+        "date": "2026-07-25"
+      },
+      "synopsis_en": "Clara, a teenager in an Andean indigenous community, learns she was adopted from a sacred condor. As her eighteenth birthday approaches, she must choose between the human world she knows and the one she came from.",
+      "_inherited": {
+        "synopsis_en": "aff-2026",
+        "genre": "aff-2026",
+        "title_en": "aff-2026"
+      },
+      "genre": "Drama",
+      "title_en": "The Condor Daughter",
+      "lbSlug": "the-condor-daughter"
+    },
+    {
+      "title": "La independencia",
+      "director": "John Agudelo Suárez",
+      "year": "2025",
+      "duration": "20 min",
+      "country": "Colombia",
+      "section": "🪀 Cortometraje de Ficción Nacional",
+      "synopsis": "Cecilia, una mujer abnegada de 52 años, decide romper con su vida de sacrificios tras años de soportar la irresponsabilidad de su hijo y la ingratitud de su familia, buscando finalmente su independencia.",
+      "synopsis_lang": "es",
+      "poster": "/assets/ficdeh/la-independencia.jpg",
+      "posterSource": "custom",
+      "_src": {
+        "url": "https://www.ficdeh.com/produccion/la-independencia/",
+        "date": "2026-07-25"
+      },
+      "genre": "Drama",
+      "lbSlug": "independence-2025"
+    },
+    {
+      "title": "La luz por primera vez",
+      "director": "Ibeth Rey Jerez, Frank Rodríguez",
+      "year": "2026",
+      "duration": "78 min",
+      "country": "Colombia, España",
+      "section": "🔍 Largometraje Documental Nacional",
+      "synopsis": "Natalia Pinilla, fotógrafa y activista, emprende un viaje que cruza Santander, Norte de Santander y España para descubrir la obra de Amalia Ramírez, una mujer olvidada que, a comienzos del siglo XX, capturó una de las imágenes más impactantes de la historia colombiana: la pirámide de calaveras de Palonegro, símbolo brutal de la Guerra de los Mil Días. Más de un siglo después, esa fotografía resurge y posiciona a Amalia como, quizás, la primera mujer fotógrafa de Colombia.",
+      "synopsis_lang": "es",
+      "poster": "/assets/ficdeh/la-luz-por-primera-vez.jpg",
+      "posterSource": "custom",
+      "_src": {
+        "url": "https://www.ficdeh.com/produccion/la-luz-por-primera-vez/",
+        "date": "2026-07-25"
+      },
+      "genre": "Documental",
+      "lbSlug": "la-luz-por-primera-vez"
+    },
+    {
+      "title": "La luz que nos queda",
+      "director": "Gloria Isabel Gómez Ceballos",
+      "year": "2017",
+      "duration": "7 min",
+      "country": "Colombia",
+      "section": "🕊️ Retrospectiva 10 Años del Acuerdo de Paz",
+      "synopsis": "Es el dos de octubre, un día histórico para Colombia. Aunque se firmaron los acuerdos con las FARC, Luz no se atreve a mostrar su rostro pues todavía existe el grupo armado ELN. A través de sus textos, ella presenta a generaciones más jóvenes su pasado mientras se comienza a escribir el futuro de la Paz.",
+      "synopsis_lang": "es",
+      "poster": "/assets/ficdeh/la-luz-que-nos-queda.jpg",
+      "posterSource": "custom",
+      "_src": {
+        "url": "https://www.ficdeh.com/produccion/la-luz-que-nos-queda/",
+        "date": "2026-07-25"
+      },
+      "lbSlug": "la-luz-que-nos-queda"
+    },
+    {
+      "title": "La Raya",
+      "director": "Yolanda Cruz",
+      "year": "2025",
+      "duration": "80 min",
+      "country": "México",
+      "section": "🧳 Largometraje de Ficción",
+      "synopsis": "La llegada de un refrigerador cambia la vida en La Raya, un pueblo abandonado en la sierra sur de Oaxaca. Sotera y su amigo Erick intentan venderlo y hacer negocio. Sin embargo, el refrigerador pronto empieza a revelar cosas misteriosas a la gente que se le acerca.",
+      "synopsis_lang": "es",
+      "poster": "/assets/ficdeh/la-raya.jpg",
+      "posterSource": "custom",
+      "_src": {
+        "url": "https://www.ficdeh.com/produccion/la-raya/",
+        "date": "2026-07-25"
+      },
+      "genre": "Drama, Misterio",
+      "lbSlug": "town-of-la-raya"
+    },
+    {
+      "title": "Los bibliotecarios",
+      "director": "Kim Snyder",
+      "year": "2025",
+      "duration": "91 min",
+      "country": "Reino Unido",
+      "section": "🌍 Largometraje Documental Internacional",
+      "synopsis": "En el Estados Unidos actual, la polarización política pone a los bibliotecarios en la mira, en medio de una ola sin precedentes de prohibición de libros que se ha desatado en Texas, Florida y otros lugares. A medida que la crisis se intensifica, ellos unen sus fuerzas como defensores inesperados en la primera línea de la democracia.",
+      "synopsis_lang": "es",
+      "poster": "/assets/ficdeh/los-bibliotecarios-the-librarians.jpg",
+      "posterSource": "custom",
+      "_src": {
+        "url": "https://www.ficdeh.com/produccion/los-bibliotecarios-the-librarians/",
+        "date": "2026-07-25"
+      },
+      "title_en": "The Librarians",
+      "lbSlug": "the-librarians-2025"
+    },
+    {
+      "title": "Los de abajo",
+      "director": "Alejandro Quiroga",
+      "year": "2024",
+      "duration": "83 min",
+      "country": "Bolivia, Colombia, Brasil, Argentina",
+      "section": "☕ Largometraje de Ficción Nacional",
+      "synopsis": "Gregorio es un campesino que vive frustrado en su pueblo Rosillas. Él soberbio y arrojado se propone recuperar para su familia las aguas de la vieja acequia que fueron desviadas por el Coronel Iglesias quien es un terrateniente argentino vecino, aliado en complot con el alcalde del pueblo para sus propios cultivos de vid. En su trayecto, Gregorio tiene que afrontar la desidia comunal, la corrupción y al poder socioeconómico de la élite.",
+      "synopsis_lang": "es",
+      "poster": "/assets/ficdeh/los-de-abajo.jpg",
+      "posterSource": "custom",
+      "_src": {
+        "url": "https://www.ficdeh.com/produccion/los-de-abajo/",
+        "date": "2026-07-25"
+      },
+      "genre": "Drama",
+      "lbSlug": "the-ones-from-below"
+    },
+    {
+      "title": "Los pliegues de la falda",
+      "director": "Blanca Muñoz Avila",
+      "year": "2025",
+      "duration": "18 min",
+      "country": "Colombia",
+      "section": "🪀 Cortometraje de Ficción Nacional",
+      "synopsis": "Linda quiere ser la protagonista de la obra de teatro del colegio; pero, cuando Carlos descubre el rol “masculino” que su hija interpretará, intenta impedirlo. Conmovida por la tristeza de su hija, María decide ayudarla, aunque eso signifique nadar a contracorriente.",
+      "synopsis_lang": "es",
+      "poster": "/assets/ficdeh/los-pliegues-de-la-falda.jpg",
+      "posterSource": "custom",
+      "_src": {
+        "url": "https://www.ficdeh.com/produccion/los-pliegues-de-la-falda/",
+        "date": "2026-07-25"
+      },
+      "lbSlug": "los-pliegues-de-la-falda"
+    },
+    {
+      "title": "Los reyes del mundo",
+      "director": "Laura Mora",
+      "year": "2022",
+      "duration": "104 min",
+      "country": "Colombia, Luxemburgo, México, Francia, Noruega",
+      "section": "🕊️ Retrospectiva 10 Años del Acuerdo de Paz",
+      "synopsis": "Rá (19), Culebro (16), Sere (14), Winny (12) Nano (13) cinco chicos de la calle de Medellín. Cinco reyes sin reino. En sus manos tienen unas viejas escrituras de una tierra heredada por Rá. Tras recibir una carta de la oficina de restitución de tierras del gobierno, notificando la devolución de los terrenos que le fueron arrebatados a su abuela, Rá decidirá emprender el viaje con sus amigos con la promesa de por fin cumplir un sueño: tener un lugar en el mundo donde ser libres, donde estar a salvo, donde construir su propio reino.",
+      "synopsis_lang": "es",
+      "poster": "/assets/ficdeh/los-reyes-del-mundo.jpg",
+      "posterSource": "custom",
+      "_src": {
+        "url": "https://www.ficdeh.com/produccion/los-reyes-del-mundo/",
+        "date": "2026-07-25"
+      },
+      "genre": "Drama, Aventura",
+      "lbSlug": "kings-of-the-world"
+    },
+    {
+      "title": "Madres de nacimiento",
+      "director": "Gloria Isabel Gómez Ceballos",
+      "year": "2026",
+      "duration": "8 min",
+      "country": "Colombia",
+      "section": "🎙️ Cortometraje Documental Nacional",
+      "synopsis": "Del olvido y la oscuridad hay imágenes y sonidos que resurgen para controlar los cuerpos de las mujeres latinoamericanas, quienes desde niñas han sido consideradas madres de nacimiento. Pero en estos archivos emerge una interferencia que proviene del pasado para evocar un mensaje de lucha, memoria y libertad.",
+      "synopsis_lang": "es",
+      "poster": "/assets/ficdeh/madres-de-nacimiento.jpg",
+      "posterSource": "custom",
+      "_src": {
+        "url": "https://www.ficdeh.com/produccion/madres-de-nacimiento/",
+        "date": "2026-07-25"
+      },
+      "genre": "Documental",
+      "_inherited": {
+        "genre": "ficmontanas-2026"
+      },
+      "lbSlug": "madres-de-nacimiento"
+    },
+    {
+      "title": "Y el río lloró",
+      "director": "Zumaya Mayers C., Rodrigo Cuervo J.",
+      "year": "2024",
+      "duration": "26 min",
+      "country": "Colombia",
+      "section": "🎙️ Cortometraje Documental Nacional",
+      "synopsis": "En el corazón del Pacífico colombiano, Manuel Cruz y su esposa Angy luchan por sanar las heridas de su comunidad, devastada por el conflicto armado. Lo hacen preservando sus tradiciones ancestrales y honrando la memoria de las víctimas, mientras el río, testigo silencioso, fluye como símbolo de resistencia y esperanza.",
+      "synopsis_lang": "es",
+      "poster": "/assets/ficdeh/mohanas-resistencias-memoria-y-paz.jpg",
+      "posterSource": "custom",
+      "_src": {
+        "url": "https://www.ficdeh.com/produccion/mohanas-resistencias-memoria-y-paz/",
+        "date": "2026-07-25"
+      },
+      "lbSlug": "y-el-rio-lloro"
+    },
+    {
+      "title": "In four stops",
+      "director": "Elizaveta Khlomova",
+      "year": "2026",
+      "duration": "19 min",
+      "country": "Rusia",
+      "section": "🚲 Cortometraje de Ficción Internacional",
+      "synopsis": "Dos días en la vida de Max, un niño sordo con una imaginación desbordante en medio de una dura realidad.",
+      "synopsis_lang": "es",
+      "poster": "/assets/ficdeh/mother-love-amor-de-madre.jpg",
+      "posterSource": "custom",
+      "_src": {
+        "url": "https://www.ficdeh.com/produccion/mother-love-amor-de-madre/",
+        "date": "2026-07-25"
+      },
+      "lbSlug": "film:1510138",
+      "title_en": "In Four Stops"
+    },
+    {
+      "title": "Muerto no",
+      "director": "Alex Reis",
+      "year": "2025",
+      "duration": "15 min",
+      "country": "Brasil",
+      "section": "🚲 Cortometraje de Ficción Internacional",
+      "synopsis": "El nacimiento del primer hijo de una joven pareja negra trae consigo felicidad, pero también agonía. El padre del recién nacido vive y expresa sus dilemas ante la llegada, la convivencia y la partida de su querido primogénito.",
+      "synopsis_lang": "es",
+      "poster": "/assets/ficdeh/muerto-no.jpg",
+      "posterSource": "custom",
+      "_src": {
+        "url": "https://www.ficdeh.com/produccion/muerto-no/",
+        "date": "2026-07-25"
+      },
+      "lbSlug": "not-dead-2025",
+      "title_en": "Not Dead"
+    },
+    {
+      "title": "Mujeres modernas",
+      "director": "Hugo Santa Cruz",
+      "year": "2025",
+      "duration": "69 min",
+      "country": "Reino Unido",
+      "section": "🧳 Largometraje de Ficción",
+      "synopsis": "Lily regresa a su piso compartido después de pasar varias semanas en un hospital psiquiátrico. Ruth es una poetisa callejera sin techo. Mónica es una madre soltera que vive en un hotel. Sus historias se entrelazan enrevesadamente en esta sátira pop sobre la crisis de la vivienda en Londres.",
+      "synopsis_lang": "es",
+      "poster": "/assets/ficdeh/mujeres-modernas.jpg",
+      "posterSource": "custom",
+      "_src": {
+        "url": "https://www.ficdeh.com/produccion/mujeres-modernas/",
+        "date": "2026-07-25"
+      },
+      "lbSlug": "modern-women",
+      "title_en": "Modern Women"
+    },
+    {
+      "title": "My grandmother is a skydiver",
+      "director": "Polina Piddubna",
+      "year": "2025",
+      "duration": "13 min",
+      "country": "Alemania",
+      "section": "🚲 Cortometraje de Ficción Internacional",
+      "synopsis": "Alfyia, una joven llena de vida en Tayikistán en los años sesenta, practica paracaidismo y estudia para convertirse en comadrona, cuando recibe una llamada extraordinaria de su nieta en el año 2022. Ante la invasión de Ucrania, la nieta de Alfyia está profundamente preocupada por la seguridad de su abuela. En esta conversación intergeneracional que trasciende el tiempo y el espacio, la nieta intenta replantearse la memoria familiar y romper el ciclo interminable del trauma colectivo.",
+      "synopsis_lang": "es",
+      "poster": "/assets/ficdeh/my-grandmother-is-a-skydiver.jpg",
+      "posterSource": "custom",
+      "_src": {
+        "url": "https://www.ficdeh.com/produccion/my-grandmother-is-a-skydiver/",
+        "date": "2026-07-25"
+      },
+      "genre": "Animación, Documental",
+      "lbSlug": "my-grandmother-is-a-skydiver"
+    },
+    {
+      "title": "Niñxs",
+      "director": "Kani Lapuerta",
+      "year": "2025",
+      "duration": "86 min",
+      "country": "México, Alemania",
+      "section": "🌍 Largometraje Documental Internacional",
+      "synopsis": "Al pie del Tepozteco, una colina sagrada que rige los vientos y la fertilidad, se encuentra el pequeño pueblo de Tepoztlán. En este contexto, el cuerpo y la mente de Karla, de quince años, atraviesan una profunda transformación. Mientras Karla transita su proceso de transición, Kani da forma a ocho años de grabaciones, en una película conmovedora en la que ambas afrontan las vicisitudes de la adolescencia trans en el ámbito rural.",
+      "synopsis_lang": "es",
+      "poster": "/assets/ficdeh/ninxs.jpg",
+      "posterSource": "custom",
+      "_src": {
+        "url": "https://www.ficdeh.com/produccion/ninxs/",
+        "date": "2026-07-25"
+      },
+      "genre": "Documental",
+      "lbSlug": "ninxs"
+    },
+    {
+      "title": "Notas sobre un destierro",
+      "director": "Gustavo Castro",
+      "year": "2025",
+      "duration": "80 min",
+      "country": "Brasil",
+      "section": "🌍 Largometraje Documental Internacional",
+      "synopsis": "Las filmaciones del encuentro con una familia brasileño-palestina en Cisjordania de 2018 son revisitadas después del 7 de octubre de 2023. Lo que iba a ser una película sobre las posibilidades de coexistencia en una tierra ocupada se transforma en una brutal reflexión sobre la colonización, el apartheid, el genocidio y la reciente proliferación de imágenes de guerra producidas por las propias víctimas de una masacre que se repite a lo largo del tiempo.",
+      "synopsis_lang": "es",
+      "poster": "/assets/ficdeh/notas-sobre-un-destierro.jpg",
+      "posterSource": "custom",
+      "_src": {
+        "url": "https://www.ficdeh.com/produccion/notas-sobre-un-destierro/",
+        "date": "2026-07-25"
+      },
+      "lbSlug": "notes-on-an-exile",
+      "title_en": "Notes On an Exile"
+    },
+    {
+      "title": "One in a million",
+      "director": "Jack MacInnes, Itab Azzam",
+      "year": "2026",
+      "duration": "102 min",
+      "country": "Reino Unido, Estados Unidos",
+      "section": "🌍 Largometraje Documental Internacional",
+      "synopsis": "Filmada a lo largo de 10 años, esta épica travesía de una niña desde Siria a Alemania y de regreso. Ella y su familia afrontan la guerra, el exilio y el dolor en una tierra extranjera, poniendo de manifiesto la complejidad de la experiencia de los refugiados.",
+      "synopsis_lang": "es",
+      "poster": "/assets/ficdeh/one-in-a-million-una-entre-un-millon.jpg",
+      "posterSource": "custom",
+      "_src": {
+        "url": "https://www.ficdeh.com/produccion/one-in-a-million-una-entre-un-millon/",
+        "date": "2026-07-25"
+      },
+      "genre": "Documental",
+      "lbSlug": "one-in-a-million-2026"
+    },
+    {
+      "title": "Outside",
+      "director": "Frank van Bergen",
+      "year": "2024",
+      "duration": "17 min",
+      "country": "Países Bajos",
+      "section": "🚲 Cortometraje de Ficción Internacional",
+      "synopsis": "Narra la historia del Forastero, un hombre cuya vida cambia para siempre tras un evento catastrófico. En un mundo posapocalíptico, vacío de vida humana, lucha por sobrevivir mientras recorre calles desiertas en busca de alimento y refugio. A medida que enfrenta amenazas que evocan recuerdos de su pasado, intenta adaptarse a su nueva realidad y encontrar la paz que tanto necesita. Una reflexión inquietante sobre la supervivencia, la soledad y la resiliencia humana.",
+      "synopsis_lang": "es",
+      "poster": "/assets/ficdeh/outside.jpg",
+      "posterSource": "custom",
+      "_src": {
+        "url": "https://www.ficdeh.com/produccion/outside/",
+        "date": "2026-07-25"
+      },
+      "lbSlug": "outside-9"
+    },
+    {
+      "title": "Padamlágan",
+      "director": "Jenn Romano",
+      "year": "2025",
+      "duration": "80 min",
+      "country": "Filipinas",
+      "section": "🧳 Largometraje de Ficción",
+      "synopsis": "Mientras Naga recuerda la tragedia del Puente Colgante de 1972, Doring, un devoto voyador, participa en la procesión fluvial de Peñafrancia mientras enfrenta el regreso de su hijo distanciado, Iván. Cuando el puente colapsa por la multitud, Iván desaparece entre los muertos y desaparecidos. Mientras Doring busca entre escombros, hospitales y autoridades indiferentes, se declara la Ley Marcial, convirtiendo su búsqueda en un retrato de duelo y pérdida nacional.",
+      "synopsis_lang": "es",
+      "poster": "/assets/ficdeh/padamlagan-night-lihgt.jpg",
+      "posterSource": "custom",
+      "_src": {
+        "url": "https://www.ficdeh.com/produccion/padamlagan-night-lihgt/",
+        "date": "2026-07-25"
+      },
+      "title_en": "Night Light",
+      "genre": "Drama",
+      "lbSlug": "night-light-2025"
+    },
+    {
+      "title": "Más allá",
+      "director": "Bettina López Mendoza",
+      "year": "2025",
+      "duration": "16 min",
+      "country": "Venezuela, Colombia, Estados Unidos, Canadá",
+      "section": "🪀 Cortometraje de Ficción Nacional",
+      "synopsis": "Después de haber sido separada de su madre mientras intentaban cruzar la selva entre Colombia y Panamá, una pequeña migrante venezolana se ve obligada a abandonar su infancia para sobrevivir. Zuli empieza a trabajar para un coyote que guía a migrantes dentro de la selva. En uno de sus viajes descubre un portal que la transporta a una tierra mágica donde se ve impulsada a reconectar con su inocencia y su imaginación, aprendiendo a ser una niña otra vez.",
+      "synopsis_lang": "es",
+      "poster": "/assets/ficdeh/pasta-negra.jpg",
+      "posterSource": "custom",
+      "_src": {
+        "url": "https://www.ficdeh.com/produccion/pasta-negra/",
+        "date": "2026-07-25"
+      },
+      "lbSlug": "beyond-2025"
+    },
+    {
+      "title": "Pawa",
+      "director": "Marbel Ina Vanegas Jusayu",
+      "year": "2026",
+      "duration": "22 min",
+      "country": "Colombia",
+      "section": "🪀 Cortometraje de Ficción Nacional",
+      "synopsis": "En una tranquila mañana en una ranchería de La Guajira, Indira da de comer a los pavos y las gallinas. Ante la sequía y el inicio de clases, Josefa, abuela de Indira, emprende un viaje junto a su nieta por las comunidades aledañas con la esperanza de vender a Taata, el pavo más grande, para comprar útiles escolares y comida.",
+      "synopsis_lang": "es",
+      "poster": "/assets/ficdeh/pawa.jpg",
+      "posterSource": "custom",
+      "_src": {
+        "url": "https://www.ficdeh.com/produccion/pawa/",
+        "date": "2026-07-25"
+      },
+      "lbSlug": "pawa"
+    },
+    {
+      "title": "Por una gota de leche",
+      "director": "Esteban J. Corzo",
+      "year": "2025",
+      "duration": "59 min",
+      "country": "Colombia",
+      "section": "🏘️ Cine Comunitario Nacional",
+      "synopsis": "En 1985, varios jóvenes militantes del M-19 robaron un camión de leche para repartirla entre la población más vulnerable del sur de Bogotá. Fueron asesinados por las fuerzas del Estado colombiano tras haberse rendido. Cuarenta años después, sus familias y la comunidad cuentan su historia.",
+      "synopsis_lang": "es",
+      "poster": "/assets/ficdeh/por-una-gota-de-leche.jpg",
+      "posterSource": "custom",
+      "_src": {
+        "url": "https://www.ficdeh.com/produccion/por-una-gota-de-leche/",
+        "date": "2026-07-25"
+      },
+      "lbSlug": "por-una-gota-de-leche"
+    },
+    {
+      "title": "La Cerrillana",
+      "director": "Andrea Urquiola",
+      "year": "2025",
+      "duration": "14 min",
+      "country": "Argentina",
+      "section": "🚲 Cortometraje de Ficción Internacional",
+      "synopsis": "Una mujer comprende la transición de su hijo acercándose a otro chico trans de su pueblo. En él ve un reflejo de lo que su hijo podría alcanzar si se sintiera validado y reconocido. Este termina siendo un puente para conectarse nuevamente con su familia y consigo misma.",
+      "synopsis_lang": "es",
+      "poster": "/assets/ficdeh/remember-us-recuerdanos.jpg",
+      "posterSource": "custom",
+      "_src": {
+        "url": "https://www.ficdeh.com/produccion/remember-us-recuerdanos/",
+        "date": "2026-07-25"
+      },
+      "genre": "Drama",
+      "lbSlug": "cerrillana"
+    },
+    {
+      "title": "Republic of Amnesia",
+      "director": "Kannan Arunasalam",
+      "year": "2025",
+      "duration": "78 min",
+      "country": "Reino Unido, Sri Lanka",
+      "section": "🌍 Largometraje Documental Internacional",
+      "synopsis": "Republic of Amnesia sigue el ascenso y la caída del Aragalaya (“La Lucha”), el movimiento de protesta liderado por jóvenes que obligó al presidente autoritario de Sri Lanka, Gotabaya Rajapaksa, a huir del país en 2022. En el centro de la historia están jóvenes activistas como Melani, Buwanaka y Jeana, cuyo despertar político se desarrolla en tiempo real mientras organizan manifestaciones, enfrentan arrestos y desafían un sistema político construido para resistir el cambio.",
+      "synopsis_lang": "es",
+      "poster": "/assets/ficdeh/republic-of-amnesia.jpg",
+      "posterSource": "custom",
+      "_src": {
+        "url": "https://www.ficdeh.com/produccion/republic-of-amnesia/",
+        "date": "2026-07-25"
+      }
+    },
+    {
+      "title": "Chaski Pacha",
+      "director": "Ramiro Fierro",
+      "year": "2025",
+      "duration": "22 min",
+      "country": "Colombia",
+      "section": "🪀 Cortometraje de Ficción Nacional",
+      "synopsis": "José, un muchacho indígena con discapacidad intelectual, se gana la vida como mandadero en la ciudad de Ipiales, en la frontera de Colombia y Ecuador. Casi todas las tardes recibe una pequeña maleta en el lado ecuatoriano y debe entregarla a otra persona en Colombia, sin saber lo que contiene. Sin embargo, una tarde, se desatan una serie de eventos que harán que José no cumpla la siguiente cita con la maleta, se choque con una nueva realidad y descubra que no todo es como su mente se lo pinta.",
+      "synopsis_lang": "es",
+      "poster": "/assets/ficdeh/salud-mutante.jpg",
+      "posterSource": "custom",
+      "_src": {
+        "url": "https://www.ficdeh.com/produccion/salud-mutante/",
+        "date": "2026-07-25"
+      }
+    },
+    {
+      "title": "Sapos por todos lados",
+      "director": "Jacobo Alban, Carlos Zerpa, Beltrán Pérez",
+      "year": "2026",
+      "duration": "6 min",
+      "country": "Colombia, Francia, Venezuela",
+      "section": "🪀 Cortometraje de Ficción Nacional",
+      "synopsis": "Natalia no encuentra trabajo hasta que un antiguo profesor le ofrece la posibilidad de trabajar con exmiembros de la guerrilla. Esa nueva experiencia la confrontará directamente con sus prejuicios.",
+      "synopsis_lang": "es",
+      "poster": "/assets/ficdeh/sapos-por-todos-lados.jpg",
+      "posterSource": "custom",
+      "_src": {
+        "url": "https://www.ficdeh.com/produccion/sapos-por-todos-lados/",
+        "date": "2026-07-25"
+      }
+    },
+    {
+      "title": "Más allá de la corona",
+      "director": "Juan David Mesa",
+      "year": "2025",
+      "duration": "14 min",
+      "country": "Colombia",
+      "section": "🎙️ Cortometraje Documental Nacional",
+      "synopsis": "Ángel debe responder tres preguntas y superar una serie de obstáculos antes de lograr su sueño: ser coronada Reina Trans de Palmira, Colombia.",
+      "synopsis_lang": "es",
+      "poster": "/assets/ficdeh/sed-el-flagelo-guajiro.jpg",
+      "posterSource": "custom",
+      "_src": {
+        "url": "https://www.ficdeh.com/produccion/sed-el-flagelo-guajiro/",
+        "date": "2026-07-25"
+      }
+    },
+    {
+      "title": "Selva",
+      "director": "Esteban Hoyos García ,  Juan Miguel Gelacio",
+      "year": "2025",
+      "duration": "70 min",
+      "country": "Colombia",
+      "section": "☕ Largometraje de Ficción Nacional",
+      "synopsis": "Una bandada de flamencos ha estado sobrevolando Bogotá en los últimos días. Nadie sabe de dónde llegaron los pájaros, pero está claro que están perdidos. Julián también está perdido: lleva cinco años trabajando en un call center, viviendo en piloto automático y sintiendo un desarraigo total por la vida.",
+      "synopsis_lang": "es",
+      "poster": "/assets/ficdeh/selva.jpg",
+      "posterSource": "custom",
+      "_src": {
+        "url": "https://www.ficdeh.com/produccion/selva/",
+        "date": "2026-07-25"
+      },
+      "genre": "Drama",
+      "lbSlug": "jungle-2025"
+    },
+    {
+      "title": "Semillas",
+      "director": "Eliana Niño",
+      "year": "2025",
+      "duration": "100 min",
+      "country": "Colombia, España",
+      "section": "🧳 Largometraje de Ficción",
+      "synopsis": "Shaira sueña con participar en un Torneo de Coleo, sin embargo, un día su caballo desaparece. En un atardecer llanero y en medio de una gran sequía, su abuelo le dice que en el verano el cielo atrapa a los animales y que ellos solo regresan hasta el día en que vuelva a llover en la tierra. Shaira encontrará la forma de hacer volver la lluvia para traer de vuelta a su caballo Semillas.",
+      "synopsis_lang": "es",
+      "poster": "/assets/ficdeh/semillas.jpg",
+      "posterSource": "custom",
+      "_src": {
+        "url": "https://www.ficdeh.com/produccion/semillas/",
+        "date": "2026-07-25"
+      },
+      "genre": "Drama",
+      "lbSlug": "semillas"
+    },
+    {
+      "title": "Si La Escombrera hablara",
+      "director": "Juan Prado",
+      "year": "2025",
+      "duration": "30 min",
+      "country": "Colombia",
+      "section": "🎙️ Cortometraje Documental Nacional",
+      "synopsis": "En la comuna 13 de Medellín se encuentra la fosa urbana más grande de América Latina: La Escombrera. Las familias de las personas víctimas de desaparición forzada la señalan como el lugar donde están muchos de los 503 desaparecidos de este territorio. TRas dos décadas de negacionismo, la búsqueda forense liderada por el colectivo Mujeres Caminando por la Verdad desencadenó en 2024, el hallazgo de cuerpos. Este acontecimiento histórico envió un mensaje muy claro a toda Colombia: la tierra ha comenzado a hablar.",
+      "synopsis_lang": "es",
+      "poster": "/assets/ficdeh/si-la-escombrera-hablara.jpg",
+      "posterSource": "custom",
+      "_src": {
+        "url": "https://www.ficdeh.com/produccion/si-la-escombrera-hablara/",
+        "date": "2026-07-25"
+      }
+    },
+    {
+      "title": "Silenciada",
+      "director": "Selina Miles",
+      "year": "2026",
+      "duration": "97 min",
+      "country": "Australia",
+      "section": "🌍 Largometraje Documental Internacional",
+      "synopsis": "Después de que el movimiento #MeToo rompiera el silencio cultural sobre la violencia de género, las supervivientes se vieron rápidamente enfrentadas a un nuevo tipo de silenciamiento y miedo, a medida que las leyes contra la difamación se convertían en un arma utilizada contra las mujeres por alzar la voz.",
+      "synopsis_lang": "es",
+      "poster": "/assets/ficdeh/silenciada-silenced.jpg",
+      "posterSource": "custom",
+      "_src": {
+        "url": "https://www.ficdeh.com/produccion/silenciada-silenced/",
+        "date": "2026-07-25"
+      },
+      "title_en": "Silenced",
+      "genre": "Documental",
+      "lbSlug": "silenced-2026"
+    },
+    {
+      "title": "Soñé su nombre",
+      "director": "Ángela Carabalí",
+      "year": "2026",
+      "duration": "86 min",
+      "country": "Colombia",
+      "section": "🔍 Largometraje Documental Nacional",
+      "synopsis": "Después de 30 años negando su dolor, Ángela se enfrenta a su pasado cuando su padre se le aparece en un sueño y le pide que lo busque. Junto a su hermana Juliana, emprende un viaje por Colombia hasta los terriotiros indígenas donde su padre, un agricultor afrodescendiente, fue víctima de desaparición forzada.",
+      "synopsis_lang": "es",
+      "poster": "/assets/ficdeh/sone-su-nombre.jpg",
+      "posterSource": "custom",
+      "_src": {
+        "url": "https://www.ficdeh.com/produccion/sone-su-nombre/",
+        "date": "2026-07-25"
+      },
+      "genre": "Documental",
+      "lbSlug": "i-dreamed-his-name"
+    },
+    {
+      "title": "Sukua",
+      "director": "Omar E. Ospina Giraldo",
+      "year": "2025",
+      "duration": "17 min",
+      "country": "Colombia",
+      "section": "🪀 Cortometraje de Ficción Nacional",
+      "synopsis": "Pirimín, un niño kogui, recibe una pistola de agua como regalo. Esa noche, escucha a su padre manifestar su inconformidad, al recordar que unas armas similares los obligaron a abandonar sus asentamientos. Ahora Pirimín no sabe qué hacer con el juguete.",
+      "synopsis_lang": "es",
+      "poster": "/assets/ficdeh/sukua.jpg",
+      "posterSource": "custom",
+      "_src": {
+        "url": "https://www.ficdeh.com/produccion/sukua/",
+        "date": "2026-07-25"
+      },
+      "genre": "Ficción",
+      "_inherited": {
+        "genre": "ficmontanas-2026"
+      },
+      "lbSlug": "sukua"
+    },
+    {
+      "title": "Una torreta en llamas",
+      "director": "Humberto Flores Jáuregui",
+      "year": "2025",
+      "duration": "22 min",
+      "country": "México",
+      "section": "🚲 Cortometraje de Ficción Internacional",
+      "synopsis": "Después de un violento enfrentamiento, un soldado herido es rescatado por Yolanda, una campesina que vive en las montañas con su nieta Alejandra. Mientras Yolanda decide si debe ayudarlo, arriesgando sus vidas, Alejandra intentará acercarse a él para confirmar sus propias sospechas.",
+      "synopsis_lang": "es",
+      "poster": "/assets/ficdeh/the-steak-el-bistec.jpg",
+      "posterSource": "custom",
+      "_src": {
+        "url": "https://www.ficdeh.com/produccion/the-steak-el-bistec/",
+        "date": "2026-07-25"
+      },
+      "genre": "Drama",
+      "lbSlug": "a-burning-turret"
+    },
+    {
+      "title": "Three black men",
+      "director": "Sienna McLean-LoGreco",
+      "year": "2026",
+      "duration": "99 min",
+      "country": "Estados Unidos",
+      "section": "🌍 Largometraje Documental Internacional",
+      "synopsis": "¿Puede un viaje hacia el pasado abrir nuevas posibilidades para la Negritud? Tres hombres negros recorren a la inversa la ruta transatlántica del comercio de esclavos, de Los Ángeles (California) a Salvador de Bahía (Brasil) y, finalmente, a Accra (Ghana). En este recorrido exploran aspectos fundamentales de la historia negra y las representaciones de la migración forzosa, la supervivencia y la desaparición de los millones de personas que cruzaron el Atlántico; y brazan la identidad negra como una fuente viva de conexión, creación y renovación.",
+      "synopsis_lang": "es",
+      "poster": "/assets/ficdeh/three-black-men-tres-hombres-negros.jpg",
+      "posterSource": "custom",
+      "_src": {
+        "url": "https://www.ficdeh.com/produccion/three-black-men-tres-hombres-negros/",
+        "date": "2026-07-25"
+      },
+      "lbSlug": "three-black-men"
+    },
+    {
+      "title": "Tierra que habla",
+      "director": "Ana Fraile, Lucas Scavino",
+      "year": "2026",
+      "duration": "82 min",
+      "country": "Argentina",
+      "section": "🌍 Largometraje Documental Internacional",
+      "synopsis": "Tres universos, tres cosmogonías. Solón, del pueblo Kankuamo de Colombia; Ailín, una mujer mapuche de la Patagonia; y Luciano, un biotecnólogo argentino, se unen en esta historia sobre la recuperación de la tierra y la lucha permanente entre indígenas y usurpadores. A pesar de la distancia, kankuamos y mapuches son dos pueblos unidos por las mismas circunstancias. ¿Quién puede reparar la tierra? ¿Quién la usurpa? ¿Quién la escucha?",
+      "synopsis_lang": "es",
+      "poster": "/assets/ficdeh/tierra-que-habla.jpg",
+      "posterSource": "custom",
+      "_src": {
+        "url": "https://www.ficdeh.com/produccion/tierra-que-habla/",
+        "date": "2026-07-25"
+      }
+    },
+    {
+      "title": "Trenzando caminos de paz",
+      "director": "Soraya Hidalides Bayuelo Castellar",
+      "year": "2024",
+      "duration": "19 min",
+      "country": "Colombia",
+      "section": "🏘️ Cine Comunitario Nacional",
+      "synopsis": "Narra la lucha, resistencia y liderazgo de las mujeres indígenas Zenú en la defensa de sus derechos, su territorio y su cultura. A través de sus voces y memorias, el documental muestra su papel en la implementación del enfoque de género del Acuerdo de Paz y los avances logrados en participación política, preservación de su identidad cultural y fortalecimiento comunitario.",
+      "synopsis_lang": "es",
+      "poster": "/assets/ficdeh/trenzando-caminos-de-paz.jpg",
+      "posterSource": "custom",
+      "_src": {
+        "url": "https://www.ficdeh.com/produccion/trenzando-caminos-de-paz/",
+        "date": "2026-07-25"
+      }
+    },
+    {
+      "title": "Tuktu, Padre Maíz",
+      "director": "Mauricio Prieto Muriel",
+      "year": "2025",
+      "duration": "14 min",
+      "country": "Colombia",
+      "section": "🪀 Cortometraje de Ficción Nacional",
+      "synopsis": "En las montañas de Colombia, Juan, un niño mestizo de 13 años, se ve obligado a huir del monstruo de la guerra. En su travesía, la tierra misma lo protege y, guiado por las voces de sus ancestros, despierta un poder ancestral llamado Tucuna, que le permite transformarse y renacer. Convertido en Tuktu, un Taita de fuerza extraordinaria, comprende que su destino no es solo sobrevivir, sino regresar para sanar la herida de la guerra y sembrar la paz en la tierra que lo vio nacer.",
+      "synopsis_lang": "es",
+      "poster": "/assets/ficdeh/tuktu-padre-maiz.jpg",
+      "posterSource": "custom",
+      "_src": {
+        "url": "https://www.ficdeh.com/produccion/tuktu-padre-maiz/",
+        "date": "2026-07-25"
+      },
+      "genre": "Animación",
+      "_inherited": {
+        "genre": "ficmontanas-2026"
+      },
+      "lbSlug": "tuktu-father-maize"
+    },
+    {
+      "title": "Un nuevo amanecer",
+      "director": "Priscila Padilla",
+      "year": "2024",
+      "duration": "94 min",
+      "country": "Colombia, Bolivia, Francia",
+      "section": "🕊️ Retrospectiva 10 Años del Acuerdo de Paz",
+      "synopsis": "Un Nuevo Amanecer narra la historia de cinco mujeres cuyos destinos fueron marcados por la guerra desde la infancia. Una de ellas logró cambiar el rumbo de su vida y, años después, decide reencontrarse con quienes sí empuñaron las armas para reconstruir, junto a ellas, un relato de memoria, amistad, amor, sororidad y esperanza. Hoy, al mirar el pasado, sus voces demuestran que la guerra dejó de ser una alternativa y que otro futuro es posible.",
+      "synopsis_lang": "es",
+      "poster": "/assets/ficdeh/un-nuevo-amanecer.jpg",
+      "posterSource": "custom",
+      "_src": {
+        "url": "https://www.ficdeh.com/produccion/un-nuevo-amanecer/",
+        "date": "2026-07-25"
+      },
+      "synopsis_en": "A documentary on five former women combatants who signed Colombia's peace accord, and what it meant to inhabit a woman's body through war and disarmament.",
+      "_inherited": {
+        "synopsis_en": "ficmontanas-2026",
+        "genre": "ficmontanas-2026"
+      },
+      "genre": "Documental",
+      "lbSlug": "a-new-dawn-2024"
+    },
+    {
+      "title": "Volver a creer",
+      "director": "Paola Díaz Gómez, Nicolás Cuéllar Gempeler, Eric Marti, Nayid Lorena Herran, Gustavo Cabezas, Ismail Pang, Mumit M, María Fernanda Pinilla",
+      "year": "2025",
+      "duration": "16 min",
+      "country": "Colombia, Kenia, Bangladesh",
+      "section": "🏘️ Cine Comunitario Nacional",
+      "synopsis": "Cortometraje documental que reúne a seis equipos de producción de Colombia, Kenia y Bangladés para contar una historia común: cómo el arte fortalece a las comunidades, las conecta más allá de sus fronteras y las impulsa a recuperar la esperanza. A través de imágenes íntimas y relatos entrelazados, el filme muestra cómo la creatividad transforma las heridas de cada territorio en resistencia, encuentro y una visión compartida de futuro.",
+      "synopsis_lang": "es",
+      "poster": "/assets/ficdeh/volver-a-creer.jpg",
+      "posterSource": "custom",
+      "_src": {
+        "url": "https://www.ficdeh.com/produccion/volver-a-creer/",
+        "date": "2026-07-25"
+      }
+    },
+    {
+      "title": "XIE. Defensa de la vida",
+      "director": "Adriana Bernal-Mor, Paola Zuluaga",
+      "year": "2026",
+      "duration": "70 min",
+      "country": "Colombia",
+      "section": "🔍 Largometraje Documental Nacional",
+      "synopsis": "Desde 1977, mujeres campesinas tejedoras de las montañas de Cundinamarca resisten la explotación irregular de nacimientos de agua por industrias de bebidas y ultraprocesados. Mientras el agua se convierte en un negocio, las comunidades padecen sequías y el deterioro de sus ecosistemas. Ahora, frente a una nueva concesión para embotellar agua, se organizan para defender el territorio y exigir que el agua prevalezca como un derecho, no como una mercancía.",
+      "synopsis_lang": "es",
+      "poster": "/assets/ficdeh/xie-defensa-de-la-vida.jpg",
+      "posterSource": "custom",
+      "_src": {
+        "url": "https://www.ficdeh.com/produccion/xie-defensa-de-la-vida/",
+        "date": "2026-07-25"
+      }
+    }
+  ]
 }
