@@ -1818,6 +1818,33 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar chrome-glass: {_e}')
 
+# ── [no-animated-blur] el desenfoque NO se anima: se anima su opacidad ─────────
+# Lección del 28 jul 2026, encontrada sobre una grabación de pantalla del iPhone
+# de Juan: el WKWebView de iOS NO interpola backdrop-filter — salta al valor
+# final en ~4 frames, y se siente como si no hubiera transición. Playwright y
+# WebKit de escritorio SÍ interpolan, así que el bug es INVISIBLE en CI y en el
+# navegador del Mac: costó tres intentos fallidos descubrirlo.
+# El patrón correcto: blur FIJO en la capa + animar su opacity — el compositor
+# mezcla nítido y desenfocado, la progresión es real en todos los motores y
+# encima es más barato (el blur se calcula una vez, no por frame).
+check = 'no-animated-blur'
+try:
+    import re as _re
+    _html = open('index.html', encoding='utf-8').read()
+    _errs = []
+    for _m in _re.finditer(r'([^{}]+)\{([^}]*)\}', _html):
+        _sel = _m.group(1).strip().splitlines()[-1].strip()
+        _body = _m.group(2).replace('\n', ' ')
+        for _tr in _re.findall(r'transition:([^;}]*)', _body):
+            if 'backdrop-filter' in _tr:
+                _errs.append(f'{_sel[:55]}: anima backdrop-filter (usar blur fijo + opacity)')
+    if _errs:
+        fail(check, 'desenfoque animado: ' + '; '.join(_errs[:4]))
+    else:
+        ok(check, 'ningún backdrop-filter en transition — el velo se anima por opacidad')
+except Exception as _e:
+    warn(check, f'no se pudo verificar no-animated-blur: {_e}')
+
 # ── [sheet-spring] TODO bottom-sheet abre spring y cierra ease-in ──────────────
 # Decisión Juan 18 jul 2026: la curva canónica vive en los tokens --sheet-in /
 # --sheet-out. Antes 7 de 8 sheets tenían curvas bespoke (el spring existía solo

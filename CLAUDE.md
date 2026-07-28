@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `c21c941 fix(design): el velo baja a 10px/240ms — calibrado en iPhone (#434)`
+> Último commit: `d029a1d fix(design): el velo baja a 6px y reparte la curva — el salto era la curva, no el motor (#435)`
 
 ---
 
