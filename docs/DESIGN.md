@@ -346,21 +346,30 @@ helpers.js o `--amb` a mano = build roto. Safari iOS: muestrear con URL propia
 
 ### 8.4.1 · Velo de los sheets (`--blur-veil` / `--tr-veil`)
 El fondo no se desenfoca de golpe: el `backdrop-filter` **se anima** de 0 a
-`--blur-veil` (**10px**) en `--tr-veil` (**240ms**, expo-out). Antes el blur era
-un valor fijo de 4px: no transicionaba —aparecía al hacerse visible el overlay—
-y su opacity terminaba a los 200ms, antes que el sheet.
+`--blur-veil` (**6px**) en `--tr-veil` (**380ms**, `cubic-bezier(.4,0,.2,1)`).
+Antes el blur era un valor fijo de 4px: no transicionaba —aparecía al hacerse
+visible el overlay— y su opacity terminaba a los 200ms, antes que el sheet.
 
-**Calibrado en device (28 jul 2026).** El primer intento fue 18px/420ms,
-sincronizado con la entrada del panel; en iPhone se sintió **pesado y lento**.
-Animar `backdrop-filter` cuesta caro y el precio sube con el radio: un valor
-alto no solo tapa de más, además arrastra. Reglas que quedan:
-- **El velo va por delante, no acompaña.** Debe leerse como instantáneo; la
-  entrada del sheet (`--sheet-in`, .38s) y el color ambiental (`--amb-o`, .6s)
-  llegan después y no pasa nada. **Si el velo se percibe acoplado al cambio de
-  color de la ficha, va demasiado lento.**
-- **Techo de radio: ~12px.** Más alto no aporta separación y sí costo de
-  compositor en móvil.
-- Cambios acá **se juzgan en teléfono real**, no en Chromium de escritorio.
+**Calibrado midiendo en WebKit (28 jul 2026), tras dos intentos fallidos:**
+
+| Intento | Valor | Curva | Síntoma en iPhone |
+|---|---|---|---|
+| 1 | 18px | 420ms ease-out | pesado y lento; el velo parecía atado al color de la ficha |
+| 2 | 10px | 240ms **expo-out** | **abrupto**: saltaba de 0 al 98% entre los 60 y 80ms |
+| 3 ✅ | 6px | 380ms `.4,0,.2,1` | progresión visible: 2 → 3.7 → 5.1 → 5.7 → 5.9px |
+
+Lecciones, en orden de importancia:
+- **Una `ease-out` agresiva NO es "suave": es un salto con rampa de salida.**
+  Cuanto más cerca de expo, más recorrido se quema en los primeros milisegundos
+  y menos transición se percibe. Para que el desenfoque se *vea* progresar hay
+  que **repartir** (curva estándar tipo `.4,0,.2,1`), no acelerar.
+- **El costo sube con el radio.** 6px basta para separar planos; **techo ~12px**.
+- **Esto se mide, no se mira.** Muestrear el valor computado durante la
+  transición en el proyecto `ios-mobile` (WebKit) es lo único que distingue
+  "interpola mal" de "interpola con la curva equivocada". Chromium de escritorio
+  no reproduce el síntoma.
+- El velo **no espera** a la entrada del sheet (`--sheet-in`, .38s) ni al color
+  ambiental (`--amb-o`, .6s): son capas independientes y el color llega después.
 
 Cerrar usa `--tr-veil-out` (160ms): salir no se saborea.
 `prefers-reduced-motion` cae a un fundido de 120ms sin animar el desenfoque.

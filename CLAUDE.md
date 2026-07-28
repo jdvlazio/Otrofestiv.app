@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `2276981 Canon: CTA con degradado + el velo del sheet se desenfoca progresivamente (#433)`
+> Último commit: `c21c941 fix(design): el velo baja a 10px/240ms — calibrado en iPhone (#434)`
 
 ---
 
