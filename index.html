@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607281747">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607281747">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607281803">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607281803">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -217,17 +217,20 @@ window.sentryOnLoad = function() {
   --tr-fast:   100ms ease;   /* feedback inmediato: hover color           */
   --tr-base:   150ms ease;   /* micro-interacción: botones, badges        */
   --tr-smooth: 200ms ease;   /* overlays, opacidades, estados             */
-  /* Velo de los sheets (28 jul 2026). Antes: opacity 200ms y el blur FIJO en
-     4px — el desenfoque no transicionaba, aparecía de golpe al hacerse visible,
-     y encima terminaba antes que el sheet (spring .38s). Ahora el blur se anima
-     de 0 a --blur-veil con la misma duración que la entrada del panel, para que
-     el fondo se hunda MIENTRAS la ficha sube, no antes.
-     La curva es ease-out puro: el desenfoque gana casi todo su recorrido en el
-     primer tercio (se siente inmediato) y se asienta despacio (se siente caro).
-     Cerrar usa la mitad del tiempo: salir de un sitio no se saborea. */
-  --blur-veil: 18px;
-  --tr-veil: 420ms cubic-bezier(.22,.61,.36,1);
-  --tr-veil-out: 220ms cubic-bezier(.4,0,1,1);
+  /* Velo de los sheets. Antes (jul 2026) el blur era FIJO en 4px: no
+     transicionaba, aparecía de golpe. Se animó a 18px/420ms — y en iPhone se
+     sintió pesado y lento: animar backdrop-filter cuesta caro y el precio sube
+     con el radio, así que un valor alto no solo tapa de más, además arrastra.
+     Calibrado en device (28 jul 2026): 10px alcanza para separar planos, y la
+     curva expo-out gasta el grueso del recorrido en los primeros ~80ms — el
+     fondo se hunde de inmediato y termina de asentarse solo.
+     El velo NO espera al color ambiental de la ficha (--amb-o, .6s): son dos
+     capas independientes y el color puede llegar después. Si se los percibe
+     acoplados es que el velo va demasiado lento.
+     Cerrar usa menos tiempo: salir de un sitio no se saborea. */
+  --blur-veil: 10px;
+  --tr-veil: 240ms cubic-bezier(.16,1,.3,1);
+  --tr-veil-out: 160ms cubic-bezier(.4,0,1,1);
   --tr-enter:  300ms ease-out; /* entradas al DOM: paneles, drawers       */
   /* Sheets — curva canónica (18 jul 2026): TODO bottom-sheet abre con spring
      y cierra con ease-in. Guardián [sheet-spring] en validate.py. */
@@ -2963,7 +2966,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202607281747";
+    s.src="/src/main.js?v=202607281803";
     document.body.appendChild(s);
     // Watchdog de boot (P0 18 jul): si el grafo ESM murió en el import (caché
     // HTTP mixta tras deploys en ráfaga — main.js nuevo + módulo viejo sin el

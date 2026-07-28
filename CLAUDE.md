@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `ce32edb fix(design): el velo del sheet se desenfoca progresivamente, no de golpe`
+> Último commit: `2276981 Canon: CTA con degradado + el velo del sheet se desenfoca progresivamente (#433)`
 
 ---
 
