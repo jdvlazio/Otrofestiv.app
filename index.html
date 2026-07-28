@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607250945">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607250945">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607281747">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607281747">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -145,6 +145,13 @@ window.sentryOnLoad = function() {
   /* ── Amber ── */
   --amber: #F59E0B;
   --amber-d: #D97706;
+  /* Fondo del CTA primario (28 jul 2026): degradado vertical mínimo en vez de
+     plano. No es decoración — un ámbar saturado a ancho completo se lee como
+     rectángulo de color; la luz cenital le devuelve materia. El recorrido es
+     corto a propósito (#FBBF24→#E89709): más abajo empieza a parecer botón
+     biselado de 2010. Valor ÚNICO: lo consume la regla dueña PRIMARIO y los 2
+     primarios de sheet — guardián [button-canon]. */
+  --amber-cta: linear-gradient(180deg, #FBBF24 0%, #F59E0B 58%, #E89709 100%);
   --amber-06: rgba(245,158,11,.06);
   --amber-08: rgba(245,158,11,.08);
   --amber-10: rgba(245,158,11,.1);
@@ -210,6 +217,17 @@ window.sentryOnLoad = function() {
   --tr-fast:   100ms ease;   /* feedback inmediato: hover color           */
   --tr-base:   150ms ease;   /* micro-interacción: botones, badges        */
   --tr-smooth: 200ms ease;   /* overlays, opacidades, estados             */
+  /* Velo de los sheets (28 jul 2026). Antes: opacity 200ms y el blur FIJO en
+     4px — el desenfoque no transicionaba, aparecía de golpe al hacerse visible,
+     y encima terminaba antes que el sheet (spring .38s). Ahora el blur se anima
+     de 0 a --blur-veil con la misma duración que la entrada del panel, para que
+     el fondo se hunda MIENTRAS la ficha sube, no antes.
+     La curva es ease-out puro: el desenfoque gana casi todo su recorrido en el
+     primer tercio (se siente inmediato) y se asienta despacio (se siente caro).
+     Cerrar usa la mitad del tiempo: salir de un sitio no se saborea. */
+  --blur-veil: 18px;
+  --tr-veil: 420ms cubic-bezier(.22,.61,.36,1);
+  --tr-veil-out: 220ms cubic-bezier(.4,0,1,1);
   --tr-enter:  300ms ease-out; /* entradas al DOM: paneles, drawers       */
   /* Sheets — curva canónica (18 jul 2026): TODO bottom-sheet abre con spring
      y cierra con ease-in. Guardián [sheet-spring] en validate.py. */
@@ -955,8 +973,11 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 /* municipio — subordinado al venue, solo ciudades distintas a la sede principal del festival */
 .venue-municipio{display:block;font-size:var(--t-xs);color:var(--white-45);margin-top:1px;letter-spacing:.02em}
 /* ── Bottom Sheet ── */
-.pel-sheet-overlay{position:fixed;inset:0;background:var(--overlay-blur-70);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);z-index:9000;opacity:0;transition:opacity var(--tr-smooth);pointer-events:none}
-.pel-sheet-overlay.open{opacity:1;pointer-events:all}
+.pel-sheet-overlay{position:fixed;inset:0;background:var(--overlay-blur-70);backdrop-filter:blur(0px);-webkit-backdrop-filter:blur(0px);z-index:9000;opacity:0;transition:opacity var(--tr-veil-out),backdrop-filter var(--tr-veil-out),-webkit-backdrop-filter var(--tr-veil-out);pointer-events:none}
+.pel-sheet-overlay.open{opacity:1;pointer-events:all;backdrop-filter:blur(var(--blur-veil));-webkit-backdrop-filter:blur(var(--blur-veil));transition:opacity var(--tr-veil),backdrop-filter var(--tr-veil),-webkit-backdrop-filter var(--tr-veil)}
+@media (prefers-reduced-motion:reduce){
+  .pel-sheet-overlay,.pel-sheet-overlay.open{transition:opacity 120ms linear}
+}
 .pel-sheet{position:fixed;bottom:0;left:0;right:0;background:var(--surf-2);border-radius:var(--r-sheet) var(--r-sheet) 0 0;z-index:9001;max-height:88dvh;overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;transform:translateY(100%);transition:var(--sheet-out)}
 .pel-sheet.open{transform:translateY(0);transition:var(--sheet-in)}
 /* ── Transición de póster compartido (hero morph, View Transitions API) ───────
@@ -1220,7 +1241,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 }
 .pel-sheet-action-btn.act-on{background:rgba(39,174,96,.08);border-color:rgba(39,174,96,.25);color:var(--green)}
 .pel-sheet-action-btn.act-prio{background:var(--amber-10);border-color:var(--amber-30);color:var(--amber)}
-.pel-sheet-action-btn.btn-primary{background:var(--amber);border-color:var(--amber);color:var(--black);font-size:var(--t-sm);padding:13px 4px}
+.pel-sheet-action-btn.btn-primary{background:var(--amber-cta);border-color:var(--amber);color:var(--black);font-size:var(--t-sm);padding:13px 4px}
 .pel-sheet-action-btn.btn-secondary{background:var(--surf-3);border-color:transparent;color:rgba(255,255,255,.5);font-size:var(--t-sm);padding:13px 4px}
 .pel-sheet-action-btn.btn-tertiary{background:none;border-color:transparent;color:var(--gray2);flex:none;padding:13px var(--sp-3)}
 .pel-sheet-ctas{display:flex;gap:var(--sp-2);align-items:center;margin-top:var(--sp-6)}
@@ -1325,7 +1346,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
    AQUÍ; cada clase conserva solo su layout (width/margin/flex). Un botón
    primario nuevo se SUMA a este selector — guardián [button-canon]. */
 .auth-send-btn,.empty-state-cta,.venue-sheet-dir,.pv-btn-save,.conflict-btn-replace,.plan-confirm-cta,.av-calc-btn,.ag-save-btn,.splash-enter-btn,.conflict-modal-btn.confirm{
-  background:var(--amber);color:var(--black);border:none;border-radius:var(--r-pill);
+  background:var(--amber-cta);color:var(--black);border:none;border-radius:var(--r-pill);
   padding:var(--sp-btn);font-family:var(--font);font-size:var(--t-base);font-weight:var(--w-bold);
   cursor:pointer;transition:opacity var(--tr-base);
 }
@@ -2266,7 +2287,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .av-type-btn.on{border-color:var(--bdr);background:var(--surf);color:var(--white)}
 .av-time-row{display:flex;align-items:center;gap:var(--sp-2);margin-bottom:20px}
 .av-time-sel{flex:1;background:var(--surf);border:1px solid var(--bdr);border-radius:var(--r-md);color:var(--white);font-size:var(--t-base);font-family:var(--font);padding:10px var(--sp-3);cursor:pointer}
-.av-sheet-confirm{width:100%;background:var(--amber);border:none;border-radius:var(--r-md);padding:var(--sp-btn) 0;font-size:var(--t-base);font-weight:var(--w-bold);color:var(--black);cursor:pointer;font-family:var(--font)}
+.av-sheet-confirm{width:100%;background:var(--amber-cta);border:none;border-radius:var(--r-md);padding:var(--sp-btn) 0;font-size:var(--t-base);font-weight:var(--w-bold);color:var(--black);cursor:pointer;font-family:var(--font)}
 
 /* Sección + Lugar — filtros dropdown ────────────────────── */
 .seccion-btn{display:flex;align-items:center;gap:var(--sp-1);font-size:var(--t-sm);font-weight:var(--w-semi);color:var(--gray);background:none;border:none;cursor:pointer;font-family:var(--font);padding:var(--sp-1) 0;transition:color var(--tr-base);white-space:nowrap;-webkit-tap-highlight-color:transparent;touch-action:manipulation;position:relative}
@@ -2487,7 +2508,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .sheet-title{font-size:var(--t-md);font-weight:var(--w-display);letter-spacing:-.02em;color:var(--white);margin-bottom:6px}
 .sheet-subtitle{font-size:var(--t-sm);color:var(--gray);margin-bottom:var(--sp-4)}
 .sheet-input{width:100%;background:var(--surf);border:1px solid var(--bdr);border-radius:var(--r-md);padding:12px 14px;font-size:16px;color:var(--white);outline:none;box-sizing:border-box;font-family:var(--font);margin-bottom:var(--sp-3)}
-.sheet-cta{width:100%;background:var(--amber);border:none;border-radius:var(--r-md);padding:var(--sp-btn) 0;font-size:var(--t-base);font-weight:var(--w-bold);color:var(--black);cursor:pointer;font-family:var(--font)}
+.sheet-cta{width:100%;background:var(--amber-cta);border:none;border-radius:var(--r-md);padding:var(--sp-btn) 0;font-size:var(--t-base);font-weight:var(--w-bold);color:var(--black);cursor:pointer;font-family:var(--font)}
 
 .txt-gray2-sm{font-size:var(--t-sm);color:var(--gray2)}
 .mt-4{margin-top:var(--sp-4)}
@@ -2942,7 +2963,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202607250945";
+    s.src="/src/main.js?v=202607281747";
     document.body.appendChild(s);
     // Watchdog de boot (P0 18 jul): si el grafo ESM murió en el import (caché
     // HTTP mixta tras deploys en ráfaga — main.js nuevo + módulo viejo sin el

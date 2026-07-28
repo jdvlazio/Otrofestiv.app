@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `d2874d4 fix(watch): pósters de Mi Plan cargan en todos los días (RemoteImage vs AsyncImage)`
+> Último commit: `ce32edb fix(design): el velo del sheet se desenfoca progresivamente, no de golpe`
 
 ---
 

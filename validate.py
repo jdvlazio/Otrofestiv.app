@@ -2092,11 +2092,23 @@ try:
     for _m in _re.finditer(r'([^{}]+)\{([^}]*)\}', _html):
         _sel = _m.group(1).strip().splitlines()[-1].strip()
         _body = _m.group(2)
-        _is_btn = ('-btn' in _sel or '-cta' in _sel or 'button' in _sel) and '::' not in _sel
+        # El botón es el ÚLTIMO componente del selector: en '.auth-btn .auth-avatar'
+        # lo que se estiliza es el avatar, no el botón que lo contiene.
+        _last = _sel.split()[-1] if _sel.split() else _sel
+        _is_btn = ('-btn' in _last or '-cta' in _last or 'button' in _last) and '::' not in _sel
         if not _is_btn:
             continue
-        if 'background:var(--amber);color:var(--black)' in _body.replace('\n', '').replace(' ', '') and '.splash-enter-btn' not in _sel:
-            _errs.append(f'{_sel[:60]}: primario amber fuera de la regla dueña')
+        # Fondo del primario: un botón con fondo ámbar Y texto negro ES un CTA
+        # primario, y su fondo debe ser --amber-cta (el degradado del canon).
+        # Se parsean las props en vez de buscar una secuencia literal: antes el
+        # check exigía 'background:var(--amber);color:var(--black)' pegados, así
+        # que cualquier prop en medio (border-color, width…) lo esquivaba — los
+        # 2 primarios de sheet pasaban invisibles.
+        _flat = _body.replace('\n', '').replace(' ', '')
+        _props = dict(_p.split(':', 1) for _p in _flat.split(';') if ':' in _p)
+        _bg, _fg = _props.get('background', ''), _props.get('color', '')
+        if _fg == 'var(--black)' and _bg.startswith('var(--amber') and _bg != 'var(--amber-cta)':
+            _errs.append(f'{_sel[:60]}: CTA primario con fondo plano (canon: var(--amber-cta))')
         if 'font-weight:var(--w-display)' in _body:
             _errs.append(f'{_sel[:60]}: w-display en botón (canon: w-bold)')
     for _sf in _glob.glob('src/**/*.js', recursive=True) + ['index.html']:
