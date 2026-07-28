@@ -1,0 +1,67 @@
+{
+  "_etapa": "catalogo-parcial",
+  "_provenance": {
+    "fuente": "Instagram @festivalfinca — 2 posts de selección oficial (26 y 27 jul 2026)",
+    "posts": [
+      "https://www.instagram.com/festivalfinca/p/DbQwYyVjv0u/ — cortometrajes",
+      "https://www.instagram.com/festivalfinca/p/DbTkRZ4iWCr/ — documentales latinoamericanos",
+      "https://www.instagram.com/festivalfinca/p/DbHJMF_D_OW/ — anuncio + póster oficial"
+    ],
+    "metodo": "lectura de las láminas del carrusel (título, traducción entre corchetes, director, país). El caption NO lista títulos.",
+    "confianza": "PROVISIONAL — un anuncio de IG no es fuente autoritativa. Re-verificar contra festivalfinca.com cuando publiquen la programación (al 28 jul la web solo tiene el texto de presentación).",
+    "sin_datos_aun": "duración, sinopsis, año, día, hora, sede, pósters de las obras",
+    "discrepancias_fuente": [
+      "Cortometrajes: el caption dice «17 cortometrajes de 10 países», pero el carrusel solo muestra 16 (10 láminas: portada + 8 dobles + cierre). Falta 1 por identificar.",
+      "Documentales: el caption dice «9 documentales de Argentina, Brasil, Ecuador y Perú», pero el carrusel muestra 10, e incluye Uruguay y Polonia, que el caption no menciona."
+    ]
+  },
+  "_festival": {
+    "nombre": "FINCA",
+    "nombreCompleto": "Festival Internacional de Cine Ambiental",
+    "edicion": "8ª",
+    "lema": "Sembremos futuro",
+    "eje": "el derecho a la tierra",
+    "fechas": "12–19 de agosto de 2026",
+    "ciudad": "Buenos Aires",
+    "pais": "Argentina",
+    "timezoneOffset": "-03:00",
+    "web": "https://www.festivalfinca.com",
+    "instagram": "@festivalfinca",
+    "organiza": "IMD — Instituto Multimedia de Derechos Humanos",
+    "escala_anunciada": "más de 35 películas; estrenos argentinos, latinoamericanos y mundiales; charlas y actividades especiales"
+  },
+  "sections": {
+    "_pendiente": "Nombres y emojis de sección SIN curar — la doctrina exige objetos concretos del contenido real de cada sección, y eso requiere las sinopsis (que aún no existen) y aprobación de Juan.",
+    "cortometrajes": { "nombre": "Cortometrajes" },
+    "documentales-latinoamericanos": { "nombre": "Documentales latinoamericanos" }
+  },
+  "films": [
+    { "title": "Above all", "title_es": "Sobre todo", "director": "Enar de Dios Rodríguez", "country": "España (Austria)", "section": "cortometrajes" },
+    { "title": "Acid City", "title_es": "Ciudad ácida", "director": "Jack Wedge, Will Freudenheim", "country": "Francia", "section": "cortometrajes" },
+    { "title": "Colorado", "director": "Julia Mensch", "country": "Argentina (Alemania)", "section": "cortometrajes" },
+    { "title": "Cuidemos el planeta", "director": "Carolina Feity", "country": "Argentina", "section": "cortometrajes" },
+    { "title": "El día que aprendí a volar", "director": "Orlymar Paredes Morales", "country": "Venezuela", "section": "cortometrajes" },
+    { "title": "Ecocidio", "director": "Aldana Loiseau", "country": "Argentina", "section": "cortometrajes" },
+    { "title": "La granja de la libertad", "director": "Luciano Militello", "country": "Argentina (Palestina)", "section": "cortometrajes" },
+    { "title": "Mi casa es su casa", "director": "Joan Mayorga", "country": "Colombia", "section": "cortometrajes" },
+    { "title": "No als poalets", "title_es": "Dígale no a los poalets", "director": "Laura García Andreu", "country": "España", "section": "cortometrajes" },
+    { "title": "Pozdravy z Rodosu", "title_es": "Saludos desde Rodas", "director": "Viera Čákanyová", "country": "Eslovaquia (República Checa)", "section": "cortometrajes" },
+    { "title": "Sangre de plomo", "director": "Totino Ríos", "country": "Perú", "section": "cortometrajes" },
+    { "title": "Sobre Ruinas", "director": "Carol Benjamin", "country": "Brasil", "section": "cortometrajes" },
+    { "title": "El viaje de Luz", "director": "Jorge Ortino", "country": "Argentina", "section": "cortometrajes" },
+    { "title": "Tigre es yaguareté", "director": "Colectivo Left Hand Rotation", "country": "Argentina (España)", "section": "cortometrajes" },
+    { "title": "Tuktuit: Caribou", "director": "Lindsay McIntyre", "country": "Canadá", "section": "cortometrajes" },
+    { "title": "Ziki", "director": "Roberta Palmieri, Olga Sargenti", "country": "Italia", "section": "cortometrajes" },
+
+    { "title": "El amor duerme en la calle", "director": "Guzmán García", "country": "Uruguay", "section": "documentales-latinoamericanos" },
+    { "title": "Amora", "title_es": "Mora", "director": "Ana Petta", "country": "Brasil", "section": "documentales-latinoamericanos" },
+    { "title": "Karuara, la gente del río", "director": "Miguel Araoz Cartagena, Stephanie Boyd", "country": "Perú (Canadá)", "section": "documentales-latinoamericanos" },
+    { "title": "Pailako - Cosmovisión en resistencia", "director": "Tatiana Conde, Ezequiel Menevichian", "country": "Argentina", "section": "documentales-latinoamericanos" },
+    { "title": "Pau d´Arco", "director": "Ana Aranha", "country": "Brasil", "section": "documentales-latinoamericanos" },
+    { "title": "La vida fracturada", "director": "Cristian Cartier, Martin Longo, Pablo Piovano, Maximiliano Goldschmidt", "country": "Argentina", "section": "documentales-latinoamericanos" },
+    { "title": "Propiedad privada prohibido pasar", "director": "Wojciech Ganczarek", "country": "Polonia", "section": "documentales-latinoamericanos" },
+    { "title": "Qué perforado está mi valle", "director": "Gastón Bejas, Natalia Gelós, Martín Alvarez Mullally, Nico Perrupato", "country": "Argentina", "section": "documentales-latinoamericanos" },
+    { "title": "Tierra que habla", "director": "Ana Fraile, Lucas Scavino", "country": "Argentina", "section": "documentales-latinoamericanos", "_nota": "También en la selección de FICDEH 2026 — ahí ya tiene sinopsis, duración (82 min), año (2026) y ficha TMDB 1738957. Heredar cuando se enriquezca." },
+    { "title": "Toroboro: el nombre de las plantas", "director": "Manolo Sarmiento", "country": "Ecuador (Brasil)", "section": "documentales-latinoamericanos" }
+  ]
+}
