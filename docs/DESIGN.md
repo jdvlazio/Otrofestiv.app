@@ -344,6 +344,18 @@ helpers.js o `--amb` a mano = build roto. Safari iOS: muestrear con URL propia
   `--gray` (nunca `gray2`), radio pill.
 - **ESTADO ACTIVO**: clase `.on` ÚNICA — `.active`/`.selected` prohibidos.
 
+### 8.4.1 · Velo de los sheets (`--blur-veil` / `--tr-veil`)
+El fondo no se desenfoca de golpe: el `backdrop-filter` **se anima** de 0 a
+`--blur-veil` (18px) en `--tr-veil` (420ms ease-out), la misma duración que la
+entrada del panel (`--sheet-in`), para que el fondo se hunda MIENTRAS la ficha
+sube. Antes el blur era un valor fijo de 4px: no transicionaba —aparecía al
+hacerse visible el overlay— y su opacity terminaba a los 200ms, antes que el
+sheet. Cerrar usa `--tr-veil-out` (la mitad): salir no se saborea.
+`prefers-reduced-motion` cae a un fundido de 120ms sin animar el desenfoque.
+Aplicado en `.pel-sheet-overlay`. **Pendiente**: los otros 5 overlays de sheet
+(rating, pv-rating, conflict, prio-limit, plan-confirm) siguen con blur fijo y
+valores dispares (4/12/10/8/6px) — unificarlos al token es el siguiente paso.
+
 ### 8.5 · Iconos — ver `docs/ICONS.md`
 Fuente única `ICONS` (`components.js`); `aria-hidden` de fábrica; escala icono ≈
 texto (11 en t-label/t-xs, 13 base, 14–16 icon-only); stroke 1.75 universal;
