@@ -329,9 +329,16 @@ helpers.js o `--amb` a mano = build roto. Safari iOS: muestrear con URL propia
 (TMDB→w92) para no heredar la entrada de caché sin-CORS del `<img>`.
 
 ### 8.4 · Botones — regla dueña única (`[button-canon]`)
-- **PRIMARIO**: UNA regla CSS dueña (amber sólido / negro / `--r-pill` / `--sp-btn`
+- **PRIMARIO**: UNA regla CSS dueña (`--amber-cta` / negro / `--r-pill` / `--sp-btn`
   / `t-base` / `w-bold` / hover .88). 10 clases suscritas; un primario nuevo se
   SUMA al selector, no re-declara. `w-display` prohibido en botones.
+  El fondo es **degradado, no plano** (`--amber-cta`, 28 jul 2026): un ámbar
+  saturado a ancho completo se lee como rectángulo de color; el degradado
+  vertical mínimo le devuelve materia sin cambiar el color ni la identidad.
+  Fuera de la regla dueña lo consumen los 3 primarios con anatomía propia
+  (`.pel-sheet-action-btn.btn-primary`, `.av-sheet-confirm`, `.sheet-cta`).
+  El guardián parsea propiedades: fondo ámbar + texto negro en un botón = CTA
+  primario, y debe usar el token.
 - **CANCEL**: una regla dueña (texto `--gray` `t-sm` `w-semi`, sin caja).
 - **Secundario/terciario**: outline pill 1px `--bdr`, texto informativo SIEMPRE
   `--gray` (nunca `gray2`), radio pill.
