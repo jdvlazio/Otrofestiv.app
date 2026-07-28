@@ -32,36 +32,353 @@
   },
   "sections": {
     "_pendiente": "Nombres y emojis de sección SIN curar — la doctrina exige objetos concretos del contenido real de cada sección, y eso requiere las sinopsis (que aún no existen) y aprobación de Juan.",
-    "cortometrajes": { "nombre": "Cortometrajes" },
-    "documentales-latinoamericanos": { "nombre": "Documentales latinoamericanos" }
+    "cortometrajes": {
+      "nombre": "Cortometrajes"
+    },
+    "documentales-latinoamericanos": {
+      "nombre": "Documentales latinoamericanos"
+    }
   },
   "films": [
-    { "title": "Above all", "title_es": "Sobre todo", "director": "Enar de Dios Rodríguez", "country": "España (Austria)", "section": "cortometrajes" },
-    { "title": "Acid City", "title_es": "Ciudad ácida", "director": "Jack Wedge, Will Freudenheim", "country": "Francia", "section": "cortometrajes" },
-    { "title": "Colorado", "director": "Julia Mensch", "country": "Argentina (Alemania)", "section": "cortometrajes" },
-    { "title": "Cuidemos el planeta", "director": "Carolina Feity", "country": "Argentina", "section": "cortometrajes" },
-    { "title": "El día que aprendí a volar", "director": "Orlymar Paredes Morales", "country": "Venezuela", "section": "cortometrajes" },
-    { "title": "Ecocidio", "director": "Aldana Loiseau", "country": "Argentina", "section": "cortometrajes" },
-    { "title": "La granja de la libertad", "director": "Luciano Militello", "country": "Argentina (Palestina)", "section": "cortometrajes" },
-    { "title": "Mi casa es su casa", "director": "Joan Mayorga", "country": "Colombia", "section": "cortometrajes" },
-    { "title": "No als poalets", "title_es": "Dígale no a los poalets", "director": "Laura García Andreu", "country": "España", "section": "cortometrajes" },
-    { "title": "Pozdravy z Rodosu", "title_es": "Saludos desde Rodas", "director": "Viera Čákanyová", "country": "Eslovaquia (República Checa)", "section": "cortometrajes" },
-    { "title": "Sangre de plomo", "director": "Totino Ríos", "country": "Perú", "section": "cortometrajes" },
-    { "title": "Sobre Ruinas", "director": "Carol Benjamin", "country": "Brasil", "section": "cortometrajes" },
-    { "title": "El viaje de Luz", "director": "Jorge Ortino", "country": "Argentina", "section": "cortometrajes" },
-    { "title": "Tigre es yaguareté", "director": "Colectivo Left Hand Rotation", "country": "Argentina (España)", "section": "cortometrajes" },
-    { "title": "Tuktuit: Caribou", "director": "Lindsay McIntyre", "country": "Canadá", "section": "cortometrajes" },
-    { "title": "Ziki", "director": "Roberta Palmieri, Olga Sargenti", "country": "Italia", "section": "cortometrajes" },
-
-    { "title": "El amor duerme en la calle", "director": "Guzmán García", "country": "Uruguay", "section": "documentales-latinoamericanos" },
-    { "title": "Amora", "title_es": "Mora", "director": "Ana Petta", "country": "Brasil", "section": "documentales-latinoamericanos" },
-    { "title": "Karuara, la gente del río", "director": "Miguel Araoz Cartagena, Stephanie Boyd", "country": "Perú (Canadá)", "section": "documentales-latinoamericanos" },
-    { "title": "Pailako - Cosmovisión en resistencia", "director": "Tatiana Conde, Ezequiel Menevichian", "country": "Argentina", "section": "documentales-latinoamericanos" },
-    { "title": "Pau d´Arco", "director": "Ana Aranha", "country": "Brasil", "section": "documentales-latinoamericanos" },
-    { "title": "La vida fracturada", "director": "Cristian Cartier, Martin Longo, Pablo Piovano, Maximiliano Goldschmidt", "country": "Argentina", "section": "documentales-latinoamericanos" },
-    { "title": "Propiedad privada prohibido pasar", "director": "Wojciech Ganczarek", "country": "Polonia", "section": "documentales-latinoamericanos" },
-    { "title": "Qué perforado está mi valle", "director": "Gastón Bejas, Natalia Gelós, Martín Alvarez Mullally, Nico Perrupato", "country": "Argentina", "section": "documentales-latinoamericanos" },
-    { "title": "Tierra que habla", "director": "Ana Fraile, Lucas Scavino", "country": "Argentina", "section": "documentales-latinoamericanos", "_nota": "También en la selección de FICDEH 2026 — ahí ya tiene sinopsis, duración (82 min), año (2026) y ficha TMDB 1738957. Heredar cuando se enriquezca." },
-    { "title": "Toroboro: el nombre de las plantas", "director": "Manolo Sarmiento", "country": "Ecuador (Brasil)", "section": "documentales-latinoamericanos" }
+    {
+      "title": "Above all",
+      "title_es": "Sobre todo",
+      "director": "Enar de Dios Rodríguez",
+      "country": "España (Austria)",
+      "section": "cortometrajes"
+    },
+    {
+      "title": "Acid City",
+      "title_es": "Ciudad ácida",
+      "director": "Jack Wedge, Will Freudenheim",
+      "country": "Francia",
+      "section": "cortometrajes",
+      "_inherited": {
+        "year": "tmdb-1599926",
+        "duration": "tmdb-1599926",
+        "synopsis_en": "tmdb-1599926",
+        "genre": "tmdb-1599926"
+      },
+      "year": 2026,
+      "duration": "12 min",
+      "synopsis_en": "A dystopian future that’s ever nearer, Acid City floats in toxic waters and is left to its own devices. But under the boiling sun, the city weaves together its own social fabric. With audio recordings taken off the streets of NYC, this animation offers us something rare in the face of climate catastrophe: hope.",
+      "genre": "Animación, Documental",
+      "_tmdb_poster": "https://image.tmdb.org/t/p/original/1L6gK6WJcSBO87SZGpiYjFFp6de.jpg",
+      "_tmdbId": 1599926,
+      "lbSlug": "acid-city"
+    },
+    {
+      "title": "Colorado",
+      "director": "Julia Mensch",
+      "country": "Argentina (Alemania)",
+      "section": "cortometrajes"
+    },
+    {
+      "title": "Cuidemos el planeta",
+      "director": "Carolina Feity",
+      "country": "Argentina",
+      "section": "cortometrajes"
+    },
+    {
+      "title": "El día que aprendí a volar",
+      "director": "Orlymar Paredes Morales",
+      "country": "Venezuela",
+      "section": "cortometrajes"
+    },
+    {
+      "title": "Ecocidio",
+      "director": "Aldana Loiseau",
+      "country": "Argentina",
+      "section": "cortometrajes",
+      "_inherited": {
+        "duration": "tmdb-1477851",
+        "synopsis": "tmdb-1477851",
+        "synopsis_en": "tmdb-1477851",
+        "genre": "tmdb-1477851"
+      },
+      "duration": "8 min",
+      "synopsis": "Un cortometraje animado con arcilla fresca sobre la historia del Ecocidiovista desde los ojos de la Pachamama. Ella es una anciana de barro que siente calor y no puede dormir, descubre que la temperatura global es muy elevada. Entristece al ver la cantidad de acciones naturalizadas que dañan al medio ambiente además de reconocer que el ser humano es incapaz de modificar su accionar.",
+      "synopsis_en": "A short animated film made with fresh clay about the story of Ecocidiovista from the perspective of Pachamama. She is an elderly woman made of clay who feels hot and cannot sleep. She discovers that the global temperature is very high. She is saddened to see the number of normalized actions that harm the environment, as well as recognizing that humans are incapable of changing their behavior.",
+      "genre": "Animación",
+      "_tmdb_poster": "https://image.tmdb.org/t/p/original/pse0IyoIjvzpkQgqASD31bJknJA.jpg",
+      "_tmdbId": 1477851,
+      "lbSlug": "ecocidio"
+    },
+    {
+      "title": "La granja de la libertad",
+      "director": "Luciano Militello",
+      "country": "Argentina (Palestina)",
+      "section": "cortometrajes"
+    },
+    {
+      "title": "Mi casa es su casa",
+      "director": "Joan Mayorga",
+      "country": "Colombia",
+      "section": "cortometrajes"
+    },
+    {
+      "title": "No als poalets",
+      "title_es": "Dígale no a los poalets",
+      "director": "Laura García Andreu",
+      "country": "España",
+      "section": "cortometrajes",
+      "_inherited": {
+        "year": "tmdb-1631620",
+        "duration": "tmdb-1631620",
+        "synopsis_en": "tmdb-1631620",
+        "genre": "tmdb-1631620"
+      },
+      "year": 2026,
+      "duration": "20 min",
+      "synopsis_en": "In a small Spanish town, a local vote over a new recycling bin has divided the community. As opinions harden and tensions rise, the countdown to election day begins. The ballot boxes will reveal whether this intense polarization will prevail—and shape the town’s future.",
+      "genre": "Documental",
+      "_tmdb_poster": "https://image.tmdb.org/t/p/original/rMSK4yQoMFIS3CAqfh2YzYODaVO.jpg",
+      "_tmdbId": 1631620,
+      "lbSlug": "no-to-mini-bins"
+    },
+    {
+      "title": "Pozdravy z Rodosu",
+      "title_es": "Saludos desde Rodas",
+      "director": "Viera Čákanyová",
+      "country": "Eslovaquia (República Checa)",
+      "section": "cortometrajes",
+      "_inherited": {
+        "year": "tmdb-1603941",
+        "duration": "tmdb-1603941",
+        "synopsis_en": "tmdb-1603941",
+        "genre": "tmdb-1603941"
+      },
+      "year": 2026,
+      "duration": "25 min",
+      "synopsis_en": "What are you gonna do when the world’s on fire? Sit by the pool with a glass of Aperol Spritz and take a selfie for your friends back home? In this satirical take on tourism during the ecological crisis, Viera Čákanyová asks how costly the Ostrich Effect we all seem to suffer from really is? The film features realistic comments from holidaymakers, glossy travel agency advertisements and some dinosaurs, just passing by.",
+      "genre": "Documental",
+      "_tmdb_poster": "https://image.tmdb.org/t/p/original/yo6QFqZpsf5anQg6eqQBkVJKeAi.jpg",
+      "_tmdbId": 1603941,
+      "lbSlug": "greetings-from-rhodes"
+    },
+    {
+      "title": "Sangre de plomo",
+      "director": "Totino Ríos",
+      "country": "Perú",
+      "section": "cortometrajes",
+      "_inherited": {
+        "year": "tmdb-1686266",
+        "duration": "tmdb-1686266",
+        "synopsis": "tmdb-1686266",
+        "genre": "tmdb-1686266"
+      },
+      "year": 2025,
+      "duration": "20 min",
+      "synopsis": "En un pueblo contaminado por una fábrica metalúrgica, una joven pareja resiste entre el abandono y la esperanza. Mientras esperan partir, una pérdida y una enfermedad amenazan con apagar la ilusión de un nuevo comienzo.  In a town poisoned by a toxic smelting plant, a young couple is caught between abandoning their home and hoping for their future. As they plan their departure, grief and illness strike.",
+      "genre": "Drama, Terror",
+      "_tmdb_poster": "https://image.tmdb.org/t/p/original/j0apxZAlgLGGVTOsvSPZr8o2UVW.jpg",
+      "_tmdbId": 1686266,
+      "lbSlug": "sangre-de-plomo"
+    },
+    {
+      "title": "Sobre Ruinas",
+      "director": "Carol Benjamin",
+      "country": "Brasil",
+      "section": "cortometrajes",
+      "_inherited": {
+        "year": "tmdb-1448990"
+      },
+      "year": 2025,
+      "_tmdb_poster": "https://image.tmdb.org/t/p/original/2qtiqz9Wu1Y2AZQglwiZC09QwpN.jpg",
+      "_tmdbId": 1448990,
+      "lbSlug": "sobre-ruinas"
+    },
+    {
+      "title": "El viaje de Luz",
+      "director": "Jorge Ortino",
+      "country": "Argentina",
+      "section": "cortometrajes"
+    },
+    {
+      "title": "Tigre es yaguareté",
+      "director": "Colectivo Left Hand Rotation",
+      "country": "Argentina (España)",
+      "section": "cortometrajes"
+    },
+    {
+      "title": "Tuktuit: Caribou",
+      "director": "Lindsay McIntyre",
+      "country": "Canadá",
+      "section": "cortometrajes",
+      "_inherited": {
+        "year": "tmdb-1175870",
+        "duration": "tmdb-1175870",
+        "synopsis_en": "tmdb-1175870",
+        "genre": "tmdb-1175870"
+      },
+      "year": 2023,
+      "duration": "17 min",
+      "synopsis_en": "An Inuit mother and daughter, Kumaa’naaq and Marguerite, must negotiate the pressures of assimilation after relocating to a new life in the South in the 1930s. Based on a true story.",
+      "genre": "Drama",
+      "_tmdb_poster": "https://image.tmdb.org/t/p/original/ftbGDR6A1WXl4gotekpJHG3zeSu.jpg",
+      "_tmdbId": 1175870,
+      "lbSlug": "the-south-wind"
+    },
+    {
+      "title": "Ziki",
+      "director": "Roberta Palmieri, Olga Sargenti",
+      "country": "Italia",
+      "section": "cortometrajes",
+      "_inherited": {
+        "year": "tmdb-1570024",
+        "duration": "tmdb-1570024",
+        "synopsis_en": "tmdb-1570024",
+        "genre": "tmdb-1570024"
+      },
+      "year": 2024,
+      "duration": "13 min",
+      "synopsis_en": "Ziki is a Congolese boy living in a village with his mother. One day, while the two are playing, Ziki discovers a mysterious tunnel winding beneath the kitchen floor. Curious, he decides to venture in, but as he walks, he slips and falls to the bottom of the tunnel. As he travels through it, he discovers a world built on exploitation and war in his homeland.",
+      "genre": "Animación",
+      "_tmdb_poster": "https://image.tmdb.org/t/p/original/1NxNgTiTKmUtL3KBqI9RThm2KjD.jpg",
+      "_tmdbId": 1570024,
+      "lbSlug": "ziki"
+    },
+    {
+      "title": "El amor duerme en la calle",
+      "director": "Guzmán García",
+      "country": "Uruguay",
+      "section": "documentales-latinoamericanos",
+      "_inherited": {
+        "year": "tmdb-1461637",
+        "duration": "tmdb-1461637",
+        "synopsis_en": "tmdb-1461637",
+        "genre": "tmdb-1461637"
+      },
+      "year": 2024,
+      "duration": "91 min",
+      "synopsis_en": "This documentary tells the story of people who, despite being homeless, are still looking for love. Cristina and Fabián live on the street. They met and what they felt was love at first sight. When their daughter was born, the baby was kept in the hospital because she had no home to take her to. Throughout the film, Cristina doesn't give up: we see her doubling her efforts to try to get her daughter back. Jonathan and Vanessa have been dating for years. Little by little, drugs have consumed their lives until they are left on the street. While they go through a spiral of aggression, they try to give up the addiction and give each other a second chance. Some time ago, Maria discovered that she has HIV. She decided not to tell Jonatan for fear that he would abandon her; when he found out about the disease, he decided to forgive her and continue their relationship. However, from that moment on, they both suffered conflicts and mistreatment.",
+      "genre": "Documental",
+      "_tmdb_poster": "https://image.tmdb.org/t/p/original/cJHcNSyTT2aaijHkYevrTsZRdik.jpg",
+      "_tmdbId": 1461637,
+      "lbSlug": "el-amor-duerme-en-la-calle"
+    },
+    {
+      "title": "Amora",
+      "title_es": "Mora",
+      "director": "Ana Petta",
+      "country": "Brasil",
+      "section": "documentales-latinoamericanos",
+      "_inherited": {
+        "year": "tmdb-1557668",
+        "genre": "tmdb-1557668"
+      },
+      "year": 2025,
+      "genre": "Documental",
+      "_tmdb_poster": "https://image.tmdb.org/t/p/original/4FS3bnauwKOiiPglhqak3BdLtle.jpg",
+      "_tmdbId": 1557668,
+      "lbSlug": "amora-2025"
+    },
+    {
+      "title": "Karuara, la gente del río",
+      "director": "Miguel Araoz Cartagena, Stephanie Boyd",
+      "country": "Perú (Canadá)",
+      "section": "documentales-latinoamericanos",
+      "_inherited": {
+        "year": "tmdb-1266623",
+        "duration": "tmdb-1266623",
+        "synopsis": "tmdb-1266623",
+        "synopsis_en": "tmdb-1266623",
+        "genre": "tmdb-1266623"
+      },
+      "year": 2025,
+      "duration": "78 min",
+      "synopsis": "Una valiente mujer indígena y su comunidad enfrentan poderosos intereses para salvar su río y el mundo que alberga. En una realidad donde la naturaleza tiene un precio, esta película nos recuerda nuestra conexión sagrada con el agua.",
+      "synopsis_en": "Facing cultural genocide, a group of Indigenous women from Peru file a groundbreaking lawsuit demanding the government recognize the Marañón River, which flows into the Amazon, as a person with rights in order to protect the world of powerful spirits led by the Karuara (people of the river).",
+      "genre": "Documental",
+      "_tmdb_poster": "https://image.tmdb.org/t/p/original/vvh06y19XBFyDVSm8CZRHlev2eR.jpg",
+      "_tmdbId": 1266623,
+      "lbSlug": "karuara-people-of-the-river"
+    },
+    {
+      "title": "Pailako - Cosmovisión en resistencia",
+      "director": "Tatiana Conde, Ezequiel Menevichian",
+      "country": "Argentina",
+      "section": "documentales-latinoamericanos"
+    },
+    {
+      "title": "Pau d´Arco",
+      "director": "Ana Aranha",
+      "country": "Brasil",
+      "section": "documentales-latinoamericanos",
+      "_inherited": {
+        "year": "tmdb-1449004",
+        "duration": "tmdb-1449004",
+        "synopsis_en": "tmdb-1449004",
+        "genre": "tmdb-1449004"
+      },
+      "year": 2025,
+      "duration": "89 min",
+      "synopsis_en": "After surviving the massacre in which the police killed ten landless workers in Pará’s Amazon region, Fernando dos Santos becomes the only survivor to reveal his identity and testify. Still shaken, he recounts how the police murdered his boyfriend and tortured his companions, yet the film portrays him as far more than a victim: a courageous man who left the city’s comfort to chase the dream of owning land, using humor and intelligence to endure the solitude of being a gay man in rural Brazil. Alongside him is José Vargas, an idealistic lawyer defending the survivors and their right to justice. As he faces threats and isolation, the film exposes the human cost of truth, resilience, and the struggle for dignity in a land scarred by violence and inequality.",
+      "genre": "Documental",
+      "_tmdb_poster": "https://image.tmdb.org/t/p/original/iB5nwpmZC4RHXFhOJyv9iaw5Pda.jpg",
+      "_tmdbId": 1449004,
+      "lbSlug": "paid-in-blood-2025"
+    },
+    {
+      "title": "La vida fracturada",
+      "director": "Cristian Cartier, Martin Longo, Pablo Piovano, Maximiliano Goldschmidt",
+      "country": "Argentina",
+      "section": "documentales-latinoamericanos",
+      "_inherited": {
+        "synopsis_en": "tmdb-1579334"
+      },
+      "synopsis_en": "This documentary delves into the socio-environmental impacts of the fossil fuel industry and extractive activities in Vaca Muerta, Argentina, and how communities, especially the Mapuche people, are fighting to protect their territories. It is a call to action for environmental justice and a good life",
+      "_tmdbId": 1579334,
+      "lbSlug": "la-vida-fracturada"
+    },
+    {
+      "title": "Propiedad privada prohibido pasar",
+      "director": "Wojciech Ganczarek",
+      "country": "Polonia",
+      "section": "documentales-latinoamericanos"
+    },
+    {
+      "title": "Qué perforado está mi valle",
+      "director": "Gastón Bejas, Natalia Gelós, Martín Alvarez Mullally, Nico Perrupato",
+      "country": "Argentina",
+      "section": "documentales-latinoamericanos"
+    },
+    {
+      "title": "Tierra que habla",
+      "director": "Ana Fraile, Lucas Scavino",
+      "country": "Argentina",
+      "section": "documentales-latinoamericanos",
+      "_nota": "También en la selección de FICDEH 2026 — ahí ya tiene sinopsis, duración (82 min), año (2026) y ficha TMDB 1738957. Heredar cuando se enriquezca.",
+      "_inherited": {
+        "year": "tmdb-1738957",
+        "duration": "tmdb-1738957",
+        "synopsis": "tmdb-1738957"
+      },
+      "year": 2026,
+      "duration": "82 min",
+      "synopsis": "Tres universos, tres cosmogonías. Solón, del pueblo Kankuamo de Colombia; Ailín, una mujer mapuche de la Patagonia; y Luciano, un biotecnólogo argentino, se unen en esta historia sobre la recuperación de la tierra y la lucha permanente entre indígenas y usurpadores. A pesar de la distancia, kankuamos y mapuches son dos pueblos unidos por las mismas circunstancias. ¿Quién puede reparar la tierra? ¿Quién la usurpa? ¿Quién la escucha?",
+      "_tmdb_poster": "https://image.tmdb.org/t/p/original/eY6bsL6KHDcbF8jfbrI2euGrudb.jpg",
+      "_tmdbId": 1738957,
+      "lbSlug": "tierra-que-habla"
+    },
+    {
+      "title": "Toroboro: el nombre de las plantas",
+      "director": "Manolo Sarmiento",
+      "country": "Ecuador (Brasil)",
+      "section": "documentales-latinoamericanos",
+      "_inherited": {
+        "year": "tmdb-811169",
+        "duration": "tmdb-811169",
+        "synopsis_en": "tmdb-811169",
+        "genre": "tmdb-811169"
+      },
+      "year": 2024,
+      "duration": "103 min",
+      "synopsis_en": "A botanical expedition in Ecuador's Amazon becomes a medium for an indigenous Huaorani community to remember the genocidal colonization it suffered in the 1960s. Meanwhile, a group of ecologists from the capital tries to stop oil exploitation in the last remaining forests where the isolated Huaoranis still live, who to this day refuse to come into contact with civilization.",
+      "genre": "Documental",
+      "_tmdb_poster": "https://image.tmdb.org/t/p/original/zPPssWWtBtDAeuP6HFVfQ43IcFc.jpg",
+      "_tmdbId": 811169,
+      "lbSlug": "toroboro-the-name-of-the-plants"
+    }
   ]
 }
