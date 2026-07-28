@@ -345,31 +345,38 @@ helpers.js o `--amb` a mano = build roto. Safari iOS: muestrear con URL propia
 - **ESTADO ACTIVO**: clase `.on` ÚNICA — `.active`/`.selected` prohibidos.
 
 ### 8.4.1 · Velo de los sheets (`--blur-veil` / `--tr-veil`)
-El fondo no se desenfoca de golpe: el `backdrop-filter` **se anima** de 0 a
-`--blur-veil` (**6px**) en `--tr-veil` (**380ms**, `cubic-bezier(.4,0,.2,1)`).
-Antes el blur era un valor fijo de 4px: no transicionaba —aparecía al hacerse
-visible el overlay— y su opacity terminaba a los 200ms, antes que el sheet.
+**Regla dura: el desenfoque NO se anima. Se anima la OPACIDAD de la capa que lo
+lleva.** El overlay tiene `backdrop-filter: blur(var(--blur-veil))` **fijo**
+(6px) y transiciona sólo `opacity` en `--tr-veil` (380ms `cubic-bezier(.4,0,.2,1)`).
+El compositor mezcla el fondo nítido con su versión desenfocada: al 30% de
+opacidad se ve un 30% de desenfoque. Guardián: `[no-animated-blur]`.
 
-**Calibrado midiendo en WebKit (28 jul 2026), tras dos intentos fallidos:**
+**Por qué, y qué costó averiguarlo (28 jul 2026).** Cuatro intentos:
 
-| Intento | Valor | Curva | Síntoma en iPhone |
-|---|---|---|---|
-| 1 | 18px | 420ms ease-out | pesado y lento; el velo parecía atado al color de la ficha |
-| 2 | 10px | 240ms **expo-out** | **abrupto**: saltaba de 0 al 98% entre los 60 y 80ms |
-| 3 ✅ | 6px | 380ms `.4,0,.2,1` | progresión visible: 2 → 3.7 → 5.1 → 5.7 → 5.9px |
+| # | Enfoque | Síntoma en iPhone |
+|---|---|---|
+| 1 | blur fijo 4px, sólo opacity 200ms | el desenfoque casi no se notaba |
+| 2 | animar blur a 18px / 420ms ease-out | pesado y lento; parecía atado al color de la ficha |
+| 3 | animar blur a 10px / 240ms expo-out | **abrupto** |
+| 4 | animar blur a 6px / 380ms `.4,0,.2,1` | **seguía abrupto** |
+| 5 ✅ | **blur fijo 6px + opacity 380ms** | progresión real |
 
-Lecciones, en orden de importancia:
-- **Una `ease-out` agresiva NO es "suave": es un salto con rampa de salida.**
-  Cuanto más cerca de expo, más recorrido se quema en los primeros milisegundos
-  y menos transición se percibe. Para que el desenfoque se *vea* progresar hay
-  que **repartir** (curva estándar tipo `.4,0,.2,1`), no acelerar.
-- **El costo sube con el radio.** 6px basta para separar planos; **techo ~12px**.
-- **Esto se mide, no se mira.** Muestrear el valor computado durante la
-  transición en el proyecto `ios-mobile` (WebKit) es lo único que distingue
-  "interpola mal" de "interpola con la curva equivocada". Chromium de escritorio
-  no reproduce el síntoma.
-- El velo **no espera** a la entrada del sheet (`--sheet-in`, .38s) ni al color
-  ambiental (`--amb-o`, .6s): son capas independientes y el color llega después.
+La causa apareció midiendo una **grabación de pantalla del iPhone**, frame a
+frame: entre 3933ms y 4000ms —4 frames— el fondo pasaba de nítido a totalmente
+desenfocado, mientras el panel seguía subiendo hasta 4450ms.
+
+- **El WKWebView de iOS no interpola `backdrop-filter`: salta al valor final.**
+  Ninguna curva lo arregla, porque la curva nunca llega a aplicarse.
+- **Playwright/WebKit de escritorio SÍ interpola.** Por eso los intentos 2–4
+  pasaron la verificación local y fallaron en el teléfono. Medir el valor
+  computado en `ios-mobile` **no basta**: ese proyecto no reproduce WKWebView.
+- **La única evidencia válida para animación en iOS es una grabación de
+  pantalla del dispositivo real**, extraída con `ffmpeg` y medida por frame.
+- Corolario general: animar una propiedad de *filtro* es frágil entre motores;
+  animar `opacity`/`transform` es seguro y además más barato.
+
+El velo **no espera** a la entrada del sheet (`--sheet-in`, .38s) ni al color
+ambiental (`--amb-o`, .6s): son capas independientes y el color llega después.
 
 Cerrar usa `--tr-veil-out` (160ms): salir no se saborea.
 `prefers-reduced-motion` cae a un fundido de 120ms sin animar el desenfoque.
