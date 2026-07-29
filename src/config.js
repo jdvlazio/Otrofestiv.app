@@ -422,6 +422,13 @@ export const SECTION_ARCHETYPES = {
   '🌊 Costas': 'Muestra / País',
   '🌍 Competencia Internacional': 'Competencia',
   '🌍 Internacional': 'Muestra / País',
+  // FINCA 2026
+  '🌍 Largos Internacionales': 'Competencia',
+  '🌋 Cortos Internacionales': 'Competencia',
+  '🛶 Docs Latinoamericanos': 'Competencia',
+  '🌾 Panorama': 'Muestra / País',
+  '🐝 FINQUITA · Infancias': 'Cortos / Programas',
+  '🌱 Actividades': 'Especiales / Eventos',
   '🌍 International Narrative Competition': 'Competencia',
   '🌎 Comp. Iberoamérica': 'Competencia',
   '🌎 Largometraje Latinoamericano': 'Muestra / País',

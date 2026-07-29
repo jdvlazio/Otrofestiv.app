@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `9a4326e revert(design): fuera los cambios de VT (#443, #444) — en device el póster era un fantasma (#445)`
+> Último commit: `4c6919a feat(finca): publicar FINCA 2026 — Pase 1 completo (primera colaboración) (#446)`
 
 ---
 
