@@ -66,7 +66,8 @@ const fakeState = (lang='es') => ({ snapshot: () => ({ _lang: lang }) });
 test('_renderSplashRailHTML — cards de los 8 festivales visibles + divisor condicional', () => {
   const html = C._renderSplashRailHTML(fakeState(), 'fantasofest2026');
   const cards = (html.match(/data-fest=/g) || []).length;
-  assert.strictEqual(cards, 8, '8 cards (cinemancia es group:test → excluido)');
+  const visibles = Object.values(CFG).filter(c => c.name && c.group !== 'test').length;
+  assert.strictEqual(cards, visibles, `${visibles} cards — todo FESTIVAL_CONFIG salvo group:test`);
   const anyCurrent = Object.entries(CFG)
     .filter(([, c]) => c.name && c.group !== 'test')
     .some(([, c]) => C._classifyFestival(c) !== 'past');
@@ -150,12 +151,13 @@ test('_renderFestivalSelectorHTML — muro de afiches con la card del splash', (
   assert.ok(!html.includes('fs-festival-row'), 'ya no renderiza filas de lista');
   // <button class="splash-card…"> — NO contar splash-card-tpl / -art (mismo prefijo)
   const cards = (html.match(/<button class="splash-card/g) || []).length;
-  assert.strictEqual(cards, 8, '8 cards-afiche (mismo componente que el splash)');
+  const visibles = Object.values(CFG).filter(c => c.name && c.group !== 'test').length;
+  assert.strictEqual(cards, visibles, `${visibles} cards-afiche (mismo componente que el splash)`);
   assert.ok(html.includes('data-action="loadFestival"'), 'en el sheet la card carga directo');
   assert.ok(!html.includes('data-action="selectSplashFest"'), 'no usa la acción del splash');
   assert.ok(html.includes('/assets/keyart/olhar2026.jpg'), 'usa el keyArt del festival');
   assert.ok(html.includes('--kap:30%'), 'aplica keyArtPos de TT');
-  assert.ok((html.match(/onerror="this.remove\(\)"/g) || []).length >= 8, 'cada img degrada (§10.2)');
+  assert.ok((html.match(/onerror="this.remove\(\)"/g) || []).length >= visibles, 'cada img degrada (§10.2)');
 });
 
 test('_renderFestivalSelectorHTML — fallback tipográfico sin keyArt', () => {
