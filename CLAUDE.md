@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `0cb50cf fix(design): el velo sale del hilo principal — escalera CSS en el compositor (#450) (#450)`
+> Último commit: `68a6dbb perf(render): un scrim cerrado no debe pintar — 46→36 capas, 35→23MB de backing (#451)`
 
 ---
 

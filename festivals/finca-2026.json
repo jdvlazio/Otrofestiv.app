@@ -466,7 +466,12 @@
    "venue": "Cine Arte Cacodelphia",
    "posterSource": "custom",
    "day_order": 3,
-   "synopsis_lang": "es"
+   "synopsis_lang": "es",
+   "country": "Paraguay",
+   "year": 2024,
+   "duration": "105 min",
+   "genre": "Documental",
+   "flags": "🇵🇾"
   },
   {
    "title": "Karuara, la gente del río",
@@ -488,7 +493,11 @@
    "venue": "Cine York",
    "posterSource": "custom",
    "day_order": 3,
-   "synopsis_lang": "es"
+   "synopsis_lang": "es",
+   "country": "Perú (Canadá)",
+   "year": 2024,
+   "duration": "77 min",
+   "flags": "🇵🇪🇨🇦"
   },
   {
    "title": "Colorado",
@@ -645,7 +654,12 @@
    "venue": "Alianza Francesa de Buenos Aires",
    "posterSource": "custom",
    "day_order": 6,
-   "synopsis_lang": "es"
+   "synopsis_lang": "es",
+   "country": "Canadá",
+   "year": 2024,
+   "duration": "110 min",
+   "genre": "Documental",
+   "flags": "🇨🇦"
   },
   {
    "title": "Qué perforado está mi valle",
@@ -795,7 +809,11 @@
      "lbSlug": "greetings-from-rhodes",
      "_tmdbId": 1603941,
      "poster": "/assets/finca/pozdravy-z-rodosu.jpg",
-     "posterSource": "custom"
+     "posterSource": "custom",
+     "country": "Eslovaquia (República Checa)",
+     "year": 2026,
+     "duration": "25 min",
+     "flags": "🇸🇰🇨🇿"
     },
     {
      "title": "Tuktuit: Caribou",
@@ -832,7 +850,11 @@
      "poster": "/assets/finca/ecocidio.jpg",
      "has_qa": true,
      "qa_detail": "Q&A | Charla con el equipo de la película",
-     "posterSource": "custom"
+     "posterSource": "custom",
+     "country": "Argentina",
+     "year": 2025,
+     "duration": "2 min",
+     "flags": "🇦🇷"
     },
     {
      "title": "Sobre todo",
@@ -944,7 +966,12 @@
      "trailer": "https://youtu.be/-iIx2JCx_2o",
      "tematica": "Biodiversidad",
      "poster": "/assets/finca/la-nostra-isola.jpg",
-     "posterSource": "custom"
+     "posterSource": "custom",
+     "country": "Francia",
+     "year": 2024,
+     "duration": "45 min",
+     "genre": "Documental",
+     "flags": "🇫🇷"
     }
    ],
    "duration": "64 min",
@@ -975,7 +1002,11 @@
      "poster": "/assets/finca/ecocidio.jpg",
      "has_qa": true,
      "qa_detail": "Q&A | Charla con el equipo de la película",
-     "posterSource": "custom"
+     "posterSource": "custom",
+     "country": "Argentina",
+     "year": 2025,
+     "duration": "2 min",
+     "flags": "🇦🇷"
     },
     {
      "title": "Cuidemos el planeta",
@@ -1023,7 +1054,12 @@
      "trailer": "https://youtu.be/mh8z-zAJrg4",
      "tematica": "Biodiversidad",
      "poster": "/assets/finca/el-dia-que-aprendi-a-volar.jpg",
-     "posterSource": "custom"
+     "posterSource": "custom",
+     "country": "Venezuela",
+     "year": 2026,
+     "duration": "7 min",
+     "genre": "Animación",
+     "flags": "🇻🇪"
     },
     {
      "title": "Soy agua",
@@ -1036,7 +1072,12 @@
      "trailer": "https://youtu.be/R49Qujy1DGc",
      "tematica": "Agua",
      "poster": "/assets/finca/soc-aigua.jpg",
-     "posterSource": "custom"
+     "posterSource": "custom",
+     "country": "España",
+     "year": 2025,
+     "duration": "6 min",
+     "genre": "Animación",
+     "flags": "🇪🇸"
     }
    ],
    "duration": "17 min",
