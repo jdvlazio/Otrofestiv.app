@@ -543,6 +543,56 @@ quitar TODO el `backdrop-filter` no bajó el raster (238ms sin blur vs 192ms con
 blur — ruido). El conteo de capas sí es una métrica válida acá porque es
 estructural, no depende de la GPU.
 
+### 8.4.5 · Viaje del póster — FLIP, y por qué NO View Transitions
+
+**Regla: el póster viaja por `transform` sobre un clon (`.poster-flight`). Está
+PROHIBIDO usar `startViewTransition` en la apertura** — guardián `[poster-morph]`
+falla si reaparece.
+
+La VT del root dio **tres** fallos distintos, todos invisibles en escritorio:
+
+| # | Síntoma en device | Causa |
+|---|---|---|
+| 1 | el velo aparecía de golpe ~400ms tras el tap | los snapshots TAPAN el DOM real: el velo corría invisible debajo |
+| 2 | póster fantasma (#443/#444, revertido) | animar los pseudo-elementos del VT |
+| 3 | texto congelado de la ficha ANTERIOR sobre el grid | el snapshot capturaba textura vieja con la GPU cargada |
+
+El patrón común: **nada que ocurra debajo de un snapshot es visible, y ninguna
+curva lo arregla.** Mientras el motor tapa la vista con imágenes, el DOM real
+—sheet, velo, contenido— trabaja a ciegas.
+
+**El FLIP no tapa nada.** Un clon del póster viaja de la card a la ficha por
+`transform` (compositor puro: sobrevive al hilo principal ocupado), y en paralelo
+el sheet hace su spring y el velo su escalera, **visibles desde el primer frame**.
+Un solo timeline, tres actores, cero snapshots.
+
+Parámetros, con su razón:
+
+- **560ms, `cubic-bezier(.2,0,0,1)`.** La curva anterior `(.16,1,.3,1)` es
+  ease-out EXPO: cubría el recorrido en el primer 30% del tiempo y se sentía
+  "rapidísima" pese a durar 420ms. Medido con la curva nueva: 3% a los 52ms,
+  49% a mitad, 92% a los 349ms y una cola que asienta hasta 521ms — **velocidad
+  ~0 al aterrizar**, así que el traspaso clon→póster real es invisible.
+- **`filter: blur(5px) → 0` en 340ms.** El póster llega enfocando. Es `filter`,
+  no `backdrop-filter`: `[no-animated-blur]` solo prohíbe el segundo, y sobre un
+  clon pequeño el raster es barato.
+- **El radio NO se anima**: las 7 superficies comparten `--r-poster` (§ abajo).
+- **Rect final proyectado**: al medir, el sheet aún está en `translateY(100%)`,
+  así que el destino se calcula `innerHeight − sheet.offsetHeight + (dst − sheet)`.
+  Verificado en 4 aperturas —incluido un programa de cortos—: **Δ < 0.3px** en
+  posición y tamaño.
+
+**Un póster = un radio.** Había tres en un solo viaje (card 12px, ficha 8px,
+thumb de corto 4px) más un `10px` hardcodeado en el JS del vuelo, así que la
+redondez cambiaba a mitad de trayecto. Un póster es el mismo objeto donde sea que
+aparezca: todas sus superficies usan **`--r-poster`**. Guardián `[poster-radius]`.
+
+**Sin fundido para lo que no descansa en `opacity:1`.** El stagger `vtRise`
+animaba la opacidad a 1; al soltar la clase, el enlace de Letterboxd (que
+descansa al .6) daba un **escalón de oscurecimiento**. Usa `vtRiseNoFade`: sube,
+no aparece. Regla general: **una animación de entrada no puede terminar en un
+valor distinto al de reposo del elemento.**
+
 ### 8.4.4 · Orden de los avisos en una ficha (regla única, 29 jul 2026)
 
 **Todo sheet —película, corto, evento— ordena igual:**
