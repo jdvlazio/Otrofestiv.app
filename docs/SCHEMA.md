@@ -40,8 +40,15 @@ el dominio entonces:
   charla al final de la función, no una por obra). Sin esto el planificador cree
   que salís al terminar la primera y te ofrece otra función a la que no llegás.
 
-Además, agregar una obra anclada suma sus compañeras a Intereses (misma regla
-que un corto arrastrando su programa) y la ficha muestra `meta_funcion_incluye`.
+Además, la función es **una unidad en las dos direcciones**: agregar una obra
+anclada suma sus compañeras a Intereses y quitarla las quita —incluido su lugar
+en el plan guardado—. La ficha lo anuncia con `meta_funcion_incluye`.
+
+> La simetría no es cosmética. Con el quitar individual, quien agregaba una obra
+> y se arrepentía quedaba con la compañera en Intereses —que nunca eligió— y con
+> la franja igual reservada. Con un corto el problema no existe porque su botón
+> opera sobre el programa: ahí hay una sola entidad. Acá hay dos que deben
+> comportarse como una.
 
 > ⚠️ **Es opt-in a propósito, no se puede derivar.** En sedes multisala (Tribeca:
 > «AMC 19th St. East 6», «Village East by Angelika») misma hora y sede es **otra

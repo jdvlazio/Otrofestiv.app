@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `5b4ce35 fix(finca): duración, banderas y países de los 3 bloques de cortos (#454)`
+> Último commit: `bdd05fa feat(plan): anclaje de función — dos obras en una misma sesión no se pisan (#455)`
 
 ---
 
