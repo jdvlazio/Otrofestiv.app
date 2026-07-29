@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `ccaf5af fix(finca): banda negra en 3 pósters + país/año/duración desde el Excel oficial (#452)`
+> Último commit: `00ef8c9 FINCA: las secciones son los 8 ejes del festival + Fase 3 del pipeline (#453)`
 
 ---
 
