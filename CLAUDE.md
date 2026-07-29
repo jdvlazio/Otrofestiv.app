@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `8b332be fix(design): el viaje del poster pasa a FLIP — fuera la View Transition (#461)`
+> Último commit: `60e5895 fix(ui): el aviso pierde la caja y el corto recupera el aire tras la sinopsis (#462)`
 
 ---
 

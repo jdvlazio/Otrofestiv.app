@@ -2027,6 +2027,46 @@ except Exception as _e:
 # root produjo TRES fallos solo-en-device (§8.4.2): snapshots que tapan el DOM
 # (velo invisible→golpe), póster fantasma (#443/#444) y texto congelado de la
 # ficha anterior. PROHIBIDO reintroducir startViewTransition en la apertura.
+# ── [poster-radius] un póster = un radio, en TODAS sus superficies ─────────────
+# El póster viaja de la card del grid a la ficha (FLIP). Había TRES radios en un
+# solo viaje —card 12px, ficha 8px, thumb de corto 4px, más un 10px hardcodeado
+# en el JS del vuelo— así que cambiaba de redondez a mitad de trayecto. Un póster
+# es el mismo objeto donde sea que aparezca. Ver docs/DESIGN.md §8.4.5.
+check = 'poster-radius'
+try:
+    import re as _re3
+    _html = open('index.html', encoding='utf-8').read()
+    _SUPERFICIES = ['.poster-card', '.pel-sheet-poster', '.psp-editorial',
+                    '.c-film-thumb', '.pel-sheet-poster-ph', '.pel-sheet-poster-stage',
+                    '.poster-flight']
+    _visto = {k: False for k in _SUPERFICIES}
+    _mal = []
+    # Toda regla cuyo selector nombre una superficie de póster y fije border-radius
+    # debe fijarlo al token. Se recorren TODAS (hay selectores agrupados).
+    for _m in _re3.finditer(r'([^{}]+)\{([^}]*)\}', _html):
+        _sel, _body = _m.group(1), _m.group(2)
+        _br = _re3.search(r'border-radius:\s*([^;}]+)', _body)
+        if not _br:
+            continue
+        for _s2 in _SUPERFICIES:
+            if _re3.search(_re3.escape(_s2) + r'(?![\w-])', _sel):
+                if 'var(--r-poster)' in _br.group(1):
+                    _visto[_s2] = True
+                else:
+                    _mal.append(f"{_s2}: {_br.group(1).strip()}")
+    _falta = [k for k, v in _visto.items() if not v]
+    if _falta:
+        _mal.append('sin --r-poster: ' + ', '.join(_falta))
+    _js = open('src/main.js', encoding='utf-8').read()
+    if _re3.search(r"borderRadius\s*=\s*['\"]\d", _js):
+        _mal.append('radio hardcodeado en el vuelo (main.js) — usar el token')
+    if _mal:
+        fail(check, 'radio de poster desalineado: ' + '; '.join(_mal[:5]))
+    else:
+        ok(check, 'las 7 superficies de poster comparten --r-poster')
+except Exception as _e:
+    warn(check, f'no se pudo verificar poster-radius: {_e}')
+
 check = 'poster-morph'
 try:
     _html = open('index.html', encoding='utf-8').read()
@@ -2480,7 +2520,7 @@ try:
     #   i18n.js (diccionarios es/en, es DATA) · sheets-controller.js · handlers.js
     _ALLOW = {
         'src/view/agenda.js': 1622,
-        'src/main.js': 1637,  # +21: _morphOpen reescrito a FLIP — fuera startViewTransition, entra el clon en vuelo (29 jul)
+        'src/main.js': 1641,  # +25 total: _morphOpen a FLIP (fuera startViewTransition, entra clon en vuelo con curva y blur) (29 jul)
         'src/i18n/i18n.js': 1409,  # +4 (net): anclaje (label+texto) y Q&A con referentes, ×3 locales (29 jul)
         'src/controller/sheets-controller.js': 1424,  # +17: qa_type, 40 países que faltaban en _COUNTRY_FLAGS y flags del corto desde richItem (29 jul 2026)
         'src/controller/handlers.js': 935,  # +20: anclaje de función en toggleWL, simétrico al quitar (29 jul)

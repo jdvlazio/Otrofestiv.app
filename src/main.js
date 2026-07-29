@@ -446,7 +446,7 @@ FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202607291446';
+const BUILD_VERSION='202607291713';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';
@@ -969,7 +969,7 @@ document.addEventListener('keydown',function(e){
 // (spring) y el velo (escalera §8.4.1) corren visibles desde el primer frame.
 // Un solo timeline, tres actores, cero snapshots. Guardián [poster-morph].
 let _vtBusy=false;
-const _FLIGHT_MS=420; // aterriza justo tras el spring del sheet (380ms)
+const _FLIGHT_MS=560; // curva enfática: cola larga desacelerando (ver .poster-flight)
 // _morphOpen(sourceEl, openFn) — dueño ÚNICO del viaje del póster. sourceEl
 // contiene el póster de origen (card del grid O thumb de un corto dentro de un
 // programa); openFn hace el render síncrono del destino. Reusado por ambos.
@@ -1001,9 +1001,13 @@ function _morphOpen(sourceEl, openFn){
     document.body.appendChild(fly);
     dst.style.opacity='0';          // el real espera a que aterrice el clon
     src.style.opacity='0';          // la card no muestra doble póster
+    // El radio NO se anima: las 6 superficies de póster comparten --r-poster, así
+    // que el clon nace y aterriza con la misma redondez (guardián [poster-radius]).
+    // Solo transform (posición/escala) y filter (blur→foco). Dos rAF: el primer
+    // frame fija el estado inicial, el segundo dispara la transición.
     requestAnimationFrame(()=>requestAnimationFrame(()=>{
       fly.style.transform=`translate(${b.left-a.left}px,${b.top-a.top}px) scale(${b.width/a.width},${b.height/a.height})`;
-      fly.style.borderRadius='10px';
+      fly.style.filter='blur(0px)';
     }));
     setTimeout(()=>{
       dst.style.opacity=''; src.style.opacity='';
