@@ -344,57 +344,56 @@ helpers.js o `--amb` a mano = build roto. Safari iOS: muestrear con URL propia
   `--gray` (nunca `gray2`), radio pill.
 - **ESTADO ACTIVO**: clase `.on` ÚNICA — `.active`/`.selected` prohibidos.
 
-### 8.4.1 · Velo de los sheets (`--blur-veil` / `--tr-veil`)
-**Dos reglas duras.**
+### 8.4.1 · Velo de los sheets — driver rAF (`initVeil`, sheets-controller.js)
 
-**(1) El velo DESENFOCA, no apaga.** `--veil-tint` (negro al **42%**) +
-`--blur-veil` (**14px**). Antes era 70% de negro con 6px: lo que se percibía era
-un apagón y el blur quedaba de adorno debajo de tanto negro — "no hay curva de
-desenfoque" fue el reporte. El peso va invertido: mucho blur, poco tinte. Como
-el radio es fijo, su coste se paga una vez y 14px no es caro.
+**La regla que quedó de la auditoría (28 jul 2026): el velo NO se anima en CSS.
+Lo conduce JS por rAF, pisando radio y opacidad frame a frame.** El radio va
+`k² × --blur-veil` (14px) y la opacidad `k` (easeOutCubic, 360ms abrir / 200ms
+lineal cerrar). Tinte `--veil-tint` (negro 42%): el velo desenfoca, no apaga.
+Guardián `[no-animated-blur]`: ninguna `transition` incluye `backdrop-filter`.
 
-**(2) El desenfoque NO se anima. Se anima la OPACIDAD de la capa que lo
-lleva.** El overlay tiene `backdrop-filter: blur(var(--blur-veil))` **fijo**
-(6px) y transiciona sólo `opacity` en `--tr-veil` (380ms `cubic-bezier(.4,0,.2,1)`).
-El compositor mezcla el fondo nítido con su versión desenfocada: al 30% de
-opacidad se ve un 30% de desenfoque. Guardián: `[no-animated-blur]`.
+**Por qué — hallazgos del banco aislado** (4 variantes lado a lado, transición
+de 3s en cámara lenta, medidas por captura en WebKit del iOS Simulator):
 
-**Por qué, y qué costó averiguarlo (28 jul 2026).** Cuatro intentos:
+1. **La opacidad CSS no atenúa el `backdrop-filter`.** Con blur fijo y fade de
+   opacidad, al 45% de opacidad ya se mide **84%** del desenfoque: la opacidad
+   funde el tinte, pero el filtro entra casi entero apenas la capa se ve. Por
+   eso "blur fijo + opacity" (intentos 5–6) seguía brincando.
+2. **`transition` del radio también revienta temprano**, con cualquier curva
+   (ease-out, expo, ease-in): mismo perfil que el fijo.
+3. **Pisar los valores por frame desde JS traza la curva honesta** — 35% cuando
+   corresponde 35%. Es la única variante que progresa, y no depende del
+   interpolador del motor.
+4. **La nitidez perceptual muere a ~5px de radio.** Aunque la rampa fuera
+   perfecta, un radio lineal "salta" a la vista: el radio debe crecer ∝ k²
+   (lento al inicio) para que el desenfoque se *vea* progresar.
 
-| # | Enfoque | Síntoma en iPhone |
+Historial de intentos (los 6 primeros fueron a ciegas — cada uno corrigió el
+síntoma del anterior sin la causa):
+
+| # | Enfoque | Resultado |
 |---|---|---|
-| 1 | blur fijo 4px, sólo opacity 200ms | el desenfoque casi no se notaba |
-| 2 | animar blur a 18px / 420ms ease-out | pesado y lento; parecía atado al color de la ficha |
-| 3 | animar blur a 10px / 240ms expo-out | **abrupto** |
-| 4 | animar blur a 6px / 380ms `.4,0,.2,1` | **seguía abrupto** |
-| 5 | blur fijo 6px + opacity 380ms | progresión real, pero **brinco** al abrir |
-| 6 ✅ | + sin `will-change`, 14px / 42% negro | — |
+| 1 | blur fijo 4px, opacity 200ms | imperceptible |
+| 2–4 | `transition` del radio (18→10→6px, 3 curvas) | brinco (causas 2 y 4) |
+| 5–6 | blur fijo + fade de opacity | brinco (causa 1) |
+| 7 ✅ | **driver rAF: radio ∝ k², opacidad k** | progresión medida y real |
 
-La causa apareció midiendo una **grabación de pantalla del iPhone**, frame a
-frame: entre 3933ms y 4000ms —4 frames— el fondo pasaba de nítido a totalmente
-desenfocado, mientras el panel seguía subiendo hasta 4450ms.
+Reglas de método que esto deja:
+- **Animación sobre `backdrop-filter` se valida con banco aislado en cámara
+  lenta + medición por frame** (screenshots → nitidez con PIL). Ni Chromium ni
+  "se ve bien en el Mac" cuentan como evidencia; la grabación de pantalla del
+  dispositivo real es el árbitro final.
+- **Nunca `will-change` sobre un elemento con `backdrop-filter`** (crear o
+  destruir la capa recalcula el backdrop → brinco).
+- El driver ancla su t0 en el **primer frame propio**: el jank de construir el
+  DOM del sheet ocurre antes y no se come el arranque.
+- El velo no espera al sheet (`--sheet-in`, .38s) ni al color ambiental
+  (`--amb-o`, .6s): capas independientes.
+- `prefers-reduced-motion`: el driver salta al estado final, sin animación.
 
-- **El WKWebView de iOS no interpola `backdrop-filter`: salta al valor final.**
-  Ninguna curva lo arregla, porque la curva nunca llega a aplicarse.
-- **Playwright/WebKit de escritorio SÍ interpola.** Por eso los intentos 2–4
-  pasaron la verificación local y fallaron en el teléfono. Medir el valor
-  computado en `ios-mobile` **no basta**: ese proyecto no reproduce WKWebView.
-- **La única evidencia válida para animación en iOS es una grabación de
-  pantalla del dispositivo real**, extraída con `ffmpeg` y medida por frame.
-- **Nunca `will-change` sobre un elemento con `backdrop-filter`.** Promoverlo a
-  capa hace que iOS recalcule el backdrop al crear/destruir la capa, y eso se ve
-  como un brinco al abrir. Fue el glitch del intento 5.
-- Corolario general: animar una propiedad de *filtro* es frágil entre motores;
-  animar `opacity`/`transform` es seguro y además más barato.
-
-El velo **no espera** a la entrada del sheet (`--sheet-in`, .38s) ni al color
-ambiental (`--amb-o`, .6s): son capas independientes y el color llega después.
-
-Cerrar usa `--tr-veil-out` (160ms): salir no se saborea.
-`prefers-reduced-motion` cae a un fundido de 120ms sin animar el desenfoque.
-Aplicado en `.pel-sheet-overlay`. **Pendiente**: los otros 5 overlays de sheet
-(rating, pv-rating, conflict, prio-limit, plan-confirm) siguen con blur fijo y
-valores dispares (4/12/10/8/6px) — unificarlos al token es el siguiente paso.
+**Pendiente**: los otros 5 overlays de sheet (rating, pv-rating, conflict,
+prio-limit, plan-confirm) siguen con blur CSS fijo y valores dispares
+(4/12/10/8/6px) — migrarlos al driver es el siguiente paso.
 
 ### 8.5 · Iconos — ver `docs/ICONS.md`
 Fuente única `ICONS` (`components.js`); `aria-hidden` de fábrica; escala icono ≈
