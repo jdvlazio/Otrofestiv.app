@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `79c896e fix(datos): el globo terraqueo — tres fallos, y el guardian era el peor`
+> Último commit: `ef99ea5 Q&A: rótulo correcto y posición · banderas: el globo y su guardián dormido · copy del anclaje (#457)`
 
 ---
 
