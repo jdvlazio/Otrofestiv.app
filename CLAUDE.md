@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `bdd05fa feat(plan): anclaje de función — dos obras en una misma sesión no se pisan (#455)`
+> Último commit: `79c896e fix(datos): el globo terraqueo — tres fallos, y el guardian era el peor`
 
 ---
 

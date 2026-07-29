@@ -2222,8 +2222,22 @@ except Exception as _e:
 # mapear se caza aquí antes de mostrar globo. Festival nuevo activo → sumarlo abajo.
 check = 'country-flags'
 try:
-    import re as _re, json as _json
-    _ACTIVE = ['festivals/tercertiempo-2026.json', 'festivals/fantasofest-2026.json']
+    import re as _re, json as _json, datetime as _dt, glob as _g2
+    # Los festivales VIVOS se DERIVAN de FESTIVAL_CONFIG (festivalEndStr futuro).
+    # Antes era una lista escrita a mano y nadie la actualizó nunca: el guardián
+    # llevaba meses dando verde sobre dos festivales ya pasados mientras
+    # FICMontañas y FINCA se publicaban sin revisar — "el segundo festival
+    # consecutivo con globos" (Juan, 29 jul 2026). Un guardián con lista manual
+    # no es un guardián: es una foto que envejece.
+    _cfg = open('src/config.js', encoding='utf-8').read()
+    _hoy = _dt.date.today().isoformat()
+    _vivos = set()
+    for _fid, _end in _re.findall(r"'([a-z0-9]+)':\s*\{.*?festivalEndStr:\s*'(\d{4}-\d{2}-\d{2})", _cfg, _re.S):
+        if _end >= _hoy:
+            _vivos.add(_re.sub(r'([a-zA-Z]+)(\d+)$', r'\1-\2', _fid))
+    _ACTIVE = [f'festivals/{_v}.json' for _v in sorted(_vivos)]
+    if not _ACTIVE:  # sin festivales vivos, revisar el más reciente igual
+        _ACTIVE = sorted(_g2.glob('festivals/*.json'))[-1:]
     _js = open('src/controller/sheets-controller.js', encoding='utf-8').read()
     _m = _re.search(r'const _COUNTRY_FLAGS=\{(.*?)\};', _js, _re.S)
     _mapped = set(_re.findall(r"'([^']+)':", _m.group(1))) if _m else set()
@@ -2232,7 +2246,7 @@ try:
         for _f in _films or []:
             _c = (_f.get('country') or '').strip()
             if _c and not _f.get('flags'):
-                _parts = [p.strip() for p in _re.split(r'[,/]', _c) if p.strip()]
+                _parts = [p.strip() for p in _re.split(r'[,/()]', _c) if p.strip()]
                 _unmapped = [p for p in _parts if p not in _mapped]
                 if _unmapped:
                     _bad.append(f"{_fid}: '{_f.get('title','?')[:30]}' país sin bandera: {', '.join(_unmapped)}")
@@ -2441,8 +2455,8 @@ try:
     _ALLOW = {
         'src/view/agenda.js': 1622,
         'src/main.js': 1616,
-        'src/i18n/i18n.js': 1406,  # +1 (net): meta_funcion_incluye ×3 locales (anclaje de función, 29 jul)
-        'src/controller/sheets-controller.js': 1407,  # +4: VEIL_MAX leído de --blur-veil (fuente única con el CSS) (29 jul 2026)
+        'src/i18n/i18n.js': 1409,  # +4 (net): anclaje (label+texto) y Q&A con referentes, ×3 locales (29 jul)
+        'src/controller/sheets-controller.js': 1424,  # +17: qa_type, 40 países que faltaban en _COUNTRY_FLAGS y flags del corto desde richItem (29 jul 2026)
         'src/controller/handlers.js': 935,  # +20: anclaje de función en toggleWL, simétrico al quitar (29 jul)
     }
     _over = []
