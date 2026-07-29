@@ -348,7 +348,7 @@ helpers.js o `--amb` a mano = build roto. Safari iOS: muestrear con URL propia
 
 **La regla que quedó de la auditoría (28 jul 2026): el velo NO se anima en CSS.
 Lo conduce JS por rAF, pisando radio y opacidad frame a frame.** El radio va
-`k² × --blur-veil` (**19px**) y la opacidad `k` (easeOutCubic, 360ms abrir /
+`k² × --blur-veil` (**10px**) y la opacidad `k` (easeOutCubic, 360ms abrir /
 200ms lineal cerrar). `--blur-veil` es la **fuente única**: el driver la lee con
 `getComputedStyle`, así el fallback CSS sin JS nunca diverge.
 
@@ -371,12 +371,15 @@ desenfoque, no el tiempo". Medido el viaje a tres escalas espaciales:
 - Corolario de método: medir desenfoque con una sola escala espacial engaña.
   Submuestrear (1/6, 1/12) antes de medir el gradiente.
 
-**Ajuste a 19px (mismo día).** 38px era el máximo del viaje medible, y en
-device tapaba demasiado: el fondo dejaba de leerse como "la lista, desenfocada"
-y pasaba a mancha, perdiendo la referencia de dónde estabas. Se bajó a la
-mitad. **La métrica dice cuánto CAMBIA el fondo, no cuánto DEBE tapar**: el
-punto de llegada es decisión de diseño, no el máximo que dé la medición.
-Curva resultante: `1.3 → 9.2 → 17.5 → 19px` en ~400ms. Tinte `--veil-tint` (negro 42%): el velo desenfoca, no apaga.
+**Bajado a 10px, en dos pasos (38 → 19 → 10, mismo día).** 38px era el máximo
+del viaje medible; 19px seguía tapando de más. El criterio que sí funciona: el
+fondo debe seguir leyéndose como **"la lista, desenfocada"** —es la referencia
+de dónde estabas—, no convertirse en mancha.
+
+**La métrica dice cuánto CAMBIA el fondo, no cuánto DEBE tapar.** El punto de
+llegada es decisión de diseño y se juzga en device; el máximo medible no es el
+valor correcto. Dos rondas de feedback se fueron en confundir una cosa con la
+otra. Curva resultante: `0.7 → 4.8 → 9.2 → 10px` en ~400ms. Tinte `--veil-tint` (negro 42%): el velo desenfoca, no apaga.
 Guardián `[no-animated-blur]`: ninguna `transition` incluye `backdrop-filter`.
 
 **Por qué — hallazgos del banco aislado** (4 variantes lado a lado, transición

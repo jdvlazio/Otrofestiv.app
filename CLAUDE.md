@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `aa83604 feat(design): el velo amplía su recorrido — radio 14→38px (medido, no a ojo) (#440)`
+> Último commit: `696673c fix(design): el radio del velo baja a la mitad (38→19px) — 38 tapaba de más (#441)`
 
 ---
 

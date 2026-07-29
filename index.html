@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607290714">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607290714">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607290723">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607290723">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -226,16 +226,17 @@ window.sentryOnLoad = function() {
      (initVeil en sheets-controller.js), con radio ∝ k² porque la nitidez
      perceptual muere a ~5px: si el radio crece lineal, "salta" aunque el
      motor interpole. El velo desenfoca, no apaga: mucho blur, poco tinte.
-     RADIO 19px (29 jul 2026): se midió el "viaje" foco→desenfoque a tres
-     escalas espaciales y el recorrido crecía hasta ~38px, así que se subió
-     ahí — pero en device 38px tapaba demasiado: el fondo dejaba de leerse como
-     "la lista, desenfocada" y pasaba a mancha. 19px (la mitad) conserva casi
-     todo el viaje perceptible y devuelve la referencia de dónde estabas.
-     Lección: la métrica dice cuánto CAMBIA el fondo, no cuánto DEBE tapar —
-     el punto de llegada es decisión de diseño, no del máximo medible.
+     RADIO 10px (29 jul 2026, tras 38→19→10 en device). La medición del
+     "viaje" foco→desenfoque decía que el recorrido crece hasta ~38px, y de ahí
+     salieron los dos valores anteriores: ambos tapaban de más. El fondo tiene
+     que seguir leyéndose como "la lista, desenfocada" — es la referencia de
+     dónde estabas —, no convertirse en mancha.
+     Lección dura: la métrica dice cuánto CAMBIA el fondo, no cuánto DEBE
+     tapar. El punto de llegada es decisión de diseño y se juzga en device;
+     el máximo medible no es el valor correcto.
      Este token es la fuente única: el driver lo lee con getComputedStyle.
      Duraciones/curva viven en el driver; acá solo intensidad y tinte. */
-  --blur-veil: 19px;
+  --blur-veil: 10px;
   --veil-tint: rgba(4,4,4,.42);
   --tr-enter:  300ms ease-out; /* entradas al DOM: paneles, drawers       */
   /* Sheets — curva canónica (18 jul 2026): TODO bottom-sheet abre con spring
@@ -2982,7 +2983,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202607290714";
+    s.src="/src/main.js?v=202607290723";
     document.body.appendChild(s);
     // Watchdog de boot (P0 18 jul): si el grafo ESM murió en el import (caché
     // HTTP mixta tras deploys en ráfaga — main.js nuevo + módulo viejo sin el
