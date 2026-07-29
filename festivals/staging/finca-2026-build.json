@@ -4,9 +4,10 @@
   "verificacion": "las 20 funciones del Excel coinciden 1:1 con la grilla día/sede/hora del doc",
   "preguntas_festival": [
    "F=14 no existe: la columna F salta de 13.0 a 15.0 y ningún valor (ni «x y y») contiene 14. El doc tampoco tiene un slot sin cubrir. ¿Función eliminada o error de numeración?",
-   "7 filas de la hoja «Selección Oficial» están casi vacías (sin F, fecha, sede, sección, y casi sin metadatos): largos «La città dei bambini. L´utopia di Francesco Tonucci» y «The fire in our hearts»; cortos «Reverie», «甘棠，湖», «Becoming Air», «The council of all beings» y «FLORIÁN» (este último sí trae país/año/duración). ¿Siguen en la selección? ¿Tendrán función? No se montan hasta confirmar.",
+   "Las filas 40–46 de «Selección Oficial» están OCULTAS en la hoja (rango oculto 39–47) y casi vacías: largos «La città dei bambini. L´utopia di Francesco Tonucci» (fila 41) y «The fire in our hearts» (fila 42); cortos «Reverie» (40), «甘棠，湖» (43), «Becoming Air» (44), «The council of all beings» (45) y «FLORIÁN» (46). Interpretamos que se cayeron de la selección (por eso no se montan). Confirmar suave: «vimos filas ocultas al final de la hoja — ¿descartadas, correcto?»",
    "Pósters faltantes en el Drive para 3 cortos programados: Tuktuit: Caribou, Cuidemos el planeta, El día que aprendí a volar."
-  ]
+  ],
+  "nota_pipeline": "El export xlsx de Google Sheets INCLUYE las filas ocultas. Todo parseo debe chequear row_dimensions[r].hidden (openpyxl sin read_only) antes de tratar una fila como parte de la selección."
  },
  "venues": {
   "Alianza Francesa de Buenos Aires": {
