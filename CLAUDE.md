@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `41aaf5b fix(design): el velo lo conduce un driver rAF — auditoría con banco aislado (#438)`
+> Último commit: `c1517d9 fix(design): el fundido a negro era el crossfade del root, no el velo (#439)`
 
 ---
 
