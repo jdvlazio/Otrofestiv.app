@@ -82,41 +82,79 @@
  ],
  "prioLimit": 4,
  "sections": {
-  "🌍 Largos Internacionales": {
-   "oficial": "Competencia Oficial de Largometrajes Internacionales",
-   "en": "International Features",
-   "archetype": "Competencia",
+  "⛏️ Extractivismos": {
+   "oficial": "Extractivismos",
+   "en": "Extractivism",
+   "archetype": "Perspectivas / Miradas",
+   "color": "#C1682E",
    "order": 1
+  },
+  "🪶 Pueblos Originarios": {
+   "oficial": "Pueblos Originarios",
+   "en": "Indigenous Peoples",
+   "archetype": "Perspectivas / Miradas",
+   "color": "#B07BD4",
+   "order": 2
+  },
+  "🏚️ Foco Tierra y Techo": {
+   "oficial": "Foco Tierra y Techo",
+   "en": "Focus: Land and Shelter",
+   "archetype": "Perspectivas / Miradas",
+   "color": "#D9A441",
+   "order": 3
+  },
+  "🌿 Biodiversidad": {
+   "oficial": "Biodiversidad",
+   "en": "Biodiversity",
+   "archetype": "Perspectivas / Miradas",
+   "color": "#4CAF6A",
+   "order": 4
+  },
+  "✊ FICDH - Derechos Humanos": {
+   "oficial": "FICDH - Derechos Humanos",
+   "en": "FICDH – Human Rights",
+   "archetype": "Perspectivas / Miradas",
+   "color": "#D8557F",
+   "order": 5
+  },
+  "💧 Agua": {
+   "oficial": "Agua",
+   "en": "Water",
+   "archetype": "Perspectivas / Miradas",
+   "color": "#3D9BE0",
+   "order": 6
+  },
+  "🌾 Soberanía Alimentaria": {
+   "oficial": "Soberanía Alimentaria",
+   "en": "Food Sovereignty",
+   "archetype": "Perspectivas / Miradas",
+   "color": "#8FAF3C",
+   "order": 7
+  },
+  "🌡️ Justicia Climática": {
+   "oficial": "Justicia Climática",
+   "en": "Climate Justice",
+   "archetype": "Perspectivas / Miradas",
+   "color": "#E0533F",
+   "order": 8
   },
   "🌋 Cortos Internacionales": {
    "oficial": "Competencia Oficial de Corto y Mediometrajes Internacionales",
    "en": "International Shorts",
-   "archetype": "Competencia",
-   "order": 2
-  },
-  "🛶 Docs Latinoamericanos": {
-   "oficial": "Competencia Oficial de Documentales Latinoamericanos",
-   "en": "Latin American Documentaries",
-   "archetype": "Competencia",
-   "order": 3
-  },
-  "🌾 Panorama": {
-   "oficial": "Panorama",
-   "en": "Panorama",
-   "archetype": "Muestra / País",
-   "order": 4
+   "archetype": "Cortos / Programas",
+   "order": 9
   },
   "🐝 FINQUITA · Infancias": {
    "oficial": "FINQUITA — Cine para infancias",
    "en": "FINQUITA · Kids",
    "archetype": "Cortos / Programas",
-   "order": 5
+   "order": 10
   },
   "🌱 Actividades": {
    "oficial": "Actividades del festival",
    "en": "Activities",
    "archetype": "Especiales / Eventos",
-   "order": 6
+   "order": 11
   }
  },
  "venues": {
@@ -181,13 +219,15 @@
    "tematica": "FICDH - Derechos Humanos",
    "poster": "/assets/finca/nao-havera-mais-historia-sem-nos.jpg",
    "flags": "🇧🇷🇵🇹",
-   "section": "🌍 Largos Internacionales",
+   "section": "✊ FICDH - Derechos Humanos",
    "day": "2026-08-12",
    "time": "19:30",
    "venue": "Alianza Francesa de Buenos Aires",
    "posterSource": "custom",
    "day_order": 0,
-   "synopsis_lang": "es"
+   "synopsis_lang": "es",
+   "lbSlug": "no-more-history-without-us",
+   "competencia": "Competencia Oficial de Largometrajes Internacionales"
   },
   {
    "title": "Toroboro: el nombre de las plantas",
@@ -209,13 +249,14 @@
    "flags": "🇪🇨🇧🇷",
    "has_qa": true,
    "qa_detail": "Q&A | Charla con referentes en la temática",
-   "section": "🛶 Docs Latinoamericanos",
+   "section": "🌿 Biodiversidad",
    "day": "2026-08-13",
    "time": "19:30",
    "venue": "Alianza Francesa de Buenos Aires",
    "posterSource": "custom",
    "day_order": 1,
-   "synopsis_lang": "es"
+   "synopsis_lang": "es",
+   "competencia": "Competencia Oficial de Documentales Latinoamericanos"
   },
   {
    "title": "Propiedad privada prohibido pasar",
@@ -235,7 +276,7 @@
    "flags": "🇵🇱",
    "has_qa": true,
    "qa_detail": "Q&A | Charla con el equipo de la película",
-   "section": "🌾 Panorama",
+   "section": "🏚️ Foco Tierra y Techo",
    "day": "2026-08-13",
    "time": "18:00",
    "venue": "Cine York",
@@ -259,7 +300,7 @@
    "tematica": "Biodiversidad",
    "poster": "/assets/finca/mi-casa-es-su-casa.jpg",
    "flags": "🇨🇴",
-   "section": "🌾 Panorama",
+   "section": "🌿 Biodiversidad",
    "day": "2026-08-13",
    "time": "18:00",
    "venue": "Cine York",
@@ -284,13 +325,14 @@
    "_tmdbId": 1570024,
    "poster": "/assets/finca/ziki.jpg",
    "flags": "🇮🇹",
-   "section": "🌋 Cortos Internacionales",
+   "section": "⛏️ Extractivismos",
    "day": "2026-08-13",
    "time": "20:30",
    "venue": "Cine York",
    "posterSource": "custom",
    "day_order": 1,
-   "synopsis_lang": "es"
+   "synopsis_lang": "es",
+   "competencia": "Competencia Oficial de Corto y Mediometrajes Internacionales"
   },
   {
    "title": "Yurlu",
@@ -310,13 +352,15 @@
    "flags": "🇦🇺",
    "has_qa": true,
    "qa_detail": "Q&A | Charla con referentes en la temática",
-   "section": "🌍 Largos Internacionales",
+   "section": "🪶 Pueblos Originarios",
    "day": "2026-08-13",
    "time": "20:30",
    "venue": "Cine York",
    "posterSource": "custom",
    "day_order": 1,
-   "synopsis_lang": "es"
+   "synopsis_lang": "es",
+   "lbSlug": "yurlu-country",
+   "competencia": "Competencia Oficial de Largometrajes Internacionales"
   },
   {
    "title": "Pailako. Cosmovisión en resistencia",
@@ -337,7 +381,7 @@
    "flags": "🇦🇷",
    "has_qa": true,
    "qa_detail": "Q&A | Charla con el equipo de la película",
-   "section": "🌾 Panorama",
+   "section": "🪶 Pueblos Originarios",
    "day": "2026-08-14",
    "time": "19:00",
    "venue": "Cine Arte Cacodelphia",
@@ -361,7 +405,7 @@
    "tematica": "Soberanía Alimentaria",
    "poster": "/assets/finca/la-granja-de-la-libertad.jpg",
    "flags": "🇦🇷🇵🇸",
-   "section": "🌾 Panorama",
+   "section": "🌾 Soberanía Alimentaria",
    "day": "2026-08-14",
    "time": "19:00",
    "venue": "Cine Arte Cacodelphia",
@@ -387,7 +431,7 @@
    "flags": "🇦🇷🇪🇸",
    "has_qa": true,
    "qa_detail": "Q&A | Charla con el equipo de la película",
-   "section": "🌾 Panorama",
+   "section": "⛏️ Extractivismos",
    "day": "2026-08-14",
    "time": "18:00",
    "venue": "Cine York",
@@ -413,13 +457,14 @@
    "_tmdbId": 1449004,
    "poster": "/assets/finca/pau-d-arco.jpg",
    "flags": "🇧🇷",
-   "section": "🛶 Docs Latinoamericanos",
+   "section": "🏚️ Foco Tierra y Techo",
    "day": "2026-08-14",
    "time": "18:00",
    "venue": "Cine York",
    "posterSource": "custom",
    "day_order": 2,
-   "synopsis_lang": "es"
+   "synopsis_lang": "es",
+   "competencia": "Competencia Oficial de Documentales Latinoamericanos"
   },
   {
    "title": "El árbol de la autenticidad",
@@ -440,13 +485,15 @@
    "flags": "🇨🇩🇧🇪🇫🇷",
    "has_qa": true,
    "qa_detail": "Q&A | Charla con referentes en la temática",
-   "section": "🌍 Largos Internacionales",
+   "section": "⛏️ Extractivismos",
    "day": "2026-08-14",
    "time": "20:30",
    "venue": "Cine York",
    "posterSource": "custom",
    "day_order": 2,
-   "synopsis_lang": "es"
+   "synopsis_lang": "es",
+   "lbSlug": "the-tree-of-authenticity",
+   "competencia": "Competencia Oficial de Largometrajes Internacionales"
   },
   {
    "title": "De la guerra fría a la guerra verde",
@@ -460,7 +507,7 @@
    "poster": "/assets/finca/de-la-guerra-fria-a-la-guerra-verde.jpg",
    "has_qa": true,
    "qa_detail": "Q&A | Charla con referentes en la temática",
-   "section": "🌍 Largos Internacionales",
+   "section": "✊ FICDH - Derechos Humanos",
    "day": "2026-08-15",
    "time": "17:00",
    "venue": "Cine Arte Cacodelphia",
@@ -471,7 +518,9 @@
    "year": 2024,
    "duration": "105 min",
    "genre": "Documental",
-   "flags": "🇵🇾"
+   "flags": "🇵🇾",
+   "lbSlug": "green-is-the-new-red",
+   "competencia": "Competencia Oficial de Largometrajes Internacionales"
   },
   {
    "title": "Karuara, la gente del río",
@@ -487,7 +536,7 @@
    "lbSlug": "karuara-people-of-the-river",
    "_tmdbId": 1266623,
    "poster": "/assets/finca/karuara-la-gente-del-rio.jpg",
-   "section": "🛶 Docs Latinoamericanos",
+   "section": "💧 Agua",
    "day": "2026-08-15",
    "time": "20:30",
    "venue": "Cine York",
@@ -497,7 +546,8 @@
    "country": "Perú (Canadá)",
    "year": 2024,
    "duration": "77 min",
-   "flags": "🇵🇪🇨🇦"
+   "flags": "🇵🇪🇨🇦",
+   "competencia": "Competencia Oficial de Documentales Latinoamericanos"
   },
   {
    "title": "Colorado",
@@ -515,7 +565,7 @@
    "tematica": "Biodiversidad",
    "poster": "/assets/finca/colorado.jpg",
    "flags": "🇦🇷🇩🇪🇨🇭",
-   "section": "🌾 Panorama",
+   "section": "🌿 Biodiversidad",
    "day": "2026-08-15",
    "time": "20:30",
    "venue": "Cine York",
@@ -543,13 +593,14 @@
    "flags": "🇦🇷",
    "has_qa": true,
    "qa_detail": "Q&A | Charla con el equipo de la película",
-   "section": "🌍 Largos Internacionales",
+   "section": "⛏️ Extractivismos",
    "day": "2026-08-16",
    "time": "17:00",
    "venue": "Cine Arte Cacodelphia",
    "posterSource": "custom",
    "day_order": 4,
-   "synopsis_lang": "es"
+   "synopsis_lang": "es",
+   "competencia": "Competencia Oficial de Largometrajes Internacionales"
   },
   {
    "title": "Mora",
@@ -572,13 +623,14 @@
    "flags": "🇧🇷",
    "has_qa": true,
    "qa_detail": "Q&A | Charla con el equipo de la película",
-   "section": "🛶 Docs Latinoamericanos",
+   "section": "🏚️ Foco Tierra y Techo",
    "day": "2026-08-17",
    "time": "17:00",
    "venue": "Cine Arte Cacodelphia",
    "posterSource": "custom",
    "day_order": 5,
-   "synopsis_lang": "es"
+   "synopsis_lang": "es",
+   "competencia": "Competencia Oficial de Documentales Latinoamericanos"
   },
   {
    "title": "¿Cuán profundo es tu amor?",
@@ -599,13 +651,15 @@
    "flags": "🇬🇧",
    "has_qa": true,
    "qa_detail": "Q&A | Charla con referentes en la temática",
-   "section": "🌍 Largos Internacionales",
+   "section": "💧 Agua",
    "day": "2026-08-17",
    "time": "19:00",
    "venue": "Centro Cultural 25 de Mayo",
    "posterSource": "custom",
    "day_order": 5,
-   "synopsis_lang": "es"
+   "synopsis_lang": "es",
+   "lbSlug": "how-deep-is-your-love-2025",
+   "competencia": "Competencia Oficial de Largometrajes Internacionales"
   },
   {
    "title": "Tierra que habla",
@@ -627,13 +681,14 @@
    "flags": "🇦🇷",
    "has_qa": true,
    "qa_detail": "Q&A | Charla con el equipo de la película",
-   "section": "🛶 Docs Latinoamericanos",
+   "section": "🪶 Pueblos Originarios",
    "day": "2026-08-18",
    "time": "19:00",
    "venue": "Cine Arte Cacodelphia",
    "posterSource": "custom",
    "day_order": 6,
-   "synopsis_lang": "es"
+   "synopsis_lang": "es",
+   "competencia": "Competencia Oficial de Documentales Latinoamericanos"
   },
   {
    "title": "Yintah",
@@ -648,7 +703,7 @@
    "poster": "/assets/finca/yintah.jpg",
    "has_qa": true,
    "qa_detail": "Q&A | Charla con referentes en la temática",
-   "section": "🌍 Largos Internacionales",
+   "section": "🪶 Pueblos Originarios",
    "day": "2026-08-18",
    "time": "18:30",
    "venue": "Alianza Francesa de Buenos Aires",
@@ -659,7 +714,9 @@
    "year": 2024,
    "duration": "110 min",
    "genre": "Documental",
-   "flags": "🇨🇦"
+   "flags": "🇨🇦",
+   "lbSlug": "yintah",
+   "competencia": "Competencia Oficial de Largometrajes Internacionales"
   },
   {
    "title": "Qué perforado está mi valle",
@@ -678,7 +735,7 @@
    "flags": "🇦🇷",
    "has_qa": true,
    "qa_detail": "Q&A | Charla con el equipo de la película",
-   "section": "🌾 Panorama",
+   "section": "⛏️ Extractivismos",
    "day": "2026-08-18",
    "time": "19:00",
    "venue": "Teatro Empire",
@@ -706,7 +763,7 @@
    "flags": "🇵🇪",
    "has_qa": true,
    "qa_detail": "Q&A | Charla con el equipo de la película",
-   "section": "🌾 Panorama",
+   "section": "🪶 Pueblos Originarios",
    "day": "2026-08-18",
    "time": "19:00",
    "venue": "Teatro Empire",
@@ -734,7 +791,7 @@
    "flags": "🇺🇾",
    "has_qa": true,
    "qa_detail": "Q&A | Charla con el equipo de la película",
-   "section": "🌾 Panorama",
+   "section": "🏚️ Foco Tierra y Techo",
    "day": "2026-08-18",
    "time": "21:00",
    "venue": "Teatro Empire",
@@ -761,13 +818,14 @@
    "flags": "🇧🇪",
    "has_qa": true,
    "qa_detail": "Q&A | Charla con referentes en la temática",
-   "section": "🌾 Panorama",
+   "section": "🌡️ Justicia Climática",
    "day": "2026-08-19",
    "time": "21:30",
    "venue": "Cine Arte Cacodelphia",
    "posterSource": "custom",
    "day_order": 7,
-   "synopsis_lang": "es"
+   "synopsis_lang": "es",
+   "lbSlug": "the-cost-of-growth"
   },
   {
    "title": "Cortometrajes en Competencia Oficial — Programa 1",
@@ -792,7 +850,8 @@
      "_tmdbId": 1599926,
      "poster": "/assets/finca/acid-city.jpg",
      "flags": "🇫🇷",
-     "posterSource": "custom"
+     "posterSource": "custom",
+     "competencia": "Competencia Oficial de Corto y Mediometrajes Internacionales"
     },
     {
      "title": "Saludos desde Rodas",
@@ -813,7 +872,8 @@
      "country": "Eslovaquia (República Checa)",
      "year": 2026,
      "duration": "25 min",
-     "flags": "🇸🇰🇨🇿"
+     "flags": "🇸🇰🇨🇿",
+     "competencia": "Competencia Oficial de Corto y Mediometrajes Internacionales"
     },
     {
      "title": "Tuktuit: Caribou",
@@ -833,7 +893,8 @@
      "_tmdbId": 1175870,
      "poster": "/assets/finca/tuktuit-caribou.jpg",
      "flags": "🇨🇦",
-     "posterSource": "custom"
+     "posterSource": "custom",
+     "competencia": "Competencia Oficial de Corto y Mediometrajes Internacionales"
     },
     {
      "title": "Ecocidio",
@@ -854,7 +915,8 @@
      "country": "Argentina",
      "year": 2025,
      "duration": "2 min",
-     "flags": "🇦🇷"
+     "flags": "🇦🇷",
+     "competencia": "Competencia Oficial de Corto y Mediometrajes Internacionales"
     },
     {
      "title": "Sobre todo",
@@ -875,7 +937,9 @@
      "flags": "🇪🇸🇦🇹",
      "has_qa": true,
      "qa_detail": "Q&A | Charla con el equipo de la película",
-     "posterSource": "custom"
+     "posterSource": "custom",
+     "lbSlug": "above-all-2025",
+     "competencia": "Competencia Oficial de Corto y Mediometrajes Internacionales"
     }
    ],
    "duration": "52 min",
@@ -910,7 +974,9 @@
      "flags": "🇪🇸🇦🇹",
      "has_qa": true,
      "qa_detail": "Q&A | Charla con el equipo de la película",
-     "posterSource": "custom"
+     "posterSource": "custom",
+     "lbSlug": "above-all-2025",
+     "competencia": "Competencia Oficial de Corto y Mediometrajes Internacionales"
     },
     {
      "title": "Sobre Ruinas",
@@ -931,7 +997,8 @@
      "_tmdbId": 1448990,
      "poster": "/assets/finca/sobre-ruinas.jpg",
      "flags": "🇧🇷",
-     "posterSource": "custom"
+     "posterSource": "custom",
+     "competencia": "Competencia Oficial de Corto y Mediometrajes Internacionales"
     },
     {
      "title": "Dígale no a los poalets",
@@ -952,7 +1019,8 @@
      "_tmdbId": 1631620,
      "poster": "/assets/finca/no-als-poalets.jpg",
      "flags": "🇪🇸",
-     "posterSource": "custom"
+     "posterSource": "custom",
+     "competencia": "Competencia Oficial de Corto y Mediometrajes Internacionales"
     },
     {
      "title": "Nuestra isla",
@@ -971,7 +1039,8 @@
      "year": 2024,
      "duration": "45 min",
      "genre": "Documental",
-     "flags": "🇫🇷"
+     "flags": "🇫🇷",
+     "lbSlug": "la-nostra-isola"
     }
    ],
    "duration": "64 min",
@@ -1006,7 +1075,8 @@
      "country": "Argentina",
      "year": 2025,
      "duration": "2 min",
-     "flags": "🇦🇷"
+     "flags": "🇦🇷",
+     "competencia": "Competencia Oficial de Corto y Mediometrajes Internacionales"
     },
     {
      "title": "Cuidemos el planeta",
@@ -1059,7 +1129,8 @@
      "year": 2026,
      "duration": "7 min",
      "genre": "Animación",
-     "flags": "🇻🇪"
+     "flags": "🇻🇪",
+     "lbSlug": "el-dia-que-aprendi-a-volar"
     },
     {
      "title": "Soy agua",
