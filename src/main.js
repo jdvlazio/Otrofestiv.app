@@ -446,7 +446,7 @@ FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202607291423';
+const BUILD_VERSION='202607291437';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';
@@ -957,38 +957,59 @@ document.addEventListener('keydown',function(e){
 // ── Event delegation para js-open-pel → openPelSheet ──────────────────────
 // capture:true garantiza que el evento llega antes del stopPropagation
 // de _posterThumb. data-title contiene el título sin encoding.
-// Transición de póster compartido (View Transitions) — el póster del grid se
-// transforma en el póster de la ficha (hero morph, decisión Juan 19 jul 2026).
-// Degrada SOLO: sin startViewTransition (Safari<18) o reduce-motion → apertura
-// normal (spring). Guardián [poster-morph]. Un flag evita solapar transiciones.
+// Transición de póster compartido — FLIP en el compositor (29 jul 2026).
+// ANTES era una View Transition del root. Produjo TRES modos de fallo distintos,
+// todos solo-en-device (§8.4.2 de DESIGN.md): (1) los snapshots TAPAN el DOM real
+// → el velo corría invisible debajo y aparecía de golpe al liberar; (2) póster
+// fantasma (#443/#444, revertido); (3) texto congelado de la ficha ANTERIOR
+// superpuesto al grid — el snapshot capturaba textura vieja con la GPU cargada.
+// Nada que pase debajo de un snapshot es visible: ninguna curva lo arregla.
+// AHORA nada tapa el DOM: un CLON del póster viaja de la card a la ficha por
+// transform (compositor puro, sobrevive al hilo principal ocupado), y el sheet
+// (spring) y el velo (escalera §8.4.1) corren visibles desde el primer frame.
+// Un solo timeline, tres actores, cero snapshots. Guardián [poster-morph].
 let _vtBusy=false;
-// _morphOpen(sourceEl, openFn) — dueño ÚNICO del hero morph. sourceEl contiene el
-// póster de origen (card del grid O thumb de un corto dentro de un programa);
-// openFn hace el render síncrono del destino. Reusado por la card del grid y por
-// la apertura de un corto (misma fuente única de póster → mismo gesto).
+const _FLIGHT_MS=420; // aterriza justo tras el spring del sheet (380ms)
+// _morphOpen(sourceEl, openFn) — dueño ÚNICO del viaje del póster. sourceEl
+// contiene el póster de origen (card del grid O thumb de un corto dentro de un
+// programa); openFn hace el render síncrono del destino. Reusado por ambos.
 function _morphOpen(sourceEl, openFn){
   const reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
   const src = sourceEl && sourceEl.querySelector && sourceEl.querySelector('.ed-still, .img-cover, img'); // cubre thumb simple (img) y editorial (.ed-still) de cortos también
-  if(!document.startViewTransition || reduce || _vtBusy || !src){ openFn(); return; }
+  const a = src && src.getBoundingClientRect();
+  if(reduce || _vtBusy || !src || !a || !a.width){ openFn(); return; }
   _vtBusy=true;
-  src.style.viewTransitionName='film-poster';
-  const _sheet=document.getElementById('pel-sheet');
-  if(_sheet) _sheet.classList.add('vt-run'); // el VT reemplaza el spring durante el gesto
-  const _clean=()=>{
-    document.querySelectorAll('[style*="film-poster"]').forEach(el=>{ el.style.viewTransitionName=''; });
-    const s=document.getElementById('pel-sheet'); if(s) s.classList.remove('vt-in','vt-run');
-    _vtBusy=false;
-  };
+  const _sheet0=document.getElementById('pel-sheet');
+  const _clean=()=>{ const s=document.getElementById('pel-sheet'); if(s) s.classList.remove('vt-in'); _vtBusy=false; };
   try{
-    const vt=document.startViewTransition(()=>{
-      src.style.viewTransitionName=''; // liberar el nombre para el estado nuevo
-      openFn();                        // render síncrono (innerHTML)
-      const sp=document.querySelector('.pel-sheet-poster, .pel-sheet-poster-stage img, .psp-editorial img, .pel-sheet .ed-still');
-      if(sp) sp.style.viewTransitionName='film-poster';
-      const s=document.getElementById('pel-sheet'); if(s) s.classList.add('vt-in'); // stagger + bloom
-    });
-    vt.finished.then(_clean, _clean);
-  }catch(_e){ _clean(); openFn(); }
+    openFn(); // render síncrono + .open → sheet (spring) y velo (escalera) arrancan YA, visibles
+    const sheet=document.getElementById('pel-sheet')||_sheet0;
+    if(sheet) sheet.classList.add('vt-in'); // stagger de la meta (vtRise, CSS puro)
+    const dst=document.querySelector('.pel-sheet-poster, .pel-sheet-poster-stage img, .psp-editorial img, .pel-sheet .ed-still');
+    if(!dst||!sheet){ setTimeout(_clean,_FLIGHT_MS); return; }
+    // Rect FINAL del destino: el sheet aún está en translateY(100%) (el spring
+    // recién arranca), así que se proyecta: posición del dst relativa al sheet +
+    // posición final del sheet (fixed bottom:0 → top final = viewport - altura).
+    const sr=sheet.getBoundingClientRect(), dr=dst.getBoundingClientRect();
+    const finalTop=window.innerHeight-sheet.offsetHeight+(dr.top-sr.top);
+    const b={left:dr.left, top:finalTop, width:dr.width||1, height:dr.height||1};
+    // Clon en vuelo: transform-only (translate+scale), nunca layout por frame.
+    const fly=document.createElement('img');
+    fly.className='poster-flight';
+    fly.src=src.currentSrc||src.src;
+    fly.style.cssText=`left:${a.left}px;top:${a.top}px;width:${a.width}px;height:${a.height}px`;
+    document.body.appendChild(fly);
+    dst.style.opacity='0';          // el real espera a que aterrice el clon
+    src.style.opacity='0';          // la card no muestra doble póster
+    requestAnimationFrame(()=>requestAnimationFrame(()=>{
+      fly.style.transform=`translate(${b.left-a.left}px,${b.top-a.top}px) scale(${b.width/a.width},${b.height/a.height})`;
+      fly.style.borderRadius='10px';
+    }));
+    setTimeout(()=>{
+      dst.style.opacity=''; src.style.opacity='';
+      fly.remove(); _clean();
+    },_FLIGHT_MS+60);
+  }catch(_e){ _clean(); }
 }
 function _openPelMorph(cardEl, title){ _morphOpen(cardEl, ()=>openPelSheet(title)); }
 globalThis._morphOpen = _morphOpen; // puente: lo usa el ACTION_REGISTRY (openCortoSheetFromEl) fuera de este IIFE

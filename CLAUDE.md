@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `cffc649 fix(ux): Letterboxd al bloque de info y un solo concepto de funcion compartida (#459)`
+> Último commit: `073a070 fix(ux): Funcion compartida vive en el mismo sitio en toda ficha + guardian (#460)`
 
 ---
 
