@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `871fca9 fix(tests): T08 acota el riel a #splash-rail — el sheet duplica las cards (#448)`
+> Último commit: `9d63760 fix(finca): keyArt desde el afiche vertical oficial — sin recorte de fecha ni lema (#449)`
 
 ---
 

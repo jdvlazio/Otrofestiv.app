@@ -344,13 +344,50 @@ helpers.js o `--amb` a mano = build roto. Safari iOS: muestrear con URL propia
   `--gray` (nunca `gray2`), radio pill.
 - **ESTADO ACTIVO**: clase `.on` ÚNICA — `.active`/`.selected` prohibidos.
 
-### 8.4.1 · Velo de los sheets — driver rAF (`initVeil`, sheets-controller.js)
+### 8.4.1 · Velo de los sheets — escalera CSS en el compositor
 
-**La regla que quedó de la auditoría (28 jul 2026): el velo NO se anima en CSS.
-Lo conduce JS por rAF, pisando radio y opacidad frame a frame.** El radio va
-`k² × --blur-veil` (**10px**) y la opacidad `k` (easeOutCubic, 360ms abrir /
-200ms lineal cerrar). `--blur-veil` es la **fuente única**: el driver la lee con
-`getComputedStyle`, así el fallback CSS sin JS nunca diverge.
+> **REVISADO 29 jul 2026 — el driver rAF fue retirado.** Lo que sigue arriba de
+> la línea es la doctrina vigente; abajo queda el historial, que sigue siendo
+> válido como física de WebKit pero llevó a la conclusión equivocada.
+
+**Regla vigente: el velo se anima SOLO por `opacity`, en CSS, y vive en el
+compositor.** Dos capas —los pseudo-elementos de `.pel-sheet-overlay`— con radio
+**fijo** (`.55` y `.84 × --blur-veil`, que componen en cuadratura ≈ el valor
+aprobado de 10px) y opacidad escalonada (0ms / 110ms, 220ms lineal). Cerrar:
+ambas a la vez, 200ms. Cero JS.
+
+**Por qué se cayó el driver rAF (medido en device, 7 de 7 aperturas):** rAF corre
+en el **hilo principal**, que es exactamente el que el sheet bloquea ~230ms
+mientras se construye. El velo progresaba hasta ~68%, **se congelaba 233ms** y
+**saltaba a 100% en un frame** — lo que se percibía como "tardío y abrupto". No
+era la curva, ni el radio, ni el momento de arranque, ni la View Transition:
+era **inanición de la animación**. Ninguna cantidad de tuning arregla una
+animación que se detiene.
+
+**La lección de arquitectura, que aplica a TODA animación de apertura:** si debe
+sobrevivir a la construcción de un sheet, tiene que correr en el compositor
+(`opacity` / `transform` vía CSS). Reproducido en banco: bajo el mismo bloqueo de
+230ms, el driver rAF se congela; cualquier variante de opacity-CSS lo atraviesa
+sin detenerse.
+
+**Consecuencia aceptada:** como la opacidad no atenúa el `backdrop-filter`
+(hallazgo 1 de abajo, sigue siendo cierto), cada capa **entra de golpe**. La
+progresión no se construye rampeando un radio sino **escalonando capas**. Con dos
+peldaños la apertura son dos tiempos en ~230ms. Si en device se lee escalonado,
+la perilla es el `transition-delay` del `::after` (acercar los peldaños) o sumar
+una tercera capa — al costo de otro `backdrop-filter` a pantalla completa.
+
+**Método que lo cazó (repetible):** frames del video del device a 30fps + varianza
+del laplaciano **acotada a la franja de fondo por encima del borde del sheet**
+(detectar ese borde por frame ANTES de medir — un ROI mal elegido produjo un
+diagnóstico falso). Buscar la firma *congelamiento → salto en un frame*. Para
+reproducir en banco: Playwright WebKit con `recordVideo` (el video captura frames
+del compositor aunque el hilo principal esté muerto; los screenshots no sirven).
+
+---
+
+**Historial (hasta 28 jul 2026) — driver rAF, retirado.** El radio iba
+`k² × --blur-veil` y la opacidad `k` (easeOutCubic, 360ms abrir / 200ms cerrar).
 
 **Por qué 38px y no 14 (29 jul 2026).** Reporte: "amplía el recorrido de foco a
 desenfoque, no el tiempo". Medido el viaje a tres escalas espaciales:
@@ -393,7 +430,11 @@ de 3s en cámara lenta, medidas por captura en WebKit del iOS Simulator):
    (ease-out, expo, ease-in): mismo perfil que el fijo.
 3. **Pisar los valores por frame desde JS traza la curva honesta** — 35% cuando
    corresponde 35%. Es la única variante que progresa, y no depende del
-   interpolador del motor.
+   interpolador del motor. ⚠️ **Cierto solo con el hilo principal libre**, que es
+   como estaba el banco. En la app real el sheet bloquea ese hilo y la curva
+   honesta se convierte en congelamiento + salto (ver arriba). El banco aislado
+   midió bien la física y mal la condición de operación: **todo banco de
+   animación tiene que reproducir el jank del caso real.**
 4. **La nitidez perceptual muere a ~5px de radio.** Aunque la rampa fuera
    perfecta, un radio lineal "salta" a la vista: el radio debe crecer ∝ k²
    (lento al inicio) para que el desenfoque se *vea* progresar.
@@ -406,7 +447,9 @@ síntoma del anterior sin la causa):
 | 1 | blur fijo 4px, opacity 200ms | imperceptible |
 | 2–4 | `transition` del radio (18→10→6px, 3 curvas) | brinco (causas 2 y 4) |
 | 5–6 | blur fijo + fade de opacity | brinco (causa 1) |
-| 7 ✅ | **driver rAF: radio ∝ k², opacidad k** | progresión medida y real |
+| 7 | driver rAF: radio ∝ k², opacidad k | progresión real **en banco**; en device se congelaba 233ms y saltaba |
+| 8–9 | animar los pseudo-elementos del View Transition | póster fantasma en device → revertido (#443/#444/#445) |
+| 10 ✅ | **escalera CSS de 2 capas, solo `opacity`** | sin congelamiento: la animación no depende del hilo principal |
 
 Reglas de método que esto deja:
 - **Animación sobre `backdrop-filter` se valida con banco aislado en cámara
