@@ -93,7 +93,11 @@ def _src_sidecar(path):
     y NO es la copia que se sube: a TMDB va el original en alta. Devuelve {} si
     el festival no tiene sidecar."""
     base = os.path.splitext(path)[0]
-    for cand in (base + '-posters-src.json',):
+    # También en staging/: el sidecar no puede vivir en festivals/ porque el
+    # validador trata todo *.json de ahí como un festival (FINCA, 29 jul 2026).
+    d, n = os.path.split(base)
+    for cand in (base + '-posters-src.json',
+                 os.path.join(d, 'staging', n + '-posters-src.json')):
         if os.path.exists(cand):
             try:
                 return json.load(open(cand, encoding='utf-8'))
