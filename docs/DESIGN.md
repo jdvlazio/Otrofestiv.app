@@ -442,6 +442,26 @@ caía de 10.16 a 8.99). Y el empalme con el DOM real no salta porque el driver
 lo dejó en el mismo valor — por eso `main.js` marca el overlay como abierto
 **en el tap**, antes de arrancar la VT.
 
+**Dos capas que NO deben quedar en el snapshot del root:**
+
+1. **El snapshot NUEVO** (`::view-transition-new(root){display:none}`). Se
+   captura justo tras el callback, cuando el driver todavía tiene el velo en
+   ~0: sale **nítido**. Al entrar producía *desenfoca → enfoca → desenfoca*.
+   Sin él, al desvanecerse el viejo se revela el DOM real, que ya tiene el velo
+   en su valor final y el sheet en su sitio — lo mismo que mostraría el nuevo,
+   pero sin el paso por nítido.
+2. **El chrome** (`.topbar`, `.main-nav` con `view-transition-name` propio y
+   `animation:none`). El `filter` del velo desenfocaba el wordmark, los tabs y
+   la nav; al terminar la VT volvían a estar nítidos. El chrome es glass:
+   difumina lo que pasa POR DETRÁS, pero su contenido nunca se desenfoca.
+
+Verificación: la curva de desenfoque debe ser **monótona**. Se mide por frame
+en una franja del fondo; cualquier retroceso >1.5pt es un re-enfoque visible.
+Tras sacar ambas capas: **retroceso 0.0pt** (antes 4.9pt).
+
+`--blur-veil-vt` (8px) NO es el mismo número que `--blur-veil` (10px): `filter`
+sobre una imagen difumina más que `backdrop-filter` sobre el DOM al mismo radio.
+
 **No sirve quitar el snapshot del root** (`display:none`): sin él, el sheet
 —que durante la VT lleva `.vt-run` y por tanto no anima— aparece de golpe.
 
