@@ -484,6 +484,35 @@ se ve cuando la VT libera la vista, ~400ms tras el tap") queda documentado como
 problema ABIERTO: mientras la VT corre, sus snapshots tapan el DOM y el velo
 del driver rAF trabaja invisible debajo.
 
+### 8.4.2b · El viaje del póster es FLIP, NUNCA View Transitions (29 jul 2026)
+
+**La View Transition del root quedó RETIRADA.** Acumuló tres modos de fallo, los
+tres invisibles en escritorio y visibles solo en el device:
+
+| # | Síntoma en device | Causa |
+|---|---|---|
+| 1 | el velo aparecía de golpe ~400ms tarde | los snapshots TAPAN el DOM real: el velo corría invisible debajo |
+| 2 | póster fantasma (#443/#444, revertido) | animar los pseudo-elementos es territorio motor-específico |
+| 3 | texto congelado de la ficha ANTERIOR sobre el grid | el snapshot capturaba textura vieja con la GPU cargada |
+
+**Lo que los une: nada que ocurra debajo de un snapshot es visible, y el snapshot
+es una foto que el motor decide cuándo y cómo tomar.** Ninguna curva, duración ni
+easing arregla eso — por eso siete intentos de tuning fallaron.
+
+**Motor vigente — FLIP en el compositor.** Un CLON del póster (`.poster-flight`,
+`position:fixed`) viaja de la card a su posición final por `transform`
+(translate+scale). Compositor puro: sobrevive al hilo principal ocupado y **no
+tapa nada**. El sheet (spring 380ms) y el velo (escalera §8.4.1) corren visibles
+desde el primer frame. Un solo timeline, tres actores, cero snapshots.
+
+Detalle que importa: al arrancar, el sheet aún está en `translateY(100%)`, así
+que el rect de destino se **proyecta** (posición del póster relativa al sheet +
+posición final del sheet) en vez de leerse — leerlo daría el rect de fuera de
+pantalla y el póster volaría al lugar equivocado.
+
+Guardián `[poster-morph]`: exige `.poster-flight` animado por `transform` y
+**falla si `startViewTransition` reaparece** en la apertura.
+
 ### 8.4.3 · Presupuesto de capas — un scrim cerrado no debe pintar
 
 **Regla: todo overlay a pantalla completa lleva `visibility:hidden` cuando está
