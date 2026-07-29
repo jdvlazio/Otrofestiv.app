@@ -1827,6 +1827,27 @@ except Exception as _e:
 # El patrón correcto: blur FIJO en la capa + animar su opacity — el compositor
 # mezcla nítido y desenfocado, la progresión es real en todos los motores y
 # encima es más barato (el blur se calcula una vez, no por frame).
+# ── [aviso-antes-sinopsis] los meta-banner van SIEMPRE antes de la sinopsis ────
+# El mismo aviso ("función compartida") vivía en dos sitios: tras la función en
+# la ficha de película y tras la sinopsis en la de corto — se movió uno y en el
+# otro solo se cambió el texto. Un concepto en dos lugares es un concepto que el
+# usuario aprende dos veces. Ver docs/DESIGN.md §8.4.4.
+check = 'aviso-antes-sinopsis'
+try:
+    _src = open('src/controller/sheets-controller.js', encoding='utf-8').read()
+    _mal = []
+    for _blk in _src.split('document.getElementById('):
+        _ib = _blk.find('meta-banner-label')
+        _is = _blk.find('pel-sheet-synopsis')
+        if _ib != -1 and _is != -1 and _ib > _is:
+            _mal.append(_blk[:60].strip().replace('\n', ' '))
+    if _mal:
+        fail(check, 'meta-banner DESPUÉS de la sinopsis (§8.4.4: los avisos van antes): ' + '; '.join(_mal[:3]))
+    else:
+        ok(check, 'los meta-banner van antes de la sinopsis en toda superficie')
+except Exception as _e:
+    warn(check, f'no se pudo verificar aviso-antes-sinopsis: {_e}')
+
 check = 'no-animated-blur'
 try:
     import re as _re

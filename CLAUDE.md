@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `4b2ef5b feat(finca): el ultimo poster que faltaba, desde los stills del press kit (#458)`
+> Último commit: `cffc649 fix(ux): Letterboxd al bloque de info y un solo concepto de funcion compartida (#459)`
 
 ---
 
