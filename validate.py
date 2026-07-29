@@ -2443,7 +2443,7 @@ try:
         'src/main.js': 1616,
         'src/i18n/i18n.js': 1406,  # +1 (net): meta_funcion_incluye ×3 locales (anclaje de función, 29 jul)
         'src/controller/sheets-controller.js': 1407,  # +4: VEIL_MAX leído de --blur-veil (fuente única con el CSS) (29 jul 2026)
-        'src/controller/handlers.js': 933,  # +18: anclaje de función en toggleWL (29 jul)
+        'src/controller/handlers.js': 935,  # +20: anclaje de función en toggleWL, simétrico al quitar (29 jul)
     }
     _over = []
     for _f in _glob.glob('src/**/*.js', recursive=True):

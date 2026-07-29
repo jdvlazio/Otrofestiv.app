@@ -57,6 +57,16 @@ export function toggleWL(title,e){
   const _hermanas=_slotKeys.size
     ?[...new Set(FILMS.filter(f=>f._slotKey&&_slotKeys.has(f._slotKey)&&f.title!==title).map(f=>f.title))]
     :[];
+  // La función es UNA unidad en las dos direcciones. Si quitar sacara solo la
+  // obra tocada, quien agrega una y se arrepiente queda con la compañera en
+  // Intereses —que nunca eligió— reservándole la franja. (Con un corto no pasa:
+  // su botón opera sobre el programa, así que ahí hay una sola entidad.)
+  const _todas=[title, ..._hermanas];
+  const _quitarTodas=(wl,wd,pr)=>{
+    let a=wl,b=wd,c=pr;
+    _todas.forEach(x=>{ a=state._delFromSet(a,x); b=state._delFromSet(b,x); c=state._delFromSet(c,x); });
+    return {watchlist:a, watched:b, prioritized:c};
+  };
   // 2. GUARD + 3. MUTATE — branch A: remove con modal si en savedAgenda
   if(watchlist.has(title)){
     if(savedAgenda&&savedAgenda.schedule.some(s=>s._title===title)){
@@ -65,32 +75,24 @@ export function toggleWL(title,e){
         t('plan_quitar_confirm'),()=>{
           // Modal callback variant — transaction agrupa las 3 mutaciones (p7d)
           state.transaction(() => {
-            state.update('savedAgenda', a => ({...a, schedule: a.schedule.filter(s=>s._title!==title)}));
+            state.update('savedAgenda', a => ({...a, schedule: a.schedule.filter(s=>!_todas.includes(s._title))}));
             if(!savedAgenda.schedule.length)state.set('savedAgenda', null);
-            state.batchUpdate({
-              watchlist: state._delFromSet(watchlist, title),
-              watched: state._delFromSet(watched, title),
-              prioritized: state._delFromSet(prioritized, title),
-            });
+            state.batchUpdate(_quitarTodas(watchlist, watched, prioritized));
           });
           saveSavedAgenda();
           saveState('wl','watched');updateCardState(title);   // render automático vía pipeline
+          _hermanas.forEach(h=>updateCardState(h));
         });return;
     }
     // Branch B: remove directo (film NO en savedAgenda)
-    state.batchUpdate({
-      watchlist: state._delFromSet(watchlist, title),
-      watched: state._delFromSet(watched, title),
-      prioritized: state._delFromSet(prioritized, title),
-    });
+    state.batchUpdate(_quitarTodas(watchlist, watched, prioritized));
     showToast(t('toast_fuera_intereses'),'info');
   }
   else{
     // Branch C: add — con detección "todas funciones bloqueadas" + UI variants
     // Agregar una obra anclada suma sus compañeras: dejarlas fuera partiría una
     // función por la mitad. Misma regla que un corto arrastrando su programa
-    // (meta_corto_incluye). Quitar SÍ es individual: sacar una obra de la lista
-    // no debe sacarte la otra.
+    // (meta_corto_incluye), y simétrica con el quitar de arriba.
     let _wl=state._addToSet(watchlist, title);
     _hermanas.forEach(h=>{ _wl=state._addToSet(_wl, h); });
     state.batchUpdate({
