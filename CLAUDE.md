@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `68a6dbb perf(render): un scrim cerrado no debe pintar — 46→36 capas, 35→23MB de backing (#451)`
+> Último commit: `ccaf5af fix(finca): banda negra en 3 pósters + país/año/duración desde el Excel oficial (#452)`
 
 ---
 

@@ -422,11 +422,19 @@ export const SECTION_ARCHETYPES = {
   '🌊 Costas': 'Muestra / País',
   '🌍 Competencia Internacional': 'Competencia',
   '🌍 Internacional': 'Muestra / País',
-  // FINCA 2026
-  '🌍 Largos Internacionales': 'Competencia',
-  '🌋 Cortos Internacionales': 'Competencia',
-  '🛶 Docs Latinoamericanos': 'Competencia',
-  '🌾 Panorama': 'Muestra / País',
+  // FINCA 2026 — la sección ES el eje temático que define el propio festival
+  // (columna «Sección» de su Excel), no la competencia. Los 3 bloques de cortos
+  // mezclan hasta 4 ejes en una misma función, así que conservan el nombre de
+  // competencia del festival. La competencia de cada obra vive en `competencia`.
+  '⛏️ Extractivismos': 'Perspectivas / Miradas',
+  '🪶 Pueblos Originarios': 'Perspectivas / Miradas',
+  '🏚️ Foco Tierra y Techo': 'Perspectivas / Miradas',
+  '🌿 Biodiversidad': 'Perspectivas / Miradas',
+  '✊ FICDH - Derechos Humanos': 'Perspectivas / Miradas',
+  '💧 Agua': 'Perspectivas / Miradas',
+  '🌾 Soberanía Alimentaria': 'Perspectivas / Miradas',
+  '🌡️ Justicia Climática': 'Perspectivas / Miradas',
+  '🌋 Cortos Internacionales': 'Cortos / Programas',
   '🐝 FINQUITA · Infancias': 'Cortos / Programas',
   '🌱 Actividades': 'Especiales / Eventos',
   '🌍 International Narrative Competition': 'Competencia',
