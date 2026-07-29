@@ -4,7 +4,7 @@
   "verificacion": "las 20 funciones del Excel coinciden 1:1 con la grilla día/sede/hora del doc",
   "preguntas_festival": [
    "F=14 no existe: la numeración de funciones salta de 13 a 15 (verificado en toda la columna F y contra el doc día-por-día, que no tiene ningún slot sin cubrir). ¿Función eliminada o salto de numeración?",
-   "Pósters faltantes en el Drive para 3 cortos programados: Tuktuit: Caribou, Cuidemos el planeta, El día que aprendí a volar."
+   "Póster faltante en el Drive para 1 corto programado: Cuidemos el planeta (los de Tuktuit y El día que aprendí a volar ya subieron, 29 jul)."
   ],
   "regla_filas_ocultas": "REGLA DURA: lo oculto en la hoja NO existe para el montaje. Las filas ocultas (39–47 en esta edición) se descartan sin preguntar — el equipo del festival trabaja con la vista visible, y el doc día-por-día lo confirma (ninguna obra oculta aparece en la programación). El export xlsx las incluye: filtrar SIEMPRE por row_dimensions[r].hidden con openpyxl sin read_only. Ídem columnas ocultas (las x* de trabajo interno)."
  },
@@ -68,7 +68,7 @@
    "year": 2024,
    "duration": "76 min",
    "genre": "Documental",
-   "section": "Competencia Oficial de Largometrajes Internacionales",
+   "section": "🌍 Largos Internacionales",
    "type": "film",
    "day": "2026-08-12",
    "date": "2026-08-12",
@@ -95,7 +95,7 @@
    "lbSlug": "toroboro-the-name-of-the-plants",
    "_tmdbId": 811169,
    "qa": "Q&A | Charla con referentes en la temática",
-   "section": "Competencia Oficial de Documentales Latinoamericanos",
+   "section": "🛶 Docs Latinoamericanos",
    "type": "film",
    "day": "2026-08-13",
    "date": "2026-08-13",
@@ -120,7 +120,7 @@
    "duration": "106 min",
    "genre": "Documental",
    "qa": "Q&A | Charla con el equipo de la película",
-   "section": "Panorama",
+   "section": "🌾 Panorama",
    "type": "film",
    "day": "2026-08-13",
    "date": "2026-08-13",
@@ -144,7 +144,7 @@
    "year": 2025,
    "duration": "5 min",
    "genre": "Animación",
-   "section": "Panorama",
+   "section": "🌾 Panorama",
    "type": "film",
    "day": "2026-08-13",
    "date": "2026-08-13",
@@ -169,7 +169,7 @@
    "genre": "Animación",
    "lbSlug": "ziki",
    "_tmdbId": 1570024,
-   "section": "Competencia Oficial de Corto y Mediometrajes Internacionales",
+   "section": "🌋 Cortos Internacionales",
    "type": "film",
    "day": "2026-08-13",
    "date": "2026-08-13",
@@ -194,7 +194,7 @@
    "duration": "79 min",
    "genre": "Documental",
    "qa": "Q&A | Charla con referentes en la temática",
-   "section": "Competencia Oficial de Largometrajes Internacionales",
+   "section": "🌍 Largos Internacionales",
    "type": "film",
    "day": "2026-08-13",
    "date": "2026-08-13",
@@ -219,7 +219,7 @@
    "duration": "37 min",
    "genre": "Documental",
    "qa": "Q&A | Charla con el equipo de la película",
-   "section": "Panorama",
+   "section": "🌾 Panorama",
    "type": "film",
    "day": "2026-08-14",
    "date": "2026-08-14",
@@ -243,7 +243,7 @@
    "year": 2025,
    "duration": "35 min",
    "genre": "Documental",
-   "section": "Panorama",
+   "section": "🌾 Panorama",
    "type": "film",
    "day": "2026-08-14",
    "date": "2026-08-14",
@@ -268,7 +268,7 @@
    "duration": "27 min",
    "genre": "Documental",
    "qa": "Q&A | Charla con el equipo de la película",
-   "section": "Panorama",
+   "section": "🌾 Panorama",
    "type": "film",
    "day": "2026-08-14",
    "date": "2026-08-14",
@@ -294,7 +294,7 @@
    "genre": "Documental",
    "lbSlug": "paid-in-blood-2025",
    "_tmdbId": 1449004,
-   "section": "Competencia Oficial de Documentales Latinoamericanos",
+   "section": "🛶 Docs Latinoamericanos",
    "type": "film",
    "day": "2026-08-14",
    "date": "2026-08-14",
@@ -319,7 +319,7 @@
    "duration": "89 min",
    "genre": "Experimental",
    "qa": "Q&A | Charla con referentes en la temática",
-   "section": "Competencia Oficial de Largometrajes Internacionales",
+   "section": "🌍 Largos Internacionales",
    "type": "film",
    "day": "2026-08-14",
    "date": "2026-08-14",
@@ -339,7 +339,7 @@
    "trailer": "https://youtu.be/iV-gzE-qvHE",
    "tematica": "FICDH - Derechos Humanos",
    "qa": "Q&A | Charla con referentes en la temática",
-   "section": "Competencia Oficial de Largometrajes Internacionales",
+   "section": "🌍 Largos Internacionales",
    "type": "film",
    "day": "2026-08-15",
    "date": "2026-08-15",
@@ -362,7 +362,7 @@
    "lbSlug": "karuara-people-of-the-river",
    "_tmdbId": 1266623,
    "genre": "Documental",
-   "section": "Competencia Oficial de Documentales Latinoamericanos",
+   "section": "🛶 Docs Latinoamericanos",
    "type": "film",
    "day": "2026-08-15",
    "date": "2026-08-15",
@@ -386,7 +386,7 @@
    "year": 2025,
    "duration": "9 min",
    "genre": "Animación",
-   "section": "Panorama",
+   "section": "🌾 Panorama",
    "type": "film",
    "day": "2026-08-15",
    "date": "2026-08-15",
@@ -413,7 +413,7 @@
    "lbSlug": "la-vida-fracturada",
    "_tmdbId": 1579334,
    "qa": "Q&A | Charla con el equipo de la película",
-   "section": "Competencia Oficial de Largometrajes Internacionales",
+   "section": "🌍 Largos Internacionales",
    "type": "film",
    "day": "2026-08-16",
    "date": "2026-08-16",
@@ -440,7 +440,7 @@
    "lbSlug": "amora-2025",
    "_tmdbId": 1557668,
    "qa": "Q&A | Charla con el equipo de la película",
-   "section": "Competencia Oficial de Documentales Latinoamericanos",
+   "section": "🛶 Docs Latinoamericanos",
    "type": "film",
    "day": "2026-08-17",
    "date": "2026-08-17",
@@ -465,7 +465,7 @@
    "duration": "101 min",
    "genre": "Documental",
    "qa": "Q&A | Charla con referentes en la temática",
-   "section": "Competencia Oficial de Largometrajes Internacionales",
+   "section": "🌍 Largos Internacionales",
    "type": "film",
    "day": "2026-08-17",
    "date": "2026-08-17",
@@ -492,7 +492,7 @@
    "lbSlug": "tierra-que-habla",
    "_tmdbId": 1738957,
    "qa": "Q&A | Charla con el equipo de la película",
-   "section": "Competencia Oficial de Documentales Latinoamericanos",
+   "section": "🛶 Docs Latinoamericanos",
    "type": "film",
    "day": "2026-08-18",
    "date": "2026-08-18",
@@ -513,7 +513,7 @@
    "trailer": "https://youtu.be/rcbdCQYIPo4",
    "tematica": "Pueblos Originarios",
    "qa": "Q&A | Charla con referentes en la temática",
-   "section": "Competencia Oficial de Largometrajes Internacionales",
+   "section": "🌍 Largos Internacionales",
    "type": "film",
    "day": "2026-08-18",
    "date": "2026-08-18",
@@ -537,7 +537,7 @@
    "duration": "61 min",
    "genre": "Documental",
    "qa": "Q&A | Charla con el equipo de la película",
-   "section": "Panorama",
+   "section": "🌾 Panorama",
    "type": "film",
    "day": "2026-08-18",
    "date": "2026-08-18",
@@ -564,7 +564,7 @@
    "lbSlug": "sangre-de-plomo",
    "_tmdbId": 1686266,
    "qa": "Q&A | Charla con el equipo de la película",
-   "section": "Panorama",
+   "section": "🌾 Panorama",
    "type": "film",
    "day": "2026-08-18",
    "date": "2026-08-18",
@@ -591,7 +591,7 @@
    "lbSlug": "el-amor-duerme-en-la-calle",
    "_tmdbId": 1461637,
    "qa": "Q&A | Charla con el equipo de la película",
-   "section": "Panorama",
+   "section": "🌾 Panorama",
    "type": "film",
    "day": "2026-08-18",
    "date": "2026-08-18",
@@ -616,7 +616,7 @@
    "duration": "93 min",
    "genre": "Documental",
    "qa": "Q&A | Charla con referentes en la temática",
-   "section": "Panorama",
+   "section": "🌾 Panorama",
    "type": "film",
    "day": "2026-08-19",
    "date": "2026-08-19",
@@ -681,7 +681,8 @@
      "duration": "15 min",
      "genre": "Experimental",
      "lbSlug": "the-south-wind",
-     "_tmdbId": 1175870
+     "_tmdbId": 1175870,
+     "poster": "/assets/finca/tuktuit-caribou.jpg"
     },
     {
      "title": "Ecocidio",
@@ -719,7 +720,7 @@
     }
    ],
    "duration": "52 min",
-   "section": "Competencia Oficial de Corto y Mediometrajes Internacionales",
+   "section": "🌋 Cortos Internacionales",
    "day": "2026-08-13",
    "date": "2026-08-13",
    "time": "19:00",
@@ -803,7 +804,7 @@
     }
    ],
    "duration": "64 min",
-   "section": "Competencia Oficial de Corto y Mediometrajes Internacionales",
+   "section": "🌋 Cortos Internacionales",
    "day": "2026-08-14",
    "date": "2026-08-14",
    "time": "19:30",
@@ -874,7 +875,8 @@
      "premiere": "Estreno argentino",
      "rating": "Apta para todo público",
      "trailer": "https://youtu.be/mh8z-zAJrg4",
-     "tematica": "Biodiversidad"
+     "tematica": "Biodiversidad",
+     "poster": "/assets/finca/el-dia-que-aprendi-a-volar.jpg"
     },
     {
      "title": "Soy agua",
@@ -890,7 +892,7 @@
     }
    ],
    "duration": "17 min",
-   "section": "FINQUITA — Cine para infancias",
+   "section": "🐝 FINQUITA · Infancias",
    "day": "2026-08-15",
    "date": "2026-08-15",
    "time": "18:00",
@@ -901,7 +903,7 @@
   {
    "title": "Ceremonia de apertura",
    "type": "event",
-   "section": "Actividades",
+   "section": "🌱 Actividades",
    "day": "2026-08-12",
    "date": "2026-08-12",
    "time": "18:00",
@@ -912,7 +914,7 @@
   {
    "title": "Sabotear el futuro — charla con Enar de Dios Rodríguez",
    "type": "event",
-   "section": "Actividades",
+   "section": "🌱 Actividades",
    "day": "2026-08-13",
    "date": "2026-08-13",
    "time": "15:00",
@@ -923,7 +925,7 @@
   {
    "title": "Pitch público — Semillas Lab",
    "type": "event",
-   "section": "Actividades",
+   "section": "🌱 Actividades",
    "day": "2026-08-19",
    "date": "2026-08-19",
    "time": "14:30",
@@ -934,7 +936,7 @@
   {
    "title": "Ceremonia de premiación",
    "type": "event",
-   "section": "Actividades",
+   "section": "🌱 Actividades",
    "day": "2026-08-19",
    "date": "2026-08-19",
    "time": "18:00",
@@ -942,5 +944,25 @@
    "duration": "90 min",
    "synopsis": "Entrega de los premios de las tres competencias oficiales, el Premio RAFMA y los premios de Semillas Lab."
   }
- ]
+ ],
+ "sections": {
+  "🌍 Largos Internacionales": {
+   "oficial": "Competencia Oficial de Largometrajes Internacionales"
+  },
+  "🌋 Cortos Internacionales": {
+   "oficial": "Competencia Oficial de Corto y Mediometrajes Internacionales"
+  },
+  "🛶 Docs Latinoamericanos": {
+   "oficial": "Competencia Oficial de Documentales Latinoamericanos"
+  },
+  "🌾 Panorama": {
+   "oficial": "Panorama"
+  },
+  "🐝 FINQUITA · Infancias": {
+   "oficial": "FINQUITA — Cine para infancias"
+  },
+  "🌱 Actividades": {
+   "oficial": "Actividades del festival"
+  }
+ }
 }
