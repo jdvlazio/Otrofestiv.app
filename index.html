@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607281937">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607281937">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607290654">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607290654">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -994,15 +994,22 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
    en los divisores era ese handoff con velocidad todavía alta. --vt-ease. */
 @keyframes vtPosterIn{from{filter:blur(12px);opacity:.15}55%{filter:blur(4px);opacity:.8}to{filter:blur(0);opacity:1}}
 @keyframes vtFadeOut{from{opacity:1}to{opacity:0}}
+@keyframes vtFadeIn{from{opacity:0}to{opacity:1}}
 @keyframes vtRise{from{opacity:0;transform:translateY(9px)}to{opacity:1;transform:translateY(0)}}
 ::view-transition-group(film-poster){animation-duration:.5s;animation-timing-function:cubic-bezier(.16,1,.3,1)}
 ::view-transition-new(film-poster){animation:vtPosterIn .5s cubic-bezier(.16,1,.3,1) both}
 ::view-transition-old(film-poster){animation:vtFadeOut .14s ease both}
-/* El fondo (y sus divisores) ASIENTA TEMPRANO: opacity rápida, sin blur → los
-   divisores del DOM real ya están fijos mucho antes de que el póster aterrice,
-   así el ojo no ve ningún salto de línea al terminar. */
-::view-transition-old(root){animation:vtFadeOut .2s ease both}
-::view-transition-new(root){animation:vtFadeOut .22s ease reverse both}
+/* CROSSFADE SIN BACHE (29 jul 2026). Antes los DOS snapshots del root se
+   desvanecían a la vez (old 1→0 y new 0→1): a mitad de camino ambos estaban al
+   ~50%, así que se veía A TRAVÉS de los dos hasta el negro del navegador. Ese
+   hundimiento de luminancia —medido: el fondo caía de 10.0 a 9.1 y volvía— es
+   el "fundido a negro corto" que se sentía como brinco al abrir cada ficha.
+   Arreglo: el snapshot VIEJO se queda OPACO debajo y sólo el NUEVO entra
+   encima. En todo momento hay una capa opaca, así que no hay por dónde ver el
+   fondo del navegador. El fondo sigue asentando temprano (.22s) para que los
+   divisores del DOM real estén fijos antes de que el póster aterrice. */
+::view-transition-old(root){animation:none}
+::view-transition-new(root){animation:vtFadeIn .22s ease both}
 .pel-sheet.vt-run{transition:none!important}
 /* Stagger COMPRIMIDO para terminar ANTES que la transición (.5s): así al cerrar
    ya está en reposo y quitar la clase no corta nada (era la otra causa del brinco). */
@@ -2967,7 +2974,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202607281937";
+    s.src="/src/main.js?v=202607290654";
     document.body.appendChild(s);
     // Watchdog de boot (P0 18 jul): si el grafo ESM murió en el import (caché
     // HTTP mixta tras deploys en ráfaga — main.js nuevo + módulo viejo sin el
