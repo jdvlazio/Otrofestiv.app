@@ -124,7 +124,14 @@ export function scoreFilm(title, screens, isPriority, allTitles){
   return score;
 }
 
-export function effectiveDuration(f){return parseDur(f&&f.duration)+(f&&f.has_qa?30:0);}
+// `_slotMin` (lo marca el loader en festivales con `sharedSlotIsOneScreening`):
+// dos obras programadas en la MISMA función ocupan la sala por la suma de
+// ambas, no por la propia. Sin esto el planificador cree que salís al terminar
+// la primera y te ofrece otra función a la que no llegás.
+export function effectiveDuration(f){
+  if(f&&f._slotMin) return f._slotMin;
+  return parseDur(f&&f.duration)+(f&&f.has_qa?30:0);
+}
 
 export function screeningPassed(s){
   if(festivalEnded()) return false; // festival terminado — todo vuelve a plena opacidad

@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `00ef8c9 FINCA: las secciones son los 8 ejes del festival + Fase 3 del pipeline (#453)`
+> Último commit: `5b4ce35 fix(finca): duración, banderas y países de los 3 bloques de cortos (#454)`
 
 ---
 

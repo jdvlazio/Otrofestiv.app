@@ -21,6 +21,9 @@ export function screensConflict(a,b){
   // Eventos informativos (info:true) — drop-in / sin hora fija: nunca generan
   // conflicto (no se planifican). Ver docs/SCHEMA.md.
   if((a&&a.info)||(b&&b.info)) return false;
+  // Misma FUNCIÓN (mismo día, hora y sala, programadas una tras otra): nunca se
+  // pisan — con una entrada ves las dos. Lo marca el loader vía `_slotKey`.
+  if(a&&b&&a._slotKey&&a._slotKey===b._slotKey) return false;
   if(a.day!==b.day) return false;
   // effectiveDuration: suma 30 min si has_qa:true (Q&A extiende la función)
   const aS=toMin(a.time), aE=aS+effectiveDuration(a);

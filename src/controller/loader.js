@@ -6,6 +6,7 @@
 // detección-festival). Escribe bridge globals en runtime (no eval-time).
 
 import { FESTIVAL_CONFIG, mergeFestivalSections } from '../config.js';
+import { parseDur } from '../domain/time.js';
 import { lruTouch } from '../lru.js';
 import { DAY_ABBR, DAY_NUM, _classifyFestival, festivalShortName } from '../view/components.js';
 import { DAYS, DAY_SHORT_EN, setCustomPosters, setDayShort, setDayShortEn, setPosters } from '../view/helpers.js';
@@ -149,6 +150,30 @@ export async function loadFestival(id){
           if(mins>0) f.duration=mins+" min";
         }
       });
+      // ── ANCLAJE DE FUNCIÓN (opt-in: root `sharedSlotIsOneScreening`) ────────
+      // Algunos festivales programan DOS obras en una misma función: mismo día,
+      // hora y sala, una detrás de la otra (FINCA 2026: 6 casos, verificados
+      // contra su documento día por día — una sola cabecera de hora para las
+      // dos). Sin esto la app las trata como funciones rivales: las declara en
+      // conflicto (falso: con una entrada ves ambas) y cree que salís al
+      // terminar la primera, así que te ofrece otra función a la que no llegás.
+      // NO se puede derivar para todos: en sedes multisala (Tribeca) misma
+      // hora+sede es OTRA sala = otra función. Por eso el festival lo declara.
+      // Se marca acá, una vez, y el dominio solo lee los campos.
+      if(data.sharedSlotIsOneScreening){
+        const _grupos={};
+        exploded.forEach(f=>{
+          if(f.info||!f.day||!f.time||!f.venue) return;
+          (_grupos[f.day+'|'+f.time+'|'+f.venue+'|'+(f.sala||'')] ||= []).push(f);
+        });
+        Object.entries(_grupos).forEach(([k,g])=>{
+          if(g.length<2) return;
+          // La sala queda ocupada por la SUMA de las obras. El Q&A se cuenta UNA
+          // vez: es una charla al final de la función, no una por obra.
+          const total=g.reduce((a,f)=>a+parseDur(f.duration),0)+(g.some(f=>f.has_qa)?30:0);
+          g.forEach(f=>{ f._slotKey=k; f._slotMin=total; });
+        });
+      }
       cfg.films=exploded; // Cacheado en sesión — evita re-fetch al volver al festival.
       // Límite recomendado: ≤5 festivales simultáneos (~80KB c/u). LRU si escala a 8+.
       cfg.posters=data.posters||{};
