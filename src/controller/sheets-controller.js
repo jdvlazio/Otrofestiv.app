@@ -18,6 +18,48 @@ import { _reRenderIntereses, showAgView, switchMainNav, updateAgTab } from './pi
 import { dayFullyPassed, festivalEnded, parseDur, toMin } from '../domain/time.js';
 import { screeningPassed, effectiveDuration } from '../domain/film.js';
 import { isScreeningBlocked } from '../domain/schedule.js';
+import { onDomReady } from '../util/ready.js';
+
+// ── Velo animado por rAF (auditoría 28 jul 2026 — DESIGN.md §8.4.1) ──────────
+// En WebKit la opacidad CSS funde el TINTE del overlay pero NO atenúa su
+// backdrop-filter: el desenfoque aparece casi entero apenas la capa se hace
+// visible, con cualquier curva. Medido en banco aislado (4 variantes, cámara
+// lenta, iOS Simulator): la única progresión real es pisar radio+opacidad por
+// frame desde JS. El radio va ∝ k² porque la nitidez perceptual muere a ~5px —
+// lineal "salta" aunque el motor interpole. El driver ancla t0 en su PRIMER
+// frame: el jank de construir el DOM del sheet ocurre antes y no se come el
+// arranque de la animación (otra causa del brinco histórico).
+const VEIL_IN = 360, VEIL_OUT = 200, VEIL_MAX = 14;
+function _veilDrive(el, opening){
+  const st = el._veil || (el._veil = { k: 0, raf: 0 });
+  cancelAnimationFrame(st.raf);
+  const set = (k) => {
+    st.k = k;
+    el.style.opacity = k;
+    const b = `blur(${(k * k * VEIL_MAX).toFixed(2)}px)`;
+    el.style.webkitBackdropFilter = b; el.style.backdropFilter = b;
+  };
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches){ set(opening ? 1 : 0); return; }
+  const k0 = st.k, k1 = opening ? 1 : 0, dur = opening ? VEIL_IN : VEIL_OUT;
+  if (opening) set(k0); // pisa el opacity:1 de .open ANTES del primer paint (sin flash)
+  let t0 = 0;
+  const step = (now) => {
+    if (!t0) t0 = now;
+    const x = Math.min(1, (now - t0) / dur);
+    const e = opening ? 1 - Math.pow(1 - x, 3) : x; // easeOutCubic al abrir, lineal al cerrar
+    set(k0 + (k1 - k0) * e);
+    if (x < 1) st.raf = requestAnimationFrame(step);
+  };
+  st.raf = requestAnimationFrame(step);
+}
+onDomReady(() => {
+  for (const id of ['pel-overlay', 'venue-overlay']){
+    const el = document.getElementById(id);
+    if (!el) continue;
+    new MutationObserver(() => _veilDrive(el, el.classList.contains('open')))
+      .observe(el, { attributes: true, attributeFilter: ['class'] });
+  }
+});
 import { state } from '../state/state.js';
 import { storage } from '../storage/storage.js';
 import { t, locSynopsis } from '../i18n/i18n.js';

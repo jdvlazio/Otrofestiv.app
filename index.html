@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607281904">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607281904">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607281937">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607281937">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -217,26 +217,18 @@ window.sentryOnLoad = function() {
   --tr-fast:   100ms ease;   /* feedback inmediato: hover color           */
   --tr-base:   150ms ease;   /* micro-interacción: botones, badges        */
   --tr-smooth: 200ms ease;   /* overlays, opacidades, estados             */
-  /* Velo de los sheets. Antes (jul 2026) el blur era FIJO en 4px: no
-     transicionaba, aparecía de golpe. Se animó a 18px/420ms — y en iPhone se
-     sintió pesado y lento: animar backdrop-filter cuesta caro y el precio sube
-     con el radio, así que un valor alto no solo tapa de más, además arrastra.
-     Calibrado en device (28 jul 2026): 10px alcanza para separar planos, y la
-     curva expo-out gasta el grueso del recorrido en los primeros ~80ms — el
-     fondo se hunde de inmediato y termina de asentarse solo.
-     El velo NO espera al color ambiental de la ficha (--amb-o, .6s): son dos
-     capas independientes y el color puede llegar después. Si se los percibe
-     acoplados es que el velo va demasiado lento.
-     Cerrar usa menos tiempo: salir de un sitio no se saborea. */
-  /* El velo desenfoca, NO apaga. Antes el overlay era negro al 70% con 6px de
-     blur: lo que se percibía era un apagón, no un desenfoque — el blur quedaba
-     de adorno debajo de tanto negro. Ahora se invierte el peso: mucho blur,
-     poco negro. Como el radio es fijo (se anima la opacidad, no el filtro) el
-     coste se paga una vez, así que 14px no es caro. */
+  /* Velo de los sheets — conducido por rAF, NO por CSS (auditoría 28 jul 2026,
+     ver DESIGN.md §8.4.1). Medido en WebKit con un banco aislado de 4 variantes
+     en cámara lenta: TODO camino CSS (radio fijo + opacity, o transition del
+     radio, con cualquier curva) aplica el blur casi entero apenas la capa se
+     hace visible — la opacidad funde el tinte pero NO atenúa el filtro. La
+     única progresión real es pisar radio+opacidad frame a frame desde JS
+     (initVeil en sheets-controller.js), con radio ∝ k² porque la nitidez
+     perceptual muere a ~5px: si el radio crece lineal, "salta" aunque el
+     motor interpole. El velo desenfoca, no apaga: mucho blur, poco tinte.
+     Duraciones/curva viven en el driver; acá solo intensidad y tinte. */
   --blur-veil: 14px;
   --veil-tint: rgba(4,4,4,.42);
-  --tr-veil: 380ms cubic-bezier(.4,0,.2,1);
-  --tr-veil-out: 180ms cubic-bezier(.4,0,1,1);
   --tr-enter:  300ms ease-out; /* entradas al DOM: paneles, drawers       */
   /* Sheets — curva canónica (18 jul 2026): TODO bottom-sheet abre con spring
      y cierra con ease-in. Guardián [sheet-spring] en validate.py. */
@@ -982,24 +974,14 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 /* municipio — subordinado al venue, solo ciudades distintas a la sede principal del festival */
 .venue-municipio{display:block;font-size:var(--t-xs);color:var(--white-45);margin-top:1px;letter-spacing:.02em}
 /* ── Bottom Sheet ── */
-/* El blur es FIJO y lo que se anima es la OPACIDAD de la capa que lo lleva.
-   Animar backdrop-filter parece lo natural, pero el WKWebView del iPhone NO lo
-   interpola: salta al valor final en ~4 frames (medido sobre grabación de
-   pantalla real, 28 jul 2026) — de ahí la sensación de "no hay transición".
-   Playwright/WebKit de escritorio SÍ interpola, así que el bug es invisible en
-   CI: no alcanza con probarlo ahí.
-   Con la opacidad, el compositor mezcla el fondo nítido con su versión
-   desenfocada; al 30% de opacidad se ve un 30% de desenfoque. La progresión es
-   real en todos los motores, y además es más barato: el blur se calcula una
-   vez en vez de en cada frame. */
-/* SIN will-change: promover a capa un elemento con backdrop-filter hace que
-   iOS recalcule el backdrop al crear/destruir la capa, y eso es visible como
-   un brinco al abrir (reportado sobre grabación, 28 jul 2026). */
-.pel-sheet-overlay{position:fixed;inset:0;background:var(--veil-tint);backdrop-filter:blur(var(--blur-veil));-webkit-backdrop-filter:blur(var(--blur-veil));z-index:9000;opacity:0;transition:opacity var(--tr-veil-out);pointer-events:none}
-.pel-sheet-overlay.open{opacity:1;pointer-events:all;transition:opacity var(--tr-veil)}
-@media (prefers-reduced-motion:reduce){
-  .pel-sheet-overlay,.pel-sheet-overlay.open{transition:opacity 120ms linear}
-}
+/* El velo NO transiciona en CSS: lo conduce initVeil() por rAF (auditoría
+   28 jul 2026, DESIGN.md §8.4.1 — la opacidad CSS funde el tinte pero no
+   atenúa el backdrop-filter en WebKit, así que cualquier camino CSS "salta").
+   Estas reglas son solo el estado de reposo + fallback sin JS (veo instantáneo).
+   SIN will-change: promover la capa hace que iOS recalcule el backdrop al
+   crearla/destruirla y se ve como un brinco. */
+.pel-sheet-overlay{position:fixed;inset:0;background:var(--veil-tint);backdrop-filter:blur(var(--blur-veil));-webkit-backdrop-filter:blur(var(--blur-veil));z-index:9000;opacity:0;transition:none;pointer-events:none}
+.pel-sheet-overlay.open{opacity:1;pointer-events:all}
 .pel-sheet{position:fixed;bottom:0;left:0;right:0;background:var(--surf-2);border-radius:var(--r-sheet) var(--r-sheet) 0 0;z-index:9001;max-height:88dvh;overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;transform:translateY(100%);transition:var(--sheet-out)}
 .pel-sheet.open{transform:translateY(0);transition:var(--sheet-in)}
 /* ── Transición de póster compartido (hero morph, View Transitions API) ───────
@@ -2985,7 +2967,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202607281904";
+    s.src="/src/main.js?v=202607281937";
     document.body.appendChild(s);
     // Watchdog de boot (P0 18 jul): si el grafo ESM murió en el import (caché
     // HTTP mixta tras deploys en ráfaga — main.js nuevo + módulo viejo sin el

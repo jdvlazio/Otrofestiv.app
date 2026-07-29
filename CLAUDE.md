@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `cbb5e14 fix(design): el velo se anima por opacidad — iOS no interpola backdrop-filter (#436)`
+> Último commit: `01cae90 fix(design): el velo desenfoca en vez de apagar, y sin will-change (el brinco) (#437)`
 
 ---
 
