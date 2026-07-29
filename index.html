@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607291713">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607291713">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607291731">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607291731">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -1049,10 +1049,23 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
    antes de aterrizar) — filter, no backdrop-filter: el guardián
    [no-animated-blur] solo prohíbe el segundo, y sobre un clon pequeño el raster
    es barato. */
-.poster-flight{position:fixed;z-index:9002;object-fit:cover;border-radius:var(--r-poster);
+/* RADIO CONTRA-ESCALADO (29 jul 2026): `transform:scale()` escala TAMBIÉN el
+   border-radius. El clon nace al tamaño de la card y aterriza al de la ficha
+   (84→96, y 56→96 desde un thumb de corto), así que el radio RENDERIZADO se
+   inflaba por el factor de escala y caía de golpe al aterrizar — se veía cambiar
+   de redondez y "brincaba" justo en los casos de más escala. Unificar el token
+   NO bastaba. El JS fija --fr = --r-poster / escala en el estado final, así que
+   radio × escala ≈ constante en todo el vuelo.
+   ENCUADRE: object-position se hereda del destino (--fp) para que el recorte del
+   clon sea el mismo que el del póster real — antes el clon encuadraba `center` y
+   la ficha `center top`, y la imagen se re-acomodaba dentro del marco al soltar. */
+.poster-flight{position:fixed;z-index:9002;object-fit:cover;
+  border-radius:var(--fr,var(--r-poster));object-position:var(--fp,center);
   transform-origin:top left;pointer-events:none;will-change:transform;
-  filter:blur(5px);
-  transition:transform .56s cubic-bezier(.2,0,0,1),filter .34s cubic-bezier(.3,0,.4,1)}
+  filter:blur(var(--fb,14px));
+  transition:transform .56s cubic-bezier(.2,0,0,1),
+             border-radius .56s cubic-bezier(.2,0,0,1),
+             filter .46s cubic-bezier(.3,0,.5,1)}
 @keyframes vtRise{from{opacity:0;transform:translateY(9px)}to{opacity:1;transform:translateY(0)}}
 /* Sin fundido: para lo que NO descansa en opacity:1 (el enlace de Letterboxd
    vive al .6), animar la opacidad a 1 y luego soltar la clase producía un
@@ -3032,7 +3045,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202607291713";
+    s.src="/src/main.js?v=202607291731";
     document.body.appendChild(s);
     // Watchdog de boot (P0 18 jul): si el grafo ESM murió en el import (caché
     // HTTP mixta tras deploys en ráfaga — main.js nuevo + módulo viejo sin el

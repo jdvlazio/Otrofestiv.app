@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `60e5895 fix(ui): el aviso pierde la caja y el corto recupera el aire tras la sinopsis (#462)`
+> Último commit: `be1fa65 fix(design): el viaje del poster — curva, blur, un solo radio y sin escalon (#463)`
 
 ---
 

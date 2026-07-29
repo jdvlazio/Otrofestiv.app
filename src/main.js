@@ -446,7 +446,7 @@ FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202607291713';
+const BUILD_VERSION='202607291731';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';
@@ -973,9 +973,20 @@ const _FLIGHT_MS=560; // curva enfática: cola larga desacelerando (ver .poster-
 // _morphOpen(sourceEl, openFn) — dueño ÚNICO del viaje del póster. sourceEl
 // contiene el póster de origen (card del grid O thumb de un corto dentro de un
 // programa); openFn hace el render síncrono del destino. Reusado por ambos.
+// Nodo que viaja. Un póster EDITORIAL no es una imagen: es una card compuesta
+// (.poster-ed = banda de sección + still + capa .ed-blur decorativa). Antes se
+// clonaba la primera <img> del subárbol, que resultaba ser .ed-blur —una capa
+// borrosa MÁS GRANDE que la card (73×78 vs 56×84)—, así que volaba un rectángulo
+// suelto mientras la card real ya estaba visible. Se clona la card COMPLETA:
+// banda y still viajan juntos y escalan como una pieza.
+function _flightNode(root){
+  if(!root||!root.querySelector) return null;
+  if(root.matches&&root.matches('.poster-ed')) return root;
+  return root.querySelector('.poster-ed')||root.querySelector('.img-cover')||root.querySelector('img');
+}
 function _morphOpen(sourceEl, openFn){
   const reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const src = sourceEl && sourceEl.querySelector && sourceEl.querySelector('.ed-still, .img-cover, img'); // cubre thumb simple (img) y editorial (.ed-still) de cortos también
+  const src = _flightNode(sourceEl);
   const a = src && src.getBoundingClientRect();
   if(reduce || _vtBusy || !src || !a || !a.width){ openFn(); return; }
   _vtBusy=true;
@@ -985,7 +996,9 @@ function _morphOpen(sourceEl, openFn){
     openFn(); // render síncrono + .open → sheet (spring) y velo (escalera) arrancan YA, visibles
     const sheet=document.getElementById('pel-sheet')||_sheet0;
     if(sheet) sheet.classList.add('vt-in'); // stagger de la meta (vtRise, CSS puro)
-    const dst=document.querySelector('.pel-sheet-poster, .pel-sheet-poster-stage img, .psp-editorial img, .pel-sheet .ed-still');
+    // Destino: la card COMPUESTA cuando es editorial (.psp-editorial), la imagen
+    // cuando es un póster normal. Nunca una capa interna.
+    const dst=document.querySelector('.psp-editorial, .pel-sheet-poster, .pel-sheet-poster-stage');
     if(!dst||!sheet){ setTimeout(_clean,_FLIGHT_MS); return; }
     // Rect FINAL del destino: el sheet aún está en translateY(100%) (el spring
     // recién arranca), así que se proyecta: posición del dst relativa al sheet +
@@ -993,20 +1006,28 @@ function _morphOpen(sourceEl, openFn){
     const sr=sheet.getBoundingClientRect(), dr=dst.getBoundingClientRect();
     const finalTop=window.innerHeight-sheet.offsetHeight+(dr.top-sr.top);
     const b={left:dr.left, top:finalTop, width:dr.width||1, height:dr.height||1};
-    // Clon en vuelo: transform-only (translate+scale), nunca layout por frame.
-    const fly=document.createElement('img');
-    fly.className='poster-flight';
-    fly.src=src.currentSrc||src.src;
-    fly.style.cssText=`left:${a.left}px;top:${a.top}px;width:${a.width}px;height:${a.height}px`;
+    const sx=b.width/a.width, sy=b.height/a.height;
+    // Clon de la card ENTERA (editorial: banda + still viajan juntos). Solo
+    // transform, nunca layout por frame.
+    const fly=src.cloneNode(true);
+    fly.classList.add('poster-flight');
+    fly.removeAttribute('id');
+    // Encuadre y radio del DESTINO: el clon debe recortar y redondear como aquello
+    // en lo que se convierte, o la imagen se re-acomoda dentro del marco al soltar.
+    const _cs=getComputedStyle(dst);
+    const _rBase=parseFloat(_cs.borderRadius)||12;
+    // Contra-escala del radio: transform:scale() escala el border-radius, así que
+    // el valor final va dividido por la escala para que el RENDERIZADO no cambie.
+    fly.style.cssText=`left:${a.left}px;top:${a.top}px;width:${a.width}px;height:${a.height}px;`+
+      `border-radius:${_rBase}px;object-position:${_cs.objectPosition};`+
+      `filter:blur(14px)`;
     document.body.appendChild(fly);
     dst.style.opacity='0';          // el real espera a que aterrice el clon
     src.style.opacity='0';          // la card no muestra doble póster
-    // El radio NO se anima: las 6 superficies de póster comparten --r-poster, así
-    // que el clon nace y aterriza con la misma redondez (guardián [poster-radius]).
-    // Solo transform (posición/escala) y filter (blur→foco). Dos rAF: el primer
-    // frame fija el estado inicial, el segundo dispara la transición.
+    // Dos rAF: el primero fija el estado inicial, el segundo dispara la transición.
     requestAnimationFrame(()=>requestAnimationFrame(()=>{
-      fly.style.transform=`translate(${b.left-a.left}px,${b.top-a.top}px) scale(${b.width/a.width},${b.height/a.height})`;
+      fly.style.transform=`translate(${b.left-a.left}px,${b.top-a.top}px) scale(${sx},${sy})`;
+      fly.style.borderRadius=`${_rBase/Math.max(sx,0.01)}px`;
       fly.style.filter='blur(0px)';
     }));
     setTimeout(()=>{
