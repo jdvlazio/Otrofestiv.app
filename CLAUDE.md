@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `d029a1d fix(design): el velo baja a 6px y reparte la curva — el salto era la curva, no el motor (#435)`
+> Último commit: `cbb5e14 fix(design): el velo se anima por opacidad — iOS no interpola backdrop-filter (#436)`
 
 ---
 

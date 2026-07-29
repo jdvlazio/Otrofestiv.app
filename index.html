@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607281849">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607281849">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607281904">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607281904">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -228,7 +228,13 @@ window.sentryOnLoad = function() {
      capas independientes y el color puede llegar después. Si se los percibe
      acoplados es que el velo va demasiado lento.
      Cerrar usa menos tiempo: salir de un sitio no se saborea. */
-  --blur-veil: 6px;
+  /* El velo desenfoca, NO apaga. Antes el overlay era negro al 70% con 6px de
+     blur: lo que se percibía era un apagón, no un desenfoque — el blur quedaba
+     de adorno debajo de tanto negro. Ahora se invierte el peso: mucho blur,
+     poco negro. Como el radio es fijo (se anima la opacidad, no el filtro) el
+     coste se paga una vez, así que 14px no es caro. */
+  --blur-veil: 14px;
+  --veil-tint: rgba(4,4,4,.42);
   --tr-veil: 380ms cubic-bezier(.4,0,.2,1);
   --tr-veil-out: 180ms cubic-bezier(.4,0,1,1);
   --tr-enter:  300ms ease-out; /* entradas al DOM: paneles, drawers       */
@@ -986,7 +992,10 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
    desenfocada; al 30% de opacidad se ve un 30% de desenfoque. La progresión es
    real en todos los motores, y además es más barato: el blur se calcula una
    vez en vez de en cada frame. */
-.pel-sheet-overlay{position:fixed;inset:0;background:var(--overlay-blur-70);backdrop-filter:blur(var(--blur-veil));-webkit-backdrop-filter:blur(var(--blur-veil));z-index:9000;opacity:0;transition:opacity var(--tr-veil-out);pointer-events:none;will-change:opacity}
+/* SIN will-change: promover a capa un elemento con backdrop-filter hace que
+   iOS recalcule el backdrop al crear/destruir la capa, y eso es visible como
+   un brinco al abrir (reportado sobre grabación, 28 jul 2026). */
+.pel-sheet-overlay{position:fixed;inset:0;background:var(--veil-tint);backdrop-filter:blur(var(--blur-veil));-webkit-backdrop-filter:blur(var(--blur-veil));z-index:9000;opacity:0;transition:opacity var(--tr-veil-out);pointer-events:none}
 .pel-sheet-overlay.open{opacity:1;pointer-events:all;transition:opacity var(--tr-veil)}
 @media (prefers-reduced-motion:reduce){
   .pel-sheet-overlay,.pel-sheet-overlay.open{transition:opacity 120ms linear}
@@ -2976,7 +2985,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202607281849";
+    s.src="/src/main.js?v=202607281904";
     document.body.appendChild(s);
     // Watchdog de boot (P0 18 jul): si el grafo ESM murió en el import (caché
     // HTTP mixta tras deploys en ráfaga — main.js nuevo + módulo viejo sin el
