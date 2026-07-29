@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `afb2cf6 fix(finca): CI en verde — arquetipos estáticos, posterSource, day_order, tests del riel dinámicos (#447)`
+> Último commit: `871fca9 fix(tests): T08 acota el riel a #splash-rail — el sheet duplica las cards (#448)`
 
 ---
 
