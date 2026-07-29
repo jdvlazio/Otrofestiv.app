@@ -446,7 +446,7 @@ FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202607290749';
+const BUILD_VERSION='202607290756';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';
@@ -971,10 +971,6 @@ function _morphOpen(sourceEl, openFn){
   const src = sourceEl && sourceEl.querySelector && sourceEl.querySelector('.ed-still, .img-cover, img'); // cubre thumb simple (img) y editorial (.ed-still) de cortos también
   if(!document.startViewTransition || reduce || _vtBusy || !src){ openFn(); return; }
   _vtBusy=true;
-  // El velo arranca EN EL TAP, antes de la VT: el driver rAF (sheets-controller)
-  // escucha esta clase, y así el desenfoque del fondo viaja a la par del póster
-  // en vez de esperar a que termine la transición.
-  document.getElementById('pel-overlay')?.classList.add('open');
   src.style.viewTransitionName='film-poster';
   const _sheet=document.getElementById('pel-sheet');
   if(_sheet) _sheet.classList.add('vt-run'); // el VT reemplaza el spring durante el gesto

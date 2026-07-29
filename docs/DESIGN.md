@@ -421,49 +421,25 @@ Reglas de método que esto deja:
   (`--amb-o`, .6s): capas independientes.
 - `prefers-reduced-motion`: el driver salta al estado final, sin animación.
 
-### 8.4.2 · View transition del root — el velo va DENTRO de la transición
+### 8.4.2 · View transition del root — crossfade sin bache (estado VIGENTE)
 
-Al abrir una ficha, el hero morph corre en una View Transition. Clave que costó
-dos bugs entenderla: **mientras la VT corre, sus pseudo-elementos TAPAN el DOM
-real**. Cualquier animación del DOM (incluido el velo, que anima el driver rAF)
-queda oculta hasta que la VT libera la vista — ~500ms después del tap. De ahí
-"el desenfoque empieza demasiado tarde", con cualquier curva.
+Estado actual (el que quedó tras revertir, 29 jul 2026):
+`::view-transition-old(root){animation:none}` — el snapshot viejo queda opaco
+debajo — y `new(root)` entra encima con `vtFadeIn .22s`. En un crossfade
+siempre debe quedar una capa opaca (sin eso había un bache a negro medible).
 
-**Regla: lo que deba verse durante la VT se anima sobre el SNAPSHOT.**
-`::view-transition-old(root)` lleva `filter: blur()` de 0 a `--blur-veil`, así
-el fondo se desenfoca a la par de que el póster viaja. Medido: el desenfoque
-pasa de 3% a **67%** a los ~100ms del tap.
-
-El cruce con `new(root)` se concentra al **final** (85–100%), y para entonces
-ambos snapshots llevan el mismo desenfoque: el crossfade es invisible. Eso
-resuelve de paso el **bache a negro** que había cuando los dos se desvanecían a
-la vez (se veía a través de ambos hasta el negro del navegador: la luminancia
-caía de 10.16 a 8.99). Y el empalme con el DOM real no salta porque el driver
-lo dejó en el mismo valor — por eso `main.js` marca el overlay como abierto
-**en el tap**, antes de arrancar la VT.
-
-**Dos capas que NO deben quedar en el snapshot del root:**
-
-1. **El snapshot NUEVO** (`::view-transition-new(root){display:none}`). Se
-   captura justo tras el callback, cuando el driver todavía tiene el velo en
-   ~0: sale **nítido**. Al entrar producía *desenfoca → enfoca → desenfoca*.
-   Sin él, al desvanecerse el viejo se revela el DOM real, que ya tiene el velo
-   en su valor final y el sheet en su sitio — lo mismo que mostraría el nuevo,
-   pero sin el paso por nítido.
-2. **El chrome** (`.topbar`, `.main-nav` con `view-transition-name` propio y
-   `animation:none`). El `filter` del velo desenfocaba el wordmark, los tabs y
-   la nav; al terminar la VT volvían a estar nítidos. El chrome es glass:
-   difumina lo que pasa POR DETRÁS, pero su contenido nunca se desenfoca.
-
-Verificación: la curva de desenfoque debe ser **monótona**. Se mide por frame
-en una franja del fondo; cualquier retroceso >1.5pt es un re-enfoque visible.
-Tras sacar ambas capas: **retroceso 0.0pt** (antes 4.9pt).
-
-`--blur-veil-vt` (8px) NO es el mismo número que `--blur-veil` (10px): `filter`
-sobre una imagen difumina más que `backdrop-filter` sobre el DOM al mismo radio.
-
-**No sirve quitar el snapshot del root** (`display:none`): sin él, el sheet
-—que durante la VT lleva `.vt-run` y por tanto no anima— aparece de golpe.
+**REVERTIDO — animar el velo dentro de la VT (intentos del 29 jul).** Se probó
+desenfocar el snapshot viejo (`filter` en `old(root)`), descartar `new(root)` y
+sacar el chrome del snapshot con `view-transition-name` propio. En Playwright
+las métricas daban bien (retroceso 0.0pt), **en device el póster quedaba como
+un fantasma sin que el fondo se desenfocara**: manipular qué snapshots existen
+y cuáles se ocultan rinde distinto en WKWebView que en el WebKit de escritorio.
+Lección: **los pseudo-elementos de View Transitions son territorio
+motor-específico — cualquier cambio ahí se valida en el dispositivo real ANTES
+de mergear, no después.** El síntoma pendiente ("el desenfoque del fondo recién
+se ve cuando la VT libera la vista, ~400ms tras el tap") queda documentado como
+problema ABIERTO: mientras la VT corre, sus snapshots tapan el DOM y el velo
+del driver rAF trabaja invisible debajo.
 
 ### 8.5 · Iconos — ver `docs/ICONS.md`
 Fuente única `ICONS` (`components.js`); `aria-hidden` de fábrica; escala icono ≈

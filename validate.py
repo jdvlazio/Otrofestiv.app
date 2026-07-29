@@ -2440,7 +2440,7 @@ try:
     #   i18n.js (diccionarios es/en, es DATA) · sheets-controller.js · handlers.js
     _ALLOW = {
         'src/view/agenda.js': 1622,
-        'src/main.js': 1620,  # +4: el velo arranca en el tap (sincronía con el hero morph) (29 jul 2026)
+        'src/main.js': 1616,
         'src/i18n/i18n.js': 1405,  # +5: aria_dia_sig ×3 locales (a11y iconos, 18 jul)
         'src/controller/sheets-controller.js': 1407,  # +4: VEIL_MAX leído de --blur-veil (fuente única con el CSS) (29 jul 2026)
         'src/controller/handlers.js': 915,

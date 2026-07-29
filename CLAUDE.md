@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `7c07ab4 fix(design): el velo se anima DENTRO de la view transition (empezaba tarde) (#443)`
+> Último commit: `e98cb28 fix(design): fuera del snapshot el chrome y el estado nuevo — el brinco era re-enfoque (#444)`
 
 ---
 
