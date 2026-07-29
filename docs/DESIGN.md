@@ -514,6 +514,39 @@ quitar TODO el `backdrop-filter` no bajó el raster (238ms sin blur vs 192ms con
 blur — ruido). El conteo de capas sí es una métrica válida acá porque es
 estructural, no depende de la GPU.
 
+### 8.4.4 · Orden de los avisos en una ficha (regla única, 29 jul 2026)
+
+**Todo sheet —película, corto, evento— ordena igual:**
+
+```
+1. IDENTIDAD    póster · título · banderas/duración · dirección·género·año ·
+                sección · Letterboxd            ← el último dato de la obra
+2. FUNCIÓN      cabecera · notice-banner (cancelada/reprogramada) · fila(s)
+                de día·hora·sede
+3. MATICES      meta-banner: Q&A · inscripción previa · función compartida
+4. SINOPSIS
+5. CTAs
+```
+
+Dos principios lo fijan:
+
+- **Lo que INVALIDA va antes; lo que MATIZA va después.** El aviso de
+  cancelada/reprogramada niega la hora que le sigue: hay que leerlo primero. El
+  Q&A y la función compartida califican una función válida — leerlos antes
+  obliga a sostener un modificador sin conocer aún lo que modifica, justo en el
+  camino más recorrido de la ficha.
+- **Los avisos van SIEMPRE antes de la sinopsis**, nunca sueltos entre la
+  sinopsis y los botones. Cuando una superficie no tiene bloque de función (la
+  ficha de un corto no lo tiene: el horario vive en su programa), los matices
+  suben igual y quedan pegados al bloque de identidad.
+
+> De dónde sale: el mismo aviso de «función compartida» vivía en dos sitios
+> distintos —tras la función en la ficha, tras la sinopsis en el corto— porque
+> se movió uno y en el otro solo se cambió el texto. Un concepto en dos lugares
+> es un concepto que el usuario tiene que aprender dos veces. **Al tocar un
+> aviso, revisar TODAS las superficies que lo pintan**, no solo la que se está
+> mirando: hoy son la ficha de película y la de corto.
+
 ### 8.5 · Iconos — ver `docs/ICONS.md`
 Fuente única `ICONS` (`components.js`); `aria-hidden` de fábrica; escala icono ≈
 texto (11 en t-label/t-xs, 13 base, 14–16 icon-only); stroke 1.75 universal;
