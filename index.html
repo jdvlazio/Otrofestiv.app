@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607290737">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607290737">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607290749">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607290749">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -237,6 +237,12 @@ window.sentryOnLoad = function() {
      Este token es la fuente única: el driver lo lee con getComputedStyle.
      Duraciones/curva viven en el driver; acá solo intensidad y tinte. */
   --blur-veil: 10px;
+  /* Radio del snapshot durante la VT. NO es el mismo número que --blur-veil:
+     filter sobre una imagen difumina MÁS que backdrop-filter sobre el DOM al
+     mismo radio, y la diferencia se veía como un tirón de re-enfoque al
+     empalmar (medido: 100% vs 95% de desenfoque). Calibrado para que aterricen
+     iguales. */
+  --blur-veil-vt: 8px;
   --veil-tint: rgba(4,4,4,.42);
   --tr-enter:  300ms ease-out; /* entradas al DOM: paneles, drawers       */
   /* Sheets — curva canónica (18 jul 2026): TODO bottom-sheet abre con spring
@@ -1019,10 +1025,29 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
    para entonces ambos llevan el mismo desenfoque, así que el crossfade es
    invisible: sin bache a negro (el bug de ayer) y sin salto al empalmar con
    el DOM real, que el driver ya dejó en el mismo valor. */
-@keyframes vtVeilOld{0%{filter:blur(0px)}70%{filter:blur(var(--blur-veil))}85%{filter:blur(var(--blur-veil));opacity:1}100%{filter:blur(var(--blur-veil));opacity:0}}
-@keyframes vtVeilNew{0%,85%{opacity:0}100%{opacity:1}}
+/* El fade del snapshot arranca PRONTO (55%) y es largo: al empalmar con el DOM
+   real hay ~6 puntos de diferencia de difuminado —filter sobre la imagen y
+   backdrop-filter no tratan igual los bordes— y en un corte seco se leen como
+   un tirón. Repartidos en ~190ms, son imperceptibles. */
+@keyframes vtVeilOld{0%{filter:blur(0px);opacity:1}55%{filter:blur(var(--blur-veil-vt));opacity:1}100%{filter:blur(var(--blur-veil-vt));opacity:0}}
 ::view-transition-old(root){animation:vtVeilOld .42s cubic-bezier(.4,0,.2,1) both}
-::view-transition-new(root){animation:vtVeilNew .42s linear both}
+/* El snapshot NUEVO se descarta. Se captura justo tras el callback, cuando el
+   driver todavía tiene el velo en ~0: sale NÍTIDO. Al entrar al final producía
+   desenfoca → enfoca → desenfoca, que es exactamente el brinco reportado.
+   Sin él, al desvanecerse el viejo se revela el DOM REAL, que para entonces ya
+   tiene el velo en su valor final y el sheet en su sitio: es lo mismo que
+   mostraría el snapshot nuevo, pero sin el paso por nítido. */
+::view-transition-new(root){display:none}
+/* El CHROME sale del snapshot del root. Si no, el filter del velo lo desenfoca
+   —wordmark, tabs, nav— y al terminar la VT vuelve a estar nítido: eso es el
+   "desenfoca, enfoca" que se sentía como brinco. El chrome es glass, difumina
+   lo que pasa POR DETRÁS, pero su propio contenido nunca se desenfoca.
+   Con nombre propio viaja fuera del root y se queda quieto y nítido. */
+.topbar{view-transition-name:chrome-top}
+.main-nav{view-transition-name:chrome-nav}
+::view-transition-group(chrome-top),::view-transition-group(chrome-nav){animation:none}
+::view-transition-old(chrome-top),::view-transition-old(chrome-nav){display:none}
+::view-transition-new(chrome-top),::view-transition-new(chrome-nav){animation:none}
 .pel-sheet.vt-run{transition:none!important}
 /* Stagger COMPRIMIDO para terminar ANTES que la transición (.5s): así al cerrar
    ya está en reposo y quitar la clase no corta nada (era la otra causa del brinco). */
@@ -2987,7 +3012,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202607290737";
+    s.src="/src/main.js?v=202607290749";
     document.body.appendChild(s);
     // Watchdog de boot (P0 18 jul): si el grafo ESM murió en el import (caché
     // HTTP mixta tras deploys en ráfaga — main.js nuevo + módulo viejo sin el
