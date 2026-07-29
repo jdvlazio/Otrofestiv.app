@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `073a070 fix(ux): Funcion compartida vive en el mismo sitio en toda ficha + guardian (#460)`
+> Último commit: `8b332be fix(design): el viaje del poster pasa a FLIP — fuera la View Transition (#461)`
 
 ---
 
