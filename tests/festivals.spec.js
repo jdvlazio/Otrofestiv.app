@@ -18,7 +18,11 @@ test('T08 — selector-carrusel: vigentes encabezan, divisor separa grupos', asy
   const r = await page.evaluate(async () => {
     const { _classifyFestival } = await import('/src/view/components.js');
     const { FESTIVAL_CONFIG } = await import('/src/config.js');
-    const ids = [...document.querySelectorAll('.splash-card[data-fest]')].map(c => c.dataset.fest);
+    // SCOPE #splash-rail: el sheet "cambiar festival" replica el riel (misma card,
+    // clase .splash-rail) y también vive en el DOM — document-wide mezcla ambos y
+    // el invariante de tiering lee las 18 cards intercaladas. Latente hasta FINCA:
+    // con 0 vigentes, tieringOk era trivialmente true.
+    const ids = [...document.querySelectorAll('#splash-rail .splash-card[data-fest]')].map(c => c.dataset.fest);
     const cls = ids.map(id => _classifyFestival(FESTIVAL_CONFIG[id]));
     const firstPastIdx = cls.indexOf('past');
     const lastCurrentIdx = cls.reduce((mx, c, i) => (c !== 'past' ? i : mx), -1);
@@ -29,7 +33,7 @@ test('T08 — selector-carrusel: vigentes encabezan, divisor separa grupos', asy
       // invariante de tiering: ningún vigente aparece DESPUÉS de un pasado
       tieringOk: firstPastIdx === -1 || lastCurrentIdx < firstPastIdx,
       firstIsCurrent: cls[0] !== 'past',
-      dividerPresent: !!document.querySelector('.splash-rail-div'),
+      dividerPresent: !!document.querySelector('#splash-rail .splash-rail-div'),
       leviza: ids.some(id => id.includes('leviza')),
     };
   });
