@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `e98cb28 fix(design): fuera del snapshot el chrome y el estado nuevo — el brinco era re-enfoque (#444)`
+> Último commit: `9a4326e revert(design): fuera los cambios de VT (#443, #444) — en device el póster era un fantasma (#445)`
 
 ---
 
@@ -63,6 +63,7 @@ Juan es Product Owner, diseñador y developer. Claude ejecuta; Juan audita y apr
 | `olhar2026` | Olhar de Cinema | Curitiba | JUN 4–13 | Archivado |
 | `tercertiempo2026` | Tercer Tiempo Fest | Bogotá | 13–19 JUL | Recién terminado |
 | `fantasofest2026` | FantasoFest | Bogotá | 13–19 JUL | Recién terminado |
+| `finca2026` | FINCA | Buenos Aires | 12–19 AGO | **Próximo / activo** |
 | `ficmontanas2026` | Ficmontañas | Salento | JUL 1–5 | Recién terminado |
 
 ### Features activas (desde `.specify/features/`)
