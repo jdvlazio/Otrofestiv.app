@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `eed9a6a fix(plan): quitar una obra anclada quita la funcion completa (simetria) (#456)`
+> Último commit: `78cebb1 fix(ux): el rotulo de Q&A distinguia mal, y el aviso iba antes de la funcion`
 
 ---
 

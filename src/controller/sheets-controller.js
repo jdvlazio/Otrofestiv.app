@@ -97,7 +97,20 @@ const _COUNTRY_FLAGS={
   'Jamaica':'🇯🇲','Trinidad and Tobago':'🇹🇹','Barbados':'🇧🇧',
   'Ecuador':'🇪🇨','Bolivia':'🇧🇴','Paraguay':'🇵🇾','Uruguay':'🇺🇾',
   'Honduras':'🇭🇳','Guatemala':'🇬🇹','El Salvador':'🇸🇻','Nicaragua':'🇳🇮',
-  'Costa Rica':'🇨🇷','Panama':'🇵🇦'
+  'Costa Rica':'🇨🇷','Panama':'🇵🇦',
+  // Huecos cazados por la auditoría del 29 jul 2026: el mapa tenía los nombres
+  // en inglés de estos países pero NO los castellanos, que es lo que traen los
+  // JSON de festivales hispanohablantes. Cada uno era un globo en pantalla.
+  'Polonia':'🇵🇱','Japón':'🇯🇵','Dinamarca':'🇩🇰','Suecia':'🇸🇪',
+  'Noruega':'🇳🇴','Países Bajos':'🇳🇱','Corea del Sur':'🇰🇷','Hungría':'🇭🇺',
+  'Letonia':'🇱🇻','República Checa':'🇨🇿','Rumania':'🇷🇴','Croacia':'🇭🇷',
+  'Eslovenia':'🇸🇮','Luxemburgo':'🇱🇺','Islandia':'🇮🇸','Camerún':'🇨🇲',
+  'Malí':'🇲🇱','Panamá':'🇵🇦','Haití':'🇭🇹','Qatar':'🇶🇦','Malasia':'🇲🇾',
+  'Tailandia':'🇹🇭','Afganistán':'🇦🇫','Kazajistán':'🇰🇿','Kirguistán':'🇰🇬',
+  'Marruecos':'🇲🇦','Mozambique':'🇲🇿','Sudáfrica':'🇿🇦','Somalia':'🇸🇴',
+  'Vanuatu':'🇻🇺','Türkiye':'🇹🇷','Guinea-Bissau':'🇬🇼','Líbano':'🇱🇧',
+  'Nueva Zelanda':'🇳🇿','Bulgaria':'🇧🇬','Serbia':'🇷🇸','Senegal':'🇸🇳',
+  'Indonesia':'🇮🇩','Nigeria':'🇳🇬','Palestina':'🇵🇸','Suiza':'🇨🇭'
 };
 let _cortoParentHtml=null;
 
@@ -492,7 +505,12 @@ export function openCortoSheet(title, country, duration, section, flags, directo
   // NO en el mapa lbSlugs del festival → usar lbUrlForFilm(richItem). lbUrl(title)
   // (por título contra el mapa) fallaba y dejaba el enlace oculto.
   const lbHref=(richItem&&lbUrlForFilm(richItem))||lbUrl(title);
-  const flgs=flags||countryToFlags(ctry)||'🌐';
+  // `flags` NO viaja en los data-attr del item (_mkCortoItemHtml no lo emite),
+  // así que acá llegaba vacío y el corto caía a recalcular desde el país — y con
+  // los paréntesis de coproducción de FINCA, al globo. richItem ES el item de
+  // film_list: su `flags` es el dato autoritativo, igual que ya se hace con
+  // duration, lbSlug y poster. Recalcular teniendo el valor es la fuente doble.
+  const flgs=flags||(richItem&&richItem.flags)||countryToFlags(ctry||(richItem&&richItem.country))||'🌐';
   const posterUrl=posterOverride||(richItem&&getCortoItemPoster(richItem))||getPosterSrc(title,true)||null;
   // Editorial por posterSource (still 16:9 local del festival) O por CDN-URL. Sin
   // el chequeo de posterSource, un still local caía a <img> recortado 2:3.
@@ -1256,8 +1274,13 @@ export function countryToFlags(countryStr){
   // (bug Voces del Territorio, 18 jul). NO se parte por guion: "Guinea-Bissau" es
   // un país. Guardián [country-flags] verifica que todo país de un festival activo
   // produzca bandera. Ver docs/ICONS.md.
-  const parts=countryStr.split(/[,/]/).map(s=>s.trim());
-  const flags=parts.map(p=>_COUNTRY_FLAGS[p]||'').filter(Boolean);
+  // PARÉNTESIS: varios festivales marcan la coproducción entre paréntesis —
+  // "España (Austria)", "República Democrática del Congo (Bélgica, Francia)"
+  // (FINCA 2026), "Republic of Korea (South Korea)" (Tribeca). Sin partirlos,
+  // TODO el string quedaba como una clave inexistente y caía al globo pese a
+  // ser países mapeados. Mismo bug que el de las comas, otro separador.
+  const parts=countryStr.split(/[,/()]/).map(s=>s.trim());
+  const flags=[...new Set(parts.map(p=>_COUNTRY_FLAGS[p]||'').filter(Boolean))];
   return flags.length?flags.join(''):'🌍';
 }
 
