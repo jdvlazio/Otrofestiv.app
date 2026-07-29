@@ -2442,7 +2442,7 @@ try:
         'src/view/agenda.js': 1622,
         'src/main.js': 1616,  # +28: quick-wins offline — storage.persist() + listener 'online' (flush cloud_dirty + revalidar versión) (19 jul 2026)
         'src/i18n/i18n.js': 1405,  # +5: aria_dia_sig ×3 locales (a11y iconos, 18 jul)
-        'src/controller/sheets-controller.js': 1403,  # +42: driver rAF del velo (initVeil — iOS no atenúa backdrop-filter con opacity) (28 jul 2026)
+        'src/controller/sheets-controller.js': 1407,  # +4: VEIL_MAX leído de --blur-veil (fuente única con el CSS) (29 jul 2026)
         'src/controller/handlers.js': 915,
     }
     _over = []

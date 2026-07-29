@@ -348,8 +348,28 @@ helpers.js o `--amb` a mano = build roto. Safari iOS: muestrear con URL propia
 
 **La regla que quedó de la auditoría (28 jul 2026): el velo NO se anima en CSS.
 Lo conduce JS por rAF, pisando radio y opacidad frame a frame.** El radio va
-`k² × --blur-veil` (14px) y la opacidad `k` (easeOutCubic, 360ms abrir / 200ms
-lineal cerrar). Tinte `--veil-tint` (negro 42%): el velo desenfoca, no apaga.
+`k² × --blur-veil` (**38px**) y la opacidad `k` (easeOutCubic, 360ms abrir /
+200ms lineal cerrar). `--blur-veil` es la **fuente única**: el driver la lee con
+`getComputedStyle`, así el fallback CSS sin JS nunca diverge.
+
+**Por qué 38px y no 14 (29 jul 2026).** Reporte: "amplía el recorrido de foco a
+desenfoque, no el tiempo". Medido el viaje a tres escalas espaciales:
+
+| radio | detalle fino | estructura media | **estructura grande** |
+|---|---|---|---|
+| 14 | 2.36 | 6.22 | 9.12 |
+| 26 | 2.41 | 6.82 | 10.32 |
+| **38** | 2.37 | **6.87** | **10.81** |
+| 50 | 2.31 | 6.61 | 10.77 |
+
+- **El detalle fino satura a ~3px de radio**: medido ahí, todos los techos dan
+  el mismo viaje, y de ahí salió el "techo ~12px" del que partimos. Era una
+  conclusión de una métrica mal elegida.
+- Lo que da la sensación de recorrido es la **estructura grande** (formas, no
+  texto): ahí el viaje crece hasta ~38px y **satura** — 50px no aporta y sí
+  cuesta compositor.
+- Corolario de método: medir desenfoque con una sola escala espacial engaña.
+  Submuestrear (1/6, 1/12) antes de medir el gradiente. Tinte `--veil-tint` (negro 42%): el velo desenfoca, no apaga.
 Guardián `[no-animated-blur]`: ninguna `transition` incluye `backdrop-filter`.
 
 **Por qué — hallazgos del banco aislado** (4 variantes lado a lado, transición

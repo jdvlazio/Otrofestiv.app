@@ -29,7 +29,11 @@ import { onDomReady } from '../util/ready.js';
 // lineal "salta" aunque el motor interpole. El driver ancla t0 en su PRIMER
 // frame: el jank de construir el DOM del sheet ocurre antes y no se come el
 // arranque de la animación (otra causa del brinco histórico).
-const VEIL_IN = 360, VEIL_OUT = 200, VEIL_MAX = 14;
+const VEIL_IN = 360, VEIL_OUT = 200;
+// El radio máximo vive en --blur-veil (index.html): una sola fuente para el
+// driver y para el fallback CSS sin JS.
+const VEIL_MAX = parseFloat(getComputedStyle(document.documentElement)
+  .getPropertyValue('--blur-veil')) || 38;
 function _veilDrive(el, opening){
   const st = el._veil || (el._veil = { k: 0, raf: 0 });
   cancelAnimationFrame(st.raf);
