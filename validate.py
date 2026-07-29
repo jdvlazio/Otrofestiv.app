@@ -2520,7 +2520,7 @@ try:
     #   i18n.js (diccionarios es/en, es DATA) · sheets-controller.js · handlers.js
     _ALLOW = {
         'src/view/agenda.js': 1622,
-        'src/main.js': 1641,  # +25 total: _morphOpen a FLIP (fuera startViewTransition, entra clon en vuelo con curva y blur) (29 jul)
+        'src/main.js': 1662,  # +46 total: _morphOpen a FLIP — clon de la card compuesta, radio contra-escalado, encuadre del destino (29 jul)
         'src/i18n/i18n.js': 1409,  # +4 (net): anclaje (label+texto) y Q&A con referentes, ×3 locales (29 jul)
         'src/controller/sheets-controller.js': 1424,  # +17: qa_type, 40 países que faltaban en _COUNTRY_FLAGS y flags del corto desde richItem (29 jul 2026)
         'src/controller/handlers.js': 935,  # +20: anclaje de función en toggleWL, simétrico al quitar (29 jul)
