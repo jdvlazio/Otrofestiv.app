@@ -3,9 +3,9 @@
   "fuente": "Excel «Selección Oficial» (metadatos+funciones por columna F) + Doc «Programación completa» (eventos y verificación) — recibidos del festival 29 jul 2026",
   "verificacion": "las 20 funciones del Excel coinciden 1:1 con la grilla día/sede/hora del doc",
   "preguntas_festival": [
-   "F=14 no existe en la numeración — ¿función eliminada?",
-   "2 largos seleccionados sin función asignada (fuera del build): ['La città dei bambini. L´utopia di Francesco Tonucci', 'The fire in our hearts']",
-   "5 cortos sin función van como catálogo por confirmar"
+   "F=14 no existe: la columna F salta de 13.0 a 15.0 y ningún valor (ni «x y y») contiene 14. El doc tampoco tiene un slot sin cubrir. ¿Función eliminada o error de numeración?",
+   "7 filas de la hoja «Selección Oficial» están casi vacías (sin F, fecha, sede, sección, y casi sin metadatos): largos «La città dei bambini. L´utopia di Francesco Tonucci» y «The fire in our hearts»; cortos «Reverie», «甘棠，湖», «Becoming Air», «The council of all beings» y «FLORIÁN» (este último sí trae país/año/duración). ¿Siguen en la selección? ¿Tendrán función? No se montan hasta confirmar.",
+   "Pósters faltantes en el Drive para 3 cortos programados: Tuktuit: Caribou, Cuidemos el planeta, El día que aprendí a volar."
   ]
  },
  "venues": {
@@ -13,44 +13,44 @@
    "short": "Alianza Francesa",
    "address": "Av. Córdoba 946, CABA",
    "nota": "Entrada gratuita. Por orden de llegada.",
-   "lat": 0,
-   "lng": 0
+   "lat": -34.59917,
+   "lng": -58.3802926
   },
   "CCEBA": {
    "short": "CCEBA",
    "address": "Paraná 1159, CABA",
    "nota": "Actividad abierta y gratuita. Sin inscripción previa.",
-   "lat": 0,
-   "lng": 0
+   "lat": -34.59511,
+   "lng": -58.388438
   },
   "Cine York": {
    "short": "Cine York",
    "address": "Juan Bautista Alberdi 895, Olivos, Vicente López",
    "city": "Olivos",
    "nota": "Entrada gratuita. Por orden de llegada.",
-   "lat": 0,
-   "lng": 0
+   "lat": -34.5076739,
+   "lng": -58.4849533
   },
   "Cine Arte Cacodelphia": {
    "short": "Cacodelphia",
    "address": "Av. Roque Sáenz Peña 1150, CABA",
    "nota": "Reserva por boletería online o presencial.",
-   "lat": 0,
-   "lng": 0
+   "lat": -34.6079213,
+   "lng": -58.3736329
   },
   "Centro Cultural 25 de Mayo": {
    "short": "CC 25 de Mayo",
    "address": "Av. Triunvirato 4444, Villa Urquiza, CABA",
    "nota": "Reserva por boletería online o presencial.",
-   "lat": 0,
-   "lng": 0
+   "lat": -34.5763854,
+   "lng": -58.4837318
   },
   "Teatro Empire": {
    "short": "Teatro Empire",
    "address": "Hipólito Yrigoyen 1934, Balvanera, CABA",
    "nota": "Reserva por boletería online o presencial.",
-   "lat": 0,
-   "lng": 0
+   "lat": -34.6105202,
+   "lng": -58.3938625
   }
  },
  "films": [
@@ -74,7 +74,8 @@
    "date": "2026-08-12",
    "time": "19:30",
    "venue": "Alianza Francesa de Buenos Aires",
-   "F": 1
+   "F": 1,
+   "poster": "/assets/finca/nao-havera-mais-historia-sem-nos.jpg"
   },
   {
    "title": "Toroboro: el nombre de las plantas",
@@ -100,7 +101,8 @@
    "date": "2026-08-13",
    "time": "19:30",
    "venue": "Alianza Francesa de Buenos Aires",
-   "F": 3
+   "F": 3,
+   "poster": "/assets/finca/toroboro-el-nombre-de-las-plantas.jpg"
   },
   {
    "title": "Propiedad privada prohibido pasar",
@@ -124,7 +126,8 @@
    "date": "2026-08-13",
    "time": "18:00",
    "venue": "Cine York",
-   "F": 4
+   "F": 4,
+   "poster": "/assets/finca/propiedad-privada-prohibido-pasar.jpg"
   },
   {
    "title": "Mi casa es su casa",
@@ -147,7 +150,8 @@
    "date": "2026-08-13",
    "time": "18:00",
    "venue": "Cine York",
-   "F": 4
+   "F": 4,
+   "poster": "/assets/finca/mi-casa-es-su-casa.jpg"
   },
   {
    "title": "Ziki",
@@ -171,7 +175,8 @@
    "date": "2026-08-13",
    "time": "20:30",
    "venue": "Cine York",
-   "F": 5
+   "F": 5,
+   "poster": "/assets/finca/ziki.jpg"
   },
   {
    "title": "Yurlu",
@@ -195,7 +200,8 @@
    "date": "2026-08-13",
    "time": "20:30",
    "venue": "Cine York",
-   "F": 5
+   "F": 5,
+   "poster": "/assets/finca/yurlu.jpg"
   },
   {
    "title": "Pailako. Cosmovisión en resistencia",
@@ -219,7 +225,8 @@
    "date": "2026-08-14",
    "time": "19:00",
    "venue": "Cine Arte Cacodelphia",
-   "F": 6
+   "F": 6,
+   "poster": "/assets/finca/pailako-cosmovision-en-resistencia.jpg"
   },
   {
    "title": "La granja de la libertad",
@@ -242,7 +249,8 @@
    "date": "2026-08-14",
    "time": "19:00",
    "venue": "Cine Arte Cacodelphia",
-   "F": 6
+   "F": 6,
+   "poster": "/assets/finca/la-granja-de-la-libertad.jpg"
   },
   {
    "title": "Tigre es yaguareté",
@@ -266,7 +274,8 @@
    "date": "2026-08-14",
    "time": "18:00",
    "venue": "Cine York",
-   "F": 8
+   "F": 8,
+   "poster": "/assets/finca/tigre-es-yaguarete.jpg"
   },
   {
    "title": "Pau d´Arco",
@@ -291,7 +300,8 @@
    "date": "2026-08-14",
    "time": "18:00",
    "venue": "Cine York",
-   "F": 8
+   "F": 8,
+   "poster": "/assets/finca/pau-d-arco.jpg"
   },
   {
    "title": "El árbol de la autenticidad",
@@ -315,7 +325,8 @@
    "date": "2026-08-14",
    "time": "20:30",
    "venue": "Cine York",
-   "F": 9
+   "F": 9,
+   "poster": "/assets/finca/l-arbre-de-l-authenticite.jpg"
   },
   {
    "title": "De la guerra fría a la guerra verde",
@@ -334,7 +345,8 @@
    "date": "2026-08-15",
    "time": "17:00",
    "venue": "Cine Arte Cacodelphia",
-   "F": 10
+   "F": 10,
+   "poster": "/assets/finca/de-la-guerra-fria-a-la-guerra-verde.jpg"
   },
   {
    "title": "Karuara, la gente del río",
@@ -356,7 +368,8 @@
    "date": "2026-08-15",
    "time": "20:30",
    "venue": "Cine York",
-   "F": 12
+   "F": 12,
+   "poster": "/assets/finca/karuara-la-gente-del-rio.jpg"
   },
   {
    "title": "Colorado",
@@ -379,7 +392,8 @@
    "date": "2026-08-15",
    "time": "20:30",
    "venue": "Cine York",
-   "F": 12
+   "F": 12,
+   "poster": "/assets/finca/colorado.jpg"
   },
   {
    "title": "La vida fracturada",
@@ -405,7 +419,8 @@
    "date": "2026-08-16",
    "time": "17:00",
    "venue": "Cine Arte Cacodelphia",
-   "F": 13
+   "F": 13,
+   "poster": "/assets/finca/la-vida-fracturada.jpg"
   },
   {
    "title": "Mora",
@@ -431,7 +446,8 @@
    "date": "2026-08-17",
    "time": "17:00",
    "venue": "Cine Arte Cacodelphia",
-   "F": 15
+   "F": 15,
+   "poster": "/assets/finca/amora.jpg"
   },
   {
    "title": "¿Cuán profundo es tu amor?",
@@ -455,7 +471,8 @@
    "date": "2026-08-17",
    "time": "19:00",
    "venue": "Centro Cultural 25 de Mayo",
-   "F": 16
+   "F": 16,
+   "poster": "/assets/finca/how-deep-is-your-love.jpg"
   },
   {
    "title": "Tierra que habla",
@@ -481,7 +498,8 @@
    "date": "2026-08-18",
    "time": "19:00",
    "venue": "Cine Arte Cacodelphia",
-   "F": 17
+   "F": 17,
+   "poster": "/assets/finca/tierra-que-habla.jpg"
   },
   {
    "title": "Yintah",
@@ -501,7 +519,8 @@
    "date": "2026-08-18",
    "time": "18:30",
    "venue": "Alianza Francesa de Buenos Aires",
-   "F": 18
+   "F": 18,
+   "poster": "/assets/finca/yintah.jpg"
   },
   {
    "title": "Qué perforado está mi valle",
@@ -524,7 +543,8 @@
    "date": "2026-08-18",
    "time": "19:00",
    "venue": "Teatro Empire",
-   "F": 19
+   "F": 19,
+   "poster": "/assets/finca/que-perforado-esta-mi-valle.jpg"
   },
   {
    "title": "Sangre de plomo",
@@ -550,7 +570,8 @@
    "date": "2026-08-18",
    "time": "19:00",
    "venue": "Teatro Empire",
-   "F": 19
+   "F": 19,
+   "poster": "/assets/finca/sangre-de-plomo.jpg"
   },
   {
    "title": "El amor duerme en la calle",
@@ -576,7 +597,8 @@
    "date": "2026-08-18",
    "time": "21:00",
    "venue": "Teatro Empire",
-   "F": 20
+   "F": 20,
+   "poster": "/assets/finca/el-amor-duerme-en-la-calle.jpg"
   },
   {
    "title": "El costo del crecimiento",
@@ -600,7 +622,8 @@
    "date": "2026-08-19",
    "time": "21:30",
    "venue": "Cine Arte Cacodelphia",
-   "F": 21
+   "F": 21,
+   "poster": "/assets/finca/the-cost-of-growth.jpg"
   },
   {
    "title": "Cortometrajes en Competencia Oficial — Programa 1",
@@ -623,7 +646,8 @@
      "duration": "12 min",
      "genre": "Animación",
      "lbSlug": "acid-city",
-     "_tmdbId": 1599926
+     "_tmdbId": 1599926,
+     "poster": "/assets/finca/acid-city.jpg"
     },
     {
      "title": "Saludos desde Rodas",
@@ -638,7 +662,8 @@
      "tematica": "Extractivismos",
      "lbSlug": "greetings-from-rhodes",
      "_tmdbId": 1603941,
-     "genre": "Documental"
+     "genre": "Documental",
+     "poster": "/assets/finca/pozdravy-z-rodosu.jpg"
     },
     {
      "title": "Tuktuit: Caribou",
@@ -671,7 +696,8 @@
      "lbSlug": "ecocidio",
      "_tmdbId": 1477851,
      "genre": "Animación",
-     "qa": "Q&A | Charla con el equipo de la película"
+     "qa": "Q&A | Charla con el equipo de la película",
+     "poster": "/assets/finca/ecocidio.jpg"
     },
     {
      "title": "Sobre todo",
@@ -688,7 +714,8 @@
      "year": 2025,
      "duration": "25 min",
      "genre": "Experimental",
-     "qa": "Q&A | Charla con el equipo de la película"
+     "qa": "Q&A | Charla con el equipo de la película",
+     "poster": "/assets/finca/above-all.jpg"
     }
    ],
    "duration": "52 min",
@@ -720,7 +747,8 @@
      "year": 2025,
      "duration": "25 min",
      "genre": "Experimental",
-     "qa": "Q&A | Charla con el equipo de la película"
+     "qa": "Q&A | Charla con el equipo de la película",
+     "poster": "/assets/finca/above-all.jpg"
     },
     {
      "title": "Sobre Ruinas",
@@ -738,7 +766,8 @@
      "duration": "19 min",
      "genre": "Documental",
      "lbSlug": "sobre-ruinas",
-     "_tmdbId": 1448990
+     "_tmdbId": 1448990,
+     "poster": "/assets/finca/sobre-ruinas.jpg"
     },
     {
      "title": "Dígale no a los poalets",
@@ -756,7 +785,8 @@
      "duration": "20 min",
      "genre": "Documental",
      "lbSlug": "no-to-mini-bins",
-     "_tmdbId": 1631620
+     "_tmdbId": 1631620,
+     "poster": "/assets/finca/no-als-poalets.jpg"
     },
     {
      "title": "Nuestra isla",
@@ -768,7 +798,8 @@
      "premiere": "Estreno argentino",
      "rating": "Apta para todo público",
      "trailer": "https://youtu.be/-iIx2JCx_2o",
-     "tematica": "Biodiversidad"
+     "tematica": "Biodiversidad",
+     "poster": "/assets/finca/la-nostra-isola.jpg"
     }
    ],
    "duration": "64 min",
@@ -798,7 +829,8 @@
      "lbSlug": "ecocidio",
      "_tmdbId": 1477851,
      "genre": "Animación",
-     "qa": "Q&A | Charla con el equipo de la película"
+     "qa": "Q&A | Charla con el equipo de la película",
+     "poster": "/assets/finca/ecocidio.jpg"
     },
     {
      "title": "Cuidemos el planeta",
@@ -829,7 +861,8 @@
      "country": "Argentina",
      "year": 2026,
      "duration": "11 min",
-     "genre": "Animación"
+     "genre": "Animación",
+     "poster": "/assets/finca/el-viaje-de-luz.jpg"
     },
     {
      "title": "El día que aprendí a volar",
@@ -852,7 +885,8 @@
      "synopsis_en": "A drop of water comes down from a cloud and falls on a little girl affected by a drought. Together they embark on a journey to reach the sea, during which the drop opens its eyes to the problems of the lack of water that endanger the life of the girl and the rest of the community.",
      "rating": "Apta para todo público",
      "trailer": "https://youtu.be/R49Qujy1DGc",
-     "tematica": "Agua"
+     "tematica": "Agua",
+     "poster": "/assets/finca/soc-aigua.jpg"
     }
    ],
    "duration": "17 min",
@@ -863,51 +897,6 @@
    "venue": "Cine York",
    "F": 11,
    "country": "Argentina"
-  },
-  {
-   "title": "Cortometrajes — función por confirmar",
-   "is_cortos": true,
-   "unscheduled": true,
-   "type": "event",
-   "film_list": [
-    {
-     "title": "Reverie",
-     "title_orig": "Reverie",
-     "premiere": ""
-    },
-    {
-     "title": "Gan Tang, El Lago",
-     "title_orig": "甘棠，湖",
-     "director": "Tianming Zhou",
-     "synopsis": "-",
-     "synopsis_en": "In the summer of 2023, the government of Jiujiang launched the Gan Tang Lake Cleansing Project. Within weeks, this ancient lake with over two millennia of history was drained. Nearby in Gan Tang Park, a boy wakes up in the rain. There, the destiny of Gan Tang awaits.",
-     "premiere": "",
-     "rating": "Apta para todo público",
-     "trailer": "https://vimeo.com/1152746085/1d0685dfbb?fl=tl&fe=ec"
-    },
-    {
-     "title": "Becoming Air",
-     "title_orig": "Becoming Air",
-     "premiere": ""
-    },
-    {
-     "title": "The council of all beings",
-     "title_orig": "The council of all beings",
-     "premiere": "",
-     "rating": "Apta para mayores de 13 años"
-    },
-    {
-     "title": "FLORIÁN",
-     "title_orig": "FLORIÁN",
-     "director": "JUAN RAMÓN OJUEZ",
-     "synopsis": "Criaturas obligadas a compartir un espacio conquistado por los humanos. Cuando el sentido de la palabra libertad muta en medio de disputas de batallas culturales. ¿Qué significa mirar a un pájaro hoy?",
-     "synopsis_en": "Creatures forced to share a space conquered by humans. When the meaning of the word freedom shifts amid the clashes of cultural battles. What does it mean to look at a bird today?",
-     "premiere": "",
-     "rating": "Apta para todo público",
-     "trailer": "https://vimeo.com/1121598373/43e55dd14b?share=copy&fl=sv&fe=ci"
-    }
-   ],
-   "section": "Panorama"
   },
   {
    "title": "Ceremonia de apertura",
