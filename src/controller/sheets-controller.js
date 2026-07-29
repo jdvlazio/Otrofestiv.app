@@ -255,7 +255,7 @@ export function openPelSheet(title){
         lista de matices de esa función — y evitan emparedar la fila entre dos
         banners de la misma familia visual. */''}
     ${_metaBanners(f)}
-    ${_anclada?`<div class="meta-banner"><div class="meta-banner-dot"></div><div class="meta-banner-text">${t('meta_funcion_incluye')}</div></div>`:''}
+    ${_anclada?`<div class="meta-banner"><div class="meta-banner-dot"></div><div><div class="meta-banner-label">${t('meta_funcion_label')}</div><div class="meta-banner-text">${t('meta_funcion_incluye')}</div></div></div>`:''}
     ${(()=>{
       const _tk=FESTIVAL_CONFIG[_activeFestId]||{};
       // ticket_url por FILM pisa al global (Tercer Tiempo 2026: cada sesión tiene
