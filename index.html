@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607291028">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607291028">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607291100">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607291100">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -234,10 +234,12 @@ window.sentryOnLoad = function() {
      Lección dura: la métrica dice cuánto CAMBIA el fondo, no cuánto DEBE
      tapar. El punto de llegada es decisión de diseño y se juzga en device;
      el máximo medible no es el valor correcto.
-     Este token es la fuente única: el driver lo lee con getComputedStyle.
-     Duraciones/curva viven en el driver; acá solo intensidad y tinte. */
+     Este token es la fuente única: las dos capas del velo derivan su radio de
+     él (ver .pel-sheet-overlay). Duraciones/curva viven en el CSS del velo. */
   --blur-veil: 10px;
   --veil-tint: rgba(4,4,4,.42);
+  /* Tinte POR CAPA: dos capas al 24% componen ≈ --veil-tint (1-(1-a)²≈.42). */
+  --veil-tint-step: rgba(4,4,4,.24);
   --tr-enter:  300ms ease-out; /* entradas al DOM: paneles, drawers       */
   /* Sheets — curva canónica (18 jul 2026): TODO bottom-sheet abre con spring
      y cierra con ease-in. Guardián [sheet-spring] en validate.py. */
@@ -989,8 +991,34 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
    Estas reglas son solo el estado de reposo + fallback sin JS (veo instantáneo).
    SIN will-change: promover la capa hace que iOS recalcule el backdrop al
    crearla/destruirla y se ve como un brinco. */
-.pel-sheet-overlay{position:fixed;inset:0;background:var(--veil-tint);backdrop-filter:blur(var(--blur-veil));-webkit-backdrop-filter:blur(var(--blur-veil));z-index:9000;opacity:0;transition:none;pointer-events:none}
-.pel-sheet-overlay.open{opacity:1;pointer-events:all}
+/* ── Velo del sheet — ESCALERA de 2 capas, animada SOLO por opacity ───────────
+   El driver rAF anterior corría en el hilo principal, que es exactamente el que
+   el sheet bloquea ~230ms mientras se construye. Medido en device (29 jul 2026,
+   7 de 7 aperturas): el velo progresaba hasta ~68%, se CONGELABA 233ms y saltaba
+   a full en UN frame. No era la curva ni el radio ni el momento de arranque —
+   era inanición de rAF. Una animación de opacity vive en el compositor y un hilo
+   principal bloqueado no puede detenerla.
+   Como opacity NO atenúa backdrop-filter de forma proporcional (satura en ~2
+   frames), la progresión se construye ESCALONANDO dos capas de radio fijo —los
+   pseudo-elementos del scrim—, no rampeando un radio. Los radios .55/.84 componen
+   en cuadratura ≈ --blur-veil (√(.55²+.84²)≈1.00), así el punto de llegada
+   aprobado en device no cambia. */
+.pel-sheet-overlay{position:fixed;inset:0;z-index:9000;pointer-events:none}
+.pel-sheet-overlay.open{pointer-events:all}
+.pel-sheet-overlay::before,.pel-sheet-overlay::after{
+  content:'';position:absolute;inset:0;opacity:0;
+  background:var(--veil-tint-step);transition:opacity 200ms linear;
+}
+.pel-sheet-overlay::before{backdrop-filter:blur(calc(var(--blur-veil) * .55));-webkit-backdrop-filter:blur(calc(var(--blur-veil) * .55))}
+.pel-sheet-overlay::after{backdrop-filter:blur(calc(var(--blur-veil) * .84));-webkit-backdrop-filter:blur(calc(var(--blur-veil) * .84))}
+/* Al abrir: escalonado (el 2º peldaño entra a mitad del 1º) → rampa perceptual.
+   Al cerrar: ambas capas a la vez, 200ms (regla base de arriba). */
+.pel-sheet-overlay.open::before{opacity:1;transition:opacity 220ms linear}
+.pel-sheet-overlay.open::after{opacity:1;transition:opacity 220ms linear 110ms}
+@media (prefers-reduced-motion:reduce){
+  .pel-sheet-overlay::before,.pel-sheet-overlay::after,
+  .pel-sheet-overlay.open::before,.pel-sheet-overlay.open::after{transition:none}
+}
 .pel-sheet{position:fixed;bottom:0;left:0;right:0;background:var(--surf-2);border-radius:var(--r-sheet) var(--r-sheet) 0 0;z-index:9001;max-height:88dvh;overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;transform:translateY(100%);transition:var(--sheet-out)}
 .pel-sheet.open{transform:translateY(0);transition:var(--sheet-in)}
 /* ── Transición de póster compartido (hero morph, View Transitions API) ───────
@@ -2983,7 +3011,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202607291028";
+    s.src="/src/main.js?v=202607291100";
     document.body.appendChild(s);
     // Watchdog de boot (P0 18 jul): si el grafo ESM murió en el import (caché
     // HTTP mixta tras deploys en ráfaga — main.js nuevo + módulo viejo sin el
