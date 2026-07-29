@@ -484,6 +484,36 @@ se ve cuando la VT libera la vista, ~400ms tras el tap") queda documentado como
 problema ABIERTO: mientras la VT corre, sus snapshots tapan el DOM y el velo
 del driver rAF trabaja invisible debajo.
 
+### 8.4.3 · Presupuesto de capas — un scrim cerrado no debe pintar
+
+**Regla: todo overlay a pantalla completa lleva `visibility:hidden` cuando está
+cerrado**, con la transición retrasada (`visibility 0s linear .4s`) para que siga
+visible durante todo el fundido de salida — la animación de cierre no cambia ni
+un frame. `opacity:0` NO basta: el elemento se sigue pintando, su
+`backdrop-filter` sigue vivo y el compositor le mantiene la capa.
+
+**De dónde salió (29 jul 2026).** Buscando el "bloqueo de 230ms" al abrir una
+ficha, el perfil de CPU descartó al JS (`openPelSheet` = 5.8ms con throttle 4x;
+la tarea más larga del hilo principal, 22ms). El trace de timeline lo mandó al
+render, y el `LayerTree` de CDP dio el número: **46 capas compuestas, una docena
+a viewport completo**, casi todas scrims cerrados con blur. En device (DPR 3)
+cada capa a pantalla completa es ~11.8MB de backing → **~140MB permanentes**.
+Esa presión de GPU es lo que hunde los frames del teléfono; el "bloqueo" era el
+device rindiendo a ~4fps, no una tarea larga.
+
+Resultado tras esconder los 9 scrims: **46 → 36 capas, 35.3 → 22.8MB** (medido
+en CSS px; en device el ahorro es ~9× por el DPR).
+
+**Método:** `CDPSession` → `LayerTree.enable` → `layerTreeDidChange` da capas con
+tamaños; `Profiler` da self-time de JS; `Tracing` con
+`disabled-by-default-devtools.timeline` da Layout/Paint/Raster. Los tres juntos
+distinguen "JS lento" de "demasiadas capas", que se sienten igual desde afuera.
+
+⚠️ **Chromium de escritorio no reproduce el costo de GPU del iPhone**: medido,
+quitar TODO el `backdrop-filter` no bajó el raster (238ms sin blur vs 192ms con
+blur — ruido). El conteo de capas sí es una métrica válida acá porque es
+estructural, no depende de la GPU.
+
 ### 8.5 · Iconos — ver `docs/ICONS.md`
 Fuente única `ICONS` (`components.js`); `aria-hidden` de fábrica; escala icono ≈
 texto (11 en t-label/t-xs, 13 base, 14–16 icon-only); stroke 1.75 universal;
