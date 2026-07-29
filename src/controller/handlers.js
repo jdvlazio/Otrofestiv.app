@@ -50,6 +50,13 @@ export function toggleWL(title,e){
   if(e) e.stopPropagation();
   // 1. READ
   const {FILMS, prioritized, savedAgenda, watched, watchlist} = state.snapshot();
+  // ANCLAJE DE FUNCIÓN: obras programadas en la MISMA función (misma sala y
+  // horario, una tras otra) comparten `_slotKey` — lo marca el loader en los
+  // festivales que lo declaran. Se calcula acá para tenerlo en todo el flujo.
+  const _slotKeys=new Set(FILMS.filter(f=>f.title===title&&f._slotKey).map(f=>f._slotKey));
+  const _hermanas=_slotKeys.size
+    ?[...new Set(FILMS.filter(f=>f._slotKey&&_slotKeys.has(f._slotKey)&&f.title!==title).map(f=>f.title))]
+    :[];
   // 2. GUARD + 3. MUTATE — branch A: remove con modal si en savedAgenda
   if(watchlist.has(title)){
     if(savedAgenda&&savedAgenda.schedule.some(s=>s._title===title)){
@@ -80,8 +87,14 @@ export function toggleWL(title,e){
   }
   else{
     // Branch C: add — con detección "todas funciones bloqueadas" + UI variants
+    // Agregar una obra anclada suma sus compañeras: dejarlas fuera partiría una
+    // función por la mitad. Misma regla que un corto arrastrando su programa
+    // (meta_corto_incluye). Quitar SÍ es individual: sacar una obra de la lista
+    // no debe sacarte la otra.
+    let _wl=state._addToSet(watchlist, title);
+    _hermanas.forEach(h=>{ _wl=state._addToSet(_wl, h); });
     state.batchUpdate({
-      watchlist: state._addToSet(watchlist, title),
+      watchlist: _wl,
       watched: state._delFromSet(watched, title),
     });
     const _allScreens=FILMS.filter(f=>f.title===title&&!screeningPassed(f));
@@ -90,6 +103,10 @@ export function toggleWL(title,e){
       const{displayTitle}=parseProgramTitle(title);
       const _short=displayTitle.length>28?displayTitle.slice(0,26)+'…':displayTitle;
       setTimeout(()=>showToast(`"${_short}" ${t('plan_bloqueado_disp')}`,'warn',5000),300);
+    } else if(_hermanas.length){
+      // Desde la grilla no se ve el banner de la ficha: si sumamos una obra que
+      // el usuario no eligió, hay que decirlo en el momento.
+      showToast(t('meta_funcion_incluye'),'info',4000);
     } else if(activeMNav==='mnav-cartelera'||activeMNav==='mnav-seleccion'){
       showActionToast(`${ICONS.heartFill} ${t('cta_en_intereses')}`,`${ICONS.bookmark} ${t('cta_priorizar')}`,()=>togglePriority(title));
     } else {
@@ -98,6 +115,8 @@ export function toggleWL(title,e){
   }
   // 4. PERSIST + surgical patch (branch B y C). Render automático vía pipeline.
   saveState('wl','watched');updateCardState(title);
+  // Las compañeras de función también cambiaron de estado → repintar su card.
+  _hermanas.forEach(h=>updateCardState(h));
 }
 
 export function toggleWatched(title,e){

@@ -22,9 +22,32 @@ Documento normativo. Toda discrepancia entre este archivo y el código es un bug
   "prioLimit": 5,
   "ticket_url": "string — URL https:// de entradas (opcional)",
   "ticketing_model": "string — 'paid' | 'mixed' (obligatorio si ticket_url existe)",
+  "sharedSlotIsOneScreening": "bool — opt-in: dos obras en el mismo día+hora+sala son UNA función",
   "films": [ ... ]
 }
 ```
+
+### `sharedSlotIsOneScreening` — anclaje de función (opt-in, 29 jul 2026)
+
+Algunos festivales programan **dos obras en una misma función**: un corto o
+mediometraje y después un largo, mismo día, hora y sala, con una sola cabecera
+de horario en su programa. Con este flag en `true`, el loader detecta esos
+grupos (`día|hora|sede|sala`) y marca cada obra con `_slotKey` y `_slotMin`, y
+el dominio entonces:
+
+- **no las declara en conflicto entre sí** — con una entrada se ven las dos;
+- **ocupa la sala por la SUMA de ambas** (+30 del Q&A **una sola vez**: es una
+  charla al final de la función, no una por obra). Sin esto el planificador cree
+  que salís al terminar la primera y te ofrece otra función a la que no llegás.
+
+Además, agregar una obra anclada suma sus compañeras a Intereses (misma regla
+que un corto arrastrando su programa) y la ficha muestra `meta_funcion_incluye`.
+
+> ⚠️ **Es opt-in a propósito, no se puede derivar.** En sedes multisala (Tribeca:
+> «AMC 19th St. East 6», «Village East by Angelika») misma hora y sede es **otra
+> sala = otra función**, y anclarlas sería un error. Solo lo declara el festival
+> cuyo programa lo confirma. FINCA 2026 es el primero: 6 casos, verificados uno
+> a uno contra su documento día por día.
 
 **Nota formato:** Los festivales desde Jardín 2026 no incluyen `config{}` en el JSON — la configuración vive en `FESTIVAL_CONFIG` de `index.html`. Los festivales legacy (FICCI 65, Cinemancia 2025) sí incluyen `config{}`.
 

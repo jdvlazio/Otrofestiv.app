@@ -144,6 +144,9 @@ export function openPelSheet(title){
   }
   const{displayTitle}=parseProgramTitle(f.title);
   const secLabel=_secLabel(f.section);
+  // ANCLAJE: ¿esta obra comparte función con otra? (`_slotKey` lo marca el
+  // loader en los festivales que declaran `sharedSlotIsOneScreening`).
+  const _anclada=screenings.some(s=>s._slotKey&&FILMS.some(o=>o._slotKey===s._slotKey&&o.title!==f.title));
   const totalFn=FILMS.filter(fi=>fi.title===f.title).length;
   const unica=totalFn===1;
   const DAY_ABB=['MAR','MIÉ','JUE','VIE','SÁB','DOM'];
@@ -231,6 +234,7 @@ export function openPelSheet(title){
     ${(()=>{const _n=NOTICES.find(n=>n.title===f.title&&n.festival===(_activeFestId||_DEFAULT_FEST_ID));if(!_n)return'';const _info=`${_n.newDay||''} ${_n.newTime||''}${_n.newVenue?' · '+_n.newVenue:''}`.trim();const _msg=_n.type==='cancelled'?t('notice_funcion_canc'):t('notice_reprog_a',{info:_info});return`<div class="notice-banner-row"><span class="notice-badge">${_n.type==='cancelled'?t('notice_cancelada'):t('notice_reprog_short')}</span><span class="notice-banner-txt">${_msg}</span></div>`;})()}
     ${_metaBanners(f)}
     ${allScr.length>0?`<div class="pel-sheet-screenings">${rows}</div>`:''}
+    ${_anclada?`<div class="meta-banner"><div class="meta-banner-dot"></div><div class="meta-banner-text">${t('meta_funcion_incluye')}</div></div>`:''}
     ${(()=>{
       const _tk=FESTIVAL_CONFIG[_activeFestId]||{};
       // ticket_url por FILM pisa al global (Tercer Tiempo 2026: cada sesión tiene
