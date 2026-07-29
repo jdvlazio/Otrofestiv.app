@@ -257,7 +257,8 @@
    "posterSource": "custom",
    "day_order": 1,
    "synopsis_lang": "es",
-   "competencia": "Competencia Oficial de Documentales Latinoamericanos"
+   "competencia": "Competencia Oficial de Documentales Latinoamericanos",
+   "qa_type": "guests"
   },
   {
    "title": "Propiedad privada prohibido pasar",
@@ -283,7 +284,8 @@
    "venue": "Cine York",
    "posterSource": "custom",
    "day_order": 1,
-   "synopsis_lang": "es"
+   "synopsis_lang": "es",
+   "qa_type": "team"
   },
   {
    "title": "Mi casa es su casa",
@@ -361,7 +363,8 @@
    "day_order": 1,
    "synopsis_lang": "es",
    "lbSlug": "yurlu-country",
-   "competencia": "Competencia Oficial de Largometrajes Internacionales"
+   "competencia": "Competencia Oficial de Largometrajes Internacionales",
+   "qa_type": "guests"
   },
   {
    "title": "Pailako. Cosmovisión en resistencia",
@@ -388,7 +391,8 @@
    "venue": "Cine Arte Cacodelphia",
    "posterSource": "custom",
    "day_order": 2,
-   "synopsis_lang": "es"
+   "synopsis_lang": "es",
+   "qa_type": "team"
   },
   {
    "title": "La granja de la libertad",
@@ -438,7 +442,8 @@
    "venue": "Cine York",
    "posterSource": "custom",
    "day_order": 2,
-   "synopsis_lang": "es"
+   "synopsis_lang": "es",
+   "qa_type": "team"
   },
   {
    "title": "Pau d´Arco",
@@ -494,7 +499,8 @@
    "day_order": 2,
    "synopsis_lang": "es",
    "lbSlug": "the-tree-of-authenticity",
-   "competencia": "Competencia Oficial de Largometrajes Internacionales"
+   "competencia": "Competencia Oficial de Largometrajes Internacionales",
+   "qa_type": "guests"
   },
   {
    "title": "De la guerra fría a la guerra verde",
@@ -521,7 +527,8 @@
    "genre": "Documental",
    "flags": "🇵🇾",
    "lbSlug": "green-is-the-new-red",
-   "competencia": "Competencia Oficial de Largometrajes Internacionales"
+   "competencia": "Competencia Oficial de Largometrajes Internacionales",
+   "qa_type": "guests"
   },
   {
    "title": "Karuara, la gente del río",
@@ -601,7 +608,8 @@
    "posterSource": "custom",
    "day_order": 4,
    "synopsis_lang": "es",
-   "competencia": "Competencia Oficial de Largometrajes Internacionales"
+   "competencia": "Competencia Oficial de Largometrajes Internacionales",
+   "qa_type": "team"
   },
   {
    "title": "Mora",
@@ -631,7 +639,8 @@
    "posterSource": "custom",
    "day_order": 5,
    "synopsis_lang": "es",
-   "competencia": "Competencia Oficial de Documentales Latinoamericanos"
+   "competencia": "Competencia Oficial de Documentales Latinoamericanos",
+   "qa_type": "team"
   },
   {
    "title": "¿Cuán profundo es tu amor?",
@@ -660,7 +669,8 @@
    "day_order": 5,
    "synopsis_lang": "es",
    "lbSlug": "how-deep-is-your-love-2025",
-   "competencia": "Competencia Oficial de Largometrajes Internacionales"
+   "competencia": "Competencia Oficial de Largometrajes Internacionales",
+   "qa_type": "guests"
   },
   {
    "title": "Tierra que habla",
@@ -689,7 +699,8 @@
    "posterSource": "custom",
    "day_order": 6,
    "synopsis_lang": "es",
-   "competencia": "Competencia Oficial de Documentales Latinoamericanos"
+   "competencia": "Competencia Oficial de Documentales Latinoamericanos",
+   "qa_type": "team"
   },
   {
    "title": "Yintah",
@@ -717,7 +728,8 @@
    "genre": "Documental",
    "flags": "🇨🇦",
    "lbSlug": "yintah",
-   "competencia": "Competencia Oficial de Largometrajes Internacionales"
+   "competencia": "Competencia Oficial de Largometrajes Internacionales",
+   "qa_type": "guests"
   },
   {
    "title": "Qué perforado está mi valle",
@@ -742,7 +754,8 @@
    "venue": "Teatro Empire",
    "posterSource": "custom",
    "day_order": 6,
-   "synopsis_lang": "es"
+   "synopsis_lang": "es",
+   "qa_type": "team"
   },
   {
    "title": "Sangre de plomo",
@@ -770,7 +783,8 @@
    "venue": "Teatro Empire",
    "posterSource": "custom",
    "day_order": 6,
-   "synopsis_lang": "es"
+   "synopsis_lang": "es",
+   "qa_type": "team"
   },
   {
    "title": "El amor duerme en la calle",
@@ -798,7 +812,8 @@
    "venue": "Teatro Empire",
    "posterSource": "custom",
    "day_order": 6,
-   "synopsis_lang": "es"
+   "synopsis_lang": "es",
+   "qa_type": "team"
   },
   {
    "title": "El costo del crecimiento",
@@ -826,7 +841,8 @@
    "posterSource": "custom",
    "day_order": 7,
    "synopsis_lang": "es",
-   "lbSlug": "the-cost-of-growth"
+   "lbSlug": "the-cost-of-growth",
+   "qa_type": "guests"
   },
   {
    "title": "Cortometrajes en Competencia Oficial — Programa 1",
@@ -917,7 +933,8 @@
      "year": 2025,
      "duration": "2 min",
      "flags": "🇦🇷",
-     "competencia": "Competencia Oficial de Corto y Mediometrajes Internacionales"
+     "competencia": "Competencia Oficial de Corto y Mediometrajes Internacionales",
+     "qa_type": "team"
     },
     {
      "title": "Sobre todo",
@@ -940,7 +957,8 @@
      "qa_detail": "Q&A | Charla con el equipo de la película",
      "posterSource": "custom",
      "lbSlug": "above-all-2025",
-     "competencia": "Competencia Oficial de Corto y Mediometrajes Internacionales"
+     "competencia": "Competencia Oficial de Corto y Mediometrajes Internacionales",
+     "qa_type": "team"
     }
    ],
    "duration": "79 min",
@@ -977,7 +995,8 @@
      "qa_detail": "Q&A | Charla con el equipo de la película",
      "posterSource": "custom",
      "lbSlug": "above-all-2025",
-     "competencia": "Competencia Oficial de Corto y Mediometrajes Internacionales"
+     "competencia": "Competencia Oficial de Corto y Mediometrajes Internacionales",
+     "qa_type": "team"
     },
     {
      "title": "Sobre Ruinas",
@@ -1077,7 +1096,8 @@
      "year": 2025,
      "duration": "2 min",
      "flags": "🇦🇷",
-     "competencia": "Competencia Oficial de Corto y Mediometrajes Internacionales"
+     "competencia": "Competencia Oficial de Corto y Mediometrajes Internacionales",
+     "qa_type": "team"
     },
     {
      "title": "Cuidemos el planeta",
@@ -1094,7 +1114,8 @@
      "tematica": "Justicia Climática",
      "flags": "🇦🇷",
      "has_qa": true,
-     "qa_detail": "Q&A | Charla con el equipo de la película"
+     "qa_detail": "Q&A | Charla con el equipo de la película",
+     "qa_type": "team"
     },
     {
      "title": "El viaje de Luz",

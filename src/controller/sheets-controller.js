@@ -232,8 +232,16 @@ export function openPelSheet(title){
     </div>
         ${allScr.length>0?`<div class="sec-hdr sm">${ICONS.clock} <span>${f.type==='event'?t('label_horario'):allScr.length===1?t('label_funcion'):t('label_funciones_pl')}</span>${totalFn>1&&f.type!=='event'?`<span class="count-badge cb-neutral">${totalFn}</span>`:''}</div>`:''}
     ${(()=>{const _n=NOTICES.find(n=>n.title===f.title&&n.festival===(_activeFestId||_DEFAULT_FEST_ID));if(!_n)return'';const _info=`${_n.newDay||''} ${_n.newTime||''}${_n.newVenue?' · '+_n.newVenue:''}`.trim();const _msg=_n.type==='cancelled'?t('notice_funcion_canc'):t('notice_reprog_a',{info:_info});return`<div class="notice-banner-row"><span class="notice-badge">${_n.type==='cancelled'?t('notice_cancelada'):t('notice_reprog_short')}</span><span class="notice-banner-txt">${_msg}</span></div>`;})()}
-    ${_metaBanners(f)}
     ${allScr.length>0?`<div class="pel-sheet-screenings">${rows}</div>`:''}
+    ${/* ORDEN DEL BLOQUE FUNCIÓN: lo que INVALIDA va antes (notice-banner de
+        cancelada/reprogramada: niega la hora que sigue, hay que saberlo primero),
+        lo que MATIZA va después. El Q&A y la inscripción previa califican una
+        función válida: leerlos antes obliga a sostener un modificador sin conocer
+        aún aquello que modifica, justo en el camino más recorrido de la ficha
+        (buscar cuándo/dónde y tocar Agregar). Agrupados abajo se leen como la
+        lista de matices de esa función — y evitan emparedar la fila entre dos
+        banners de la misma familia visual. */''}
+    ${_metaBanners(f)}
     ${_anclada?`<div class="meta-banner"><div class="meta-banner-dot"></div><div class="meta-banner-text">${t('meta_funcion_incluye')}</div></div>`:''}
     ${(()=>{
       const _tk=FESTIVAL_CONFIG[_activeFestId]||{};
@@ -1272,7 +1280,11 @@ export function _genreEN(g) {
 
 export function _metaBanners(f){
   let b='';
-  if(f.has_qa) b+=`<div class="meta-banner"><div class="meta-banner-dot"></div><div><div class="meta-banner-label">${t('meta_qa_label')}</div><div class="meta-banner-text">${t('notice_extension')} <span>${t('meta_qa_time')}</span></div></div></div>`;
+  // `qa_type` distingue los DOS Q&A que el festival programa: con el equipo de
+  // la película o con referentes del tema. Rotularlos a todos "equipo presente"
+  // le prometía al usuario un encuentro con los directores que en 7 de 16
+  // funciones de FINCA no ocurre. Sin el campo (resto de festivales) → equipo.
+  if(f.has_qa) b+=`<div class="meta-banner"><div class="meta-banner-dot"></div><div><div class="meta-banner-label">${t(f.qa_type==='guests'?'meta_qa_label_ref':'meta_qa_label')}</div><div class="meta-banner-text">${t('meta_qa_time')}</div></div></div>`;
   if(f.requires_registration) b+=`<div class="meta-banner"><div class="meta-banner-dot"></div><div><div class="meta-banner-label">${t('badge_inscripcion_prev')}</div><div class="meta-banner-text">${t('meta_registro_text')}</div></div></div>`;
   return b;
 }
