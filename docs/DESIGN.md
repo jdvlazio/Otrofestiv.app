@@ -391,6 +391,24 @@ Reglas de método que esto deja:
   (`--amb-o`, .6s): capas independientes.
 - `prefers-reduced-motion`: el driver salta al estado final, sin animación.
 
+### 8.4.2 · View transition del root — crossfade SIN bache
+
+Al abrir una ficha, el hero morph del póster corre dentro de una View
+Transition. El **fondo** (snapshot `root`) hacía crossfade con las dos capas
+desvaneciéndose a la vez (`old` 1→0 y `new` 0→1): a mitad de camino ambas
+estaban al ~50%, así que se veía **a través de las dos hasta el negro del
+navegador**. Medido en la banda del fondo: la luminancia caía de 10.2 a 9.0 y
+volvía a subir — un **bache de 1.17** que se percibe como un fundido a negro
+corto, un brinco, en CADA apertura.
+
+**Regla: en un crossfade siempre debe quedar una capa opaca.** El snapshot
+viejo se queda opaco (`animation:none`) y sólo el nuevo entra encima
+(`vtFadeIn .22s`). Bache tras el arreglo: **0.11** (−91%).
+
+Este síntoma es independiente del velo y sobrevivió a 7 iteraciones sobre el
+blur, porque nunca estuvo en el velo. Cuando el reporte sea "fundido/parpadeo
+a negro", mirar primero las View Transitions, no la capa de desenfoque.
+
 **Pendiente**: los otros 5 overlays de sheet (rating, pv-rating, conflict,
 prio-limit, plan-confirm) siguen con blur CSS fijo y valores dispares
 (4/12/10/8/6px) — migrarlos al driver es el siguiente paso.

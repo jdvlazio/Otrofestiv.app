@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `01cae90 fix(design): el velo desenfoca en vez de apagar, y sin will-change (el brinco) (#437)`
+> Último commit: `41aaf5b fix(design): el velo lo conduce un driver rAF — auditoría con banco aislado (#438)`
 
 ---
 
