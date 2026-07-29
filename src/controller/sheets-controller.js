@@ -539,9 +539,9 @@ export function openCortoSheet(title, country, duration, section, flags, directo
         <a class="c-lb pel-sheet-lb" href="${lbHref||'#'}" target="_blank" rel="noopener"${!lbHref?' style="display:none"':''}>${LB_SVG}<span class="c-lb-text pel-sheet-lb-text">Letterboxd</span></a>
       </div>
     </div>
-        ${parentTitle?`<div class="meta-banner" style="margin-top:var(--sp-3)"><div class="meta-banner-dot"></div><div><div class="meta-banner-label">${t('meta_funcion_label')}</div><div class="meta-banner-text">${t('meta_funcion_incluye')}</div></div></div>`:''}
+        ${parentTitle?`<div class="meta-banner"><div class="meta-banner-dot"></div><div><div class="meta-banner-label">${t('meta_funcion_label')}</div><div class="meta-banner-text">${t('meta_funcion_incluye')}</div></div></div>`:''}
         ${syn?`<div class="sec-hdr sm">${ICONS.text} <span>${t('label_sinopsis')}</span></div><div class="pel-sheet-synopsis">${syn}</div>`:''}
-    <div class="flex-gap1-mt1">
+    <div class="pel-sheet-ctas">
       <button id="corto-wl-btn" class="row-center-xs pel-sheet-action-btn${inWL?' act-on btn-primary':' btn-primary'}" data-title="${escXML(parentTitle||title)}" data-action="toggleWL">${inWL?ICONS.heartFill:ICONS.heart} ${inWL?t('cta_en_intereses'):t('cta_intereses')}</button>
       <button id="corto-prio-btn" class="row-center-xs pel-sheet-action-btn${inPrio?' act-prio':' btn-secondary'}" data-title="${escXML(parentTitle||title)}" data-action="togglePelPrio">${inPrio?ICONS.bookmarkFill:ICONS.bookmark} ${inPrio?t('cta_priorizada'):t('cta_priorizar')}</button>
       <button class="row-center-xs pel-sheet-action-btn${filmRatings[title]?' act-on':' btn-secondary'}" data-title="${escXML(title)}" data-action="closePelAndRate">${ICONS.star} ${filmRatings[title]?t('misc_cambiar'):t('cta_calificar')}</button>
