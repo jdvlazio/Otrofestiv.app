@@ -2066,6 +2066,24 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar poster-radius: {_e}')
 
+# ── [dtab-sin-linea] el dia activo se marca SOLO con color, sin linea ambar ────
+# Decidido 18 may 2026 (964cc6b) y revertido POR ERROR el 18 jul (534b150) al
+# "unificar el lenguaje de activo con .pmode-tab.on": se deshizo una decision
+# anterior sin saber que existia. Este guardian es la memoria de esa decision.
+check = 'dtab-sin-linea'
+try:
+    import re as _re4
+    _html = open('index.html', encoding='utf-8').read()
+    _m = _re4.search(r'\.dtab\.on\{([^}]*)\}', _html)
+    if not _m:
+        fail(check, 'no existe la regla .dtab.on')
+    elif 'border-bottom-color' in _m.group(1) or 'border-bottom:' in _m.group(1):
+        fail(check, 'linea ambar bajo el dia activo reintroducida — el activo va SOLO por color')
+    else:
+        ok(check, 'dia activo marcado solo por color, sin linea')
+except Exception as _e:
+    warn(check, f'no se pudo verificar dtab-sin-linea: {_e}')
+
 check = 'poster-morph'
 try:
     _html = open('index.html', encoding='utf-8').read()
