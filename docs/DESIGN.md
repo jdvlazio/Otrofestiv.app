@@ -345,7 +345,15 @@ helpers.js o `--amb` a mano = build roto. Safari iOS: muestrear con URL propia
 - **ESTADO ACTIVO**: clase `.on` ÚNICA — `.active`/`.selected` prohibidos.
 
 ### 8.4.1 · Velo de los sheets (`--blur-veil` / `--tr-veil`)
-**Regla dura: el desenfoque NO se anima. Se anima la OPACIDAD de la capa que lo
+**Dos reglas duras.**
+
+**(1) El velo DESENFOCA, no apaga.** `--veil-tint` (negro al **42%**) +
+`--blur-veil` (**14px**). Antes era 70% de negro con 6px: lo que se percibía era
+un apagón y el blur quedaba de adorno debajo de tanto negro — "no hay curva de
+desenfoque" fue el reporte. El peso va invertido: mucho blur, poco tinte. Como
+el radio es fijo, su coste se paga una vez y 14px no es caro.
+
+**(2) El desenfoque NO se anima. Se anima la OPACIDAD de la capa que lo
 lleva.** El overlay tiene `backdrop-filter: blur(var(--blur-veil))` **fijo**
 (6px) y transiciona sólo `opacity` en `--tr-veil` (380ms `cubic-bezier(.4,0,.2,1)`).
 El compositor mezcla el fondo nítido con su versión desenfocada: al 30% de
@@ -359,7 +367,8 @@ opacidad se ve un 30% de desenfoque. Guardián: `[no-animated-blur]`.
 | 2 | animar blur a 18px / 420ms ease-out | pesado y lento; parecía atado al color de la ficha |
 | 3 | animar blur a 10px / 240ms expo-out | **abrupto** |
 | 4 | animar blur a 6px / 380ms `.4,0,.2,1` | **seguía abrupto** |
-| 5 ✅ | **blur fijo 6px + opacity 380ms** | progresión real |
+| 5 | blur fijo 6px + opacity 380ms | progresión real, pero **brinco** al abrir |
+| 6 ✅ | + sin `will-change`, 14px / 42% negro | — |
 
 La causa apareció midiendo una **grabación de pantalla del iPhone**, frame a
 frame: entre 3933ms y 4000ms —4 frames— el fondo pasaba de nítido a totalmente
@@ -372,6 +381,9 @@ desenfocado, mientras el panel seguía subiendo hasta 4450ms.
   computado en `ios-mobile` **no basta**: ese proyecto no reproduce WKWebView.
 - **La única evidencia válida para animación en iOS es una grabación de
   pantalla del dispositivo real**, extraída con `ffmpeg` y medida por frame.
+- **Nunca `will-change` sobre un elemento con `backdrop-filter`.** Promoverlo a
+  capa hace que iOS recalcule el backdrop al crear/destruir la capa, y eso se ve
+  como un brinco al abrir. Fue el glitch del intento 5.
 - Corolario general: animar una propiedad de *filtro* es frágil entre motores;
   animar `opacity`/`transform` es seguro y además más barato.
 
