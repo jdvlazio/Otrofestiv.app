@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `696673c fix(design): el radio del velo baja a la mitad (38→19px) — 38 tapaba de más (#441)`
+> Último commit: `e18c042 fix(design): el radio del velo baja de nuevo a la mitad (19→10px) (#442)`
 
 ---
 
