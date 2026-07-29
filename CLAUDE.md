@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `cc3ebdf fix(design): el poster editorial viaja como card, el radio deja de brincar (#464)`
+> Último commit: `caf2c0d fix(design): el poster deja de viajar — la card sube completa (#465)`
 
 ---
 

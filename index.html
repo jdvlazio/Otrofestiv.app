@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607291842">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607291842">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607291853">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607291853">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -513,7 +513,12 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .dtab-date{font-size:var(--t-xs);font-weight:var(--w-bold);display:block;margin-top:var(--sp-1);letter-spacing:.5px;text-transform:uppercase}
 
 .dtab:hover{color:var(--white)}
-.dtab.on{color:var(--amber);border-bottom-color:var(--amber)} /* mismo lenguaje de activo que .pmode-tab.on */
+/* SIN línea ámbar: el activo se marca SOLO con color en el número y el texto.
+   Decidido el 18 may 2026 (964cc6b) y REVERTIDO por error el 18 jul (534b150) al
+   "unificar el lenguaje de activo con .pmode-tab.on" — se deshizo una decisión
+   anterior sin saber que existía. El navegador de días ya lleva 8+ tabs; una
+   línea bajo cada activo añade peso sin añadir información. Guardián [dtab-sin-linea]. */
+.dtab.on{color:var(--amber)}
 .dtab.past{opacity:.35}
 
 /* Navegación principal (bottom tabs) */
@@ -3018,7 +3023,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202607291842";
+    s.src="/src/main.js?v=202607291853";
     document.body.appendChild(s);
     // Watchdog de boot (P0 18 jul): si el grafo ESM murió en el import (caché
     // HTTP mixta tras deploys en ráfaga — main.js nuevo + módulo viejo sin el
