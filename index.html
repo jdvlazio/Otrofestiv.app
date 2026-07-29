@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607290708">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607290708">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607290714">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607290714">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -226,13 +226,16 @@ window.sentryOnLoad = function() {
      (initVeil en sheets-controller.js), con radio ∝ k² porque la nitidez
      perceptual muere a ~5px: si el radio crece lineal, "salta" aunque el
      motor interpole. El velo desenfoca, no apaga: mucho blur, poco tinte.
-     RADIO 38px (29 jul 2026): medido el "viaje" foco→desenfoque a tres escalas
-     espaciales, el recorrido crece hasta ~38px y ahí satura (50px no aporta y
-     sí cuesta). Con 14px el detalle fino ya moría, pero la ESTRUCTURA grande
-     apenas se movía: por eso se sentía corto. Este token es la fuente única —
-     el driver lo lee con getComputedStyle.
+     RADIO 19px (29 jul 2026): se midió el "viaje" foco→desenfoque a tres
+     escalas espaciales y el recorrido crecía hasta ~38px, así que se subió
+     ahí — pero en device 38px tapaba demasiado: el fondo dejaba de leerse como
+     "la lista, desenfocada" y pasaba a mancha. 19px (la mitad) conserva casi
+     todo el viaje perceptible y devuelve la referencia de dónde estabas.
+     Lección: la métrica dice cuánto CAMBIA el fondo, no cuánto DEBE tapar —
+     el punto de llegada es decisión de diseño, no del máximo medible.
+     Este token es la fuente única: el driver lo lee con getComputedStyle.
      Duraciones/curva viven en el driver; acá solo intensidad y tinte. */
-  --blur-veil: 38px;
+  --blur-veil: 19px;
   --veil-tint: rgba(4,4,4,.42);
   --tr-enter:  300ms ease-out; /* entradas al DOM: paneles, drawers       */
   /* Sheets — curva canónica (18 jul 2026): TODO bottom-sheet abre con spring
@@ -2979,7 +2982,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202607290708";
+    s.src="/src/main.js?v=202607290714";
     document.body.appendChild(s);
     // Watchdog de boot (P0 18 jul): si el grafo ESM murió en el import (caché
     // HTTP mixta tras deploys en ráfaga — main.js nuevo + módulo viejo sin el

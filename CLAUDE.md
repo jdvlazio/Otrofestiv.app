@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `c1517d9 fix(design): el fundido a negro era el crossfade del root, no el velo (#439)`
+> Último commit: `aa83604 feat(design): el velo amplía su recorrido — radio 14→38px (medido, no a ojo) (#440)`
 
 ---
 
