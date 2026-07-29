@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `ef99ea5 Q&A: rótulo correcto y posición · banderas: el globo y su guardián dormido · copy del anclaje (#457)`
+> Último commit: `4b2ef5b feat(finca): el ultimo poster que faltaba, desde los stills del press kit (#458)`
 
 ---
 
