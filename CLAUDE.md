@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `9d63760 fix(finca): keyArt desde el afiche vertical oficial — sin recorte de fecha ni lema (#449)`
+> Último commit: `0cb50cf fix(design): el velo sale del hilo principal — escalera CSS en el compositor (#450) (#450)`
 
 ---
 
