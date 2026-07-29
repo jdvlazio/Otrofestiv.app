@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607290723">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607290723">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607290737">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607290737">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -1008,17 +1008,21 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 ::view-transition-group(film-poster){animation-duration:.5s;animation-timing-function:cubic-bezier(.16,1,.3,1)}
 ::view-transition-new(film-poster){animation:vtPosterIn .5s cubic-bezier(.16,1,.3,1) both}
 ::view-transition-old(film-poster){animation:vtFadeOut .14s ease both}
-/* CROSSFADE SIN BACHE (29 jul 2026). Antes los DOS snapshots del root se
-   desvanecían a la vez (old 1→0 y new 0→1): a mitad de camino ambos estaban al
-   ~50%, así que se veía A TRAVÉS de los dos hasta el negro del navegador. Ese
-   hundimiento de luminancia —medido: el fondo caía de 10.0 a 9.1 y volvía— es
-   el "fundido a negro corto" que se sentía como brinco al abrir cada ficha.
-   Arreglo: el snapshot VIEJO se queda OPACO debajo y sólo el NUEVO entra
-   encima. En todo momento hay una capa opaca, así que no hay por dónde ver el
-   fondo del navegador. El fondo sigue asentando temprano (.22s) para que los
-   divisores del DOM real estén fijos antes de que el póster aterrice. */
-::view-transition-old(root){animation:none}
-::view-transition-new(root){animation:vtFadeIn .22s ease both}
+/* EL DESENFOQUE OCURRE SOBRE EL SNAPSHOT (29 jul 2026). Mientras la VT corre,
+   sus pseudo-elementos TAPAN el DOM real: el velo del driver rAF se animaba
+   debajo, invisible, y sólo se veía cuando la VT liberaba la vista ~500ms
+   después del tap. De ahí "el desenfoque empieza demasiado tarde" con
+   cualquier curva. Quitar el snapshot del root no sirve: sin él, el sheet
+   —que durante la VT lleva .vt-run y por tanto NO anima— aparece de golpe.
+   Solución: desenfocar el snapshot VIEJO, que es justo lo que se ve mientras
+   el póster viaja. El cruce con el snapshot nuevo se concentra al FINAL, y
+   para entonces ambos llevan el mismo desenfoque, así que el crossfade es
+   invisible: sin bache a negro (el bug de ayer) y sin salto al empalmar con
+   el DOM real, que el driver ya dejó en el mismo valor. */
+@keyframes vtVeilOld{0%{filter:blur(0px)}70%{filter:blur(var(--blur-veil))}85%{filter:blur(var(--blur-veil));opacity:1}100%{filter:blur(var(--blur-veil));opacity:0}}
+@keyframes vtVeilNew{0%,85%{opacity:0}100%{opacity:1}}
+::view-transition-old(root){animation:vtVeilOld .42s cubic-bezier(.4,0,.2,1) both}
+::view-transition-new(root){animation:vtVeilNew .42s linear both}
 .pel-sheet.vt-run{transition:none!important}
 /* Stagger COMPRIMIDO para terminar ANTES que la transición (.5s): así al cerrar
    ya está en reposo y quitar la clase no corta nada (era la otra causa del brinco). */
@@ -2983,7 +2987,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202607290723";
+    s.src="/src/main.js?v=202607290737";
     document.body.appendChild(s);
     // Watchdog de boot (P0 18 jul): si el grafo ESM murió en el import (caché
     // HTTP mixta tras deploys en ráfaga — main.js nuevo + módulo viejo sin el

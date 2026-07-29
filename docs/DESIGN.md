@@ -421,27 +421,29 @@ Reglas de método que esto deja:
   (`--amb-o`, .6s): capas independientes.
 - `prefers-reduced-motion`: el driver salta al estado final, sin animación.
 
-### 8.4.2 · View transition del root — crossfade SIN bache
+### 8.4.2 · View transition del root — el velo va DENTRO de la transición
 
-Al abrir una ficha, el hero morph del póster corre dentro de una View
-Transition. El **fondo** (snapshot `root`) hacía crossfade con las dos capas
-desvaneciéndose a la vez (`old` 1→0 y `new` 0→1): a mitad de camino ambas
-estaban al ~50%, así que se veía **a través de las dos hasta el negro del
-navegador**. Medido en la banda del fondo: la luminancia caía de 10.2 a 9.0 y
-volvía a subir — un **bache de 1.17** que se percibe como un fundido a negro
-corto, un brinco, en CADA apertura.
+Al abrir una ficha, el hero morph corre en una View Transition. Clave que costó
+dos bugs entenderla: **mientras la VT corre, sus pseudo-elementos TAPAN el DOM
+real**. Cualquier animación del DOM (incluido el velo, que anima el driver rAF)
+queda oculta hasta que la VT libera la vista — ~500ms después del tap. De ahí
+"el desenfoque empieza demasiado tarde", con cualquier curva.
 
-**Regla: en un crossfade siempre debe quedar una capa opaca.** El snapshot
-viejo se queda opaco (`animation:none`) y sólo el nuevo entra encima
-(`vtFadeIn .22s`). Bache tras el arreglo: **0.11** (−91%).
+**Regla: lo que deba verse durante la VT se anima sobre el SNAPSHOT.**
+`::view-transition-old(root)` lleva `filter: blur()` de 0 a `--blur-veil`, así
+el fondo se desenfoca a la par de que el póster viaja. Medido: el desenfoque
+pasa de 3% a **67%** a los ~100ms del tap.
 
-Este síntoma es independiente del velo y sobrevivió a 7 iteraciones sobre el
-blur, porque nunca estuvo en el velo. Cuando el reporte sea "fundido/parpadeo
-a negro", mirar primero las View Transitions, no la capa de desenfoque.
+El cruce con `new(root)` se concentra al **final** (85–100%), y para entonces
+ambos snapshots llevan el mismo desenfoque: el crossfade es invisible. Eso
+resuelve de paso el **bache a negro** que había cuando los dos se desvanecían a
+la vez (se veía a través de ambos hasta el negro del navegador: la luminancia
+caía de 10.16 a 8.99). Y el empalme con el DOM real no salta porque el driver
+lo dejó en el mismo valor — por eso `main.js` marca el overlay como abierto
+**en el tap**, antes de arrancar la VT.
 
-**Pendiente**: los otros 5 overlays de sheet (rating, pv-rating, conflict,
-prio-limit, plan-confirm) siguen con blur CSS fijo y valores dispares
-(4/12/10/8/6px) — migrarlos al driver es el siguiente paso.
+**No sirve quitar el snapshot del root** (`display:none`): sin él, el sheet
+—que durante la VT lleva `.vt-run` y por tanto no anima— aparece de golpe.
 
 ### 8.5 · Iconos — ver `docs/ICONS.md`
 Fuente única `ICONS` (`components.js`); `aria-hidden` de fábrica; escala icono ≈
