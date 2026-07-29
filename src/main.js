@@ -446,7 +446,7 @@ FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202607291731';
+const BUILD_VERSION='202607291842';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';
@@ -957,84 +957,35 @@ document.addEventListener('keydown',function(e){
 // ── Event delegation para js-open-pel → openPelSheet ──────────────────────
 // capture:true garantiza que el evento llega antes del stopPropagation
 // de _posterThumb. data-title contiene el título sin encoding.
-// Transición de póster compartido — FLIP en el compositor (29 jul 2026).
-// ANTES era una View Transition del root. Produjo TRES modos de fallo distintos,
-// todos solo-en-device (§8.4.2 de DESIGN.md): (1) los snapshots TAPAN el DOM real
-// → el velo corría invisible debajo y aparecía de golpe al liberar; (2) póster
-// fantasma (#443/#444, revertido); (3) texto congelado de la ficha ANTERIOR
-// superpuesto al grid — el snapshot capturaba textura vieja con la GPU cargada.
-// Nada que pase debajo de un snapshot es visible: ninguna curva lo arregla.
-// AHORA nada tapa el DOM: un CLON del póster viaja de la card a la ficha por
-// transform (compositor puro, sobrevive al hilo principal ocupado), y el sheet
-// (spring) y el velo (escalera §8.4.1) corren visibles desde el primer frame.
-// Un solo timeline, tres actores, cero snapshots. Guardián [poster-morph].
+// Apertura de la ficha — la card sube COMPLETA (29 jul 2026, decisión de Juan).
+// El póster ya NO viaja. Se intentó dos veces y produjo CINCO defectos visuales
+// distintos, todos solo-en-device (§8.4.5 de DESIGN.md):
+//   View Transition — velo invisible bajo los snapshots · póster fantasma
+//     (#443/#444) · texto congelado de la ficha anterior sobre el grid
+//   FLIP con clon    — el radio se inflaba por transform:scale() y caía de golpe ·
+//     la imagen se re-encuadraba al soltar (origen center vs destino center top) ·
+//     en pósters generativos el título desaparecía al aterrizar (el del sheet se
+//     regenera SIN título) y la banda de sección "aparecía" porque el blur del
+//     vuelo borraba una card de 56px
+// El patrón: cada arreglo destapaba otro defecto porque el origen y el destino no
+// son el mismo objeto —distinto tamaño, recorte, radio y CONTENIDO—. Una animación
+// que finge que sí lo son tiene que mentir en algún frame.
+// Lo que queda es lo que funcionaba: el spring del sheet y el velo en escalera
+// (§8.4.1), ambos en el compositor. Guardián [poster-morph] impide que vuelva.
 let _vtBusy=false;
-const _FLIGHT_MS=560; // curva enfática: cola larga desacelerando (ver .poster-flight)
-// _morphOpen(sourceEl, openFn) — dueño ÚNICO del viaje del póster. sourceEl
-// contiene el póster de origen (card del grid O thumb de un corto dentro de un
-// programa); openFn hace el render síncrono del destino. Reusado por ambos.
-// Nodo que viaja. Un póster EDITORIAL no es una imagen: es una card compuesta
-// (.poster-ed = banda de sección + still + capa .ed-blur decorativa). Antes se
-// clonaba la primera <img> del subárbol, que resultaba ser .ed-blur —una capa
-// borrosa MÁS GRANDE que la card (73×78 vs 56×84)—, así que volaba un rectángulo
-// suelto mientras la card real ya estaba visible. Se clona la card COMPLETA:
-// banda y still viajan juntos y escalan como una pieza.
-function _flightNode(root){
-  if(!root||!root.querySelector) return null;
-  if(root.matches&&root.matches('.poster-ed')) return root;
-  return root.querySelector('.poster-ed')||root.querySelector('.img-cover')||root.querySelector('img');
-}
+// _morphOpen(sourceEl, openFn) — se conserva como costura ÚNICA de apertura (la
+// usan la card del grid y el corto dentro de un programa) para que el stagger de
+// la meta viva en un solo sitio. `sourceEl` ya no se usa para nada visual.
 function _morphOpen(sourceEl, openFn){
-  const reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const src = _flightNode(sourceEl);
-  const a = src && src.getBoundingClientRect();
-  if(reduce || _vtBusy || !src || !a || !a.width){ openFn(); return; }
+  if(_vtBusy){ openFn(); return; }
   _vtBusy=true;
-  const _sheet0=document.getElementById('pel-sheet');
-  const _clean=()=>{ const s=document.getElementById('pel-sheet'); if(s) s.classList.remove('vt-in'); _vtBusy=false; };
   try{
-    openFn(); // render síncrono + .open → sheet (spring) y velo (escalera) arrancan YA, visibles
-    const sheet=document.getElementById('pel-sheet')||_sheet0;
-    if(sheet) sheet.classList.add('vt-in'); // stagger de la meta (vtRise, CSS puro)
-    // Destino: la card COMPUESTA cuando es editorial (.psp-editorial), la imagen
-    // cuando es un póster normal. Nunca una capa interna.
-    const dst=document.querySelector('.psp-editorial, .pel-sheet-poster, .pel-sheet-poster-stage');
-    if(!dst||!sheet){ setTimeout(_clean,_FLIGHT_MS); return; }
-    // Rect FINAL del destino: el sheet aún está en translateY(100%) (el spring
-    // recién arranca), así que se proyecta: posición del dst relativa al sheet +
-    // posición final del sheet (fixed bottom:0 → top final = viewport - altura).
-    const sr=sheet.getBoundingClientRect(), dr=dst.getBoundingClientRect();
-    const finalTop=window.innerHeight-sheet.offsetHeight+(dr.top-sr.top);
-    const b={left:dr.left, top:finalTop, width:dr.width||1, height:dr.height||1};
-    const sx=b.width/a.width, sy=b.height/a.height;
-    // Clon de la card ENTERA (editorial: banda + still viajan juntos). Solo
-    // transform, nunca layout por frame.
-    const fly=src.cloneNode(true);
-    fly.classList.add('poster-flight');
-    fly.removeAttribute('id');
-    // Encuadre y radio del DESTINO: el clon debe recortar y redondear como aquello
-    // en lo que se convierte, o la imagen se re-acomoda dentro del marco al soltar.
-    const _cs=getComputedStyle(dst);
-    const _rBase=parseFloat(_cs.borderRadius)||12;
-    // Contra-escala del radio: transform:scale() escala el border-radius, así que
-    // el valor final va dividido por la escala para que el RENDERIZADO no cambie.
-    fly.style.cssText=`left:${a.left}px;top:${a.top}px;width:${a.width}px;height:${a.height}px;`+
-      `border-radius:${_rBase}px;object-position:${_cs.objectPosition};`+
-      `filter:blur(14px)`;
-    document.body.appendChild(fly);
-    dst.style.opacity='0';          // el real espera a que aterrice el clon
-    src.style.opacity='0';          // la card no muestra doble póster
-    // Dos rAF: el primero fija el estado inicial, el segundo dispara la transición.
-    requestAnimationFrame(()=>requestAnimationFrame(()=>{
-      fly.style.transform=`translate(${b.left-a.left}px,${b.top-a.top}px) scale(${sx},${sy})`;
-      fly.style.borderRadius=`${_rBase/Math.max(sx,0.01)}px`;
-      fly.style.filter='blur(0px)';
-    }));
-    setTimeout(()=>{
-      dst.style.opacity=''; src.style.opacity='';
-      fly.remove(); _clean();
-    },_FLIGHT_MS+60);
-  }catch(_e){ _clean(); }
+    openFn();  // render síncrono + .open → spring del sheet y velo arrancan ya
+    const sheet=document.getElementById('pel-sheet');
+    if(sheet) sheet.classList.add('vt-in');  // stagger de la meta (vtRise, CSS puro)
+    setTimeout(()=>{ const s=document.getElementById('pel-sheet');
+      if(s) s.classList.remove('vt-in'); _vtBusy=false; }, 420);
+  }catch(_e){ _vtBusy=false; }
 }
 function _openPelMorph(cardEl, title){ _morphOpen(cardEl, ()=>openPelSheet(title)); }
 globalThis._morphOpen = _morphOpen; // puente: lo usa el ACTION_REGISTRY (openCortoSheetFromEl) fuera de este IIFE

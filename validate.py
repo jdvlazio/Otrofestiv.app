@@ -2037,8 +2037,7 @@ try:
     import re as _re3
     _html = open('index.html', encoding='utf-8').read()
     _SUPERFICIES = ['.poster-card', '.pel-sheet-poster', '.psp-editorial',
-                    '.c-film-thumb', '.pel-sheet-poster-ph', '.pel-sheet-poster-stage',
-                    '.poster-flight']
+                    '.c-film-thumb', '.pel-sheet-poster-ph', '.pel-sheet-poster-stage']
     _visto = {k: False for k in _SUPERFICIES}
     _mal = []
     # Toda regla cuyo selector nombre una superficie de póster y fije border-radius
@@ -2063,7 +2062,7 @@ try:
     if _mal:
         fail(check, 'radio de poster desalineado: ' + '; '.join(_mal[:5]))
     else:
-        ok(check, 'las 7 superficies de poster comparten --r-poster')
+        ok(check, 'las 6 superficies de poster comparten --r-poster')
 except Exception as _e:
     warn(check, f'no se pudo verificar poster-radius: {_e}')
 
@@ -2071,24 +2070,25 @@ check = 'poster-morph'
 try:
     _html = open('index.html', encoding='utf-8').read()
     _mn = open('src/main.js', encoding='utf-8').read()
+    _sc = open('src/controller/sheets-controller.js', encoding='utf-8').read()
     _errs = []
-    if '.poster-flight' not in _html:
-        _errs.append('falta el CSS del clon en vuelo (.poster-flight)')
-    if 'transition:transform' not in _html.replace(' ', '') or 'will-change:transform' not in _html.replace(' ', ''):
-        _errs.append('.poster-flight debe animar por transform (compositor)')
+    # El poster NO viaja. Dos intentos, CINCO defectos solo-en-device (DESIGN.md
+    # 8.4.5). Este guardian impide que cualquiera de los dos motores vuelva.
+    if 'startViewTransition' in (_mn + _sc):
+        _errs.append('startViewTransition reintroducido — prohibido (3 fallos device)')
+    if 'poster-flight' in (_mn + _html):
+        _errs.append('clon en vuelo (.poster-flight) reintroducido — prohibido (2 fallos device)')
+    # Lo que SI debe seguir: la costura unica de apertura y el stagger sobre el DOM.
+    if '_openPelMorph' not in _mn or '_morphOpen' not in _mn:
+        _errs.append('falta la costura unica de apertura (_morphOpen/_openPelMorph)')
+    if 'vt-in' not in _html or '@keyframes vtRise' not in _html:
+        _errs.append('falta el stagger de la meta (vt-in / vtRise)')
     if 'prefers-reduced-motion:reduce' not in _html.replace(' ', ''):
         _errs.append('falta el guard @media reduce-motion')
-    if '_openPelMorph' not in _mn or 'poster-flight' not in _mn:
-        _errs.append('falta _morphOpen/poster-flight en main.js')
-    if 'reduce' not in _mn:
-        _errs.append('falta el fallback reduce-motion en _morphOpen')
-    _allsrc = _mn + open('src/controller/sheets-controller.js', encoding='utf-8').read()
-    if 'startViewTransition' in _allsrc:
-        _errs.append('startViewTransition REINTRODUCIDO — prohibido en la apertura (3 fallos device, §8.4.2)')
     if _errs:
-        fail(check, 'poster-morph roto: ' + '; '.join(_errs[:4]))
+        fail(check, 'apertura de ficha rota: ' + '; '.join(_errs[:4]))
     else:
-        ok(check, 'viaje del póster por FLIP/transform, sin View Transitions ni snapshots')
+        ok(check, 'la card sube completa: sin View Transition ni clon en vuelo')
 except Exception as _e:
     warn(check, f'no se pudo verificar poster-morph: {_e}')
 
