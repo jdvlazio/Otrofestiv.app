@@ -80,10 +80,12 @@ export function screensConflictReason(a,b){
 
 export function isScreeningBlocked(s){
   const av=availability[s.day];if(!av) return false;
-  // effectiveDuration (no parseDur): incluye los +30 de Q&A, consistente con
-  // screensConflict. Sin esto, el Q&A de una función podía correr dentro de un
-  // bloque de no-disponibilidad sin ser detectado. (has_qa:false → idéntico a parseDur.)
-  const sStart=toMin(s.time),sEnd=sStart+effectiveDuration(s);
+  // blockDuration (SIN Q&A): el bloque de "no disponible" mide contra el fin de
+  // las PELÍCULAS. El Q&A es opcional y no hay traslado de por medio — si tu
+  // bloque arranca cuando termina el film, salís del Q&A y ya. Excluir la
+  // función por su Q&A estimado era el mismo sobre-compromiso del caso Ziki
+  // (doctrina 30 jul 2026: el Q&A solo compromete cuando salir cuesta).
+  const sStart=toMin(s.time),sEnd=sStart+blockDuration(s);
   // Chequeo de solapamiento completo: excluye funciones que ocurran durante el bloque
   return av.blocks.some(b=>sStart<toMin(b.to)&&sEnd>toMin(b.from));
 }

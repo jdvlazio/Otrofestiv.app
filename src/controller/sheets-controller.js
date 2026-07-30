@@ -16,7 +16,7 @@ import { runCalc } from './calc.js';
 import { saveAV, saveLastSlot, saveRating, saveSavedAgenda } from './persistence.js';
 import { _reRenderIntereses, showAgView, switchMainNav, updateAgTab } from './pipeline.js';
 import { dayFullyPassed, festivalEnded, parseDur, toMin } from '../domain/time.js';
-import { screeningPassed, effectiveDuration } from '../domain/film.js';
+import { screeningPassed, effectiveDuration, blockDuration } from '../domain/film.js';
 import { isScreeningBlocked } from '../domain/schedule.js';
 // ── Velo del sheet: SIN driver JS (29 jul 2026 — DESIGN.md §8.4.1) ───────────
 // Vivía acá un driver rAF que pisaba radio+opacidad por frame. Medido en device
@@ -1460,7 +1460,7 @@ export function checkPlanConflictsWithBlock(day, fromStr, toStr){
   const bFrom=toMin(fromStr), bTo=toMin(toStr);
   return savedAgenda.schedule.filter(s=>{
     if(s.day!==day) return false;
-    const sStart=toMin(s.time), sEnd=sStart+effectiveDuration(s); // Q&A incluido, como isScreeningBlocked
+    const sStart=toMin(s.time), sEnd=sStart+blockDuration(s); // SIN Q&A, emparejado con isScreeningBlocked (doctrina 30 jul)
     return sStart<bTo&&sEnd>bFrom;
   });
 }

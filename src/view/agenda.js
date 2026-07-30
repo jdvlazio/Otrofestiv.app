@@ -741,9 +741,12 @@ export function renderContextualHeader(state, consensus){
           .sort((a,b)=>toMin(a.time)-toMin(b.time));
         const nextFilm=upcoming[0];
         if(nextFilm&&nextFilm.day===next.day){
-          const dur=blockDuration(next);
+          const _tv=travelMins(next.venue,nextFilm.venue);
+          // Con traslado el Q&A cuenta entero (doctrina 30 jul): el margen se mide
+          // desde el fin CON Q&A. En la misma sede, desde el fin de las películas.
+          const dur=_tv>0?effectiveDuration(next):blockDuration(next);
           const effectiveEndMin=toMin(next.time)+dur+delayMins;
-          const travel=travelMins(next.venue,nextFilm.venue);
+          const travel=_tv;
           const margin=toMin(nextFilm.time)-(effectiveEndMin+FESTIVAL_BUFFER+travel);
           const{displayTitle:nt}=parseProgramTitle(nextFilm._title||'');
           const nShort=nt.length>26?nt.slice(0,24)+'…':nt;
