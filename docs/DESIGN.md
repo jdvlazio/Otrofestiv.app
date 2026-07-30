@@ -646,17 +646,23 @@ aviso era un resumen de su cuerpo.
 
 ```
 🕐 FUNCIONES ②
-   JUE 13 · 19:00 · Cacodelphia
    SÁB 15 · 18:00 · Cine York        [+ Agregar]
-   Compartida · verás también otros títulos.     ← .fn-note
+   JUE 13 · 19:00 · Cacodelphia
+ ● COMPARTIDA                                    ← .meta-banner, igual que Q&A
+   Verás también otros títulos.
 ```
 
 - **El rótulo del bloque queda NEUTRO.** Meter «compartida» ahí es un error de
   categoría —el rótulo nombra el bloque, compartida es propiedad de la fila— y
   además mentiría cuando una obra tiene dos funciones y solo una es compartida
   (hoy no ocurre en FINCA; es estructuralmente posible).
-- **El adjetivo y la consecuencia viven en una nota**, `.fn-note`: sin punto, sin
-  rótulo, sin caja. Muere el `.meta-banner` de función compartida en las dos fichas.
+- **El adjetivo y la consecuencia viven en un `.meta-banner`**, el MISMO componente
+  que Q&A e inscripción previa: punto ámbar, rótulo y texto, sin caja. El rótulo dice
+  «COMPARTIDA» a secas — no repite el sustantivo del bloque.
+  *Intento descartado (mismo día):* una nota gris sin punto ni rótulo (`.fn-note`).
+  Comunicaba demasiado silenciosamente y, peor, **inventaba un segundo lenguaje para
+  los avisos** justo al lado del Q&A, que usa el canon y funciona. Todo aviso de la
+  ficha usa `.meta-banner`: uno solo.
 - **La explicación no es el accesorio, es el mensaje.** «Compartida» es vocabulario
   nuestro; lo que informa al espectador es *verás también otros títulos*. Dos
   intentos previos de suprimirla fallaron por eso («programa completo» no dice qué
