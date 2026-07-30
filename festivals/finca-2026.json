@@ -285,7 +285,9 @@
    "posterSource": "custom",
    "day_order": 1,
    "synopsis_lang": "es",
-   "qa_type": "team"
+   "qa_type": "team",
+   "lbSlug": "propiedad-privada-prohibido-pasar",
+   "_tmdbId": 1740128
   },
   {
    "title": "Mi casa es su casa",
@@ -309,7 +311,9 @@
    "venue": "Cine York",
    "posterSource": "custom",
    "day_order": 1,
-   "synopsis_lang": "es"
+   "synopsis_lang": "es",
+   "lbSlug": "mi-casa-es-su-casa",
+   "_tmdbId": 1740149
   },
   {
    "title": "Ziki",
@@ -392,7 +396,9 @@
    "posterSource": "custom",
    "day_order": 2,
    "synopsis_lang": "es",
-   "qa_type": "team"
+   "qa_type": "team",
+   "lbSlug": "pailako-cosmovision-en-resistencia",
+   "_tmdbId": 1740151
   },
   {
    "title": "La granja de la libertad",
@@ -416,7 +422,9 @@
    "venue": "Cine Arte Cacodelphia",
    "posterSource": "custom",
    "day_order": 2,
-   "synopsis_lang": "es"
+   "synopsis_lang": "es",
+   "lbSlug": "la-granja-de-la-libertad",
+   "_tmdbId": 1740142
   },
   {
    "title": "Tigre es yaguareté",
@@ -443,7 +451,9 @@
    "posterSource": "custom",
    "day_order": 2,
    "synopsis_lang": "es",
-   "qa_type": "team"
+   "qa_type": "team",
+   "lbSlug": "tigre-es-yaguarete",
+   "_tmdbId": 1740146
   },
   {
    "title": "Pau d´Arco",
@@ -579,7 +589,9 @@
    "venue": "Cine York",
    "posterSource": "custom",
    "day_order": 3,
-   "synopsis_lang": "es"
+   "synopsis_lang": "es",
+   "lbSlug": "colorado-1",
+   "_tmdbId": 1740148
   },
   {
    "title": "La vida fracturada",
@@ -755,7 +767,9 @@
    "posterSource": "custom",
    "day_order": 6,
    "synopsis_lang": "es",
-   "qa_type": "team"
+   "qa_type": "team",
+   "lbSlug": "que-perforado-esta-mi-valle",
+   "_tmdbId": 1740152
   },
   {
    "title": "Sangre de plomo",
@@ -931,7 +945,7 @@
      "posterSource": "custom",
      "country": "Argentina",
      "year": 2025,
-     "duration": "2 min",
+     "duration": "8 min",
      "flags": "🇦🇷",
      "competencia": "Competencia Oficial de Corto y Mediometrajes Internacionales",
      "qa_type": "team"
@@ -1094,7 +1108,7 @@
      "posterSource": "custom",
      "country": "Argentina",
      "year": 2025,
-     "duration": "2 min",
+     "duration": "8 min",
      "flags": "🇦🇷",
      "competencia": "Competencia Oficial de Corto y Mediometrajes Internacionales",
      "qa_type": "team"
@@ -1135,7 +1149,9 @@
      "tematica": "Biodiversidad",
      "poster": "/assets/finca/el-viaje-de-luz.jpg",
      "flags": "🇦🇷",
-     "posterSource": "custom"
+     "posterSource": "custom",
+     "lbSlug": "el-viaje-de-luz",
+     "_tmdbId": 1740154
     },
     {
      "title": "El día que aprendí a volar",
