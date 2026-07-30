@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `fc5202f fix(design): "compartida" vuelve al canon de aviso, con el peso del Q&A (#474)`
+> Último commit: `9b88377 fix(design): fuera la linea fina bajo los botones secundarios de la ficha (#475)`
 
 ---
 

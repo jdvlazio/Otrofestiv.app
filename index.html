@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607300043">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607300043">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607300625">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607300625">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -1321,8 +1321,16 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .pel-sheet-action-btn.act-prio{background:var(--amber-cta-soft) border-box;border-color:var(--amber-30);color:var(--amber)}
 .pel-sheet-action-btn.btn-primary{background:var(--amber-cta);border-color:var(--amber);color:var(--black);font-size:var(--t-sm);padding:13px 4px}
 .pel-sheet-action-btn.btn-secondary{background:var(--surf-cta) border-box;border-color:transparent;color:rgba(255,255,255,.5);font-size:var(--t-sm);padding:13px 4px}
-.pel-sheet-action-btn.btn-tertiary{background:none;border-color:transparent;color:var(--gray2);flex:none;padding:13px var(--sp-3)}
+/* font-size igual que primario y secundario (t-sm): sin él heredaba t-caption (12px)
+   y el terciario medía 43px contra 41 de sus vecinos en la misma fila. */
+.pel-sheet-action-btn.btn-tertiary{background:none;border-color:transparent;color:var(--gray2);flex:none;font-size:var(--t-sm);padding:13px var(--sp-3)}
+/* Los tres CTAs miden IGUAL. No con align-items:stretch —eso taparía la causa—
+   sino igualando el icono: el corazón viene de ICONS a 14 y marcador/estrella a 13,
+   con el mismo padding, así que el primario medía 42px y los secundarios 41 en la
+   misma fila. Se normaliza a 13 (base de ICONS) acá y no en el glifo compartido,
+   que lo usan otras superficies con su propia escala. */
 .pel-sheet-ctas{display:flex;gap:var(--sp-2);align-items:center;margin-top:var(--sp-6)}
+.pel-sheet-ctas .pel-sheet-action-btn svg{width:13px;height:13px}
 .pel-sheet-ctas-watched{display:flex;gap:var(--sp-2);margin-top:var(--sp-6)}
 
 .pel-sheet-lb{display:inline-flex;align-items:center;gap:6px;margin-top:var(--sp-4);opacity:.6;text-decoration:none}
@@ -3043,7 +3051,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202607300043";
+    s.src="/src/main.js?v=202607300625";
     document.body.appendChild(s);
     // Watchdog de boot (P0 18 jul): si el grafo ESM murió en el import (caché
     // HTTP mixta tras deploys en ráfaga — main.js nuevo + módulo viejo sin el
