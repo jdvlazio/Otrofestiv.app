@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607300625">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607300625">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607300752">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607300752">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -626,6 +626,17 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .meta-banner-label{font-size:var(--t-xs);font-weight:var(--w-display);color:var(--amber);letter-spacing:.5px;text-transform:uppercase}
 .meta-banner-text{font-size:var(--t-sm);color:var(--white);margin-top:2px;line-height:1.4}
 .meta-banner-text span{color:var(--gray)}
+/* ── BANDA AVISOS ────────────────────────────────────────────────────────────
+   Zona EXCLUSIVA de los avisos que MATIZAN la función (Q&A, programa,
+   inscripción). Lo que la INVALIDA —cancelada/reprogramada— se queda dentro de
+   FUNCIÓN, pegado a la hora que niega.
+   Grid `max-content 1fr`: la columna de pastillas la define la etiqueta más
+   ancha de cada idioma (INSCRIPCIÓN 106px en ES, RSVP REQUIRED 118px en EN) sin
+   un solo valor fijo. padding-left 0 → las pastillas caen en el riel de 16px,
+   el mismo del día de la fila y del cuerpo de la sinopsis. (Juan, 30 jul 2026) */
+.avisos-body{display:grid;grid-template-columns:max-content 1fr;column-gap:var(--sp-2);row-gap:var(--sp-2);align-items:baseline;padding:2px var(--sp-4) var(--sp-3) 0}
+.aviso-pill{font-size:var(--t-badge);font-weight:var(--w-display);letter-spacing:.5px;text-transform:uppercase;background:var(--amber-12);color:var(--amber);border-radius:var(--r-md);padding:2px 7px;white-space:nowrap;justify-self:start;font-family:var(--font)}
+.aviso-txt{font-size:var(--t-caption);color:var(--white);line-height:1.4}
 .pel-sheet-ticket-link{display:inline-flex;align-items:center;gap:var(--sp-1);margin-top:var(--sp-3);font-size:var(--t-sm);color:var(--amber);text-decoration:none;opacity:.9;cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
 .pel-sheet-ticket-link:hover{opacity:1}
 .meta-banner .pel-sheet-ticket-link{margin-top:var(--sp-1)}
@@ -3051,7 +3062,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202607300625";
+    s.src="/src/main.js?v=202607300752";
     document.body.appendChild(s);
     // Watchdog de boot (P0 18 jul): si el grafo ESM murió en el import (caché
     // HTTP mixta tras deploys en ráfaga — main.js nuevo + módulo viejo sin el

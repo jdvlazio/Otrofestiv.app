@@ -2372,6 +2372,27 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar poster-single-owner: {_e}')
 
+# ── [avisos-en-banda] los avisos que MATIZAN viven en la banda AVISOS ─────────
+# Q&A, programa e inscripción vivían DENTRO del bloque de FUNCIÓN y competían con el
+# día, la hora y la sede (y "función" aparecía 3 veces en 4 líneas). Ahora tienen
+# banda propia, construida por _avisosBand — dueño único. Un .meta-banner-label
+# suelto en las fichas significa que alguien volvió a colgar un aviso fuera.
+# Excepción legítima: el banner de entradas de festival mixto (lleva enlace, no es
+# un matiz de la función) y el notice-banner-row de cancelada/reprogramada, que va
+# DENTRO de FUNCIÓN porque la invalida.
+check = 'avisos-en-banda'
+try:
+    _sc = open('src/controller/sheets-controller.js', encoding='utf-8').read()
+    _bad = [i for i, ln in enumerate(_sc.splitlines(), 1)
+            if 'meta-banner-label' in ln and not ln.strip().startswith('//')]
+    if _bad:
+        fail(check, 'aviso con rótulo fuera de la banda AVISOS (usar _avisosBand): '
+             + ', '.join(f'sheets-controller.js:{i}' for i in _bad[:5]))
+    else:
+        ok(check, 'los avisos que matizan la función se construyen solo en _avisosBand')
+except Exception as _e:
+    warn(check, f'no se pudo verificar avisos-en-banda: {_e}')
+
 # ── [aviso-sin-caja] ningún aviso lleva recuadro sobre el texto ────────────────
 # Regla de Juan (29 jul 2026): un aviso es una NOTA al margen, no una tarjeta. El
 # recuadro competía con las superficies reales (sec-hdr, filas de función) y pesaba
@@ -2594,7 +2615,7 @@ try:
         'src/view/agenda.js': 1622,
         'src/main.js': 1662,  # +46 total: _morphOpen a FLIP — clon de la card compuesta, radio contra-escalado, encuadre del destino (29 jul)
         'src/i18n/i18n.js': 1412,  # +4 (net): anclaje (label+texto) y Q&A con referentes, ×3 locales (29 jul)
-        'src/controller/sheets-controller.js': 1497,  # +39: la ficha de corto hereda la función de su(s) programa(s) — _screeningRows (dueño único, antes inline en openPelSheet), _findParentPrograms, _cortoScreeningPairs y _noticeRows (dueño único del aviso cancelada/reprogramada, heredado por título de programa) (29 jul 2026)
+        'src/controller/sheets-controller.js': 1519,  # +39: la ficha de corto hereda la función de su(s) programa(s) — _screeningRows (dueño único, antes inline en openPelSheet), _findParentPrograms, _cortoScreeningPairs y _noticeRows y _avisosBand (banda AVISOS: dueño único de lo que MATIZA la función, con la evidencia de vocabulario) (30 jul 2026)
         'src/controller/handlers.js': 935,  # +20: anclaje de función en toggleWL, simétrico al quitar (29 jul)
     }
     _over = []

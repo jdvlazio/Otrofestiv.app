@@ -302,8 +302,7 @@ export function openPelSheet(title){
         (buscar cuándo/dónde y tocar Agregar). Agrupados abajo se leen como la
         lista de matices de esa función — y evitan emparedar la fila entre dos
         banners de la misma familia visual. */''}
-    ${_metaBanners(f)}
-    ${_anclada?`<div class="meta-banner"><div class="meta-banner-dot"></div><div><div class="meta-banner-label">${t('meta_compartida_label')}</div><div class="meta-banner-text">${t('meta_funcion_incluye')}</div></div></div>`:''}
+    ${_avisosBand(f, {prog:_anclada?'obras':null})}
     ${(()=>{
       const _tk=FESTIVAL_CONFIG[_activeFestId]||{};
       // ticket_url por FILM pisa al global (Tercer Tiempo 2026: cada sesión tiene
@@ -612,7 +611,7 @@ export function openCortoSheet(title, country, duration, section, flags, directo
       </div>
     </div>
         ${_cortoScrHdr}${_cortoNotices}${_cortoScrBody}
-        ${_cortoShared?`<div class="meta-banner"><div class="meta-banner-dot"></div><div><div class="meta-banner-label">${t('meta_compartida_label')}</div><div class="meta-banner-text">${t('meta_funcion_incluye')}</div></div></div>`:''}
+        ${_cortoShared?_avisosBand(null, {prog:'cortos'}):''}
         ${syn?`<div class="sec-hdr sm">${ICONS.text} <span>${t('label_sinopsis')}</span></div><div class="pel-sheet-synopsis">${syn}</div>`:''}
     <div class="pel-sheet-ctas">
       <button id="corto-wl-btn" class="row-center-xs pel-sheet-action-btn${inWL?' act-on btn-primary':' btn-primary'}" data-title="${escXML(parentTitle||title)}" data-action="toggleWL">${inWL?ICONS.heartFill:ICONS.heart} ${inWL?t('cta_en_intereses'):t('cta_intereses')}</button>
@@ -1390,15 +1389,38 @@ export function _genreEN(g) {
   return g.split(',').map(s => _GENRE_EN[s.trim()] || s.trim()).join(', ');
 }
 
-export function _metaBanners(f){
-  let b='';
+// _avisosBand — DUEÑO ÚNICO de la banda AVISOS, para la ficha de película y la de
+// corto. Zona exclusiva de lo que MATIZA la función; lo que la INVALIDA
+// (cancelada/reprogramada) se queda dentro de FUNCIÓN, pegado a la hora que niega.
+//
+// Por qué banda y no avisos sueltos: vivían DENTRO del bloque de FUNCIÓN y
+// competían con el día, la hora y la sede — y la palabra "función" aparecía tres
+// veces en cuatro líneas. La ficha ya organiza en bandas con rótulo (FUNCIÓN,
+// SINOPSIS); los avisos no tenían la suya y vivían de prestado.
+//
+// Vocabulario, con evidencia (30 jul 2026): "función compartida" y "shared
+// screening" NO existen en la industria; lo establecido es "programa" — es como
+// los propios festivales llaman al contenedor en NUESTROS datos (FINCA:
+// "…— Programa 1", Cinemancia: "Programa de cortos 4", Olhar: "PGM 07"). Y
+// "doble" quedó descartado por falso: los slots compartidos llegan a 4 obras y
+// mezclan duraciones (106min + 5min en FINCA), así que no hay "doble programa".
+//
+// `opts.prog`: 'cortos' (corto dentro de un bloque) | 'obras' (slot compartido) |
+// null. El texto cambia; la etiqueta es la misma.
+export function _avisosBand(f, opts){
+  const rows=[];
   // `qa_type` distingue los DOS Q&A que el festival programa: con el equipo de
-  // la película o con referentes del tema. Rotularlos a todos "equipo presente"
-  // le prometía al usuario un encuentro con los directores que en 7 de 16
-  // funciones de FINCA no ocurre. Sin el campo (resto de festivales) → equipo.
-  if(f.has_qa) b+=`<div class="meta-banner"><div class="meta-banner-dot"></div><div><div class="meta-banner-label">${t(f.qa_type==='guests'?'meta_qa_label_ref':'meta_qa_label')}</div><div class="meta-banner-text">${t('meta_qa_time')}</div></div></div>`;
-  if(f.requires_registration) b+=`<div class="meta-banner"><div class="meta-banner-dot"></div><div><div class="meta-banner-label">${t('badge_inscripcion_prev')}</div><div class="meta-banner-text">${t('meta_registro_text')}</div></div></div>`;
-  return b;
+  // la película o con referentes. Rotularlos a todos "equipo" le prometía al
+  // usuario un encuentro con los directores que en 7 de 16 funciones de FINCA no
+  // ocurre. Sin el campo (resto de festivales) → equipo.
+  if(f&&f.has_qa) rows.push(['Q&A', t(f.qa_type==='guests'?'aviso_qa_ref':'aviso_qa_equipo')]);
+  if(opts&&opts.prog) rows.push([t('badge_programa'), t(opts.prog==='cortos'?'aviso_prog_cortos':'aviso_prog_obras')]);
+  if(f&&f.requires_registration) rows.push([t('badge_inscripcion'), t('aviso_inscripcion')]);
+  if(!rows.length) return '';
+  return `<div class="sec-hdr sm">${ICONS.alert} <span>${t('label_avisos')}</span></div>`
+    +`<div class="avisos-body">`
+    +rows.map(([b,tx])=>`<span class="aviso-pill">${b}</span><span class="aviso-txt">${tx}</span>`).join('')
+    +`</div>`;
 }
 
 export function _checkRecalcOpportunity(){

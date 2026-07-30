@@ -252,3 +252,42 @@ test('AF06 — corto sin función anunciada muestra vacío explícito', async ({
   await expect(page.locator('#pel-sheet-inner .pel-sheet-screening')).toHaveCount(0);
   await expect(page.locator('#pel-sheet-inner')).toContainText(/sin función anunciada|no screening announced/i, { timeout: 5000 });
 });
+
+// ─── Banda AVISOS (30 jul 2026) ────────────────────────────────────────────────
+// Los avisos que MATIZAN la función (Q&A, programa, inscripción) viven en su
+// propia banda, no dentro del bloque de FUNCIÓN. AF09 exige que existan; AF10 es
+// el invariante de alineación: todos los textos comparten columna (grid), que es
+// lo que se rompe si alguien vuelve a anchos fijos.
+
+// AF09 — la ficha de un corto muestra el aviso PROGRAMA en la banda AVISOS
+test('AF09 — banda AVISOS con el aviso de programa en la ficha de corto', async ({ page }) => {
+  await enterFestival(page, 'finca2026', FINCA_SIMTIME);
+  await page.evaluate(() => openCortoSheet('Ecocidio', '', '', ''));
+  await page.waitForSelector('#pel-sheet.open', { timeout: 8000 });
+  await expect(page.locator('#pel-sheet-inner .avisos-body')).toHaveCount(1, { timeout: 5000 });
+  await expect(page.locator('#pel-sheet-inner .aviso-pill').first()).toHaveText(/programa|programme/i);
+  // y NO quedan avisos con rótulo fuera de la banda
+  await expect(page.locator('#pel-sheet-inner .meta-banner-label')).toHaveCount(0);
+});
+
+// AF10 — invariante de alineación: pastillas al riel del día, textos en una columna
+test('AF10 — los avisos comparten columna y arrancan en el riel del día', async ({ page }) => {
+  await enterFestival(page, 'finca2026', FINCA_SIMTIME);
+  const withQa = await page.evaluate(() => (FILMS.find(f => f.has_qa) || {}).title);
+  if (!withQa) { console.log('AF10: festival sin Q&A, skip'); return; }
+  await page.evaluate((t) => openPelSheet(t), withQa);
+  await page.waitForSelector('#pel-sheet-inner .avisos-body', { timeout: 8000 });
+  const m = await page.evaluate(() => {
+    const L = e => Math.round(e.getBoundingClientRect().left);
+    return {
+      pills: [...document.querySelectorAll('.aviso-pill')].map(L),
+      txts: [...document.querySelectorAll('.aviso-txt')].map(L),
+      dia: L(document.querySelector('.pelicula-day')),
+    };
+  });
+  expect(m.pills.length).toBeGreaterThan(0);
+  // pastillas en el mismo riel que el día de la fila de función
+  m.pills.forEach(x => expect(x).toBe(m.dia));
+  // todos los textos en la MISMA columna (lo garantiza el grid, no un px fijo)
+  expect(new Set(m.txts).size).toBe(1);
+});
