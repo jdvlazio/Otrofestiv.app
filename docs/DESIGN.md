@@ -637,7 +637,49 @@ programa, sí — así que **la ficha lo hereda**:
 > aviso, revisar TODAS las superficies que lo pintan**, no solo la que se está
 > mirando: hoy son la ficha de película y la de corto.
 
-### 8.4.6 · «Función compartida»: un solo sustantivo (29 jul 2026)
+### 8.4.6 · Banda AVISOS: sitio exclusivo para lo que matiza (30 jul 2026)
+
+**Lo que INVALIDA se queda en FUNCIÓN; lo que MATIZA tiene banda propia.** Q&A,
+programa e inscripción vivían dentro del bloque de FUNCIÓN, compitiendo con el día,
+la hora y la sede — y la palabra «función» aparecía tres veces en cuatro líneas. La
+ficha ya organiza en bandas con rótulo (FUNCIÓN, SINOPSIS); los avisos no tenían la
+suya y vivían de prestado.
+
+```
+🕐 FUNCIÓN
+   JUE 13 · 19:30 · Alianza Francesa
+⚠ AVISOS
+   ⟨Q&A⟩         Con referentes · +30 min estimados
+   ⟨PROGRAMA⟩    Verás las otras obras
+   ⟨INSCRIPCIÓN⟩ Reservá tu lugar
+```
+
+- **Dueño único `_avisosBand`**, consumido por la ficha de película y la de corto.
+  Guardián `[avisos-en-banda]`: un `.meta-banner-label` suelto = alguien volvió a
+  colgar un aviso fuera.
+- **Cancelada/reprogramada NO entra**: va dentro de FUNCIÓN, pegada a la hora que
+  niega. Enterrarla en una banda de abajo sería esconder la única advertencia que
+  hace perder el viaje.
+- **Todos los avisos llevan pastilla.** Sin ella, el que no la tenía se leía como
+  de otra especie. La pastilla es el único recuadro que sobrevive (§8.4.7).
+- **Alineación por grid, no por píxeles**: `max-content 1fr`. La columna de
+  pastillas la define la etiqueta más ancha **de cada idioma** —106px en ES,
+  118px en EN con `RSVP REQUIRED`— sin un solo valor fijo ni condicional por
+  locale. `padding-left: 0` → las pastillas caen en el riel de **16px**, el mismo
+  del día de la fila y del cuerpo de la sinopsis. Test AF10 lo fija como invariante.
+
+**Vocabulario, con evidencia.** «Función compartida» y «shared screening» **no
+existen en la industria**: lo establecido es *doble programa* / *programa de cortos*,
+y el sustantivo que los cubre a ambos es **PROGRAMA** — que es como los propios
+festivales llaman al contenedor en nuestros datos (FINCA: *«… — Programa 1»*,
+Cinemancia: *«Programa de cortos 4»*, Olhar: *«PGM 07»*). Descartado «doble» por
+falso: los slots compartidos llegan a **4 obras** y mezclan duraciones (106 min +
+5 min en FINCA). Descartado nombrar el contenedor al estilo Sundance
+(*«part of Shorts Program 4»*) porque **a veces no hay programa**. Descartado
+*TENÉ EN CUENTA* como rótulo: es un imperativo, no un sustantivo — un rótulo de
+banda tiene que poder completar *«esta es la ___ de la película»*.
+
+### 8.4.5b · «Función compartida»: un solo sustantivo (29 jul 2026)
 
 El bloque decía **«función» tres veces en cuatro líneas**: rótulo del bloque
 (FUNCIONES), rótulo del aviso (FUNCIÓN COMPARTIDA) y su propia frase («Otros

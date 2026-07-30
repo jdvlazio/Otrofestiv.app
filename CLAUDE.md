@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `9b88377 fix(design): fuera la linea fina bajo los botones secundarios de la ficha (#475)`
+> Último commit: `e3ac2e3 fix(design): los CTAs de la ficha miden IGUAL (41px los cuatro tipos) (#476)`
 
 ---
 

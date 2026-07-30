@@ -108,7 +108,7 @@ export function toggleWL(title,e){
     } else if(_hermanas.length){
       // Desde la grilla no se ve el banner de la ficha: si sumamos una obra que
       // el usuario no eligió, hay que decirlo en el momento.
-      showToast(`${t('meta_funcion_label')} · ${t('meta_funcion_incluye')}`,'info',4000);
+      showToast(`${t('badge_programa')} · ${t('aviso_prog_obras')}`,'info',4000);
     } else if(activeMNav==='mnav-cartelera'||activeMNav==='mnav-seleccion'){
       showActionToast(`${ICONS.heartFill} ${t('cta_en_intereses')}`,`${ICONS.bookmark} ${t('cta_priorizar')}`,()=>togglePriority(title));
     } else {
