@@ -5,7 +5,7 @@
 // app. Sink puro (solo main.js lo importa: ACTION_REGISTRY + Object.assign + IIFE
 // detección-festival). Escribe bridge globals en runtime (no eval-time).
 
-import { FESTIVAL_CONFIG, mergeFestivalSections } from '../config.js';
+import { FESTIVAL_CONFIG, NOTICES, mergeFestivalSections } from '../config.js';
 import { parseDur } from '../domain/time.js';
 import { lruTouch } from '../lru.js';
 import { DAY_ABBR, DAY_NUM, _classifyFestival, festivalShortName } from '../view/components.js';
@@ -172,6 +172,40 @@ export async function loadFestival(id){
           // vez: es una charla al final de la función, no una por obra.
           const total=g.reduce((a,f)=>a+parseDur(f.duration),0)+(g.some(f=>f.has_qa)?30:0);
           g.forEach(f=>{ f._slotKey=k; f._slotMin=total; });
+        });
+      }
+      // ── AVISOS: cancelada / reprogramada, SELLADOS en la función ────────────
+      // Antes el aviso se resolvía por búsqueda en cada superficie (la ficha, el
+      // listado y la card lo buscaban por su cuenta en NOTICES) y el
+      // PLANIFICADOR no lo miraba nunca: armaba el día alrededor de funciones
+      // canceladas y de horas que ya no existían. Se sella acá, una vez, igual
+      // que _slotKey — y todos los consumidores lo leen del dato.
+      //
+      // Reprogramada: la VERDAD es la hora nueva (decisión de Juan, 30 jul 2026).
+      // Se aplica al dato y queda `_movedFrom` con la vieja para poder decir de
+      // dónde viene. Mantener la hora vieja en pantalla y pedirle al
+      // planificador que la ignore es la doble verdad que ya nos costó bugs.
+      const _avisos=NOTICES.filter(n=>n.festival===id);
+      if(_avisos.length){
+        const _dk=data.dayKeys||[];
+        exploded.forEach(f=>{
+          if(f.info) return;
+          // `date` (día de la función original) desambigua cuando una obra tiene
+          // varias funciones y solo una cambió. Sin `date` → aplica a todas.
+          const n=_avisos.find(x=>x.title===f.title&&(!x.date||x.date===f.day));
+          if(!n) return;
+          if(n.type==='cancelled'){ f._cancelled=true; return; }
+          if(n.type==='rescheduled'&&(n.newDay||n.newTime||n.newVenue)){
+            f._movedFrom={day:f.day,time:f.time,venue:f.venue};
+            if(n.newDay){
+              f.day=n.newDay;
+              // day_order es el índice en dayKeys: sin recalcularlo, la función
+              // movida se ordena en su día viejo.
+              const _i=_dk.indexOf(n.newDay); if(_i>=0) f.day_order=_i;
+            }
+            if(n.newTime) f.time=n.newTime;
+            if(n.newVenue) f.venue=n.newVenue;
+          }
         });
       }
       cfg.films=exploded; // Cacheado en sesión — evita re-fetch al volver al festival.
