@@ -315,3 +315,35 @@ test('AF11 — el diálogo de confirmación alinea todo a un solo riel', async (
   // y el rótulo no toca el borde de la caja (antes: 1px → lo cortaba el radio)
   expect(m.hdrDentro).toBeGreaterThanOrEqual(12);
 });
+
+// AF12 — la ficha de un corto HEREDA el Q&A de su programa
+// Antes no: la banda leía Q&A/inscripción/gratis del film, y la ficha de un corto
+// no tiene film propio — solo las funciones que hereda. Son propiedades de la
+// FUNCIÓN, así que ahora se derivan de ahí y sirven a las dos fichas.
+test('AF12 — el corto hereda el Q&A de su programa, y nombra cuál función', async ({ page }) => {
+  await enterFestival(page, 'finca2026', '2026-08-12T10:00');
+  const r = await page.evaluate(() => {
+    // Ecocidio está en DOS programas; le damos Q&A solo a uno
+    FILMS.filter(f => f.title.startsWith('FINQUITA')).forEach(f => { f.has_qa = true; f.qa_type = 'guests'; });
+    openCortoSheet('Ecocidio', '', '', '');
+    return {
+      pills: [...document.querySelectorAll('.aviso-pill')].map(e => e.textContent),
+      qaTxt: [...document.querySelectorAll('.aviso-txt')][0].textContent,
+    };
+  });
+  expect(r.pills[0]).toMatch(/Q&A/);
+  // aplica a UNA de las dos funciones → el aviso dice a cuál (si no, mentiría)
+  expect(r.qaTxt).toMatch(/\d{1,2}:\d{2}/);
+});
+
+// AF13 — GRATIS aparece en la banda AVISOS (festival mixto)
+// Ya era badge en las cards del listado; faltaba en la ficha, que es donde se decide.
+test('AF13 — la ficha muestra GRATIS en un festival de ticketing mixto', async ({ page }) => {
+  await enterFestival(page, 'tercertiempo2026');
+  const title = await page.evaluate(() => (FILMS.find(f => f.is_free === true && !f.info) || {}).title);
+  if (!title) { console.log('AF13: sin función gratuita, skip'); return; }
+  await page.evaluate((t) => openPelSheet(t), title);
+  await page.waitForSelector('#pel-sheet-inner .avisos-body', { timeout: 8000 });
+  const pills = await page.evaluate(() => [...document.querySelectorAll('.aviso-pill')].map(e => e.textContent));
+  expect(pills.some(p => /gratis|free/i.test(p))).toBe(true);
+});

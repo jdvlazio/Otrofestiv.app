@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `d65b4f9 fix(domain): el anclaje es transversal — blockDuration, dueno unico del fin de funcion (#482)`
+> Último commit: `a81f9b6 docs(schema): doctrina de proyecciones conjuntas — dos modelos, y un guardian que obliga a decidir (#483)`
 
 ---
 

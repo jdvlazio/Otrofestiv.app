@@ -1394,9 +1394,25 @@ export function _avisosBand(f, opts){
   // la película o con referentes. Rotularlos a todos "equipo" le prometía al
   // usuario un encuentro con los directores que en 7 de 16 funciones de FINCA no
   // ocurre. Sin el campo (resto de festivales) → equipo.
-  if(f&&f.has_qa) rows.push(['Q&A', t(f.qa_type==='guests'?'aviso_qa_ref':'aviso_qa_equipo')]);
+  // Q&A, inscripción y gratis son propiedades de la FUNCIÓN, no de la obra. Se
+  // leían del film y por eso la ficha de un CORTO no mostraba el Q&A de su
+  // programa: esa ficha no tiene film propio, solo las funciones que hereda.
+  // Derivarlos de las funciones sirve a las dos fichas con un solo camino.
+  const _src=(opts&&opts.scrs&&opts.scrs.length)?opts.scrs:(f?[f]:[]);
+  const _con=k=>_src.filter(x=>x&&x[k]);
+  // Si el rasgo está en ALGUNAS funciones y no en todas, el aviso nombra cuáles
+  // —si no, mentiría sobre las otras—. Hoy no ocurre en ningún festival cargado.
+  const _cual=h=>(h.length&&h.length<_src.length)?' · '+h.map(_coord).join(' / '):'';
+  const _qa=_con('has_qa');
+  if(_qa.length) rows.push(['Q&A', t(_qa[0].qa_type==='guests'?'aviso_qa_ref':'aviso_qa_equipo')+_cual(_qa)]);
   if(opts&&opts.prog) rows.push([t('badge_programa'), t(opts.prog==='cortos'?'aviso_prog_cortos':'aviso_prog_obras')]);
-  if(f&&f.requires_registration) rows.push([t('badge_inscripcion'), t('aviso_inscripcion')]);
+  const _ins=_con('requires_registration');
+  if(_ins.length) rows.push([t('badge_inscripcion'), t('aviso_inscripcion')+_cual(_ins)]);
+  // GRATIS solo en festival MIXTO: marca la excepción cuando casi todo se paga.
+  // Ya era badge en las cards del listado; faltaba en la ficha, que es donde el
+  // usuario decide. Mismo criterio que _metaBadges — un solo predicado.
+  const _gratis=((FESTIVAL_CONFIG[_activeFestId]||{}).ticketing_model==='mixed')?_con('is_free'):[];
+  if(_gratis.length) rows.push([t('badge_gratis'), t('aviso_gratis')+_cual(_gratis)]);
   if(!rows.length) return '';
   return `<div class="sec-hdr sm">${ICONS.alert} <span>${t('label_avisos')}</span></div>`
     +`<div class="avisos-body">`

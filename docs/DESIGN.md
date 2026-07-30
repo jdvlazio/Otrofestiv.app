@@ -662,6 +662,12 @@ suya y vivían de prestado.
   hace perder el viaje.
 - **Todos los avisos llevan pastilla.** Sin ella, el que no la tenía se leía como
   de otra especie. La pastilla es el único recuadro que sobrevive (§8.4.7).
+- **Q&A, inscripción y GRATIS se derivan de la FUNCIÓN, no de la obra.** Leerlos
+  del film dejaba muda la ficha de un corto —que no tiene film propio, solo las
+  funciones que hereda de su programa—. Si el rasgo está en algunas funciones y
+  no en todas, el aviso **nombra cuáles**; si no, mentiría sobre las otras.
+  GRATIS solo aparece en festival de ticketing **mixto**: marca la excepción
+  cuando casi todo se paga (mismo predicado que el badge del listado).
 - **Alineación por grid, no por píxeles**: `max-content 1fr`. La columna de
   pastillas la define la etiqueta más ancha **de cada idioma** —106px en ES,
   118px en EN con `RSVP REQUIRED`— sin un solo valor fijo ni condicional por
