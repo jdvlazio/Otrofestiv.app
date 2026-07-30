@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `24e76ef feat(avisos): cancelada y reprogramada entran a la banda, y el planificador por fin las ve (#478)`
+> Último commit: `d9da399 fix(plan): Mi Plan entiende el anclaje — fuera el aviso falso de Q&A (#479)`
 
 ---
 

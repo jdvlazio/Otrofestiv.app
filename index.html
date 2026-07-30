@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607300845">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607300845">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607300857">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607300857">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -1544,6 +1544,10 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .mplan-wk-time.mp-event-time{color:var(--event-blue-70)}
 .mplan-wk-title{font-size:var(--t-sm);font-weight:var(--w-semi);color:var(--white);line-height:1.3;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
 .mplan-wk-title.mp-event-title{color:var(--event-blue-title)}
+/* mp-multi = una obra dentro de un bloque que contiene VARIAS (función
+   compartida). Se clampan a 1 línea para que entren todas: lo que importa es
+   saber qué obras hay, no leer el título completo de cada una. */
+.mplan-wk-title.mp-multi{-webkit-line-clamp:1;font-size:var(--t-xs);margin-bottom:1px}
 .mplan-wk-venue{font-size:var(--t-xs);color:var(--gray);margin-top:3px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 
 /* Lista de detalle */
@@ -3075,7 +3079,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202607300845";
+    s.src="/src/main.js?v=202607300857";
     document.body.appendChild(s);
     // Watchdog de boot (P0 18 jul): si el grafo ESM murió en el import (caché
     // HTTP mixta tras deploys en ráfaga — main.js nuevo + módulo viejo sin el
