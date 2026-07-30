@@ -11,7 +11,7 @@ Orden canónico para montar un festival. Cada paso mapea a una fase de abajo.
 
 | # | Paso | Hace | Fase |
 |---|---|---|---|
-| 1 | `node scripts/csv-to-festival.js <in.csv> festivals/<id>.json` | CSV del organizador → JSON base `{venues, films}` | 1 |
+| 1 | `node scripts/csv-to-festival.js <in.csv> festivals/<id>.json [--anclaje\|--separadas]` | CSV del organizador → JSON base `{venues, films}`. **BLOQUEA** si hay proyecciones conjuntas sin modelo decidido (gate duro), y al terminar emite el comando de `generate-config.js` ya derivado | 1 |
 | 2 | `TMDB_API_KEY=… python3 scripts/enrich-festival.py festivals/<id>.json` | llena **solo `genre`/`year`** (gate de 4 criterios; rechaza en miss) | 3 |
 | 3 | **`synopsis_es` → traducción inline de Claude** (lee PT/EN → ES) + **pase de Content Design** | localización de contenido | 3b / 5 |
 | 4 | `python3 scripts/geocode-venues.py …` | lat/lng de venues (Nominatim) | 2 |

@@ -92,9 +92,14 @@ function isAllcaps(title) {
 
 // ── Main ────────────────────────────────────────────────────────────────────
 function main() {
-  const [, , inPath, outArg] = process.argv;
+  const argv = process.argv.slice(2);
+  const flags = new Set(argv.filter(a => a.startsWith('--')));
+  const pos = argv.filter(a => !a.startsWith('--'));
+  const [inPath, outArg] = pos;
   if (!inPath) {
-    console.error('Uso: node scripts/csv-to-festival.js <input.csv> [output.json]');
+    console.error('Uso: node scripts/csv-to-festival.js <input.csv> [output.json] [--anclaje|--separadas]');
+    console.error('  --anclaje    los slots compartidos son UNA función → sharedSlotIsOneScreening:true');
+    console.error('  --separadas  los slots compartidos son funciones separadas (anotar en _SEPARATE de validate.py)');
     process.exit(2);
   }
   const outPath = outArg || inPath.replace(/\.csv$/i, '') + '.json';
@@ -152,8 +157,15 @@ function main() {
       synopsis: clean(get(r, 'synopsis_source')),
       synopsis_lang: clean(get(r, 'synopsis_lang')).toLowerCase() || 'es',
       day, date: date ? parseInt(date, 10) : null, time, venue,
+      sala: clean(get(r, 'sala')),
       has_qa: truthy(get(r, 'has_qa')),
+      qa_type: clean(get(r, 'qa_type')).toLowerCase(),
       requires_registration: truthy(get(r, 'requires_registration')),
+      is_free: truthy(get(r, 'is_free')),
+      title_orig: normTitle(get(r, 'title_orig')),
+      rating: clean(get(r, 'rating')),
+      trailer: clean(get(r, 'trailer')),
+      competencia: clean(get(r, 'competencia')),
     };
   }).filter(Boolean);
 
@@ -200,8 +212,14 @@ function main() {
     film.time = base.time;
     if (base.venue) film.venue = base.venue;
     film.day_order = dayOrder[base.day] ?? 0;
-    if (base.has_qa) film.has_qa = true;
+    if (base.has_qa) { film.has_qa = true; if (base.qa_type) film.qa_type = base.qa_type; }
     if (base.requires_registration) film.requires_registration = true;
+    if (base.is_free) film.is_free = true;
+    if (base.title_orig && base.title_orig !== title) film.title_orig = base.title_orig;
+    if (base.rating) film.rating = base.rating;
+    if (base.trailer) film.trailer = base.trailer;
+    if (base.competencia) film.competencia = base.competencia;
+    if (base.sala) film.sala = base.sala;
     if (fns.length > 1) {
       film.screenings = fns.map(e => {
         const s = { day: e.day, time: e.time };
@@ -218,8 +236,32 @@ function main() {
   for (const v of [...venuesSet].sort()) venues[v] = { short: v };
   if (venuesSet.size) { warn(`${venuesSet.size} venues sin coordenadas — correr scripts/geocode-venues.py`); report.counts.venues = venuesSet.size; }
 
+  // ── GATE DURO: proyecciones conjuntas (doctrina SCHEMA.md, 30 jul 2026) ──────
+  // Dos+ obras en el mismo día+hora+sede+sala = decisión OBLIGATORIA contra el
+  // programa oficial. Sin decisión NO se emite el JSON: el limbo de Cinemancia
+  // (corto+largo tratados como rivales) no se repite. No se auto-deriva — en
+  // multisala misma hora+sede puede ser otra sala = otra función.
+  const slotMap = new Map();
+  for (const e of entries) {
+    if (!e.day || !e.time || !e.venue) continue;
+    const k = `${e.day}|${e.time}|${e.venue}|${e.sala || ''}`;
+    if (!slotMap.has(k)) slotMap.set(k, new Set());
+    slotMap.get(k).add(e.title);
+  }
+  const sharedSlots = [...slotMap.entries()].filter(([, t]) => t.size > 1);
+  if (sharedSlots.length && !flags.has('--anclaje') && !flags.has('--separadas')) {
+    console.error(`\n⛔ ${sharedSlots.length} slot(s) compartidos SIN modelo decidido — no se emite el JSON.`);
+    for (const [k, t] of sharedSlots) console.error(`   · ${k} → ${[...t].join(' + ')}`);
+    console.error(`\n  Decidí contra el programa oficial (SCHEMA.md § Proyecciones conjuntas):`);
+    console.error(`   1. ¿El festival le puso NOMBRE al conjunto? → modelalo como PROGRAMA (fila is_cortos + film_list), no como filas sueltas.`);
+    console.error(`   2. ¿Obras independientes en UNA función? → re-corré con --anclaje (activa sharedSlotIsOneScreening).`);
+    console.error(`   3. ¿Funciones de verdad separadas (multisala/paralelas)? → re-corré con --separadas y anotá el slot en _SEPARATE de validate.py.`);
+    process.exit(1);
+  }
+
   // ── Salida ──
   const out = { venues, films };
+  if (sharedSlots.length && flags.has('--anclaje')) out.sharedSlotIsOneScreening = true;
   fs.writeFileSync(outPath, JSON.stringify(out, null, 2) + '\n', 'utf8');
 
   // ── Reporte de cobertura ──
@@ -237,7 +279,21 @@ function main() {
     console.log(`\n⚠ ${report.warnings.length} warnings:`);
     for (const w of report.warnings) console.log('   · ' + w);
   } else console.log('\n✓ sin warnings');
-  console.log(`\n→ Siguiente: geocode-venues.py · generate-config.js · validate-festivals.js\n`);
+  if (sharedSlots.length && flags.has('--anclaje'))
+    console.log(`   ⚓ anclaje: ${sharedSlots.length} slot(s) compartidos → sharedSlotIsOneScreening:true`);
+  if (sharedSlots.length && flags.has('--separadas'))
+    console.log(`   ⚠ ${sharedSlots.length} slot(s) compartidos declarados SEPARADOS — anotalos en _SEPARATE de validate.py o [slots-sin-decidir] va a fallar`);
+
+  // ── generate-config.js: comando listo, derivado del propio dato ──
+  // Un flujo, no dos pasos sueltos que hay que recordar. Lo derivable va lleno;
+  // lo que el CSV no sabe (nombre oficial, ciudad, tz) queda como <placeholder>.
+  const _id = path.basename(outPath).replace(/\.json$/i, '').replace(/-/g, '');
+  const _isoDays = orderedDays.filter(d => /^\d{4}-\d{2}-\d{2}$/.test(d)).sort();
+  const _start = _isoDays[0] || '<YYYY-MM-DD>';
+  console.log(`\n→ Siguiente paso (config bootstrap — completar los <placeholders>):`);
+  console.log(`   node scripts/generate-config.js --id ${_id} --name "<Nombre>" --fullname "<Nombre oficial completo>" \\`);
+  console.log(`     --short <CORTO> --city <Ciudad> --start ${_start} --days ${orderedDays.length} --storage ${_id}_ --tz <±HH:MM del país del festival>`);
+  console.log(`\n→ Después: geocode-venues.py · enrich-festival.py (PIPELINE.md manda) · validate-festivals.js · python3 validate.py\n`);
 }
 
 main();

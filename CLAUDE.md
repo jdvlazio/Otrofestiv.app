@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `378eb76 fix(avisos): Q&A/inscripcion/gratis se derivan de la FUNCION — y GRATIS entra a la ficha (#484)`
+> Último commit: `790b5d3 feat(plan): el aviso en Mi Plan trae su salida — Actualizar / Buscar reemplazo (#485)`
 
 ---
 
