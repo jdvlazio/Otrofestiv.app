@@ -71,7 +71,7 @@ export function toggleWL(title,e){
   if(watchlist.has(title)){
     if(savedAgenda&&savedAgenda.schedule.some(s=>s._title===title)){
       showActionModal(t('plan_quitar_intereses'),
-        `<b>${title.length>36?title.slice(0,34)+'…':title}</b> ${t('plan_esta_en_tu_plan')}<br><br>${t('plan_quitar_tmb')}`,
+        `<div><b>${title.length>36?title.slice(0,34)+'…':title}</b> ${t('plan_esta_en_tu_plan')}</div><div>${t('plan_quitar_tmb')}</div>`,
         t('plan_quitar_confirm'),()=>{
           // Modal callback variant — transaction agrupa las 3 mutaciones (p7d)
           state.transaction(() => {
@@ -143,7 +143,7 @@ export function toggleWatched(title,e){
   const _short=title.length>36?title.slice(0,34)+'…':title;
   showActionModal(
     t('modal_ya_viste_titulo'),
-    `<b>${_short}</b><br><br>${t('modal_ya_viste_body')}`,
+    `<div class="cm-subject">${_short}</div><div>${t('modal_ya_viste_body')}</div>`,
     t('modal_ya_viste_cta'),
     ()=>{
       state.update('watched', s => state._addToSet(s, title));
@@ -247,7 +247,7 @@ export function removeFromAgenda(title){
   const {savedAgenda} = state.snapshot();
   if(!savedAgenda) return;
   const _s=title.length>36?title.slice(0,34)+'…':title;
-  showActionModal(t('plan_quitar_plan'),`<b>${_s}</b><br><br>${t('plan_restaurar_suger')}`,t('misc_quitar'),()=>{
+  showActionModal(t('plan_quitar_plan'),`<div class="cm-subject">${_s}</div><div>${t('plan_restaurar_suger')}</div>`,t('misc_quitar'),()=>{
     // Modal callback — el handler real (variant aceptada en spec)
     const rem=savedAgenda.schedule.find(s=>s._title===title);
     if(rem){state.update('lastRemovedSlots', arr => [{...rem,_isRestored:true}, ...arr.filter(r=>r._title!==rem._title)].slice(0,MAX_REMEMBERED_SLOTS));saveLastSlot();}
@@ -526,7 +526,7 @@ export function removeFilmFromScenario(title,e){
   const short=title.length>36?title.slice(0,34)+'…':title;
   showActionModal(
     t('plan_quitar_intereses'),
-    `<b>${short}</b><br><br>${t('plan_se_quitara')}.`,
+    `<div class="cm-subject">${short}</div><div>${t('plan_se_quitara')}.</div>`,
     t('misc_quitar'),
     ()=>{
       state.batchUpdate({
@@ -807,7 +807,7 @@ export function saveCurrentScenario(){
     const n=_futureN;
     showActionModal(
       `${ICONS.calendar} ${t('plan_reemplazar_plan')}`,
-      `${t('plan_ya_tenes_n',{count:`<b>${n} ${n!==1?t('misc_peliculas'):t('misc_pelicula')}</b>`})}<br><br>${t('plan_reemplazar')}.`,
+      `<div>${t('plan_ya_tenes_n',{count:`<b>${n} ${n!==1?t('misc_peliculas'):t('misc_pelicula')}</b>`})}</div><div>${t('plan_reemplazar')}.</div>`,
       t('misc_si_reemplazar'),
       _doSave,
       t('plan_conservar_actual')

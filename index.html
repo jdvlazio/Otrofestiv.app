@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607300857">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607300857">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607300914">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607300914">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -591,11 +591,19 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 
 /* ── Modal de conflictos ── */
 .conflict-modal{position:fixed;top:0;left:0;right:0;bottom:0;background:var(--overlay-70);z-index:9999;display:flex;align-items:center;justify-content:center;padding:var(--sp-5)}
-.conflict-modal-box{background:var(--surf-2);border:1px solid var(--bdr);border-radius:var(--r);max-width:320px;width:100%;overflow:hidden}
-.conflict-modal-hdr{font-size:var(--t-label);font-weight:var(--w-bold);color:var(--white-60);letter-spacing:.8px;text-transform:uppercase;margin-bottom:var(--sp-2)}
-.conflict-modal-body{padding:var(--sp-2) var(--sp-5) var(--sp-3);font-size:var(--t-sm);color:var(--gray);line-height:1.55}
+/* Un SOLO riel: el padding vive en la caja y ni el rótulo, ni el cuerpo, ni los
+   botones lo repiten. Antes había tres bordes izquierdos distintos —36, 52 y 60—
+   y el rótulo, con padding 0, quedaba pegado al borde superior: la esquina
+   redondeada lo cortaba. Medido, no estimado. (Juan, 30 jul 2026) */
+.conflict-modal-box{background:var(--surf-2);border:1px solid var(--bdr);border-radius:var(--r);max-width:320px;width:100%;overflow:hidden;padding:var(--sp-4)}
+.conflict-modal-hdr{font-size:var(--t-label);font-weight:var(--w-bold);color:var(--white-60);letter-spacing:.8px;text-transform:uppercase;margin-bottom:var(--sp-3)}
+/* El ritmo vertical lo da un token, no `<br><br>`: el cuerpo es una columna con
+   gap. Con los dobles saltos, el hueco entre el título de la obra y su
+   explicación era una línea en blanco entera, fuera de toda escala. */
+.conflict-modal-body{display:flex;flex-direction:column;gap:var(--sp-2);font-size:var(--t-sm);color:var(--gray);line-height:1.55;margin-bottom:var(--sp-4)}
+.conflict-modal-body .cm-subject{color:var(--white);font-weight:var(--w-semi)}
 .conflict-modal-body b{color:var(--white)}
-.conflict-modal-btns{display:flex;flex-direction:column;gap:var(--sp-2);padding:0 var(--sp-4) var(--sp-4)}
+.conflict-modal-btns{display:flex;flex-direction:column;gap:var(--sp-1)}
 .conflict-modal-btn{width:100%;padding:var(--sp-btn);border-radius:var(--r-pill);border:none;font-family:var(--font);font-size:var(--t-sm);font-weight:var(--w-semi);cursor:pointer;touch-action:manipulation;text-align:center}
 .conflict-modal-btn.cancel{background:none;border:none;color:var(--gray);padding:10px}
 .conflict-modal-btn.confirm{font-size:var(--t-base)} /* anatomía amber: suscrito a la regla dueña PRIMARIO */
@@ -3079,7 +3087,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202607300857";
+    s.src="/src/main.js?v=202607300914";
     document.body.appendChild(s);
     // Watchdog de boot (P0 18 jul): si el grafo ESM murió en el import (caché
     // HTTP mixta tras deploys en ráfaga — main.js nuevo + módulo viejo sin el

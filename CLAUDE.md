@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `d9da399 fix(plan): Mi Plan entiende el anclaje — fuera el aviso falso de Q&A (#479)`
+> Último commit: `8583eb9 fix(plan): el calendario dibuja la funcion compartida completa, en un bloque (#480)`
 
 ---
 

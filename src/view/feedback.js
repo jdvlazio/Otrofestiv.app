@@ -31,12 +31,12 @@ export function showConflictModal(conflicts, onConfirm){
   modal.innerHTML=`<div class="conflict-modal-box">
     <div class="conflict-modal-hdr">${t('conflict_plan_titulo')}</div>
     <div class="conflict-modal-body">
-      ${t('conflict_choca_intro')}<br>${names}<br><br>
-      ${t('plan_continuar_quitar')}
+      <div>${t('conflict_choca_intro')}<br>${names}</div>
+      <div>${t('plan_continuar_quitar')}</div>
     </div>
     <div class="conflict-modal-btns">
-      <button class="conflict-modal-btn cancel" id="conflict-cancel">${t('search_cancelar')}</button>
       <button class="conflict-modal-btn confirm" id="conflict-ok">${t('plan_quitar_continuar')}</button>
+      <button class="conflict-modal-btn cancel" id="conflict-cancel">${t('search_cancelar')}</button>
     </div>
   </div>`;
   document.body.appendChild(modal);
@@ -60,8 +60,8 @@ export function _showModal(title,body,label,cb,cls,cancelLabel){
     <div class="conflict-modal-hdr">${title}</div>
     <div class="conflict-modal-body">${body}</div>
     <div class="conflict-modal-btns">
-      <button class="conflict-modal-btn cancel" id="cm-c">${cancelLabel||t('misc_cancelar')}</button>
       <button class="conflict-modal-btn ${cls}" id="cm-ok">${label}</button>
+      <button class="conflict-modal-btn cancel" id="cm-c">${cancelLabel||t('misc_cancelar')}</button>
     </div></div>`;
   document.body.appendChild(m);
   document.getElementById('cm-c').onclick=()=>m.remove();
