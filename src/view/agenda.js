@@ -352,6 +352,17 @@ export function renderMiPlanCalendar(state){
       const _rowKey=(s._title||'')+s.time;
       const _safeRowKey=_rowKey.replace(/"/g,'&quot;');
       const _mf=FILMS.find(fi=>fi.title===s._title);const _mp=_mf?getFilmPoster(_mf):null;
+      // ── La función de tu Plan ya no existe ──────────────────────────────────
+      // El loader sella el aviso en la función: una cancelada queda con
+      // `_cancelled`, y una reprogramada MUEVE su día/hora (la verdad es la
+      // nueva). Así que una entrada guardada que no encuentra su función exacta
+      // es una que se movió, y una que la encuentra cancelada es una que se cayó.
+      // NUNCA se borra en silencio: se marca y el usuario decide. Sacarle a
+      // alguien una función del Plan sin avisar es peor que el aviso mismo.
+      const _scr=FILMS.find(fi=>fi.title===s._title&&fi.day===s.day&&fi.time===s.time);
+      const _void=_scr?!!_scr._cancelled:!!(_mf&&(_mf._movedFrom||FILMS.some(fi=>fi.title===s._title&&fi._movedFrom)));
+      const _voidBadge=_void
+        ?`<span class="notice-badge">${_scr&&_scr._cancelled?t('notice_cancelada'):t('notice_reprog_short')}</span>`:'';
       const _isEventRow=_mf&&_mf.type==='event';
       const _safeMpT=(s._title||"").replace(/'/g,"\\'");
       const _mphInner=_mp
@@ -364,7 +375,7 @@ export function renderMiPlanCalendar(state){
         ${_mph}
         <div class="mplan-ri">
           <div class="mplan-t1${isPast?' mp-past':''}" ${!isPast?`data-action="toggleFilmAlternatives" data-key="${(s._title||'')+(s.day||'')+(s.time||'')}" data-title="${safeT}" data-day="${s.day||''}" data-time="${s.time||''}" data-stop="1"`:''} title="${!isPast?t('tooltip_cambiar_horario'):''}">${s.time}</div>
-          <div class="mplan-t2">${mplanEndStr(s.time,dur)}${prioritized.has(s._title)?` <span class="txt-amber60-xs">${ICONS.bookmarkFill}</span>`:''}${_rowStars?` <span class="txt-amber-sm">${_rowStars}</span>`:''}${isNow?` <span class="txt-green-semi">${t('label_en_curso_min')}</span>`:''}</div>
+          <div class="mplan-t2${_void?' mp-void':''}">${_voidBadge}${mplanEndStr(s.time,dur)}${prioritized.has(s._title)?` <span class="txt-amber60-xs">${ICONS.bookmarkFill}</span>`:''}${_rowStars?` <span class="txt-amber-sm">${_rowStars}</span>`:''}${isNow?` <span class="txt-green-semi">${t('label_en_curso_min')}</span>`:''}</div>
           <div>${(()=>{const{displayTitle:_dt,progSuffix:_ps}=parseProgramTitle(s._title||'');const _mfqa=FILMS.find(fi=>fi.title===s._title&&fi.day===s.day&&fi.time===s.time);const _qab=_mfqa?.has_qa?`<span class="meta-badge sm">Q&A</span>`:'';return`<div class="mplan-rtitle${_isEventRow?' mp-event-title':''}">${_dt}${_qab}</div>${_ps?`<div class="prog-suffix">${_ps}</div>`:''}`;})()} </div>
           <div class="mplan-rvenue${_isEventRow?' mp-event-venue':''}">${ICONS.pin} ${vcfg(s.venue).short}${sala(s.venue)?' \u00b7 '+sala(s.venue):''}</div>
           ${(()=>{const _mf=FILMS.find(fi=>fi.title===s._title&&fi.day===s.day&&fi.time===s.time);if(!_mf||!_mf.is_cortos||!_mf.film_list||!_mf.film_list.length) return'';return`<button class="row-xs mplan-prog-toggle" data-action="toggleMplanProg">${ICONS.chevronR} ${t('label_programa')}</button>`;})()}

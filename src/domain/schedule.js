@@ -100,7 +100,9 @@ export function computeScenarios(titles){
   const pending=titles.filter(t=>!watched.has(t)&&!FILMS.some(f=>f.title===t&&f.info));
   const allPendingTitles=pending; // for section uniqueness check
   const baseGroups=pending.map(t=>{
-    const screens=FILMS.filter(f=>f.title===t&&!isScreeningBlocked(f)&&!screeningPassed(f));
+    // `_cancelled` lo sella el loader desde NOTICES. Sin este filtro el
+    // optimizador armaba el día alrededor de una función que no va a ocurrir.
+    const screens=FILMS.filter(f=>f.title===t&&!f._cancelled&&!isScreeningBlocked(f)&&!screeningPassed(f));
     const isPrio=prioritized.has(t);
     const sc=scoreFilm(t,screens,isPrio,allPendingTitles);
     const isRec=screens.length>0&&!!screens[0].is_recurring;

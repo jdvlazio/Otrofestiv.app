@@ -6,7 +6,7 @@
 // la importa (sin ciclo). Lets de UI-state module-local; LB_SLUGS vía bridge
 // (lo escribe loadFestival). Roster/viewstate vía bridge.
 
-import { FESTIVAL_CONFIG, MAX_REMEMBERED_SLOTS, NOTICES, TMDB_IMG, _DEFAULT_FEST_ID } from '../config.js';
+import { FESTIVAL_CONFIG, MAX_REMEMBERED_SLOTS, TMDB_IMG, _DEFAULT_FEST_ID } from '../config.js';
 import { DAY_ABBR, DAY_NUM, ICONS, _secLabel, _sectionColor, escXML, isFullDayBlocked, makeProgramPoster, parseProgramTitle, renderRatingStarsHTML } from '../view/components.js';
 import { _getItemPoster, _mkCortoItemHtml, _posterStyle, dayLabel, emptyState, durFmt, flagFmt, getCortoItemPoster, getFilmPoster, getFilmPosterUntitled, getPosterSrc, itemPosterParts, posterAmbient, posterParts, sala, starsText, vcfg } from '../view/helpers.js';
 import { closeAvSheet, closePVRating, closePrioLimit } from '../view/sheets.js';
@@ -139,41 +139,21 @@ function _screeningRows(pairs){
     // el ancho y lee en una línea hasta 360px. El botón "Añadir" (acción) sí se queda
     // a la derecha. La etiqueta "en tu plan" queda para lectores de pantalla (.sr-only).
     let _addCtrl='', _planned=false;
-    if(!owner.is_recurring){
+    // Una función cancelada NO se puede sumar al Plan: dejarle el botón permitía
+    // planificar algo que no va a ocurrir (lo tenía, era un bug funcional).
+    if(!owner.is_recurring&&!s._cancelled){
       _planned=savedAgenda&&savedAgenda.schedule.some(e=>e._title===owner.title&&e.day===s.day&&e.time===s.time);
       if(!_planned&&!festivalEnded()&&!screeningPassed(s)){
         _addCtrl=`<button class="suggestion-add" data-action="addSuggestion" data-title="${owner.title.replace(/"/g,'&quot;')}" data-day="${s.day}" data-time="${s.time}" data-stop="1">${ICONS.plus} ${t('misc_anadir')}</button>`;
       }
     }
-    return`<div class="pel-sheet-screening${_planned?' in-plan':''}"${isPast?' style="opacity:.4"':''}>
+    return`<div class="pel-sheet-screening${_planned?' in-plan':''}${s._cancelled?' scr-void':''}"${isPast?' style="opacity:.4"':''}>
       ${_planned?`<span class="sr-only">${t('plan_en_tu_plan')}</span>`:''}
       <span class="pelicula-day" data-day="${s.day}">${dayAbb}</span>
       <span class="pelicula-time">${s.time}</span>
       <span class="pelicula-venue" data-venue="${s.venue.replace(/"/g,'&quot;')}" data-action="openVenueSheet">${ICONS.pin} <span class="venue-text">${vc.short}${sl?' · '+sl:''}${_city?`<span class="venue-municipio">${_city}</span>`:''}</span></span>
       ${_addCtrl}
     </div>`;
-  }).join('');
-}
-
-// _noticeRows — DUEÑO ÚNICO del aviso de función cancelada/reprogramada. Recibe la
-// lista de títulos que MANDAN sobre esa función: para una película el suyo, para un
-// corto los de sus programas (el aviso está indexado por título de programa, y el
-// corto no lo comparte). Va ARRIBA de la fila porque INVALIDA la hora que le sigue
-// (DESIGN 8.4.4): mostrar el horario viejo sin advertencia manda gente a una sala
-// donde no hay nada.
-function _noticeRows(titles){
-  const fest=_activeFestId||_DEFAULT_FEST_ID;
-  const seen=new Set();
-  return titles.map(_t2=>{
-    const n=NOTICES.find(x=>x.title===_t2&&x.festival===fest);
-    if(!n||seen.has(_t2)) return '';
-    seen.add(_t2);
-    // dayLabel: el aviso mostraba la fecha ISO cruda ("2026-08-16 17:00"), la única
-    // superficie de la app que no habla en días legibles.
-    const info=[n.newDay?(dayLabel(n.newDay)||n.newDay):'',n.newTime||'',n.newVenue||'']
-      .filter(Boolean).join(' · ');
-    const msg=n.type==='cancelled'?t('notice_funcion_canc'):t('notice_reprog_a',{info});
-    return`<div class="notice-banner-row"><span class="notice-badge">${n.type==='cancelled'?t('notice_cancelada'):t('notice_reprog_short')}</span><span class="notice-banner-txt">${msg}</span></div>`;
   }).join('');
 }
 
@@ -292,17 +272,13 @@ export function openPelSheet(title){
       </div>
     </div>
         ${allScr.length>0?`<div class="sec-hdr sm">${ICONS.clock} <span>${f.type==='event'?t('label_horario'):allScr.length===1?t('label_funcion'):t('label_funciones_pl')}</span>${totalFn>1&&f.type!=='event'?`<span class="count-badge cb-neutral">${totalFn}</span>`:''}</div>`:''}
-    ${_noticeRows([f.title])}
     ${allScr.length>0?`<div class="pel-sheet-screenings">${rows}</div>`:''}
-    ${/* ORDEN DEL BLOQUE FUNCIÓN: lo que INVALIDA va antes (notice-banner de
-        cancelada/reprogramada: niega la hora que sigue, hay que saberlo primero),
-        lo que MATIZA va después. El Q&A y la inscripción previa califican una
-        función válida: leerlos antes obliga a sostener un modificador sin conocer
-        aún aquello que modifica, justo en el camino más recorrido de la ficha
-        (buscar cuándo/dónde y tocar Agregar). Agrupados abajo se leen como la
-        lista de matices de esa función — y evitan emparedar la fila entre dos
-        banners de la misma familia visual. */''}
-    ${_avisosBand(f, {prog:_anclada?'obras':null})}
+    ${/* ORDEN: FUNCIÓN (solo día·hora·sede) → AVISOS → SINOPSIS. Todos los avisos
+        viven en su banda, incluidos cancelada y reprogramada, que van PRIMERAS y
+        en rojo: lo que invalida se lee antes de lo que matiza (DESIGN 8.4.6). La
+        fila afectada lleva su propia marca (hora tachada / atenuada) — el aviso
+        explica, la fila señala; ninguna de las dos hace el trabajo sola. */''}
+    ${_avisosBand(f, {prog:_anclada?'obras':null, scrs:allScr})}
     ${(()=>{
       const _tk=FESTIVAL_CONFIG[_activeFestId]||{};
       // ticket_url por FILM pisa al global (Tercer Tiempo 2026: cada sesión tiene
@@ -592,10 +568,6 @@ export function openCortoSheet(title, country, duration, section, flags, directo
   const _cortoShared=_cortoPairs.length>0;
   const _cortoScrLbl=_cortoPairs.length>1?t('label_funciones_pl'):t('label_funcion');
   const _cortoScrHdr=`<div class="sec-hdr sm">${ICONS.clock} <span>${_cortoScrLbl}</span>${_cortoPairs.length>1?`<span class="count-badge cb-neutral">${_cortoPairs.length}</span>`:''}</div>`;
-  // El aviso de cancelada/reprogramada también se hereda: está indexado por título
-  // de PROGRAMA, así que la ficha del corto solo lo ve si pregunta por sus owners.
-  // Sin esto mostraba la hora vieja sin advertencia — el bug latente del mismo linaje.
-  const _cortoNotices=_noticeRows([...new Set(_cortoPairs.map(p=>p.owner.title))]);
   const _cortoScrBody=_cortoPairs.length
     ?`<div class="pel-sheet-screenings">${_screeningRows(_cortoPairs)}</div>`
     :emptyState(ICONS.clock, t('corto_sin_funcion'));
@@ -610,8 +582,8 @@ export function openCortoSheet(title, country, duration, section, flags, directo
         <a class="c-lb pel-sheet-lb" href="${lbHref||'#'}" target="_blank" rel="noopener"${!lbHref?' style="display:none"':''}>${LB_SVG}<span class="c-lb-text pel-sheet-lb-text">Letterboxd</span></a>
       </div>
     </div>
-        ${_cortoScrHdr}${_cortoNotices}${_cortoScrBody}
-        ${_cortoShared?_avisosBand(null, {prog:'cortos'}):''}
+        ${_cortoScrHdr}${_cortoScrBody}
+        ${_avisosBand(null, {prog:_cortoShared?'cortos':null, scrs:_cortoPairs.map(p=>p.s)})}
         ${syn?`<div class="sec-hdr sm">${ICONS.text} <span>${t('label_sinopsis')}</span></div><div class="pel-sheet-synopsis">${syn}</div>`:''}
     <div class="pel-sheet-ctas">
       <button id="corto-wl-btn" class="row-center-xs pel-sheet-action-btn${inWL?' act-on btn-primary':' btn-primary'}" data-title="${escXML(parentTitle||title)}" data-action="toggleWL">${inWL?ICONS.heartFill:ICONS.heart} ${inWL?t('cta_en_intereses'):t('cta_intereses')}</button>
@@ -1409,6 +1381,15 @@ export function _genreEN(g) {
 // null. El texto cambia; la etiqueta es la misma.
 export function _avisosBand(f, opts){
   const rows=[];
+  // ROJO primero: lo que INVALIDA se lee antes de lo que matiza (DESIGN 8.4.4).
+  // `_cancelled` / `_movedFrom` los sella el loader; acá solo se leen.
+  (opts&&opts.scrs||[]).forEach(sc=>{
+    if(sc._cancelled)
+      rows.push([t('badge_cancelada'), t('aviso_cancelada',{info:_coord(sc)}), 'red']);
+    else if(sc._movedFrom)
+      // La coordenada VIEJA va tachada: la fila de arriba ya muestra la nueva.
+      rows.push([t('badge_movida'), t('aviso_movida',{info:`<s>${_coord(sc._movedFrom)}</s>`}), 'red']);
+  });
   // `qa_type` distingue los DOS Q&A que el festival programa: con el equipo de
   // la película o con referentes. Rotularlos a todos "equipo" le prometía al
   // usuario un encuentro con los directores que en 7 de 16 funciones de FINCA no
@@ -1419,8 +1400,16 @@ export function _avisosBand(f, opts){
   if(!rows.length) return '';
   return `<div class="sec-hdr sm">${ICONS.alert} <span>${t('label_avisos')}</span></div>`
     +`<div class="avisos-body">`
-    +rows.map(([b,tx])=>`<span class="aviso-pill">${b}</span><span class="aviso-txt">${tx}</span>`).join('')
+    +rows.map(([b,tx,sev])=>`<span class="aviso-pill${sev==='red'?' sev-red':''}">${b}</span><span class="aviso-txt">${tx}</span>`).join('')
     +`</div>`;
+}
+
+// _coord — "jue 13 · 19:00": cómo la app nombra una función dentro de una FRASE.
+// dayLabel devuelve el día en mayúsculas porque en la fila es una etiqueta; dentro
+// de una oración, "JUE 13" grita. Se baja a minúsculas solo acá.
+function _coord(sc){
+  const d=sc.day?(dayLabel(sc.day)||sc.day).toLocaleLowerCase():'';
+  return [d, sc.time||''].filter(Boolean).join(' · ');
 }
 
 export function _checkRecalcOpportunity(){
