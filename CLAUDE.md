@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `5cfcf80 fix(nav): fuera la linea ambar del dia activo (regresion de julio) (#466)`
+> Último commit: `388e13a feat(finca): descripcion en ingles de las 4 actividades (#467)`
 
 ---
 
