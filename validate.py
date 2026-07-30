@@ -2372,6 +2372,33 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar poster-single-owner: {_e}')
 
+# ── [aviso-sin-caja] ningún aviso lleva recuadro sobre el texto ────────────────
+# Regla de Juan (29 jul 2026): un aviso es una NOTA al margen, no una tarjeta. El
+# recuadro competía con las superficies reales (sec-hdr, filas de función) y pesaba
+# más que su contenido. Se quitó de .meta-banner, .notice-banner-row, .prio-stale y
+# .notice-detail-*. La PASTILLA del badge sí se queda: ahí el fondo ES el componente,
+# no una caja alrededor de un texto.
+check = 'aviso-sin-caja'
+try:
+    import re as _re
+    _html = open('index.html', encoding='utf-8').read()
+    _AVISOS = ('.meta-banner{', '.notice-banner-row{', '.prio-stale{',
+               '.notice-detail-amber{', '.notice-detail-green{')
+    _off = []
+    for _sel in _AVISOS:
+        _i = _html.find(_sel)
+        if _i < 0:
+            continue
+        _body = _html[_i + len(_sel):_html.index('}', _i)]
+        if 'background' in _body or 'border:' in _body or 'border-radius' in _body:
+            _off.append(_sel[:-1])
+    if _off:
+        fail(check, 'aviso(s) con caja (fondo/borde/radio sobre el texto): ' + ', '.join(_off))
+    else:
+        ok(check, f'{len(_AVISOS)} avisos sin caja — solo el badge conserva su pastilla')
+except Exception as _e:
+    warn(check, f'no se pudo verificar aviso-sin-caja: {_e}')
+
 # ── [screening-row-single-owner] la fila de función tiene UN solo constructor ───
 # La fila "día · hora · sede [· Añadir]" es el mismo concepto en la ficha de película
 # y en la de corto. Tenerla duplicada fue el bug de jul 2026: la ficha de corto no
@@ -2567,7 +2594,7 @@ try:
         'src/view/agenda.js': 1622,
         'src/main.js': 1662,  # +46 total: _morphOpen a FLIP — clon de la card compuesta, radio contra-escalado, encuadre del destino (29 jul)
         'src/i18n/i18n.js': 1409,  # +4 (net): anclaje (label+texto) y Q&A con referentes, ×3 locales (29 jul)
-        'src/controller/sheets-controller.js': 1486,  # +39: la ficha de corto hereda la función de su(s) programa(s) — _screeningRows (dueño único, antes inline en openPelSheet), _findParentPrograms, _cortoScreeningPairs y _noticeRows (dueño único del aviso cancelada/reprogramada, heredado por título de programa) (29 jul 2026)
+        'src/controller/sheets-controller.js': 1489,  # +39: la ficha de corto hereda la función de su(s) programa(s) — _screeningRows (dueño único, antes inline en openPelSheet), _findParentPrograms, _cortoScreeningPairs y _noticeRows (dueño único del aviso cancelada/reprogramada, heredado por título de programa) (29 jul 2026)
         'src/controller/handlers.js': 935,  # +20: anclaje de función en toggleWL, simétrico al quitar (29 jul)
     }
     _over = []

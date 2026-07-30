@@ -168,7 +168,10 @@ function _noticeRows(titles){
     const n=NOTICES.find(x=>x.title===_t2&&x.festival===fest);
     if(!n||seen.has(_t2)) return '';
     seen.add(_t2);
-    const info=`${n.newDay||''} ${n.newTime||''}${n.newVenue?' · '+n.newVenue:''}`.trim();
+    // dayLabel: el aviso mostraba la fecha ISO cruda ("2026-08-16 17:00"), la única
+    // superficie de la app que no habla en días legibles.
+    const info=[n.newDay?(dayLabel(n.newDay)||n.newDay):'',n.newTime||'',n.newVenue||'']
+      .filter(Boolean).join(' · ');
     const msg=n.type==='cancelled'?t('notice_funcion_canc'):t('notice_reprog_a',{info});
     return`<div class="notice-banner-row"><span class="notice-badge">${n.type==='cancelled'?t('notice_cancelada'):t('notice_reprog_short')}</span><span class="notice-banner-txt">${msg}</span></div>`;
   }).join('');

@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `1d7642a fix(ux): la ficha de un corto ya dice cuando y donde verlo (#470)`
+> Último commit: `1a839b6 fix(ux): el corto también hereda el aviso de cancelada/reprogramada (#471)`
 
 ---
 

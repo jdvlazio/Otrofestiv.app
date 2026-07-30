@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607292310">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607292310">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607292324">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607292324">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -152,6 +152,12 @@ window.sentryOnLoad = function() {
      biselado de 2010. Valor ÚNICO: lo consume la regla dueña PRIMARIO y los 2
      primarios de sheet — guardián [button-canon]. */
   --amber-cta: linear-gradient(180deg, #FBBF24 0%, #F59E0B 58%, #E89709 100%);
+  /* Hermanos del --amber-cta: MISMA curva de luz (0% / 58% / 100%) para que el
+     volumen del secundario lea como el del primario y no como otro material.
+     --surf-cta = Priorizar en reposo; --amber-cta-soft = Priorizar activo.
+     (Juan, 29 jul 2026: "ganando volumen", igual que Interés.) */
+  --surf-cta: linear-gradient(180deg, #2A2724 0%, #201E1B 58%, #1A1816 100%);
+  --amber-cta-soft: linear-gradient(180deg, rgba(245,158,11,.16) 0%, rgba(245,158,11,.10) 58%, rgba(245,158,11,.07) 100%);
   --amber-06: rgba(245,158,11,.06);
   --amber-08: rgba(245,158,11,.08);
   --amber-10: rgba(245,158,11,.1);
@@ -735,8 +741,8 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .group-label.ok{color:var(--green)}
 .group-label.fail{color:var(--gray2)}
 .prio-chip-past-lbl{font-size:var(--t-badge);color:var(--gray2);text-align:center;line-height:1.2;margin-top:2px}
-/* prio-stale = aviso FUERTE (canon notice-banner-row): amber-08, r-sm, sin borde */
-.prio-stale{display:flex;align-items:center;gap:var(--sp-2);padding:var(--sp-2) var(--sp-3);background:var(--amber-08);border-radius:var(--r-sm);margin-bottom:var(--sp-3);font-size:var(--t-sm);color:var(--white);line-height:1.4}
+/* prio-stale = aviso FUERTE (canon notice-banner-row): sin caja, igual que el resto */
+.prio-stale{display:flex;align-items:center;gap:var(--sp-2);margin-bottom:var(--sp-3);font-size:var(--t-sm);color:var(--white);line-height:1.4}
 .prio-stale-cta{margin-left:auto;flex-shrink:0;background:none;border:none;color:var(--amber);font-family:var(--font);font-size:var(--t-sm);font-weight:var(--w-bold);cursor:pointer;white-space:nowrap}
 
 #ag-result-wrap.stale{opacity:.5}
@@ -1300,9 +1306,9 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
   touch-action:manipulation
 }
 .pel-sheet-action-btn.act-on{background:rgba(39,174,96,.08);border-color:rgba(39,174,96,.25);color:var(--green)}
-.pel-sheet-action-btn.act-prio{background:var(--amber-10);border-color:var(--amber-30);color:var(--amber)}
+.pel-sheet-action-btn.act-prio{background:var(--amber-cta-soft);border-color:var(--amber-30);color:var(--amber)}
 .pel-sheet-action-btn.btn-primary{background:var(--amber-cta);border-color:var(--amber);color:var(--black);font-size:var(--t-sm);padding:13px 4px}
-.pel-sheet-action-btn.btn-secondary{background:var(--surf-3);border-color:transparent;color:rgba(255,255,255,.5);font-size:var(--t-sm);padding:13px 4px}
+.pel-sheet-action-btn.btn-secondary{background:var(--surf-cta);border-color:transparent;color:rgba(255,255,255,.5);font-size:var(--t-sm);padding:13px 4px}
 .pel-sheet-action-btn.btn-tertiary{background:none;border-color:transparent;color:var(--gray2);flex:none;padding:13px var(--sp-3)}
 .pel-sheet-ctas{display:flex;gap:var(--sp-2);align-items:center;margin-top:var(--sp-6)}
 .pel-sheet-ctas-watched{display:flex;gap:var(--sp-2);margin-top:var(--sp-6)}
@@ -2523,9 +2529,9 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .mt-2{margin-top:var(--sp-2)}
 .txt-xs{font-size:var(--t-xs)}
 .pad-muted{padding:var(--sp-4);color:var(--gray);font-size:var(--t-base)}
-/* notice-detail = detalle del notice-badge con contenedor del canon (no texto pelado) */
-.notice-detail-amber{font-size:var(--t-xs);color:var(--amber);font-weight:var(--w-semi);background:var(--amber-08);border-radius:var(--r-sm);padding:2px var(--sp-2);margin-top:var(--sp-1);display:inline-block}
-.notice-detail-green{font-size:var(--t-xs);color:var(--green);font-weight:var(--w-semi);background:var(--green-12);border-radius:var(--r-sm);padding:2px var(--sp-2);margin-top:var(--sp-1);display:inline-block}
+/* notice-detail = detalle del notice-badge. Sin caja: el color ya lo distingue. */
+.notice-detail-amber{font-size:var(--t-xs);color:var(--amber);font-weight:var(--w-semi);margin-top:var(--sp-1);display:inline-block}
+.notice-detail-green{font-size:var(--t-xs);color:var(--green);font-weight:var(--w-semi);margin-top:var(--sp-1);display:inline-block}
 
 /* ── Utility classes (pasada 2) ─────────────────────────────────────────── */
 .stars-row{display:flex;justify-content:center;gap:2px;pointer-events:none}
@@ -2578,7 +2584,9 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 
 .touch-44{width:44px;height:44px;display:flex;align-items:center;justify-content:center}
 .ml-2{margin-left:var(--sp-2)}
-.notice-banner-row{display:flex;align-items:center;gap:var(--sp-2);padding:var(--sp-2) var(--sp-3);background:var(--amber-08);border-radius:var(--r-sm);margin-bottom:var(--sp-2)}
+/* Sin caja: ningún aviso lleva recuadro sobre el texto — solo el badge conserva
+   su pastilla. Misma regla que .meta-banner (Juan, 29 jul 2026). */
+.notice-banner-row{display:flex;align-items:center;gap:var(--sp-2);margin-bottom:var(--sp-2)}
 .notice-banner-txt{font-size:var(--t-sm);color:var(--amber-60)}
 .meta-xs-gray{font-size:var(--t-xs);color:var(--gray);margin-bottom:var(--sp-2)}
 
@@ -3023,7 +3031,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202607292310";
+    s.src="/src/main.js?v=202607292324";
     document.body.appendChild(s);
     // Watchdog de boot (P0 18 jul): si el grafo ESM murió en el import (caché
     // HTTP mixta tras deploys en ráfaga — main.js nuevo + módulo viejo sin el
