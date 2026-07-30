@@ -2447,6 +2447,58 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar screening-row-single-owner: {_e}')
 
+# ── [template-al-dia] la plantilla de onboarding no se queda atrás ──────────────
+# Causa raíz de la tarea #81: el onboarding de FINCA usó 10 campos de film que la
+# plantilla no enseñaba, y nadie lo notó hasta un mes después. Regla: todo campo
+# que usan LOS DOS festivales más recientes (por festivalEndStr) debe estar en
+# pipeline/festival-template.json o en la whitelist de omisiones DELIBERADAS.
+# Un campo nuevo que dos onboardings seguidos necesitaron ya no es experimento:
+# es vocabulario — y la plantilla es donde el próximo onboarding lo aprende.
+check = 'template-al-dia'
+try:
+    import json as _json, glob as _glob
+    # Omisiones deliberadas (documentar el porqué acá):
+    #   tematica     — campo interno del festival (Juan: "no hagas nada con eso")
+    #   qa_detail    — texto libre del festival; la plantilla enseña qa_type
+    #   flags        — derivado por countryToFlags; solo se llena si el derivado falla
+    #   screenings   — forma intermedia del ensamblador (el loader lo explota)
+    #   info, is_recurring, is_programa — legacy / casos que la doctrina cubre aparte
+    _OMIT = {'tematica', 'qa_detail', 'flags', 'screenings', 'info', 'is_recurring',
+             'is_programa', 'date'}
+    _tpl = _json.load(open('pipeline/festival-template.json', encoding='utf-8'))
+    _tf = set(_tpl.keys())
+    for _f in _tpl.get('films', []):
+        _tf |= set(_f.keys())
+        for _it in (_f.get('film_list') or []): _tf |= set(_it.keys())
+    _fests = []
+    for _fp in _glob.glob('festivals/*.json'):
+        try:
+            _d = _json.load(open(_fp, encoding='utf-8'))
+            if isinstance(_d, dict) and _d.get('festivalEndStr'):
+                _fests.append((_d['festivalEndStr'], _fp, _d))
+        except Exception:
+            continue
+    _fests.sort(reverse=True)
+    _missing = {}
+    for _end, _fp, _d in _fests[:2]:
+        _used = set(_d.keys())
+        for _f in _d.get('films', []):
+            _used |= set(_f.keys())
+            for _it in (_f.get('film_list') or []): _used |= set(_it.keys())
+        for _k in _used:
+            if _k.startswith('_') or _k in _tf or _k in _OMIT: continue
+            _missing.setdefault(_k, []).append(_fp.split('/')[-1])
+    _viol = {k: v for k, v in _missing.items() if len(v) >= 2}
+    if _viol:
+        fail(check, 'campo(s) usados por los 2 festivales más recientes y ausentes de la plantilla: '
+             + '; '.join(f"{k} ({'+'.join(v)})" for k, v in sorted(_viol.items())))
+    else:
+        _solo = sorted(k for k, v in _missing.items() if len(v) == 1)
+        ok(check, 'plantilla al día con los 2 festivales más recientes'
+           + (f" ({len(_solo)} campo(s) usados por solo uno: {', '.join(_solo[:5])})" if _solo else ''))
+except Exception as _e:
+    warn(check, f'no se pudo verificar template-al-dia: {_e}')
+
 # ── [slots-sin-decidir] toda proyección conjunta tiene modelo declarado ────────
 # Doctrina (SCHEMA.md, 30 jul 2026): los festivales juntan proyecciones y hay DOS
 # modelos canónicos — Programa (is_cortos+film_list) o Anclaje
