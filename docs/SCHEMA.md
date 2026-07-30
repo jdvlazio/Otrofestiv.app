@@ -27,12 +27,47 @@ Documento normativo. Toda discrepancia entre este archivo y el código es un bug
 }
 ```
 
+### Proyecciones conjuntas — los DOS modelos canónicos (doctrina, 30 jul 2026)
+
+Los festivales juntan proyecciones, y van a seguir haciéndolo: un bloque curado
+de cortos, un corto antes de un largo, dos mediometrajes en una función.
+**Tenemos arquitectura para ambos casos — no se inventa un tercer modelo.**
+(El precedente: para Cinemancia 2025 se ideó una «función doble» con póster
+partido a la mitad. Nunca llegó al código y quedó obsoleta: sus dos slots
+compartidos son exactamente los casos que estos modelos resuelven.)
+
+| | **A · PROGRAMA** | **B · ANCLAJE** |
+|---|---|---|
+| Qué es | El festival curó un contenedor con nombre («…— Programa 1», «FINQUITA») | Obras independientes que comparten función, sin contenedor |
+| Cómo viene | Una entrada `is_cortos` + `film_list` | N entradas normales + `sharedSlotIsOneScreening: true` en la raíz |
+| Entidad en la app | El programa (las obras viven dentro; ficha propia vía `openCortoSheet`) | Cada obra (ficha y card **independientes** — nunca fusionadas) |
+| Interés/Plan opera sobre | El programa completo | La obra; sus compañeras se suman/quitan en simetría |
+| Aviso en ficha | `⟨PROGRAMA⟩ Verás los otros cortos` | `⟨PROGRAMA⟩ Verás las otras obras` |
+
+**Regla de decisión en onboarding:** ¿el festival le puso NOMBRE al conjunto?
+→ Programa. ¿Son obras con identidad propia que comparten horario? → Anclaje.
+La duda se resuelve contra el programa oficial del festival, nunca por deducción
+(guardián `[slots-sin-decidir]` obliga a decidir; ver abajo).
+
+**Lo que la app garantiza en ambos modelos, transversal a todos los tabs** (el
+dominio es el dueño; ninguna vista calcula por su cuenta):
+
+- **Conflictos** — `screensConflict`: las obras de una función no rivalizan.
+- **Duración** — el par `blockDuration` (fin del bloque, sin Q&A: «¿hasta qué
+  hora estoy en la sala?») / `effectiveDuration` (bloque + Q&A: «¿cuánto ocupa
+  la sala?» — conflictos). Consumido por huecos de sugerencias, «termina en X»,
+  en-curso, buffer de retrasos y el orden del optimizador.
+- **Mi Plan** — la lista no mide huecos ni avisa Q&A entre obras del mismo slot;
+  el calendario dibuja **un bloque por función** con todas sus obras.
+- **Ficha** — hereda funciones y avisos (banda AVISOS); Q&A contado UNA vez.
+
 ### `sharedSlotIsOneScreening` — anclaje de función (opt-in, 29 jul 2026)
 
 Algunos festivales programan **dos obras en una misma función**: un corto o
 mediometraje y después un largo, mismo día, hora y sala, con una sola cabecera
 de horario en su programa. Con este flag en `true`, el loader detecta esos
-grupos (`día|hora|sede|sala`) y marca cada obra con `_slotKey` y `_slotMin`, y
+grupos (`día|hora|sede|sala`) y marca cada obra con `_slotKey`, `_slotDur`
+(suma de las obras — el fin del bloque) y `_slotMin` (con el Q&A — conflictos), y
 el dominio entonces:
 
 - **no las declara en conflicto entre sí** — con una entrada se ven las dos;
