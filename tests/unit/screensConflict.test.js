@@ -63,11 +63,21 @@ test('distant venues, gap > buffer but < buffer+travel → conflict', () => {
   assert.strictEqual(screensConflict(a, b), true);
 });
 
-test('has_qa extends a → conflict that would not exist without Q&A', () => {
-  // a 10:00 + 90 min + 30 min Q&A ends 12:00. b starts 12:10 → gap 10 → conflict.
-  // Without has_qa, gap would be 40 min → no conflict. Q&A is what flips it.
+test('has_qa en la MISMA sede NO bloquea — advierte (doctrina 30 jul 2026)', () => {
+  // a 10:00 + 90 min termina 11:30; su Q&A estimado iría hasta 12:00. b arranca
+  // 12:10 en la MISMA sala → 40 min entre películas: entra, y Mi Plan avisa
+  // "Q&A · si te quedás tenés ~10 min". El Q&A es opcional y estimado: solo
+  // compromete el tiempo cuando salir cuesta (traslado). Antes este test
+  // congelaba la regla vieja (conflicto por el estimado).
   const a = { day: sameDay, time: '10:00 AM', duration: '90 min', has_qa: true, venue: 'Sala A' };
   const b = { day: sameDay, time: '12:10 PM', duration: '60 min', venue: 'Sala A' };
+  assert.strictEqual(screensConflict(a, b), false);
+});
+
+test('has_qa CON traslado sigue contando entero → conflicto', () => {
+  // mismas horas, sedes distintas: el gap tras el Q&A no cubre viaje+buffer.
+  const a = { day: sameDay, time: '10:00 AM', duration: '90 min', has_qa: true, venue: 'Sala A' };
+  const b = { day: sameDay, time: '12:10 PM', duration: '60 min', venue: 'Sala B' };
   assert.strictEqual(screensConflict(a, b), true);
 });
 

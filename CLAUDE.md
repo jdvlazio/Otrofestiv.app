@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `790b5d3 feat(plan): el aviso en Mi Plan trae su salida — Actualizar / Buscar reemplazo (#485)`
+> Último commit: `a01acfb feat(pipeline): la plantilla de onboarding se pone al dia — y un guardian que la mantiene asi (#81) (#486)`
 
 ---
 
