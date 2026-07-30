@@ -637,7 +637,35 @@ programa, sí — así que **la ficha lo hereda**:
 > aviso, revisar TODAS las superficies que lo pintan**, no solo la que se está
 > mirando: hoy son la ficha de película y la de corto.
 
-### 8.4.6 · Ningún aviso lleva caja (regla, 29 jul 2026)
+### 8.4.6 · «Función compartida»: un solo sustantivo (29 jul 2026)
+
+El bloque decía **«función» tres veces en cuatro líneas**: rótulo del bloque
+(FUNCIONES), rótulo del aviso (FUNCIÓN COMPARTIDA) y su propia frase («Otros
+títulos en la misma función»). Los dos rótulos eran el mismo sustantivo, y el del
+aviso era un resumen de su cuerpo.
+
+```
+🕐 FUNCIONES ②
+   JUE 13 · 19:00 · Cacodelphia
+   SÁB 15 · 18:00 · Cine York        [+ Agregar]
+   Compartida · verás también otros títulos.     ← .fn-note
+```
+
+- **El rótulo del bloque queda NEUTRO.** Meter «compartida» ahí es un error de
+  categoría —el rótulo nombra el bloque, compartida es propiedad de la fila— y
+  además mentiría cuando una obra tiene dos funciones y solo una es compartida
+  (hoy no ocurre en FINCA; es estructuralmente posible).
+- **El adjetivo y la consecuencia viven en una nota**, `.fn-note`: sin punto, sin
+  rótulo, sin caja. Muere el `.meta-banner` de función compartida en las dos fichas.
+- **La explicación no es el accesorio, es el mensaje.** «Compartida» es vocabulario
+  nuestro; lo que informa al espectador es *verás también otros títulos*. Dos
+  intentos previos de suprimirla fallaron por eso («programa completo» no dice qué
+  es programa ni qué es completo).
+- Descartado nombrar el contenedor al estilo Sundance («part of Shorts Program 4»)
+  o IFFR («preceded by»): **a veces no hay programa** —dos largos comparten slot en
+  FINCA— así que la solución no puede depender de que exista un nombre.
+
+### 8.4.7 · Ningún aviso lleva caja (regla, 29 jul 2026)
 
 **Un aviso es una NOTA al margen, no una tarjeta.** El recuadro competía con las
 superficies reales —`sec-hdr`, filas de función— y pesaba más que su contenido.
