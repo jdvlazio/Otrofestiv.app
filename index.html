@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607292324">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607292324">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607300004">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607300004">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -620,6 +620,11 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .meta-banner-dot{width:6px;height:6px;border-radius:50%;background:var(--amber);flex-shrink:0;margin-top:var(--sp-1)}
 .meta-banner-label{font-size:var(--t-xs);font-weight:var(--w-display);color:var(--amber);letter-spacing:.5px;text-transform:uppercase}
 .meta-banner-text{font-size:var(--t-sm);color:var(--white);margin-top:2px;line-height:1.4}
+/* .fn-note = la explicación de la función compartida, ya SIN rótulo ni punto: el
+   rótulo del bloque absorbió el adjetivo ("FUNCIONES COMPARTIDAS"), así que repetir
+   "función compartida" acá era decir el mismo sustantivo 3 veces en 4 líneas.
+   Queda una nota al pie de la fila, alineada con ella. (Juan, 29 jul 2026) */
+.fn-note{font-size:var(--t-sm);color:var(--gray);line-height:1.4;margin:calc(var(--sp-1) * -1) 0 var(--sp-3) var(--sp-3)}
 .meta-banner-text span{color:var(--gray)}
 .pel-sheet-ticket-link{display:inline-flex;align-items:center;gap:var(--sp-1);margin-top:var(--sp-3);font-size:var(--t-sm);color:var(--amber);text-decoration:none;opacity:.9;cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
 .pel-sheet-ticket-link:hover{opacity:1}
@@ -3031,7 +3036,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202607292324";
+    s.src="/src/main.js?v=202607300004";
     document.body.appendChild(s);
     // Watchdog de boot (P0 18 jul): si el grafo ESM murió en el import (caché
     // HTTP mixta tras deploys en ráfaga — main.js nuevo + módulo viejo sin el

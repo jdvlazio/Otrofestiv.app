@@ -303,7 +303,7 @@ export function openPelSheet(title){
         lista de matices de esa función — y evitan emparedar la fila entre dos
         banners de la misma familia visual. */''}
     ${_metaBanners(f)}
-    ${_anclada?`<div class="meta-banner"><div class="meta-banner-dot"></div><div><div class="meta-banner-label">${t('meta_funcion_label')}</div><div class="meta-banner-text">${t('meta_funcion_incluye')}</div></div></div>`:''}
+    ${_anclada?`<div class="fn-note">${t('meta_funcion_incluye')}</div>`:''}
     ${(()=>{
       const _tk=FESTIVAL_CONFIG[_activeFestId]||{};
       // ticket_url por FILM pisa al global (Tercer Tiempo 2026: cada sesión tiene
@@ -584,7 +584,13 @@ export function openCortoSheet(title, country, duration, section, flags, directo
   // Sin función anunciada (bloque-catálogo sin sesión) → VACÍO EXPLÍCITO: callar
   // dejaba la ficha muda y el usuario no sabía si el dato faltaba o no existía.
   const _cortoPairs=_cortoScreeningPairs(title);
-  const _cortoScrHdr=`<div class="sec-hdr sm">${ICONS.clock} <span>${_cortoPairs.length>1?t('label_funciones_pl'):t('label_funcion')}</span>${_cortoPairs.length>1?`<span class="count-badge cb-neutral">${_cortoPairs.length}</span>`:''}</div>`;
+  // Rótulo NEUTRO ("FUNCIÓN"/"FUNCIONES"): el adjetivo "compartida" NO va acá —
+  // sería un error de categoría (el rótulo nombra el bloque; compartida es propiedad
+  // de la fila) y mentiría cuando una obra tiene dos funciones y solo una es
+  // compartida. Baja a la nota, que es donde es verdad. (Opción C, Juan 29 jul 2026.)
+  const _cortoShared=_cortoPairs.length>0;
+  const _cortoScrLbl=_cortoPairs.length>1?t('label_funciones_pl'):t('label_funcion');
+  const _cortoScrHdr=`<div class="sec-hdr sm">${ICONS.clock} <span>${_cortoScrLbl}</span>${_cortoPairs.length>1?`<span class="count-badge cb-neutral">${_cortoPairs.length}</span>`:''}</div>`;
   // El aviso de cancelada/reprogramada también se hereda: está indexado por título
   // de PROGRAMA, así que la ficha del corto solo lo ve si pregunta por sus owners.
   // Sin esto mostraba la hora vieja sin advertencia — el bug latente del mismo linaje.
@@ -604,7 +610,7 @@ export function openCortoSheet(title, country, duration, section, flags, directo
       </div>
     </div>
         ${_cortoScrHdr}${_cortoNotices}${_cortoScrBody}
-        ${parentTitle?`<div class="meta-banner"><div class="meta-banner-dot"></div><div><div class="meta-banner-label">${t('meta_funcion_label')}</div><div class="meta-banner-text">${t('meta_funcion_incluye')}</div></div></div>`:''}
+        ${_cortoShared?`<div class="fn-note">${t('meta_funcion_incluye')}</div>`:''}
         ${syn?`<div class="sec-hdr sm">${ICONS.text} <span>${t('label_sinopsis')}</span></div><div class="pel-sheet-synopsis">${syn}</div>`:''}
     <div class="pel-sheet-ctas">
       <button id="corto-wl-btn" class="row-center-xs pel-sheet-action-btn${inWL?' act-on btn-primary':' btn-primary'}" data-title="${escXML(parentTitle||title)}" data-action="toggleWL">${inWL?ICONS.heartFill:ICONS.heart} ${inWL?t('cta_en_intereses'):t('cta_intereses')}</button>

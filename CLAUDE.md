@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `1a839b6 fix(ux): el corto también hereda el aviso de cancelada/reprogramada (#471)`
+> Último commit: `b859a63 fix(design): ningun aviso lleva caja, y Priorizar gana volumen (#472)`
 
 ---
 
