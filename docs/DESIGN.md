@@ -624,6 +624,11 @@ programa, sí — así que **la ficha lo hereda**:
 - Sin función anunciada (bloque-catálogo sin sesión) → **vacío explícito**
   «Sin función anunciada». Callar dejaba la ficha muda y el usuario no podía
   distinguir «no hay dato» de «no hay función». Tests AF04–AF06.
+- **El aviso de cancelada/reprogramada también se hereda.** Está indexado por
+  título de programa, así que la ficha del corto solo lo ve si pregunta por sus
+  owners. Sin eso mostraba la hora vieja sin advertencia: mandar a alguien a una
+  sala vacía es peor que no decirle la hora. `_noticeRows` es el **dueño único**
+  y lo consumen las dos fichas; va ARRIBA de la fila porque la INVALIDA.
 
 > De dónde sale: el mismo aviso de «función compartida» vivía en dos sitios
 > distintos —tras la función en la ficha, tras la sinopsis en el corto— porque
