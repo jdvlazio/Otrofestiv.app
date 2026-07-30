@@ -159,3 +159,28 @@ test('T50 — dos obras del mismo slot no generan aviso entre ellas y comparten 
   // y las dos terminan a la MISMA hora: es una sola función
   expect(new Set(d.fines).size).toBe(1);
 });
+
+// T51 — el calendario dibuja UN bloque por función, con todas sus obras dentro
+// Antes pintaba un bloque por obra: dos encimados arrancando a la misma hora, uno
+// de 106 min y otro de 5 min montado encima. La función se dibuja completa.
+test('T51 — el calendario dibuja un solo bloque para la función compartida', async ({ page }) => {
+  await enterFestival(page, 'finca2026', '2026-08-13T10:00');
+  const ok = await page.evaluate(() => {
+    const slot = FILMS.find(f => f._slotKey && f.title.startsWith('Propiedad'));
+    if (!slot) return false;
+    const miembros = FILMS.filter(f => f._slotKey === slot._slotKey);
+    if (miembros.length < 2) return false;
+    state.set('savedAgenda', { schedule: miembros.map(f => ({ ...f, _title: f.title })), scenarioIdx: 0 });
+    return true;
+  });
+  if (!ok) { console.log('T51: sin slot compartido, skip'); return; }
+  await page.evaluate(() => { switchMainNav('mnav-miplan'); showAgView(); });
+  await page.waitForSelector('#ag-view', { state: 'visible', timeout: 8000 });
+  await page.waitForTimeout(600);
+  const d = await page.evaluate(() => {
+    const bs = [...document.querySelectorAll('.mplan-col-mobile .mplan-wk-block')];
+    return { bloques: bs.length, titulos: bs.length ? bs[0].querySelectorAll('.mplan-wk-title').length : 0 };
+  });
+  expect(d.bloques).toBe(1);      // una función, un bloque
+  expect(d.titulos).toBe(2);      // con TODAS sus obras listadas
+});

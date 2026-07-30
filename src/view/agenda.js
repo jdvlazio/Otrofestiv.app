@@ -301,8 +301,20 @@ export function renderMiPlanCalendar(state){
     }
 
     // Film blocks
-    const blocksHtml=dayFilms.map(s=>{
-      const fMin=toMin(s.time),dur=parseDur(s.duration);
+    // ANCLAJE: las obras del MISMO slot son UNA función → UN bloque. Antes se
+    // dibujaba un bloque por obra: dos bloques encimados arrancando a la misma
+    // hora, uno de 106 min y otro de 5 min montado encima. La función se dibuja
+    // completa —el bloque mide lo que dura el conjunto— y lista TODAS sus obras,
+    // que es lo único que le dice al usuario a qué está entrando.
+    const _bloques=[];
+    dayFilms.forEach(fx=>{
+      const k=_slotKeyOf(fx);
+      const g=k?_bloques.find(x=>x.k===k):null;
+      if(g) g.items.push(fx); else _bloques.push({k:k||null,items:[fx]});
+    });
+    const blocksHtml=_bloques.map(_grp=>{
+      const s=_grp.items[0];
+      const fMin=toMin(s.time),dur=_planDur(s);
       const top=PHDR+toPx(fMin);
       const blockH=Math.max(dur/60*PPH-4,20);
       const isPast=isPastDay||(isToday&&screeningEnded(s,nowMin));
@@ -319,7 +331,7 @@ export function renderMiPlanCalendar(state){
       return`<div class="mplan-wk-block ${type}${stateClass}" style="top:${top.toFixed(0)}px;height:${blockH.toFixed(0)}px" data-fkey="${(s._title||'')}${s.time}" data-action="activatePlanFilm" data-day-index="${i}" data-stop="1" title="${(s._title||'').replace(/"/g,'&quot;')}">
         ${isPrio?`<div class="mplan-wk-badge">${ICONS.bookmarkFill}</div>`:''}
         <div class="mplan-wk-time${isEvent?' mp-event-time':''}">${s.time}</div>
-        <div class="mplan-wk-title${isEvent?' mp-event-title':''}">${displayTitle}</div>
+        ${_grp.items.map(it=>`<div class="mplan-wk-title${isEvent?' mp-event-title':''}${_grp.items.length>1?' mp-multi':''}">${parseProgramTitle(it._title||'').displayTitle}</div>`).join('')}
         ${showVenue?`<div class="mplan-wk-venue">${ICONS.pin} ${vc2.short}</div>`:''}
       </div>`;
     }).join('');
