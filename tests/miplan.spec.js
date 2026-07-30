@@ -184,3 +184,56 @@ test('T51 — el calendario dibuja un solo bloque para la función compartida', 
   expect(d.bloques).toBe(1);      // una función, un bloque
   expect(d.titulos).toBe(2);      // con TODAS sus obras listadas
 });
+
+// T52 — la entrada afectada por un aviso tiene SALIDA, no solo marca
+// El badge dice QUÉ pasó; el botón dice QUÉ HAGO. Reprogramada → se muda a la
+// hora nueva (reusa addSuggestion, que revalida conflictos). Cancelada → se
+// quita y lleva a Sugerencias con el hueco libre. Nada se mueve ni se borra solo.
+test('T52 — Actualizar muda la entrada a la función nueva', async ({ page }) => {
+  await enterFestival(page, 'finca2026', '2026-08-13T10:00');
+  const ok = await page.evaluate(() => {
+    // se simula el aviso sobre el DATO, igual que lo haría el loader desde NOTICES
+    const f = FILMS.find(fi => fi.title === 'Ziki');
+    if (!f) return false;
+    f._movedFrom = { day: f.day, time: f.time, venue: f.venue };
+    f.day = '2026-08-14'; f.time = '21:00'; f.day_order = 2;
+    state.set('savedAgenda', { schedule: [{ ...f, _title: f.title,
+      day: f._movedFrom.day, time: f._movedFrom.time, venue: f._movedFrom.venue }], scenarioIdx: 0 });
+    return true;
+  });
+  if (!ok) { console.log('T52: sin film de prueba, skip'); return; }
+  await page.evaluate(() => { switchMainNav('mnav-miplan'); showAgView(); });
+  await page.waitForSelector('#ag-view', { state: 'visible', timeout: 8000 });
+  await page.waitForTimeout(600);
+  const btn = page.locator('.mplan-fix').first();
+  await expect(btn).toBeVisible({ timeout: 5000 });
+  await btn.click();
+  await page.waitForTimeout(700);
+  const entry = await page.evaluate(() => savedAgenda.schedule.find(s => s._title === 'Ziki') || {});
+  expect(entry.day).toBe('2026-08-14');
+  expect(entry.time).toBe('21:00');
+});
+
+// T53 — la hora tachada NO arrastra al badge ni al botón
+// `text-decoration` de un ancestro se PROPAGA al dibujar y no se puede cancelar
+// desde un hijo: con la regla en la fila quedaban tachados los tres.
+test('T53 — el tachado de la hora no alcanza al badge ni a la salida', async ({ page }) => {
+  await enterFestival(page, 'finca2026', '2026-08-13T10:00');
+  const ok = await page.evaluate(() => {
+    const f = FILMS.find(fi => fi.title === 'Yurlu');
+    if (!f) return false;
+    f._cancelled = true;
+    state.set('savedAgenda', { schedule: [{ ...f, _title: f.title }], scenarioIdx: 0 });
+    return true;
+  });
+  if (!ok) { console.log('T53: sin film de prueba, skip'); return; }
+  await page.evaluate(() => { switchMainNav('mnav-miplan'); showAgView(); });
+  await page.waitForSelector('.mplan-fix', { timeout: 8000 });
+  const deco = await page.evaluate(() => {
+    const g = s => { const e = document.querySelector(s); return e ? getComputedStyle(e).textDecorationLine : null; };
+    return { hora: g('.mp-void-t'), badge: g('.mplan-t2 .notice-badge'), boton: g('.mplan-fix') };
+  });
+  expect(deco.hora).toBe('line-through');
+  expect(deco.badge).toBe('none');
+  expect(deco.boton).toBe('none');
+});

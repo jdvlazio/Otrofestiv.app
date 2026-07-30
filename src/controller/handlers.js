@@ -242,24 +242,53 @@ export function clearDelay(title,day,time,venue){
   cloudClearDelay(cloudScreeningKey(title,day,time,venue));
 }
 
+// _dropFromPlan — DUEÑO ÚNICO del quitar del Plan (mutación + recuerdo para
+// deshacer + render + toast). Lo llaman el quitar normal (tras confirmar en el
+// modal) y el arreglo de una función cancelada, que NO pide confirmación: el
+// usuario está actuando sobre algo que ya no existe, y preguntarle "¿seguro?"
+// sería pedirle que confirme la realidad.
+function _dropFromPlan(title){
+  const {savedAgenda} = state.snapshot();
+  if(!savedAgenda) return;
+  const rem=savedAgenda.schedule.find(s=>s._title===title);
+  if(rem){state.update('lastRemovedSlots', arr => [{...rem,_isRestored:true}, ...arr.filter(r=>r._title!==rem._title)].slice(0,MAX_REMEMBERED_SLOTS));saveLastSlot();}
+  state.update('savedAgenda', a => ({...a, schedule: a.schedule.filter(s=>s._title!==title)}));
+  if(!savedAgenda.schedule.length)state.set('savedAgenda', null);
+  saveSavedAgenda();
+  // CTA B: mostrar aviso contextual post-eliminación
+  _ctaRemovedVisible=true;
+  if(_ctaRemovedTimer) clearTimeout(_ctaRemovedTimer);
+  _ctaRemovedTimer=setTimeout(()=>{_ctaRemovedVisible=false;renderAgenda();},6000);
+  renderAgenda();showToast(t('toast_fuera_plan'),'info');
+}
+
 export function removeFromAgenda(title){
   // 1. READ + 2. GUARD — el outer handler solo abre el modal de confirmación
   const {savedAgenda} = state.snapshot();
   if(!savedAgenda) return;
   const _s=title.length>36?title.slice(0,34)+'…':title;
-  showActionModal(t('plan_quitar_plan'),`<div class="cm-subject">${_s}</div><div>${t('plan_restaurar_suger')}</div>`,t('misc_quitar'),()=>{
-    // Modal callback — el handler real (variant aceptada en spec)
-    const rem=savedAgenda.schedule.find(s=>s._title===title);
-    if(rem){state.update('lastRemovedSlots', arr => [{...rem,_isRestored:true}, ...arr.filter(r=>r._title!==rem._title)].slice(0,MAX_REMEMBERED_SLOTS));saveLastSlot();}
-    state.update('savedAgenda', a => ({...a, schedule: a.schedule.filter(s=>s._title!==title)}));
-    if(!savedAgenda.schedule.length)state.set('savedAgenda', null);
-    saveSavedAgenda();
-    // CTA B: mostrar aviso contextual post-eliminación
-    _ctaRemovedVisible=true;
-    if(_ctaRemovedTimer) clearTimeout(_ctaRemovedTimer);
-    _ctaRemovedTimer=setTimeout(()=>{_ctaRemovedVisible=false;renderAgenda();},6000);
-    renderAgenda();showToast(t('toast_fuera_plan'),'info');
-  });
+  showActionModal(t('plan_quitar_plan'),`<div class="cm-subject">${_s}</div><div>${t('plan_restaurar_suger')}</div>`,t('misc_quitar'),()=>_dropFromPlan(title));
+}
+
+// _planFixNotice — la salida para una entrada del Plan cuya función cambió. El
+// aviso rojo dice QUÉ pasó; esto es el QUÉ HAGO, que faltaba: la entrada quedaba
+// marcada y sin camino.
+//
+//   Reprogramada → se muda a la hora nueva. Reusa addSuggestion, que ya resuelve
+//     el swap y REVALIDA conflictos: si la hora nueva choca con otra cosa del
+//     plan, aparece el sheet de conflicto de siempre. No se mueve sola: mover
+//     algo en la agenda de alguien sin preguntar es la misma falta que borrarlo.
+//   Cancelada → se quita y se va a Sugerencias, con el hueco ya libre. Quitar
+//     sola deja un agujero; el valor está en llenarlo, y el motor de sugerencias
+//     ya sabe qué cabe ahí.
+export function _planFixNotice(title){
+  title=normTitle(title);
+  const {FILMS, savedAgenda} = state.snapshot();
+  if(!savedAgenda||!savedAgenda.schedule.some(s=>s._title===title)) return;
+  const moved=FILMS.find(f=>f.title===title&&f._movedFrom&&!f._cancelled);
+  if(moved){ addSuggestion(title, moved.day, moved.time); return; }
+  _dropFromPlan(title);
+  setTimeout(_scrollToSuggestions, 350);
 }
 
 export function addSuggestion(title,day,time){

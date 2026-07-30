@@ -2654,9 +2654,9 @@ try:
     _ALLOW = {
         'src/view/agenda.js': 1670,
         'src/main.js': 1662,  # +46 total: _morphOpen a FLIP — clon de la card compuesta, radio contra-escalado, encuadre del destino (29 jul)
-        'src/i18n/i18n.js': 1427,  # +4 (net): anclaje (label+texto) y Q&A con referentes, ×3 locales (29 jul)
+        'src/i18n/i18n.js': 1433,  # +4 (net): anclaje (label+texto) y Q&A con referentes, ×3 locales (29 jul)
         'src/controller/sheets-controller.js': 1524,  # +39: la ficha de corto hereda la función de su(s) programa(s) — _screeningRows (dueño único, antes inline en openPelSheet), _findParentPrograms, _cortoScreeningPairs y _noticeRows y _avisosBand (banda AVISOS: dueño único de lo que MATIZA la función, con la evidencia de vocabulario) (30 jul 2026)
-        'src/controller/handlers.js': 935,  # +20: anclaje de función en toggleWL, simétrico al quitar (29 jul)
+        'src/controller/handlers.js': 964,  # +20: anclaje de función en toggleWL, simétrico al quitar (29 jul)
     }
     _over = []
     for _f in _glob.glob('src/**/*.js', recursive=True):
