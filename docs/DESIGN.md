@@ -637,6 +637,19 @@ programa, sí — así que **la ficha lo hereda**:
 > aviso, revisar TODAS las superficies que lo pintan**, no solo la que se está
 > mirando: hoy son la ficha de película y la de corto.
 
+### 8.4.6 · Ningún aviso lleva caja (regla, 29 jul 2026)
+
+**Un aviso es una NOTA al margen, no una tarjeta.** El recuadro competía con las
+superficies reales —`sec-hdr`, filas de función— y pesaba más que su contenido.
+Sin fondo, sin borde, sin radio en: `.meta-banner`, `.notice-banner-row`,
+`.prio-stale`, `.notice-detail-amber/-green`. Guardián `[aviso-sin-caja]`.
+
+**La pastilla del badge SÍ se queda:** ahí el fondo *es* el componente, no una caja
+alrededor de un texto. Corolario de copy: **el badge dice el estado, el texto dice
+solo lo que el badge no puede decir.** El aviso decía «RESCHEDULED» y luego
+«Reprogramada → …»: la misma palabra dos veces. Hoy el texto es solo el dato nuevo
+(«Ahora dom 16 · 17:00 · Cine York»), y la fecha va en día legible, no en ISO.
+
 ### 8.5 · Iconos — ver `docs/ICONS.md`
 Fuente única `ICONS` (`components.js`); `aria-hidden` de fábrica; escala icono ≈
 texto (11 en t-label/t-xs, 13 base, 14–16 icon-only); stroke 1.75 universal;
