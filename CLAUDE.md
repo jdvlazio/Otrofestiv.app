@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `c6b40fe fix(finca): 8 fichas nuevas en TMDB con su Letterboxd + Ecocidio a 8 min (#468)`
+> Último commit: `9257162 feat(finca): Cuidemos el planeta estrena su propio 16:9 (#469)`
 
 ---
 

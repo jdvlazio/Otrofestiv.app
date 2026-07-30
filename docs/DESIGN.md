@@ -601,9 +601,29 @@ Dos principios lo fijan:
   obliga a sostener un modificador sin conocer aún lo que modifica, justo en el
   camino más recorrido de la ficha.
 - **Los avisos van SIEMPRE antes de la sinopsis**, nunca sueltos entre la
-  sinopsis y los botones. Cuando una superficie no tiene bloque de función (la
-  ficha de un corto no lo tiene: el horario vive en su programa), los matices
-  suben igual y quedan pegados al bloque de identidad.
+  sinopsis y los botones.
+
+**Corrección (29 jul 2026): la ficha de un corto SÍ tiene bloque de función.**
+Esta sección decía que no lo tenía «porque el horario vive en su programa». Era
+la descripción de un bug, no una regla: el corto se veía sin día, hora ni sede, y
+quien buscaba el corto de un amigo no sabía cuándo verlo. El horario vive en el
+programa, sí — así que **la ficha lo hereda**:
+
+- **Todas** las funciones de **todos** sus programas. Un corto se programa en dos
+  bloques distintos (Ecocidio: 13 AGO Cacodelphia + 15 AGO Cine York). Mostrar
+  solo el primero es peor que no mostrar nada: el usuario confía en una única
+  función y se pierde la otra. `_findParentPrograms` (plural).
+- **Con la misma fila**, no con una línea de texto aparte: `_screeningRows` es el
+  **dueño único** de `día · hora · sede [· Añadir]` y lo consumen las dos fichas.
+  Guardián `[screening-row-single-owner]`. La duplicación ERA el bug: la ficha de
+  corto no pintaba función porque su constructor no la tenía.
+- Cabecera **«Función»** a secas —la fila es idéntica a la de una película y el
+  aviso justo debajo ya explica que esa función incluye el programa entero— y el
+  botón «Añadir» apunta al **programa**, no al corto (agregar un corto agrega su
+  programa completo; `addSuggestion` solo entiende títulos que existen en FILMS).
+- Sin función anunciada (bloque-catálogo sin sesión) → **vacío explícito**
+  «Sin función anunciada». Callar dejaba la ficha muda y el usuario no podía
+  distinguir «no hay dato» de «no hay función». Tests AF04–AF06.
 
 > De dónde sale: el mismo aviso de «función compartida» vivía en dos sitios
 > distintos —tras la función en la ficha, tras la sinopsis en el corto— porque

@@ -114,6 +114,62 @@ const _COUNTRY_FLAGS={
 };
 let _cortoParentHtml=null;
 
+// _screeningRows — DUEÑO ÚNICO de la fila de función (día · hora · sede [· Añadir]),
+// para la ficha de película/programa y la de corto: es la MISMA cosa en ambas, y
+// tenerla duplicada FUE el bug (la ficha de corto no la pintaba nunca).
+// `pairs` = [{s, owner}] — `owner` es el film que manda sobre el Plan. Para un corto
+// es su PROGRAMA: agregar un corto agrega el programa completo (regla establecida) y
+// addSuggestion solo entiende títulos que existen en FILMS.
+function _screeningRows(pairs){
+  return pairs.map(({s,owner})=>{
+    const dayAbb=dayLabel(s.day)||s.day;
+    const vc=vcfg(s.venue),sl=sala(s.venue);
+    const _festCity=(FESTIVAL_CONFIG[_activeFestId]||{}).city||'';
+    const _city=_festCity&&vc.city&&vc.city!==_festCity?vc.city:'';
+    const isPast=screeningPassed(s)&&!festivalEnded();
+    // Mitad B (pin-funcion): control "Añadir esta función al Plan" por fila.
+    // Recurrentes: sin control (informativo). Si esta función ya está en el
+    // Plan → indicador "En tu Plan"; si no, y la función no pasó ni terminó el
+    // festival → botón "Añadir" (reusa addSuggestion, que decide add vs swap).
+    // "En tu plan": la fila se marca con una BARRA de acento ámbar a la izquierda
+    // (.pel-sheet-screening.in-plan), no con un badge ni un check. Decisión de Juan
+    // (20 jul 2026): el badge "✓ En tu Plan" era flex-shrink:0 y le robaba ancho al
+    // venue → "Cinemateca de Bogotá · Sala 2" se partía en dos líneas. La barra vive
+    // en el margen (::before absoluto, costo CERO de ancho) → el venue recupera TODO
+    // el ancho y lee en una línea hasta 360px. El botón "Añadir" (acción) sí se queda
+    // a la derecha. La etiqueta "en tu plan" queda para lectores de pantalla (.sr-only).
+    let _addCtrl='', _planned=false;
+    if(!owner.is_recurring){
+      _planned=savedAgenda&&savedAgenda.schedule.some(e=>e._title===owner.title&&e.day===s.day&&e.time===s.time);
+      if(!_planned&&!festivalEnded()&&!screeningPassed(s)){
+        _addCtrl=`<button class="suggestion-add" data-action="addSuggestion" data-title="${owner.title.replace(/"/g,'&quot;')}" data-day="${s.day}" data-time="${s.time}" data-stop="1">${ICONS.plus} ${t('misc_anadir')}</button>`;
+      }
+    }
+    return`<div class="pel-sheet-screening${_planned?' in-plan':''}"${isPast?' style="opacity:.4"':''}>
+      ${_planned?`<span class="sr-only">${t('plan_en_tu_plan')}</span>`:''}
+      <span class="pelicula-day" data-day="${s.day}">${dayAbb}</span>
+      <span class="pelicula-time">${s.time}</span>
+      <span class="pelicula-venue" data-venue="${s.venue.replace(/"/g,'&quot;')}" data-action="openVenueSheet">${ICONS.pin} <span class="venue-text">${vc.short}${sl?' · '+sl:''}${_city?`<span class="venue-municipio">${_city}</span>`:''}</span></span>
+      ${_addCtrl}
+    </div>`;
+  }).join('');
+}
+
+// _cortoScreeningPairs — las funciones que hereda un corto de sus programas, ya
+// ordenadas futuro→pasado igual que en la ficha de película (mismo criterio, no una
+// segunda regla de orden). Un bloque-catálogo sin sesión asignada no aporta ninguna.
+function _cortoScreeningPairs(cortoTitle){
+  const pairs=[];
+  _findParentPrograms(cortoTitle).forEach(prog=>{
+    FILMS.filter(g=>g.title===prog.title&&g.day&&g.time&&g.venue)
+      .forEach(s=>pairs.push({s,owner:prog}));
+  });
+  const fut=pairs.filter(p=>!screeningPassed(p.s))
+    .sort((a,b)=>a.s.day_order-b.s.day_order||toMin(a.s.time)-toMin(b.s.time));
+  const past=pairs.filter(p=>screeningPassed(p.s));
+  return [...fut,...past];
+}
+
 export function openPelSheet(title){
   // Decodificar entidades HTML que el inline onclick puede pasar (&#39; → ')
   const _d=document.createElement('textarea');
@@ -171,38 +227,7 @@ export function openPelSheet(title){
   const future=scheduled.filter(s=>!screeningPassed(s)).sort((a,b)=>a.day_order-b.day_order||toMin(a.time)-toMin(b.time));
   const past=scheduled.filter(s=>screeningPassed(s));
   const allScr=[...future,...past];
-  const rows=allScr.map(s=>{
-    const dayAbb=dayLabel(s.day)||s.day;
-    const vc=vcfg(s.venue),sl=sala(s.venue);
-    const _festCity=(FESTIVAL_CONFIG[_activeFestId]||{}).city||'';
-    const _city=_festCity&&vc.city&&vc.city!==_festCity?vc.city:'';
-    const isPast=screeningPassed(s)&&!festivalEnded();
-    // Mitad B (pin-funcion): control "Añadir esta función al Plan" por fila.
-    // Recurrentes: sin control (informativo). Si esta función ya está en el
-    // Plan → indicador "En tu Plan"; si no, y la función no pasó ni terminó el
-    // festival → botón "Añadir" (reusa addSuggestion, que decide add vs swap).
-    // "En tu plan": la fila se marca con una BARRA de acento ámbar a la izquierda
-    // (.pel-sheet-screening.in-plan), no con un badge ni un check. Decisión de Juan
-    // (20 jul 2026): el badge "✓ En tu Plan" era flex-shrink:0 y le robaba ancho al
-    // venue → "Cinemateca de Bogotá · Sala 2" se partía en dos líneas. La barra vive
-    // en el margen (::before absoluto, costo CERO de ancho) → el venue recupera TODO
-    // el ancho y lee en una línea hasta 360px. El botón "Añadir" (acción) sí se queda
-    // a la derecha. La etiqueta "en tu plan" queda para lectores de pantalla (.sr-only).
-    let _addCtrl='', _planned=false;
-    if(!f.is_recurring){
-      _planned=savedAgenda&&savedAgenda.schedule.some(e=>e._title===f.title&&e.day===s.day&&e.time===s.time);
-      if(!_planned&&!festivalEnded()&&!screeningPassed(s)){
-        _addCtrl=`<button class="suggestion-add" data-action="addSuggestion" data-title="${f.title.replace(/"/g,'&quot;')}" data-day="${s.day}" data-time="${s.time}" data-stop="1">${ICONS.plus} ${t('misc_anadir')}</button>`;
-      }
-    }
-    return`<div class="pel-sheet-screening${_planned?' in-plan':''}"${isPast?' style="opacity:.4"':''}>
-      ${_planned?`<span class="sr-only">${t('plan_en_tu_plan')}</span>`:''}
-      <span class="pelicula-day" data-day="${s.day}">${dayAbb}</span>
-      <span class="pelicula-time">${s.time}</span>
-      <span class="pelicula-venue" data-venue="${s.venue.replace(/"/g,'&quot;')}" data-action="openVenueSheet">${ICONS.pin} <span class="venue-text">${vc.short}${sl?' · '+sl:''}${_city?`<span class="venue-municipio">${_city}</span>`:''}</span></span>
-      ${_addCtrl}
-    </div>`;
-  }).join('');
+  const rows=_screeningRows(allScr.map(s=>({s,owner:f})));
   // Lista de cortos si es programa
   let cortosHtml='';
   if(f.is_cortos&&f.film_list?.length){
@@ -528,6 +553,19 @@ export function openCortoSheet(title, country, duration, section, flags, directo
   const inWL=watchlist.has(parentTitle||title);
   const inPrio=prioritized.has(parentTitle||title);
   const secLabel=_secLabel(section||'');
+  // FUNCIÓN del corto: la hereda de su(s) programa(s) — el corto no es entrada de
+  // FILMS, el día/hora/sede viven en el bloque que lo proyecta. Se pinta con el MISMO
+  // constructor de filas que la ficha de película (_screeningRows), no con una línea
+  // de texto aparte: es el mismo concepto, un solo lenguaje visual. Encabezado
+  // "Función" a secas (decisión de Juan): la fila es idéntica a la de una película y
+  // el aviso inmediatamente debajo ya explica que esa función incluye el programa.
+  // Sin función anunciada (bloque-catálogo sin sesión) → VACÍO EXPLÍCITO: callar
+  // dejaba la ficha muda y el usuario no sabía si el dato faltaba o no existía.
+  const _cortoPairs=_cortoScreeningPairs(title);
+  const _cortoScrHdr=`<div class="sec-hdr sm">${ICONS.clock} <span>${_cortoPairs.length>1?t('label_funciones_pl'):t('label_funcion')}</span>${_cortoPairs.length>1?`<span class="count-badge cb-neutral">${_cortoPairs.length}</span>`:''}</div>`;
+  const _cortoScrBody=_cortoPairs.length
+    ?`<div class="pel-sheet-screenings">${_screeningRows(_cortoPairs)}</div>`
+    :emptyState(ICONS.clock, t('corto_sin_funcion'));
   inner.innerHTML=`
     <div class="pel-sheet-header">
       ${posterHtml}
@@ -539,6 +577,7 @@ export function openCortoSheet(title, country, duration, section, flags, directo
         <a class="c-lb pel-sheet-lb" href="${lbHref||'#'}" target="_blank" rel="noopener"${!lbHref?' style="display:none"':''}>${LB_SVG}<span class="c-lb-text pel-sheet-lb-text">Letterboxd</span></a>
       </div>
     </div>
+        ${_cortoScrHdr}${_cortoScrBody}
         ${parentTitle?`<div class="meta-banner"><div class="meta-banner-dot"></div><div><div class="meta-banner-label">${t('meta_funcion_label')}</div><div class="meta-banner-text">${t('meta_funcion_incluye')}</div></div></div>`:''}
         ${syn?`<div class="sec-hdr sm">${ICONS.text} <span>${t('label_sinopsis')}</span></div><div class="pel-sheet-synopsis">${syn}</div>`:''}
     <div class="pel-sheet-ctas">
@@ -622,6 +661,22 @@ export function _openCombinedFilmSheet(filmData){
 
 export function _findParentProgram(cortoTitle){
   return FILMS.find(f=>f.is_cortos&&f.film_list?.some(c=>c.title===cortoTitle))||null;
+}
+
+// _findParentPrograms — TODOS los programas que incluyen este corto. El singular
+// devuelve solo el primero y sirve para lo 1:1 (el corazón). Para las FUNCIONES no
+// alcanza: un corto se programa en dos bloques con día/hora/sede propios (Ecocidio en
+// FINCA: 13 AGO Cacodelphia + 15 AGO Cine York; en Olhar, 10 cortos repiten en la
+// "Sessão com Acessibilidade"). Mostrar solo el primero es PEOR que no mostrar nada:
+// el usuario confía en una única función y se pierde la otra.
+export function _findParentPrograms(cortoTitle){
+  const out=[],seen=new Set();
+  FILMS.forEach(f=>{
+    if(!f.is_cortos||!f.film_list?.some(c=>c.title===cortoTitle)) return;
+    if(seen.has(f.title)) return;
+    seen.add(f.title); out.push(f);
+  });
+  return out;
 }
 
 export function openConflictSheet(incomingTitle, incomingScreen, existingEntry){

@@ -200,3 +200,55 @@ test('AF03 — añadir otra función del mismo título hace swap', async ({ page
   const len = await page.evaluate(() => savedAgenda.schedule.length);
   expect(len).toBe(1);
 });
+
+// ─── Función heredada en la ficha de corto (bug jul 2026) ──────────────────────
+// Un corto no es entrada de FILMS: su dia/hora/sede viven en el programa que lo
+// proyecta. La ficha de corto los ignoraba y quedaba MUDA — se veia el corto pero
+// nunca cuando ni donde. Estos tests exigen la fila; sin ellos el bug vuelve.
+
+const FINCA_SIMTIME = '2026-08-14T15:00';
+
+// AF04 — la ficha de un corto muestra la función de su programa
+test('AF04 — la ficha de un corto muestra la función heredada', async ({ page }) => {
+  await enterFestival(page, 'finca2026', FINCA_SIMTIME);
+  await page.evaluate(() => openCortoSheet('Cuidemos el planeta', '', '', ''));
+  await page.waitForSelector('#pel-sheet.open', { timeout: 8000 });
+  const row = page.locator('#pel-sheet-inner .pel-sheet-screening').first();
+  await expect(row).toBeVisible({ timeout: 5000 });
+  // Los tres datos, no solo la fila: dia, hora y sede.
+  await expect(row.locator('.pelicula-day')).not.toBeEmpty();
+  await expect(row.locator('.pelicula-time')).toContainText(/\d{1,2}:\d{2}/);
+  await expect(row.locator('.pelicula-venue')).not.toBeEmpty();
+});
+
+// AF05 — un corto en DOS programas muestra sus DOS funciones, y "Añadir" apunta
+// al programa (no al corto): addSuggestion solo entiende titulos de FILMS.
+test('AF05 — corto en dos programas muestra ambas funciones y añade el programa', async ({ page }) => {
+  // simTime al ARRANQUE del festival: las dos funciones de Ecocidio (13 y 15 AGO)
+  // quedan en futuro, asi que ambas filas llevan boton. Con el reloj en el 14 la del
+  // 13 ya paso y no lleva control — correcto, pero no es lo que este test mide.
+  await enterFestival(page, 'finca2026', '2026-08-12T10:00');
+  await page.evaluate(() => { state.set('savedAgenda', null); });
+  await page.evaluate(() => openCortoSheet('Ecocidio', '', '', ''));
+  await page.waitForSelector('#pel-sheet.open', { timeout: 8000 });
+  await expect(page.locator('#pel-sheet-inner .pel-sheet-screening')).toHaveCount(2, { timeout: 5000 });
+  const owners = await page.evaluate(() =>
+    [...document.querySelectorAll('#pel-sheet-inner .suggestion-add')].map(b => ({
+      title: b.dataset.title, day: b.dataset.day, time: b.dataset.time })));
+  expect(owners.length).toBe(2);
+  // Cada owner existe en FILMS con ESA funcion → addSuggestion puede resolverlo.
+  const resolvable = await page.evaluate((os) =>
+    os.every(o => FILMS.some(f => f.title === o.title && f.day === o.day && f.time === o.time)), owners);
+  expect(resolvable).toBe(true);
+  // Y ninguno es el titulo del corto.
+  expect(owners.some(o => o.title === 'Ecocidio')).toBe(false);
+});
+
+// AF06 — sin función anunciada, vacío EXPLÍCITO (no silencio)
+test('AF06 — corto sin función anunciada muestra vacío explícito', async ({ page }) => {
+  await enterFestival(page, 'finca2026', FINCA_SIMTIME);
+  await page.evaluate(() => openCortoSheet('Corto Inexistente QA', '', '', ''));
+  await page.waitForSelector('#pel-sheet.open', { timeout: 8000 });
+  await expect(page.locator('#pel-sheet-inner .pel-sheet-screening')).toHaveCount(0);
+  await expect(page.locator('#pel-sheet-inner')).toContainText(/sin función anunciada|no screening announced/i, { timeout: 5000 });
+});
