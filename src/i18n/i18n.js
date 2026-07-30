@@ -144,6 +144,7 @@ export const _I18N = {
     "lang_idioma": "Idioma",
     "label_horario": "horario",
     "label_funcion": "función",
+    "corto_sin_funcion": "Sin función anunciada",
     "label_funciones_pl": "funciones",
     "label_sinopsis": "sinopsis",
     "label_descripcion": "descripción",
@@ -573,6 +574,7 @@ export const _I18N = {
     "lang_idioma": "Language",
     "label_horario": "schedule",
     "label_funcion": "screening",
+    "corto_sin_funcion": "No screening announced",
     "label_funciones_pl": "screenings",
     "label_sinopsis": "synopsis",
     "label_descripcion": "description",
@@ -893,6 +895,7 @@ export const _I18N = {
     // pone en MAYÚSCULA en el header del sheet — se guardan en minúscula.
     "label_sinopsis": "sinopse",
     "label_funcion": "sessão",
+    "corto_sin_funcion": "Sem sessão anunciada",
     "label_funciones_pl": "sessões",
     "label_descripcion": "descrição",
     "label_funciones": "Sessões",

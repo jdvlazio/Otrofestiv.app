@@ -2372,6 +2372,33 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar poster-single-owner: {_e}')
 
+# ── [screening-row-single-owner] la fila de función tiene UN solo constructor ───
+# La fila "día · hora · sede [· Añadir]" es el mismo concepto en la ficha de película
+# y en la de corto. Tenerla duplicada fue el bug de jul 2026: la ficha de corto no
+# pintaba función NUNCA porque su constructor simplemente no la tenía, y el usuario
+# que buscaba el corto de un amigo no sabía cuándo ni dónde verlo. `_screeningRows`
+# es el dueño único; quien emita la clase .pel-sheet-screening a mano la re-derivó.
+check = 'screening-row-single-owner'
+try:
+    import glob as _glob
+    _off = []
+    for _sf in _glob.glob('src/**/*.js', recursive=True):
+        _c = open(_sf, encoding='utf-8').read()
+        for _i, _ln in enumerate(_c.splitlines(), 1):
+            _t = _ln.strip()
+            if _t.startswith('//') or 'class="pel-sheet-screening' not in _ln:
+                continue
+            # el dueño único es la única línea autorizada a emitirla
+            if _sf.replace('\\', '/').endswith('controller/sheets-controller.js') and '_screeningRows' in _c[:_c.index(_ln)][-2000:]:
+                continue
+            _off.append(f"{_sf}:{_i}")
+    if len(_off) > 1:
+        fail(check, 'la fila de función se construye en más de un sitio (usar _screeningRows): ' + '; '.join(_off[:6]))
+    else:
+        ok(check, 'fila de función construida solo por _screeningRows (ficha de película + de corto)')
+except Exception as _e:
+    warn(check, f'no se pudo verificar screening-row-single-owner: {_e}')
+
 # ── [activity-duration] toda actividad de un festival activo tiene duración ────
 # Valor central de la app: TODA actividad (película, evento único o programa
 # múltiple) muestra su duración — alimenta el cálculo del plan y la decisión del
@@ -2540,7 +2567,7 @@ try:
         'src/view/agenda.js': 1622,
         'src/main.js': 1662,  # +46 total: _morphOpen a FLIP — clon de la card compuesta, radio contra-escalado, encuadre del destino (29 jul)
         'src/i18n/i18n.js': 1409,  # +4 (net): anclaje (label+texto) y Q&A con referentes, ×3 locales (29 jul)
-        'src/controller/sheets-controller.js': 1424,  # +17: qa_type, 40 países que faltaban en _COUNTRY_FLAGS y flags del corto desde richItem (29 jul 2026)
+        'src/controller/sheets-controller.js': 1463,  # +39: la ficha de corto hereda la función de su(s) programa(s) — _screeningRows (dueño único, antes inline en openPelSheet), _findParentPrograms y _cortoScreeningPairs (29 jul 2026)
         'src/controller/handlers.js': 935,  # +20: anclaje de función en toggleWL, simétrico al quitar (29 jul)
     }
     _over = []
