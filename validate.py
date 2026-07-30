@@ -2447,6 +2447,46 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar screening-row-single-owner: {_e}')
 
+# ── [slots-sin-decidir] toda proyección conjunta tiene modelo declarado ────────
+# Doctrina (SCHEMA.md, 30 jul 2026): los festivales juntan proyecciones y hay DOS
+# modelos canónicos — Programa (is_cortos+film_list) o Anclaje
+# (sharedSlotIsOneScreening). Lo que NO puede pasar es el limbo: dos obras en el
+# mismo día+hora+sede+sala sin decisión, tratadas como rivales (Cinemancia 2025
+# quedó así: corto+largo a las 19:00 en la misma sala, declarados en conflicto).
+# NO se auto-deriva (multisala: misma hora+sede puede ser otra sala = otra
+# función) → el guardián OBLIGA a decidir contra el programa oficial: declarar el
+# flag, o anotar el slot como funciones separadas en _SEPARATE.
+check = 'slots-sin-decidir'
+try:
+    import json as _json
+    _ACTIVE = ['finca-2026']   # activos/próximos hoy (mismo roster que activity-duration)
+    # (festival, 'dia|hora|sede') REVISADOS contra el programa oficial y confirmados
+    # como funciones SEPARADAS (p.ej. actividades paralelas en espacios distintos).
+    _SEPARATE = set()
+    _viol = []
+    for _fname in _ACTIVE:
+        try:
+            _fd = _json.load(open('festivals/' + _fname + '.json', encoding='utf-8'))
+        except FileNotFoundError:
+            continue
+        if _fd.get('sharedSlotIsOneScreening'):
+            continue  # modelo declarado: el loader ancla estos grupos
+        _slots = {}
+        for _f in _fd.get('films', []):
+            if _f.get('info') or _f.get('is_cortos') or not (_f.get('day') and _f.get('time') and _f.get('venue')):
+                continue
+            _k = f"{_f['day']}|{_f['time']}|{_f['venue']}|{_f.get('sala','')}"
+            _slots.setdefault(_k, []).append(_f.get('title', '?'))
+        for _k, _g in _slots.items():
+            if len(_g) > 1 and (_fname, _k.rsplit('|',1)[0]) not in _SEPARATE:
+                _viol.append(f"{_fname}: {_k} → " + ' + '.join(t[:22] for t in _g))
+    if _viol:
+        fail(check, 'slot(s) compartidos SIN modelo decidido (declarar sharedSlotIsOneScreening o anotar en _SEPARATE): ' + '; '.join(_viol[:4]))
+    else:
+        ok(check, 'toda proyección conjunta de festivales activos tiene modelo declarado (Programa o Anclaje)')
+except Exception as _e:
+    warn(check, f'no se pudo verificar slots-sin-decidir: {_e}')
+
 # ── [activity-duration] toda actividad de un festival activo tiene duración ────
 # Valor central de la app: TODA actividad (película, evento único o programa
 # múltiple) muestra su duración — alimenta el cálculo del plan y la decisión del

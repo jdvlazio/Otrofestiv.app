@@ -104,6 +104,26 @@ Columnas del CSV — **clase organizador** (lo que solo el festival sabe):
 
 5. **Orden editorial de secciones** — el orden en que las secciones aparecen por primera vez en `films[]` define el orden de display en el Grid. Organizar el array con intención curatorial: secciones principales primero, eventos y shorts al final. Primera aparición = posición en el Grid.
 
+#### Gate de Fase 1 — proyecciones conjuntas (obligatorio desde FINCA 2026)
+
+Al cerrar el JSON, buscar **slots compartidos** (2+ obras con mismo
+día+hora+sede+sala). Cada uno exige una decisión contra el programa oficial —
+nunca por deducción:
+
+1. **¿El festival lo curó con nombre?** → modelo **Programa**: una entrada
+   `is_cortos` + `film_list`.
+2. **¿Obras independientes en una misma función?** (corto antes del largo, dos
+   mediometrajes) → modelo **Anclaje**: `sharedSlotIsOneScreening: true` en la
+   raíz. Verificar caso por caso: en sedes multisala, misma hora+sede puede ser
+   otra sala = otra función.
+3. **¿Son de verdad funciones separadas?** (actividades paralelas en espacios
+   distintos) → anotarlo en `_SEPARATE` del guardián.
+
+El guardián `[slots-sin-decidir]` (validate.py) falla si un festival activo
+tiene slots compartidos sin decisión — Cinemancia 2025 quedó en ese limbo y la
+app trató corto+largo de una misma función como rivales. Doctrina completa y
+tabla de decisión: `docs/SCHEMA.md` § Proyecciones conjuntas.
+
 #### Reglas de Fase 1 probadas en Tercer Tiempo 2026 (fuente = PDF + fichas web)
 
 1. **Sección = NOMBRE OFICIAL, jamás inventado.** Si el festival nombra sus

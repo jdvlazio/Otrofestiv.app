@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `6e0a0e1 fix(ui): Vista pasa a Calificar, y el dialogo de confirmacion se alinea (#481)`
+> Último commit: `d65b4f9 fix(domain): el anclaje es transversal — blockDuration, dueno unico del fin de funcion (#482)`
 
 ---
 
