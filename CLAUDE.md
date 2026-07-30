@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `d2c41e1 fix(ux): "funcion" una vez en vez de tres en el bloque de funcion (#473)`
+> Último commit: `fc5202f fix(design): "compartida" vuelve al canon de aviso, con el peso del Q&A (#474)`
 
 ---
 

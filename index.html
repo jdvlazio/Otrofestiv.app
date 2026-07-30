@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607300029">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607300029">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607300043">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607300043">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -156,7 +156,12 @@ window.sentryOnLoad = function() {
      volumen del secundario lea como el del primario y no como otro material.
      --surf-cta = Priorizar en reposo; --amber-cta-soft = Priorizar activo.
      (Juan, 29 jul 2026: "ganando volumen", igual que Interés.) */
-  --surf-cta: linear-gradient(180deg, #2A2724 0%, #201E1B 58%, #1A1816 100%);
+  /* OJO con la parada final: NUNCA más oscura que el fondo del sheet (--surf-2,
+     #1B1917). Un cierre en #1A1816 pintaba el borde inferior de la pastilla más
+     oscuro que la superficie de atrás y se leía como una LÍNEA bajo el botón, no
+     como volumen. El degradado aclara desde arriba y cierra en el color plano
+     original (#201E1B), que sigue por encima del fondo. */
+  --surf-cta: linear-gradient(180deg, #2E2B27 0%, #262320 58%, #201E1B 100%);
   --amber-cta-soft: linear-gradient(180deg, rgba(245,158,11,.16) 0%, rgba(245,158,11,.10) 58%, rgba(245,158,11,.07) 100%);
   --amber-06: rgba(245,158,11,.06);
   --amber-08: rgba(245,158,11,.08);
@@ -1306,9 +1311,16 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
   touch-action:manipulation
 }
 .pel-sheet-action-btn.act-on{background:rgba(39,174,96,.08);border-color:rgba(39,174,96,.25);color:var(--green)}
-.pel-sheet-action-btn.act-prio{background:var(--amber-cta-soft);border-color:var(--amber-30);color:var(--amber)}
+/* ` border-box` en el ATAJO: el borde de 1px es transparente (secundario) o
+   translúcido (act-prio), así que esa franja muestra el fondo. Con el origen por
+   defecto (padding-box) el gradiente se calcula sobre la caja de padding y se REPITE
+   en la franja del borde → la última fila mostraba la parada más CLARA del gradiente,
+   +14 de brillo sobre el interior, y se leía como una línea fina BAJO el botón.
+   Medido pixel a pixel: 45,42,38 → 32,30,27 (= interior). Va en esta declaración y no
+   en la regla base porque el atajo `background:` resetea background-origin. */
+.pel-sheet-action-btn.act-prio{background:var(--amber-cta-soft) border-box;border-color:var(--amber-30);color:var(--amber)}
 .pel-sheet-action-btn.btn-primary{background:var(--amber-cta);border-color:var(--amber);color:var(--black);font-size:var(--t-sm);padding:13px 4px}
-.pel-sheet-action-btn.btn-secondary{background:var(--surf-cta);border-color:transparent;color:rgba(255,255,255,.5);font-size:var(--t-sm);padding:13px 4px}
+.pel-sheet-action-btn.btn-secondary{background:var(--surf-cta) border-box;border-color:transparent;color:rgba(255,255,255,.5);font-size:var(--t-sm);padding:13px 4px}
 .pel-sheet-action-btn.btn-tertiary{background:none;border-color:transparent;color:var(--gray2);flex:none;padding:13px var(--sp-3)}
 .pel-sheet-ctas{display:flex;gap:var(--sp-2);align-items:center;margin-top:var(--sp-6)}
 .pel-sheet-ctas-watched{display:flex;gap:var(--sp-2);margin-top:var(--sp-6)}
@@ -3031,7 +3043,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202607300029";
+    s.src="/src/main.js?v=202607300043";
     document.body.appendChild(s);
     // Watchdog de boot (P0 18 jul): si el grafo ESM murió en el import (caché
     // HTTP mixta tras deploys en ráfaga — main.js nuevo + módulo viejo sin el
