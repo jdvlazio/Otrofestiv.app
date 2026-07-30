@@ -127,3 +127,35 @@ test('T44 — flujo completo: Tribeca filtro día + intereses + plan + mi plan',
   await page.waitForTimeout(200); // mínimo: colección de errores async
   expect(errors).toHaveLength(0);
 });
+
+// ─── Anclaje de función en Mi Plan (bug de producción, 30 jul 2026) ───────────
+// Dos obras del MISMO slot son UNA función. Mi Plan las trataba como funciones
+// rivales: avisaba "Q&A · si te quedás no llegás a la siguiente" entre ellas —la
+// siguiente ERA la misma función— y mostraba el fin de cada obra por separado, así
+// que un corto de 5 min decía que salías 18:05 cuando la función terminaba 19:51.
+test('T50 — dos obras del mismo slot no generan aviso entre ellas y comparten fin', async ({ page }) => {
+  await enterFestival(page, 'finca2026', '2026-08-13T10:00');
+  const ok = await page.evaluate(() => {
+    const slot = FILMS.find(f => f._slotKey && f.title.startsWith('Propiedad'));
+    if (!slot) return false;
+    const miembros = FILMS.filter(f => f._slotKey === slot._slotKey);
+    if (miembros.length < 2) return false;
+    state.set('savedAgenda', { schedule: miembros.map(f => ({ ...f, _title: f.title })), scenarioIdx: 0 });
+    return true;
+  });
+  if (!ok) { console.log('T50: sin slot compartido en el festival, skip'); return; }
+  await page.evaluate(() => { switchMainNav('mnav-miplan'); showAgView(); });
+  await page.waitForSelector('#ag-view', { state: 'visible', timeout: 8000 });
+  await page.waitForTimeout(600);
+  const d = await page.evaluate(() => ({
+    rows: document.querySelectorAll('.mplan-row').length,
+    warns: [...document.querySelectorAll('.mplan-warn-row')].map(e => e.textContent.trim()),
+    fines: [...document.querySelectorAll('.mplan-row .mplan-t2')].map(e => (e.textContent.match(/\d{1,2}:\d{2}/) || [''])[0]),
+  }));
+  // las dos filas existen (si no, el resto no probaría nada)
+  expect(d.rows).toBe(2);
+  // ningún aviso entre ellas
+  expect(d.warns).toHaveLength(0);
+  // y las dos terminan a la MISMA hora: es una sola función
+  expect(new Set(d.fines).size).toBe(1);
+});
