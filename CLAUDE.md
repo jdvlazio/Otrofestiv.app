@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `b859a63 fix(design): ningun aviso lleva caja, y Priorizar gana volumen (#472)`
+> Último commit: `d2c41e1 fix(ux): "funcion" una vez en vez de tres en el bloque de funcion (#473)`
 
 ---
 
