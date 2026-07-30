@@ -25,11 +25,21 @@ export function screensConflict(a,b){
   // pisan — con una entrada ves las dos. Lo marca el loader vía `_slotKey`.
   if(a&&b&&a._slotKey&&a._slotKey===b._slotKey) return false;
   if(a.day!==b.day) return false;
-  // effectiveDuration: suma 30 min si has_qa:true (Q&A extiende la función)
-  const aS=toMin(a.time), aE=aS+effectiveDuration(a);
-  const bS=toMin(b.time), bE=bS+effectiveDuration(b);
-  // Gap requerido: tiempo de viaje entre sedes + buffer mínimo
+  // ── Cuándo cuenta el Q&A (decisión de Juan, 30 jul 2026) ─────────────────────
+  // El Q&A es OPCIONAL y sus +30 min son una ESTIMACIÓN. Solo compromete el
+  // tiempo cuando salir de la función tiene costo: hay TRASLADO de por medio
+  // (variables incontrolables — mejor no comprometerse). En la MISMA sede,
+  // quedarse o salir es una decisión de asiento: el fin duro es el de las
+  // películas (blockDuration) y el Q&A queda como ADVERTENCIA en Mi Plan
+  // ("Q&A · si te quedás tenés ~N min"), que ya existía pero nunca podía
+  // aparecer porque esta regla excluía la opción antes.
+  // Caso que lo destapó: FINCA jue 13, función 18:00 (106+5) + Ziki 20:30 en el
+  // MISMO Cine York — 39 min entre películas, el festival lo programó para que
+  // se pudiera, y la app la excluía por 9<15 contando el Q&A estimado.
   const travel=(a.venue&&b.venue)?travelMins(a.venue,b.venue):0;
+  const _qaCuenta=travel>0;
+  const aS=toMin(a.time), aE=aS+(_qaCuenta?effectiveDuration(a):blockDuration(a));
+  const bS=toMin(b.time), bE=bS+(_qaCuenta?effectiveDuration(b):blockDuration(b));
   const minGap=Math.max(FESTIVAL_BUFFER, travel+FESTIVAL_BUFFER);
   if(aE<=bS) return (bS-aE)<minGap; // a antes que b
   if(bE<=aS) return (aS-bE)<minGap; // b antes que a
@@ -57,8 +67,10 @@ export function screensConflict(a,b){
 // 17,6 km de por medio).
 export function screensConflictReason(a,b){
   if(!screensConflict(a,b)) return null;
-  const aS=toMin(a.time), aE=aS+effectiveDuration(a);
-  const bS=toMin(b.time), bE=bS+effectiveDuration(b);
+  // Mismos fines que screensConflict (Q&A solo cuenta si hay traslado).
+  const _tv=(a.venue&&b.venue)?travelMins(a.venue,b.venue):0;
+  const aS=toMin(a.time), aE=aS+(_tv>0?effectiveDuration(a):blockDuration(a));
+  const bS=toMin(b.time), bE=bS+(_tv>0?effectiveDuration(b):blockDuration(b));
   if(aE>bS && bE>aS) return {kind:'solape'}; // ninguno termina antes de que arranque el otro
   const bFirst = bE<=aS;
   const gap = bFirst ? (aS-bE) : (bS-aE);
