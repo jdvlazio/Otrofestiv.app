@@ -170,8 +170,14 @@ export async function loadFestival(id){
           if(g.length<2) return;
           // La sala queda ocupada por la SUMA de las obras. El Q&A se cuenta UNA
           // vez: es una charla al final de la función, no una por obra.
-          const total=g.reduce((a,f)=>a+parseDur(f.duration),0)+(g.some(f=>f.has_qa)?30:0);
-          g.forEach(f=>{ f._slotKey=k; f._slotMin=total; });
+          // DOS duraciones, porque son dos preguntas distintas:
+          //   _slotDur = lo que dura la función (suma de las obras). Es el "hasta
+          //              qué hora estoy en la sala" → huecos, fin de bloque, "en curso".
+          //   _slotMin = _slotDur + el Q&A. Es lo que OCUPA la sala para el cálculo
+          //              de conflictos, donde quedarse al Q&A tiene que caber.
+          const base=g.reduce((a,f)=>a+parseDur(f.duration),0);
+          const total=base+(g.some(f=>f.has_qa)?30:0);
+          g.forEach(f=>{ f._slotKey=k; f._slotDur=base; f._slotMin=total; });
         });
       }
       // ── AVISOS: cancelada / reprogramada, SELLADOS en la función ────────────

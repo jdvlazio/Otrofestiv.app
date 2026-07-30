@@ -26,7 +26,7 @@ import { cloudScreeningKey } from '../domain/delays.js';
 // Es la ÚNICA dependencia view→controller permitida (fijada en validate.py [view-purity]).
 import { getConsensusMap } from '../controller/delays-cloud.js';
 import {
-  screeningPassed, screeningEnded, screeningNow, effectiveDuration,
+  screeningPassed, screeningEnded, screeningNow, effectiveDuration, blockDuration,
 } from '../domain/film.js';
 import {
   isScreeningBlocked, screensConflict, screensConflictReason,
@@ -180,12 +180,6 @@ function _slotKeyOf(e){
   return (f&&f._slotKey)||null;
 }
 function _slotMembers(k){ return k?FILMS.filter(f=>f._slotKey===k):[]; }
-// Duración del BLOQUE que ocupa esta entrada: si comparte función, la suma de las
-// obras del slot. Sin el Q&A — quedarse es opcional, y por eso existe su aviso.
-function _planDur(e){
-  const m=_slotMembers(_slotKeyOf(e));
-  return m.length?m.reduce((a,f)=>a+parseDur(f.duration),0):parseDur(e.duration);
-}
 function _slotHasQa(e){
   const m=_slotMembers(_slotKeyOf(e));
   return m.length?m.some(f=>f.has_qa):!!e.has_qa;
@@ -231,7 +225,7 @@ export function renderMiPlanCalendar(state){
   const _visSched=schedule.filter(s=>_visDays.has(s.day));
   const _src=_visSched.length?_visSched:schedule;
   const _allMins=_src.flatMap(s=>{
-    const st=toMin(s.time), en=st+parseDur(s.duration);
+    const st=toMin(s.time), en=st+blockDuration(s);
     return[st,en];
   });
   const _minStart=Math.min(..._allMins);
@@ -314,7 +308,7 @@ export function renderMiPlanCalendar(state){
     });
     const blocksHtml=_bloques.map(_grp=>{
       const s=_grp.items[0];
-      const fMin=toMin(s.time),dur=_planDur(s);
+      const fMin=toMin(s.time),dur=blockDuration(s);
       const top=PHDR+toPx(fMin);
       const blockH=Math.max(dur/60*PPH-4,20);
       const isPast=isPastDay||(isToday&&screeningEnded(s,nowMin));
@@ -372,7 +366,7 @@ export function renderMiPlanCalendar(state){
     }
   } else {
     dayFilms.forEach((s,idx)=>{
-      const fMin=toMin(s.time),dur=_planDur(s);
+      const fMin=toMin(s.time),dur=blockDuration(s);
       const isPast=isPastDay||(activeMiPlanDay===nowDayIdx&&screeningEnded(s,nowMin));
       const isNow=activeMiPlanDay===nowDayIdx&&screeningNow(s,nowMin);
       // F1 (Diario, 17 jul): el estado Vista vive EN LA FILA (in-situ, modelo
@@ -385,7 +379,7 @@ export function renderMiPlanCalendar(state){
       // "no llegás a la siguiente": la siguiente ES la misma función.
       if(idx>0&&!_mismaFuncion(dayFilms[idx-1],s)){
         const prev=dayFilms[idx-1];
-        const gap=fMin-(toMin(prev.time)+_planDur(prev));
+        const gap=fMin-(toMin(prev.time)+blockDuration(prev));
         if(gap>=0&&gap<25){
           const _isCritical=gap<=5;
           listHtml+=`<div class="mplan-warn-row" style="${_isCritical?'color:var(--red)':''}">${ICONS.alert} ${_isCritical?t('warn_sin_tiempo'):`~${gap} ${t('warn_min_hasta_sig')}`}</div>`;
@@ -482,7 +476,7 @@ export function renderUnconfirmed(state,schedule){
   const latest=past[0];const older=past.slice(1);
   const{displayTitle}=parseProgramTitle(latest._title||'');
   const short=displayTitle.length>28?displayTitle.slice(0,26)+'…':displayTitle;
-  const endMs=_festDate(FESTIVAL_DATES[latest.day],latest.time).getTime()+parseDur(latest.duration)*60000;
+  const endMs=_festDate(FESTIVAL_DATES[latest.day],latest.time).getTime()+blockDuration(latest)*60000;
   const minsAgo=Math.round((now.getTime()-endMs)/60000);
   const timeDesc=minsAgo<120?`${t('plan_termino_hace')} ${minsAgo} min`:`${dayLabel(latest.day)} · ${latest.time}`;
   const safeLast=latest._title.replace(/"/g,'&quot;').replace(/'/g,"&#39;");
@@ -704,7 +698,7 @@ export function renderContextualHeader(state, consensus){
     //   ❌ "Ahora"           — redundante con eyebrow
     //   Todo estado nuevo debe pasar este filtro antes de añadir badge.
     const _nowMin=_festNowMin();
-    const _endMin=toMin(next.time)+parseDur(next.duration)+(filmDelays[_delayKey(next)]||0);
+    const _endMin=toMin(next.time)+blockDuration(next)+(filmDelays[_delayKey(next)]||0);
     const _leftMin=Math.max(0,_endMin-_nowMin);
     // Horas + minutos cuando pasa de 59 min ("En 5 h 35"), minutos pelados por debajo
     // ("En 45 min") — pedir "335 min" obliga a calcular (regla de Juan, 17 jul).
@@ -742,7 +736,7 @@ export function renderContextualHeader(state, consensus){
           .sort((a,b)=>toMin(a.time)-toMin(b.time));
         const nextFilm=upcoming[0];
         if(nextFilm&&nextFilm.day===next.day){
-          const dur=parseDur(next.duration);
+          const dur=blockDuration(next);
           const effectiveEndMin=toMin(next.time)+dur+delayMins;
           const travel=travelMins(next.venue,nextFilm.venue);
           const margin=toMin(nextFilm.time)-(effectiveEndMin+FESTIVAL_BUFFER+travel);
@@ -1533,7 +1527,7 @@ export function getSuggestions(){
       // Entre funciones — cualquier hueco positivo (el chequeo fStart/fEnd filtra lo imposible)
       for(let i=0;i<dayItems.length-1;i++){
         const a=dayItems[i],b=dayItems[i+1];
-        const aEnd=toMin(a.time)+parseDur(a.duration)+FESTIVAL_BUFFER;
+        const aEnd=toMin(a.time)+blockDuration(a)+FESTIVAL_BUFFER;
         const bStart=toMin(b.time)-FESTIVAL_BUFFER;
         if(bStart>aEnd)
           slots.push({start:aEnd,end:bStart,ctx:`Entre ${(a._title||'').split(' ').slice(0,3).join(' ')}… y ${(b._title||'').split(' ').slice(0,3).join(' ')}…`});
@@ -1541,7 +1535,7 @@ export function getSuggestions(){
       // Después de la última — siempre se crea, extiende hasta la 1am
       // Bug fix: el if(lastEnd<22*60) cortaba noches con película tardía (ej: 20:00+90min=22:10 → sin slot)
       const last=dayItems[dayItems.length-1];
-      const lastEnd=toMin(last.time)+parseDur(last.duration)+FESTIVAL_BUFFER;
+      const lastEnd=toMin(last.time)+blockDuration(last)+FESTIVAL_BUFFER;
       slots.push({start:lastEnd,end:25*60,ctx:`Después de ${(last._title||'').split(' ').slice(0,3).join(' ')}…`});
     }
 
@@ -1550,7 +1544,7 @@ export function getSuggestions(){
     if(slots.length){
       FILMS.forEach(f=>{
         if(seenDiscover.has(f.title)||screeningPassed(f)||f.day!==day||isScreeningBlocked(f)) return;
-        const fStart=toMin(f.time),fEnd=fStart+parseDur(f.duration);
+        const fStart=toMin(f.time),fEnd=fStart+blockDuration(f);
         // Verificar que hay un slot de tiempo (check rápido)
         const slot=slots.find(sl=>fStart>=sl.start&&fEnd<=sl.end&&fEnd-fStart>=20);
         if(!slot) return;
@@ -1637,7 +1631,7 @@ export function _scrollMiPlanToNow(){
     // Calcular SH igual que renderMiPlanCalendar (usamos plan completo como fallback)
     if(!savedAgenda || !savedAgenda.schedule.length) return;
     const allMins = savedAgenda.schedule.flatMap(s => {
-      const st = toMin(s.time), en = st + parseDur(s.duration);
+      const st = toMin(s.time), en = st + blockDuration(s);
       return [st, en];
     });
     const SH = Math.max(9, Math.floor((Math.min(...allMins) - 30) / 60));

@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `8583eb9 fix(plan): el calendario dibuja la funcion compartida completa, en un bloque (#480)`
+> Último commit: `6e0a0e1 fix(ui): Vista pasa a Calificar, y el dialogo de confirmacion se alinea (#481)`
 
 ---
 

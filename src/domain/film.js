@@ -128,6 +128,24 @@ export function scoreFilm(title, screens, isPriority, allTitles){
 // dos obras programadas en la MISMA función ocupan la sala por la suma de
 // ambas, no por la propia. Sin esto el planificador cree que salís al terminar
 // la primera y te ofrece otra función a la que no llegás.
+// blockDuration — cuánto dura la FUNCIÓN a la que entra el espectador. Con
+// anclaje, la suma de las obras del slot (`_slotDur`, sellado por el loader);
+// sin anclaje, la duración de la obra. SIN el Q&A: quedarse es opcional, y por
+// eso existe su aviso.
+//
+// Es la respuesta a "¿hasta qué hora estoy en la sala?" y la usan TODAS las
+// superficies que miden tiempo: huecos de sugerencias, "termina en X min", "en
+// curso", buffer de retrasos, fin del día. Antes cada una hacía
+// parseDur(f.duration) por su cuenta y ninguna sabía de anclaje: un corto de 5
+// min dentro de una función de 111 declaraba libre un hueco que no existía.
+//
+// El par: effectiveDuration = blockDuration + Q&A, para CONFLICTOS, donde
+// quedarse al Q&A tiene que caber.
+export function blockDuration(f){
+  if(f&&f._slotDur) return f._slotDur;
+  return parseDur(f&&f.duration);
+}
+
 export function effectiveDuration(f){
   if(f&&f._slotMin) return f._slotMin;
   return parseDur(f&&f.duration)+(f&&f.has_qa?30:0);
