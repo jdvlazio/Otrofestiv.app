@@ -291,3 +291,27 @@ test('AF10 — los avisos comparten columna y arrancan en el riel del día', asy
   // todos los textos en la MISMA columna (lo garantiza el grid, no un px fijo)
   expect(new Set(m.txts).size).toBe(1);
 });
+
+// AF11 — el diálogo de confirmación tiene UN solo riel izquierdo
+// Tenía tres (36, 52 y 60) y el rótulo, sin padding, quedaba cortado por la
+// esquina redondeada de la caja. El padding vive ahora en la caja: todo alinea.
+test('AF11 — el diálogo de confirmación alinea todo a un solo riel', async ({ page }) => {
+  await enterFestival(page, 'finca2026', FINCA_SIMTIME);
+  const title = await page.evaluate(() => (FILMS.find(f => !f.is_cortos && !f.info) || {}).title);
+  await page.evaluate((t) => openPelSheet(t), title);
+  await page.waitForSelector('#pel-vista-btn', { timeout: 8000 });
+  await page.locator('#pel-vista-btn').click();
+  await page.waitForSelector('#conflict-modal .conflict-modal-box', { timeout: 5000 });
+  const m = await page.evaluate(() => {
+    const L = s => Math.round(document.querySelector(s).getBoundingClientRect().left);
+    const box = document.querySelector('.conflict-modal-box').getBoundingClientRect();
+    return {
+      lefts: ['.conflict-modal-hdr', '.conflict-modal-body', '.conflict-modal-btn.confirm', '.conflict-modal-btn.cancel'].map(L),
+      hdrDentro: Math.round(document.querySelector('.conflict-modal-hdr').getBoundingClientRect().top - box.top),
+    };
+  });
+  // un solo borde izquierdo para rótulo, cuerpo y los dos botones
+  expect(new Set(m.lefts).size).toBe(1);
+  // y el rótulo no toca el borde de la caja (antes: 1px → lo cortaba el radio)
+  expect(m.hdrDentro).toBeGreaterThanOrEqual(12);
+});
