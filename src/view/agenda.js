@@ -163,6 +163,37 @@ export function renderAgenda(){
   }
 }
 
+// ── ANCLAJE en Mi Plan ────────────────────────────────────────────────────────
+// Dos obras del MISMO slot son UNA sola función: el festival las programa seguidas
+// bajo una única hora (FINCA 2026: 6 casos). El dominio ya lo sabía —screensConflict
+// no las declara en conflicto, effectiveDuration usa _slotMin— pero Mi Plan seguía
+// tratándolas como funciones rivales: medía el hueco entre ellas, avisaba "Q&A · si
+// te quedás no llegás a la siguiente" (el Q&A es UNO, al final de la función
+// completa) y mostraba el fin de cada obra por separado, así que un corto de 5 min
+// decía que salías 18:05 cuando la función terminaba 19:51. (Bug visto por Juan en
+// producción, 30 jul 2026.)
+function _slotKeyOf(e){
+  if(e&&e._slotKey) return e._slotKey;
+  // Las entradas guardadas antes de que existiera _slotKey no lo traen: se resuelve
+  // contra FILMS, que es donde el loader lo sella.
+  const f=FILMS.find(fi=>fi.title===e._title&&fi.day===e.day&&fi.time===e.time);
+  return (f&&f._slotKey)||null;
+}
+function _slotMembers(k){ return k?FILMS.filter(f=>f._slotKey===k):[]; }
+// Duración del BLOQUE que ocupa esta entrada: si comparte función, la suma de las
+// obras del slot. Sin el Q&A — quedarse es opcional, y por eso existe su aviso.
+function _planDur(e){
+  const m=_slotMembers(_slotKeyOf(e));
+  return m.length?m.reduce((a,f)=>a+parseDur(f.duration),0):parseDur(e.duration);
+}
+function _slotHasQa(e){
+  const m=_slotMembers(_slotKeyOf(e));
+  return m.length?m.some(f=>f.has_qa):!!e.has_qa;
+}
+function _mismaFuncion(a,b){
+  const ka=_slotKeyOf(a); return !!ka&&ka===_slotKeyOf(b);
+}
+
 export function renderMiPlanCalendar(state){
   const {savedAgenda, FILMS, prioritized, watched, filmRatings, FESTIVAL_DATES} = state.snapshot();
   if(!savedAgenda||!savedAgenda.schedule.length) return'';
@@ -329,7 +360,7 @@ export function renderMiPlanCalendar(state){
     }
   } else {
     dayFilms.forEach((s,idx)=>{
-      const fMin=toMin(s.time),dur=parseDur(s.duration);
+      const fMin=toMin(s.time),dur=_planDur(s);
       const isPast=isPastDay||(activeMiPlanDay===nowDayIdx&&screeningEnded(s,nowMin));
       const isNow=activeMiPlanDay===nowDayIdx&&screeningNow(s,nowMin);
       // F1 (Diario, 17 jul): el estado Vista vive EN LA FILA (in-situ, modelo
@@ -338,14 +369,16 @@ export function renderMiPlanCalendar(state){
       const isSeen=watched.has(s._title);
       const _rowStars=(isSeen&&filmRatings[s._title])?starsText(filmRatings[s._title]):'';
       const safeT=(s._title||'').replace(/"/g,'&quot;');
-      if(idx>0){
+      // Entre dos obras de la MISMA función no hay hueco que medir, ni traslado, ni
+      // "no llegás a la siguiente": la siguiente ES la misma función.
+      if(idx>0&&!_mismaFuncion(dayFilms[idx-1],s)){
         const prev=dayFilms[idx-1];
-        const gap=fMin-(toMin(prev.time)+parseDur(prev.duration));
+        const gap=fMin-(toMin(prev.time)+_planDur(prev));
         if(gap>=0&&gap<25){
           const _isCritical=gap<=5;
           listHtml+=`<div class="mplan-warn-row" style="${_isCritical?'color:var(--red)':''}">${ICONS.alert} ${_isCritical?t('warn_sin_tiempo'):`~${gap} ${t('warn_min_hasta_sig')}`}</div>`;
         }
-        if(prev.has_qa){const qaGap=gap-30;qaGap<0?listHtml+=`<div class="mplan-warn-row" style="color:var(--red)">${t('warn_qa_no_llega')}</div>`:listHtml+=`<div class="mplan-warn-row">${t('warn_qa_tiempo',{n:qaGap})}</div>`;}
+        if(_slotHasQa(prev)){const qaGap=gap-30;qaGap<0?listHtml+=`<div class="mplan-warn-row" style="color:var(--red)">${t('warn_qa_no_llega')}</div>`:listHtml+=`<div class="mplan-warn-row">${t('warn_qa_tiempo',{n:qaGap})}</div>`;}
         const tw=travelWarn(prev,s);
         if(tw) listHtml+=`<div class="mplan-warn-row">${tw}</div>`;
       }
