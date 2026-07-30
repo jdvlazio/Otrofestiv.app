@@ -11,7 +11,7 @@
 import { FESTIVAL_CONFIG } from '../config.js';
 import { toMin, minToStr, parseDur, _festDate, festivalEnded } from '../domain/time.js';
 import { _resolveVenue } from '../domain/festival.js';
-import { effectiveDuration, screeningPassed, _djb2, _titleSeed, _mulberry32, shuffle, scoreFilm } from '../domain/film.js';
+import { blockDuration, effectiveDuration, screeningPassed, _djb2, _titleSeed, _mulberry32, shuffle, scoreFilm } from '../domain/film.js';
 import { screensConflict, isScreeningBlocked, sortScreensByStrategy, computeScenarios } from '../domain/schedule.js';
 import { renderAgenda } from '../view/agenda.js';
 import { showToast } from '../view/feedback.js';
@@ -25,7 +25,7 @@ import { t } from '../i18n/i18n.js';
 // Estas se proveen como worker-local en _mkCalcWorker._venueFns.
 const _SCHED_PURE_FNS = [
   'toMin','minToStr','parseDur','_festDate','_resolveVenue',
-  'effectiveDuration','screensConflict','screeningPassed',
+  'blockDuration','effectiveDuration','screensConflict','screeningPassed',
   'isScreeningBlocked','_djb2','_titleSeed','_mulberry32',
   'shuffle','scoreFilm','sortScreensByStrategy','computeScenarios'
 ];

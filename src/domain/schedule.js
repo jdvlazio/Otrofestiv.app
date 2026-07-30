@@ -15,7 +15,7 @@
 
 import { FESTIVAL_BUFFER } from "../config.js";
 import { toMin, parseDur } from "./time.js";
-import { effectiveDuration, screeningPassed, shuffle, scoreFilm, _titleSeed, _mulberry32 } from "./film.js";
+import { effectiveDuration, blockDuration, screeningPassed, shuffle, scoreFilm, _titleSeed, _mulberry32 } from "./film.js";
 import { travelMins } from "./festival.js";
 export function screensConflict(a,b){
   // Eventos informativos (info:true) — drop-in / sin hora fija: nunca generan
@@ -85,8 +85,9 @@ export function sortScreensByStrategy(screens, allGroups){
     const conflB=allOtherScreenings.filter(s=>s!==b&&screensConflict(b,s)).length;
     if(conflA!==conflB) return conflA-conflB; // menos conflictos primero
     // Si empatan, earliest finish time (termina antes = deja más espacio)
-    const endA=toMin(a.time)+parseDur(a.duration);
-    const endB=toMin(b.time)+parseDur(b.duration);
+    // blockDuration: con anclaje, la función termina cuando termina el BLOQUE.
+    const endA=toMin(a.time)+blockDuration(a);
+    const endB=toMin(b.time)+blockDuration(b);
     return endA-endB;
   });
 }
