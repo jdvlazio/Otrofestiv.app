@@ -657,9 +657,15 @@ suya y vivían de prestado.
 - **Dueño único `_avisosBand`**, consumido por la ficha de película y la de corto.
   Guardián `[avisos-en-banda]`: un `.meta-banner-label` suelto = alguien volvió a
   colgar un aviso fuera.
-- **Cancelada/reprogramada NO entra**: va dentro de FUNCIÓN, pegada a la hora que
-  niega. Enterrarla en una banda de abajo sería esconder la única advertencia que
-  hace perder el viaje.
+- **Cancelada/reprogramada entra PRIMERA y en rojo** (§8.4.6 lo detalla): la banda
+  tiene dos niveles de severidad — ámbar matiza, rojo invalida.
+- **En Mi Plan, el aviso trae su SALIDA.** El badge dice qué pasó; el botón dice
+  qué hago: *Actualizar* muda la entrada a la hora nueva —reusando el flujo de
+  conflictos, sin moverla sola— y *Buscar reemplazo* la quita y lleva a
+  Sugerencias con el hueco libre. Nada se mueve ni se borra sin que el usuario lo
+  pida. La hora va tachada **en la hora misma**, no en la fila: `text-decoration`
+  se propaga al dibujar y no se puede cancelar desde un hijo, así que la regla en
+  el contenedor tachaba también el badge y el propio botón.
 - **Todos los avisos llevan pastilla.** Sin ella, el que no la tenía se leía como
   de otra especie. La pastilla es el único recuadro que sobrevive (§8.4.7).
 - **Q&A, inscripción y GRATIS se derivan de la FUNCIÓN, no de la obra.** Leerlos

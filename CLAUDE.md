@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `a81f9b6 docs(schema): doctrina de proyecciones conjuntas — dos modelos, y un guardian que obliga a decidir (#483)`
+> Último commit: `378eb76 fix(avisos): Q&A/inscripcion/gratis se derivan de la FUNCION — y GRATIS entra a la ficha (#484)`
 
 ---
 

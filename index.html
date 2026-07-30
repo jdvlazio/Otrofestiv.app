@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607301008">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607301008">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607301029">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607301029">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -655,9 +655,14 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
    haría leer "esa ya fue" donde hay que leer "esa se canceló". (Juan, 30 jul 2026) */
 .pel-sheet-screening.scr-void .pelicula-time{text-decoration:line-through;text-decoration-color:var(--red);text-decoration-thickness:1.5px;color:var(--gray)}
 .pel-sheet-screening.scr-void .pelicula-day{color:var(--gray2)}
-/* mp-void = la función de esta entrada del Plan ya no existe (cancelada o movida).
-   Misma señal que en la ficha: hora tachada en rojo, nunca atenuada. */
-.mplan-t2.mp-void{text-decoration:line-through;text-decoration-color:var(--red);text-decoration-thickness:1.5px}
+/* mp-void-t = la HORA de una entrada cuya función ya no existe. Misma señal que
+   en la ficha: tachada en rojo, nunca atenuada.
+   Va en la hora y NO en la fila: `text-decoration` de un ancestro no se puede
+   cancelar desde un hijo (no es heredada, se PROPAGA al dibujar), así que con la
+   regla en el contenedor quedaban tachados también el badge y el botón de salida.
+   Verificado en captura antes de darlo por bueno. (30 jul 2026) */
+.mp-void-t{text-decoration:line-through;text-decoration-color:var(--red);text-decoration-thickness:1.5px}
+.mplan-fix{margin-left:var(--sp-2);vertical-align:middle}
 .pel-sheet-ticket-link{display:inline-flex;align-items:center;gap:var(--sp-1);margin-top:var(--sp-3);font-size:var(--t-sm);color:var(--amber);text-decoration:none;opacity:.9;cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
 .pel-sheet-ticket-link:hover{opacity:1}
 .meta-banner .pel-sheet-ticket-link{margin-top:var(--sp-1)}
@@ -3087,7 +3092,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202607301008";
+    s.src="/src/main.js?v=202607301029";
     document.body.appendChild(s);
     // Watchdog de boot (P0 18 jul): si el grafo ESM murió en el import (caché
     // HTTP mixta tras deploys en ráfaga — main.js nuevo + módulo viejo sin el
