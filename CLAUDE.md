@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `a01acfb feat(pipeline): la plantilla de onboarding se pone al dia — y un guardian que la mantiene asi (#81) (#486)`
+> Último commit: `3dd56a1 fix(domain): el Q&A no bloquea en la misma sede — advierte (#487)`
 
 ---
 

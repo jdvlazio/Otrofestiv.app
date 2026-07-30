@@ -57,3 +57,25 @@ test('simetría: el orden de los argumentos no cambia el veredicto', () => {
   const ziki = { day: DAY, time: '20:30', duration: '12 min', venue: 'Cine York' };
   assert.strictEqual(screensConflict(ziki, FUNCION), false);
 });
+
+// ── isScreeningBlocked: el bloque de disponibilidad tampoco cuenta el Q&A ──────
+const { isScreeningBlocked } = loadDomain({
+  functions: ['toMin', 'parseDur', 'blockDuration', 'effectiveDuration', 'isScreeningBlocked'],
+  globals: {
+    FESTIVAL_BUFFER: 15, DEFAULT_DURATION_MIN: 90, _activeFestId: 'test',
+    FESTIVAL_CONFIG: { test: { venues: {} } },
+    availability: { '2026-08-13': { blocks: [{ from: '20:00', to: '23:00' }] } },
+  },
+});
+
+test('disponibilidad: el Q&A opcional NO excluye la función (películas terminan antes del bloque)', () => {
+  // film 18:00+106 → 19:51; Q&A estimado hasta 20:21 pisaría el bloque de 20:00.
+  // Salir del Q&A no cuesta nada → la función entra.
+  const f = { day: '2026-08-13', time: '18:00', duration: '106 min', has_qa: true };
+  assert.strictEqual(isScreeningBlocked(f), false);
+});
+
+test('disponibilidad: si las PELÍCULAS pisan el bloque, sigue excluida', () => {
+  const f = { day: '2026-08-13', time: '19:00', duration: '106 min', has_qa: false }; // → 20:46
+  assert.strictEqual(isScreeningBlocked(f), true);
+});

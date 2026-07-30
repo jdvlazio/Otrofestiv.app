@@ -35,12 +35,12 @@ test('block that overlaps screening → true', () => {
   );
 });
 
-test('has_qa screening whose Q&A tail overlaps a block → true (effectiveDuration)', () => {
-  // Screening 11:30 AM (690) + 90 min → fin 13:00 (780). Con Q&A (+30) → 13:30 (810).
-  // Block 13:00 (780) — 13:45 (825):
-  //   sin Q&A: sEnd=780 > bFrom=780 ✗ → NO bloqueado (frontera, correcto)
-  //   con Q&A: sEnd=810 > bFrom=780 ✓ → bloqueado (el Q&A 13:00–13:30 cae en el bloque)
-  // Pre-fix (parseDur ignora Q&A) → false (bug). Con effectiveDuration → true.
+test('has_qa: el Q&A que pisa el bloque NO excluye la función (doctrina 30 jul 2026)', () => {
+  // Screening 11:30 AM + 90 min → películas terminan 13:00. El Q&A estimado iría
+  // hasta 13:30 y pisaría el bloque 13:00–13:45 — pero el Q&A es OPCIONAL y salir
+  // no cuesta nada (no hay traslado en disponibilidad): la función ENTRA y quien
+  // tiene el bloque simplemente no se queda al Q&A. Este test congelaba la regla
+  // vieja (effectiveDuration → excluida), el mismo sobre-compromiso del caso Ziki.
   const { isScreeningBlocked } = loadDomain({
     globals: {
       availability: { 'MAR 21': { blocks: [{ from: '1:00 PM', to: '1:45 PM' }] } },
@@ -48,8 +48,8 @@ test('has_qa screening whose Q&A tail overlaps a block → true (effectiveDurati
     },
   });
   assert.strictEqual(
-    isScreeningBlocked({ day: 'MAR 21', time: '11:30 AM', duration: '90 min', has_qa: true }),
-    true,
+    isScreeningBlocked({ day: 'MAR 21', time: '11:30 AM', duration: '90 min', has_qa: false }),
+    false,
     'el Q&A (13:00–13:30) cae dentro del bloque 13:00–13:45 → debe estar bloqueado'
   );
   // Control: el mismo screening SIN Q&A termina 13:00 = inicio del bloque → no bloqueado.
