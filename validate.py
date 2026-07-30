@@ -2567,7 +2567,7 @@ try:
         'src/view/agenda.js': 1622,
         'src/main.js': 1662,  # +46 total: _morphOpen a FLIP — clon de la card compuesta, radio contra-escalado, encuadre del destino (29 jul)
         'src/i18n/i18n.js': 1409,  # +4 (net): anclaje (label+texto) y Q&A con referentes, ×3 locales (29 jul)
-        'src/controller/sheets-controller.js': 1463,  # +39: la ficha de corto hereda la función de su(s) programa(s) — _screeningRows (dueño único, antes inline en openPelSheet), _findParentPrograms y _cortoScreeningPairs (29 jul 2026)
+        'src/controller/sheets-controller.js': 1486,  # +39: la ficha de corto hereda la función de su(s) programa(s) — _screeningRows (dueño único, antes inline en openPelSheet), _findParentPrograms, _cortoScreeningPairs y _noticeRows (dueño único del aviso cancelada/reprogramada, heredado por título de programa) (29 jul 2026)
         'src/controller/handlers.js': 935,  # +20: anclaje de función en toggleWL, simétrico al quitar (29 jul)
     }
     _over = []

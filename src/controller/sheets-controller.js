@@ -155,6 +155,25 @@ function _screeningRows(pairs){
   }).join('');
 }
 
+// _noticeRows — DUEÑO ÚNICO del aviso de función cancelada/reprogramada. Recibe la
+// lista de títulos que MANDAN sobre esa función: para una película el suyo, para un
+// corto los de sus programas (el aviso está indexado por título de programa, y el
+// corto no lo comparte). Va ARRIBA de la fila porque INVALIDA la hora que le sigue
+// (DESIGN 8.4.4): mostrar el horario viejo sin advertencia manda gente a una sala
+// donde no hay nada.
+function _noticeRows(titles){
+  const fest=_activeFestId||_DEFAULT_FEST_ID;
+  const seen=new Set();
+  return titles.map(_t2=>{
+    const n=NOTICES.find(x=>x.title===_t2&&x.festival===fest);
+    if(!n||seen.has(_t2)) return '';
+    seen.add(_t2);
+    const info=`${n.newDay||''} ${n.newTime||''}${n.newVenue?' · '+n.newVenue:''}`.trim();
+    const msg=n.type==='cancelled'?t('notice_funcion_canc'):t('notice_reprog_a',{info});
+    return`<div class="notice-banner-row"><span class="notice-badge">${n.type==='cancelled'?t('notice_cancelada'):t('notice_reprog_short')}</span><span class="notice-banner-txt">${msg}</span></div>`;
+  }).join('');
+}
+
 // _cortoScreeningPairs — las funciones que hereda un corto de sus programas, ya
 // ordenadas futuro→pasado igual que en la ficha de película (mismo criterio, no una
 // segunda regla de orden). Un bloque-catálogo sin sesión asignada no aporta ninguna.
@@ -270,7 +289,7 @@ export function openPelSheet(title){
       </div>
     </div>
         ${allScr.length>0?`<div class="sec-hdr sm">${ICONS.clock} <span>${f.type==='event'?t('label_horario'):allScr.length===1?t('label_funcion'):t('label_funciones_pl')}</span>${totalFn>1&&f.type!=='event'?`<span class="count-badge cb-neutral">${totalFn}</span>`:''}</div>`:''}
-    ${(()=>{const _n=NOTICES.find(n=>n.title===f.title&&n.festival===(_activeFestId||_DEFAULT_FEST_ID));if(!_n)return'';const _info=`${_n.newDay||''} ${_n.newTime||''}${_n.newVenue?' · '+_n.newVenue:''}`.trim();const _msg=_n.type==='cancelled'?t('notice_funcion_canc'):t('notice_reprog_a',{info:_info});return`<div class="notice-banner-row"><span class="notice-badge">${_n.type==='cancelled'?t('notice_cancelada'):t('notice_reprog_short')}</span><span class="notice-banner-txt">${_msg}</span></div>`;})()}
+    ${_noticeRows([f.title])}
     ${allScr.length>0?`<div class="pel-sheet-screenings">${rows}</div>`:''}
     ${/* ORDEN DEL BLOQUE FUNCIÓN: lo que INVALIDA va antes (notice-banner de
         cancelada/reprogramada: niega la hora que sigue, hay que saberlo primero),
@@ -563,6 +582,10 @@ export function openCortoSheet(title, country, duration, section, flags, directo
   // dejaba la ficha muda y el usuario no sabía si el dato faltaba o no existía.
   const _cortoPairs=_cortoScreeningPairs(title);
   const _cortoScrHdr=`<div class="sec-hdr sm">${ICONS.clock} <span>${_cortoPairs.length>1?t('label_funciones_pl'):t('label_funcion')}</span>${_cortoPairs.length>1?`<span class="count-badge cb-neutral">${_cortoPairs.length}</span>`:''}</div>`;
+  // El aviso de cancelada/reprogramada también se hereda: está indexado por título
+  // de PROGRAMA, así que la ficha del corto solo lo ve si pregunta por sus owners.
+  // Sin esto mostraba la hora vieja sin advertencia — el bug latente del mismo linaje.
+  const _cortoNotices=_noticeRows([...new Set(_cortoPairs.map(p=>p.owner.title))]);
   const _cortoScrBody=_cortoPairs.length
     ?`<div class="pel-sheet-screenings">${_screeningRows(_cortoPairs)}</div>`
     :emptyState(ICONS.clock, t('corto_sin_funcion'));
@@ -577,7 +600,7 @@ export function openCortoSheet(title, country, duration, section, flags, directo
         <a class="c-lb pel-sheet-lb" href="${lbHref||'#'}" target="_blank" rel="noopener"${!lbHref?' style="display:none"':''}>${LB_SVG}<span class="c-lb-text pel-sheet-lb-text">Letterboxd</span></a>
       </div>
     </div>
-        ${_cortoScrHdr}${_cortoScrBody}
+        ${_cortoScrHdr}${_cortoNotices}${_cortoScrBody}
         ${parentTitle?`<div class="meta-banner"><div class="meta-banner-dot"></div><div><div class="meta-banner-label">${t('meta_funcion_label')}</div><div class="meta-banner-text">${t('meta_funcion_incluye')}</div></div></div>`:''}
         ${syn?`<div class="sec-hdr sm">${ICONS.text} <span>${t('label_sinopsis')}</span></div><div class="pel-sheet-synopsis">${syn}</div>`:''}
     <div class="pel-sheet-ctas">

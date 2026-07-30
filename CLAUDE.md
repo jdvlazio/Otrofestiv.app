@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `9257162 feat(finca): Cuidemos el planeta estrena su propio 16:9 (#469)`
+> Último commit: `1d7642a fix(ux): la ficha de un corto ya dice cuando y donde verlo (#470)`
 
 ---
 
