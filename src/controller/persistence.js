@@ -8,6 +8,7 @@
 
 import { FESTIVAL_CONFIG } from '../config.js';
 import { _festDate } from '../domain/time.js';
+import { syncScheduleWithCatalog } from '../domain/schedule.js';
 import { report } from '../telemetry.js';
 import { FESTIVAL_STATE, deriveHydrate, deriveCloudSave, deriveCloudApply, deriveCloudMerge } from '../state/festival-context.js';
 import { closeAuthSheet } from '../view/sheets.js';
@@ -215,6 +216,13 @@ export function _applyCloudRow(data, opts){
   // no-vacíos, con merge para ratings/availability). Mismo comportamiento previo.
   const _u=deriveCloudApply(data, whole);
   if(Object.keys(_u).length) state.batchUpdate(_u);
+  // El plan que llega de la nube es una copia congelada de OTRO momento (u otro
+  // dispositivo con catálogo viejo). Se re-deriva contra el catálogo vivo — la
+  // misma normalización del loader; ver syncScheduleWithCatalog. Solo si FILMS
+  // ya existe (en boot temprano no hay catálogo todavía; el loader la corre después).
+  if(_u.savedAgenda&&_u.savedAgenda.schedule&&FILMS&&FILMS.length){
+    state.update('savedAgenda', a=>({...a, schedule: syncScheduleWithCatalog(a.schedule, FILMS)}));
+  }
   // Persistir en local (identidad de arrays/Sets vía globals bridgeados).
   storage.setWatchlist(watchlist);storage.setWatched(watched);
   storage.setPrioritized(prioritized);storage.setSavedAgenda(savedAgenda);

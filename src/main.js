@@ -98,7 +98,7 @@ import { runCalc } from './controller/calc.js';
 
 // ── Step 7b: controller/persistence.js — saves + cloud sync + Supabase auth. ──
 import {
-  saveWL, saveWatched, saveRating, saveAV, saveSavedAgenda, savePrio, saveLastSlot, saveDelays, saveState, loadState, _cloudLoad, _cloudSave, _sbUpdateUI, submitAuthEmail, submitOTP, deleteAccount, signOutAndClose, setPlanRerender,
+  saveWL, saveWatched, saveRating, saveAV, saveSavedAgenda, savePrio, saveLastSlot, saveDelays, saveState, loadState, _cloudLoad, _cloudSave, _sbUpdateUI, submitAuthEmail, submitOTP, deleteAccount, signOutAndClose, setPlanRerender, _applyCloudRow,
 } from './controller/persistence.js';
 
 // ── Step 7c: controller/pipeline.js — render dispatchers. ────────────────────
@@ -447,7 +447,7 @@ FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202607310837';
+const BUILD_VERSION='202607310939';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';
@@ -1322,6 +1322,10 @@ document.addEventListener('click', function(e){
     // NOTICES.push(...) → limpiar cfg.films → loadFestival() → el sellado del
     // loader. Era la única ruta crítica sin test: se verificaba a mano.
     NOTICES,
+    // _applyCloudRow: la puerta por donde entra el plan desde la nube — expuesta
+    // para que la suite pueda ejercer su normalización contra el catálogo
+    // (syncScheduleWithCatalog) sin montar Supabase. Solo tests.
+    _applyCloudRow,
     _renderProgramaContent, closeAuthSheet, closePelSheet, loadFestival, normTitle,
     openAuthSheet, openPelSheet, openRatingSheet, openCortoSheet, renderAgenda,
     render, saveSavedAgenda, saveState, savePrio, saveWL, saveWatched, searchOpen,
