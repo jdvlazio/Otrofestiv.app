@@ -6,6 +6,7 @@ import { DAYS, dayLabel, starsText, vcfg, getFilmPoster, getCortoItemPoster } fr
 import { parseProgramTitle, _sectionColor } from '../view/components.js';
 import { showToast } from '../view/feedback.js';
 import { _festDate } from '../domain/time.js';
+import { blockDuration } from '../domain/film.js';
 import { t } from '../i18n/i18n.js';
 import { _getDisplayName, _promptDisplayName } from './auth.js';  // share→auth (sharePlan pide nombre)
 
@@ -298,8 +299,11 @@ export async function exportICS(){
     const dateStr=FESTIVAL_DATES[s.day];if(!dateStr) return;
     const start=_festDate(dateStr,to24h(s.time));
     if(isNaN(start.getTime())) return; // skip si fecha inválida
-    const dur=s.duration?parseInt(String(s.duration)):90;
-    const end=new Date(start.getTime()+(isNaN(dur)?90:dur)*60000);
+    // blockDuration — el MISMO fin de bloque que Mi Plan (con anclaje: la función
+    // entera, no la obra suelta). parseInt(duration)||90 exportaba "18:00→18:05"
+    // para una obra anclada cuyo bloque real termina 19:51 (la mentira de la
+    // captura del 31 jul, fugada al calendario del teléfono).
+    const end=new Date(start.getTime()+blockDuration(s)*60000);
     const clean=str=>(str||'').replace(/[\r\n,;\\]/g,' ').trim();
     lines.push('BEGIN:VEVENT',
       `DTSTART:${fmt(start)}`,`DTEND:${fmt(end)}`,
@@ -323,8 +327,8 @@ export async function exportICS(){
       const dateStr=FESTIVAL_DATES[s.day]; if(!dateStr) return;
       const start=_festDate(dateStr,to24h(s.time));
       if(isNaN(start.getTime())) return;
-      const dur=s.duration?parseInt(String(s.duration)):90;
-      const end=new Date(start.getTime()+(isNaN(dur)?90:dur)*60000);
+      const end=new Date(start.getTime()+blockDuration(s)*60000); // mismo fin que el ICS
+
       events.push({
         title:_clean(s._title),
         start:start.getTime(),

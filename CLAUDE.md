@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `81695fb fix(design): la banda AVISOS respira igual arriba y abajo (#490) (#490)`
+> Último commit: `4e17274 fix(plan): el plan guardado se re-deriva del catalogo en cada hidratacion (#491) (#491)`
 
 ---
 

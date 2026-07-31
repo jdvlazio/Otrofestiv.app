@@ -167,7 +167,7 @@ function extractObject(source, name) {
 }
 
 const DEFAULT_FNS = [
-  'toMin', 'minToStr', 'parseDur', 'blockDuration', 'effectiveDuration',
+  'toMin', 'minToStr', 'parseDur', 'blockDuration', 'effectiveDuration', 'durationForTravel', 'screeningEndDate',
   'screeningEndMin', 'screeningEnded', 'screeningNow',
   '_resolveVenue', 'venueTravelMins', 'travelMins',
   'screensConflict',

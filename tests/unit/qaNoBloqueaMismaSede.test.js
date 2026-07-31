@@ -13,7 +13,7 @@ const assert = require('node:assert');
 const { loadDomain } = require('../lib/load-domain.js');
 
 const { screensConflict, screensConflictReason } = loadDomain({
-  functions: ['toMin', 'parseDur', 'blockDuration', '_resolveVenue', 'effectiveDuration',
+  functions: ['toMin', 'parseDur', 'blockDuration', 'durationForTravel', '_resolveVenue', 'effectiveDuration',
               'venueTravelMins', 'travelMins', 'screensConflict', 'screensConflictReason'],
   globals: {
     FESTIVAL_BUFFER: 15,

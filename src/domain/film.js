@@ -151,6 +151,16 @@ export function effectiveDuration(f){
   return parseDur(f&&f.duration)+(f&&f.has_qa?30:0);
 }
 
+// durationForTravel — LA DOCTRINA DEL Q&A en un solo dueño (30 jul 2026):
+// el Q&A (+30 estimados) solo compromete tu tiempo cuando salir cuesta algo,
+// es decir cuando hay TRASLADO a otra sede. Misma sede → el fin duro es el
+// bloque (blockDuration) y el Q&A queda como advertencia, no como muro.
+// Antes esta decisión vivía inline en screensConflict/Reason (_qaCuenta) y
+// re-escrita a mano en la vista de delays — dos sitios que podían divergir.
+export function durationForTravel(f,travel){
+  return travel>0?effectiveDuration(f):blockDuration(f);
+}
+
 export function screeningPassed(s){
   if(festivalEnded()) return false; // festival terminado — todo vuelve a plena opacidad
   const dateStr=FESTIVAL_DATES[s.day];
@@ -167,6 +177,17 @@ export function screeningPassed(s){
 // screeningEndMin (effectiveDuration = parseDur + Q&A). NOTA: screeningPassed
 // (arriba) es OTRO concepto — "ya no llegás" (arranque+10 de gracia), no "terminó".
 export function screeningEndMin(s){ return toMin(s.time)+effectiveDuration(s); }
+// screeningEndDate — el MISMO fin canónico, como instante absoluto (cruza días).
+// Dueño único del filtro "esta entrada del plan ya terminó": renderUnconfirmed y
+// _updateMiPlanBadge lo reconstruían por separado, y el "terminó hace X min"
+// usaba OTRO fin (blockDuration) en la misma frase que el filtro (effective).
+export function screeningEndDate(s){
+  const dateStr=FESTIVAL_DATES[s.day];
+  if(!dateStr) return null;
+  const end=_festDate(dateStr,s.time);
+  end.setMinutes(end.getMinutes()+effectiveDuration(s));
+  return end;
+}
 export function screeningEnded(s,nowMin){ return screeningEndMin(s)<=nowMin; }
 export function screeningNow(s,nowMin){ return toMin(s.time)<=nowMin&&!screeningEnded(s,nowMin); }
 

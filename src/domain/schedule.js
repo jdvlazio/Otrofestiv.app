@@ -15,7 +15,7 @@
 
 import { FESTIVAL_BUFFER } from "../config.js";
 import { toMin, parseDur } from "./time.js";
-import { effectiveDuration, blockDuration, screeningPassed, shuffle, scoreFilm, _titleSeed, _mulberry32 } from "./film.js";
+import { effectiveDuration, blockDuration, durationForTravel, screeningPassed, shuffle, scoreFilm, _titleSeed, _mulberry32 } from "./film.js";
 import { travelMins } from "./festival.js";
 export function screensConflict(a,b){
   // Eventos informativos (info:true) — drop-in / sin hora fija: nunca generan
@@ -37,9 +37,9 @@ export function screensConflict(a,b){
   // MISMO Cine York — 39 min entre películas, el festival lo programó para que
   // se pudiera, y la app la excluía por 9<15 contando el Q&A estimado.
   const travel=(a.venue&&b.venue)?travelMins(a.venue,b.venue):0;
-  const _qaCuenta=travel>0;
-  const aS=toMin(a.time), aE=aS+(_qaCuenta?effectiveDuration(a):blockDuration(a));
-  const bS=toMin(b.time), bE=bS+(_qaCuenta?effectiveDuration(b):blockDuration(b));
+  // durationForTravel = la doctrina del Q&A (dueño único en domain/film.js)
+  const aS=toMin(a.time), aE=aS+durationForTravel(a,travel);
+  const bS=toMin(b.time), bE=bS+durationForTravel(b,travel);
   const minGap=Math.max(FESTIVAL_BUFFER, travel+FESTIVAL_BUFFER);
   if(aE<=bS) return (bS-aE)<minGap; // a antes que b
   if(bE<=aS) return (aS-bE)<minGap; // b antes que a
@@ -69,8 +69,8 @@ export function screensConflictReason(a,b){
   if(!screensConflict(a,b)) return null;
   // Mismos fines que screensConflict (Q&A solo cuenta si hay traslado).
   const _tv=(a.venue&&b.venue)?travelMins(a.venue,b.venue):0;
-  const aS=toMin(a.time), aE=aS+(_tv>0?effectiveDuration(a):blockDuration(a));
-  const bS=toMin(b.time), bE=bS+(_tv>0?effectiveDuration(b):blockDuration(b));
+  const aS=toMin(a.time), aE=aS+durationForTravel(a,_tv);
+  const bS=toMin(b.time), bE=bS+durationForTravel(b,_tv);
   if(aE>bS && bE>aS) return {kind:'solape'}; // ninguno termina antes de que arranque el otro
   const bFirst = bE<=aS;
   const gap = bFirst ? (aS-bE) : (bS-aE);
