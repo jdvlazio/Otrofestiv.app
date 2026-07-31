@@ -16,7 +16,7 @@ import {
   DAYS, DAY_SHORT_EN, _dayChips, _lblLocalized, _minFmt, _mkCortoItemHtml, _posterThumb, getCortoItemPoster, itemPosterParts, posterParts, dayChip, dayLabel, dayLabelLong, durFmt, emptyState, emptyStateHero, flagFmt, getFilmPoster, isToday, mplanBlockType, mplanEndStr, sala, starsText, travelWarn, vcfg, delayConsensusBadge,
 } from './helpers.js';
 import {
-  _festDate, _festNowMin, festivalEnded, minToStr, parseDur, simNow, simTodayStr, toMin,
+  _festDate, _festNowMin, festivalEnded, minToStr, simNow, simTodayStr, toMin,
 } from '../domain/time.js';
 // Consenso colaborativo de retraso (Fase B): renderAgenda (impura/exenta) lo lee
 // del controller y lo pasa como dato a las funciones puras del view.
@@ -26,7 +26,7 @@ import { cloudScreeningKey } from '../domain/delays.js';
 // Es la ÚNICA dependencia view→controller permitida (fijada en validate.py [view-purity]).
 import { getConsensusMap } from '../controller/delays-cloud.js';
 import {
-  screeningPassed, screeningEnded, screeningNow, effectiveDuration,
+  screeningPassed, screeningEnded, screeningNow, screeningEndDate, effectiveDuration, blockDuration, durationForTravel, delayedEndMin, _delayKey,
 } from '../domain/film.js';
 import {
   isScreeningBlocked, screensConflict, screensConflictReason,
@@ -163,6 +163,31 @@ export function renderAgenda(){
   }
 }
 
+// ── ANCLAJE en Mi Plan ────────────────────────────────────────────────────────
+// Dos obras del MISMO slot son UNA sola función: el festival las programa seguidas
+// bajo una única hora (FINCA 2026: 6 casos). El dominio ya lo sabía —screensConflict
+// no las declara en conflicto, effectiveDuration usa _slotMin— pero Mi Plan seguía
+// tratándolas como funciones rivales: medía el hueco entre ellas, avisaba "Q&A · si
+// te quedás no llegás a la siguiente" (el Q&A es UNO, al final de la función
+// completa) y mostraba el fin de cada obra por separado, así que un corto de 5 min
+// decía que salías 18:05 cuando la función terminaba 19:51. (Bug visto por Juan en
+// producción, 30 jul 2026.)
+function _slotKeyOf(e){
+  if(e&&e._slotKey) return e._slotKey;
+  // Las entradas guardadas antes de que existiera _slotKey no lo traen: se resuelve
+  // contra FILMS, que es donde el loader lo sella.
+  const f=FILMS.find(fi=>fi.title===e._title&&fi.day===e.day&&fi.time===e.time);
+  return (f&&f._slotKey)||null;
+}
+function _slotMembers(k){ return k?FILMS.filter(f=>f._slotKey===k):[]; }
+function _slotHasQa(e){
+  const m=_slotMembers(_slotKeyOf(e));
+  return m.length?m.some(f=>f.has_qa):!!e.has_qa;
+}
+function _mismaFuncion(a,b){
+  const ka=_slotKeyOf(a); return !!ka&&ka===_slotKeyOf(b);
+}
+
 export function renderMiPlanCalendar(state){
   const {savedAgenda, FILMS, prioritized, watched, filmRatings, FESTIVAL_DATES} = state.snapshot();
   if(!savedAgenda||!savedAgenda.schedule.length) return'';
@@ -200,7 +225,7 @@ export function renderMiPlanCalendar(state){
   const _visSched=schedule.filter(s=>_visDays.has(s.day));
   const _src=_visSched.length?_visSched:schedule;
   const _allMins=_src.flatMap(s=>{
-    const st=toMin(s.time), en=st+parseDur(s.duration);
+    const st=toMin(s.time), en=st+blockDuration(s);
     return[st,en];
   });
   const _minStart=Math.min(..._allMins);
@@ -270,8 +295,20 @@ export function renderMiPlanCalendar(state){
     }
 
     // Film blocks
-    const blocksHtml=dayFilms.map(s=>{
-      const fMin=toMin(s.time),dur=parseDur(s.duration);
+    // ANCLAJE: las obras del MISMO slot son UNA función → UN bloque. Antes se
+    // dibujaba un bloque por obra: dos bloques encimados arrancando a la misma
+    // hora, uno de 106 min y otro de 5 min montado encima. La función se dibuja
+    // completa —el bloque mide lo que dura el conjunto— y lista TODAS sus obras,
+    // que es lo único que le dice al usuario a qué está entrando.
+    const _bloques=[];
+    dayFilms.forEach(fx=>{
+      const k=_slotKeyOf(fx);
+      const g=k?_bloques.find(x=>x.k===k):null;
+      if(g) g.items.push(fx); else _bloques.push({k:k||null,items:[fx]});
+    });
+    const blocksHtml=_bloques.map(_grp=>{
+      const s=_grp.items[0];
+      const fMin=toMin(s.time),dur=blockDuration(s);
       const top=PHDR+toPx(fMin);
       const blockH=Math.max(dur/60*PPH-4,20);
       const isPast=isPastDay||(isToday&&screeningEnded(s,nowMin));
@@ -288,7 +325,7 @@ export function renderMiPlanCalendar(state){
       return`<div class="mplan-wk-block ${type}${stateClass}" style="top:${top.toFixed(0)}px;height:${blockH.toFixed(0)}px" data-fkey="${(s._title||'')}${s.time}" data-action="activatePlanFilm" data-day-index="${i}" data-stop="1" title="${(s._title||'').replace(/"/g,'&quot;')}">
         ${isPrio?`<div class="mplan-wk-badge">${ICONS.bookmarkFill}</div>`:''}
         <div class="mplan-wk-time${isEvent?' mp-event-time':''}">${s.time}</div>
-        <div class="mplan-wk-title${isEvent?' mp-event-title':''}">${displayTitle}</div>
+        ${_grp.items.map(it=>`<div class="mplan-wk-title${isEvent?' mp-event-title':''}${_grp.items.length>1?' mp-multi':''}">${parseProgramTitle(it._title||'').displayTitle}</div>`).join('')}
         ${showVenue?`<div class="mplan-wk-venue">${ICONS.pin} ${vc2.short}</div>`:''}
       </div>`;
     }).join('');
@@ -329,7 +366,7 @@ export function renderMiPlanCalendar(state){
     }
   } else {
     dayFilms.forEach((s,idx)=>{
-      const fMin=toMin(s.time),dur=parseDur(s.duration);
+      const fMin=toMin(s.time),dur=blockDuration(s);
       const isPast=isPastDay||(activeMiPlanDay===nowDayIdx&&screeningEnded(s,nowMin));
       const isNow=activeMiPlanDay===nowDayIdx&&screeningNow(s,nowMin);
       // F1 (Diario, 17 jul): el estado Vista vive EN LA FILA (in-situ, modelo
@@ -338,20 +375,38 @@ export function renderMiPlanCalendar(state){
       const isSeen=watched.has(s._title);
       const _rowStars=(isSeen&&filmRatings[s._title])?starsText(filmRatings[s._title]):'';
       const safeT=(s._title||'').replace(/"/g,'&quot;');
-      if(idx>0){
+      // Entre dos obras de la MISMA función no hay hueco que medir, ni traslado, ni
+      // "no llegás a la siguiente": la siguiente ES la misma función.
+      if(idx>0&&!_mismaFuncion(dayFilms[idx-1],s)){
         const prev=dayFilms[idx-1];
-        const gap=fMin-(toMin(prev.time)+parseDur(prev.duration));
+        const gap=fMin-(toMin(prev.time)+blockDuration(prev));
         if(gap>=0&&gap<25){
           const _isCritical=gap<=5;
           listHtml+=`<div class="mplan-warn-row" style="${_isCritical?'color:var(--red)':''}">${ICONS.alert} ${_isCritical?t('warn_sin_tiempo'):`~${gap} ${t('warn_min_hasta_sig')}`}</div>`;
         }
-        if(prev.has_qa){const qaGap=gap-30;qaGap<0?listHtml+=`<div class="mplan-warn-row" style="color:var(--red)">${t('warn_qa_no_llega')}</div>`:listHtml+=`<div class="mplan-warn-row">${t('warn_qa_tiempo',{n:qaGap})}</div>`;}
+        if(_slotHasQa(prev)){const qaGap=gap-30;qaGap<0?listHtml+=`<div class="mplan-warn-row" style="color:var(--red)">${t('warn_qa_no_llega')}</div>`:listHtml+=`<div class="mplan-warn-row">${t('warn_qa_tiempo',{n:qaGap})}</div>`;}
         const tw=travelWarn(prev,s);
         if(tw) listHtml+=`<div class="mplan-warn-row">${tw}</div>`;
       }
       const _rowKey=(s._title||'')+s.time;
       const _safeRowKey=_rowKey.replace(/"/g,'&quot;');
       const _mf=FILMS.find(fi=>fi.title===s._title);const _mp=_mf?getFilmPoster(_mf):null;
+      // ── La función de tu Plan ya no existe ──────────────────────────────────
+      // El loader sella el aviso en la función: una cancelada queda con
+      // `_cancelled`, y una reprogramada MUEVE su día/hora (la verdad es la
+      // nueva). Así que una entrada guardada que no encuentra su función exacta
+      // es una que se movió, y una que la encuentra cancelada es una que se cayó.
+      // NUNCA se borra en silencio: se marca y el usuario decide. Sacarle a
+      // alguien una función del Plan sin avisar es peor que el aviso mismo.
+      const _scr=FILMS.find(fi=>fi.title===s._title&&fi.day===s.day&&fi.time===s.time);
+      const _void=_scr?!!_scr._cancelled:!!(_mf&&(_mf._movedFrom||FILMS.some(fi=>fi.title===s._title&&fi._movedFrom)));
+      const _voidCanc=!!(_scr&&_scr._cancelled);
+      const _voidBadge=_void
+        ?`<span class="notice-badge">${_voidCanc?t('notice_cancelada'):t('notice_reprog_short')}</span>`:'';
+      // La salida, en la propia fila: el badge dice QUÉ pasó, el botón dice QUÉ
+      // HAGO. Sin él la entrada quedaba marcada y sin camino.
+      const _voidFix=_void
+        ?`<button class="suggestion-add mplan-fix" data-title="${safeT}" data-action="planFixNotice" data-stop="1">${_voidCanc?t('plan_fix_cancelada'):t('plan_fix_movida')}</button>`:'';
       const _isEventRow=_mf&&_mf.type==='event';
       const _safeMpT=(s._title||"").replace(/'/g,"\\'");
       const _mphInner=_mp
@@ -363,8 +418,8 @@ export function renderMiPlanCalendar(state){
       listHtml+=`<div class="mplan-row${_rowKey===_activeMiPlanFilm?' active':''}${isSeen?' mp-seen':''}" style="cursor:pointer" data-rkey="${_safeRowKey}" data-action="selectFromDetail">
         ${_mph}
         <div class="mplan-ri">
-          <div class="mplan-t1${isPast?' mp-past':''}" ${!isPast?`data-action="toggleFilmAlternatives" data-key="${(s._title||'')+(s.day||'')+(s.time||'')}" data-title="${safeT}" data-day="${s.day||''}" data-time="${s.time||''}" data-stop="1"`:''} title="${!isPast?t('tooltip_cambiar_horario'):''}">${s.time}</div>
-          <div class="mplan-t2">${mplanEndStr(s.time,dur)}${prioritized.has(s._title)?` <span class="txt-amber60-xs">${ICONS.bookmarkFill}</span>`:''}${_rowStars?` <span class="txt-amber-sm">${_rowStars}</span>`:''}${isNow?` <span class="txt-green-semi">${t('label_en_curso_min')}</span>`:''}</div>
+          <div class="mplan-t1${isPast?' mp-past':''}${_void?' mp-void-t':''}" ${!isPast?`data-action="toggleFilmAlternatives" data-key="${(s._title||'')+(s.day||'')+(s.time||'')}" data-title="${safeT}" data-day="${s.day||''}" data-time="${s.time||''}" data-stop="1"`:''} title="${!isPast?t('tooltip_cambiar_horario'):''}">${s.time}</div>
+          <div class="mplan-t2">${_voidBadge}${_void?`<span class="mp-void-t">${mplanEndStr(s.time,dur)}</span>`:mplanEndStr(s.time,dur)}${_voidFix}${prioritized.has(s._title)?` <span class="txt-amber60-xs">${ICONS.bookmarkFill}</span>`:''}${_rowStars?` <span class="txt-amber-sm">${_rowStars}</span>`:''}${isNow?` <span class="txt-green-semi">${t('label_en_curso_min')}</span>`:''}</div>
           <div>${(()=>{const{displayTitle:_dt,progSuffix:_ps}=parseProgramTitle(s._title||'');const _mfqa=FILMS.find(fi=>fi.title===s._title&&fi.day===s.day&&fi.time===s.time);const _qab=_mfqa?.has_qa?`<span class="meta-badge sm">Q&A</span>`:'';return`<div class="mplan-rtitle${_isEventRow?' mp-event-title':''}">${_dt}${_qab}</div>${_ps?`<div class="prog-suffix">${_ps}</div>`:''}`;})()} </div>
           <div class="mplan-rvenue${_isEventRow?' mp-event-venue':''}">${ICONS.pin} ${vcfg(s.venue).short}${sala(s.venue)?' \u00b7 '+sala(s.venue):''}</div>
           ${(()=>{const _mf=FILMS.find(fi=>fi.title===s._title&&fi.day===s.day&&fi.time===s.time);if(!_mf||!_mf.is_cortos||!_mf.film_list||!_mf.film_list.length) return'';return`<button class="row-xs mplan-prog-toggle" data-action="toggleMplanProg">${ICONS.chevronR} ${t('label_programa')}</button>`;})()}
@@ -410,10 +465,8 @@ export function renderUnconfirmed(state,schedule){
   const now=simNow();
   const past=schedule.filter(s=>{
     if(watched.has(s._title)) return false;
-    const dateStr=FESTIVAL_DATES[s.day];if(!dateStr) return false;
-    const end=_festDate(dateStr,s.time);
-    end.setMinutes(end.getMinutes()+effectiveDuration(s)); // fin canónico (Q&A incluido)
-    return end<now;
+    const end=screeningEndDate(s); // fin canónico único (Q&A incluido)
+    return end&&end<now;
   }).sort((a,b)=>{
     const da=_festDate(FESTIVAL_DATES[a.day],a.time);
     const db=_festDate(FESTIVAL_DATES[b.day],b.time);
@@ -426,8 +479,9 @@ export function renderUnconfirmed(state,schedule){
   const latest=past[0];const older=past.slice(1);
   const{displayTitle}=parseProgramTitle(latest._title||'');
   const short=displayTitle.length>28?displayTitle.slice(0,26)+'…':displayTitle;
-  const endMs=_festDate(FESTIVAL_DATES[latest.day],latest.time).getTime()+parseDur(latest.duration)*60000;
-  const minsAgo=Math.round((now.getTime()-endMs)/60000);
+  // MISMO fin que el filtro de arriba: antes "terminó hace X" medía desde
+  // blockDuration mientras el filtro usaba effective — dos relojes en una frase.
+  const minsAgo=Math.round((now.getTime()-screeningEndDate(latest).getTime())/60000);
   const timeDesc=minsAgo<120?`${t('plan_termino_hace')} ${minsAgo} min`:`${dayLabel(latest.day)} · ${latest.time}`;
   const safeLast=latest._title.replace(/"/g,'&quot;').replace(/'/g,"&#39;");
   const olderHtml=older.length?`
@@ -648,7 +702,7 @@ export function renderContextualHeader(state, consensus){
     //   ❌ "Ahora"           — redundante con eyebrow
     //   Todo estado nuevo debe pasar este filtro antes de añadir badge.
     const _nowMin=_festNowMin();
-    const _endMin=toMin(next.time)+parseDur(next.duration)+(filmDelays[_delayKey(next)]||0);
+    const _endMin=delayedEndMin(next); // fin de bloque + retraso (dueño único)
     const _leftMin=Math.max(0,_endMin-_nowMin);
     // Horas + minutos cuando pasa de 59 min ("En 5 h 35"), minutos pelados por debajo
     // ("En 45 min") — pedir "335 min" obliga a calcular (regla de Juan, 17 jul).
@@ -686,9 +740,10 @@ export function renderContextualHeader(state, consensus){
           .sort((a,b)=>toMin(a.time)-toMin(b.time));
         const nextFilm=upcoming[0];
         if(nextFilm&&nextFilm.day===next.day){
-          const dur=parseDur(next.duration);
-          const effectiveEndMin=toMin(next.time)+dur+delayMins;
-          const travel=travelMins(next.venue,nextFilm.venue);
+          const _tv=travelMins(next.venue,nextFilm.venue);
+          // delayedEndMin = doctrina del Q&A + retraso reportado (dueño único)
+          const effectiveEndMin=delayedEndMin(next,_tv);
+          const travel=_tv;
           const margin=toMin(nextFilm.time)-(effectiveEndMin+FESTIVAL_BUFFER+travel);
           const{displayTitle:nt}=parseProgramTitle(nextFilm._title||'');
           const nShort=nt.length>26?nt.slice(0,24)+'…':nt;
@@ -1456,7 +1511,7 @@ export function getSuggestions(){
     if(!slotFree) return; // slot ocupado — cae a Bloque 2
     const day=rs.day;
     if(!byDay[day]) byDay[day]=[];
-    byDay[day].push({...rs,gapCtx:'Restaurar al mismo horario',_isRestored:true});
+    byDay[day].push({...rs,_isRestored:true});
     hardExclude.add(rs._title);
     seenDiscover.add(rs._title);
     seenRecovery.add(rs._title);
@@ -1469,24 +1524,24 @@ export function getSuggestions(){
     const slots=[];
     if(dayItems.length===0){
       // Día completamente libre — cubre hasta la 1am
-      slots.push({start:0,end:25*60,ctx:t('plan_dia_libre')});
+      slots.push({start:0,end:25*60});
     } else {
       // Antes de la primera
       if(toMin(dayItems[0].time)>60)
-        slots.push({start:0,end:toMin(dayItems[0].time)-FESTIVAL_BUFFER,ctx:`Antes de ${(dayItems[0]._title||'').split(' ').slice(0,3).join(' ')}…`});
+        slots.push({start:0,end:toMin(dayItems[0].time)-FESTIVAL_BUFFER});
       // Entre funciones — cualquier hueco positivo (el chequeo fStart/fEnd filtra lo imposible)
       for(let i=0;i<dayItems.length-1;i++){
         const a=dayItems[i],b=dayItems[i+1];
-        const aEnd=toMin(a.time)+parseDur(a.duration)+FESTIVAL_BUFFER;
+        const aEnd=toMin(a.time)+blockDuration(a)+FESTIVAL_BUFFER;
         const bStart=toMin(b.time)-FESTIVAL_BUFFER;
         if(bStart>aEnd)
-          slots.push({start:aEnd,end:bStart,ctx:`Entre ${(a._title||'').split(' ').slice(0,3).join(' ')}… y ${(b._title||'').split(' ').slice(0,3).join(' ')}…`});
+          slots.push({start:aEnd,end:bStart});
       }
       // Después de la última — siempre se crea, extiende hasta la 1am
       // Bug fix: el if(lastEnd<22*60) cortaba noches con película tardía (ej: 20:00+90min=22:10 → sin slot)
       const last=dayItems[dayItems.length-1];
-      const lastEnd=toMin(last.time)+parseDur(last.duration)+FESTIVAL_BUFFER;
-      slots.push({start:lastEnd,end:25*60,ctx:`Después de ${(last._title||'').split(' ').slice(0,3).join(' ')}…`});
+      const lastEnd=toMin(last.time)+blockDuration(last)+FESTIVAL_BUFFER;
+      slots.push({start:lastEnd,end:25*60});
     }
 
     // Bloque 1 — Descubrimiento: películas del festival que quepan en huecos
@@ -1494,8 +1549,10 @@ export function getSuggestions(){
     if(slots.length){
       FILMS.forEach(f=>{
         if(seenDiscover.has(f.title)||screeningPassed(f)||f.day!==day||isScreeningBlocked(f)) return;
-        const fStart=toMin(f.time),fEnd=fStart+parseDur(f.duration);
+        const fStart=toMin(f.time),fEnd=fStart+blockDuration(f);
         // Verificar que hay un slot de tiempo (check rápido)
+        // gapCtx retirado (31 jul 2026): se calculaba un rótulo por slot ("Antes de
+        // X…", en ES hardcodeado) que NINGÚN consumidor renderizaba. Payload muerto.
         const slot=slots.find(sl=>fStart>=sl.start&&fEnd<=sl.end&&fEnd-fStart>=20);
         if(!slot) return;
         // Verificar que no conflictúa con ningún item del plan activo (incluye travel time)
@@ -1503,7 +1560,7 @@ export function getSuggestions(){
         if(noConflict){
           seenDiscover.add(f.title);seenRecovery.add(f.title);
           if(!byDay[day]) byDay[day]=[];
-          byDay[day].push({...f,gapCtx:slot.ctx});
+          byDay[day].push({...f});
         }
       });
     }
@@ -1518,7 +1575,7 @@ export function getSuggestions(){
         if(noConflict){
           seenRecovery.add(f.title);seenDiscover.add(f.title);
           if(!byDay[day]) byDay[day]=[];
-          byDay[day].push({...f,gapCtx:t('misc_sugerencias_wl'),_isFromWL:true});
+          byDay[day].push({...f,_isFromWL:true});
         }
       });
     });
@@ -1537,7 +1594,6 @@ export function getSuggestions(){
   return byDay;
 }
 
-export function _delayKey(s){return(s._title||s.title||'')+'|'+(s.day||'')+'|'+(s.time||'');}
 
 export function _fixStickyOffset(){
   const tb=document.querySelector('.topbar');
@@ -1581,7 +1637,7 @@ export function _scrollMiPlanToNow(){
     // Calcular SH igual que renderMiPlanCalendar (usamos plan completo como fallback)
     if(!savedAgenda || !savedAgenda.schedule.length) return;
     const allMins = savedAgenda.schedule.flatMap(s => {
-      const st = toMin(s.time), en = st + parseDur(s.duration);
+      const st = toMin(s.time), en = st + blockDuration(s);
       return [st, en];
     });
     const SH = Math.max(9, Math.floor((Math.min(...allMins) - 30) / 60));
@@ -1600,10 +1656,8 @@ export function _updateMiPlanBadge(){
   const now=simNow();
   const count=savedAgenda.schedule.filter(s=>{
     if(watched.has(s._title)) return false;
-    const dateStr=FESTIVAL_DATES[s.day]; if(!dateStr) return false;
-    const end=_festDate(dateStr,s.time);
-    end.setMinutes(end.getMinutes()+effectiveDuration(s)); // fin canónico (Q&A incluido)
-    return end<now;
+    const end=screeningEndDate(s); // fin canónico único — mismo filtro que renderUnconfirmed
+    return end&&end<now;
   }).length;
   if(count>0){
     badge.textContent=count>9?'9+':String(count);

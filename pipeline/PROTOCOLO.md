@@ -38,6 +38,33 @@ La configuración de un festival (nombre, fechas, días, storageKey, etc.) vive 
 gate (config{} en el JSON = error). El engine ignora silenciosamente cualquier config dentro del JSON.
 (Corrige una versión vieja de este doc que decía "config{} en el JSON, sincronizado" — eso ya no aplica.)
 
+## Ensamblado — del CSV al JSON
+
+```bash
+node scripts/csv-to-festival.js <in.csv> festivals/<id>.json [--anclaje|--separadas]
+```
+
+El ensamblador **no emite el JSON** si encuentra proyecciones conjuntas sin modelo
+decidido: dos o más obras en el mismo día+hora+sede+sala exigen una decisión contra
+el programa oficial (doctrina completa en `docs/SCHEMA.md` § Proyecciones conjuntas).
+
+| Situación | Qué hacer |
+|---|---|
+| El festival le puso **nombre** al conjunto | Modelarlo como **Programa**: fila `is_cortos` + `film_list` |
+| Obras independientes en **una** función | Re-correr con `--anclaje` → activa `sharedSlotIsOneScreening` |
+| Funciones de verdad **separadas** (multisala, paralelas) | Re-correr con `--separadas` y anotar el slot en `_SEPARATE` de `validate.py` |
+
+Es el mismo criterio que el guardián `[slots-sin-decidir]` de CI, pero atrapado en el
+minuto uno del onboarding en vez de al final. Cinemancia 2025 quedó en ese limbo —
+corto+largo de una misma función tratados como rivales— y nadie lo notó.
+
+Al terminar, el ensamblador imprime el comando de `generate-config.js` con los
+argumentos ya derivados del propio dato: un flujo, no dos pasos sueltos.
+
+> La plantilla se mantiene al día sola: el guardián `[template-al-dia]` falla si un
+> campo que usan los dos festivales más recientes no está en `festival-template.json`.
+> Es lo que evitó que FINCA volviera a dejarla atrás (usó 10 campos que no enseñaba).
+
 ## El pipeline — siempre en este orden
 
 > ⚠️ **Regla global: ningún festival llega a producción sin completar los 5 pasos.**
@@ -267,10 +294,10 @@ Siempre emoji de banderas: `"🇨🇴"`, `"🇦🇷🇫🇷"`
 ## Archivos de referencia en este repositorio
 
 ```
-/pipeline/
-  PROTOCOLO.md          ← este archivo
-  festival-template.json ← molde JSON vacío con comentarios
-  csv-template.csv       ← template para organizadores
+/pipeline/                ← DUEÑO ÚNICO de la plantilla de onboarding
+  PROTOCOLO.md            ← este archivo
+  festival-template.json  ← molde JSON comentado (los 4 tipos de entrada + doctrina)
+  csv-template.csv        ← template para organizadores (entrada del ensamblador)
 
 /festivals/
   aff-2026.json          ← AFF 2026 (producción)

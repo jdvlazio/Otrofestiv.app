@@ -1818,6 +1818,54 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar chrome-glass: {_e}')
 
+# ── [no-animated-blur] el desenfoque NO se anima: se anima su opacidad ─────────
+# Lección del 28 jul 2026, encontrada sobre una grabación de pantalla del iPhone
+# de Juan: el WKWebView de iOS NO interpola backdrop-filter — salta al valor
+# final en ~4 frames, y se siente como si no hubiera transición. Playwright y
+# WebKit de escritorio SÍ interpolan, así que el bug es INVISIBLE en CI y en el
+# navegador del Mac: costó tres intentos fallidos descubrirlo.
+# El patrón correcto: blur FIJO en la capa + animar su opacity — el compositor
+# mezcla nítido y desenfocado, la progresión es real en todos los motores y
+# encima es más barato (el blur se calcula una vez, no por frame).
+# ── [aviso-antes-sinopsis] los meta-banner van SIEMPRE antes de la sinopsis ────
+# El mismo aviso ("función compartida") vivía en dos sitios: tras la función en
+# la ficha de película y tras la sinopsis en la de corto — se movió uno y en el
+# otro solo se cambió el texto. Un concepto en dos lugares es un concepto que el
+# usuario aprende dos veces. Ver docs/DESIGN.md §8.4.4.
+check = 'aviso-antes-sinopsis'
+try:
+    _src = open('src/controller/sheets-controller.js', encoding='utf-8').read()
+    _mal = []
+    for _blk in _src.split('document.getElementById('):
+        _ib = _blk.find('meta-banner-label')
+        _is = _blk.find('pel-sheet-synopsis')
+        if _ib != -1 and _is != -1 and _ib > _is:
+            _mal.append(_blk[:60].strip().replace('\n', ' '))
+    if _mal:
+        fail(check, 'meta-banner DESPUÉS de la sinopsis (§8.4.4: los avisos van antes): ' + '; '.join(_mal[:3]))
+    else:
+        ok(check, 'los meta-banner van antes de la sinopsis en toda superficie')
+except Exception as _e:
+    warn(check, f'no se pudo verificar aviso-antes-sinopsis: {_e}')
+
+check = 'no-animated-blur'
+try:
+    import re as _re
+    _html = open('index.html', encoding='utf-8').read()
+    _errs = []
+    for _m in _re.finditer(r'([^{}]+)\{([^}]*)\}', _html):
+        _sel = _m.group(1).strip().splitlines()[-1].strip()
+        _body = _m.group(2).replace('\n', ' ')
+        for _tr in _re.findall(r'transition:([^;}]*)', _body):
+            if 'backdrop-filter' in _tr:
+                _errs.append(f'{_sel[:55]}: anima backdrop-filter (usar blur fijo + opacity)')
+    if _errs:
+        fail(check, 'desenfoque animado: ' + '; '.join(_errs[:4]))
+    else:
+        ok(check, 'ningún backdrop-filter en transition — el velo se anima por opacidad')
+except Exception as _e:
+    warn(check, f'no se pudo verificar no-animated-blur: {_e}')
+
 # ── [sheet-spring] TODO bottom-sheet abre spring y cierra ease-in ──────────────
 # Decisión Juan 18 jul 2026: la curva canónica vive en los tokens --sheet-in /
 # --sheet-out. Antes 7 de 8 sheets tenían curvas bespoke (el spring existía solo
@@ -1974,28 +2022,91 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar filter-drop-canon: {_e}')
 
-# ── [poster-morph] transición de póster compartido con degradación limpia ──────
-# Decisión Juan 19 jul: el póster del grid se transforma en el de la ficha (View
-# Transitions). Requisitos que NO pueden desaparecer: (1) el CSS del hero morph
-# en index.html; (2) el fallback en main.js — si se quita el guard de
-# startViewTransition/reduce-motion, rompe la apertura en Safari viejo.
+# ── [poster-morph] viaje del póster: FLIP en el compositor, NUNCA View Transition ──
+# Decisión Juan 19 jul (el póster viaja) + 29 jul (el motor es FLIP). La VT del
+# root produjo TRES fallos solo-en-device (§8.4.2): snapshots que tapan el DOM
+# (velo invisible→golpe), póster fantasma (#443/#444) y texto congelado de la
+# ficha anterior. PROHIBIDO reintroducir startViewTransition en la apertura.
+# ── [poster-radius] un póster = un radio, en TODAS sus superficies ─────────────
+# El póster viaja de la card del grid a la ficha (FLIP). Había TRES radios en un
+# solo viaje —card 12px, ficha 8px, thumb de corto 4px, más un 10px hardcodeado
+# en el JS del vuelo— así que cambiaba de redondez a mitad de trayecto. Un póster
+# es el mismo objeto donde sea que aparezca. Ver docs/DESIGN.md §8.4.5.
+check = 'poster-radius'
+try:
+    import re as _re3
+    _html = open('index.html', encoding='utf-8').read()
+    _SUPERFICIES = ['.poster-card', '.pel-sheet-poster', '.psp-editorial',
+                    '.c-film-thumb', '.pel-sheet-poster-ph', '.pel-sheet-poster-stage']
+    _visto = {k: False for k in _SUPERFICIES}
+    _mal = []
+    # Toda regla cuyo selector nombre una superficie de póster y fije border-radius
+    # debe fijarlo al token. Se recorren TODAS (hay selectores agrupados).
+    for _m in _re3.finditer(r'([^{}]+)\{([^}]*)\}', _html):
+        _sel, _body = _m.group(1), _m.group(2)
+        _br = _re3.search(r'border-radius:\s*([^;}]+)', _body)
+        if not _br:
+            continue
+        for _s2 in _SUPERFICIES:
+            if _re3.search(_re3.escape(_s2) + r'(?![\w-])', _sel):
+                if 'var(--r-poster)' in _br.group(1):
+                    _visto[_s2] = True
+                else:
+                    _mal.append(f"{_s2}: {_br.group(1).strip()}")
+    _falta = [k for k, v in _visto.items() if not v]
+    if _falta:
+        _mal.append('sin --r-poster: ' + ', '.join(_falta))
+    _js = open('src/main.js', encoding='utf-8').read()
+    if _re3.search(r"borderRadius\s*=\s*['\"]\d", _js):
+        _mal.append('radio hardcodeado en el vuelo (main.js) — usar el token')
+    if _mal:
+        fail(check, 'radio de poster desalineado: ' + '; '.join(_mal[:5]))
+    else:
+        ok(check, 'las 6 superficies de poster comparten --r-poster')
+except Exception as _e:
+    warn(check, f'no se pudo verificar poster-radius: {_e}')
+
+# ── [dtab-sin-linea] el dia activo se marca SOLO con color, sin linea ambar ────
+# Decidido 18 may 2026 (964cc6b) y revertido POR ERROR el 18 jul (534b150) al
+# "unificar el lenguaje de activo con .pmode-tab.on": se deshizo una decision
+# anterior sin saber que existia. Este guardian es la memoria de esa decision.
+check = 'dtab-sin-linea'
+try:
+    import re as _re4
+    _html = open('index.html', encoding='utf-8').read()
+    _m = _re4.search(r'\.dtab\.on\{([^}]*)\}', _html)
+    if not _m:
+        fail(check, 'no existe la regla .dtab.on')
+    elif 'border-bottom-color' in _m.group(1) or 'border-bottom:' in _m.group(1):
+        fail(check, 'linea ambar bajo el dia activo reintroducida — el activo va SOLO por color')
+    else:
+        ok(check, 'dia activo marcado solo por color, sin linea')
+except Exception as _e:
+    warn(check, f'no se pudo verificar dtab-sin-linea: {_e}')
+
 check = 'poster-morph'
 try:
     _html = open('index.html', encoding='utf-8').read()
     _mn = open('src/main.js', encoding='utf-8').read()
+    _sc = open('src/controller/sheets-controller.js', encoding='utf-8').read()
     _errs = []
-    if '::view-transition-group(film-poster)' not in _html:
-        _errs.append('falta el CSS del hero morph (view-transition-group)')
+    # El poster NO viaja. Dos intentos, CINCO defectos solo-en-device (DESIGN.md
+    # 8.4.5). Este guardian impide que cualquiera de los dos motores vuelva.
+    if 'startViewTransition' in (_mn + _sc):
+        _errs.append('startViewTransition reintroducido — prohibido (3 fallos device)')
+    if 'poster-flight' in (_mn + _html):
+        _errs.append('clon en vuelo (.poster-flight) reintroducido — prohibido (2 fallos device)')
+    # Lo que SI debe seguir: la costura unica de apertura y el stagger sobre el DOM.
+    if '_openPelMorph' not in _mn or '_morphOpen' not in _mn:
+        _errs.append('falta la costura unica de apertura (_morphOpen/_openPelMorph)')
+    if 'vt-in' not in _html or '@keyframes vtRise' not in _html:
+        _errs.append('falta el stagger de la meta (vt-in / vtRise)')
     if 'prefers-reduced-motion:reduce' not in _html.replace(' ', ''):
-        _errs.append('falta el guard @media reduce-motion del morph')
-    if '_openPelMorph' not in _mn:
-        _errs.append('falta _openPelMorph en main.js')
-    if 'document.startViewTransition' not in _mn or 'reduce' not in _mn:
-        _errs.append('falta el fallback (startViewTransition/reduce-motion) en _openPelMorph')
+        _errs.append('falta el guard @media reduce-motion')
     if _errs:
-        fail(check, 'poster-morph roto: ' + '; '.join(_errs[:4]))
+        fail(check, 'apertura de ficha rota: ' + '; '.join(_errs[:4]))
     else:
-        ok(check, 'hero morph del póster con degradación (Safari<18/reduce-motion → spring)')
+        ok(check, 'la card sube completa: sin View Transition ni clon en vuelo')
 except Exception as _e:
     warn(check, f'no se pudo verificar poster-morph: {_e}')
 
@@ -2092,11 +2203,23 @@ try:
     for _m in _re.finditer(r'([^{}]+)\{([^}]*)\}', _html):
         _sel = _m.group(1).strip().splitlines()[-1].strip()
         _body = _m.group(2)
-        _is_btn = ('-btn' in _sel or '-cta' in _sel or 'button' in _sel) and '::' not in _sel
+        # El botón es el ÚLTIMO componente del selector: en '.auth-btn .auth-avatar'
+        # lo que se estiliza es el avatar, no el botón que lo contiene.
+        _last = _sel.split()[-1] if _sel.split() else _sel
+        _is_btn = ('-btn' in _last or '-cta' in _last or 'button' in _last) and '::' not in _sel
         if not _is_btn:
             continue
-        if 'background:var(--amber);color:var(--black)' in _body.replace('\n', '').replace(' ', '') and '.splash-enter-btn' not in _sel:
-            _errs.append(f'{_sel[:60]}: primario amber fuera de la regla dueña')
+        # Fondo del primario: un botón con fondo ámbar Y texto negro ES un CTA
+        # primario, y su fondo debe ser --amber-cta (el degradado del canon).
+        # Se parsean las props en vez de buscar una secuencia literal: antes el
+        # check exigía 'background:var(--amber);color:var(--black)' pegados, así
+        # que cualquier prop en medio (border-color, width…) lo esquivaba — los
+        # 2 primarios de sheet pasaban invisibles.
+        _flat = _body.replace('\n', '').replace(' ', '')
+        _props = dict(_p.split(':', 1) for _p in _flat.split(';') if ':' in _p)
+        _bg, _fg = _props.get('background', ''), _props.get('color', '')
+        if _fg == 'var(--black)' and _bg.startswith('var(--amber') and _bg != 'var(--amber-cta)':
+            _errs.append(f'{_sel[:60]}: CTA primario con fondo plano (canon: var(--amber-cta))')
         if 'font-weight:var(--w-display)' in _body:
             _errs.append(f'{_sel[:60]}: w-display en botón (canon: w-bold)')
     for _sf in _glob.glob('src/**/*.js', recursive=True) + ['index.html']:
@@ -2183,8 +2306,22 @@ except Exception as _e:
 # mapear se caza aquí antes de mostrar globo. Festival nuevo activo → sumarlo abajo.
 check = 'country-flags'
 try:
-    import re as _re, json as _json
-    _ACTIVE = ['festivals/tercertiempo-2026.json', 'festivals/fantasofest-2026.json']
+    import re as _re, json as _json, datetime as _dt, glob as _g2
+    # Los festivales VIVOS se DERIVAN de FESTIVAL_CONFIG (festivalEndStr futuro).
+    # Antes era una lista escrita a mano y nadie la actualizó nunca: el guardián
+    # llevaba meses dando verde sobre dos festivales ya pasados mientras
+    # FICMontañas y FINCA se publicaban sin revisar — "el segundo festival
+    # consecutivo con globos" (Juan, 29 jul 2026). Un guardián con lista manual
+    # no es un guardián: es una foto que envejece.
+    _cfg = open('src/config.js', encoding='utf-8').read()
+    _hoy = _dt.date.today().isoformat()
+    _vivos = set()
+    for _fid, _end in _re.findall(r"'([a-z0-9]+)':\s*\{.*?festivalEndStr:\s*'(\d{4}-\d{2}-\d{2})", _cfg, _re.S):
+        if _end >= _hoy:
+            _vivos.add(_re.sub(r'([a-zA-Z]+)(\d+)$', r'\1-\2', _fid))
+    _ACTIVE = [f'festivals/{_v}.json' for _v in sorted(_vivos)]
+    if not _ACTIVE:  # sin festivales vivos, revisar el más reciente igual
+        _ACTIVE = sorted(_g2.glob('festivals/*.json'))[-1:]
     _js = open('src/controller/sheets-controller.js', encoding='utf-8').read()
     _m = _re.search(r'const _COUNTRY_FLAGS=\{(.*?)\};', _js, _re.S)
     _mapped = set(_re.findall(r"'([^']+)':", _m.group(1))) if _m else set()
@@ -2193,7 +2330,7 @@ try:
         for _f in _films or []:
             _c = (_f.get('country') or '').strip()
             if _c and not _f.get('flags'):
-                _parts = [p.strip() for p in _re.split(r'[,/]', _c) if p.strip()]
+                _parts = [p.strip() for p in _re.split(r'[,/()]', _c) if p.strip()]
                 _unmapped = [p for p in _parts if p not in _mapped]
                 if _unmapped:
                     _bad.append(f"{_fid}: '{_f.get('title','?')[:30]}' país sin bandera: {', '.join(_unmapped)}")
@@ -2234,6 +2371,283 @@ try:
         ok(check, 'decisión y marco editorial construidos solo en view/helpers.js')
 except Exception as _e:
     warn(check, f'no se pudo verificar poster-single-owner: {_e}')
+
+# ── [avisos-en-banda] los avisos que MATIZAN viven en la banda AVISOS ─────────
+# Q&A, programa e inscripción vivían DENTRO del bloque de FUNCIÓN y competían con el
+# día, la hora y la sede (y "función" aparecía 3 veces en 4 líneas). Ahora tienen
+# banda propia, construida por _avisosBand — dueño único. Un .meta-banner-label
+# suelto en las fichas significa que alguien volvió a colgar un aviso fuera.
+# Excepción legítima: el banner de entradas de festival mixto (lleva enlace, no es
+# un matiz de la función) y el notice-banner-row de cancelada/reprogramada, que va
+# DENTRO de FUNCIÓN porque la invalida.
+check = 'avisos-en-banda'
+try:
+    _sc = open('src/controller/sheets-controller.js', encoding='utf-8').read()
+    _bad = [i for i, ln in enumerate(_sc.splitlines(), 1)
+            if 'meta-banner-label' in ln and not ln.strip().startswith('//')]
+    if _bad:
+        fail(check, 'aviso con rótulo fuera de la banda AVISOS (usar _avisosBand): '
+             + ', '.join(f'sheets-controller.js:{i}' for i in _bad[:5]))
+    else:
+        ok(check, 'los avisos que matizan la función se construyen solo en _avisosBand')
+except Exception as _e:
+    warn(check, f'no se pudo verificar avisos-en-banda: {_e}')
+
+# ── [aviso-sin-caja] ningún aviso lleva recuadro sobre el texto ────────────────
+# Regla de Juan (29 jul 2026): un aviso es una NOTA al margen, no una tarjeta. El
+# recuadro competía con las superficies reales (sec-hdr, filas de función) y pesaba
+# más que su contenido. Se quitó de .meta-banner, .notice-banner-row, .prio-stale y
+# .notice-detail-*. La PASTILLA del badge sí se queda: ahí el fondo ES el componente,
+# no una caja alrededor de un texto.
+check = 'aviso-sin-caja'
+try:
+    import re as _re
+    _html = open('index.html', encoding='utf-8').read()
+    _AVISOS = ('.meta-banner{', '.notice-banner-row{', '.prio-stale{',
+               '.notice-detail-amber{', '.notice-detail-green{')
+    _off = []
+    for _sel in _AVISOS:
+        _i = _html.find(_sel)
+        if _i < 0:
+            continue
+        _body = _html[_i + len(_sel):_html.index('}', _i)]
+        if 'background' in _body or 'border:' in _body or 'border-radius' in _body:
+            _off.append(_sel[:-1])
+    if _off:
+        fail(check, 'aviso(s) con caja (fondo/borde/radio sobre el texto): ' + ', '.join(_off))
+    else:
+        ok(check, f'{len(_AVISOS)} avisos sin caja — solo el badge conserva su pastilla')
+except Exception as _e:
+    warn(check, f'no se pudo verificar aviso-sin-caja: {_e}')
+
+# ── [screening-row-single-owner] la fila de función tiene UN solo constructor ───
+# La fila "día · hora · sede [· Añadir]" es el mismo concepto en la ficha de película
+# y en la de corto. Tenerla duplicada fue el bug de jul 2026: la ficha de corto no
+# pintaba función NUNCA porque su constructor simplemente no la tenía, y el usuario
+# que buscaba el corto de un amigo no sabía cuándo ni dónde verlo. `_screeningRows`
+# es el dueño único; quien emita la clase .pel-sheet-screening a mano la re-derivó.
+check = 'screening-row-single-owner'
+try:
+    import glob as _glob
+    _off = []
+    for _sf in _glob.glob('src/**/*.js', recursive=True):
+        _c = open(_sf, encoding='utf-8').read()
+        for _i, _ln in enumerate(_c.splitlines(), 1):
+            _t = _ln.strip()
+            if _t.startswith('//') or 'class="pel-sheet-screening' not in _ln:
+                continue
+            # el dueño único es la única línea autorizada a emitirla
+            if _sf.replace('\\', '/').endswith('controller/sheets-controller.js') and '_screeningRows' in _c[:_c.index(_ln)][-2000:]:
+                continue
+            _off.append(f"{_sf}:{_i}")
+    if len(_off) > 1:
+        fail(check, 'la fila de función se construye en más de un sitio (usar _screeningRows): ' + '; '.join(_off[:6]))
+    else:
+        ok(check, 'fila de función construida solo por _screeningRows (ficha de película + de corto)')
+except Exception as _e:
+    warn(check, f'no se pudo verificar screening-row-single-owner: {_e}')
+
+# ── [plan-sync-en-puertas] el plan hidratado se re-deriva del catálogo ──────────
+# Una entrada de savedAgenda es una copia congelada de la función al elegirla.
+# Bug real (31 jul 2026, FINCA): plan guardado antes del anclaje mostraba fines y
+# aviso de Q&A calculados sobre la copia vieja. Regla: TODA puerta por donde un
+# plan persistido entra al estado vivo (hydrate del loader, _applyCloudRow de la
+# nube) debe pasar por syncScheduleWithCatalog. Si alguien abre una puerta nueva
+# que hidrate savedAgenda desde fuera (storage/nube), tiene que sumarla acá y
+# llamar al sync — este check lo recuerda.
+check = 'plan-sync-en-puertas'
+try:
+    _puertas = {
+        'src/controller/loader.js': 'loadState(',        # hydrate local (BATCH 2)
+        'src/controller/persistence.js': 'deriveCloudApply(',  # plan desde la nube
+    }
+    _sin = []
+    for _pf, _marca in _puertas.items():
+        _c = open(_pf, encoding='utf-8').read()
+        if _marca in _c and 'syncScheduleWithCatalog(' not in _c:
+            _sin.append(_pf)
+    if _sin:
+        fail(check, 'puerta de hidratación del plan sin sync contra el catálogo: ' + '; '.join(_sin))
+    else:
+        ok(check, 'las 2 puertas del plan (loader + nube) re-derivan contra el catálogo')
+except Exception as _e:
+    warn(check, f'no se pudo verificar plan-sync-en-puertas: {_e}')
+
+# ── [plan-write-chokepoint] savedAgenda tiene UN camino de escritura ────────────
+# PR 2 del plan de confiabilidad (31 jul 2026): toda MUTACIÓN del plan pasa por
+# commitPlan (persistence.js), que certifica el resultado con verifyPlan —
+# report-only en prod, duro en tests (__PLAN_STRICT__). Las únicas escrituras
+# directas permitidas son las 2 puertas de HIDRATACIÓN (loader + nube), que
+# normalizan vía syncScheduleWithCatalog. Un escritor nuevo que salte el
+# chokepoint reabre la puerta a planes inválidos sin radar — este check lo veta.
+check = 'plan-write-chokepoint'
+try:
+    import glob as _glob, re as _re
+    # sitio permitido → nº exacto de escrituras directas esperadas
+    _allowed = {'src/controller/persistence.js': 2,  # commitPlan + puerta nube
+                'src/controller/loader.js': 1}       # puerta hydrate local
+    _off = []
+    for _sf in _glob.glob('src/**/*.js', recursive=True):
+        _n = _sf.replace('\\', '/')
+        _c = open(_sf, encoding='utf-8').read()
+        _hits = len(_re.findall(r"state\.(?:set|update)\('savedAgenda'", _c))
+        if _n in _allowed:
+            if _hits != _allowed[_n]:
+                _off.append(f"{_n}: {_hits} escrituras (esperadas {_allowed[_n]})")
+        elif _hits:
+            _off.append(f"{_n}: {_hits} escrituras fuera del chokepoint")
+    if _off:
+        fail(check, 'savedAgenda se escribe fuera de commitPlan: ' + '; '.join(_off))
+    else:
+        ok(check, 'savedAgenda: chokepoint único (commitPlan) + 2 puertas de hidratación')
+except Exception as _e:
+    warn(check, f'no se pudo verificar plan-write-chokepoint: {_e}')
+
+# ── [fin-inline-ratchet] la aritmética de fin fuera del dominio no puede CRECER ─
+# PR 3 del plan de confiabilidad (31 jul 2026). El tech lead descartó el rewrite
+# big-bang del intervalo canónico (generalidad especulativa); en su lugar, patrón
+# ratchet de migraciones: los sitios existentes de `toMin(x)+duración` fuera de
+# src/domain/ están auditados (todos usan el dueño correcto) y su CONTEO es un
+# techo — código nuevo debe usar los dueños del dominio (delayedEndMin,
+# screeningEndMin/Date, durationForTravel), no sumar a mano. Si esta cifra sube,
+# el CI exige mover el cálculo al dominio (o, si es legítimo, documentarlo y
+# ajustar el techo A CONCIENCIA en este check).
+check = 'fin-inline-ratchet'
+try:
+    import glob as _glob, re as _re
+    _TECHO = 4  # agenda.js:382,1536,1544 (huecos/slots) + helpers.js:347 (travelWarn)
+    _hits = []
+    for _sf in _glob.glob('src/**/*.js', recursive=True):
+        if _sf.replace('\\', '/').startswith('src/domain/'):
+            continue
+        for _i, _ln in enumerate(open(_sf, encoding='utf-8').read().splitlines(), 1):
+            _code = _ln.split('//')[0]
+            if _re.search(r'toMin\([^)]*\)\s*\+\s*(blockDuration|effectiveDuration|durationForTravel)', _code):
+                _hits.append(f"{_sf}:{_i}")
+    if len(_hits) > _TECHO:
+        fail(check, f'aritmética de fin inline subió a {len(_hits)} (techo {_TECHO}) — usar los dueños del dominio: ' + '; '.join(_hits))
+    else:
+        ok(check, f'aritmética de fin inline: {len(_hits)}/{_TECHO} sitios auditados (ratchet)')
+except Exception as _e:
+    warn(check, f'no se pudo verificar fin-inline-ratchet: {_e}')
+
+# ── [duracion-solo-dominio] aritmética de duración solo en el dominio ───────────
+# La clase de bug del 31 jul 2026: sitios que calculan un fin de función a mano
+# (parseInt(duration) en el ICS y en _gapSuggestion) ignoraban el anclaje y el
+# Q&A — exportaban "18:00→18:05" donde el bloque real termina 19:51. Regla: fuera
+# de src/domain/, nadie parsea `duration` para aritmética — se usa el par
+# blockDuration/effectiveDuration (o durationForTravel). Excepción única:
+# controller/loader.js, el SELLADOR — deriva la duración canónica una vez.
+check = 'duracion-solo-dominio'
+try:
+    import glob as _glob, re as _re
+    _off = []
+    for _sf in _glob.glob('src/**/*.js', recursive=True):
+        _n = _sf.replace('\\', '/')
+        if _n.startswith('src/domain/') or _n.endswith('controller/loader.js'):
+            continue
+        for _i, _ln in enumerate(open(_sf, encoding='utf-8').read().splitlines(), 1):
+            _code = _ln.split('//')[0]
+            if _re.search(r'parseInt\([^)]*duration|parseDur\(', _code):
+                _off.append(f"{_sf}:{_i}")
+    if _off:
+        fail(check, 'aritmética de duración fuera del dominio (usar blockDuration/effectiveDuration/durationForTravel): ' + '; '.join(_off[:6]))
+    else:
+        ok(check, 'toda aritmética de duración pasa por el dominio (única excepción: el sellador)')
+except Exception as _e:
+    warn(check, f'no se pudo verificar duracion-solo-dominio: {_e}')
+
+# ── [template-al-dia] la plantilla de onboarding no se queda atrás ──────────────
+# Causa raíz de la tarea #81: el onboarding de FINCA usó 10 campos de film que la
+# plantilla no enseñaba, y nadie lo notó hasta un mes después. Regla: todo campo
+# que usan LOS DOS festivales más recientes (por festivalEndStr) debe estar en
+# pipeline/festival-template.json o en la whitelist de omisiones DELIBERADAS.
+# Un campo nuevo que dos onboardings seguidos necesitaron ya no es experimento:
+# es vocabulario — y la plantilla es donde el próximo onboarding lo aprende.
+check = 'template-al-dia'
+try:
+    import json as _json, glob as _glob
+    # Omisiones deliberadas (documentar el porqué acá):
+    #   tematica     — campo interno del festival (Juan: "no hagas nada con eso")
+    #   qa_detail    — texto libre del festival; la plantilla enseña qa_type
+    #   flags        — derivado por countryToFlags; solo se llena si el derivado falla
+    #   screenings   — forma intermedia del ensamblador (el loader lo explota)
+    #   info, is_recurring, is_programa — legacy / casos que la doctrina cubre aparte
+    _OMIT = {'tematica', 'qa_detail', 'flags', 'screenings', 'info', 'is_recurring',
+             'is_programa', 'date'}
+    _tpl = _json.load(open('pipeline/festival-template.json', encoding='utf-8'))
+    _tf = set(_tpl.keys())
+    for _f in _tpl.get('films', []):
+        _tf |= set(_f.keys())
+        for _it in (_f.get('film_list') or []): _tf |= set(_it.keys())
+    _fests = []
+    for _fp in _glob.glob('festivals/*.json'):
+        try:
+            _d = _json.load(open(_fp, encoding='utf-8'))
+            if isinstance(_d, dict) and _d.get('festivalEndStr'):
+                _fests.append((_d['festivalEndStr'], _fp, _d))
+        except Exception:
+            continue
+    _fests.sort(reverse=True)
+    _missing = {}
+    for _end, _fp, _d in _fests[:2]:
+        _used = set(_d.keys())
+        for _f in _d.get('films', []):
+            _used |= set(_f.keys())
+            for _it in (_f.get('film_list') or []): _used |= set(_it.keys())
+        for _k in _used:
+            if _k.startswith('_') or _k in _tf or _k in _OMIT: continue
+            _missing.setdefault(_k, []).append(_fp.split('/')[-1])
+    _viol = {k: v for k, v in _missing.items() if len(v) >= 2}
+    if _viol:
+        fail(check, 'campo(s) usados por los 2 festivales más recientes y ausentes de la plantilla: '
+             + '; '.join(f"{k} ({'+'.join(v)})" for k, v in sorted(_viol.items())))
+    else:
+        _solo = sorted(k for k, v in _missing.items() if len(v) == 1)
+        ok(check, 'plantilla al día con los 2 festivales más recientes'
+           + (f" ({len(_solo)} campo(s) usados por solo uno: {', '.join(_solo[:5])})" if _solo else ''))
+except Exception as _e:
+    warn(check, f'no se pudo verificar template-al-dia: {_e}')
+
+# ── [slots-sin-decidir] toda proyección conjunta tiene modelo declarado ────────
+# Doctrina (SCHEMA.md, 30 jul 2026): los festivales juntan proyecciones y hay DOS
+# modelos canónicos — Programa (is_cortos+film_list) o Anclaje
+# (sharedSlotIsOneScreening). Lo que NO puede pasar es el limbo: dos obras en el
+# mismo día+hora+sede+sala sin decisión, tratadas como rivales (Cinemancia 2025
+# quedó así: corto+largo a las 19:00 en la misma sala, declarados en conflicto).
+# NO se auto-deriva (multisala: misma hora+sede puede ser otra sala = otra
+# función) → el guardián OBLIGA a decidir contra el programa oficial: declarar el
+# flag, o anotar el slot como funciones separadas en _SEPARATE.
+check = 'slots-sin-decidir'
+try:
+    import json as _json
+    _ACTIVE = ['finca-2026']   # activos/próximos hoy (mismo roster que activity-duration)
+    # (festival, 'dia|hora|sede') REVISADOS contra el programa oficial y confirmados
+    # como funciones SEPARADAS (p.ej. actividades paralelas en espacios distintos).
+    _SEPARATE = set()
+    _viol = []
+    for _fname in _ACTIVE:
+        try:
+            _fd = _json.load(open('festivals/' + _fname + '.json', encoding='utf-8'))
+        except FileNotFoundError:
+            continue
+        if _fd.get('sharedSlotIsOneScreening'):
+            continue  # modelo declarado: el loader ancla estos grupos
+        _slots = {}
+        for _f in _fd.get('films', []):
+            if _f.get('info') or _f.get('is_cortos') or not (_f.get('day') and _f.get('time') and _f.get('venue')):
+                continue
+            _k = f"{_f['day']}|{_f['time']}|{_f['venue']}|{_f.get('sala','')}"
+            _slots.setdefault(_k, []).append(_f.get('title', '?'))
+        for _k, _g in _slots.items():
+            if len(_g) > 1 and (_fname, _k.rsplit('|',1)[0]) not in _SEPARATE:
+                _viol.append(f"{_fname}: {_k} → " + ' + '.join(t[:22] for t in _g))
+    if _viol:
+        fail(check, 'slot(s) compartidos SIN modelo decidido (declarar sharedSlotIsOneScreening o anotar en _SEPARATE): ' + '; '.join(_viol[:4]))
+    else:
+        ok(check, 'toda proyección conjunta de festivales activos tiene modelo declarado (Programa o Anclaje)')
+except Exception as _e:
+    warn(check, f'no se pudo verificar slots-sin-decidir: {_e}')
 
 # ── [activity-duration] toda actividad de un festival activo tiene duración ────
 # Valor central de la app: TODA actividad (película, evento único o programa
@@ -2400,11 +2814,11 @@ try:
     #   agenda.js (render agenda+miplan) · main.js (composición/bootstrap) ·
     #   i18n.js (diccionarios es/en, es DATA) · sheets-controller.js · handlers.js
     _ALLOW = {
-        'src/view/agenda.js': 1622,
-        'src/main.js': 1616,  # +28: quick-wins offline — storage.persist() + listener 'online' (flush cloud_dirty + revalidar versión) (19 jul 2026)
-        'src/i18n/i18n.js': 1405,  # +5: aria_dia_sig ×3 locales (a11y iconos, 18 jul)
-        'src/controller/sheets-controller.js': 1361,  # +5: 'en tu plan' = barra de acento (comentario del racional) (20 jul 2026)
-        'src/controller/handlers.js': 915,
+        'src/view/agenda.js': 1672,
+        'src/main.js': 1662,  # +46 total: _morphOpen a FLIP — clon de la card compuesta, radio contra-escalado, encuadre del destino (29 jul)
+        'src/i18n/i18n.js': 1433,  # +4 (net): anclaje (label+texto) y Q&A con referentes, ×3 locales (29 jul)
+        'src/controller/sheets-controller.js': 1524,  # +39: la ficha de corto hereda la función de su(s) programa(s) — _screeningRows (dueño único, antes inline en openPelSheet), _findParentPrograms, _cortoScreeningPairs y _noticeRows y _avisosBand (banda AVISOS: dueño único de lo que MATIZA la función, con la evidencia de vocabulario) (30 jul 2026)
+        'src/controller/handlers.js': 964,  # +20: anclaje de función en toggleWL, simétrico al quitar (29 jul)
     }
     _over = []
     for _f in _glob.glob('src/**/*.js', recursive=True):

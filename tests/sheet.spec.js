@@ -200,3 +200,167 @@ test('AF03 — añadir otra función del mismo título hace swap', async ({ page
   const len = await page.evaluate(() => savedAgenda.schedule.length);
   expect(len).toBe(1);
 });
+
+// ─── Función heredada en la ficha de corto (bug jul 2026) ──────────────────────
+// Un corto no es entrada de FILMS: su dia/hora/sede viven en el programa que lo
+// proyecta. La ficha de corto los ignoraba y quedaba MUDA — se veia el corto pero
+// nunca cuando ni donde. Estos tests exigen la fila; sin ellos el bug vuelve.
+
+const FINCA_SIMTIME = '2026-08-14T15:00';
+
+// AF04 — la ficha de un corto muestra la función de su programa
+test('AF04 — la ficha de un corto muestra la función heredada', async ({ page }) => {
+  await enterFestival(page, 'finca2026', FINCA_SIMTIME);
+  await page.evaluate(() => openCortoSheet('Cuidemos el planeta', '', '', ''));
+  await page.waitForSelector('#pel-sheet.open', { timeout: 8000 });
+  const row = page.locator('#pel-sheet-inner .pel-sheet-screening').first();
+  await expect(row).toBeVisible({ timeout: 5000 });
+  // Los tres datos, no solo la fila: dia, hora y sede.
+  await expect(row.locator('.pelicula-day')).not.toBeEmpty();
+  await expect(row.locator('.pelicula-time')).toContainText(/\d{1,2}:\d{2}/);
+  await expect(row.locator('.pelicula-venue')).not.toBeEmpty();
+});
+
+// AF05 — un corto en DOS programas muestra sus DOS funciones, y "Añadir" apunta
+// al programa (no al corto): addSuggestion solo entiende titulos de FILMS.
+test('AF05 — corto en dos programas muestra ambas funciones y añade el programa', async ({ page }) => {
+  // simTime al ARRANQUE del festival: las dos funciones de Ecocidio (13 y 15 AGO)
+  // quedan en futuro, asi que ambas filas llevan boton. Con el reloj en el 14 la del
+  // 13 ya paso y no lleva control — correcto, pero no es lo que este test mide.
+  await enterFestival(page, 'finca2026', '2026-08-12T10:00');
+  await page.evaluate(() => { state.set('savedAgenda', null); });
+  await page.evaluate(() => openCortoSheet('Ecocidio', '', '', ''));
+  await page.waitForSelector('#pel-sheet.open', { timeout: 8000 });
+  await expect(page.locator('#pel-sheet-inner .pel-sheet-screening')).toHaveCount(2, { timeout: 5000 });
+  const owners = await page.evaluate(() =>
+    [...document.querySelectorAll('#pel-sheet-inner .suggestion-add')].map(b => ({
+      title: b.dataset.title, day: b.dataset.day, time: b.dataset.time })));
+  expect(owners.length).toBe(2);
+  // Cada owner existe en FILMS con ESA funcion → addSuggestion puede resolverlo.
+  const resolvable = await page.evaluate((os) =>
+    os.every(o => FILMS.some(f => f.title === o.title && f.day === o.day && f.time === o.time)), owners);
+  expect(resolvable).toBe(true);
+  // Y ninguno es el titulo del corto.
+  expect(owners.some(o => o.title === 'Ecocidio')).toBe(false);
+});
+
+// AF06 — sin función anunciada, vacío EXPLÍCITO (no silencio)
+test('AF06 — corto sin función anunciada muestra vacío explícito', async ({ page }) => {
+  await enterFestival(page, 'finca2026', FINCA_SIMTIME);
+  await page.evaluate(() => openCortoSheet('Corto Inexistente QA', '', '', ''));
+  await page.waitForSelector('#pel-sheet.open', { timeout: 8000 });
+  await expect(page.locator('#pel-sheet-inner .pel-sheet-screening')).toHaveCount(0);
+  await expect(page.locator('#pel-sheet-inner')).toContainText(/sin función anunciada|no screening announced/i, { timeout: 5000 });
+});
+
+// ─── Banda AVISOS (30 jul 2026) ────────────────────────────────────────────────
+// Los avisos que MATIZAN la función (Q&A, programa, inscripción) viven en su
+// propia banda, no dentro del bloque de FUNCIÓN. AF09 exige que existan; AF10 es
+// el invariante de alineación: todos los textos comparten columna (grid), que es
+// lo que se rompe si alguien vuelve a anchos fijos.
+
+// AF09 — la ficha de un corto muestra el aviso PROGRAMA en la banda AVISOS
+test('AF09 — banda AVISOS con el aviso de programa en la ficha de corto', async ({ page }) => {
+  await enterFestival(page, 'finca2026', FINCA_SIMTIME);
+  await page.evaluate(() => openCortoSheet('Ecocidio', '', '', ''));
+  await page.waitForSelector('#pel-sheet.open', { timeout: 8000 });
+  await expect(page.locator('#pel-sheet-inner .avisos-body')).toHaveCount(1, { timeout: 5000 });
+  await expect(page.locator('#pel-sheet-inner .aviso-pill').first()).toHaveText(/programa|programme/i);
+  // y NO quedan avisos con rótulo fuera de la banda
+  await expect(page.locator('#pel-sheet-inner .meta-banner-label')).toHaveCount(0);
+});
+
+// AF10 — invariante de alineación: pastillas al riel del día, textos en una columna
+test('AF10 — los avisos comparten columna y arrancan en el riel del día', async ({ page }) => {
+  await enterFestival(page, 'finca2026', FINCA_SIMTIME);
+  const withQa = await page.evaluate(() => (FILMS.find(f => f.has_qa) || {}).title);
+  if (!withQa) { console.log('AF10: festival sin Q&A, skip'); return; }
+  await page.evaluate((t) => openPelSheet(t), withQa);
+  await page.waitForSelector('#pel-sheet-inner .avisos-body', { timeout: 8000 });
+  const m = await page.evaluate(() => {
+    const L = e => Math.round(e.getBoundingClientRect().left);
+    return {
+      pills: [...document.querySelectorAll('.aviso-pill')].map(L),
+      txts: [...document.querySelectorAll('.aviso-txt')].map(L),
+      dia: L(document.querySelector('.pelicula-day')),
+    };
+  });
+  expect(m.pills.length).toBeGreaterThan(0);
+  // pastillas en el mismo riel que el día de la fila de función
+  m.pills.forEach(x => expect(x).toBe(m.dia));
+  // todos los textos en la MISMA columna (lo garantiza el grid, no un px fijo)
+  expect(new Set(m.txts).size).toBe(1);
+});
+
+// AF11 — el diálogo de confirmación tiene UN solo riel izquierdo
+// Tenía tres (36, 52 y 60) y el rótulo, sin padding, quedaba cortado por la
+// esquina redondeada de la caja. El padding vive ahora en la caja: todo alinea.
+test('AF11 — el diálogo de confirmación alinea todo a un solo riel', async ({ page }) => {
+  await enterFestival(page, 'finca2026', FINCA_SIMTIME);
+  const title = await page.evaluate(() => (FILMS.find(f => !f.is_cortos && !f.info) || {}).title);
+  await page.evaluate((t) => openPelSheet(t), title);
+  await page.waitForSelector('#pel-vista-btn', { timeout: 8000 });
+  await page.locator('#pel-vista-btn').click();
+  await page.waitForSelector('#conflict-modal .conflict-modal-box', { timeout: 5000 });
+  const m = await page.evaluate(() => {
+    const L = s => Math.round(document.querySelector(s).getBoundingClientRect().left);
+    const box = document.querySelector('.conflict-modal-box').getBoundingClientRect();
+    return {
+      lefts: ['.conflict-modal-hdr', '.conflict-modal-body', '.conflict-modal-btn.confirm', '.conflict-modal-btn.cancel'].map(L),
+      hdrDentro: Math.round(document.querySelector('.conflict-modal-hdr').getBoundingClientRect().top - box.top),
+    };
+  });
+  // un solo borde izquierdo para rótulo, cuerpo y los dos botones
+  expect(new Set(m.lefts).size).toBe(1);
+  // y el rótulo no toca el borde de la caja (antes: 1px → lo cortaba el radio)
+  expect(m.hdrDentro).toBeGreaterThanOrEqual(12);
+});
+
+// AF12 — la ficha de un corto HEREDA el Q&A de su programa
+// Antes no: la banda leía Q&A/inscripción/gratis del film, y la ficha de un corto
+// no tiene film propio — solo las funciones que hereda. Son propiedades de la
+// FUNCIÓN, así que ahora se derivan de ahí y sirven a las dos fichas.
+test('AF12 — el corto hereda el Q&A de su programa, y nombra cuál función', async ({ page }) => {
+  await enterFestival(page, 'finca2026', '2026-08-12T10:00');
+  const r = await page.evaluate(() => {
+    // Ecocidio está en DOS programas; le damos Q&A solo a uno
+    FILMS.filter(f => f.title.startsWith('FINQUITA')).forEach(f => { f.has_qa = true; f.qa_type = 'guests'; });
+    openCortoSheet('Ecocidio', '', '', '');
+    return {
+      pills: [...document.querySelectorAll('.aviso-pill')].map(e => e.textContent),
+      qaTxt: [...document.querySelectorAll('.aviso-txt')][0].textContent,
+    };
+  });
+  expect(r.pills[0]).toMatch(/Q&A/);
+  // aplica a UNA de las dos funciones → el aviso dice a cuál (si no, mentiría)
+  expect(r.qaTxt).toMatch(/\d{1,2}:\d{2}/);
+});
+
+// AF13 — GRATIS aparece en la banda AVISOS (festival mixto)
+// Ya era badge en las cards del listado; faltaba en la ficha, que es donde se decide.
+test('AF13 — la ficha muestra GRATIS en un festival de ticketing mixto', async ({ page }) => {
+  await enterFestival(page, 'tercertiempo2026');
+  const title = await page.evaluate(() => (FILMS.find(f => f.is_free === true && !f.info) || {}).title);
+  if (!title) { console.log('AF13: sin función gratuita, skip'); return; }
+  await page.evaluate((t) => openPelSheet(t), title);
+  await page.waitForSelector('#pel-sheet-inner .avisos-body', { timeout: 8000 });
+  const pills = await page.evaluate(() => [...document.querySelectorAll('.aviso-pill')].map(e => e.textContent));
+  expect(pills.some(p => /gratis|free/i.test(p))).toBe(true);
+});
+
+// AF14 — la banda AVISOS respira igual arriba y abajo, al ritmo de FUNCIÓN
+// Nació con 2px arriba y 12px abajo: el bloque quedaba pegado al encabezado y
+// con el aire caído. La referencia es la fila de función (padding 8px 0) — misma
+// respiración vertical en las dos superficies de la ficha. (Juan, 31 jul 2026)
+test('AF14 — la banda AVISOS usa el ritmo vertical de la fila de función', async ({ page }) => {
+  await enterFestival(page, 'finca2026', FINCA_SIMTIME);
+  await page.evaluate(() => openCortoSheet('Ecocidio', '', '', ''));
+  await page.waitForSelector('#pel-sheet-inner .avisos-body', { timeout: 8000 });
+  const m = await page.evaluate(() => {
+    const cs = s => getComputedStyle(document.querySelector(s));
+    const a = cs('.avisos-body'), f = cs('#pel-sheet-inner .pel-sheet-screening');
+    return { arriba: a.paddingTop, abajo: a.paddingBottom, fila: f.paddingTop };
+  });
+  expect(m.arriba).toBe(m.abajo);   // mismo aire arriba y abajo
+  expect(m.arriba).toBe(m.fila);    // y el mismo que la fila de función
+});

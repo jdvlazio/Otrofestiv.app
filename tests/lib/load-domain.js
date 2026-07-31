@@ -167,10 +167,10 @@ function extractObject(source, name) {
 }
 
 const DEFAULT_FNS = [
-  'toMin', 'minToStr', 'parseDur', 'effectiveDuration',
+  'toMin', 'minToStr', 'parseDur', 'blockDuration', 'effectiveDuration', 'durationForTravel', 'screeningEndDate',
   'screeningEndMin', 'screeningEnded', 'screeningNow',
   '_resolveVenue', 'venueTravelMins', 'travelMins',
-  'screensConflict',
+  'screensConflict', 'verifyPlan',
   // Fase 2 — festival phase helpers
   '_endedStats', '_classifyTodayScreenings', '_gapSuggestion', '_getFestivalPhase',
   // Fase 3 — temporal subsystem

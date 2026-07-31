@@ -124,7 +124,42 @@ export function scoreFilm(title, screens, isPriority, allTitles){
   return score;
 }
 
-export function effectiveDuration(f){return parseDur(f&&f.duration)+(f&&f.has_qa?30:0);}
+// `_slotMin` (lo marca el loader en festivales con `sharedSlotIsOneScreening`):
+// dos obras programadas en la MISMA función ocupan la sala por la suma de
+// ambas, no por la propia. Sin esto el planificador cree que salís al terminar
+// la primera y te ofrece otra función a la que no llegás.
+// blockDuration — cuánto dura la FUNCIÓN a la que entra el espectador. Con
+// anclaje, la suma de las obras del slot (`_slotDur`, sellado por el loader);
+// sin anclaje, la duración de la obra. SIN el Q&A: quedarse es opcional, y por
+// eso existe su aviso.
+//
+// Es la respuesta a "¿hasta qué hora estoy en la sala?" y la usan TODAS las
+// superficies que miden tiempo: huecos de sugerencias, "termina en X min", "en
+// curso", buffer de retrasos, fin del día. Antes cada una hacía
+// parseDur(f.duration) por su cuenta y ninguna sabía de anclaje: un corto de 5
+// min dentro de una función de 111 declaraba libre un hueco que no existía.
+//
+// El par: effectiveDuration = blockDuration + Q&A, para CONFLICTOS, donde
+// quedarse al Q&A tiene que caber.
+export function blockDuration(f){
+  if(f&&f._slotDur) return f._slotDur;
+  return parseDur(f&&f.duration);
+}
+
+export function effectiveDuration(f){
+  if(f&&f._slotMin) return f._slotMin;
+  return parseDur(f&&f.duration)+(f&&f.has_qa?30:0);
+}
+
+// durationForTravel — LA DOCTRINA DEL Q&A en un solo dueño (30 jul 2026):
+// el Q&A (+30 estimados) solo compromete tu tiempo cuando salir cuesta algo,
+// es decir cuando hay TRASLADO a otra sede. Misma sede → el fin duro es el
+// bloque (blockDuration) y el Q&A queda como advertencia, no como muro.
+// Antes esta decisión vivía inline en screensConflict/Reason (_qaCuenta) y
+// re-escrita a mano en la vista de delays — dos sitios que podían divergir.
+export function durationForTravel(f,travel){
+  return travel>0?effectiveDuration(f):blockDuration(f);
+}
 
 export function screeningPassed(s){
   if(festivalEnded()) return false; // festival terminado — todo vuelve a plena opacidad
@@ -142,6 +177,17 @@ export function screeningPassed(s){
 // screeningEndMin (effectiveDuration = parseDur + Q&A). NOTA: screeningPassed
 // (arriba) es OTRO concepto — "ya no llegás" (arranque+10 de gracia), no "terminó".
 export function screeningEndMin(s){ return toMin(s.time)+effectiveDuration(s); }
+// screeningEndDate — el MISMO fin canónico, como instante absoluto (cruza días).
+// Dueño único del filtro "esta entrada del plan ya terminó": renderUnconfirmed y
+// _updateMiPlanBadge lo reconstruían por separado, y el "terminó hace X min"
+// usaba OTRO fin (blockDuration) en la misma frase que el filtro (effective).
+export function screeningEndDate(s){
+  const dateStr=FESTIVAL_DATES[s.day];
+  if(!dateStr) return null;
+  const end=_festDate(dateStr,s.time);
+  end.setMinutes(end.getMinutes()+effectiveDuration(s));
+  return end;
+}
 export function screeningEnded(s,nowMin){ return screeningEndMin(s)<=nowMin; }
 export function screeningNow(s,nowMin){ return toMin(s.time)<=nowMin&&!screeningEnded(s,nowMin); }
 
@@ -170,4 +216,67 @@ export function _endedStats(){
   });
   const totalPlanned=savedAgenda&&savedAgenda.schedule?savedAgenda.schedule.length:0;
   return{totalWatched,totalPlanned,pendingRatings};
+}
+
+// ── PREPARACIÓN DE CATÁLOGO (dueño único: loader Y tests) ─────────────────────
+// Estas dos transformaciones vivían inline en loadFestival. El oráculo del
+// planeador (tests/unit/plannerOracle) necesita ejercer el MISMO catálogo que
+// producción — duplicarlas en el test lib habría creado la divergencia que un
+// oráculo existe para impedir. Extraídas como puras; el loader las llama.
+
+// explodeScreenings — screenings[] → un objeto plano por función.
+// Compatibilidad total con el formato plano existente (day/time/venue).
+export function explodeScreenings(films){
+  const exploded=[];
+  (films||[]).forEach(f=>{
+    if(Array.isArray(f.screenings)&&f.screenings.length){
+      const base=Object.assign({},f);
+      delete base.screenings;
+      f.screenings.forEach((s,i)=>{
+        exploded.push(Object.assign({},base,{
+          day:s.day||s.date,date:s.date||s.day,time:s.time,venue:s.venue||'',
+          day_order:s.day_order!==undefined?s.day_order:i,
+          sala:s.sala||'',
+          ...(s.is_free!=null?{is_free:s.is_free}:{}) // por-función (festivales mixed)
+        }));
+      });
+    } else {
+      exploded.push(f);
+    }
+  });
+  return exploded;
+}
+
+// sealSharedSlots — ANCLAJE DE FUNCIÓN (opt-in: root `sharedSlotIsOneScreening`).
+// Muta los films del grupo (mismo día|hora|sede|sala) con _slotKey/_slotDur/_slotMin.
+// La sala queda ocupada por la SUMA de las obras; el Q&A se cuenta UNA vez.
+// Doctrina completa en docs/SCHEMA.md § Proyecciones conjuntas.
+export function sealSharedSlots(films){
+  const _grupos={};
+  films.forEach(f=>{
+    if(f.info||!f.day||!f.time||!f.venue) return;
+    (_grupos[f.day+'|'+f.time+'|'+f.venue+'|'+(f.sala||'')] ||= []).push(f);
+  });
+  Object.entries(_grupos).forEach(([k,g])=>{
+    if(g.length<2) return;
+    const base=g.reduce((a,f)=>a+parseDur(f.duration),0);
+    const total=base+(g.some(f=>f.has_qa)?30:0);
+    g.forEach(f=>{ f._slotKey=k; f._slotDur=base; f._slotMin=total; });
+  });
+  return films;
+}
+
+// _delayKey — clave del retraso reportado de una función (título|día|hora).
+// Vivía en la vista (agenda.js); es identidad de dominio y la usa delayedEndMin.
+export function _delayKey(s){return(s._title||s.title||'')+'|'+(s.day||'')+'|'+(s.time||'');}
+
+// delayedEndMin — el fin de una función CON su retraso reportado (PR 3, 31 jul).
+// El delay se sumaba a mano en 2 sitios de la vista — el residuo real que quedó
+// del intervalo canónico descartado por el tech lead (lo demás ya tenía dueño).
+//   travel === undefined → fin de BLOQUE (+delay): "¿hasta cuándo estoy en la sala?"
+//   travel numérico     → doctrina del Q&A vía durationForTravel (+delay):
+//                         margen real hacia OTRA función.
+export function delayedEndMin(s, travel){
+  const d=(typeof filmDelays!=='undefined'&&filmDelays&&filmDelays[_delayKey(s)])||0;
+  return toMin(s.time)+(travel===undefined?blockDuration(s):durationForTravel(s,travel))+d;
 }

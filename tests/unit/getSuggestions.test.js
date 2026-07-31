@@ -40,7 +40,7 @@ function mkConflict() {
 function load(opts = {}) {
   const passed = opts.passed || new Set();
   return loadDomain({
-    functions: ['getSuggestions', 'toMin', 'parseDur'],
+    functions: ['getSuggestions', 'toMin', 'parseDur', 'blockDuration'],
     globals: {
       DEFAULT_DURATION_MIN: 90,
       FESTIVAL_BUFFER: opts.buffer != null ? opts.buffer : 10,

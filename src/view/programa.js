@@ -135,11 +135,13 @@ export function renderProgramaListHTML(state){
       const vc=vcfg(f.venue);
       const src=getFilmPoster(f)||'';
       const nowBadge=isNow?`<span class="film-check-badge">${t('misc_ahora')}</span>`:'';
-      const notice=NOTICES.find(n=>n.title===f.title&&n.festival===((_activeFestId||_DEFAULT_FEST_ID)));
-      const noticeBadge=notice?`<span class="notice-badge">${notice.type==='cancelled'?t('notice_cancelada'):t('notice_reprog_short')}</span>`:'';
-      const noticeNote=notice&&notice.type==='cancelled'?`<div class="notice-detail-amber">${t('plan_fecha_pendiente')}</div>`:
-        notice&&notice.type==='rescheduled'&&notice.newTime?`<div class="notice-detail-green">${notice.newDay||''} · ${notice.newTime}${notice.newVenue?' · '+notice.newVenue:''}</div>`:'';
-      const cancelStyle=notice&&notice.type==='cancelled'?'opacity:.5':'';
+      // El dato viene SELLADO en la función por el loader (_cancelled/_movedFrom):
+      // el listado ya no busca en NOTICES. Y para una movida, la hora que muestra la
+      // card ES la nueva — el detalle "pasa a…" quedó redundante y se retiró.
+      const noticeBadge=f._cancelled?`<span class="notice-badge">${t('notice_cancelada')}</span>`
+        :f._movedFrom?`<span class="notice-badge">${t('notice_reprog_short')}</span>`:'';
+      const noticeNote=f._cancelled?`<div class="notice-detail-amber">${t('plan_fecha_pendiente')}</div>`:'';
+      const cancelStyle=f._cancelled?'opacity:.5':'';
       const pastStyle=passed&&!isNow&&!festivalEnded()?'opacity:.45':'';
       const itemStyle=[pastStyle,cancelStyle].filter(Boolean).join(';');
       const safeT=f.title.replace(/"/g,'&quot;').replace(/'/g,"&#39;");
@@ -148,7 +150,7 @@ export function renderProgramaListHTML(state){
         ${_stk||_plistPosterHtml(f,src)}
         <div class="plist-info">
           <div class="plist-title">${noticeBadge}<span class="plist-title-txt">${dt}</span>${_metaBadges(f)}${nowBadge}</div>
-          <div class="plist-meta" style="${notice&&notice.type==='cancelled'?'text-decoration:line-through':''}">${vc.short}${sala(f.venue)?' · '+sala(f.venue):''}${f.duration?' · '+durFmt(f.duration):''}</div>
+          <div class="plist-meta" style="${f._cancelled?'text-decoration:line-through':''}">${vc.short}${sala(f.venue)?' · '+sala(f.venue):''}${f.duration?' · '+durFmt(f.duration):''}</div>
           ${noticeNote||`<div class="plist-sec">${_secLabelFull(f.section||'')}</div>`}
         </div>
         <div class="plist-heart${inWL?'':' empty'}" data-title="${f.title.replace(/"/g,'&quot;')}" data-action="toggleWLFromList" data-stop="1">${inWL?ICONS.heartFill:ICONS.heart}</div>
@@ -267,7 +269,7 @@ export function _renderExploreListaHTML(state){
     return`<div class="plist-item js-open-pel${allPast?' past-card':''}" data-title="${escXML(f.title)}">
       ${_stk2||_plistPosterHtml(f,src)}
       <div class="plist-info">
-        ${(()=>{const n=NOTICES.find(nx=>nx.title===f.title&&nx.festival===((_activeFestId||_DEFAULT_FEST_ID)));const nb=n?`<span class="notice-badge">${n.type==='cancelled'?t('notice_cancelada'):t('notice_reprog_short')}</span>`:'';const nn=n&&n.type==='cancelled'?`<div class="notice-detail-amber">${t('plan_fecha_pendiente')}</div>`:n&&n.type==='rescheduled'&&n.newTime?`<div class="notice-detail-green">${n.newDay||''} · ${n.newTime}${n.newVenue?' · '+n.newVenue:''}</div>`:'';return`<div class="plist-title" style="${allPast?'opacity:.5':''}">${nb}${dt}</div><div class="plist-meta" style="${n&&n.type==='cancelled'?'text-decoration:line-through':''}${allPast?';opacity:.5':''}">${daysHtml?`${daysHtml} · `:''}${durFmt(f.duration)}${_metaBadges(f)?` · ${_metaBadges(f)}`:''}</div>${nn||`<div class="plist-sec">${_secLabelFull(f.section||'')}</div>`}`;})()}
+        ${(()=>{const nb=f._cancelled?`<span class="notice-badge">${t('notice_cancelada')}</span>`:f._movedFrom?`<span class="notice-badge">${t('notice_reprog_short')}</span>`:'';const nn=f._cancelled?`<div class="notice-detail-amber">${t('plan_fecha_pendiente')}</div>`:'';const n=f._cancelled?{type:'cancelled'}:null;return`<div class="plist-title" style="${allPast?'opacity:.5':''}">${nb}${dt}</div><div class="plist-meta" style="${n&&n.type==='cancelled'?'text-decoration:line-through':''}${allPast?';opacity:.5':''}">${daysHtml?`${daysHtml} · `:''}${durFmt(f.duration)}${_metaBadges(f)?` · ${_metaBadges(f)}`:''}</div>${nn||`<div class="plist-sec">${_secLabelFull(f.section||'')}</div>`}`;})()}
       </div>
       <div class="plist-heart${inWL?'':' empty'}" data-title="${f.title.replace(/"/g,'&quot;')}" data-action="toggleWLFromList" data-stop="1">${inWL?ICONS.heartFill:ICONS.heart}</div>
     </div>`;
@@ -413,8 +415,8 @@ export function render(){
       :``;
     const progBadge='';//REMOVED
     const nowBadge=isNow?`<div class="poster-now">${t('misc_ahora')}</div>`:'';
-    const _notice=NOTICES.find(n=>n.title===f.title&&n.festival===(_activeFestId||_DEFAULT_FEST_ID));
-    const pastBadge=_notice?`<div class="badge-past poster-past-badge">${_notice.type==='cancelled'?t('notice_cancelada'):t('notice_reprog_short')}</div>`:'';
+    const pastBadge=f._cancelled?`<div class="badge-past poster-past-badge">${t('notice_cancelada')}</div>`
+      :f._movedFrom?`<div class="badge-past poster-past-badge">${t('notice_reprog_short')}</div>`:'';
 
     const _fe=festivalEnded();
 return`<div class="poster-card js-open-pel${inWL&&!inW?' in-wl':''}${inW&&!_fe?' in-watched':''}${passed&&!_fe?' past-card':''}" data-title="${escXML(f.title)}"${_cardBg2}>

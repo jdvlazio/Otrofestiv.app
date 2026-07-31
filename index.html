@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607250945">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607250945">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607311421">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607311421">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -145,6 +145,24 @@ window.sentryOnLoad = function() {
   /* ── Amber ── */
   --amber: #F59E0B;
   --amber-d: #D97706;
+  /* Fondo del CTA primario (28 jul 2026): degradado vertical mínimo en vez de
+     plano. No es decoración — un ámbar saturado a ancho completo se lee como
+     rectángulo de color; la luz cenital le devuelve materia. El recorrido es
+     corto a propósito (#FBBF24→#E89709): más abajo empieza a parecer botón
+     biselado de 2010. Valor ÚNICO: lo consume la regla dueña PRIMARIO y los 2
+     primarios de sheet — guardián [button-canon]. */
+  --amber-cta: linear-gradient(180deg, #FBBF24 0%, #F59E0B 58%, #E89709 100%);
+  /* Hermanos del --amber-cta: MISMA curva de luz (0% / 58% / 100%) para que el
+     volumen del secundario lea como el del primario y no como otro material.
+     --surf-cta = Priorizar en reposo; --amber-cta-soft = Priorizar activo.
+     (Juan, 29 jul 2026: "ganando volumen", igual que Interés.) */
+  /* OJO con la parada final: NUNCA más oscura que el fondo del sheet (--surf-2,
+     #1B1917). Un cierre en #1A1816 pintaba el borde inferior de la pastilla más
+     oscuro que la superficie de atrás y se leía como una LÍNEA bajo el botón, no
+     como volumen. El degradado aclara desde arriba y cierra en el color plano
+     original (#201E1B), que sigue por encima del fondo. */
+  --surf-cta: linear-gradient(180deg, #2E2B27 0%, #262320 58%, #201E1B 100%);
+  --amber-cta-soft: linear-gradient(180deg, rgba(245,158,11,.16) 0%, rgba(245,158,11,.10) 58%, rgba(245,158,11,.07) 100%);
   --amber-06: rgba(245,158,11,.06);
   --amber-08: rgba(245,158,11,.08);
   --amber-10: rgba(245,158,11,.1);
@@ -202,6 +220,12 @@ window.sentryOnLoad = function() {
   --r-md:   8px;
   --r-lg:   12px;
   --r:      12px;
+  /* RADIO DEL PÓSTER — uno solo, en TODAS sus superficies (29 jul 2026).
+     Había tres: card del grid 12px, póster de la ficha 8px, thumb de corto 4px.
+     El póster viaja entre ellas (FLIP), así que cambiaba de redondez a mitad de
+     vuelo — visible y feo. Un póster es el MISMO objeto donde sea que aparezca:
+     mismo radio. Guardián [poster-radius]. */
+  --r-poster: 12px;
   --r-sheet:28px; /* 20→28 (18 jul 2026): squircle generoso en los 9 sheets */
   --r-handle:2px;
   --r-pill: 999px;
@@ -210,6 +234,29 @@ window.sentryOnLoad = function() {
   --tr-fast:   100ms ease;   /* feedback inmediato: hover color           */
   --tr-base:   150ms ease;   /* micro-interacción: botones, badges        */
   --tr-smooth: 200ms ease;   /* overlays, opacidades, estados             */
+  /* Velo de los sheets — conducido por rAF, NO por CSS (auditoría 28 jul 2026,
+     ver DESIGN.md §8.4.1). Medido en WebKit con un banco aislado de 4 variantes
+     en cámara lenta: TODO camino CSS (radio fijo + opacity, o transition del
+     radio, con cualquier curva) aplica el blur casi entero apenas la capa se
+     hace visible — la opacidad funde el tinte pero NO atenúa el filtro. La
+     única progresión real es pisar radio+opacidad frame a frame desde JS
+     (initVeil en sheets-controller.js), con radio ∝ k² porque la nitidez
+     perceptual muere a ~5px: si el radio crece lineal, "salta" aunque el
+     motor interpole. El velo desenfoca, no apaga: mucho blur, poco tinte.
+     RADIO 10px (29 jul 2026, tras 38→19→10 en device). La medición del
+     "viaje" foco→desenfoque decía que el recorrido crece hasta ~38px, y de ahí
+     salieron los dos valores anteriores: ambos tapaban de más. El fondo tiene
+     que seguir leyéndose como "la lista, desenfocada" — es la referencia de
+     dónde estabas —, no convertirse en mancha.
+     Lección dura: la métrica dice cuánto CAMBIA el fondo, no cuánto DEBE
+     tapar. El punto de llegada es decisión de diseño y se juzga en device;
+     el máximo medible no es el valor correcto.
+     Este token es la fuente única: las dos capas del velo derivan su radio de
+     él (ver .pel-sheet-overlay). Duraciones/curva viven en el CSS del velo. */
+  --blur-veil: 10px;
+  --veil-tint: rgba(4,4,4,.42);
+  /* Tinte POR CAPA: dos capas al 24% componen ≈ --veil-tint (1-(1-a)²≈.42). */
+  --veil-tint-step: rgba(4,4,4,.24);
   --tr-enter:  300ms ease-out; /* entradas al DOM: paneles, drawers       */
   /* Sheets — curva canónica (18 jul 2026): TODO bottom-sheet abre con spring
      y cierra con ease-in. Guardián [sheet-spring] en validate.py. */
@@ -477,7 +524,12 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .dtab-date{font-size:var(--t-xs);font-weight:var(--w-bold);display:block;margin-top:var(--sp-1);letter-spacing:.5px;text-transform:uppercase}
 
 .dtab:hover{color:var(--white)}
-.dtab.on{color:var(--amber);border-bottom-color:var(--amber)} /* mismo lenguaje de activo que .pmode-tab.on */
+/* SIN línea ámbar: el activo se marca SOLO con color en el número y el texto.
+   Decidido el 18 may 2026 (964cc6b) y REVERTIDO por error el 18 jul (534b150) al
+   "unificar el lenguaje de activo con .pmode-tab.on" — se deshizo una decisión
+   anterior sin saber que existía. El navegador de días ya lleva 8+ tabs; una
+   línea bajo cada activo añade peso sin añadir información. Guardián [dtab-sin-linea]. */
+.dtab.on{color:var(--amber)}
 .dtab.past{opacity:.35}
 
 /* Navegación principal (bottom tabs) */
@@ -539,11 +591,19 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 
 /* ── Modal de conflictos ── */
 .conflict-modal{position:fixed;top:0;left:0;right:0;bottom:0;background:var(--overlay-70);z-index:9999;display:flex;align-items:center;justify-content:center;padding:var(--sp-5)}
-.conflict-modal-box{background:var(--surf-2);border:1px solid var(--bdr);border-radius:var(--r);max-width:320px;width:100%;overflow:hidden}
-.conflict-modal-hdr{font-size:var(--t-label);font-weight:var(--w-bold);color:var(--white-60);letter-spacing:.8px;text-transform:uppercase;margin-bottom:var(--sp-2)}
-.conflict-modal-body{padding:var(--sp-2) var(--sp-5) var(--sp-3);font-size:var(--t-sm);color:var(--gray);line-height:1.55}
+/* Un SOLO riel: el padding vive en la caja y ni el rótulo, ni el cuerpo, ni los
+   botones lo repiten. Antes había tres bordes izquierdos distintos —36, 52 y 60—
+   y el rótulo, con padding 0, quedaba pegado al borde superior: la esquina
+   redondeada lo cortaba. Medido, no estimado. (Juan, 30 jul 2026) */
+.conflict-modal-box{background:var(--surf-2);border:1px solid var(--bdr);border-radius:var(--r);max-width:320px;width:100%;overflow:hidden;padding:var(--sp-4)}
+.conflict-modal-hdr{font-size:var(--t-label);font-weight:var(--w-bold);color:var(--white-60);letter-spacing:.8px;text-transform:uppercase;margin-bottom:var(--sp-3)}
+/* El ritmo vertical lo da un token, no `<br><br>`: el cuerpo es una columna con
+   gap. Con los dobles saltos, el hueco entre el título de la obra y su
+   explicación era una línea en blanco entera, fuera de toda escala. */
+.conflict-modal-body{display:flex;flex-direction:column;gap:var(--sp-2);font-size:var(--t-sm);color:var(--gray);line-height:1.55;margin-bottom:var(--sp-4)}
+.conflict-modal-body .cm-subject{color:var(--white);font-weight:var(--w-semi)}
 .conflict-modal-body b{color:var(--white)}
-.conflict-modal-btns{display:flex;flex-direction:column;gap:var(--sp-2);padding:0 var(--sp-4) var(--sp-4)}
+.conflict-modal-btns{display:flex;flex-direction:column;gap:var(--sp-1)}
 .conflict-modal-btn{width:100%;padding:var(--sp-btn);border-radius:var(--r-pill);border:none;font-family:var(--font);font-size:var(--t-sm);font-weight:var(--w-semi);cursor:pointer;touch-action:manipulation;text-align:center}
 .conflict-modal-btn.cancel{background:none;border:none;color:var(--gray);padding:10px}
 .conflict-modal-btn.confirm{font-size:var(--t-base)} /* anatomía amber: suscrito a la regla dueña PRIMARIO */
@@ -566,11 +626,47 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .count-badge.cb-amber{background:var(--amber-10);color:var(--amber);border:1px solid var(--amber-30)}
 
 .count-badge.cb-green{background:var(--green-12);color:var(--green);border:1px solid var(--green-20)}
-.meta-banner{display:flex;align-items:flex-start;gap:var(--sp-2);padding:var(--sp-2) var(--sp-3);background:var(--surf-2);border-radius:var(--r-sm);margin-bottom:var(--sp-2)}
+/* Sin caja: el aviso es una NOTA al margen, no una tarjeta. El recuadro competía
+   con las superficies reales (sec-hdr, filas de función) y pesaba más que su
+   contenido. Queda el punto ámbar como ancla visual. (Juan, 29 jul 2026) */
+.meta-banner{display:flex;align-items:flex-start;gap:var(--sp-2);margin-bottom:var(--sp-3)}
 .meta-banner-dot{width:6px;height:6px;border-radius:50%;background:var(--amber);flex-shrink:0;margin-top:var(--sp-1)}
 .meta-banner-label{font-size:var(--t-xs);font-weight:var(--w-display);color:var(--amber);letter-spacing:.5px;text-transform:uppercase}
 .meta-banner-text{font-size:var(--t-sm);color:var(--white);margin-top:2px;line-height:1.4}
 .meta-banner-text span{color:var(--gray)}
+/* ── BANDA AVISOS ────────────────────────────────────────────────────────────
+   Zona EXCLUSIVA de los avisos que MATIZAN la función (Q&A, programa,
+   inscripción). Lo que la INVALIDA —cancelada/reprogramada— se queda dentro de
+   FUNCIÓN, pegado a la hora que niega.
+   Grid `max-content 1fr`: la columna de pastillas la define la etiqueta más
+   ancha de cada idioma (INSCRIPCIÓN 106px en ES, RSVP REQUIRED 118px en EN) sin
+   un solo valor fijo. padding-left 0 → las pastillas caen en el riel de 16px,
+   el mismo del día de la fila y del cuerpo de la sinopsis. (Juan, 30 jul 2026)
+   Vertical sp-2/sp-2 = el MISMO ritmo de la fila de función (padding 8px 0): la
+   banda respira igual arriba y abajo. Antes 2px/12px — pegada al encabezado y
+   con el aire caído abajo, que además engordaba el salto entre cabeceras.
+   (Juan, 31 jul 2026) */
+.avisos-body{display:grid;grid-template-columns:max-content 1fr;column-gap:var(--sp-2);row-gap:var(--sp-2);align-items:baseline;padding:var(--sp-2) var(--sp-4) var(--sp-2) 0}
+.aviso-pill{font-size:var(--t-badge);font-weight:var(--w-display);letter-spacing:.5px;text-transform:uppercase;background:var(--amber-12);color:var(--amber);border-radius:var(--r-md);padding:2px 7px;white-space:nowrap;justify-self:start;font-family:var(--font)}
+.aviso-txt{font-size:var(--t-caption);color:var(--white);line-height:1.4}
+/* sev-red = el aviso INVALIDA la función (cancelada / movida). Segundo nivel de la
+   escala de severidad de la banda: ámbar matiza, rojo invalida. El color no es la
+   única señal — la palabra "Cancelada" hace el trabajo igual. */
+.aviso-pill.sev-red{background:var(--red-12);color:var(--red)}
+.aviso-txt s{text-decoration-color:var(--red);text-decoration-thickness:1.5px;color:var(--gray)}
+/* La fila afectada se marca en su propia forma: la hora tachada en rojo. NO se
+   atenúa: opacity .4 ya significa "función que pasó" y confundir las dos señales
+   haría leer "esa ya fue" donde hay que leer "esa se canceló". (Juan, 30 jul 2026) */
+.pel-sheet-screening.scr-void .pelicula-time{text-decoration:line-through;text-decoration-color:var(--red);text-decoration-thickness:1.5px;color:var(--gray)}
+.pel-sheet-screening.scr-void .pelicula-day{color:var(--gray2)}
+/* mp-void-t = la HORA de una entrada cuya función ya no existe. Misma señal que
+   en la ficha: tachada en rojo, nunca atenuada.
+   Va en la hora y NO en la fila: `text-decoration` de un ancestro no se puede
+   cancelar desde un hijo (no es heredada, se PROPAGA al dibujar), así que con la
+   regla en el contenedor quedaban tachados también el badge y el botón de salida.
+   Verificado en captura antes de darlo por bueno. (30 jul 2026) */
+.mp-void-t{text-decoration:line-through;text-decoration-color:var(--red);text-decoration-thickness:1.5px}
+.mplan-fix{margin-left:var(--sp-2);vertical-align:middle}
 .pel-sheet-ticket-link{display:inline-flex;align-items:center;gap:var(--sp-1);margin-top:var(--sp-3);font-size:var(--t-sm);color:var(--amber);text-decoration:none;opacity:.9;cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
 .pel-sheet-ticket-link:hover{opacity:1}
 .meta-banner .pel-sheet-ticket-link{margin-top:var(--sp-1)}
@@ -691,8 +787,8 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .group-label.ok{color:var(--green)}
 .group-label.fail{color:var(--gray2)}
 .prio-chip-past-lbl{font-size:var(--t-badge);color:var(--gray2);text-align:center;line-height:1.2;margin-top:2px}
-/* prio-stale = aviso FUERTE (canon notice-banner-row): amber-08, r-sm, sin borde */
-.prio-stale{display:flex;align-items:center;gap:var(--sp-2);padding:var(--sp-2) var(--sp-3);background:var(--amber-08);border-radius:var(--r-sm);margin-bottom:var(--sp-3);font-size:var(--t-sm);color:var(--white);line-height:1.4}
+/* prio-stale = aviso FUERTE (canon notice-banner-row): sin caja, igual que el resto */
+.prio-stale{display:flex;align-items:center;gap:var(--sp-2);margin-bottom:var(--sp-3);font-size:var(--t-sm);color:var(--white);line-height:1.4}
 .prio-stale-cta{margin-left:auto;flex-shrink:0;background:none;border:none;color:var(--amber);font-family:var(--font);font-size:var(--t-sm);font-weight:var(--w-bold);cursor:pointer;white-space:nowrap}
 
 #ag-result-wrap.stale{opacity:.5}
@@ -879,7 +975,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .saved-agenda:has(.ag-save-btn) .ag-save-btn{margin-bottom:calc(var(--nav-h,56px) + max(env(safe-area-inset-bottom),20px) + 16px)}
 .poster-grid-sep{grid-column:1/-1;pointer-events:none;user-select:none;margin-top:var(--sp-3)}
 .poster-grid-sep:first-child{margin-top:0}
-.poster-card{position:relative;border-radius:var(--r);overflow:hidden;cursor:pointer;background:var(--surf-2);background-size:cover;background-position:center;aspect-ratio:2/3;display:block;container-type:inline-size}
+.poster-card{position:relative;border-radius:var(--r-poster);overflow:hidden;cursor:pointer;background:var(--surf-2);background-size:cover;background-position:center;aspect-ratio:2/3;display:block;container-type:inline-size}
 /* Skeleton shimmer (decisión Juan 18 jul 2026): el CONTENEDOR del póster (dueño
    del tamaño) muestra un brillo que lo recorre mientras la imagen carga; la
    imagen hace fade-in encima al llegar. La animación termina sola (8 ciclos)
@@ -908,7 +1004,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .poster-ed .ed-scrim .ed-title{font-family:-apple-system,BlinkMacSystemFont,sans-serif;font-size:10px;font-size:9.2cqi;font-weight:var(--w-display);letter-spacing:-.02em;color:var(--white);line-height:1.27;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
 .poster-card-stack{width:100%;height:100%;display:flex;gap:1px;background:var(--bdr)}
 .pcs-back,.pcs-front{flex:1;height:100%;object-fit:cover;object-position:center;display:block;min-width:0}
-.pel-sheet-poster-stage{display:flex;gap:1px;background:var(--bdr);flex-shrink:0;width:var(--poster-lg-w);height:var(--poster-lg-h);border-radius:var(--r-md);overflow:hidden}
+.pel-sheet-poster-stage{display:flex;gap:1px;background:var(--bdr);flex-shrink:0;width:var(--poster-lg-w);height:var(--poster-lg-h);border-radius:var(--r-poster);overflow:hidden}
 .psp-card{flex:1;height:100%;object-fit:cover;object-position:center;display:block;min-width:0;cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
 .psp-front,.psp-back{/* split visual — sin posicionamiento absoluto */}
 
@@ -955,39 +1051,66 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 /* municipio — subordinado al venue, solo ciudades distintas a la sede principal del festival */
 .venue-municipio{display:block;font-size:var(--t-xs);color:var(--white-45);margin-top:1px;letter-spacing:.02em}
 /* ── Bottom Sheet ── */
-.pel-sheet-overlay{position:fixed;inset:0;background:var(--overlay-blur-70);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);z-index:9000;opacity:0;transition:opacity var(--tr-smooth);pointer-events:none}
-.pel-sheet-overlay.open{opacity:1;pointer-events:all}
+/* El velo NO transiciona en CSS: lo conduce initVeil() por rAF (auditoría
+   28 jul 2026, DESIGN.md §8.4.1 — la opacidad CSS funde el tinte pero no
+   atenúa el backdrop-filter en WebKit, así que cualquier camino CSS "salta").
+   Estas reglas son solo el estado de reposo + fallback sin JS (veo instantáneo).
+   SIN will-change: promover la capa hace que iOS recalcule el backdrop al
+   crearla/destruirla y se ve como un brinco. */
+/* ── Velo del sheet — ESCALERA de 2 capas, animada SOLO por opacity ───────────
+   El driver rAF anterior corría en el hilo principal, que es exactamente el que
+   el sheet bloquea ~230ms mientras se construye. Medido en device (29 jul 2026,
+   7 de 7 aperturas): el velo progresaba hasta ~68%, se CONGELABA 233ms y saltaba
+   a full en UN frame. No era la curva ni el radio ni el momento de arranque —
+   era inanición de rAF. Una animación de opacity vive en el compositor y un hilo
+   principal bloqueado no puede detenerla.
+   Como opacity NO atenúa backdrop-filter de forma proporcional (satura en ~2
+   frames), la progresión se construye ESCALONANDO dos capas de radio fijo —los
+   pseudo-elementos del scrim—, no rampeando un radio. Los radios .55/.84 componen
+   en cuadratura ≈ --blur-veil (√(.55²+.84²)≈1.00), así el punto de llegada
+   aprobado en device no cambia. */
+/* visibility: mismo motivo que los scrims de arriba — cerrado no debe pintar ni
+   promover capa (son DOS superficies filtradas a pantalla completa por scrim, y
+   hay dos scrims: ficha y sede). El delay cubre el fundido de salida completo. */
+.pel-sheet-overlay{position:fixed;inset:0;z-index:9000;pointer-events:none;visibility:hidden;transition:visibility 0s linear .4s}
+.pel-sheet-overlay.open{pointer-events:all;visibility:visible;transition:visibility 0s}
+.pel-sheet-overlay::before,.pel-sheet-overlay::after{
+  content:'';position:absolute;inset:0;opacity:0;
+  background:var(--veil-tint-step);transition:opacity 200ms linear;
+}
+.pel-sheet-overlay::before{backdrop-filter:blur(calc(var(--blur-veil) * .55));-webkit-backdrop-filter:blur(calc(var(--blur-veil) * .55))}
+.pel-sheet-overlay::after{backdrop-filter:blur(calc(var(--blur-veil) * .84));-webkit-backdrop-filter:blur(calc(var(--blur-veil) * .84))}
+/* Al abrir: escalonado (el 2º peldaño entra a mitad del 1º) → rampa perceptual.
+   Al cerrar: ambas capas a la vez, 200ms (regla base de arriba). */
+.pel-sheet-overlay.open::before{opacity:1;transition:opacity 220ms linear}
+.pel-sheet-overlay.open::after{opacity:1;transition:opacity 220ms linear 110ms}
+@media (prefers-reduced-motion:reduce){
+  .pel-sheet-overlay::before,.pel-sheet-overlay::after,
+  .pel-sheet-overlay.open::before,.pel-sheet-overlay.open::after{transition:none}
+}
 .pel-sheet{position:fixed;bottom:0;left:0;right:0;background:var(--surf-2);border-radius:var(--r-sheet) var(--r-sheet) 0 0;z-index:9001;max-height:88dvh;overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;transform:translateY(100%);transition:var(--sheet-out)}
 .pel-sheet.open{transform:translateY(0);transition:var(--sheet-in)}
-/* ── Transición de póster compartido (hero morph, View Transitions API) ───────
-   Al abrir la ficha desde un póster del grid, el póster se transforma en el de
-   la ficha, LLEGANDO desde blur→foco + opacidad (no salta: enfoca al aterrizar).
-   El fondo enfoca en sitio (sin deslizar). Degrada solo (Safari<18/reduce-motion
-   → spring). Cableado en main.js (_openPelMorph). Guardián [poster-morph]. */
-/* Curva ease-out EXPO (casi plana al final): la velocidad al aterrizar es ~0, así
-   el traspaso del snapshot del VT al DOM real NO salta —el "brinco" que se sentía
-   en los divisores era ese handoff con velocidad todavía alta. --vt-ease. */
-@keyframes vtPosterIn{from{filter:blur(12px);opacity:.15}55%{filter:blur(4px);opacity:.8}to{filter:blur(0);opacity:1}}
-@keyframes vtFadeOut{from{opacity:1}to{opacity:0}}
+/* ── Apertura de la ficha (29 jul 2026) ───────────────────────────────────────
+   El póster NO viaja: la card sube completa. Se retiró primero la View Transition
+   y después el clon FLIP, tras cinco defectos visuales distintos en device — ver
+   DESIGN.md §8.4.5 para la lista y el porqué. Aquí queda solo el stagger de la
+   meta sobre el DOM real; el movimiento de la card es el spring (--sheet-in) y el
+   fondo lo resuelve el velo en escalera (§8.4.1). Guardián [poster-morph]. */
 @keyframes vtRise{from{opacity:0;transform:translateY(9px)}to{opacity:1;transform:translateY(0)}}
-::view-transition-group(film-poster){animation-duration:.5s;animation-timing-function:cubic-bezier(.16,1,.3,1)}
-::view-transition-new(film-poster){animation:vtPosterIn .5s cubic-bezier(.16,1,.3,1) both}
-::view-transition-old(film-poster){animation:vtFadeOut .14s ease both}
-/* El fondo (y sus divisores) ASIENTA TEMPRANO: opacity rápida, sin blur → los
-   divisores del DOM real ya están fijos mucho antes de que el póster aterrice,
-   así el ojo no ve ningún salto de línea al terminar. */
-::view-transition-old(root){animation:vtFadeOut .2s ease both}
-::view-transition-new(root){animation:vtFadeOut .22s ease reverse both}
-.pel-sheet.vt-run{transition:none!important}
-/* Stagger COMPRIMIDO para terminar ANTES que la transición (.5s): así al cerrar
-   ya está en reposo y quitar la clase no corta nada (era la otra causa del brinco). */
+/* Sin fundido: para lo que NO descansa en opacity:1 (el enlace de Letterboxd
+   vive al .6), animar la opacidad a 1 y luego soltar la clase producía un
+   ESCALÓN de oscurecimiento al terminar el viaje. Solo sube, no aparece. */
+@keyframes vtRiseNoFade{from{transform:translateY(9px)}to{transform:translateY(0)}}
+/* Stagger de la meta — CSS puro sobre el DOM real, sin snapshots. */
 .pel-sheet.vt-in .pel-sheet-meta>*{animation:vtRise .28s cubic-bezier(.16,1,.3,1) both}
 .pel-sheet.vt-in .pel-sheet-meta>*:nth-child(1){animation-delay:.06s}
 .pel-sheet.vt-in .pel-sheet-meta>*:nth-child(2){animation-delay:.1s}
 .pel-sheet.vt-in .pel-sheet-meta>*:nth-child(3){animation-delay:.14s}
 .pel-sheet.vt-in .pel-sheet-inner>*:not(.pel-sheet-header){animation:vtRise .28s cubic-bezier(.16,1,.3,1) both;animation-delay:.12s}
+/* El enlace de Letterboxd descansa en opacity:.6 → sube sin fundir (ver vtRiseNoFade). */
+.pel-sheet.vt-in .pel-sheet-lb{animation-name:vtRiseNoFade}
 .pel-sheet.amb.vt-in{--amb-o:0}
-@media(prefers-reduced-motion:reduce){::view-transition-group(film-poster),::view-transition-new(film-poster),::view-transition-old(film-poster),::view-transition-old(root),::view-transition-new(root){animation:none}}
+@media(prefers-reduced-motion:reduce){.pel-sheet.vt-in .pel-sheet-meta>*,.pel-sheet.vt-in .pel-sheet-inner>*:not(.pel-sheet-header){animation:none}}
 /* Color ambiental (decisión Juan 18 jul 2026): el header de la ficha respira el
    color dominante del póster (muestreado y DOMADO por posterAmbient — único
    sampler, guardián [poster-ambient]) y se funde a surf-2 a los ~300px. La
@@ -1003,11 +1126,11 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .pel-sheet-close{position:absolute;right:12px;top:6px;background:var(--surf-2);border:none;color:var(--gray2);width:44px;height:44px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:var(--t-md);line-height:1}
 .pel-sheet-close:active{background:var(--bdr)}
 .pel-sheet-inner{padding:var(--sp-btn) var(--sp-4) var(--sp-6)}
-.pel-sheet-poster{width:var(--poster-lg-w);height:var(--poster-lg-h);object-fit:cover;border-radius:var(--r-md);flex-shrink:0;display:block;background:var(--surf-2);object-position:center top}
-.pel-sheet-poster-ph{width:var(--poster-lg-w);height:var(--poster-lg-h);border-radius:var(--r-md);background:var(--surf-2);flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:var(--t-display)}
+.pel-sheet-poster{width:var(--poster-lg-w);height:var(--poster-lg-h);object-fit:cover;border-radius:var(--r-poster);flex-shrink:0;display:block;background:var(--surf-2);object-position:center top}
+.pel-sheet-poster-ph{width:var(--poster-lg-w);height:var(--poster-lg-h);border-radius:var(--r-poster);background:var(--surf-2);flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:var(--t-display)}
 /* Poster editorial en sheet: SOLO aporta tamaño/radio; el marco (banda+img) lo
    pinta .poster-ed (clase añadida en el markup, ver editorialFrame). */
-.psp-editorial{width:var(--poster-lg-w);height:var(--poster-lg-h);border-radius:var(--r-md);overflow:hidden;flex-shrink:0;container-type:inline-size}
+.psp-editorial{width:var(--poster-lg-w);height:var(--poster-lg-h);border-radius:var(--r-poster);overflow:hidden;flex-shrink:0;container-type:inline-size}
 .pel-sheet.compact .psp-editorial{width:72px;height:108px}
 .pel-sheet-header{display:flex;gap:var(--sp-btn);margin-bottom:var(--sp-4)}
 /* Modo compacto: films con 3+ funciones reducen el poster para que CTAs sean visibles */
@@ -1063,8 +1186,18 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .venue-day-hdr:first-child{margin-top:var(--sp-1)}
 
 /* ── Rating sheet ── */
-.rating-overlay{position:fixed;inset:0;background:var(--overlay-50);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);z-index:9100;opacity:0;transition:opacity var(--tr-smooth);pointer-events:none}
-.rating-overlay.open{opacity:1;pointer-events:all}
+/* ── Overlays dormidos: NO deben pintar mientras están cerrados ──────────────
+   Medido 29 jul 2026 (CDP LayerTree, ficha abierta): 46 capas compuestas, una
+   docena a viewport completo. Cada scrim con backdrop-filter y opacity:0 seguía
+   promovido y con su filtro vivo. En device (DPR 3) cada capa a pantalla
+   completa es ~11.8MB de backing → ~140MB permanentes: esa presión de GPU es lo
+   que hunde los frames al abrir un sheet (el "bloqueo de 230ms" no era una tarea
+   de JS: la más larga del hilo principal medía 22ms).
+   `visibility:hidden` saca al elemento del pintado → sin filtro y sin capa. El
+   delay en la transición lo mantiene visible durante todo el fundido de salida,
+   así la animación de cierre no cambia ni un frame. */
+.rating-overlay{position:fixed;inset:0;background:var(--overlay-50);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);z-index:9100;opacity:0;visibility:hidden;transition:opacity var(--tr-smooth),visibility 0s linear .4s;pointer-events:none}
+.rating-overlay.open{opacity:1;visibility:visible;transition:opacity var(--tr-smooth),visibility 0s;pointer-events:all}
 .rating-sheet{position:fixed;bottom:0;left:0;right:0;background:var(--surf-2);border-radius:var(--r-sheet) var(--r-sheet) 0 0;z-index:9101;padding:16px 20px 40px;transform:translateY(100%);transition:var(--sheet-out)}
 .rating-sheet.open{transform:translateY(0);transition:var(--sheet-in)}
 .rating-handle{width:36px;height:4px;background:var(--bdr);border-radius:var(--r-handle);margin:0 auto 18px}
@@ -1081,8 +1214,8 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 /* ── Sheet añadir a Intereses desde Programa ── */
 /* ── Sheet conflicto de horario ── */
 /* ── Sheet rating post-función desde Mi Plan ── */
-.pv-rating-overlay{position:fixed;inset:0;background:var(--overlay-blur-78);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);z-index:9300;opacity:0;pointer-events:none;transition:opacity .25s}
-.pv-rating-overlay.open{opacity:1;pointer-events:all}
+.pv-rating-overlay{position:fixed;inset:0;background:var(--overlay-blur-78);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);z-index:9300;opacity:0;visibility:hidden;pointer-events:none;transition:opacity .25s,visibility 0s linear .4s}
+.pv-rating-overlay.open{opacity:1;visibility:visible;transition:opacity .25s,visibility 0s;pointer-events:all}
 .pv-rating-sheet{position:fixed;bottom:0;left:0;right:0;background:var(--surf-2);border-radius:var(--r-sheet) var(--r-sheet) 0 0;z-index:9301;display:none;transition:var(--sheet-out);overflow:hidden}
 .pv-rating-sheet.open{display:flex;flex-direction:column;transform:translateY(0);transition:var(--sheet-in)}
 .pv-handle{width:36px;height:4px;background:rgba(255,255,255,.1);border-radius:var(--r-handle);margin:12px auto 0}
@@ -1103,8 +1236,8 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .pv-actions{padding:0 20px 44px;display:flex;gap:var(--sp-2)}
 .pv-btn-save{flex:2} /* anatomía: regla dueña */
 .pv-btn-later{flex:1;background:none;border:1px solid var(--bdr);border-radius:var(--r-pill);color:var(--gray);font-family:var(--font);font-size:var(--t-base);font-weight:var(--w-semi);padding:var(--sp-btn);cursor:pointer;white-space:nowrap}
-.conflict-sheet-overlay{position:fixed;inset:0;background:var(--overlay-blur-72);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);z-index:9180;opacity:0;pointer-events:none;transition:opacity .25s}
-.conflict-sheet-overlay.open{opacity:1;pointer-events:all}
+.conflict-sheet-overlay{position:fixed;inset:0;background:var(--overlay-blur-72);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);z-index:9180;opacity:0;visibility:hidden;pointer-events:none;transition:opacity .25s,visibility 0s linear .4s}
+.conflict-sheet-overlay.open{opacity:1;visibility:visible;transition:opacity .25s,visibility 0s;pointer-events:all}
 .conflict-sheet{position:fixed;bottom:0;left:0;right:0;background:var(--surf-2);border-radius:var(--r-sheet) var(--r-sheet) 0 0;z-index:9181;transform:translateY(100%);transition:var(--sheet-out)}
 .conflict-sheet.open{transform:translateY(0);transition:var(--sheet-in)}
 .conflict-handle{width:36px;height:4px;background:rgba(255,255,255,.1);border-radius:var(--r-handle);margin:12px auto 0}
@@ -1132,8 +1265,8 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .conflict-btn-keep{width:100%;background:none;border:1px solid var(--bdr);border-radius:var(--r-pill);color:var(--gray);font-family:var(--font);font-size:var(--t-sm);font-weight:var(--w-semi);padding:var(--sp-btn);cursor:pointer} /* color unificado al secundario (--gray) */
 .conflict-btn-cancel{width:100%} /* anatomía: regla CANCEL canónica */
 
-.prio-limit-overlay{position:fixed;inset:0;background:var(--overlay-blur-75);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);z-index:9200;opacity:0;pointer-events:none;transition:opacity .25s}
-.prio-limit-overlay.open{opacity:1;pointer-events:all}
+.prio-limit-overlay{position:fixed;inset:0;background:var(--overlay-blur-75);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);z-index:9200;opacity:0;visibility:hidden;pointer-events:none;transition:opacity .25s,visibility 0s linear .4s}
+.prio-limit-overlay.open{opacity:1;visibility:visible;transition:opacity .25s,visibility 0s;pointer-events:all}
 .prio-limit-sheet{position:fixed;bottom:0;left:0;right:0;background:var(--surf-2);border-radius:var(--r-sheet) var(--r-sheet) 0 0;z-index:9201;transform:translateY(100%);transition:var(--sheet-out)}
 .prio-limit-sheet.open{transform:translateY(0);transition:var(--sheet-in)}
 .prio-limit-handle{width:36px;height:4px;background:rgba(255,255,255,.1);border-radius:var(--r-handle);margin:12px auto 0}
@@ -1153,8 +1286,8 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .prio-limit-swap{background:none;border:1px solid var(--bdr);border-radius:var(--r-pill);color:var(--gray);font-family:var(--font);font-size:var(--t-sm);font-weight:var(--w-semi);padding:5px 11px;cursor:pointer;white-space:nowrap;flex-shrink:0;transition:all var(--tr-base)}
 .prio-limit-swap:active{border-color:var(--amber-30);color:var(--amber);background:var(--amber-10)}
 .prio-limit-cancel{width:calc(100% - 40px);margin:8px 20px 44px;display:block;text-align:center} /* anatomía: regla CANCEL canónica */
-.plan-confirm-overlay{position:fixed;inset:0;background:var(--overlay-55);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);z-index:9200;opacity:0;pointer-events:none;transition:opacity .25s}
-.plan-confirm-overlay.open{opacity:1;pointer-events:all}
+.plan-confirm-overlay{position:fixed;inset:0;background:var(--overlay-55);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);z-index:9200;opacity:0;visibility:hidden;pointer-events:none;transition:opacity .25s,visibility 0s linear .4s}
+.plan-confirm-overlay.open{opacity:1;visibility:visible;transition:opacity .25s,visibility 0s;pointer-events:all}
 .plan-confirm-sheet{position:fixed;bottom:0;left:0;right:0;background:var(--surf-2);border-radius:var(--r-sheet) var(--r-sheet) 0 0;z-index:9201;padding:8px 20px 44px;display:none;transition:var(--sheet-out)}
 .plan-confirm-sheet.open{display:block;transform:translateY(0);transition:var(--sheet-in)}
 .plan-confirm-handle{width:36px;height:4px;background:rgba(255,255,255,.12);border-radius:var(--r-handle);margin:12px auto 20px}
@@ -1219,11 +1352,26 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
   touch-action:manipulation
 }
 .pel-sheet-action-btn.act-on{background:rgba(39,174,96,.08);border-color:rgba(39,174,96,.25);color:var(--green)}
-.pel-sheet-action-btn.act-prio{background:var(--amber-10);border-color:var(--amber-30);color:var(--amber)}
-.pel-sheet-action-btn.btn-primary{background:var(--amber);border-color:var(--amber);color:var(--black);font-size:var(--t-sm);padding:13px 4px}
-.pel-sheet-action-btn.btn-secondary{background:var(--surf-3);border-color:transparent;color:rgba(255,255,255,.5);font-size:var(--t-sm);padding:13px 4px}
-.pel-sheet-action-btn.btn-tertiary{background:none;border-color:transparent;color:var(--gray2);flex:none;padding:13px var(--sp-3)}
+/* ` border-box` en el ATAJO: el borde de 1px es transparente (secundario) o
+   translúcido (act-prio), así que esa franja muestra el fondo. Con el origen por
+   defecto (padding-box) el gradiente se calcula sobre la caja de padding y se REPITE
+   en la franja del borde → la última fila mostraba la parada más CLARA del gradiente,
+   +14 de brillo sobre el interior, y se leía como una línea fina BAJO el botón.
+   Medido pixel a pixel: 45,42,38 → 32,30,27 (= interior). Va en esta declaración y no
+   en la regla base porque el atajo `background:` resetea background-origin. */
+.pel-sheet-action-btn.act-prio{background:var(--amber-cta-soft) border-box;border-color:var(--amber-30);color:var(--amber)}
+.pel-sheet-action-btn.btn-primary{background:var(--amber-cta);border-color:var(--amber);color:var(--black);font-size:var(--t-sm);padding:13px 4px}
+.pel-sheet-action-btn.btn-secondary{background:var(--surf-cta) border-box;border-color:transparent;color:rgba(255,255,255,.5);font-size:var(--t-sm);padding:13px 4px}
+/* font-size igual que primario y secundario (t-sm): sin él heredaba t-caption (12px)
+   y el terciario medía 43px contra 41 de sus vecinos en la misma fila. */
+.pel-sheet-action-btn.btn-tertiary{background:none;border-color:transparent;color:var(--gray2);flex:none;font-size:var(--t-sm);padding:13px var(--sp-3)}
+/* Los tres CTAs miden IGUAL. No con align-items:stretch —eso taparía la causa—
+   sino igualando el icono: el corazón viene de ICONS a 14 y marcador/estrella a 13,
+   con el mismo padding, así que el primario medía 42px y los secundarios 41 en la
+   misma fila. Se normaliza a 13 (base de ICONS) acá y no en el glifo compartido,
+   que lo usan otras superficies con su propia escala. */
 .pel-sheet-ctas{display:flex;gap:var(--sp-2);align-items:center;margin-top:var(--sp-6)}
+.pel-sheet-ctas .pel-sheet-action-btn svg{width:13px;height:13px}
 .pel-sheet-ctas-watched{display:flex;gap:var(--sp-2);margin-top:var(--sp-6)}
 
 .pel-sheet-lb{display:inline-flex;align-items:center;gap:6px;margin-top:var(--sp-4);opacity:.6;text-decoration:none}
@@ -1234,7 +1382,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 
 /* Lista de cortometrajes */
 
-.c-film-thumb{width:var(--poster-xs-w);height:var(--poster-xs-h);object-fit:cover;border-radius:var(--r-sm);flex-shrink:0;display:block}
+.c-film-thumb{width:var(--poster-xs-w);height:var(--poster-xs-h);object-fit:cover;border-radius:var(--r-poster);flex-shrink:0;display:block}
 /* Como DIV enmarcado (poster-ed) el thumb usa el modelo flex del marco — el display:block de arriba es para el caso <img> y rompía el frame (ed-img colapsaba a 0). */
 .c-film-thumb.poster-ed{display:flex}
 .pel-sheet-corto-item:active{background:var(--surf-2)}
@@ -1325,7 +1473,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
    AQUÍ; cada clase conserva solo su layout (width/margin/flex). Un botón
    primario nuevo se SUMA a este selector — guardián [button-canon]. */
 .auth-send-btn,.empty-state-cta,.venue-sheet-dir,.pv-btn-save,.conflict-btn-replace,.plan-confirm-cta,.av-calc-btn,.ag-save-btn,.splash-enter-btn,.conflict-modal-btn.confirm{
-  background:var(--amber);color:var(--black);border:none;border-radius:var(--r-pill);
+  background:var(--amber-cta);color:var(--black);border:none;border-radius:var(--r-pill);
   padding:var(--sp-btn);font-family:var(--font);font-size:var(--t-base);font-weight:var(--w-bold);
   cursor:pointer;transition:opacity var(--tr-base);
 }
@@ -1413,6 +1561,10 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .mplan-wk-time.mp-event-time{color:var(--event-blue-70)}
 .mplan-wk-title{font-size:var(--t-sm);font-weight:var(--w-semi);color:var(--white);line-height:1.3;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
 .mplan-wk-title.mp-event-title{color:var(--event-blue-title)}
+/* mp-multi = una obra dentro de un bloque que contiene VARIAS (función
+   compartida). Se clampan a 1 línea para que entren todas: lo que importa es
+   saber qué obras hay, no leer el título completo de cada una. */
+.mplan-wk-title.mp-multi{-webkit-line-clamp:1;font-size:var(--t-xs);margin-bottom:1px}
 .mplan-wk-venue{font-size:var(--t-xs);color:var(--gray);margin-top:3px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 
 /* Lista de detalle */
@@ -1457,8 +1609,8 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 /* Sección archivo */
 /* ── DIARIO (17 jul): lo visto como destino propio (patrón Letterboxd/Things).
    Sheet propio bajo pel-sheet (z 9001): tocar una card abre la película ENCIMA. */
-.diary-overlay{position:fixed;inset:0;background:var(--overlay-70);z-index:8900;opacity:0;pointer-events:none;transition:opacity .25s ease}
-.diary-overlay.open{opacity:1;pointer-events:auto}
+.diary-overlay{position:fixed;inset:0;background:var(--overlay-70);z-index:8900;opacity:0;visibility:hidden;pointer-events:none;transition:opacity .25s ease,visibility 0s linear .4s}
+.diary-overlay.open{opacity:1;visibility:visible;transition:opacity .25s ease,visibility 0s;pointer-events:auto}
 .diary-sheet{position:fixed;bottom:0;left:0;right:0;max-height:86dvh;background:var(--surf-2);border-radius:var(--r-sheet) var(--r-sheet) 0 0;z-index:8901;display:flex;flex-direction:column;transform:translateY(100%);transition:var(--sheet-out)}
 .diary-sheet.open{transform:translateY(0);transition:var(--sheet-in)}
 .diary-hdr{display:flex;align-items:flex-start;justify-content:space-between;gap:var(--sp-3);padding:var(--sp-1) var(--sp-4) var(--sp-3)}
@@ -1709,8 +1861,8 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 }
 
 /* ── FESTIVAL BOTTOM SHEET ── */
-.fs-overlay{position:fixed;inset:0;background:var(--overlay-60);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);z-index:2000;opacity:0;transition:opacity var(--tr-smooth);pointer-events:none}
-.fs-overlay.open{opacity:1;pointer-events:all}
+.fs-overlay{position:fixed;inset:0;background:var(--overlay-60);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);z-index:2000;opacity:0;visibility:hidden;transition:opacity var(--tr-smooth),visibility 0s linear .4s;pointer-events:none}
+.fs-overlay.open{opacity:1;visibility:visible;transition:opacity var(--tr-smooth),visibility 0s;pointer-events:all}
 .fs-sheet{position:fixed;bottom:0;left:0;right:0;background:var(--surf);border-radius:var(--r) var(--r) 0 0;z-index:2001;padding:0 0 env(safe-area-inset-bottom);max-height:85dvh;overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;transform:translateY(100%);transition:var(--sheet-out)}
 .fs-sheet.open{transform:translateY(0);transition:var(--sheet-in)}
 .fs-handle{width:36px;height:4px;background:var(--bdr);border-radius:var(--r-handle);margin:var(--sp-3) auto 0}
@@ -2266,7 +2418,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .av-type-btn.on{border-color:var(--bdr);background:var(--surf);color:var(--white)}
 .av-time-row{display:flex;align-items:center;gap:var(--sp-2);margin-bottom:20px}
 .av-time-sel{flex:1;background:var(--surf);border:1px solid var(--bdr);border-radius:var(--r-md);color:var(--white);font-size:var(--t-base);font-family:var(--font);padding:10px var(--sp-3);cursor:pointer}
-.av-sheet-confirm{width:100%;background:var(--amber);border:none;border-radius:var(--r-md);padding:var(--sp-btn) 0;font-size:var(--t-base);font-weight:var(--w-bold);color:var(--black);cursor:pointer;font-family:var(--font)}
+.av-sheet-confirm{width:100%;background:var(--amber-cta);border:none;border-radius:var(--r-md);padding:var(--sp-btn) 0;font-size:var(--t-base);font-weight:var(--w-bold);color:var(--black);cursor:pointer;font-family:var(--font)}
 
 /* Sección + Lugar — filtros dropdown ────────────────────── */
 .seccion-btn{display:flex;align-items:center;gap:var(--sp-1);font-size:var(--t-sm);font-weight:var(--w-semi);color:var(--gray);background:none;border:none;cursor:pointer;font-family:var(--font);padding:var(--sp-1) 0;transition:color var(--tr-base);white-space:nowrap;-webkit-tap-highlight-color:transparent;touch-action:manipulation;position:relative}
@@ -2442,9 +2594,9 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .mt-2{margin-top:var(--sp-2)}
 .txt-xs{font-size:var(--t-xs)}
 .pad-muted{padding:var(--sp-4);color:var(--gray);font-size:var(--t-base)}
-/* notice-detail = detalle del notice-badge con contenedor del canon (no texto pelado) */
-.notice-detail-amber{font-size:var(--t-xs);color:var(--amber);font-weight:var(--w-semi);background:var(--amber-08);border-radius:var(--r-sm);padding:2px var(--sp-2);margin-top:var(--sp-1);display:inline-block}
-.notice-detail-green{font-size:var(--t-xs);color:var(--green);font-weight:var(--w-semi);background:var(--green-12);border-radius:var(--r-sm);padding:2px var(--sp-2);margin-top:var(--sp-1);display:inline-block}
+/* notice-detail = detalle del notice-badge. Sin caja: el color ya lo distingue. */
+.notice-detail-amber{font-size:var(--t-xs);color:var(--amber);font-weight:var(--w-semi);margin-top:var(--sp-1);display:inline-block}
+.notice-detail-green{font-size:var(--t-xs);color:var(--green);font-weight:var(--w-semi);margin-top:var(--sp-1);display:inline-block}
 
 /* ── Utility classes (pasada 2) ─────────────────────────────────────────── */
 .stars-row{display:flex;justify-content:center;gap:2px;pointer-events:none}
@@ -2487,7 +2639,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .sheet-title{font-size:var(--t-md);font-weight:var(--w-display);letter-spacing:-.02em;color:var(--white);margin-bottom:6px}
 .sheet-subtitle{font-size:var(--t-sm);color:var(--gray);margin-bottom:var(--sp-4)}
 .sheet-input{width:100%;background:var(--surf);border:1px solid var(--bdr);border-radius:var(--r-md);padding:12px 14px;font-size:16px;color:var(--white);outline:none;box-sizing:border-box;font-family:var(--font);margin-bottom:var(--sp-3)}
-.sheet-cta{width:100%;background:var(--amber);border:none;border-radius:var(--r-md);padding:var(--sp-btn) 0;font-size:var(--t-base);font-weight:var(--w-bold);color:var(--black);cursor:pointer;font-family:var(--font)}
+.sheet-cta{width:100%;background:var(--amber-cta);border:none;border-radius:var(--r-md);padding:var(--sp-btn) 0;font-size:var(--t-base);font-weight:var(--w-bold);color:var(--black);cursor:pointer;font-family:var(--font)}
 
 .txt-gray2-sm{font-size:var(--t-sm);color:var(--gray2)}
 .mt-4{margin-top:var(--sp-4)}
@@ -2497,10 +2649,12 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 
 .touch-44{width:44px;height:44px;display:flex;align-items:center;justify-content:center}
 .ml-2{margin-left:var(--sp-2)}
-.notice-banner-row{display:flex;align-items:center;gap:var(--sp-2);padding:var(--sp-2) var(--sp-3);background:var(--amber-08);border-radius:var(--r-sm);margin-bottom:var(--sp-2)}
+/* Sin caja: ningún aviso lleva recuadro sobre el texto — solo el badge conserva
+   su pastilla. Misma regla que .meta-banner (Juan, 29 jul 2026). */
+.notice-banner-row{display:flex;align-items:center;gap:var(--sp-2);margin-bottom:var(--sp-2)}
 .notice-banner-txt{font-size:var(--t-sm);color:var(--amber-60)}
 .meta-xs-gray{font-size:var(--t-xs);color:var(--gray);margin-bottom:var(--sp-2)}
-.flex-gap1-mt1{display:flex;gap:var(--sp-1);margin-top:var(--sp-1)}
+
 .row-center-xs{display:inline-flex;align-items:center;justify-content:center;gap:var(--sp-1)}
 
 .txt-white60{color:var(--white-60)}
@@ -2942,7 +3096,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202607250945";
+    s.src="/src/main.js?v=202607311421";
     document.body.appendChild(s);
     // Watchdog de boot (P0 18 jul): si el grafo ESM murió en el import (caché
     // HTTP mixta tras deploys en ráfaga — main.js nuevo + módulo viejo sin el

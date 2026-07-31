@@ -22,9 +22,93 @@ Documento normativo. Toda discrepancia entre este archivo y el código es un bug
   "prioLimit": 5,
   "ticket_url": "string — URL https:// de entradas (opcional)",
   "ticketing_model": "string — 'paid' | 'mixed' (obligatorio si ticket_url existe)",
+  "sharedSlotIsOneScreening": "bool — opt-in: dos obras en el mismo día+hora+sala son UNA función",
   "films": [ ... ]
 }
 ```
+
+### Proyecciones conjuntas — los DOS modelos canónicos (doctrina, 30 jul 2026)
+
+Los festivales juntan proyecciones, y van a seguir haciéndolo: un bloque curado
+de cortos, un corto antes de un largo, dos mediometrajes en una función.
+**Tenemos arquitectura para ambos casos — no se inventa un tercer modelo.**
+(El precedente: para Cinemancia 2025 se ideó una «función doble» con póster
+partido a la mitad. Nunca llegó al código y quedó obsoleta: sus dos slots
+compartidos son exactamente los casos que estos modelos resuelven.)
+
+| | **A · PROGRAMA** | **B · ANCLAJE** |
+|---|---|---|
+| Qué es | El festival curó un contenedor con nombre («…— Programa 1», «FINQUITA») | Obras independientes que comparten función, sin contenedor |
+| Cómo viene | Una entrada `is_cortos` + `film_list` | N entradas normales + `sharedSlotIsOneScreening: true` en la raíz |
+| Entidad en la app | El programa (las obras viven dentro; ficha propia vía `openCortoSheet`) | Cada obra (ficha y card **independientes** — nunca fusionadas) |
+| Interés/Plan opera sobre | El programa completo | La obra; sus compañeras se suman/quitan en simetría |
+| Aviso en ficha | `⟨PROGRAMA⟩ Verás los otros cortos` | `⟨PROGRAMA⟩ Verás las otras obras` |
+
+**Regla de decisión en onboarding:** ¿el festival le puso NOMBRE al conjunto?
+→ Programa. ¿Son obras con identidad propia que comparten horario? → Anclaje.
+La duda se resuelve contra el programa oficial del festival, nunca por deducción
+(guardián `[slots-sin-decidir]` obliga a decidir; ver abajo).
+
+**Lo que la app garantiza en ambos modelos, transversal a todos los tabs** (el
+dominio es el dueño; ninguna vista calcula por su cuenta):
+
+- **Conflictos** — `screensConflict`: las obras de una función no rivalizan.
+- **Duración** — el par `blockDuration` (fin del bloque, sin Q&A: «¿hasta qué
+  hora estoy en la sala?») / `effectiveDuration` (bloque + Q&A: «¿cuánto ocupa
+  la sala?» — conflictos), con `durationForTravel` como dueño de la doctrina del
+  Q&A (compromete solo con traslado) y `screeningEndDate` como fin canónico
+  absoluto («¿ya terminó?») y `delayedEndMin` (fin + retraso reportado — «termina
+  en X» y el margen hacia la siguiente). Consumido por huecos de sugerencias,
+  «termina en X», en-curso, buffer de retrasos, el orden del optimizador y el
+  EXPORT a calendario (ICS + iOS). Guardianes: `[duracion-solo-dominio]` (fuera
+  de `src/domain/` nadie parsea `duration`; única excepción: el sellador) y
+  `[fin-inline-ratchet]` (la aritmética de fin inline fuera del dominio tiene
+  techo — código nuevo usa los dueños).
+- **Mi Plan** — la lista no mide huecos ni avisa Q&A entre obras del mismo slot;
+  el calendario dibuja **un bloque por función** con todas sus obras.
+- **Ficha** — hereda funciones y avisos (banda AVISOS); Q&A contado UNA vez.
+- **Escritura del plan** — `commitPlan` (persistence.js) es el ÚNICO camino de
+  mutación de `savedAgenda`; certifica cada escritura con `verifyPlan` (el
+  mismo certificador del oráculo del planeador) — report-only en producción,
+  duro en tests (`__PLAN_STRICT__`). Las 2 puertas de hidratación (loader +
+  nube) normalizan vía `syncScheduleWithCatalog`. Guardián:
+  `[plan-write-chokepoint]`.
+- **Plan guardado** — `syncScheduleWithCatalog` (31 jul 2026): una entrada de
+  `savedAgenda` guarda la ELECCIÓN (título+día+hora); todo lo demás se re-deriva
+  de la función viva en cada hidratación (loader y nube). Un plan guardado antes
+  de un cambio de catálogo nunca vuelve a mentir. Sin match exacto la entrada
+  queda intacta — territorio del camino de avisos. Guardián:
+  `[plan-sync-en-puertas]`.
+
+### `sharedSlotIsOneScreening` — anclaje de función (opt-in, 29 jul 2026)
+
+Algunos festivales programan **dos obras en una misma función**: un corto o
+mediometraje y después un largo, mismo día, hora y sala, con una sola cabecera
+de horario en su programa. Con este flag en `true`, el loader detecta esos
+grupos (`día|hora|sede|sala`) y marca cada obra con `_slotKey`, `_slotDur`
+(suma de las obras — el fin del bloque) y `_slotMin` (con el Q&A — conflictos), y
+el dominio entonces:
+
+- **no las declara en conflicto entre sí** — con una entrada se ven las dos;
+- **ocupa la sala por la SUMA de ambas** (+30 del Q&A **una sola vez**: es una
+  charla al final de la función, no una por obra). Sin esto el planificador cree
+  que salís al terminar la primera y te ofrece otra función a la que no llegás.
+
+Además, la función es **una unidad en las dos direcciones**: agregar una obra
+anclada suma sus compañeras a Intereses y quitarla las quita —incluido su lugar
+en el plan guardado—. La ficha lo anuncia con `meta_funcion_incluye`.
+
+> La simetría no es cosmética. Con el quitar individual, quien agregaba una obra
+> y se arrepentía quedaba con la compañera en Intereses —que nunca eligió— y con
+> la franja igual reservada. Con un corto el problema no existe porque su botón
+> opera sobre el programa: ahí hay una sola entidad. Acá hay dos que deben
+> comportarse como una.
+
+> ⚠️ **Es opt-in a propósito, no se puede derivar.** En sedes multisala (Tribeca:
+> «AMC 19th St. East 6», «Village East by Angelika») misma hora y sede es **otra
+> sala = otra función**, y anclarlas sería un error. Solo lo declara el festival
+> cuyo programa lo confirma. FINCA 2026 es el primero: 6 casos, verificados uno
+> a uno contra su documento día por día.
 
 **Nota formato:** Los festivales desde Jardín 2026 no incluyen `config{}` en el JSON — la configuración vive en `FESTIVAL_CONFIG` de `index.html`. Los festivales legacy (FICCI 65, Cinemancia 2025) sí incluyen `config{}`.
 

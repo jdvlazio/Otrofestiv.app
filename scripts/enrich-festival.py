@@ -105,6 +105,46 @@ CTY_ES2EN = {
     'irak': 'iraq', 'libano': 'lebanon', 'arabia saudita': 'saudi arabia',
     'catar': 'qatar', 'kenia': 'kenya', 'etiopia': 'ethiopia',
     'argelia': 'algeria', 'tunez': 'tunisia',
+    # lección FICDEH (26 jul 2026): 'Filipinas'≠'Philippines' repitió el falso
+    # rechazo de TT con otro país — completada la tabla con TODO país plausible
+    # de festival (el mapa corto era una lista de "los que ya nos pasaron").
+    'filipinas': 'philippines', 'canada': 'canada', 'mexico': 'mexico',
+    'peru': 'peru', 'panama': 'panama', 'haiti': 'haiti',
+    'republica dominicana': 'dominican republic', 'belice': 'belize',
+    'groenlandia': 'greenland', 'islandia': 'iceland', 'austria': 'austria',
+    'portugal': 'portugal', 'luxemburgo': 'luxembourg', 'monaco': 'monaco',
+    'eslovaquia': 'slovakia', 'eslovenia': 'slovenia', 'croacia': 'croatia',
+    'serbia': 'serbia', 'bosnia': 'bosnia and herzegovina', 'kosovo': 'kosovo',
+    'macedonia del norte': 'north macedonia', 'albania': 'albania',
+    'bulgaria': 'bulgaria', 'rumania': 'romania', 'moldavia': 'moldova',
+    'bielorrusia': 'belarus', 'estonia': 'estonia', 'letonia': 'latvia',
+    'lituania': 'lithuania', 'georgia': 'georgia', 'armenia': 'armenia',
+    'azerbaiyan': 'azerbaijan', 'kazajistan': 'kazakhstan',
+    'uzbekistan': 'uzbekistan', 'mongolia': 'mongolia', 'china': 'china',
+    'taiwan': 'taiwan', 'hong kong': 'hong kong', 'india': 'india',
+    'pakistan': 'pakistan', 'banglades': 'bangladesh', 'bangladesh': 'bangladesh',
+    'nepal': 'nepal', 'sri lanka': 'sri lanka', 'birmania': 'myanmar',
+    'myanmar': 'myanmar', 'tailandia': 'thailand', 'vietnam': 'vietnam',
+    'laos': 'laos', 'camboya': 'cambodia', 'malasia': 'malaysia',
+    'singapur': 'singapore', 'indonesia': 'indonesia', 'australia': 'australia',
+    'siria': 'syria', 'jordania': 'jordan', 'israel': 'israel',
+    'palestina': 'palestine', 'yemen': 'yemen', 'oman': 'oman',
+    'kuwait': 'kuwait', 'barein': 'bahrain',
+    'emiratos arabes unidos': 'united arab emirates', 'afganistan': 'afghanistan',
+    'libia': 'libya', 'sudan': 'sudan', 'somalia': 'somalia',
+    'senegal': 'senegal', 'mali': 'mali', 'burkina faso': 'burkina faso',
+    'niger': 'niger', 'chad': 'chad', 'ghana': 'ghana', 'nigeria': 'nigeria',
+    'camerun': 'cameroon', 'congo': 'congo', 'uganda': 'uganda',
+    'tanzania': 'tanzania', 'ruanda': 'rwanda', 'burundi': 'burundi',
+    'mozambique': 'mozambique', 'angola': 'angola', 'zambia': 'zambia',
+    'zimbabue': 'zimbabwe', 'malaui': 'malawi', 'namibia': 'namibia',
+    'botsuana': 'botswana', 'costa de marfil': 'ivory coast',
+    'mauritania': 'mauritania', 'sahara occidental': 'western sahara',
+    'chipre': 'cyprus', 'malta': 'malta', 'cuba': 'cuba',
+    'puerto rico': 'puerto rico', 'jamaica': 'jamaica',
+    'trinidad y tobago': 'trinidad and tobago', 'guyana': 'guyana',
+    'surinam': 'suriname', 'curazao': 'curacao', 'fiyi': 'fiji',
+    'papua nueva guinea': 'papua new guinea',
 }
 
 def _countries(s):
@@ -178,8 +218,10 @@ def match_ok(film, det):
     return (True, f'ok (título {tsim:.2f}, {corrob} corrob.)')
 
 # ── TMDB functions ─────────────────────────────────────────────────────────────
-def _search(media, query):
+def _search(media, query, year=None):
     params = {'api_key': TMDB_KEY, 'query': query, 'language': 'en-US'}
+    if year:  # acota la búsqueda al año — clave para títulos cortos/numéricos
+        params['primary_release_year' if media == 'movie' else 'first_air_date_year'] = year
     r = requests.get(f'{TMDB_BASE}/search/{media}', params=params, timeout=8)
     return r.json().get('results', [])
 
@@ -198,19 +240,24 @@ def _query_variants(title):
     return out
 
 def candidates_for(film, max_each=3):
-    """Hasta `max_each` resultados por (media × query). Título original primero,
-    luego EN, luego variantes sin comillas/subtítulo (solo si lo literal dio 0)."""
+    """Hasta `max_each` resultados por (media × query). PRIMERO la pasada
+    ACOTADA POR AÑO (año ±1) si el film lo tiene — lección FICDEH (26 jul 2026):
+    los títulos cortos/numéricos ('1982', '58th') quedan enterrados en el
+    ranking sin filtro entre homónimos famosos y el correcto jamás llega al
+    gate; con el año delante, aparece de una. Los candidatos de TODAS las
+    pasadas cruzan el MISMO gate de 4 criterios — esto mejora la recuperación,
+    no afloja la identidad. Luego: sin filtro, y variantes si todo dio 0."""
     titles = []
     for k in ('title', 'title_en'):
         v = film.get(k)
         if v and v not in titles:
             titles.append(v)
     seen, out = set(), []
-    def _run(queries):
+    def _run(queries, year=None):
         for media in ('movie', 'tv'):
             for q in queries:
                 try:
-                    results = _search(media, q)
+                    results = _search(media, q, year=year)
                 except Exception:
                     results = []
                 for res in results[:max_each]:
@@ -218,6 +265,10 @@ def candidates_for(film, max_each=3):
                     if key not in seen:
                         seen.add(key)
                         out.append((media, res))
+    y = str(film.get('year') or '').strip()
+    if y.isdigit():
+        for yy in (int(y), int(y) - 1, int(y) + 1):
+            _run(titles, year=yy)
     _run(titles)
     if not out:
         variants = [v for t in titles for v in _query_variants(t) if v not in titles]

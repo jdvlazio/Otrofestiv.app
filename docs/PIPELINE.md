@@ -11,7 +11,7 @@ Orden canónico para montar un festival. Cada paso mapea a una fase de abajo.
 
 | # | Paso | Hace | Fase |
 |---|---|---|---|
-| 1 | `node scripts/csv-to-festival.js <in.csv> festivals/<id>.json` | CSV del organizador → JSON base `{venues, films}` | 1 |
+| 1 | `node scripts/csv-to-festival.js <in.csv> festivals/<id>.json [--anclaje\|--separadas]` | CSV del organizador → JSON base `{venues, films}`. **BLOQUEA** si hay proyecciones conjuntas sin modelo decidido (gate duro), y al terminar emite el comando de `generate-config.js` ya derivado | 1 |
 | 2 | `TMDB_API_KEY=… python3 scripts/enrich-festival.py festivals/<id>.json` | llena **solo `genre`/`year`** (gate de 4 criterios; rechaza en miss) | 3 |
 | 3 | **`synopsis_es` → traducción inline de Claude** (lee PT/EN → ES) + **pase de Content Design** | localización de contenido | 3b / 5 |
 | 4 | `python3 scripts/geocode-venues.py …` | lat/lng de venues (Nominatim) | 2 |
@@ -103,6 +103,26 @@ Columnas del CSV — **clase organizador** (lo que solo el festival sabe):
 4. Secciones con emoji — cada sección recibe un emoji único antes del commit.
 
 5. **Orden editorial de secciones** — el orden en que las secciones aparecen por primera vez en `films[]` define el orden de display en el Grid. Organizar el array con intención curatorial: secciones principales primero, eventos y shorts al final. Primera aparición = posición en el Grid.
+
+#### Gate de Fase 1 — proyecciones conjuntas (obligatorio desde FINCA 2026)
+
+Al cerrar el JSON, buscar **slots compartidos** (2+ obras con mismo
+día+hora+sede+sala). Cada uno exige una decisión contra el programa oficial —
+nunca por deducción:
+
+1. **¿El festival lo curó con nombre?** → modelo **Programa**: una entrada
+   `is_cortos` + `film_list`.
+2. **¿Obras independientes en una misma función?** (corto antes del largo, dos
+   mediometrajes) → modelo **Anclaje**: `sharedSlotIsOneScreening: true` en la
+   raíz. Verificar caso por caso: en sedes multisala, misma hora+sede puede ser
+   otra sala = otra función.
+3. **¿Son de verdad funciones separadas?** (actividades paralelas en espacios
+   distintos) → anotarlo en `_SEPARATE` del guardián.
+
+El guardián `[slots-sin-decidir]` (validate.py) falla si un festival activo
+tiene slots compartidos sin decisión — Cinemancia 2025 quedó en ese limbo y la
+app trató corto+largo de una misma función como rivales. Doctrina completa y
+tabla de decisión: `docs/SCHEMA.md` § Proyecciones conjuntas.
 
 #### Reglas de Fase 1 probadas en Tercer Tiempo 2026 (fuente = PDF + fichas web)
 
@@ -482,12 +502,20 @@ para que en LB se vea bien, no para sembrar fichas vacías ni huérfanas sin ima
 
 > 🚦 **GATE PRIMERO — correr `python3 scripts/tmdb-gaps.py <festival.json>` ANTES de
 > abrir cualquier alta.** El script mide cada póster y separa las obras en **APTAS**
-> (póster ≥500px) y **BLOQUEADAS** (sin póster o <500px). **No se abre el alta de una
-> obra bloqueada** — primero hay que conseguir su póster en alta. Lección del ensayo
-> «Al son que me toquen bailo» (21 jul 2026): el asset era 298px → TMDB lo rechazó
-> por resolución mínima y quedó una ficha huérfana. Casi todos nuestros pósters de
-> films son ~300px (optimizados para la app móvil) → **no sirven como fuente TMDB**;
-> el cuello de botella real de un lote es **juntar los pósters en alta**, no subir.
+> y **BLOQUEADAS**, con dos criterios que el uploader de TMDB aplica por separado:
+> **ancho ≥500px** y **proporción entre 0.66 y 0.71** (w/h). **No se abre el alta de
+> una obra bloqueada** — primero se arregla su póster. Cuando el festival tiene
+> sidecar `<id>-posters-src.json`, el gate juzga el **original de la fuente** (que es
+> lo que se sube, no el asset optimizado de la app) e imprime su URL en `Subir:`.
+>
+> Las dos lecciones que lo construyeron, ambas pagadas con fichas rebotadas:
+> - **Resolución** — ensayo «Al son que me toquen bailo» (21 jul 2026): el asset era
+>   298px → TMDB lo rechazó y quedó una ficha huérfana. Casi todos nuestros pósters
+>   de films son ~300–500px (optimizados para la app) → hay que bajar el original.
+> - **Proporción** — tanda FICDEH (25 jul 2026): el original de *Amalgama* medía
+>   1857×2560 (**0.725**) y TMDB lo rechazó por *aspect ratio* **después** de crear la
+>   ficha; entró tras un recorte centrado a 1792×2560 (0.700). Los 700×1000 de la
+>   fuente (0.700) pasaron los seis. El gate ya sugiere el recorte exacto.
 
 > ⚠️ **Límite de plataforma:** la API de TMDB **no crea películas ni sube imágenes** —
 > ambas son solo por web y **requieren login**. Claude nunca escribe contraseñas:
@@ -512,9 +540,18 @@ para que en LB se vea bien, no para sembrar fichas vacías ni huérfanas sin ima
   La barrera es *quién* introdujo el archivo (solo lo adjuntado por el usuario), no
   *dónde* está; es una red anti-exfiltración, no un límite tonto. → **Juan adjunta
   el póster al chat** (para un lote, un arrastre masivo de todos). Requisitos TMDB:
-  **portrait ~2:3** y **≥500px de ancho** (rechaza más chico → ver el GATE de arriba).
-  Nuestros assets están optimizados ~300px para la app → **no sirven**; hay que
-  conseguir el **original de prensa** en alta (press kit del festival / canal oficial).
+  **≥500px de ancho** y **ratio 0.66–0.71** (rechaza fuera de rango → ver el GATE).
+  Nuestros assets están optimizados para la app → **no sirven**; hay que conseguir el
+  **original de prensa** en alta (press kit del festival / canal oficial).
+  **Vía que funcionó (25 jul 2026), cuando el adjunto al chat no llega al disco:**
+  usar el **Browser integrado** (`preview_start` con la URL de TMDB) — Juan se loguea
+  ahí una vez y Claude conduce todo (⊕ «Añadir cartel», idioma, siguiente ficha)
+  **salvo el diálogo de archivos**, que es una ventana de la app de Claude y por eso
+  es lo único que Claude no puede tocar jamás → **un doble clic de Juan por póster**.
+  Tras subir, poner **Idioma = Español; Castellano (es-ES)** en el cartel (si el
+  cartel tiene texto): el desplegable acumula lo tecleado si se repite el intento —
+  escribir el filtro UNA vez y clicar la opción; verificar con
+  `GET /movie/<id>/images?include_image_language=es,xx,null` que `iso_639_1` sea `es`.
 - **Equipo → Director:** en «Añadir nuevo miembro del equipo» buscar la persona.
   Si hay **homónimos** (TMDB suele mostrar varios), **no atar a un perfil existente
   sin certeza** — meter la persona equivocada ensucia una base pública. Regla de

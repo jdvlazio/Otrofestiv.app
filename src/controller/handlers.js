@@ -12,7 +12,7 @@ import { showActionModal, showToast } from '../view/feedback.js';
 import { _renderProgramaContent, lugarClose, render, renderNoticesBanner, _noticeKey } from '../view/programa.js';
 import { renderAgenda, updateCardState, updateHorarioPrioBtn } from '../view/agenda.js';
 import { runCalc } from './calc.js';
-import { saveDelays, saveLastSlot, savePrio, saveSavedAgenda, saveState, saveWL, saveWatched } from './persistence.js';
+import { commitPlan, saveDelays, saveLastSlot, savePrio, saveSavedAgenda, saveState, saveWL, saveWatched } from './persistence.js';
 import { cloudReportDelay, cloudClearDelay, cloudScreeningKey } from './delays-cloud.js';
 import { _getProgramaPhase, _reRenderIntereses, _updateProgramaActiveFilter, initProgramaModeBar, showAgView, showDayView, switchMainNav, updateAgTab, _markPreserveResult } from './pipeline.js';
 import { searchClose, seccionClose } from './overlays.js';
@@ -50,38 +50,52 @@ export function toggleWL(title,e){
   if(e) e.stopPropagation();
   // 1. READ
   const {FILMS, prioritized, savedAgenda, watched, watchlist} = state.snapshot();
+  // ANCLAJE DE FUNCIÓN: obras programadas en la MISMA función (misma sala y
+  // horario, una tras otra) comparten `_slotKey` — lo marca el loader en los
+  // festivales que lo declaran. Se calcula acá para tenerlo en todo el flujo.
+  const _slotKeys=new Set(FILMS.filter(f=>f.title===title&&f._slotKey).map(f=>f._slotKey));
+  const _hermanas=_slotKeys.size
+    ?[...new Set(FILMS.filter(f=>f._slotKey&&_slotKeys.has(f._slotKey)&&f.title!==title).map(f=>f.title))]
+    :[];
+  // La función es UNA unidad en las dos direcciones. Si quitar sacara solo la
+  // obra tocada, quien agrega una y se arrepiente queda con la compañera en
+  // Intereses —que nunca eligió— reservándole la franja. (Con un corto no pasa:
+  // su botón opera sobre el programa, así que ahí hay una sola entidad.)
+  const _todas=[title, ..._hermanas];
+  const _quitarTodas=(wl,wd,pr)=>{
+    let a=wl,b=wd,c=pr;
+    _todas.forEach(x=>{ a=state._delFromSet(a,x); b=state._delFromSet(b,x); c=state._delFromSet(c,x); });
+    return {watchlist:a, watched:b, prioritized:c};
+  };
   // 2. GUARD + 3. MUTATE — branch A: remove con modal si en savedAgenda
   if(watchlist.has(title)){
     if(savedAgenda&&savedAgenda.schedule.some(s=>s._title===title)){
       showActionModal(t('plan_quitar_intereses'),
-        `<b>${title.length>36?title.slice(0,34)+'…':title}</b> ${t('plan_esta_en_tu_plan')}<br><br>${t('plan_quitar_tmb')}`,
+        `<div><b>${title.length>36?title.slice(0,34)+'…':title}</b> ${t('plan_esta_en_tu_plan')}</div><div>${t('plan_quitar_tmb')}</div>`,
         t('plan_quitar_confirm'),()=>{
           // Modal callback variant — transaction agrupa las 3 mutaciones (p7d)
           state.transaction(() => {
-            state.update('savedAgenda', a => ({...a, schedule: a.schedule.filter(s=>s._title!==title)}));
-            if(!savedAgenda.schedule.length)state.set('savedAgenda', null);
-            state.batchUpdate({
-              watchlist: state._delFromSet(watchlist, title),
-              watched: state._delFromSet(watched, title),
-              prioritized: state._delFromSet(prioritized, title),
-            });
+            commitPlan(a=>{const sch=a.schedule.filter(s=>!_todas.includes(s._title));return sch.length?{...a,schedule:sch}:null;});
+            state.batchUpdate(_quitarTodas(watchlist, watched, prioritized));
           });
           saveSavedAgenda();
           saveState('wl','watched');updateCardState(title);   // render automático vía pipeline
+          _hermanas.forEach(h=>updateCardState(h));
         });return;
     }
     // Branch B: remove directo (film NO en savedAgenda)
-    state.batchUpdate({
-      watchlist: state._delFromSet(watchlist, title),
-      watched: state._delFromSet(watched, title),
-      prioritized: state._delFromSet(prioritized, title),
-    });
+    state.batchUpdate(_quitarTodas(watchlist, watched, prioritized));
     showToast(t('toast_fuera_intereses'),'info');
   }
   else{
     // Branch C: add — con detección "todas funciones bloqueadas" + UI variants
+    // Agregar una obra anclada suma sus compañeras: dejarlas fuera partiría una
+    // función por la mitad. Misma regla que un corto arrastrando su programa
+    // (meta_corto_incluye), y simétrica con el quitar de arriba.
+    let _wl=state._addToSet(watchlist, title);
+    _hermanas.forEach(h=>{ _wl=state._addToSet(_wl, h); });
     state.batchUpdate({
-      watchlist: state._addToSet(watchlist, title),
+      watchlist: _wl,
       watched: state._delFromSet(watched, title),
     });
     const _allScreens=FILMS.filter(f=>f.title===title&&!screeningPassed(f));
@@ -90,6 +104,10 @@ export function toggleWL(title,e){
       const{displayTitle}=parseProgramTitle(title);
       const _short=displayTitle.length>28?displayTitle.slice(0,26)+'…':displayTitle;
       setTimeout(()=>showToast(`"${_short}" ${t('plan_bloqueado_disp')}`,'warn',5000),300);
+    } else if(_hermanas.length){
+      // Desde la grilla no se ve el banner de la ficha: si sumamos una obra que
+      // el usuario no eligió, hay que decirlo en el momento.
+      showToast(`${t('badge_programa')} · ${t('aviso_prog_obras')}`,'info',4000);
     } else if(activeMNav==='mnav-cartelera'||activeMNav==='mnav-seleccion'){
       showActionToast(`${ICONS.heartFill} ${t('cta_en_intereses')}`,`${ICONS.bookmark} ${t('cta_priorizar')}`,()=>togglePriority(title));
     } else {
@@ -98,6 +116,8 @@ export function toggleWL(title,e){
   }
   // 4. PERSIST + surgical patch (branch B y C). Render automático vía pipeline.
   saveState('wl','watched');updateCardState(title);
+  // Las compañeras de función también cambiaron de estado → repintar su card.
+  _hermanas.forEach(h=>updateCardState(h));
 }
 
 export function toggleWatched(title,e){
@@ -122,7 +142,7 @@ export function toggleWatched(title,e){
   const _short=title.length>36?title.slice(0,34)+'…':title;
   showActionModal(
     t('modal_ya_viste_titulo'),
-    `<b>${_short}</b><br><br>${t('modal_ya_viste_body')}`,
+    `<div class="cm-subject">${_short}</div><div>${t('modal_ya_viste_body')}</div>`,
     t('modal_ya_viste_cta'),
     ()=>{
       state.update('watched', s => state._addToSet(s, title));
@@ -221,24 +241,52 @@ export function clearDelay(title,day,time,venue){
   cloudClearDelay(cloudScreeningKey(title,day,time,venue));
 }
 
+// _dropFromPlan — DUEÑO ÚNICO del quitar del Plan (mutación + recuerdo para
+// deshacer + render + toast). Lo llaman el quitar normal (tras confirmar en el
+// modal) y el arreglo de una función cancelada, que NO pide confirmación: el
+// usuario está actuando sobre algo que ya no existe, y preguntarle "¿seguro?"
+// sería pedirle que confirme la realidad.
+function _dropFromPlan(title){
+  const {savedAgenda} = state.snapshot();
+  if(!savedAgenda) return;
+  const rem=savedAgenda.schedule.find(s=>s._title===title);
+  if(rem){state.update('lastRemovedSlots', arr => [{...rem,_isRestored:true}, ...arr.filter(r=>r._title!==rem._title)].slice(0,MAX_REMEMBERED_SLOTS));saveLastSlot();}
+  commitPlan(a=>{const sch=a.schedule.filter(s=>s._title!==title);return sch.length?{...a,schedule:sch}:null;});
+  saveSavedAgenda();
+  // CTA B: mostrar aviso contextual post-eliminación
+  _ctaRemovedVisible=true;
+  if(_ctaRemovedTimer) clearTimeout(_ctaRemovedTimer);
+  _ctaRemovedTimer=setTimeout(()=>{_ctaRemovedVisible=false;renderAgenda();},6000);
+  renderAgenda();showToast(t('toast_fuera_plan'),'info');
+}
+
 export function removeFromAgenda(title){
   // 1. READ + 2. GUARD — el outer handler solo abre el modal de confirmación
   const {savedAgenda} = state.snapshot();
   if(!savedAgenda) return;
   const _s=title.length>36?title.slice(0,34)+'…':title;
-  showActionModal(t('plan_quitar_plan'),`<b>${_s}</b><br><br>${t('plan_restaurar_suger')}`,t('misc_quitar'),()=>{
-    // Modal callback — el handler real (variant aceptada en spec)
-    const rem=savedAgenda.schedule.find(s=>s._title===title);
-    if(rem){state.update('lastRemovedSlots', arr => [{...rem,_isRestored:true}, ...arr.filter(r=>r._title!==rem._title)].slice(0,MAX_REMEMBERED_SLOTS));saveLastSlot();}
-    state.update('savedAgenda', a => ({...a, schedule: a.schedule.filter(s=>s._title!==title)}));
-    if(!savedAgenda.schedule.length)state.set('savedAgenda', null);
-    saveSavedAgenda();
-    // CTA B: mostrar aviso contextual post-eliminación
-    _ctaRemovedVisible=true;
-    if(_ctaRemovedTimer) clearTimeout(_ctaRemovedTimer);
-    _ctaRemovedTimer=setTimeout(()=>{_ctaRemovedVisible=false;renderAgenda();},6000);
-    renderAgenda();showToast(t('toast_fuera_plan'),'info');
-  });
+  showActionModal(t('plan_quitar_plan'),`<div class="cm-subject">${_s}</div><div>${t('plan_restaurar_suger')}</div>`,t('misc_quitar'),()=>_dropFromPlan(title));
+}
+
+// _planFixNotice — la salida para una entrada del Plan cuya función cambió. El
+// aviso rojo dice QUÉ pasó; esto es el QUÉ HAGO, que faltaba: la entrada quedaba
+// marcada y sin camino.
+//
+//   Reprogramada → se muda a la hora nueva. Reusa addSuggestion, que ya resuelve
+//     el swap y REVALIDA conflictos: si la hora nueva choca con otra cosa del
+//     plan, aparece el sheet de conflicto de siempre. No se mueve sola: mover
+//     algo en la agenda de alguien sin preguntar es la misma falta que borrarlo.
+//   Cancelada → se quita y se va a Sugerencias, con el hueco ya libre. Quitar
+//     sola deja un agujero; el valor está en llenarlo, y el motor de sugerencias
+//     ya sabe qué cabe ahí.
+export function _planFixNotice(title){
+  title=normTitle(title);
+  const {FILMS, savedAgenda} = state.snapshot();
+  if(!savedAgenda||!savedAgenda.schedule.some(s=>s._title===title)) return;
+  const moved=FILMS.find(f=>f.title===title&&f._movedFrom&&!f._cancelled);
+  if(moved){ addSuggestion(title, moved.day, moved.time); return; }
+  _dropFromPlan(title);
+  setTimeout(_scrollToSuggestions, 350);
 }
 
 export function addSuggestion(title,day,time){
@@ -258,9 +306,7 @@ export function addSuggestion(title,day,time){
   // 3. MUTATE (step 2): Add specific screening to saved agenda
   const screen=FILMS.find(f=>f.title===title&&f.day===day&&f.time===time);
   if(screen){
-    if(!savedAgenda) state.set('savedAgenda', {schedule:[]});
-    // Avoid duplicates (re-read state porque pudo haber sido seteado arriba)
-    const sa=state.get('savedAgenda');
+    const sa=state.get('savedAgenda')||{schedule:[]};
     // Mitad B (pin-funcion): add / swap / no-op. El sheet de película usa esta
     // misma acción para "Añadir esta función". Si el título ya está en OTRA
     // función → swap; si ya está en ESA misma → sin acción (cae al render final).
@@ -279,11 +325,10 @@ export function addSuggestion(title,day,time){
       }
       // filter(s._title!==title): no-opea en add (título ausente), quita la
       // función vieja en swap (título presente en otra función).
-      state.update('savedAgenda', a => ({
-        ...a,
-        schedule: [...a.schedule.filter(s=>s._title!==title), {...screen,_title:title}]
+      commitPlan(a=>{const b=a||{schedule:[]};return {...b,
+        schedule: [...b.schedule.filter(s=>s._title!==title), {...screen,_title:title}]
           .sort((x,y)=>x.day_order!==y.day_order?x.day_order-y.day_order:toMin(x.time)-toMin(y.time))
-      }));
+      };});
       saveSavedAgenda();
       // 5. UI EFFECT: toast informativo con día y hora
       const{displayTitle:dt}=parseProgramTitle(title);
@@ -484,13 +529,11 @@ export function confirmReplace(removedTitle,newTitle,day,time,isScenario){
       } else {
         // Mi Plan (saved): comportamiento histórico — escribe a savedAgenda.
         if(removedTitle) _removePlanItem(removedTitle);
-        if(!savedAgenda) state.set('savedAgenda', {schedule:[]});
         if(!watchlist.has(newTitle)){state.update('watchlist', s=>state._addToSet(s,newTitle));saveWL();}
-        state.update('savedAgenda', a => ({
-          ...a,
-          schedule: [...a.schedule.filter(s=>s._title!==newTitle), {...screen,_title:newTitle}]
+        commitPlan(a=>{const b=a||{schedule:[]};return {...b,
+          schedule: [...b.schedule.filter(s=>s._title!==newTitle), {...screen,_title:newTitle}]
             .sort((x,y)=>DAY_KEYS.indexOf(x.day)-DAY_KEYS.indexOf(y.day)||toMin(x.time)-toMin(y.time))
-        }));
+        };});
         saveSavedAgenda();
       }
       _expandedFilm='';
@@ -505,7 +548,7 @@ export function removeFilmFromScenario(title,e){
   const short=title.length>36?title.slice(0,34)+'…':title;
   showActionModal(
     t('plan_quitar_intereses'),
-    `<b>${short}</b><br><br>${t('plan_se_quitara')}.`,
+    `<div class="cm-subject">${short}</div><div>${t('plan_se_quitara')}.</div>`,
     t('misc_quitar'),
     ()=>{
       state.batchUpdate({
@@ -776,7 +819,7 @@ export function saveCurrentScenario(){
     const _key=s=>`${s._title}|${s.day}|${s.time}`;
     const _fresh=new Set(_squeezed.map(_key));
     const _merged=[..._past.filter(s=>!_fresh.has(_key(s))),..._squeezed];
-    state.set('savedAgenda', {schedule:_merged});
+    commitPlan(()=>({schedule:_merged}));
     saveSavedAgenda();
     openPlanConfirm(_merged);
   };
@@ -786,7 +829,7 @@ export function saveCurrentScenario(){
     const n=_futureN;
     showActionModal(
       `${ICONS.calendar} ${t('plan_reemplazar_plan')}`,
-      `${t('plan_ya_tenes_n',{count:`<b>${n} ${n!==1?t('misc_peliculas'):t('misc_pelicula')}</b>`})}<br><br>${t('plan_reemplazar')}.`,
+      `<div>${t('plan_ya_tenes_n',{count:`<b>${n} ${n!==1?t('misc_peliculas'):t('misc_pelicula')}</b>`})}</div><div>${t('plan_reemplazar')}.</div>`,
       t('misc_si_reemplazar'),
       _doSave,
       t('plan_conservar_actual')

@@ -6,18 +6,26 @@
 // la importa (sin ciclo). Lets de UI-state module-local; LB_SLUGS vía bridge
 // (lo escribe loadFestival). Roster/viewstate vía bridge.
 
-import { FESTIVAL_CONFIG, MAX_REMEMBERED_SLOTS, NOTICES, TMDB_IMG, _DEFAULT_FEST_ID } from '../config.js';
+import { FESTIVAL_CONFIG, MAX_REMEMBERED_SLOTS, TMDB_IMG, _DEFAULT_FEST_ID } from '../config.js';
 import { DAY_ABBR, DAY_NUM, ICONS, _secLabel, _sectionColor, escXML, isFullDayBlocked, makeProgramPoster, parseProgramTitle, renderRatingStarsHTML } from '../view/components.js';
 import { _getItemPoster, _mkCortoItemHtml, _posterStyle, dayLabel, emptyState, durFmt, flagFmt, getCortoItemPoster, getFilmPoster, getFilmPosterUntitled, getPosterSrc, itemPosterParts, posterAmbient, posterParts, sala, starsText, vcfg } from '../view/helpers.js';
 import { closeAvSheet, closePVRating, closePrioLimit } from '../view/sheets.js';
 import { showConflictModal, showToast } from '../view/feedback.js';
 import { renderAgenda, renderAvBlocks, renderDiaryHTML } from '../view/agenda.js';
 import { runCalc } from './calc.js';
-import { saveAV, saveLastSlot, saveRating, saveSavedAgenda } from './persistence.js';
+import { commitPlan, saveAV, saveLastSlot, saveRating, saveSavedAgenda } from './persistence.js';
 import { _reRenderIntereses, showAgView, switchMainNav, updateAgTab } from './pipeline.js';
 import { dayFullyPassed, festivalEnded, parseDur, toMin } from '../domain/time.js';
-import { screeningPassed, effectiveDuration } from '../domain/film.js';
+import { screeningPassed, effectiveDuration, blockDuration } from '../domain/film.js';
 import { isScreeningBlocked } from '../domain/schedule.js';
+// ── Velo del sheet: SIN driver JS (29 jul 2026 — DESIGN.md §8.4.1) ───────────
+// Vivía acá un driver rAF que pisaba radio+opacidad por frame. Medido en device
+// con el video de Juan (7 de 7 aperturas): progresaba hasta ~68%, se congelaba
+// 233ms y saltaba a full en un frame. Causa: rAF corre en el hilo principal y
+// ese hilo lo bloquea el propio sheet al construirse — la animación se moría de
+// hambre a mitad de camino. Ahora el velo es CSS puro (escalera de dos capas
+// animadas por opacity, index.html .pel-sheet-overlay): vive en el compositor,
+// que un hilo principal bloqueado no puede detener.
 import { state } from '../state/state.js';
 import { storage } from '../storage/storage.js';
 import { t, locSynopsis } from '../i18n/i18n.js';
@@ -89,9 +97,80 @@ const _COUNTRY_FLAGS={
   'Jamaica':'🇯🇲','Trinidad and Tobago':'🇹🇹','Barbados':'🇧🇧',
   'Ecuador':'🇪🇨','Bolivia':'🇧🇴','Paraguay':'🇵🇾','Uruguay':'🇺🇾',
   'Honduras':'🇭🇳','Guatemala':'🇬🇹','El Salvador':'🇸🇻','Nicaragua':'🇳🇮',
-  'Costa Rica':'🇨🇷','Panama':'🇵🇦'
+  'Costa Rica':'🇨🇷','Panama':'🇵🇦',
+  // Huecos cazados por la auditoría del 29 jul 2026: el mapa tenía los nombres
+  // en inglés de estos países pero NO los castellanos, que es lo que traen los
+  // JSON de festivales hispanohablantes. Cada uno era un globo en pantalla.
+  'Polonia':'🇵🇱','Japón':'🇯🇵','Dinamarca':'🇩🇰','Suecia':'🇸🇪',
+  'Noruega':'🇳🇴','Países Bajos':'🇳🇱','Corea del Sur':'🇰🇷','Hungría':'🇭🇺',
+  'Letonia':'🇱🇻','República Checa':'🇨🇿','Rumania':'🇷🇴','Croacia':'🇭🇷',
+  'Eslovenia':'🇸🇮','Luxemburgo':'🇱🇺','Islandia':'🇮🇸','Camerún':'🇨🇲',
+  'Malí':'🇲🇱','Panamá':'🇵🇦','Haití':'🇭🇹','Qatar':'🇶🇦','Malasia':'🇲🇾',
+  'Tailandia':'🇹🇭','Afganistán':'🇦🇫','Kazajistán':'🇰🇿','Kirguistán':'🇰🇬',
+  'Marruecos':'🇲🇦','Mozambique':'🇲🇿','Sudáfrica':'🇿🇦','Somalia':'🇸🇴',
+  'Vanuatu':'🇻🇺','Türkiye':'🇹🇷','Guinea-Bissau':'🇬🇼','Líbano':'🇱🇧',
+  'Nueva Zelanda':'🇳🇿','Bulgaria':'🇧🇬','Serbia':'🇷🇸','Senegal':'🇸🇳',
+  'Indonesia':'🇮🇩','Nigeria':'🇳🇬','Palestina':'🇵🇸','Suiza':'🇨🇭'
 };
 let _cortoParentHtml=null;
+
+// _screeningRows — DUEÑO ÚNICO de la fila de función (día · hora · sede [· Añadir]),
+// para la ficha de película/programa y la de corto: es la MISMA cosa en ambas, y
+// tenerla duplicada FUE el bug (la ficha de corto no la pintaba nunca).
+// `pairs` = [{s, owner}] — `owner` es el film que manda sobre el Plan. Para un corto
+// es su PROGRAMA: agregar un corto agrega el programa completo (regla establecida) y
+// addSuggestion solo entiende títulos que existen en FILMS.
+function _screeningRows(pairs){
+  return pairs.map(({s,owner})=>{
+    const dayAbb=dayLabel(s.day)||s.day;
+    const vc=vcfg(s.venue),sl=sala(s.venue);
+    const _festCity=(FESTIVAL_CONFIG[_activeFestId]||{}).city||'';
+    const _city=_festCity&&vc.city&&vc.city!==_festCity?vc.city:'';
+    const isPast=screeningPassed(s)&&!festivalEnded();
+    // Mitad B (pin-funcion): control "Añadir esta función al Plan" por fila.
+    // Recurrentes: sin control (informativo). Si esta función ya está en el
+    // Plan → indicador "En tu Plan"; si no, y la función no pasó ni terminó el
+    // festival → botón "Añadir" (reusa addSuggestion, que decide add vs swap).
+    // "En tu plan": la fila se marca con una BARRA de acento ámbar a la izquierda
+    // (.pel-sheet-screening.in-plan), no con un badge ni un check. Decisión de Juan
+    // (20 jul 2026): el badge "✓ En tu Plan" era flex-shrink:0 y le robaba ancho al
+    // venue → "Cinemateca de Bogotá · Sala 2" se partía en dos líneas. La barra vive
+    // en el margen (::before absoluto, costo CERO de ancho) → el venue recupera TODO
+    // el ancho y lee en una línea hasta 360px. El botón "Añadir" (acción) sí se queda
+    // a la derecha. La etiqueta "en tu plan" queda para lectores de pantalla (.sr-only).
+    let _addCtrl='', _planned=false;
+    // Una función cancelada NO se puede sumar al Plan: dejarle el botón permitía
+    // planificar algo que no va a ocurrir (lo tenía, era un bug funcional).
+    if(!owner.is_recurring&&!s._cancelled){
+      _planned=savedAgenda&&savedAgenda.schedule.some(e=>e._title===owner.title&&e.day===s.day&&e.time===s.time);
+      if(!_planned&&!festivalEnded()&&!screeningPassed(s)){
+        _addCtrl=`<button class="suggestion-add" data-action="addSuggestion" data-title="${owner.title.replace(/"/g,'&quot;')}" data-day="${s.day}" data-time="${s.time}" data-stop="1">${ICONS.plus} ${t('misc_anadir')}</button>`;
+      }
+    }
+    return`<div class="pel-sheet-screening${_planned?' in-plan':''}${s._cancelled?' scr-void':''}"${isPast?' style="opacity:.4"':''}>
+      ${_planned?`<span class="sr-only">${t('plan_en_tu_plan')}</span>`:''}
+      <span class="pelicula-day" data-day="${s.day}">${dayAbb}</span>
+      <span class="pelicula-time">${s.time}</span>
+      <span class="pelicula-venue" data-venue="${s.venue.replace(/"/g,'&quot;')}" data-action="openVenueSheet">${ICONS.pin} <span class="venue-text">${vc.short}${sl?' · '+sl:''}${_city?`<span class="venue-municipio">${_city}</span>`:''}</span></span>
+      ${_addCtrl}
+    </div>`;
+  }).join('');
+}
+
+// _cortoScreeningPairs — las funciones que hereda un corto de sus programas, ya
+// ordenadas futuro→pasado igual que en la ficha de película (mismo criterio, no una
+// segunda regla de orden). Un bloque-catálogo sin sesión asignada no aporta ninguna.
+function _cortoScreeningPairs(cortoTitle){
+  const pairs=[];
+  _findParentPrograms(cortoTitle).forEach(prog=>{
+    FILMS.filter(g=>g.title===prog.title&&g.day&&g.time&&g.venue)
+      .forEach(s=>pairs.push({s,owner:prog}));
+  });
+  const fut=pairs.filter(p=>!screeningPassed(p.s))
+    .sort((a,b)=>a.s.day_order-b.s.day_order||toMin(a.s.time)-toMin(b.s.time));
+  const past=pairs.filter(p=>screeningPassed(p.s));
+  return [...fut,...past];
+}
 
 export function openPelSheet(title){
   // Decodificar entidades HTML que el inline onclick puede pasar (&#39; → ')
@@ -136,6 +215,9 @@ export function openPelSheet(title){
   }
   const{displayTitle}=parseProgramTitle(f.title);
   const secLabel=_secLabel(f.section);
+  // ANCLAJE: ¿esta obra comparte función con otra? (`_slotKey` lo marca el
+  // loader en los festivales que declaran `sharedSlotIsOneScreening`).
+  const _anclada=screenings.some(s=>s._slotKey&&FILMS.some(o=>o._slotKey===s._slotKey&&o.title!==f.title));
   const totalFn=FILMS.filter(fi=>fi.title===f.title).length;
   const unica=totalFn===1;
   const DAY_ABB=['MAR','MIÉ','JUE','VIE','SÁB','DOM'];
@@ -147,38 +229,7 @@ export function openPelSheet(title){
   const future=scheduled.filter(s=>!screeningPassed(s)).sort((a,b)=>a.day_order-b.day_order||toMin(a.time)-toMin(b.time));
   const past=scheduled.filter(s=>screeningPassed(s));
   const allScr=[...future,...past];
-  const rows=allScr.map(s=>{
-    const dayAbb=dayLabel(s.day)||s.day;
-    const vc=vcfg(s.venue),sl=sala(s.venue);
-    const _festCity=(FESTIVAL_CONFIG[_activeFestId]||{}).city||'';
-    const _city=_festCity&&vc.city&&vc.city!==_festCity?vc.city:'';
-    const isPast=screeningPassed(s)&&!festivalEnded();
-    // Mitad B (pin-funcion): control "Añadir esta función al Plan" por fila.
-    // Recurrentes: sin control (informativo). Si esta función ya está en el
-    // Plan → indicador "En tu Plan"; si no, y la función no pasó ni terminó el
-    // festival → botón "Añadir" (reusa addSuggestion, que decide add vs swap).
-    // "En tu plan": la fila se marca con una BARRA de acento ámbar a la izquierda
-    // (.pel-sheet-screening.in-plan), no con un badge ni un check. Decisión de Juan
-    // (20 jul 2026): el badge "✓ En tu Plan" era flex-shrink:0 y le robaba ancho al
-    // venue → "Cinemateca de Bogotá · Sala 2" se partía en dos líneas. La barra vive
-    // en el margen (::before absoluto, costo CERO de ancho) → el venue recupera TODO
-    // el ancho y lee en una línea hasta 360px. El botón "Añadir" (acción) sí se queda
-    // a la derecha. La etiqueta "en tu plan" queda para lectores de pantalla (.sr-only).
-    let _addCtrl='', _planned=false;
-    if(!f.is_recurring){
-      _planned=savedAgenda&&savedAgenda.schedule.some(e=>e._title===f.title&&e.day===s.day&&e.time===s.time);
-      if(!_planned&&!festivalEnded()&&!screeningPassed(s)){
-        _addCtrl=`<button class="suggestion-add" data-action="addSuggestion" data-title="${f.title.replace(/"/g,'&quot;')}" data-day="${s.day}" data-time="${s.time}" data-stop="1">${ICONS.plus} ${t('misc_anadir')}</button>`;
-      }
-    }
-    return`<div class="pel-sheet-screening${_planned?' in-plan':''}"${isPast?' style="opacity:.4"':''}>
-      ${_planned?`<span class="sr-only">${t('plan_en_tu_plan')}</span>`:''}
-      <span class="pelicula-day" data-day="${s.day}">${dayAbb}</span>
-      <span class="pelicula-time">${s.time}</span>
-      <span class="pelicula-venue" data-venue="${s.venue.replace(/"/g,'&quot;')}" data-action="openVenueSheet">${ICONS.pin} <span class="venue-text">${vc.short}${sl?' · '+sl:''}${_city?`<span class="venue-municipio">${_city}</span>`:''}</span></span>
-      ${_addCtrl}
-    </div>`;
-  }).join('');
+  const rows=_screeningRows(allScr.map(s=>({s,owner:f})));
   // Lista de cortos si es programa
   let cortosHtml='';
   if(f.is_cortos&&f.film_list?.length){
@@ -217,12 +268,17 @@ export function openPelSheet(title){
           :(f.duration?`<div class="pel-sheet-flags-dur">${durFmt(f.duration)}</div>`:'')}
         ${f.type!=='event'&&_metaLine?`<div class="pel-sheet-metaline">${_metaLine}</div>`:''}
         ${f.section?`<div class="pel-sheet-sec" data-section="${f.section.replace(/"/g,'&quot;')}" data-action="filterBySection">${secLabel} <span class="pel-sheet-sec-arrow">›</span></div>`:''}
+        ${(!f.is_cortos&&!f.is_programa&&f.type!=='event')?lbLink(f.title,f):''}
       </div>
     </div>
         ${allScr.length>0?`<div class="sec-hdr sm">${ICONS.clock} <span>${f.type==='event'?t('label_horario'):allScr.length===1?t('label_funcion'):t('label_funciones_pl')}</span>${totalFn>1&&f.type!=='event'?`<span class="count-badge cb-neutral">${totalFn}</span>`:''}</div>`:''}
-    ${(()=>{const _n=NOTICES.find(n=>n.title===f.title&&n.festival===(_activeFestId||_DEFAULT_FEST_ID));if(!_n)return'';const _info=`${_n.newDay||''} ${_n.newTime||''}${_n.newVenue?' · '+_n.newVenue:''}`.trim();const _msg=_n.type==='cancelled'?t('notice_funcion_canc'):t('notice_reprog_a',{info:_info});return`<div class="notice-banner-row"><span class="notice-badge">${_n.type==='cancelled'?t('notice_cancelada'):t('notice_reprog_short')}</span><span class="notice-banner-txt">${_msg}</span></div>`;})()}
-    ${_metaBanners(f)}
     ${allScr.length>0?`<div class="pel-sheet-screenings">${rows}</div>`:''}
+    ${/* ORDEN: FUNCIÓN (solo día·hora·sede) → AVISOS → SINOPSIS. Todos los avisos
+        viven en su banda, incluidos cancelada y reprogramada, que van PRIMERAS y
+        en rojo: lo que invalida se lee antes de lo que matiza (DESIGN 8.4.6). La
+        fila afectada lleva su propia marca (hora tachada / atenuada) — el aviso
+        explica, la fila señala; ninguna de las dos hace el trabajo sola. */''}
+    ${_avisosBand(f, {prog:_anclada?'obras':null, scrs:allScr})}
     ${(()=>{
       const _tk=FESTIVAL_CONFIG[_activeFestId]||{};
       // ticket_url por FILM pisa al global (Tercer Tiempo 2026: cada sesión tiene
@@ -245,7 +301,6 @@ export function openPelSheet(title){
     ${f.synopsis?`    <div class="sec-hdr sm">${ICONS.text} <span>${f.type==='event'?t('label_descripcion'):t('label_sinopsis')}</span></div>
     <div class="pel-sheet-synopsis">${locSynopsis(f).replace(/^⚠️\s*INGLÉS\s*[—-]\s*/,'')}</div>`:''}
     ${cortosHtml}
-    ${(!f.is_cortos&&!f.is_programa&&f.type!=='event')?lbLink(f.title,f):''}
         ${inW?`<div class="pel-sheet-ctas-watched">
         <button data-title="${escXML(f.title)}" data-action="toggleWatchedAndClose" class="pel-sheet-action-btn act-on">${ICONS.check} ${t('cta_vista')}</button>
         ${!f.is_cortos?`<button data-title="${escXML(f.title)}" data-action="closePelAndRate" class="pel-sheet-action-btn btn-secondary">${ICONS.star} ${filmRatings[f.title]?t('misc_cambiar'):t('cta_calificar')}</button>`:``}
@@ -253,7 +308,7 @@ export function openPelSheet(title){
     :`<div class="pel-sheet-ctas">
         <button id="pel-wl-btn" class="row-center-xs pel-sheet-action-btn${inWL?' act-on btn-primary':' btn-primary'}" data-title="${escXML(f.title)}" data-action="togglePelWL">${inWL?ICONS.heartFill:ICONS.heart} ${inWL?t('cta_en_intereses'):t('cta_intereses')}</button>
         <button id="pel-prio-btn" class="row-center-xs pel-sheet-action-btn${inPrio?' act-prio':' btn-secondary'}" data-title="${escXML(f.title)}" data-action="togglePelPrio">${inPrio?ICONS.bookmarkFill:ICONS.bookmark} ${inPrio?t('cta_priorizada'):t('cta_priorizar')}</button>
-        <button id="pel-vista-btn" class="row-center-xs pel-sheet-action-btn btn-tertiary" data-title="${escXML(f.title)}" data-action="toggleWatched">${ICONS.check} ${f.type==='event'?t('cta_asistio'):t('cta_vista')}</button>
+        <button id="pel-vista-btn" class="row-center-xs pel-sheet-action-btn btn-secondary" data-title="${escXML(f.title)}" data-action="toggleWatched">${ICONS.star} ${t('cta_calificar')}</button>
       </div>`}
     ${_inPlan&&activeView==='agenda'?`<button data-title="${escXML(f.title)}" data-action="closePelAndRemove" class="pel-sheet-remove-plan">${ICONS.x} ${t('plan_quitar_plan')}</button>`:''}
   `;
@@ -472,7 +527,12 @@ export function openCortoSheet(title, country, duration, section, flags, directo
   // NO en el mapa lbSlugs del festival → usar lbUrlForFilm(richItem). lbUrl(title)
   // (por título contra el mapa) fallaba y dejaba el enlace oculto.
   const lbHref=(richItem&&lbUrlForFilm(richItem))||lbUrl(title);
-  const flgs=flags||countryToFlags(ctry)||'🌐';
+  // `flags` NO viaja en los data-attr del item (_mkCortoItemHtml no lo emite),
+  // así que acá llegaba vacío y el corto caía a recalcular desde el país — y con
+  // los paréntesis de coproducción de FINCA, al globo. richItem ES el item de
+  // film_list: su `flags` es el dato autoritativo, igual que ya se hace con
+  // duration, lbSlug y poster. Recalcular teniendo el valor es la fuente doble.
+  const flgs=flags||(richItem&&richItem.flags)||countryToFlags(ctry||(richItem&&richItem.country))||'🌐';
   const posterUrl=posterOverride||(richItem&&getCortoItemPoster(richItem))||getPosterSrc(title,true)||null;
   // Editorial por posterSource (still 16:9 local del festival) O por CDN-URL. Sin
   // el chequeo de posterSource, un still local caía a <img> recortado 2:3.
@@ -490,6 +550,27 @@ export function openCortoSheet(title, country, duration, section, flags, directo
   const inWL=watchlist.has(parentTitle||title);
   const inPrio=prioritized.has(parentTitle||title);
   const secLabel=_secLabel(section||'');
+  // FUNCIÓN del corto: la hereda de su(s) programa(s) — el corto no es entrada de
+  // FILMS, el día/hora/sede viven en el bloque que lo proyecta. Se pinta con el MISMO
+  // constructor de filas que la ficha de película (_screeningRows), no con una línea
+  // de texto aparte: es el mismo concepto, un solo lenguaje visual. Encabezado
+  // "Función" a secas (decisión de Juan): la fila es idéntica a la de una película y
+  // el aviso inmediatamente debajo ya explica que esa función incluye el programa.
+  // Sin función anunciada (bloque-catálogo sin sesión) → VACÍO EXPLÍCITO: callar
+  // dejaba la ficha muda y el usuario no sabía si el dato faltaba o no existía.
+  const _cortoPairs=_cortoScreeningPairs(title);
+  // Rótulo NEUTRO ("FUNCIÓN"/"FUNCIONES"): el adjetivo "compartida" NO va acá —
+  // sería un error de categoría (el rótulo nombra el bloque; compartida es propiedad
+  // de la fila) y mentiría cuando una obra tiene dos funciones y solo una es
+  // compartida. Vive en su meta-banner, con el MISMO peso visual que Q&A e
+  // inscripción previa: mismo componente, punto ámbar y rótulo. El rótulo dice
+  // "Compartida" a secas, sin repetir el sustantivo del bloque.
+  const _cortoShared=_cortoPairs.length>0;
+  const _cortoScrLbl=_cortoPairs.length>1?t('label_funciones_pl'):t('label_funcion');
+  const _cortoScrHdr=`<div class="sec-hdr sm">${ICONS.clock} <span>${_cortoScrLbl}</span>${_cortoPairs.length>1?`<span class="count-badge cb-neutral">${_cortoPairs.length}</span>`:''}</div>`;
+  const _cortoScrBody=_cortoPairs.length
+    ?`<div class="pel-sheet-screenings">${_screeningRows(_cortoPairs)}</div>`
+    :emptyState(ICONS.clock, t('corto_sin_funcion'));
   inner.innerHTML=`
     <div class="pel-sheet-header">
       ${posterHtml}
@@ -498,12 +579,13 @@ export function openCortoSheet(title, country, duration, section, flags, directo
         <div class="pel-sheet-flags-dur">${flgs}${dur?` · ${dur}`:''}</div>
         ${(dir||gnr||yr)?`<div class="pel-sheet-metaline">${[dir,gnr,yr].filter(Boolean).join(' · ')}</div>`:''}
         ${secLabel?`<div class="pel-sheet-sec">${secLabel}</div>`:''}
+        <a class="c-lb pel-sheet-lb" href="${lbHref||'#'}" target="_blank" rel="noopener"${!lbHref?' style="display:none"':''}>${LB_SVG}<span class="c-lb-text pel-sheet-lb-text">Letterboxd</span></a>
       </div>
     </div>
+        ${_cortoScrHdr}${_cortoScrBody}
+        ${_avisosBand(null, {prog:_cortoShared?'cortos':null, scrs:_cortoPairs.map(p=>p.s)})}
         ${syn?`<div class="sec-hdr sm">${ICONS.text} <span>${t('label_sinopsis')}</span></div><div class="pel-sheet-synopsis">${syn}</div>`:''}
-    <a class="c-lb pel-sheet-lb" href="${lbHref||'#'}" target="_blank" rel="noopener"${!lbHref?' style="display:none"':''}>${LB_SVG}<span class="c-lb-text pel-sheet-lb-text">Letterboxd</span></a>
-        ${parentTitle?`<div class="meta-banner" style="margin-top:var(--sp-3)"><div class="meta-banner-dot"></div><div class="meta-banner-text">${t('meta_corto_incluye')}</div></div>`:''}
-    <div class="flex-gap1-mt1">
+    <div class="pel-sheet-ctas">
       <button id="corto-wl-btn" class="row-center-xs pel-sheet-action-btn${inWL?' act-on btn-primary':' btn-primary'}" data-title="${escXML(parentTitle||title)}" data-action="toggleWL">${inWL?ICONS.heartFill:ICONS.heart} ${inWL?t('cta_en_intereses'):t('cta_intereses')}</button>
       <button id="corto-prio-btn" class="row-center-xs pel-sheet-action-btn${inPrio?' act-prio':' btn-secondary'}" data-title="${escXML(parentTitle||title)}" data-action="togglePelPrio">${inPrio?ICONS.bookmarkFill:ICONS.bookmark} ${inPrio?t('cta_priorizada'):t('cta_priorizar')}</button>
       <button class="row-center-xs pel-sheet-action-btn${filmRatings[title]?' act-on':' btn-secondary'}" data-title="${escXML(title)}" data-action="closePelAndRate">${ICONS.star} ${filmRatings[title]?t('misc_cambiar'):t('cta_calificar')}</button>
@@ -586,6 +668,22 @@ export function _findParentProgram(cortoTitle){
   return FILMS.find(f=>f.is_cortos&&f.film_list?.some(c=>c.title===cortoTitle))||null;
 }
 
+// _findParentPrograms — TODOS los programas que incluyen este corto. El singular
+// devuelve solo el primero y sirve para lo 1:1 (el corazón). Para las FUNCIONES no
+// alcanza: un corto se programa en dos bloques con día/hora/sede propios (Ecocidio en
+// FINCA: 13 AGO Cacodelphia + 15 AGO Cine York; en Olhar, 10 cortos repiten en la
+// "Sessão com Acessibilidade"). Mostrar solo el primero es PEOR que no mostrar nada:
+// el usuario confía en una única función y se pierde la otra.
+export function _findParentPrograms(cortoTitle){
+  const out=[],seen=new Set();
+  FILMS.forEach(f=>{
+    if(!f.is_cortos||!f.film_list?.some(c=>c.title===cortoTitle)) return;
+    if(seen.has(f.title)) return;
+    seen.add(f.title); out.push(f);
+  });
+  return out;
+}
+
 export function openConflictSheet(incomingTitle, incomingScreen, existingEntry){
   const{displayTitle:inDT}=parseProgramTitle(incomingTitle);
   const{displayTitle:exDT}=parseProgramTitle(existingEntry._title||'');
@@ -634,13 +732,12 @@ export function confirmConflictReplace(){
   if(!_conflictPending) return;
   const{incomingTitle, incomingScreen, existingEntry}=_conflictPending;
   // 3. MUTATE — quitar la existente e insertar la nueva
-  state.update('savedAgenda', a => ({
-    ...a,
+  commitPlan(a=>{const b=a||{schedule:[]};return {...b,
     schedule: [
-      ...a.schedule.filter(s=>!(s._title===existingEntry._title&&s.day===existingEntry.day&&s.time===existingEntry.time)),
+      ...b.schedule.filter(s=>!(s._title===existingEntry._title&&s.day===existingEntry.day&&s.time===existingEntry.time)),
       {...incomingScreen,_title:incomingTitle}
     ].sort((x,y)=>x.day_order!==y.day_order?x.day_order-y.day_order:toMin(x.time)-toMin(y.time))
-  }));
+  };});
   // 4. PERSIST + 5. RENDER + UI EFFECTS
   saveSavedAgenda();
   const{displayTitle:dt}=parseProgramTitle(incomingTitle);
@@ -1236,8 +1333,13 @@ export function countryToFlags(countryStr){
   // (bug Voces del Territorio, 18 jul). NO se parte por guion: "Guinea-Bissau" es
   // un país. Guardián [country-flags] verifica que todo país de un festival activo
   // produzca bandera. Ver docs/ICONS.md.
-  const parts=countryStr.split(/[,/]/).map(s=>s.trim());
-  const flags=parts.map(p=>_COUNTRY_FLAGS[p]||'').filter(Boolean);
+  // PARÉNTESIS: varios festivales marcan la coproducción entre paréntesis —
+  // "España (Austria)", "República Democrática del Congo (Bélgica, Francia)"
+  // (FINCA 2026), "Republic of Korea (South Korea)" (Tribeca). Sin partirlos,
+  // TODO el string quedaba como una clave inexistente y caía al globo pese a
+  // ser países mapeados. Mismo bug que el de las comas, otro separador.
+  const parts=countryStr.split(/[,/()]/).map(s=>s.trim());
+  const flags=[...new Set(parts.map(p=>_COUNTRY_FLAGS[p]||'').filter(Boolean))];
   return flags.length?flags.join(''):'🌍';
 }
 
@@ -1258,11 +1360,71 @@ export function _genreEN(g) {
   return g.split(',').map(s => _GENRE_EN[s.trim()] || s.trim()).join(', ');
 }
 
-export function _metaBanners(f){
-  let b='';
-  if(f.has_qa) b+=`<div class="meta-banner"><div class="meta-banner-dot"></div><div><div class="meta-banner-label">${t('meta_qa_label')}</div><div class="meta-banner-text">${t('notice_extension')} <span>${t('meta_qa_time')}</span></div></div></div>`;
-  if(f.requires_registration) b+=`<div class="meta-banner"><div class="meta-banner-dot"></div><div><div class="meta-banner-label">${t('badge_inscripcion_prev')}</div><div class="meta-banner-text">${t('meta_registro_text')}</div></div></div>`;
-  return b;
+// _avisosBand — DUEÑO ÚNICO de la banda AVISOS, para la ficha de película y la de
+// corto. Zona exclusiva de lo que MATIZA la función; lo que la INVALIDA
+// (cancelada/reprogramada) se queda dentro de FUNCIÓN, pegado a la hora que niega.
+//
+// Por qué banda y no avisos sueltos: vivían DENTRO del bloque de FUNCIÓN y
+// competían con el día, la hora y la sede — y la palabra "función" aparecía tres
+// veces en cuatro líneas. La ficha ya organiza en bandas con rótulo (FUNCIÓN,
+// SINOPSIS); los avisos no tenían la suya y vivían de prestado.
+//
+// Vocabulario, con evidencia (30 jul 2026): "función compartida" y "shared
+// screening" NO existen en la industria; lo establecido es "programa" — es como
+// los propios festivales llaman al contenedor en NUESTROS datos (FINCA:
+// "…— Programa 1", Cinemancia: "Programa de cortos 4", Olhar: "PGM 07"). Y
+// "doble" quedó descartado por falso: los slots compartidos llegan a 4 obras y
+// mezclan duraciones (106min + 5min en FINCA), así que no hay "doble programa".
+//
+// `opts.prog`: 'cortos' (corto dentro de un bloque) | 'obras' (slot compartido) |
+// null. El texto cambia; la etiqueta es la misma.
+export function _avisosBand(f, opts){
+  const rows=[];
+  // ROJO primero: lo que INVALIDA se lee antes de lo que matiza (DESIGN 8.4.4).
+  // `_cancelled` / `_movedFrom` los sella el loader; acá solo se leen.
+  (opts&&opts.scrs||[]).forEach(sc=>{
+    if(sc._cancelled)
+      rows.push([t('badge_cancelada'), t('aviso_cancelada',{info:_coord(sc)}), 'red']);
+    else if(sc._movedFrom)
+      // La coordenada VIEJA va tachada: la fila de arriba ya muestra la nueva.
+      rows.push([t('badge_movida'), t('aviso_movida',{info:`<s>${_coord(sc._movedFrom)}</s>`}), 'red']);
+  });
+  // `qa_type` distingue los DOS Q&A que el festival programa: con el equipo de
+  // la película o con referentes. Rotularlos a todos "equipo" le prometía al
+  // usuario un encuentro con los directores que en 7 de 16 funciones de FINCA no
+  // ocurre. Sin el campo (resto de festivales) → equipo.
+  // Q&A, inscripción y gratis son propiedades de la FUNCIÓN, no de la obra. Se
+  // leían del film y por eso la ficha de un CORTO no mostraba el Q&A de su
+  // programa: esa ficha no tiene film propio, solo las funciones que hereda.
+  // Derivarlos de las funciones sirve a las dos fichas con un solo camino.
+  const _src=(opts&&opts.scrs&&opts.scrs.length)?opts.scrs:(f?[f]:[]);
+  const _con=k=>_src.filter(x=>x&&x[k]);
+  // Si el rasgo está en ALGUNAS funciones y no en todas, el aviso nombra cuáles
+  // —si no, mentiría sobre las otras—. Hoy no ocurre en ningún festival cargado.
+  const _cual=h=>(h.length&&h.length<_src.length)?' · '+h.map(_coord).join(' / '):'';
+  const _qa=_con('has_qa');
+  if(_qa.length) rows.push(['Q&A', t(_qa[0].qa_type==='guests'?'aviso_qa_ref':'aviso_qa_equipo')+_cual(_qa)]);
+  if(opts&&opts.prog) rows.push([t('badge_programa'), t(opts.prog==='cortos'?'aviso_prog_cortos':'aviso_prog_obras')]);
+  const _ins=_con('requires_registration');
+  if(_ins.length) rows.push([t('badge_inscripcion'), t('aviso_inscripcion')+_cual(_ins)]);
+  // GRATIS solo en festival MIXTO: marca la excepción cuando casi todo se paga.
+  // Ya era badge en las cards del listado; faltaba en la ficha, que es donde el
+  // usuario decide. Mismo criterio que _metaBadges — un solo predicado.
+  const _gratis=((FESTIVAL_CONFIG[_activeFestId]||{}).ticketing_model==='mixed')?_con('is_free'):[];
+  if(_gratis.length) rows.push([t('badge_gratis'), t('aviso_gratis')+_cual(_gratis)]);
+  if(!rows.length) return '';
+  return `<div class="sec-hdr sm">${ICONS.alert} <span>${t('label_avisos')}</span></div>`
+    +`<div class="avisos-body">`
+    +rows.map(([b,tx,sev])=>`<span class="aviso-pill${sev==='red'?' sev-red':''}">${b}</span><span class="aviso-txt">${tx}</span>`).join('')
+    +`</div>`;
+}
+
+// _coord — "jue 13 · 19:00": cómo la app nombra una función dentro de una FRASE.
+// dayLabel devuelve el día en mayúsculas porque en la fila es una etiqueta; dentro
+// de una oración, "JUE 13" grita. Se baja a minúsculas solo acá.
+function _coord(sc){
+  const d=sc.day?(dayLabel(sc.day)||sc.day).toLocaleLowerCase():'';
+  return [d, sc.time||''].filter(Boolean).join(' · ');
 }
 
 export function _checkRecalcOpportunity(){
@@ -1287,8 +1449,7 @@ export function _removePlanItem(title){
     state.update('lastRemovedSlots', arr => [{...removed,_isRestored:true}, ...arr.filter(r=>r._title!==removed._title)].slice(0,MAX_REMEMBERED_SLOTS));
     saveLastSlot();
   }
-  state.update('savedAgenda', a => ({...a, schedule: a.schedule.filter(s=>s._title!==title)}));
-  if(!savedAgenda.schedule.length) state.set('savedAgenda', null);
+  commitPlan(a=>{const sch=a.schedule.filter(s=>s._title!==title);return sch.length?{...a,schedule:sch}:null;});
   saveSavedAgenda();
 }
 
@@ -1297,7 +1458,7 @@ export function checkPlanConflictsWithBlock(day, fromStr, toStr){
   const bFrom=toMin(fromStr), bTo=toMin(toStr);
   return savedAgenda.schedule.filter(s=>{
     if(s.day!==day) return false;
-    const sStart=toMin(s.time), sEnd=sStart+effectiveDuration(s); // Q&A incluido, como isScreeningBlocked
+    const sStart=toMin(s.time), sEnd=sStart+blockDuration(s); // SIN Q&A, emparejado con isScreeningBlocked (doctrina 30 jul)
     return sStart<bTo&&sEnd>bFrom;
   });
 }

@@ -5,7 +5,8 @@
 // app. Sink puro (solo main.js lo importa: ACTION_REGISTRY + Object.assign + IIFE
 // detección-festival). Escribe bridge globals en runtime (no eval-time).
 
-import { FESTIVAL_CONFIG, mergeFestivalSections } from '../config.js';
+import { FESTIVAL_CONFIG, NOTICES, mergeFestivalSections } from '../config.js';
+import { parseDur } from '../domain/time.js';
 import { lruTouch } from '../lru.js';
 import { DAY_ABBR, DAY_NUM, _classifyFestival, festivalShortName } from '../view/components.js';
 import { DAYS, DAY_SHORT_EN, setCustomPosters, setDayShort, setDayShortEn, setPosters } from '../view/helpers.js';
@@ -20,7 +21,8 @@ import { _updateProgramaActiveFilter, initProgramaModeBar, showAgView, showDayVi
 import { seccionClose } from './overlays.js';
 import { setProgramaView } from './handlers.js';
 import { dayFullyPassed, simTodayStr } from '../domain/time.js';
-import { normTitle, validateFilm } from '../domain/film.js';
+import { explodeScreenings, normTitle, sealSharedSlots, validateFilm } from '../domain/film.js';
+import { syncScheduleWithCatalog } from '../domain/schedule.js';
 import { state } from '../state/state.js';
 import { deriveClear } from '../state/festival-context.js';
 import { storage } from '../storage/storage.js';
@@ -120,25 +122,9 @@ export async function loadFestival(id){
       // retry exitoso.)
       const data=await _fetchFestivalJson(_festUrl);
       // ── Explosión de screenings[] → objetos planos por función ──
-      // Si un film tiene screenings[], genera un objeto por función.
-      // Compatibilidad total con el formato plano existente (day/time/venue).
-      const exploded=[];
-      (data.films||[]).forEach(f=>{
-        if(Array.isArray(f.screenings)&&f.screenings.length){
-          const base=Object.assign({},f);
-          delete base.screenings;
-          f.screenings.forEach((s,i)=>{
-            exploded.push(Object.assign({},base,{
-              day:s.day||s.date,date:s.date||s.day,time:s.time,venue:s.venue||'',
-              day_order:s.day_order!==undefined?s.day_order:i,
-              sala:s.sala||'',
-              ...(s.is_free!=null?{is_free:s.is_free}:{}) // por-función (festivales mixed)
-            }));
-          });
-        } else {
-          exploded.push(f);
-        }
-      });
+      // Dueño: explodeScreenings (domain/film.js) — compartido con el oráculo
+      // del planeador, que necesita ejercer el MISMO catálogo que producción.
+      const exploded=explodeScreenings(data.films);
       // Duración automática para is_programa
       exploded.forEach(f=>{
         if(f.is_programa&&f.film_list&&f.film_list.length&&!f.duration){
@@ -149,6 +135,51 @@ export async function loadFestival(id){
           if(mins>0) f.duration=mins+" min";
         }
       });
+      // ── ANCLAJE DE FUNCIÓN (opt-in: root `sharedSlotIsOneScreening`) ────────
+      // Algunos festivales programan DOS obras en una misma función: mismo día,
+      // hora y sala, una detrás de la otra (FINCA 2026: 6 casos, verificados
+      // contra su documento día por día — una sola cabecera de hora para las
+      // dos). Sin esto la app las trata como funciones rivales: las declara en
+      // conflicto (falso: con una entrada ves ambas) y cree que salís al
+      // terminar la primera, así que te ofrece otra función a la que no llegás.
+      // NO se puede derivar para todos: en sedes multisala (Tribeca) misma
+      // hora+sede es OTRA sala = otra función. Por eso el festival lo declara.
+      // Se marca acá, una vez, y el dominio solo lee los campos.
+      if(data.sharedSlotIsOneScreening) sealSharedSlots(exploded); // dueño: domain/film.js (compartido con el oráculo)
+      // ── AVISOS: cancelada / reprogramada, SELLADOS en la función ────────────
+      // Antes el aviso se resolvía por búsqueda en cada superficie (la ficha, el
+      // listado y la card lo buscaban por su cuenta en NOTICES) y el
+      // PLANIFICADOR no lo miraba nunca: armaba el día alrededor de funciones
+      // canceladas y de horas que ya no existían. Se sella acá, una vez, igual
+      // que _slotKey — y todos los consumidores lo leen del dato.
+      //
+      // Reprogramada: la VERDAD es la hora nueva (decisión de Juan, 30 jul 2026).
+      // Se aplica al dato y queda `_movedFrom` con la vieja para poder decir de
+      // dónde viene. Mantener la hora vieja en pantalla y pedirle al
+      // planificador que la ignore es la doble verdad que ya nos costó bugs.
+      const _avisos=NOTICES.filter(n=>n.festival===id);
+      if(_avisos.length){
+        const _dk=data.dayKeys||[];
+        exploded.forEach(f=>{
+          if(f.info) return;
+          // `date` (día de la función original) desambigua cuando una obra tiene
+          // varias funciones y solo una cambió. Sin `date` → aplica a todas.
+          const n=_avisos.find(x=>x.title===f.title&&(!x.date||x.date===f.day));
+          if(!n) return;
+          if(n.type==='cancelled'){ f._cancelled=true; return; }
+          if(n.type==='rescheduled'&&(n.newDay||n.newTime||n.newVenue)){
+            f._movedFrom={day:f.day,time:f.time,venue:f.venue};
+            if(n.newDay){
+              f.day=n.newDay;
+              // day_order es el índice en dayKeys: sin recalcularlo, la función
+              // movida se ordena en su día viejo.
+              const _i=_dk.indexOf(n.newDay); if(_i>=0) f.day_order=_i;
+            }
+            if(n.newTime) f.time=n.newTime;
+            if(n.newVenue) f.venue=n.newVenue;
+          }
+        });
+      }
       cfg.films=exploded; // Cacheado en sesión — evita re-fetch al volver al festival.
       // Límite recomendado: ≤5 festivales simultáneos (~80KB c/u). LRU si escala a 8+.
       cfg.posters=data.posters||{};
@@ -387,6 +418,18 @@ export async function loadFestival(id){
     watched: new Set([...state.get('watched')].filter(t=>_validTitles.has(t))),
     prioritized: new Set([...state.get('prioritized')].filter(t=>_validTitles.has(t))),
   });
+
+  // ► SYNC DEL PLAN CONTRA EL CATÁLOGO ───────────────────────────────
+  // El hydrate de savedAgenda (BATCH 2) corre ANTES de que exista FILMS, así
+  // que trae la copia congelada tal cual se guardó. Acá, con el catálogo ya
+  // sellado (slots + avisos), cada entrada se re-deriva de su función viva:
+  // el plan guarda la ELECCIÓN (título+día+hora), el catálogo manda el resto.
+  // Solo persiste en LOCAL: es una corrección derivada e idempotente — subirla
+  // a la nube crearía ping-pong entre dispositivos que se normalizan solos.
+  if(savedAgenda&&savedAgenda.schedule&&savedAgenda.schedule.length){
+    state.update('savedAgenda', a=>({...a, schedule: syncScheduleWithCatalog(a.schedule, _newFilms)}));
+    storage.setSavedAgenda(state.get('savedAgenda'));
+  }
 
   // Set active day to today
   const _ts=simTodayStr();

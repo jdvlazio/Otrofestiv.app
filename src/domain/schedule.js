@@ -15,18 +15,31 @@
 
 import { FESTIVAL_BUFFER } from "../config.js";
 import { toMin, parseDur } from "./time.js";
-import { effectiveDuration, screeningPassed, shuffle, scoreFilm, _titleSeed, _mulberry32 } from "./film.js";
+import { effectiveDuration, blockDuration, durationForTravel, screeningPassed, shuffle, scoreFilm, _titleSeed, _mulberry32 } from "./film.js";
 import { travelMins } from "./festival.js";
 export function screensConflict(a,b){
   // Eventos informativos (info:true) — drop-in / sin hora fija: nunca generan
   // conflicto (no se planifican). Ver docs/SCHEMA.md.
   if((a&&a.info)||(b&&b.info)) return false;
+  // Misma FUNCIÓN (mismo día, hora y sala, programadas una tras otra): nunca se
+  // pisan — con una entrada ves las dos. Lo marca el loader vía `_slotKey`.
+  if(a&&b&&a._slotKey&&a._slotKey===b._slotKey) return false;
   if(a.day!==b.day) return false;
-  // effectiveDuration: suma 30 min si has_qa:true (Q&A extiende la función)
-  const aS=toMin(a.time), aE=aS+effectiveDuration(a);
-  const bS=toMin(b.time), bE=bS+effectiveDuration(b);
-  // Gap requerido: tiempo de viaje entre sedes + buffer mínimo
+  // ── Cuándo cuenta el Q&A (decisión de Juan, 30 jul 2026) ─────────────────────
+  // El Q&A es OPCIONAL y sus +30 min son una ESTIMACIÓN. Solo compromete el
+  // tiempo cuando salir de la función tiene costo: hay TRASLADO de por medio
+  // (variables incontrolables — mejor no comprometerse). En la MISMA sede,
+  // quedarse o salir es una decisión de asiento: el fin duro es el de las
+  // películas (blockDuration) y el Q&A queda como ADVERTENCIA en Mi Plan
+  // ("Q&A · si te quedás tenés ~N min"), que ya existía pero nunca podía
+  // aparecer porque esta regla excluía la opción antes.
+  // Caso que lo destapó: FINCA jue 13, función 18:00 (106+5) + Ziki 20:30 en el
+  // MISMO Cine York — 39 min entre películas, el festival lo programó para que
+  // se pudiera, y la app la excluía por 9<15 contando el Q&A estimado.
   const travel=(a.venue&&b.venue)?travelMins(a.venue,b.venue):0;
+  // durationForTravel = la doctrina del Q&A (dueño único en domain/film.js)
+  const aS=toMin(a.time), aE=aS+durationForTravel(a,travel);
+  const bS=toMin(b.time), bE=bS+durationForTravel(b,travel);
   const minGap=Math.max(FESTIVAL_BUFFER, travel+FESTIVAL_BUFFER);
   if(aE<=bS) return (bS-aE)<minGap; // a antes que b
   if(bE<=aS) return (aS-bE)<minGap; // b antes que a
@@ -54,8 +67,10 @@ export function screensConflict(a,b){
 // 17,6 km de por medio).
 export function screensConflictReason(a,b){
   if(!screensConflict(a,b)) return null;
-  const aS=toMin(a.time), aE=aS+effectiveDuration(a);
-  const bS=toMin(b.time), bE=bS+effectiveDuration(b);
+  // Mismos fines que screensConflict (Q&A solo cuenta si hay traslado).
+  const _tv=(a.venue&&b.venue)?travelMins(a.venue,b.venue):0;
+  const aS=toMin(a.time), aE=aS+durationForTravel(a,_tv);
+  const bS=toMin(b.time), bE=bS+durationForTravel(b,_tv);
   if(aE>bS && bE>aS) return {kind:'solape'}; // ninguno termina antes de que arranque el otro
   const bFirst = bE<=aS;
   const gap = bFirst ? (aS-bE) : (bS-aE);
@@ -65,10 +80,12 @@ export function screensConflictReason(a,b){
 
 export function isScreeningBlocked(s){
   const av=availability[s.day];if(!av) return false;
-  // effectiveDuration (no parseDur): incluye los +30 de Q&A, consistente con
-  // screensConflict. Sin esto, el Q&A de una función podía correr dentro de un
-  // bloque de no-disponibilidad sin ser detectado. (has_qa:false → idéntico a parseDur.)
-  const sStart=toMin(s.time),sEnd=sStart+effectiveDuration(s);
+  // blockDuration (SIN Q&A): el bloque de "no disponible" mide contra el fin de
+  // las PELÍCULAS. El Q&A es opcional y no hay traslado de por medio — si tu
+  // bloque arranca cuando termina el film, salís del Q&A y ya. Excluir la
+  // función por su Q&A estimado era el mismo sobre-compromiso del caso Ziki
+  // (doctrina 30 jul 2026: el Q&A solo compromete cuando salir cuesta).
+  const sStart=toMin(s.time),sEnd=sStart+blockDuration(s);
   // Chequeo de solapamiento completo: excluye funciones que ocurran durante el bloque
   return av.blocks.some(b=>sStart<toMin(b.to)&&sEnd>toMin(b.from));
 }
@@ -82,8 +99,9 @@ export function sortScreensByStrategy(screens, allGroups){
     const conflB=allOtherScreenings.filter(s=>s!==b&&screensConflict(b,s)).length;
     if(conflA!==conflB) return conflA-conflB; // menos conflictos primero
     // Si empatan, earliest finish time (termina antes = deja más espacio)
-    const endA=toMin(a.time)+parseDur(a.duration);
-    const endB=toMin(b.time)+parseDur(b.duration);
+    // blockDuration: con anclaje, la función termina cuando termina el BLOQUE.
+    const endA=toMin(a.time)+blockDuration(a);
+    const endB=toMin(b.time)+blockDuration(b);
     return endA-endB;
   });
 }
@@ -97,7 +115,9 @@ export function computeScenarios(titles){
   const pending=titles.filter(t=>!watched.has(t)&&!FILMS.some(f=>f.title===t&&f.info));
   const allPendingTitles=pending; // for section uniqueness check
   const baseGroups=pending.map(t=>{
-    const screens=FILMS.filter(f=>f.title===t&&!isScreeningBlocked(f)&&!screeningPassed(f));
+    // `_cancelled` lo sella el loader desde NOTICES. Sin este filtro el
+    // optimizador armaba el día alrededor de una función que no va a ocurrir.
+    const screens=FILMS.filter(f=>f.title===t&&!f._cancelled&&!isScreeningBlocked(f)&&!screeningPassed(f));
     const isPrio=prioritized.has(t);
     const sc=scoreFilm(t,screens,isPrio,allPendingTitles);
     const isRec=screens.length>0&&!!screens[0].is_recurring;
@@ -294,4 +314,68 @@ export function computeScenarios(titles){
       dayBalance:Math.round(dayBalance(sc)*10)/10
     };
   });
+}
+
+// ── syncScheduleWithCatalog — el plan guarda la ELECCIÓN, el catálogo manda el resto ──
+// Una entrada de savedAgenda es una copia congelada de la función al momento de
+// elegirla. Si el catálogo cambia después (corrección de duración, anclaje de
+// función nuevo, Q&A agregado), la copia miente — y de ella leen Mi Plan, los
+// conflictos, el ICS, las notificaciones y Compartir. Bug real: plan de FINCA
+// guardado antes del anclaje mostraba "18:05" de fin y "~115 min" de Q&A donde
+// el catálogo vivo dice "19:51" y "~9 min" (31 jul 2026).
+// Contrato:
+//   - La identidad de la elección es título+día+hora EXACTOS. Con match, la
+//     entrada se reemplaza por la función viva; solo sobreviven los campos
+//     propios de la entrada (_title, _squeezed).
+//   - Sin match, la entrada queda INTACTA: es el caso reprogramada/cancelada
+//     que el camino de avisos marca con badge y salida. Nada se corrige ni se
+//     borra en silencio.
+//   - Idempotente: correrla dos veces = una vez (deriva todo del catálogo).
+export function syncScheduleWithCatalog(schedule, films){
+  if(!schedule||!schedule.length) return schedule;
+  return schedule.map(e=>{
+    const live=(films||[]).find(f=>f.title===e._title&&f.day===e.day&&f.time===e.time);
+    if(!live) return e;
+    const out={...live,_title:e._title};
+    if(e._squeezed) out._squeezed=e._squeezed;
+    return out;
+  });
+}
+
+// ── verifyPlan — CERTIFICADOR independiente del plan ──────────────────────────
+// Patrón "certifying algorithms": en vez de confiar en cómo se construyó el
+// plan, se verifica el RESULTADO contra las reglas del dominio. Barato de
+// auditar (lee, no construye) y sirve a dos amos: el oráculo del planeador en
+// CI (falla duro) y el chokepoint de escritura (PR 2: report-only en prod).
+// Fuente de factibilidad: el MISMO screensConflict de producción — si el
+// verificador re-implementara la regla sería una segunda opinión, no un
+// certificado.
+// `_squeezed` se respeta: es una violación DELIBERADA que el usuario aceptó
+// (plan apretado a sabiendas) — certificarla como error sería un falso rojo.
+// Devuelve {ok, violations:[{kind, title, with?}]} — kinds:
+//   'conflicto'  — dos entradas no-squeezed en conflicto real
+//   'cancelada'  — entrada cuya función está _cancelled
+//   'duplicado'  — el mismo título dos veces
+//   'pasada'     — (opt-in checkPassed) función ya pasada al momento de armar
+export function verifyPlan(schedule, opts){
+  const v=[];
+  const list=schedule||[];
+  const seen=new Set();
+  list.forEach(s=>{
+    const t=s._title||s.title||'';
+    // is_recurring (taller multi-día): el plan lleva TODAS sus sesiones a
+    // propósito — mismo título N veces es lo correcto, no un duplicado.
+    if(seen.has(t)&&!s.is_recurring) v.push({kind:'duplicado', title:t});
+    seen.add(t);
+    if(s._cancelled) v.push({kind:'cancelada', title:t});
+    if(opts&&opts.checkPassed&&screeningPassed(s)) v.push({kind:'pasada', title:t});
+  });
+  for(let i=0;i<list.length;i++){
+    for(let j=i+1;j<list.length;j++){
+      const a=list[i], b=list[j];
+      if(a._squeezed||b._squeezed) continue;
+      if(screensConflict(a,b)) v.push({kind:'conflicto', title:a._title||a.title, with:b._title||b.title});
+    }
+  }
+  return {ok:v.length===0, violations:v};
 }

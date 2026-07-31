@@ -329,13 +329,414 @@ helpers.js o `--amb` a mano = build roto. Safari iOS: muestrear con URL propia
 (TMDB→w92) para no heredar la entrada de caché sin-CORS del `<img>`.
 
 ### 8.4 · Botones — regla dueña única (`[button-canon]`)
-- **PRIMARIO**: UNA regla CSS dueña (amber sólido / negro / `--r-pill` / `--sp-btn`
+- **PRIMARIO**: UNA regla CSS dueña (`--amber-cta` / negro / `--r-pill` / `--sp-btn`
   / `t-base` / `w-bold` / hover .88). 10 clases suscritas; un primario nuevo se
   SUMA al selector, no re-declara. `w-display` prohibido en botones.
+  El fondo es **degradado, no plano** (`--amber-cta`, 28 jul 2026): un ámbar
+  saturado a ancho completo se lee como rectángulo de color; el degradado
+  vertical mínimo le devuelve materia sin cambiar el color ni la identidad.
+  Fuera de la regla dueña lo consumen los 3 primarios con anatomía propia
+  (`.pel-sheet-action-btn.btn-primary`, `.av-sheet-confirm`, `.sheet-cta`).
+  El guardián parsea propiedades: fondo ámbar + texto negro en un botón = CTA
+  primario, y debe usar el token.
 - **CANCEL**: una regla dueña (texto `--gray` `t-sm` `w-semi`, sin caja).
 - **Secundario/terciario**: outline pill 1px `--bdr`, texto informativo SIEMPRE
   `--gray` (nunca `gray2`), radio pill.
 - **ESTADO ACTIVO**: clase `.on` ÚNICA — `.active`/`.selected` prohibidos.
+
+### 8.4.1 · Velo de los sheets — escalera CSS en el compositor
+
+> **REVISADO 29 jul 2026 — el driver rAF fue retirado.** Lo que sigue arriba de
+> la línea es la doctrina vigente; abajo queda el historial, que sigue siendo
+> válido como física de WebKit pero llevó a la conclusión equivocada.
+
+**Regla vigente: el velo se anima SOLO por `opacity`, en CSS, y vive en el
+compositor.** Dos capas —los pseudo-elementos de `.pel-sheet-overlay`— con radio
+**fijo** (`.55` y `.84 × --blur-veil`, que componen en cuadratura ≈ el valor
+aprobado de 10px) y opacidad escalonada (0ms / 110ms, 220ms lineal). Cerrar:
+ambas a la vez, 200ms. Cero JS.
+
+**Por qué se cayó el driver rAF (medido en device, 7 de 7 aperturas):** rAF corre
+en el **hilo principal**, que es exactamente el que el sheet bloquea ~230ms
+mientras se construye. El velo progresaba hasta ~68%, **se congelaba 233ms** y
+**saltaba a 100% en un frame** — lo que se percibía como "tardío y abrupto". No
+era la curva, ni el radio, ni el momento de arranque, ni la View Transition:
+era **inanición de la animación**. Ninguna cantidad de tuning arregla una
+animación que se detiene.
+
+**La lección de arquitectura, que aplica a TODA animación de apertura:** si debe
+sobrevivir a la construcción de un sheet, tiene que correr en el compositor
+(`opacity` / `transform` vía CSS). Reproducido en banco: bajo el mismo bloqueo de
+230ms, el driver rAF se congela; cualquier variante de opacity-CSS lo atraviesa
+sin detenerse.
+
+**Consecuencia aceptada:** como la opacidad no atenúa el `backdrop-filter`
+(hallazgo 1 de abajo, sigue siendo cierto), cada capa **entra de golpe**. La
+progresión no se construye rampeando un radio sino **escalonando capas**. Con dos
+peldaños la apertura son dos tiempos en ~230ms. Si en device se lee escalonado,
+la perilla es el `transition-delay` del `::after` (acercar los peldaños) o sumar
+una tercera capa — al costo de otro `backdrop-filter` a pantalla completa.
+
+**Método que lo cazó (repetible):** frames del video del device a 30fps + varianza
+del laplaciano **acotada a la franja de fondo por encima del borde del sheet**
+(detectar ese borde por frame ANTES de medir — un ROI mal elegido produjo un
+diagnóstico falso). Buscar la firma *congelamiento → salto en un frame*. Para
+reproducir en banco: Playwright WebKit con `recordVideo` (el video captura frames
+del compositor aunque el hilo principal esté muerto; los screenshots no sirven).
+
+---
+
+**Historial (hasta 28 jul 2026) — driver rAF, retirado.** El radio iba
+`k² × --blur-veil` y la opacidad `k` (easeOutCubic, 360ms abrir / 200ms cerrar).
+
+**Por qué 38px y no 14 (29 jul 2026).** Reporte: "amplía el recorrido de foco a
+desenfoque, no el tiempo". Medido el viaje a tres escalas espaciales:
+
+| radio | detalle fino | estructura media | **estructura grande** |
+|---|---|---|---|
+| 14 | 2.36 | 6.22 | 9.12 |
+| 26 | 2.41 | 6.82 | 10.32 |
+| **38** | 2.37 | **6.87** | **10.81** |
+| 50 | 2.31 | 6.61 | 10.77 |
+
+- **El detalle fino satura a ~3px de radio**: medido ahí, todos los techos dan
+  el mismo viaje, y de ahí salió el "techo ~12px" del que partimos. Era una
+  conclusión de una métrica mal elegida.
+- Lo que da la sensación de recorrido es la **estructura grande** (formas, no
+  texto): ahí el viaje crece hasta ~38px y **satura** — 50px no aporta y sí
+  cuesta compositor.
+- Corolario de método: medir desenfoque con una sola escala espacial engaña.
+  Submuestrear (1/6, 1/12) antes de medir el gradiente.
+
+**Bajado a 10px, en dos pasos (38 → 19 → 10, mismo día).** 38px era el máximo
+del viaje medible; 19px seguía tapando de más. El criterio que sí funciona: el
+fondo debe seguir leyéndose como **"la lista, desenfocada"** —es la referencia
+de dónde estabas—, no convertirse en mancha.
+
+**La métrica dice cuánto CAMBIA el fondo, no cuánto DEBE tapar.** El punto de
+llegada es decisión de diseño y se juzga en device; el máximo medible no es el
+valor correcto. Dos rondas de feedback se fueron en confundir una cosa con la
+otra. Curva resultante: `0.7 → 4.8 → 9.2 → 10px` en ~400ms. Tinte `--veil-tint` (negro 42%): el velo desenfoca, no apaga.
+Guardián `[no-animated-blur]`: ninguna `transition` incluye `backdrop-filter`.
+
+**Por qué — hallazgos del banco aislado** (4 variantes lado a lado, transición
+de 3s en cámara lenta, medidas por captura en WebKit del iOS Simulator):
+
+1. **La opacidad CSS no atenúa el `backdrop-filter`.** Con blur fijo y fade de
+   opacidad, al 45% de opacidad ya se mide **84%** del desenfoque: la opacidad
+   funde el tinte, pero el filtro entra casi entero apenas la capa se ve. Por
+   eso "blur fijo + opacity" (intentos 5–6) seguía brincando.
+2. **`transition` del radio también revienta temprano**, con cualquier curva
+   (ease-out, expo, ease-in): mismo perfil que el fijo.
+3. **Pisar los valores por frame desde JS traza la curva honesta** — 35% cuando
+   corresponde 35%. Es la única variante que progresa, y no depende del
+   interpolador del motor. ⚠️ **Cierto solo con el hilo principal libre**, que es
+   como estaba el banco. En la app real el sheet bloquea ese hilo y la curva
+   honesta se convierte en congelamiento + salto (ver arriba). El banco aislado
+   midió bien la física y mal la condición de operación: **todo banco de
+   animación tiene que reproducir el jank del caso real.**
+4. **La nitidez perceptual muere a ~5px de radio.** Aunque la rampa fuera
+   perfecta, un radio lineal "salta" a la vista: el radio debe crecer ∝ k²
+   (lento al inicio) para que el desenfoque se *vea* progresar.
+
+Historial de intentos (los 6 primeros fueron a ciegas — cada uno corrigió el
+síntoma del anterior sin la causa):
+
+| # | Enfoque | Resultado |
+|---|---|---|
+| 1 | blur fijo 4px, opacity 200ms | imperceptible |
+| 2–4 | `transition` del radio (18→10→6px, 3 curvas) | brinco (causas 2 y 4) |
+| 5–6 | blur fijo + fade de opacity | brinco (causa 1) |
+| 7 | driver rAF: radio ∝ k², opacidad k | progresión real **en banco**; en device se congelaba 233ms y saltaba |
+| 8–9 | animar los pseudo-elementos del View Transition | póster fantasma en device → revertido (#443/#444/#445) |
+| 10 ✅ | **escalera CSS de 2 capas, solo `opacity`** | sin congelamiento: la animación no depende del hilo principal |
+
+Reglas de método que esto deja:
+- **Animación sobre `backdrop-filter` se valida con banco aislado en cámara
+  lenta + medición por frame** (screenshots → nitidez con PIL). Ni Chromium ni
+  "se ve bien en el Mac" cuentan como evidencia; la grabación de pantalla del
+  dispositivo real es el árbitro final.
+- **Nunca `will-change` sobre un elemento con `backdrop-filter`** (crear o
+  destruir la capa recalcula el backdrop → brinco).
+- El driver ancla su t0 en el **primer frame propio**: el jank de construir el
+  DOM del sheet ocurre antes y no se come el arranque.
+- El velo no espera al sheet (`--sheet-in`, .38s) ni al color ambiental
+  (`--amb-o`, .6s): capas independientes.
+- `prefers-reduced-motion`: el driver salta al estado final, sin animación.
+
+### 8.4.2 · View transition del root — crossfade sin bache (estado VIGENTE)
+
+Estado actual (el que quedó tras revertir, 29 jul 2026):
+`::view-transition-old(root){animation:none}` — el snapshot viejo queda opaco
+debajo — y `new(root)` entra encima con `vtFadeIn .22s`. En un crossfade
+siempre debe quedar una capa opaca (sin eso había un bache a negro medible).
+
+**REVERTIDO — animar el velo dentro de la VT (intentos del 29 jul).** Se probó
+desenfocar el snapshot viejo (`filter` en `old(root)`), descartar `new(root)` y
+sacar el chrome del snapshot con `view-transition-name` propio. En Playwright
+las métricas daban bien (retroceso 0.0pt), **en device el póster quedaba como
+un fantasma sin que el fondo se desenfocara**: manipular qué snapshots existen
+y cuáles se ocultan rinde distinto en WKWebView que en el WebKit de escritorio.
+Lección: **los pseudo-elementos de View Transitions son territorio
+motor-específico — cualquier cambio ahí se valida en el dispositivo real ANTES
+de mergear, no después.** El síntoma pendiente ("el desenfoque del fondo recién
+se ve cuando la VT libera la vista, ~400ms tras el tap") queda documentado como
+problema ABIERTO: mientras la VT corre, sus snapshots tapan el DOM y el velo
+del driver rAF trabaja invisible debajo.
+
+### 8.4.2b · El viaje del póster es FLIP, NUNCA View Transitions (29 jul 2026)
+
+**La View Transition del root quedó RETIRADA.** Acumuló tres modos de fallo, los
+tres invisibles en escritorio y visibles solo en el device:
+
+| # | Síntoma en device | Causa |
+|---|---|---|
+| 1 | el velo aparecía de golpe ~400ms tarde | los snapshots TAPAN el DOM real: el velo corría invisible debajo |
+| 2 | póster fantasma (#443/#444, revertido) | animar los pseudo-elementos es territorio motor-específico |
+| 3 | texto congelado de la ficha ANTERIOR sobre el grid | el snapshot capturaba textura vieja con la GPU cargada |
+
+**Lo que los une: nada que ocurra debajo de un snapshot es visible, y el snapshot
+es una foto que el motor decide cuándo y cómo tomar.** Ninguna curva, duración ni
+easing arregla eso — por eso siete intentos de tuning fallaron.
+
+**Motor vigente — FLIP en el compositor.** Un CLON del póster (`.poster-flight`,
+`position:fixed`) viaja de la card a su posición final por `transform`
+(translate+scale). Compositor puro: sobrevive al hilo principal ocupado y **no
+tapa nada**. El sheet (spring 380ms) y el velo (escalera §8.4.1) corren visibles
+desde el primer frame. Un solo timeline, tres actores, cero snapshots.
+
+Detalle que importa: al arrancar, el sheet aún está en `translateY(100%)`, así
+que el rect de destino se **proyecta** (posición del póster relativa al sheet +
+posición final del sheet) en vez de leerse — leerlo daría el rect de fuera de
+pantalla y el póster volaría al lugar equivocado.
+
+Guardián `[poster-morph]`: exige `.poster-flight` animado por `transform` y
+**falla si `startViewTransition` reaparece** en la apertura.
+
+### 8.4.3 · Presupuesto de capas — un scrim cerrado no debe pintar
+
+**Regla: todo overlay a pantalla completa lleva `visibility:hidden` cuando está
+cerrado**, con la transición retrasada (`visibility 0s linear .4s`) para que siga
+visible durante todo el fundido de salida — la animación de cierre no cambia ni
+un frame. `opacity:0` NO basta: el elemento se sigue pintando, su
+`backdrop-filter` sigue vivo y el compositor le mantiene la capa.
+
+**De dónde salió (29 jul 2026).** Buscando el "bloqueo de 230ms" al abrir una
+ficha, el perfil de CPU descartó al JS (`openPelSheet` = 5.8ms con throttle 4x;
+la tarea más larga del hilo principal, 22ms). El trace de timeline lo mandó al
+render, y el `LayerTree` de CDP dio el número: **46 capas compuestas, una docena
+a viewport completo**, casi todas scrims cerrados con blur. En device (DPR 3)
+cada capa a pantalla completa es ~11.8MB de backing → **~140MB permanentes**.
+Esa presión de GPU es lo que hunde los frames del teléfono; el "bloqueo" era el
+device rindiendo a ~4fps, no una tarea larga.
+
+Resultado tras esconder los 9 scrims: **46 → 36 capas, 35.3 → 22.8MB** (medido
+en CSS px; en device el ahorro es ~9× por el DPR).
+
+**Método:** `CDPSession` → `LayerTree.enable` → `layerTreeDidChange` da capas con
+tamaños; `Profiler` da self-time de JS; `Tracing` con
+`disabled-by-default-devtools.timeline` da Layout/Paint/Raster. Los tres juntos
+distinguen "JS lento" de "demasiadas capas", que se sienten igual desde afuera.
+
+⚠️ **Chromium de escritorio no reproduce el costo de GPU del iPhone**: medido,
+quitar TODO el `backdrop-filter` no bajó el raster (238ms sin blur vs 192ms con
+blur — ruido). El conteo de capas sí es una métrica válida acá porque es
+estructural, no depende de la GPU.
+
+### 8.4.5 · El póster NO viaja: la card sube completa (decisión, 29 jul 2026)
+
+**Regla: al abrir una ficha, la card sube con todo dentro. El póster no se mueve
+de la card al sheet.** Guardián `[poster-morph]` falla si vuelve cualquiera de los
+dos motores que se intentaron (`startViewTransition` o un clon `.poster-flight`).
+
+Se intentó **dos veces, con motores distintos, y dio CINCO defectos visuales
+distintos** — todos invisibles en escritorio y solo detectables en device:
+
+| Motor | Defecto |
+|---|---|
+| View Transition | el velo corría **invisible** bajo los snapshots y aparecía de golpe al liberar |
+| View Transition | **póster fantasma** (#443/#444, revertido) |
+| View Transition | **texto congelado** de la ficha anterior superpuesto al grid |
+| Clon FLIP | el **radio se inflaba** por `transform:scale()` y caía de golpe al soltar |
+| Clon FLIP | la imagen **se re-encuadraba** (origen `center` vs destino `center top`) |
+| Clon FLIP | en pósters generativos el **título desaparecía** al aterrizar (el del sheet se regenera SIN título) y la **banda de sección "aparecía"** porque el blur del vuelo borraba una card de 56px |
+
+**El patrón, que es la lección:** cada arreglo destapaba otro defecto porque
+**origen y destino no son el mismo objeto**. Difieren en tamaño, recorte, radio
+y —en los generativos— en **contenido**. Una animación que finge que son el mismo
+objeto tiene que mentir en algún frame, y en device siempre se nota cuál.
+
+Medido tras retirarlo, con 230ms de bloqueo del hilo inyectado: el velo llega al
+87% en 33ms y asienta al 99% en 67ms, sin escalones ni congelamientos. Lo que
+queda es lo que siempre funcionó, y ambos viven en el compositor:
+
+- el **spring** de la card (`--sheet-in`)
+- el **velo en escalera** (§8.4.1)
+- el **stagger** de la meta (`vt-in` / `vtRise`), CSS puro sobre el DOM real
+
+**Lo que SÍ se conserva del intento FLIP**, porque era un defecto real e
+independiente: **un póster = un radio**. Había tres en juego (card 12px, ficha
+8px, thumb de corto 4px); las **6 superficies** usan `--r-poster`. Guardián
+`[poster-radius]`.
+
+### 8.4.4 · Orden de los avisos en una ficha (regla única, 29 jul 2026)
+
+**Todo sheet —película, corto, evento— ordena igual:**
+
+```
+1. IDENTIDAD    póster · título · banderas/duración · dirección·género·año ·
+                sección · Letterboxd            ← el último dato de la obra
+2. FUNCIÓN      cabecera · notice-banner (cancelada/reprogramada) · fila(s)
+                de día·hora·sede
+3. MATICES      meta-banner: Q&A · inscripción previa · función compartida
+4. SINOPSIS
+5. CTAs
+```
+
+Dos principios lo fijan:
+
+- **Lo que INVALIDA va antes; lo que MATIZA va después.** El aviso de
+  cancelada/reprogramada niega la hora que le sigue: hay que leerlo primero. El
+  Q&A y la función compartida califican una función válida — leerlos antes
+  obliga a sostener un modificador sin conocer aún lo que modifica, justo en el
+  camino más recorrido de la ficha.
+- **Los avisos van SIEMPRE antes de la sinopsis**, nunca sueltos entre la
+  sinopsis y los botones.
+
+**Corrección (29 jul 2026): la ficha de un corto SÍ tiene bloque de función.**
+Esta sección decía que no lo tenía «porque el horario vive en su programa». Era
+la descripción de un bug, no una regla: el corto se veía sin día, hora ni sede, y
+quien buscaba el corto de un amigo no sabía cuándo verlo. El horario vive en el
+programa, sí — así que **la ficha lo hereda**:
+
+- **Todas** las funciones de **todos** sus programas. Un corto se programa en dos
+  bloques distintos (Ecocidio: 13 AGO Cacodelphia + 15 AGO Cine York). Mostrar
+  solo el primero es peor que no mostrar nada: el usuario confía en una única
+  función y se pierde la otra. `_findParentPrograms` (plural).
+- **Con la misma fila**, no con una línea de texto aparte: `_screeningRows` es el
+  **dueño único** de `día · hora · sede [· Añadir]` y lo consumen las dos fichas.
+  Guardián `[screening-row-single-owner]`. La duplicación ERA el bug: la ficha de
+  corto no pintaba función porque su constructor no la tenía.
+- Cabecera **«Función»** a secas —la fila es idéntica a la de una película y el
+  aviso justo debajo ya explica que esa función incluye el programa entero— y el
+  botón «Añadir» apunta al **programa**, no al corto (agregar un corto agrega su
+  programa completo; `addSuggestion` solo entiende títulos que existen en FILMS).
+- Sin función anunciada (bloque-catálogo sin sesión) → **vacío explícito**
+  «Sin función anunciada». Callar dejaba la ficha muda y el usuario no podía
+  distinguir «no hay dato» de «no hay función». Tests AF04–AF06.
+- **El aviso de cancelada/reprogramada también se hereda.** Está indexado por
+  título de programa, así que la ficha del corto solo lo ve si pregunta por sus
+  owners. Sin eso mostraba la hora vieja sin advertencia: mandar a alguien a una
+  sala vacía es peor que no decirle la hora. `_noticeRows` es el **dueño único**
+  y lo consumen las dos fichas; va ARRIBA de la fila porque la INVALIDA.
+
+> De dónde sale: el mismo aviso de «función compartida» vivía en dos sitios
+> distintos —tras la función en la ficha, tras la sinopsis en el corto— porque
+> se movió uno y en el otro solo se cambió el texto. Un concepto en dos lugares
+> es un concepto que el usuario tiene que aprender dos veces. **Al tocar un
+> aviso, revisar TODAS las superficies que lo pintan**, no solo la que se está
+> mirando: hoy son la ficha de película y la de corto.
+
+### 8.4.6 · Banda AVISOS: sitio exclusivo para lo que matiza (30 jul 2026)
+
+**Lo que INVALIDA se queda en FUNCIÓN; lo que MATIZA tiene banda propia.** Q&A,
+programa e inscripción vivían dentro del bloque de FUNCIÓN, compitiendo con el día,
+la hora y la sede — y la palabra «función» aparecía tres veces en cuatro líneas. La
+ficha ya organiza en bandas con rótulo (FUNCIÓN, SINOPSIS); los avisos no tenían la
+suya y vivían de prestado.
+
+```
+🕐 FUNCIÓN
+   JUE 13 · 19:30 · Alianza Francesa
+⚠ AVISOS
+   ⟨Q&A⟩         Con referentes · +30 min estimados
+   ⟨PROGRAMA⟩    Verás las otras obras
+   ⟨INSCRIPCIÓN⟩ Reservá tu lugar
+```
+
+- **Dueño único `_avisosBand`**, consumido por la ficha de película y la de corto.
+  Guardián `[avisos-en-banda]`: un `.meta-banner-label` suelto = alguien volvió a
+  colgar un aviso fuera.
+- **Cancelada/reprogramada entra PRIMERA y en rojo** (§8.4.6 lo detalla): la banda
+  tiene dos niveles de severidad — ámbar matiza, rojo invalida.
+- **En Mi Plan, el aviso trae su SALIDA.** El badge dice qué pasó; el botón dice
+  qué hago: *Actualizar* muda la entrada a la hora nueva —reusando el flujo de
+  conflictos, sin moverla sola— y *Buscar reemplazo* la quita y lleva a
+  Sugerencias con el hueco libre. Nada se mueve ni se borra sin que el usuario lo
+  pida. La hora va tachada **en la hora misma**, no en la fila: `text-decoration`
+  se propaga al dibujar y no se puede cancelar desde un hijo, así que la regla en
+  el contenedor tachaba también el badge y el propio botón.
+- **Todos los avisos llevan pastilla.** Sin ella, el que no la tenía se leía como
+  de otra especie. La pastilla es el único recuadro que sobrevive (§8.4.7).
+- **Q&A, inscripción y GRATIS se derivan de la FUNCIÓN, no de la obra.** Leerlos
+  del film dejaba muda la ficha de un corto —que no tiene film propio, solo las
+  funciones que hereda de su programa—. Si el rasgo está en algunas funciones y
+  no en todas, el aviso **nombra cuáles**; si no, mentiría sobre las otras.
+  GRATIS solo aparece en festival de ticketing **mixto**: marca la excepción
+  cuando casi todo se paga (mismo predicado que el badge del listado).
+- **Alineación por grid, no por píxeles**: `max-content 1fr`. La columna de
+  pastillas la define la etiqueta más ancha **de cada idioma** —106px en ES,
+  118px en EN con `RSVP REQUIRED`— sin un solo valor fijo ni condicional por
+  locale. `padding-left: 0` → las pastillas caen en el riel de **16px**, el mismo
+  del día de la fila y del cuerpo de la sinopsis. Test AF10 lo fija como invariante.
+
+**Vocabulario, con evidencia.** «Función compartida» y «shared screening» **no
+existen en la industria**: lo establecido es *doble programa* / *programa de cortos*,
+y el sustantivo que los cubre a ambos es **PROGRAMA** — que es como los propios
+festivales llaman al contenedor en nuestros datos (FINCA: *«… — Programa 1»*,
+Cinemancia: *«Programa de cortos 4»*, Olhar: *«PGM 07»*). Descartado «doble» por
+falso: los slots compartidos llegan a **4 obras** y mezclan duraciones (106 min +
+5 min en FINCA). Descartado nombrar el contenedor al estilo Sundance
+(*«part of Shorts Program 4»*) porque **a veces no hay programa**. Descartado
+*TENÉ EN CUENTA* como rótulo: es un imperativo, no un sustantivo — un rótulo de
+banda tiene que poder completar *«esta es la ___ de la película»*.
+
+### 8.4.5b · «Función compartida»: un solo sustantivo (29 jul 2026)
+
+El bloque decía **«función» tres veces en cuatro líneas**: rótulo del bloque
+(FUNCIONES), rótulo del aviso (FUNCIÓN COMPARTIDA) y su propia frase («Otros
+títulos en la misma función»). Los dos rótulos eran el mismo sustantivo, y el del
+aviso era un resumen de su cuerpo.
+
+```
+🕐 FUNCIONES ②
+   SÁB 15 · 18:00 · Cine York        [+ Agregar]
+   JUE 13 · 19:00 · Cacodelphia
+ ● COMPARTIDA                                    ← .meta-banner, igual que Q&A
+   Verás también otros títulos.
+```
+
+- **El rótulo del bloque queda NEUTRO.** Meter «compartida» ahí es un error de
+  categoría —el rótulo nombra el bloque, compartida es propiedad de la fila— y
+  además mentiría cuando una obra tiene dos funciones y solo una es compartida
+  (hoy no ocurre en FINCA; es estructuralmente posible).
+- **El adjetivo y la consecuencia viven en un `.meta-banner`**, el MISMO componente
+  que Q&A e inscripción previa: punto ámbar, rótulo y texto, sin caja. El rótulo dice
+  «COMPARTIDA» a secas — no repite el sustantivo del bloque.
+  *Intento descartado (mismo día):* una nota gris sin punto ni rótulo (`.fn-note`).
+  Comunicaba demasiado silenciosamente y, peor, **inventaba un segundo lenguaje para
+  los avisos** justo al lado del Q&A, que usa el canon y funciona. Todo aviso de la
+  ficha usa `.meta-banner`: uno solo.
+- **La explicación no es el accesorio, es el mensaje.** «Compartida» es vocabulario
+  nuestro; lo que informa al espectador es *verás también otros títulos*. Dos
+  intentos previos de suprimirla fallaron por eso («programa completo» no dice qué
+  es programa ni qué es completo).
+- Descartado nombrar el contenedor al estilo Sundance («part of Shorts Program 4»)
+  o IFFR («preceded by»): **a veces no hay programa** —dos largos comparten slot en
+  FINCA— así que la solución no puede depender de que exista un nombre.
+
+### 8.4.7 · Ningún aviso lleva caja (regla, 29 jul 2026)
+
+**Un aviso es una NOTA al margen, no una tarjeta.** El recuadro competía con las
+superficies reales —`sec-hdr`, filas de función— y pesaba más que su contenido.
+Sin fondo, sin borde, sin radio en: `.meta-banner`, `.notice-banner-row`,
+`.prio-stale`, `.notice-detail-amber/-green`. Guardián `[aviso-sin-caja]`.
+
+**La pastilla del badge SÍ se queda:** ahí el fondo *es* el componente, no una caja
+alrededor de un texto. Corolario de copy: **el badge dice el estado, el texto dice
+solo lo que el badge no puede decir.** El aviso decía «RESCHEDULED» y luego
+«Reprogramada → …»: la misma palabra dos veces. Hoy el texto es solo el dato nuevo
+(«Ahora dom 16 · 17:00 · Cine York»), y la fecha va en día legible, no en ISO.
 
 ### 8.5 · Iconos — ver `docs/ICONS.md`
 Fuente única `ICONS` (`components.js`); `aria-hidden` de fábrica; escala icono ≈

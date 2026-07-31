@@ -98,7 +98,7 @@ import { runCalc } from './controller/calc.js';
 
 // ── Step 7b: controller/persistence.js — saves + cloud sync + Supabase auth. ──
 import {
-  saveWL, saveWatched, saveRating, saveAV, saveSavedAgenda, savePrio, saveLastSlot, saveDelays, saveState, loadState, _cloudLoad, _cloudSave, _sbUpdateUI, submitAuthEmail, submitOTP, deleteAccount, signOutAndClose, setPlanRerender,
+  saveWL, saveWatched, saveRating, saveAV, saveSavedAgenda, savePrio, saveLastSlot, saveDelays, saveState, loadState, _cloudLoad, _cloudSave, _sbUpdateUI, submitAuthEmail, submitOTP, deleteAccount, signOutAndClose, setPlanRerender, _applyCloudRow, commitPlan,
 } from './controller/persistence.js';
 
 // ── Step 7c: controller/pipeline.js — render dispatchers. ────────────────────
@@ -119,7 +119,7 @@ import {
 
 // ── Step 7d-3: controller/handlers.js — mutators+filters+composites. ─────────
 import {
-  toggleWL, toggleWatched, togglePelPrio, togglePelWL, setDelay, undoDelay, clearDelay, removeFromAgenda, addSuggestion, checkinLaVi, checkinNoLaVi, forceInclude, togglePriority, swapPriority, markWatchedFromPlan, confirmReplace, removeFilmFromScenario, _dismissNotice, selectMiPlanDay, miPlanNav, toggleMplanProg, setActivePlanFilm, selectFromDetail, toggleFilmAlternatives, _toggleEveningFilms, filterByVenue, filterByDay, filterBySection, setInteresesView, setProgramaMode, toggleProgramaView, setProgramaView, setProgramaChip, clearProgramaChip, _pafClearSec, _pafClearVenue, _toggleWLFromList, saveCurrentScenario, _scrollToAgSection, _setExpandedFilm, _closePelAndRemove, _closePelAndRate, _navTo, _closeAuthAndReset, _toggleCtxOlder, _toggleWatchedAndClose, _toggleWLAndClose, _activatePlanFilm, _scrollToSuggestions, _removeConflictModal, _scrollToTop, _searchOpenFilm, _searchOpenCorto,
+  toggleWL, toggleWatched, togglePelPrio, togglePelWL, setDelay, undoDelay, clearDelay, removeFromAgenda, addSuggestion, _planFixNotice, checkinLaVi, checkinNoLaVi, forceInclude, togglePriority, swapPriority, markWatchedFromPlan, confirmReplace, removeFilmFromScenario, _dismissNotice, selectMiPlanDay, miPlanNav, toggleMplanProg, setActivePlanFilm, selectFromDetail, toggleFilmAlternatives, _toggleEveningFilms, filterByVenue, filterByDay, filterBySection, setInteresesView, setProgramaMode, toggleProgramaView, setProgramaView, setProgramaChip, clearProgramaChip, _pafClearSec, _pafClearVenue, _toggleWLFromList, saveCurrentScenario, _scrollToAgSection, _setExpandedFilm, _closePelAndRemove, _closePelAndRate, _navTo, _closeAuthAndReset, _toggleCtxOlder, _toggleWatchedAndClose, _toggleWLAndClose, _activatePlanFilm, _scrollToSuggestions, _removeConflictModal, _scrollToTop, _searchOpenFilm, _searchOpenCorto,
 } from './controller/handlers.js';
 import { setDelaysRerender } from './controller/delays-cloud.js';
 import { initWatchBridge } from './controller/watch-bridge.js';
@@ -191,6 +191,7 @@ const ACTION_REGISTRY = {
   confirmAvBlock:     ()      => confirmAvBlock(),
   confirmReplace:     (el)    => confirmReplace(el.dataset.rmtitle, el.dataset.newtitle, el.dataset.day, el.dataset.time, !!el.closest('#ag-result')),
   removeFromAgenda:   (el)    => removeFromAgenda(el.dataset.title),
+  planFixNotice:      (el)    => _planFixNotice(el.dataset.title),
   setDelay:           (el)    => setDelay(el.dataset.title, el.dataset.day, el.dataset.time, +el.dataset.mins, el.dataset.venue),
   clearDelay:         (el)    => clearDelay(el.dataset.title, el.dataset.day, el.dataset.time, el.dataset.venue),
   undoDelay:          (el)    => undoDelay(el.dataset.title, el.dataset.day, el.dataset.time, el.dataset.venue),
@@ -446,7 +447,7 @@ FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202607250945';
+const BUILD_VERSION='202607311421';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';
@@ -957,38 +958,35 @@ document.addEventListener('keydown',function(e){
 // ── Event delegation para js-open-pel → openPelSheet ──────────────────────
 // capture:true garantiza que el evento llega antes del stopPropagation
 // de _posterThumb. data-title contiene el título sin encoding.
-// Transición de póster compartido (View Transitions) — el póster del grid se
-// transforma en el póster de la ficha (hero morph, decisión Juan 19 jul 2026).
-// Degrada SOLO: sin startViewTransition (Safari<18) o reduce-motion → apertura
-// normal (spring). Guardián [poster-morph]. Un flag evita solapar transiciones.
+// Apertura de la ficha — la card sube COMPLETA (29 jul 2026, decisión de Juan).
+// El póster ya NO viaja. Se intentó dos veces y produjo CINCO defectos visuales
+// distintos, todos solo-en-device (§8.4.5 de DESIGN.md):
+//   View Transition — velo invisible bajo los snapshots · póster fantasma
+//     (#443/#444) · texto congelado de la ficha anterior sobre el grid
+//   FLIP con clon    — el radio se inflaba por transform:scale() y caía de golpe ·
+//     la imagen se re-encuadraba al soltar (origen center vs destino center top) ·
+//     en pósters generativos el título desaparecía al aterrizar (el del sheet se
+//     regenera SIN título) y la banda de sección "aparecía" porque el blur del
+//     vuelo borraba una card de 56px
+// El patrón: cada arreglo destapaba otro defecto porque el origen y el destino no
+// son el mismo objeto —distinto tamaño, recorte, radio y CONTENIDO—. Una animación
+// que finge que sí lo son tiene que mentir en algún frame.
+// Lo que queda es lo que funcionaba: el spring del sheet y el velo en escalera
+// (§8.4.1), ambos en el compositor. Guardián [poster-morph] impide que vuelva.
 let _vtBusy=false;
-// _morphOpen(sourceEl, openFn) — dueño ÚNICO del hero morph. sourceEl contiene el
-// póster de origen (card del grid O thumb de un corto dentro de un programa);
-// openFn hace el render síncrono del destino. Reusado por la card del grid y por
-// la apertura de un corto (misma fuente única de póster → mismo gesto).
+// _morphOpen(sourceEl, openFn) — se conserva como costura ÚNICA de apertura (la
+// usan la card del grid y el corto dentro de un programa) para que el stagger de
+// la meta viva en un solo sitio. `sourceEl` ya no se usa para nada visual.
 function _morphOpen(sourceEl, openFn){
-  const reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const src = sourceEl && sourceEl.querySelector && sourceEl.querySelector('.ed-still, .img-cover, img'); // cubre thumb simple (img) y editorial (.ed-still) de cortos también
-  if(!document.startViewTransition || reduce || _vtBusy || !src){ openFn(); return; }
+  if(_vtBusy){ openFn(); return; }
   _vtBusy=true;
-  src.style.viewTransitionName='film-poster';
-  const _sheet=document.getElementById('pel-sheet');
-  if(_sheet) _sheet.classList.add('vt-run'); // el VT reemplaza el spring durante el gesto
-  const _clean=()=>{
-    document.querySelectorAll('[style*="film-poster"]').forEach(el=>{ el.style.viewTransitionName=''; });
-    const s=document.getElementById('pel-sheet'); if(s) s.classList.remove('vt-in','vt-run');
-    _vtBusy=false;
-  };
   try{
-    const vt=document.startViewTransition(()=>{
-      src.style.viewTransitionName=''; // liberar el nombre para el estado nuevo
-      openFn();                        // render síncrono (innerHTML)
-      const sp=document.querySelector('.pel-sheet-poster, .pel-sheet-poster-stage img, .psp-editorial img, .pel-sheet .ed-still');
-      if(sp) sp.style.viewTransitionName='film-poster';
-      const s=document.getElementById('pel-sheet'); if(s) s.classList.add('vt-in'); // stagger + bloom
-    });
-    vt.finished.then(_clean, _clean);
-  }catch(_e){ _clean(); openFn(); }
+    openFn();  // render síncrono + .open → spring del sheet y velo arrancan ya
+    const sheet=document.getElementById('pel-sheet');
+    if(sheet) sheet.classList.add('vt-in');  // stagger de la meta (vtRise, CSS puro)
+    setTimeout(()=>{ const s=document.getElementById('pel-sheet');
+      if(s) s.classList.remove('vt-in'); _vtBusy=false; }, 420);
+  }catch(_e){ _vtBusy=false; }
 }
 function _openPelMorph(cardEl, title){ _morphOpen(cardEl, ()=>openPelSheet(title)); }
 globalThis._morphOpen = _morphOpen; // puente: lo usa el ACTION_REGISTRY (openCortoSheetFromEl) fuera de este IIFE
@@ -1318,12 +1316,25 @@ document.addEventListener('click', function(e){
     _posterErr, _cortoSheetPosterErr, _edPosterErr,
     searchQuery, submitAuthEmail, submitOTP,
     // (b) page.evaluate — tests
-    _renderProgramaContent, closeAuthSheet, closePelSheet, loadFestival, normTitle,
+    // NOTICES: CONFIG, no estado — no va al roster de state (rompería la frontera
+    // que vigila [state-mirror], igual que FESTIVAL_CONFIG/VENUES). Se expone acá
+    // para que la suite pueda INYECTAR un aviso y ejercer el camino REAL:
+    // NOTICES.push(...) → limpiar cfg.films → loadFestival() → el sellado del
+    // loader. Era la única ruta crítica sin test: se verificaba a mano.
+    NOTICES,
+    // _applyCloudRow: la puerta por donde entra el plan desde la nube — expuesta
+    // para que la suite pueda ejercer su normalización contra el catálogo
+    // (syncScheduleWithCatalog) sin montar Supabase. Solo tests.
+    _applyCloudRow,
+    // commitPlan: el chokepoint de escritura del plan — expuesto para que la
+    // suite pruebe strict-mode (__PLAN_STRICT__) sin montar un flujo entero.
+    commitPlan,
+    _renderProgramaContent, closeAuthSheet, closePelSheet, exportICS, loadFestival, normTitle,
     openAuthSheet, openPelSheet, openRatingSheet, openCortoSheet, renderAgenda,
     render, saveSavedAgenda, saveState, savePrio, saveWL, saveWatched, searchOpen,
     searchClose, selectSplashFest, dismissSplash, showAgView, showDayView,
     simNow, simTodayStr, switchMainNav, runCalc, _getFestivalPhase,
-    toggleWL, togglePriority, addBlock,
+    toggleWL, togglePriority, addBlock, addSuggestion,
     setProgramaView, openConflictSheet, deleteAccount,
   });
 })();

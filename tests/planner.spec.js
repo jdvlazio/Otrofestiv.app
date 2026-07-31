@@ -99,3 +99,32 @@ test('T43 — planear con títulos muestra chips de disponibilidad', async ({ pa
   const hasUI = await page.locator('.av-calc-btn').count();
   expect(hasUI).toBeGreaterThan(0);
 });
+
+// T54 — el Q&A no bloquea en la misma sede: advierte (decisión de Juan, 30 jul 2026)
+// Caso real de FINCA: función compartida 18:00 (106+5, Q&A) + Ziki 20:30, mismo
+// Cine York. 39 min entre películas — el festival lo programó para que se pudiera —
+// pero el planificador excluía a Ziki contando los +30 ESTIMADOS del Q&A opcional
+// (9 < buffer 15). Ahora entra, y Mi Plan muestra "Q&A · si te quedás tenés ~N min".
+// Con TRASLADO el Q&A sigue contando entero (variables incontrolables).
+test('T54 — Ziki entra al plan pese al Q&A (misma sede) y Mi Plan advierte', async ({ page }) => {
+  await enterFestival(page, 'finca2026', '2026-08-13T10:00');
+  await page.evaluate(() => {
+    watchlist.clear();
+    ['Propiedad privada prohibido pasar', 'Mi casa es su casa', 'Ziki'].forEach(t => watchlist.add(t));
+    saveState('wl', 'watched');
+  });
+  await goToPlanear(page);
+  await page.locator('.av-calc-btn').click();
+  await page.locator('#ag-result-wrap').waitFor({ state: 'visible', timeout: 20000 });
+  const titles = await page.evaluate(() =>
+    (cachedResult?.scenarios?.[0]?.schedule || []).map(s => s._title));
+  expect(titles).toContain('Ziki');
+  expect(titles).toContain('Propiedad privada prohibido pasar');
+  // y la advertencia aparece en Mi Plan
+  await page.evaluate(() => { state.set('savedAgenda', { schedule: cachedResult.scenarios[0].schedule, scenarioIdx: 0 }); switchMainNav('mnav-miplan'); showAgView(); });
+  await page.waitForSelector('#ag-view', { state: 'visible', timeout: 8000 });
+  await page.waitForTimeout(600);
+  const warns = await page.evaluate(() =>
+    [...document.querySelectorAll('.mplan-warn-row')].map(e => e.textContent.trim()));
+  expect(warns.some(w => /Q&A/.test(w) && /min/.test(w))).toBe(true);
+});

@@ -20,6 +20,7 @@
 
 import { FESTIVAL_CONFIG, DEFAULT_DURATION_MIN, FESTIVAL_BUFFER } from "../config.js";
 import { toMin, simNow, simTodayStr, festivalEnded, _festNowMin } from "./time.js";
+import { blockDuration } from "./film.js";
 import { screeningPassed, _classifyTodayScreenings, _endedStats } from "./film.js";
 export function _resolveVenue(name,venues){
   if(!name) return{short:''};
@@ -69,7 +70,9 @@ export function _gapSuggestion(todayDay,gapFromMin,gapToMin,lastDone,next){
     if(savedAgenda.schedule.some(s=>s._title===f.title)) return false;
     if(screeningPassed(f)) return false;
     const fStart=toMin(f.time);
-    const fEnd=fStart+(parseInt(f.duration)||DEFAULT_DURATION_MIN);
+    // blockDuration: una obra anclada OCUPA su función entera (un corto de 5 min
+    // en un bloque de 111 no "cabe" en un hueco de 30). Antes: parseInt(duration).
+    const fEnd=fStart+blockDuration(f);
     if(!(fStart>=gapFromMin&&fEnd<=gapToMin+10)) return false;
     // Viaje desde la anterior y hacia la siguiente (si las hay).
     if(lastDone&&!_reachOK(lastDone.venue,f.venue,fStart-gapFromMin)) return false;
@@ -111,7 +114,10 @@ export function _getFestivalPhase(){
 
   // BETWEEN: hueco > 45 min entre función terminada y la próxima
   if(lastDone&&!active.length&&minsUntil>45){
-    const lastDoneDur=parseInt(lastDone.duration)||DEFAULT_DURATION_MIN;
+    // blockDuration: con anclaje, la última función termina cuando termina el
+    // BLOQUE — con la obra corta (5 min) el hueco "libre" arrancaba a las 18:05
+    // con la función viva hasta 19:51 (mismo bug que Mi Plan, 30 jul 2026).
+    const lastDoneDur=blockDuration(lastDone)||DEFAULT_DURATION_MIN;
     const gapFromMin=toMin(lastDone.time)+lastDoneDur;
     const gapToMin=nextStartMin;
     return{
