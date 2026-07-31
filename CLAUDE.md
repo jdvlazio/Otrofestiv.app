@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `4e17274 fix(plan): el plan guardado se re-deriva del catalogo en cada hidratacion (#491) (#491)`
+> Último commit: `0c8dc0d fix(domain): los bordes de Planear/Mi Plan dejan de calcular duracion a mano (#492) (#492)`
 
 ---
 

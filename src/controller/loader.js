@@ -21,7 +21,7 @@ import { _updateProgramaActiveFilter, initProgramaModeBar, showAgView, showDayVi
 import { seccionClose } from './overlays.js';
 import { setProgramaView } from './handlers.js';
 import { dayFullyPassed, simTodayStr } from '../domain/time.js';
-import { normTitle, validateFilm } from '../domain/film.js';
+import { explodeScreenings, normTitle, sealSharedSlots, validateFilm } from '../domain/film.js';
 import { syncScheduleWithCatalog } from '../domain/schedule.js';
 import { state } from '../state/state.js';
 import { deriveClear } from '../state/festival-context.js';
@@ -122,25 +122,9 @@ export async function loadFestival(id){
       // retry exitoso.)
       const data=await _fetchFestivalJson(_festUrl);
       // ── Explosión de screenings[] → objetos planos por función ──
-      // Si un film tiene screenings[], genera un objeto por función.
-      // Compatibilidad total con el formato plano existente (day/time/venue).
-      const exploded=[];
-      (data.films||[]).forEach(f=>{
-        if(Array.isArray(f.screenings)&&f.screenings.length){
-          const base=Object.assign({},f);
-          delete base.screenings;
-          f.screenings.forEach((s,i)=>{
-            exploded.push(Object.assign({},base,{
-              day:s.day||s.date,date:s.date||s.day,time:s.time,venue:s.venue||'',
-              day_order:s.day_order!==undefined?s.day_order:i,
-              sala:s.sala||'',
-              ...(s.is_free!=null?{is_free:s.is_free}:{}) // por-función (festivales mixed)
-            }));
-          });
-        } else {
-          exploded.push(f);
-        }
-      });
+      // Dueño: explodeScreenings (domain/film.js) — compartido con el oráculo
+      // del planeador, que necesita ejercer el MISMO catálogo que producción.
+      const exploded=explodeScreenings(data.films);
       // Duración automática para is_programa
       exploded.forEach(f=>{
         if(f.is_programa&&f.film_list&&f.film_list.length&&!f.duration){
@@ -161,26 +145,7 @@ export async function loadFestival(id){
       // NO se puede derivar para todos: en sedes multisala (Tribeca) misma
       // hora+sede es OTRA sala = otra función. Por eso el festival lo declara.
       // Se marca acá, una vez, y el dominio solo lee los campos.
-      if(data.sharedSlotIsOneScreening){
-        const _grupos={};
-        exploded.forEach(f=>{
-          if(f.info||!f.day||!f.time||!f.venue) return;
-          (_grupos[f.day+'|'+f.time+'|'+f.venue+'|'+(f.sala||'')] ||= []).push(f);
-        });
-        Object.entries(_grupos).forEach(([k,g])=>{
-          if(g.length<2) return;
-          // La sala queda ocupada por la SUMA de las obras. El Q&A se cuenta UNA
-          // vez: es una charla al final de la función, no una por obra.
-          // DOS duraciones, porque son dos preguntas distintas:
-          //   _slotDur = lo que dura la función (suma de las obras). Es el "hasta
-          //              qué hora estoy en la sala" → huecos, fin de bloque, "en curso".
-          //   _slotMin = _slotDur + el Q&A. Es lo que OCUPA la sala para el cálculo
-          //              de conflictos, donde quedarse al Q&A tiene que caber.
-          const base=g.reduce((a,f)=>a+parseDur(f.duration),0);
-          const total=base+(g.some(f=>f.has_qa)?30:0);
-          g.forEach(f=>{ f._slotKey=k; f._slotDur=base; f._slotMin=total; });
-        });
-      }
+      if(data.sharedSlotIsOneScreening) sealSharedSlots(exploded); // dueño: domain/film.js (compartido con el oráculo)
       // ── AVISOS: cancelada / reprogramada, SELLADOS en la función ────────────
       // Antes el aviso se resolvía por búsqueda en cada superficie (la ficha, el
       // listado y la card lo buscaban por su cuenta en NOTICES) y el
