@@ -2473,6 +2473,36 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar plan-sync-en-puertas: {_e}')
 
+# ── [plan-write-chokepoint] savedAgenda tiene UN camino de escritura ────────────
+# PR 2 del plan de confiabilidad (31 jul 2026): toda MUTACIÓN del plan pasa por
+# commitPlan (persistence.js), que certifica el resultado con verifyPlan —
+# report-only en prod, duro en tests (__PLAN_STRICT__). Las únicas escrituras
+# directas permitidas son las 2 puertas de HIDRATACIÓN (loader + nube), que
+# normalizan vía syncScheduleWithCatalog. Un escritor nuevo que salte el
+# chokepoint reabre la puerta a planes inválidos sin radar — este check lo veta.
+check = 'plan-write-chokepoint'
+try:
+    import glob as _glob, re as _re
+    # sitio permitido → nº exacto de escrituras directas esperadas
+    _allowed = {'src/controller/persistence.js': 2,  # commitPlan + puerta nube
+                'src/controller/loader.js': 1}       # puerta hydrate local
+    _off = []
+    for _sf in _glob.glob('src/**/*.js', recursive=True):
+        _n = _sf.replace('\\', '/')
+        _c = open(_sf, encoding='utf-8').read()
+        _hits = len(_re.findall(r"state\.(?:set|update)\('savedAgenda'", _c))
+        if _n in _allowed:
+            if _hits != _allowed[_n]:
+                _off.append(f"{_n}: {_hits} escrituras (esperadas {_allowed[_n]})")
+        elif _hits:
+            _off.append(f"{_n}: {_hits} escrituras fuera del chokepoint")
+    if _off:
+        fail(check, 'savedAgenda se escribe fuera de commitPlan: ' + '; '.join(_off))
+    else:
+        ok(check, 'savedAgenda: chokepoint único (commitPlan) + 2 puertas de hidratación')
+except Exception as _e:
+    warn(check, f'no se pudo verificar plan-write-chokepoint: {_e}')
+
 # ── [duracion-solo-dominio] aritmética de duración solo en el dominio ───────────
 # La clase de bug del 31 jul 2026: sitios que calculan un fin de función a mano
 # (parseInt(duration) en el ICS y en _gapSuggestion) ignoraban el anclaje y el
