@@ -347,3 +347,20 @@ test('AF13 — la ficha muestra GRATIS en un festival de ticketing mixto', async
   const pills = await page.evaluate(() => [...document.querySelectorAll('.aviso-pill')].map(e => e.textContent));
   expect(pills.some(p => /gratis|free/i.test(p))).toBe(true);
 });
+
+// AF14 — la banda AVISOS respira igual arriba y abajo, al ritmo de FUNCIÓN
+// Nació con 2px arriba y 12px abajo: el bloque quedaba pegado al encabezado y
+// con el aire caído. La referencia es la fila de función (padding 8px 0) — misma
+// respiración vertical en las dos superficies de la ficha. (Juan, 31 jul 2026)
+test('AF14 — la banda AVISOS usa el ritmo vertical de la fila de función', async ({ page }) => {
+  await enterFestival(page, 'finca2026', FINCA_SIMTIME);
+  await page.evaluate(() => openCortoSheet('Ecocidio', '', '', ''));
+  await page.waitForSelector('#pel-sheet-inner .avisos-body', { timeout: 8000 });
+  const m = await page.evaluate(() => {
+    const cs = s => getComputedStyle(document.querySelector(s));
+    const a = cs('.avisos-body'), f = cs('#pel-sheet-inner .pel-sheet-screening');
+    return { arriba: a.paddingTop, abajo: a.paddingBottom, fila: f.paddingTop };
+  });
+  expect(m.arriba).toBe(m.abajo);   // mismo aire arriba y abajo
+  expect(m.arriba).toBe(m.fila);    // y el mismo que la fila de función
+});

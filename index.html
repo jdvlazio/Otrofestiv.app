@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607310729">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607310729">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607310837">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607310837">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -641,8 +641,12 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
    Grid `max-content 1fr`: la columna de pastillas la define la etiqueta más
    ancha de cada idioma (INSCRIPCIÓN 106px en ES, RSVP REQUIRED 118px en EN) sin
    un solo valor fijo. padding-left 0 → las pastillas caen en el riel de 16px,
-   el mismo del día de la fila y del cuerpo de la sinopsis. (Juan, 30 jul 2026) */
-.avisos-body{display:grid;grid-template-columns:max-content 1fr;column-gap:var(--sp-2);row-gap:var(--sp-2);align-items:baseline;padding:2px var(--sp-4) var(--sp-3) 0}
+   el mismo del día de la fila y del cuerpo de la sinopsis. (Juan, 30 jul 2026)
+   Vertical sp-2/sp-2 = el MISMO ritmo de la fila de función (padding 8px 0): la
+   banda respira igual arriba y abajo. Antes 2px/12px — pegada al encabezado y
+   con el aire caído abajo, que además engordaba el salto entre cabeceras.
+   (Juan, 31 jul 2026) */
+.avisos-body{display:grid;grid-template-columns:max-content 1fr;column-gap:var(--sp-2);row-gap:var(--sp-2);align-items:baseline;padding:var(--sp-2) var(--sp-4) var(--sp-2) 0}
 .aviso-pill{font-size:var(--t-badge);font-weight:var(--w-display);letter-spacing:.5px;text-transform:uppercase;background:var(--amber-12);color:var(--amber);border-radius:var(--r-md);padding:2px 7px;white-space:nowrap;justify-self:start;font-family:var(--font)}
 .aviso-txt{font-size:var(--t-caption);color:var(--white);line-height:1.4}
 /* sev-red = el aviso INVALIDA la función (cancelada / movida). Segundo nivel de la
@@ -3092,7 +3096,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202607310729";
+    s.src="/src/main.js?v=202607310837";
     document.body.appendChild(s);
     // Watchdog de boot (P0 18 jul): si el grafo ESM murió en el import (caché
     // HTTP mixta tras deploys en ráfaga — main.js nuevo + módulo viejo sin el
