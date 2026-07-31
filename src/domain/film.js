@@ -265,3 +265,18 @@ export function sealSharedSlots(films){
   });
   return films;
 }
+
+// _delayKey — clave del retraso reportado de una función (título|día|hora).
+// Vivía en la vista (agenda.js); es identidad de dominio y la usa delayedEndMin.
+export function _delayKey(s){return(s._title||s.title||'')+'|'+(s.day||'')+'|'+(s.time||'');}
+
+// delayedEndMin — el fin de una función CON su retraso reportado (PR 3, 31 jul).
+// El delay se sumaba a mano en 2 sitios de la vista — el residuo real que quedó
+// del intervalo canónico descartado por el tech lead (lo demás ya tenía dueño).
+//   travel === undefined → fin de BLOQUE (+delay): "¿hasta cuándo estoy en la sala?"
+//   travel numérico     → doctrina del Q&A vía durationForTravel (+delay):
+//                         margen real hacia OTRA función.
+export function delayedEndMin(s, travel){
+  const d=(typeof filmDelays!=='undefined'&&filmDelays&&filmDelays[_delayKey(s)])||0;
+  return toMin(s.time)+(travel===undefined?blockDuration(s):durationForTravel(s,travel))+d;
+}

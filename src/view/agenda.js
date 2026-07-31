@@ -26,7 +26,7 @@ import { cloudScreeningKey } from '../domain/delays.js';
 // Es la ÚNICA dependencia view→controller permitida (fijada en validate.py [view-purity]).
 import { getConsensusMap } from '../controller/delays-cloud.js';
 import {
-  screeningPassed, screeningEnded, screeningNow, screeningEndDate, effectiveDuration, blockDuration, durationForTravel,
+  screeningPassed, screeningEnded, screeningNow, screeningEndDate, effectiveDuration, blockDuration, durationForTravel, delayedEndMin, _delayKey,
 } from '../domain/film.js';
 import {
   isScreeningBlocked, screensConflict, screensConflictReason,
@@ -702,7 +702,7 @@ export function renderContextualHeader(state, consensus){
     //   ❌ "Ahora"           — redundante con eyebrow
     //   Todo estado nuevo debe pasar este filtro antes de añadir badge.
     const _nowMin=_festNowMin();
-    const _endMin=toMin(next.time)+blockDuration(next)+(filmDelays[_delayKey(next)]||0);
+    const _endMin=delayedEndMin(next); // fin de bloque + retraso (dueño único)
     const _leftMin=Math.max(0,_endMin-_nowMin);
     // Horas + minutos cuando pasa de 59 min ("En 5 h 35"), minutos pelados por debajo
     // ("En 45 min") — pedir "335 min" obliga a calcular (regla de Juan, 17 jul).
@@ -741,9 +741,8 @@ export function renderContextualHeader(state, consensus){
         const nextFilm=upcoming[0];
         if(nextFilm&&nextFilm.day===next.day){
           const _tv=travelMins(next.venue,nextFilm.venue);
-          // durationForTravel = la doctrina del Q&A (dueño único en domain/film.js)
-          const dur=durationForTravel(next,_tv);
-          const effectiveEndMin=toMin(next.time)+dur+delayMins;
+          // delayedEndMin = doctrina del Q&A + retraso reportado (dueño único)
+          const effectiveEndMin=delayedEndMin(next,_tv);
           const travel=_tv;
           const margin=toMin(nextFilm.time)-(effectiveEndMin+FESTIVAL_BUFFER+travel);
           const{displayTitle:nt}=parseProgramTitle(nextFilm._title||'');
@@ -1595,7 +1594,6 @@ export function getSuggestions(){
   return byDay;
 }
 
-export function _delayKey(s){return(s._title||s.title||'')+'|'+(s.day||'')+'|'+(s.time||'');}
 
 export function _fixStickyOffset(){
   const tb=document.querySelector('.topbar');
