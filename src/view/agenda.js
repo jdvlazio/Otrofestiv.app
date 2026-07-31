@@ -16,7 +16,7 @@ import {
   DAYS, DAY_SHORT_EN, _dayChips, _lblLocalized, _minFmt, _mkCortoItemHtml, _posterThumb, getCortoItemPoster, itemPosterParts, posterParts, dayChip, dayLabel, dayLabelLong, durFmt, emptyState, emptyStateHero, flagFmt, getFilmPoster, isToday, mplanBlockType, mplanEndStr, sala, starsText, travelWarn, vcfg, delayConsensusBadge,
 } from './helpers.js';
 import {
-  _festDate, _festNowMin, festivalEnded, minToStr, parseDur, simNow, simTodayStr, toMin,
+  _festDate, _festNowMin, festivalEnded, minToStr, simNow, simTodayStr, toMin,
 } from '../domain/time.js';
 // Consenso colaborativo de retraso (Fase B): renderAgenda (impura/exenta) lo lee
 // del controller y lo pasa como dato a las funciones puras del view.
@@ -26,7 +26,7 @@ import { cloudScreeningKey } from '../domain/delays.js';
 // Es la ÚNICA dependencia view→controller permitida (fijada en validate.py [view-purity]).
 import { getConsensusMap } from '../controller/delays-cloud.js';
 import {
-  screeningPassed, screeningEnded, screeningNow, effectiveDuration, blockDuration,
+  screeningPassed, screeningEnded, screeningNow, screeningEndDate, effectiveDuration, blockDuration, durationForTravel,
 } from '../domain/film.js';
 import {
   isScreeningBlocked, screensConflict, screensConflictReason,
@@ -465,10 +465,8 @@ export function renderUnconfirmed(state,schedule){
   const now=simNow();
   const past=schedule.filter(s=>{
     if(watched.has(s._title)) return false;
-    const dateStr=FESTIVAL_DATES[s.day];if(!dateStr) return false;
-    const end=_festDate(dateStr,s.time);
-    end.setMinutes(end.getMinutes()+effectiveDuration(s)); // fin canónico (Q&A incluido)
-    return end<now;
+    const end=screeningEndDate(s); // fin canónico único (Q&A incluido)
+    return end&&end<now;
   }).sort((a,b)=>{
     const da=_festDate(FESTIVAL_DATES[a.day],a.time);
     const db=_festDate(FESTIVAL_DATES[b.day],b.time);
@@ -481,8 +479,9 @@ export function renderUnconfirmed(state,schedule){
   const latest=past[0];const older=past.slice(1);
   const{displayTitle}=parseProgramTitle(latest._title||'');
   const short=displayTitle.length>28?displayTitle.slice(0,26)+'…':displayTitle;
-  const endMs=_festDate(FESTIVAL_DATES[latest.day],latest.time).getTime()+blockDuration(latest)*60000;
-  const minsAgo=Math.round((now.getTime()-endMs)/60000);
+  // MISMO fin que el filtro de arriba: antes "terminó hace X" medía desde
+  // blockDuration mientras el filtro usaba effective — dos relojes en una frase.
+  const minsAgo=Math.round((now.getTime()-screeningEndDate(latest).getTime())/60000);
   const timeDesc=minsAgo<120?`${t('plan_termino_hace')} ${minsAgo} min`:`${dayLabel(latest.day)} · ${latest.time}`;
   const safeLast=latest._title.replace(/"/g,'&quot;').replace(/'/g,"&#39;");
   const olderHtml=older.length?`
@@ -742,9 +741,8 @@ export function renderContextualHeader(state, consensus){
         const nextFilm=upcoming[0];
         if(nextFilm&&nextFilm.day===next.day){
           const _tv=travelMins(next.venue,nextFilm.venue);
-          // Con traslado el Q&A cuenta entero (doctrina 30 jul): el margen se mide
-          // desde el fin CON Q&A. En la misma sede, desde el fin de las películas.
-          const dur=_tv>0?effectiveDuration(next):blockDuration(next);
+          // durationForTravel = la doctrina del Q&A (dueño único en domain/film.js)
+          const dur=durationForTravel(next,_tv);
           const effectiveEndMin=toMin(next.time)+dur+delayMins;
           const travel=_tv;
           const margin=toMin(nextFilm.time)-(effectiveEndMin+FESTIVAL_BUFFER+travel);
@@ -1514,7 +1512,7 @@ export function getSuggestions(){
     if(!slotFree) return; // slot ocupado — cae a Bloque 2
     const day=rs.day;
     if(!byDay[day]) byDay[day]=[];
-    byDay[day].push({...rs,gapCtx:'Restaurar al mismo horario',_isRestored:true});
+    byDay[day].push({...rs,_isRestored:true});
     hardExclude.add(rs._title);
     seenDiscover.add(rs._title);
     seenRecovery.add(rs._title);
@@ -1527,24 +1525,24 @@ export function getSuggestions(){
     const slots=[];
     if(dayItems.length===0){
       // Día completamente libre — cubre hasta la 1am
-      slots.push({start:0,end:25*60,ctx:t('plan_dia_libre')});
+      slots.push({start:0,end:25*60});
     } else {
       // Antes de la primera
       if(toMin(dayItems[0].time)>60)
-        slots.push({start:0,end:toMin(dayItems[0].time)-FESTIVAL_BUFFER,ctx:`Antes de ${(dayItems[0]._title||'').split(' ').slice(0,3).join(' ')}…`});
+        slots.push({start:0,end:toMin(dayItems[0].time)-FESTIVAL_BUFFER});
       // Entre funciones — cualquier hueco positivo (el chequeo fStart/fEnd filtra lo imposible)
       for(let i=0;i<dayItems.length-1;i++){
         const a=dayItems[i],b=dayItems[i+1];
         const aEnd=toMin(a.time)+blockDuration(a)+FESTIVAL_BUFFER;
         const bStart=toMin(b.time)-FESTIVAL_BUFFER;
         if(bStart>aEnd)
-          slots.push({start:aEnd,end:bStart,ctx:`Entre ${(a._title||'').split(' ').slice(0,3).join(' ')}… y ${(b._title||'').split(' ').slice(0,3).join(' ')}…`});
+          slots.push({start:aEnd,end:bStart});
       }
       // Después de la última — siempre se crea, extiende hasta la 1am
       // Bug fix: el if(lastEnd<22*60) cortaba noches con película tardía (ej: 20:00+90min=22:10 → sin slot)
       const last=dayItems[dayItems.length-1];
       const lastEnd=toMin(last.time)+blockDuration(last)+FESTIVAL_BUFFER;
-      slots.push({start:lastEnd,end:25*60,ctx:`Después de ${(last._title||'').split(' ').slice(0,3).join(' ')}…`});
+      slots.push({start:lastEnd,end:25*60});
     }
 
     // Bloque 1 — Descubrimiento: películas del festival que quepan en huecos
@@ -1554,6 +1552,8 @@ export function getSuggestions(){
         if(seenDiscover.has(f.title)||screeningPassed(f)||f.day!==day||isScreeningBlocked(f)) return;
         const fStart=toMin(f.time),fEnd=fStart+blockDuration(f);
         // Verificar que hay un slot de tiempo (check rápido)
+        // gapCtx retirado (31 jul 2026): se calculaba un rótulo por slot ("Antes de
+        // X…", en ES hardcodeado) que NINGÚN consumidor renderizaba. Payload muerto.
         const slot=slots.find(sl=>fStart>=sl.start&&fEnd<=sl.end&&fEnd-fStart>=20);
         if(!slot) return;
         // Verificar que no conflictúa con ningún item del plan activo (incluye travel time)
@@ -1561,7 +1561,7 @@ export function getSuggestions(){
         if(noConflict){
           seenDiscover.add(f.title);seenRecovery.add(f.title);
           if(!byDay[day]) byDay[day]=[];
-          byDay[day].push({...f,gapCtx:slot.ctx});
+          byDay[day].push({...f});
         }
       });
     }
@@ -1576,7 +1576,7 @@ export function getSuggestions(){
         if(noConflict){
           seenRecovery.add(f.title);seenDiscover.add(f.title);
           if(!byDay[day]) byDay[day]=[];
-          byDay[day].push({...f,gapCtx:t('misc_sugerencias_wl'),_isFromWL:true});
+          byDay[day].push({...f,_isFromWL:true});
         }
       });
     });
@@ -1658,10 +1658,8 @@ export function _updateMiPlanBadge(){
   const now=simNow();
   const count=savedAgenda.schedule.filter(s=>{
     if(watched.has(s._title)) return false;
-    const dateStr=FESTIVAL_DATES[s.day]; if(!dateStr) return false;
-    const end=_festDate(dateStr,s.time);
-    end.setMinutes(end.getMinutes()+effectiveDuration(s)); // fin canónico (Q&A incluido)
-    return end<now;
+    const end=screeningEndDate(s); // fin canónico único — mismo filtro que renderUnconfirmed
+    return end&&end<now;
   }).length;
   if(count>0){
     badge.textContent=count>9?'9+':String(count);

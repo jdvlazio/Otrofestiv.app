@@ -70,7 +70,9 @@ export function _gapSuggestion(todayDay,gapFromMin,gapToMin,lastDone,next){
     if(savedAgenda.schedule.some(s=>s._title===f.title)) return false;
     if(screeningPassed(f)) return false;
     const fStart=toMin(f.time);
-    const fEnd=fStart+(parseInt(f.duration)||DEFAULT_DURATION_MIN);
+    // blockDuration: una obra anclada OCUPA su función entera (un corto de 5 min
+    // en un bloque de 111 no "cabe" en un hueco de 30). Antes: parseInt(duration).
+    const fEnd=fStart+blockDuration(f);
     if(!(fStart>=gapFromMin&&fEnd<=gapToMin+10)) return false;
     // Viaje desde la anterior y hacia la siguiente (si las hay).
     if(lastDone&&!_reachOK(lastDone.venue,f.venue,fStart-gapFromMin)) return false;

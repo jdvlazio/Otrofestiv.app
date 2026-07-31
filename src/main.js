@@ -447,7 +447,7 @@ FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202607310939';
+const BUILD_VERSION='202607311105';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';
@@ -1326,7 +1326,7 @@ document.addEventListener('click', function(e){
     // para que la suite pueda ejercer su normalización contra el catálogo
     // (syncScheduleWithCatalog) sin montar Supabase. Solo tests.
     _applyCloudRow,
-    _renderProgramaContent, closeAuthSheet, closePelSheet, loadFestival, normTitle,
+    _renderProgramaContent, closeAuthSheet, closePelSheet, exportICS, loadFestival, normTitle,
     openAuthSheet, openPelSheet, openRatingSheet, openCortoSheet, renderAgenda,
     render, saveSavedAgenda, saveState, savePrio, saveWL, saveWatched, searchOpen,
     searchClose, selectSplashFest, dismissSplash, showAgView, showDayView,

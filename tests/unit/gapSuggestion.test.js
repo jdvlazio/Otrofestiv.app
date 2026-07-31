@@ -97,3 +97,20 @@ test('mismo hueco con margen de viaje suficiente → se sugiere', () => {
   const gap = _gapSuggestion('D', 895, 1300, { venue: 'A' }, { venue: 'A', time: '21:40' });
   assert.strictEqual(gap && gap.title, 'CORTOS');
 });
+
+// ── Anclaje (31 jul 2026): la obra OCUPA su función entera ────────────────────
+// Antes fEnd usaba parseInt(f.duration): un corto de 5 min "cabía" en un hueco
+// de 30 aunque su función real (bloque anclado) ocupa 111. blockDuration mide
+// lo que de verdad ocupa la sala.
+test('una obra anclada NO cabe en un hueco menor que su bloque', () => {
+  const corto = { title: 'Corto', day: 'MAR 21', time: '10:00 AM', duration: '5 min', _slotDur: 111, _slotMin: 141 };
+  const { _gapSuggestion } = load({ FILMS: [corto] });
+  // hueco 10:00→10:30 (30 min): la obra suelta cabría, el bloque de 111 NO
+  assert.strictEqual(_gapSuggestion('MAR 21', 600, 630), null);
+});
+
+test('la misma obra anclada SÍ cabe cuando el hueco cubre el bloque', () => {
+  const corto = { title: 'Corto', day: 'MAR 21', time: '10:00 AM', duration: '5 min', _slotDur: 111, _slotMin: 141 };
+  const { _gapSuggestion } = load({ FILMS: [corto] });
+  assert.strictEqual(_gapSuggestion('MAR 21', 600, 600 + 111), corto);
+});

@@ -2473,6 +2473,32 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar plan-sync-en-puertas: {_e}')
 
+# ── [duracion-solo-dominio] aritmética de duración solo en el dominio ───────────
+# La clase de bug del 31 jul 2026: sitios que calculan un fin de función a mano
+# (parseInt(duration) en el ICS y en _gapSuggestion) ignoraban el anclaje y el
+# Q&A — exportaban "18:00→18:05" donde el bloque real termina 19:51. Regla: fuera
+# de src/domain/, nadie parsea `duration` para aritmética — se usa el par
+# blockDuration/effectiveDuration (o durationForTravel). Excepción única:
+# controller/loader.js, el SELLADOR — deriva la duración canónica una vez.
+check = 'duracion-solo-dominio'
+try:
+    import glob as _glob, re as _re
+    _off = []
+    for _sf in _glob.glob('src/**/*.js', recursive=True):
+        _n = _sf.replace('\\', '/')
+        if _n.startswith('src/domain/') or _n.endswith('controller/loader.js'):
+            continue
+        for _i, _ln in enumerate(open(_sf, encoding='utf-8').read().splitlines(), 1):
+            _code = _ln.split('//')[0]
+            if _re.search(r'parseInt\([^)]*duration|parseDur\(', _code):
+                _off.append(f"{_sf}:{_i}")
+    if _off:
+        fail(check, 'aritmética de duración fuera del dominio (usar blockDuration/effectiveDuration/durationForTravel): ' + '; '.join(_off[:6]))
+    else:
+        ok(check, 'toda aritmética de duración pasa por el dominio (única excepción: el sellador)')
+except Exception as _e:
+    warn(check, f'no se pudo verificar duracion-solo-dominio: {_e}')
+
 # ── [template-al-dia] la plantilla de onboarding no se queda atrás ──────────────
 # Causa raíz de la tarea #81: el onboarding de FINCA usó 10 campos de film que la
 # plantilla no enseñaba, y nadie lo notó hasta un mes después. Regla: todo campo

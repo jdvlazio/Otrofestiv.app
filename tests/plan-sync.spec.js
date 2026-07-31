@@ -69,3 +69,26 @@ test('PS02 — el plan que llega de la nube también se normaliza contra el cat�
   expect(r.dur).toBe('12 min');
   expect(r.slotDur).toBe(91);
 });
+
+// PS03 — el calendario exportado dice la verdad del bloque
+// exportICS calculaba DTEND con parseInt(duration)||90: una obra anclada de
+// 5 min exportaba "18:00→18:05" al calendario del teléfono — la mentira de la
+// captura del 31 jul, fugada al ICS. Ahora DTEND sale de blockDuration (19:51).
+test('PS03 — el ICS exporta el fin del BLOQUE para una obra anclada', async ({ page }) => {
+  await enterFestival(page, 'finca2026', '2026-08-13T10:00');
+  const ics = await page.evaluate(async () => {
+    const f = FILMS.find(fi => fi.title === 'Mi casa es su casa' && fi.day === '2026-08-13');
+    state.set('savedAgenda', { scenarioIdx: 0, schedule: [{ ...f, _title: f.title }] });
+    // capturar el blob del download (camino web) sin descargar nada
+    let captured = null;
+    const orig = URL.createObjectURL.bind(URL);
+    URL.createObjectURL = b => { captured = b; return orig(b); };
+    await exportICS();
+    URL.createObjectURL = orig;
+    return captured ? await captured.text() : null;
+  });
+  expect(ics).toContain('BEGIN:VEVENT');
+  // 18:00 -03:00 = 21:00Z; fin del bloque 19:51 -03:00 = 22:51Z (obra suelta diría 21:05Z)
+  expect(ics).toContain('DTSTART:20260813T210000Z');
+  expect(ics).toContain('DTEND:20260813T225100Z');
+});
