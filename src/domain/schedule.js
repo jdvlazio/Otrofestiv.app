@@ -341,3 +341,41 @@ export function syncScheduleWithCatalog(schedule, films){
     return out;
   });
 }
+
+// ── verifyPlan — CERTIFICADOR independiente del plan ──────────────────────────
+// Patrón "certifying algorithms": en vez de confiar en cómo se construyó el
+// plan, se verifica el RESULTADO contra las reglas del dominio. Barato de
+// auditar (lee, no construye) y sirve a dos amos: el oráculo del planeador en
+// CI (falla duro) y el chokepoint de escritura (PR 2: report-only en prod).
+// Fuente de factibilidad: el MISMO screensConflict de producción — si el
+// verificador re-implementara la regla sería una segunda opinión, no un
+// certificado.
+// `_squeezed` se respeta: es una violación DELIBERADA que el usuario aceptó
+// (plan apretado a sabiendas) — certificarla como error sería un falso rojo.
+// Devuelve {ok, violations:[{kind, title, with?}]} — kinds:
+//   'conflicto'  — dos entradas no-squeezed en conflicto real
+//   'cancelada'  — entrada cuya función está _cancelled
+//   'duplicado'  — el mismo título dos veces
+//   'pasada'     — (opt-in checkPassed) función ya pasada al momento de armar
+export function verifyPlan(schedule, opts){
+  const v=[];
+  const list=schedule||[];
+  const seen=new Set();
+  list.forEach(s=>{
+    const t=s._title||s.title||'';
+    // is_recurring (taller multi-día): el plan lleva TODAS sus sesiones a
+    // propósito — mismo título N veces es lo correcto, no un duplicado.
+    if(seen.has(t)&&!s.is_recurring) v.push({kind:'duplicado', title:t});
+    seen.add(t);
+    if(s._cancelled) v.push({kind:'cancelada', title:t});
+    if(opts&&opts.checkPassed&&screeningPassed(s)) v.push({kind:'pasada', title:t});
+  });
+  for(let i=0;i<list.length;i++){
+    for(let j=i+1;j<list.length;j++){
+      const a=list[i], b=list[j];
+      if(a._squeezed||b._squeezed) continue;
+      if(screensConflict(a,b)) v.push({kind:'conflicto', title:a._title||a.title, with:b._title||b.title});
+    }
+  }
+  return {ok:v.length===0, violations:v};
+}

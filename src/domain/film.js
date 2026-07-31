@@ -217,3 +217,51 @@ export function _endedStats(){
   const totalPlanned=savedAgenda&&savedAgenda.schedule?savedAgenda.schedule.length:0;
   return{totalWatched,totalPlanned,pendingRatings};
 }
+
+// ── PREPARACIÓN DE CATÁLOGO (dueño único: loader Y tests) ─────────────────────
+// Estas dos transformaciones vivían inline en loadFestival. El oráculo del
+// planeador (tests/unit/plannerOracle) necesita ejercer el MISMO catálogo que
+// producción — duplicarlas en el test lib habría creado la divergencia que un
+// oráculo existe para impedir. Extraídas como puras; el loader las llama.
+
+// explodeScreenings — screenings[] → un objeto plano por función.
+// Compatibilidad total con el formato plano existente (day/time/venue).
+export function explodeScreenings(films){
+  const exploded=[];
+  (films||[]).forEach(f=>{
+    if(Array.isArray(f.screenings)&&f.screenings.length){
+      const base=Object.assign({},f);
+      delete base.screenings;
+      f.screenings.forEach((s,i)=>{
+        exploded.push(Object.assign({},base,{
+          day:s.day||s.date,date:s.date||s.day,time:s.time,venue:s.venue||'',
+          day_order:s.day_order!==undefined?s.day_order:i,
+          sala:s.sala||'',
+          ...(s.is_free!=null?{is_free:s.is_free}:{}) // por-función (festivales mixed)
+        }));
+      });
+    } else {
+      exploded.push(f);
+    }
+  });
+  return exploded;
+}
+
+// sealSharedSlots — ANCLAJE DE FUNCIÓN (opt-in: root `sharedSlotIsOneScreening`).
+// Muta los films del grupo (mismo día|hora|sede|sala) con _slotKey/_slotDur/_slotMin.
+// La sala queda ocupada por la SUMA de las obras; el Q&A se cuenta UNA vez.
+// Doctrina completa en docs/SCHEMA.md § Proyecciones conjuntas.
+export function sealSharedSlots(films){
+  const _grupos={};
+  films.forEach(f=>{
+    if(f.info||!f.day||!f.time||!f.venue) return;
+    (_grupos[f.day+'|'+f.time+'|'+f.venue+'|'+(f.sala||'')] ||= []).push(f);
+  });
+  Object.entries(_grupos).forEach(([k,g])=>{
+    if(g.length<2) return;
+    const base=g.reduce((a,f)=>a+parseDur(f.duration),0);
+    const total=base+(g.some(f=>f.has_qa)?30:0);
+    g.forEach(f=>{ f._slotKey=k; f._slotDur=base; f._slotMin=total; });
+  });
+  return films;
+}
