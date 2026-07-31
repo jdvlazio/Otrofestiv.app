@@ -2503,6 +2503,34 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar plan-write-chokepoint: {_e}')
 
+# ── [fin-inline-ratchet] la aritmética de fin fuera del dominio no puede CRECER ─
+# PR 3 del plan de confiabilidad (31 jul 2026). El tech lead descartó el rewrite
+# big-bang del intervalo canónico (generalidad especulativa); en su lugar, patrón
+# ratchet de migraciones: los sitios existentes de `toMin(x)+duración` fuera de
+# src/domain/ están auditados (todos usan el dueño correcto) y su CONTEO es un
+# techo — código nuevo debe usar los dueños del dominio (delayedEndMin,
+# screeningEndMin/Date, durationForTravel), no sumar a mano. Si esta cifra sube,
+# el CI exige mover el cálculo al dominio (o, si es legítimo, documentarlo y
+# ajustar el techo A CONCIENCIA en este check).
+check = 'fin-inline-ratchet'
+try:
+    import glob as _glob, re as _re
+    _TECHO = 4  # agenda.js:382,1536,1544 (huecos/slots) + helpers.js:347 (travelWarn)
+    _hits = []
+    for _sf in _glob.glob('src/**/*.js', recursive=True):
+        if _sf.replace('\\', '/').startswith('src/domain/'):
+            continue
+        for _i, _ln in enumerate(open(_sf, encoding='utf-8').read().splitlines(), 1):
+            _code = _ln.split('//')[0]
+            if _re.search(r'toMin\([^)]*\)\s*\+\s*(blockDuration|effectiveDuration|durationForTravel)', _code):
+                _hits.append(f"{_sf}:{_i}")
+    if len(_hits) > _TECHO:
+        fail(check, f'aritmética de fin inline subió a {len(_hits)} (techo {_TECHO}) — usar los dueños del dominio: ' + '; '.join(_hits))
+    else:
+        ok(check, f'aritmética de fin inline: {len(_hits)}/{_TECHO} sitios auditados (ratchet)')
+except Exception as _e:
+    warn(check, f'no se pudo verificar fin-inline-ratchet: {_e}')
+
 # ── [duracion-solo-dominio] aritmética de duración solo en el dominio ───────────
 # La clase de bug del 31 jul 2026: sitios que calculan un fin de función a mano
 # (parseInt(duration) en el ICS y en _gapSuggestion) ignoraban el anclaje y el

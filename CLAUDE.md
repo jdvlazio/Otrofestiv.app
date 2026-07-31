@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `9649d92 test(planner): oraculo exacto + certificador — la optimalidad deja de ser opinion (#493) (#493)`
+> Último commit: `6ceed54 feat(plan): commitPlan — un solo camino de escritura, certificado (#494) (#494)`
 
 ---
 

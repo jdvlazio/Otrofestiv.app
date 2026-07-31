@@ -57,10 +57,13 @@ dominio es el dueño; ninguna vista calcula por su cuenta):
   hora estoy en la sala?») / `effectiveDuration` (bloque + Q&A: «¿cuánto ocupa
   la sala?» — conflictos), con `durationForTravel` como dueño de la doctrina del
   Q&A (compromete solo con traslado) y `screeningEndDate` como fin canónico
-  absoluto («¿ya terminó?»). Consumido por huecos de sugerencias, «termina en
-  X», en-curso, buffer de retrasos, el orden del optimizador y el EXPORT a
-  calendario (ICS + iOS). Guardián: `[duracion-solo-dominio]` — fuera de
-  `src/domain/` nadie parsea `duration` (única excepción: el sellador).
+  absoluto («¿ya terminó?») y `delayedEndMin` (fin + retraso reportado — «termina
+  en X» y el margen hacia la siguiente). Consumido por huecos de sugerencias,
+  «termina en X», en-curso, buffer de retrasos, el orden del optimizador y el
+  EXPORT a calendario (ICS + iOS). Guardianes: `[duracion-solo-dominio]` (fuera
+  de `src/domain/` nadie parsea `duration`; única excepción: el sellador) y
+  `[fin-inline-ratchet]` (la aritmética de fin inline fuera del dominio tiene
+  techo — código nuevo usa los dueños).
 - **Mi Plan** — la lista no mide huecos ni avisa Q&A entre obras del mismo slot;
   el calendario dibuja **un bloque por función** con todas sus obras.
 - **Ficha** — hereda funciones y avisos (banda AVISOS); Q&A contado UNA vez.
