@@ -22,6 +22,7 @@ import { seccionClose } from './overlays.js';
 import { setProgramaView } from './handlers.js';
 import { dayFullyPassed, simTodayStr } from '../domain/time.js';
 import { normTitle, validateFilm } from '../domain/film.js';
+import { syncScheduleWithCatalog } from '../domain/schedule.js';
 import { state } from '../state/state.js';
 import { deriveClear } from '../state/festival-context.js';
 import { storage } from '../storage/storage.js';
@@ -452,6 +453,18 @@ export async function loadFestival(id){
     watched: new Set([...state.get('watched')].filter(t=>_validTitles.has(t))),
     prioritized: new Set([...state.get('prioritized')].filter(t=>_validTitles.has(t))),
   });
+
+  // ► SYNC DEL PLAN CONTRA EL CATÁLOGO ───────────────────────────────
+  // El hydrate de savedAgenda (BATCH 2) corre ANTES de que exista FILMS, así
+  // que trae la copia congelada tal cual se guardó. Acá, con el catálogo ya
+  // sellado (slots + avisos), cada entrada se re-deriva de su función viva:
+  // el plan guarda la ELECCIÓN (título+día+hora), el catálogo manda el resto.
+  // Solo persiste en LOCAL: es una corrección derivada e idempotente — subirla
+  // a la nube crearía ping-pong entre dispositivos que se normalizan solos.
+  if(savedAgenda&&savedAgenda.schedule&&savedAgenda.schedule.length){
+    state.update('savedAgenda', a=>({...a, schedule: syncScheduleWithCatalog(a.schedule, _newFilms)}));
+    storage.setSavedAgenda(state.get('savedAgenda'));
+  }
 
   // Set active day to today
   const _ts=simTodayStr();

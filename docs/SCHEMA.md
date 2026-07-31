@@ -60,6 +60,12 @@ dominio es el dueño; ninguna vista calcula por su cuenta):
 - **Mi Plan** — la lista no mide huecos ni avisa Q&A entre obras del mismo slot;
   el calendario dibuja **un bloque por función** con todas sus obras.
 - **Ficha** — hereda funciones y avisos (banda AVISOS); Q&A contado UNA vez.
+- **Plan guardado** — `syncScheduleWithCatalog` (31 jul 2026): una entrada de
+  `savedAgenda` guarda la ELECCIÓN (título+día+hora); todo lo demás se re-deriva
+  de la función viva en cada hidratación (loader y nube). Un plan guardado antes
+  de un cambio de catálogo nunca vuelve a mentir. Sin match exacto la entrada
+  queda intacta — territorio del camino de avisos. Guardián:
+  `[plan-sync-en-puertas]`.
 
 ### `sharedSlotIsOneScreening` — anclaje de función (opt-in, 29 jul 2026)
 

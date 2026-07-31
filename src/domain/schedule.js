@@ -315,3 +315,29 @@ export function computeScenarios(titles){
     };
   });
 }
+
+// ── syncScheduleWithCatalog — el plan guarda la ELECCIÓN, el catálogo manda el resto ──
+// Una entrada de savedAgenda es una copia congelada de la función al momento de
+// elegirla. Si el catálogo cambia después (corrección de duración, anclaje de
+// función nuevo, Q&A agregado), la copia miente — y de ella leen Mi Plan, los
+// conflictos, el ICS, las notificaciones y Compartir. Bug real: plan de FINCA
+// guardado antes del anclaje mostraba "18:05" de fin y "~115 min" de Q&A donde
+// el catálogo vivo dice "19:51" y "~9 min" (31 jul 2026).
+// Contrato:
+//   - La identidad de la elección es título+día+hora EXACTOS. Con match, la
+//     entrada se reemplaza por la función viva; solo sobreviven los campos
+//     propios de la entrada (_title, _squeezed).
+//   - Sin match, la entrada queda INTACTA: es el caso reprogramada/cancelada
+//     que el camino de avisos marca con badge y salida. Nada se corrige ni se
+//     borra en silencio.
+//   - Idempotente: correrla dos veces = una vez (deriva todo del catálogo).
+export function syncScheduleWithCatalog(schedule, films){
+  if(!schedule||!schedule.length) return schedule;
+  return schedule.map(e=>{
+    const live=(films||[]).find(f=>f.title===e._title&&f.day===e.day&&f.time===e.time);
+    if(!live) return e;
+    const out={...live,_title:e._title};
+    if(e._squeezed) out._squeezed=e._squeezed;
+    return out;
+  });
+}

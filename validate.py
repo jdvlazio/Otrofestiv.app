@@ -2447,6 +2447,32 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar screening-row-single-owner: {_e}')
 
+# ── [plan-sync-en-puertas] el plan hidratado se re-deriva del catálogo ──────────
+# Una entrada de savedAgenda es una copia congelada de la función al elegirla.
+# Bug real (31 jul 2026, FINCA): plan guardado antes del anclaje mostraba fines y
+# aviso de Q&A calculados sobre la copia vieja. Regla: TODA puerta por donde un
+# plan persistido entra al estado vivo (hydrate del loader, _applyCloudRow de la
+# nube) debe pasar por syncScheduleWithCatalog. Si alguien abre una puerta nueva
+# que hidrate savedAgenda desde fuera (storage/nube), tiene que sumarla acá y
+# llamar al sync — este check lo recuerda.
+check = 'plan-sync-en-puertas'
+try:
+    _puertas = {
+        'src/controller/loader.js': 'loadState(',        # hydrate local (BATCH 2)
+        'src/controller/persistence.js': 'deriveCloudApply(',  # plan desde la nube
+    }
+    _sin = []
+    for _pf, _marca in _puertas.items():
+        _c = open(_pf, encoding='utf-8').read()
+        if _marca in _c and 'syncScheduleWithCatalog(' not in _c:
+            _sin.append(_pf)
+    if _sin:
+        fail(check, 'puerta de hidratación del plan sin sync contra el catálogo: ' + '; '.join(_sin))
+    else:
+        ok(check, 'las 2 puertas del plan (loader + nube) re-derivan contra el catálogo')
+except Exception as _e:
+    warn(check, f'no se pudo verificar plan-sync-en-puertas: {_e}')
+
 # ── [template-al-dia] la plantilla de onboarding no se queda atrás ──────────────
 # Causa raíz de la tarea #81: el onboarding de FINCA usó 10 campos de film que la
 # plantilla no enseñaba, y nadie lo notó hasta un mes después. Regla: todo campo

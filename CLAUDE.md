@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `263b05a test(avisos): el camino del aviso deja de depender de mi palabra (#489) (#489)`
+> Último commit: `81695fb fix(design): la banda AVISOS respira igual arriba y abajo (#490) (#490)`
 
 ---
 
