@@ -8,7 +8,7 @@
 
 import { FESTIVAL_CONFIG } from '../config.js';
 import { _festDate } from '../domain/time.js';
-import { syncScheduleWithCatalog } from '../domain/schedule.js';
+import { syncScheduleWithCatalog, verifyPlan } from '../domain/schedule.js';
 import { report } from '../telemetry.js';
 import { FESTIVAL_STATE, deriveHydrate, deriveCloudSave, deriveCloudApply, deriveCloudMerge } from '../state/festival-context.js';
 import { closeAuthSheet } from '../view/sheets.js';
@@ -39,6 +39,30 @@ export function saveRating(title,rating){
 }
 
 export function saveAV(){ storage.setAvailability(availability); _cloudSave('availability'); }
+
+// ── commitPlan — CHOKEPOINT de escritura del plan (PR 2, 31 jul 2026) ─────────
+// TODA mutación de savedAgenda pasa por acá (guardián [plan-write-chokepoint]);
+// las únicas escrituras directas permitidas son las 2 puertas de HIDRATACIÓN
+// (loader + nube), que normalizan vía syncScheduleWithCatalog.
+// El resultado se certifica con verifyPlan (el mismo del oráculo del planeador):
+//   - en producción REPORTA y deja pasar (telemetría Sentry) — un plan raro no
+//     puede brickear al usuario; el dato manda y el radar avisa.
+//   - en tests (globalThis.__PLAN_STRICT__) TIRA — un flujo que produce un plan
+//     inválido es un bug y el CI lo tiene que ver.
+// `mutate` recibe el plan actual (puede ser null) y devuelve el siguiente
+// (o null para "sin plan"). La persistencia sigue siendo del caller
+// (saveSavedAgenda) — algunos flujos agrupan varias mutaciones por transacción.
+export function commitPlan(mutate){
+  const next=mutate(state.get('savedAgenda'));
+  const cert=verifyPlan((next&&next.schedule)||[]);
+  if(!cert.ok){
+    const msg='commitPlan: plan inválido: '+cert.violations.map(v=>v.kind+':'+(v.title||'')).join(' · ');
+    if(globalThis.__PLAN_STRICT__) throw new Error(msg);
+    report(new Error(msg), 'commitPlan');
+  }
+  state.set('savedAgenda', next);
+  return next;
+}
 
 export function saveSavedAgenda(){ storage.setSavedAgenda(savedAgenda); _cloudSave('savedAgenda'); _scheduleNotifications(); }
 

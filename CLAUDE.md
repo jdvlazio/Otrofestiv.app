@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `0c8dc0d fix(domain): los bordes de Planear/Mi Plan dejan de calcular duracion a mano (#492) (#492)`
+> Último commit: `9649d92 test(planner): oraculo exacto + certificador — la optimalidad deja de ser opinion (#493) (#493)`
 
 ---
 

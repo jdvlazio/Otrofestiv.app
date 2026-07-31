@@ -12,7 +12,7 @@ import { showActionModal, showToast } from '../view/feedback.js';
 import { _renderProgramaContent, lugarClose, render, renderNoticesBanner, _noticeKey } from '../view/programa.js';
 import { renderAgenda, updateCardState, updateHorarioPrioBtn } from '../view/agenda.js';
 import { runCalc } from './calc.js';
-import { saveDelays, saveLastSlot, savePrio, saveSavedAgenda, saveState, saveWL, saveWatched } from './persistence.js';
+import { commitPlan, saveDelays, saveLastSlot, savePrio, saveSavedAgenda, saveState, saveWL, saveWatched } from './persistence.js';
 import { cloudReportDelay, cloudClearDelay, cloudScreeningKey } from './delays-cloud.js';
 import { _getProgramaPhase, _reRenderIntereses, _updateProgramaActiveFilter, initProgramaModeBar, showAgView, showDayView, switchMainNav, updateAgTab, _markPreserveResult } from './pipeline.js';
 import { searchClose, seccionClose } from './overlays.js';
@@ -75,8 +75,7 @@ export function toggleWL(title,e){
         t('plan_quitar_confirm'),()=>{
           // Modal callback variant — transaction agrupa las 3 mutaciones (p7d)
           state.transaction(() => {
-            state.update('savedAgenda', a => ({...a, schedule: a.schedule.filter(s=>!_todas.includes(s._title))}));
-            if(!savedAgenda.schedule.length)state.set('savedAgenda', null);
+            commitPlan(a=>{const sch=a.schedule.filter(s=>!_todas.includes(s._title));return sch.length?{...a,schedule:sch}:null;});
             state.batchUpdate(_quitarTodas(watchlist, watched, prioritized));
           });
           saveSavedAgenda();
@@ -252,8 +251,7 @@ function _dropFromPlan(title){
   if(!savedAgenda) return;
   const rem=savedAgenda.schedule.find(s=>s._title===title);
   if(rem){state.update('lastRemovedSlots', arr => [{...rem,_isRestored:true}, ...arr.filter(r=>r._title!==rem._title)].slice(0,MAX_REMEMBERED_SLOTS));saveLastSlot();}
-  state.update('savedAgenda', a => ({...a, schedule: a.schedule.filter(s=>s._title!==title)}));
-  if(!savedAgenda.schedule.length)state.set('savedAgenda', null);
+  commitPlan(a=>{const sch=a.schedule.filter(s=>s._title!==title);return sch.length?{...a,schedule:sch}:null;});
   saveSavedAgenda();
   // CTA B: mostrar aviso contextual post-eliminación
   _ctaRemovedVisible=true;
@@ -308,9 +306,7 @@ export function addSuggestion(title,day,time){
   // 3. MUTATE (step 2): Add specific screening to saved agenda
   const screen=FILMS.find(f=>f.title===title&&f.day===day&&f.time===time);
   if(screen){
-    if(!savedAgenda) state.set('savedAgenda', {schedule:[]});
-    // Avoid duplicates (re-read state porque pudo haber sido seteado arriba)
-    const sa=state.get('savedAgenda');
+    const sa=state.get('savedAgenda')||{schedule:[]};
     // Mitad B (pin-funcion): add / swap / no-op. El sheet de película usa esta
     // misma acción para "Añadir esta función". Si el título ya está en OTRA
     // función → swap; si ya está en ESA misma → sin acción (cae al render final).
@@ -329,11 +325,10 @@ export function addSuggestion(title,day,time){
       }
       // filter(s._title!==title): no-opea en add (título ausente), quita la
       // función vieja en swap (título presente en otra función).
-      state.update('savedAgenda', a => ({
-        ...a,
-        schedule: [...a.schedule.filter(s=>s._title!==title), {...screen,_title:title}]
+      commitPlan(a=>{const b=a||{schedule:[]};return {...b,
+        schedule: [...b.schedule.filter(s=>s._title!==title), {...screen,_title:title}]
           .sort((x,y)=>x.day_order!==y.day_order?x.day_order-y.day_order:toMin(x.time)-toMin(y.time))
-      }));
+      };});
       saveSavedAgenda();
       // 5. UI EFFECT: toast informativo con día y hora
       const{displayTitle:dt}=parseProgramTitle(title);
@@ -534,13 +529,11 @@ export function confirmReplace(removedTitle,newTitle,day,time,isScenario){
       } else {
         // Mi Plan (saved): comportamiento histórico — escribe a savedAgenda.
         if(removedTitle) _removePlanItem(removedTitle);
-        if(!savedAgenda) state.set('savedAgenda', {schedule:[]});
         if(!watchlist.has(newTitle)){state.update('watchlist', s=>state._addToSet(s,newTitle));saveWL();}
-        state.update('savedAgenda', a => ({
-          ...a,
-          schedule: [...a.schedule.filter(s=>s._title!==newTitle), {...screen,_title:newTitle}]
+        commitPlan(a=>{const b=a||{schedule:[]};return {...b,
+          schedule: [...b.schedule.filter(s=>s._title!==newTitle), {...screen,_title:newTitle}]
             .sort((x,y)=>DAY_KEYS.indexOf(x.day)-DAY_KEYS.indexOf(y.day)||toMin(x.time)-toMin(y.time))
-        }));
+        };});
         saveSavedAgenda();
       }
       _expandedFilm='';
@@ -826,7 +819,7 @@ export function saveCurrentScenario(){
     const _key=s=>`${s._title}|${s.day}|${s.time}`;
     const _fresh=new Set(_squeezed.map(_key));
     const _merged=[..._past.filter(s=>!_fresh.has(_key(s))),..._squeezed];
-    state.set('savedAgenda', {schedule:_merged});
+    commitPlan(()=>({schedule:_merged}));
     saveSavedAgenda();
     openPlanConfirm(_merged);
   };

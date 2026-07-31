@@ -64,6 +64,12 @@ dominio es el dueño; ninguna vista calcula por su cuenta):
 - **Mi Plan** — la lista no mide huecos ni avisa Q&A entre obras del mismo slot;
   el calendario dibuja **un bloque por función** con todas sus obras.
 - **Ficha** — hereda funciones y avisos (banda AVISOS); Q&A contado UNA vez.
+- **Escritura del plan** — `commitPlan` (persistence.js) es el ÚNICO camino de
+  mutación de `savedAgenda`; certifica cada escritura con `verifyPlan` (el
+  mismo certificador del oráculo del planeador) — report-only en producción,
+  duro en tests (`__PLAN_STRICT__`). Las 2 puertas de hidratación (loader +
+  nube) normalizan vía `syncScheduleWithCatalog`. Guardián:
+  `[plan-write-chokepoint]`.
 - **Plan guardado** — `syncScheduleWithCatalog` (31 jul 2026): una entrada de
   `savedAgenda` guarda la ELECCIÓN (título+día+hora); todo lo demás se re-deriva
   de la función viva en cada hidratación (loader y nube). Un plan guardado antes

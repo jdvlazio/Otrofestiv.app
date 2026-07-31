@@ -13,7 +13,7 @@ import { closeAvSheet, closePVRating, closePrioLimit } from '../view/sheets.js';
 import { showConflictModal, showToast } from '../view/feedback.js';
 import { renderAgenda, renderAvBlocks, renderDiaryHTML } from '../view/agenda.js';
 import { runCalc } from './calc.js';
-import { saveAV, saveLastSlot, saveRating, saveSavedAgenda } from './persistence.js';
+import { commitPlan, saveAV, saveLastSlot, saveRating, saveSavedAgenda } from './persistence.js';
 import { _reRenderIntereses, showAgView, switchMainNav, updateAgTab } from './pipeline.js';
 import { dayFullyPassed, festivalEnded, parseDur, toMin } from '../domain/time.js';
 import { screeningPassed, effectiveDuration, blockDuration } from '../domain/film.js';
@@ -732,13 +732,12 @@ export function confirmConflictReplace(){
   if(!_conflictPending) return;
   const{incomingTitle, incomingScreen, existingEntry}=_conflictPending;
   // 3. MUTATE — quitar la existente e insertar la nueva
-  state.update('savedAgenda', a => ({
-    ...a,
+  commitPlan(a=>{const b=a||{schedule:[]};return {...b,
     schedule: [
-      ...a.schedule.filter(s=>!(s._title===existingEntry._title&&s.day===existingEntry.day&&s.time===existingEntry.time)),
+      ...b.schedule.filter(s=>!(s._title===existingEntry._title&&s.day===existingEntry.day&&s.time===existingEntry.time)),
       {...incomingScreen,_title:incomingTitle}
     ].sort((x,y)=>x.day_order!==y.day_order?x.day_order-y.day_order:toMin(x.time)-toMin(y.time))
-  }));
+  };});
   // 4. PERSIST + 5. RENDER + UI EFFECTS
   saveSavedAgenda();
   const{displayTitle:dt}=parseProgramTitle(incomingTitle);
@@ -1450,8 +1449,7 @@ export function _removePlanItem(title){
     state.update('lastRemovedSlots', arr => [{...removed,_isRestored:true}, ...arr.filter(r=>r._title!==removed._title)].slice(0,MAX_REMEMBERED_SLOTS));
     saveLastSlot();
   }
-  state.update('savedAgenda', a => ({...a, schedule: a.schedule.filter(s=>s._title!==title)}));
-  if(!savedAgenda.schedule.length) state.set('savedAgenda', null);
+  commitPlan(a=>{const sch=a.schedule.filter(s=>s._title!==title);return sch.length?{...a,schedule:sch}:null;});
   saveSavedAgenda();
 }
 

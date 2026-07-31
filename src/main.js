@@ -98,7 +98,7 @@ import { runCalc } from './controller/calc.js';
 
 // ── Step 7b: controller/persistence.js — saves + cloud sync + Supabase auth. ──
 import {
-  saveWL, saveWatched, saveRating, saveAV, saveSavedAgenda, savePrio, saveLastSlot, saveDelays, saveState, loadState, _cloudLoad, _cloudSave, _sbUpdateUI, submitAuthEmail, submitOTP, deleteAccount, signOutAndClose, setPlanRerender, _applyCloudRow,
+  saveWL, saveWatched, saveRating, saveAV, saveSavedAgenda, savePrio, saveLastSlot, saveDelays, saveState, loadState, _cloudLoad, _cloudSave, _sbUpdateUI, submitAuthEmail, submitOTP, deleteAccount, signOutAndClose, setPlanRerender, _applyCloudRow, commitPlan,
 } from './controller/persistence.js';
 
 // ── Step 7c: controller/pipeline.js — render dispatchers. ────────────────────
@@ -447,7 +447,7 @@ FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202607311137';
+const BUILD_VERSION='202607311239';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';
@@ -1326,12 +1326,15 @@ document.addEventListener('click', function(e){
     // para que la suite pueda ejercer su normalización contra el catálogo
     // (syncScheduleWithCatalog) sin montar Supabase. Solo tests.
     _applyCloudRow,
+    // commitPlan: el chokepoint de escritura del plan — expuesto para que la
+    // suite pruebe strict-mode (__PLAN_STRICT__) sin montar un flujo entero.
+    commitPlan,
     _renderProgramaContent, closeAuthSheet, closePelSheet, exportICS, loadFestival, normTitle,
     openAuthSheet, openPelSheet, openRatingSheet, openCortoSheet, renderAgenda,
     render, saveSavedAgenda, saveState, savePrio, saveWL, saveWatched, searchOpen,
     searchClose, selectSplashFest, dismissSplash, showAgView, showDayView,
     simNow, simTodayStr, switchMainNav, runCalc, _getFestivalPhase,
-    toggleWL, togglePriority, addBlock,
+    toggleWL, togglePriority, addBlock, addSuggestion,
     setProgramaView, openConflictSheet, deleteAccount,
   });
 })();
