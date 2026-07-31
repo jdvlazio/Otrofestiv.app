@@ -447,7 +447,7 @@ FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202607301439';
+const BUILD_VERSION='202607310729';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';
@@ -1316,6 +1316,12 @@ document.addEventListener('click', function(e){
     _posterErr, _cortoSheetPosterErr, _edPosterErr,
     searchQuery, submitAuthEmail, submitOTP,
     // (b) page.evaluate — tests
+    // NOTICES: CONFIG, no estado — no va al roster de state (rompería la frontera
+    // que vigila [state-mirror], igual que FESTIVAL_CONFIG/VENUES). Se expone acá
+    // para que la suite pueda INYECTAR un aviso y ejercer el camino REAL:
+    // NOTICES.push(...) → limpiar cfg.films → loadFestival() → el sellado del
+    // loader. Era la única ruta crítica sin test: se verificaba a mano.
+    NOTICES,
     _renderProgramaContent, closeAuthSheet, closePelSheet, loadFestival, normTitle,
     openAuthSheet, openPelSheet, openRatingSheet, openCortoSheet, renderAgenda,
     render, saveSavedAgenda, saveState, savePrio, saveWL, saveWatched, searchOpen,

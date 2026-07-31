@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `3dd56a1 fix(domain): el Q&A no bloquea en la misma sede — advierte (#487)`
+> Último commit: `726e210 fix(domain): barrido de la doctrina del Q&A — 4 sitios mas alineados (#488)`
 
 ---
 
