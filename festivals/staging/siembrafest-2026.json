@@ -1,0 +1,1913 @@
+{
+  "_etapa": "A-catalogo (SIN funciones — no publicar)",
+  "_provenance": {
+    "fuente": "Página única de la Selección Oficial (https://siembrafest.com/seleccion-sf-2026/), server-rendered, capturada 2026-08-02. El festival anuncia 86 producciones.",
+    "verificacion": "Parseo estructural h3/ul/li del HTML crudo; conteo contra el anuncio oficial; secciones = curaduría del festival tal cual (aprobado por Juan 2 ago)."
+  },
+  "sections": {
+    "Mujeres que sostienen la vida": {
+      "oficial": "Mujeres que sostienen la vida",
+      "en": "",
+      "archetype": "",
+      "color": "",
+      "order": 1
+    },
+    "Amores & Desamores": {
+      "oficial": "Amores & Desamores",
+      "en": "",
+      "archetype": "",
+      "color": "",
+      "order": 2
+    },
+    "Cinema Patatús": {
+      "oficial": "Cinema Patatús",
+      "en": "",
+      "archetype": "",
+      "color": "",
+      "order": 3
+    },
+    "Muertos de Risa": {
+      "oficial": "Muertos de Risa",
+      "en": "",
+      "archetype": "",
+      "color": "",
+      "order": 4
+    },
+    "Buenos, Malos y Feos": {
+      "oficial": "Buenos, Malos y Feos",
+      "en": "",
+      "archetype": "",
+      "color": "",
+      "order": 5
+    },
+    "Ojo Pelao": {
+      "oficial": "Ojo Pelao",
+      "en": "",
+      "archetype": "",
+      "color": "",
+      "order": 6
+    },
+    "Sabores en Escena": {
+      "oficial": "Sabores en Escena",
+      "en": "",
+      "archetype": "",
+      "color": "",
+      "order": 7
+    },
+    "Estampas": {
+      "oficial": "Estampas",
+      "en": "",
+      "archetype": "",
+      "color": "",
+      "order": 8
+    },
+    "Así es Cundinamarca": {
+      "oficial": "Así es Cundinamarca",
+      "en": "",
+      "archetype": "",
+      "color": "",
+      "order": 9
+    }
+  },
+  "films": [
+    {
+      "title": "En su sombra fértil",
+      "director": "Andrés Dávila",
+      "year": "2025",
+      "duration": "11 min",
+      "country": "Colombia",
+      "section": "Mujeres que sostienen la vida",
+      "genre": "Documental / Experimental",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "lbSlug": "",
+      "_src": {
+        "url": "https://siembrafest.com/seleccion-sf-2026/",
+        "date": "2026-08-02",
+        "ficha_raw": "2025 | 11' | Documental / Experimental",
+        "formato": "Documental / Experimental",
+        "produccion": "Andrés Dávila"
+      }
+    },
+    {
+      "title": "La gallina Saraviada",
+      "director": "Ingrid Paola Bonilla Rodríguez",
+      "year": "2025",
+      "duration": "11 min",
+      "country": "Colombia",
+      "section": "Mujeres que sostienen la vida",
+      "genre": "Ficción",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "lbSlug": "",
+      "_src": {
+        "url": "https://siembrafest.com/seleccion-sf-2026/",
+        "date": "2026-08-02",
+        "ficha_raw": "2025 | 11' | Ficción",
+        "formato": "Ficción",
+        "produccion": "Nicolás Manuel Galfrascoli"
+      }
+    },
+    {
+      "title": "Victorias y Glorias – Relatos de campeonas",
+      "director": "Luber Yesid Zúñiga Ordóñez",
+      "year": "2025",
+      "duration": "11 min",
+      "country": "Colombia",
+      "section": "Mujeres que sostienen la vida",
+      "genre": "Documental",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "lbSlug": "",
+      "_src": {
+        "url": "https://siembrafest.com/seleccion-sf-2026/",
+        "date": "2026-08-02",
+        "ficha_raw": "2025 | 11' | Documental",
+        "formato": "Documental",
+        "produccion": "Jorge Yesidt Vela Forigua"
+      }
+    },
+    {
+      "title": "Paramunas: El alma de la montaña",
+      "director": "Alejandro Calderón",
+      "year": "2024",
+      "duration": "17 min",
+      "country": "Colombia",
+      "section": "Mujeres que sostienen la vida",
+      "genre": "enviromental",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "lbSlug": "",
+      "_src": {
+        "url": "https://siembrafest.com/seleccion-sf-2026/",
+        "date": "2026-08-02",
+        "ficha_raw": "2024 | 17' | Documental – enviromental",
+        "formato": "Documental",
+        "produccion": "Natalia Cano"
+      }
+    },
+    {
+      "title": "La tinaja",
+      "director": "Ernestina Miranda, Mar Ajé",
+      "year": "2025",
+      "duration": "14 min",
+      "country": "Colombia",
+      "section": "Mujeres que sostienen la vida",
+      "genre": "Experimental",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "lbSlug": "",
+      "_src": {
+        "url": "https://siembrafest.com/seleccion-sf-2026/",
+        "date": "2026-08-02",
+        "ficha_raw": "2025 | 14' | Experimental",
+        "formato": "Experimental",
+        "produccion": "Madre Monte"
+      }
+    },
+    {
+      "title": "Cayenas libertarias",
+      "director": "Javier Camilo Aranguren",
+      "year": "2025",
+      "duration": "20 min",
+      "country": "Colombia",
+      "section": "Mujeres que sostienen la vida",
+      "genre": "Documental",
+      "synopsis": "En las llanuras de Colombia, un grupo de mujeres conserva y reinterpreta los lecos, o cantos de trabajo del llano, que durante generaciones fueron interpretados por hombres. A través de sus cantos de vaquería, resignifican su lugar en la tradición llanera, revelando su relación armónica con la naturaleza y su compleja conexión con el arraigo llanero.",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "lbSlug": "cayenas-libertarias",
+      "_src": {
+        "url": "https://siembrafest.com/seleccion-sf-2026/",
+        "date": "2026-08-02",
+        "ficha_raw": "2025 | 20' | Documental",
+        "formato": "Documental",
+        "produccion": "Javier Camilo Aranguren"
+      },
+      "_inherited": {
+        "synopsis": "ficdeh-2026",
+        "lbSlug": "ficdeh-2026"
+      }
+    },
+    {
+      "title": "La grandiosa",
+      "director": "Viviana Reinoso",
+      "year": "2026",
+      "duration": "13 min",
+      "country": "Colombia",
+      "section": "Mujeres que sostienen la vida",
+      "genre": "Documental",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "lbSlug": "",
+      "_src": {
+        "url": "https://siembrafest.com/seleccion-sf-2026/",
+        "date": "2026-08-02",
+        "ficha_raw": "2026 | 13' | Documental",
+        "formato": "Documental",
+        "produccion": "Viviana Reinoso"
+      }
+    },
+    {
+      "title": "Pasta negra",
+      "director": "Jorge Thielen Armand",
+      "year": "2025",
+      "duration": "14 min",
+      "country": "Colombia",
+      "section": "Mujeres que sostienen la vida",
+      "genre": "DRAMA",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "lbSlug": "",
+      "_src": {
+        "url": "https://siembrafest.com/seleccion-sf-2026/",
+        "date": "2026-08-02",
+        "ficha_raw": "2025 | 14' | Ficción – DRAMA",
+        "formato": "Ficción",
+        "produccion": "Jorge Thielen Armand; Stefano Centini; Felipe Guerrero; Rodrigo Michelangeli"
+      }
+    },
+    {
+      "title": "Carlina",
+      "director": "Ángela María Leiton",
+      "year": "2026",
+      "duration": "14 min",
+      "country": "Colombia",
+      "section": "Amores & Desamores",
+      "genre": "Ficción",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "lbSlug": "",
+      "_src": {
+        "url": "https://siembrafest.com/seleccion-sf-2026/",
+        "date": "2026-08-02",
+        "ficha_raw": "2026 | 14' | Ficción",
+        "formato": "Ficción",
+        "produccion": "María Paula Hernández"
+      }
+    },
+    {
+      "title": "Carola",
+      "director": "Violeta Barrios Ramírez",
+      "year": "2025",
+      "duration": "11 min",
+      "country": "Colombia",
+      "section": "Amores & Desamores",
+      "genre": "Ficción",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "lbSlug": "",
+      "_src": {
+        "url": "https://siembrafest.com/seleccion-sf-2026/",
+        "date": "2026-08-02",
+        "ficha_raw": "2025 | 11' | Ficción",
+        "formato": "Ficción",
+        "produccion": "Simon Ramírez"
+      }
+    },
+    {
+      "title": "Corazón Galvánico",
+      "director": "Valentina Valencia",
+      "year": "2024",
+      "duration": "11 min",
+      "country": "Colombia",
+      "section": "Amores & Desamores",
+      "genre": "Cyberpunk, coming of age",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "lbSlug": "",
+      "_src": {
+        "url": "https://siembrafest.com/seleccion-sf-2026/",
+        "date": "2026-08-02",
+        "ficha_raw": "2024 | 11' | Animación / Experimental – Cyberpunk, coming of age",
+        "formato": "Animación / Experimental",
+        "produccion": "Yesid Moreno Ardila; Mariana Lamos Upegui; Laura González Franco"
+      }
+    },
+    {
+      "title": "Orígenes",
+      "director": "Daniel Rodríguez Gaitán",
+      "year": "2024",
+      "duration": "7 min",
+      "country": "Colombia",
+      "section": "Amores & Desamores",
+      "genre": "Drama",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "lbSlug": "",
+      "_src": {
+        "url": "https://siembrafest.com/seleccion-sf-2026/",
+        "date": "2026-08-02",
+        "ficha_raw": "2024 | 7' | Documental – Drama",
+        "formato": "Documental",
+        "produccion": "Daniel Rodríguez Gaitán; Cinegamos Corporación Cultural Audiovisual"
+      }
+    },
+    {
+      "title": "Take it off",
+      "director": "Sergio Tovar Uribe",
+      "year": "2025",
+      "duration": "10 min",
+      "country": "Colombia",
+      "section": "Amores & Desamores",
+      "genre": "Drama, Fantasy, Romance",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "lbSlug": "",
+      "_src": {
+        "url": "https://siembrafest.com/seleccion-sf-2026/",
+        "date": "2026-08-02",
+        "ficha_raw": "2025 | 10' | Ficción – Drama, Fantasy, Romance",
+        "formato": "Ficción",
+        "produccion": "Vanessa La"
+      }
+    },
+    {
+      "title": "El mejor chocolate del mundo",
+      "director": "John Agudelo",
+      "year": "2026",
+      "duration": "17 min",
+      "country": "Colombia",
+      "section": "Amores & Desamores",
+      "genre": "Romance, social",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "lbSlug": "",
+      "_src": {
+        "url": "https://siembrafest.com/seleccion-sf-2026/",
+        "date": "2026-08-02",
+        "ficha_raw": "2026 | 17' | Ficción – Romance, social",
+        "formato": "Ficción",
+        "produccion": "Johanna Quintero"
+      }
+    },
+    {
+      "title": "Valentino y la calavera",
+      "director": "Ivan Sierra",
+      "year": "2025",
+      "duration": "7 min",
+      "country": "Colombia",
+      "section": "Amores & Desamores",
+      "genre": "Animación",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "lbSlug": "",
+      "_src": {
+        "url": "https://siembrafest.com/seleccion-sf-2026/",
+        "date": "2026-08-02",
+        "ficha_raw": "2025 | 7' | Animación",
+        "formato": "Animación",
+        "produccion": "Linda Marín"
+      }
+    },
+    {
+      "title": "Tres gatos parias",
+      "director": "Ivan Sierra",
+      "year": "2025",
+      "duration": "7 min",
+      "country": "Colombia",
+      "section": "Amores & Desamores",
+      "genre": "Animación",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "lbSlug": "",
+      "_src": {
+        "url": "https://siembrafest.com/seleccion-sf-2026/",
+        "date": "2026-08-02",
+        "ficha_raw": "2025 | 7' | Animación",
+        "formato": "Animación",
+        "produccion": "Linda Marín"
+      }
+    },
+    {
+      "title": "Desarraigo",
+      "director": "Nicolas Patiño Hortua, Andrés Santiago Cely Orjuela",
+      "year": "2026",
+      "duration": "15 min",
+      "country": "Colombia",
+      "section": "Amores & Desamores",
+      "genre": "Drama, Autor",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "lbSlug": "",
+      "_src": {
+        "url": "https://siembrafest.com/seleccion-sf-2026/",
+        "date": "2026-08-02",
+        "ficha_raw": "2026 | 15' | Ficción – Drama, Autor",
+        "formato": "Ficción",
+        "produccion": "Juan Diego Alvarado Moya; Nicolás Patiño Hortua; Andrés Santiago Cely Orjuela; Juan Fernando Vargas; Jacobo Lennis Hernández; Martín Santiago Rodríguez Meneses; Camilo Andrés Barragan"
+      }
+    },
+    {
+      "title": "La independencia",
+      "director": "John Agudelo",
+      "year": "2024",
+      "duration": "20 min",
+      "country": "Colombia",
+      "section": "Amores & Desamores",
+      "genre": "Ficción",
+      "synopsis": "Cecilia, una mujer abnegada de 52 años, decide romper con su vida de sacrificios tras años de soportar la irresponsabilidad de su hijo y la ingratitud de su familia, buscando finalmente su independencia.",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "lbSlug": "independence-2025",
+      "_src": {
+        "url": "https://siembrafest.com/seleccion-sf-2026/",
+        "date": "2026-08-02",
+        "ficha_raw": "2024 | 20' | Ficción",
+        "formato": "Ficción",
+        "produccion": "Johanna Quintero"
+      },
+      "synopsis_en": "Cecilia, a selfless 52-year-old woman, decides to break with her life of sacrifices after years of enduring her son s irresponsibility and her family s ingratitude, finally seeking her independence.",
+      "title_en": "Independence",
+      "_inherited": {
+        "synopsis": "ficdeh-2026",
+        "synopsis_en": "ficdeh-2026",
+        "lbSlug": "ficdeh-2026",
+        "title_en": "ficdeh-2026"
+      }
+    },
+    {
+      "title": "Gladiolos",
+      "director": "Mónica Juanita Hernández Duquino",
+      "year": "2022",
+      "duration": "15 min",
+      "country": "Colombia",
+      "section": "Amores & Desamores",
+      "genre": "Ficción",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "lbSlug": "",
+      "_src": {
+        "url": "https://siembrafest.com/seleccion-sf-2026/",
+        "date": "2026-08-02",
+        "ficha_raw": "2022 | 15' | Ficción",
+        "formato": "Ficción",
+        "produccion": "Mónica Juanita Hernández Duquino; Iván David Gaona Morales"
+      }
+    },
+    {
+      "title": "Make up: El arte de amar",
+      "director": "Daniel Calderón",
+      "year": "2025",
+      "duration": "20 min",
+      "country": "Colombia",
+      "section": "Amores & Desamores",
+      "genre": "Drama, romance",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "lbSlug": "",
+      "_src": {
+        "url": "https://siembrafest.com/seleccion-sf-2026/",
+        "date": "2026-08-02",
+        "ficha_raw": "2025 | 20' | Ficción – Drama, romance",
+        "formato": "Ficción",
+        "produccion": "Daniel Calderón"
+      }
+    },
+    {
+      "title": "Amor",
+      "director": "Dayana González Fajardo",
+      "year": "2026",
+      "duration": "14 min",
+      "country": "Colombia",
+      "section": "Amores & Desamores",
+      "genre": "Drama, Romance",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "lbSlug": "",
+      "_src": {
+        "url": "https://siembrafest.com/seleccion-sf-2026/",
+        "date": "2026-08-02",
+        "ficha_raw": "2026 | 14' | Ficción – Drama, Romance",
+        "formato": "Ficción",
+        "produccion": "La Cachaca Films / La Colonia Films"
+      }
+    },
+    {
+      "title": "Elementales",
+      "director": "Camilo Botero",
+      "year": "2025",
+      "duration": "9 min",
+      "country": "Colombia",
+      "section": "Amores & Desamores",
+      "genre": "Familia",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "lbSlug": "",
+      "_src": {
+        "url": "https://siembrafest.com/seleccion-sf-2026/",
+        "date": "2026-08-02",
+        "ficha_raw": "2025 | 9' | Documental – Familia",
+        "formato": "Documental",
+        "produccion": "Camilo Botero"
+      }
+    },
+    {
+      "title": "Desde acá veo la tormenta",
+      "director": "Juan Felipe Restrepo",
+      "year": "2026",
+      "duration": "10 min",
+      "country": "Colombia",
+      "section": "Amores & Desamores",
+      "genre": "Familia; Imágenes de archivo; Metraje encontrado; Mujer",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "lbSlug": "",
+      "_src": {
+        "url": "https://siembrafest.com/seleccion-sf-2026/",
+        "date": "2026-08-02",
+        "ficha_raw": "2026 | 10' | Ficción / Experimental – Familia; Imágenes de archivo; Metraje encontrado; Mujer",
+        "formato": "Ficción / Experimental",
+        "produccion": "Juan Felipe Restrepo"
+      }
+    },
+    {
+      "title": "La calle del amor",
+      "director": "Ramón Contreras",
+      "year": "2026",
+      "duration": "9 min",
+      "country": "Colombia",
+      "section": "Amores & Desamores",
+      "genre": "ADOLESCENTE",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "lbSlug": "",
+      "_src": {
+        "url": "https://siembrafest.com/seleccion-sf-2026/",
+        "date": "2026-08-02",
+        "ficha_raw": "2026 | 9' | Ficción – ADOLESCENTE",
+        "formato": "Ficción",
+        "produccion": "Ramón Contreras"
+      }
+    },
+    {
+      "title": "Idilio",
+      "director": "Luz Rincón Barahona",
+      "year": "2024",
+      "duration": "19 min",
+      "country": "Colombia",
+      "section": "Amores & Desamores",
+      "genre": "CIENCIA FICCIÓN",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "lbSlug": "",
+      "_src": {
+        "url": "https://siembrafest.com/seleccion-sf-2026/",
+        "date": "2026-08-02",
+        "ficha_raw": "2024 | 19' | Ficción – CIENCIA FICCIÓN",
+        "formato": "Ficción",
+        "produccion": "Alicia Burgos Duque"
+      }
+    },
+    {
+      "title": "Unlearning Motherhood",
+      "director": "Juliana Erazo",
+      "year": "2025",
+      "duration": "11 min",
+      "country": "Colombia",
+      "section": "Amores & Desamores",
+      "genre": "RETRATO",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "lbSlug": "",
+      "_src": {
+        "url": "https://siembrafest.com/seleccion-sf-2026/",
+        "date": "2026-08-02",
+        "ficha_raw": "2025 | 11' | Animación – RETRATO",
+        "formato": "Animación",
+        "produccion": "Richard Valk Productions"
+      }
+    },
+    {
+      "title": "Soñé su nombre",
+      "director": "Ángela Carabalí",
+      "year": "2025",
+      "duration": "86 min",
+      "country": "Colombia",
+      "section": "Amores & Desamores",
+      "genre": "DERECHOS HUMANOS",
+      "synopsis": "Después de 30 años negando su dolor, Ángela se enfrenta a su pasado cuando su padre se le aparece en un sueño y le pide que lo busque. Junto a su hermana Juliana, emprende un viaje por Colombia hasta los terriotiros indígenas donde su padre, un agricultor afrodescendiente, fue víctima de desaparición forzada.",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "lbSlug": "i-dreamed-his-name",
+      "_src": {
+        "url": "https://siembrafest.com/seleccion-sf-2026/",
+        "date": "2026-08-02",
+        "ficha_raw": "2025 | 86' | Documental – DERECHOS HUMANOS",
+        "formato": "Documental",
+        "produccion": "Carabalí Films & New Media"
+      },
+      "synopsis_en": "Thirty years after his forced disappearance, the filmmaker’s Afro Colombian father comes to her in a dream, asking her to find him. With her sister, she sets out on a journey of discovery across Colombia’s painful history, reconnecting with their father and his activism.",
+      "title_en": "I Dreamed His Name",
+      "_inherited": {
+        "synopsis": "ficdeh-2026",
+        "synopsis_en": "ficdeh-2026",
+        "lbSlug": "ficdeh-2026",
+        "title_en": "ficdeh-2026"
+      }
+    },
+    {
+      "title": "Animero: Son de la muerte",
+      "director": "Nadine Holguín",
+      "year": "2025",
+      "duration": "11 min",
+      "country": "Colombia",
+      "section": "Cinema Patatús",
+      "genre": "Drama, Suspenso, Danza",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "lbSlug": "",
+      "_src": {
+        "url": "https://siembrafest.com/seleccion-sf-2026/",
+        "date": "2026-08-02",
+        "ficha_raw": "2025 | 11' | Experimental – Drama, Suspenso, Danza",
+        "formato": "Experimental",
+        "produccion": "Mirlanda Torres; Nadine Holguín; Jéssica Londoño"
+      }
+    },
+    {
+      "title": "Nativos de la tierra negra",
+      "director": "Juan Pablo Ríos",
+      "year": "2026",
+      "duration": "18 min",
+      "country": "Colombia",
+      "section": "Cinema Patatús",
+      "genre": "Thriller, drama",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "lbSlug": "",
+      "_src": {
+        "url": "https://siembrafest.com/seleccion-sf-2026/",
+        "date": "2026-08-02",
+        "ficha_raw": "2026 | 18' | Ficción – Thriller, drama",
+        "formato": "Ficción",
+        "produccion": "Paula Cecilia Villegas; Juan Pablo Ríos; Alexander Restrepo"
+      }
+    },
+    {
+      "title": "La Oscurana",
+      "director": "Carolina González",
+      "year": "2025",
+      "duration": "20 min",
+      "country": "Colombia",
+      "section": "Cinema Patatús",
+      "genre": "Drama, Suspense, Surrealism",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "lbSlug": "",
+      "_src": {
+        "url": "https://siembrafest.com/seleccion-sf-2026/",
+        "date": "2026-08-02",
+        "ficha_raw": "2025 | 20' | Ficción – Drama, Suspense, Surrealism",
+        "formato": "Ficción",
+        "produccion": "Carolina González"
+      }
+    },
+    {
+      "title": "Que el cielo nos perdone",
+      "director": "Andrés Buitrago",
+      "year": "2025",
+      "duration": "17 min",
+      "country": "Colombia",
+      "section": "Cinema Patatús",
+      "genre": "Drama, Terror",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "lbSlug": "",
+      "_src": {
+        "url": "https://siembrafest.com/seleccion-sf-2026/",
+        "date": "2026-08-02",
+        "ficha_raw": "2025 | 17' | Ficción – Drama, Terror",
+        "formato": "Ficción",
+        "produccion": "Carolina Cardona Pardo"
+      }
+    },
+    {
+      "title": "El silbido del cañaduzal",
+      "director": "Juan Fernando Murillo",
+      "year": "2025",
+      "duration": "19 min",
+      "country": "Colombia",
+      "section": "Cinema Patatús",
+      "genre": "Ficción",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "lbSlug": "",
+      "_src": {
+        "url": "https://siembrafest.com/seleccion-sf-2026/",
+        "date": "2026-08-02",
+        "ficha_raw": "2025 | 19' | Ficción",
+        "formato": "Ficción",
+        "produccion": "James Mathew Carvajal"
+      }
+    },
+    {
+      "title": "Bajo el mismo techo",
+      "director": "Sophia Cadavid",
+      "year": "2026",
+      "duration": "13 min",
+      "country": "Colombia",
+      "section": "Cinema Patatús",
+      "genre": "Thriller, suspenso",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "lbSlug": "",
+      "_src": {
+        "url": "https://siembrafest.com/seleccion-sf-2026/",
+        "date": "2026-08-02",
+        "ficha_raw": "2026 | 13' | Ficción – Thriller, suspenso",
+        "formato": "Ficción",
+        "produccion": "Sophia Cadavid; Sebastian Usaquen"
+      }
+    },
+    {
+      "title": "Payasadas",
+      "director": "Santiago Duque",
+      "year": "2025",
+      "duration": "24 min",
+      "country": "Colombia",
+      "section": "Cinema Patatús",
+      "genre": "Comedy, Horror",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "lbSlug": "",
+      "_src": {
+        "url": "https://siembrafest.com/seleccion-sf-2026/",
+        "date": "2026-08-02",
+        "ficha_raw": "2025 | 24' | Ficción – Comedy, Horror",
+        "formato": "Ficción",
+        "produccion": "Soria Aldana"
+      }
+    },
+    {
+      "title": "Noche de vuelo",
+      "director": "Juan Alvarado",
+      "year": "2025",
+      "duration": "19 min",
+      "country": "Colombia",
+      "section": "Cinema Patatús",
+      "genre": "PSICOLÓGICO",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "lbSlug": "",
+      "_src": {
+        "url": "https://siembrafest.com/seleccion-sf-2026/",
+        "date": "2026-08-02",
+        "ficha_raw": "2025 | 19' | Ficción – PSICOLÓGICO",
+        "formato": "Ficción",
+        "produccion": "Juan Alvarado"
+      }
+    },
+    {
+      "title": "Villa Feliz",
+      "director": "James Camargo De Alba",
+      "year": "2021",
+      "duration": "8 min",
+      "country": "Colombia",
+      "section": "Cinema Patatús",
+      "genre": "ARTE",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "lbSlug": "",
+      "_src": {
+        "url": "https://siembrafest.com/seleccion-sf-2026/",
+        "date": "2026-08-02",
+        "ficha_raw": "2021 | 8' | Ficción – ARTE",
+        "formato": "Ficción",
+        "produccion": "Cóncavo Films"
+      }
+    },
+    {
+      "title": "Linfernum",
+      "director": "Dayana González Fajardo",
+      "year": "2024",
+      "duration": "8 min",
+      "country": "Colombia",
+      "section": "Cinema Patatús",
+      "genre": "CINE NEGRO",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "lbSlug": "",
+      "_src": {
+        "url": "https://siembrafest.com/seleccion-sf-2026/",
+        "date": "2026-08-02",
+        "ficha_raw": "2024 | 8' | Ficción – CINE NEGRO",
+        "formato": "Ficción",
+        "produccion": "La Cachaca Films"
+      }
+    },
+    {
+      "title": "Muertos que no son muertos",
+      "director": "Nicolás O. Segura",
+      "year": "2025",
+      "duration": "9 min",
+      "country": "Colombia",
+      "section": "Muertos de Risa",
+      "genre": "Horror, Comedy",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "lbSlug": "",
+      "_src": {
+        "url": "https://siembrafest.com/seleccion-sf-2026/",
+        "date": "2026-08-02",
+        "ficha_raw": "2025 | 9' | Ficción – Horror, Comedy",
+        "formato": "Ficción",
+        "produccion": "María Camila Hoyos; Juan Carrasquilla; Nicolás O. Segura"
+      }
+    },
+    {
+      "title": "HDLT",
+      "director": "Artefactum Suba",
+      "year": "2026",
+      "duration": "18 min",
+      "country": "Colombia",
+      "section": "Muertos de Risa",
+      "genre": "MOCKUMENTARY, DRAMA, COMEDY",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "lbSlug": "",
+      "_src": {
+        "url": "https://siembrafest.com/seleccion-sf-2026/",
+        "date": "2026-08-02",
+        "ficha_raw": "2026 | 18' | Documental / Experimental – MOCKUMENTARY, DRAMA, COMEDY",
+        "formato": "Documental / Experimental",
+        "produccion": "Artefactum Suba"
+      }
+    },
+    {
+      "title": "Miguel Ángel, Federico, y el carro que pasó encima de las gafas",
+      "director": "Juan David Rodríguez",
+      "year": "2025",
+      "duration": "13 min",
+      "country": "Colombia",
+      "section": "Muertos de Risa",
+      "genre": "Comedy, Drama",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "lbSlug": "",
+      "_src": {
+        "url": "https://siembrafest.com/seleccion-sf-2026/",
+        "date": "2026-08-02",
+        "ficha_raw": "2025 | 13' | Experimental – Comedy, Drama",
+        "formato": "Experimental",
+        "produccion": "Mar Barrera; Juan David Rodríguez"
+      }
+    },
+    {
+      "title": "El día de mi suerte",
+      "director": "Dayana González Fajardo",
+      "year": "2024",
+      "duration": "8 min",
+      "country": "Colombia",
+      "section": "Muertos de Risa",
+      "genre": "COMEDIA",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "lbSlug": "",
+      "_src": {
+        "url": "https://siembrafest.com/seleccion-sf-2026/",
+        "date": "2026-08-02",
+        "ficha_raw": "2024 | 8' | Ficción – COMEDIA",
+        "formato": "Ficción",
+        "produccion": "La Cachaca Films"
+      }
+    },
+    {
+      "title": "Dios y suerte",
+      "director": "Carol Duran Pulido",
+      "year": "2025",
+      "duration": "17 min",
+      "country": "Colombia",
+      "section": "Buenos, Malos y Feos",
+      "genre": "Social, Etnográfico",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "lbSlug": "",
+      "_src": {
+        "url": "https://siembrafest.com/seleccion-sf-2026/",
+        "date": "2026-08-02",
+        "ficha_raw": "2025 | 17' | Documental – Social, Etnográfico",
+        "formato": "Documental",
+        "produccion": "Yineth Daniela Gil"
+      }
+    },
+    {
+      "title": "Catatumbo: Casa del trueno, memoria y dignidad",
+      "director": "Jhonattan Sarmiento",
+      "year": "2025",
+      "duration": "8 min",
+      "country": "Colombia",
+      "section": "Buenos, Malos y Feos",
+      "genre": "Ia, Sci-Fi, Fiction",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "lbSlug": "",
+      "_src": {
+        "url": "https://siembrafest.com/seleccion-sf-2026/",
+        "date": "2026-08-02",
+        "ficha_raw": "2025 | 8' | Animación – Ia, Sci-Fi, Fiction",
+        "formato": "Animación",
+        "produccion": "Jhonattan Sarmiento"
+      }
+    },
+    {
+      "title": "Preguntas frecuentes",
+      "director": "Sofía Salinas Barrera",
+      "year": "2025",
+      "duration": "16 min",
+      "country": "Colombia",
+      "section": "Buenos, Malos y Feos",
+      "genre": "Documental / Experimental",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "lbSlug": "",
+      "_src": {
+        "url": "https://siembrafest.com/seleccion-sf-2026/",
+        "date": "2026-08-02",
+        "ficha_raw": "2025 | 16' | Documental / Experimental",
+        "formato": "Documental / Experimental",
+        "produccion": "Sofía Salinas Barrera; Juan Bohorquez Triana"
+      }
+    },
+    {
+      "title": "La Mona",
+      "director": "Laura Gutiérrez Ardila",
+      "year": "2025",
+      "duration": "18 min",
+      "country": "Colombia",
+      "section": "Buenos, Malos y Feos",
+      "genre": "Ficción",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "lbSlug": "",
+      "_src": {
+        "url": "https://siembrafest.com/seleccion-sf-2026/",
+        "date": "2026-08-02",
+        "ficha_raw": "2025 | 18' | Ficción",
+        "formato": "Ficción",
+        "produccion": "Diana C. Patiño Martínez"
+      }
+    },
+    {
+      "title": "Desde la ventana",
+      "director": "Mike Pitalua",
+      "year": "2021",
+      "duration": "9 min",
+      "country": "Colombia",
+      "section": "Buenos, Malos y Feos",
+      "genre": "Ficción",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "lbSlug": "",
+      "_src": {
+        "url": "https://siembrafest.com/seleccion-sf-2026/",
+        "date": "2026-08-02",
+        "ficha_raw": "2021 | 9' | Ficción",
+        "formato": "Ficción",
+        "produccion": "Sonia Jaimes; Mario Madera"
+      }
+    },
+    {
+      "title": "Floresmiro",
+      "director": "John Agudelo",
+      "year": "2025",
+      "duration": "101 min",
+      "country": "Colombia",
+      "section": "Buenos, Malos y Feos",
+      "genre": "Social, war, peace, religión",
+      "synopsis": "En San Vicente de Chucurí, el padre Floro impulsa una planta de frutas para evitar las pérdidas causadas por la guerra. También recordamos a Floresmiro López, un sacerdote que arriesgó su vida defendiendo campesinos durante el conflicto armado. Con amor y firmeza moral, enfrentó las armas y dejó un legado de organización comunitaria clave en la región.",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "lbSlug": "floresmiro",
+      "_src": {
+        "url": "https://siembrafest.com/seleccion-sf-2026/",
+        "date": "2026-08-02",
+        "ficha_raw": "2025 | 101' | Documental – Social, war, peace, religión",
+        "formato": "Documental",
+        "produccion": "Johanna Quintero"
+      },
+      "_inherited": {
+        "synopsis": "ficdeh-2026",
+        "lbSlug": "ficdeh-2026"
+      }
+    },
+    {
+      "title": "Relatos del camino",
+      "director": "Daniel Prieto",
+      "year": "2025",
+      "duration": "12 min",
+      "country": "Colombia",
+      "section": "Buenos, Malos y Feos",
+      "genre": "Animación / Documental",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "lbSlug": "",
+      "_src": {
+        "url": "https://siembrafest.com/seleccion-sf-2026/",
+        "date": "2026-08-02",
+        "ficha_raw": "2025 | 12' | Animación / Documental",
+        "formato": "Animación / Documental",
+        "produccion": "Jhina Hernández Ospina; Daniel Prieto"
+      }
+    },
+    {
+      "title": "Términa",
+      "director": "Juan José Guevara Ruiz",
+      "year": "2025",
+      "duration": "27 min",
+      "country": "Colombia",
+      "section": "Buenos, Malos y Feos",
+      "genre": "Ficción",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "lbSlug": "",
+      "_src": {
+        "url": "https://siembrafest.com/seleccion-sf-2026/",
+        "date": "2026-08-02",
+        "ficha_raw": "2025 | 27' | Ficción",
+        "formato": "Ficción",
+        "produccion": "Laura Valentina Castillo Ramírez"
+      }
+    },
+    {
+      "title": "6 de diciembre",
+      "director": "Nelson Rodríguez Tequia",
+      "year": "2025",
+      "duration": "29 min",
+      "country": "Colombia",
+      "section": "Buenos, Malos y Feos",
+      "genre": "Documental / Experimental",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "lbSlug": "",
+      "_src": {
+        "url": "https://siembrafest.com/seleccion-sf-2026/",
+        "date": "2026-08-02",
+        "ficha_raw": "2025 | 29' | Documental / Experimental",
+        "formato": "Documental / Experimental",
+        "produccion": "Nelson Rodríguez Tequia"
+      }
+    },
+    {
+      "title": "Pudor ante el asalto de los ojos furtivos",
+      "director": "Laura María Rodríguez",
+      "year": "2025",
+      "duration": "9 min",
+      "country": "Colombia",
+      "section": "Buenos, Malos y Feos",
+      "genre": "Animación",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "lbSlug": "",
+      "_src": {
+        "url": "https://siembrafest.com/seleccion-sf-2026/",
+        "date": "2026-08-02",
+        "ficha_raw": "2025 | 9' | Animación",
+        "formato": "Animación",
+        "produccion": "Laura María Rodríguez"
+      }
+    },
+    {
+      "title": "La despedida del río",
+      "director": "Mateo Salas",
+      "year": "2025",
+      "duration": "17 min",
+      "country": "Colombia",
+      "section": "Buenos, Malos y Feos",
+      "genre": "Documental",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "lbSlug": "",
+      "_src": {
+        "url": "https://siembrafest.com/seleccion-sf-2026/",
+        "date": "2026-08-02",
+        "ficha_raw": "2025 | 17' | Documental",
+        "formato": "Documental",
+        "produccion": "Mateo Salas; Andrea Orozco Sáenz; Sara I. Betancur Gómez; Jose Carlos Hoyos Hernández; Melissa García Miranda; Emma Heather Lara"
+      }
+    },
+    {
+      "title": "Las piedras del río",
+      "director": "Edna Sierra",
+      "year": "2026",
+      "duration": "16 min",
+      "country": "Colombia",
+      "section": "Buenos, Malos y Feos",
+      "genre": "Drama / Tragedy",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "lbSlug": "",
+      "_src": {
+        "url": "https://siembrafest.com/seleccion-sf-2026/",
+        "date": "2026-08-02",
+        "ficha_raw": "2026 | 16' | Ficción – Drama / Tragedy",
+        "formato": "Ficción",
+        "produccion": "Edna Sierra; Wilson Arango"
+      }
+    },
+    {
+      "title": "La Europa",
+      "director": "Jorge Pérez Aldana",
+      "year": "2025",
+      "duration": "21 min",
+      "country": "Colombia",
+      "section": "Buenos, Malos y Feos",
+      "genre": "Ambiental; Asuntos sociales; Direct Cinema; Emigracion/Inmigracion; Música; Violencia",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "lbSlug": "",
+      "_src": {
+        "url": "https://siembrafest.com/seleccion-sf-2026/",
+        "date": "2026-08-02",
+        "ficha_raw": "2025 | 21' | Documental / Experimental – Ambiental; Asuntos sociales; Direct Cinema; Emigracion/Inmigracion; Música; Violencia",
+        "formato": "Documental / Experimental",
+        "produccion": "Jorge Pérez Aldana"
+      }
+    },
+    {
+      "title": "El huaquero",
+      "director": "Harold De Vasten",
+      "year": "2025",
+      "duration": "94 min",
+      "country": "Colombia",
+      "section": "Buenos, Malos y Feos",
+      "genre": "Campo; Emigracion/Inmigracion; Familia",
+      "synopsis": "Manuel quiere vender su cosecha de maíz para costear el viaje a la ciudad y dejar la vereda de sus padres ancianos. Conocer a Ezequiel —un viejo ermitaño y huaquero que parece haber hallado algo grande— lo enfrenta a su ambición, el amor y sus anhelos más profundos.",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "lbSlug": "",
+      "_src": {
+        "url": "https://siembrafest.com/seleccion-sf-2026/",
+        "date": "2026-08-02",
+        "ficha_raw": "2025 | 94' | Ficción – Campo; Emigracion/Inmigracion; Familia",
+        "formato": "Ficción",
+        "produccion": "Gloria Saavedra Castaño"
+      },
+      "synopsis_en": "Manuel wants to sell his corn harvest to fund his trip to the city and leave the hamlet where his elderly parents live. Meeting Ezequiel —an old hermit and treasure-hunting huaquero who seems to have found something big— forces him to confront his ambition, love and his deepest longings.",
+      "_inherited": {
+        "synopsis": "ficmontanas-2026",
+        "synopsis_en": "ficmontanas-2026"
+      }
+    },
+    {
+      "title": "Irredentos",
+      "director": "Harold De Vasten",
+      "year": "2024",
+      "duration": "100 min",
+      "country": "Colombia",
+      "section": "Buenos, Malos y Feos",
+      "genre": "Otro; Soledad; Vejez",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "lbSlug": "",
+      "_src": {
+        "url": "https://siembrafest.com/seleccion-sf-2026/",
+        "date": "2026-08-02",
+        "ficha_raw": "2024 | 100' | Ficción – Otro; Soledad; Vejez",
+        "formato": "Ficción",
+        "produccion": "Gloria Saavedra Castaño"
+      },
+      "_inherited": {
+        "director": "grafia-unificada-con-el-huaquero"
+      }
+    },
+    {
+      "title": "Entre 2 aguas",
+      "director": "Carlos Gabriel Vergara M.",
+      "year": "2025",
+      "duration": "93 min",
+      "country": "Colombia",
+      "section": "Buenos, Malos y Feos",
+      "genre": "Ambiental",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "lbSlug": "",
+      "_src": {
+        "url": "https://siembrafest.com/seleccion-sf-2026/",
+        "date": "2026-08-02",
+        "ficha_raw": "2025 | 93' | Ficción – Ambiental",
+        "formato": "Ficción",
+        "produccion": "Carlos Gabriel Vergara M."
+      }
+    },
+    {
+      "title": "Y el río lloró",
+      "director": "Zumaya Mayers",
+      "year": "2024",
+      "duration": "27 min",
+      "country": "Colombia",
+      "section": "Buenos, Malos y Feos",
+      "genre": "DERECHOS HUMANOS",
+      "synopsis": "En el corazón del Pacífico colombiano, Manuel Cruz y su esposa Angy luchan por sanar las heridas de su comunidad, devastada por el conflicto armado. Lo hacen preservando sus tradiciones ancestrales y honrando la memoria de las víctimas, mientras el río, testigo silencioso, fluye como símbolo de resistencia y esperanza.",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "lbSlug": "y-el-rio-lloro",
+      "_src": {
+        "url": "https://siembrafest.com/seleccion-sf-2026/",
+        "date": "2026-08-02",
+        "ficha_raw": "2024 | 27' | Documental – DERECHOS HUMANOS",
+        "formato": "Documental",
+        "produccion": "Fundación Medios de Comunicación Étnicos y Ambientales"
+      },
+      "_inherited": {
+        "synopsis": "ficdeh-2026",
+        "lbSlug": "ficdeh-2026"
+      }
+    },
+    {
+      "title": "Extinta",
+      "director": "Yesid Soacha",
+      "year": "2024",
+      "duration": "7 min",
+      "country": "Colombia",
+      "section": "Ojo Pelao",
+      "genre": "Sci-fi, Mistery, Post-apocaliptical",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "lbSlug": "",
+      "_src": {
+        "url": "https://siembrafest.com/seleccion-sf-2026/",
+        "date": "2026-08-02",
+        "ficha_raw": "2024 | 7' | Animación – Sci-fi, Mistery, Post-apocaliptical",
+        "formato": "Animación",
+        "produccion": "Daniel Guerra Roncancio"
+      }
+    },
+    {
+      "title": "Un pájaro más",
+      "director": "Julián Gómez Reyes",
+      "year": "2026",
+      "duration": "16 min",
+      "country": "Colombia",
+      "section": "Ojo Pelao",
+      "genre": "Animación",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "lbSlug": "",
+      "_src": {
+        "url": "https://siembrafest.com/seleccion-sf-2026/",
+        "date": "2026-08-02",
+        "ficha_raw": "2026 | 16' | Animación",
+        "formato": "Animación",
+        "produccion": "Leidy Guzmán; Julián Gómez Reyes"
+      }
+    },
+    {
+      "title": "Cantos al fuego de “Bolar”",
+      "director": "Ivan Sierra",
+      "year": "2025",
+      "duration": "7 min",
+      "country": "Colombia",
+      "section": "Ojo Pelao",
+      "genre": "Animación",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "lbSlug": "",
+      "_src": {
+        "url": "https://siembrafest.com/seleccion-sf-2026/",
+        "date": "2026-08-02",
+        "ficha_raw": "2025 | 7' | Animación",
+        "formato": "Animación",
+        "produccion": "Linda Marín"
+      }
+    },
+    {
+      "title": "La gran hazaña",
+      "director": "Luber Yesid Zúñiga Ordóñez",
+      "year": "2025",
+      "duration": "15 min",
+      "country": "Colombia",
+      "section": "Ojo Pelao",
+      "genre": "Ficción",
+      "synopsis": "A Pablo le encanta jugar al trompo. Cuando Don Chucho, el usurero del pueblo, retiene a Pascualina, su amiga y mascota, Pablo debe enfrentarse a Felipe, el mejor jugador de trompo de la región, para rescatarla. Pero ganar no es suficiente: los demás niños del pueblo se unirán a él en un acto de solidaridad, amistad y trabajo en equipo para lograr esta gran hazaña.",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "lbSlug": "the-great-feat",
+      "_src": {
+        "url": "https://siembrafest.com/seleccion-sf-2026/",
+        "date": "2026-08-02",
+        "ficha_raw": "2025 | 15' | Ficción",
+        "formato": "Ficción",
+        "produccion": "Jorge Yesidt Vela Forigua"
+      },
+      "synopsis_en": "A rescue with a spinning tops, feathers, eggs and friends.",
+      "title_en": "The Great Feat",
+      "_inherited": {
+        "synopsis": "ficdeh-2026",
+        "synopsis_en": "ficdeh-2026",
+        "lbSlug": "ficdeh-2026",
+        "title_en": "ficdeh-2026"
+      }
+    },
+    {
+      "title": "La pecera",
+      "director": "Angela Tatiana Fonseca Galvez",
+      "year": "2025",
+      "duration": "8 min",
+      "country": "Colombia",
+      "section": "Ojo Pelao",
+      "genre": "Animación",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "lbSlug": "",
+      "_src": {
+        "url": "https://siembrafest.com/seleccion-sf-2026/",
+        "date": "2026-08-02",
+        "ficha_raw": "2025 | 8' | Animación",
+        "formato": "Animación",
+        "produccion": "Ángela Tatiana Fonseca Galvez"
+      }
+    },
+    {
+      "title": "Daniel",
+      "director": "Armando Velásquez Ramírez",
+      "year": "2025",
+      "duration": "12 min",
+      "country": "Colombia",
+      "section": "Ojo Pelao",
+      "genre": "Drama / Tragedy",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "lbSlug": "",
+      "_src": {
+        "url": "https://siembrafest.com/seleccion-sf-2026/",
+        "date": "2026-08-02",
+        "ficha_raw": "2025 | 12' | Ficción – Drama / Tragedy",
+        "formato": "Ficción",
+        "produccion": "Armando Velásquez Ramírez; Alejandra Monsalve Deossa"
+      }
+    },
+    {
+      "title": "Emechiche, el renacer de los Cabeciblanco",
+      "director": "Juan Camilo González",
+      "year": "2025",
+      "duration": "11 min",
+      "country": "Colombia",
+      "section": "Ojo Pelao",
+      "genre": "Drama / Tragedy",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "lbSlug": "",
+      "_src": {
+        "url": "https://siembrafest.com/seleccion-sf-2026/",
+        "date": "2026-08-02",
+        "ficha_raw": "2025 | 11' | Animación – Drama / Tragedy",
+        "formato": "Animación",
+        "produccion": "Juan Camilo González"
+      }
+    },
+    {
+      "title": "Zizuma, nuestra casa de agua y nubes",
+      "director": "Fátima Correa",
+      "year": "2026",
+      "duration": "12 min",
+      "country": "Colombia",
+      "section": "Ojo Pelao",
+      "genre": "Ambiental; Ecologia",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "lbSlug": "",
+      "_src": {
+        "url": "https://siembrafest.com/seleccion-sf-2026/",
+        "date": "2026-08-02",
+        "ficha_raw": "2026 | 12' | Animación / Ficción – Ambiental; Ecologia",
+        "formato": "Animación / Ficción",
+        "produccion": "Fátima Correa"
+      }
+    },
+    {
+      "title": "En el mar",
+      "director": "Alfred Robinson",
+      "year": "2025",
+      "duration": "7 min",
+      "country": "Colombia",
+      "section": "Ojo Pelao",
+      "genre": "INFANTIL",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "lbSlug": "",
+      "_src": {
+        "url": "https://siembrafest.com/seleccion-sf-2026/",
+        "date": "2026-08-02",
+        "ficha_raw": "2025 | 7' | Animación – INFANTIL",
+        "formato": "Animación",
+        "produccion": "Gregory Robinson"
+      }
+    },
+    {
+      "title": "La asociación",
+      "director": "Juan Camilo Muñoz Quintero",
+      "year": "2026",
+      "duration": "19 min",
+      "country": "Colombia",
+      "section": "Sabores en Escena",
+      "genre": "Documental",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "lbSlug": "",
+      "_src": {
+        "url": "https://siembrafest.com/seleccion-sf-2026/",
+        "date": "2026-08-02",
+        "ficha_raw": "2026 | 19' | Documental",
+        "formato": "Documental",
+        "produccion": "Álvaro Muñoz Sánchez"
+      }
+    },
+    {
+      "title": "Somos historias (Episodio 2)",
+      "director": "Paola Diaz Gómez, Juven Piranga Valencia, Gustavo Cabezas Tenorio, María Fernanda Pinilla Segura, Lorena Herran Sánchez, Ursula Baylon Londoño, Melvin Rivero Guerra, Liceth Duran Herrera, Sonia Jaimes Rodríguez, Nicolas Cuéllar Gempeler",
+      "year": "2023",
+      "duration": "30 min",
+      "country": "Colombia",
+      "section": "Sabores en Escena",
+      "genre": "Documental",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "lbSlug": "",
+      "_src": {
+        "url": "https://siembrafest.com/seleccion-sf-2026/",
+        "date": "2026-08-02",
+        "ficha_raw": "2023 | 30' | Documental",
+        "formato": "Documental",
+        "produccion": "Historias en Kilómetros"
+      }
+    },
+    {
+      "title": "Phakhakhe Pi'txi – Minga de pensamiento",
+      "director": "Duvier Baicue",
+      "year": "2024",
+      "duration": "10 min",
+      "country": "Colombia",
+      "section": "Sabores en Escena",
+      "genre": "Derechos Humanos, comunidades indígenas, ancestralidad, comunidades, pueblos indígenas, territorio, costumbres",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "lbSlug": "",
+      "_src": {
+        "url": "https://siembrafest.com/seleccion-sf-2026/",
+        "date": "2026-08-02",
+        "ficha_raw": "2024 | 10' | Documental / Experimental – Derechos Humanos, comunidades indígenas, ancestralidad, comunidades, pueblos indígenas, territorio, costumbres",
+        "formato": "Documental / Experimental",
+        "produccion": "Diana Paola Sánchez"
+      }
+    },
+    {
+      "title": "Sinfonía incompleta de oficios del Fonce",
+      "director": "Nelson Omar Silva Sánchez",
+      "year": "2024",
+      "duration": "16 min",
+      "country": "Colombia",
+      "section": "Estampas",
+      "genre": "Documental",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "lbSlug": "",
+      "_src": {
+        "url": "https://siembrafest.com/seleccion-sf-2026/",
+        "date": "2026-08-02",
+        "ficha_raw": "2024 | 16' | Documental",
+        "formato": "Documental",
+        "produccion": "Nelson Omar Silva Sánchez"
+      }
+    },
+    {
+      "title": "Mingoya: Tierra de ornitólogos",
+      "director": "Juan Esteban Quintero",
+      "year": "2024",
+      "duration": "8 min",
+      "country": "Colombia",
+      "section": "Estampas",
+      "genre": "Ornitología, Conservación, Colombia, Ciencia comunitaria",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "lbSlug": "",
+      "_src": {
+        "url": "https://siembrafest.com/seleccion-sf-2026/",
+        "date": "2026-08-02",
+        "ficha_raw": "2024 | 8' | Animación / Documental – Ornitología, Conservación, Colombia, Ciencia comunitaria",
+        "formato": "Animación / Documental",
+        "produccion": "Nelsy Daniela Niño / Las Alegrías"
+      }
+    },
+    {
+      "title": "Camino al Chicamocha",
+      "director": "Frank Alexander Rodríguez Rojas",
+      "year": "2024",
+      "duration": "15 min",
+      "country": "Colombia",
+      "section": "Estampas",
+      "genre": "Naturaleza, Montaña, Medio ambiente",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "lbSlug": "",
+      "_src": {
+        "url": "https://siembrafest.com/seleccion-sf-2026/",
+        "date": "2026-08-02",
+        "ficha_raw": "2024 | 15' | Documental – Naturaleza, Montaña, Medio ambiente",
+        "formato": "Documental",
+        "produccion": "Silvia Juliana León Díaz"
+      }
+    },
+    {
+      "title": "Refugiar el gesto",
+      "director": "Adrián Villa-Dávila, Andrés Prado",
+      "year": "2026",
+      "duration": "11 min",
+      "country": "Colombia",
+      "section": "Estampas",
+      "genre": "Videodance",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "lbSlug": "",
+      "_src": {
+        "url": "https://siembrafest.com/seleccion-sf-2026/",
+        "date": "2026-08-02",
+        "ficha_raw": "2026 | 11' | Documental / Experimental – Videodance",
+        "formato": "Documental / Experimental",
+        "produccion": "Tragaluz"
+      }
+    },
+    {
+      "title": "Donde nace el nombre",
+      "director": "Juan Vanegas",
+      "year": "2025",
+      "duration": "27 min",
+      "country": "Colombia",
+      "section": "Estampas",
+      "genre": "Ambiental; Cambio climático; Campo; Comunidades indígenas; Ecologia; Mar; Montaña; Naturaleza",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "lbSlug": "",
+      "_src": {
+        "url": "https://siembrafest.com/seleccion-sf-2026/",
+        "date": "2026-08-02",
+        "ficha_raw": "2025 | 27' | Documental – Ambiental; Cambio climático; Campo; Comunidades indígenas; Ecologia; Mar; Montaña; Naturaleza",
+        "formato": "Documental",
+        "produccion": "Miguel Galezzo"
+      }
+    },
+    {
+      "title": "Herencia: Los cantos de la tierra",
+      "director": "Iván Acosta Rojas",
+      "year": "2026",
+      "duration": "82 min",
+      "country": "Colombia",
+      "section": "Estampas",
+      "genre": "Ambiental; Arte callejero; Asuntos sociales; Campo; Danza; Familia; Fiestas populares; Música; Naturaleza",
+      "synopsis": "La música campesina ha transmitido durante generaciones las historias, costumbres y afectos de las comunidades rurales del interior colombiano. A través de coplas, ritmos e instrumentos tradicionales, jóvenes y mayores mantienen viva una herencia cultural nacida de la tierra, el trabajo y las fusiones musicales que dieron identidad a toda una región.",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "lbSlug": "herencia-los-cantos-de-la-tierra",
+      "_src": {
+        "url": "https://siembrafest.com/seleccion-sf-2026/",
+        "date": "2026-08-02",
+        "ficha_raw": "2026 | 82' | Documental – Ambiental; Arte callejero; Asuntos sociales; Campo; Danza; Familia; Fiestas populares; Música; Naturaleza",
+        "formato": "Documental",
+        "produccion": "Iván Acosta Rojas"
+      },
+      "synopsis_en": "A documentary celebrating peasant 'carranguera' music —voices, stories and instruments like the requinto, tiple and guacharaca— as the root of rural Colombian identity.",
+      "_inherited": {
+        "synopsis": "ficdeh-2026",
+        "synopsis_en": "ficdeh-2026",
+        "lbSlug": "ficdeh-2026"
+      }
+    },
+    {
+      "title": "Guatapé (No) ha muerto",
+      "director": "Laurence Paciarelli",
+      "year": "2025",
+      "duration": "52 min",
+      "country": "Colombia",
+      "section": "Estampas",
+      "genre": "HISTÓRICO",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "lbSlug": "",
+      "_src": {
+        "url": "https://siembrafest.com/seleccion-sf-2026/",
+        "date": "2026-08-02",
+        "ficha_raw": "2025 | 52' | Documental – HISTÓRICO",
+        "formato": "Documental",
+        "produccion": "Laurence Paciarelli"
+      }
+    },
+    {
+      "title": "Tentado de difunto",
+      "director": "Juan David Corredor Robles",
+      "year": "2025",
+      "duration": "13 min",
+      "country": "Colombia",
+      "section": "Estampas",
+      "genre": "ARTE",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "lbSlug": "",
+      "_src": {
+        "url": "https://siembrafest.com/seleccion-sf-2026/",
+        "date": "2026-08-02",
+        "ficha_raw": "2025 | 13' | Documental – ARTE",
+        "formato": "Documental",
+        "produccion": "Daniel Santiago Ruiz Sandoval"
+      }
+    },
+    {
+      "title": "XIE. Defensa de la vida",
+      "director": "Adriana Bernal-Mor, Paola Zuluaga Palacios",
+      "year": "2025",
+      "duration": "70 min",
+      "country": "Colombia",
+      "section": "Así es Cundinamarca",
+      "genre": "Human Righst",
+      "synopsis": "Desde 1977, mujeres campesinas tejedoras de las montañas de Cundinamarca resisten la explotación irregular de nacimientos de agua por industrias de bebidas y ultraprocesados. Mientras el agua se convierte en un negocio, las comunidades padecen sequías y el deterioro de sus ecosistemas. Ahora, frente a una nueva concesión para embotellar agua, se organizan para defender el territorio y exigir que el agua prevalezca como un derecho, no como una mercancía.",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "lbSlug": "xie-defensa-de-la-vida",
+      "_src": {
+        "url": "https://siembrafest.com/seleccion-sf-2026/",
+        "date": "2026-08-02",
+        "ficha_raw": "2025 | 70' | Documental – Human Righst",
+        "formato": "Documental",
+        "produccion": "Paola Zuluaga Palacios"
+      },
+      "_inherited": {
+        "synopsis": "ficdeh-2026",
+        "lbSlug": "ficdeh-2026"
+      }
+    },
+    {
+      "title": "Teresa",
+      "director": "Edgar Medina Fetecua",
+      "year": "2025",
+      "duration": "18 min",
+      "country": "Colombia",
+      "section": "Así es Cundinamarca",
+      "genre": "Ficción",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "lbSlug": "",
+      "_src": {
+        "url": "https://siembrafest.com/seleccion-sf-2026/",
+        "date": "2026-08-02",
+        "ficha_raw": "2025 | 18' | Ficción",
+        "formato": "Ficción",
+        "produccion": "Miosotis Daxsea Mahecha Almonacid"
+      }
+    },
+    {
+      "title": "Gachalá, entre el miedo y la memoria",
+      "director": "María Camila Mariño",
+      "year": "2026",
+      "duration": "11 min",
+      "country": "Colombia",
+      "section": "Así es Cundinamarca",
+      "genre": "Documental",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "lbSlug": "",
+      "_src": {
+        "url": "https://siembrafest.com/seleccion-sf-2026/",
+        "date": "2026-08-02",
+        "ficha_raw": "2026 | 11' | Documental",
+        "formato": "Documental",
+        "produccion": "Santiago Guzmán"
+      }
+    },
+    {
+      "title": "Herminda",
+      "director": "Ernesto Lozano Redondo",
+      "year": "2024",
+      "duration": "9 min",
+      "country": "Colombia",
+      "section": "Así es Cundinamarca",
+      "genre": "Ficción",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "lbSlug": "",
+      "_src": {
+        "url": "https://siembrafest.com/seleccion-sf-2026/",
+        "date": "2026-08-02",
+        "ficha_raw": "2024 | 9' | Ficción",
+        "formato": "Ficción",
+        "produccion": "Ernesto Lozano Redondo"
+      }
+    },
+    {
+      "title": "Elipsis",
+      "director": "Dayana González Fajardo",
+      "year": "2020",
+      "duration": "6 min",
+      "country": "Colombia",
+      "section": "Así es Cundinamarca",
+      "genre": "CIENCIA FICCIÓN",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "lbSlug": "",
+      "_src": {
+        "url": "https://siembrafest.com/seleccion-sf-2026/",
+        "date": "2026-08-02",
+        "ficha_raw": "2020 | 6' | Ficción – CIENCIA FICCIÓN",
+        "formato": "Ficción",
+        "produccion": "La Cachaca Films"
+      }
+    },
+    {
+      "title": "La muerte de Elías",
+      "director": "Gustavo Valcárcel",
+      "year": "2023",
+      "duration": "9 min",
+      "country": "Colombia",
+      "section": "Así es Cundinamarca",
+      "genre": "CRIMEN",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "lbSlug": "",
+      "_src": {
+        "url": "https://siembrafest.com/seleccion-sf-2026/",
+        "date": "2026-08-02",
+        "ficha_raw": "2023 | 9' | Documental – CRIMEN",
+        "formato": "Documental",
+        "produccion": "Gustavo Valcárcel"
+      }
+    },
+    {
+      "title": "Trigos",
+      "director": "Enrique Uribe White (1898-1983)",
+      "year": "1941",
+      "duration": "20 min",
+      "country": "Colombia",
+      "section": "Así es Cundinamarca",
+      "genre": "HISTÓRICO",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "lbSlug": "",
+      "_src": {
+        "url": "https://siembrafest.com/seleccion-sf-2026/",
+        "date": "2026-08-02",
+        "ficha_raw": "1941 | 20' | Documental – HISTÓRICO",
+        "formato": "Documental",
+        "produccion": "Colectivo Imágenes de Segunda Mano"
+      }
+    }
+  ]
+}
