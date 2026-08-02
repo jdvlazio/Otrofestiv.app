@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `6ceed54 feat(plan): commitPlan — un solo camino de escritura, certificado (#494) (#494)`
+> Último commit: `03a17b1 fix(domain): delayedEndMin — el retraso reportado gana dueño unico (#495) (#495)`
 
 ---
 
