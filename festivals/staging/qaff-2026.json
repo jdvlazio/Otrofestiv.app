@@ -1,1088 +1,2470 @@
 {
-  "_etapa": "A-catalogo (SIN funciones — no publicar)",
-  "_provenance": {
-    "fuente": "Selección Oficial QAFF 2026 (https://www.quibdoafricafilmfestival.com/es/selection-2026), server-rendered, capturada 2026-08-02. El festival anuncia 55 films.",
-    "verificacion": "Parseo por regex de línea \"Título (Dir) - dur - país\"; conteo contra el anuncio. Secciones INTERINAS = grupos de formato de la página; las curatoriales (Competición/Panoramas/Prisma/…) llegarán del programa (widget Boom) o del catálogo.",
-    "sin_year": "La fuente NO publica año — completar vía TMDB/catálogo."
+ "_etapa": "B-ensamblada (staged, sin publicar — falta pase de secciones/emoji, geocoding y verificación humana)",
+ "_provenance": {
+  "fuente": "Etapa A (selection-2026) + programación Boom published_calendar (sidecar qaff-2026-programacion-raw.json), 2 ago 2026",
+  "verificacion": "Cruce título-normalizado eventos↔obras; sección dueña = 1ª categoría del evento (decisión Juan 2 ago); sin prelanzamiento 5 sep (decisión Juan); doble ciudad con city en venues (decisión Juan)",
+  "decisiones_pendientes": "emojis/EN de secciones; 19-20 sep incluidos (funciones de cierre reales); geocoding; verificar URL de Registrarse por evento"
+ },
+ "name": "QAFF 2026",
+ "shortName": "QAFF",
+ "city": "Quibdó y Bogotá",
+ "country": "CO",
+ "dates": "14–20 SEP",
+ "dates_en": "SEP 14–20",
+ "year": 2026,
+ "timezoneOffset": "-05:00",
+ "storageKey": "qaff2026_",
+ "festivalStartStr": "2026-09-14T00:00:00",
+ "festivalEndStr": "2026-09-20T23:59:00",
+ "festivalDates": {
+  "2026-09-14": "2026-09-14",
+  "2026-09-15": "2026-09-15",
+  "2026-09-16": "2026-09-16",
+  "2026-09-17": "2026-09-17",
+  "2026-09-18": "2026-09-18",
+  "2026-09-19": "2026-09-19",
+  "2026-09-20": "2026-09-20"
+ },
+ "days": [
+  {
+   "k": "2026-09-14",
+   "d": 14,
+   "lbl": "LUN"
   },
-  "sections": {
-    "Animación": {
-      "oficial": "Animación",
-      "en": "Animation",
-      "archetype": "",
-      "color": "",
-      "order": 1,
-      "_interina": true
-    },
-    "Experimental": {
-      "oficial": "Experimental",
-      "en": "Experimental",
-      "archetype": "",
-      "color": "",
-      "order": 2,
-      "_interina": true
-    },
-    "Cortometraje de Ficción": {
-      "oficial": "Cortometraje de Ficción",
-      "en": "Short Fiction",
-      "archetype": "",
-      "color": "",
-      "order": 3,
-      "_interina": true
-    },
-    "Cortometraje Documental": {
-      "oficial": "Cortometraje Documental",
-      "en": "Short Documentary",
-      "archetype": "",
-      "color": "",
-      "order": 4,
-      "_interina": true
-    },
-    "Largometraje Documental": {
-      "oficial": "Largometraje Documental",
-      "en": "Feature Documentary",
-      "archetype": "",
-      "color": "",
-      "order": 5,
-      "_interina": true
-    },
-    "Largometraje de Ficción": {
-      "oficial": "Largometraje de Ficción",
-      "en": "Feature Fiction",
-      "archetype": "",
-      "color": "",
-      "order": 6,
-      "_interina": true
-    }
+  {
+   "k": "2026-09-15",
+   "d": 15,
+   "lbl": "MAR"
   },
-  "films": [
-    {
-      "title": "Free Fall",
-      "director": "Wilson Borja",
-      "duration": "9 min",
-      "country": "Colombia",
-      "section": "Animación",
-      "genre": "",
-      "synopsis": "",
-      "synopsis_lang": "es",
-      "poster": "",
-      "posterSource": "",
-      "_src": {
-        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
-        "date": "2026-08-02",
-        "linea_raw": "Free Fall (Wilson Borja) - 9' - Colombia"
-      }
-    },
-    {
-      "title": "Hacker Leonilia",
-      "director": "Gustavo Fontele Dourado",
-      "duration": "15 min",
-      "country": "Brasil",
-      "section": "Animación",
-      "genre": "Animación, Drama",
-      "synopsis": "",
-      "synopsis_lang": "es",
-      "poster": "/4qBc6v5V0UZdYzhRzNukG1MHZH9.jpg",
-      "posterSource": "tmdb",
-      "lbSlug": "hacker-leonilia",
-      "_src": {
-        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
-        "date": "2026-08-02",
-        "linea_raw": "Hacker Leonilia (Gustavo Fontele Dourado) - 14'59 - Brazil",
-        "tmdb_id": 1539677
-      },
-      "year": "2025",
-      "synopsis_en": "An elderly hacker with a personal crisis needs to use her skills and memories to escape a metaverse in order to have a second chance.",
-      "_inherited": {
-        "synopsis_en": "tmdb-1539677"
-      }
-    },
-    {
-      "title": "Stormy Days",
-      "director": "Vitor Bitencourt Rocha",
-      "duration": "19 min",
-      "country": "Brasil",
-      "section": "Animación",
-      "genre": "",
-      "synopsis": "",
-      "synopsis_lang": "es",
-      "poster": "",
-      "posterSource": "",
-      "_src": {
-        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
-        "date": "2026-08-02",
-        "linea_raw": "Stormy Days (Vitor Bitencourt Rocha) - 19'20 - Brazil"
-      }
-    },
-    {
-      "title": "Manman Chadwon",
-      "director": "Gwladys Gambie",
-      "duration": "10 min",
-      "country": "Martinica",
-      "section": "Experimental",
-      "genre": "",
-      "synopsis": "",
-      "synopsis_lang": "es",
-      "poster": "",
-      "posterSource": "",
-      "_src": {
-        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
-        "date": "2026-08-02",
-        "linea_raw": "Manman Chadwon (Gwladys Gambie) - 10'13 - Martinique (out of competition)"
-      },
-      "_out_of_competition": "out of competition"
-    },
-    {
-      "title": "Leer en las gotas de lluvia",
-      "director": "Lilian Pallares, Charles Olsen",
-      "duration": "10 min",
-      "country": "España",
-      "section": "Experimental",
-      "genre": "",
-      "synopsis": "",
-      "synopsis_lang": "es",
-      "poster": "",
-      "posterSource": "",
-      "_src": {
-        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
-        "date": "2026-08-02",
-        "linea_raw": "Leer en las gotas de lluvia (Lilian Pallares, Charles Olsen) - 10'24 - Spain"
-      }
-    },
-    {
-      "title": "Concrete Moves",
-      "director": "Fagamou Fama Ndiaye",
-      "duration": "12 min",
-      "country": "Senegal",
-      "section": "Experimental",
-      "genre": "Documental",
-      "synopsis": "",
-      "synopsis_lang": "es",
-      "poster": "/7jmZ899cs6DHznSqbILVBLl16zH.jpg",
-      "posterSource": "tmdb",
-      "lbSlug": "concrete-moves",
-      "_src": {
-        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
-        "date": "2026-08-02",
-        "linea_raw": "Concrete Moves (Fagamou Fama Ndiaye) - 12' - Senegal",
-        "tmdb_id": 1665627
-      },
-      "year": "2026",
-      "synopsis_en": "Fagamou returns to the same hill that, decades ago, triggered her fear of snakes.",
-      "_inherited": {
-        "synopsis_en": "tmdb-1665627"
-      }
-    },
-    {
-      "title": "POSESAS [Possessed]",
-      "director": "Sebastian Wiedemann, Daniel Cortes",
-      "duration": "16 min",
-      "country": "Colombia",
-      "section": "Experimental",
-      "genre": "",
-      "synopsis": "",
-      "synopsis_lang": "es",
-      "poster": "",
-      "posterSource": "",
-      "_src": {
-        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
-        "date": "2026-08-02",
-        "linea_raw": "POSESAS [Possessed] (Sebastian Wiedemann, Daniel Cortes) - 16'18 - Colombia"
-      }
-    },
-    {
-      "title": "FACE TO FACE",
-      "director": "Florent Mahoukou",
-      "duration": "20 min",
-      "country": "Congo",
-      "section": "Experimental",
-      "genre": "",
-      "synopsis": "",
-      "synopsis_lang": "es",
-      "poster": "",
-      "posterSource": "",
-      "_src": {
-        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
-        "date": "2026-08-02",
-        "linea_raw": "FACE TO FACE (Florent Mahoukou) - 19'54 - Congo (out of competition)"
-      },
-      "_out_of_competition": "out of competition"
-    },
-    {
-      "title": "CAPTAIN ANTHONY",
-      "director": "Gregory Robinson",
-      "duration": "8 min",
-      "country": "Colombia",
-      "section": "Cortometraje de Ficción",
-      "genre": "",
-      "synopsis": "",
-      "synopsis_lang": "es",
-      "poster": "",
-      "posterSource": "",
-      "_src": {
-        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
-        "date": "2026-08-02",
-        "linea_raw": "CAPTAIN ANTHONY (Gregory Robinson) - 8' - Colombia"
-      }
-    },
-    {
-      "title": "Sheltering Gestures",
-      "director": "Adrian Villa-Davila, Andres Prado",
-      "duration": "11 min",
-      "country": "Colombia",
-      "section": "Cortometraje de Ficción",
-      "genre": "Videodance",
-      "synopsis": "",
-      "synopsis_lang": "es",
-      "poster": "",
-      "posterSource": "",
-      "lbSlug": "sheltering-gestures",
-      "_src": {
-        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
-        "date": "2026-08-02",
-        "linea_raw": "Sheltering Gestures (Adrian Villa-Davila, Andres Prado) - 10'53 - Colombia"
-      },
-      "year": "2026",
-      "title_orig": "Refugiar el gesto",
-      "_inherited": {
-        "genre": "siembrafest-2026",
-        "year": "siembrafest-2026",
-        "title_orig": "siembrafest-2026"
-      }
-    },
-    {
-      "title": "MANGO",
-      "director": "Joan Iyiola",
-      "duration": "11 min",
-      "country": "Francia (Reino Unido)",
-      "section": "Cortometraje de Ficción",
-      "genre": "",
-      "synopsis": "",
-      "synopsis_lang": "es",
-      "poster": "",
-      "posterSource": "",
-      "_src": {
-        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
-        "date": "2026-08-02",
-        "linea_raw": "MANGO (Joan Iyiola) - 11' - France, United Kingdom"
-      }
-    },
-    {
-      "title": "The Black Bart of Taco King #17",
-      "director": "Rickey Larke",
-      "duration": "11 min",
-      "country": "Estados Unidos",
-      "section": "Cortometraje de Ficción",
-      "genre": "",
-      "synopsis": "",
-      "synopsis_lang": "es",
-      "poster": "/2U9w9fNF8paFH8pemCC8yyrZfvb.jpg",
-      "posterSource": "tmdb",
-      "lbSlug": "the-black-bart-of-taco-king-17",
-      "_src": {
-        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
-        "date": "2026-08-02",
-        "linea_raw": "The Black Bart of Taco King #17 (Rickey Larke) - 11'20 - United States",
-        "tmdb_id": 1654835
-      },
-      "year": "2026",
-      "synopsis_en": "A suave larcenist searches for a new partner at a dive bar and finds the perfect Bonnie to his Clyde. He takes her to dinner to put her to the test, yet she has all the answers... and more.",
-      "_inherited": {
-        "synopsis_en": "tmdb-1654835"
-      }
-    },
-    {
-      "title": "Kanekalon",
-      "director": "Sara J. Asprilla",
-      "duration": "13 min",
-      "country": "Colombia",
-      "section": "Cortometraje de Ficción",
-      "genre": "",
-      "synopsis": "",
-      "synopsis_lang": "es",
-      "poster": "/6ayAk61nDOMUKa71nipvIYIxzrc.jpg",
-      "posterSource": "tmdb",
-      "lbSlug": "kanekalon",
-      "_src": {
-        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
-        "date": "2026-08-02",
-        "linea_raw": "Kanekalon (Sara J. Asprilla) - 12'30 - Colombia",
-        "tmdb_id": 1454683
-      },
-      "year": "2025",
-      "synopsis_en": "Teyo, a young trans woman, prepares to enter her new female school. In the middle of a trip through Quibdó, a hot city of sound, rhythms and glances that she faces before entering class converge.",
-      "_inherited": {
-        "synopsis_en": "tmdb-1454683"
-      }
-    },
-    {
-      "title": "BERTHA",
-      "director": "Laura Asprilla",
-      "duration": "13 min",
-      "country": "Colombia",
-      "section": "Cortometraje de Ficción",
-      "genre": "",
-      "synopsis": "",
-      "synopsis_lang": "es",
-      "poster": "",
-      "posterSource": "",
-      "_src": {
-        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
-        "date": "2026-08-02",
-        "linea_raw": "BERTHA (Laura Asprilla) - 12'44 - Colombia"
-      }
-    },
-    {
-      "title": "The Clay Vase",
-      "director": "Ernestina Miranda, Mar Aje",
-      "duration": "14 min",
-      "country": "Colombia",
-      "section": "Cortometraje de Ficción",
-      "genre": "Experimental",
-      "synopsis": "",
-      "synopsis_lang": "es",
-      "poster": "",
-      "posterSource": "",
-      "_src": {
-        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
-        "date": "2026-08-02",
-        "linea_raw": "The Clay Vase (Ernestina Miranda, Mar Aje) - 13'47 - Colombia"
-      },
-      "year": "2025",
-      "title_orig": "La tinaja",
-      "_inherited": {
-        "genre": "siembrafest-2026",
-        "year": "siembrafest-2026",
-        "title_orig": "siembrafest-2026"
-      }
-    },
-    {
-      "title": "305 Fishkill Avenue",
-      "director": "Ramel Westry",
-      "duration": "15 min",
-      "country": "Estados Unidos",
-      "section": "Cortometraje de Ficción",
-      "genre": "",
-      "synopsis": "",
-      "synopsis_lang": "es",
-      "poster": "",
-      "posterSource": "",
-      "_src": {
-        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
-        "date": "2026-08-02",
-        "linea_raw": "305 Fishkill Avenue (Ramel Westry) - 15' - United States"
-      }
-    },
-    {
-      "title": "Gloria",
-      "director": "Marvin Yamb",
-      "duration": "15 min",
-      "country": "Guayana Francesa",
-      "section": "Cortometraje de Ficción",
-      "genre": "",
-      "synopsis": "",
-      "synopsis_lang": "es",
-      "poster": "",
-      "posterSource": "",
-      "_src": {
-        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
-        "date": "2026-08-02",
-        "linea_raw": "Gloria (Marvin Yamb) - 15' - French Guiana"
-      }
-    },
-    {
-      "title": "The Last Dance",
-      "director": "Hayden Mclean",
-      "duration": "17 min",
-      "country": "Reino Unido",
-      "section": "Cortometraje de Ficción",
-      "genre": "",
-      "synopsis": "",
-      "synopsis_lang": "es",
-      "poster": "",
-      "posterSource": "",
-      "_src": {
-        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
-        "date": "2026-08-02",
-        "linea_raw": "The Last Dance (Hayden Mclean) - 16'39 - United Kingdom"
-      }
-    },
-    {
-      "title": "VICHE",
-      "director": "Jorge Eliecer Leudo Murillo",
-      "duration": "17 min",
-      "country": "Colombia",
-      "section": "Cortometraje de Ficción",
-      "genre": "Familia",
-      "synopsis": "",
-      "synopsis_lang": "es",
-      "poster": "/uwM4DppRwhaYVXq2WPxtFEjF1F0.jpg",
-      "posterSource": "tmdb",
-      "lbSlug": "viche",
-      "_src": {
-        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
-        "date": "2026-08-02",
-        "linea_raw": "VICHE (Jorge Eliecer Leudo Murillo) - 17'10 - Colombia",
-        "tmdb_id": 1496482
-      },
-      "year": "2025",
-      "synopsis_en": "In the heart of Chocó, Diógenes, a young Afro-descendant university student, lives trapped between the traditions of his grandfather Anacleto, a master viche producer, and his own aspirations to go out into the world and build a different life.",
-      "_inherited": {
-        "synopsis_en": "tmdb-1496482"
-      }
-    },
-    {
-      "title": "Happy Meal",
-      "director": "Johanna Makabi",
-      "duration": "20 min",
-      "country": "Francia",
-      "section": "Cortometraje de Ficción",
-      "genre": "",
-      "synopsis": "",
-      "synopsis_lang": "es",
-      "poster": "",
-      "posterSource": "",
-      "_src": {
-        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
-        "date": "2026-08-02",
-        "linea_raw": "Happy Meal (Johanna Makabi) - 19'50 - France"
-      }
-    },
-    {
-      "title": "Waterfront Memories",
-      "director": "Marton Olympio",
-      "duration": "20 min",
-      "country": "Brasil",
-      "section": "Cortometraje de Ficción",
-      "genre": "",
-      "synopsis": "",
-      "synopsis_lang": "es",
-      "poster": "",
-      "posterSource": "",
-      "_src": {
-        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
-        "date": "2026-08-02",
-        "linea_raw": "Waterfront Memories (Marton Olympio) - 20' - Brazil"
-      }
-    },
-    {
-      "title": "One Sunday",
-      "director": "Day Sena",
-      "duration": "20 min",
-      "country": "Brasil",
-      "section": "Cortometraje de Ficción",
-      "genre": "",
-      "synopsis": "",
-      "synopsis_lang": "es",
-      "poster": "",
-      "posterSource": "",
-      "_src": {
-        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
-        "date": "2026-08-02",
-        "linea_raw": "One Sunday (Day Sena) - 20' - Brazil"
-      }
-    },
-    {
-      "title": "The One who Cries",
-      "director": "Cyrille Guei",
-      "duration": "20 min",
-      "country": "Francia",
-      "section": "Cortometraje de Ficción",
-      "genre": "",
-      "synopsis": "",
-      "synopsis_lang": "es",
-      "poster": "",
-      "posterSource": "",
-      "_src": {
-        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
-        "date": "2026-08-02",
-        "linea_raw": "The One who Cries (Cyrille Guei) - 20' - France"
-      }
-    },
-    {
-      "title": "Amelia",
-      "director": "Badewa Adeseye Ajibade",
-      "duration": "23 min",
-      "country": "Nigeria",
-      "section": "Cortometraje de Ficción",
-      "genre": "",
-      "synopsis": "",
-      "synopsis_lang": "es",
-      "poster": "",
-      "posterSource": "",
-      "_src": {
-        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
-        "date": "2026-08-02",
-        "linea_raw": "Amelia (Badewa Adeseye Ajibade) - 23'03 - Nigeria"
-      }
-    },
-    {
-      "title": "Mojugba",
-      "director": "Gustavo Alonso Arias",
-      "duration": "24 min",
-      "country": "Colombia",
-      "section": "Cortometraje de Ficción",
-      "genre": "",
-      "synopsis": "",
-      "synopsis_lang": "es",
-      "poster": "",
-      "posterSource": "",
-      "_src": {
-        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
-        "date": "2026-08-02",
-        "linea_raw": "Mojugba (Gustavo Alonso Arias) - 23'33 - Colombia"
-      }
-    },
-    {
-      "title": "A Cor da Patroa",
-      "director": "Milena Anjos",
-      "duration": "25 min",
-      "country": "Brasil",
-      "section": "Cortometraje de Ficción",
-      "genre": "Drama",
-      "synopsis": "",
-      "synopsis_lang": "es",
-      "poster": "/2btPt3kZfuoG44dxktYikFOkbEf.jpg",
-      "posterSource": "tmdb",
-      "lbSlug": "a-cor-da-patroa",
-      "_src": {
-        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
-        "date": "2026-08-02",
-        "linea_raw": "A Cor da Patroa (Milena Anjos) - 24'48 - Brazil",
-        "tmdb_id": 1657249
-      }
-    },
-    {
-      "title": "Cafe ?",
-      "director": "Bamar Kane",
-      "duration": "25 min",
-      "country": "Francia",
-      "section": "Cortometraje de Ficción",
-      "genre": "",
-      "synopsis": "",
-      "synopsis_lang": "es",
-      "poster": "",
-      "posterSource": "",
-      "_src": {
-        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
-        "date": "2026-08-02",
-        "linea_raw": "Cafe ? (Bamar Kane) - 24'59 - France"
-      }
-    },
-    {
-      "title": "Altanegra",
-      "director": "Raiza De La Hoz, Daniela Ponce",
-      "duration": "26 min",
-      "country": "Colombia",
-      "section": "Cortometraje de Ficción",
-      "genre": "",
-      "synopsis": "",
-      "synopsis_lang": "es",
-      "poster": "",
-      "posterSource": "",
-      "_src": {
-        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
-        "date": "2026-08-02",
-        "linea_raw": "Altanegra (Raiza De La Hoz, Daniela Ponce) - 25'59 - Colombia"
-      }
-    },
-    {
-      "title": "When the world broke open",
-      "director": "Desiree Mbakumua Meiffret",
-      "duration": "30 min",
-      "country": "Estados Unidos",
-      "section": "Cortometraje de Ficción",
-      "genre": "",
-      "synopsis": "",
-      "synopsis_lang": "es",
-      "poster": "",
-      "posterSource": "",
-      "_src": {
-        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
-        "date": "2026-08-02",
-        "linea_raw": "When the world broke open (Desiree Mbakumua Meiffret) - 29'59 - United States"
-      }
-    },
-    {
-      "title": "Amazonas Cocinas Indigenas de Selva y Rio",
-      "director": "Jairo Garrido",
-      "duration": "13 min",
-      "country": "Colombia",
-      "section": "Cortometraje Documental",
-      "genre": "",
-      "synopsis": "",
-      "synopsis_lang": "es",
-      "poster": "",
-      "posterSource": "",
-      "_src": {
-        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
-        "date": "2026-08-02",
-        "linea_raw": "Amazonas Cocinas Indigenas de Selva y Rio (Jairo Garrido) - 13' - Colombia"
-      }
-    },
-    {
-      "title": "Carabali",
-      "director": "Medhin Tewolde",
-      "duration": "18 min",
-      "country": "México",
-      "section": "Cortometraje Documental",
-      "genre": "",
-      "synopsis": "",
-      "synopsis_lang": "es",
-      "poster": "",
-      "posterSource": "",
-      "_src": {
-        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
-        "date": "2026-08-02",
-        "linea_raw": "Carabali (Medhin Tewolde) - 18'20 - Mexico"
-      }
-    },
-    {
-      "title": "A King Displaced",
-      "director": "Olayinka Eno Babalola",
-      "duration": "20 min",
-      "country": "Nigeria",
-      "section": "Cortometraje Documental",
-      "genre": "",
-      "synopsis": "",
-      "synopsis_lang": "es",
-      "poster": "",
-      "posterSource": "",
-      "_src": {
-        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
-        "date": "2026-08-02",
-        "linea_raw": "A King Displaced (Olayinka Eno Babalola) - 19'57 - Nigeria"
-      }
-    },
-    {
-      "title": "Mi viche todo el dia",
-      "director": "Juan Camilo Moreno",
-      "duration": "26 min",
-      "country": "Colombia",
-      "section": "Cortometraje Documental",
-      "genre": "Documental",
-      "synopsis": "",
-      "synopsis_lang": "es",
-      "poster": "",
-      "posterSource": "",
-      "lbSlug": "my-daily-viche",
-      "_src": {
-        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
-        "date": "2026-08-02",
-        "linea_raw": "Mi viche todo el dia (Juan Camilo Moreno) - 26'26 - Colombia (out of competition)",
-        "tmdb_id": 1593596
-      },
-      "_out_of_competition": "out of competition",
-      "year": "2025",
-      "synopsis_en": "In the Medio Atrato region of Chocó, Ana Panesso and her community grow sugarcane and make viche, an ancestral beverage that was once prohibited but now is in vogue. Through food, river trips, and music, viche and its knowledge not only shape people s daily lives but also raise the question of a just future, where viche serves as food, sustenance, and identity for Black families.",
-      "_inherited": {
-        "synopsis_en": "tmdb-1593596"
-      }
-    },
-    {
-      "title": "Stories from La Guajirita",
-      "director": "David Antonio Diaz de la rosa",
-      "duration": "51 min",
-      "country": "Colombia",
-      "section": "Cortometraje Documental",
-      "genre": "",
-      "synopsis": "",
-      "synopsis_lang": "es",
-      "poster": "",
-      "posterSource": "",
-      "_src": {
-        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
-        "date": "2026-08-02",
-        "linea_raw": "Stories from La Guajirita (David Antonio Diaz de la rosa) - 51'19 - Colombia"
-      }
-    },
-    {
-      "title": "Sisters in Destiny: Angela Davis & Gerty Archimede",
-      "director": "Pascal Frederic Archimede, Dimitry Zandronis",
-      "duration": "53 min",
-      "country": "Guadalupe",
-      "section": "Cortometraje Documental",
-      "genre": "",
-      "synopsis": "",
-      "synopsis_lang": "es",
-      "poster": "",
-      "posterSource": "",
-      "_src": {
-        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
-        "date": "2026-08-02",
-        "linea_raw": "Sisters in Destiny: Angela Davis & Gerty Archimede (Pascal Frederic Archimede, Dimitry Zandronis) - 52'40 - Guadeloupe"
-      }
-    },
-    {
-      "title": "The Madmen Coach",
-      "director": "Carlo Liberatore",
-      "duration": "60 min",
-      "country": "Italia (Senegal)",
-      "section": "Largometraje Documental",
-      "genre": "Documental",
-      "synopsis": "",
-      "synopsis_lang": "es",
-      "poster": "/D8N4FBRKkPM8laxkVHPiv6ZDfY.jpg",
-      "posterSource": "tmdb",
-      "lbSlug": "the-madmen-coach",
-      "_src": {
-        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
-        "date": "2026-08-02",
-        "linea_raw": "The Madmen Coach (Carlo Liberatore) - 60' - Italy, Senegal",
-        "tmdb_id": 1675697
-      }
-    },
-    {
-      "title": "The Travelers",
-      "director": "David Bingong",
-      "duration": "60 min",
-      "country": "Camerún (España)",
-      "section": "Largometraje Documental",
-      "genre": "",
-      "synopsis": "",
-      "synopsis_lang": "es",
-      "poster": "",
-      "posterSource": "",
-      "_src": {
-        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
-        "date": "2026-08-02",
-        "linea_raw": "The Travelers (David Bingong) - 60'20 - Cameroon, Spain"
-      }
-    },
-    {
-      "title": "Father's Day",
-      "director": "Ayana O'Shun",
-      "duration": "74 min",
-      "country": "Canadá",
-      "section": "Largometraje Documental",
-      "genre": "",
-      "synopsis": "",
-      "synopsis_lang": "es",
-      "poster": "",
-      "posterSource": "",
-      "_src": {
-        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
-        "date": "2026-08-02",
-        "linea_raw": "Father's Day (Ayana O'Shun) - 74' - Canada"
-      }
-    },
-    {
-      "title": "Surviving Biafra",
-      "director": "Meji Alabi, Leke Alabi-Isama",
-      "duration": "75 min",
-      "country": "Nigeria (Reino Unido)",
-      "section": "Largometraje Documental",
-      "genre": "Documental",
-      "synopsis": "",
-      "synopsis_lang": "es",
-      "poster": "/cEcb4J4zVAq80jVVYWYBsrgm7Yk.jpg",
-      "posterSource": "tmdb",
-      "lbSlug": "surviving-biafra",
-      "_src": {
-        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
-        "date": "2026-08-02",
-        "linea_raw": "Surviving Biafra (Meji Alabi, Leke Alabi-Isama) - 75' - Nigeria, United Kingdom",
-        "tmdb_id": 1713898
-      },
-      "year": "2026",
-      "synopsis_en": "Some of the last survivors from Nigeria’s Civil War, also known as the Biafran War, share their memories from the frontline.",
-      "_inherited": {
-        "synopsis_en": "tmdb-1713898"
-      }
-    },
-    {
-      "title": "The Banjo Boys",
-      "director": "Johan R Nayar",
-      "duration": "76 min",
-      "country": "Alemania (Malaui, Reino Unido)",
-      "section": "Largometraje Documental",
-      "genre": "Documental, Música",
-      "synopsis": "",
-      "synopsis_lang": "es",
-      "poster": "/6CmwyWw15chXWgBcYi5qBYtcIGc.jpg",
-      "posterSource": "tmdb",
-      "lbSlug": "the-banjo-boys",
-      "_src": {
-        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
-        "date": "2026-08-02",
-        "linea_raw": "The Banjo Boys (Johan R Nayar) - 76' - Germany, Malawi, United Kingdom",
-        "tmdb_id": 1547480
-      },
-      "year": "2025",
-      "synopsis_en": "The Banjo Boys follows the rise of Madalitso Band, Malawian musicians Yobu Maligwa and Yosefe Kalekeni, who craft a banjo, a one-stringed babatone, and foot drum, creating a sound that moves audiences. Once mocked as madmen in Lilongwe’s streets, they meet Neil Nayar, a British musician drawn to Malawi’s spirit. Their chance encounter sparks a trio, propelling them from local busking to global stages like Sauti za Busara, WOMAD, and Joshua Tree. Facing visa struggles, personal tragedies—including original member Rice’s imprisonment for murder—and cultural tensions, their grit fuels joyous performances. Yobu’s pastoral visions, Yosefe’s resilience, and Neil’s purpose drive their bond. Their minimalist sound bridges continents, culminating in a 2023 world tour and a legendary Malawi homecoming. Intimate interviews and vibrant performances reveal music’s power to unite and transform.",
-      "_inherited": {
-        "synopsis_en": "tmdb-1547480"
-      }
-    },
-    {
-      "title": "Viva Yurumangui",
-      "director": "Emma Christopher, Sergio Leyva Seiglie",
-      "duration": "80 min",
-      "country": "Colombia",
-      "section": "Largometraje Documental",
-      "genre": "",
-      "synopsis": "",
-      "synopsis_lang": "es",
-      "poster": "",
-      "posterSource": "",
-      "_src": {
-        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
-        "date": "2026-08-02",
-        "linea_raw": "Viva Yurumangui (Emma Christopher, Sergio Leyva Seiglie) - 80' - Colombia"
-      }
-    },
-    {
-      "title": "Soñé su nombre",
-      "director": "Ángela Carabalí",
-      "duration": "85 min",
-      "country": "Colombia",
-      "section": "Largometraje Documental",
-      "genre": "DERECHOS HUMANOS",
-      "synopsis": "Después de 30 años negando su dolor, Ángela se enfrenta a su pasado cuando su padre se le aparece en un sueño y le pide que lo busque. Junto a su hermana Juliana, emprende un viaje por Colombia hasta los terriotiros indígenas donde su padre, un agricultor afrodescendiente, fue víctima de desaparición forzada.",
-      "synopsis_lang": "es",
-      "poster": "",
-      "posterSource": "",
-      "lbSlug": "i-dreamed-his-name",
-      "_src": {
-        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
-        "date": "2026-08-02",
-        "linea_raw": "Soñé su nombre (Ángela Carabalí) - 85' - Colombia (out of competition)"
-      },
-      "_out_of_competition": "out of competition",
-      "synopsis_en": "Thirty years after his forced disappearance, the filmmaker’s Afro Colombian father comes to her in a dream, asking her to find him. With her sister, she sets out on a journey of discovery across Colombia’s painful history, reconnecting with their father and his activism.",
-      "year": "2025",
-      "_inherited": {
-        "synopsis": "siembrafest-2026",
-        "synopsis_en": "siembrafest-2026",
-        "genre": "siembrafest-2026",
-        "lbSlug": "siembrafest-2026",
-        "year": "siembrafest-2026"
-      }
-    },
-    {
-      "title": "INITIATION INTO THE EIGHTH DIMENSION",
-      "director": "Lucas Silva",
-      "duration": "90 min",
-      "country": "Colombia",
-      "section": "Largometraje Documental",
-      "genre": "",
-      "synopsis": "",
-      "synopsis_lang": "es",
-      "poster": "",
-      "posterSource": "",
-      "_src": {
-        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
-        "date": "2026-08-02",
-        "linea_raw": "INITIATION INTO THE EIGHTH DIMENSION (Lucas Silva) - 90' - Colombia"
-      }
-    },
-    {
-      "title": "Orango",
-      "director": "Samuel Kay Forrest",
-      "duration": "94 min",
-      "country": "Guinea-Bisáu",
-      "section": "Largometraje Documental",
-      "genre": "",
-      "synopsis": "",
-      "synopsis_lang": "es",
-      "poster": "",
-      "posterSource": "",
-      "_src": {
-        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
-        "date": "2026-08-02",
-        "linea_raw": "Orango (Samuel Kay Forrest) - 94' - Guinea-Bissau"
-      }
-    },
-    {
-      "title": "Of Mud and Blood",
-      "director": "Jean-Gabriel Leynaud",
-      "duration": "94 min",
-      "country": "Congo (Francia)",
-      "section": "Largometraje Documental",
-      "genre": "",
-      "synopsis": "",
-      "synopsis_lang": "es",
-      "poster": "",
-      "posterSource": "",
-      "_src": {
-        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
-        "date": "2026-08-02",
-        "linea_raw": "Of Mud and Blood (Jean-Gabriel Leynaud) - 94' - Congo, France"
-      }
-    },
-    {
-      "title": "Hyphen",
-      "director": "Reine Razzouk",
-      "duration": "98 min",
-      "country": "Líbano",
-      "section": "Largometraje Documental",
-      "genre": "",
-      "synopsis": "",
-      "synopsis_lang": "es",
-      "poster": "",
-      "posterSource": "",
-      "_src": {
-        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
-        "date": "2026-08-02",
-        "linea_raw": "Hyphen (Reine Razzouk) - 98' - Lebanon (out of competition)"
-      },
-      "_out_of_competition": "out of competition"
-    },
-    {
-      "title": "Three Black Men",
-      "director": "Sienna McLean-LoGreco",
-      "duration": "99 min",
-      "country": "Estados Unidos",
-      "section": "Largometraje Documental",
-      "genre": "",
-      "synopsis": "¿Puede un viaje hacia el pasado abrir nuevas posibilidades para la Negritud? Tres hombres negros recorren a la inversa la ruta transatlántica del comercio de esclavos, de Los Ángeles (California) a Salvador de Bahía (Brasil) y, finalmente, a Accra (Ghana). En este recorrido exploran aspectos fundamentales de la historia negra y las representaciones de la migración forzosa, la supervivencia y la desaparición de los millones de personas que cruzaron el Atlántico; y brazan la identidad negra como una fuente viva de conexión, creación y renovación.",
-      "synopsis_lang": "es",
-      "poster": "",
-      "posterSource": "",
-      "lbSlug": "three-black-men",
-      "_src": {
-        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
-        "date": "2026-08-02",
-        "linea_raw": "Three Black Men (Sienna McLean-LoGreco) - 99'17 - United States",
-        "tmdb_id": 1616280
-      },
-      "synopsis_en": "Can blackness escape the violence of its origins?  Three Black men set out on a transformative journey along the transatlantic slave route in reverse, exploring resistance, liberation and a new understanding of Blackness.  Their epic voyage takes them from Los Angeles to Salvador da Bahia in Brazil, and finally to Accra in Ghana. Their mission is to redefine Blackness, heal from historical trauma, and envision new paths to liberation beyond the constraints of white supremacy.",
-      "year": "2026",
-      "_inherited": {
-        "synopsis": "ficdeh-2026",
-        "synopsis_en": "ficdeh-2026",
-        "lbSlug": "ficdeh-2026",
-        "year": "ficdeh-2026"
-      }
-    },
-    {
-      "title": "Wrong Generation",
-      "director": "Shili Munyama",
-      "duration": "65 min",
-      "country": "Namibia",
-      "section": "Largometraje de Ficción",
-      "genre": "",
-      "synopsis": "",
-      "synopsis_lang": "es",
-      "poster": "",
-      "posterSource": "",
-      "_src": {
-        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
-        "date": "2026-08-02",
-        "linea_raw": "Wrong Generation (Shili Munyama) - 64'53 - Namibia"
-      }
-    },
-    {
-      "title": "Aisha Can't Fly Away",
-      "director": "Morad Mostafa",
-      "duration": "90 min",
-      "country": "",
-      "section": "Largometraje de Ficción",
-      "genre": "",
-      "synopsis": "",
-      "synopsis_lang": "es",
-      "poster": "",
-      "posterSource": "",
-      "_src": {
-        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
-        "date": "2026-08-02",
-        "linea_raw": "Aisha Can't Fly Away (Morad Mostafa) - 90' - Not Specified"
-      }
-    },
-    {
-      "title": "Nunkui",
-      "director": "Verenice Benitez",
-      "duration": "90 min",
-      "country": "Chile (Ecuador, Alemania)",
-      "section": "Largometraje de Ficción",
-      "genre": "Drama",
-      "synopsis": "",
-      "synopsis_lang": "es",
-      "poster": "/p61q7EcIjvKpfmd8tXDlDdXCTr8.jpg",
-      "posterSource": "tmdb",
-      "lbSlug": "nunkui-2026",
-      "_src": {
-        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
-        "date": "2026-08-02",
-        "linea_raw": "Nunkui (Verenice Benitez) - 90' - Chile, Ecuador, Germany",
-        "tmdb_id": 1243032
-      },
-      "year": "2026",
-      "synopsis_en": "Nunkui, the female spirit of the garden. Nunkui, the name of a Shuar girl in a lush world of plants, animals, spirits and an extended family. Between premonitory dreams and mining conflicts in the Amazonian Cóndor mountain range, Nunkui searches for her place in the world, influenced by her grandfather Yaunchu, an old Shuar leader.",
-      "_inherited": {
-        "synopsis_en": "tmdb-1243032"
-      }
-    },
-    {
-      "title": "THE ANCHORAGE OF THE TIME",
-      "director": "Sol de Carvalho",
-      "duration": "105 min",
-      "country": "Mozambique",
-      "section": "Largometraje de Ficción",
-      "genre": "Drama",
-      "synopsis": "",
-      "synopsis_lang": "es",
-      "poster": "",
-      "posterSource": "",
-      "lbSlug": "the-anchorage-of-time",
-      "_src": {
-        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
-        "date": "2026-08-02",
-        "linea_raw": "THE ANCHORAGE OF THE TIME (Sol de Carvalho) - 105' - Mozambique"
-      },
-      "year": "2024"
-    },
-    {
-      "title": "LAUNDRY (Uhlanjululo)",
-      "director": "Zamo Mkhwanazi",
-      "duration": "106 min",
-      "country": "Sudáfrica (Suiza)",
-      "section": "Largometraje de Ficción",
-      "genre": "",
-      "synopsis": "",
-      "synopsis_lang": "es",
-      "poster": "",
-      "posterSource": "",
-      "_src": {
-        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
-        "date": "2026-08-02",
-        "linea_raw": "LAUNDRY (Uhlanjululo) (Zamo Mkhwanazi) - 105'54 - South Africa, Switzerland"
-      }
-    },
-    {
-      "title": "Sapeur: The Great Scam",
-      "director": "Denis F. Miala",
-      "duration": "120 min",
-      "country": "Angola",
-      "section": "Largometraje de Ficción",
-      "genre": "",
-      "synopsis": "",
-      "synopsis_lang": "es",
-      "poster": "",
-      "posterSource": "",
-      "_src": {
-        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
-        "date": "2026-08-02",
-        "linea_raw": "Sapeur: The Great Scam (Denis F. Miala) - 120' - Angola (out of competition/Work in progress)"
-      },
-      "_out_of_competition": "out of competition/Work in progress"
-    },
-    {
-      "title": "God's Work",
-      "director": "Michael James",
-      "duration": "126 min",
-      "country": "Sudáfrica",
-      "section": "Largometraje de Ficción",
-      "genre": "",
-      "synopsis": "",
-      "synopsis_lang": "es",
-      "poster": "",
-      "posterSource": "",
-      "_src": {
-        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
-        "date": "2026-08-02",
-        "linea_raw": "God's Work (Michael James) - 126' - South Africa"
-      }
-    }
-  ]
+  {
+   "k": "2026-09-16",
+   "d": 16,
+   "lbl": "MIÉ"
+  },
+  {
+   "k": "2026-09-17",
+   "d": 17,
+   "lbl": "JUE"
+  },
+  {
+   "k": "2026-09-18",
+   "d": 18,
+   "lbl": "VIE"
+  },
+  {
+   "k": "2026-09-19",
+   "d": 19,
+   "lbl": "SÁB"
+  },
+  {
+   "k": "2026-09-20",
+   "d": 20,
+   "lbl": "DOM"
+  }
+ ],
+ "dayKeys": [
+  "2026-09-14",
+  "2026-09-15",
+  "2026-09-16",
+  "2026-09-17",
+  "2026-09-18",
+  "2026-09-19",
+  "2026-09-20"
+ ],
+ "dayShort": {
+  "2026-09-14": "LUN 14",
+  "2026-09-15": "MAR 15",
+  "2026-09-16": "MIÉ 16",
+  "2026-09-17": "JUE 17",
+  "2026-09-18": "VIE 18",
+  "2026-09-19": "SÁB 19",
+  "2026-09-20": "DOM 20"
+ },
+ "dayShort_en": {
+  "2026-09-14": "MON 14",
+  "2026-09-15": "TUE 15",
+  "2026-09-16": "WED 16",
+  "2026-09-17": "THU 17",
+  "2026-09-18": "FRI 18",
+  "2026-09-19": "SAT 19",
+  "2026-09-20": "SUN 20"
+ },
+ "dayLong": {
+  "2026-09-14": "Lunes 14 de septiembre",
+  "2026-09-15": "Martes 15 de septiembre",
+  "2026-09-16": "Miércoles 16 de septiembre",
+  "2026-09-17": "Jueves 17 de septiembre",
+  "2026-09-18": "Viernes 18 de septiembre",
+  "2026-09-19": "Sábado 19 de septiembre",
+  "2026-09-20": "Domingo 20 de septiembre"
+ },
+ "prioLimit": 4,
+ "sharedSlotIsOneScreening": false,
+ "sections": {
+  "Prisma Femenino": {
+   "oficial": "Prisma Femenino",
+   "en": "",
+   "archetype": "Perspectivas / Miradas",
+   "color": "#E875FC",
+   "order": 7,
+   "_todas_las_obras_multi": true
+  },
+  "Imaginarios Afrodisruptivos": {
+   "oficial": "Imaginarios Afrodisruptivos",
+   "en": "",
+   "archetype": "Perspectivas / Miradas",
+   "color": "#15A327",
+   "order": 2,
+   "_todas_las_obras_multi": true
+  },
+  "Fronteras Latam": {
+   "oficial": "Fronteras Latam",
+   "en": "",
+   "archetype": "Muestra / País",
+   "color": "#62778B",
+   "order": 3,
+   "_todas_las_obras_multi": true
+  },
+  "Panorama Colombiano": {
+   "oficial": "Panorama Colombiano",
+   "en": "",
+   "archetype": "Muestra / País",
+   "color": "#F0CD0B",
+   "order": 1,
+   "_todas_las_obras_multi": true
+  },
+  "Panorama Diaspórica": {
+   "oficial": "Panorama Diaspórica",
+   "en": "",
+   "archetype": "Muestra / País",
+   "color": "#57248A",
+   "order": 14,
+   "_todas_las_obras_multi": true
+  },
+  "Panorama Africano": {
+   "oficial": "Panorama Africano",
+   "en": "",
+   "archetype": "Muestra / País",
+   "color": "#E05B1B",
+   "order": 1,
+   "_todas_las_obras_multi": true
+  },
+  "Otra Mirada": {
+   "oficial": "Otra Mirada",
+   "en": "",
+   "archetype": "Perspectivas / Miradas",
+   "color": "#1839D1",
+   "order": 4,
+   "_todas_las_obras_multi": true
+  },
+  "Diálogo Improbable": {
+   "oficial": "Diálogo Improbable",
+   "en": "",
+   "archetype": "Charlas / Industria",
+   "color": "#C3090C",
+   "order": 10,
+   "_todas_las_obras_multi": true
+  }
+ },
+ "venues": {
+  "Biblioteca Departamental - Quibdó": {
+   "short": "Biblioteca Departamental - Quibdó",
+   "lat": null,
+   "lng": null,
+   "city": "Quibdó",
+   "address": "",
+   "_contact": {
+    "email": "secretariaskui@airplan.aero",
+    "phone": "+57 (604) 520 8542",
+    "website": "https://www.aeropuertoquibdo.co/biblioteca"
+   }
+  },
+  "Cinemateca de Bogotá - Bogotá": {
+   "short": "Cinemateca de Bogotá - Bogotá",
+   "lat": null,
+   "lng": null,
+   "city": "Bogotá",
+   "address": "Cra. 3 #19-10, Santa Fé, Bogotá, Cundinamarca, Colombia",
+   "_contact": {
+    "email": "contactenos@idartes.gov.co",
+    "phone": "+57 601 379 5750 Ext. 4504",
+    "website": "https://cinematecadebogota.gov.co/"
+   }
+  },
+  "Museo Nacional - Bogotá": {
+   "short": "Museo Nacional - Bogotá",
+   "lat": null,
+   "lng": null,
+   "city": "Bogotá",
+   "address": "Ak 7 #28-66, Bogotá, Colombia",
+   "_contact": {
+    "email": "prensa@museonacional.gov.co",
+    "phone": "+60(1) 381 6470",
+    "website": "https://www.museonacional.gov.co/"
+   }
+  }
+ },
+ "films": [
+  {
+   "title": "MUESTRA ARTISTICA",
+   "type": "event",
+   "duration": "47580 min",
+   "synopsis": "\"Magia en el Monte\" — Mery Palmezzano Muestra artística de apertura · Vernissage QAFF 2026 · Quibdó Magia en el Monte es una instalación inmersiva que transforma el espacio de la Biblioteca Pública Arnoldo Palacios Mosquera en un lugar mítico: una manigua interior donde lo femenino florece en su dimensión más elevada. A través de ilustración y alambrismo, la propuesta invita a quien entra a detenerse, a reconocer la magia que habita en la naturaleza y en las mujeres que la guardan.",
+   "synopsis_lang": "es",
+   "section": "Prisma Femenino",
+   "year": "",
+   "day": "2026-09-14",
+   "time": "09:00",
+   "venue": "Biblioteca Departamental - Quibdó",
+   "day_order": 0,
+   "has_qa": false,
+   "is_cortos": false,
+   "film_list": null,
+   "requires_registration": true,
+   "is_free": true,
+   "_src": {
+    "boom_event_id": 3946755,
+    "stills": [
+     "https://static.wixstatic.com/media/736095_2084eae2d9c74d88854893335bf2f3f4~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_f3fa5eb011224991af2b459d43616681~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_296877c753024a0080fcf3a7929e65d7~mv2.jpg"
+    ]
+   },
+   "event_kind": ""
+  },
+  {
+   "title": "FACE TO FACE",
+   "director": "Florent Mahoukou",
+   "duration": "20 min",
+   "country": "Congo",
+   "section": "Imaginarios Afrodisruptivos",
+   "genre": "",
+   "synopsis": "Producer: Florent Mahoukou At a difficult moment in his personal and professional life, choreographer Florent Mahoukou returns to the city of Pointe Noire, where, for him, everything began with dance.",
+   "synopsis_lang": "en",
+   "poster": "",
+   "posterSource": "",
+   "_src": {
+    "boom_event_id": 3946855,
+    "stills": [
+     "https://static.wixstatic.com/media/736095_b1a1b967304e4c949fdfa993823e05ad~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_c26d27daafcc43359507088156abe876~mv2.jpg"
+    ]
+   },
+   "day": "2026-09-14",
+   "time": "10:00",
+   "venue": "Biblioteca Departamental - Quibdó",
+   "day_order": 0,
+   "has_qa": false,
+   "is_cortos": false,
+   "film_list": null,
+   "requires_registration": true,
+   "is_free": true,
+   "type": "film",
+   "year": "2021",
+   "_inherited": {
+    "year": "qaff-event-desc",
+    "synopsis": "qaff-event-desc"
+   }
+  },
+  {
+   "title": "Manman Chadwon",
+   "director": "Gwladys Gambie",
+   "duration": "10 min",
+   "country": "Martinica",
+   "section": "Fronteras Latam",
+   "genre": "",
+   "synopsis": "An anthem to fantastic femininity, to life, to freedom, and to metamorphosis, at once intimate and revolutionary. It is a sensory chant, a dreamlike reflection on the feminine condition within a destructive masculine world.",
+   "synopsis_lang": "en",
+   "poster": "",
+   "posterSource": "",
+   "_src": {
+    "boom_event_id": 3946856,
+    "stills": [
+     "https://static.wixstatic.com/media/736095_31d1ae51d8894c2cbf16dab95262a37a~mv2.png",
+     "https://static.wixstatic.com/media/736095_1bbc7797322049888ed079cb9a44e65a~mv2.jpg"
+    ]
+   },
+   "day": "2026-09-14",
+   "time": "10:25",
+   "venue": "Biblioteca Departamental - Quibdó",
+   "day_order": 0,
+   "has_qa": false,
+   "is_cortos": false,
+   "film_list": null,
+   "requires_registration": true,
+   "is_free": true,
+   "type": "film",
+   "year": "2022",
+   "_inherited": {
+    "year": "qaff-event-desc",
+    "synopsis": "qaff-event-desc"
+   }
+  },
+  {
+   "title": "CAPTAIN ANTHONY",
+   "director": "Gregory Robinson",
+   "duration": "8 min",
+   "country": "Colombia",
+   "section": "Panorama Colombiano",
+   "genre": "",
+   "synopsis": "Executive Producer: Alex Cottrell Director of Photography: Lucas Mejía In 1942, Anthony is a ten-year-old boy living on the island of Providencia, Colombia. He dreams of becoming a great schooner captain like his father, and goes to school every day to learn about the sea and navigation from his teacher Fabio.",
+   "synopsis_lang": "en",
+   "poster": "",
+   "posterSource": "",
+   "_src": {
+    "boom_event_id": 3946782,
+    "stills": [
+     "https://static.wixstatic.com/media/736095_a65f252ebf10453abf3bd1ba7b3810f9~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_f29d97e9cb9e4baa927754c18ff4854b~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_89237e018190462a8c28101fde094784~mv2.jpg"
+    ]
+   },
+   "day": "2026-09-14",
+   "time": "10:35",
+   "venue": "Biblioteca Departamental - Quibdó",
+   "day_order": 0,
+   "has_qa": false,
+   "is_cortos": false,
+   "film_list": null,
+   "requires_registration": true,
+   "is_free": true,
+   "type": "film",
+   "year": "2025",
+   "_inherited": {
+    "year": "qaff-event-desc",
+    "synopsis": "qaff-event-desc"
+   }
+  },
+  {
+   "title": "MANGO",
+   "director": "Joan Iyiola",
+   "duration": "11 min",
+   "country": "Francia (Reino Unido)",
+   "section": "Panorama Diaspórica",
+   "genre": "",
+   "synopsis": "Producers: Laura Jumel, Alison Holder, Mary Iyiola, Joan Iyiola Editors: Xanna Ward Dixon, Patrick Walsh Zadie is an independent florist who is privately suffering from fibroids but is determined to take her career to the next level. When a dream job arrives, Zadie searches for help in order to control her morphing body, but the unwanted growths threaten to take over.",
+   "synopsis_lang": "en",
+   "poster": "",
+   "posterSource": "",
+   "_src": {
+    "boom_event_id": 3946813,
+    "stills": [
+     "https://static.wixstatic.com/media/736095_4a26637fc7d44da4bed053ce4c54bbd9~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_2728b87f800e42aeadbfb540858da778~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_0290ca6859834bc5968bf0df8452f152~mv2.jpg"
+    ]
+   },
+   "day": "2026-09-14",
+   "time": "13:00",
+   "venue": "Biblioteca Departamental - Quibdó",
+   "day_order": 0,
+   "has_qa": false,
+   "is_cortos": false,
+   "film_list": null,
+   "requires_registration": true,
+   "is_free": true,
+   "type": "film",
+   "year": "2025",
+   "_inherited": {
+    "year": "qaff-event-desc",
+    "synopsis": "qaff-event-desc"
+   }
+  },
+  {
+   "title": "A King Displaced",
+   "director": "Olayinka Eno Babalola",
+   "duration": "20 min",
+   "country": "Nigeria",
+   "section": "Prisma Femenino",
+   "genre": "",
+   "synopsis": "Producer: Olayinka Eno Babalola Daniel Hungbeji navigates his daily life both as a fisherman and as a traditional ruler within the water settlement of Makoko, Lagos, Nigeria.",
+   "synopsis_lang": "en",
+   "poster": "",
+   "posterSource": "",
+   "_src": {
+    "boom_event_id": 3946814,
+    "stills": [
+     "https://static.wixstatic.com/media/736095_d49a4c2acfe44df88c10789d6c9556dd~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_7bc07f5da02d4093ac42614331986294~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_b5eb429ba2b348edb09fe7e8e5966336~mv2.jpg"
+    ]
+   },
+   "day": "2026-09-14",
+   "time": "13:15",
+   "venue": "Biblioteca Departamental - Quibdó",
+   "day_order": 0,
+   "has_qa": false,
+   "is_cortos": false,
+   "film_list": null,
+   "requires_registration": true,
+   "is_free": true,
+   "type": "film",
+   "year": "2026",
+   "_inherited": {
+    "year": "qaff-event-desc",
+    "synopsis": "qaff-event-desc"
+   }
+  },
+  {
+   "title": "A Cor da Patroa",
+   "director": "Milena Anjos",
+   "duration": "25 min",
+   "country": "Brasil",
+   "section": "Prisma Femenino",
+   "genre": "Drama",
+   "synopsis": "Producer: Heraldo de Deus With classes suspended due to police tension in retaliation for a community protest, a child accompanies his mother on a workday as a domestic worker and is surprised to meet her employer.",
+   "synopsis_lang": "en",
+   "poster": "/2btPt3kZfuoG44dxktYikFOkbEf.jpg",
+   "posterSource": "tmdb",
+   "lbSlug": "a-cor-da-patroa",
+   "_src": {
+    "boom_event_id": 3946815,
+    "stills": [
+     "https://static.wixstatic.com/media/736095_22a33bd244844e04bc76b9bb0a2180fc~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_48b97ff76346492daa8fdac90ea631a4~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_b5613165149c4a80970c199b2bd23b3f~mv2.jpg"
+    ]
+   },
+   "day": "2026-09-14",
+   "time": "13:35",
+   "venue": "Biblioteca Departamental - Quibdó",
+   "day_order": 0,
+   "has_qa": false,
+   "is_cortos": false,
+   "film_list": null,
+   "requires_registration": true,
+   "is_free": true,
+   "type": "film",
+   "year": "2026",
+   "_inherited": {
+    "year": "qaff-event-desc",
+    "synopsis": "qaff-event-desc"
+   }
+  },
+  {
+   "title": "Stories from La Guajirita",
+   "director": "David Antonio Diaz de la rosa",
+   "duration": "51 min",
+   "country": "Colombia",
+   "section": "Panorama Colombiano",
+   "genre": "",
+   "synopsis": "Producer: Edwin Ivan De Angel Barreto Relatos de la Guajirita tells the story of the Afro-descendant communities of Becerril, Cesar, through their memories, traditions, music, and oral narratives.",
+   "synopsis_lang": "en",
+   "poster": "",
+   "posterSource": "",
+   "_src": {
+    "boom_event_id": 3946816,
+    "stills": [
+     "https://static.wixstatic.com/media/736095_1cc2177695df4dd8b942def454108e67~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_0d44682f57bc41d3b51606fab550dba1~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_58402abccc1340cf91559c6ed4eb129b~mv2.jpg"
+    ]
+   },
+   "day": "2026-09-14",
+   "time": "14:00",
+   "venue": "Biblioteca Departamental - Quibdó",
+   "day_order": 0,
+   "has_qa": false,
+   "is_cortos": false,
+   "film_list": null,
+   "requires_registration": true,
+   "is_free": true,
+   "type": "film",
+   "year": "2025",
+   "_inherited": {
+    "year": "qaff-event-desc",
+    "synopsis": "qaff-event-desc"
+   }
+  },
+  {
+   "title": "Aisha Can't Fly Away",
+   "director": "Morad Mostafa",
+   "duration": "90 min",
+   "country": "",
+   "section": "Panorama Africano",
+   "genre": "",
+   "synopsis": "Producer: Sawsan Yusuf Aisha is a 26-year-old Sudanese caregiver living in a neighbourhood in the heart of Cairo, where she witnesses the tension between her fellow African migrants and local gangs.",
+   "synopsis_lang": "en",
+   "poster": "",
+   "posterSource": "",
+   "_src": {
+    "boom_event_id": 3946820,
+    "stills": [
+     "https://static.wixstatic.com/media/736095_2c454456040b45018ee8da47197fbadf~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_977b2b388f3e44d68f76bd0107870283~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_79d4616101d7449d8a6d2cbfd9f65629~mv2.jpg"
+    ]
+   },
+   "day": "2026-09-14",
+   "time": "15:00",
+   "venue": "Biblioteca Departamental - Quibdó",
+   "day_order": 0,
+   "has_qa": false,
+   "is_cortos": false,
+   "film_list": null,
+   "requires_registration": true,
+   "is_free": true,
+   "type": "film",
+   "year": "2025",
+   "_inherited": {
+    "year": "qaff-event-desc",
+    "synopsis": "qaff-event-desc"
+   }
+  },
+  {
+   "title": "Happy Meal",
+   "director": "Johanna Makabi",
+   "duration": "20 min",
+   "country": "Francia",
+   "section": "Prisma Femenino",
+   "genre": "",
+   "synopsis": "Producers: Sonia Makabi, Juliette Schrameck DOM, 32, is undergoing therapy. As the Christmas holidays come to an end, he is granted, for the first time in years, the right to spend a day alone with his daughters. A precious day... that he dreads seeing come to an end.",
+   "synopsis_lang": "en",
+   "poster": "",
+   "posterSource": "",
+   "_src": {
+    "boom_event_id": 3946818,
+    "stills": [
+     "https://static.wixstatic.com/media/736095_d6d0dc86c90b469aba71278ecaef263f~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_88440909b6fe40729478956e71265fb4~mv2.jpg"
+    ]
+   },
+   "day": "2026-09-14",
+   "time": "16:30",
+   "venue": "Biblioteca Departamental - Quibdó",
+   "day_order": 0,
+   "has_qa": false,
+   "is_cortos": false,
+   "film_list": null,
+   "requires_registration": true,
+   "is_free": true,
+   "type": "film",
+   "year": "2025",
+   "_inherited": {
+    "year": "qaff-event-desc",
+    "synopsis": "qaff-event-desc"
+   }
+  },
+  {
+   "title": "Leer en las gotas de lluvia",
+   "director": "Lilian Pallares, Charles Olsen",
+   "duration": "10 min",
+   "country": "España",
+   "section": "Imaginarios Afrodisruptivos",
+   "genre": "",
+   "synopsis": "Producer: Antenablue An Angolan artist and mother, her four-year-old daughter, and a New Zealand painter create imaginary worlds in new lands. These find echo in the poem by Xisca Minart, Read in Raindrops.",
+   "synopsis_lang": "en",
+   "poster": "",
+   "posterSource": "",
+   "_src": {
+    "boom_event_id": 3946817,
+    "stills": [
+     "https://static.wixstatic.com/media/736095_0e1ec849bc554e09b33c7cf9b245e2af~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_0cabc82ceeb54e6fb5b84df6a12991f6~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_d2c50677250241bcaf13d049639ef697~mv2.jpg"
+    ]
+   },
+   "day": "2026-09-14",
+   "time": "16:50",
+   "venue": "Biblioteca Departamental - Quibdó",
+   "day_order": 0,
+   "has_qa": false,
+   "is_cortos": false,
+   "film_list": null,
+   "requires_registration": true,
+   "is_free": true,
+   "type": "film",
+   "year": "2025",
+   "_inherited": {
+    "year": "qaff-event-desc",
+    "synopsis": "qaff-event-desc"
+   }
+  },
+  {
+   "title": "Gloria",
+   "director": "Marvin Yamb",
+   "duration": "15 min",
+   "country": "Guayana Francesa",
+   "section": "Fronteras Latam",
+   "genre": "",
+   "synopsis": "Producers: Murielle Thierrin, Alexandre Collombier When Gloria discovers a deep secret that her daughter Ilana confides in her, she struggles to react, trapped in the silence of religion and traditions that suffocate her family.",
+   "synopsis_lang": "en",
+   "poster": "",
+   "posterSource": "",
+   "_src": {
+    "boom_event_id": 3946819,
+    "stills": [
+     "https://static.wixstatic.com/media/736095_9210ad04b1d349dcbf9525f21eb6be5b~mv2.jpg"
+    ]
+   },
+   "day": "2026-09-14",
+   "time": "17:10",
+   "venue": "Biblioteca Departamental - Quibdó",
+   "day_order": 0,
+   "has_qa": false,
+   "is_cortos": false,
+   "film_list": null,
+   "requires_registration": true,
+   "is_free": true,
+   "type": "film",
+   "year": "2025",
+   "_inherited": {
+    "year": "qaff-event-desc",
+    "synopsis": "qaff-event-desc"
+   }
+  },
+  {
+   "title": "Free Fall",
+   "director": "Wilson Borja",
+   "duration": "9 min",
+   "country": "Colombia",
+   "section": "Panorama Colombiano",
+   "genre": "",
+   "synopsis": "Producers: Diego Felipe Rios, Maria Paula Lorgia Original Score: Carolina Borja Sound Design: Carolina Lucio Compositing: Carlos Andres Alarcón Animation: Simon Beltran, Juan David Aristizabal In a desperate attempt to escape isolation, a faceless character leaps from a ledge hoping to find his end, unaware that at the bottom of the fall, the laws of gravity do not apply to him: he bounces back.",
+   "synopsis_lang": "en",
+   "poster": "",
+   "posterSource": "",
+   "_src": {
+    "boom_event_id": 3946821,
+    "stills": [
+     "https://static.wixstatic.com/media/736095_9476c6ae3db849a3923c6ed232438c2a~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_ad7a89b2f6824379a6ea7a139d00f691~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_57e64c2cac8f4235bd926254484ce6bf~mv2.jpg"
+    ]
+   },
+   "day": "2026-09-15",
+   "time": "10:00",
+   "venue": "Biblioteca Departamental - Quibdó",
+   "day_order": 1,
+   "has_qa": false,
+   "is_cortos": false,
+   "film_list": null,
+   "requires_registration": true,
+   "is_free": true,
+   "type": "film",
+   "year": "2024",
+   "_inherited": {
+    "year": "qaff-event-desc",
+    "synopsis": "qaff-event-desc"
+   }
+  },
+  {
+   "title": "Concrete Moves",
+   "director": "Fagamou Fama Ndiaye",
+   "duration": "12 min",
+   "country": "Senegal",
+   "section": "Panorama Africano",
+   "genre": "Documental",
+   "synopsis": "Producers: Chloe Ortolé Diop, Fagamou Fama Ndiaye Concrete Moves is inspired by a childhood memory: the fear triggered by a snake during a school trip to the Mamelles lighthouse in Dakar. Returning to that same hill decades later.",
+   "synopsis_lang": "en",
+   "poster": "/7jmZ899cs6DHznSqbILVBLl16zH.jpg",
+   "posterSource": "tmdb",
+   "lbSlug": "concrete-moves",
+   "_src": {
+    "boom_event_id": 3946822,
+    "stills": [
+     "https://static.wixstatic.com/media/736095_5142609b1ca24fdd987bda7a217f1abb~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_401cd942fd5a4b0b9e3368bdf4c8d021~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_b992fbc9a68a4dec95dd9e70f6b5aea8~mv2.jpg"
+    ]
+   },
+   "year": "2026",
+   "synopsis_en": "Fagamou returns to the same hill that, decades ago, triggered her fear of snakes.",
+   "_inherited": {
+    "synopsis_en": "tmdb-1665627",
+    "synopsis": "qaff-event-desc"
+   },
+   "day": "2026-09-15",
+   "time": "10:15",
+   "venue": "Biblioteca Departamental - Quibdó",
+   "day_order": 1,
+   "has_qa": false,
+   "is_cortos": false,
+   "film_list": null,
+   "requires_registration": true,
+   "is_free": true,
+   "type": "film"
+  },
+  {
+   "title": "Viva Yurumangui",
+   "director": "Emma Christopher, Sergio Leyva Seiglie",
+   "duration": "80 min",
+   "country": "Colombia",
+   "section": "Panorama Colombiano",
+   "genre": "",
+   "synopsis": "Producer: Emma Christopher Cinematography: Javier Labrador Deulofeu, Sergio Leyva Seiglie, Yerson Arroyo Arroyo Editor: María Alejandra Briganti, Irene Cajias Sound Editor: Isabel Torres Reyes On the remote Pacific coast of Colombia, the inhabitants of the Yurumanguí palenque still fight for freedom, hundreds of years after their ancestors fled slavery.",
+   "synopsis_lang": "en",
+   "poster": "",
+   "posterSource": "",
+   "_src": {
+    "boom_event_id": 3946824,
+    "stills": [
+     "https://static.wixstatic.com/media/736095_e08b36d36b5e42dc8d1921578a756fce~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_ec951b281a034cef8d8def00e11be1a1~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_de24c08e3de844cb9c26de60168ad47c~mv2.jpg"
+    ]
+   },
+   "day": "2026-09-15",
+   "time": "10:30",
+   "venue": "Biblioteca Departamental - Quibdó",
+   "day_order": 1,
+   "has_qa": false,
+   "is_cortos": false,
+   "film_list": null,
+   "requires_registration": true,
+   "is_free": true,
+   "type": "film",
+   "year": "2025",
+   "_inherited": {
+    "year": "qaff-event-desc",
+    "synopsis": "qaff-event-desc"
+   }
+  },
+  {
+   "title": "Hacker Leonilia",
+   "director": "Gustavo Fontele Dourado",
+   "duration": "15 min",
+   "country": "Brasil",
+   "section": "Fronteras Latam",
+   "genre": "Animación, Drama",
+   "synopsis": "Producers: Gustavo Fontele Dourado, Luciana Menescal Landwehr, Rafael Moura, Lorena Figueiredo Production Companies: Fontele Studios, Algo Além Filmes, Avera Filmes, Toti Produções, Madá Produções In the future, an elderly hacker and embroiderer must confront her own traumas and use her skills to escape a virtual reality. This story is based on the life of my grandmother, Leonilia Ferreira.",
+   "synopsis_lang": "en",
+   "poster": "/4qBc6v5V0UZdYzhRzNukG1MHZH9.jpg",
+   "posterSource": "tmdb",
+   "lbSlug": "hacker-leonilia",
+   "_src": {
+    "boom_event_id": 3946825,
+    "stills": [
+     "https://static.wixstatic.com/media/736095_84db74106e07428b8e57dd2759373057~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_2dcdddd819f54289a0f99b2d7525df29~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_9afe0416de5d40a08fff7533a3389103~mv2.jpg"
+    ]
+   },
+   "year": "2025",
+   "synopsis_en": "An elderly hacker with a personal crisis needs to use her skills and memories to escape a metaverse in order to have a second chance.",
+   "_inherited": {
+    "synopsis_en": "tmdb-1539677",
+    "synopsis": "qaff-event-desc"
+   },
+   "day": "2026-09-15",
+   "time": "13:00",
+   "venue": "Biblioteca Departamental - Quibdó",
+   "day_order": 1,
+   "has_qa": false,
+   "is_cortos": false,
+   "film_list": null,
+   "requires_registration": true,
+   "is_free": true,
+   "type": "film"
+  },
+  {
+   "title": "The Last Dance",
+   "director": "Hayden Mclean",
+   "duration": "17 min",
+   "country": "Reino Unido",
+   "section": "Panorama Diaspórica",
+   "genre": "",
+   "synopsis": "Producers: Lurleen Johnson, Harold Salakianathan, Hayden Mclean, Ade Adesina When Fox's \"LA Bar\" is hit with a compulsory purchase order, a cornerstone of Caribbean life in 90's East London is threatened. As the city begins to forget, the community remembers.",
+   "synopsis_lang": "en",
+   "poster": "",
+   "posterSource": "",
+   "_src": {
+    "boom_event_id": 3946826,
+    "stills": [
+     "https://static.wixstatic.com/media/736095_e8348ec15e8a42e3929b862aeec080e0~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_9a4eba69db6545ffb3366a5577de25fd~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_fddbd0b48f5b497196d860056f4a64ee~mv2.jpg"
+    ]
+   },
+   "day": "2026-09-15",
+   "time": "13:15",
+   "venue": "Biblioteca Departamental - Quibdó",
+   "day_order": 1,
+   "has_qa": false,
+   "is_cortos": false,
+   "film_list": null,
+   "requires_registration": true,
+   "is_free": true,
+   "type": "film",
+   "year": "2025",
+   "_inherited": {
+    "year": "qaff-event-desc",
+    "synopsis": "qaff-event-desc"
+   }
+  },
+  {
+   "title": "VICHE",
+   "director": "Jorge Eliecer Leudo Murillo",
+   "duration": "17 min",
+   "country": "Colombia",
+   "section": "Panorama Colombiano",
+   "genre": "Familia",
+   "synopsis": "Producer: Sharon Kathiana Ochoa Ibarguen In the heart of Chocó, Diógenes, a young Afro-Colombian university student, lives trapped between the traditions of his grandfather Anacleto, a master viche producer, and his own aspirations to go out into the world and build a different life.",
+   "synopsis_lang": "en",
+   "poster": "/uwM4DppRwhaYVXq2WPxtFEjF1F0.jpg",
+   "posterSource": "tmdb",
+   "lbSlug": "viche",
+   "_src": {
+    "boom_event_id": 3946827,
+    "stills": [
+     "https://static.wixstatic.com/media/736095_8675e03284d44405b286391fdbdd8f17~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_c668b45b2b0246c5a7a8547ac58ba9f0~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_54815b18969e4893b76db35e977e2646~mv2.jpg"
+    ]
+   },
+   "year": "2025",
+   "synopsis_en": "In the heart of Chocó, Diógenes, a young Afro-descendant university student, lives trapped between the traditions of his grandfather Anacleto, a master viche producer, and his own aspirations to go out into the world and build a different life.",
+   "_inherited": {
+    "synopsis_en": "tmdb-1496482",
+    "synopsis": "qaff-event-desc"
+   },
+   "day": "2026-09-15",
+   "time": "13:35",
+   "venue": "Biblioteca Departamental - Quibdó",
+   "day_order": 1,
+   "has_qa": false,
+   "is_cortos": false,
+   "film_list": null,
+   "requires_registration": true,
+   "is_free": true,
+   "type": "film"
+  },
+  {
+   "title": "Cafe ?",
+   "director": "Bamar Kane",
+   "duration": "25 min",
+   "country": "Francia",
+   "section": "Panorama Diaspórica",
+   "genre": "",
+   "synopsis": "Producer: Bamar KANE Ouzin, Baba and Sémou, longtime friends and retirees, never miss their daily coffee meetup. But every year, in April, Sémou is haunted by the loss of his first love. One afternoon, as Ouzin and Baba grow concerned about their friend, Sémou doesn't show up for coffee.",
+   "synopsis_lang": "en",
+   "poster": "",
+   "posterSource": "",
+   "_src": {
+    "boom_event_id": 3946823,
+    "stills": [
+     "https://static.wixstatic.com/media/736095_ff7d04a35552471e9ee3cb6595192851~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_f20c3674fea9477995ce4ab341a6841a~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_50bc776cc0854f51907108aaea79d11d~mv2.jpg"
+    ]
+   },
+   "day": "2026-09-15",
+   "time": "13:55",
+   "venue": "Biblioteca Departamental - Quibdó",
+   "day_order": 1,
+   "has_qa": false,
+   "is_cortos": false,
+   "film_list": null,
+   "requires_registration": true,
+   "is_free": true,
+   "type": "film",
+   "year": "2025",
+   "_inherited": {
+    "year": "qaff-event-desc",
+    "synopsis": "qaff-event-desc"
+   }
+  },
+  {
+   "title": "The Banjo Boys",
+   "director": "Johan R Nayar",
+   "duration": "76 min",
+   "country": "Alemania (Malaui, Reino Unido)",
+   "section": "Otra Mirada",
+   "genre": "Documental, Música",
+   "synopsis": "Producers: Tim Delhaes, Johan Nayar, Neil Nayar The Banjo Boys follows the electrifying rise of Madalitso Band, a Malawian duo—Yobu Maligwa and Yosefe Kalekeni—who built their own instruments into a banjo, a one-stringed babatone (bass), and a foot drum,",
+   "synopsis_lang": "en",
+   "poster": "/6CmwyWw15chXWgBcYi5qBYtcIGc.jpg",
+   "posterSource": "tmdb",
+   "lbSlug": "the-banjo-boys",
+   "_src": {
+    "boom_event_id": 3946761,
+    "stills": [
+     "https://static.wixstatic.com/media/736095_5f7fe42dcf08430bb45dc9668fd5cb12~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_492c0216dded48229581de4ebf76e353~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_37a4ddf79d5c4a52a8fa55a4ff3292d8~mv2.jpg"
+    ]
+   },
+   "year": "2025",
+   "synopsis_en": "The Banjo Boys follows the rise of Madalitso Band, Malawian musicians Yobu Maligwa and Yosefe Kalekeni, who craft a banjo, a one-stringed babatone, and foot drum, creating a sound that moves audiences. Once mocked as madmen in Lilongwe’s streets, they meet Neil Nayar, a British musician drawn to Malawi’s spirit. Their chance encounter sparks a trio, propelling them from local busking to global stages like Sauti za Busara, WOMAD, and Joshua Tree. Facing visa struggles, personal tragedies—including original member Rice’s imprisonment for murder—and cultural tensions, their grit fuels joyous performances. Yobu’s pastoral visions, Yosefe’s resilience, and Neil’s purpose drive their bond. Their minimalist sound bridges continents, culminating in a 2023 world tour and a legendary Malawi homecoming. Intimate interviews and vibrant performances reveal music’s power to unite and transform.",
+   "_inherited": {
+    "synopsis_en": "tmdb-1547480",
+    "synopsis": "qaff-event-desc"
+   },
+   "day": "2026-09-15",
+   "time": "14:00",
+   "venue": "Cinemateca de Bogotá - Bogotá",
+   "day_order": 1,
+   "has_qa": false,
+   "is_cortos": false,
+   "film_list": null,
+   "requires_registration": true,
+   "is_free": true,
+   "type": "film"
+  },
+  {
+   "title": "The Banjo Boys",
+   "director": "Johan R Nayar",
+   "duration": "76 min",
+   "country": "Alemania (Malaui, Reino Unido)",
+   "section": "Otra Mirada",
+   "genre": "Documental, Música",
+   "synopsis": "Producers: Tim Delhaes, Johan Nayar, Neil Nayar The Banjo Boys follows the electrifying rise of Madalitso Band, a Malawian duo—Yobu Maligwa and Yosefe Kalekeni—who built their own instruments into a banjo, a one-stringed babatone (bass), and a foot drum,",
+   "synopsis_lang": "en",
+   "poster": "/6CmwyWw15chXWgBcYi5qBYtcIGc.jpg",
+   "posterSource": "tmdb",
+   "lbSlug": "the-banjo-boys",
+   "_src": {
+    "boom_event_id": 3946828,
+    "stills": [
+     "https://static.wixstatic.com/media/736095_5f7fe42dcf08430bb45dc9668fd5cb12~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_37a4ddf79d5c4a52a8fa55a4ff3292d8~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_492c0216dded48229581de4ebf76e353~mv2.jpg"
+    ]
+   },
+   "year": "2025",
+   "synopsis_en": "The Banjo Boys follows the rise of Madalitso Band, Malawian musicians Yobu Maligwa and Yosefe Kalekeni, who craft a banjo, a one-stringed babatone, and foot drum, creating a sound that moves audiences. Once mocked as madmen in Lilongwe’s streets, they meet Neil Nayar, a British musician drawn to Malawi’s spirit. Their chance encounter sparks a trio, propelling them from local busking to global stages like Sauti za Busara, WOMAD, and Joshua Tree. Facing visa struggles, personal tragedies—including original member Rice’s imprisonment for murder—and cultural tensions, their grit fuels joyous performances. Yobu’s pastoral visions, Yosefe’s resilience, and Neil’s purpose drive their bond. Their minimalist sound bridges continents, culminating in a 2023 world tour and a legendary Malawi homecoming. Intimate interviews and vibrant performances reveal music’s power to unite and transform.",
+   "_inherited": {
+    "synopsis_en": "tmdb-1547480",
+    "synopsis": "qaff-event-desc"
+   },
+   "_programada": true,
+   "day": "2026-09-15",
+   "time": "14:20",
+   "venue": "Biblioteca Departamental - Quibdó",
+   "day_order": 1,
+   "has_qa": false,
+   "is_cortos": false,
+   "film_list": null,
+   "requires_registration": true,
+   "is_free": true,
+   "type": "film"
+  },
+  {
+   "title": "When the world broke open",
+   "director": "Desiree Mbakumua Meiffret",
+   "duration": "30 min",
+   "country": "Estados Unidos",
+   "section": "Panorama Diaspórica",
+   "genre": "",
+   "synopsis": "Producers: Vickson Hangula, Desiree Mbakumua Meiffret, Veundja Katuuo At the height of the 1904 Herero and Nama genocide in German South West Africa, a young, pregnant Herero woman named Jorokee flees the smoldering ruins of her village with her husband Unomuinjo...",
+   "synopsis_lang": "en",
+   "poster": "",
+   "posterSource": "",
+   "_src": {
+    "boom_event_id": 3946831,
+    "stills": [
+     "https://static.wixstatic.com/media/736095_3a9dacbe57b94a56bd12b917507e8763~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_b13c72d3e89d4f86bc106f5b42095570~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_632f3fb36ce5477fa81d9974a5f3e112~mv2.jpg"
+    ]
+   },
+   "day": "2026-09-15",
+   "time": "15:20",
+   "venue": "Biblioteca Departamental - Quibdó",
+   "day_order": 1,
+   "has_qa": false,
+   "is_cortos": false,
+   "film_list": null,
+   "requires_registration": true,
+   "is_free": true,
+   "type": "film",
+   "year": "2026",
+   "_inherited": {
+    "year": "qaff-event-desc",
+    "synopsis": "qaff-event-desc"
+   }
+  },
+  {
+   "title": "God's Work",
+   "director": "Michael James",
+   "duration": "126 min",
+   "country": "Sudáfrica",
+   "section": "Otra Mirada",
+   "genre": "",
+   "synopsis": "Producer: Sithabile Mkhize Music Composer: George Acogny Co-Producer: Marco Orsini Executive Producers: Toni Monty, Gary Springer In a derelict building on the outskirts of Durban, a group of homeless men carve out a fragile existence amid violence, addiction, and the constant threat of being erased.",
+   "synopsis_lang": "en",
+   "poster": "",
+   "posterSource": "",
+   "_src": {
+    "boom_event_id": 3946858,
+    "stills": [
+     "https://static.wixstatic.com/media/736095_bf4985f261f24f249de6e4329f2f7e87~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_e99683effbd64176a0602f682316a2ee~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_c7fd873c531b4cd6853c56bb45ead4e5~mv2.jpg"
+    ]
+   },
+   "day": "2026-09-15",
+   "time": "17:00",
+   "venue": "Cinemateca de Bogotá - Bogotá",
+   "day_order": 1,
+   "has_qa": false,
+   "is_cortos": false,
+   "film_list": null,
+   "requires_registration": true,
+   "is_free": true,
+   "type": "film",
+   "year": "2025",
+   "_inherited": {
+    "year": "qaff-event-desc",
+    "synopsis": "qaff-event-desc"
+   }
+  },
+  {
+   "title": "THE ANCHORAGE OF THE TIME",
+   "director": "Sol de Carvalho",
+   "duration": "105 min",
+   "country": "Mozambique",
+   "section": "Otra Mirada",
+   "genre": "Drama",
+   "synopsis": "Producers: Paula Ferreira, Sol de Carvalho IZIDINE, a recently promoted police detective, is called to a nursing home located in a former colonial fortress to investigate a crime: the home's director has been murdered.",
+   "synopsis_lang": "en",
+   "poster": "",
+   "posterSource": "",
+   "lbSlug": "the-anchorage-of-time",
+   "_src": {
+    "boom_event_id": 3946857,
+    "stills": [
+     "https://static.wixstatic.com/media/736095_b28c83444bb1473895268c8b7088ac3f~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_abe52ad074534739bd6b12f1ac45232b~mv2.jpg"
+    ]
+   },
+   "year": "2024",
+   "day": "2026-09-15",
+   "time": "19:30",
+   "venue": "Cinemateca de Bogotá - Bogotá",
+   "day_order": 1,
+   "has_qa": false,
+   "is_cortos": false,
+   "film_list": null,
+   "requires_registration": true,
+   "is_free": true,
+   "type": "film",
+   "_inherited": {
+    "synopsis": "qaff-event-desc"
+   }
+  },
+  {
+   "title": "POSESAS [Possessed]",
+   "director": "Sebastian Wiedemann, Daniel Cortes",
+   "duration": "16 min",
+   "country": "Colombia",
+   "section": "Panorama Colombiano",
+   "genre": "",
+   "synopsis": "Producer: John Echavarria Cañas Based on a critical and counter-current review of the historical figure of Javiera Londoño, an 18th-century landowner who supposedly contributed to the abolition of slavery in the region of Antioquia, Colombia.",
+   "synopsis_lang": "en",
+   "poster": "",
+   "posterSource": "",
+   "_src": {
+    "boom_event_id": 3946832,
+    "stills": [
+     "https://static.wixstatic.com/media/736095_30f597bea0564e8b9be430e2e26d16fe~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_bc559a89cc754683bc1320b2ee183f29~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_5d707888a99f4be5b9329cf1531bce01~mv2.jpg"
+    ]
+   },
+   "day": "2026-09-16",
+   "time": "10:00",
+   "venue": "Biblioteca Departamental - Quibdó",
+   "day_order": 2,
+   "has_qa": false,
+   "is_cortos": false,
+   "film_list": null,
+   "requires_registration": true,
+   "is_free": true,
+   "type": "film",
+   "year": "2025",
+   "_inherited": {
+    "year": "qaff-event-desc",
+    "synopsis": "qaff-event-desc"
+   }
+  },
+  {
+   "title": "DIÁLOGO IMPROBABLE  ·  NOIR IDENTIDAD",
+   "type": "event",
+   "duration": "120 min",
+   "synopsis": "Ser negro no es un género: identidades complejas entre la vitrina y la pantalla NOIR Identidad explora la negritud como identidad compleja, múltiple e irreductible a una sola definición. ¿Cómo se cura una identidad en un museo? ¿Cómo se filma sin reducirla? El curador que construye vitrinas vs. el cineasta que construye planos vs. el artista que trabaja con imagen y objeto vs. el gestor cultural que diseña los espacios donde las identidades caben o no caben. Pregunta central: ¿cómo se representa dignamente la diversidad negra sin esencializarla, simplificarla ni traicionarla? MODERADORA: Indhira Serrano PANELISTAS: Dra. Patricia Mena, César A. Palacios Chaverra, Nicola Vizcaíno, Museo Afro de Colombia",
+   "synopsis_lang": "es",
+   "section": "Diálogo Improbable",
+   "year": "",
+   "day": "2026-09-16",
+   "time": "10:00",
+   "venue": "Museo Nacional - Bogotá",
+   "day_order": 2,
+   "has_qa": false,
+   "is_cortos": false,
+   "film_list": null,
+   "requires_registration": true,
+   "is_free": true,
+   "_src": {
+    "boom_event_id": 3946873,
+    "stills": [
+     "https://static.wixstatic.com/media/736095_3305c26f616248cb8bd57e0bc39a4da4~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_a834c25a46144fb3a5a9def733482b83~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_4425913c423744a292123c465a658c21~mv2.jpg"
+    ]
+   },
+   "event_kind": ""
+  },
+  {
+   "title": "The One who Cries",
+   "director": "Cyrille Guei",
+   "duration": "20 min",
+   "country": "Francia",
+   "section": "Panorama Diaspórica",
+   "genre": "",
+   "synopsis": "Producer: Lucas Sénécaut A shepherdess is convinced by her childhood friend, who has become a seller of fake medicines, to go and retrieve the goods that a spirit supposedly stole from her. In fact, a rumor is circulating that a demon is prowling the streets of Abidjan: \"The Weeper.\"",
+   "synopsis_lang": "en",
+   "poster": "",
+   "posterSource": "",
+   "_src": {
+    "boom_event_id": 3946833,
+    "stills": [
+     "https://static.wixstatic.com/media/736095_4577383181884789ba4c164e883d8801~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_aeaa21e9382642728c7f64a81aac9da6~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_a32e8420c8c74d65b2750011aba3cc7f~mv2.jpg"
+    ]
+   },
+   "day": "2026-09-16",
+   "time": "10:20",
+   "venue": "Biblioteca Departamental - Quibdó",
+   "day_order": 2,
+   "has_qa": false,
+   "is_cortos": false,
+   "film_list": null,
+   "requires_registration": true,
+   "is_free": true,
+   "type": "film",
+   "year": "2025",
+   "_inherited": {
+    "year": "qaff-event-desc",
+    "synopsis": "qaff-event-desc"
+   }
+  },
+  {
+   "title": "Mojugba",
+   "director": "Gustavo Alonso Arias",
+   "duration": "24 min",
+   "country": "Colombia",
+   "section": "Panorama Colombiano",
+   "genre": "",
+   "synopsis": "Producer: Fanny Milena Quiñones Fanny, an Afro-Colombian leader, turns the Mojugba, a Yoruba ritual of ancestral invocation, into an act of resistance. In a country that tries to erase its history, she teaches that remembering is revolutionary.",
+   "synopsis_lang": "en",
+   "poster": "",
+   "posterSource": "",
+   "_src": {
+    "boom_event_id": 3946834,
+    "stills": [
+     "https://static.wixstatic.com/media/736095_cca66f5433ba4aa6ae0d108cce62341c~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_8a18221fb6c54de9bec176fe0312647d~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_779df1d10c464101b8ee0a57a8cd49b1~mv2.jpg"
+    ]
+   },
+   "day": "2026-09-16",
+   "time": "10:40",
+   "venue": "Biblioteca Departamental - Quibdó",
+   "day_order": 2,
+   "has_qa": false,
+   "is_cortos": false,
+   "film_list": null,
+   "requires_registration": true,
+   "is_free": true,
+   "type": "film",
+   "year": "2026",
+   "_inherited": {
+    "year": "qaff-event-desc",
+    "synopsis": "qaff-event-desc"
+   }
+  },
+  {
+   "title": "Sisters in Destiny: Angela Davis & Gerty Archimede",
+   "director": "Pascal Frederic Archimede, Dimitry Zandronis",
+   "duration": "53 min",
+   "country": "Guadalupe",
+   "section": "Fronteras Latam",
+   "genre": "",
+   "synopsis": "Producers: Dimitry Zandronis, Baptiste Brunner Two women. Two continents. One shared fight. From Guadeloupe to the United States, Sisters in Destiny explores the intertwined journeys of Gerty Archimède, a trailblazer of feminism.",
+   "synopsis_lang": "en",
+   "poster": "",
+   "posterSource": "",
+   "_src": {
+    "boom_event_id": 3946835,
+    "stills": [
+     "https://static.wixstatic.com/media/736095_88abde35f82d4616bd650ab3bd5a7cf8~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_fa21774c03fa4250ac9e56e9a988d77f~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_dc61fbde1991474baa05d0c53a35eda9~mv2.jpg"
+    ]
+   },
+   "day": "2026-09-16",
+   "time": "11:00",
+   "venue": "Biblioteca Departamental - Quibdó",
+   "day_order": 2,
+   "has_qa": false,
+   "is_cortos": false,
+   "film_list": null,
+   "requires_registration": true,
+   "is_free": true,
+   "type": "film",
+   "year": "2025",
+   "_inherited": {
+    "year": "qaff-event-desc",
+    "synopsis": "qaff-event-desc"
+   }
+  },
+  {
+   "title": "Kanekalon",
+   "director": "Sara J. Asprilla",
+   "duration": "13 min",
+   "country": "Colombia",
+   "section": "Panorama Colombiano",
+   "genre": "",
+   "synopsis": "Producer: Karol Mora Albarracin Teyo, a trans girl, gets ready to start at her new all-girls school. As she journeys through Quibdó, a warm and vibrant city, she navigates the rhythms and gazes that greet her before stepping into class.",
+   "synopsis_lang": "en",
+   "poster": "/6ayAk61nDOMUKa71nipvIYIxzrc.jpg",
+   "posterSource": "tmdb",
+   "lbSlug": "kanekalon",
+   "_src": {
+    "boom_event_id": 3946836,
+    "stills": [
+     "https://static.wixstatic.com/media/736095_d6eca52999e542acaac94ef150afd11e~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_5dc204e00e1e4771800ac7682beaaa55~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_3b8f76e9fa81427cb0c33d505dfced77~mv2.jpg"
+    ]
+   },
+   "year": "2025",
+   "synopsis_en": "Teyo, a young trans woman, prepares to enter her new female school. In the middle of a trip through Quibdó, a hot city of sound, rhythms and glances that she faces before entering class converge.",
+   "_inherited": {
+    "synopsis_en": "tmdb-1454683",
+    "synopsis": "qaff-event-desc"
+   },
+   "day": "2026-09-16",
+   "time": "13:00",
+   "venue": "Biblioteca Departamental - Quibdó",
+   "day_order": 2,
+   "has_qa": false,
+   "is_cortos": false,
+   "film_list": null,
+   "requires_registration": true,
+   "is_free": true,
+   "type": "film"
+  },
+  {
+   "title": "Amelia",
+   "director": "Badewa Adeseye Ajibade",
+   "duration": "23 min",
+   "country": "Nigeria",
+   "section": "Panorama Africano",
+   "genre": "",
+   "synopsis": "Producers: Badewa Adeseye Ajibade, Abisola Yussuf Defiance, strength, bravery, love, and loss—these are the heart of Amelia's story. More than just a tale about our protagonist, it is uniquely told through her perspective. As a married Nigerian woman living in relative poverty in the year 2002.",
+   "synopsis_lang": "en",
+   "poster": "",
+   "posterSource": "",
+   "_src": {
+    "boom_event_id": 3946837,
+    "stills": [
+     "https://static.wixstatic.com/media/736095_6630c348f0434dcc9797689853275ba3~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_660a9010a3774e8abf00ae62fad9bdb6~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_a886e890a6b04a0d8cb52c4f49c8d3cb~mv2.jpg"
+    ]
+   },
+   "day": "2026-09-16",
+   "time": "13:15",
+   "venue": "Biblioteca Departamental - Quibdó",
+   "day_order": 2,
+   "has_qa": false,
+   "is_cortos": false,
+   "film_list": null,
+   "requires_registration": true,
+   "is_free": true,
+   "type": "film",
+   "year": "2025",
+   "_inherited": {
+    "year": "qaff-event-desc",
+    "synopsis": "qaff-event-desc"
+   }
+  },
+  {
+   "title": "One Sunday",
+   "director": "Day Sena",
+   "duration": "20 min",
+   "country": "Brasil",
+   "section": "Fronteras Latam",
+   "genre": "",
+   "synopsis": "Producers: Marcos Alexandre, Day Sena One Sunday tells the story of a possible encounter between Samuel and a stray bullet. The bullet comes from a gunshot fired in the favela where Samuel lives. On a sunny Sunday, Samuel decides to take advantage of his day off to go to the beach.",
+   "synopsis_lang": "en",
+   "poster": "",
+   "posterSource": "",
+   "_src": {
+    "boom_event_id": 3946838,
+    "stills": [
+     "https://static.wixstatic.com/media/736095_0b97e17976c54fe98b490b45db0c3aa9~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_f4a22ec1c6cd4181bff95cce4677e2f8~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_399a33793d5a4dc286ba9d3c6b61e9ab~mv2.jpg"
+    ]
+   },
+   "day": "2026-09-16",
+   "time": "13:45",
+   "venue": "Biblioteca Departamental - Quibdó",
+   "day_order": 2,
+   "has_qa": false,
+   "is_cortos": false,
+   "film_list": null,
+   "requires_registration": true,
+   "is_free": true,
+   "type": "film",
+   "year": "2026",
+   "_inherited": {
+    "year": "qaff-event-desc",
+    "synopsis": "qaff-event-desc"
+   }
+  },
+  {
+   "title": "Surviving Biafra",
+   "director": "Meji Alabi, Leke Alabi-Isama",
+   "duration": "75 min",
+   "country": "Nigeria (Reino Unido)",
+   "section": "Panorama Africano",
+   "genre": "Documental",
+   "synopsis": "Producer: Charlie Northcott Surviving Biafra is a feature documentary directed by Meji Alabi and Leke Alabi-Isama, exploring the Nigerian Civil War through the eyewitness accounts of those who survived it.",
+   "synopsis_lang": "en",
+   "poster": "/cEcb4J4zVAq80jVVYWYBsrgm7Yk.jpg",
+   "posterSource": "tmdb",
+   "lbSlug": "surviving-biafra",
+   "_src": {
+    "boom_event_id": 3946859,
+    "stills": [
+     "https://static.wixstatic.com/media/736095_486e5ff5b5f34348a7cb7dfca99f9266~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_085131453e7b4299b9dfe4be22a9ac7b~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_53399b8d66084701aaa085be3fc6dd1e~mv2.jpg"
+    ]
+   },
+   "year": "2026",
+   "synopsis_en": "Some of the last survivors from Nigeria’s Civil War, also known as the Biafran War, share their memories from the frontline.",
+   "_inherited": {
+    "synopsis_en": "tmdb-1713898",
+    "synopsis": "qaff-event-desc"
+   },
+   "day": "2026-09-16",
+   "time": "14:00",
+   "venue": "Cinemateca de Bogotá - Bogotá",
+   "day_order": 2,
+   "has_qa": false,
+   "is_cortos": false,
+   "film_list": null,
+   "requires_registration": true,
+   "is_free": true,
+   "type": "film"
+  },
+  {
+   "title": "Amazonas Cocinas Indigenas de Selva y Rio",
+   "director": "Jairo Garrido",
+   "duration": "13 min",
+   "country": "Colombia",
+   "section": "Panorama Colombiano",
+   "genre": "",
+   "synopsis": "Producer: Ricardo Malagón This documentary explores the ancestral knowledge preserved through the kitchens of the forest and the river. Through traditional recipes, gathering practices, and the deep relationship between people and nature.",
+   "synopsis_lang": "en",
+   "poster": "",
+   "posterSource": "",
+   "_src": {
+    "boom_event_id": 3946853,
+    "stills": [
+     "https://static.wixstatic.com/media/736095_8bacd8c38ebd478ea0da2f3764069a5c~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_f270c14344334406bdf28e2239f50d37~mv2.jpg"
+    ]
+   },
+   "day": "2026-09-16",
+   "time": "14:15",
+   "venue": "Biblioteca Departamental - Quibdó",
+   "day_order": 2,
+   "has_qa": false,
+   "is_cortos": false,
+   "film_list": null,
+   "requires_registration": true,
+   "is_free": true,
+   "type": "film",
+   "year": "2026",
+   "_inherited": {
+    "year": "qaff-event-desc",
+    "synopsis": "qaff-event-desc"
+   }
+  },
+  {
+   "title": "Soñé su nombre",
+   "director": "Ángela Carabalí",
+   "duration": "85 min",
+   "country": "Colombia",
+   "section": "Prisma Femenino",
+   "genre": "DERECHOS HUMANOS",
+   "synopsis": "Después de 30 años negando su dolor, Ángela se enfrenta a su pasado cuando su padre se le aparece en un sueño y le pide que lo busque. Junto a su hermana Juliana, emprende un viaje por Colombia hasta los terriotiros indígenas donde su padre, un agricultor afrodescendiente, fue víctima de desaparición forzada.",
+   "synopsis_lang": "es",
+   "poster": "",
+   "posterSource": "",
+   "lbSlug": "i-dreamed-his-name",
+   "_src": {
+    "boom_event_id": 3946839,
+    "stills": [
+     "https://static.wixstatic.com/media/736095_6ec4185d7c314d25895198d01330a2df~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_612fc0f3e3a84fca8e6474ff60393c9d~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_a3f9b14a79b4463ebbb6018b14b86c6c~mv2.jpg"
+    ]
+   },
+   "synopsis_en": "Thirty years after his forced disappearance, the filmmaker’s Afro Colombian father comes to her in a dream, asking her to find him. With her sister, she sets out on a journey of discovery across Colombia’s painful history, reconnecting with their father and his activism.",
+   "year": "2025",
+   "_inherited": {
+    "synopsis": "siembrafest-2026",
+    "synopsis_en": "siembrafest-2026",
+    "genre": "siembrafest-2026",
+    "lbSlug": "siembrafest-2026",
+    "year": "siembrafest-2026"
+   },
+   "day": "2026-09-16",
+   "time": "15:00",
+   "venue": "Biblioteca Departamental - Quibdó",
+   "day_order": 2,
+   "has_qa": false,
+   "is_cortos": false,
+   "film_list": null,
+   "requires_registration": true,
+   "is_free": true,
+   "type": "film"
+  },
+  {
+   "title": "Three Black Men",
+   "director": "Sienna McLean-LoGreco",
+   "duration": "99 min",
+   "country": "Estados Unidos",
+   "section": "Panorama Diaspórica",
+   "genre": "",
+   "synopsis": "¿Puede un viaje hacia el pasado abrir nuevas posibilidades para la Negritud? Tres hombres negros recorren a la inversa la ruta transatlántica del comercio de esclavos, de Los Ángeles (California) a Salvador de Bahía (Brasil) y, finalmente, a Accra (Ghana). En este recorrido exploran aspectos fundamentales de la historia negra y las representaciones de la migración forzosa, la supervivencia y la desaparición de los millones de personas que cruzaron el Atlántico; y brazan la identidad negra como una fuente viva de conexión, creación y renovación.",
+   "synopsis_lang": "es",
+   "poster": "",
+   "posterSource": "",
+   "lbSlug": "three-black-men",
+   "_src": {
+    "boom_event_id": 3946840,
+    "stills": [
+     "https://static.wixstatic.com/media/736095_7eed0eb9db544264b378332f5a819d7c~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_84e916417e5f48a7bc92c2ad0b82bec9~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_07b01117a55149f3a7e0b9e42ff1bdfd~mv2.jpg"
+    ]
+   },
+   "synopsis_en": "Can blackness escape the violence of its origins?  Three Black men set out on a transformative journey along the transatlantic slave route in reverse, exploring resistance, liberation and a new understanding of Blackness.  Their epic voyage takes them from Los Angeles to Salvador da Bahia in Brazil, and finally to Accra in Ghana. Their mission is to redefine Blackness, heal from historical trauma, and envision new paths to liberation beyond the constraints of white supremacy.",
+   "year": "2026",
+   "_inherited": {
+    "synopsis": "ficdeh-2026",
+    "synopsis_en": "ficdeh-2026",
+    "lbSlug": "ficdeh-2026",
+    "year": "ficdeh-2026"
+   },
+   "day": "2026-09-16",
+   "time": "16:25",
+   "venue": "Biblioteca Departamental - Quibdó",
+   "day_order": 2,
+   "has_qa": false,
+   "is_cortos": false,
+   "film_list": null,
+   "requires_registration": true,
+   "is_free": true,
+   "type": "film"
+  },
+  {
+   "title": "Three Black Men",
+   "director": "Sienna McLean-LoGreco",
+   "duration": "99 min",
+   "country": "Estados Unidos",
+   "section": "Panorama Diaspórica",
+   "genre": "",
+   "synopsis": "¿Puede un viaje hacia el pasado abrir nuevas posibilidades para la Negritud? Tres hombres negros recorren a la inversa la ruta transatlántica del comercio de esclavos, de Los Ángeles (California) a Salvador de Bahía (Brasil) y, finalmente, a Accra (Ghana). En este recorrido exploran aspectos fundamentales de la historia negra y las representaciones de la migración forzosa, la supervivencia y la desaparición de los millones de personas que cruzaron el Atlántico; y brazan la identidad negra como una fuente viva de conexión, creación y renovación.",
+   "synopsis_lang": "es",
+   "poster": "",
+   "posterSource": "",
+   "lbSlug": "three-black-men",
+   "_src": {
+    "boom_event_id": 3946860,
+    "stills": [
+     "https://static.wixstatic.com/media/736095_7eed0eb9db544264b378332f5a819d7c~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_84e916417e5f48a7bc92c2ad0b82bec9~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_07b01117a55149f3a7e0b9e42ff1bdfd~mv2.jpg"
+    ]
+   },
+   "synopsis_en": "Can blackness escape the violence of its origins?  Three Black men set out on a transformative journey along the transatlantic slave route in reverse, exploring resistance, liberation and a new understanding of Blackness.  Their epic voyage takes them from Los Angeles to Salvador da Bahia in Brazil, and finally to Accra in Ghana. Their mission is to redefine Blackness, heal from historical trauma, and envision new paths to liberation beyond the constraints of white supremacy.",
+   "year": "2026",
+   "_inherited": {
+    "synopsis": "ficdeh-2026",
+    "synopsis_en": "ficdeh-2026",
+    "lbSlug": "ficdeh-2026",
+    "year": "ficdeh-2026"
+   },
+   "_programada": true,
+   "day": "2026-09-16",
+   "time": "17:00",
+   "venue": "Cinemateca de Bogotá - Bogotá",
+   "day_order": 2,
+   "has_qa": false,
+   "is_cortos": false,
+   "film_list": null,
+   "requires_registration": true,
+   "is_free": true,
+   "type": "film"
+  },
+  {
+   "title": "Nunkui",
+   "director": "Verenice Benitez",
+   "duration": "90 min",
+   "country": "Chile (Ecuador, Alemania)",
+   "section": "Fronteras Latam",
+   "genre": "Drama",
+   "synopsis": "Producer: Isabela Parra Nunkui lives in a Shuar community and dreams of the feminine spirit of the garden, also called Nunkui, just like her. While her aunt teaches her songs and the secrets of cultivation, the vast Amazon rainforest they call home is handed over to transnational mining companies, and evictions begin in the area.",
+   "synopsis_lang": "en",
+   "poster": "/p61q7EcIjvKpfmd8tXDlDdXCTr8.jpg",
+   "posterSource": "tmdb",
+   "lbSlug": "nunkui-2026",
+   "_src": {
+    "boom_event_id": 3946861,
+    "stills": [
+     "https://static.wixstatic.com/media/736095_e8543d7660ed41c7b1f68b95bd90c44b~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_ca262f4e93474943bc7df4e93eb0080b~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_76d911be5f6c4c5bac8bfeee9bdc676c~mv2.jpg"
+    ]
+   },
+   "year": "2026",
+   "synopsis_en": "Nunkui, the female spirit of the garden. Nunkui, the name of a Shuar girl in a lush world of plants, animals, spirits and an extended family. Between premonitory dreams and mining conflicts in the Amazonian Cóndor mountain range, Nunkui searches for her place in the world, influenced by her grandfather Yaunchu, an old Shuar leader.",
+   "_inherited": {
+    "synopsis_en": "tmdb-1243032",
+    "synopsis": "qaff-event-desc"
+   },
+   "day": "2026-09-16",
+   "time": "19:30",
+   "venue": "Cinemateca de Bogotá - Bogotá",
+   "day_order": 2,
+   "has_qa": false,
+   "is_cortos": false,
+   "film_list": null,
+   "requires_registration": true,
+   "is_free": true,
+   "type": "film"
+  },
+  {
+   "title": "Stormy Days",
+   "director": "Vitor Bitencourt Rocha",
+   "duration": "19 min",
+   "country": "Brasil",
+   "section": "Fronteras Latam",
+   "genre": "",
+   "synopsis": "Producer: Laís Araújo Ahura is a wheelchair carrier who tries to escape at all costs, but finds Gymbia being attacked. He saves her and begins his journey in search of love and freedom.",
+   "synopsis_lang": "en",
+   "poster": "",
+   "posterSource": "",
+   "_src": {
+    "boom_event_id": 3946841,
+    "stills": [
+     "https://static.wixstatic.com/media/736095_366032b5a9ab4e27b4a2bfd279b6078e~mv2.jpg"
+    ]
+   },
+   "day": "2026-09-17",
+   "time": "10:00",
+   "venue": "Biblioteca Departamental - Quibdó",
+   "day_order": 3,
+   "has_qa": false,
+   "is_cortos": false,
+   "film_list": null,
+   "requires_registration": true,
+   "is_free": true,
+   "type": "film",
+   "year": "2026",
+   "_inherited": {
+    "year": "qaff-event-desc",
+    "synopsis": "qaff-event-desc"
+   }
+  },
+  {
+   "title": "Sheltering Gestures",
+   "director": "Adrian Villa-Davila, Andres Prado",
+   "duration": "11 min",
+   "country": "Colombia",
+   "section": "Panorama Colombiano",
+   "genre": "Videodance",
+   "synopsis": "Producer: TRAGALUZ A group of young dancers who witnessed the gradual disappearance of the traditional Danza de las Tabliteras.",
+   "synopsis_lang": "en",
+   "poster": "",
+   "posterSource": "",
+   "lbSlug": "sheltering-gestures",
+   "_src": {
+    "boom_event_id": 3946842,
+    "stills": [
+     "https://static.wixstatic.com/media/736095_b867e0be8f0745dc9957e418218e7871~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_be214a560a084e2bb3b6ab8895c86421~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_172fbd5fbbc74cecbed358c8cd00e2f7~mv2.jpg"
+    ]
+   },
+   "year": "2026",
+   "title_orig": "Refugiar el gesto",
+   "_inherited": {
+    "genre": "siembrafest-2026",
+    "year": "siembrafest-2026",
+    "title_orig": "siembrafest-2026",
+    "synopsis": "qaff-event-desc"
+   },
+   "day": "2026-09-17",
+   "time": "10:20",
+   "venue": "Biblioteca Departamental - Quibdó",
+   "day_order": 3,
+   "has_qa": false,
+   "is_cortos": false,
+   "film_list": null,
+   "requires_registration": true,
+   "is_free": true,
+   "type": "film"
+  },
+  {
+   "title": "The Clay Vase",
+   "director": "Ernestina Miranda, Mar Aje",
+   "duration": "14 min",
+   "country": "Colombia",
+   "section": "Panorama Colombiano",
+   "genre": "Experimental",
+   "synopsis": "Producer: Madre Monte Where do we keep our memories? Where do they endure? How do we evoke them? An epiphany dispels forgetfulness and reconstructs the bond between Esther, the protagonist, and her ancestors through the world of dreams, her mother's memories, and the restoration of an inherited clay vessel.",
+   "synopsis_lang": "en",
+   "poster": "",
+   "posterSource": "",
+   "_src": {
+    "boom_event_id": 3946843,
+    "stills": [
+     "https://static.wixstatic.com/media/736095_dd75908f4ff14589a0029009a282c872~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_a2ba2936bc6349e1a87b5c5ed383d2eb~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_d00562f1aa7646b29bf6a2a24a2d5b45~mv2.jpg"
+    ]
+   },
+   "year": "2025",
+   "title_orig": "La tinaja",
+   "_inherited": {
+    "genre": "siembrafest-2026",
+    "year": "siembrafest-2026",
+    "title_orig": "siembrafest-2026",
+    "synopsis": "qaff-event-desc"
+   },
+   "day": "2026-09-17",
+   "time": "10:30",
+   "venue": "Biblioteca Departamental - Quibdó",
+   "day_order": 3,
+   "has_qa": false,
+   "is_cortos": false,
+   "film_list": null,
+   "requires_registration": true,
+   "is_free": true,
+   "type": "film"
+  },
+  {
+   "title": "Father's Day",
+   "director": "Ayana O'Shun",
+   "duration": "74 min",
+   "country": "Canadá",
+   "section": "Panorama Diaspórica",
+   "genre": "",
+   "synopsis": "Producers: Ayana O'Shun, Bianca Bellange Father's Day is an intimate and powerful documentary that explores the legacy of absent fathers in Black communities across North America and the Caribbean.",
+   "synopsis_lang": "en",
+   "poster": "",
+   "posterSource": "",
+   "_src": {
+    "boom_event_id": 3946844,
+    "stills": [
+     "https://static.wixstatic.com/media/736095_f61acb85889c4d05a9226d35470c9d14~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_74c48997fc3746f5aae8a4650e0ef39a~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_d2d891979a0a484a887b5586c3fc0155~mv2.jpg"
+    ]
+   },
+   "day": "2026-09-17",
+   "time": "10:45",
+   "venue": "Biblioteca Departamental - Quibdó",
+   "day_order": 3,
+   "has_qa": false,
+   "is_cortos": false,
+   "film_list": null,
+   "requires_registration": true,
+   "is_free": true,
+   "type": "film",
+   "year": "2025",
+   "_inherited": {
+    "year": "qaff-event-desc",
+    "synopsis": "qaff-event-desc"
+   }
+  },
+  {
+   "title": "Altanegra",
+   "director": "Raiza De La Hoz, Daniela Ponce",
+   "duration": "26 min",
+   "country": "Colombia",
+   "section": "Panorama Colombiano",
+   "genre": "",
+   "synopsis": "In a territory marked by promises of equality and realities of exclusion, being young, Black, and from a rural community becomes an act of everyday resistance.",
+   "synopsis_lang": "en",
+   "poster": "",
+   "posterSource": "",
+   "_src": {
+    "boom_event_id": 3946845,
+    "stills": [
+     "https://static.wixstatic.com/media/736095_80ff7da7d74947a1b181fa3f4d4bb808~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_ed229e8ceb2643a1bd5e6e1dd303f90b~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_d9f72683d8cf4e03b4c9bf794f82cf98~mv2.jpg"
+    ]
+   },
+   "day": "2026-09-17",
+   "time": "13:00",
+   "venue": "Biblioteca Departamental - Quibdó",
+   "day_order": 3,
+   "has_qa": false,
+   "is_cortos": false,
+   "film_list": null,
+   "requires_registration": true,
+   "is_free": true,
+   "type": "film",
+   "year": "2025",
+   "_inherited": {
+    "year": "qaff-event-desc",
+    "synopsis": "qaff-event-desc"
+   }
+  },
+  {
+   "title": "The Black Bart of Taco King #17",
+   "director": "Rickey Larke",
+   "duration": "11 min",
+   "country": "Estados Unidos",
+   "section": "Panorama Diaspórica",
+   "genre": "",
+   "synopsis": "Producers: Rickey Larke, Preston Purchase, Lyandre Pierre, Julian Park, Lo Howard, Lorelle Lynch, Charles Taylor Goubeaud A suave criminal searches for a new partner at a dive bar and finds the perfect Bonnie to his Clyde. He takes her to dinner to put her to the test, yet she has all the answers... and more.",
+   "synopsis_lang": "en",
+   "poster": "/2U9w9fNF8paFH8pemCC8yyrZfvb.jpg",
+   "posterSource": "tmdb",
+   "lbSlug": "the-black-bart-of-taco-king-17",
+   "_src": {
+    "boom_event_id": 3946846,
+    "stills": [
+     "https://static.wixstatic.com/media/736095_d4b9ac8d4d4242b08abc1da0276be64a~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_194e4ff22e9248fbab8977d5d749fb35~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_16387229824e4aeba20a4b1a240e23b4~mv2.jpg"
+    ]
+   },
+   "year": "2026",
+   "synopsis_en": "A suave larcenist searches for a new partner at a dive bar and finds the perfect Bonnie to his Clyde. He takes her to dinner to put her to the test, yet she has all the answers... and more.",
+   "_inherited": {
+    "synopsis_en": "tmdb-1654835",
+    "synopsis": "qaff-event-desc"
+   },
+   "day": "2026-09-17",
+   "time": "13:30",
+   "venue": "Biblioteca Departamental - Quibdó",
+   "day_order": 3,
+   "has_qa": false,
+   "is_cortos": false,
+   "film_list": null,
+   "requires_registration": true,
+   "is_free": true,
+   "type": "film"
+  },
+  {
+   "title": "Carabali",
+   "director": "Medhin Tewolde",
+   "duration": "18 min",
+   "country": "México",
+   "section": "Fronteras Latam",
+   "genre": "",
+   "synopsis": "Producer: Daniela Contreras, Nicolas Défossé An Afro-Colombian community leader is threatened and forced into exile. Far from his land and family, Carabalí resists in displacement, clinging to the hope of returning one day to the place where he belongs.",
+   "synopsis_lang": "en",
+   "poster": "",
+   "posterSource": "",
+   "_src": {
+    "boom_event_id": 3946847,
+    "stills": [
+     "https://static.wixstatic.com/media/736095_8d8869bdfb6d4c8bb931c4091c549198~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_95221a9a9e094e61963d54ec8bebc311~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_48686c2aedfa423b9a29bf3720277b2f~mv2.jpg"
+    ]
+   },
+   "day": "2026-09-17",
+   "time": "13:45",
+   "venue": "Biblioteca Departamental - Quibdó",
+   "day_order": 3,
+   "has_qa": false,
+   "is_cortos": false,
+   "film_list": null,
+   "requires_registration": true,
+   "is_free": true,
+   "type": "film",
+   "year": "2026",
+   "_inherited": {
+    "year": "qaff-event-desc",
+    "synopsis": "qaff-event-desc"
+   }
+  },
+  {
+   "title": "Of Mud and Blood",
+   "director": "Jean-Gabriel Leynaud",
+   "duration": "94 min",
+   "country": "Congo (Francia)",
+   "section": "Otra Mirada",
+   "genre": "",
+   "synopsis": "Producer: Valdés. Pallas Film In Numbi, an isolated village in the mountains of the Congo, life revolves around the rush for coltan, a \"rare earth\" indispensable for electronics. The fatality that affects the inhabitants embodies the insidious mechanisms of capitalism in the 2020s.",
+   "synopsis_lang": "en",
+   "poster": "",
+   "posterSource": "",
+   "_src": {
+    "boom_event_id": 3946862,
+    "stills": [
+     "https://static.wixstatic.com/media/736095_14da0cda8c5648cb83b7c9fcd25b55b7~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_b4ef8392a9824059938249ecc6643cc6~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_9f3bbd95370246d0a96b7ba84ff36be2~mv2.jpg"
+    ]
+   },
+   "day": "2026-09-17",
+   "time": "14:00",
+   "venue": "Cinemateca de Bogotá - Bogotá",
+   "day_order": 3,
+   "has_qa": false,
+   "is_cortos": false,
+   "film_list": null,
+   "requires_registration": true,
+   "is_free": true,
+   "type": "film",
+   "year": "2025",
+   "_inherited": {
+    "year": "qaff-event-desc",
+    "synopsis": "qaff-event-desc"
+   }
+  },
+  {
+   "title": "Mi viche todo el dia",
+   "director": "Juan Camilo Moreno",
+   "duration": "26 min",
+   "country": "Colombia",
+   "section": "Panorama Colombiano",
+   "genre": "Documental",
+   "synopsis": "Production: Leandro Hernández Castro, Jhonan Cardona Cinematography: Tininiska Simpson Sound Director: Jhonan Cardona Field Production: Marcela Mosquera, Ana Panesso Screenplay: Jhonan Cardona, Juan Camilo Moreno Music: Ana Panesso, Angel Mena and Sabrosura P. In the Medio Atrato region of Chocó, Ana Panesso and her community grow sugarcane and produce viche, an ancestral beverage once prohibited and now in vogue.",
+   "synopsis_lang": "en",
+   "poster": "",
+   "posterSource": "",
+   "lbSlug": "my-daily-viche",
+   "_src": {
+    "boom_event_id": 3946848,
+    "stills": [
+     "https://static.wixstatic.com/media/736095_04d6c6bdc3a34adb890e6eef6e42a962~mv2.png",
+     "https://static.wixstatic.com/media/736095_11a556446dbe4856929683f456e6bff0~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_57a4a5d16fc84addb9a9c854201e4be4~mv2.jpg"
+    ]
+   },
+   "year": "2025",
+   "synopsis_en": "In the Medio Atrato region of Chocó, Ana Panesso and her community grow sugarcane and make viche, an ancestral beverage that was once prohibited but now is in vogue. Through food, river trips, and music, viche and its knowledge not only shape people s daily lives but also raise the question of a just future, where viche serves as food, sustenance, and identity for Black families.",
+   "_inherited": {
+    "synopsis_en": "tmdb-1593596",
+    "synopsis": "qaff-event-desc"
+   },
+   "day": "2026-09-17",
+   "time": "14:10",
+   "venue": "Biblioteca Departamental - Quibdó",
+   "day_order": 3,
+   "has_qa": false,
+   "is_cortos": false,
+   "film_list": null,
+   "requires_registration": true,
+   "is_free": true,
+   "type": "film"
+  },
+  {
+   "title": "BERTHA",
+   "director": "Laura Asprilla",
+   "duration": "13 min",
+   "country": "Colombia",
+   "section": "Panorama Colombiano",
+   "genre": "",
+   "synopsis": "Producer: Laura Asprilla ULDA (65) refuses to take charge of her macho husband's funeral because he died in another woman's bed. At home, only Bertha, a mischievous goat, remains as her companion while she returns to the woman she once was.",
+   "synopsis_lang": "en",
+   "poster": "",
+   "posterSource": "",
+   "_src": {
+    "boom_event_id": 3946850,
+    "stills": [
+     "https://static.wixstatic.com/media/736095_7f7c831c59b448c2a7631c518ad82ab6~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_5a4ae9a3a7094ea89476ee223e5ac5f7~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_47c54f9782c442078e61f512686a0f68~mv2.jpg"
+    ]
+   },
+   "day": "2026-09-17",
+   "time": "14:10",
+   "venue": "Biblioteca Departamental - Quibdó",
+   "day_order": 3,
+   "has_qa": false,
+   "is_cortos": false,
+   "film_list": null,
+   "requires_registration": true,
+   "is_free": true,
+   "type": "film",
+   "year": "2025",
+   "_inherited": {
+    "year": "qaff-event-desc",
+    "synopsis": "qaff-event-desc"
+   }
+  },
+  {
+   "title": "Nunkui",
+   "director": "Verenice Benitez",
+   "duration": "90 min",
+   "country": "Chile (Ecuador, Alemania)",
+   "section": "Fronteras Latam",
+   "genre": "Drama",
+   "synopsis": "Producer: Isabela Parra Nunkui lives in a Shuar community and dreams of the feminine spirit of the garden, also called Nunkui, just like her. While her aunt teaches her songs and the secrets of cultivation, the vast Amazon rainforest they call home is handed over to transnational mining companies, and evictions begin in the area.",
+   "synopsis_lang": "en",
+   "poster": "/p61q7EcIjvKpfmd8tXDlDdXCTr8.jpg",
+   "posterSource": "tmdb",
+   "lbSlug": "nunkui-2026",
+   "_src": {
+    "boom_event_id": 3946849,
+    "stills": [
+     "https://static.wixstatic.com/media/736095_e8543d7660ed41c7b1f68b95bd90c44b~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_76d911be5f6c4c5bac8bfeee9bdc676c~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_ca262f4e93474943bc7df4e93eb0080b~mv2.jpg"
+    ]
+   },
+   "year": "2026",
+   "synopsis_en": "Nunkui, the female spirit of the garden. Nunkui, the name of a Shuar girl in a lush world of plants, animals, spirits and an extended family. Between premonitory dreams and mining conflicts in the Amazonian Cóndor mountain range, Nunkui searches for her place in the world, influenced by her grandfather Yaunchu, an old Shuar leader.",
+   "_inherited": {
+    "synopsis_en": "tmdb-1243032",
+    "synopsis": "qaff-event-desc"
+   },
+   "_programada": true,
+   "day": "2026-09-17",
+   "time": "14:25",
+   "venue": "Biblioteca Departamental - Quibdó",
+   "day_order": 3,
+   "has_qa": false,
+   "is_cortos": false,
+   "film_list": null,
+   "requires_registration": true,
+   "is_free": true,
+   "type": "film"
+  },
+  {
+   "title": "Viva Yurumangui",
+   "director": "Emma Christopher, Sergio Leyva Seiglie",
+   "duration": "80 min",
+   "country": "Colombia",
+   "section": "Panorama Colombiano",
+   "genre": "",
+   "synopsis": "Producer: Emma Christopher Cinematography: Javier Labrador Deulofeu, Sergio Leyva Seiglie, Yerson Arroyo Arroyo Editor: María Alejandra Briganti, Irene Cajias Sound Editor: Isabel Torres Reyes On the remote Pacific coast of Colombia, the inhabitants of the Yurumanguí palenque still fight for freedom, hundreds of years after their ancestors fled slavery.",
+   "synopsis_lang": "en",
+   "poster": "",
+   "posterSource": "",
+   "_src": {
+    "boom_event_id": 3946863,
+    "stills": [
+     "https://static.wixstatic.com/media/736095_de24c08e3de844cb9c26de60168ad47c~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_e08b36d36b5e42dc8d1921578a756fce~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_ec951b281a034cef8d8def00e11be1a1~mv2.jpg"
+    ]
+   },
+   "year": "2025",
+   "_inherited": {
+    "year": "qaff-event-desc",
+    "synopsis": "qaff-event-desc"
+   },
+   "_programada": true,
+   "day": "2026-09-17",
+   "time": "15:00",
+   "venue": "Cinemateca de Bogotá - Bogotá",
+   "day_order": 3,
+   "has_qa": false,
+   "is_cortos": false,
+   "film_list": null,
+   "requires_registration": true,
+   "is_free": true,
+   "type": "film"
+  },
+  {
+   "title": "Surviving Biafra",
+   "director": "Meji Alabi, Leke Alabi-Isama",
+   "duration": "75 min",
+   "country": "Nigeria (Reino Unido)",
+   "section": "Panorama Africano",
+   "genre": "Documental",
+   "synopsis": "Producer: Charlie Northcott Surviving Biafra is a feature documentary directed by Meji Alabi and Leke Alabi-Isama, exploring the Nigerian Civil War through the eyewitness accounts of those who survived it.",
+   "synopsis_lang": "en",
+   "poster": "/cEcb4J4zVAq80jVVYWYBsrgm7Yk.jpg",
+   "posterSource": "tmdb",
+   "lbSlug": "surviving-biafra",
+   "_src": {
+    "boom_event_id": 3946852,
+    "stills": [
+     "https://static.wixstatic.com/media/736095_085131453e7b4299b9dfe4be22a9ac7b~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_486e5ff5b5f34348a7cb7dfca99f9266~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_53399b8d66084701aaa085be3fc6dd1e~mv2.jpg"
+    ]
+   },
+   "year": "2026",
+   "synopsis_en": "Some of the last survivors from Nigeria’s Civil War, also known as the Biafran War, share their memories from the frontline.",
+   "_inherited": {
+    "synopsis_en": "tmdb-1713898",
+    "synopsis": "qaff-event-desc"
+   },
+   "_programada": true,
+   "day": "2026-09-17",
+   "time": "15:55",
+   "venue": "Biblioteca Departamental - Quibdó",
+   "day_order": 3,
+   "has_qa": false,
+   "is_cortos": false,
+   "film_list": null,
+   "requires_registration": true,
+   "is_free": true,
+   "type": "film"
+  },
+  {
+   "title": "DIÁLOGO IMPROBABLE  ·  NOIR HISTÓRICO",
+   "type": "event",
+   "duration": "120 min",
+   "synopsis": "Las sombras del archivo: memoria negra entre el museo y el cine La historia afrodescendiente ha sido contada desde los archivos coloniales, la Inquisición y los registros de esclavización. El Museo Afro rastrea esas memorias en archivos nacionales para restituirlas. El cine NOIR Histórico hace lo mismo: ilumina lo que fue deliberadamente oscurecido. ¿Qué ocurre cuando el curador, la documentalista, el director de teatro y la especialista en salud mental y políticas públicas se encuentran frente al mismo archivo? El museo desclasifica y expone; el cine reanima y resignifica; la política pública mide el daño y diseña la reparación. MODERADORA: Catherine Dunga PANELISTAS: Ángela Carabalí, Julián Díaz, Carlos Correa Angulo, Gwladys Gambie",
+   "synopsis_lang": "es",
+   "section": "Diálogo Improbable",
+   "year": "",
+   "day": "2026-09-17",
+   "time": "16:00",
+   "venue": "Museo Nacional - Bogotá",
+   "day_order": 3,
+   "has_qa": false,
+   "is_cortos": false,
+   "film_list": null,
+   "requires_registration": true,
+   "is_free": true,
+   "_src": {
+    "boom_event_id": 3946874,
+    "stills": [
+     "https://static.wixstatic.com/media/736095_3305c26f616248cb8bd57e0bc39a4da4~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_7d0c4d58d838481684c90a79a78aa9a8~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_59d4b32e46c1460ea8a9ceafa117a70f~mv2.jpg"
+    ]
+   },
+   "event_kind": ""
+  },
+  {
+   "title": "Waterfront Memories",
+   "director": "Marton Olympio",
+   "duration": "20 min",
+   "country": "Brasil",
+   "section": "Fronteras Latam",
+   "genre": "",
+   "synopsis": "Producer: Rafael Leal An 80-year-old Black painter escapes from a nursing home and takes refuge on a beach bench. There, lost memories gradually resurface. As he comes face to face with the waves of his past, he re-evaluates his life, sketches new perspectives, and reconnects with his son.",
+   "synopsis_lang": "en",
+   "poster": "",
+   "posterSource": "",
+   "_src": {
+    "boom_event_id": 3946851,
+    "stills": [
+     "https://static.wixstatic.com/media/736095_3240104f3ddf425881851859fa9fd662~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_a3d748b2020a4614b5112d4d17288471~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_ce1ef8a6aa7d474bac903561d7889b06~mv2.jpg"
+    ]
+   },
+   "day": "2026-09-17",
+   "time": "16:25",
+   "venue": "Biblioteca Departamental - Quibdó",
+   "day_order": 3,
+   "has_qa": false,
+   "is_cortos": false,
+   "film_list": null,
+   "requires_registration": true,
+   "is_free": true,
+   "type": "film",
+   "year": "2025",
+   "_inherited": {
+    "year": "qaff-event-desc",
+    "synopsis": "qaff-event-desc"
+   }
+  },
+  {
+   "title": "LAUNDRY (Uhlanjululo)",
+   "director": "Zamo Mkhwanazi",
+   "duration": "106 min",
+   "country": "Sudáfrica (Suiza)",
+   "section": "Panorama Africano",
+   "genre": "",
+   "synopsis": "Producers: Philippe Coeytaux, Zamo Mkhwanazi, Jim Stark, Nicolas Wadimoff, Marco Orsini South Africa, 1968. Apartheid is the law of the land. Khuthala, a talented young musician, wants nothing to do with his family's laundry business. He dreams of jazz, of a life shaped by music, not by soap and steam.",
+   "synopsis_lang": "en",
+   "poster": "",
+   "posterSource": "",
+   "_src": {
+    "boom_event_id": 3946864,
+    "stills": [
+     "https://static.wixstatic.com/media/736095_d642dcded575410b820443fef161203f~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_1a23c40802d14f1d8f16c6e22c647c21~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_ef25327f502a475391f12fecf5710877~mv2.jpg"
+    ]
+   },
+   "day": "2026-09-17",
+   "time": "16:30",
+   "venue": "Cinemateca de Bogotá - Bogotá",
+   "day_order": 3,
+   "has_qa": false,
+   "is_cortos": false,
+   "film_list": null,
+   "requires_registration": true,
+   "is_free": true,
+   "type": "film",
+   "year": "2025",
+   "_inherited": {
+    "year": "qaff-event-desc",
+    "synopsis": "qaff-event-desc"
+   }
+  },
+  {
+   "title": "305 Fishkill Avenue",
+   "director": "Ramel Westry",
+   "duration": "15 min",
+   "country": "Estados Unidos",
+   "section": "Panorama Diaspórica",
+   "genre": "",
+   "synopsis": "Producers: David M. Night Maire, Ramel Westry A kind-hearted janitor witnesses dangerous criminal activity at his neighboring apartment building: 305 Fishkill Avenue. The problem is no one believes this address even exists.",
+   "synopsis_lang": "en",
+   "poster": "",
+   "posterSource": "",
+   "_src": {
+    "boom_event_id": 3946829,
+    "stills": [
+     "https://static.wixstatic.com/media/736095_0a89cd22dcfe4a9ab3cf2ea3c4a24f4c~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_599d16dc40db4dbe868fdda9fd275d76~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_ed672ff497da4500b39aedc1e4e3de77~mv2.jpg"
+    ]
+   },
+   "day": "2026-09-18",
+   "time": "10:00",
+   "venue": "Biblioteca Departamental - Quibdó",
+   "day_order": 4,
+   "has_qa": false,
+   "is_cortos": false,
+   "film_list": null,
+   "requires_registration": true,
+   "is_free": true,
+   "type": "film",
+   "year": "2026",
+   "_inherited": {
+    "year": "qaff-event-desc",
+    "synopsis": "qaff-event-desc"
+   }
+  },
+  {
+   "title": "Sapeur: The Great Scam",
+   "director": "Denis F. Miala",
+   "duration": "120 min",
+   "country": "Angola",
+   "section": "Panorama Diaspórica",
+   "genre": "",
+   "synopsis": "Producers: Denis F. Miala, Lourenço M De Carvalho, Alberto Mende In the slums of Palanca, in Luanda, the charismatic mechanic and sapeur Jacob promises his son Alberto a house he cannot afford. Desperate, he teams up with his shady friend Lunda in a scam: posing as a wealthy landowner to sell non-existent plots of land to French investors.",
+   "synopsis_lang": "en",
+   "poster": "",
+   "posterSource": "",
+   "_src": {
+    "boom_event_id": 3946871,
+    "stills": [
+     "https://static.wixstatic.com/media/736095_536286a4c0514f0aaf893b315c369b58~mv2.jpg"
+    ]
+   },
+   "day": "2026-09-18",
+   "time": "10:15",
+   "venue": "Biblioteca Departamental - Quibdó",
+   "day_order": 4,
+   "has_qa": false,
+   "is_cortos": false,
+   "film_list": null,
+   "requires_registration": true,
+   "is_free": true,
+   "type": "film",
+   "year": "2026",
+   "_inherited": {
+    "year": "qaff-event-desc",
+    "synopsis": "qaff-event-desc"
+   }
+  },
+  {
+   "title": "God's Work",
+   "director": "Michael James",
+   "duration": "126 min",
+   "country": "Sudáfrica",
+   "section": "Otra Mirada",
+   "genre": "",
+   "synopsis": "Producer: Sithabile Mkhize Music Composer: George Acogny Co-Producer: Marco Orsini Executive Producers: Toni Monty, Gary Springer In a derelict building on the outskirts of Durban, a group of homeless men carve out a fragile existence amid violence, addiction, and the constant threat of being erased.",
+   "synopsis_lang": "en",
+   "poster": "",
+   "posterSource": "",
+   "_src": {
+    "boom_event_id": 3946872,
+    "stills": [
+     "https://static.wixstatic.com/media/736095_bf4985f261f24f249de6e4329f2f7e87~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_e99683effbd64176a0602f682316a2ee~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_c7fd873c531b4cd6853c56bb45ead4e5~mv2.jpg"
+    ]
+   },
+   "year": "2025",
+   "_inherited": {
+    "year": "qaff-event-desc",
+    "synopsis": "qaff-event-desc"
+   },
+   "_programada": true,
+   "day": "2026-09-18",
+   "time": "13:00",
+   "venue": "Biblioteca Departamental - Quibdó",
+   "day_order": 4,
+   "has_qa": false,
+   "is_cortos": false,
+   "film_list": null,
+   "requires_registration": true,
+   "is_free": true,
+   "type": "film"
+  },
+  {
+   "title": "The Travelers",
+   "director": "David Bingong",
+   "duration": "60 min",
+   "country": "Camerún (España)",
+   "section": "Panorama Africano",
+   "genre": "",
+   "synopsis": "Producers: Irene Gutiérrez Torres, David Bingong On the border between Morocco and Spain, we wait impatiently for the \"patera\" (boat) to cross into Europe. After one failed attempt after another, we survive, and I, \"the Artist,\" must keep the flame of hope alive for the entire group.",
+   "synopsis_lang": "en",
+   "poster": "",
+   "posterSource": "",
+   "_src": {
+    "boom_event_id": 3946865,
+    "stills": [
+     "https://static.wixstatic.com/media/736095_6d5c33a272984f3eaacb2e5f3cca745e~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_3d1b5b9c93ae4d85b5ac5e3fc0580f72~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_cdbb8ee412234c86bcf8f16b59325337~mv2.jpg"
+    ]
+   },
+   "day": "2026-09-18",
+   "time": "14:00",
+   "venue": "Cinemateca de Bogotá - Bogotá",
+   "day_order": 4,
+   "has_qa": false,
+   "is_cortos": false,
+   "film_list": null,
+   "requires_registration": true,
+   "is_free": true,
+   "type": "film",
+   "year": "2025",
+   "_inherited": {
+    "year": "qaff-event-desc",
+    "synopsis": "qaff-event-desc"
+   }
+  },
+  {
+   "title": "THE ANCHORAGE OF THE TIME",
+   "director": "Sol de Carvalho",
+   "duration": "105 min",
+   "country": "Mozambique",
+   "section": "Otra Mirada",
+   "genre": "Drama",
+   "synopsis": "Producers: Paula Ferreira, Sol de Carvalho IZIDINE, a recently promoted police detective, is called to a nursing home located in a former colonial fortress to investigate a crime: the home's director has been murdered.",
+   "synopsis_lang": "en",
+   "poster": "",
+   "posterSource": "",
+   "lbSlug": "the-anchorage-of-time",
+   "_src": {
+    "boom_event_id": 3946854,
+    "stills": [
+     "https://static.wixstatic.com/media/736095_b28c83444bb1473895268c8b7088ac3f~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_abe52ad074534739bd6b12f1ac45232b~mv2.jpg"
+    ]
+   },
+   "year": "2024",
+   "_inherited": {
+    "synopsis": "qaff-event-desc"
+   },
+   "_programada": true,
+   "day": "2026-09-18",
+   "time": "15:10",
+   "venue": "Biblioteca Departamental - Quibdó",
+   "day_order": 4,
+   "has_qa": false,
+   "is_cortos": false,
+   "film_list": null,
+   "requires_registration": true,
+   "is_free": true,
+   "type": "film"
+  },
+  {
+   "title": "INITIATION INTO THE EIGHTH DIMENSION",
+   "director": "Lucas Silva",
+   "duration": "90 min",
+   "country": "Colombia",
+   "section": "Panorama Colombiano",
+   "genre": "",
+   "synopsis": "Producer: Samuel Moreno Alvarez Five Afro-Colombian characters in the middle of Bogotá, five disparate destinies in a city that is hostile to them. Rubi Quejada, a young model displaced from Chocó.",
+   "synopsis_lang": "en",
+   "poster": "",
+   "posterSource": "",
+   "_src": {
+    "boom_event_id": 3946866,
+    "stills": [
+     "https://static.wixstatic.com/media/736095_690f9709d99945498e31c35b01544c88~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_efc4601d871045bbba23c6b74b62337e~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_7ff6bf779fe94e759f3563c0b78e445b~mv2.jpg"
+    ]
+   },
+   "day": "2026-09-18",
+   "time": "17:00",
+   "venue": "Cinemateca de Bogotá - Bogotá",
+   "day_order": 4,
+   "has_qa": false,
+   "is_cortos": false,
+   "film_list": null,
+   "requires_registration": true,
+   "is_free": true,
+   "type": "film",
+   "year": "2025",
+   "_inherited": {
+    "year": "qaff-event-desc",
+    "synopsis": "qaff-event-desc"
+   }
+  },
+  {
+   "title": "Wrong Generation",
+   "director": "Shili Munyama",
+   "duration": "65 min",
+   "country": "Namibia",
+   "section": "Panorama Africano",
+   "genre": "",
+   "synopsis": "Producers: Jenny Kandenge, Lavinia Kapewasha Following a series of brutal murders—the last of which takes the life of his childhood friend—a group of estranged best friends reconnects to organize the largest protest in post-apartheid Namibia.",
+   "synopsis_lang": "en",
+   "poster": "",
+   "posterSource": "",
+   "_src": {
+    "boom_event_id": 3946867,
+    "stills": [
+     "https://static.wixstatic.com/media/736095_d4d77335fdc54f14a8a0407b6daaa57d~mv2.jpg"
+    ]
+   },
+   "day": "2026-09-18",
+   "time": "19:30",
+   "venue": "Cinemateca de Bogotá - Bogotá",
+   "day_order": 4,
+   "has_qa": false,
+   "is_cortos": false,
+   "film_list": null,
+   "requires_registration": true,
+   "is_free": true,
+   "type": "film",
+   "year": "2026",
+   "_inherited": {
+    "year": "qaff-event-desc",
+    "synopsis": "qaff-event-desc"
+   }
+  },
+  {
+   "title": "Father's Day",
+   "director": "Ayana O'Shun",
+   "duration": "74 min",
+   "country": "Canadá",
+   "section": "Panorama Diaspórica",
+   "genre": "",
+   "synopsis": "Producers: Ayana O'Shun, Bianca Bellange Father's Day is an intimate and powerful documentary that explores the legacy of absent fathers in Black communities across North America and the Caribbean.",
+   "synopsis_lang": "en",
+   "poster": "",
+   "posterSource": "",
+   "_src": {
+    "boom_event_id": 3946868,
+    "stills": [
+     "https://static.wixstatic.com/media/736095_f61acb85889c4d05a9226d35470c9d14~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_74c48997fc3746f5aae8a4650e0ef39a~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_d2d891979a0a484a887b5586c3fc0155~mv2.jpg"
+    ]
+   },
+   "year": "2025",
+   "_inherited": {
+    "year": "qaff-event-desc",
+    "synopsis": "qaff-event-desc"
+   },
+   "_programada": true,
+   "day": "2026-09-19",
+   "time": "17:00",
+   "venue": "Cinemateca de Bogotá - Bogotá",
+   "day_order": 5,
+   "has_qa": false,
+   "is_cortos": false,
+   "film_list": null,
+   "requires_registration": true,
+   "is_free": true,
+   "type": "film"
+  },
+  {
+   "title": "The Madmen Coach",
+   "director": "Carlo Liberatore",
+   "duration": "60 min",
+   "country": "Italia (Senegal)",
+   "section": "Otra Mirada",
+   "genre": "Documental",
+   "synopsis": "Producers: Valerio Di Tommaso, Carlo Liberatore Cinematography: Gabriele Bucari, Carlo Liberatore Original Music: Patrizio Maria D'Artista In Dakar, Malick Biteye forms a football team made up of players with mental disorders. In a context of absolute poverty, the stories and desires of these men, who fight against stigma, intertwine.",
+   "synopsis_lang": "en",
+   "poster": "/D8N4FBRKkPM8laxkVHPiv6ZDfY.jpg",
+   "posterSource": "tmdb",
+   "lbSlug": "the-madmen-coach",
+   "_src": {
+    "boom_event_id": 3946869,
+    "stills": [
+     "https://static.wixstatic.com/media/736095_972733ccc81d497a9709b36dd720adea~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_c688745153404272a6c8c87c46def124~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_5ec26406a8d94f8e9c44202823d4cf4b~mv2.jpg"
+    ]
+   },
+   "day": "2026-09-20",
+   "time": "16:00",
+   "venue": "Cinemateca de Bogotá - Bogotá",
+   "day_order": 6,
+   "has_qa": false,
+   "is_cortos": false,
+   "film_list": null,
+   "requires_registration": true,
+   "is_free": true,
+   "type": "film",
+   "year": "2025",
+   "_inherited": {
+    "year": "qaff-event-desc",
+    "synopsis": "qaff-event-desc"
+   }
+  },
+  {
+   "title": "Aisha Can't Fly Away",
+   "director": "Morad Mostafa",
+   "duration": "90 min",
+   "country": "",
+   "section": "Panorama Africano",
+   "genre": "",
+   "synopsis": "Producer: Sawsan Yusuf Aisha is a 26-year-old Sudanese caregiver living in a neighbourhood in the heart of Cairo, where she witnesses the tension between her fellow African migrants and local gangs.",
+   "synopsis_lang": "en",
+   "poster": "",
+   "posterSource": "",
+   "_src": {
+    "boom_event_id": 3946870,
+    "stills": [
+     "https://static.wixstatic.com/media/736095_5187f3510aa44698bd503f8390d6093b~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_f916a2fc69134536bc56f4107391faea~mv2.jpg",
+     "https://static.wixstatic.com/media/736095_abe5059bd7bb4bfeaff6910db096670e~mv2.jpg"
+    ]
+   },
+   "year": "2025",
+   "_inherited": {
+    "year": "qaff-event-desc",
+    "synopsis": "qaff-event-desc"
+   },
+   "_programada": true,
+   "day": "2026-09-20",
+   "time": "18:30",
+   "venue": "Cinemateca de Bogotá - Bogotá",
+   "day_order": 6,
+   "has_qa": false,
+   "is_cortos": false,
+   "film_list": null,
+   "requires_registration": true,
+   "is_free": true,
+   "type": "film"
+  }
+ ],
+ "_obras_sin_funcion": [
+  "Orango",
+  "Hyphen"
+ ]
 }
