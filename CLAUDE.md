@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `5d07e3a fix(landing): itms-apps en iOS — el badge de App Store navega en el webview de IG (#497) (#497)`
+> Último commit: `6a6c739 fix(landing): funnel /get con rescate — el badge de Apple sobrevive al webview de IG (#498) (#498)`
 
 ---
 

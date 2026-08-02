@@ -60,6 +60,22 @@ enum PlanComputeTests {
         check("dayLabel en orden MMM-d", PlanCompute.dayLabel("2026-07-04", lang: .en).contains("JUL 4"))
         check("dayLabel sin puntos",    !PlanCompute.dayLabel("2026-07-04", lang: .es).contains("."))
 
+        // ── Lang.current respeta el idioma del USUARIO (B2, 2 ago 2026) ───────
+        // Bug real: Locale.current se resuelve contra las localizaciones del
+        // bundle (sin es.lproj → siempre "en") y el plan salía "THU AUG 13" con
+        // el sistema en español. Lang.current pasó a preferredLanguages. El
+        // harness corre el binario con -AppleLanguages forzado (ver run.sh) y
+        // acá se asserta la cadena completa: idioma → dayLabel del encabezado.
+        if let forced = UserDefaults.standard.stringArray(forKey: "AppleLanguages")?.first {
+            if forced.hasPrefix("es") {
+                check("Lang.current=es con AppleLanguages es", Lang.current == .es)
+                check("encabezado ES localizado (JUE 13 AGO)", PlanCompute.dayLabel("2026-08-13", lang: Lang.current) == "JUE 13 AGO")
+            } else if forced.hasPrefix("en") {
+                check("Lang.current=en con AppleLanguages en", Lang.current == .en)
+                check("encabezado EN (THU AUG 13)", PlanCompute.dayLabel("2026-08-13", lang: Lang.current) == "THU AUG 13")
+            }
+        }
+
         // ── nextUpcoming ──────────────────────────────────────────────────────
         let now = PlanCompute.startDate(item("_", "2026-07-04", "12:00"))!
         let past = item("past", "2026-07-04", "09:00")
