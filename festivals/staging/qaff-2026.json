@@ -1,0 +1,1088 @@
+{
+  "_etapa": "A-catalogo (SIN funciones — no publicar)",
+  "_provenance": {
+    "fuente": "Selección Oficial QAFF 2026 (https://www.quibdoafricafilmfestival.com/es/selection-2026), server-rendered, capturada 2026-08-02. El festival anuncia 55 films.",
+    "verificacion": "Parseo por regex de línea \"Título (Dir) - dur - país\"; conteo contra el anuncio. Secciones INTERINAS = grupos de formato de la página; las curatoriales (Competición/Panoramas/Prisma/…) llegarán del programa (widget Boom) o del catálogo.",
+    "sin_year": "La fuente NO publica año — completar vía TMDB/catálogo."
+  },
+  "sections": {
+    "Animación": {
+      "oficial": "Animación",
+      "en": "Animation",
+      "archetype": "",
+      "color": "",
+      "order": 1,
+      "_interina": true
+    },
+    "Experimental": {
+      "oficial": "Experimental",
+      "en": "Experimental",
+      "archetype": "",
+      "color": "",
+      "order": 2,
+      "_interina": true
+    },
+    "Cortometraje de Ficción": {
+      "oficial": "Cortometraje de Ficción",
+      "en": "Short Fiction",
+      "archetype": "",
+      "color": "",
+      "order": 3,
+      "_interina": true
+    },
+    "Cortometraje Documental": {
+      "oficial": "Cortometraje Documental",
+      "en": "Short Documentary",
+      "archetype": "",
+      "color": "",
+      "order": 4,
+      "_interina": true
+    },
+    "Largometraje Documental": {
+      "oficial": "Largometraje Documental",
+      "en": "Feature Documentary",
+      "archetype": "",
+      "color": "",
+      "order": 5,
+      "_interina": true
+    },
+    "Largometraje de Ficción": {
+      "oficial": "Largometraje de Ficción",
+      "en": "Feature Fiction",
+      "archetype": "",
+      "color": "",
+      "order": 6,
+      "_interina": true
+    }
+  },
+  "films": [
+    {
+      "title": "Free Fall",
+      "director": "Wilson Borja",
+      "duration": "9 min",
+      "country": "Colombia",
+      "section": "Animación",
+      "genre": "",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "_src": {
+        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
+        "date": "2026-08-02",
+        "linea_raw": "Free Fall (Wilson Borja) - 9' - Colombia"
+      }
+    },
+    {
+      "title": "Hacker Leonilia",
+      "director": "Gustavo Fontele Dourado",
+      "duration": "15 min",
+      "country": "Brasil",
+      "section": "Animación",
+      "genre": "Animación, Drama",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "/4qBc6v5V0UZdYzhRzNukG1MHZH9.jpg",
+      "posterSource": "tmdb",
+      "lbSlug": "hacker-leonilia",
+      "_src": {
+        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
+        "date": "2026-08-02",
+        "linea_raw": "Hacker Leonilia (Gustavo Fontele Dourado) - 14'59 - Brazil",
+        "tmdb_id": 1539677
+      },
+      "year": "2025",
+      "synopsis_en": "An elderly hacker with a personal crisis needs to use her skills and memories to escape a metaverse in order to have a second chance.",
+      "_inherited": {
+        "synopsis_en": "tmdb-1539677"
+      }
+    },
+    {
+      "title": "Stormy Days",
+      "director": "Vitor Bitencourt Rocha",
+      "duration": "19 min",
+      "country": "Brasil",
+      "section": "Animación",
+      "genre": "",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "_src": {
+        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
+        "date": "2026-08-02",
+        "linea_raw": "Stormy Days (Vitor Bitencourt Rocha) - 19'20 - Brazil"
+      }
+    },
+    {
+      "title": "Manman Chadwon",
+      "director": "Gwladys Gambie",
+      "duration": "10 min",
+      "country": "Martinica",
+      "section": "Experimental",
+      "genre": "",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "_src": {
+        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
+        "date": "2026-08-02",
+        "linea_raw": "Manman Chadwon (Gwladys Gambie) - 10'13 - Martinique (out of competition)"
+      },
+      "_out_of_competition": "out of competition"
+    },
+    {
+      "title": "Leer en las gotas de lluvia",
+      "director": "Lilian Pallares, Charles Olsen",
+      "duration": "10 min",
+      "country": "España",
+      "section": "Experimental",
+      "genre": "",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "_src": {
+        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
+        "date": "2026-08-02",
+        "linea_raw": "Leer en las gotas de lluvia (Lilian Pallares, Charles Olsen) - 10'24 - Spain"
+      }
+    },
+    {
+      "title": "Concrete Moves",
+      "director": "Fagamou Fama Ndiaye",
+      "duration": "12 min",
+      "country": "Senegal",
+      "section": "Experimental",
+      "genre": "Documental",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "/7jmZ899cs6DHznSqbILVBLl16zH.jpg",
+      "posterSource": "tmdb",
+      "lbSlug": "concrete-moves",
+      "_src": {
+        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
+        "date": "2026-08-02",
+        "linea_raw": "Concrete Moves (Fagamou Fama Ndiaye) - 12' - Senegal",
+        "tmdb_id": 1665627
+      },
+      "year": "2026",
+      "synopsis_en": "Fagamou returns to the same hill that, decades ago, triggered her fear of snakes.",
+      "_inherited": {
+        "synopsis_en": "tmdb-1665627"
+      }
+    },
+    {
+      "title": "POSESAS [Possessed]",
+      "director": "Sebastian Wiedemann, Daniel Cortes",
+      "duration": "16 min",
+      "country": "Colombia",
+      "section": "Experimental",
+      "genre": "",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "_src": {
+        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
+        "date": "2026-08-02",
+        "linea_raw": "POSESAS [Possessed] (Sebastian Wiedemann, Daniel Cortes) - 16'18 - Colombia"
+      }
+    },
+    {
+      "title": "FACE TO FACE",
+      "director": "Florent Mahoukou",
+      "duration": "20 min",
+      "country": "Congo",
+      "section": "Experimental",
+      "genre": "",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "_src": {
+        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
+        "date": "2026-08-02",
+        "linea_raw": "FACE TO FACE (Florent Mahoukou) - 19'54 - Congo (out of competition)"
+      },
+      "_out_of_competition": "out of competition"
+    },
+    {
+      "title": "CAPTAIN ANTHONY",
+      "director": "Gregory Robinson",
+      "duration": "8 min",
+      "country": "Colombia",
+      "section": "Cortometraje de Ficción",
+      "genre": "",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "_src": {
+        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
+        "date": "2026-08-02",
+        "linea_raw": "CAPTAIN ANTHONY (Gregory Robinson) - 8' - Colombia"
+      }
+    },
+    {
+      "title": "Sheltering Gestures",
+      "director": "Adrian Villa-Davila, Andres Prado",
+      "duration": "11 min",
+      "country": "Colombia",
+      "section": "Cortometraje de Ficción",
+      "genre": "Videodance",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "lbSlug": "sheltering-gestures",
+      "_src": {
+        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
+        "date": "2026-08-02",
+        "linea_raw": "Sheltering Gestures (Adrian Villa-Davila, Andres Prado) - 10'53 - Colombia"
+      },
+      "year": "2026",
+      "title_orig": "Refugiar el gesto",
+      "_inherited": {
+        "genre": "siembrafest-2026",
+        "year": "siembrafest-2026",
+        "title_orig": "siembrafest-2026"
+      }
+    },
+    {
+      "title": "MANGO",
+      "director": "Joan Iyiola",
+      "duration": "11 min",
+      "country": "Francia (Reino Unido)",
+      "section": "Cortometraje de Ficción",
+      "genre": "",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "_src": {
+        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
+        "date": "2026-08-02",
+        "linea_raw": "MANGO (Joan Iyiola) - 11' - France, United Kingdom"
+      }
+    },
+    {
+      "title": "The Black Bart of Taco King #17",
+      "director": "Rickey Larke",
+      "duration": "11 min",
+      "country": "Estados Unidos",
+      "section": "Cortometraje de Ficción",
+      "genre": "",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "/2U9w9fNF8paFH8pemCC8yyrZfvb.jpg",
+      "posterSource": "tmdb",
+      "lbSlug": "the-black-bart-of-taco-king-17",
+      "_src": {
+        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
+        "date": "2026-08-02",
+        "linea_raw": "The Black Bart of Taco King #17 (Rickey Larke) - 11'20 - United States",
+        "tmdb_id": 1654835
+      },
+      "year": "2026",
+      "synopsis_en": "A suave larcenist searches for a new partner at a dive bar and finds the perfect Bonnie to his Clyde. He takes her to dinner to put her to the test, yet she has all the answers... and more.",
+      "_inherited": {
+        "synopsis_en": "tmdb-1654835"
+      }
+    },
+    {
+      "title": "Kanekalon",
+      "director": "Sara J. Asprilla",
+      "duration": "13 min",
+      "country": "Colombia",
+      "section": "Cortometraje de Ficción",
+      "genre": "",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "/6ayAk61nDOMUKa71nipvIYIxzrc.jpg",
+      "posterSource": "tmdb",
+      "lbSlug": "kanekalon",
+      "_src": {
+        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
+        "date": "2026-08-02",
+        "linea_raw": "Kanekalon (Sara J. Asprilla) - 12'30 - Colombia",
+        "tmdb_id": 1454683
+      },
+      "year": "2025",
+      "synopsis_en": "Teyo, a young trans woman, prepares to enter her new female school. In the middle of a trip through Quibdó, a hot city of sound, rhythms and glances that she faces before entering class converge.",
+      "_inherited": {
+        "synopsis_en": "tmdb-1454683"
+      }
+    },
+    {
+      "title": "BERTHA",
+      "director": "Laura Asprilla",
+      "duration": "13 min",
+      "country": "Colombia",
+      "section": "Cortometraje de Ficción",
+      "genre": "",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "_src": {
+        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
+        "date": "2026-08-02",
+        "linea_raw": "BERTHA (Laura Asprilla) - 12'44 - Colombia"
+      }
+    },
+    {
+      "title": "The Clay Vase",
+      "director": "Ernestina Miranda, Mar Aje",
+      "duration": "14 min",
+      "country": "Colombia",
+      "section": "Cortometraje de Ficción",
+      "genre": "Experimental",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "_src": {
+        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
+        "date": "2026-08-02",
+        "linea_raw": "The Clay Vase (Ernestina Miranda, Mar Aje) - 13'47 - Colombia"
+      },
+      "year": "2025",
+      "title_orig": "La tinaja",
+      "_inherited": {
+        "genre": "siembrafest-2026",
+        "year": "siembrafest-2026",
+        "title_orig": "siembrafest-2026"
+      }
+    },
+    {
+      "title": "305 Fishkill Avenue",
+      "director": "Ramel Westry",
+      "duration": "15 min",
+      "country": "Estados Unidos",
+      "section": "Cortometraje de Ficción",
+      "genre": "",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "_src": {
+        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
+        "date": "2026-08-02",
+        "linea_raw": "305 Fishkill Avenue (Ramel Westry) - 15' - United States"
+      }
+    },
+    {
+      "title": "Gloria",
+      "director": "Marvin Yamb",
+      "duration": "15 min",
+      "country": "Guayana Francesa",
+      "section": "Cortometraje de Ficción",
+      "genre": "",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "_src": {
+        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
+        "date": "2026-08-02",
+        "linea_raw": "Gloria (Marvin Yamb) - 15' - French Guiana"
+      }
+    },
+    {
+      "title": "The Last Dance",
+      "director": "Hayden Mclean",
+      "duration": "17 min",
+      "country": "Reino Unido",
+      "section": "Cortometraje de Ficción",
+      "genre": "",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "_src": {
+        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
+        "date": "2026-08-02",
+        "linea_raw": "The Last Dance (Hayden Mclean) - 16'39 - United Kingdom"
+      }
+    },
+    {
+      "title": "VICHE",
+      "director": "Jorge Eliecer Leudo Murillo",
+      "duration": "17 min",
+      "country": "Colombia",
+      "section": "Cortometraje de Ficción",
+      "genre": "Familia",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "/uwM4DppRwhaYVXq2WPxtFEjF1F0.jpg",
+      "posterSource": "tmdb",
+      "lbSlug": "viche",
+      "_src": {
+        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
+        "date": "2026-08-02",
+        "linea_raw": "VICHE (Jorge Eliecer Leudo Murillo) - 17'10 - Colombia",
+        "tmdb_id": 1496482
+      },
+      "year": "2025",
+      "synopsis_en": "In the heart of Chocó, Diógenes, a young Afro-descendant university student, lives trapped between the traditions of his grandfather Anacleto, a master viche producer, and his own aspirations to go out into the world and build a different life.",
+      "_inherited": {
+        "synopsis_en": "tmdb-1496482"
+      }
+    },
+    {
+      "title": "Happy Meal",
+      "director": "Johanna Makabi",
+      "duration": "20 min",
+      "country": "Francia",
+      "section": "Cortometraje de Ficción",
+      "genre": "",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "_src": {
+        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
+        "date": "2026-08-02",
+        "linea_raw": "Happy Meal (Johanna Makabi) - 19'50 - France"
+      }
+    },
+    {
+      "title": "Waterfront Memories",
+      "director": "Marton Olympio",
+      "duration": "20 min",
+      "country": "Brasil",
+      "section": "Cortometraje de Ficción",
+      "genre": "",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "_src": {
+        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
+        "date": "2026-08-02",
+        "linea_raw": "Waterfront Memories (Marton Olympio) - 20' - Brazil"
+      }
+    },
+    {
+      "title": "One Sunday",
+      "director": "Day Sena",
+      "duration": "20 min",
+      "country": "Brasil",
+      "section": "Cortometraje de Ficción",
+      "genre": "",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "_src": {
+        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
+        "date": "2026-08-02",
+        "linea_raw": "One Sunday (Day Sena) - 20' - Brazil"
+      }
+    },
+    {
+      "title": "The One who Cries",
+      "director": "Cyrille Guei",
+      "duration": "20 min",
+      "country": "Francia",
+      "section": "Cortometraje de Ficción",
+      "genre": "",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "_src": {
+        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
+        "date": "2026-08-02",
+        "linea_raw": "The One who Cries (Cyrille Guei) - 20' - France"
+      }
+    },
+    {
+      "title": "Amelia",
+      "director": "Badewa Adeseye Ajibade",
+      "duration": "23 min",
+      "country": "Nigeria",
+      "section": "Cortometraje de Ficción",
+      "genre": "",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "_src": {
+        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
+        "date": "2026-08-02",
+        "linea_raw": "Amelia (Badewa Adeseye Ajibade) - 23'03 - Nigeria"
+      }
+    },
+    {
+      "title": "Mojugba",
+      "director": "Gustavo Alonso Arias",
+      "duration": "24 min",
+      "country": "Colombia",
+      "section": "Cortometraje de Ficción",
+      "genre": "",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "_src": {
+        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
+        "date": "2026-08-02",
+        "linea_raw": "Mojugba (Gustavo Alonso Arias) - 23'33 - Colombia"
+      }
+    },
+    {
+      "title": "A Cor da Patroa",
+      "director": "Milena Anjos",
+      "duration": "25 min",
+      "country": "Brasil",
+      "section": "Cortometraje de Ficción",
+      "genre": "Drama",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "/2btPt3kZfuoG44dxktYikFOkbEf.jpg",
+      "posterSource": "tmdb",
+      "lbSlug": "a-cor-da-patroa",
+      "_src": {
+        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
+        "date": "2026-08-02",
+        "linea_raw": "A Cor da Patroa (Milena Anjos) - 24'48 - Brazil",
+        "tmdb_id": 1657249
+      }
+    },
+    {
+      "title": "Cafe ?",
+      "director": "Bamar Kane",
+      "duration": "25 min",
+      "country": "Francia",
+      "section": "Cortometraje de Ficción",
+      "genre": "",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "_src": {
+        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
+        "date": "2026-08-02",
+        "linea_raw": "Cafe ? (Bamar Kane) - 24'59 - France"
+      }
+    },
+    {
+      "title": "Altanegra",
+      "director": "Raiza De La Hoz, Daniela Ponce",
+      "duration": "26 min",
+      "country": "Colombia",
+      "section": "Cortometraje de Ficción",
+      "genre": "",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "_src": {
+        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
+        "date": "2026-08-02",
+        "linea_raw": "Altanegra (Raiza De La Hoz, Daniela Ponce) - 25'59 - Colombia"
+      }
+    },
+    {
+      "title": "When the world broke open",
+      "director": "Desiree Mbakumua Meiffret",
+      "duration": "30 min",
+      "country": "Estados Unidos",
+      "section": "Cortometraje de Ficción",
+      "genre": "",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "_src": {
+        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
+        "date": "2026-08-02",
+        "linea_raw": "When the world broke open (Desiree Mbakumua Meiffret) - 29'59 - United States"
+      }
+    },
+    {
+      "title": "Amazonas Cocinas Indigenas de Selva y Rio",
+      "director": "Jairo Garrido",
+      "duration": "13 min",
+      "country": "Colombia",
+      "section": "Cortometraje Documental",
+      "genre": "",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "_src": {
+        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
+        "date": "2026-08-02",
+        "linea_raw": "Amazonas Cocinas Indigenas de Selva y Rio (Jairo Garrido) - 13' - Colombia"
+      }
+    },
+    {
+      "title": "Carabali",
+      "director": "Medhin Tewolde",
+      "duration": "18 min",
+      "country": "México",
+      "section": "Cortometraje Documental",
+      "genre": "",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "_src": {
+        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
+        "date": "2026-08-02",
+        "linea_raw": "Carabali (Medhin Tewolde) - 18'20 - Mexico"
+      }
+    },
+    {
+      "title": "A King Displaced",
+      "director": "Olayinka Eno Babalola",
+      "duration": "20 min",
+      "country": "Nigeria",
+      "section": "Cortometraje Documental",
+      "genre": "",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "_src": {
+        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
+        "date": "2026-08-02",
+        "linea_raw": "A King Displaced (Olayinka Eno Babalola) - 19'57 - Nigeria"
+      }
+    },
+    {
+      "title": "Mi viche todo el dia",
+      "director": "Juan Camilo Moreno",
+      "duration": "26 min",
+      "country": "Colombia",
+      "section": "Cortometraje Documental",
+      "genre": "Documental",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "lbSlug": "my-daily-viche",
+      "_src": {
+        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
+        "date": "2026-08-02",
+        "linea_raw": "Mi viche todo el dia (Juan Camilo Moreno) - 26'26 - Colombia (out of competition)",
+        "tmdb_id": 1593596
+      },
+      "_out_of_competition": "out of competition",
+      "year": "2025",
+      "synopsis_en": "In the Medio Atrato region of Chocó, Ana Panesso and her community grow sugarcane and make viche, an ancestral beverage that was once prohibited but now is in vogue. Through food, river trips, and music, viche and its knowledge not only shape people s daily lives but also raise the question of a just future, where viche serves as food, sustenance, and identity for Black families.",
+      "_inherited": {
+        "synopsis_en": "tmdb-1593596"
+      }
+    },
+    {
+      "title": "Stories from La Guajirita",
+      "director": "David Antonio Diaz de la rosa",
+      "duration": "51 min",
+      "country": "Colombia",
+      "section": "Cortometraje Documental",
+      "genre": "",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "_src": {
+        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
+        "date": "2026-08-02",
+        "linea_raw": "Stories from La Guajirita (David Antonio Diaz de la rosa) - 51'19 - Colombia"
+      }
+    },
+    {
+      "title": "Sisters in Destiny: Angela Davis & Gerty Archimede",
+      "director": "Pascal Frederic Archimede, Dimitry Zandronis",
+      "duration": "53 min",
+      "country": "Guadalupe",
+      "section": "Cortometraje Documental",
+      "genre": "",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "_src": {
+        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
+        "date": "2026-08-02",
+        "linea_raw": "Sisters in Destiny: Angela Davis & Gerty Archimede (Pascal Frederic Archimede, Dimitry Zandronis) - 52'40 - Guadeloupe"
+      }
+    },
+    {
+      "title": "The Madmen Coach",
+      "director": "Carlo Liberatore",
+      "duration": "60 min",
+      "country": "Italia (Senegal)",
+      "section": "Largometraje Documental",
+      "genre": "Documental",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "/D8N4FBRKkPM8laxkVHPiv6ZDfY.jpg",
+      "posterSource": "tmdb",
+      "lbSlug": "the-madmen-coach",
+      "_src": {
+        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
+        "date": "2026-08-02",
+        "linea_raw": "The Madmen Coach (Carlo Liberatore) - 60' - Italy, Senegal",
+        "tmdb_id": 1675697
+      }
+    },
+    {
+      "title": "The Travelers",
+      "director": "David Bingong",
+      "duration": "60 min",
+      "country": "Camerún (España)",
+      "section": "Largometraje Documental",
+      "genre": "",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "_src": {
+        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
+        "date": "2026-08-02",
+        "linea_raw": "The Travelers (David Bingong) - 60'20 - Cameroon, Spain"
+      }
+    },
+    {
+      "title": "Father's Day",
+      "director": "Ayana O'Shun",
+      "duration": "74 min",
+      "country": "Canadá",
+      "section": "Largometraje Documental",
+      "genre": "",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "_src": {
+        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
+        "date": "2026-08-02",
+        "linea_raw": "Father's Day (Ayana O'Shun) - 74' - Canada"
+      }
+    },
+    {
+      "title": "Surviving Biafra",
+      "director": "Meji Alabi, Leke Alabi-Isama",
+      "duration": "75 min",
+      "country": "Nigeria (Reino Unido)",
+      "section": "Largometraje Documental",
+      "genre": "Documental",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "/cEcb4J4zVAq80jVVYWYBsrgm7Yk.jpg",
+      "posterSource": "tmdb",
+      "lbSlug": "surviving-biafra",
+      "_src": {
+        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
+        "date": "2026-08-02",
+        "linea_raw": "Surviving Biafra (Meji Alabi, Leke Alabi-Isama) - 75' - Nigeria, United Kingdom",
+        "tmdb_id": 1713898
+      },
+      "year": "2026",
+      "synopsis_en": "Some of the last survivors from Nigeria’s Civil War, also known as the Biafran War, share their memories from the frontline.",
+      "_inherited": {
+        "synopsis_en": "tmdb-1713898"
+      }
+    },
+    {
+      "title": "The Banjo Boys",
+      "director": "Johan R Nayar",
+      "duration": "76 min",
+      "country": "Alemania (Malaui, Reino Unido)",
+      "section": "Largometraje Documental",
+      "genre": "Documental, Música",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "/6CmwyWw15chXWgBcYi5qBYtcIGc.jpg",
+      "posterSource": "tmdb",
+      "lbSlug": "the-banjo-boys",
+      "_src": {
+        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
+        "date": "2026-08-02",
+        "linea_raw": "The Banjo Boys (Johan R Nayar) - 76' - Germany, Malawi, United Kingdom",
+        "tmdb_id": 1547480
+      },
+      "year": "2025",
+      "synopsis_en": "The Banjo Boys follows the rise of Madalitso Band, Malawian musicians Yobu Maligwa and Yosefe Kalekeni, who craft a banjo, a one-stringed babatone, and foot drum, creating a sound that moves audiences. Once mocked as madmen in Lilongwe’s streets, they meet Neil Nayar, a British musician drawn to Malawi’s spirit. Their chance encounter sparks a trio, propelling them from local busking to global stages like Sauti za Busara, WOMAD, and Joshua Tree. Facing visa struggles, personal tragedies—including original member Rice’s imprisonment for murder—and cultural tensions, their grit fuels joyous performances. Yobu’s pastoral visions, Yosefe’s resilience, and Neil’s purpose drive their bond. Their minimalist sound bridges continents, culminating in a 2023 world tour and a legendary Malawi homecoming. Intimate interviews and vibrant performances reveal music’s power to unite and transform.",
+      "_inherited": {
+        "synopsis_en": "tmdb-1547480"
+      }
+    },
+    {
+      "title": "Viva Yurumangui",
+      "director": "Emma Christopher, Sergio Leyva Seiglie",
+      "duration": "80 min",
+      "country": "Colombia",
+      "section": "Largometraje Documental",
+      "genre": "",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "_src": {
+        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
+        "date": "2026-08-02",
+        "linea_raw": "Viva Yurumangui (Emma Christopher, Sergio Leyva Seiglie) - 80' - Colombia"
+      }
+    },
+    {
+      "title": "Soñé su nombre",
+      "director": "Ángela Carabalí",
+      "duration": "85 min",
+      "country": "Colombia",
+      "section": "Largometraje Documental",
+      "genre": "DERECHOS HUMANOS",
+      "synopsis": "Después de 30 años negando su dolor, Ángela se enfrenta a su pasado cuando su padre se le aparece en un sueño y le pide que lo busque. Junto a su hermana Juliana, emprende un viaje por Colombia hasta los terriotiros indígenas donde su padre, un agricultor afrodescendiente, fue víctima de desaparición forzada.",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "lbSlug": "i-dreamed-his-name",
+      "_src": {
+        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
+        "date": "2026-08-02",
+        "linea_raw": "Soñé su nombre (Ángela Carabalí) - 85' - Colombia (out of competition)"
+      },
+      "_out_of_competition": "out of competition",
+      "synopsis_en": "Thirty years after his forced disappearance, the filmmaker’s Afro Colombian father comes to her in a dream, asking her to find him. With her sister, she sets out on a journey of discovery across Colombia’s painful history, reconnecting with their father and his activism.",
+      "year": "2025",
+      "_inherited": {
+        "synopsis": "siembrafest-2026",
+        "synopsis_en": "siembrafest-2026",
+        "genre": "siembrafest-2026",
+        "lbSlug": "siembrafest-2026",
+        "year": "siembrafest-2026"
+      }
+    },
+    {
+      "title": "INITIATION INTO THE EIGHTH DIMENSION",
+      "director": "Lucas Silva",
+      "duration": "90 min",
+      "country": "Colombia",
+      "section": "Largometraje Documental",
+      "genre": "",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "_src": {
+        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
+        "date": "2026-08-02",
+        "linea_raw": "INITIATION INTO THE EIGHTH DIMENSION (Lucas Silva) - 90' - Colombia"
+      }
+    },
+    {
+      "title": "Orango",
+      "director": "Samuel Kay Forrest",
+      "duration": "94 min",
+      "country": "Guinea-Bisáu",
+      "section": "Largometraje Documental",
+      "genre": "",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "_src": {
+        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
+        "date": "2026-08-02",
+        "linea_raw": "Orango (Samuel Kay Forrest) - 94' - Guinea-Bissau"
+      }
+    },
+    {
+      "title": "Of Mud and Blood",
+      "director": "Jean-Gabriel Leynaud",
+      "duration": "94 min",
+      "country": "Congo (Francia)",
+      "section": "Largometraje Documental",
+      "genre": "",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "_src": {
+        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
+        "date": "2026-08-02",
+        "linea_raw": "Of Mud and Blood (Jean-Gabriel Leynaud) - 94' - Congo, France"
+      }
+    },
+    {
+      "title": "Hyphen",
+      "director": "Reine Razzouk",
+      "duration": "98 min",
+      "country": "Líbano",
+      "section": "Largometraje Documental",
+      "genre": "",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "_src": {
+        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
+        "date": "2026-08-02",
+        "linea_raw": "Hyphen (Reine Razzouk) - 98' - Lebanon (out of competition)"
+      },
+      "_out_of_competition": "out of competition"
+    },
+    {
+      "title": "Three Black Men",
+      "director": "Sienna McLean-LoGreco",
+      "duration": "99 min",
+      "country": "Estados Unidos",
+      "section": "Largometraje Documental",
+      "genre": "",
+      "synopsis": "¿Puede un viaje hacia el pasado abrir nuevas posibilidades para la Negritud? Tres hombres negros recorren a la inversa la ruta transatlántica del comercio de esclavos, de Los Ángeles (California) a Salvador de Bahía (Brasil) y, finalmente, a Accra (Ghana). En este recorrido exploran aspectos fundamentales de la historia negra y las representaciones de la migración forzosa, la supervivencia y la desaparición de los millones de personas que cruzaron el Atlántico; y brazan la identidad negra como una fuente viva de conexión, creación y renovación.",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "lbSlug": "three-black-men",
+      "_src": {
+        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
+        "date": "2026-08-02",
+        "linea_raw": "Three Black Men (Sienna McLean-LoGreco) - 99'17 - United States",
+        "tmdb_id": 1616280
+      },
+      "synopsis_en": "Can blackness escape the violence of its origins?  Three Black men set out on a transformative journey along the transatlantic slave route in reverse, exploring resistance, liberation and a new understanding of Blackness.  Their epic voyage takes them from Los Angeles to Salvador da Bahia in Brazil, and finally to Accra in Ghana. Their mission is to redefine Blackness, heal from historical trauma, and envision new paths to liberation beyond the constraints of white supremacy.",
+      "year": "2026",
+      "_inherited": {
+        "synopsis": "ficdeh-2026",
+        "synopsis_en": "ficdeh-2026",
+        "lbSlug": "ficdeh-2026",
+        "year": "ficdeh-2026"
+      }
+    },
+    {
+      "title": "Wrong Generation",
+      "director": "Shili Munyama",
+      "duration": "65 min",
+      "country": "Namibia",
+      "section": "Largometraje de Ficción",
+      "genre": "",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "_src": {
+        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
+        "date": "2026-08-02",
+        "linea_raw": "Wrong Generation (Shili Munyama) - 64'53 - Namibia"
+      }
+    },
+    {
+      "title": "Aisha Can't Fly Away",
+      "director": "Morad Mostafa",
+      "duration": "90 min",
+      "country": "",
+      "section": "Largometraje de Ficción",
+      "genre": "",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "_src": {
+        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
+        "date": "2026-08-02",
+        "linea_raw": "Aisha Can't Fly Away (Morad Mostafa) - 90' - Not Specified"
+      }
+    },
+    {
+      "title": "Nunkui",
+      "director": "Verenice Benitez",
+      "duration": "90 min",
+      "country": "Chile (Ecuador, Alemania)",
+      "section": "Largometraje de Ficción",
+      "genre": "Drama",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "/p61q7EcIjvKpfmd8tXDlDdXCTr8.jpg",
+      "posterSource": "tmdb",
+      "lbSlug": "nunkui-2026",
+      "_src": {
+        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
+        "date": "2026-08-02",
+        "linea_raw": "Nunkui (Verenice Benitez) - 90' - Chile, Ecuador, Germany",
+        "tmdb_id": 1243032
+      },
+      "year": "2026",
+      "synopsis_en": "Nunkui, the female spirit of the garden. Nunkui, the name of a Shuar girl in a lush world of plants, animals, spirits and an extended family. Between premonitory dreams and mining conflicts in the Amazonian Cóndor mountain range, Nunkui searches for her place in the world, influenced by her grandfather Yaunchu, an old Shuar leader.",
+      "_inherited": {
+        "synopsis_en": "tmdb-1243032"
+      }
+    },
+    {
+      "title": "THE ANCHORAGE OF THE TIME",
+      "director": "Sol de Carvalho",
+      "duration": "105 min",
+      "country": "Mozambique",
+      "section": "Largometraje de Ficción",
+      "genre": "Drama",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "lbSlug": "the-anchorage-of-time",
+      "_src": {
+        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
+        "date": "2026-08-02",
+        "linea_raw": "THE ANCHORAGE OF THE TIME (Sol de Carvalho) - 105' - Mozambique"
+      },
+      "year": "2024"
+    },
+    {
+      "title": "LAUNDRY (Uhlanjululo)",
+      "director": "Zamo Mkhwanazi",
+      "duration": "106 min",
+      "country": "Sudáfrica (Suiza)",
+      "section": "Largometraje de Ficción",
+      "genre": "",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "_src": {
+        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
+        "date": "2026-08-02",
+        "linea_raw": "LAUNDRY (Uhlanjululo) (Zamo Mkhwanazi) - 105'54 - South Africa, Switzerland"
+      }
+    },
+    {
+      "title": "Sapeur: The Great Scam",
+      "director": "Denis F. Miala",
+      "duration": "120 min",
+      "country": "Angola",
+      "section": "Largometraje de Ficción",
+      "genre": "",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "_src": {
+        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
+        "date": "2026-08-02",
+        "linea_raw": "Sapeur: The Great Scam (Denis F. Miala) - 120' - Angola (out of competition/Work in progress)"
+      },
+      "_out_of_competition": "out of competition/Work in progress"
+    },
+    {
+      "title": "God's Work",
+      "director": "Michael James",
+      "duration": "126 min",
+      "country": "Sudáfrica",
+      "section": "Largometraje de Ficción",
+      "genre": "",
+      "synopsis": "",
+      "synopsis_lang": "es",
+      "poster": "",
+      "posterSource": "",
+      "_src": {
+        "url": "https://www.quibdoafricafilmfestival.com/es/selection-2026",
+        "date": "2026-08-02",
+        "linea_raw": "God's Work (Michael James) - 126' - South Africa"
+      }
+    }
+  ]
+}
