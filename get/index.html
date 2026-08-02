@@ -25,7 +25,9 @@
   // iPadOS moderno se reporta como Mac — el touch lo delata.
   var isIOS     = /iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
   var isAndroid = /Android/.test(ua);
-  location.replace(isIOS ? APPSTORE : isAndroid ? PLAY : '/');
+  // itms-apps en iOS: mismo motivo que la landing — si el QR/link se abre en un
+  // navegador in-app (IG/FB), el universal link a apps.apple.com se bloquea.
+  location.replace(isIOS ? APPSTORE.replace('https://','itms-apps://') : isAndroid ? PLAY : '/');
 })();
 </script>
 </body>
