@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `03a17b1 fix(domain): delayedEndMin — el retraso reportado gana dueño unico (#495) (#495)`
+> Último commit: `e5d8504 fix(landing): URL del App Store con storefront + slug — el badge revive en IG y desktop (#496) (#496)`
 
 ---
 

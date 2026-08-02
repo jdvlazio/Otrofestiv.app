@@ -150,3 +150,29 @@ test.describe('store gate v4 — matriz de UAs', () => {
     await expectLanding(page); await context.close();
   });
 });
+
+// ── SG14/SG15 — el badge de App Store NAVEGA en el webview (2 ago 2026) ───────
+// Bug de campaña FINCA: en el in-app browser de Instagram el tap al badge de
+// Apple "no hacía nada". Los webviews de IG/FB BLOQUEAN el handoff del
+// universal link apps.apple.com a la app de App Store (la navegación se
+// cancela en silencio). Workaround estándar de la industria (Branch/AppsFlyer):
+// en iOS el href usa itms-apps:// — el esquema sí pasa al sistema, y en Safari
+// normal también abre App Store directo. Android/desktop conservan https
+// (la página web, que resuelve desde #496 con storefront + slug).
+test.describe('store gate v4 — badge de App Store por plataforma', () => {
+  test('SG14 Instagram iOS → badge Apple con itms-apps://', async ({ browser }) => {
+    const { context, page } = await open(browser, UA.igIOS);
+    await page.waitForSelector('.sg-btn', { timeout: 8000 });
+    const hrefs = await page.evaluate(() => [...document.querySelectorAll('.sg-btn')].map(a => a.getAttribute('href')));
+    expect(hrefs.some(h => h.startsWith('itms-apps://apps.apple.com/co/app/otrofestiv/id6769367002'))).toBe(true);
+    await context.close();
+  });
+  test('SG15 Instagram Android → badge Apple https (página web) + Play intacto', async ({ browser }) => {
+    const { context, page } = await open(browser, UA.igAndroid);
+    await page.waitForSelector('.sg-btn', { timeout: 8000 });
+    const hrefs = await page.evaluate(() => [...document.querySelectorAll('.sg-btn')].map(a => a.getAttribute('href')));
+    expect(hrefs.some(h => h.startsWith('https://apps.apple.com/co/app/otrofestiv/id6769367002'))).toBe(true);
+    expect(hrefs.some(h => h.includes('play.google.com/store/apps/details'))).toBe(true);
+    await context.close();
+  });
+});
