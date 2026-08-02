@@ -168,22 +168,23 @@
  "venues": {
   "Biblioteca Departamental - Quibdó": {
    "short": "Biblioteca Departamental - Quibdó",
-   "lat": null,
-   "lng": null,
+   "lat": 5.6900179,
+   "lng": -76.6397377,
    "city": "Quibdó",
-   "address": "",
+   "address": "Calle 30, Av. Aeropuerto, Barrio Los Ángeles",
    "_contact": {
     "email": "secretariaskui@airplan.aero",
     "phone": "+57 (604) 520 8542",
     "website": "https://www.aeropuertoquibdo.co/biblioteca"
-   }
+   },
+   "_geocode_nota": "Pin = Aeropuerto El Caraño (OSM); la biblioteca está en el Centro de Servicios del aeropuerto (dirección y tel. confirmados en aeropuertoquibdo.co/biblioteca). Afinar si el festival publica pin exacto."
   },
   "Cinemateca de Bogotá - Bogotá": {
    "short": "Cinemateca de Bogotá - Bogotá",
-   "lat": null,
-   "lng": null,
+   "lat": 4.6032463,
+   "lng": -74.06758,
    "city": "Bogotá",
-   "address": "Cra. 3 #19-10, Santa Fé, Bogotá, Cundinamarca, Colombia",
+   "address": "Carrera 3 No. 19-10",
    "_contact": {
     "email": "contactenos@idartes.gov.co",
     "phone": "+57 601 379 5750 Ext. 4504",
@@ -192,10 +193,10 @@
   },
   "Museo Nacional - Bogotá": {
    "short": "Museo Nacional - Bogotá",
-   "lat": null,
-   "lng": null,
+   "lat": 4.6155238,
+   "lng": -74.0684131,
    "city": "Bogotá",
-   "address": "Ak 7 #28-66, Bogotá, Colombia",
+   "address": "Avenida Carrera 7 No. 28-66",
    "_contact": {
     "email": "prensa@museonacional.gov.co",
     "phone": "+60(1) 381 6470",
