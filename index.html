@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202607311421">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202607311421">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202608020656">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202608020656">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -3096,7 +3096,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202607311421";
+    s.src="/src/main.js?v=202608020656";
     document.body.appendChild(s);
     // Watchdog de boot (P0 18 jul): si el grafo ESM murió en el import (caché
     // HTTP mixta tras deploys en ráfaga — main.js nuevo + módulo viejo sin el
@@ -3117,7 +3117,7 @@ setTimeout(function(){
   if (isApp || isDev) { bootApp(); return; }
   function showLanding(){
     var es = (window.__otfLang || 'es') !== 'en';
-    var APPSTORE = 'https://apps.apple.com/app/id6769367002';
+    var APPSTORE = 'https://apps.apple.com/co/app/otrofestiv/id6769367002';
     var PLAY = 'https://play.google.com/store/apps/details?id=app.otrofestiv.mobile';
     var ua = navigator.userAgent;
     var isIOS = /iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
