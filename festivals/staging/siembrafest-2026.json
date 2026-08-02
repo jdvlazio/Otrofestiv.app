@@ -80,16 +80,21 @@
       "genre": "Documental / Experimental",
       "synopsis": "",
       "synopsis_lang": "es",
-      "poster": "",
-      "posterSource": "",
+      "poster": "/2eNN7S45048PDcKKz2uRmEnpkQr.jpg",
+      "posterSource": "tmdb",
       "_src": {
         "url": "https://siembrafest.com/seleccion-sf-2026/",
         "date": "2026-08-02",
         "ficha_raw": "2025 | 11' | Documental / Experimental",
         "formato": "Documental / Experimental",
-        "produccion": "Andrés Dávila"
+        "produccion": "Andrés Dávila",
+        "tmdb_id": 1553616
       },
-      "lbSlug": "en-su-sombra-fertil"
+      "lbSlug": "en-su-sombra-fertil",
+      "synopsis_en": "In the Sibundoy Valley, Mercedes Cuatindioy cultivates her chagra as an act of resistance and remembrance. Between seeds and polyculture practices, her life embodies the transmission of indigenous knowledge threatened by oblivion.",
+      "_inherited": {
+        "synopsis_en": "tmdb-1553616"
+      }
     },
     {
       "title": "La gallina Saraviada",
@@ -159,17 +164,21 @@
       "country": "Colombia",
       "section": "🏺 Mujeres que sostienen la vida",
       "genre": "Experimental",
-      "synopsis": "",
+      "synopsis": "¿Dónde guardamos nuestras memorias? ¿Dónde perviven? ¿Cómo las recordamos?  Una epifanía despeja olvidos y repara el vínculo de Esther, la protagonista, con su ancestralidad a través del contacto con el mundo de los sueños, las memorias de su madre y la cura de una tinaja heredada. Gestado de manera grupal, este cortometraje navega de manera íntima y poética, los instantes de un rito de paso.  Sumergido en la cosmovisión palenquera y narrado sin pretensiones de develar los misterios pero sí de percibirlos, esta obra es una ventana al universo de esos sentires que crecen en ciénagas y arroyos.",
       "synopsis_lang": "es",
-      "poster": "",
-      "posterSource": "",
+      "poster": "/air1XOw7h9fKgRq6V7vTAt4WCIB.jpg",
+      "posterSource": "tmdb",
       "lbSlug": "la-tinaja",
       "_src": {
         "url": "https://siembrafest.com/seleccion-sf-2026/",
         "date": "2026-08-02",
         "ficha_raw": "2025 | 14' | Experimental",
         "formato": "Experimental",
-        "produccion": "Madre Monte"
+        "produccion": "Madre Monte",
+        "tmdb_id": 1668923
+      },
+      "_inherited": {
+        "synopsis": "tmdb-1668923"
       }
     },
     {
@@ -182,15 +191,16 @@
       "genre": "Documental",
       "synopsis": "En las llanuras de Colombia, un grupo de mujeres conserva y reinterpreta los lecos, o cantos de trabajo del llano, que durante generaciones fueron interpretados por hombres. A través de sus cantos de vaquería, resignifican su lugar en la tradición llanera, revelando su relación armónica con la naturaleza y su compleja conexión con el arraigo llanero.",
       "synopsis_lang": "es",
-      "poster": "",
-      "posterSource": "",
+      "poster": "/dQxbmxDq320B08UKcEOHgOkIy4b.jpg",
+      "posterSource": "tmdb",
       "lbSlug": "cayenas-libertarias",
       "_src": {
         "url": "https://siembrafest.com/seleccion-sf-2026/",
         "date": "2026-08-02",
         "ficha_raw": "2025 | 20' | Documental",
         "formato": "Documental",
-        "produccion": "Javier Camilo Aranguren"
+        "produccion": "Javier Camilo Aranguren",
+        "tmdb_id": 1737961
       },
       "_inherited": {
         "synopsis": "ficdeh-2026",
@@ -227,16 +237,21 @@
       "genre": "DRAMA",
       "synopsis": "",
       "synopsis_lang": "es",
-      "poster": "",
-      "posterSource": "",
+      "poster": "/eETZnvE46E29uCsxpK3anseNfmy.jpg",
+      "posterSource": "tmdb",
       "_src": {
         "url": "https://siembrafest.com/seleccion-sf-2026/",
         "date": "2026-08-02",
         "ficha_raw": "2025 | 14' | Ficción – DRAMA",
         "formato": "Ficción",
-        "produccion": "Jorge Thielen Armand; Stefano Centini; Felipe Guerrero; Rodrigo Michelangeli"
+        "produccion": "Jorge Thielen Armand; Stefano Centini; Felipe Guerrero; Rodrigo Michelangeli",
+        "tmdb_id": 1403488
       },
-      "lbSlug": "pasta-negra"
+      "lbSlug": "pasta-negra",
+      "synopsis_en": "Three Venezuelan women cross the border into Colombia to buy a packet of pasta.",
+      "_inherited": {
+        "synopsis_en": "tmdb-1403488"
+      }
     },
     {
       "title": "Carlina",
@@ -286,18 +301,24 @@
       "country": "Colombia",
       "section": "💐 Amores & Desamores",
       "genre": "Cyberpunk, coming of age",
-      "synopsis": "",
+      "synopsis": "Ivy, ciudadana de un futuro en decadencia, se ve ahogada en una perpetua melancolía tras separarse de su enamorada. OHM, su asistente robótico y regente del nuevo orden mundial, le presenta la oportunidad única de reencontrarse con ella.",
       "synopsis_lang": "es",
-      "poster": "",
-      "posterSource": "",
+      "poster": "/wfamQLJcXInlAxEZ6DtbdIJxNwT.jpg",
+      "posterSource": "tmdb",
       "_src": {
         "url": "https://siembrafest.com/seleccion-sf-2026/",
         "date": "2026-08-02",
         "ficha_raw": "2024 | 11' | Animación / Experimental – Cyberpunk, coming of age",
         "formato": "Animación / Experimental",
-        "produccion": "Yesid Moreno Ardila; Mariana Lamos Upegui; Laura González Franco"
+        "produccion": "Yesid Moreno Ardila; Mariana Lamos Upegui; Laura González Franco",
+        "tmdb_id": 1376037
       },
-      "lbSlug": "galvanic-heart"
+      "lbSlug": "galvanic-heart",
+      "synopsis_en": "This is a story set on the future Caribbean coast, which is almost  uninhabitable due to pollution and climate change. Amidst the gloomy landscape of the new world order OHM, we find Ivy, our protagonist, who, after a heartbreaking breakup, is left in a very delicate emotional state.",
+      "_inherited": {
+        "synopsis": "tmdb-1376037",
+        "synopsis_en": "tmdb-1376037"
+      }
     },
     {
       "title": "Orígenes",
@@ -329,16 +350,21 @@
       "genre": "Drama, Fantasy, Romance",
       "synopsis": "",
       "synopsis_lang": "es",
-      "poster": "",
-      "posterSource": "",
+      "poster": "/b4RHj48yxGqcCh8FUeAfJDLTs9Z.jpg",
+      "posterSource": "tmdb",
       "_src": {
         "url": "https://siembrafest.com/seleccion-sf-2026/",
         "date": "2026-08-02",
         "ficha_raw": "2025 | 10' | Ficción – Drama, Fantasy, Romance",
         "formato": "Ficción",
-        "produccion": "Vanessa La"
+        "produccion": "Vanessa La",
+        "tmdb_id": 1551580
       },
-      "lbSlug": "take-it-off-2025"
+      "lbSlug": "take-it-off-2025",
+      "synopsis_en": "Milo has a mask, and every time he puts it on, he is transported to a world full of sunflowers. There, he meets a girl in a white dress who, without realizing it, will lead him to face his greatest fear: taking off the mask.",
+      "_inherited": {
+        "synopsis_en": "tmdb-1551580"
+      }
     },
     {
       "title": "El mejor chocolate del mundo",
@@ -370,16 +396,21 @@
       "genre": "Animación",
       "synopsis": "",
       "synopsis_lang": "es",
-      "poster": "",
-      "posterSource": "",
+      "poster": "/3W7tNanPoH5K5Pqv33LhH7EFUro.jpg",
+      "posterSource": "tmdb",
       "_src": {
         "url": "https://siembrafest.com/seleccion-sf-2026/",
         "date": "2026-08-02",
         "ficha_raw": "2025 | 7' | Animación",
         "formato": "Animación",
-        "produccion": "Linda Marín"
+        "produccion": "Linda Marín",
+        "tmdb_id": 1723547
       },
-      "lbSlug": "valentino-y-la-calavera"
+      "lbSlug": "valentino-y-la-calavera",
+      "synopsis_en": "While coming to collect an old lady's soul, Death finds its role upended by the antics of her mischievous three-year-old grandson.",
+      "_inherited": {
+        "synopsis_en": "tmdb-1723547"
+      }
     },
     {
       "title": "Tres gatos parias",
@@ -409,18 +440,22 @@
       "country": "Colombia",
       "section": "💐 Amores & Desamores",
       "genre": "Drama, Autor",
-      "synopsis": "",
+      "synopsis": "Tras la muerte de su esposa, Ángel enfrenta un duelo solitario en su hogar rural. Una gotera crece como una presencia abrumadora, transformando su espacio y empujándolo a decisiones irracionales mientras intenta reconciliarse con su pérdida.",
       "synopsis_lang": "es",
-      "poster": "",
-      "posterSource": "",
+      "poster": "/ncFypC1QoQQVdm4rnhfTA9BgOGN.jpg",
+      "posterSource": "tmdb",
       "_src": {
         "url": "https://siembrafest.com/seleccion-sf-2026/",
         "date": "2026-08-02",
         "ficha_raw": "2026 | 15' | Ficción – Drama, Autor",
         "formato": "Ficción",
-        "produccion": "Juan Diego Alvarado Moya; Nicolás Patiño Hortua; Andrés Santiago Cely Orjuela; Juan Fernando Vargas; Jacobo Lennis Hernández; Martín Santiago Rodríguez Meneses; Camilo Andrés Barragan"
+        "produccion": "Juan Diego Alvarado Moya; Nicolás Patiño Hortua; Andrés Santiago Cely Orjuela; Juan Fernando Vargas; Jacobo Lennis Hernández; Martín Santiago Rodríguez Meneses; Camilo Andrés Barragan",
+        "tmdb_id": 1510204
       },
-      "lbSlug": "desarraigo-2026"
+      "lbSlug": "desarraigo-2026",
+      "_inherited": {
+        "synopsis": "tmdb-1510204"
+      }
     },
     {
       "title": "La independencia",
@@ -440,7 +475,8 @@
         "date": "2026-08-02",
         "ficha_raw": "2024 | 20' | Ficción",
         "formato": "Ficción",
-        "produccion": "Johanna Quintero"
+        "produccion": "Johanna Quintero",
+        "tmdb_id": 1595081
       },
       "synopsis_en": "Cecilia, a selfless 52-year-old woman, decides to break with her life of sacrifices after years of enduring her son s irresponsibility and her family s ingratitude, finally seeking her independence.",
       "title_en": "Independence",
@@ -461,16 +497,21 @@
       "genre": "Ficción",
       "synopsis": "",
       "synopsis_lang": "es",
-      "poster": "",
-      "posterSource": "",
+      "poster": "/hPcSDRpwapMHGFdi6dJ6pPLQAPf.jpg",
+      "posterSource": "tmdb",
       "_src": {
         "url": "https://siembrafest.com/seleccion-sf-2026/",
         "date": "2026-08-02",
         "ficha_raw": "2022 | 15' | Ficción",
         "formato": "Ficción",
-        "produccion": "Mónica Juanita Hernández Duquino; Iván David Gaona Morales"
+        "produccion": "Mónica Juanita Hernández Duquino; Iván David Gaona Morales",
+        "tmdb_id": 898817
       },
-      "lbSlug": "gladiolos"
+      "lbSlug": "gladiolos",
+      "synopsis_en": "Waldina, the flowers seller of the little town of Arcabuco, has died. Her son Humberto arrives from the big city and decides to make the last delivery of flowers to her clients without knowing that in one of that doors could find his happiness.",
+      "_inherited": {
+        "synopsis_en": "tmdb-898817"
+      }
     },
     {
       "title": "Make up: El arte de amar",
@@ -622,15 +663,16 @@
       "genre": "DERECHOS HUMANOS",
       "synopsis": "Después de 30 años negando su dolor, Ángela se enfrenta a su pasado cuando su padre se le aparece en un sueño y le pide que lo busque. Junto a su hermana Juliana, emprende un viaje por Colombia hasta los terriotiros indígenas donde su padre, un agricultor afrodescendiente, fue víctima de desaparición forzada.",
       "synopsis_lang": "es",
-      "poster": "",
-      "posterSource": "",
+      "poster": "/xlXvgdoTqDdzUFoBAb2ANqka4tC.jpg",
+      "posterSource": "tmdb",
       "lbSlug": "i-dreamed-his-name",
       "_src": {
         "url": "https://siembrafest.com/seleccion-sf-2026/",
         "date": "2026-08-02",
         "ficha_raw": "2025 | 86' | Documental – DERECHOS HUMANOS",
         "formato": "Documental",
-        "produccion": "Carabalí Films & New Media"
+        "produccion": "Carabalí Films & New Media",
+        "tmdb_id": 1454365
       },
       "synopsis_en": "Thirty years after his forced disappearance, the filmmaker’s Afro Colombian father comes to her in a dream, asking her to find him. With her sister, she sets out on a journey of discovery across Colombia’s painful history, reconnecting with their father and his activism.",
       "title_en": "I Dreamed His Name",
@@ -691,15 +733,20 @@
       "genre": "Drama, Suspense, Surrealism",
       "synopsis": "",
       "synopsis_lang": "es",
-      "poster": "",
-      "posterSource": "",
+      "poster": "/yYkKFEuNyaCZwC16SyMDa5AideG.jpg",
+      "posterSource": "tmdb",
       "lbSlug": "cristinas-baby",
       "_src": {
         "url": "https://siembrafest.com/seleccion-sf-2026/",
         "date": "2026-08-02",
         "ficha_raw": "2025 | 20' | Ficción – Drama, Suspense, Surrealism",
         "formato": "Ficción",
-        "produccion": "Carolina González"
+        "produccion": "Carolina González",
+        "tmdb_id": 1456285
+      },
+      "synopsis_en": "Cristina lives in La Oscurana, about to give birth and sensing her death. At this crossroads, she decides to look for Rafael -the painter and photographer of this Colombian Caribbean town- to make a portrait of her. A play of light: giving birth and the image sees the light, in La Oscurana. His daughter Emérita has returned to the village and the ritual of making the image is an event: Rafael wants to capture even the silence. Silence that seems to linger in the image until the arrival of the new life.",
+      "_inherited": {
+        "synopsis_en": "tmdb-1456285"
       }
     },
     {
@@ -712,14 +759,15 @@
       "genre": "Drama, Terror",
       "synopsis": "",
       "synopsis_lang": "es",
-      "poster": "",
-      "posterSource": "",
+      "poster": "/fyvT3ZlgNJO5lswCC8XdXkXFVnB.jpg",
+      "posterSource": "tmdb",
       "_src": {
         "url": "https://siembrafest.com/seleccion-sf-2026/",
         "date": "2026-08-02",
         "ficha_raw": "2025 | 17' | Ficción – Drama, Terror",
         "formato": "Ficción",
-        "produccion": "Carolina Cardona Pardo"
+        "produccion": "Carolina Cardona Pardo",
+        "tmdb_id": 1565878
       },
       "lbSlug": "que-el-cielo-nos-perdone"
     },
@@ -731,17 +779,21 @@
       "country": "Colombia",
       "section": "🕯️ Cinema Patatús",
       "genre": "Ficción",
-      "synopsis": "",
+      "synopsis": "Christian y Gustavo se pierden en un vasto cañaveral en el Valle del Cauca, Colombia, conocido por las misteriosas desapariciones de niños. Mientras intentan escapar del inquietante silbido que llena el aire, son capturados por un despiadado asesino en serie.",
       "synopsis_lang": "es",
-      "poster": "",
-      "posterSource": "",
+      "poster": "/kwZgjSqAL9KKXBVnfsLlXHSjpig.jpg",
+      "posterSource": "tmdb",
       "lbSlug": "el-silbido-del-canaduzal",
       "_src": {
         "url": "https://siembrafest.com/seleccion-sf-2026/",
         "date": "2026-08-02",
         "ficha_raw": "2025 | 19' | Ficción",
         "formato": "Ficción",
-        "produccion": "James Mathew Carvajal"
+        "produccion": "James Mathew Carvajal",
+        "tmdb_id": 1538740
+      },
+      "_inherited": {
+        "synopsis": "tmdb-1538740"
       }
     },
     {
@@ -772,17 +824,23 @@
       "country": "Colombia",
       "section": "🕯️ Cinema Patatús",
       "genre": "Comedy, Horror",
-      "synopsis": "",
+      "synopsis": "En una reunión de payasos, quien sonríe es el verdadero infeliz.",
       "synopsis_lang": "es",
-      "poster": "",
-      "posterSource": "",
+      "poster": "/9gKGoKM2Ua2eTCGlTBvZojOGq0p.jpg",
+      "posterSource": "tmdb",
       "lbSlug": "clownin-around",
       "_src": {
         "url": "https://siembrafest.com/seleccion-sf-2026/",
         "date": "2026-08-02",
         "ficha_raw": "2025 | 24' | Ficción – Comedy, Horror",
         "formato": "Ficción",
-        "produccion": "Soria Aldana"
+        "produccion": "Soria Aldana",
+        "tmdb_id": 1638000
+      },
+      "synopsis_en": "Nicolás, a DJ overwhelmed by his past, meets a disturbing neighbor who introduces him to a cult made up of eccentric clowns. Between laughter and tension, the young man discovers a strange escape from his problems that puts his sanity to the test.",
+      "_inherited": {
+        "synopsis": "tmdb-1638000",
+        "synopsis_en": "tmdb-1638000"
       }
     },
     {
@@ -853,17 +911,23 @@
       "country": "Colombia",
       "section": "💀 Muertos de Risa",
       "genre": "Horror, Comedy",
-      "synopsis": "",
+      "synopsis": "Durante la grabación de un supuesto exorcismo, el presentador de Muertos Que No Son Muertos, enfrenta su peor miedo: Un hogar campesino donde no pasa absolutamente nada.",
       "synopsis_lang": "es",
-      "poster": "",
-      "posterSource": "",
+      "poster": "/uvJNAQPDcIIcw10zjZw8BR6OytU.jpg",
+      "posterSource": "tmdb",
       "lbSlug": "muertos-que-no-son-muertos",
       "_src": {
         "url": "https://siembrafest.com/seleccion-sf-2026/",
         "date": "2026-08-02",
         "ficha_raw": "2025 | 9' | Ficción – Horror, Comedy",
         "formato": "Ficción",
-        "produccion": "María Camila Hoyos; Juan Carrasquilla; Nicolás O. Segura"
+        "produccion": "María Camila Hoyos; Juan Carrasquilla; Nicolás O. Segura",
+        "tmdb_id": 1506756
+      },
+      "synopsis_en": "While filming a so-called exorcism, the host of the TV show \"Muertos Que No Son Muertos\" faces his worst fear: a rural house where absolutely nothing paranormal happens.",
+      "_inherited": {
+        "synopsis": "tmdb-1506756",
+        "synopsis_en": "tmdb-1506756"
       }
     },
     {
@@ -976,15 +1040,20 @@
       "genre": "Documental / Experimental",
       "synopsis": "",
       "synopsis_lang": "es",
-      "poster": "",
-      "posterSource": "",
+      "poster": "/gY6k1B2FGXBsMvTDr7ltZRSe7OF.jpg",
+      "posterSource": "tmdb",
       "lbSlug": "frequently-asked-questions",
       "_src": {
         "url": "https://siembrafest.com/seleccion-sf-2026/",
         "date": "2026-08-02",
         "ficha_raw": "2025 | 16' | Documental / Experimental",
         "formato": "Documental / Experimental",
-        "produccion": "Sofía Salinas Barrera; Juan Bohorquez Triana"
+        "produccion": "Sofía Salinas Barrera; Juan Bohorquez Triana",
+        "tmdb_id": 1592609
+      },
+      "synopsis_en": "S. writes to Juan, who is deeply asleep. She reflects on images and cinema, and a piece of advice from a director she admires challenges her and all her previous work. Determined to find an idea behind the images she has recorded so far, S. wanders among materials, her own archive of images and sounds, internet browser tabs, western films and Japanese short stories. S. compiles all these thoughts and findings into a letter, hoping to deliver it to Juan when he wakes up.",
+      "_inherited": {
+        "synopsis_en": "tmdb-1592609"
       }
     },
     {
@@ -1005,7 +1074,12 @@
         "date": "2026-08-02",
         "ficha_raw": "2025 | 18' | Ficción",
         "formato": "Ficción",
-        "produccion": "Diana C. Patiño Martínez"
+        "produccion": "Diana C. Patiño Martínez",
+        "tmdb_id": 1444298
+      },
+      "synopsis_en": "In the damp and dusty village of La Hondura, La Mona is ready to sacrifice everything to maintain her authority even if loneliness is the price she must pay. Her body, however, refuses to toe the line.",
+      "_inherited": {
+        "synopsis_en": "tmdb-1444298"
       }
     },
     {
@@ -1038,15 +1112,16 @@
       "genre": "Social, war, peace, religión",
       "synopsis": "En San Vicente de Chucurí, el padre Floro impulsa una planta de frutas para evitar las pérdidas causadas por la guerra. También recordamos a Floresmiro López, un sacerdote que arriesgó su vida defendiendo campesinos durante el conflicto armado. Con amor y firmeza moral, enfrentó las armas y dejó un legado de organización comunitaria clave en la región.",
       "synopsis_lang": "es",
-      "poster": "",
-      "posterSource": "",
+      "poster": "/946mgZZneD5dezapP1PcPwoUlfu.jpg",
+      "posterSource": "tmdb",
       "lbSlug": "floresmiro",
       "_src": {
         "url": "https://siembrafest.com/seleccion-sf-2026/",
         "date": "2026-08-02",
         "ficha_raw": "2025 | 101' | Documental – Social, war, peace, religión",
         "formato": "Documental",
-        "produccion": "Johanna Quintero"
+        "produccion": "Johanna Quintero",
+        "tmdb_id": 1738416
       },
       "_inherited": {
         "synopsis": "ficdeh-2026",
@@ -1081,17 +1156,21 @@
       "country": "Colombia",
       "section": "🪙 Buenos, Malos y Feos",
       "genre": "Ficción",
-      "synopsis": "",
+      "synopsis": "Alex, un joven sumido en la depresión y consumido por la promesa de acabar con su propia vida, viaja a Bogotá con un único propósito: vengarse de su abusador, la persona que para él, es el causante de todo el camino de miseria que ha llevado hasta ahora, antes de poner fin a su propia vida.",
       "synopsis_lang": "es",
-      "poster": "",
-      "posterSource": "",
+      "poster": "/2PxyvOX5x33ZVaqFb6yHqrMbVFZ.jpg",
+      "posterSource": "tmdb",
       "lbSlug": "termina",
       "_src": {
         "url": "https://siembrafest.com/seleccion-sf-2026/",
         "date": "2026-08-02",
         "ficha_raw": "2025 | 27' | Ficción",
         "formato": "Ficción",
-        "produccion": "Laura Valentina Castillo Ramírez"
+        "produccion": "Laura Valentina Castillo Ramírez",
+        "tmdb_id": 1585991
+      },
+      "_inherited": {
+        "synopsis": "tmdb-1585991"
       }
     },
     {
@@ -1124,15 +1203,20 @@
       "genre": "Animación",
       "synopsis": "",
       "synopsis_lang": "es",
-      "poster": "",
-      "posterSource": "",
+      "poster": "/9elraxytkfPvx8jsoLsWtDeF3pV.jpg",
+      "posterSource": "tmdb",
       "lbSlug": "shame-in-the-face-of-furtive-eyes",
       "_src": {
         "url": "https://siembrafest.com/seleccion-sf-2026/",
         "date": "2026-08-02",
         "ficha_raw": "2025 | 9' | Animación",
         "formato": "Animación",
-        "produccion": "Laura María Rodríguez"
+        "produccion": "Laura María Rodríguez",
+        "tmdb_id": 1592968
+      },
+      "synopsis_en": "The city as a stage of desire, where the male gaze provokes surveillance and scrutiny of the female body. This power relationship turns the body into a field of contestation in public space.",
+      "_inherited": {
+        "synopsis_en": "tmdb-1592968"
       }
     },
     {
@@ -1143,17 +1227,21 @@
       "country": "Colombia",
       "section": "🪙 Buenos, Malos y Feos",
       "genre": "Documental",
-      "synopsis": "",
+      "synopsis": "Una comunidad de barequeros y pescadores tienen que aprender a vivir en medio de las consecuencias de un proyecto hidroeléctrico que al inundar las playas del río los obligó a levantar un campamento sobre el cañón del Cauca, desde donde observan un mundo mágico que confirma su tragedia y su destino.",
       "synopsis_lang": "es",
-      "poster": "",
-      "posterSource": "",
+      "poster": "/vLfuF29EHorpUsn41GpZrxYQTnd.jpg",
+      "posterSource": "tmdb",
       "lbSlug": "la-despedida-del-rio",
       "_src": {
         "url": "https://siembrafest.com/seleccion-sf-2026/",
         "date": "2026-08-02",
         "ficha_raw": "2025 | 17' | Documental",
         "formato": "Documental",
-        "produccion": "Mateo Salas; Andrea Orozco Sáenz; Sara I. Betancur Gómez; Jose Carlos Hoyos Hernández; Melissa García Miranda; Emma Heather Lara"
+        "produccion": "Mateo Salas; Andrea Orozco Sáenz; Sara I. Betancur Gómez; Jose Carlos Hoyos Hernández; Melissa García Miranda; Emma Heather Lara",
+        "tmdb_id": 1609572
+      },
+      "_inherited": {
+        "synopsis": "tmdb-1609572"
       }
     },
     {
@@ -1186,15 +1274,20 @@
       "genre": "Ambiental; Asuntos sociales; Direct Cinema; Emigracion/Inmigracion; Música; Violencia",
       "synopsis": "",
       "synopsis_lang": "es",
-      "poster": "",
-      "posterSource": "",
+      "poster": "/pxCKt70n1FtUug8GW9h01eYz8l.jpg",
+      "posterSource": "tmdb",
       "lbSlug": "the-europe",
       "_src": {
         "url": "https://siembrafest.com/seleccion-sf-2026/",
         "date": "2026-08-02",
         "ficha_raw": "2025 | 21' | Documental / Experimental – Ambiental; Asuntos sociales; Direct Cinema; Emigracion/Inmigracion; Música; Violencia",
         "formato": "Documental / Experimental",
-        "produccion": "Jorge Pérez Aldana"
+        "produccion": "Jorge Pérez Aldana",
+        "tmdb_id": 1456264
+      },
+      "synopsis_en": "Andrés Narváez, Colombian social leader, music minstrel and empirical poet, returns to the Montes de María after his exile in Spain, following an attempt on his life in which he was shot four times.  His time in Asturias and the melancholy of a forced migration inspired him to compose several of his best known songs, connecting through song the two Europes: the one he left and the one that welcomed him.  Upon his return, with the violence still latent, Andrés delves into the deepest landscapes of his territory and the most painful memories that the war left behind, composing in memory of those who no longer walk with him; music saved him and that is why he decided that 'it is better to sing than to point out'.",
+      "_inherited": {
+        "synopsis_en": "tmdb-1456264"
       }
     },
     {
@@ -1275,15 +1368,16 @@
       "genre": "DERECHOS HUMANOS",
       "synopsis": "En el corazón del Pacífico colombiano, Manuel Cruz y su esposa Angy luchan por sanar las heridas de su comunidad, devastada por el conflicto armado. Lo hacen preservando sus tradiciones ancestrales y honrando la memoria de las víctimas, mientras el río, testigo silencioso, fluye como símbolo de resistencia y esperanza.",
       "synopsis_lang": "es",
-      "poster": "",
-      "posterSource": "",
+      "poster": "/lcLH5ISLZg7WCDo0QKx0k1oH3fD.jpg",
+      "posterSource": "tmdb",
       "lbSlug": "y-el-rio-lloro",
       "_src": {
         "url": "https://siembrafest.com/seleccion-sf-2026/",
         "date": "2026-08-02",
         "ficha_raw": "2024 | 27' | Documental – DERECHOS HUMANOS",
         "formato": "Documental",
-        "produccion": "Fundación Medios de Comunicación Étnicos y Ambientales"
+        "produccion": "Fundación Medios de Comunicación Étnicos y Ambientales",
+        "tmdb_id": 1738823
       },
       "_inherited": {
         "synopsis": "ficdeh-2026",
@@ -1360,15 +1454,16 @@
       "genre": "Ficción",
       "synopsis": "A Pablo le encanta jugar al trompo. Cuando Don Chucho, el usurero del pueblo, retiene a Pascualina, su amiga y mascota, Pablo debe enfrentarse a Felipe, el mejor jugador de trompo de la región, para rescatarla. Pero ganar no es suficiente: los demás niños del pueblo se unirán a él en un acto de solidaridad, amistad y trabajo en equipo para lograr esta gran hazaña.",
       "synopsis_lang": "es",
-      "poster": "",
-      "posterSource": "",
+      "poster": "/luHjmi57PSrqdH20zGuojt6ivmt.jpg",
+      "posterSource": "tmdb",
       "lbSlug": "the-great-feat",
       "_src": {
         "url": "https://siembrafest.com/seleccion-sf-2026/",
         "date": "2026-08-02",
         "ficha_raw": "2025 | 15' | Ficción",
         "formato": "Ficción",
-        "produccion": "Jorge Yesidt Vela Forigua"
+        "produccion": "Jorge Yesidt Vela Forigua",
+        "tmdb_id": 1494003
       },
       "synopsis_en": "A rescue with a spinning tops, feathers, eggs and friends.",
       "title_en": "The Great Feat",
@@ -1429,15 +1524,20 @@
       "genre": "Drama / Tragedy",
       "synopsis": "",
       "synopsis_lang": "es",
-      "poster": "",
-      "posterSource": "",
+      "poster": "/a6MItsvgkatTwGoBzkPdho4OvU5.jpg",
+      "posterSource": "tmdb",
       "lbSlug": "emechiche-the-rebirth-of-white-headed",
       "_src": {
         "url": "https://siembrafest.com/seleccion-sf-2026/",
         "date": "2026-08-02",
         "ficha_raw": "2025 | 11' | Animación – Drama / Tragedy",
         "formato": "Animación",
-        "produccion": "Juan Camilo González"
+        "produccion": "Juan Camilo González",
+        "tmdb_id": 1592964
+      },
+      "synopsis_en": "The Colombian Montes de María are home to the emechiche  (Saguinus oedipus). An endangered species, we will observe their complex relationship with their young and their environment. We will analyse their survival, allowing us to witness their feelings and wild instincts.",
+      "_inherited": {
+        "synopsis_en": "tmdb-1592964"
       }
     },
     {
@@ -1490,15 +1590,16 @@
       "genre": "Documental",
       "synopsis": "",
       "synopsis_lang": "es",
-      "poster": "",
-      "posterSource": "",
+      "poster": "/n27jihE6w5jSqeKoaXWprB1FdCR.jpg",
+      "posterSource": "tmdb",
       "lbSlug": "la-asociacion",
       "_src": {
         "url": "https://siembrafest.com/seleccion-sf-2026/",
         "date": "2026-08-02",
         "ficha_raw": "2026 | 19' | Documental",
         "formato": "Documental",
-        "produccion": "Álvaro Muñoz Sánchez"
+        "produccion": "Álvaro Muñoz Sánchez",
+        "tmdb_id": 1663705
       }
     },
     {
@@ -1611,15 +1712,20 @@
       "genre": "Videodance",
       "synopsis": "",
       "synopsis_lang": "es",
-      "poster": "",
-      "posterSource": "",
+      "poster": "/bHXUP6sTxTX46cmGdVLDh9eLxqB.jpg",
+      "posterSource": "tmdb",
       "lbSlug": "sheltering-gestures",
       "_src": {
         "url": "https://siembrafest.com/seleccion-sf-2026/",
         "date": "2026-08-02",
         "ficha_raw": "2026 | 11' | Documental / Experimental – Videodance",
         "formato": "Documental / Experimental",
-        "produccion": "Tragaluz"
+        "produccion": "Tragaluz",
+        "tmdb_id": 1713804
+      },
+      "synopsis_en": "A group of young dancers witnessed the gradual disappearance of the traditional Danza de las Tabliteras. Determined to bring it back to life, they learned its rhythms and choreography from the four remaining elders who still carried the dance in their bodies. Once again, these gestures echo the movements that decades ago filled the community of San Antonio, Bolívar, with pride, vitality, and collective spirit.",
+      "_inherited": {
+        "synopsis_en": "tmdb-1713804"
       }
     },
     {
@@ -1652,15 +1758,16 @@
       "genre": "Ambiental; Arte callejero; Asuntos sociales; Campo; Danza; Familia; Fiestas populares; Música; Naturaleza",
       "synopsis": "La música campesina ha transmitido durante generaciones las historias, costumbres y afectos de las comunidades rurales del interior colombiano. A través de coplas, ritmos e instrumentos tradicionales, jóvenes y mayores mantienen viva una herencia cultural nacida de la tierra, el trabajo y las fusiones musicales que dieron identidad a toda una región.",
       "synopsis_lang": "es",
-      "poster": "",
-      "posterSource": "",
+      "poster": "/jCdjqbA6mKPlpDkFgufv1zf5RnF.jpg",
+      "posterSource": "tmdb",
       "lbSlug": "herencia-los-cantos-de-la-tierra",
       "_src": {
         "url": "https://siembrafest.com/seleccion-sf-2026/",
         "date": "2026-08-02",
         "ficha_raw": "2026 | 82' | Documental – Ambiental; Arte callejero; Asuntos sociales; Campo; Danza; Familia; Fiestas populares; Música; Naturaleza",
         "formato": "Documental",
-        "produccion": "Iván Acosta Rojas"
+        "produccion": "Iván Acosta Rojas",
+        "tmdb_id": 1670058
       },
       "synopsis_en": "A documentary celebrating peasant 'carranguera' music —voices, stories and instruments like the requinto, tiple and guacharaca— as the root of rural Colombian identity.",
       "_inherited": {
@@ -1719,15 +1826,16 @@
       "genre": "Human Righst",
       "synopsis": "Desde 1977, mujeres campesinas tejedoras de las montañas de Cundinamarca resisten la explotación irregular de nacimientos de agua por industrias de bebidas y ultraprocesados. Mientras el agua se convierte en un negocio, las comunidades padecen sequías y el deterioro de sus ecosistemas. Ahora, frente a una nueva concesión para embotellar agua, se organizan para defender el territorio y exigir que el agua prevalezca como un derecho, no como una mercancía.",
       "synopsis_lang": "es",
-      "poster": "",
-      "posterSource": "",
+      "poster": "/r1udprF9gtCMICkYfHXZ4rISD8U.jpg",
+      "posterSource": "tmdb",
       "lbSlug": "xie-defensa-de-la-vida",
       "_src": {
         "url": "https://siembrafest.com/seleccion-sf-2026/",
         "date": "2026-08-02",
         "ficha_raw": "2025 | 70' | Documental – Human Righst",
         "formato": "Documental",
-        "produccion": "Paola Zuluaga Palacios"
+        "produccion": "Paola Zuluaga Palacios",
+        "tmdb_id": 1739023
       },
       "_inherited": {
         "synopsis": "ficdeh-2026",
@@ -1804,15 +1912,16 @@
       "genre": "CIENCIA FICCIÓN",
       "synopsis": "",
       "synopsis_lang": "es",
-      "poster": "",
-      "posterSource": "",
+      "poster": "/klFalxUJaemUMN7YiJIqzpD6oOH.jpg",
+      "posterSource": "tmdb",
       "lbSlug": "elipsis-2021",
       "_src": {
         "url": "https://siembrafest.com/seleccion-sf-2026/",
         "date": "2026-08-02",
         "ficha_raw": "2020 | 6' | Ficción – CIENCIA FICCIÓN",
         "formato": "Ficción",
-        "produccion": "La Cachaca Films"
+        "produccion": "La Cachaca Films",
+        "tmdb_id": 1355190
       }
     },
     {
@@ -1843,17 +1952,23 @@
       "country": "Colombia",
       "section": "🌾 Así es Cundinamarca",
       "genre": "HISTÓRICO",
-      "synopsis": "",
+      "synopsis": "Una película sobre la siembra y cosecha del trigo en el altiplano cundiboyacense. Entre intertítulos bíblicos y escenas pastoriles, emerge un poema bucólico sobre el trabajo agrícola, los ritmos de la tierra y la vida campesina.",
       "synopsis_lang": "es",
-      "poster": "",
-      "posterSource": "",
+      "poster": "/q0e0O9T1HbVvdLkSvQ7JxnNKI6Z.jpg",
+      "posterSource": "tmdb",
       "lbSlug": "trigos",
       "_src": {
         "url": "https://siembrafest.com/seleccion-sf-2026/",
         "date": "2026-08-02",
         "ficha_raw": "1941 | 20' | Documental – HISTÓRICO",
         "formato": "Documental",
-        "produccion": "Colectivo Imágenes de Segunda Mano"
+        "produccion": "Colectivo Imágenes de Segunda Mano",
+        "tmdb_id": 1538872
+      },
+      "synopsis_en": "A film about the sowing and harvesting of wheat in Colombia’s Cundiboyacense high plateau. Through biblical intertitles and pastoral scenes, a bucolic poem unfolds—evoking the rhythms of the land, the dignity of agricultural labor, and the soul of rural life.",
+      "_inherited": {
+        "synopsis": "tmdb-1538872",
+        "synopsis_en": "tmdb-1538872"
       }
     }
   ]
