@@ -3,7 +3,8 @@
  "_provenance": {
   "fuente": "Etapa A (selection-2026) + programación Boom published_calendar (sidecar qaff-2026-programacion-raw.json), 2 ago 2026",
   "verificacion": "Cruce título-normalizado eventos↔obras; sección dueña = 1ª categoría del evento (decisión Juan 2 ago); sin prelanzamiento 5 sep (decisión Juan); doble ciudad con city en venues (decisión Juan)",
-  "decisiones_pendientes": "emojis/EN de secciones; 19-20 sep incluidos (funciones de cierre reales); geocoding; verificar URL de Registrarse por evento"
+  "decisiones_pendientes": "emojis/EN de secciones; 19-20 sep incluidos (funciones de cierre reales); geocoding; verificar URL de Registrarse por evento",
+  "registro": "Registrarse = RSVP nativo de Boom (addon registration: open, cupo 500/evento, page_url vacío — sin deep-link por evento). ticket_url → página del programa, donde vive el formulario. Confirmado en addons del published_calendar, 2 ago."
  },
  "name": "QAFF 2026",
  "shortName": "QAFF",
@@ -230,7 +231,8 @@
      "https://static.wixstatic.com/media/736095_296877c753024a0080fcf3a7929e65d7~mv2.jpg"
     ]
    },
-   "event_kind": ""
+   "event_kind": "",
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026"
   },
   {
    "title": "FACE TO FACE",
@@ -264,7 +266,8 @@
    "_inherited": {
     "year": "qaff-event-desc",
     "synopsis": "qaff-event-desc"
-   }
+   },
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026"
   },
   {
    "title": "Manman Chadwon",
@@ -298,7 +301,8 @@
    "_inherited": {
     "year": "qaff-event-desc",
     "synopsis": "qaff-event-desc"
-   }
+   },
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026"
   },
   {
    "title": "CAPTAIN ANTHONY",
@@ -333,7 +337,8 @@
    "_inherited": {
     "year": "qaff-event-desc",
     "synopsis": "qaff-event-desc"
-   }
+   },
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026"
   },
   {
    "title": "MANGO",
@@ -368,7 +373,8 @@
    "_inherited": {
     "year": "qaff-event-desc",
     "synopsis": "qaff-event-desc"
-   }
+   },
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026"
   },
   {
    "title": "A King Displaced",
@@ -403,7 +409,8 @@
    "_inherited": {
     "year": "qaff-event-desc",
     "synopsis": "qaff-event-desc"
-   }
+   },
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026"
   },
   {
    "title": "A Cor da Patroa",
@@ -439,7 +446,8 @@
    "_inherited": {
     "year": "qaff-event-desc",
     "synopsis": "qaff-event-desc"
-   }
+   },
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026"
   },
   {
    "title": "Stories from La Guajirita",
@@ -474,7 +482,8 @@
    "_inherited": {
     "year": "qaff-event-desc",
     "synopsis": "qaff-event-desc"
-   }
+   },
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026"
   },
   {
    "title": "Aisha Can't Fly Away",
@@ -509,7 +518,8 @@
    "_inherited": {
     "year": "qaff-event-desc",
     "synopsis": "qaff-event-desc"
-   }
+   },
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026"
   },
   {
    "title": "Happy Meal",
@@ -543,7 +553,8 @@
    "_inherited": {
     "year": "qaff-event-desc",
     "synopsis": "qaff-event-desc"
-   }
+   },
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026"
   },
   {
    "title": "Leer en las gotas de lluvia",
@@ -578,7 +589,8 @@
    "_inherited": {
     "year": "qaff-event-desc",
     "synopsis": "qaff-event-desc"
-   }
+   },
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026"
   },
   {
    "title": "Gloria",
@@ -611,7 +623,8 @@
    "_inherited": {
     "year": "qaff-event-desc",
     "synopsis": "qaff-event-desc"
-   }
+   },
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026"
   },
   {
    "title": "Free Fall",
@@ -646,7 +659,8 @@
    "_inherited": {
     "year": "qaff-event-desc",
     "synopsis": "qaff-event-desc"
-   }
+   },
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026"
   },
   {
    "title": "Concrete Moves",
@@ -683,7 +697,8 @@
    "film_list": null,
    "requires_registration": true,
    "is_free": true,
-   "type": "film"
+   "type": "film",
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026"
   },
   {
    "title": "Viva Yurumangui",
@@ -718,7 +733,8 @@
    "_inherited": {
     "year": "qaff-event-desc",
     "synopsis": "qaff-event-desc"
-   }
+   },
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026"
   },
   {
    "title": "Hacker Leonilia",
@@ -755,7 +771,8 @@
    "film_list": null,
    "requires_registration": true,
    "is_free": true,
-   "type": "film"
+   "type": "film",
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026"
   },
   {
    "title": "The Last Dance",
@@ -790,7 +807,8 @@
    "_inherited": {
     "year": "qaff-event-desc",
     "synopsis": "qaff-event-desc"
-   }
+   },
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026"
   },
   {
    "title": "VICHE",
@@ -827,7 +845,8 @@
    "film_list": null,
    "requires_registration": true,
    "is_free": true,
-   "type": "film"
+   "type": "film",
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026"
   },
   {
    "title": "Cafe ?",
@@ -862,7 +881,8 @@
    "_inherited": {
     "year": "qaff-event-desc",
     "synopsis": "qaff-event-desc"
-   }
+   },
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026"
   },
   {
    "title": "The Banjo Boys",
@@ -899,7 +919,8 @@
    "film_list": null,
    "requires_registration": true,
    "is_free": true,
-   "type": "film"
+   "type": "film",
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026"
   },
   {
    "title": "The Banjo Boys",
@@ -937,7 +958,8 @@
    "film_list": null,
    "requires_registration": true,
    "is_free": true,
-   "type": "film"
+   "type": "film",
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026"
   },
   {
    "title": "When the world broke open",
@@ -972,7 +994,8 @@
    "_inherited": {
     "year": "qaff-event-desc",
     "synopsis": "qaff-event-desc"
-   }
+   },
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026"
   },
   {
    "title": "God's Work",
@@ -1007,7 +1030,8 @@
    "_inherited": {
     "year": "qaff-event-desc",
     "synopsis": "qaff-event-desc"
-   }
+   },
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026"
   },
   {
    "title": "THE ANCHORAGE OF THE TIME",
@@ -1041,7 +1065,8 @@
    "type": "film",
    "_inherited": {
     "synopsis": "qaff-event-desc"
-   }
+   },
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026"
   },
   {
    "title": "POSESAS [Possessed]",
@@ -1076,7 +1101,8 @@
    "_inherited": {
     "year": "qaff-event-desc",
     "synopsis": "qaff-event-desc"
-   }
+   },
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026"
   },
   {
    "title": "DIÁLOGO IMPROBABLE  ·  NOIR IDENTIDAD",
@@ -1103,7 +1129,8 @@
      "https://static.wixstatic.com/media/736095_4425913c423744a292123c465a658c21~mv2.jpg"
     ]
    },
-   "event_kind": ""
+   "event_kind": "",
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026"
   },
   {
    "title": "The One who Cries",
@@ -1138,7 +1165,8 @@
    "_inherited": {
     "year": "qaff-event-desc",
     "synopsis": "qaff-event-desc"
-   }
+   },
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026"
   },
   {
    "title": "Mojugba",
@@ -1173,7 +1201,8 @@
    "_inherited": {
     "year": "qaff-event-desc",
     "synopsis": "qaff-event-desc"
-   }
+   },
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026"
   },
   {
    "title": "Sisters in Destiny: Angela Davis & Gerty Archimede",
@@ -1208,7 +1237,8 @@
    "_inherited": {
     "year": "qaff-event-desc",
     "synopsis": "qaff-event-desc"
-   }
+   },
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026"
   },
   {
    "title": "Kanekalon",
@@ -1245,7 +1275,8 @@
    "film_list": null,
    "requires_registration": true,
    "is_free": true,
-   "type": "film"
+   "type": "film",
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026"
   },
   {
    "title": "Amelia",
@@ -1280,7 +1311,8 @@
    "_inherited": {
     "year": "qaff-event-desc",
     "synopsis": "qaff-event-desc"
-   }
+   },
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026"
   },
   {
    "title": "One Sunday",
@@ -1315,7 +1347,8 @@
    "_inherited": {
     "year": "qaff-event-desc",
     "synopsis": "qaff-event-desc"
-   }
+   },
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026"
   },
   {
    "title": "Surviving Biafra",
@@ -1352,7 +1385,8 @@
    "film_list": null,
    "requires_registration": true,
    "is_free": true,
-   "type": "film"
+   "type": "film",
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026"
   },
   {
    "title": "Amazonas Cocinas Indigenas de Selva y Rio",
@@ -1386,7 +1420,8 @@
    "_inherited": {
     "year": "qaff-event-desc",
     "synopsis": "qaff-event-desc"
-   }
+   },
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026"
   },
   {
    "title": "Soñé su nombre",
@@ -1426,7 +1461,8 @@
    "film_list": null,
    "requires_registration": true,
    "is_free": true,
-   "type": "film"
+   "type": "film",
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026"
   },
   {
    "title": "Three Black Men",
@@ -1465,7 +1501,8 @@
    "film_list": null,
    "requires_registration": true,
    "is_free": true,
-   "type": "film"
+   "type": "film",
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026"
   },
   {
    "title": "Three Black Men",
@@ -1505,7 +1542,8 @@
    "film_list": null,
    "requires_registration": true,
    "is_free": true,
-   "type": "film"
+   "type": "film",
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026"
   },
   {
    "title": "Nunkui",
@@ -1542,7 +1580,8 @@
    "film_list": null,
    "requires_registration": true,
    "is_free": true,
-   "type": "film"
+   "type": "film",
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026"
   },
   {
    "title": "Stormy Days",
@@ -1575,7 +1614,8 @@
    "_inherited": {
     "year": "qaff-event-desc",
     "synopsis": "qaff-event-desc"
-   }
+   },
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026"
   },
   {
    "title": "Sheltering Gestures",
@@ -1614,7 +1654,8 @@
    "film_list": null,
    "requires_registration": true,
    "is_free": true,
-   "type": "film"
+   "type": "film",
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026"
   },
   {
    "title": "The Clay Vase",
@@ -1652,7 +1693,8 @@
    "film_list": null,
    "requires_registration": true,
    "is_free": true,
-   "type": "film"
+   "type": "film",
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026"
   },
   {
    "title": "Father's Day",
@@ -1687,7 +1729,8 @@
    "_inherited": {
     "year": "qaff-event-desc",
     "synopsis": "qaff-event-desc"
-   }
+   },
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026"
   },
   {
    "title": "Altanegra",
@@ -1722,7 +1765,8 @@
    "_inherited": {
     "year": "qaff-event-desc",
     "synopsis": "qaff-event-desc"
-   }
+   },
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026"
   },
   {
    "title": "The Black Bart of Taco King #17",
@@ -1759,7 +1803,8 @@
    "film_list": null,
    "requires_registration": true,
    "is_free": true,
-   "type": "film"
+   "type": "film",
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026"
   },
   {
    "title": "Carabali",
@@ -1794,7 +1839,8 @@
    "_inherited": {
     "year": "qaff-event-desc",
     "synopsis": "qaff-event-desc"
-   }
+   },
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026"
   },
   {
    "title": "Of Mud and Blood",
@@ -1829,7 +1875,8 @@
    "_inherited": {
     "year": "qaff-event-desc",
     "synopsis": "qaff-event-desc"
-   }
+   },
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026"
   },
   {
    "title": "Mi viche todo el dia",
@@ -1866,7 +1913,8 @@
    "film_list": null,
    "requires_registration": true,
    "is_free": true,
-   "type": "film"
+   "type": "film",
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026"
   },
   {
    "title": "BERTHA",
@@ -1901,7 +1949,8 @@
    "_inherited": {
     "year": "qaff-event-desc",
     "synopsis": "qaff-event-desc"
-   }
+   },
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026"
   },
   {
    "title": "Nunkui",
@@ -1939,7 +1988,8 @@
    "film_list": null,
    "requires_registration": true,
    "is_free": true,
-   "type": "film"
+   "type": "film",
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026"
   },
   {
    "title": "Viva Yurumangui",
@@ -1975,7 +2025,8 @@
    "film_list": null,
    "requires_registration": true,
    "is_free": true,
-   "type": "film"
+   "type": "film",
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026"
   },
   {
    "title": "Surviving Biafra",
@@ -2013,7 +2064,8 @@
    "film_list": null,
    "requires_registration": true,
    "is_free": true,
-   "type": "film"
+   "type": "film",
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026"
   },
   {
    "title": "DIÁLOGO IMPROBABLE  ·  NOIR HISTÓRICO",
@@ -2040,7 +2092,8 @@
      "https://static.wixstatic.com/media/736095_59d4b32e46c1460ea8a9ceafa117a70f~mv2.jpg"
     ]
    },
-   "event_kind": ""
+   "event_kind": "",
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026"
   },
   {
    "title": "Waterfront Memories",
@@ -2075,7 +2128,8 @@
    "_inherited": {
     "year": "qaff-event-desc",
     "synopsis": "qaff-event-desc"
-   }
+   },
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026"
   },
   {
    "title": "LAUNDRY (Uhlanjululo)",
@@ -2110,7 +2164,8 @@
    "_inherited": {
     "year": "qaff-event-desc",
     "synopsis": "qaff-event-desc"
-   }
+   },
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026"
   },
   {
    "title": "305 Fishkill Avenue",
@@ -2145,7 +2200,8 @@
    "_inherited": {
     "year": "qaff-event-desc",
     "synopsis": "qaff-event-desc"
-   }
+   },
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026"
   },
   {
    "title": "Sapeur: The Great Scam",
@@ -2178,7 +2234,8 @@
    "_inherited": {
     "year": "qaff-event-desc",
     "synopsis": "qaff-event-desc"
-   }
+   },
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026"
   },
   {
    "title": "God's Work",
@@ -2214,7 +2271,8 @@
    "film_list": null,
    "requires_registration": true,
    "is_free": true,
-   "type": "film"
+   "type": "film",
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026"
   },
   {
    "title": "The Travelers",
@@ -2249,7 +2307,8 @@
    "_inherited": {
     "year": "qaff-event-desc",
     "synopsis": "qaff-event-desc"
-   }
+   },
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026"
   },
   {
    "title": "THE ANCHORAGE OF THE TIME",
@@ -2284,7 +2343,8 @@
    "film_list": null,
    "requires_registration": true,
    "is_free": true,
-   "type": "film"
+   "type": "film",
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026"
   },
   {
    "title": "INITIATION INTO THE EIGHTH DIMENSION",
@@ -2319,7 +2379,8 @@
    "_inherited": {
     "year": "qaff-event-desc",
     "synopsis": "qaff-event-desc"
-   }
+   },
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026"
   },
   {
    "title": "Wrong Generation",
@@ -2352,7 +2413,8 @@
    "_inherited": {
     "year": "qaff-event-desc",
     "synopsis": "qaff-event-desc"
-   }
+   },
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026"
   },
   {
    "title": "Father's Day",
@@ -2388,7 +2450,8 @@
    "film_list": null,
    "requires_registration": true,
    "is_free": true,
-   "type": "film"
+   "type": "film",
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026"
   },
   {
    "title": "The Madmen Coach",
@@ -2424,7 +2487,8 @@
    "_inherited": {
     "year": "qaff-event-desc",
     "synopsis": "qaff-event-desc"
-   }
+   },
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026"
   },
   {
    "title": "Aisha Can't Fly Away",
@@ -2460,7 +2524,8 @@
    "film_list": null,
    "requires_registration": true,
    "is_free": true,
-   "type": "film"
+   "type": "film",
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026"
   }
  ],
  "_obras_sin_funcion": [
