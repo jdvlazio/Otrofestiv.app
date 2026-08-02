@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202608020711">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202608020711">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202608020734">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202608020734">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -3096,7 +3096,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202608020711";
+    s.src="/src/main.js?v=202608020734";
     document.body.appendChild(s);
     // Watchdog de boot (P0 18 jul): si el grafo ESM murió en el import (caché
     // HTTP mixta tras deploys en ráfaga — main.js nuevo + módulo viejo sin el
@@ -3121,12 +3121,13 @@ setTimeout(function(){
     var PLAY = 'https://play.google.com/store/apps/details?id=app.otrofestiv.mobile';
     var ua = navigator.userAgent;
     var isIOS = /iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
-    // En iOS el badge navega con itms-apps:// — apps.apple.com es un universal
-    // link y los navegadores in-app (Instagram/Facebook) BLOQUEAN el handoff a
-    // la app de App Store: el tap se cancela y "no pasa nada" (reportado por
-    // Juan, 2 ago, campaña FINCA). El esquema itms-apps sí lo dejan pasar al
-    // sistema, y en Safari normal también abre App Store directo. Desktop y
-    // Android conservan la URL https (la página web, que ya resuelve — #496).
+    // En iOS el badge navega con itms-apps:// (Safari lo abre directo en App
+    // Store). EXCEPTO en los in-app browsers de Instagram/Facebook: bloquean
+    // TANTO el universal link apps.apple.com COMO el esquema itms-apps (campaña
+    // FINCA, 2 ago — confirmado tras 2 intentos y el hilo de Apple #742526).
+    // Ahí el badge va a NUESTRO /get (navegación same-domain, siempre pasa),
+    // que redirige al store y, si el webview también frena eso, muestra el
+    // rescate ("abrir en navegador externo"). Desktop/Android: https normal.
     var isAndroid = /Android/.test(ua);
     var isMobile = isIOS || isAndroid;
     var sub = es ? 'Tu agenda personal para festivales de cine.' : 'Your personal film festival agenda.';
@@ -3153,7 +3154,9 @@ setTimeout(function(){
         '<span class="sg-btn-txt"><span class="sg-kick' + (kickCaps?' sg-kick-caps':'') + '">' + kick + '</span><span class="sg-name">' + name + '</span></span></a>';
     }
     // Wording oficial de cada tienda (ES/EN)
-    var badgeA = sgBtn(isIOS ? APPSTORE.replace('https://','itms-apps://') : APPSTORE, appleIco, es ? 'Consíguelo en el' : 'Download on the', 'App Store', false);
+    var inApp = /Instagram|FBAN|FBAV|FB_IAB/.test(ua);
+    var appleHref = isIOS ? (inApp ? '/get/' : APPSTORE.replace('https://','itms-apps://')) : APPSTORE;
+    var badgeA = sgBtn(appleHref, appleIco, es ? 'Consíguelo en el' : 'Download on the', 'App Store', false);
     var badgeG = sgBtn(PLAY, playIco, es ? 'DISPONIBLE EN' : 'GET IT ON', 'Google Play', true);
     document.body.innerHTML =
       '<style>' +
