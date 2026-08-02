@@ -6,17 +6,36 @@
 <meta name="robots" content="noindex">
 <title>Otrofestiv — Descargá la app</title>
 <!-- /get — router de descarga (patrón industria: URL única que decide por dispositivo).
-     Es el destino del QR de la landing. SOLO navegadores llegan aquí: la app nativa
-     jamás navega a /get. Por eso el redirect duro es seguro en esta página.
-     iOS → App Store · Android → Play Store · desktop/otros → raíz (landing). -->
+     Destino del QR de la landing Y del badge de Apple cuando la landing corre en un
+     in-app browser (Instagram/Facebook). SOLO navegadores llegan aquí: la app nativa
+     jamás navega a /get.
+     iOS → App Store · Android → Play Store · desktop/otros → raíz (landing).
+
+     RESCATE iOS (2 ago 2026, campaña FINCA): los webviews de IG/FB bloquean el
+     universal link apps.apple.com Y el esquema itms-apps — la navegación se cancela
+     en silencio (hilo Apple #742526: bloqueo deliberado de Meta). El redirect
+     cross-domain desde página propia pasa "la mayoría de las veces"; para el resto,
+     si 1.6s después seguimos acá, se muestra el rescate: reintento con itms-apps +
+     la instrucción del menú ··· → abrir en navegador externo. -->
 <style>
   body{margin:0;background:#0A0A0A;color:#F0EDE8;font-family:system-ui;display:flex;
-       align-items:center;justify-content:center;min-height:100vh}
+       align-items:center;justify-content:center;min-height:100vh;text-align:center}
   p{color:#888;font-size:14px}
+  #rescate{display:none;flex-direction:column;align-items:center;gap:20px;padding:32px;max-width:340px}
+  .r-t{font-size:19px;font-weight:700;line-height:1.35}
+  .r-btn{display:inline-block;background:#F59E0B;color:#000;font-weight:700;font-size:16px;
+         padding:14px 28px;border-radius:12px;text-decoration:none}
+  .r-alt{color:#888;font-size:14px;line-height:1.5}
+  .r-alt b{color:#F0EDE8;font-weight:600}
 </style>
 </head>
 <body>
-<p>Redirigiendo…</p>
+<p id="wait">Redirigiendo…</p>
+<div id="rescate">
+  <div class="r-t" id="r-t">Instagram está bloqueando la App&nbsp;Store</div>
+  <a class="r-btn" id="r-btn" href="#">Abrir App Store</a>
+  <div class="r-alt" id="r-alt">Si no se abre: tocá <b>···</b> arriba a la derecha y elegí <b>Abrir en el navegador externo</b>.</div>
+</div>
 <script>
 (function(){
   var APPSTORE = 'https://apps.apple.com/co/app/otrofestiv/id6769367002';
@@ -25,9 +44,27 @@
   // iPadOS moderno se reporta como Mac — el touch lo delata.
   var isIOS     = /iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
   var isAndroid = /Android/.test(ua);
-  // itms-apps en iOS: mismo motivo que la landing — si el QR/link se abre en un
-  // navegador in-app (IG/FB), el universal link a apps.apple.com se bloquea.
-  location.replace(isIOS ? APPSTORE.replace('https://','itms-apps://') : isAndroid ? PLAY : '/');
+  var inApp     = /Instagram|FBAN|FBAV|FB_IAB/.test(ua);
+  var en = (navigator.language || '').slice(0,2) === 'en';
+  if (!isIOS) { location.replace(isAndroid ? PLAY : '/'); return; }
+  // iOS: intentar el redirect normal (pasa en Safari y en la mayoría de webviews)…
+  location.replace(APPSTORE);
+  // …y si seguimos vivos, el webview lo bloqueó → rescate visible.
+  setTimeout(function(){
+    document.getElementById('wait').style.display = 'none';
+    var r = document.getElementById('rescate');
+    if (en) {
+      document.getElementById('r-t').textContent = 'Instagram is blocking the App Store';
+      document.getElementById('r-btn').textContent = 'Open App Store';
+      document.getElementById('r-alt').innerHTML = "If nothing happens: tap <b>···</b> at the top right and choose <b>Open in external browser</b>.";
+    }
+    if (!inApp) {
+      // Safari/Chrome iOS: acá no hay menú ··· de webview — solo el reintento.
+      document.getElementById('r-alt').style.display = 'none';
+    }
+    document.getElementById('r-btn').setAttribute('href', APPSTORE.replace('https://','itms-apps://'));
+    r.style.display = 'flex';
+  }, 1600);
 })();
 </script>
 </body>

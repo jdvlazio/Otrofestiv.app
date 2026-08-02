@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `e5d8504 fix(landing): URL del App Store con storefront + slug — el badge revive en IG y desktop (#496) (#496)`
+> Último commit: `5d07e3a fix(landing): itms-apps en iOS — el badge de App Store navega en el webview de IG (#497) (#497)`
 
 ---
 
