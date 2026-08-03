@@ -27,11 +27,23 @@ CIUDADES={'bogot':'Bogotá','medell':'Medellín','cali':'Cali','barranquilla':'B
  'pereira':'Pereira','manizales':'Manizales','tunja':'Tunja'}
 
 def parse(t):
-    """→ (funciones[], fechas[])"""
+    """→ (funciones[], fechas[]). OJO: entre 'Ubicación' y 'Hora' puede haber
+    'Sala:' (y potencialmente otros campos). Se trocea por 'Ubicación:' y se
+    leen las etiquetas dentro de cada trozo — nunca asumir orden fijo."""
     funcs=[]
-    bloques=re.findall(r'Ubicación:\s*\n(.+?)\nHora:\s*\n(.+?)\n(?:Tipo de ingreso:\s*\n(.+?)\n)?', t)
-    for sede,hora,ing in bloques:
-        funcs.append({'sede':sede.strip(),'hora':hora.strip(),'ingreso':(ing or '').strip()})
+    trozos=t.split('Ubicación:')[1:]
+    for tr in trozos:
+        tr=tr.split('Ubicación:')[0][:800]
+        lineas=[x.strip() for x in tr.split('\n')]
+        lineas=[x for x in lineas if x]
+        sede=lineas[0] if lineas else ''
+        def campo(nombre):
+            for i,l in enumerate(lineas):
+                if l.rstrip(':').strip().lower()==nombre:
+                    return lineas[i+1] if i+1<len(lineas) else ''
+            return ''
+        funcs.append({'sede':sede,'sala':campo('sala'),'hora':campo('hora'),
+                      'ingreso':campo('tipo de ingreso')})
     fechas=re.findall(r'\n(\d{1,2}\s+AGO)\n', t)
     return funcs, fechas
 

@@ -1,23 +1,16 @@
 {
  "_provenance": {
-  "fuente": "Barrido metódico de las 91 fichas de ficdeh.com/produccion/<slug>/ (3 ago 2026) + mapa sede→ciudad de las 11 páginas /categoria-evento/ciudades/ + grilla real de la Cinemateca de Bogotá.",
-  "que_es_fiable": "sede, hora y tipo de ingreso (verificados: la hora coincide 24/24 con la agenda de la Cinemateca).",
-  "que_NO_es_fiable": "⚠️ LAS FECHAS de las fichas: en 6 de 24 funciones verificables contra la Cinemateca el día NO coincide (25% de error). Ejemplos: Niñxs ficha 12→real 13; Eva 13→15; Por una gota de leche 13→16; La luz por primera vez 14/15→19. NO usar fechas_ficha para montar funciones.",
-  "dia_fiable_solo_si": "dia_confirmado_cinemateca tiene valor (24 obras, 30 funciones con día+hora+SALA reales)."
+  "fuente": "Barrido de las 91 fichas de ficdeh.com/produccion/<slug>/ (3 ago 2026, script pipeline/ficdeh-2026-barrido-fichas.py) + mapa sede→ciudad de las 11 páginas /categoria-evento/ciudades/ + grilla real de la Cinemateca de Bogotá.",
+  "fiable": "sede, SALA (cuando la declara), hora y tipo de ingreso. La hora coincide 24/24 con la agenda de la Cinemateca.",
+  "NO_fiable": "⚠️ las FECHAS de las fichas: 6 de 24 funciones verificables tienen el día equivocado. Manda la sede: la Cinemateca vende boletas por fecha en tuboleta.",
+  "leccion_de_parseo": "⚠️ entre \"Ubicación\" y \"Hora\" puede aparecer \"Sala:\" — un parser que asumía orden fijo perdió 32 funciones (299 vs 331 reales). Trocear por \"Ubicación:\" y leer etiquetas por nombre, nunca por posición."
  },
  "_resumen": {
   "obras": 91,
-  "funciones": 299,
-  "con_ciudad": 267,
-  "con_hora": 299,
-  "con_tipo_ingreso": 295,
-  "funciones_con_dia_confirmado": 24,
-  "tipos_de_ingreso": {
-   "Entrada libre": 206,
-   "Boletería en taquilla": 63,
-   "Función privada": 26,
-   "": 4
-  }
+  "funciones": 331,
+  "con_sala": 31,
+  "con_ciudad": 289,
+  "con_dia_confirmado": 24
  },
  "obras": {
   "1982": {
@@ -25,12 +18,14 @@
    "funciones": [
     {
      "sede": "Cinemateca de Bogotá - Cra. 3 # 19-10",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "16:00",
      "ingreso": "Boletería en taquilla"
     },
     {
      "sede": "La Pascasia - Cl. 47 #43 88. Centro",
+     "sala": "",
      "ciudad": "Medellín",
      "hora": "16:30",
      "ingreso": "Entrada libre"
@@ -53,10 +48,10 @@
    "funciones": [
     {
      "sede": "Universidad Tecnológica del Chocó - Carrera 22, Ciudadela Universitaria Barrio Nicolas Medrano",
+     "sala": "",
      "ciudad": "Quibdó",
      "hora": "09:00",
-     "ingreso": "Función privada",
-     "_ciudad_por": "listado de ciudad"
+     "ingreso": "Función privada"
     }
    ],
    "fechas_ficha": [
@@ -70,6 +65,7 @@
    "funciones": [
     {
      "sede": "Centro de Formación de la Cooperación Española - Calle 36 # 2-74, El Centro",
+     "sala": "",
      "ciudad": "Cartagena",
      "hora": "10:00",
      "ingreso": "Entrada libre"
@@ -86,6 +82,7 @@
    "funciones": [
     {
      "sede": "Cinemateca de Bogotá - Cra. 3 # 19-10",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "15:00",
      "ingreso": "Boletería en taquilla"
@@ -108,15 +105,24 @@
    "funciones": [
     {
      "sede": "Centro Cultural - Sala Audiovisual de Cali - Cra. 5 # 6-05, San Pedro",
-     "ciudad": "Cali",
+     "sala": "",
+     "ciudad": "",
      "hora": "17:00",
      "ingreso": "Entrada libre"
     },
     {
      "sede": "Cinemateca de Bogotá - Cra. 3 # 19-10",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "15:00",
      "ingreso": "Boletería en taquilla"
+    },
+    {
+     "sede": "Universidad de Ibagué - Carrera 22 - Calle 67, barrio Ambalá",
+     "sala": "La Casona",
+     "ciudad": "Ibagué",
+     "hora": "09:00",
+     "ingreso": "Entrada libre"
     }
    ],
    "fechas_ficha": [
@@ -137,13 +143,15 @@
    "funciones": [
     {
      "sede": "Cinemateca de Bogotá - Cra. 3 # 19-10",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "15:00",
      "ingreso": "Boletería en taquilla"
     },
     {
      "sede": "Ágora Casa Cultural (La Ceja) - Cl. 19 # 23-15",
-     "ciudad": "Medellín",
+     "sala": "",
+     "ciudad": "",
      "hora": "17:00",
      "ingreso": "Entrada libre"
     }
@@ -165,25 +173,35 @@
    "funciones": [
     {
      "sede": "Cinemateca de Tunja - Calle 17 # 15-36",
+     "sala": "",
      "ciudad": "Tunja",
      "hora": "18:30",
      "ingreso": "Boletería en taquilla"
     },
     {
      "sede": "Cinemateca de Bogotá - Cra. 3 # 19-10",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "13:00",
      "ingreso": "Boletería en taquilla"
     },
     {
      "sede": "Cinemateca del Museo La Tertulia - Cra. 1 # 5-105, Oeste",
+     "sala": "",
      "ciudad": "Cali",
      "hora": "19:00",
-     "ingreso": "Boletería en taquilla",
-     "_ciudad_por": "listado de ciudad"
+     "ingreso": "Boletería en taquilla"
+    },
+    {
+     "sede": "Universidad de Ibagué - Carrera 22 - Calle 67, barrio Ambalá",
+     "sala": "Auditorio de Ingeniería",
+     "ciudad": "Ibagué",
+     "hora": "15:00",
+     "ingreso": "Entrada libre"
     },
     {
      "sede": "Centro de Conciliación y Arbitraje - Universidad del Norte - Calle 74 # 58-79",
+     "sala": "",
      "ciudad": "",
      "hora": "10:00",
      "ingreso": "Entrada libre"
@@ -208,10 +226,10 @@
    "funciones": [
     {
      "sede": "Alianza Francesa - Parque Fernández de Madrid, Cra. 8 # 37-34, San Diego",
-     "ciudad": "Cartagena",
+     "sala": "",
+     "ciudad": "",
      "hora": "18:30",
-     "ingreso": "Entrada libre",
-     "_ciudad_por": "heurística"
+     "ingreso": "Entrada libre"
     }
    ],
    "fechas_ficha": [
@@ -224,19 +242,29 @@
    "url": "https://www.ficdeh.com/produccion/aqui-no-entra-luz/",
    "funciones": [
     {
+     "sede": "Centro Cultural Panóptico de Ibagué - Calle 11 # 9-73ª, barrio Belén",
+     "sala": "Auditorio",
+     "ciudad": "Ibagué",
+     "hora": "18:00",
+     "ingreso": "Entrada libre"
+    },
+    {
      "sede": "Cinemateca de Bogotá - Cra. 3 # 19-10",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "16:00",
      "ingreso": "Boletería en taquilla"
     },
     {
      "sede": "El Teatrino - Los Almendros Mz E # Lote 11",
+     "sala": "",
      "ciudad": "Cartagena",
      "hora": "18:30",
      "ingreso": "Entrada libre"
     },
     {
      "sede": "La Capilla del Claustro Comfama - Carrera 44 # 48 - 18",
+     "sala": "",
      "ciudad": "",
      "hora": "17:00",
      "ingreso": "Entrada libre"
@@ -259,7 +287,8 @@
    "funciones": [
     {
      "sede": "Centro Cultural - Sala Audiovisual de Cali - Cra. 5 # 6-05, San Pedro",
-     "ciudad": "Cali",
+     "sala": "",
+     "ciudad": "",
      "hora": "17:00",
      "ingreso": "Entrada libre"
     }
@@ -275,12 +304,14 @@
    "funciones": [
     {
      "sede": "Cinemateca de Bogotá - Cra. 3 # 19-10",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "17:30",
      "ingreso": "Boletería en taquilla"
     },
     {
      "sede": "Cinemateca del Caribe - Calle 76 # 57-61",
+     "sala": "",
      "ciudad": "Barranquilla",
      "hora": "19:00",
      "ingreso": "Boletería en taquilla"
@@ -304,12 +335,14 @@
    "funciones": [
     {
      "sede": "Biblioteca Pública Deptal Arnoldo de los Santos Palacios Mosquera - Calle 30, Avenida Aeropuerto, Barrio Los Ángeles (frente al Aeropuerto El Caraño)",
+     "sala": "",
      "ciudad": "Quibdó",
      "hora": "16:00",
      "ingreso": "Entrada libre"
     },
     {
      "sede": "Cinemateca de Bogotá - Cra. 3 # 19-10",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "20:00",
      "ingreso": "Boletería en taquilla"
@@ -331,7 +364,15 @@
    "url": "https://www.ficdeh.com/produccion/cartas-a-la-tierra/",
    "funciones": [
     {
+     "sede": "Centro Cultural Panóptico de Ibagué - Calle 11 # 9-73ª, barrio Belén",
+     "sala": "Celda \"Teatro Ibagué\"",
+     "ciudad": "Ibagué",
+     "hora": "14:00",
+     "ingreso": "Entrada libre"
+    },
+    {
      "sede": "Cinemateca de Bogotá - Cra. 3 # 19-10",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "19:30",
      "ingreso": "Boletería en taquilla"
@@ -348,12 +389,21 @@
    "funciones": [
     {
      "sede": "Universidad del Quindío - Cra. 15 con calle 12 Norte",
+     "sala": "",
      "ciudad": "Armenia",
      "hora": "17:00",
      "ingreso": "Entrada libre"
     },
     {
+     "sede": "Universidad de Ibagué - Carrera 22 - Calle 67, barrio Ambalá",
+     "sala": "Patio de Banderas",
+     "ciudad": "Ibagué",
+     "hora": "18:00",
+     "ingreso": "Entrada libre"
+    },
+    {
      "sede": "Fundación Alianza Tecnologica y Desarrollo Educativo -  ALITIC - Cra. 54 # 64-73",
+     "sala": "",
      "ciudad": "",
      "hora": "18:00",
      "ingreso": "Entrada libre"
@@ -372,12 +422,14 @@
    "funciones": [
     {
      "sede": "Universidad del Quindío - Cra. 15 con calle 12 Norte",
+     "sala": "",
      "ciudad": "Armenia",
      "hora": "17:00",
      "ingreso": "Entrada libre"
     },
     {
      "sede": "Cinemateca de Bogotá - Cra. 3 # 19-10",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "19:30",
      "ingreso": "Boletería en taquilla"
@@ -394,19 +446,21 @@
    "funciones": [
     {
      "sede": "Bulevar del Oriente - Comuna 14, entre la transversal 103 con calle 96 y calle 73 con transversal 73, entre los barrios Alfonso Bonilla Aragón y Marroquín 2",
+     "sala": "",
      "ciudad": "Cali",
      "hora": "18:30",
-     "ingreso": "Entrada libre",
-     "_ciudad_por": "heurística"
+     "ingreso": "Entrada libre"
     },
     {
      "sede": "Centro de Formación de la Cooperación Española - Calle 36 # 2-74, El Centro",
+     "sala": "",
      "ciudad": "Cartagena",
      "hora": "10:00",
      "ingreso": "Entrada libre"
     },
     {
      "sede": "Museo Casa de la Memoria - Cl. 51 #36-66. Parque Bicentenario",
+     "sala": "",
      "ciudad": "Medellín",
      "hora": "14:30",
      "ingreso": "Entrada libre"
@@ -424,18 +478,21 @@
    "funciones": [
     {
      "sede": "Cinemateca de Tunja - Calle 17 # 15-36",
+     "sala": "",
      "ciudad": "Tunja",
      "hora": "16:00",
      "ingreso": "Boletería en taquilla"
     },
     {
      "sede": "Cinemateca de Bogotá - Cra. 3 # 19-10",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "17:30",
      "ingreso": "Boletería en taquilla"
     },
     {
      "sede": "Fundación Alianza Tecnologica y Desarrollo Educativo -  ALITIC - Cra. 54 # 64-73",
+     "sala": "",
      "ciudad": "",
      "hora": "11:00",
      "ingreso": "Entrada libre"
@@ -453,66 +510,80 @@
    "funciones": [
     {
      "sede": "Cinemateca de Tunja - Calle 17 # 15-36",
+     "sala": "",
      "ciudad": "Tunja",
      "hora": "16:00",
      "ingreso": "Boletería en taquilla"
     },
     {
      "sede": "Universidad del Quindío - Cra. 15 con calle 12 Norte",
+     "sala": "",
      "ciudad": "Armenia",
      "hora": "10:30",
      "ingreso": "Entrada libre"
     },
     {
      "sede": "Auditorio Tulio Gómez Estrada, Facultad de Ciencias Jurídicas y Sociales - Av. Santander # 57-58",
+     "sala": "",
      "ciudad": "Manizales",
      "hora": "10:30",
      "ingreso": "Entrada libre"
     },
     {
      "sede": "Biblioteca Pública Deptal Arnoldo de los Santos Palacios Mosquera - Calle 30, Avenida Aeropuerto, Barrio Los Ángeles (frente al Aeropuerto El Caraño)",
+     "sala": "",
      "ciudad": "Quibdó",
      "hora": "16:00",
      "ingreso": "Entrada libre"
     },
     {
      "sede": "Bulevar del Oriente - Comuna 14, entre la transversal 103 con calle 96 y calle 73 con transversal 73, entre los barrios Alfonso Bonilla Aragón y Marroquín 2",
+     "sala": "",
      "ciudad": "Cali",
      "hora": "18:30",
-     "ingreso": "Entrada libre",
-     "_ciudad_por": "heurística"
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "Centro Cultural Panóptico de Ibagué - Calle 11 # 9-73ª, barrio Belén",
+     "sala": "Auditorio",
+     "ciudad": "Ibagué",
+     "hora": "17:00",
+     "ingreso": "Entrada libre"
     },
     {
      "sede": "Centro de Formación de la Cooperación Española - Calle 36 # 2-74, El Centro",
+     "sala": "",
      "ciudad": "Cartagena",
      "hora": "10:00",
      "ingreso": "Entrada libre"
     },
     {
      "sede": "Cinemateca de Bogotá - Cra. 3 # 19-10",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "15:00",
      "ingreso": "Boletería en taquilla"
     },
     {
      "sede": "Cinemateca del Museo La Tertulia - Cra. 1 # 5-105, Oeste",
+     "sala": "",
      "ciudad": "Cali",
      "hora": "17:00",
-     "ingreso": "Boletería en taquilla",
-     "_ciudad_por": "listado de ciudad"
+     "ingreso": "Boletería en taquilla"
     },
     {
      "sede": "Universidad de Salamanca - Cra. 50 # 79-155",
+     "sala": "",
      "ciudad": "",
      "hora": "18:30",
      "ingreso": "Función privada"
     },
     {
      "sede": "Biblioteca Pública y Parque Cultural Débora Arango - Cl. 37 Sur # 45 B-27, Zona 8, Envigado",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "17:30",
-     "ingreso": "Entrada libre",
-     "_ciudad_por": "heurística"
+     "ingreso": "Entrada libre"
     }
    ],
    "fechas_ficha": [
@@ -530,12 +601,14 @@
    "funciones": [
     {
      "sede": "Cinemateca de Bogotá - Cra. 3 # 19-10",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "4:30 - 7:30 p.m",
      "ingreso": "Boletería en taquilla"
     },
     {
      "sede": "Colombo Americano de Medellín - Cra. 45 #53 - 24, Centro",
+     "sala": "",
      "ciudad": "Medellín",
      "hora": "14:30",
      "ingreso": "Entrada libre"
@@ -565,12 +638,14 @@
    "funciones": [
     {
      "sede": "Casa de la Juventud Antonio Nariño - Cra. 20 # 19 Sur - 26",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "16:00",
      "ingreso": "Entrada libre"
     },
     {
      "sede": "Book Times - Calle 54 # 53-76",
+     "sala": "",
      "ciudad": "",
      "hora": "18:00",
      "ingreso": "Entrada libre"
@@ -588,18 +663,21 @@
    "funciones": [
     {
      "sede": "Cinemateca de Bogotá - Cra. 3 # 19-10",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "14:00",
      "ingreso": "Boletería en taquilla"
     },
     {
      "sede": "Museo de Arte Moderno - MAMB - Edificio World Trade Center (Calle 76 # 54-11, loc B3)",
+     "sala": "",
      "ciudad": "",
      "hora": "18:30",
      "ingreso": "Entrada libre"
     },
     {
      "sede": "La Capilla del Claustro Comfama - Carrera 44 # 48 - 18",
+     "sala": "",
      "ciudad": "",
      "hora": "15:00",
      "ingreso": "Entrada libre"
@@ -623,6 +701,7 @@
    "funciones": [
     {
      "sede": "Cinemateca de Bogotá - Cra. 3 # 19-10",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "18:30",
      "ingreso": "Boletería en taquilla"
@@ -639,39 +718,42 @@
    "funciones": [
     {
      "sede": "Liceo Taller San Miguel - Km 8 Vía Armenia - Entrada # 8",
-     "ciudad": "Armenia",
+     "sala": "",
+     "ciudad": "Pereira",
      "hora": "08:00",
      "ingreso": "Función privada"
     },
     {
      "sede": "Casa de la Juventud Ayelen - Calle 65A Sur # 17C-30",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "16:00",
-     "ingreso": "Entrada libre",
-     "_ciudad_por": "heurística"
+     "ingreso": "Entrada libre"
     },
     {
      "sede": "Casa de la Juventud  Chiguazá - Calle 48P BIS D Sur # 5A-43",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "15:00",
      "ingreso": "Entrada libre"
     },
     {
      "sede": "Casa de la Juventud  Huitaca - Calle 17A # 118-25",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "14:00",
-     "ingreso": "Entrada libre",
-     "_ciudad_por": "heurística"
+     "ingreso": "Entrada libre"
     },
     {
      "sede": "Cinemateca Fontanar del Río - Calle 146 # 138A-99",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "14:00",
-     "ingreso": "Entrada libre",
-     "_ciudad_por": "heurística"
+     "ingreso": "Entrada libre"
     },
     {
      "sede": "Cinemateca El Tunal - Calle 56 Sur # 23-62",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "14:00",
      "ingreso": "Entrada libre"
@@ -688,29 +770,31 @@
    "funciones": [
     {
      "sede": "Cinemateca de Tunja - Calle 17 # 15-36",
+     "sala": "",
      "ciudad": "Tunja",
      "hora": "18:30",
      "ingreso": "Boletería en taquilla"
     },
     {
      "sede": "Contacto Escuela de Fotografía - Cra. 16 # 9-54, piso 2",
+     "sala": "",
      "ciudad": "Armenia",
      "hora": "15:00",
-     "ingreso": "Entrada libre",
-     "_ciudad_por": "listado de ciudad"
+     "ingreso": "Entrada libre"
     },
     {
      "sede": "Lember Cinéma - Calle 42 # 3-45",
+     "sala": "",
      "ciudad": "Ibagué",
      "hora": "19:00",
      "ingreso": "Entrada libre"
     },
     {
      "sede": "Nueva Acrópolis - Cra. 49 # 66 -02",
+     "sala": "",
      "ciudad": "Barranquilla",
      "hora": "18:30",
-     "ingreso": "Entrada libre",
-     "_ciudad_por": "listado de ciudad"
+     "ingreso": "Entrada libre"
     }
    ],
    "fechas_ficha": [
@@ -725,34 +809,38 @@
    "funciones": [
     {
      "sede": "Cinemateca de Bogotá - Cra. 3 # 19-10",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "19:00",
      "ingreso": "Boletería en taquilla"
     },
     {
      "sede": "Función Aire Libre - Malecón",
+     "sala": "",
      "ciudad": "Quibdó",
      "hora": "18:00",
      "ingreso": ""
     },
     {
      "sede": "Cinemateca del Caribe - Calle 76 # 57-61",
+     "sala": "",
      "ciudad": "Barranquilla",
      "hora": "17:00",
      "ingreso": "Boletería en taquilla"
     },
     {
      "sede": "Sala Fundadores",
+     "sala": "",
      "ciudad": "Manizales",
      "hora": "19:00",
      "ingreso": ""
     },
     {
      "sede": "Parque de los Deseos - Carrera 52 # 71 - 11",
+     "sala": "",
      "ciudad": "Medellín",
      "hora": "19:00",
-     "ingreso": "Entrada libre",
-     "_ciudad_por": "listado de ciudad"
+     "ingreso": "Entrada libre"
     }
    ],
    "fechas_ficha": [
@@ -773,82 +861,98 @@
    "funciones": [
     {
      "sede": "Colombo Americano de Pereira - Carrera 6 Nº 23-58",
+     "sala": "",
      "ciudad": "Pereira",
      "hora": "10:00",
      "ingreso": "Entrada libre"
     },
     {
      "sede": "Institución Educativa Jaime Salazar Robledo - Comuna Villa Santana",
+     "sala": "",
      "ciudad": "Pereira",
      "hora": "09:00",
      "ingreso": "Función privada"
     },
     {
      "sede": "Museo Intangible del Confinamiento. Casa de la Cultura Alfonso López - Carrera 7b # 2e-05, barrio Alfonso López",
+     "sala": "",
      "ciudad": "Pereira",
      "hora": "14:00",
      "ingreso": "Entrada libre"
     },
     {
      "sede": "Biblioteca Pública La Victoria - Calle 37 BIS B Sur # 2B",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "14:00",
      "ingreso": "Entrada libre"
     },
     {
      "sede": "Casa de las Luciérnagas - Diagonal 73H SUR # 78-38",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "17:00",
-     "ingreso": "Entrada libre",
-     "_ciudad_por": "heurística"
+     "ingreso": "Entrada libre"
     },
     {
      "sede": "Centro Cultural del Socorro - Cra. 71 # 26-210, sobre la Avenida Principal del barrio El Socorro",
+     "sala": "",
      "ciudad": "Cartagena",
      "hora": "17:30",
-     "ingreso": "Entrada libre",
-     "_ciudad_por": "listado de ciudad"
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "Centro Cultural Panóptico de Ibagué - Calle 11 # 9-73ª, barrio Belén",
+     "sala": "Auditorio",
+     "ciudad": "Ibagué",
+     "hora": "16:00",
+     "ingreso": "Entrada libre"
     },
     {
      "sede": "Cinemateca de Bogotá - Cra. 3 # 19-10",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "17:30",
      "ingreso": "Boletería en taquilla"
     },
     {
      "sede": "Cinemateca Fontanar del Río - Calle 146 # 138A-99",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "14:00",
-     "ingreso": "Entrada libre",
-     "_ciudad_por": "heurística"
+     "ingreso": "Entrada libre"
     },
     {
      "sede": "Cinemateca El Tunal - Calle 56 Sur # 23-62",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "14:00",
      "ingreso": "Entrada libre"
     },
     {
      "sede": "Institución Educativa Bienestar Social - Cra. 47b # 45-47, Mariano Ramos",
+     "sala": "",
      "ciudad": "Cali",
      "hora": "08:30",
-     "ingreso": "Función privada",
-     "_ciudad_por": "listado de ciudad"
+     "ingreso": "Función privada"
     },
     {
      "sede": "Parque Arqueológico de Usme - Calle 136B Sur # 3A-48",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "10:00",
      "ingreso": "Entrada libre"
     },
     {
      "sede": "Colegio Cruzada Social - Calle 46 # 13C -57, barrio Cevillar",
+     "sala": "",
      "ciudad": "Barranquilla",
      "hora": "10:30",
      "ingreso": "Función privada"
     },
     {
      "sede": "Centro Cultural Banco de la República - Cl. 50 #50-21 Piso 3",
+     "sala": "",
      "ciudad": "Medellín",
      "hora": "10:00",
      "ingreso": "Entrada libre"
@@ -867,6 +971,7 @@
    "funciones": [
     {
      "sede": "Fundación Alianza Tecnologica y Desarrollo Educativo -  ALITIC - Cra. 54 # 64-73",
+     "sala": "",
      "ciudad": "",
      "hora": "11:00",
      "ingreso": "Entrada libre"
@@ -883,19 +988,21 @@
    "funciones": [
     {
      "sede": "Auditorio Centro Cultural Universitario Rogelio Salmona - Cra. 28D entre Cl. 66 #y 67",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "17:00",
-     "ingreso": "Entrada libre",
-     "_ciudad_por": "heurística"
+     "ingreso": "Entrada libre"
     },
     {
      "sede": "Cinemateca de Bogotá - Cra. 3 # 19-10",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "14:30",
      "ingreso": "Boletería en taquilla"
     },
     {
      "sede": "Universidad Americana - Calle 72 # 41C-64",
+     "sala": "",
      "ciudad": "",
      "hora": "14:00",
      "ingreso": "Función privada"
@@ -919,56 +1026,63 @@
    "funciones": [
     {
      "sede": "Cine Club Alef - Casa Hoja - Calle 12 bis # 16-18, Av. Circunvalar",
+     "sala": "",
      "ciudad": "Pereira",
      "hora": "19:00",
-     "ingreso": "Entrada libre",
-     "_ciudad_por": "listado de ciudad"
+     "ingreso": "Entrada libre"
     },
     {
      "sede": "Biblioteca Pública Carlos E. Restrepo - Diagonal 21A Sur # 19-54 sur",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "16:30",
-     "ingreso": "Entrada libre",
-     "_ciudad_por": "heurística"
+     "ingreso": "Entrada libre"
     },
     {
      "sede": "Biblioteca Pública La Marichuela - Diagonal 76B Sur # 1C-40",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "16:00",
      "ingreso": "Entrada libre"
     },
     {
      "sede": "Centro de Formación de la Cooperación Española - Calle 36 # 2-74, El Centro",
+     "sala": "",
      "ciudad": "Cartagena",
      "hora": "18:30",
      "ingreso": "Entrada libre"
     },
     {
      "sede": "Cinema Local - Calle 74 # 20 B -19",
-     "ciudad": "Cali",
+     "sala": "",
+     "ciudad": "Bogotá",
      "hora": "17:00",
      "ingreso": "Entrada libre"
     },
     {
      "sede": "Cinemateca de Bogotá - Cra. 3 # 19-10",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "19:30",
      "ingreso": "Boletería en taquilla"
     },
     {
      "sede": "Librería Bagatá - Cra. 7 #27-3 (frente al Colegio Carrasquilla)",
+     "sala": "",
      "ciudad": "Quibdó",
      "hora": "15:00",
      "ingreso": "Entrada libre"
     },
     {
      "sede": "CasArte3962 - Calle 73B # 39-62",
+     "sala": "",
      "ciudad": "",
      "hora": "18:30",
      "ingreso": "Entrada libre"
     },
     {
      "sede": "La Pascasia - Cl. 47 #43 88. Centro",
+     "sala": "",
      "ciudad": "Medellín",
      "hora": "18:30",
      "ingreso": "Entrada libre"
@@ -994,31 +1108,35 @@
    "funciones": [
     {
      "sede": "Centro Integral de Justicia Campo Verde - Calle 85 Sur # 94-75",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "14:00",
-     "ingreso": "Entrada libre",
-     "_ciudad_por": "heurística"
+     "ingreso": "Entrada libre"
     },
     {
      "sede": "Cinema Local - Calle 74 # 20 B -19",
-     "ciudad": "Cali",
+     "sala": "",
+     "ciudad": "Bogotá",
      "hora": "18:30",
      "ingreso": "Entrada libre"
     },
     {
      "sede": "Cinema Local - Calle 74 # 20 B -19",
-     "ciudad": "Cali",
+     "sala": "",
+     "ciudad": "Bogotá",
      "hora": "18:30",
      "ingreso": "Entrada libre"
     },
     {
      "sede": "Servicio FORJAR Restaurativo Ciudad Bolívar - Cra. 44 # 58C-90 Sur",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "08:00",
      "ingreso": "Función privada"
     },
     {
      "sede": "Colombo Americano de Medellín - Cra. 45 #53 - 24, Centro",
+     "sala": "",
      "ciudad": "Medellín",
      "hora": "15:00",
      "ingreso": "Entrada libre"
@@ -1035,12 +1153,14 @@
    "funciones": [
     {
      "sede": "Institución Educativa Isaac Rodríguez - Barrio Reposo #2",
+     "sala": "",
      "ciudad": "",
      "hora": "08:00",
      "ingreso": "Función privada"
     },
     {
      "sede": "La Capilla del Claustro Comfama - Carrera 44 # 48 - 18",
+     "sala": "",
      "ciudad": "",
      "hora": "17:00",
      "ingreso": "Entrada libre"
@@ -1057,6 +1177,7 @@
    "funciones": [
     {
      "sede": "Centro de Formación de la Cooperación Española - Calle 36 # 2-74, El Centro",
+     "sala": "",
      "ciudad": "Cartagena",
      "hora": "10:00",
      "ingreso": "Entrada libre"
@@ -1080,12 +1201,14 @@
    "funciones": [
     {
      "sede": "Cámara de Comercio de Pereira - Carrera 8a # 23-09, piso 3",
+     "sala": "",
      "ciudad": "Pereira",
      "hora": "19:00",
      "ingreso": "Entrada libre"
     },
     {
      "sede": "Cinemateca de Bogotá - Cra. 3 # 19-10",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "17:30",
      "ingreso": "Boletería en taquilla"
@@ -1108,28 +1231,31 @@
    "funciones": [
     {
      "sede": "Cinema Local - Calle 74 # 20 B -19",
-     "ciudad": "Cali",
+     "sala": "",
+     "ciudad": "Bogotá",
      "hora": "18:30",
      "ingreso": "Entrada libre"
     },
     {
      "sede": "Cinema Local - Calle 74 # 20 B -19",
-     "ciudad": "Cali",
+     "sala": "",
+     "ciudad": "Bogotá",
      "hora": "18:30",
      "ingreso": "Entrada libre"
     },
     {
      "sede": "Cinemateca de Bogotá - Cra. 3 # 19-10",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "11:00",
      "ingreso": "Boletería en taquilla"
     },
     {
      "sede": "Cineprox - Dg. 75B #2A-120Rotonda Comercial Las Américas",
+     "sala": "",
      "ciudad": "Medellín",
      "hora": "18:30",
-     "ingreso": "Entrada libre",
-     "_ciudad_por": "listado de ciudad"
+     "ingreso": "Entrada libre"
     }
    ],
    "fechas_ficha": [
@@ -1143,23 +1269,31 @@
    "funciones": [
     {
      "sede": "Biblioteca Pública Gabriel García Márquez - Calle 48B SUR # 21-13",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "15:00",
-     "ingreso": "Entrada libre",
-     "_ciudad_por": "heurística"
+     "ingreso": "Entrada libre"
     },
     {
      "sede": "Casa Cultural y Comunitaria Casa Sin Raza - Diagonal 73B Sur # 82F-34",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "15:00",
-     "ingreso": "Entrada libre",
-     "_ciudad_por": "heurística"
+     "ingreso": "Entrada libre"
     },
     {
      "sede": "Cinemateca de Bogotá - Cra. 3 # 19-10",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "16:00",
      "ingreso": "Boletería en taquilla"
+    },
+    {
+     "sede": "Universidad Americana - Calle 72 # 41C-64",
+     "sala": "Cinemateca de la Universidad",
+     "ciudad": "",
+     "hora": "10:00",
+     "ingreso": "Función privada"
     }
    ],
    "fechas_ficha": [
@@ -1179,6 +1313,7 @@
    "funciones": [
     {
      "sede": "Biblioteca Pública Deptal Arnoldo de los Santos Palacios Mosquera - Calle 30, Avenida Aeropuerto, Barrio Los Ángeles (frente al Aeropuerto El Caraño)",
+     "sala": "",
      "ciudad": "Quibdó",
      "hora": "15:00",
      "ingreso": "Entrada libre"
@@ -1196,43 +1331,49 @@
    "funciones": [
     {
      "sede": "Shuffle live music - CC El Lago. Calle 24 #7-17, local 303",
+     "sala": "",
      "ciudad": "Pereira",
      "hora": "19:00",
      "ingreso": "Entrada libre"
     },
     {
      "sede": "Biblioteca Pública Francisco José de Caldas - Cra. 92 # 146 C - 24",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "16:00",
      "ingreso": "Entrada libre"
     },
     {
      "sede": "Biblioteca Pública Las Ferias - Cra. 69J # 73-29",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "14:00",
-     "ingreso": "Entrada libre",
-     "_ciudad_por": "heurística"
+     "ingreso": "Entrada libre"
     },
     {
      "sede": "Biblioteca Pública Virgilio Barco - Av. La Esmeralda # 57-60",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "15:00",
      "ingreso": "Entrada libre"
     },
     {
      "sede": "Centro Compartir Pilona 10 - Calle 66 BIS Sur # 18T-45",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "19:00",
      "ingreso": "Entrada libre"
     },
     {
      "sede": "Parque Arqueológico de Usme - Calle 136B Sur # 3A-48",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "14:00",
      "ingreso": "Entrada libre"
     },
     {
      "sede": "Caas Morón - Cra. 53  # 48-134",
+     "sala": "",
      "ciudad": "",
      "hora": "18:30",
      "ingreso": "Entrada libre"
@@ -1250,63 +1391,77 @@
    "funciones": [
     {
      "sede": "Colombo Americano de Pereira - Carrera 6 Nº 23-58",
+     "sala": "",
      "ciudad": "Pereira",
      "hora": "10:00",
      "ingreso": "Entrada libre"
     },
     {
      "sede": "Institución Educativa Jaime Salazar Robledo - Comuna Villa Santana",
+     "sala": "",
      "ciudad": "Pereira",
      "hora": "09:00",
      "ingreso": "Función privada"
     },
     {
      "sede": "Cinemateca de Tunja - Calle 17 # 15-36",
+     "sala": "",
      "ciudad": "Tunja",
      "hora": "16:00",
      "ingreso": "Boletería en taquilla"
     },
     {
      "sede": "Museo Intangible del Confinamiento. Casa de la Cultura Alfonso López - Carrera 7b # 2e-05, barrio Alfonso López",
+     "sala": "",
      "ciudad": "Pereira",
      "hora": "14:00",
      "ingreso": "Entrada libre"
     },
     {
      "sede": "Casa de las Luciérnagas - Diagonal 73H SUR # 78-38",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "17:00",
-     "ingreso": "Entrada libre",
-     "_ciudad_por": "heurística"
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "Centro Cultural Panóptico de Ibagué - Calle 11 # 9-73ª, barrio Belén",
+     "sala": "Auditorio",
+     "ciudad": "Ibagué",
+     "hora": "16:00",
+     "ingreso": "Entrada libre"
     },
     {
      "sede": "Cinemateca Fontanar del Río - Calle 146 # 138A-99",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "14:00",
-     "ingreso": "Entrada libre",
-     "_ciudad_por": "heurística"
+     "ingreso": "Entrada libre"
     },
     {
      "sede": "Cinemateca El Tunal - Calle 56 Sur # 23-62",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "14:00",
      "ingreso": "Entrada libre"
     },
     {
      "sede": "Institución Educativa Bienestar Social - Cra. 47b # 45-47, Mariano Ramos",
+     "sala": "",
      "ciudad": "Cali",
      "hora": "08:30",
-     "ingreso": "Función privada",
-     "_ciudad_por": "listado de ciudad"
+     "ingreso": "Función privada"
     },
     {
      "sede": "Colegio Cruzada Social - Calle 46 # 13C -57, barrio Cevillar",
+     "sala": "",
      "ciudad": "Barranquilla",
      "hora": "10:30",
      "ingreso": "Función privada"
     },
     {
      "sede": "Centro Cultural Banco de la República - Cl. 50 #50-21 Piso 3",
+     "sala": "",
      "ciudad": "Medellín",
      "hora": "10:00",
      "ingreso": "Entrada libre"
@@ -1324,71 +1479,84 @@
    "funciones": [
     {
      "sede": "Colombo Americano de Pereira - Carrera 6 Nº 23-58",
+     "sala": "",
      "ciudad": "Pereira",
      "hora": "10:00",
      "ingreso": "Entrada libre"
     },
     {
      "sede": "Institución Educativa Jaime Salazar Robledo - Comuna Villa Santana",
+     "sala": "",
      "ciudad": "Pereira",
      "hora": "09:00",
      "ingreso": "Función privada"
     },
     {
      "sede": "Fundación Malabareando las Calles - Carrera 8 #15 - 09",
+     "sala": "",
      "ciudad": "Pereira",
      "hora": "14:00",
-     "ingreso": "Entrada libre",
-     "_ciudad_por": "listado de ciudad"
+     "ingreso": "Entrada libre"
     },
     {
      "sede": "Universidad del Quindío - Cra. 15 con calle 12 Norte",
+     "sala": "",
      "ciudad": "Armenia",
      "hora": "17:00",
      "ingreso": "Entrada libre"
     },
     {
      "sede": "Museo Intangible del Confinamiento. Casa de la Cultura Alfonso López - Carrera 7b # 2e-05, barrio Alfonso López",
+     "sala": "",
      "ciudad": "Pereira",
      "hora": "14:00",
      "ingreso": "Entrada libre"
     },
     {
      "sede": "Casa de las Luciérnagas - Diagonal 73H SUR # 78-38",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "17:00",
-     "ingreso": "Entrada libre",
-     "_ciudad_por": "heurística"
+     "ingreso": "Entrada libre"
     },
     {
      "sede": "Centro Cultural del Socorro - Cra. 71 # 26-210, sobre la Avenida Principal del barrio El Socorro",
+     "sala": "",
      "ciudad": "Cartagena",
      "hora": "17:30",
-     "ingreso": "Entrada libre",
-     "_ciudad_por": "listado de ciudad"
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "Centro Cultural Panóptico de Ibagué - Calle 11 # 9-73ª, barrio Belén",
+     "sala": "Auditorio",
+     "ciudad": "Ibagué",
+     "hora": "16:00",
+     "ingreso": "Entrada libre"
     },
     {
      "sede": "Cinemateca Fontanar del Río - Calle 146 # 138A-99",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "14:00",
-     "ingreso": "Entrada libre",
-     "_ciudad_por": "heurística"
+     "ingreso": "Entrada libre"
     },
     {
      "sede": "Cinemateca El Tunal - Calle 56 Sur # 23-62",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "14:00",
      "ingreso": "Entrada libre"
     },
     {
      "sede": "Institución Educativa Bienestar Social - Cra. 47b # 45-47, Mariano Ramos",
+     "sala": "",
      "ciudad": "Cali",
      "hora": "08:30",
-     "ingreso": "Función privada",
-     "_ciudad_por": "listado de ciudad"
+     "ingreso": "Función privada"
     },
     {
      "sede": "Centro Cultural Banco de la República - Cl. 50 #50-21 Piso 3",
+     "sala": "",
      "ciudad": "Medellín",
      "hora": "10:00",
      "ingreso": "Entrada libre"
@@ -1407,35 +1575,45 @@
    "funciones": [
     {
      "sede": "Auditorio Centro Cultural Universitario Rogelio Salmona - Cra. 28D entre Cl. 66 #y 67",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "17:00",
-     "ingreso": "Entrada libre",
-     "_ciudad_por": "heurística"
+     "ingreso": "Entrada libre"
     },
     {
      "sede": "Cinema Local - Calle 74 # 20 B -19",
-     "ciudad": "Cali",
+     "sala": "",
+     "ciudad": "Bogotá",
      "hora": "18:30",
      "ingreso": "Entrada libre"
     },
     {
      "sede": "Cinema Local - Calle 74 # 20 B -19",
-     "ciudad": "Cali",
+     "sala": "",
+     "ciudad": "Bogotá",
      "hora": "19:00",
      "ingreso": "Entrada libre"
     },
     {
+     "sede": "Universidad de Ibagué - Carrera 22 - Calle 67, barrio Ambalá",
+     "sala": "Patio de Banderas",
+     "ciudad": "Ibagué",
+     "hora": "18:00",
+     "ingreso": "Entrada libre"
+    },
+    {
      "sede": "Comfama Cineclub Bello Sede Centro - Cra. 49 #46-57",
-     "ciudad": "Medellín",
+     "sala": "",
+     "ciudad": "",
      "hora": "16:00",
      "ingreso": "Entrada libre"
     },
     {
      "sede": "Cineprox - Dg. 75B #2A-120Rotonda Comercial Las Américas",
+     "sala": "",
      "ciudad": "Medellín",
      "hora": "14:00",
-     "ingreso": "Entrada libre",
-     "_ciudad_por": "listado de ciudad"
+     "ingreso": "Entrada libre"
     }
    ],
    "fechas_ficha": [
@@ -1451,24 +1629,24 @@
    "funciones": [
     {
      "sede": "Casa de la Juventud Diego Felipe Becerra - Cra. 125 # 132C-82",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "14:00",
-     "ingreso": "Entrada libre",
-     "_ciudad_por": "heurística"
+     "ingreso": "Entrada libre"
     },
     {
      "sede": "Cinemateca del Museo La Tertulia - Cra. 1 # 5-105, Oeste",
+     "sala": "",
      "ciudad": "Cali",
      "hora": "17:00",
-     "ingreso": "Boletería en taquilla",
-     "_ciudad_por": "listado de ciudad"
+     "ingreso": "Boletería en taquilla"
     },
     {
      "sede": "Maloka Cultural - Cra. 46 # 79-18",
+     "sala": "",
      "ciudad": "Barranquilla",
      "hora": "18:30",
-     "ingreso": "Entrada libre",
-     "_ciudad_por": "listado de ciudad"
+     "ingreso": "Entrada libre"
     }
    ],
    "fechas_ficha": [
@@ -1483,10 +1661,17 @@
    "funciones": [
     {
      "sede": "Biblioteca Pública Usaquén Servitá - Calle 165 # 7-52",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "15:00",
-     "ingreso": "Entrada libre",
-     "_ciudad_por": "heurística"
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "Centro Cultural Panóptico de Ibagué - Calle 11 # 9-73ª, barrio Belén",
+     "sala": "Auditorio",
+     "ciudad": "Ibagué",
+     "hora": "16:00",
+     "ingreso": "Entrada libre"
     }
    ],
    "fechas_ficha": [
@@ -1501,6 +1686,7 @@
    "funciones": [
     {
      "sede": "Librería Bagatá - Cra. 7 #27-3 (frente al Colegio Carrasquilla)",
+     "sala": "",
      "ciudad": "Quibdó",
      "hora": "15:00",
      "ingreso": "Entrada libre"
@@ -1518,10 +1704,10 @@
    "funciones": [
     {
      "sede": "Casa Cultural El Bordillo - Cra. 44  # 87-44",
+     "sala": "",
      "ciudad": "Barranquilla",
      "hora": "19:30",
-     "ingreso": "Entrada libre",
-     "_ciudad_por": "listado de ciudad"
+     "ingreso": "Entrada libre"
     }
    ],
    "fechas_ficha": [
@@ -1535,18 +1721,21 @@
    "funciones": [
     {
      "sede": "Cinemateca de Bogotá - Cra. 3 # 19-10",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "20:00",
      "ingreso": "Boletería en taquilla"
     },
     {
      "sede": "Cinemateca del Caribe - Calle 76 # 57-61",
+     "sala": "",
      "ciudad": "Barranquilla",
      "hora": "15:00",
      "ingreso": "Boletería en taquilla"
     },
     {
      "sede": "Centro Comunitario Nueva Colombia / Biblioteca Pa To Ma Suto - Diagonal 75A  # 15D-67",
+     "sala": "",
      "ciudad": "",
      "hora": "15:30",
      "ingreso": "Entrada libre"
@@ -1569,76 +1758,91 @@
    "funciones": [
     {
      "sede": "Colombo Americano de Pereira - Carrera 6 Nº 23-58",
+     "sala": "",
      "ciudad": "Pereira",
      "hora": "10:00",
      "ingreso": "Entrada libre"
     },
     {
      "sede": "Institución Educativa Jaime Salazar Robledo - Comuna Villa Santana",
+     "sala": "",
      "ciudad": "Pereira",
      "hora": "09:00",
      "ingreso": "Función privada"
     },
     {
      "sede": "Cinemateca de Tunja - Calle 17 # 15-36",
+     "sala": "",
      "ciudad": "Tunja",
      "hora": "16:00",
      "ingreso": "Boletería en taquilla"
     },
     {
      "sede": "Fundación Malabareando las Calles - Carrera 8 #15 - 09",
+     "sala": "",
      "ciudad": "Pereira",
      "hora": "14:00",
-     "ingreso": "Entrada libre",
-     "_ciudad_por": "listado de ciudad"
+     "ingreso": "Entrada libre"
     },
     {
      "sede": "Museo Intangible del Confinamiento. Casa de la Cultura Alfonso López - Carrera 7b # 2e-05, barrio Alfonso López",
+     "sala": "",
      "ciudad": "Pereira",
      "hora": "14:00",
      "ingreso": "Entrada libre"
     },
     {
      "sede": "Biblioteca Pública La Victoria - Calle 37 BIS B Sur # 2B",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "14:00",
      "ingreso": "Entrada libre"
     },
     {
      "sede": "Casa de las Luciérnagas - Diagonal 73H SUR # 78-38",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "17:00",
-     "ingreso": "Entrada libre",
-     "_ciudad_por": "heurística"
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "Centro Cultural Panóptico de Ibagué - Calle 11 # 9-73ª, barrio Belén",
+     "sala": "Auditorio",
+     "ciudad": "Ibagué",
+     "hora": "16:00",
+     "ingreso": "Entrada libre"
     },
     {
      "sede": "Cinemateca Fontanar del Río - Calle 146 # 138A-99",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "14:00",
-     "ingreso": "Entrada libre",
-     "_ciudad_por": "heurística"
+     "ingreso": "Entrada libre"
     },
     {
      "sede": "Cinemateca El Tunal - Calle 56 Sur # 23-62",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "14:00",
      "ingreso": "Entrada libre"
     },
     {
      "sede": "Institución Educativa Bienestar Social - Cra. 47b # 45-47, Mariano Ramos",
+     "sala": "",
      "ciudad": "Cali",
      "hora": "08:30",
-     "ingreso": "Función privada",
-     "_ciudad_por": "listado de ciudad"
+     "ingreso": "Función privada"
     },
     {
      "sede": "Colegio Cruzada Social - Calle 46 # 13C -57, barrio Cevillar",
+     "sala": "",
      "ciudad": "Barranquilla",
      "hora": "10:30",
      "ingreso": "Función privada"
     },
     {
      "sede": "Centro Cultural Banco de la República - Cl. 50 #50-21 Piso 3",
+     "sala": "",
      "ciudad": "Medellín",
      "hora": "10:00",
      "ingreso": "Entrada libre"
@@ -1657,13 +1861,14 @@
    "funciones": [
     {
      "sede": "Cinemateca del Museo La Tertulia - Cra. 1 # 5-105, Oeste",
+     "sala": "",
      "ciudad": "Cali",
      "hora": "19:00",
-     "ingreso": "Boletería en taquilla",
-     "_ciudad_por": "listado de ciudad"
+     "ingreso": "Boletería en taquilla"
     },
     {
      "sede": "Colombo Americano de Medellín - Cra. 45 #53 - 24, Centro",
+     "sala": "",
      "ciudad": "Medellín",
      "hora": "16:30",
      "ingreso": "Entrada libre"
@@ -1680,19 +1885,28 @@
    "funciones": [
     {
      "sede": "Biblioteca Pública La Victoria - Calle 37 BIS B Sur # 2B",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "14:00",
      "ingreso": "Entrada libre"
     },
     {
      "sede": "CEFE Cometas - Calle 127 A # 87",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "11:00",
-     "ingreso": "Entrada libre",
-     "_ciudad_por": "heurística"
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "Centro Cultural Panóptico de Ibagué - Calle 11 # 9-73ª, barrio Belén",
+     "sala": "Celda \"Teatro Ibagué\"",
+     "ciudad": "Ibagué",
+     "hora": "14:00",
+     "ingreso": "Entrada libre"
     },
     {
      "sede": "Cinemateca de Bogotá - Cra. 3 # 19-10",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "17:30",
      "ingreso": "Boletería en taquilla"
@@ -1707,43 +1921,56 @@
    "funciones": [
     {
      "sede": "Cinemateca de Tunja - Calle 17 # 15-36",
+     "sala": "",
      "ciudad": "Tunja",
      "hora": "16:00",
      "ingreso": "Boletería en taquilla"
     },
     {
      "sede": "Casa de la Juventud Chapinero - Calle 65A # 1-40",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "17:00",
      "ingreso": "Entrada libre"
     },
     {
      "sede": "Casa de la Juventud  El Cacma - Calle 24 # 27A-31",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "15:30",
-     "ingreso": "Entrada libre",
-     "_ciudad_por": "heurística"
+     "ingreso": "Entrada libre"
     },
     {
      "sede": "Casa de la Juventud Nacho Sánchez - Cra. 3 Este # 9-58",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "15:00",
      "ingreso": "Entrada libre"
     },
     {
      "sede": "Cinemateca de Bogotá - Cra. 3 # 19-10",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "13:00",
      "ingreso": "Boletería en taquilla"
     },
     {
+     "sede": "Universidad de Ibagué - Carrera 22 - Calle 67, barrio Ambalá",
+     "sala": "Salón 8-12",
+     "ciudad": "Ibagué",
+     "hora": "15:00",
+     "ingreso": "Entrada libre"
+    },
+    {
      "sede": "CasArte3962 - Calle 73B # 39-62",
+     "sala": "",
      "ciudad": "",
      "hora": "18:30",
      "ingreso": "Entrada libre"
     },
     {
      "sede": "La Capilla del Claustro Comfama - Carrera 44 # 48 - 18",
+     "sala": "",
      "ciudad": "",
      "hora": "18:30",
      "ingreso": "Entrada libre"
@@ -1767,10 +1994,10 @@
    "funciones": [
     {
      "sede": "La Trocha, La Casa de la Paz - Cra. 13 # 36-37",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "17:00",
-     "ingreso": "Entrada libre",
-     "_ciudad_por": "heurística"
+     "ingreso": "Entrada libre"
     }
    ],
    "fechas_ficha": [
@@ -1785,85 +2012,101 @@
    "funciones": [
     {
      "sede": "Cinemateca de Tunja - Calle 17 # 15-36",
+     "sala": "",
      "ciudad": "Tunja",
      "hora": "16:00",
      "ingreso": "Boletería en taquilla"
     },
     {
      "sede": "Cárcel La 40 Establecimiento Penitenciario y Carcelario de Pereira INPEC - Carrera 8 # 41-97",
-     "ciudad": "Pereira",
+     "sala": "",
+     "ciudad": "",
      "hora": "09:00",
      "ingreso": "Función privada"
     },
     {
      "sede": "Cine Club La Florida - Corregimiento La Florida",
+     "sala": "",
      "ciudad": "Pereira",
      "hora": "19:00",
      "ingreso": "Entrada libre"
     },
     {
      "sede": "Casa B - Cra. 2 BIS # 6D-30",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "18:00",
-     "ingreso": "Entrada libre",
-     "_ciudad_por": "heurística"
+     "ingreso": "Entrada libre"
     },
     {
      "sede": "Casa de las Luciérnagas - Diagonal 73H SUR # 78-38",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "16:00",
-     "ingreso": "Entrada libre",
-     "_ciudad_por": "heurística"
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "Centro Cultural Panóptico de Ibagué - Calle 11 # 9-73ª, barrio Belén",
+     "sala": "Auditorio",
+     "ciudad": "Ibagué",
+     "hora": "17:00",
+     "ingreso": "Entrada libre"
     },
     {
      "sede": "Cinemateca de Bogotá - Cra. 3 # 19-10",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "16:30",
      "ingreso": "Boletería en taquilla"
     },
     {
      "sede": "Cinemateca Fontanar del Río - Calle 146 # 138A-99",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "14:00",
-     "ingreso": "Entrada libre",
-     "_ciudad_por": "heurística"
+     "ingreso": "Entrada libre"
     },
     {
      "sede": "Cinemateca El Tunal - Calle 56 Sur # 23-62",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "14:00",
      "ingreso": "Entrada libre"
     },
     {
      "sede": "Institución Educativa Antonia Santos",
+     "sala": "",
      "ciudad": "",
      "hora": "08:30",
      "ingreso": "Función privada"
     },
     {
      "sede": "Institución Educativa Cristóbal Colón - Cra. 47a # 44-32, Mariano Ramos",
+     "sala": "",
      "ciudad": "Cali",
      "hora": "08:30",
      "ingreso": "Función privada"
     },
     {
      "sede": "Teatro El Ensueño - Transversal 70D # 60-90",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "11:00",
      "ingreso": "Entrada libre"
     },
     {
      "sede": "Fundación Puerto Colombia - Estación Ferrocarril de Bolívar, Cra. 4 # 2-45",
+     "sala": "",
      "ciudad": "Barranquilla",
      "hora": "18:00",
      "ingreso": "Entrada libre"
     },
     {
      "sede": "Festival de Cine de La Ceja",
+     "sala": "",
      "ciudad": "Medellín",
      "hora": "18:30",
-     "ingreso": "",
-     "_ciudad_por": "listado de ciudad"
+     "ingreso": ""
     }
    ],
    "fechas_ficha": [
@@ -1901,18 +2144,21 @@
    "funciones": [
     {
      "sede": "Biblioteca Pública CEFE Fontanar Del Río - Calle 146 # 138A-99",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "11:00",
      "ingreso": "Entrada libre"
     },
     {
      "sede": "Biblioteca Pública Julio Mario Santodomingo - Calle 170 # 67-51",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "16:00",
      "ingreso": "Entrada libre"
     },
     {
      "sede": "Cinemateca de Bogotá - Cra. 3 # 19-10",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "16:00",
      "ingreso": "Boletería en taquilla"
@@ -1927,12 +2173,14 @@
    "funciones": [
     {
      "sede": "Plazoleta del Samán - Cra. 5 # 6-05, San Pedro",
+     "sala": "",
      "ciudad": "Cali",
      "hora": "18:30",
      "ingreso": "Entrada libre"
     },
     {
      "sede": "Colombo Americano de Medellín - Cra. 45 #53 - 24, Centro",
+     "sala": "",
      "ciudad": "Medellín",
      "hora": "14:30",
      "ingreso": "Entrada libre"
@@ -1949,18 +2197,28 @@
    "funciones": [
     {
      "sede": "Universidad del Quindío - Cra. 15 con calle 12 Norte",
+     "sala": "",
      "ciudad": "Armenia",
      "hora": "17:00",
      "ingreso": "Entrada libre"
     },
     {
      "sede": "Auditorio Tulio Gómez Estrada, Facultad de Ciencias Jurídicas y Sociales - Av. Santander # 57-58",
+     "sala": "",
      "ciudad": "Manizales",
      "hora": "19:30",
      "ingreso": "Entrada libre"
     },
     {
+     "sede": "Centro Cultural Panóptico de Ibagué - Calle 11 # 9-73ª, barrio Belén",
+     "sala": "Celda \"Teatro Ibagué\"",
+     "ciudad": "Ibagué",
+     "hora": "14:00",
+     "ingreso": "Entrada libre"
+    },
+    {
      "sede": "Fundación Alianza Tecnologica y Desarrollo Educativo -  ALITIC - Cra. 54 # 64-73",
+     "sala": "",
      "ciudad": "",
      "hora": "18:00",
      "ingreso": "Entrada libre"
@@ -1978,16 +2236,17 @@
    "funciones": [
     {
      "sede": "Biblioteca Pública Deptal Arnoldo de los Santos Palacios Mosquera - Calle 30, Avenida Aeropuerto, Barrio Los Ángeles (frente al Aeropuerto El Caraño)",
+     "sala": "",
      "ciudad": "Quibdó",
      "hora": "15:00",
      "ingreso": "Entrada libre"
     },
     {
      "sede": "Bulevar del Oriente - Comuna 14, entre la transversal 103 con calle 96 y calle 73 con transversal 73, entre los barrios Alfonso Bonilla Aragón y Marroquín 2",
+     "sala": "",
      "ciudad": "Cali",
      "hora": "18:30",
-     "ingreso": "Entrada libre",
-     "_ciudad_por": "heurística"
+     "ingreso": "Entrada libre"
     }
    ],
    "fechas_ficha": [
@@ -2001,71 +2260,84 @@
    "funciones": [
     {
      "sede": "Colombo Americano de Pereira - Carrera 6 Nº 23-58",
+     "sala": "",
      "ciudad": "Pereira",
      "hora": "10:00",
      "ingreso": "Entrada libre"
     },
     {
      "sede": "Institución Educativa Jaime Salazar Robledo - Comuna Villa Santana",
+     "sala": "",
      "ciudad": "Pereira",
      "hora": "09:00",
      "ingreso": "Función privada"
     },
     {
      "sede": "Escuela de Administración y Mercadotecnia del Quindío (EAM) - Cra. 14 # 3-11 (Avenida Bolívar)",
+     "sala": "",
      "ciudad": "Armenia",
      "hora": "16:00",
-     "ingreso": "Entrada libre",
-     "_ciudad_por": "listado de ciudad"
+     "ingreso": "Entrada libre"
     },
     {
      "sede": "Museo Intangible del Confinamiento. Casa de la Cultura Alfonso López - Carrera 7b # 2e-05, barrio Alfonso López",
+     "sala": "",
      "ciudad": "Pereira",
      "hora": "14:00",
      "ingreso": "Entrada libre"
     },
     {
      "sede": "Casa de las Luciérnagas - Diagonal 73H SUR # 78-38",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "17:00",
-     "ingreso": "Entrada libre",
-     "_ciudad_por": "heurística"
+     "ingreso": "Entrada libre"
     },
     {
      "sede": "Centro Cultural del Socorro - Cra. 71 # 26-210, sobre la Avenida Principal del barrio El Socorro",
+     "sala": "",
      "ciudad": "Cartagena",
      "hora": "17:30",
-     "ingreso": "Entrada libre",
-     "_ciudad_por": "listado de ciudad"
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "Centro Cultural Panóptico de Ibagué - Calle 11 # 9-73ª, barrio Belén",
+     "sala": "Auditorio",
+     "ciudad": "Ibagué",
+     "hora": "16:00",
+     "ingreso": "Entrada libre"
     },
     {
      "sede": "Cinemateca Fontanar del Río - Calle 146 # 138A-99",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "14:00",
-     "ingreso": "Entrada libre",
-     "_ciudad_por": "heurística"
+     "ingreso": "Entrada libre"
     },
     {
      "sede": "Cinemateca El Tunal - Calle 56 Sur # 23-62",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "14:00",
      "ingreso": "Entrada libre"
     },
     {
      "sede": "Institución Educativa Bienestar Social - Cra. 47b # 45-47, Mariano Ramos",
+     "sala": "",
      "ciudad": "Cali",
      "hora": "08:30",
-     "ingreso": "Función privada",
-     "_ciudad_por": "listado de ciudad"
+     "ingreso": "Función privada"
     },
     {
      "sede": "Colegio Cruzada Social - Calle 46 # 13C -57, barrio Cevillar",
+     "sala": "",
      "ciudad": "Barranquilla",
      "hora": "10:30",
      "ingreso": "Función privada"
     },
     {
      "sede": "Centro Cultural Banco de la República - Cl. 50 #50-21 Piso 3",
+     "sala": "",
      "ciudad": "Medellín",
      "hora": "10:00",
      "ingreso": "Entrada libre"
@@ -2084,25 +2356,42 @@
    "funciones": [
     {
      "sede": "Cine Club Alef - Casa Hoja - Calle 12 bis # 16-18, Av. Circunvalar",
+     "sala": "",
      "ciudad": "Pereira",
      "hora": "19:00",
-     "ingreso": "Entrada libre",
-     "_ciudad_por": "listado de ciudad"
+     "ingreso": "Entrada libre"
     },
     {
      "sede": "Biblioteca Pública Deptal Arnoldo de los Santos Palacios Mosquera - Calle 30, Avenida Aeropuerto, Barrio Los Ángeles (frente al Aeropuerto El Caraño)",
+     "sala": "",
      "ciudad": "Quibdó",
      "hora": "15:00",
      "ingreso": "Entrada libre"
     },
     {
+     "sede": "Centro Cultural Panóptico de Ibagué - Calle 11 # 9-73ª, barrio Belén",
+     "sala": "Auditorio",
+     "ciudad": "Ibagué",
+     "hora": "18:00",
+     "ingreso": "Entrada libre"
+    },
+    {
      "sede": "El Teatrino - Los Almendros Mz E # Lote 11",
+     "sala": "",
      "ciudad": "Cartagena",
      "hora": "18:30",
      "ingreso": "Entrada libre"
     },
     {
+     "sede": "Universidad de Ibagué - Carrera 22 - Calle 67, barrio Ambalá",
+     "sala": "Patio de Banderas",
+     "ciudad": "Ibagué",
+     "hora": "18:00",
+     "ingreso": "Entrada libre"
+    },
+    {
      "sede": "Fundación Alianza Tecnologica y Desarrollo Educativo -  ALITIC - Cra. 54 # 64-73",
+     "sala": "",
      "ciudad": "",
      "hora": "18:00",
      "ingreso": "Entrada libre"
@@ -2121,16 +2410,17 @@
    "funciones": [
     {
      "sede": "Casa de la Juventud Iwoka - Cra. 78N BIS # 39-33",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "10:00",
      "ingreso": "Entrada libre"
     },
     {
      "sede": "Casa de la Juventud Usaquén - Calle 155 # 7-45",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "14:00",
-     "ingreso": "Entrada libre",
-     "_ciudad_por": "heurística"
+     "ingreso": "Entrada libre"
     }
    ],
    "fechas_ficha": [],
@@ -2142,20 +2432,21 @@
    "funciones": [
     {
      "sede": "Escuela de Administración y Mercadotecnia del Quindío (EAM) - Cra. 14 # 3-11 (Avenida Bolívar)",
+     "sala": "",
      "ciudad": "Armenia",
      "hora": "16:00",
-     "ingreso": "Entrada libre",
-     "_ciudad_por": "listado de ciudad"
+     "ingreso": "Entrada libre"
     },
     {
      "sede": "Centro Cultural del Socorro - Cra. 71 # 26-210, sobre la Avenida Principal del barrio El Socorro",
+     "sala": "",
      "ciudad": "Cartagena",
      "hora": "17:30",
-     "ingreso": "Entrada libre",
-     "_ciudad_por": "listado de ciudad"
+     "ingreso": "Entrada libre"
     },
     {
      "sede": "Fundación Alianza Tecnologica y Desarrollo Educativo -  ALITIC - Cra. 54 # 64-73",
+     "sala": "",
      "ciudad": "",
      "hora": "11:00",
      "ingreso": "Entrada libre"
@@ -2173,32 +2464,31 @@
    "funciones": [
     {
      "sede": "Cinemateca de Bogotá - Cra. 3 # 19-10",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "14:00",
      "ingreso": "Boletería en taquilla"
     },
     {
      "sede": "Cinemateca Fontanar del Río - Calle 146 # 138A-99",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "16:00",
-     "ingreso": "Entrada libre",
-     "_ciudad_por": "heurística"
+     "ingreso": "Entrada libre"
     },
     {
      "sede": "Cinemateca El Tunal - Calle 56 Sur # 23-62",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "16:00",
      "ingreso": "Entrada libre"
     },
     {
      "sede": "Alianza Francesa - Calle 52 # 54-75",
+     "sala": "",
      "ciudad": "",
      "hora": "18:30",
-     "ingreso": "Entrada libre",
-     "_ciudad_candidatas": [
-      "Barranquilla",
-      "Cartagena"
-     ]
+     "ingreso": "Entrada libre"
     }
    ],
    "fechas_ficha": [
@@ -2218,12 +2508,14 @@
    "funciones": [
     {
      "sede": "Cinemateca de Bogotá - Cra. 3 # 19-10",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "19:00",
      "ingreso": "Boletería en taquilla"
     },
     {
      "sede": "Cinemateca del Caribe - Calle 76 # 57-61",
+     "sala": "",
      "ciudad": "Barranquilla",
      "hora": "19:00",
      "ingreso": "Boletería en taquilla"
@@ -2247,12 +2539,14 @@
    "funciones": [
     {
      "sede": "Cinemateca de Bogotá - Cra. 3 # 19-10",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "19:00",
      "ingreso": "Boletería en taquilla"
     },
     {
      "sede": "Colombo Americano de Medellín - Cra. 45 #53 - 24, Centro",
+     "sala": "",
      "ciudad": "Medellín",
      "hora": "18:30",
      "ingreso": "Entrada libre"
@@ -2275,6 +2569,7 @@
    "funciones": [
     {
      "sede": "Fundación Alianza Tecnologica y Desarrollo Educativo -  ALITIC - Cra. 54 # 64-73",
+     "sala": "",
      "ciudad": "",
      "hora": "11:00",
      "ingreso": "Entrada libre"
@@ -2291,13 +2586,14 @@
    "funciones": [
     {
      "sede": "Fundación Gilberto Alzate Avendaño - Biblioteca - Calle 10 # 3-16",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "14:00",
-     "ingreso": "Entrada libre",
-     "_ciudad_por": "heurística"
+     "ingreso": "Entrada libre"
     },
     {
      "sede": "Cinemateca del Caribe - Calle 76 # 57-61",
+     "sala": "",
      "ciudad": "Barranquilla",
      "hora": "20:00",
      "ingreso": "Boletería en taquilla"
@@ -2314,30 +2610,35 @@
    "funciones": [
     {
      "sede": "Universidad del Quindío - Cra. 15 con calle 12 Norte",
+     "sala": "",
      "ciudad": "Armenia",
      "hora": "17:00",
      "ingreso": "Entrada libre"
     },
     {
      "sede": "Biblioteca Pública CEFE Fontanar Del Río - Calle 146 # 138A-99",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "11:00",
      "ingreso": "Entrada libre"
     },
     {
      "sede": "Biblioteca Pública Julio Mario Santodomingo - Calle 170 # 67-51",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "16:00",
      "ingreso": "Entrada libre"
     },
     {
      "sede": "Cinemateca de Bogotá - Cra. 3 # 19-10",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "19:30",
      "ingreso": "Boletería en taquilla"
     },
     {
      "sede": "Fundación Alianza Tecnologica y Desarrollo Educativo -  ALITIC - Cra. 54 # 64-73",
+     "sala": "",
      "ciudad": "",
      "hora": "18:00",
      "ingreso": "Entrada libre"
@@ -2355,12 +2656,21 @@
    "funciones": [
     {
      "sede": "Universidad del Quindío - Cra. 15 con calle 12 Norte",
+     "sala": "",
      "ciudad": "Armenia",
      "hora": "17:00",
      "ingreso": "Entrada libre"
     },
     {
+     "sede": "Centro Cultural Panóptico de Ibagué - Calle 11 # 9-73ª, barrio Belén",
+     "sala": "Celda \"Teatro Ibagué\"",
+     "ciudad": "Ibagué",
+     "hora": "14:00",
+     "ingreso": "Entrada libre"
+    },
+    {
      "sede": "Cinemateca de Bogotá - Cra. 3 # 19-10",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "19:30",
      "ingreso": "Boletería en taquilla"
@@ -2378,38 +2688,42 @@
    "funciones": [
     {
      "sede": "Auditorio Centro Cultural Universitario Rogelio Salmona - Cra. 28D entre Cl. 66 #y 67",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "17:00",
-     "ingreso": "Entrada libre",
-     "_ciudad_por": "heurística"
+     "ingreso": "Entrada libre"
     },
     {
      "sede": "Casa de la Juventud Aldea De Pensadores - Calle 70 # 88A-7",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "14:00",
      "ingreso": "Entrada libre"
     },
     {
      "sede": "Casa de la Juventud  El Frailejón - Cra. 12 # 76A-28 Sur",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "15:30",
      "ingreso": "Entrada libre"
     },
     {
      "sede": "Casa de la Juventud José Saramago - Cra. 82J # 70A-52",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "15:00",
-     "ingreso": "Entrada libre",
-     "_ciudad_por": "heurística"
+     "ingreso": "Entrada libre"
     },
     {
      "sede": "Cinemateca de Bogotá - Cra. 3 # 19-10",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "16:00",
      "ingreso": "Boletería en taquilla"
     },
     {
      "sede": "Fundación Alianza Tecnologica y Desarrollo Educativo -  ALITIC - Cra. 54 # 64-73",
+     "sala": "",
      "ciudad": "",
      "hora": "18:00",
      "ingreso": "Entrada libre"
@@ -2432,38 +2746,49 @@
    "funciones": [
     {
      "sede": "Alianza Francesa - Parque Fernández de Madrid, Cra. 8 # 37-34, San Diego",
-     "ciudad": "Cartagena",
+     "sala": "",
+     "ciudad": "",
      "hora": "18:30",
-     "ingreso": "Entrada libre",
-     "_ciudad_por": "heurística"
+     "ingreso": "Entrada libre"
     },
     {
      "sede": "Biblioteca Pública CEFE Fontanar Del Río - Calle 146 # 138A-99",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "11:00",
      "ingreso": "Entrada libre"
     },
     {
      "sede": "Biblioteca Pública Julio Mario Santodomingo - Calle 170 # 67-51",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "16:00",
      "ingreso": "Entrada libre"
     },
     {
      "sede": "Casa LGBTIQ Sebastián Romero - Calle 44 # 14-60",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "15:00",
-     "ingreso": "Entrada libre",
-     "_ciudad_por": "heurística"
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "Universidad de Ibagué - Carrera 22 - Calle 67, barrio Ambalá",
+     "sala": "Patio de Banderas",
+     "ciudad": "Ibagué",
+     "hora": "18:00",
+     "ingreso": "Entrada libre"
     },
     {
      "sede": "Fundación Alianza Tecnologica y Desarrollo Educativo -  ALITIC - Cra. 54 # 64-73",
+     "sala": "",
      "ciudad": "",
      "hora": "18:00",
      "ingreso": "Entrada libre"
     },
     {
      "sede": "Colombo Americano de Medellín - Cra. 45 #53 - 24, Centro",
+     "sala": "",
      "ciudad": "Medellín",
      "hora": "14:00",
      "ingreso": "Entrada libre"
@@ -2481,13 +2806,22 @@
    "funciones": [
     {
      "sede": "Institución Educativa José Joaquín Jaramillo",
+     "sala": "",
      "ciudad": "",
      "hora": "08:30",
      "ingreso": "Función privada"
     },
     {
+     "sede": "Universidad del Atlántico - Puerto Colombia - Cra. 30 # 8-49, Puerto Colombia",
+     "sala": "Centro de Convenciones",
+     "ciudad": "Barranquilla",
+     "hora": "16:00",
+     "ingreso": "Entrada libre"
+    },
+    {
      "sede": "Ágora Casa Cultural (La Ceja) - Cl. 19 # 23-15",
-     "ciudad": "Medellín",
+     "sala": "",
+     "ciudad": "",
      "hora": "17:00",
      "ingreso": "Entrada libre"
     }
@@ -2504,24 +2838,35 @@
    "funciones": [
     {
      "sede": "Biblioteca Pública CEFE Fontanar Del Río - Calle 146 # 138A-99",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "11:00",
      "ingreso": "Entrada libre"
     },
     {
      "sede": "Biblioteca Pública Deptal Arnoldo de los Santos Palacios Mosquera - Calle 30, Avenida Aeropuerto, Barrio Los Ángeles (frente al Aeropuerto El Caraño)",
+     "sala": "",
      "ciudad": "Quibdó",
      "hora": "15:00",
      "ingreso": "Entrada libre"
     },
     {
      "sede": "Biblioteca Pública Julio Mario Santodomingo - Calle 170 # 67-51",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "16:00",
      "ingreso": "Entrada libre"
     },
     {
+     "sede": "Universidad de Ibagué - Carrera 22 - Calle 67, barrio Ambalá",
+     "sala": "Patio de Banderas",
+     "ciudad": "Ibagué",
+     "hora": "18:00",
+     "ingreso": "Entrada libre"
+    },
+    {
      "sede": "Fundación Alianza Tecnologica y Desarrollo Educativo -  ALITIC - Cra. 54 # 64-73",
+     "sala": "",
      "ciudad": "",
      "hora": "11:00",
      "ingreso": "Entrada libre"
@@ -2539,13 +2884,14 @@
    "funciones": [
     {
      "sede": "Escuela de Administración y Mercadotecnia del Quindío (EAM) - Cra. 14 # 3-11 (Avenida Bolívar)",
+     "sala": "",
      "ciudad": "Armenia",
      "hora": "16:00",
-     "ingreso": "Entrada libre",
-     "_ciudad_por": "listado de ciudad"
+     "ingreso": "Entrada libre"
     },
     {
      "sede": "Fundación Alianza Tecnologica y Desarrollo Educativo -  ALITIC - Cra. 54 # 64-73",
+     "sala": "",
      "ciudad": "",
      "hora": "11:00",
      "ingreso": "Entrada libre"
@@ -2562,16 +2908,17 @@
    "funciones": [
     {
      "sede": "Biblioteca Pública Deptal Arnoldo de los Santos Palacios Mosquera - Calle 30, Avenida Aeropuerto, Barrio Los Ángeles (frente al Aeropuerto El Caraño)",
+     "sala": "",
      "ciudad": "Quibdó",
      "hora": "15:00",
      "ingreso": "Entrada libre"
     },
     {
      "sede": "Cinemateca del Museo La Tertulia - Cra. 1 # 5-105, Oeste",
+     "sala": "",
      "ciudad": "Cali",
      "hora": "17:00",
-     "ingreso": "Boletería en taquilla",
-     "_ciudad_por": "listado de ciudad"
+     "ingreso": "Boletería en taquilla"
     }
    ],
    "fechas_ficha": [
@@ -2593,79 +2940,101 @@
    "funciones": [
     {
      "sede": "Cinemateca de Tunja - Calle 17 # 15-36",
+     "sala": "",
      "ciudad": "Tunja",
      "hora": "18:30",
      "ingreso": "Boletería en taquilla"
     },
     {
+     "sede": "Cine a la Calle - Parque Olaya Herrera",
+     "sala": "",
+     "ciudad": "Pereira",
+     "hora": "18:00",
+     "ingreso": "Entrada libre"
+    },
+    {
      "sede": "Cine Bajo las Estrellas programa de exhibición y circulación - Parque Sucre",
+     "sala": "",
      "ciudad": "Armenia",
      "hora": "18:30",
      "ingreso": "Entrada libre"
     },
     {
      "sede": "Biblioteca Pública Manuel Zapata Olivella - Av. Ciudad de Cali # 6C-09",
-     "ciudad": "Cali",
+     "sala": "",
+     "ciudad": "Bogotá",
      "hora": "15:00",
      "ingreso": "Entrada libre"
     },
     {
      "sede": "Cinemateca de Bogotá - Cra. 3 # 19-10",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "11:00",
      "ingreso": "Boletería en taquilla"
     },
     {
      "sede": "Cinemateca Fontanar del Río - Calle 146 # 138A-99",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "16:00",
-     "ingreso": "Entrada libre",
-     "_ciudad_por": "heurística"
+     "ingreso": "Entrada libre"
     },
     {
      "sede": "Cinemateca El Tunal - Calle 56 Sur # 23-62",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "16:00",
      "ingreso": "Entrada libre"
     },
     {
      "sede": "Institución Educativa Isaac Rodríguez - Barrio Reposo #2",
+     "sala": "",
      "ciudad": "",
      "hora": "08:00",
      "ingreso": "Función privada"
     },
     {
      "sede": "Manzana del Cuidado Mochuelo - Calle 91C Sur # 18H-14",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "15:00",
-     "ingreso": "Entrada libre",
-     "_ciudad_por": "heurística"
+     "ingreso": "Entrada libre"
     },
     {
      "sede": "Universidad de Cartagena Claustro San Agustín - Cra. 6, Calle de la Universidad # 36-100",
-     "ciudad": "Cartagena",
+     "sala": "",
+     "ciudad": "",
      "hora": "18:30",
      "ingreso": "Entrada libre"
     },
     {
+     "sede": "Universidad de Ibagué - Carrera 22 - Calle 67, barrio Ambalá",
+     "sala": "Auditorio Central",
+     "ciudad": "Ibagué",
+     "hora": "18:00",
+     "ingreso": "Entrada libre"
+    },
+    {
      "sede": "Universidad Minuto de Dios - Diagonal 81F # 72 C-1",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "18:00",
-     "ingreso": "Entrada libre",
-     "_ciudad_por": "heurística"
+     "ingreso": "Entrada libre"
     },
     {
      "sede": "Cinemateca del Caribe - Calle 76 # 57-61",
+     "sala": "",
      "ciudad": "Barranquilla",
      "hora": "16:00",
      "ingreso": "Boletería en taquilla"
     },
     {
      "sede": "Cineprox - Dg. 75B #2A-120Rotonda Comercial Las Américas",
+     "sala": "",
      "ciudad": "Medellín",
      "hora": "16:30",
-     "ingreso": "Entrada libre",
-     "_ciudad_por": "listado de ciudad"
+     "ingreso": "Entrada libre"
     }
    ],
    "fechas_ficha": [
@@ -2690,10 +3059,10 @@
    "funciones": [
     {
      "sede": "Auditorio Centro Cultural Universitario Rogelio Salmona - Cra. 28D entre Cl. 66 #y 67",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "19:00",
-     "ingreso": "Entrada libre",
-     "_ciudad_por": "heurística"
+     "ingreso": "Entrada libre"
     }
    ],
    "fechas_ficha": [
@@ -2707,6 +3076,7 @@
    "funciones": [
     {
      "sede": "Cinemateca de Bogotá - Cra. 3 # 19-10",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "17:30",
      "ingreso": "Boletería en taquilla"
@@ -2723,31 +3093,35 @@
    "funciones": [
     {
      "sede": "Casa B - Cra. 2 BIS # 6D-30",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "18:00",
-     "ingreso": "Entrada libre",
-     "_ciudad_por": "heurística"
+     "ingreso": "Entrada libre"
     },
     {
      "sede": "Librería Bagatá - Cra. 7 #27-3 (frente al Colegio Carrasquilla)",
+     "sala": "",
      "ciudad": "Quibdó",
      "hora": "15:00",
      "ingreso": "Entrada libre"
     },
     {
      "sede": "Lugar del Poema - Pasaje Leclerc, calle 24 # 8b-83 piso 2, Getsemaní",
+     "sala": "",
      "ciudad": "Cartagena",
      "hora": "19:00",
      "ingreso": "Entrada libre"
     },
     {
      "sede": "Book Times - Calle 54 # 53-76",
+     "sala": "",
      "ciudad": "",
      "hora": "18:00",
      "ingreso": "Entrada libre"
     },
     {
      "sede": "Sala Fundadores",
+     "sala": "",
      "ciudad": "Manizales",
      "hora": "19:00",
      "ingreso": ""
@@ -2765,30 +3139,42 @@
    "funciones": [
     {
      "sede": "Cinemateca de Tunja - Calle 17 # 15-36",
+     "sala": "",
      "ciudad": "Tunja",
      "hora": "16:00",
      "ingreso": "Boletería en taquilla"
     },
     {
      "sede": "Biblioteca Pública CEFE Fontanar Del Río - Calle 146 # 138A-99",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "11:00",
      "ingreso": "Entrada libre"
     },
     {
      "sede": "Biblioteca Pública Julio Mario Santodomingo - Calle 170 # 67-51",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "16:00",
      "ingreso": "Entrada libre"
     },
     {
+     "sede": "Centro Cultural Panóptico de Ibagué - Calle 11 # 9-73ª, barrio Belén",
+     "sala": "Celda \"Teatro Ibagué\"",
+     "ciudad": "Ibagué",
+     "hora": "14:00",
+     "ingreso": "Entrada libre"
+    },
+    {
      "sede": "Cinemateca de Bogotá - Cra. 3 # 19-10",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "17:30",
      "ingreso": "Boletería en taquilla"
     },
     {
      "sede": "Fundación Alianza Tecnologica y Desarrollo Educativo -  ALITIC - Cra. 54 # 64-73",
+     "sala": "",
      "ciudad": "",
      "hora": "18:00",
      "ingreso": "Entrada libre"
@@ -2806,8 +3192,16 @@
    "funciones": [
     {
      "sede": "Biblioteca Pública La Victoria - Calle 37 BIS B Sur # 2B",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "14:00",
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "Universidad de Ibagué - Carrera 22 - Calle 67, barrio Ambalá",
+     "sala": "Patio de Banderas",
+     "ciudad": "Ibagué",
+     "hora": "18:00",
      "ingreso": "Entrada libre"
     }
    ],
@@ -2822,25 +3216,28 @@
    "funciones": [
     {
      "sede": "Cinemateca de Tunja - Calle 17 # 15-36",
+     "sala": "",
      "ciudad": "Tunja",
      "hora": "18:30",
      "ingreso": "Boletería en taquilla"
     },
     {
      "sede": "Cinemateca de Bogotá - Cra. 3 # 19-10",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "17:00",
      "ingreso": "Boletería en taquilla"
     },
     {
      "sede": "Universidad Tecnológica del Chocó - Carrera 22, Ciudadela Universitaria Barrio Nicolas Medrano",
+     "sala": "",
      "ciudad": "Quibdó",
      "hora": "09:00",
-     "ingreso": "Función privada",
-     "_ciudad_por": "listado de ciudad"
+     "ingreso": "Función privada"
     },
     {
      "sede": "Cinemateca del Caribe - Calle 76 # 57-61",
+     "sala": "",
      "ciudad": "Barranquilla",
      "hora": "15:00",
      "ingreso": "Boletería en taquilla"
@@ -2863,7 +3260,15 @@
    "url": "https://www.ficdeh.com/produccion/tierra-que-habla/",
    "funciones": [
     {
+     "sede": "Centro Cultural Panóptico de Ibagué - Calle 11 # 9-73ª, barrio Belén",
+     "sala": "Auditorio",
+     "ciudad": "Ibagué",
+     "hora": "18:30",
+     "ingreso": "Entrada libre"
+    },
+    {
      "sede": "Colombo Americano de Medellín - Cra. 45 #53 - 24, Centro",
+     "sala": "",
      "ciudad": "Medellín",
      "hora": "14:30",
      "ingreso": "Entrada libre"
@@ -2881,16 +3286,24 @@
    "funciones": [
     {
      "sede": "Centro de Formación de la Cooperación Española - Calle 36 # 2-74, El Centro",
+     "sala": "",
      "ciudad": "Cartagena",
      "hora": "18:30",
      "ingreso": "Entrada libre"
     },
     {
-     "sede": "Museo a Cielo Abierto - Barrio Abajo - Barrio Abajo, entre las calles 41 y 42 y las carreras 53 y 53B",
+     "sede": "Centro Cultural Villas de San Pablo - Cra. 28 C # 143 C - 58",
+     "sala": "MAUA",
      "ciudad": "Barranquilla",
      "hora": "18:30",
-     "ingreso": "Entrada libre",
-     "_ciudad_por": "listado de ciudad"
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "Museo a Cielo Abierto - Barrio Abajo - Barrio Abajo, entre las calles 41 y 42 y las carreras 53 y 53B",
+     "sala": "",
+     "ciudad": "Barranquilla",
+     "hora": "18:30",
+     "ingreso": "Entrada libre"
     }
    ],
    "fechas_ficha": [
@@ -2904,20 +3317,21 @@
    "funciones": [
     {
      "sede": "Escuela de Administración y Mercadotecnia del Quindío (EAM) - Cra. 14 # 3-11 (Avenida Bolívar)",
+     "sala": "",
      "ciudad": "Armenia",
      "hora": "16:00",
-     "ingreso": "Entrada libre",
-     "_ciudad_por": "listado de ciudad"
+     "ingreso": "Entrada libre"
     },
     {
      "sede": "Centro Cultural del Socorro - Cra. 71 # 26-210, sobre la Avenida Principal del barrio El Socorro",
+     "sala": "",
      "ciudad": "Cartagena",
      "hora": "17:30",
-     "ingreso": "Entrada libre",
-     "_ciudad_por": "listado de ciudad"
+     "ingreso": "Entrada libre"
     },
     {
      "sede": "Cinemateca de Bogotá - Cra. 3 # 19-10",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "19:30",
      "ingreso": "Boletería en taquilla"
@@ -2935,10 +3349,10 @@
    "funciones": [
     {
      "sede": "Cinemateca del Museo La Tertulia - Cra. 1 # 5-105, Oeste",
+     "sala": "",
      "ciudad": "Cali",
      "hora": "17:00",
-     "ingreso": "Boletería en taquilla",
-     "_ciudad_por": "listado de ciudad"
+     "ingreso": "Boletería en taquilla"
     }
    ],
    "fechas_ficha": [
@@ -2952,17 +3366,31 @@
    "funciones": [
     {
      "sede": "Auditorio Centro Cultural Universitario Rogelio Salmona - Cra. 28D entre Cl. 66 #y 67",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "19:00",
-     "ingreso": "Entrada libre",
-     "_ciudad_por": "heurística"
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "Centro Cultural Panóptico de Ibagué - Calle 11 # 9-73ª, barrio Belén",
+     "sala": "Auditorio",
+     "ciudad": "Ibagué",
+     "hora": "17:00",
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "Centro Cultural Villas de San Pablo - Cra. 28 C # 143 C - 58",
+     "sala": "MAUA",
+     "ciudad": "Barranquilla",
+     "hora": "18:30",
+     "ingreso": "Entrada libre"
     },
     {
      "sede": "Museo a Cielo Abierto - Barrio Abajo - Barrio Abajo, entre las calles 41 y 42 y las carreras 53 y 53B",
+     "sala": "",
      "ciudad": "Barranquilla",
      "hora": "18:30",
-     "ingreso": "Entrada libre",
-     "_ciudad_por": "listado de ciudad"
+     "ingreso": "Entrada libre"
     }
    ],
    "fechas_ficha": [
@@ -2977,6 +3405,7 @@
    "funciones": [
     {
      "sede": "Cinemateca de Bogotá - Cra. 3 # 19-10",
+     "sala": "",
      "ciudad": "Bogotá",
      "hora": "17:00",
      "ingreso": "Boletería en taquilla"
