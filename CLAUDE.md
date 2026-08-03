@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `6a6c739 fix(landing): funnel /get con rescate — el badge de Apple sobrevive al webview de IG (#498) (#498)`
+> Último commit: `7a3e83c fix(watch): idioma real del usuario + copy de errores del handoff (#499) (#499)`
 
 ---
 

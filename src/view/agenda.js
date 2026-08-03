@@ -352,14 +352,18 @@ export function renderMiPlanCalendar(state){
   let listHtml=`<div class="mplan-list" id="mplan-detail"><div class="mplan-list-hdr"><span class="mplan-day-name">${dayLabelLong(activeKey)}</span>${dayFilms.length?`<span class="count-badge cb-neutral">${dayFilms.length}</span>`:''}</div>`;
   if(!dayFilms.length){
     if(!isPastDay){
-      // CTA C: día futuro sin películas — invita a explorar sugerencias o recalcular
+      // CTA C: día futuro sin películas — invita a explorar sugerencias o recalcular.
+      // SIN chevron (Juan, 3 ago 2026): chevron-abajo + caja se leía como acordeón
+      // ("viene expandido y no cierra") — promesa falsa. El tap sigue siendo el
+      // atajo (scroll a Sugerencias); el borde ámbar marca accionable y el copy
+      // dice a dónde ir. plan_empty_dia es UNA frase (la costura ". o" era la
+      // concatenación de dos claves vestigiales; plan_recalcular_suffix retirada).
       listHtml+=`<div class="cta-ctx cta-ctx-c" data-action="scrollToSuggestions">
         <div class="cta-ctx-ico">${ICONS.calendar}</div>
         <div class="cta-ctx-body">
           <div class="cta-ctx-title cta-ctx-title-c">${t('plan_dia_libre')}</div>
-          <div class="cta-ctx-sub">${t('plan_empty_dia')} ${t('plan_recalcular_suffix')}</div>
+          <div class="cta-ctx-sub">${t('plan_empty_dia')}</div>
         </div>
-        <div class="cta-ctx-arr cta-ctx-arr-c">${ICONS.chevronD}</div>
       </div>`;
     } else {
       listHtml+=emptyState(ICONS.calendar, t('plan_nada_dia'));
