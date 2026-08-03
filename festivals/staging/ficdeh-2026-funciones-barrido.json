@@ -1,0 +1,2998 @@
+{
+ "_provenance": {
+  "fuente": "Barrido metódico de las 91 fichas de ficdeh.com/produccion/<slug>/ (3 ago 2026) + mapa sede→ciudad de las 11 páginas /categoria-evento/ciudades/ + grilla real de la Cinemateca de Bogotá.",
+  "que_es_fiable": "sede, hora y tipo de ingreso (verificados: la hora coincide 24/24 con la agenda de la Cinemateca).",
+  "que_NO_es_fiable": "⚠️ LAS FECHAS de las fichas: en 6 de 24 funciones verificables contra la Cinemateca el día NO coincide (25% de error). Ejemplos: Niñxs ficha 12→real 13; Eva 13→15; Por una gota de leche 13→16; La luz por primera vez 14/15→19. NO usar fechas_ficha para montar funciones.",
+  "dia_fiable_solo_si": "dia_confirmado_cinemateca tiene valor (24 obras, 30 funciones con día+hora+SALA reales)."
+ },
+ "_resumen": {
+  "obras": 91,
+  "funciones": 299,
+  "con_ciudad": 267,
+  "con_hora": 299,
+  "con_tipo_ingreso": 295,
+  "funciones_con_dia_confirmado": 24,
+  "tipos_de_ingreso": {
+   "Entrada libre": 206,
+   "Boletería en taquilla": 63,
+   "Función privada": 26,
+   "": 4
+  }
+ },
+ "obras": {
+  "1982": {
+   "url": "https://www.ficdeh.com/produccion/1982/",
+   "funciones": [
+    {
+     "sede": "Cinemateca de Bogotá - Cra. 3 # 19-10",
+     "ciudad": "Bogotá",
+     "hora": "16:00",
+     "ingreso": "Boletería en taquilla"
+    },
+    {
+     "sede": "La Pascasia - Cl. 47 #43 88. Centro",
+     "ciudad": "Medellín",
+     "hora": "16:30",
+     "ingreso": "Entrada libre"
+    }
+   ],
+   "fechas_ficha": [
+    "14 AGO"
+   ],
+   "_fechas_ficha_no_fiables": true,
+   "dia_confirmado_cinemateca": [
+    {
+     "dia": 14,
+     "hora": "16:00",
+     "sala": "Sala 2"
+    }
+   ]
+  },
+  "58th": {
+   "url": "https://www.ficdeh.com/produccion/58th/",
+   "funciones": [
+    {
+     "sede": "Universidad Tecnológica del Chocó - Carrera 22, Ciudadela Universitaria Barrio Nicolas Medrano",
+     "ciudad": "Quibdó",
+     "hora": "09:00",
+     "ingreso": "Función privada",
+     "_ciudad_por": "listado de ciudad"
+    }
+   ],
+   "fechas_ficha": [
+    "19 AGO"
+   ],
+   "_fechas_ficha_no_fiables": true,
+   "dia_confirmado_cinemateca": null
+  },
+  "Amalgama": {
+   "url": "https://www.ficdeh.com/produccion/amalgama/",
+   "funciones": [
+    {
+     "sede": "Centro de Formación de la Cooperación Española - Calle 36 # 2-74, El Centro",
+     "ciudad": "Cartagena",
+     "hora": "10:00",
+     "ingreso": "Entrada libre"
+    }
+   ],
+   "fechas_ficha": [
+    "13 AGO"
+   ],
+   "_fechas_ficha_no_fiables": true,
+   "dia_confirmado_cinemateca": null
+  },
+  "American Doctor": {
+   "url": "https://www.ficdeh.com/produccion/american-doctor-medico-estadounidense/",
+   "funciones": [
+    {
+     "sede": "Cinemateca de Bogotá - Cra. 3 # 19-10",
+     "ciudad": "Bogotá",
+     "hora": "15:00",
+     "ingreso": "Boletería en taquilla"
+    }
+   ],
+   "fechas_ficha": [
+    "17 AGO"
+   ],
+   "_fechas_ficha_no_fiables": true,
+   "dia_confirmado_cinemateca": [
+    {
+     "dia": 17,
+     "hora": "15:00",
+     "sala": "Sala Capital"
+    }
+   ]
+  },
+  "Aminetu": {
+   "url": "https://www.ficdeh.com/produccion/aminetu/",
+   "funciones": [
+    {
+     "sede": "Centro Cultural - Sala Audiovisual de Cali - Cra. 5 # 6-05, San Pedro",
+     "ciudad": "Cali",
+     "hora": "17:00",
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "Cinemateca de Bogotá - Cra. 3 # 19-10",
+     "ciudad": "Bogotá",
+     "hora": "15:00",
+     "ingreso": "Boletería en taquilla"
+    }
+   ],
+   "fechas_ficha": [
+    "13 AGO",
+    "13 AGO"
+   ],
+   "_fechas_ficha_no_fiables": true,
+   "dia_confirmado_cinemateca": [
+    {
+     "dia": 13,
+     "hora": "15:00",
+     "sala": "Sala 3"
+    }
+   ]
+  },
+  "Amor rebelde": {
+   "url": "https://www.ficdeh.com/produccion/amor-rebelde/",
+   "funciones": [
+    {
+     "sede": "Cinemateca de Bogotá - Cra. 3 # 19-10",
+     "ciudad": "Bogotá",
+     "hora": "15:00",
+     "ingreso": "Boletería en taquilla"
+    },
+    {
+     "sede": "Ágora Casa Cultural (La Ceja) - Cl. 19 # 23-15",
+     "ciudad": "Medellín",
+     "hora": "17:00",
+     "ingreso": "Entrada libre"
+    }
+   ],
+   "fechas_ficha": [
+    "14 AGO"
+   ],
+   "_fechas_ficha_no_fiables": true,
+   "dia_confirmado_cinemateca": [
+    {
+     "dia": 14,
+     "hora": "15:00",
+     "sala": "Sala Capital"
+    }
+   ]
+  },
+  "Andariega": {
+   "url": "https://www.ficdeh.com/produccion/andariega/",
+   "funciones": [
+    {
+     "sede": "Cinemateca de Tunja - Calle 17 # 15-36",
+     "ciudad": "Tunja",
+     "hora": "18:30",
+     "ingreso": "Boletería en taquilla"
+    },
+    {
+     "sede": "Cinemateca de Bogotá - Cra. 3 # 19-10",
+     "ciudad": "Bogotá",
+     "hora": "13:00",
+     "ingreso": "Boletería en taquilla"
+    },
+    {
+     "sede": "Cinemateca del Museo La Tertulia - Cra. 1 # 5-105, Oeste",
+     "ciudad": "Cali",
+     "hora": "19:00",
+     "ingreso": "Boletería en taquilla",
+     "_ciudad_por": "listado de ciudad"
+    },
+    {
+     "sede": "Centro de Conciliación y Arbitraje - Universidad del Norte - Calle 74 # 58-79",
+     "ciudad": "",
+     "hora": "10:00",
+     "ingreso": "Entrada libre"
+    }
+   ],
+   "fechas_ficha": [
+    "17 AGO",
+    "15 AGO",
+    "19 AGO"
+   ],
+   "_fechas_ficha_no_fiables": true,
+   "dia_confirmado_cinemateca": [
+    {
+     "dia": 17,
+     "hora": "13:00",
+     "sala": "Sala 2"
+    }
+   ]
+  },
+  "Apolo": {
+   "url": "https://www.ficdeh.com/produccion/apolo/",
+   "funciones": [
+    {
+     "sede": "Alianza Francesa - Parque Fernández de Madrid, Cra. 8 # 37-34, San Diego",
+     "ciudad": "Cartagena",
+     "hora": "18:30",
+     "ingreso": "Entrada libre",
+     "_ciudad_por": "heurística"
+    }
+   ],
+   "fechas_ficha": [
+    "14 AGO"
+   ],
+   "_fechas_ficha_no_fiables": true,
+   "dia_confirmado_cinemateca": null
+  },
+  "Aquí no entra luz": {
+   "url": "https://www.ficdeh.com/produccion/aqui-no-entra-luz/",
+   "funciones": [
+    {
+     "sede": "Cinemateca de Bogotá - Cra. 3 # 19-10",
+     "ciudad": "Bogotá",
+     "hora": "16:00",
+     "ingreso": "Boletería en taquilla"
+    },
+    {
+     "sede": "El Teatrino - Los Almendros Mz E # Lote 11",
+     "ciudad": "Cartagena",
+     "hora": "18:30",
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "La Capilla del Claustro Comfama - Carrera 44 # 48 - 18",
+     "ciudad": "",
+     "hora": "17:00",
+     "ingreso": "Entrada libre"
+    }
+   ],
+   "fechas_ficha": [
+    "15 AGO"
+   ],
+   "_fechas_ficha_no_fiables": true,
+   "dia_confirmado_cinemateca": [
+    {
+     "dia": 15,
+     "hora": "16:00",
+     "sala": "Sala 3"
+    }
+   ]
+  },
+  "Bajo fuego": {
+   "url": "https://www.ficdeh.com/produccion/bajo-fuego/",
+   "funciones": [
+    {
+     "sede": "Centro Cultural - Sala Audiovisual de Cali - Cra. 5 # 6-05, San Pedro",
+     "ciudad": "Cali",
+     "hora": "17:00",
+     "ingreso": "Entrada libre"
+    }
+   ],
+   "fechas_ficha": [
+    "11 AGO"
+   ],
+   "_fechas_ficha_no_fiables": true,
+   "dia_confirmado_cinemateca": null
+  },
+  "Cayenas libertarias": {
+   "url": "https://www.ficdeh.com/produccion/bogota-underground-hip-hop/",
+   "funciones": [
+    {
+     "sede": "Cinemateca de Bogotá - Cra. 3 # 19-10",
+     "ciudad": "Bogotá",
+     "hora": "17:30",
+     "ingreso": "Boletería en taquilla"
+    },
+    {
+     "sede": "Cinemateca del Caribe - Calle 76 # 57-61",
+     "ciudad": "Barranquilla",
+     "hora": "19:00",
+     "ingreso": "Boletería en taquilla"
+    }
+   ],
+   "fechas_ficha": [
+    "17 AGO"
+   ],
+   "_fechas_ficha_no_fiables": true,
+   "dia_confirmado_cinemateca": null
+  },
+  "Bojayá, la verdad desde adentro": {
+   "url": "https://www.ficdeh.com/produccion/bojaya-la-verdad-desde-adentro/",
+   "funciones": [],
+   "fechas_ficha": [],
+   "_fechas_ficha_no_fiables": true,
+   "dia_confirmado_cinemateca": null
+  },
+  "Carmela y los caminantes": {
+   "url": "https://www.ficdeh.com/produccion/carmela-y-los-caminantes/",
+   "funciones": [
+    {
+     "sede": "Biblioteca Pública Deptal Arnoldo de los Santos Palacios Mosquera - Calle 30, Avenida Aeropuerto, Barrio Los Ángeles (frente al Aeropuerto El Caraño)",
+     "ciudad": "Quibdó",
+     "hora": "16:00",
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "Cinemateca de Bogotá - Cra. 3 # 19-10",
+     "ciudad": "Bogotá",
+     "hora": "20:00",
+     "ingreso": "Boletería en taquilla"
+    }
+   ],
+   "fechas_ficha": [
+    "14 AGO"
+   ],
+   "_fechas_ficha_no_fiables": true,
+   "dia_confirmado_cinemateca": [
+    {
+     "dia": 14,
+     "hora": "20:00",
+     "sala": "Sala 3"
+    }
+   ]
+  },
+  "Cartas a la tierra": {
+   "url": "https://www.ficdeh.com/produccion/cartas-a-la-tierra/",
+   "funciones": [
+    {
+     "sede": "Cinemateca de Bogotá - Cra. 3 # 19-10",
+     "ciudad": "Bogotá",
+     "hora": "19:30",
+     "ingreso": "Boletería en taquilla"
+    }
+   ],
+   "fechas_ficha": [
+    "13 AGO"
+   ],
+   "_fechas_ficha_no_fiables": true,
+   "dia_confirmado_cinemateca": null
+  },
+  "Celeste": {
+   "url": "https://www.ficdeh.com/produccion/celeste/",
+   "funciones": [
+    {
+     "sede": "Universidad del Quindío - Cra. 15 con calle 12 Norte",
+     "ciudad": "Armenia",
+     "hora": "17:00",
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "Fundación Alianza Tecnologica y Desarrollo Educativo -  ALITIC - Cra. 54 # 64-73",
+     "ciudad": "",
+     "hora": "18:00",
+     "ingreso": "Entrada libre"
+    }
+   ],
+   "fechas_ficha": [
+    "15 AGO",
+    "16 AGO",
+    "15 AGO"
+   ],
+   "_fechas_ficha_no_fiables": true,
+   "dia_confirmado_cinemateca": null
+  },
+  "Clemencia": {
+   "url": "https://www.ficdeh.com/produccion/clemencia/",
+   "funciones": [
+    {
+     "sede": "Universidad del Quindío - Cra. 15 con calle 12 Norte",
+     "ciudad": "Armenia",
+     "hora": "17:00",
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "Cinemateca de Bogotá - Cra. 3 # 19-10",
+     "ciudad": "Bogotá",
+     "hora": "19:30",
+     "ingreso": "Boletería en taquilla"
+    }
+   ],
+   "fechas_ficha": [
+    "13 AGO"
+   ],
+   "_fechas_ficha_no_fiables": true,
+   "dia_confirmado_cinemateca": null
+  },
+  "Cobija de recuerdos": {
+   "url": "https://www.ficdeh.com/produccion/cobija-de-recuerdos/",
+   "funciones": [
+    {
+     "sede": "Bulevar del Oriente - Comuna 14, entre la transversal 103 con calle 96 y calle 73 con transversal 73, entre los barrios Alfonso Bonilla Aragón y Marroquín 2",
+     "ciudad": "Cali",
+     "hora": "18:30",
+     "ingreso": "Entrada libre",
+     "_ciudad_por": "heurística"
+    },
+    {
+     "sede": "Centro de Formación de la Cooperación Española - Calle 36 # 2-74, El Centro",
+     "ciudad": "Cartagena",
+     "hora": "10:00",
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "Museo Casa de la Memoria - Cl. 51 #36-66. Parque Bicentenario",
+     "ciudad": "Medellín",
+     "hora": "14:30",
+     "ingreso": "Entrada libre"
+    }
+   ],
+   "fechas_ficha": [
+    "19 AGO",
+    "13 AGO"
+   ],
+   "_fechas_ficha_no_fiables": true,
+   "dia_confirmado_cinemateca": null
+  },
+  "Todos los días": {
+   "url": "https://www.ficdeh.com/produccion/color-piel/",
+   "funciones": [
+    {
+     "sede": "Cinemateca de Tunja - Calle 17 # 15-36",
+     "ciudad": "Tunja",
+     "hora": "16:00",
+     "ingreso": "Boletería en taquilla"
+    },
+    {
+     "sede": "Cinemateca de Bogotá - Cra. 3 # 19-10",
+     "ciudad": "Bogotá",
+     "hora": "17:30",
+     "ingreso": "Boletería en taquilla"
+    },
+    {
+     "sede": "Fundación Alianza Tecnologica y Desarrollo Educativo -  ALITIC - Cra. 54 # 64-73",
+     "ciudad": "",
+     "hora": "11:00",
+     "ingreso": "Entrada libre"
+    }
+   ],
+   "fechas_ficha": [
+    "17 AGO",
+    "16 AGO"
+   ],
+   "_fechas_ficha_no_fiables": true,
+   "dia_confirmado_cinemateca": null
+  },
+  "Cuando la palabra se hace búsqueda": {
+   "url": "https://www.ficdeh.com/produccion/cuando-la-palabra-se-hace-busqueda/",
+   "funciones": [
+    {
+     "sede": "Cinemateca de Tunja - Calle 17 # 15-36",
+     "ciudad": "Tunja",
+     "hora": "16:00",
+     "ingreso": "Boletería en taquilla"
+    },
+    {
+     "sede": "Universidad del Quindío - Cra. 15 con calle 12 Norte",
+     "ciudad": "Armenia",
+     "hora": "10:30",
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "Auditorio Tulio Gómez Estrada, Facultad de Ciencias Jurídicas y Sociales - Av. Santander # 57-58",
+     "ciudad": "Manizales",
+     "hora": "10:30",
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "Biblioteca Pública Deptal Arnoldo de los Santos Palacios Mosquera - Calle 30, Avenida Aeropuerto, Barrio Los Ángeles (frente al Aeropuerto El Caraño)",
+     "ciudad": "Quibdó",
+     "hora": "16:00",
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "Bulevar del Oriente - Comuna 14, entre la transversal 103 con calle 96 y calle 73 con transversal 73, entre los barrios Alfonso Bonilla Aragón y Marroquín 2",
+     "ciudad": "Cali",
+     "hora": "18:30",
+     "ingreso": "Entrada libre",
+     "_ciudad_por": "heurística"
+    },
+    {
+     "sede": "Centro de Formación de la Cooperación Española - Calle 36 # 2-74, El Centro",
+     "ciudad": "Cartagena",
+     "hora": "10:00",
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "Cinemateca de Bogotá - Cra. 3 # 19-10",
+     "ciudad": "Bogotá",
+     "hora": "15:00",
+     "ingreso": "Boletería en taquilla"
+    },
+    {
+     "sede": "Cinemateca del Museo La Tertulia - Cra. 1 # 5-105, Oeste",
+     "ciudad": "Cali",
+     "hora": "17:00",
+     "ingreso": "Boletería en taquilla",
+     "_ciudad_por": "listado de ciudad"
+    },
+    {
+     "sede": "Universidad de Salamanca - Cra. 50 # 79-155",
+     "ciudad": "",
+     "hora": "18:30",
+     "ingreso": "Función privada"
+    },
+    {
+     "sede": "Biblioteca Pública y Parque Cultural Débora Arango - Cl. 37 Sur # 45 B-27, Zona 8, Envigado",
+     "ciudad": "Bogotá",
+     "hora": "17:30",
+     "ingreso": "Entrada libre",
+     "_ciudad_por": "heurística"
+    }
+   ],
+   "fechas_ficha": [
+    "18 AGO",
+    "14 AGO",
+    "14 AGO",
+    "18 AGO",
+    "18 AGO"
+   ],
+   "_fechas_ficha_no_fiables": true,
+   "dia_confirmado_cinemateca": null
+  },
+  "Cuando un río se convierte en mar": {
+   "url": "https://www.ficdeh.com/produccion/cuando-un-rio-se-convierte-en-mar/",
+   "funciones": [
+    {
+     "sede": "Cinemateca de Bogotá - Cra. 3 # 19-10",
+     "ciudad": "Bogotá",
+     "hora": "4:30 - 7:30 p.m",
+     "ingreso": "Boletería en taquilla"
+    },
+    {
+     "sede": "Colombo Americano de Medellín - Cra. 45 #53 - 24, Centro",
+     "ciudad": "Medellín",
+     "hora": "14:30",
+     "ingreso": "Entrada libre"
+    }
+   ],
+   "fechas_ficha": [
+    "14 AGO"
+   ],
+   "_fechas_ficha_no_fiables": true,
+   "dia_confirmado_cinemateca": [
+    {
+     "dia": 14,
+     "hora": "16:30",
+     "sala": "Sala 3"
+    }
+   ]
+  },
+  "Defendamos la vida": {
+   "url": "https://www.ficdeh.com/produccion/defendamos-la-vida/",
+   "funciones": [],
+   "fechas_ficha": [],
+   "_fechas_ficha_no_fiables": true,
+   "dia_confirmado_cinemateca": null
+  },
+  "Del otro lado": {
+   "url": "https://www.ficdeh.com/produccion/del-otro-lado/",
+   "funciones": [
+    {
+     "sede": "Casa de la Juventud Antonio Nariño - Cra. 20 # 19 Sur - 26",
+     "ciudad": "Bogotá",
+     "hora": "16:00",
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "Book Times - Calle 54 # 53-76",
+     "ciudad": "",
+     "hora": "18:00",
+     "ingreso": "Entrada libre"
+    }
+   ],
+   "fechas_ficha": [
+    "14 AGO",
+    "18 AGO"
+   ],
+   "_fechas_ficha_no_fiables": true,
+   "dia_confirmado_cinemateca": null
+  },
+  "Desierto verde": {
+   "url": "https://www.ficdeh.com/produccion/desierto-verde/",
+   "funciones": [
+    {
+     "sede": "Cinemateca de Bogotá - Cra. 3 # 19-10",
+     "ciudad": "Bogotá",
+     "hora": "14:00",
+     "ingreso": "Boletería en taquilla"
+    },
+    {
+     "sede": "Museo de Arte Moderno - MAMB - Edificio World Trade Center (Calle 76 # 54-11, loc B3)",
+     "ciudad": "",
+     "hora": "18:30",
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "La Capilla del Claustro Comfama - Carrera 44 # 48 - 18",
+     "ciudad": "",
+     "hora": "15:00",
+     "ingreso": "Entrada libre"
+    }
+   ],
+   "fechas_ficha": [
+    "15 AGO",
+    "13 AGO"
+   ],
+   "_fechas_ficha_no_fiables": true,
+   "dia_confirmado_cinemateca": [
+    {
+     "dia": 15,
+     "hora": "14:00",
+     "sala": "Sala 3"
+    }
+   ]
+  },
+  "Después del frío": {
+   "url": "https://www.ficdeh.com/produccion/despues-del-frio/",
+   "funciones": [
+    {
+     "sede": "Cinemateca de Bogotá - Cra. 3 # 19-10",
+     "ciudad": "Bogotá",
+     "hora": "18:30",
+     "ingreso": "Boletería en taquilla"
+    }
+   ],
+   "fechas_ficha": [
+    "19 AGO"
+   ],
+   "_fechas_ficha_no_fiables": true,
+   "dia_confirmado_cinemateca": null
+  },
+  "El bosque": {
+   "url": "https://www.ficdeh.com/produccion/el-bosque/",
+   "funciones": [
+    {
+     "sede": "Liceo Taller San Miguel - Km 8 Vía Armenia - Entrada # 8",
+     "ciudad": "Armenia",
+     "hora": "08:00",
+     "ingreso": "Función privada"
+    },
+    {
+     "sede": "Casa de la Juventud Ayelen - Calle 65A Sur # 17C-30",
+     "ciudad": "Bogotá",
+     "hora": "16:00",
+     "ingreso": "Entrada libre",
+     "_ciudad_por": "heurística"
+    },
+    {
+     "sede": "Casa de la Juventud  Chiguazá - Calle 48P BIS D Sur # 5A-43",
+     "ciudad": "Bogotá",
+     "hora": "15:00",
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "Casa de la Juventud  Huitaca - Calle 17A # 118-25",
+     "ciudad": "Bogotá",
+     "hora": "14:00",
+     "ingreso": "Entrada libre",
+     "_ciudad_por": "heurística"
+    },
+    {
+     "sede": "Cinemateca Fontanar del Río - Calle 146 # 138A-99",
+     "ciudad": "Bogotá",
+     "hora": "14:00",
+     "ingreso": "Entrada libre",
+     "_ciudad_por": "heurística"
+    },
+    {
+     "sede": "Cinemateca El Tunal - Calle 56 Sur # 23-62",
+     "ciudad": "Bogotá",
+     "hora": "14:00",
+     "ingreso": "Entrada libre"
+    }
+   ],
+   "fechas_ficha": [
+    "14 AGO"
+   ],
+   "_fechas_ficha_no_fiables": true,
+   "dia_confirmado_cinemateca": null
+  },
+  "El hogar fue sepultado en esa tierra que nunca pudimos encontrar": {
+   "url": "https://www.ficdeh.com/produccion/el-hogar-fue-sepultado-en-esa-tierra-que-nunca-pudimos-encontrar/",
+   "funciones": [
+    {
+     "sede": "Cinemateca de Tunja - Calle 17 # 15-36",
+     "ciudad": "Tunja",
+     "hora": "18:30",
+     "ingreso": "Boletería en taquilla"
+    },
+    {
+     "sede": "Contacto Escuela de Fotografía - Cra. 16 # 9-54, piso 2",
+     "ciudad": "Armenia",
+     "hora": "15:00",
+     "ingreso": "Entrada libre",
+     "_ciudad_por": "listado de ciudad"
+    },
+    {
+     "sede": "Lember Cinéma - Calle 42 # 3-45",
+     "ciudad": "Ibagué",
+     "hora": "19:00",
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "Nueva Acrópolis - Cra. 49 # 66 -02",
+     "ciudad": "Barranquilla",
+     "hora": "18:30",
+     "ingreso": "Entrada libre",
+     "_ciudad_por": "listado de ciudad"
+    }
+   ],
+   "fechas_ficha": [
+    "15 AGO",
+    "18 AGO"
+   ],
+   "_fechas_ficha_no_fiables": true,
+   "dia_confirmado_cinemateca": null
+  },
+  "El juego de la vida": {
+   "url": "https://www.ficdeh.com/produccion/el-juego-de-la-vida/",
+   "funciones": [
+    {
+     "sede": "Cinemateca de Bogotá - Cra. 3 # 19-10",
+     "ciudad": "Bogotá",
+     "hora": "19:00",
+     "ingreso": "Boletería en taquilla"
+    },
+    {
+     "sede": "Función Aire Libre - Malecón",
+     "ciudad": "Quibdó",
+     "hora": "18:00",
+     "ingreso": ""
+    },
+    {
+     "sede": "Cinemateca del Caribe - Calle 76 # 57-61",
+     "ciudad": "Barranquilla",
+     "hora": "17:00",
+     "ingreso": "Boletería en taquilla"
+    },
+    {
+     "sede": "Sala Fundadores",
+     "ciudad": "Manizales",
+     "hora": "19:00",
+     "ingreso": ""
+    },
+    {
+     "sede": "Parque de los Deseos - Carrera 52 # 71 - 11",
+     "ciudad": "Medellín",
+     "hora": "19:00",
+     "ingreso": "Entrada libre",
+     "_ciudad_por": "listado de ciudad"
+    }
+   ],
+   "fechas_ficha": [
+    "17 AGO",
+    "14 AGO"
+   ],
+   "_fechas_ficha_no_fiables": true,
+   "dia_confirmado_cinemateca": [
+    {
+     "dia": 17,
+     "hora": "19:00",
+     "sala": "Sala 2"
+    }
+   ]
+  },
+  "El Paraíso de Ainara": {
+   "url": "https://www.ficdeh.com/produccion/el-paraiso-de-ainara/",
+   "funciones": [
+    {
+     "sede": "Colombo Americano de Pereira - Carrera 6 Nº 23-58",
+     "ciudad": "Pereira",
+     "hora": "10:00",
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "Institución Educativa Jaime Salazar Robledo - Comuna Villa Santana",
+     "ciudad": "Pereira",
+     "hora": "09:00",
+     "ingreso": "Función privada"
+    },
+    {
+     "sede": "Museo Intangible del Confinamiento. Casa de la Cultura Alfonso López - Carrera 7b # 2e-05, barrio Alfonso López",
+     "ciudad": "Pereira",
+     "hora": "14:00",
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "Biblioteca Pública La Victoria - Calle 37 BIS B Sur # 2B",
+     "ciudad": "Bogotá",
+     "hora": "14:00",
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "Casa de las Luciérnagas - Diagonal 73H SUR # 78-38",
+     "ciudad": "Bogotá",
+     "hora": "17:00",
+     "ingreso": "Entrada libre",
+     "_ciudad_por": "heurística"
+    },
+    {
+     "sede": "Centro Cultural del Socorro - Cra. 71 # 26-210, sobre la Avenida Principal del barrio El Socorro",
+     "ciudad": "Cartagena",
+     "hora": "17:30",
+     "ingreso": "Entrada libre",
+     "_ciudad_por": "listado de ciudad"
+    },
+    {
+     "sede": "Cinemateca de Bogotá - Cra. 3 # 19-10",
+     "ciudad": "Bogotá",
+     "hora": "17:30",
+     "ingreso": "Boletería en taquilla"
+    },
+    {
+     "sede": "Cinemateca Fontanar del Río - Calle 146 # 138A-99",
+     "ciudad": "Bogotá",
+     "hora": "14:00",
+     "ingreso": "Entrada libre",
+     "_ciudad_por": "heurística"
+    },
+    {
+     "sede": "Cinemateca El Tunal - Calle 56 Sur # 23-62",
+     "ciudad": "Bogotá",
+     "hora": "14:00",
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "Institución Educativa Bienestar Social - Cra. 47b # 45-47, Mariano Ramos",
+     "ciudad": "Cali",
+     "hora": "08:30",
+     "ingreso": "Función privada",
+     "_ciudad_por": "listado de ciudad"
+    },
+    {
+     "sede": "Parque Arqueológico de Usme - Calle 136B Sur # 3A-48",
+     "ciudad": "Bogotá",
+     "hora": "10:00",
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "Colegio Cruzada Social - Calle 46 # 13C -57, barrio Cevillar",
+     "ciudad": "Barranquilla",
+     "hora": "10:30",
+     "ingreso": "Función privada"
+    },
+    {
+     "sede": "Centro Cultural Banco de la República - Cl. 50 #50-21 Piso 3",
+     "ciudad": "Medellín",
+     "hora": "10:00",
+     "ingreso": "Entrada libre"
+    }
+   ],
+   "fechas_ficha": [
+    "16 AGO",
+    "12 AGO",
+    "16 AGO"
+   ],
+   "_fechas_ficha_no_fiables": true,
+   "dia_confirmado_cinemateca": null
+  },
+  "Shelter": {
+   "url": "https://www.ficdeh.com/produccion/el-puente-de-los-suspiros/",
+   "funciones": [
+    {
+     "sede": "Fundación Alianza Tecnologica y Desarrollo Educativo -  ALITIC - Cra. 54 # 64-73",
+     "ciudad": "",
+     "hora": "11:00",
+     "ingreso": "Entrada libre"
+    }
+   ],
+   "fechas_ficha": [
+    "18 AGO"
+   ],
+   "_fechas_ficha_no_fiables": true,
+   "dia_confirmado_cinemateca": null
+  },
+  "El silencio de la tierra": {
+   "url": "https://www.ficdeh.com/produccion/el-silencio-de-la-tierra/",
+   "funciones": [
+    {
+     "sede": "Auditorio Centro Cultural Universitario Rogelio Salmona - Cra. 28D entre Cl. 66 #y 67",
+     "ciudad": "Bogotá",
+     "hora": "17:00",
+     "ingreso": "Entrada libre",
+     "_ciudad_por": "heurística"
+    },
+    {
+     "sede": "Cinemateca de Bogotá - Cra. 3 # 19-10",
+     "ciudad": "Bogotá",
+     "hora": "14:30",
+     "ingreso": "Boletería en taquilla"
+    },
+    {
+     "sede": "Universidad Americana - Calle 72 # 41C-64",
+     "ciudad": "",
+     "hora": "14:00",
+     "ingreso": "Función privada"
+    }
+   ],
+   "fechas_ficha": [
+    "13 AGO",
+    "13 AGO"
+   ],
+   "_fechas_ficha_no_fiables": true,
+   "dia_confirmado_cinemateca": [
+    {
+     "dia": 13,
+     "hora": "14:30",
+     "sala": "Sala 2"
+    }
+   ]
+  },
+  "El silencio de los palafitos": {
+   "url": "https://www.ficdeh.com/produccion/el-silencio-de-los-palafitos/",
+   "funciones": [
+    {
+     "sede": "Cine Club Alef - Casa Hoja - Calle 12 bis # 16-18, Av. Circunvalar",
+     "ciudad": "Pereira",
+     "hora": "19:00",
+     "ingreso": "Entrada libre",
+     "_ciudad_por": "listado de ciudad"
+    },
+    {
+     "sede": "Biblioteca Pública Carlos E. Restrepo - Diagonal 21A Sur # 19-54 sur",
+     "ciudad": "Bogotá",
+     "hora": "16:30",
+     "ingreso": "Entrada libre",
+     "_ciudad_por": "heurística"
+    },
+    {
+     "sede": "Biblioteca Pública La Marichuela - Diagonal 76B Sur # 1C-40",
+     "ciudad": "Bogotá",
+     "hora": "16:00",
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "Centro de Formación de la Cooperación Española - Calle 36 # 2-74, El Centro",
+     "ciudad": "Cartagena",
+     "hora": "18:30",
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "Cinema Local - Calle 74 # 20 B -19",
+     "ciudad": "Cali",
+     "hora": "17:00",
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "Cinemateca de Bogotá - Cra. 3 # 19-10",
+     "ciudad": "Bogotá",
+     "hora": "19:30",
+     "ingreso": "Boletería en taquilla"
+    },
+    {
+     "sede": "Librería Bagatá - Cra. 7 #27-3 (frente al Colegio Carrasquilla)",
+     "ciudad": "Quibdó",
+     "hora": "15:00",
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "CasArte3962 - Calle 73B # 39-62",
+     "ciudad": "",
+     "hora": "18:30",
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "La Pascasia - Cl. 47 #43 88. Centro",
+     "ciudad": "Medellín",
+     "hora": "18:30",
+     "ingreso": "Entrada libre"
+    }
+   ],
+   "fechas_ficha": [
+    "15 AGO",
+    "18 AGO",
+    "15 AGO",
+    "12 AGO"
+   ],
+   "_fechas_ficha_no_fiables": true,
+   "dia_confirmado_cinemateca": [
+    {
+     "dia": 16,
+     "hora": "19:30",
+     "sala": "Sala Capital"
+    }
+   ]
+  },
+  "El valor de la palabra": {
+   "url": "https://www.ficdeh.com/produccion/el-valor-de-la-palabra/",
+   "funciones": [
+    {
+     "sede": "Centro Integral de Justicia Campo Verde - Calle 85 Sur # 94-75",
+     "ciudad": "Bogotá",
+     "hora": "14:00",
+     "ingreso": "Entrada libre",
+     "_ciudad_por": "heurística"
+    },
+    {
+     "sede": "Cinema Local - Calle 74 # 20 B -19",
+     "ciudad": "Cali",
+     "hora": "18:30",
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "Cinema Local - Calle 74 # 20 B -19",
+     "ciudad": "Cali",
+     "hora": "18:30",
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "Servicio FORJAR Restaurativo Ciudad Bolívar - Cra. 44 # 58C-90 Sur",
+     "ciudad": "Bogotá",
+     "hora": "08:00",
+     "ingreso": "Función privada"
+    },
+    {
+     "sede": "Colombo Americano de Medellín - Cra. 45 #53 - 24, Centro",
+     "ciudad": "Medellín",
+     "hora": "15:00",
+     "ingreso": "Entrada libre"
+    }
+   ],
+   "fechas_ficha": [
+    "14 AGO"
+   ],
+   "_fechas_ficha_no_fiables": true,
+   "dia_confirmado_cinemateca": null
+  },
+  "El verano de Jahia": {
+   "url": "https://www.ficdeh.com/produccion/el-verano-de-jahia-jahias-summer/",
+   "funciones": [
+    {
+     "sede": "Institución Educativa Isaac Rodríguez - Barrio Reposo #2",
+     "ciudad": "",
+     "hora": "08:00",
+     "ingreso": "Función privada"
+    },
+    {
+     "sede": "La Capilla del Claustro Comfama - Carrera 44 # 48 - 18",
+     "ciudad": "",
+     "hora": "17:00",
+     "ingreso": "Entrada libre"
+    }
+   ],
+   "fechas_ficha": [
+    "14 AGO"
+   ],
+   "_fechas_ficha_no_fiables": true,
+   "dia_confirmado_cinemateca": null
+  },
+  "Espeletia BK: Frailejón desarticulado": {
+   "url": "https://www.ficdeh.com/produccion/espeletia-bk-frailejon-desarticulado/",
+   "funciones": [
+    {
+     "sede": "Centro de Formación de la Cooperación Española - Calle 36 # 2-74, El Centro",
+     "ciudad": "Cartagena",
+     "hora": "10:00",
+     "ingreso": "Entrada libre"
+    }
+   ],
+   "fechas_ficha": [
+    "13 AGO"
+   ],
+   "_fechas_ficha_no_fiables": true,
+   "dia_confirmado_cinemateca": null
+  },
+  "Estamos en el mapa": {
+   "url": "https://www.ficdeh.com/produccion/estamos-en-el-mapa/",
+   "funciones": [],
+   "fechas_ficha": [],
+   "_fechas_ficha_no_fiables": true,
+   "dia_confirmado_cinemateca": null
+  },
+  "Eva": {
+   "url": "https://www.ficdeh.com/produccion/eva/",
+   "funciones": [
+    {
+     "sede": "Cámara de Comercio de Pereira - Carrera 8a # 23-09, piso 3",
+     "ciudad": "Pereira",
+     "hora": "19:00",
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "Cinemateca de Bogotá - Cra. 3 # 19-10",
+     "ciudad": "Bogotá",
+     "hora": "17:30",
+     "ingreso": "Boletería en taquilla"
+    }
+   ],
+   "fechas_ficha": [
+    "13 AGO"
+   ],
+   "_fechas_ficha_no_fiables": true,
+   "dia_confirmado_cinemateca": [
+    {
+     "dia": 15,
+     "hora": "17:30",
+     "sala": "Sala Capital"
+    }
+   ]
+  },
+  "Feito Pipa": {
+   "url": "https://www.ficdeh.com/produccion/feito-pipa/",
+   "funciones": [
+    {
+     "sede": "Cinema Local - Calle 74 # 20 B -19",
+     "ciudad": "Cali",
+     "hora": "18:30",
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "Cinema Local - Calle 74 # 20 B -19",
+     "ciudad": "Cali",
+     "hora": "18:30",
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "Cinemateca de Bogotá - Cra. 3 # 19-10",
+     "ciudad": "Bogotá",
+     "hora": "11:00",
+     "ingreso": "Boletería en taquilla"
+    },
+    {
+     "sede": "Cineprox - Dg. 75B #2A-120Rotonda Comercial Las Américas",
+     "ciudad": "Medellín",
+     "hora": "18:30",
+     "ingreso": "Entrada libre",
+     "_ciudad_por": "listado de ciudad"
+    }
+   ],
+   "fechas_ficha": [
+    "19 AGO"
+   ],
+   "_fechas_ficha_no_fiables": true,
+   "dia_confirmado_cinemateca": null
+  },
+  "Floresmiro": {
+   "url": "https://www.ficdeh.com/produccion/floresmiro/",
+   "funciones": [
+    {
+     "sede": "Biblioteca Pública Gabriel García Márquez - Calle 48B SUR # 21-13",
+     "ciudad": "Bogotá",
+     "hora": "15:00",
+     "ingreso": "Entrada libre",
+     "_ciudad_por": "heurística"
+    },
+    {
+     "sede": "Casa Cultural y Comunitaria Casa Sin Raza - Diagonal 73B Sur # 82F-34",
+     "ciudad": "Bogotá",
+     "hora": "15:00",
+     "ingreso": "Entrada libre",
+     "_ciudad_por": "heurística"
+    },
+    {
+     "sede": "Cinemateca de Bogotá - Cra. 3 # 19-10",
+     "ciudad": "Bogotá",
+     "hora": "16:00",
+     "ingreso": "Boletería en taquilla"
+    }
+   ],
+   "fechas_ficha": [
+    "19 AGO"
+   ],
+   "_fechas_ficha_no_fiables": true,
+   "dia_confirmado_cinemateca": [
+    {
+     "dia": 19,
+     "hora": "16:00",
+     "sala": "Sala Capital"
+    }
+   ]
+  },
+  "Apotnojushi La Casa del viento": {
+   "url": "https://www.ficdeh.com/produccion/guerreras/",
+   "funciones": [
+    {
+     "sede": "Biblioteca Pública Deptal Arnoldo de los Santos Palacios Mosquera - Calle 30, Avenida Aeropuerto, Barrio Los Ángeles (frente al Aeropuerto El Caraño)",
+     "ciudad": "Quibdó",
+     "hora": "15:00",
+     "ingreso": "Entrada libre"
+    }
+   ],
+   "fechas_ficha": [
+    "14 AGO",
+    "14 AGO"
+   ],
+   "_fechas_ficha_no_fiables": true,
+   "dia_confirmado_cinemateca": null
+  },
+  "Herencia: Los cantos de la tierra": {
+   "url": "https://www.ficdeh.com/produccion/herencia-los-cantos-de-la-tierra/",
+   "funciones": [
+    {
+     "sede": "Shuffle live music - CC El Lago. Calle 24 #7-17, local 303",
+     "ciudad": "Pereira",
+     "hora": "19:00",
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "Biblioteca Pública Francisco José de Caldas - Cra. 92 # 146 C - 24",
+     "ciudad": "Bogotá",
+     "hora": "16:00",
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "Biblioteca Pública Las Ferias - Cra. 69J # 73-29",
+     "ciudad": "Bogotá",
+     "hora": "14:00",
+     "ingreso": "Entrada libre",
+     "_ciudad_por": "heurística"
+    },
+    {
+     "sede": "Biblioteca Pública Virgilio Barco - Av. La Esmeralda # 57-60",
+     "ciudad": "Bogotá",
+     "hora": "15:00",
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "Centro Compartir Pilona 10 - Calle 66 BIS Sur # 18T-45",
+     "ciudad": "Bogotá",
+     "hora": "19:00",
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "Parque Arqueológico de Usme - Calle 136B Sur # 3A-48",
+     "ciudad": "Bogotá",
+     "hora": "14:00",
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "Caas Morón - Cra. 53  # 48-134",
+     "ciudad": "",
+     "hora": "18:30",
+     "ingreso": "Entrada libre"
+    }
+   ],
+   "fechas_ficha": [
+    "18 AGO",
+    "14 AGO"
+   ],
+   "_fechas_ficha_no_fiables": true,
+   "dia_confirmado_cinemateca": null
+  },
+  "Akababuru: Expresión de asombro": {
+   "url": "https://www.ficdeh.com/produccion/herminda/",
+   "funciones": [
+    {
+     "sede": "Colombo Americano de Pereira - Carrera 6 Nº 23-58",
+     "ciudad": "Pereira",
+     "hora": "10:00",
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "Institución Educativa Jaime Salazar Robledo - Comuna Villa Santana",
+     "ciudad": "Pereira",
+     "hora": "09:00",
+     "ingreso": "Función privada"
+    },
+    {
+     "sede": "Cinemateca de Tunja - Calle 17 # 15-36",
+     "ciudad": "Tunja",
+     "hora": "16:00",
+     "ingreso": "Boletería en taquilla"
+    },
+    {
+     "sede": "Museo Intangible del Confinamiento. Casa de la Cultura Alfonso López - Carrera 7b # 2e-05, barrio Alfonso López",
+     "ciudad": "Pereira",
+     "hora": "14:00",
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "Casa de las Luciérnagas - Diagonal 73H SUR # 78-38",
+     "ciudad": "Bogotá",
+     "hora": "17:00",
+     "ingreso": "Entrada libre",
+     "_ciudad_por": "heurística"
+    },
+    {
+     "sede": "Cinemateca Fontanar del Río - Calle 146 # 138A-99",
+     "ciudad": "Bogotá",
+     "hora": "14:00",
+     "ingreso": "Entrada libre",
+     "_ciudad_por": "heurística"
+    },
+    {
+     "sede": "Cinemateca El Tunal - Calle 56 Sur # 23-62",
+     "ciudad": "Bogotá",
+     "hora": "14:00",
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "Institución Educativa Bienestar Social - Cra. 47b # 45-47, Mariano Ramos",
+     "ciudad": "Cali",
+     "hora": "08:30",
+     "ingreso": "Función privada",
+     "_ciudad_por": "listado de ciudad"
+    },
+    {
+     "sede": "Colegio Cruzada Social - Calle 46 # 13C -57, barrio Cevillar",
+     "ciudad": "Barranquilla",
+     "hora": "10:30",
+     "ingreso": "Función privada"
+    },
+    {
+     "sede": "Centro Cultural Banco de la República - Cl. 50 #50-21 Piso 3",
+     "ciudad": "Medellín",
+     "hora": "10:00",
+     "ingreso": "Entrada libre"
+    }
+   ],
+   "fechas_ficha": [
+    "16 AGO",
+    "12 AGO"
+   ],
+   "_fechas_ficha_no_fiables": true,
+   "dia_confirmado_cinemateca": null
+  },
+  "Héroes del silencio": {
+   "url": "https://www.ficdeh.com/produccion/heroes-del-silencio/",
+   "funciones": [
+    {
+     "sede": "Colombo Americano de Pereira - Carrera 6 Nº 23-58",
+     "ciudad": "Pereira",
+     "hora": "10:00",
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "Institución Educativa Jaime Salazar Robledo - Comuna Villa Santana",
+     "ciudad": "Pereira",
+     "hora": "09:00",
+     "ingreso": "Función privada"
+    },
+    {
+     "sede": "Fundación Malabareando las Calles - Carrera 8 #15 - 09",
+     "ciudad": "Pereira",
+     "hora": "14:00",
+     "ingreso": "Entrada libre",
+     "_ciudad_por": "listado de ciudad"
+    },
+    {
+     "sede": "Universidad del Quindío - Cra. 15 con calle 12 Norte",
+     "ciudad": "Armenia",
+     "hora": "17:00",
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "Museo Intangible del Confinamiento. Casa de la Cultura Alfonso López - Carrera 7b # 2e-05, barrio Alfonso López",
+     "ciudad": "Pereira",
+     "hora": "14:00",
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "Casa de las Luciérnagas - Diagonal 73H SUR # 78-38",
+     "ciudad": "Bogotá",
+     "hora": "17:00",
+     "ingreso": "Entrada libre",
+     "_ciudad_por": "heurística"
+    },
+    {
+     "sede": "Centro Cultural del Socorro - Cra. 71 # 26-210, sobre la Avenida Principal del barrio El Socorro",
+     "ciudad": "Cartagena",
+     "hora": "17:30",
+     "ingreso": "Entrada libre",
+     "_ciudad_por": "listado de ciudad"
+    },
+    {
+     "sede": "Cinemateca Fontanar del Río - Calle 146 # 138A-99",
+     "ciudad": "Bogotá",
+     "hora": "14:00",
+     "ingreso": "Entrada libre",
+     "_ciudad_por": "heurística"
+    },
+    {
+     "sede": "Cinemateca El Tunal - Calle 56 Sur # 23-62",
+     "ciudad": "Bogotá",
+     "hora": "14:00",
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "Institución Educativa Bienestar Social - Cra. 47b # 45-47, Mariano Ramos",
+     "ciudad": "Cali",
+     "hora": "08:30",
+     "ingreso": "Función privada",
+     "_ciudad_por": "listado de ciudad"
+    },
+    {
+     "sede": "Centro Cultural Banco de la República - Cl. 50 #50-21 Piso 3",
+     "ciudad": "Medellín",
+     "hora": "10:00",
+     "ingreso": "Entrada libre"
+    }
+   ],
+   "fechas_ficha": [
+    "16 AGO",
+    "12 AGO",
+    "15 AGO"
+   ],
+   "_fechas_ficha_no_fiables": true,
+   "dia_confirmado_cinemateca": null
+  },
+  "Hija del volcán": {
+   "url": "https://www.ficdeh.com/produccion/hija-del-volcan/",
+   "funciones": [
+    {
+     "sede": "Auditorio Centro Cultural Universitario Rogelio Salmona - Cra. 28D entre Cl. 66 #y 67",
+     "ciudad": "Bogotá",
+     "hora": "17:00",
+     "ingreso": "Entrada libre",
+     "_ciudad_por": "heurística"
+    },
+    {
+     "sede": "Cinema Local - Calle 74 # 20 B -19",
+     "ciudad": "Cali",
+     "hora": "18:30",
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "Cinema Local - Calle 74 # 20 B -19",
+     "ciudad": "Cali",
+     "hora": "19:00",
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "Comfama Cineclub Bello Sede Centro - Cra. 49 #46-57",
+     "ciudad": "Medellín",
+     "hora": "16:00",
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "Cineprox - Dg. 75B #2A-120Rotonda Comercial Las Américas",
+     "ciudad": "Medellín",
+     "hora": "14:00",
+     "ingreso": "Entrada libre",
+     "_ciudad_por": "listado de ciudad"
+    }
+   ],
+   "fechas_ficha": [
+    "14 AGO",
+    "14 AGO",
+    "18 AGO"
+   ],
+   "_fechas_ficha_no_fiables": true,
+   "dia_confirmado_cinemateca": null
+  },
+  "Honorablé": {
+   "url": "https://www.ficdeh.com/produccion/honorable/",
+   "funciones": [
+    {
+     "sede": "Casa de la Juventud Diego Felipe Becerra - Cra. 125 # 132C-82",
+     "ciudad": "Bogotá",
+     "hora": "14:00",
+     "ingreso": "Entrada libre",
+     "_ciudad_por": "heurística"
+    },
+    {
+     "sede": "Cinemateca del Museo La Tertulia - Cra. 1 # 5-105, Oeste",
+     "ciudad": "Cali",
+     "hora": "17:00",
+     "ingreso": "Boletería en taquilla",
+     "_ciudad_por": "listado de ciudad"
+    },
+    {
+     "sede": "Maloka Cultural - Cra. 46 # 79-18",
+     "ciudad": "Barranquilla",
+     "hora": "18:30",
+     "ingreso": "Entrada libre",
+     "_ciudad_por": "listado de ciudad"
+    }
+   ],
+   "fechas_ficha": [
+    "14 AGO",
+    "19 AGO"
+   ],
+   "_fechas_ficha_no_fiables": true,
+   "dia_confirmado_cinemateca": null
+  },
+  "Indiamenta": {
+   "url": "https://www.ficdeh.com/produccion/indiamenta/",
+   "funciones": [
+    {
+     "sede": "Biblioteca Pública Usaquén Servitá - Calle 165 # 7-52",
+     "ciudad": "Bogotá",
+     "hora": "15:00",
+     "ingreso": "Entrada libre",
+     "_ciudad_por": "heurística"
+    }
+   ],
+   "fechas_ficha": [
+    "15 AGO",
+    "16 AGO"
+   ],
+   "_fechas_ficha_no_fiables": true,
+   "dia_confirmado_cinemateca": null
+  },
+  "Juntas por la paz del Chocó": {
+   "url": "https://www.ficdeh.com/produccion/juntas-por-la-paz-del-choco/",
+   "funciones": [
+    {
+     "sede": "Librería Bagatá - Cra. 7 #27-3 (frente al Colegio Carrasquilla)",
+     "ciudad": "Quibdó",
+     "hora": "15:00",
+     "ingreso": "Entrada libre"
+    }
+   ],
+   "fechas_ficha": [
+    "15 AGO",
+    "16 AGO"
+   ],
+   "_fechas_ficha_no_fiables": true,
+   "dia_confirmado_cinemateca": null
+  },
+  "Kaugsankamalla: mientras vivamos": {
+   "url": "https://www.ficdeh.com/produccion/kaugsankamalla-mientras-vivamos/",
+   "funciones": [
+    {
+     "sede": "Casa Cultural El Bordillo - Cra. 44  # 87-44",
+     "ciudad": "Barranquilla",
+     "hora": "19:30",
+     "ingreso": "Entrada libre",
+     "_ciudad_por": "listado de ciudad"
+    }
+   ],
+   "fechas_ficha": [
+    "14 AGO"
+   ],
+   "_fechas_ficha_no_fiables": true,
+   "dia_confirmado_cinemateca": null
+  },
+  "La Bonga": {
+   "url": "https://www.ficdeh.com/produccion/la-bonga/",
+   "funciones": [
+    {
+     "sede": "Cinemateca de Bogotá - Cra. 3 # 19-10",
+     "ciudad": "Bogotá",
+     "hora": "20:00",
+     "ingreso": "Boletería en taquilla"
+    },
+    {
+     "sede": "Cinemateca del Caribe - Calle 76 # 57-61",
+     "ciudad": "Barranquilla",
+     "hora": "15:00",
+     "ingreso": "Boletería en taquilla"
+    },
+    {
+     "sede": "Centro Comunitario Nueva Colombia / Biblioteca Pa To Ma Suto - Diagonal 75A  # 15D-67",
+     "ciudad": "",
+     "hora": "15:30",
+     "ingreso": "Entrada libre"
+    }
+   ],
+   "fechas_ficha": [
+    "15 AGO"
+   ],
+   "_fechas_ficha_no_fiables": true,
+   "dia_confirmado_cinemateca": [
+    {
+     "dia": 15,
+     "hora": "20:00",
+     "sala": "Sala Capital"
+    }
+   ]
+  },
+  "La gran hazaña": {
+   "url": "https://www.ficdeh.com/produccion/la-gran-hazana/",
+   "funciones": [
+    {
+     "sede": "Colombo Americano de Pereira - Carrera 6 Nº 23-58",
+     "ciudad": "Pereira",
+     "hora": "10:00",
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "Institución Educativa Jaime Salazar Robledo - Comuna Villa Santana",
+     "ciudad": "Pereira",
+     "hora": "09:00",
+     "ingreso": "Función privada"
+    },
+    {
+     "sede": "Cinemateca de Tunja - Calle 17 # 15-36",
+     "ciudad": "Tunja",
+     "hora": "16:00",
+     "ingreso": "Boletería en taquilla"
+    },
+    {
+     "sede": "Fundación Malabareando las Calles - Carrera 8 #15 - 09",
+     "ciudad": "Pereira",
+     "hora": "14:00",
+     "ingreso": "Entrada libre",
+     "_ciudad_por": "listado de ciudad"
+    },
+    {
+     "sede": "Museo Intangible del Confinamiento. Casa de la Cultura Alfonso López - Carrera 7b # 2e-05, barrio Alfonso López",
+     "ciudad": "Pereira",
+     "hora": "14:00",
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "Biblioteca Pública La Victoria - Calle 37 BIS B Sur # 2B",
+     "ciudad": "Bogotá",
+     "hora": "14:00",
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "Casa de las Luciérnagas - Diagonal 73H SUR # 78-38",
+     "ciudad": "Bogotá",
+     "hora": "17:00",
+     "ingreso": "Entrada libre",
+     "_ciudad_por": "heurística"
+    },
+    {
+     "sede": "Cinemateca Fontanar del Río - Calle 146 # 138A-99",
+     "ciudad": "Bogotá",
+     "hora": "14:00",
+     "ingreso": "Entrada libre",
+     "_ciudad_por": "heurística"
+    },
+    {
+     "sede": "Cinemateca El Tunal - Calle 56 Sur # 23-62",
+     "ciudad": "Bogotá",
+     "hora": "14:00",
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "Institución Educativa Bienestar Social - Cra. 47b # 45-47, Mariano Ramos",
+     "ciudad": "Cali",
+     "hora": "08:30",
+     "ingreso": "Función privada",
+     "_ciudad_por": "listado de ciudad"
+    },
+    {
+     "sede": "Colegio Cruzada Social - Calle 46 # 13C -57, barrio Cevillar",
+     "ciudad": "Barranquilla",
+     "hora": "10:30",
+     "ingreso": "Función privada"
+    },
+    {
+     "sede": "Centro Cultural Banco de la República - Cl. 50 #50-21 Piso 3",
+     "ciudad": "Medellín",
+     "hora": "10:00",
+     "ingreso": "Entrada libre"
+    }
+   ],
+   "fechas_ficha": [
+    "16 AGO",
+    "15 AGO",
+    "18 AGO"
+   ],
+   "_fechas_ficha_no_fiables": true,
+   "dia_confirmado_cinemateca": null
+  },
+  "La hija cóndor": {
+   "url": "https://www.ficdeh.com/produccion/la-hija-condor/",
+   "funciones": [
+    {
+     "sede": "Cinemateca del Museo La Tertulia - Cra. 1 # 5-105, Oeste",
+     "ciudad": "Cali",
+     "hora": "19:00",
+     "ingreso": "Boletería en taquilla",
+     "_ciudad_por": "listado de ciudad"
+    },
+    {
+     "sede": "Colombo Americano de Medellín - Cra. 45 #53 - 24, Centro",
+     "ciudad": "Medellín",
+     "hora": "16:30",
+     "ingreso": "Entrada libre"
+    }
+   ],
+   "fechas_ficha": [
+    "16 AGO"
+   ],
+   "_fechas_ficha_no_fiables": true,
+   "dia_confirmado_cinemateca": null
+  },
+  "La independencia": {
+   "url": "https://www.ficdeh.com/produccion/la-independencia/",
+   "funciones": [
+    {
+     "sede": "Biblioteca Pública La Victoria - Calle 37 BIS B Sur # 2B",
+     "ciudad": "Bogotá",
+     "hora": "14:00",
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "CEFE Cometas - Calle 127 A # 87",
+     "ciudad": "Bogotá",
+     "hora": "11:00",
+     "ingreso": "Entrada libre",
+     "_ciudad_por": "heurística"
+    },
+    {
+     "sede": "Cinemateca de Bogotá - Cra. 3 # 19-10",
+     "ciudad": "Bogotá",
+     "hora": "17:30",
+     "ingreso": "Boletería en taquilla"
+    }
+   ],
+   "fechas_ficha": [],
+   "_fechas_ficha_no_fiables": true,
+   "dia_confirmado_cinemateca": null
+  },
+  "La luz por primera vez": {
+   "url": "https://www.ficdeh.com/produccion/la-luz-por-primera-vez/",
+   "funciones": [
+    {
+     "sede": "Cinemateca de Tunja - Calle 17 # 15-36",
+     "ciudad": "Tunja",
+     "hora": "16:00",
+     "ingreso": "Boletería en taquilla"
+    },
+    {
+     "sede": "Casa de la Juventud Chapinero - Calle 65A # 1-40",
+     "ciudad": "Bogotá",
+     "hora": "17:00",
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "Casa de la Juventud  El Cacma - Calle 24 # 27A-31",
+     "ciudad": "Bogotá",
+     "hora": "15:30",
+     "ingreso": "Entrada libre",
+     "_ciudad_por": "heurística"
+    },
+    {
+     "sede": "Casa de la Juventud Nacho Sánchez - Cra. 3 Este # 9-58",
+     "ciudad": "Bogotá",
+     "hora": "15:00",
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "Cinemateca de Bogotá - Cra. 3 # 19-10",
+     "ciudad": "Bogotá",
+     "hora": "13:00",
+     "ingreso": "Boletería en taquilla"
+    },
+    {
+     "sede": "CasArte3962 - Calle 73B # 39-62",
+     "ciudad": "",
+     "hora": "18:30",
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "La Capilla del Claustro Comfama - Carrera 44 # 48 - 18",
+     "ciudad": "",
+     "hora": "18:30",
+     "ingreso": "Entrada libre"
+    }
+   ],
+   "fechas_ficha": [
+    "14 AGO",
+    "15 AGO"
+   ],
+   "_fechas_ficha_no_fiables": true,
+   "dia_confirmado_cinemateca": [
+    {
+     "dia": 19,
+     "hora": "13:00",
+     "sala": "Sala 2"
+    }
+   ]
+  },
+  "La luz que nos queda": {
+   "url": "https://www.ficdeh.com/produccion/la-luz-que-nos-queda/",
+   "funciones": [
+    {
+     "sede": "La Trocha, La Casa de la Paz - Cra. 13 # 36-37",
+     "ciudad": "Bogotá",
+     "hora": "17:00",
+     "ingreso": "Entrada libre",
+     "_ciudad_por": "heurística"
+    }
+   ],
+   "fechas_ficha": [
+    "15 AGO",
+    "15 AGO"
+   ],
+   "_fechas_ficha_no_fiables": true,
+   "dia_confirmado_cinemateca": null
+  },
+  "La Raya": {
+   "url": "https://www.ficdeh.com/produccion/la-raya/",
+   "funciones": [
+    {
+     "sede": "Cinemateca de Tunja - Calle 17 # 15-36",
+     "ciudad": "Tunja",
+     "hora": "16:00",
+     "ingreso": "Boletería en taquilla"
+    },
+    {
+     "sede": "Cárcel La 40 Establecimiento Penitenciario y Carcelario de Pereira INPEC - Carrera 8 # 41-97",
+     "ciudad": "Pereira",
+     "hora": "09:00",
+     "ingreso": "Función privada"
+    },
+    {
+     "sede": "Cine Club La Florida - Corregimiento La Florida",
+     "ciudad": "Pereira",
+     "hora": "19:00",
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "Casa B - Cra. 2 BIS # 6D-30",
+     "ciudad": "Bogotá",
+     "hora": "18:00",
+     "ingreso": "Entrada libre",
+     "_ciudad_por": "heurística"
+    },
+    {
+     "sede": "Casa de las Luciérnagas - Diagonal 73H SUR # 78-38",
+     "ciudad": "Bogotá",
+     "hora": "16:00",
+     "ingreso": "Entrada libre",
+     "_ciudad_por": "heurística"
+    },
+    {
+     "sede": "Cinemateca de Bogotá - Cra. 3 # 19-10",
+     "ciudad": "Bogotá",
+     "hora": "16:30",
+     "ingreso": "Boletería en taquilla"
+    },
+    {
+     "sede": "Cinemateca Fontanar del Río - Calle 146 # 138A-99",
+     "ciudad": "Bogotá",
+     "hora": "14:00",
+     "ingreso": "Entrada libre",
+     "_ciudad_por": "heurística"
+    },
+    {
+     "sede": "Cinemateca El Tunal - Calle 56 Sur # 23-62",
+     "ciudad": "Bogotá",
+     "hora": "14:00",
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "Institución Educativa Antonia Santos",
+     "ciudad": "",
+     "hora": "08:30",
+     "ingreso": "Función privada"
+    },
+    {
+     "sede": "Institución Educativa Cristóbal Colón - Cra. 47a # 44-32, Mariano Ramos",
+     "ciudad": "Cali",
+     "hora": "08:30",
+     "ingreso": "Función privada"
+    },
+    {
+     "sede": "Teatro El Ensueño - Transversal 70D # 60-90",
+     "ciudad": "Bogotá",
+     "hora": "11:00",
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "Fundación Puerto Colombia - Estación Ferrocarril de Bolívar, Cra. 4 # 2-45",
+     "ciudad": "Barranquilla",
+     "hora": "18:00",
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "Festival de Cine de La Ceja",
+     "ciudad": "Medellín",
+     "hora": "18:30",
+     "ingreso": "",
+     "_ciudad_por": "listado de ciudad"
+    }
+   ],
+   "fechas_ficha": [
+    "13 AGO",
+    "18 AGO",
+    "19 AGO"
+   ],
+   "_fechas_ficha_no_fiables": true,
+   "dia_confirmado_cinemateca": [
+    {
+     "dia": 13,
+     "hora": "16:30",
+     "sala": "Sala Capital"
+    }
+   ]
+  },
+  "Los bibliotecarios": {
+   "url": "https://www.ficdeh.com/produccion/los-bibliotecarios-the-librarians/",
+   "funciones": [],
+   "fechas_ficha": [
+    "24 AGO"
+   ],
+   "_fechas_ficha_no_fiables": true,
+   "dia_confirmado_cinemateca": null
+  },
+  "Los de abajo": {
+   "url": "https://www.ficdeh.com/produccion/los-de-abajo/",
+   "funciones": [],
+   "fechas_ficha": [],
+   "_fechas_ficha_no_fiables": true,
+   "dia_confirmado_cinemateca": null
+  },
+  "Los pliegues de la falda": {
+   "url": "https://www.ficdeh.com/produccion/los-pliegues-de-la-falda/",
+   "funciones": [
+    {
+     "sede": "Biblioteca Pública CEFE Fontanar Del Río - Calle 146 # 138A-99",
+     "ciudad": "Bogotá",
+     "hora": "11:00",
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "Biblioteca Pública Julio Mario Santodomingo - Calle 170 # 67-51",
+     "ciudad": "Bogotá",
+     "hora": "16:00",
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "Cinemateca de Bogotá - Cra. 3 # 19-10",
+     "ciudad": "Bogotá",
+     "hora": "16:00",
+     "ingreso": "Boletería en taquilla"
+    }
+   ],
+   "fechas_ficha": [],
+   "_fechas_ficha_no_fiables": true,
+   "dia_confirmado_cinemateca": null
+  },
+  "Los reyes del mundo": {
+   "url": "https://www.ficdeh.com/produccion/los-reyes-del-mundo/",
+   "funciones": [
+    {
+     "sede": "Plazoleta del Samán - Cra. 5 # 6-05, San Pedro",
+     "ciudad": "Cali",
+     "hora": "18:30",
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "Colombo Americano de Medellín - Cra. 45 #53 - 24, Centro",
+     "ciudad": "Medellín",
+     "hora": "14:30",
+     "ingreso": "Entrada libre"
+    }
+   ],
+   "fechas_ficha": [
+    "15 AGO"
+   ],
+   "_fechas_ficha_no_fiables": true,
+   "dia_confirmado_cinemateca": null
+  },
+  "Madres de nacimiento": {
+   "url": "https://www.ficdeh.com/produccion/madres-de-nacimiento/",
+   "funciones": [
+    {
+     "sede": "Universidad del Quindío - Cra. 15 con calle 12 Norte",
+     "ciudad": "Armenia",
+     "hora": "17:00",
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "Auditorio Tulio Gómez Estrada, Facultad de Ciencias Jurídicas y Sociales - Av. Santander # 57-58",
+     "ciudad": "Manizales",
+     "hora": "19:30",
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "Fundación Alianza Tecnologica y Desarrollo Educativo -  ALITIC - Cra. 54 # 64-73",
+     "ciudad": "",
+     "hora": "18:00",
+     "ingreso": "Entrada libre"
+    }
+   ],
+   "fechas_ficha": [
+    "13 AGO",
+    "19 AGO"
+   ],
+   "_fechas_ficha_no_fiables": true,
+   "dia_confirmado_cinemateca": null
+  },
+  "Y el río lloró": {
+   "url": "https://www.ficdeh.com/produccion/mohanas-resistencias-memoria-y-paz/",
+   "funciones": [
+    {
+     "sede": "Biblioteca Pública Deptal Arnoldo de los Santos Palacios Mosquera - Calle 30, Avenida Aeropuerto, Barrio Los Ángeles (frente al Aeropuerto El Caraño)",
+     "ciudad": "Quibdó",
+     "hora": "15:00",
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "Bulevar del Oriente - Comuna 14, entre la transversal 103 con calle 96 y calle 73 con transversal 73, entre los barrios Alfonso Bonilla Aragón y Marroquín 2",
+     "ciudad": "Cali",
+     "hora": "18:30",
+     "ingreso": "Entrada libre",
+     "_ciudad_por": "heurística"
+    }
+   ],
+   "fechas_ficha": [
+    "17 AGO"
+   ],
+   "_fechas_ficha_no_fiables": true,
+   "dia_confirmado_cinemateca": null
+  },
+  "In four stops": {
+   "url": "https://www.ficdeh.com/produccion/mother-love-amor-de-madre/",
+   "funciones": [
+    {
+     "sede": "Colombo Americano de Pereira - Carrera 6 Nº 23-58",
+     "ciudad": "Pereira",
+     "hora": "10:00",
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "Institución Educativa Jaime Salazar Robledo - Comuna Villa Santana",
+     "ciudad": "Pereira",
+     "hora": "09:00",
+     "ingreso": "Función privada"
+    },
+    {
+     "sede": "Escuela de Administración y Mercadotecnia del Quindío (EAM) - Cra. 14 # 3-11 (Avenida Bolívar)",
+     "ciudad": "Armenia",
+     "hora": "16:00",
+     "ingreso": "Entrada libre",
+     "_ciudad_por": "listado de ciudad"
+    },
+    {
+     "sede": "Museo Intangible del Confinamiento. Casa de la Cultura Alfonso López - Carrera 7b # 2e-05, barrio Alfonso López",
+     "ciudad": "Pereira",
+     "hora": "14:00",
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "Casa de las Luciérnagas - Diagonal 73H SUR # 78-38",
+     "ciudad": "Bogotá",
+     "hora": "17:00",
+     "ingreso": "Entrada libre",
+     "_ciudad_por": "heurística"
+    },
+    {
+     "sede": "Centro Cultural del Socorro - Cra. 71 # 26-210, sobre la Avenida Principal del barrio El Socorro",
+     "ciudad": "Cartagena",
+     "hora": "17:30",
+     "ingreso": "Entrada libre",
+     "_ciudad_por": "listado de ciudad"
+    },
+    {
+     "sede": "Cinemateca Fontanar del Río - Calle 146 # 138A-99",
+     "ciudad": "Bogotá",
+     "hora": "14:00",
+     "ingreso": "Entrada libre",
+     "_ciudad_por": "heurística"
+    },
+    {
+     "sede": "Cinemateca El Tunal - Calle 56 Sur # 23-62",
+     "ciudad": "Bogotá",
+     "hora": "14:00",
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "Institución Educativa Bienestar Social - Cra. 47b # 45-47, Mariano Ramos",
+     "ciudad": "Cali",
+     "hora": "08:30",
+     "ingreso": "Función privada",
+     "_ciudad_por": "listado de ciudad"
+    },
+    {
+     "sede": "Colegio Cruzada Social - Calle 46 # 13C -57, barrio Cevillar",
+     "ciudad": "Barranquilla",
+     "hora": "10:30",
+     "ingreso": "Función privada"
+    },
+    {
+     "sede": "Centro Cultural Banco de la República - Cl. 50 #50-21 Piso 3",
+     "ciudad": "Medellín",
+     "hora": "10:00",
+     "ingreso": "Entrada libre"
+    }
+   ],
+   "fechas_ficha": [
+    "16 AGO",
+    "12 AGO",
+    "16 AGO"
+   ],
+   "_fechas_ficha_no_fiables": true,
+   "dia_confirmado_cinemateca": null
+  },
+  "Muerto no": {
+   "url": "https://www.ficdeh.com/produccion/muerto-no/",
+   "funciones": [
+    {
+     "sede": "Cine Club Alef - Casa Hoja - Calle 12 bis # 16-18, Av. Circunvalar",
+     "ciudad": "Pereira",
+     "hora": "19:00",
+     "ingreso": "Entrada libre",
+     "_ciudad_por": "listado de ciudad"
+    },
+    {
+     "sede": "Biblioteca Pública Deptal Arnoldo de los Santos Palacios Mosquera - Calle 30, Avenida Aeropuerto, Barrio Los Ángeles (frente al Aeropuerto El Caraño)",
+     "ciudad": "Quibdó",
+     "hora": "15:00",
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "El Teatrino - Los Almendros Mz E # Lote 11",
+     "ciudad": "Cartagena",
+     "hora": "18:30",
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "Fundación Alianza Tecnologica y Desarrollo Educativo -  ALITIC - Cra. 54 # 64-73",
+     "ciudad": "",
+     "hora": "18:00",
+     "ingreso": "Entrada libre"
+    }
+   ],
+   "fechas_ficha": [
+    "15 AGO",
+    "17 AGO",
+    "13 AGO"
+   ],
+   "_fechas_ficha_no_fiables": true,
+   "dia_confirmado_cinemateca": null
+  },
+  "Mujeres modernas": {
+   "url": "https://www.ficdeh.com/produccion/mujeres-modernas/",
+   "funciones": [
+    {
+     "sede": "Casa de la Juventud Iwoka - Cra. 78N BIS # 39-33",
+     "ciudad": "Bogotá",
+     "hora": "10:00",
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "Casa de la Juventud Usaquén - Calle 155 # 7-45",
+     "ciudad": "Bogotá",
+     "hora": "14:00",
+     "ingreso": "Entrada libre",
+     "_ciudad_por": "heurística"
+    }
+   ],
+   "fechas_ficha": [],
+   "_fechas_ficha_no_fiables": true,
+   "dia_confirmado_cinemateca": null
+  },
+  "My grandmother is a skydiver": {
+   "url": "https://www.ficdeh.com/produccion/my-grandmother-is-a-skydiver/",
+   "funciones": [
+    {
+     "sede": "Escuela de Administración y Mercadotecnia del Quindío (EAM) - Cra. 14 # 3-11 (Avenida Bolívar)",
+     "ciudad": "Armenia",
+     "hora": "16:00",
+     "ingreso": "Entrada libre",
+     "_ciudad_por": "listado de ciudad"
+    },
+    {
+     "sede": "Centro Cultural del Socorro - Cra. 71 # 26-210, sobre la Avenida Principal del barrio El Socorro",
+     "ciudad": "Cartagena",
+     "hora": "17:30",
+     "ingreso": "Entrada libre",
+     "_ciudad_por": "listado de ciudad"
+    },
+    {
+     "sede": "Fundación Alianza Tecnologica y Desarrollo Educativo -  ALITIC - Cra. 54 # 64-73",
+     "ciudad": "",
+     "hora": "11:00",
+     "ingreso": "Entrada libre"
+    }
+   ],
+   "fechas_ficha": [
+    "18 AGO",
+    "14 AGO"
+   ],
+   "_fechas_ficha_no_fiables": true,
+   "dia_confirmado_cinemateca": null
+  },
+  "Niñxs": {
+   "url": "https://www.ficdeh.com/produccion/ninxs/",
+   "funciones": [
+    {
+     "sede": "Cinemateca de Bogotá - Cra. 3 # 19-10",
+     "ciudad": "Bogotá",
+     "hora": "14:00",
+     "ingreso": "Boletería en taquilla"
+    },
+    {
+     "sede": "Cinemateca Fontanar del Río - Calle 146 # 138A-99",
+     "ciudad": "Bogotá",
+     "hora": "16:00",
+     "ingreso": "Entrada libre",
+     "_ciudad_por": "heurística"
+    },
+    {
+     "sede": "Cinemateca El Tunal - Calle 56 Sur # 23-62",
+     "ciudad": "Bogotá",
+     "hora": "16:00",
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "Alianza Francesa - Calle 52 # 54-75",
+     "ciudad": "",
+     "hora": "18:30",
+     "ingreso": "Entrada libre",
+     "_ciudad_candidatas": [
+      "Barranquilla",
+      "Cartagena"
+     ]
+    }
+   ],
+   "fechas_ficha": [
+    "12 AGO"
+   ],
+   "_fechas_ficha_no_fiables": true,
+   "dia_confirmado_cinemateca": [
+    {
+     "dia": 13,
+     "hora": "14:00",
+     "sala": "Sala Capital"
+    }
+   ]
+  },
+  "Notas sobre un destierro": {
+   "url": "https://www.ficdeh.com/produccion/notas-sobre-un-destierro/",
+   "funciones": [
+    {
+     "sede": "Cinemateca de Bogotá - Cra. 3 # 19-10",
+     "ciudad": "Bogotá",
+     "hora": "19:00",
+     "ingreso": "Boletería en taquilla"
+    },
+    {
+     "sede": "Cinemateca del Caribe - Calle 76 # 57-61",
+     "ciudad": "Barranquilla",
+     "hora": "19:00",
+     "ingreso": "Boletería en taquilla"
+    }
+   ],
+   "fechas_ficha": [
+    "16 AGO",
+    "12 AGO"
+   ],
+   "_fechas_ficha_no_fiables": true,
+   "dia_confirmado_cinemateca": [
+    {
+     "dia": 16,
+     "hora": "19:00",
+     "sala": "Sala 2"
+    }
+   ]
+  },
+  "One in a million": {
+   "url": "https://www.ficdeh.com/produccion/one-in-a-million-una-entre-un-millon/",
+   "funciones": [
+    {
+     "sede": "Cinemateca de Bogotá - Cra. 3 # 19-10",
+     "ciudad": "Bogotá",
+     "hora": "19:00",
+     "ingreso": "Boletería en taquilla"
+    },
+    {
+     "sede": "Colombo Americano de Medellín - Cra. 45 #53 - 24, Centro",
+     "ciudad": "Medellín",
+     "hora": "18:30",
+     "ingreso": "Entrada libre"
+    }
+   ],
+   "fechas_ficha": [
+    "15 AGO"
+   ],
+   "_fechas_ficha_no_fiables": true,
+   "dia_confirmado_cinemateca": [
+    {
+     "dia": 15,
+     "hora": "19:00",
+     "sala": "Sala 2"
+    }
+   ]
+  },
+  "Outside": {
+   "url": "https://www.ficdeh.com/produccion/outside/",
+   "funciones": [
+    {
+     "sede": "Fundación Alianza Tecnologica y Desarrollo Educativo -  ALITIC - Cra. 54 # 64-73",
+     "ciudad": "",
+     "hora": "11:00",
+     "ingreso": "Entrada libre"
+    }
+   ],
+   "fechas_ficha": [
+    "18 AGO"
+   ],
+   "_fechas_ficha_no_fiables": true,
+   "dia_confirmado_cinemateca": null
+  },
+  "Padamlágan": {
+   "url": "https://www.ficdeh.com/produccion/padamlagan-night-lihgt/",
+   "funciones": [
+    {
+     "sede": "Fundación Gilberto Alzate Avendaño - Biblioteca - Calle 10 # 3-16",
+     "ciudad": "Bogotá",
+     "hora": "14:00",
+     "ingreso": "Entrada libre",
+     "_ciudad_por": "heurística"
+    },
+    {
+     "sede": "Cinemateca del Caribe - Calle 76 # 57-61",
+     "ciudad": "Barranquilla",
+     "hora": "20:00",
+     "ingreso": "Boletería en taquilla"
+    }
+   ],
+   "fechas_ficha": [
+    "14 AGO"
+   ],
+   "_fechas_ficha_no_fiables": true,
+   "dia_confirmado_cinemateca": null
+  },
+  "Más allá": {
+   "url": "https://www.ficdeh.com/produccion/pasta-negra/",
+   "funciones": [
+    {
+     "sede": "Universidad del Quindío - Cra. 15 con calle 12 Norte",
+     "ciudad": "Armenia",
+     "hora": "17:00",
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "Biblioteca Pública CEFE Fontanar Del Río - Calle 146 # 138A-99",
+     "ciudad": "Bogotá",
+     "hora": "11:00",
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "Biblioteca Pública Julio Mario Santodomingo - Calle 170 # 67-51",
+     "ciudad": "Bogotá",
+     "hora": "16:00",
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "Cinemateca de Bogotá - Cra. 3 # 19-10",
+     "ciudad": "Bogotá",
+     "hora": "19:30",
+     "ingreso": "Boletería en taquilla"
+    },
+    {
+     "sede": "Fundación Alianza Tecnologica y Desarrollo Educativo -  ALITIC - Cra. 54 # 64-73",
+     "ciudad": "",
+     "hora": "18:00",
+     "ingreso": "Entrada libre"
+    }
+   ],
+   "fechas_ficha": [
+    "16 AGO",
+    "15 AGO"
+   ],
+   "_fechas_ficha_no_fiables": true,
+   "dia_confirmado_cinemateca": null
+  },
+  "Pawa": {
+   "url": "https://www.ficdeh.com/produccion/pawa/",
+   "funciones": [
+    {
+     "sede": "Universidad del Quindío - Cra. 15 con calle 12 Norte",
+     "ciudad": "Armenia",
+     "hora": "17:00",
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "Cinemateca de Bogotá - Cra. 3 # 19-10",
+     "ciudad": "Bogotá",
+     "hora": "19:30",
+     "ingreso": "Boletería en taquilla"
+    }
+   ],
+   "fechas_ficha": [
+    "13 AGO",
+    "15 AGO"
+   ],
+   "_fechas_ficha_no_fiables": true,
+   "dia_confirmado_cinemateca": null
+  },
+  "Por una gota de leche": {
+   "url": "https://www.ficdeh.com/produccion/por-una-gota-de-leche/",
+   "funciones": [
+    {
+     "sede": "Auditorio Centro Cultural Universitario Rogelio Salmona - Cra. 28D entre Cl. 66 #y 67",
+     "ciudad": "Bogotá",
+     "hora": "17:00",
+     "ingreso": "Entrada libre",
+     "_ciudad_por": "heurística"
+    },
+    {
+     "sede": "Casa de la Juventud Aldea De Pensadores - Calle 70 # 88A-7",
+     "ciudad": "Bogotá",
+     "hora": "14:00",
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "Casa de la Juventud  El Frailejón - Cra. 12 # 76A-28 Sur",
+     "ciudad": "Bogotá",
+     "hora": "15:30",
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "Casa de la Juventud José Saramago - Cra. 82J # 70A-52",
+     "ciudad": "Bogotá",
+     "hora": "15:00",
+     "ingreso": "Entrada libre",
+     "_ciudad_por": "heurística"
+    },
+    {
+     "sede": "Cinemateca de Bogotá - Cra. 3 # 19-10",
+     "ciudad": "Bogotá",
+     "hora": "16:00",
+     "ingreso": "Boletería en taquilla"
+    },
+    {
+     "sede": "Fundación Alianza Tecnologica y Desarrollo Educativo -  ALITIC - Cra. 54 # 64-73",
+     "ciudad": "",
+     "hora": "18:00",
+     "ingreso": "Entrada libre"
+    }
+   ],
+   "fechas_ficha": [
+    "13 AGO"
+   ],
+   "_fechas_ficha_no_fiables": true,
+   "dia_confirmado_cinemateca": [
+    {
+     "dia": 16,
+     "hora": "16:00",
+     "sala": "Sala 2"
+    }
+   ]
+  },
+  "La Cerrillana": {
+   "url": "https://www.ficdeh.com/produccion/remember-us-recuerdanos/",
+   "funciones": [
+    {
+     "sede": "Alianza Francesa - Parque Fernández de Madrid, Cra. 8 # 37-34, San Diego",
+     "ciudad": "Cartagena",
+     "hora": "18:30",
+     "ingreso": "Entrada libre",
+     "_ciudad_por": "heurística"
+    },
+    {
+     "sede": "Biblioteca Pública CEFE Fontanar Del Río - Calle 146 # 138A-99",
+     "ciudad": "Bogotá",
+     "hora": "11:00",
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "Biblioteca Pública Julio Mario Santodomingo - Calle 170 # 67-51",
+     "ciudad": "Bogotá",
+     "hora": "16:00",
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "Casa LGBTIQ Sebastián Romero - Calle 44 # 14-60",
+     "ciudad": "Bogotá",
+     "hora": "15:00",
+     "ingreso": "Entrada libre",
+     "_ciudad_por": "heurística"
+    },
+    {
+     "sede": "Fundación Alianza Tecnologica y Desarrollo Educativo -  ALITIC - Cra. 54 # 64-73",
+     "ciudad": "",
+     "hora": "18:00",
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "Colombo Americano de Medellín - Cra. 45 #53 - 24, Centro",
+     "ciudad": "Medellín",
+     "hora": "14:00",
+     "ingreso": "Entrada libre"
+    }
+   ],
+   "fechas_ficha": [
+    "14 AGO",
+    "13 AGO"
+   ],
+   "_fechas_ficha_no_fiables": true,
+   "dia_confirmado_cinemateca": null
+  },
+  "Republic of Amnesia": {
+   "url": "https://www.ficdeh.com/produccion/republic-of-amnesia/",
+   "funciones": [
+    {
+     "sede": "Institución Educativa José Joaquín Jaramillo",
+     "ciudad": "",
+     "hora": "08:30",
+     "ingreso": "Función privada"
+    },
+    {
+     "sede": "Ágora Casa Cultural (La Ceja) - Cl. 19 # 23-15",
+     "ciudad": "Medellín",
+     "hora": "17:00",
+     "ingreso": "Entrada libre"
+    }
+   ],
+   "fechas_ficha": [
+    "14 AGO",
+    "19 AGO"
+   ],
+   "_fechas_ficha_no_fiables": true,
+   "dia_confirmado_cinemateca": null
+  },
+  "Chaski Pacha": {
+   "url": "https://www.ficdeh.com/produccion/salud-mutante/",
+   "funciones": [
+    {
+     "sede": "Biblioteca Pública CEFE Fontanar Del Río - Calle 146 # 138A-99",
+     "ciudad": "Bogotá",
+     "hora": "11:00",
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "Biblioteca Pública Deptal Arnoldo de los Santos Palacios Mosquera - Calle 30, Avenida Aeropuerto, Barrio Los Ángeles (frente al Aeropuerto El Caraño)",
+     "ciudad": "Quibdó",
+     "hora": "15:00",
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "Biblioteca Pública Julio Mario Santodomingo - Calle 170 # 67-51",
+     "ciudad": "Bogotá",
+     "hora": "16:00",
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "Fundación Alianza Tecnologica y Desarrollo Educativo -  ALITIC - Cra. 54 # 64-73",
+     "ciudad": "",
+     "hora": "11:00",
+     "ingreso": "Entrada libre"
+    }
+   ],
+   "fechas_ficha": [
+    "14 AGO",
+    "18 AGO"
+   ],
+   "_fechas_ficha_no_fiables": true,
+   "dia_confirmado_cinemateca": null
+  },
+  "Sapos por todos lados": {
+   "url": "https://www.ficdeh.com/produccion/sapos-por-todos-lados/",
+   "funciones": [
+    {
+     "sede": "Escuela de Administración y Mercadotecnia del Quindío (EAM) - Cra. 14 # 3-11 (Avenida Bolívar)",
+     "ciudad": "Armenia",
+     "hora": "16:00",
+     "ingreso": "Entrada libre",
+     "_ciudad_por": "listado de ciudad"
+    },
+    {
+     "sede": "Fundación Alianza Tecnologica y Desarrollo Educativo -  ALITIC - Cra. 54 # 64-73",
+     "ciudad": "",
+     "hora": "11:00",
+     "ingreso": "Entrada libre"
+    }
+   ],
+   "fechas_ficha": [
+    "18 AGO"
+   ],
+   "_fechas_ficha_no_fiables": true,
+   "dia_confirmado_cinemateca": null
+  },
+  "Más allá de la corona": {
+   "url": "https://www.ficdeh.com/produccion/sed-el-flagelo-guajiro/",
+   "funciones": [
+    {
+     "sede": "Biblioteca Pública Deptal Arnoldo de los Santos Palacios Mosquera - Calle 30, Avenida Aeropuerto, Barrio Los Ángeles (frente al Aeropuerto El Caraño)",
+     "ciudad": "Quibdó",
+     "hora": "15:00",
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "Cinemateca del Museo La Tertulia - Cra. 1 # 5-105, Oeste",
+     "ciudad": "Cali",
+     "hora": "17:00",
+     "ingreso": "Boletería en taquilla",
+     "_ciudad_por": "listado de ciudad"
+    }
+   ],
+   "fechas_ficha": [
+    "15 AGO",
+    "15 AGO"
+   ],
+   "_fechas_ficha_no_fiables": true,
+   "dia_confirmado_cinemateca": null
+  },
+  "Selva": {
+   "url": "https://www.ficdeh.com/produccion/selva/",
+   "funciones": [],
+   "fechas_ficha": [],
+   "_fechas_ficha_no_fiables": true,
+   "dia_confirmado_cinemateca": null
+  },
+  "Semillas": {
+   "url": "https://www.ficdeh.com/produccion/semillas/",
+   "funciones": [
+    {
+     "sede": "Cinemateca de Tunja - Calle 17 # 15-36",
+     "ciudad": "Tunja",
+     "hora": "18:30",
+     "ingreso": "Boletería en taquilla"
+    },
+    {
+     "sede": "Cine Bajo las Estrellas programa de exhibición y circulación - Parque Sucre",
+     "ciudad": "Armenia",
+     "hora": "18:30",
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "Biblioteca Pública Manuel Zapata Olivella - Av. Ciudad de Cali # 6C-09",
+     "ciudad": "Cali",
+     "hora": "15:00",
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "Cinemateca de Bogotá - Cra. 3 # 19-10",
+     "ciudad": "Bogotá",
+     "hora": "11:00",
+     "ingreso": "Boletería en taquilla"
+    },
+    {
+     "sede": "Cinemateca Fontanar del Río - Calle 146 # 138A-99",
+     "ciudad": "Bogotá",
+     "hora": "16:00",
+     "ingreso": "Entrada libre",
+     "_ciudad_por": "heurística"
+    },
+    {
+     "sede": "Cinemateca El Tunal - Calle 56 Sur # 23-62",
+     "ciudad": "Bogotá",
+     "hora": "16:00",
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "Institución Educativa Isaac Rodríguez - Barrio Reposo #2",
+     "ciudad": "",
+     "hora": "08:00",
+     "ingreso": "Función privada"
+    },
+    {
+     "sede": "Manzana del Cuidado Mochuelo - Calle 91C Sur # 18H-14",
+     "ciudad": "Bogotá",
+     "hora": "15:00",
+     "ingreso": "Entrada libre",
+     "_ciudad_por": "heurística"
+    },
+    {
+     "sede": "Universidad de Cartagena Claustro San Agustín - Cra. 6, Calle de la Universidad # 36-100",
+     "ciudad": "Cartagena",
+     "hora": "18:30",
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "Universidad Minuto de Dios - Diagonal 81F # 72 C-1",
+     "ciudad": "Bogotá",
+     "hora": "18:00",
+     "ingreso": "Entrada libre",
+     "_ciudad_por": "heurística"
+    },
+    {
+     "sede": "Cinemateca del Caribe - Calle 76 # 57-61",
+     "ciudad": "Barranquilla",
+     "hora": "16:00",
+     "ingreso": "Boletería en taquilla"
+    },
+    {
+     "sede": "Cineprox - Dg. 75B #2A-120Rotonda Comercial Las Américas",
+     "ciudad": "Medellín",
+     "hora": "16:30",
+     "ingreso": "Entrada libre",
+     "_ciudad_por": "listado de ciudad"
+    }
+   ],
+   "fechas_ficha": [
+    "14 AGO",
+    "14 AGO",
+    "13 AGO",
+    "16 AGO",
+    "14 AGO",
+    "13 AGO"
+   ],
+   "_fechas_ficha_no_fiables": true,
+   "dia_confirmado_cinemateca": [
+    {
+     "dia": 15,
+     "hora": "11:00",
+     "sala": "Sala 3"
+    }
+   ]
+  },
+  "Si La Escombrera hablara": {
+   "url": "https://www.ficdeh.com/produccion/si-la-escombrera-hablara/",
+   "funciones": [
+    {
+     "sede": "Auditorio Centro Cultural Universitario Rogelio Salmona - Cra. 28D entre Cl. 66 #y 67",
+     "ciudad": "Bogotá",
+     "hora": "19:00",
+     "ingreso": "Entrada libre",
+     "_ciudad_por": "heurística"
+    }
+   ],
+   "fechas_ficha": [
+    "19 AGO"
+   ],
+   "_fechas_ficha_no_fiables": true,
+   "dia_confirmado_cinemateca": null
+  },
+  "Silenciada": {
+   "url": "https://www.ficdeh.com/produccion/silenciada-silenced/",
+   "funciones": [
+    {
+     "sede": "Cinemateca de Bogotá - Cra. 3 # 19-10",
+     "ciudad": "Bogotá",
+     "hora": "17:30",
+     "ingreso": "Boletería en taquilla"
+    }
+   ],
+   "fechas_ficha": [
+    "14 AGO"
+   ],
+   "_fechas_ficha_no_fiables": true,
+   "dia_confirmado_cinemateca": null
+  },
+  "Soñé su nombre": {
+   "url": "https://www.ficdeh.com/produccion/sone-su-nombre/",
+   "funciones": [
+    {
+     "sede": "Casa B - Cra. 2 BIS # 6D-30",
+     "ciudad": "Bogotá",
+     "hora": "18:00",
+     "ingreso": "Entrada libre",
+     "_ciudad_por": "heurística"
+    },
+    {
+     "sede": "Librería Bagatá - Cra. 7 #27-3 (frente al Colegio Carrasquilla)",
+     "ciudad": "Quibdó",
+     "hora": "15:00",
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "Lugar del Poema - Pasaje Leclerc, calle 24 # 8b-83 piso 2, Getsemaní",
+     "ciudad": "Cartagena",
+     "hora": "19:00",
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "Book Times - Calle 54 # 53-76",
+     "ciudad": "",
+     "hora": "18:00",
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "Sala Fundadores",
+     "ciudad": "Manizales",
+     "hora": "19:00",
+     "ingreso": ""
+    }
+   ],
+   "fechas_ficha": [
+    "15 AGO",
+    "14 AGO"
+   ],
+   "_fechas_ficha_no_fiables": true,
+   "dia_confirmado_cinemateca": null
+  },
+  "Sukua": {
+   "url": "https://www.ficdeh.com/produccion/sukua/",
+   "funciones": [
+    {
+     "sede": "Cinemateca de Tunja - Calle 17 # 15-36",
+     "ciudad": "Tunja",
+     "hora": "16:00",
+     "ingreso": "Boletería en taquilla"
+    },
+    {
+     "sede": "Biblioteca Pública CEFE Fontanar Del Río - Calle 146 # 138A-99",
+     "ciudad": "Bogotá",
+     "hora": "11:00",
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "Biblioteca Pública Julio Mario Santodomingo - Calle 170 # 67-51",
+     "ciudad": "Bogotá",
+     "hora": "16:00",
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "Cinemateca de Bogotá - Cra. 3 # 19-10",
+     "ciudad": "Bogotá",
+     "hora": "17:30",
+     "ingreso": "Boletería en taquilla"
+    },
+    {
+     "sede": "Fundación Alianza Tecnologica y Desarrollo Educativo -  ALITIC - Cra. 54 # 64-73",
+     "ciudad": "",
+     "hora": "18:00",
+     "ingreso": "Entrada libre"
+    }
+   ],
+   "fechas_ficha": [
+    "13 AGO",
+    "13 AGO"
+   ],
+   "_fechas_ficha_no_fiables": true,
+   "dia_confirmado_cinemateca": null
+  },
+  "Una torreta en llamas": {
+   "url": "https://www.ficdeh.com/produccion/the-steak-el-bistec/",
+   "funciones": [
+    {
+     "sede": "Biblioteca Pública La Victoria - Calle 37 BIS B Sur # 2B",
+     "ciudad": "Bogotá",
+     "hora": "14:00",
+     "ingreso": "Entrada libre"
+    }
+   ],
+   "fechas_ficha": [
+    "14 AGO"
+   ],
+   "_fechas_ficha_no_fiables": true,
+   "dia_confirmado_cinemateca": null
+  },
+  "Three black men": {
+   "url": "https://www.ficdeh.com/produccion/three-black-men-tres-hombres-negros/",
+   "funciones": [
+    {
+     "sede": "Cinemateca de Tunja - Calle 17 # 15-36",
+     "ciudad": "Tunja",
+     "hora": "18:30",
+     "ingreso": "Boletería en taquilla"
+    },
+    {
+     "sede": "Cinemateca de Bogotá - Cra. 3 # 19-10",
+     "ciudad": "Bogotá",
+     "hora": "17:00",
+     "ingreso": "Boletería en taquilla"
+    },
+    {
+     "sede": "Universidad Tecnológica del Chocó - Carrera 22, Ciudadela Universitaria Barrio Nicolas Medrano",
+     "ciudad": "Quibdó",
+     "hora": "09:00",
+     "ingreso": "Función privada",
+     "_ciudad_por": "listado de ciudad"
+    },
+    {
+     "sede": "Cinemateca del Caribe - Calle 76 # 57-61",
+     "ciudad": "Barranquilla",
+     "hora": "15:00",
+     "ingreso": "Boletería en taquilla"
+    }
+   ],
+   "fechas_ficha": [
+    "16 AGO",
+    "13 AGO"
+   ],
+   "_fechas_ficha_no_fiables": true,
+   "dia_confirmado_cinemateca": [
+    {
+     "dia": 16,
+     "hora": "17:00",
+     "sala": "Sala Capital"
+    }
+   ]
+  },
+  "Tierra que habla": {
+   "url": "https://www.ficdeh.com/produccion/tierra-que-habla/",
+   "funciones": [
+    {
+     "sede": "Colombo Americano de Medellín - Cra. 45 #53 - 24, Centro",
+     "ciudad": "Medellín",
+     "hora": "14:30",
+     "ingreso": "Entrada libre"
+    }
+   ],
+   "fechas_ficha": [
+    "14 AGO",
+    "10 AGO"
+   ],
+   "_fechas_ficha_no_fiables": true,
+   "dia_confirmado_cinemateca": null
+  },
+  "Trenzando caminos de paz": {
+   "url": "https://www.ficdeh.com/produccion/trenzando-caminos-de-paz/",
+   "funciones": [
+    {
+     "sede": "Centro de Formación de la Cooperación Española - Calle 36 # 2-74, El Centro",
+     "ciudad": "Cartagena",
+     "hora": "18:30",
+     "ingreso": "Entrada libre"
+    },
+    {
+     "sede": "Museo a Cielo Abierto - Barrio Abajo - Barrio Abajo, entre las calles 41 y 42 y las carreras 53 y 53B",
+     "ciudad": "Barranquilla",
+     "hora": "18:30",
+     "ingreso": "Entrada libre",
+     "_ciudad_por": "listado de ciudad"
+    }
+   ],
+   "fechas_ficha": [
+    "12 AGO"
+   ],
+   "_fechas_ficha_no_fiables": true,
+   "dia_confirmado_cinemateca": null
+  },
+  "Tuktu, Padre Maíz": {
+   "url": "https://www.ficdeh.com/produccion/tuktu-padre-maiz/",
+   "funciones": [
+    {
+     "sede": "Escuela de Administración y Mercadotecnia del Quindío (EAM) - Cra. 14 # 3-11 (Avenida Bolívar)",
+     "ciudad": "Armenia",
+     "hora": "16:00",
+     "ingreso": "Entrada libre",
+     "_ciudad_por": "listado de ciudad"
+    },
+    {
+     "sede": "Centro Cultural del Socorro - Cra. 71 # 26-210, sobre la Avenida Principal del barrio El Socorro",
+     "ciudad": "Cartagena",
+     "hora": "17:30",
+     "ingreso": "Entrada libre",
+     "_ciudad_por": "listado de ciudad"
+    },
+    {
+     "sede": "Cinemateca de Bogotá - Cra. 3 # 19-10",
+     "ciudad": "Bogotá",
+     "hora": "19:30",
+     "ingreso": "Boletería en taquilla"
+    }
+   ],
+   "fechas_ficha": [
+    "13 AGO",
+    "14 AGO"
+   ],
+   "_fechas_ficha_no_fiables": true,
+   "dia_confirmado_cinemateca": null
+  },
+  "Un nuevo amanecer": {
+   "url": "https://www.ficdeh.com/produccion/un-nuevo-amanecer/",
+   "funciones": [
+    {
+     "sede": "Cinemateca del Museo La Tertulia - Cra. 1 # 5-105, Oeste",
+     "ciudad": "Cali",
+     "hora": "17:00",
+     "ingreso": "Boletería en taquilla",
+     "_ciudad_por": "listado de ciudad"
+    }
+   ],
+   "fechas_ficha": [
+    "15 AGO"
+   ],
+   "_fechas_ficha_no_fiables": true,
+   "dia_confirmado_cinemateca": null
+  },
+  "Volver a creer": {
+   "url": "https://www.ficdeh.com/produccion/volver-a-creer/",
+   "funciones": [
+    {
+     "sede": "Auditorio Centro Cultural Universitario Rogelio Salmona - Cra. 28D entre Cl. 66 #y 67",
+     "ciudad": "Bogotá",
+     "hora": "19:00",
+     "ingreso": "Entrada libre",
+     "_ciudad_por": "heurística"
+    },
+    {
+     "sede": "Museo a Cielo Abierto - Barrio Abajo - Barrio Abajo, entre las calles 41 y 42 y las carreras 53 y 53B",
+     "ciudad": "Barranquilla",
+     "hora": "18:30",
+     "ingreso": "Entrada libre",
+     "_ciudad_por": "listado de ciudad"
+    }
+   ],
+   "fechas_ficha": [
+    "14 AGO",
+    "13 AGO"
+   ],
+   "_fechas_ficha_no_fiables": true,
+   "dia_confirmado_cinemateca": null
+  },
+  "XIE. Defensa de la vida": {
+   "url": "https://www.ficdeh.com/produccion/xie-defensa-de-la-vida/",
+   "funciones": [
+    {
+     "sede": "Cinemateca de Bogotá - Cra. 3 # 19-10",
+     "ciudad": "Bogotá",
+     "hora": "17:00",
+     "ingreso": "Boletería en taquilla"
+    }
+   ],
+   "fechas_ficha": [
+    "13 AGO"
+   ],
+   "_fechas_ficha_no_fiables": true,
+   "dia_confirmado_cinemateca": [
+    {
+     "dia": 13,
+     "hora": "17:00",
+     "sala": "Sala 2"
+    }
+   ]
+  }
+ }
+}
