@@ -11,7 +11,7 @@ UA={'User-Agent':'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/53
 
 def get(url):
     for _ in range(3):
-        r=subprocess.run(['curl','-s','--compressed','--max-time','45','-A',UA['User-Agent'],url],capture_output=True)
+        r=subprocess.run(['curl','-sL','--compressed','--max-time','45','-A',UA['User-Agent'],url],capture_output=True)
         if r.returncode==0 and len(r.stdout)>2000:
             return r.stdout.decode('utf-8','ignore')
         time.sleep(1.5)
@@ -42,8 +42,8 @@ def parse(t):
                 if l.rstrip(':').strip().lower()==nombre:
                     return lineas[i+1] if i+1<len(lineas) else ''
             return ''
-        funcs.append({'sede':sede,'sala':campo('sala'),'hora':campo('hora'),
-                      'ingreso':campo('tipo de ingreso')})
+        funcs.append({'sede':sede,'sala':campo('sala'),'fecha':campo('fecha'),
+                      'hora':campo('hora'),'ingreso':campo('tipo de ingreso')})
     fechas=re.findall(r'\n(\d{1,2}\s+AGO)\n', t)
     return funcs, fechas
 
