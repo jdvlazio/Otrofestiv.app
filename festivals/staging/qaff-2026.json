@@ -489,7 +489,7 @@
    "title": "Aisha Can't Fly Away",
    "director": "Morad Mostafa",
    "duration": "90 min",
-   "country": "",
+   "country": "Egipto (Catar, Túnez, Alemania, Sudán, Francia, Arabia Saudita)",
    "section": "🌳 Panorama Africano",
    "genre": "",
    "synopsis": "Aisha is a 26-year-old Sudanese caregiver living in a neighbourhood in the heart of Cairo, where she witnesses the tension between her fellow African migrants and local gangs.",
@@ -502,7 +502,8 @@
      "https://static.wixstatic.com/media/736095_2c454456040b45018ee8da47197fbadf~mv2.jpg",
      "https://static.wixstatic.com/media/736095_977b2b388f3e44d68f76bd0107870283~mv2.jpg",
      "https://static.wixstatic.com/media/736095_79d4616101d7449d8a6d2cbfd9f65629~mv2.jpg"
-    ]
+    ],
+    "tmdb_id": 1337148
    },
    "day": "2026-09-14",
    "time": "15:00",
@@ -517,9 +518,12 @@
    "year": "2025",
    "_inherited": {
     "year": "qaff-event-desc",
-    "synopsis": "qaff-event-desc"
+    "synopsis": "qaff-event-desc",
+    "lbSlug": "tmdb-1337148 (dir. Murad Mustafa = Morad Mostafa, translit)",
+    "country": "tmdb-1337148"
    },
-   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026"
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026",
+   "lbSlug": "aisha-cant-fly-away"
   },
   {
    "title": "Happy Meal",
@@ -527,7 +531,7 @@
    "duration": "20 min",
    "country": "Francia",
    "section": "🪞 Prisma Femenino",
-   "genre": "",
+   "genre": "Drama",
    "synopsis": "DOM, 32, is undergoing therapy. As the Christmas holidays come to an end, he is granted, for the first time in years, the right to spend a day alone with his daughters. A precious day... that he dreads seeing come to an end.",
    "synopsis_lang": "en",
    "poster": "/assets/qaff/happy-meal.jpg",
@@ -554,7 +558,8 @@
     "year": "qaff-event-desc",
     "synopsis": "qaff-event-desc"
    },
-   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026"
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026",
+   "lbSlug": "happy-meal-2026"
   },
   {
    "title": "Leer en las gotas de lluvia",
@@ -598,7 +603,7 @@
    "duration": "15 min",
    "country": "Guayana Francesa",
    "section": "🌊 Fronteras Latam",
-   "genre": "",
+   "genre": "Drama, Familia",
    "synopsis": "When Gloria discovers a deep secret that her daughter Ilana confides in her, she struggles to react, trapped in the silence of religion and traditions that suffocate her family.",
    "synopsis_lang": "en",
    "poster": "/assets/qaff/gloria.jpg",
@@ -624,7 +629,8 @@
     "year": "qaff-event-desc",
     "synopsis": "qaff-event-desc"
    },
-   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026"
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026",
+   "lbSlug": "gloria-2025-2"
   },
   {
    "title": "Free Fall",
@@ -780,7 +786,7 @@
    "duration": "17 min",
    "country": "Reino Unido",
    "section": "☕ Panorama Diaspórica",
-   "genre": "",
+   "genre": "Drama",
    "synopsis": "When Fox's \"LA Bar\" is hit with a compulsory purchase order, a cornerstone of Caribbean life in 90's East London is threatened. As the city begins to forget, the community remembers.",
    "synopsis_lang": "en",
    "poster": "/assets/qaff/the-last-dance.jpg",
@@ -808,7 +814,8 @@
     "year": "qaff-event-desc",
     "synopsis": "qaff-event-desc"
    },
-   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026"
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026",
+   "lbSlug": "the-last-dance-2025"
   },
   {
    "title": "VICHE",
@@ -1702,7 +1709,7 @@
    "duration": "74 min",
    "country": "Canadá",
    "section": "☕ Panorama Diaspórica",
-   "genre": "",
+   "genre": "Documental",
    "synopsis": "Father's Day is an intimate and powerful documentary that explores the legacy of absent fathers in Black communities across North America and the Caribbean.",
    "synopsis_lang": "en",
    "poster": "/assets/qaff/father-s-day.jpg",
@@ -1730,7 +1737,8 @@
     "year": "qaff-event-desc",
     "synopsis": "qaff-event-desc"
    },
-   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026"
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026",
+   "lbSlug": "fathers-day-2025"
   },
   {
    "title": "Altanegra",
@@ -1859,7 +1867,8 @@
      "https://static.wixstatic.com/media/736095_14da0cda8c5648cb83b7c9fcd25b55b7~mv2.jpg",
      "https://static.wixstatic.com/media/736095_b4ef8392a9824059938249ecc6643cc6~mv2.jpg",
      "https://static.wixstatic.com/media/736095_9f3bbd95370246d0a96b7ba84ff36be2~mv2.jpg"
-    ]
+    ],
+    "tmdb_id": 1108782
    },
    "day": "2026-09-17",
    "time": "14:00",
@@ -1874,9 +1883,11 @@
    "year": "2025",
    "_inherited": {
     "year": "qaff-event-desc",
-    "synopsis": "qaff-event-desc"
+    "synopsis": "qaff-event-desc",
+    "lbSlug": "tmdb-1108782"
    },
-   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026"
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026",
+   "lbSlug": "of-mud-and-blood"
   },
   {
    "title": "Mi viche todo el dia",
@@ -2422,7 +2433,7 @@
    "duration": "74 min",
    "country": "Canadá",
    "section": "☕ Panorama Diaspórica",
-   "genre": "",
+   "genre": "Documental",
    "synopsis": "Father's Day is an intimate and powerful documentary that explores the legacy of absent fathers in Black communities across North America and the Caribbean.",
    "synopsis_lang": "en",
    "poster": "/assets/qaff/father-s-day.jpg",
@@ -2451,7 +2462,8 @@
    "requires_registration": true,
    "is_free": true,
    "type": "film",
-   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026"
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026",
+   "lbSlug": "fathers-day-2025"
   },
   {
    "title": "The Madmen Coach",
@@ -2494,7 +2506,7 @@
    "title": "Aisha Can't Fly Away",
    "director": "Morad Mostafa",
    "duration": "90 min",
-   "country": "",
+   "country": "Egipto (Catar, Túnez, Alemania, Sudán, Francia, Arabia Saudita)",
    "section": "🌳 Panorama Africano",
    "genre": "",
    "synopsis": "Aisha is a 26-year-old Sudanese caregiver living in a neighbourhood in the heart of Cairo, where she witnesses the tension between her fellow African migrants and local gangs.",
@@ -2507,12 +2519,15 @@
      "https://static.wixstatic.com/media/736095_5187f3510aa44698bd503f8390d6093b~mv2.jpg",
      "https://static.wixstatic.com/media/736095_f916a2fc69134536bc56f4107391faea~mv2.jpg",
      "https://static.wixstatic.com/media/736095_abe5059bd7bb4bfeaff6910db096670e~mv2.jpg"
-    ]
+    ],
+    "tmdb_id": 1337148
    },
    "year": "2025",
    "_inherited": {
     "year": "qaff-event-desc",
-    "synopsis": "qaff-event-desc"
+    "synopsis": "qaff-event-desc",
+    "lbSlug": "tmdb-1337148 (dir. Murad Mustafa = Morad Mostafa, translit)",
+    "country": "tmdb-1337148"
    },
    "_programada": true,
    "day": "2026-09-20",
@@ -2525,7 +2540,8 @@
    "requires_registration": true,
    "is_free": true,
    "type": "film",
-   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026"
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026",
+   "lbSlug": "aisha-cant-fly-away"
   }
  ],
  "_obras_sin_funcion": [
