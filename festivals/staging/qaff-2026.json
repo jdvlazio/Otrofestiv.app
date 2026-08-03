@@ -1775,7 +1775,8 @@
      "https://static.wixstatic.com/media/736095_80ff7da7d74947a1b181fa3f4d4bb808~mv2.jpg",
      "https://static.wixstatic.com/media/736095_ed229e8ceb2643a1bd5e6e1dd303f90b~mv2.jpg",
      "https://static.wixstatic.com/media/736095_d9f72683d8cf4e03b4c9bf794f82cf98~mv2.jpg"
-    ]
+    ],
+    "tmdb_id": 1742175
    },
    "day": "2026-09-17",
    "time": "13:00",
@@ -1790,7 +1791,8 @@
    "year": "2025",
    "_inherited": {
     "year": "qaff-event-desc",
-    "synopsis": "qaff-event-desc"
+    "synopsis": "qaff-event-desc",
+    "tmdb_alta": "creada 2026-08-02 (jdvlazio) — pendiente póster y lbSlug"
    },
    "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026"
   },
