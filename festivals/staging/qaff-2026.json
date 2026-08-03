@@ -357,7 +357,8 @@
      "https://static.wixstatic.com/media/736095_4a26637fc7d44da4bed053ce4c54bbd9~mv2.jpg",
      "https://static.wixstatic.com/media/736095_2728b87f800e42aeadbfb540858da778~mv2.jpg",
      "https://static.wixstatic.com/media/736095_0290ca6859834bc5968bf0df8452f152~mv2.jpg"
-    ]
+    ],
+    "tmdb_id": 1429453
    },
    "day": "2026-09-14",
    "time": "13:00",
@@ -372,9 +373,11 @@
    "year": "2025",
    "_inherited": {
     "year": "qaff-event-desc",
-    "synopsis": "qaff-event-desc"
+    "synopsis": "qaff-event-desc",
+    "lbSlug": "tmdb-1429453 (doble verificación)"
    },
-   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026"
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026",
+   "lbSlug": "mango-2025"
   },
   {
    "title": "A King Displaced",
@@ -650,7 +653,8 @@
      "https://static.wixstatic.com/media/736095_9476c6ae3db849a3923c6ed232438c2a~mv2.jpg",
      "https://static.wixstatic.com/media/736095_ad7a89b2f6824379a6ea7a139d00f691~mv2.jpg",
      "https://static.wixstatic.com/media/736095_57e64c2cac8f4235bd926254484ce6bf~mv2.jpg"
-    ]
+    ],
+    "tmdb_id": 1487969
    },
    "day": "2026-09-15",
    "time": "10:00",
@@ -665,9 +669,13 @@
    "year": "2024",
    "_inherited": {
     "year": "qaff-event-desc",
-    "synopsis": "qaff-event-desc"
+    "synopsis": "qaff-event-desc",
+    "lbSlug": "tmdb-1487969 (doble verificación)",
+    "title_orig": "tmdb-1487969"
    },
-   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026"
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026",
+   "lbSlug": "caida-libre",
+   "title_orig": "Caída Libre"
   },
   {
    "title": "Concrete Moves",
@@ -1158,7 +1166,8 @@
      "https://static.wixstatic.com/media/736095_4577383181884789ba4c164e883d8801~mv2.jpg",
      "https://static.wixstatic.com/media/736095_aeaa21e9382642728c7f64a81aac9da6~mv2.jpg",
      "https://static.wixstatic.com/media/736095_a32e8420c8c74d65b2750011aba3cc7f~mv2.jpg"
-    ]
+    ],
+    "tmdb_id": 1628580
    },
    "day": "2026-09-16",
    "time": "10:20",
@@ -1173,9 +1182,13 @@
    "year": "2025",
    "_inherited": {
     "year": "qaff-event-desc",
-    "synopsis": "qaff-event-desc"
+    "synopsis": "qaff-event-desc",
+    "lbSlug": "tmdb-1628580 (doble verificación)",
+    "title_orig": "tmdb-1628580"
    },
-   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026"
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026",
+   "lbSlug": "celui-qui-pleure",
+   "title_orig": "Celui qui pleure"
   },
   {
    "title": "Mojugba",
@@ -1683,7 +1696,8 @@
      "https://static.wixstatic.com/media/736095_dd75908f4ff14589a0029009a282c872~mv2.jpg",
      "https://static.wixstatic.com/media/736095_a2ba2936bc6349e1a87b5c5ed383d2eb~mv2.jpg",
      "https://static.wixstatic.com/media/736095_d00562f1aa7646b29bf6a2a24a2d5b45~mv2.jpg"
-    ]
+    ],
+    "tmdb_id": 1668923
    },
    "year": "2025",
    "title_orig": "La tinaja",
@@ -1691,7 +1705,8 @@
     "genre": "siembrafest-2026",
     "year": "siembrafest-2026",
     "title_orig": "siembrafest-2026",
-    "synopsis": "qaff-event-desc"
+    "synopsis": "qaff-event-desc",
+    "lbSlug": "tmdb-1668923 (doble verificación)"
    },
    "day": "2026-09-17",
    "time": "10:30",
@@ -1703,7 +1718,8 @@
    "requires_registration": true,
    "is_free": true,
    "type": "film",
-   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026"
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026",
+   "lbSlug": "la-tinaja"
   },
   {
    "title": "Father's Day",
@@ -2125,7 +2141,8 @@
      "https://static.wixstatic.com/media/736095_3240104f3ddf425881851859fa9fd662~mv2.jpg",
      "https://static.wixstatic.com/media/736095_a3d748b2020a4614b5112d4d17288471~mv2.jpg",
      "https://static.wixstatic.com/media/736095_ce1ef8a6aa7d474bac903561d7889b06~mv2.jpg"
-    ]
+    ],
+    "tmdb_id": 1542983
    },
    "day": "2026-09-17",
    "time": "16:25",
@@ -2140,9 +2157,13 @@
    "year": "2025",
    "_inherited": {
     "year": "qaff-event-desc",
-    "synopsis": "qaff-event-desc"
+    "synopsis": "qaff-event-desc",
+    "lbSlug": "tmdb-1542983 (doble verificación)",
+    "title_orig": "tmdb-1542983"
    },
-   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026"
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026",
+   "lbSlug": "memorias-com-vista-para-o-mar",
+   "title_orig": "Memórias com vista para o mar"
   },
   {
    "title": "LAUNDRY (Uhlanjululo)",
@@ -2161,7 +2182,8 @@
      "https://static.wixstatic.com/media/736095_d642dcded575410b820443fef161203f~mv2.jpg",
      "https://static.wixstatic.com/media/736095_1a23c40802d14f1d8f16c6e22c647c21~mv2.jpg",
      "https://static.wixstatic.com/media/736095_ef25327f502a475391f12fecf5710877~mv2.jpg"
-    ]
+    ],
+    "tmdb_id": 1466164
    },
    "day": "2026-09-17",
    "time": "16:30",
@@ -2176,9 +2198,13 @@
    "year": "2025",
    "_inherited": {
     "year": "qaff-event-desc",
-    "synopsis": "qaff-event-desc"
+    "synopsis": "qaff-event-desc",
+    "lbSlug": "tmdb-1466164 (doble verificación)",
+    "title_orig": "tmdb-1466164"
    },
-   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026"
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026",
+   "lbSlug": "laundry-2025",
+   "title_orig": "Uhlanjululo"
   },
   {
    "title": "305 Fishkill Avenue",
@@ -2304,7 +2330,8 @@
      "https://static.wixstatic.com/media/736095_6d5c33a272984f3eaacb2e5f3cca745e~mv2.jpg",
      "https://static.wixstatic.com/media/736095_3d1b5b9c93ae4d85b5ac5e3fc0580f72~mv2.jpg",
      "https://static.wixstatic.com/media/736095_cdbb8ee412234c86bcf8f16b59325337~mv2.jpg"
-    ]
+    ],
+    "tmdb_id": 1463516
    },
    "day": "2026-09-18",
    "time": "14:00",
@@ -2319,9 +2346,13 @@
    "year": "2025",
    "_inherited": {
     "year": "qaff-event-desc",
-    "synopsis": "qaff-event-desc"
+    "synopsis": "qaff-event-desc",
+    "lbSlug": "tmdb-1463516 (doble verificación)",
+    "title_orig": "tmdb-1463516"
    },
-   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026"
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026",
+   "lbSlug": "the-travelers-2025",
+   "title_orig": "Les Voyageurs"
   },
   {
    "title": "THE ANCHORAGE OF THE TIME",
