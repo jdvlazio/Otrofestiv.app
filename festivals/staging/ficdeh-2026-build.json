@@ -2938,7 +2938,7 @@
    "type": "event",
    "section": "🎤 Charlas que Unen",
    "duration": "",
-   "synopsis": "",
+   "synopsis": "A partir de la proyección de XIE. Defensa de la vida, las invitadas conversan sobre su experiencia de liderazgo en defensa del agua.",
    "synopsis_lang": "es",
    "event_kind": "ponencia",
    "day": "2026-08-13",
@@ -2952,8 +2952,7 @@
    "requires_registration": false,
    "_src": {
     "programacion_oficial": "Las guardianas del agua"
-   },
-   "_pendiente": "sinopsis y duración — recuperar de /charlas/<slug> o /talleres/<slug>"
+   }
   },
   {
    "title": "Aminetu",
@@ -3047,7 +3046,7 @@
    "type": "event",
    "section": "🎤 Charlas que Unen",
    "duration": "",
-   "synopsis": "",
+   "synopsis": "Organizaciones de mujeres conversan sobre el incremento de estas violencias en la ciudad.",
    "synopsis_lang": "es",
    "event_kind": "ponencia",
    "day": "2026-08-13",
@@ -3061,8 +3060,7 @@
    "requires_registration": false,
    "_src": {
     "programacion_oficial": "Violencias de género en Barranquilla"
-   },
-   "_pendiente": "sinopsis y duración — recuperar de /charlas/<slug> o /talleres/<slug>"
+   }
   },
   {
    "title": "La Cerrillana",
@@ -3868,7 +3866,7 @@
    "type": "event",
    "section": "🛠️ Formación",
    "duration": "",
-   "synopsis": "",
+   "synopsis": "En alianza con el SENA, una introducción a los fundamentos de la producción audiovisual y la animación 2D.",
    "synopsis_lang": "es",
    "event_kind": "masterclass",
    "day": "2026-08-14",
@@ -3882,15 +3880,14 @@
    "requires_registration": false,
    "_src": {
     "programacion_oficial": "Producción y Animación 2D"
-   },
-   "_pendiente": "sinopsis y duración — recuperar de /charlas/<slug> o /talleres/<slug>"
+   }
   },
   {
    "title": "De los deepfakes y otras violencias digitales",
    "type": "event",
    "section": "🎤 Charlas que Unen",
    "duration": "",
-   "synopsis": "",
+   "synopsis": "¿Qué se está haciendo en Colombia para erradicar estas violencias contra las mujeres? Expertas conversan sobre el tema.",
    "synopsis_lang": "es",
    "event_kind": "ponencia",
    "day": "2026-08-14",
@@ -3904,15 +3901,14 @@
    "requires_registration": false,
    "_src": {
     "programacion_oficial": "De los deepfakes y otras violencias digitales"
-   },
-   "_pendiente": "sinopsis y duración — recuperar de /charlas/<slug> o /talleres/<slug>"
+   }
   },
   {
    "title": "Una ciudad ¿para quién?",
    "type": "event",
    "section": "🎤 Charlas que Unen",
    "duration": "",
-   "synopsis": "",
+   "synopsis": "Un diálogo en torno al derecho a la ciudad en Cartagena.",
    "synopsis_lang": "es",
    "event_kind": "ponencia",
    "day": "2026-08-14",
@@ -3926,8 +3922,7 @@
    "requires_registration": false,
    "_src": {
     "programacion_oficial": "Una ciudad ¿para quién?"
-   },
-   "_pendiente": "sinopsis y duración — recuperar de /charlas/<slug> o /talleres/<slug>"
+   }
   },
   {
    "title": "Honorablé",
@@ -4743,7 +4738,7 @@
    "type": "event",
    "section": "🎤 Charlas que Unen",
    "duration": "",
-   "synopsis": "",
+   "synopsis": "El regreso de la delgadez extrema y su viralización digital representa un riesgo para niños, niñas y jóvenes. Activistas reflexionan sobre el tema.",
    "synopsis_lang": "es",
    "event_kind": "ponencia",
    "day": "2026-08-14",
@@ -4757,8 +4752,7 @@
    "requires_registration": false,
    "_src": {
     "programacion_oficial": "Hackeando los mandatos de la delgadez"
-   },
-   "_pendiente": "sinopsis y duración — recuperar de /charlas/<slug> o /talleres/<slug>"
+   }
   },
   {
    "title": "Hija del volcán",
@@ -4796,7 +4790,7 @@
    "type": "event",
    "section": "🛠️ Formación",
    "duration": "",
-   "synopsis": "",
+   "synopsis": "A través del uso de pinturas y actividades creativas se abordan conceptos básicos de storytelling y composición visual de forma práctica y sin tecnología.",
    "synopsis_lang": "es",
    "event_kind": "masterclass",
    "day": "2026-08-14",
@@ -4810,8 +4804,7 @@
    "requires_registration": false,
    "_src": {
     "programacion_oficial": "Pintando realidades"
-   },
-   "_pendiente": "sinopsis y duración — recuperar de /charlas/<slug> o /talleres/<slug>"
+   }
   },
   {
    "title": "Bojayá, la verdad desde adentro",
@@ -5322,7 +5315,7 @@
    "type": "event",
    "section": "🎤 Charlas que Unen",
    "duration": "",
-   "synopsis": "",
+   "synopsis": "Un espacio de diálogo sobre las nuevas formas de participación y activismo político en las plataformas digitales.",
    "synopsis_lang": "es",
    "event_kind": "ponencia",
    "day": "2026-08-14",
@@ -5336,8 +5329,7 @@
    "requires_registration": false,
    "_src": {
     "programacion_oficial": "Mujeres, juventudes y activismo político en la era digital"
-   },
-   "_pendiente": "sinopsis y duración — recuperar de /charlas/<slug> o /talleres/<slug>"
+   }
   },
   {
    "title": "Herencia: Los cantos de la tierra",
@@ -5614,8 +5606,8 @@
    "year": "2026",
    "section": "🎟️ Invitadas",
    "type": "film",
-   "duration": "",
-   "country": "",
+   "duration": "15 min",
+   "country": "Colombia",
    "synopsis": "",
    "synopsis_lang": "es",
    "poster": "",
@@ -5634,7 +5626,8 @@
     "url": "https://www.ficdeh.com/peliculas?categoria=invitadas",
     "date": "2026-08-05",
     "programacion_oficial": "Juntos podemos curar"
-   }
+   },
+   "_pendiente": "sinopsis — la ficha del festival no la publica"
   },
   {
    "title": "Apotnojushi La Casa del viento",
@@ -5882,7 +5875,7 @@
    "type": "event",
    "section": "🛠️ Formación",
    "duration": "",
-   "synopsis": "",
+   "synopsis": "El barrismo es mucho más que acompañar a un equipo. La pasión por el fútbol puede convertirse en una fuerza para construir comunidad y promover el liderazgo.",
    "synopsis_lang": "es",
    "event_kind": "masterclass",
    "day": "2026-08-15",
@@ -5893,18 +5886,17 @@
    "is_cortos": false,
    "film_list": null,
    "is_free": true,
-   "requires_registration": false,
+   "requires_registration": true,
    "_src": {
     "programacion_oficial": "Barrismo social: Construyendo comunidad desde el aguante"
-   },
-   "_pendiente": "sinopsis y duración — recuperar de /charlas/<slug> o /talleres/<slug>"
+   }
   },
   {
    "title": "Actuación para cine",
    "type": "event",
    "section": "🛠️ Formación",
    "duration": "",
-   "synopsis": "",
+   "synopsis": "Aproximación práctica a la actuación para cine mediante ejercicios orientados al desarrollo de herramientas actorales que permitan abordar la escena desde la corporalidad.",
    "synopsis_lang": "es",
    "event_kind": "masterclass",
    "day": "2026-08-15",
@@ -5918,8 +5910,7 @@
    "requires_registration": false,
    "_src": {
     "programacion_oficial": "Actuación para cine"
-   },
-   "_pendiente": "sinopsis y duración — recuperar de /charlas/<slug> o /talleres/<slug>"
+   }
   },
   {
    "title": "Hija del volcán",
@@ -6934,7 +6925,7 @@
    "type": "event",
    "section": "🎤 Charlas que Unen",
    "duration": "",
-   "synopsis": "",
+   "synopsis": "Cuidado y protección de áreas naturales en riesgo.",
    "synopsis_lang": "es",
    "event_kind": "ponencia",
    "day": "2026-08-15",
@@ -6945,11 +6936,10 @@
    "is_cortos": false,
    "film_list": null,
    "is_free": true,
-   "requires_registration": false,
+   "requires_registration": true,
    "_src": {
     "programacion_oficial": "Desde el centro de la tierra"
-   },
-   "_pendiente": "sinopsis y duración — recuperar de /charlas/<slug> o /talleres/<slug>"
+   }
   },
   {
    "title": "Los reyes del mundo",
@@ -7161,8 +7151,8 @@
    "year": "2026",
    "section": "🎟️ Invitadas",
    "type": "film",
-   "duration": "",
-   "country": "",
+   "duration": "15 min",
+   "country": "Colombia",
    "synopsis": "",
    "synopsis_lang": "es",
    "poster": "",
@@ -7181,7 +7171,8 @@
     "url": "https://www.ficdeh.com/peliculas?categoria=invitadas",
     "date": "2026-08-05",
     "programacion_oficial": "Juntos podemos curar"
-   }
+   },
+   "_pendiente": "sinopsis — la ficha del festival no la publica"
   },
   {
    "title": "Juntas por la paz del Chocó",
@@ -7367,7 +7358,7 @@
    "type": "event",
    "section": "🛠️ Formación",
    "duration": "",
-   "synopsis": "",
+   "synopsis": "Herramientas para la identificación y denuncia de las violencias de género en los medios de comunicación.",
    "synopsis_lang": "es",
    "event_kind": "masterclass",
    "day": "2026-08-15",
@@ -7378,11 +7369,10 @@
    "is_cortos": false,
    "film_list": null,
    "is_free": true,
-   "requires_registration": false,
+   "requires_registration": true,
    "_src": {
     "programacion_oficial": "Visibilizar lo Invisible: Taller de Herramientas frente a las Violencias de Género"
-   },
-   "_pendiente": "sinopsis y duración — recuperar de /charlas/<slug> o /talleres/<slug>"
+   }
   },
   {
    "title": "Indiamenta",
@@ -7447,7 +7437,7 @@
    "type": "event",
    "section": "🛠️ Formación",
    "duration": "",
-   "synopsis": "",
+   "synopsis": "Espacio de encuentro, diálogo e inspiración que reúne a mujeres de la industria audiovisual del Eje Cafetero para compartir sus experiencias.",
    "synopsis_lang": "es",
    "event_kind": "masterclass",
    "day": "2026-08-15",
@@ -7461,15 +7451,14 @@
    "requires_registration": false,
    "_src": {
     "programacion_oficial": "Conversatorio Mujeres en el Audiovisual"
-   },
-   "_pendiente": "sinopsis y duración — recuperar de /charlas/<slug> o /talleres/<slug>"
+   }
   },
   {
    "title": "Resistencias indígenas en Ibagué",
    "type": "event",
    "section": "🎤 Charlas que Unen",
    "duration": "",
-   "synopsis": "",
+   "synopsis": "¿Qué procesos de resistencia lideran las y los indígenas de la ciudad? Las personas invitadas reflexionan sobre el tema.",
    "synopsis_lang": "es",
    "event_kind": "ponencia",
    "day": "2026-08-15",
@@ -7483,8 +7472,7 @@
    "requires_registration": false,
    "_src": {
     "programacion_oficial": "Resistencias indígenas en Ibagué"
-   },
-   "_pendiente": "sinopsis y duración — recuperar de /charlas/<slug> o /talleres/<slug>"
+   }
   },
   {
    "title": "El juego de la vida",
@@ -7522,7 +7510,7 @@
    "type": "event",
    "section": "🎤 Charlas que Unen",
    "duration": "",
-   "synopsis": "",
+   "synopsis": "Una jornada cultural para conmemorar los diez años de la firma de los Acuerdos de Paz en Colombia. Incluye la proyección de cortometrajes.",
    "synopsis_lang": "es",
    "event_kind": "ponencia",
    "day": "2026-08-15",
@@ -7536,8 +7524,7 @@
    "requires_registration": false,
    "_src": {
     "programacion_oficial": "El Arte de la Paz"
-   },
-   "_pendiente": "sinopsis y duración — recuperar de /charlas/<slug> o /talleres/<slug>"
+   }
   },
   {
    "title": "La luz que nos queda",
@@ -7752,7 +7739,7 @@
    "type": "event",
    "section": "🎤 Charlas que Unen",
    "duration": "",
-   "synopsis": "",
+   "synopsis": "Una reflexión sobre el papel de las mujeres buscadoras a partir del documental Soñé su nombre.",
    "synopsis_lang": "es",
    "event_kind": "ponencia",
    "day": "2026-08-15",
@@ -7766,8 +7753,7 @@
    "requires_registration": false,
    "_src": {
     "programacion_oficial": "Ni un minuto de silencio, toda una vida de búsqueda"
-   },
-   "_pendiente": "sinopsis y duración — recuperar de /charlas/<slug> o /talleres/<slug>"
+   }
   },
   {
    "title": "Aquí no entra luz",
@@ -8898,7 +8884,7 @@
    "type": "event",
    "section": "🎤 Charlas que Unen",
    "duration": "",
-   "synopsis": "",
+   "synopsis": "Las periodistas de este proyecto toman los micrófonos y comparten cómo ha sido narrar el conflicto y la paz en Colombia.",
    "synopsis_lang": "es",
    "event_kind": "ponencia",
    "day": "2026-08-16",
@@ -8912,8 +8898,7 @@
    "requires_registration": false,
    "_src": {
     "programacion_oficial": "Colombia +20: una década de periodismo para la paz"
-   },
-   "_pendiente": "sinopsis y duración — recuperar de /charlas/<slug> o /talleres/<slug>"
+   }
   },
   {
    "title": "Por una gota de leche",
@@ -10107,7 +10092,7 @@
    "type": "event",
    "section": "🎤 Charlas que Unen",
    "duration": "",
-   "synopsis": "",
+   "synopsis": "A partir de la proyección de los cortos La Cerillana y Los pliegues de la falda activistas conversan sobre estas experiencia de vida.",
    "synopsis_lang": "es",
    "event_kind": "ponencia",
    "day": "2026-08-17",
@@ -10121,8 +10106,7 @@
    "requires_registration": false,
    "_src": {
     "programacion_oficial": "¡Existimos! Infancias trans en Colombia"
-   },
-   "_pendiente": "sinopsis y duración — recuperar de /charlas/<slug> o /talleres/<slug>"
+   }
   },
   {
    "title": "Cuando la palabra se hace búsqueda",
@@ -10334,7 +10318,7 @@
    "type": "event",
    "section": "🎤 Charlas que Unen",
    "duration": "",
-   "synopsis": "",
+   "synopsis": "Condiciones laborales, creativas y éticas que atraviesan la industria.",
    "synopsis_lang": "es",
    "event_kind": "ponencia",
    "day": "2026-08-17",
@@ -10348,8 +10332,7 @@
    "requires_registration": false,
    "_src": {
     "programacion_oficial": "Tercera charla Derechos audiovisuales"
-   },
-   "_pendiente": "sinopsis y duración — recuperar de /charlas/<slug> o /talleres/<slug>"
+   }
   },
   {
    "title": "La Cerrillana",
@@ -10506,7 +10489,7 @@
    "type": "event",
    "section": "🛠️ Formación",
    "duration": "",
-   "synopsis": "",
+   "synopsis": "Herramientas prácticas para identificar fuentes confiables, verificar información, evitar la desinformación y construir narrativas que generen diálogo.",
    "synopsis_lang": "es",
    "event_kind": "masterclass",
    "day": "2026-08-18",
@@ -10517,11 +10500,10 @@
    "is_cortos": false,
    "film_list": null,
    "is_free": true,
-   "requires_registration": false,
+   "requires_registration": true,
    "_src": {
     "programacion_oficial": "Crear para resistir: la creación de contenido como un acto de responsabilidad"
-   },
-   "_pendiente": "sinopsis y duración — recuperar de /charlas/<slug> o /talleres/<slug>"
+   }
   },
   {
    "title": "Three black men",
@@ -10557,7 +10539,7 @@
    "type": "event",
    "section": "🎤 Charlas que Unen",
    "duration": "",
-   "synopsis": "",
+   "synopsis": "Diálogo sobre las transformaciones que la inteligencia artificial está generando en los procesos creativos y artísticos del país.",
    "synopsis_lang": "es",
    "event_kind": "ponencia",
    "day": "2026-08-18",
@@ -10571,8 +10553,7 @@
    "requires_registration": false,
    "_src": {
     "programacion_oficial": "El arte de moldear la IA"
-   },
-   "_pendiente": "sinopsis y duración — recuperar de /charlas/<slug> o /talleres/<slug>"
+   }
   },
   {
    "title": "Amalgama",
@@ -11669,7 +11650,7 @@
    "type": "event",
    "section": "🎤 Charlas que Unen",
    "duration": "",
-   "synopsis": "",
+   "synopsis": "Una invitación a reflexionar sobre la importancia del río Otún como fuente de vida y patrimonio natural.",
    "synopsis_lang": "es",
    "event_kind": "ponencia",
    "day": "2026-08-18",
@@ -11683,15 +11664,14 @@
    "requires_registration": false,
    "_src": {
     "programacion_oficial": "De Poleka Kasue al Río Otún: ¿Quién cuida el agua del río más importante de la región?"
-   },
-   "_pendiente": "sinopsis y duración — recuperar de /charlas/<slug> o /talleres/<slug>"
+   }
   },
   {
    "title": "Hablemos de salud mental",
    "type": "event",
    "section": "🎤 Charlas que Unen",
    "duration": "",
-   "synopsis": "",
+   "synopsis": "Un espacio de reflexión en torno a la salud mental de los jóvenes chocoanos.",
    "synopsis_lang": "es",
    "event_kind": "ponencia",
    "day": "2026-08-18",
@@ -11705,8 +11685,7 @@
    "requires_registration": false,
    "_src": {
     "programacion_oficial": "Hablemos de salud mental"
-   },
-   "_pendiente": "sinopsis y duración — recuperar de /charlas/<slug> o /talleres/<slug>"
+   }
   },
   {
    "title": "Cuando la palabra se hace búsqueda",
@@ -12128,9 +12107,9 @@
    "year": "2025",
    "section": "🎟️ Invitadas",
    "type": "film",
-   "duration": "",
-   "country": "",
-   "synopsis": "",
+   "duration": "77 min",
+   "country": "Suiza (Kosovo, Estados Unidos, Francia)",
+   "synopsis": "En una pequeña aldea kosovar, una cineasta ayuda a su padre exiliado a reconstruir su infancia con la ayuda de los habitantes del lugar, revelando recuerdos personales, historias familiares olvidadas y las huellas de un pasado borrado por la guerra.",
    "synopsis_lang": "es",
    "poster": "",
    "posterSource": "",
@@ -12275,7 +12254,7 @@
    "type": "event",
    "section": "🎤 Charlas que Unen",
    "duration": "",
-   "synopsis": "",
+   "synopsis": "¿Cuáles han sido los alcances e implicaciones de la Ley 1448 de 2011? Líderes y lideresas reflexionan sobre esto.",
    "synopsis_lang": "es",
    "event_kind": "ponencia",
    "day": "2026-08-19",
@@ -12289,8 +12268,7 @@
    "requires_registration": false,
    "_src": {
     "programacion_oficial": "Reconocer, atender y reparar: 15 años de la Ley de Víctimas"
-   },
-   "_pendiente": "sinopsis y duración — recuperar de /charlas/<slug> o /talleres/<slug>"
+   }
   },
   {
    "title": "La gran hazaña",
@@ -12533,7 +12511,7 @@
    "type": "event",
    "section": "🛠️ Formación",
    "duration": "",
-   "synopsis": "",
+   "synopsis": "La Comisión Fílmica de Bogotá presenta la guía de cuidado y prevención de violencias en el entorno laboral audiovisual.",
    "synopsis_lang": "es",
    "event_kind": "masterclass",
    "day": "2026-08-19",
@@ -12547,8 +12525,7 @@
    "requires_registration": false,
    "_src": {
     "programacion_oficial": "Gritemos ¡Corte!"
-   },
-   "_pendiente": "sinopsis y duración — recuperar de /charlas/<slug> o /talleres/<slug>"
+   }
   },
   {
    "title": "Cuando la palabra se hace búsqueda",
@@ -12971,9 +12948,9 @@
    "year": "2025",
    "section": "🎟️ Invitadas",
    "type": "film",
-   "duration": "",
-   "country": "",
-   "synopsis": "",
+   "duration": "24 min",
+   "country": "Alemania",
+   "synopsis": "De camino a casa tras una cirugía reconstructiva después de sufrir una mutilación genital femenina, Halima habla sobre su estrategia para mantenerse fuerte. Es una figura colectiva que representa a cinco mujeres somalíes que hablan sobre la violencia infligida a sus cuerpos, su huida como mujeres y el poder de la fuerza femenina.",
    "synopsis_lang": "es",
    "poster": "",
    "posterSource": "",
@@ -12998,7 +12975,7 @@
    "type": "event",
    "section": "🎤 Charlas que Unen",
    "duration": "",
-   "synopsis": "",
+   "synopsis": "A partir de la proyección del cortometraje Halima, Juliana Domicó conversa sobre su lucha por la erradicación de esta práctica en el país.",
    "synopsis_lang": "es",
    "event_kind": "ponencia",
    "day": "2026-08-19",
@@ -13012,8 +12989,7 @@
    "requires_registration": false,
    "_src": {
     "programacion_oficial": "¡No más mutilación genital femenina en Colombia!"
-   },
-   "_pendiente": "sinopsis y duración — recuperar de /charlas/<slug> o /talleres/<slug>"
+   }
   },
   {
    "title": "Bojayá, la verdad desde adentro",
@@ -13640,9 +13616,9 @@
    "year": "2025",
    "section": "🎟️ Invitadas",
    "type": "film",
-   "duration": "",
-   "country": "",
-   "synopsis": "",
+   "duration": "77 min",
+   "country": "Suiza (Kosovo, Estados Unidos, Francia)",
+   "synopsis": "En una pequeña aldea kosovar, una cineasta ayuda a su padre exiliado a reconstruir su infancia con la ayuda de los habitantes del lugar, revelando recuerdos personales, historias familiares olvidadas y las huellas de un pasado borrado por la guerra.",
    "synopsis_lang": "es",
    "poster": "",
    "posterSource": "",
@@ -13667,7 +13643,7 @@
    "type": "event",
    "section": "🛠️ Formación",
    "duration": "",
-   "synopsis": "",
+   "synopsis": "¿Cómo construir el universo sonoro de una película? Un recorrido por el desarrollo del sonido directo y la posproducción de la película Semillas.",
    "synopsis_lang": "es",
    "event_kind": "masterclass",
    "day": "2026-08-20",
@@ -13681,8 +13657,7 @@
    "requires_registration": false,
    "_src": {
     "programacion_oficial": "Del rodaje a la mezcla final: el sonido de Semillas"
-   },
-   "_pendiente": "sinopsis y duración — recuperar de /charlas/<slug> o /talleres/<slug>"
+   }
   },
   {
    "title": "Los bibliotecarios",
