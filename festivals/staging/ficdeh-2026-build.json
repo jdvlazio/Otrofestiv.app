@@ -220,8 +220,8 @@
   },
   "Plazoleta del Samán - Cali": {
    "short": "Plazoleta del Samán",
-   "lat": 3.4682202,
-   "lng": -76.4825525,
+   "lat": 3.4498201,
+   "lng": -76.5361556,
    "city": "Cali",
    "address": "Cra. 5 # 6-05, San Pedro"
   },
@@ -295,17 +295,10 @@
    "city": "Tunja",
    "address": "Calle 17 # 15-36"
   },
-  "Sala 2 - Cinemateca de Bogotá - Bogotá": {
-   "short": "Sala 2 - Cinemateca de Bogotá",
-   "lat": 4.6031614,
-   "lng": -74.0676717,
-   "city": "Bogotá",
-   "address": ""
-  },
-  "Centro Cultural - Sala Audiovisual de Cali - Cali": {
-   "short": "Centro Cultural - Sala Audiovisual de Cali",
-   "lat": 3.4682202,
-   "lng": -76.4825525,
+  "Centro Cultural de Cali - Cali": {
+   "short": "Centro Cultural de Cali",
+   "lat": 3.4498201,
+   "lng": -76.5361556,
    "city": "Cali",
    "address": "Cra. 5 # 6-05, San Pedro"
   },
@@ -400,13 +393,6 @@
    "city": "Armenia",
    "address": "Cra. 18 # 7-58"
   },
-  "Auditorio C202 - UNIMINUTO - Bogotá": {
-   "short": "Auditorio C202 - UNIMINUTO",
-   "lat": 4.699716,
-   "lng": -74.09075,
-   "city": "Bogotá",
-   "address": ""
-  },
   "Casa de la Juventud Diego Felipe Becerra - Bogotá": {
    "short": "Casa de la Juventud Diego Felipe Becerra",
    "lat": 4.7408869,
@@ -483,13 +469,6 @@
    "lng": -74.1431784,
    "city": "Bogotá",
    "address": "Calle 65A Sur # 17C-30"
-  },
-  "Laboratorio 1 y 2 - Bogotá": {
-   "short": "Laboratorio 1 y 2",
-   "lat": 4.6031614,
-   "lng": -74.0676717,
-   "city": "Bogotá",
-   "address": "Laboratorio 1 y 2"
   },
   "COMFAMA - Cineclub Bello - Medellín": {
    "short": "COMFAMA - Cineclub Bello",
@@ -596,8 +575,8 @@
    "city": "Pereira",
    "address": "Corregimiento La Florida"
   },
-  "UNIVERSIDAD TECNOLÓGICA DE PEREIRA - BLOQUE 7A / 118 - Pereira": {
-   "short": "UNIVERSIDAD TECNOLÓGICA DE PEREIRA - BLOQUE 7A / 118",
+  "Universidad Tecnológica de Pereira -UTP - Pereira": {
+   "short": "Universidad Tecnológica de Pereira -UTP",
    "lat": 4.7943151,
    "lng": -75.6888918,
    "city": "Pereira",
@@ -771,13 +750,6 @@
    "city": "Armenia",
    "address": "Cra. 23d # 11-25"
   },
-  "Laboratorio 1 y 2 - Cinemateca de Bogotá - Bogotá": {
-   "short": "Laboratorio 1 y 2 - Cinemateca de Bogotá",
-   "lat": 4.6031614,
-   "lng": -74.0676717,
-   "city": "Bogotá",
-   "address": ""
-  },
   "Centro Cultural del Socorro - Cartagena": {
    "short": "Centro Cultural del Socorro",
    "lat": 10.3842515,
@@ -841,13 +813,6 @@
    "city": "Bogotá",
    "address": "Calle 155 # 7-45"
   },
-  "Universidad Tecnológica de Pereira -UTP - Pereira": {
-   "short": "Universidad Tecnológica de Pereira -UTP",
-   "lat": 4.7943151,
-   "lng": -75.6888918,
-   "city": "Pereira",
-   "address": "Bloque 13 Sala Magistral 1 (Carrera 27 #10-02, Barrio Álamos)"
-  },
   "Biblioteca Pública Gabriel García Márquez - Bogotá": {
    "short": "Biblioteca Pública Gabriel García Márquez",
    "lat": 4.5718289,
@@ -903,13 +868,6 @@
    "lng": -74.1177298,
    "city": "Bogotá",
    "address": "Diagonal 76B Sur # 1C-40"
-  },
-  "Universidad Tecnológica de Pereira - Bloque 13, Sala Magistral 1 - Pereira": {
-   "short": "Universidad Tecnológica de Pereira - Bloque 13, Sala Magistral 1",
-   "lat": 4.7943151,
-   "lng": -75.6888918,
-   "city": "Pereira",
-   "address": ""
   },
   "Rueda Libre (La Ceja) - Medellín": {
    "short": "Rueda Libre (La Ceja)",
@@ -973,13 +931,6 @@
    "lng": -74.1091675,
    "city": "Bogotá",
    "address": "Calle 48P BIS D Sur # 5A-43"
-  },
-  "Sala 2 de la Cinemateca - Bogotá": {
-   "short": "Sala 2 de la Cinemateca",
-   "lat": 4.6031614,
-   "lng": -74.0676717,
-   "city": "Bogotá",
-   "address": ""
   },
   "Universidad Alexander von Humboldt - Armenia": {
    "short": "Universidad Alexander von Humboldt",
@@ -2263,14 +2214,15 @@
    "event_kind": "ponencia",
    "day": "2026-08-13",
    "time": "17:00",
-   "venue": "Sala 2 - Cinemateca de Bogotá - Bogotá",
+   "venue": "Cinemateca de Bogotá - Bogotá",
    "day_order": 1,
    "has_qa": false,
    "is_cortos": false,
    "film_list": null,
-   "is_free": true,
+   "sala": "Sala 2",
+   "is_free": false,
    "requires_registration": false,
-   "_ingreso": "",
+   "_ingreso": "Boletería en taquilla",
    "_src": {
     "programacion_oficial": "Las guardianas del agua"
    }
@@ -2288,11 +2240,12 @@
    "posterSource": "custom",
    "day": "2026-08-13",
    "time": "17:00",
-   "venue": "Centro Cultural - Sala Audiovisual de Cali - Cali",
+   "venue": "Centro Cultural de Cali - Cali",
    "day_order": 1,
    "has_qa": false,
    "is_cortos": false,
    "film_list": null,
+   "sala": "Sala Audiovisual",
    "is_free": true,
    "requires_registration": false,
    "_ingreso": "",
@@ -3159,11 +3112,12 @@
    "event_kind": "ponencia",
    "day": "2026-08-14",
    "time": "10:00",
-   "venue": "Auditorio C202 - UNIMINUTO - Bogotá",
+   "venue": "Universidad Minuto de Dios - Bogotá",
    "day_order": 2,
    "has_qa": false,
    "is_cortos": false,
    "film_list": null,
+   "sala": "Auditorio C202",
    "is_free": true,
    "requires_registration": false,
    "_ingreso": "",
@@ -4046,11 +4000,12 @@
    "event_kind": "ponencia",
    "day": "2026-08-14",
    "time": "16:00",
-   "venue": "Laboratorio 1 y 2 - Bogotá",
+   "venue": "Cinemateca de Bogotá - Bogotá",
    "day_order": 2,
    "has_qa": false,
    "is_cortos": false,
    "film_list": null,
+   "sala": "Laboratorio 1 y 2",
    "is_free": true,
    "requires_registration": false,
    "_ingreso": "",
@@ -5231,11 +5186,12 @@
    "event_kind": "masterclass",
    "day": "2026-08-15",
    "time": "09:00",
-   "venue": "UNIVERSIDAD TECNOLÓGICA DE PEREIRA - BLOQUE 7A / 118 - Pereira",
+   "venue": "Universidad Tecnológica de Pereira -UTP - Pereira",
    "day_order": 3,
    "has_qa": false,
    "is_cortos": false,
    "film_list": null,
+   "sala": "Bloque 7A / 118",
    "is_free": true,
    "requires_registration": true,
    "_ingreso": "",
@@ -6776,11 +6732,12 @@
    "event_kind": "masterclass",
    "day": "2026-08-15",
    "time": "16:00",
-   "venue": "Laboratorio 1 y 2 - Bogotá",
+   "venue": "Cinemateca de Bogotá - Bogotá",
    "day_order": 3,
    "has_qa": false,
    "is_cortos": false,
    "film_list": null,
+   "sala": "Laboratorio 1 y 2",
    "is_free": true,
    "requires_registration": true,
    "_ingreso": "",
@@ -8377,11 +8334,12 @@
    "event_kind": "ponencia",
    "day": "2026-08-16",
    "time": "15:30",
-   "venue": "Laboratorio 1 y 2 - Cinemateca de Bogotá - Bogotá",
+   "venue": "Cinemateca de Bogotá - Bogotá",
    "day_order": 4,
    "has_qa": false,
    "is_cortos": false,
    "film_list": null,
+   "sala": "Laboratorio 1 y 2",
    "is_free": true,
    "requires_registration": false,
    "_ingreso": "",
@@ -9605,14 +9563,15 @@
    "event_kind": "ponencia",
    "day": "2026-08-17",
    "time": "16:00",
-   "venue": "Sala 2 - Cinemateca de Bogotá - Bogotá",
+   "venue": "Cinemateca de Bogotá - Bogotá",
    "day_order": 5,
    "has_qa": false,
    "is_cortos": false,
    "film_list": null,
-   "is_free": true,
+   "sala": "Sala 2",
+   "is_free": false,
    "requires_registration": false,
-   "_ingreso": "",
+   "_ingreso": "Boletería en taquilla",
    "_src": {
     "programacion_oficial": "¡Existimos! Infancias trans en Colombia"
    }
@@ -9842,11 +9801,12 @@
    "event_kind": "ponencia",
    "day": "2026-08-17",
    "time": "17:30",
-   "venue": "Laboratorio 1 y 2 - Cinemateca de Bogotá - Bogotá",
+   "venue": "Cinemateca de Bogotá - Bogotá",
    "day_order": 5,
    "has_qa": false,
    "is_cortos": false,
    "film_list": null,
+   "sala": "Laboratorio 1 y 2",
    "is_free": true,
    "requires_registration": false,
    "_ingreso": "",
@@ -9990,11 +9950,12 @@
    "event_kind": "masterclass",
    "day": "2026-08-18",
    "time": "09:00",
-   "venue": "UNIVERSIDAD TECNOLÓGICA DE PEREIRA - BLOQUE 7A / 118 - Pereira",
+   "venue": "Universidad Tecnológica de Pereira -UTP - Pereira",
    "day_order": 6,
    "has_qa": false,
    "is_cortos": false,
    "film_list": null,
+   "sala": "Bloque 7A / 118",
    "is_free": true,
    "requires_registration": true,
    "_ingreso": "",
@@ -10014,11 +9975,12 @@
    "event_kind": "ponencia",
    "day": "2026-08-18",
    "time": "10:00",
-   "venue": "Auditorio C202 - UNIMINUTO - Bogotá",
+   "venue": "Universidad Minuto de Dios - Bogotá",
    "day_order": 6,
    "has_qa": false,
    "is_cortos": false,
    "film_list": null,
+   "sala": "Auditorio C202",
    "is_free": true,
    "requires_registration": false,
    "_ingreso": "",
@@ -11043,11 +11005,12 @@
    "event_kind": "ponencia",
    "day": "2026-08-18",
    "time": "16:00",
-   "venue": "Universidad Tecnológica de Pereira - Bloque 13, Sala Magistral 1 - Pereira",
+   "venue": "Universidad Tecnológica de Pereira -UTP - Pereira",
    "day_order": 6,
    "has_qa": false,
    "is_cortos": false,
    "film_list": null,
+   "sala": "Bloque 13, Sala Magistral 1",
    "is_free": true,
    "requires_registration": false,
    "_ingreso": "",
@@ -12099,14 +12062,15 @@
    "event_kind": "ponencia",
    "day": "2026-08-19",
    "time": "15:30",
-   "venue": "Sala 2 de la Cinemateca - Bogotá",
+   "venue": "Cinemateca de Bogotá - Bogotá",
    "day_order": 7,
    "has_qa": false,
    "is_cortos": false,
    "film_list": null,
-   "is_free": true,
+   "sala": "Sala 2",
+   "is_free": false,
    "requires_registration": false,
-   "_ingreso": "",
+   "_ingreso": "Boletería en taquilla",
    "_src": {
     "programacion_oficial": "¡No más mutilación genital femenina en Colombia!"
    }

@@ -48,12 +48,41 @@ GEO = json.load(open(GEO_PATH, encoding='utf-8')) if os.path.exists(GEO_PATH) el
 # y /talleres/<slug>). El póster vive en /uploads/obras/ del sitio del festival.
 ACT_PATH = f'{REPO}/festivals/staging/ficdeh-2026-actividades.json'
 ACT = json.load(open(ACT_PATH, encoding='utf-8')) if os.path.exists(ACT_PATH) else {}
+# La programación escribe la SALA dentro del nombre de la sede («Sala 2 -
+# Cinemateca de Bogotá»), así que un mismo lugar entra al catálogo como varias
+# sedes distintas: la Cinemateca aparecía 5 veces, y en el filtro por sede se
+# leían como 5 lugares. La sala no es una sede: es un dato de la función, y el
+# schema ya tiene campo para ella (`sala`, que el dominio usa en la clave de
+# anclaje día|hora|sede|sala). Tabla explícita —no heurística sobre el guion,
+# que partiría nombres legítimos como «La Trocha - Casa de la Paz».
+SEDE_SALA = {
+    'Sala 2 - Cinemateca de Bogotá':            ('Cinemateca de Bogotá', 'Sala 2'),
+    'Sala 2 de la Cinemateca':                  ('Cinemateca de Bogotá', 'Sala 2'),
+    'Laboratorio 1 y 2 - Cinemateca de Bogotá': ('Cinemateca de Bogotá', 'Laboratorio 1 y 2'),
+    'Laboratorio 1 y 2':                        ('Cinemateca de Bogotá', 'Laboratorio 1 y 2'),
+    'Auditorio C202 - UNIMINUTO':               ('Universidad Minuto de Dios', 'Auditorio C202'),
+    'UNIVERSIDAD TECNOLÓGICA DE PEREIRA - BLOQUE 7A / 118':
+        ('Universidad Tecnológica de Pereira -UTP', 'Bloque 7A / 118'),
+    'Universidad Tecnológica de Pereira - Bloque 13, Sala Magistral 1':
+        ('Universidad Tecnológica de Pereira -UTP', 'Bloque 13, Sala Magistral 1'),
+    'Centro Cultural - Sala Audiovisual de Cali':
+        ('Centro Cultural de Cali', 'Sala Audiovisual'),
+}
+
+
+def sede_sala(f):
+    """→ (sede, sala). La sala explícita de la fuente gana sobre la del nombre."""
+    sede, sala = SEDE_SALA.get(f['sede'], (f['sede'], ''))
+    return sede, (f.get('sala') or sala or '')
+
+
 venues = {}
 def venue_key(f):
-    key = f"{f['sede']} - {f['ciudad']}"
+    sede, _ = sede_sala(f)
+    key = f'{sede} - {f["ciudad"]}'
     if key not in venues:
         g = GEO.get(key, {})
-        venues[key] = {'short': f['sede'], 'lat': g.get('lat'), 'lng': g.get('lng'),
+        venues[key] = {'short': sede, 'lat': g.get('lat'), 'lng': g.get('lng'),
                        'city': f['ciudad'], 'address': f.get('direccion','') or ''}
         if g.get('_geo'): venues[key]['_geo'] = g['_geo']
     return key
@@ -77,7 +106,7 @@ for f in sorted(funcs, key=lambda x: (x['dia'], x['hora'], x['ciudad'])):
     base = {'day': f['dia'], 'time': f['hora'], 'venue': venue_key(f),
             'day_order': dias.index(f['dia']),
             'has_qa': False, 'is_cortos': False, 'film_list': None,
-            **({'sala': f['sala']} if f.get('sala') else {}),
+            **({'sala': sede_sala(f)[1]} if sede_sala(f)[1] else {}),
             # is_free/requires_registration salen del 'tipo de ingreso' que
             # publica cada función en la programación oficial.
             'is_free': f.get('ingreso','').strip().lower().startswith('entrada libre') or not f.get('ingreso'),
@@ -111,6 +140,25 @@ for f in sorted(funcs, key=lambda x: (x['dia'], x['hora'], x['ciudad'])):
 # ── slots compartidos: mismo día+hora+sede ───────────────────────────────────
 slots = collections.Counter((e['day'], e['time'], e['venue']) for e in films_out)
 compartidos = {k: v for k, v in slots.items() if v > 1}
+
+# Una función no puede tener dos regímenes de entrada: cuando la fuente declara
+# el ingreso en una obra del slot y lo deja vacío en la otra (pasa cuando
+# escribió la misma sala de dos formas), el dato bueno se propaga al grupo.
+_slots = collections.defaultdict(list)
+for e in films_out:
+    if e.get('day') and e.get('time') and e.get('venue'):
+        _slots[(e['day'], e['time'], e['venue'], e.get('sala', ''))].append(e)
+for _k, _g in _slots.items():
+    if len(_g) < 2:
+        continue
+    _ing = next((e['_ingreso'] for e in _g if (e.get('_ingreso') or '').strip()), '')
+    if not _ing:
+        continue
+    for e in _g:
+        if not (e.get('_ingreso') or '').strip():
+            e['_ingreso'] = _ing
+            e['is_free'] = _ing.strip().lower().startswith('entrada libre')
+            e['requires_registration'] = 'inscrip' in _ing.lower()
 
 out = {
   '_etapa': 'B-ensamblada (staging, sin publicar): faltan geocoding, sinopsis de actividades, pase de secciones nuevas y checklist',

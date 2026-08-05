@@ -53,13 +53,14 @@
   "_fuente": "Google Maps (verificado 2026-08-05)"
  },
  "Plazoleta del Samán - Cali": {
-  "lat": 3.4682202,
-  "lng": -76.4825525,
+  "lat": 3.4498201,
+  "lng": -76.5361556,
   "city": "Cali",
   "short": "Plazoleta del Samán",
   "address": "Cra. 5 # 6-05, San Pedro",
-  "_prec": "calle",
-  "_match": "Carrera 5, Jorge Eliécer Gaitán, Comuna 6, Cali ciudad, Cali, Sur, Val"
+  "_prec": "manual",
+  "_match": "Plazoleta del Samán, en el Centro Cultural de Cali (Cra. 5 #6-05)",
+  "_fuente": "Google Maps (verificado 2026-08-05)"
  },
  "Centro de Formación de la Cooperación Española - Cartagena": {
   "lat": 10.4244554,
@@ -1175,5 +1176,15 @@
   "address": "Carrera 22 Calle 33",
   "_prec": "poi",
   "_match": "Teatro Fundadores"
+ },
+ "Centro Cultural de Cali - Cali": {
+  "lat": 3.4498201,
+  "lng": -76.5361556,
+  "city": "Cali",
+  "short": "Centro Cultural de Cali",
+  "address": "Cra. 5 # 6-05, San Pedro",
+  "_prec": "manual",
+  "_match": "Centro Cultural De Cali",
+  "_fuente": "Google Maps (verificado 2026-08-05)"
  }
 }
