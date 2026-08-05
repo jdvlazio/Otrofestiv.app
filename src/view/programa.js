@@ -12,7 +12,7 @@
 
 import { NOTICES, SECTION_ORDER_LIST, _DEFAULT_FEST_ID } from '../config.js';
 import { ICONS, _secLabel, _secLabelFull, _sectionColor, escXML, makeEventPoster, makeProgramPoster, parseProgramTitle } from './components.js';
-import { _dayChips, _getItemPoster, _metaBadges, _plistPosterHtml, _programaStack, dayLabel, durFmt, emptyState, getFilmPoster, isNowShowing, posterParts, sala, vcfg } from './helpers.js';
+import { _dayChips, _getItemPoster, _metaBadges, _plistPosterHtml, _programaStack, dayLabel, durFmt, emptyState, getFilmPoster, isNowShowing, posterParts, sala, vcfg, venueMatches } from './helpers.js';
 import { festivalEnded, toMin } from '../domain/time.js';
 import { screeningPassed } from '../domain/film.js';
 import { state } from '../state/state.js';
@@ -107,7 +107,7 @@ export function renderProgramaListHTML(state){
   try{
   const {FILMS, _activeFestId, watchlist} = state.snapshot();
   let films=FILMS.filter(f=>f.day===activeDay);
-  if(activeVenue!=='all') films=films.filter(f=>vcfg(f.venue).short===activeVenue);
+  if(activeVenue!=='all') films=films.filter(f=>venueMatches(f.venue,activeVenue));
   if(activeSec!=='all') films=films.filter(f=>f.section===activeSec);
   films.sort((a,b)=>{
     const td=toMin(a.time)-toMin(b.time);
@@ -234,8 +234,8 @@ export function _renderExploreListaHTML(state){
   }
   if(activeVenue!=='all'){
     entries=entries.filter(e=>e.screenings.some(s=>{
-      if(s.screenings&&s.screenings.length) return s.screenings.some(sc=>vcfg(sc.venue).short===activeVenue);
-      return vcfg(s.venue).short===activeVenue;
+      if(s.screenings&&s.screenings.length) return s.screenings.some(sc=>venueMatches(sc.venue,activeVenue));
+      return venueMatches(s.venue,activeVenue);
     }));
   }
   const _typeOrder=f=>f.type==='event'?2:f.is_cortos?1:0;
@@ -307,8 +307,8 @@ export function renderPeliculaViewHTML(state){
   }
   if(activeVenue!=='all'){
     entries=entries.filter(e=>e.screenings.some(s=>{
-      if(s.screenings&&s.screenings.length) return s.screenings.some(sc=>vcfg(sc.venue).short===activeVenue);
-      return vcfg(s.venue).short===activeVenue;
+      if(s.screenings&&s.screenings.length) return s.screenings.some(sc=>venueMatches(sc.venue,activeVenue));
+      return venueMatches(s.venue,activeVenue);
     }));
   }
   const _unknownSecMap=(()=>{const m={};let i=SECTION_ORDER_LIST.length;FILMS.forEach(f=>{if(f.section&&SECTION_ORDER_LIST.indexOf(f.section)<0&&!(f.section in m))m[f.section]=i++;});return m;})();
@@ -393,7 +393,7 @@ export function render(){
   if(cartelaMode==='pelicula'){renderSbar();renderPeliculaView();return;}
   lugarClose(); // refresh label if open
   let films=FILMS.filter(f=>f.day===activeDay);
-  if(activeVenue!=='all') films=films.filter(f=>vcfg(f.venue).short===activeVenue);
+  if(activeVenue!=='all') films=films.filter(f=>venueMatches(f.venue,activeVenue));
   if(activeSec!=='all') films=films.filter(f=>f.section===activeSec);
   films.sort((a,b)=>toMin(a.time)-toMin(b.time));
   const cntEl=document.getElementById('cnt');
@@ -448,7 +448,7 @@ export function renderSbar(){
   panel.innerHTML='';
   const isExplorar=activeDay==='all';
   let dayF=isExplorar?FILMS:FILMS.filter(f=>f.day===activeDay);
-  if(activeVenue!=='all') dayF=dayF.filter(f=>vcfg(f.venue).short===activeVenue);
+  if(activeVenue!=='all') dayF=dayF.filter(f=>venueMatches(f.venue,activeVenue));
   const secs=[...new Set(dayF.map(f=>f.section))].sort((a,b)=>{
     const ia=SECTION_ORDER_LIST.indexOf(a),ib=SECTION_ORDER_LIST.indexOf(b);
     if(ia>=0&&ib>=0) return ia-ib;

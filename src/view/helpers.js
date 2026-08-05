@@ -337,6 +337,24 @@ export function vcfg(v){
   return _resolveVenue(v,festVenues);
 }
 
+// venueMatches — EL predicado del filtro de lugar (dueño único, 5 ago 2026).
+// `sel` es 'all', un short de sede, o el centinela 'city:<Ciudad>' (filtro de
+// ciudad entera — festivales multiciudad, FICDEH/Cinemancia). Antes cada
+// superficie comparaba `vcfg(v).short===activeVenue` a mano en 8 sitios; el
+// nivel de ciudad habría exigido tocarlos todos y en el tiempo habrían
+// divergido. Consumido por programa.js (grid/lista/horario) y overlays.js.
+export function venueMatches(v, sel){
+  if(sel==='all') return true;
+  if(sel&&sel.startsWith('city:')) return (vcfg(v).city||'')===sel.slice(5);
+  return vcfg(v).short===sel;
+}
+
+// venueSelLabel — cómo se MUESTRA la selección del filtro (pill de filtros
+// activos): la ciudad sin el centinela, o el short tal cual.
+export function venueSelLabel(sel){
+  return (sel&&sel.startsWith('city:'))?sel.slice(5):sel;
+}
+
 export function sala(v){const m=v.match(/Sala\s*(\d+)/)||v.match(/Sal[oó]n\s*(\d+)/i);return m?'Sala '+m[1]:'';}
 
 export function travelWarn(s1,s2){
