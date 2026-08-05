@@ -46,6 +46,13 @@
    "en": "Community Cinema",
    "archetype": "Perspectivas / Miradas",
    "order": 9
+  },
+  "🎟️ Invitadas": {
+   "oficial": "Invitadas",
+   "en": "Guest Films",
+   "archetype": "Especiales / Eventos",
+   "color": "#E0418A",
+   "order": 10
   }
  },
  "films": [
@@ -1946,6 +1953,63 @@
     "date": "2026-07-25"
    },
    "lbSlug": "xie-defensa-de-la-vida"
+  },
+  {
+   "title": "Halima - Una guía para ser fuerte",
+   "director": "Linda Verweyen",
+   "year": "2025",
+   "section": "🎟️ Invitadas",
+   "type": "film",
+   "duration": "",
+   "country": "",
+   "synopsis": "",
+   "synopsis_lang": "es",
+   "poster": "",
+   "posterSource": "",
+   "lbSlug": "",
+   "_src": {
+    "url": "https://www.ficdeh.com/peliculas?categoria=invitadas",
+    "date": "2026-08-05"
+   },
+   "_pendiente": "duración, país, sinopsis y póster — la ficha nueva del sitio no los expone en la tarjeta"
+  },
+  {
+   "title": "Juntos podemos curar",
+   "director": "Colectivo Yosokwi, Colectivo ArtEmbassy, Fundación Las Mercedes",
+   "year": "2026",
+   "section": "🎟️ Invitadas",
+   "type": "film",
+   "duration": "",
+   "country": "",
+   "synopsis": "",
+   "synopsis_lang": "es",
+   "poster": "",
+   "posterSource": "",
+   "lbSlug": "",
+   "_src": {
+    "url": "https://www.ficdeh.com/peliculas?categoria=invitadas",
+    "date": "2026-08-05"
+   },
+   "_pendiente": "duración, país, sinopsis y póster — la ficha nueva del sitio no los expone en la tarjeta"
+  },
+  {
+   "title": "The Beauty of the donkey",
+   "director": "Dea Gjinovci",
+   "year": "2025",
+   "section": "🎟️ Invitadas",
+   "type": "film",
+   "duration": "",
+   "country": "",
+   "synopsis": "",
+   "synopsis_lang": "es",
+   "poster": "",
+   "posterSource": "",
+   "lbSlug": "",
+   "_src": {
+    "url": "https://www.ficdeh.com/peliculas?categoria=invitadas",
+    "date": "2026-08-05"
+   },
+   "_pendiente": "duración, país, sinopsis y póster — la ficha nueva del sitio no los expone en la tarjeta"
   }
  ]
 }

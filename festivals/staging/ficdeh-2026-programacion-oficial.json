@@ -3,7 +3,8 @@
   "fuente": "Programación oficial publicada en el sitio NUEVO de FICDEH (ficdeh.com migró de WordPress a Next.js/Vercel; las URLs viejas /produccion/<slug>/ dan 404). Ruta: /programacion/<ciudad>?fecha=YYYY-MM-DD. Extraída 5 ago 2026.",
   "metodo": "Vercel bloquea curl con un Security Checkpoint → hay que extraer desde el navegador con sesión. Por ciudad: leer la página base para las fechas y el total declarado, luego una petición por fecha.",
   "verificacion": "Las 11 ciudades cuadran EXACTO contra el total que declara el propio sitio: 433 = 433.",
-  "confirma": "Teatro Colón 12 AGO 5:30 p.m. — coincide con el afiche de Instagram y NO con el 18:00 del sitio viejo. La fuente nueva gana."
+  "confirma": "Teatro Colón 12 AGO 5:30 p.m. — coincide con el afiche de Instagram y NO con el 18:00 del sitio viejo. La fuente nueva gana.",
+  "clasificacion": "Cruzado contra las secciones del propio sitio: /peliculas?categoria=invitadas (3 films), /charlas (18 títulos) y /talleres (22 títulos). Los 6 títulos que parecían películas nuevas eran charlas (De Poleka Kasue, Desde el centro de la tierra, Las guardianas del agua, Ni un minuto de silencio) o talleres (Gritemos ¡Corte!, Pintando realidades)."
  },
  "_resumen": {
   "funciones": 433,
@@ -35,19 +36,28 @@
    "2026-08-24": 1
   },
   "cruzan_catalogo": 392,
-  "films_nuevos": [
-   "De Poleka Kasue al Río Otún: ¿Quién cuida el agua del río más importante de la región?",
-   "Desde el centro de la tierra",
-   "Gritemos ¡Corte!",
-   "Halima - Una guía para ser fuerte",
-   "Juntos podemos curar",
-   "Las guardianas del agua",
-   "Ni un minuto de silencio, toda una vida de búsqueda",
-   "Pintando realidades",
-   "The Beauty of the donkey"
-  ],
   "actividades": 30,
-  "sedes_unicas": 137
+  "sedes_unicas": 137,
+  "por_tipo": {
+   "film": 392,
+   "taller": 18,
+   "charla": 18,
+   "film_invitada": 5
+  },
+  "films_invitados": {
+   "Halima - Una guía para ser fuerte": {
+    "director": "Linda Verweyen",
+    "anio": "2025"
+   },
+   "Juntos podemos curar": {
+    "director": "Colectivo Yosokwi, Colectivo ArtEmbassy, Fundación Las Mercedes",
+    "anio": "2026"
+   },
+   "The Beauty of the donkey": {
+    "director": "Dea Gjinovci",
+    "anio": "2025"
+   }
+  }
  },
  "funciones": [
   {
@@ -288,7 +298,7 @@
    "direccion": "Lab 1 y 2",
    "titulo_programacion": "El documental como proceso social: archivo, memoria y comunidad",
    "obra_catalogo": null,
-   "tipo": "actividad"
+   "tipo": "taller"
   },
   {
    "dia": "2026-08-13",
@@ -298,7 +308,7 @@
    "direccion": "",
    "titulo_programacion": "Las guardianas del agua",
    "obra_catalogo": null,
-   "tipo": "film_nuevo"
+   "tipo": "charla"
   },
   {
    "dia": "2026-08-13",
@@ -328,7 +338,7 @@
    "direccion": "Calle 19A # 1E-37",
    "titulo_programacion": "Fortalece tu discurso: comunicación estratégica para creadoras audiovisuales",
    "obra_catalogo": null,
-   "tipo": "actividad"
+   "tipo": "taller"
   },
   {
    "dia": "2026-08-13",
@@ -338,7 +348,7 @@
    "direccion": "Calle 19A # 1E-37",
    "titulo_programacion": "¿Cómo obtener el reconocimiento como Proyecto Cinematográfico Nacional?",
    "obra_catalogo": null,
-   "tipo": "actividad"
+   "tipo": "taller"
   },
   {
    "dia": "2026-08-13",
@@ -358,7 +368,7 @@
    "direccion": "",
    "titulo_programacion": "De los deepfakes y otras violencias digitales",
    "obra_catalogo": null,
-   "tipo": "actividad"
+   "tipo": "charla"
   },
   {
    "dia": "2026-08-14",
@@ -538,7 +548,7 @@
    "direccion": "Laboratorio 1 y 2",
    "titulo_programacion": "Hackeando los mandatos de la delgadez",
    "obra_catalogo": null,
-   "tipo": "actividad"
+   "tipo": "charla"
   },
   {
    "dia": "2026-08-14",
@@ -558,7 +568,7 @@
    "direccion": "Calle 19A # 1E-37",
    "titulo_programacion": "Contratos esenciales de las obras audiovisuales",
    "obra_catalogo": null,
-   "tipo": "actividad"
+   "tipo": "taller"
   },
   {
    "dia": "2026-08-14",
@@ -568,7 +578,7 @@
    "direccion": "Calle 19A # 1E-37",
    "titulo_programacion": "Certificados de inversión o donación cinematográfica (Ley 814 de 2003)",
    "obra_catalogo": null,
-   "tipo": "actividad"
+   "tipo": "taller"
   },
   {
    "dia": "2026-08-15",
@@ -628,7 +638,7 @@
    "direccion": "Cra. 2 BIS # 6D-30",
    "titulo_programacion": "Ni un minuto de silencio, toda una vida de búsqueda",
    "obra_catalogo": null,
-   "tipo": "film_nuevo"
+   "tipo": "charla"
   },
   {
    "dia": "2026-08-15",
@@ -748,7 +758,7 @@
    "direccion": "Cra. 3 # 19-10",
    "titulo_programacion": "Derechos de autor con EGEDA",
    "obra_catalogo": null,
-   "tipo": "actividad"
+   "tipo": "taller"
   },
   {
    "dia": "2026-08-15",
@@ -858,7 +868,7 @@
    "direccion": "",
    "titulo_programacion": "El Arte de la Paz",
    "obra_catalogo": null,
-   "tipo": "actividad"
+   "tipo": "charla"
   },
   {
    "dia": "2026-08-15",
@@ -878,7 +888,7 @@
    "direccion": "Laboratorio 1 y 2",
    "titulo_programacion": "Visibilizar lo Invisible: Taller de Herramientas frente a las Violencias de Género",
    "obra_catalogo": null,
-   "tipo": "actividad"
+   "tipo": "taller"
   },
   {
    "dia": "2026-08-15",
@@ -1048,7 +1058,7 @@
    "direccion": "",
    "titulo_programacion": "Colombia +20: una década de periodismo para la paz",
    "obra_catalogo": null,
-   "tipo": "actividad"
+   "tipo": "charla"
   },
   {
    "dia": "2026-08-17",
@@ -1068,7 +1078,7 @@
    "direccion": "Cra. 3 # 19-10",
    "titulo_programacion": "Del proyecto al mercado internacional: una mirada práctica al papel del agente de ventas",
    "obra_catalogo": null,
-   "tipo": "actividad"
+   "tipo": "taller"
   },
   {
    "dia": "2026-08-17",
@@ -1168,7 +1178,7 @@
    "direccion": "",
    "titulo_programacion": "Tercera charla Derechos audiovisuales",
    "obra_catalogo": null,
-   "tipo": "actividad"
+   "tipo": "charla"
   },
   {
    "dia": "2026-08-17",
@@ -1178,7 +1188,7 @@
    "direccion": "",
    "titulo_programacion": "¡Existimos! Infancias trans en Colombia",
    "obra_catalogo": null,
-   "tipo": "actividad"
+   "tipo": "charla"
   },
   {
    "dia": "2026-08-18",
@@ -1188,7 +1198,7 @@
    "direccion": "",
    "titulo_programacion": "El arte de moldear la IA",
    "obra_catalogo": null,
-   "tipo": "actividad"
+   "tipo": "charla"
   },
   {
    "dia": "2026-08-18",
@@ -1388,7 +1398,7 @@
    "direccion": "",
    "titulo_programacion": "Reconocer, atender y reparar: 15 años de la Ley de Víctimas",
    "obra_catalogo": null,
-   "tipo": "actividad"
+   "tipo": "charla"
   },
   {
    "dia": "2026-08-19",
@@ -1448,7 +1458,7 @@
    "direccion": "Cra. 3 # 19-10",
    "titulo_programacion": "Halima - Una guía para ser fuerte",
    "obra_catalogo": null,
-   "tipo": "film_nuevo"
+   "tipo": "film_invitada"
   },
   {
    "dia": "2026-08-19",
@@ -1478,7 +1488,7 @@
    "direccion": "",
    "titulo_programacion": "¡No más mutilación genital femenina en Colombia!",
    "obra_catalogo": null,
-   "tipo": "actividad"
+   "tipo": "charla"
   },
   {
    "dia": "2026-08-19",
@@ -1488,7 +1498,7 @@
    "direccion": "Universidad Jorge Tadeo Lozano Salón Oval",
    "titulo_programacion": "Gritemos ¡Corte!",
    "obra_catalogo": null,
-   "tipo": "film_nuevo"
+   "tipo": "taller"
   },
   {
    "dia": "2026-08-20",
@@ -1498,7 +1508,7 @@
    "direccion": "Calle 82 # 10-69",
    "titulo_programacion": "The Beauty of the donkey",
    "obra_catalogo": null,
-   "tipo": "film_nuevo"
+   "tipo": "film_invitada"
   },
   {
    "dia": "2026-08-20",
@@ -1508,7 +1518,7 @@
    "direccion": "UNIMINUTO Sede Calle 90 Estudio de radio 408",
    "titulo_programacion": "Del rodaje a la mezcla final: el sonido de Semillas",
    "obra_catalogo": null,
-   "tipo": "actividad"
+   "tipo": "taller"
   },
   {
    "dia": "2026-08-24",
@@ -1588,7 +1598,7 @@
    "direccion": "Cl. 51 #36-66. Parque Bicentenario",
    "titulo_programacion": "Juntos podemos curar",
    "obra_catalogo": null,
-   "tipo": "film_nuevo"
+   "tipo": "film_invitada"
   },
   {
    "dia": "2026-08-14",
@@ -1718,7 +1728,7 @@
    "direccion": "Cl. 73 #51D-14",
    "titulo_programacion": "Desde el centro de la tierra",
    "obra_catalogo": null,
-   "tipo": "film_nuevo"
+   "tipo": "charla"
   },
   {
    "dia": "2026-08-15",
@@ -1728,7 +1738,7 @@
    "direccion": "Cl. 73 #51D-14",
    "titulo_programacion": "Juntos podemos curar",
    "obra_catalogo": null,
-   "tipo": "film_nuevo"
+   "tipo": "film_invitada"
   },
   {
    "dia": "2026-08-16",
@@ -2198,7 +2208,7 @@
    "direccion": "Calle 4B # 38A-66",
    "titulo_programacion": "The Beauty of the donkey",
    "obra_catalogo": null,
-   "tipo": "film_nuevo"
+   "tipo": "film_invitada"
   },
   {
    "dia": "2026-08-19",
@@ -2228,7 +2238,7 @@
    "direccion": "Calle 76 # 57-61",
    "titulo_programacion": "Violencias de género en Barranquilla",
    "obra_catalogo": null,
-   "tipo": "actividad"
+   "tipo": "charla"
   },
   {
    "dia": "2026-08-13",
@@ -2398,7 +2408,7 @@
    "direccion": "Corporación Universitaria Americana (Cinemateca)",
    "titulo_programacion": "Master Class: Cine documental autobiográfico y memorias",
    "obra_catalogo": null,
-   "tipo": "actividad"
+   "tipo": "taller"
   },
   {
    "dia": "2026-08-16",
@@ -2758,7 +2768,7 @@
    "direccion": "Calle 36 # 2-74, El Centro",
    "titulo_programacion": "Una ciudad ¿para quién?",
    "obra_catalogo": null,
-   "tipo": "actividad"
+   "tipo": "charla"
   },
   {
    "dia": "2026-08-14",
@@ -2918,7 +2928,7 @@
    "direccion": "Cra. 18 # 7-58",
    "titulo_programacion": "Producción y Animación 2D",
    "obra_catalogo": null,
-   "tipo": "actividad"
+   "tipo": "taller"
   },
   {
    "dia": "2026-08-15",
@@ -2928,7 +2938,7 @@
    "direccion": "Calle 22 Norte # 12-39",
    "titulo_programacion": "Conversatorio Mujeres en el Audiovisual",
    "obra_catalogo": null,
-   "tipo": "actividad"
+   "tipo": "taller"
   },
   {
    "dia": "2026-08-15",
@@ -3418,7 +3428,7 @@
    "direccion": "",
    "titulo_programacion": "Resistencias indígenas en Ibagué",
    "obra_catalogo": null,
-   "tipo": "actividad"
+   "tipo": "charla"
   },
   {
    "dia": "2026-08-16",
@@ -3598,7 +3608,7 @@
    "direccion": "Carrera 22 - Calle 67, barrio Ambalá",
    "titulo_programacion": "Gestión y Programación de Muestras y Festivales de Cine",
    "obra_catalogo": null,
-   "tipo": "actividad"
+   "tipo": "taller"
   },
   {
    "dia": "2026-08-19",
@@ -3648,7 +3658,7 @@
    "direccion": "Colegio Carrasquilla (Cra. 7ma)",
    "titulo_programacion": "Actuación para cine",
    "obra_catalogo": null,
-   "tipo": "actividad"
+   "tipo": "taller"
   },
   {
    "dia": "2026-08-15",
@@ -3768,7 +3778,7 @@
    "direccion": "Cra. 7 #27-3 (frente al Colegio Carrasquilla)",
    "titulo_programacion": "Hablemos de salud mental",
    "obra_catalogo": null,
-   "tipo": "actividad"
+   "tipo": "charla"
   },
   {
    "dia": "2026-08-18",
@@ -3848,7 +3858,7 @@
    "direccion": "Carrera 6 Nº 23-58",
    "titulo_programacion": "Mujeres, juventudes y activismo político en la era digital",
    "obra_catalogo": null,
-   "tipo": "actividad"
+   "tipo": "charla"
   },
   {
    "dia": "2026-08-14",
@@ -3878,7 +3888,7 @@
    "direccion": "Carrera 8 #15 - 09",
    "titulo_programacion": "Pintando realidades",
    "obra_catalogo": null,
-   "tipo": "film_nuevo"
+   "tipo": "taller"
   },
   {
    "dia": "2026-08-14",
@@ -3968,7 +3978,7 @@
    "direccion": "UNIVERSIDAD TECNOLÓGICA DE PEREIRA - BLOQUE 7A / 118",
    "titulo_programacion": "Barrismo social: Construyendo comunidad desde el aguante",
    "obra_catalogo": null,
-   "tipo": "actividad"
+   "tipo": "taller"
   },
   {
    "dia": "2026-08-17",
@@ -4048,7 +4058,7 @@
    "direccion": "",
    "titulo_programacion": "De Poleka Kasue al Río Otún: ¿Quién cuida el agua del río más importante de la región?",
    "obra_catalogo": null,
-   "tipo": "film_nuevo"
+   "tipo": "charla"
   },
   {
    "dia": "2026-08-18",
@@ -4058,7 +4068,7 @@
    "direccion": "UNIVERSIDAD TECNOLÓGICA DE PEREIRA - BLOQUE 7A / 118",
    "titulo_programacion": "Crear para resistir: la creación de contenido como un acto de responsabilidad",
    "obra_catalogo": null,
-   "tipo": "actividad"
+   "tipo": "taller"
   },
   {
    "dia": "2026-08-18",
