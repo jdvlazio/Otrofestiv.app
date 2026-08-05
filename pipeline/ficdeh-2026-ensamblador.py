@@ -141,6 +141,27 @@ for f in sorted(funcs, key=lambda x: (x['dia'], x['hora'], x['ciudad'])):
 slots = collections.Counter((e['day'], e['time'], e['venue']) for e in films_out)
 compartidos = {k: v for k, v in slots.items() if v > 1}
 
+# has_qa — solo donde hay confirmación externa verificable. El sitio del
+# festival no lo publica y las fichas de la Cinemateca tampoco (su menú incluye
+# «Conversatorios y charlas», que aparece en las 30 páginas y NO es señal de
+# nada). Hoy: la inauguración de Bogotá, confirmada por el afiche de @ficdeh.
+# has_qa suma 30' a la ocupación de sala (effectiveDuration) → toca conflictos.
+CONF_PATH = f'{REPO}/festivals/staging/ficdeh-2026-confirmaciones-externas.json'
+CONF = json.load(open(CONF_PATH, encoding='utf-8')) if os.path.exists(CONF_PATH) else {}
+for _i in CONF.get('inauguraciones', []):
+    if not _i.get('has_qa'):
+        continue
+    _hit = [e for e in films_out
+            if e['day'] == _i['dia'] and e.get('title') == _i.get('pelicula')]
+    for e in _hit:
+        e['has_qa'] = True
+        e['_qa_detalle'] = _i.get('qa_detalle', '')
+        e['_src']['qa'] = 'confirmaciones-externas (afiche @ficdeh)'
+        if _i.get('ingreso') and not (e.get('_ingreso') or '').strip():
+            e['_ingreso'] = _i['ingreso']
+            e['is_free'] = _i['ingreso'].strip().lower().startswith('entrada libre')
+    print(f"  has_qa · {_i['ciudad']} {_i['dia']} «{_i.get('pelicula')}» → {len(_hit)} función(es)")
+
 # Una función no puede tener dos regímenes de entrada: cuando la fuente declara
 # el ingreso en una obra del slot y lo deja vacío en la otra (pasa cuando
 # escribió la misma sala de dos formas), el dato bueno se propaga al grupo.

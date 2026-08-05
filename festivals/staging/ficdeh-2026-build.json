@@ -1085,18 +1085,20 @@
    "time": "17:30",
    "venue": "Teatro Colón - Bogotá",
    "day_order": 0,
-   "has_qa": false,
+   "has_qa": true,
    "is_cortos": false,
    "film_list": null,
    "is_free": true,
    "requires_registration": false,
-   "_ingreso": "",
+   "_ingreso": "Entrada libre hasta completar aforo",
    "_src": {
     "url": "https://www.ficdeh.com/produccion/bojaya-la-verdad-desde-adentro/",
     "date": "2026-07-25",
-    "programacion_oficial": "Bojayá, la verdad desde adentro"
+    "programacion_oficial": "Bojayá, la verdad desde adentro",
+    "qa": "confirmaciones-externas (afiche @ficdeh)"
    },
-   "type": "film"
+   "type": "film",
+   "_qa_detalle": "Modera Juan Manuel Santos · Director y guionista Ramón Alexander Valencia · Protagonistas María Pascuala Palacios, Heidy Palacios Conchave, Ever Murillo Rivas"
   },
   {
    "title": "Niñxs",
