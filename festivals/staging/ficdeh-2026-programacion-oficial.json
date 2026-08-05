@@ -4,7 +4,9 @@
   "metodo": "Vercel bloquea curl con un Security Checkpoint → hay que extraer desde el navegador con sesión. Por ciudad: leer la página base para las fechas y el total declarado, luego una petición por fecha.",
   "verificacion": "Las 11 ciudades cuadran EXACTO contra el total que declara el propio sitio: 433 = 433.",
   "confirma": "Teatro Colón 12 AGO 5:30 p.m. — coincide con el afiche de Instagram y NO con el 18:00 del sitio viejo. La fuente nueva gana.",
-  "clasificacion": "Cruzado contra las secciones del propio sitio: /peliculas?categoria=invitadas (3 films), /charlas (18 títulos) y /talleres (22 títulos). Los 6 títulos que parecían películas nuevas eran charlas (De Poleka Kasue, Desde el centro de la tierra, Las guardianas del agua, Ni un minuto de silencio) o talleres (Gritemos ¡Corte!, Pintando realidades)."
+  "clasificacion": "Cruzado contra las secciones del propio sitio: /peliculas?categoria=invitadas (3 films), /charlas (18 títulos) y /talleres (22 títulos). Los 6 títulos que parecían películas nuevas eran charlas (De Poleka Kasue, Desde el centro de la tierra, Las guardianas del agua, Ni un minuto de silencio) o talleres (Gritemos ¡Corte!, Pintando realidades).",
+  "decision_actividades": "Aprobado por Juan el 5 ago: entran las 18 Charlas que Unen + 9 talleres abiertos al público (Actuación para cine, Barrismo social, Conversatorio Mujeres en el Audiovisual, Crear para resistir, sonido de Semillas, Gritemos ¡Corte!, Pintando realidades, Producción y Animación 2D, Visibilizar lo Invisible). Quedan fuera 9 de industria (Ley 814, EGEDA, contratos, agente de ventas, comunicación estratégica, documental como proceso social, Escribir la memoria, Gestión y Programación de Muestras) y, por otra razón, La mirada desobediente (Buenos Aires), Ser en la Virtualidad (Ciudad de México), Cuerpos en movimiento y Charla CFB y PUFA (sin fecha/hora) y Master Class Barranquilla (sin hora).",
+  "descripciones": "Las descripciones de cada actividad viven en /charlas/<slug> y /talleres/<slug> del sitio nuevo (campos: descripción, Ciudad, Fecha, Hora, Modalidad, tallerista/panelistas, formulario de inscripción). Recuperar al ensamblar Etapa B."
  },
  "_resumen": {
   "funciones": 433,
@@ -57,7 +59,9 @@
     "director": "Dea Gjinovci",
     "anio": "2025"
    }
-  }
+  },
+  "actividades_en_app": 27,
+  "talleres_excluidos": 9
  },
  "funciones": [
   {
@@ -68,7 +72,8 @@
    "direccion": "Calle 10 # 5-32",
    "titulo_programacion": "Bojayá, la verdad desde adentro",
    "obra_catalogo": "Bojayá, la verdad desde adentro",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-13",
@@ -78,7 +83,8 @@
    "direccion": "Calle 146 # 138A-99",
    "titulo_programacion": "Sukua",
    "obra_catalogo": "Sukua",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-13",
@@ -88,7 +94,8 @@
    "direccion": "Calle 146 # 138A-99",
    "titulo_programacion": "Los pliegues de la falda",
    "obra_catalogo": "Los pliegues de la falda",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-13",
@@ -98,7 +105,8 @@
    "direccion": "Calle 146 # 138A-99",
    "titulo_programacion": "Más allá",
    "obra_catalogo": "Más allá",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-13",
@@ -108,7 +116,8 @@
    "direccion": "Calle 146 # 138A-99",
    "titulo_programacion": "La Cerrillana",
    "obra_catalogo": "La Cerrillana",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-13",
@@ -118,7 +127,8 @@
    "direccion": "Calle 146 # 138A-99",
    "titulo_programacion": "Chaski Pacha",
    "obra_catalogo": "Chaski Pacha",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-13",
@@ -128,7 +138,8 @@
    "direccion": "Calle 37 BIS B Sur # 2B",
    "titulo_programacion": "La independencia",
    "obra_catalogo": "La independencia",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-13",
@@ -138,7 +149,8 @@
    "direccion": "Calle 37 BIS B Sur # 2B",
    "titulo_programacion": "Una torreta en llamas",
    "obra_catalogo": "Una torreta en llamas",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-13",
@@ -148,7 +160,8 @@
    "direccion": "Calle 37 BIS B Sur # 2B",
    "titulo_programacion": "La gran hazaña",
    "obra_catalogo": "La gran hazaña",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-13",
@@ -158,7 +171,8 @@
    "direccion": "Calle 37 BIS B Sur # 2B",
    "titulo_programacion": "El Paraíso de Ainara",
    "obra_catalogo": "El Paraíso de Ainara",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-13",
@@ -168,7 +182,8 @@
    "direccion": "Cra. 69J # 73-29",
    "titulo_programacion": "Herencia: Los cantos de la tierra",
    "obra_catalogo": "Herencia: Los cantos de la tierra",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-13",
@@ -178,7 +193,8 @@
    "direccion": "Cra. 78N BIS # 39-33",
    "titulo_programacion": "Mujeres modernas",
    "obra_catalogo": "Mujeres modernas",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-13",
@@ -188,7 +204,8 @@
    "direccion": "Calle 74 # 20 B -19",
    "titulo_programacion": "Feito Pipa",
    "obra_catalogo": "Feito Pipa",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-13",
@@ -198,7 +215,8 @@
    "direccion": "Cra. 3 # 19-10",
    "titulo_programacion": "Niñxs",
    "obra_catalogo": "Niñxs",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-13",
@@ -208,7 +226,8 @@
    "direccion": "Cra. 3 # 19-10",
    "titulo_programacion": "El silencio de la tierra",
    "obra_catalogo": "El silencio de la tierra",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-13",
@@ -218,7 +237,8 @@
    "direccion": "Cra. 3 # 19-10",
    "titulo_programacion": "Aminetu",
    "obra_catalogo": "Aminetu",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-13",
@@ -228,7 +248,8 @@
    "direccion": "Cra. 3 # 19-10",
    "titulo_programacion": "La Raya",
    "obra_catalogo": "La Raya",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-13",
@@ -238,7 +259,8 @@
    "direccion": "Cra. 3 # 19-10",
    "titulo_programacion": "XIE. Defensa de la vida",
    "obra_catalogo": "XIE. Defensa de la vida",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-13",
@@ -248,7 +270,8 @@
    "direccion": "Cra. 3 # 19-10",
    "titulo_programacion": "Cartas a la tierra",
    "obra_catalogo": "Cartas a la tierra",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-13",
@@ -258,7 +281,8 @@
    "direccion": "Cra. 3 # 19-10",
    "titulo_programacion": "Más allá",
    "obra_catalogo": "Más allá",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-13",
@@ -268,7 +292,8 @@
    "direccion": "Cra. 3 # 19-10",
    "titulo_programacion": "Pawa",
    "obra_catalogo": "Pawa",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-13",
@@ -278,7 +303,8 @@
    "direccion": "Cra. 3 # 19-10",
    "titulo_programacion": "Clemencia",
    "obra_catalogo": "Clemencia",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-13",
@@ -288,7 +314,8 @@
    "direccion": "Cra. 3 # 19-10",
    "titulo_programacion": "Tuktu, Padre Maíz",
    "obra_catalogo": "Tuktu, Padre Maíz",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-13",
@@ -298,7 +325,9 @@
    "direccion": "Lab 1 y 2",
    "titulo_programacion": "El documental como proceso social: archivo, memoria y comunidad",
    "obra_catalogo": null,
-   "tipo": "taller"
+   "tipo": "taller",
+   "en_app": false,
+   "_motivo_exclusion": "industria/profesionalización (con inscripción, público de industria)"
   },
   {
    "dia": "2026-08-13",
@@ -308,7 +337,8 @@
    "direccion": "",
    "titulo_programacion": "Las guardianas del agua",
    "obra_catalogo": null,
-   "tipo": "charla"
+   "tipo": "charla",
+   "en_app": true
   },
   {
    "dia": "2026-08-13",
@@ -318,7 +348,8 @@
    "direccion": "Cra. 44 # 58C-90 Sur",
    "titulo_programacion": "El valor de la palabra",
    "obra_catalogo": "El valor de la palabra",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-13",
@@ -328,7 +359,8 @@
    "direccion": "Transversal 70D # 60-90",
    "titulo_programacion": "La Raya",
    "obra_catalogo": "La Raya",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-13",
@@ -338,7 +370,9 @@
    "direccion": "Calle 19A # 1E-37",
    "titulo_programacion": "Fortalece tu discurso: comunicación estratégica para creadoras audiovisuales",
    "obra_catalogo": null,
-   "tipo": "taller"
+   "tipo": "taller",
+   "en_app": false,
+   "_motivo_exclusion": "industria/profesionalización (con inscripción, público de industria)"
   },
   {
    "dia": "2026-08-13",
@@ -348,7 +382,9 @@
    "direccion": "Calle 19A # 1E-37",
    "titulo_programacion": "¿Cómo obtener el reconocimiento como Proyecto Cinematográfico Nacional?",
    "obra_catalogo": null,
-   "tipo": "taller"
+   "tipo": "taller",
+   "en_app": false,
+   "_motivo_exclusion": "industria/profesionalización (con inscripción, público de industria)"
   },
   {
    "dia": "2026-08-13",
@@ -358,7 +394,8 @@
    "direccion": "Diagonal 81F # 72 C-1",
    "titulo_programacion": "Semillas",
    "obra_catalogo": "Semillas",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-14",
@@ -368,7 +405,8 @@
    "direccion": "",
    "titulo_programacion": "De los deepfakes y otras violencias digitales",
    "obra_catalogo": null,
-   "tipo": "charla"
+   "tipo": "charla",
+   "en_app": true
   },
   {
    "dia": "2026-08-14",
@@ -378,7 +416,8 @@
    "direccion": "Cra. 20 # 19 Sur - 26",
    "titulo_programacion": "Del otro lado",
    "obra_catalogo": "Del otro lado",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-14",
@@ -388,7 +427,8 @@
    "direccion": "Calle 65A Sur # 17C-30",
    "titulo_programacion": "El bosque",
    "obra_catalogo": "El bosque",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-14",
@@ -398,7 +438,8 @@
    "direccion": "Calle 65A # 1-40",
    "titulo_programacion": "La luz por primera vez",
    "obra_catalogo": "La luz por primera vez",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-14",
@@ -408,7 +449,8 @@
    "direccion": "Cra. 125 # 132C-82",
    "titulo_programacion": "Honorablé",
    "obra_catalogo": "Honorablé",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-14",
@@ -418,7 +460,8 @@
    "direccion": "Cra. 82J # 70A-52",
    "titulo_programacion": "Por una gota de leche",
    "obra_catalogo": "Por una gota de leche",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-14",
@@ -428,7 +471,8 @@
    "direccion": "Calle 44 # 14-60",
    "titulo_programacion": "La Cerrillana",
    "obra_catalogo": "La Cerrillana",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-14",
@@ -438,7 +482,8 @@
    "direccion": "Calle 44 # 14-60",
    "titulo_programacion": "Apolo",
    "obra_catalogo": "Apolo",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-14",
@@ -448,7 +493,8 @@
    "direccion": "Calle 74 # 20 B -19",
    "titulo_programacion": "Hija del volcán",
    "obra_catalogo": "Hija del volcán",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-14",
@@ -458,7 +504,8 @@
    "direccion": "Cinemateca del Museo La Tertulia - Cra. 1 # 5-105, Oeste",
    "titulo_programacion": "Amor rebelde",
    "obra_catalogo": "Amor rebelde",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-14",
@@ -468,7 +515,8 @@
    "direccion": "Cra. 3 # 19-10",
    "titulo_programacion": "Amor rebelde",
    "obra_catalogo": "Amor rebelde",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-14",
@@ -478,7 +526,8 @@
    "direccion": "Cra. 3 # 19-10",
    "titulo_programacion": "1982",
    "obra_catalogo": "1982",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-14",
@@ -488,7 +537,8 @@
    "direccion": "Cra. 3 # 19-10",
    "titulo_programacion": "Cuando un río se convierte en mar",
    "obra_catalogo": "Cuando un río se convierte en mar",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-14",
@@ -498,7 +548,8 @@
    "direccion": "Cra. 3 # 19-10",
    "titulo_programacion": "Silenciada (Silenced)",
    "obra_catalogo": "Silenciada",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-14",
@@ -508,7 +559,8 @@
    "direccion": "Cra. 3 # 19-10",
    "titulo_programacion": "Carmela y los caminantes",
    "obra_catalogo": "Carmela y los caminantes",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-14",
@@ -518,7 +570,8 @@
    "direccion": "Calle 146 # 138A-99",
    "titulo_programacion": "El bosque",
    "obra_catalogo": "El bosque",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-14",
@@ -528,7 +581,8 @@
    "direccion": "Calle 146 # 138A-99",
    "titulo_programacion": "Niñxs",
    "obra_catalogo": "Niñxs",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-14",
@@ -538,7 +592,8 @@
    "direccion": "Calle 10 # 3-16",
    "titulo_programacion": "Padamlágan (night lihgt)",
    "obra_catalogo": "Padamlágan",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-14",
@@ -548,7 +603,8 @@
    "direccion": "Laboratorio 1 y 2",
    "titulo_programacion": "Hackeando los mandatos de la delgadez",
    "obra_catalogo": null,
-   "tipo": "charla"
+   "tipo": "charla",
+   "en_app": true
   },
   {
    "dia": "2026-08-14",
@@ -558,7 +614,8 @@
    "direccion": "Calle 91C Sur # 18H-14",
    "titulo_programacion": "Semillas",
    "obra_catalogo": "Semillas",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-14",
@@ -568,7 +625,9 @@
    "direccion": "Calle 19A # 1E-37",
    "titulo_programacion": "Contratos esenciales de las obras audiovisuales",
    "obra_catalogo": null,
-   "tipo": "taller"
+   "tipo": "taller",
+   "en_app": false,
+   "_motivo_exclusion": "industria/profesionalización (con inscripción, público de industria)"
   },
   {
    "dia": "2026-08-14",
@@ -578,7 +637,9 @@
    "direccion": "Calle 19A # 1E-37",
    "titulo_programacion": "Certificados de inversión o donación cinematográfica (Ley 814 de 2003)",
    "obra_catalogo": null,
-   "tipo": "taller"
+   "tipo": "taller",
+   "en_app": false,
+   "_motivo_exclusion": "industria/profesionalización (con inscripción, público de industria)"
   },
   {
    "dia": "2026-08-15",
@@ -588,7 +649,8 @@
    "direccion": "Calle 165 # 7-52",
    "titulo_programacion": "Indiamenta",
    "obra_catalogo": "Indiamenta",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-15",
@@ -598,7 +660,8 @@
    "direccion": "Calle 165 # 7-52",
    "titulo_programacion": "Muerto no",
    "obra_catalogo": "Muerto no",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-15",
@@ -608,7 +671,8 @@
    "direccion": "Calle 165 # 7-52",
    "titulo_programacion": "Celeste",
    "obra_catalogo": "Celeste",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-15",
@@ -618,7 +682,8 @@
    "direccion": "Calle 165 # 7-52",
    "titulo_programacion": "Más allá de la corona",
    "obra_catalogo": "Más allá de la corona",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-15",
@@ -628,7 +693,8 @@
    "direccion": "Cra. 2 BIS # 6D-30",
    "titulo_programacion": "Soñé su nombre",
    "obra_catalogo": "Soñé su nombre",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-15",
@@ -638,7 +704,8 @@
    "direccion": "Cra. 2 BIS # 6D-30",
    "titulo_programacion": "Ni un minuto de silencio, toda una vida de búsqueda",
    "obra_catalogo": null,
-   "tipo": "charla"
+   "tipo": "charla",
+   "en_app": true
   },
   {
    "dia": "2026-08-15",
@@ -648,7 +715,8 @@
    "direccion": "Diagonal 73B Sur # 82F-34",
    "titulo_programacion": "Floresmiro",
    "obra_catalogo": "Floresmiro",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-15",
@@ -658,7 +726,8 @@
    "direccion": "Calle 70 # 88A-7",
    "titulo_programacion": "Por una gota de leche",
    "obra_catalogo": "Por una gota de leche",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-15",
@@ -668,7 +737,8 @@
    "direccion": "Cra. 1 Este # 10-48 Sur",
    "titulo_programacion": "Bojayá, la verdad desde adentro",
    "obra_catalogo": "Bojayá, la verdad desde adentro",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-15",
@@ -678,7 +748,8 @@
    "direccion": "Calle 24 # 27A-31",
    "titulo_programacion": "La luz por primera vez",
    "obra_catalogo": "La luz por primera vez",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-15",
@@ -688,7 +759,8 @@
    "direccion": "Diagonal 73H SUR # 78-38",
    "titulo_programacion": "La Raya",
    "obra_catalogo": "La Raya",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-15",
@@ -698,7 +770,8 @@
    "direccion": "Calle 127 A # 87",
    "titulo_programacion": "La independencia",
    "obra_catalogo": "La independencia",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-15",
@@ -708,7 +781,8 @@
    "direccion": "Calle 127 A # 87",
    "titulo_programacion": "Una torreta en llamas",
    "obra_catalogo": "Una torreta en llamas",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-15",
@@ -718,7 +792,8 @@
    "direccion": "Calle 127 A # 87",
    "titulo_programacion": "La gran hazaña",
    "obra_catalogo": "La gran hazaña",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-15",
@@ -728,7 +803,8 @@
    "direccion": "Calle 127 A # 87",
    "titulo_programacion": "El Paraíso de Ainara",
    "obra_catalogo": "El Paraíso de Ainara",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-15",
@@ -738,7 +814,8 @@
    "direccion": "Calle 85 Sur # 94-75",
    "titulo_programacion": "El valor de la palabra",
    "obra_catalogo": "El valor de la palabra",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-15",
@@ -748,7 +825,8 @@
    "direccion": "Cinemateca del Museo La Tertulia - Cra. 1 # 5-105, Oeste",
    "titulo_programacion": "La Bonga",
    "obra_catalogo": "La Bonga",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-15",
@@ -758,7 +836,9 @@
    "direccion": "Cra. 3 # 19-10",
    "titulo_programacion": "Derechos de autor con EGEDA",
    "obra_catalogo": null,
-   "tipo": "taller"
+   "tipo": "taller",
+   "en_app": false,
+   "_motivo_exclusion": "industria/profesionalización (con inscripción, público de industria)"
   },
   {
    "dia": "2026-08-15",
@@ -768,7 +848,8 @@
    "direccion": "Cra. 3 # 19-10",
    "titulo_programacion": "Semillas",
    "obra_catalogo": "Semillas",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-15",
@@ -778,7 +859,8 @@
    "direccion": "Cra. 3 # 19-10",
    "titulo_programacion": "Desierto verde",
    "obra_catalogo": "Desierto verde",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-15",
@@ -788,7 +870,8 @@
    "direccion": "Cra. 3 # 19-10",
    "titulo_programacion": "Cuando la palabra se hace búsqueda",
    "obra_catalogo": "Cuando la palabra se hace búsqueda",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-15",
@@ -798,7 +881,8 @@
    "direccion": "Cra. 3 # 19-10",
    "titulo_programacion": "Aquí no entra luz",
    "obra_catalogo": "Aquí no entra luz",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-15",
@@ -808,7 +892,8 @@
    "direccion": "Cra. 3 # 19-10",
    "titulo_programacion": "Eva",
    "obra_catalogo": "Eva",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-15",
@@ -818,7 +903,8 @@
    "direccion": "Cra. 3 # 19-10",
    "titulo_programacion": "One in a million (Uno entre un millón)",
    "obra_catalogo": "One in a million",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-15",
@@ -828,7 +914,8 @@
    "direccion": "Cra. 3 # 19-10",
    "titulo_programacion": "La Bonga",
    "obra_catalogo": "La Bonga",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-15",
@@ -838,7 +925,8 @@
    "direccion": "Calle 146 # 138A-99",
    "titulo_programacion": "La Raya",
    "obra_catalogo": "La Raya",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-15",
@@ -848,7 +936,8 @@
    "direccion": "Calle 146 # 138A-99",
    "titulo_programacion": "Semillas",
    "obra_catalogo": "Semillas",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-15",
@@ -858,7 +947,8 @@
    "direccion": "Calle 10 # 3-16",
    "titulo_programacion": "Un nuevo amanecer",
    "obra_catalogo": "Un nuevo amanecer",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-15",
@@ -868,7 +958,8 @@
    "direccion": "",
    "titulo_programacion": "El Arte de la Paz",
    "obra_catalogo": null,
-   "tipo": "charla"
+   "tipo": "charla",
+   "en_app": true
   },
   {
    "dia": "2026-08-15",
@@ -878,7 +969,8 @@
    "direccion": "Cra. 13 # 36-37",
    "titulo_programacion": "La luz que nos queda",
    "obra_catalogo": "La luz que nos queda",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-15",
@@ -888,7 +980,9 @@
    "direccion": "Laboratorio 1 y 2",
    "titulo_programacion": "Visibilizar lo Invisible: Taller de Herramientas frente a las Violencias de Género",
    "obra_catalogo": null,
-   "tipo": "taller"
+   "tipo": "taller",
+   "en_app": true,
+   "_motivo_exclusion": ""
   },
   {
    "dia": "2026-08-15",
@@ -898,7 +992,8 @@
    "direccion": "Calle 136B Sur # 3A-48",
    "titulo_programacion": "Héroes del silencio",
    "obra_catalogo": "Héroes del silencio",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-15",
@@ -908,7 +1003,8 @@
    "direccion": "Calle 136B Sur # 3A-48",
    "titulo_programacion": "El Paraíso de Ainara",
    "obra_catalogo": "El Paraíso de Ainara",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-15",
@@ -918,7 +1014,8 @@
    "direccion": "Calle 136B Sur # 3A-48",
    "titulo_programacion": "In four stops",
    "obra_catalogo": "In four stops",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-15",
@@ -928,7 +1025,8 @@
    "direccion": "Calle 136B Sur # 3A-48",
    "titulo_programacion": "Akababuru: Expresión de asombro",
    "obra_catalogo": "Akababuru: Expresión de asombro",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-15",
@@ -938,7 +1036,8 @@
    "direccion": "Calle 136B Sur # 3A-48",
    "titulo_programacion": "La gran hazaña",
    "obra_catalogo": "La gran hazaña",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-15",
@@ -948,7 +1047,8 @@
    "direccion": "Calle 136B Sur # 3A-48",
    "titulo_programacion": "Herencia: Los cantos de la tierra",
    "obra_catalogo": "Herencia: Los cantos de la tierra",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-16",
@@ -958,7 +1058,8 @@
    "direccion": "Cra. 3 # 19-10",
    "titulo_programacion": "Feito Pipa",
    "obra_catalogo": "Feito Pipa",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-16",
@@ -968,7 +1069,8 @@
    "direccion": "Cra. 3 # 19-10",
    "titulo_programacion": "Por una gota de leche",
    "obra_catalogo": "Por una gota de leche",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-16",
@@ -978,7 +1080,8 @@
    "direccion": "Cra. 3 # 19-10",
    "titulo_programacion": "Three black men (Tres hombres negros)",
    "obra_catalogo": "Three black men",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-16",
@@ -988,7 +1091,8 @@
    "direccion": "Cra. 3 # 19-10",
    "titulo_programacion": "Notas sobre un destierro",
    "obra_catalogo": "Notas sobre un destierro",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-16",
@@ -998,7 +1102,8 @@
    "direccion": "Cra. 3 # 19-10",
    "titulo_programacion": "El silencio de los palafitos",
    "obra_catalogo": "El silencio de los palafitos",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-16",
@@ -1008,7 +1113,8 @@
    "direccion": "Calle 146 # 138A-99",
    "titulo_programacion": "Héroes del silencio",
    "obra_catalogo": "Héroes del silencio",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-16",
@@ -1018,7 +1124,8 @@
    "direccion": "Calle 146 # 138A-99",
    "titulo_programacion": "El Paraíso de Ainara",
    "obra_catalogo": "El Paraíso de Ainara",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-16",
@@ -1028,7 +1135,8 @@
    "direccion": "Calle 146 # 138A-99",
    "titulo_programacion": "In four stops",
    "obra_catalogo": "In four stops",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-16",
@@ -1038,7 +1146,8 @@
    "direccion": "Calle 146 # 138A-99",
    "titulo_programacion": "Akababuru: Expresión de asombro",
    "obra_catalogo": "Akababuru: Expresión de asombro",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-16",
@@ -1048,7 +1157,8 @@
    "direccion": "Calle 146 # 138A-99",
    "titulo_programacion": "La gran hazaña",
    "obra_catalogo": "La gran hazaña",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-16",
@@ -1058,7 +1168,8 @@
    "direccion": "",
    "titulo_programacion": "Colombia +20: una década de periodismo para la paz",
    "obra_catalogo": null,
-   "tipo": "charla"
+   "tipo": "charla",
+   "en_app": true
   },
   {
    "dia": "2026-08-17",
@@ -1068,7 +1179,8 @@
    "direccion": "Cra. 3 # 19-10",
    "titulo_programacion": "Andariega",
    "obra_catalogo": "Andariega",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-17",
@@ -1078,7 +1190,9 @@
    "direccion": "Cra. 3 # 19-10",
    "titulo_programacion": "Del proyecto al mercado internacional: una mirada práctica al papel del agente de ventas",
    "obra_catalogo": null,
-   "tipo": "taller"
+   "tipo": "taller",
+   "en_app": false,
+   "_motivo_exclusion": "industria/profesionalización (con inscripción, público de industria)"
   },
   {
    "dia": "2026-08-17",
@@ -1088,7 +1202,8 @@
    "direccion": "Cra. 3 # 19-10",
    "titulo_programacion": "American Doctor (Médico estadounidense)",
    "obra_catalogo": "American Doctor",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-17",
@@ -1098,7 +1213,8 @@
    "direccion": "Cra. 3 # 19-10",
    "titulo_programacion": "Los pliegues de la falda",
    "obra_catalogo": "Los pliegues de la falda",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-17",
@@ -1108,7 +1224,8 @@
    "direccion": "Cra. 3 # 19-10",
    "titulo_programacion": "La Cerrillana",
    "obra_catalogo": "La Cerrillana",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-17",
@@ -1118,7 +1235,8 @@
    "direccion": "Cra. 3 # 19-10",
    "titulo_programacion": "La independencia",
    "obra_catalogo": "La independencia",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-17",
@@ -1128,7 +1246,8 @@
    "direccion": "Cra. 3 # 19-10",
    "titulo_programacion": "Cayenas libertarias",
    "obra_catalogo": "Cayenas libertarias",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-17",
@@ -1138,7 +1257,8 @@
    "direccion": "Cra. 3 # 19-10",
    "titulo_programacion": "El Paraíso de Ainara",
    "obra_catalogo": "El Paraíso de Ainara",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-17",
@@ -1148,7 +1268,8 @@
    "direccion": "Cra. 3 # 19-10",
    "titulo_programacion": "Todos los días",
    "obra_catalogo": "Todos los días",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-17",
@@ -1158,7 +1279,8 @@
    "direccion": "Cra. 3 # 19-10",
    "titulo_programacion": "Sukua",
    "obra_catalogo": "Sukua",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-17",
@@ -1168,7 +1290,8 @@
    "direccion": "Cra. 3 # 19-10",
    "titulo_programacion": "El juego de la vida",
    "obra_catalogo": "El juego de la vida",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-17",
@@ -1178,7 +1301,8 @@
    "direccion": "",
    "titulo_programacion": "Tercera charla Derechos audiovisuales",
    "obra_catalogo": null,
-   "tipo": "charla"
+   "tipo": "charla",
+   "en_app": true
   },
   {
    "dia": "2026-08-17",
@@ -1188,7 +1312,8 @@
    "direccion": "",
    "titulo_programacion": "¡Existimos! Infancias trans en Colombia",
    "obra_catalogo": null,
-   "tipo": "charla"
+   "tipo": "charla",
+   "en_app": true
   },
   {
    "dia": "2026-08-18",
@@ -1198,7 +1323,8 @@
    "direccion": "",
    "titulo_programacion": "El arte de moldear la IA",
    "obra_catalogo": null,
-   "tipo": "charla"
+   "tipo": "charla",
+   "en_app": true
   },
   {
    "dia": "2026-08-18",
@@ -1208,7 +1334,8 @@
    "direccion": "Cra. 92 # 146 C - 24",
    "titulo_programacion": "Herencia: Los cantos de la tierra",
    "obra_catalogo": "Herencia: Los cantos de la tierra",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-18",
@@ -1218,7 +1345,8 @@
    "direccion": "Calle 48B SUR # 21-13",
    "titulo_programacion": "Floresmiro",
    "obra_catalogo": "Floresmiro",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-18",
@@ -1228,7 +1356,8 @@
    "direccion": "Calle 170 # 67-51",
    "titulo_programacion": "Sukua",
    "obra_catalogo": "Sukua",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-18",
@@ -1238,7 +1367,8 @@
    "direccion": "Calle 170 # 67-51",
    "titulo_programacion": "Los pliegues de la falda",
    "obra_catalogo": "Los pliegues de la falda",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-18",
@@ -1248,7 +1378,8 @@
    "direccion": "Calle 170 # 67-51",
    "titulo_programacion": "Más allá",
    "obra_catalogo": "Más allá",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-18",
@@ -1258,7 +1389,8 @@
    "direccion": "Calle 170 # 67-51",
    "titulo_programacion": "La Cerrillana",
    "obra_catalogo": "La Cerrillana",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-18",
@@ -1268,7 +1400,8 @@
    "direccion": "Calle 170 # 67-51",
    "titulo_programacion": "Chaski Pacha",
    "obra_catalogo": "Chaski Pacha",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-18",
@@ -1278,7 +1411,8 @@
    "direccion": "Diagonal 76B Sur # 1C-40",
    "titulo_programacion": "El silencio de los palafitos",
    "obra_catalogo": "El silencio de los palafitos",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-18",
@@ -1288,7 +1422,8 @@
    "direccion": "Av. Ciudad de Cali # 6C-09",
    "titulo_programacion": "Semillas",
    "obra_catalogo": "Semillas",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-18",
@@ -1298,7 +1433,8 @@
    "direccion": "Cra. 2 BIS # 6D-30",
    "titulo_programacion": "La Raya",
    "obra_catalogo": "La Raya",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-18",
@@ -1308,7 +1444,8 @@
    "direccion": "Cra. 12 # 76A-28 Sur",
    "titulo_programacion": "Por una gota de leche",
    "obra_catalogo": "Por una gota de leche",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-18",
@@ -1318,7 +1455,8 @@
    "direccion": "Cra. 3 Este # 9-58",
    "titulo_programacion": "La luz por primera vez",
    "obra_catalogo": "La luz por primera vez",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-18",
@@ -1328,7 +1466,8 @@
    "direccion": "Calle 155 # 7-45",
    "titulo_programacion": "Mujeres modernas",
    "obra_catalogo": "Mujeres modernas",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-18",
@@ -1338,7 +1477,8 @@
    "direccion": "Diagonal 73H SUR # 78-38",
    "titulo_programacion": "Akababuru: Expresión de asombro",
    "obra_catalogo": "Akababuru: Expresión de asombro",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-18",
@@ -1348,7 +1488,8 @@
    "direccion": "Diagonal 73H SUR # 78-38",
    "titulo_programacion": "La gran hazaña",
    "obra_catalogo": "La gran hazaña",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-18",
@@ -1358,7 +1499,8 @@
    "direccion": "Diagonal 73H SUR # 78-38",
    "titulo_programacion": "Héroes del silencio",
    "obra_catalogo": "Héroes del silencio",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-18",
@@ -1368,7 +1510,8 @@
    "direccion": "Diagonal 73H SUR # 78-38",
    "titulo_programacion": "El Paraíso de Ainara",
    "obra_catalogo": "El Paraíso de Ainara",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-18",
@@ -1378,7 +1521,8 @@
    "direccion": "Diagonal 73H SUR # 78-38",
    "titulo_programacion": "In four stops",
    "obra_catalogo": "In four stops",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-18",
@@ -1388,7 +1532,8 @@
    "direccion": "Calle 74 # 20 B -19",
    "titulo_programacion": "El valor de la palabra",
    "obra_catalogo": "El valor de la palabra",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-19",
@@ -1398,7 +1543,8 @@
    "direccion": "",
    "titulo_programacion": "Reconocer, atender y reparar: 15 años de la Ley de Víctimas",
    "obra_catalogo": null,
-   "tipo": "charla"
+   "tipo": "charla",
+   "en_app": true
   },
   {
    "dia": "2026-08-19",
@@ -1408,7 +1554,8 @@
    "direccion": "Diagonal 21A Sur # 19-54 sur",
    "titulo_programacion": "El silencio de los palafitos",
    "obra_catalogo": "El silencio de los palafitos",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-19",
@@ -1418,7 +1565,8 @@
    "direccion": "Calle 48P BIS D Sur # 5A-43",
    "titulo_programacion": "El bosque",
    "obra_catalogo": "El bosque",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-19",
@@ -1428,7 +1576,8 @@
    "direccion": "Calle 17A # 118-25",
    "titulo_programacion": "El bosque",
    "obra_catalogo": "El bosque",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-19",
@@ -1438,7 +1587,8 @@
    "direccion": "Cinemateca del Museo La Tertulia - Cra. 1 # 5-105, Oeste",
    "titulo_programacion": "Después del frío",
    "obra_catalogo": "Después del frío",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-19",
@@ -1448,7 +1598,8 @@
    "direccion": "Cra. 3 # 19-10",
    "titulo_programacion": "La luz por primera vez",
    "obra_catalogo": "La luz por primera vez",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-19",
@@ -1458,7 +1609,8 @@
    "direccion": "Cra. 3 # 19-10",
    "titulo_programacion": "Halima - Una guía para ser fuerte",
    "obra_catalogo": null,
-   "tipo": "film_invitada"
+   "tipo": "film_invitada",
+   "en_app": true
   },
   {
    "dia": "2026-08-19",
@@ -1468,7 +1620,8 @@
    "direccion": "Cra. 3 # 19-10",
    "titulo_programacion": "Floresmiro",
    "obra_catalogo": "Floresmiro",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-19",
@@ -1478,7 +1631,8 @@
    "direccion": "Cra. 3 # 19-10",
    "titulo_programacion": "Después del frío",
    "obra_catalogo": "Después del frío",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-19",
@@ -1488,7 +1642,8 @@
    "direccion": "",
    "titulo_programacion": "¡No más mutilación genital femenina en Colombia!",
    "obra_catalogo": null,
-   "tipo": "charla"
+   "tipo": "charla",
+   "en_app": true
   },
   {
    "dia": "2026-08-19",
@@ -1498,7 +1653,9 @@
    "direccion": "Universidad Jorge Tadeo Lozano Salón Oval",
    "titulo_programacion": "Gritemos ¡Corte!",
    "obra_catalogo": null,
-   "tipo": "taller"
+   "tipo": "taller",
+   "en_app": true,
+   "_motivo_exclusion": ""
   },
   {
    "dia": "2026-08-20",
@@ -1508,7 +1665,8 @@
    "direccion": "Calle 82 # 10-69",
    "titulo_programacion": "The Beauty of the donkey",
    "obra_catalogo": null,
-   "tipo": "film_invitada"
+   "tipo": "film_invitada",
+   "en_app": true
   },
   {
    "dia": "2026-08-20",
@@ -1518,7 +1676,9 @@
    "direccion": "UNIMINUTO Sede Calle 90 Estudio de radio 408",
    "titulo_programacion": "Del rodaje a la mezcla final: el sonido de Semillas",
    "obra_catalogo": null,
-   "tipo": "taller"
+   "tipo": "taller",
+   "en_app": true,
+   "_motivo_exclusion": ""
   },
   {
    "dia": "2026-08-24",
@@ -1528,7 +1688,8 @@
    "direccion": "Av. La Esmeralda # 57-60",
    "titulo_programacion": "Los bibliotecarios (The librarians)",
    "obra_catalogo": "Los bibliotecarios",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-13",
@@ -1538,7 +1699,8 @@
    "direccion": "Cra. 45 #53 - 24. Centro",
    "titulo_programacion": "One in a million (Uno entre un millón)",
    "obra_catalogo": "One in a million",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-14",
@@ -1548,7 +1710,8 @@
    "direccion": "Cl. 19 # 23-15",
    "titulo_programacion": "Republic of Amnesia (República de la amnesia)",
    "obra_catalogo": "Republic of Amnesia",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-14",
@@ -1558,7 +1721,8 @@
    "direccion": "Cra. 45 #53 - 24. Centro",
    "titulo_programacion": "El valor de la palabra",
    "obra_catalogo": "El valor de la palabra",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-14",
@@ -1568,7 +1732,8 @@
    "direccion": "Carrera 44 # 48 - 18",
    "titulo_programacion": "Aquí no entra luz",
    "obra_catalogo": "Aquí no entra luz",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-14",
@@ -1578,7 +1743,8 @@
    "direccion": "Cra. 49 #46-57",
    "titulo_programacion": "Hija del volcán",
    "obra_catalogo": "Hija del volcán",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-14",
@@ -1588,7 +1754,8 @@
    "direccion": "Cl. 47 #43 88. Centro",
    "titulo_programacion": "1982",
    "obra_catalogo": "1982",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-14",
@@ -1598,7 +1765,8 @@
    "direccion": "Cl. 51 #36-66. Parque Bicentenario",
    "titulo_programacion": "Juntos podemos curar",
    "obra_catalogo": null,
-   "tipo": "film_invitada"
+   "tipo": "film_invitada",
+   "en_app": true
   },
   {
    "dia": "2026-08-14",
@@ -1608,7 +1776,8 @@
    "direccion": "Cl. 51 #36-66. Parque Bicentenario",
    "titulo_programacion": "Apotnojushi La Casa del viento",
    "obra_catalogo": "Apotnojushi La Casa del viento",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-14",
@@ -1618,7 +1787,8 @@
    "direccion": "Cl. 51 #36-66. Parque Bicentenario",
    "titulo_programacion": "Kaugsankamalla: mientras vivamos",
    "obra_catalogo": "Kaugsankamalla: mientras vivamos",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-14",
@@ -1628,7 +1798,8 @@
    "direccion": "Carrera 52 # 71 - 11",
    "titulo_programacion": "El juego de la vida",
    "obra_catalogo": "El juego de la vida",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-15",
@@ -1638,7 +1809,8 @@
    "direccion": "Cl. 50 #50-21 Piso 3",
    "titulo_programacion": "El Paraíso de Ainara",
    "obra_catalogo": "El Paraíso de Ainara",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-15",
@@ -1648,7 +1820,8 @@
    "direccion": "Cl. 50 #50-21 Piso 3",
    "titulo_programacion": "In four stops",
    "obra_catalogo": "In four stops",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-15",
@@ -1658,7 +1831,8 @@
    "direccion": "Cl. 50 #50-21 Piso 3",
    "titulo_programacion": "Akababuru: Expresión de asombro",
    "obra_catalogo": "Akababuru: Expresión de asombro",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-15",
@@ -1668,7 +1842,8 @@
    "direccion": "Cl. 50 #50-21 Piso 3",
    "titulo_programacion": "La gran hazaña",
    "obra_catalogo": "La gran hazaña",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-15",
@@ -1678,7 +1853,8 @@
    "direccion": "Cl. 50 #50-21 Piso 3",
    "titulo_programacion": "Héroes del silencio",
    "obra_catalogo": "Héroes del silencio",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-15",
@@ -1688,7 +1864,8 @@
    "direccion": "Cra. 45 #53 - 24. Centro",
    "titulo_programacion": "Los reyes del mundo",
    "obra_catalogo": "Los reyes del mundo",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-15",
@@ -1698,7 +1875,8 @@
    "direccion": "Cra. 45 #53 - 24. Centro",
    "titulo_programacion": "Los reyes del mundo",
    "obra_catalogo": "Los reyes del mundo",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-15",
@@ -1708,7 +1886,8 @@
    "direccion": "Cra. 45 #53 - 24. Centro",
    "titulo_programacion": "Bojayá, la verdad desde adentro",
    "obra_catalogo": "Bojayá, la verdad desde adentro",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-15",
@@ -1718,7 +1897,8 @@
    "direccion": "Carrera 44 # 48 - 18",
    "titulo_programacion": "La luz por primera vez",
    "obra_catalogo": "La luz por primera vez",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-15",
@@ -1728,7 +1908,8 @@
    "direccion": "Cl. 73 #51D-14",
    "titulo_programacion": "Desde el centro de la tierra",
    "obra_catalogo": null,
-   "tipo": "charla"
+   "tipo": "charla",
+   "en_app": true
   },
   {
    "dia": "2026-08-15",
@@ -1738,7 +1919,8 @@
    "direccion": "Cl. 73 #51D-14",
    "titulo_programacion": "Juntos podemos curar",
    "obra_catalogo": null,
-   "tipo": "film_invitada"
+   "tipo": "film_invitada",
+   "en_app": true
   },
   {
    "dia": "2026-08-16",
@@ -1748,7 +1930,8 @@
    "direccion": "Cra. 45 #53 - 24. Centro",
    "titulo_programacion": "Más allá",
    "obra_catalogo": "Más allá",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-16",
@@ -1758,7 +1941,8 @@
    "direccion": "Cra. 45 #53 - 24. Centro",
    "titulo_programacion": "Celeste",
    "obra_catalogo": "Celeste",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-16",
@@ -1768,7 +1952,8 @@
    "direccion": "Cra. 45 #53 - 24. Centro",
    "titulo_programacion": "Akababuru: Expresión de asombro",
    "obra_catalogo": "Akababuru: Expresión de asombro",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-16",
@@ -1778,7 +1963,8 @@
    "direccion": "Cra. 45 #53 - 24. Centro",
    "titulo_programacion": "Todos los días",
    "obra_catalogo": "Todos los días",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-16",
@@ -1788,7 +1974,8 @@
    "direccion": "Cra. 45 #53 - 24. Centro",
    "titulo_programacion": "Muerto no",
    "obra_catalogo": "Muerto no",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-16",
@@ -1798,7 +1985,8 @@
    "direccion": "Cra. 45 #53 - 24. Centro",
    "titulo_programacion": "Sukua",
    "obra_catalogo": "Sukua",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-16",
@@ -1808,7 +1996,8 @@
    "direccion": "Cra. 45 #53 - 24. Centro",
    "titulo_programacion": "La Cerrillana",
    "obra_catalogo": "La Cerrillana",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-16",
@@ -1818,7 +2007,8 @@
    "direccion": "Cra. 45 #53 - 24. Centro",
    "titulo_programacion": "La hija cóndor",
    "obra_catalogo": "La hija cóndor",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-16",
@@ -1828,7 +2018,8 @@
    "direccion": "Carrera 44 # 48 - 18",
    "titulo_programacion": "El verano de Jahia (Jahia's Summer)",
    "obra_catalogo": "El verano de Jahia",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-17",
@@ -1838,7 +2029,8 @@
    "direccion": "Dg. 75B #2A-120Rotonda Comercial Las Américas",
    "titulo_programacion": "Semillas",
    "obra_catalogo": "Semillas",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-18",
@@ -1848,7 +2040,8 @@
    "direccion": "Cra. 45 #53 - 24. Centro",
    "titulo_programacion": "Cuando un río se convierte en mar",
    "obra_catalogo": "Cuando un río se convierte en mar",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-18",
@@ -1858,7 +2051,8 @@
    "direccion": "Cra. 49 #46-57",
    "titulo_programacion": "Desierto verde",
    "obra_catalogo": "Desierto verde",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-18",
@@ -1868,7 +2062,8 @@
    "direccion": "Cl. 47 #43 88. Centro",
    "titulo_programacion": "El silencio de los palafitos",
    "obra_catalogo": "El silencio de los palafitos",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-18",
@@ -1878,7 +2073,8 @@
    "direccion": "Teatro Municipal Juan de Dios Aranzazu: Cra. 22 #18-77",
    "titulo_programacion": "La Raya",
    "obra_catalogo": "La Raya",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-19",
@@ -1888,7 +2084,8 @@
    "direccion": "Cl. 19 # 23-15",
    "titulo_programacion": "Amor rebelde",
    "obra_catalogo": "Amor rebelde",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-19",
@@ -1898,7 +2095,8 @@
    "direccion": "Cl. 19 # 23-15",
    "titulo_programacion": "Amor rebelde",
    "obra_catalogo": "Amor rebelde",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-19",
@@ -1908,7 +2106,8 @@
    "direccion": "Dg. 75B #2A-120Rotonda Comercial Las Américas",
    "titulo_programacion": "Feito Pipa",
    "obra_catalogo": "Feito Pipa",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-19",
@@ -1918,7 +2117,8 @@
    "direccion": "Cra. 45 #53 - 24. Centro",
    "titulo_programacion": "Tierra que habla",
    "obra_catalogo": "Tierra que habla",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-19",
@@ -1928,7 +2128,8 @@
    "direccion": "Cl. 51 #36-66. Parque Bicentenario",
    "titulo_programacion": "La luz que nos queda",
    "obra_catalogo": "La luz que nos queda",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-19",
@@ -1938,7 +2139,8 @@
    "direccion": "Cl. 51 #36-66. Parque Bicentenario",
    "titulo_programacion": "Cuando la palabra se hace búsqueda",
    "obra_catalogo": "Cuando la palabra se hace búsqueda",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-19",
@@ -1948,7 +2150,8 @@
    "direccion": "Cl. 51 #36-66. Parque Bicentenario",
    "titulo_programacion": "Cobija de recuerdos",
    "obra_catalogo": "Cobija de recuerdos",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-10",
@@ -1958,7 +2161,8 @@
    "direccion": "Cra. 47a # 44-32, Mariano Ramos",
    "titulo_programacion": "La Raya",
    "obra_catalogo": "La Raya",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-10",
@@ -1968,7 +2172,8 @@
    "direccion": "Cra. 47a # 44-32, Mariano Ramos",
    "titulo_programacion": "La Raya",
    "obra_catalogo": "La Raya",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-11",
@@ -1978,7 +2183,8 @@
    "direccion": "Cra. 5 # 6-05, San Pedro",
    "titulo_programacion": "Bajo fuego",
    "obra_catalogo": "Bajo fuego",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-11",
@@ -1988,7 +2194,8 @@
    "direccion": "",
    "titulo_programacion": "La Raya",
    "obra_catalogo": "La Raya",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-12",
@@ -1998,7 +2205,8 @@
    "direccion": "Cra. 47b # 45-47, Mariano Ramos",
    "titulo_programacion": "El Paraíso de Ainara",
    "obra_catalogo": "El Paraíso de Ainara",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-12",
@@ -2008,7 +2216,8 @@
    "direccion": "Cra. 47b # 45-47, Mariano Ramos",
    "titulo_programacion": "In four stops",
    "obra_catalogo": "In four stops",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-12",
@@ -2018,7 +2227,8 @@
    "direccion": "Cra. 47b # 45-47, Mariano Ramos",
    "titulo_programacion": "Akababuru: Expresión de asombro",
    "obra_catalogo": "Akababuru: Expresión de asombro",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-12",
@@ -2028,7 +2238,8 @@
    "direccion": "Cra. 47b # 45-47, Mariano Ramos",
    "titulo_programacion": "La gran hazaña",
    "obra_catalogo": "La gran hazaña",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-12",
@@ -2038,7 +2249,8 @@
    "direccion": "Cra. 47b # 45-47, Mariano Ramos",
    "titulo_programacion": "Héroes del silencio",
    "obra_catalogo": "Héroes del silencio",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-12",
@@ -2048,7 +2260,8 @@
    "direccion": "Cra. 5 # 6-05, San Pedro",
    "titulo_programacion": "Los reyes del mundo",
    "obra_catalogo": "Los reyes del mundo",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-13",
@@ -2058,7 +2271,8 @@
    "direccion": "Cra. 5 # 6-05, San Pedro",
    "titulo_programacion": "Aminetu",
    "obra_catalogo": "Aminetu",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-13",
@@ -2068,7 +2282,8 @@
    "direccion": "Calle 4B # 38A-66",
    "titulo_programacion": "Feito Pipa",
    "obra_catalogo": "Feito Pipa",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-13",
@@ -2078,7 +2293,8 @@
    "direccion": "Cra. 1 # 5-105, Oeste",
    "titulo_programacion": "Bojayá, la verdad desde adentro",
    "obra_catalogo": "Bojayá, la verdad desde adentro",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-13",
@@ -2088,7 +2304,8 @@
    "direccion": "",
    "titulo_programacion": "Republic of Amnesia (República de la amnesia)",
    "obra_catalogo": "Republic of Amnesia",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-14",
@@ -2098,7 +2315,8 @@
    "direccion": "Comuna 14, entre la transversal 103 con calle 96 y calle 73 con transversal 73, entre los barrios Alfonso Bonilla Aragón y Marroquín 2",
    "titulo_programacion": "Cobija de recuerdos",
    "obra_catalogo": "Cobija de recuerdos",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-14",
@@ -2108,7 +2326,8 @@
    "direccion": "Comuna 14, entre la transversal 103 con calle 96 y calle 73 con transversal 73, entre los barrios Alfonso Bonilla Aragón y Marroquín 2",
    "titulo_programacion": "Y el río lloró",
    "obra_catalogo": "Y el río lloró",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-14",
@@ -2118,7 +2337,8 @@
    "direccion": "Comuna 14, entre la transversal 103 con calle 96 y calle 73 con transversal 73, entre los barrios Alfonso Bonilla Aragón y Marroquín 2",
    "titulo_programacion": "Cuando la palabra se hace búsqueda",
    "obra_catalogo": "Cuando la palabra se hace búsqueda",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-14",
@@ -2128,7 +2348,8 @@
    "direccion": "Calle 4B # 38A-66",
    "titulo_programacion": "Hija del volcán",
    "obra_catalogo": "Hija del volcán",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-14",
@@ -2138,7 +2359,8 @@
    "direccion": "Cra. 1 # 5-105, Oeste",
    "titulo_programacion": "El valor de la palabra",
    "obra_catalogo": "El valor de la palabra",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-15",
@@ -2148,7 +2370,8 @@
    "direccion": "Calle 4B # 38A-66",
    "titulo_programacion": "El silencio de los palafitos",
    "obra_catalogo": "El silencio de los palafitos",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-15",
@@ -2158,7 +2381,8 @@
    "direccion": "Cra. 1 # 5-105, Oeste",
    "titulo_programacion": "Más allá de la corona",
    "obra_catalogo": "Más allá de la corona",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-15",
@@ -2168,7 +2392,8 @@
    "direccion": "Cra. 1 # 5-105, Oeste",
    "titulo_programacion": "Honorablé",
    "obra_catalogo": "Honorablé",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-15",
@@ -2178,7 +2403,8 @@
    "direccion": "Cra. 1 # 5-105, Oeste",
    "titulo_programacion": "La hija cóndor",
    "obra_catalogo": "La hija cóndor",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-16",
@@ -2188,7 +2414,8 @@
    "direccion": "Cra. 1 # 5-105, Oeste",
    "titulo_programacion": "Un nuevo amanecer",
    "obra_catalogo": "Un nuevo amanecer",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-16",
@@ -2198,7 +2425,8 @@
    "direccion": "Cra. 1 # 5-105, Oeste",
    "titulo_programacion": "Andariega",
    "obra_catalogo": "Andariega",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-18",
@@ -2208,7 +2436,8 @@
    "direccion": "Calle 4B # 38A-66",
    "titulo_programacion": "The Beauty of the donkey",
    "obra_catalogo": null,
-   "tipo": "film_invitada"
+   "tipo": "film_invitada",
+   "en_app": true
   },
   {
    "dia": "2026-08-19",
@@ -2218,7 +2447,8 @@
    "direccion": "Cra. 1 # 5-105, Oeste",
    "titulo_programacion": "Cuando la palabra se hace búsqueda",
    "obra_catalogo": "Cuando la palabra se hace búsqueda",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-12",
@@ -2228,7 +2458,8 @@
    "direccion": "Calle 52 # 54-75",
    "titulo_programacion": "Niñxs",
    "obra_catalogo": "Niñxs",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-13",
@@ -2238,7 +2469,8 @@
    "direccion": "Calle 76 # 57-61",
    "titulo_programacion": "Violencias de género en Barranquilla",
    "obra_catalogo": null,
-   "tipo": "charla"
+   "tipo": "charla",
+   "en_app": true
   },
   {
    "dia": "2026-08-13",
@@ -2248,7 +2480,8 @@
    "direccion": "Calle 76 # 57-61",
    "titulo_programacion": "Cayenas libertarias",
    "obra_catalogo": "Cayenas libertarias",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-13",
@@ -2258,7 +2491,8 @@
    "direccion": "Cra. 54 # 64-73",
    "titulo_programacion": "La Cerrillana",
    "obra_catalogo": "La Cerrillana",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-13",
@@ -2268,7 +2502,8 @@
    "direccion": "Cra. 54 # 64-73",
    "titulo_programacion": "Madres de nacimiento",
    "obra_catalogo": "Madres de nacimiento",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-13",
@@ -2278,7 +2513,8 @@
    "direccion": "Cra. 54 # 64-73",
    "titulo_programacion": "Más allá",
    "obra_catalogo": "Más allá",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-13",
@@ -2288,7 +2524,8 @@
    "direccion": "Cra. 54 # 64-73",
    "titulo_programacion": "Celeste",
    "obra_catalogo": "Celeste",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-13",
@@ -2298,7 +2535,8 @@
    "direccion": "Cra. 54 # 64-73",
    "titulo_programacion": "Muerto no",
    "obra_catalogo": "Muerto no",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-13",
@@ -2308,7 +2546,8 @@
    "direccion": "Cra. 54 # 64-73",
    "titulo_programacion": "Sukua",
    "obra_catalogo": "Sukua",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-13",
@@ -2318,7 +2557,8 @@
    "direccion": "Edificio World Trade Center (Calle 76 # 54-11, loc B3)",
    "titulo_programacion": "Desierto verde",
    "obra_catalogo": "Desierto verde",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-13",
@@ -2328,7 +2568,8 @@
    "direccion": "Calle 72 # 41C-64",
    "titulo_programacion": "El silencio de la tierra",
    "obra_catalogo": "El silencio de la tierra",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-13",
@@ -2338,7 +2579,8 @@
    "direccion": "Cra. 50 # 79-155",
    "titulo_programacion": "Por una gota de leche",
    "obra_catalogo": "Por una gota de leche",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-14",
@@ -2348,7 +2590,8 @@
    "direccion": "Cra. 53 # 48-134",
    "titulo_programacion": "Herencia: Los cantos de la tierra",
    "obra_catalogo": "Herencia: Los cantos de la tierra",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-14",
@@ -2358,7 +2601,8 @@
    "direccion": "Calle 73B # 39-62",
    "titulo_programacion": "La luz por primera vez",
    "obra_catalogo": "La luz por primera vez",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-14",
@@ -2368,7 +2612,8 @@
    "direccion": "Calle 76 # 57-61",
    "titulo_programacion": "Semillas",
    "obra_catalogo": "Semillas",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-15",
@@ -2378,7 +2623,8 @@
    "direccion": "Calle 54 # 53-76",
    "titulo_programacion": "Soñé su nombre",
    "obra_catalogo": "Soñé su nombre",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-15",
@@ -2388,7 +2634,8 @@
    "direccion": "Calle 73B # 39-62",
    "titulo_programacion": "El silencio de los palafitos",
    "obra_catalogo": "El silencio de los palafitos",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-15",
@@ -2398,7 +2645,8 @@
    "direccion": "Calle 76 # 57-61",
    "titulo_programacion": "El juego de la vida",
    "obra_catalogo": "El juego de la vida",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-15",
@@ -2408,7 +2656,9 @@
    "direccion": "Corporación Universitaria Americana (Cinemateca)",
    "titulo_programacion": "Master Class: Cine documental autobiográfico y memorias",
    "obra_catalogo": null,
-   "tipo": "taller"
+   "tipo": "taller",
+   "en_app": false,
+   "_motivo_exclusion": "industria/profesionalización (con inscripción, público de industria)"
   },
   {
    "dia": "2026-08-16",
@@ -2418,7 +2668,8 @@
    "direccion": "Calle 54 # 53-76",
    "titulo_programacion": "Del otro lado",
    "obra_catalogo": "Del otro lado",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-16",
@@ -2428,7 +2679,8 @@
    "direccion": "Calle 76 # 57-61",
    "titulo_programacion": "Notas sobre un destierro",
    "obra_catalogo": "Notas sobre un destierro",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-17",
@@ -2438,7 +2690,8 @@
    "direccion": "Diagonal 75A # 15D-67",
    "titulo_programacion": "La Bonga",
    "obra_catalogo": "La Bonga",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-17",
@@ -2448,7 +2701,8 @@
    "direccion": "Calle 76 # 57-61",
    "titulo_programacion": "Three black men (Tres hombres negros)",
    "obra_catalogo": "Three black men",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-18",
@@ -2458,7 +2712,8 @@
    "direccion": "Cra. 44 # 87-44",
    "titulo_programacion": "Kaugsankamalla: mientras vivamos",
    "obra_catalogo": "Kaugsankamalla: mientras vivamos",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-18",
@@ -2468,7 +2723,8 @@
    "direccion": "Calle 76 # 57-61",
    "titulo_programacion": "Padamlágan (night lihgt)",
    "obra_catalogo": "Padamlágan",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-18",
@@ -2478,7 +2734,8 @@
    "direccion": "Calle 46 # 13C -57, barrio Cevillar",
    "titulo_programacion": "El Paraíso de Ainara",
    "obra_catalogo": "El Paraíso de Ainara",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-18",
@@ -2488,7 +2745,8 @@
    "direccion": "Calle 46 # 13C -57, barrio Cevillar",
    "titulo_programacion": "Akababuru: Expresión de asombro",
    "obra_catalogo": "Akababuru: Expresión de asombro",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-18",
@@ -2498,7 +2756,8 @@
    "direccion": "Calle 46 # 13C -57, barrio Cevillar",
    "titulo_programacion": "La gran hazaña",
    "obra_catalogo": "La gran hazaña",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-18",
@@ -2508,7 +2767,8 @@
    "direccion": "Calle 46 # 13C -57, barrio Cevillar",
    "titulo_programacion": "In four stops",
    "obra_catalogo": "In four stops",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-18",
@@ -2518,7 +2778,8 @@
    "direccion": "Cra. 54 # 64-73",
    "titulo_programacion": "Shelter",
    "obra_catalogo": "Shelter",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-18",
@@ -2528,7 +2789,8 @@
    "direccion": "Cra. 54 # 64-73",
    "titulo_programacion": "My grandmother is a skydiver",
    "obra_catalogo": "My grandmother is a skydiver",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-18",
@@ -2538,7 +2800,8 @@
    "direccion": "Cra. 54 # 64-73",
    "titulo_programacion": "Todos los días",
    "obra_catalogo": "Todos los días",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-18",
@@ -2548,7 +2811,8 @@
    "direccion": "Cra. 54 # 64-73",
    "titulo_programacion": "Sapos por todos lados",
    "obra_catalogo": "Sapos por todos lados",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-18",
@@ -2558,7 +2822,8 @@
    "direccion": "Cra. 54 # 64-73",
    "titulo_programacion": "Chaski Pacha",
    "obra_catalogo": "Chaski Pacha",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-18",
@@ -2568,7 +2833,8 @@
    "direccion": "Cra. 54 # 64-73",
    "titulo_programacion": "Outside",
    "obra_catalogo": "Outside",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-18",
@@ -2578,7 +2844,8 @@
    "direccion": "Cra. 50 # 79-155",
    "titulo_programacion": "Cuando la palabra se hace búsqueda",
    "obra_catalogo": "Cuando la palabra se hace búsqueda",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-18",
@@ -2588,7 +2855,8 @@
    "direccion": "Cra. 50 # 79-155",
    "titulo_programacion": "El hogar fue sepultado en esa tierra que nunca pudimos encontrar",
    "obra_catalogo": "El hogar fue sepultado en esa tierra que nunca pudimos encontrar",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-18",
@@ -2598,7 +2866,8 @@
    "direccion": "Cra. 50 # 79-155",
    "titulo_programacion": "Trenzando caminos de paz",
    "obra_catalogo": "Trenzando caminos de paz",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-18",
@@ -2608,7 +2877,8 @@
    "direccion": "Cra. 50 # 79-155",
    "titulo_programacion": "Volver a creer",
    "obra_catalogo": "Volver a creer",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-19",
@@ -2618,7 +2888,8 @@
    "direccion": "Calle 74 # 58-79",
    "titulo_programacion": "Andariega",
    "obra_catalogo": "Andariega",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-19",
@@ -2628,7 +2899,8 @@
    "direccion": "Calle 76 # 57-61",
    "titulo_programacion": "La Bonga",
    "obra_catalogo": "La Bonga",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-19",
@@ -2638,7 +2910,8 @@
    "direccion": "Estación Ferrocarril de Bolívar, Cra. 4 # 2-45",
    "titulo_programacion": "La Raya",
    "obra_catalogo": "La Raya",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-19",
@@ -2648,7 +2921,8 @@
    "direccion": "Cra. 46 # 79-18",
    "titulo_programacion": "Honorablé",
    "obra_catalogo": "Honorablé",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-19",
@@ -2658,7 +2932,8 @@
    "direccion": "Cra. 46 # 79-18",
    "titulo_programacion": "Trenzando caminos de paz",
    "obra_catalogo": "Trenzando caminos de paz",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-19",
@@ -2668,7 +2943,8 @@
    "direccion": "Cra. 46 # 79-18",
    "titulo_programacion": "Volver a creer",
    "obra_catalogo": "Volver a creer",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-19",
@@ -2678,7 +2954,8 @@
    "direccion": "Calle 72 # 41C-64",
    "titulo_programacion": "Floresmiro",
    "obra_catalogo": "Floresmiro",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-19",
@@ -2688,7 +2965,8 @@
    "direccion": "Universidad del Atlántico - Puerto Colombia - Cra. 30 # 8-49, Puerto Colombia",
    "titulo_programacion": "Republic of Amnesia (República de la amnesia)",
    "obra_catalogo": "Republic of Amnesia",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-12",
@@ -2698,7 +2976,8 @@
    "direccion": "Calle 36 # 2-74, El Centro",
    "titulo_programacion": "Trenzando caminos de paz",
    "obra_catalogo": "Trenzando caminos de paz",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-12",
@@ -2708,7 +2987,8 @@
    "direccion": "Calle 36 # 2-74, El Centro",
    "titulo_programacion": "El silencio de los palafitos",
    "obra_catalogo": "El silencio de los palafitos",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-13",
@@ -2718,7 +2998,8 @@
    "direccion": "Calle 36 # 2-74, El Centro",
    "titulo_programacion": "Cobija de recuerdos",
    "obra_catalogo": "Cobija de recuerdos",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-13",
@@ -2728,7 +3009,8 @@
    "direccion": "Calle 36 # 2-74, El Centro",
    "titulo_programacion": "Espeletia BK: Frailejón desarticulado",
    "obra_catalogo": "Espeletia BK: Frailejón desarticulado",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-13",
@@ -2738,7 +3020,8 @@
    "direccion": "Calle 36 # 2-74, El Centro",
    "titulo_programacion": "Cuando la palabra se hace búsqueda",
    "obra_catalogo": "Cuando la palabra se hace búsqueda",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-13",
@@ -2748,7 +3031,8 @@
    "direccion": "Calle 36 # 2-74, El Centro",
    "titulo_programacion": "Amalgama",
    "obra_catalogo": "Amalgama",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-13",
@@ -2758,7 +3042,8 @@
    "direccion": "Cra. 6, Calle de la Universidad # 36-100",
    "titulo_programacion": "Semillas",
    "obra_catalogo": "Semillas",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-14",
@@ -2768,7 +3053,8 @@
    "direccion": "Calle 36 # 2-74, El Centro",
    "titulo_programacion": "Una ciudad ¿para quién?",
    "obra_catalogo": null,
-   "tipo": "charla"
+   "tipo": "charla",
+   "en_app": true
   },
   {
    "dia": "2026-08-14",
@@ -2778,7 +3064,8 @@
    "direccion": "Pasaje Leclerc, calle 24 # 8b-83 piso 2, Getsemaní",
    "titulo_programacion": "Soñé su nombre",
    "obra_catalogo": "Soñé su nombre",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-15",
@@ -2788,7 +3075,8 @@
    "direccion": "Los Almendros Mz E # Lote 11",
    "titulo_programacion": "Muerto no",
    "obra_catalogo": "Muerto no",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-15",
@@ -2798,7 +3086,8 @@
    "direccion": "Los Almendros Mz E # Lote 11",
    "titulo_programacion": "Aquí no entra luz",
    "obra_catalogo": "Aquí no entra luz",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-16",
@@ -2808,7 +3097,8 @@
    "direccion": "Cra. 71 # 26-210, sobre la Avenida Principal del barrio El Socorro",
    "titulo_programacion": "Tuktu, Padre Maíz",
    "obra_catalogo": "Tuktu, Padre Maíz",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-16",
@@ -2818,7 +3108,8 @@
    "direccion": "Cra. 71 # 26-210, sobre la Avenida Principal del barrio El Socorro",
    "titulo_programacion": "El Paraíso de Ainara",
    "obra_catalogo": "El Paraíso de Ainara",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-16",
@@ -2828,7 +3119,8 @@
    "direccion": "Cra. 71 # 26-210, sobre la Avenida Principal del barrio El Socorro",
    "titulo_programacion": "Héroes del silencio",
    "obra_catalogo": "Héroes del silencio",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-16",
@@ -2838,7 +3130,8 @@
    "direccion": "Cra. 71 # 26-210, sobre la Avenida Principal del barrio El Socorro",
    "titulo_programacion": "In four stops",
    "obra_catalogo": "In four stops",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-16",
@@ -2848,7 +3141,8 @@
    "direccion": "Cra. 71 # 26-210, sobre la Avenida Principal del barrio El Socorro",
    "titulo_programacion": "My grandmother is a skydiver",
    "obra_catalogo": "My grandmother is a skydiver",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-17",
@@ -2858,7 +3152,8 @@
    "direccion": "Parque Fernández de Madrid, Cra. 8 # 37-34, San Diego",
    "titulo_programacion": "La Cerrillana",
    "obra_catalogo": "La Cerrillana",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-17",
@@ -2868,7 +3163,8 @@
    "direccion": "Parque Fernández de Madrid, Cra. 8 # 37-34, San Diego",
    "titulo_programacion": "Apolo",
    "obra_catalogo": "Apolo",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-13",
@@ -2878,7 +3174,8 @@
    "direccion": "Parque Sucre",
    "titulo_programacion": "Semillas",
    "obra_catalogo": "Semillas",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-14",
@@ -2888,7 +3185,8 @@
    "direccion": "Cra. 14 # 3-11 (Avenida Bolívar)",
    "titulo_programacion": "In four stops",
    "obra_catalogo": "In four stops",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-14",
@@ -2898,7 +3196,8 @@
    "direccion": "Cra. 14 # 3-11 (Avenida Bolívar)",
    "titulo_programacion": "My grandmother is a skydiver",
    "obra_catalogo": "My grandmother is a skydiver",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-14",
@@ -2908,7 +3207,8 @@
    "direccion": "Cra. 14 # 3-11 (Avenida Bolívar)",
    "titulo_programacion": "Tuktu, Padre Maíz",
    "obra_catalogo": "Tuktu, Padre Maíz",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-14",
@@ -2918,7 +3218,8 @@
    "direccion": "Cra. 14 # 3-11 (Avenida Bolívar)",
    "titulo_programacion": "Sapos por todos lados",
    "obra_catalogo": "Sapos por todos lados",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-14",
@@ -2928,7 +3229,9 @@
    "direccion": "Cra. 18 # 7-58",
    "titulo_programacion": "Producción y Animación 2D",
    "obra_catalogo": null,
-   "tipo": "taller"
+   "tipo": "taller",
+   "en_app": true,
+   "_motivo_exclusion": ""
   },
   {
    "dia": "2026-08-15",
@@ -2938,7 +3241,9 @@
    "direccion": "Calle 22 Norte # 12-39",
    "titulo_programacion": "Conversatorio Mujeres en el Audiovisual",
    "obra_catalogo": null,
-   "tipo": "taller"
+   "tipo": "taller",
+   "en_app": true,
+   "_motivo_exclusion": ""
   },
   {
    "dia": "2026-08-15",
@@ -2948,7 +3253,8 @@
    "direccion": "Calle 22 Norte # 12-39",
    "titulo_programacion": "Madres de nacimiento",
    "obra_catalogo": "Madres de nacimiento",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-15",
@@ -2958,7 +3264,8 @@
    "direccion": "Calle 22 Norte # 12-39",
    "titulo_programacion": "Celeste",
    "obra_catalogo": "Celeste",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-15",
@@ -2968,7 +3275,8 @@
    "direccion": "Calle 22 Norte # 12-39",
    "titulo_programacion": "Pawa",
    "obra_catalogo": "Pawa",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-15",
@@ -2978,7 +3286,8 @@
    "direccion": "Calle 22 Norte # 12-39",
    "titulo_programacion": "Héroes del silencio",
    "obra_catalogo": "Héroes del silencio",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-15",
@@ -2988,7 +3297,8 @@
    "direccion": "Calle 22 Norte # 12-39",
    "titulo_programacion": "Más allá",
    "obra_catalogo": "Más allá",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-15",
@@ -2998,7 +3308,8 @@
    "direccion": "Calle 22 Norte # 12-39",
    "titulo_programacion": "Clemencia",
    "obra_catalogo": "Clemencia",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-15",
@@ -3008,7 +3319,8 @@
    "direccion": "Calle 22 Norte # 12-39",
    "titulo_programacion": "La luz que nos queda",
    "obra_catalogo": "La luz que nos queda",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-15",
@@ -3018,7 +3330,8 @@
    "direccion": "Cra. 16 # 9-54, piso 2",
    "titulo_programacion": "Hija del volcán",
    "obra_catalogo": "Hija del volcán",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-16",
@@ -3028,7 +3341,8 @@
    "direccion": "Cra. 23d # 11-25",
    "titulo_programacion": "Trenzando caminos de paz",
    "obra_catalogo": "Trenzando caminos de paz",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-16",
@@ -3038,7 +3352,8 @@
    "direccion": "Cra. 23d # 11-25",
    "titulo_programacion": "Juntas por la paz del Chocó",
    "obra_catalogo": "Juntas por la paz del Chocó",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-16",
@@ -3048,7 +3363,8 @@
    "direccion": "Cra. 23d # 11-25",
    "titulo_programacion": "Indiamenta",
    "obra_catalogo": "Indiamenta",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-18",
@@ -3058,7 +3374,8 @@
    "direccion": "Cra. 15 con calle 12 Norte",
    "titulo_programacion": "Amalgama",
    "obra_catalogo": "Amalgama",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-18",
@@ -3068,7 +3385,8 @@
    "direccion": "Cra. 15 con calle 12 Norte",
    "titulo_programacion": "Cobija de recuerdos",
    "obra_catalogo": "Cobija de recuerdos",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-18",
@@ -3078,7 +3396,8 @@
    "direccion": "Cra. 15 con calle 12 Norte",
    "titulo_programacion": "Espeletia BK: Frailejón desarticulado",
    "obra_catalogo": "Espeletia BK: Frailejón desarticulado",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-18",
@@ -3088,7 +3407,8 @@
    "direccion": "Cra. 15 con calle 12 Norte",
    "titulo_programacion": "Cuando la palabra se hace búsqueda",
    "obra_catalogo": "Cuando la palabra se hace búsqueda",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-18",
@@ -3098,7 +3418,8 @@
    "direccion": "Cra. 15 con calle 12 Norte",
    "titulo_programacion": "Del otro lado",
    "obra_catalogo": "Del otro lado",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-18",
@@ -3108,7 +3429,8 @@
    "direccion": "Cra. 15 con calle 12 Norte",
    "titulo_programacion": "Cuando la palabra se hace búsqueda",
    "obra_catalogo": "Cuando la palabra se hace búsqueda",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-19",
@@ -3118,7 +3440,8 @@
    "direccion": "Avenida Bolívar # 1-189",
    "titulo_programacion": "Bojayá, la verdad desde adentro",
    "obra_catalogo": "Bojayá, la verdad desde adentro",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-13",
@@ -3128,7 +3451,8 @@
    "direccion": "Calle 11 # 9-73ª, barrio Belén",
    "titulo_programacion": "Madres de nacimiento",
    "obra_catalogo": "Madres de nacimiento",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-13",
@@ -3138,7 +3462,8 @@
    "direccion": "Calle 11 # 9-73ª, barrio Belén",
    "titulo_programacion": "Sukua",
    "obra_catalogo": "Sukua",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-13",
@@ -3148,7 +3473,8 @@
    "direccion": "Calle 11 # 9-73ª, barrio Belén",
    "titulo_programacion": "La independencia",
    "obra_catalogo": "La independencia",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-13",
@@ -3158,7 +3484,8 @@
    "direccion": "Calle 11 # 9-73ª, barrio Belén",
    "titulo_programacion": "Cartas a la tierra",
    "obra_catalogo": "Cartas a la tierra",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-13",
@@ -3168,7 +3495,8 @@
    "direccion": "Calle 11 # 9-73ª, barrio Belén",
    "titulo_programacion": "Pawa",
    "obra_catalogo": "Pawa",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-13",
@@ -3178,7 +3506,8 @@
    "direccion": "Calle 11 # 9-73ª, barrio Belén",
    "titulo_programacion": "La Raya",
    "obra_catalogo": "La Raya",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-13",
@@ -3188,7 +3517,8 @@
    "direccion": "Carrera 22 - Calle 67, barrio Ambalá",
    "titulo_programacion": "Semillas",
    "obra_catalogo": "Semillas",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-14",
@@ -3198,7 +3528,8 @@
    "direccion": "Calle 11 # 9-73ª, barrio Belén",
    "titulo_programacion": "Pawa",
    "obra_catalogo": "Pawa",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-14",
@@ -3208,7 +3539,8 @@
    "direccion": "Calle 11 # 9-73ª, barrio Belén",
    "titulo_programacion": "Madres de nacimiento",
    "obra_catalogo": "Madres de nacimiento",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-14",
@@ -3218,7 +3550,8 @@
    "direccion": "Calle 11 # 9-73ª, barrio Belén",
    "titulo_programacion": "Sukua",
    "obra_catalogo": "Sukua",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-14",
@@ -3228,7 +3561,8 @@
    "direccion": "Calle 11 # 9-73ª, barrio Belén",
    "titulo_programacion": "La independencia",
    "obra_catalogo": "La independencia",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-14",
@@ -3238,7 +3572,8 @@
    "direccion": "Calle 11 # 9-73ª, barrio Belén",
    "titulo_programacion": "Cartas a la tierra",
    "obra_catalogo": "Cartas a la tierra",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-14",
@@ -3248,7 +3583,8 @@
    "direccion": "Calle 11 # 9-73ª, barrio Belén",
    "titulo_programacion": "Volver a creer",
    "obra_catalogo": "Volver a creer",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-14",
@@ -3258,7 +3594,8 @@
    "direccion": "Calle 11 # 9-73ª, barrio Belén",
    "titulo_programacion": "Cuando la palabra se hace búsqueda",
    "obra_catalogo": "Cuando la palabra se hace búsqueda",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-14",
@@ -3268,7 +3605,8 @@
    "direccion": "Calle 11 # 9-73ª, barrio Belén",
    "titulo_programacion": "Tierra que habla",
    "obra_catalogo": "Tierra que habla",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-14",
@@ -3278,7 +3616,8 @@
    "direccion": "Carrera 22 - Calle 67, barrio Ambalá",
    "titulo_programacion": "La luz por primera vez",
    "obra_catalogo": "La luz por primera vez",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-14",
@@ -3288,7 +3627,8 @@
    "direccion": "Carrera 22 - Calle 67, barrio Ambalá",
    "titulo_programacion": "Chaski Pacha",
    "obra_catalogo": "Chaski Pacha",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-14",
@@ -3298,7 +3638,8 @@
    "direccion": "Carrera 22 - Calle 67, barrio Ambalá",
    "titulo_programacion": "Muerto no",
    "obra_catalogo": "Muerto no",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-14",
@@ -3308,7 +3649,8 @@
    "direccion": "Carrera 22 - Calle 67, barrio Ambalá",
    "titulo_programacion": "La Cerrillana",
    "obra_catalogo": "La Cerrillana",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-14",
@@ -3318,7 +3660,8 @@
    "direccion": "Carrera 22 - Calle 67, barrio Ambalá",
    "titulo_programacion": "Una torreta en llamas",
    "obra_catalogo": "Una torreta en llamas",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-14",
@@ -3328,7 +3671,8 @@
    "direccion": "Carrera 22 - Calle 67, barrio Ambalá",
    "titulo_programacion": "Celeste",
    "obra_catalogo": "Celeste",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-15",
@@ -3338,7 +3682,8 @@
    "direccion": "Calle 11 # 9-73ª, barrio Belén",
    "titulo_programacion": "Madres de nacimiento",
    "obra_catalogo": "Madres de nacimiento",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-15",
@@ -3348,7 +3693,8 @@
    "direccion": "Calle 11 # 9-73ª, barrio Belén",
    "titulo_programacion": "Sukua",
    "obra_catalogo": "Sukua",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-15",
@@ -3358,7 +3704,8 @@
    "direccion": "Calle 11 # 9-73ª, barrio Belén",
    "titulo_programacion": "La independencia",
    "obra_catalogo": "La independencia",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-15",
@@ -3368,7 +3715,8 @@
    "direccion": "Calle 11 # 9-73ª, barrio Belén",
    "titulo_programacion": "Cartas a la tierra",
    "obra_catalogo": "Cartas a la tierra",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-15",
@@ -3378,7 +3726,8 @@
    "direccion": "Calle 11 # 9-73ª, barrio Belén",
    "titulo_programacion": "Pawa",
    "obra_catalogo": "Pawa",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-15",
@@ -3388,7 +3737,8 @@
    "direccion": "Calle 11 # 9-73ª, barrio Belén",
    "titulo_programacion": "Indiamenta",
    "obra_catalogo": "Indiamenta",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-15",
@@ -3398,7 +3748,8 @@
    "direccion": "Calle 11 # 9-73ª, barrio Belén",
    "titulo_programacion": "Aquí no entra luz",
    "obra_catalogo": "Aquí no entra luz",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-15",
@@ -3408,7 +3759,8 @@
    "direccion": "Calle 11 # 9-73ª, barrio Belén",
    "titulo_programacion": "Muerto no",
    "obra_catalogo": "Muerto no",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-15",
@@ -3418,7 +3770,8 @@
    "direccion": "Calle 42 # 3-45",
    "titulo_programacion": "El hogar fue sepultado en esa tierra que nunca pudimos encontrar",
    "obra_catalogo": "El hogar fue sepultado en esa tierra que nunca pudimos encontrar",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-15",
@@ -3428,7 +3781,8 @@
    "direccion": "",
    "titulo_programacion": "Resistencias indígenas en Ibagué",
    "obra_catalogo": null,
-   "tipo": "charla"
+   "tipo": "charla",
+   "en_app": true
   },
   {
    "dia": "2026-08-16",
@@ -3438,7 +3792,8 @@
    "direccion": "Calle 11 # 9-73ª, barrio Belén",
    "titulo_programacion": "El Paraíso de Ainara",
    "obra_catalogo": "El Paraíso de Ainara",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-16",
@@ -3448,7 +3803,8 @@
    "direccion": "Calle 11 # 9-73ª, barrio Belén",
    "titulo_programacion": "Akababuru: Expresión de asombro",
    "obra_catalogo": "Akababuru: Expresión de asombro",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-16",
@@ -3458,7 +3814,8 @@
    "direccion": "Calle 11 # 9-73ª, barrio Belén",
    "titulo_programacion": "La gran hazaña",
    "obra_catalogo": "La gran hazaña",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-16",
@@ -3468,7 +3825,8 @@
    "direccion": "Calle 11 # 9-73ª, barrio Belén",
    "titulo_programacion": "Héroes del silencio",
    "obra_catalogo": "Héroes del silencio",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-16",
@@ -3478,7 +3836,8 @@
    "direccion": "Calle 11 # 9-73ª, barrio Belén",
    "titulo_programacion": "In four stops",
    "obra_catalogo": "In four stops",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-18",
@@ -3488,7 +3847,8 @@
    "direccion": "Calle 11 # 9-73ª, barrio Belén",
    "titulo_programacion": "Madres de nacimiento",
    "obra_catalogo": "Madres de nacimiento",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-18",
@@ -3498,7 +3858,8 @@
    "direccion": "Calle 11 # 9-73ª, barrio Belén",
    "titulo_programacion": "Sukua",
    "obra_catalogo": "Sukua",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-18",
@@ -3508,7 +3869,8 @@
    "direccion": "Calle 11 # 9-73ª, barrio Belén",
    "titulo_programacion": "La independencia",
    "obra_catalogo": "La independencia",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-18",
@@ -3518,7 +3880,8 @@
    "direccion": "Calle 11 # 9-73ª, barrio Belén",
    "titulo_programacion": "Cartas a la tierra",
    "obra_catalogo": "Cartas a la tierra",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-18",
@@ -3528,7 +3891,8 @@
    "direccion": "Calle 11 # 9-73ª, barrio Belén",
    "titulo_programacion": "Pawa",
    "obra_catalogo": "Pawa",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-18",
@@ -3538,7 +3902,8 @@
    "direccion": "Carrera 22 - Calle 67, barrio Ambalá",
    "titulo_programacion": "Aminetu",
    "obra_catalogo": "Aminetu",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-18",
@@ -3548,7 +3913,8 @@
    "direccion": "Carrera 22 - Calle 67, barrio Ambalá",
    "titulo_programacion": "Andariega",
    "obra_catalogo": "Andariega",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-19",
@@ -3558,7 +3924,8 @@
    "direccion": "Calle 11 # 9-73ª, barrio Belén",
    "titulo_programacion": "Madres de nacimiento",
    "obra_catalogo": "Madres de nacimiento",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-19",
@@ -3568,7 +3935,8 @@
    "direccion": "Calle 11 # 9-73ª, barrio Belén",
    "titulo_programacion": "Sukua",
    "obra_catalogo": "Sukua",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-19",
@@ -3578,7 +3946,8 @@
    "direccion": "Calle 11 # 9-73ª, barrio Belén",
    "titulo_programacion": "La independencia",
    "obra_catalogo": "La independencia",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-19",
@@ -3588,7 +3957,8 @@
    "direccion": "Calle 11 # 9-73ª, barrio Belén",
    "titulo_programacion": "Cartas a la tierra",
    "obra_catalogo": "Cartas a la tierra",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-19",
@@ -3598,7 +3968,8 @@
    "direccion": "Calle 11 # 9-73ª, barrio Belén",
    "titulo_programacion": "Pawa",
    "obra_catalogo": "Pawa",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-19",
@@ -3608,7 +3979,9 @@
    "direccion": "Carrera 22 - Calle 67, barrio Ambalá",
    "titulo_programacion": "Gestión y Programación de Muestras y Festivales de Cine",
    "obra_catalogo": null,
-   "tipo": "taller"
+   "tipo": "taller",
+   "en_app": false,
+   "_motivo_exclusion": "industria/profesionalización (con inscripción, público de industria)"
   },
   {
    "dia": "2026-08-19",
@@ -3618,7 +3991,8 @@
    "direccion": "Carrera 22 - Calle 67, barrio Ambalá",
    "titulo_programacion": "Hija del volcán",
    "obra_catalogo": "Hija del volcán",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-13",
@@ -3628,7 +4002,8 @@
    "direccion": "Centro Comercial El Caraño Calle 30, Avenida Aeropuerto, Barrio Los Ángeles (frente al Aeropuerto El Caraño)",
    "titulo_programacion": "Bojayá, la verdad desde adentro",
    "obra_catalogo": "Bojayá, la verdad desde adentro",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-14",
@@ -3638,7 +4013,8 @@
    "direccion": "Centro Comercial El Caraño Calle 30, Avenida Aeropuerto, Barrio Los Ángeles (frente al Aeropuerto El Caraño)",
    "titulo_programacion": "Bojayá, la verdad desde adentro",
    "obra_catalogo": "Bojayá, la verdad desde adentro",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-14",
@@ -3648,7 +4024,8 @@
    "direccion": "Barrio Reposo #2",
    "titulo_programacion": "El verano de Jahia (Jahia's Summer)",
    "obra_catalogo": "El verano de Jahia",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-15",
@@ -3658,7 +4035,9 @@
    "direccion": "Colegio Carrasquilla (Cra. 7ma)",
    "titulo_programacion": "Actuación para cine",
    "obra_catalogo": null,
-   "tipo": "taller"
+   "tipo": "taller",
+   "en_app": true,
+   "_motivo_exclusion": ""
   },
   {
    "dia": "2026-08-15",
@@ -3668,7 +4047,8 @@
    "direccion": "Cra. 7 #27-3 (frente al Colegio Carrasquilla)",
    "titulo_programacion": "Juntas por la paz del Chocó",
    "obra_catalogo": "Juntas por la paz del Chocó",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-15",
@@ -3678,7 +4058,8 @@
    "direccion": "Cra. 7 #27-3 (frente al Colegio Carrasquilla)",
    "titulo_programacion": "Después del frío",
    "obra_catalogo": "Después del frío",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-16",
@@ -3688,7 +4069,8 @@
    "direccion": "",
    "titulo_programacion": "El juego de la vida",
    "obra_catalogo": "El juego de la vida",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-17",
@@ -3698,7 +4080,8 @@
    "direccion": "Calle 30, Avenida Aeropuerto, Barrio Los Ángeles (frente al Aeropuerto El Caraño)",
    "titulo_programacion": "Chaski Pacha",
    "obra_catalogo": "Chaski Pacha",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-17",
@@ -3708,7 +4091,8 @@
    "direccion": "Calle 30, Avenida Aeropuerto, Barrio Los Ángeles (frente al Aeropuerto El Caraño)",
    "titulo_programacion": "Muerto no",
    "obra_catalogo": "Muerto no",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-17",
@@ -3718,7 +4102,8 @@
    "direccion": "Calle 30, Avenida Aeropuerto, Barrio Los Ángeles (frente al Aeropuerto El Caraño)",
    "titulo_programacion": "Y el río lloró",
    "obra_catalogo": "Y el río lloró",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-17",
@@ -3728,7 +4113,8 @@
    "direccion": "Calle 30, Avenida Aeropuerto, Barrio Los Ángeles (frente al Aeropuerto El Caraño)",
    "titulo_programacion": "Apotnojushi La Casa del viento",
    "obra_catalogo": "Apotnojushi La Casa del viento",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-17",
@@ -3738,7 +4124,8 @@
    "direccion": "Calle 30, Avenida Aeropuerto, Barrio Los Ángeles (frente al Aeropuerto El Caraño)",
    "titulo_programacion": "Más allá de la corona",
    "obra_catalogo": "Más allá de la corona",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-17",
@@ -3748,7 +4135,8 @@
    "direccion": "Calle 30, Avenida Aeropuerto, Barrio Los Ángeles (frente al Aeropuerto El Caraño)",
    "titulo_programacion": "Cuando la palabra se hace búsqueda",
    "obra_catalogo": "Cuando la palabra se hace búsqueda",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-17",
@@ -3758,7 +4146,8 @@
    "direccion": "Barrio Reposo #2",
    "titulo_programacion": "Semillas",
    "obra_catalogo": "Semillas",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-18",
@@ -3768,7 +4157,8 @@
    "direccion": "Cra. 7 #27-3 (frente al Colegio Carrasquilla)",
    "titulo_programacion": "El silencio de los palafitos",
    "obra_catalogo": "El silencio de los palafitos",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-18",
@@ -3778,7 +4168,8 @@
    "direccion": "Cra. 7 #27-3 (frente al Colegio Carrasquilla)",
    "titulo_programacion": "Hablemos de salud mental",
    "obra_catalogo": null,
-   "tipo": "charla"
+   "tipo": "charla",
+   "en_app": true
   },
   {
    "dia": "2026-08-18",
@@ -3788,7 +4179,8 @@
    "direccion": "Carrera 22, Ciudadela Universitaria Barrio Nicolas Medrano",
    "titulo_programacion": "Three black men (Tres hombres negros)",
    "obra_catalogo": "Three black men",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-19",
@@ -3798,7 +4190,8 @@
    "direccion": "Calle 30, Avenida Aeropuerto, Barrio Los Ángeles (frente al Aeropuerto El Caraño)",
    "titulo_programacion": "Carmela y los caminantes",
    "obra_catalogo": "Carmela y los caminantes",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-19",
@@ -3808,7 +4201,8 @@
    "direccion": "Carrera 22, Ciudadela Universitaria Barrio Nicolas Medrano",
    "titulo_programacion": "58th",
    "obra_catalogo": "58th",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-13",
@@ -3818,7 +4212,8 @@
    "direccion": "Carrera 8a # 23-09, piso 3",
    "titulo_programacion": "Eva",
    "obra_catalogo": "Eva",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-14",
@@ -3828,7 +4223,8 @@
    "direccion": "Parque Olaya Herrera",
    "titulo_programacion": "Semillas",
    "obra_catalogo": "Semillas",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-14",
@@ -3838,7 +4234,8 @@
    "direccion": "Corregimiento La Florida",
    "titulo_programacion": "Apotnojushi La Casa del viento",
    "obra_catalogo": "Apotnojushi La Casa del viento",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-14",
@@ -3848,7 +4245,8 @@
    "direccion": "Corregimiento La Florida",
    "titulo_programacion": "La Raya",
    "obra_catalogo": "La Raya",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-14",
@@ -3858,7 +4256,8 @@
    "direccion": "Carrera 6 Nº 23-58",
    "titulo_programacion": "Mujeres, juventudes y activismo político en la era digital",
    "obra_catalogo": null,
-   "tipo": "charla"
+   "tipo": "charla",
+   "en_app": true
   },
   {
    "dia": "2026-08-14",
@@ -3868,7 +4267,8 @@
    "direccion": "Carrera 8 #15 - 09",
    "titulo_programacion": "La gran hazaña",
    "obra_catalogo": "La gran hazaña",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-14",
@@ -3878,7 +4278,8 @@
    "direccion": "Carrera 8 #15 - 09",
    "titulo_programacion": "Héroes del silencio",
    "obra_catalogo": "Héroes del silencio",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-14",
@@ -3888,7 +4289,9 @@
    "direccion": "Carrera 8 #15 - 09",
    "titulo_programacion": "Pintando realidades",
    "obra_catalogo": null,
-   "tipo": "taller"
+   "tipo": "taller",
+   "en_app": true,
+   "_motivo_exclusion": ""
   },
   {
    "dia": "2026-08-14",
@@ -3898,7 +4301,8 @@
    "direccion": "Km 8 Vía Armenia - Entrada # 8",
    "titulo_programacion": "El bosque",
    "obra_catalogo": "El bosque",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-15",
@@ -3908,7 +4312,8 @@
    "direccion": "Calle 12 bis # 16-18, Av. Circunvalar",
    "titulo_programacion": "Muerto no",
    "obra_catalogo": "Muerto no",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-15",
@@ -3918,7 +4323,8 @@
    "direccion": "Calle 12 bis # 16-18, Av. Circunvalar",
    "titulo_programacion": "El silencio de los palafitos",
    "obra_catalogo": "El silencio de los palafitos",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-15",
@@ -3928,7 +4334,8 @@
    "direccion": "Carrera 6 Nº 23-58",
    "titulo_programacion": "El Paraíso de Ainara",
    "obra_catalogo": "El Paraíso de Ainara",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-15",
@@ -3938,7 +4345,8 @@
    "direccion": "Carrera 6 Nº 23-58",
    "titulo_programacion": "In four stops",
    "obra_catalogo": "In four stops",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-15",
@@ -3948,7 +4356,8 @@
    "direccion": "Carrera 6 Nº 23-58",
    "titulo_programacion": "Akababuru: Expresión de asombro",
    "obra_catalogo": "Akababuru: Expresión de asombro",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-15",
@@ -3958,7 +4367,8 @@
    "direccion": "Carrera 6 Nº 23-58",
    "titulo_programacion": "La gran hazaña",
    "obra_catalogo": "La gran hazaña",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-15",
@@ -3968,7 +4378,8 @@
    "direccion": "Carrera 6 Nº 23-58",
    "titulo_programacion": "Héroes del silencio",
    "obra_catalogo": "Héroes del silencio",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-15",
@@ -3978,7 +4389,9 @@
    "direccion": "UNIVERSIDAD TECNOLÓGICA DE PEREIRA - BLOQUE 7A / 118",
    "titulo_programacion": "Barrismo social: Construyendo comunidad desde el aguante",
    "obra_catalogo": null,
-   "tipo": "taller"
+   "tipo": "taller",
+   "en_app": true,
+   "_motivo_exclusion": ""
   },
   {
    "dia": "2026-08-17",
@@ -3988,7 +4401,8 @@
    "direccion": "Carrera 7b # 2e-05, barrio Alfonso López",
    "titulo_programacion": "El Paraíso de Ainara",
    "obra_catalogo": "El Paraíso de Ainara",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-17",
@@ -3998,7 +4412,8 @@
    "direccion": "Carrera 7b # 2e-05, barrio Alfonso López",
    "titulo_programacion": "In four stops",
    "obra_catalogo": "In four stops",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-17",
@@ -4008,7 +4423,8 @@
    "direccion": "Carrera 7b # 2e-05, barrio Alfonso López",
    "titulo_programacion": "Akababuru: Expresión de asombro",
    "obra_catalogo": "Akababuru: Expresión de asombro",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-17",
@@ -4018,7 +4434,8 @@
    "direccion": "Carrera 7b # 2e-05, barrio Alfonso López",
    "titulo_programacion": "La gran hazaña",
    "obra_catalogo": "La gran hazaña",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-17",
@@ -4028,7 +4445,8 @@
    "direccion": "Carrera 7b # 2e-05, barrio Alfonso López",
    "titulo_programacion": "Héroes del silencio",
    "obra_catalogo": "Héroes del silencio",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-18",
@@ -4038,7 +4456,8 @@
    "direccion": "Carrera 8 # 41-97",
    "titulo_programacion": "La Raya",
    "obra_catalogo": "La Raya",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-18",
@@ -4048,7 +4467,8 @@
    "direccion": "CC El Lago. Calle 24 #7-17, local 303",
    "titulo_programacion": "Herencia: Los cantos de la tierra",
    "obra_catalogo": "Herencia: Los cantos de la tierra",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-18",
@@ -4058,7 +4478,8 @@
    "direccion": "",
    "titulo_programacion": "De Poleka Kasue al Río Otún: ¿Quién cuida el agua del río más importante de la región?",
    "obra_catalogo": null,
-   "tipo": "charla"
+   "tipo": "charla",
+   "en_app": true
   },
   {
    "dia": "2026-08-18",
@@ -4068,7 +4489,9 @@
    "direccion": "UNIVERSIDAD TECNOLÓGICA DE PEREIRA - BLOQUE 7A / 118",
    "titulo_programacion": "Crear para resistir: la creación de contenido como un acto de responsabilidad",
    "obra_catalogo": null,
-   "tipo": "taller"
+   "tipo": "taller",
+   "en_app": true,
+   "_motivo_exclusion": ""
   },
   {
    "dia": "2026-08-18",
@@ -4078,7 +4501,8 @@
    "direccion": "Bloque 13 Sala Magistral 1 (Carrera 27 #10-02, Barrio Álamos)",
    "titulo_programacion": "Cuando la palabra se hace búsqueda",
    "obra_catalogo": "Cuando la palabra se hace búsqueda",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-19",
@@ -4088,7 +4512,8 @@
    "direccion": "Carrera 6 Nº 23-58",
    "titulo_programacion": "Bojayá, la verdad desde adentro",
    "obra_catalogo": "Bojayá, la verdad desde adentro",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-19",
@@ -4098,7 +4523,8 @@
    "direccion": "Comuna Villa Santana",
    "titulo_programacion": "La gran hazaña",
    "obra_catalogo": "La gran hazaña",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-19",
@@ -4108,7 +4534,8 @@
    "direccion": "Comuna Villa Santana",
    "titulo_programacion": "Héroes del silencio",
    "obra_catalogo": "Héroes del silencio",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-19",
@@ -4118,7 +4545,8 @@
    "direccion": "Comuna Villa Santana",
    "titulo_programacion": "El Paraíso de Ainara",
    "obra_catalogo": "El Paraíso de Ainara",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-19",
@@ -4128,7 +4556,8 @@
    "direccion": "Comuna Villa Santana",
    "titulo_programacion": "In four stops",
    "obra_catalogo": "In four stops",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-19",
@@ -4138,7 +4567,8 @@
    "direccion": "Comuna Villa Santana",
    "titulo_programacion": "Akababuru: Expresión de asombro",
    "obra_catalogo": "Akababuru: Expresión de asombro",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-10",
@@ -4148,7 +4578,8 @@
    "direccion": "Carrera 22 Calle 33",
    "titulo_programacion": "El juego de la vida",
    "obra_catalogo": "El juego de la vida",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-12",
@@ -4158,7 +4589,8 @@
    "direccion": "Cra. 28D entre Cl. 66 #y 67",
    "titulo_programacion": "Por una gota de leche",
    "obra_catalogo": "Por una gota de leche",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-12",
@@ -4168,7 +4600,8 @@
    "direccion": "Cra. 28D entre Cl. 66 #y 67",
    "titulo_programacion": "Si La Escombrera hablara",
    "obra_catalogo": "Si La Escombrera hablara",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-12",
@@ -4178,7 +4611,8 @@
    "direccion": "Cra. 22 #70b-31, Manizales, Caldas",
    "titulo_programacion": "El juego de la vida",
    "obra_catalogo": "El juego de la vida",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-12",
@@ -4188,7 +4622,8 @@
    "direccion": "Cl. 65 #26-10",
    "titulo_programacion": "Desierto verde",
    "obra_catalogo": "Desierto verde",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-13",
@@ -4198,7 +4633,8 @@
    "direccion": "Cra. 28D entre Cl. 66 #y 67",
    "titulo_programacion": "El silencio de la tierra",
    "obra_catalogo": "El silencio de la tierra",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-13",
@@ -4208,7 +4644,8 @@
    "direccion": "Cra. 28D entre Cl. 66 #y 67",
    "titulo_programacion": "Volver a creer",
    "obra_catalogo": "Volver a creer",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-14",
@@ -4218,7 +4655,8 @@
    "direccion": "Carrera 27 # 64-60",
    "titulo_programacion": "Tierra que habla",
    "obra_catalogo": "Tierra que habla",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-18",
@@ -4228,7 +4666,8 @@
    "direccion": "Av. Santander Cra. 23 # 65-11, Piso 3",
    "titulo_programacion": "Notas sobre un destierro",
    "obra_catalogo": "Notas sobre un destierro",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-19",
@@ -4238,7 +4677,8 @@
    "direccion": "Av. Santander # 57-58",
    "titulo_programacion": "Cuando la palabra se hace búsqueda",
    "obra_catalogo": "Cuando la palabra se hace búsqueda",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-19",
@@ -4248,7 +4688,8 @@
    "direccion": "Av. Santander # 57-58",
    "titulo_programacion": "Bojayá, la verdad desde adentro",
    "obra_catalogo": "Bojayá, la verdad desde adentro",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-19",
@@ -4258,7 +4699,8 @@
    "direccion": "Av. Santander # 57-58",
    "titulo_programacion": "Bojayá, la verdad desde adentro",
    "obra_catalogo": "Bojayá, la verdad desde adentro",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-19",
@@ -4268,7 +4710,8 @@
    "direccion": "Av. Santander # 57-58",
    "titulo_programacion": "Madres de nacimiento",
    "obra_catalogo": "Madres de nacimiento",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-19",
@@ -4278,7 +4721,8 @@
    "direccion": "Carrera 22 Calle 33",
    "titulo_programacion": "El juego de la vida",
    "obra_catalogo": "El juego de la vida",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-13",
@@ -4288,7 +4732,8 @@
    "direccion": "Calle 17 # 15-36",
    "titulo_programacion": "Akababuru: Expresión de asombro",
    "obra_catalogo": "Akababuru: Expresión de asombro",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-13",
@@ -4298,7 +4743,8 @@
    "direccion": "Calle 17 # 15-36",
    "titulo_programacion": "Todos los días",
    "obra_catalogo": "Todos los días",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-13",
@@ -4308,7 +4754,8 @@
    "direccion": "Calle 17 # 15-36",
    "titulo_programacion": "Sukua",
    "obra_catalogo": "Sukua",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-13",
@@ -4318,7 +4765,8 @@
    "direccion": "Calle 17 # 15-36",
    "titulo_programacion": "La gran hazaña",
    "obra_catalogo": "La gran hazaña",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-13",
@@ -4328,7 +4776,8 @@
    "direccion": "Calle 17 # 15-36",
    "titulo_programacion": "Three black men (Tres hombres negros)",
    "obra_catalogo": "Three black men",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-14",
@@ -4338,7 +4787,8 @@
    "direccion": "Calle 17 # 15-36",
    "titulo_programacion": "Cuando la palabra se hace búsqueda",
    "obra_catalogo": "Cuando la palabra se hace búsqueda",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-14",
@@ -4348,7 +4798,8 @@
    "direccion": "Calle 17 # 15-36",
    "titulo_programacion": "El hogar fue sepultado en esa tierra que nunca pudimos encontrar",
    "obra_catalogo": "El hogar fue sepultado en esa tierra que nunca pudimos encontrar",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-15",
@@ -4358,7 +4809,8 @@
    "direccion": "Calle 17 # 15-36",
    "titulo_programacion": "La luz por primera vez",
    "obra_catalogo": "La luz por primera vez",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-15",
@@ -4368,7 +4820,8 @@
    "direccion": "Calle 17 # 15-36",
    "titulo_programacion": "Andariega",
    "obra_catalogo": "Andariega",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-16",
@@ -4378,7 +4831,8 @@
    "direccion": "Calle 17 # 15-36",
    "titulo_programacion": "La Raya",
    "obra_catalogo": "La Raya",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   },
   {
    "dia": "2026-08-16",
@@ -4388,7 +4842,8 @@
    "direccion": "Calle 17 # 15-36",
    "titulo_programacion": "Semillas",
    "obra_catalogo": "Semillas",
-   "tipo": "film"
+   "tipo": "film",
+   "en_app": true
   }
  ]
 }
