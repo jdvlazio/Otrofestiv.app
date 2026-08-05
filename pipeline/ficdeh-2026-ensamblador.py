@@ -25,7 +25,11 @@ def norm(s):
 by_title = {f['title']: f for f in CAT['films']}
 
 # ── funciones que entran ─────────────────────────────────────────────────────
-funcs = [f for f in PROG['funciones'] if f.get('en_app')]
+# Ventana OFICIAL del festival (decisión de Juan, 5 ago): 12–19 AGO. Las
+# funciones del 10, 11, 20 y 24 son actividades alternativas fuera de programa.
+VENTANA = {f'2026-08-{d}' for d in range(12, 20)}
+funcs = [f for f in PROG['funciones'] if f.get('en_app') and f['dia'] in VENTANA]
+fuera = [f for f in PROG['funciones'] if f.get('en_app') and f['dia'] not in VENTANA]
 dias  = sorted({f['dia'] for f in funcs})
 
 LBL    = ['LUN','MAR','MIÉ','JUE','VIE','SÁB','DOM']
@@ -62,7 +66,12 @@ for f in sorted(funcs, key=lambda x: (x['dia'], x['hora'], x['ciudad'])):
     base = {'day': f['dia'], 'time': f['hora'], 'venue': venue_key(f),
             'day_order': dias.index(f['dia']),
             'has_qa': False, 'is_cortos': False, 'film_list': None,
-            'is_free': True, 'requires_registration': False,
+            **({'sala': f['sala']} if f.get('sala') else {}),
+            # is_free/requires_registration salen del 'tipo de ingreso' que
+            # publica cada función en la programación oficial.
+            'is_free': f.get('ingreso','').strip().lower().startswith('entrada libre') or not f.get('ingreso'),
+            'requires_registration': 'inscrip' in f.get('ingreso','').lower(),
+            '_ingreso': f.get('ingreso',''),
             '_src': {'programacion_oficial': f['titulo_programacion']}}
     if f['tipo'] in ('film','film_invitada'):
         obra = by_title.get(f['obra_catalogo']) if f['obra_catalogo'] else by_title.get(f['titulo_programacion'])
@@ -94,7 +103,10 @@ out = {
   },
   'name': '13° FICDEH', 'shortName': 'FICDEH',
   'fullName': 'Festival Internacional de Cine por los Derechos Humanos',
-  'city': 'Bogotá y 10 ciudades', 'country': 'CO',
+  # '11 ciudades' NO coincide con la city de ninguna sede → el badge
+  # `venue-municipio` (multiciudad, introducido con Cinemancia) se muestra en
+  # TODAS las funciones, que es lo que queremos en un festival de 11 ciudades.
+  'city': '11 ciudades', 'country': 'CO',
   'dates': f'{dnum(dias[0])}–{dnum(dias[-1])} AGO', 'dates_en': f'AUG {dnum(dias[0])}–{dnum(dias[-1])}',
   'year': 2026, 'timezoneOffset': '-05:00', 'storageKey': 'ficdeh2026_',
   'festivalStartStr': f'{dias[0]}T00:00:00', 'festivalEndStr': f'{dias[-1]}T23:59:00',
@@ -116,6 +128,7 @@ out = {
 }
 json.dump(out, open(f'{REPO}/festivals/staging/ficdeh-2026-build.json','w',encoding='utf-8'), ensure_ascii=False, indent=1)
 
+print(f'fuera de la ventana oficial (12-19 AGO): {len(fuera)} → ' + str(sorted({x["dia"] for x in fuera})))
 print(f'funciones ensambladas: {len(films_out)}  (cine {sum(1 for e in films_out if e["type"]=="film")} · actividades {sum(1 for e in films_out if e["type"]=="event")})')
 print(f'días: {len(dias)} ({dias[0]} → {dias[-1]})  · prioLimit {out["prioLimit"]}')
 print(f'sedes: {len(venues)} · ciudades: {len({v["city"] for v in venues.values()})}')
