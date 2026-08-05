@@ -76,7 +76,7 @@ final class WatchAuthManager: NSObject, ObservableObject {
             try? await Task.sleep(for: .milliseconds(100))
         }
         guard session.isReachable else {
-            status = .failed("iPhone no alcanzable — abrí Otrofestiv en el teléfono")
+            status = .failed(L.phoneUnreachable)
             return
         }
         do {
@@ -112,7 +112,14 @@ final class WatchAuthManager: NSObject, ObservableObject {
 enum WatchAuthError: LocalizedError {
     case phone(String)
     var errorDescription: String? {
-        switch self { case .phone(let m): return "iPhone: \(m)" }
+        switch self {
+        case .phone(let m):
+            // El teléfono responde con el mensaje de la capa web (watch-bridge.js).
+            // El caso conocido se mapea a copy propio del reloj (localizado y humano);
+            // el resto conserva el prefijo técnico para diagnóstico.
+            if m.contains("sin sesión de email") { return L.phoneNoSession }
+            return "iPhone: \(m)"
+        }
     }
 }
 

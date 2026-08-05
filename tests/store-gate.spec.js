@@ -150,3 +150,65 @@ test.describe('store gate v4 — matriz de UAs', () => {
     await expectLanding(page); await context.close();
   });
 });
+
+// ── SG14/SG15 — el badge de App Store NAVEGA en el webview (2 ago 2026) ───────
+// Bug de campaña FINCA: en el in-app browser de Instagram el tap al badge de
+// Apple "no hacía nada". Los webviews de IG/FB BLOQUEAN el handoff del
+// universal link apps.apple.com a la app de App Store (la navegación se
+// cancela en silencio). Workaround estándar de la industria (Branch/AppsFlyer):
+// en iOS el href usa itms-apps:// — el esquema sí pasa al sistema, y en Safari
+// normal también abre App Store directo. Android/desktop conservan https
+// (la página web, que resuelve desde #496 con storefront + slug).
+test.describe('store gate v4 — badge de App Store por plataforma', () => {
+  // v2 (2 ago): IG bloquea TAMBIÉN itms-apps (confirmado en el teléfono de Juan)
+  // → en in-app browsers el badge va a /get/, que redirige y tiene el rescate.
+  test('SG14 Instagram iOS → badge Apple hacia /get/ (funnel con rescate)', async ({ browser }) => {
+    const { context, page } = await open(browser, UA.igIOS);
+    await page.waitForSelector('.sg-btn', { timeout: 8000 });
+    const hrefs = await page.evaluate(() => [...document.querySelectorAll('.sg-btn')].map(a => a.getAttribute('href')));
+    expect(hrefs.some(h => h === '/get/')).toBe(true);
+    await context.close();
+  });
+  test('SG14b Safari iOS (fuera de webview) → badge Apple directo con itms-apps://', async ({ browser }) => {
+    const { context, page } = await open(browser, UA.safariIOS);
+    await page.waitForSelector('.sg-btn', { timeout: 8000 });
+    const hrefs = await page.evaluate(() => [...document.querySelectorAll('.sg-btn')].map(a => a.getAttribute('href')));
+    expect(hrefs.some(h => h.startsWith('itms-apps://apps.apple.com/co/app/otrofestiv/id6769367002'))).toBe(true);
+    await context.close();
+  });
+  // SG16 — el RESCATE de /get: si el webview frena el redirect (acá: 204 = la
+  // navegación no ocurre), a los 1.6s aparece el rescate con reintento itms-apps
+  // + instrucción del menú ···. Es la red del funnel de campaña (IG stories/bio).
+  test('SG16 /get en IG iOS con redirect bloqueado → muestra el rescate', async ({ browser }) => {
+    const GET = fs.readFileSync(path.join(__dirname, '..', 'get', 'index.html'), 'utf8');
+    const context = await browser.newContext({ userAgent: UA.igIOS, viewport: { width: 390, height: 844 }, locale: 'es-CO' });
+    const page = await context.newPage();
+    await context.route('**/*', (route) => {
+      const url = route.request().url();
+      if (url.startsWith(FAKE + 'get')) return route.fulfill({ contentType: 'text/html', body: GET });
+      if (url.includes('apps.apple.com')) return route.fulfill({ status: 204, body: '' }); // el webview "se traga" la navegación
+      return route.fulfill({ status: 204, body: '' });
+    });
+    // waitUntil commit: el location.replace inline aborta el 'load' del goto
+    // (la navegación al store devuelve 204 y la página original sigue viva).
+    await page.goto(FAKE + 'get/', { waitUntil: 'commit' });
+    await page.waitForSelector('#rescate', { state: 'visible', timeout: 5000 });
+    const r = await page.evaluate(() => ({
+      titulo: document.getElementById('r-t').textContent,
+      btn: document.getElementById('r-btn').getAttribute('href'),
+      alt: document.getElementById('r-alt').style.display !== 'none',
+    }));
+    expect(r.titulo).toContain('Instagram');
+    expect(r.btn.startsWith('itms-apps://apps.apple.com/co/app/otrofestiv/')).toBe(true);
+    expect(r.alt).toBe(true); // la instrucción del ··· SÍ se muestra en webview
+    await context.close();
+  });
+  test('SG15 Instagram Android → badge Apple https (página web) + Play intacto', async ({ browser }) => {
+    const { context, page } = await open(browser, UA.igAndroid);
+    await page.waitForSelector('.sg-btn', { timeout: 8000 });
+    const hrefs = await page.evaluate(() => [...document.querySelectorAll('.sg-btn')].map(a => a.getAttribute('href')));
+    expect(hrefs.some(h => h.startsWith('https://apps.apple.com/co/app/otrofestiv/id6769367002'))).toBe(true);
+    expect(hrefs.some(h => h.includes('play.google.com/store/apps/details'))).toBe(true);
+    await context.close();
+  });
+});

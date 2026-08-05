@@ -188,3 +188,66 @@ test('T41 — sección del poster no truncada en grid', async ({ page }) => {
   expect(content).not.toMatch(/>FICC\s*</);
   expect(content).not.toMatch(/>COMP\s*</);
 });
+
+// ── T46/T47 — filtro de lugar con NIVEL DE CIUDAD (5 ago 2026) ────────────────
+// FICDEH 2026: 11 ciudades, 131 sedes, 416 funciones — la lista plana eran 12,5
+// pantallas de scroll y el usuario de Tunja tenía que recorrer las de Bogotá.
+// Anatomía aprobada por Juan: nivel 1 = ciudades (caben sin scroll), nivel 2 =
+// "‹ Ciudades" + la ciudad (filtra entera) + sus sedes. SOLO en multiciudad:
+// con una sola ciudad el filtro queda EXACTO como siempre (T47 lo congela).
+test('T46 — multiciudad: el filtro abre por ciudad y se puede filtrar la ciudad entera', async ({ page }) => {
+  await enterFestival(page, 'cinemancia2025');
+  await page.evaluate(() => switchMainNav('mnav-cartelera'));
+  await page.waitForTimeout(300);
+  await page.evaluate(() => document.getElementById('lugar-btn').click());
+  await page.waitForSelector('#lugar-drop', { timeout: 5000 });
+
+  const n1 = await page.evaluate(() => [...document.querySelectorAll('#lugar-drop .lugar-opt')].map(o => o.dataset.v));
+  expect(n1[0]).toBe('all');
+  expect(n1.filter(v => v.startsWith('drill:')).length).toBeGreaterThanOrEqual(2); // ciudades, no sedes
+  expect(n1.some(v => v === 'Colombo Americano')).toBe(false);                     // las sedes NO están en el nivel 1
+
+  // entrar a una ciudad → "‹ Ciudades" + la ciudad + sus sedes
+  await page.evaluate(() => document.querySelector('#lugar-drop [data-v="drill:Medellín"]').click());
+  await page.waitForTimeout(200);
+  const n2 = await page.evaluate(() => [...document.querySelectorAll('#lugar-drop .lugar-opt')].map(o => o.dataset.v));
+  expect(n2[0]).toBe('back');
+  expect(n2[1]).toBe('city:Medellín');
+  expect(n2.length).toBeGreaterThan(2);
+  // el drill NO cierra el dropdown (regresión: el repintado dejaba huérfano el
+  // e.target y lugarOutside lo cerraba — por eso stopPropagation)
+  expect(await page.evaluate(() => !!document.getElementById('lugar-drop'))).toBe(true);
+
+  // volver
+  await page.evaluate(() => document.querySelector('#lugar-drop [data-v="back"]').click());
+  await page.waitForTimeout(200);
+  expect(await page.evaluate(() => document.querySelector('#lugar-drop .lugar-opt').dataset.v)).toBe('all');
+
+  // filtrar la ciudad entera
+  await page.evaluate(() => document.querySelector('#lugar-drop [data-v="drill:Medellín"]').click());
+  await page.waitForTimeout(200);
+  await page.evaluate(() => document.querySelector('#lugar-drop [data-v="city:Medellín"]').click());
+  await page.waitForTimeout(700);
+  const tras = await page.evaluate(() => ({
+    sel: activeVenue,
+    pill: document.querySelector('.paf-pill')?.innerText.replace(/\s+/g, ' ').trim(),
+    items: document.querySelectorAll('.poster-card, .plist-item').length,
+  }));
+  expect(tras.sel).toBe('city:Medellín');
+  expect(tras.pill).toContain('Medellín');
+  expect(tras.pill).not.toContain('city:');   // el centinela no se filtra a la UI
+  expect(tras.items).toBeGreaterThan(0);
+});
+
+test('T47 — festival de una ciudad: el filtro sigue plano, sin nivel de ciudad', async ({ page }) => {
+  await enterFestival(page, 'finca2026', '2026-08-13T10:00');
+  await page.evaluate(() => switchMainNav('mnav-cartelera'));
+  await page.waitForTimeout(300);
+  await page.evaluate(() => document.getElementById('lugar-btn').click());
+  await page.waitForSelector('#lugar-drop', { timeout: 5000 });
+  const v = await page.evaluate(() => [...document.querySelectorAll('#lugar-drop .lugar-opt')].map(o => o.dataset.v));
+  expect(v[0]).toBe('all');
+  expect(v.some(x => x.startsWith('drill:'))).toBe(false);
+  expect(v.some(x => x.startsWith('city:'))).toBe(false);
+  expect(v.length).toBeGreaterThan(1);        // y sigue listando sus sedes
+});

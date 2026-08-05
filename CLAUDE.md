@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `6ceed54 feat(plan): commitPlan — un solo camino de escritura, certificado (#494) (#494)`
+> Último commit: `262ee1e fix(ux): Dia libre pierde el chevron-acordeon y la costura del copy (#500) (#500)`
 
 ---
 
@@ -64,7 +64,7 @@ Juan es Product Owner, diseñador y developer. Claude ejecuta; Juan audita y apr
 | `tercertiempo2026` | Tercer Tiempo Fest | Bogotá | 13–19 JUL | Recién terminado |
 | `fantasofest2026` | FantasoFest | Bogotá | 13–19 JUL | Recién terminado |
 | `finca2026` | FINCA | Buenos Aires | 12–19 AGO | **Próximo / activo** |
-| `ficmontanas2026` | Ficmontañas | Salento | JUL 1–5 | Recién terminado |
+| `ficmontanas2026` | Ficmontañas | Salento | JUL 1–5 | Archivado |
 
 ### Features activas (desde `.specify/features/`)
 

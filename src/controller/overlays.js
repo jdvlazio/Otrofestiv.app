@@ -6,7 +6,7 @@
 
 import { FILM_CATEGORY_LABEL, FILM_CATEGORY_ORDER, SECTION_ORDER_LIST } from '../config.js';
 import { ICONS, _secLabelFull, parseProgramTitle } from '../view/components.js';
-import { emptyState, getFilmPoster, vcfg } from '../view/helpers.js';
+import { emptyState, getFilmPoster, vcfg, venueMatches } from '../view/helpers.js';
 import { _renderProgramaContent, lugarClose, lugarOutside, render } from '../view/programa.js';
 import { t } from '../i18n/i18n.js';
 import { _updateProgramaActiveFilter } from './pipeline.js';
@@ -22,7 +22,7 @@ export function seccionOpen(){
   drop.style.right = (window.innerWidth-r.right)+'px';
 
   const baseFilms = activeDay==='all' ? FILMS : FILMS.filter(f=>f.day===activeDay);
-  const films = activeVenue!=='all' ? baseFilms.filter(f=>vcfg(f.venue).short===activeVenue) : baseFilms;
+  const films = activeVenue!=='all' ? baseFilms.filter(f=>venueMatches(f.venue,activeVenue)) : baseFilms;
 
   const secMap={}, secCatMap={}, titleSet={};
   films.forEach(f=>{
@@ -284,23 +284,67 @@ export function lugarOpen(){
   const venues = Object.values(venueMap).sort((a,b)=>b.count-a.count);
   const total = venues.reduce((s,v)=>s+v.count,0);
 
-  // Render options
-  const opts = [{label:t('filter_todos_lugares'), count:total, short:'all'}, ...venues.map(v=>({...v,short:v.label}))];
-  drop.innerHTML = opts.map(v=>{
-    const isActive = (v.short==='all' && activeVenue==='all') || (activeVenue===v.short);
-    return '<div class="lugar-opt'+(isActive?' on':'')+'" data-v="'+v.short+'">'
-      +(v.short!=='all'?ICONS.pin:'')
-      +'<span>'+v.label+'</span>'
+  // ── Nivel de CIUDAD (solo festivales multiciudad — FICDEH 11, Cinemancia 10) ──
+  // Multiciudad = ≥2 ciudades DISTINTAS y NO VACÍAS entre las sedes visibles. El
+  // borde que valida la regla es FINCA: 1 sede declara city y 5 no — una regla
+  // ingenua ("¿hay city? agrupá") le inventaría dos grupos absurdos. Mono-ciudad
+  // → este bloque no corre y el filtro queda EXACTO como siempre.
+  // Anatomía aprobada (Juan, 5 ago 2026): nivel 1 = ciudades con conteo (caben
+  // las 11 de FICDEH sin scroll); nivel 2 = "‹ Ciudades" + la ciudad misma
+  // (filtra entera, centinela 'city:<Ciudad>' — ver venueMatches) + sus sedes.
+  // Un solo target por fila; navegación interna no cierra el dropdown.
+  const cityMap = {};
+  venues.forEach(v=>{ if(v.city){ (cityMap[v.city] ||= {count:0}); cityMap[v.city].count+=v.count; } });
+  const cities = Object.entries(cityMap).map(([name,x])=>({name,...x})).sort((a,b)=>b.count-a.count);
+  const multiCity = cities.length>=2;
+  // Si ya hay selección (ciudad o sede), el dropdown abre DENTRO de su ciudad.
+  let drillCity = (activeVenue&&activeVenue.startsWith('city:'))?activeVenue.slice(5):null;
+  if(multiCity&&!drillCity&&activeVenue!=='all'){
+    const cur=venues.find(v=>v.label===activeVenue);
+    if(cur&&cur.city) drillCity=cur.city;
+  }
+
+  function _row(dataV,label,count,opts={}){
+    const isActive=(dataV==='all'&&activeVenue==='all')||(activeVenue===dataV);
+    return '<div class="lugar-opt'+(isActive?' on':'')+(opts.cls?' '+opts.cls:'')+'" data-v="'+dataV.replace(/"/g,'&quot;')+'">'
+      +(opts.icon||'')
+      +'<span>'+label+'</span>'
       // "todos los lugares" sin conteo (total general sin referencia confunde);
-      // los venues individuales sí muestran su número.
-      +(v.short!=='all'?'<span class="lugar-cnt">'+v.count+'</span>':'')
+      // ciudades y sedes sí muestran su número.
+      +(count!=null?'<span class="lugar-cnt">'+count+'</span>':'')
+      +(opts.chev?ICONS.chevronR:'')
       +'</div>';
-  }).join('');
+  }
+
+  function _paint(){
+    if(!multiCity){
+      drop.innerHTML=_row('all', t('filter_todos_lugares'), null)
+        +venues.map(v=>_row(v.label, v.label, v.count, {icon:ICONS.pin})).join('');
+      return;
+    }
+    if(!drillCity){
+      drop.innerHTML=_row('all', t('filter_todos_lugares'), null)
+        +cities.map(c=>_row('drill:'+c.name, c.name, c.count, {chev:true})).join('');
+    } else {
+      const cv=venues.filter(v=>v.city===drillCity);
+      const ccount=cv.reduce((s,v)=>s+v.count,0);
+      drop.innerHTML='<div class="lugar-opt lugar-back" data-v="back">'+ICONS.chevronL+'<span>'+t('filter_ciudades')+'</span></div>'
+        +_row('city:'+drillCity, drillCity, ccount)
+        +cv.map(v=>_row(v.label, v.label, v.count, {icon:ICONS.pin})).join('');
+    }
+  }
+  _paint();
 
   drop.addEventListener('click', e=>{
     const opt = e.target.closest('.lugar-opt');
     if(!opt) return;
     const v = opt.dataset.v;
+    // Navegación INTERNA (no filtra, no cierra). stopPropagation es obligatorio:
+    // _paint() reemplaza el innerHTML, así que para cuando el evento llega a
+    // `document` la fila clickeada ya no está en el DOM → lugarOutside evalúa
+    // drop.contains(e.target)===false y cerraría el dropdown recién repintado.
+    if(v==='back'){ e.stopPropagation(); drillCity=null; _paint(); return; }
+    if(v.startsWith('drill:')){ e.stopPropagation(); drillCity=v.slice(6); _paint(); return; }
     activeVenue = (v==='all'||v===activeVenue)?'all':v;
     lugarClose();
     _updateProgramaActiveFilter();

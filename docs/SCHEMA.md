@@ -80,6 +80,25 @@ dominio es el dueño; ninguna vista calcula por su cuenta):
   queda intacta — territorio del camino de avisos. Guardián:
   `[plan-sync-en-puertas]`.
 
+### Festivales MULTICIUDAD — `city` por sede
+
+Cada entrada de `venues` puede declarar `city`. Con eso la app hace dos cosas,
+ambas automáticas (sin flags ni cambios de pipeline):
+
+- **Display** — badge `venue-municipio` bajo el nombre de la sede y ciudad en la
+  dirección de su ficha, cuando difiere de `FESTIVAL_CONFIG[id].city`
+  (Cinemancia 2025, 10 municipios del Valle de Aburrá).
+- **Filtro de lugar con nivel de ciudad** (5 ago 2026) — cuando hay **≥2
+  ciudades distintas y no vacías** entre las sedes visibles, el dropdown pasa a
+  dos niveles: ciudades (con su conteo) → «‹ Ciudades» + la ciudad (filtra
+  entera) + sus sedes. Con una sola ciudad el filtro queda plano, idéntico a
+  siempre. Motivo: FICDEH 2026 tiene 131 sedes en 11 ciudades — la lista plana
+  eran 12,5 pantallas de scroll en 390×844.
+  El predicado es `venueMatches(venue, sel)` (`view/helpers.js`), dueño único:
+  `sel` es `'all'`, un short de sede, o el centinela `'city:<Ciudad>'`.
+  **Ojo con el borde**: FINCA declara `city` en 1 de 6 sedes — por eso la regla
+  exige DOS ciudades distintas, no «¿hay city?».
+
 ### `sharedSlotIsOneScreening` — anclaje de función (opt-in, 29 jul 2026)
 
 Algunos festivales programan **dos obras en una misma función**: un corto o
