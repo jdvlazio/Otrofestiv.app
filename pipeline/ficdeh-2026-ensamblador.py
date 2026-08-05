@@ -224,7 +224,7 @@ out = {
   # '11 ciudades' NO coincide con la city de ninguna sede → el badge
   # `venue-municipio` (multiciudad, introducido con Cinemancia) se muestra en
   # TODAS las funciones, que es lo que queremos en un festival de 11 ciudades.
-  'city': '11 ciudades', 'country': 'CO',
+  'city': 'Colombia', 'country': 'CO',
   'dates': f'{dnum(dias[0])}–{dnum(dias[-1])} AGO', 'dates_en': f'AUG {dnum(dias[0])}–{dnum(dias[-1])}',
   'year': 2026, 'timezoneOffset': '-05:00', 'storageKey': 'ficdeh2026_',
   'festivalStartStr': f'{dias[0]}T00:00:00', 'festivalEndStr': f'{dias[-1]}T23:59:00',

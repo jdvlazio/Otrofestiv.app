@@ -329,11 +329,13 @@ export const FESTIVAL_CONFIG={
     keyArt:'/assets/keyart/fantasofest2026.jpg',
     films:null,posters:null,lbSlugs:{}
   },
-  // FICDEH: `city` no coincide con ninguna sede a propósito — así el badge
-  // venue-municipio y el filtro por ciudad se activan en las 11 ciudades.
+  // FICDEH ocurre en 11 ciudades, así que `city` es el PAÍS. `country` va vacío
+  // a propósito: el splash pinta «CIUDAD, PAÍS» y con ambos daría «COLOMBIA,
+  // COLOMBIA». Además, al no coincidir con ninguna sede, el badge
+  // venue-municipio y el filtro por ciudad se activan en las 11.
   'ficdeh2026': {
     name:'FICDEH',fullName:'FICDEH — Festival Internacional de Cine por los Derechos Humanos',shortName:'FICDEH',
-    city:'11 ciudades',country:'CO',
+    city:'Colombia',country:'',
     dates:'12–19 AGO',dates_en:'AUG 12–19',year:2026,timezoneOffset:'-05:00',
     keyArt:'/assets/keyart/ficdeh2026.jpg',
     storageKey:'ficdeh2026_',festivalStartStr:'2026-08-12T00:00:00',festivalEndStr:'2026-08-19T23:00:00',
@@ -344,6 +346,7 @@ export const FESTIVAL_CONFIG={
     dayShort_en:{'2026-08-12':'WED 12','2026-08-13':'THU 13','2026-08-14':'FRI 14','2026-08-15':'SAT 15','2026-08-16':'SUN 16','2026-08-17':'MON 17','2026-08-18':'TUE 18','2026-08-19':'WED 19'},
     dayLong:{'2026-08-12':'Miércoles 12 de agosto','2026-08-13':'Jueves 13 de agosto','2026-08-14':'Viernes 14 de agosto','2026-08-15':'Sábado 15 de agosto','2026-08-16':'Domingo 16 de agosto','2026-08-17':'Lunes 17 de agosto','2026-08-18':'Martes 18 de agosto','2026-08-19':'Miércoles 19 de agosto'},
     prioLimit:4,eventPosterLabel:['EVENTO',''],
+    tagline:'Festival Internacional de Cine por los Derechos Humanos', // espacios duros: fuerzan el corte en «Cine / por los Derechos Humanos»
     films:null,posters:null,lbSlugs:{}
   },
   'finca2026': {
