@@ -67,6 +67,11 @@ SEDE_SALA = {
         ('Universidad Tecnológica de Pereira -UTP', 'Bloque 13, Sala Magistral 1'),
     'Centro Cultural - Sala Audiovisual de Cali':
         ('Centro Cultural de Cali', 'Sala Audiovisual'),
+    # «Cinemateca» a secas: la fuente repite 3 funciones de la Cinemateca de
+    # Bogotá con este nombre, misma sala y hora, pero con la dirección de la
+    # Cinemateca del Museo La Tertulia (que es de Cali) y sin tipo de ingreso.
+    # Se unifica y el dedup posterior se queda con la entrada completa.
+    'Cinemateca': ('Cinemateca de Bogotá', ''),
 }
 
 
@@ -168,6 +173,29 @@ for e in films_out:
     for k in ('poster', 'posterSource', 'lbSlug'):
         if k in e and not (e[k] or '').strip():
             del e[k]
+
+# Dedup: la misma obra, el mismo día, a la misma hora y en la misma sala es UNA
+# función, por más que la fuente la liste dos veces con dos grafías de la sede.
+# Sin esto la app pinta dos proyecciones simultáneas de la misma película. Gana
+# la entrada con más datos (la que trae tipo de ingreso).
+_vistas, _dedup, _fuera = {}, [], []
+for e in films_out:
+    k = (e.get('day'), e.get('time'), e.get('venue'), e.get('sala', ''), e.get('title'))
+    if None in k[:3]:
+        _dedup.append(e)
+        continue
+    prev = _vistas.get(k)
+    if prev is None:
+        _vistas[k] = len(_dedup)
+        _dedup.append(e)
+    elif len((e.get('_ingreso') or '').strip()) > len((_dedup[prev].get('_ingreso') or '').strip()):
+        _fuera.append(_dedup[prev]['title'])
+        _dedup[prev] = e            # la nueva trae ingreso y la vieja no
+    else:
+        _fuera.append(e['title'])
+if _fuera:
+    print(f'  dedup: {len(_fuera)} funciones repetidas por grafía de sede → {sorted(set(_fuera))}')
+films_out = _dedup
 
 # has_qa — solo donde hay confirmación externa verificable. El sitio del
 # festival no lo publica y las fichas de la Cinemateca tampoco (su menú incluye

@@ -432,13 +432,6 @@
    "city": "Bogotá",
    "address": "Calle 44 # 14-60"
   },
-  "Cinemateca - Bogotá": {
-   "short": "Cinemateca",
-   "lat": 4.6032463,
-   "lng": -74.06758,
-   "city": "Bogotá",
-   "address": "Cinemateca del Museo La Tertulia - Cra. 1 # 5-105, Oeste"
-  },
   "Manzana del Cuidado Mochuelo - Bogotá": {
    "short": "Manzana del Cuidado Mochuelo",
    "lat": 4.5084612,
@@ -3541,39 +3534,6 @@
     "url": "https://www.ficdeh.com/produccion/apolo/",
     "date": "2026-07-25",
     "programacion_oficial": "Apolo"
-   },
-   "type": "film"
-  },
-  {
-   "title": "Amor rebelde",
-   "director": "Alejandro Bernal",
-   "year": "2021",
-   "duration": "77 min",
-   "country": "Colombia, Canadá, Brasil",
-   "section": "🕊️ Retrospectiva 10 Años del Acuerdo de Paz",
-   "synopsis": "Dos excombatientes de las FARC luchan por mantener viva su relación y construir una familia durante su tránsito a la vida civil. A lo largo de cinco años, el documental acompaña su proceso de reintegración mientras enfrentan los desafíos personales y sociales que deja el conflicto armado colombiano.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/amor-rebelde.jpg",
-   "posterSource": "custom",
-   "genre": "Documental",
-   "lbSlug": "rebel-love-2021",
-   "synopsis_en": "Two young ex-FARC guerrillas fight to keep their love alive and raise a family during the transition from war to peace. We follow them for five years as they enter civil life, build a home, and have their first child. Having lived through the conflict, they are adamant never to return to war, but Colombia's peace process is polarized and its future is uncertain.",
-   "title_en": "Rebel Love",
-   "day": "2026-08-14",
-   "time": "15:00",
-   "venue": "Cinemateca - Bogotá",
-   "day_order": 2,
-   "has_qa": false,
-   "is_cortos": false,
-   "film_list": null,
-   "sala": "Sala Capital",
-   "is_free": true,
-   "requires_registration": false,
-   "_ingreso": "",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/amor-rebelde/",
-    "date": "2026-07-25",
-    "programacion_oficial": "Amor rebelde"
    },
    "type": "film"
   },
@@ -7743,38 +7703,6 @@
     "url": "https://www.ficdeh.com/produccion/el-silencio-de-los-palafitos/",
     "date": "2026-07-25",
     "programacion_oficial": "El silencio de los palafitos"
-   },
-   "type": "film"
-  },
-  {
-   "title": "La Bonga",
-   "director": "Sebastián Pinzón Silva y Canela Reyes",
-   "year": "2023",
-   "duration": "77 min",
-   "country": "Colombia, Estados Unidos",
-   "section": "🕊️ Retrospectiva 10 Años del Acuerdo de Paz",
-   "synopsis": "Hace 20 años, el pueblo palenquero de La Bonga recibió una amenaza firmada por paramilitares. Esa misma noche, 120 familias salieron para nunca volver. Hoy, La Bonga ha sido devorada por la selva, y toda una generación solo conoce su pueblo a través de historias. María ha sido la única persona que ha regresado a vivir allá. Muchos creen que está loca y que pone en riesgo su vida. Después de dos décadas, María lidera a más de 300 personas durante el primer retorno colectivo a La Bonga, para llevar a cabo una enorme celebración. La película teje el viaje colectivo con el viaje solitario de María y su nieta, un año después de la fiesta, en el que María intenta inculcar en ella el amor por su tierra ancestral. La Bonga es un viaje simbólico por las selvas del Caribe colombiano para resucitar un lugar que sólo existe en la memoria, un ritual de despedida de un pueblo que fue y que no volverá. En un acto de resistencia, esta fiesta suelta lo perdido, lo deja ir, mientras celebra su memoria y su comunidad.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/la-bonga.jpg",
-   "posterSource": "custom",
-   "genre": "Documental",
-   "lbSlug": "la-bonga",
-   "synopsis_en": "Decades after they were forced to flee their village in the Colombian jungle, a community makes a poetically rendered return home.",
-   "day": "2026-08-15",
-   "time": "20:00",
-   "venue": "Cinemateca - Bogotá",
-   "day_order": 3,
-   "has_qa": false,
-   "is_cortos": false,
-   "film_list": null,
-   "sala": "Sala Capital",
-   "is_free": true,
-   "requires_registration": false,
-   "_ingreso": "",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/la-bonga/",
-    "date": "2026-07-25",
-    "programacion_oficial": "La Bonga"
    },
    "type": "film"
   },
@@ -12504,37 +12432,6 @@
     "url": "https://www.ficdeh.com/produccion/volver-a-creer/",
     "date": "2026-07-25",
     "programacion_oficial": "Volver a creer"
-   },
-   "type": "film"
-  },
-  {
-   "title": "Después del frío",
-   "director": "María Jimena Duzán",
-   "year": "2022",
-   "duration": "84 min",
-   "country": "Colombia",
-   "section": "🕊️ Retrospectiva 10 Años del Acuerdo de Paz",
-   "synopsis": "En 2016, Colombia firmó un histórico acuerdo de paz con las FARC, marcando el fin de una guerra de 60 años. ‘Después del frío’ narra las historias de tres personas: un ganadero uribista que fue secuestrado, un coronel implicado en ‘falsos positivos’ y un líder social de Siloé, en Cali. A través de entrevistas cercanas y humanas, este documental revela los desafíos y las pequeñas victorias en el camino hacia la reconciliación y la justicia en un país aún marcado por la sombra del conflicto.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/despues-del-frio.jpg",
-   "posterSource": "custom",
-   "genre": "Documental",
-   "lbSlug": "despues-del-frio",
-   "day": "2026-08-19",
-   "time": "18:30",
-   "venue": "Cinemateca - Bogotá",
-   "day_order": 7,
-   "has_qa": false,
-   "is_cortos": false,
-   "film_list": null,
-   "sala": "Sala Capital",
-   "is_free": true,
-   "requires_registration": false,
-   "_ingreso": "",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/despues-del-frio/",
-    "date": "2026-07-25",
-    "programacion_oficial": "Después del frío"
    },
    "type": "film"
   },
