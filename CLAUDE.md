@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `262ee1e fix(ux): Dia libre pierde el chevron-acordeon y la costura del copy (#500) (#500)`
+> Último commit: `2114682 feat(filtro): nivel de ciudad en el filtro de lugar para festivales multiciudad (#501) (#501)`
 
 ---
 

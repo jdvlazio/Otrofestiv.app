@@ -12,6 +12,20 @@ import { t } from '../i18n/i18n.js';
 import { _updateProgramaActiveFilter } from './pipeline.js';
 import { countryToFlags } from './sheets-controller.js';
 
+// _dropRight — posición horizontal de un panel de filtro, ACOTADA al viewport.
+// Bug (FICDEH, 6 ago 2026): el panel se anclaba al borde derecho de su botón sin
+// tope, así que con el botón a media pantalla (Sección termina en x=274 de 375)
+// y el panel en su ancho máximo de 300px, el borde izquierdo caía en -26px: se
+// leía "odo el programa" sin la T y los emojis salían partidos. Le pasa a
+// cualquier festival cuyo panel llegue al máximo — con secciones de nombre largo
+// es sistemático. El clamp deja al menos MARGEN px de aire a la izquierda.
+function _dropRight(btnRight){
+  const MARGEN=8;
+  const ancho=Math.min(300, window.innerWidth*0.9); // espejo de .filter-drop max-width
+  const right=window.innerWidth-btnRight;
+  return Math.max(MARGEN, Math.min(right, window.innerWidth-ancho-MARGEN))+'px';
+}
+
 export function seccionOpen(){
   const btn = document.getElementById('seccion-btn');
   const r = btn.getBoundingClientRect();
@@ -19,7 +33,7 @@ export function seccionOpen(){
   drop.id = 'seccion-drop';
   drop.className = 'filter-drop'; // anatomía única; el build solo aporta posición
   drop.style.top = (r.bottom+4)+'px';
-  drop.style.right = (window.innerWidth-r.right)+'px';
+  drop.style.right = _dropRight(r.right);
 
   const baseFilms = activeDay==='all' ? FILMS : FILMS.filter(f=>f.day===activeDay);
   const films = activeVenue!=='all' ? baseFilms.filter(f=>venueMatches(f.venue,activeVenue)) : baseFilms;
@@ -254,7 +268,7 @@ export function lugarOpen(){
   drop.id = 'lugar-drop';
   drop.className = 'filter-drop'; // anatomía única; el build solo aporta posición
   drop.style.top = (r.bottom+4)+'px';
-  drop.style.right = (window.innerWidth-r.right)+'px';
+  drop.style.right = _dropRight(r.right);
 
   // Collect unique venues from FILMS
   // Embedded screenings[] format (Tribeca): expand all screenings, dedupe by title.

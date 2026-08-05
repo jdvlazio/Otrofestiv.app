@@ -251,3 +251,27 @@ test('T47 — festival de una ciudad: el filtro sigue plano, sin nivel de ciudad
   expect(v.some(x => x.startsWith('city:'))).toBe(false);
   expect(v.length).toBeGreaterThan(1);        // y sigue listando sus sedes
 });
+
+// ── T48 — los paneles de filtro nunca se salen del viewport ───────────────────
+// Bug real (FICDEH, 6 ago 2026): el panel se anclaba al borde derecho de su
+// botón sin tope. Con el botón "Sección" terminando en x=274 de 375 y el panel
+// en su ancho máximo (300px), el borde izquierdo caía en -26px: se leía "odo el
+// programa" sin la T y los emojis de sección salían partidos. No lo introdujo
+// FICDEH — le pasa a cualquier festival cuyo panel llegue a 300px.
+test('T48 — los paneles de Sección y Lugar caben en pantalla (375px, el peor caso)', async ({ page }) => {
+  await page.setViewportSize({ width: 375, height: 844 });
+  await enterFestival(page, 'tribeca2026');
+  await page.evaluate(() => switchMainNav('mnav-cartelera'));
+  await page.waitForTimeout(300);
+  for (const [btn, drop] of [['seccion-btn', 'seccion-drop'], ['lugar-btn', 'lugar-drop']]) {
+    await page.evaluate(id => document.getElementById(id).click(), btn);
+    await page.waitForSelector(`#${drop}`, { timeout: 5000 });
+    const box = await page.evaluate(id => {
+      const r = document.getElementById(id).getBoundingClientRect();
+      return { left: Math.round(r.left), right: Math.round(r.right), w: Math.round(r.width) };
+    }, drop);
+    expect(box.left, `${drop} se sale por la izquierda`).toBeGreaterThanOrEqual(0);
+    expect(box.right, `${drop} se sale por la derecha`).toBeLessThanOrEqual(375);
+    await page.evaluate(id => document.getElementById(id)?.remove(), drop);
+  }
+});
