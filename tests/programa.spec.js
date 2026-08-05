@@ -275,3 +275,66 @@ test('T48 — los paneles de Sección y Lugar caben en pantalla (375px, el peor 
     await page.evaluate(id => document.getElementById(id)?.remove(), drop);
   }
 });
+
+// ── T49/T50 — la CIUDAD como contexto (FICDEH, 6 ago 2026) ───────────────────
+// FICDEH: 11 ciudades, 387 funciones. Dos problemas que resolvió este bloque:
+//   · el modo por días mezclaba las 11 sin decir cuál era cuál — había que abrir
+//     cada ficha para saber si la función era alcanzable;
+//   · el filtro de ciudad se perdía al cambiar de día y al cerrar la app.
+// Doctrina: la ciudad filtra lo que DESCUBRÍS (Programa/Días), nunca lo que YA
+// ELEGISTE (Mi Plan). Y es contexto: se recuerda; la sede no.
+test('T49 — multiciudad: cada card del modo por días dice su ciudad', async ({ page }) => {
+  await enterFestival(page, 'cinemancia2025');
+  // El día con MÁS funciones — un DAY_KEYS fijo puede caer en un día vacío y el
+  // test pasaría sin ejercer nada (pasó: skip silencioso, cazado por mutación).
+  await page.evaluate(() => {
+    switchMainNav('mnav-cartelera');
+    const cnt = {}; FILMS.forEach(f => { if (f.day) cnt[f.day] = (cnt[f.day] || 0) + 1; });
+    activeDay = Object.keys(cnt).sort((a, b) => cnt[b] - cnt[a])[0];
+    programaViewMode = 'list';   // el modo POR DÍAS es la lista (el grid son pósters)
+    _renderProgramaContent();
+  });
+  await page.waitForTimeout(500);
+  const r = await page.evaluate(() => {
+    const items = [...document.querySelectorAll('.plist-item')];
+    return { items: items.length, conCiudad: items.filter(i => i.querySelector('.plist-city')).length };
+  });
+  expect(r.items, 'el día elegido tiene que tener funciones o el test no prueba nada').toBeGreaterThan(0);
+  expect(r.conCiudad).toBe(r.items);   // TODAS, no algunas
+});
+
+test('T50 — la ciudad se recuerda entre sesiones; la sede no', async ({ page }) => {
+  await enterFestival(page, 'cinemancia2025');
+  await page.evaluate(() => { switchMainNav('mnav-cartelera'); });
+  await page.waitForTimeout(300);
+  // elegir una ciudad por la UI real
+  await page.evaluate(() => document.getElementById('lugar-btn').click());
+  await page.waitForSelector('#lugar-drop', { timeout: 5000 });
+  const ciudad = await page.evaluate(() => {
+    const d = [...document.querySelectorAll('#lugar-drop .lugar-opt')].find(o => o.dataset.v.startsWith('drill:'));
+    d.click(); return d.dataset.v.slice(6);
+  });
+  await page.waitForTimeout(200);
+  await page.evaluate(c => document.querySelector(`#lugar-drop [data-v="city:${c}"]`).click(), ciudad);
+  await page.waitForTimeout(600);
+
+  const guardado = await page.evaluate(() => localStorage.getItem('cinemancia2025_city'));
+  expect(guardado).toBe('city:' + ciudad);
+
+  // cambiar de DÍA no la pierde (antes sí: activeVenue se reseteaba a 'all')
+  await page.evaluate(() => { const t = [...document.querySelectorAll('.dtab')].find(x => x.dataset.day && x.dataset.day !== 'all' && x.dataset.day !== activeDay); t && t.click(); });
+  await page.waitForTimeout(600);
+  expect(await page.evaluate(() => activeVenue)).toBe('city:' + ciudad);
+
+  // reabrir la app: sigue en su ciudad
+  await enterFestival(page, 'cinemancia2025');
+  expect(await page.evaluate(() => activeVenue)).toBe('city:' + ciudad);
+
+  // y se puede SALIR: quitar el chip la olvida
+  await page.evaluate(() => { switchMainNav('mnav-cartelera'); });
+  await page.waitForTimeout(300);
+  await page.evaluate(() => document.querySelector('.paf-pill[data-action="pafClearVenue"]')?.click());
+  await page.waitForTimeout(500);
+  expect(await page.evaluate(() => activeVenue)).toBe('all');
+  expect(await page.evaluate(() => localStorage.getItem('cinemancia2025_city'))).toBeFalsy();
+});

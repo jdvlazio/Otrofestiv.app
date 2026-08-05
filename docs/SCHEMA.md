@@ -96,6 +96,24 @@ ambas automáticas (sin flags ni cambios de pipeline):
   eran 12,5 pantallas de scroll en 390×844.
   El predicado es `venueMatches(venue, sel)` (`view/helpers.js`), dueño único:
   `sel` es `'all'`, un short de sede, o el centinela `'city:<Ciudad>'`.
+- **La ciudad es CONTEXTO** (6 ago 2026): se **recuerda entre sesiones** (por
+  festival, `storage.getCityFilter`) y **sobrevive al cambio de día o sección**
+  (`keepCityOnly`); una SEDE, en cambio, es un filtro momentáneo y se limpia.
+  Quitar el chip del filtro es la acción explícita de salir de la ciudad, y
+  también la olvida. Al cargar, si la ciudad guardada ya no existe en las sedes
+  del festival, se descarta en silencio (no deja el programa vacío).
+  **Doctrina:** la ciudad filtra lo que DESCUBRÍS (Programa, Días, Sugerencias),
+  **nunca lo que ya elegiste** — Mi Plan muestra tu plan completo aunque tenga
+  funciones de varias ciudades. Un plan itinerante (Bogotá el 13, Medellín el 17)
+  es legítimo y ya funciona: `screensConflict` corta por día antes que nada.
+- **La ciudad se ve en cada card** del modo por días (`venueCity`, dueño único —
+  devuelve '' si coincide con la del festival, para no repetirla en los de una
+  sola ciudad). Sin esto, en FICDEH había que abrir la ficha para saber si una
+  función era alcanzable.
+- **Conflicto entre ciudades** — `screensConflictReason` devuelve `kind:'ciudad'`
+  con el nombre y **sin minutos**: `travelMins` usa velocidad urbana y a escala
+  intermunicipal se equivoca 3× (Bogotá→Ibagué: estima 13 h, son ~4). Se dice el
+  dato (la ciudad) y el usuario juzga; se puede forzar con "+ Incluir".
   **Ojo con el borde**: FINCA declara `city` en 1 de 6 sedes — por eso la regla
   exige DOS ciudades distintas, no «¿hay city?».
 

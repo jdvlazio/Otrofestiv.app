@@ -355,6 +355,25 @@ export function venueSelLabel(sel){
   return (sel&&sel.startsWith('city:'))?sel.slice(5):sel;
 }
 
+// isCitySel / keepCityOnly — la CIUDAD es contexto, la SEDE es un filtro momentáneo.
+// Al cambiar de día o de sección se limpia la sede (el viernes esa sala quizá no
+// proyecta) pero se CONSERVA la ciudad: seguís en la misma ciudad. Sin esto, en
+// FICDEH elegir Bogotá y tocar otro día te devolvía las 11 ciudades.
+export function isCitySel(sel){ return !!(sel&&sel.startsWith('city:')); }
+
+// venueCity(v) — la ciudad de una sede, SOLO cuando aporta (dueño único).
+// Devuelve '' si la sede no declara ciudad o si es la misma del festival: en un
+// festival de una ciudad, repetirla en cada card sería ruido. En FICDEH (11
+// ciudades, `city:'Colombia'` en config a propósito) ninguna coincide → todas la
+// muestran. Mismo criterio que ya usaban las fichas para el badge
+// `venue-municipio`; acá pasa a ser el dueño de esa decisión.
+export function venueCity(v){
+  const festCity=(FESTIVAL_CONFIG[_activeFestId]||{}).city||'';
+  const c=vcfg(v).city||'';
+  return (c&&c!==festCity)?c:'';
+}
+export function keepCityOnly(sel){ return isCitySel(sel)?sel:'all'; }
+
 export function sala(v){const m=v.match(/Sala\s*(\d+)/)||v.match(/Sal[oó]n\s*(\d+)/i);return m?'Sala '+m[1]:'';}
 
 export function travelWarn(s1,s2){

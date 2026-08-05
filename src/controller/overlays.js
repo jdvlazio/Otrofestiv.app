@@ -6,7 +6,8 @@
 
 import { FILM_CATEGORY_LABEL, FILM_CATEGORY_ORDER, SECTION_ORDER_LIST } from '../config.js';
 import { ICONS, _secLabelFull, parseProgramTitle } from '../view/components.js';
-import { emptyState, getFilmPoster, vcfg, venueMatches } from '../view/helpers.js';
+import { emptyState, getFilmPoster, vcfg, venueMatches, isCitySel } from '../view/helpers.js';
+import { storage } from '../storage/storage.js';
 import { _renderProgramaContent, lugarClose, lugarOutside, render } from '../view/programa.js';
 import { t } from '../i18n/i18n.js';
 import { _updateProgramaActiveFilter } from './pipeline.js';
@@ -360,6 +361,11 @@ export function lugarOpen(){
     if(v==='back'){ e.stopPropagation(); drillCity=null; _paint(); return; }
     if(v.startsWith('drill:')){ e.stopPropagation(); drillCity=v.slice(6); _paint(); return; }
     activeVenue = (v==='all'||v===activeVenue)?'all':v;
+    // La CIUDAD se recuerda entre sesiones (es contexto: el usuario sigue estando
+    // ahí la próxima vez que abra). Una SEDE no: es un filtro momentáneo. Elegir
+    // "todos los lugares" o cambiar de ciudad reescribe/borra lo guardado, así que
+    // siempre se puede cambiar desde el mismo dropdown.
+    storage.setCityFilter(isCitySel(activeVenue)?activeVenue:'');
     lugarClose();
     _updateProgramaActiveFilter();
     if(activeMNav==='mnav-cartelera') _renderProgramaContent(true); else render(); // selección lugar → scroll al tope

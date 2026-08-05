@@ -15,7 +15,7 @@ const { loadDomain } = require('../lib/load-domain.js');
 
 const { screensConflictReason } = loadDomain({
   functions: ['toMin', 'parseDur', 'blockDuration', 'durationForTravel', '_resolveVenue', 'effectiveDuration', 'venueTravelMins',
-              'travelMins', 'screensConflict', 'screensConflictReason'],
+              'travelMins', 'screensConflict', 'screensConflictReason', '_cityOf'],
   globals: {
     FESTIVAL_BUFFER: 15,
     FESTIVAL_TRANSPORT: 'transit',
@@ -82,4 +82,46 @@ test('días distintos → null (delega en screensConflict)', () => {
   const a = { day: DAY, time: '13:00', duration: '115 min', venue: 'Cinemateca Sala 2' };
   const b = { day: '2026-07-18', time: '13:30', duration: '90 min', venue: 'CEFE Fontanar del Río' };
   assert.strictEqual(screensConflictReason(a, b), null);
+});
+
+// ── kind:'ciudad' — festivales multiciudad (FICDEH, 6 ago 2026) ───────────────
+// travelMins aplica velocidad URBANA (10 km/h, con overhead de transporte
+// público de ciudad) a distancias intermunicipales: Bogotá→Ibagué son 130 km
+// (~4 h en bus) y le salen 13 h. Con ese número la app decía "Muy justo hasta X ·
+// ~13 h de viaje" — una frase que se contradice a sí misma. Ahora, cuando las
+// sedes declaran ciudades distintas, el motivo es 'ciudad' y NO lleva minutos:
+// se dice el dato (la ciudad) y el usuario juzga. Misma doctrina que el Q&A.
+// fábrica local: estos casos necesitan sedes CON ciudad declarada
+function loadReason(venues){
+  return loadDomain({
+    functions: ['toMin','parseDur','blockDuration','durationForTravel','_resolveVenue','effectiveDuration',
+                'venueTravelMins','travelMins','screensConflict','screensConflictReason','_cityOf'],
+    globals: { FESTIVAL_BUFFER:15, FESTIVAL_TRANSPORT:'transit',
+               FESTIVAL_CONFIG:{ test:{ venues } }, _activeFestId:'test', DEFAULT_DURATION_MIN:90 },
+  });
+}
+
+test("ciudades distintas → kind 'ciudad' con el nombre, y sin minutos inventados", () => {
+  const { screensConflictReason } = loadReason({
+    'Cinemateca': { short: 'Cinemateca', city: 'Bogotá',  lat: 4.61,  lng: -74.07 },
+    'Panóptico':  { short: 'Panóptico',  city: 'Ibagué',  lat: 4.44,  lng: -75.24 },
+  });
+  const r = screensConflictReason(
+    { day: 'D1', time: '10:00', venue: 'Cinemateca', duration: '90 min' },
+    { day: 'D1', time: '20:00', venue: 'Panóptico',  duration: '90 min' });
+  assert.strictEqual(r.kind, 'ciudad');
+  assert.strictEqual(r.city, 'Ibagué');      // la ciudad de la función que se evalúa
+  assert.strictEqual(r.cityFrom, 'Bogotá');
+  assert.strictEqual(r.travel, undefined, 'no expone minutos: la estimación no es confiable a esa escala');
+});
+
+test('misma ciudad: sigue siendo viaje/ajustado, no ciudad', () => {
+  const { screensConflictReason } = loadReason({
+    'A': { short: 'A', city: 'Bogotá', lat: 4.61, lng: -74.07 },
+    'B': { short: 'B', city: 'Bogotá', lat: 4.70, lng: -74.05 },
+  });
+  const r = screensConflictReason(
+    { day: 'D1', time: '10:00', venue: 'A', duration: '90 min' },
+    { day: 'D1', time: '11:40', venue: 'B', duration: '90 min' });
+  assert.ok(r && r.kind !== 'ciudad', `esperaba viaje/ajustado, vino ${r && r.kind}`);
 });
