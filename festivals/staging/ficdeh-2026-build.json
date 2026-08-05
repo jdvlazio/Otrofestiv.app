@@ -183,773 +183,739 @@
   }
  },
  "venues": {
-  "Institución Educativa Bienestar Social - Cali": {
-   "short": "Institución Educativa Bienestar Social",
-   "lat": null,
-   "lng": null,
-   "city": "Cali",
-   "address": "Cra. 47b # 45-47, Mariano Ramos"
-  },
   "Universidad de Caldas - Auditorio Roberto Vélez Correa - Manizales": {
    "short": "Universidad de Caldas - Auditorio Roberto Vélez Correa",
-   "lat": null,
-   "lng": null,
+   "lat": 5.0743694,
+   "lng": -75.5081167,
    "city": "Manizales",
    "address": "Cl. 65 #26-10"
   },
   "Fundación Batuta Caldas - Manizales": {
    "short": "Fundación Batuta Caldas",
-   "lat": null,
-   "lng": null,
+   "lat": 5.0743694,
+   "lng": -75.5081167,
    "city": "Manizales",
-   "address": "Cra. 22 #70b-31, Manizales, Caldas"
+   "address": "Cra. 22 #70b-31, Manizales, Caldas",
+   "_geo": "CENTROIDE de ciudad — sede no hallada en OSM, revisar antes de publicar"
   },
   "Auditorio Centro Cultural Universitario Rogelio Salmona - Manizales": {
    "short": "Auditorio Centro Cultural Universitario Rogelio Salmona",
-   "lat": null,
-   "lng": null,
+   "lat": 5.0743694,
+   "lng": -75.5081167,
    "city": "Manizales",
-   "address": "Cra. 28D entre Cl. 66 #y 67"
+   "address": "Cra. 28D entre Cl. 66 #y 67",
+   "_geo": "CENTROIDE de ciudad — sede no hallada en OSM, revisar antes de publicar"
   },
   "Teatro Colón - Bogotá": {
    "short": "Teatro Colón",
-   "lat": null,
-   "lng": null,
+   "lat": 4.6577748,
+   "lng": -74.1559069,
    "city": "Bogotá",
    "address": "Calle 10 # 5-32"
   },
   "Alianza Francesa - Barranquilla": {
    "short": "Alianza Francesa",
-   "lat": null,
-   "lng": null,
+   "lat": 10.9934507,
+   "lng": -74.7889733,
    "city": "Barranquilla",
    "address": "Calle 52 # 54-75"
   },
   "Plazoleta del Samán - Cali": {
    "short": "Plazoleta del Samán",
-   "lat": null,
-   "lng": null,
+   "lat": 3.4514536,
+   "lng": -76.5298755,
    "city": "Cali",
    "address": "Cra. 5 # 6-05, San Pedro"
   },
   "Centro de Formación de la Cooperación Española - Cartagena": {
    "short": "Centro de Formación de la Cooperación Española",
-   "lat": null,
-   "lng": null,
+   "lat": 10.4265566,
+   "lng": -75.5441671,
    "city": "Cartagena",
-   "address": "Calle 36 # 2-74, El Centro"
-  },
-  "Servicio FORJAR Restaurativo Ciudad Bolívar - Bogotá": {
-   "short": "Servicio FORJAR Restaurativo Ciudad Bolívar",
-   "lat": null,
-   "lng": null,
-   "city": "Bogotá",
-   "address": "Cra. 44 # 58C-90 Sur"
-  },
-  "Institución Educativa José Joaquín Jaramillo - Cali": {
-   "short": "Institución Educativa José Joaquín Jaramillo",
-   "lat": null,
-   "lng": null,
-   "city": "Cali",
-   "address": ""
+   "address": "Calle 36 # 2-74, El Centro",
+   "_geo": "CENTROIDE de ciudad — sede no hallada en OSM, revisar antes de publicar"
   },
   "Casa de la Juventud Iwoka - Bogotá": {
    "short": "Casa de la Juventud Iwoka",
-   "lat": null,
-   "lng": null,
+   "lat": 4.6533817,
+   "lng": -74.0836331,
    "city": "Bogotá",
    "address": "Cra. 78N BIS # 39-33"
   },
   "Biblioteca Pública CEFE Fontanar Del Río - Bogotá": {
    "short": "Biblioteca Pública CEFE Fontanar Del Río",
-   "lat": null,
-   "lng": null,
+   "lat": 4.6533817,
+   "lng": -74.0836331,
    "city": "Bogotá",
-   "address": "Calle 146 # 138A-99"
+   "address": "Calle 146 # 138A-99",
+   "_geo": "CENTROIDE de ciudad — sede no hallada en OSM, revisar antes de publicar"
   },
   "Teatro El Ensueño - Bogotá": {
    "short": "Teatro El Ensueño",
-   "lat": null,
-   "lng": null,
+   "lat": 4.586801,
+   "lng": -74.1579139,
    "city": "Bogotá",
    "address": "Transversal 70D # 60-90"
   },
-  "Universidad Americana - Barranquilla": {
-   "short": "Universidad Americana",
-   "lat": null,
-   "lng": null,
-   "city": "Barranquilla",
-   "address": "Calle 72 # 41C-64"
-  },
   "Biblioteca Pública La Victoria - Bogotá": {
    "short": "Biblioteca Pública La Victoria",
-   "lat": null,
-   "lng": null,
+   "lat": 4.5537936,
+   "lng": -74.0947173,
    "city": "Bogotá",
    "address": "Calle 37 BIS B Sur # 2B"
   },
   "Biblioteca Pública Las Ferias - Bogotá": {
    "short": "Biblioteca Pública Las Ferias",
-   "lat": null,
-   "lng": null,
+   "lat": 4.6533817,
+   "lng": -74.0836331,
    "city": "Bogotá",
    "address": "Cra. 69J # 73-29"
   },
   "Cinemateca de Bogotá - Bogotá": {
    "short": "Cinemateca de Bogotá",
-   "lat": null,
-   "lng": null,
+   "lat": 4.6533817,
+   "lng": -74.0836331,
    "city": "Bogotá",
    "address": "Cra. 3 # 19-10"
   },
   "Centro Cultural Panóptico de Ibagué - Ibagué": {
    "short": "Centro Cultural Panóptico de Ibagué",
-   "lat": null,
-   "lng": null,
+   "lat": 4.4386033,
+   "lng": -75.2108857,
    "city": "Ibagué",
-   "address": "Calle 11 # 9-73ª, barrio Belén"
+   "address": "Calle 11 # 9-73ª, barrio Belén",
+   "_geo": "CENTROIDE de ciudad — sede no hallada en OSM, revisar antes de publicar"
   },
   "Cineland - Quibdó": {
    "short": "Cineland",
-   "lat": null,
-   "lng": null,
+   "lat": 5.6912838,
+   "lng": -76.6531337,
    "city": "Quibdó",
-   "address": "Centro Comercial El Caraño Calle 30, Avenida Aeropuerto, Barrio Los Ángeles (frente al Aeropuerto El Caraño)"
+   "address": "Centro Comercial El Caraño Calle 30, Avenida Aeropuerto, Barrio Los Ángeles (frente al Aeropuerto El Caraño)",
+   "_geo": "CENTROIDE de ciudad — sede no hallada en OSM, revisar antes de publicar"
   },
   "Cinemateca de Tunja - Tunja": {
    "short": "Cinemateca de Tunja",
-   "lat": null,
-   "lng": null,
+   "lat": 5.5317862,
+   "lng": -73.3688625,
    "city": "Tunja",
    "address": "Calle 17 # 15-36"
   },
   "Sala 2 - Cinemateca de Bogotá - Bogotá": {
    "short": "Sala 2 - Cinemateca de Bogotá",
-   "lat": null,
-   "lng": null,
+   "lat": 4.6533817,
+   "lng": -74.0836331,
    "city": "Bogotá",
-   "address": ""
+   "address": "",
+   "_geo": "CENTROIDE de ciudad — sede no hallada en OSM, revisar antes de publicar"
   },
   "Centro Cultural - Sala Audiovisual de Cali - Cali": {
    "short": "Centro Cultural - Sala Audiovisual de Cali",
-   "lat": null,
-   "lng": null,
+   "lat": 3.4514536,
+   "lng": -76.5298755,
    "city": "Cali",
    "address": "Cra. 5 # 6-05, San Pedro"
   },
   "Cinemateca del Caribe - Barranquilla": {
    "short": "Cinemateca del Caribe",
-   "lat": null,
-   "lng": null,
+   "lat": 11.005653,
+   "lng": -74.8024986,
    "city": "Barranquilla",
    "address": "Calle 76 # 57-61"
   },
   "Fundación Alianza Tecnologica y Desarrollo Educativo - ALITIC - Barranquilla": {
    "short": "Fundación Alianza Tecnologica y Desarrollo Educativo - ALITIC",
-   "lat": null,
-   "lng": null,
+   "lat": 11.0101922,
+   "lng": -74.8231794,
    "city": "Barranquilla",
    "address": "Cra. 54 # 64-73"
   },
   "Universidad Minuto de Dios - Bogotá": {
    "short": "Universidad Minuto de Dios",
-   "lat": null,
-   "lng": null,
+   "lat": 4.699716,
+   "lng": -74.09075,
    "city": "Bogotá",
    "address": "Diagonal 81F # 72 C-1"
   },
   "Universidad de Ibagué - Ibagué": {
    "short": "Universidad de Ibagué",
-   "lat": null,
-   "lng": null,
+   "lat": 4.449702,
+   "lng": -75.1991135,
    "city": "Ibagué",
    "address": "Carrera 22 - Calle 67, barrio Ambalá"
   },
   "Cine Bajo las Estrellas programa de exhibición y circulación - Armenia": {
    "short": "Cine Bajo las Estrellas programa de exhibición y circulación",
-   "lat": null,
-   "lng": null,
+   "lat": 4.5360491,
+   "lng": -75.6691458,
    "city": "Armenia",
    "address": "Parque Sucre"
   },
   "Museo de Arte Moderno - MAMB - Barranquilla": {
    "short": "Museo de Arte Moderno - MAMB",
-   "lat": null,
-   "lng": null,
+   "lat": 11.0101922,
+   "lng": -74.8231794,
    "city": "Barranquilla",
-   "address": "Edificio World Trade Center (Calle 76 # 54-11, loc B3)"
-  },
-  "Universidad de Salamanca - Barranquilla": {
-   "short": "Universidad de Salamanca",
-   "lat": null,
-   "lng": null,
-   "city": "Barranquilla",
-   "address": "Cra. 50 # 79-155"
+   "address": "Edificio World Trade Center (Calle 76 # 54-11, loc B3)",
+   "_geo": "CENTROIDE de ciudad — sede no hallada en OSM, revisar antes de publicar"
   },
   "Cinema Local - Bogotá": {
    "short": "Cinema Local",
-   "lat": null,
-   "lng": null,
+   "lat": 4.6980467,
+   "lng": -74.1053842,
    "city": "Bogotá",
    "address": "Calle 74 # 20 B -19"
   },
   "Cinema Local - Cali": {
    "short": "Cinema Local",
-   "lat": null,
-   "lng": null,
+   "lat": 3.376914,
+   "lng": -76.5460196,
    "city": "Cali",
    "address": "Calle 4B # 38A-66"
   },
   "Cinemateca del Museo La Tertulia - Cali": {
    "short": "Cinemateca del Museo La Tertulia",
-   "lat": null,
-   "lng": null,
+   "lat": 3.4587602,
+   "lng": -76.5526406,
    "city": "Cali",
    "address": "Cra. 1 # 5-105, Oeste"
   },
   "Cinefilo - UdeC San Agustín, Patio de Humanidades - Cartagena": {
    "short": "Cinefilo - UdeC San Agustín, Patio de Humanidades",
-   "lat": null,
-   "lng": null,
+   "lat": 10.4265566,
+   "lng": -75.5441671,
    "city": "Cartagena",
-   "address": "Cra. 6, Calle de la Universidad # 36-100"
+   "address": "Cra. 6, Calle de la Universidad # 36-100",
+   "_geo": "CENTROIDE de ciudad — sede no hallada en OSM, revisar antes de publicar"
   },
   "Colombo Americano - Medellín": {
    "short": "Colombo Americano",
-   "lat": null,
-   "lng": null,
+   "lat": 6.2496242,
+   "lng": -75.5624493,
    "city": "Medellín",
    "address": "Cra. 45 #53 - 24. Centro"
   },
   "Cámara de Comercio de Pereira - Pereira": {
    "short": "Cámara de Comercio de Pereira",
-   "lat": null,
-   "lng": null,
+   "lat": 4.7854606,
+   "lng": -75.788322,
    "city": "Pereira",
-   "address": "Carrera 8a # 23-09, piso 3"
-  },
-  "Liceo Taller San Miguel - Pereira": {
-   "short": "Liceo Taller San Miguel",
-   "lat": null,
-   "lng": null,
-   "city": "Pereira",
-   "address": "Km 8 Vía Armenia - Entrada # 8"
-  },
-  "Institución Educativa Isaac Rodríguez - Quibdó": {
-   "short": "Institución Educativa Isaac Rodríguez",
-   "lat": null,
-   "lng": null,
-   "city": "Quibdó",
-   "address": "Barrio Reposo #2"
+   "address": "Carrera 8a # 23-09, piso 3",
+   "_geo": "CENTROIDE de ciudad — sede no hallada en OSM, revisar antes de publicar"
   },
   "Sena Galán - Armenia": {
    "short": "Sena Galán",
-   "lat": null,
-   "lng": null,
+   "lat": 4.4919894,
+   "lng": -75.7413961,
    "city": "Armenia",
    "address": "Cra. 18 # 7-58"
   },
   "Auditorio C202 - UNIMINUTO - Bogotá": {
    "short": "Auditorio C202 - UNIMINUTO",
-   "lat": null,
-   "lng": null,
+   "lat": 4.6533817,
+   "lng": -74.0836331,
    "city": "Bogotá",
-   "address": ""
+   "address": "",
+   "_geo": "CENTROIDE de ciudad — sede no hallada en OSM, revisar antes de publicar"
   },
   "Casa de la Juventud Diego Felipe Becerra - Bogotá": {
    "short": "Casa de la Juventud Diego Felipe Becerra",
-   "lat": null,
-   "lng": null,
+   "lat": 4.6533817,
+   "lng": -74.0836331,
    "city": "Bogotá",
-   "address": "Cra. 125 # 132C-82"
+   "address": "Cra. 125 # 132C-82",
+   "_geo": "CENTROIDE de ciudad — sede no hallada en OSM, revisar antes de publicar"
   },
   "Cinemateca Fontanar del Río - Bogotá": {
    "short": "Cinemateca Fontanar del Río",
-   "lat": null,
-   "lng": null,
+   "lat": 4.6533817,
+   "lng": -74.0836331,
    "city": "Bogotá",
-   "address": "Calle 146 # 138A-99"
+   "address": "Calle 146 # 138A-99",
+   "_geo": "CENTROIDE de ciudad — sede no hallada en OSM, revisar antes de publicar"
   },
   "Fundación Gilberto Alzate Avendaño - Biblioteca - Bogotá": {
    "short": "Fundación Gilberto Alzate Avendaño - Biblioteca",
-   "lat": null,
-   "lng": null,
+   "lat": 4.5953608,
+   "lng": -74.0724134,
    "city": "Bogotá",
    "address": "Calle 10 # 3-16"
   },
   "Fundación Malabareando las Calles - Pereira": {
    "short": "Fundación Malabareando las Calles",
-   "lat": null,
-   "lng": null,
+   "lat": 4.8163596,
+   "lng": -75.7156875,
    "city": "Pereira",
    "address": "Carrera 8 #15 - 09"
   },
   "Casa de la Juventud José Saramago - Bogotá": {
    "short": "Casa de la Juventud José Saramago",
-   "lat": null,
-   "lng": null,
+   "lat": 4.6533817,
+   "lng": -74.0836331,
    "city": "Bogotá",
    "address": "Cra. 82J # 70A-52"
   },
   "Casa LGBTIQ Sebastián Romero - Bogotá": {
    "short": "Casa LGBTIQ Sebastián Romero",
-   "lat": null,
-   "lng": null,
+   "lat": 4.6549558,
+   "lng": -74.1014045,
    "city": "Bogotá",
    "address": "Calle 44 # 14-60"
   },
   "Cinemateca - Bogotá": {
    "short": "Cinemateca",
-   "lat": null,
-   "lng": null,
+   "lat": 4.6032463,
+   "lng": -74.06758,
    "city": "Bogotá",
    "address": "Cinemateca del Museo La Tertulia - Cra. 1 # 5-105, Oeste"
   },
   "Manzana del Cuidado Mochuelo - Bogotá": {
    "short": "Manzana del Cuidado Mochuelo",
-   "lat": null,
-   "lng": null,
+   "lat": 4.6533817,
+   "lng": -74.0836331,
    "city": "Bogotá",
-   "address": "Calle 91C Sur # 18H-14"
+   "address": "Calle 91C Sur # 18H-14",
+   "_geo": "CENTROIDE de ciudad — sede no hallada en OSM, revisar antes de publicar"
   },
   "Escuela de Administración y Mercadotecnia del Quindío (EAM) - Armenia": {
    "short": "Escuela de Administración y Mercadotecnia del Quindío (EAM)",
-   "lat": null,
-   "lng": null,
+   "lat": 4.4919894,
+   "lng": -75.7413961,
    "city": "Armenia",
-   "address": "Cra. 14 # 3-11 (Avenida Bolívar)"
+   "address": "Cra. 14 # 3-11 (Avenida Bolívar)",
+   "_geo": "CENTROIDE de ciudad — sede no hallada en OSM, revisar antes de publicar"
   },
   "Casa de la Juventud Antonio Nariño - Bogotá": {
    "short": "Casa de la Juventud Antonio Nariño",
-   "lat": null,
-   "lng": null,
+   "lat": 4.6533817,
+   "lng": -74.0836331,
    "city": "Bogotá",
    "address": "Cra. 20 # 19 Sur - 26"
   },
   "Casa de la Juventud Ayelen - Bogotá": {
    "short": "Casa de la Juventud Ayelen",
-   "lat": null,
-   "lng": null,
+   "lat": 4.5266764,
+   "lng": -74.0907662,
    "city": "Bogotá",
    "address": "Calle 65A Sur # 17C-30"
   },
   "Laboratorio 1 y 2 - Bogotá": {
    "short": "Laboratorio 1 y 2",
-   "lat": null,
-   "lng": null,
+   "lat": 4.6533817,
+   "lng": -74.0836331,
    "city": "Bogotá",
-   "address": "Laboratorio 1 y 2"
+   "address": "Laboratorio 1 y 2",
+   "_geo": "CENTROIDE de ciudad — sede no hallada en OSM, revisar antes de publicar"
   },
   "COMFAMA - Cineclub Bello - Medellín": {
    "short": "COMFAMA - Cineclub Bello",
-   "lat": null,
-   "lng": null,
+   "lat": 6.2697324,
+   "lng": -75.6025597,
    "city": "Medellín",
    "address": "Cra. 49 #46-57"
   },
   "La Pascasia - Medellín": {
    "short": "La Pascasia",
-   "lat": null,
-   "lng": null,
+   "lat": 6.2449294,
+   "lng": -75.5648967,
    "city": "Medellín",
    "address": "Cl. 47 #43 88. Centro"
   },
   "Casa de la Juventud Chapinero - Bogotá": {
    "short": "Casa de la Juventud Chapinero",
-   "lat": null,
-   "lng": null,
+   "lat": 4.6931062,
+   "lng": -74.1178782,
    "city": "Bogotá",
    "address": "Calle 65A # 1-40"
   },
   "Ágora Casa Cultural (La Ceja) - Medellín": {
    "short": "Ágora Casa Cultural (La Ceja)",
-   "lat": null,
-   "lng": null,
+   "lat": 6.2697324,
+   "lng": -75.6025597,
    "city": "Medellín",
    "address": "Cl. 19 # 23-15"
   },
   "COMFAMA - Capilla del Claustro - Medellín": {
    "short": "COMFAMA - Capilla del Claustro",
-   "lat": null,
-   "lng": null,
+   "lat": 6.2458085,
+   "lng": -75.5643297,
    "city": "Medellín",
    "address": "Carrera 44 # 48 - 18"
   },
   "Universidad Nacional de Colombia - Auditorio Juan Hurtado - Manizales": {
    "short": "Universidad Nacional de Colombia - Auditorio Juan Hurtado",
-   "lat": null,
-   "lng": null,
+   "lat": 5.050553,
+   "lng": -75.4882765,
    "city": "Manizales",
    "address": "Carrera 27 # 64-60"
   },
   "Cine a la Calle - Pereira": {
    "short": "Cine a la Calle",
-   "lat": null,
-   "lng": null,
+   "lat": 4.809428,
+   "lng": -75.6962833,
    "city": "Pereira",
    "address": "Parque Olaya Herrera"
   },
   "Colombo Americano de Pereira - Pereira": {
    "short": "Colombo Americano de Pereira",
-   "lat": null,
-   "lng": null,
+   "lat": 4.7854606,
+   "lng": -75.788322,
    "city": "Pereira",
-   "address": "Carrera 6 Nº 23-58"
+   "address": "Carrera 6 Nº 23-58",
+   "_geo": "CENTROIDE de ciudad — sede no hallada en OSM, revisar antes de publicar"
   },
   "Caas Morón - Barranquilla": {
    "short": "Caas Morón",
-   "lat": null,
-   "lng": null,
+   "lat": 11.0101922,
+   "lng": -74.8231794,
    "city": "Barranquilla",
    "address": "Cra. 53 # 48-134"
   },
   "CasArte3962 - Barranquilla": {
    "short": "CasArte3962",
-   "lat": null,
-   "lng": null,
+   "lat": 10.9900266,
+   "lng": -74.8098764,
    "city": "Barranquilla",
    "address": "Calle 73B # 39-62"
   },
   "Bulevar del Oriente - Cali": {
    "short": "Bulevar del Oriente",
-   "lat": null,
-   "lng": null,
+   "lat": 3.4108435,
+   "lng": -76.5812127,
    "city": "Cali",
-   "address": "Comuna 14, entre la transversal 103 con calle 96 y calle 73 con transversal 73, entre los barrios Alfonso Bonilla Aragón y Marroquín 2"
+   "address": "Comuna 14, entre la transversal 103 con calle 96 y calle 73 con transversal 73, entre los barrios Alfonso Bonilla Aragón y Marroquín 2",
+   "_geo": "CENTROIDE de ciudad — sede no hallada en OSM, revisar antes de publicar"
   },
   "Lugar del Poema - Cartagena": {
    "short": "Lugar del Poema",
-   "lat": null,
-   "lng": null,
+   "lat": 10.4265566,
+   "lng": -75.5441671,
    "city": "Cartagena",
-   "address": "Pasaje Leclerc, calle 24 # 8b-83 piso 2, Getsemaní"
+   "address": "Pasaje Leclerc, calle 24 # 8b-83 piso 2, Getsemaní",
+   "_geo": "CENTROIDE de ciudad — sede no hallada en OSM, revisar antes de publicar"
   },
   "Museo Casa de la Memoria - Medellín": {
    "short": "Museo Casa de la Memoria",
-   "lat": null,
-   "lng": null,
+   "lat": 6.2459198,
+   "lng": -75.5565561,
    "city": "Medellín",
    "address": "Cl. 51 #36-66. Parque Bicentenario"
   },
   "Parque de los Deseos - Medellín": {
    "short": "Parque de los Deseos",
-   "lat": null,
-   "lng": null,
+   "lat": 6.2174236,
+   "lng": -75.5809056,
    "city": "Medellín",
    "address": "Carrera 52 # 71 - 11"
   },
   "Cine Club La Florida - Pereira": {
    "short": "Cine Club La Florida",
-   "lat": null,
-   "lng": null,
+   "lat": 4.7591552,
+   "lng": -75.6116226,
    "city": "Pereira",
    "address": "Corregimiento La Florida"
   },
   "UNIVERSIDAD TECNOLÓGICA DE PEREIRA - BLOQUE 7A / 118 - Pereira": {
    "short": "UNIVERSIDAD TECNOLÓGICA DE PEREIRA - BLOQUE 7A / 118",
-   "lat": null,
-   "lng": null,
+   "lat": 4.7854606,
+   "lng": -75.788322,
    "city": "Pereira",
-   "address": "UNIVERSIDAD TECNOLÓGICA DE PEREIRA - BLOQUE 7A / 118"
+   "address": "UNIVERSIDAD TECNOLÓGICA DE PEREIRA - BLOQUE 7A / 118",
+   "_geo": "CENTROIDE de ciudad — sede no hallada en OSM, revisar antes de publicar"
   },
   "Colegio Carrasquilla (Cra. 7ma) - Quibdó": {
    "short": "Colegio Carrasquilla (Cra. 7ma)",
-   "lat": null,
-   "lng": null,
+   "lat": 5.6912838,
+   "lng": -76.6531337,
    "city": "Quibdó",
-   "address": "Colegio Carrasquilla (Cra. 7ma)"
+   "address": "Colegio Carrasquilla (Cra. 7ma)",
+   "_geo": "CENTROIDE de ciudad — sede no hallada en OSM, revisar antes de publicar"
   },
   "Contacto Escuela de Fotografía - Armenia": {
    "short": "Contacto Escuela de Fotografía",
-   "lat": null,
-   "lng": null,
+   "lat": 4.536307,
+   "lng": -75.6723751,
    "city": "Armenia",
    "address": "Cra. 16 # 9-54, piso 2"
   },
   "Parque Arqueológico de Usme - Bogotá": {
    "short": "Parque Arqueológico de Usme",
-   "lat": null,
-   "lng": null,
+   "lat": 4.4740997,
+   "lng": -74.1246938,
    "city": "Bogotá",
    "address": "Calle 136B Sur # 3A-48"
   },
   "Centro Cultural Banco de la República - Medellín": {
    "short": "Centro Cultural Banco de la República",
-   "lat": null,
-   "lng": null,
+   "lat": 6.2697324,
+   "lng": -75.6025597,
    "city": "Medellín",
-   "address": "Cl. 50 #50-21 Piso 3"
+   "address": "Cl. 50 #50-21 Piso 3",
+   "_geo": "CENTROIDE de ciudad — sede no hallada en OSM, revisar antes de publicar"
   },
   "CEFE Cometas - Bogotá": {
    "short": "CEFE Cometas",
-   "lat": null,
-   "lng": null,
+   "lat": 4.7293567,
+   "lng": -74.1051666,
    "city": "Bogotá",
    "address": "Calle 127 A # 87"
   },
   "Casa de la Juventud Aldea De Pensadores - Bogotá": {
    "short": "Casa de la Juventud Aldea De Pensadores",
-   "lat": null,
-   "lng": null,
+   "lat": 4.6791826,
+   "lng": -74.0899171,
    "city": "Bogotá",
    "address": "Calle 70 # 88A-7"
   },
   "Casa de la Juventud Damawha - Bogotá": {
    "short": "Casa de la Juventud Damawha",
-   "lat": null,
-   "lng": null,
+   "lat": 4.5427513,
+   "lng": -74.1087731,
    "city": "Bogotá",
    "address": "Cra. 1 Este # 10-48 Sur"
   },
   "Centro Integral de Justicia Campo Verde - Bogotá": {
    "short": "Centro Integral de Justicia Campo Verde",
-   "lat": null,
-   "lng": null,
+   "lat": 4.6236278,
+   "lng": -74.2105632,
    "city": "Bogotá",
    "address": "Calle 85 Sur # 94-75"
   },
   "Jardín Botánico de Medellín - Medellín": {
    "short": "Jardín Botánico de Medellín",
-   "lat": null,
-   "lng": null,
+   "lat": 6.2705481,
+   "lng": -75.5635288,
    "city": "Medellín",
    "address": "Cl. 73 #51D-14"
   },
   "Biblioteca Pública Usaquén Servitá - Bogotá": {
    "short": "Biblioteca Pública Usaquén Servitá",
-   "lat": null,
-   "lng": null,
+   "lat": 4.7471266,
+   "lng": -74.0553474,
    "city": "Bogotá",
    "address": "Calle 165 # 7-52"
   },
   "Casa Cultural y Comunitaria Casa Sin Raza - Bogotá": {
    "short": "Casa Cultural y Comunitaria Casa Sin Raza",
-   "lat": null,
-   "lng": null,
+   "lat": 4.6533817,
+   "lng": -74.0836331,
    "city": "Bogotá",
-   "address": "Diagonal 73B Sur # 82F-34"
+   "address": "Diagonal 73B Sur # 82F-34",
+   "_geo": "CENTROIDE de ciudad — sede no hallada en OSM, revisar antes de publicar"
   },
   "Librería Bagatá - Quibdó": {
    "short": "Librería Bagatá",
-   "lat": null,
-   "lng": null,
+   "lat": 5.6912838,
+   "lng": -76.6531337,
    "city": "Quibdó",
-   "address": "Cra. 7 #27-3 (frente al Colegio Carrasquilla)"
+   "address": "Cra. 7 #27-3 (frente al Colegio Carrasquilla)",
+   "_geo": "CENTROIDE de ciudad — sede no hallada en OSM, revisar antes de publicar"
   },
   "Casa de la Juventud El Cacma - Bogotá": {
    "short": "Casa de la Juventud El Cacma",
-   "lat": null,
-   "lng": null,
+   "lat": 4.6107756,
+   "lng": -74.0715365,
    "city": "Bogotá",
    "address": "Calle 24 # 27A-31"
   },
   "Casa de las Luciérnagas - Bogotá": {
    "short": "Casa de las Luciérnagas",
-   "lat": null,
-   "lng": null,
+   "lat": 4.6067352,
+   "lng": -74.2038167,
    "city": "Bogotá",
    "address": "Diagonal 73H SUR # 78-38"
   },
   "Casa Cromo Casa Cultural - Armenia": {
    "short": "Casa Cromo Casa Cultural",
-   "lat": null,
-   "lng": null,
+   "lat": 4.559016,
+   "lng": -75.6542441,
    "city": "Armenia",
    "address": "Calle 22 Norte # 12-39"
   },
   "Museo Panóptico de Ibagué - Ibagué": {
    "short": "Museo Panóptico de Ibagué",
-   "lat": null,
-   "lng": null,
+   "lat": 4.4481695,
+   "lng": -75.2399655,
    "city": "Ibagué",
    "address": ""
   },
   "La Trocha - Casa de la Paz - Bogotá": {
    "short": "La Trocha - Casa de la Paz",
-   "lat": null,
-   "lng": null,
+   "lat": 4.6533817,
+   "lng": -74.0836331,
    "city": "Bogotá",
-   "address": ""
+   "address": "",
+   "_geo": "CENTROIDE de ciudad — sede no hallada en OSM, revisar antes de publicar"
   },
   "La Trocha, La Casa de la Paz - Bogotá": {
    "short": "La Trocha, La Casa de la Paz",
-   "lat": null,
-   "lng": null,
+   "lat": 4.6533817,
+   "lng": -74.0836331,
    "city": "Bogotá",
    "address": "Cra. 13 # 36-37"
   },
   "Book Times - Barranquilla": {
    "short": "Book Times",
-   "lat": null,
-   "lng": null,
+   "lat": 10.9456745,
+   "lng": -74.8100795,
    "city": "Barranquilla",
    "address": "Calle 54 # 53-76"
   },
   "Casa B - Bogotá": {
    "short": "Casa B",
-   "lat": null,
-   "lng": null,
+   "lat": 4.6533817,
+   "lng": -74.0836331,
    "city": "Bogotá",
    "address": "Cra. 2 BIS # 6D-30"
   },
   "El Teatrino - Cartagena": {
    "short": "El Teatrino",
-   "lat": null,
-   "lng": null,
+   "lat": 10.4265566,
+   "lng": -75.5441671,
    "city": "Cartagena",
-   "address": "Los Almendros Mz E # Lote 11"
+   "address": "Los Almendros Mz E # Lote 11",
+   "_geo": "CENTROIDE de ciudad — sede no hallada en OSM, revisar antes de publicar"
   },
   "Lember Cinéma - Ibagué": {
    "short": "Lember Cinéma",
-   "lat": null,
-   "lng": null,
+   "lat": 4.4375075,
+   "lng": -75.2112701,
    "city": "Ibagué",
    "address": "Calle 42 # 3-45"
   },
   "Cine Club Alef - Casa Hoja - Pereira": {
    "short": "Cine Club Alef - Casa Hoja",
-   "lat": null,
-   "lng": null,
+   "lat": 4.7854606,
+   "lng": -75.788322,
    "city": "Pereira",
-   "address": "Calle 12 bis # 16-18, Av. Circunvalar"
+   "address": "Calle 12 bis # 16-18, Av. Circunvalar",
+   "_geo": "CENTROIDE de ciudad — sede no hallada en OSM, revisar antes de publicar"
   },
   "Casa Aparte - Armenia": {
    "short": "Casa Aparte",
-   "lat": null,
-   "lng": null,
+   "lat": 4.4919894,
+   "lng": -75.7413961,
    "city": "Armenia",
    "address": "Cra. 23d # 11-25"
   },
   "Laboratorio 1 y 2 - Cinemateca de Bogotá - Bogotá": {
    "short": "Laboratorio 1 y 2 - Cinemateca de Bogotá",
-   "lat": null,
-   "lng": null,
+   "lat": 4.6533817,
+   "lng": -74.0836331,
    "city": "Bogotá",
-   "address": ""
+   "address": "",
+   "_geo": "CENTROIDE de ciudad — sede no hallada en OSM, revisar antes de publicar"
   },
   "Centro Cultural del Socorro - Cartagena": {
    "short": "Centro Cultural del Socorro",
-   "lat": null,
-   "lng": null,
+   "lat": 10.4265566,
+   "lng": -75.5441671,
    "city": "Cartagena",
-   "address": "Cra. 71 # 26-210, sobre la Avenida Principal del barrio El Socorro"
+   "address": "Cra. 71 # 26-210, sobre la Avenida Principal del barrio El Socorro",
+   "_geo": "CENTROIDE de ciudad — sede no hallada en OSM, revisar antes de publicar"
   },
   "Función Aire Libre - Malecón - Quibdó": {
    "short": "Función Aire Libre - Malecón",
-   "lat": null,
-   "lng": null,
+   "lat": 5.6912838,
+   "lng": -76.6531337,
    "city": "Quibdó",
-   "address": ""
+   "address": "",
+   "_geo": "CENTROIDE de ciudad — sede no hallada en OSM, revisar antes de publicar"
   },
   "Museo Intangible del Confinamiento. Casa de la Cultura Alfonso López - Pereira": {
    "short": "Museo Intangible del Confinamiento. Casa de la Cultura Alfonso López",
-   "lat": null,
-   "lng": null,
+   "lat": 4.7854606,
+   "lng": -75.788322,
    "city": "Pereira",
-   "address": "Carrera 7b # 2e-05, barrio Alfonso López"
+   "address": "Carrera 7b # 2e-05, barrio Alfonso López",
+   "_geo": "CENTROIDE de ciudad — sede no hallada en OSM, revisar antes de publicar"
   },
   "Biblioteca Pública Deptal Arnoldo de los Santos Palacios Mosquera - Quibdó": {
    "short": "Biblioteca Pública Deptal Arnoldo de los Santos Palacios Mosquera",
-   "lat": null,
-   "lng": null,
+   "lat": 5.6912838,
+   "lng": -76.6531337,
    "city": "Quibdó",
-   "address": "Calle 30, Avenida Aeropuerto, Barrio Los Ángeles (frente al Aeropuerto El Caraño)"
+   "address": "Calle 30, Avenida Aeropuerto, Barrio Los Ángeles (frente al Aeropuerto El Caraño)",
+   "_geo": "CENTROIDE de ciudad — sede no hallada en OSM, revisar antes de publicar"
   },
   "Centro Comunitario Nueva Colombia / Biblioteca Pa To Ma Suto - Barranquilla": {
    "short": "Centro Comunitario Nueva Colombia / Biblioteca Pa To Ma Suto",
-   "lat": null,
-   "lng": null,
+   "lat": 11.0101922,
+   "lng": -74.8231794,
    "city": "Barranquilla",
-   "address": "Diagonal 75A # 15D-67"
+   "address": "Diagonal 75A # 15D-67",
+   "_geo": "CENTROIDE de ciudad — sede no hallada en OSM, revisar antes de publicar"
   },
   "Cineprox - Medellín": {
    "short": "Cineprox",
-   "lat": null,
-   "lng": null,
+   "lat": 6.2697324,
+   "lng": -75.6025597,
    "city": "Medellín",
-   "address": "Dg. 75B #2A-120Rotonda Comercial Las Américas"
+   "address": "Dg. 75B #2A-120Rotonda Comercial Las Américas",
+   "_geo": "CENTROIDE de ciudad — sede no hallada en OSM, revisar antes de publicar"
   },
   "Alianza Francesa - Cartagena": {
    "short": "Alianza Francesa",
-   "lat": null,
-   "lng": null,
+   "lat": 10.4264842,
+   "lng": -75.5482642,
    "city": "Cartagena",
    "address": "Parque Fernández de Madrid, Cra. 8 # 37-34, San Diego"
   },
-  "Cárcel La 40 Establecimiento Penitenciario y Carcelario de Pereira INPEC - Pereira": {
-   "short": "Cárcel La 40 Establecimiento Penitenciario y Carcelario de Pereira INPEC",
-   "lat": null,
-   "lng": null,
-   "city": "Pereira",
-   "address": "Carrera 8 # 41-97"
-  },
-  "Universidad Tecnológica del Chocó - Quibdó": {
-   "short": "Universidad Tecnológica del Chocó",
-   "lat": null,
-   "lng": null,
-   "city": "Quibdó",
-   "address": "Carrera 22, Ciudadela Universitaria Barrio Nicolas Medrano"
-  },
   "Universidad del Quindío - Armenia": {
    "short": "Universidad del Quindío",
-   "lat": null,
-   "lng": null,
+   "lat": 4.5538677,
+   "lng": -75.6610022,
    "city": "Armenia",
    "address": "Cra. 15 con calle 12 Norte"
   },
-  "Colegio Cruzada Social - Barranquilla": {
-   "short": "Colegio Cruzada Social",
-   "lat": null,
-   "lng": null,
-   "city": "Barranquilla",
-   "address": "Calle 46 # 13C -57, barrio Cevillar"
-  },
   "Casa de la Juventud Usaquén - Bogotá": {
    "short": "Casa de la Juventud Usaquén",
-   "lat": null,
-   "lng": null,
+   "lat": 4.7545409,
+   "lng": -74.0873051,
    "city": "Bogotá",
    "address": "Calle 155 # 7-45"
   },
   "Universidad Tecnológica de Pereira -UTP - Pereira": {
    "short": "Universidad Tecnológica de Pereira -UTP",
-   "lat": null,
-   "lng": null,
+   "lat": 4.7854606,
+   "lng": -75.788322,
    "city": "Pereira",
-   "address": "Bloque 13 Sala Magistral 1 (Carrera 27 #10-02, Barrio Álamos)"
+   "address": "Bloque 13 Sala Magistral 1 (Carrera 27 #10-02, Barrio Álamos)",
+   "_geo": "CENTROIDE de ciudad — sede no hallada en OSM, revisar antes de publicar"
   },
   "Biblioteca Pública Gabriel García Márquez - Bogotá": {
    "short": "Biblioteca Pública Gabriel García Márquez",
-   "lat": null,
-   "lng": null,
+   "lat": 4.5722396,
+   "lng": -74.1300288,
    "city": "Bogotá",
    "address": "Calle 48B SUR # 21-13"
   },
   "Biblioteca Pública Manuel Zapata Olivella - Bogotá": {
    "short": "Biblioteca Pública Manuel Zapata Olivella",
-   "lat": null,
-   "lng": null,
+   "lat": 4.6097416,
+   "lng": -74.2030786,
    "city": "Bogotá",
    "address": "Av. Ciudad de Cali # 6C-09"
   },
   "Casa de la Juventud Nacho Sánchez - Bogotá": {
    "short": "Casa de la Juventud Nacho Sánchez",
-   "lat": null,
-   "lng": null,
+   "lat": 4.4994512,
+   "lng": -74.1044834,
    "city": "Bogotá",
    "address": "Cra. 3 Este # 9-58"
   },
   "All Cine Cable Plaza - Manizales": {
    "short": "All Cine Cable Plaza",
-   "lat": null,
-   "lng": null,
+   "lat": 5.0743694,
+   "lng": -75.5081167,
    "city": "Manizales",
-   "address": "Av. Santander Cra. 23 # 65-11, Piso 3"
+   "address": "Av. Santander Cra. 23 # 65-11, Piso 3",
+   "_geo": "CENTROIDE de ciudad — sede no hallada en OSM, revisar antes de publicar"
   },
   "Casa de la Juventud El Frailejón - Bogotá": {
    "short": "Casa de la Juventud El Frailejón",
-   "lat": null,
-   "lng": null,
+   "lat": 4.6533817,
+   "lng": -74.0836331,
    "city": "Bogotá",
    "address": "Cra. 12 # 76A-28 Sur"
   },
@@ -1008,13 +974,6 @@
    "lng": null,
    "city": "Bogotá",
    "address": ""
-  },
-  "Institución Educativa Jaime Salazar Robledo - Pereira": {
-   "short": "Institución Educativa Jaime Salazar Robledo",
-   "lat": null,
-   "lng": null,
-   "city": "Pereira",
-   "address": "Comuna Villa Santana"
   },
   "Centro de Conciliación y Arbitraje - Universidad del Norte - Barranquilla": {
    "short": "Centro de Conciliación y Arbitraje - Universidad del Norte",
@@ -1102,158 +1061,6 @@
   }
  },
  "films": [
-  {
-   "title": "El Paraíso de Ainara",
-   "director": "Esther Niemeier, Laura Espinel",
-   "year": "2025",
-   "duration": "14 min",
-   "country": "Colombia",
-   "section": "🎙️ Cortometraje Documental Nacional",
-   "synopsis": "En el colorido barrio El Paraíso de Bogotá, la curiosa Ainara, de 10 años, crece en Violetta, una biblioteca comunitaria fundada por su familia para les niñes del barrio. Un segundo hogar para aprender y jugar mientras los padres y las madres trabajan largas jornadas. A través del juego, el teatro y las manualidades, Ainara y sus amigues descubren la fuerza de la comunidad. El corto celebra la solidaridad y una buena dosis de girl power, mostrando cómo del cuidado colectivo pueden nacer pequeños paraísos.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/el-paraiso-de-ainara.jpg",
-   "posterSource": "custom",
-   "lbSlug": "el-paraiso-de-ainara",
-   "day": "2026-08-12",
-   "time": "08:30",
-   "venue": "Institución Educativa Bienestar Social - Cali",
-   "day_order": 0,
-   "has_qa": false,
-   "is_cortos": false,
-   "film_list": null,
-   "is_free": true,
-   "requires_registration": false,
-   "_ingreso": "",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/el-paraiso-de-ainara/",
-    "date": "2026-07-25",
-    "programacion_oficial": "El Paraíso de Ainara"
-   },
-   "type": "film"
-  },
-  {
-   "title": "In four stops",
-   "director": "Elizaveta Khlomova",
-   "year": "2026",
-   "duration": "19 min",
-   "country": "Rusia",
-   "section": "🚲 Cortometraje de Ficción Internacional",
-   "synopsis": "Dos días en la vida de Max, un niño sordo con una imaginación desbordante en medio de una dura realidad.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/mother-love-amor-de-madre.jpg",
-   "posterSource": "custom",
-   "lbSlug": "film:1510138",
-   "title_en": "In Four Stops",
-   "day": "2026-08-12",
-   "time": "08:30",
-   "venue": "Institución Educativa Bienestar Social - Cali",
-   "day_order": 0,
-   "has_qa": false,
-   "is_cortos": false,
-   "film_list": null,
-   "is_free": true,
-   "requires_registration": false,
-   "_ingreso": "",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/mother-love-amor-de-madre/",
-    "date": "2026-07-25",
-    "programacion_oficial": "In four stops"
-   },
-   "type": "film"
-  },
-  {
-   "title": "Akababuru: Expresión de asombro",
-   "director": "Irati Dojura Landa Yagarí",
-   "year": "2025",
-   "duration": "13 min",
-   "country": "Colombia",
-   "section": "🪀 Cortometraje de Ficción Nacional",
-   "synopsis": "Kari es una niña indígena emberá que teme reír. Un día conoce a Kera, una joven mestiza, quien decide contarle el mito de Kiraparamia, una mujer que, según los ancianos, fue castigada por los dioses por reírse de su esposo. Kera reinterpreta el mito y le dice que, en realidad, la risa de Kiraparamia la liberó. Esta historia inspira profundamente a la pequeña Kari, quien decide confrontar a los niños que la oprimen a ella y a sus amigas mediante la risa.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/herminda.jpg",
-   "posterSource": "custom",
-   "title_en": "Akababuru: Expression of Astonishment",
-   "genre": "Fantasía",
-   "lbSlug": "akababuru-expresion-de-asombro",
-   "synopsis_en": "Kari, an Indigenous girl, is afraid to laugh. But a new interpretation of the old legend of Kiraparamia helps her to set herself free.",
-   "day": "2026-08-12",
-   "time": "08:30",
-   "venue": "Institución Educativa Bienestar Social - Cali",
-   "day_order": 0,
-   "has_qa": false,
-   "is_cortos": false,
-   "film_list": null,
-   "is_free": true,
-   "requires_registration": false,
-   "_ingreso": "",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/herminda/",
-    "date": "2026-07-25",
-    "programacion_oficial": "Akababuru: Expresión de asombro"
-   },
-   "type": "film"
-  },
-  {
-   "title": "La gran hazaña",
-   "director": "Luber Yesid Zúñiga Ordóñez",
-   "year": "2025",
-   "duration": "15 min",
-   "country": "Colombia",
-   "section": "🪀 Cortometraje de Ficción Nacional",
-   "synopsis": "A Pablo le encanta jugar al trompo. Cuando Don Chucho, el usurero del pueblo, retiene a Pascualina, su amiga y mascota, Pablo debe enfrentarse a Felipe, el mejor jugador de trompo de la región, para rescatarla. Pero ganar no es suficiente: los demás niños del pueblo se unirán a él en un acto de solidaridad, amistad y trabajo en equipo para lograr esta gran hazaña.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/la-gran-hazana.jpg",
-   "posterSource": "custom",
-   "genre": "Ficción",
-   "lbSlug": "the-great-feat",
-   "synopsis_en": "A rescue with a spinning tops, feathers, eggs and friends.",
-   "title_en": "The Great Feat",
-   "day": "2026-08-12",
-   "time": "08:30",
-   "venue": "Institución Educativa Bienestar Social - Cali",
-   "day_order": 0,
-   "has_qa": false,
-   "is_cortos": false,
-   "film_list": null,
-   "is_free": true,
-   "requires_registration": false,
-   "_ingreso": "",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/la-gran-hazana/",
-    "date": "2026-07-25",
-    "programacion_oficial": "La gran hazaña"
-   },
-   "type": "film"
-  },
-  {
-   "title": "Héroes del silencio",
-   "director": "Atikeinis Durán Izquierdo",
-   "year": "2026",
-   "duration": "13 min",
-   "country": "Colombia",
-   "section": "🏘️ Cine Comunitario Nacional",
-   "synopsis": "Cortometraje rodado por los niños y niñas de la comunidad indígena de Morotrwa, en la Sierra Nevada de Gonawindua. A través de sus propias fotografías y vídeos, documentan sus vidas y su territorio, eligiendo libremente qué mostrar.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/heroes-del-silencio.jpg",
-   "posterSource": "custom",
-   "lbSlug": "heroes-del-silencio",
-   "day": "2026-08-12",
-   "time": "08:30",
-   "venue": "Institución Educativa Bienestar Social - Cali",
-   "day_order": 0,
-   "has_qa": false,
-   "is_cortos": false,
-   "film_list": null,
-   "is_free": true,
-   "requires_registration": false,
-   "_ingreso": "",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/heroes-del-silencio/",
-    "date": "2026-07-25",
-    "programacion_oficial": "Héroes del silencio"
-   },
-   "type": "film"
-  },
   {
    "title": "Desierto verde",
    "director": "Meliza Luna Venegas",
@@ -1525,66 +1332,6 @@
     "url": "https://www.ficdeh.com/produccion/si-la-escombrera-hablara/",
     "date": "2026-07-25",
     "programacion_oficial": "Si La Escombrera hablara"
-   },
-   "type": "film"
-  },
-  {
-   "title": "El valor de la palabra",
-   "director": "Marta Rodríguez, Fernando Restrepo",
-   "year": "2026",
-   "duration": "79 min",
-   "country": "Colombia",
-   "section": "🔍 Largometraje Documental Nacional",
-   "synopsis": "La historia de Ángel María Torres y Napoleón Torres, líderes arhuacos de la Sierra Nevada de Santa Marta, asesinados por el ejército en 1990. A través de archivos y testimonios íntimos, el documental retrata el vacío que dejaron en sus familias y comunidad, mientras revela la cosmovisión arhuaca, donde el territorio es un ser vivo y la palabra un vínculo esencial. Más que narrar una tragedia, la película es un acto de resistencia y memoria frente a la violencia colonial persistente.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/el-valor-de-la-palabra.jpg",
-   "posterSource": "custom",
-   "synopsis_en": "The long career of Colombian filmmaker Marta Rodríguez demonstrates a commitment to documenting the history of repression and struggle of indigenous and marginalized peoples.",
-   "title_en": "The Value of Speech",
-   "lbSlug": "el-valor-de-la-palabra",
-   "day": "2026-08-13",
-   "time": "08:00",
-   "venue": "Servicio FORJAR Restaurativo Ciudad Bolívar - Bogotá",
-   "day_order": 1,
-   "has_qa": false,
-   "is_cortos": false,
-   "film_list": null,
-   "is_free": true,
-   "requires_registration": false,
-   "_ingreso": "",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/el-valor-de-la-palabra/",
-    "date": "2026-07-25",
-    "programacion_oficial": "El valor de la palabra"
-   },
-   "type": "film"
-  },
-  {
-   "title": "Republic of Amnesia",
-   "director": "Kannan Arunasalam",
-   "year": "2025",
-   "duration": "78 min",
-   "country": "Reino Unido, Sri Lanka",
-   "section": "🌍 Largometraje Documental Internacional",
-   "synopsis": "Republic of Amnesia sigue el ascenso y la caída del Aragalaya (“La Lucha”), el movimiento de protesta liderado por jóvenes que obligó al presidente autoritario de Sri Lanka, Gotabaya Rajapaksa, a huir del país en 2022. En el centro de la historia están jóvenes activistas como Melani, Buwanaka y Jeana, cuyo despertar político se desarrolla en tiempo real mientras organizan manifestaciones, enfrentan arrestos y desafían un sistema político construido para resistir el cambio.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/republic-of-amnesia.jpg",
-   "posterSource": "custom",
-   "lbSlug": "republic-of-amnesia",
-   "day": "2026-08-13",
-   "time": "08:30",
-   "venue": "Institución Educativa José Joaquín Jaramillo - Cali",
-   "day_order": 1,
-   "has_qa": false,
-   "is_cortos": false,
-   "film_list": null,
-   "is_free": true,
-   "requires_registration": false,
-   "_ingreso": "",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/republic-of-amnesia/",
-    "date": "2026-07-25",
-    "programacion_oficial": "Republic of Amnesia (República de la amnesia)"
    },
    "type": "film"
   },
@@ -1926,36 +1673,6 @@
    "type": "film"
   },
   {
-   "title": "El silencio de la tierra",
-   "director": "Frank Gutiérrez",
-   "year": "2026",
-   "duration": "77 min",
-   "country": "España, Francia, Bélgica",
-   "section": "🌍 Largometraje Documental Internacional",
-   "synopsis": "Berta Cáceres, Paulo Paulino Guajajara y Aldo Zamora dieron la vida por defender la tierra. Estos activistas ambientales fueron brutalmente asesinados en América Latina por enfrentarse a los intereses de grandes corporaciones multinacionales y sus aliados locales. ¿Quién está detrás de estos crímenes y por qué gozan de impunidad casi total? ¿Qué consecuencias tiene esta violencia para el planeta y el futuro de la humanidad?",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/el-silencio-de-la-tierra.jpg",
-   "posterSource": "custom",
-   "genre": "Documental, Drama",
-   "lbSlug": "le-silence-de-la-terre",
-   "day": "2026-08-13",
-   "time": "14:00",
-   "venue": "Universidad Americana - Barranquilla",
-   "day_order": 1,
-   "has_qa": false,
-   "is_cortos": false,
-   "film_list": null,
-   "is_free": true,
-   "requires_registration": false,
-   "_ingreso": "",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/el-silencio-de-la-tierra/",
-    "date": "2026-07-25",
-    "programacion_oficial": "El silencio de la tierra"
-   },
-   "type": "film"
-  },
-  {
    "title": "La independencia",
    "director": "John Agudelo Suárez",
    "year": "2025",
@@ -2132,9 +1849,10 @@
    "has_qa": false,
    "is_cortos": false,
    "film_list": null,
-   "is_free": true,
+   "sala": "Sala Capital",
+   "is_free": false,
    "requires_registration": false,
-   "_ingreso": "",
+   "_ingreso": "Boletería en taquilla",
    "_src": {
     "url": "https://www.ficdeh.com/produccion/ninxs/",
     "date": "2026-07-25",
@@ -2313,9 +2031,10 @@
    "has_qa": false,
    "is_cortos": false,
    "film_list": null,
-   "is_free": true,
+   "sala": "Sala 2",
+   "is_free": false,
    "requires_registration": false,
-   "_ingreso": "",
+   "_ingreso": "Boletería en taquilla",
    "_src": {
     "url": "https://www.ficdeh.com/produccion/el-silencio-de-la-tierra/",
     "date": "2026-07-25",
@@ -2341,9 +2060,10 @@
    "has_qa": false,
    "is_cortos": false,
    "film_list": null,
-   "is_free": true,
+   "sala": "Sala 3",
+   "is_free": false,
    "requires_registration": false,
-   "_ingreso": "",
+   "_ingreso": "Boletería en taquilla",
    "_src": {
     "url": "https://www.ficdeh.com/produccion/aminetu/",
     "date": "2026-07-25",
@@ -2370,9 +2090,9 @@
    "has_qa": false,
    "is_cortos": false,
    "film_list": null,
-   "is_free": true,
+   "is_free": false,
    "requires_registration": false,
-   "_ingreso": "",
+   "_ingreso": "Boletería en taquilla",
    "_src": {
     "url": "https://www.ficdeh.com/produccion/bojaya-la-verdad-desde-adentro/",
     "date": "2026-07-25",
@@ -2402,9 +2122,9 @@
    "has_qa": false,
    "is_cortos": false,
    "film_list": null,
-   "is_free": true,
+   "is_free": false,
    "requires_registration": false,
-   "_ingreso": "",
+   "_ingreso": "Boletería en taquilla",
    "_src": {
     "url": "https://www.ficdeh.com/produccion/herminda/",
     "date": "2026-07-25",
@@ -2431,9 +2151,9 @@
    "has_qa": false,
    "is_cortos": false,
    "film_list": null,
-   "is_free": true,
+   "is_free": false,
    "requires_registration": false,
-   "_ingreso": "",
+   "_ingreso": "Boletería en taquilla",
    "_src": {
     "url": "https://www.ficdeh.com/produccion/color-piel/",
     "date": "2026-07-25",
@@ -2462,9 +2182,9 @@
    "has_qa": false,
    "is_cortos": false,
    "film_list": null,
-   "is_free": true,
+   "is_free": false,
    "requires_registration": false,
-   "_ingreso": "",
+   "_ingreso": "Boletería en taquilla",
    "_src": {
     "url": "https://www.ficdeh.com/produccion/sukua/",
     "date": "2026-07-25",
@@ -2494,9 +2214,9 @@
    "has_qa": false,
    "is_cortos": false,
    "film_list": null,
-   "is_free": true,
+   "is_free": false,
    "requires_registration": false,
-   "_ingreso": "",
+   "_ingreso": "Boletería en taquilla",
    "_src": {
     "url": "https://www.ficdeh.com/produccion/la-gran-hazana/",
     "date": "2026-07-25",
@@ -2526,9 +2246,10 @@
    "has_qa": false,
    "is_cortos": false,
    "film_list": null,
-   "is_free": true,
+   "sala": "Sala Capital",
+   "is_free": false,
    "requires_registration": false,
-   "_ingreso": "",
+   "_ingreso": "Boletería en taquilla",
    "_src": {
     "url": "https://www.ficdeh.com/produccion/la-raya/",
     "date": "2026-07-25",
@@ -2555,9 +2276,10 @@
    "has_qa": false,
    "is_cortos": false,
    "film_list": null,
-   "is_free": true,
+   "sala": "Sala 2",
+   "is_free": false,
    "requires_registration": false,
-   "_ingreso": "",
+   "_ingreso": "Boletería en taquilla",
    "_src": {
     "url": "https://www.ficdeh.com/produccion/xie-defensa-de-la-vida/",
     "date": "2026-07-25",
@@ -2570,8 +2292,10 @@
    "type": "event",
    "section": "🎤 Charlas que Unen",
    "duration": "",
-   "synopsis": "",
+   "synopsis": "A partir de la proyección de la película XIE. Defensa de la vida, las invitadas conversarán sobre su experiencia de liderazgo en defensa del agua y la vida en La Calera.",
    "synopsis_lang": "es",
+   "poster": "/uploads/obras/Portada_Charla-1-e1776487324802.jpg",
+   "posterSource": "custom",
    "event_kind": "ponencia",
    "day": "2026-08-13",
    "time": "17:00",
@@ -2585,8 +2309,7 @@
    "_ingreso": "",
    "_src": {
     "programacion_oficial": "Las guardianas del agua"
-   },
-   "_pendiente": "sinopsis y duración — recuperar de /charlas/<slug> o /talleres/<slug>"
+   }
   },
   {
    "title": "Aminetu",
@@ -2683,8 +2406,10 @@
    "type": "event",
    "section": "🎤 Charlas que Unen",
    "duration": "",
-   "synopsis": "",
+   "synopsis": "Organizaciones de mujeres conversan sobre el incremento de estas violencias en la ciudad.",
    "synopsis_lang": "es",
+   "poster": "/uploads/obras/Portada_Charla-1-e1776487324802.jpg",
+   "posterSource": "custom",
    "event_kind": "ponencia",
    "day": "2026-08-13",
    "time": "18:00",
@@ -2698,8 +2423,7 @@
    "_ingreso": "",
    "_src": {
     "programacion_oficial": "Violencias de género en Barranquilla"
-   },
-   "_pendiente": "sinopsis y duración — recuperar de /charlas/<slug> o /talleres/<slug>"
+   }
   },
   {
    "title": "La Cerrillana",
@@ -3012,35 +2736,6 @@
    "type": "film"
   },
   {
-   "title": "Por una gota de leche",
-   "director": "Esteban J. Corzo",
-   "year": "2025",
-   "duration": "59 min",
-   "country": "Colombia",
-   "section": "🏘️ Cine Comunitario Nacional",
-   "synopsis": "En 1985, varios jóvenes militantes del M-19 robaron un camión de leche para repartirla entre la población más vulnerable del sur de Bogotá. Fueron asesinados por las fuerzas del Estado colombiano tras haberse rendido. Cuarenta años después, sus familias y la comunidad cuentan su historia.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/por-una-gota-de-leche.jpg",
-   "posterSource": "custom",
-   "lbSlug": "por-una-gota-de-leche",
-   "day": "2026-08-13",
-   "time": "18:30",
-   "venue": "Universidad de Salamanca - Barranquilla",
-   "day_order": 1,
-   "has_qa": false,
-   "is_cortos": false,
-   "film_list": null,
-   "is_free": true,
-   "requires_registration": false,
-   "_ingreso": "",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/por-una-gota-de-leche/",
-    "date": "2026-07-25",
-    "programacion_oficial": "Por una gota de leche"
-   },
-   "type": "film"
-  },
-  {
    "title": "Feito Pipa",
    "director": "Allan Deberton",
    "year": "2026",
@@ -3123,9 +2818,9 @@
    "has_qa": false,
    "is_cortos": false,
    "film_list": null,
-   "is_free": true,
+   "is_free": false,
    "requires_registration": false,
-   "_ingreso": "",
+   "_ingreso": "Boletería en taquilla",
    "_src": {
     "url": "https://www.ficdeh.com/produccion/bojaya-la-verdad-desde-adentro/",
     "date": "2026-07-25",
@@ -3215,9 +2910,9 @@
    "has_qa": false,
    "is_cortos": false,
    "film_list": null,
-   "is_free": true,
+   "is_free": false,
    "requires_registration": false,
-   "_ingreso": "",
+   "_ingreso": "Boletería en taquilla",
    "_src": {
     "url": "https://www.ficdeh.com/produccion/three-black-men-tres-hombres-negros/",
     "date": "2026-07-25",
@@ -3244,9 +2939,9 @@
    "has_qa": false,
    "is_cortos": false,
    "film_list": null,
-   "is_free": true,
+   "is_free": false,
    "requires_registration": false,
-   "_ingreso": "",
+   "_ingreso": "Boletería en taquilla",
    "_src": {
     "url": "https://www.ficdeh.com/produccion/bogota-underground-hip-hop/",
     "date": "2026-07-25",
@@ -3332,9 +3027,9 @@
    "has_qa": false,
    "is_cortos": false,
    "film_list": null,
-   "is_free": true,
+   "is_free": false,
    "requires_registration": false,
-   "_ingreso": "",
+   "_ingreso": "Boletería en taquilla",
    "_src": {
     "url": "https://www.ficdeh.com/produccion/cartas-a-la-tierra/",
     "date": "2026-07-25",
@@ -3363,9 +3058,10 @@
    "has_qa": false,
    "is_cortos": false,
    "film_list": null,
-   "is_free": true,
+   "sala": "Sala 2",
+   "is_free": false,
    "requires_registration": false,
-   "_ingreso": "",
+   "_ingreso": "Boletería en taquilla",
    "_src": {
     "url": "https://www.ficdeh.com/produccion/pasta-negra/",
     "date": "2026-07-25",
@@ -3392,9 +3088,9 @@
    "has_qa": false,
    "is_cortos": false,
    "film_list": null,
-   "is_free": true,
+   "is_free": false,
    "requires_registration": false,
-   "_ingreso": "",
+   "_ingreso": "Boletería en taquilla",
    "_src": {
     "url": "https://www.ficdeh.com/produccion/pawa/",
     "date": "2026-07-25",
@@ -3421,9 +3117,9 @@
    "has_qa": false,
    "is_cortos": false,
    "film_list": null,
-   "is_free": true,
+   "is_free": false,
    "requires_registration": false,
-   "_ingreso": "",
+   "_ingreso": "Boletería en taquilla",
    "_src": {
     "url": "https://www.ficdeh.com/produccion/clemencia/",
     "date": "2026-07-25",
@@ -3453,9 +3149,9 @@
    "has_qa": false,
    "is_cortos": false,
    "film_list": null,
-   "is_free": true,
+   "is_free": false,
    "requires_registration": false,
-   "_ingreso": "",
+   "_ingreso": "Boletería en taquilla",
    "_src": {
     "url": "https://www.ficdeh.com/produccion/tuktu-padre-maiz/",
     "date": "2026-07-25",
@@ -3464,76 +3160,14 @@
    "type": "film"
   },
   {
-   "title": "El bosque",
-   "director": "Suneesh Vadakkumbadan",
-   "year": "",
-   "duration": "81 min",
-   "country": "India",
-   "section": "🧳 Largometraje de Ficción",
-   "synopsis": "Película simbólica en malayalam que explora el vínculo entre los seres humanos y la naturaleza. Ambientada en Kerala, refleja el desplazamiento de comunidades indígenas causado por la minería. La historia sigue a Chaman, un curandero tribal profundamente conectado con el bosque, y a su nieto Thaman. Cuando el nido de pájaros que protegen es destruido por la lluvia, se refleja la fragilidad de la vida. A medida que la minería obliga a la reubicación, Chaman se niega a marcharse. Su desaparición en el bosque y el nacimiento de dos polluelos reafirman el ciclo vital de la naturaleza.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/el-bosque.jpg",
-   "posterSource": "custom",
-   "lbSlug": "the-forest-3",
-   "synopsis_en": "Kaadu is a symbolic Malayalam film that reminds us of the inseparable bond between land and human beings. Set against the backdrop of Kerala, it deeply explores the reality of displacement faced by indigenous communities worldwide in the name of mining. The story follows Chaman, a seventy-year-old tribal healer and elder who shares a profound spiritual connection with the forest and its living beings, and his grandson Thaman, whose worldview is shaped by his grandfather's philosophy.",
-   "genre": "Documental",
-   "title_en": "The Forest",
-   "day": "2026-08-14",
-   "time": "08:00",
-   "venue": "Liceo Taller San Miguel - Pereira",
-   "day_order": 2,
-   "has_qa": false,
-   "is_cortos": false,
-   "film_list": null,
-   "is_free": true,
-   "requires_registration": false,
-   "_ingreso": "",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/el-bosque/",
-    "date": "2026-07-25",
-    "programacion_oficial": "El bosque"
-   },
-   "type": "film"
-  },
-  {
-   "title": "El verano de Jahia",
-   "director": "Olivier Meys",
-   "year": "2025",
-   "duration": "90 min",
-   "country": "Bélgica, Francia, Luxemburgo",
-   "section": "🧳 Largometraje de Ficción",
-   "synopsis": "En un centro de acogida belga, Jahia lleva una vida tranquila y reservada junto a su madre traumatizada. Todo cambia con la llegada de la vivaz Mila. Atraídas la una por la otra, las dos jóvenes forjan un vínculo frágil que aporta calidez y resiliencia a un entorno marcado por el miedo y la incertidumbre. Jahia empieza a cocinar para consolar a su madre, mientras Mila se enfrenta al inminente veredicto que decidirá su solicitud de asilo. Su amistad se convierte en un refugio, un espacio donde la esperanza puede respirar a pesar de las sombras del exilio.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/el-verano-de-jahia-jahias-summer.jpg",
-   "posterSource": "custom",
-   "title_en": "Jahia's Summer",
-   "genre": "Drama",
-   "lbSlug": "jahias-summer",
-   "synopsis_en": "When Mila arrives at the asylum center, Jahia's life changes dramatically. Jahia has previously kept to herself, spending her evenings in the kitchen where she cooks for her mother, who is haunted by memories of their escape from Burkina Faso. Alongside a stern directive that she must go to school, a new girl appears at the center. Mila's forced but genuine optimism breaks through Jahia's barrier, but the wait for the life-altering asylum decision remains terrifying. And one day, Mila and her family receive their verdict. In this deeply unsettling but still hopeful drama, we follow two vulnerable friends who try to navigate an unstable and artificial everyday life, where life has an expiration date. Or a new beginning.",
-   "day": "2026-08-14",
-   "time": "08:00",
-   "venue": "Institución Educativa Isaac Rodríguez - Quibdó",
-   "day_order": 2,
-   "has_qa": false,
-   "is_cortos": false,
-   "film_list": null,
-   "is_free": true,
-   "requires_registration": false,
-   "_ingreso": "",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/el-verano-de-jahia-jahias-summer/",
-    "date": "2026-07-25",
-    "programacion_oficial": "El verano de Jahia (Jahia's Summer)"
-   },
-   "type": "film"
-  },
-  {
    "title": "Producción y Animación 2D",
    "type": "event",
    "section": "🛠️ Formación",
    "duration": "",
-   "synopsis": "",
+   "synopsis": "En alianza con el SENA, este taller ofrece una introducción a los fundamentos de la producción audiovisual y la animación 2D, brindando a los participantes herramientas básicas par",
    "synopsis_lang": "es",
+   "poster": "/uploads/obras/formacion-produccion-y-animacion-2d.jpg",
+   "posterSource": "custom",
    "event_kind": "masterclass",
    "day": "2026-08-14",
    "time": "10:00",
@@ -3547,16 +3181,17 @@
    "_ingreso": "",
    "_src": {
     "programacion_oficial": "Producción y Animación 2D"
-   },
-   "_pendiente": "sinopsis y duración — recuperar de /charlas/<slug> o /talleres/<slug>"
+   }
   },
   {
    "title": "De los deepfakes y otras violencias digitales",
    "type": "event",
    "section": "🎤 Charlas que Unen",
    "duration": "",
-   "synopsis": "",
+   "synopsis": "¿Qué se está haciendo en Colombia para erradicar estas violencias contra las mujeres? Expertas conversan sobre el tema.",
    "synopsis_lang": "es",
+   "poster": "/uploads/obras/Portada_Charla-1-e1776487324802.jpg",
+   "posterSource": "custom",
    "event_kind": "ponencia",
    "day": "2026-08-14",
    "time": "10:00",
@@ -3570,16 +3205,17 @@
    "_ingreso": "",
    "_src": {
     "programacion_oficial": "De los deepfakes y otras violencias digitales"
-   },
-   "_pendiente": "sinopsis y duración — recuperar de /charlas/<slug> o /talleres/<slug>"
+   }
   },
   {
    "title": "Una ciudad ¿para quién?",
    "type": "event",
    "section": "🎤 Charlas que Unen",
    "duration": "",
-   "synopsis": "",
+   "synopsis": "Un diálogo en torno al derecho a la ciudad en Cartagena",
    "synopsis_lang": "es",
+   "poster": "/uploads/obras/Portada_Charla-1-e1776487324802.jpg",
+   "posterSource": "custom",
    "event_kind": "ponencia",
    "day": "2026-08-14",
    "time": "10:00",
@@ -3593,8 +3229,7 @@
    "_ingreso": "",
    "_src": {
     "programacion_oficial": "Una ciudad ¿para quién?"
-   },
-   "_pendiente": "sinopsis y duración — recuperar de /charlas/<slug> o /talleres/<slug>"
+   }
   },
   {
    "title": "Honorablé",
@@ -4018,6 +3653,7 @@
    "has_qa": false,
    "is_cortos": false,
    "film_list": null,
+   "sala": "Sala Capital",
    "is_free": true,
    "requires_registration": false,
    "_ingreso": "",
@@ -4050,9 +3686,10 @@
    "has_qa": false,
    "is_cortos": false,
    "film_list": null,
-   "is_free": true,
+   "sala": "Sala Capital",
+   "is_free": false,
    "requires_registration": false,
-   "_ingreso": "",
+   "_ingreso": "Boletería en taquilla",
    "_src": {
     "url": "https://www.ficdeh.com/produccion/amor-rebelde/",
     "date": "2026-07-25",
@@ -4296,9 +3933,9 @@
    "has_qa": false,
    "is_cortos": false,
    "film_list": null,
-   "is_free": true,
+   "is_free": false,
    "requires_registration": false,
-   "_ingreso": "",
+   "_ingreso": "Boletería en taquilla",
    "_src": {
     "url": "https://www.ficdeh.com/produccion/semillas/",
     "date": "2026-07-25",
@@ -4391,9 +4028,10 @@
    "has_qa": false,
    "is_cortos": false,
    "film_list": null,
-   "is_free": true,
+   "sala": "Sala 2",
+   "is_free": false,
    "requires_registration": false,
-   "_ingreso": "",
+   "_ingreso": "Boletería en taquilla",
    "_src": {
     "url": "https://www.ficdeh.com/produccion/1982/",
     "date": "2026-07-25",
@@ -4437,8 +4075,10 @@
    "type": "event",
    "section": "🎤 Charlas que Unen",
    "duration": "",
-   "synopsis": "",
+   "synopsis": "El regreso de la delgadez extrema y su viralización digital representa un riesgo para niños, niñas y jóvenes. En este espacio, activistas reflexionan sobre el cuerpo, la violencia estética, las redes sociales y la salud mental.",
    "synopsis_lang": "es",
+   "poster": "/uploads/obras/Portada_Charla-1-e1776487324802.jpg",
+   "posterSource": "custom",
    "event_kind": "ponencia",
    "day": "2026-08-14",
    "time": "16:00",
@@ -4452,8 +4092,7 @@
    "_ingreso": "",
    "_src": {
     "programacion_oficial": "Hackeando los mandatos de la delgadez"
-   },
-   "_pendiente": "sinopsis y duración — recuperar de /charlas/<slug> o /talleres/<slug>"
+   }
   },
   {
    "title": "Hija del volcán",
@@ -4492,8 +4131,10 @@
    "type": "event",
    "section": "🛠️ Formación",
    "duration": "",
-   "synopsis": "",
+   "synopsis": "A través del uso de pinturas y actividades creativas, se abordarán conceptos básicos de storytelling y composición visual de forma práctica y sin tecnicismos.",
    "synopsis_lang": "es",
+   "poster": "/uploads/obras/formacion-pintando-realidades.jpg",
+   "posterSource": "custom",
    "event_kind": "masterclass",
    "day": "2026-08-14",
    "time": "16:00",
@@ -4507,8 +4148,7 @@
    "_ingreso": "",
    "_src": {
     "programacion_oficial": "Pintando realidades"
-   },
-   "_pendiente": "sinopsis y duración — recuperar de /charlas/<slug> o /talleres/<slug>"
+   }
   },
   {
    "title": "Bojayá, la verdad desde adentro",
@@ -4560,9 +4200,9 @@
    "has_qa": false,
    "is_cortos": false,
    "film_list": null,
-   "is_free": true,
+   "is_free": false,
    "requires_registration": false,
-   "_ingreso": "",
+   "_ingreso": "Boletería en taquilla",
    "_src": {
     "url": "https://www.ficdeh.com/produccion/cuando-la-palabra-se-hace-busqueda/",
     "date": "2026-07-25",
@@ -4592,9 +4232,10 @@
    "has_qa": false,
    "is_cortos": false,
    "film_list": null,
-   "is_free": true,
+   "sala": "Sala 3",
+   "is_free": false,
    "requires_registration": false,
-   "_ingreso": "",
+   "_ingreso": "Boletería en taquilla",
    "_src": {
     "url": "https://www.ficdeh.com/produccion/cuando-un-rio-se-convierte-en-mar/",
     "date": "2026-07-25",
@@ -4807,9 +4448,10 @@
    "has_qa": false,
    "is_cortos": false,
    "film_list": null,
-   "is_free": true,
+   "sala": "Sala Capital",
+   "is_free": false,
    "requires_registration": false,
-   "_ingreso": "",
+   "_ingreso": "Boletería en taquilla",
    "_src": {
     "url": "https://www.ficdeh.com/produccion/silenciada-silenced/",
     "date": "2026-07-25",
@@ -5036,8 +4678,10 @@
    "type": "event",
    "section": "🎤 Charlas que Unen",
    "duration": "",
-   "synopsis": "",
+   "synopsis": "Un espacio de diálogo sobre las nuevas formas de participación y activismo politico en las plataformas digitales.",
    "synopsis_lang": "es",
+   "poster": "/uploads/obras/Portada_Charla-1-e1776487324802.jpg",
+   "posterSource": "custom",
    "event_kind": "ponencia",
    "day": "2026-08-14",
    "time": "18:00",
@@ -5051,8 +4695,7 @@
    "_ingreso": "",
    "_src": {
     "programacion_oficial": "Mujeres, juventudes y activismo político en la era digital"
-   },
-   "_pendiente": "sinopsis y duración — recuperar de /charlas/<slug> o /talleres/<slug>"
+   }
   },
   {
    "title": "Herencia: Los cantos de la tierra",
@@ -5261,9 +4904,9 @@
    "has_qa": false,
    "is_cortos": false,
    "film_list": null,
-   "is_free": true,
+   "is_free": false,
    "requires_registration": false,
-   "_ingreso": "",
+   "_ingreso": "Boletería en taquilla",
    "_src": {
     "url": "https://www.ficdeh.com/produccion/el-valor-de-la-palabra/",
     "date": "2026-07-25",
@@ -5441,9 +5084,9 @@
    "has_qa": false,
    "is_cortos": false,
    "film_list": null,
-   "is_free": true,
+   "is_free": false,
    "requires_registration": false,
-   "_ingreso": "",
+   "_ingreso": "Boletería en taquilla",
    "_src": {
     "url": "https://www.ficdeh.com/produccion/el-hogar-fue-sepultado-en-esa-tierra-que-nunca-pudimos-encontrar/",
     "date": "2026-07-25",
@@ -5600,9 +5243,10 @@
    "has_qa": false,
    "is_cortos": false,
    "film_list": null,
-   "is_free": true,
+   "sala": "Sala 3",
+   "is_free": false,
    "requires_registration": false,
-   "_ingreso": "",
+   "_ingreso": "Boletería en taquilla",
    "_src": {
     "url": "https://www.ficdeh.com/produccion/carmela-y-los-caminantes/",
     "date": "2026-07-25",
@@ -5615,8 +5259,10 @@
    "type": "event",
    "section": "🛠️ Formación",
    "duration": "",
-   "synopsis": "",
+   "synopsis": "El barrismo es mucho más que acompañar a un equipo. La pasión por el fútbol puede convertirse en una fuerza para construir comunidad, promover el liderazgo, fortalecer la convivenc",
    "synopsis_lang": "es",
+   "poster": "/uploads/obras/formacion-barrismo-social.jpg",
+   "posterSource": "custom",
    "event_kind": "masterclass",
    "day": "2026-08-15",
    "time": "09:00",
@@ -5626,20 +5272,21 @@
    "is_cortos": false,
    "film_list": null,
    "is_free": true,
-   "requires_registration": false,
+   "requires_registration": true,
    "_ingreso": "",
    "_src": {
     "programacion_oficial": "Barrismo social: Construyendo comunidad desde el aguante"
-   },
-   "_pendiente": "sinopsis y duración — recuperar de /charlas/<slug> o /talleres/<slug>"
+   }
   },
   {
    "title": "Actuación para cine",
    "type": "event",
    "section": "🛠️ Formación",
    "duration": "",
-   "synopsis": "",
+   "synopsis": "Aproximación práctica a la actuación para cine mediante ejercicios orientados al desarrollo de herramientas actorales que permitan abordar la escena desde la corporalidad, las acci",
    "synopsis_lang": "es",
+   "poster": "/uploads/obras/formacion-actuacion-para-cine.jpg",
+   "posterSource": "custom",
    "event_kind": "masterclass",
    "day": "2026-08-15",
    "time": "09:00",
@@ -5653,8 +5300,7 @@
    "_ingreso": "",
    "_src": {
     "programacion_oficial": "Actuación para cine"
-   },
-   "_pendiente": "sinopsis y duración — recuperar de /charlas/<slug> o /talleres/<slug>"
+   }
   },
   {
    "title": "Hija del volcán",
@@ -6290,9 +5936,10 @@
    "has_qa": false,
    "is_cortos": false,
    "film_list": null,
-   "is_free": true,
+   "sala": "Sala 3",
+   "is_free": false,
    "requires_registration": false,
-   "_ingreso": "",
+   "_ingreso": "Boletería en taquilla",
    "_src": {
     "url": "https://www.ficdeh.com/produccion/semillas/",
     "date": "2026-07-25",
@@ -6411,9 +6058,10 @@
    "has_qa": false,
    "is_cortos": false,
    "film_list": null,
-   "is_free": true,
+   "sala": "Sala 3",
+   "is_free": false,
    "requires_registration": false,
-   "_ingreso": "",
+   "_ingreso": "Boletería en taquilla",
    "_src": {
     "url": "https://www.ficdeh.com/produccion/desierto-verde/",
     "date": "2026-07-25",
@@ -6688,6 +6336,7 @@
    "has_qa": false,
    "is_cortos": false,
    "film_list": null,
+   "sala": "SALA 1",
    "is_free": true,
    "requires_registration": false,
    "_ingreso": "",
@@ -6703,8 +6352,10 @@
    "type": "event",
    "section": "🎤 Charlas que Unen",
    "duration": "",
-   "synopsis": "",
+   "synopsis": "Cuidado y protección de áreas naturales en riesgo. Entrada con previa inscripción: https://forms.gle/q8LxC7KnkowLT7ov8PanelistasEmmerich WeissenbergerDirector de la Fundación Las Mercedes. Fundador del Colectivo ArtEmbassy.Nora RuzsicsArtista. Cineasta. Miembro del Colectivo ArtEmbassy.Gunzareiman V",
    "synopsis_lang": "es",
+   "poster": "/uploads/obras/Portada_Charla-1-e1776487324802.jpg",
+   "posterSource": "custom",
    "event_kind": "ponencia",
    "day": "2026-08-15",
    "time": "14:00",
@@ -6718,8 +6369,7 @@
    "_ingreso": "",
    "_src": {
     "programacion_oficial": "Desde el centro de la tierra"
-   },
-   "_pendiente": "sinopsis y duración — recuperar de /charlas/<slug> o /talleres/<slug>"
+   }
   },
   {
    "title": "Los reyes del mundo",
@@ -6922,9 +6572,10 @@
    "has_qa": false,
    "is_cortos": false,
    "film_list": null,
-   "is_free": true,
+   "sala": "Sala Capital",
+   "is_free": false,
    "requires_registration": false,
-   "_ingreso": "",
+   "_ingreso": "Boletería en taquilla",
    "_src": {
     "url": "https://www.ficdeh.com/produccion/cuando-la-palabra-se-hace-busqueda/",
     "date": "2026-07-25",
@@ -7105,9 +6756,10 @@
    "has_qa": false,
    "is_cortos": false,
    "film_list": null,
-   "is_free": true,
+   "sala": "Sala 2",
+   "is_free": false,
    "requires_registration": false,
-   "_ingreso": "",
+   "_ingreso": "Boletería en taquilla",
    "_src": {
     "url": "https://www.ficdeh.com/produccion/aqui-no-entra-luz/",
     "date": "2026-07-25",
@@ -7151,8 +6803,10 @@
    "type": "event",
    "section": "🛠️ Formación",
    "duration": "",
-   "synopsis": "",
+   "synopsis": "Este taller brindará herramientas para la identificación y denuncia de las violencias de género en los medios de comunicación.",
    "synopsis_lang": "es",
+   "poster": "/uploads/obras/formacion-visibilizar-lo-invisible.jpg",
+   "posterSource": "custom",
    "event_kind": "masterclass",
    "day": "2026-08-15",
    "time": "16:00",
@@ -7162,12 +6816,11 @@
    "is_cortos": false,
    "film_list": null,
    "is_free": true,
-   "requires_registration": false,
+   "requires_registration": true,
    "_ingreso": "",
    "_src": {
     "programacion_oficial": "Visibilizar lo Invisible: Taller de Herramientas frente a las Violencias de Género"
-   },
-   "_pendiente": "sinopsis y duración — recuperar de /charlas/<slug> o /talleres/<slug>"
+   }
   },
   {
    "title": "Indiamenta",
@@ -7219,9 +6872,9 @@
    "has_qa": false,
    "is_cortos": false,
    "film_list": null,
-   "is_free": true,
+   "is_free": false,
    "requires_registration": false,
-   "_ingreso": "",
+   "_ingreso": "Boletería en taquilla",
    "_src": {
     "url": "https://www.ficdeh.com/produccion/la-luz-por-primera-vez/",
     "date": "2026-07-25",
@@ -7234,8 +6887,10 @@
    "type": "event",
    "section": "🛠️ Formación",
    "duration": "",
-   "synopsis": "",
+   "synopsis": "Espacio de encuentro, diálogo e inspiración que reúne a mujeres que hacen parte de la industria audiovisual del Eje Cafetero. Compartirán sus experiencias y conversarán sobre las o",
    "synopsis_lang": "es",
+   "poster": "/uploads/obras/formacion-mujeres-en-el-audiovisual.jpg",
+   "posterSource": "custom",
    "event_kind": "masterclass",
    "day": "2026-08-15",
    "time": "16:30",
@@ -7249,16 +6904,17 @@
    "_ingreso": "",
    "_src": {
     "programacion_oficial": "Conversatorio Mujeres en el Audiovisual"
-   },
-   "_pendiente": "sinopsis y duración — recuperar de /charlas/<slug> o /talleres/<slug>"
+   }
   },
   {
    "title": "Resistencias indígenas en Ibagué",
    "type": "event",
    "section": "🎤 Charlas que Unen",
    "duration": "",
-   "synopsis": "",
+   "synopsis": "¿Qué procesos de resistencia lideran las y los indígenas de la ciudad? En este espacio lxs invitadxs reflexionan sobre el tema.PanelistasModeradoreIván Reina OrtizRealizadore de Cine y TV. Magíster en Administración. Productore local de FICDEH en Ibagué.Katerin Yelitza Rodríguez MontealegreEstudiant",
    "synopsis_lang": "es",
+   "poster": "/uploads/obras/Portada_Charla-1-e1776487324802.jpg",
+   "posterSource": "custom",
    "event_kind": "ponencia",
    "day": "2026-08-15",
    "time": "16:30",
@@ -7272,8 +6928,7 @@
    "_ingreso": "",
    "_src": {
     "programacion_oficial": "Resistencias indígenas en Ibagué"
-   },
-   "_pendiente": "sinopsis y duración — recuperar de /charlas/<slug> o /talleres/<slug>"
+   }
   },
   {
    "title": "El juego de la vida",
@@ -7297,9 +6952,9 @@
    "has_qa": false,
    "is_cortos": false,
    "film_list": null,
-   "is_free": true,
+   "is_free": false,
    "requires_registration": false,
-   "_ingreso": "",
+   "_ingreso": "Boletería en taquilla",
    "_src": {
     "url": "https://www.ficdeh.com/produccion/el-juego-de-la-vida/",
     "date": "2026-07-25",
@@ -7312,8 +6967,10 @@
    "type": "event",
    "section": "🎤 Charlas que Unen",
    "duration": "",
-   "synopsis": "",
+   "synopsis": "Una jornada cultural para conmemorar los diez años de la firma de los Acuerdos de Paz en Colombia. Incluye la proyección de los cortometrajes \"La luz que nos queda\" (dir. Gloria Isabel Gómez Ceballos) y \"Lo que sentimos\" (dir. Fondo Multidonante de las Naciones Unidas para la Paz en Colombia), la ch",
    "synopsis_lang": "es",
+   "poster": "/uploads/obras/Portada_Charla-1-e1776487324802.jpg",
+   "posterSource": "custom",
    "event_kind": "ponencia",
    "day": "2026-08-15",
    "time": "17:00",
@@ -7327,8 +6984,7 @@
    "_ingreso": "",
    "_src": {
     "programacion_oficial": "El Arte de la Paz"
-   },
-   "_pendiente": "sinopsis y duración — recuperar de /charlas/<slug> o /talleres/<slug>"
+   }
   },
   {
    "title": "La luz que nos queda",
@@ -7409,9 +7065,9 @@
    "has_qa": false,
    "is_cortos": false,
    "film_list": null,
-   "is_free": true,
+   "is_free": false,
    "requires_registration": false,
-   "_ingreso": "",
+   "_ingreso": "Boletería en taquilla",
    "_src": {
     "url": "https://www.ficdeh.com/produccion/sed-el-flagelo-guajiro/",
     "date": "2026-07-25",
@@ -7441,9 +7097,9 @@
    "has_qa": false,
    "is_cortos": false,
    "film_list": null,
-   "is_free": true,
+   "is_free": false,
    "requires_registration": false,
-   "_ingreso": "",
+   "_ingreso": "Boletería en taquilla",
    "_src": {
     "url": "https://www.ficdeh.com/produccion/honorable/",
     "date": "2026-07-25",
@@ -7471,9 +7127,10 @@
    "has_qa": false,
    "is_cortos": false,
    "film_list": null,
-   "is_free": true,
+   "sala": "Sala Capital",
+   "is_free": false,
    "requires_registration": false,
-   "_ingreso": "",
+   "_ingreso": "Boletería en taquilla",
    "_src": {
     "url": "https://www.ficdeh.com/produccion/eva/",
     "date": "2026-07-25",
@@ -7550,8 +7207,10 @@
    "type": "event",
    "section": "🎤 Charlas que Unen",
    "duration": "",
-   "synopsis": "",
+   "synopsis": "Una reflexión sobre el papel de las mujeres buscadoras a partir del documental \"Soñé su nombre\"",
    "synopsis_lang": "es",
+   "poster": "/uploads/obras/Portada_Charla-1-e1776487324802.jpg",
+   "posterSource": "custom",
    "event_kind": "ponencia",
    "day": "2026-08-15",
    "time": "18:00",
@@ -7565,8 +7224,7 @@
    "_ingreso": "",
    "_src": {
     "programacion_oficial": "Ni un minuto de silencio, toda una vida de búsqueda"
-   },
-   "_pendiente": "sinopsis y duración — recuperar de /charlas/<slug> o /talleres/<slug>"
+   }
   },
   {
    "title": "Aquí no entra luz",
@@ -7780,9 +7438,9 @@
    "has_qa": false,
    "is_cortos": false,
    "film_list": null,
-   "is_free": true,
+   "is_free": false,
    "requires_registration": false,
-   "_ingreso": "",
+   "_ingreso": "Boletería en taquilla",
    "_src": {
     "url": "https://www.ficdeh.com/produccion/andariega/",
     "date": "2026-07-25",
@@ -8017,9 +7675,10 @@
    "has_qa": false,
    "is_cortos": false,
    "film_list": null,
-   "is_free": true,
+   "sala": "Sala 2",
+   "is_free": false,
    "requires_registration": false,
-   "_ingreso": "",
+   "_ingreso": "Boletería en taquilla",
    "_src": {
     "url": "https://www.ficdeh.com/produccion/one-in-a-million-una-entre-un-millon/",
     "date": "2026-07-25",
@@ -8049,9 +7708,9 @@
    "has_qa": false,
    "is_cortos": false,
    "film_list": null,
-   "is_free": true,
+   "is_free": false,
    "requires_registration": false,
-   "_ingreso": "",
+   "_ingreso": "Boletería en taquilla",
    "_src": {
     "url": "https://www.ficdeh.com/produccion/la-hija-condor/",
     "date": "2026-07-25",
@@ -8202,6 +7861,7 @@
    "has_qa": false,
    "is_cortos": false,
    "film_list": null,
+   "sala": "Sala Capital",
    "is_free": true,
    "requires_registration": false,
    "_ingreso": "",
@@ -8233,9 +7893,10 @@
    "has_qa": false,
    "is_cortos": false,
    "film_list": null,
-   "is_free": true,
+   "sala": "Sala Capital",
+   "is_free": false,
    "requires_registration": false,
-   "_ingreso": "",
+   "_ingreso": "Boletería en taquilla",
    "_src": {
     "url": "https://www.ficdeh.com/produccion/la-bonga/",
     "date": "2026-07-25",
@@ -8265,9 +7926,10 @@
    "has_qa": false,
    "is_cortos": false,
    "film_list": null,
-   "is_free": true,
+   "sala": "Sala 3",
+   "is_free": false,
    "requires_registration": false,
-   "_ingreso": "",
+   "_ingreso": "Boletería en taquilla",
    "_src": {
     "url": "https://www.ficdeh.com/produccion/feito-pipa/",
     "date": "2026-07-25",
@@ -8535,6 +8197,7 @@
    "has_qa": false,
    "is_cortos": false,
    "film_list": null,
+   "sala": "SALA 2",
    "is_free": true,
    "requires_registration": false,
    "_ingreso": "",
@@ -8564,6 +8227,7 @@
    "has_qa": false,
    "is_cortos": false,
    "film_list": null,
+   "sala": "SALA 2",
    "is_free": true,
    "requires_registration": false,
    "_ingreso": "",
@@ -8596,6 +8260,7 @@
    "has_qa": false,
    "is_cortos": false,
    "film_list": null,
+   "sala": "SALA 2",
    "is_free": true,
    "requires_registration": false,
    "_ingreso": "",
@@ -8625,6 +8290,7 @@
    "has_qa": false,
    "is_cortos": false,
    "film_list": null,
+   "sala": "SALA 2",
    "is_free": true,
    "requires_registration": false,
    "_ingreso": "",
@@ -8657,6 +8323,7 @@
    "has_qa": false,
    "is_cortos": false,
    "film_list": null,
+   "sala": "SALA 2",
    "is_free": true,
    "requires_registration": false,
    "_ingreso": "",
@@ -8688,6 +8355,7 @@
    "has_qa": false,
    "is_cortos": false,
    "film_list": null,
+   "sala": "SALA 2",
    "is_free": true,
    "requires_registration": false,
    "_ingreso": "",
@@ -8720,6 +8388,7 @@
    "has_qa": false,
    "is_cortos": false,
    "film_list": null,
+   "sala": "SALA 2",
    "is_free": true,
    "requires_registration": false,
    "_ingreso": "",
@@ -8735,8 +8404,10 @@
    "type": "event",
    "section": "🎤 Charlas que Unen",
    "duration": "",
-   "synopsis": "",
+   "synopsis": "Las periodistas de este proyecto toman los micrófonos y comparten cómo ha sido narrar el conflicto y la paz en Colombia.",
    "synopsis_lang": "es",
+   "poster": "/uploads/obras/Portada_Charla-1-e1776487324802.jpg",
+   "posterSource": "custom",
    "event_kind": "ponencia",
    "day": "2026-08-16",
    "time": "15:30",
@@ -8750,8 +8421,7 @@
    "_ingreso": "",
    "_src": {
     "programacion_oficial": "Colombia +20: una década de periodismo para la paz"
-   },
-   "_pendiente": "sinopsis y duración — recuperar de /charlas/<slug> o /talleres/<slug>"
+   }
   },
   {
    "title": "Por una gota de leche",
@@ -8772,9 +8442,10 @@
    "has_qa": false,
    "is_cortos": false,
    "film_list": null,
-   "is_free": true,
+   "sala": "Sala 2",
+   "is_free": false,
    "requires_registration": false,
-   "_ingreso": "",
+   "_ingreso": "Boletería en taquilla",
    "_src": {
     "url": "https://www.ficdeh.com/produccion/por-una-gota-de-leche/",
     "date": "2026-07-25",
@@ -8956,9 +8627,9 @@
    "has_qa": false,
    "is_cortos": false,
    "film_list": null,
-   "is_free": true,
+   "is_free": false,
    "requires_registration": false,
-   "_ingreso": "",
+   "_ingreso": "Boletería en taquilla",
    "_src": {
     "url": "https://www.ficdeh.com/produccion/la-raya/",
     "date": "2026-07-25",
@@ -8986,9 +8657,10 @@
    "has_qa": false,
    "is_cortos": false,
    "film_list": null,
-   "is_free": true,
+   "sala": "Sala Capital",
+   "is_free": false,
    "requires_registration": false,
-   "_ingreso": "",
+   "_ingreso": "Boletería en taquilla",
    "_src": {
     "url": "https://www.ficdeh.com/produccion/three-black-men-tres-hombres-negros/",
     "date": "2026-07-25",
@@ -9017,9 +8689,9 @@
    "has_qa": false,
    "is_cortos": false,
    "film_list": null,
-   "is_free": true,
+   "is_free": false,
    "requires_registration": false,
-   "_ingreso": "",
+   "_ingreso": "Boletería en taquilla",
    "_src": {
     "url": "https://www.ficdeh.com/produccion/un-nuevo-amanecer/",
     "date": "2026-07-25",
@@ -9232,6 +8904,7 @@
    "has_qa": false,
    "is_cortos": false,
    "film_list": null,
+   "sala": "SALA 2",
    "is_free": true,
    "requires_registration": false,
    "_ingreso": "",
@@ -9327,9 +9000,9 @@
    "has_qa": false,
    "is_cortos": false,
    "film_list": null,
-   "is_free": true,
+   "is_free": false,
    "requires_registration": false,
-   "_ingreso": "",
+   "_ingreso": "Boletería en taquilla",
    "_src": {
     "url": "https://www.ficdeh.com/produccion/semillas/",
     "date": "2026-07-25",
@@ -9358,9 +9031,9 @@
    "has_qa": false,
    "is_cortos": false,
    "film_list": null,
-   "is_free": true,
+   "is_free": false,
    "requires_registration": false,
-   "_ingreso": "",
+   "_ingreso": "Boletería en taquilla",
    "_src": {
     "url": "https://www.ficdeh.com/produccion/notas-sobre-un-destierro/",
     "date": "2026-07-25",
@@ -9389,9 +9062,10 @@
    "has_qa": false,
    "is_cortos": false,
    "film_list": null,
-   "is_free": true,
+   "sala": "Sala 2",
+   "is_free": false,
    "requires_registration": false,
-   "_ingreso": "",
+   "_ingreso": "Boletería en taquilla",
    "_src": {
     "url": "https://www.ficdeh.com/produccion/notas-sobre-un-destierro/",
     "date": "2026-07-25",
@@ -9421,9 +9095,9 @@
    "has_qa": false,
    "is_cortos": false,
    "film_list": null,
-   "is_free": true,
+   "is_free": false,
    "requires_registration": false,
-   "_ingreso": "",
+   "_ingreso": "Boletería en taquilla",
    "_src": {
     "url": "https://www.ficdeh.com/produccion/andariega/",
     "date": "2026-07-25",
@@ -9452,44 +9126,14 @@
    "has_qa": false,
    "is_cortos": false,
    "film_list": null,
-   "is_free": true,
+   "sala": "Sala Capital",
+   "is_free": false,
    "requires_registration": false,
-   "_ingreso": "",
+   "_ingreso": "Boletería en taquilla",
    "_src": {
     "url": "https://www.ficdeh.com/produccion/el-silencio-de-los-palafitos/",
     "date": "2026-07-25",
     "programacion_oficial": "El silencio de los palafitos"
-   },
-   "type": "film"
-  },
-  {
-   "title": "Semillas",
-   "director": "Eliana Niño",
-   "year": "2025",
-   "duration": "100 min",
-   "country": "Colombia, España",
-   "section": "🧳 Largometraje de Ficción",
-   "synopsis": "Shaira sueña con participar en un Torneo de Coleo, sin embargo, un día su caballo desaparece. En un atardecer llanero y en medio de una gran sequía, su abuelo le dice que en el verano el cielo atrapa a los animales y que ellos solo regresan hasta el día en que vuelva a llover en la tierra. Shaira encontrará la forma de hacer volver la lluvia para traer de vuelta a su caballo Semillas.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/semillas.jpg",
-   "posterSource": "custom",
-   "genre": "Drama",
-   "lbSlug": "semillas",
-   "synopsis_en": "In Eliana Niño’s poignant and charming feature debut, Shaira, a girl from the eastern plains of Colombia, dreams of participating in a coleo festival (an event similar to a rodeo). But after a recent drought severely damaged the crops, Shaira’s grandfather sells her horse without telling her. One day, he tells Shaira that the reason why some clouds take the shape of animals is that the sky traps them and won’t return them until it rains again. Shaira embarks on a journey to go in search of a special seed that will make the heavens rain again to bring her horse back.",
-   "day": "2026-08-17",
-   "time": "08:00",
-   "venue": "Institución Educativa Isaac Rodríguez - Quibdó",
-   "day_order": 5,
-   "has_qa": false,
-   "is_cortos": false,
-   "film_list": null,
-   "is_free": true,
-   "requires_registration": false,
-   "_ingreso": "",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/semillas/",
-    "date": "2026-07-25",
-    "programacion_oficial": "Semillas"
    },
    "type": "film"
   },
@@ -9515,9 +9159,10 @@
    "has_qa": false,
    "is_cortos": false,
    "film_list": null,
-   "is_free": true,
+   "sala": "Sala 2",
+   "is_free": false,
    "requires_registration": false,
-   "_ingreso": "",
+   "_ingreso": "Boletería en taquilla",
    "_src": {
     "url": "https://www.ficdeh.com/produccion/andariega/",
     "date": "2026-07-25",
@@ -9697,9 +9342,9 @@
    "has_qa": false,
    "is_cortos": false,
    "film_list": null,
-   "is_free": true,
+   "is_free": false,
    "requires_registration": false,
-   "_ingreso": "",
+   "_ingreso": "Boletería en taquilla",
    "_src": {
     "url": "https://www.ficdeh.com/produccion/three-black-men-tres-hombres-negros/",
     "date": "2026-07-25",
@@ -9728,9 +9373,10 @@
    "has_qa": false,
    "is_cortos": false,
    "film_list": null,
-   "is_free": true,
+   "sala": "Sala Capital",
+   "is_free": false,
    "requires_registration": false,
-   "_ingreso": "",
+   "_ingreso": "Boletería en taquilla",
    "_src": {
     "url": "https://www.ficdeh.com/produccion/american-doctor-medico-estadounidense/",
     "date": "2026-07-25",
@@ -9938,9 +9584,10 @@
    "has_qa": false,
    "is_cortos": false,
    "film_list": null,
-   "is_free": true,
+   "sala": "Sala 2",
+   "is_free": false,
    "requires_registration": false,
-   "_ingreso": "",
+   "_ingreso": "Boletería en taquilla",
    "_src": {
     "url": "https://www.ficdeh.com/produccion/los-pliegues-de-la-falda/",
     "date": "2026-07-25",
@@ -9970,9 +9617,9 @@
    "has_qa": false,
    "is_cortos": false,
    "film_list": null,
-   "is_free": true,
+   "is_free": false,
    "requires_registration": false,
-   "_ingreso": "",
+   "_ingreso": "Boletería en taquilla",
    "_src": {
     "url": "https://www.ficdeh.com/produccion/remember-us-recuerdanos/",
     "date": "2026-07-25",
@@ -9985,8 +9632,10 @@
    "type": "event",
    "section": "🎤 Charlas que Unen",
    "duration": "",
-   "synopsis": "",
+   "synopsis": "A partir de la proyección de los cortos La Cerillana y Los pliegues de la falda activistas conversan sobre estas experiencia de vida.",
    "synopsis_lang": "es",
+   "poster": "/uploads/obras/Portada_Charla-1-e1776487324802.jpg",
+   "posterSource": "custom",
    "event_kind": "ponencia",
    "day": "2026-08-17",
    "time": "16:00",
@@ -10000,8 +9649,7 @@
    "_ingreso": "",
    "_src": {
     "programacion_oficial": "¡Existimos! Infancias trans en Colombia"
-   },
-   "_pendiente": "sinopsis y duración — recuperar de /charlas/<slug> o /talleres/<slug>"
+   }
   },
   {
    "title": "Cuando la palabra se hace búsqueda",
@@ -10087,9 +9735,10 @@
    "has_qa": false,
    "is_cortos": false,
    "film_list": null,
-   "is_free": true,
+   "sala": "Sala Capital",
+   "is_free": false,
    "requires_registration": false,
-   "_ingreso": "",
+   "_ingreso": "Boletería en taquilla",
    "_src": {
     "url": "https://www.ficdeh.com/produccion/la-independencia/",
     "date": "2026-07-25",
@@ -10116,9 +9765,9 @@
    "has_qa": false,
    "is_cortos": false,
    "film_list": null,
-   "is_free": true,
+   "is_free": false,
    "requires_registration": false,
-   "_ingreso": "",
+   "_ingreso": "Boletería en taquilla",
    "_src": {
     "url": "https://www.ficdeh.com/produccion/bogota-underground-hip-hop/",
     "date": "2026-07-25",
@@ -10145,9 +9794,9 @@
    "has_qa": false,
    "is_cortos": false,
    "film_list": null,
-   "is_free": true,
+   "is_free": false,
    "requires_registration": false,
-   "_ingreso": "",
+   "_ingreso": "Boletería en taquilla",
    "_src": {
     "url": "https://www.ficdeh.com/produccion/el-paraiso-de-ainara/",
     "date": "2026-07-25",
@@ -10174,9 +9823,9 @@
    "has_qa": false,
    "is_cortos": false,
    "film_list": null,
-   "is_free": true,
+   "is_free": false,
    "requires_registration": false,
-   "_ingreso": "",
+   "_ingreso": "Boletería en taquilla",
    "_src": {
     "url": "https://www.ficdeh.com/produccion/color-piel/",
     "date": "2026-07-25",
@@ -10205,9 +9854,9 @@
    "has_qa": false,
    "is_cortos": false,
    "film_list": null,
-   "is_free": true,
+   "is_free": false,
    "requires_registration": false,
-   "_ingreso": "",
+   "_ingreso": "Boletería en taquilla",
    "_src": {
     "url": "https://www.ficdeh.com/produccion/sukua/",
     "date": "2026-07-25",
@@ -10220,8 +9869,10 @@
    "type": "event",
    "section": "🎤 Charlas que Unen",
    "duration": "",
-   "synopsis": "",
+   "synopsis": "Condiciones laborales, creativas y éticas que atraviesan la industria.",
    "synopsis_lang": "es",
+   "poster": "/uploads/obras/Portada_Charla-1-e1776487324802.jpg",
+   "posterSource": "custom",
    "event_kind": "ponencia",
    "day": "2026-08-17",
    "time": "17:30",
@@ -10235,8 +9886,7 @@
    "_ingreso": "",
    "_src": {
     "programacion_oficial": "Tercera charla Derechos audiovisuales"
-   },
-   "_pendiente": "sinopsis y duración — recuperar de /charlas/<slug> o /talleres/<slug>"
+   }
   },
   {
    "title": "La Cerrillana",
@@ -10323,9 +9973,10 @@
    "has_qa": false,
    "is_cortos": false,
    "film_list": null,
-   "is_free": true,
+   "sala": "Sala 2",
+   "is_free": false,
    "requires_registration": false,
-   "_ingreso": "",
+   "_ingreso": "Boletería en taquilla",
    "_src": {
     "url": "https://www.ficdeh.com/produccion/el-juego-de-la-vida/",
     "date": "2026-07-25",
@@ -10362,44 +10013,14 @@
    "type": "film"
   },
   {
-   "title": "La Raya",
-   "director": "Yolanda Cruz",
-   "year": "2025",
-   "duration": "80 min",
-   "country": "México",
-   "section": "🧳 Largometraje de Ficción",
-   "synopsis": "La llegada de un refrigerador cambia la vida en La Raya, un pueblo abandonado en la sierra sur de Oaxaca. Sotera y su amigo Erick intentan venderlo y hacer negocio. Sin embargo, el refrigerador pronto empieza a revelar cosas misteriosas a la gente que se le acerca.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/la-raya.jpg",
-   "posterSource": "custom",
-   "genre": "Drama, Misterio",
-   "lbSlug": "town-of-la-raya",
-   "synopsis_en": "In the almost deserted town of La Raya, a mysterious refrigerator appears out of nowhere. Sotera Santos and her friend Eric see an opportunity to make a fortune by selling it. However, the fridge soon starts unveiling strange and enigmatic phenomena to those who approach it. As Sotera grapples with these unsettling occurrences, she must also face the painful reality that her mother might not return to take her to the United States, and that perhaps her departure from La Raya is not yet meant to be.",
-   "title_en": "Town Of La Raya",
-   "day": "2026-08-18",
-   "time": "09:00",
-   "venue": "Cárcel La 40 Establecimiento Penitenciario y Carcelario de Pereira INPEC - Pereira",
-   "day_order": 6,
-   "has_qa": false,
-   "is_cortos": false,
-   "film_list": null,
-   "is_free": true,
-   "requires_registration": false,
-   "_ingreso": "",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/la-raya/",
-    "date": "2026-07-25",
-    "programacion_oficial": "La Raya"
-   },
-   "type": "film"
-  },
-  {
    "title": "Crear para resistir: la creación de contenido como un acto de responsabilidad",
    "type": "event",
    "section": "🛠️ Formación",
    "duration": "",
-   "synopsis": "",
+   "synopsis": "Herramientas prácticas para identificar fuentes confiables, verificar información, evitar la desinformación y construir narrativas que generen diálogo e impacto sin perder el compr",
    "synopsis_lang": "es",
+   "poster": "/uploads/obras/formacion-crear-para-resistir.jpg",
+   "posterSource": "custom",
    "event_kind": "masterclass",
    "day": "2026-08-18",
    "time": "09:00",
@@ -10409,50 +10030,21 @@
    "is_cortos": false,
    "film_list": null,
    "is_free": true,
-   "requires_registration": false,
+   "requires_registration": true,
    "_ingreso": "",
    "_src": {
     "programacion_oficial": "Crear para resistir: la creación de contenido como un acto de responsabilidad"
-   },
-   "_pendiente": "sinopsis y duración — recuperar de /charlas/<slug> o /talleres/<slug>"
-  },
-  {
-   "title": "Three black men",
-   "director": "Sienna McLean-LoGreco",
-   "year": "2026",
-   "duration": "99 min",
-   "country": "Estados Unidos",
-   "section": "🌍 Largometraje Documental Internacional",
-   "synopsis": "¿Puede un viaje hacia el pasado abrir nuevas posibilidades para la Negritud? Tres hombres negros recorren a la inversa la ruta transatlántica del comercio de esclavos, de Los Ángeles (California) a Salvador de Bahía (Brasil) y, finalmente, a Accra (Ghana). En este recorrido exploran aspectos fundamentales de la historia negra y las representaciones de la migración forzosa, la supervivencia y la desaparición de los millones de personas que cruzaron el Atlántico; y brazan la identidad negra como una fuente viva de conexión, creación y renovación.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/three-black-men-tres-hombres-negros.jpg",
-   "posterSource": "custom",
-   "lbSlug": "three-black-men",
-   "synopsis_en": "Can blackness escape the violence of its origins?  Three Black men set out on a transformative journey along the transatlantic slave route in reverse, exploring resistance, liberation and a new understanding of Blackness.  Their epic voyage takes them from Los Angeles to Salvador da Bahia in Brazil, and finally to Accra in Ghana. Their mission is to redefine Blackness, heal from historical trauma, and envision new paths to liberation beyond the constraints of white supremacy.",
-   "day": "2026-08-18",
-   "time": "09:00",
-   "venue": "Universidad Tecnológica del Chocó - Quibdó",
-   "day_order": 6,
-   "has_qa": false,
-   "is_cortos": false,
-   "film_list": null,
-   "is_free": true,
-   "requires_registration": false,
-   "_ingreso": "",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/three-black-men-tres-hombres-negros/",
-    "date": "2026-07-25",
-    "programacion_oficial": "Three black men (Tres hombres negros)"
-   },
-   "type": "film"
+   }
   },
   {
    "title": "El arte de moldear la IA",
    "type": "event",
    "section": "🎤 Charlas que Unen",
    "duration": "",
-   "synopsis": "",
+   "synopsis": "Diálogo sobre las transformaciones que la inteligencia artificial está generando en los procesos creativos y artísticos del país.",
    "synopsis_lang": "es",
+   "poster": "/uploads/obras/Portada_Charla-1-e1776487324802.jpg",
+   "posterSource": "custom",
    "event_kind": "ponencia",
    "day": "2026-08-18",
    "time": "10:00",
@@ -10466,8 +10058,7 @@
    "_ingreso": "",
    "_src": {
     "programacion_oficial": "El arte de moldear la IA"
-   },
-   "_pendiente": "sinopsis y duración — recuperar de /charlas/<slug> o /talleres/<slug>"
+   }
   },
   {
    "title": "Amalgama",
@@ -10587,129 +10178,6 @@
     "url": "https://www.ficdeh.com/produccion/cuando-la-palabra-se-hace-busqueda/",
     "date": "2026-07-25",
     "programacion_oficial": "Cuando la palabra se hace búsqueda"
-   },
-   "type": "film"
-  },
-  {
-   "title": "El Paraíso de Ainara",
-   "director": "Esther Niemeier, Laura Espinel",
-   "year": "2025",
-   "duration": "14 min",
-   "country": "Colombia",
-   "section": "🎙️ Cortometraje Documental Nacional",
-   "synopsis": "En el colorido barrio El Paraíso de Bogotá, la curiosa Ainara, de 10 años, crece en Violetta, una biblioteca comunitaria fundada por su familia para les niñes del barrio. Un segundo hogar para aprender y jugar mientras los padres y las madres trabajan largas jornadas. A través del juego, el teatro y las manualidades, Ainara y sus amigues descubren la fuerza de la comunidad. El corto celebra la solidaridad y una buena dosis de girl power, mostrando cómo del cuidado colectivo pueden nacer pequeños paraísos.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/el-paraiso-de-ainara.jpg",
-   "posterSource": "custom",
-   "lbSlug": "el-paraiso-de-ainara",
-   "day": "2026-08-18",
-   "time": "10:30",
-   "venue": "Colegio Cruzada Social - Barranquilla",
-   "day_order": 6,
-   "has_qa": false,
-   "is_cortos": false,
-   "film_list": null,
-   "is_free": true,
-   "requires_registration": false,
-   "_ingreso": "",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/el-paraiso-de-ainara/",
-    "date": "2026-07-25",
-    "programacion_oficial": "El Paraíso de Ainara"
-   },
-   "type": "film"
-  },
-  {
-   "title": "Akababuru: Expresión de asombro",
-   "director": "Irati Dojura Landa Yagarí",
-   "year": "2025",
-   "duration": "13 min",
-   "country": "Colombia",
-   "section": "🪀 Cortometraje de Ficción Nacional",
-   "synopsis": "Kari es una niña indígena emberá que teme reír. Un día conoce a Kera, una joven mestiza, quien decide contarle el mito de Kiraparamia, una mujer que, según los ancianos, fue castigada por los dioses por reírse de su esposo. Kera reinterpreta el mito y le dice que, en realidad, la risa de Kiraparamia la liberó. Esta historia inspira profundamente a la pequeña Kari, quien decide confrontar a los niños que la oprimen a ella y a sus amigas mediante la risa.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/herminda.jpg",
-   "posterSource": "custom",
-   "title_en": "Akababuru: Expression of Astonishment",
-   "genre": "Fantasía",
-   "lbSlug": "akababuru-expresion-de-asombro",
-   "synopsis_en": "Kari, an Indigenous girl, is afraid to laugh. But a new interpretation of the old legend of Kiraparamia helps her to set herself free.",
-   "day": "2026-08-18",
-   "time": "10:30",
-   "venue": "Colegio Cruzada Social - Barranquilla",
-   "day_order": 6,
-   "has_qa": false,
-   "is_cortos": false,
-   "film_list": null,
-   "is_free": true,
-   "requires_registration": false,
-   "_ingreso": "",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/herminda/",
-    "date": "2026-07-25",
-    "programacion_oficial": "Akababuru: Expresión de asombro"
-   },
-   "type": "film"
-  },
-  {
-   "title": "La gran hazaña",
-   "director": "Luber Yesid Zúñiga Ordóñez",
-   "year": "2025",
-   "duration": "15 min",
-   "country": "Colombia",
-   "section": "🪀 Cortometraje de Ficción Nacional",
-   "synopsis": "A Pablo le encanta jugar al trompo. Cuando Don Chucho, el usurero del pueblo, retiene a Pascualina, su amiga y mascota, Pablo debe enfrentarse a Felipe, el mejor jugador de trompo de la región, para rescatarla. Pero ganar no es suficiente: los demás niños del pueblo se unirán a él en un acto de solidaridad, amistad y trabajo en equipo para lograr esta gran hazaña.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/la-gran-hazana.jpg",
-   "posterSource": "custom",
-   "genre": "Ficción",
-   "lbSlug": "the-great-feat",
-   "synopsis_en": "A rescue with a spinning tops, feathers, eggs and friends.",
-   "title_en": "The Great Feat",
-   "day": "2026-08-18",
-   "time": "10:30",
-   "venue": "Colegio Cruzada Social - Barranquilla",
-   "day_order": 6,
-   "has_qa": false,
-   "is_cortos": false,
-   "film_list": null,
-   "is_free": true,
-   "requires_registration": false,
-   "_ingreso": "",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/la-gran-hazana/",
-    "date": "2026-07-25",
-    "programacion_oficial": "La gran hazaña"
-   },
-   "type": "film"
-  },
-  {
-   "title": "In four stops",
-   "director": "Elizaveta Khlomova",
-   "year": "2026",
-   "duration": "19 min",
-   "country": "Rusia",
-   "section": "🚲 Cortometraje de Ficción Internacional",
-   "synopsis": "Dos días en la vida de Max, un niño sordo con una imaginación desbordante en medio de una dura realidad.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/mother-love-amor-de-madre.jpg",
-   "posterSource": "custom",
-   "lbSlug": "film:1510138",
-   "title_en": "In Four Stops",
-   "day": "2026-08-18",
-   "time": "10:30",
-   "venue": "Colegio Cruzada Social - Barranquilla",
-   "day_order": 6,
-   "has_qa": false,
-   "is_cortos": false,
-   "film_list": null,
-   "is_free": true,
-   "requires_registration": false,
-   "_ingreso": "",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/mother-love-amor-de-madre/",
-    "date": "2026-07-25",
-    "programacion_oficial": "In four stops"
    },
    "type": "film"
   },
@@ -11312,6 +10780,7 @@
    "has_qa": false,
    "is_cortos": false,
    "film_list": null,
+   "sala": "SALA 2",
    "is_free": true,
    "requires_registration": false,
    "_ingreso": "",
@@ -11601,8 +11070,10 @@
    "type": "event",
    "section": "🎤 Charlas que Unen",
    "duration": "",
-   "synopsis": "",
+   "synopsis": "Una invitación a reflexionar sobre la importancia del río Otún como fuente de vida y patrimonio natural.",
    "synopsis_lang": "es",
+   "poster": "/uploads/obras/Portada_Charla-1-e1776487324802.jpg",
+   "posterSource": "custom",
    "event_kind": "ponencia",
    "day": "2026-08-18",
    "time": "16:00",
@@ -11616,16 +11087,17 @@
    "_ingreso": "",
    "_src": {
     "programacion_oficial": "De Poleka Kasue al Río Otún: ¿Quién cuida el agua del río más importante de la región?"
-   },
-   "_pendiente": "sinopsis y duración — recuperar de /charlas/<slug> o /talleres/<slug>"
+   }
   },
   {
    "title": "Hablemos de salud mental",
    "type": "event",
    "section": "🎤 Charlas que Unen",
    "duration": "",
-   "synopsis": "",
+   "synopsis": "Un espacio de reflexión en torno a la salud mental de los jóvenes chocoanos.",
    "synopsis_lang": "es",
+   "poster": "/uploads/obras/Portada_Charla-1-e1776487324802.jpg",
+   "posterSource": "custom",
    "event_kind": "ponencia",
    "day": "2026-08-18",
    "time": "16:00",
@@ -11639,8 +11111,7 @@
    "_ingreso": "",
    "_src": {
     "programacion_oficial": "Hablemos de salud mental"
-   },
-   "_pendiente": "sinopsis y duración — recuperar de /charlas/<slug> o /talleres/<slug>"
+   }
   },
   {
    "title": "Cuando la palabra se hace búsqueda",
@@ -11921,125 +11392,6 @@
    "type": "film"
   },
   {
-   "title": "Cuando la palabra se hace búsqueda",
-   "director": "Frank Benítez Peña",
-   "year": "2026",
-   "duration": "61 min",
-   "country": "Colombia",
-   "section": "🔍 Largometraje Documental Nacional",
-   "synopsis": "En Colombia, la búsqueda de personas desaparecidas ha abierto caminos inesperados de encuentro entre quienes sufren su ausencia y quienes guardan información clave sobre su paradero. Este largometraje revela el papel fundamental de los aportantes de información, en las voces de quienes participaron directa e indirectamente en las hostilidades y que, desde el compromiso, han decidido sumarse al proceso humanitario de la búsqueda liderado por la Unidad de Búsqueda de Personas dadas por Desaparecidas.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/cuando-la-palabra-se-hace-busqueda.jpg",
-   "posterSource": "custom",
-   "synopsis_en": "A documentary on the search for the disappeared: the voices of those who search and the echo of an absence that lingers.",
-   "genre": "Documental",
-   "lbSlug": "cuando-la-palabra-se-hace-busqueda",
-   "day": "2026-08-18",
-   "time": "18:30",
-   "venue": "Universidad de Salamanca - Barranquilla",
-   "day_order": 6,
-   "has_qa": false,
-   "is_cortos": false,
-   "film_list": null,
-   "is_free": true,
-   "requires_registration": false,
-   "_ingreso": "",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/cuando-la-palabra-se-hace-busqueda/",
-    "date": "2026-07-25",
-    "programacion_oficial": "Cuando la palabra se hace búsqueda"
-   },
-   "type": "film"
-  },
-  {
-   "title": "El hogar fue sepultado en esa tierra que nunca pudimos encontrar",
-   "director": "Deimer Quintero Vertel",
-   "year": "2026",
-   "duration": "92 min",
-   "country": "Colombia",
-   "section": "🔍 Largometraje Documental Nacional",
-   "synopsis": "El hogar ha desaparecido; la casa fue paraíso, pero también infierno. Aunque la guerra intentó destruirlo todo a su paso, la familia intenta volver. Entre anhelos y pesadillas crean un nuevo territorio, un refugio donde se reencuentran con sus amigos y su comunidad. Allí logran volver a la casa grande, el parque de diversiones de la infancia, ahora habitado por seres fantásticos y espectros, en donde buscan conjurar un abrazo.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/el-hogar-fue-sepultado-en-esa-tierra-que-nunca-pudimos-encontrar.jpg",
-   "posterSource": "custom",
-   "lbSlug": "our-home-was-buried-in-a-land-we-could-never",
-   "title_en": "Our Home Was Buried in a Land We Could Never Find",
-   "day": "2026-08-18",
-   "time": "18:30",
-   "venue": "Universidad de Salamanca - Barranquilla",
-   "day_order": 6,
-   "has_qa": false,
-   "is_cortos": false,
-   "film_list": null,
-   "is_free": true,
-   "requires_registration": false,
-   "_ingreso": "",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/el-hogar-fue-sepultado-en-esa-tierra-que-nunca-pudimos-encontrar/",
-    "date": "2026-07-25",
-    "programacion_oficial": "El hogar fue sepultado en esa tierra que nunca pudimos encontrar"
-   },
-   "type": "film"
-  },
-  {
-   "title": "Trenzando caminos de paz",
-   "director": "Soraya Hidalides Bayuelo Castellar",
-   "year": "2024",
-   "duration": "19 min",
-   "country": "Colombia",
-   "section": "🏘️ Cine Comunitario Nacional",
-   "synopsis": "Narra la lucha, resistencia y liderazgo de las mujeres indígenas Zenú en la defensa de sus derechos, su territorio y su cultura. A través de sus voces y memorias, el documental muestra su papel en la implementación del enfoque de género del Acuerdo de Paz y los avances logrados en participación política, preservación de su identidad cultural y fortalecimiento comunitario.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/trenzando-caminos-de-paz.jpg",
-   "posterSource": "custom",
-   "lbSlug": "trenzando-caminos-de-paz",
-   "day": "2026-08-18",
-   "time": "18:30",
-   "venue": "Universidad de Salamanca - Barranquilla",
-   "day_order": 6,
-   "has_qa": false,
-   "is_cortos": false,
-   "film_list": null,
-   "is_free": true,
-   "requires_registration": false,
-   "_ingreso": "",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/trenzando-caminos-de-paz/",
-    "date": "2026-07-25",
-    "programacion_oficial": "Trenzando caminos de paz"
-   },
-   "type": "film"
-  },
-  {
-   "title": "Volver a creer",
-   "director": "Paola Díaz Gómez, Nicolás Cuéllar Gempeler, Eric Marti, Nayid Lorena Herran, Gustavo Cabezas, Ismail Pang, Mumit M, María Fernanda Pinilla",
-   "year": "2025",
-   "duration": "16 min",
-   "country": "Colombia, Kenia, Bangladesh",
-   "section": "🏘️ Cine Comunitario Nacional",
-   "synopsis": "Cortometraje documental que reúne a seis equipos de producción de Colombia, Kenia y Bangladés para contar una historia común: cómo el arte fortalece a las comunidades, las conecta más allá de sus fronteras y las impulsa a recuperar la esperanza. A través de imágenes íntimas y relatos entrelazados, el filme muestra cómo la creatividad transforma las heridas de cada territorio en resistencia, encuentro y una visión compartida de futuro.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/volver-a-creer.jpg",
-   "posterSource": "custom",
-   "lbSlug": "volver-a-creer-1",
-   "day": "2026-08-18",
-   "time": "18:30",
-   "venue": "Universidad de Salamanca - Barranquilla",
-   "day_order": 6,
-   "has_qa": false,
-   "is_cortos": false,
-   "film_list": null,
-   "is_free": true,
-   "requires_registration": false,
-   "_ingreso": "",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/volver-a-creer/",
-    "date": "2026-07-25",
-    "programacion_oficial": "Volver a creer"
-   },
-   "type": "film"
-  },
-  {
    "title": "El valor de la palabra",
    "director": "Marta Rodríguez, Fernando Restrepo",
    "year": "2026",
@@ -12080,8 +11432,8 @@
    "country": "Suiza (Kosovo, Estados Unidos, Francia)",
    "synopsis": "En una pequeña aldea kosovar, una cineasta ayuda a su padre exiliado a reconstruir su infancia con la ayuda de los habitantes del lugar, revelando recuerdos personales, historias familiares olvidadas y las huellas de un pasado borrado por la guerra.",
    "synopsis_lang": "es",
-   "poster": "",
-   "posterSource": "",
+   "poster": "/uploads/obras/The-Beauty-of-the-donkey.jpg",
+   "posterSource": "custom",
    "lbSlug": "",
    "day": "2026-08-18",
    "time": "18:30",
@@ -12213,9 +11565,9 @@
    "has_qa": false,
    "is_cortos": false,
    "film_list": null,
-   "is_free": true,
+   "is_free": false,
    "requires_registration": false,
-   "_ingreso": "",
+   "_ingreso": "Boletería en taquilla",
    "_src": {
     "url": "https://www.ficdeh.com/produccion/padamlagan-night-lihgt/",
     "date": "2026-07-25",
@@ -12228,8 +11580,10 @@
    "type": "event",
    "section": "🎤 Charlas que Unen",
    "duration": "",
-   "synopsis": "",
+   "synopsis": "¿Cuáles han sido los alcances e implicaciones de la Ley 1448 de 2011? Líderes y lideresas reflexionan sobre esto.",
    "synopsis_lang": "es",
+   "poster": "/uploads/obras/Portada_Charla-1-e1776487324802.jpg",
+   "posterSource": "custom",
    "event_kind": "ponencia",
    "day": "2026-08-19",
    "time": "09:00",
@@ -12243,191 +11597,7 @@
    "_ingreso": "",
    "_src": {
     "programacion_oficial": "Reconocer, atender y reparar: 15 años de la Ley de Víctimas"
-   },
-   "_pendiente": "sinopsis y duración — recuperar de /charlas/<slug> o /talleres/<slug>"
-  },
-  {
-   "title": "La gran hazaña",
-   "director": "Luber Yesid Zúñiga Ordóñez",
-   "year": "2025",
-   "duration": "15 min",
-   "country": "Colombia",
-   "section": "🪀 Cortometraje de Ficción Nacional",
-   "synopsis": "A Pablo le encanta jugar al trompo. Cuando Don Chucho, el usurero del pueblo, retiene a Pascualina, su amiga y mascota, Pablo debe enfrentarse a Felipe, el mejor jugador de trompo de la región, para rescatarla. Pero ganar no es suficiente: los demás niños del pueblo se unirán a él en un acto de solidaridad, amistad y trabajo en equipo para lograr esta gran hazaña.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/la-gran-hazana.jpg",
-   "posterSource": "custom",
-   "genre": "Ficción",
-   "lbSlug": "the-great-feat",
-   "synopsis_en": "A rescue with a spinning tops, feathers, eggs and friends.",
-   "title_en": "The Great Feat",
-   "day": "2026-08-19",
-   "time": "09:00",
-   "venue": "Institución Educativa Jaime Salazar Robledo - Pereira",
-   "day_order": 7,
-   "has_qa": false,
-   "is_cortos": false,
-   "film_list": null,
-   "is_free": true,
-   "requires_registration": false,
-   "_ingreso": "",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/la-gran-hazana/",
-    "date": "2026-07-25",
-    "programacion_oficial": "La gran hazaña"
-   },
-   "type": "film"
-  },
-  {
-   "title": "Héroes del silencio",
-   "director": "Atikeinis Durán Izquierdo",
-   "year": "2026",
-   "duration": "13 min",
-   "country": "Colombia",
-   "section": "🏘️ Cine Comunitario Nacional",
-   "synopsis": "Cortometraje rodado por los niños y niñas de la comunidad indígena de Morotrwa, en la Sierra Nevada de Gonawindua. A través de sus propias fotografías y vídeos, documentan sus vidas y su territorio, eligiendo libremente qué mostrar.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/heroes-del-silencio.jpg",
-   "posterSource": "custom",
-   "lbSlug": "heroes-del-silencio",
-   "day": "2026-08-19",
-   "time": "09:00",
-   "venue": "Institución Educativa Jaime Salazar Robledo - Pereira",
-   "day_order": 7,
-   "has_qa": false,
-   "is_cortos": false,
-   "film_list": null,
-   "is_free": true,
-   "requires_registration": false,
-   "_ingreso": "",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/heroes-del-silencio/",
-    "date": "2026-07-25",
-    "programacion_oficial": "Héroes del silencio"
-   },
-   "type": "film"
-  },
-  {
-   "title": "El Paraíso de Ainara",
-   "director": "Esther Niemeier, Laura Espinel",
-   "year": "2025",
-   "duration": "14 min",
-   "country": "Colombia",
-   "section": "🎙️ Cortometraje Documental Nacional",
-   "synopsis": "En el colorido barrio El Paraíso de Bogotá, la curiosa Ainara, de 10 años, crece en Violetta, una biblioteca comunitaria fundada por su familia para les niñes del barrio. Un segundo hogar para aprender y jugar mientras los padres y las madres trabajan largas jornadas. A través del juego, el teatro y las manualidades, Ainara y sus amigues descubren la fuerza de la comunidad. El corto celebra la solidaridad y una buena dosis de girl power, mostrando cómo del cuidado colectivo pueden nacer pequeños paraísos.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/el-paraiso-de-ainara.jpg",
-   "posterSource": "custom",
-   "lbSlug": "el-paraiso-de-ainara",
-   "day": "2026-08-19",
-   "time": "09:00",
-   "venue": "Institución Educativa Jaime Salazar Robledo - Pereira",
-   "day_order": 7,
-   "has_qa": false,
-   "is_cortos": false,
-   "film_list": null,
-   "is_free": true,
-   "requires_registration": false,
-   "_ingreso": "",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/el-paraiso-de-ainara/",
-    "date": "2026-07-25",
-    "programacion_oficial": "El Paraíso de Ainara"
-   },
-   "type": "film"
-  },
-  {
-   "title": "In four stops",
-   "director": "Elizaveta Khlomova",
-   "year": "2026",
-   "duration": "19 min",
-   "country": "Rusia",
-   "section": "🚲 Cortometraje de Ficción Internacional",
-   "synopsis": "Dos días en la vida de Max, un niño sordo con una imaginación desbordante en medio de una dura realidad.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/mother-love-amor-de-madre.jpg",
-   "posterSource": "custom",
-   "lbSlug": "film:1510138",
-   "title_en": "In Four Stops",
-   "day": "2026-08-19",
-   "time": "09:00",
-   "venue": "Institución Educativa Jaime Salazar Robledo - Pereira",
-   "day_order": 7,
-   "has_qa": false,
-   "is_cortos": false,
-   "film_list": null,
-   "is_free": true,
-   "requires_registration": false,
-   "_ingreso": "",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/mother-love-amor-de-madre/",
-    "date": "2026-07-25",
-    "programacion_oficial": "In four stops"
-   },
-   "type": "film"
-  },
-  {
-   "title": "Akababuru: Expresión de asombro",
-   "director": "Irati Dojura Landa Yagarí",
-   "year": "2025",
-   "duration": "13 min",
-   "country": "Colombia",
-   "section": "🪀 Cortometraje de Ficción Nacional",
-   "synopsis": "Kari es una niña indígena emberá que teme reír. Un día conoce a Kera, una joven mestiza, quien decide contarle el mito de Kiraparamia, una mujer que, según los ancianos, fue castigada por los dioses por reírse de su esposo. Kera reinterpreta el mito y le dice que, en realidad, la risa de Kiraparamia la liberó. Esta historia inspira profundamente a la pequeña Kari, quien decide confrontar a los niños que la oprimen a ella y a sus amigas mediante la risa.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/herminda.jpg",
-   "posterSource": "custom",
-   "title_en": "Akababuru: Expression of Astonishment",
-   "genre": "Fantasía",
-   "lbSlug": "akababuru-expresion-de-asombro",
-   "synopsis_en": "Kari, an Indigenous girl, is afraid to laugh. But a new interpretation of the old legend of Kiraparamia helps her to set herself free.",
-   "day": "2026-08-19",
-   "time": "09:00",
-   "venue": "Institución Educativa Jaime Salazar Robledo - Pereira",
-   "day_order": 7,
-   "has_qa": false,
-   "is_cortos": false,
-   "film_list": null,
-   "is_free": true,
-   "requires_registration": false,
-   "_ingreso": "",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/herminda/",
-    "date": "2026-07-25",
-    "programacion_oficial": "Akababuru: Expresión de asombro"
-   },
-   "type": "film"
-  },
-  {
-   "title": "58th",
-   "director": "Carl Joseph Papa",
-   "year": "2026",
-   "duration": "86 min",
-   "country": "Filipinas",
-   "section": "🌍 Largometraje Documental Internacional",
-   "synopsis": "A pesar del dolor y el trauma que ha soportado, una hija persigue incansablemente la justicia para su padre, que sigue desaparecido y es considerado la víctima número 58 de la Masacre de Maguindanao, el ataque más mortífero contra periodistas en la historia.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/58th.jpg",
-   "posterSource": "custom",
-   "lbSlug": "58th",
-   "genre": "Animación, Drama",
-   "synopsis_en": "Fifteen years after the Maguindanao Massacre, the family of its 58th victim fights for the justice that remains elusive.",
-   "day": "2026-08-19",
-   "time": "09:00",
-   "venue": "Universidad Tecnológica del Chocó - Quibdó",
-   "day_order": 7,
-   "has_qa": false,
-   "is_cortos": false,
-   "film_list": null,
-   "is_free": true,
-   "requires_registration": false,
-   "_ingreso": "",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/58th/",
-    "date": "2026-07-25",
-    "programacion_oficial": "58th"
-   },
-   "type": "film"
+   }
   },
   {
    "title": "Andariega",
@@ -12462,41 +11632,14 @@
    "type": "film"
   },
   {
-   "title": "Floresmiro",
-   "director": "John Agudelo Suárez",
-   "year": "2025",
-   "duration": "101 min",
-   "country": "Colombia",
-   "section": "🔍 Largometraje Documental Nacional",
-   "synopsis": "En San Vicente de Chucurí, el padre Floro impulsa una planta de frutas para evitar las pérdidas causadas por la guerra. También recordamos a Floresmiro López, un sacerdote que arriesgó su vida defendiendo campesinos durante el conflicto armado. Con amor y firmeza moral, enfrentó las armas y dejó un legado de organización comunitaria clave en la región.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficdeh/floresmiro.jpg",
-   "posterSource": "custom",
-   "lbSlug": "floresmiro",
-   "day": "2026-08-19",
-   "time": "10:00",
-   "venue": "Universidad Americana - Barranquilla",
-   "day_order": 7,
-   "has_qa": false,
-   "is_cortos": false,
-   "film_list": null,
-   "is_free": true,
-   "requires_registration": false,
-   "_ingreso": "",
-   "_src": {
-    "url": "https://www.ficdeh.com/produccion/floresmiro/",
-    "date": "2026-07-25",
-    "programacion_oficial": "Floresmiro"
-   },
-   "type": "film"
-  },
-  {
    "title": "Gritemos ¡Corte!",
    "type": "event",
    "section": "🛠️ Formación",
    "duration": "",
-   "synopsis": "",
+   "synopsis": "La Comisión Fílmica de Bogotá presenta la guía de cuidado y prevención de violencias en el entorno laboral audiovisual.",
    "synopsis_lang": "es",
+   "poster": "/uploads/obras/formacion-gritemos-corte.jpg",
+   "posterSource": "custom",
    "event_kind": "masterclass",
    "day": "2026-08-19",
    "time": "10:00",
@@ -12510,8 +11653,7 @@
    "_ingreso": "",
    "_src": {
     "programacion_oficial": "Gritemos ¡Corte!"
-   },
-   "_pendiente": "sinopsis y duración — recuperar de /charlas/<slug> o /talleres/<slug>"
+   }
   },
   {
    "title": "Cuando la palabra se hace búsqueda",
@@ -12565,9 +11707,10 @@
    "has_qa": false,
    "is_cortos": false,
    "film_list": null,
-   "is_free": true,
+   "sala": "Sala 2",
+   "is_free": false,
    "requires_registration": false,
-   "_ingreso": "",
+   "_ingreso": "Boletería en taquilla",
    "_src": {
     "url": "https://www.ficdeh.com/produccion/la-luz-por-primera-vez/",
     "date": "2026-07-25",
@@ -12871,9 +12014,9 @@
    "has_qa": false,
    "is_cortos": false,
    "film_list": null,
-   "is_free": true,
+   "is_free": false,
    "requires_registration": false,
-   "_ingreso": "",
+   "_ingreso": "Boletería en taquilla",
    "_src": {
     "url": "https://www.ficdeh.com/produccion/la-bonga/",
     "date": "2026-07-25",
@@ -12932,6 +12075,7 @@
    "has_qa": false,
    "is_cortos": false,
    "film_list": null,
+   "sala": "SALA 2",
    "is_free": true,
    "requires_registration": false,
    "_ingreso": "",
@@ -12952,8 +12096,8 @@
    "country": "Alemania",
    "synopsis": "De camino a casa tras una cirugía reconstructiva después de sufrir una mutilación genital femenina, Halima habla sobre su estrategia para mantenerse fuerte. Es una figura colectiva que representa a cinco mujeres somalíes que hablan sobre la violencia infligida a sus cuerpos, su huida como mujeres y el poder de la fuerza femenina.",
    "synopsis_lang": "es",
-   "poster": "",
-   "posterSource": "",
+   "poster": "/uploads/obras/CDN.jpg",
+   "posterSource": "custom",
    "lbSlug": "",
    "day": "2026-08-19",
    "time": "15:30",
@@ -12962,9 +12106,10 @@
    "has_qa": false,
    "is_cortos": false,
    "film_list": null,
-   "is_free": true,
+   "sala": "Sala 2",
+   "is_free": false,
    "requires_registration": false,
-   "_ingreso": "",
+   "_ingreso": "Boletería en taquilla",
    "_src": {
     "url": "https://www.ficdeh.com/peliculas?categoria=invitadas",
     "date": "2026-08-05",
@@ -12976,8 +12121,10 @@
    "type": "event",
    "section": "🎤 Charlas que Unen",
    "duration": "",
-   "synopsis": "",
+   "synopsis": "A partir de la proyección del cortometraje Halima, Juliana Domicó conversa sobre su lucha por la erradicación de esta práctica en el país.",
    "synopsis_lang": "es",
+   "poster": "/uploads/obras/Portada_Charla-1-e1776487324802.jpg",
+   "posterSource": "custom",
    "event_kind": "ponencia",
    "day": "2026-08-19",
    "time": "15:30",
@@ -12991,8 +12138,7 @@
    "_ingreso": "",
    "_src": {
     "programacion_oficial": "¡No más mutilación genital femenina en Colombia!"
-   },
-   "_pendiente": "sinopsis y duración — recuperar de /charlas/<slug> o /talleres/<slug>"
+   }
   },
   {
    "title": "Bojayá, la verdad desde adentro",
@@ -13071,9 +12217,10 @@
    "has_qa": false,
    "is_cortos": false,
    "film_list": null,
-   "is_free": true,
+   "sala": "Sala Capital",
+   "is_free": false,
    "requires_registration": false,
-   "_ingreso": "",
+   "_ingreso": "Boletería en taquilla",
    "_src": {
     "url": "https://www.ficdeh.com/produccion/floresmiro/",
     "date": "2026-07-25",
@@ -13197,9 +12344,9 @@
    "has_qa": false,
    "is_cortos": false,
    "film_list": null,
-   "is_free": true,
+   "is_free": false,
    "requires_registration": false,
-   "_ingreso": "",
+   "_ingreso": "Boletería en taquilla",
    "_src": {
     "url": "https://www.ficdeh.com/produccion/cuando-la-palabra-se-hace-busqueda/",
     "date": "2026-07-25",
@@ -13471,6 +12618,7 @@
    "has_qa": false,
    "is_cortos": false,
    "film_list": null,
+   "sala": "Sala Capital",
    "is_free": true,
    "requires_registration": false,
    "_ingreso": "",
@@ -13501,9 +12649,10 @@
    "has_qa": false,
    "is_cortos": false,
    "film_list": null,
-   "is_free": true,
+   "sala": "Sala Capital",
+   "is_free": false,
    "requires_registration": false,
-   "_ingreso": "",
+   "_ingreso": "Boletería en taquilla",
    "_src": {
     "url": "https://www.ficdeh.com/produccion/despues-del-frio/",
     "date": "2026-07-25",

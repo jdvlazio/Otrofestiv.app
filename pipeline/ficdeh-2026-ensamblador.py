@@ -39,12 +39,23 @@ def wd(k): return datetime.date.fromisoformat(k).weekday()
 def dnum(k): return int(k[-2:])
 
 # ── venues: clave "Sede - Ciudad" ────────────────────────────────────────────
+# Las coordenadas viven en un SIDECAR (ficdeh-2026-venues-geo.json) y se
+# mergean aquí: este script regenera el build desde cero, así que escribirlas
+# en el build las perdería en la siguiente pasada (pasó el 5 ago).
+GEO_PATH = f'{REPO}/festivals/staging/ficdeh-2026-venues-geo.json'
+GEO = json.load(open(GEO_PATH, encoding='utf-8')) if os.path.exists(GEO_PATH) else {}
+# Sinopsis, póster y si pide inscripción de cada actividad (de /charlas/<slug>
+# y /talleres/<slug>). El póster vive en /uploads/obras/ del sitio del festival.
+ACT_PATH = f'{REPO}/festivals/staging/ficdeh-2026-actividades.json'
+ACT = json.load(open(ACT_PATH, encoding='utf-8')) if os.path.exists(ACT_PATH) else {}
 venues = {}
 def venue_key(f):
     key = f"{f['sede']} - {f['ciudad']}"
     if key not in venues:
-        venues[key] = {'short': f['sede'], 'lat': None, 'lng': None,
+        g = GEO.get(key, {})
+        venues[key] = {'short': f['sede'], 'lat': g.get('lat'), 'lng': g.get('lng'),
                        'city': f['ciudad'], 'address': f.get('direccion','') or ''}
+        if g.get('_geo'): venues[key]['_geo'] = g['_geo']
     return key
 
 # ── secciones de actividades (nombres del festival, regla "tal cual") ────────
@@ -73,6 +84,8 @@ for f in sorted(funcs, key=lambda x: (x['dia'], x['hora'], x['ciudad'])):
             'requires_registration': 'inscrip' in f.get('ingreso','').lower(),
             '_ingreso': f.get('ingreso',''),
             '_src': {'programacion_oficial': f['titulo_programacion']}}
+    # El póster que publica la programación oficial es el mismo /uploads/obras/
+    # del festival; solo se usa si la obra del catálogo no trae uno propio.
     if f['tipo'] in ('film','film_invitada'):
         obra = by_title.get(f['obra_catalogo']) if f['obra_catalogo'] else by_title.get(f['titulo_programacion'])
         if not obra:
@@ -80,14 +93,19 @@ for f in sorted(funcs, key=lambda x: (x['dia'], x['hora'], x['ciudad'])):
             continue
         e = {k: v for k, v in obra.items() if not k.startswith('_')}
         e.update(base); e['type'] = 'film'
+        if not e.get('poster') and f.get('poster_url'):
+            e['poster'] = f['poster_url']; e['posterSource'] = 'custom'
         e['_src'] = {**obra.get('_src', {}), **base['_src']}
     else:
+        a = ACT.get(f['titulo_programacion'], {})
         e = {'title': f['titulo_programacion'], 'type': 'event',
              'section': SEC_ACT[f['tipo']][0], 'duration': '',
-             'synopsis': '', 'synopsis_lang': 'es',
+             'synopsis': a.get('synopsis',''), 'synopsis_lang': 'es',
+             'poster': a.get('poster',''), 'posterSource': 'custom' if a.get('poster') else '',
              'event_kind': 'ponencia' if f['tipo']=='charla' else 'masterclass'}
         e.update(base)
-        e['_pendiente'] = 'sinopsis y duración — recuperar de /charlas/<slug> o /talleres/<slug>'
+        if a.get('requires_registration'): e['requires_registration'] = True
+        if not e['synopsis']: e['_pendiente'] = 'sin sinopsis en la ficha del festival'
     films_out.append(e)
 
 # ── slots compartidos: mismo día+hora+sede ───────────────────────────────────
@@ -131,6 +149,7 @@ json.dump(out, open(f'{REPO}/festivals/staging/ficdeh-2026-build.json','w',encod
 print(f'fuera de la ventana oficial (12-19 AGO): {len(fuera)} → ' + str(sorted({x["dia"] for x in fuera})))
 print(f'funciones ensambladas: {len(films_out)}  (cine {sum(1 for e in films_out if e["type"]=="film")} · actividades {sum(1 for e in films_out if e["type"]=="event")})')
 print(f'días: {len(dias)} ({dias[0]} → {dias[-1]})  · prioLimit {out["prioLimit"]}')
+print(f'sedes con coordenada: {sum(1 for v in venues.values() if v.get("lat"))}/{len(venues)}')
 print(f'sedes: {len(venues)} · ciudades: {len({v["city"] for v in venues.values()})}')
 print(f'obras únicas programadas: {len({e["title"] for e in films_out if e["type"]=="film"})}/{len(CAT["films"])}')
 if sin_ficha: print('SIN FICHA EN EL CATÁLOGO:', dict(sin_ficha))
