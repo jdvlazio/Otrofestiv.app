@@ -1,0 +1,4384 @@
+{
+ "_provenance": {
+  "fuente": "Programación oficial publicada en el sitio NUEVO de FICDEH (ficdeh.com migró de WordPress a Next.js/Vercel; las URLs viejas /produccion/<slug>/ dan 404). Ruta: /programacion/<ciudad>?fecha=YYYY-MM-DD. Extraída 5 ago 2026.",
+  "metodo": "Vercel bloquea curl con un Security Checkpoint → hay que extraer desde el navegador con sesión. Por ciudad: leer la página base para las fechas y el total declarado, luego una petición por fecha.",
+  "verificacion": "Las 11 ciudades cuadran EXACTO contra el total que declara el propio sitio: 433 = 433.",
+  "confirma": "Teatro Colón 12 AGO 5:30 p.m. — coincide con el afiche de Instagram y NO con el 18:00 del sitio viejo. La fuente nueva gana."
+ },
+ "_resumen": {
+  "funciones": 433,
+  "por_ciudad": {
+   "Bogotá": 147,
+   "Ibagué": 50,
+   "Barranquilla": 47,
+   "Medellín": 42,
+   "Pereira": 33,
+   "Cali": 27,
+   "Armenia": 25,
+   "Quibdó": 19,
+   "Cartagena": 18,
+   "Manizales": 14,
+   "Tunja": 11
+  },
+  "por_dia": {
+   "2026-08-10": 3,
+   "2026-08-11": 2,
+   "2026-08-12": 14,
+   "2026-08-13": 67,
+   "2026-08-14": 73,
+   "2026-08-15": 90,
+   "2026-08-16": 40,
+   "2026-08-17": 30,
+   "2026-08-18": 63,
+   "2026-08-19": 48,
+   "2026-08-20": 2,
+   "2026-08-24": 1
+  },
+  "cruzan_catalogo": 392,
+  "films_nuevos": [
+   "De Poleka Kasue al Río Otún: ¿Quién cuida el agua del río más importante de la región?",
+   "Desde el centro de la tierra",
+   "Gritemos ¡Corte!",
+   "Halima - Una guía para ser fuerte",
+   "Juntos podemos curar",
+   "Las guardianas del agua",
+   "Ni un minuto de silencio, toda una vida de búsqueda",
+   "Pintando realidades",
+   "The Beauty of the donkey"
+  ],
+  "actividades": 30,
+  "sedes_unicas": 137
+ },
+ "funciones": [
+  {
+   "dia": "2026-08-12",
+   "hora": "17:30",
+   "ciudad": "Bogotá",
+   "sede": "Teatro Colón",
+   "direccion": "Calle 10 # 5-32",
+   "titulo_programacion": "Bojayá, la verdad desde adentro",
+   "obra_catalogo": "Bojayá, la verdad desde adentro",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-13",
+   "hora": "11:00",
+   "ciudad": "Bogotá",
+   "sede": "Biblioteca Pública CEFE Fontanar Del Río",
+   "direccion": "Calle 146 # 138A-99",
+   "titulo_programacion": "Sukua",
+   "obra_catalogo": "Sukua",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-13",
+   "hora": "11:00",
+   "ciudad": "Bogotá",
+   "sede": "Biblioteca Pública CEFE Fontanar Del Río",
+   "direccion": "Calle 146 # 138A-99",
+   "titulo_programacion": "Los pliegues de la falda",
+   "obra_catalogo": "Los pliegues de la falda",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-13",
+   "hora": "11:00",
+   "ciudad": "Bogotá",
+   "sede": "Biblioteca Pública CEFE Fontanar Del Río",
+   "direccion": "Calle 146 # 138A-99",
+   "titulo_programacion": "Más allá",
+   "obra_catalogo": "Más allá",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-13",
+   "hora": "11:00",
+   "ciudad": "Bogotá",
+   "sede": "Biblioteca Pública CEFE Fontanar Del Río",
+   "direccion": "Calle 146 # 138A-99",
+   "titulo_programacion": "La Cerrillana",
+   "obra_catalogo": "La Cerrillana",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-13",
+   "hora": "11:00",
+   "ciudad": "Bogotá",
+   "sede": "Biblioteca Pública CEFE Fontanar Del Río",
+   "direccion": "Calle 146 # 138A-99",
+   "titulo_programacion": "Chaski Pacha",
+   "obra_catalogo": "Chaski Pacha",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-13",
+   "hora": "14:00",
+   "ciudad": "Bogotá",
+   "sede": "Biblioteca Pública La Victoria",
+   "direccion": "Calle 37 BIS B Sur # 2B",
+   "titulo_programacion": "La independencia",
+   "obra_catalogo": "La independencia",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-13",
+   "hora": "14:00",
+   "ciudad": "Bogotá",
+   "sede": "Biblioteca Pública La Victoria",
+   "direccion": "Calle 37 BIS B Sur # 2B",
+   "titulo_programacion": "Una torreta en llamas",
+   "obra_catalogo": "Una torreta en llamas",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-13",
+   "hora": "14:00",
+   "ciudad": "Bogotá",
+   "sede": "Biblioteca Pública La Victoria",
+   "direccion": "Calle 37 BIS B Sur # 2B",
+   "titulo_programacion": "La gran hazaña",
+   "obra_catalogo": "La gran hazaña",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-13",
+   "hora": "14:00",
+   "ciudad": "Bogotá",
+   "sede": "Biblioteca Pública La Victoria",
+   "direccion": "Calle 37 BIS B Sur # 2B",
+   "titulo_programacion": "El Paraíso de Ainara",
+   "obra_catalogo": "El Paraíso de Ainara",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-13",
+   "hora": "14:00",
+   "ciudad": "Bogotá",
+   "sede": "Biblioteca Pública Las Ferias",
+   "direccion": "Cra. 69J # 73-29",
+   "titulo_programacion": "Herencia: Los cantos de la tierra",
+   "obra_catalogo": "Herencia: Los cantos de la tierra",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-13",
+   "hora": "10:00",
+   "ciudad": "Bogotá",
+   "sede": "Casa de la Juventud Iwoka",
+   "direccion": "Cra. 78N BIS # 39-33",
+   "titulo_programacion": "Mujeres modernas",
+   "obra_catalogo": "Mujeres modernas",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-13",
+   "hora": "18:30",
+   "ciudad": "Bogotá",
+   "sede": "Cinema Local",
+   "direccion": "Calle 74 # 20 B -19",
+   "titulo_programacion": "Feito Pipa",
+   "obra_catalogo": "Feito Pipa",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-13",
+   "hora": "14:00",
+   "ciudad": "Bogotá",
+   "sede": "Cinemateca de Bogotá",
+   "direccion": "Cra. 3 # 19-10",
+   "titulo_programacion": "Niñxs",
+   "obra_catalogo": "Niñxs",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-13",
+   "hora": "14:30",
+   "ciudad": "Bogotá",
+   "sede": "Cinemateca de Bogotá",
+   "direccion": "Cra. 3 # 19-10",
+   "titulo_programacion": "El silencio de la tierra",
+   "obra_catalogo": "El silencio de la tierra",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-13",
+   "hora": "15:00",
+   "ciudad": "Bogotá",
+   "sede": "Cinemateca de Bogotá",
+   "direccion": "Cra. 3 # 19-10",
+   "titulo_programacion": "Aminetu",
+   "obra_catalogo": "Aminetu",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-13",
+   "hora": "16:30",
+   "ciudad": "Bogotá",
+   "sede": "Cinemateca de Bogotá",
+   "direccion": "Cra. 3 # 19-10",
+   "titulo_programacion": "La Raya",
+   "obra_catalogo": "La Raya",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-13",
+   "hora": "17:00",
+   "ciudad": "Bogotá",
+   "sede": "Cinemateca de Bogotá",
+   "direccion": "Cra. 3 # 19-10",
+   "titulo_programacion": "XIE. Defensa de la vida",
+   "obra_catalogo": "XIE. Defensa de la vida",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-13",
+   "hora": "19:30",
+   "ciudad": "Bogotá",
+   "sede": "Cinemateca de Bogotá",
+   "direccion": "Cra. 3 # 19-10",
+   "titulo_programacion": "Cartas a la tierra",
+   "obra_catalogo": "Cartas a la tierra",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-13",
+   "hora": "19:30",
+   "ciudad": "Bogotá",
+   "sede": "Cinemateca de Bogotá",
+   "direccion": "Cra. 3 # 19-10",
+   "titulo_programacion": "Más allá",
+   "obra_catalogo": "Más allá",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-13",
+   "hora": "19:30",
+   "ciudad": "Bogotá",
+   "sede": "Cinemateca de Bogotá",
+   "direccion": "Cra. 3 # 19-10",
+   "titulo_programacion": "Pawa",
+   "obra_catalogo": "Pawa",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-13",
+   "hora": "19:30",
+   "ciudad": "Bogotá",
+   "sede": "Cinemateca de Bogotá",
+   "direccion": "Cra. 3 # 19-10",
+   "titulo_programacion": "Clemencia",
+   "obra_catalogo": "Clemencia",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-13",
+   "hora": "19:30",
+   "ciudad": "Bogotá",
+   "sede": "Cinemateca de Bogotá",
+   "direccion": "Cra. 3 # 19-10",
+   "titulo_programacion": "Tuktu, Padre Maíz",
+   "obra_catalogo": "Tuktu, Padre Maíz",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-13",
+   "hora": "14:00",
+   "ciudad": "Bogotá",
+   "sede": "Lab 1 y 2",
+   "direccion": "Lab 1 y 2",
+   "titulo_programacion": "El documental como proceso social: archivo, memoria y comunidad",
+   "obra_catalogo": null,
+   "tipo": "actividad"
+  },
+  {
+   "dia": "2026-08-13",
+   "hora": "17:00",
+   "ciudad": "Bogotá",
+   "sede": "Sala 2 - Cinemateca de Bogotá",
+   "direccion": "",
+   "titulo_programacion": "Las guardianas del agua",
+   "obra_catalogo": null,
+   "tipo": "film_nuevo"
+  },
+  {
+   "dia": "2026-08-13",
+   "hora": "08:00",
+   "ciudad": "Bogotá",
+   "sede": "Servicio FORJAR Restaurativo Ciudad Bolívar",
+   "direccion": "Cra. 44 # 58C-90 Sur",
+   "titulo_programacion": "El valor de la palabra",
+   "obra_catalogo": "El valor de la palabra",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-13",
+   "hora": "11:00",
+   "ciudad": "Bogotá",
+   "sede": "Teatro El Ensueño",
+   "direccion": "Transversal 70D # 60-90",
+   "titulo_programacion": "La Raya",
+   "obra_catalogo": "La Raya",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-13",
+   "hora": "14:00",
+   "ciudad": "Bogotá",
+   "sede": "Universidad de los Andes",
+   "direccion": "Calle 19A # 1E-37",
+   "titulo_programacion": "Fortalece tu discurso: comunicación estratégica para creadoras audiovisuales",
+   "obra_catalogo": null,
+   "tipo": "actividad"
+  },
+  {
+   "dia": "2026-08-13",
+   "hora": "16:30",
+   "ciudad": "Bogotá",
+   "sede": "Universidad de los Andes",
+   "direccion": "Calle 19A # 1E-37",
+   "titulo_programacion": "¿Cómo obtener el reconocimiento como Proyecto Cinematográfico Nacional?",
+   "obra_catalogo": null,
+   "tipo": "actividad"
+  },
+  {
+   "dia": "2026-08-13",
+   "hora": "18:00",
+   "ciudad": "Bogotá",
+   "sede": "Universidad Minuto de Dios",
+   "direccion": "Diagonal 81F # 72 C-1",
+   "titulo_programacion": "Semillas",
+   "obra_catalogo": "Semillas",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-14",
+   "hora": "10:00",
+   "ciudad": "Bogotá",
+   "sede": "Auditorio C202 - UNIMINUTO",
+   "direccion": "",
+   "titulo_programacion": "De los deepfakes y otras violencias digitales",
+   "obra_catalogo": null,
+   "tipo": "actividad"
+  },
+  {
+   "dia": "2026-08-14",
+   "hora": "16:00",
+   "ciudad": "Bogotá",
+   "sede": "Casa de la Juventud Antonio Nariño",
+   "direccion": "Cra. 20 # 19 Sur - 26",
+   "titulo_programacion": "Del otro lado",
+   "obra_catalogo": "Del otro lado",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-14",
+   "hora": "16:00",
+   "ciudad": "Bogotá",
+   "sede": "Casa de la Juventud Ayelen",
+   "direccion": "Calle 65A Sur # 17C-30",
+   "titulo_programacion": "El bosque",
+   "obra_catalogo": "El bosque",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-14",
+   "hora": "17:00",
+   "ciudad": "Bogotá",
+   "sede": "Casa de la Juventud Chapinero",
+   "direccion": "Calle 65A # 1-40",
+   "titulo_programacion": "La luz por primera vez",
+   "obra_catalogo": "La luz por primera vez",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-14",
+   "hora": "14:00",
+   "ciudad": "Bogotá",
+   "sede": "Casa de la Juventud Diego Felipe Becerra",
+   "direccion": "Cra. 125 # 132C-82",
+   "titulo_programacion": "Honorablé",
+   "obra_catalogo": "Honorablé",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-14",
+   "hora": "15:00",
+   "ciudad": "Bogotá",
+   "sede": "Casa de la Juventud José Saramago",
+   "direccion": "Cra. 82J # 70A-52",
+   "titulo_programacion": "Por una gota de leche",
+   "obra_catalogo": "Por una gota de leche",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-14",
+   "hora": "15:00",
+   "ciudad": "Bogotá",
+   "sede": "Casa LGBTIQ Sebastián Romero",
+   "direccion": "Calle 44 # 14-60",
+   "titulo_programacion": "La Cerrillana",
+   "obra_catalogo": "La Cerrillana",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-14",
+   "hora": "15:00",
+   "ciudad": "Bogotá",
+   "sede": "Casa LGBTIQ Sebastián Romero",
+   "direccion": "Calle 44 # 14-60",
+   "titulo_programacion": "Apolo",
+   "obra_catalogo": "Apolo",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-14",
+   "hora": "19:00",
+   "ciudad": "Bogotá",
+   "sede": "Cinema Local",
+   "direccion": "Calle 74 # 20 B -19",
+   "titulo_programacion": "Hija del volcán",
+   "obra_catalogo": "Hija del volcán",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-14",
+   "hora": "15:00",
+   "ciudad": "Bogotá",
+   "sede": "Cinemateca",
+   "direccion": "Cinemateca del Museo La Tertulia - Cra. 1 # 5-105, Oeste",
+   "titulo_programacion": "Amor rebelde",
+   "obra_catalogo": "Amor rebelde",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-14",
+   "hora": "15:00",
+   "ciudad": "Bogotá",
+   "sede": "Cinemateca de Bogotá",
+   "direccion": "Cra. 3 # 19-10",
+   "titulo_programacion": "Amor rebelde",
+   "obra_catalogo": "Amor rebelde",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-14",
+   "hora": "16:00",
+   "ciudad": "Bogotá",
+   "sede": "Cinemateca de Bogotá",
+   "direccion": "Cra. 3 # 19-10",
+   "titulo_programacion": "1982",
+   "obra_catalogo": "1982",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-14",
+   "hora": "16:30",
+   "ciudad": "Bogotá",
+   "sede": "Cinemateca de Bogotá",
+   "direccion": "Cra. 3 # 19-10",
+   "titulo_programacion": "Cuando un río se convierte en mar",
+   "obra_catalogo": "Cuando un río se convierte en mar",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-14",
+   "hora": "17:30",
+   "ciudad": "Bogotá",
+   "sede": "Cinemateca de Bogotá",
+   "direccion": "Cra. 3 # 19-10",
+   "titulo_programacion": "Silenciada (Silenced)",
+   "obra_catalogo": "Silenciada",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-14",
+   "hora": "20:00",
+   "ciudad": "Bogotá",
+   "sede": "Cinemateca de Bogotá",
+   "direccion": "Cra. 3 # 19-10",
+   "titulo_programacion": "Carmela y los caminantes",
+   "obra_catalogo": "Carmela y los caminantes",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-14",
+   "hora": "14:00",
+   "ciudad": "Bogotá",
+   "sede": "Cinemateca Fontanar del Río",
+   "direccion": "Calle 146 # 138A-99",
+   "titulo_programacion": "El bosque",
+   "obra_catalogo": "El bosque",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-14",
+   "hora": "16:00",
+   "ciudad": "Bogotá",
+   "sede": "Cinemateca Fontanar del Río",
+   "direccion": "Calle 146 # 138A-99",
+   "titulo_programacion": "Niñxs",
+   "obra_catalogo": "Niñxs",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-14",
+   "hora": "14:00",
+   "ciudad": "Bogotá",
+   "sede": "Fundación Gilberto Alzate Avendaño - Biblioteca",
+   "direccion": "Calle 10 # 3-16",
+   "titulo_programacion": "Padamlágan (night lihgt)",
+   "obra_catalogo": "Padamlágan",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-14",
+   "hora": "16:00",
+   "ciudad": "Bogotá",
+   "sede": "Laboratorio 1 y 2",
+   "direccion": "Laboratorio 1 y 2",
+   "titulo_programacion": "Hackeando los mandatos de la delgadez",
+   "obra_catalogo": null,
+   "tipo": "actividad"
+  },
+  {
+   "dia": "2026-08-14",
+   "hora": "15:00",
+   "ciudad": "Bogotá",
+   "sede": "Manzana del Cuidado Mochuelo",
+   "direccion": "Calle 91C Sur # 18H-14",
+   "titulo_programacion": "Semillas",
+   "obra_catalogo": "Semillas",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-14",
+   "hora": "14:00",
+   "ciudad": "Bogotá",
+   "sede": "Universidad de los Andes",
+   "direccion": "Calle 19A # 1E-37",
+   "titulo_programacion": "Contratos esenciales de las obras audiovisuales",
+   "obra_catalogo": null,
+   "tipo": "actividad"
+  },
+  {
+   "dia": "2026-08-14",
+   "hora": "16:30",
+   "ciudad": "Bogotá",
+   "sede": "Universidad de los Andes",
+   "direccion": "Calle 19A # 1E-37",
+   "titulo_programacion": "Certificados de inversión o donación cinematográfica (Ley 814 de 2003)",
+   "obra_catalogo": null,
+   "tipo": "actividad"
+  },
+  {
+   "dia": "2026-08-15",
+   "hora": "15:00",
+   "ciudad": "Bogotá",
+   "sede": "Biblioteca Pública Usaquén Servitá",
+   "direccion": "Calle 165 # 7-52",
+   "titulo_programacion": "Indiamenta",
+   "obra_catalogo": "Indiamenta",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-15",
+   "hora": "15:00",
+   "ciudad": "Bogotá",
+   "sede": "Biblioteca Pública Usaquén Servitá",
+   "direccion": "Calle 165 # 7-52",
+   "titulo_programacion": "Muerto no",
+   "obra_catalogo": "Muerto no",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-15",
+   "hora": "15:00",
+   "ciudad": "Bogotá",
+   "sede": "Biblioteca Pública Usaquén Servitá",
+   "direccion": "Calle 165 # 7-52",
+   "titulo_programacion": "Celeste",
+   "obra_catalogo": "Celeste",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-15",
+   "hora": "15:00",
+   "ciudad": "Bogotá",
+   "sede": "Biblioteca Pública Usaquén Servitá",
+   "direccion": "Calle 165 # 7-52",
+   "titulo_programacion": "Más allá de la corona",
+   "obra_catalogo": "Más allá de la corona",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-15",
+   "hora": "18:00",
+   "ciudad": "Bogotá",
+   "sede": "Casa B",
+   "direccion": "Cra. 2 BIS # 6D-30",
+   "titulo_programacion": "Soñé su nombre",
+   "obra_catalogo": "Soñé su nombre",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-15",
+   "hora": "18:00",
+   "ciudad": "Bogotá",
+   "sede": "Casa B",
+   "direccion": "Cra. 2 BIS # 6D-30",
+   "titulo_programacion": "Ni un minuto de silencio, toda una vida de búsqueda",
+   "obra_catalogo": null,
+   "tipo": "film_nuevo"
+  },
+  {
+   "dia": "2026-08-15",
+   "hora": "15:00",
+   "ciudad": "Bogotá",
+   "sede": "Casa Cultural y Comunitaria Casa Sin Raza",
+   "direccion": "Diagonal 73B Sur # 82F-34",
+   "titulo_programacion": "Floresmiro",
+   "obra_catalogo": "Floresmiro",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-15",
+   "hora": "14:00",
+   "ciudad": "Bogotá",
+   "sede": "Casa de la Juventud Aldea De Pensadores",
+   "direccion": "Calle 70 # 88A-7",
+   "titulo_programacion": "Por una gota de leche",
+   "obra_catalogo": "Por una gota de leche",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-15",
+   "hora": "14:00",
+   "ciudad": "Bogotá",
+   "sede": "Casa de la Juventud Damawha",
+   "direccion": "Cra. 1 Este # 10-48 Sur",
+   "titulo_programacion": "Bojayá, la verdad desde adentro",
+   "obra_catalogo": "Bojayá, la verdad desde adentro",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-15",
+   "hora": "15:30",
+   "ciudad": "Bogotá",
+   "sede": "Casa de la Juventud El Cacma",
+   "direccion": "Calle 24 # 27A-31",
+   "titulo_programacion": "La luz por primera vez",
+   "obra_catalogo": "La luz por primera vez",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-15",
+   "hora": "16:00",
+   "ciudad": "Bogotá",
+   "sede": "Casa de las Luciérnagas",
+   "direccion": "Diagonal 73H SUR # 78-38",
+   "titulo_programacion": "La Raya",
+   "obra_catalogo": "La Raya",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-15",
+   "hora": "11:00",
+   "ciudad": "Bogotá",
+   "sede": "CEFE Cometas",
+   "direccion": "Calle 127 A # 87",
+   "titulo_programacion": "La independencia",
+   "obra_catalogo": "La independencia",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-15",
+   "hora": "11:00",
+   "ciudad": "Bogotá",
+   "sede": "CEFE Cometas",
+   "direccion": "Calle 127 A # 87",
+   "titulo_programacion": "Una torreta en llamas",
+   "obra_catalogo": "Una torreta en llamas",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-15",
+   "hora": "11:00",
+   "ciudad": "Bogotá",
+   "sede": "CEFE Cometas",
+   "direccion": "Calle 127 A # 87",
+   "titulo_programacion": "La gran hazaña",
+   "obra_catalogo": "La gran hazaña",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-15",
+   "hora": "11:00",
+   "ciudad": "Bogotá",
+   "sede": "CEFE Cometas",
+   "direccion": "Calle 127 A # 87",
+   "titulo_programacion": "El Paraíso de Ainara",
+   "obra_catalogo": "El Paraíso de Ainara",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-15",
+   "hora": "14:00",
+   "ciudad": "Bogotá",
+   "sede": "Centro Integral de Justicia Campo Verde",
+   "direccion": "Calle 85 Sur # 94-75",
+   "titulo_programacion": "El valor de la palabra",
+   "obra_catalogo": "El valor de la palabra",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-15",
+   "hora": "20:00",
+   "ciudad": "Bogotá",
+   "sede": "Cinemateca",
+   "direccion": "Cinemateca del Museo La Tertulia - Cra. 1 # 5-105, Oeste",
+   "titulo_programacion": "La Bonga",
+   "obra_catalogo": "La Bonga",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-15",
+   "hora": "10:30",
+   "ciudad": "Bogotá",
+   "sede": "Cinemateca de Bogotá",
+   "direccion": "Cra. 3 # 19-10",
+   "titulo_programacion": "Derechos de autor con EGEDA",
+   "obra_catalogo": null,
+   "tipo": "actividad"
+  },
+  {
+   "dia": "2026-08-15",
+   "hora": "11:00",
+   "ciudad": "Bogotá",
+   "sede": "Cinemateca de Bogotá",
+   "direccion": "Cra. 3 # 19-10",
+   "titulo_programacion": "Semillas",
+   "obra_catalogo": "Semillas",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-15",
+   "hora": "14:00",
+   "ciudad": "Bogotá",
+   "sede": "Cinemateca de Bogotá",
+   "direccion": "Cra. 3 # 19-10",
+   "titulo_programacion": "Desierto verde",
+   "obra_catalogo": "Desierto verde",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-15",
+   "hora": "15:00",
+   "ciudad": "Bogotá",
+   "sede": "Cinemateca de Bogotá",
+   "direccion": "Cra. 3 # 19-10",
+   "titulo_programacion": "Cuando la palabra se hace búsqueda",
+   "obra_catalogo": "Cuando la palabra se hace búsqueda",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-15",
+   "hora": "16:00",
+   "ciudad": "Bogotá",
+   "sede": "Cinemateca de Bogotá",
+   "direccion": "Cra. 3 # 19-10",
+   "titulo_programacion": "Aquí no entra luz",
+   "obra_catalogo": "Aquí no entra luz",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-15",
+   "hora": "17:30",
+   "ciudad": "Bogotá",
+   "sede": "Cinemateca de Bogotá",
+   "direccion": "Cra. 3 # 19-10",
+   "titulo_programacion": "Eva",
+   "obra_catalogo": "Eva",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-15",
+   "hora": "19:00",
+   "ciudad": "Bogotá",
+   "sede": "Cinemateca de Bogotá",
+   "direccion": "Cra. 3 # 19-10",
+   "titulo_programacion": "One in a million (Uno entre un millón)",
+   "obra_catalogo": "One in a million",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-15",
+   "hora": "20:00",
+   "ciudad": "Bogotá",
+   "sede": "Cinemateca de Bogotá",
+   "direccion": "Cra. 3 # 19-10",
+   "titulo_programacion": "La Bonga",
+   "obra_catalogo": "La Bonga",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-15",
+   "hora": "14:00",
+   "ciudad": "Bogotá",
+   "sede": "Cinemateca Fontanar del Río",
+   "direccion": "Calle 146 # 138A-99",
+   "titulo_programacion": "La Raya",
+   "obra_catalogo": "La Raya",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-15",
+   "hora": "16:00",
+   "ciudad": "Bogotá",
+   "sede": "Cinemateca Fontanar del Río",
+   "direccion": "Calle 146 # 138A-99",
+   "titulo_programacion": "Semillas",
+   "obra_catalogo": "Semillas",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-15",
+   "hora": "14:00",
+   "ciudad": "Bogotá",
+   "sede": "Fundación Gilberto Alzate Avendaño - Biblioteca",
+   "direccion": "Calle 10 # 3-16",
+   "titulo_programacion": "Un nuevo amanecer",
+   "obra_catalogo": "Un nuevo amanecer",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-15",
+   "hora": "17:00",
+   "ciudad": "Bogotá",
+   "sede": "La Trocha - Casa de la Paz",
+   "direccion": "",
+   "titulo_programacion": "El Arte de la Paz",
+   "obra_catalogo": null,
+   "tipo": "actividad"
+  },
+  {
+   "dia": "2026-08-15",
+   "hora": "17:00",
+   "ciudad": "Bogotá",
+   "sede": "La Trocha, La Casa de la Paz",
+   "direccion": "Cra. 13 # 36-37",
+   "titulo_programacion": "La luz que nos queda",
+   "obra_catalogo": "La luz que nos queda",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-15",
+   "hora": "16:00",
+   "ciudad": "Bogotá",
+   "sede": "Laboratorio 1 y 2",
+   "direccion": "Laboratorio 1 y 2",
+   "titulo_programacion": "Visibilizar lo Invisible: Taller de Herramientas frente a las Violencias de Género",
+   "obra_catalogo": null,
+   "tipo": "actividad"
+  },
+  {
+   "dia": "2026-08-15",
+   "hora": "10:00",
+   "ciudad": "Bogotá",
+   "sede": "Parque Arqueológico de Usme",
+   "direccion": "Calle 136B Sur # 3A-48",
+   "titulo_programacion": "Héroes del silencio",
+   "obra_catalogo": "Héroes del silencio",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-15",
+   "hora": "10:00",
+   "ciudad": "Bogotá",
+   "sede": "Parque Arqueológico de Usme",
+   "direccion": "Calle 136B Sur # 3A-48",
+   "titulo_programacion": "El Paraíso de Ainara",
+   "obra_catalogo": "El Paraíso de Ainara",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-15",
+   "hora": "10:00",
+   "ciudad": "Bogotá",
+   "sede": "Parque Arqueológico de Usme",
+   "direccion": "Calle 136B Sur # 3A-48",
+   "titulo_programacion": "In four stops",
+   "obra_catalogo": "In four stops",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-15",
+   "hora": "10:00",
+   "ciudad": "Bogotá",
+   "sede": "Parque Arqueológico de Usme",
+   "direccion": "Calle 136B Sur # 3A-48",
+   "titulo_programacion": "Akababuru: Expresión de asombro",
+   "obra_catalogo": "Akababuru: Expresión de asombro",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-15",
+   "hora": "10:00",
+   "ciudad": "Bogotá",
+   "sede": "Parque Arqueológico de Usme",
+   "direccion": "Calle 136B Sur # 3A-48",
+   "titulo_programacion": "La gran hazaña",
+   "obra_catalogo": "La gran hazaña",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-15",
+   "hora": "14:00",
+   "ciudad": "Bogotá",
+   "sede": "Parque Arqueológico de Usme",
+   "direccion": "Calle 136B Sur # 3A-48",
+   "titulo_programacion": "Herencia: Los cantos de la tierra",
+   "obra_catalogo": "Herencia: Los cantos de la tierra",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-16",
+   "hora": "11:00",
+   "ciudad": "Bogotá",
+   "sede": "Cinemateca de Bogotá",
+   "direccion": "Cra. 3 # 19-10",
+   "titulo_programacion": "Feito Pipa",
+   "obra_catalogo": "Feito Pipa",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-16",
+   "hora": "16:00",
+   "ciudad": "Bogotá",
+   "sede": "Cinemateca de Bogotá",
+   "direccion": "Cra. 3 # 19-10",
+   "titulo_programacion": "Por una gota de leche",
+   "obra_catalogo": "Por una gota de leche",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-16",
+   "hora": "17:00",
+   "ciudad": "Bogotá",
+   "sede": "Cinemateca de Bogotá",
+   "direccion": "Cra. 3 # 19-10",
+   "titulo_programacion": "Three black men (Tres hombres negros)",
+   "obra_catalogo": "Three black men",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-16",
+   "hora": "19:00",
+   "ciudad": "Bogotá",
+   "sede": "Cinemateca de Bogotá",
+   "direccion": "Cra. 3 # 19-10",
+   "titulo_programacion": "Notas sobre un destierro",
+   "obra_catalogo": "Notas sobre un destierro",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-16",
+   "hora": "19:30",
+   "ciudad": "Bogotá",
+   "sede": "Cinemateca de Bogotá",
+   "direccion": "Cra. 3 # 19-10",
+   "titulo_programacion": "El silencio de los palafitos",
+   "obra_catalogo": "El silencio de los palafitos",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-16",
+   "hora": "14:00",
+   "ciudad": "Bogotá",
+   "sede": "Cinemateca Fontanar del Río",
+   "direccion": "Calle 146 # 138A-99",
+   "titulo_programacion": "Héroes del silencio",
+   "obra_catalogo": "Héroes del silencio",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-16",
+   "hora": "14:00",
+   "ciudad": "Bogotá",
+   "sede": "Cinemateca Fontanar del Río",
+   "direccion": "Calle 146 # 138A-99",
+   "titulo_programacion": "El Paraíso de Ainara",
+   "obra_catalogo": "El Paraíso de Ainara",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-16",
+   "hora": "14:00",
+   "ciudad": "Bogotá",
+   "sede": "Cinemateca Fontanar del Río",
+   "direccion": "Calle 146 # 138A-99",
+   "titulo_programacion": "In four stops",
+   "obra_catalogo": "In four stops",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-16",
+   "hora": "14:00",
+   "ciudad": "Bogotá",
+   "sede": "Cinemateca Fontanar del Río",
+   "direccion": "Calle 146 # 138A-99",
+   "titulo_programacion": "Akababuru: Expresión de asombro",
+   "obra_catalogo": "Akababuru: Expresión de asombro",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-16",
+   "hora": "14:00",
+   "ciudad": "Bogotá",
+   "sede": "Cinemateca Fontanar del Río",
+   "direccion": "Calle 146 # 138A-99",
+   "titulo_programacion": "La gran hazaña",
+   "obra_catalogo": "La gran hazaña",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-16",
+   "hora": "15:30",
+   "ciudad": "Bogotá",
+   "sede": "Laboratorio 1 y 2 - Cinemateca de Bogotá",
+   "direccion": "",
+   "titulo_programacion": "Colombia +20: una década de periodismo para la paz",
+   "obra_catalogo": null,
+   "tipo": "actividad"
+  },
+  {
+   "dia": "2026-08-17",
+   "hora": "13:00",
+   "ciudad": "Bogotá",
+   "sede": "Cinemateca de Bogotá",
+   "direccion": "Cra. 3 # 19-10",
+   "titulo_programacion": "Andariega",
+   "obra_catalogo": "Andariega",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-17",
+   "hora": "14:00",
+   "ciudad": "Bogotá",
+   "sede": "Cinemateca de Bogotá",
+   "direccion": "Cra. 3 # 19-10",
+   "titulo_programacion": "Del proyecto al mercado internacional: una mirada práctica al papel del agente de ventas",
+   "obra_catalogo": null,
+   "tipo": "actividad"
+  },
+  {
+   "dia": "2026-08-17",
+   "hora": "15:00",
+   "ciudad": "Bogotá",
+   "sede": "Cinemateca de Bogotá",
+   "direccion": "Cra. 3 # 19-10",
+   "titulo_programacion": "American Doctor (Médico estadounidense)",
+   "obra_catalogo": "American Doctor",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-17",
+   "hora": "16:00",
+   "ciudad": "Bogotá",
+   "sede": "Cinemateca de Bogotá",
+   "direccion": "Cra. 3 # 19-10",
+   "titulo_programacion": "Los pliegues de la falda",
+   "obra_catalogo": "Los pliegues de la falda",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-17",
+   "hora": "16:00",
+   "ciudad": "Bogotá",
+   "sede": "Cinemateca de Bogotá",
+   "direccion": "Cra. 3 # 19-10",
+   "titulo_programacion": "La Cerrillana",
+   "obra_catalogo": "La Cerrillana",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-17",
+   "hora": "17:30",
+   "ciudad": "Bogotá",
+   "sede": "Cinemateca de Bogotá",
+   "direccion": "Cra. 3 # 19-10",
+   "titulo_programacion": "La independencia",
+   "obra_catalogo": "La independencia",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-17",
+   "hora": "17:30",
+   "ciudad": "Bogotá",
+   "sede": "Cinemateca de Bogotá",
+   "direccion": "Cra. 3 # 19-10",
+   "titulo_programacion": "Cayenas libertarias",
+   "obra_catalogo": "Cayenas libertarias",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-17",
+   "hora": "17:30",
+   "ciudad": "Bogotá",
+   "sede": "Cinemateca de Bogotá",
+   "direccion": "Cra. 3 # 19-10",
+   "titulo_programacion": "El Paraíso de Ainara",
+   "obra_catalogo": "El Paraíso de Ainara",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-17",
+   "hora": "17:30",
+   "ciudad": "Bogotá",
+   "sede": "Cinemateca de Bogotá",
+   "direccion": "Cra. 3 # 19-10",
+   "titulo_programacion": "Todos los días",
+   "obra_catalogo": "Todos los días",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-17",
+   "hora": "17:30",
+   "ciudad": "Bogotá",
+   "sede": "Cinemateca de Bogotá",
+   "direccion": "Cra. 3 # 19-10",
+   "titulo_programacion": "Sukua",
+   "obra_catalogo": "Sukua",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-17",
+   "hora": "19:00",
+   "ciudad": "Bogotá",
+   "sede": "Cinemateca de Bogotá",
+   "direccion": "Cra. 3 # 19-10",
+   "titulo_programacion": "El juego de la vida",
+   "obra_catalogo": "El juego de la vida",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-17",
+   "hora": "17:30",
+   "ciudad": "Bogotá",
+   "sede": "Laboratorio 1 y 2 - Cinemateca de Bogotá",
+   "direccion": "",
+   "titulo_programacion": "Tercera charla Derechos audiovisuales",
+   "obra_catalogo": null,
+   "tipo": "actividad"
+  },
+  {
+   "dia": "2026-08-17",
+   "hora": "16:00",
+   "ciudad": "Bogotá",
+   "sede": "Sala 2 - Cinemateca de Bogotá",
+   "direccion": "",
+   "titulo_programacion": "¡Existimos! Infancias trans en Colombia",
+   "obra_catalogo": null,
+   "tipo": "actividad"
+  },
+  {
+   "dia": "2026-08-18",
+   "hora": "10:00",
+   "ciudad": "Bogotá",
+   "sede": "Auditorio C202 - UNIMINUTO",
+   "direccion": "",
+   "titulo_programacion": "El arte de moldear la IA",
+   "obra_catalogo": null,
+   "tipo": "actividad"
+  },
+  {
+   "dia": "2026-08-18",
+   "hora": "16:00",
+   "ciudad": "Bogotá",
+   "sede": "Biblioteca Pública Francisco José de Caldas",
+   "direccion": "Cra. 92 # 146 C - 24",
+   "titulo_programacion": "Herencia: Los cantos de la tierra",
+   "obra_catalogo": "Herencia: Los cantos de la tierra",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-18",
+   "hora": "15:00",
+   "ciudad": "Bogotá",
+   "sede": "Biblioteca Pública Gabriel García Márquez",
+   "direccion": "Calle 48B SUR # 21-13",
+   "titulo_programacion": "Floresmiro",
+   "obra_catalogo": "Floresmiro",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-18",
+   "hora": "16:00",
+   "ciudad": "Bogotá",
+   "sede": "Biblioteca Pública Julio Mario Santodomingo",
+   "direccion": "Calle 170 # 67-51",
+   "titulo_programacion": "Sukua",
+   "obra_catalogo": "Sukua",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-18",
+   "hora": "16:00",
+   "ciudad": "Bogotá",
+   "sede": "Biblioteca Pública Julio Mario Santodomingo",
+   "direccion": "Calle 170 # 67-51",
+   "titulo_programacion": "Los pliegues de la falda",
+   "obra_catalogo": "Los pliegues de la falda",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-18",
+   "hora": "16:00",
+   "ciudad": "Bogotá",
+   "sede": "Biblioteca Pública Julio Mario Santodomingo",
+   "direccion": "Calle 170 # 67-51",
+   "titulo_programacion": "Más allá",
+   "obra_catalogo": "Más allá",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-18",
+   "hora": "16:00",
+   "ciudad": "Bogotá",
+   "sede": "Biblioteca Pública Julio Mario Santodomingo",
+   "direccion": "Calle 170 # 67-51",
+   "titulo_programacion": "La Cerrillana",
+   "obra_catalogo": "La Cerrillana",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-18",
+   "hora": "16:00",
+   "ciudad": "Bogotá",
+   "sede": "Biblioteca Pública Julio Mario Santodomingo",
+   "direccion": "Calle 170 # 67-51",
+   "titulo_programacion": "Chaski Pacha",
+   "obra_catalogo": "Chaski Pacha",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-18",
+   "hora": "16:00",
+   "ciudad": "Bogotá",
+   "sede": "Biblioteca Pública La Marichuela",
+   "direccion": "Diagonal 76B Sur # 1C-40",
+   "titulo_programacion": "El silencio de los palafitos",
+   "obra_catalogo": "El silencio de los palafitos",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-18",
+   "hora": "15:00",
+   "ciudad": "Bogotá",
+   "sede": "Biblioteca Pública Manuel Zapata Olivella",
+   "direccion": "Av. Ciudad de Cali # 6C-09",
+   "titulo_programacion": "Semillas",
+   "obra_catalogo": "Semillas",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-18",
+   "hora": "18:00",
+   "ciudad": "Bogotá",
+   "sede": "Casa B",
+   "direccion": "Cra. 2 BIS # 6D-30",
+   "titulo_programacion": "La Raya",
+   "obra_catalogo": "La Raya",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-18",
+   "hora": "15:30",
+   "ciudad": "Bogotá",
+   "sede": "Casa de la Juventud El Frailejón",
+   "direccion": "Cra. 12 # 76A-28 Sur",
+   "titulo_programacion": "Por una gota de leche",
+   "obra_catalogo": "Por una gota de leche",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-18",
+   "hora": "15:00",
+   "ciudad": "Bogotá",
+   "sede": "Casa de la Juventud Nacho Sánchez",
+   "direccion": "Cra. 3 Este # 9-58",
+   "titulo_programacion": "La luz por primera vez",
+   "obra_catalogo": "La luz por primera vez",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-18",
+   "hora": "14:00",
+   "ciudad": "Bogotá",
+   "sede": "Casa de la Juventud Usaquén",
+   "direccion": "Calle 155 # 7-45",
+   "titulo_programacion": "Mujeres modernas",
+   "obra_catalogo": "Mujeres modernas",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-18",
+   "hora": "17:00",
+   "ciudad": "Bogotá",
+   "sede": "Casa de las Luciérnagas",
+   "direccion": "Diagonal 73H SUR # 78-38",
+   "titulo_programacion": "Akababuru: Expresión de asombro",
+   "obra_catalogo": "Akababuru: Expresión de asombro",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-18",
+   "hora": "17:00",
+   "ciudad": "Bogotá",
+   "sede": "Casa de las Luciérnagas",
+   "direccion": "Diagonal 73H SUR # 78-38",
+   "titulo_programacion": "La gran hazaña",
+   "obra_catalogo": "La gran hazaña",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-18",
+   "hora": "17:00",
+   "ciudad": "Bogotá",
+   "sede": "Casa de las Luciérnagas",
+   "direccion": "Diagonal 73H SUR # 78-38",
+   "titulo_programacion": "Héroes del silencio",
+   "obra_catalogo": "Héroes del silencio",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-18",
+   "hora": "17:00",
+   "ciudad": "Bogotá",
+   "sede": "Casa de las Luciérnagas",
+   "direccion": "Diagonal 73H SUR # 78-38",
+   "titulo_programacion": "El Paraíso de Ainara",
+   "obra_catalogo": "El Paraíso de Ainara",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-18",
+   "hora": "17:00",
+   "ciudad": "Bogotá",
+   "sede": "Casa de las Luciérnagas",
+   "direccion": "Diagonal 73H SUR # 78-38",
+   "titulo_programacion": "In four stops",
+   "obra_catalogo": "In four stops",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-18",
+   "hora": "18:30",
+   "ciudad": "Bogotá",
+   "sede": "Cinema Local",
+   "direccion": "Calle 74 # 20 B -19",
+   "titulo_programacion": "El valor de la palabra",
+   "obra_catalogo": "El valor de la palabra",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-19",
+   "hora": "09:00",
+   "ciudad": "Bogotá",
+   "sede": "Auditorio Principal - UNIAGRARIA",
+   "direccion": "",
+   "titulo_programacion": "Reconocer, atender y reparar: 15 años de la Ley de Víctimas",
+   "obra_catalogo": null,
+   "tipo": "actividad"
+  },
+  {
+   "dia": "2026-08-19",
+   "hora": "16:30",
+   "ciudad": "Bogotá",
+   "sede": "Biblioteca Pública Carlos E. Restrepo",
+   "direccion": "Diagonal 21A Sur # 19-54 sur",
+   "titulo_programacion": "El silencio de los palafitos",
+   "obra_catalogo": "El silencio de los palafitos",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-19",
+   "hora": "15:00",
+   "ciudad": "Bogotá",
+   "sede": "Casa de la Juventud Chiguazá",
+   "direccion": "Calle 48P BIS D Sur # 5A-43",
+   "titulo_programacion": "El bosque",
+   "obra_catalogo": "El bosque",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-19",
+   "hora": "14:00",
+   "ciudad": "Bogotá",
+   "sede": "Casa de la Juventud Huitaca",
+   "direccion": "Calle 17A # 118-25",
+   "titulo_programacion": "El bosque",
+   "obra_catalogo": "El bosque",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-19",
+   "hora": "18:30",
+   "ciudad": "Bogotá",
+   "sede": "Cinemateca",
+   "direccion": "Cinemateca del Museo La Tertulia - Cra. 1 # 5-105, Oeste",
+   "titulo_programacion": "Después del frío",
+   "obra_catalogo": "Después del frío",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-19",
+   "hora": "13:00",
+   "ciudad": "Bogotá",
+   "sede": "Cinemateca de Bogotá",
+   "direccion": "Cra. 3 # 19-10",
+   "titulo_programacion": "La luz por primera vez",
+   "obra_catalogo": "La luz por primera vez",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-19",
+   "hora": "15:30",
+   "ciudad": "Bogotá",
+   "sede": "Cinemateca de Bogotá",
+   "direccion": "Cra. 3 # 19-10",
+   "titulo_programacion": "Halima - Una guía para ser fuerte",
+   "obra_catalogo": null,
+   "tipo": "film_nuevo"
+  },
+  {
+   "dia": "2026-08-19",
+   "hora": "16:00",
+   "ciudad": "Bogotá",
+   "sede": "Cinemateca de Bogotá",
+   "direccion": "Cra. 3 # 19-10",
+   "titulo_programacion": "Floresmiro",
+   "obra_catalogo": "Floresmiro",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-19",
+   "hora": "18:30",
+   "ciudad": "Bogotá",
+   "sede": "Cinemateca de Bogotá",
+   "direccion": "Cra. 3 # 19-10",
+   "titulo_programacion": "Después del frío",
+   "obra_catalogo": "Después del frío",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-19",
+   "hora": "15:30",
+   "ciudad": "Bogotá",
+   "sede": "Sala 2 de la Cinemateca",
+   "direccion": "",
+   "titulo_programacion": "¡No más mutilación genital femenina en Colombia!",
+   "obra_catalogo": null,
+   "tipo": "actividad"
+  },
+  {
+   "dia": "2026-08-19",
+   "hora": "10:00",
+   "ciudad": "Bogotá",
+   "sede": "Universidad Jorge Tadeo Lozano Salón Oval",
+   "direccion": "Universidad Jorge Tadeo Lozano Salón Oval",
+   "titulo_programacion": "Gritemos ¡Corte!",
+   "obra_catalogo": null,
+   "tipo": "film_nuevo"
+  },
+  {
+   "dia": "2026-08-20",
+   "hora": "17:30",
+   "ciudad": "Bogotá",
+   "sede": "CEFE Chapinero",
+   "direccion": "Calle 82 # 10-69",
+   "titulo_programacion": "The Beauty of the donkey",
+   "obra_catalogo": null,
+   "tipo": "film_nuevo"
+  },
+  {
+   "dia": "2026-08-20",
+   "hora": "18:30",
+   "ciudad": "Bogotá",
+   "sede": "UNIMINUTO Sede Calle 90 Estudio de radio 408",
+   "direccion": "UNIMINUTO Sede Calle 90 Estudio de radio 408",
+   "titulo_programacion": "Del rodaje a la mezcla final: el sonido de Semillas",
+   "obra_catalogo": null,
+   "tipo": "actividad"
+  },
+  {
+   "dia": "2026-08-24",
+   "hora": "09:00",
+   "ciudad": "Bogotá",
+   "sede": "Biblioteca Pública Virgilio Barco",
+   "direccion": "Av. La Esmeralda # 57-60",
+   "titulo_programacion": "Los bibliotecarios (The librarians)",
+   "obra_catalogo": "Los bibliotecarios",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-13",
+   "hora": "18:30",
+   "ciudad": "Medellín",
+   "sede": "Colombo Americano",
+   "direccion": "Cra. 45 #53 - 24. Centro",
+   "titulo_programacion": "One in a million (Uno entre un millón)",
+   "obra_catalogo": "One in a million",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-14",
+   "hora": "17:00",
+   "ciudad": "Medellín",
+   "sede": "Ágora Casa Cultural (La Ceja)",
+   "direccion": "Cl. 19 # 23-15",
+   "titulo_programacion": "Republic of Amnesia (República de la amnesia)",
+   "obra_catalogo": "Republic of Amnesia",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-14",
+   "hora": "15:00",
+   "ciudad": "Medellín",
+   "sede": "Colombo Americano",
+   "direccion": "Cra. 45 #53 - 24. Centro",
+   "titulo_programacion": "El valor de la palabra",
+   "obra_catalogo": "El valor de la palabra",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-14",
+   "hora": "17:00",
+   "ciudad": "Medellín",
+   "sede": "COMFAMA - Capilla del Claustro",
+   "direccion": "Carrera 44 # 48 - 18",
+   "titulo_programacion": "Aquí no entra luz",
+   "obra_catalogo": "Aquí no entra luz",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-14",
+   "hora": "16:00",
+   "ciudad": "Medellín",
+   "sede": "COMFAMA - Cineclub Bello",
+   "direccion": "Cra. 49 #46-57",
+   "titulo_programacion": "Hija del volcán",
+   "obra_catalogo": "Hija del volcán",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-14",
+   "hora": "16:30",
+   "ciudad": "Medellín",
+   "sede": "La Pascasia",
+   "direccion": "Cl. 47 #43 88. Centro",
+   "titulo_programacion": "1982",
+   "obra_catalogo": "1982",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-14",
+   "hora": "18:30",
+   "ciudad": "Medellín",
+   "sede": "Museo Casa de la Memoria",
+   "direccion": "Cl. 51 #36-66. Parque Bicentenario",
+   "titulo_programacion": "Juntos podemos curar",
+   "obra_catalogo": null,
+   "tipo": "film_nuevo"
+  },
+  {
+   "dia": "2026-08-14",
+   "hora": "18:30",
+   "ciudad": "Medellín",
+   "sede": "Museo Casa de la Memoria",
+   "direccion": "Cl. 51 #36-66. Parque Bicentenario",
+   "titulo_programacion": "Apotnojushi La Casa del viento",
+   "obra_catalogo": "Apotnojushi La Casa del viento",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-14",
+   "hora": "18:30",
+   "ciudad": "Medellín",
+   "sede": "Museo Casa de la Memoria",
+   "direccion": "Cl. 51 #36-66. Parque Bicentenario",
+   "titulo_programacion": "Kaugsankamalla: mientras vivamos",
+   "obra_catalogo": "Kaugsankamalla: mientras vivamos",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-14",
+   "hora": "19:00",
+   "ciudad": "Medellín",
+   "sede": "Parque de los Deseos",
+   "direccion": "Carrera 52 # 71 - 11",
+   "titulo_programacion": "El juego de la vida",
+   "obra_catalogo": "El juego de la vida",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-15",
+   "hora": "10:00",
+   "ciudad": "Medellín",
+   "sede": "Centro Cultural Banco de la República",
+   "direccion": "Cl. 50 #50-21 Piso 3",
+   "titulo_programacion": "El Paraíso de Ainara",
+   "obra_catalogo": "El Paraíso de Ainara",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-15",
+   "hora": "10:00",
+   "ciudad": "Medellín",
+   "sede": "Centro Cultural Banco de la República",
+   "direccion": "Cl. 50 #50-21 Piso 3",
+   "titulo_programacion": "In four stops",
+   "obra_catalogo": "In four stops",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-15",
+   "hora": "10:00",
+   "ciudad": "Medellín",
+   "sede": "Centro Cultural Banco de la República",
+   "direccion": "Cl. 50 #50-21 Piso 3",
+   "titulo_programacion": "Akababuru: Expresión de asombro",
+   "obra_catalogo": "Akababuru: Expresión de asombro",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-15",
+   "hora": "10:00",
+   "ciudad": "Medellín",
+   "sede": "Centro Cultural Banco de la República",
+   "direccion": "Cl. 50 #50-21 Piso 3",
+   "titulo_programacion": "La gran hazaña",
+   "obra_catalogo": "La gran hazaña",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-15",
+   "hora": "10:00",
+   "ciudad": "Medellín",
+   "sede": "Centro Cultural Banco de la República",
+   "direccion": "Cl. 50 #50-21 Piso 3",
+   "titulo_programacion": "Héroes del silencio",
+   "obra_catalogo": "Héroes del silencio",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-15",
+   "hora": "14:00",
+   "ciudad": "Medellín",
+   "sede": "Colombo Americano",
+   "direccion": "Cra. 45 #53 - 24. Centro",
+   "titulo_programacion": "Los reyes del mundo",
+   "obra_catalogo": "Los reyes del mundo",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-15",
+   "hora": "14:30",
+   "ciudad": "Medellín",
+   "sede": "Colombo Americano",
+   "direccion": "Cra. 45 #53 - 24. Centro",
+   "titulo_programacion": "Los reyes del mundo",
+   "obra_catalogo": "Los reyes del mundo",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-15",
+   "hora": "19:00",
+   "ciudad": "Medellín",
+   "sede": "Colombo Americano",
+   "direccion": "Cra. 45 #53 - 24. Centro",
+   "titulo_programacion": "Bojayá, la verdad desde adentro",
+   "obra_catalogo": "Bojayá, la verdad desde adentro",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-15",
+   "hora": "18:30",
+   "ciudad": "Medellín",
+   "sede": "COMFAMA - Capilla del Claustro",
+   "direccion": "Carrera 44 # 48 - 18",
+   "titulo_programacion": "La luz por primera vez",
+   "obra_catalogo": "La luz por primera vez",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-15",
+   "hora": "14:00",
+   "ciudad": "Medellín",
+   "sede": "Jardín Botánico de Medellín",
+   "direccion": "Cl. 73 #51D-14",
+   "titulo_programacion": "Desde el centro de la tierra",
+   "obra_catalogo": null,
+   "tipo": "film_nuevo"
+  },
+  {
+   "dia": "2026-08-15",
+   "hora": "15:00",
+   "ciudad": "Medellín",
+   "sede": "Jardín Botánico de Medellín",
+   "direccion": "Cl. 73 #51D-14",
+   "titulo_programacion": "Juntos podemos curar",
+   "obra_catalogo": null,
+   "tipo": "film_nuevo"
+  },
+  {
+   "dia": "2026-08-16",
+   "hora": "14:30",
+   "ciudad": "Medellín",
+   "sede": "Colombo Americano",
+   "direccion": "Cra. 45 #53 - 24. Centro",
+   "titulo_programacion": "Más allá",
+   "obra_catalogo": "Más allá",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-16",
+   "hora": "14:30",
+   "ciudad": "Medellín",
+   "sede": "Colombo Americano",
+   "direccion": "Cra. 45 #53 - 24. Centro",
+   "titulo_programacion": "Celeste",
+   "obra_catalogo": "Celeste",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-16",
+   "hora": "14:30",
+   "ciudad": "Medellín",
+   "sede": "Colombo Americano",
+   "direccion": "Cra. 45 #53 - 24. Centro",
+   "titulo_programacion": "Akababuru: Expresión de asombro",
+   "obra_catalogo": "Akababuru: Expresión de asombro",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-16",
+   "hora": "14:30",
+   "ciudad": "Medellín",
+   "sede": "Colombo Americano",
+   "direccion": "Cra. 45 #53 - 24. Centro",
+   "titulo_programacion": "Todos los días",
+   "obra_catalogo": "Todos los días",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-16",
+   "hora": "14:30",
+   "ciudad": "Medellín",
+   "sede": "Colombo Americano",
+   "direccion": "Cra. 45 #53 - 24. Centro",
+   "titulo_programacion": "Muerto no",
+   "obra_catalogo": "Muerto no",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-16",
+   "hora": "14:30",
+   "ciudad": "Medellín",
+   "sede": "Colombo Americano",
+   "direccion": "Cra. 45 #53 - 24. Centro",
+   "titulo_programacion": "Sukua",
+   "obra_catalogo": "Sukua",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-16",
+   "hora": "14:30",
+   "ciudad": "Medellín",
+   "sede": "Colombo Americano",
+   "direccion": "Cra. 45 #53 - 24. Centro",
+   "titulo_programacion": "La Cerrillana",
+   "obra_catalogo": "La Cerrillana",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-16",
+   "hora": "17:30",
+   "ciudad": "Medellín",
+   "sede": "Colombo Americano",
+   "direccion": "Cra. 45 #53 - 24. Centro",
+   "titulo_programacion": "La hija cóndor",
+   "obra_catalogo": "La hija cóndor",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-16",
+   "hora": "17:00",
+   "ciudad": "Medellín",
+   "sede": "COMFAMA - Capilla del Claustro",
+   "direccion": "Carrera 44 # 48 - 18",
+   "titulo_programacion": "El verano de Jahia (Jahia's Summer)",
+   "obra_catalogo": "El verano de Jahia",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-17",
+   "hora": "16:30",
+   "ciudad": "Medellín",
+   "sede": "Cineprox",
+   "direccion": "Dg. 75B #2A-120Rotonda Comercial Las Américas",
+   "titulo_programacion": "Semillas",
+   "obra_catalogo": "Semillas",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-18",
+   "hora": "15:00",
+   "ciudad": "Medellín",
+   "sede": "Colombo Americano",
+   "direccion": "Cra. 45 #53 - 24. Centro",
+   "titulo_programacion": "Cuando un río se convierte en mar",
+   "obra_catalogo": "Cuando un río se convierte en mar",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-18",
+   "hora": "18:00",
+   "ciudad": "Medellín",
+   "sede": "COMFAMA - Cineclub Bello",
+   "direccion": "Cra. 49 #46-57",
+   "titulo_programacion": "Desierto verde",
+   "obra_catalogo": "Desierto verde",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-18",
+   "hora": "18:00",
+   "ciudad": "Medellín",
+   "sede": "La Pascasia",
+   "direccion": "Cl. 47 #43 88. Centro",
+   "titulo_programacion": "El silencio de los palafitos",
+   "obra_catalogo": "El silencio de los palafitos",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-18",
+   "hora": "18:30",
+   "ciudad": "Medellín",
+   "sede": "Rueda Libre (La Ceja)",
+   "direccion": "Teatro Municipal Juan de Dios Aranzazu: Cra. 22 #18-77",
+   "titulo_programacion": "La Raya",
+   "obra_catalogo": "La Raya",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-19",
+   "hora": "16:00",
+   "ciudad": "Medellín",
+   "sede": "Ágora Casa Cultural (La Ceja)",
+   "direccion": "Cl. 19 # 23-15",
+   "titulo_programacion": "Amor rebelde",
+   "obra_catalogo": "Amor rebelde",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-19",
+   "hora": "17:00",
+   "ciudad": "Medellín",
+   "sede": "Ágora Casa Cultural (La Ceja)",
+   "direccion": "Cl. 19 # 23-15",
+   "titulo_programacion": "Amor rebelde",
+   "obra_catalogo": "Amor rebelde",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-19",
+   "hora": "18:30",
+   "ciudad": "Medellín",
+   "sede": "Cineprox",
+   "direccion": "Dg. 75B #2A-120Rotonda Comercial Las Américas",
+   "titulo_programacion": "Feito Pipa",
+   "obra_catalogo": "Feito Pipa",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-19",
+   "hora": "15:00",
+   "ciudad": "Medellín",
+   "sede": "Colombo Americano",
+   "direccion": "Cra. 45 #53 - 24. Centro",
+   "titulo_programacion": "Tierra que habla",
+   "obra_catalogo": "Tierra que habla",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-19",
+   "hora": "14:30",
+   "ciudad": "Medellín",
+   "sede": "Museo Casa de la Memoria",
+   "direccion": "Cl. 51 #36-66. Parque Bicentenario",
+   "titulo_programacion": "La luz que nos queda",
+   "obra_catalogo": "La luz que nos queda",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-19",
+   "hora": "14:30",
+   "ciudad": "Medellín",
+   "sede": "Museo Casa de la Memoria",
+   "direccion": "Cl. 51 #36-66. Parque Bicentenario",
+   "titulo_programacion": "Cuando la palabra se hace búsqueda",
+   "obra_catalogo": "Cuando la palabra se hace búsqueda",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-19",
+   "hora": "14:30",
+   "ciudad": "Medellín",
+   "sede": "Museo Casa de la Memoria",
+   "direccion": "Cl. 51 #36-66. Parque Bicentenario",
+   "titulo_programacion": "Cobija de recuerdos",
+   "obra_catalogo": "Cobija de recuerdos",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-10",
+   "hora": "08:30",
+   "ciudad": "Cali",
+   "sede": "Institución Educativa Cristóbal Colón",
+   "direccion": "Cra. 47a # 44-32, Mariano Ramos",
+   "titulo_programacion": "La Raya",
+   "obra_catalogo": "La Raya",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-10",
+   "hora": "14:00",
+   "ciudad": "Cali",
+   "sede": "Institución Educativa Cristóbal Colón",
+   "direccion": "Cra. 47a # 44-32, Mariano Ramos",
+   "titulo_programacion": "La Raya",
+   "obra_catalogo": "La Raya",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-11",
+   "hora": "17:00",
+   "ciudad": "Cali",
+   "sede": "Centro Cultural - Sala Audiovisual de Cali",
+   "direccion": "Cra. 5 # 6-05, San Pedro",
+   "titulo_programacion": "Bajo fuego",
+   "obra_catalogo": "Bajo fuego",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-11",
+   "hora": "08:30",
+   "ciudad": "Cali",
+   "sede": "Institución Educativa Antonia Santos",
+   "direccion": "",
+   "titulo_programacion": "La Raya",
+   "obra_catalogo": "La Raya",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-12",
+   "hora": "08:30",
+   "ciudad": "Cali",
+   "sede": "Institución Educativa Bienestar Social",
+   "direccion": "Cra. 47b # 45-47, Mariano Ramos",
+   "titulo_programacion": "El Paraíso de Ainara",
+   "obra_catalogo": "El Paraíso de Ainara",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-12",
+   "hora": "08:30",
+   "ciudad": "Cali",
+   "sede": "Institución Educativa Bienestar Social",
+   "direccion": "Cra. 47b # 45-47, Mariano Ramos",
+   "titulo_programacion": "In four stops",
+   "obra_catalogo": "In four stops",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-12",
+   "hora": "08:30",
+   "ciudad": "Cali",
+   "sede": "Institución Educativa Bienestar Social",
+   "direccion": "Cra. 47b # 45-47, Mariano Ramos",
+   "titulo_programacion": "Akababuru: Expresión de asombro",
+   "obra_catalogo": "Akababuru: Expresión de asombro",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-12",
+   "hora": "08:30",
+   "ciudad": "Cali",
+   "sede": "Institución Educativa Bienestar Social",
+   "direccion": "Cra. 47b # 45-47, Mariano Ramos",
+   "titulo_programacion": "La gran hazaña",
+   "obra_catalogo": "La gran hazaña",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-12",
+   "hora": "08:30",
+   "ciudad": "Cali",
+   "sede": "Institución Educativa Bienestar Social",
+   "direccion": "Cra. 47b # 45-47, Mariano Ramos",
+   "titulo_programacion": "Héroes del silencio",
+   "obra_catalogo": "Héroes del silencio",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-12",
+   "hora": "18:30",
+   "ciudad": "Cali",
+   "sede": "Plazoleta del Samán",
+   "direccion": "Cra. 5 # 6-05, San Pedro",
+   "titulo_programacion": "Los reyes del mundo",
+   "obra_catalogo": "Los reyes del mundo",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-13",
+   "hora": "17:00",
+   "ciudad": "Cali",
+   "sede": "Centro Cultural - Sala Audiovisual de Cali",
+   "direccion": "Cra. 5 # 6-05, San Pedro",
+   "titulo_programacion": "Aminetu",
+   "obra_catalogo": "Aminetu",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-13",
+   "hora": "18:30",
+   "ciudad": "Cali",
+   "sede": "Cinema Local",
+   "direccion": "Calle 4B # 38A-66",
+   "titulo_programacion": "Feito Pipa",
+   "obra_catalogo": "Feito Pipa",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-13",
+   "hora": "18:30",
+   "ciudad": "Cali",
+   "sede": "Cinemateca del Museo La Tertulia",
+   "direccion": "Cra. 1 # 5-105, Oeste",
+   "titulo_programacion": "Bojayá, la verdad desde adentro",
+   "obra_catalogo": "Bojayá, la verdad desde adentro",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-13",
+   "hora": "08:30",
+   "ciudad": "Cali",
+   "sede": "Institución Educativa José Joaquín Jaramillo",
+   "direccion": "",
+   "titulo_programacion": "Republic of Amnesia (República de la amnesia)",
+   "obra_catalogo": "Republic of Amnesia",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-14",
+   "hora": "18:30",
+   "ciudad": "Cali",
+   "sede": "Bulevar del Oriente",
+   "direccion": "Comuna 14, entre la transversal 103 con calle 96 y calle 73 con transversal 73, entre los barrios Alfonso Bonilla Aragón y Marroquín 2",
+   "titulo_programacion": "Cobija de recuerdos",
+   "obra_catalogo": "Cobija de recuerdos",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-14",
+   "hora": "18:30",
+   "ciudad": "Cali",
+   "sede": "Bulevar del Oriente",
+   "direccion": "Comuna 14, entre la transversal 103 con calle 96 y calle 73 con transversal 73, entre los barrios Alfonso Bonilla Aragón y Marroquín 2",
+   "titulo_programacion": "Y el río lloró",
+   "obra_catalogo": "Y el río lloró",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-14",
+   "hora": "18:30",
+   "ciudad": "Cali",
+   "sede": "Bulevar del Oriente",
+   "direccion": "Comuna 14, entre la transversal 103 con calle 96 y calle 73 con transversal 73, entre los barrios Alfonso Bonilla Aragón y Marroquín 2",
+   "titulo_programacion": "Cuando la palabra se hace búsqueda",
+   "obra_catalogo": "Cuando la palabra se hace búsqueda",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-14",
+   "hora": "18:30",
+   "ciudad": "Cali",
+   "sede": "Cinema Local",
+   "direccion": "Calle 4B # 38A-66",
+   "titulo_programacion": "Hija del volcán",
+   "obra_catalogo": "Hija del volcán",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-14",
+   "hora": "18:30",
+   "ciudad": "Cali",
+   "sede": "Cinemateca del Museo La Tertulia",
+   "direccion": "Cra. 1 # 5-105, Oeste",
+   "titulo_programacion": "El valor de la palabra",
+   "obra_catalogo": "El valor de la palabra",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-15",
+   "hora": "17:00",
+   "ciudad": "Cali",
+   "sede": "Cinema Local",
+   "direccion": "Calle 4B # 38A-66",
+   "titulo_programacion": "El silencio de los palafitos",
+   "obra_catalogo": "El silencio de los palafitos",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-15",
+   "hora": "17:00",
+   "ciudad": "Cali",
+   "sede": "Cinemateca del Museo La Tertulia",
+   "direccion": "Cra. 1 # 5-105, Oeste",
+   "titulo_programacion": "Más allá de la corona",
+   "obra_catalogo": "Más allá de la corona",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-15",
+   "hora": "17:00",
+   "ciudad": "Cali",
+   "sede": "Cinemateca del Museo La Tertulia",
+   "direccion": "Cra. 1 # 5-105, Oeste",
+   "titulo_programacion": "Honorablé",
+   "obra_catalogo": "Honorablé",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-15",
+   "hora": "19:00",
+   "ciudad": "Cali",
+   "sede": "Cinemateca del Museo La Tertulia",
+   "direccion": "Cra. 1 # 5-105, Oeste",
+   "titulo_programacion": "La hija cóndor",
+   "obra_catalogo": "La hija cóndor",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-16",
+   "hora": "17:00",
+   "ciudad": "Cali",
+   "sede": "Cinemateca del Museo La Tertulia",
+   "direccion": "Cra. 1 # 5-105, Oeste",
+   "titulo_programacion": "Un nuevo amanecer",
+   "obra_catalogo": "Un nuevo amanecer",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-16",
+   "hora": "19:00",
+   "ciudad": "Cali",
+   "sede": "Cinemateca del Museo La Tertulia",
+   "direccion": "Cra. 1 # 5-105, Oeste",
+   "titulo_programacion": "Andariega",
+   "obra_catalogo": "Andariega",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-18",
+   "hora": "18:30",
+   "ciudad": "Cali",
+   "sede": "Cinema Local",
+   "direccion": "Calle 4B # 38A-66",
+   "titulo_programacion": "The Beauty of the donkey",
+   "obra_catalogo": null,
+   "tipo": "film_nuevo"
+  },
+  {
+   "dia": "2026-08-19",
+   "hora": "17:00",
+   "ciudad": "Cali",
+   "sede": "Cinemateca del Museo La Tertulia",
+   "direccion": "Cra. 1 # 5-105, Oeste",
+   "titulo_programacion": "Cuando la palabra se hace búsqueda",
+   "obra_catalogo": "Cuando la palabra se hace búsqueda",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-12",
+   "hora": "18:30",
+   "ciudad": "Barranquilla",
+   "sede": "Alianza Francesa",
+   "direccion": "Calle 52 # 54-75",
+   "titulo_programacion": "Niñxs",
+   "obra_catalogo": "Niñxs",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-13",
+   "hora": "18:00",
+   "ciudad": "Barranquilla",
+   "sede": "Cinemateca del Caribe",
+   "direccion": "Calle 76 # 57-61",
+   "titulo_programacion": "Violencias de género en Barranquilla",
+   "obra_catalogo": null,
+   "tipo": "actividad"
+  },
+  {
+   "dia": "2026-08-13",
+   "hora": "19:00",
+   "ciudad": "Barranquilla",
+   "sede": "Cinemateca del Caribe",
+   "direccion": "Calle 76 # 57-61",
+   "titulo_programacion": "Cayenas libertarias",
+   "obra_catalogo": "Cayenas libertarias",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-13",
+   "hora": "18:00",
+   "ciudad": "Barranquilla",
+   "sede": "Fundación Alianza Tecnologica y Desarrollo Educativo - ALITIC",
+   "direccion": "Cra. 54 # 64-73",
+   "titulo_programacion": "La Cerrillana",
+   "obra_catalogo": "La Cerrillana",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-13",
+   "hora": "18:00",
+   "ciudad": "Barranquilla",
+   "sede": "Fundación Alianza Tecnologica y Desarrollo Educativo - ALITIC",
+   "direccion": "Cra. 54 # 64-73",
+   "titulo_programacion": "Madres de nacimiento",
+   "obra_catalogo": "Madres de nacimiento",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-13",
+   "hora": "18:00",
+   "ciudad": "Barranquilla",
+   "sede": "Fundación Alianza Tecnologica y Desarrollo Educativo - ALITIC",
+   "direccion": "Cra. 54 # 64-73",
+   "titulo_programacion": "Más allá",
+   "obra_catalogo": "Más allá",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-13",
+   "hora": "18:00",
+   "ciudad": "Barranquilla",
+   "sede": "Fundación Alianza Tecnologica y Desarrollo Educativo - ALITIC",
+   "direccion": "Cra. 54 # 64-73",
+   "titulo_programacion": "Celeste",
+   "obra_catalogo": "Celeste",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-13",
+   "hora": "18:00",
+   "ciudad": "Barranquilla",
+   "sede": "Fundación Alianza Tecnologica y Desarrollo Educativo - ALITIC",
+   "direccion": "Cra. 54 # 64-73",
+   "titulo_programacion": "Muerto no",
+   "obra_catalogo": "Muerto no",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-13",
+   "hora": "18:00",
+   "ciudad": "Barranquilla",
+   "sede": "Fundación Alianza Tecnologica y Desarrollo Educativo - ALITIC",
+   "direccion": "Cra. 54 # 64-73",
+   "titulo_programacion": "Sukua",
+   "obra_catalogo": "Sukua",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-13",
+   "hora": "18:30",
+   "ciudad": "Barranquilla",
+   "sede": "Museo de Arte Moderno - MAMB",
+   "direccion": "Edificio World Trade Center (Calle 76 # 54-11, loc B3)",
+   "titulo_programacion": "Desierto verde",
+   "obra_catalogo": "Desierto verde",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-13",
+   "hora": "14:00",
+   "ciudad": "Barranquilla",
+   "sede": "Universidad Americana",
+   "direccion": "Calle 72 # 41C-64",
+   "titulo_programacion": "El silencio de la tierra",
+   "obra_catalogo": "El silencio de la tierra",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-13",
+   "hora": "18:30",
+   "ciudad": "Barranquilla",
+   "sede": "Universidad de Salamanca",
+   "direccion": "Cra. 50 # 79-155",
+   "titulo_programacion": "Por una gota de leche",
+   "obra_catalogo": "Por una gota de leche",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-14",
+   "hora": "18:30",
+   "ciudad": "Barranquilla",
+   "sede": "Caas Morón",
+   "direccion": "Cra. 53 # 48-134",
+   "titulo_programacion": "Herencia: Los cantos de la tierra",
+   "obra_catalogo": "Herencia: Los cantos de la tierra",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-14",
+   "hora": "18:30",
+   "ciudad": "Barranquilla",
+   "sede": "CasArte3962",
+   "direccion": "Calle 73B # 39-62",
+   "titulo_programacion": "La luz por primera vez",
+   "obra_catalogo": "La luz por primera vez",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-14",
+   "hora": "16:00",
+   "ciudad": "Barranquilla",
+   "sede": "Cinemateca del Caribe",
+   "direccion": "Calle 76 # 57-61",
+   "titulo_programacion": "Semillas",
+   "obra_catalogo": "Semillas",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-15",
+   "hora": "18:00",
+   "ciudad": "Barranquilla",
+   "sede": "Book Times",
+   "direccion": "Calle 54 # 53-76",
+   "titulo_programacion": "Soñé su nombre",
+   "obra_catalogo": "Soñé su nombre",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-15",
+   "hora": "18:30",
+   "ciudad": "Barranquilla",
+   "sede": "CasArte3962",
+   "direccion": "Calle 73B # 39-62",
+   "titulo_programacion": "El silencio de los palafitos",
+   "obra_catalogo": "El silencio de los palafitos",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-15",
+   "hora": "17:00",
+   "ciudad": "Barranquilla",
+   "sede": "Cinemateca del Caribe",
+   "direccion": "Calle 76 # 57-61",
+   "titulo_programacion": "El juego de la vida",
+   "obra_catalogo": "El juego de la vida",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-15",
+   "hora": "10:00",
+   "ciudad": "Barranquilla",
+   "sede": "Corporación Universitaria Americana (Cinemateca)",
+   "direccion": "Corporación Universitaria Americana (Cinemateca)",
+   "titulo_programacion": "Master Class: Cine documental autobiográfico y memorias",
+   "obra_catalogo": null,
+   "tipo": "actividad"
+  },
+  {
+   "dia": "2026-08-16",
+   "hora": "18:00",
+   "ciudad": "Barranquilla",
+   "sede": "Book Times",
+   "direccion": "Calle 54 # 53-76",
+   "titulo_programacion": "Del otro lado",
+   "obra_catalogo": "Del otro lado",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-16",
+   "hora": "19:00",
+   "ciudad": "Barranquilla",
+   "sede": "Cinemateca del Caribe",
+   "direccion": "Calle 76 # 57-61",
+   "titulo_programacion": "Notas sobre un destierro",
+   "obra_catalogo": "Notas sobre un destierro",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-17",
+   "hora": "15:30",
+   "ciudad": "Barranquilla",
+   "sede": "Centro Comunitario Nueva Colombia / Biblioteca Pa To Ma Suto",
+   "direccion": "Diagonal 75A # 15D-67",
+   "titulo_programacion": "La Bonga",
+   "obra_catalogo": "La Bonga",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-17",
+   "hora": "15:00",
+   "ciudad": "Barranquilla",
+   "sede": "Cinemateca del Caribe",
+   "direccion": "Calle 76 # 57-61",
+   "titulo_programacion": "Three black men (Tres hombres negros)",
+   "obra_catalogo": "Three black men",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-18",
+   "hora": "19:30",
+   "ciudad": "Barranquilla",
+   "sede": "Casa Cultural El Bordillo",
+   "direccion": "Cra. 44 # 87-44",
+   "titulo_programacion": "Kaugsankamalla: mientras vivamos",
+   "obra_catalogo": "Kaugsankamalla: mientras vivamos",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-18",
+   "hora": "20:00",
+   "ciudad": "Barranquilla",
+   "sede": "Cinemateca del Caribe",
+   "direccion": "Calle 76 # 57-61",
+   "titulo_programacion": "Padamlágan (night lihgt)",
+   "obra_catalogo": "Padamlágan",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-18",
+   "hora": "10:30",
+   "ciudad": "Barranquilla",
+   "sede": "Colegio Cruzada Social",
+   "direccion": "Calle 46 # 13C -57, barrio Cevillar",
+   "titulo_programacion": "El Paraíso de Ainara",
+   "obra_catalogo": "El Paraíso de Ainara",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-18",
+   "hora": "10:30",
+   "ciudad": "Barranquilla",
+   "sede": "Colegio Cruzada Social",
+   "direccion": "Calle 46 # 13C -57, barrio Cevillar",
+   "titulo_programacion": "Akababuru: Expresión de asombro",
+   "obra_catalogo": "Akababuru: Expresión de asombro",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-18",
+   "hora": "10:30",
+   "ciudad": "Barranquilla",
+   "sede": "Colegio Cruzada Social",
+   "direccion": "Calle 46 # 13C -57, barrio Cevillar",
+   "titulo_programacion": "La gran hazaña",
+   "obra_catalogo": "La gran hazaña",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-18",
+   "hora": "10:30",
+   "ciudad": "Barranquilla",
+   "sede": "Colegio Cruzada Social",
+   "direccion": "Calle 46 # 13C -57, barrio Cevillar",
+   "titulo_programacion": "In four stops",
+   "obra_catalogo": "In four stops",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-18",
+   "hora": "11:00",
+   "ciudad": "Barranquilla",
+   "sede": "Fundación Alianza Tecnologica y Desarrollo Educativo - ALITIC",
+   "direccion": "Cra. 54 # 64-73",
+   "titulo_programacion": "Shelter",
+   "obra_catalogo": "Shelter",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-18",
+   "hora": "11:00",
+   "ciudad": "Barranquilla",
+   "sede": "Fundación Alianza Tecnologica y Desarrollo Educativo - ALITIC",
+   "direccion": "Cra. 54 # 64-73",
+   "titulo_programacion": "My grandmother is a skydiver",
+   "obra_catalogo": "My grandmother is a skydiver",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-18",
+   "hora": "11:00",
+   "ciudad": "Barranquilla",
+   "sede": "Fundación Alianza Tecnologica y Desarrollo Educativo - ALITIC",
+   "direccion": "Cra. 54 # 64-73",
+   "titulo_programacion": "Todos los días",
+   "obra_catalogo": "Todos los días",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-18",
+   "hora": "11:00",
+   "ciudad": "Barranquilla",
+   "sede": "Fundación Alianza Tecnologica y Desarrollo Educativo - ALITIC",
+   "direccion": "Cra. 54 # 64-73",
+   "titulo_programacion": "Sapos por todos lados",
+   "obra_catalogo": "Sapos por todos lados",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-18",
+   "hora": "11:00",
+   "ciudad": "Barranquilla",
+   "sede": "Fundación Alianza Tecnologica y Desarrollo Educativo - ALITIC",
+   "direccion": "Cra. 54 # 64-73",
+   "titulo_programacion": "Chaski Pacha",
+   "obra_catalogo": "Chaski Pacha",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-18",
+   "hora": "11:00",
+   "ciudad": "Barranquilla",
+   "sede": "Fundación Alianza Tecnologica y Desarrollo Educativo - ALITIC",
+   "direccion": "Cra. 54 # 64-73",
+   "titulo_programacion": "Outside",
+   "obra_catalogo": "Outside",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-18",
+   "hora": "18:30",
+   "ciudad": "Barranquilla",
+   "sede": "Universidad de Salamanca",
+   "direccion": "Cra. 50 # 79-155",
+   "titulo_programacion": "Cuando la palabra se hace búsqueda",
+   "obra_catalogo": "Cuando la palabra se hace búsqueda",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-18",
+   "hora": "18:30",
+   "ciudad": "Barranquilla",
+   "sede": "Universidad de Salamanca",
+   "direccion": "Cra. 50 # 79-155",
+   "titulo_programacion": "El hogar fue sepultado en esa tierra que nunca pudimos encontrar",
+   "obra_catalogo": "El hogar fue sepultado en esa tierra que nunca pudimos encontrar",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-18",
+   "hora": "18:30",
+   "ciudad": "Barranquilla",
+   "sede": "Universidad de Salamanca",
+   "direccion": "Cra. 50 # 79-155",
+   "titulo_programacion": "Trenzando caminos de paz",
+   "obra_catalogo": "Trenzando caminos de paz",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-18",
+   "hora": "18:30",
+   "ciudad": "Barranquilla",
+   "sede": "Universidad de Salamanca",
+   "direccion": "Cra. 50 # 79-155",
+   "titulo_programacion": "Volver a creer",
+   "obra_catalogo": "Volver a creer",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-19",
+   "hora": "10:00",
+   "ciudad": "Barranquilla",
+   "sede": "Centro de Conciliación y Arbitraje - Universidad del Norte",
+   "direccion": "Calle 74 # 58-79",
+   "titulo_programacion": "Andariega",
+   "obra_catalogo": "Andariega",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-19",
+   "hora": "15:00",
+   "ciudad": "Barranquilla",
+   "sede": "Cinemateca del Caribe",
+   "direccion": "Calle 76 # 57-61",
+   "titulo_programacion": "La Bonga",
+   "obra_catalogo": "La Bonga",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-19",
+   "hora": "18:00",
+   "ciudad": "Barranquilla",
+   "sede": "Fundación Puerto Colombia",
+   "direccion": "Estación Ferrocarril de Bolívar, Cra. 4 # 2-45",
+   "titulo_programacion": "La Raya",
+   "obra_catalogo": "La Raya",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-19",
+   "hora": "18:30",
+   "ciudad": "Barranquilla",
+   "sede": "Maloka Cultural",
+   "direccion": "Cra. 46 # 79-18",
+   "titulo_programacion": "Honorablé",
+   "obra_catalogo": "Honorablé",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-19",
+   "hora": "18:30",
+   "ciudad": "Barranquilla",
+   "sede": "Maloka Cultural",
+   "direccion": "Cra. 46 # 79-18",
+   "titulo_programacion": "Trenzando caminos de paz",
+   "obra_catalogo": "Trenzando caminos de paz",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-19",
+   "hora": "18:30",
+   "ciudad": "Barranquilla",
+   "sede": "Maloka Cultural",
+   "direccion": "Cra. 46 # 79-18",
+   "titulo_programacion": "Volver a creer",
+   "obra_catalogo": "Volver a creer",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-19",
+   "hora": "10:00",
+   "ciudad": "Barranquilla",
+   "sede": "Universidad Americana",
+   "direccion": "Calle 72 # 41C-64",
+   "titulo_programacion": "Floresmiro",
+   "obra_catalogo": "Floresmiro",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-19",
+   "hora": "16:00",
+   "ciudad": "Barranquilla",
+   "sede": "Universidad del Atlántico - Centro de Convenciones",
+   "direccion": "Universidad del Atlántico - Puerto Colombia - Cra. 30 # 8-49, Puerto Colombia",
+   "titulo_programacion": "Republic of Amnesia (República de la amnesia)",
+   "obra_catalogo": "Republic of Amnesia",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-12",
+   "hora": "18:30",
+   "ciudad": "Cartagena",
+   "sede": "Centro de Formación de la Cooperación Española",
+   "direccion": "Calle 36 # 2-74, El Centro",
+   "titulo_programacion": "Trenzando caminos de paz",
+   "obra_catalogo": "Trenzando caminos de paz",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-12",
+   "hora": "18:30",
+   "ciudad": "Cartagena",
+   "sede": "Centro de Formación de la Cooperación Española",
+   "direccion": "Calle 36 # 2-74, El Centro",
+   "titulo_programacion": "El silencio de los palafitos",
+   "obra_catalogo": "El silencio de los palafitos",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-13",
+   "hora": "10:00",
+   "ciudad": "Cartagena",
+   "sede": "Centro de Formación de la Cooperación Española",
+   "direccion": "Calle 36 # 2-74, El Centro",
+   "titulo_programacion": "Cobija de recuerdos",
+   "obra_catalogo": "Cobija de recuerdos",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-13",
+   "hora": "10:00",
+   "ciudad": "Cartagena",
+   "sede": "Centro de Formación de la Cooperación Española",
+   "direccion": "Calle 36 # 2-74, El Centro",
+   "titulo_programacion": "Espeletia BK: Frailejón desarticulado",
+   "obra_catalogo": "Espeletia BK: Frailejón desarticulado",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-13",
+   "hora": "10:00",
+   "ciudad": "Cartagena",
+   "sede": "Centro de Formación de la Cooperación Española",
+   "direccion": "Calle 36 # 2-74, El Centro",
+   "titulo_programacion": "Cuando la palabra se hace búsqueda",
+   "obra_catalogo": "Cuando la palabra se hace búsqueda",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-13",
+   "hora": "10:00",
+   "ciudad": "Cartagena",
+   "sede": "Centro de Formación de la Cooperación Española",
+   "direccion": "Calle 36 # 2-74, El Centro",
+   "titulo_programacion": "Amalgama",
+   "obra_catalogo": "Amalgama",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-13",
+   "hora": "18:30",
+   "ciudad": "Cartagena",
+   "sede": "Cinefilo - UdeC San Agustín, Patio de Humanidades",
+   "direccion": "Cra. 6, Calle de la Universidad # 36-100",
+   "titulo_programacion": "Semillas",
+   "obra_catalogo": "Semillas",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-14",
+   "hora": "10:00",
+   "ciudad": "Cartagena",
+   "sede": "Centro de Formación de la Cooperación Española",
+   "direccion": "Calle 36 # 2-74, El Centro",
+   "titulo_programacion": "Una ciudad ¿para quién?",
+   "obra_catalogo": null,
+   "tipo": "actividad"
+  },
+  {
+   "dia": "2026-08-14",
+   "hora": "18:30",
+   "ciudad": "Cartagena",
+   "sede": "Lugar del Poema",
+   "direccion": "Pasaje Leclerc, calle 24 # 8b-83 piso 2, Getsemaní",
+   "titulo_programacion": "Soñé su nombre",
+   "obra_catalogo": "Soñé su nombre",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-15",
+   "hora": "18:30",
+   "ciudad": "Cartagena",
+   "sede": "El Teatrino",
+   "direccion": "Los Almendros Mz E # Lote 11",
+   "titulo_programacion": "Muerto no",
+   "obra_catalogo": "Muerto no",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-15",
+   "hora": "18:30",
+   "ciudad": "Cartagena",
+   "sede": "El Teatrino",
+   "direccion": "Los Almendros Mz E # Lote 11",
+   "titulo_programacion": "Aquí no entra luz",
+   "obra_catalogo": "Aquí no entra luz",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-16",
+   "hora": "17:30",
+   "ciudad": "Cartagena",
+   "sede": "Centro Cultural del Socorro",
+   "direccion": "Cra. 71 # 26-210, sobre la Avenida Principal del barrio El Socorro",
+   "titulo_programacion": "Tuktu, Padre Maíz",
+   "obra_catalogo": "Tuktu, Padre Maíz",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-16",
+   "hora": "17:30",
+   "ciudad": "Cartagena",
+   "sede": "Centro Cultural del Socorro",
+   "direccion": "Cra. 71 # 26-210, sobre la Avenida Principal del barrio El Socorro",
+   "titulo_programacion": "El Paraíso de Ainara",
+   "obra_catalogo": "El Paraíso de Ainara",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-16",
+   "hora": "17:30",
+   "ciudad": "Cartagena",
+   "sede": "Centro Cultural del Socorro",
+   "direccion": "Cra. 71 # 26-210, sobre la Avenida Principal del barrio El Socorro",
+   "titulo_programacion": "Héroes del silencio",
+   "obra_catalogo": "Héroes del silencio",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-16",
+   "hora": "17:30",
+   "ciudad": "Cartagena",
+   "sede": "Centro Cultural del Socorro",
+   "direccion": "Cra. 71 # 26-210, sobre la Avenida Principal del barrio El Socorro",
+   "titulo_programacion": "In four stops",
+   "obra_catalogo": "In four stops",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-16",
+   "hora": "17:30",
+   "ciudad": "Cartagena",
+   "sede": "Centro Cultural del Socorro",
+   "direccion": "Cra. 71 # 26-210, sobre la Avenida Principal del barrio El Socorro",
+   "titulo_programacion": "My grandmother is a skydiver",
+   "obra_catalogo": "My grandmother is a skydiver",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-17",
+   "hora": "18:30",
+   "ciudad": "Cartagena",
+   "sede": "Alianza Francesa",
+   "direccion": "Parque Fernández de Madrid, Cra. 8 # 37-34, San Diego",
+   "titulo_programacion": "La Cerrillana",
+   "obra_catalogo": "La Cerrillana",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-17",
+   "hora": "18:30",
+   "ciudad": "Cartagena",
+   "sede": "Alianza Francesa",
+   "direccion": "Parque Fernández de Madrid, Cra. 8 # 37-34, San Diego",
+   "titulo_programacion": "Apolo",
+   "obra_catalogo": "Apolo",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-13",
+   "hora": "18:30",
+   "ciudad": "Armenia",
+   "sede": "Cine Bajo las Estrellas programa de exhibición y circulación",
+   "direccion": "Parque Sucre",
+   "titulo_programacion": "Semillas",
+   "obra_catalogo": "Semillas",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-14",
+   "hora": "16:00",
+   "ciudad": "Armenia",
+   "sede": "Escuela de Administración y Mercadotecnia del Quindío (EAM)",
+   "direccion": "Cra. 14 # 3-11 (Avenida Bolívar)",
+   "titulo_programacion": "In four stops",
+   "obra_catalogo": "In four stops",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-14",
+   "hora": "16:00",
+   "ciudad": "Armenia",
+   "sede": "Escuela de Administración y Mercadotecnia del Quindío (EAM)",
+   "direccion": "Cra. 14 # 3-11 (Avenida Bolívar)",
+   "titulo_programacion": "My grandmother is a skydiver",
+   "obra_catalogo": "My grandmother is a skydiver",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-14",
+   "hora": "16:00",
+   "ciudad": "Armenia",
+   "sede": "Escuela de Administración y Mercadotecnia del Quindío (EAM)",
+   "direccion": "Cra. 14 # 3-11 (Avenida Bolívar)",
+   "titulo_programacion": "Tuktu, Padre Maíz",
+   "obra_catalogo": "Tuktu, Padre Maíz",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-14",
+   "hora": "16:00",
+   "ciudad": "Armenia",
+   "sede": "Escuela de Administración y Mercadotecnia del Quindío (EAM)",
+   "direccion": "Cra. 14 # 3-11 (Avenida Bolívar)",
+   "titulo_programacion": "Sapos por todos lados",
+   "obra_catalogo": "Sapos por todos lados",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-14",
+   "hora": "10:00",
+   "ciudad": "Armenia",
+   "sede": "Sena Galán",
+   "direccion": "Cra. 18 # 7-58",
+   "titulo_programacion": "Producción y Animación 2D",
+   "obra_catalogo": null,
+   "tipo": "actividad"
+  },
+  {
+   "dia": "2026-08-15",
+   "hora": "16:30",
+   "ciudad": "Armenia",
+   "sede": "Casa Cromo Casa Cultural",
+   "direccion": "Calle 22 Norte # 12-39",
+   "titulo_programacion": "Conversatorio Mujeres en el Audiovisual",
+   "obra_catalogo": null,
+   "tipo": "actividad"
+  },
+  {
+   "dia": "2026-08-15",
+   "hora": "19:00",
+   "ciudad": "Armenia",
+   "sede": "Casa Cromo Casa Cultural",
+   "direccion": "Calle 22 Norte # 12-39",
+   "titulo_programacion": "Madres de nacimiento",
+   "obra_catalogo": "Madres de nacimiento",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-15",
+   "hora": "19:00",
+   "ciudad": "Armenia",
+   "sede": "Casa Cromo Casa Cultural",
+   "direccion": "Calle 22 Norte # 12-39",
+   "titulo_programacion": "Celeste",
+   "obra_catalogo": "Celeste",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-15",
+   "hora": "19:00",
+   "ciudad": "Armenia",
+   "sede": "Casa Cromo Casa Cultural",
+   "direccion": "Calle 22 Norte # 12-39",
+   "titulo_programacion": "Pawa",
+   "obra_catalogo": "Pawa",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-15",
+   "hora": "19:00",
+   "ciudad": "Armenia",
+   "sede": "Casa Cromo Casa Cultural",
+   "direccion": "Calle 22 Norte # 12-39",
+   "titulo_programacion": "Héroes del silencio",
+   "obra_catalogo": "Héroes del silencio",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-15",
+   "hora": "19:00",
+   "ciudad": "Armenia",
+   "sede": "Casa Cromo Casa Cultural",
+   "direccion": "Calle 22 Norte # 12-39",
+   "titulo_programacion": "Más allá",
+   "obra_catalogo": "Más allá",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-15",
+   "hora": "19:00",
+   "ciudad": "Armenia",
+   "sede": "Casa Cromo Casa Cultural",
+   "direccion": "Calle 22 Norte # 12-39",
+   "titulo_programacion": "Clemencia",
+   "obra_catalogo": "Clemencia",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-15",
+   "hora": "19:00",
+   "ciudad": "Armenia",
+   "sede": "Casa Cromo Casa Cultural",
+   "direccion": "Calle 22 Norte # 12-39",
+   "titulo_programacion": "La luz que nos queda",
+   "obra_catalogo": "La luz que nos queda",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-15",
+   "hora": "10:00",
+   "ciudad": "Armenia",
+   "sede": "Contacto Escuela de Fotografía",
+   "direccion": "Cra. 16 # 9-54, piso 2",
+   "titulo_programacion": "Hija del volcán",
+   "obra_catalogo": "Hija del volcán",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-16",
+   "hora": "12:30",
+   "ciudad": "Armenia",
+   "sede": "Casa Aparte",
+   "direccion": "Cra. 23d # 11-25",
+   "titulo_programacion": "Trenzando caminos de paz",
+   "obra_catalogo": "Trenzando caminos de paz",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-16",
+   "hora": "12:30",
+   "ciudad": "Armenia",
+   "sede": "Casa Aparte",
+   "direccion": "Cra. 23d # 11-25",
+   "titulo_programacion": "Juntas por la paz del Chocó",
+   "obra_catalogo": "Juntas por la paz del Chocó",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-16",
+   "hora": "12:30",
+   "ciudad": "Armenia",
+   "sede": "Casa Aparte",
+   "direccion": "Cra. 23d # 11-25",
+   "titulo_programacion": "Indiamenta",
+   "obra_catalogo": "Indiamenta",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-18",
+   "hora": "10:30",
+   "ciudad": "Armenia",
+   "sede": "Universidad del Quindío",
+   "direccion": "Cra. 15 con calle 12 Norte",
+   "titulo_programacion": "Amalgama",
+   "obra_catalogo": "Amalgama",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-18",
+   "hora": "10:30",
+   "ciudad": "Armenia",
+   "sede": "Universidad del Quindío",
+   "direccion": "Cra. 15 con calle 12 Norte",
+   "titulo_programacion": "Cobija de recuerdos",
+   "obra_catalogo": "Cobija de recuerdos",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-18",
+   "hora": "10:30",
+   "ciudad": "Armenia",
+   "sede": "Universidad del Quindío",
+   "direccion": "Cra. 15 con calle 12 Norte",
+   "titulo_programacion": "Espeletia BK: Frailejón desarticulado",
+   "obra_catalogo": "Espeletia BK: Frailejón desarticulado",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-18",
+   "hora": "10:30",
+   "ciudad": "Armenia",
+   "sede": "Universidad del Quindío",
+   "direccion": "Cra. 15 con calle 12 Norte",
+   "titulo_programacion": "Cuando la palabra se hace búsqueda",
+   "obra_catalogo": "Cuando la palabra se hace búsqueda",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-18",
+   "hora": "15:00",
+   "ciudad": "Armenia",
+   "sede": "Universidad del Quindío",
+   "direccion": "Cra. 15 con calle 12 Norte",
+   "titulo_programacion": "Del otro lado",
+   "obra_catalogo": "Del otro lado",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-18",
+   "hora": "17:00",
+   "ciudad": "Armenia",
+   "sede": "Universidad del Quindío",
+   "direccion": "Cra. 15 con calle 12 Norte",
+   "titulo_programacion": "Cuando la palabra se hace búsqueda",
+   "obra_catalogo": "Cuando la palabra se hace búsqueda",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-19",
+   "hora": "16:00",
+   "ciudad": "Armenia",
+   "sede": "Universidad Alexander von Humboldt",
+   "direccion": "Avenida Bolívar # 1-189",
+   "titulo_programacion": "Bojayá, la verdad desde adentro",
+   "obra_catalogo": "Bojayá, la verdad desde adentro",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-13",
+   "hora": "14:00",
+   "ciudad": "Ibagué",
+   "sede": "Centro Cultural Panóptico de Ibagué",
+   "direccion": "Calle 11 # 9-73ª, barrio Belén",
+   "titulo_programacion": "Madres de nacimiento",
+   "obra_catalogo": "Madres de nacimiento",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-13",
+   "hora": "14:00",
+   "ciudad": "Ibagué",
+   "sede": "Centro Cultural Panóptico de Ibagué",
+   "direccion": "Calle 11 # 9-73ª, barrio Belén",
+   "titulo_programacion": "Sukua",
+   "obra_catalogo": "Sukua",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-13",
+   "hora": "14:00",
+   "ciudad": "Ibagué",
+   "sede": "Centro Cultural Panóptico de Ibagué",
+   "direccion": "Calle 11 # 9-73ª, barrio Belén",
+   "titulo_programacion": "La independencia",
+   "obra_catalogo": "La independencia",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-13",
+   "hora": "14:00",
+   "ciudad": "Ibagué",
+   "sede": "Centro Cultural Panóptico de Ibagué",
+   "direccion": "Calle 11 # 9-73ª, barrio Belén",
+   "titulo_programacion": "Cartas a la tierra",
+   "obra_catalogo": "Cartas a la tierra",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-13",
+   "hora": "14:00",
+   "ciudad": "Ibagué",
+   "sede": "Centro Cultural Panóptico de Ibagué",
+   "direccion": "Calle 11 # 9-73ª, barrio Belén",
+   "titulo_programacion": "Pawa",
+   "obra_catalogo": "Pawa",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-13",
+   "hora": "17:00",
+   "ciudad": "Ibagué",
+   "sede": "Centro Cultural Panóptico de Ibagué",
+   "direccion": "Calle 11 # 9-73ª, barrio Belén",
+   "titulo_programacion": "La Raya",
+   "obra_catalogo": "La Raya",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-13",
+   "hora": "18:00",
+   "ciudad": "Ibagué",
+   "sede": "Universidad de Ibagué",
+   "direccion": "Carrera 22 - Calle 67, barrio Ambalá",
+   "titulo_programacion": "Semillas",
+   "obra_catalogo": "Semillas",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-14",
+   "hora": "14:00",
+   "ciudad": "Ibagué",
+   "sede": "Centro Cultural Panóptico de Ibagué",
+   "direccion": "Calle 11 # 9-73ª, barrio Belén",
+   "titulo_programacion": "Pawa",
+   "obra_catalogo": "Pawa",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-14",
+   "hora": "14:00",
+   "ciudad": "Ibagué",
+   "sede": "Centro Cultural Panóptico de Ibagué",
+   "direccion": "Calle 11 # 9-73ª, barrio Belén",
+   "titulo_programacion": "Madres de nacimiento",
+   "obra_catalogo": "Madres de nacimiento",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-14",
+   "hora": "14:00",
+   "ciudad": "Ibagué",
+   "sede": "Centro Cultural Panóptico de Ibagué",
+   "direccion": "Calle 11 # 9-73ª, barrio Belén",
+   "titulo_programacion": "Sukua",
+   "obra_catalogo": "Sukua",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-14",
+   "hora": "14:00",
+   "ciudad": "Ibagué",
+   "sede": "Centro Cultural Panóptico de Ibagué",
+   "direccion": "Calle 11 # 9-73ª, barrio Belén",
+   "titulo_programacion": "La independencia",
+   "obra_catalogo": "La independencia",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-14",
+   "hora": "14:00",
+   "ciudad": "Ibagué",
+   "sede": "Centro Cultural Panóptico de Ibagué",
+   "direccion": "Calle 11 # 9-73ª, barrio Belén",
+   "titulo_programacion": "Cartas a la tierra",
+   "obra_catalogo": "Cartas a la tierra",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-14",
+   "hora": "17:00",
+   "ciudad": "Ibagué",
+   "sede": "Centro Cultural Panóptico de Ibagué",
+   "direccion": "Calle 11 # 9-73ª, barrio Belén",
+   "titulo_programacion": "Volver a creer",
+   "obra_catalogo": "Volver a creer",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-14",
+   "hora": "17:00",
+   "ciudad": "Ibagué",
+   "sede": "Centro Cultural Panóptico de Ibagué",
+   "direccion": "Calle 11 # 9-73ª, barrio Belén",
+   "titulo_programacion": "Cuando la palabra se hace búsqueda",
+   "obra_catalogo": "Cuando la palabra se hace búsqueda",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-14",
+   "hora": "18:30",
+   "ciudad": "Ibagué",
+   "sede": "Centro Cultural Panóptico de Ibagué",
+   "direccion": "Calle 11 # 9-73ª, barrio Belén",
+   "titulo_programacion": "Tierra que habla",
+   "obra_catalogo": "Tierra que habla",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-14",
+   "hora": "15:00",
+   "ciudad": "Ibagué",
+   "sede": "Universidad de Ibagué",
+   "direccion": "Carrera 22 - Calle 67, barrio Ambalá",
+   "titulo_programacion": "La luz por primera vez",
+   "obra_catalogo": "La luz por primera vez",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-14",
+   "hora": "18:00",
+   "ciudad": "Ibagué",
+   "sede": "Universidad de Ibagué",
+   "direccion": "Carrera 22 - Calle 67, barrio Ambalá",
+   "titulo_programacion": "Chaski Pacha",
+   "obra_catalogo": "Chaski Pacha",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-14",
+   "hora": "18:00",
+   "ciudad": "Ibagué",
+   "sede": "Universidad de Ibagué",
+   "direccion": "Carrera 22 - Calle 67, barrio Ambalá",
+   "titulo_programacion": "Muerto no",
+   "obra_catalogo": "Muerto no",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-14",
+   "hora": "18:00",
+   "ciudad": "Ibagué",
+   "sede": "Universidad de Ibagué",
+   "direccion": "Carrera 22 - Calle 67, barrio Ambalá",
+   "titulo_programacion": "La Cerrillana",
+   "obra_catalogo": "La Cerrillana",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-14",
+   "hora": "18:00",
+   "ciudad": "Ibagué",
+   "sede": "Universidad de Ibagué",
+   "direccion": "Carrera 22 - Calle 67, barrio Ambalá",
+   "titulo_programacion": "Una torreta en llamas",
+   "obra_catalogo": "Una torreta en llamas",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-14",
+   "hora": "18:00",
+   "ciudad": "Ibagué",
+   "sede": "Universidad de Ibagué",
+   "direccion": "Carrera 22 - Calle 67, barrio Ambalá",
+   "titulo_programacion": "Celeste",
+   "obra_catalogo": "Celeste",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-15",
+   "hora": "14:00",
+   "ciudad": "Ibagué",
+   "sede": "Centro Cultural Panóptico de Ibagué",
+   "direccion": "Calle 11 # 9-73ª, barrio Belén",
+   "titulo_programacion": "Madres de nacimiento",
+   "obra_catalogo": "Madres de nacimiento",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-15",
+   "hora": "14:00",
+   "ciudad": "Ibagué",
+   "sede": "Centro Cultural Panóptico de Ibagué",
+   "direccion": "Calle 11 # 9-73ª, barrio Belén",
+   "titulo_programacion": "Sukua",
+   "obra_catalogo": "Sukua",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-15",
+   "hora": "14:00",
+   "ciudad": "Ibagué",
+   "sede": "Centro Cultural Panóptico de Ibagué",
+   "direccion": "Calle 11 # 9-73ª, barrio Belén",
+   "titulo_programacion": "La independencia",
+   "obra_catalogo": "La independencia",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-15",
+   "hora": "14:00",
+   "ciudad": "Ibagué",
+   "sede": "Centro Cultural Panóptico de Ibagué",
+   "direccion": "Calle 11 # 9-73ª, barrio Belén",
+   "titulo_programacion": "Cartas a la tierra",
+   "obra_catalogo": "Cartas a la tierra",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-15",
+   "hora": "14:00",
+   "ciudad": "Ibagué",
+   "sede": "Centro Cultural Panóptico de Ibagué",
+   "direccion": "Calle 11 # 9-73ª, barrio Belén",
+   "titulo_programacion": "Pawa",
+   "obra_catalogo": "Pawa",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-15",
+   "hora": "16:00",
+   "ciudad": "Ibagué",
+   "sede": "Centro Cultural Panóptico de Ibagué",
+   "direccion": "Calle 11 # 9-73ª, barrio Belén",
+   "titulo_programacion": "Indiamenta",
+   "obra_catalogo": "Indiamenta",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-15",
+   "hora": "18:00",
+   "ciudad": "Ibagué",
+   "sede": "Centro Cultural Panóptico de Ibagué",
+   "direccion": "Calle 11 # 9-73ª, barrio Belén",
+   "titulo_programacion": "Aquí no entra luz",
+   "obra_catalogo": "Aquí no entra luz",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-15",
+   "hora": "18:00",
+   "ciudad": "Ibagué",
+   "sede": "Centro Cultural Panóptico de Ibagué",
+   "direccion": "Calle 11 # 9-73ª, barrio Belén",
+   "titulo_programacion": "Muerto no",
+   "obra_catalogo": "Muerto no",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-15",
+   "hora": "19:00",
+   "ciudad": "Ibagué",
+   "sede": "Lember Cinéma",
+   "direccion": "Calle 42 # 3-45",
+   "titulo_programacion": "El hogar fue sepultado en esa tierra que nunca pudimos encontrar",
+   "obra_catalogo": "El hogar fue sepultado en esa tierra que nunca pudimos encontrar",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-15",
+   "hora": "16:30",
+   "ciudad": "Ibagué",
+   "sede": "Museo Panóptico de Ibagué",
+   "direccion": "",
+   "titulo_programacion": "Resistencias indígenas en Ibagué",
+   "obra_catalogo": null,
+   "tipo": "actividad"
+  },
+  {
+   "dia": "2026-08-16",
+   "hora": "16:00",
+   "ciudad": "Ibagué",
+   "sede": "Centro Cultural Panóptico de Ibagué",
+   "direccion": "Calle 11 # 9-73ª, barrio Belén",
+   "titulo_programacion": "El Paraíso de Ainara",
+   "obra_catalogo": "El Paraíso de Ainara",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-16",
+   "hora": "16:00",
+   "ciudad": "Ibagué",
+   "sede": "Centro Cultural Panóptico de Ibagué",
+   "direccion": "Calle 11 # 9-73ª, barrio Belén",
+   "titulo_programacion": "Akababuru: Expresión de asombro",
+   "obra_catalogo": "Akababuru: Expresión de asombro",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-16",
+   "hora": "16:00",
+   "ciudad": "Ibagué",
+   "sede": "Centro Cultural Panóptico de Ibagué",
+   "direccion": "Calle 11 # 9-73ª, barrio Belén",
+   "titulo_programacion": "La gran hazaña",
+   "obra_catalogo": "La gran hazaña",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-16",
+   "hora": "16:00",
+   "ciudad": "Ibagué",
+   "sede": "Centro Cultural Panóptico de Ibagué",
+   "direccion": "Calle 11 # 9-73ª, barrio Belén",
+   "titulo_programacion": "Héroes del silencio",
+   "obra_catalogo": "Héroes del silencio",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-16",
+   "hora": "16:00",
+   "ciudad": "Ibagué",
+   "sede": "Centro Cultural Panóptico de Ibagué",
+   "direccion": "Calle 11 # 9-73ª, barrio Belén",
+   "titulo_programacion": "In four stops",
+   "obra_catalogo": "In four stops",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-18",
+   "hora": "14:00",
+   "ciudad": "Ibagué",
+   "sede": "Centro Cultural Panóptico de Ibagué",
+   "direccion": "Calle 11 # 9-73ª, barrio Belén",
+   "titulo_programacion": "Madres de nacimiento",
+   "obra_catalogo": "Madres de nacimiento",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-18",
+   "hora": "14:00",
+   "ciudad": "Ibagué",
+   "sede": "Centro Cultural Panóptico de Ibagué",
+   "direccion": "Calle 11 # 9-73ª, barrio Belén",
+   "titulo_programacion": "Sukua",
+   "obra_catalogo": "Sukua",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-18",
+   "hora": "14:00",
+   "ciudad": "Ibagué",
+   "sede": "Centro Cultural Panóptico de Ibagué",
+   "direccion": "Calle 11 # 9-73ª, barrio Belén",
+   "titulo_programacion": "La independencia",
+   "obra_catalogo": "La independencia",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-18",
+   "hora": "14:00",
+   "ciudad": "Ibagué",
+   "sede": "Centro Cultural Panóptico de Ibagué",
+   "direccion": "Calle 11 # 9-73ª, barrio Belén",
+   "titulo_programacion": "Cartas a la tierra",
+   "obra_catalogo": "Cartas a la tierra",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-18",
+   "hora": "14:00",
+   "ciudad": "Ibagué",
+   "sede": "Centro Cultural Panóptico de Ibagué",
+   "direccion": "Calle 11 # 9-73ª, barrio Belén",
+   "titulo_programacion": "Pawa",
+   "obra_catalogo": "Pawa",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-18",
+   "hora": "09:00",
+   "ciudad": "Ibagué",
+   "sede": "Universidad de Ibagué",
+   "direccion": "Carrera 22 - Calle 67, barrio Ambalá",
+   "titulo_programacion": "Aminetu",
+   "obra_catalogo": "Aminetu",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-18",
+   "hora": "15:00",
+   "ciudad": "Ibagué",
+   "sede": "Universidad de Ibagué",
+   "direccion": "Carrera 22 - Calle 67, barrio Ambalá",
+   "titulo_programacion": "Andariega",
+   "obra_catalogo": "Andariega",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-19",
+   "hora": "14:00",
+   "ciudad": "Ibagué",
+   "sede": "Centro Cultural Panóptico de Ibagué",
+   "direccion": "Calle 11 # 9-73ª, barrio Belén",
+   "titulo_programacion": "Madres de nacimiento",
+   "obra_catalogo": "Madres de nacimiento",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-19",
+   "hora": "14:00",
+   "ciudad": "Ibagué",
+   "sede": "Centro Cultural Panóptico de Ibagué",
+   "direccion": "Calle 11 # 9-73ª, barrio Belén",
+   "titulo_programacion": "Sukua",
+   "obra_catalogo": "Sukua",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-19",
+   "hora": "14:00",
+   "ciudad": "Ibagué",
+   "sede": "Centro Cultural Panóptico de Ibagué",
+   "direccion": "Calle 11 # 9-73ª, barrio Belén",
+   "titulo_programacion": "La independencia",
+   "obra_catalogo": "La independencia",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-19",
+   "hora": "14:00",
+   "ciudad": "Ibagué",
+   "sede": "Centro Cultural Panóptico de Ibagué",
+   "direccion": "Calle 11 # 9-73ª, barrio Belén",
+   "titulo_programacion": "Cartas a la tierra",
+   "obra_catalogo": "Cartas a la tierra",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-19",
+   "hora": "14:00",
+   "ciudad": "Ibagué",
+   "sede": "Centro Cultural Panóptico de Ibagué",
+   "direccion": "Calle 11 # 9-73ª, barrio Belén",
+   "titulo_programacion": "Pawa",
+   "obra_catalogo": "Pawa",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-19",
+   "hora": "09:00",
+   "ciudad": "Ibagué",
+   "sede": "Universidad de Ibagué",
+   "direccion": "Carrera 22 - Calle 67, barrio Ambalá",
+   "titulo_programacion": "Gestión y Programación de Muestras y Festivales de Cine",
+   "obra_catalogo": null,
+   "tipo": "actividad"
+  },
+  {
+   "dia": "2026-08-19",
+   "hora": "18:00",
+   "ciudad": "Ibagué",
+   "sede": "Universidad de Ibagué",
+   "direccion": "Carrera 22 - Calle 67, barrio Ambalá",
+   "titulo_programacion": "Hija del volcán",
+   "obra_catalogo": "Hija del volcán",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-13",
+   "hora": "16:00",
+   "ciudad": "Quibdó",
+   "sede": "Cineland",
+   "direccion": "Centro Comercial El Caraño Calle 30, Avenida Aeropuerto, Barrio Los Ángeles (frente al Aeropuerto El Caraño)",
+   "titulo_programacion": "Bojayá, la verdad desde adentro",
+   "obra_catalogo": "Bojayá, la verdad desde adentro",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-14",
+   "hora": "16:00",
+   "ciudad": "Quibdó",
+   "sede": "Cineland",
+   "direccion": "Centro Comercial El Caraño Calle 30, Avenida Aeropuerto, Barrio Los Ángeles (frente al Aeropuerto El Caraño)",
+   "titulo_programacion": "Bojayá, la verdad desde adentro",
+   "obra_catalogo": "Bojayá, la verdad desde adentro",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-14",
+   "hora": "08:00",
+   "ciudad": "Quibdó",
+   "sede": "Institución Educativa Isaac Rodríguez",
+   "direccion": "Barrio Reposo #2",
+   "titulo_programacion": "El verano de Jahia (Jahia's Summer)",
+   "obra_catalogo": "El verano de Jahia",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-15",
+   "hora": "09:00",
+   "ciudad": "Quibdó",
+   "sede": "Colegio Carrasquilla (Cra. 7ma)",
+   "direccion": "Colegio Carrasquilla (Cra. 7ma)",
+   "titulo_programacion": "Actuación para cine",
+   "obra_catalogo": null,
+   "tipo": "actividad"
+  },
+  {
+   "dia": "2026-08-15",
+   "hora": "15:00",
+   "ciudad": "Quibdó",
+   "sede": "Librería Bagatá",
+   "direccion": "Cra. 7 #27-3 (frente al Colegio Carrasquilla)",
+   "titulo_programacion": "Juntas por la paz del Chocó",
+   "obra_catalogo": "Juntas por la paz del Chocó",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-15",
+   "hora": "15:00",
+   "ciudad": "Quibdó",
+   "sede": "Librería Bagatá",
+   "direccion": "Cra. 7 #27-3 (frente al Colegio Carrasquilla)",
+   "titulo_programacion": "Después del frío",
+   "obra_catalogo": "Después del frío",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-16",
+   "hora": "18:00",
+   "ciudad": "Quibdó",
+   "sede": "Función Aire Libre - Malecón",
+   "direccion": "",
+   "titulo_programacion": "El juego de la vida",
+   "obra_catalogo": "El juego de la vida",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-17",
+   "hora": "15:00",
+   "ciudad": "Quibdó",
+   "sede": "Biblioteca Pública Deptal Arnoldo de los Santos Palacios Mosquera",
+   "direccion": "Calle 30, Avenida Aeropuerto, Barrio Los Ángeles (frente al Aeropuerto El Caraño)",
+   "titulo_programacion": "Chaski Pacha",
+   "obra_catalogo": "Chaski Pacha",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-17",
+   "hora": "15:00",
+   "ciudad": "Quibdó",
+   "sede": "Biblioteca Pública Deptal Arnoldo de los Santos Palacios Mosquera",
+   "direccion": "Calle 30, Avenida Aeropuerto, Barrio Los Ángeles (frente al Aeropuerto El Caraño)",
+   "titulo_programacion": "Muerto no",
+   "obra_catalogo": "Muerto no",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-17",
+   "hora": "15:00",
+   "ciudad": "Quibdó",
+   "sede": "Biblioteca Pública Deptal Arnoldo de los Santos Palacios Mosquera",
+   "direccion": "Calle 30, Avenida Aeropuerto, Barrio Los Ángeles (frente al Aeropuerto El Caraño)",
+   "titulo_programacion": "Y el río lloró",
+   "obra_catalogo": "Y el río lloró",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-17",
+   "hora": "15:00",
+   "ciudad": "Quibdó",
+   "sede": "Biblioteca Pública Deptal Arnoldo de los Santos Palacios Mosquera",
+   "direccion": "Calle 30, Avenida Aeropuerto, Barrio Los Ángeles (frente al Aeropuerto El Caraño)",
+   "titulo_programacion": "Apotnojushi La Casa del viento",
+   "obra_catalogo": "Apotnojushi La Casa del viento",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-17",
+   "hora": "15:00",
+   "ciudad": "Quibdó",
+   "sede": "Biblioteca Pública Deptal Arnoldo de los Santos Palacios Mosquera",
+   "direccion": "Calle 30, Avenida Aeropuerto, Barrio Los Ángeles (frente al Aeropuerto El Caraño)",
+   "titulo_programacion": "Más allá de la corona",
+   "obra_catalogo": "Más allá de la corona",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-17",
+   "hora": "16:00",
+   "ciudad": "Quibdó",
+   "sede": "Biblioteca Pública Deptal Arnoldo de los Santos Palacios Mosquera",
+   "direccion": "Calle 30, Avenida Aeropuerto, Barrio Los Ángeles (frente al Aeropuerto El Caraño)",
+   "titulo_programacion": "Cuando la palabra se hace búsqueda",
+   "obra_catalogo": "Cuando la palabra se hace búsqueda",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-17",
+   "hora": "08:00",
+   "ciudad": "Quibdó",
+   "sede": "Institución Educativa Isaac Rodríguez",
+   "direccion": "Barrio Reposo #2",
+   "titulo_programacion": "Semillas",
+   "obra_catalogo": "Semillas",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-18",
+   "hora": "15:00",
+   "ciudad": "Quibdó",
+   "sede": "Librería Bagatá",
+   "direccion": "Cra. 7 #27-3 (frente al Colegio Carrasquilla)",
+   "titulo_programacion": "El silencio de los palafitos",
+   "obra_catalogo": "El silencio de los palafitos",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-18",
+   "hora": "16:00",
+   "ciudad": "Quibdó",
+   "sede": "Librería Bagatá",
+   "direccion": "Cra. 7 #27-3 (frente al Colegio Carrasquilla)",
+   "titulo_programacion": "Hablemos de salud mental",
+   "obra_catalogo": null,
+   "tipo": "actividad"
+  },
+  {
+   "dia": "2026-08-18",
+   "hora": "09:00",
+   "ciudad": "Quibdó",
+   "sede": "Universidad Tecnológica del Chocó",
+   "direccion": "Carrera 22, Ciudadela Universitaria Barrio Nicolas Medrano",
+   "titulo_programacion": "Three black men (Tres hombres negros)",
+   "obra_catalogo": "Three black men",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-19",
+   "hora": "16:00",
+   "ciudad": "Quibdó",
+   "sede": "Biblioteca Pública Deptal Arnoldo de los Santos Palacios Mosquera",
+   "direccion": "Calle 30, Avenida Aeropuerto, Barrio Los Ángeles (frente al Aeropuerto El Caraño)",
+   "titulo_programacion": "Carmela y los caminantes",
+   "obra_catalogo": "Carmela y los caminantes",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-19",
+   "hora": "09:00",
+   "ciudad": "Quibdó",
+   "sede": "Universidad Tecnológica del Chocó",
+   "direccion": "Carrera 22, Ciudadela Universitaria Barrio Nicolas Medrano",
+   "titulo_programacion": "58th",
+   "obra_catalogo": "58th",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-13",
+   "hora": "19:00",
+   "ciudad": "Pereira",
+   "sede": "Cámara de Comercio de Pereira",
+   "direccion": "Carrera 8a # 23-09, piso 3",
+   "titulo_programacion": "Eva",
+   "obra_catalogo": "Eva",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-14",
+   "hora": "18:00",
+   "ciudad": "Pereira",
+   "sede": "Cine a la Calle",
+   "direccion": "Parque Olaya Herrera",
+   "titulo_programacion": "Semillas",
+   "obra_catalogo": "Semillas",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-14",
+   "hora": "19:00",
+   "ciudad": "Pereira",
+   "sede": "Cine Club La Florida",
+   "direccion": "Corregimiento La Florida",
+   "titulo_programacion": "Apotnojushi La Casa del viento",
+   "obra_catalogo": "Apotnojushi La Casa del viento",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-14",
+   "hora": "19:00",
+   "ciudad": "Pereira",
+   "sede": "Cine Club La Florida",
+   "direccion": "Corregimiento La Florida",
+   "titulo_programacion": "La Raya",
+   "obra_catalogo": "La Raya",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-14",
+   "hora": "18:00",
+   "ciudad": "Pereira",
+   "sede": "Colombo Americano de Pereira",
+   "direccion": "Carrera 6 Nº 23-58",
+   "titulo_programacion": "Mujeres, juventudes y activismo político en la era digital",
+   "obra_catalogo": null,
+   "tipo": "actividad"
+  },
+  {
+   "dia": "2026-08-14",
+   "hora": "14:00",
+   "ciudad": "Pereira",
+   "sede": "Fundación Malabareando las Calles",
+   "direccion": "Carrera 8 #15 - 09",
+   "titulo_programacion": "La gran hazaña",
+   "obra_catalogo": "La gran hazaña",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-14",
+   "hora": "14:00",
+   "ciudad": "Pereira",
+   "sede": "Fundación Malabareando las Calles",
+   "direccion": "Carrera 8 #15 - 09",
+   "titulo_programacion": "Héroes del silencio",
+   "obra_catalogo": "Héroes del silencio",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-14",
+   "hora": "16:00",
+   "ciudad": "Pereira",
+   "sede": "Fundación Malabareando las Calles",
+   "direccion": "Carrera 8 #15 - 09",
+   "titulo_programacion": "Pintando realidades",
+   "obra_catalogo": null,
+   "tipo": "film_nuevo"
+  },
+  {
+   "dia": "2026-08-14",
+   "hora": "08:00",
+   "ciudad": "Pereira",
+   "sede": "Liceo Taller San Miguel",
+   "direccion": "Km 8 Vía Armenia - Entrada # 8",
+   "titulo_programacion": "El bosque",
+   "obra_catalogo": "El bosque",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-15",
+   "hora": "19:00",
+   "ciudad": "Pereira",
+   "sede": "Cine Club Alef - Casa Hoja",
+   "direccion": "Calle 12 bis # 16-18, Av. Circunvalar",
+   "titulo_programacion": "Muerto no",
+   "obra_catalogo": "Muerto no",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-15",
+   "hora": "19:00",
+   "ciudad": "Pereira",
+   "sede": "Cine Club Alef - Casa Hoja",
+   "direccion": "Calle 12 bis # 16-18, Av. Circunvalar",
+   "titulo_programacion": "El silencio de los palafitos",
+   "obra_catalogo": "El silencio de los palafitos",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-15",
+   "hora": "10:00",
+   "ciudad": "Pereira",
+   "sede": "Colombo Americano de Pereira",
+   "direccion": "Carrera 6 Nº 23-58",
+   "titulo_programacion": "El Paraíso de Ainara",
+   "obra_catalogo": "El Paraíso de Ainara",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-15",
+   "hora": "10:00",
+   "ciudad": "Pereira",
+   "sede": "Colombo Americano de Pereira",
+   "direccion": "Carrera 6 Nº 23-58",
+   "titulo_programacion": "In four stops",
+   "obra_catalogo": "In four stops",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-15",
+   "hora": "10:00",
+   "ciudad": "Pereira",
+   "sede": "Colombo Americano de Pereira",
+   "direccion": "Carrera 6 Nº 23-58",
+   "titulo_programacion": "Akababuru: Expresión de asombro",
+   "obra_catalogo": "Akababuru: Expresión de asombro",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-15",
+   "hora": "10:00",
+   "ciudad": "Pereira",
+   "sede": "Colombo Americano de Pereira",
+   "direccion": "Carrera 6 Nº 23-58",
+   "titulo_programacion": "La gran hazaña",
+   "obra_catalogo": "La gran hazaña",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-15",
+   "hora": "10:00",
+   "ciudad": "Pereira",
+   "sede": "Colombo Americano de Pereira",
+   "direccion": "Carrera 6 Nº 23-58",
+   "titulo_programacion": "Héroes del silencio",
+   "obra_catalogo": "Héroes del silencio",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-15",
+   "hora": "09:00",
+   "ciudad": "Pereira",
+   "sede": "UNIVERSIDAD TECNOLÓGICA DE PEREIRA - BLOQUE 7A / 118",
+   "direccion": "UNIVERSIDAD TECNOLÓGICA DE PEREIRA - BLOQUE 7A / 118",
+   "titulo_programacion": "Barrismo social: Construyendo comunidad desde el aguante",
+   "obra_catalogo": null,
+   "tipo": "actividad"
+  },
+  {
+   "dia": "2026-08-17",
+   "hora": "14:00",
+   "ciudad": "Pereira",
+   "sede": "Museo Intangible del Confinamiento. Casa de la Cultura Alfonso López",
+   "direccion": "Carrera 7b # 2e-05, barrio Alfonso López",
+   "titulo_programacion": "El Paraíso de Ainara",
+   "obra_catalogo": "El Paraíso de Ainara",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-17",
+   "hora": "14:00",
+   "ciudad": "Pereira",
+   "sede": "Museo Intangible del Confinamiento. Casa de la Cultura Alfonso López",
+   "direccion": "Carrera 7b # 2e-05, barrio Alfonso López",
+   "titulo_programacion": "In four stops",
+   "obra_catalogo": "In four stops",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-17",
+   "hora": "14:00",
+   "ciudad": "Pereira",
+   "sede": "Museo Intangible del Confinamiento. Casa de la Cultura Alfonso López",
+   "direccion": "Carrera 7b # 2e-05, barrio Alfonso López",
+   "titulo_programacion": "Akababuru: Expresión de asombro",
+   "obra_catalogo": "Akababuru: Expresión de asombro",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-17",
+   "hora": "14:00",
+   "ciudad": "Pereira",
+   "sede": "Museo Intangible del Confinamiento. Casa de la Cultura Alfonso López",
+   "direccion": "Carrera 7b # 2e-05, barrio Alfonso López",
+   "titulo_programacion": "La gran hazaña",
+   "obra_catalogo": "La gran hazaña",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-17",
+   "hora": "14:00",
+   "ciudad": "Pereira",
+   "sede": "Museo Intangible del Confinamiento. Casa de la Cultura Alfonso López",
+   "direccion": "Carrera 7b # 2e-05, barrio Alfonso López",
+   "titulo_programacion": "Héroes del silencio",
+   "obra_catalogo": "Héroes del silencio",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-18",
+   "hora": "09:00",
+   "ciudad": "Pereira",
+   "sede": "Cárcel La 40 Establecimiento Penitenciario y Carcelario de Pereira INPEC",
+   "direccion": "Carrera 8 # 41-97",
+   "titulo_programacion": "La Raya",
+   "obra_catalogo": "La Raya",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-18",
+   "hora": "19:00",
+   "ciudad": "Pereira",
+   "sede": "Shuffle live music",
+   "direccion": "CC El Lago. Calle 24 #7-17, local 303",
+   "titulo_programacion": "Herencia: Los cantos de la tierra",
+   "obra_catalogo": "Herencia: Los cantos de la tierra",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-18",
+   "hora": "16:00",
+   "ciudad": "Pereira",
+   "sede": "Universidad Tecnológica de Pereira - Bloque 13, Sala Magistral 1",
+   "direccion": "",
+   "titulo_programacion": "De Poleka Kasue al Río Otún: ¿Quién cuida el agua del río más importante de la región?",
+   "obra_catalogo": null,
+   "tipo": "film_nuevo"
+  },
+  {
+   "dia": "2026-08-18",
+   "hora": "09:00",
+   "ciudad": "Pereira",
+   "sede": "UNIVERSIDAD TECNOLÓGICA DE PEREIRA - BLOQUE 7A / 118",
+   "direccion": "UNIVERSIDAD TECNOLÓGICA DE PEREIRA - BLOQUE 7A / 118",
+   "titulo_programacion": "Crear para resistir: la creación de contenido como un acto de responsabilidad",
+   "obra_catalogo": null,
+   "tipo": "actividad"
+  },
+  {
+   "dia": "2026-08-18",
+   "hora": "14:00",
+   "ciudad": "Pereira",
+   "sede": "Universidad Tecnológica de Pereira -UTP",
+   "direccion": "Bloque 13 Sala Magistral 1 (Carrera 27 #10-02, Barrio Álamos)",
+   "titulo_programacion": "Cuando la palabra se hace búsqueda",
+   "obra_catalogo": "Cuando la palabra se hace búsqueda",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-19",
+   "hora": "18:30",
+   "ciudad": "Pereira",
+   "sede": "Colombo Americano de Pereira",
+   "direccion": "Carrera 6 Nº 23-58",
+   "titulo_programacion": "Bojayá, la verdad desde adentro",
+   "obra_catalogo": "Bojayá, la verdad desde adentro",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-19",
+   "hora": "09:00",
+   "ciudad": "Pereira",
+   "sede": "Institución Educativa Jaime Salazar Robledo",
+   "direccion": "Comuna Villa Santana",
+   "titulo_programacion": "La gran hazaña",
+   "obra_catalogo": "La gran hazaña",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-19",
+   "hora": "09:00",
+   "ciudad": "Pereira",
+   "sede": "Institución Educativa Jaime Salazar Robledo",
+   "direccion": "Comuna Villa Santana",
+   "titulo_programacion": "Héroes del silencio",
+   "obra_catalogo": "Héroes del silencio",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-19",
+   "hora": "09:00",
+   "ciudad": "Pereira",
+   "sede": "Institución Educativa Jaime Salazar Robledo",
+   "direccion": "Comuna Villa Santana",
+   "titulo_programacion": "El Paraíso de Ainara",
+   "obra_catalogo": "El Paraíso de Ainara",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-19",
+   "hora": "09:00",
+   "ciudad": "Pereira",
+   "sede": "Institución Educativa Jaime Salazar Robledo",
+   "direccion": "Comuna Villa Santana",
+   "titulo_programacion": "In four stops",
+   "obra_catalogo": "In four stops",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-19",
+   "hora": "09:00",
+   "ciudad": "Pereira",
+   "sede": "Institución Educativa Jaime Salazar Robledo",
+   "direccion": "Comuna Villa Santana",
+   "titulo_programacion": "Akababuru: Expresión de asombro",
+   "obra_catalogo": "Akababuru: Expresión de asombro",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-10",
+   "hora": "08:00",
+   "ciudad": "Manizales",
+   "sede": "Teatro Los Fundadores",
+   "direccion": "Carrera 22 Calle 33",
+   "titulo_programacion": "El juego de la vida",
+   "obra_catalogo": "El juego de la vida",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-12",
+   "hora": "17:00",
+   "ciudad": "Manizales",
+   "sede": "Auditorio Centro Cultural Universitario Rogelio Salmona",
+   "direccion": "Cra. 28D entre Cl. 66 #y 67",
+   "titulo_programacion": "Por una gota de leche",
+   "obra_catalogo": "Por una gota de leche",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-12",
+   "hora": "19:00",
+   "ciudad": "Manizales",
+   "sede": "Auditorio Centro Cultural Universitario Rogelio Salmona",
+   "direccion": "Cra. 28D entre Cl. 66 #y 67",
+   "titulo_programacion": "Si La Escombrera hablara",
+   "obra_catalogo": "Si La Escombrera hablara",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-12",
+   "hora": "15:30",
+   "ciudad": "Manizales",
+   "sede": "Fundación Batuta Caldas",
+   "direccion": "Cra. 22 #70b-31, Manizales, Caldas",
+   "titulo_programacion": "El juego de la vida",
+   "obra_catalogo": "El juego de la vida",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-12",
+   "hora": "15:00",
+   "ciudad": "Manizales",
+   "sede": "Universidad de Caldas - Auditorio Roberto Vélez Correa",
+   "direccion": "Cl. 65 #26-10",
+   "titulo_programacion": "Desierto verde",
+   "obra_catalogo": "Desierto verde",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-13",
+   "hora": "17:30",
+   "ciudad": "Manizales",
+   "sede": "Auditorio Centro Cultural Universitario Rogelio Salmona",
+   "direccion": "Cra. 28D entre Cl. 66 #y 67",
+   "titulo_programacion": "El silencio de la tierra",
+   "obra_catalogo": "El silencio de la tierra",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-13",
+   "hora": "19:00",
+   "ciudad": "Manizales",
+   "sede": "Auditorio Centro Cultural Universitario Rogelio Salmona",
+   "direccion": "Cra. 28D entre Cl. 66 #y 67",
+   "titulo_programacion": "Volver a creer",
+   "obra_catalogo": "Volver a creer",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-14",
+   "hora": "18:00",
+   "ciudad": "Manizales",
+   "sede": "Universidad Nacional de Colombia - Auditorio Juan Hurtado",
+   "direccion": "Carrera 27 # 64-60",
+   "titulo_programacion": "Tierra que habla",
+   "obra_catalogo": "Tierra que habla",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-18",
+   "hora": "15:00",
+   "ciudad": "Manizales",
+   "sede": "All Cine Cable Plaza",
+   "direccion": "Av. Santander Cra. 23 # 65-11, Piso 3",
+   "titulo_programacion": "Notas sobre un destierro",
+   "obra_catalogo": "Notas sobre un destierro",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-19",
+   "hora": "10:30",
+   "ciudad": "Manizales",
+   "sede": "Auditorio Tulio Gómez Estrada, Facultad de Ciencias Jurídicas y Sociales",
+   "direccion": "Av. Santander # 57-58",
+   "titulo_programacion": "Cuando la palabra se hace búsqueda",
+   "obra_catalogo": "Cuando la palabra se hace búsqueda",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-19",
+   "hora": "17:00",
+   "ciudad": "Manizales",
+   "sede": "Auditorio Tulio Gómez Estrada, Facultad de Ciencias Jurídicas y Sociales",
+   "direccion": "Av. Santander # 57-58",
+   "titulo_programacion": "Bojayá, la verdad desde adentro",
+   "obra_catalogo": "Bojayá, la verdad desde adentro",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-19",
+   "hora": "17:30",
+   "ciudad": "Manizales",
+   "sede": "Auditorio Tulio Gómez Estrada, Facultad de Ciencias Jurídicas y Sociales",
+   "direccion": "Av. Santander # 57-58",
+   "titulo_programacion": "Bojayá, la verdad desde adentro",
+   "obra_catalogo": "Bojayá, la verdad desde adentro",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-19",
+   "hora": "19:00",
+   "ciudad": "Manizales",
+   "sede": "Auditorio Tulio Gómez Estrada, Facultad de Ciencias Jurídicas y Sociales",
+   "direccion": "Av. Santander # 57-58",
+   "titulo_programacion": "Madres de nacimiento",
+   "obra_catalogo": "Madres de nacimiento",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-19",
+   "hora": "19:00",
+   "ciudad": "Manizales",
+   "sede": "Teatro Los Fundadores",
+   "direccion": "Carrera 22 Calle 33",
+   "titulo_programacion": "El juego de la vida",
+   "obra_catalogo": "El juego de la vida",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-13",
+   "hora": "16:00",
+   "ciudad": "Tunja",
+   "sede": "Cinemateca de Tunja",
+   "direccion": "Calle 17 # 15-36",
+   "titulo_programacion": "Akababuru: Expresión de asombro",
+   "obra_catalogo": "Akababuru: Expresión de asombro",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-13",
+   "hora": "16:00",
+   "ciudad": "Tunja",
+   "sede": "Cinemateca de Tunja",
+   "direccion": "Calle 17 # 15-36",
+   "titulo_programacion": "Todos los días",
+   "obra_catalogo": "Todos los días",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-13",
+   "hora": "16:00",
+   "ciudad": "Tunja",
+   "sede": "Cinemateca de Tunja",
+   "direccion": "Calle 17 # 15-36",
+   "titulo_programacion": "Sukua",
+   "obra_catalogo": "Sukua",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-13",
+   "hora": "16:00",
+   "ciudad": "Tunja",
+   "sede": "Cinemateca de Tunja",
+   "direccion": "Calle 17 # 15-36",
+   "titulo_programacion": "La gran hazaña",
+   "obra_catalogo": "La gran hazaña",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-13",
+   "hora": "18:30",
+   "ciudad": "Tunja",
+   "sede": "Cinemateca de Tunja",
+   "direccion": "Calle 17 # 15-36",
+   "titulo_programacion": "Three black men (Tres hombres negros)",
+   "obra_catalogo": "Three black men",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-14",
+   "hora": "16:00",
+   "ciudad": "Tunja",
+   "sede": "Cinemateca de Tunja",
+   "direccion": "Calle 17 # 15-36",
+   "titulo_programacion": "Cuando la palabra se hace búsqueda",
+   "obra_catalogo": "Cuando la palabra se hace búsqueda",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-14",
+   "hora": "18:30",
+   "ciudad": "Tunja",
+   "sede": "Cinemateca de Tunja",
+   "direccion": "Calle 17 # 15-36",
+   "titulo_programacion": "El hogar fue sepultado en esa tierra que nunca pudimos encontrar",
+   "obra_catalogo": "El hogar fue sepultado en esa tierra que nunca pudimos encontrar",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-15",
+   "hora": "16:00",
+   "ciudad": "Tunja",
+   "sede": "Cinemateca de Tunja",
+   "direccion": "Calle 17 # 15-36",
+   "titulo_programacion": "La luz por primera vez",
+   "obra_catalogo": "La luz por primera vez",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-15",
+   "hora": "18:30",
+   "ciudad": "Tunja",
+   "sede": "Cinemateca de Tunja",
+   "direccion": "Calle 17 # 15-36",
+   "titulo_programacion": "Andariega",
+   "obra_catalogo": "Andariega",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-16",
+   "hora": "16:00",
+   "ciudad": "Tunja",
+   "sede": "Cinemateca de Tunja",
+   "direccion": "Calle 17 # 15-36",
+   "titulo_programacion": "La Raya",
+   "obra_catalogo": "La Raya",
+   "tipo": "film"
+  },
+  {
+   "dia": "2026-08-16",
+   "hora": "18:30",
+   "ciudad": "Tunja",
+   "sede": "Cinemateca de Tunja",
+   "direccion": "Calle 17 # 15-36",
+   "titulo_programacion": "Semillas",
+   "obra_catalogo": "Semillas",
+   "tipo": "film"
+  }
+ ]
+}
