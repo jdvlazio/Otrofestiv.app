@@ -1368,8 +1368,9 @@ export function buildResultHTML(scenarios){
             : _k==='solape'
             ? t('conflict_solapa',{title:conflictWith})
             : t(conflictReason.bFirst?'conflict_justo_desde':'conflict_justo_hasta',{title:conflictWith});
+          // 'ciudad' sin detalle: "Es en Ibagué" ya lo dice todo (Juan, UX Writer)
           const _det=_k==='ciudad'
-            ? t('conflict_ciudad_det')
+            ? ''
             : _k==='viaje'
             ? t('conflict_viaje_det',{travel:_minFmt(conflictReason.travel), gap:_minFmt(conflictReason.gap)})
             : _k==='ajustado' ? t('conflict_hueco_det',{gap:_minFmt(conflictReason.gap)}) : '';

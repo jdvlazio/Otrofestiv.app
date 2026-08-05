@@ -113,7 +113,8 @@ ambas automáticas (sin flags ni cambios de pipeline):
 - **Conflicto entre ciudades** — `screensConflictReason` devuelve `kind:'ciudad'`
   con el nombre y **sin minutos**: `travelMins` usa velocidad urbana y a escala
   intermunicipal se equivoca 3× (Bogotá→Ibagué: estima 13 h, son ~4). Se dice el
-  dato (la ciudad) y el usuario juzga; se puede forzar con "+ Incluir".
+  dato (la ciudad) y el usuario juzga; se puede forzar con "+ Incluir". El
+  mensaje va **solo**: «Es en Ibagué» — sin texto de apoyo, ya lo dice todo.
   **Ojo con el borde**: FINCA declara `city` en 1 de 6 sedes — por eso la regla
   exige DOS ciudades distintas, no «¿hay city?».
 

@@ -113,6 +113,8 @@ test("ciudades distintas → kind 'ciudad' con el nombre, y sin minutos inventad
   assert.strictEqual(r.city, 'Ibagué');      // la ciudad de la función que se evalúa
   assert.strictEqual(r.cityFrom, 'Bogotá');
   assert.strictEqual(r.travel, undefined, 'no expone minutos: la estimación no es confiable a esa escala');
+  // La vista no pinta detalle para 'ciudad': "Es en Ibagué" ya lo dice todo
+  // (Juan como UX Writer, 6 ago) — el motivo NO debe traer texto de apoyo.
 });
 
 test('misma ciudad: sigue siendo viaje/ajustado, no ciudad', () => {
