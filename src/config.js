@@ -329,10 +329,10 @@ export const FESTIVAL_CONFIG={
     keyArt:'/assets/keyart/fantasofest2026.jpg',
     films:null,posters:null,lbSlugs:{}
   },
+  // FICDEH: `city` no coincide con ninguna sede a propósito — así el badge
+  // venue-municipio y el filtro por ciudad se activan en las 11 ciudades.
   'ficdeh2026': {
     name:'FICDEH',fullName:'FICDEH — Festival Internacional de Cine por los Derechos Humanos',shortName:'FICDEH',
-    // 11 ciudades y 31 municipios: `city` no debe coincidir con ninguna sede, para
-    // que el badge venue-municipio y el filtro por ciudad se activen en todas.
     city:'11 ciudades',country:'CO',
     dates:'12–19 AGO',dates_en:'AUG 12–19',year:2026,timezoneOffset:'-05:00',
     keyArt:'/assets/keyart/ficdeh2026.jpg',
@@ -524,7 +524,7 @@ export const SECTION_ARCHETYPES = {
   '📽️ Reunions & Retrospectives': 'Retrospectiva / Tributo',
   '🗣️ Talks': 'Charlas / Industria',
   '🥇 Awards Screenings': 'Especiales / Eventos',
-  '🪶 Cine Indígena': 'Muestra / País'
+  '🪶 Cine Indígena': 'Muestra / País',
   // ── FICDEH 2026 (11 ciudades, 12–19 AGO)
   '🧳 Largometraje de Ficción': 'Competencia',
   '🔍 Largometraje Documental Nacional': 'Competencia',

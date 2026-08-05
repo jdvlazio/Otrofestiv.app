@@ -216,7 +216,10 @@ out = {
     'programacion': 'festivals/staging/ficdeh-2026-programacion-oficial.json — sitio nuevo Next.js, 433 funciones, 424 en_app',
     'alcance': PROG['_provenance'].get('decision_actividades',''),
   },
-  'name': '13° FICDEH', 'shortName': 'FICDEH',
+  # El nombre debe ser IDÉNTICO al de FESTIVAL_CONFIG: el JSON lo pisa en
+  # runtime y el guardián [festival-name-parity] exige paridad. La edición
+  # («13°») vive en `year`, no en el nombre del selector.
+  'name': 'FICDEH', 'shortName': 'FICDEH',
   'fullName': 'Festival Internacional de Cine por los Derechos Humanos',
   # '11 ciudades' NO coincide con la city de ninguna sede → el badge
   # `venue-municipio` (multiciudad, introducido con Cinemancia) se muestra en

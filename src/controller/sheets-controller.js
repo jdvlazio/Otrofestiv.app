@@ -66,6 +66,7 @@ const _COUNTRY_FLAGS={
   'Perú':'🇵🇪','Portugal':'🇵🇹','Reino Unido':'🇬🇧','Rep. Dominicana':'🇩🇴',
   'Suiza':'🇨🇭','Taiwán':'🇹🇼','Turquía':'🇹🇷','UK':'🇬🇧',
   'Venezuela':'🇻🇪','Vietnam':'🇻🇳',
+  'Kenia':'🇰🇪','Filipinas':'🇵🇭','Rusia':'🇷🇺', // FICDEH 2026
   'United States':'🇺🇸','USA':'🇺🇸','US':'🇺🇸',
   'United Kingdom':'🇬🇧','England':'🇬🇧','Scotland':'🇬🇧','Ireland':'🇮🇪',
   'France':'🇫🇷','Germany':'🇩🇪','Italy':'🇮🇹','Spain':'🇪🇸',
