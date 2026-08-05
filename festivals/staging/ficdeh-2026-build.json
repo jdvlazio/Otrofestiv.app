@@ -165,21 +165,19 @@
    "color": "#E0418A",
    "order": 10
   },
-  "🎤 Charlas que Unen": {
+  "💬 Charlas que Unen": {
    "oficial": "Charlas que Unen",
    "en": "Talks That Unite",
    "archetype": "Charlas / Industria",
    "color": "#639922",
-   "order": 11,
-   "_pendiente_aprobacion": "emoji y traducción propuestos, sin aprobar"
+   "order": 11
   },
   "🛠️ Formación": {
    "oficial": "Formación",
-   "en": "Training",
+   "en": "Workshops",
    "archetype": "Charlas / Industria",
    "color": "#639922",
-   "order": 12,
-   "_pendiente_aprobacion": "emoji y traducción propuestos, sin aprobar"
+   "order": 12
   }
  },
  "venues": {
@@ -2207,7 +2205,7 @@
   {
    "title": "Las guardianas del agua",
    "type": "event",
-   "section": "🎤 Charlas que Unen",
+   "section": "💬 Charlas que Unen",
    "duration": "",
    "synopsis": "A partir de la proyección de la película XIE. Defensa de la vida, las invitadas conversarán sobre su experiencia de liderazgo en defensa del agua y la vida en La Calera.",
    "synopsis_lang": "es",
@@ -2323,7 +2321,7 @@
   {
    "title": "Violencias de género en Barranquilla",
    "type": "event",
-   "section": "🎤 Charlas que Unen",
+   "section": "💬 Charlas que Unen",
    "duration": "",
    "synopsis": "Organizaciones de mujeres conversan sobre el incremento de estas violencias en la ciudad.",
    "synopsis_lang": "es",
@@ -3105,7 +3103,7 @@
   {
    "title": "De los deepfakes y otras violencias digitales",
    "type": "event",
-   "section": "🎤 Charlas que Unen",
+   "section": "💬 Charlas que Unen",
    "duration": "",
    "synopsis": "¿Qué se está haciendo en Colombia para erradicar estas violencias contra las mujeres? Expertas conversan sobre el tema.",
    "synopsis_lang": "es",
@@ -3130,7 +3128,7 @@
   {
    "title": "Una ciudad ¿para quién?",
    "type": "event",
-   "section": "🎤 Charlas que Unen",
+   "section": "💬 Charlas que Unen",
    "duration": "",
    "synopsis": "Un diálogo en torno al derecho a la ciudad en Cartagena",
    "synopsis_lang": "es",
@@ -3993,7 +3991,7 @@
   {
    "title": "Hackeando los mandatos de la delgadez",
    "type": "event",
-   "section": "🎤 Charlas que Unen",
+   "section": "💬 Charlas que Unen",
    "duration": "",
    "synopsis": "El regreso de la delgadez extrema y su viralización digital representa un riesgo para niños, niñas y jóvenes. En este espacio, activistas reflexionan sobre el cuerpo, la violencia estética, las redes sociales y la salud mental.",
    "synopsis_lang": "es",
@@ -4597,7 +4595,7 @@
   {
    "title": "Mujeres, juventudes y activismo político en la era digital",
    "type": "event",
-   "section": "🎤 Charlas que Unen",
+   "section": "💬 Charlas que Unen",
    "duration": "",
    "synopsis": "Un espacio de diálogo sobre las nuevas formas de participación y activismo politico en las plataformas digitales.",
    "synopsis_lang": "es",
@@ -6273,7 +6271,7 @@
   {
    "title": "Desde el centro de la tierra",
    "type": "event",
-   "section": "🎤 Charlas que Unen",
+   "section": "💬 Charlas que Unen",
    "duration": "",
    "synopsis": "Cuidado y protección de áreas naturales en riesgo. Entrada con previa inscripción: https://forms.gle/q8LxC7KnkowLT7ov8PanelistasEmmerich WeissenbergerDirector de la Fundación Las Mercedes. Fundador del Colectivo ArtEmbassy.Nora RuzsicsArtista. Cineasta. Miembro del Colectivo ArtEmbassy.Gunzareiman V",
    "synopsis_lang": "es",
@@ -6834,7 +6832,7 @@
   {
    "title": "Resistencias indígenas en Ibagué",
    "type": "event",
-   "section": "🎤 Charlas que Unen",
+   "section": "💬 Charlas que Unen",
    "duration": "",
    "synopsis": "¿Qué procesos de resistencia lideran las y los indígenas de la ciudad? En este espacio lxs invitadxs reflexionan sobre el tema.PanelistasModeradoreIván Reina OrtizRealizadore de Cine y TV. Magíster en Administración. Productore local de FICDEH en Ibagué.Katerin Yelitza Rodríguez MontealegreEstudiant",
    "synopsis_lang": "es",
@@ -6890,7 +6888,7 @@
   {
    "title": "El Arte de la Paz",
    "type": "event",
-   "section": "🎤 Charlas que Unen",
+   "section": "💬 Charlas que Unen",
    "duration": "",
    "synopsis": "Una jornada cultural para conmemorar los diez años de la firma de los Acuerdos de Paz en Colombia. Incluye la proyección de los cortometrajes \"La luz que nos queda\" (dir. Gloria Isabel Gómez Ceballos) y \"Lo que sentimos\" (dir. Fondo Multidonante de las Naciones Unidas para la Paz en Colombia), la ch",
    "synopsis_lang": "es",
@@ -7130,7 +7128,7 @@
   {
    "title": "Ni un minuto de silencio, toda una vida de búsqueda",
    "type": "event",
-   "section": "🎤 Charlas que Unen",
+   "section": "💬 Charlas que Unen",
    "duration": "",
    "synopsis": "Una reflexión sobre el papel de las mujeres buscadoras a partir del documental \"Soñé su nombre\"",
    "synopsis_lang": "es",
@@ -8327,7 +8325,7 @@
   {
    "title": "Colombia +20: una década de periodismo para la paz",
    "type": "event",
-   "section": "🎤 Charlas que Unen",
+   "section": "💬 Charlas que Unen",
    "duration": "",
    "synopsis": "Las periodistas de este proyecto toman los micrófonos y comparten cómo ha sido narrar el conflicto y la paz en Colombia.",
    "synopsis_lang": "es",
@@ -9556,7 +9554,7 @@
   {
    "title": "¡Existimos! Infancias trans en Colombia",
    "type": "event",
-   "section": "🎤 Charlas que Unen",
+   "section": "💬 Charlas que Unen",
    "duration": "",
    "synopsis": "A partir de la proyección de los cortos La Cerillana y Los pliegues de la falda activistas conversan sobre estas experiencia de vida.",
    "synopsis_lang": "es",
@@ -9794,7 +9792,7 @@
   {
    "title": "Tercera charla Derechos audiovisuales",
    "type": "event",
-   "section": "🎤 Charlas que Unen",
+   "section": "💬 Charlas que Unen",
    "duration": "",
    "synopsis": "Condiciones laborales, creativas y éticas que atraviesan la industria.",
    "synopsis_lang": "es",
@@ -9968,7 +9966,7 @@
   {
    "title": "El arte de moldear la IA",
    "type": "event",
-   "section": "🎤 Charlas que Unen",
+   "section": "💬 Charlas que Unen",
    "duration": "",
    "synopsis": "Diálogo sobre las transformaciones que la inteligencia artificial está generando en los procesos creativos y artísticos del país.",
    "synopsis_lang": "es",
@@ -10998,7 +10996,7 @@
   {
    "title": "De Poleka Kasue al Río Otún: ¿Quién cuida el agua del río más importante de la región?",
    "type": "event",
-   "section": "🎤 Charlas que Unen",
+   "section": "💬 Charlas que Unen",
    "duration": "",
    "synopsis": "Una invitación a reflexionar sobre la importancia del río Otún como fuente de vida y patrimonio natural.",
    "synopsis_lang": "es",
@@ -11023,7 +11021,7 @@
   {
    "title": "Hablemos de salud mental",
    "type": "event",
-   "section": "🎤 Charlas que Unen",
+   "section": "💬 Charlas que Unen",
    "duration": "",
    "synopsis": "Un espacio de reflexión en torno a la salud mental de los jóvenes chocoanos.",
    "synopsis_lang": "es",
@@ -11512,7 +11510,7 @@
   {
    "title": "Reconocer, atender y reparar: 15 años de la Ley de Víctimas",
    "type": "event",
-   "section": "🎤 Charlas que Unen",
+   "section": "💬 Charlas que Unen",
    "duration": "",
    "synopsis": "¿Cuáles han sido los alcances e implicaciones de la Ley 1448 de 2011? Líderes y lideresas reflexionan sobre esto.",
    "synopsis_lang": "es",
@@ -12055,7 +12053,7 @@
   {
    "title": "¡No más mutilación genital femenina en Colombia!",
    "type": "event",
-   "section": "🎤 Charlas que Unen",
+   "section": "💬 Charlas que Unen",
    "duration": "",
    "synopsis": "A partir de la proyección del cortometraje Halima, Juliana Domicó conversa sobre su lucha por la erradicación de esta práctica en el país.",
    "synopsis_lang": "es",

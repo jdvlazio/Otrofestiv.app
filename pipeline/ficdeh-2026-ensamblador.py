@@ -88,17 +88,22 @@ def venue_key(f):
     return key
 
 # ── secciones de actividades (nombres del festival, regla "tal cual") ────────
+# Nombres ES verbatim del festival (regla «secciones tal cual»); emoji y EN son
+# nuestra capa, aprobados por Juan el 5 ago 2026.
+#   💬 y no 🎤: el micrófono chocaba con el 🎙️ de Cortometraje Documental
+#   Nacional — dos micrófonos casi idénticos a tamaño de riel.
+#   «Workshops» y no «Training»: son talleres (animación 2D, pintura, actuación,
+#   «Taller de Herramientas»), y es el término que busca el público de festival.
 SEC_ACT = {
-  'charla': ('🎤 Charlas que Unen', 'Talks That Unite', 'Charlas / Industria', 11),
-  'taller': ('🛠️ Formación',        'Training',          'Charlas / Industria', 12),
+  'charla': ('💬 Charlas que Unen', 'Talks That Unite', 'Charlas / Industria', 11),
+  'taller': ('🛠️ Formación',        'Workshops',        'Charlas / Industria', 12),
 }
 
 sections = dict(CAT.get('sections') or {})
 for k,(nombre,en,arch,order) in SEC_ACT.items():
     if nombre not in sections:
         sections[nombre] = {'oficial': nombre.split(' ',1)[1], 'en': en,
-                            'archetype': arch, 'color': '#639922', 'order': order,
-                            '_pendiente_aprobacion': 'emoji y traducción propuestos, sin aprobar'}
+                            'archetype': arch, 'color': '#639922', 'order': order}
 
 # ── ensamblado ───────────────────────────────────────────────────────────────
 films_out, sin_ficha = [], collections.Counter()
