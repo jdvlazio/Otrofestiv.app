@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `2114682 feat(filtro): nivel de ciudad en el filtro de lugar para festivales multiciudad (#501) (#501)`
+> Último commit: `bd9555d fix(filtro): los paneles de filtro no se salen del viewport (#502) (#502)`
 
 ---
 

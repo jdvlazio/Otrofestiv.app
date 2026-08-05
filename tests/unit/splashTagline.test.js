@@ -80,15 +80,27 @@ test('_renderSplashRailHTML — cards de los 8 festivales visibles + divisor con
   assert.ok(!html.includes('cinemancia2025'), 'excluye group:test');
 });
 
-test('_renderSplashRailHTML — activo marcado, keyArt + keyArtPos + onerror', () => {
+test('_renderSplashRailHTML — activo marcado, keyArt + onerror', () => {
   const html = C._renderSplashRailHTML(fakeState(), 'tercertiempo2026');
   assert.match(html, /data-fest="tercertiempo2026"[^>]*aria-selected="true"/, 'activo aria-selected');
   assert.match(html, /class="splash-card[^"]*\bon\b/, 'activo lleva clase on');
-  assert.ok(html.includes('/assets/keyart/tercertiempo2026.jpg'), 'usa keyArt');
-  // keyArtPos vía custom property --kap (no inline style raw: ARQUITECTURA §10.3)
-  assert.ok(html.includes('--kap:30%'), 'aplica keyArtPos de TT (30%: conserva "10" e "CINE")');
+  assert.ok(html.includes('/assets/keyart/tercertiempo2026-v2.jpg'), 'usa keyArt');
   // toda <img> degrada si el afiche 404ea (§10.2)
   assert.ok(html.includes('onerror="this.remove()"'), 'la img de keyArt lleva onerror');
+});
+
+// keyArtPos sigue soportado (custom property --kap, no inline style raw:
+// ARQUITECTURA §10.3), pero ya NINGÚN festival lo usa: desde ago 2026 los keyArt
+// se recomponen a 2:3 con scripts/compose-keyart.py, así que no hay recorte que
+// posicionar. El test pasa a ejercer la CAPACIDAD con un fixture, no un festival
+// real — y verifica que sin keyArtPos no se emite la property.
+test('_renderSplashRailHTML — --kap solo si el festival declara keyArtPos', () => {
+  assert.ok(!C._renderSplashRailHTML(fakeState(), 'tercertiempo2026').includes('--kap:'),
+    'sin keyArtPos no se emite --kap');
+  CFG.tercertiempo2026.keyArtPos = '30%';
+  assert.ok(C._renderSplashRailHTML(fakeState(), 'tercertiempo2026').includes('--kap:30%'),
+    'con keyArtPos se emite --kap');
+  delete CFG.tercertiempo2026.keyArtPos;
 });
 
 // INVARIANTE (bug cazado en QA 13 jul): el orden del riel es ESTABLE — no depende
@@ -155,8 +167,7 @@ test('_renderFestivalSelectorHTML — muro de afiches con la card del splash', (
   assert.strictEqual(cards, visibles, `${visibles} cards-afiche (mismo componente que el splash)`);
   assert.ok(html.includes('data-action="loadFestival"'), 'en el sheet la card carga directo');
   assert.ok(!html.includes('data-action="selectSplashFest"'), 'no usa la acción del splash');
-  assert.ok(html.includes('/assets/keyart/olhar2026.jpg'), 'usa el keyArt del festival');
-  assert.ok(html.includes('--kap:30%'), 'aplica keyArtPos de TT');
+  assert.ok(html.includes('/assets/keyart/olhar2026-v2.jpg'), 'usa el keyArt del festival');
   assert.ok((html.match(/onerror="this.remove\(\)"/g) || []).length >= visibles, 'cada img degrada (§10.2)');
 });
 
