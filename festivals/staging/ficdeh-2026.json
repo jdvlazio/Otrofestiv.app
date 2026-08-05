@@ -1964,13 +1964,16 @@
    "country": "Alemania",
    "synopsis": "De camino a casa tras una cirugía reconstructiva después de sufrir una mutilación genital femenina, Halima habla sobre su estrategia para mantenerse fuerte. Es una figura colectiva que representa a cinco mujeres somalíes que hablan sobre la violencia infligida a sus cuerpos, su huida como mujeres y el poder de la fuerza femenina.",
    "synopsis_lang": "es",
-   "poster": "",
-   "posterSource": "",
+   "poster": "/assets/ficdeh/halima-una-guia-para-ser-fuerte.jpg",
+   "posterSource": "custom",
    "lbSlug": "",
    "_src": {
     "url": "https://www.ficdeh.com/peliculas?categoria=invitadas",
-    "date": "2026-08-05"
-   }
+    "date": "2026-08-05",
+    "poster": "https://indieshortfest.com/wp-content/uploads/2026/02/Halima.webp"
+   },
+   "genre": "Documental",
+   "_nota": "Título original: «Halima – Eine Anleitung zum Starksein». Codirigida con Fahma Abdukader Farah (el festival acredita solo a Linda Verweyen). No está en TMDB ni Letterboxd — candidata a alta."
   },
   {
    "title": "Juntos podemos curar",
@@ -1989,7 +1992,8 @@
     "url": "https://www.ficdeh.com/peliculas?categoria=invitadas",
     "date": "2026-08-05"
    },
-   "_pendiente": "sinopsis — la ficha del festival no la publica"
+   "_pendiente": "sinopsis y póster — la ficha del festival no los publica; sin rastro en TMDB, Letterboxd ni web (obra 2026 del Colectivo Yosokwi, arhuaco). Pedir al festival o a @colectivoyosokwi.",
+   "genre": "Documental"
   },
   {
    "title": "The Beauty of the donkey",
@@ -2001,12 +2005,19 @@
    "country": "Suiza (Kosovo, Estados Unidos, Francia)",
    "synopsis": "En una pequeña aldea kosovar, una cineasta ayuda a su padre exiliado a reconstruir su infancia con la ayuda de los habitantes del lugar, revelando recuerdos personales, historias familiares olvidadas y las huellas de un pasado borrado por la guerra.",
    "synopsis_lang": "es",
-   "poster": "",
-   "posterSource": "",
-   "lbSlug": "",
+   "poster": "/assets/ficdeh/the-beauty-of-the-donkey.jpg",
+   "posterSource": "custom",
+   "lbSlug": "the-beauty-of-the-donkey",
    "_src": {
     "url": "https://www.ficdeh.com/peliculas?categoria=invitadas",
-    "date": "2026-08-05"
+    "date": "2026-08-05",
+    "tmdb": 1544920
+   },
+   "genre": "Documental",
+   "synopsis_en": "After her father Asllan has lived in exile for sixty years, Dea returns with him to Makermal. This Kosovar village that was once his home was destroyed in the war, leaving only the stories of the survivors. Together with the remaining villagers, Swiss-Kosovar director Dea Gjinovci and her father embark on a search for traces of the past and are confronted with the collective scars of a community.",
+   "_inherited": {
+    "synopsis_en": "tmdb-1544920",
+    "poster": "tmdb-1544920"
    }
   }
  ]
