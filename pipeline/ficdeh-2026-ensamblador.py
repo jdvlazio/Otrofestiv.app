@@ -146,6 +146,29 @@ for f in sorted(funcs, key=lambda x: (x['dia'], x['hora'], x['ciudad'])):
 slots = collections.Counter((e['day'], e['time'], e['venue']) for e in films_out)
 compartidos = {k: v for k, v in slots.items() if v > 1}
 
+# Pósters genéricos de sección: el sitio publica UNA «Portada_Charla» que sirve
+# a las 18 charlas por igual. Repetido 18 veces en la grilla es peor que nada —
+# para eso está el póster editorial por tipo (eventPosterLabel). Se detecta por
+# repetición, no por lista negra, para que el próximo genérico también caiga.
+_uso = collections.Counter(e.get('poster') for e in films_out
+                           if e.get('type') == 'event' and e.get('poster'))
+_generico = {p for p, n in _uso.items() if n > 1}
+for e in films_out:
+    if e.get('poster') in _generico:
+        e['poster'] = ''
+        e['posterSource'] = ''
+        e['_poster_descartado'] = 'genérico de sección (compartido por varias actividades)'
+if _generico:
+    print(f'  pósters genéricos descartados: {len(_generico)} → ' +
+          ', '.join(f'{p.split("/")[-1]} (×{_uso[p]})' for p in _generico))
+
+# Un poster vacío debe ser AUSENCIA de campo, no string vacío: el gate
+# [poster-empty-film] lo rechaza y el fallback editorial necesita que falte.
+for e in films_out:
+    for k in ('poster', 'posterSource', 'lbSlug'):
+        if k in e and not (e[k] or '').strip():
+            del e[k]
+
 # has_qa — solo donde hay confirmación externa verificable. El sitio del
 # festival no lo publica y las fichas de la Cinemateca tampoco (su menú incluye
 # «Conversatorios y charlas», que aparece en las 30 páginas y NO es señal de
@@ -213,7 +236,8 @@ out = {
   # corto+largo. Verificado uno a uno; las sedes son de sala única salvo la
   # Cinemateca, que escalona horarios (nunca dos títulos a la misma hora).
   'sharedSlotIsOneScreening': True,
-  'ticketing_model': 'mixed',
+  # sin ticketing_model: exige ticket_url y no hay una URL única — la boletería
+  # la vende cada sede (la Cinemateca por tuboleta). is_free por función ya lo dice.
   'sections': sections,
   'venues': venues,
   'films': films_out,

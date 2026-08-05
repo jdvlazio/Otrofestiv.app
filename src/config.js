@@ -204,6 +204,18 @@ export const SECTION_EN = {
   '💬 Conversatorios & Masterclass':'Talks & Masterclasses',
   '📽️ Cortometrajes':'Short Films',
   '🎉 Eventos Especiales':'Special Events',
+  // ── FICDEH 2026 (11 ciudades, 12–19 AGO)
+  '🧳 Largometraje de Ficción': 'International Fiction Feature',
+  '🔍 Largometraje Documental Nacional': 'Colombian Documentary Feature',
+  '🌍 Largometraje Documental Internacional': 'International Documentary Feature',
+  '🪀 Cortometraje de Ficción Nacional': 'Colombian Fiction Short',
+  '🚲 Cortometraje de Ficción Internacional': 'International Fiction Short',
+  '🎙️ Cortometraje Documental Nacional': 'Colombian Documentary Short',
+  '🏘️ Cine Comunitario Nacional': 'Community Cinema',
+  '🕊️ Retrospectiva 10 Años del Acuerdo de Paz': '10 Years of the Peace Agreement',
+  '🎟️ Invitadas': 'Guest Films',
+  '💬 Charlas que Unen': 'Talks That Unite',
+  '🛠️ Formación': 'Workshops',
 };
 
 // ── NOTICES ──────────────────────────────────────────────────────────────────
@@ -315,6 +327,23 @@ export const FESTIVAL_CONFIG={
     dayLong:{'2026-07-13':'Lunes 13 de julio','2026-07-14':'Martes 14 de julio','2026-07-15':'Miércoles 15 de julio','2026-07-16':'Jueves 16 de julio','2026-07-17':'Viernes 17 de julio','2026-07-18':'Sábado 18 de julio','2026-07-19':'Domingo 19 de julio'},
     prioLimit:4,
     keyArt:'/assets/keyart/fantasofest2026.jpg',
+    films:null,posters:null,lbSlugs:{}
+  },
+  'ficdeh2026': {
+    name:'FICDEH',fullName:'FICDEH — Festival Internacional de Cine por los Derechos Humanos',shortName:'FICDEH',
+    // 11 ciudades y 31 municipios: `city` no debe coincidir con ninguna sede, para
+    // que el badge venue-municipio y el filtro por ciudad se activen en todas.
+    city:'11 ciudades',country:'CO',
+    dates:'12–19 AGO',dates_en:'AUG 12–19',year:2026,timezoneOffset:'-05:00',
+    keyArt:'/assets/keyart/ficdeh2026.jpg',
+    storageKey:'ficdeh2026_',festivalStartStr:'2026-08-12T00:00:00',festivalEndStr:'2026-08-19T23:00:00',
+    festivalDates:{'2026-08-12':'2026-08-12','2026-08-13':'2026-08-13','2026-08-14':'2026-08-14','2026-08-15':'2026-08-15','2026-08-16':'2026-08-16','2026-08-17':'2026-08-17','2026-08-18':'2026-08-18','2026-08-19':'2026-08-19'},
+    days:[{k:'2026-08-12',d:12,lbl:'MIÉ'},{k:'2026-08-13',d:13,lbl:'JUE'},{k:'2026-08-14',d:14,lbl:'VIE'},{k:'2026-08-15',d:15,lbl:'SÁB'},{k:'2026-08-16',d:16,lbl:'DOM'},{k:'2026-08-17',d:17,lbl:'LUN'},{k:'2026-08-18',d:18,lbl:'MAR'},{k:'2026-08-19',d:19,lbl:'MIÉ'}],
+    dayKeys:['2026-08-12','2026-08-13','2026-08-14','2026-08-15','2026-08-16','2026-08-17','2026-08-18','2026-08-19'],
+    dayShort:{'2026-08-12':'MIÉ 12','2026-08-13':'JUE 13','2026-08-14':'VIE 14','2026-08-15':'SÁB 15','2026-08-16':'DOM 16','2026-08-17':'LUN 17','2026-08-18':'MAR 18','2026-08-19':'MIÉ 19'},
+    dayShort_en:{'2026-08-12':'WED 12','2026-08-13':'THU 13','2026-08-14':'FRI 14','2026-08-15':'SAT 15','2026-08-16':'SUN 16','2026-08-17':'MON 17','2026-08-18':'TUE 18','2026-08-19':'WED 19'},
+    dayLong:{'2026-08-12':'Miércoles 12 de agosto','2026-08-13':'Jueves 13 de agosto','2026-08-14':'Viernes 14 de agosto','2026-08-15':'Sábado 15 de agosto','2026-08-16':'Domingo 16 de agosto','2026-08-17':'Lunes 17 de agosto','2026-08-18':'Martes 18 de agosto','2026-08-19':'Miércoles 19 de agosto'},
+    prioLimit:4,eventPosterLabel:['EVENTO',''],
     films:null,posters:null,lbSlugs:{}
   },
   'finca2026': {
@@ -496,6 +525,18 @@ export const SECTION_ARCHETYPES = {
   '🗣️ Talks': 'Charlas / Industria',
   '🥇 Awards Screenings': 'Especiales / Eventos',
   '🪶 Cine Indígena': 'Muestra / País'
+  // ── FICDEH 2026 (11 ciudades, 12–19 AGO)
+  '🧳 Largometraje de Ficción': 'Competencia',
+  '🔍 Largometraje Documental Nacional': 'Competencia',
+  '🌍 Largometraje Documental Internacional': 'Competencia',
+  '🪀 Cortometraje de Ficción Nacional': 'Cortos / Programas',
+  '🚲 Cortometraje de Ficción Internacional': 'Cortos / Programas',
+  '🎙️ Cortometraje Documental Nacional': 'Cortos / Programas',
+  '🏘️ Cine Comunitario Nacional': 'Perspectivas / Miradas',
+  '🕊️ Retrospectiva 10 Años del Acuerdo de Paz': 'Retrospectiva / Tributo',
+  '🎟️ Invitadas': 'Especiales / Eventos',
+  '💬 Charlas que Unen': 'Charlas / Industria',
+  '🛠️ Formación': 'Charlas / Industria',
 };
 
 // mergeFestivalSections(sections) — DATA-DRIVEN (P2.2): un festival declara sus

@@ -111,7 +111,6 @@
  },
  "prioLimit": 4,
  "sharedSlotIsOneScreening": true,
- "ticketing_model": "mixed",
  "sections": {
   "🕊️ Retrospectiva 10 Años del Acuerdo de Paz": {
    "en": "10 Years of the Peace Agreement",
@@ -2209,8 +2208,6 @@
    "duration": "",
    "synopsis": "A partir de la proyección de la película XIE. Defensa de la vida, las invitadas conversarán sobre su experiencia de liderazgo en defensa del agua y la vida en La Calera.",
    "synopsis_lang": "es",
-   "poster": "/uploads/obras/Portada_Charla-1-e1776487324802.jpg",
-   "posterSource": "custom",
    "event_kind": "ponencia",
    "day": "2026-08-13",
    "time": "17:00",
@@ -2225,7 +2222,8 @@
    "_ingreso": "Boletería en taquilla",
    "_src": {
     "programacion_oficial": "Las guardianas del agua"
-   }
+   },
+   "_poster_descartado": "genérico de sección (compartido por varias actividades)"
   },
   {
    "title": "Aminetu",
@@ -2325,8 +2323,6 @@
    "duration": "",
    "synopsis": "Organizaciones de mujeres conversan sobre el incremento de estas violencias en la ciudad.",
    "synopsis_lang": "es",
-   "poster": "/uploads/obras/Portada_Charla-1-e1776487324802.jpg",
-   "posterSource": "custom",
    "event_kind": "ponencia",
    "day": "2026-08-13",
    "time": "18:00",
@@ -2340,7 +2336,8 @@
    "_ingreso": "",
    "_src": {
     "programacion_oficial": "Violencias de género en Barranquilla"
-   }
+   },
+   "_poster_descartado": "genérico de sección (compartido por varias actividades)"
   },
   {
    "title": "La Cerrillana",
@@ -3107,8 +3104,6 @@
    "duration": "",
    "synopsis": "¿Qué se está haciendo en Colombia para erradicar estas violencias contra las mujeres? Expertas conversan sobre el tema.",
    "synopsis_lang": "es",
-   "poster": "/uploads/obras/Portada_Charla-1-e1776487324802.jpg",
-   "posterSource": "custom",
    "event_kind": "ponencia",
    "day": "2026-08-14",
    "time": "10:00",
@@ -3123,7 +3118,8 @@
    "_ingreso": "",
    "_src": {
     "programacion_oficial": "De los deepfakes y otras violencias digitales"
-   }
+   },
+   "_poster_descartado": "genérico de sección (compartido por varias actividades)"
   },
   {
    "title": "Una ciudad ¿para quién?",
@@ -3132,8 +3128,6 @@
    "duration": "",
    "synopsis": "Un diálogo en torno al derecho a la ciudad en Cartagena",
    "synopsis_lang": "es",
-   "poster": "/uploads/obras/Portada_Charla-1-e1776487324802.jpg",
-   "posterSource": "custom",
    "event_kind": "ponencia",
    "day": "2026-08-14",
    "time": "10:00",
@@ -3147,7 +3141,8 @@
    "_ingreso": "",
    "_src": {
     "programacion_oficial": "Una ciudad ¿para quién?"
-   }
+   },
+   "_poster_descartado": "genérico de sección (compartido por varias actividades)"
   },
   {
    "title": "Honorablé",
@@ -3995,8 +3990,6 @@
    "duration": "",
    "synopsis": "El regreso de la delgadez extrema y su viralización digital representa un riesgo para niños, niñas y jóvenes. En este espacio, activistas reflexionan sobre el cuerpo, la violencia estética, las redes sociales y la salud mental.",
    "synopsis_lang": "es",
-   "poster": "/uploads/obras/Portada_Charla-1-e1776487324802.jpg",
-   "posterSource": "custom",
    "event_kind": "ponencia",
    "day": "2026-08-14",
    "time": "16:00",
@@ -4011,7 +4004,8 @@
    "_ingreso": "",
    "_src": {
     "programacion_oficial": "Hackeando los mandatos de la delgadez"
-   }
+   },
+   "_poster_descartado": "genérico de sección (compartido por varias actividades)"
   },
   {
    "title": "Hija del volcán",
@@ -4599,8 +4593,6 @@
    "duration": "",
    "synopsis": "Un espacio de diálogo sobre las nuevas formas de participación y activismo politico en las plataformas digitales.",
    "synopsis_lang": "es",
-   "poster": "/uploads/obras/Portada_Charla-1-e1776487324802.jpg",
-   "posterSource": "custom",
    "event_kind": "ponencia",
    "day": "2026-08-14",
    "time": "18:00",
@@ -4614,7 +4606,8 @@
    "_ingreso": "",
    "_src": {
     "programacion_oficial": "Mujeres, juventudes y activismo político en la era digital"
-   }
+   },
+   "_poster_descartado": "genérico de sección (compartido por varias actividades)"
   },
   {
    "title": "Herencia: Los cantos de la tierra",
@@ -4904,9 +4897,6 @@
    "country": "Colombia",
    "synopsis": "",
    "synopsis_lang": "es",
-   "poster": "",
-   "posterSource": "",
-   "lbSlug": "",
    "genre": "Documental",
    "day": "2026-08-14",
    "time": "18:30",
@@ -6275,8 +6265,6 @@
    "duration": "",
    "synopsis": "Cuidado y protección de áreas naturales en riesgo. Entrada con previa inscripción: https://forms.gle/q8LxC7KnkowLT7ov8PanelistasEmmerich WeissenbergerDirector de la Fundación Las Mercedes. Fundador del Colectivo ArtEmbassy.Nora RuzsicsArtista. Cineasta. Miembro del Colectivo ArtEmbassy.Gunzareiman V",
    "synopsis_lang": "es",
-   "poster": "/uploads/obras/Portada_Charla-1-e1776487324802.jpg",
-   "posterSource": "custom",
    "event_kind": "ponencia",
    "day": "2026-08-15",
    "time": "14:00",
@@ -6290,7 +6278,8 @@
    "_ingreso": "",
    "_src": {
     "programacion_oficial": "Desde el centro de la tierra"
-   }
+   },
+   "_poster_descartado": "genérico de sección (compartido por varias actividades)"
   },
   {
    "title": "Los reyes del mundo",
@@ -6514,9 +6503,6 @@
    "country": "Colombia",
    "synopsis": "",
    "synopsis_lang": "es",
-   "poster": "",
-   "posterSource": "",
-   "lbSlug": "",
    "genre": "Documental",
    "day": "2026-08-15",
    "time": "15:00",
@@ -6836,8 +6822,6 @@
    "duration": "",
    "synopsis": "¿Qué procesos de resistencia lideran las y los indígenas de la ciudad? En este espacio lxs invitadxs reflexionan sobre el tema.PanelistasModeradoreIván Reina OrtizRealizadore de Cine y TV. Magíster en Administración. Productore local de FICDEH en Ibagué.Katerin Yelitza Rodríguez MontealegreEstudiant",
    "synopsis_lang": "es",
-   "poster": "/uploads/obras/Portada_Charla-1-e1776487324802.jpg",
-   "posterSource": "custom",
    "event_kind": "ponencia",
    "day": "2026-08-15",
    "time": "16:30",
@@ -6851,7 +6835,8 @@
    "_ingreso": "",
    "_src": {
     "programacion_oficial": "Resistencias indígenas en Ibagué"
-   }
+   },
+   "_poster_descartado": "genérico de sección (compartido por varias actividades)"
   },
   {
    "title": "El juego de la vida",
@@ -6892,8 +6877,6 @@
    "duration": "",
    "synopsis": "Una jornada cultural para conmemorar los diez años de la firma de los Acuerdos de Paz en Colombia. Incluye la proyección de los cortometrajes \"La luz que nos queda\" (dir. Gloria Isabel Gómez Ceballos) y \"Lo que sentimos\" (dir. Fondo Multidonante de las Naciones Unidas para la Paz en Colombia), la ch",
    "synopsis_lang": "es",
-   "poster": "/uploads/obras/Portada_Charla-1-e1776487324802.jpg",
-   "posterSource": "custom",
    "event_kind": "ponencia",
    "day": "2026-08-15",
    "time": "17:00",
@@ -6907,7 +6890,8 @@
    "_ingreso": "",
    "_src": {
     "programacion_oficial": "El Arte de la Paz"
-   }
+   },
+   "_poster_descartado": "genérico de sección (compartido por varias actividades)"
   },
   {
    "title": "La luz que nos queda",
@@ -7132,8 +7116,6 @@
    "duration": "",
    "synopsis": "Una reflexión sobre el papel de las mujeres buscadoras a partir del documental \"Soñé su nombre\"",
    "synopsis_lang": "es",
-   "poster": "/uploads/obras/Portada_Charla-1-e1776487324802.jpg",
-   "posterSource": "custom",
    "event_kind": "ponencia",
    "day": "2026-08-15",
    "time": "18:00",
@@ -7147,7 +7129,8 @@
    "_ingreso": "",
    "_src": {
     "programacion_oficial": "Ni un minuto de silencio, toda una vida de búsqueda"
-   }
+   },
+   "_poster_descartado": "genérico de sección (compartido por varias actividades)"
   },
   {
    "title": "Aquí no entra luz",
@@ -8329,8 +8312,6 @@
    "duration": "",
    "synopsis": "Las periodistas de este proyecto toman los micrófonos y comparten cómo ha sido narrar el conflicto y la paz en Colombia.",
    "synopsis_lang": "es",
-   "poster": "/uploads/obras/Portada_Charla-1-e1776487324802.jpg",
-   "posterSource": "custom",
    "event_kind": "ponencia",
    "day": "2026-08-16",
    "time": "15:30",
@@ -8345,7 +8326,8 @@
    "_ingreso": "",
    "_src": {
     "programacion_oficial": "Colombia +20: una década de periodismo para la paz"
-   }
+   },
+   "_poster_descartado": "genérico de sección (compartido por varias actividades)"
   },
   {
    "title": "Por una gota de leche",
@@ -9558,8 +9540,6 @@
    "duration": "",
    "synopsis": "A partir de la proyección de los cortos La Cerillana y Los pliegues de la falda activistas conversan sobre estas experiencia de vida.",
    "synopsis_lang": "es",
-   "poster": "/uploads/obras/Portada_Charla-1-e1776487324802.jpg",
-   "posterSource": "custom",
    "event_kind": "ponencia",
    "day": "2026-08-17",
    "time": "16:00",
@@ -9574,7 +9554,8 @@
    "_ingreso": "Boletería en taquilla",
    "_src": {
     "programacion_oficial": "¡Existimos! Infancias trans en Colombia"
-   }
+   },
+   "_poster_descartado": "genérico de sección (compartido por varias actividades)"
   },
   {
    "title": "Cuando la palabra se hace búsqueda",
@@ -9796,8 +9777,6 @@
    "duration": "",
    "synopsis": "Condiciones laborales, creativas y éticas que atraviesan la industria.",
    "synopsis_lang": "es",
-   "poster": "/uploads/obras/Portada_Charla-1-e1776487324802.jpg",
-   "posterSource": "custom",
    "event_kind": "ponencia",
    "day": "2026-08-17",
    "time": "17:30",
@@ -9812,7 +9791,8 @@
    "_ingreso": "",
    "_src": {
     "programacion_oficial": "Tercera charla Derechos audiovisuales"
-   }
+   },
+   "_poster_descartado": "genérico de sección (compartido por varias actividades)"
   },
   {
    "title": "La Cerrillana",
@@ -9970,8 +9950,6 @@
    "duration": "",
    "synopsis": "Diálogo sobre las transformaciones que la inteligencia artificial está generando en los procesos creativos y artísticos del país.",
    "synopsis_lang": "es",
-   "poster": "/uploads/obras/Portada_Charla-1-e1776487324802.jpg",
-   "posterSource": "custom",
    "event_kind": "ponencia",
    "day": "2026-08-18",
    "time": "10:00",
@@ -9986,7 +9964,8 @@
    "_ingreso": "",
    "_src": {
     "programacion_oficial": "El arte de moldear la IA"
-   }
+   },
+   "_poster_descartado": "genérico de sección (compartido por varias actividades)"
   },
   {
    "title": "Amalgama",
@@ -11000,8 +10979,6 @@
    "duration": "",
    "synopsis": "Una invitación a reflexionar sobre la importancia del río Otún como fuente de vida y patrimonio natural.",
    "synopsis_lang": "es",
-   "poster": "/uploads/obras/Portada_Charla-1-e1776487324802.jpg",
-   "posterSource": "custom",
    "event_kind": "ponencia",
    "day": "2026-08-18",
    "time": "16:00",
@@ -11016,7 +10993,8 @@
    "_ingreso": "",
    "_src": {
     "programacion_oficial": "De Poleka Kasue al Río Otún: ¿Quién cuida el agua del río más importante de la región?"
-   }
+   },
+   "_poster_descartado": "genérico de sección (compartido por varias actividades)"
   },
   {
    "title": "Hablemos de salud mental",
@@ -11025,8 +11003,6 @@
    "duration": "",
    "synopsis": "Un espacio de reflexión en torno a la salud mental de los jóvenes chocoanos.",
    "synopsis_lang": "es",
-   "poster": "/uploads/obras/Portada_Charla-1-e1776487324802.jpg",
-   "posterSource": "custom",
    "event_kind": "ponencia",
    "day": "2026-08-18",
    "time": "16:00",
@@ -11040,7 +11016,8 @@
    "_ingreso": "",
    "_src": {
     "programacion_oficial": "Hablemos de salud mental"
-   }
+   },
+   "_poster_descartado": "genérico de sección (compartido por varias actividades)"
   },
   {
    "title": "Cuando la palabra se hace búsqueda",
@@ -11514,8 +11491,6 @@
    "duration": "",
    "synopsis": "¿Cuáles han sido los alcances e implicaciones de la Ley 1448 de 2011? Líderes y lideresas reflexionan sobre esto.",
    "synopsis_lang": "es",
-   "poster": "/uploads/obras/Portada_Charla-1-e1776487324802.jpg",
-   "posterSource": "custom",
    "event_kind": "ponencia",
    "day": "2026-08-19",
    "time": "09:00",
@@ -11529,7 +11504,8 @@
    "_ingreso": "",
    "_src": {
     "programacion_oficial": "Reconocer, atender y reparar: 15 años de la Ley de Víctimas"
-   }
+   },
+   "_poster_descartado": "genérico de sección (compartido por varias actividades)"
   },
   {
    "title": "Andariega",
@@ -12030,7 +12006,6 @@
    "synopsis_lang": "es",
    "poster": "/assets/ficdeh/halima-una-guia-para-ser-fuerte.jpg",
    "posterSource": "custom",
-   "lbSlug": "",
    "genre": "Documental",
    "day": "2026-08-19",
    "time": "15:30",
@@ -12057,8 +12032,6 @@
    "duration": "",
    "synopsis": "A partir de la proyección del cortometraje Halima, Juliana Domicó conversa sobre su lucha por la erradicación de esta práctica en el país.",
    "synopsis_lang": "es",
-   "poster": "/uploads/obras/Portada_Charla-1-e1776487324802.jpg",
-   "posterSource": "custom",
    "event_kind": "ponencia",
    "day": "2026-08-19",
    "time": "15:30",
@@ -12073,7 +12046,8 @@
    "_ingreso": "Boletería en taquilla",
    "_src": {
     "programacion_oficial": "¡No más mutilación genital femenina en Colombia!"
-   }
+   },
+   "_poster_descartado": "genérico de sección (compartido por varias actividades)"
   },
   {
    "title": "Bojayá, la verdad desde adentro",
