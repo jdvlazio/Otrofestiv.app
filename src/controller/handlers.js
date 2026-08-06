@@ -7,7 +7,7 @@
 
 import { FESTIVAL_CONFIG, MAX_REMEMBERED_SLOTS } from '../config.js';
 import { ICONS, parseProgramTitle } from '../view/components.js';
-import { closeAuthSheet, closePrioLimit } from '../view/sheets.js';
+import { closeAuthSheet, closeCitySheet, closePrioLimit } from '../view/sheets.js';
 import { showActionModal, showToast } from '../view/feedback.js';
 import { _renderProgramaContent, lugarClose, render, renderNoticesBanner, _noticeKey } from '../view/programa.js';
 import { renderAgenda, updateCardState, updateHorarioPrioBtn } from '../view/agenda.js';
@@ -781,6 +781,26 @@ export function clearProgramaChip(){
 export function _pafClearSec(){
   activeSec='all';seccionClose();_updateProgramaActiveFilter();
   if(activeMNav==='mnav-cartelera')_renderProgramaContent(true);else render(); // limpiar filtro sección → scroll al tope
+}
+
+// citySheetPick / citySheetAll — respuestas del sheet de ciudad (multiciudad).
+// Ambas RECUERDAN la respuesta: elegir ciudad guarda 'city:X'; "ver todas"
+// guarda 'all', que no filtra pero marca la pregunta como hecha para que no
+// vuelva a aparecer. El '' (nunca preguntado) es el único estado que la dispara.
+export function citySheetPick(city){
+  activeVenue='city:'+city;
+  storage.setCityFilter(activeVenue);
+  closeCitySheet();
+  _updateProgramaActiveFilter();
+  _renderProgramaContent(true);
+}
+
+export function citySheetAll(){
+  activeVenue='all';
+  storage.setCityFilter('all');   // preguntado y respondido: ver todas
+  closeCitySheet();
+  _updateProgramaActiveFilter();
+  _renderProgramaContent(true);
 }
 
 export function _pafClearVenue(){

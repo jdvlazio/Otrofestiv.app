@@ -338,3 +338,82 @@ test('T50 — la ciudad se recuerda entre sesiones; la sede no', async ({ page }
   expect(await page.evaluate(() => activeVenue)).toBe('all');
   expect(await page.evaluate(() => localStorage.getItem('cinemancia2025_city'))).toBeFalsy();
 });
+
+// ── T51 — el badge de precio marca la MINORÍA ────────────────────────────────
+// FICDEH 2026 (81% de entrada libre) invirtió la premisa de la app: el badge
+// GRATIS pintaba 313 de 384 funciones y escondía las 71 accionables. La regla
+// pasó a ser "marcá la minoría" y la decide ticketBadgeTarget() una vez por
+// festival. Este test congela el OTRO lado: en los festivales donde lo gratuito
+// sigue siendo la excepción, nada cambió — el badge GRATIS sigue exactamente
+// donde estaba. (El lado invertido lo cubre tests/unit/ticketBadgeTarget.test.js
+// con las proporciones reales de ambos festivales.)
+test('T51 — donde gratis es la excepción, el badge GRATIS sigue igual', async ({ page }) => {
+  await enterFestival(page, 'tercertiempo2026');
+  await page.evaluate(() => { switchMainNav('mnav-cartelera'); activeDay = 'all'; programaViewMode = 'list'; _renderProgramaContent(); });
+  await page.waitForTimeout(500);
+
+  const r = await page.evaluate(() => {
+    const items = [...document.querySelectorAll('.plist-item')];
+    const badges = items.flatMap(i => [...i.querySelectorAll('.meta-badge')].map(b => b.textContent));
+    const reales = FILMS.filter(f => !f.info && f.day && f.time);
+    return {
+      target: ticketBadgeTarget(),
+      libres: reales.filter(f => f.is_free === true).length,
+      total: reales.length,
+      gratis: badges.filter(b => /GRATIS|FREE/i.test(b)).length,
+      boleta: badges.filter(b => /BOLETA|TICKETED/i.test(b)).length,
+    };
+  });
+  expect(r.libres * 2).toBeLessThan(r.total);      // premisa del escenario
+  expect(r.target).toBe('free');
+  expect(r.gratis).toBeGreaterThan(0);             // sigue marcando las gratuitas
+  expect(r.boleta).toBe(0);                        // y NO invade con CON BOLETA
+});
+
+// ── T52 — el sheet de ciudad: se pregunta UNA vez, y solo si hay que preguntar ─
+// FICDEH 2026 abre en 11 ciudades: entrar al programa y ver las 11 mezcladas no
+// es un catálogo, es ruido. El sheet pregunta al entrar, guarda la respuesta y
+// no vuelve a preguntar. En un festival de una ciudad no existe.
+test('T52 — sheet de ciudad: solo multiciudad, y no reaparece', async ({ page }) => {
+  // mono-ciudad: el sheet NO existe
+  await enterFestival(page, 'tercertiempo2026');
+  await page.waitForTimeout(600);
+  expect(await page.evaluate(() => document.getElementById('city-sheet')?.classList.contains('open'))).toBeFalsy();
+
+  // multiciudad: aparece con una fila por ciudad + la salida
+  await enterFestival(page, 'cinemancia2025');
+  await page.waitForSelector('#city-sheet.open', { timeout: 5000 });
+  const filas = await page.evaluate(() => ({
+    ciudades: document.querySelectorAll('#city-sheet-list .lugar-opt.city').length,
+    salida: !!document.querySelector('#city-sheet-list .lugar-opt.escape'),
+    nombre: document.querySelector('#city-sheet-list .lugar-opt.city span').textContent.trim(),
+  }));
+  expect(filas.ciudades).toBeGreaterThan(1);
+  expect(filas.salida).toBe(true);
+
+  // elegir ciudad: filtra, cierra y queda recordada
+  await page.evaluate(() => document.querySelector('#city-sheet-list .lugar-opt.city').click());
+  await page.waitForTimeout(600);
+  expect(await page.evaluate(() => activeVenue)).toBe('city:' + filas.nombre);
+  expect(await page.evaluate(() => document.getElementById('city-sheet').classList.contains('open'))).toBe(false);
+
+  // reabrir: ya respondió, no se vuelve a preguntar
+  await enterFestival(page, 'cinemancia2025');
+  await page.waitForTimeout(900);
+  expect(await page.evaluate(() => document.getElementById('city-sheet').classList.contains('open'))).toBe(false);
+  expect(await page.evaluate(() => activeVenue)).toBe('city:' + filas.nombre);
+});
+
+// La salida ("ver todas") también es una respuesta: no puede reabrir el sheet en
+// bucle cada vez que el usuario entra.
+test('T53 — "ver todas" se recuerda como respuesta, no como silencio', async ({ page }) => {
+  await enterFestival(page, 'cinemancia2025');
+  await page.waitForSelector('#city-sheet.open', { timeout: 5000 });
+  await page.evaluate(() => document.querySelector('#city-sheet-list .lugar-opt.escape').click());
+  await page.waitForTimeout(500);
+  expect(await page.evaluate(() => activeVenue)).toBe('all');
+
+  await enterFestival(page, 'cinemancia2025');
+  await page.waitForTimeout(900);
+  expect(await page.evaluate(() => document.getElementById('city-sheet').classList.contains('open'))).toBe(false);
+});

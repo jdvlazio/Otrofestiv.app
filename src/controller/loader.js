@@ -10,7 +10,7 @@ import { parseDur } from '../domain/time.js';
 import { lruTouch } from '../lru.js';
 import { DAY_ABBR, DAY_NUM, _classifyFestival, festivalShortName } from '../view/components.js';
 import { DAYS, DAY_SHORT_EN, setCustomPosters, setDayShort, setDayShortEn, setPosters, keepCityOnly } from '../view/helpers.js';
-import { closeFestivalSheet } from '../view/sheets.js';
+import { closeFestivalSheet, openCitySheet } from '../view/sheets.js';
 import { showToast } from '../view/feedback.js';
 import { _renderProgramaContent, lugarClose } from '../view/programa.js';
 import { _fixStickyOffset } from '../view/agenda.js';
@@ -437,11 +437,20 @@ export async function loadFestival(id){
   // ESTE festival y (b) sigue existiendo en sus sedes — si el festival cambió su
   // programación y esa ciudad ya no está, se descarta en silencio en vez de dejar
   // el programa vacío. Cambiarla o quitarla es un tap en el filtro de Lugar.
+  // Tres estados: '' = nunca preguntado (dispara el sheet) · 'all' = eligió ver
+  // todas (no filtra, pero no se vuelve a preguntar) · 'city:X' = su ciudad.
   const _savedCity=storage.getCityFilter();
-  if(_savedCity){
+  if(_savedCity&&_savedCity!=='all'){
     const _c=_savedCity.slice(5);
     const _existe=Object.values(cfg.venues||{}).some(v=>v&&v.city===_c);
     if(_existe) activeVenue=_savedCity; else storage.setCityFilter('');
+  }
+  // El sheet se abre DESPUÉS del primer render del programa (rAF doble): si se
+  // abriera antes, el usuario ve el sheet sobre una pantalla vacía y no entiende
+  // de qué le están hablando. Ver openCitySheet: se auto-descarta si el festival
+  // no es multiciudad, así que acá no hace falta repetir la condición.
+  if(!storage.getCityFilter()){
+    requestAnimationFrame(()=>requestAnimationFrame(()=>openCitySheet()));
   }
 
   // Set active day to today

@@ -284,6 +284,34 @@ Usado cuando un film tiene múltiples funciones en días/horarios/venues distint
 
 `is_free` se absorbe en la explosión de screenings (whitelist en `loader.js`). Solo aplica a festivales con `ticketing_model: "mixed"`.
 
+#### El badge de precio marca la MINORÍA
+
+Marcar `is_free` no implica pintar un badge GRATIS. **La app decide sola de qué
+lado cae la minoría y marca ese lado**, una vez por festival:
+
+| Funciones gratuitas | Badge que se pinta | En |
+|---|---|---|
+| ≤ 50% | **GRATIS** | las gratuitas |
+| > 50% (y el empate) | **CON BOLETA** | las de pago |
+
+Dueño único: **`ticketBadgeTarget()`** en `src/view/helpers.js` — lo consultan
+las cards (`_metaBadges`) y la fila de AVISOS de la ficha. Guardián
+`[badge-precio-minoria]`. Nadie más lee `is_free` para decidir un badge.
+
+**Por qué:** hasta agosto de 2026 lo gratuito era la excepción en los diez
+festivales montados (0% en nueve, 6% en Tercer Tiempo) y marcar las gratuitas
+alcanzaba. FICDEH 2026 invirtió la premisa —313 de 384 funciones de entrada
+libre, el 81%— y el badge pasó a pintar 313 tarjetas sin decir nada, escondiendo
+las 71 que sí exigen sacar boleta. Un badge que marca la mayoría no informa.
+
+El umbral es 50% y no uno más alto a propósito: es "la minoría" literal, se
+explica en una frase y no deja zona gris marcando mayorías. **El empate resuelve
+a CON BOLETA**, que es lo accionable. Con el programa aún sin cargar no se decide
+nada (ni se memoiza).
+
+Para el onboarding esto no cambia nada: se sigue marcando `is_free` en cada
+función gratuita, sin importar cuántas sean.
+
 **Regla de explosión:** el sistema convierte `screenings[]` en objetos film planos usando:
 ```javascript
 day: s.day || s.date   // ← CRÍTICO: siempre usar ambos por compatibilidad
