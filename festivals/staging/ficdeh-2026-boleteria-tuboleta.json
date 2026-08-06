@@ -1,0 +1,40 @@
+{
+ "_provenance": {
+  "que_es": "Venta de boletas por FUNCIÓN de las proyecciones de FICDEH en la Cinemateca de Bogotá.",
+  "fuente": "https://cinemateca.checkout.tuboleta.com/ (listado del promotor IDARTES - CINEMATECA), capturado 5 ago 2026",
+  "como_se_obtuvo": "El listado del checkout expone 83 eventos de la Cinemateca; 29 son de FICDEH. Cada uno tiene un productId, y el <title> de /selection/event/date?productId=<id> trae sala, fecha, hora y título — por eso el cruce es exacto y no por aproximación de título.",
+  "ojo": "NO está en el sitio de FICDEH (que solo dice «Boletería en taquilla») ni en las fichas de película de la Cinemateca ni en su agenda: el enlace de compra vive solo en tuboleta. Tampoco se ve con curl — la página necesita JS.",
+  "url_patron": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=<productId>"
+ },
+ "funciones": [
+  {"productId": "10230522900359", "dia": "2026-08-13", "hora": "14:00", "sala": "Sala Capital", "titulo": "Niñxs"},
+  {"productId": "10230522900360", "dia": "2026-08-13", "hora": "14:30", "sala": "Sala 2", "titulo": "El silencio de la tierra"},
+  {"productId": "10230522900361", "dia": "2026-08-13", "hora": "15:00", "sala": "Sala 3", "titulo": "Aminetu"},
+  {"productId": "10230522900362", "dia": "2026-08-13", "hora": "16:30", "sala": "Sala Capital", "titulo": "La Raya"},
+  {"productId": "10230522900363", "dia": "2026-08-13", "hora": "17:00", "sala": "Sala 2", "titulo": "XIE. Defensa de la Vida"},
+  {"productId": "10230522900364", "dia": "2026-08-13", "hora": "19:30", "sala": "Sala 2", "titulo": "Competencia Cortometrajes Nacionales, Programa"},
+  {"productId": "10230522900365", "dia": "2026-08-14", "hora": "15:00", "sala": "Sala Capital", "titulo": "Amor rebelde"},
+  {"productId": "10230522900370", "dia": "2026-08-14", "hora": "16:00", "sala": "Sala 2", "titulo": "1982"},
+  {"productId": "10230522900371", "dia": "2026-08-14", "hora": "16:30", "sala": "Sala 3", "titulo": "Cuando un río se convierte en mar"},
+  {"productId": "10230522900372", "dia": "2026-08-14", "hora": "17:30", "sala": "Sala Capital", "titulo": "Silenced"},
+  {"productId": "10230522900373", "dia": "2026-08-14", "hora": "20:00", "sala": "Sala 3", "titulo": "Carmela y los caminantes"},
+  {"productId": "10230522900374", "dia": "2026-08-15", "hora": "11:00", "sala": "Sala 3", "titulo": "Semillas"},
+  {"productId": "10230522900375", "dia": "2026-08-15", "hora": "11:00", "sala": "Sala 3", "titulo": "Desierto verde"},
+  {"productId": "10230522900377", "dia": "2026-08-15", "hora": "16:00", "sala": "Sala 3", "titulo": "Aquí no entra luz"},
+  {"productId": "10230522900378", "dia": "2026-08-15", "hora": "17:30", "sala": "Sala Capital", "titulo": "Eva"},
+  {"productId": "10230522900379", "dia": "2026-08-15", "hora": "19:00", "sala": "Sala 2", "titulo": "One in a Million"},
+  {"productId": "10230522900380", "dia": "2026-08-15", "hora": "20:00", "sala": "Sala Capital", "titulo": "La Bonga"},
+  {"productId": "10230522900381", "dia": "2026-08-16", "hora": "11:00", "sala": "Sala 3", "titulo": "El mundo de Gugu (Feito Pipa)"},
+  {"productId": "10230522900382", "dia": "2026-08-16", "hora": "16:00", "sala": "Sala 2", "titulo": "Por una gota de leche"},
+  {"productId": "10230522900383", "dia": "2026-08-16", "hora": "17:00", "sala": "Sala Capital", "titulo": "Three Black Men"},
+  {"productId": "10230522900384", "dia": "2026-08-16", "hora": "19:00", "sala": "Sala 2", "titulo": "Notas sobre un destierro"},
+  {"productId": "10230522900385", "dia": "2026-08-16", "hora": "19:30", "sala": "Sala Capital", "titulo": "El silencio de los palafitos"},
+  {"productId": "10230522900386", "dia": "2026-08-17", "hora": "13:00", "sala": "Sala 2", "titulo": "Andariega"},
+  {"productId": "10230522900387", "dia": "2026-08-17", "hora": "15:00", "sala": "Sala Capital", "titulo": "American Doctor"},
+  {"productId": "10230522900388", "dia": "2026-08-17", "hora": "16:00", "sala": "Sala 2", "titulo": "Los pliegues de la falda"},
+  {"productId": "10230522900389", "dia": "2026-08-17", "hora": "17:30", "sala": "Sala Capital", "titulo": "Competencia Cortometrajes Nacionales, Programa 2"},
+  {"productId": "10230522900391", "dia": "2026-08-19", "hora": "13:00", "sala": "Sala 2", "titulo": "La luz por primera vez"},
+  {"productId": "10230522900392", "dia": "2026-08-19", "hora": "15:30", "sala": "Sala 2", "titulo": "Halima - Una guía para ser fuerte"},
+  {"productId": "10230522900393", "dia": "2026-08-19", "hora": "16:00", "sala": "Sala Capital", "titulo": "Floresmiro"}
+ ]
+}

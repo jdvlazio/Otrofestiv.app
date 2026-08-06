@@ -347,6 +347,7 @@ export const FESTIVAL_CONFIG={
     dayLong:{'2026-08-12':'Miércoles 12 de agosto','2026-08-13':'Jueves 13 de agosto','2026-08-14':'Viernes 14 de agosto','2026-08-15':'Sábado 15 de agosto','2026-08-16':'Domingo 16 de agosto','2026-08-17':'Lunes 17 de agosto','2026-08-18':'Martes 18 de agosto','2026-08-19':'Miércoles 19 de agosto'},
     prioLimit:4,eventPosterLabel:['EVENTO',''],
     tagline:'Festival Internacional de Cine por los Derechos Humanos', // espacios duros: fuerzan el corte en «Cine / por los Derechos Humanos»
+    ticketing_model:'mixed', // entrada libre en casi todo + boletería en la Cinemateca (ticket_url por función). No va en el JSON: ahí el validador exigiría un ticket_url de raíz y FICDEH no tiene boletería única
     films:null,posters:null,lbSlugs:{}
   },
   'finca2026': {

@@ -197,6 +197,52 @@ if _fuera:
     print(f'  dedup: {len(_fuera)} funciones repetidas por grafía de sede → {sorted(set(_fuera))}')
 films_out = _dedup
 
+# ticket_url — solo la Cinemateca de Bogotá vende online, y el enlace no está
+# ni en el sitio de FICDEH («Boletería en taquilla» a secas) ni en las fichas
+# ni en la agenda de la Cinemateca: vive únicamente en su checkout de tuboleta,
+# y solo se ve con JS (curl no lo alcanza). Cada boleta es de una FUNCIÓN, así
+# que el enlace se reparte a todas las obras del slot.
+TB_PATH = f'{REPO}/festivals/staging/ficdeh-2026-boleteria-tuboleta.json'
+TB = json.load(open(TB_PATH, encoding='utf-8')) if os.path.exists(TB_PATH) else {'funciones': []}
+TB_URL = 'https://cinemateca.checkout.tuboleta.com/selection/event/date?productId='
+
+
+def _tit(s):
+    s = unicodedata.normalize('NFD', (s or '').lower())
+    s = ''.join(c for c in s if unicodedata.category(c) != 'Mn')
+    return re.sub(r'[^a-z0-9]+', ' ', s).strip()
+
+
+def _misma_sala(e, t):
+    """La boleta es de UNA sala. Sin este filtro, un taller gratis en el
+    Laboratorio hereda el enlace de compra de la película que va a esa misma
+    hora en Sala Capital."""
+    s = (e.get('sala') or '').strip()
+    return not s or _tit(s) == _tit(t['sala'])
+
+
+_tb_ok = _tb_no = 0
+for t in TB['funciones']:
+    slot = [e for e in films_out
+            if e.get('day') == t['dia'] and e.get('time') == t['hora']
+            and (e.get('venue') or '').startswith('Cinemateca de Bogotá')
+            and _misma_sala(e, t)]
+    if not slot:
+        # la hora de tuboleta no cuadra con la del festival: se busca la obra
+        # por título dentro del día (pasa con Desierto verde, ver más abajo)
+        slot = [e for e in films_out
+                if e.get('day') == t['dia'] and (e.get('venue') or '').startswith('Cinemateca de Bogotá')
+                and _tit(e.get('title')) == _tit(t['titulo'])]
+    if slot:
+        for e in slot:
+            e['ticket_url'] = TB_URL + t['productId']
+        _tb_ok += 1
+    else:
+        _tb_no += 1
+        print(f"  ⚠️ boleta sin función: {t['dia']} {t['hora']} «{t['titulo']}»")
+print(f'  ticket_url: {_tb_ok}/{len(TB["funciones"])} boletas cruzadas → '
+      f'{sum(1 for e in films_out if e.get("ticket_url"))} funciones con enlace de compra')
+
 # has_qa — solo donde hay confirmación externa verificable. El sitio del
 # festival no lo publica y las fichas de la Cinemateca tampoco (su menú incluye
 # «Conversatorios y charlas», que aparece en las 30 páginas y NO es señal de
@@ -267,8 +313,10 @@ out = {
   # corto+largo. Verificado uno a uno; las sedes son de sala única salvo la
   # Cinemateca, que escalona horarios (nunca dos títulos a la misma hora).
   'sharedSlotIsOneScreening': True,
-  # sin ticketing_model: exige ticket_url y no hay una URL única — la boletería
-  # la vende cada sede (la Cinemateca por tuboleta). is_free por función ya lo dice.
+  # ticketing_model NO va aquí: el validador exige ticket_url en el root si el
+  # JSON lo declara, y FICDEH no tiene boletería única (solo la Cinemateca vende
+  # online, sede por sede). Vive en FESTIVAL_CONFIG, que es de donde lo leen el
+  # badge de gratis (view/helpers.js) y el filtro de funciones gratuitas.
   'sections': sections,
   'venues': venues,
   'films': films_out,
