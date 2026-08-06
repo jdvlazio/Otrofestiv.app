@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `90ef9fe fix(splash): los afiches entran enteros en la card — estirado a 2:3 (#503) (#503)`
+> Último commit: `27207e3 Merge remote-tracking branch 'origin/main' into fix/splash-ciudad-pais`
 
 ---
 
