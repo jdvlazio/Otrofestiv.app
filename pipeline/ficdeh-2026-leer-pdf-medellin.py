@@ -21,6 +21,8 @@ REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PDF = os.path.expanduser('~/Desktop/FICDEH_PROGRAMACIÓN_MEDELLÍN_2026.pdf')
 OUT = f'{REPO}/festivals/staging/ficdeh-2026-medellin-pdf.json'
 CORTE_X = 500          # frontera entre la columna izquierda y la derecha
+# Una dirección colombiana: «Cra. 45 # 53 - 24», «Cl. 51 # 36 - 66», «Carrera 22 - Calle 67»
+ES_DIR = re.compile(r'^\s*(Cra?\.|Cl\.|Calle|Carrera|Kra\.|Dg\.|Diagonal|Av\.|Avenida|Transversal|Tv\.)\s*\d', re.I)
 DIAS = {'MIÉRCOLES': 2, 'JUEVES': 3, 'VIERNES': 4, 'SÁBADO': 5,
         'DOMINGO': 6, 'LUNES': 0, 'MARTES': 1}
 
@@ -39,7 +41,16 @@ def lineas_de_pagina(p):
             filas[round(y / 6)].append((x, t))       # agrupa por banda horizontal
         for k in sorted(filas):
             out.append(' '.join(t for _, t in sorted(filas[k])).strip())
-    return [l for l in out if l]
+    # El pie de página («MEDELLÍN», «PROGRAMACIÓN», la url) va rotado en el
+    # margen y pdftotext lo pega al final de la línea que le queda más cerca.
+    limpias = []
+    for l in out:
+        for a, b in (('ﬁ', 'fi'), ('ﬂ', 'fl'), ('ﬀ', 'ff'), ('ﬃ', 'ffi')):
+            l = l.replace(a, b)
+        l = re.sub(r'\s*(MEDELL[ÍI]N|PROGRAMACI[ÓO]N|www\.FICDEH\.com)\s*$', '', l).strip()
+        if l and not re.fullmatch(r'(MEDELL[ÍI]N|PROGRAMACI[ÓO]N|www\.FICDEH\.com|D[íi]a|\d{1,2})', l, re.I):
+            limpias.append(l)
+    return limpias
 
 
 def main():
@@ -54,6 +65,14 @@ def main():
     #   TÍTULO · [(título internacional)] · Dir. … · Categoría · PAÍS I AÑO I DUR’ · [Estreno | Q&A]
     funcs, dia, hora, sede, direccion, sala = [], None, None, None, '', ''
     pend = []            # líneas de la obra en curso, hasta su línea de país/año/duración
+    unidas, k = [], 0
+    while k < len(lineas):
+        l = lineas[k]
+        if l.endswith('-') and k + 1 < len(lineas) and re.search(r'\sI\s\d{4}\sI\s', lineas[k + 1]):
+            l = l.rstrip('- ') + ' - ' + lineas[k + 1]; k += 1
+        unidas.append(l); k += 1
+    lineas = unidas
+
     for l in lineas:
         md = re.match(r'^(MIÉRCOLES|JUEVES|VIERNES|SÁBADO|DOMINGO|LUNES|MARTES)\s+(\d{1,2})\s*/\s*AGOSTO', l, re.I)
         if md:
@@ -67,6 +86,8 @@ def main():
             if ap == 'A' and hh == 12: hh = 0
             hora, sede, direccion, sala, pend = f'{hh:02d}:{mm}', None, '', '', []
             continue
+        if re.fullmatch(r'Proyecci[óo]n infantil', l.strip(), re.I):
+            continue                       # etiqueta de sección, no una sede
         if hora and sede is None:
             sede = l.strip(); continue
         if sede and not direccion:
@@ -75,6 +96,17 @@ def main():
             if ms:
                 sala = ms.group(1).upper()
                 direccion = direccion[:ms.start()].strip(' -')
+            continue
+        # Una MISMA hora puede tener DOS sedes. Se reconoce porque la línea
+        # siguiente es una dirección; sin esto, la segunda sede se cuela como
+        # título de la obra y arrastra su dirección detrás.
+        if ES_DIR.match(l) and pend:
+            sede, direccion, sala = pend[-1], l.strip(), ''
+            ms = re.search(r'-\s*(SALA\s*\d+)\s*$', direccion, re.I)
+            if ms:
+                sala = ms.group(1).upper()
+                direccion = direccion[:ms.start()].strip(' -')
+            pend = []
             continue
         mp = re.match(r'^(.+?)\s+I\s+(\d{4})\s+I\s+(\d+)\s*[’\']', l)
         if mp:
@@ -100,6 +132,37 @@ def main():
             funcs[-1]['estreno'] = True
         if l.strip() and not re.match(r'^\d+$|^Día$', l.strip()):
             pend.append(l.strip())
+
+    # Seis fichas cuyo título el parser no recupera (maquetas puntuales: el
+    # título va en una caja aparte de su bloque). Se completan a mano leyendo el
+    # PDF, en orden de aparición dentro de su bloque de hora+sede. Preferible una
+    # tabla explícita y auditable a seguir generalizando el parser con un único
+    # documento de muestra.
+    PARCHE = {
+        ('2026-08-14', '16:30', 'La Pascasia'):                        ['1982'],
+        ('2026-08-15', '10:00', 'Centro Cultural Banco de la República'):
+            ['El Paraíso de Ainara', 'In Four Stops'],
+        ('2026-08-16', '14:30', 'Colombo Americano de Medellín'):
+            ['Más allá', 'Akababuru: Expresión de asombro'],
+        ('2026-08-18', '18:00', 'Comfama Cineclub Bello'):             ['Desierto verde'],
+        # «Rueda Libre…: Cra. 22 # 18 - 77» — el nombre de la sede lleva dos puntos
+        # y la dirección detrás, así que el título queda al final de esa línea.
+        ('2026-08-18', '18:30', 'Rueda Libre Festival de Cine de la Ceja'): ['La Raya'],
+    }
+    # Sedes cuyo nombre y dirección ocupan dos líneas: el parser toma la primera
+    # como dirección y la segunda queda pegada al título.
+    for f in funcs:
+        m = re.match(r'^(?:.*?(?:Cra?\.|Cl\.|Calle|Carrera|Dg\.)\s*[\d#\-\s\.]+|.*?SALA\s*\d+)\s+(.+)$', f['titulo'])
+        if m and len(f['titulo']) > 20 and m.group(1).strip():
+            f['titulo'] = m.group(1).strip()
+            f['_titulo_depurado'] = 'la dirección de la sede venía pegada al título'
+
+    for k, titulos in PARCHE.items():
+        huecos = [f for f in funcs
+                  if (f['dia'], f['hora'], f['sede']) == k and not f['titulo']]
+        for f, t in zip(huecos, titulos):
+            f['titulo'] = t
+            f['_titulo_manual'] = 'leído del PDF; el parser no lo recupera'
 
     json.dump({'_provenance': {
         'fuente': 'FICDEH_PROGRAMACIÓN_MEDELLÍN_2026.pdf — guía oficial impresa',

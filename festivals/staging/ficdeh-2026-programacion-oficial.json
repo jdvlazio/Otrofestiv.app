@@ -2417,8 +2417,8 @@
    "en_app": true
   },
   {
-   "dia": "2026-08-15",
-   "hora": "10:00",
+   "dia": "2026-08-16",
+   "hora": "14:30",
    "ciudad": "Medellín",
    "sede": "Centro Cultural Banco de la República",
    "direccion": "Cl. 50 #50-21 Piso 3",
@@ -2429,7 +2429,8 @@
    "ingreso": "",
    "obra_catalogo": "Akababuru: Expresión de asombro",
    "tipo": "film",
-   "en_app": true
+   "en_app": true,
+   "_correccion": "día y hora según la guía oficial en PDF de Medellín"
   },
   {
    "dia": "2026-08-15",
@@ -2478,7 +2479,7 @@
   },
   {
    "dia": "2026-08-15",
-   "hora": "14:30",
+   "hora": "14:00",
    "ciudad": "Medellín",
    "sede": "Colombo Americano",
    "direccion": "Cra. 45 #53 - 24. Centro",
@@ -2489,7 +2490,8 @@
    "ingreso": "",
    "obra_catalogo": "Los reyes del mundo",
    "tipo": "film",
-   "en_app": true
+   "en_app": true,
+   "_correccion": "día y hora según la guía oficial en PDF de Medellín"
   },
   {
    "dia": "2026-08-15",
@@ -2763,7 +2765,7 @@
   },
   {
    "dia": "2026-08-19",
-   "hora": "16:00",
+   "hora": "17:00",
    "ciudad": "Medellín",
    "sede": "Ágora Casa Cultural (La Ceja)",
    "direccion": "Cl. 19 # 23-15",
@@ -2774,7 +2776,8 @@
    "ingreso": "",
    "obra_catalogo": "Amor rebelde",
    "tipo": "film",
-   "en_app": true
+   "en_app": true,
+   "_correccion": "día y hora según la guía oficial en PDF de Medellín"
   },
   {
    "dia": "2026-08-19",
@@ -6480,7 +6483,7 @@
    "en_app": true
   },
   {
-   "dia": "2026-08-12",
+   "dia": "2026-08-13",
    "hora": "18:30",
    "ciudad": "Medellín",
    "sede": "Colombo Americano",
@@ -6493,7 +6496,8 @@
    "obra_catalogo": "One in a million",
    "tipo": "film",
    "en_app": true,
-   "_src": "programación canónica del sitio (barrido 11 ciudades × 8 días)"
+   "_src": "programación canónica del sitio (barrido 11 ciudades × 8 días)",
+   "_correccion": "día y hora según la guía oficial en PDF de Medellín"
   },
   {
    "dia": "2026-08-18",
@@ -7422,6 +7426,22 @@
    "tipo": "film",
    "en_app": true,
    "_src": "programación canónica del sitio (barrido 11 ciudades × 8 días)"
+  },
+  {
+   "dia": "2026-08-18",
+   "hora": "18:00",
+   "ciudad": "Medellín",
+   "sede": "La Pascasia",
+   "direccion": "Cl. 47 # 43 - 88. Centro",
+   "sala": "",
+   "titulo_programacion": "Lo que sentimos",
+   "director_programacion": "Fondo Multidonante de las Naciones",
+   "poster_url": "",
+   "ingreso": "",
+   "obra_catalogo": "Lo que sentimos",
+   "tipo": "film",
+   "en_app": true,
+   "_src": "guía oficial en PDF de Medellín"
   }
  ]
 }

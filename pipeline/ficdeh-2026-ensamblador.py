@@ -169,7 +169,11 @@ for f in sorted(funcs, key=lambda x: (x['dia'], x['hora'], x['ciudad'])):
         # única que da un rango real —«1:00 PM - 4:00 PM» en Los frutos que dan
         # vida—, así que los TALLERES toman esas 3 horas y las charlas se quedan
         # en los 90 min por defecto hasta que el festival confirme (Juan, 6 ago).
-        _dur = '180 min' if f['tipo'] == 'taller' else ''
+        # Duraciones oficiales que el festival confirmó para Medellín (6 ago):
+        # Charlas que Unen 2:00–5:00 PM y talleres 1:00–4:00 PM, ambas 3 horas.
+        # Sin este dato el dominio aplicaba 90 min por defecto y el plan cabía
+        # cosas imposibles detrás de una charla.
+        _dur = '180 min'
         e = {'title': f['titulo_programacion'], 'type': 'event',
              'section': SEC_ACT[f['tipo']][0], 'duration': _dur,
              'synopsis': a.get('synopsis',''), 'synopsis_lang': 'es',
@@ -229,6 +233,25 @@ for e in films_out:
 if _fuera:
     print(f'  dedup: {len(_fuera)} funciones repetidas por grafía de sede → {sorted(set(_fuera))}')
 films_out = _dedup
+
+# Segunda pasada, SIN la sala en la clave: al corregir horarios con la guía en
+# PDF, una función puede caer sobre otra idéntica que solo se diferencia en que
+# una trae sala y la otra no. Gana la que tiene sala, que es la del PDF.
+_v2, _out2, _fuera2 = {}, [], []
+for e in films_out:
+    k = (e.get('day'), e.get('time'), e.get('venue'), e.get('title'))
+    if None in k[:3] or not e.get('title'):
+        _out2.append(e); continue
+    prev = _v2.get(k)
+    if prev is None:
+        _v2[k] = len(_out2); _out2.append(e)
+    elif e.get('sala') and not _out2[prev].get('sala'):
+        _fuera2.append(e['title']); _out2[prev] = e
+    else:
+        _fuera2.append(e['title'])
+if _fuera2:
+    print(f'  dedup (sin sala): {len(_fuera2)} → {sorted(set(_fuera2))}')
+films_out = _out2
 
 # ticket_url — solo la Cinemateca de Bogotá vende online, y el enlace no está
 # ni en el sitio de FICDEH («Boletería en taquilla» a secas) ni en las fichas
