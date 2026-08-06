@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `1aa7a39 fix(splash): un festival nacional no dice su país dos veces (#506)`
+> Último commit: `8b1f2f3 feat(sedes): la sala se declara, y llega igual al calendario en los dos caminos`
 
 ---
 
