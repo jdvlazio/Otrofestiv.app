@@ -48,6 +48,16 @@ GEO = json.load(open(GEO_PATH, encoding='utf-8')) if os.path.exists(GEO_PATH) el
 # y /talleres/<slug>). El póster vive en /uploads/obras/ del sitio del festival.
 ACT_PATH = f'{REPO}/festivals/staging/ficdeh-2026-actividades.json'
 ACT = json.load(open(ACT_PATH, encoding='utf-8')) if os.path.exists(ACT_PATH) else {}
+
+
+def _poster_local(url):
+    """El sitio del festival sirve sus pósters en /uploads/obras/…; esa ruta en
+    nuestra app es un 404 y la card sale con el icono de imagen rota (lo vimos
+    en «Pintando realidades»). Los archivos se bajan a assets/ficdeh/ y aquí se
+    reescribe la ruta."""
+    if url.startswith('/uploads/'):
+        return '/assets/ficdeh/' + url.rsplit('/', 1)[-1]
+    return url
 # La programación escribe la SALA dentro del nombre de la sede («Sala 2 -
 # Cinemateca de Bogotá»), así que un mismo lugar entra al catálogo como varias
 # sedes distintas: la Cinemateca aparecía 5 veces, y en el filtro por sede se
@@ -133,14 +143,14 @@ for f in sorted(funcs, key=lambda x: (x['dia'], x['hora'], x['ciudad'])):
         e = {k: v for k, v in obra.items() if not k.startswith('_')}
         e.update(base); e['type'] = 'film'
         if not e.get('poster') and f.get('poster_url'):
-            e['poster'] = f['poster_url']; e['posterSource'] = 'custom'
+            e['poster'] = _poster_local(f['poster_url']); e['posterSource'] = 'custom'
         e['_src'] = {**obra.get('_src', {}), **base['_src']}
     else:
         a = ACT.get(f['titulo_programacion'], {})
         e = {'title': f['titulo_programacion'], 'type': 'event',
              'section': SEC_ACT[f['tipo']][0], 'duration': '',
              'synopsis': a.get('synopsis',''), 'synopsis_lang': 'es',
-             'poster': a.get('poster',''), 'posterSource': 'custom' if a.get('poster') else '',
+             'poster': _poster_local(a.get('poster','')), 'posterSource': 'custom' if a.get('poster') else '',
              'event_kind': 'ponencia' if f['tipo']=='charla' else 'masterclass'}
         e.update(base)
         if a.get('requires_registration'): e['requires_registration'] = True
