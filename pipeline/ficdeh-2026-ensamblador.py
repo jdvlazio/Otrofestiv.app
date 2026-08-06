@@ -48,6 +48,28 @@ GEO = json.load(open(GEO_PATH, encoding='utf-8')) if os.path.exists(GEO_PATH) el
 # y /talleres/<slug>). El póster vive en /uploads/obras/ del sitio del festival.
 ACT_PATH = f'{REPO}/festivals/staging/ficdeh-2026-actividades.json'
 ACT = json.load(open(ACT_PATH, encoding='utf-8')) if os.path.exists(ACT_PATH) else {}
+# Detalle de cada ficha de charla/taller: DURACIÓN (del rango «Hora : 9:00 a.m.
+# - 12:00 M.») e INSCRIPCIÓN leída del campo. Solo 4 de 42 fichas publican el
+# rango, y una de ellas —Pintando realidades, 90 min— demuestra que la duración
+# NO es uniforme: por eso el dato real gana y los 180 min quedan de respaldo.
+DET_PATH = f'{REPO}/festivals/staging/ficdeh-2026-actividades-detalle.json'
+DET = (json.load(open(DET_PATH, encoding='utf-8'))['actividades']
+       if os.path.exists(DET_PATH) else {})
+
+
+def _slug(t):
+    t = unicodedata.normalize('NFD', (t or '').lower())
+    t = ''.join(c for c in t if unicodedata.category(c) != 'Mn')
+    return re.sub(r'[^a-z0-9]+', '-', t).strip('-')
+
+
+def detalle(titulo):
+    """La ficha se busca por slug: el sidecar viene indexado por la url."""
+    sl = _slug(titulo)
+    if sl in DET:
+        return DET[sl]
+    return next((v for k, v in DET.items()
+                 if k.startswith(sl[:34]) or sl.startswith(k[:34])), {})
 
 
 def _poster_local(url):
@@ -173,14 +195,18 @@ for f in sorted(funcs, key=lambda x: (x['dia'], x['hora'], x['ciudad'])):
         # Charlas que Unen 2:00–5:00 PM y talleres 1:00–4:00 PM, ambas 3 horas.
         # Sin este dato el dominio aplicaba 90 min por defecto y el plan cabía
         # cosas imposibles detrás de una charla.
-        _dur = '180 min'
+        _d = detalle(f['titulo_programacion'])
+        # 180 min es lo que el festival confirmó para Medellín (charlas 2–5 PM,
+        # talleres 1–4 PM); solo se usa cuando la ficha no publica su rango.
+        _dur = f"{_d['duracion_min']} min" if _d.get('duracion_min') else '180 min'
         e = {'title': f['titulo_programacion'], 'type': 'event',
              'section': SEC_ACT[f['tipo']][0], 'duration': _dur,
              'synopsis': a.get('synopsis',''), 'synopsis_lang': 'es',
              'poster': _poster_local(a.get('poster','')), 'posterSource': 'custom' if a.get('poster') else '',
              'event_kind': 'ponencia' if f['tipo']=='charla' else 'masterclass'}
         e.update(base)
-        if a.get('requires_registration'): e['requires_registration'] = True
+        if a.get('requires_registration') or _d.get('requires_registration'):
+            e['requires_registration'] = True
         if not e['synopsis']: e['_pendiente'] = 'sin sinopsis en la ficha del festival'
     films_out.append(e)
 
