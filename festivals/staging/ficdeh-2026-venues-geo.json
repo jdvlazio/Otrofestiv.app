@@ -1186,5 +1186,14 @@
   "_prec": "manual",
   "_match": "Centro Cultural De Cali",
   "_fuente": "Google Maps (verificado 2026-08-05)"
+ },
+ "Institución Educativa Los Arrieritos - Manizales": {
+  "lat": 5.0743694,
+  "lng": -75.5081209,
+  "city": "Manizales",
+  "short": "Institución Educativa Los Arrieritos",
+  "address": "",
+  "_prec": "ciudad",
+  "_geo": "CENTROIDE de Manizales — la fuente no da dirección y el único resultado en Maps cae a 42 km, probablemente en otro municipio de Caldas. Preguntar al festival."
  }
 }

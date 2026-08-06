@@ -223,6 +223,12 @@ def main():
     for i, k in enumerate(orden, 1):
         v = info[k]
         ciudad = v['ciudad']
+        # Una sede verificada A MANO en Google Maps no se vuelve a tocar: el
+        # geocoder automático no la mejora y sí la empeora. Correr este script
+        # una segunda vez llegó a pisar 40 verificaciones manuales de golpe.
+        if geo.get(k, {}).get('_prec') == 'manual':
+            stats['manual'] += 1
+            continue
         if ciudad not in CENTROIDES:
             print(f'[{i:3}] ⚠️  ciudad desconocida: {ciudad} ({k})', flush=True)
             continue

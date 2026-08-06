@@ -1,0 +1,18 @@
+{
+ "_provenance": {
+  "fuente": "Guía oficial en PDF de Medellín (FICDEH_PROGRAMACIÓN_MEDELLÍN_2026.pdf)",
+  "que_resuelve": "La SALA de las funciones del Colombo Americano, que proyecta en SALA 1 y SALA 2 el mismo día. Sin ella el anclaje día|hora|sede junta funciones de salas distintas. Confirma además que el bloque de 7 cortos del 16 AGO 14:30 está TODO en SALA 2: es un programa único, no funciones paralelas.",
+  "clave": "dia | hora | sede normalizada"
+ },
+ "salas": {
+  "2026-08-13|18:30|colombo americano de medellin": "SALA 1",
+  "2026-08-14|15:00|colombo americano de medellin": "SALA 2",
+  "2026-08-15|14:00|colombo americano de medellin": "SALA 1",
+  "2026-08-15|19:00|colombo americano de medellin": "SALA 1",
+  "2026-08-16|14:30|colombo americano de medellin": "SALA 2",
+  "2026-08-16|17:30|colombo americano de medellin": "SALA 2",
+  "2026-08-18|15:00|colombo americano de medellin": "SALA 2",
+  "2026-08-19|15:00|colombo americano de medellin": "SALA 2",
+  "2026-08-19|18:30|cineprox dg 75b 2a 120": "SALA 3"
+ }
+}

@@ -85,10 +85,26 @@ SEDE_SALA = {
 }
 
 
+# La guía en PDF de Medellín es la única fuente que dice en qué sala del Colombo
+# Americano va cada función — y proyecta en SALA 1 y SALA 2 el mismo día, así que
+# sin este dato el anclaje día|hora|sede junta funciones que son paralelas.
+SALAS_PATH = f'{REPO}/festivals/staging/ficdeh-2026-salas-medellin.json'
+SALAS = (json.load(open(SALAS_PATH, encoding='utf-8'))['salas']
+         if os.path.exists(SALAS_PATH) else {})
+
+
+def _norm(s):
+    s = unicodedata.normalize('NFD', (s or '').lower())
+    s = ''.join(c for c in s if unicodedata.category(c) != 'Mn')
+    return re.sub(r'[^a-z0-9]+', ' ', s).strip()
+
+
 def sede_sala(f):
-    """→ (sede, sala). La sala explícita de la fuente gana sobre la del nombre."""
+    """→ (sede, sala). Manda la guía en PDF; luego la sala explícita de la
+    programación; por último la que venía metida en el nombre de la sede."""
     sede, sala = SEDE_SALA.get(f['sede'], (f['sede'], ''))
-    return sede, (f.get('sala') or sala or '')
+    del_pdf = SALAS.get(f"{f['dia']}|{f['hora']}|{_norm(f['sede'])}")
+    return sede, (del_pdf or f.get('sala') or sala or '')
 
 
 venues = {}
@@ -147,8 +163,15 @@ for f in sorted(funcs, key=lambda x: (x['dia'], x['hora'], x['ciudad'])):
         e['_src'] = {**obra.get('_src', {}), **base['_src']}
     else:
         a = ACT.get(f['titulo_programacion'], {})
+        # Duración de las actividades: ninguna fuente la publica por actividad,
+        # y sin ella el dominio aplica DEFAULT_DURATION_MIN (90 min), que para un
+        # taller de media tarde se queda corto. La guía en PDF de Medellín es la
+        # única que da un rango real —«1:00 PM - 4:00 PM» en Los frutos que dan
+        # vida—, así que los TALLERES toman esas 3 horas y las charlas se quedan
+        # en los 90 min por defecto hasta que el festival confirme (Juan, 6 ago).
+        _dur = '180 min' if f['tipo'] == 'taller' else ''
         e = {'title': f['titulo_programacion'], 'type': 'event',
-             'section': SEC_ACT[f['tipo']][0], 'duration': '',
+             'section': SEC_ACT[f['tipo']][0], 'duration': _dur,
              'synopsis': a.get('synopsis',''), 'synopsis_lang': 'es',
              'poster': _poster_local(a.get('poster','')), 'posterSource': 'custom' if a.get('poster') else '',
              'event_kind': 'ponencia' if f['tipo']=='charla' else 'masterclass'}
@@ -263,8 +286,14 @@ CONF = json.load(open(CONF_PATH, encoding='utf-8')) if os.path.exists(CONF_PATH)
 for _i in CONF.get('inauguraciones', []):
     if not _i.get('has_qa'):
         continue
+    # La inauguración es UNA función concreta: hay que casar también la ciudad y
+    # la hora. Sin eso, el Q&A de Bogotá se coló en la función de Quibdó, que
+    # ese mismo día proyecta la misma película.
+    _ciudad = {k: v.get('city') for k, v in venues.items()}
     _hit = [e for e in films_out
-            if e['day'] == _i['dia'] and e.get('title') == _i.get('pelicula')]
+            if e['day'] == _i['dia'] and e.get('title') == _i.get('pelicula')
+            and _ciudad.get(e['venue']) == _i.get('ciudad')
+            and (not _i.get('hora_evento') or e['time'] == _i['hora_evento'])]
     for e in _hit:
         e['has_qa'] = True
         e['_qa_detalle'] = _i.get('qa_detalle', '')
