@@ -2605,6 +2605,42 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar duracion-solo-dominio: {_e}')
 
+# ── [tests-puerto-propio] cada corrida de tests con su servidor ─────────────────
+# La causa raíz del "flaky" que llevábamos meses tapando con `retries`: Playwright
+# MATA el servidor que él levantó al terminar, y con `reuseExistingServer` una
+# segunda corrida reusa ese servidor en vez de levantar el suyo. Si la primera
+# termina antes, la segunda se queda sin servidor a mitad de camino →
+# ERR_CONNECTION_REFUSED y cascada de timeouts en specs sin relación entre sí.
+# Medido: la misma suite da 21/21 sola y 1/21 con otra corrida solapada; dos
+# suites completas solapadas daban 22 y 14 fallos, y 0 con puerto propio.
+# Regla: el puerto sale de PW_PORT (scripts/test.sh elige uno libre) y ningún
+# spec lo hardcodea — un solo `localhost:3000` incrustado ata esa corrida al
+# puerto compartido y reabre el agujero.
+check = 'tests-puerto-propio'
+try:
+    import glob as _glob, re as _re
+    _cfg = open('playwright.config.js', encoding='utf-8').read()
+    _prob = []
+    if 'process.env.PW_PORT' not in _cfg:
+        _prob.append('playwright.config.js no lee PW_PORT')
+    if not os.path.exists('scripts/test.sh'):
+        _prob.append('falta scripts/test.sh (elige el puerto libre)')
+    for _tf in sorted(_glob.glob('tests/**/*.js', recursive=True)):
+        for _i, _ln in enumerate(open(_tf, encoding='utf-8').read().splitlines(), 1):
+            # Ojo: acá NO se puede cortar por '//' como en los otros checks — el
+            # '//' de 'http://' se comía la línea entera y el guardián no veía
+            # nada (cazado por mutación). Se descartan solo las líneas que SON
+            # comentario.
+            _code = '' if _ln.lstrip().startswith('//') else _ln
+            if _re.search(r'localhost:\d+|127\.0\.0\.1:\d+', _code):
+                _prob.append(f"{_tf}:{_i} hardcodea el puerto (usar baseURL)")
+    if _prob:
+        fail(check, 'aislamiento de corridas roto: ' + '; '.join(_prob[:5]))
+    else:
+        ok(check, 'cada corrida toma su puerto (PW_PORT) — dos suites simultáneas no se pisan')
+except Exception as _e:
+    warn(check, f'no se pudo verificar tests-puerto-propio: {_e}')
+
 # ── [template-al-dia] la plantilla de onboarding no se queda atrás ──────────────
 # Causa raíz de la tarea #81: el onboarding de FINCA usó 10 campos de film que la
 # plantilla no enseñaba, y nadie lo notó hasta un mes después. Regla: todo campo
