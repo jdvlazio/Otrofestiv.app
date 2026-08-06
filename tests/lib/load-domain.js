@@ -34,6 +34,10 @@ const AGENDA = path.join(ROOT, 'src', 'view', 'agenda.js');
 // view/helpers.js: vcfg/venueMatches/venueSelLabel — el predicado del filtro de
 // lugar (nivel de ciudad, 5 ago 2026). Puro sobre FESTIVAL_CONFIG inyectado.
 const VHELPERS = path.join(ROOT, 'src', 'view', 'helpers.js');
+// src/config.js — helpers puros de configuración (countryName,
+// festivalLocationLabel). Va al FINAL por el mismo motivo que agenda: solo se le
+// piden fns que no existen en los otros archivos, así no ensombrece nada.
+const CONFIG = path.join(ROOT, 'src', 'config.js');
 
 // p8 Step 0: el código de la app se movió de los <script> inline de index.html
 // a src/main.js (módulo). readScripts concatena los scripts inline restantes
@@ -55,13 +59,14 @@ function readScripts() {
   const domainSrc = DOMAIN.filter(fs.existsSync).map(f => fs.readFileSync(f, 'utf8')).join('\n');
   const agendaSrc = fs.existsSync(AGENDA) ? fs.readFileSync(AGENDA, 'utf8') : '';
   const vhelpersSrc = fs.existsSync(VHELPERS) ? fs.readFileSync(VHELPERS, 'utf8') : '';
+  const configSrc = fs.existsSync(CONFIG) ? fs.readFileSync(CONFIG, 'utf8') : '';
   // domainSrc ANTES de main: las fns de dominio (main-thread, src/domain/) deben
   // matchearse antes que las COPIAS worker-local (en backtick strings dentro de
   // main.js, ej. `function simNow(){return SIM_TIME...}`). extractFunction
   // devuelve el primer match en orden de documento → la versión main-thread.
   // agendaSrc al FINAL: solo se piden de ahí fns que no existen en otros archivos
   // (getSuggestions) — sin riesgo de shadowing.
-  return inline + '\n' + domainSrc + '\n' + main + '\n' + storageSrc + '\n' + agendaSrc + '\n' + vhelpersSrc;
+  return inline + '\n' + domainSrc + '\n' + main + '\n' + storageSrc + '\n' + agendaSrc + '\n' + vhelpersSrc + '\n' + configSrc;
 }
 
 // Returns the source of `function NAME(...) { ... }` from `source`, or null.
