@@ -355,7 +355,44 @@ export function venueSelLabel(sel){
   return (sel&&sel.startsWith('city:'))?sel.slice(5):sel;
 }
 
-export function sala(v){const m=v.match(/Sala\s*(\d+)/)||v.match(/Sal[oó]n\s*(\d+)/i);return m?'Sala '+m[1]:'';}
+// sala(v) — la sala dentro del edificio, DECLARADA o, en su defecto, deducida.
+//
+// El modelo de multisala es: cada sala es una SEDE con clave propia, mismo
+// `short` (el edificio) y las mismas coordenadas. Eso ya hace lo importante —dos
+// funciones simultáneas en salas distintas son funciones distintas y entran en
+// conflicto, encadenarlas no cuesta viaje, y el filtro las agrupa por edificio—.
+// Lo que faltaba era DECIRLE al asistente a qué sala entrar.
+//
+// Hasta ahora la sala se adivinaba con un regex sobre el nombre de la sede, y el
+// regex solo entiende NÚMEROS: «Cinemateca Sala Capital» (Tercer Tiempo y
+// FantasoFest, ambos publicados) se perdía — llegabas al edificio sin saber la
+// sala. Por eso el dato pasa a poder DECLARARSE: `room` en la entrada de venues.
+//
+// El regex se conserva como respaldo, no por nostalgia: los festivales ya
+// montados (FICCI 65 con 9 sedes-sala, Cinemancia, Tercer Tiempo) traen la sala
+// dentro del nombre y seguirían funcionando sin re-onboardearlos.
+export function sala(v){
+  const _room=(vcfg(v)||{}).room;
+  if(_room) return String(_room).trim();
+  const s=String(v||'');
+  const m=s.match(/Sala\s*(\d+)/)||s.match(/Sal[oó]n\s*(\d+)/i);
+  return m?'Sala '+(m[1]||m[2]):'';
+}
+
+// venueLabel(v) — el nombre COMPLETO de dónde ocurre una función: edificio + sala.
+// Dueño único de esa concatenación.
+//
+// Nació de una incoherencia real entre las dos vías de exportar al calendario: el
+// ICS mandaba `LOCATION` con la clave cruda de la sede —que lleva la sala— y el
+// puente nativo de iOS mandaba solo el `short` —que la pierde—. Mismo plan, mismo
+// usuario, y a qué sala entrar dependía del teléfono. Ahora ambas piden acá.
+// Frente a la clave cruda tiene además la ventaja de ser legible: «UNIBAC · Sala 1»
+// en vez de «Salón 1 ‒ Miguel Sebastián Guerrero, unibac».
+export function venueLabel(v){
+  const nombre=(vcfg(v)||{}).short||String(v||'');
+  const _sala=sala(v);
+  return _sala?`${nombre} · ${_sala}`:nombre;
+}
 
 export function travelWarn(s1,s2){
   if(s1.day!==s2.day) return null;

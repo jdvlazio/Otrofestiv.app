@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `27207e3 Merge remote-tracking branch 'origin/main' into fix/splash-ciudad-pais`
+> Último commit: `1aa7a39 fix(splash): un festival nacional no dice su país dos veces (#506)`
 
 ---
 

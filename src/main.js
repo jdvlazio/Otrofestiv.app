@@ -85,7 +85,7 @@ import {
 import {
   _posterStyle, getPosterSrc, getFilmPoster, getCortoItemPoster, _getItemPoster, _isEditorialPoster, _posterThumb, isNowShowing, isToday, vcfg, sala, travelWarn, mplanEndStr, mplanBlockType, dayChip, dayLabel, _lblLocalized, durFmt, flagFmt, _langDates, _mkCortoItemHtml, starsText, _dayChips, _metaBadges, _programaStack, _plistPosterHtml, DAY_SHORT_EN,
   setDayShort, setDayShortEn, setPosters, setCustomPosters,
-  emptyState, emptyStateHero, DAYS,
+  emptyState, emptyStateHero, DAYS, venueLabel,
 } from './view/helpers.js';
 
 // ── Step 6f: view/agenda.js — render de agenda+miplan (18 fns). ───────────────
@@ -447,7 +447,7 @@ FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202608061044';
+const BUILD_VERSION='202608061440';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';
@@ -1308,7 +1308,7 @@ document.addEventListener('click', function(e){
   //      — corren en GLOBAL scope, no module scope → DEBEN estar en globalThis
   //      (correctness de producción, no solo tests; onerror no se migró en 7c).
   //  (b) page.evaluate de la suite Playwright.
-  Object.assign(globalThis, {
+  Object.assign(globalThis, { venueLabel, sala,
     // (a) inline on* handlers — producción
     //     en HTML generado (main.js innerHTML): onerror=_posterErr/_cortoSheetPosterErr
     //     en markup estático (index.html): oninput/onkeyup/onkeydown=searchQuery,

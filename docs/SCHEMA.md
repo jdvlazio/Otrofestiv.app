@@ -146,6 +146,7 @@ en el plan guardado—. La ficha lo anuncia con `meta_funcion_incluye`.
   "Nombre completo del venue": {
     "short": "Nombre corto para el card (≤ 20 chars)",
     "address": "Dirección completa",
+    "room": "Sala 3 — opcional, solo sedes MULTISALA (ver abajo)",
     "lat": 0.0,
     "lng": 0.0
   }
@@ -157,6 +158,36 @@ en el plan guardado—. La ficha lo anuncia con `meta_funcion_incluye`.
 - `short` es lo que ve el usuario en el card
 - Coordenadas requeridas para la vista de mapa
 - Los nombres de venue en `film.venue` y `film.screenings[].venue` deben ser claves exactas de este objeto
+
+#### Sedes MULTISALA — una sala, una sede
+
+Un complejo con varias salas (Colombo Americano 1/2/3, Cinemateca de Bogotá,
+Plaza Bocagrande 1–5 en FICCI 65) se monta como **una entrada de `venues` por
+sala**: clave propia, **mismo `short`** (el edificio) y **las mismas
+coordenadas**. Con eso, y sin nada más:
+
+- son **funciones distintas** y nunca se funden;
+- dos a la misma hora **entran en conflicto** (no podés estar en dos salas);
+- encadenar una tras otra **no cuesta viaje** (0 min, mismas coordenadas);
+- el **filtro de Lugar las agrupa por edificio** — elegir «Cinemateca» trae sus
+  tres salas, que es lo que uno quiere.
+
+> Ojo: por eso `sharedSlotIsOneScreening` es **opt-in**. En una sede multisala,
+> misma hora + misma sede es **otra sala = otra función**, y anclarlas sería un
+> error.
+
+**`room` — cómo se llama la sala.** Opcional. Si no se declara, la app la deduce
+del nombre de la sede, pero **solo entiende salas numeradas** (`Sala 3`,
+`Salón 1`). Una sala con nombre propio —«Sala Capital» de la Cinemateca— se
+pierde: el asistente llega al edificio sin saber a cuál entrar. Se declara ahí.
+
+Dueño único: `sala(venue)` (`view/helpers.js`) — declarado gana sobre deducido —
+y `venueLabel(venue)` arma el «Edificio · Sala» que se exporta al calendario.
+
+**Regla de onboarding:** si dos sedes comparten `short`, cada una necesita su
+sala. Si no la tienen, no son salas: son la misma sede escrita de dos formas
+(FICCI 65 tiene cuatro de esos duplicados: `AECID`/`aecid`,
+`Auditorio Nido`/`Auditorio nido`…) y hay que fusionarlas.
 
 ---
 
