@@ -271,12 +271,13 @@
    },
    "genre": "Documental",
    "lbSlug": "under-fire-2020",
-   "synopsis_en": "Bajo Fuego depicts the unraveling of peace for a group of coca growing peasants in the southwest of Colombia. The film takes the perspective of the ‘cocaleros’ and over a period of 3 years shows how they survive in the midst of the most difficult circumstances. The government delays in fulfilling what it promised in the agreement, economic difficulties arise for families that substituted their coca trees, and the increasing presence of armed groups start to terrorise the region. The promised peace in Colombia turns out to be an illusion when the newly armed groups take control, assassinations occur, and the films’ main protagonists are being threatened with their lives and displaced. Even though peace was supposedly signed in Colombia, Bajo Fuego shows that for many in the southwest of Colombia the war continues.",
+   "synopsis_en": "Bajo Fuego follows coca-growing families in southwest Colombia over three years, as the peace they were promised comes undone. The government stalls on the substitution agreement it signed, money runs out for those who tore up their coca, and newly armed groups move in. Threats and killings follow, and the film's protagonists are displaced. Peace was signed, but here the war never stopped.",
    "_inherited": {
     "synopsis_en": "tmdb-790253",
     "title_en": "tmdb-790253"
    },
-   "title_en": "Under Fire"
+   "title_en": "Under Fire",
+   "_synopsis_en_original_len": 824
   },
   {
    "title": "Cayenas libertarias",
@@ -779,10 +780,11 @@
    "title_en": "Jahia's Summer",
    "genre": "Drama",
    "lbSlug": "jahias-summer",
-   "synopsis_en": "When Mila arrives at the asylum center, Jahia's life changes dramatically. Jahia has previously kept to herself, spending her evenings in the kitchen where she cooks for her mother, who is haunted by memories of their escape from Burkina Faso. Alongside a stern directive that she must go to school, a new girl appears at the center. Mila's forced but genuine optimism breaks through Jahia's barrier, but the wait for the life-altering asylum decision remains terrifying. And one day, Mila and her family receive their verdict. In this deeply unsettling but still hopeful drama, we follow two vulnerable friends who try to navigate an unstable and artificial everyday life, where life has an expiration date. Or a new beginning.",
+   "synopsis_en": "Jahia keeps to herself at the asylum center, spending her evenings cooking for a mother still haunted by their escape from Burkina Faso. Then Mila arrives, and her forced but genuine optimism breaks through. The two build a friendship in a life with an expiration date — until the day Mila's family receives its verdict.",
    "_inherited": {
     "synopsis_en": "tmdb-1000821"
-   }
+   },
+   "_synopsis_en_original_len": 728
   },
   {
    "title": "Espeletia BK: Frailejón desarticulado",
@@ -909,14 +911,15 @@
     "date": "2026-07-25"
    },
    "lbSlug": "the-house-of-the-wind-2026",
-   "synopsis_en": "In this expressive and community-centered work, Wayuú director Marbel Vanegas Jusayu documents the social, spiritual, and environmental impacts of the installation of a wind farm in Apotnojushi, a historically marginalized community that remains committed to its sovereignty. Women leaders such as Ana Rosa Jusayu, the director’s mother, work to strengthen the social fabric, activate historical memory, and assert their right to determine their future. Through the voices and living portraits of community members, the piece reflects in its vignettes the community’s deep connection to its ancestral territory.",
+   "synopsis_en": "Wayuú director Marbel Vanegas Jusayu documents what a wind farm brings to Apotnojushi: its social, spiritual and environmental toll on a community that has never stopped claiming its sovereignty. Women leaders — among them the director's mother, Ana Rosa Jusayu — hold the social fabric together and assert their right to decide their own future.",
    "_inherited": {
     "synopsis_en": "tmdb-1668905",
     "title_en": "tmdb-1668905",
     "genre": "sección «🎙️ Cortometraje Documental Nacional»"
    },
    "title_en": "The House of the Wind",
-   "genre": "Documental"
+   "genre": "Documental",
+   "_synopsis_en_original_len": 611
   },
   {
    "title": "Herencia: Los cantos de la tierra",
@@ -1096,7 +1099,7 @@
    "duration": "77 min",
    "country": "Colombia, Estados Unidos",
    "section": "🕊️ Retrospectiva 10 Años del Acuerdo de Paz",
-   "synopsis": "Hace 20 años, el pueblo palenquero de La Bonga recibió una amenaza firmada por paramilitares. Esa misma noche, 120 familias salieron para nunca volver. Hoy, La Bonga ha sido devorada por la selva, y toda una generación solo conoce su pueblo a través de historias. María ha sido la única persona que ha regresado a vivir allá. Muchos creen que está loca y que pone en riesgo su vida. Después de dos décadas, María lidera a más de 300 personas durante el primer retorno colectivo a La Bonga, para llevar a cabo una enorme celebración. La película teje el viaje colectivo con el viaje solitario de María y su nieta, un año después de la fiesta, en el que María intenta inculcar en ella el amor por su tierra ancestral. La Bonga es un viaje simbólico por las selvas del Caribe colombiano para resucitar un lugar que sólo existe en la memoria, un ritual de despedida de un pueblo que fue y que no volverá. En un acto de resistencia, esta fiesta suelta lo perdido, lo deja ir, mientras celebra su memoria y su comunidad.",
+   "synopsis": "Hace veinte años, el pueblo palenquero de La Bonga recibió una amenaza firmada por paramilitares y esa misma noche 120 familias salieron para nunca volver. Hoy la selva se lo tragó y una generación entera solo lo conoce por relatos. María fue la única que regresó a vivir allí; muchos creen que está loca. Dos décadas después lidera el primer retorno colectivo: más de 300 personas caminando de vuelta para celebrar una fiesta de despedida.",
    "synopsis_lang": "es",
    "poster": "/assets/ficdeh/la-bonga.jpg",
    "posterSource": "custom",
@@ -1109,7 +1112,8 @@
    "synopsis_en": "Decades after they were forced to flee their village in the Colombian jungle, a community makes a poetically rendered return home.",
    "_inherited": {
     "synopsis_en": "tmdb-1084665"
-   }
+   },
+   "_synopsis_original_len": 1014
   },
   {
    "title": "La gran hazaña",
@@ -1202,10 +1206,11 @@
    },
    "genre": "Documental",
    "lbSlug": "la-luz-por-primera-vez",
-   "synopsis_en": "Natalia Pinilla, photographer and activist, embarks on a journey across Santander, Norte de Santander, and Madrid, Spain, to uncover the work of Amalia Ramírez, a forgotten woman who, at the beginning of the 20th century, captured one of the most impactful images in Colombian history: the pyramid of skulls at Palonegro, a brutal symbol of the Thousand Days' War. More than a century later, this photograph resurfaces, establishing Amalia as the country's first female photographer. Along the way, she discovers previously unseen archives, connects with descendants unaware of her legacy, and finds a contemporary echo of her struggle in other women photographers. Through historical revelations and intimate encounters, the documentary reconstructs not only Amalia's work but also the memory of a country scarred by violence. The rediscovery of her photographs—portraits, everyday scenes, and forgotten visual testimonies—transforms her into a symbol of resistance, art, and memory.",
+   "synopsis_en": "Photographer and activist Natalia Pinilla travels across Santander, Norte de Santander and Madrid to recover the work of Amalia Ramírez, who at the start of the 20th century made one of the most harrowing images in Colombian history: the pyramid of skulls at Palonegro. A century later the photograph resurfaces and establishes Amalia as the country's first woman photographer — and with her, the memory of a country scarred by violence.",
    "_inherited": {
     "synopsis_en": "tmdb-1705404"
-   }
+   },
+   "_synopsis_en_original_len": 984
   },
   {
    "title": "La luz que nos queda",
@@ -1289,12 +1294,13 @@
    },
    "genre": "Drama",
    "lbSlug": "the-ones-from-below",
-   "synopsis_en": "Gregório is a rustic and idealistic peasant who lives frustrated in the village of Rosillas. Arrogant and bold, he wants to recover the waters of the family's old dam, which were diverted by Colonel Igrejas, an Argentinean farmer who acts in collusion with the town's mayor to benefit the cultivation of his own vines. In the midst of all this, Gregório will have to face the contempt of the residents, the corruption and the socioeconomic power of the elite, leaving aside the love for his little son Olegário, the care for his elderly parents and the love of Paula, the teacher at the school who insists that he go live in the city. How does the one who stays on the land that everyone has decided to leave survives.",
+   "synopsis_en": "Gregório, a stubborn and idealistic peasant in the village of Rosillas, wants back the water of his family's old dam — diverted by a landowner who has the mayor on his side. Facing the contempt of his neighbours and the power of the local elite, he lets everything else slip: his small son, his ageing parents, and Paula, the schoolteacher who begs him to move to the city. A portrait of the one who stays on the land everyone else has left.",
    "_inherited": {
     "synopsis_en": "tmdb-1039722",
     "title_en": "tmdb-1039722"
    },
-   "title_en": "The Ones from Below"
+   "title_en": "The Ones from Below",
+   "_synopsis_en_original_len": 718
   },
   {
    "title": "Los pliegues de la falda",
