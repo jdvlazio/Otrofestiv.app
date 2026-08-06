@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `b117652 copy(multiciudad): el conflicto de ciudad va sin texto de apoyo`
+> Último commit: `5243093 Merge remote-tracking branch 'origin/main' into feat/ciudad-persistente`
 
 ---
 
