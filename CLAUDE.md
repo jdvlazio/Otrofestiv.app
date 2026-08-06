@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `bd9555d fix(filtro): los paneles de filtro no se salen del viewport (#502) (#502)`
+> Último commit: `90ef9fe fix(splash): los afiches entran enteros en la card — estirado a 2:3 (#503) (#503)`
 
 ---
 

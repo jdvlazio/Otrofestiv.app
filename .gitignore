@@ -19,10 +19,11 @@ Thumbs.db
 .idea/
 *.swp
 
-# Playwright
-playwright-report/
-test-results/
-test-results.json
+# Playwright — artefactos por corrida (scripts/test.sh sufija con el puerto
+# para que dos corridas simultáneas no se pisen el informe)
+playwright-report*/
+test-results*/
+test-results*.json
 
 # Claude Code (config local de harness, no del proyecto)
 .claude/

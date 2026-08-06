@@ -518,6 +518,44 @@ Las invariantes de arquitectura **no se documentan y confía**: se verifican. `v
 
 > Regla: al cambiar la firma/deps de una función de dominio (ej. un `import` interno nuevo) suele haber que actualizar `tests/lib/load-domain.js` (`DEFAULT_FNS`) además del test.
 
+### 15.5 Cómo se corre la suite — un puerto por corrida
+
+**Correr siempre `./scripts/test.sh`**, nunca `npx playwright test` a secas:
+
+```bash
+./scripts/test.sh                       # toda la suite
+./scripts/test.sh tests/programa.spec.js
+./scripts/test.sh -g "T51"
+```
+
+**Por qué** (6 ago 2026 — el flaky que costó meses): Playwright **mata el
+servidor que él levantó** al terminar. Con `reuseExistingServer` (local), una
+segunda corrida reusa ese servidor en vez de levantar el suyo; si la primera
+termina antes, la segunda se queda sin servidor a mitad de camino →
+`net::ERR_CONNECTION_REFUSED` y una cascada de timeouts de 30s en specs sin
+relación entre sí. Como el daño depende de qué corrida termine antes, **fallaba
+distinto cada vez** y parecía aleatorio.
+
+Medido: la misma suite da **21/21 sola y 1/21** con otra corrida solapada. Dos
+suites completas solapadas daban **22 y 14 fallos**; con puerto propio, **0 y 0**.
+
+Pasaba a diario sin que se notara: dos sesiones de Claude Code en la misma
+carpeta, o dos corridas encimadas en la misma sesión. En CI el workflow invoca
+Playwright cinco veces seguidas y cada paso levantaba y mataba el servidor en el
+mismo puerto — misma clase de bug, por eso los pasos también usan el script.
+
+`scripts/test.sh` toma el primer puerto libre (3000–3099) y aísla también los
+artefactos: el JSON de resultados y el informe HTML son archivos únicos que dos
+corridas se sobreescribían. Lo congela `[tests-puerto-propio]`, que además
+prohíbe hardcodear `localhost:3000` en un spec.
+
+> `retries: 2` sigue puesto. Ahora que la causa dominante está cerrada, la
+> pregunta abierta es si todavía hacen falta o están tapando algo distinto.
+> Sospechosos anotados, no demostrados: el SW recarga la página en cada
+> activación (`sw.js` — `client.navigate`, ya identificado como causa de los
+> falsos positivos #133–#137 del monitor, que por eso bloquea el SW) y el
+> repintado alineado al minuto exacto del reloj (`main.js` — `_msToNextMin`).
+
 ---
 
 ## 16. ARQUITECTURA OBJETIVO — MVC vanilla JS

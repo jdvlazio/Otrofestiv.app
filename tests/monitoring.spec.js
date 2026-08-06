@@ -129,6 +129,14 @@ test('M05 — topbar muestra nombre del festival', async ({ page }) => {
 // de tienda con sus hrefs correctos y la ruta /get del QR responde. UA de
 // navegador de escritorio → toma el camino landing del gate.
 test.describe('landing de tiendas', () => {
+  // SOLO contra producción. El gate se salta a propósito en localhost
+  // (`isDev`, index.html) para poder desarrollar la app sin la landing en medio,
+  // así que contra el servidor local este test NO PUEDE pasar: es un rojo
+  // permanente que no significa nada. Corría en cada suite local diciendo que
+  // algo estaba roto cuando no lo estaba — justo el ruido que hace desconfiar
+  // de la suite entera. Contra prod (BASE_URL=https://otrofestiv.app) corre igual.
+  const _local = !/^https?:\/\/(?!localhost|127\.0\.0\.1)/.test(process.env.BASE_URL || '');
+  test.skip(_local, 'la landing de tiendas no existe en localhost (gate isDev) — correr con BASE_URL=https://otrofestiv.app');
   test.use({ userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36' });
   test('M06 — navegador recibe la landing con badges y /get vivo', async ({ page }) => {
     await page.goto('/', { waitUntil: 'domcontentloaded' });
