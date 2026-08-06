@@ -273,12 +273,40 @@ en TMDB (sin fecha/director/sinopsis) — sin criterio corroborante NO se atan.
    - Festival `"mixed"` → marcar `is_free: true` en cada screening gratuito (verificar contra el sitio oficial de entradas).
    - Recordar: `ticket_url`/`ticketing_model` ya están en el whitelist `_cfgFields` de `loader.js`. `is_free` ya pasa por la explosión de screenings.
 
+5. **keyArt — el afiche del splash se ESTIRA a 2:3 (regla permanente).**
+
+   > **REGLA (Juan, 6 ago 2026):** el afiche se **estira en un eje** hasta
+   > 400×600. **No se recorta, no se rellena con bandas, no se difumina.**
+
+   La card del riel es 2:3 exacto con `object-fit:cover`, así que recorta todo
+   afiche que no lo sea — y los afiches de festival casi nunca son 2:3 (suelen
+   ser 3:4 o serie A). Medido en ago 2026: 7 de 10 se recortaban, hasta +19,5%
+   (Tercer Tiempo perdía casi un quinto del afiche, patrocinadores incluidos).
+
+   Se evaluaron tres caminos con afiches reales a tamaño de card: banda de color
+   plano (deja línea dura), blur del propio afiche detrás (mejor, pero sigue
+   siendo un marco alrededor de un afiche chico) y **estirado** — que llena la
+   card, deja leer el afiche entero y **no se percibe**. Compresiones reales:
+   5,7% / 5,9% / 7,4% / 16,3%; aprobado incluso en el peor caso. **Sin umbral ni
+   excepciones**: se estira siempre, para que ningún onboarding tenga que decidir.
+
+   ```bash
+   python3 scripts/compose-keyart.py assets/keyart/<fest>.jpg
+   ```
+   **Write-once**: escribe a `-v2` y NUNCA sobreescribe — el SW cachea
+   `/assets/` cache-first para siempre, y sobreescribir dejaría a los usuarios
+   recurrentes viendo el afiche viejo. Actualizar el path en `config.js`.
+   Con el afiche completo, `keyArtPos` deja de tener sentido: quitarlo.
+   Verifica el guardián **`[keyart-2-3]`** (falla sobre 2% de desvío).
+   `--check` diagnostica sin escribir; `--all` procesa todos.
+
 **Gates de salida (bloqueantes):**
 - [ ] JSON sin `config{}`
 - [ ] `storageKey` único (verificar contra todos los festivales)
 - [ ] `festivalEndStr` presente y correcto
 - [ ] `country` presente (necesario para `flagFmt`)
 - [ ] Ticketing evaluado: `ticket_url` + `ticketing_model` presentes (o ambos ausentes si es gratuito); `is_free` marcado en funciones gratuitas si es `"mixed"`
+- [ ] `keyArt` en 2:3 (`[keyart-2-3]` en verde) — estirado con `compose-keyart.py` si el afiche original no lo era
 
 ---
 

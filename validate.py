@@ -2531,6 +2531,54 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar fin-inline-ratchet: {_e}')
 
+# ── [keyart-2-3] el afiche del splash entra entero en la card ───────────────────
+# La card del riel es 2:3 EXACTO con object-fit:cover, así que recorta todo
+# keyArt que no lo sea. Medido en ago 2026: 7 de 10 se recortaban, hasta +19,5%
+# (Tercer Tiempo perdía casi un quinto del afiche).
+# REGLA PERMANENTE (Juan, 6 ago 2026): el afiche se ESTIRA en un eje hasta
+# 400×600 — no se recorta, no se rellena con bandas, no se difumina. Se probaron
+# las tres opciones con afiches reales; el estirado no se percibe ni en el peor
+# caso (16,3% de compresión) y deja leer el afiche completo.
+# Se aplica con `python3 scripts/compose-keyart.py <archivo>` (write-once:
+# escribe a -v2, nunca sobreescribe, por el caché del SW).
+check = 'keyart-2-3'
+try:
+    import re as _re
+    _TOL = 0.02
+    _cfg = open('src/config.js', encoding='utf-8').read()
+    _paths = _re.findall(r"keyArt:\s*'(/assets/keyart/[^']+)'", _cfg)
+    _mal, _sin = [], []
+    for _p in _paths:
+        _f = _p.lstrip('/')
+        if not os.path.exists(_f):
+            _sin.append(_f); continue
+        # dimensiones del JPEG sin dependencias: SOF0..SOF15 del marcador
+        with open(_f, 'rb') as _fh:
+            _d = _fh.read()
+        _i, _w, _h = 2, None, None
+        while _i < len(_d) - 9:
+            if _d[_i] != 0xFF:
+                _i += 1; continue
+            _m = _d[_i + 1]
+            if 0xC0 <= _m <= 0xCF and _m not in (0xC4, 0xC8, 0xCC):
+                _h = int.from_bytes(_d[_i + 5:_i + 7], 'big')
+                _w = int.from_bytes(_d[_i + 7:_i + 9], 'big')
+                break
+            _i += 2 + int.from_bytes(_d[_i + 2:_i + 4], 'big')
+        if not (_w and _h):
+            continue
+        _ex = (_w - _h * 2 / 3) / (_h * 2 / 3)
+        if abs(_ex) > _TOL:
+            _mal.append(f"{os.path.basename(_f)} {_w}×{_h} ({_ex:+.1%})")
+    if _sin:
+        fail(check, 'keyArt referenciado que no existe: ' + '; '.join(_sin))
+    elif _mal:
+        fail(check, 'keyArt que la card va a recortar (correr scripts/compose-keyart.py): ' + '; '.join(_mal))
+    else:
+        ok(check, f'los {len(_paths)} keyArt entran enteros en la card 2:3 (tolerancia {_TOL:.0%})')
+except Exception as _e:
+    warn(check, f'no se pudo verificar keyart-2-3: {_e}')
+
 # ── [duracion-solo-dominio] aritmética de duración solo en el dominio ───────────
 # La clase de bug del 31 jul 2026: sitios que calculan un fin de función a mano
 # (parseInt(duration) en el ICS y en _gapSuggestion) ignoraban el anclaje y el

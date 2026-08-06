@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `262ee1e fix(ux): Dia libre pierde el chevron-acordeon y la costura del copy (#500) (#500)`
+> Último commit: `bd9555d fix(filtro): los paneles de filtro no se salen del viewport (#502) (#502)`
 
 ---
 
