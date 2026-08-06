@@ -782,7 +782,8 @@
    "lbSlug": "jahias-summer",
    "synopsis_en": "Jahia keeps to herself at the asylum center, spending her evenings cooking for a mother still haunted by their escape from Burkina Faso. Then Mila arrives, and her forced but genuine optimism breaks through. The two build a friendship in a life with an expiration date — until the day Mila's family receives its verdict.",
    "_inherited": {
-    "synopsis_en": "tmdb-1000821"
+    "synopsis_en": "tmdb-1000821",
+    "title_en": "programación del festival + TMDB 1000821 (orig. «L’été de Jahia») + lbSlug jahias-summer"
    },
    "_synopsis_en_original_len": 728
   },
@@ -1590,7 +1591,8 @@
    "lbSlug": "night-light-2025",
    "synopsis_en": "Five days before the proclamation of Martial Law, the Colgante Bridge collapsed in Naga, forcing a father into a desperate search for his missing son.",
    "_inherited": {
-    "synopsis_en": "tmdb-1422099"
+    "synopsis_en": "tmdb-1422099",
+    "title_en": "lbSlug night-light-2025 (la programación lo escribe «night lihgt», con errata)"
    }
   },
   {
@@ -1851,7 +1853,8 @@
    "lbSlug": "silenced-2026",
    "synopsis_en": "After #MeToo broke the cultural silence on gender violence, international human rights lawyer Jennifer Robinson fights against the weaponization of defamation laws to silence survivors.",
    "_inherited": {
-    "synopsis_en": "tmdb-1596286"
+    "synopsis_en": "tmdb-1596286",
+    "title_en": "programación del festival + lbSlug silenced-2026"
    }
   },
   {
@@ -2029,10 +2032,12 @@
    "synopsis_en": "A documentary on five former women combatants who signed Colombia's peace accord, and what it meant to inhabit a woman's body through war and disarmament.",
    "_inherited": {
     "synopsis_en": "ficmontanas-2026",
-    "genre": "ficmontanas-2026"
+    "genre": "ficmontanas-2026",
+    "title_en": "lbSlug a-new-dawn"
    },
    "genre": "Documental",
-   "lbSlug": "a-new-dawn-2024"
+   "lbSlug": "a-new-dawn-2024",
+   "title_en": "A New Dawn"
   },
   {
    "title": "Volver a creer",
