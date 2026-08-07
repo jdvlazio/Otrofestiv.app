@@ -570,6 +570,26 @@ export function countryName(iso, lang='es'){
   return e ? (e[lang] ?? e.es) : '';
 }
 
+// festivalLocationLabel — la línea de UBICACIÓN del splash (dueño único).
+// Regla: la ciudad NUNCA se repite con el país. Un festival NACIONAL declara el
+// país en `city` porque no tiene una sede única —FICDEH 2026 son 11 ciudades—, y
+// entonces la línea salía «COLOMBIA, COLOMBIA»: eso no es una ubicación, es un
+// error de lectura.
+// Se compara contra TODOS los nombres del país, no solo el del idioma activo:
+// con la interfaz en inglés, `city:'Brasil'` y país «Brazil» son el mismo lugar
+// escrito distinto, y la repetición volvería por la puerta de atrás. La
+// comparación ignora acentos y mayúsculas por el mismo motivo.
+export function festivalLocationLabel(cfg, lang='es'){
+  const ciudad = cfg && cfg.city ? String(cfg.city).trim() : '';
+  if(!ciudad) return '';                     // sin ciudad no se inventa el país
+  const iso = cfg && cfg.country;
+  const pais = countryName(iso, lang);
+  if(!pais) return ciudad;
+  const norm = s => String(s).normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().trim();
+  const esElPais = Object.values(COUNTRY_NAMES[iso]||{}).some(p=>norm(p)===norm(ciudad));
+  return esElPais ? ciudad : `${ciudad}, ${pais}`;
+}
+
 export function mergeFestivalSections(sections){
   if(!sections || typeof sections!=='object') return;
   // Insertar en ORDER_LIST respetando `order` (los que ya están no se duplican).

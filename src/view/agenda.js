@@ -544,7 +544,7 @@ export function renderFilmAlternatives(state,title,day,time){
       <div class="checkin-opt-info">
         <div class="checkin-opt-time">${f.time} · ${durFmt(f.duration)}</div>
         <div class="checkin-opt-title">${short}</div>
-        <div class="checkin-opt-venue">${ICONS.pin} ${vc2.short}</div>
+        <div class="checkin-opt-venue">${ICONS.pin} ${vc2.short}${sala(f.venue)?' \u00b7 '+sala(f.venue):''}</div>
       </div>
       <div class="checkin-opt-add" data-action="confirmReplace" data-rmtitle="${safeT}" data-newtitle="${safeTNew}" data-day="${f.day}" data-time="${f.time}">${ICONS.plus}</div>
     </div>`;
@@ -781,7 +781,7 @@ export function renderContextualHeader(state, consensus){
             <div class="ctx-next-title">${dt}</div>
             ${badge}
           </div>
-          <div class="ctx-next-detail">${next.time} · ${vc.short}</div>
+          <div class="ctx-next-detail">${next.time} · ${vc.short}${sala(next.venue)?' \u00b7 '+sala(next.venue):''}</div>
         </div>
       </div>
       ${consensusHtml}${delayHtml}${warnHtml}
@@ -812,7 +812,7 @@ export function renderContextualHeader(state, consensus){
           <div class="ctx-suggest-badge">${gapSuggestion.time}</div>
           <div class="ctx-suggest-info">
             <div class="ctx-suggest-title">${dt.length>26?dt.slice(0,24)+'…':dt}</div>
-            <div class="ctx-suggest-venue">${vc2.short}</div>
+            <div class="ctx-suggest-venue">${vc2.short}${sala(gapSuggestion.venue)?' \u00b7 '+sala(gapSuggestion.venue):''}</div>
           </div>
         </div>`;
     })():'';
@@ -1358,11 +1358,20 @@ export function buildResultHTML(scenarios){
           // y mostramos los minutos, que el usuario juzgue). Antes ambos decían "Choca
           // con X" — mismo mensaje para dos problemas distintos, y no decía ninguno.
           const _k=conflictReason?conflictReason.kind:'solape';
-          const _ico=_k==='viaje'?ICONS.route:ICONS.clock;
-          const _msg=_k==='solape'
+          // 'ciudad' (multiciudad): pin, dice la CIUDAD y NO da minutos — nuestra
+          // estimación de traslado usa velocidad urbana y a escala intermunicipal
+          // se equivoca 3× (Bogotá→Ibagué: dice 13 h, son ~4). Decimos el dato
+          // (la ciudad) y que el usuario juzgue.
+          const _ico=_k==='ciudad'?ICONS.pin:_k==='viaje'?ICONS.route:ICONS.clock;
+          const _msg=_k==='ciudad'
+            ? t('conflict_ciudad',{city:conflictReason.city})
+            : _k==='solape'
             ? t('conflict_solapa',{title:conflictWith})
             : t(conflictReason.bFirst?'conflict_justo_desde':'conflict_justo_hasta',{title:conflictWith});
-          const _det=_k==='viaje'
+          // 'ciudad' sin detalle: "Es en Ibagué" ya lo dice todo (Juan, UX Writer)
+          const _det=_k==='ciudad'
+            ? ''
+            : _k==='viaje'
             ? t('conflict_viaje_det',{travel:_minFmt(conflictReason.travel), gap:_minFmt(conflictReason.gap)})
             : _k==='ajustado' ? t('conflict_hueco_det',{gap:_minFmt(conflictReason.gap)}) : '';
           reason=`<div class="excl-reason conflict">${_ico} ${_msg}${conflictWhen?' · '+conflictWhen:''}</div>`

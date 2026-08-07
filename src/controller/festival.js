@@ -1,7 +1,7 @@
 // ── src/controller/festival.js ────────────────────────────────────────────────────
 // p8 Step 7e — Lifecycle de splash/selector de festival + auto-resolve posters. POSTERS/CUSTOM_POSTERS vía bridge.
 
-import { FESTIVAL_CONFIG, TMDB_API_BASE, TMDB_API_KEY, TMDB_POSTER_BASE, _DEFAULT_FEST_ID, _POSTER_CACHE_PFX, countryName } from '../config.js';
+import { FESTIVAL_CONFIG, TMDB_API_BASE, TMDB_API_KEY, TMDB_POSTER_BASE, _DEFAULT_FEST_ID, _POSTER_CACHE_PFX, festivalLocationLabel } from '../config.js';
 import { _renderFestivalSelectorHTML, _renderSplashRailHTML, _classifyFestival, festivalShortName, festivalTagline, festivalSeasonYear } from '../view/components.js';
 import { _langDates, setPosters } from '../view/helpers.js';
 import { render } from '../view/programa.js';
@@ -79,10 +79,10 @@ function _fillFestInfo(festId, scope){
   // idioma para los taglines localizados (Tribeca: ES descriptor / EN nombre original).
   if(tagEl) tagEl.textContent=festivalTagline(cfg, state.snapshot()._lang);
   if(cityEl){
-    // CIUDAD, PAÍS — el país se resuelve por ISO (config.countryName) y se localiza.
-    const _lang=state.snapshot()._lang;
-    const _pais=countryName(cfg.country,_lang);
-    const _loc=cfg.city ? (_pais ? `${cfg.city}, ${_pais}` : String(cfg.city)) : '';
+    // CIUDAD, PAÍS — lo arma festivalLocationLabel (dueño único): resuelve el país
+    // por ISO, lo localiza, y NO lo repite cuando la ciudad ya ES el país (los
+    // festivales nacionales, como FICDEH, declaran «Colombia» en `city`).
+    const _loc=festivalLocationLabel(cfg, state.snapshot()._lang);
     cityEl.innerHTML=(cls==='ongoing'?'<span class="live-dot"></span>':'')+_loc.toUpperCase();
   }
   if(datesEl){

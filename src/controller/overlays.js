@@ -6,7 +6,8 @@
 
 import { FILM_CATEGORY_LABEL, FILM_CATEGORY_ORDER, SECTION_ORDER_LIST } from '../config.js';
 import { ICONS, _secLabelFull, parseProgramTitle } from '../view/components.js';
-import { emptyState, getFilmPoster, vcfg, venueMatches } from '../view/helpers.js';
+import { emptyState, getFilmPoster, vcfg, venueMatches, isCitySel, festivalCities } from '../view/helpers.js';
+import { storage } from '../storage/storage.js';
 import { _renderProgramaContent, lugarClose, lugarOutside, render } from '../view/programa.js';
 import { t } from '../i18n/i18n.js';
 import { _updateProgramaActiveFilter } from './pipeline.js';
@@ -307,9 +308,12 @@ export function lugarOpen(){
   // las 11 de FICDEH sin scroll); nivel 2 = "‹ Ciudades" + la ciudad misma
   // (filtra entera, centinela 'city:<Ciudad>' — ver venueMatches) + sus sedes.
   // Un solo target por fila; navegación interna no cierra el dropdown.
-  const cityMap = {};
-  venues.forEach(v=>{ if(v.city){ (cityMap[v.city] ||= {count:0}); cityMap[v.city].count+=v.count; } });
-  const cities = Object.entries(cityMap).map(([name,x])=>({name,...x})).sort((a,b)=>b.count-a.count);
+  // festivalCities es el dueño único (helpers.js) — el sheet de bienvenida
+  // multiciudad lee la MISMA lista, así que nunca pueden divergir. Se filtra a
+  // las ciudades visibles en este dropdown (que respeta el día activo).
+  const _visibles=new Set(venues.map(v=>v.city).filter(Boolean));
+  const cities = festivalCities(activeDay==='all'?FILMS:FILMS.filter(f=>f.day===activeDay))
+    .filter(c=>_visibles.has(c.name));
   const multiCity = cities.length>=2;
   // Si ya hay selección (ciudad o sede), el dropdown abre DENTRO de su ciudad.
   let drillCity = (activeVenue&&activeVenue.startsWith('city:'))?activeVenue.slice(5):null;
@@ -360,6 +364,11 @@ export function lugarOpen(){
     if(v==='back'){ e.stopPropagation(); drillCity=null; _paint(); return; }
     if(v.startsWith('drill:')){ e.stopPropagation(); drillCity=v.slice(6); _paint(); return; }
     activeVenue = (v==='all'||v===activeVenue)?'all':v;
+    // La CIUDAD se recuerda entre sesiones (es contexto: el usuario sigue estando
+    // ahí la próxima vez que abra). Una SEDE no: es un filtro momentáneo. Elegir
+    // "todos los lugares" o cambiar de ciudad reescribe/borra lo guardado, así que
+    // siempre se puede cambiar desde el mismo dropdown.
+    storage.setCityFilter(isCitySel(activeVenue)?activeVenue:'');
     lugarClose();
     _updateProgramaActiveFilter();
     if(activeMNav==='mnav-cartelera') _renderProgramaContent(true); else render(); // selección lugar → scroll al tope
