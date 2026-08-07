@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202608061643">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202608061643">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202608061230">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202608061230">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -944,6 +944,12 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
    que center). line-height ajustado para 2 líneas legibles. */
 .plist-title-txt{flex:1;min-width:0;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;line-height:1.25}
 .plist-meta{font-size:var(--t-sm);font-weight:var(--w-thin);color:var(--gray);margin-bottom:var(--sp-1)}
+/* plist-city — la CIUDAD en la card del modo por días (festivales multiciudad).
+   FICDEH 2026: 11 ciudades y 387 funciones; sin esto había que abrir cada ficha
+   para saber si la función era alcanzable. Va en línea propia (como
+   .venue-municipio en las fichas) para no competir con sede·sala·duración, y en
+   ámbar tenue: es el dato que decide si vale la pena seguir leyendo la card. */
+.plist-city{display:block;font-size:var(--t-xs);color:var(--amber-70,var(--amber));margin-top:2px;letter-spacing:.04em;font-weight:var(--w-semi)}
 .plist-sec{font-size:var(--t-label);color:var(--white-60);font-weight:var(--w-semi);margin-top:2px;letter-spacing:.2px}
 .plist-heart{font-size:var(--t-icon);color:var(--amber);flex-shrink:0;cursor:pointer;padding:6px;border-radius:50%;transition:background var(--tr-base),transform 200ms cubic-bezier(.34,1.56,.64,1)/* bounce intencional */;display:flex;align-items:center;justify-content:center;align-self:center}
 /* Mi Plan — modo lista compacta */
@@ -2441,6 +2447,24 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 /* lugar-back — fila de regreso del drill-down de ciudad (festivales multiciudad).
    Ámbar = navegación, no selección: no filtra, vuelve al nivel de ciudades. */
 .lugar-back{color:var(--amber);font-weight:var(--w-semi);font-size:var(--t-sm)}
+/* Sheet de ciudad (multiciudad) — gramática del SPLASH (aprobado 7 ago):
+   afiche → eyebrow (.splash-fest-label, MAYÚS con tracking) → lista. No repite
+   el nombre del festival: el afiche que el usuario acaba de tocar ya lo dice.
+   El póster reusa .splash-card-tpl/.splash-card-art con su propia escala —más
+   chico que en el splash porque acá es contexto, no la elección. */
+#city-sheet .auth-sheet-inner{--poster-h:150px;--poster-w:calc(var(--poster-h) * 2 / 3)}
+.city-sheet-art{margin:0 auto var(--sp-4)}
+#city-sheet .splash-fest-label{text-align:center;margin-bottom:var(--sp-4)}
+/* Sheet de ciudad (multiciudad): la fila es EXACTAMENTE .lugar-opt — sin fechas
+   ni conteos, la lista del sheet y el nivel de ciudades del filtro son la misma
+   cosa (Juan, 7 ago: "lo de las fechas sobra"). Cero clases nuevas.
+   El nombre toma peso de elección; la salida ("ver todas") es una fila más,
+   como "todos los lugares" en el filtro — no un cancelar.
+   El techo en vh deja entrar las 11 ciudades sin scroll en un teléfono normal y
+   recorta con scroll solo en pantallas cortas. */
+.lugar-opt.city{font-weight:var(--w-semi);color:var(--white)}
+.lugar-opt.escape{color:var(--gray2);font-size:var(--t-sm);justify-content:center}
+#city-sheet-list{max-height:66vh;overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;margin:0 calc(-1*var(--sp-5))}
 .lugar-back svg{color:var(--amber)}
 @keyframes lugarFadeIn{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:translateY(0)}}
 /* Dropdown de filtro ÚNICO (sección + lugar) — auditoría overlays 18 jul 2026.
@@ -3103,7 +3127,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202608061643";
+    s.src="/src/main.js?v=202608061230";
     document.body.appendChild(s);
     // Watchdog de boot (P0 18 jul): si el grafo ESM murió en el import (caché
     // HTTP mixta tras deploys en ráfaga — main.js nuevo + módulo viejo sin el
@@ -3214,6 +3238,18 @@ setTimeout(function(){
 </script>
 
 <!-- Festival switcher bottom sheet -->
+<!-- Sheet de CIUDAD (festivales multiciudad) — se muestra UNA vez al entrar al
+     Programa, cuando el festival tiene ≥2 ciudades y el usuario no eligió aún.
+     Reusa la anatomía del bottom sheet canónico (.auth-sheet). La lista la pinta
+     _renderCitySheet() desde festivalCities(), el mismo dueño que el filtro. -->
+<div class="auth-sheet" id="city-sheet" data-close-bg="CitySheet">
+  <div class="auth-sheet-inner">
+    <div class="splash-card-tpl city-sheet-art" id="city-sheet-art"></div>
+    <div class="splash-fest-label" id="city-sheet-label"></div>
+    <div id="city-sheet-list"></div>
+  </div>
+</div>
+
 <div class="auth-sheet" id="auth-sheet" data-close-bg="AuthSheet">
   <div class="auth-sheet-inner">
     <div id="auth-sheet-step1">

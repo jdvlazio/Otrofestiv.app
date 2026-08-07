@@ -85,7 +85,7 @@ import {
 import {
   _posterStyle, getPosterSrc, getFilmPoster, getCortoItemPoster, _getItemPoster, _isEditorialPoster, _posterThumb, isNowShowing, isToday, vcfg, sala, travelWarn, mplanEndStr, mplanBlockType, dayChip, dayLabel, _lblLocalized, durFmt, flagFmt, _langDates, _mkCortoItemHtml, starsText, _dayChips, _metaBadges, _programaStack, _plistPosterHtml, DAY_SHORT_EN,
   setDayShort, setDayShortEn, setPosters, setCustomPosters,
-  emptyState, emptyStateHero, DAYS, venueLabel,
+  emptyState, emptyStateHero, DAYS, venueLabel, ticketBadgeTarget,
 } from './view/helpers.js';
 
 // ── Step 6f: view/agenda.js — render de agenda+miplan (18 fns). ───────────────
@@ -119,6 +119,7 @@ import {
 
 // ── Step 7d-3: controller/handlers.js — mutators+filters+composites. ─────────
 import {
+  citySheetPick, citySheetAll,
   toggleWL, toggleWatched, togglePelPrio, togglePelWL, setDelay, undoDelay, clearDelay, removeFromAgenda, addSuggestion, _planFixNotice, checkinLaVi, checkinNoLaVi, forceInclude, togglePriority, swapPriority, markWatchedFromPlan, confirmReplace, removeFilmFromScenario, _dismissNotice, selectMiPlanDay, miPlanNav, toggleMplanProg, setActivePlanFilm, selectFromDetail, toggleFilmAlternatives, _toggleEveningFilms, filterByVenue, filterByDay, filterBySection, setInteresesView, setProgramaMode, toggleProgramaView, setProgramaView, setProgramaChip, clearProgramaChip, _pafClearSec, _pafClearVenue, _toggleWLFromList, saveCurrentScenario, _scrollToAgSection, _setExpandedFilm, _closePelAndRemove, _closePelAndRate, _navTo, _closeAuthAndReset, _toggleCtxOlder, _toggleWatchedAndClose, _toggleWLAndClose, _activatePlanFilm, _scrollToSuggestions, _removeConflictModal, _scrollToTop, _searchOpenFilm, _searchOpenCorto,
 } from './controller/handlers.js';
 import { setDelaysRerender } from './controller/delays-cloud.js';
@@ -258,6 +259,8 @@ const ACTION_REGISTRY = {
   toggleEveningFilms:  (el)    => _toggleEveningFilms(el),
   toggleWLFromList:    (el)    => _toggleWLFromList(el.dataset.title, el),
   addSuggestion:       (el)    => addSuggestion(el.dataset.title, el.dataset.day, el.dataset.time),
+  citySheetPick:       (el)    => citySheetPick(el.dataset.city),
+  citySheetAll:        ()      => citySheetAll(),
   clearProgramaChip:   ()      => clearProgramaChip(),
   runCalc:             ()      => runCalc(),
   openDiary:           ()      => openDiary(),
@@ -447,7 +450,7 @@ FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202608061643';
+const BUILD_VERSION='202608061230';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';
@@ -1329,6 +1332,9 @@ document.addEventListener('click', function(e){
     // commitPlan: el chokepoint de escritura del plan — expuesto para que la
     // suite pruebe strict-mode (__PLAN_STRICT__) sin montar un flujo entero.
     commitPlan,
+    // ticketBadgeTarget: qué marca el badge de precio (la minoría) — expuesto
+    // para que la suite lo consulte sin recalcular la proporción a mano.
+    ticketBadgeTarget,
     _renderProgramaContent, closeAuthSheet, closePelSheet, exportICS, loadFestival, normTitle,
     openAuthSheet, openPelSheet, openRatingSheet, openCortoSheet, renderAgenda,
     render, saveSavedAgenda, saveState, savePrio, saveWL, saveWatched, searchOpen,

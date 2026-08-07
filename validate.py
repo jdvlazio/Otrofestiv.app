@@ -2605,6 +2605,42 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar duracion-solo-dominio: {_e}')
 
+# ── [badge-precio-minoria] el badge de precio marca la MINORÍA, nunca a mano ────
+# FICDEH 2026 invirtió una premisa que la app daba por sentada: 81% de sus
+# funciones son de entrada libre, así que el badge GRATIS pintaba 313 tarjetas y
+# escondía las 71 accionables. La regla vive en ticketBadgeTarget() (view/
+# helpers.js), que decide UNA vez por festival de qué lado cae la minoría.
+# Regla: nadie decide badge de precio leyendo `is_free` por su cuenta — quien lo
+# pinte consulta al dueño. Sin esto, cada superficie nueva reintroduce el sesgo
+# "gratis es la excepción" y los festivales de entrada libre vuelven a romperse.
+check = 'badge-precio-minoria'
+try:
+    import glob as _glob, re as _re
+    _src = open('src/view/helpers.js', encoding='utf-8').read()
+    if not _re.search(r'export function ticketBadgeTarget\(', _src):
+        fail(check, 'falta ticketBadgeTarget() en src/view/helpers.js — es el dueño de la regla')
+    else:
+        _off = []
+        for _sf in sorted(_glob.glob('src/**/*.js', recursive=True)):
+            _n = _sf.replace('\\', '/')
+            # el dueño, y el diccionario (que solo DECLARA las claves, no pinta)
+            if _n.endswith('view/helpers.js') or _n.endswith('i18n/i18n.js'):
+                continue
+            _txt = open(_sf, encoding='utf-8').read()
+            _consulta = 'ticketBadgeTarget' in _txt
+            for _i, _ln in enumerate(_txt.splitlines(), 1):
+                _code = _ln.split('//')[0]
+                # pintar un badge/aviso de precio decidiendo is_free por su cuenta
+                if _re.search(r'badge_gratis|badge_con_boleta|aviso_gratis|aviso_con_boleta', _code) \
+                        and not _consulta:
+                    _off.append(f"{_sf}:{_i}")
+        if _off:
+            fail(check, 'badge de precio sin consultar ticketBadgeTarget(): ' + '; '.join(_off[:6]))
+        else:
+            ok(check, 'el badge de precio lo decide ticketBadgeTarget() (marca la minoría)')
+except Exception as _e:
+    warn(check, f'no se pudo verificar badge-precio-minoria: {_e}')
+
 # ── [tests-puerto-propio] cada corrida de tests con su servidor ─────────────────
 # La causa raíz del "flaky" que llevábamos meses tapando con `retries`: Playwright
 # MATA el servidor que él levantó al terminar, y con `reuseExistingServer` una
@@ -2898,11 +2934,11 @@ try:
     #   agenda.js (render agenda+miplan) · main.js (composición/bootstrap) ·
     #   i18n.js (diccionarios es/en, es DATA) · sheets-controller.js · handlers.js
     _ALLOW = {
-        'src/view/agenda.js': 1672,
+        'src/view/agenda.js': 1681,  # +9: kind 'ciudad' en el detalle de conflicto (6 ago)
         'src/main.js': 1662,  # +46 total: _morphOpen a FLIP — clon de la card compuesta, radio contra-escalado, encuadre del destino (29 jul)
-        'src/i18n/i18n.js': 1433,  # +4 (net): anclaje (label+texto) y Q&A con referentes, ×3 locales (29 jul)
-        'src/controller/sheets-controller.js': 1524,  # +39: la ficha de corto hereda la función de su(s) programa(s) — _screeningRows (dueño único, antes inline en openPelSheet), _findParentPrograms, _cortoScreeningPairs y _noticeRows y _avisosBand (banda AVISOS: dueño único de lo que MATIZA la función, con la evidencia de vocabulario) (30 jul 2026)
-        'src/controller/handlers.js': 964,  # +20: anclaje de función en toggleWL, simétrico al quitar (29 jul)
+        'src/i18n/i18n.js': 1448,  # +12: sheet de ciudad + badge CON BOLETA ×3 locales (6 ago)
+        'src/controller/sheets-controller.js': 1528,  # +4: precio en AVISOS sigue a ticketBadgeTarget (6 ago)  # +39: la ficha de corto hereda la función de su(s) programa(s) — _screeningRows (dueño único, antes inline en openPelSheet), _findParentPrograms, _cortoScreeningPairs y _noticeRows y _avisosBand (banda AVISOS: dueño único de lo que MATIZA la función, con la evidencia de vocabulario) (30 jul 2026)
+        'src/controller/handlers.js': 979,  # +15: acciones del sheet de ciudad (7 ago)  # +20: anclaje de función en toggleWL, simétrico al quitar (29 jul)
     }
     _over = []
     for _f in _glob.glob('src/**/*.js', recursive=True):

@@ -56,6 +56,15 @@ export const storage = {
   getLastRemovedSlots() { try { const r=localStorage.getItem(FESTIVAL_STORAGE_KEY+'lastslot'); if(!r) return []; const p=JSON.parse(r); return Array.isArray(p)?p:(p?[p]:[]); } catch(e) { return []; } },
   setLastRemovedSlots(a) { try { localStorage.setItem(FESTIVAL_STORAGE_KEY+'lastslot', JSON.stringify(a)); } catch(e) {} },
 
+  // cityFilter — la CIUDAD elegida en un festival multiciudad (FICDEH: 11).
+  // Es CONTEXTO, no un filtro cualquiera: el usuario está en una ciudad y quiere
+  // seguir estándolo la próxima vez que abra la app. Guarda el centinela completo
+  // ('city:Bogotá') para poder devolvérselo tal cual a activeVenue.
+  // Solo se persiste la CIUDAD; una sede concreta es un filtro momentáneo y muere
+  // con la sesión. Scoped por festival (prefijo FESTIVAL_STORAGE_KEY).
+  getCityFilter() { try { return localStorage.getItem(FESTIVAL_STORAGE_KEY+'city') || ''; } catch(e) { return ''; } },
+  setCityFilter(v) { try { v ? localStorage.setItem(FESTIVAL_STORAGE_KEY+'city', v) : localStorage.removeItem(FESTIVAL_STORAGE_KEY+'city'); } catch(e) {} },
+
   // filmDelays: post-p5.5 NO contiene _hist (separado a filmDelaysHistory).
   // El strip de _hist en lectura permite migración suave para usuarios con storage pre-p5.5.
   getFilmDelays() { try { const r=localStorage.getItem(FESTIVAL_STORAGE_KEY+'delays'); if(!r) return {}; const p=JSON.parse(r); const {_hist:_, ...clean}=p; return clean; } catch(e) { return {}; } },

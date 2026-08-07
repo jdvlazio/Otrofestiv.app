@@ -14,7 +14,7 @@ const { loadDomain } = require('../lib/load-domain.js');
 
 const { screensConflict, screensConflictReason } = loadDomain({
   functions: ['toMin', 'parseDur', 'blockDuration', 'durationForTravel', '_resolveVenue', 'effectiveDuration',
-              'venueTravelMins', 'travelMins', 'screensConflict', 'screensConflictReason'],
+              'venueTravelMins', 'travelMins', 'screensConflict', 'screensConflictReason', '_cityOf'],
   globals: {
     FESTIVAL_BUFFER: 15,
     FESTIVAL_TRANSPORT: 'transit',

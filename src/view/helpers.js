@@ -355,6 +355,49 @@ export function venueSelLabel(sel){
   return (sel&&sel.startsWith('city:'))?sel.slice(5):sel;
 }
 
+// isCitySel / keepCityOnly — la CIUDAD es contexto, la SEDE es un filtro momentáneo.
+// Al cambiar de día o de sección se limpia la sede (el viernes esa sala quizá no
+// proyecta) pero se CONSERVA la ciudad: seguís en la misma ciudad. Sin esto, en
+// FICDEH elegir Bogotá y tocar otro día te devolvía las 11 ciudades.
+export function isCitySel(sel){ return !!(sel&&sel.startsWith('city:')); }
+
+// venueCity(v) — la ciudad de una sede, SOLO cuando aporta (dueño único).
+// Devuelve '' si la sede no declara ciudad o si es la misma del festival: en un
+// festival de una ciudad, repetirla en cada card sería ruido. En FICDEH (11
+// ciudades, `city:'Colombia'` en config a propósito) ninguna coincide → todas la
+// muestran. Mismo criterio que ya usaban las fichas para el badge
+// `venue-municipio`; acá pasa a ser el dueño de esa decisión.
+// festivalCities(films) — DUEÑO ÚNICO de "las ciudades de este festival".
+// Devuelve [{name, count, days:[dayKeys...]}] ordenado por cantidad de funciones.
+// Lo consumen el nivel de ciudades del filtro de Lugar y el sheet de bienvenida
+// multiciudad: sin un dueño, dos listas de ciudades que pueden divergir.
+//
+// `days` sale de las FUNCIONES, no de la config: en un festival ITINERANTE
+// (Tercer Tiempo: DeKalb → Bogotá → CDMX en fechas distintas) cada ciudad tiene
+// su propia ventana, y derivarla del dato es lo que permite soportarlos sin
+// campos nuevos en el JSON. En uno simultáneo (FICDEH) todas coinciden.
+export function festivalCities(films){
+  const map={};
+  (films||[]).forEach(f=>{
+    if(f.info||!f.venue||!f.day) return;
+    const c=vcfg(f.venue).city;
+    if(!c) return;
+    (map[c] ||= {name:c,count:0,days:new Set()});
+    map[c].count++;
+    map[c].days.add(f.day);
+  });
+  return Object.values(map)
+    .map(c=>({...c, days:[...c.days].sort()}))
+    .sort((a,b)=>b.count-a.count);
+}
+
+export function venueCity(v){
+  const festCity=(FESTIVAL_CONFIG[_activeFestId]||{}).city||'';
+  const c=vcfg(v).city||'';
+  return (c&&c!==festCity)?c:'';
+}
+export function keepCityOnly(sel){ return isCitySel(sel)?sel:'all'; }
+
 // sala(v) — la sala dentro del edificio, DECLARADA o, en su defecto, deducida.
 //
 // El modelo de multisala es: cada sala es una SEDE con clave propia, mismo
@@ -518,13 +561,49 @@ export function _dayChips(screenings){
     .join('<span style="color:var(--gray2)"> · </span>');
 }
 
+// ticketBadgeTarget() — QUÉ marca el badge de precio en este festival (dueño único).
+//   'free' → badge GRATIS en las gratuitas · 'paid' → badge CON BOLETA en las de
+//   pago · null → el festival no es 'mixed', no hay badge.
+//
+// REGLA (Juan, 6 ago 2026): **el badge marca siempre la MINORÍA.** Un badge que
+// pinta la mayoría de las tarjetas no discrimina: informa cero y ensucia.
+// Hasta FICDEH lo gratuito era la excepción en todos los festivales (0% en
+// nueve, 6% en Tercer Tiempo) y marcar las gratis alcanzaba. FICDEH 2026
+// invierte la premisa: 81% gratis (313 de 384) — el badge pintaba 313 tarjetas y
+// escondía lo único accionable, las 71 que cuestan plata.
+// EMPATE EXACTO → 'paid': con 50/50 ninguna es minoría, y desempata lo
+// accionable (hay que sacar boleta) sobre lo que no exige nada.
+// Umbral 50% y no uno más alto: es "la minoría" literal, se explica en una línea
+// y no deja zona gris marcando mayorías.
+//
+// Memoizado por festival: la proporción se recorre UNA vez, no por card.
+let _tbCache={id:null,val:null};
+export function ticketBadgeTarget(){
+  const id=_activeFestId;
+  if(_tbCache.id===id) return _tbCache.val;
+  const cfg=FESTIVAL_CONFIG[id]||{};
+  let val=null;
+  if(cfg.ticketing_model==='mixed'){
+    const reales=(FILMS||[]).filter(f=>!f.info&&f.day&&f.time);
+    // Sin funciones cargadas no hay mayoría que leer: se devuelve null SIN
+    // memoizar, o una consulta anterior a la carga congelaría el festival
+    // entero sin badges.
+    if(!reales.length) return null;
+    const libres=reales.filter(f=>f.is_free===true).length;
+    val=(libres*2>=reales.length)?'paid':'free';
+  }
+  _tbCache={id,val};
+  return val;
+}
+
 export function _metaBadges(f){
   let b='';
   if(f.has_qa) b+=`<span class="meta-badge">Q&A</span>`;
   if(f.requires_registration) b+=`<span class="meta-badge">${t('badge_inscripcion')}</span>`;
-  // Festival mixto: marcar función gratuita (discrimina — solo las gratis, no todas).
-  if((FESTIVAL_CONFIG[_activeFestId]||{}).ticketing_model==='mixed'&&f.is_free===true)
-    b+=`<span class="meta-badge">${t('badge_gratis')}</span>`;
+  // Festival mixto: el badge marca la MINORÍA (ver ticketBadgeTarget).
+  const _tb=ticketBadgeTarget();
+  if(_tb==='free'&&f.is_free===true) b+=`<span class="meta-badge">${t('badge_gratis')}</span>`;
+  else if(_tb==='paid'&&f.is_free!==true) b+=`<span class="meta-badge">${t('badge_con_boleta')}</span>`;
   return b;
 }
 

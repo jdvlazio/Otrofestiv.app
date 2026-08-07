@@ -179,7 +179,7 @@ const DEFAULT_FNS = [
   'toMin', 'minToStr', 'parseDur', 'blockDuration', 'effectiveDuration', 'durationForTravel', 'screeningEndDate',
   'screeningEndMin', 'screeningEnded', 'screeningNow',
   '_resolveVenue', 'venueTravelMins', 'travelMins',
-  'screensConflict', 'verifyPlan',
+  'screensConflict', 'verifyPlan', '_cityOf', // helper local de schedule.js (kind 'ciudad')
   // Fase 2 — festival phase helpers
   '_endedStats', '_classifyTodayScreenings', '_gapSuggestion', '_getFestivalPhase',
   // Fase 3 — temporal subsystem
