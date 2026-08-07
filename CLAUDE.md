@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `875f6fc feat(festival): FICDEH 2026 — 13° Festival Internacional de Cine por los Derechos Humanos (#507)`
+> Último commit: `c0bf4b5 fix(splash): FICDEH 2026 — el keyArt oficial, el del campesino en la moto (#510)`
 
 ---
 
