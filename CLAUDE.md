@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `875f6fc feat(festival): FICDEH 2026 — 13° Festival Internacional de Cine por los Derechos Humanos (#507)`
+> Último commit: `f567f2b Merge remote-tracking branch 'origin/main' into fix/aviso-ciudad`
 
 ---
 
