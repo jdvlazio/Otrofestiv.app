@@ -8,7 +8,7 @@
 
 import { FESTIVAL_CONFIG, MAX_REMEMBERED_SLOTS, TMDB_IMG, _DEFAULT_FEST_ID } from '../config.js';
 import { DAY_ABBR, DAY_NUM, ICONS, _secLabel, _sectionColor, escXML, isFullDayBlocked, makeProgramPoster, parseProgramTitle, renderRatingStarsHTML } from '../view/components.js';
-import { _getItemPoster, _mkCortoItemHtml, _posterStyle, dayLabel, emptyState, durFmt, flagFmt, getCortoItemPoster, getFilmPoster, getFilmPosterUntitled, getPosterSrc, itemPosterParts, posterAmbient, posterParts, sala, starsText, vcfg } from '../view/helpers.js';
+import { _getItemPoster, _mkCortoItemHtml, _posterStyle, dayLabel, emptyState, durFmt, flagFmt, getCortoItemPoster, getFilmPoster, getFilmPosterUntitled, getPosterSrc, itemPosterParts, posterAmbient, posterParts, sala, starsText, vcfg, ticketBadgeTarget } from '../view/helpers.js';
 import { closeAvSheet, closePVRating, closePrioLimit } from '../view/sheets.js';
 import { showConflictModal, showToast } from '../view/feedback.js';
 import { renderAgenda, renderAvBlocks, renderDiaryHTML } from '../view/agenda.js';
@@ -1407,11 +1407,17 @@ export function _avisosBand(f, opts){
   if(opts&&opts.prog) rows.push([t('badge_programa'), t(opts.prog==='cortos'?'aviso_prog_cortos':'aviso_prog_obras')]);
   const _ins=_con('requires_registration');
   if(_ins.length) rows.push([t('badge_inscripcion'), t('aviso_inscripcion')+_cual(_ins)]);
-  // GRATIS solo en festival MIXTO: marca la excepción cuando casi todo se paga.
-  // Ya era badge en las cards del listado; faltaba en la ficha, que es donde el
-  // usuario decide. Mismo criterio que _metaBadges — un solo predicado.
-  const _gratis=((FESTIVAL_CONFIG[_activeFestId]||{}).ticketing_model==='mixed')?_con('is_free'):[];
-  if(_gratis.length) rows.push([t('badge_gratis'), t('aviso_gratis')+_cual(_gratis)]);
+  // Precio: la ficha dice lo MISMO que la card — ticketBadgeTarget es el dueño
+  // único de qué se marca (la minoría). Si la card de una función dice CON
+  // BOLETA y su ficha dijera GRATIS, se contradirían.
+  const _tb=ticketBadgeTarget();
+  if(_tb==='free'){
+    const _g=_con('is_free');
+    if(_g.length) rows.push([t('badge_gratis'), t('aviso_gratis')+_cual(_g)]);
+  } else if(_tb==='paid'){
+    const _p=_src.filter(x=>x&&x.is_free!==true);
+    if(_p.length) rows.push([t('badge_con_boleta'), t('aviso_con_boleta')+_cual(_p)]);
+  }
   if(!rows.length) return '';
   return `<div class="sec-hdr sm">${ICONS.alert} <span>${t('label_avisos')}</span></div>`
     +`<div class="avisos-body">`

@@ -9,8 +9,8 @@ import { FESTIVAL_CONFIG, NOTICES, mergeFestivalSections } from '../config.js';
 import { parseDur } from '../domain/time.js';
 import { lruTouch } from '../lru.js';
 import { DAY_ABBR, DAY_NUM, _classifyFestival, festivalShortName } from '../view/components.js';
-import { DAYS, DAY_SHORT_EN, setCustomPosters, setDayShort, setDayShortEn, setPosters } from '../view/helpers.js';
-import { closeFestivalSheet } from '../view/sheets.js';
+import { DAYS, DAY_SHORT_EN, setCustomPosters, setDayShort, setDayShortEn, setPosters, keepCityOnly } from '../view/helpers.js';
+import { closeFestivalSheet, openCitySheet } from '../view/sheets.js';
 import { showToast } from '../view/feedback.js';
 import { _renderProgramaContent, lugarClose } from '../view/programa.js';
 import { _fixStickyOffset } from '../view/agenda.js';
@@ -334,7 +334,7 @@ export async function loadFestival(id){
       todoBtn.style.cssText='display:flex;align-items:center;justify-content:center;padding:0 14px';
       todoBtn.innerHTML='<span data-i18n="bar_todo" style="font-size:var(--t-sm);font-weight:700;letter-spacing:.08em;text-transform:uppercase">'+t('bar_todo')+'</span>';
       todoBtn.onclick=()=>{
-        activeDay='all';activeVenue='all';activeSec='all';selectedIdx=null;
+        activeDay='all';activeVenue=keepCityOnly(activeVenue);activeSec='all';selectedIdx=null;
         cartelaMode='horario';
         setProgramaView('grid'); // TODO → siempre Grid
         document.querySelectorAll('.dtab').forEach(t=>t.classList.toggle('on',t.dataset.day==='all'));
@@ -359,7 +359,7 @@ export async function loadFestival(id){
       btn.dataset.lblEn=_dtabLblEN;
       btn.innerHTML=`<span class="dtab-date">${_dtabLbl}</span><span class="dtab-name">${day.d}</span>`;
       btn.onclick=()=>{
-        activeDay=day.k;activeVenue='all';selectedIdx=null;
+        activeDay=day.k;activeVenue=keepCityOnly(activeVenue);selectedIdx=null;
         setProgramaView('list'); // día específico → siempre Lista (horarios/planificación)
         document.querySelectorAll('.dtab').forEach(t=>t.classList.toggle('on',t.dataset.day===day.k));
         _renderProgramaContent(true); // cambio de día específico → scroll al tope
@@ -429,6 +429,28 @@ export async function loadFestival(id){
   if(savedAgenda&&savedAgenda.schedule&&savedAgenda.schedule.length){
     state.update('savedAgenda', a=>({...a, schedule: syncScheduleWithCatalog(a.schedule, _newFilms)}));
     storage.setSavedAgenda(state.get('savedAgenda'));
+  }
+
+  // ► CIUDAD RECORDADA (festivales multiciudad) ──────────────────────────────
+  // La ciudad es CONTEXTO, no un filtro más: quien está en Quibdó sigue en Quibdó
+  // la próxima vez que abre la app. Se restaura solo si (a) hay una guardada para
+  // ESTE festival y (b) sigue existiendo en sus sedes — si el festival cambió su
+  // programación y esa ciudad ya no está, se descarta en silencio en vez de dejar
+  // el programa vacío. Cambiarla o quitarla es un tap en el filtro de Lugar.
+  // Tres estados: '' = nunca preguntado (dispara el sheet) · 'all' = eligió ver
+  // todas (no filtra, pero no se vuelve a preguntar) · 'city:X' = su ciudad.
+  const _savedCity=storage.getCityFilter();
+  if(_savedCity&&_savedCity!=='all'){
+    const _c=_savedCity.slice(5);
+    const _existe=Object.values(cfg.venues||{}).some(v=>v&&v.city===_c);
+    if(_existe) activeVenue=_savedCity; else storage.setCityFilter('');
+  }
+  // El sheet se abre DESPUÉS del primer render del programa (rAF doble): si se
+  // abriera antes, el usuario ve el sheet sobre una pantalla vacía y no entiende
+  // de qué le están hablando. Ver openCitySheet: se auto-descarta si el festival
+  // no es multiciudad, así que acá no hace falta repetir la condición.
+  if(!storage.getCityFilter()){
+    requestAnimationFrame(()=>requestAnimationFrame(()=>openCitySheet()));
   }
 
   // Set active day to today

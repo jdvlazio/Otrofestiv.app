@@ -7,10 +7,11 @@
 
 import { FESTIVAL_CONFIG, MAX_REMEMBERED_SLOTS } from '../config.js';
 import { ICONS, parseProgramTitle } from '../view/components.js';
-import { closeAuthSheet, closePrioLimit } from '../view/sheets.js';
+import { closeAuthSheet, closeCitySheet, closePrioLimit } from '../view/sheets.js';
 import { showActionModal, showToast } from '../view/feedback.js';
 import { _renderProgramaContent, lugarClose, render, renderNoticesBanner, _noticeKey } from '../view/programa.js';
 import { renderAgenda, updateCardState, updateHorarioPrioBtn } from '../view/agenda.js';
+import { keepCityOnly } from '../view/helpers.js';
 import { runCalc } from './calc.js';
 import { commitPlan, saveDelays, saveLastSlot, savePrio, saveSavedAgenda, saveState, saveWL, saveWatched } from './persistence.js';
 import { cloudReportDelay, cloudClearDelay, cloudScreeningKey } from './delays-cloud.js';
@@ -670,7 +671,7 @@ export function filterByVenue(venue){
 
 export function filterByDay(day){
   closePelSheet();
-  activeDay=day;activeVenue='all';selectedIdx=null;
+  activeDay=day;activeVenue=keepCityOnly(activeVenue);selectedIdx=null;
   cartelaMode='horario';
   document.querySelectorAll('.dtab').forEach(t=>t.classList.toggle('on',t.dataset.day===day));
   requestAnimationFrame(()=>{
@@ -685,7 +686,7 @@ export function filterByDay(day){
 export function filterBySection(section){
   // Navegar a Programa · Explorar con esa sección activa
   closePelSheet();
-  activeSec=section;activeVenue='all';selectedIdx=null;
+  activeSec=section;activeVenue=keepCityOnly(activeVenue);selectedIdx=null;
   programaSubMode='hoy';
   programaChip='all';
   _programaChipMatchFn=null;
@@ -719,7 +720,7 @@ export function setInteresesView(mode){
 export function setProgramaMode(mode){
   programaSubMode=mode;
   // Reset filtros al cambiar modo y cerrar dropdowns
-  activeSec='all';activeVenue='all';selectedIdx=null;
+  activeSec='all';activeVenue=keepCityOnly(activeVenue);selectedIdx=null;
   programaChip='all';_programaChipMatchFn=null;
   lugarClose();seccionClose();
   // Set active day for hoy/mañana modes
@@ -772,7 +773,7 @@ export function setProgramaChip(chipId){
 
 export function clearProgramaChip(){
   _programaChipMatchFn=null;
-  activeVenue='all';
+  activeVenue=keepCityOnly(activeVenue);
   lugarClose();
   setProgramaChip('all');
 }
@@ -782,8 +783,29 @@ export function _pafClearSec(){
   if(activeMNav==='mnav-cartelera')_renderProgramaContent(true);else render(); // limpiar filtro sección → scroll al tope
 }
 
+// citySheetPick / citySheetAll — respuestas del sheet de ciudad (multiciudad).
+// Ambas RECUERDAN la respuesta: elegir ciudad guarda 'city:X'; "ver todas"
+// guarda 'all', que no filtra pero marca la pregunta como hecha para que no
+// vuelva a aparecer. El '' (nunca preguntado) es el único estado que la dispara.
+export function citySheetPick(city){
+  activeVenue='city:'+city;
+  storage.setCityFilter(activeVenue);
+  closeCitySheet();
+  _updateProgramaActiveFilter();
+  _renderProgramaContent(true);
+}
+
+export function citySheetAll(){
+  activeVenue='all';
+  storage.setCityFilter('all');   // preguntado y respondido: ver todas
+  closeCitySheet();
+  _updateProgramaActiveFilter();
+  _renderProgramaContent(true);
+}
+
 export function _pafClearVenue(){
-  activeVenue='all';lugarClose();_updateProgramaActiveFilter();
+  // quitar el chip es la acción EXPLÍCITA de salir de la ciudad → también la olvida
+  activeVenue='all';storage.setCityFilter('');lugarClose();_updateProgramaActiveFilter();
   if(activeMNav==='mnav-cartelera')_renderProgramaContent(true);else render(); // limpiar filtro lugar → scroll al tope
 }
 

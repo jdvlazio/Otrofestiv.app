@@ -96,6 +96,25 @@ ambas automáticas (sin flags ni cambios de pipeline):
   eran 12,5 pantallas de scroll en 390×844.
   El predicado es `venueMatches(venue, sel)` (`view/helpers.js`), dueño único:
   `sel` es `'all'`, un short de sede, o el centinela `'city:<Ciudad>'`.
+- **La ciudad es CONTEXTO** (6 ago 2026): se **recuerda entre sesiones** (por
+  festival, `storage.getCityFilter`) y **sobrevive al cambio de día o sección**
+  (`keepCityOnly`); una SEDE, en cambio, es un filtro momentáneo y se limpia.
+  Quitar el chip del filtro es la acción explícita de salir de la ciudad, y
+  también la olvida. Al cargar, si la ciudad guardada ya no existe en las sedes
+  del festival, se descarta en silencio (no deja el programa vacío).
+  **Doctrina:** la ciudad filtra lo que DESCUBRÍS (Programa, Días, Sugerencias),
+  **nunca lo que ya elegiste** — Mi Plan muestra tu plan completo aunque tenga
+  funciones de varias ciudades. Un plan itinerante (Bogotá el 13, Medellín el 17)
+  es legítimo y ya funciona: `screensConflict` corta por día antes que nada.
+- **La ciudad se ve en cada card** del modo por días (`venueCity`, dueño único —
+  devuelve '' si coincide con la del festival, para no repetirla en los de una
+  sola ciudad). Sin esto, en FICDEH había que abrir la ficha para saber si una
+  función era alcanzable.
+- **Conflicto entre ciudades** — `screensConflictReason` devuelve `kind:'ciudad'`
+  con el nombre y **sin minutos**: `travelMins` usa velocidad urbana y a escala
+  intermunicipal se equivoca 3× (Bogotá→Ibagué: estima 13 h, son ~4). Se dice el
+  dato (la ciudad) y el usuario juzga; se puede forzar con "+ Incluir". El
+  mensaje va **solo**: «Es en Ibagué» — sin texto de apoyo, ya lo dice todo.
   **Ojo con el borde**: FINCA declara `city` en 1 de 6 sedes — por eso la regla
   exige DOS ciudades distintas, no «¿hay city?».
 
@@ -264,6 +283,34 @@ Usado cuando un film tiene múltiples funciones en días/horarios/venues distint
 ```
 
 `is_free` se absorbe en la explosión de screenings (whitelist en `loader.js`). Solo aplica a festivales con `ticketing_model: "mixed"`.
+
+#### El badge de precio marca la MINORÍA
+
+Marcar `is_free` no implica pintar un badge GRATIS. **La app decide sola de qué
+lado cae la minoría y marca ese lado**, una vez por festival:
+
+| Funciones gratuitas | Badge que se pinta | En |
+|---|---|---|
+| ≤ 50% | **GRATIS** | las gratuitas |
+| > 50% (y el empate) | **CON BOLETA** | las de pago |
+
+Dueño único: **`ticketBadgeTarget()`** en `src/view/helpers.js` — lo consultan
+las cards (`_metaBadges`) y la fila de AVISOS de la ficha. Guardián
+`[badge-precio-minoria]`. Nadie más lee `is_free` para decidir un badge.
+
+**Por qué:** hasta agosto de 2026 lo gratuito era la excepción en los diez
+festivales montados (0% en nueve, 6% en Tercer Tiempo) y marcar las gratuitas
+alcanzaba. FICDEH 2026 invirtió la premisa —313 de 384 funciones de entrada
+libre, el 81%— y el badge pasó a pintar 313 tarjetas sin decir nada, escondiendo
+las 71 que sí exigen sacar boleta. Un badge que marca la mayoría no informa.
+
+El umbral es 50% y no uno más alto a propósito: es "la minoría" literal, se
+explica en una frase y no deja zona gris marcando mayorías. **El empate resuelve
+a CON BOLETA**, que es lo accionable. Con el programa aún sin cargar no se decide
+nada (ni se memoiza).
+
+Para el onboarding esto no cambia nada: se sigue marcando `is_free` en cada
+función gratuita, sin importar cuántas sean.
 
 **Regla de explosión:** el sistema convierte `screenings[]` en objetos film planos usando:
 ```javascript

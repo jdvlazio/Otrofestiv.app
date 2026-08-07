@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `27207e3 Merge remote-tracking branch 'origin/main' into fix/splash-ciudad-pais`
+> Último commit: `5243093 Merge remote-tracking branch 'origin/main' into feat/ciudad-persistente`
 
 ---
 

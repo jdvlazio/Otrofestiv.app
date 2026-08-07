@@ -275,3 +275,145 @@ test('T48 — los paneles de Sección y Lugar caben en pantalla (375px, el peor 
     await page.evaluate(id => document.getElementById(id)?.remove(), drop);
   }
 });
+
+// ── T49/T50 — la CIUDAD como contexto (FICDEH, 6 ago 2026) ───────────────────
+// FICDEH: 11 ciudades, 387 funciones. Dos problemas que resolvió este bloque:
+//   · el modo por días mezclaba las 11 sin decir cuál era cuál — había que abrir
+//     cada ficha para saber si la función era alcanzable;
+//   · el filtro de ciudad se perdía al cambiar de día y al cerrar la app.
+// Doctrina: la ciudad filtra lo que DESCUBRÍS (Programa/Días), nunca lo que YA
+// ELEGISTE (Mi Plan). Y es contexto: se recuerda; la sede no.
+test('T49 — multiciudad: cada card del modo por días dice su ciudad', async ({ page }) => {
+  await enterFestival(page, 'cinemancia2025');
+  // El día con MÁS funciones — un DAY_KEYS fijo puede caer en un día vacío y el
+  // test pasaría sin ejercer nada (pasó: skip silencioso, cazado por mutación).
+  await page.evaluate(() => {
+    switchMainNav('mnav-cartelera');
+    const cnt = {}; FILMS.forEach(f => { if (f.day) cnt[f.day] = (cnt[f.day] || 0) + 1; });
+    activeDay = Object.keys(cnt).sort((a, b) => cnt[b] - cnt[a])[0];
+    programaViewMode = 'list';   // el modo POR DÍAS es la lista (el grid son pósters)
+    _renderProgramaContent();
+  });
+  await page.waitForTimeout(500);
+  const r = await page.evaluate(() => {
+    const items = [...document.querySelectorAll('.plist-item')];
+    return { items: items.length, conCiudad: items.filter(i => i.querySelector('.plist-city')).length };
+  });
+  expect(r.items, 'el día elegido tiene que tener funciones o el test no prueba nada').toBeGreaterThan(0);
+  expect(r.conCiudad).toBe(r.items);   // TODAS, no algunas
+});
+
+test('T50 — la ciudad se recuerda entre sesiones; la sede no', async ({ page }) => {
+  await enterFestival(page, 'cinemancia2025');
+  await page.evaluate(() => { switchMainNav('mnav-cartelera'); });
+  await page.waitForTimeout(300);
+  // elegir una ciudad por la UI real
+  await page.evaluate(() => document.getElementById('lugar-btn').click());
+  await page.waitForSelector('#lugar-drop', { timeout: 5000 });
+  const ciudad = await page.evaluate(() => {
+    const d = [...document.querySelectorAll('#lugar-drop .lugar-opt')].find(o => o.dataset.v.startsWith('drill:'));
+    d.click(); return d.dataset.v.slice(6);
+  });
+  await page.waitForTimeout(200);
+  await page.evaluate(c => document.querySelector(`#lugar-drop [data-v="city:${c}"]`).click(), ciudad);
+  await page.waitForTimeout(600);
+
+  const guardado = await page.evaluate(() => localStorage.getItem('cinemancia2025_city'));
+  expect(guardado).toBe('city:' + ciudad);
+
+  // cambiar de DÍA no la pierde (antes sí: activeVenue se reseteaba a 'all')
+  await page.evaluate(() => { const t = [...document.querySelectorAll('.dtab')].find(x => x.dataset.day && x.dataset.day !== 'all' && x.dataset.day !== activeDay); t && t.click(); });
+  await page.waitForTimeout(600);
+  expect(await page.evaluate(() => activeVenue)).toBe('city:' + ciudad);
+
+  // reabrir la app: sigue en su ciudad
+  await enterFestival(page, 'cinemancia2025');
+  expect(await page.evaluate(() => activeVenue)).toBe('city:' + ciudad);
+
+  // y se puede SALIR: quitar el chip la olvida
+  await page.evaluate(() => { switchMainNav('mnav-cartelera'); });
+  await page.waitForTimeout(300);
+  await page.evaluate(() => document.querySelector('.paf-pill[data-action="pafClearVenue"]')?.click());
+  await page.waitForTimeout(500);
+  expect(await page.evaluate(() => activeVenue)).toBe('all');
+  expect(await page.evaluate(() => localStorage.getItem('cinemancia2025_city'))).toBeFalsy();
+});
+
+// ── T51 — el badge de precio marca la MINORÍA ────────────────────────────────
+// FICDEH 2026 (81% de entrada libre) invirtió la premisa de la app: el badge
+// GRATIS pintaba 313 de 384 funciones y escondía las 71 accionables. La regla
+// pasó a ser "marcá la minoría" y la decide ticketBadgeTarget() una vez por
+// festival. Este test congela el OTRO lado: en los festivales donde lo gratuito
+// sigue siendo la excepción, nada cambió — el badge GRATIS sigue exactamente
+// donde estaba. (El lado invertido lo cubre tests/unit/ticketBadgeTarget.test.js
+// con las proporciones reales de ambos festivales.)
+test('T51 — donde gratis es la excepción, el badge GRATIS sigue igual', async ({ page }) => {
+  await enterFestival(page, 'tercertiempo2026');
+  await page.evaluate(() => { switchMainNav('mnav-cartelera'); activeDay = 'all'; programaViewMode = 'list'; _renderProgramaContent(); });
+  await page.waitForTimeout(500);
+
+  const r = await page.evaluate(() => {
+    const items = [...document.querySelectorAll('.plist-item')];
+    const badges = items.flatMap(i => [...i.querySelectorAll('.meta-badge')].map(b => b.textContent));
+    const reales = FILMS.filter(f => !f.info && f.day && f.time);
+    return {
+      target: ticketBadgeTarget(),
+      libres: reales.filter(f => f.is_free === true).length,
+      total: reales.length,
+      gratis: badges.filter(b => /GRATIS|FREE/i.test(b)).length,
+      boleta: badges.filter(b => /BOLETA|TICKETED/i.test(b)).length,
+    };
+  });
+  expect(r.libres * 2).toBeLessThan(r.total);      // premisa del escenario
+  expect(r.target).toBe('free');
+  expect(r.gratis).toBeGreaterThan(0);             // sigue marcando las gratuitas
+  expect(r.boleta).toBe(0);                        // y NO invade con CON BOLETA
+});
+
+// ── T52 — el sheet de ciudad: se pregunta UNA vez, y solo si hay que preguntar ─
+// FICDEH 2026 abre en 11 ciudades: entrar al programa y ver las 11 mezcladas no
+// es un catálogo, es ruido. El sheet pregunta al entrar, guarda la respuesta y
+// no vuelve a preguntar. En un festival de una ciudad no existe.
+test('T52 — sheet de ciudad: solo multiciudad, y no reaparece', async ({ page }) => {
+  // mono-ciudad: el sheet NO existe
+  await enterFestival(page, 'tercertiempo2026');
+  await page.waitForTimeout(600);
+  expect(await page.evaluate(() => document.getElementById('city-sheet')?.classList.contains('open'))).toBeFalsy();
+
+  // multiciudad: aparece con una fila por ciudad + la salida
+  await enterFestival(page, 'cinemancia2025');
+  await page.waitForSelector('#city-sheet.open', { timeout: 5000 });
+  const filas = await page.evaluate(() => ({
+    ciudades: document.querySelectorAll('#city-sheet-list .lugar-opt.city').length,
+    salida: !!document.querySelector('#city-sheet-list .lugar-opt.escape'),
+    nombre: document.querySelector('#city-sheet-list .lugar-opt.city span').textContent.trim(),
+  }));
+  expect(filas.ciudades).toBeGreaterThan(1);
+  expect(filas.salida).toBe(true);
+
+  // elegir ciudad: filtra, cierra y queda recordada
+  await page.evaluate(() => document.querySelector('#city-sheet-list .lugar-opt.city').click());
+  await page.waitForTimeout(600);
+  expect(await page.evaluate(() => activeVenue)).toBe('city:' + filas.nombre);
+  expect(await page.evaluate(() => document.getElementById('city-sheet').classList.contains('open'))).toBe(false);
+
+  // reabrir: ya respondió, no se vuelve a preguntar
+  await enterFestival(page, 'cinemancia2025');
+  await page.waitForTimeout(900);
+  expect(await page.evaluate(() => document.getElementById('city-sheet').classList.contains('open'))).toBe(false);
+  expect(await page.evaluate(() => activeVenue)).toBe('city:' + filas.nombre);
+});
+
+// La salida ("ver todas") también es una respuesta: no puede reabrir el sheet en
+// bucle cada vez que el usuario entra.
+test('T53 — "ver todas" se recuerda como respuesta, no como silencio', async ({ page }) => {
+  await enterFestival(page, 'cinemancia2025');
+  await page.waitForSelector('#city-sheet.open', { timeout: 5000 });
+  await page.evaluate(() => document.querySelector('#city-sheet-list .lugar-opt.escape').click());
+  await page.waitForTimeout(500);
+  expect(await page.evaluate(() => activeVenue)).toBe('all');
+
+  await enterFestival(page, 'cinemancia2025');
+  await page.waitForTimeout(900);
+  expect(await page.evaluate(() => document.getElementById('city-sheet').classList.contains('open'))).toBe(false);
+});

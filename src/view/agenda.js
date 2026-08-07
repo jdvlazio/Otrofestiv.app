@@ -1358,11 +1358,20 @@ export function buildResultHTML(scenarios){
           // y mostramos los minutos, que el usuario juzgue). Antes ambos decían "Choca
           // con X" — mismo mensaje para dos problemas distintos, y no decía ninguno.
           const _k=conflictReason?conflictReason.kind:'solape';
-          const _ico=_k==='viaje'?ICONS.route:ICONS.clock;
-          const _msg=_k==='solape'
+          // 'ciudad' (multiciudad): pin, dice la CIUDAD y NO da minutos — nuestra
+          // estimación de traslado usa velocidad urbana y a escala intermunicipal
+          // se equivoca 3× (Bogotá→Ibagué: dice 13 h, son ~4). Decimos el dato
+          // (la ciudad) y que el usuario juzgue.
+          const _ico=_k==='ciudad'?ICONS.pin:_k==='viaje'?ICONS.route:ICONS.clock;
+          const _msg=_k==='ciudad'
+            ? t('conflict_ciudad',{city:conflictReason.city})
+            : _k==='solape'
             ? t('conflict_solapa',{title:conflictWith})
             : t(conflictReason.bFirst?'conflict_justo_desde':'conflict_justo_hasta',{title:conflictWith});
-          const _det=_k==='viaje'
+          // 'ciudad' sin detalle: "Es en Ibagué" ya lo dice todo (Juan, UX Writer)
+          const _det=_k==='ciudad'
+            ? ''
+            : _k==='viaje'
             ? t('conflict_viaje_det',{travel:_minFmt(conflictReason.travel), gap:_minFmt(conflictReason.gap)})
             : _k==='ajustado' ? t('conflict_hueco_det',{gap:_minFmt(conflictReason.gap)}) : '';
           reason=`<div class="excl-reason conflict">${_ico} ${_msg}${conflictWhen?' · '+conflictWhen:''}</div>`
