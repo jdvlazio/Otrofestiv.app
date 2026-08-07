@@ -2,7 +2,7 @@
 // p8 Step 7e — Compartir plan (canvas/imagen) + export ICS.
 
 import { FESTIVAL_CONFIG } from '../config.js';
-import { DAYS, dayLabel, starsText, vcfg, getFilmPoster, getCortoItemPoster } from '../view/helpers.js';
+import { DAYS, dayLabel, starsText, vcfg, venueLabel, getFilmPoster, getCortoItemPoster } from '../view/helpers.js';
 import { parseProgramTitle, _sectionColor } from '../view/components.js';
 import { showToast } from '../view/feedback.js';
 import { _festDate } from '../domain/time.js';
@@ -308,7 +308,7 @@ export async function exportICS(){
     lines.push('BEGIN:VEVENT',
       `DTSTART:${fmt(start)}`,`DTEND:${fmt(end)}`,
       `SUMMARY:${clean(s._title)}`,
-      `LOCATION:${clean(s.venue)}`,
+      `LOCATION:${clean(venueLabel(s.venue))}`,   // edificio · sala (dueño único)
       `DESCRIPTION:${clean(_icsCfg.name||'Festival')} - ${clean(s.section)} - ${clean(s.duration)}`,
       `UID:otrofestiv-${_icsId}-${s._title?.replace(/\s/g,'')}-${fmt(start)}@otrofestiv.app`,
       'END:VEVENT');
@@ -333,7 +333,8 @@ export async function exportICS(){
         title:_clean(s._title),
         start:start.getTime(),
         end:end.getTime(),
-        location:_clean(vcfg(s.venue).short||s.venue),
+        location:_clean(venueLabel(s.venue)),   // MISMO texto que el ICS: a qué sala
+                                                //  entrar no puede depender del teléfono
         notes:`${_clean(_icsCfg.name||'Festival')}${s.section?(' · '+_clean(s.section)):''}`
       });
     });

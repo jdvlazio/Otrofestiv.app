@@ -544,7 +544,7 @@ export function renderFilmAlternatives(state,title,day,time){
       <div class="checkin-opt-info">
         <div class="checkin-opt-time">${f.time} · ${durFmt(f.duration)}</div>
         <div class="checkin-opt-title">${short}</div>
-        <div class="checkin-opt-venue">${ICONS.pin} ${vc2.short}</div>
+        <div class="checkin-opt-venue">${ICONS.pin} ${vc2.short}${sala(f.venue)?' \u00b7 '+sala(f.venue):''}</div>
       </div>
       <div class="checkin-opt-add" data-action="confirmReplace" data-rmtitle="${safeT}" data-newtitle="${safeTNew}" data-day="${f.day}" data-time="${f.time}">${ICONS.plus}</div>
     </div>`;
@@ -781,7 +781,7 @@ export function renderContextualHeader(state, consensus){
             <div class="ctx-next-title">${dt}</div>
             ${badge}
           </div>
-          <div class="ctx-next-detail">${next.time} · ${vc.short}</div>
+          <div class="ctx-next-detail">${next.time} · ${vc.short}${sala(next.venue)?' \u00b7 '+sala(next.venue):''}</div>
         </div>
       </div>
       ${consensusHtml}${delayHtml}${warnHtml}
@@ -812,7 +812,7 @@ export function renderContextualHeader(state, consensus){
           <div class="ctx-suggest-badge">${gapSuggestion.time}</div>
           <div class="ctx-suggest-info">
             <div class="ctx-suggest-title">${dt.length>26?dt.slice(0,24)+'…':dt}</div>
-            <div class="ctx-suggest-venue">${vc2.short}</div>
+            <div class="ctx-suggest-venue">${vc2.short}${sala(gapSuggestion.venue)?' \u00b7 '+sala(gapSuggestion.venue):''}</div>
           </div>
         </div>`;
     })():'';
