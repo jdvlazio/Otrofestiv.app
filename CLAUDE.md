@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `f567f2b Merge remote-tracking branch 'origin/main' into fix/aviso-ciudad`
+> Último commit: `ab19278 chore: bump tras traer main (keyArt de FICDEH)`
 
 ---
 

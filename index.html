@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202608070852">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202608070852">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202608070902">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202608070902">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -1056,6 +1056,13 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 
 /* municipio — subordinado al venue, solo ciudades distintas a la sede principal del festival */
 .venue-municipio{display:block;font-size:var(--t-xs);color:var(--white-45);margin-top:1px;letter-spacing:.02em}
+/* La ficha filtrada por ciudad (7 ago 2026). La ciudad se dice UNA vez, en el
+   banner de Funciones —mismo tratamiento de etiqueta que el resto de la banda—,
+   y desaparece de cada fila (.venue-municipio) porque ahí ya no aporta. */
+.fn-ciudad{margin-left:var(--sp-3);font-size:var(--t-xs);color:var(--white-45);letter-spacing:.06em;text-transform:uppercase}
+/* La nota de lo que quedó fuera INFORMA, no invita: sin acento, sin subrayado y
+   sin nombrar la ciudad —nombrarla reintroduce la repetición que se quiso quitar—. */
+.fn-otra-ciudad{padding:var(--sp-2) var(--sp-5) var(--sp-3);font-size:var(--t-xs);color:var(--gray2)}
 /* ── Bottom Sheet ── */
 /* El velo NO transiciona en CSS: lo conduce initVeil() por rAF (auditoría
    28 jul 2026, DESIGN.md §8.4.1 — la opacidad CSS funde el tinte pero no
@@ -3127,7 +3134,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202608070852";
+    s.src="/src/main.js?v=202608070902";
     document.body.appendChild(s);
     // Watchdog de boot (P0 18 jul): si el grafo ESM murió en el import (caché
     // HTTP mixta tras deploys en ráfaga — main.js nuevo + módulo viejo sin el

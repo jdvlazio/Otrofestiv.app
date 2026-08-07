@@ -447,3 +447,52 @@ test('T54 — el aviso dice la ciudad solo cuando la obra recorre varias', async
   expect(una, 'aviso parcial presente').toMatch(/lun 17/);
   expect(una, 'con una sola ciudad, nombrarla es ruido').not.toContain('Bogotá');
 });
+
+// ── T55 — la ficha hereda el contexto de ciudad ──────────────────────────────
+// Con Medellín elegido, «One in a million» mostraba sus 2 funciones y un aviso de
+// boletería que era de Bogotá: información de una ciudad a la que no vas y encima
+// engañosa, porque en Medellín esa función es gratis.
+// La excepción NO es negociable: una función que ya está en tu plan se muestra
+// siempre, aunque sea de otra ciudad — si no, la app te ofrecería «Agregar» algo
+// que ya tenés. Es la doctrina de #504: la ciudad filtra lo que descubrís, nunca
+// lo que ya elegiste.
+test('T55 — la ficha filtra por ciudad, pero nunca esconde lo que ya elegiste', async ({ page }) => {
+  await enterFestival(page, 'ficdeh2026', '2026-08-12T09:00:00-05:00');
+  await page.waitForTimeout(500);
+  await page.evaluate(() => {
+    const f = [...document.querySelectorAll('#city-sheet-list .lugar-opt.city')].find(x => /Medell/.test(x.textContent));
+    if (f) f.click();
+  });
+  await page.waitForTimeout(600);
+
+  const ficha = async () => {
+    await page.evaluate(() => { try { closePelSheet(); } catch (e) {} });
+    await page.waitForTimeout(400);
+    await page.evaluate(() => openPelSheet('One in a million'));
+    await page.waitForTimeout(900);
+    return page.evaluate(() => ({
+      funciones: document.querySelectorAll('#pel-sheet .pel-sheet-screening').length,
+      ciudadBanner: document.querySelector('#pel-sheet .fn-ciudad')?.textContent || '',
+      ciudadEnFilas: document.querySelectorAll('#pel-sheet .venue-municipio').length,
+      nota: document.querySelector('#pel-sheet .fn-otra-ciudad')?.textContent || '',
+      avisos: !!document.querySelector('#pel-sheet .avisos-body'),
+    }));
+  };
+
+  const a = await ficha();
+  expect(a.funciones, 'solo la función de Medellín').toBe(1);
+  expect(a.ciudadBanner).toBe('Medellín');
+  expect(a.ciudadEnFilas, 'la ciudad se dice UNA vez, en el banner').toBe(0);
+  expect(a.nota).toMatch(/otra ciudad/);
+  expect(a.avisos, 'en Medellín es gratis: la banda AVISOS no debe quedar vacía').toBe(false);
+
+  // la función de Bogotá entra al plan → deja de ser "descubrimiento"
+  await page.evaluate(() => {
+    const b = FILMS.find(f => f.title === 'One in a million' && /Cinemateca/.test(f.venue || ''));
+    state.set('savedAgenda', { schedule: [{ _title: b.title, title: b.title, day: b.day,
+      time: b.time, venue: b.venue, duration: b.duration, day_order: b.day_order }] });
+  });
+  const b = await ficha();
+  expect(b.funciones, 'lo que ya elegiste se muestra aunque sea de otra ciudad').toBe(2);
+  expect(b.nota, 'ya no queda nada fuera').toBe('');
+});

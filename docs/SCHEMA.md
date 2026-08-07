@@ -106,6 +106,18 @@ ambas automáticas (sin flags ni cambios de pipeline):
   **nunca lo que ya elegiste** — Mi Plan muestra tu plan completo aunque tenga
   funciones de varias ciudades. Un plan itinerante (Bogotá el 13, Medellín el 17)
   es legítimo y ya funciona: `screensConflict` corta por día antes que nada.
+- **La FICHA hereda el contexto** (7 ago 2026): con una ciudad elegida, la ficha
+  muestra solo sus funciones, la nombra **una vez** en el banner de Funciones (y
+  la quita de cada fila, donde ya no aporta) y avisa lo que quedó fuera con una
+  nota sobria —«+1 función en otra ciudad»— que no nombra la ciudad ni ofrece
+  acción: cambiar de ciudad es del filtro de Lugar, no de la ficha.
+  Los AVISOS se recalculan sobre lo que se ve, así que la banda **desaparece**
+  cuando se queda sin filas: «One in a million» es gratis en Medellín y con
+  boleta en Bogotá, y con Medellín elegido no hay nada que advertir. Antes esa
+  ficha mostraba un «CON BOLETA» que era de otra ciudad — engañoso, no solo ruido.
+  **La excepción no es negociable:** una función que ya está en tu plan se muestra
+  siempre, aunque sea de otra ciudad. Sin ella la app te ofrecería «Agregar» algo
+  que ya tenés. Congelado por T55.
 - **La ciudad se ve en cada card** del modo por días (`venueCity`, dueño único —
   devuelve '' si coincide con la del festival, para no repetirla en los de una
   sola ciudad). Sin esto, en FICDEH había que abrir la ficha para saber si una

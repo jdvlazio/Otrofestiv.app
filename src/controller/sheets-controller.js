@@ -8,7 +8,7 @@
 
 import { FESTIVAL_CONFIG, MAX_REMEMBERED_SLOTS, TMDB_IMG, _DEFAULT_FEST_ID } from '../config.js';
 import { DAY_ABBR, DAY_NUM, ICONS, _secLabel, _sectionColor, escXML, isFullDayBlocked, makeProgramPoster, parseProgramTitle, renderRatingStarsHTML } from '../view/components.js';
-import { _getItemPoster, _mkCortoItemHtml, _posterStyle, dayLabel, emptyState, durFmt, flagFmt, getCortoItemPoster, getFilmPoster, getFilmPosterUntitled, getPosterSrc, itemPosterParts, posterAmbient, posterParts, sala, starsText, vcfg, venueCity, ticketBadgeTarget } from '../view/helpers.js';
+import { _getItemPoster, _mkCortoItemHtml, _posterStyle, dayLabel, emptyState, durFmt, flagFmt, getCortoItemPoster, getFilmPoster, getFilmPosterUntitled, getPosterSrc, itemPosterParts, posterAmbient, posterParts, sala, starsText, vcfg, venueCity, venueMatches, isCitySel, ticketBadgeTarget } from '../view/helpers.js';
 import { closeAvSheet, closePVRating, closePrioLimit } from '../view/sheets.js';
 import { showConflictModal, showToast } from '../view/feedback.js';
 import { renderAgenda, renderAvBlocks, renderDiaryHTML } from '../view/agenda.js';
@@ -120,12 +120,13 @@ let _cortoParentHtml=null;
 // `pairs` = [{s, owner}] — `owner` es el film que manda sobre el Plan. Para un corto
 // es su PROGRAMA: agregar un corto agrega el programa completo (regla establecida) y
 // addSuggestion solo entiende títulos que existen en FILMS.
-function _screeningRows(pairs){
+function _screeningRows(pairs, opts){
   return pairs.map(({s,owner})=>{
     const dayAbb=dayLabel(s.day)||s.day;
     const vc=vcfg(s.venue),sl=sala(s.venue);
     const _festCity=(FESTIVAL_CONFIG[_activeFestId]||{}).city||'';
-    const _city=_festCity&&vc.city&&vc.city!==_festCity?vc.city:'';
+    // sinCiudad: la ficha ya filtró por ciudad y la nombra arriba — acá sobra.
+    const _city=(opts&&opts.sinCiudad)?'':(_festCity&&vc.city&&vc.city!==_festCity?vc.city:'');
     const isPast=screeningPassed(s)&&!festivalEnded();
     // Mitad B (pin-funcion): control "Añadir esta función al Plan" por fila.
     // Recurrentes: sin control (informativo). Si esta función ya está en el
@@ -228,8 +229,21 @@ export function openPelSheet(title){
   const scheduled=screenings.filter(s=>s.day&&s.time&&s.venue);
   const future=scheduled.filter(s=>!screeningPassed(s)).sort((a,b)=>a.day_order-b.day_order||toMin(a.time)-toMin(b.time));
   const past=scheduled.filter(s=>screeningPassed(s));
-  const allScr=[...future,...past];
-  const rows=_screeningRows(allScr.map(s=>({s,owner:f})));
+  // ── La ficha HEREDA el contexto de ciudad (7 ago 2026) ────────────────────
+  // Con Medellín elegido, «One in a million» mostraba sus 2 funciones y un aviso
+  // de boletería que era de Bogotá: información sobre una ciudad a la que no vas,
+  // y encima engañosa —en Medellín esa función es gratis—.
+  // Doctrina (#504): la ciudad filtra lo que DESCUBRÍS, nunca lo que YA ELEGISTE.
+  // Por eso una función que está en tu plan se muestra SIEMPRE, aunque sea de otra
+  // ciudad: sin esa excepción la app te ofrecería «Agregar» algo que ya tenés.
+  const _ciudadSel=isCitySel(activeVenue)?activeVenue.slice(5):'';
+  const _yaElegida=sc=>savedAgenda&&savedAgenda.schedule.some(e=>e._title===f.title&&e.day===sc.day&&e.time===sc.time);
+  const _todas=[...future,...past];
+  const allScr=_ciudadSel?_todas.filter(sc=>venueMatches(sc.venue,activeVenue)||_yaElegida(sc)):_todas;
+  const _ocultas=_todas.length-allScr.length;
+  // La ciudad se dice UNA vez, en el banner de Funciones (Juan, 7 ago): repetirla
+  // bajo cada sede cuando ya filtraste por ella es decir dos veces lo mismo.
+  const rows=_screeningRows(allScr.map(s=>({s,owner:f})), {sinCiudad:!!_ciudadSel});
   // Lista de cortos si es programa
   let cortosHtml='';
   if(f.is_cortos&&f.film_list?.length){
@@ -271,8 +285,8 @@ export function openPelSheet(title){
         ${(!f.is_cortos&&!f.is_programa&&f.type!=='event')?lbLink(f.title,f):''}
       </div>
     </div>
-        ${allScr.length>0?`<div class="sec-hdr sm">${ICONS.clock} <span>${f.type==='event'?t('label_horario'):allScr.length===1?t('label_funcion'):t('label_funciones_pl')}</span>${totalFn>1&&f.type!=='event'?`<span class="count-badge cb-neutral">${totalFn}</span>`:''}</div>`:''}
-    ${allScr.length>0?`<div class="pel-sheet-screenings">${rows}</div>`:''}
+        ${allScr.length>0?`<div class="sec-hdr sm">${ICONS.clock} <span>${f.type==='event'?t('label_horario'):allScr.length===1?t('label_funcion'):t('label_funciones_pl')}</span>${totalFn>1&&f.type!=='event'?`<span class="count-badge cb-neutral">${allScr.length}</span>`:''}${_ciudadSel?`<span class="fn-ciudad">${_ciudadSel}</span>`:''}</div>`:''}
+    ${allScr.length>0?`<div class="pel-sheet-screenings">${rows}${_ocultas>0?`<div class="fn-otra-ciudad">${t(_ocultas===1?'fn_otra_ciudad':'fn_otras_ciudades',{n:_ocultas})}</div>`:''}</div>`:''}
     ${/* ORDEN: FUNCIÓN (solo día·hora·sede) → AVISOS → SINOPSIS. Todos los avisos
         viven en su banda, incluidos cancelada y reprogramada, que van PRIMERAS y
         en rojo: lo que invalida se lee antes de lo que matiza (DESIGN 8.4.6). La
