@@ -255,11 +255,15 @@ function validateFestival(fname, data) {
     }
     if (!film.section) warnings.push(`"${title}": campo 'section' vacío`);
 
-    // ── RULE 5a: duplicado real (mismo título+día+hora) ──────────────────
+    // ── RULE 5a: duplicado real (mismo título+día+hora+SEDE) ─────────────
+    // La sede entra en la clave: en un festival multiciudad la misma obra se
+    // proyecta a la misma hora en ciudades distintas y eso NO es duplicado
+    // (FICDEH 2026: 14 casos legítimos en 11 ciudades). Duplicado real es
+    // repetir título+día+hora en LA MISMA sede, que sí es imposible.
     if (film.title) {
       _seenTitles.add(film.title);
-      const _slot = `${film.title}|${film.day||''}|${film.time||''}`;
-      if (_seenSlots.has(_slot)) errors.push(`GATE BLOQUEANTE: funcion duplicada (mismo título+día+hora) — '${film.title.slice(0,55)}'`);
+      const _slot = `${film.title}|${film.day||''}|${film.time||''}|${film.venue||''}`;
+      if (_seenSlots.has(_slot)) errors.push(`GATE BLOQUEANTE: funcion duplicada (mismo título+día+hora+sede) — '${film.title.slice(0,55)}'`);
       else _seenSlots.add(_slot);
     }
     // ── RULE 5b: titulo en ALLCAPS ───────────────────────────────────────

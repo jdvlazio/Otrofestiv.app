@@ -1,0 +1,1703 @@
+{
+ "Cinemateca de Bogotá - Bogotá": {
+  "estado": "DISCREPA",
+  "funciones": 41,
+  "usado": [
+   4.6088242,
+   -74.0706886
+  ],
+  "prec": "poi",
+  "dist_m": 3742,
+  "por_nombre": [
+   4.6088242,
+   -74.0706886
+  ],
+  "por_direccion": [
+   4.5773862,
+   -74.082727
+  ],
+  "direccion": "Cra. 3 # 19-10"
+ },
+ "Centro Cultural Panóptico de Ibagué - Ibagué": {
+  "estado": "OK",
+  "funciones": 37,
+  "usado": [
+   4.4483425,
+   -75.2400253
+  ],
+  "prec": "poi",
+  "dist_m": 265,
+  "por_nombre": [
+   4.4483425,
+   -75.2400253
+  ],
+  "por_direccion": [
+   4.4502653,
+   -75.2386197
+  ],
+  "direccion": "Calle 11 # 9-73ª, barrio Belén"
+ },
+ "Colombo Americano - Medellín": {
+  "estado": "OK",
+  "funciones": 15,
+  "usado": [
+   6.2497341,
+   -75.5627237
+  ],
+  "prec": "poi",
+  "dist_m": 33,
+  "por_nombre": [
+   6.2497341,
+   -75.5627237
+  ],
+  "por_direccion": [
+   6.2496242,
+   -75.5624493
+  ],
+  "direccion": "Cra. 45 #53 - 24. Centro"
+ },
+ "Fundación Alianza Tecnologica y Desarrollo Educativo - ALITIC - Barranquilla": {
+  "estado": "UNA SOLA",
+  "funciones": 12,
+  "usado": [
+   10.9946547,
+   -74.7936587
+  ],
+  "prec": "calle",
+  "dist_m": null,
+  "por_nombre": null,
+  "por_direccion": [
+   10.9946547,
+   -74.7936587
+  ],
+  "direccion": "Cra. 54 # 64-73"
+ },
+ "Cinemateca de Tunja - Tunja": {
+  "estado": "UNA SOLA",
+  "funciones": 11,
+  "usado": [
+   5.5327848,
+   -73.3709906
+  ],
+  "prec": "calle",
+  "dist_m": null,
+  "por_nombre": null,
+  "por_direccion": [
+   5.5327848,
+   -73.3709906
+  ],
+  "direccion": "Calle 17 # 15-36"
+ },
+ "Universidad de Ibagué - Ibagué": {
+  "estado": "DISCREPA",
+  "funciones": 10,
+  "usado": [
+   4.449702,
+   -75.1991135
+  ],
+  "prec": "poi",
+  "dist_m": 1092,
+  "por_nombre": [
+   4.449702,
+   -75.1991135
+  ],
+  "por_direccion": [
+   4.4586302,
+   -75.2032142
+  ],
+  "direccion": "Carrera 22 - Calle 67, barrio Ambalá"
+ },
+ "Cinemateca Fontanar del Río - Bogotá": {
+  "estado": "SIN FUENTE",
+  "funciones": 9,
+  "usado": [
+   4.7551603,
+   -74.1133774
+  ],
+  "prec": "calle",
+  "dist_m": null,
+  "por_nombre": null,
+  "por_direccion": null,
+  "direccion": "Calle 146 # 138A-99"
+ },
+ "Cinemateca del Museo La Tertulia - Cali": {
+  "estado": "manual",
+  "funciones": 8
+ },
+ "Cinemateca del Caribe - Barranquilla": {
+  "estado": "UNA SOLA",
+  "funciones": 8,
+  "usado": [
+   11.005653,
+   -74.8024986
+  ],
+  "prec": "calle",
+  "dist_m": null,
+  "por_nombre": null,
+  "por_direccion": [
+   11.005653,
+   -74.8024986
+  ],
+  "direccion": "Calle 76 # 57-61"
+ },
+ "Casa Cromo Casa Cultural - Armenia": {
+  "estado": "UNA SOLA",
+  "funciones": 8,
+  "usado": [
+   4.559016,
+   -75.6542441
+  ],
+  "prec": "calle",
+  "dist_m": null,
+  "por_nombre": null,
+  "por_direccion": [
+   4.559016,
+   -75.6542441
+  ],
+  "direccion": "Calle 22 Norte # 12-39"
+ },
+ "Centro de Formación de la Cooperación Española - Cartagena": {
+  "estado": "DISCREPA",
+  "funciones": 7,
+  "usado": [
+   10.4245407,
+   -75.5522001
+  ],
+  "prec": "poi",
+  "dist_m": 8239,
+  "por_nombre": [
+   10.4245407,
+   -75.5522001
+  ],
+  "por_direccion": [
+   10.4071605,
+   -75.4789632
+  ],
+  "direccion": "Calle 36 # 2-74, El Centro"
+ },
+ "Biblioteca Pública Deptal Arnoldo de los Santos Palacios Mosquera - Quibdó": {
+  "estado": "DISCREPA",
+  "funciones": 7,
+  "usado": [
+   5.6903043,
+   -76.6449533
+  ],
+  "prec": "poi",
+  "dist_m": 1603,
+  "por_nombre": [
+   5.6903043,
+   -76.6449533
+  ],
+  "por_direccion": [
+   5.6939491,
+   -76.6589698
+  ],
+  "direccion": "Calle 30, Avenida Aeropuerto, Barrio Los Ángeles (frente al Aeropuerto El Caraño)"
+ },
+ "Colombo Americano de Pereira - Pereira": {
+  "estado": "DISCREPA",
+  "funciones": 7,
+  "usado": [
+   4.8090918,
+   -75.6814146
+  ],
+  "prec": "poi",
+  "dist_m": 1976,
+  "por_nombre": [
+   4.8090918,
+   -75.6814146
+  ],
+  "por_direccion": [
+   4.8161577,
+   -75.6977757
+  ],
+  "direccion": "Carrera 6 Nº 23-58"
+ },
+ "Casa de las Luciérnagas - Bogotá": {
+  "estado": "UNA SOLA",
+  "funciones": 6,
+  "usado": [
+   4.6067352,
+   -74.2038167
+  ],
+  "prec": "calle",
+  "dist_m": null,
+  "por_nombre": null,
+  "por_direccion": [
+   4.6067352,
+   -74.2038167
+  ],
+  "direccion": "Diagonal 73H SUR # 78-38"
+ },
+ "Parque Arqueológico de Usme - Bogotá": {
+  "estado": "DISCREPA",
+  "funciones": 6,
+  "usado": [
+   4.4774665,
+   -74.1186759
+  ],
+  "prec": "poi",
+  "dist_m": 765,
+  "por_nombre": [
+   4.4774665,
+   -74.1186759
+  ],
+  "por_direccion": [
+   4.4740997,
+   -74.1246938
+  ],
+  "direccion": "Calle 136B Sur # 3A-48"
+ },
+ "Museo Casa de la Memoria - Medellín": {
+  "estado": "UNA SOLA",
+  "funciones": 6,
+  "usado": [
+   6.2459198,
+   -75.5565561
+  ],
+  "prec": "poi",
+  "dist_m": null,
+  "por_nombre": [
+   6.2459198,
+   -75.5565561
+  ],
+  "por_direccion": null,
+  "direccion": "Cl. 51 #36-66. Parque Bicentenario"
+ },
+ "Universidad del Quindío - Armenia": {
+  "estado": "UNA SOLA",
+  "funciones": 6,
+  "usado": [
+   4.5538677,
+   -75.6610022
+  ],
+  "prec": "poi",
+  "dist_m": null,
+  "por_nombre": [
+   4.5538677,
+   -75.6610022
+  ],
+  "por_direccion": null,
+  "direccion": "Cra. 15 con calle 12 Norte"
+ },
+ "Biblioteca Pública CEFE Fontanar Del Río - Bogotá": {
+  "estado": "alias",
+  "funciones": 5
+ },
+ "Biblioteca Pública Julio Mario Santodomingo - Bogotá": {
+  "estado": "OK",
+  "funciones": 5,
+  "usado": [
+   4.7566147,
+   -74.0626286
+  ],
+  "prec": "poi",
+  "dist_m": 467,
+  "por_nombre": [
+   4.7566147,
+   -74.0626286
+  ],
+  "por_direccion": [
+   4.7552547,
+   -74.0586418
+  ],
+  "direccion": "Calle 170 # 67-51"
+ },
+ "Centro Cultural Banco de la República - Medellín": {
+  "estado": "OK",
+  "funciones": 5,
+  "usado": [
+   6.249052,
+   -75.5684408
+  ],
+  "prec": "poi",
+  "dist_m": 555,
+  "por_nombre": [
+   6.249052,
+   -75.5684408
+  ],
+  "por_direccion": [
+   6.2518521,
+   -75.5725946
+  ],
+  "direccion": "Cl. 50 #50-21 Piso 3"
+ },
+ "Centro Cultural del Socorro - Cartagena": {
+  "estado": "OK",
+  "funciones": 5,
+  "usado": [
+   10.3842515,
+   -75.4805496
+  ],
+  "prec": "poi",
+  "dist_m": 559,
+  "por_nombre": [
+   10.3842515,
+   -75.4805496
+  ],
+  "por_direccion": [
+   10.3892267,
+   -75.481251
+  ],
+  "direccion": "Cra. 71 # 26-210, sobre la Avenida Principal del barrio El Socorro"
+ },
+ "Museo Intangible del Confinamiento. Casa de la Cultura Alfonso López - Pereira": {
+  "estado": "UNA SOLA",
+  "funciones": 5,
+  "usado": [
+   4.8111739,
+   -75.6769712
+  ],
+  "prec": "calle",
+  "dist_m": null,
+  "por_nombre": null,
+  "por_direccion": [
+   4.8111739,
+   -75.6769712
+  ],
+  "direccion": "Carrera 7b # 2e-05, barrio Alfonso López"
+ },
+ "Biblioteca Pública La Victoria - Bogotá": {
+  "estado": "UNA SOLA",
+  "funciones": 4,
+  "usado": [
+   4.5537936,
+   -74.0947173
+  ],
+  "prec": "poi",
+  "dist_m": null,
+  "por_nombre": [
+   4.5537936,
+   -74.0947173
+  ],
+  "por_direccion": null,
+  "direccion": "Calle 37 BIS B Sur # 2B"
+ },
+ "Biblioteca Pública Usaquén Servitá - Bogotá": {
+  "estado": "manual",
+  "funciones": 4
+ },
+ "CEFE Cometas - Bogotá": {
+  "estado": "DISCREPA",
+  "funciones": 4,
+  "usado": [
+   4.7144987,
+   -74.0851038
+  ],
+  "prec": "poi",
+  "dist_m": 2770,
+  "por_nombre": [
+   4.7144987,
+   -74.0851038
+  ],
+  "por_direccion": [
+   4.7293567,
+   -74.1051666
+  ],
+  "direccion": "Calle 127 A # 87"
+ },
+ "Cinema Local - Cali": {
+  "estado": "UNA SOLA",
+  "funciones": 4,
+  "usado": [
+   3.373295,
+   -76.5456344
+  ],
+  "prec": "calle",
+  "dist_m": null,
+  "por_nombre": null,
+  "por_direccion": [
+   3.373295,
+   -76.5456344
+  ],
+  "direccion": "Calle 4B # 38A-66"
+ },
+ "Escuela de Administración y Mercadotecnia del Quindío (EAM) - Armenia": {
+  "estado": "DISCREPA",
+  "funciones": 4,
+  "usado": [
+   4.5416295,
+   -75.663319
+  ],
+  "prec": "poi",
+  "dist_m": 1109,
+  "por_nombre": [
+   4.5416295,
+   -75.663319
+  ],
+  "por_direccion": [
+   4.5349519,
+   -75.6707468
+  ],
+  "direccion": "Cra. 14 # 3-11 (Avenida Bolívar)"
+ },
+ "Librería Bagatá - Quibdó": {
+  "estado": "UNA SOLA",
+  "funciones": 4,
+  "usado": [
+   5.6912842,
+   -76.6574025
+  ],
+  "prec": "calle",
+  "dist_m": null,
+  "por_nombre": null,
+  "por_direccion": [
+   5.6912842,
+   -76.6574025
+  ],
+  "direccion": "Cra. 7 #27-3 (frente al Colegio Carrasquilla)"
+ },
+ "Auditorio Centro Cultural Universitario Rogelio Salmona - Manizales": {
+  "estado": "UNA SOLA",
+  "funciones": 4,
+  "usado": [
+   5.0545465,
+   -75.4916559
+  ],
+  "prec": "poi",
+  "dist_m": null,
+  "por_nombre": [
+   5.0545465,
+   -75.4916559
+  ],
+  "por_direccion": null,
+  "direccion": "Cra. 28D entre Cl. 66 #y 67"
+ },
+ "Auditorio Tulio Gómez Estrada, Facultad de Ciencias Jurídicas y Sociales - Manizales": {
+  "estado": "UNA SOLA",
+  "funciones": 4,
+  "usado": [
+   5.0637592,
+   -75.4959969
+  ],
+  "prec": "calle",
+  "dist_m": null,
+  "por_nombre": null,
+  "por_direccion": [
+   5.0637592,
+   -75.4959969
+  ],
+  "direccion": "Av. Santander # 57-58"
+ },
+ "Cinema Local - Bogotá": {
+  "estado": "DISCREPA",
+  "funciones": 3,
+  "usado": [
+   4.6627888,
+   -74.0631807
+  ],
+  "prec": "poi",
+  "dist_m": 6103,
+  "por_nombre": [
+   4.6627888,
+   -74.0631807
+  ],
+  "por_direccion": [
+   4.6980467,
+   -74.1053842
+  ],
+  "direccion": "Calle 74 # 20 B -19"
+ },
+ "Cinemateca - Bogotá": {
+  "estado": "UNA SOLA",
+  "funciones": 3,
+  "usado": [
+   4.6032463,
+   -74.06758
+  ],
+  "prec": "poi",
+  "dist_m": null,
+  "por_nombre": [
+   4.6032463,
+   -74.06758
+  ],
+  "por_direccion": null,
+  "direccion": "Cinemateca del Museo La Tertulia - Cra. 1 # 5-105, Oeste"
+ },
+ "Casa B - Bogotá": {
+  "estado": "UNA SOLA",
+  "funciones": 3,
+  "usado": [
+   4.5533234,
+   -74.100257
+  ],
+  "prec": "calle",
+  "dist_m": null,
+  "por_nombre": null,
+  "por_direccion": [
+   4.5533234,
+   -74.100257
+  ],
+  "direccion": "Cra. 2 BIS # 6D-30"
+ },
+ "Ágora Casa Cultural (La Ceja) - Medellín": {
+  "estado": "UNA SOLA",
+  "funciones": 3,
+  "usado": [
+   6.2217344,
+   -75.5822126
+  ],
+  "prec": "calle",
+  "dist_m": null,
+  "por_nombre": null,
+  "por_direccion": [
+   6.2217344,
+   -75.5822126
+  ],
+  "direccion": "Cl. 19 # 23-15"
+ },
+ "COMFAMA - Capilla del Claustro - Medellín": {
+  "estado": "OK",
+  "funciones": 3,
+  "usado": [
+   6.2457531,
+   -75.5637191
+  ],
+  "prec": "poi",
+  "dist_m": 68,
+  "por_nombre": [
+   6.2457531,
+   -75.5637191
+  ],
+  "por_direccion": [
+   6.2458085,
+   -75.5643297
+  ],
+  "direccion": "Carrera 44 # 48 - 18"
+ },
+ "Bulevar del Oriente - Cali": {
+  "estado": "UNA SOLA",
+  "funciones": 3,
+  "usado": [
+   3.4265621,
+   -76.4761659
+  ],
+  "prec": "calle",
+  "dist_m": null,
+  "por_nombre": null,
+  "por_direccion": [
+   3.4265621,
+   -76.4761659
+  ],
+  "direccion": "Comuna 14, entre la transversal 103 con calle 96 y calle 73 con transversal 73, entre los barrios Alfonso Bonilla Aragón y Marroquín 2"
+ },
+ "Maloka Cultural - Barranquilla": {
+  "estado": "UNA SOLA",
+  "funciones": 3,
+  "usado": [
+   10.9954675,
+   -74.8076454
+  ],
+  "prec": "calle",
+  "dist_m": null,
+  "por_nombre": null,
+  "por_direccion": [
+   10.9954675,
+   -74.8076454
+  ],
+  "direccion": "Cra. 46 # 79-18"
+ },
+ "Casa Aparte - Armenia": {
+  "estado": "UNA SOLA",
+  "funciones": 3,
+  "usado": [
+   4.5453739,
+   -75.6744517
+  ],
+  "prec": "calle",
+  "dist_m": null,
+  "por_nombre": null,
+  "por_direccion": [
+   4.5453739,
+   -75.6744517
+  ],
+  "direccion": "Cra. 23d # 11-25"
+ },
+ "Fundación Malabareando las Calles - Pereira": {
+  "estado": "UNA SOLA",
+  "funciones": 3,
+  "usado": [
+   4.8135729,
+   -75.6922049
+  ],
+  "prec": "calle",
+  "dist_m": null,
+  "por_nombre": null,
+  "por_direccion": [
+   4.8135729,
+   -75.6922049
+  ],
+  "direccion": "Carrera 8 #15 - 09"
+ },
+ "Sala 2 - Cinemateca de Bogotá - Bogotá": {
+  "estado": "alias",
+  "funciones": 2
+ },
+ "Auditorio C202 - UNIMINUTO - Bogotá": {
+  "estado": "alias",
+  "funciones": 2
+ },
+ "Casa LGBTIQ Sebastián Romero - Bogotá": {
+  "estado": "UNA SOLA",
+  "funciones": 2,
+  "usado": [
+   4.6538268,
+   -74.0999662
+  ],
+  "prec": "calle",
+  "dist_m": null,
+  "por_nombre": null,
+  "por_direccion": [
+   4.6538268,
+   -74.0999662
+  ],
+  "direccion": "Calle 44 # 14-60"
+ },
+ "Fundación Gilberto Alzate Avendaño - Biblioteca - Bogotá": {
+  "estado": "OK",
+  "funciones": 2,
+  "usado": [
+   4.5953608,
+   -74.0724134
+  ],
+  "prec": "poi",
+  "dist_m": null,
+  "por_nombre": [
+   4.5953608,
+   -74.0724134
+  ],
+  "por_direccion": [
+   4.5953608,
+   -74.0724134
+  ],
+  "direccion": "Calle 10 # 3-16"
+ },
+ "Laboratorio 1 y 2 - Bogotá": {
+  "estado": "alias",
+  "funciones": 2
+ },
+ "Laboratorio 1 y 2 - Cinemateca de Bogotá - Bogotá": {
+  "estado": "alias",
+  "funciones": 2
+ },
+ "COMFAMA - Cineclub Bello - Medellín": {
+  "estado": "UNA SOLA",
+  "funciones": 2,
+  "usado": [
+   6.2922203,
+   -75.5558029
+  ],
+  "prec": "calle",
+  "dist_m": null,
+  "por_nombre": null,
+  "por_direccion": [
+   6.2922203,
+   -75.5558029
+  ],
+  "direccion": "Cra. 49 #46-57"
+ },
+ "La Pascasia - Medellín": {
+  "estado": "UNA SOLA",
+  "funciones": 2,
+  "usado": [
+   6.2449294,
+   -75.5648967
+  ],
+  "prec": "calle",
+  "dist_m": null,
+  "por_nombre": null,
+  "por_direccion": [
+   6.2449294,
+   -75.5648967
+  ],
+  "direccion": "Cl. 47 #43 88. Centro"
+ },
+ "Jardín Botánico de Medellín - Medellín": {
+  "estado": "UNA SOLA",
+  "funciones": 2,
+  "usado": [
+   6.2705481,
+   -75.5635288
+  ],
+  "prec": "poi",
+  "dist_m": null,
+  "por_nombre": [
+   6.2705481,
+   -75.5635288
+  ],
+  "por_direccion": null,
+  "direccion": "Cl. 73 #51D-14"
+ },
+ "Cineprox - Medellín": {
+  "estado": "SIN FUENTE",
+  "funciones": 2,
+  "usado": [
+   6.2140234,
+   -75.5949218
+  ],
+  "prec": "calle",
+  "dist_m": null,
+  "por_nombre": null,
+  "por_direccion": null,
+  "direccion": "Dg. 75B #2A-120Rotonda Comercial Las Américas"
+ },
+ "CasArte3962 - Barranquilla": {
+  "estado": "UNA SOLA",
+  "funciones": 2,
+  "usado": [
+   10.9900266,
+   -74.8098764
+  ],
+  "prec": "calle",
+  "dist_m": null,
+  "por_nombre": null,
+  "por_direccion": [
+   10.9900266,
+   -74.8098764
+  ],
+  "direccion": "Calle 73B # 39-62"
+ },
+ "Book Times - Barranquilla": {
+  "estado": "UNA SOLA",
+  "funciones": 2,
+  "usado": [
+   10.9790026,
+   -74.7960474
+  ],
+  "prec": "calle",
+  "dist_m": null,
+  "por_nombre": null,
+  "por_direccion": [
+   10.9790026,
+   -74.7960474
+  ],
+  "direccion": "Calle 54 # 53-76"
+ },
+ "El Teatrino - Cartagena": {
+  "estado": "manual",
+  "funciones": 2
+ },
+ "Alianza Francesa - Cartagena": {
+  "estado": "UNA SOLA",
+  "funciones": 2,
+  "usado": [
+   10.4264842,
+   -75.5482642
+  ],
+  "prec": "calle",
+  "dist_m": null,
+  "por_nombre": null,
+  "por_direccion": [
+   10.4264842,
+   -75.5482642
+  ],
+  "direccion": "Parque Fernández de Madrid, Cra. 8 # 37-34, San Diego"
+ },
+ "Cineland - Quibdó": {
+  "estado": "manual",
+  "funciones": 2
+ },
+ "Cine Club La Florida - Pereira": {
+  "estado": "UNA SOLA",
+  "funciones": 2,
+  "usado": [
+   4.7592804,
+   -75.6116548
+  ],
+  "prec": "poi",
+  "dist_m": null,
+  "por_nombre": [
+   4.7592804,
+   -75.6116548
+  ],
+  "por_direccion": null,
+  "direccion": "Corregimiento La Florida"
+ },
+ "Cine Club Alef - Casa Hoja - Pereira": {
+  "estado": "UNA SOLA",
+  "funciones": 2,
+  "usado": [
+   4.8161526,
+   -75.6885385
+  ],
+  "prec": "calle",
+  "dist_m": null,
+  "por_nombre": null,
+  "por_direccion": [
+   4.8161526,
+   -75.6885385
+  ],
+  "direccion": "Calle 12 bis # 16-18, Av. Circunvalar"
+ },
+ "UNIVERSIDAD TECNOLÓGICA DE PEREIRA - BLOQUE 7A / 118 - Pereira": {
+  "estado": "alias",
+  "funciones": 2
+ },
+ "Teatro Colón - Bogotá": {
+  "estado": "DISCREPA",
+  "funciones": 1,
+  "usado": [
+   4.596677,
+   -74.0744246
+  ],
+  "prec": "poi",
+  "dist_m": 11034,
+  "por_nombre": [
+   4.596677,
+   -74.0744246
+  ],
+  "por_direccion": [
+   4.6560633,
+   -74.1541833
+  ],
+  "direccion": "Calle 10 # 5-32"
+ },
+ "Biblioteca Pública Las Ferias - Bogotá": {
+  "estado": "UNA SOLA",
+  "funciones": 1,
+  "usado": [
+   4.6716157,
+   -74.0982024
+  ],
+  "prec": "calle",
+  "dist_m": null,
+  "por_nombre": null,
+  "por_direccion": [
+   4.6716157,
+   -74.0982024
+  ],
+  "direccion": "Cra. 69J # 73-29"
+ },
+ "Casa de la Juventud Iwoka - Bogotá": {
+  "estado": "UNA SOLA",
+  "funciones": 1,
+  "usado": [
+   4.6222774,
+   -74.1571759
+  ],
+  "prec": "calle",
+  "dist_m": null,
+  "por_nombre": null,
+  "por_direccion": [
+   4.6222774,
+   -74.1571759
+  ],
+  "direccion": "Cra. 78N BIS # 39-33"
+ },
+ "Teatro El Ensueño - Bogotá": {
+  "estado": "OK",
+  "funciones": 1,
+  "usado": [
+   4.5859476,
+   -74.1585387
+  ],
+  "prec": "poi",
+  "dist_m": 439,
+  "por_nombre": [
+   4.5859476,
+   -74.1585387
+  ],
+  "por_direccion": [
+   4.5875745,
+   -74.1621462
+  ],
+  "direccion": "Transversal 70D # 60-90"
+ },
+ "Universidad Minuto de Dios - Bogotá": {
+  "estado": "UNA SOLA",
+  "funciones": 1,
+  "usado": [
+   4.699716,
+   -74.09075
+  ],
+  "prec": "calle",
+  "dist_m": null,
+  "por_nombre": null,
+  "por_direccion": [
+   4.699716,
+   -74.09075
+  ],
+  "direccion": "Diagonal 81F # 72 C-1"
+ },
+ "Casa de la Juventud Antonio Nariño - Bogotá": {
+  "estado": "SIN FUENTE",
+  "funciones": 1,
+  "usado": [
+   4.5611063,
+   -74.145397
+  ],
+  "prec": "calle",
+  "dist_m": null,
+  "por_nombre": null,
+  "por_direccion": null,
+  "direccion": "Cra. 20 # 19 Sur - 26"
+ },
+ "Casa de la Juventud Ayelen - Bogotá": {
+  "estado": "UNA SOLA",
+  "funciones": 1,
+  "usado": [
+   4.5537767,
+   -74.1431784
+  ],
+  "prec": "calle",
+  "dist_m": null,
+  "por_nombre": null,
+  "por_direccion": [
+   4.5537767,
+   -74.1431784
+  ],
+  "direccion": "Calle 65A Sur # 17C-30"
+ },
+ "Casa de la Juventud Chapinero - Bogotá": {
+  "estado": "UNA SOLA",
+  "funciones": 1,
+  "usado": [
+   4.697615,
+   -74.1239484
+  ],
+  "prec": "calle",
+  "dist_m": null,
+  "por_nombre": null,
+  "por_direccion": [
+   4.697615,
+   -74.1239484
+  ],
+  "direccion": "Calle 65A # 1-40"
+ },
+ "Casa de la Juventud Diego Felipe Becerra - Bogotá": {
+  "estado": "manual",
+  "funciones": 1
+ },
+ "Casa de la Juventud José Saramago - Bogotá": {
+  "estado": "manual",
+  "funciones": 1
+ },
+ "Manzana del Cuidado Mochuelo - Bogotá": {
+  "estado": "SIN FUENTE",
+  "funciones": 1,
+  "usado": [
+   4.5589571,
+   -74.1207319
+  ],
+  "prec": "calle",
+  "dist_m": null,
+  "por_nombre": null,
+  "por_direccion": null,
+  "direccion": "Calle 91C Sur # 18H-14"
+ },
+ "Casa Cultural y Comunitaria Casa Sin Raza - Bogotá": {
+  "estado": "manual",
+  "funciones": 1
+ },
+ "Casa de la Juventud Aldea De Pensadores - Bogotá": {
+  "estado": "UNA SOLA",
+  "funciones": 1,
+  "usado": [
+   4.7170723,
+   -74.1375702
+  ],
+  "prec": "calle",
+  "dist_m": null,
+  "por_nombre": null,
+  "por_direccion": [
+   4.7170723,
+   -74.1375702
+  ],
+  "direccion": "Calle 70 # 88A-7"
+ },
+ "Casa de la Juventud Damawha - Bogotá": {
+  "estado": "UNA SOLA",
+  "funciones": 1,
+  "usado": [
+   4.5427513,
+   -74.1087731
+  ],
+  "prec": "calle",
+  "dist_m": null,
+  "por_nombre": null,
+  "por_direccion": [
+   4.5427513,
+   -74.1087731
+  ],
+  "direccion": "Cra. 1 Este # 10-48 Sur"
+ },
+ "Casa de la Juventud El Cacma - Bogotá": {
+  "estado": "DISCREPA",
+  "funciones": 1,
+  "usado": [
+   4.6223992,
+   -74.0812057
+  ],
+  "prec": "poi",
+  "dist_m": 1907,
+  "por_nombre": [
+   4.6223992,
+   -74.0812057
+  ],
+  "por_direccion": [
+   4.6096998,
+   -74.0696465
+  ],
+  "direccion": "Calle 24 # 27A-31"
+ },
+ "Centro Integral de Justicia Campo Verde - Bogotá": {
+  "estado": "DISCREPA",
+  "funciones": 1,
+  "usado": [
+   4.624968,
+   -74.2121149
+  ],
+  "prec": "poi",
+  "dist_m": 1254,
+  "por_nombre": [
+   4.624968,
+   -74.2121149
+  ],
+  "por_direccion": [
+   4.6143105,
+   -74.2084257
+  ],
+  "direccion": "Calle 85 Sur # 94-75"
+ },
+ "La Trocha - Casa de la Paz - Bogotá": {
+  "estado": "UNA SOLA",
+  "funciones": 1,
+  "usado": [
+   4.6248295,
+   -74.0677545
+  ],
+  "prec": "poi",
+  "dist_m": null,
+  "por_nombre": [
+   4.6248295,
+   -74.0677545
+  ],
+  "por_direccion": null,
+  "direccion": ""
+ },
+ "La Trocha, La Casa de la Paz - Bogotá": {
+  "estado": "DISCREPA",
+  "funciones": 1,
+  "usado": [
+   4.6248295,
+   -74.0677545
+  ],
+  "prec": "poi",
+  "dist_m": 4577,
+  "por_nombre": [
+   4.6248295,
+   -74.0677545
+  ],
+  "por_direccion": [
+   4.6644017,
+   -74.0563737
+  ],
+  "direccion": "Cra. 13 # 36-37"
+ },
+ "Biblioteca Pública Francisco José de Caldas - Bogotá": {
+  "estado": "UNA SOLA",
+  "funciones": 1,
+  "usado": [
+   4.7411974,
+   -74.0847011
+  ],
+  "prec": "poi",
+  "dist_m": null,
+  "por_nombre": [
+   4.7411974,
+   -74.0847011
+  ],
+  "por_direccion": null,
+  "direccion": "Cra. 92 # 146 C - 24"
+ },
+ "Biblioteca Pública Gabriel García Márquez - Bogotá": {
+  "estado": "DISCREPA",
+  "funciones": 1,
+  "usado": [
+   4.6353335,
+   -74.0832661
+  ],
+  "prec": "poi",
+  "dist_m": 8723,
+  "por_nombre": [
+   4.6353335,
+   -74.0832661
+  ],
+  "por_direccion": [
+   4.5722396,
+   -74.1300288
+  ],
+  "direccion": "Calle 48B SUR # 21-13"
+ },
+ "Biblioteca Pública La Marichuela - Bogotá": {
+  "estado": "UNA SOLA",
+  "funciones": 1,
+  "usado": [
+   4.5121758,
+   -74.1177298
+  ],
+  "prec": "poi",
+  "dist_m": null,
+  "por_nombre": [
+   4.5121758,
+   -74.1177298
+  ],
+  "por_direccion": null,
+  "direccion": "Diagonal 76B Sur # 1C-40"
+ },
+ "Biblioteca Pública Manuel Zapata Olivella - Bogotá": {
+  "estado": "UNA SOLA",
+  "funciones": 1,
+  "usado": [
+   4.6430663,
+   -74.1547667
+  ],
+  "prec": "poi",
+  "dist_m": null,
+  "por_nombre": [
+   4.6430663,
+   -74.1547667
+  ],
+  "por_direccion": null,
+  "direccion": "Av. Ciudad de Cali # 6C-09"
+ },
+ "Casa de la Juventud El Frailejón - Bogotá": {
+  "estado": "manual",
+  "funciones": 1
+ },
+ "Casa de la Juventud Nacho Sánchez - Bogotá": {
+  "estado": "UNA SOLA",
+  "funciones": 1,
+  "usado": [
+   4.5401056,
+   -74.0980355
+  ],
+  "prec": "calle",
+  "dist_m": null,
+  "por_nombre": null,
+  "por_direccion": [
+   4.5401056,
+   -74.0980355
+  ],
+  "direccion": "Cra. 3 Este # 9-58"
+ },
+ "Casa de la Juventud Usaquén - Bogotá": {
+  "estado": "UNA SOLA",
+  "funciones": 1,
+  "usado": [
+   4.7302391,
+   -74.0258586
+  ],
+  "prec": "calle",
+  "dist_m": null,
+  "por_nombre": null,
+  "por_direccion": [
+   4.7302391,
+   -74.0258586
+  ],
+  "direccion": "Calle 155 # 7-45"
+ },
+ "Auditorio Principal - UNIAGRARIA - Bogotá": {
+  "estado": "manual",
+  "funciones": 1
+ },
+ "Biblioteca Pública Carlos E. Restrepo - Bogotá": {
+  "estado": "UNA SOLA",
+  "funciones": 1,
+  "usado": [
+   4.5843555,
+   -74.1032378
+  ],
+  "prec": "poi",
+  "dist_m": null,
+  "por_nombre": [
+   4.5843555,
+   -74.1032378
+  ],
+  "por_direccion": null,
+  "direccion": "Diagonal 21A Sur # 19-54 sur"
+ },
+ "Casa de la Juventud Chiguazá - Bogotá": {
+  "estado": "UNA SOLA",
+  "funciones": 1,
+  "usado": [
+   4.5512974,
+   -74.1091675
+  ],
+  "prec": "calle",
+  "dist_m": null,
+  "por_nombre": null,
+  "por_direccion": [
+   4.5512974,
+   -74.1091675
+  ],
+  "direccion": "Calle 48P BIS D Sur # 5A-43"
+ },
+ "Casa de la Juventud Huitaca - Bogotá": {
+  "estado": "UNA SOLA",
+  "funciones": 1,
+  "usado": [
+   4.646258,
+   -74.1221864
+  ],
+  "prec": "calle",
+  "dist_m": null,
+  "por_nombre": null,
+  "por_direccion": [
+   4.646258,
+   -74.1221864
+  ],
+  "direccion": "Calle 17A # 118-25"
+ },
+ "Sala 2 de la Cinemateca - Bogotá": {
+  "estado": "alias",
+  "funciones": 1
+ },
+ "Universidad Jorge Tadeo Lozano Salón Oval - Bogotá": {
+  "estado": "UNA SOLA",
+  "funciones": 1,
+  "usado": [
+   4.607911,
+   -74.0673108
+  ],
+  "prec": "poi",
+  "dist_m": null,
+  "por_nombre": [
+   4.607911,
+   -74.0673108
+  ],
+  "por_direccion": null,
+  "direccion": "Universidad Jorge Tadeo Lozano Salón Oval"
+ },
+ "Parque de los Deseos - Medellín": {
+  "estado": "DISCREPA",
+  "funciones": 1,
+  "usado": [
+   6.2681798,
+   -75.5661711
+  ],
+  "prec": "poi",
+  "dist_m": 5238,
+  "por_nombre": [
+   6.2681798,
+   -75.5661711
+  ],
+  "por_direccion": [
+   6.2229218,
+   -75.5793099
+  ],
+  "direccion": "Carrera 52 # 71 - 11"
+ },
+ "Rueda Libre (La Ceja) - Medellín": {
+  "estado": "manual",
+  "funciones": 1
+ },
+ "Plazoleta del Samán - Cali": {
+  "estado": "UNA SOLA",
+  "funciones": 1,
+  "usado": [
+   3.4682202,
+   -76.4825525
+  ],
+  "prec": "calle",
+  "dist_m": null,
+  "por_nombre": null,
+  "por_direccion": [
+   3.4682202,
+   -76.4825525
+  ],
+  "direccion": "Cra. 5 # 6-05, San Pedro"
+ },
+ "Centro Cultural - Sala Audiovisual de Cali - Cali": {
+  "estado": "UNA SOLA",
+  "funciones": 1,
+  "usado": [
+   3.4682202,
+   -76.4825525
+  ],
+  "prec": "calle",
+  "dist_m": null,
+  "por_nombre": null,
+  "por_direccion": [
+   3.4682202,
+   -76.4825525
+  ],
+  "direccion": "Cra. 5 # 6-05, San Pedro"
+ },
+ "Alianza Francesa - Barranquilla": {
+  "estado": "DISCREPA",
+  "funciones": 1,
+  "usado": [
+   11.0055366,
+   -74.8222334
+  ],
+  "prec": "poi",
+  "dist_m": 3871,
+  "por_nombre": [
+   11.0055366,
+   -74.8222334
+  ],
+  "por_direccion": [
+   10.9934507,
+   -74.7889733
+  ],
+  "direccion": "Calle 52 # 54-75"
+ },
+ "Museo de Arte Moderno - MAMB - Barranquilla": {
+  "estado": "UNA SOLA",
+  "funciones": 1,
+  "usado": [
+   10.9869747,
+   -74.7780462
+  ],
+  "prec": "poi",
+  "dist_m": null,
+  "por_nombre": [
+   10.9869747,
+   -74.7780462
+  ],
+  "por_direccion": null,
+  "direccion": "Edificio World Trade Center (Calle 76 # 54-11, loc B3)"
+ },
+ "Caas Morón - Barranquilla": {
+  "estado": "UNA SOLA",
+  "funciones": 1,
+  "usado": [
+   11.0063726,
+   -74.8137185
+  ],
+  "prec": "calle",
+  "dist_m": null,
+  "por_nombre": null,
+  "por_direccion": [
+   11.0063726,
+   -74.8137185
+  ],
+  "direccion": "Cra. 53 # 48-134"
+ },
+ "Centro Comunitario Nueva Colombia / Biblioteca Pa To Ma Suto - Barranquilla": {
+  "estado": "manual",
+  "funciones": 1
+ },
+ "Casa Cultural El Bordillo - Barranquilla": {
+  "estado": "UNA SOLA",
+  "funciones": 1,
+  "usado": [
+   10.9998767,
+   -74.8190555
+  ],
+  "prec": "calle",
+  "dist_m": null,
+  "por_nombre": null,
+  "por_direccion": [
+   10.9998767,
+   -74.8190555
+  ],
+  "direccion": "Cra. 44 # 87-44"
+ },
+ "Centro de Conciliación y Arbitraje - Universidad del Norte - Barranquilla": {
+  "estado": "UNA SOLA",
+  "funciones": 1,
+  "usado": [
+   11.0060088,
+   -74.7953414
+  ],
+  "prec": "calle",
+  "dist_m": null,
+  "por_nombre": null,
+  "por_direccion": [
+   11.0060088,
+   -74.7953414
+  ],
+  "direccion": "Calle 74 # 58-79"
+ },
+ "Fundación Puerto Colombia - Barranquilla": {
+  "estado": "SIN FUENTE",
+  "funciones": 1,
+  "usado": [
+   10.9881735,
+   -74.9590597
+  ],
+  "prec": "calle",
+  "dist_m": null,
+  "por_nombre": null,
+  "por_direccion": null,
+  "direccion": "Estación Ferrocarril de Bolívar, Cra. 4 # 2-45"
+ },
+ "Universidad del Atlántico - Centro de Convenciones - Barranquilla": {
+  "estado": "SIN FUENTE",
+  "funciones": 1,
+  "usado": [
+   11.0198822,
+   -74.873301
+  ],
+  "prec": "calle",
+  "dist_m": null,
+  "por_nombre": null,
+  "por_direccion": null,
+  "direccion": "Universidad del Atlántico - Puerto Colombia - Cra. 30 # 8-49, Puerto Colombia"
+ },
+ "Cinefilo - UdeC San Agustín, Patio de Humanidades - Cartagena": {
+  "estado": "UNA SOLA",
+  "funciones": 1,
+  "usado": [
+   10.3566029,
+   -75.4924962
+  ],
+  "prec": "calle",
+  "dist_m": null,
+  "por_nombre": null,
+  "por_direccion": [
+   10.3566029,
+   -75.4924962
+  ],
+  "direccion": "Cra. 6, Calle de la Universidad # 36-100"
+ },
+ "Lugar del Poema - Cartagena": {
+  "estado": "UNA SOLA",
+  "funciones": 1,
+  "usado": [
+   10.420315,
+   -75.5481268
+  ],
+  "prec": "calle",
+  "dist_m": null,
+  "por_nombre": null,
+  "por_direccion": [
+   10.420315,
+   -75.5481268
+  ],
+  "direccion": "Pasaje Leclerc, calle 24 # 8b-83 piso 2, Getsemaní"
+ },
+ "Cine Bajo las Estrellas programa de exhibición y circulación - Armenia": {
+  "estado": "UNA SOLA",
+  "funciones": 1,
+  "usado": [
+   4.5360491,
+   -75.6691458
+  ],
+  "prec": "calle",
+  "dist_m": null,
+  "por_nombre": null,
+  "por_direccion": [
+   4.5360491,
+   -75.6691458
+  ],
+  "direccion": "Parque Sucre"
+ },
+ "Sena Galán - Armenia": {
+  "estado": "UNA SOLA",
+  "funciones": 1,
+  "usado": [
+   4.5169258,
+   -75.6918669
+  ],
+  "prec": "calle",
+  "dist_m": null,
+  "por_nombre": null,
+  "por_direccion": [
+   4.5169258,
+   -75.6918669
+  ],
+  "direccion": "Cra. 18 # 7-58"
+ },
+ "Contacto Escuela de Fotografía - Armenia": {
+  "estado": "UNA SOLA",
+  "funciones": 1,
+  "usado": [
+   4.5388271,
+   -75.6685075
+  ],
+  "prec": "calle",
+  "dist_m": null,
+  "por_nombre": null,
+  "por_direccion": [
+   4.5388271,
+   -75.6685075
+  ],
+  "direccion": "Cra. 16 # 9-54, piso 2"
+ },
+ "Universidad Alexander von Humboldt - Armenia": {
+  "estado": "UNA SOLA",
+  "funciones": 1,
+  "usado": [
+   4.5425151,
+   -75.6627651
+  ],
+  "prec": "poi",
+  "dist_m": null,
+  "por_nombre": [
+   4.5425151,
+   -75.6627651
+  ],
+  "por_direccion": null,
+  "direccion": "Avenida Bolívar # 1-189"
+ },
+ "Lember Cinéma - Ibagué": {
+  "estado": "UNA SOLA",
+  "funciones": 1,
+  "usado": [
+   4.4346758,
+   -75.2128494
+  ],
+  "prec": "calle",
+  "dist_m": null,
+  "por_nombre": null,
+  "por_direccion": [
+   4.4346758,
+   -75.2128494
+  ],
+  "direccion": "Calle 42 # 3-45"
+ },
+ "Museo Panóptico de Ibagué - Ibagué": {
+  "estado": "UNA SOLA",
+  "funciones": 1,
+  "usado": [
+   4.4481695,
+   -75.2399655
+  ],
+  "prec": "poi",
+  "dist_m": null,
+  "por_nombre": [
+   4.4481695,
+   -75.2399655
+  ],
+  "por_direccion": null,
+  "direccion": ""
+ },
+ "Colegio Carrasquilla (Cra. 7ma) - Quibdó": {
+  "estado": "UNA SOLA",
+  "funciones": 1,
+  "usado": [
+   5.69135,
+   -76.6568012
+  ],
+  "prec": "calle",
+  "dist_m": null,
+  "por_nombre": null,
+  "por_direccion": [
+   5.69135,
+   -76.6568012
+  ],
+  "direccion": "Colegio Carrasquilla (Cra. 7ma)"
+ },
+ "Función Aire Libre - Malecón - Quibdó": {
+  "estado": "manual",
+  "funciones": 1
+ },
+ "Cámara de Comercio de Pereira - Pereira": {
+  "estado": "manual",
+  "funciones": 1
+ },
+ "Cine a la Calle - Pereira": {
+  "estado": "DISCREPA",
+  "funciones": 1,
+  "usado": [
+   4.8001186,
+   -75.7344513
+  ],
+  "prec": "poi",
+  "dist_m": 4354,
+  "por_nombre": [
+   4.8001186,
+   -75.7344513
+  ],
+  "por_direccion": [
+   4.809428,
+   -75.6962833
+  ],
+  "direccion": "Parque Olaya Herrera"
+ },
+ "Shuffle live music - Pereira": {
+  "estado": "manual",
+  "funciones": 1
+ },
+ "Universidad Tecnológica de Pereira - Bloque 13, Sala Magistral 1 - Pereira": {
+  "estado": "alias",
+  "funciones": 1
+ },
+ "Universidad Tecnológica de Pereira -UTP - Pereira": {
+  "estado": "UNA SOLA",
+  "funciones": 1,
+  "usado": [
+   4.7943151,
+   -75.6888918
+  ],
+  "prec": "poi",
+  "dist_m": null,
+  "por_nombre": [
+   4.7943151,
+   -75.6888918
+  ],
+  "por_direccion": null,
+  "direccion": "Bloque 13 Sala Magistral 1 (Carrera 27 #10-02, Barrio Álamos)"
+ },
+ "Fundación Batuta Caldas - Manizales": {
+  "estado": "manual",
+  "funciones": 1
+ },
+ "Universidad de Caldas - Auditorio Roberto Vélez Correa - Manizales": {
+  "estado": "UNA SOLA",
+  "funciones": 1,
+  "usado": [
+   5.0549153,
+   -75.4940702
+  ],
+  "prec": "calle",
+  "dist_m": null,
+  "por_nombre": null,
+  "por_direccion": [
+   5.0549153,
+   -75.4940702
+  ],
+  "direccion": "Cl. 65 #26-10"
+ },
+ "Universidad Nacional de Colombia - Auditorio Juan Hurtado - Manizales": {
+  "estado": "UNA SOLA",
+  "funciones": 1,
+  "usado": [
+   5.064816,
+   -75.5094002
+  ],
+  "prec": "calle",
+  "dist_m": null,
+  "por_nombre": null,
+  "por_direccion": [
+   5.064816,
+   -75.5094002
+  ],
+  "direccion": "Carrera 27 # 64-60"
+ },
+ "All Cine Cable Plaza - Manizales": {
+  "estado": "SIN FUENTE",
+  "funciones": 1,
+  "usado": [
+   5.064487,
+   -75.4991461
+  ],
+  "prec": "calle",
+  "dist_m": null,
+  "por_nombre": null,
+  "por_direccion": null,
+  "direccion": "Av. Santander Cra. 23 # 65-11, Piso 3"
+ },
+ "Teatro Los Fundadores - Manizales": {
+  "estado": "OK",
+  "funciones": 1,
+  "usado": [
+   5.0684238,
+   -75.5103558
+  ],
+  "prec": "poi",
+  "dist_m": 453,
+  "por_nombre": [
+   5.0684238,
+   -75.5103558
+  ],
+  "por_direccion": [
+   5.0678686,
+   -75.5144079
+  ],
+  "direccion": "Carrera 22 Calle 33"
+ }
+}
