@@ -417,3 +417,33 @@ test('T53 — "ver todas" se recuerda como respuesta, no como silencio', async (
   await page.waitForTimeout(900);
   expect(await page.evaluate(() => document.getElementById('city-sheet').classList.contains('open'))).toBe(false);
 });
+
+// ── T54 — el aviso parcial nombra la CIUDAD cuando la obra recorre varias ────
+// FICDEH 2026 estrenó un mecanismo que ningún festival había ejercido: un rasgo
+// (precio, Q&A, inscripción) presente en ALGUNAS funciones y no en todas, con
+// esas funciones repartidas en ciudades distintas — 43 obras.
+// «One in a million» es gratis en Medellín y con boleta en Bogotá; el aviso
+// desambiguaba por fecha y hora, y había que cruzar «sáb 15 · 19:00» a mano
+// contra la lista de funciones para descubrir que hablaba de OTRA ciudad.
+// La ciudad se agrega solo si la obra recorre ≥2: si todas sus funciones están
+// en la misma, nombrarla no distingue nada y sería ruido en cada línea.
+test('T54 — el aviso dice la ciudad solo cuando la obra recorre varias', async ({ page }) => {
+  await enterFestival(page, 'ficdeh2026', '2026-08-12T09:00:00-05:00');
+  const avisos = async (titulo) => {
+    await page.evaluate(() => { try { closePelSheet(); } catch (e) {} });
+    await page.waitForTimeout(500);
+    await page.evaluate(t => openPelSheet(t), titulo);
+    await page.waitForTimeout(800);
+    return page.evaluate(() => [...document.querySelectorAll('[class*="aviso"]')]
+      .map(e => e.textContent.replace(/\s+/g, ' ').trim()).find(x => /entrada/.test(x)) || '');
+  };
+  // recorre 2 ciudades → la ciudad es lo que separa las funciones
+  const varias = await avisos('One in a million');
+  expect(varias, 'el aviso debe nombrar la ciudad').toContain('Bogotá');
+  expect(varias).toMatch(/sáb 15/);
+
+  // 3 funciones, todas en Bogotá → la ciudad no distingue: no se dice
+  const una = await avisos('Los pliegues de la falda');
+  expect(una, 'aviso parcial presente').toMatch(/lun 17/);
+  expect(una, 'con una sola ciudad, nombrarla es ruido').not.toContain('Bogotá');
+});

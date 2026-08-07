@@ -8,7 +8,7 @@
 
 import { FESTIVAL_CONFIG, MAX_REMEMBERED_SLOTS, TMDB_IMG, _DEFAULT_FEST_ID } from '../config.js';
 import { DAY_ABBR, DAY_NUM, ICONS, _secLabel, _sectionColor, escXML, isFullDayBlocked, makeProgramPoster, parseProgramTitle, renderRatingStarsHTML } from '../view/components.js';
-import { _getItemPoster, _mkCortoItemHtml, _posterStyle, dayLabel, emptyState, durFmt, flagFmt, getCortoItemPoster, getFilmPoster, getFilmPosterUntitled, getPosterSrc, itemPosterParts, posterAmbient, posterParts, sala, starsText, vcfg, ticketBadgeTarget } from '../view/helpers.js';
+import { _getItemPoster, _mkCortoItemHtml, _posterStyle, dayLabel, emptyState, durFmt, flagFmt, getCortoItemPoster, getFilmPoster, getFilmPosterUntitled, getPosterSrc, itemPosterParts, posterAmbient, posterParts, sala, starsText, vcfg, venueCity, ticketBadgeTarget } from '../view/helpers.js';
 import { closeAvSheet, closePVRating, closePrioLimit } from '../view/sheets.js';
 import { showConflictModal, showToast } from '../view/feedback.js';
 import { renderAgenda, renderAvBlocks, renderDiaryHTML } from '../view/agenda.js';
@@ -1400,8 +1400,13 @@ export function _avisosBand(f, opts){
   const _src=(opts&&opts.scrs&&opts.scrs.length)?opts.scrs:(f?[f]:[]);
   const _con=k=>_src.filter(x=>x&&x[k]);
   // Si el rasgo está en ALGUNAS funciones y no en todas, el aviso nombra cuáles
-  // —si no, mentiría sobre las otras—. Hoy no ocurre en ningún festival cargado.
-  const _cual=h=>(h.length&&h.length<_src.length)?' · '+h.map(_coord).join(' / '):'';
+  // —si no, mentiría sobre las otras—. FICDEH 2026 lo ejerce en 43 obras, y ahí
+  // «sáb 15 · 19:00» no alcanza: lo que separa las dos funciones de «One in a
+  // million» (gratis en Medellín, con boleta en Bogotá) es la CIUDAD. Se agrega
+  // solo si ESTA obra recorre ≥2 ciudades; si no, sería ruido en cada línea.
+  const _ciudades=new Set(_src.map(x=>x&&venueCity(x.venue)).filter(Boolean));
+  const _conCiudad=_ciudades.size>1;
+  const _cual=h=>(h.length&&h.length<_src.length)?' · '+h.map(x=>_coord(x,_conCiudad)).join(' / '):'';
   const _qa=_con('has_qa');
   if(_qa.length) rows.push(['Q&A', t(_qa[0].qa_type==='guests'?'aviso_qa_ref':'aviso_qa_equipo')+_cual(_qa)]);
   if(opts&&opts.prog) rows.push([t('badge_programa'), t(opts.prog==='cortos'?'aviso_prog_cortos':'aviso_prog_obras')]);
@@ -1428,9 +1433,11 @@ export function _avisosBand(f, opts){
 // _coord — "jue 13 · 19:00": cómo la app nombra una función dentro de una FRASE.
 // dayLabel devuelve el día en mayúsculas porque en la fila es una etiqueta; dentro
 // de una oración, "JUE 13" grita. Se baja a minúsculas solo acá.
-function _coord(sc){
+function _coord(sc, conCiudad){
   const d=sc.day?(dayLabel(sc.day)||sc.day).toLocaleLowerCase():'';
-  return [d, sc.time||''].filter(Boolean).join(' · ');
+  // La ciudad va PRIMERO: es el dato más grueso. Solo cuando desambigua (ver _cual).
+  const c=conCiudad?venueCity(sc.venue):'';
+  return [c, d, sc.time||''].filter(Boolean).join(' · ');
 }
 
 export function _checkRecalcOpportunity(){
