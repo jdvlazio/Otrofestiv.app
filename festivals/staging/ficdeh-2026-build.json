@@ -747,6 +747,13 @@
    "city": "Armenia",
    "address": "Cra. 23d # 11-25"
   },
+  "Aguas Fieras & Club el Camello - Medellín": {
+   "short": "Aguas Fieras & Club el Camello",
+   "lat": null,
+   "lng": null,
+   "city": "Medellín",
+   "address": "Cr. 45 #7-45, El Poblado"
+  },
   "Centro Cultural del Socorro - Cartagena": {
    "short": "Centro Cultural del Socorro",
    "lat": 10.3842515,
@@ -8542,6 +8549,30 @@
    "type": "film"
   },
   {
+   "title": "Los frutos que dan vida: Siembra autosostenible casera",
+   "type": "event",
+   "section": "🛠️ Formación",
+   "duration": "180 min",
+   "synopsis": "Aprenderás los conceptos clave sobre el manejo de semillas, preparación de la tierra y uso de abonos para propagar y mantener plántulas sanas.",
+   "synopsis_lang": "es",
+   "poster": "/assets/ficdeh/los-frutos-que-dan-vida.jpg",
+   "posterSource": "custom",
+   "event_kind": "masterclass",
+   "day": "2026-08-16",
+   "time": "13:00",
+   "venue": "Aguas Fieras & Club el Camello - Medellín",
+   "day_order": 4,
+   "has_qa": false,
+   "is_cortos": false,
+   "film_list": null,
+   "is_free": true,
+   "requires_registration": true,
+   "_ingreso": "Entrada libre con inscripción previa (15 personas)",
+   "_src": {
+    "programacion_oficial": "Los frutos que dan vida: Siembra autosostenible casera"
+   }
+  },
+  {
    "title": "Héroes del silencio",
    "director": "Atikeinis Durán Izquierdo",
    "year": "2026",
@@ -9872,6 +9903,30 @@
    },
    "type": "film",
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230522900386"
+  },
+  {
+   "title": "Los frutos que dan vida: Siembra autosostenible casera",
+   "type": "event",
+   "section": "🛠️ Formación",
+   "duration": "180 min",
+   "synopsis": "Aprenderás los conceptos clave sobre el manejo de semillas, preparación de la tierra y uso de abonos para propagar y mantener plántulas sanas.",
+   "synopsis_lang": "es",
+   "poster": "/assets/ficdeh/los-frutos-que-dan-vida.jpg",
+   "posterSource": "custom",
+   "event_kind": "masterclass",
+   "day": "2026-08-17",
+   "time": "13:00",
+   "venue": "Aguas Fieras & Club el Camello - Medellín",
+   "day_order": 5,
+   "has_qa": false,
+   "is_cortos": false,
+   "film_list": null,
+   "is_free": true,
+   "requires_registration": true,
+   "_ingreso": "Entrada libre con inscripción previa (15 personas)",
+   "_src": {
+    "programacion_oficial": "Los frutos que dan vida: Siembra autosostenible casera"
+   }
   },
   {
    "title": "Madres de nacimiento",
@@ -12600,6 +12655,31 @@
     "programacion_oficial": "La gran hazaña"
    },
    "type": "film"
+  },
+  {
+   "title": "¿Cómo filmar un país en guerra?",
+   "type": "event",
+   "section": "🛠️ Formación",
+   "duration": "120 min",
+   "synopsis": "Descúbrelo a través de los rushes inéditos de Juan Guillermo Garcés y el making of de las películas de Víctor Gaviria en los años noventa.",
+   "synopsis_lang": "es",
+   "poster": "/assets/ficdeh/como-filmar-un-pais-en-guerra.jpg",
+   "posterSource": "custom",
+   "event_kind": "masterclass",
+   "day": "2026-08-18",
+   "time": "16:30",
+   "venue": "Cineprox - Medellín",
+   "day_order": 6,
+   "has_qa": false,
+   "is_cortos": false,
+   "film_list": null,
+   "sala": "SALA 3",
+   "is_free": true,
+   "requires_registration": true,
+   "_ingreso": "Entrada libre con inscripción previa (15 personas)",
+   "_src": {
+    "programacion_oficial": "¿Cómo filmar un país en guerra?"
+   }
   },
   {
    "title": "Cuando la palabra se hace búsqueda",
