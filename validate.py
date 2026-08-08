@@ -2532,6 +2532,50 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar fin-inline-ratchet: {_e}')
 
+# ── [keyart-write-once] un afiche publicado nunca se sobreescribe ───────────────
+# El SW cachea /assets/ cache-first en un caché que sobrevive a TODOS los deploys
+# (ASSETS_CACHE, sw.js). Sobreescribir un keyArt in-place deja a los usuarios
+# recurrentes viendo el afiche viejo para siempre: la URL no cambió, así que el
+# SW nunca lo vuelve a pedir. Reinstalar la app tampoco alcanza — el caché del
+# WebView persiste.
+# La regla estaba escrita en config.js, compose-keyart.py y PIPELINE.md, y aun
+# así el afiche de FICDEH 2026 se sobreescribió CUATRO veces con el mismo nombre:
+# el aliado de comunicaciones en Medellín seguía viendo el anterior a 4 días de
+# que abriera el festival. Una regla que solo vive en la documentación no se
+# cumple; por eso ahora se verifica por huella.
+check = 'keyart-write-once'
+try:
+    import glob as _glob, hashlib as _hl, os as _os
+    _reg = 'assets/keyart/HUELLAS.txt'
+    if not _os.path.exists(_reg):
+        warn(check, 'falta assets/keyart/HUELLAS.txt (correr scripts/keyart-huellas.py)')
+    else:
+        _antes = {}
+        for _ln in open(_reg, encoding='utf-8'):
+            _ln = _ln.strip()
+            if _ln and not _ln.startswith('#'):
+                _h, _n = _ln.split(None, 1)
+                _antes[_n] = _h
+        _cambiados, _sinreg = [], []
+        for _f in sorted(_glob.glob('assets/keyart/*.jpg')):
+            _n = _os.path.basename(_f)
+            _h = _hl.sha1(open(_f, 'rb').read()).hexdigest()[:16]
+            if _n not in _antes:
+                _sinreg.append(_n)
+            elif _antes[_n] != _h:
+                _cambiados.append(_n)
+        if _cambiados:
+            fail(check, 'keyArt SOBREESCRITO (los usuarios recurrentes verían el viejo para '
+                        'siempre): ' + ', '.join(_cambiados) +
+                        ' — usar un nombre nuevo (-v2) y actualizar src/config.js')
+        elif _sinreg:
+            fail(check, 'keyArt sin huella registrada: ' + ', '.join(_sinreg) +
+                        ' — correr python3 scripts/keyart-huellas.py')
+        else:
+            ok(check, f'{len(_antes)} afiches con su huella intacta (write-once respetado)')
+except Exception as _e:
+    warn(check, f'no se pudo verificar keyart-write-once: {_e}')
+
 # ── [keyart-2-3] el afiche del splash entra entero en la card ───────────────────
 # La card del riel es 2:3 EXACTO con object-fit:cover, así que recorta todo
 # keyArt que no lo sea. Medido en ago 2026: 7 de 10 se recortaban, hasta +19,5%

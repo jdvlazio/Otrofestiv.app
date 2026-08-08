@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `867cfd3 fix(avisos): el aviso parcial nombra la CIUDAD cuando la obra recorre varias (#509)`
+> Último commit: `b8fa987 feat(ficdeh): dos actividades de Medellín que faltaban, con sus pósters (#512)`
 
 ---
 
