@@ -26,8 +26,10 @@
  },
  "Desde el centro de la tierra": {
   "synopsis": "Cuidado y protección de áreas naturales en riesgo. Entrada con previa inscripción: https://forms.gle/q8LxC7KnkowLT7ov8PanelistasEmmerich WeissenbergerDirector de la Fundación Las Mercedes. Fundador del Colectivo ArtEmbassy.Nora RuzsicsArtista. Cineasta. Miembro del Colectivo ArtEmbassy.Gunzareiman V",
-  "requires_registration": false,
-  "poster": "/uploads/obras/Portada_Charla-1-e1776487324802.jpg"
+  "requires_registration": true,
+  "poster": "/uploads/obras/Portada_Charla-1-e1776487324802.jpg",
+  "registration_url": "https://docs.google.com/forms/d/e/1FAIpQLSc-dyfD_Z1R2PZIr5hpBn4nLNGr6kb80JoFxks3rOPpDpYJ2w/viewform",
+  "_registration_url_src": "linkship.cc/ficdeh (enlaces del bio oficial del festival), 8 ago 2026 — forms.gle/q8LxC7KnkowLT7ov8 · el form se titula «Confirmación de asistencia. Charlas que Unen \"Desde el centro de la tierra\"»"
  },
  "El Arte de la Paz": {
   "synopsis": "Una jornada cultural para conmemorar los diez años de la firma de los Acuerdos de Paz en Colombia. Incluye la proyección de los cortometrajes \"La luz que nos queda\" (dir. Gloria Isabel Gómez Ceballos) y \"Lo que sentimos\" (dir. Fondo Multidonante de las Naciones Unidas para la Paz en Colombia), la ch",
@@ -99,7 +101,9 @@
   "synopsis": "El barrismo es mucho más que acompañar a un equipo. La pasión por el fútbol puede convertirse en una fuerza para construir comunidad, promover el liderazgo, fortalecer la convivenc",
   "requires_registration": true,
   "poster": "/uploads/obras/formacion-barrismo-social.jpg",
-  "modalidad": "Presencial"
+  "modalidad": "Presencial",
+  "registration_url": "https://docs.google.com/forms/d/e/1FAIpQLSfLmzL1WNXvEq-FvZgzubVfcuQEvrjRf6HZ5zSC0mbRdwIS-A/viewform",
+  "_registration_url_src": "linkship.cc/ficdeh (enlaces del bio oficial del festival), 8 ago 2026 — forms.gle/WzZeXPBPgbZHW1FN8 · el form confirma Pereira, 15/08, 9:00 a.m."
  },
  "Conversatorio Mujeres en el Audiovisual": {
   "synopsis": "Espacio de encuentro, diálogo e inspiración que reúne a mujeres que hacen parte de la industria audiovisual del Eje Cafetero. Compartirán sus experiencias y conversarán sobre las o",
@@ -111,7 +115,9 @@
   "synopsis": "Herramientas prácticas para identificar fuentes confiables, verificar información, evitar la desinformación y construir narrativas que generen diálogo e impacto sin perder el compr",
   "requires_registration": true,
   "poster": "/uploads/obras/formacion-crear-para-resistir.jpg",
-  "modalidad": "Presencial"
+  "modalidad": "Presencial",
+  "registration_url": "https://docs.google.com/forms/d/e/1FAIpQLSeKw3Cl-a9XRiOjncH_5MsZh3H9BYndxW69S3Avt1yE1lRVTQ/viewform",
+  "_registration_url_src": "linkship.cc/ficdeh (enlaces del bio oficial del festival), 8 ago 2026 — forms.gle/awoY99MXYHHRdYr2A · el form confirma 18/08"
  },
  "Del rodaje a la mezcla final: el sonido de Semillas": {
   "synopsis": "¿Cómo construir el universo sonoro de una película? Este será un recorrido por el desarrollo del sonido directo y la posproducción de sonido de la película Semillas, dirigida por E",
@@ -141,7 +147,9 @@
   "synopsis": "Este taller brindará herramientas para la identificación y denuncia de las violencias de género en los medios de comunicación.",
   "requires_registration": true,
   "poster": "/uploads/obras/formacion-visibilizar-lo-invisible.jpg",
-  "modalidad": "Presencial"
+  "modalidad": "Presencial",
+  "registration_url": "https://docs.google.com/forms/d/e/1FAIpQLSeUvZCv77WwHBMSWeI_Vm47n901vyDWTAnui_1FINYxGmaShQ/viewform",
+  "_registration_url_src": "linkship.cc/ficdeh (enlaces del bio oficial del festival), 8 ago 2026 — la página del festival enlaza este form por su /formResponse (el endpoint de ENVÍO, no el formulario). Se guarda el /viewform, que es el que abre"
  },
  "¿Cómo obtener el reconocimiento como Proyecto Cinematográfico Nacional?": {
   "synopsis": "Conoce la ruta completa desde la formulación hasta la certificación y accede al beneficio tributario de la Ley 814 de 2003.",
@@ -218,11 +226,13 @@
   "requires_registration": true,
   "poster": "/assets/ficdeh/como-filmar-un-pais-en-guerra.jpg",
   "registration_url": "https://docs.google.com/forms/d/e/1FAIpQLSfaVwhN0vUftmGRrC4EeSufi6iF0GcC625c2x2JGoUyJnpdfw/viewform",
-  "_registration_url_nota": "Formulario oficial de inscripción, entregado por el festival el 8 ago. Es ESPECÍFICO de esta actividad: el propio form se titula «Filmar un país en guerra | 13° FICDEH». NO se publica todavía porque el schema no tiene campo para el enlace de inscripción — requires_registration es booleano y ticket_url es solo para comprar entradas (decisión de Juan). Queda aquí para aplicarlo en cuanto exista el campo."
+  "_registration_url_src": "póster oficial de Medellín, 7 ago 2026 · reconfirmado el 8 ago en linkship.cc/ficdeh (forms.gle/ENrJMfoondUo8LnR7 resuelve al MISMO formulario)"
  },
  "Los frutos que dan vida: Siembra autosostenible casera": {
   "synopsis": "Aprenderás los conceptos clave sobre el manejo de semillas, preparación de la tierra y uso de abonos para propagar y mantener plántulas sanas.",
   "requires_registration": true,
-  "poster": "/assets/ficdeh/los-frutos-que-dan-vida.jpg"
+  "poster": "/assets/ficdeh/los-frutos-que-dan-vida.jpg",
+  "registration_url": "https://docs.google.com/forms/d/e/1FAIpQLSdyNHv8o_hwEoc4_9rL8sQ3x55Eq_sNAnr_qUf4yRsPf-zIpw/viewform",
+  "_registration_url_src": "linkship.cc/ficdeh (enlaces del bio oficial del festival), 8 ago 2026 — forms.gle/4ZyBzJ4SsCYbvYGF6 · UN formulario para las DOS sesiones: «Fechas: Domingo 16 y lunes 17 de agosto», «a lo largo de dos sesiones». Confirma is_recurring y la sede «Aguas Fieras (Cra. 45 #7-45, El Poblado)»"
  }
 }

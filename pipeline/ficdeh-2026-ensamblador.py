@@ -147,6 +147,13 @@ def venue_key(f):
 #   Nacional — dos micrófonos casi idénticos a tamaño de riel.
 #   «Workshops» y no «Training»: son talleres (animación 2D, pintura, actuación,
 #   «Taller de Herramientas»), y es el término que busca el público de festival.
+# Talleres que ocurren en VARIAS sesiones y se toman completos. Se declara a
+# mano y no por «tiene más de una función»: una charla que se repite en dos
+# ciudades también tendría varias, pero ahí sí son alternativas.
+RECURRENTES = {
+    'Los frutos que dan vida: Siembra autosostenible casera',   # 16 y 17 AGO, Aguas Fieras
+}
+
 SEC_ACT = {
   'charla': ('💬 Charlas que Unen', 'Talks That Unite', 'Charlas / Industria', 11),
   'taller': ('🛠️ Formación',        'Workshops',        'Charlas / Industria', 12),
@@ -213,11 +220,21 @@ for f in sorted(funcs, key=lambda x: (x['dia'], x['hora'], x['ciudad'])):
         if a.get('requires_registration') or _d.get('requires_registration'):
             e['requires_registration'] = True
         # El formulario de inscripción va en la FUNCIÓN (docs/SCHEMA.md §Ticketing),
-        # no en la raíz: cada actividad tiene el suyo. El de la Master Class se
-        # titula «Filmar un país en guerra», así que no es reutilizable.
+        # no en la raíz: cada actividad tiene el SUYO —cada form se titula con el
+        # nombre de su actividad—, así que ninguno es reutilizable. Los 6 que el
+        # festival publica salen del bio oficial (linkship.cc/ficdeh); el sidecar
+        # guarda de dónde vino cada uno en `_registration_url_src`.
         _ru = a.get('registration_url') or ''
         if _ru.startswith('https://'):
             e['registration_url'] = _ru
+        # is_recurring — un taller de varias sesiones es UN bloque, no varias
+        # opciones: quien se inscribe va a todas. Con esto la ficha ofrece un
+        # solo «Añadir las N sesiones» en vez de un botón por sesión, y el plan
+        # las mete todas o ninguna (schedule.js §is_recurring). La fuente lo
+        # confirma sola: hay UN formulario de inscripción para las dos fechas.
+        # Precedente: los talleres de Leviza 2026.
+        if f['titulo_programacion'] in RECURRENTES:
+            e['is_recurring'] = True
         if not e['synopsis']: e['_pendiente'] = 'sin sinopsis en la ficha del festival'
     films_out.append(e)
 
