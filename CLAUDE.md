@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `ab19278 chore: bump tras traer main (keyArt de FICDEH)`
+> Último commit: `c0bf4b5 fix(splash): FICDEH 2026 — el keyArt oficial, el del campesino en la moto (#510)`
 
 ---
 
