@@ -480,9 +480,18 @@ export function _sortFestivals(entries, activeFestId){
     if(cls==='upcoming') return 2;
     return 3; // past
   };
+  // PRIORIDAD EDITORIAL — desempata DENTRO del tier, antes que la fecha.
+  // Nace de FINCA vs FICDEH (8 ago 2026): mismas fechas exactas, y quién salía
+  // primero lo decidía un accidente de datos —30 minutos de diferencia en
+  // festivalEndStr—. Con una alianza oficial y otra parcial, esa decisión es
+  // editorial y tiene que estar declarada, no emerger del ruido.
+  // Sin `priority` en el config, todo se comporta como antes.
+  const _prio=([,cfg])=>(cfg.priority??99);
   return entries.sort((a,b)=>{
     const ta=_tier(a),tb=_tier(b);
     if(ta!==tb) return ta-tb;
+    const pa=_prio(a),pb=_prio(b);
+    if(pa!==pb) return pa-pb;
     // ongoing: termina antes primero
     if(ta===1) return new Date(a[1].festivalEndStr||0)-new Date(b[1].festivalEndStr||0);
     // upcoming: empieza antes primero

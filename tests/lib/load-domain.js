@@ -38,6 +38,9 @@ const VHELPERS = path.join(ROOT, 'src', 'view', 'helpers.js');
 // festivalLocationLabel). Va al FINAL por el mismo motivo que agenda: solo se le
 // piden fns que no existen en los otros archivos, así no ensombrece nada.
 const CONFIG = path.join(ROOT, 'src', 'config.js');
+// src/view/components.js — helpers puros de presentación (_sortFestivals,
+// _classifyFestival). Al final, como config: solo se le piden fns propias.
+const COMPONENTS = path.join(ROOT, 'src', 'view', 'components.js');
 
 // p8 Step 0: el código de la app se movió de los <script> inline de index.html
 // a src/main.js (módulo). readScripts concatena los scripts inline restantes
@@ -60,13 +63,14 @@ function readScripts() {
   const agendaSrc = fs.existsSync(AGENDA) ? fs.readFileSync(AGENDA, 'utf8') : '';
   const vhelpersSrc = fs.existsSync(VHELPERS) ? fs.readFileSync(VHELPERS, 'utf8') : '';
   const configSrc = fs.existsSync(CONFIG) ? fs.readFileSync(CONFIG, 'utf8') : '';
+  const compSrc = fs.existsSync(COMPONENTS) ? fs.readFileSync(COMPONENTS, 'utf8') : '';
   // domainSrc ANTES de main: las fns de dominio (main-thread, src/domain/) deben
   // matchearse antes que las COPIAS worker-local (en backtick strings dentro de
   // main.js, ej. `function simNow(){return SIM_TIME...}`). extractFunction
   // devuelve el primer match en orden de documento → la versión main-thread.
   // agendaSrc al FINAL: solo se piden de ahí fns que no existen en otros archivos
   // (getSuggestions) — sin riesgo de shadowing.
-  return inline + '\n' + domainSrc + '\n' + main + '\n' + storageSrc + '\n' + agendaSrc + '\n' + vhelpersSrc + '\n' + configSrc;
+  return inline + '\n' + domainSrc + '\n' + main + '\n' + storageSrc + '\n' + agendaSrc + '\n' + vhelpersSrc + '\n' + configSrc + '\n' + compSrc;
 }
 
 // Returns the source of `function NAME(...) { ... }` from `source`, or null.
