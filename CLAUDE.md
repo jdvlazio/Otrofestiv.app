@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `b8fa987 feat(ficdeh): dos actividades de Medellín que faltaban, con sus pósters (#512)`
+> Último commit: `a1d0e01 feat(actividades): registration_url — la ficha dice DÓNDE inscribirse`
 
 ---
 
