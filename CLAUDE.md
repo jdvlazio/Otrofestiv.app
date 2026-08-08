@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `c0bf4b5 fix(splash): FICDEH 2026 — el keyArt oficial, el del campesino en la moto (#510)`
+> Último commit: `e67cc19 Merge remote-tracking branch 'origin/main' into fix/aviso-ciudad`
 
 ---
 
