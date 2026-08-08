@@ -237,3 +237,59 @@ test('T53 — el tachado de la hora no alcanza al badge ni a la salida', async (
   expect(deco.badge).toBe('none');
   expect(deco.boton).toBe('none');
 });
+
+// ── T56 — el taller multi-día entra y sale ENTERO ────────────────────────────
+// Un taller de varios días se toma completo: quien se inscribe va a todas las
+// sesiones. Hasta ahora `is_recurring` solo APAGABA el botón por sesión y no
+// ponía nada en su lugar — el único camino al Plan era Intereses + planificador.
+//
+// La regla dura: si una sola sesión no cabe, no entra NINGUNA. Un plan con «1 de
+// 2» no es medio taller, es un plan que miente sobre un compromiso que nadie
+// tomó. Y verifyPlan no puede cazarlo por su cuenta: para él las repeticiones
+// del título son legítimas, que es justo el permiso que da is_recurring.
+test('T56 — el taller multi-día entra y sale entero, y no entra a medias', async ({ page }) => {
+  await enterFestival(page, 'leviza2026', LEVIZA_SIMTIME);
+  const leer = () => page.evaluate(() => ({
+    enPlan: ((savedAgenda && savedAgenda.schedule) || []).filter(e => e._title === 'Taller de Guion').length,
+    control: document.querySelector('#pel-sheet .pel-sheet-bloque .suggestion-add')?.textContent.trim() || '',
+    marcadas: document.querySelectorAll('#pel-sheet .pel-sheet-screening.in-plan').length,
+    porSesion: document.querySelectorAll('#pel-sheet .pel-sheet-screening .suggestion-add').length,
+  }));
+  const tocar = async () => {
+    await page.evaluate(() => { const b = document.querySelector('#pel-sheet .pel-sheet-bloque .suggestion-add'); if (b) b.click(); });
+    await page.waitForTimeout(1200);
+  };
+  await page.evaluate(() => openPelSheet('Taller de Guion'));
+  await page.waitForTimeout(1100);
+
+  const a = await leer();
+  expect(a.control, 'el control es del bloque y dice cuántas son').toMatch(/3 sesiones/);
+  expect(a.porSesion, 'ninguna sesión tiene botón propio').toBe(0);
+
+  await tocar();
+  const b = await leer();
+  expect(b.enPlan, 'entran las 3 de una').toBe(3);
+  expect(b.marcadas, 'el estado «en tu plan» es del bloque: todas las filas marcadas').toBe(3);
+  expect(b.control).toMatch(/Quitar/);
+  // el plan resultante es válido: 3 veces el mismo título NO es duplicado
+  const cert = await page.evaluate(() => verifyPlan(savedAgenda.schedule, { catalog: FILMS }));
+  expect(cert.ok, JSON.stringify(cert.violations)).toBe(true);
+
+  await tocar();
+  expect((await leer()).enPlan, 'quitar saca todas').toBe(0);
+
+  // TODO O NADA: con la 2ª sesión ocupada, no entra ninguna — ni la 1ª, que cabía
+  await page.evaluate(() => {
+    const ses = FILMS.filter(f => f.title === 'Taller de Guion' && f.day && f.time).sort((x, y) => x.day_order - y.day_order);
+    const s1 = ses[1];
+    state.set('savedAgenda', { schedule: [{ _title: 'Rival', title: 'Rival', day: s1.day,
+      time: s1.time, venue: s1.venue, duration: '120 min', day_order: s1.day_order }] });
+    openPelSheet('Taller de Guion');
+  });
+  await page.waitForTimeout(1100);
+  await tocar();
+  const c = await leer();
+  expect(c.enPlan, 'si una sesión no cabe, no entra ninguna').toBe(0);
+  expect(await page.evaluate(() => savedAgenda.schedule.some(e => e._title === 'Rival')),
+    'y no se saca nada del plan sin permiso').toBe(true);
+});

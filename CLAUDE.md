@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `c9bfe3a feat(ficdeh): el formulario de inscripción de la Master Class, publicado (#514)`
+> Último commit: `e259fcf fix(ficdeh): la sede se llama «Aguas Fieras», y ahora sí tiene coordenadas (#516)`
 
 ---
 

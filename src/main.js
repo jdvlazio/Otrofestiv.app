@@ -37,7 +37,7 @@ import { LANGS, t, _applyI18nDOM } from './i18n/i18n.js';
 //   las consume vía eval(name).toString(); sus copias worker-local se quedan. ──
 import { toMin, parseDur, minToStr, _festDate, simNow, simTodayStr, dayFullyPassed, festivalEnded } from './domain/time.js';
 import { _djb2, _titleSeed, _mulberry32, shuffle, scoreFilm, effectiveDuration, screeningPassed, _classifyTodayScreenings, _endedStats, normTitle } from './domain/film.js';
-import { screensConflict, isScreeningBlocked, sortScreensByStrategy, computeScenarios } from './domain/schedule.js';
+import { screensConflict, isScreeningBlocked, sortScreensByStrategy, computeScenarios, verifyPlan } from './domain/schedule.js';
 import { _resolveVenue, _gapSuggestion, _getFestivalPhase, venueTravelMins, travelMins } from './domain/festival.js';
 
 // ── Step 6a: view/components.js — capa presentacional foundational de Wave 6
@@ -120,7 +120,7 @@ import {
 // ── Step 7d-3: controller/handlers.js — mutators+filters+composites. ─────────
 import {
   citySheetPick, citySheetAll,
-  toggleWL, toggleWatched, togglePelPrio, togglePelWL, setDelay, undoDelay, clearDelay, removeFromAgenda, addSuggestion, _planFixNotice, checkinLaVi, checkinNoLaVi, forceInclude, togglePriority, swapPriority, markWatchedFromPlan, confirmReplace, removeFilmFromScenario, _dismissNotice, selectMiPlanDay, miPlanNav, toggleMplanProg, setActivePlanFilm, selectFromDetail, toggleFilmAlternatives, _toggleEveningFilms, filterByVenue, filterByDay, filterBySection, setInteresesView, setProgramaMode, toggleProgramaView, setProgramaView, setProgramaChip, clearProgramaChip, _pafClearSec, _pafClearVenue, _toggleWLFromList, saveCurrentScenario, _scrollToAgSection, _setExpandedFilm, _closePelAndRemove, _closePelAndRate, _navTo, _closeAuthAndReset, _toggleCtxOlder, _toggleWatchedAndClose, _toggleWLAndClose, _activatePlanFilm, _scrollToSuggestions, _removeConflictModal, _scrollToTop, _searchOpenFilm, _searchOpenCorto,
+  toggleWL, toggleWatched, togglePelPrio, togglePelWL, setDelay, undoDelay, clearDelay, removeFromAgenda, addSuggestion, addRecurringBlock, removeRecurringBlock, _planFixNotice, checkinLaVi, checkinNoLaVi, forceInclude, togglePriority, swapPriority, markWatchedFromPlan, confirmReplace, removeFilmFromScenario, _dismissNotice, selectMiPlanDay, miPlanNav, toggleMplanProg, setActivePlanFilm, selectFromDetail, toggleFilmAlternatives, _toggleEveningFilms, filterByVenue, filterByDay, filterBySection, setInteresesView, setProgramaMode, toggleProgramaView, setProgramaView, setProgramaChip, clearProgramaChip, _pafClearSec, _pafClearVenue, _toggleWLFromList, saveCurrentScenario, _scrollToAgSection, _setExpandedFilm, _closePelAndRemove, _closePelAndRate, _navTo, _closeAuthAndReset, _toggleCtxOlder, _toggleWatchedAndClose, _toggleWLAndClose, _activatePlanFilm, _scrollToSuggestions, _removeConflictModal, _scrollToTop, _searchOpenFilm, _searchOpenCorto,
 } from './controller/handlers.js';
 import { setDelaysRerender } from './controller/delays-cloud.js';
 import { initWatchBridge } from './controller/watch-bridge.js';
@@ -259,6 +259,9 @@ const ACTION_REGISTRY = {
   toggleEveningFilms:  (el)    => _toggleEveningFilms(el),
   toggleWLFromList:    (el)    => _toggleWLFromList(el.dataset.title, el),
   addSuggestion:       (el)    => addSuggestion(el.dataset.title, el.dataset.day, el.dataset.time),
+  // taller multi-día: el bloque entra o sale entero (no hay acción por sesión)
+  addRecurringBlock:   (el)    => addRecurringBlock(el.dataset.title),
+  removeRecurringBlock:(el)    => removeRecurringBlock(el.dataset.title),
   citySheetPick:       (el)    => citySheetPick(el.dataset.city),
   citySheetAll:        ()      => citySheetAll(),
   clearProgramaChip:   ()      => clearProgramaChip(),
@@ -450,7 +453,7 @@ FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202608081009';
+const BUILD_VERSION='202608081128';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';
@@ -1332,6 +1335,9 @@ document.addEventListener('click', function(e){
     // commitPlan: el chokepoint de escritura del plan — expuesto para que la
     // suite pruebe strict-mode (__PLAN_STRICT__) sin montar un flujo entero.
     commitPlan,
+    // verifyPlan: el certificador del plan. Expuesto para que los tests puedan
+    // exigir invariantes sobre el resultado (p. ej. el bloque recurrente completo).
+    verifyPlan,
     // ticketBadgeTarget: qué marca el badge de precio (la minoría) — expuesto
     // para que la suite lo consulte sin recalcular la proporción a mano.
     ticketBadgeTarget,
