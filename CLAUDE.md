@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `e259fcf fix(ficdeh): la sede se llama «Aguas Fieras», y ahora sí tiene coordenadas (#516)`
+> Último commit: `36557b7 feat(plan): el taller multi-día se añade y se quita como BLOQUE (#517)`
 
 ---
 

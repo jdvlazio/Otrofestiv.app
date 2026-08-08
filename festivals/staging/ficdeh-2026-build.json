@@ -5800,7 +5800,8 @@
    "_ingreso": "",
    "_src": {
     "programacion_oficial": "Barrismo social: Construyendo comunidad desde el aguante"
-   }
+   },
+   "registration_url": "https://docs.google.com/forms/d/e/1FAIpQLSfLmzL1WNXvEq-FvZgzubVfcuQEvrjRf6HZ5zSC0mbRdwIS-A/viewform"
   },
   {
    "title": "Actuación para cine",
@@ -6882,11 +6883,12 @@
    "is_cortos": false,
    "film_list": null,
    "is_free": true,
-   "requires_registration": false,
+   "requires_registration": true,
    "_ingreso": "",
    "_src": {
     "programacion_oficial": "Desde el centro de la tierra"
    },
+   "registration_url": "https://docs.google.com/forms/d/e/1FAIpQLSc-dyfD_Z1R2PZIr5hpBn4nLNGr6kb80JoFxks3rOPpDpYJ2w/viewform",
    "_poster_descartado": "genérico de sección (compartido por varias actividades)"
   },
   {
@@ -7352,7 +7354,8 @@
    "_ingreso": "",
    "_src": {
     "programacion_oficial": "Visibilizar lo Invisible: Taller de Herramientas frente a las Violencias de Género"
-   }
+   },
+   "registration_url": "https://docs.google.com/forms/d/e/1FAIpQLSeUvZCv77WwHBMSWeI_Vm47n901vyDWTAnui_1FINYxGmaShQ/viewform"
   },
   {
    "title": "Indiamenta",
@@ -8570,7 +8573,9 @@
    "_ingreso": "Entrada libre con inscripción previa (15 personas)",
    "_src": {
     "programacion_oficial": "Los frutos que dan vida: Siembra autosostenible casera"
-   }
+   },
+   "registration_url": "https://docs.google.com/forms/d/e/1FAIpQLSdyNHv8o_hwEoc4_9rL8sQ3x55Eq_sNAnr_qUf4yRsPf-zIpw/viewform",
+   "is_recurring": true
   },
   {
    "title": "Héroes del silencio",
@@ -9926,7 +9931,9 @@
    "_ingreso": "Entrada libre con inscripción previa (15 personas)",
    "_src": {
     "programacion_oficial": "Los frutos que dan vida: Siembra autosostenible casera"
-   }
+   },
+   "registration_url": "https://docs.google.com/forms/d/e/1FAIpQLSdyNHv8o_hwEoc4_9rL8sQ3x55Eq_sNAnr_qUf4yRsPf-zIpw/viewform",
+   "is_recurring": true
   },
   {
    "title": "Madres de nacimiento",
@@ -11396,7 +11403,8 @@
    "_ingreso": "",
    "_src": {
     "programacion_oficial": "Crear para resistir: la creación de contenido como un acto de responsabilidad"
-   }
+   },
+   "registration_url": "https://docs.google.com/forms/d/e/1FAIpQLSeKw3Cl-a9XRiOjncH_5MsZh3H9BYndxW69S3Avt1yE1lRVTQ/viewform"
   },
   {
    "title": "Héroes del silencio",
