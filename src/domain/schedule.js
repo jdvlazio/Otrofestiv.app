@@ -392,5 +392,21 @@ export function verifyPlan(schedule, opts){
       if(screensConflict(a,b)) v.push({kind:'conflicto', title:a._title||a.title, with:b._title||b.title});
     }
   }
+  // BLOQUE INCOMPLETO — un taller multi-día se toma ENTERO: quien se inscribe va
+  // a todas las sesiones. Un plan con 1 de 2 no es medio taller, es un plan que
+  // miente. El chequeo de duplicado de arriba no puede cazarlo: para él las
+  // repeticiones del título son legítimas, y ese es justo el permiso que da
+  // is_recurring. Necesita el catálogo (opts.catalog) porque el schedule solo sabe
+  // lo que YA está; sin catálogo no se verifica (las llamadas viejas no cambian).
+  const cat=opts&&opts.catalog;
+  if(cat){
+    const enPlan={};
+    list.forEach(s=>{ const t=s._title||s.title||''; if(s.is_recurring) enPlan[t]=(enPlan[t]||0)+1; });
+    Object.keys(enPlan).forEach(t=>{
+      const total=cat.filter(f=>f&&f.is_recurring&&(f.title===t)&&f.day&&f.time).length;
+      if(total&&enPlan[t]!==total)
+        v.push({kind:'bloque-incompleto', title:t, tiene:enPlan[t], necesita:total});
+    });
+  }
   return {ok:v.length===0, violations:v};
 }

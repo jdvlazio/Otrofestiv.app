@@ -142,8 +142,15 @@ function _screeningRows(pairs, opts){
     let _addCtrl='', _planned=false;
     // Una función cancelada NO se puede sumar al Plan: dejarle el botón permitía
     // planificar algo que no va a ocurrir (lo tenía, era un bug funcional).
+    // El estado «en tu plan» se calcula SIEMPRE — antes vivía dentro del if de
+    // abajo, así que en un taller multi-día NUNCA se calculaba y sus filas no se
+    // marcaban aunque el bloque estuviera en el plan.
+    // No hace falta una rama especial para el bloque: como entra entero (o no
+    // entra), la comparación exacta marca sus N filas igual.
+    _planned=savedAgenda&&savedAgenda.schedule.some(e=>e._title===owner.title&&e.day===s.day&&e.time===s.time);
+    // El botón POR SESIÓN, en cambio, no existe para un recurrente: su control
+    // vive abajo, a nivel de bloque (ver _bloqueCtrl).
     if(!owner.is_recurring&&!s._cancelled){
-      _planned=savedAgenda&&savedAgenda.schedule.some(e=>e._title===owner.title&&e.day===s.day&&e.time===s.time);
       if(!_planned&&!festivalEnded()&&!screeningPassed(s)){
         _addCtrl=`<button class="suggestion-add" data-action="addSuggestion" data-title="${owner.title.replace(/"/g,'&quot;')}" data-day="${s.day}" data-time="${s.time}" data-stop="1">${ICONS.plus} ${t('misc_anadir')}</button>`;
       }
@@ -244,6 +251,22 @@ export function openPelSheet(title){
   // La ciudad se dice UNA vez, en el banner de Funciones (Juan, 7 ago): repetirla
   // bajo cada sede cuando ya filtraste por ella es decir dos veces lo mismo.
   const rows=_screeningRows(allScr.map(s=>({s,owner:f})), {sinCiudad:!!_ciudadSel});
+  // ── TALLER MULTI-DÍA (is_recurring): el control es del BLOQUE ─────────────
+  // Un taller de varios días se toma entero: quien se inscribe va a todas las
+  // sesiones. Por eso las filas quedan informativas (sin botón propio, ver
+  // _screeningRows) y debajo aparece UN control que mete o saca las N de una.
+  // Misma semántica que el corto, donde añadir un corto añade su programa.
+  // Hasta ahora is_recurring solo APAGABA el botón por sesión y no ponía nada en
+  // su lugar: el único camino al Plan era Intereses + planificador.
+  let _bloqueCtrl='';
+  if(f.is_recurring&&!festivalEnded()){
+    const _ses=allScr.filter(sc=>!screeningPassed(sc)&&!sc._cancelled);
+    const _enPlan=savedAgenda&&savedAgenda.schedule.filter(e=>e._title===f.title).length;
+    if(_enPlan)
+      _bloqueCtrl=`<button class="suggestion-add blk-quitar" data-action="removeRecurringBlock" data-title="${f.title.replace(/"/g,'&quot;')}" data-stop="1">${ICONS.x} ${t('bloque_quitar',{n:_enPlan})}</button>`;
+    else if(_ses.length)
+      _bloqueCtrl=`<button class="suggestion-add blk-add" data-action="addRecurringBlock" data-title="${f.title.replace(/"/g,'&quot;')}" data-stop="1">${ICONS.plus} ${t('bloque_anadir',{n:_ses.length})}</button>`;
+  }
   // Lista de cortos si es programa
   let cortosHtml='';
   if(f.is_cortos&&f.film_list?.length){
@@ -286,7 +309,7 @@ export function openPelSheet(title){
       </div>
     </div>
         ${allScr.length>0?`<div class="sec-hdr sm">${ICONS.clock} <span>${f.type==='event'?t('label_horario'):allScr.length===1?t('label_funcion'):t('label_funciones_pl')}</span>${totalFn>1&&f.type!=='event'?`<span class="count-badge cb-neutral">${allScr.length}</span>`:''}${_ciudadSel?`<span class="fn-ciudad">${_ciudadSel}</span>`:''}</div>`:''}
-    ${allScr.length>0?`<div class="pel-sheet-screenings">${rows}${_ocultas>0?`<div class="fn-otra-ciudad">${t(_ocultas===1?'fn_otra_ciudad':'fn_otras_ciudades',{n:_ocultas})}</div>`:''}</div>`:''}
+    ${allScr.length>0?`<div class="pel-sheet-screenings">${rows}${_ocultas>0?`<div class="fn-otra-ciudad">${t(_ocultas===1?'fn_otra_ciudad':'fn_otras_ciudades',{n:_ocultas})}</div>`:''}${_bloqueCtrl?`<div class="pel-sheet-bloque">${_bloqueCtrl}</div>`:''}</div>`:''}
     ${/* ORDEN: FUNCIÓN (solo día·hora·sede) → AVISOS → SINOPSIS. Todos los avisos
         viven en su banda, incluidos cancelada y reprogramada, que van PRIMERAS y
         en rojo: lo que invalida se lee antes de lo que matiza (DESIGN 8.4.6). La

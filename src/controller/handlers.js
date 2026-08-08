@@ -290,6 +290,51 @@ export function _planFixNotice(title){
   setTimeout(_scrollToSuggestions, 350);
 }
 
+// ── TALLER MULTI-DÍA: el bloque entra o sale ENTERO ──────────────────────────
+// addSuggestion NO sirve acá: antes de insertar hace filter(s._title!==title) para
+// resolver el swap de función, y con un bloque eso BORRA las sesiones ya añadidas
+// —al meter la segunda desaparecía la primera—. Por eso el conjunto entra en UN
+// solo commitPlan: el chokepoint valida un estado coherente, no un intermedio.
+//
+// REGLA DURA (Juan, 8 ago): si una sola sesión no cabe, no entra NINGUNA. Un plan
+// con «1 de 2» no es medio taller, es un plan que miente sobre un compromiso que
+// nadie tomó. Y no se desplaza nada sin permiso: un taller puede chocar con varias
+// cosas a la vez, y sacarlas de un toque es demasiado que decidir por el usuario.
+export function addRecurringBlock(title){
+  const ses=FILMS.filter(f=>f.title===title&&f.is_recurring&&f.day&&f.time&&!f._cancelled&&!screeningPassed(f));
+  if(!ses.length) return;
+  const sa=savedAgenda||{schedule:[]};
+  const otras=sa.schedule.filter(e=>e._title!==title);
+  // ¿alguna sesión choca con algo que YA está en el plan?
+  const choque=ses.map(sc=>({sc, con:otras.find(e=>e.day===sc.day&&screensConflict(e,sc))})).find(x=>x.con);
+  if(choque){
+    const{displayTitle:conDT}=parseProgramTitle(choque.con._title||'');
+    const _ds=(FESTIVAL_CONFIG[_activeFestId]||{}).dayShort||{};
+    showToast(`${ICONS.alert} ${t('bloque_no_cabe',{obra:conDT,cuando:(_ds[choque.con.day]||choque.con.day||'')+' · '+(choque.con.time||'')})}`,'warn',5000);
+    return;
+  }
+  commitPlan(a=>{const b=a||{schedule:[]};return {...b,
+    schedule: [...b.schedule.filter(e=>e._title!==title), ...ses.map(sc=>({...sc,_title:title}))]
+      .sort((x,y)=>x.day_order!==y.day_order?x.day_order-y.day_order:toMin(x.time)-toMin(y.time))
+  };});
+  saveSavedAgenda();
+  const{displayTitle:dt}=parseProgramTitle(title);
+  showToast(`${ICONS.calendar} ${dt.length>20?dt.slice(0,18)+'…':dt} · ${t('bloque_anadido',{n:ses.length})}`,'info');
+  renderAgenda();
+  if(document.getElementById('pel-sheet')?.classList.contains('open')) openPelSheet(title);
+}
+
+// Quitar SIEMPRE saca el bloque completo — desde la ficha o desde Mi Plan. Dejar
+// una sesión suelta reintroduciría el estado parcial que la regla prohíbe.
+export function removeRecurringBlock(title){
+  commitPlan(a=>{const b=a||{schedule:[]};return {...b, schedule:b.schedule.filter(e=>e._title!==title)};});
+  saveSavedAgenda();
+  const{displayTitle:dt}=parseProgramTitle(title);
+  showToast(`${ICONS.undo} ${dt.length>20?dt.slice(0,18)+'…':dt} · ${t('bloque_quitado')}`,'info');
+  renderAgenda();
+  if(document.getElementById('pel-sheet')?.classList.contains('open')) openPelSheet(title);
+}
+
 export function addSuggestion(title,day,time){
   title=normTitle(title);
   // 1. READ
