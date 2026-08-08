@@ -216,7 +216,9 @@
  "¿Cómo filmar un país en guerra?": {
   "synopsis": "Descúbrelo a través de los rushes inéditos de Juan Guillermo Garcés y el making of de las películas de Víctor Gaviria en los años noventa.",
   "requires_registration": true,
-  "poster": "/assets/ficdeh/como-filmar-un-pais-en-guerra.jpg"
+  "poster": "/assets/ficdeh/como-filmar-un-pais-en-guerra.jpg",
+  "registration_url": "https://docs.google.com/forms/d/e/1FAIpQLSfaVwhN0vUftmGRrC4EeSufi6iF0GcC625c2x2JGoUyJnpdfw/viewform",
+  "_registration_url_nota": "Formulario oficial de inscripción, entregado por el festival el 8 ago. Es ESPECÍFICO de esta actividad: el propio form se titula «Filmar un país en guerra | 13° FICDEH». NO se publica todavía porque el schema no tiene campo para el enlace de inscripción — requires_registration es booleano y ticket_url es solo para comprar entradas (decisión de Juan). Queda aquí para aplicarlo en cuanto exista el campo."
  },
  "Los frutos que dan vida: Siembra autosostenible casera": {
   "synopsis": "Aprenderás los conceptos clave sobre el manejo de semillas, preparación de la tierra y uso de abonos para propagar y mantener plántulas sanas.",

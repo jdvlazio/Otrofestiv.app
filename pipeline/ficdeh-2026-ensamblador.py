@@ -212,6 +212,12 @@ for f in sorted(funcs, key=lambda x: (x['dia'], x['hora'], x['ciudad'])):
         e.update(base)
         if a.get('requires_registration') or _d.get('requires_registration'):
             e['requires_registration'] = True
+        # El formulario de inscripción va en la FUNCIÓN (docs/SCHEMA.md §Ticketing),
+        # no en la raíz: cada actividad tiene el suyo. El de la Master Class se
+        # titula «Filmar un país en guerra», así que no es reutilizable.
+        _ru = a.get('registration_url') or ''
+        if _ru.startswith('https://'):
+            e['registration_url'] = _ru
         if not e['synopsis']: e['_pendiente'] = 'sin sinopsis en la ficha del festival'
     films_out.append(e)
 
