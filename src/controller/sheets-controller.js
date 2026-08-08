@@ -312,6 +312,18 @@ export function openPelSheet(title){
       }
       return '';
     })()}
+    ${(()=>{
+      // INSCRIPCIÓN — mismo patrón que el enlace de compra, tres decisiones heredadas:
+      // por FUNCIÓN (no del festival: el formulario de la Master Class de FICDEH se
+      // titula con el nombre de ESA actividad), validado https:// antes de pintarlo,
+      // y oculto cuando el festival terminó.
+      // NO se reusó ticket_url a propósito: «ticket es solo para comprar» (Juan). Un
+      // formulario gratuito ahí haría que la ficha dijera «Comprá tu entrada» en una
+      // actividad de entrada libre — lo contrario de lo que arregló el badge de precio.
+      const _rurl=(f.registration_url&&/^https:\/\//.test(f.registration_url))?f.registration_url:'';
+      if(!_rurl||festivalEnded()) return '';
+      return `<a class="pel-sheet-ticket-link" href="${_rurl}" target="_blank" rel="noopener">${ICONS.clipboardList} ${t('inscripcion_link')}</a>`;
+    })()}
     ${f.synopsis?`    <div class="sec-hdr sm">${ICONS.text} <span>${f.type==='event'?t('label_descripcion'):t('label_sinopsis')}</span></div>
     <div class="pel-sheet-synopsis">${locSynopsis(f).replace(/^⚠️\s*INGLÉS\s*[—-]\s*/,'')}</div>`:''}
     ${cortosHtml}
