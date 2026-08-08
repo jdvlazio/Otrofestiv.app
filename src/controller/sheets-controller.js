@@ -322,7 +322,7 @@ export function openPelSheet(title){
       // actividad de entrada libre — lo contrario de lo que arregló el badge de precio.
       const _rurl=(f.registration_url&&/^https:\/\//.test(f.registration_url))?f.registration_url:'';
       if(!_rurl||festivalEnded()) return '';
-      return `<a class="pel-sheet-ticket-link" href="${_rurl}" target="_blank" rel="noopener">${ICONS.ticket} ${t('inscripcion_link')}</a>`;
+      return `<a class="pel-sheet-ticket-link" href="${_rurl}" target="_blank" rel="noopener">${ICONS.clipboardList} ${t('inscripcion_link')}</a>`;
     })()}
     ${f.synopsis?`    <div class="sec-hdr sm">${ICONS.text} <span>${f.type==='event'?t('label_descripcion'):t('label_sinopsis')}</span></div>
     <div class="pel-sheet-synopsis">${locSynopsis(f).replace(/^⚠️\s*INGLÉS\s*[—-]\s*/,'')}</div>`:''}
