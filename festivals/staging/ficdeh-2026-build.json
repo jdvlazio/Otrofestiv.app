@@ -747,12 +747,12 @@
    "city": "Armenia",
    "address": "Cra. 23d # 11-25"
   },
-  "Aguas Fieras & Club el Camello - Medellín": {
-   "short": "Aguas Fieras & Club el Camello",
-   "lat": null,
-   "lng": null,
+  "Aguas Fieras - Medellín": {
+   "short": "Aguas Fieras",
+   "lat": 6.2097776,
+   "lng": -75.5751323,
    "city": "Medellín",
-   "address": "Cr. 45 #7-45, El Poblado"
+   "address": "Cra. 45 #7-45, El Poblado"
   },
   "Centro Cultural del Socorro - Cartagena": {
    "short": "Centro Cultural del Socorro",
@@ -8560,7 +8560,7 @@
    "event_kind": "masterclass",
    "day": "2026-08-16",
    "time": "13:00",
-   "venue": "Aguas Fieras & Club el Camello - Medellín",
+   "venue": "Aguas Fieras - Medellín",
    "day_order": 4,
    "has_qa": false,
    "is_cortos": false,
@@ -9916,7 +9916,7 @@
    "event_kind": "masterclass",
    "day": "2026-08-17",
    "time": "13:00",
-   "venue": "Aguas Fieras & Club el Camello - Medellín",
+   "venue": "Aguas Fieras - Medellín",
    "day_order": 5,
    "has_qa": false,
    "is_cortos": false,

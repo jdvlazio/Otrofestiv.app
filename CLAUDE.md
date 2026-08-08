@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `a5669e1 Merge remote-tracking branch 'origin/main' into feat/ficdeh-inscripcion-url`
+> Último commit: `c9bfe3a feat(ficdeh): el formulario de inscripción de la Master Class, publicado (#514)`
 
 ---
 
