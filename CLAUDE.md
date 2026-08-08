@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `b8fa987 feat(ficdeh): dos actividades de Medellín que faltaban, con sus pósters (#512)`
+> Último commit: `93d0117 Merge remote-tracking branch 'origin/main' into feat/ficdeh-inscripcion-url`
 
 ---
 
