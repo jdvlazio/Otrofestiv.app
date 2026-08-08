@@ -196,6 +196,11 @@ for f in sorted(funcs, key=lambda x: (x['dia'], x['hora'], x['ciudad'])):
         # Sin este dato el dominio aplicaba 90 min por defecto y el plan cabía
         # cosas imposibles detrás de una charla.
         _d = detalle(f['titulo_programacion'])
+        # Duraciones que solo constan en el póster oficial (Medellín, 7 ago).
+        _DUR_POSTER = {'¿Cómo filmar un país en guerra?': 120,   # 4:30–6:30 PM
+                       'Los frutos que dan vida: Siembra autosostenible casera': 180}  # 1–4 PM
+        if f['titulo_programacion'] in _DUR_POSTER:
+            _d = {**_d, 'duracion_min': _DUR_POSTER[f['titulo_programacion']]}
         # 180 min es lo que el festival confirmó para Medellín (charlas 2–5 PM,
         # talleres 1–4 PM); solo se usa cuando la ficha no publica su rango.
         _dur = f"{_d['duracion_min']} min" if _d.get('duracion_min') else '180 min'
@@ -218,8 +223,13 @@ compartidos = {k: v for k, v in slots.items() if v > 1}
 # a las 18 charlas por igual. Repetido 18 veces en la grilla es peor que nada —
 # para eso está el póster editorial por tipo (eventPosterLabel). Se detecta por
 # repetición, no por lista negra, para que el próximo genérico también caiga.
-_uso = collections.Counter(e.get('poster') for e in films_out
-                           if e.get('type') == 'event' and e.get('poster'))
+# Se cuentan TÍTULOS distintos, no funciones: una actividad que se repite varios
+# días (Los frutos que dan vida, 16 y 17 AGO) usa su póster dos veces sin que
+# eso lo haga genérico. Contando funciones se le borraba el póster propio.
+_uso = collections.Counter()
+for _p, _t in {(e.get('poster'), e.get('title')) for e in films_out
+               if e.get('type') == 'event' and e.get('poster')}:
+    _uso[_p] += 1
 _generico = {p for p, n in _uso.items() if n > 1}
 for e in films_out:
     if e.get('poster') in _generico:
