@@ -2428,16 +2428,17 @@ except Exception as _e:
 # es el dueño único; quien emita la clase .pel-sheet-screening a mano la re-derivó.
 check = 'screening-row-single-owner'
 try:
-    import glob as _glob
+    import glob as _glob, re as _re
     _off = []
     for _sf in _glob.glob('src/**/*.js', recursive=True):
         _c = open(_sf, encoding='utf-8').read()
         for _i, _ln in enumerate(_c.splitlines(), 1):
             _t = _ln.strip()
-            if _t.startswith('//') or 'class="pel-sheet-screening' not in _ln:
-                continue
-            # el dueño único es la única línea autorizada a emitirla
-            if _sf.replace('\\', '/').endswith('controller/sheets-controller.js') and '_screeningRows' in _c[:_c.index(_ln)][-2000:]:
+            # OJO: `pel-sheet-screenings` (plural) es el CONTENEDOR, no la fila —
+            # el patrón antiguo, por prefijo, los confundía y solo pasaba por una
+            # heurística de proximidad que se rompía al mover código. Se exige que
+            # la clase termine ahí (comilla, espacio o interpolación).
+            if _t.startswith('//') or not _re.search(r'class="pel-sheet-screening(?![a-z-])', _ln):
                 continue
             _off.append(f"{_sf}:{_i}")
     if len(_off) > 1:
@@ -2936,8 +2937,8 @@ try:
     _ALLOW = {
         'src/view/agenda.js': 1681,  # +9: kind 'ciudad' en el detalle de conflicto (6 ago)
         'src/main.js': 1662,  # +46 total: _morphOpen a FLIP — clon de la card compuesta, radio contra-escalado, encuadre del destino (29 jul)
-        'src/i18n/i18n.js': 1448,  # +12: sheet de ciudad + badge CON BOLETA ×3 locales (6 ago)
-        'src/controller/sheets-controller.js': 1528,  # +4: precio en AVISOS sigue a ticketBadgeTarget (6 ago)  # +39: la ficha de corto hereda la función de su(s) programa(s) — _screeningRows (dueño único, antes inline en openPelSheet), _findParentPrograms, _cortoScreeningPairs y _noticeRows y _avisosBand (banda AVISOS: dueño único de lo que MATIZA la función, con la evidencia de vocabulario) (30 jul 2026)
+        'src/i18n/i18n.js': 1454,  # +12: sheet de ciudad + badge CON BOLETA ×3 locales (6 ago)
+        'src/controller/sheets-controller.js': 1549,  # +14: la ficha hereda el contexto de ciudad — filtra funciones, la nombra una vez y avisa lo que quedó fuera (7 ago)  # +7: el aviso parcial nombra la CIUDAD cuando la obra recorre varias (FICDEH, 43 obras) (7 ago)  # +4: precio en AVISOS sigue a ticketBadgeTarget (6 ago)  # +39: la ficha de corto hereda la función de su(s) programa(s) — _screeningRows (dueño único, antes inline en openPelSheet), _findParentPrograms, _cortoScreeningPairs y _noticeRows y _avisosBand (banda AVISOS: dueño único de lo que MATIZA la función, con la evidencia de vocabulario) (30 jul 2026)
         'src/controller/handlers.js': 979,  # +15: acciones del sheet de ciudad (7 ago)  # +20: anclaje de función en toggleWL, simétrico al quitar (29 jul)
     }
     _over = []
