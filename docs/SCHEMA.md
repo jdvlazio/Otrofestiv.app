@@ -22,6 +22,7 @@ Documento normativo. Toda discrepancia entre este archivo y el código es un bug
   "prioLimit": 5,
   "ticket_url": "string — URL https:// de entradas (opcional)",
   "ticketing_model": "string — 'paid' | 'mixed' (obligatorio si ticket_url existe)",
+  "// registration_url": "va en la FUNCIÓN, no en la raíz — ver § Ticketing",
   "sharedSlotIsOneScreening": "bool — opt-in: dos obras en el mismo día+hora+sala son UNA función",
   "films": [ ... ]
 }
@@ -165,6 +166,17 @@ en el plan guardado—. La ficha lo anuncia con `meta_funcion_incluye`.
 **Ticketing (campos opcionales del root):**
 - `ticket_url` — URL `https://` de la página oficial de entradas. Si existe, el sheet de función muestra un bloque con link (oculto cuando `festivalEnded()`). Ausencia de `ticket_url` = festival gratuito (no muestra nada).
 - `ticketing_model` — `"paid"` (todo pago, ej. Tribeca → link "Comprá tu entrada →") o `"mixed"` (pago + gratis, ej. Olhar → meta-banner "Funciones pagas y gratuitas"). **Obligatorio si `ticket_url` existe.**
+- `registration_url` — URL `https://` del formulario de inscripción. **Va en la
+  FUNCIÓN** (`films[].registration_url` o `screenings[].registration_url`), no en
+  la raíz: el formulario es de esa actividad, no del festival —el de la Master
+  Class de FICDEH 2026 se titula «Filmar un país en guerra | 13° FICDEH»—. Si
+  existe, la ficha muestra un enlace «Inscribite →» junto al aviso INSCRIPCIÓN;
+  si no, no se muestra nada. Mismas tres reglas que `ticket_url`: por función,
+  validado `https://`, oculto cuando `festivalEnded()`.
+  **No usar `ticket_url` para esto:** el ticket es solo para COMPRAR, y un
+  formulario gratuito ahí haría que la ficha dijera «Comprá tu entrada» en una
+  actividad de entrada libre. Complementa a `requires_registration` (el booleano
+  dice que hace falta; este dice dónde — con 15 cupos por taller, ese es el dato).
 - En festivales `"mixed"`, marcar funciones gratuitas con `is_free: true` por screening (ver Screenings). El card muestra badge "GRATIS"; el sheet oculta el bloque solo si **todas** las funciones del film son gratuitas.
 - Ambos campos se absorben vía el whitelist `_cfgFields` en `loader.js` — un campo root nuevo que no esté ahí se descarta en silencio.
 
