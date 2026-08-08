@@ -415,9 +415,16 @@ else:
     # Extract festival IDs
     fest_ids = re.findall(r"'([a-z0-9]+)':\s*\{", fc_block)
     fc_errors = 0
+    # La entrada se lee ENTERA, hasta donde empieza el siguiente festival. Antes se
+    # tomaban 400 caracteres fijos: un comentario dentro de la entrada empujaba los
+    # campos fuera de la ventana y el guardián los reportaba como faltantes aunque
+    # estuvieran ahí (pasó al declarar `priority` en finca2026, 8 ago 2026).
+    _starts = {fid: fc_block.find(f"'{fid}':") for fid in fest_ids}
+    _orden = sorted(_starts.values())
     for fest_id in fest_ids:
-        entry_start = fc_block.find(f"'{fest_id}':")
-        entry       = fc_block[entry_start:entry_start+400]
+        entry_start = _starts[fest_id]
+        _sig = next((x for x in _orden if x > entry_start), len(fc_block))
+        entry       = fc_block[entry_start:_sig]
         missing = [k for k in REQUIRED_BOOTSTRAP_FIELDS
                    if k+':' not in entry and k+' :' not in entry]
         if missing:

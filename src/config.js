@@ -351,6 +351,10 @@ export const FESTIVAL_CONFIG={
     films:null,posters:null,lbSlugs:{}
   },
   'finca2026': {
+    // priority: alianza OFICIAL — va primero entre los de su tier aunque comparta
+    // fechas con FICDEH (alianza parcial). Sin este campo el orden lo decidían 30
+    // minutos de diferencia en festivalEndStr, que no es una decisión.
+    priority:1,
     name:'FINCA',fullName:'FINCA — Festival Internacional de Cine Ambiental',shortName:'FINCA',
     city:'Buenos Aires',country:'AR',
     dates:'12–19 AGO',dates_en:'AUG 12–19',year:2026,timezoneOffset:'-03:00',
