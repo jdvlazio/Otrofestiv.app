@@ -3,11 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-<<<<<<< HEAD
-> Último commit: `93d0117 Merge remote-tracking branch 'origin/main' into feat/ficdeh-inscripcion-url`
-=======
-> Último commit: `a1d0e01 feat(actividades): registration_url — la ficha dice DÓNDE inscribirse`
->>>>>>> origin/main
+> Último commit: `a5669e1 Merge remote-tracking branch 'origin/main' into feat/ficdeh-inscripcion-url`
 
 ---
 
