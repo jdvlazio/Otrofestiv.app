@@ -333,6 +333,22 @@ export const FESTIVAL_CONFIG={
   // a propósito: el splash pinta «CIUDAD, PAÍS» y con ambos daría «COLOMBIA,
   // COLOMBIA». Además, al no coincidir con ninguna sede, el badge
   // venue-municipio y el filtro por ciudad se activan en las 11.
+  'ficma2026': {
+    name:'FICMA',fullName:'FICMA — Feria Internacional de Cine de Manizales',shortName:'FICMA',
+    city:'Manizales',country:'CO',
+    dates:'10–17 AGO',dates_en:'AUG 10–17',year:2026,timezoneOffset:'-05:00',
+    keyArt:'/assets/keyart/ficma2026.jpg',
+    storageKey:'ficma2026_',festivalStartStr:'2026-08-10T00:00:00',festivalEndStr:'2026-08-17T23:59:00',
+    festivalDates:{'2026-08-10':'2026-08-10','2026-08-11':'2026-08-11','2026-08-12':'2026-08-12','2026-08-13':'2026-08-13','2026-08-14':'2026-08-14','2026-08-15':'2026-08-15','2026-08-16':'2026-08-16','2026-08-17':'2026-08-17'},
+    days:[{k:'2026-08-10',d:10,lbl:'LUN'},{k:'2026-08-11',d:11,lbl:'MAR'},{k:'2026-08-12',d:12,lbl:'MIÉ'},{k:'2026-08-13',d:13,lbl:'JUE'},{k:'2026-08-14',d:14,lbl:'VIE'},{k:'2026-08-15',d:15,lbl:'SÁB'},{k:'2026-08-16',d:16,lbl:'DOM'},{k:'2026-08-17',d:17,lbl:'LUN'}],
+    dayKeys:['2026-08-10','2026-08-11','2026-08-12','2026-08-13','2026-08-14','2026-08-15','2026-08-16','2026-08-17'],
+    dayShort:{'2026-08-10':'LUN 10','2026-08-11':'MAR 11','2026-08-12':'MIÉ 12','2026-08-13':'JUE 13','2026-08-14':'VIE 14','2026-08-15':'SÁB 15','2026-08-16':'DOM 16','2026-08-17':'LUN 17'},
+    dayShort_en:{'2026-08-10':'MON 10','2026-08-11':'TUE 11','2026-08-12':'WED 12','2026-08-13':'THU 13','2026-08-14':'FRI 14','2026-08-15':'SAT 15','2026-08-16':'SUN 16','2026-08-17':'MON 17'},
+    dayLong:{'2026-08-10':'Lunes 10 de agosto','2026-08-11':'Martes 11 de agosto','2026-08-12':'Miércoles 12 de agosto','2026-08-13':'Jueves 13 de agosto','2026-08-14':'Viernes 14 de agosto','2026-08-15':'Sábado 15 de agosto','2026-08-16':'Domingo 16 de agosto','2026-08-17':'Lunes 17 de agosto'},
+    prioLimit:4,
+    tagline:'El jardín de las cosas perdidas', // lema de esta edición, impreso en cada página del programa
+    films:null,posters:null,lbSlugs:{}
+  },
   'ficdeh2026': {
     name:'FICDEH',fullName:'FICDEH — Festival Internacional de Cine por los Derechos Humanos',shortName:'FICDEH',
     city:'Colombia',country:'',
@@ -545,6 +561,22 @@ export const SECTION_ARCHETYPES = {
   '🎟️ Invitadas': 'Especiales / Eventos',
   '💬 Charlas que Unen': 'Charlas / Industria',
   '🛠️ Formación': 'Charlas / Industria',
+  // FICMA 17 — programa por TEMAS de coleccionismo y ciudad, no por competencias.
+  // Las dos de estrenos son la cabecera y llevan colores distintos entre sí; las
+  // temáticas comparten «Perspectivas», salvo antigüedades y numismática, que
+  // miran al pasado y toman el color de retrospectiva.
+  '🎬 Estrenos Nacionales': 'Competencia',
+  '🌍 Estrenos Internacionales': 'Muestra / País',
+  '🕊️ En alianza con el FICDEH': 'Especiales / Eventos',
+  '🎨 Arte': 'Perspectivas / Miradas',
+  '🥫 Arte Pop': 'Perspectivas / Miradas',
+  '💥 Cómic': 'Perspectivas / Miradas',
+  '🎵 Música': 'Perspectivas / Miradas',
+  '🏗️ Arquitectura': 'Perspectivas / Miradas',
+  '🕰️ Antigüedades': 'Retrospectiva / Tributo',
+  '🪙 Numismática': 'Retrospectiva / Tributo',
+  '🌱 Medio Ambiente': 'Perspectivas / Miradas',
+  '🏛️ Red de Museos': 'Especiales / Eventos',
 };
 
 // mergeFestivalSections(sections) — DATA-DRIVEN (P2.2): un festival declara sus

@@ -27,3 +27,10 @@ test-results*.json
 
 # Claude Code (config local de harness, no del proyecto)
 .claude/
+
+# Fuentes originales de cada festival (PDF del programa, Excel del organizador,
+# afiches y pósters oficiales). Viven CON el proyecto y no en el escritorio —el
+# escritorio es de tránsito— pero fuera de git: son decenas de MB por festival y
+# el repo sirve GitHub Pages. Lo que se deriva de ellas sí se versiona, en
+# festivals/staging/. Ver pipeline/PROTOCOLO.md § Fuentes originales.
+fuentes/

@@ -18,7 +18,7 @@ y — que es la única forma de recuperar el orden de lectura real.
 import json, os, re, subprocess, collections
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-PDF = os.path.expanduser('~/Desktop/FICDEH_PROGRAMACIÓN_MEDELLÍN_2026.pdf')
+PDF = f'{REPO}/fuentes/ficdeh-2026/FICDEH_PROGRAMACIÓN_MEDELLÍN_2026.pdf'
 OUT = f'{REPO}/festivals/staging/ficdeh-2026-medellin-pdf.json'
 CORTE_X = 500          # frontera entre la columna izquierda y la derecha
 # Una dirección colombiana: «Cra. 45 # 53 - 24», «Cl. 51 # 36 - 66», «Carrera 22 - Calle 67»

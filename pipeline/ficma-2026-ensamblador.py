@@ -1,0 +1,280 @@
+# -*- coding: utf-8 -*-
+"""Ensambla FICMA 17 → festivals/ficma-2026.json
+
+Junta las tres fuentes que produjeron los pasos anteriores:
+
+  · ficma-2026-crudo.json    — el PDF, leído con OCR (Vision) y parseado. Manda
+                               sobre programación: día, hora, sede, sala, sección,
+                               título, director, país, duración, año y Q&A.
+  · ficma-2026-tmdb.json     — enriquecimiento VERIFICADO (director + año/duración).
+                               Aporta póster, sinopsis y géneros. No manda sobre
+                               ningún dato que el PDF publique: si el festival dice
+                               86 min, van 86 aunque TMDB diga 88.
+  · ficma-2026-venues-geo.json — coordenadas. Las `_prec: manual` son de Juan
+                               contra Google Maps y no se tocan.
+
+El PDF es la autoridad porque es el programa del festival; TMDB es una fuente de
+ficha, no de programación. Esa jerarquía evita que un dato de catálogo mueva una
+función, que es como se rompió Medellín en FICDEH.
+"""
+import json, os, re, shutil, unicodedata, collections, datetime
+
+REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+ST = f'{REPO}/festivals/staging'
+OUT = f'{REPO}/festivals/ficma-2026.json'
+CIUDAD = 'Manizales'
+
+# ── secciones ────────────────────────────────────────────────────────────────
+# El NOMBRE va tal cual lo escribe el festival (regla permanente de onboarding),
+# con UNA excepción decidida por Juan el 8 ago: «EN ALIANZA CON EL FESTIVAL DE
+# DERECHOS HUMANOS» se acorta a «En alianza con el FICDEH» — el nombre completo
+# desborda el chip de sección y FICDEH es como se conoce al festival aliado.
+# lo único nuestro son el emoji, el inglés y el arquetipo. El PDF las imprime en
+# versalitas — eso es tipografía, no el nombre, así que van en capitalización
+# normal. FICMA no programa por competencias sino por TEMAS de coleccionismo y
+# ciudad, y los emojis siguen esa lógica.
+SECCIONES = {
+# El arquetipo NO es una etiqueta libre: es la clave del color (ARCHETYPE_COLORS,
+# 9 valores cerrados) y un gate lo exige. Las dos secciones de estrenos son la
+# cabecera del festival y llevan colores distintos entre sí; las temáticas
+# comparten «Perspectivas», salvo las dos que miran al pasado —antigüedades y
+# numismática—, que van con el color de retrospectiva.
+    'ESTRENOS NACIONALES':        ('🎬 Estrenos Nacionales', 'National Premieres', 'Competencia', 1),
+    'ESTRENOS INTERNACIONALES':   ('🌍 Estrenos Internacionales', 'International Premieres', 'Muestra / País', 2),
+    'EN ALIANZA CON EL FESTIVAL DE DERECHOS HUMANOS':
+        ('🕊️ En alianza con el FICDEH',
+         'In Partnership with FICDEH', 'Especiales / Eventos', 3),
+    'ARTE':                       ('🎨 Arte', 'Art', 'Perspectivas / Miradas', 4),
+    'ARTE POP':                   ('🥫 Arte Pop', 'Pop Art', 'Perspectivas / Miradas', 5),
+    'CÓMIC':                      ('💥 Cómic', 'Comics', 'Perspectivas / Miradas', 6),
+    'MÚSICA':                     ('🎵 Música', 'Music', 'Perspectivas / Miradas', 7),
+    'ARQUITECTURA':               ('🏗️ Arquitectura', 'Architecture', 'Perspectivas / Miradas', 8),
+    'ANTIGÜEDADES':               ('🕰️ Antigüedades', 'Antiques', 'Retrospectiva / Tributo', 9),
+    'NUMISMÁTICA':                ('🪙 Numismática', 'Numismatics', 'Retrospectiva / Tributo', 10),
+    'MEDIO AMBIENTE':             ('🌱 Medio Ambiente', 'Environment', 'Perspectivas / Miradas', 11),
+    'RED DE MUSEOS':              ('🏛️ Red de Museos', 'Museum Network', 'Especiales / Eventos', 12),
+}
+
+BANDERAS = {
+    'colombia': '🇨🇴', 'argentina': '🇦🇷', 'brasil': '🇧🇷', 'chile': '🇨🇱', 'mexico': '🇲🇽',
+    'peru': '🇵🇪', 'panama': '🇵🇦', 'espana': '🇪🇸', 'francia': '🇫🇷', 'italia': '🇮🇹',
+    'alemania': '🇩🇪', 'reino unido': '🇬🇧', 'estados unidos': '🇺🇸', 'canada': '🇨🇦',
+    'japon': '🇯🇵', 'china': '🇨🇳', 'iran': '🇮🇷', 'india': '🇮🇳', 'rusia': '🇷🇺',
+    'polonia': '🇵🇱', 'dinamarca': '🇩🇰', 'suecia': '🇸🇪', 'noruega': '🇳🇴', 'irlanda': '🇮🇪',
+    'belgica': '🇧🇪', 'paises bajos': '🇳🇱', 'portugal': '🇵🇹', 'suiza': '🇨🇭',
+    'macedonia del norte': '🇲🇰', 'nueva zelanda': '🇳🇿', 'australia': '🇦🇺',
+    'grecia': '🇬🇷', 'turquia': '🇹🇷', 'austria': '🇦🇹', 'luxemburgo': '🇱🇺',
+}
+DIA_ES = ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo']
+DIA_AB = ['LUN', 'MAR', 'MIÉ', 'JUE', 'VIE', 'SÁB', 'DOM']
+DIA_EN = ['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN']
+
+
+# ── correcciones y material que el PDF no da ─────────────────────────────────
+# Títulos que el OCR o el propio programa escriben mal. Se corrigen contra el
+# AFICHE OFICIAL, que es la fuente más fuerte sobre cómo se llama una obra.
+TITULO_OFICIAL = {
+    # El programa dice «AA95»; el afiche dice «AA 965» — es el vuelo 965 de
+    # American Airlines, el que cayó en el Valle en 1995. Al OCR se le fue un dígito.
+    'AA95 un rescate imposible': 'AA965 un rescate imposible',
+    # El afiche dice «Puntos de fuga» (plural) y da el internacional. Con el
+    # título correcto la película SÍ aparece en TMDB (id 1525164).
+    'Punto de Fuga': 'Puntos de fuga',
+}
+TITULO_INTERNACIONAL = {'Punto de Fuga': 'Vanishing Points'}
+
+# EXCEPCIÓN a «el PDF manda»: duraciones donde el programa se equivocó y Juan
+# resolvió a favor de la oficial (8 ago). Va como tabla y no como «si TMDB
+# difiere, gana TMDB»: esa regla automática movería 30 funciones sin que nadie
+# lo decida, y en un festival la duración programada suele ser la buena.
+DURACION_OFICIAL = {
+    'Punto de Fuga': 72,     # el programa dice 90; TMDB y la distribución, 72
+}
+TMDB_MANUAL = {'Punto de Fuga': 1525164}
+
+# Pósters que no salieron de TMDB. `editorial` marca un still 16:9: la app lo
+# enmarca sin recortarlo en vez de forzarlo dentro de un slot 2:3
+# (_isEditorialPoster → posterModel). `custom` es un cartel vertical oficial.
+POSTER_OFICIAL = {
+    'AA95 un rescate imposible':            ('aa965-un-rescate-imposible.jpg', 'custom'),
+    'Cuando la palabra se hace búsqueda: El eco de sus voces':
+        ('cuando-la-palabra-se-hace-b-squeda-el-eco-de-sus-voces.jpg', 'custom'),
+    'Punto de Fuga':                        ('puntos-de-fuga.jpg', 'custom'),
+    'Cómo limpiar un espejo':               ('c-mo-limpiar-un-espejo.jpg', 'editorial'),
+    # Heredados de FICDEH: son las MISMAS obras de la sección en alianza, con
+    # póster y sinopsis oficiales que el festival aliado ya nos dio.
+    'Desierto verde':                       ('desierto-verde.jpg', 'custom'),
+    'Notas sobre un destierro':             ('notas-sobre-un-destierro.jpg', 'custom'),
+}
+HEREDA_SINOPSIS_FICDEH = ('Desierto verde', 'Notas sobre un destierro')
+
+
+def sinacento(s):
+    return ''.join(c for c in unicodedata.normalize('NFD', (s or '').lower())
+                   if unicodedata.category(c) != 'Mn').strip()
+
+
+def banderas(pais):
+    out = [BANDERAS[k] for p in re.split(r'[,/]| y ', pais or '')
+           if (k := sinacento(p)) in BANDERAS]
+    return ''.join(dict.fromkeys(out))
+
+
+def slug(t):
+    return ''.join(c if c.isalnum() else '-' for c in t.lower()).strip('-')[:60]
+
+
+def main():
+    crudo = json.load(open(f'{ST}/ficma-2026-crudo.json', encoding='utf-8'))
+    tmdb = json.load(open(f'{ST}/ficma-2026-tmdb.json', encoding='utf-8'))['verificadas']
+    geo = json.load(open(f'{ST}/ficma-2026-venues-geo.json', encoding='utf-8'))
+    funcs = crudo['funciones']
+
+    dias = sorted({f['dia'] for f in funcs})
+    fecha = lambda d: datetime.date.fromisoformat(d)
+
+    # ── venues ───────────────────────────────────────────────────────────────
+    # La clave lleva la ciudad como en el resto de festivales, aunque FICMA sea
+    # de una sola: es el formato que el loader y las fichas esperan.
+    venues, sin_ubicar = {}, []
+    for f in funcs:
+        k = f'{f["sede"]} - {CIUDAD}'
+        if k in venues:
+            continue
+        g = geo.get(f['sede'], {})
+        if not g.get('lat'):
+            sin_ubicar.append(f['sede'])
+        venues[k] = {'short': f['sede'], 'lat': g.get('lat'), 'lng': g.get('lng'),
+                     'city': CIUDAD, 'address': ''}
+        if g.get('_prec'):
+            venues[k]['_prec'] = g['_prec']
+
+    # ── films ────────────────────────────────────────────────────────────────
+    # Sinopsis oficiales del catálogo de FICDEH para las obras compartidas.
+    ficdeh = {x['title']: x for x in json.load(
+        open(f'{REPO}/festivals/ficdeh-2026.json', encoding='utf-8'))['films']}
+
+    films, sin_tmdb = [], []
+    for f in funcs:
+        t = tmdb.get(f['titulo'], {})
+        if not t:
+            sin_tmdb.append(f['titulo'])
+        sec = SECCIONES.get(f['seccion'])
+        if not sec:
+            raise SystemExit(f'sección sin declarar: «{f["seccion"]}» (pág {f["pagina"]})')
+        e = {
+            'title': TITULO_OFICIAL.get(f['titulo'], f['titulo']),
+            'director': f['director'],
+            'year': str(f['anio']),
+            # La duración es la del PDF, SIEMPRE: es la que el festival programó.
+            # TMDB difiere hasta en 3 min y mover eso corre el fin de la función.
+            'duration': f'{DURACION_OFICIAL.get(f["titulo"], f["duracion_min"])} min',
+            'country': f['pais'],
+            'flags': banderas(f['pais']),
+            'section': sec[0],
+            'day': f['dia'],
+            'time': f['hora'],
+            'venue': f'{f["sede"]} - {CIUDAD}',
+            'has_qa': f['has_qa'],
+            '_src': 'FICMA 17 - PROGRAMACIÓN.pdf (OCR) · ' + f['pagina'],
+        }
+        if f.get('sala'):
+            e['sala'] = f['sala']
+        if f.get('ciclo'):
+            # El ciclo es la marca del festival («Cine al barrio»), no la sede.
+            e['cycle'] = f['ciclo']
+        if t:
+            e['tmdb_id'] = t['tmdb_id']
+            if (g := (t.get('generos') or [''])[0]):
+                e['genre'] = g
+            # Nunca poster:'' — el gate [poster-empty-film] lo bloquea y con razón:
+            # un string vacío es un póster roto, la ausencia es un dato honesto.
+            if t.get('poster_path'):
+                e['poster'] = f'/assets/ficma/{slug(f["titulo"])}.jpg'
+                e['posterSource'] = 'tmdb'
+            if t.get('synopsis_es'):
+                e['synopsis'], e['synopsis_lang'] = t['synopsis_es'], 'es'
+            elif t.get('synopsis_en'):
+                e['synopsis'], e['synopsis_lang'] = t['synopsis_en'], 'en'
+            if t.get('synopsis_en'):
+                e['synopsis_en'] = t['synopsis_en']
+            if t.get('titulo_original') and t['titulo_original'] != f['titulo']:
+                e['original_title'] = t['titulo_original']
+        if f['titulo'] in TITULO_INTERNACIONAL:
+            e['original_title'] = TITULO_INTERNACIONAL[f['titulo']]
+        if f['titulo'] in TMDB_MANUAL:
+            e['tmdb_id'] = TMDB_MANUAL[f['titulo']]
+        if f['titulo'] in POSTER_OFICIAL:
+            arch, tipo = POSTER_OFICIAL[f['titulo']]
+            e['poster'], e['posterSource'] = f'/assets/ficma/{arch}', tipo
+        if f['titulo'] in HEREDA_SINOPSIS_FICDEH and not e.get('synopsis'):
+            src = ficdeh.get(f['titulo'], {})
+            if src.get('synopsis'):
+                e['synopsis'] = src['synopsis']
+                e['synopsis_lang'] = src.get('synopsis_lang', 'es')
+                e['_inherited'] = 'sinopsis y póster del catálogo de FICDEH (misma obra)'
+                if src.get('synopsis_en'):
+                    e['synopsis_en'] = src['synopsis_en']
+        if not e.get('synopsis'):
+            e['_pendiente'] = 'sin sinopsis'
+        films.append(e)
+
+    films.sort(key=lambda x: (x['day'], x['time'], x['title']))
+    # day_order — posición dentro del día. Sin él la vista por días ordena por
+    # inserción y el programa sale desordenado.
+    for dia in dias:
+        for i, x in enumerate([f for f in films if f['day'] == dia]):
+            x['day_order'] = i
+
+    d = {
+        '_provenance': {
+            'programacion': 'FICMA 17 - PROGRAMACIÓN.pdf — 87 páginas de imagen (son los posts de '
+                            'Instagram exportados desde un iPhone), leídas con OCR de Vision y '
+                            'parseadas por la plantilla fija: una página, una función.',
+            'catalogo': 'TMDB, emparejado con VERIFICACIÓN: director + (año ±1 o duración ±3 min). '
+                        'Lo que no verifica no se acepta.',
+            'sedes': 'Nominatim con verificación de tipo de lugar; las marcadas _prec:manual las '
+                     'ubicó Juan en Google Maps y mandan sobre las automáticas.',
+            'acceso': 'Entrada libre a todo el festival (confirmado por Juan, 8 ago 2026).',
+        },
+        'name': 'FICMA', 'shortName': 'FICMA',
+        'fullName': 'Feria Internacional de Cine de Manizales',
+        'city': CIUDAD, 'country': 'CO',
+        'dates': '10–17 AGO', 'dates_en': 'AUG 10–17', 'year': 2026,
+        'timezoneOffset': '-05:00', 'storageKey': 'ficma2026_',
+        'festivalStartStr': f'{dias[0]}T00:00:00', 'festivalEndStr': f'{dias[-1]}T23:59:00',
+        'festivalDates': {x: x for x in dias},
+        'days': [{'k': x, 'd': fecha(x).day, 'lbl': DIA_AB[fecha(x).weekday()]} for x in dias],
+        'dayKeys': dias,
+        'dayShort': {x: f'{DIA_AB[fecha(x).weekday()]} {fecha(x).day}' for x in dias},
+        'dayShort_en': {x: f'{DIA_EN[fecha(x).weekday()]} {fecha(x).day}' for x in dias},
+        'dayLong': {x: f'{DIA_ES[fecha(x).weekday()]} {fecha(x).day} de agosto' for x in dias},
+        'prioLimit': 4,
+        # Tres funciones del festival juntan un corto y un largo bajo una sola
+        # cabecera de horario. Confirmado con Juan (8 ago). El flag es de raíz:
+        # también alcanza al bloque del jueves 13, que espera confirmación del
+        # festival — y si resultara ser dos funciones distintas, se corrige el
+        # dato, no el modelo.
+        'sharedSlotIsOneScreening': True,
+        'sections': {v[0]: {'en': v[1], 'archetype': v[2], 'order': v[3]}
+                     for v in sorted(SECCIONES.values(), key=lambda x: x[3])},
+        'venues': venues,
+        'films': films,
+    }
+    json.dump(d, open(OUT, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+
+    print(f'{OUT}  {os.path.getsize(OUT)//1024} KB')
+    print(f'  films {len(films)} · obras {len({x["title"] for x in films})} · '
+          f'venues {len(venues)} · secciones {len(SECCIONES)} · días {len(dias)}')
+    print(f'  con póster {sum(1 for x in films if x.get("poster"))} · '
+          f'con sinopsis {sum(1 for x in films if x.get("synopsis"))} · '
+          f'con Q&A {sum(1 for x in films if x["has_qa"])}')
+    print(f'  sin ubicar {sorted(set(sin_ubicar))}')
+    print(f'  sin ficha TMDB {len(set(sin_tmdb))}: {sorted(set(sin_tmdb))}')
+    slots = [k for k, n in collections.Counter(
+        (x['day'], x['time'], x['venue'], x.get('sala', '')) for x in films).items() if n > 1]
+    print(f'  slots compartidos {len(slots)}')
+
+
+if __name__ == '__main__':
+    main()
