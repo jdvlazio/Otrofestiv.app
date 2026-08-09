@@ -90,8 +90,14 @@ def main():
             ok += 1
             print(f'[{i:2}] OK  {s[:44]:46} {elegido["_match"][:48]}', flush=True)
         else:
+            # `_todo`, NO `_nota`: son dos cosas distintas y llamarlas igual
+            # costó caro. Esto es un PENDIENTE de trabajo y se queda en el
+            # sidecar. `_nota` significa otra cosa —«esta sede se revisó a mano
+            # y es real»— y el guardián [sedes-apiladas] la lee en el JSON
+            # publicado para dar por cerrado el aviso. Con el mismo nombre, un
+            # pendiente silenciaba el aviso de una sede sin revisar.
             geo[s] = {**prev, 'n': meta['n'], '_prec': 'sin verificar',
-                      '_nota': 'buscar a mano (sedes-html.py genera la página)'}
+                      '_todo': 'buscar a mano (sedes-html.py genera la página)'}
             falta += 1
             print(f'[{i:2}] ??  {s[:44]}', flush=True)
         time.sleep(1.1)                            # cortesía con Nominatim
