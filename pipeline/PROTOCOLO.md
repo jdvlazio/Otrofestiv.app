@@ -331,3 +331,36 @@ FICMA, por ejemplo, guarda su OCR completo en
 Si clonás el repo en otra máquina, `fuentes/` llega vacío y los lectores de
 fuente original no corren; todo lo demás sí. Pedile los originales a quien montó
 el festival.
+
+---
+
+## El formato intermedio — un shape, N lectores, M herramientas (9 ago 2026)
+
+Los PARSERS son desechables: cada fuente es única (un PDF de imágenes, un Excel
+con filas rojas, un sitio Next.js) y generalizarlos es capa sobre capa. Las
+HERRAMIENTAS son permanentes: el cruce TMDB verificado, Letterboxd por tmdb_id,
+el geocoding con verificación de tipo, la página de sedes.
+
+Lo que las une es UN formato. Todo parser, venga de donde venga, escribe:
+
+```json
+{ "_provenance": { "fuente": "…", "capturado": "AAAA-MM-DD" },
+  "funciones": [ { "titulo": "…", "dia": "AAAA-MM-DD", "hora": "HH:MM",
+                   "sede": "…", "sala": "", "ciudad": "",
+                   "director": "…", "pais": "…", "anio": 2026,
+                   "duracion_min": 90, "has_qa": false,
+                   "acceso": "", "en_app": true } ] }
+```
+
+y las herramientas genéricas leen eso, nunca el JSON propio de un festival.
+`capturado` es obligatorio: sin fecha no se sabe si un sidecar está viejo —
+así se escondió el bug de las 48 salas de FICDEH.
+
+Las funciones comunes (norm, hora24, rango_horario, curl_get, tmdb_get,
+director_coincide, ficha_verifica, sede_sala, dias_config, banderas,
+provenance) viven en **`pipeline/lib.py`** — antes reescritas por triplicado.
+`python3 pipeline/lib.py` corre su selftest: los casos reales que cada una
+resolvió, incluidos los que costaron un bug.
+
+Los pipelines de FICDEH y FICMA (festivales en vivo) NO se migran: la lib
+nace para los festivales siguientes. Primer banco de pruebas: SiembraFest.
