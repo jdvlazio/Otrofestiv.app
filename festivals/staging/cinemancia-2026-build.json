@@ -231,79 +231,90 @@
   "Centro Colombo Americano - Sede centro - Medellín": {
    "short": "Centro Colombo Americano - Sede centro",
    "city": "Medellín",
-   "lat": null,
-   "lng": null,
-   "address": ""
+   "lat": 6.2497341,
+   "lng": -75.5627237,
+   "address": "",
+   "_prec": "heredada 2025"
   },
   "La Capilla del Claustro Comfama - Medellín": {
    "short": "La Capilla del Claustro Comfama",
    "city": "Medellín",
-   "lat": null,
-   "lng": null,
-   "address": ""
+   "lat": 6.24575,
+   "lng": -75.56372,
+   "address": "",
+   "_prec": "heredada 2025"
   },
   "Teatro Caribe - Itagüí": {
    "short": "Teatro Caribe",
    "city": "Itagüí",
-   "lat": null,
-   "lng": null,
-   "address": ""
+   "lat": 6.1728219,
+   "lng": -75.6076087,
+   "address": "",
+   "_prec": "heredada 2025"
   },
   "Antimateria Libros y Café - Medellín": {
    "short": "Antimateria Libros y Café",
    "city": "Medellín",
-   "lat": null,
-   "lng": null,
-   "address": ""
+   "lat": 6.20062,
+   "lng": -75.56368,
+   "address": "",
+   "_prec": "heredada 2025"
   },
   "Casa Municipal de la Cultura - Caldas": {
    "short": "Casa Municipal de la Cultura",
    "city": "Caldas",
-   "lat": null,
-   "lng": null,
-   "address": ""
+   "lat": 6.0924079,
+   "lng": -75.6351796,
+   "address": "",
+   "_prec": "nominatim"
   },
   "Cineprox Las Américas - Medellín": {
    "short": "Cineprox Las Américas",
    "city": "Medellín",
-   "lat": null,
-   "lng": null,
-   "address": ""
+   "lat": 6.2145832,
+   "lng": -75.5963458,
+   "address": "",
+   "_prec": "heredada 2025"
   },
   "Biblioteca Comfama Bello Centro - Bello": {
    "short": "Biblioteca Comfama Bello Centro",
    "city": "Bello",
-   "lat": null,
-   "lng": null,
-   "address": ""
+   "lat": 6.3361,
+   "lng": -75.56653,
+   "address": "",
+   "_prec": "heredada 2025"
   },
   "Terko - Copacabana": {
    "short": "Terko",
    "city": "Copacabana",
-   "lat": null,
-   "lng": null,
-   "address": ""
+   "lat": 6.34726,
+   "lng": -75.506,
+   "address": "",
+   "_prec": "heredada 2025"
   },
   "Cine MAMM - Medellín": {
    "short": "Cine MAMM",
    "city": "Medellín",
-   "lat": null,
-   "lng": null,
-   "address": ""
+   "lat": 6.2237,
+   "lng": -75.57407,
+   "address": "",
+   "_prec": "nominatim"
   },
   "ITM - Facultad de Artes y Humanidades - Medellín": {
    "short": "ITM - Facultad de Artes y Humanidades",
    "city": "Medellín",
    "lat": null,
    "lng": null,
-   "address": ""
+   "address": "",
+   "_prec": "sin verificar"
   },
   "Casa Museo Otraparte - Envigado": {
    "short": "Casa Museo Otraparte",
    "city": "Envigado",
-   "lat": null,
-   "lng": null,
-   "address": ""
+   "lat": 6.17918,
+   "lng": -75.58388,
+   "address": "",
+   "_prec": "nominatim"
   }
  },
  "films": [

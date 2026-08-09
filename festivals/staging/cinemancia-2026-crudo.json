@@ -1,0 +1,721 @@
+{
+ "_provenance": {
+  "fuente": "derivado de cinemancia-2026-build.json para las herramientas genéricas del pipeline",
+  "capturado": "2026-08-09",
+  "nota": "sede ya canónica (tabla SEDES del ensamblador); una sede = una clave"
+ },
+ "funciones": [
+  {
+   "titulo": "Sombras en la niebla",
+   "dia": "2026-09-10",
+   "hora": "16:00",
+   "sede": "Centro Colombo Americano - Sede centro",
+   "ciudad": "Medellín",
+   "sala": "Sala 1"
+  },
+  {
+   "titulo": "Un aparato para detectar fantasmas",
+   "dia": "2026-09-10",
+   "hora": "16:00",
+   "sede": "Centro Colombo Americano - Sede centro",
+   "ciudad": "Medellín",
+   "sala": "Sala 1"
+  },
+  {
+   "titulo": "Ya se ven los tigres en la lluvia",
+   "dia": "2026-09-10",
+   "hora": "16:00",
+   "sede": "Centro Colombo Americano - Sede centro",
+   "ciudad": "Medellín",
+   "sala": "Sala 1"
+  },
+  {
+   "titulo": "El cazador",
+   "dia": "2026-09-10",
+   "hora": "16:00",
+   "sede": "Centro Colombo Americano - Sede centro",
+   "ciudad": "Medellín",
+   "sala": "Sala 1"
+  },
+  {
+   "titulo": "Las formas de la magia",
+   "dia": "2026-09-10",
+   "hora": "16:00",
+   "sede": "Centro Colombo Americano - Sede centro",
+   "ciudad": "Medellín",
+   "sala": "Sala 1"
+  },
+  {
+   "titulo": "Memorias Encontradas Numa Banheira",
+   "dia": "2026-09-10",
+   "hora": "19:30",
+   "sede": "Centro Colombo Americano - Sede centro",
+   "ciudad": "Medellín",
+   "sala": "Sala 2"
+  },
+  {
+   "titulo": "Parece el mundo",
+   "dia": "2026-09-10",
+   "hora": "19:30",
+   "sede": "Centro Colombo Americano - Sede centro",
+   "ciudad": "Medellín",
+   "sala": "Sala 2"
+  },
+  {
+   "titulo": "Borrachos mientras escuchamos las gotas caer",
+   "dia": "2026-09-07",
+   "hora": "19:00",
+   "sede": "La Capilla del Claustro Comfama",
+   "ciudad": "Medellín",
+   "sala": ""
+  },
+  {
+   "titulo": "Borrachos mientras escuchamos las gotas caer",
+   "dia": "2026-09-10",
+   "hora": "18:00",
+   "sede": "Teatro Caribe",
+   "ciudad": "Itagüí",
+   "sala": ""
+  },
+  {
+   "titulo": "El salto",
+   "dia": "2026-09-07",
+   "hora": "19:00",
+   "sede": "La Capilla del Claustro Comfama",
+   "ciudad": "Medellín",
+   "sala": ""
+  },
+  {
+   "titulo": "El salto",
+   "dia": "2026-09-10",
+   "hora": "18:00",
+   "sede": "Teatro Caribe",
+   "ciudad": "Itagüí",
+   "sala": ""
+  },
+  {
+   "titulo": "Gramática práctica italiana",
+   "dia": "2026-09-07",
+   "hora": "19:00",
+   "sede": "La Capilla del Claustro Comfama",
+   "ciudad": "Medellín",
+   "sala": ""
+  },
+  {
+   "titulo": "Gramática práctica italiana",
+   "dia": "2026-09-10",
+   "hora": "18:00",
+   "sede": "Teatro Caribe",
+   "ciudad": "Itagüí",
+   "sala": ""
+  },
+  {
+   "titulo": "Liminal",
+   "dia": "2026-09-05",
+   "hora": "17:00",
+   "sede": "La Capilla del Claustro Comfama",
+   "ciudad": "Medellín",
+   "sala": ""
+  },
+  {
+   "titulo": "Liminal",
+   "dia": "2026-09-08",
+   "hora": "18:00",
+   "sede": "Teatro Caribe",
+   "ciudad": "Itagüí",
+   "sala": ""
+  },
+  {
+   "titulo": "Madres de nacimiento",
+   "dia": "2026-09-07",
+   "hora": "19:00",
+   "sede": "La Capilla del Claustro Comfama",
+   "ciudad": "Medellín",
+   "sala": ""
+  },
+  {
+   "titulo": "Madres de nacimiento",
+   "dia": "2026-09-10",
+   "hora": "18:00",
+   "sede": "Teatro Caribe",
+   "ciudad": "Itagüí",
+   "sala": ""
+  },
+  {
+   "titulo": "Medellín yo te saludo",
+   "dia": "2026-09-05",
+   "hora": "17:00",
+   "sede": "La Capilla del Claustro Comfama",
+   "ciudad": "Medellín",
+   "sala": ""
+  },
+  {
+   "titulo": "Medellín yo te saludo",
+   "dia": "2026-09-08",
+   "hora": "18:00",
+   "sede": "Teatro Caribe",
+   "ciudad": "Itagüí",
+   "sala": ""
+  },
+  {
+   "titulo": "Para no volver",
+   "dia": "2026-09-07",
+   "hora": "19:00",
+   "sede": "La Capilla del Claustro Comfama",
+   "ciudad": "Medellín",
+   "sala": ""
+  },
+  {
+   "titulo": "Para no volver",
+   "dia": "2026-09-10",
+   "hora": "18:00",
+   "sede": "Teatro Caribe",
+   "ciudad": "Itagüí",
+   "sala": ""
+  },
+  {
+   "titulo": "Pausas activas",
+   "dia": "2026-09-05",
+   "hora": "17:00",
+   "sede": "La Capilla del Claustro Comfama",
+   "ciudad": "Medellín",
+   "sala": ""
+  },
+  {
+   "titulo": "Pausas activas",
+   "dia": "2026-09-08",
+   "hora": "18:00",
+   "sede": "Teatro Caribe",
+   "ciudad": "Itagüí",
+   "sala": ""
+  },
+  {
+   "titulo": "Preguntas frecuentes",
+   "dia": "2026-09-05",
+   "hora": "17:00",
+   "sede": "La Capilla del Claustro Comfama",
+   "ciudad": "Medellín",
+   "sala": ""
+  },
+  {
+   "titulo": "Preguntas frecuentes",
+   "dia": "2026-09-08",
+   "hora": "18:00",
+   "sede": "Teatro Caribe",
+   "ciudad": "Itagüí",
+   "sala": ""
+  },
+  {
+   "titulo": "Refracción",
+   "dia": "2026-09-05",
+   "hora": "17:00",
+   "sede": "La Capilla del Claustro Comfama",
+   "ciudad": "Medellín",
+   "sala": ""
+  },
+  {
+   "titulo": "Refracción",
+   "dia": "2026-09-08",
+   "hora": "18:00",
+   "sede": "Teatro Caribe",
+   "ciudad": "Itagüí",
+   "sala": ""
+  },
+  {
+   "titulo": "Larama",
+   "dia": "2026-09-04",
+   "hora": "19:00",
+   "sede": "Antimateria Libros y Café",
+   "ciudad": "Medellín",
+   "sala": ""
+  },
+  {
+   "titulo": "Larama",
+   "dia": "2026-09-08",
+   "hora": "15:00",
+   "sede": "La Capilla del Claustro Comfama",
+   "ciudad": "Medellín",
+   "sala": ""
+  },
+  {
+   "titulo": "Lo que los humanos ven como sangre los jaguares ven como chicha",
+   "dia": "2026-09-04",
+   "hora": "19:00",
+   "sede": "Antimateria Libros y Café",
+   "ciudad": "Medellín",
+   "sala": ""
+  },
+  {
+   "titulo": "Lo que los humanos ven como sangre los jaguares ven como chicha",
+   "dia": "2026-09-08",
+   "hora": "15:00",
+   "sede": "La Capilla del Claustro Comfama",
+   "ciudad": "Medellín",
+   "sala": ""
+  },
+  {
+   "titulo": "Objetos parlantes",
+   "dia": "2026-09-04",
+   "hora": "19:00",
+   "sede": "Antimateria Libros y Café",
+   "ciudad": "Medellín",
+   "sala": ""
+  },
+  {
+   "titulo": "Objetos parlantes",
+   "dia": "2026-09-08",
+   "hora": "15:00",
+   "sede": "La Capilla del Claustro Comfama",
+   "ciudad": "Medellín",
+   "sala": ""
+  },
+  {
+   "titulo": "Puro andar",
+   "dia": "2026-09-04",
+   "hora": "19:00",
+   "sede": "Antimateria Libros y Café",
+   "ciudad": "Medellín",
+   "sala": ""
+  },
+  {
+   "titulo": "Puro andar",
+   "dia": "2026-09-08",
+   "hora": "15:00",
+   "sede": "La Capilla del Claustro Comfama",
+   "ciudad": "Medellín",
+   "sala": ""
+  },
+  {
+   "titulo": "Spoils",
+   "dia": "2026-09-04",
+   "hora": "19:00",
+   "sede": "Antimateria Libros y Café",
+   "ciudad": "Medellín",
+   "sala": ""
+  },
+  {
+   "titulo": "Spoils",
+   "dia": "2026-09-08",
+   "hora": "15:00",
+   "sede": "La Capilla del Claustro Comfama",
+   "ciudad": "Medellín",
+   "sala": ""
+  },
+  {
+   "titulo": "Trizas",
+   "dia": "2026-09-04",
+   "hora": "19:00",
+   "sede": "Antimateria Libros y Café",
+   "ciudad": "Medellín",
+   "sala": ""
+  },
+  {
+   "titulo": "Trizas",
+   "dia": "2026-09-08",
+   "hora": "15:00",
+   "sede": "La Capilla del Claustro Comfama",
+   "ciudad": "Medellín",
+   "sala": ""
+  },
+  {
+   "titulo": "Jakawisa",
+   "dia": "2026-09-09",
+   "hora": "16:00",
+   "sede": "Centro Colombo Americano - Sede centro",
+   "ciudad": "Medellín",
+   "sala": "Sala 2"
+  },
+  {
+   "titulo": "Hiding / Esquivo",
+   "dia": "2026-09-09",
+   "hora": "16:00",
+   "sede": "Centro Colombo Americano - Sede centro",
+   "ciudad": "Medellín",
+   "sala": "Sala 2"
+  },
+  {
+   "titulo": "Derroteros, Derroteros, Derroteros, Derroteros, Derroteros, Derroteros, Derroteros",
+   "dia": "2026-09-09",
+   "hora": "16:00",
+   "sede": "Centro Colombo Americano - Sede centro",
+   "ciudad": "Medellín",
+   "sala": "Sala 2"
+  },
+  {
+   "titulo": "¿Qué historia es ésta y cuál es su final?",
+   "dia": "2026-09-05",
+   "hora": "18:30",
+   "sede": "Casa Municipal de la Cultura",
+   "ciudad": "Caldas",
+   "sala": ""
+  },
+  {
+   "titulo": "¿Qué historia es ésta y cuál es su final?",
+   "dia": "2026-09-06",
+   "hora": "14:00",
+   "sede": "Centro Colombo Americano - Sede centro",
+   "ciudad": "Medellín",
+   "sala": "Sala 1"
+  },
+  {
+   "titulo": "Alicia soñó con un faro",
+   "dia": "2026-09-08",
+   "hora": "16:00",
+   "sede": "Cineprox Las Américas",
+   "ciudad": "Medellín",
+   "sala": ""
+  },
+  {
+   "titulo": "Alicia soñó con un faro",
+   "dia": "2026-09-11",
+   "hora": "16:30",
+   "sede": "Biblioteca Comfama Bello Centro",
+   "ciudad": "Bello",
+   "sala": ""
+  },
+  {
+   "titulo": "Cuando las nubes esconden la sombra",
+   "dia": "2026-09-07",
+   "hora": "18:00",
+   "sede": "Teatro Caribe",
+   "ciudad": "Itagüí",
+   "sala": ""
+  },
+  {
+   "titulo": "El cielo, la tierra y la lluvia",
+   "dia": "2026-09-10",
+   "hora": "18:30",
+   "sede": "Terko",
+   "ciudad": "Copacabana",
+   "sala": ""
+  },
+  {
+   "titulo": "El cielo, la tierra y la lluvia",
+   "dia": "2026-09-11",
+   "hora": "16:00",
+   "sede": "Centro Colombo Americano - Sede centro",
+   "ciudad": "Medellín",
+   "sala": "Sala 1"
+  },
+  {
+   "titulo": "El sueño de Ana",
+   "dia": "2026-09-07",
+   "hora": "18:00",
+   "sede": "Teatro Caribe",
+   "ciudad": "Itagüí",
+   "sala": ""
+  },
+  {
+   "titulo": "El viento sabe que vuelvo a casa",
+   "dia": "2026-09-05",
+   "hora": "16:30",
+   "sede": "Cineprox Las Américas",
+   "ciudad": "Medellín",
+   "sala": ""
+  },
+  {
+   "titulo": "El viento sabe que vuelvo a casa",
+   "dia": "2026-09-09",
+   "hora": "14:00",
+   "sede": "Centro Colombo Americano - Sede centro",
+   "ciudad": "Medellín",
+   "sala": "Sala 1"
+  },
+  {
+   "titulo": "Obreras saliendo de la fábrica",
+   "dia": "2026-09-05",
+   "hora": "18:30",
+   "sede": "Casa Municipal de la Cultura",
+   "ciudad": "Caldas",
+   "sala": ""
+  },
+  {
+   "titulo": "Obreras saliendo de la fábrica",
+   "dia": "2026-09-06",
+   "hora": "14:00",
+   "sede": "Centro Colombo Americano - Sede centro",
+   "ciudad": "Medellín",
+   "sala": "Sala 1"
+  },
+  {
+   "titulo": "Sobre cosas que me han pasado",
+   "dia": "2026-09-06",
+   "hora": "15:00",
+   "sede": "Cine MAMM",
+   "ciudad": "Medellín",
+   "sala": ""
+  },
+  {
+   "titulo": "Sobre cosas que me han pasado",
+   "dia": "2026-09-10",
+   "hora": "17:30",
+   "sede": "Centro Colombo Americano - Sede centro",
+   "ciudad": "Medellín",
+   "sala": "Sala 2"
+  },
+  {
+   "titulo": "Vendrá la muerte y tendrá tus ojos",
+   "dia": "2026-09-08",
+   "hora": "16:30",
+   "sede": "Cineprox Las Américas",
+   "ciudad": "Medellín",
+   "sala": ""
+  },
+  {
+   "titulo": "Vendrá la muerte y tendrá tus ojos",
+   "dia": "2026-09-11",
+   "hora": "16:00",
+   "sede": "Biblioteca Comfama Bello Centro",
+   "ciudad": "Bello",
+   "sala": ""
+  },
+  {
+   "titulo": "Ver y escuchar",
+   "dia": "2026-09-09",
+   "hora": "19:00",
+   "sede": "La Capilla del Claustro Comfama",
+   "ciudad": "Medellín",
+   "sala": ""
+  },
+  {
+   "titulo": "Verano",
+   "dia": "2026-09-06",
+   "hora": "15:00",
+   "sede": "Cine MAMM",
+   "ciudad": "Medellín",
+   "sala": ""
+  },
+  {
+   "titulo": "Verano",
+   "dia": "2026-09-10",
+   "hora": "17:30",
+   "sede": "Centro Colombo Americano - Sede centro",
+   "ciudad": "Medellín",
+   "sala": "Sala 2"
+  },
+  {
+   "titulo": "Cleaning & Cleansing",
+   "dia": "2026-09-07",
+   "hora": "16:30",
+   "sede": "Cineprox Las Américas",
+   "ciudad": "Medellín",
+   "sala": ""
+  },
+  {
+   "titulo": "Cleaning & Cleansing",
+   "dia": "2026-09-11",
+   "hora": "19:00",
+   "sede": "Centro Colombo Americano - Sede centro",
+   "ciudad": "Medellín",
+   "sala": "Sala 2"
+  },
+  {
+   "titulo": "La tercera opción / Die dritte Option / The Third Option",
+   "dia": "2026-09-09",
+   "hora": "17:00",
+   "sede": "La Capilla del Claustro Comfama",
+   "ciudad": "Medellín",
+   "sala": ""
+  },
+  {
+   "titulo": "La tercera opción / Die dritte Option / The Third Option",
+   "dia": "2026-09-10",
+   "hora": "16:30",
+   "sede": "Cineprox Las Américas",
+   "ciudad": "Medellín",
+   "sala": ""
+  },
+  {
+   "titulo": "La tercera opción / Die dritte Option / The Third Option",
+   "dia": "2026-09-11",
+   "hora": "14:00",
+   "sede": "Centro Colombo Americano - Sede centro",
+   "ciudad": "Medellín",
+   "sala": "Sala 1"
+  },
+  {
+   "titulo": "Viviendo juntos / Zusammenleben",
+   "dia": "2026-09-04",
+   "hora": "17:00",
+   "sede": "Centro Colombo Americano - Sede centro",
+   "ciudad": "Medellín",
+   "sala": "Sala 2"
+  },
+  {
+   "titulo": "Viviendo juntos / Zusammenleben",
+   "dia": "2026-09-06",
+   "hora": "18:00",
+   "sede": "Teatro Caribe",
+   "ciudad": "Itagüí",
+   "sala": ""
+  },
+  {
+   "titulo": "Vive L’Amour",
+   "dia": "2026-09-08",
+   "hora": "19:00",
+   "sede": "Centro Colombo Americano - Sede centro",
+   "ciudad": "Medellín",
+   "sala": "Sala 2"
+  },
+  {
+   "titulo": "The Children’s Hour",
+   "dia": "2026-09-07",
+   "hora": "17:30",
+   "sede": "ITM - Facultad de Artes y Humanidades",
+   "ciudad": "Medellín",
+   "sala": ""
+  },
+  {
+   "titulo": "Buddies",
+   "dia": "2026-09-05",
+   "hora": "14:00",
+   "sede": "Centro Colombo Americano - Sede centro",
+   "ciudad": "Medellín",
+   "sala": "Sala 1"
+  },
+  {
+   "titulo": "Caminito al Cielo",
+   "dia": "2026-09-04",
+   "hora": "16:00",
+   "sede": "Biblioteca Comfama Bello Centro",
+   "ciudad": "Bello",
+   "sala": ""
+  },
+  {
+   "titulo": "Caminito al Cielo",
+   "dia": "2026-09-08",
+   "hora": "20:00",
+   "sede": "Antimateria Libros y Café",
+   "ciudad": "Medellín",
+   "sala": ""
+  },
+  {
+   "titulo": "Cuartito rosa",
+   "dia": "2026-09-04",
+   "hora": "16:00",
+   "sede": "Biblioteca Comfama Bello Centro",
+   "ciudad": "Bello",
+   "sala": ""
+  },
+  {
+   "titulo": "Cuartito rosa",
+   "dia": "2026-09-08",
+   "hora": "20:00",
+   "sede": "Antimateria Libros y Café",
+   "ciudad": "Medellín",
+   "sala": ""
+  },
+  {
+   "titulo": "El santo y el milagro",
+   "dia": "2026-09-05",
+   "hora": "18:00",
+   "sede": "Biblioteca Comfama Bello Centro",
+   "ciudad": "Bello",
+   "sala": ""
+  },
+  {
+   "titulo": "El santo y el milagro",
+   "dia": "2026-09-10",
+   "hora": "16:00",
+   "sede": "Casa Museo Otraparte",
+   "ciudad": "Envigado",
+   "sala": ""
+  },
+  {
+   "titulo": "La libertad remonta el estadio",
+   "dia": "2026-09-05",
+   "hora": "18:00",
+   "sede": "Centro Colombo Americano - Sede centro",
+   "ciudad": "Medellín",
+   "sala": "Sala 2"
+  },
+  {
+   "titulo": "La libertad remonta el estadio",
+   "dia": "2026-09-10",
+   "hora": "16:00",
+   "sede": "Casa Museo Otraparte",
+   "ciudad": "Envigado",
+   "sala": ""
+  },
+  {
+   "titulo": "Valparaíso eterno",
+   "dia": "2026-09-05",
+   "hora": "18:00",
+   "sede": "Centro Colombo Americano - Sede centro",
+   "ciudad": "Medellín",
+   "sala": "Sala 2"
+  },
+  {
+   "titulo": "Valparaíso eterno",
+   "dia": "2026-09-10",
+   "hora": "16:00",
+   "sede": "Casa Museo Otraparte",
+   "ciudad": "Envigado",
+   "sala": ""
+  },
+  {
+   "titulo": "Chico eléctrico",
+   "dia": "2026-09-06",
+   "hora": "19:00",
+   "sede": "Centro Colombo Americano - Sede centro",
+   "ciudad": "Medellín",
+   "sala": "Sala 2"
+  },
+  {
+   "titulo": "Dice que…",
+   "dia": "2026-09-04",
+   "hora": "19:00",
+   "sede": "Casa Museo Otraparte",
+   "ciudad": "Envigado",
+   "sala": ""
+  },
+  {
+   "titulo": "Homenaje a la obra de Philip Henry Gosse",
+   "dia": "2026-09-10",
+   "hora": "17:30",
+   "sede": "ITM - Facultad de Artes y Humanidades",
+   "ciudad": "Medellín",
+   "sala": ""
+  },
+  {
+   "titulo": "Las picapedreras",
+   "dia": "2026-09-04",
+   "hora": "19:00",
+   "sede": "Casa Museo Otraparte",
+   "ciudad": "Envigado",
+   "sala": ""
+  },
+  {
+   "titulo": "Rancho",
+   "dia": "2026-09-10",
+   "hora": "17:30",
+   "sede": "ITM - Facultad de Artes y Humanidades",
+   "ciudad": "Medellín",
+   "sala": ""
+  },
+  {
+   "titulo": "Solo qu3r3mos un poco de amor",
+   "dia": "2026-09-06",
+   "hora": "19:00",
+   "sede": "Centro Colombo Americano - Sede centro",
+   "ciudad": "Medellín",
+   "sala": "Sala 2"
+  },
+  {
+   "titulo": "Spot Fuera de campo 1",
+   "dia": "2026-09-10",
+   "hora": "17:30",
+   "sede": "ITM - Facultad de Artes y Humanidades",
+   "ciudad": "Medellín",
+   "sala": ""
+  },
+  {
+   "titulo": "Spot Fuera de campo 2",
+   "dia": "2026-09-10",
+   "hora": "17:30",
+   "sede": "ITM - Facultad de Artes y Humanidades",
+   "ciudad": "Medellín",
+   "sala": ""
+  }
+ ]
+}

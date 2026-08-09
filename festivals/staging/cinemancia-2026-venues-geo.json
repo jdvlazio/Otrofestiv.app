@@ -1,0 +1,74 @@
+{
+ "Antimateria Libros y Café": {
+  "lat": 6.20062,
+  "lng": -75.56368,
+  "_prec": "heredada 2025",
+  "_match": "cinemancia-2025.json → «Antimateria Libros y Café»"
+ },
+ "Biblioteca Comfama Bello Centro": {
+  "lat": 6.3361,
+  "lng": -75.56653,
+  "_prec": "heredada 2025",
+  "_match": "cinemancia-2025.json → «Biblioteca Comfama Bello»"
+ },
+ "Casa Museo Otraparte": {
+  "lat": 6.17918,
+  "lng": -75.58388,
+  "_prec": "nominatim",
+  "_match": "Casa Museo Otraparte (tourism/museum), Envigado — la heredada de 2025 era el Teatro Otraparte, a 47 m"
+ },
+ "Centro Colombo Americano - Sede centro": {
+  "lat": 6.2497341,
+  "lng": -75.5627237,
+  "_prec": "heredada 2025",
+  "_match": "cinemancia-2025.json → «Centro Colombo Americano Sede centro. Sala 2»"
+ },
+ "Cineprox Las Américas": {
+  "lat": 6.2145832,
+  "lng": -75.5963458,
+  "_prec": "heredada 2025",
+  "_match": "cinemancia-2025.json → «Procinal Las Américas Sala 3»",
+  "_todo": "CONFIRMAR: la coordenada es la de «Procinal Las Américas» (Cinemancia 2025). Cineprox no está en OSM. Verificar que sea el mismo cine con la cadena renombrada."
+ },
+ "La Capilla del Claustro Comfama": {
+  "lat": 6.24575,
+  "lng": -75.56372,
+  "_prec": "heredada 2025",
+  "_match": "cinemancia-2025.json → «Claustro Comfama»"
+ },
+ "Teatro Caribe": {
+  "lat": 6.1728219,
+  "lng": -75.6076087,
+  "_prec": "heredada 2025",
+  "_match": "cinemancia-2025.json → «Teatro Caribe»"
+ },
+ "Terko": {
+  "lat": 6.34726,
+  "lng": -75.506,
+  "_prec": "heredada 2025",
+  "_match": "cinemancia-2025.json → «Terko Bar»"
+ },
+ "_provenance": {
+  "fuente": "sembrado desde cinemancia-2025.json + Nominatim verificado (caja de ciudad, token y clase de lugar)",
+  "capturado": "2026-08-09",
+  "nota": "«heredada 2025» = coordenada de la edición anterior; «nominatim» = verificada en esta pasada"
+ },
+ "Casa Municipal de la Cultura": {
+  "lat": 6.0924079,
+  "lng": -75.6351796,
+  "_prec": "nominatim",
+  "_match": "Casa de la Cultura, 128 Sur-44, Carrera 49, Cabecera Municipal de Caldas, Caldas, Valle de",
+  "n": 2
+ },
+ "Cine MAMM": {
+  "lat": 6.2237,
+  "lng": -75.57407,
+  "_prec": "nominatim",
+  "_match": "Museo de Arte Moderno de Medellín (tourism/museum) — «Cine MAMM» es su sala"
+ },
+ "ITM - Facultad de Artes y Humanidades": {
+  "_prec": "sin verificar",
+  "n": 5,
+  "_todo": "buscar a mano: es la sede LA FLORESTA. OSM solo tiene la sede Fraternidad, que es otro campus."
+ }
+}

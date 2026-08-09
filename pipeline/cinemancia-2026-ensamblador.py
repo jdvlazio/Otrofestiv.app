@@ -150,6 +150,10 @@ def fecha_iso(txt):
 
 def main():
     listado, web, tmdb, lb = (carga(x) for x in ('listado', 'web', 'tmdb', 'lb'))
+    # Las coordenadas viven en su sidecar y NO se recalculan aquí: correr el
+    # geocoder de nuevo pisó 40 verificaciones humanas en FICDEH.
+    gp = f'{ST}/cinemancia-2026-venues-geo.json'
+    GEO = json.load(open(gp, encoding='utf-8')) if os.path.exists(gp) else {}
     T = {norm(o['title']): o for o in tmdb}
     L = {norm(o['title']): o for o in lb}
 
@@ -227,8 +231,18 @@ def main():
                 errores.append(f'sede fuera de la tabla: {h["sede_txt"]!r}'); continue
             sede, sala = SEDES[h['sede_txt']]
             clave = f'{sede} - {h["ciudad"]}'
+            gg = GEO.get(sede, {})
             venues.setdefault(clave, {'short': sede, 'city': h['ciudad'],
-                                      'lat': None, 'lng': None, 'address': ''})
+                                      'lat': gg.get('lat'), 'lng': gg.get('lng'),
+                                      'address': ''})
+            if gg.get('_prec'):
+                venues[clave]['_prec'] = gg['_prec']
+            # `_nota` = sede a <60 m de otra ya revisada a mano. Se propaga
+            # porque el guardián [sedes-apiladas] la lee en el publicado; si
+            # no, muere en el siguiente ensamblado. `_todo` NO se propaga: es
+            # un pendiente de trabajo y se queda en el sidecar.
+            if gg.get('_nota'):
+                venues[clave]['_nota'] = gg['_nota']
             films.append({**base, 'day': dia, 'time': h['hora'],
                           'day_order': DIAS.index(dia), 'venue': clave,
                           'sala': sala})
@@ -267,6 +281,9 @@ def main():
          'venues': venues, 'films': films}
     json.dump(d, open(OUT, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
 
+    sin_geo = [k for k, v in venues.items() if not v.get('lat')]
+    if sin_geo:
+        print(f'   ⚠ {len(sin_geo)} sede(s) sin coordenada: {sin_geo}')
     print(f'{OUT.split("/")[-1]}  ·  {len(films)} funciones de '
           f'{len(listado) - len(sin_horario)} obras · {len(venues)} sedes')
     print(f'   sinopsis: {sum(1 for f in films if f["synopsis"])}/{len(films)} funciones · '
