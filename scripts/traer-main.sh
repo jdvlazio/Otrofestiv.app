@@ -65,24 +65,37 @@ git commit -q --no-edit
 node scripts/bump-version.js >/dev/null 2>&1 && echo "▸ bump rehecho"
 git add -u
 
-# LA VERIFICACIÓN: nada tuyo puede haber cambiado salvo los números de build.
+# LA VERIFICACIÓN — «¿siguen mis líneas?», no «¿cambió el archivo?».
+# La primera versión comparaba el archivo contra el commit previo y marcaba
+# cualquier diferencia: falso positivo garantizado, porque main APORTA cambios
+# legítimos. Lo que hay que defender es lo MÍO: cada línea que agregué desde que
+# la rama se separó de main tiene que seguir presente después del merge. Así se
+# caza el accidente real —el CSS de .fn-ciudad y el markup del city-sheet
+# desaparecieron sin que nadie los borrara a propósito—.
 echo
 echo "▸ verificando que no se perdió trabajo…"
+base=$(git merge-base origin/main "$antes")
 perdidas=0
-while IFS= read -r f; do
-  [ -z "$f" ] && continue
-  n=$(git diff "$antes" -- "$f" | grep -E '^[+-]' | grep -vE '^[+-]{3}' \
-      | grep -viE '20[0-9]{10}|Último commit' | wc -l | tr -d ' ')
-  if [ "$n" != "0" ]; then
-    printf '    %-42s %s líneas distintas\n' "$f" "$n"
+for f in "${BUMP[@]}"; do
+  [ -f "$f" ] || continue
+  mias=$(git diff "$base" "$antes" -- "$f" | grep '^+' | grep -v '^+++' | sed 's/^+//' \
+         | grep -vE '20[0-9]{10}|Último commit' | grep -vE '^[[:space:]]*$' || true)
+  [ -z "$mias" ] && continue
+  faltan=0
+  while IFS= read -r linea; do
+    [ -z "$linea" ] && continue
+    grep -qF -- "$linea" "$f" || faltan=$((faltan+1))
+  done <<< "$mias"
+  if [ "$faltan" != "0" ]; then
+    printf '    %-30s %s línea(s) TUYAS desaparecieron\n' "$f" "$faltan"
     perdidas=$((perdidas+1))
   fi
-done < <(printf '%s\n' "${BUMP[@]}")
+done
 
 if [ "$perdidas" != "0" ]; then
-  echo "✗ Alguno de los archivos del bump cambió MÁS que su número de versión." >&2
-  echo "  Revisá con: git diff $antes -- <archivo>   ·   deshacé con: git merge --abort" >&2
+  echo "✗ El merge se llevó trabajo tuyo por delante." >&2
+  echo "  Deshacé con: git reset --hard $antes   ·   y resolvé los conflictos a mano." >&2
   exit 1
 fi
-echo "✓ los 5 archivos del bump solo cambiaron su versión — no se perdió nada."
+echo "✓ ninguna línea propia se perdió en el merge."
 echo "  Corré la suite antes de pushear: ./scripts/test.sh"
