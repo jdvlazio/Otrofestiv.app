@@ -65,7 +65,15 @@ sinopsis ES/EN, géneros, pósters a `assets/<id>/`. Lo que no verifica **no
 entra**: los «sin ficha» se dan de alta en TMDB (PIPELINE.md Fase 3b) o quedan
 sin ficha, jamás se adivina un homónimo.
 
-**Y el bar-trim, que es obligatorio** (docs/POSTERS.md §3): los afiches llegan
+**Y los dos pasos de imagen, obligatorios**: primero `python3 pipeline/bar-trim.py
+<id> --aplicar` (quita el MARCO del diseño del festival) y después
+`python3 pipeline/posters-2-3.py <id> --aplicar` (lleva el póster al 2:3 exacto
+ESTIRANDO — regla de Juan, la misma del keyArt: no se recorta, no se rellena con
+bandas). El orden importa: estirar antes de quitar el marco estira el marco.
+Ojo: estirar NO elimina una banda que está dentro de la imagen; para eso está el
+trim. Y un `posterSource:editorial` (still 16:9) se queda como está.
+
+**El bar-trim en detalle** (docs/POSTERS.md §3): los afiches llegan
 dentro de un diseño —marco blanco, barras negras de centrado— y así entran a la
 card con bandas. `python3 pipeline/bar-trim.py <id>` los detecta y con
 `--aplicar` los recorta. Se venía haciendo a ojo y en FICMA no se hizo: 15
