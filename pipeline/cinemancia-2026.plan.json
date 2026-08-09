@@ -23,6 +23,10 @@
   {
    "cmd": "python3 pipeline/cinemancia-2026-fichas-web.py",
    "que": "fichas de su web → sinopsis, HORARIOS (89 funciones) y ficha técnica"
+  },
+  {
+   "cmd": "python3 pipeline/cinemancia-2026-ensamblador.py",
+   "que": "los 4 sidecars → build.json: 89 funciones de 56 obras, 11 sedes, 41 proyecciones reales"
   }
  ],
  "_resuelto_por_el_barrido": [
@@ -35,18 +39,22 @@
   "LA PROGRAMACIÓN SÍ EXISTE: está publicada obra por obra en el bloque «Horarios» de cada ficha (fecha, hora, teatro, ciudad, sala). No hay página general, por eso el anuncio dice que sale «en los próximos días». Rescatadas 89 funciones, 14 sedes, 8 días (4–11 SEP) de las 56 obras con ficha.",
   "Sinopsis: TMDB 52 + web 57 (35 en ambas) → COBERTURA COMBINADA 74 de 109. La brecha baja de 57 a 35.",
   "Ficha técnica de las 56: Año/Duración/País/Idioma/Dirección al 100%; Producción y Montaje 53, Guion 50, Sonido 49, Fotografía 45, Elenco 39, Música 19.",
-  "El año 1987 de «La libertad remonta el estadio» queda confirmado por TERCERA fuente: su propia sinopsis dice «el jueves 2 de abril de 1987»."
+  "El año 1987 de «La libertad remonta el estadio» queda confirmado por TERCERA fuente: su propia sinopsis dice «el jueves 2 de abril de 1987».",
+  "sharedSlot RESUELTO SIN PREGUNTAR: las 89 filas son 41 proyecciones reales (día|hora|sede|sala). De los 21 bloques con más de una obra NINGUNO mezcla secciones, y las secciones grandes se parten en programas parejos (Nuevas voces = 2 programas de 5, cada uno repetido en dos ciudades). Cuadra con las 77 proyecciones que anuncia el festival para 109 obras.",
+  "Las 14 sedes que publica la web son 11 reales: «Biblioteca Comfama Bello - Centro»/«...Bello Centro» y «Centro Colombo Americano - Sede centro - Sala 2»/«Colombo Americano - Sede centro - Sala 2» son la misma escrita de dos formas. Tabla SEDES explícita en el ensamblador; una sede nueva DETIENE el ensamblado."
  ],
  "_pendientes": [
   "PEDIR AL FESTIVAL 35 sinopsis (no 53 ni 36): las que no están ni en TMDB ni en su web. Competencia de cortometrajes 12, Competencia central 10, Iluminaciones 10, Proyecciones especiales 3.",
   "PROGRAMACIÓN INCOMPLETA, no ausente: hay 89 pases de las 56 obras con ficha; el festival anunció 77 proyecciones en total y faltan las 53 obras sin ficha (incluidas inauguración del 3 SEP y clausura del 12). Re-correr fichas-web.py cuando publiquen el resto.",
-  "ENSAMBLADOR pendiente de escribir: sede y sala vienen pegadas en sede_txt («Centro Colombo Americano - Sede centro - Sala 1») y hay que partirlas con tabla de sedes, NO con regex — lección FICDEH.",
   "DOS OBRAS SIN LETTERBOXD, ambas de Sergio Navarro: «El santo y el milagro» (1993) y «Valparaíso eterno» (1991). Alta manual o resolver a mano.",
   "SEDES: geocodificar cuando haya programación. Partir del gazetteer de cinemancia-2025.json (35 sedes) antes de geocodificar de cero.",
   "SECCIONES: 16 encabezados en el PDF. Falta decidir con Juan el arquetipo y el emoji de cada una (regla «secciones tal cual»: el nombre ES verbatim, nuestra capa es solo emoji/arquetipo/EN). «Carta blanca» ya está aclarado por Juan (9 ago): son recomendaciones de la directora boliviana Luciana Decker, obras que conversan con la suya — va en la misma línea que «Alquimia de la luz», no es un título provisional.",
   "PÓSTERS: la web del festival publica FOTOGRAMAS 16:9 (1024×573, 2048×1143), no pósters 2:3. O llegan los pósters oficiales, o se usa el de TMDB, o el fotograma va por posterSource:'editorial'.",
   "CORTOS: la ficha de «Medellín yo te saludo» lista otras cuatro obras del mismo bloque — ahí está la agrupación de los programas de cortos, que es lo que alimenta sharedSlot. 77 proyecciones para 109 películas: sin esa agrupación la app inventa conflictos de horario que no existen.",
-  "ENTRADA LIBRE con preinscripción → registration_url por función, NO ticket_url."
+  "ENTRADA LIBRE con preinscripción → registration_url por función, NO ticket_url.",
+  "SECCIONES: falta el arquetipo y el emoji de las 16 (decisión de Juan). Sin arquetipo, [seccion-sin-arquetipo] las pinta gris ilegible. sections{} va vacío en el build a propósito.",
+  "GEOCODIFICAR las 11 sedes. 8 de 11 existen en cinemancia-2025.json; las nuevas son Casa Municipal de la Cultura (Caldas), Casa Museo Otraparte (Envigado), Cineprox Las Américas e ITM Facultad de Artes (Medellín).",
+  "PUBLICAR: falta el script de publicar (build → festivals/cinemancia-2026.json) y la entrada en FESTIVAL_CONFIG de src/config.js."
  ],
  "_conteos_que_no_cuadran": "El artículo dice 109 obras y 11 secciones; el encabezado del PDF dice 108 y 13; contando entradas del PDF salen 109 en 16 encabezados. Los 16 incluyen «Programa 1/2» (subsecciones de una misma) y las funciones de apertura y clausura, que ellos seguramente no cuentan como sección. Confirmar con el festival antes de fijar el mapa de secciones."
 }

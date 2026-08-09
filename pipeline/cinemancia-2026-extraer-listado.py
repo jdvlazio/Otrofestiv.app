@@ -111,6 +111,11 @@ def ficha(seccion, txt):
     if not m:
         return None
     p = [x.strip() for x in m.group('resto').split(',')]
+    # El separador es la coma, pero un nombre puede llevarla: «Arthur J.
+    # Bressan, Jr.». Sin esto el director quedaba truncado en «Arthur J.
+    # Bressan» y «Jr.» se colaba como país. Se re-pega solo el sufijo.
+    while len(p) > 1 and re.fullmatch(r'(Jr|Sr|Jnr|Snr|II|III)\.?', p[1], re.I):
+        p[0] = f'{p[0]}, {p.pop(1)}'
     dur = next((x for x in p if re.search(r"\d+\s*[’'′]", x)), None)
     anio = next((x for x in p if re.fullmatch(r'(18|19|20)\d\d', x)), None)
     i = p.index(dur) if dur else len(p)

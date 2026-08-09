@@ -200,6 +200,8 @@ BANDERAS = {
     'suiza': '🇨🇭', 'austria': '🇦🇹', 'grecia': '🇬🇷', 'turquia': '🇹🇷', 'kenia': '🇰🇪',
     'filipinas': '🇵🇭', 'macedonia del norte': '🇲🇰', 'nueva zelanda': '🇳🇿',
     'australia': '🇦🇺', 'luxemburgo': '🇱🇺', 'sudafrica': '🇿🇦', 'senegal': '🇸🇳',
+    # Cinemancia 2026 trae 24 países y estos cinco no estaban en la tabla.
+    'egipto': '🇪🇬', 'georgia': '🇬🇪', 'serbia': '🇷🇸', 'singapur': '🇸🇬', 'taiwan': '🇹🇼',
 }
 
 def banderas(pais):
