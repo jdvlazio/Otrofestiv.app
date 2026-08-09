@@ -137,7 +137,14 @@ def director_coincide(esperado, nombres):
     a = set(norm(esperado).split()) - quita
     for n in (nombres or []):
         b = set(norm(n).split()) - quita
+        # tokens largos compartidos (apellidos), O casi-todos los tokens si son
+        # cortos: «Gala del Sol» no tiene ninguno de >4 letras y aun así debe
+        # casar consigo misma. Al extraer esta función a la lib se perdió la
+        # segunda cláusula y la validación contra FICMA lo cazó (obra 68/68 con
+        # una faltante). Ambas vienen del script original.
         if {x for x in a if len(x) > 4} & {x for x in b if len(x) > 4}:
+            return True
+        if a and b and len(a & b) >= min(2, len(a), len(b)):
             return True
     return False
 
@@ -210,6 +217,23 @@ def provenance(fuente, **extra):
             'capturado': datetime.date.today().isoformat(), **extra}
 
 
+# ── el formato intermedio: cargar validando ──────────────────────────────────
+def cargar_crudo(path):
+    """Carga un sidecar del formato intermedio y FALLA si no lo cumple. Las
+    herramientas genéricas solo aceptan este shape: mejor un error a la cara
+    que una herramienta leyendo claves que no existen."""
+    d = json.load(open(path, encoding='utf-8'))
+    pr = d.get('_provenance') or {}
+    assert pr.get('capturado'), f'{path}: _provenance.capturado es OBLIGATORIO'
+    fs = d.get('funciones')
+    assert isinstance(fs, list) and fs, f'{path}: falta la lista funciones[]'
+    OBLIG = {'titulo', 'dia', 'hora', 'sede'}
+    for i, f in enumerate(fs):
+        faltan = OBLIG - set(f)
+        assert not faltan, f'{path}: funciones[{i}] sin {sorted(faltan)}'
+    return d
+
+
 # ── selftest ─────────────────────────────────────────────────────────────────
 def _selftest():
     ok = [0]
@@ -229,6 +253,7 @@ def _selftest():
     t('director acentos', director_coincide('Michaël Dudok de Wit', ['Michael Dudok de Wit']), True)
     t('director romanizado', director_coincide('Gorõ Miyazaki', ['宮崎吾朗', 'Goro Miyazaki']), True)
     t('director distinto', director_coincide('Lina Rodríguez', ['Maider Oleaga']), False)
+    t('director tokens cortos', director_coincide('Gala del Sol', ['Gala del Sol']), True)
     t('ficha ok', ficha_verifica(
         {'director': 'Kogonada', 'anio': 2017, 'duracion_min': 104},
         {'credits': {'crew': [{'job': 'Director', 'name': 'Kogonada'}]},
@@ -246,6 +271,18 @@ def _selftest():
     t('dias lbl', d['days'][0], {'k': '2026-08-10', 'd': 10, 'lbl': 'LUN'})
     t('dias long', d['dayLong']['2026-08-11'], 'Martes 11 de agosto')
     assert 'capturado' in provenance('x'); ok[0] += 1
+    import tempfile, os as _os
+    tf = tempfile.NamedTemporaryFile('w', suffix='.json', delete=False, encoding='utf-8')
+    json.dump({'_provenance': provenance('test'),
+               'funciones': [{'titulo': 'X', 'dia': '2026-09-09', 'hora': '10:00', 'sede': 'Y'}]}, tf)
+    tf.close()
+    t('cargar_crudo ok', len(cargar_crudo(tf.name)['funciones']), 1)
+    json.dump({'funciones': [{'titulo': 'X'}]}, open(tf.name, 'w'))
+    try:
+        cargar_crudo(tf.name); assert False, 'debió fallar sin capturado'
+    except AssertionError as e:
+        assert 'capturado' in str(e); ok[0] += 1
+    _os.unlink(tf.name)
     print(f'✓ selftest: {ok[0]} casos')
 
 
