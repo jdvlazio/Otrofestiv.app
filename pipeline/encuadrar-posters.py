@@ -29,7 +29,17 @@ import json, os, struct, subprocess, sys, tempfile, zlib
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 LIENZO_W, LIENZO_H = 780, 1170          # 2:3 exacto
-CLARO, OSCURO, PLANO, MAX_FRAC = 232, 24, 42, 0.12
+# Calibrado con los píxeles reales de los afiches, no a ojo. Un marco es una
+# fila PLANA —poca varianza a lo ancho— sea blanca, negra o gris: en «El juego
+# de la vida» el marco son dos filas (255 y 178) y exigir «casi blanco» dejaba
+# fuera la segunda, que es la línea gris que se veía. El arte, en cambio, tiene
+# varianza alta desde la primera fila (117 ahí mismo).
+PLANO, MAX_FRAC = 45, 0.12
+# Zoom mínimo final: tras recortar el marco queda a veces 1–2 filas de
+# transición (antialias del borde). En vez de afinar más el detector —que
+# arriesga comerse arte— se escala un 4% y se recorta al centro: se traga el
+# residuo perdiendo un 2% por lado, imperceptible. Es el «hacer zoom» de Juan.
+OVERSCAN = 1.04
 MUESTRA = 220                            # ancho de análisis
 
 
@@ -75,8 +85,7 @@ def _borde(lineas):
     """Cuántas líneas de borde uniforme hay al principio de la secuencia."""
     n, tope = 0, max(2, int(len(lineas) * MAX_FRAC))
     for l in lineas:
-        media = sum(l) / len(l)
-        if (max(l) - min(l)) < PLANO and (media > CLARO or media < OSCURO):
+        if (max(l) - min(l)) < PLANO:
             n += 1
             if n >= tope:
                 return 0          # sigue más allá del tope → es arte, no marco
@@ -158,11 +167,18 @@ def main():
             if q.returncode != 0:
                 print(f'   ✗ recorte falló en {n}: {q.stderr.decode().strip()[:70]}')
                 fallos += 1
-        # 2 · escalar al lienzo exacto (estira el eje que falte)
-        q = subprocess.run(['sips', '-z', str(LIENZO_H), str(LIENZO_W), real, '--out', real],
+        # 2 · escalar al lienzo con overscan y recortar al centro: llena el
+        #     placeholder exacto y se traga el residuo del borde.
+        gz_h, gz_w = round(LIENZO_H * OVERSCAN), round(LIENZO_W * OVERSCAN)
+        q = subprocess.run(['sips', '-z', str(gz_h), str(gz_w), real, '--out', real],
                            capture_output=True)
         if q.returncode != 0:
             print(f'   ✗ escala falló en {n}: {q.stderr.decode().strip()[:70]}')
+            fallos += 1; continue
+        q = subprocess.run(['sips', '-c', str(LIENZO_H), str(LIENZO_W), real, '--out', real],
+                           capture_output=True)
+        if q.returncode != 0:
+            print(f'   ✗ encuadre falló en {n}: {q.stderr.decode().strip()[:70]}')
             fallos += 1
 
     # ── verificación: el objetivo es 0 con marco y 0 fuera de lienzo ─────────

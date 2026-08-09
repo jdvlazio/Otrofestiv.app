@@ -81,9 +81,17 @@ falta: encadenar recortes sobre recortes acumula deformación):
 1. **Caja de contenido** — se descarta el borde uniforme. Solo cuenta como marco
    lo que aparece en los DOS lados opuestos: un marco rodea. Un borde claro de
    un solo lado es arte —el cielo de «The Dig»— y recortarlo mutila el afiche.
-2. **Escala al lienzo** — la caja se lleva a 780×1170 estirando el eje que
-   falte. Estirar, no recortar: el afiche se ve completo, y hasta un ~16% de
-   estirado no se percibe (probado en el keyArt).
+2. **Escala al lienzo con zoom mínimo** — la caja se lleva a 780×1170 estirando
+   el eje que falte, con un 4% de overscan que se recorta al centro. Ese zoom se
+   traga las 1–2 filas de transición que deja el antialias del borde, a cambio
+   de un 2% por lado que no se percibe. Afinar más el detector para ahorrarse
+   ese 2% arriesga comerse arte, que es peor.
+
+**Qué cuenta como marco, calibrado con píxeles reales:** una línea PLANA (poca
+varianza a lo ancho), sea blanca, negra o gris. En «El juego de la vida» el
+marco son dos filas —255 y 178— y exigir «casi blanco» dejaba fuera la segunda,
+que es justo la línea gris que se veía. El arte tiene varianza alta desde la
+primera fila (117 ahí mismo).
 
 El script **verifica su propio resultado**: al terminar mide de nuevo y reporta
 cuántos quedan con borde y cuántos fuera de lienzo. Objetivo 0 y 0; lo que
