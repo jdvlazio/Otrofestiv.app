@@ -376,3 +376,43 @@ test('P07 — el markup del selector es el mismo del splash (una implementación
   expect(sel.info, 'el info del selector dejó de salir de _fillFestInfo').toBe(splash.info);
   expect(a).toContain('splash-rail-div'); // la comparación ejerció los divisores
 });
+
+// ── P08 — filtrar por una sede nunca cruza ciudades (invariante, no mecanismo) ─
+// El bug del 9 ago no fue del filtro de ciudad: fue que la SEDE se identificaba por
+// nombre corto, y el corto no es único entre ciudades. Elegir «Cinema Local» en
+// Bogotá traía las 4 funciones de Cali.
+//
+// Este test no sabe nada de centinelas, de `short` ni de la clave (ciudad, short):
+// afirma el INVARIANTE —lo que el usuario espera— así que sigue cazando la clase
+// aunque mañana cambiemos por completo cómo se implementa. Es el mismo patrón que
+// el oráculo del planeador: juzgar el resultado, no el camino.
+//
+// Corre sobre CADA festival del config: uno nuevo entra solo, y si es multiciudad
+// queda cubierto desde su primer PR.
+for (const festId of MAIN_FESTIVALS) {
+  test(`P08 — ${festId}: una sede no arrastra funciones de otra ciudad`, async ({ page }) => {
+    await enterFestival(page, festId);
+    const r = await page.evaluate(async () => {
+      const { venueMatches, vcfg } = await import('/src/view/helpers.js');
+      const conCiudad = FILMS.filter(f => f.venue && f.day && (vcfg(f.venue).city || ''));
+      const ciudades = [...new Set(conCiudad.map(f => vcfg(f.venue).city))];
+      if (ciudades.length < 2) return { mono: true, ciudades: ciudades.length };
+      // Se prueban TODAS las sedes visibles, no una muestra: son decenas, es barato,
+      // y el caso que rompía era justo una sede puntual entre 113.
+      const sedes = [...new Set(conCiudad.map(f => vcfg(f.venue).city + '\u001F' + vcfg(f.venue).short))];
+      const cruces = [];
+      sedes.forEach(k => {
+        const [ciudad, short] = k.split('\u001F');
+        const vis = FILMS.filter(f => f.venue && venueMatches(f.venue, 'sede:' + k));
+        const otras = vis.filter(f => (vcfg(f.venue).city || '') !== ciudad);
+        if (otras.length) cruces.push(`${short} (${ciudad}) trajo ${otras.length} de ${[...new Set(otras.map(f => vcfg(f.venue).city))].join('/')}`);
+        // y la sede tiene que existir: si el filtro la deja vacía, desapareció
+        if (!vis.length) cruces.push(`${short} (${ciudad}) no devuelve ninguna función`);
+      });
+      return { mono: false, sedes: sedes.length, ciudades: ciudades.length, cruces };
+    });
+    if (r.mono) { console.log(`P08 ${festId}: ${r.ciudades} ciudad(es), no aplica`); return; }
+    console.log(`P08 ${festId}: ${r.sedes} sedes en ${r.ciudades} ciudades`);
+    expect(r.cruces, `el filtro de sede cruzó ciudades:\n  ${r.cruces.join('\n  ')}`).toEqual([]);
+  });
+}

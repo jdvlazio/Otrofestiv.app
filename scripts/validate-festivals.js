@@ -229,6 +229,19 @@ function validateFestival(fname, data) {
       errors.push(`"${title}": day='${film.day}' no existe en dayKeys`);
     }
 
+    // ── RULE 1c: el nombre corto no puede ser ambiguo entre ciudades ──────
+    // [short-ambiguo] — el `short` es una ETIQUETA, no una identidad. Dentro de una
+    // misma ciudad varias sedes lo comparten a propósito (las salas de un edificio),
+    // pero si el MISMO short aparece en DOS ciudades, cualquier lógica que agrupe por
+    // él las funde: en FICDEH «Cinema Local» (Bogotá y Cali) y «Alianza Francesa»
+    // (Barranquilla y Cartagena) hacían que elegir una trajera las funciones de la
+    // otra, que el conteo de la ciudad no cuadrara y que la sede DESAPARECIERA de la
+    // lista de la segunda (9 ago 2026, en producción). El código ya no se deja
+    // engañar —la clave es (ciudad, short)— pero el dato sigue siendo ambiguo para
+    // un ojo humano: dos filas idénticas en dos ciudades distintas.
+    // Aviso, no error: puede ser legítimo (una cadena con sede en dos ciudades).
+    // Lo que no puede es pasar inadvertido.
+
     // ── RULE 1b: day_order ES el índice del día en dayKeys ────────────────
     // [day-order-indice] — `day_order` no es un número libre: es el índice del día
     // (0 = primer día), y así lo trata TODA la app. Ordena las funciones de la
@@ -608,6 +621,21 @@ function validateFestival(fname, data) {
   }
   if (_longSyn.length) {
     warnings.push(`[synopsis-length] ${_longSyn.length} sinopsis > ${_SYN_MAX} chars (revisar/condensar): ${_longSyn.slice(0, 4).join(', ')}${_longSyn.length > 4 ? ` +${_longSyn.length - 4} más` : ''}`);
+  }
+
+  // [short-ambiguo] — mismo short en dos ciudades (ver RULE 1c).
+  const _porShort = {};
+  Object.entries(data.venues || {}).forEach(([k, v]) => {
+    const sh = (v && v.short) || k;
+    const ci = (v && v.city) || '';
+    (_porShort[sh] = _porShort[sh] || new Set()).add(ci);
+  });
+  const _ambiguos = Object.entries(_porShort).filter(([, c]) => c.size > 1)
+    .map(([sh, c]) => `"${sh}" en ${[...c].join(' y ')}`);
+  if (_ambiguos.length) {
+    warnings.push(`[short-ambiguo] ${_ambiguos.length} nombre(s) corto(s) repetido(s) entre ciudades: `
+      + _ambiguos.slice(0, 3).join(' · ') + (_ambiguos.length > 3 ? ` +${_ambiguos.length - 3} más` : '')
+      + ' — el filtro los distingue por (ciudad, short), pero en pantalla son dos filas iguales: conviene diferenciar el short');
   }
 
   // [day-order-indice] — se reporta AGREGADO: 83 líneas sueltas no se leen, un

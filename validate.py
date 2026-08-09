@@ -2664,6 +2664,80 @@ except Exception as _e:
 # vengan del repo. Sin registrar, esos cuatro archivos vuelven a conflictuar en
 # cada PR —los cinco conflictos del 8 ago 2026 fueron exactamente eso—.
 # Aviso, no error: en CI no aplica y un clon de solo lectura no lo necesita.
+# ── [doc-cadena] la documentación y los guardianes se citan mutuamente ─────────
+# «Hemos escrito muchas cosas pero no todas se cumplen en cadena» (Juan, 9 ago 2026).
+# Medido: la cadena docs→código estaba COMPLETA (61 de 61 etiquetas documentadas
+# tienen ejecutor). El hueco era el otro sentido: de 100 guardianes reales, 46 no
+# se mencionaban en NINGÚN documento. Un guardián invisible se cumple pero no se
+# conoce: nadie puede leer la doc y saber que existe, así que se re-descubre a
+# golpes o se duplica.
+#
+# El check va en las DOS direcciones, que es lo que hace que sea una cadena:
+#   docs → código: una etiqueta citada sin ejecutor es una promesa vacía. ERROR:
+#                  hoy son cero y tienen que seguir siéndolo.
+#   código → docs: un guardián sin mención es deuda. Techo que solo BAJA, mismo
+#                  patrón que module-size: lo viejo queda con número y lo NUEVO
+#                  nace documentado o no entra.
+check = 'doc-cadena'
+try:
+    import glob as _glob
+    _docs = ' '.join(open(_f, encoding='utf-8').read() for _f in _glob.glob('docs/*.md') + ['CLAUDE.md'])
+    _reales = {}
+    for _m in re.finditer(r"^check = '([^']+)'", open('validate.py', encoding='utf-8').read(), re.M):
+        _reales[_m.group(1)] = 'validate.py'
+    # Cada archivo DECLARA sus guardianes a su manera, y el extractor tiene que
+    # conocer las tres formas o inventa huérfanos. Ya pasó dos veces hoy: un `[i]`
+    # de índice contado como guardián (54 falsos), y lint-catalog dado por vacío
+    # porque emite `err('etiqueta', …)` y no `[etiqueta]`.
+    #   validate.py            → check = 'x'
+    #   validate-festivals.js  → '[x]' dentro del mensaje
+    #   lint-catalog.py        → err('x', …) / warn('x', …)
+    # En los dos archivos que se leen por REGEX se exige que la etiqueta lleve GUION.
+    # Sin eso entraban `[emoji]`, `[fname]` e `[info]` —índices y palabras sueltas
+    # dentro de mensajes— como si fueran guardianes. Todos los reales son kebab-case
+    # de dos o más palabras; los de validate.py no necesitan la heurística porque su
+    # declaración (`check = '…'`) es inequívoca.
+    for _f, _pat in [('scripts/validate-festivals.js', r"""['"`][^'"`]*\[([a-z0-9][a-z0-9]*(?:-[a-z0-9]+)+)\]"""),
+                     ('scripts/lint-catalog.py',       r"""(?:err|warn)\(\s*['"]([a-z0-9][a-z0-9]*(?:-[a-z0-9]+)+)['"]""")]:
+        if not os.path.exists(_f):
+            continue
+        for _l in set(re.findall(_pat, open(_f, encoding='utf-8').read())):
+            _reales.setdefault(_l, os.path.basename(_f))
+    # Deuda al introducir la regla: guardianes que ya existían sin documentar.
+    # Se DOCUMENTA y se saca de acá; nunca se agrega uno nuevo.
+    _DEUDA_DOC = {
+        'activity-duration','apostrophe-onclick','aviso-antes-sinopsis','bare-t-in-template',
+        'day-order-indice','dead-code','design-banned-classes','diary-poster-grid','doctype',
+        'dom-ready-guard','dtab-sin-linea','fc-bootstrap','filter-drop-canon','html-divs',
+        'i18n-hardcoded','i18n-interpolation','i18n-voseo','json-fields','keyart-write-once',
+        'no-underscore-actions','onclick-syntax','pais-conocido','pipeline-circuito',
+        'poster-editorial-parity','poster-radio-unico','poster-single-owner','pressed-canon',
+        'prio-limit','responsive-contract','sala-en-sede','sched-pure-fns','section-display-raw',
+        'sedes-apiladas','shadow-t','sheet-meta-legible','staging-provenance','static-html-template',
+        'synopsis-helper','synopsis-length','tasks-sync','template-al-dia','title-normalization',
+        'validate-film-tests','version-json','viewstate-shadow','worker-deps',
+    }
+    _sin_doc = sorted(k for k in _reales if ('[' + k + ']') not in _docs)
+    _nuevos = [k for k in _sin_doc if k not in _DEUDA_DOC]
+    # docs → código: etiqueta citada con backticks que no existe como guardián
+    _citadas = set(re.findall(r'`\[([a-z0-9][a-z0-9-]{3,40})\]`', _docs))
+    _promesas = sorted(c for c in _citadas if c not in _reales)
+    if _promesas:
+        fail(check, 'la doc cita guardián(es) que NO existen: ' + ', '.join('[' + p + ']' for p in _promesas[:5])
+                    + ' — o se implementan o se saca la promesa')
+    elif _nuevos:
+        fail(check, 'guardián(es) NUEVO(s) sin una línea en la doc: ' + ', '.join('[' + n + ']' for n in _nuevos[:5])
+                    + ' — un guardián invisible se cumple pero no se conoce')
+    else:
+        _saldada = sorted(k for k in _DEUDA_DOC if k in _reales and ('[' + k + ']') in _docs)
+        _msg = f'{len(_reales)} guardianes · {len(_reales)-len(_sin_doc)} documentados · deuda {len(_sin_doc)}/{len(_DEUDA_DOC)}'
+        if _saldada:
+            warn(check, _msg + ' — ya documentados, sacalos de _DEUDA_DOC: ' + ', '.join(_saldada[:4]))
+        else:
+            ok(check, _msg)
+except Exception as _e:
+    warn(check, f'no se pudo verificar doc-cadena: {_e}')
+
 # ── [stash-compartido] el stash NO se aísla por worktree ───────────────────────
 # Los worktrees aíslan el árbol y el índice; la PILA DE STASH es una sola para todo
 # el repositorio. Con dos chats trabajando en worktrees distintos, un `git stash pop`
