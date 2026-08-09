@@ -10,7 +10,8 @@
   "reextraccion": "Re-extraída 5 ago con TODOS los campos que publica cada fila: póster (/uploads/obras/), tipo de ingreso, director y SALA. La primera pasada solo tomó hora/sede/título.",
   "funciones_privadas": "Excluidas 29 funciones marcadas \"Función privada\" por el propio festival: son proyecciones cerradas (cárceles, colegios, centros de justicia). Incluirlas sería ofrecer algo no asistible.",
   "_merge_canonica": "59 funciones añadidas desde la extracción canónica del sitio (6 ago). La extracción anterior no cubría todos los días: faltaban sobre todo repeticiones del 12 y el 17 en Tunja, Manizales e Ibagué. Se excluyen las actividades de industria (decisión de Juan) y cualquier título sin ficha en el catálogo.",
-  "_fix_akababuru": "Eliminada la función de Akababuru en el Centro Cultural Banco de la República (Medellín): la creó por error la corrección de horarios del PDF, que cruzaba por (día, título) sin exigir la misma SEDE. Auditadas las 4 correcciones: las otras 3 movieron funciones dentro de su propia sede y son correctas."
+  "_fix_akababuru": "Eliminada la función de Akababuru en el Centro Cultural Banco de la República (Medellín): la creó por error la corrección de horarios del PDF, que cruzaba por (día, título) sin exigir la misma SEDE. Auditadas las 4 correcciones: las otras 3 movieron funciones dentro de su propia sede y son correctas.",
+  "actualizado": "8 ago 2026 desde el barrido de la web (pipeline/ficdeh-2026-actualizar-programacion.py): salas añadidas, funciones retiradas por el festival y funciones nuevas de obras ya catalogadas. Industria sigue fuera."
  },
  "_resumen": {
   "funciones": 425,
@@ -2273,14 +2274,15 @@
    "ciudad": "Medellín",
    "sede": "Colombo Americano",
    "direccion": "Cra. 45 #53 - 24. Centro",
-   "sala": "",
+   "sala": "SALA 2",
    "titulo_programacion": "El valor de la palabra",
    "director_programacion": "Marta Rodríguez/Fernando Restrepo",
    "poster_url": "/uploads/obras/El-valor-de-la-palabra.webp",
    "ingreso": "",
    "obra_catalogo": "El valor de la palabra",
    "tipo": "film",
-   "en_app": true
+   "en_app": true,
+   "_src_sala": "web ficdeh.com, barrido 8 ago"
   },
   {
    "dia": "2026-08-14",
@@ -2468,7 +2470,7 @@
    "ciudad": "Medellín",
    "sede": "Colombo Americano",
    "direccion": "Cra. 45 #53 - 24. Centro",
-   "sala": "",
+   "sala": "SALA 1",
    "titulo_programacion": "Los reyes del mundo",
    "director_programacion": "Laura Mora",
    "poster_url": "/uploads/obras/57150_8239__imagen__-1.jpg",
@@ -2476,7 +2478,8 @@
    "obra_catalogo": "Los reyes del mundo",
    "tipo": "film",
    "en_app": true,
-   "_correccion": "día y hora según la guía oficial en PDF de Medellín"
+   "_correccion": "día y hora según la guía oficial en PDF de Medellín",
+   "_src_sala": "web ficdeh.com, barrido 8 ago"
   },
   {
    "dia": "2026-08-15",
@@ -2484,14 +2487,15 @@
    "ciudad": "Medellín",
    "sede": "Colombo Americano",
    "direccion": "Cra. 45 #53 - 24. Centro",
-   "sala": "",
+   "sala": "SALA 1",
    "titulo_programacion": "Bojayá, la verdad desde adentro",
    "director_programacion": "Ramón Alexander Valencia Córdoba",
    "poster_url": "/uploads/obras/Bojaya-la-verdad-desde-adentro-2.jpg",
    "ingreso": "",
    "obra_catalogo": "Bojayá, la verdad desde adentro",
    "tipo": "film",
-   "en_app": true
+   "en_app": true,
+   "_src_sala": "web ficdeh.com, barrido 8 ago"
   },
   {
    "dia": "2026-08-15",
@@ -2529,14 +2533,15 @@
    "ciudad": "Medellín",
    "sede": "Jardín Botánico de Medellín",
    "direccion": "Cl. 73 #51D-14",
-   "sala": "",
+   "sala": "Auditorio Aurita López",
    "titulo_programacion": "Juntos podemos curar",
    "director_programacion": "Colectivo Yosokwi, Colectivo ArtEmbassy, Fundación Las Mercedes · 15 min · Auditorio Aurita López",
    "poster_url": "",
    "ingreso": "",
    "obra_catalogo": null,
    "tipo": "film_invitada",
-   "en_app": true
+   "en_app": true,
+   "_src_sala": "web ficdeh.com, barrido 8 ago"
   },
   {
    "dia": "2026-08-16",
@@ -2679,14 +2684,15 @@
    "ciudad": "Medellín",
    "sede": "Cineprox",
    "direccion": "Dg. 75B #2A-120Rotonda Comercial Las Américas",
-   "sala": "",
+   "sala": "SALA 3",
    "titulo_programacion": "Semillas",
    "director_programacion": "Eliana Niño",
    "poster_url": "/uploads/obras/Semillas.jpg",
    "ingreso": "",
    "obra_catalogo": "Semillas",
    "tipo": "film",
-   "en_app": true
+   "en_app": true,
+   "_src_sala": "web ficdeh.com, barrido 8 ago"
   },
   {
    "dia": "2026-08-18",
@@ -2785,14 +2791,15 @@
    "ciudad": "Medellín",
    "sede": "Cineprox",
    "direccion": "Dg. 75B #2A-120Rotonda Comercial Las Américas",
-   "sala": "",
+   "sala": "SALA 3",
    "titulo_programacion": "Feito Pipa",
    "director_programacion": "Allan Deberton",
    "poster_url": "/uploads/obras/Feito-Pipa.jpg",
    "ingreso": "",
    "obra_catalogo": "Feito Pipa",
    "tipo": "film",
-   "en_app": true
+   "en_app": true,
+   "_src_sala": "web ficdeh.com, barrido 8 ago"
   },
   {
    "dia": "2026-08-19",
@@ -4572,14 +4579,15 @@
    "ciudad": "Ibagué",
    "sede": "Centro Cultural Panóptico de Ibagué",
    "direccion": "Calle 11 # 9-73ª, barrio Belén",
-   "sala": "",
+   "sala": "Celda Teatro Ibagué - Proyección en loop",
    "titulo_programacion": "Madres de nacimiento",
    "director_programacion": "Gloria Isabel Gómez Ceballos · Celda Teatro Ibagué - Proyección en loop",
    "poster_url": "/uploads/obras/Madres-de-nacimiento-POSTER.jpg",
    "ingreso": "",
    "obra_catalogo": "Madres de nacimiento",
    "tipo": "film",
-   "en_app": true
+   "en_app": true,
+   "_src_sala": "web ficdeh.com, barrido 8 ago"
   },
   {
    "dia": "2026-08-13",
@@ -4587,14 +4595,15 @@
    "ciudad": "Ibagué",
    "sede": "Centro Cultural Panóptico de Ibagué",
    "direccion": "Calle 11 # 9-73ª, barrio Belén",
-   "sala": "",
+   "sala": "Celda Teatro Ibagué - Proyección en loop",
    "titulo_programacion": "Sukua",
    "director_programacion": "Omar E. Ospina Giraldo · Celda Teatro Ibagué - Proyección en loop",
    "poster_url": "/uploads/obras/Sukua.jpg",
    "ingreso": "",
    "obra_catalogo": "Sukua",
    "tipo": "film",
-   "en_app": true
+   "en_app": true,
+   "_src_sala": "web ficdeh.com, barrido 8 ago"
   },
   {
    "dia": "2026-08-13",
@@ -4602,14 +4611,15 @@
    "ciudad": "Ibagué",
    "sede": "Centro Cultural Panóptico de Ibagué",
    "direccion": "Calle 11 # 9-73ª, barrio Belén",
-   "sala": "",
+   "sala": "Celda Teatro Ibagué - Proyección en loop",
    "titulo_programacion": "La independencia",
    "director_programacion": "John Agudelo Suárez · Celda Teatro Ibagué - Proyección en loop",
    "poster_url": "/uploads/obras/La-independencia.webp",
    "ingreso": "",
    "obra_catalogo": "La independencia",
    "tipo": "film",
-   "en_app": true
+   "en_app": true,
+   "_src_sala": "web ficdeh.com, barrido 8 ago"
   },
   {
    "dia": "2026-08-13",
@@ -4617,14 +4627,15 @@
    "ciudad": "Ibagué",
    "sede": "Centro Cultural Panóptico de Ibagué",
    "direccion": "Calle 11 # 9-73ª, barrio Belén",
-   "sala": "",
+   "sala": "Celda Teatro Ibagué - Proyección en loop",
    "titulo_programacion": "Cartas a la tierra",
    "director_programacion": "Erika David · Celda Teatro Ibagué - Proyección en loop",
    "poster_url": "/uploads/obras/Cartas-a-la-tierra-POSTER.jpg",
    "ingreso": "",
    "obra_catalogo": "Cartas a la tierra",
    "tipo": "film",
-   "en_app": true
+   "en_app": true,
+   "_src_sala": "web ficdeh.com, barrido 8 ago"
   },
   {
    "dia": "2026-08-13",
@@ -4632,14 +4643,15 @@
    "ciudad": "Ibagué",
    "sede": "Centro Cultural Panóptico de Ibagué",
    "direccion": "Calle 11 # 9-73ª, barrio Belén",
-   "sala": "",
+   "sala": "Celda Teatro Ibagué - Proyección en loop",
    "titulo_programacion": "Pawa",
    "director_programacion": "Marbel Ina Vanegas Jusayu · Celda Teatro Ibagué - Proyección en loop",
    "poster_url": "/uploads/obras/Pawa.webp",
    "ingreso": "",
    "obra_catalogo": "Pawa",
    "tipo": "film",
-   "en_app": true
+   "en_app": true,
+   "_src_sala": "web ficdeh.com, barrido 8 ago"
   },
   {
    "dia": "2026-08-13",
@@ -4647,14 +4659,15 @@
    "ciudad": "Ibagué",
    "sede": "Centro Cultural Panóptico de Ibagué",
    "direccion": "Calle 11 # 9-73ª, barrio Belén",
-   "sala": "",
+   "sala": "Auditorio",
    "titulo_programacion": "La Raya",
    "director_programacion": "Yolanda Cruz · Auditorio",
    "poster_url": "/uploads/obras/La-Raya.jpg",
    "ingreso": "",
    "obra_catalogo": "La Raya",
    "tipo": "film",
-   "en_app": true
+   "en_app": true,
+   "_src_sala": "web ficdeh.com, barrido 8 ago"
   },
   {
    "dia": "2026-08-13",
@@ -4662,14 +4675,15 @@
    "ciudad": "Ibagué",
    "sede": "Universidad de Ibagué",
    "direccion": "Carrera 22 - Calle 67, barrio Ambalá",
-   "sala": "",
+   "sala": "Auditorio Central",
    "titulo_programacion": "Semillas",
    "director_programacion": "Eliana Niño · Auditorio Central",
    "poster_url": "/uploads/obras/Semillas.jpg",
    "ingreso": "",
    "obra_catalogo": "Semillas",
    "tipo": "film",
-   "en_app": true
+   "en_app": true,
+   "_src_sala": "web ficdeh.com, barrido 8 ago"
   },
   {
    "dia": "2026-08-14",
@@ -4677,14 +4691,15 @@
    "ciudad": "Ibagué",
    "sede": "Centro Cultural Panóptico de Ibagué",
    "direccion": "Calle 11 # 9-73ª, barrio Belén",
-   "sala": "",
+   "sala": "Celda Teatro Ibagué (Proyección en loop)",
    "titulo_programacion": "Pawa",
    "director_programacion": "Marbel Ina Vanegas Jusayu · Celda Teatro Ibagué (Proyección en loop)",
    "poster_url": "/uploads/obras/Pawa.webp",
    "ingreso": "",
    "obra_catalogo": "Pawa",
    "tipo": "film",
-   "en_app": true
+   "en_app": true,
+   "_src_sala": "web ficdeh.com, barrido 8 ago"
   },
   {
    "dia": "2026-08-14",
@@ -4692,14 +4707,15 @@
    "ciudad": "Ibagué",
    "sede": "Centro Cultural Panóptico de Ibagué",
    "direccion": "Calle 11 # 9-73ª, barrio Belén",
-   "sala": "",
+   "sala": "Celda Teatro Ibagué (Proyección en loop)",
    "titulo_programacion": "Madres de nacimiento",
    "director_programacion": "Gloria Isabel Gómez Ceballos · Celda Teatro Ibagué (Proyección en loop)",
    "poster_url": "/uploads/obras/Madres-de-nacimiento-POSTER.jpg",
    "ingreso": "",
    "obra_catalogo": "Madres de nacimiento",
    "tipo": "film",
-   "en_app": true
+   "en_app": true,
+   "_src_sala": "web ficdeh.com, barrido 8 ago"
   },
   {
    "dia": "2026-08-14",
@@ -4707,14 +4723,15 @@
    "ciudad": "Ibagué",
    "sede": "Centro Cultural Panóptico de Ibagué",
    "direccion": "Calle 11 # 9-73ª, barrio Belén",
-   "sala": "",
+   "sala": "Celda Teatro Ibagué (Proyección en loop)",
    "titulo_programacion": "Sukua",
    "director_programacion": "Omar E. Ospina Giraldo · Celda Teatro Ibagué (Proyección en loop)",
    "poster_url": "/uploads/obras/Sukua.jpg",
    "ingreso": "",
    "obra_catalogo": "Sukua",
    "tipo": "film",
-   "en_app": true
+   "en_app": true,
+   "_src_sala": "web ficdeh.com, barrido 8 ago"
   },
   {
    "dia": "2026-08-14",
@@ -4722,14 +4739,15 @@
    "ciudad": "Ibagué",
    "sede": "Centro Cultural Panóptico de Ibagué",
    "direccion": "Calle 11 # 9-73ª, barrio Belén",
-   "sala": "",
+   "sala": "Celda Teatro Ibagué (Proyección en loop)",
    "titulo_programacion": "La independencia",
    "director_programacion": "John Agudelo Suárez · Celda Teatro Ibagué (Proyección en loop)",
    "poster_url": "/uploads/obras/La-independencia.webp",
    "ingreso": "",
    "obra_catalogo": "La independencia",
    "tipo": "film",
-   "en_app": true
+   "en_app": true,
+   "_src_sala": "web ficdeh.com, barrido 8 ago"
   },
   {
    "dia": "2026-08-14",
@@ -4737,14 +4755,15 @@
    "ciudad": "Ibagué",
    "sede": "Centro Cultural Panóptico de Ibagué",
    "direccion": "Calle 11 # 9-73ª, barrio Belén",
-   "sala": "",
+   "sala": "Celda Teatro Ibagué (Proyección en loop)",
    "titulo_programacion": "Cartas a la tierra",
    "director_programacion": "Erika David · Celda Teatro Ibagué (Proyección en loop)",
    "poster_url": "/uploads/obras/Cartas-a-la-tierra-POSTER.jpg",
    "ingreso": "",
    "obra_catalogo": "Cartas a la tierra",
    "tipo": "film",
-   "en_app": true
+   "en_app": true,
+   "_src_sala": "web ficdeh.com, barrido 8 ago"
   },
   {
    "dia": "2026-08-14",
@@ -4752,14 +4771,15 @@
    "ciudad": "Ibagué",
    "sede": "Centro Cultural Panóptico de Ibagué",
    "direccion": "Calle 11 # 9-73ª, barrio Belén",
-   "sala": "",
+   "sala": "Auditorio",
    "titulo_programacion": "Volver a creer",
    "director_programacion": "Paola Díaz Gómez/Nicolás Cuéllar Gempeler/Eric Marti/Nayid Lorena Herran/Gustavo Cabezas/Ismail Pang/Mumit M/María Fernanda Pinilla · Auditorio",
    "poster_url": "/uploads/obras/Volver-a-creer.webp",
    "ingreso": "",
    "obra_catalogo": "Volver a creer",
    "tipo": "film",
-   "en_app": true
+   "en_app": true,
+   "_src_sala": "web ficdeh.com, barrido 8 ago"
   },
   {
    "dia": "2026-08-14",
@@ -4767,14 +4787,15 @@
    "ciudad": "Ibagué",
    "sede": "Centro Cultural Panóptico de Ibagué",
    "direccion": "Calle 11 # 9-73ª, barrio Belén",
-   "sala": "",
+   "sala": "Auditorio",
    "titulo_programacion": "Cuando la palabra se hace búsqueda",
    "director_programacion": "Frank Benitez · Auditorio",
    "poster_url": "/uploads/obras/Cuando-la-palabra-se-hace-busqueda.jpg",
    "ingreso": "",
    "obra_catalogo": "Cuando la palabra se hace búsqueda",
    "tipo": "film",
-   "en_app": true
+   "en_app": true,
+   "_src_sala": "web ficdeh.com, barrido 8 ago"
   },
   {
    "dia": "2026-08-14",
@@ -4782,14 +4803,15 @@
    "ciudad": "Ibagué",
    "sede": "Centro Cultural Panóptico de Ibagué",
    "direccion": "Calle 11 # 9-73ª, barrio Belén",
-   "sala": "",
+   "sala": "Auditorio",
    "titulo_programacion": "Tierra que habla",
    "director_programacion": "Ana Fraile/Lucas Scavino · Auditorio",
    "poster_url": "/uploads/obras/Tierra-que-habla.jpg",
    "ingreso": "",
    "obra_catalogo": "Tierra que habla",
    "tipo": "film",
-   "en_app": true
+   "en_app": true,
+   "_src_sala": "web ficdeh.com, barrido 8 ago"
   },
   {
    "dia": "2026-08-14",
@@ -4797,14 +4819,15 @@
    "ciudad": "Ibagué",
    "sede": "Universidad de Ibagué",
    "direccion": "Carrera 22 - Calle 67, barrio Ambalá",
-   "sala": "",
+   "sala": "Biblioteca Sala 4",
    "titulo_programacion": "La luz por primera vez",
    "director_programacion": "Ibeth Rey Jerez/Frank Rodríguez · Biblioteca Sala 4",
    "poster_url": "/uploads/obras/La-luz-por-primera-vez.jpg",
    "ingreso": "",
    "obra_catalogo": "La luz por primera vez",
    "tipo": "film",
-   "en_app": true
+   "en_app": true,
+   "_src_sala": "web ficdeh.com, barrido 8 ago"
   },
   {
    "dia": "2026-08-14",
@@ -4842,14 +4865,15 @@
    "ciudad": "Ibagué",
    "sede": "Universidad de Ibagué",
    "direccion": "Carrera 22 - Calle 67, barrio Ambalá",
-   "sala": "",
+   "sala": "Media Torta Facultad de Humanidades",
    "titulo_programacion": "La Cerrillana",
    "director_programacion": "Andrea Urquiola · Media Torta Facultad de Humanidades",
    "poster_url": "/uploads/obras/La-Cerrillana.webp",
    "ingreso": "",
    "obra_catalogo": "La Cerrillana",
    "tipo": "film",
-   "en_app": true
+   "en_app": true,
+   "_src_sala": "web ficdeh.com, barrido 8 ago"
   },
   {
    "dia": "2026-08-14",
@@ -4887,14 +4911,15 @@
    "ciudad": "Ibagué",
    "sede": "Centro Cultural Panóptico de Ibagué",
    "direccion": "Calle 11 # 9-73ª, barrio Belén",
-   "sala": "",
+   "sala": "Celda Teatro Ibagué (Proyección en loop)",
    "titulo_programacion": "Madres de nacimiento",
    "director_programacion": "Gloria Isabel Gómez Ceballos · Celda Teatro Ibagué (Proyección en loop)",
    "poster_url": "/uploads/obras/Madres-de-nacimiento-POSTER.jpg",
    "ingreso": "",
    "obra_catalogo": "Madres de nacimiento",
    "tipo": "film",
-   "en_app": true
+   "en_app": true,
+   "_src_sala": "web ficdeh.com, barrido 8 ago"
   },
   {
    "dia": "2026-08-15",
@@ -4902,14 +4927,15 @@
    "ciudad": "Ibagué",
    "sede": "Centro Cultural Panóptico de Ibagué",
    "direccion": "Calle 11 # 9-73ª, barrio Belén",
-   "sala": "",
+   "sala": "Celda Teatro Ibagué (Proyección en loop)",
    "titulo_programacion": "Sukua",
    "director_programacion": "Omar E. Ospina Giraldo · Celda Teatro Ibagué (Proyección en loop)",
    "poster_url": "/uploads/obras/Sukua.jpg",
    "ingreso": "",
    "obra_catalogo": "Sukua",
    "tipo": "film",
-   "en_app": true
+   "en_app": true,
+   "_src_sala": "web ficdeh.com, barrido 8 ago"
   },
   {
    "dia": "2026-08-15",
@@ -4917,14 +4943,15 @@
    "ciudad": "Ibagué",
    "sede": "Centro Cultural Panóptico de Ibagué",
    "direccion": "Calle 11 # 9-73ª, barrio Belén",
-   "sala": "",
+   "sala": "Celda Teatro Ibagué (Proyección en loop)",
    "titulo_programacion": "La independencia",
    "director_programacion": "John Agudelo Suárez · Celda Teatro Ibagué (Proyección en loop)",
    "poster_url": "/uploads/obras/La-independencia.webp",
    "ingreso": "",
    "obra_catalogo": "La independencia",
    "tipo": "film",
-   "en_app": true
+   "en_app": true,
+   "_src_sala": "web ficdeh.com, barrido 8 ago"
   },
   {
    "dia": "2026-08-15",
@@ -4932,14 +4959,15 @@
    "ciudad": "Ibagué",
    "sede": "Centro Cultural Panóptico de Ibagué",
    "direccion": "Calle 11 # 9-73ª, barrio Belén",
-   "sala": "",
+   "sala": "Celda Teatro Ibagué (Proyección en loop)",
    "titulo_programacion": "Cartas a la tierra",
    "director_programacion": "Erika David · Celda Teatro Ibagué (Proyección en loop)",
    "poster_url": "/uploads/obras/Cartas-a-la-tierra-POSTER.jpg",
    "ingreso": "",
    "obra_catalogo": "Cartas a la tierra",
    "tipo": "film",
-   "en_app": true
+   "en_app": true,
+   "_src_sala": "web ficdeh.com, barrido 8 ago"
   },
   {
    "dia": "2026-08-15",
@@ -4947,14 +4975,15 @@
    "ciudad": "Ibagué",
    "sede": "Centro Cultural Panóptico de Ibagué",
    "direccion": "Calle 11 # 9-73ª, barrio Belén",
-   "sala": "",
+   "sala": "Celda Teatro Ibagué (Proyección en loop)",
    "titulo_programacion": "Pawa",
    "director_programacion": "Marbel Ina Vanegas Jusayu · Celda Teatro Ibagué (Proyección en loop)",
    "poster_url": "/uploads/obras/Pawa.webp",
    "ingreso": "",
    "obra_catalogo": "Pawa",
    "tipo": "film",
-   "en_app": true
+   "en_app": true,
+   "_src_sala": "web ficdeh.com, barrido 8 ago"
   },
   {
    "dia": "2026-08-15",
@@ -4962,14 +4991,15 @@
    "ciudad": "Ibagué",
    "sede": "Centro Cultural Panóptico de Ibagué",
    "direccion": "Calle 11 # 9-73ª, barrio Belén",
-   "sala": "",
+   "sala": "Auditorio",
    "titulo_programacion": "Indiamenta",
    "director_programacion": "Carlos Nieto · Auditorio",
    "poster_url": "/uploads/obras/Indiamenta.jpg",
    "ingreso": "",
    "obra_catalogo": "Indiamenta",
    "tipo": "film",
-   "en_app": true
+   "en_app": true,
+   "_src_sala": "web ficdeh.com, barrido 8 ago"
   },
   {
    "dia": "2026-08-15",
@@ -4977,14 +5007,15 @@
    "ciudad": "Ibagué",
    "sede": "Centro Cultural Panóptico de Ibagué",
    "direccion": "Calle 11 # 9-73ª, barrio Belén",
-   "sala": "",
+   "sala": "Auditorio",
    "titulo_programacion": "Aquí no entra luz",
    "director_programacion": "Karol Maia · Auditorio",
    "poster_url": "/uploads/obras/Aqui-no-entra-luz.webp",
    "ingreso": "",
    "obra_catalogo": "Aquí no entra luz",
    "tipo": "film",
-   "en_app": true
+   "en_app": true,
+   "_src_sala": "web ficdeh.com, barrido 8 ago"
   },
   {
    "dia": "2026-08-15",
@@ -4992,14 +5023,15 @@
    "ciudad": "Ibagué",
    "sede": "Centro Cultural Panóptico de Ibagué",
    "direccion": "Calle 11 # 9-73ª, barrio Belén",
-   "sala": "",
+   "sala": "Auditorio",
    "titulo_programacion": "Muerto no",
    "director_programacion": "Alex Reis · Auditorio",
    "poster_url": "/uploads/obras/Muerto-no.jpg",
    "ingreso": "",
    "obra_catalogo": "Muerto no",
    "tipo": "film",
-   "en_app": true
+   "en_app": true,
+   "_src_sala": "web ficdeh.com, barrido 8 ago"
   },
   {
    "dia": "2026-08-15",
@@ -5037,14 +5069,15 @@
    "ciudad": "Ibagué",
    "sede": "Centro Cultural Panóptico de Ibagué",
    "direccion": "Calle 11 # 9-73ª, barrio Belén",
-   "sala": "",
+   "sala": "Auditorio",
    "titulo_programacion": "El Paraíso de Ainara",
    "director_programacion": "Esther Niemeier/Laura Espinel · Auditorio",
    "poster_url": "/uploads/obras/El-paraiso-de-anaira-POSTER.jpg",
    "ingreso": "",
    "obra_catalogo": "El Paraíso de Ainara",
    "tipo": "film",
-   "en_app": true
+   "en_app": true,
+   "_src_sala": "web ficdeh.com, barrido 8 ago"
   },
   {
    "dia": "2026-08-16",
@@ -5052,14 +5085,15 @@
    "ciudad": "Ibagué",
    "sede": "Centro Cultural Panóptico de Ibagué",
    "direccion": "Calle 11 # 9-73ª, barrio Belén",
-   "sala": "",
+   "sala": "Auditorio",
    "titulo_programacion": "Akababuru: Expresión de asombro",
    "director_programacion": "Irati Dojura · Auditorio",
    "poster_url": "/uploads/obras/Akababuru-Expresion-de-asombro.jpg",
    "ingreso": "",
    "obra_catalogo": "Akababuru: Expresión de asombro",
    "tipo": "film",
-   "en_app": true
+   "en_app": true,
+   "_src_sala": "web ficdeh.com, barrido 8 ago"
   },
   {
    "dia": "2026-08-16",
@@ -5067,14 +5101,15 @@
    "ciudad": "Ibagué",
    "sede": "Centro Cultural Panóptico de Ibagué",
    "direccion": "Calle 11 # 9-73ª, barrio Belén",
-   "sala": "",
+   "sala": "Auditorio",
    "titulo_programacion": "La gran hazaña",
    "director_programacion": "Luber Yesidt Zúñiga Ordóñez · Auditorio",
    "poster_url": "/uploads/obras/La-gran-hazana.jpg",
    "ingreso": "",
    "obra_catalogo": "La gran hazaña",
    "tipo": "film",
-   "en_app": true
+   "en_app": true,
+   "_src_sala": "web ficdeh.com, barrido 8 ago"
   },
   {
    "dia": "2026-08-16",
@@ -5082,14 +5117,15 @@
    "ciudad": "Ibagué",
    "sede": "Centro Cultural Panóptico de Ibagué",
    "direccion": "Calle 11 # 9-73ª, barrio Belén",
-   "sala": "",
+   "sala": "Auditorio",
    "titulo_programacion": "Héroes del silencio",
    "director_programacion": "Atikeinis Durán Izquierdo · Auditorio",
    "poster_url": "/uploads/obras/Heroes-del-silencio.jpg",
    "ingreso": "",
    "obra_catalogo": "Héroes del silencio",
    "tipo": "film",
-   "en_app": true
+   "en_app": true,
+   "_src_sala": "web ficdeh.com, barrido 8 ago"
   },
   {
    "dia": "2026-08-16",
@@ -5097,14 +5133,15 @@
    "ciudad": "Ibagué",
    "sede": "Centro Cultural Panóptico de Ibagué",
    "direccion": "Calle 11 # 9-73ª, barrio Belén",
-   "sala": "",
+   "sala": "Auditorio",
    "titulo_programacion": "In four stops",
    "director_programacion": "Elizaveta Khlomova · Auditorio",
    "poster_url": "/uploads/obras/In-four-stops-En-cuatro-paradas.jpg",
    "ingreso": "",
    "obra_catalogo": "In four stops",
    "tipo": "film",
-   "en_app": true
+   "en_app": true,
+   "_src_sala": "web ficdeh.com, barrido 8 ago"
   },
   {
    "dia": "2026-08-18",
@@ -5112,14 +5149,15 @@
    "ciudad": "Ibagué",
    "sede": "Centro Cultural Panóptico de Ibagué",
    "direccion": "Calle 11 # 9-73ª, barrio Belén",
-   "sala": "",
+   "sala": "Celda Teatro Ibagué (Proyección en loop)",
    "titulo_programacion": "Madres de nacimiento",
    "director_programacion": "Gloria Isabel Gómez Ceballos · Celda Teatro Ibagué (Proyección en loop)",
    "poster_url": "/uploads/obras/Madres-de-nacimiento-POSTER.jpg",
    "ingreso": "",
    "obra_catalogo": "Madres de nacimiento",
    "tipo": "film",
-   "en_app": true
+   "en_app": true,
+   "_src_sala": "web ficdeh.com, barrido 8 ago"
   },
   {
    "dia": "2026-08-18",
@@ -5127,14 +5165,15 @@
    "ciudad": "Ibagué",
    "sede": "Centro Cultural Panóptico de Ibagué",
    "direccion": "Calle 11 # 9-73ª, barrio Belén",
-   "sala": "",
+   "sala": "Celda Teatro Ibagué (Proyección en loop)",
    "titulo_programacion": "Sukua",
    "director_programacion": "Omar E. Ospina Giraldo · Celda Teatro Ibagué (Proyección en loop)",
    "poster_url": "/uploads/obras/Sukua.jpg",
    "ingreso": "",
    "obra_catalogo": "Sukua",
    "tipo": "film",
-   "en_app": true
+   "en_app": true,
+   "_src_sala": "web ficdeh.com, barrido 8 ago"
   },
   {
    "dia": "2026-08-18",
@@ -5142,14 +5181,15 @@
    "ciudad": "Ibagué",
    "sede": "Centro Cultural Panóptico de Ibagué",
    "direccion": "Calle 11 # 9-73ª, barrio Belén",
-   "sala": "",
+   "sala": "Celda Teatro Ibagué (Proyección en loop)",
    "titulo_programacion": "La independencia",
    "director_programacion": "John Agudelo Suárez · Celda Teatro Ibagué (Proyección en loop)",
    "poster_url": "/uploads/obras/La-independencia.webp",
    "ingreso": "",
    "obra_catalogo": "La independencia",
    "tipo": "film",
-   "en_app": true
+   "en_app": true,
+   "_src_sala": "web ficdeh.com, barrido 8 ago"
   },
   {
    "dia": "2026-08-18",
@@ -5157,14 +5197,15 @@
    "ciudad": "Ibagué",
    "sede": "Centro Cultural Panóptico de Ibagué",
    "direccion": "Calle 11 # 9-73ª, barrio Belén",
-   "sala": "",
+   "sala": "Celda Teatro Ibagué (Proyección en loop)",
    "titulo_programacion": "Cartas a la tierra",
    "director_programacion": "Erika David · Celda Teatro Ibagué (Proyección en loop)",
    "poster_url": "/uploads/obras/Cartas-a-la-tierra-POSTER.jpg",
    "ingreso": "",
    "obra_catalogo": "Cartas a la tierra",
    "tipo": "film",
-   "en_app": true
+   "en_app": true,
+   "_src_sala": "web ficdeh.com, barrido 8 ago"
   },
   {
    "dia": "2026-08-18",
@@ -5172,14 +5213,15 @@
    "ciudad": "Ibagué",
    "sede": "Centro Cultural Panóptico de Ibagué",
    "direccion": "Calle 11 # 9-73ª, barrio Belén",
-   "sala": "",
+   "sala": "Celda Teatro Ibagué (Proyección en loop)",
    "titulo_programacion": "Pawa",
    "director_programacion": "Marbel Ina Vanegas Jusayu · Celda Teatro Ibagué (Proyección en loop)",
    "poster_url": "/uploads/obras/Pawa.webp",
    "ingreso": "",
    "obra_catalogo": "Pawa",
    "tipo": "film",
-   "en_app": true
+   "en_app": true,
+   "_src_sala": "web ficdeh.com, barrido 8 ago"
   },
   {
    "dia": "2026-08-18",
@@ -5187,14 +5229,15 @@
    "ciudad": "Ibagué",
    "sede": "Universidad de Ibagué",
    "direccion": "Carrera 22 - Calle 67, barrio Ambalá",
-   "sala": "",
+   "sala": "La Casona",
    "titulo_programacion": "Aminetu",
    "director_programacion": "Lucía Muñoz Lucena · La Casona",
    "poster_url": "/uploads/obras/Aminetu.jpg",
    "ingreso": "",
    "obra_catalogo": "Aminetu",
    "tipo": "film",
-   "en_app": true
+   "en_app": true,
+   "_src_sala": "web ficdeh.com, barrido 8 ago"
   },
   {
    "dia": "2026-08-18",
@@ -5202,14 +5245,15 @@
    "ciudad": "Ibagué",
    "sede": "Universidad de Ibagué",
    "direccion": "Carrera 22 - Calle 67, barrio Ambalá",
-   "sala": "",
+   "sala": "Auditorio de Ingeniería",
    "titulo_programacion": "Andariega",
    "director_programacion": "Raúl Soto · Auditorio de Ingeniería",
    "poster_url": "/uploads/obras/Bojaya-la-verdad-desde-adentro-1.jpg",
    "ingreso": "",
    "obra_catalogo": "Andariega",
    "tipo": "film",
-   "en_app": true
+   "en_app": true,
+   "_src_sala": "web ficdeh.com, barrido 8 ago"
   },
   {
    "dia": "2026-08-19",
@@ -5217,14 +5261,15 @@
    "ciudad": "Ibagué",
    "sede": "Centro Cultural Panóptico de Ibagué",
    "direccion": "Calle 11 # 9-73ª, barrio Belén",
-   "sala": "",
+   "sala": "Celda Teatro Ibagué (Proyección en loop)",
    "titulo_programacion": "Madres de nacimiento",
    "director_programacion": "Gloria Isabel Gómez Ceballos · Celda Teatro Ibagué (Proyección en loop)",
    "poster_url": "/uploads/obras/Madres-de-nacimiento-POSTER.jpg",
    "ingreso": "",
    "obra_catalogo": "Madres de nacimiento",
    "tipo": "film",
-   "en_app": true
+   "en_app": true,
+   "_src_sala": "web ficdeh.com, barrido 8 ago"
   },
   {
    "dia": "2026-08-19",
@@ -5232,14 +5277,15 @@
    "ciudad": "Ibagué",
    "sede": "Centro Cultural Panóptico de Ibagué",
    "direccion": "Calle 11 # 9-73ª, barrio Belén",
-   "sala": "",
+   "sala": "Celda Teatro Ibagué (Proyección en loop)",
    "titulo_programacion": "Sukua",
    "director_programacion": "Omar E. Ospina Giraldo · Celda Teatro Ibagué (Proyección en loop)",
    "poster_url": "/uploads/obras/Sukua.jpg",
    "ingreso": "",
    "obra_catalogo": "Sukua",
    "tipo": "film",
-   "en_app": true
+   "en_app": true,
+   "_src_sala": "web ficdeh.com, barrido 8 ago"
   },
   {
    "dia": "2026-08-19",
@@ -5247,14 +5293,15 @@
    "ciudad": "Ibagué",
    "sede": "Centro Cultural Panóptico de Ibagué",
    "direccion": "Calle 11 # 9-73ª, barrio Belén",
-   "sala": "",
+   "sala": "Celda Teatro Ibagué (Proyección en loop)",
    "titulo_programacion": "La independencia",
    "director_programacion": "John Agudelo Suárez · Celda Teatro Ibagué (Proyección en loop)",
    "poster_url": "/uploads/obras/La-independencia.webp",
    "ingreso": "",
    "obra_catalogo": "La independencia",
    "tipo": "film",
-   "en_app": true
+   "en_app": true,
+   "_src_sala": "web ficdeh.com, barrido 8 ago"
   },
   {
    "dia": "2026-08-19",
@@ -5262,14 +5309,15 @@
    "ciudad": "Ibagué",
    "sede": "Centro Cultural Panóptico de Ibagué",
    "direccion": "Calle 11 # 9-73ª, barrio Belén",
-   "sala": "",
+   "sala": "Celda Teatro Ibagué (Proyección en loop)",
    "titulo_programacion": "Cartas a la tierra",
    "director_programacion": "Erika David · Celda Teatro Ibagué (Proyección en loop)",
    "poster_url": "/uploads/obras/Cartas-a-la-tierra-POSTER.jpg",
    "ingreso": "",
    "obra_catalogo": "Cartas a la tierra",
    "tipo": "film",
-   "en_app": true
+   "en_app": true,
+   "_src_sala": "web ficdeh.com, barrido 8 ago"
   },
   {
    "dia": "2026-08-19",
@@ -5277,14 +5325,15 @@
    "ciudad": "Ibagué",
    "sede": "Centro Cultural Panóptico de Ibagué",
    "direccion": "Calle 11 # 9-73ª, barrio Belén",
-   "sala": "",
+   "sala": "Celda Teatro Ibagué (Proyección en loop)",
    "titulo_programacion": "Pawa",
    "director_programacion": "Marbel Ina Vanegas Jusayu · Celda Teatro Ibagué (Proyección en loop)",
    "poster_url": "/uploads/obras/Pawa.webp",
    "ingreso": "",
    "obra_catalogo": "Pawa",
    "tipo": "film",
-   "en_app": true
+   "en_app": true,
+   "_src_sala": "web ficdeh.com, barrido 8 ago"
   },
   {
    "dia": "2026-08-19",
@@ -5307,14 +5356,15 @@
    "ciudad": "Ibagué",
    "sede": "Universidad de Ibagué",
    "direccion": "Carrera 22 - Calle 67, barrio Ambalá",
-   "sala": "",
+   "sala": "Media Torta Facultad de Humanidades",
    "titulo_programacion": "Hija del volcán",
    "director_programacion": "Jenifer de la Rosa · Media Torta Facultad de Humanidades",
    "poster_url": "/uploads/obras/Hija-del-volcan.jpg",
    "ingreso": "",
    "obra_catalogo": "Hija del volcán",
    "tipo": "film",
-   "en_app": true
+   "en_app": true,
+   "_src_sala": "web ficdeh.com, barrido 8 ago"
   },
   {
    "dia": "2026-08-13",
@@ -6120,7 +6170,8 @@
    "ingreso": "",
    "obra_catalogo": "Por una gota de leche",
    "tipo": "film",
-   "en_app": true
+   "en_app": false,
+   "_motivo_exclusion": "retirada de la web del festival (barrido 8 ago)"
   },
   {
    "dia": "2026-08-12",
@@ -6165,7 +6216,8 @@
    "ingreso": "",
    "obra_catalogo": "Desierto verde",
    "tipo": "film",
-   "en_app": true
+   "en_app": false,
+   "_motivo_exclusion": "retirada de la web del festival (barrido 8 ago)"
   },
   {
    "dia": "2026-08-13",
@@ -7475,6 +7527,54 @@
    "tipo": "taller",
    "en_app": true,
    "_src": "guía oficial en PDF de Medellín + póster oficial del festival"
+  },
+  {
+   "titulo_programacion": "Lo que sentimos",
+   "director_programacion": "Fondo Multidonante de las Naciones",
+   "obra_catalogo": "Lo que sentimos",
+   "tipo": "film",
+   "poster_url": "",
+   "ciudad": "Bogotá",
+   "dia": "2026-08-15",
+   "hora": "14:00",
+   "sede": "Fundación Gilberto Alzate Avendaño - Biblioteca",
+   "direccion": "",
+   "sala": "",
+   "ingreso": "",
+   "en_app": true,
+   "_src": "web ficdeh.com, barrido 8 ago — función que la web añadió"
+  },
+  {
+   "titulo_programacion": "Lo que sentimos",
+   "director_programacion": "Fondo Multidonante de las Naciones",
+   "obra_catalogo": "Lo que sentimos",
+   "tipo": "film",
+   "poster_url": "",
+   "ciudad": "Bogotá",
+   "dia": "2026-08-15",
+   "hora": "17:00",
+   "sede": "La Trocha, La Casa de la Paz",
+   "direccion": "",
+   "sala": "",
+   "ingreso": "",
+   "en_app": true,
+   "_src": "web ficdeh.com, barrido 8 ago — función que la web añadió"
+  },
+  {
+   "titulo_programacion": "Lo que sentimos",
+   "director_programacion": "Fondo Multidonante de las Naciones",
+   "obra_catalogo": "Lo que sentimos",
+   "tipo": "film",
+   "poster_url": "",
+   "ciudad": "Pereira",
+   "dia": "2026-08-19",
+   "hora": "18:30",
+   "sede": "Colombo Americano de Pereira",
+   "direccion": "",
+   "sala": "",
+   "ingreso": "",
+   "en_app": true,
+   "_src": "web ficdeh.com, barrido 8 ago — función que la web añadió"
   }
  ]
 }
