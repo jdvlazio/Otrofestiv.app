@@ -545,6 +545,19 @@ se borran del working tree.
    verifica que ninguna línea propia haya desaparecido.
 2. **Para mirar otra rama, worktree, nunca `checkout`.** Un `git worktree add`
    deja el directorio principal intacto: ni arrastra untracked ni borra nada.
+3. **Nada de `git stash` en este repo.** Los worktrees aíslan el árbol y el índice;
+   la **pila de stash es una sola para todo el repositorio**. Con dos chats en
+   worktrees distintos, un `pop` saca la entrada de arriba — que puede ser del otro.
+   Pasó el 9 ago 2026: un `pop` en el worktree de app trajo `ficmontanas-hold-5` del
+   worktree de onboarding y dejó `CLAUDE.md`, `src/config.js` y
+   `validate-festivals.js` con marcadores de conflicto sin resolver, en medio de una
+   verificación que no tenía nada que ver con festivales.
+   **En vez de stash: commiteá el WIP en tu rama.** Un commit lleva tu nombre de rama
+   y nadie lo saca por accidente. Si aun así hay que aplicar uno, `git stash apply
+   stash@{N}` por referencia exacta, nunca `pop`.
+   No hay hook de git para stash (`pre-stash` no existe), así que la barrera vigila
+   el ESTADO: `[stash-compartido]` avisa cuando hay entradas vivas con más de un
+   worktree, y dice de qué rama vienen.
 
 **Barreras mecánicas** (`.githooks/`, activadas con `git config core.hooksPath .githooks`):
 
@@ -554,6 +567,16 @@ se borran del working tree.
 | `pre-push` | `validate.py` en rojo — el fallo se ve en 20 s acá, no en 5 min de CI |
 
 Ambos aceptan `--no-verify`. Que el escape exista no lo vuelve rutina.
+
+Y lo que un hook no puede cortar, lo vigila `validate.py`:
+
+| guardián | qué vigila |
+|---|---|
+| `[hooks-activos]` | los hooks enchufados en este clon (`core.hooksPath`) |
+| `[merge-driver]` | el driver `bump` registrado (§15.4c) |
+| `[sin-symlinks]` | ningún enlace simbólico versionado — tumban el deploy de Pages |
+| `[peso-repo]` | material de trabajo versionado (ofimáticos, > 3 MB) |
+| `[stash-compartido]` | stash vivo con varios worktrees — la pila es del repo, no del worktree |
 
 > Por qué barreras y no propósitos: un agente encadena comandos de git en un
 > segundo, sin la fricción que tiene una persona al ver el diff en pantalla. La
