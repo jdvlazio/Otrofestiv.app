@@ -346,7 +346,11 @@ export const FESTIVAL_CONFIG={
     dayShort_en:{'2026-08-10':'MON 10','2026-08-11':'TUE 11','2026-08-12':'WED 12','2026-08-13':'THU 13','2026-08-14':'FRI 14','2026-08-15':'SAT 15','2026-08-16':'SUN 16','2026-08-17':'MON 17'},
     dayLong:{'2026-08-10':'Lunes 10 de agosto','2026-08-11':'Martes 11 de agosto','2026-08-12':'Miércoles 12 de agosto','2026-08-13':'Jueves 13 de agosto','2026-08-14':'Viernes 14 de agosto','2026-08-15':'Sábado 15 de agosto','2026-08-16':'Domingo 16 de agosto','2026-08-17':'Lunes 17 de agosto'},
     prioLimit:4,
-    tagline:'El jardín de las cosas perdidas', // lema de esta edición, impreso en cada página del programa
+    // El subtítulo expande la sigla, no repite el nombre: «FICMA» no le dice
+    // nada a quien llega de fuera. El lema de la edición —«El jardín de las
+    // cosas perdidas»— se lee en el afiche, que está justo encima; ponerlo aquí
+    // gastaba la única línea de contexto que tenemos. Mismo criterio que FICDEH.
+    tagline:'Feria Internacional de Cine de Manizales',
     films:null,posters:null,lbSlugs:{}
   },
   'ficdeh2026': {
@@ -367,10 +371,10 @@ export const FESTIVAL_CONFIG={
     films:null,posters:null,lbSlugs:{}
   },
   'finca2026': {
-    // priority: alianza OFICIAL — va primero entre los de su tier aunque comparta
-    // fechas con FICDEH (alianza parcial). Sin este campo el orden lo decidían 30
-    // minutos de diferencia en festivalEndStr, que no es una decisión.
-    priority:1,
+    // Sin `priority`. Lo llevó unos días para darle visibilidad ante una nota de
+    // prensa, y se retira: la REGLA MADRE del splash es la fecha —primero el que
+    // empieza antes— y una excepción editorial permanente la erosiona (Juan,
+    // 9 ago 2026). Para un empujón puntual, ponerlo y quitarlo; nunca dejarlo.
     name:'FINCA',fullName:'FINCA — Festival Internacional de Cine Ambiental',shortName:'FINCA',
     city:'Buenos Aires',country:'AR',
     dates:'12–19 AGO',dates_en:'AUG 12–19',year:2026,timezoneOffset:'-03:00',
