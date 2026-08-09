@@ -293,3 +293,30 @@ test('T56 — el taller multi-día entra y sale entero, y no entra a medias', as
   expect(await page.evaluate(() => savedAgenda.schedule.some(e => e._title === 'Rival')),
     'y no se saca nada del plan sin permiso').toBe(true);
 });
+
+// T57 — un taller que YA EMPEZÓ no se ofrece. Cazado con los datos reales de
+// FICMA 17: su taller de 2 días mostraba «Añadir las 1 sesiones» —mal escrito y,
+// peor, incoherente—: se ofrecían «las sesiones que quedan», pero verifyPlan
+// cuenta TODAS las del catálogo, así que ese plan de 1 de 2 lo marcaba el propio
+// chokepoint como bloque-incompleto. Un taller se toma entero; si su primera
+// sesión pasó, ya no se puede.
+test('T57 — un taller ya empezado no se ofrece', async ({ page }) => {
+  // víspera: se ofrece completo
+  await enterFestival(page, 'leviza2026', '2026-05-13T09:00:00-05:00');
+  await page.evaluate(() => openPelSheet('Taller de Guion'));
+  await page.waitForTimeout(1100);
+  const antes = await page.evaluate(() =>
+    document.querySelector('#pel-sheet .pel-sheet-bloque .suggestion-add')?.textContent.trim() || '');
+  expect(antes).toMatch(/3 sesiones/);
+
+  // con la primera sesión ya pasada: sin control de añadir
+  await enterFestival(page, 'leviza2026', '2026-05-15T23:00:00-05:00');
+  await page.evaluate(() => openPelSheet('Taller de Guion'));
+  await page.waitForTimeout(1100);
+  const despues = await page.evaluate(() => ({
+    ctrl: document.querySelector('#pel-sheet .pel-sheet-bloque .suggestion-add')?.textContent.trim() || '',
+    filas: document.querySelectorAll('#pel-sheet .pel-sheet-screening').length,
+  }));
+  expect(despues.ctrl, 'no se ofrece un taller que ya empezó').toBe('');
+  expect(despues.filas, 'las sesiones siguen listándose, informativas').toBeGreaterThan(0);
+});

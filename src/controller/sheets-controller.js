@@ -260,12 +260,19 @@ export function openPelSheet(title){
   // su lugar: el único camino al Plan era Intereses + planificador.
   let _bloqueCtrl='';
   if(f.is_recurring&&!festivalEnded()){
-    const _ses=allScr.filter(sc=>!screeningPassed(sc)&&!sc._cancelled);
     const _enPlan=savedAgenda&&savedAgenda.schedule.filter(e=>e._title===f.title).length;
+    // Todas las sesiones del taller, no solo las futuras: el bloque se toma ENTERO.
+    const _todasSes=allScr.filter(sc=>!sc._cancelled);
+    const _empezado=_todasSes.some(sc=>screeningPassed(sc));
     if(_enPlan)
-      _bloqueCtrl=`<button class="suggestion-add blk-quitar" data-action="removeRecurringBlock" data-title="${f.title.replace(/"/g,'&quot;')}" data-stop="1">${ICONS.x} ${t('bloque_quitar',{n:_enPlan})}</button>`;
-    else if(_ses.length)
-      _bloqueCtrl=`<button class="suggestion-add blk-add" data-action="addRecurringBlock" data-title="${f.title.replace(/"/g,'&quot;')}" data-stop="1">${ICONS.plus} ${t('bloque_anadir',{n:_ses.length})}</button>`;
+      _bloqueCtrl=`<button class="suggestion-add blk-quitar" data-action="removeRecurringBlock" data-title="${f.title.replace(/"/g,'&quot;')}" data-stop="1">${ICONS.x} ${t(_enPlan===1?'bloque_quitar_1':'bloque_quitar',{n:_enPlan})}</button>`;
+    // Un taller que YA EMPEZÓ no se puede tomar entero, así que no se ofrece.
+    // Sin esto se ofrecían «las sesiones que quedan», y eso rompía dos cosas: el
+    // texto («Añadir las 1 sesiones», cazado con los talleres de FICMA) y el
+    // invariante — verifyPlan cuenta TODAS las del catálogo, así que un plan con
+    // 1 de 2 quedaba marcado como bloque-incompleto por el propio chokepoint.
+    else if(_todasSes.length&&!_empezado)
+      _bloqueCtrl=`<button class="suggestion-add blk-add" data-action="addRecurringBlock" data-title="${f.title.replace(/"/g,'&quot;')}" data-stop="1">${ICONS.plus} ${t(_todasSes.length===1?'bloque_anadir_1':'bloque_anadir',{n:_todasSes.length})}</button>`;
   }
   // Lista de cortos si es programa
   let cortosHtml='';

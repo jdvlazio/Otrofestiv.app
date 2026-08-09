@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `36557b7 feat(plan): el taller multi-día se añade y se quita como BLOQUE (#517)`
+> Último commit: `02866a3 feat(ficdeh): el taller de dos sesiones y los seis formularios de inscripción (#518)`
 
 ---
 

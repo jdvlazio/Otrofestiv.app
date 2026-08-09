@@ -301,7 +301,12 @@ export function _planFixNotice(title){
 // nadie tomó. Y no se desplaza nada sin permiso: un taller puede chocar con varias
 // cosas a la vez, y sacarlas de un toque es demasiado que decidir por el usuario.
 export function addRecurringBlock(title){
-  const ses=FILMS.filter(f=>f.title===title&&f.is_recurring&&f.day&&f.time&&!f._cancelled&&!screeningPassed(f));
+  // TODAS las sesiones, no solo las futuras: el bloque es todo o nada, y verifyPlan
+  // cuenta las del catálogo. Filtrar por pasadas dejaba el plan en «1 de 2» y el
+  // propio chokepoint lo marcaba como bloque-incompleto. La ficha ya no ofrece un
+  // taller empezado; este filtro es el cinturón por si se llega por otro camino.
+  const ses=FILMS.filter(f=>f.title===title&&f.is_recurring&&f.day&&f.time&&!f._cancelled);
+  if(ses.some(sc=>screeningPassed(sc))) return;
   if(!ses.length) return;
   const sa=savedAgenda||{schedule:[]};
   const otras=sa.schedule.filter(e=>e._title!==title);
