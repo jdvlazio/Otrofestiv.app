@@ -26,9 +26,8 @@
  "Cineprox Las Américas": {
   "lat": 6.2145832,
   "lng": -75.5963458,
-  "_prec": "heredada 2025",
-  "_match": "cinemancia-2025.json → «Procinal Las Américas Sala 3»",
-  "_todo": "CONFIRMAR: la coordenada es la de «Procinal Las Américas» (Cinemancia 2025). Cineprox no está en OSM. Verificar que sea el mismo cine con la cadena renombrada."
+  "_prec": "manual",
+  "_match": "confirmado por Juan (9 ago 2026): Procinal se renombró Cineprox, es el mismo cine. Coordenada de «Procinal Las Américas» en Cinemancia 2025."
  },
  "La Capilla del Claustro Comfama": {
   "lat": 6.24575,
@@ -49,9 +48,9 @@
   "_match": "cinemancia-2025.json → «Terko Bar»"
  },
  "_provenance": {
-  "fuente": "sembrado desde cinemancia-2025.json + Nominatim verificado (caja de ciudad, token y clase de lugar)",
+  "fuente": "sembrado desde cinemancia-2025.json + Nominatim verificado + 1 coordenada manual de Juan",
   "capturado": "2026-08-09",
-  "nota": "«heredada 2025» = coordenada de la edición anterior; «nominatim» = verificada en esta pasada"
+  "nota": "_prec:\"manual\" es verificación humana y el geocoder NO la toca"
  },
  "Casa Municipal de la Cultura": {
   "lat": 6.0924079,
@@ -67,8 +66,9 @@
   "_match": "Museo de Arte Moderno de Medellín (tourism/museum) — «Cine MAMM» es su sala"
  },
  "ITM - Facultad de Artes y Humanidades": {
-  "_prec": "sin verificar",
-  "n": 5,
-  "_todo": "buscar a mano: es la sede LA FLORESTA. OSM solo tiene la sede Fraternidad, que es otro campus."
+  "lat": 6.2575625,
+  "lng": -75.6019375,
+  "_prec": "manual",
+  "_match": "verificada a mano por Juan (9 ago 2026) — sede La Floresta, la que usa el festival"
  }
 }

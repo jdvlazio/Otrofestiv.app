@@ -47,7 +47,7 @@
   "sharedSlot RESUELTO SIN PREGUNTAR: las 89 filas son 41 proyecciones reales (día|hora|sede|sala). De los 21 bloques con más de una obra NINGUNO mezcla secciones, y las secciones grandes se parten en programas parejos (Nuevas voces = 2 programas de 5, cada uno repetido en dos ciudades). Cuadra con las 77 proyecciones que anuncia el festival para 109 obras.",
   "Las 14 sedes que publica la web son 11 reales: «Biblioteca Comfama Bello - Centro»/«...Bello Centro» y «Centro Colombo Americano - Sede centro - Sala 2»/«Colombo Americano - Sede centro - Sala 2» son la misma escrita de dos formas. Tabla SEDES explícita en el ensamblador; una sede nueva DETIENE el ensamblado.",
   "SECCIONES aprobadas por Juan (9 ago): las 16 con emoji y arquetipo, ya en SECTION_ARCHETYPES (13 nuevas; 🏆 Competencia central, 🎞️ Competencia de cortometrajes y 💡 Iluminaciones ya estaban de 2025 con clave idéntica). Nuevas voces y Proyecciones especiales heredan emoji y arquetipo pero cambian de clave porque el festival cambió el uso de mayúsculas — nombre verbatim.",
-  "GEOCODING: 10 de 11 sedes ubicadas y las 10 caen en el municipio que declara la web; 0 apiladas, 0 pares a <60 m. Siete heredadas de cinemancia-2025.json, tres verificadas en Nominatim."
+  "GEOCODING CERRADO: 11 de 11 sedes ubicadas, todas dentro de la caja de su municipio; 0 apiladas y la más cercana entre sí a 456 m. Seis heredadas de 2025, tres verificadas en Nominatim y dos manuales de Juan (ITM sede La Floresta, y la confirmación de que Procinal se renombró Cineprox)."
  ],
  "_pendientes": [
   "PEDIR AL FESTIVAL 35 sinopsis (no 53 ni 36): las que no están ni en TMDB ni en su web. Competencia de cortometrajes 12, Competencia central 10, Iluminaciones 10, Proyecciones especiales 3.",
@@ -58,8 +58,6 @@
   "CORTOS: la ficha de «Medellín yo te saludo» lista otras cuatro obras del mismo bloque — ahí está la agrupación de los programas de cortos, que es lo que alimenta sharedSlot. 77 proyecciones para 109 películas: sin esa agrupación la app inventa conflictos de horario que no existen.",
   "ENTRADA LIBRE con preinscripción → registration_url por función, NO ticket_url.",
   "PUBLICAR: falta el script de publicar (build → festivals/cinemancia-2026.json) y la entrada en FESTIVAL_CONFIG de src/config.js.",
-  "SEDE SIN UBICAR (1): «ITM - Facultad de Artes y Humanidades». Es la sede LA FLORESTA; OSM solo tiene la sede Fraternidad, que es OTRO campus y usarla sería el error de FICMA. Página de búsqueda manual en fuentes/cinemancia-2026/sedes.html.",
-  "CONFIRMAR «Cineprox Las Américas»: la coordenada viene de «Procinal Las Américas» (Cinemancia 2025). Probablemente el mismo cine con la cadena renombrada, pero no está verificado y Cineprox no existe en OSM.",
   "RE-VERIFICAR las 7 sedes con _prec:'heredada 2025' antes de publicar: son coordenadas de la edición anterior, no de esta pasada."
  ],
  "_conteos_que_no_cuadran": "El artículo dice 109 obras y 11 secciones; el encabezado del PDF dice 108 y 13; contando entradas del PDF salen 109 en 16 encabezados. Los 16 incluyen «Programa 1/2» (subsecciones de una misma) y las funciones de apertura y clausura, que ellos seguramente no cuentan como sección. Confirmar con el festival antes de fijar el mapa de secciones."

@@ -274,7 +274,7 @@
    "lat": 6.2145832,
    "lng": -75.5963458,
    "address": "",
-   "_prec": "heredada 2025"
+   "_prec": "manual"
   },
   "Biblioteca Comfama Bello Centro - Bello": {
    "short": "Biblioteca Comfama Bello Centro",
@@ -303,10 +303,10 @@
   "ITM - Facultad de Artes y Humanidades - Medellín": {
    "short": "ITM - Facultad de Artes y Humanidades",
    "city": "Medellín",
-   "lat": null,
-   "lng": null,
+   "lat": 6.2575625,
+   "lng": -75.6019375,
    "address": "",
-   "_prec": "sin verificar"
+   "_prec": "manual"
   },
   "Casa Museo Otraparte - Envigado": {
    "short": "Casa Museo Otraparte",
