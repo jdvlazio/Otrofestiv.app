@@ -104,6 +104,11 @@ SEDE_SALA = {
     # Cinemateca del Museo La Tertulia (que es de Cali) y sin tipo de ingreso.
     # Se unifica y el dedup posterior se queda con la entrada completa.
     'Cinemateca': ('Cinemateca de Bogotá', ''),
+    # La web escribe «La Trocha, La Casa de la Paz» y el resto del festival
+    # «La Trocha - Casa de la Paz»: la misma sede, dos grafías, dos pins a 0 m.
+    # Lo cazó [sedes-apiladas] en su primera corrida (9 ago) — el duplicado
+    # entró el 8 ago con las funciones nuevas de «Lo que sentimos».
+    'La Trocha, La Casa de la Paz': ('La Trocha - Casa de la Paz', ''),
 }
 
 
