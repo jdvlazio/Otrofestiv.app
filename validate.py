@@ -2539,6 +2539,24 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar fin-inline-ratchet: {_e}')
 
+# ── [hooks-activos] las barreras de git están enchufadas ────────────────────────
+# .githooks/ se versiona, pero core.hooksPath es config LOCAL de cada clon: un
+# clon nuevo trae los hooks y no los usa hasta que alguien lo configura. Aviso, no
+# error: en CI no aplica, y un clon de solo lectura no los necesita.
+check = 'hooks-activos'
+try:
+    import subprocess as _sp
+    _hp = _sp.run(['git', 'config', 'core.hooksPath'], capture_output=True, text=True).stdout.strip()
+    if not os.path.isdir('.githooks'):
+        warn(check, 'falta .githooks/ (pre-commit + pre-push)')
+    elif _hp != '.githooks':
+        warn(check, 'los hooks no están activos en este clon — enchufalos con: '
+                    'git config core.hooksPath .githooks')
+    else:
+        ok(check, 'pre-commit y pre-push activos (core.hooksPath)')
+except Exception as _e:
+    warn(check, f'no se pudo verificar hooks-activos: {_e}')
+
 # ── [peso-repo] el repo guarda el producto, no el material de trabajo ───────────
 # 68,7 MB entraron de un tirón (8 ago 2026): un `git add -A` se llevó fuentes/ con
 # los PDF y afiches originales de FICDEH y FICMA —uno de 35 MB, otro de 26—. La
