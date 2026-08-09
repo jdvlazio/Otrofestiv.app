@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+# pre-push — corre validate.py antes de que nada salga del disco. githooks(5): si
+# sale distinto de cero, el push se aborta.
+#
+# No sustituye al CI: lo adelanta. La diferencia práctica es que un guardián roto
+# se ve en 20 segundos acá en vez de en 5 minutos allá, y no ocupa un runner.
+#
+# Degradación deliberada: si falta python3 o validate.py, no bloquea. Un hook que
+# rompe el flujo por su propio entorno se desactiva y deja de proteger.
+set -uo pipefail
+cd "$(git rev-parse --show-toplevel)" || exit 0
+[ -f validate.py ] || exit 0
+command -v python3 >/dev/null 2>&1 || exit 0
+
+salida=$(python3 validate.py 2>&1) || true
+if printf '%s' "$salida" | grep -q "PUSH BLOQUEADO"; then
+  printf '\033[31m✗ validate.py no pasa — el push se detuvo acá, no en CI\033[0m\n' >&2
+  printf '%s\n' "$salida" | grep "✗" | sed 's/^/    /' >&2
+  printf '  (si es a propósito: git push --no-verify)\n' >&2
+  exit 1
+fi
+exit 0

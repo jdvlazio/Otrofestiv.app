@@ -518,6 +518,48 @@ Las invariantes de arquitectura **no se documentan y confía**: se verifican. `v
 
 > Regla: al cambiar la firma/deps de una función de dominio (ej. un `import` interno nuevo) suele haber que actualizar `tests/lib/load-domain.js` (`DEFAULT_FNS`) además del test.
 
+### 15.4b Operaciones de git — las barreras y por qué existen
+
+En una semana de agosto de 2026 se perdió trabajo tres veces, y **ninguna fue un
+error de lógica**: las tres fueron manipulación del repositorio.
+
+| qué pasó | qué se perdió |
+|---|---|
+| `git checkout --theirs index.html` al resolver un merge | el markup del sheet de ciudad (8 referencias) y `ticketBadgeTarget` del TEST BRIDGE (3) |
+| lo mismo, dos días después | el CSS de `.fn-ciudad` / `.fn-otra-ciudad` |
+| `git add -A` | versionó `fuentes/` (68 MB); al cambiar de rama, git borró del disco los PDF originales |
+
+Las tres estaban descritas en la documentación de git. `git-checkout(1)`: `--ours`
+y `--theirs` sacan «stage #2 o #3 **for unmerged paths**» — el **archivo entero**,
+no el hunk. Y al cambiar de rama, los archivos versionados en una y no en la otra
+se borran del working tree.
+
+**Dos reglas duras:**
+
+1. **Nunca `--ours`/`--theirs` sobre un archivo con código.** En este repo la
+   trampa es concreta: `bump-version.js` toca cinco archivos —`index.html`,
+   `src/main.js`, `sw.js`, `version.json`, `CLAUDE.md`— y tres **también llevan
+   código**. Un conflicto ahí parece trivial y no lo es. Usar
+   **`./scripts/traer-main.sh`**, que resuelve el bump re-ejecutándolo y al final
+   verifica que ninguna línea propia haya desaparecido.
+2. **Para mirar otra rama, worktree, nunca `checkout`.** Un `git worktree add`
+   deja el directorio principal intacto: ni arrastra untracked ni borra nada.
+
+**Barreras mecánicas** (`.githooks/`, activadas con `git config core.hooksPath .githooks`):
+
+| hook | qué corta |
+|---|---|
+| `pre-commit` | marcadores de conflicto sin resolver · documentos ofimáticos · archivos > 3 MB |
+| `pre-push` | `validate.py` en rojo — el fallo se ve en 20 s acá, no en 5 min de CI |
+
+Ambos aceptan `--no-verify`. Que el escape exista no lo vuelve rutina.
+
+> Por qué barreras y no propósitos: un agente encadena comandos de git en un
+> segundo, sin la fricción que tiene una persona al ver el diff en pantalla. La
+> velocidad que ayuda escribiendo código es peligrosa moviendo archivos.
+
+---
+
 ### 15.5 Cómo se corre la suite — un puerto por corrida
 
 **Correr siempre `./scripts/test.sh`**, nunca `npx playwright test` a secas:
