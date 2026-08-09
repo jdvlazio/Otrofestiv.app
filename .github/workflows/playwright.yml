@@ -53,6 +53,15 @@ jobs:
       - name: Feature tests
         run: ./scripts/test.sh tests/auth.spec.js tests/search.spec.js tests/i18n.spec.js tests/i18n-boot.spec.js
 
+      # Paso PROPIO, y no sumado a "Regression tests", por lo que mide: un test por
+      # FESTIVAL (festivalTestIds) que recorre intereses → prioridades →
+      # disponibilidad → Planear → Mi Plan → sugerencias. Cuando cae, lo que falló
+      # es un festival concreto, y el nombre del paso lo dice sin abrir el log.
+      # Es el gate de docs/FESTIVAL-CHECKLIST.md: un festival nuevo entra solo a la
+      # cobertura al agregar su config + su JSON.
+      - name: Recorrido por festival
+        run: ./scripts/test.sh tests/recorrido-festival.spec.js
+
       - name: Cross-engine responsive tests
         # Invariantes de layout deterministas bajo WebKit@390 (ios-mobile) +
         # Blink@360 (android-small). El filtro de archivo sólo matchea esos dos

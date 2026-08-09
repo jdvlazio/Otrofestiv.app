@@ -37,7 +37,7 @@ import { LANGS, t, _applyI18nDOM } from './i18n/i18n.js';
 //   las consume vía eval(name).toString(); sus copias worker-local se quedan. ──
 import { toMin, parseDur, minToStr, _festDate, simNow, simTodayStr, dayFullyPassed, festivalEnded } from './domain/time.js';
 import { _djb2, _titleSeed, _mulberry32, shuffle, scoreFilm, effectiveDuration, screeningPassed, _classifyTodayScreenings, _endedStats, normTitle } from './domain/film.js';
-import { screensConflict, isScreeningBlocked, sortScreensByStrategy, computeScenarios, verifyPlan } from './domain/schedule.js';
+import { screensConflict, isScreeningBlocked, plannableScreens, sortScreensByStrategy, computeScenarios, verifyPlan } from './domain/schedule.js';
 import { _resolveVenue, _gapSuggestion, _getFestivalPhase, venueTravelMins, travelMins } from './domain/festival.js';
 
 // ── Step 6a: view/components.js — capa presentacional foundational de Wave 6
@@ -91,6 +91,7 @@ import {
 // ── Step 6f: view/agenda.js — render de agenda+miplan (18 fns). ───────────────
 import {
   renderAgenda, renderMiPlanCalendar, renderUnconfirmed, renderFilmAlternatives, renderContextualHeader, renderPrioStrip, renderFilmListHTML, renderSavedAgendaHTML, renderAvBlocks, updateCardState, updateHorarioPrioBtn, _fixStickyOffset, _scrollMiPlanToNow, _updateMiPlanBadge,
+  getSuggestions,
 } from './view/agenda.js';
 
 // ── Step 7a: controller/calc.js — orquestación del planner (worker). ─────────
@@ -453,7 +454,7 @@ FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202608082355';
+const BUILD_VERSION='202608090808';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';
@@ -1341,6 +1342,18 @@ document.addEventListener('click', function(e){
     // ticketBadgeTarget: qué marca el badge de precio (la minoría) — expuesto
     // para que la suite lo consulte sin recalcular la proporción a mano.
     ticketBadgeTarget,
+    // screensConflict + isScreeningBlocked: los DUEÑOS de «estas dos no caben» y
+    // «esta franja está vetada». El recorrido por festival
+    // (tests/recorrido-festival.spec.js) audita con ellos el plan que la UI acaba
+    // de mostrar. Se exponen para que el test PREGUNTE en vez de reimplementar:
+    // un test que recalcula la regla es una segunda opinión, no un veredicto —
+    // y coincide con producción hasta el día en que la regla cambia.
+    // Solo lectura: ninguna muta estado.
+    screensConflict, isScreeningBlocked, screeningPassed, plannableScreens,
+    // getSuggestions: lo que la app OFRECE agregar al plan. Expuesto para que el
+    // recorrido verifique la promesa que nadie mira — que una sugerencia jamás
+    // choque con el plan que ya tenés.
+    getSuggestions,
     _renderProgramaContent, closeAuthSheet, closePelSheet, exportICS, loadFestival, normTitle,
     openAuthSheet, openPelSheet, openRatingSheet, openCortoSheet, renderAgenda,
     render, saveSavedAgenda, saveState, savePrio, saveWL, saveWatched, searchOpen,

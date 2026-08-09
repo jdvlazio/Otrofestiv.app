@@ -105,6 +105,32 @@ export function isScreeningBlocked(s){
   return av.blocks.some(b=>sStart<toMin(b.to)&&sEnd>toMin(b.from));
 }
 
+// ── plannableScreens — DUEÑO ÚNICO de «qué funciones de este título son
+// planificables AHORA MISMO, para vos» ───────────────────────────────────────
+// Junta los cuatro filtros que el planeador aplica antes de decidir: cancelada,
+// ya pasada, en una franja que vetaste, y la regla del taller multi-día.
+//
+// TALLER MULTI-DÍA: entero o nada — también frente a TU disponibilidad. La rama
+// todo-o-nada del backtracking mete el grupo completo, pero el grupo ya venía
+// FILTRADO: si vetaste la tarde de una de las sesiones, llegaba con 2 de 3 y el
+// plan proponía medio taller. Quien se inscribe va a todas; un plan con 2 de 3
+// no es medio taller, es un plan que miente — es lo que verifyPlan llama
+// 'bloque-incompleto'. Se compara contra el CATÁLOGO, no contra el filtro, para
+// que valga igual si la sesión falta por veto, por cancelación o porque pasó.
+//
+// Cazado por tests/recorrido-festival.spec.js en Leviza (9 ago 2026) al vetar un
+// día entero. Vive acá y no inline porque la regla la necesitan tres: el
+// planeador, el oráculo exacto y el recorrido por festival — y una regla con
+// tres copias es una regla que se desincroniza.
+export function plannableScreens(title){
+  const screens=FILMS.filter(f=>f.title===title&&!f._cancelled&&!isScreeningBlocked(f)&&!screeningPassed(f));
+  if(screens.length&&screens[0].is_recurring){
+    const total=FILMS.filter(f=>f.title===title&&f.is_recurring&&f.day&&f.time&&!f._cancelled).length;
+    if(total&&screens.length!==total) return [];
+  }
+  return screens;
+}
+
 export function sortScreensByStrategy(screens, allGroups){
   // Precalcular todas las funciones de todas las otras películas
   const allOtherScreenings=allGroups.flatMap(g=>g.screens);
@@ -132,7 +158,7 @@ export function computeScenarios(titles){
   const baseGroups=pending.map(t=>{
     // `_cancelled` lo sella el loader desde NOTICES. Sin este filtro el
     // optimizador armaba el día alrededor de una función que no va a ocurrir.
-    const screens=FILMS.filter(f=>f.title===t&&!f._cancelled&&!isScreeningBlocked(f)&&!screeningPassed(f));
+    const screens=plannableScreens(t);
     const isPrio=prioritized.has(t);
     const sc=scoreFilm(t,screens,isPrio,allPendingTitles);
     const isRec=screens.length>0&&!!screens[0].is_recurring;
