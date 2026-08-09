@@ -65,19 +65,39 @@ sinopsis ES/EN, géneros, pósters a `assets/<id>/`. Lo que no verifica **no
 entra**: los «sin ficha» se dan de alta en TMDB (PIPELINE.md Fase 3b) o quedan
 sin ficha, jamás se adivina un homónimo.
 
-**Y los dos pasos de imagen, obligatorios**: primero `python3 pipeline/bar-trim.py
-<id> --aplicar` (quita el MARCO del diseño del festival) y después
-`python3 pipeline/posters-2-3.py <id> --aplicar` (lleva el póster al 2:3 exacto
-ESTIRANDO — regla de Juan, la misma del keyArt: no se recorta, no se rellena con
-bandas). El orden importa: estirar antes de quitar el marco estira el marco.
-Ojo: estirar NO elimina una banda que está dentro de la imagen; para eso está el
-trim. Y un `posterSource:editorial` (still 16:9) se queda como está.
+**Y el encuadre de pósters, obligatorio** (docs/POSTERS.md §3):
 
-**El bar-trim en detalle** (docs/POSTERS.md §3): los afiches llegan
-dentro de un diseño —marco blanco, barras negras de centrado— y así entran a la
-card con bandas. `python3 pipeline/bar-trim.py <id>` los detecta y con
-`--aplicar` los recorta. Se venía haciendo a ojo y en FICMA no se hizo: 15
-pósters entraron con marco. Verificar el antes/después a la vista, siempre.
+```bash
+python3 pipeline/encuadrar-posters.py <id> --aplicar
+```
+
+REGLA (Juan, 9 ago 2026): **todo póster cubre exactamente la proporción y el
+tamaño del placeholder** — 780×1170, 2:3. Ni marco visible, ni hueco, ni recorte
+del afiche. Es un cálculo, no un ajuste a ojo.
+
+Dos pasos en uno, siempre desde el archivo ORIGINAL (re-descargarlo si hace
+falta: encadenar recortes sobre recortes acumula deformación):
+
+1. **Caja de contenido** — se descarta el borde uniforme. Solo cuenta como marco
+   lo que aparece en los DOS lados opuestos: un marco rodea. Un borde claro de
+   un solo lado es arte —el cielo de «The Dig»— y recortarlo mutila el afiche.
+2. **Escala al lienzo con zoom mínimo** — la caja se lleva a 780×1170 estirando
+   el eje que falte, con un 4% de overscan que se recorta al centro. Ese zoom se
+   traga las 1–2 filas de transición que deja el antialias del borde, a cambio
+   de un 2% por lado que no se percibe. Afinar más el detector para ahorrarse
+   ese 2% arriesga comerse arte, que es peor.
+
+**Qué cuenta como marco, calibrado con píxeles reales:** una línea PLANA (poca
+varianza a lo ancho), sea blanca, negra o gris. En «El juego de la vida» el
+marco son dos filas —255 y 178— y exigir «casi blanco» dejaba fuera la segunda,
+que es justo la línea gris que se veía. El arte tiene varianza alta desde la
+primera fila (117 ahí mismo).
+
+El script **verifica su propio resultado**: al terminar mide de nuevo y reporta
+cuántos quedan con borde y cuántos fuera de lienzo. Objetivo 0 y 0; lo que
+quede es arte de un solo lado.
+
+Un `posterSource:editorial` (still 16:9) se respeta: su marco lo encuadra a 16/9.
 
 Correcciones en `festivals/staging/<id>-correcciones.json`:
 `titulo_oficial` (el OCR/programa escriben mal → se corrige contra el afiche)
