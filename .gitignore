@@ -25,5 +25,10 @@ playwright-report*/
 test-results*/
 test-results*.json
 
+# fuentes/ — PDF, Excel y afiches originales del festival. Material de TRABAJO,
+# no del producto: pesa decenas de MB y su sitio es el disco de Juan, no el repo.
+# (Entraron 68 MB por un `git add -A` cuando esta regla aún no existía.)
+fuentes/
+
 # Claude Code (config local de harness, no del proyecto)
 .claude/
