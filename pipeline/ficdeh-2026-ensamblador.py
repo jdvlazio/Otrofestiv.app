@@ -405,7 +405,14 @@ for _k, _g in _slots.items():
             e['requires_registration'] = 'inscrip' in _ing.lower()
 
 out = {
-  '_etapa': 'B-ensamblada (staging, sin publicar): faltan geocoding, sinopsis de actividades, pase de secciones nuevas y checklist',
+  # El marcador dice en qué punto está el festival, y se actualiza cuando el
+  # punto cambia — si no, miente. Este decía «staging, sin publicar: faltan
+  # geocoding, sinopsis de actividades, pase de secciones y checklist» con el
+  # festival ya en producción, las 114 sedes ubicadas, las 29 actividades con
+  # sinopsis y las 12 secciones con inglés y arquetipo. Lo único abierto es el
+  # gate humano, que es de Juan y nadie más puede dar por hecho.
+  '_etapa': 'PUBLICADA en producción (8 ago 2026). Pendiente solo el gate humano: '
+            'la revisión film-por-film en tools/audit.html?fest=ficdeh-2026.',
   '_provenance': {
     'catalogo': 'festivals/staging/ficdeh-2026.json — 94 obras (91 + 3 invitadas)',
     'programacion': 'festivals/staging/ficdeh-2026-programacion-oficial.json — sitio nuevo Next.js, 433 funciones, 424 en_app',

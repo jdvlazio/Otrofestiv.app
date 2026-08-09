@@ -1,5 +1,5 @@
 {
- "_etapa": "B-ensamblada (staging, sin publicar): faltan geocoding, sinopsis de actividades, pase de secciones nuevas y checklist",
+ "_etapa": "PUBLICADA en producción (8 ago 2026). Pendiente solo el gate humano: la revisión film-por-film en tools/audit.html?fest=ficdeh-2026.",
  "_provenance": {
   "catalogo": "festivals/staging/ficdeh-2026.json — 94 obras (91 + 3 invitadas)",
   "programacion": "festivals/staging/ficdeh-2026-programacion-oficial.json — sitio nuevo Next.js, 433 funciones, 424 en_app",
