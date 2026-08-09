@@ -5,9 +5,9 @@
   "salas": [],
   "consulta": "Alianza Francesa, Manizales, Caldas, Colombia",
   "_prec": "manual",
-  "_nota": "buscar a mano en Google Maps",
   "lat": 5.0588125,
-  "lng": -75.4884375
+  "lng": -75.4884375,
+  "_todo": "buscar a mano en Google Maps"
  },
  "All Cine": {
   "ciclo": "",
@@ -15,9 +15,9 @@
   "salas": [],
   "consulta": "All Cine, Manizales, Caldas, Colombia",
   "_prec": "manual",
-  "_nota": "buscar a mano en Google Maps",
   "lat": 5.0563125,
-  "lng": -75.4854375
+  "lng": -75.4854375,
+  "_todo": "buscar a mano en Google Maps"
  },
  "Aranjuez": {
   "ciclo": "Cine al barrio",
@@ -45,9 +45,9 @@
   "salas": [],
   "consulta": "Universidad de Caldas, Manizales, Caldas, Colombia",
   "_prec": "manual",
-  "_nota": "buscar a mano en Google Maps",
   "lat": 5.0559375,
-  "lng": -75.4929375
+  "lng": -75.4929375,
+  "_todo": "buscar a mano en Google Maps"
  },
  "Auditorio principal Campus El Cable - Universidad Nacional de Colombia": {
   "ciclo": "",
@@ -55,9 +55,9 @@
   "salas": [],
   "consulta": "Universidad Nacional de Colombia, Manizales, Caldas, Colombia",
   "_prec": "manual",
-  "_nota": "buscar a mano en Google Maps",
   "lat": 5.0555625,
-  "lng": -75.4861875
+  "lng": -75.4861875,
+  "_todo": "buscar a mano en Google Maps"
  },
  "Barrio la estrella": {
   "ciclo": "Cine bajo la niebla",
@@ -65,9 +65,9 @@
   "salas": [],
   "consulta": "Barrio la estrella, Manizales, Caldas, Colombia",
   "_prec": "manual",
-  "_nota": "buscar a mano en Google Maps",
   "lat": 5.0773125,
-  "lng": -75.4873125
+  "lng": -75.4873125,
+  "_todo": "buscar a mano en Google Maps"
  },
  "Batuta": {
   "ciclo": "",
@@ -95,9 +95,9 @@
   "salas": [],
   "consulta": "Cancha de Bengala, Manizales, Caldas, Colombia",
   "_prec": "manual",
-  "_nota": "buscar a mano en Google Maps",
   "lat": 5.0820625,
-  "lng": -75.4896875
+  "lng": -75.4896875,
+  "_todo": "buscar a mano en Google Maps"
  },
  "Cancha la Isla": {
   "ciclo": "Cine bajo la niebla",
@@ -105,7 +105,7 @@
   "salas": [],
   "consulta": "Cancha la Isla, Manizales, Caldas, Colombia",
   "_prec": "sin verificar",
-  "_nota": "buscar a mano en Google Maps"
+  "_todo": "buscar a mano en Google Maps"
  },
  "Cine fest": {
   "ciclo": "Expoferias",
@@ -113,9 +113,9 @@
   "salas": [],
   "consulta": "Cine fest, Manizales, Caldas, Colombia",
   "_prec": "manual",
-  "_nota": "buscar a mano en Google Maps",
   "lat": 5.0416875,
-  "lng": -75.4753125
+  "lng": -75.4753125,
+  "_todo": "buscar a mano en Google Maps"
  },
  "Cineclub La Rendija": {
   "ciclo": "",
@@ -123,7 +123,7 @@
   "salas": [],
   "consulta": "Cineclub La Rendija, Manizales, Caldas, Colombia",
   "_prec": "sin verificar",
-  "_nota": "buscar a mano en Google Maps"
+  "_todo": "buscar a mano en Google Maps"
  },
  "Clandestino Records": {
   "ciclo": "",
@@ -131,9 +131,9 @@
   "salas": [],
   "consulta": "Clandestino Records, Manizales, Caldas, Colombia",
   "_prec": "manual",
-  "_nota": "buscar a mano en Google Maps",
   "lat": 5.0701875,
-  "lng": -75.5166875
+  "lng": -75.5166875,
+  "_todo": "buscar a mano en Google Maps"
  },
  "Colombo": {
   "ciclo": "",
@@ -171,9 +171,9 @@
   "salas": [],
   "consulta": "Media Torta de Chipre, Manizales, Caldas, Colombia",
   "_prec": "manual",
-  "_nota": "buscar a mano en Google Maps",
   "lat": 5.0723125,
-  "lng": -75.5259375
+  "lng": -75.5259375,
+  "_todo": "buscar a mano en Google Maps"
  },
  "Parque Ernesto Gutiérrez": {
   "ciclo": "Cine bajo la niebla",
@@ -181,9 +181,9 @@
   "salas": [],
   "consulta": "Parque Ernesto Gutiérrez, Manizales, Caldas, Colombia",
   "_prec": "manual",
-  "_nota": "buscar a mano en Google Maps",
   "lat": 5.0683125,
-  "lng": -75.5121875
+  "lng": -75.5121875,
+  "_todo": "buscar a mano en Google Maps"
  },
  "Parque Fundadores": {
   "ciclo": "Cine al barrio",
@@ -221,9 +221,9 @@
   "salas": [],
   "consulta": "SES Hospital Universitario de Caldas, Manizales, Caldas, Colombia",
   "_prec": "manual",
-  "_nota": "buscar a mano en Google Maps",
   "lat": 5.0629375,
-  "lng": -75.5009375
+  "lng": -75.5009375,
+  "_todo": "buscar a mano en Google Maps"
  },
  "Samaria": {
   "ciclo": "Cine al barrio",
@@ -241,7 +241,7 @@
   "salas": [],
   "consulta": "San José, Manizales, Caldas, Colombia",
   "_prec": "sin verificar",
-  "_nota": "buscar a mano en Google Maps"
+  "_todo": "buscar a mano en Google Maps"
  },
  "Teatro los Fundadores": {
   "ciclo": "",
@@ -272,9 +272,9 @@
   "salas": [],
   "consulta": "Torreón F-101, Manizales, Caldas, Colombia",
   "_prec": "manual",
-  "_nota": "buscar a mano en Google Maps",
   "lat": 5.0674375,
-  "lng": -75.5031875
+  "lng": -75.5031875,
+  "_todo": "buscar a mano en Google Maps"
  },
  "Universidad de Caldas": {
   "lat": 5.0559375,
@@ -310,12 +310,12 @@
   "lat": 5.0678125,
   "lng": -75.5199375,
   "_prec": "manual",
-  "_nota": "Ambas secretarías están en la Alcaldía de Manizales (Cra. 22 Bolívar): comparten coordenada A PROPÓSITO. Verificado por reverse-geocoding; no es el error de sedes apiladas."
+  "_nota": "Comparte coordenada con «Casa de la Secretaría de Cultura»: ambas son dependencias en la Alcaldía de Manizales (confirmado por Juan, 9 ago 2026). Son despachos distintos; la dirección exacta sigue pendiente de la organización."
  },
  "Casa de la Secretaría de Cultura": {
   "lat": 5.0678125,
   "lng": -75.5199375,
   "_prec": "manual",
-  "_nota": "Ambas secretarías están en la Alcaldía de Manizales (Cra. 22 Bolívar): comparten coordenada A PROPÓSITO. Verificado por reverse-geocoding; no es el error de sedes apiladas."
+  "_nota": "Comparte coordenada con «Secretaría de la Mujer y Equidad de Género»: ambas son dependencias en la Alcaldía de Manizales (confirmado por Juan, 9 ago 2026). Son despachos distintos; la dirección exacta sigue pendiente de la organización."
  }
 }

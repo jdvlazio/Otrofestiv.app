@@ -258,6 +258,11 @@ def main():
                      'city': CIUDAD, 'address': ''}
         if g.get('_prec'):
             venues[k]['_prec'] = g['_prec']
+        # _nota: sede a <60 m de otra que ya se revisó a mano. El guardián
+        # [sedes-apiladas] la lee en el JSON publicado, así que si no se
+        # propaga aquí, el próximo ensamblado la borra y el aviso revive.
+        if g.get('_nota'):
+            venues[k]['_nota'] = g['_nota']
 
     # ── films ────────────────────────────────────────────────────────────────
     # Sinopsis oficiales del catálogo de FICDEH para las obras compartidas.
