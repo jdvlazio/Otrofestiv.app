@@ -2355,6 +2355,44 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar country-flags: {_e}')
 
+# ── [poster-radio-unico] toda superficie de póster usa var(--r-poster) ────────
+# El póster se ve IGUAL en toda la app. Hasta ago 2026 convivían TRES radios
+# —12px, 8px y 4px— sin razón de diseño detrás: deriva pura, 16 declaraciones
+# repartidas en 2000 líneas de CSS. Nadie las eligió; se fueron copiando.
+# El radio es proporcional (--r-poster, clamp elíptico) justamente porque el rango
+# de tamaños va de 32px a 96px: un valor fijo no puede servir a los dos extremos.
+# Un radio suelto no rompe nada y no da error — por eso hace falta el guardián.
+#
+# Se juzga por NOMBRE de selector (poster/thumb): un póster nuevo se va a llamar
+# así. Los overlays que van ENCIMA del póster —badges, checks— no son superficie
+# de imagen y llevan el radio de su propio componente; van en la excepción, con
+# nombre, para que agregar uno sea una decisión y no un descuido.
+check = 'poster-radio-unico'
+try:
+    _html = open('index.html', encoding='utf-8').read()
+    # Encima del póster, no el póster: conservan su radio propio.
+    _ENCIMA = {'.poster-now', '.poster-past-badge', '.pv-poster-check'}
+    _malos = []
+    for _m in re.finditer(r'^(\.[a-zA-Z0-9_.\-]*(?:poster|thumb)[a-zA-Z0-9_.\-]*)\{([^}]*)\}', _html, re.M):
+        _sel, _cuerpo = _m.group(1), _m.group(2)
+        if _sel in _ENCIMA:
+            continue
+        _br = re.search(r'border-radius:([^;}]+)', _cuerpo)
+        if not _br:
+            continue
+        _val = _br.group(1).strip()
+        if _val != 'var(--r-poster)':
+            _linea = _html[:_m.start()].count('\n') + 1
+            _malos.append(f'{_sel} (L{_linea}): {_val}')
+    if _malos:
+        fail(check, 'superficie(s) de póster con radio propio en vez de var(--r-poster): '
+                    + ' · '.join(_malos[:5]) + (f' +{len(_malos)-5} más' if len(_malos) > 5 else ''))
+    else:
+        _n = len(re.findall(r'border-radius:var\(--r-poster\)', _html))
+        ok(check, f'{_n} superficies de póster con el mismo radio proporcional')
+except Exception as _e:
+    warn(check, f'no se pudo verificar poster-radio-unico: {_e}')
+
 # ── [poster-single-owner] decisión y marco editorial SOLO en view/helpers.js ──
 # posterModel/posterParts (films) e itemPosterParts (obras) son los ÚNICOS dueños
 # de la decisión editorial-vs-imagen y del marco. Si _isEditorialPoster( o

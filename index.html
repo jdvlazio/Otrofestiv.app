@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202608091203">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202608091203">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202608091221">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202608091221">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -225,7 +225,18 @@ window.sentryOnLoad = function() {
      El póster viaja entre ellas (FLIP), así que cambiaba de redondez a mitad de
      vuelo — visible y feo. Un póster es el MISMO objeto donde sea que aparezca:
      mismo radio. Guardián [poster-radius]. */
-  --r-poster: 12px;
+  /* --r-poster — DUEÑO ÚNICO del radio de toda superficie de póster 2:3.
+     Antes convivían TRES radios (12/8/4px) sin razón de diseño detrás: deriva.
+     Un valor fijo no puede unificarlos porque el rango va de 32px a 96px —3×—:
+     12px sobre 32px es el 37% del ancho, o sea una píldora.
+     La unificación es PROPORCIONAL, calibrada para preservar el look de las
+     superficies grandes (grid 14,4% y ficha 12,5% pasan a ~11 y 12,5px).
+     La notación elíptica `X / Y` NO es un typo: en un rectángulo 2:3 el 13% del
+     ancho y el 8,667% del alto son la MISMA medida en px, así que la esquina sale
+     circular y no ovalada (técnica de Letterboxd). Los topes del clamp evitan que
+     un thumb diminuto pierda la curva y que una superficie grande se redondee de
+     más. Guardián: [poster-radio-unico] en validate.py. */
+  --r-poster: clamp(4px, 13%, 14px) / clamp(4px, 8.667%, 14px);
   --r-sheet:28px; /* 20→28 (18 jul 2026): squircle generoso en los 9 sheets */
   --r-handle:2px;
   --r-pill: 999px;
@@ -683,7 +694,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .notice-banner-close::after,.poster-wl-dot::after,.prio-chip-rm::after,.av-pill-rm::after{content:'';position:absolute;inset:-14px;border-radius:50%}
 
 /* ── Poster ── */
-.lb-poster{width:var(--poster-xs-w);height:var(--poster-xs-h);object-fit:cover;border-radius:var(--r-sm);flex-shrink:0;display:block;background:var(--surf-2)}
+.lb-poster{width:var(--poster-xs-w);height:var(--poster-xs-h);object-fit:cover;border-radius:var(--r-poster);flex-shrink:0;display:block;background:var(--surf-2)}
 
 /* Editorial en thumbs (_posterThumb): el contenedor lleva su clase de tamaño +
    `poster-ed` + `--ed-accent`; el marco lo pinta .poster-ed (ver editorialFrame).
@@ -775,7 +786,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 
 .prio-strip-row{display:flex;gap:var(--sp-2);overflow-x:auto;padding-bottom:var(--sp-1);-webkit-overflow-scrolling:touch;scrollbar-width:none;touch-action:pan-x}
 .prio-chip{flex-shrink:0;width:var(--poster-md-w);position:relative;cursor:pointer}
-.prio-chip-poster{width:var(--poster-md-w);height:var(--poster-md-h);object-fit:cover;border-radius:var(--r-md);display:block;background:var(--surf-2)}
+.prio-chip-poster{width:var(--poster-md-w);height:var(--poster-md-h);object-fit:cover;border-radius:var(--r-poster);display:block;background:var(--surf-2)}
 .prio-chip-ph{width:72px;height:108px;border-radius:var(--r-md);background:var(--surf-2);display:flex;align-items:center;justify-content:center;font-size:var(--t-lg);opacity:.3}
 .prio-chip-rm{position:absolute;top:4px;right:4px;background:var(--overlay-70);border:none;color:var(--white);border-radius:50%;width:18px;height:18px;font-size:var(--t-sm);cursor:pointer;display:flex;align-items:center;justify-content:center;line-height:1}
 .prio-chip.past{opacity:.35}
@@ -931,7 +942,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .plist-time-hdr{padding:var(--sp-2) var(--sp-4);font-size:var(--t-label);font-weight:var(--w-bold);color:var(--amber);letter-spacing:.1em;background:var(--surf-2);position:sticky;top:var(--sticky-top-lista,0px);z-index:2;flex-shrink:0}
 .plist-item{display:flex;align-items:flex-start;gap:var(--sp-3);padding:var(--sp-2) var(--sp-4);border-bottom:1px solid var(--bdr-l);cursor:pointer}
 .plist-item:active{background:var(--surf-2)}
-.plist-poster{width:56px;height:84px;border-radius:var(--r-sm);flex-shrink:0;object-fit:cover;background:var(--surf-2)}
+.plist-poster{width:56px;height:84px;border-radius:var(--r-poster);flex-shrink:0;object-fit:cover;background:var(--surf-2)}
 .plist-poster-stack{position:relative;width:56px;height:84px;flex-shrink:0}
 .plist-poster-stack .ps-back{position:absolute;top:0;right:0;width:46px;height:72px;border-radius:var(--r-sm);object-fit:cover;background:var(--surf-3);opacity:.6;border:1px solid var(--bdr)}
 .plist-poster-stack .ps-front{position:absolute;bottom:0;left:0;width:46px;height:72px;border-radius:var(--r-sm);object-fit:cover;background:var(--surf-3);box-shadow:2px -2px 0 rgba(0,0,0,.5)}
@@ -1284,8 +1295,8 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .pv-rating-sheet.open{display:flex;flex-direction:column;transform:translateY(0);transition:var(--sheet-in)}
 .pv-handle{width:36px;height:4px;background:rgba(255,255,255,.1);border-radius:var(--r-handle);margin:12px auto 0}
 .pv-header{display:flex;gap:var(--sp-btn);align-items:flex-start;padding:20px 20px 16px}
-.pv-poster-wrap{width:44px;height:66px;border-radius:var(--r-md);flex-shrink:0;position:relative;overflow:visible}
-.pv-poster-img{width:44px;height:66px;border-radius:var(--r-md);object-fit:cover;background:var(--surf-3)}
+.pv-poster-wrap{width:44px;height:66px;border-radius:var(--r-poster);flex-shrink:0;position:relative;overflow:visible}
+.pv-poster-img{width:44px;height:66px;border-radius:var(--r-poster);object-fit:cover;background:var(--surf-3)}
 .pv-poster-check{position:absolute;bottom:-5px;right:-5px;width:18px;height:18px;background:var(--green);border-radius:50%;display:flex;align-items:center;justify-content:center;border:2px solid var(--surf-2)}
 .pv-film-title{font-size:var(--t-md);font-weight:var(--w-display);color:var(--white);letter-spacing:-.02em;line-height:1.2;margin-bottom:5px}
 .pv-context{font-size:var(--t-sm);color:var(--gray);line-height:1.6}
@@ -1312,7 +1323,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .conflict-card{display:flex;align-items:center;gap:var(--sp-3);padding:var(--sp-3) var(--sp-4);border-radius:var(--r);border:1px solid var(--bdr);background:var(--surf-3)}
 .conflict-card.incoming{border-color:var(--amber-30);background:var(--amber-10)}
 .conflict-card.existing{border-color:var(--bdr);background:var(--surf-3)}
-.conflict-poster{width:32px;height:48px;border-radius:var(--r-sm);flex-shrink:0;object-fit:cover;background:var(--white-05)}
+.conflict-poster{width:32px;height:48px;border-radius:var(--r-poster);flex-shrink:0;object-fit:cover;background:var(--white-05)}
 .conflict-card.incoming .conflict-poster{background:var(--amber-12)}
 .conflict-card.existing .conflict-poster{background:var(--white-05)}
 .conflict-role{font-size:var(--t-label);font-weight:var(--w-bold);letter-spacing:.8px;text-transform:uppercase;margin-bottom:3px}
@@ -1343,7 +1354,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .prio-limit-list{padding:6px 0}
 .prio-limit-item{display:flex;align-items:center;gap:var(--sp-3);padding:var(--sp-3) var(--sp-5);border-bottom:1px solid var(--bdr-l);cursor:pointer}
 .prio-limit-item:last-child{border-bottom:none}
-.prio-limit-thumb{width:32px;height:48px;border-radius:var(--r-sm);flex-shrink:0;object-fit:cover;background:var(--surf-3)}
+.prio-limit-thumb{width:32px;height:48px;border-radius:var(--r-poster);flex-shrink:0;object-fit:cover;background:var(--surf-3)}
 .prio-limit-info{flex:1;min-width:0}
 .prio-limit-name{font-size:var(--t-base);font-weight:var(--w-semi);color:var(--white);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .prio-limit-when{font-size:var(--t-sm);color:var(--gray);margin-top:2px}
@@ -1846,7 +1857,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .recap-chip.done{background:var(--green-12);color:var(--green);border:1px solid var(--green-20)}
 .recap-chip.pend{background:var(--amber-10);color:var(--amber);border:1px solid var(--amber-30)}
 .ctx-next-row{display:flex;align-items:center;gap:var(--sp-3);margin-top:8px}
-.ctx-next-poster{width:36px;height:54px;border-radius:var(--r-sm);flex-shrink:0;object-fit:cover;background:var(--surf-3)}
+.ctx-next-poster{width:36px;height:54px;border-radius:var(--r-poster);flex-shrink:0;object-fit:cover;background:var(--surf-3)}
 .ctx-next-title{font-size:var(--t-base);font-weight:var(--w-bold);color:var(--white);letter-spacing:-.1px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;flex:1;min-width:0}
 .ctx-next-title-row{display:flex;align-items:center;gap:var(--sp-2);margin-bottom:3px}
 .ctx-next-detail{font-size:var(--t-sm);color:var(--gray)}
@@ -2621,7 +2632,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .search-item:active{background:var(--surf-2)}
 .search-item-poster{
   width:38px;height:57px;
-  object-fit:cover;border-radius:var(--r-sm);
+  object-fit:cover;border-radius:var(--r-poster);
   flex-shrink:0;background:var(--surf-2);
 }
 .search-item-info{flex:1;min-width:0}
@@ -2652,7 +2663,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .int-item-rating-empty{font-size:var(--t-xs);color:var(--gray2);cursor:pointer}
 .int-seen-btn.on{background:rgba(245,158,11,.1);color:var(--amber);border-color:rgba(245,158,11,.3)}
 .int-item:active{background:var(--surf-2)}
-.int-item-poster{width:56px;height:84px;border-radius:var(--r-sm);background:var(--surf-2);flex-shrink:0;overflow:hidden;object-fit:cover}
+.int-item-poster{width:56px;height:84px;border-radius:var(--r-poster);background:var(--surf-2);flex-shrink:0;overflow:hidden;object-fit:cover}
 
 .int-item-info{flex:1;min-width:0}
 .int-item-title{font-size:var(--t-base);font-weight:var(--w-bold);color:var(--white);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-bottom:2px}
@@ -2710,7 +2721,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .w-full-sm{width:100%;font-size:var(--t-sm)}
 
 .label-track-amber{font-size:var(--t-xs);color:var(--amber);letter-spacing:1px}
-.poster-sm{width:36px;height:54px;border-radius:var(--r-sm);flex-shrink:0}
+.poster-sm{width:36px;height:54px;border-radius:var(--r-poster);flex-shrink:0}
 .bg-surf-3{background:var(--surf-3)}
 .txt-gray-sm-mb1{font-size:var(--t-sm);color:var(--gray);margin-bottom:var(--sp-1)}
 .txt-caption-gray{font-size:var(--t-caption);color:var(--gray)}
@@ -3185,7 +3196,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202608091203";
+    s.src="/src/main.js?v=202608091221";
     document.body.appendChild(s);
     // Watchdog de boot (P0 18 jul): si el grafo ESM murió en el import (caché
     // HTTP mixta tras deploys en ráfaga — main.js nuevo + módulo viejo sin el
