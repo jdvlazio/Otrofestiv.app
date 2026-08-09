@@ -602,10 +602,17 @@ export const SECTION_ARCHETYPES = {
 // splash. Set acotado a los países con festival (crece 1 línea por país nuevo). Se eligió
 // texto sobre bandera: 100% responsive y consistente en todo dispositivo (los emoji de
 // bandera no renderizan en Windows; ver deuda opcional de migrar a SVG por ISO).
+// Crece UNA línea por país nuevo, y esa línea es fácil de olvidar: FINCA entró con
+// country:'AR' sin su entrada acá y el splash mostró «BUENOS AIRES» a secas durante
+// toda su publicación — countryName devuelve '' con un ISO desconocido, así que
+// festivalLocationLabel se queda con la ciudad y no hay error en ningún lado.
+// Lo cazó Juan mirando el splash (9 ago 2026). El guardián [pais-conocido] de
+// validate.py exige ahora que todo `country` de FESTIVAL_CONFIG exista en esta tabla.
 export const COUNTRY_NAMES = {
   CO: { es:'Colombia',       en:'Colombia' },
   BR: { es:'Brasil',         en:'Brazil' },
   US: { es:'Estados Unidos', en:'United States' },
+  AR: { es:'Argentina',      en:'Argentina' },
 };
 // countryName(iso, lang) — nombre del país o '' si no hay dato / ISO desconocido. Puro.
 export function countryName(iso, lang='es'){
