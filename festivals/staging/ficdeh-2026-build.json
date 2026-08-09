@@ -698,13 +698,6 @@
    "city": "Bogotá",
    "address": ""
   },
-  "La Trocha, La Casa de la Paz - Bogotá": {
-   "short": "La Trocha, La Casa de la Paz",
-   "lat": 4.6248165,
-   "lng": -74.0679005,
-   "city": "Bogotá",
-   "address": "Cra. 13 # 36-37"
-  },
   "Book Times - Barranquilla": {
    "short": "Book Times",
    "lat": 10.9790026,
@@ -7527,7 +7520,7 @@
    "synopsis_en": "It’s October 2, a historic day for Colombia. Although the agreements with the FARC have been signed, Luz does not dare to show his face because the ELN still exists. Through her texts, she introduces younger generations to her past while the future of peace begins to be written.",
    "day": "2026-08-15",
    "time": "17:00",
-   "venue": "La Trocha, La Casa de la Paz - Bogotá",
+   "venue": "La Trocha - Casa de la Paz - Bogotá",
    "day_order": 3,
    "has_qa": false,
    "is_cortos": false,
@@ -7556,7 +7549,7 @@
    "genre": "Documental",
    "day": "2026-08-15",
    "time": "17:00",
-   "venue": "La Trocha, La Casa de la Paz - Bogotá",
+   "venue": "La Trocha - Casa de la Paz - Bogotá",
    "day_order": 3,
    "has_qa": false,
    "is_cortos": false,
