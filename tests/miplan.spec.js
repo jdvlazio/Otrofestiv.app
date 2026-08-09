@@ -251,19 +251,27 @@ test('T56 — el taller multi-día entra y sale entero, y no entra a medias', as
   await enterFestival(page, 'leviza2026', LEVIZA_SIMTIME);
   const leer = () => page.evaluate(() => ({
     enPlan: ((savedAgenda && savedAgenda.schedule) || []).filter(e => e._title === 'Taller de Guion').length,
-    control: document.querySelector('#pel-sheet .pel-sheet-bloque .suggestion-add')?.textContent.trim() || '',
+    control: document.querySelector('#pel-sheet .blk-add, #pel-sheet .blk-quitar')?.textContent.trim() || '',
+    // El texto VISIBLE es corto («Agregar»/«Quitar») porque el corchete ya agrupa;
+    // la cuenta vive en el aria-label, que es lo único que oye quien no ve el
+    // corchete. Se afirman los dos: si alguien acorta el aria «para unificar», el
+    // lector de pantalla pierde el dato y este test lo dice.
+    aria: document.querySelector('#pel-sheet .blk-add, #pel-sheet .blk-quitar')?.getAttribute('aria-label') || '',
+    corchetes: document.querySelectorAll('#pel-sheet .blq-corchete').length,
     marcadas: document.querySelectorAll('#pel-sheet .pel-sheet-screening.in-plan').length,
     porSesion: document.querySelectorAll('#pel-sheet .pel-sheet-screening .suggestion-add').length,
   }));
   const tocar = async () => {
-    await page.evaluate(() => { const b = document.querySelector('#pel-sheet .pel-sheet-bloque .suggestion-add'); if (b) b.click(); });
+    await page.evaluate(() => { const b = document.querySelector('#pel-sheet .blk-add, #pel-sheet .blk-quitar'); if (b) b.click(); });
     await page.waitForTimeout(1200);
   };
   await page.evaluate(() => openPelSheet('Taller de Guion'));
   await page.waitForTimeout(1100);
 
   const a = await leer();
-  expect(a.control, 'el control es del bloque y dice cuántas son').toMatch(/3 sesiones/);
+  expect(a.control, 'el botón dice lo mismo que una función suelta').toBe('Agregar');
+  expect(a.aria, 'la cuenta no se pierde: viaja en el aria-label').toMatch(/3 sesiones/);
+  expect(a.corchetes, 'las 3 sesiones van unidas por un corchete').toBe(1);
   expect(a.porSesion, 'ninguna sesión tiene botón propio').toBe(0);
 
   await tocar();
@@ -305,16 +313,19 @@ test('T57 — un taller ya empezado no se ofrece', async ({ page }) => {
   await enterFestival(page, 'leviza2026', '2026-05-13T09:00:00-05:00');
   await page.evaluate(() => openPelSheet('Taller de Guion'));
   await page.waitForTimeout(1100);
-  const antes = await page.evaluate(() =>
-    document.querySelector('#pel-sheet .pel-sheet-bloque .suggestion-add')?.textContent.trim() || '');
-  expect(antes).toMatch(/3 sesiones/);
+  const antes = await page.evaluate(() => {
+    const b = document.querySelector('#pel-sheet .blk-add, #pel-sheet .blk-quitar');
+    return { txt: b?.textContent.trim() || '', aria: b?.getAttribute('aria-label') || '' };
+  });
+  expect(antes.txt).toBe('Agregar');
+  expect(antes.aria).toMatch(/3 sesiones/);
 
   // con la primera sesión ya pasada: sin control de añadir
   await enterFestival(page, 'leviza2026', '2026-05-15T23:00:00-05:00');
   await page.evaluate(() => openPelSheet('Taller de Guion'));
   await page.waitForTimeout(1100);
   const despues = await page.evaluate(() => ({
-    ctrl: document.querySelector('#pel-sheet .pel-sheet-bloque .suggestion-add')?.textContent.trim() || '',
+    ctrl: document.querySelector('#pel-sheet .blk-add, #pel-sheet .blk-quitar')?.textContent.trim() || '',
     filas: document.querySelectorAll('#pel-sheet .pel-sheet-screening').length,
   }));
   expect(despues.ctrl, 'no se ofrece un taller que ya empezó').toBe('');
@@ -355,7 +366,7 @@ test('T59 — la fila dice «Sesión 1 de N» y el modal avisa que se van todas'
   await enterFestival(page, 'leviza2026', '2026-05-13T09:00:00-05:00');
   await page.evaluate(() => openPelSheet('Taller de Guion'));
   await page.waitForTimeout(1000);
-  await page.evaluate(() => { const b = document.querySelector('#pel-sheet .pel-sheet-bloque .suggestion-add'); if (b) b.click(); });
+  await page.evaluate(() => { const b = document.querySelector('#pel-sheet .blk-add, #pel-sheet .blk-quitar'); if (b) b.click(); });
   await page.waitForTimeout(1200);
   await page.evaluate(() => { try { closePelSheet(); } catch (e) {} switchMainNav('mnav-miplan'); showAgView(); });
   await page.waitForTimeout(1800);
