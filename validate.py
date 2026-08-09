@@ -3007,6 +3007,47 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar festival-name-parity: {_e}')
 
+# ── [pais-conocido] todo `country` del config tiene nombre en COUNTRY_NAMES ────
+# La línea de ubicación del splash sale de festivalLocationLabel → countryName, y
+# countryName devuelve '' cuando el ISO no está en la tabla. El resultado no es un
+# error: es la ciudad sola. FINCA se publicó con country:'AR' sin su entrada y el
+# splash dijo «BUENOS AIRES» —sin Argentina— durante toda su vitrina, sin que nada
+# se quejara (lo vio Juan, 9 ago 2026).
+# La tabla crece una línea por país, y esa línea es justo la que se olvida cuando
+# el festival nuevo es del exterior. `country:''` es LEGÍTIMO y no se exige: es como
+# un festival nacional dice «no tengo una sede única» (FICDEH, 11 ciudades).
+check = 'pais-conocido'
+try:
+    _cfg = open('src/config.js', encoding='utf-8').read()
+    # Hasta el CIERRE DEL OBJETO (`\n};`), no hasta la primera `}` — esa cierra la
+    # primera entrada y dejaba la tabla en un solo país: el guardián acusaba de
+    # faltantes a US, BR y AR estando los tres. Un check con un parser flojo no
+    # avisa de menos: avisa mal, que es peor.
+    _tabla = _cfg[_cfg.index('COUNTRY_NAMES'):]
+    _tabla = _tabla[:_tabla.index('\n};')]
+    _conocidos = set(re.findall(r"^\s*([A-Z]{2}):\s*\{", _tabla, re.M))
+    _body = _cfg[_cfg.index('FESTIVAL_CONFIG'):]
+    _ids = re.findall(r"\n  '([a-z0-9]+)':\s*\{", _body)
+    _huerfanos = []
+    for _i, _fid in enumerate(_ids):
+        _ini = _body.index("'%s':" % _fid)
+        _fin = _body.index("'%s':" % _ids[_i + 1]) if _i + 1 < len(_ids) else _ini + 2500
+        _blk = _body[_ini:_fin]
+        if re.search(r"group\s*:\s*['\"]test['\"]", _blk):
+            continue
+        _m = re.search(r"country:'([A-Z]{2})'", _blk)
+        if _m and _m.group(1) not in _conocidos:
+            _huerfanos.append(f'{_fid} → {_m.group(1)}')
+    if not _conocidos:
+        warn(check, 'no se pudo leer COUNTRY_NAMES')
+    elif _huerfanos:
+        fail(check, 'festival(es) con país sin nombre en COUNTRY_NAMES: ' + ', '.join(_huerfanos)
+                    + ' — el splash mostraría solo la ciudad, sin error visible')
+    else:
+        ok(check, f'todo country del config tiene nombre ({len(_conocidos)} países en la tabla)')
+except Exception as _e:
+    warn(check, f'no se pudo verificar pais-conocido: {_e}')
+
 # ── [timezone-valid] todo festival tiene timezoneOffset válido (±HH:MM) ─────────
 # Toda la lógica de "ahora" (now-line, contador, en-curso, hoy, pasó/futuro) se ancla
 # a la zona del festival vía cfg.timezoneOffset (domain/time.js _festNow/_festDate).
