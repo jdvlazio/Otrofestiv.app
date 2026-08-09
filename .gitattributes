@@ -1,0 +1,10 @@
+# Los cuatro archivos que lleva el número de build se mergean con el driver
+# `bump`: resuelve solo el conflicto que es SOLO el timestamp, y deja intacto
+# cualquier conflicto de contenido real. Ver scripts/merge-bump.sh.
+#
+# El driver hay que registrarlo en cada clon (git no ejecuta comandos declarados
+# por el repo): sh scripts/install-hooks.sh
+index.html   merge=bump
+src/main.js  merge=bump
+sw.js        merge=bump
+version.json merge=bump
