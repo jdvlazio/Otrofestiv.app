@@ -606,10 +606,21 @@ export function _renderSplashRailHTML(state, activeFestId, action='selectSplashF
   // FECHA del info, y solo si el año de ESE festival DIFIERE de la temporada
   // (festivalSeasonYear) — ver _fillSplashInfo. A FUTURO, cuando el riel mezcle años,
   // acá cabría un divisor de año (mismo patrón que "ANTERIORES", agrupando por año).
-  let html=current.map(e=>mkCard(e,false)).join('');
-  // Divisor "ANTERIORES" solo separa DOS grupos: si no hay vigentes (todos pasados)
-  // no se emite (colgar de primero descentra el snap inicial → auto-selección).
-  if(current.length && past.length) html+=`<span class="splash-rail-div" aria-hidden="true"><span class="srd-bar"></span><span class="srd-lbl">${t('splash_anteriores')}</span><span class="srd-bar"></span></span>`;
+  // Un divisor SEPARA dos grupos: se emite solo si hay algo de los dos lados. Colgar
+  // uno de primero descentra el snap inicial y rompe la auto-selección.
+  const div=lbl=>`<span class="splash-rail-div" aria-hidden="true"><span class="srd-bar"></span><span class="srd-lbl">${lbl}</span><span class="srd-bar"></span></span>`;
+  const ongoing =current.filter(([,cfg])=>_classifyFestival(cfg)==='ongoing');
+  const upcoming=current.filter(([,cfg])=>_classifyFestival(cfg)!=='ongoing');
+  // "PRÓXIMOS" — en curso y por empezar viajaban en el MISMO grupo, sin nada que los
+  // distinga: con FICMA abierto y FICDEH/FINCA a dos días, las tres cards se leían
+  // igual de disponibles. El tier ya existía en _sortFestivals; lo que faltaba era
+  // decirlo en pantalla. Misma tira y misma dirección: los próximos NO se mudan a la
+  // izquierda —eso haría correr el tiempo de derecha a izquierda y obligaría a
+  // arrancar el riel desplazado, que es de lo que depende la preselección—.
+  let html=ongoing.map(e=>mkCard(e,false)).join('');
+  if(ongoing.length && upcoming.length) html+=div(t('fs_proximos'));
+  html+=upcoming.map(e=>mkCard(e,false)).join('');
+  if(current.length && past.length) html+=div(t('splash_anteriores'));
   html+=past.map(e=>mkCard(e,true)).join('');
   return html;
 }
