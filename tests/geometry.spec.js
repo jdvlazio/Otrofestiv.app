@@ -115,3 +115,63 @@ test('G01 — el primer contenido de cada tab arranca a la misma distancia del c
   expect(max, `algún tab no arranca pegado al chrome: ${JSON.stringify(gaps)}`).toBeLessThanOrEqual(2);
   expect(max - min, `gaps desiguales entre tabs: ${JSON.stringify(gaps)}`).toBeLessThanOrEqual(2);
 });
+
+// ── G02 — el grupo de sesiones: mismo ritmo, mismo eje, sin robarle la sede ────
+// El bloque multi-día se dibuja como GRUPO (corchete + eslabón + un solo control,
+// 9 ago 2026). Tres medidas lo sostienen, y las tres se pierden en silencio si
+// alguien toca el CSS sin medir:
+//
+//  1. La fila del grupo mide LO MISMO que una fila suelta. Agrupar no es motivo
+//     para cambiar el ritmo vertical de la lista.
+//  2. Corchete, eslabón y botón comparten EJE. Es lo que hace leer «estas N
+//     alimentan una sola acción»; con el eje corrido, el corchete parece decorado.
+//  3. La columna de sede no encoge de más. El primer borrador la dejaba en 129px
+//     contra 151px de una fila normal: 22px que parten «Colombo Americano · Sala 2»
+//     en dos líneas — el mismo bug que causó el badge «✓ En tu Plan» (20 jul).
+test('G02 — el grupo de sesiones comparte eje y no le roba ancho a la sede', async ({ page }) => {
+  await enterFestival(page, 'leviza2026', '2026-05-13T09:00:00-05:00');
+  const m = await page.evaluate(() => {
+    activeVenue = 'all';
+    const taller = FILMS.find(f => f.is_recurring);
+    openPelSheet(taller.title, taller);
+    const g = document.querySelector('.blq');
+    if (!g) return { err: 'no se dibujó el grupo' };
+    const ctr = el => { const r = el.getBoundingClientRect(); return +(r.top + r.height / 2).toFixed(1); };
+    const out = {
+      filas: [...document.querySelectorAll('.blq .pel-sheet-screening')].map(e => +e.getBoundingClientRect().height.toFixed(1)),
+      corchete: +document.querySelector('.blq-corchete').getBoundingClientRect().height.toFixed(1),
+      ejeGrupo: ctr(g),
+      ejeLink: ctr(document.querySelector('.blq-link')),
+      ejeBtn: ctr(document.querySelector('.blk-add, .blk-quitar')),
+      sedeGrupo: +document.querySelector('.blq .pelicula-venue').getBoundingClientRect().width.toFixed(1),
+      // El RITMO se mide en padding, no en alto: el alto depende del contenido
+      // (una sede con municipio ocupa dos líneas) y compararlo entre filas
+      // distintas mide el texto, no el diseño. Primer borrador de este test:
+      // falló contra una fila de referencia de 39px por esa razón.
+      padGrupo: getComputedStyle(document.querySelector('.blq .pel-sheet-screening')).paddingTop,
+    };
+    // Referencia: una función suelta CON su botón «Agregar» — el mismo caso de uso.
+    const suelta = FILMS.find(f => !f.is_recurring && f.day && f.time && f.venue && !f.info);
+    openPelSheet(suelta.title, suelta);
+    const fila = document.querySelector('.pel-sheet-screening');
+    out.padNormal = getComputedStyle(fila).paddingTop;
+    out.sedeNormal = +fila.querySelector('.pelicula-venue').getBoundingClientRect().width.toFixed(1);
+    out.normalTieneBoton = !!fila.querySelector('.suggestion-add');
+    return out;
+  });
+  expect(m.err).toBeUndefined();
+  console.log('G02:', JSON.stringify(m));
+  expect(m.normalTieneBoton, 'la referencia tiene que ser una fila CON botón').toBe(true);
+
+  // 1. mismo ritmo vertical que una fila suelta
+  expect(m.padGrupo, `la fila del grupo cambió su padding (${m.padGrupo}) frente a una suelta (${m.padNormal})`).toBe(m.padNormal);
+  // el corchete abarca exactamente las filas
+  expect(Math.abs(m.corchete - m.filas.reduce((a, b) => a + b, 0)),
+    `el corchete (${m.corchete}) no abarca las filas`).toBeLessThanOrEqual(1);
+  // 2. eje compartido
+  expect(Math.abs(m.ejeLink - m.ejeGrupo), 'el eslabón no está centrado en el grupo').toBeLessThanOrEqual(1);
+  expect(Math.abs(m.ejeBtn - m.ejeGrupo), 'el botón no comparte eje con el grupo').toBeLessThanOrEqual(1);
+  // 3. la sede no encoge de más
+  expect(m.sedeNormal - m.sedeGrupo,
+    `el grupo le roba ${(m.sedeNormal - m.sedeGrupo).toFixed(1)}px a la sede (tope 8)`).toBeLessThanOrEqual(8);
+});

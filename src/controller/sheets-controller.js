@@ -264,16 +264,35 @@ export function openPelSheet(title){
     // Todas las sesiones del taller, no solo las futuras: el bloque se toma ENTERO.
     const _todasSes=allScr.filter(sc=>!sc._cancelled);
     const _empezado=_todasSes.some(sc=>screeningPassed(sc));
+    // El botón dice lo MISMO que una función suelta («Agregar»/«Quitar»): el texto
+    // largo compensaba una agrupación que no se veía, y ahora el corchete la muestra
+    // (Juan, 9 ago 2026). La cuenta viaja en el aria-label — quien no ve el corchete
+    // sigue oyendo «Añadir las 2 sesiones». Cero strings nuevas: las cuatro existían.
     if(_enPlan)
-      _bloqueCtrl=`<button class="suggestion-add blk-quitar" data-action="removeRecurringBlock" data-title="${f.title.replace(/"/g,'&quot;')}" data-stop="1">${ICONS.x} ${t(_enPlan===1?'bloque_quitar_1':'bloque_quitar',{n:_enPlan})}</button>`;
+      _bloqueCtrl=`<button class="suggestion-add blk-quitar" data-action="removeRecurringBlock" data-title="${f.title.replace(/"/g,'&quot;')}" data-stop="1" aria-label="${t(_enPlan===1?'bloque_quitar_1':'bloque_quitar',{n:_enPlan})}">${ICONS.x} ${t('misc_quitar')}</button>`;
     // Un taller que YA EMPEZÓ no se puede tomar entero, así que no se ofrece.
     // Sin esto se ofrecían «las sesiones que quedan», y eso rompía dos cosas: el
     // texto («Añadir las 1 sesiones», cazado con los talleres de FICMA) y el
     // invariante — verifyPlan cuenta TODAS las del catálogo, así que un plan con
     // 1 de 2 quedaba marcado como bloque-incompleto por el propio chokepoint.
     else if(_todasSes.length&&!_empezado)
-      _bloqueCtrl=`<button class="suggestion-add blk-add" data-action="addRecurringBlock" data-title="${f.title.replace(/"/g,'&quot;')}" data-stop="1">${ICONS.plus} ${t(_todasSes.length===1?'bloque_anadir_1':'bloque_anadir',{n:_todasSes.length})}</button>`;
+      _bloqueCtrl=`<button class="suggestion-add blk-add" data-action="addRecurringBlock" data-title="${f.title.replace(/"/g,'&quot;')}" data-stop="1" aria-label="${t(_todasSes.length===1?'bloque_anadir_1':'bloque_anadir',{n:_todasSes.length})}">${ICONS.plus} ${t('misc_anadir')}</button>`;
   }
+  // ── El GRUPO: corchete + eslabón + un solo control ────────────────────────
+  // Las sesiones van unidas por un corchete recto con eslabón, y el control queda
+  // a su derecha EN LÍNEA — la misma píldora de cualquier función suelta. Antes era
+  // un botón a lo ancho DEBAJO: no se parecía a nada más en la app y obligaba a
+  // explicar la agrupación con palabras. El corchete va del lado del BOTÓN (Juan,
+  // 9 ago): a la izquierda corría las filas ~24px y rompía la columna que comparten
+  // TODAS las filas de la app. Con una sola sesión no hay nada que unir.
+  const _esGrupo=f.is_recurring&&allScr.length>1;
+  const _cuerpoFn=f.is_recurring
+    ?`<div class="blq${_esGrupo?' blq-multi':''}">
+        <div class="blq-filas">${rows}</div>
+        ${_esGrupo?`<div class="blq-corchete" aria-hidden="true"><span class="blq-c-seg"></span><span class="blq-link">${ICONS.link}</span><span class="blq-c-seg"></span></div>`:''}
+        ${_bloqueCtrl?`<div class="blq-cta">${_bloqueCtrl}</div>`:''}
+      </div>`
+    :rows;
   // Lista de cortos si es programa
   let cortosHtml='';
   if(f.is_cortos&&f.film_list?.length){
@@ -316,7 +335,7 @@ export function openPelSheet(title){
       </div>
     </div>
         ${allScr.length>0?`<div class="sec-hdr sm">${ICONS.clock} <span>${f.type==='event'?t('label_horario'):allScr.length===1?t('label_funcion'):t('label_funciones_pl')}</span>${totalFn>1&&f.type!=='event'?`<span class="count-badge cb-neutral">${allScr.length}</span>`:''}${_ciudadSel?`<span class="fn-ciudad">${_ciudadSel}</span>`:''}</div>`:''}
-    ${allScr.length>0?`<div class="pel-sheet-screenings">${rows}${_ocultas>0?`<div class="fn-otra-ciudad">${t(_ocultas===1?'fn_otra_ciudad':'fn_otras_ciudades',{n:_ocultas})}</div>`:''}${_bloqueCtrl?`<div class="pel-sheet-bloque">${_bloqueCtrl}</div>`:''}</div>`:''}
+    ${allScr.length>0?`<div class="pel-sheet-screenings">${_cuerpoFn}${_ocultas>0?`<div class="fn-otra-ciudad">${t(_ocultas===1?'fn_otra_ciudad':'fn_otras_ciudades',{n:_ocultas})}</div>`:''}</div>`:''}
     ${/* ORDEN: FUNCIÓN (solo día·hora·sede) → AVISOS → SINOPSIS. Todos los avisos
         viven en su banda, incluidos cancelada y reprogramada, que van PRIMERAS y
         en rojo: lo que invalida se lee antes de lo que matiza (DESIGN 8.4.6). La
