@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `35ad093 guard: barreras mecánicas para las operaciones de git (#524)`
+> Último commit: `829ae6d fix(splash): el orden vuelve a la fecha, y el subtítulo explica la sigla (#526)`
 
 ---
 
