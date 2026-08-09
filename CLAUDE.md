@@ -1,9 +1,11 @@
 # CLAUDE.md — Otrofestiv
 > Generado automáticamente por `scripts/generate-claude-md.js`.
-> No editar a mano — los cambios se sobreescriben en el próximo deploy.
+> No editar a mano — los cambios se sobreescriben al regenerar.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `3d1b474 feat(ficma): sinopsis oficiales de AA965 y «Que el cielo nos perdone»`
+> El hash del último commit NO va acá a propósito: cambiaba en cada rama y hacía
+> de este archivo un conflicto garantizado por PR, sin aportar nada que `git log`
+> no diga mejor.
 
 ---
 
@@ -46,6 +48,23 @@ Juan es Product Owner, diseñador y developer. Claude ejecuta; Juan audita y apr
 4. **Validar antes de commitear.** Siempre correr `python3 validate.py` antes de proponer un commit.
 5. **bump-version antes de deploy.** `node scripts/bump-version.js` justo antes de cada push.
 6. **Sin regresiones.** Verificar qué cambió y por qué después de cada entrega.
+7. **Código de la app acá, datos del festival allá.** El trabajo está partido en dos
+   chats con worktrees separados. La pregunta que decide dónde va un cambio es una
+   sola: *¿esto es código o es un festival?*
+
+| | Dueño | Qué toca | Ramas |
+|---|---|---|---|
+| **Main** | código de la app | `src/`, `validate.py`, `tests/`, `scripts/` | `feat/*`, `fix/*` |
+| **Onboarding** | datos de festival | `festivals/`, `assets/`, `src/config.js` | `feat/<festival>-catalogo` |
+
+**Quien es dueño de la rama la lleva hasta el final: push _y_ merge.** El trabajo no
+se parte a la mitad entre dos chats — así nace la pregunta «¿y ahora quién mergea?».
+Juan autoriza en el chat dueño de la rama.
+
+Si un cambio necesita las dos cosas (un campo nuevo en el dato + soporte en la app),
+van **dos PR, primero el de app**: así el dato nunca llega a producción antes que el
+código que sabe leerlo. El workflow `frontera.yml` lo verifica; para la excepción
+deliberada existe la etiqueta `frontera-ok`.
 
 ---
 
@@ -153,8 +172,10 @@ congelados en código viejo pese a los deploys web. Antes de CADA build:
 ## Herramientas del pipeline
 
 ```bash
+sh scripts/install-hooks.sh                # UNA VEZ por clon/worktree: hooks + driver de merge
 python3 validate.py                        # validar antes de commitear
-node scripts/bump-version.js               # actualizar sw.js + version.json + CLAUDE.md antes de deploy
+node scripts/bump-version.js               # actualizar index.html + main.js + sw.js + version.json antes de deploy
+node scripts/generate-claude-md.js         # regenerar este archivo cuando cambie el estado del proyecto
 node scripts/generate-config.js --help     # generar entrada FESTIVAL_CONFIG
 python3 scripts/enrich-festival.py --help  # enriquecer JSON con TMDB
 python3 scripts/geocode-venues.py --help   # geocodificar venues

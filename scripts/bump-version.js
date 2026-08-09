@@ -93,5 +93,7 @@ console.log(`   src/main.js  → BUILD_VERSION = ${build}`);
 console.log(`   index.html   → main.js?v= = ${build}`);
 console.log(`   version.json → android = ${build}, ios = ${vData.ios} (misma cadencia)`);
 
-// Regenerar CLAUDE.md con estado actual del repo
-try { require('./generate-claude-md'); } catch (_) {}
+// CLAUDE.md ya NO se regenera acá (ago 2026). Era el quinto archivo que el bump
+// tocaba en cada rama, y su línea de «último commit» cambiaba siempre → conflicto
+// garantizado por PR, en un archivo que ni siquiera se despliega. Se regenera a
+// mano cuando cambia el estado del proyecto: node scripts/generate-claude-md.js
