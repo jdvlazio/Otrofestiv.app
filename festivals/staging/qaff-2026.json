@@ -5,11 +5,12 @@
   "verificacion": "Cruce título-normalizado eventos↔obras; sección dueña = 1ª categoría del evento (decisión Juan 2 ago); sin prelanzamiento 5 sep (decisión Juan); doble ciudad con city en venues (decisión Juan)",
   "decisiones_pendientes": "emojis/EN de secciones; 19-20 sep incluidos (funciones de cierre reales); geocoding; verificar URL de Registrarse por evento",
   "registro": "Registrarse = RSVP nativo de Boom (addon registration: open, cupo 500/evento, page_url vacío — sin deep-link por evento). ticket_url → página del programa, donde vive el formulario. Confirmado en addons del published_calendar, 2 ago.",
-  "keyart": "Cartel oficial \"NOIR\" 8ª edición (1414×2000) — Portada del sitio, static.wixstatic.com/media/736095_c1d5667c92ab40159d57379cdb7298f7~mv2.jpg, capturado 3 ago 2026. Dice \"8ª EDICIÓN 14-18 SEPTIEMBRE 2026\"."
+  "keyart": "Cartel oficial \"NOIR\" 8ª edición (1414×2000) — Portada del sitio, static.wixstatic.com/media/736095_c1d5667c92ab40159d57379cdb7298f7~mv2.jpg, capturado 3 ago 2026. Dice \"8ª EDICIÓN 14-18 SEPTIEMBRE 2026\".",
+  "alcance": "SOLO QUIBDÓ (decisión de Juan, 9 ago 2026). El calendario del festival incluye 17 funciones en Bogotá —Cinemateca y Museo Nacional— que quedan fuera de la app; con ellas salen 8 obras que solo se proyectaban allí y la sección Diálogo Improbable completa."
  },
  "name": "QAFF 2026",
  "shortName": "QAFF",
- "city": "Quibdó y Bogotá",
+ "city": "Quibdó",
  "country": "CO",
  "dates": "14–20 SEP",
  "dates_en": "SEP 14–20",
@@ -158,13 +159,6 @@
    "archetype": "Perspectivas / Miradas",
    "color": "#1839D1",
    "order": 4
-  },
-  "🗄️ Diálogo Improbable": {
-   "oficial": "Diálogo Improbable",
-   "en": "Improbable Dialogue",
-   "archetype": "Charlas / Industria",
-   "color": "#C3090C",
-   "order": 10
   }
  },
  "venues": {
@@ -180,30 +174,6 @@
     "website": "https://www.aeropuertoquibdo.co/biblioteca"
    },
    "_geocode_nota": "Pin = Aeropuerto El Caraño (OSM); la biblioteca está en el Centro de Servicios del aeropuerto (dirección y tel. confirmados en aeropuertoquibdo.co/biblioteca). Afinar si el festival publica pin exacto."
-  },
-  "Cinemateca de Bogotá - Bogotá": {
-   "short": "Cinemateca de Bogotá - Bogotá",
-   "lat": 4.6032463,
-   "lng": -74.06758,
-   "city": "Bogotá",
-   "address": "Carrera 3 No. 19-10",
-   "_contact": {
-    "email": "contactenos@idartes.gov.co",
-    "phone": "+57 601 379 5750 Ext. 4504",
-    "website": "https://cinematecadebogota.gov.co/"
-   }
-  },
-  "Museo Nacional - Bogotá": {
-   "short": "Museo Nacional - Bogotá",
-   "lat": 4.6155238,
-   "lng": -74.0684131,
-   "city": "Bogotá",
-   "address": "Avenida Carrera 7 No. 28-66",
-   "_contact": {
-    "email": "prensa@museonacional.gov.co",
-    "phone": "+60(1) 381 6470",
-    "website": "https://www.museonacional.gov.co/"
-   }
   }
  },
  "films": [
@@ -949,44 +919,6 @@
    "posterSource": "custom",
    "lbSlug": "the-banjo-boys",
    "_src": {
-    "boom_event_id": 3946761,
-    "stills": [
-     "https://static.wixstatic.com/media/736095_5f7fe42dcf08430bb45dc9668fd5cb12~mv2.jpg",
-     "https://static.wixstatic.com/media/736095_492c0216dded48229581de4ebf76e353~mv2.jpg",
-     "https://static.wixstatic.com/media/736095_37a4ddf79d5c4a52a8fa55a4ff3292d8~mv2.jpg"
-    ]
-   },
-   "year": "2025",
-   "synopsis_en": "The Banjo Boys follows the rise of Madalitso Band, Malawian musicians Yobu Maligwa and Yosefe Kalekeni, who craft a banjo, a one-stringed babatone, and foot drum, creating a sound that moves audiences. Once mocked as madmen in Lilongwe’s streets, they meet Neil Nayar, a British musician drawn to Malawi’s spirit. Their chance encounter sparks a trio, propelling them from local busking to global stages like Sauti za Busara, WOMAD, and Joshua Tree. Facing visa struggles, personal tragedies—including original member Rice’s imprisonment for murder—and cultural tensions, their grit fuels joyous performances. Yobu’s pastoral visions, Yosefe’s resilience, and Neil’s purpose drive their bond. Their minimalist sound bridges continents, culminating in a 2023 world tour and a legendary Malawi homecoming. Intimate interviews and vibrant performances reveal music’s power to unite and transform.",
-   "_inherited": {
-    "synopsis_en": "tmdb-1547480",
-    "synopsis": "qaff-event-desc"
-   },
-   "day": "2026-09-15",
-   "time": "14:00",
-   "venue": "Cinemateca de Bogotá - Bogotá",
-   "day_order": 1,
-   "has_qa": false,
-   "is_cortos": false,
-   "film_list": null,
-   "requires_registration": true,
-   "is_free": true,
-   "type": "film",
-   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026"
-  },
-  {
-   "title": "The Banjo Boys",
-   "director": "Johan R Nayar",
-   "duration": "76 min",
-   "country": "Alemania (Malaui, Reino Unido)",
-   "section": "🪕 Otra Mirada",
-   "genre": "Documental, Música",
-   "synopsis": "The Banjo Boys follows the electrifying rise of Madalitso Band, a Malawian duo—Yobu Maligwa and Yosefe Kalekeni—who built their own instruments into a banjo, a one-stringed babatone (bass), and a foot drum,",
-   "synopsis_lang": "en",
-   "poster": "/assets/qaff/the-banjo-boys.jpg",
-   "posterSource": "custom",
-   "lbSlug": "the-banjo-boys",
-   "_src": {
     "boom_event_id": 3946828,
     "stills": [
      "https://static.wixstatic.com/media/736095_5f7fe42dcf08430bb45dc9668fd5cb12~mv2.jpg",
@@ -1054,80 +986,6 @@
    "title_orig": "When the World Broke Open"
   },
   {
-   "title": "God's Work",
-   "director": "Michael James",
-   "duration": "126 min",
-   "country": "Sudáfrica",
-   "section": "🪕 Otra Mirada",
-   "genre": "",
-   "synopsis": "In a derelict building on the outskirts of Durban, a group of homeless men carve out a fragile existence amid violence, addiction, and the constant threat of being erased.",
-   "synopsis_lang": "en",
-   "poster": "/assets/qaff/god-s-work.jpg",
-   "posterSource": "custom",
-   "_src": {
-    "boom_event_id": 3946858,
-    "stills": [
-     "https://static.wixstatic.com/media/736095_bf4985f261f24f249de6e4329f2f7e87~mv2.jpg",
-     "https://static.wixstatic.com/media/736095_e99683effbd64176a0602f682316a2ee~mv2.jpg",
-     "https://static.wixstatic.com/media/736095_c7fd873c531b4cd6853c56bb45ead4e5~mv2.jpg"
-    ],
-    "tmdb_id": 1742391
-   },
-   "day": "2026-09-15",
-   "time": "17:00",
-   "venue": "Cinemateca de Bogotá - Bogotá",
-   "day_order": 1,
-   "has_qa": false,
-   "is_cortos": false,
-   "film_list": null,
-   "requires_registration": true,
-   "is_free": true,
-   "type": "film",
-   "year": "2025",
-   "_inherited": {
-    "year": "qaff-event-desc",
-    "synopsis": "qaff-event-desc",
-    "tmdb_alta": "creada 2026-08-03 (jdvlazio) — póster subido 2026-08-03 (verificado en sesión)"
-   },
-   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026"
-  },
-  {
-   "title": "The Anchorage of the Time",
-   "director": "Sol de Carvalho",
-   "duration": "105 min",
-   "country": "Mozambique",
-   "section": "🪕 Otra Mirada",
-   "genre": "Drama",
-   "synopsis": "IZIDINE, a recently promoted police detective, is called to a nursing home located in a former colonial fortress to investigate a crime: the home's director has been murdered.",
-   "synopsis_lang": "en",
-   "poster": "/assets/qaff/the-anchorage-of-the-time.jpg",
-   "posterSource": "custom",
-   "lbSlug": "the-anchorage-of-time",
-   "_src": {
-    "boom_event_id": 3946857,
-    "stills": [
-     "https://static.wixstatic.com/media/736095_b28c83444bb1473895268c8b7088ac3f~mv2.jpg",
-     "https://static.wixstatic.com/media/736095_abe52ad074534739bd6b12f1ac45232b~mv2.jpg"
-    ]
-   },
-   "year": "2024",
-   "day": "2026-09-15",
-   "time": "19:30",
-   "venue": "Cinemateca de Bogotá - Bogotá",
-   "day_order": 1,
-   "has_qa": false,
-   "is_cortos": false,
-   "film_list": null,
-   "requires_registration": true,
-   "is_free": true,
-   "type": "film",
-   "_inherited": {
-    "synopsis": "qaff-event-desc"
-   },
-   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026",
-   "_src_titulo": "Title Case; el calendario del festival lo publica en mayúsculas como «THE ANCHORAGE OF THE TIME»"
-  },
-  {
    "title": "POSESAS [Possessed]",
    "director": "Sebastian Wiedemann, Daniel Cortes",
    "duration": "16 min",
@@ -1167,35 +1025,6 @@
    "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026",
    "_poster_provisional": "Imagen oficial del catálogo QAFF pero es un still vertical con laurel, sin tipografía de título (auditoría visual de Juan, 2 ago). Re-chequear antes de publicar por si el festival publica póster definitivo.",
    "title_orig": "Posesas"
-  },
-  {
-   "title": "Diálogo Improbable · Noir Identidad",
-   "type": "event",
-   "duration": "120 min",
-   "synopsis": "Ser negro no es un género: identidades complejas entre la vitrina y la pantalla NOIR Identidad explora la negritud como identidad compleja, múltiple e irreductible a una sola definición. ¿Cómo se cura una identidad en un museo? ¿Cómo se filma sin reducirla? El curador que construye vitrinas vs. el cineasta que construye planos vs. el artista que trabaja con imagen y objeto vs. el gestor cultural que diseña los espacios donde las identidades caben o no caben. Pregunta central: ¿cómo se representa dignamente la diversidad negra sin esencializarla, simplificarla ni traicionarla? PANELISTAS: Dra. Patricia Mena, César A. Palacios Chaverra, Nicola Vizcaíno, Museo Afro de Colombia",
-   "synopsis_lang": "es",
-   "section": "🗄️ Diálogo Improbable",
-   "year": "",
-   "day": "2026-09-16",
-   "time": "10:00",
-   "venue": "Museo Nacional - Bogotá",
-   "day_order": 2,
-   "has_qa": false,
-   "is_cortos": false,
-   "film_list": null,
-   "requires_registration": true,
-   "is_free": true,
-   "_src": {
-    "boom_event_id": 3946873,
-    "stills": [
-     "https://static.wixstatic.com/media/736095_3305c26f616248cb8bd57e0bc39a4da4~mv2.jpg",
-     "https://static.wixstatic.com/media/736095_a834c25a46144fb3a5a9def733482b83~mv2.jpg",
-     "https://static.wixstatic.com/media/736095_4425913c423744a292123c465a658c21~mv2.jpg"
-    ]
-   },
-   "event_kind": "",
-   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026",
-   "_src_titulo": "Title Case; el calendario del festival lo publica en mayúsculas como «DIÁLOGO IMPROBABLE  ·  NOIR IDENTIDAD»"
   },
   {
    "title": "The One who Cries",
@@ -1433,44 +1262,6 @@
    "title_orig": "Domingo"
   },
   {
-   "title": "Surviving Biafra",
-   "director": "Meji Alabi, Leke Alabi-Isama",
-   "duration": "75 min",
-   "country": "Nigeria (Reino Unido)",
-   "section": "🌳 Panorama Africano",
-   "genre": "Documental",
-   "synopsis": "Surviving Biafra is a feature documentary directed by Meji Alabi and Leke Alabi-Isama, exploring the Nigerian Civil War through the eyewitness accounts of those who survived it.",
-   "synopsis_lang": "en",
-   "poster": "/assets/qaff/surviving-biafra.jpg",
-   "posterSource": "custom",
-   "lbSlug": "surviving-biafra",
-   "_src": {
-    "boom_event_id": 3946859,
-    "stills": [
-     "https://static.wixstatic.com/media/736095_486e5ff5b5f34348a7cb7dfca99f9266~mv2.jpg",
-     "https://static.wixstatic.com/media/736095_085131453e7b4299b9dfe4be22a9ac7b~mv2.jpg",
-     "https://static.wixstatic.com/media/736095_53399b8d66084701aaa085be3fc6dd1e~mv2.jpg"
-    ]
-   },
-   "year": "2026",
-   "synopsis_en": "Some of the last survivors from Nigeria’s Civil War, also known as the Biafran War, share their memories from the frontline.",
-   "_inherited": {
-    "synopsis_en": "tmdb-1713898",
-    "synopsis": "qaff-event-desc"
-   },
-   "day": "2026-09-16",
-   "time": "14:00",
-   "venue": "Cinemateca de Bogotá - Bogotá",
-   "day_order": 2,
-   "has_qa": false,
-   "is_cortos": false,
-   "film_list": null,
-   "requires_registration": true,
-   "is_free": true,
-   "type": "film",
-   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026"
-  },
-  {
    "title": "Amazonas Cocinas Indigenas de Selva y Rio",
    "director": "Jairo Garrido",
    "duration": "13 min",
@@ -1581,85 +1372,6 @@
    "day": "2026-09-16",
    "time": "16:25",
    "venue": "Biblioteca Departamental - Quibdó",
-   "day_order": 2,
-   "has_qa": false,
-   "is_cortos": false,
-   "film_list": null,
-   "requires_registration": true,
-   "is_free": true,
-   "type": "film",
-   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026"
-  },
-  {
-   "title": "Three Black Men",
-   "director": "Sienna McLean-LoGreco",
-   "duration": "99 min",
-   "country": "Estados Unidos",
-   "section": "☕ Panorama Diaspórica",
-   "genre": "",
-   "synopsis": "¿Puede un viaje hacia el pasado abrir nuevas posibilidades para la Negritud? Tres hombres negros recorren a la inversa la ruta transatlántica del comercio de esclavos, de Los Ángeles (California) a Salvador de Bahía (Brasil) y, finalmente, a Accra (Ghana). En este recorrido exploran aspectos fundamentales de la historia negra y las representaciones de la migración forzosa, la supervivencia y la desaparición de los millones de personas que cruzaron el Atlántico; y brazan la identidad negra como una fuente viva de conexión, creación y renovación.",
-   "synopsis_lang": "es",
-   "poster": "/assets/qaff/three-black-men.jpg",
-   "posterSource": "custom",
-   "lbSlug": "three-black-men",
-   "_src": {
-    "boom_event_id": 3946860,
-    "stills": [
-     "https://static.wixstatic.com/media/736095_7eed0eb9db544264b378332f5a819d7c~mv2.jpg",
-     "https://static.wixstatic.com/media/736095_84e916417e5f48a7bc92c2ad0b82bec9~mv2.jpg",
-     "https://static.wixstatic.com/media/736095_07b01117a55149f3a7e0b9e42ff1bdfd~mv2.jpg"
-    ]
-   },
-   "synopsis_en": "Can blackness escape the violence of its origins?  Three Black men set out on a transformative journey along the transatlantic slave route in reverse, exploring resistance, liberation and a new understanding of Blackness.  Their epic voyage takes them from Los Angeles to Salvador da Bahia in Brazil, and finally to Accra in Ghana. Their mission is to redefine Blackness, heal from historical trauma, and envision new paths to liberation beyond the constraints of white supremacy.",
-   "year": "2026",
-   "_inherited": {
-    "synopsis": "ficdeh-2026",
-    "synopsis_en": "ficdeh-2026",
-    "lbSlug": "ficdeh-2026",
-    "year": "ficdeh-2026"
-   },
-   "_programada": true,
-   "day": "2026-09-16",
-   "time": "17:00",
-   "venue": "Cinemateca de Bogotá - Bogotá",
-   "day_order": 2,
-   "has_qa": false,
-   "is_cortos": false,
-   "film_list": null,
-   "requires_registration": true,
-   "is_free": true,
-   "type": "film",
-   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026"
-  },
-  {
-   "title": "Nunkui",
-   "director": "Verenice Benitez",
-   "duration": "90 min",
-   "country": "Chile (Ecuador, Alemania)",
-   "section": "🌊 Fronteras Latam",
-   "genre": "Drama",
-   "synopsis": "Nunkui lives in a Shuar community and dreams of the feminine spirit of the garden, also called Nunkui, just like her. While her aunt teaches her songs and the secrets of cultivation, the vast Amazon rainforest they call home is handed over to transnational mining companies, and evictions begin in the area.",
-   "synopsis_lang": "en",
-   "poster": "/assets/qaff/nunkui.jpg",
-   "posterSource": "custom",
-   "lbSlug": "nunkui-2026",
-   "_src": {
-    "boom_event_id": 3946861,
-    "stills": [
-     "https://static.wixstatic.com/media/736095_e8543d7660ed41c7b1f68b95bd90c44b~mv2.jpg",
-     "https://static.wixstatic.com/media/736095_ca262f4e93474943bc7df4e93eb0080b~mv2.jpg",
-     "https://static.wixstatic.com/media/736095_76d911be5f6c4c5bac8bfeee9bdc676c~mv2.jpg"
-    ]
-   },
-   "year": "2026",
-   "synopsis_en": "Nunkui, the female spirit of the garden. Nunkui, the name of a Shuar girl in a lush world of plants, animals, spirits and an extended family. Between premonitory dreams and mining conflicts in the Amazonian Cóndor mountain range, Nunkui searches for her place in the world, influenced by her grandfather Yaunchu, an old Shuar leader.",
-   "_inherited": {
-    "synopsis_en": "tmdb-1243032",
-    "synopsis": "qaff-event-desc"
-   },
-   "day": "2026-09-16",
-   "time": "19:30",
-   "venue": "Cinemateca de Bogotá - Bogotá",
    "day_order": 2,
    "has_qa": false,
    "is_cortos": false,
@@ -1943,45 +1655,6 @@
    "title_orig": "Carabalí"
   },
   {
-   "title": "Of Mud and Blood",
-   "director": "Jean-Gabriel Leynaud",
-   "duration": "94 min",
-   "country": "Congo (Francia)",
-   "section": "🪕 Otra Mirada",
-   "genre": "",
-   "synopsis": "In Numbi, an isolated village in the mountains of the Congo, life revolves around the rush for coltan, a \"rare earth\" indispensable for electronics. The fatality that affects the inhabitants embodies the insidious mechanisms of capitalism in the 2020s.",
-   "synopsis_lang": "en",
-   "poster": "/assets/qaff/of-mud-and-blood.jpg",
-   "posterSource": "custom",
-   "_src": {
-    "boom_event_id": 3946862,
-    "stills": [
-     "https://static.wixstatic.com/media/736095_14da0cda8c5648cb83b7c9fcd25b55b7~mv2.jpg",
-     "https://static.wixstatic.com/media/736095_b4ef8392a9824059938249ecc6643cc6~mv2.jpg",
-     "https://static.wixstatic.com/media/736095_9f3bbd95370246d0a96b7ba84ff36be2~mv2.jpg"
-    ],
-    "tmdb_id": 1108782
-   },
-   "day": "2026-09-17",
-   "time": "14:00",
-   "venue": "Cinemateca de Bogotá - Bogotá",
-   "day_order": 3,
-   "has_qa": false,
-   "is_cortos": false,
-   "film_list": null,
-   "requires_registration": true,
-   "is_free": true,
-   "type": "film",
-   "year": "2025",
-   "_inherited": {
-    "year": "qaff-event-desc",
-    "synopsis": "qaff-event-desc",
-    "lbSlug": "tmdb-1108782"
-   },
-   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026",
-   "lbSlug": "of-mud-and-blood"
-  },
-  {
    "title": "Mi viche todo el dia",
    "director": "Juan Camilo Moreno",
    "duration": "26 min",
@@ -2098,47 +1771,6 @@
    "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026"
   },
   {
-   "title": "Viva Yurumangui",
-   "director": "Emma Christopher, Sergio Leyva Seiglie",
-   "duration": "80 min",
-   "country": "Colombia",
-   "section": "🛶 Panorama Colombiano",
-   "genre": "",
-   "synopsis": "On the remote Pacific coast of Colombia, the inhabitants of the Yurumanguí palenque still fight for freedom, hundreds of years after their ancestors fled slavery.",
-   "synopsis_lang": "en",
-   "poster": "/assets/qaff/viva-yurumangui.jpg",
-   "posterSource": "custom",
-   "_src": {
-    "boom_event_id": 3946863,
-    "stills": [
-     "https://static.wixstatic.com/media/736095_de24c08e3de844cb9c26de60168ad47c~mv2.jpg",
-     "https://static.wixstatic.com/media/736095_e08b36d36b5e42dc8d1921578a756fce~mv2.jpg",
-     "https://static.wixstatic.com/media/736095_ec951b281a034cef8d8def00e11be1a1~mv2.jpg"
-    ],
-    "tmdb_id": 1742319
-   },
-   "year": "2025",
-   "_inherited": {
-    "year": "qaff-event-desc",
-    "synopsis": "qaff-event-desc",
-    "tmdb_alta": "creada 2026-08-03 (jdvlazio) — póster subido 2026-08-03 (verificado en sesión)",
-    "title_orig": "poster oficial QAFF + ficha TMDB creada"
-   },
-   "_programada": true,
-   "day": "2026-09-17",
-   "time": "15:00",
-   "venue": "Cinemateca de Bogotá - Bogotá",
-   "day_order": 3,
-   "has_qa": false,
-   "is_cortos": false,
-   "film_list": null,
-   "requires_registration": true,
-   "is_free": true,
-   "type": "film",
-   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026",
-   "title_orig": "Viva Yurumanguí"
-  },
-  {
    "title": "Surviving Biafra",
    "director": "Meji Alabi, Leke Alabi-Isama",
    "duration": "75 min",
@@ -2176,35 +1808,6 @@
    "is_free": true,
    "type": "film",
    "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026"
-  },
-  {
-   "title": "Diálogo Improbable · Noir Histórico",
-   "type": "event",
-   "duration": "120 min",
-   "synopsis": "Las sombras del archivo: memoria negra entre el museo y el cine La historia afrodescendiente ha sido contada desde los archivos coloniales, la Inquisición y los registros de esclavización. El Museo Afro rastrea esas memorias en archivos nacionales para restituirlas. El cine NOIR Histórico hace lo mismo: ilumina lo que fue deliberadamente oscurecido. ¿Qué ocurre cuando el curador, la documentalista, el director de teatro y la especialista en salud mental y políticas públicas se encuentran frente al mismo archivo? El museo desclasifica y expone; el cine reanima y resignifica; la política pública mide el daño y diseña la reparación.",
-   "synopsis_lang": "es",
-   "section": "🗄️ Diálogo Improbable",
-   "year": "",
-   "day": "2026-09-17",
-   "time": "16:00",
-   "venue": "Museo Nacional - Bogotá",
-   "day_order": 3,
-   "has_qa": false,
-   "is_cortos": false,
-   "film_list": null,
-   "requires_registration": true,
-   "is_free": true,
-   "_src": {
-    "boom_event_id": 3946874,
-    "stills": [
-     "https://static.wixstatic.com/media/736095_3305c26f616248cb8bd57e0bc39a4da4~mv2.jpg",
-     "https://static.wixstatic.com/media/736095_7d0c4d58d838481684c90a79a78aa9a8~mv2.jpg",
-     "https://static.wixstatic.com/media/736095_59d4b32e46c1460ea8a9ceafa117a70f~mv2.jpg"
-    ]
-   },
-   "event_kind": "",
-   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026",
-   "_src_titulo": "Title Case; el calendario del festival lo publica en mayúsculas como «DIÁLOGO IMPROBABLE  ·  NOIR HISTÓRICO»"
   },
   {
    "title": "Waterfront Memories",
@@ -2246,47 +1849,6 @@
    "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026",
    "lbSlug": "memorias-com-vista-para-o-mar",
    "title_orig": "Memórias com vista para o mar"
-  },
-  {
-   "title": "LAUNDRY (Uhlanjululo)",
-   "director": "Zamo Mkhwanazi",
-   "duration": "106 min",
-   "country": "Sudáfrica (Suiza)",
-   "section": "🌳 Panorama Africano",
-   "genre": "",
-   "synopsis": "South Africa, 1968. Apartheid is the law of the land. Khuthala, a talented young musician, wants nothing to do with his family's laundry business. He dreams of jazz, of a life shaped by music, not by soap and steam.",
-   "synopsis_lang": "en",
-   "poster": "/assets/qaff/laundry-uhlanjululo.jpg",
-   "posterSource": "custom",
-   "_src": {
-    "boom_event_id": 3946864,
-    "stills": [
-     "https://static.wixstatic.com/media/736095_d642dcded575410b820443fef161203f~mv2.jpg",
-     "https://static.wixstatic.com/media/736095_1a23c40802d14f1d8f16c6e22c647c21~mv2.jpg",
-     "https://static.wixstatic.com/media/736095_ef25327f502a475391f12fecf5710877~mv2.jpg"
-    ],
-    "tmdb_id": 1466164
-   },
-   "day": "2026-09-17",
-   "time": "16:30",
-   "venue": "Cinemateca de Bogotá - Bogotá",
-   "day_order": 3,
-   "has_qa": false,
-   "is_cortos": false,
-   "film_list": null,
-   "requires_registration": true,
-   "is_free": true,
-   "type": "film",
-   "year": "2025",
-   "_inherited": {
-    "year": "qaff-event-desc",
-    "synopsis": "qaff-event-desc",
-    "lbSlug": "tmdb-1466164 (doble verificación)",
-    "title_orig": "tmdb-1466164"
-   },
-   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026",
-   "lbSlug": "laundry-2025",
-   "title_orig": "Uhlanjululo"
   },
   {
    "title": "305 Fishkill Avenue",
@@ -2402,47 +1964,6 @@
    "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026"
   },
   {
-   "title": "The Travelers",
-   "director": "David Bingong",
-   "duration": "60 min",
-   "country": "Camerún (España)",
-   "section": "🌳 Panorama Africano",
-   "genre": "",
-   "synopsis": "On the border between Morocco and Spain, we wait impatiently for the \"patera\" (boat) to cross into Europe. After one failed attempt after another, we survive, and I, \"the Artist,\" must keep the flame of hope alive for the entire group.",
-   "synopsis_lang": "en",
-   "poster": "/assets/qaff/the-travelers.jpg",
-   "posterSource": "custom",
-   "_src": {
-    "boom_event_id": 3946865,
-    "stills": [
-     "https://static.wixstatic.com/media/736095_6d5c33a272984f3eaacb2e5f3cca745e~mv2.jpg",
-     "https://static.wixstatic.com/media/736095_3d1b5b9c93ae4d85b5ac5e3fc0580f72~mv2.jpg",
-     "https://static.wixstatic.com/media/736095_cdbb8ee412234c86bcf8f16b59325337~mv2.jpg"
-    ],
-    "tmdb_id": 1463516
-   },
-   "day": "2026-09-18",
-   "time": "14:00",
-   "venue": "Cinemateca de Bogotá - Bogotá",
-   "day_order": 4,
-   "has_qa": false,
-   "is_cortos": false,
-   "film_list": null,
-   "requires_registration": true,
-   "is_free": true,
-   "type": "film",
-   "year": "2025",
-   "_inherited": {
-    "year": "qaff-event-desc",
-    "synopsis": "qaff-event-desc",
-    "lbSlug": "tmdb-1463516 (doble verificación)",
-    "title_orig": "tmdb-1463516"
-   },
-   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026",
-   "lbSlug": "the-travelers-2025",
-   "title_orig": "Les Voyageurs"
-  },
-  {
    "title": "The Anchorage of the Time",
    "director": "Sol de Carvalho",
    "duration": "105 min",
@@ -2478,200 +1999,6 @@
    "type": "film",
    "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026",
    "_src_titulo": "Title Case; el calendario del festival lo publica en mayúsculas como «THE ANCHORAGE OF THE TIME»"
-  },
-  {
-   "title": "Iniciación en la Octava Dimensión",
-   "director": "Lucas Silva",
-   "duration": "90 min",
-   "country": "Colombia",
-   "section": "🛶 Panorama Colombiano",
-   "genre": "",
-   "synopsis": "Five Afro-Colombian characters in the middle of Bogotá, five disparate destinies in a city that is hostile to them. Rubi Quejada, a young model displaced from Chocó.",
-   "synopsis_lang": "en",
-   "poster": "/assets/qaff/initiation-into-the-eighth-dimension.jpg",
-   "posterSource": "custom",
-   "_src": {
-    "boom_event_id": 3946866,
-    "stills": [
-     "https://static.wixstatic.com/media/736095_690f9709d99945498e31c35b01544c88~mv2.jpg",
-     "https://static.wixstatic.com/media/736095_efc4601d871045bbba23c6b74b62337e~mv2.jpg",
-     "https://static.wixstatic.com/media/736095_7ff6bf779fe94e759f3563c0b78e445b~mv2.jpg"
-    ],
-    "tmdb_id": 1742327
-   },
-   "day": "2026-09-18",
-   "time": "17:00",
-   "venue": "Cinemateca de Bogotá - Bogotá",
-   "day_order": 4,
-   "has_qa": false,
-   "is_cortos": false,
-   "film_list": null,
-   "requires_registration": true,
-   "is_free": true,
-   "type": "film",
-   "year": "2025",
-   "_inherited": {
-    "year": "qaff-event-desc",
-    "synopsis": "qaff-event-desc",
-    "tmdb_alta": "creada 2026-08-03 (jdvlazio) — póster subido 2026-08-03 (verificado en sesión)",
-    "title_orig": "poster oficial QAFF + ficha TMDB creada"
-   },
-   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026",
-   "title_orig": "Iniciación en la Octava Dimensión",
-   "title_en": "Initiation into the Eighth Dimension",
-   "_src_titulo": "title_orig; el calendario del festival lo publica en mayúsculas como «INITIATION INTO THE EIGHTH DIMENSION»"
-  },
-  {
-   "title": "Wrong Generation",
-   "director": "Shili Munyama",
-   "duration": "65 min",
-   "country": "Namibia",
-   "section": "🌳 Panorama Africano",
-   "genre": "",
-   "synopsis": "Following a series of brutal murders—the last of which takes the life of his childhood friend—a group of estranged best friends reconnects to organize the largest protest in post-apartheid Namibia.",
-   "synopsis_lang": "en",
-   "poster": "/assets/qaff/wrong-generation.jpg",
-   "posterSource": "custom",
-   "_src": {
-    "boom_event_id": 3946867,
-    "stills": [
-     "https://static.wixstatic.com/media/736095_d4d77335fdc54f14a8a0407b6daaa57d~mv2.jpg"
-    ],
-    "tmdb_id": 1742419
-   },
-   "day": "2026-09-18",
-   "time": "19:30",
-   "venue": "Cinemateca de Bogotá - Bogotá",
-   "day_order": 4,
-   "has_qa": false,
-   "is_cortos": false,
-   "film_list": null,
-   "requires_registration": true,
-   "is_free": true,
-   "type": "film",
-   "year": "2026",
-   "_inherited": {
-    "year": "qaff-event-desc",
-    "synopsis": "qaff-event-desc",
-    "tmdb_alta": "creada 2026-08-03 (jdvlazio) — póster subido 2026-08-03 (verificado en sesión)"
-   },
-   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026"
-  },
-  {
-   "title": "Father's Day",
-   "director": "Ayana O'Shun",
-   "duration": "74 min",
-   "country": "Canadá",
-   "section": "☕ Panorama Diaspórica",
-   "genre": "Documental",
-   "synopsis": "Father's Day is an intimate and powerful documentary that explores the legacy of absent fathers in Black communities across North America and the Caribbean.",
-   "synopsis_lang": "en",
-   "poster": "/assets/qaff/father-s-day.jpg",
-   "posterSource": "custom",
-   "_src": {
-    "boom_event_id": 3946868,
-    "stills": [
-     "https://static.wixstatic.com/media/736095_f61acb85889c4d05a9226d35470c9d14~mv2.jpg",
-     "https://static.wixstatic.com/media/736095_74c48997fc3746f5aae8a4650e0ef39a~mv2.jpg",
-     "https://static.wixstatic.com/media/736095_d2d891979a0a484a887b5586c3fc0155~mv2.jpg"
-    ]
-   },
-   "year": "2025",
-   "_inherited": {
-    "year": "qaff-event-desc",
-    "synopsis": "qaff-event-desc"
-   },
-   "_programada": true,
-   "day": "2026-09-19",
-   "time": "17:00",
-   "venue": "Cinemateca de Bogotá - Bogotá",
-   "day_order": 5,
-   "has_qa": false,
-   "is_cortos": false,
-   "film_list": null,
-   "requires_registration": true,
-   "is_free": true,
-   "type": "film",
-   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026",
-   "lbSlug": "fathers-day-2025"
-  },
-  {
-   "title": "The Madmen Coach",
-   "director": "Carlo Liberatore",
-   "duration": "60 min",
-   "country": "Italia (Senegal)",
-   "section": "🪕 Otra Mirada",
-   "genre": "Documental",
-   "synopsis": "In Dakar, Malick Biteye forms a football team made up of players with mental disorders. In a context of absolute poverty, the stories and desires of these men, who fight against stigma, intertwine.",
-   "synopsis_lang": "en",
-   "poster": "/assets/qaff/the-madmen-coach.jpg",
-   "posterSource": "custom",
-   "lbSlug": "the-madmen-coach",
-   "_src": {
-    "boom_event_id": 3946869,
-    "stills": [
-     "https://static.wixstatic.com/media/736095_972733ccc81d497a9709b36dd720adea~mv2.jpg",
-     "https://static.wixstatic.com/media/736095_c688745153404272a6c8c87c46def124~mv2.jpg",
-     "https://static.wixstatic.com/media/736095_5ec26406a8d94f8e9c44202823d4cf4b~mv2.jpg"
-    ]
-   },
-   "day": "2026-09-20",
-   "time": "16:00",
-   "venue": "Cinemateca de Bogotá - Bogotá",
-   "day_order": 6,
-   "has_qa": false,
-   "is_cortos": false,
-   "film_list": null,
-   "requires_registration": true,
-   "is_free": true,
-   "type": "film",
-   "year": "2025",
-   "_inherited": {
-    "year": "qaff-event-desc",
-    "synopsis": "qaff-event-desc"
-   },
-   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026"
-  },
-  {
-   "title": "Aisha Can't Fly Away",
-   "director": "Morad Mostafa",
-   "duration": "90 min",
-   "country": "Egipto (Catar, Túnez, Alemania, Sudán, Francia, Arabia Saudita)",
-   "section": "🌳 Panorama Africano",
-   "genre": "",
-   "synopsis": "Aisha is a 26-year-old Sudanese caregiver living in a neighbourhood in the heart of Cairo, where she witnesses the tension between her fellow African migrants and local gangs.",
-   "synopsis_lang": "en",
-   "poster": "/assets/qaff/aisha-can-t-fly-away.jpg",
-   "posterSource": "custom",
-   "_src": {
-    "boom_event_id": 3946870,
-    "stills": [
-     "https://static.wixstatic.com/media/736095_5187f3510aa44698bd503f8390d6093b~mv2.jpg",
-     "https://static.wixstatic.com/media/736095_f916a2fc69134536bc56f4107391faea~mv2.jpg",
-     "https://static.wixstatic.com/media/736095_abe5059bd7bb4bfeaff6910db096670e~mv2.jpg"
-    ],
-    "tmdb_id": 1337148
-   },
-   "year": "2025",
-   "_inherited": {
-    "year": "qaff-event-desc",
-    "synopsis": "qaff-event-desc",
-    "lbSlug": "tmdb-1337148 (dir. Murad Mustafa = Morad Mostafa, translit)",
-    "country": "tmdb-1337148"
-   },
-   "_programada": true,
-   "day": "2026-09-20",
-   "time": "18:30",
-   "venue": "Cinemateca de Bogotá - Bogotá",
-   "day_order": 6,
-   "has_qa": false,
-   "is_cortos": false,
-   "film_list": null,
-   "requires_registration": true,
-   "is_free": true,
-   "type": "film",
-   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026",
-   "lbSlug": "aisha-cant-fly-away"
   }
  ],
  "_obras_sin_funcion": [
