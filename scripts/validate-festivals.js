@@ -90,7 +90,8 @@ function sectionEmoji(sec) {
 // abriendo el 12, es un riesgo peor que la deuda.
 // FICMA es el urgente: 83 de 90, y abre el 10 de agosto.
 const DAY_ORDER_DEUDA = {
-  'ficma-2026.json': 83,
+  // FICMA salió de la lista el 9 ago: su ensamblador ya calcula
+  // day_order = dayKeys.indexOf(day). Los cuatro que quedan están archivados.
   'ficmontanas-2026.json': 40,
   'leviza-2026.json': 21,
   'tercertiempo-2026.json': 14,

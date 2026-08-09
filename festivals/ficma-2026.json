@@ -476,7 +476,7 @@
    "original_title": "El juego de la vida",
    "lbSlug": "the-game-of-life-2025",
    "title_en": "The Game of Life",
-   "day_order": 1
+   "day_order": 0
   },
   {
    "title": "Coleccionar para recordar. Museos, arte y la construcción de la memoria",
@@ -492,7 +492,7 @@
    "event_kind": "ponencia",
    "sala": "Sala Fundadores",
    "_pendiente": "sin sinopsis",
-   "day_order": 2
+   "day_order": 0
   },
   {
    "title": "La Sirena (The Siren)",
@@ -517,7 +517,7 @@
    "original_title": "La Sirène",
    "lbSlug": "the-siren-2023",
    "title_en": "The Siren",
-   "day_order": 3
+   "day_order": 0
   },
   {
    "title": "Las aventuras de Tintín",
@@ -542,7 +542,7 @@
    "synopsis_en": "Intrepid young reporter, Tintin, and his loyal dog, Snowy, are thrust into a world of high adventure when they discover a ship carrying an explosive secret. As Tintin is drawn into a centuries-old mystery, Ivan Ivanovitch Sakharine suspects him of stealing a priceless treasure. Tintin and Snowy, with the help of salty, cantankerous Captain Haddock and bumbling detectives, Thompson and Thomson, travel half the world, one step ahead of their enemies, as Tintin endeavors to find the Unicorn, a sunken ship that may hold a vast fortune, but also an ancient curse.",
    "original_title": "The Adventures of Tintin",
    "lbSlug": "the-adventures-of-tintin",
-   "day_order": 4
+   "day_order": 0
   },
   {
    "title": "Cómo limpiar un espejo",
@@ -565,7 +565,7 @@
    "synopsis_en": "Days before moving to Bogotá, Tomás confronts the guilt of betraying his best friend, noticing how his own situation is reflected in his mother’s actions.",
    "genre": "Drama",
    "_src_synopsis": "material oficial del festival (8 ago 2026), en español e inglés. La ficha lo clasifica como DRAMA/FICCIÓN.",
-   "day_order": 5
+   "day_order": 0
   },
   {
    "title": "Gente de bien",
@@ -589,7 +589,7 @@
    "synopsis_lang": "es",
    "synopsis_en": "Eric, a ten-year-old boy, finds himself living overnight with Gabriel, his father whom he barely knows. Seeing that the man is having a hard time building a relationship with his son and staying afloat financially, Maria Isabel, the upper-class woman Gabriel works for as a carpenter, decides to take the boy under her wing.",
    "lbSlug": "gente-de-bien",
-   "day_order": 6
+   "day_order": 0
   },
   {
    "title": "En busca del arca perdida",
@@ -614,7 +614,7 @@
    "synopsis_en": "When Dr. Indiana Jones – the tweed-suited professor who just happens to be a celebrated archaeologist – is hired by the government to locate the legendary Ark of the Covenant, he finds himself up against the entire Nazi regime.",
    "original_title": "Raiders of the Lost Ark",
    "lbSlug": "raiders-of-the-lost-ark",
-   "day_order": 7
+   "day_order": 0
   },
   {
    "title": "De la realidad a la verdad",
@@ -633,7 +633,7 @@
    "is_recurring": true,
    "_cupos": 15,
    "_pendiente": "sin sinopsis",
-   "day_order": 0
+   "day_order": 1
   },
   {
    "title": "El hogar fue sepultado en esa tierra que nunca pudimos encontrar",
@@ -671,7 +671,7 @@
    "event_kind": "ponencia",
    "sala": "Auditorio",
    "_pendiente": "sin sinopsis",
-   "day_order": 2
+   "day_order": 1
   },
   {
    "title": "Dos veces bestia",
@@ -696,7 +696,7 @@
    "synopsis_en": "Authorities have prohibited access to a forest on the outskirts of the city. Strange vegetation has infested the area, and those who have been questioned report sightings of rare species, human-sized birds, or figures that appear and disappear. Despite the restrictions, several people decide to visit the place. Once there, they coexist and play without fear of the warnings. Little by little, reality begins to distort, blending with their memories, dreams, and fantasies.",
    "lbSlug": "twice-the-beast",
    "title_en": "Twice the Beast",
-   "day_order": 3
+   "day_order": 1
   },
   {
    "title": "Con la fuerza del río",
@@ -719,7 +719,7 @@
    "synopsis_lang": "es",
    "synopsis_en": "A documentary about six protagonists at the 34th Plurinational Meeting of Women, Lesbians, Trans, Transvestites, Bisexuals and Non-Binaries, held in La Plata, 2019. Through their political activism, participation in workshops, and marches, an intimate map of one of the most powerful feminist events in Abya Yala unfolds. Valentina, Urraca Negra, Micaela, Romina, Alicia, and Tata represent diverse struggles and identities. Their stories speak of a collective desire for freedom.",
    "lbSlug": "con-la-fuerza-del-rio",
-   "day_order": 4
+   "day_order": 1
   },
   {
    "title": "Cuando el dolor se nombra: Diálogo abierto y violencia de género",
@@ -735,7 +735,7 @@
    "has_qa": true,
    "_src": "FICMA 17 - PROGRAMACIÓN.pdf (OCR) · pg-11.jpg",
    "_pendiente": "sin sinopsis",
-   "day_order": 5
+   "day_order": 1
   },
   {
    "title": "High Fidelity",
@@ -758,7 +758,7 @@
    "synopsis_lang": "es",
    "synopsis_en": "After his long-time girlfriend dumps him, a thirty-year-old record store owner seeks to understand why he is unlucky in love while recounting his \"top five breakups of all time\".",
    "lbSlug": "high-fidelity",
-   "day_order": 6
+   "day_order": 1
   },
   {
    "title": "Brigitte Planeta B",
@@ -784,7 +784,7 @@
    "original_title": "Brigitte, planeta B",
    "lbSlug": "brigittes-planet-b",
    "title_en": "Brigitte's Planet B",
-   "day_order": 7
+   "day_order": 1
   },
   {
    "title": "Columbus",
@@ -808,7 +808,7 @@
    "synopsis_lang": "es",
    "synopsis_en": "When a renowned architecture scholar falls suddenly ill during a speaking tour, his son Jin finds himself stranded in Columbus, Indiana - a small Midwestern city celebrated for its many significant modernist buildings. Jin strikes up a friendship with Casey, a young architecture enthusiast who works at the local library.",
    "lbSlug": "columbus-2017",
-   "day_order": 8
+   "day_order": 1
   },
   {
    "title": "La Marcha del Hambre",
@@ -833,7 +833,7 @@
    "synopsis_en": "In 1966, a group of courageous Colombian teachers defied all odds by embarking on an epic 1,600-kilometer march in defense of public education. Fifty-seven years later, they seek to return to the trail, but the pandemic and tragedy force them into lockdown. Only one hope remains: that Sor, a young teacher inspired by their legacy, will undertake the final journey in honor of their courage, accompanied by the voices of the walking teachers.",
    "original_title": "La marcha del hambre",
    "lbSlug": "la-marcha-del-hambre",
-   "day_order": 9
+   "day_order": 1
   },
   {
    "title": "The Great Arch",
@@ -857,7 +857,7 @@
    "synopsis_en": "France, 1983. The biggest architectural competition in history is launched by the new socialist president, François Mitterrand. Coveted by all the biggest international architectural firms, the open-call competition is surprisingly won by an unknown: Johan Otto von Spreckelsen, an architecture teacher from Copenhagen. Until then, the fifty-year-old Dane had built only four buildings: his home, and three small chapels.",
    "original_title": "L'Inconnu de la Grande Arche",
    "lbSlug": "the-great-arch-2025",
-   "day_order": 10
+   "day_order": 1
   },
   {
    "title": "Las mil y una",
@@ -881,7 +881,7 @@
    "synopsis_en": "Set in a community of project houses, Iris, a young woman with a tough past, meets Renata and feels immediately attracted to her. A tender coming of age story about friendship and first love in a hostile environment.",
    "lbSlug": "one-in-a-thousand",
    "title_en": "One in a Thousand",
-   "day_order": 11
+   "day_order": 1
   },
   {
    "title": "My Favourite Cake",
@@ -905,7 +905,7 @@
    "synopsis_en": "Mahin lives alone in Tehran since her husband’s death and her daughter’s departure for Europe, until an afternoon tea with friends leads her to break her solitary routine and revitalize her love life.",
    "original_title": "کیک محبوب من",
    "lbSlug": "my-favourite-cake",
-   "day_order": 12
+   "day_order": 1
   },
   {
    "title": "System K",
@@ -930,7 +930,7 @@
    "synopsis_en": "Kinshasa, Democratic Republic of Congo, 2017. In the urban jungle of Kinshasa, amid social and political chaos, an eclectic and bubbling street art scene is emerging.",
    "original_title": "Système K",
    "lbSlug": "system-k",
-   "day_order": 13
+   "day_order": 1
   },
   {
    "title": "Habitante",
@@ -954,7 +954,7 @@
    "synopsis_lang": "en",
    "synopsis_en": "José Alejandro González traveled the world with a camera, capturing faces, voices, and fleeting encounters with strangers. On one of those trips, while working as a cleaner in a hotel in the north, the camera turned on itself. Habitante was born from that gesture: an intimate logbook made up of personal archives, fragments of travel, and shared silences. Through a sensitive and fragmented montage, the film explores the resonances between the filmmaker's life and those he encountered along the way, revealing common echoes of migration, uprooting, and searching. More than a portrait of the other, Habitante is a question about how we inhabit the world, about the sometimes impossible desire to belong. Between tenderness and discomfort, between observation and self-exploration, the film becomes an emotional diary that, by looking outward, ends up revealing the inner landscape of the filmmaker.",
    "lbSlug": "habitante",
-   "day_order": 0
+   "day_order": 2
   },
   {
    "title": "Colombia a través de sus monedas y billetes: historia y desarrollo del coleccionismo",
@@ -970,7 +970,7 @@
    "event_kind": "ponencia",
    "sala": "Auditorio",
    "_pendiente": "sin sinopsis",
-   "day_order": 1
+   "day_order": 2
   },
   {
    "title": "Dicen que tú y yo estamos locos",
@@ -1010,7 +1010,7 @@
    "_cupos": 20,
    "sala": "Hall Orquídeas",
    "_pendiente": "sin sinopsis",
-   "day_order": 3
+   "day_order": 2
   },
   {
    "title": "Memoria infinita",
@@ -1035,7 +1035,7 @@
    "original_title": "La memoria infinita",
    "lbSlug": "the-eternal-memory",
    "title_en": "The Eternal Memory",
-   "day_order": 4
+   "day_order": 2
   },
   {
    "title": "No se admiten perros ni italianos",
@@ -1060,7 +1060,7 @@
    "original_title": "Interdit aux chiens et aux Italiens",
    "lbSlug": "no-dogs-or-italians-allowed",
    "title_en": "No Dogs or Italians Allowed",
-   "day_order": 5
+   "day_order": 2
   },
   {
    "title": "Herb & Dorothy",
@@ -1084,7 +1084,7 @@
    "synopsis_lang": "en",
    "synopsis_en": "He was a postal clerk. She was a librarian. With their modest means, the couple managed to build one of the most important contemporary art collections in history. Meet Herb and Dorothy Vogel, whose shared passion and disciplines and defied stereotypes and redefined what it means to be an art collector.",
    "lbSlug": "herb-dorothy",
-   "day_order": 6
+   "day_order": 2
   },
   {
    "title": "Por cielo y tierra",
@@ -1109,7 +1109,7 @@
    "synopsis_en": "POR CIELO Y TIERRA tells the stories of Omaira, a former combatant who has been searching for her father since 2017; Daniela, an indigenous woman who searched for her father's remains for 20 years; Gladys, a mother still searching for her son, who disappeared at the hands of paramilitaries in 2002; and Herminia, another mother who finally received and gave her son a dignified burial after years of waiting. The film also chronicles the stories of thousands of families and communities who, day by day, walk the complex and lengthy path of searching for their loved ones in Colombia, alongside the Search Unit for Disappeared Persons (UBPD).",
    "original_title": "POR CIELO Y TIERRA",
    "lbSlug": "por-cielo-y-tierra",
-   "day_order": 7
+   "day_order": 2
   },
   {
    "title": "Cuando la palabra se hace búsqueda: El eco de sus voces",
@@ -1131,7 +1131,7 @@
    "synopsis_lang": "es",
    "genre": "Documental",
    "_src_synopsis": "material oficial del festival (8 ago 2026). Solo en español.",
-   "day_order": 8
+   "day_order": 2
   },
   {
    "title": "Loving Vincent",
@@ -1155,7 +1155,7 @@
    "synopsis_lang": "es",
    "synopsis_en": "A young man arrives at the last hometown of painter Vincent van Gogh to deliver the troubled artist's final letter and ends up investigating his final days there.",
    "lbSlug": "loving-vincent",
-   "day_order": 9
+   "day_order": 2
   },
   {
    "title": "Desierto verde",
@@ -1180,7 +1180,7 @@
    "title_en": "Green Desert",
    "poster": "/assets/ficma/desierto-verde.jpg",
    "posterSource": "custom",
-   "day_order": 10
+   "day_order": 2
   },
   {
    "title": "Soñé su nombre",
@@ -1205,7 +1205,7 @@
    "synopsis_en": "Thirty years after his forced disappearance, the filmmaker’s Afro Colombian father comes to her in a dream, asking her to find him. With her sister, she sets out on a journey of discovery across Colombia’s painful history, reconnecting with their father and his activism.",
    "lbSlug": "i-dreamed-his-name",
    "title_en": "I Dreamed His Name",
-   "day_order": 11
+   "day_order": 2
   },
   {
    "title": "L'argent",
@@ -1229,7 +1229,7 @@
    "synopsis_en": "A forged 500-franc note is passed from person to person and shop to shop, until it falls into the hands of a genuine innocent who doesn't see it for what it is—which will have devastating consequences on his life.",
    "original_title": "L'Argent",
    "lbSlug": "largent-1983",
-   "day_order": 12
+   "day_order": 2
   },
   {
    "title": "My Octopus Teacher",
@@ -1252,7 +1252,7 @@
    "synopsis_lang": "es",
    "synopsis_en": "After years of swimming every day in the freezing ocean at the tip of Africa, Craig Foster meets an unlikely teacher: a young octopus who displays remarkable curiosity. Visiting her den and tracking her movements for months on end he eventually wins the animal’s trust and they develop a never-before-seen bond between human and wild animal.",
    "lbSlug": "my-octopus-teacher",
-   "day_order": 13
+   "day_order": 2
   },
   {
    "title": "Dicen que tú y yo estamos locos",
@@ -1273,7 +1273,7 @@
    "posterSource": "tmdb",
    "synopsis": "La Biblioteca Pública Luis Ángel Arango es la más grande de Colombia y una de las más importantes de América Latina. Este espacio emblemático de la vida bogotana trasciende su misión tradicional para convertirse en escenario de vida de múltiples personajes, quienes encuentran en sus salas de lectura un refugio, una pausa o una forma de escapar de la realidad que los espera más allá de sus puertas.  La película recoge las historias de algunos de estos “locos”, término con el que suelen ser identificados por otros usuarios e, incluso, por la ciudad misma.",
    "synopsis_lang": "es",
-   "day_order": 14
+   "day_order": 2
   },
   {
    "title": "The Gold Rush",
@@ -1297,7 +1297,7 @@
    "synopsis_lang": "es",
    "synopsis_en": "A gold prospector in Alaska struggles to survive the elements and win the heart of a dance hall girl.",
    "lbSlug": "the-gold-rush",
-   "day_order": 15
+   "day_order": 2
   },
   {
    "title": "The Human Scale",
@@ -1322,7 +1322,7 @@
    "synopsis_en": "50 % of the world’s population lives in urban areas. By 2050 this will increase to 80%. Life in a mega city is both enchanting and problematic. Today we face peak oil, climate change, loneliness and severe health issues due to our way of life. But why? The Danish architect and professor Jan Gehl has studied human behavior in cities through 40 years. He has documented how modern cities repel human interaction, and argues that we can build cities in a way, which takes human needs for inclusion and intimacy into account.",
    "original_title": "Den mänskliga staden",
    "lbSlug": "the-human-scale",
-   "day_order": 16
+   "day_order": 2
   },
   {
    "title": "El principe de Nanawa",
@@ -1348,7 +1348,7 @@
    "original_title": "El príncipe de Nanawa",
    "lbSlug": "the-prince-of-nanawa",
    "title_en": "The Prince of Nanawa",
-   "day_order": 0
+   "day_order": 3
   },
   {
    "title": "Escribir con la cámara: Del guion a la puesta en escena",
@@ -1367,7 +1367,7 @@
    "synopsis": "Un espacio para reflexionar sobre la relación entre guion, dirección y lenguaje visual, y sobre cómo las decisiones de la puesta en escena pueden potenciar, transformar o incluso replantear aquello que estaba escrito.",
    "synopsis_lang": "es",
    "sala": "Sede principal",
-   "day_order": 1
+   "day_order": 3
   },
   {
    "title": "El Juego de la Vida",
@@ -1392,7 +1392,7 @@
    "original_title": "El juego de la vida",
    "lbSlug": "the-game-of-life-2025",
    "title_en": "The Game of Life",
-   "day_order": 2
+   "day_order": 3
   },
   {
    "title": "Coleccionismo, patrimonio y las distintas formas en que los objetos cuentan historias y construyen memoria",
@@ -1431,7 +1431,7 @@
    "synopsis_en": "In the name of economic recovery, the Brazilian Government created a perennial system of compulsory vertical isolation for seniors over 80 to be confined in a colony. Teca is 77 and lives in the village of Muriti, in the Amazon, when she is surprised by the announcement of the age reduction, including her age group. Cornered, Teca makes an intriguing journey hidden from the officers amidst rivers, boats and the underworld to clandestinely try to fulfill her last dream, to take a plane ride.",
    "lbSlug": "the-blue-trail",
    "title_en": "The Blue Trail",
-   "day_order": 4
+   "day_order": 3
   },
   {
    "title": "Crumb",
@@ -1455,7 +1455,7 @@
    "synopsis_lang": "es",
    "synopsis_en": "This movie chronicles the life and times of R. Crumb. Robert Crumb is the cartoonist/artist who drew Keep On Truckin', Fritz the Cat, and played a major pioneering role in the genesis of underground comix. Through interviews with his mother, two brothers, wife, ex-wife and ex-girlfriends, as well as selections from his vast quantity of graphic art, we are treated to a darkly comic ride through one man's subconscious mind.",
    "lbSlug": "crumb",
-   "day_order": 5
+   "day_order": 3
   },
   {
    "title": "La colina de las amapolas",
@@ -1481,7 +1481,7 @@
    "original_title": "コクリコ坂から",
    "lbSlug": "from-up-on-poppy-hill",
    "title_en": "From Up on Poppy Hill",
-   "day_order": 6
+   "day_order": 3
   },
   {
    "title": "Honeyland",
@@ -1506,7 +1506,7 @@
    "synopsis_en": "When nomadic beekeepers break Honeyland’s basic rule (take half of the honey, but leave half to the bees), the last female beehunter in Europe must save the bees and restore natural balance.",
    "original_title": "Медена земја",
    "lbSlug": "honeyland-2019",
-   "day_order": 7
+   "day_order": 3
   },
   {
    "title": "The Treasure of the Sierra Madre",
@@ -1530,7 +1530,7 @@
    "synopsis_lang": "es",
    "synopsis_en": "Two jobless Americans convince a prospector to travel to the mountains of Mexico with them in search of gold. But the hostile wilderness, local bandits, and greed all get in the way of their journey.",
    "lbSlug": "the-treasure-of-the-sierra-madre",
-   "day_order": 8
+   "day_order": 3
   },
   {
    "title": "Buena Vista Social Club",
@@ -1554,7 +1554,7 @@
    "synopsis_lang": "es",
    "synopsis_en": "In this fascinating Oscar-nominated documentary, American guitarist Ry Cooder brings together a group of legendary Cuban folk musicians (some in their 90s) to record a Grammy-winning CD in their native city of Havana. The result is a spectacular compilation of concert footage from the group's gigs in Amsterdam and New York City's famed Carnegie Hall, with director Wim Wenders capturing not only the music -- but also the musicians' life stories.",
    "lbSlug": "buena-vista-social-club",
-   "day_order": 9
+   "day_order": 3
   },
   {
    "title": "La infiltrada",
@@ -1578,7 +1578,7 @@
    "synopsis_en": "Basque Country, Spain, late nineties. A young policewoman manages to infiltrate the ruthless terrorist gang ETA.",
    "lbSlug": "undercover-2024-1",
    "title_en": "Undercover",
-   "day_order": 10
+   "day_order": 3
   },
   {
    "title": "Andariega",
@@ -1603,7 +1603,7 @@
    "synopsis_en": "Each year, 26-year-old María Yessenia Herrera, best-known as “Chena”, joins the traveling diaspora of peasants who move around Colombia working as hand-picking coffee harvesters. Traveling and working constitute the basis of her autonomy. She keeps a notebook in her luggage where she writes and reflects about her past and the life that she faces as a woman and as a mother who must provide for a household full of problems and scarcity from afar. Despite her youth, her body is weakening, calling into question her own idea of freedom.",
    "lbSlug": "nomad-spirit",
    "title_en": "Nomad Spirit",
-   "day_order": 0
+   "day_order": 4
   },
   {
    "title": "Propiedad intelectual en el audiovisual",
@@ -1619,7 +1619,7 @@
    "event_kind": "ponencia",
    "sala": "Auditorio",
    "_pendiente": "sin sinopsis",
-   "day_order": 1
+   "day_order": 4
   },
   {
    "title": "Harry Potter y la piedra filosofal",
@@ -1644,7 +1644,7 @@
    "synopsis_en": "Harry Potter has lived under the stairs at his aunt and uncle's house his whole life. But on his 11th birthday, he learns he's a powerful wizard—with a place waiting for him at the Hogwarts School of Witchcraft and Wizardry. As he learns to harness his newfound powers with the help of the school's kindly headmaster, Harry uncovers the truth about his parents' deaths—and about the villain who's to blame.",
    "original_title": "Harry Potter and the Philosopher's Stone",
    "lbSlug": "harry-potter-and-the-philosophers-stone",
-   "day_order": 2
+   "day_order": 4
   },
   {
    "title": "Star Wars: Episodio VI El retorno del Jedi",
@@ -1669,7 +1669,7 @@
    "synopsis_en": "Luke Skywalker leads a mission to rescue his friend Han Solo from the clutches of Jabba the Hutt, the Emperor prepares to crush the Rebellion with a more powerful Death Star, and the Rebel fleet mounts a massive attack on the space station. Luke Skywalker confronts Darth Vader in a final climactic duel before the evil Emperor.",
    "original_title": "Return of the Jedi",
    "lbSlug": "return-of-the-jedi",
-   "day_order": 3
+   "day_order": 4
   },
   {
    "title": "La Grazia",
@@ -1711,7 +1711,7 @@
    "registration_url": "https://docs.google.com/forms/d/e/1FAIpQLScQwx4mCGbX-JGI9Y6Tranmsa1C-yet1ZDFwF8MjxcoPBUraQ/viewform",
    "_cupos": 30,
    "_pendiente": "sin sinopsis",
-   "day_order": 5
+   "day_order": 4
   },
   {
    "title": "Restaurar para conservar, el color como patrimonio cinematográfico",
@@ -1727,7 +1727,7 @@
    "event_kind": "ponencia",
    "sala": "Sede principal",
    "_pendiente": "sin sinopsis",
-   "day_order": 6
+   "day_order": 4
   },
   {
    "title": "Animación de imágenes fijas, de 0 a 100 para Dummies",
@@ -1745,7 +1745,7 @@
    "is_recurring": true,
    "_cupos": 30,
    "_pendiente": "sin sinopsis",
-   "day_order": 7
+   "day_order": 4
   },
   {
    "title": "Beautiful Losers",
@@ -1769,7 +1769,7 @@
    "synopsis_lang": "en",
    "synopsis_en": "This documentary follows the lives and careers of a collective group of do-it-yourself artists and designers who inadvertently affected the art world.",
    "lbSlug": "beautiful-losers",
-   "day_order": 8
+   "day_order": 4
   },
   {
    "title": "Cine en Movimiento: Taller Teórico-Práctico de Plano Secuencia",
@@ -1787,7 +1787,7 @@
    "registration_url": "https://docs.google.com/forms/d/e/1FAIpQLScQwx4mCGbX-JGI9Y6Tranmsa1C-yet1ZDFwF8MjxcoPBUraQ/viewform",
    "_cupos": 30,
    "_pendiente": "sin sinopsis",
-   "day_order": 9
+   "day_order": 4
   },
   {
    "title": "Para su tranquilidad haga su propio museo",
@@ -1813,7 +1813,7 @@
    "original_title": "Para su tranquilidad, haga su propio museo",
    "lbSlug": "for-your-peace-of-mind-make-your-own-museum",
    "title_en": "For Your Peace of Mind, Make Your Own Museum",
-   "day_order": 10
+   "day_order": 4
   },
   {
    "title": "Tierra que habla",
@@ -1835,7 +1835,7 @@
    "synopsis": "Tres universos, tres cosmogonías. Solón, del pueblo Kankuamo de Colombia; Ailín, una mujer mapuche de la Patagonia; y Luciano, un biotecnólogo argentino, se unen en esta historia sobre la recuperación de la tierra y la lucha permanente entre indígenas y usurpadores. A pesar de la distancia, kankuamos y mapuches son dos pueblos unidos por las mismas circunstancias. ¿Quién puede reparar la tierra? ¿Quién la usurpa? ¿Quién la escucha?",
    "synopsis_lang": "es",
    "lbSlug": "tierra-que-habla",
-   "day_order": 11
+   "day_order": 4
   },
   {
    "title": "'The Dig",
@@ -1859,7 +1859,7 @@
    "synopsis_en": "As WWII looms, a wealthy widow hires an amateur archaeologist to excavate the burial mounds on her estate. When they make a historic discovery, the echoes of Britain's past resonate in the face of its uncertain future‎.",
    "original_title": "The Dig",
    "lbSlug": "the-dig-2021",
-   "day_order": 12
+   "day_order": 4
   },
   {
    "title": "Vinyl Nation",
@@ -1882,7 +1882,7 @@
    "synopsis_lang": "es",
    "synopsis_en": "The vinyl record renaissance over the past decade has brought new fans to a classic format and transformed our idea of a record collector: younger, both male and female, multicultural. This same revival has made buying music more expensive, benefited established bands over independent artists and muddled the question of whether vinyl actually sounds better than other formats. Vinyl Nation digs into the crates of the record resurgence in search of truths set in deep wax: Has the return of vinyl made music fandom more inclusive or divided? What does vinyl say about our past here in the present? How has the second life of vinyl changed how we hear music and how we listen to each other?",
    "lbSlug": "vinyl-nation",
-   "day_order": 13
+   "day_order": 4
   },
   {
    "title": "Exit Through the Gift Shop",
@@ -1906,7 +1906,7 @@
    "synopsis_lang": "es",
    "synopsis_en": "Banksy is a graffiti artist with a global reputation whose work can be seen on walls from post-hurricane New Orleans to the separation barrier on the Palestinian West Bank. Fiercely guarding his anonymity to avoid prosecution, Banksy has so far resisted all attempts to be captured on film. Exit Through the Gift Shop tells the incredible true story of how an eccentric French shop keeper turned documentary maker attempted to locate and befriend Banksy, only to have the artist turn the camera back on its owner.",
    "lbSlug": "exit-through-the-gift-shop",
-   "day_order": 14
+   "day_order": 4
   },
   {
    "title": "Llueve sobre Babel",
@@ -1930,7 +1930,7 @@
    "synopsis_en": "In a retro-futuristic, tropical-punk twist on Dante’s Inferno, a group of misfits converges at Babel, a legendary dive bar that doubles as purgatory, where La Flaca—the city’s Grim Reaper—presides. Here, souls gamble years of their lives with her, daring to outwit Death Herself.",
    "lbSlug": "rains-over-babel",
    "title_en": "Rains Over Babel",
-   "day_order": 15
+   "day_order": 4
   },
   {
    "title": "Nina y los cuentos del Erizo",
@@ -1956,7 +1956,7 @@
    "original_title": "Nina et le secret du hérisson",
    "lbSlug": "nina-and-the-hedgehogs-secret",
    "title_en": "Nina and the Hedgehog's Secret",
-   "day_order": 0
+   "day_order": 5
   },
   {
    "title": "El presidente el gente",
@@ -1982,7 +1982,7 @@
    "original_title": "Juanpis González: El presidente de la gente",
    "lbSlug": "juanpis-gonzalez-the-peoples-president",
    "title_en": "Juanpis González: The People's President",
-   "day_order": 1
+   "day_order": 5
   },
   {
    "title": "Toy Story",
@@ -2006,7 +2006,7 @@
    "synopsis_lang": "es",
    "synopsis_en": "Led by Woody, Andy's toys live happily in his room until Andy's birthday brings Buzz Lightyear onto the scene. Afraid of losing his place in Andy's heart, Woody plots against Buzz. But when circumstances separate Buzz and Woody from their owner, the duo eventually learns to put aside their differences.",
    "lbSlug": "toy-story",
-   "day_order": 2
+   "day_order": 5
   },
   {
    "title": "Back to the Future",
@@ -2030,7 +2030,7 @@
    "synopsis_lang": "es",
    "synopsis_en": "Eighties teenager Marty McFly is accidentally sent back in time to 1955, inadvertently disrupting his parents' first meeting and attracting his mother's romantic interest. Marty must repair the damage to history by rekindling his parents' romance and - with the help of his eccentric inventor friend Doc Brown - return to 1985.",
    "lbSlug": "back-to-the-future",
-   "day_order": 3
+   "day_order": 5
   },
   {
    "title": "Notas sobre un destierro",
@@ -2051,7 +2051,7 @@
    "synopsis_lang": "es",
    "_inherited": "sinopsis y póster del catálogo de FICDEH (misma obra)",
    "synopsis_en": "Footage from a 2018 encounter with a Palestinian-Brazilian family in the West Bank is revisited after October 7, 2023. What was meant to be a film about the possibilities of coexistence in an occupied land becomes a reflection on colonization, apartheid, genocide, and the recent proliferation of war imagery produced by the very victims of a massacre that repeats itself throughout history.",
-   "day_order": 4
+   "day_order": 5
   },
   {
    "title": "Animación de imágenes fijas, de 0 a 100 para Dummies",
@@ -2095,7 +2095,7 @@
    "original_title": "O Menino e o Mundo",
    "lbSlug": "boy-the-world",
    "title_en": "Boy & the World",
-   "day_order": 6
+   "day_order": 5
   },
   {
    "title": "The Lord of the Rings: The Fellowship of the Ring",
@@ -2119,7 +2119,7 @@
    "synopsis_lang": "es",
    "synopsis_en": "Young hobbit Frodo Baggins, after inheriting a mysterious ring from his uncle Bilbo, must leave his home in order to keep it from falling into the hands of its evil creator. Along the way, a fellowship is formed to protect the ringbearer and make sure that the ring arrives at its final destination: Mt. Doom, the only place where it can be destroyed.",
    "lbSlug": "the-lord-of-the-rings-the-fellowship-of-the-ring",
-   "day_order": 7
+   "day_order": 5
   },
   {
    "title": "Record Safari",
@@ -2142,7 +2142,7 @@
    "synopsis_lang": "en",
    "synopsis_en": "A collector of records since childhood, Alex Rodriguez has turned his addiction into a career. Follow Alex across America as he discovers and curates records for Coachella Music Festival’s on-site record store. Dig into the world of record collecting, as Alex spends weeks on the road, buying records and swapping stories with fellow collectors, musicians, and producers.",
    "lbSlug": "record-safari",
-   "day_order": 8
+   "day_order": 5
   },
   {
    "title": "En Tierra",
@@ -2167,7 +2167,7 @@
    "original_title": "En tierra",
    "lbSlug": "grounded-2025",
    "title_en": "Grounded",
-   "day_order": 9
+   "day_order": 5
   },
   {
    "title": "The General",
@@ -2191,7 +2191,7 @@
    "synopsis_lang": "es",
    "synopsis_en": "During America’s Civil War, Union spies steal engineer Johnny Gray's beloved locomotive, 'The General'—with Johnnie's lady love aboard an attached boxcar—and he single-handedly must do all in his power to both get The General back and to rescue Annabelle.",
    "lbSlug": "the-general",
-   "day_order": 10
+   "day_order": 5
   },
   {
    "title": "Manizales City",
@@ -2214,7 +2214,7 @@
    "synopsis_lang": "en",
    "synopsis_en": "Documentary ﬁlmmed on the occasion of the seventy-fifth anniversary of the founding of the city in March 1925, with the record of the festivities and celebrations of the commemorative carnival. However, on July 3, 1925, the city suffered a terrible fire, which destroyed much of its historic center. The producers ﬁlmed the ruins of the city and added this footage to the original version, offering a rather bleak contrasting picture.",
    "lbSlug": "manizales-city",
-   "day_order": 0
+   "day_order": 6
   },
   {
    "title": "Maya, donne-moin titre",
@@ -2240,7 +2240,7 @@
    "original_title": "Maya, donne-moi un autre titre",
    "lbSlug": "maya-give-me-another-title",
    "title_en": "Maya, Give Me Another Title",
-   "day_order": 1
+   "day_order": 6
   },
   {
    "title": "Bien inmueble",
@@ -2266,7 +2266,7 @@
    "original_title": "Bien Inmueble",
    "lbSlug": "real-property",
    "title_en": "Real Property",
-   "day_order": 2
+   "day_order": 6
   },
   {
    "title": "Memorias de un caracol",
@@ -2290,7 +2290,7 @@
    "synopsis_en": "Forcibly separated from her twin brother when they are orphaned, a melancholic misfit learns how to find confidence within herself amid the clutter of misfortunes and everyday life.",
    "original_title": "Memoir of a Snail",
    "lbSlug": "memoir-of-a-snail",
-   "day_order": 3
+   "day_order": 6
   },
   {
    "title": "AA965 un rescate imposible",
@@ -2312,7 +2312,7 @@
    "synopsis_lang": "es",
    "genre": "Documental",
    "_src_synopsis": "material oficial del festival (8 ago 2026). Solo en español.",
-   "day_order": 4
+   "day_order": 6
   },
   {
    "title": "Microcosmos: Le peuple de l'herbe",
@@ -2338,7 +2338,7 @@
    "original_title": "Microcosmos : Le peuple de l'herbe",
    "lbSlug": "microcosmos",
    "title_en": "Microcosmos",
-   "day_order": 5
+   "day_order": 6
   },
   {
    "title": "The Price of Everything",
@@ -2387,7 +2387,7 @@
    "synopsis_lang": "es",
    "synopsis_en": "Spanning over 70 years, two women recount their experiences growing up in Colombia and immigrating to Canada. Intersecting with key moments in Colombian history, Vanishing Points is an essay film that reflects on the entanglements between official histories and personal stories, and the complexities of diasporic identity.",
    "_src_synopsis": "rayonverde.com/puntos-de-fuga — la distribuidora de la película. Verificado contra las tres anclas: Lina Rodríguez ✓, Colombia/Canadá ✓, 72 min ✓ (la misma duración que corrige el dato del programa).",
-   "day_order": 7
+   "day_order": 6
   },
   {
    "title": "Que el cielo nos perdone",
@@ -2412,7 +2412,7 @@
    "synopsis": "Colombia, 1951: En medio de La Violencia, el período de brutal guerra política entre liberales y conservadores, un par de chulavitas —asesinos a sueldo pagados por el gobierno— acechan a un sacerdote en la oscuridad de la noche, esperando que los conduzca a la cabaña en el bosque en donde se esconden sus próximas víctimas. Pero el horror que encontrarán allí es mil veces peor que el dolor que pensaban infligir.",
    "synopsis_lang": "es",
    "_src_synopsis": "material oficial del festival (8 ago 2026). La ficha da 16 min y el programa 17: se conservan los 17 del programa, que es la duración con la que el festival armó el horario.",
-   "day_order": 8
+   "day_order": 6
   },
   {
    "title": "La tortue rouge",
@@ -2437,7 +2437,7 @@
    "synopsis_en": "The dialogue-less film follows the major life stages of a castaway on a deserted tropical island populated by turtles, crabs and birds.",
    "lbSlug": "the-red-turtle",
    "title_en": "The Red Turtle",
-   "day_order": 9
+   "day_order": 6
   },
   {
    "title": "Wolfwalkers",
@@ -2461,7 +2461,7 @@
    "synopsis_lang": "es",
    "synopsis_en": "In a time of superstition and magic, when wolves are seen as demonic and nature an evil to be tamed, a young apprentice hunter comes to Ireland with her father to wipe out the last pack. But when she saves a wild native girl, their friendship leads her to discover the world of the Wolfwalkers and transform her into the very thing her father is tasked to destroy.",
    "lbSlug": "wolfwalkers",
-   "day_order": 0
+   "day_order": 7
   },
   {
    "title": "La Luz por Primera Vez",
@@ -2484,7 +2484,7 @@
    "synopsis_lang": "en",
    "synopsis_en": "Natalia Pinilla, photographer and activist, embarks on a journey across Santander, Norte de Santander, and Madrid, Spain, to uncover the work of Amalia Ramírez, a forgotten woman who, at the beginning of the 20th century, captured one of the most impactful images in Colombian history: the pyramid of skulls at Palonegro, a brutal symbol of the Thousand Days' War. More than a century later, this photograph resurfaces, establishing Amalia as the country's first female photographer. Along the way, she discovers previously unseen archives, connects with descendants unaware of her legacy, and finds a contemporary echo of her struggle in other women photographers. Through historical revelations and intimate encounters, the documentary reconstructs not only Amalia's work but also the memory of a country scarred by violence. The rediscovery of her photographs—portraits, everyday scenes, and forgotten visual testimonies—transforms her into a symbol of resistance, art, and memory.",
    "lbSlug": "la-luz-por-primera-vez",
-   "day_order": 1
+   "day_order": 7
   },
   {
    "title": "Ghost World",
@@ -2508,7 +2508,7 @@
    "synopsis_lang": "es",
    "synopsis_en": "Two quirky, cynical teenaged girls try to figure out what to do with their lives after high school graduation. After they play a prank on an eccentric, middle aged record collector, one of them befriends him, which causes a rift in the girls’ friendship.",
    "lbSlug": "ghost-world",
-   "day_order": 2
+   "day_order": 7
   }
  ]
 }
