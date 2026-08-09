@@ -2539,6 +2539,45 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar fin-inline-ratchet: {_e}')
 
+# ── [peso-repo] el repo guarda el producto, no el material de trabajo ───────────
+# 68,7 MB entraron de un tirón (8 ago 2026): un `git add -A` se llevó fuentes/ con
+# los PDF y afiches originales de FICDEH y FICMA —uno de 35 MB, otro de 26—. La
+# regla que los ignoraba venía en el PR del festival, que aún no estaba mergeado,
+# así que en main no existía y nada los frenó.
+# Dos reglas, calibradas con lo que el repo tiene de verdad: el archivo legítimo
+# más pesado son 2,28 MB (un póster de Leviza) y hay CERO documentos ofimáticos.
+# Esta es la única capa que bloquea el MERGE; el .gitignore y la disciplina de
+# `git add` dependen de que alguien se acuerde.
+check = 'peso-repo'
+try:
+    import subprocess as _sp
+    TOPE_MB = 3.0
+    EXT_TRABAJO = ('.pdf', '.xlsx', '.xls', '.docx', '.doc', '.numbers', '.pages', '.key', '.psd', '.ai')
+    _out = _sp.run(['git', 'ls-files', '-s'], capture_output=True, text=True).stdout
+    _pesados, _ofim = [], []
+    for _ln in _out.splitlines():
+        _f = _ln.split('\t', 1)[-1].strip().strip('"')
+        if _f.lower().endswith(EXT_TRABAJO):
+            _ofim.append(_f)
+            continue
+        try:
+            _mb = os.path.getsize(_f) / 1024 / 1024
+        except OSError:
+            continue
+        if _mb > TOPE_MB:
+            _pesados.append(f'{_f} ({_mb:.1f} MB)')
+    _prob = []
+    if _ofim:
+        _prob.append('documentos de trabajo versionados: ' + ', '.join(_ofim[:4]))
+    if _pesados:
+        _prob.append(f'archivos sobre {TOPE_MB:g} MB: ' + ', '.join(_pesados[:4]))
+    if _prob:
+        fail(check, ' · '.join(_prob) + ' — el material original va en fuentes/ (gitignored), no en el repo')
+    else:
+        ok(check, f'sin material de trabajo versionado (tope {TOPE_MB:g} MB por archivo)')
+except Exception as _e:
+    warn(check, f'no se pudo verificar peso-repo: {_e}')
+
 # ── [keyart-write-once] un afiche publicado nunca se sobreescribe ───────────────
 # El SW cachea /assets/ cache-first en un caché que sobrevive a TODOS los deploys
 # (ASSETS_CACHE, sw.js). Sobreescribir un keyArt in-place deja a los usuarios
