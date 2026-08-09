@@ -3156,6 +3156,163 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar layer-direction: {_e}')
 
+
+# ── [staging-provenance] todo sidecar nuevo declara cuándo se capturó ─────────
+# El bug de las 48 salas de FICDEH vivió escondido porque nada decía de CUÁNDO
+# era cada sidecar. Regla: todo JSON nuevo en festivals/staging/ lleva
+# _provenance.capturado (lib.provenance() lo pone solo). Los que existían antes
+# de la regla quedan congelados en esta lista — NO añadir nombres nuevos aquí:
+# un sidecar nuevo sin fecha es un error, no un candidato a la lista.
+check = 'staging-provenance'
+try:
+    import json as _json, glob as _glob, os as _os
+    _LEGACY_SIN_FECHA = {
+        'ficdeh-2026-actividades.json', 'ficdeh-2026-boleteria-tuboleta.json',
+        'ficdeh-2026-build.json', 'ficdeh-2026-cinemateca-grid.json',
+        'ficdeh-2026-confirmaciones-externas.json', 'ficdeh-2026-funciones-barrido.json',
+        'ficdeh-2026-geo-auditoria.json', 'ficdeh-2026-posters-src.json',
+        'ficdeh-2026-programacion-oficial.json', 'ficdeh-2026-programacion-raw.json',
+        'ficdeh-2026-salas-medellin.json', 'ficdeh-2026-title-en-candidatos.json',
+        'ficdeh-2026-venues-geo.json', 'ficdeh-2026.json',
+        'ficma-2026-crudo.json', 'ficma-2026-franja-ocr.json',
+        'ficma-2026-letterboxd.json', 'ficma-2026-ocr.json',
+        'ficma-2026-title-en.json', 'ficma-2026-tmdb.json',
+        'ficma-2026-venues-geo.json',
+        'finca-2026-build.json', 'finca-2026-funciones.json',
+        'finca-2026-posters-src.json', 'finca-2026.json',
+    }
+    _sin = []
+    for _f in sorted(_glob.glob('festivals/staging/*.json')):
+        _b = _os.path.basename(_f)
+        if _b in _LEGACY_SIN_FECHA:
+            continue
+        try:
+            _d = _json.load(open(_f, encoding='utf-8'))
+        except Exception:
+            _sin.append(_b + ' (JSON inválido)'); continue
+        _pr = _d.get('_provenance') if isinstance(_d, dict) else None
+        if not (isinstance(_pr, dict) and (_pr.get('capturado') or _pr.get('recibido'))):
+            _sin.append(_b)
+    if _sin:
+        fail(check, 'sidecar sin _provenance.capturado (usar lib.provenance()): ' + ', '.join(_sin))
+    else:
+        ok(check, 'todo sidecar nuevo declara cuándo se capturó (legacy congelado: '
+                  f'{len(_LEGACY_SIN_FECHA)})')
+except Exception as _e:
+    warn(check, f'no se pudo verificar staging-provenance: {_e}')
+
+# ── [pipeline-circuito] el barrido que nadie consume ──────────────────────────
+# El bug real: el barrido escribía programacion-canonica.json y el ensamblador
+# leía programacion-oficial.json — dos nombres para lo mismo, y el nuevo quedó
+# sin consumidor. Este guardián busca ESE patrón: dentro de un mismo festival,
+# un sidecar que se escribe y nadie lee junto a otro del mismo propósito
+# (comparten un token largo del nombre) que se lee y nadie escribe.
+check = 'pipeline-circuito'
+try:
+    import re as _re, glob as _glob, os as _os
+    _escribe, _lee = {}, {}
+    for _sp in _glob.glob('pipeline/*.py'):
+        for _ln in open(_sp, encoding='utf-8'):
+            for _m in _re.findall(r"[a-z0-9\-{}]+\.json", _ln):
+                _b = _m.replace('{fid}', '*').lstrip('-')
+                _es_w = bool(_re.search(r"json\.dump|,\s*'w'", _ln))
+                (_escribe if _es_w else _lee).setdefault(_b, set()).add(_os.path.basename(_sp))
+    def _quien(_tabla, _b):
+        # nombre exacto o patrón de herramienta genérica ('*-crudo.json')
+        _hit = set(_tabla.get(_b, set()))
+        for _k, _v in _tabla.items():
+            if _k.startswith('*') and _b.endswith(_k[1:]):
+                _hit |= _v
+        return _hit
+    _pares = []
+    _files = [_os.path.basename(_f) for _f in _glob.glob('festivals/staging/*.json')]
+    for _a in _files:
+        if _quien(_escribe, _a) and not _quien(_lee, _a):          # se escribe, nadie lee
+            _fest = _a.split('-202')[0]
+            _tok = {t for t in _re.split(r'[-.]', _a) if len(t) >= 6} - {_fest}
+            for _b in _files:
+                if _b == _a or not _b.startswith(_fest):
+                    continue
+                if _quien(_lee, _b) and not _quien(_escribe, _b) and \
+                   _tok & {t for t in _re.split(r'[-.]', _b) if len(t) >= 6}:
+                    _pares.append(f'{_a} (se escribe, nadie lee) ↔ {_b} (se lee, nadie escribe)')
+    if _pares:
+        fail(check, 'circuito roto entre productor y consumidor: ' + '; '.join(sorted(set(_pares))))
+    else:
+        ok(check, 'ningún sidecar escrito-sin-lector convive con su gemelo leído-sin-escritor')
+except Exception as _e:
+    warn(check, f'no se pudo verificar pipeline-circuito: {_e}')
+
+# ── [sedes-apiladas] + [sala-en-sede] — los guardianes de datos de sede ───────
+# Aprobados tras FICDEH. (a) dos sedes del mismo festival a <60 m casi siempre
+# son la MISMA con dos nombres (63 de 120 apiladas en el geocoding v1); si es
+# real (dos secretarías en la Alcaldía) se declara con _nota en el venue.
+# (b) la sala dentro del nombre de la sede parte el filtro de lugar (la
+# Cinemateca aparecía 5 veces). Ambos como WARNING: los festivales archivados
+# violan (b) y no se van a reescribir.
+check = 'sedes-apiladas'
+try:
+    import json as _json, math as _math, glob as _glob, os as _os, itertools as _it
+    _avisos = []
+    _ACTIVOS_AP = {'ficdeh-2026.json', 'ficma-2026.json', 'finca-2026.json'}
+    for _f in sorted(_glob.glob('festivals/*.json')):
+        if _os.path.basename(_f) not in _ACTIVOS_AP:
+            continue          # los archivados no se reescriben
+        try:
+            _d = _json.load(open(_f, encoding='utf-8'))
+        except Exception:
+            continue
+        _vs = _d.get('venues')
+        if not isinstance(_vs, dict):
+            continue
+        _ub = {k: v for k, v in _vs.items()
+               if isinstance(v, dict) and v.get('lat') and not v.get('_nota')}
+        for _a, _b in _it.combinations(_ub, 2):
+            _dy = (_ub[_a]['lat'] - _ub[_b]['lat']) * 111320
+            _dx = (_ub[_a]['lng'] - _ub[_b]['lng']) * 111320 * \
+                  _math.cos(_math.radians(_ub[_a]['lat']))
+            if _math.hypot(_dx, _dy) < 60:
+                _avisos.append(f'{_os.path.basename(_f)}: «{_a}» y «{_b}» a '
+                               f'{round(_math.hypot(_dx, _dy))} m — ¿misma sede con dos '
+                               'nombres? (si es real, _nota en el venue)')
+    if _avisos:
+        for _w in _avisos[:8]:
+            warn(check, _w)
+        ok(check, f'{len(_avisos)} pares sospechosos (warnings)')
+    else:
+        ok(check, 'ningún par de sedes a <60 m sin _nota')
+except Exception as _e:
+    warn(check, f'no se pudo verificar sedes-apiladas: {_e}')
+
+check = 'sala-en-sede'
+try:
+    import json as _json, re as _re, glob as _glob, os as _os
+    _avisos = []
+    _ACTIVOS = {'ficdeh-2026.json', 'ficma-2026.json', 'finca-2026.json'}
+    for _f in sorted(_glob.glob('festivals/*.json')):
+        if _os.path.basename(_f) not in _ACTIVOS:
+            continue          # los archivados no se reescriben
+        try:
+            _d = _json.load(open(_f, encoding='utf-8'))
+        except Exception:
+            continue
+        _vs = _d.get('venues')
+        if not isinstance(_vs, dict):
+            continue
+        for _k, _v in _vs.items():
+            _n = (_v.get('short') or _k) if isinstance(_v, dict) else _k
+            if _re.search(r'\b[Ss]ala\s+\d|\bSALA\s+\d', _n):
+                _avisos.append(f'{_os.path.basename(_f)}: «{_n}» lleva la SALA en el '
+                               'nombre — va en el campo sala de la función')
+    if _avisos:
+        for _w in _avisos:
+            warn(check, _w)
+        ok(check, f'{len(_avisos)} sedes con sala en el nombre (warnings)')
+    else:
+        ok(check, 'ninguna sede activa lleva la sala en el nombre')
+except Exception as _e:
+    warn(check, f'no se pudo verificar sala-en-sede: {_e}')
+
 # ── Report ────────────────────────────────────────────────────────────────────
 print()
 print('═' * 60)
