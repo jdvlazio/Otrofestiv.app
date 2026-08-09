@@ -133,6 +133,62 @@ SINOPSIS_PRIMERA_FUENTE = {
                 'Verificado contra las tres anclas: Lina Rodríguez ✓, Colombia/Canadá ✓, '
                 '72 min ✓ (la misma duración que corrige el dato del programa).',
     },
+    # OJO al buscar material de esta: su director tiene OTRA película sobre el
+    # mismo accidente, la ficción «Rescate en el Valle» (2023). Una búsqueda
+    # devuelve esa sinopsis y encaja lo suficiente como para colarse. Esta es el
+    # documental de 2026, y la sinopsis vino del festival.
+    'AA95 un rescate imposible': {
+        'es': 'En diciembre de 1995, un Boeing 757 de American Airlines se estrelló en los '
+              'cerros de Buga, dejando 156 muertos y apenas cinco sobrevivientes. Perdidos '
+              'entre la niebla y la montaña, esperaron durante horas un rescate para el que '
+              'Colombia no estaba preparada.\n\nAños después, comenzaron a surgir '
+              'testimonios desconocidos sobre los heroicos esfuerzos de rescatistas y '
+              'médicos anónimos que arriesgaron sus propias vidas para salvar a los '
+              'sobrevivientes.\n\nA través de entrevistas exclusivas y relatos inéditos, '
+              'este documental reconstruye una tragedia olvidada y revela la extraordinaria '
+              'historia humana que nació en medio del desastre.',
+        'genero': 'Documental',   # «este documental», lo dice el propio texto
+        '_src': 'material oficial del festival (8 ago 2026). Solo en español.',
+    },
+    'Que el cielo nos perdone': {
+        'es': 'Colombia, 1951: En medio de La Violencia, el período de brutal guerra '
+              'política entre liberales y conservadores, un par de chulavitas —asesinos a '
+              'sueldo pagados por el gobierno— acechan a un sacerdote en la oscuridad de la '
+              'noche, esperando que los conduzca a la cabaña en el bosque en donde se '
+              'esconden sus próximas víctimas. Pero el horror que encontrarán allí es mil '
+              'veces peor que el dolor que pensaban infligir.',
+        'genero': 'Terror',       # la ficha oficial: Ficción / Terror / Suspenso
+        'title_en': 'May heaven forgive us',
+        '_src': 'material oficial del festival (8 ago 2026). La ficha da 16 min y el '
+                'programa 17: se conservan los 17 del programa, que es la duración con la '
+                'que el festival armó el horario.',
+    },
+    'Cómo limpiar un espejo': {
+        'es': 'Días antes de mudarse a Bogotá, Tomás enfrenta la culpa de haber traicionado '
+              'a su mejor amigo, al ver cómo su propia situación se refleja en las acciones '
+              'de su madre.',
+        'en': 'Days before moving to Bogotá, Tomás confronts the guilt of betraying his best '
+              'friend, noticing how his own situation is reflected in his mother\u2019s actions.',
+        'genero': 'Drama',
+        '_src': 'material oficial del festival (8 ago 2026), en español e inglés. La ficha '
+                'lo clasifica como DRAMA/FICCIÓN.',
+    },
+    'Cuando la palabra se hace búsqueda: El eco de sus voces': {
+        'es': 'En Colombia, la búsqueda de las personas desaparecidas ha abierto caminos '
+              'inesperados de encuentro entre quienes sufren su ausencia y quienes guardan '
+              'información clave sobre su paradero. Este largometraje documental revela el '
+              'papel fundamental de los aportantes de información, en las voces de quienes '
+              'participaron directa e indirectamente en las hostilidades y que, desde el '
+              'compromiso, han decidido sumarse al proceso humanitario de la búsqueda '
+              'liderado por la Unidad de Búsqueda de Personas dadas por Desaparecidas '
+              '(UBPD).\n\nA través de historias íntimas y encuentros improbables entre '
+              'víctimas y antiguos actores del conflicto, la película expone cómo la verdad '
+              'compartida —desde un enfoque extrajudicial, confidencial y humanitario— se '
+              'convierte en una herramienta para aliviar el dolor de las familias y '
+              'dignificar la memoria de quienes desaparecieron.',
+        'genero': 'Documental',   # lo dice el propio texto: «este largometraje documental»
+        '_src': 'material oficial del festival (8 ago 2026). Solo en español.',
+    },
 }
 
 
@@ -279,7 +335,8 @@ def main():
         # (pipeline/ficma-2026-letterboxd.py). Sin mapeo → sin botón, nunca un homónimo.
         if f['titulo'] in lb:
             e['lbSlug'] = lb[f['titulo']]
-        _en = TITULO_EN_MANUAL.get(f['titulo']) or title_en.get(f['titulo'])
+        _en = ((_sf or {}).get('title_en') if (_sf := SINOPSIS_PRIMERA_FUENTE.get(f['titulo'])) else None) \
+              or TITULO_EN_MANUAL.get(f['titulo']) or title_en.get(f['titulo'])
         if _en:
             e['title_en'] = _en
         if f['titulo'] in TMDB_MANUAL:
@@ -298,7 +355,10 @@ def main():
         _sf = SINOPSIS_PRIMERA_FUENTE.get(f['titulo'])
         if _sf and not e.get('synopsis'):
             e['synopsis'], e['synopsis_lang'] = _sf['es'], 'es'
-            e['synopsis_en'] = _sf['en']
+            if _sf.get('en'):
+                e['synopsis_en'] = _sf['en']
+            if _sf.get('genero') and not e.get('genre'):
+                e['genre'] = _sf['genero']
             e['_src_synopsis'] = _sf['_src']
         if not e.get('synopsis'):
             e['_pendiente'] = 'sin sinopsis'
