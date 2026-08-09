@@ -320,3 +320,28 @@ test('T57 — un taller ya empezado no se ofrece', async ({ page }) => {
   expect(despues.ctrl, 'no se ofrece un taller que ya empezó').toBe('');
   expect(despues.filas, 'las sesiones siguen listándose, informativas').toBeGreaterThan(0);
 });
+
+// T58 — un taller multi-día no aparece en Sugerencias.
+// Era el único camino que quedaba para romper el bloque: el botón de la
+// sugerencia llama a addSuggestion, que añade UNA función — y eso deja el bloque
+// a medias, justo lo que prohíbe el invariante. (Quitar, en cambio, nunca lo
+// rompió: tanto Mi Plan como Planear filtran por TÍTULO, así que sacan las N.)
+test('T58 — el taller multi-día no se ofrece como sugerencia', async ({ page }) => {
+  await enterFestival(page, 'leviza2026', '2026-05-13T09:00:00-05:00');
+  const r = await page.evaluate(() => {
+    const rec = FILMS.filter(f => f.is_recurring && f.day && f.time);
+    const tallerTitulo = rec[0].title;
+    // plan mínimo para que el motor de sugerencias corra, + el taller en Intereses
+    const suelta = FILMS.find(f => !f.info && f.day && f.time && !f.is_recurring);
+    state.set('savedAgenda', { schedule: [{ _title: suelta.title, title: suelta.title, day: suelta.day,
+      time: suelta.time, venue: suelta.venue, duration: suelta.duration, day_order: suelta.day_order }] });
+    watchlist.clear(); watchlist.add(tallerTitulo);
+    switchMainNav('mnav-miplan'); showAgView();
+    return { tallerTitulo, sesiones: rec.length };
+  });
+  await page.waitForTimeout(1200);
+  const ofrecido = await page.evaluate((t) =>
+    [...document.querySelectorAll('[data-action="addSuggestion"]')].some(b => b.dataset.title === t),
+  r.tallerTitulo);
+  expect(ofrecido, 'una sesión suelta del bloque no puede ofrecerse: addSuggestion añade una sola').toBe(false);
+});

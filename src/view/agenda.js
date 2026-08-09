@@ -1561,6 +1561,12 @@ export function getSuggestions(){
     // Usa screensConflict — mismo criterio que el algoritmo, incluye travel time entre venues
     if(slots.length){
       FILMS.forEach(f=>{
+        // Un taller multi-día NO se sugiere: se toma entero, y el botón de la
+        // sugerencia añade UNA función (addSuggestion) — eso dejaría el bloque a
+        // medias, que es justo lo que el invariante prohíbe. Además sugerir «meté
+        // estas 9 horas en tu hueco» no es una sugerencia, es otro plan.
+        // Su camino es el control de bloque de la ficha.
+        if(f.is_recurring) return;
         if(seenDiscover.has(f.title)||screeningPassed(f)||f.day!==day||isScreeningBlocked(f)) return;
         const fStart=toMin(f.time),fEnd=fStart+blockDuration(f);
         // Verificar que hay un slot de tiempo (check rápido)
@@ -1582,7 +1588,8 @@ export function getSuggestions(){
     // Usa screensConflict (±10 min) — mismo criterio que el algoritmo de planificación
     // Solo aparece si genuinamente cabe sin conflicto en el plan actual
     [...watchlist].filter(wlTitle=>!seenRecovery.has(wlTitle)).forEach(wlTitle=>{
-      FILMS.filter(f=>f.title===wlTitle&&f.day===day&&!screeningPassed(f)&&!isScreeningBlocked(f)).forEach(f=>{
+      // mismo motivo que arriba: el bloque no entra por sugerencia
+      FILMS.filter(f=>f.title===wlTitle&&!f.is_recurring&&f.day===day&&!screeningPassed(f)&&!isScreeningBlocked(f)).forEach(f=>{
         if(seenRecovery.has(f.title)) return;
         const noConflict=!saved.some(s=>screensConflict(s,f));
         if(noConflict){
