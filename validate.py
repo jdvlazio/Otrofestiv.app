@@ -2596,6 +2596,51 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar peso-repo: {_e}')
 
+# ── [sin-symlinks] ningún enlace simbólico versionado ──────────────────────────
+# El 8 ago 2026 un symlink `fuentes` → /Users/Juanda/Documents/Otrofestiv-dev/fuentes
+# entró al repo dentro del PR de FICMA. En el runner de Pages esa ruta absoluta no
+# existe; el empaquetador lo sigue y muere con exit 1. Resultado: FICMA quedó en
+# main sin llegar nunca a producción, y el log no decía «symlink» por ningún lado.
+#
+# Un symlink no sobrevive a salir de la máquina que lo creó, así que en un repo que
+# se despliega no hay caso legítimo. La regla es absoluta a propósito: cualquier
+# excepción futura tendría que discutirse, que es exactamente lo que no pasó acá.
+# git guarda los symlinks con el modo 120000 — eso es lo que se busca.
+check = 'sin-symlinks'
+try:
+    import subprocess as _sp
+    _out = _sp.run(['git', 'ls-files', '-s'], capture_output=True, text=True).stdout
+    _links = [_ln.split('\t', 1)[-1].strip().strip('"')
+              for _ln in _out.splitlines() if _ln.startswith('120000')]
+    if _links:
+        fail(check, 'enlaces simbólicos versionados: ' + ', '.join(_links[:5])
+                    + ' — no sobreviven al runner y tumban el deploy de Pages')
+    else:
+        ok(check, 'ningún symlink versionado')
+except Exception as _e:
+    warn(check, f'no se pudo verificar sin-symlinks: {_e}')
+
+# ── [merge-driver] el driver `bump` está registrado en este clon ────────────────
+# .gitattributes declara `merge=bump` para los archivos que llevan el número de
+# build, pero registrar el driver es config LOCAL: git no ejecuta comandos que
+# vengan del repo. Sin registrar, esos cuatro archivos vuelven a conflictuar en
+# cada PR —los cinco conflictos del 8 ago 2026 fueron exactamente eso—.
+# Aviso, no error: en CI no aplica y un clon de solo lectura no lo necesita.
+check = 'merge-driver'
+try:
+    import subprocess as _sp
+    _drv = _sp.run(['git', 'config', 'merge.bump.driver'],
+                   capture_output=True, text=True).stdout.strip()
+    if not os.path.isfile('.gitattributes'):
+        warn(check, 'falta .gitattributes (declara merge=bump)')
+    elif not _drv:
+        warn(check, 'el driver `bump` no está registrado en este clon — enchufalo con: '
+                    'sh scripts/install-hooks.sh')
+    else:
+        ok(check, 'driver `bump` registrado (conflictos de build se resuelven solos)')
+except Exception as _e:
+    warn(check, f'no se pudo verificar merge-driver: {_e}')
+
 # ── [keyart-write-once] un afiche publicado nunca se sobreescribe ───────────────
 # El SW cachea /assets/ cache-first en un caché que sobrevive a TODOS los deploys
 # (ASSETS_CACHE, sw.js). Sobreescribir un keyArt in-place deja a los usuarios

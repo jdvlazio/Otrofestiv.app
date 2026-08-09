@@ -5,25 +5,21 @@
  * Fuentes de verdad:
  *   - FESTIVAL_CONFIG en index.html → lista de festivales
  *   - .specify/features/            → features activas
- *   - git log -1                    → último commit
  *
  * Uso: node scripts/generate-claude-md.js
- * Se ejecuta automáticamente desde bump-version.js antes de cada deploy.
+ *
+ * Se corre A MANO, cuando cambia el estado del proyecto (un festival entra o se
+ * archiva, una feature arranca). Hasta ago 2026 lo disparaba bump-version.js en
+ * cada deploy: eso metía CLAUDE.md —y su hash de último commit— en cada rama, y
+ * lo convertía en el quinto conflicto garantizado de cada PR.
  */
 
 const fs   = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
 
 const ROOT = path.join(__dirname, '..');
 
-// ── 1. Último commit ──────────────────────────────────────────────────────────
-let lastCommit = '(desconocido)';
-try {
-  lastCommit = execSync('git log --oneline -1', { cwd: ROOT }).toString().trim();
-} catch (_) {}
-
-// ── 2. Festivales desde FESTIVAL_CONFIG ───────────────────────────────────────
+// ── 1. Festivales desde FESTIVAL_CONFIG ───────────────────────────────────────
 // p8 Step 0: FESTIVAL_CONFIG se movió de index.html a src/main.js (módulo).
 // p8 Step 1: FESTIVAL_CONFIG se movió a src/config.js (`export const`); el regex
 //   `const FESTIVAL_CONFIG={...};// Festival` matchea igual dentro del export.
@@ -76,7 +72,7 @@ const festivalsTable = [
   )
 ].join('\n');
 
-// ── 3. Features desde .specify/features/ ─────────────────────────────────────
+// ── 2. Features desde .specify/features/ ─────────────────────────────────────
 const featuresDir = path.join(ROOT, '.specify', 'features');
 let featuresSection = '_Sin features activas en `.specify/features/`._';
 
@@ -98,13 +94,15 @@ if (fs.existsSync(featuresDir)) {
   }
 }
 
-// ── 4. Generar CLAUDE.md ──────────────────────────────────────────────────────
+// ── 3. Generar CLAUDE.md ──────────────────────────────────────────────────────
 const generated = `# CLAUDE.md — Otrofestiv
 > Generado automáticamente por \`scripts/generate-claude-md.js\`.
-> No editar a mano — los cambios se sobreescriben en el próximo deploy.
+> No editar a mano — los cambios se sobreescriben al regenerar.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: \`${lastCommit}\`
+> El hash del último commit NO va acá a propósito: cambiaba en cada rama y hacía
+> de este archivo un conflicto garantizado por PR, sin aportar nada que \`git log\`
+> no diga mejor.
 
 ---
 
@@ -147,6 +145,23 @@ Juan es Product Owner, diseñador y developer. Claude ejecuta; Juan audita y apr
 4. **Validar antes de commitear.** Siempre correr \`python3 validate.py\` antes de proponer un commit.
 5. **bump-version antes de deploy.** \`node scripts/bump-version.js\` justo antes de cada push.
 6. **Sin regresiones.** Verificar qué cambió y por qué después de cada entrega.
+7. **Código de la app acá, datos del festival allá.** El trabajo está partido en dos
+   chats con worktrees separados. La pregunta que decide dónde va un cambio es una
+   sola: *¿esto es código o es un festival?*
+
+| | Dueño | Qué toca | Ramas |
+|---|---|---|---|
+| **Main** | código de la app | \`src/\`, \`validate.py\`, \`tests/\`, \`scripts/\` | \`feat/*\`, \`fix/*\` |
+| **Onboarding** | datos de festival | \`festivals/\`, \`assets/\`, \`src/config.js\` | \`feat/<festival>-catalogo\` |
+
+**Quien es dueño de la rama la lleva hasta el final: push _y_ merge.** El trabajo no
+se parte a la mitad entre dos chats — así nace la pregunta «¿y ahora quién mergea?».
+Juan autoriza en el chat dueño de la rama.
+
+Si un cambio necesita las dos cosas (un campo nuevo en el dato + soporte en la app),
+van **dos PR, primero el de app**: así el dato nunca llega a producción antes que el
+código que sabe leerlo. El workflow \`frontera.yml\` lo verifica; para la excepción
+deliberada existe la etiqueta \`frontera-ok\`.
 
 ---
 
@@ -243,8 +258,10 @@ congelados en código viejo pese a los deploys web. Antes de CADA build:
 ## Herramientas del pipeline
 
 \`\`\`bash
+sh scripts/install-hooks.sh                # UNA VEZ por clon/worktree: hooks + driver de merge
 python3 validate.py                        # validar antes de commitear
-node scripts/bump-version.js               # actualizar sw.js + version.json + CLAUDE.md antes de deploy
+node scripts/bump-version.js               # actualizar index.html + main.js + sw.js + version.json antes de deploy
+node scripts/generate-claude-md.js         # regenerar este archivo cuando cambie el estado del proyecto
 node scripts/generate-config.js --help     # generar entrada FESTIVAL_CONFIG
 python3 scripts/enrich-festival.py --help  # enriquecer JSON con TMDB
 python3 scripts/geocode-venues.py --help   # geocodificar venues
@@ -254,4 +271,3 @@ python3 scripts/geocode-venues.py --help   # geocodificar venues
 fs.writeFileSync(path.join(ROOT, 'CLAUDE.md'), generated);
 console.log('✅ CLAUDE.md generado.');
 console.log(`   Festivales: ${festivals.length}`);
-console.log(`   Último commit: ${lastCommit}`);

@@ -537,9 +537,10 @@ se borran del working tree.
 **Dos reglas duras:**
 
 1. **Nunca `--ours`/`--theirs` sobre un archivo con código.** En este repo la
-   trampa es concreta: `bump-version.js` toca cinco archivos —`index.html`,
-   `src/main.js`, `sw.js`, `version.json`, `CLAUDE.md`— y tres **también llevan
-   código**. Un conflicto ahí parece trivial y no lo es. Usar
+   trampa es concreta: `bump-version.js` toca cuatro archivos —`index.html`,
+   `src/main.js`, `sw.js`, `version.json`— y tres **también llevan código**. Un
+   conflicto ahí parece trivial y no lo es. Desde el driver `bump` (15.4c) casi
+   nunca hay que resolverlo a mano; cuando lo haya, usar
    **`./scripts/traer-main.sh`**, que resuelve el bump re-ejecutándolo y al final
    verifica que ninguna línea propia haya desaparecido.
 2. **Para mirar otra rama, worktree, nunca `checkout`.** Un `git worktree add`
@@ -557,6 +558,61 @@ Ambos aceptan `--no-verify`. Que el escape exista no lo vuelve rutina.
 > Por qué barreras y no propósitos: un agente encadena comandos de git en un
 > segundo, sin la fricción que tiene una persona al ver el diff en pantalla. La
 > velocidad que ayuda escribiendo código es peligrosa moviendo archivos.
+
+---
+
+### 15.4c El conflicto que no debía existir — el driver `bump`
+
+Al medir los conflictos de esa misma semana apareció que **los cinco fueron el
+mismo timestamp de 12 dígitos**, y ninguno fue contenido. La causa no era falta de
+coordinación entre ramas: era estructural. `bump-version.js` estampa el mismo
+renglón en cada rama antes de cada push, así que con dos ramas vivas el conflicto
+no es probable — **es seguro, uno por PR**. Y como tres de esos archivos también
+llevan código, el conflicto barato es justo el que se lleva trabajo por delante.
+
+Tres cambios, en orden de cuánto quitan del camino:
+
+1. **`.gitattributes` + `scripts/merge-bump.sh`.** Los cuatro archivos del bump
+   (`index.html`, `src/main.js`, `sw.js`, `version.json`) se mergean con un driver
+   propio: normaliza el build a un marcador, deja que git mergee de verdad, y
+   estampa de vuelta el build **más alto** de los dos lados. El conflicto que era
+   solo el número desaparece; el de contenido real sigue saliendo con marcadores.
+   Probado con las dos mitades antes de adoptarlo — que un conflicto real siga
+   siendo un conflicto es la mitad que importa.
+2. **`CLAUDE.md` fuera del bump.** Era el quinto archivo, y su línea de «último
+   commit» cambiaba en toda rama sin aportar nada que `git log` no diga mejor.
+   Ahora se regenera a mano: `node scripts/generate-claude-md.js`.
+3. **`[sin-symlinks]` en `validate.py`.** Un symlink `fuentes` → ruta absoluta del
+   Mac entró dentro de un PR de festival y tumbó el deploy de Pages: en el runner
+   esa ruta no existe, el empaquetador la sigue y muere con exit 1 sin decir la
+   palabra «symlink» en ningún lado. FICMA quedó en `main` sin llegar a producción.
+   Un symlink no sobrevive a salir de la máquina que lo creó: la regla es absoluta.
+
+> El driver se declara en el repo pero se registra **local** (`merge.bump.driver`):
+> git no ejecuta comandos que vengan del repositorio, y eso es una defensa suya,
+> no un descuido. `sh scripts/install-hooks.sh` lo enchufa —junto con los hooks— y
+> `[merge-driver]` avisa si falta. `traer-main.sh` queda como red para el clon que
+> no lo corrió.
+
+### 15.4d La frontera código/datos
+
+El trabajo está partido en dos chats con worktrees separados, y la regla es
+**«código de la app acá, datos del festival allá»**. `frontera.yml` la vuelve
+ejecutable: un PR que toca a la vez app (`src/`, `index.html`, `sw.js`,
+`validate.py`, `tests/`, `scripts/`) y festival (`festivals/`, `assets/`) falla.
+
+Dos decisiones deliberadas: **`src/config.js` no cuenta como código**, porque
+registrar un festival en `FESTIVAL_CONFIG` es parte legítima de un PR de datos; y
+la etiqueta **`frontera-ok`** deja pasar la mezcla, dejando rastro de que fue una
+decisión y no un descuido.
+
+Cuando un cambio necesita los dos lados —un campo nuevo en el dato más su soporte
+en la app— van **dos PR, primero el de app**: así el dato nunca llega a producción
+antes que el código que sabe leerlo.
+
+**Dueño de la rama = quien la lleva hasta el final, push _y_ merge.** El trabajo no
+se parte a la mitad entre dos chats; de ahí nacía la pregunta «¿y ahora quién
+mergea?», que costó más tiempo que los conflictos.
 
 ---
 

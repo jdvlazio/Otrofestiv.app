@@ -26,7 +26,12 @@
 set -uo pipefail
 cd "$(git rev-parse --show-toplevel)"
 
-BUMP=(index.html src/main.js sw.js version.json CLAUDE.md)
+# Desde ago 2026 el driver `bump` (.gitattributes + scripts/merge-bump.sh) resuelve
+# estos cuatro solo, así que lo normal es que este script no tenga nada que hacer.
+# Se queda como red: en un clon sin `install-hooks.sh` corrido, el driver no está
+# registrado y los conflictos vuelven. CLAUDE.md salió de la lista — ya no lo toca
+# el bump.
+BUMP=(index.html src/main.js sw.js version.json)
 rama=$(git rev-parse --abbrev-ref HEAD)
 [ "$rama" = "main" ] && { echo "Estás en main: no hay nada que traer."; exit 1; }
 
