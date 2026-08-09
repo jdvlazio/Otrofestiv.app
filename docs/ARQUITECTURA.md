@@ -656,6 +656,64 @@ prohíbe hardcodear `localhost:3000` en un spec.
 
 ---
 
+### 15.6 QA de festival nuevo — dos capas y un gate
+
+`docs/QA-FULL.md` definió en mayo de 2026 un protocolo de 92 checks manuales y dejó
+tres bloques escritos pero **sin ejecutar**: E (Intereses), F (Planear), G (Mi Plan).
+Corrió una vez. Pasaron cinco festivales sin volver a correr. Que un protocolo
+manual se ejecute una vez en tres meses no es descuido — es el dato de diseño: lo
+manual no se sostiene, así que lo que importa se automatiza y lo manual se recorta
+hasta que quepa en una sesión.
+
+**Capa 1 — el motor es óptimo** (`tests/unit/plannerOracle.test.js`, sin navegador).
+Recorre `festivals/*.json` y compara `computeScenarios` contra un solver exacto
+(`tests/lib/exact-planner.js`), certificando cada plan con `verifyPlan`. Desde ago
+2026 siembra además las tres restricciones que el usuario sí usa —prioridades,
+ya-vistas, disponibilidad— y juzga **los dos máximos** que la app reporta:
+`trueMax` (sin exigir prioridades) y `maxWithPriorities` (exigiéndolas), este
+último contra `exactMaxEntries(..., {required})`.
+
+> Lección de método: sembrar 96 watchlists con prioridades **no** cazó una mutación
+> que hacía `maxWithPriorities = trueMax`. En las 96 las prioridades nunca costaron
+> nada, así que ambos máximos coincidían y la mentira era indistinguible de la
+> verdad. Una restricción que no aprieta no prueba nada. Lo cerró un caso
+> **dirigido**: dos obras de una sola función que chocan entre sí — exigir ambas es
+> imposible por definición y los máximos se separan (1 y 0). Cuando el muestreo no
+> caza, no hay que muestrear más: hay que construir la tensión.
+
+**Capa 2 — la app conecta ese motor** (`tests/recorrido-festival.spec.js`). Un
+recorrido por festival: intereses → prioridades → ya-vistas → disponibilidad →
+Planear (click real) → auditar → Mi Plan → sugerencias. El DOM se usa para
+**ejercer**, no para juzgar: el veredicto lo da `verifyPlan` sobre el plan que la UI
+acaba de mostrar y sobre el que `commitPlan` guardó (con `__PLAN_STRICT__`, que en
+tests **tira** en vez de reportar). Un aserto sobre texto renderizado se rompe con
+cada cambio de copy y no dice nada sobre si el plan es correcto.
+
+Ambas capas son **cross-festival por construcción**: la primera por el glob de
+`festivals/`, la segunda por `festivalTestIds()`. Un festival nuevo entra a la
+cobertura al agregar su config + su JSON, sin editar specs.
+
+**El gate** vive en `docs/FESTIVAL-CHECKLIST.md`: un festival no se publica sin
+las dos capas en verde **con su JSON ya montado**. Es lo que convierte esto en algo
+que corre siempre, en vez de un documento que se relee.
+
+**Qué encontró el primer día.** El recorrido cazó un bug real en Leviza: al vetar un
+día entero, el planeador proponía **2 de las 3 sesiones** de un taller multi-día —
+la rama todo-o-nada del backtracking mete el grupo completo, pero el grupo ya venía
+filtrado por disponibilidad. Un plan con 2 de 3 no es medio taller: es un plan que
+miente, y FICDEH —que arrancaba tres días después— tiene taller multi-día. El fix
+creó `plannableScreens` como **dueño único** de «qué funciones son planificables
+para vos» (cancelada · pasada · franja vetada · taller entero-o-nada), consumido por
+el planeador, el oráculo y el recorrido.
+
+> Y al extraerlo apareció la trampa que este mismo documento advierte: el worker del
+> planeador se arma con `.toString()` sobre `_SCHED_PURE_FNS` (`controller/calc.js`).
+> Una función nueva que no esté en esa lista existe en el main thread y **no** en el
+> worker: el cálculo moría adentro y el plan no volvía nunca. Lo cazó
+> `workerParity.test.js`, que lee la lista del propio `calc.js`.
+
+---
+
 ## 16. ARQUITECTURA OBJETIVO — MVC vanilla JS
 
 > **MIGRACIÓN COMPLETADA (JUL 2026).** El roadmap MVC (Fases 1–8) ya está en producción: las capas están separadas (`domain/` = Model puro, `view/` = render puro, `controller/` = orquestación, `state`+`storage` = estado) y su dirección de dependencia la protege una fitness function (§15.4). Esta sección se conserva como registro del diseño objetivo y su rationale.

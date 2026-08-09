@@ -189,7 +189,7 @@ const DEFAULT_FNS = [
   // Fase 3 — temporal subsystem
   '_festDate', 'simNow', '_tzOffsetMin', '_festNow', '_festNowMin', 'simTodayStr', 'festivalEnded', 'screeningPassed', 'dayFullyPassed',
   // Fase 4 — schedule planning
-  'isScreeningBlocked', '_djb2', '_titleSeed', '_mulberry32',
+  'isScreeningBlocked', 'plannableScreens', '_djb2', '_titleSeed', '_mulberry32',
   'shuffle', 'scoreFilm', 'sortScreensByStrategy', 'computeScenarios',
 ];
 

@@ -12,6 +12,19 @@
 
 - [ ] `node scripts/validate-festivals.js <id>` → **0 errores**
 - [ ] `python3 validate.py` → **OK para push**
+- [ ] **El festival planifica de verdad** (gate desde ago 2026, ver `docs/ARQUITECTURA.md` §15.6):
+      - [ ] `node --test tests/unit/plannerOracle.test.js` → el festival nuevo entra **solo** al glob
+            de `festivals/*.json`: se le siembran watchlists con prioridades, ya-vistas y franjas
+            vetadas, y se compara el plan contra un solver exacto. Prueba que el motor es **óptimo**
+            con tu catálogo real.
+      - [ ] `./scripts/test.sh recorrido-festival.spec.js` → recorrido completo del festival nuevo
+            (intereses → prioridades → disponibilidad → Planear → Mi Plan → sugerencias). Prueba que
+            la app **conecta** ese motor con lo que el usuario toca. También entra solo, vía
+            `festivalTestIds()`.
+      > Los dos corren en CI, así que el PR del festival los trae puestos. El ítem existe para que
+      > el hallazgo se lea: un festival puede tener el JSON impecable y aun así no dejarse planificar
+      > —bloques de cortos, talleres multi-día, funciones ancladas, sedes en varias ciudades—, y eso
+      > no lo ve ningún validador de forma.
 - [ ] **`python3 scripts/lint-catalog.py festivals/<id>.json`** → 0 errores y warnings revisados (contenido: duraciones vs sección, sinopsis puras, países, títulos bilingües, **pHash de pósters**) — ver PIPELINE Fase 1.5 (doble lectura + auditoría de rechazos del enrich)
 - [ ] **Procedencia (pipeline v2)**: `_provenance: true` en el root + `_src: {url, date}` en cada film (gate `[sin-procedencia]`). Dato sin fuente = dato no confiable.
 - [ ] **`tools/audit.html?fest=<id>`** revisado: filtro "Solo problemas" en **0** o cada hallazgo justificado explícitamente ante Juan (una pasada visual cubre póster·metadata·sinopsis·procedencia·LB).
