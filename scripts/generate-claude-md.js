@@ -182,7 +182,8 @@ ${featuresSection}
 | Archivo | Qué contiene |
 |---|---|
 | \`docs/ARQUITECTURA.md\` | Design system completo, reglas de diseño, mapa de funciones, patrones canónicos |
-| \`docs/PIPELINE.md\` | Proceso de onboarding de festivales nuevos (fases, gates, roles) |
+| \`pipeline/PROTOCOLO.md\` | EL proceso de onboarding: fuente → producción (pasos, formato intermedio, checklist) |
+| \`docs/PIPELINE.md\` | Doctrina de enrichment (TMDB/LB) + historial de errores — manda en su tema |
 | \`docs/SCHEMA.md\` | Schema normativo del JSON de festival |
 | \`.specify/memory/constitution.md\` | Rationale de decisiones de arquitectura clave |
 | \`.specify/features/\` | Specs y planes de features en desarrollo |

@@ -1,9 +1,12 @@
-# Pipeline de onboarding — festivales Otrofestiv
+# Doctrina de enrichment y historial de errores — festivales Otrofestiv
 
-> **Regla de oro:** cada fase debe completarse y validarse antes de iniciar la siguiente.  
-> Un push que falla `validate-festivals.js` se revierte sin excepciones.
-
----
+> **Alcance (9 ago 2026):** este documento es LA AUTORIDAD sobre qué se acepta
+> de TMDB / Letterboxd / fuentes de terceros y por qué — el proceso endurecido
+> tras Tribeca 2026 (134 posters falsos, 107 synopsis_en de films distintos).
+> **El PROCESO de montar un festival vive en `pipeline/PROTOCOLO.md`**; este
+> doc manda únicamente en su tema. Las reglas de verificación ya son código:
+> `lib.ficha_verifica()` y `pipeline/enriquecer.py` las aplican solas — este
+> doc explica el porqué y guarda el historial para no repetirlo.
 
 ## 0 · Secuencia de herramientas (referencia rápida)
 
