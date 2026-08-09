@@ -577,6 +577,59 @@ Y lo que un hook no puede cortar, lo vigila `validate.py`:
 | `[sin-symlinks]` | ningún enlace simbólico versionado — tumban el deploy de Pages |
 | `[peso-repo]` | material de trabajo versionado (ofimáticos, > 3 MB) |
 | `[stash-compartido]` | stash vivo con varios worktrees — la pila es del repo, no del worktree |
+| `[doc-cadena]` | que esta documentación y los guardianes se citen mutuamente |
+
+#### La identidad nunca sale de una etiqueta
+
+`short` es cómo se **muestra** una sede; la identidad es la sede. Confundirlos costó
+un bug en producción: el filtro agrupaba por `short`, que no es único entre ciudades
+(FICDEH tiene dos «Cinema Local» y dos «Alianza Francesa»), así que elegir una traía
+las funciones de la otra y la segunda desaparecía de su lista. La clave correcta es
+**(ciudad, short)**: la ciudad separa, el short agrupa — dentro de una ciudad el
+short repetido son las salas de un edificio y agruparlas es lo que se quiere.
+
+Tres guardianes sostienen la regla, y cada uno cubre lo que el otro no ve:
+
+| | |
+|---|---|
+| `[short-ambiguo]` | **el dato**: avisa si un short se repite entre ciudades (validate-festivals) |
+| `venueMatches.test.js` | **la unidad**: el predicado no cruza ciudades y sí agrupa salas |
+| `P08` | **el invariante**: filtrar por una sede nunca devuelve otra ciudad, en CADA festival |
+
+P08 es el que más vale: no sabe nada de centinelas ni de `short`, así que sigue
+cazando la clase aunque cambiemos por completo la implementación. Juzga el
+resultado, no el camino — mismo patrón que el oráculo del planeador (§15.6).
+
+> **La familia del bug.** El 9 ago aparecieron tres del mismo tipo: `day_order` que
+> no era el índice del día, `COUNTRY_NAMES` sin `AR` (que devolvía `''`), y el short
+> como clave. Ninguno lanzó un error: los tres devolvieron algo **plausible** —un
+> orden, una línea más corta, un conteo— y por eso sobrevivieron meses. La regla que
+> dejan: **una derivación que puede fallar tiene que fallar fuerte o no fallar
+> nunca**; devolver un valor creíble es la peor de las tres opciones.
+
+#### La cadena doc ↔ guardián
+
+Una regla escrita que nadie ejecuta es una opinión; un guardián que nadie documenta
+es una trampa. `[doc-cadena]` cierra el circuito en **las dos direcciones**:
+
+- **doc → código.** Una etiqueta citada en la documentación sin ejecutor real es una
+  promesa vacía. Hoy son **cero** y es un error bloqueante que dejen de serlo.
+- **código → doc.** Un guardián sin una línea acá es deuda: se cumple, pero nadie
+  puede leer la doc y saber que existe, así que se re-descubre a golpes o se duplica.
+  Techo que solo BAJA (mismo patrón que `module-size`): los 46 que ya estaban quedan
+  con número, y **uno nuevo nace documentado o no entra**.
+
+> Medido el 9 ago 2026, a partir de «hemos escrito muchas cosas pero no todas se
+> cumplen en cadena» (Juan). El resultado corrigió la intuición: de 61 etiquetas
+> documentadas, **las 61 tenían ejecutor**. El hueco estaba al revés — de 100
+> guardianes reales, **46 no se mencionaban en ningún documento**.
+>
+> Dos advertencias que costaron dos iteraciones, y que valen para cualquier check
+> que lea código con regex: el extractor tiene que conocer **cómo declara sus
+> etiquetas cada archivo** (`check = 'x'` en validate.py, `'[x]'` en el mensaje de
+> validate-festivals.js, `err('x', …)` en lint-catalog.py) o inventa huérfanos —
+> primero dio 54 falsos, después 5 «promesas rotas» que sí existían. Un check con
+> parser flojo no avisa de menos: **avisa mal**, que es peor.
 
 > Por qué barreras y no propósitos: un agente encadena comandos de git en un
 > segundo, sin la fricción que tiene una persona al ver el diff en pantalla. La
