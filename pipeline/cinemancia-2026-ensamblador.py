@@ -66,6 +66,42 @@ MES = {'enero': 1, 'febrero': 2, 'marzo': 3, 'abril': 4, 'mayo': 5, 'junio': 6,
        'julio': 7, 'agosto': 8, 'septiembre': 9, 'octubre': 10, 'noviembre': 11,
        'diciembre': 12}
 
+# Sección del PDF → (emoji, arquetipo, etiqueta EN). Aprobado por Juan el 9 ago
+# 2026. El nombre ES va VERBATIM del festival (regla «secciones tal cual»);
+# nuestra capa es solo el emoji, el arquetipo —que decide el color— y el EN.
+#
+# Las cinco primeras heredan emoji y arquetipo de Cinemancia 2025, que ya está
+# en SECTION_ARCHETYPES: así el festival no cambia de color entre ediciones.
+# Incluida una decisión de 2025 que se respeta a propósito: «Iluminaciones» va
+# como Perspectivas / Miradas y no como Retrospectiva, aunque en 2026 sea la
+# sección de restauraciones.
+#
+# El orden es el del PDF, que es la curaduría del festival.
+SECCIONES = [
+    ('Función inaugural',                    '⭐',  'Apertura / Gala',         'Opening Film'),
+    ('Función de clausura',                  '🎬',  'Clausura',                'Closing Film'),
+    ('Competencia central',                  '🏆',  'Competencia',             'Main Competition'),
+    ('Competencia de cortometrajes',         '🎞️',  'Competencia',             'Short Film Competition'),
+    ('Programa 1. El espesor de las formas', '🔺',  'Cortos / Programas',      'Programme 1. The Thickness of Forms'),
+    ('Programa 2. Teoremas sobre la mirada', '👁️',  'Cortos / Programas',      'Programme 2. Theorems on the Gaze'),
+    ('Competencia Nuevas voces',             '🌱',  'Competencia',             'New Voices Competition'),
+    ('Proyecciones especiales',              '✨',  'Especiales / Eventos',    'Special Screenings'),
+    ('Iluminaciones',                        '💡',  'Perspectivas / Miradas',  'Illuminations'),
+    ('Alquimia de la luz. El cine de Luciana Decker', '⚗️', 'Retrospectiva / Tributo',
+     'Alchemy of Light. The Cinema of Luciana Decker'),
+    ('Carta blanca',                         '🃏',  'Perspectivas / Miradas',  'Carte Blanche'),
+    ('La primavera llega para los que esperan. El cine de José Luis Torres Leiva', '🌷',
+     'Retrospectiva / Tributo', 'Spring Comes for Those Who Wait. The Cinema of José Luis Torres Leiva'),
+    ('Febril incisión. El cine de Thomas Fürhapter', '🌡️', 'Retrospectiva / Tributo',
+     'Feverish Incision. The Cinema of Thomas Fürhapter'),
+    ('Sick and Dirty. Curaduría de Michael Koresky', '🖤', 'Perspectivas / Miradas',
+     'Sick and Dirty. Curated by Michael Koresky'),
+    ('La sutil materia. Sergio Navarro',     '📼',  'Retrospectiva / Tributo', 'The Subtle Matter. Sergio Navarro'),
+    ('Historia(s) del cine: Argentina. Curaduría de José Miccio', '🇦🇷', 'Muestra / País',
+     'Histoire(s) of Cinema: Argentina. Curated by José Miccio'),
+]
+SEC = {s: (f'{e} {s}', a, en) for s, e, a, en in SECCIONES}
+
 
 def norm(s):
     s = ''.join(c for c in unicodedata.normalize('NFD', (s or '').lower())
@@ -129,7 +165,10 @@ def main():
         t = T.get(norm(o['title']), {})
         l = L.get(norm(o['title']), {})
         w = ficha(o['title'])
-        secciones.setdefault(o['section'], 0)
+        if o['section'] not in SEC:
+            errores.append(f'sección sin arquetipo: {o["section"]!r}'); continue
+        clave_sec, _arq, _en = SEC[o['section']]
+        secciones.setdefault(clave_sec, 0)
 
         # sinopsis: la del festival manda; TMDB rellena. Nunca se traduce.
         sin_es = (w or {}).get('synopsis_web') or t.get('synopsis') or ''
@@ -141,7 +180,7 @@ def main():
             'director': o['director'], 'year': str(o['year'] or ''),
             'duration': f'{o["duration"]} min' if o['duration'] else '',
             'country': o['country'], 'flags': lib.banderas(o['country']),
-            'section': o['section'],
+            'section': clave_sec,
             'synopsis': sin_es, 'synopsis_lang': 'es' if sin_es else '',
             'synopsis_en': t.get('synopsis_en') or '',
             'poster': f'https://image.tmdb.org/t/p/w500{t["poster_tmdb"]}'
@@ -178,7 +217,7 @@ def main():
             films.append({**base, 'day': dia, 'time': h['hora'],
                           'day_order': DIAS.index(dia), 'venue': clave,
                           'sala': sala})
-            secciones[o['section']] += 1
+            secciones[clave_sec] += 1
 
     if errores:
         print('ERRORES — el ensamblado se detiene:')
@@ -207,7 +246,10 @@ def main():
              'PDF oficial (obras y secciones) + fichas de la web (sinopsis y horarios) + TMDB',
              precedencia='sinopsis: web del festival > TMDB; nunca traducida',
              pendiente=f'{len(sin_horario)} obras sin horario publicado'),
-         'sections': {}, 'venues': venues, 'films': films}
+         'sections': {SEC[s][0]: {'oficial': s, 'en': SEC[s][2],
+                                  'archetype': SEC[s][1], 'order': i + 1}
+                      for i, (s, *_ ) in enumerate(SECCIONES)},
+         'venues': venues, 'films': films}
     json.dump(d, open(OUT, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
 
     print(f'{OUT.split("/")[-1]}  ·  {len(films)} funciones de '

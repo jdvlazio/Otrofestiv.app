@@ -584,6 +584,22 @@ export const SECTION_ARCHETYPES = {
   // Franja Académica de FICMA — el festival la divide en talleres y charlas.
   '🛠️ Talleres': 'Charlas / Industria',
   '💬 Charlas': 'Charlas / Industria',
+
+  // Cinemancia 2026 (sexta edición). Cinco heredan emoji y arquetipo de
+  // Cinemancia 2025 para que el festival no cambie de color entre ediciones.
+  '⭐ Función inaugural': 'Apertura / Gala',
+  '🎬 Función de clausura': 'Clausura',
+  '🔺 Programa 1. El espesor de las formas': 'Cortos / Programas',
+  '👁️ Programa 2. Teoremas sobre la mirada': 'Cortos / Programas',
+  '🌱 Competencia Nuevas voces': 'Competencia',
+  '✨ Proyecciones especiales': 'Especiales / Eventos',
+  '⚗️ Alquimia de la luz. El cine de Luciana Decker': 'Retrospectiva / Tributo',
+  '🃏 Carta blanca': 'Perspectivas / Miradas',
+  '🌷 La primavera llega para los que esperan. El cine de José Luis Torres Leiva': 'Retrospectiva / Tributo',
+  '🌡️ Febril incisión. El cine de Thomas Fürhapter': 'Retrospectiva / Tributo',
+  '🖤 Sick and Dirty. Curaduría de Michael Koresky': 'Perspectivas / Miradas',
+  '📼 La sutil materia. Sergio Navarro': 'Retrospectiva / Tributo',
+  '🇦🇷 Historia(s) del cine: Argentina. Curaduría de José Miccio': 'Muestra / País',
 };
 
 // mergeFestivalSections(sections) — DATA-DRIVEN (P2.2): un festival declara sus
