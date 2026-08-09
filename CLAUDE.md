@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `e367ddc fix(ficdeh): el barrido de la web no llegaba al festival — 48 salas, 3 funciones`
+> Último commit: `8bf985b Merge remote-tracking branch 'origin/main' into chore/barreras-git`
 
 ---
 
