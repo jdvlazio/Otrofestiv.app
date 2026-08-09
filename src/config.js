@@ -602,6 +602,8 @@ export const SECTION_ARCHETYPES = {
   '🖤 Sick and Dirty. Curaduría de Michael Koresky': 'Perspectivas / Miradas',
   '📼 La sutil materia. Sergio Navarro': 'Retrospectiva / Tributo',
   '🇦🇷 Historia(s) del cine: Argentina. Curaduría de José Miccio': 'Muestra / País',
+  '🏆 Competencia Central': 'Competencia',
+  '🎞️ Competencia de Cortometrajes': 'Competencia',
 };
 
 // mergeFestivalSections(sections) — DATA-DRIVEN (P2.2): un festival declara sus

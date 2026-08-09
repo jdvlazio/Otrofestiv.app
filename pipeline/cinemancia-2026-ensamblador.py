@@ -100,14 +100,19 @@ SECCIONES = [
     ('Historia(s) del cine: Argentina. Curaduría de José Miccio', '🇦🇷', 'Muestra / País',
      'Histoire(s) of Cinema: Argentina. Curated by José Miccio'),
 ]
-# Única excepción a «tal cual», decidida por Juan el 9 ago 2026: el PDF de este
-# año escribe dos secciones en minúscula que en 2025 iban en Title Case. Se
-# muestran como en 2025 —«se ve mucho más título de sección»— y de paso vuelven
-# a ser exactamente la misma clave del mapa, o sea herencia real y no una
-# entrada nueva. El PDF sigue siendo la fuente: esto es solo cómo se rotula.
+# Única excepción a «tal cual», decidida por Juan el 9 ago 2026: los nombres
+# genéricos de sección van en Title Case, «se ve mucho más título de sección».
+# El PDF los escribe en minúscula. Esto NO cambia qué secciones hay ni qué obra
+# va en cada una —eso lo sigue mandando el PDF— solo cómo se rotulan.
+# Alcance: los cinco que listó Juan. Los nombres que ya son título propio
+# («La sutil materia. Sergio Navarro», «Carta blanca», «Función inaugural»…)
+# se quedan como los escribe el festival.
 ROTULO = {
-    'Competencia Nuevas voces': 'Competencia Nuevas Voces',
-    'Proyecciones especiales':  'Proyecciones Especiales',
+    'Competencia central':          'Competencia Central',
+    'Competencia de cortometrajes': 'Competencia de Cortometrajes',
+    'Competencia Nuevas voces':     'Competencia Nuevas Voces',
+    'Proyecciones especiales':      'Proyecciones Especiales',
+    # «Iluminaciones» ya es una sola palabra: no necesita entrada.
 }
 SEC = {s: (f'{e} {ROTULO.get(s, s)}', a, en, ROTULO.get(s, s))
        for s, e, a, en in SECCIONES}
