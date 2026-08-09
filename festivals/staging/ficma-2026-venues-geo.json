@@ -1,0 +1,321 @@
+{
+ "Alianza Francesa": {
+  "ciclo": "",
+  "n": 2,
+  "salas": [],
+  "consulta": "Alianza Francesa, Manizales, Caldas, Colombia",
+  "_prec": "manual",
+  "_nota": "buscar a mano en Google Maps",
+  "lat": 5.0588125,
+  "lng": -75.4884375
+ },
+ "All Cine": {
+  "ciclo": "",
+  "n": 15,
+  "salas": [],
+  "consulta": "All Cine, Manizales, Caldas, Colombia",
+  "_prec": "manual",
+  "_nota": "buscar a mano en Google Maps",
+  "lat": 5.0563125,
+  "lng": -75.4854375
+ },
+ "Aranjuez": {
+  "ciclo": "Cine al barrio",
+  "n": 1,
+  "salas": [],
+  "consulta": "Aranjuez, Manizales, Caldas, Colombia",
+  "lat": 5.0425408,
+  "lng": -75.4997759,
+  "_prec": "nominatim",
+  "_match": "Aranjuez, Comuna Universitaria, Perímetro Urbano Manizales, Manizales, Centrosur, Caldas, "
+ },
+ "Auditorio Juan Hurtado - Universidad Nacional": {
+  "ciclo": "",
+  "n": 3,
+  "salas": [],
+  "consulta": "Universidad Nacional, Manizales, Caldas, Colombia",
+  "lat": 5.0568793,
+  "lng": -75.4913791,
+  "_prec": "nominatim",
+  "_match": "Universidad Nacional - Campus Palogrande, Avenida Paralela, Palogrande, Comuna Palogrande,"
+ },
+ "Auditorio Roberto Vélez Correa - Universidad de Caldas": {
+  "ciclo": "",
+  "n": 1,
+  "salas": [],
+  "consulta": "Universidad de Caldas, Manizales, Caldas, Colombia",
+  "_prec": "manual",
+  "_nota": "buscar a mano en Google Maps",
+  "lat": 5.0559375,
+  "lng": -75.4929375
+ },
+ "Auditorio principal Campus El Cable - Universidad Nacional de Colombia": {
+  "ciclo": "",
+  "n": 1,
+  "salas": [],
+  "consulta": "Universidad Nacional de Colombia, Manizales, Caldas, Colombia",
+  "_prec": "manual",
+  "_nota": "buscar a mano en Google Maps",
+  "lat": 5.0555625,
+  "lng": -75.4861875
+ },
+ "Barrio la estrella": {
+  "ciclo": "Cine bajo la niebla",
+  "n": 1,
+  "salas": [],
+  "consulta": "Barrio la estrella, Manizales, Caldas, Colombia",
+  "_prec": "manual",
+  "_nota": "buscar a mano en Google Maps",
+  "lat": 5.0773125,
+  "lng": -75.4873125
+ },
+ "Batuta": {
+  "ciclo": "",
+  "n": 2,
+  "salas": [],
+  "consulta": "Batuta, Manizales, Caldas, Colombia",
+  "lat": 5.0510059,
+  "lng": -75.4826798,
+  "_prec": "nominatim",
+  "_match": "Batuta - Sede Principal, Carrera 22, Zona Industrial Alta Suiza, Comuna Ecoturística Cerro"
+ },
+ "Bosques del Norte": {
+  "ciclo": "Cine al barrio",
+  "n": 1,
+  "salas": [],
+  "consulta": "Bosques del Norte, Manizales, Caldas, Colombia",
+  "lat": 5.0829919,
+  "lng": -75.4892998,
+  "_prec": "nominatim",
+  "_match": "Bosques del Norte, Comuna Ciudadela del Norte, Perímetro Urbano Manizales, Manizales, Cent"
+ },
+ "Cancha de Bengala": {
+  "ciclo": "Cine al barrio",
+  "n": 1,
+  "salas": [],
+  "consulta": "Cancha de Bengala, Manizales, Caldas, Colombia",
+  "_prec": "manual",
+  "_nota": "buscar a mano en Google Maps",
+  "lat": 5.0820625,
+  "lng": -75.4896875
+ },
+ "Cancha la Isla": {
+  "ciclo": "Cine bajo la niebla",
+  "n": 1,
+  "salas": [],
+  "consulta": "Cancha la Isla, Manizales, Caldas, Colombia",
+  "_prec": "sin verificar",
+  "_nota": "buscar a mano en Google Maps"
+ },
+ "Cine fest": {
+  "ciclo": "Expoferias",
+  "n": 9,
+  "salas": [],
+  "consulta": "Cine fest, Manizales, Caldas, Colombia",
+  "_prec": "manual",
+  "_nota": "buscar a mano en Google Maps",
+  "lat": 5.0416875,
+  "lng": -75.4753125
+ },
+ "Cineclub La Rendija": {
+  "ciclo": "",
+  "n": 1,
+  "salas": [],
+  "consulta": "Cineclub La Rendija, Manizales, Caldas, Colombia",
+  "_prec": "sin verificar",
+  "_nota": "buscar a mano en Google Maps"
+ },
+ "Clandestino Records": {
+  "ciclo": "",
+  "n": 2,
+  "salas": [],
+  "consulta": "Clandestino Records, Manizales, Caldas, Colombia",
+  "_prec": "manual",
+  "_nota": "buscar a mano en Google Maps",
+  "lat": 5.0701875,
+  "lng": -75.5166875
+ },
+ "Colombo": {
+  "ciclo": "",
+  "n": 2,
+  "salas": [],
+  "consulta": "Colombo, Manizales, Caldas, Colombia",
+  "lat": 5.058704,
+  "lng": -75.4896552,
+  "_prec": "nominatim",
+  "_match": "Centro Colombo Americano, Calle 62, La Estrella, Comuna Palogrande, Perímetro Urbano Maniz"
+ },
+ "El Carmen": {
+  "ciclo": "Cine al barrio",
+  "n": 1,
+  "salas": [],
+  "consulta": "El Carmen, Manizales, Caldas, Colombia",
+  "lat": 5.0601441,
+  "lng": -75.5191322,
+  "_prec": "nominatim",
+  "_match": "El Carmen, Comuna La Macarena, Perímetro Urbano Manizales, Manizales, Centrosur, Caldas, R"
+ },
+ "La Enea Cisco": {
+  "ciclo": "Cine al barrio",
+  "n": 1,
+  "salas": [],
+  "consulta": "La Enea Cisco, Manizales, Caldas, Colombia",
+  "lat": 5.0325643,
+  "lng": -75.46605,
+  "_prec": "nominatim",
+  "_match": "Cisco La Enea, Carrera 33B, San Marcel, Comuna Tesorito, Perímetro Urbano Manizales, Maniz"
+ },
+ "Media Torta de Chipre": {
+  "ciclo": "Cine bajo la niebla",
+  "n": 1,
+  "salas": [],
+  "consulta": "Media Torta de Chipre, Manizales, Caldas, Colombia",
+  "_prec": "manual",
+  "_nota": "buscar a mano en Google Maps",
+  "lat": 5.0723125,
+  "lng": -75.5259375
+ },
+ "Parque Ernesto Gutiérrez": {
+  "ciclo": "Cine bajo la niebla",
+  "n": 2,
+  "salas": [],
+  "consulta": "Parque Ernesto Gutiérrez, Manizales, Caldas, Colombia",
+  "_prec": "manual",
+  "_nota": "buscar a mano en Google Maps",
+  "lat": 5.0683125,
+  "lng": -75.5121875
+ },
+ "Parque Fundadores": {
+  "ciclo": "Cine al barrio",
+  "n": 1,
+  "salas": [],
+  "consulta": "Parque Fundadores, Manizales, Caldas, Colombia",
+  "lat": 5.0675654,
+  "lng": -75.5104371,
+  "_prec": "nominatim",
+  "_match": "Parque Fundadores, Comuna Cumanday, Perímetro Urbano Manizales, Manizales, Centrosur, Cald"
+ },
+ "Plaza de Bolivar": {
+  "ciclo": "Cine bajo la niebla",
+  "n": 1,
+  "salas": [],
+  "consulta": "Plaza de Bolivar, Manizales, Caldas, Colombia",
+  "lat": 5.0680769,
+  "lng": -75.5173616,
+  "_prec": "nominatim",
+  "_match": "Plaza de Bolívar, Centro Histórico de Manizales, Comuna Cumanday, Perímetro Urbano Manizal"
+ },
+ "Rogelio Salmona": {
+  "ciclo": "Cine al aire libre",
+  "n": 1,
+  "salas": [],
+  "consulta": "Rogelio Salmona, Manizales, Caldas, Colombia",
+  "lat": 5.0545465,
+  "lng": -75.4916559,
+  "_prec": "nominatim",
+  "_match": "Centro Cultural Rogelio Salmona, Calle 65, Palogrande, Comuna Palogrande, Perímetro Urbano"
+ },
+ "SES Hospital Universitario de Caldas": {
+  "ciclo": "",
+  "n": 1,
+  "salas": [],
+  "consulta": "SES Hospital Universitario de Caldas, Manizales, Caldas, Colombia",
+  "_prec": "manual",
+  "_nota": "buscar a mano en Google Maps",
+  "lat": 5.0629375,
+  "lng": -75.5009375
+ },
+ "Samaria": {
+  "ciclo": "Cine al barrio",
+  "n": 1,
+  "salas": [],
+  "consulta": "Samaria, Manizales, Caldas, Colombia",
+  "lat": 5.078985,
+  "lng": -75.486459,
+  "_prec": "nominatim",
+  "_match": "Samaria, Comuna Nuevo Horizonte, Perímetro Urbano Manizales, Manizales, Centrosur, Caldas,"
+ },
+ "San José": {
+  "ciclo": "Cine al barrio",
+  "n": 1,
+  "salas": [],
+  "consulta": "San José, Manizales, Caldas, Colombia",
+  "_prec": "sin verificar",
+  "_nota": "buscar a mano en Google Maps"
+ },
+ "Teatro los Fundadores": {
+  "ciclo": "",
+  "n": 20,
+  "salas": [
+   "Sala Fundadores",
+   "Sala Olimpia"
+  ],
+  "consulta": "Teatro los Fundadores, Manizales, Caldas, Colombia",
+  "lat": 5.0684238,
+  "lng": -75.5103558,
+  "_prec": "nominatim",
+  "_match": "Teatro Fundadores, Calle 33, Fundadores, Comuna Cumanday, Perímetro Urbano Manizales, Mani"
+ },
+ "Torre del Cable": {
+  "ciclo": "Cine bajo la niebla",
+  "n": 1,
+  "salas": [],
+  "consulta": "Torre del Cable, Manizales, Caldas, Colombia",
+  "lat": 5.0572695,
+  "lng": -75.4860656,
+  "_prec": "nominatim",
+  "_match": "Portal del Cable Torre Empresarial, Calle 64, El Cable, Comuna Palogrande, Perímetro Urban"
+ },
+ "Universidad Autónoma - Aula Torreón F-101": {
+  "ciclo": "",
+  "n": 1,
+  "salas": [],
+  "consulta": "Torreón F-101, Manizales, Caldas, Colombia",
+  "_prec": "manual",
+  "_nota": "buscar a mano en Google Maps",
+  "lat": 5.0674375,
+  "lng": -75.5031875
+ },
+ "Universidad de Caldas": {
+  "lat": 5.0559375,
+  "lng": -75.4929375,
+  "_prec": "manual",
+  "_remap": "coordenada verificada de «Auditorio Roberto Vélez Correa - Universidad de Caldas»"
+ },
+ "Universidad Nacional · Palogrande": {
+  "lat": 5.0568793,
+  "lng": -75.4913791,
+  "_prec": "nominatim",
+  "_remap": "coordenada verificada de «Auditorio Juan Hurtado - Universidad Nacional»"
+ },
+ "Universidad Nacional · El Cable": {
+  "lat": 5.0555625,
+  "lng": -75.4861875,
+  "_prec": "manual",
+  "_remap": "coordenada verificada de «Auditorio principal Campus El Cable - Universidad Nacional de Colombia»"
+ },
+ "Universidad Autónoma": {
+  "lat": 5.0674375,
+  "lng": -75.5031875,
+  "_prec": "manual",
+  "_remap": "coordenada verificada de «Universidad Autónoma - Aula Torreón F-101»"
+ },
+ "Expoferias": {
+  "lat": 5.0416875,
+  "lng": -75.4753125,
+  "_prec": "manual",
+  "_remap": "coordenada verificada de «Cine fest»"
+ },
+ "Secretaría de la Mujer y Equidad de Género": {
+  "lat": 5.0678125,
+  "lng": -75.5199375,
+  "_prec": "manual",
+  "_nota": "Ambas secretarías están en la Alcaldía de Manizales (Cra. 22 Bolívar): comparten coordenada A PROPÓSITO. Verificado por reverse-geocoding; no es el error de sedes apiladas."
+ },
+ "Casa de la Secretaría de Cultura": {
+  "lat": 5.0678125,
+  "lng": -75.5199375,
+  "_prec": "manual",
+  "_nota": "Ambas secretarías están en la Alcaldía de Manizales (Cra. 22 Bolívar): comparten coordenada A PROPÓSITO. Verificado por reverse-geocoding; no es el error de sedes apiladas."
+ }
+}

@@ -20,7 +20,7 @@ import json, os, re, datetime
 import openpyxl
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-XLSX = os.path.expanduser('~/Desktop/Programación _ MEDELLÍN.xlsx')
+XLSX = f'{REPO}/fuentes/ficdeh-2026/Programación _ MEDELLÍN.xlsx'
 OUT = f'{REPO}/festivals/staging/ficdeh-2026-medellin-oficial.json'
 
 COLS = {'fecha': 1, 'hora': 2, 'sede': 3, 'categoria': 4, 'titulo': 5, 'director': 6,

@@ -306,3 +306,28 @@ Siempre emoji de banderas: `"🇨🇴"`, `"🇦🇷🇫🇷"`
 /docs/ARQUITECTURA.md         ← documentación técnica completa del sistema
 tools/enricher.html            ← enricher de películas (TMDB + Letterboxd)
 ```
+
+---
+
+## Fuentes originales — `fuentes/<festival-id>/`
+
+El PDF del programa, el Excel del organizador, los afiches y los pósters
+oficiales van en **`fuentes/<festival-id>/`**, y los scripts los leen de ahí con
+ruta relativa al repo (`f'{REPO}/fuentes/…'`), nunca del escritorio ni de una
+ruta absoluta de una máquina.
+
+**El escritorio es de tránsito.** Sirve para dejar un archivo a mano y ubicarlo
+rápido; nada de trabajo vive ahí. Además macOS lo protege por aplicación, así
+que un archivo que pasa por el escritorio arrastra un atributo `com.apple.macl`
+que puede impedir abrirlo después (`xattr -c <archivo>` lo limpia).
+
+**`fuentes/` está en `.gitignore`**: son decenas de MB por festival y el repo
+sirve GitHub Pages. Lo que se DERIVA de esas fuentes —el texto extraído, la
+programación parseada, el geocoding— sí se versiona, en `festivals/staging/`,
+con su `_provenance`. Así el pipeline es reproducible sin cargar el binario:
+FICMA, por ejemplo, guarda su OCR completo en
+`festivals/staging/ficma-2026-ocr.json`.
+
+Si clonás el repo en otra máquina, `fuentes/` llega vacío y los lectores de
+fuente original no corren; todo lo demás sí. Pedile los originales a quien montó
+el festival.
