@@ -365,11 +365,13 @@ def main():
         films.append(e)
 
     films.sort(key=lambda x: (x['day'], x['time'], x['title']))
-    # day_order — posición dentro del día. Sin él la vista por días ordena por
-    # inserción y el programa sale desordenado.
-    for dia in dias:
-        for i, x in enumerate([f for f in films if f['day'] == dia]):
-            x['day_order'] = i
+    # day_order — el ÍNDICE DEL DÍA dentro de dayKeys, no la posición de la
+    # función dentro del día. Lo tenía como contador correlativo y por eso en la
+    # ficha de un taller multi-día el SÁB 15 salía antes que el VIE 14: la
+    # primera sesión del sábado llevaba 0 y la segunda del viernes 1.
+    # Guardián: [day-order-indice] en validate-festivals.js.
+    for x in films:
+        x['day_order'] = dias.index(x['day'])
 
     d = {
         '_provenance': {
