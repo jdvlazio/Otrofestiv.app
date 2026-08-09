@@ -5,7 +5,12 @@ categoría del evento; SIN prelanzamiento del 5 sep (ventana 14–20); doble ciu
 Quibdó/Bogotá con city en venues."""
 import json, re, html, unicodedata, collections
 
-REPO='/Users/Juanda/Documents/Otrofestiv-dev'
+# Derivada del propio archivo, como el resto del pipeline. Estaba quemada en
+# absoluto («/Users/Juanda/Documents/Otrofestiv-dev») y por eso el ensamblador
+# no corría en un worktree: leía los sidecars del checkout principal, que en
+# una rama distinta tiene otro contenido — o directamente no los tiene.
+import os
+REPO=os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 staging=json.load(open(f'{REPO}/festivals/staging/qaff-2026.json'))
 side=json.load(open(f'{REPO}/festivals/staging/qaff-2026-programacion-raw.json'))
 
@@ -167,15 +172,32 @@ def section_of(ev):
     return name
 
 # ── ensamblar funciones ───────────────────────────────────────────────────────
-out_films=[]; sin_match=[]; enriquecidas=0
+out_films=[]; sin_match=[]; enriquecidas=0; continuos=[]
 ACTIVIDAD=re.compile(r'master ?class|networking|dialogo|diálogo|lanzamiento|apertura|clausura|muestra art|ceremonia|conversatorio|taller|panel', re.I)
 for ev in sorted(events, key=lambda e:e['start']):
     day=ev['start'][:10]; time=ev['start'][11:16]
+    # La duración sale de fin−inicio, pero eso SOLO vale cuando el evento es una
+    # función. Cuando es una exposición, el «fin» es la fecha de CIERRE: la
+    # Muestra Artística va del 14 SEP al 17 OCT y salían 47.580 min, o sea 33
+    # días de «duración». Un valor así envenena el planificador: la obra ocupa
+    # el festival entero y todo le da conflicto.
+    #
+    # Regla, tomada de FICDEH: la duración es la de la OBRA, nunca la de la
+    # ventana en que está disponible (allí las proyecciones en loop conservan
+    # sus 8, 17 o 20 min y lo continuo se dice en el nombre de la sala). La
+    # duración más larga de FICDEH, con 444 funciones, son 180 min.
+    #
+    # Por encima del tope no se inventa un número: se deja VACÍA y se reporta.
+    # Un dato faltante se ve; uno inventado no.
+    TOPE_MIN = 480                       # 8 h: nada que sea una función dura más
     dur_min=None
     try:
         t0=datetime.datetime.fromisoformat(ev['start']); t1=datetime.datetime.fromisoformat(ev['end'])
         dur_min=int((t1-t0).total_seconds()//60)
     except: pass
+    if dur_min and dur_min > TOPE_MIN:
+        continuos.append((ev['title'], ev['start'][:10], ev['end'][:10], dur_min))
+        dur_min=None
     vk=venue_key(ev.get('venue'))
     sec=section_of(ev)
     film=find_film(ev['title'])
@@ -250,9 +272,41 @@ final={
  'films':out_films,
  '_obras_sin_funcion':sin_funcion,
 }
+# ── candado de idempotencia ───────────────────────────────────────────────────
+# Este script LEE y ESCRIBE el mismo archivo: toma las obras de Etapa A de
+# qaff-2026.json y sobreescribe ese mismo qaff-2026.json con la Etapa B. O sea
+# que se come su propia salida. Mientras solo corra una vez no pasa nada, pero
+# sobre el archivo YA CURADO destruye trabajo que no está en ninguna otra parte:
+# comprobado el 9 ago 2026, un re-ensamblado se llevó por delante los 9 emoji de
+# sección que aprobó Juan y los 37 `_src.tmdb_id`, sin avisar y sin error.
+#
+# Así que antes de escribir se mira lo que hay. Si el archivo actual ya tiene
+# curaduría, el script se detiene. Con --forzar se sobreescribe igual, pero es
+# una decisión explícita y no un descuido.
+import sys as _sys
+_prev = staging
+_emoji = sum(1 for k in (_prev.get('sections') or {}) if k and not k[0].isalnum())
+_tmdb  = sum(1 for f in _prev.get('films', [])
+             if isinstance(f.get('_src'), dict) and f['_src'].get('tmdb_id'))
+_nuevo_emoji = sum(1 for k in (final.get('sections') or {}) if k and not k[0].isalnum())
+if (_emoji and not _nuevo_emoji) or _tmdb:
+    if '--forzar' not in _sys.argv:
+        print('\n✗ EL ENSAMBLADO SE DETIENE: el archivo staged ya está curado y este '
+              'script lo sobreescribiría.')
+        print(f'   emoji de sección: {_emoji} ahora → {_nuevo_emoji} tras re-ensamblar')
+        print(f'   _src.tmdb_id    : {_tmdb} se perderían')
+        print('   Si de verdad quieres re-ensamblar desde cero: --forzar')
+        _sys.exit(1)
+    print('\n⚠ --forzar: se sobreescribe la curaduría existente '
+          f'({_emoji} emoji de sección, {_tmdb} tmdb_id).')
+
 json.dump(final, open(f'{REPO}/festivals/staging/qaff-2026.json','w',encoding='utf-8'), ensure_ascii=False, indent=1)
 
 print(f'funciones: {len(out_films)} ({sum(1 for f in out_films if f.get("type")=="film")} film / {sum(1 for f in out_films if f.get("type")=="event")} event)')
+if continuos:
+    print(f'\nEVENTOS CONTINUOS ({len(continuos)}) — duración vaciada, es una ventana y no una función:')
+    for t,a,b,m in continuos:
+        print(f'   · {t[:44]:46} {a} → {b}  ({m} min = {m//1440} días)')
 print(f'eventos descartados (fuera de ventana): {[(e["start"][:10],e["title"][:40]) for e in descartados]}')
 print(f'enriquecidas con año/sinopsis del desc: ver marcas')
 print(f'sin match con Etapa A ({len(sin_match)}):')

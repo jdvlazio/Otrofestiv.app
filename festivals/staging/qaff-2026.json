@@ -210,7 +210,7 @@
   {
    "title": "MUESTRA ARTISTICA",
    "type": "event",
-   "duration": "47580 min",
+   "duration": "",
    "synopsis": "\"Magia en el Monte\" — Mery Palmezzano Muestra artística de apertura · Vernissage QAFF 2026 · Quibdó Magia en el Monte es una instalación inmersiva que transforma el espacio de la Biblioteca Pública Arnoldo Palacios Mosquera en un lugar mítico: una manigua interior donde lo femenino florece en su dimensión más elevada. A través de ilustración y alambrismo, la propuesta invita a quien entra a detenerse, a reconocer la magia que habita en la naturaleza y en las mujeres que la guardan.",
    "synopsis_lang": "es",
    "section": "🖼️ Muestra Artística",
@@ -233,7 +233,8 @@
     ]
    },
    "event_kind": "",
-   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026"
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026",
+   "_pendiente": "duración: el evento del calendario va del 14 SEP al 17 OCT porque es una MUESTRA abierta en continuo, no una función. Los 47.580 min que salían de fin−inicio son la ventana, no la obra. Se deja vacía; si la organización publica una duración de visita, va aquí."
   },
   {
    "title": "FACE TO FACE",
