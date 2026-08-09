@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202608090932">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202608090932">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202608091004">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202608091004">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -1050,7 +1050,16 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .pelicula-venue{font-size:var(--t-caption);color:rgba(240,237,232,.6);flex:1;min-width:0;cursor:pointer;transition:color var(--tr-base);display:flex;align-items:flex-start;gap:var(--sp-1);position:relative}
 .pelicula-venue::after{content:'';position:absolute;inset:-6px 0}
 .pelicula-venue:active{color:var(--amber)}
-.pelicula-venue>svg{margin-top:3px}
+/* flex-shrink:0 — el pin NO cede ancho. `.pelicula-venue` es flex y el <svg> es un
+   item más: sin esto el navegador reparte el ahogo entre icono y texto, y como el
+   SVG no tiene ancho intrínseco, cede primero. El texto puede envolver; el icono
+   no, así que se estruja en horizontal conservando el alto — no se ve más chico,
+   se ve DEFORMADO. Medido en FICMA: «Secretaría de la Mujer y Equidad de Género»
+   dejaba el pin en 7,5×13 (42% de ancho perdido), y ya con «Teatro los Fundadores»
+   perdía un 8%. Afectaba SEIS superficies, no solo la ficha: Programa (día y
+   TODO), Mi Plan, Intereses y el sheet de sede comparten esta fila.
+   Reportado por Juan el 9 ago 2026. Guardián: G03 en tests/geometry.spec.js. */
+.pelicula-venue>svg{margin-top:3px;flex-shrink:0}
 .saved-venue svg,.mplan-rvenue svg,.mplan-wk-venue svg,.checkin-opt-venue svg{vertical-align:middle}
 .venue-text{line-height:1.4}
 
@@ -3176,7 +3185,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202608090932";
+    s.src="/src/main.js?v=202608091004";
     document.body.appendChild(s);
     // Watchdog de boot (P0 18 jul): si el grafo ESM murió en el import (caché
     // HTTP mixta tras deploys en ráfaga — main.js nuevo + módulo viejo sin el

@@ -175,3 +175,79 @@ test('G02 — el grupo de sesiones comparte eje y no le roba ancho a la sede', a
   expect(m.sedeNormal - m.sedeGrupo,
     `el grupo le roba ${(m.sedeNormal - m.sedeGrupo).toFixed(1)}px a la sede (tope 8)`).toBeLessThanOrEqual(8);
 });
+
+// ── G03 — ningún icono se estruja ─────────────────────────────────────────────
+// Un <svg> dentro de un contenedor flex es un item más. Sin `flex-shrink:0`, el
+// navegador reparte el ahogo entre el icono y el texto, y el SVG —que no tiene
+// ancho intrínseco— cede primero: el texto envuelve, el icono no puede, así que
+// pierde ancho conservando el alto. No se ve más chico: se ve DEFORMADO.
+//
+// Reportado por Juan el 9 ago 2026 sobre el pin de sede. Medido en FICMA:
+// «Secretaría de la Mujer y Equidad de Género» dejaba el pin en 7,5×13 —42% de
+// ancho— y ya «Teatro los Fundadores» perdía un 8%. Afectaba SEIS superficies.
+//
+// El criterio es la PROPORCIÓN, no el tamaño: un icono que rinde más chico en
+// ambas dimensiones lo está achicando el CSS a propósito y se ve bien. Esa
+// distinción es la que hace útil al guardián — con «más angosto que su ancho
+// declarado» daba 5 culpables y 4 eran falsos positivos.
+const _detectorIconos = () => {
+  const rotos = [];
+  document.querySelectorAll('svg[width][height]').forEach(svg => {
+    const w = parseFloat(svg.getAttribute('width')), h = parseFloat(svg.getAttribute('height'));
+    if (!w || !h) return;
+    const r = svg.getBoundingClientRect();
+    if (r.width === 0 || r.height === 0) return;            // oculto: no se juzga
+    const propDecl = w / h, propReal = r.width / r.height;
+    if (Math.abs(propReal - propDecl) / propDecl < 0.02) return;
+    const p = svg.parentElement;
+    rotos.push(`${p ? '.' + (p.className || '').toString().split(' ')[0] : '?'}: `
+      + `${w}×${h} declarado → ${r.width.toFixed(1)}×${r.height.toFixed(1)} `
+      + `(texto: "${(p ? p.textContent : '').replace(/\s+/g, ' ').trim().slice(0, 30)}")`);
+  });
+  return [...new Set(rotos)];
+};
+
+test('G03 — ningún icono pierde su proporción por el flex del contenedor', async ({ page }) => {
+  // FICMA a propósito: tiene las sedes más largas del catálogo, que es lo que
+  // aprieta. Con nombres cortos el defecto no aparece y el test pasaría en vano.
+  await enterFestival(page, 'ficma2026', '2026-08-09T08:00:00-05:00');
+  const rotos = [];
+  // DOS muestras, y solo cuenta lo que aparece en las dos. Los sheets entran con
+  // animación y una medición a mitad de camino inventa proporciones que no existen
+  // un frame después: así salió flaky en su primera corrida. Un defecto real de
+  // layout no se arregla solo en 250ms, así que la intersección no pierde nada.
+  const barrer = async (pantalla) => {
+    const a = await page.evaluate(_detectorIconos);
+    await page.waitForTimeout(250);
+    const b = await page.evaluate(_detectorIconos);
+    a.filter(x => b.includes(x)).forEach(x => rotos.push(`[${pantalla}] ${x}`));
+  };
+
+  await page.evaluate(() => {
+    activeVenue = 'all';
+    const largo = FILMS.filter(f => f.venue && f.day && f.time)
+      .sort((a, b) => (b.venue || '').length - (a.venue || '').length)[0];
+    openPelSheet(largo.title, largo);
+  });
+  await page.waitForTimeout(700);
+  await barrer('ficha');
+
+  await page.evaluate(() => { closePelSheet(); switchMainNav('mnav-cartelera'); showDayView(); });
+  await page.waitForTimeout(600);
+  await barrer('programa');
+
+  await page.evaluate(() => {
+    const fs = FILMS.filter(f => f.day && f.time && f.venue && !f.info).slice(0, 5);
+    state.set('savedAgenda', { schedule: fs.map(f => ({ ...f, _title: f.title })) });
+    fs.forEach(f => watchlist.add(f.title));
+    switchMainNav('mnav-miplan'); showAgView();
+  });
+  await page.waitForTimeout(800);
+  await barrer('mi plan');
+
+  await page.evaluate(() => { switchMainNav('mnav-seleccion'); showAgView(); });
+  await page.waitForTimeout(700);
+  await barrer('intereses');
+
+  expect(rotos, `icono(s) deformado(s):\n  ${rotos.join('\n  ')}`).toEqual([]);
+});
