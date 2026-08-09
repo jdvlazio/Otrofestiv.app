@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `8bf985b Merge remote-tracking branch 'origin/main' into chore/barreras-git`
+> Último commit: `3d1b474 feat(ficma): sinopsis oficiales de AA965 y «Que el cielo nos perdone»`
 
 ---
 
@@ -63,6 +63,7 @@ Juan es Product Owner, diseñador y developer. Claude ejecuta; Juan audita y apr
 | `olhar2026` | Olhar de Cinema | Curitiba | JUN 4–13 | Archivado |
 | `tercertiempo2026` | Tercer Tiempo Fest | Bogotá | 13–19 JUL | Recién terminado |
 | `fantasofest2026` | FantasoFest | Bogotá | 13–19 JUL | Recién terminado |
+| `ficma2026` | FICMA | Manizales | 10–17 AGO | **Próximo / activo** |
 | `ficdeh2026` | FICDEH | Colombia | 12–19 AGO | **Próximo / activo** |
 | `finca2026` | FINCA | Buenos Aires | 12–19 AGO | **Próximo / activo** |
 | `ficmontanas2026` | Ficmontañas | Salento | JUL 1–5 | Archivado |

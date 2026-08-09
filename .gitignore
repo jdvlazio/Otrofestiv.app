@@ -25,10 +25,20 @@ playwright-report*/
 test-results*/
 test-results*.json
 
-# fuentes/ — PDF, Excel y afiches originales del festival. Material de TRABAJO,
-# no del producto: pesa decenas de MB y su sitio es el disco de Juan, no el repo.
+# fuentes/ — PDF del programa, Excel del organizador, afiches y pósters
+# originales de cada festival. Material de TRABAJO, no del producto: pesa
+# decenas de MB por festival y el repo sirve GitHub Pages.
 # (Entraron 68 MB por un `git add -A` cuando esta regla aún no existía.)
+# Viven CON el proyecto y no en el escritorio —el escritorio es de tránsito—.
+# Lo que se DERIVA de ellas sí se versiona, en festivals/staging/, con su
+# procedencia. Ver pipeline/PROTOCOLO.md § Fuentes originales.
+#
+# Las DOS líneas hacen falta. «fuentes/» con barra ignora el directorio, pero un
+# SYMLINK con ese nombre es un archivo y se cuela igual: uno apuntando al disco
+# de Juan llegó a main y tumbó el deploy de Pages, porque en el runner queda
+# colgando y tar aborta («./fuentes: File removed before we read it»).
 fuentes/
+fuentes
 
 # Y las extensiones del material original, esté donde esté: un PDF de programación
 # o un Excel de horarios son la FUENTE de la que se extrae el catálogo, nunca el
