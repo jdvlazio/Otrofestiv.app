@@ -107,7 +107,7 @@ def main():
             continue
         w, h, filas = px
         t, b = borde(filas, True), borde(filas, False)
-        if t + b < 4:                       # 3 px de ruido no son un marco
+        if min(t, b) < 2:                   # el marco debe estar en AMBOS lados
             continue
         # escalar al tamaño original y recortar
         W = int(subprocess.run(['sips', '-g', 'pixelWidth', real], capture_output=True)
@@ -115,14 +115,21 @@ def main():
         H = int(subprocess.run(['sips', '-g', 'pixelHeight', real], capture_output=True)
                 .stdout.decode().split(':')[-1])
         rt, rb = round(t * H / h), round(b * H / h)
+        # Se recorta lo MISMO por los dos lados, usando el menor. sips recorta
+        # desde el centro y no acepta offset negativo —lo lee como bandera y
+        # aborta—, así que un marco asimétrico fallaba en silencio (habitante:
+        # 14 arriba, 17 abajo → offset −1 → sips error → póster sin tocar).
+        # Simétrico es además más seguro: nunca se come imagen, y deja como
+        # mucho unos pocos px de marco en el lado más grueso.
+        rt = rb = min(rt, rb)
         nuevo_h = H - rt - rb
         tocados.append((os.path.basename(p), f'{H}px → {nuevo_h}px (arriba {rt}, abajo {rb})'))
         if aplicar:
-            # sips recorta desde el CENTRO: se compensa el desbalance con offset
-            off = (rt - rb) // 2
-            subprocess.run(['sips', '-c', str(nuevo_h), str(W),
-                            '--cropOffset', str(off), '0', real, '--out', real],
-                           capture_output=True)
+            r = subprocess.run(['sips', '-c', str(nuevo_h), str(W), real, '--out', real],
+                               capture_output=True)
+            if r.returncode != 0:                     # nunca más en silencio
+                print(f'   ✗ sips falló en {os.path.basename(p)}: '
+                      f'{r.stderr.decode().strip()[:80]}')
     print(f'{len(vistos)} pósters propios · con marco {len(tocados)}'
           + ('  (APLICADO)' if aplicar else '  (simulación — usar --aplicar)'))
     for n, msg in tocados:
