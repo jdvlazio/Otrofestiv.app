@@ -30,5 +30,19 @@ test-results*.json
 # (Entraron 68 MB por un `git add -A` cuando esta regla aún no existía.)
 fuentes/
 
+# Y las extensiones del material original, esté donde esté: un PDF de programación
+# o un Excel de horarios son la FUENTE de la que se extrae el catálogo, nunca el
+# producto. Lo respalda el guardián [peso-repo], que además pone tope de 3 MB por
+# archivo (el póster legítimo más pesado del repo son 2,28 MB).
+*.pdf
+*.xlsx
+*.xls
+*.docx
+*.doc
+*.numbers
+*.pages
+*.key
+*.psd
+
 # Claude Code (config local de harness, no del proyecto)
 .claude/

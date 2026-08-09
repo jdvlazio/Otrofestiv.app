@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `e39c7ab fix(plan): un taller que ya empezó no se ofrece — lo cazó FICMA (#521)`
+> Último commit: `a3973f1 fix: sacar fuentes/ del repo — 68 MB de material de trabajo`
 
 ---
 
