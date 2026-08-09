@@ -4,18 +4,34 @@
  "_jerarquia_de_fuentes": "PDF oficial del listado > artículo de prensa del festival > fichas de /peliculas/ (solo publica 56 de las 109)",
  "_edicion_anterior": "festivals/cinemancia-2025.json — 87 obras y 35 sedes de 2025. El gazetteer de sedes es reutilizable: casi todas se repiten. Ojo, es esquema viejo (sin _src, sections vacío, day_order como string).",
  "pasos": [
-  {"cmd": "python3 pipeline/cinemancia-2026-extraer-listado.py",     "que": "PDF oficial (Drive) → 109 obras con sección, director, país, año y duración"},
-  {"cmd": "python3 pipeline/cinemancia-2026-cruzar-letterboxd.py",   "que": "lista de Letterboxd × PDF → lbSlug de 107 de 109 (alineación de secuencias)"},
-  {"cmd": "python3 pipeline/cinemancia-2026-barrido-fichas.py",     "que": "ficha de Letterboxd → director, año y tmdbId; VERIFICA el emparejamiento (105/107)"}
+  {
+   "cmd": "python3 pipeline/cinemancia-2026-extraer-listado.py",
+   "que": "PDF oficial (Drive) → 109 obras con sección, director, país, año y duración"
+  },
+  {
+   "cmd": "python3 pipeline/cinemancia-2026-cruzar-letterboxd.py",
+   "que": "lista de Letterboxd × PDF → lbSlug de 107 de 109 (alineación de secuencias)"
+  },
+  {
+   "cmd": "python3 pipeline/cinemancia-2026-barrido-fichas.py",
+   "que": "ficha de Letterboxd → director, año y tmdbId; VERIFICA el emparejamiento (105/107)"
+  },
+  {
+   "cmd": "python3 pipeline/cinemancia-2026-tmdb.py",
+   "que": "tmdbId verificado → sinopsis ES/EN, póster y title_en (sin búsqueda). Requiere TMDB_API_KEY"
+  }
  ],
  "_resuelto_por_el_barrido": [
   "Las 28 parejas que solo se sostenían por el orden quedaron CONFIRMADAS POR DIRECTOR: 28 de 28. Ya no hay zona gris en el emparejamiento.",
   "tmdbId para las 107 con lbSlug — el 100%. La sinopsis y el póster salen de ahí sin buscar nada.",
   "ERRATA RESUELTA CON EVIDENCIA: «La libertad remonta el estadio» es de 1987, no 1897 (Letterboxd, mismo director). No hace falta preguntar; sí avisarles de la errata en su PDF.",
-  "«Jakawisa» (Delia Yujra Chura, 2020) no se pudo verificar: su ficha de Letterboxd no publica director ni año. El título casa exacto, así que se acepta con esta salvedad anotada."
+  "«Jakawisa» (Delia Yujra Chura, 2020) no se pudo verificar: su ficha de Letterboxd no publica director ni año. El título casa exacto, así que se acepta con esta salvedad anotada.",
+  "TMDB por id: sinopsis ES 52/109, sinopsis EN 85/109, póster 94/109. Nada traducido: sin overview en español el campo va vacío.",
+  "Cruzando TMDB con las fichas de su web, la brecha real de sinopsis baja de 57 a 36: hay 21 que la web del festival SÍ publica y se pueden raspar sin pedir nada."
  ],
  "_pendientes": [
-  "TMDB: sinopsis ES/EN y póster de las 107 usando el tmdbId YA verificado. Requiere TMDB_API_KEY en el entorno. Es lo que puede cubrir buena parte de las 53 sinopsis que el festival no ha publicado.",
+  "RASPAR las 21 sinopsis que su web sí publica y TMDB no tiene (paso pendiente de escribir: cinemancia-2026-sinopsis-web.py). Ojo, la ficha mezcla sinopsis y biografía del director en párrafos del mismo formato.",
+  "PEDIR AL FESTIVAL 36 sinopsis: las que no están ni en TMDB ni en su web. Concentradas en Competencia central (10), Competencia de cortometrajes (12) e Iluminaciones (10).",
   "DOS OBRAS SIN LETTERBOXD, ambas de Sergio Navarro: «El santo y el milagro» (1993) y «Valparaíso eterno» (1991). Alta manual o resolver a mano.",
   "PROGRAMACIÓN: no publicada. Regla de secuencia (lección FICDEH): el catálogo se adelanta, la programación NO se toca hasta que el festival la publique en firme.",
   "SEDES: geocodificar cuando haya programación. Partir del gazetteer de cinemancia-2025.json (35 sedes) antes de geocodificar de cero.",
