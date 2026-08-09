@@ -65,6 +65,12 @@ sinopsis ES/EN, géneros, pósters a `assets/<id>/`. Lo que no verifica **no
 entra**: los «sin ficha» se dan de alta en TMDB (PIPELINE.md Fase 3b) o quedan
 sin ficha, jamás se adivina un homónimo.
 
+**Y el bar-trim, que es obligatorio** (docs/POSTERS.md §3): los afiches llegan
+dentro de un diseño —marco blanco, barras negras de centrado— y así entran a la
+card con bandas. `python3 pipeline/bar-trim.py <id>` los detecta y con
+`--aplicar` los recorta. Se venía haciendo a ojo y en FICMA no se hizo: 15
+pósters entraron con marco. Verificar el antes/después a la vista, siempre.
+
 Correcciones en `festivals/staging/<id>-correcciones.json`:
 `titulo_oficial` (el OCR/programa escriben mal → se corrige contra el afiche)
 vs `alias` (el festival rebautizó → se busca por el nombre de distribución,
