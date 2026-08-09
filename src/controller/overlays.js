@@ -6,7 +6,7 @@
 
 import { FILM_CATEGORY_LABEL, FILM_CATEGORY_ORDER, SECTION_ORDER_LIST } from '../config.js';
 import { ICONS, _secLabelFull, parseProgramTitle } from '../view/components.js';
-import { emptyState, getFilmPoster, vcfg, venueMatches, isCitySel, festivalCities } from '../view/helpers.js';
+import { emptyState, getFilmPoster, vcfg, venueMatches, isCitySel, festivalCities, SEDE_SEP } from '../view/helpers.js';
 import { storage } from '../storage/storage.js';
 import { _renderProgramaContent, lugarClose, lugarOutside, render } from '../view/programa.js';
 import { t } from '../i18n/i18n.js';
@@ -282,19 +282,25 @@ export function lugarOpen(){
         if(_vSeen.has(f.title)) return;
         _vSeen.add(f.title);
         const rel=activeDay==='all'?f.screenings:f.screenings.filter(s=>s.date===activeDay||s.day===activeDay);
-        rel.forEach(s=>{
-          const cfg=vcfg(s.venue);const short=cfg.short||s.venue;
-          if(!short) return;
-          if(!venueMap[short]) venueMap[short]={label:short,count:0,city:cfg.city||''};
-          venueMap[short].count++;
-        });
+        rel.forEach(s=>_acum(s.venue));
       } else {
-        const cfg=vcfg(f.venue);const short=cfg.short||f.venue;
-        if(!short) return;
-        if(!venueMap[short]) venueMap[short]={label:short,count:0,city:cfg.city||''};
-        venueMap[short].count++;
+        _acum(f.venue);
       }
     });
+  // La clave agrupa por (CIUDAD, short), no por short a secas: el short no es único
+  // entre ciudades —FICDEH tiene dos «Cinema Local» (Bogotá y Cali) y dos «Alianza
+  // Francesa» (Barranquilla y Cartagena)— y fundirlas mezclaba las funciones de las
+  // dos, descuadraba el conteo de la ciudad y hacía DESAPARECER la sede de la
+  // segunda. Dentro de una misma ciudad el short sí agrupa a propósito: son las
+  // salas de un edificio (Cinemateca Sala 2/3/Capital, las 5 de Plaza Bocagrande).
+  function _acum(venue){
+    const cfg=vcfg(venue);const short=cfg.short||venue;
+    if(!short) return;
+    const city=cfg.city||'';
+    const k=city+SEDE_SEP+short;
+    if(!venueMap[k]) venueMap[k]={key:k,label:short,count:0,city};
+    venueMap[k].count++;
+  }
 
   const venues = Object.values(venueMap).sort((a,b)=>b.count-a.count);
   const total = venues.reduce((s,v)=>s+v.count,0);
@@ -318,7 +324,7 @@ export function lugarOpen(){
   // Si ya hay selección (ciudad o sede), el dropdown abre DENTRO de su ciudad.
   let drillCity = (activeVenue&&activeVenue.startsWith('city:'))?activeVenue.slice(5):null;
   if(multiCity&&!drillCity&&activeVenue!=='all'){
-    const cur=venues.find(v=>v.label===activeVenue);
+    const cur=venues.find(v=>('sede:'+v.key)===activeVenue||v.label===activeVenue);
     if(cur&&cur.city) drillCity=cur.city;
   }
 
@@ -336,6 +342,8 @@ export function lugarOpen(){
 
   function _paint(){
     if(!multiCity){
+      // Camino de UNA ciudad: el short pelado, sin centinela. Es el que no puede
+      // cambiar (FICMA es la regresión a vigilar) y por eso se deja intacto.
       drop.innerHTML=_row('all', t('filter_todos_lugares'), null)
         +venues.map(v=>_row(v.label, v.label, v.count, {icon:ICONS.pin})).join('');
       return;
@@ -348,7 +356,7 @@ export function lugarOpen(){
       const ccount=cv.reduce((s,v)=>s+v.count,0);
       drop.innerHTML='<div class="lugar-opt lugar-back" data-v="back">'+ICONS.chevronL+'<span>'+t('filter_ciudades')+'</span></div>'
         +_row('city:'+drillCity, drillCity, ccount)
-        +cv.map(v=>_row(v.label, v.label, v.count, {icon:ICONS.pin})).join('');
+        +cv.map(v=>_row('sede:'+v.key, v.label, v.count, {icon:ICONS.pin})).join('');
     }
   }
   _paint();

@@ -343,16 +343,56 @@ export function vcfg(v){
 // superficie comparaba `vcfg(v).short===activeVenue` a mano en 8 sitios; el
 // nivel de ciudad habría exigido tocarlos todos y en el tiempo habrían
 // divergido. Consumido por programa.js (grid/lista/horario) y overlays.js.
+// SEDE_SEP — separador del centinela 'sede:<ciudad><SEP><short>'. Se usa un
+// carácter de control (U+001F, unit separator) y no un '|' o un '·' porque el
+// delimitador NO puede aparecer nunca dentro de un nombre de ciudad o de sede.
+// Se escribe como ESCAPE, nunca como carácter literal: un control invisible en el
+// fuente se pierde en un copiar/pegar y no se ve al revisar un diff.
+export const SEDE_SEP='\u001F';
+
+// venueMatches — DUEÑO ÚNICO del predicado «esta función pasa el filtro de lugar».
+// Tres formas de selección:
+//   'all'                       → todo
+//   'city:<Ciudad>'             → la ciudad entera
+//   'sede:<Ciudad><SEP><short>' → una sede DE esa ciudad
+//   '<short>'                   → legado: sede por nombre corto, sin ciudad
+//
+// Por qué la sede lleva la ciudad adentro (9 ago 2026): el nombre corto NO es
+// único cuando el festival recorre varias ciudades. En FICDEH hay dos «Cinema
+// Local» (Bogotá y Cali) y dos «Alianza Francesa» (Barranquilla y Cartagena);
+// filtrando solo por short, elegir la de Bogotá traía también las 4 funciones de
+// Cali, el conteo de la ciudad no cuadraba (135 arriba, 139 adentro) y la sede
+// DESAPARECÍA de la lista de la segunda ciudad, absorbida por la primera.
+//
+// Y por qué la clave es (ciudad, short) y no la sede completa: dentro de UNA
+// ciudad, varias sedes comparten short a PROPÓSITO — son las salas de un mismo
+// edificio (Cinemateca Sala 2/3/Capital → «Cinemateca de Bogotá»; las 5 de Plaza
+// Bocagrande). Ahí agrupar es lo correcto: quien elige el edificio quiere todas
+// sus salas. La ciudad separa; el short agrupa.
 export function venueMatches(v, sel){
   if(sel==='all') return true;
   if(sel&&sel.startsWith('city:')) return (vcfg(v).city||'')===sel.slice(5);
+  if(sel&&sel.startsWith('sede:')){
+    const i=sel.indexOf(SEDE_SEP);
+    if(i<0) return vcfg(v).short===sel.slice(5);
+    const ciudad=sel.slice(5,i), short=sel.slice(i+1);
+    const c=vcfg(v);
+    return c.short===short && (c.city||'')===ciudad;
+  }
   return vcfg(v).short===sel;
 }
 
 // venueSelLabel — cómo se MUESTRA la selección del filtro (pill de filtros
 // activos): la ciudad sin el centinela, o el short tal cual.
 export function venueSelLabel(sel){
-  return (sel&&sel.startsWith('city:'))?sel.slice(5):sel;
+  if(sel&&sel.startsWith('city:')) return sel.slice(5);
+  if(sel&&sel.startsWith('sede:')){
+    // La pill muestra el NOMBRE de la sede; la ciudad viaja en el centinela para
+    // desambiguar, no para leerse (ya está dicha en el propio filtro de ciudad).
+    const i=sel.indexOf(SEDE_SEP);
+    return i<0?sel.slice(5):sel.slice(i+1);
+  }
+  return sel;
 }
 
 // isCitySel / keepCityOnly — la CIUDAD es contexto, la SEDE es un filtro momentáneo.
