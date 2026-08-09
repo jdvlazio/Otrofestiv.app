@@ -106,6 +106,8 @@
       "requires_registration": false,
       "is_free": false,
       "_is_free_nota": "Solo significativo en festival de ticketing MIXTO: marca la excepción gratuita.",
+      "ticket_url": "",
+      "_ticket_url_nota": "URL de COMPRA de boleta, por función. Distinta de registration_url, que es inscripción gratuita: un festival puede tener las dos. Si el festival no publica deep-link por función (QAFF: el RSVP del calendario Boom no lo tiene), va la página del programa.",
       "is_cortos": false,
       "film_list": null,
       "poster": "",

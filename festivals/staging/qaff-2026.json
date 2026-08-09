@@ -5,7 +5,9 @@
   "verificacion": "Cruce título-normalizado eventos↔obras; sección dueña = 1ª categoría del evento (decisión Juan 2 ago); sin prelanzamiento 5 sep (decisión Juan); doble ciudad con city en venues (decisión Juan)",
   "decisiones_pendientes": "emojis/EN de secciones; 19-20 sep incluidos (funciones de cierre reales); geocoding; verificar URL de Registrarse por evento",
   "registro": "Registrarse = RSVP nativo de Boom (addon registration: open, cupo 500/evento, page_url vacío — sin deep-link por evento). ticket_url → página del programa, donde vive el formulario. Confirmado en addons del published_calendar, 2 ago.",
-  "keyart": "Cartel oficial \"NOIR\" 8ª edición (1414×2000) — Portada del sitio, static.wixstatic.com/media/736095_c1d5667c92ab40159d57379cdb7298f7~mv2.jpg, capturado 3 ago 2026. Dice \"8ª EDICIÓN 14-18 SEPTIEMBRE 2026\"."
+  "keyart": "Cartel oficial \"NOIR\" 8ª edición (1414×2000) — Portada del sitio, static.wixstatic.com/media/736095_c1d5667c92ab40159d57379cdb7298f7~mv2.jpg, capturado 3 ago 2026. Dice \"8ª EDICIÓN 14-18 SEPTIEMBRE 2026\".",
+  "capturado": "2026-08-02",
+  "nota": "ver pipeline/qaff-2026-ensamblador.py"
  },
  "name": "QAFF 2026",
  "shortName": "QAFF",

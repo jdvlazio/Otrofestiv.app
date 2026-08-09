@@ -2,7 +2,9 @@
  "_provenance": {
   "fuente": "Boom Calendar del sitio (calendar.apiboomtech.com/api/published_calendar, comp_id=comp-ms99pkc3), capturado 2026-08-02 vía Chrome del usuario + curl con headers PLATFORM:WIX",
   "verificacion": "Calendario \"Program QAFF2026\" oficial del sitio (published=1); filtrado a eventos 2026-09 (los 95 de 2025-09 son la edición pasada)",
-  "nota_registro": "registration/tickets=null en los 65 eventos: el botón Registrarse del widget es el módulo RSVP a nivel de calendario — construir/verificar URL por evento (calendar.boomte.ch/registration/) en el montaje"
+  "nota_registro": "registration/tickets=null en los 65 eventos: el botón Registrarse del widget es el módulo RSVP a nivel de calendario — construir/verificar URL por evento (calendar.boomte.ch/registration/) en el montaje",
+  "capturado": "2026-08-02",
+  "nota": "re-consultado el 9 ago 2026: 0 cambios en los 65 eventos de 2026-09"
  },
  "calendar_name": "Program QAFF2026",
  "time_zone": "America/Bogota",
