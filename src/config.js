@@ -577,6 +577,9 @@ export const SECTION_ARCHETYPES = {
   '🪙 Numismática': 'Retrospectiva / Tributo',
   '🌱 Medio Ambiente': 'Perspectivas / Miradas',
   '🏛️ Red de Museos': 'Especiales / Eventos',
+  // Franja Académica de FICMA — el festival la divide en talleres y charlas.
+  '🛠️ Talleres': 'Charlas / Industria',
+  '💬 Charlas': 'Charlas / Industria',
 };
 
 // mergeFestivalSections(sections) — DATA-DRIVEN (P2.2): un festival declara sus

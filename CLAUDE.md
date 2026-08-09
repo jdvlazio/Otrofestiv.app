@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `02866a3 feat(ficdeh): el taller de dos sesiones y los seis formularios de inscripción (#518)`
+> Último commit: `42cf051 feat(festival): FICMA 17 — Feria Internacional de Cine de Manizales`
 
 ---
 

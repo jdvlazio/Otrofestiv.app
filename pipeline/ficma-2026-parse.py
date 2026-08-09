@@ -11,7 +11,8 @@ valor la línea siguiente de SU columna, no la siguiente del documento.
 """
 import json, re, os, unicodedata, collections
 
-S = os.path.dirname(os.path.abspath(__file__))
+REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+ST = f'{REPO}/festivals/staging'
 # La columna de datos está acotada por AMBOS lados. A la izquierda para dejar
 # fuera el póster —sus críticas impresas se colaban como campos—; a la derecha
 # porque el rótulo «FERIA INTERNACIONAL DE CINE DE MANIZALES» va rotado en el
@@ -30,9 +31,28 @@ SEDE_SALA = {
     'Olimpia':                                   ('Teatro los Fundadores', 'Sala Olimpia'),
     'Sala Fundadores':                           ('Teatro los Fundadores', 'Sala Fundadores'),
     'Fundadores':                                ('Teatro los Fundadores', 'Sala Fundadores'),
+    # Las universidades traen el auditorio dentro del nombre, igual que el Teatro.
+    # Sin esto, cada auditorio era una «sede» distinta en el mismo campus y el
+    # chequeo de sedes apiladas las habría marcado a metros una de otra.
+    'Auditorio Roberto Vélez Correa - Universidad de Caldas':
+        ('Universidad de Caldas', 'Auditorio Roberto Vélez Correa'),
+    # Los dos campus de la Nacional son SITIOS distintos —Palogrande y El
+    # Cable, a más de un km—: fundirlos bajo «Universidad Nacional» los habría
+    # puesto en el mismo punto del mapa.
+    'Auditorio Juan Hurtado - Universidad Nacional':
+        ('Universidad Nacional · Palogrande', 'Auditorio Juan Hurtado'),
+    'Auditorio principal Campus El Cable - Universidad Nacional de Colombia':
+        ('Universidad Nacional · El Cable', 'Auditorio principal'),
+    'Universidad Autónoma - Aula Torreón F-101':
+        ('Universidad Autónoma', 'Aula Torreón F-101'),
 }
 # Ciclos itinerantes del festival: la marca va delante y el lugar real detrás.
-CICLOS = ('Cine al barrio', 'Cine bajo la niebla', 'Cine al aire libre', 'Expoferias')
+# OJO con «Expoferias - Cine fest», que va al revés: Expoferias es el LUGAR (el
+# recinto ferial) y «Cine fest» el nombre que el festival le da a su actividad
+# ahí. Se supo por el PDF de la Franja Académica, que lo llama solo «Expoferias».
+# Por eso el ciclo no se deduce del guion: se declara.
+CICLOS = ('Cine al barrio', 'Cine bajo la niebla', 'Cine al aire libre')
+CICLO_DETRAS = {'Expoferias - Cine fest': ('Expoferias', 'Cine fest')}
 ETIQUETAS = {'DIRECCIÓN':'director','DIRECCION':'director','PAÍS':'pais','PAIS':'pais',
              'DURACIÓN':'duracion','DURACION':'duracion','AÑO':'anio','ANO':'anio',
              'LUGAR':'sede','HORA':'hora'}
@@ -54,7 +74,7 @@ def hora24(s):
 
 
 def main():
-    d = json.load(open(f'{S}/ocr.json', encoding='utf-8'))
+    d = json.load(open(f'{ST}/ficma-2026-ocr.json', encoding='utf-8'))
     paginas = sorted(d, key=lambda k: int(re.search(r'(\d+)', k).group(1)))
 
     dia_actual = None
@@ -163,7 +183,10 @@ def main():
     # lo pisa (pasó en FICDEH y costó una tarde).
     for f in funcs:
         cruda = f['sede']
-        if cruda in SEDE_SALA:
+        if cruda in CICLO_DETRAS:
+            f['sede'], f['ciclo'] = CICLO_DETRAS[cruda]
+            f['sala'] = ''
+        elif cruda in SEDE_SALA:
             f['sede'], f['sala'], f['ciclo'] = (*SEDE_SALA[cruda], '')
         else:
             c = next((x for x in CICLOS if cruda.lower().startswith(x.lower())), '')
@@ -173,7 +196,7 @@ def main():
 
     json.dump({'_fuente': 'FICMA 17 - PROGRAMACIÓN.pdf · 87 páginas de imagen, OCR con Vision (macOS)',
                'portadas': portadas, 'funciones': funcs, 'sin_clasificar': sin_clasificar},
-              open(f'{S}/ficma-crudo.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+              open(f'{ST}/ficma-2026-crudo.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
 
     faltan = lambda k: sum(1 for f in funcs if not f[k])
     print(f'páginas {len(paginas)} · portadas de día {len(portadas)} · funciones {len(funcs)} · sin clasificar {len(sin_clasificar)}')

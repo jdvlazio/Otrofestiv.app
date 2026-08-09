@@ -14,7 +14,7 @@ mano en Google Maps. Preferible un hueco declarado a un punto inventado.
 """
 import json, os, re, subprocess, time, unicodedata
 
-S = os.path.dirname(os.path.abspath(__file__))
+REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Caja de Manizales con margen: fuera de aquí, el resultado es de otra ciudad.
 CAJA = (4.95, 5.15, -75.60, -75.40)          # lat_min, lat_max, lng_min, lng_max
 GENERICAS = {'parque', 'auditorio', 'sala', 'teatro', 'cancha', 'plaza', 'barrio',
@@ -40,7 +40,7 @@ def buscar(q):
 
 
 def main():
-    sedes = json.load(open(f'{S}/ficma-sedes.json', encoding='utf-8'))
+    sedes = json.load(open(f'{REPO}/festivals/staging/ficma-sedes-pend.json', encoding='utf-8'))
     out = {}
     for i, (clave, s) in enumerate(sorted(sedes.items()), 1):
         consulta = s.get('consulta') or f"{clave}, Manizales, Caldas"
@@ -72,7 +72,7 @@ def main():
               f"{elegido['_match'][:52] if elegido else ''}", flush=True)
         time.sleep(1.1)          # cortesía con Nominatim
 
-    json.dump(out, open(f'{S}/ficma-venues-geo.json', 'w', encoding='utf-8'),
+    json.dump(out, open(f'{REPO}/festivals/staging/ficma-2026-venues-geo-nuevas.json', 'w', encoding='utf-8'),
               ensure_ascii=False, indent=1)
     n = sum(1 for v in out.values() if v['_prec'] == 'nominatim')
     print(f'\n{len(out)} sedes · ubicadas {n} · sin verificar {len(out) - n}')

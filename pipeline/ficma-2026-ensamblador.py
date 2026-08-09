@@ -53,6 +53,10 @@ SECCIONES = {
     'NUMISMÁTICA':                ('🪙 Numismática', 'Numismatics', 'Retrospectiva / Tributo', 10),
     'MEDIO AMBIENTE':             ('🌱 Medio Ambiente', 'Environment', 'Perspectivas / Miradas', 11),
     'RED DE MUSEOS':              ('🏛️ Red de Museos', 'Museum Network', 'Especiales / Eventos', 12),
+    # Franja Académica — el festival la divide en dos y así se respeta. Mismos
+    # emojis que en FICDEH para lo mismo, para que se lea igual entre festivales.
+    'TALLERES':                   ('🛠️ Talleres', 'Workshops', 'Charlas / Industria', 13),
+    'CHARLAS':                    ('💬 Charlas', 'Talks', 'Charlas / Industria', 14),
 }
 
 BANDERAS = {
@@ -81,7 +85,7 @@ TITULO_OFICIAL = {
     # título correcto la película SÍ aparece en TMDB (id 1525164).
     'Punto de Fuga': 'Puntos de fuga',
 }
-TITULO_INTERNACIONAL = {'Punto de Fuga': 'Vanishing Points'}
+TITULO_EN_MANUAL = {'Punto de Fuga': 'Vanishing Points'}   # del afiche oficial
 
 # EXCEPCIÓN a «el PDF manda»: duraciones donde el programa se equivocó y Juan
 # resolvió a favor de la oficial (8 ago). Va como tabla y no como «si TMDB
@@ -108,6 +112,29 @@ POSTER_OFICIAL = {
 }
 HEREDA_SINOPSIS_FICDEH = ('Desierto verde', 'Notas sobre un destierro')
 
+# Sinopsis de PRIMERA FUENTE para obras que el PDF no describe y TMDB no tiene.
+# La regla (docs/PIPELINE.md) es que la sinopsis salga de quien hizo o distribuye
+# la película, y que se verifique contra tres anclas: director, país y duración.
+# La ES es traducción nuestra de la oficial en inglés — el camino documentado
+# cuando solo existe en un idioma.
+SINOPSIS_PRIMERA_FUENTE = {
+    'Punto de Fuga': {
+        'es': 'A lo largo de más de setenta años, dos mujeres cuentan cómo fue crecer en '
+              'Colombia y emigrar a Canadá. Atravesado por momentos clave de la historia '
+              'colombiana, «Puntos de fuga» es un ensayo fílmico sobre el enredo entre la '
+              'historia oficial y las historias personales, y sobre lo complejo de la '
+              'identidad diaspórica.',
+        'en': 'Spanning over 70 years, two women recount their experiences growing up in '
+              'Colombia and immigrating to Canada. Intersecting with key moments in '
+              'Colombian history, Vanishing Points is an essay film that reflects on the '
+              'entanglements between official histories and personal stories, and the '
+              'complexities of diasporic identity.',
+        '_src': 'rayonverde.com/puntos-de-fuga — la distribuidora de la película. '
+                'Verificado contra las tres anclas: Lina Rodríguez ✓, Colombia/Canadá ✓, '
+                '72 min ✓ (la misma duración que corrige el dato del programa).',
+    },
+}
+
 
 def sinacento(s):
     return ''.join(c for c in unicodedata.normalize('NFD', (s or '').lower())
@@ -127,8 +154,35 @@ def slug(t):
 def main():
     crudo = json.load(open(f'{ST}/ficma-2026-crudo.json', encoding='utf-8'))
     tmdb = json.load(open(f'{ST}/ficma-2026-tmdb.json', encoding='utf-8'))['verificadas']
+    title_en = json.load(open(f'{ST}/ficma-2026-title-en.json', encoding='utf-8'))['title_en']
+    lb = json.load(open(f'{ST}/ficma-2026-letterboxd.json', encoding='utf-8'))['lbSlug']
     geo = json.load(open(f'{ST}/ficma-2026-venues-geo.json', encoding='utf-8'))
     funcs = crudo['funciones']
+
+    # ── Franja Académica ─────────────────────────────────────────────────────
+    # 12 actividades de un PDF aparte. Se convierten al mismo shape que una
+    # función de película para que el resto del ensamblador no las distinga: una
+    # actividad de varios días produce una entrada POR DÍA, y el bloque se marca
+    # con is_recurring (el plan las toma todas o ninguna).
+    franja = json.load(open(f'{ST}/ficma-2026-franja.json', encoding='utf-8'))['actividades']
+    for a in franja:
+        for dia in a['dias']:
+            funcs.append({
+                'pagina': a['pagina'], 'dia': dia, 'hora': a['hora'],
+                'sede': a['sede'], 'sala': a.get('sala', ''), 'ciclo': '',
+                'seccion': 'TALLERES' if a['tipo'] == 'taller' else 'CHARLAS',
+                'titulo': a['titulo'],
+                # En una charla el «director» es quien la dicta: invitados y
+                # moderación. Es lo que la ficha muestra bajo el título.
+                'director': a['tallerista'] or ', '.join(
+                    x for x in (a['invitados'], a['modera'] and f'modera {a["modera"]}') if x),
+                'pais': '', 'anio': None,
+                # Sin rango horario publicado (las charlas) no se inventa: 90 min
+                # es el DEFAULT_DURATION_MIN del dominio y queda explícito aquí.
+                'duracion_min': a['duracion_min'] or 90,
+                'has_qa': False,
+                '_franja': a,
+            })
 
     dias = sorted({f['dia'] for f in funcs})
     fecha = lambda d: datetime.date.fromisoformat(d)
@@ -162,6 +216,7 @@ def main():
         sec = SECCIONES.get(f['seccion'])
         if not sec:
             raise SystemExit(f'sección sin declarar: «{f["seccion"]}» (pág {f["pagina"]})')
+        _fa = f.get('_franja')
         e = {
             'title': TITULO_OFICIAL.get(f['titulo'], f['titulo']),
             'director': f['director'],
@@ -178,6 +233,23 @@ def main():
             'has_qa': f['has_qa'],
             '_src': 'FICMA 17 - PROGRAMACIÓN.pdf (OCR) · ' + f['pagina'],
         }
+        if _fa:
+            # Actividad, no película: sin país ni año, con tipo de evento.
+            e['type'] = 'event'
+            e['event_kind'] = 'taller' if _fa['tipo'] == 'taller' else 'ponencia'
+            for k in ('country', 'flags', 'year'):
+                e.pop(k, None)
+            if _fa['requires_registration']:
+                e['requires_registration'] = True
+            if _fa.get('registration_url'):
+                e['registration_url'] = _fa['registration_url']
+            if _fa.get('synopsis'):
+                e['synopsis'], e['synopsis_lang'] = _fa['synopsis'], 'es'
+            if _fa['is_recurring']:
+                e['is_recurring'] = True
+            if _fa.get('cupos'):
+                e['_cupos'] = _fa['cupos']
+            e['_src'] = 'FICMA 17 - FRANJA ACADÉMICA.pdf (OCR) · ' + _fa['pagina']
         if f.get('sala'):
             e['sala'] = f['sala']
         if f.get('ciclo'):
@@ -200,8 +272,16 @@ def main():
                 e['synopsis_en'] = t['synopsis_en']
             if t.get('titulo_original') and t['titulo_original'] != f['titulo']:
                 e['original_title'] = t['titulo_original']
-        if f['titulo'] in TITULO_INTERNACIONAL:
-            e['original_title'] = TITULO_INTERNACIONAL[f['titulo']]
+        # title_en: el título con que la obra se distribuye en inglés, traído de
+        # TMDB sobre un tmdb_id ya verificado (pipeline/ficma-2026-title-en.py).
+        # Las que ya se llaman igual en inglés no lo llevan.
+        # lbSlug: lo resuelve Letterboxd desde su mapeo con el tmdb_id verificado
+        # (pipeline/ficma-2026-letterboxd.py). Sin mapeo → sin botón, nunca un homónimo.
+        if f['titulo'] in lb:
+            e['lbSlug'] = lb[f['titulo']]
+        _en = TITULO_EN_MANUAL.get(f['titulo']) or title_en.get(f['titulo'])
+        if _en:
+            e['title_en'] = _en
         if f['titulo'] in TMDB_MANUAL:
             e['tmdb_id'] = TMDB_MANUAL[f['titulo']]
         if f['titulo'] in POSTER_OFICIAL:
@@ -215,6 +295,11 @@ def main():
                 e['_inherited'] = 'sinopsis y póster del catálogo de FICDEH (misma obra)'
                 if src.get('synopsis_en'):
                     e['synopsis_en'] = src['synopsis_en']
+        _sf = SINOPSIS_PRIMERA_FUENTE.get(f['titulo'])
+        if _sf and not e.get('synopsis'):
+            e['synopsis'], e['synopsis_lang'] = _sf['es'], 'es'
+            e['synopsis_en'] = _sf['en']
+            e['_src_synopsis'] = _sf['_src']
         if not e.get('synopsis'):
             e['_pendiente'] = 'sin sinopsis'
         films.append(e)
@@ -270,6 +355,8 @@ def main():
           f'con sinopsis {sum(1 for x in films if x.get("synopsis"))} · '
           f'con Q&A {sum(1 for x in films if x["has_qa"])}')
     print(f'  sin ubicar {sorted(set(sin_ubicar))}')
+    print(f'  con título EN {sum(1 for x in films if x.get("title_en"))} · '
+          f'con Letterboxd {sum(1 for x in films if x.get("lbSlug"))}')
     print(f'  sin ficha TMDB {len(set(sin_tmdb))}: {sorted(set(sin_tmdb))}')
     slots = [k for k, n in collections.Counter(
         (x['day'], x['time'], x['venue'], x.get('sala', '')) for x in films).items() if n > 1]

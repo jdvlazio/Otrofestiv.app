@@ -275,5 +275,47 @@
   "_nota": "buscar a mano en Google Maps",
   "lat": 5.0674375,
   "lng": -75.5031875
+ },
+ "Universidad de Caldas": {
+  "lat": 5.0559375,
+  "lng": -75.4929375,
+  "_prec": "manual",
+  "_remap": "coordenada verificada de «Auditorio Roberto Vélez Correa - Universidad de Caldas»"
+ },
+ "Universidad Nacional · Palogrande": {
+  "lat": 5.0568793,
+  "lng": -75.4913791,
+  "_prec": "nominatim",
+  "_remap": "coordenada verificada de «Auditorio Juan Hurtado - Universidad Nacional»"
+ },
+ "Universidad Nacional · El Cable": {
+  "lat": 5.0555625,
+  "lng": -75.4861875,
+  "_prec": "manual",
+  "_remap": "coordenada verificada de «Auditorio principal Campus El Cable - Universidad Nacional de Colombia»"
+ },
+ "Universidad Autónoma": {
+  "lat": 5.0674375,
+  "lng": -75.5031875,
+  "_prec": "manual",
+  "_remap": "coordenada verificada de «Universidad Autónoma - Aula Torreón F-101»"
+ },
+ "Expoferias": {
+  "lat": 5.0416875,
+  "lng": -75.4753125,
+  "_prec": "manual",
+  "_remap": "coordenada verificada de «Cine fest»"
+ },
+ "Secretaría de la Mujer y Equidad de Género": {
+  "lat": 5.0678125,
+  "lng": -75.5199375,
+  "_prec": "manual",
+  "_nota": "Ambas secretarías están en la Alcaldía de Manizales (Cra. 22 Bolívar): comparten coordenada A PROPÓSITO. Verificado por reverse-geocoding; no es el error de sedes apiladas."
+ },
+ "Casa de la Secretaría de Cultura": {
+  "lat": 5.0678125,
+  "lng": -75.5199375,
+  "_prec": "manual",
+  "_nota": "Ambas secretarías están en la Alcaldía de Manizales (Cra. 22 Bolívar): comparten coordenada A PROPÓSITO. Verificado por reverse-geocoding; no es el error de sedes apiladas."
  }
 }
