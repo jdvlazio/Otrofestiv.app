@@ -1050,7 +1050,16 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .pelicula-venue{font-size:var(--t-caption);color:rgba(240,237,232,.6);flex:1;min-width:0;cursor:pointer;transition:color var(--tr-base);display:flex;align-items:flex-start;gap:var(--sp-1);position:relative}
 .pelicula-venue::after{content:'';position:absolute;inset:-6px 0}
 .pelicula-venue:active{color:var(--amber)}
-.pelicula-venue>svg{margin-top:3px}
+/* flex-shrink:0 — el pin NO cede ancho. `.pelicula-venue` es flex y el <svg> es un
+   item más: sin esto el navegador reparte el ahogo entre icono y texto, y como el
+   SVG no tiene ancho intrínseco, cede primero. El texto puede envolver; el icono
+   no, así que se estruja en horizontal conservando el alto — no se ve más chico,
+   se ve DEFORMADO. Medido en FICMA: «Secretaría de la Mujer y Equidad de Género»
+   dejaba el pin en 7,5×13 (42% de ancho perdido), y ya con «Teatro los Fundadores»
+   perdía un 8%. Afectaba SEIS superficies, no solo la ficha: Programa (día y
+   TODO), Mi Plan, Intereses y el sheet de sede comparten esta fila.
+   Reportado por Juan el 9 ago 2026. Guardián: G03 en tests/geometry.spec.js. */
+.pelicula-venue>svg{margin-top:3px;flex-shrink:0}
 .saved-venue svg,.mplan-rvenue svg,.mplan-wk-venue svg,.checkin-opt-venue svg{vertical-align:middle}
 .venue-text{line-height:1.4}
 
