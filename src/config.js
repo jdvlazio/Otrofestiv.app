@@ -585,14 +585,16 @@ export const SECTION_ARCHETYPES = {
   '🛠️ Talleres': 'Charlas / Industria',
   '💬 Charlas': 'Charlas / Industria',
 
-  // Cinemancia 2026 (sexta edición). Cinco heredan emoji y arquetipo de
-  // Cinemancia 2025 para que el festival no cambie de color entre ediciones.
+  // Cinemancia 2026 (sexta edición). Cinco secciones continúan de Cinemancia
+  // 2025 y NO aparecen aquí porque ya estaban con la misma clave: 🏆
+  // Competencia central, 🎞️ Competencia de cortometrajes, 💡 Iluminaciones,
+  // 🌱 Competencia Nuevas Voces y ✨ Proyecciones Especiales. Las dos últimas
+  // se rotulan en Title Case como en 2025 (decisión de Juan, 9 ago 2026)
+  // aunque el PDF de este año las escriba en minúscula.
   '⭐ Función inaugural': 'Apertura / Gala',
   '🎬 Función de clausura': 'Clausura',
   '🔺 Programa 1. El espesor de las formas': 'Cortos / Programas',
   '👁️ Programa 2. Teoremas sobre la mirada': 'Cortos / Programas',
-  '🌱 Competencia Nuevas voces': 'Competencia',
-  '✨ Proyecciones especiales': 'Especiales / Eventos',
   '⚗️ Alquimia de la luz. El cine de Luciana Decker': 'Retrospectiva / Tributo',
   '🃏 Carta blanca': 'Perspectivas / Miradas',
   '🌷 La primavera llega para los que esperan. El cine de José Luis Torres Leiva': 'Retrospectiva / Tributo',

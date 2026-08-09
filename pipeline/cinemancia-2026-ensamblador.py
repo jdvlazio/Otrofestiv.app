@@ -100,7 +100,17 @@ SECCIONES = [
     ('Historia(s) del cine: Argentina. Curaduría de José Miccio', '🇦🇷', 'Muestra / País',
      'Histoire(s) of Cinema: Argentina. Curated by José Miccio'),
 ]
-SEC = {s: (f'{e} {s}', a, en) for s, e, a, en in SECCIONES}
+# Única excepción a «tal cual», decidida por Juan el 9 ago 2026: el PDF de este
+# año escribe dos secciones en minúscula que en 2025 iban en Title Case. Se
+# muestran como en 2025 —«se ve mucho más título de sección»— y de paso vuelven
+# a ser exactamente la misma clave del mapa, o sea herencia real y no una
+# entrada nueva. El PDF sigue siendo la fuente: esto es solo cómo se rotula.
+ROTULO = {
+    'Competencia Nuevas voces': 'Competencia Nuevas Voces',
+    'Proyecciones especiales':  'Proyecciones Especiales',
+}
+SEC = {s: (f'{e} {ROTULO.get(s, s)}', a, en, ROTULO.get(s, s))
+       for s, e, a, en in SECCIONES}
 
 
 def norm(s):
@@ -167,7 +177,7 @@ def main():
         w = ficha(o['title'])
         if o['section'] not in SEC:
             errores.append(f'sección sin arquetipo: {o["section"]!r}'); continue
-        clave_sec, _arq, _en = SEC[o['section']]
+        clave_sec, _arq, _en, _rot = SEC[o['section']]
         secciones.setdefault(clave_sec, 0)
 
         # sinopsis: la del festival manda; TMDB rellena. Nunca se traduce.
@@ -246,7 +256,7 @@ def main():
              'PDF oficial (obras y secciones) + fichas de la web (sinopsis y horarios) + TMDB',
              precedencia='sinopsis: web del festival > TMDB; nunca traducida',
              pendiente=f'{len(sin_horario)} obras sin horario publicado'),
-         'sections': {SEC[s][0]: {'oficial': s, 'en': SEC[s][2],
+         'sections': {SEC[s][0]: {'oficial': SEC[s][3], 'en': SEC[s][2],
                                   'archetype': SEC[s][1], 'order': i + 1}
                       for i, (s, *_ ) in enumerate(SECCIONES)},
          'venues': venues, 'films': films}
