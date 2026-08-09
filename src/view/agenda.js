@@ -172,6 +172,21 @@ export function renderAgenda(){
 // completa) y mostraba el fin de cada obra por separado, así que un corto de 5 min
 // decía que salías 18:05 cuando la función terminaba 19:51. (Bug visto por Juan en
 // producción, 30 jul 2026.)
+// _sesionDeBloque — «Sesión 1 de 2» para un taller multi-día. Sin esto sus filas
+// se leían como funciones sueltas del mismo título —lectura falsa— y sorprendía
+// que quitar una las sacara todas. Se lee como una coordenada más, junto al día y
+// la hora. Vacío para todo lo que no sea un bloque. Lo usan las DOS listas donde
+// aparecen sesiones: .mplan-row (Mi Plan) y .saved-item (plan guardado/Planear).
+function _sesionDeBloque(s){
+  const _t=s&&(s._title||s.title);
+  if(!_t) return '';
+  const _ses=FILMS.filter(x=>x.title===_t&&x.is_recurring&&x.day&&x.time)
+    .sort((a,b)=>a.day_order-b.day_order||toMin(a.time)-toMin(b.time));
+  if(_ses.length<2) return '';
+  const _i=_ses.findIndex(x=>x.day===s.day&&x.time===s.time);
+  return _i<0?'':`<div class="saved-sesion">${t('bloque_sesion_n',{i:_i+1,n:_ses.length})}</div>`;
+}
+
 function _slotKeyOf(e){
   if(e&&e._slotKey) return e._slotKey;
   // Las entradas guardadas antes de que existiera _slotKey no lo traen: se resuelve
@@ -426,6 +441,7 @@ export function renderMiPlanCalendar(state){
           <div class="mplan-t2">${_voidBadge}${_void?`<span class="mp-void-t">${mplanEndStr(s.time,dur)}</span>`:mplanEndStr(s.time,dur)}${_voidFix}${prioritized.has(s._title)?` <span class="txt-amber60-xs">${ICONS.bookmarkFill}</span>`:''}${_rowStars?` <span class="txt-amber-sm">${_rowStars}</span>`:''}${isNow?` <span class="txt-green-semi">${t('label_en_curso_min')}</span>`:''}</div>
           <div>${(()=>{const{displayTitle:_dt,progSuffix:_ps}=parseProgramTitle(s._title||'');const _mfqa=FILMS.find(fi=>fi.title===s._title&&fi.day===s.day&&fi.time===s.time);const _qab=_mfqa?.has_qa?`<span class="meta-badge sm">Q&A</span>`:'';return`<div class="mplan-rtitle${_isEventRow?' mp-event-title':''}">${_dt}${_qab}</div>${_ps?`<div class="prog-suffix">${_ps}</div>`:''}`;})()} </div>
           <div class="mplan-rvenue${_isEventRow?' mp-event-venue':''}">${ICONS.pin} ${vcfg(s.venue).short}${sala(s.venue)?' \u00b7 '+sala(s.venue):''}</div>
+          ${_sesionDeBloque(s)}
           ${(()=>{const _mf=FILMS.find(fi=>fi.title===s._title&&fi.day===s.day&&fi.time===s.time);if(!_mf||!_mf.is_cortos||!_mf.film_list||!_mf.film_list.length) return'';return`<button class="row-xs mplan-prog-toggle" data-action="toggleMplanProg">${ICONS.chevronR} ${t('label_programa')}</button>`;})()}
         </div>
         <div class="col-end">
@@ -1458,6 +1474,7 @@ export function mkAgendaRow(s, mode='saved'){
       ${mode==='scenario'?_timeHTML:''}
       <div class="saved-title">${displayTitle}</div>${progSuffix?`<div class="film-sub-label">${progSuffix}</div>`:''}
       <div class="saved-venue">${ICONS.pin} ${vc2.short}${sl?' · '+sl:''}${s.duration?' · '+durFmt(s.duration):''}</div>
+      ${_sesionDeBloque(s)}
       ${_progBtn}
     </div>
     ${mode==='saved'?`<button class="row-xs saved-check${isDone?' done':''}" data-title="${safeT}" data-day="${s.day||''}" data-time="${s.time||''}" data-venue="${(s.venue||'').replace(/"/g,'&quot;')}" data-dur="${s.duration||''}" data-action="${isDone?'toggleWatched':'markWatchedFromPlan'}">${ICONS.check+' '+t('cta_vista')}</button>`:''}
@@ -1561,6 +1578,12 @@ export function getSuggestions(){
     // Usa screensConflict — mismo criterio que el algoritmo, incluye travel time entre venues
     if(slots.length){
       FILMS.forEach(f=>{
+        // Un taller multi-día NO se sugiere: se toma entero, y el botón de la
+        // sugerencia añade UNA función (addSuggestion) — eso dejaría el bloque a
+        // medias, que es justo lo que el invariante prohíbe. Además sugerir «meté
+        // estas 9 horas en tu hueco» no es una sugerencia, es otro plan.
+        // Su camino es el control de bloque de la ficha.
+        if(f.is_recurring) return;
         if(seenDiscover.has(f.title)||screeningPassed(f)||f.day!==day||isScreeningBlocked(f)) return;
         const fStart=toMin(f.time),fEnd=fStart+blockDuration(f);
         // Verificar que hay un slot de tiempo (check rápido)
@@ -1582,7 +1605,8 @@ export function getSuggestions(){
     // Usa screensConflict (±10 min) — mismo criterio que el algoritmo de planificación
     // Solo aparece si genuinamente cabe sin conflicto en el plan actual
     [...watchlist].filter(wlTitle=>!seenRecovery.has(wlTitle)).forEach(wlTitle=>{
-      FILMS.filter(f=>f.title===wlTitle&&f.day===day&&!screeningPassed(f)&&!isScreeningBlocked(f)).forEach(f=>{
+      // mismo motivo que arriba: el bloque no entra por sugerencia
+      FILMS.filter(f=>f.title===wlTitle&&!f.is_recurring&&f.day===day&&!screeningPassed(f)&&!isScreeningBlocked(f)).forEach(f=>{
         if(seenRecovery.has(f.title)) return;
         const noConflict=!saved.some(s=>screensConflict(s,f));
         if(noConflict){

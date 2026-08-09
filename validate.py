@@ -2539,6 +2539,45 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar fin-inline-ratchet: {_e}')
 
+# ── [peso-repo] el repo guarda el producto, no el material de trabajo ───────────
+# 68,7 MB entraron de un tirón (8 ago 2026): un `git add -A` se llevó fuentes/ con
+# los PDF y afiches originales de FICDEH y FICMA —uno de 35 MB, otro de 26—. La
+# regla que los ignoraba venía en el PR del festival, que aún no estaba mergeado,
+# así que en main no existía y nada los frenó.
+# Dos reglas, calibradas con lo que el repo tiene de verdad: el archivo legítimo
+# más pesado son 2,28 MB (un póster de Leviza) y hay CERO documentos ofimáticos.
+# Esta es la única capa que bloquea el MERGE; el .gitignore y la disciplina de
+# `git add` dependen de que alguien se acuerde.
+check = 'peso-repo'
+try:
+    import subprocess as _sp
+    TOPE_MB = 3.0
+    EXT_TRABAJO = ('.pdf', '.xlsx', '.xls', '.docx', '.doc', '.numbers', '.pages', '.key', '.psd', '.ai')
+    _out = _sp.run(['git', 'ls-files', '-s'], capture_output=True, text=True).stdout
+    _pesados, _ofim = [], []
+    for _ln in _out.splitlines():
+        _f = _ln.split('\t', 1)[-1].strip().strip('"')
+        if _f.lower().endswith(EXT_TRABAJO):
+            _ofim.append(_f)
+            continue
+        try:
+            _mb = os.path.getsize(_f) / 1024 / 1024
+        except OSError:
+            continue
+        if _mb > TOPE_MB:
+            _pesados.append(f'{_f} ({_mb:.1f} MB)')
+    _prob = []
+    if _ofim:
+        _prob.append('documentos de trabajo versionados: ' + ', '.join(_ofim[:4]))
+    if _pesados:
+        _prob.append(f'archivos sobre {TOPE_MB:g} MB: ' + ', '.join(_pesados[:4]))
+    if _prob:
+        fail(check, ' · '.join(_prob) + ' — el material original va en fuentes/ (gitignored), no en el repo')
+    else:
+        ok(check, f'sin material de trabajo versionado (tope {TOPE_MB:g} MB por archivo)')
+except Exception as _e:
+    warn(check, f'no se pudo verificar peso-repo: {_e}')
+
 # ── [keyart-write-once] un afiche publicado nunca se sobreescribe ───────────────
 # El SW cachea /assets/ cache-first en un caché que sobrevive a TODOS los deploys
 # (ASSETS_CACHE, sw.js). Sobreescribir un keyArt in-place deja a los usuarios
@@ -2986,11 +3025,11 @@ try:
     #   agenda.js (render agenda+miplan) · main.js (composición/bootstrap) ·
     #   i18n.js (diccionarios es/en, es DATA) · sheets-controller.js · handlers.js
     _ALLOW = {
-        'src/view/agenda.js': 1681,  # +9: kind 'ciudad' en el detalle de conflicto (6 ago)
+        'src/view/agenda.js': 1705,  # +13: «Sesión 1 de 2» en Mi Plan + el taller no se sugiere (8 ago)  # +7: el taller multi-día no se sugiere (bloque a medias) (8 ago)  # +9: kind 'ciudad' en el detalle de conflicto (6 ago)
         'src/main.js': 1662,  # +46 total: _morphOpen a FLIP — clon de la card compuesta, radio contra-escalado, encuadre del destino (29 jul)
-        'src/i18n/i18n.js': 1472,  # +12: sheet de ciudad + badge CON BOLETA ×3 locales (6 ago)
-        'src/controller/sheets-controller.js': 1584,  # +23: control de BLOQUE para is_recurring (8 ago)  # +12: registration_url — enlace de inscripción por función, mismo patrón que ticket_url (8 ago)  # +14: la ficha hereda el contexto de ciudad — filtra funciones, la nombra una vez y avisa lo que quedó fuera (7 ago)  # +7: el aviso parcial nombra la CIUDAD cuando la obra recorre varias (FICDEH, 43 obras) (7 ago)  # +4: precio en AVISOS sigue a ticketBadgeTarget (6 ago)  # +39: la ficha de corto hereda la función de su(s) programa(s) — _screeningRows (dueño único, antes inline en openPelSheet), _findParentPrograms, _cortoScreeningPairs y _noticeRows y _avisosBand (banda AVISOS: dueño único de lo que MATIZA la función, con la evidencia de vocabulario) (30 jul 2026)
-        'src/controller/handlers.js': 1024,  # +45: taller multi-día — addRecurringBlock/removeRecurringBlock (bloque entero en un solo commitPlan) (8 ago)  # +15: acciones del sheet de ciudad (7 ago)  # +20: anclaje de función en toggleWL, simétrico al quitar (29 jul)
+        'src/i18n/i18n.js': 1484,  # +12: sheet de ciudad + badge CON BOLETA ×3 locales (6 ago)
+        'src/controller/sheets-controller.js': 1591,  # +7: un taller empezado no se ofrece (bug cazado con FICMA) (8 ago)  # +23: control de BLOQUE para is_recurring (8 ago)  # +12: registration_url — enlace de inscripción por función, mismo patrón que ticket_url (8 ago)  # +14: la ficha hereda el contexto de ciudad — filtra funciones, la nombra una vez y avisa lo que quedó fuera (7 ago)  # +7: el aviso parcial nombra la CIUDAD cuando la obra recorre varias (FICDEH, 43 obras) (7 ago)  # +4: precio en AVISOS sigue a ticketBadgeTarget (6 ago)  # +39: la ficha de corto hereda la función de su(s) programa(s) — _screeningRows (dueño único, antes inline en openPelSheet), _findParentPrograms, _cortoScreeningPairs y _noticeRows y _avisosBand (banda AVISOS: dueño único de lo que MATIZA la función, con la evidencia de vocabulario) (30 jul 2026)
+        'src/controller/handlers.js': 1034,  # +45: taller multi-día — addRecurringBlock/removeRecurringBlock (bloque entero en un solo commitPlan) (8 ago)  # +15: acciones del sheet de ciudad (7 ago)  # +20: anclaje de función en toggleWL, simétrico al quitar (29 jul)
     }
     _over = []
     for _f in _glob.glob('src/**/*.js', recursive=True):

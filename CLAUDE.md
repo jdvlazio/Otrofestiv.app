@@ -3,7 +3,7 @@
 > No editar a mano — los cambios se sobreescriben en el próximo deploy.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `42cf051 feat(festival): FICMA 17 — Feria Internacional de Cine de Manizales`
+> Último commit: `3d1b474 feat(ficma): sinopsis oficiales de AA965 y «Que el cielo nos perdone»`
 
 ---
 
