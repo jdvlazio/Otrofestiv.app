@@ -1,0 +1,20 @@
+{
+ "_etapa": "PRE-ONBOARDING. Catálogo extraído y cruzado; la programación NO existe todavía (el festival la publica «en los próximos días»). NO PUBLICAR.",
+ "_festival": "Cinemancia 2026 — sexta edición · 3–12 SEP 2026 · Medellín, Envigado, Caldas, Itagüí, Copacabana, Bello (Valle de Aburrá) · entrada libre con preinscripción",
+ "_jerarquia_de_fuentes": "PDF oficial del listado > artículo de prensa del festival > fichas de /peliculas/ (solo publica 56 de las 109)",
+ "_edicion_anterior": "festivals/cinemancia-2025.json — 87 obras y 35 sedes de 2025. El gazetteer de sedes es reutilizable: casi todas se repiten. Ojo, es esquema viejo (sin _src, sections vacío, day_order como string).",
+ "pasos": [
+  {"cmd": "python3 pipeline/cinemancia-2026-extraer-listado.py",     "que": "PDF oficial (Drive) → 109 obras con sección, director, país, año y duración"},
+  {"cmd": "python3 pipeline/cinemancia-2026-cruzar-letterboxd.py",   "que": "lista de Letterboxd × PDF → lbSlug de 107 de 109 (alineación de secuencias)"}
+ ],
+ "_pendientes": [
+  "VERIFICAR POR DIRECTOR las 28 parejas con _conf<0.5 (títulos traducidos). Doctrina Tribeca: un título parecido no es evidencia. La ficha de Letterboxd da director, año y el ID de TMDB en la misma página — ver el sondeo hecho a mano con «Iluminaciones» (Pablo Llorca, 2025, TMDB 1478518).",
+  "DOS OBRAS SIN LETTERBOXD, ambas de Sergio Navarro: «El santo y el milagro» (1993) y «Valparaíso eterno» (1991). Alta manual o resolver a mano.",
+  "ERRATA EN LA FUENTE: «La libertad remonta el estadio» (Sergio Navarro) sale con año 1897 en el PDF. Imposible; preguntar al festival si es 1987 o 1997.",
+  "PROGRAMACIÓN: no publicada. Regla de secuencia (lección FICDEH): el catálogo se adelanta, la programación NO se toca hasta que el festival la publique en firme.",
+  "SEDES: geocodificar cuando haya programación. Partir del gazetteer de cinemancia-2025.json (35 sedes) antes de geocodificar de cero.",
+  "SECCIONES: 16 encabezados en el PDF. Falta decidir con Juan el arquetipo y el emoji de cada una (regla «secciones tal cual»: el nombre ES verbatim, nuestra capa es solo emoji/arquetipo/EN).",
+  "ENTRADA LIBRE con preinscripción → registration_url por función, NO ticket_url."
+ ],
+ "_conteos_que_no_cuadran": "El artículo dice 109 obras y 11 secciones; el encabezado del PDF dice 108 y 13; contando entradas del PDF salen 109 en 16 encabezados. Los 16 incluyen «Programa 1/2» (subsecciones de una misma) y las funciones de apertura y clausura, que ellos seguramente no cuentan como sección. Confirmar con el festival antes de fijar el mapa de secciones."
+}

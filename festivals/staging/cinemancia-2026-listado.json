@@ -1,0 +1,991 @@
+{
+ "_provenance": {
+  "fuente": "PDF oficial del listado (https://drive.google.com/uc?export=download&id=166jpX4CUxRNDKxzy9kIDaEEVZaq3s4PN), enlazado desde https://cinemanciafestival.com/cinemancia-2026-revela-la-programacion-oficial-de-su-sexta-edicion",
+  "capturado": "2026-08-09",
+  "jerarquia": "PDF oficial > artículo web > fichas de /peliculas/",
+  "nota": "El artículo dice 109 obras y 11 secciones; el encabezado del PDF dice 108 y 13; contando las entradas del PDF salen 109 en 16 encabezados. /peliculas/ solo publica 56 de las 109."
+ },
+ "obras": [
+  {
+   "section": "Función inaugural",
+   "title": "Todas las canciones del mundo",
+   "director": "Santiago Flórez Rincón",
+   "country": "Colombia",
+   "year": 2026,
+   "duration": 83,
+   "_raw": "Todas las canciones del mundo (Dir. Santiago Flórez Rincón, Colombia, 2026, 83’)"
+  },
+  {
+   "section": "Función inaugural",
+   "title": "Lamentos de un balcón",
+   "director": "Hans Chispas",
+   "country": "Colombia",
+   "year": 2026,
+   "duration": 4,
+   "_raw": "Lamentos de un balcón (Dir. Hans Chispas, Colombia, 2026, 4’)"
+  },
+  {
+   "section": "Función de clausura",
+   "title": "Iluminaciones",
+   "director": "Pablo Llorca",
+   "country": "España",
+   "year": 2025,
+   "duration": 61,
+   "_raw": "Iluminaciones (Dir. Pablo Llorca, España, 2025, 61’)"
+  },
+  {
+   "section": "Competencia central",
+   "title": "Así llegó la noche",
+   "director": "Ángel Santos",
+   "country": "España",
+   "year": 2025,
+   "duration": 122,
+   "_raw": "Así llegó la noche (Dir. Ángel Santos, España, 2025, 122’)"
+  },
+  {
+   "section": "Competencia central",
+   "title": "Auslandsreise / Viaje al extranjero",
+   "director": "Ted Fendt",
+   "country": "Alemania",
+   "year": 2026,
+   "duration": 63,
+   "_raw": "Auslandsreise / Viaje al extranjero (Dir. Ted Fendt, Alemania, 2026, 63’)"
+  },
+  {
+   "section": "Competencia central",
+   "title": "Beaucoup parler / Mucho hablar",
+   "director": "Pascale Bodet",
+   "country": "Francia",
+   "year": 2026,
+   "duration": 78,
+   "_raw": "Beaucoup parler / Mucho hablar (Dir. Pascale Bodet, Francia, 2026, 78’)"
+  },
+  {
+   "section": "Competencia central",
+   "title": "Cairo Streets / Las calles de El Cairo",
+   "director": "Abdellah Taïa",
+   "country": "Egipto",
+   "year": 2025,
+   "duration": 19,
+   "_raw": "Cairo Streets / Las calles de El Cairo (Dir. Abdellah Taïa, Egipto, 2025, 19’)"
+  },
+  {
+   "section": "Competencia central",
+   "title": "Futuros luminosos",
+   "director": "Ismael García",
+   "country": "Colombia",
+   "year": 2026,
+   "duration": 25,
+   "_raw": "Futuros luminosos (Dir. Ismael García, Colombia, 2026, 25’)"
+  },
+  {
+   "section": "Competencia central",
+   "title": "Hold My Hand",
+   "director": "Sophie Sherman",
+   "country": "Bélgica",
+   "year": 2025,
+   "duration": 17,
+   "_raw": "Hold My Hand (Dir. Sophie Sherman, Bélgica, 2025, 17’)"
+  },
+  {
+   "section": "Competencia central",
+   "title": "La corazonada",
+   "director": "Diego Soto",
+   "country": "Chile",
+   "year": 2025,
+   "duration": 78,
+   "_raw": "La corazonada (Dir. Diego Soto, Chile, 2025, 78’)"
+  },
+  {
+   "section": "Competencia central",
+   "title": "Las almas ni los ojos",
+   "director": "Canela Reyes y César Jaimes",
+   "country": "Colombia",
+   "year": 2026,
+   "duration": 75,
+   "_raw": "Las almas ni los ojos (Dir. Canela Reyes y César Jaimes, Colombia, 2026, 75’)"
+  },
+  {
+   "section": "Competencia central",
+   "title": "Oublie pas le gruau",
+   "director": "Olivier Godin",
+   "country": "Canadá",
+   "year": 2026,
+   "duration": 75,
+   "_raw": "Oublie pas le gruau (Dir. Olivier Godin, Canadá, 2026, 75’)"
+  },
+  {
+   "section": "Competencia central",
+   "title": "Procès d’un jeune poète / Juicio a un joven poeta",
+   "director": "Philippe Van Cutsem",
+   "country": "Bélgica",
+   "year": 2025,
+   "duration": 60,
+   "_raw": "Procès d’un jeune poète / Juicio a un joven poeta (Dir. Philippe Van Cutsem, Bélgica, 2025, 60’)"
+  },
+  {
+   "section": "Competencia central",
+   "title": "Sol menor",
+   "director": "André Silva Santos",
+   "country": "Portugal",
+   "year": 2025,
+   "duration": 27,
+   "_raw": "Sol menor (Dir. André Silva Santos, Portugal, 2025, 27’)"
+  },
+  {
+   "section": "Competencia central",
+   "title": "Solitudes / Soledades",
+   "director": "Ryan McKenna",
+   "country": "Canadá",
+   "year": 2025,
+   "duration": 38,
+   "_raw": "Solitudes / Soledades (Dir. Ryan McKenna, Canadá, 2025, 38’)"
+  },
+  {
+   "section": "Competencia central",
+   "title": "Un techo sin cielo",
+   "director": "Diego Hernández",
+   "country": "México",
+   "year": 2025,
+   "duration": 90,
+   "_raw": "Un techo sin cielo (Dir. Diego Hernández, México, 2025, 90’)"
+  },
+  {
+   "section": "Competencia central",
+   "title": "Una Dança Non Sancta",
+   "director": "Tiago Almança",
+   "country": "Portugal",
+   "year": 2026,
+   "duration": 7,
+   "_raw": "Una Dança Non Sancta (Dir. Tiago Almança, Portugal, 2026, 7’)"
+  },
+  {
+   "section": "Competencia de cortometrajes",
+   "title": "Bright Summer Days",
+   "director": "Nevena Desivojevic",
+   "country": "Serbia",
+   "year": 2025,
+   "duration": 15,
+   "_raw": "Bright Summer Days (Dir. Nevena Desivojevic, Serbia, 2025, 15’)"
+  },
+  {
+   "section": "Competencia de cortometrajes",
+   "title": "Certas formas",
+   "director": "Luiz Afonso Morêda",
+   "country": "Brasil",
+   "year": 2026,
+   "duration": 17,
+   "_raw": "Certas formas (Dir. Luiz Afonso Morêda, Brasil, 2026, 17’)"
+  },
+  {
+   "section": "Competencia de cortometrajes",
+   "title": "Chuura",
+   "director": "Evgenia Arbugaeva",
+   "country": "Rusia",
+   "year": 2026,
+   "duration": 17,
+   "_raw": "Chuura (Dir. Evgenia Arbugaeva, Rusia, 2026, 17’)"
+  },
+  {
+   "section": "Competencia de cortometrajes",
+   "title": "Crash",
+   "director": "Gabriela Mureb",
+   "country": "Alemania y Brasil",
+   "year": 2026,
+   "duration": 19,
+   "_raw": "Crash (Dir. Gabriela Mureb, Alemania y Brasil, 2026, 19’)"
+  },
+  {
+   "section": "Competencia de cortometrajes",
+   "title": "El oído absoluto",
+   "director": "Rafael Federman",
+   "country": "Argentina",
+   "year": 2026,
+   "duration": 18,
+   "_raw": "El oído absoluto (Dir. Rafael Federman, Argentina, 2026, 18’)"
+  },
+  {
+   "section": "Competencia de cortometrajes",
+   "title": "Henry Is a Girl Who Likes to Sleep",
+   "director": "Marthe Peters",
+   "country": "Bélgica",
+   "year": 2026,
+   "duration": 14,
+   "_raw": "Henry Is a Girl Who Likes to Sleep (Dir. Marthe Peters, Bélgica, 2026, 14’)"
+  },
+  {
+   "section": "Competencia de cortometrajes",
+   "title": "Koki, Ciao",
+   "director": "Quenton Miller",
+   "country": "Países Bajos",
+   "year": 2025,
+   "duration": 12,
+   "_raw": "Koki, Ciao (Dir. Quenton Miller, Países Bajos, 2025, 12’)"
+  },
+  {
+   "section": "Competencia de cortometrajes",
+   "title": "loose sleep",
+   "director": "Rodrigo Soares Teixeira",
+   "country": "Portugal",
+   "year": 2026,
+   "duration": 8,
+   "_raw": "loose sleep (Dir. Rodrigo Soares Teixeira, Portugal, 2026, 8’)"
+  },
+  {
+   "section": "Competencia de cortometrajes",
+   "title": "Mi amigo, el arquitecto",
+   "director": "Óscar Garzón",
+   "country": "Colombia",
+   "year": 2026,
+   "duration": 16,
+   "_raw": "Mi amigo, el arquitecto (Dir. Óscar Garzón, Colombia, 2026, 16’)"
+  },
+  {
+   "section": "Competencia de cortometrajes",
+   "title": "Mirando al sur",
+   "director": "Felipe López Gómez",
+   "country": "Colombia",
+   "year": 2026,
+   "duration": 34,
+   "_raw": "Mirando al sur (Dir. Felipe López Gómez, Colombia, 2026, 34’)"
+  },
+  {
+   "section": "Competencia de cortometrajes",
+   "title": "O",
+   "director": "Francisca Alarcão",
+   "country": "España y Portugal",
+   "year": 2026,
+   "duration": 14,
+   "_raw": "O (Dir. Francisca Alarcão, España y Portugal, 2026, 14’)"
+  },
+  {
+   "section": "Competencia de cortometrajes",
+   "title": "Only Making Out",
+   "director": "Marlon Weber",
+   "country": "Alemania",
+   "year": 2025,
+   "duration": 15,
+   "_raw": "Only Making Out (Dir. Marlon Weber, Alemania, 2025, 15’)"
+  },
+  {
+   "section": "Competencia de cortometrajes",
+   "title": "Our Homes Do Not Exist",
+   "director": "Anna Lamour",
+   "country": "Grecia",
+   "year": 2025,
+   "duration": 15,
+   "_raw": "Our Homes Do Not Exist (Dir. Anna Lamour, Grecia, 2025, 15’)"
+  },
+  {
+   "section": "Competencia de cortometrajes",
+   "title": "Pies al revés",
+   "director": "Elodie Arpa",
+   "country": "Colombia",
+   "year": 2025,
+   "duration": 18,
+   "_raw": "Pies al revés (Dir. Elodie Arpa, Colombia, 2025, 18’)"
+  },
+  {
+   "section": "Competencia de cortometrajes",
+   "title": "Prueba de cámara",
+   "director": "David Correa",
+   "country": "Colombia",
+   "year": 2026,
+   "duration": 10,
+   "_raw": "Prueba de cámara (Dir. David Correa, Colombia, 2026, 10’)"
+  },
+  {
+   "section": "Programa 1. El espesor de las formas",
+   "title": "Sombras en la niebla",
+   "director": "Pedro Pablo Vega",
+   "country": "Colombia",
+   "year": 2026,
+   "duration": 25,
+   "_raw": "Sombras en la niebla (Dir. Pedro Pablo Vega, Colombia, 2026, 25’)"
+  },
+  {
+   "section": "Programa 1. El espesor de las formas",
+   "title": "Un aparato para detectar fantasmas",
+   "director": "Mauricio Maldonado",
+   "country": "Colombia",
+   "year": 2025,
+   "duration": 18,
+   "_raw": "Un aparato para detectar fantasmas (Dir. Mauricio Maldonado, Colombia, 2025, 18’)"
+  },
+  {
+   "section": "Programa 1. El espesor de las formas",
+   "title": "Ya se ven los tigres en la lluvia",
+   "director": "Óscar Ruiz Navia",
+   "country": "Colombia",
+   "year": 2025,
+   "duration": 15,
+   "_raw": "Ya se ven los tigres en la lluvia (Dir. Óscar Ruiz Navia, Colombia, 2025, 15’)"
+  },
+  {
+   "section": "Programa 1. El espesor de las formas",
+   "title": "El cazador",
+   "director": "Luciana Riso Soto y Manuel Villa",
+   "country": "Colombia",
+   "year": 2026,
+   "duration": 13,
+   "_raw": "El cazador (Dir. Luciana Riso Soto y Manuel Villa, Colombia, 2026, 13’)"
+  },
+  {
+   "section": "Programa 1. El espesor de las formas",
+   "title": "Las formas de la magia",
+   "director": "María Paula Lorgia Garnica",
+   "country": "Colombia",
+   "year": 2026,
+   "duration": 17,
+   "_raw": "Las formas de la magia (Dir. María Paula Lorgia Garnica, Colombia, 2026, 17’)"
+  },
+  {
+   "section": "Programa 2. Teoremas sobre la mirada",
+   "title": "Memorias Encontradas Numa Banheira",
+   "director": "Leonardo Pirondi",
+   "country": "Brasil",
+   "year": 2026,
+   "duration": 5,
+   "_raw": "Memorias Encontradas Numa Banheira (Dir. Leonardo Pirondi, Brasil, 2026, 5’)"
+  },
+  {
+   "section": "Programa 2. Teoremas sobre la mirada",
+   "title": "Parece el mundo",
+   "director": "Santiago Quirama",
+   "country": "Colombia",
+   "year": 2026,
+   "duration": 38,
+   "_raw": "Parece el mundo (Dir. Santiago Quirama, Colombia, 2026, 38’)"
+  },
+  {
+   "section": "Competencia Nuevas voces",
+   "title": "Borrachos mientras escuchamos las gotas caer",
+   "director": "Santiago Gómez Ramírez",
+   "country": "Colombia",
+   "year": 2026,
+   "duration": 22,
+   "_raw": "Borrachos mientras escuchamos las gotas caer (Dir. Santiago Gómez Ramírez, Colombia, 2026, 22’)"
+  },
+  {
+   "section": "Competencia Nuevas voces",
+   "title": "El salto",
+   "director": "Jerónimo Rincón",
+   "country": "Colombia",
+   "year": 2026,
+   "duration": 12,
+   "_raw": "El salto (Dir. Jerónimo Rincón, Colombia, 2026, 12’)"
+  },
+  {
+   "section": "Competencia Nuevas voces",
+   "title": "Gramática práctica italiana",
+   "director": "Daniel Cortés",
+   "country": "Colombia",
+   "year": 2025,
+   "duration": 13,
+   "_raw": "Gramática práctica italiana (Dir. Daniel Cortés, Colombia, 2025, 13’)"
+  },
+  {
+   "section": "Competencia Nuevas voces",
+   "title": "Liminal",
+   "director": "Gabriella Castelblanco",
+   "country": "Colombia",
+   "year": 2026,
+   "duration": 16,
+   "_raw": "Liminal (Dir. Gabriella Castelblanco, Colombia, 2026, 16’)"
+  },
+  {
+   "section": "Competencia Nuevas voces",
+   "title": "Madres de nacimiento",
+   "director": "Gloria Isabel Gómez",
+   "country": "Colombia",
+   "year": 2026,
+   "duration": 9,
+   "_raw": "Madres de nacimiento (Dir. Gloria Isabel Gómez, Colombia, 2026, 9’)"
+  },
+  {
+   "section": "Competencia Nuevas voces",
+   "title": "Medellín yo te saludo",
+   "director": "Lucas Muñoz",
+   "country": "Colombia",
+   "year": 2026,
+   "duration": 9,
+   "_raw": "Medellín yo te saludo (Dir. Lucas Muñoz, Colombia, 2026, 9’)"
+  },
+  {
+   "section": "Competencia Nuevas voces",
+   "title": "Para no volver",
+   "director": "Tania Galvis",
+   "country": "Colombia",
+   "year": 2025,
+   "duration": 11,
+   "_raw": "Para no volver (Dir. Tania Galvis, Colombia, 2025, 11’)"
+  },
+  {
+   "section": "Competencia Nuevas voces",
+   "title": "Pausas activas",
+   "director": "Juan Pablo Castro",
+   "country": "Colombia",
+   "year": 2026,
+   "duration": 12,
+   "_raw": "Pausas activas (Dir. Juan Pablo Castro, Colombia, 2026, 12’)"
+  },
+  {
+   "section": "Competencia Nuevas voces",
+   "title": "Preguntas frecuentes",
+   "director": "Sofía Salinas Barrera",
+   "country": "Colombia",
+   "year": 2025,
+   "duration": 16,
+   "_raw": "Preguntas frecuentes (Dir. Sofía Salinas Barrera, Colombia, 2025, 16’)"
+  },
+  {
+   "section": "Competencia Nuevas voces",
+   "title": "Refracción",
+   "director": "Isabella Palacio",
+   "country": "Colombia",
+   "year": 2025,
+   "duration": 11,
+   "_raw": "Refracción (Dir. Isabella Palacio, Colombia, 2025, 11’)"
+  },
+  {
+   "section": "Proyecciones especiales",
+   "title": "A Árvore do Conhecimento / El árbol del conocimiento",
+   "director": "Eugène Green",
+   "country": "Portugal",
+   "year": 2025,
+   "duration": 100,
+   "_raw": "A Árvore do Conhecimento / El árbol del conocimiento (Dir. Eugène Green, Portugal, 2025, 100’)"
+  },
+  {
+   "section": "Proyecciones especiales",
+   "title": "Decaer",
+   "director": "Juan Camilo González",
+   "country": "Colombia",
+   "year": 2026,
+   "duration": 8,
+   "_raw": "Decaer (Dir. Juan Camilo González, Colombia, 2026, 8’)"
+  },
+  {
+   "section": "Proyecciones especiales",
+   "title": "Disciplina",
+   "director": "Affonso Uchôa",
+   "country": "Brasil",
+   "year": 2026,
+   "duration": 45,
+   "_raw": "Disciplina (Dir. Affonso Uchôa, Brasil, 2026, 45’)"
+  },
+  {
+   "section": "Proyecciones especiales",
+   "title": "Dry Leaf",
+   "director": "Alexandre Koberidze",
+   "country": "Georgia",
+   "year": 2025,
+   "duration": 186,
+   "_raw": "Dry Leaf (Dir. Alexandre Koberidze, Georgia, 2025, 186’)"
+  },
+  {
+   "section": "Proyecciones especiales",
+   "title": "El hogar fue sepultado en esa tierra que nunca pudimos encontrar",
+   "director": "Deimer Quintero Vertel",
+   "country": "Colombia",
+   "year": 2026,
+   "duration": 93,
+   "_raw": "El hogar fue sepultado en esa tierra que nunca pudimos encontrar (Dir. Deimer Quintero Vertel, Colombia, 2026, 93’)"
+  },
+  {
+   "section": "Proyecciones especiales",
+   "title": "Lolita en Honda",
+   "director": "Daniel Torres",
+   "country": "Colombia",
+   "year": 2026,
+   "duration": 61,
+   "_raw": "Lolita en Honda (Dir. Daniel Torres, Colombia, 2026, 61’)"
+  },
+  {
+   "section": "Proyecciones especiales",
+   "title": "Para hacer una película solo se necesita un arma",
+   "director": "Santiago Sein",
+   "country": "Argentina",
+   "year": 2026,
+   "duration": 146,
+   "_raw": "Para hacer una película solo se necesita un arma (Dir. Santiago Sein, Argentina, 2026, 146’)"
+  },
+  {
+   "section": "Proyecciones especiales",
+   "title": "The Souffleur",
+   "director": "Gastón Solnicki",
+   "country": "Argentina",
+   "year": 2026,
+   "duration": 78,
+   "_raw": "The Souffleur (Dir. Gastón Solnicki, Argentina, 2026, 78’)"
+  },
+  {
+   "section": "Proyecciones especiales",
+   "title": "Une vie manifeste",
+   "director": "Jean-Gabriel Périot",
+   "country": "Francia",
+   "year": 2026,
+   "duration": 86,
+   "_raw": "Une vie manifeste (Dir. Jean-Gabriel Périot, Francia, 2026, 86’)"
+  },
+  {
+   "section": "Iluminaciones",
+   "title": "La tempestá",
+   "director": "Pere Portabella",
+   "country": "España",
+   "year": 2003,
+   "duration": 6,
+   "_raw": "La tempestá (Dir. Pere Portabella, España, 2003, 6’)"
+  },
+  {
+   "section": "Iluminaciones",
+   "title": "Los golfos",
+   "director": "Carlos Saura",
+   "country": "España",
+   "year": 1960,
+   "duration": 83,
+   "_raw": "Los golfos (Dir. Carlos Saura, España, 1960, 83’)"
+  },
+  {
+   "section": "Iluminaciones",
+   "title": "Macho Dancer",
+   "director": "Lino Brocka",
+   "country": "Filipinas",
+   "year": 1988,
+   "duration": 136,
+   "_raw": "Macho Dancer (Dir. Lino Brocka, Filipinas, 1988, 136’)"
+  },
+  {
+   "section": "Iluminaciones",
+   "title": "Ich denke oft an Hawaii / Muchas veces pienso en Hawái",
+   "director": "Elfi Mikesch",
+   "country": "Alemania",
+   "year": 1978,
+   "duration": 82,
+   "_raw": "Ich denke oft an Hawaii / Muchas veces pienso en Hawái (Dir. Elfi Mikesch, Alemania, 1978, 82’)"
+  },
+  {
+   "section": "Iluminaciones",
+   "title": "No contéis con los dedos",
+   "director": "Pere Portabella",
+   "country": "España",
+   "year": 1967,
+   "duration": 26,
+   "_raw": "No contéis con los dedos (Dir. Pere Portabella, España, 1967, 26’)"
+  },
+  {
+   "section": "Iluminaciones",
+   "title": "Sunshine Singapur",
+   "director": "Rajendra Gour",
+   "country": "Singapur",
+   "year": 1972,
+   "duration": 7,
+   "_raw": "Sunshine Singapur (Dir. Rajendra Gour, Singapur, 1972, 7’)"
+  },
+  {
+   "section": "Iluminaciones",
+   "title": "Eyes",
+   "director": "Rajendra Gour",
+   "country": "Singapur",
+   "year": 1967,
+   "duration": 5,
+   "_raw": "Eyes (Dir. Rajendra Gour, Singapur, 1967, 5’)"
+  },
+  {
+   "section": "Iluminaciones",
+   "title": "Labour of Love: The Housewife",
+   "director": "Rajendra Gour",
+   "country": "Singapur",
+   "year": 1978,
+   "duration": 19,
+   "_raw": "Labour of Love: The Housewife (Dir. Rajendra Gour, Singapur, 1978, 19’)"
+  },
+  {
+   "section": "Iluminaciones",
+   "title": "My Child, My Child",
+   "director": "Rajendra Gour",
+   "country": "Singapur",
+   "year": 1978,
+   "duration": 12,
+   "_raw": "My Child, My Child (Dir. Rajendra Gour, Singapur, 1978, 12’)"
+  },
+  {
+   "section": "Iluminaciones",
+   "title": "Sight and Desire",
+   "director": "Rajendra Gour",
+   "country": "Singapur",
+   "year": 1968,
+   "duration": 23,
+   "_raw": "Sight and Desire (Dir. Rajendra Gour, Singapur, 1968, 23’)"
+  },
+  {
+   "section": "Iluminaciones",
+   "title": "Vampir Cuadecuc",
+   "director": "Pere Portabella",
+   "country": "España",
+   "year": 1971,
+   "duration": 67,
+   "_raw": "Vampir Cuadecuc (Dir. Pere Portabella, España, 1971, 67’)"
+  },
+  {
+   "section": "Iluminaciones",
+   "title": "Was soll'n wir denn machen ohne den Tod / ¿Qué haremos sin la muerte?",
+   "director": "Elfi Mikesch",
+   "country": "Alemania",
+   "year": 1980,
+   "duration": 101,
+   "_raw": "Was soll'n wir denn machen ohne den Tod / ¿Qué haremos sin la muerte? (Dir. Elfi Mikesch, Alemania, 1980, 101’)"
+  },
+  {
+   "section": "Alquimia de la luz. El cine de Luciana Decker",
+   "title": "Larama",
+   "director": "Luciana Decker",
+   "country": "Bolivia",
+   "year": 2020,
+   "duration": 8,
+   "_raw": "Larama (Dir. Luciana Decker, Bolivia, 2020, 8’)"
+  },
+  {
+   "section": "Alquimia de la luz. El cine de Luciana Decker",
+   "title": "Lo que los humanos ven como sangre los jaguares ven como chicha",
+   "director": "Luciana Decker",
+   "country": "Bolivia",
+   "year": 2023,
+   "duration": 30,
+   "_raw": "Lo que los humanos ven como sangre los jaguares ven como chicha (Dir. Luciana Decker, Bolivia, 2023, 30’)"
+  },
+  {
+   "section": "Alquimia de la luz. El cine de Luciana Decker",
+   "title": "Objetos parlantes",
+   "director": "Luciana Decker",
+   "country": "Bolivia",
+   "year": 2021,
+   "duration": 10,
+   "_raw": "Objetos parlantes (Dir. Luciana Decker, Bolivia, 2021, 10’)"
+  },
+  {
+   "section": "Alquimia de la luz. El cine de Luciana Decker",
+   "title": "Puro andar",
+   "director": "Luciana Decker",
+   "country": "Bolivia",
+   "year": 2025,
+   "duration": 12,
+   "_raw": "Puro andar (Dir. Luciana Decker, Bolivia, 2025, 12’)"
+  },
+  {
+   "section": "Alquimia de la luz. El cine de Luciana Decker",
+   "title": "Spoils",
+   "director": "Luciana Decker",
+   "country": "Bolivia, Estados Unidos",
+   "year": 2023,
+   "duration": 7,
+   "_raw": "Spoils (Dir. Luciana Decker, Bolivia, Estados Unidos, 2023, 7’)"
+  },
+  {
+   "section": "Alquimia de la luz. El cine de Luciana Decker",
+   "title": "Trizas",
+   "director": "Luciana Decker",
+   "country": "Bolivia",
+   "year": 2026,
+   "duration": 15,
+   "_raw": "Trizas (Dir. Luciana Decker, Bolivia, 2026, 15’)"
+  },
+  {
+   "section": "Carta blanca",
+   "title": "Jakawisa",
+   "director": "Delia Yujra Chura",
+   "country": "Bolivia",
+   "year": 2020,
+   "duration": 6,
+   "_raw": "Jakawisa (Dir. Delia Yujra Chura, Bolivia, 2020, 6’)"
+  },
+  {
+   "section": "Carta blanca",
+   "title": "Hiding / Esquivo",
+   "director": "Fatmeh Villalba",
+   "country": "Bolivia, Alemania",
+   "year": 2024,
+   "duration": 30,
+   "_raw": "Hiding / Esquivo (Dir. Fatmeh Villalba, Bolivia, Alemania, 2024, 30’)"
+  },
+  {
+   "section": "Carta blanca",
+   "title": "Derroteros, Derroteros, Derroteros, Derroteros, Derroteros, Derroteros, Derroteros",
+   "director": "Esteban Prudencia",
+   "country": "Bolivia, Cuba",
+   "year": 2026,
+   "duration": 19,
+   "_raw": "Derroteros, Derroteros, Derroteros, Derroteros, Derroteros, Derroteros, Derroteros (Dir. Esteban Prudencia, Bolivia, Cuba, 2026, 19’)"
+  },
+  {
+   "section": "La primavera llega para los que esperan. El cine de José Luis Torres Leiva",
+   "title": "¿Qué historia es ésta y cuál es su final?",
+   "director": "José Luis Torres Leiva",
+   "country": "Chile",
+   "year": 2013,
+   "duration": 53,
+   "_raw": "¿Qué historia es ésta y cuál es su final? (Dir. José Luis Torres Leiva, Chile, 2013, 53’)"
+  },
+  {
+   "section": "La primavera llega para los que esperan. El cine de José Luis Torres Leiva",
+   "title": "Alicia soñó con un faro",
+   "director": "José Luis Torres Leiva",
+   "country": "Chile",
+   "year": 2021,
+   "duration": 8,
+   "_raw": "Alicia soñó con un faro (Dir. José Luis Torres Leiva, Chile, 2021, 8’)"
+  },
+  {
+   "section": "La primavera llega para los que esperan. El cine de José Luis Torres Leiva",
+   "title": "Cuando las nubes esconden la sombra",
+   "director": "José Luis Torres Leiva",
+   "country": "Chile",
+   "year": 2024,
+   "duration": 71,
+   "_raw": "Cuando las nubes esconden la sombra (Dir. José Luis Torres Leiva, Chile, 2024, 71’)"
+  },
+  {
+   "section": "La primavera llega para los que esperan. El cine de José Luis Torres Leiva",
+   "title": "El cielo, la tierra y la lluvia",
+   "director": "José Luis Torres Leiva",
+   "country": "Chile",
+   "year": 2008,
+   "duration": 110,
+   "_raw": "El cielo, la tierra y la lluvia (Dir. José Luis Torres Leiva, Chile, 2008, 110’)"
+  },
+  {
+   "section": "La primavera llega para los que esperan. El cine de José Luis Torres Leiva",
+   "title": "El sueño de Ana",
+   "director": "José Luis Torres Leiva",
+   "country": "Chile",
+   "year": 2017,
+   "duration": 9,
+   "_raw": "El sueño de Ana (Dir. José Luis Torres Leiva, Chile, 2017, 9’)"
+  },
+  {
+   "section": "La primavera llega para los que esperan. El cine de José Luis Torres Leiva",
+   "title": "El viento sabe que vuelvo a casa",
+   "director": "José Luis Torres Leiva",
+   "country": "Chile",
+   "year": 2016,
+   "duration": 102,
+   "_raw": "El viento sabe que vuelvo a casa (Dir. José Luis Torres Leiva, Chile, 2016, 102’)"
+  },
+  {
+   "section": "La primavera llega para los que esperan. El cine de José Luis Torres Leiva",
+   "title": "Obreras saliendo de la fábrica",
+   "director": "José Luis Torres Leiva",
+   "country": "Chile",
+   "year": 2005,
+   "duration": 21,
+   "_raw": "Obreras saliendo de la fábrica (Dir. José Luis Torres Leiva, Chile, 2005, 21’)"
+  },
+  {
+   "section": "La primavera llega para los que esperan. El cine de José Luis Torres Leiva",
+   "title": "Sobre cosas que me han pasado",
+   "director": "José Luis Torres Leiva",
+   "country": "Chile",
+   "year": 2018,
+   "duration": 15,
+   "_raw": "Sobre cosas que me han pasado (Dir. José Luis Torres Leiva, Chile, 2018, 15’)"
+  },
+  {
+   "section": "La primavera llega para los que esperan. El cine de José Luis Torres Leiva",
+   "title": "Vendrá la muerte y tendrá tus ojos",
+   "director": "José Luis Torres Leiva",
+   "country": "Chile",
+   "year": 2019,
+   "duration": 86,
+   "_raw": "Vendrá la muerte y tendrá tus ojos (Dir. José Luis Torres Leiva, Chile, 2019, 86’)"
+  },
+  {
+   "section": "La primavera llega para los que esperan. El cine de José Luis Torres Leiva",
+   "title": "Ver y escuchar",
+   "director": "José Luis Torres Leiva",
+   "country": "Chile",
+   "year": 2013,
+   "duration": 90,
+   "_raw": "Ver y escuchar (Dir. José Luis Torres Leiva, Chile, 2013, 90’)"
+  },
+  {
+   "section": "La primavera llega para los que esperan. El cine de José Luis Torres Leiva",
+   "title": "Verano",
+   "director": "José Luis Torres Leiva",
+   "country": "Chile",
+   "year": 2011,
+   "duration": 95,
+   "_raw": "Verano (Dir. José Luis Torres Leiva, Chile, 2011, 95’)"
+  },
+  {
+   "section": "Febril incisión. El cine de Thomas Fürhapter",
+   "title": "Cleaning & Cleansing",
+   "director": "Thomas Fürhapter",
+   "country": "Austria",
+   "year": 2024,
+   "duration": 92,
+   "_raw": "Cleaning & Cleansing (Dir. Thomas Fürhapter, Austria, 2024, 92’)"
+  },
+  {
+   "section": "Febril incisión. El cine de Thomas Fürhapter",
+   "title": "La tercera opción / Die dritte Option / The Third Option",
+   "director": "Thomas Fürhapter",
+   "country": "Austria",
+   "year": 2017,
+   "duration": 78,
+   "_raw": "La tercera opción / Die dritte Option / The Third Option (Dir. Thomas Fürhapter, Austria, 2017, 78’)"
+  },
+  {
+   "section": "Febril incisión. El cine de Thomas Fürhapter",
+   "title": "Viviendo juntos / Zusammenleben",
+   "director": "Thomas Fürhapter",
+   "country": "Austria",
+   "year": 2022,
+   "duration": 90,
+   "_raw": "Viviendo juntos / Zusammenleben (Dir. Thomas Fürhapter, Austria, 2022, 90’)"
+  },
+  {
+   "section": "Sick and Dirty. Curaduría de Michael Koresky",
+   "title": "Vive L’Amour",
+   "director": "Tsai Ming-liang",
+   "country": "Taiwán",
+   "year": 1994,
+   "duration": 118,
+   "_raw": "Vive L’Amour (Dir. Tsai Ming-liang, Taiwán, 1994, 118’)"
+  },
+  {
+   "section": "Sick and Dirty. Curaduría de Michael Koresky",
+   "title": "The Children’s Hour",
+   "director": "William Wyler",
+   "country": "Estados Unidos",
+   "year": 1961,
+   "duration": 108,
+   "_raw": "The Children’s Hour (Dir. William Wyler, Estados Unidos, 1961, 108’)"
+  },
+  {
+   "section": "Sick and Dirty. Curaduría de Michael Koresky",
+   "title": "Buddies",
+   "director": "Arthur J. Bressan",
+   "country": "Jr., Estados Unidos",
+   "year": 1985,
+   "duration": 81,
+   "_raw": "Buddies (Dir. Arthur J. Bressan, Jr., Estados Unidos, 1985, 81’)"
+  },
+  {
+   "section": "La sutil materia. Sergio Navarro",
+   "title": "Caminito al Cielo",
+   "director": "Sergio Navarro",
+   "country": "Chile",
+   "year": 1989,
+   "duration": 37,
+   "_raw": "Caminito al Cielo (Sergio Navarro, Chile, 1989, 37')"
+  },
+  {
+   "section": "La sutil materia. Sergio Navarro",
+   "title": "Cuartito rosa",
+   "director": "Sergio Navarro",
+   "country": "Chile",
+   "year": 1991,
+   "duration": 30,
+   "_raw": "Cuartito rosa (Sergio Navarro , Chile, 1991, 30')"
+  },
+  {
+   "section": "La sutil materia. Sergio Navarro",
+   "title": "El santo y el milagro",
+   "director": "Sergio Navarro",
+   "country": "Chile",
+   "year": 1993,
+   "duration": 35,
+   "_raw": "El santo y el milagro (Sergio Navarro, Chile, 1993, 35')"
+  },
+  {
+   "section": "La sutil materia. Sergio Navarro",
+   "title": "La libertad remonta el estadio",
+   "director": "Sergio Navarro",
+   "country": "Chile",
+   "year": 1897,
+   "duration": 22,
+   "_raw": "La libertad remonta el estadio (Sergio Navarro, Chile, 1897, 22')"
+  },
+  {
+   "section": "La sutil materia. Sergio Navarro",
+   "title": "Valparaíso eterno",
+   "director": "Sergio Navarro",
+   "country": "Chile",
+   "year": 1991,
+   "duration": 30,
+   "_raw": "Valparaíso eterno (Sergio Navarro, 1991, Chile, 30')"
+  },
+  {
+   "section": "Historia(s) del cine: Argentina. Curaduría de José Miccio",
+   "title": "Chico eléctrico",
+   "director": "Ingrid Pokropek",
+   "country": "Argentina",
+   "year": 2021,
+   "duration": 28,
+   "_raw": "Chico eléctrico (Dir. Ingrid Pokropek, Argentina, 2021, 28’)"
+  },
+  {
+   "section": "Historia(s) del cine: Argentina. Curaduría de José Miccio",
+   "title": "Dice que…",
+   "director": "Alejandro Fernández Mouján",
+   "country": "Argentina",
+   "year": 2025,
+   "duration": 68,
+   "_raw": "Dice que… (Dir. Alejandro Fernández Mouján, Argentina, 2025, 68’)"
+  },
+  {
+   "section": "Historia(s) del cine: Argentina. Curaduría de José Miccio",
+   "title": "Homenaje a la obra de Philip Henry Gosse",
+   "director": "Pablo Martín Weber",
+   "country": "Argentina",
+   "year": 2020,
+   "duration": 22,
+   "_raw": "Homenaje a la obra de Philip Henry Gosse (Dir. Pablo Martín Weber, Argentina, 2020, 22’)"
+  },
+  {
+   "section": "Historia(s) del cine: Argentina. Curaduría de José Miccio",
+   "title": "Las picapedreras",
+   "director": "Azul Aizenberg",
+   "country": "Argentina",
+   "year": 2021,
+   "duration": 16,
+   "_raw": "Las picapedreras (Dir. Azul Aizenberg, Argentina, 2021, 16’)"
+  },
+  {
+   "section": "Historia(s) del cine: Argentina. Curaduría de José Miccio",
+   "title": "Rancho",
+   "director": "Pedro Speroni",
+   "country": "Argentina",
+   "year": 2021,
+   "duration": 70,
+   "_raw": "Rancho (Dir. Pedro Speroni, Argentina, 2021, 70’)"
+  },
+  {
+   "section": "Historia(s) del cine: Argentina. Curaduría de José Miccio",
+   "title": "Solo qu3r3mos un poco de amor",
+   "director": "Raúl Perrone",
+   "country": "Argentina",
+   "year": 2024,
+   "duration": 75,
+   "_raw": "Solo qu3r3mos un poco de amor (Dir. Raúl Perrone, Argentina, 2024, 75’)"
+  },
+  {
+   "section": "Historia(s) del cine: Argentina. Curaduría de José Miccio",
+   "title": "Spot Fuera de campo 1",
+   "director": "Pablo Martín Weber",
+   "country": "Argentina",
+   "year": 2025,
+   "duration": 3,
+   "_raw": "Spot Fuera de campo 1 (Dir. Pablo Martín Weber, Argentina, 2025, 3’)"
+  },
+  {
+   "section": "Historia(s) del cine: Argentina. Curaduría de José Miccio",
+   "title": "Spot Fuera de campo 2",
+   "director": "María Aparicio",
+   "country": "Argentina",
+   "year": 2024,
+   "duration": 4,
+   "_raw": "Spot Fuera de campo 2 (Dir. María Aparicio, Argentina, 2024, 4’)"
+  }
+ ]
+}
