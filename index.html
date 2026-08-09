@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202608090808">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202608090808">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202608090858">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202608090858">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -1069,9 +1069,42 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 /* Taller multi-día (is_recurring): el control es del BLOQUE, no de la sesión.
    Va debajo del listado, ancho completo, porque la decisión es sobre el conjunto
    —no cabe alineado a la derecha de una fila, como el «Agregar» por función—. */
-.pel-sheet-bloque{padding:var(--sp-2) var(--sp-5) var(--sp-3)}
-.pel-sheet-bloque .suggestion-add{width:100%;justify-content:center;padding:var(--sp-2) var(--sp-3)}
-.pel-sheet-bloque .blk-quitar{color:var(--gray2)}
+/* ── Taller multi-día: el corchete que dice «esto es una sola cosa» ──────────
+   Las N sesiones van unidas por un corchete recto con un eslabón, y el control
+   queda a su derecha EN LÍNEA — la misma píldora que cualquier función suelta.
+   El corchete va del lado del botón: las filas conservan la alineación
+   izquierda del resto de la app (a la izquierda las corría ~24px) y apunta a
+   lo que significa — estas N alimentan UNA acción. */
+/* --blq-arm: largo del brazo del corchete Y ancho del eslabón — es UN solo número
+   con un solo significado, y de él sale el desplazamiento que centra el icono
+   sobre la línea. Sin esto reaparecen los 12/-6 sueltos, que es como se pierde la
+   relación entre las dos medidas. */
+.blq{--blq-arm:var(--sp-2);display:flex;align-items:stretch;padding:var(--sp-1) 0}
+.blq-filas{flex:1;min-width:0}
+/* Las filas del grupo conservan EXACTAMENTE el alto de una fila suelta: el ritmo
+   vertical de la lista es el mismo en toda la app y agrupar no es motivo para
+   romperlo. Lo único que se les quita es la divisoria — una línea entre filas dice
+   «son ítems distintos», justo lo contrario de lo que el corchete afirma. */
+.blq-filas .pel-sheet-screening{border-bottom:none}
+/* El brazo del corchete YA es el aire entre la sede y la línea: sumarle padding
+   acá le robaba ancho a la sede sin separar más. Medido: con brazo 12 + padding 8
+   + 12 del CTA, la columna de sede quedaba en 129px contra los 151px de una fila
+   normal con botón — 22px que parten «Colombo Americano · Sala 2» en dos líneas.
+   Es el mismo bug que causó el badge «✓ En tu Plan» (20 jul). Ahora la diferencia
+   es de 6px. */
+.blq-multi .blq-filas{padding-right:0}
+/* El corchete son DOS tramos con un hueco al medio para el eslabón. La primera
+   versión pintaba el icono encima con un `background` que lo despejara, y se veía
+   una cajita: la ficha lleva color ambiental del póster, así que NINGÚN color fijo
+   coincide con su fondo. Un hueco real no depende del fondo. */
+.blq-corchete{display:flex;flex-direction:column;align-items:flex-end;width:var(--blq-arm);flex-shrink:0}
+.blq-c-seg{flex:1;width:100%;border-right:1.5px solid var(--bdr)}
+.blq-c-seg:first-child{border-top:1.5px solid var(--bdr)}
+.blq-c-seg:last-child{border-bottom:1.5px solid var(--bdr)}
+/* Medio brazo hacia afuera = el eslabón queda centrado SOBRE la línea vertical. */
+.blq-link{display:flex;color:var(--gray2);margin-right:calc(var(--blq-arm) / -2);padding:var(--sp-1) 0}
+.blq-cta{display:flex;align-items:center;flex-shrink:0;padding-left:var(--sp-2)}
+.blq-cta .blk-quitar{color:var(--gray2)}
 /* ── Bottom Sheet ── */
 /* El velo NO transiciona en CSS: lo conduce initVeil() por rAF (auditoría
    28 jul 2026, DESIGN.md §8.4.1 — la opacidad CSS funde el tinte pero no
@@ -3143,7 +3176,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202608090808";
+    s.src="/src/main.js?v=202608090858";
     document.body.appendChild(s);
     // Watchdog de boot (P0 18 jul): si el grafo ESM murió en el import (caché
     // HTTP mixta tras deploys en ráfaga — main.js nuevo + módulo viejo sin el
