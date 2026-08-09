@@ -115,6 +115,11 @@ by_norm={norm(f['title']):f for f in staging['films']}
 alias={}
 for f in staging['films']:
     if f.get('title_orig'): alias[norm(f['title_orig'])]=f
+    # También por title_en. Dos obras colombianas —«El Capitán Anthony» e
+    # «Iniciación en la Octava Dimensión»— las publica el festival traducidas al
+    # inglés en el calendario, y el catálogo guarda el título original. Sin este
+    # índice, un re-ensamblado no las encontraría y las daría por eventos sueltos.
+    if f.get('title_en'): alias.setdefault(norm(f['title_en']), f)
 
 ALIAS_EV={  # título del calendario → título de Etapa A (typos y traducciones de la fuente)
  'CAIDA LIBRE':'Free Fall',

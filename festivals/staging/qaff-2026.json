@@ -208,7 +208,7 @@
  },
  "films": [
   {
-   "title": "MUESTRA ARTISTICA",
+   "title": "Muestra Artística",
    "type": "event",
    "duration": "",
    "synopsis": "\"Magia en el Monte\" — Mery Palmezzano Muestra artística de apertura · Vernissage QAFF 2026 · Quibdó Magia en el Monte es una instalación inmersiva que transforma el espacio de la Biblioteca Pública Arnoldo Palacios Mosquera en un lugar mítico: una manigua interior donde lo femenino florece en su dimensión más elevada. A través de ilustración y alambrismo, la propuesta invita a quien entra a detenerse, a reconocer la magia que habita en la naturaleza y en las mujeres que la guardan.",
@@ -234,10 +234,11 @@
    },
    "event_kind": "",
    "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026",
-   "_pendiente": "duración: el evento del calendario va del 14 SEP al 17 OCT porque es una MUESTRA abierta en continuo, no una función. Los 47.580 min que salían de fin−inicio son la ventana, no la obra. Se deja vacía; si la organización publica una duración de visita, va aquí."
+   "_pendiente": "duración: el evento del calendario va del 14 SEP al 17 OCT porque es una MUESTRA abierta en continuo, no una función. Los 47.580 min que salían de fin−inicio son la ventana, no la obra. Se deja vacía; si la organización publica una duración de visita, va aquí.",
+   "_src_titulo": "ortografía; el calendario del festival lo publica en mayúsculas como «MUESTRA ARTISTICA»"
   },
   {
-   "title": "FACE TO FACE",
+   "title": "Face to Face",
    "director": "Florent Mahoukou",
    "duration": "20 min",
    "country": "Congo",
@@ -273,7 +274,8 @@
     "title_orig": "póster oficial QAFF"
    },
    "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026",
-   "title_orig": "Face to Face"
+   "title_orig": "Face to Face",
+   "_src_titulo": "title_orig; el calendario del festival lo publica en mayúsculas como «FACE TO FACE»"
   },
   {
    "title": "Manman Chadwon",
@@ -313,7 +315,7 @@
    "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026"
   },
   {
-   "title": "CAPTAIN ANTHONY",
+   "title": "El Capitán Anthony",
    "director": "Gregory Robinson",
    "duration": "8 min",
    "country": "Colombia",
@@ -350,10 +352,12 @@
     "title_orig": "poster oficial QAFF + ficha TMDB creada"
    },
    "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026",
-   "title_orig": "El Capitán Anthony"
+   "title_orig": "El Capitán Anthony",
+   "title_en": "Captain Anthony",
+   "_src_titulo": "title_orig; el calendario del festival lo publica en mayúsculas como «CAPTAIN ANTHONY»"
   },
   {
-   "title": "MANGO",
+   "title": "Mango",
    "director": "Joan Iyiola",
    "duration": "11 min",
    "country": "Francia (Reino Unido)",
@@ -389,7 +393,8 @@
     "lbSlug": "tmdb-1429453 (doble verificación)"
    },
    "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026",
-   "lbSlug": "mango-2025"
+   "lbSlug": "mango-2025",
+   "_src_titulo": "Title Case; el calendario del festival lo publica en mayúsculas como «MANGO»"
   },
   {
    "title": "A King Displaced",
@@ -853,7 +858,7 @@
    "lbSlug": "the-last-dance-2025"
   },
   {
-   "title": "VICHE",
+   "title": "Viche",
    "director": "Jorge Eliecer Leudo Murillo",
    "duration": "17 min",
    "country": "Colombia",
@@ -888,7 +893,8 @@
    "requires_registration": true,
    "is_free": true,
    "type": "film",
-   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026"
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026",
+   "_src_titulo": "Title Case; el calendario del festival lo publica en mayúsculas como «VICHE»"
   },
   {
    "title": "Cafe ?",
@@ -1086,7 +1092,7 @@
    "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026"
   },
   {
-   "title": "THE ANCHORAGE OF THE TIME",
+   "title": "The Anchorage of the Time",
    "director": "Sol de Carvalho",
    "duration": "105 min",
    "country": "Mozambique",
@@ -1118,7 +1124,8 @@
    "_inherited": {
     "synopsis": "qaff-event-desc"
    },
-   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026"
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026",
+   "_src_titulo": "Title Case; el calendario del festival lo publica en mayúsculas como «THE ANCHORAGE OF THE TIME»"
   },
   {
    "title": "POSESAS [Possessed]",
@@ -1162,7 +1169,7 @@
    "title_orig": "Posesas"
   },
   {
-   "title": "DIÁLOGO IMPROBABLE  ·  NOIR IDENTIDAD",
+   "title": "Diálogo Improbable · Noir Identidad",
    "type": "event",
    "duration": "120 min",
    "synopsis": "Ser negro no es un género: identidades complejas entre la vitrina y la pantalla NOIR Identidad explora la negritud como identidad compleja, múltiple e irreductible a una sola definición. ¿Cómo se cura una identidad en un museo? ¿Cómo se filma sin reducirla? El curador que construye vitrinas vs. el cineasta que construye planos vs. el artista que trabaja con imagen y objeto vs. el gestor cultural que diseña los espacios donde las identidades caben o no caben. Pregunta central: ¿cómo se representa dignamente la diversidad negra sin esencializarla, simplificarla ni traicionarla? PANELISTAS: Dra. Patricia Mena, César A. Palacios Chaverra, Nicola Vizcaíno, Museo Afro de Colombia",
@@ -1187,7 +1194,8 @@
     ]
    },
    "event_kind": "",
-   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026"
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026",
+   "_src_titulo": "Title Case; el calendario del festival lo publica en mayúsculas como «DIÁLOGO IMPROBABLE  ·  NOIR IDENTIDAD»"
   },
   {
    "title": "The One who Cries",
@@ -2012,7 +2020,7 @@
    "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026"
   },
   {
-   "title": "BERTHA",
+   "title": "Bertha",
    "director": "Laura Asprilla",
    "duration": "13 min",
    "country": "Colombia",
@@ -2047,7 +2055,8 @@
     "synopsis": "qaff-event-desc",
     "tmdb_alta": "creada 2026-08-03 (jdvlazio) — póster subido 2026-08-03 (verificado en sesión)"
    },
-   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026"
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026",
+   "_src_titulo": "Title Case; el calendario del festival lo publica en mayúsculas como «BERTHA»"
   },
   {
    "title": "Nunkui",
@@ -2169,7 +2178,7 @@
    "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026"
   },
   {
-   "title": "DIÁLOGO IMPROBABLE  ·  NOIR HISTÓRICO",
+   "title": "Diálogo Improbable · Noir Histórico",
    "type": "event",
    "duration": "120 min",
    "synopsis": "Las sombras del archivo: memoria negra entre el museo y el cine La historia afrodescendiente ha sido contada desde los archivos coloniales, la Inquisición y los registros de esclavización. El Museo Afro rastrea esas memorias en archivos nacionales para restituirlas. El cine NOIR Histórico hace lo mismo: ilumina lo que fue deliberadamente oscurecido. ¿Qué ocurre cuando el curador, la documentalista, el director de teatro y la especialista en salud mental y políticas públicas se encuentran frente al mismo archivo? El museo desclasifica y expone; el cine reanima y resignifica; la política pública mide el daño y diseña la reparación.",
@@ -2194,7 +2203,8 @@
     ]
    },
    "event_kind": "",
-   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026"
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026",
+   "_src_titulo": "Title Case; el calendario del festival lo publica en mayúsculas como «DIÁLOGO IMPROBABLE  ·  NOIR HISTÓRICO»"
   },
   {
    "title": "Waterfront Memories",
@@ -2433,7 +2443,7 @@
    "title_orig": "Les Voyageurs"
   },
   {
-   "title": "THE ANCHORAGE OF THE TIME",
+   "title": "The Anchorage of the Time",
    "director": "Sol de Carvalho",
    "duration": "105 min",
    "country": "Mozambique",
@@ -2466,10 +2476,11 @@
    "requires_registration": true,
    "is_free": true,
    "type": "film",
-   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026"
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026",
+   "_src_titulo": "Title Case; el calendario del festival lo publica en mayúsculas como «THE ANCHORAGE OF THE TIME»"
   },
   {
-   "title": "INITIATION INTO THE EIGHTH DIMENSION",
+   "title": "Iniciación en la Octava Dimensión",
    "director": "Lucas Silva",
    "duration": "90 min",
    "country": "Colombia",
@@ -2506,7 +2517,9 @@
     "title_orig": "poster oficial QAFF + ficha TMDB creada"
    },
    "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026",
-   "title_orig": "Iniciación en la Octava Dimensión"
+   "title_orig": "Iniciación en la Octava Dimensión",
+   "title_en": "Initiation into the Eighth Dimension",
+   "_src_titulo": "title_orig; el calendario del festival lo publica en mayúsculas como «INITIATION INTO THE EIGHTH DIMENSION»"
   },
   {
    "title": "Wrong Generation",
