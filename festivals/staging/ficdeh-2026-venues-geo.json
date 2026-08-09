@@ -60,7 +60,8 @@
   "address": "Cra. 5 # 6-05, San Pedro",
   "_prec": "manual",
   "_match": "Plazoleta del Samán, en el Centro Cultural de Cali (Cra. 5 #6-05)",
-  "_fuente": "Google Maps (verificado 2026-08-05)"
+  "_fuente": "Google Maps (verificado 2026-08-05)",
+  "_nota": "Es el espacio al aire libre del «Centro Cultural de Cali»: misma dirección (Cra. 5 # 6-05) y por eso las mismas coordenadas. Espacios distintos."
  },
  "Centro de Formación de la Cooperación Española - Cartagena": {
   "lat": 10.4244554,
@@ -99,7 +100,8 @@
   "short": "Biblioteca Pública CEFE Fontanar Del Río",
   "address": "Calle 146 # 138A-99",
   "_prec": "alias",
-  "_match": "hereda de «Cinemateca Fontanar del Río - Bogotá»"
+  "_match": "hereda de «Cinemateca Fontanar del Río - Bogotá»",
+  "_nota": "Mismo edificio que «Cinemateca Fontanar del Río» (CEFE Fontanar del Río, Calle 146 # 138A-99). El festival publica los dos nombres, sin sala y en días que no se solapan (13 ago aquí, 14–16 en la Cinemateca); se conservan ambos verbatim."
  },
  "Teatro El Ensueño - Bogotá": {
   "lat": 4.5859476,
@@ -151,7 +153,8 @@
   "short": "Centro Cultural Panóptico de Ibagué",
   "address": "Calle 11 # 9-73ª, barrio Belén",
   "_prec": "poi",
-  "_match": "Panóptico de Ibagué"
+  "_match": "Panóptico de Ibagué",
+  "_nota": "Mismo complejo que «Museo Panóptico de Ibagué» (a 20 m): el Panóptico alberga centro cultural y museo. Espacios distintos; nombres tal cual los publica el festival."
  },
  "Cineland - Quibdó": {
   "lat": 5.6899285,
@@ -355,7 +358,8 @@
   "address": "Calle 146 # 138A-99",
   "_prec": "manual",
   "_match": "CEFE Fontanar del Río, Suba",
-  "_fuente": "Google Maps (verificado 2026-08-05)"
+  "_fuente": "Google Maps (verificado 2026-08-05)",
+  "_nota": "Mismo edificio que «Biblioteca Pública CEFE Fontanar Del Río» (CEFE Fontanar del Río, Calle 146 # 138A-99). El festival publica los dos nombres, sin sala y en días que no se solapan (14–16 ago aquí, 13 en la biblioteca); se conservan ambos verbatim."
  },
  "Fundación Gilberto Alzate Avendaño - Biblioteca - Bogotá": {
   "lat": 4.5953608,
@@ -744,7 +748,8 @@
   "short": "Museo Panóptico de Ibagué",
   "address": "",
   "_prec": "poi",
-  "_match": "Museo Panoptico De ibagué"
+  "_match": "Museo Panoptico De ibagué",
+  "_nota": "Mismo complejo que «Centro Cultural Panóptico de Ibagué» (a 20 m). Una sola función, el 15 ago. Nombre tal cual lo publica el festival."
  },
  "La Trocha - Casa de la Paz - Bogotá": {
   "lat": 4.6248165,
@@ -1185,7 +1190,8 @@
   "address": "Cra. 5 # 6-05, San Pedro",
   "_prec": "manual",
   "_match": "Centro Cultural De Cali",
-  "_fuente": "Google Maps (verificado 2026-08-05)"
+  "_fuente": "Google Maps (verificado 2026-08-05)",
+  "_nota": "Comparte dirección y coordenadas con «Plazoleta del Samán», que es su espacio al aire libre. Espacios distintos."
  },
  "Institución Educativa Los Arrieritos - Manizales": {
   "lat": 5.0743694,
