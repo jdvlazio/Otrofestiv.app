@@ -143,6 +143,11 @@ def venue_key(f):
         venues[key] = {'short': sede, 'lat': g.get('lat'), 'lng': g.get('lng'),
                        'city': f['ciudad'], 'address': f.get('direccion','') or ''}
         if g.get('_geo'): venues[key]['_geo'] = g['_geo']
+        # _nota: sedes que caen a <60 m de otra y que ya se revisaron a mano
+        # (el guardián [sedes-apiladas] la exige para no volver a preguntar).
+        # Vive en el sidecar, no en el publicado: si no se propagara aquí, el
+        # próximo ensamblado la borraría.
+        if g.get('_nota'): venues[key]['_nota'] = g['_nota']
     return key
 
 # ── secciones de actividades (nombres del festival, regla "tal cual") ────────
