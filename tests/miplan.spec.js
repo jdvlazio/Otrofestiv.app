@@ -345,3 +345,44 @@ test('T58 — el taller multi-día no se ofrece como sugerencia', async ({ page 
   r.tallerTitulo);
   expect(ofrecido, 'una sesión suelta del bloque no puede ofrecerse: addSuggestion añade una sola').toBe(false);
 });
+
+// T59 — el copy del bloque: la fila dice cuál es, y el modal qué se va.
+// En Mi Plan las sesiones se leían como funciones sueltas del mismo título, y
+// sorprendía que quitar una las sacara todas. Además el modal prometía «lo podés
+// encontrar de nuevo en Sugerencias», que dejó de ser cierto para un taller: se
+// quitaron de ahí justamente para que el bloque no se rompa (T58).
+test('T59 — la fila dice «Sesión 1 de N» y el modal avisa que se van todas', async ({ page }) => {
+  await enterFestival(page, 'leviza2026', '2026-05-13T09:00:00-05:00');
+  await page.evaluate(() => openPelSheet('Taller de Guion'));
+  await page.waitForTimeout(1000);
+  await page.evaluate(() => { const b = document.querySelector('#pel-sheet .pel-sheet-bloque .suggestion-add'); if (b) b.click(); });
+  await page.waitForTimeout(1200);
+  await page.evaluate(() => { try { closePelSheet(); } catch (e) {} switchMainNav('mnav-miplan'); showAgView(); });
+  await page.waitForTimeout(1800);
+
+  const fila = await page.evaluate(() => [...document.querySelectorAll('.saved-sesion')].map(e => e.textContent.trim()));
+  expect(fila.length, 'la fila del taller lleva su coordenada').toBeGreaterThan(0);
+  expect(fila[0]).toMatch(/Sesión \d de 3/);
+
+  await page.evaluate(() => removeFromAgenda('Taller de Guion'));
+  await page.waitForTimeout(800);
+  const modal = await page.evaluate(() => {
+    const c = document.querySelector('.cm-subject');
+    return c ? c.parentElement.textContent.replace(/\s+/g, ' ').trim() : '';
+  });
+  expect(modal, 'el modal dice la consecuencia real').toMatch(/3 sesiones/);
+  expect(modal, 'y ya no promete Sugerencias, donde el taller no aparece').not.toMatch(/Sugerencias/);
+
+  // control: una película normal conserva el copy de siempre
+  await page.evaluate(() => { const b = [...document.querySelectorAll('button')].find(x => /cancelar/i.test(x.textContent)); if (b) b.click(); });
+  await page.waitForTimeout(400);
+  const normal = await page.evaluate(() => {
+    const f = FILMS.find(x => !x.info && x.day && x.time && !x.is_recurring);
+    state.set('savedAgenda', { schedule: [{ _title: f.title, title: f.title, day: f.day, time: f.time,
+      venue: f.venue, duration: f.duration, day_order: f.day_order }] });
+    removeFromAgenda(f.title);
+    const c = document.querySelector('.cm-subject');
+    return c ? c.parentElement.textContent : '';
+  });
+  expect(normal, 'lo que no es bloque no cambia').toMatch(/Sugerencias/);
+});

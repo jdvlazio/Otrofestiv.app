@@ -266,7 +266,12 @@ export function removeFromAgenda(title){
   const {savedAgenda} = state.snapshot();
   if(!savedAgenda) return;
   const _s=title.length>36?title.slice(0,34)+'…':title;
-  showActionModal(t('plan_quitar_plan'),`<div class="cm-subject">${_s}</div><div>${t('plan_restaurar_suger')}</div>`,t('misc_quitar'),()=>_dropFromPlan(title));
+  // Taller multi-día: el modal dice la CONSECUENCIA real —salen las N— y no la
+  // promesa vieja. «Lo podés encontrar de nuevo en Sugerencias» dejó de ser cierto
+  // para un taller: se quitaron de ahí justamente para que el bloque no se rompa.
+  const _rec=(FILMS||[]).filter(f=>f.title===title&&f.is_recurring&&f.day&&f.time).length;
+  const _cuerpo=_rec>1?t('bloque_quitar_aviso',{n:_rec}):t('plan_restaurar_suger');
+  showActionModal(t('plan_quitar_plan'),`<div class="cm-subject">${_s}</div><div>${_cuerpo}</div>`,t('misc_quitar'),()=>_dropFromPlan(title));
 }
 
 // _planFixNotice — la salida para una entrada del Plan cuya función cambió. El
