@@ -518,6 +518,223 @@ Las invariantes de arquitectura **no se documentan y confía**: se verifican. `v
 
 > Regla: al cambiar la firma/deps de una función de dominio (ej. un `import` interno nuevo) suele haber que actualizar `tests/lib/load-domain.js` (`DEFAULT_FNS`) además del test.
 
+### 15.4b Operaciones de git — las barreras y por qué existen
+
+En una semana de agosto de 2026 se perdió trabajo tres veces, y **ninguna fue un
+error de lógica**: las tres fueron manipulación del repositorio.
+
+| qué pasó | qué se perdió |
+|---|---|
+| `git checkout --theirs index.html` al resolver un merge | el markup del sheet de ciudad (8 referencias) y `ticketBadgeTarget` del TEST BRIDGE (3) |
+| lo mismo, dos días después | el CSS de `.fn-ciudad` / `.fn-otra-ciudad` |
+| `git add -A` | versionó `fuentes/` (68 MB); al cambiar de rama, git borró del disco los PDF originales |
+
+Las tres estaban descritas en la documentación de git. `git-checkout(1)`: `--ours`
+y `--theirs` sacan «stage #2 o #3 **for unmerged paths**» — el **archivo entero**,
+no el hunk. Y al cambiar de rama, los archivos versionados en una y no en la otra
+se borran del working tree.
+
+**Dos reglas duras:**
+
+1. **Nunca `--ours`/`--theirs` sobre un archivo con código.** En este repo la
+   trampa es concreta: `bump-version.js` toca cuatro archivos —`index.html`,
+   `src/main.js`, `sw.js`, `version.json`— y tres **también llevan código**. Un
+   conflicto ahí parece trivial y no lo es. Desde el driver `bump` (15.4c) casi
+   nunca hay que resolverlo a mano; cuando lo haya, usar
+   **`./scripts/traer-main.sh`**, que resuelve el bump re-ejecutándolo y al final
+   verifica que ninguna línea propia haya desaparecido.
+2. **Para mirar otra rama, worktree, nunca `checkout`.** Un `git worktree add`
+   deja el directorio principal intacto: ni arrastra untracked ni borra nada.
+3. **Nada de `git stash` en este repo.** Los worktrees aíslan el árbol y el índice;
+   la **pila de stash es una sola para todo el repositorio**. Con dos chats en
+   worktrees distintos, un `pop` saca la entrada de arriba — que puede ser del otro.
+   Pasó el 9 ago 2026: un `pop` en el worktree de app trajo `ficmontanas-hold-5` del
+   worktree de onboarding y dejó `CLAUDE.md`, `src/config.js` y
+   `validate-festivals.js` con marcadores de conflicto sin resolver, en medio de una
+   verificación que no tenía nada que ver con festivales.
+   **En vez de stash: commiteá el WIP en tu rama.** Un commit lleva tu nombre de rama
+   y nadie lo saca por accidente. Si aun así hay que aplicar uno, `git stash apply
+   stash@{N}` por referencia exacta, nunca `pop`.
+   No hay hook de git para stash (`pre-stash` no existe), así que la barrera vigila
+   el ESTADO: `[stash-compartido]` avisa cuando hay entradas vivas con más de un
+   worktree, y dice de qué rama vienen.
+
+**Barreras mecánicas** (`.githooks/`, activadas con `git config core.hooksPath .githooks`):
+
+| hook | qué corta |
+|---|---|
+| `pre-commit` | marcadores de conflicto sin resolver · documentos ofimáticos · archivos > 3 MB |
+| `pre-push` | `validate.py` en rojo — el fallo se ve en 20 s acá, no en 5 min de CI |
+
+Ambos aceptan `--no-verify`. Que el escape exista no lo vuelve rutina.
+
+Y lo que un hook no puede cortar, lo vigila `validate.py`:
+
+| guardián | qué vigila |
+|---|---|
+| `[hooks-activos]` | los hooks enchufados en este clon (`core.hooksPath`) |
+| `[merge-driver]` | el driver `bump` registrado (§15.4c) |
+| `[sin-symlinks]` | ningún enlace simbólico versionado — tumban el deploy de Pages |
+| `[peso-repo]` | material de trabajo versionado (ofimáticos, > 3 MB) |
+| `[stash-compartido]` | stash vivo con varios worktrees — la pila es del repo, no del worktree |
+
+> Por qué barreras y no propósitos: un agente encadena comandos de git en un
+> segundo, sin la fricción que tiene una persona al ver el diff en pantalla. La
+> velocidad que ayuda escribiendo código es peligrosa moviendo archivos.
+
+---
+
+### 15.4c El conflicto que no debía existir — el driver `bump`
+
+Al medir los conflictos de esa misma semana apareció que **los cinco fueron el
+mismo timestamp de 12 dígitos**, y ninguno fue contenido. La causa no era falta de
+coordinación entre ramas: era estructural. `bump-version.js` estampa el mismo
+renglón en cada rama antes de cada push, así que con dos ramas vivas el conflicto
+no es probable — **es seguro, uno por PR**. Y como tres de esos archivos también
+llevan código, el conflicto barato es justo el que se lleva trabajo por delante.
+
+Tres cambios, en orden de cuánto quitan del camino:
+
+1. **`.gitattributes` + `scripts/merge-bump.sh`.** Los cuatro archivos del bump
+   (`index.html`, `src/main.js`, `sw.js`, `version.json`) se mergean con un driver
+   propio: normaliza el build a un marcador, deja que git mergee de verdad, y
+   estampa de vuelta el build **más alto** de los dos lados. El conflicto que era
+   solo el número desaparece; el de contenido real sigue saliendo con marcadores.
+   Probado con las dos mitades antes de adoptarlo — que un conflicto real siga
+   siendo un conflicto es la mitad que importa.
+2. **`CLAUDE.md` fuera del bump.** Era el quinto archivo, y su línea de «último
+   commit» cambiaba en toda rama sin aportar nada que `git log` no diga mejor.
+   Ahora se regenera a mano: `node scripts/generate-claude-md.js`.
+3. **`[sin-symlinks]` en `validate.py`.** Un symlink `fuentes` → ruta absoluta del
+   Mac entró dentro de un PR de festival y tumbó el deploy de Pages: en el runner
+   esa ruta no existe, el empaquetador la sigue y muere con exit 1 sin decir la
+   palabra «symlink» en ningún lado. FICMA quedó en `main` sin llegar a producción.
+   Un symlink no sobrevive a salir de la máquina que lo creó: la regla es absoluta.
+
+> El driver se declara en el repo pero se registra **local** (`merge.bump.driver`):
+> git no ejecuta comandos que vengan del repositorio, y eso es una defensa suya,
+> no un descuido. `sh scripts/install-hooks.sh` lo enchufa —junto con los hooks— y
+> `[merge-driver]` avisa si falta. `traer-main.sh` queda como red para el clon que
+> no lo corrió.
+
+### 15.4d La frontera código/datos
+
+El trabajo está partido en dos chats con worktrees separados, y la regla es
+**«código de la app acá, datos del festival allá»**. `frontera.yml` la vuelve
+ejecutable: un PR que toca a la vez app (`src/`, `index.html`, `sw.js`,
+`validate.py`, `tests/`, `scripts/`) y festival (`festivals/`, `assets/`) falla.
+
+Dos decisiones deliberadas: **`src/config.js` no cuenta como código**, porque
+registrar un festival en `FESTIVAL_CONFIG` es parte legítima de un PR de datos; y
+la etiqueta **`frontera-ok`** deja pasar la mezcla, dejando rastro de que fue una
+decisión y no un descuido.
+
+Cuando un cambio necesita los dos lados —un campo nuevo en el dato más su soporte
+en la app— van **dos PR, primero el de app**: así el dato nunca llega a producción
+antes que el código que sabe leerlo.
+
+**Dueño de la rama = quien la lleva hasta el final, push _y_ merge.** El trabajo no
+se parte a la mitad entre dos chats; de ahí nacía la pregunta «¿y ahora quién
+mergea?», que costó más tiempo que los conflictos.
+
+---
+
+### 15.5 Cómo se corre la suite — un puerto por corrida
+
+**Correr siempre `./scripts/test.sh`**, nunca `npx playwright test` a secas:
+
+```bash
+./scripts/test.sh                       # toda la suite
+./scripts/test.sh tests/programa.spec.js
+./scripts/test.sh -g "T51"
+```
+
+**Por qué** (6 ago 2026 — el flaky que costó meses): Playwright **mata el
+servidor que él levantó** al terminar. Con `reuseExistingServer` (local), una
+segunda corrida reusa ese servidor en vez de levantar el suyo; si la primera
+termina antes, la segunda se queda sin servidor a mitad de camino →
+`net::ERR_CONNECTION_REFUSED` y una cascada de timeouts de 30s en specs sin
+relación entre sí. Como el daño depende de qué corrida termine antes, **fallaba
+distinto cada vez** y parecía aleatorio.
+
+Medido: la misma suite da **21/21 sola y 1/21** con otra corrida solapada. Dos
+suites completas solapadas daban **22 y 14 fallos**; con puerto propio, **0 y 0**.
+
+Pasaba a diario sin que se notara: dos sesiones de Claude Code en la misma
+carpeta, o dos corridas encimadas en la misma sesión. En CI el workflow invoca
+Playwright cinco veces seguidas y cada paso levantaba y mataba el servidor en el
+mismo puerto — misma clase de bug, por eso los pasos también usan el script.
+
+`scripts/test.sh` toma el primer puerto libre (3000–3099) y aísla también los
+artefactos: el JSON de resultados y el informe HTML son archivos únicos que dos
+corridas se sobreescribían. Lo congela `[tests-puerto-propio]`, que además
+prohíbe hardcodear `localhost:3000` en un spec.
+
+> `retries: 2` sigue puesto. Ahora que la causa dominante está cerrada, la
+> pregunta abierta es si todavía hacen falta o están tapando algo distinto.
+> Sospechosos anotados, no demostrados: el SW recarga la página en cada
+> activación (`sw.js` — `client.navigate`, ya identificado como causa de los
+> falsos positivos #133–#137 del monitor, que por eso bloquea el SW) y el
+> repintado alineado al minuto exacto del reloj (`main.js` — `_msToNextMin`).
+
+---
+
+### 15.6 QA de festival nuevo — dos capas y un gate
+
+`docs/QA-FULL.md` definió en mayo de 2026 un protocolo de 92 checks manuales y dejó
+tres bloques escritos pero **sin ejecutar**: E (Intereses), F (Planear), G (Mi Plan).
+Corrió una vez. Pasaron cinco festivales sin volver a correr. Que un protocolo
+manual se ejecute una vez en tres meses no es descuido — es el dato de diseño: lo
+manual no se sostiene, así que lo que importa se automatiza y lo manual se recorta
+hasta que quepa en una sesión.
+
+**Capa 1 — el motor es óptimo** (`tests/unit/plannerOracle.test.js`, sin navegador).
+Recorre `festivals/*.json` y compara `computeScenarios` contra un solver exacto
+(`tests/lib/exact-planner.js`), certificando cada plan con `verifyPlan`. Desde ago
+2026 siembra además las tres restricciones que el usuario sí usa —prioridades,
+ya-vistas, disponibilidad— y juzga **los dos máximos** que la app reporta:
+`trueMax` (sin exigir prioridades) y `maxWithPriorities` (exigiéndolas), este
+último contra `exactMaxEntries(..., {required})`.
+
+> Lección de método: sembrar 96 watchlists con prioridades **no** cazó una mutación
+> que hacía `maxWithPriorities = trueMax`. En las 96 las prioridades nunca costaron
+> nada, así que ambos máximos coincidían y la mentira era indistinguible de la
+> verdad. Una restricción que no aprieta no prueba nada. Lo cerró un caso
+> **dirigido**: dos obras de una sola función que chocan entre sí — exigir ambas es
+> imposible por definición y los máximos se separan (1 y 0). Cuando el muestreo no
+> caza, no hay que muestrear más: hay que construir la tensión.
+
+**Capa 2 — la app conecta ese motor** (`tests/recorrido-festival.spec.js`). Un
+recorrido por festival: intereses → prioridades → ya-vistas → disponibilidad →
+Planear (click real) → auditar → Mi Plan → sugerencias. El DOM se usa para
+**ejercer**, no para juzgar: el veredicto lo da `verifyPlan` sobre el plan que la UI
+acaba de mostrar y sobre el que `commitPlan` guardó (con `__PLAN_STRICT__`, que en
+tests **tira** en vez de reportar). Un aserto sobre texto renderizado se rompe con
+cada cambio de copy y no dice nada sobre si el plan es correcto.
+
+Ambas capas son **cross-festival por construcción**: la primera por el glob de
+`festivals/`, la segunda por `festivalTestIds()`. Un festival nuevo entra a la
+cobertura al agregar su config + su JSON, sin editar specs.
+
+**El gate** vive en `docs/FESTIVAL-CHECKLIST.md`: un festival no se publica sin
+las dos capas en verde **con su JSON ya montado**. Es lo que convierte esto en algo
+que corre siempre, en vez de un documento que se relee.
+
+**Qué encontró el primer día.** El recorrido cazó un bug real en Leviza: al vetar un
+día entero, el planeador proponía **2 de las 3 sesiones** de un taller multi-día —
+la rama todo-o-nada del backtracking mete el grupo completo, pero el grupo ya venía
+filtrado por disponibilidad. Un plan con 2 de 3 no es medio taller: es un plan que
+miente, y FICDEH —que arrancaba tres días después— tiene taller multi-día. El fix
+creó `plannableScreens` como **dueño único** de «qué funciones son planificables
+para vos» (cancelada · pasada · franja vetada · taller entero-o-nada), consumido por
+el planeador, el oráculo y el recorrido.
+
+> Y al extraerlo apareció la trampa que este mismo documento advierte: el worker del
+> planeador se arma con `.toString()` sobre `_SCHED_PURE_FNS` (`controller/calc.js`).
+> Una función nueva que no esté en esa lista existe en el main thread y **no** en el
+> worker: el cálculo moría adentro y el plan no volvía nunca. Lo cazó
+> `workerParity.test.js`, que lee la lista del propio `calc.js`.
+
 ---
 
 ## 16. ARQUITECTURA OBJETIVO — MVC vanilla JS

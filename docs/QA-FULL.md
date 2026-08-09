@@ -124,11 +124,31 @@
 
 ---
 
+## BLOQUES E, F y G — AUTOMATIZADOS (9 ago 2026)
+
+Estos tres bloques quedaron escritos en mayo y **nunca se ejecutaron**: este
+protocolo corrió una vez, y pasaron cinco festivales sin volver a correr. Que un
+protocolo manual se ejecute una vez en tres meses no es descuido — es la prueba
+de que lo manual no se sostiene. Se convirtieron en código:
+
+| bloque | dónde vive ahora |
+|---|---|
+| **E** — Intereses (prioridades, ya vistas, disponibilidad) | `tests/unit/plannerOracle.test.js` (oráculo con restricciones) + `tests/recorrido-festival.spec.js` |
+| **F** — Planear (cálculo, óptimo, conflictos) | ambos: el óptimo contra un solver exacto, el flujo con clicks reales |
+| **G** — Mi Plan (guardar, sugerencias) | `tests/recorrido-festival.spec.js` |
+
+Corren en CI **con cada festival del config**, sin editar specs: el oráculo recoge
+`festivals/*.json` y el recorrido usa `festivalTestIds()`. Un festival nuevo entra
+solo. Detalle y rationale en `docs/ARQUITECTURA.md` §15.6.
+
+**Lo que este documento sigue cubriendo — y por qué se queda:** copy, jerarquía
+visual y sensación de uso. Eso no se automatiza, y ahora cabe en una sesión corta:
+un protocolo que se puede terminar es uno que se vuelve a correr.
+
 ## PENDIENTES PARA PRÓXIMA SESIÓN
 
 - D12: sheet de evento/taller (sin Letterboxd, sin flags)
 - H8/H9: Mi Plan e Intereses en inglés
 - I4: búsqueda sin resultados
-- F1-F12: Planear completo (disponibilidad, quitar bloques)
-- G1-G13: Mi Plan completo (compartir, exportar ICS)
-- E1-E10: Intereses completo (ya vistas, rating)
+- G: compartir y exportar ICS — el recorrido llega hasta Mi Plan; compartir sigue
+  sin cobertura automática y sigue siendo verificación manual.

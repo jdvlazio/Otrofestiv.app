@@ -81,15 +81,38 @@ function sectionEmoji(sec) {
   return isEmoji ? first : '';
 }
 
+// [day-order-indice] — DEUDA CONOCIDA al introducir la regla (9 ago 2026).
+// Mismo patrón que el techo de `module-size`: lo que ya estaba mal queda visible y
+// con número, pero solo puede BAJAR. Un festival nuevo entra en 0 o no entra, y
+// cualquier función que se agregue a estos cinco tiene que salir bien.
+// Sin la lista, la regla dejaría el pipeline trabado hasta corregir cinco JSON
+// —cuatro de ellos de festivales ya archivados— y eso, con FICDEH y FINCA
+// abriendo el 12, es un riesgo peor que la deuda.
+// FICMA es el urgente: 83 de 90, y abre el 10 de agosto.
+const DAY_ORDER_DEUDA = {
+  // FICMA salió de la lista el 9 ago: su ensamblador ya calcula
+  // day_order = dayKeys.indexOf(day). Los cuatro que quedan están archivados.
+  'ficmontanas-2026.json': 40,
+  'leviza-2026.json': 21,
+  'tercertiempo-2026.json': 14,
+  'fantasofest-2026.json': 11,
+};
+
 // ── Validar un festival ──────────────────────────────────────────────────────
 function validateFestival(fname, data) {
   const errors = [];
   const warnings = [];
+  const _dayOrderMal = [];
 
   const hasConfigBlock = !!data.config;
   const cfg = data.config || {};
   const films = data.films || [];
-  const dayKeys = cfg.dayKeys || [];
+  // dayKeys vive en la RAÍZ del JSON desde el pipeline v2 (config{} salió a
+  // src/config.js y es error bloqueante tenerlo acá). Leerlo solo de `cfg` dejaba
+  // en cero toda regla que dependiera de él —incluida RULE 1, «el día existe en
+  // dayKeys»— y una regla que nunca corre se lee igual que una regla que pasa.
+  // Cazado el 9 ago 2026 al estrenar [day-order-indice]: daba verde en los 12.
+  const dayKeys = data.dayKeys || cfg.dayKeys || [];
 
   // CONFIG required fields
   // Festivales NUEVOS (desde Mujeres 2026): config en FESTIVAL_CONFIG de src/config.js, no en el JSON.
@@ -167,7 +190,8 @@ function validateFestival(fname, data) {
   }
 
   // dayKeys must match festivalDates (solo si el JSON define config)
-  const festDates = cfg.festivalDates || {};
+  // Misma sombra que dayKeys: festivalDates vive en la raíz desde el pipeline v2.
+  const festDates = data.festivalDates || cfg.festivalDates || {};
   for (const k of dayKeys) {
     if (!festDates[k]) errors.push(`dayKeys tiene '${k}' pero festivalDates no lo tiene`);
   }
@@ -195,8 +219,35 @@ function validateFestival(fname, data) {
     const isCortos = !!film.is_cortos;
 
     // ── RULE 1: day must exist in dayKeys ─────────────────────────────────
-    if (film.day && dayKeys.length && !dayKeys.includes(film.day)) {
+    // 'TBD' es un marcador DELIBERADO: la función existe y el festival aún no
+    // anunció su fecha (Tribeca la usa junto con time:'TBD'). No es un día roto,
+    // es la ausencia de día dicha en voz alta — y la app la trata aparte.
+    // Esta rama estuvo dormida hasta el 9 ago 2026: dayKeys se leía solo de
+    // config{}, que el pipeline v2 sacó del JSON, así que la lista venía vacía y
+    // la regla no comparaba nada.
+    if (film.day && film.day !== 'TBD' && dayKeys.length && !dayKeys.includes(film.day)) {
       errors.push(`"${title}": day='${film.day}' no existe en dayKeys`);
+    }
+
+    // ── RULE 1b: day_order ES el índice del día en dayKeys ────────────────
+    // [day-order-indice] — `day_order` no es un número libre: es el índice del día
+    // (0 = primer día), y así lo trata TODA la app. Ordena las funciones de la
+    // ficha, las filas de Mi Plan, el «próximo» del Programa (day_order*1440+hora)
+    // y el plan que arma el planeador. Con el valor equivocado no hay error visible
+    // — solo un orden que miente.
+    //
+    // Cazado el 9 ago 2026 al auditar la geometría del bloque de sesiones: la ficha
+    // del taller de Leviza listaba JUE 14 · SÁB 16 · VIE 15. La revisión encontró
+    // FICMA con 83 de 90 funciones fuera de índice, a un día de abrir. El patrón
+    // era usar day_order como contador correlativo por función, no como día.
+    //
+    // `loader.js` ya lo recalcula cuando un aviso reprograma una función — esa es
+    // la definición viva del campo; acá se exige lo mismo en el dato de origen.
+    if (film.day && film.day_order != null && dayKeys.length) {
+      const _esperado = dayKeys.indexOf(film.day);
+      if (_esperado >= 0 && film.day_order !== _esperado) {
+        _dayOrderMal.push(`"${title}" (${film.day}): day_order=${film.day_order}, esperado ${_esperado}`);
+      }
     }
 
     // ── RULE 2: is_cortos must have film_list ─────────────────────────────
@@ -255,11 +306,15 @@ function validateFestival(fname, data) {
     }
     if (!film.section) warnings.push(`"${title}": campo 'section' vacío`);
 
-    // ── RULE 5a: duplicado real (mismo título+día+hora) ──────────────────
+    // ── RULE 5a: duplicado real (mismo título+día+hora+SEDE) ─────────────
+    // La sede entra en la clave: en un festival multiciudad la misma obra se
+    // proyecta a la misma hora en ciudades distintas y eso NO es duplicado
+    // (FICDEH 2026: 14 casos legítimos en 11 ciudades). Duplicado real es
+    // repetir título+día+hora en LA MISMA sede, que sí es imposible.
     if (film.title) {
       _seenTitles.add(film.title);
-      const _slot = `${film.title}|${film.day||''}|${film.time||''}`;
-      if (_seenSlots.has(_slot)) errors.push(`GATE BLOQUEANTE: funcion duplicada (mismo título+día+hora) — '${film.title.slice(0,55)}'`);
+      const _slot = `${film.title}|${film.day||''}|${film.time||''}|${film.venue||''}`;
+      if (_seenSlots.has(_slot)) errors.push(`GATE BLOQUEANTE: funcion duplicada (mismo título+día+hora+sede) — '${film.title.slice(0,55)}'`);
       else _seenSlots.add(_slot);
     }
     // ── RULE 5b: titulo en ALLCAPS ───────────────────────────────────────
@@ -553,6 +608,21 @@ function validateFestival(fname, data) {
   }
   if (_longSyn.length) {
     warnings.push(`[synopsis-length] ${_longSyn.length} sinopsis > ${_SYN_MAX} chars (revisar/condensar): ${_longSyn.slice(0, 4).join(', ')}${_longSyn.length > 4 ? ` +${_longSyn.length - 4} más` : ''}`);
+  }
+
+  // [day-order-indice] — se reporta AGREGADO: 83 líneas sueltas no se leen, un
+  // número contra su techo sí. Sobre el techo = error; en el techo = warning que
+  // recuerda la deuda con su nombre.
+  const _techo = DAY_ORDER_DEUDA[fname] || 0;
+  if (_dayOrderMal.length > _techo) {
+    errors.push(`[day-order-indice] ${_dayOrderMal.length} función(es) con day_order ≠ índice del día en dayKeys (techo ${_techo}). `
+      + `day_order ordena ficha, Mi Plan, Programa y el plan generado: con el valor equivocado el orden miente sin dar error. `
+      + `Ejemplos: ${_dayOrderMal.slice(0, 3).join(' · ')}${_dayOrderMal.length > 3 ? ` +${_dayOrderMal.length - 3} más` : ''}`);
+  } else if (_dayOrderMal.length > 0) {
+    warnings.push(`[day-order-indice] ${_dayOrderMal.length} función(es) con day_order fuera de índice (deuda conocida, techo ${_techo}). `
+      + `Recalcular: day_order = dayKeys.indexOf(day). Al corregirlo, bajar el techo en DAY_ORDER_DEUDA.`);
+  } else if (_techo > 0) {
+    warnings.push(`[day-order-indice] deuda saldada (0 de ${_techo}) — bajá su techo a 0 en DAY_ORDER_DEUDA.`);
   }
 
   return { errors, warnings };

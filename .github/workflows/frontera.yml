@@ -1,0 +1,60 @@
+name: Frontera código/datos
+
+# «Código de la app acá, datos del festival allá». La regla existía como acuerdo
+# entre los dos chats de trabajo; acá se vuelve ejecutable.
+#
+# POR QUÉ: el 8 ago 2026 un PR de festival arrastró un symlink al raíz del repo y
+# tumbó el deploy de Pages — FICMA quedó en main sin llegar a producción. Los PR
+# mezclados son también los que producen los conflictos caros: dos ramas vivas
+# tocando los mismos archivos de app.
+#
+# NO es un bloqueo dogmático: `src/config.js` está excluido a propósito, porque
+# registrar un festival en FESTIVAL_CONFIG es parte legítima de un PR de datos.
+# Y si un cambio necesita de verdad los dos lados, la etiqueta `frontera-ok` lo
+# deja pasar dejando rastro de que fue una decisión, no un descuido.
+
+on:
+  pull_request:
+    branches: [main]
+    # SIN filtro de paths, por la misma razón que los otros checks: si el workflow
+    # no corre, un check requerido queda pendiente para siempre (PR #428).
+
+jobs:
+  frontera:
+    runs-on: ubuntu-latest
+    name: Frontera código/datos
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Un PR toca código o toca datos, no las dos cosas
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+          ETIQUETADO: ${{ contains(github.event.pull_request.labels.*.name, 'frontera-ok') }}
+        run: |
+          CHANGED=$(git diff --name-only "$BASE_SHA...$HEAD_SHA")
+          echo "Archivos cambiados:"; echo "$CHANGED"; echo "---"
+
+          # Código: la app. src/config.js NO cuenta — es donde se registra un festival.
+          COD=$(printf '%s\n' "$CHANGED" | grep -E '^(src/|index\.html$|sw\.js$|validate\.py$|tests/|scripts/)' \
+                | grep -vx 'src/config.js' || true)
+          # Datos: el material de un festival.
+          DAT=$(printf '%s\n' "$CHANGED" | grep -E '^(festivals/|assets/)' || true)
+
+          if [ -z "$COD" ] || [ -z "$DAT" ]; then
+            echo "✓ El PR se queda de un solo lado de la frontera."
+            exit 0
+          fi
+
+          echo "Código:"; printf '%s\n' "$COD" | sed 's/^/    /'
+          echo "Datos:";  printf '%s\n' "$DAT" | sed 's/^/    /'
+
+          if [ "$ETIQUETADO" = "true" ]; then
+            echo "⚠ Mezcla código+datos, permitida por la etiqueta 'frontera-ok'."
+            exit 0
+          fi
+
+          echo "::error::Este PR mezcla código de la app con datos de festival. Separalos en dos PR (primero el de app, para que el dato nunca llegue a producción antes del código que sabe leerlo). Si la mezcla es deliberada, etiquetá el PR como 'frontera-ok'."
+          exit 1

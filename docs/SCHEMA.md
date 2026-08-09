@@ -22,6 +22,7 @@ Documento normativo. Toda discrepancia entre este archivo y el código es un bug
   "prioLimit": 5,
   "ticket_url": "string — URL https:// de entradas (opcional)",
   "ticketing_model": "string — 'paid' | 'mixed' (obligatorio si ticket_url existe)",
+  "// registration_url": "va en la FUNCIÓN, no en la raíz — ver § Ticketing",
   "sharedSlotIsOneScreening": "bool — opt-in: dos obras en el mismo día+hora+sala son UNA función",
   "films": [ ... ]
 }
@@ -80,6 +81,56 @@ dominio es el dueño; ninguna vista calcula por su cuenta):
   queda intacta — territorio del camino de avisos. Guardián:
   `[plan-sync-en-puertas]`.
 
+### Festivales MULTICIUDAD — `city` por sede
+
+Cada entrada de `venues` puede declarar `city`. Con eso la app hace dos cosas,
+ambas automáticas (sin flags ni cambios de pipeline):
+
+- **Display** — badge `venue-municipio` bajo el nombre de la sede y ciudad en la
+  dirección de su ficha, cuando difiere de `FESTIVAL_CONFIG[id].city`
+  (Cinemancia 2025, 10 municipios del Valle de Aburrá).
+- **Filtro de lugar con nivel de ciudad** (5 ago 2026) — cuando hay **≥2
+  ciudades distintas y no vacías** entre las sedes visibles, el dropdown pasa a
+  dos niveles: ciudades (con su conteo) → «‹ Ciudades» + la ciudad (filtra
+  entera) + sus sedes. Con una sola ciudad el filtro queda plano, idéntico a
+  siempre. Motivo: FICDEH 2026 tiene 131 sedes en 11 ciudades — la lista plana
+  eran 12,5 pantallas de scroll en 390×844.
+  El predicado es `venueMatches(venue, sel)` (`view/helpers.js`), dueño único:
+  `sel` es `'all'`, un short de sede, o el centinela `'city:<Ciudad>'`.
+- **La ciudad es CONTEXTO** (6 ago 2026): se **recuerda entre sesiones** (por
+  festival, `storage.getCityFilter`) y **sobrevive al cambio de día o sección**
+  (`keepCityOnly`); una SEDE, en cambio, es un filtro momentáneo y se limpia.
+  Quitar el chip del filtro es la acción explícita de salir de la ciudad, y
+  también la olvida. Al cargar, si la ciudad guardada ya no existe en las sedes
+  del festival, se descarta en silencio (no deja el programa vacío).
+  **Doctrina:** la ciudad filtra lo que DESCUBRÍS (Programa, Días, Sugerencias),
+  **nunca lo que ya elegiste** — Mi Plan muestra tu plan completo aunque tenga
+  funciones de varias ciudades. Un plan itinerante (Bogotá el 13, Medellín el 17)
+  es legítimo y ya funciona: `screensConflict` corta por día antes que nada.
+- **La FICHA hereda el contexto** (7 ago 2026): con una ciudad elegida, la ficha
+  muestra solo sus funciones, la nombra **una vez** en el banner de Funciones (y
+  la quita de cada fila, donde ya no aporta) y avisa lo que quedó fuera con una
+  nota sobria —«+1 función en otra ciudad»— que no nombra la ciudad ni ofrece
+  acción: cambiar de ciudad es del filtro de Lugar, no de la ficha.
+  Los AVISOS se recalculan sobre lo que se ve, así que la banda **desaparece**
+  cuando se queda sin filas: «One in a million» es gratis en Medellín y con
+  boleta en Bogotá, y con Medellín elegido no hay nada que advertir. Antes esa
+  ficha mostraba un «CON BOLETA» que era de otra ciudad — engañoso, no solo ruido.
+  **La excepción no es negociable:** una función que ya está en tu plan se muestra
+  siempre, aunque sea de otra ciudad. Sin ella la app te ofrecería «Agregar» algo
+  que ya tenés. Congelado por T55.
+- **La ciudad se ve en cada card** del modo por días (`venueCity`, dueño único —
+  devuelve '' si coincide con la del festival, para no repetirla en los de una
+  sola ciudad). Sin esto, en FICDEH había que abrir la ficha para saber si una
+  función era alcanzable.
+- **Conflicto entre ciudades** — `screensConflictReason` devuelve `kind:'ciudad'`
+  con el nombre y **sin minutos**: `travelMins` usa velocidad urbana y a escala
+  intermunicipal se equivoca 3× (Bogotá→Ibagué: estima 13 h, son ~4). Se dice el
+  dato (la ciudad) y el usuario juzga; se puede forzar con "+ Incluir". El
+  mensaje va **solo**: «Es en Ibagué» — sin texto de apoyo, ya lo dice todo.
+  **Ojo con el borde**: FINCA declara `city` en 1 de 6 sedes — por eso la regla
+  exige DOS ciudades distintas, no «¿hay city?».
+
 ### `sharedSlotIsOneScreening` — anclaje de función (opt-in, 29 jul 2026)
 
 Algunos festivales programan **dos obras en una misma función**: un corto o
@@ -115,6 +166,17 @@ en el plan guardado—. La ficha lo anuncia con `meta_funcion_incluye`.
 **Ticketing (campos opcionales del root):**
 - `ticket_url` — URL `https://` de la página oficial de entradas. Si existe, el sheet de función muestra un bloque con link (oculto cuando `festivalEnded()`). Ausencia de `ticket_url` = festival gratuito (no muestra nada).
 - `ticketing_model` — `"paid"` (todo pago, ej. Tribeca → link "Comprá tu entrada →") o `"mixed"` (pago + gratis, ej. Olhar → meta-banner "Funciones pagas y gratuitas"). **Obligatorio si `ticket_url` existe.**
+- `registration_url` — URL `https://` del formulario de inscripción. **Va en la
+  FUNCIÓN** (`films[].registration_url` o `screenings[].registration_url`), no en
+  la raíz: el formulario es de esa actividad, no del festival —el de la Master
+  Class de FICDEH 2026 se titula «Filmar un país en guerra | 13° FICDEH»—. Si
+  existe, la ficha muestra un enlace «Inscribite →» junto al aviso INSCRIPCIÓN;
+  si no, no se muestra nada. Mismas tres reglas que `ticket_url`: por función,
+  validado `https://`, oculto cuando `festivalEnded()`.
+  **No usar `ticket_url` para esto:** el ticket es solo para COMPRAR, y un
+  formulario gratuito ahí haría que la ficha dijera «Comprá tu entrada» en una
+  actividad de entrada libre. Complementa a `requires_registration` (el booleano
+  dice que hace falta; este dice dónde — con 15 cupos por taller, ese es el dato).
 - En festivales `"mixed"`, marcar funciones gratuitas con `is_free: true` por screening (ver Screenings). El card muestra badge "GRATIS"; el sheet oculta el bloque solo si **todas** las funciones del film son gratuitas.
 - Ambos campos se absorben vía el whitelist `_cfgFields` en `loader.js` — un campo root nuevo que no esté ahí se descarta en silencio.
 
@@ -127,6 +189,7 @@ en el plan guardado—. La ficha lo anuncia con `meta_funcion_incluye`.
   "Nombre completo del venue": {
     "short": "Nombre corto para el card (≤ 20 chars)",
     "address": "Dirección completa",
+    "room": "Sala 3 — opcional, solo sedes MULTISALA (ver abajo)",
     "lat": 0.0,
     "lng": 0.0
   }
@@ -138,6 +201,36 @@ en el plan guardado—. La ficha lo anuncia con `meta_funcion_incluye`.
 - `short` es lo que ve el usuario en el card
 - Coordenadas requeridas para la vista de mapa
 - Los nombres de venue en `film.venue` y `film.screenings[].venue` deben ser claves exactas de este objeto
+
+#### Sedes MULTISALA — una sala, una sede
+
+Un complejo con varias salas (Colombo Americano 1/2/3, Cinemateca de Bogotá,
+Plaza Bocagrande 1–5 en FICCI 65) se monta como **una entrada de `venues` por
+sala**: clave propia, **mismo `short`** (el edificio) y **las mismas
+coordenadas**. Con eso, y sin nada más:
+
+- son **funciones distintas** y nunca se funden;
+- dos a la misma hora **entran en conflicto** (no podés estar en dos salas);
+- encadenar una tras otra **no cuesta viaje** (0 min, mismas coordenadas);
+- el **filtro de Lugar las agrupa por edificio** — elegir «Cinemateca» trae sus
+  tres salas, que es lo que uno quiere.
+
+> Ojo: por eso `sharedSlotIsOneScreening` es **opt-in**. En una sede multisala,
+> misma hora + misma sede es **otra sala = otra función**, y anclarlas sería un
+> error.
+
+**`room` — cómo se llama la sala.** Opcional. Si no se declara, la app la deduce
+del nombre de la sede, pero **solo entiende salas numeradas** (`Sala 3`,
+`Salón 1`). Una sala con nombre propio —«Sala Capital» de la Cinemateca— se
+pierde: el asistente llega al edificio sin saber a cuál entrar. Se declara ahí.
+
+Dueño único: `sala(venue)` (`view/helpers.js`) — declarado gana sobre deducido —
+y `venueLabel(venue)` arma el «Edificio · Sala» que se exporta al calendario.
+
+**Regla de onboarding:** si dos sedes comparten `short`, cada una necesita su
+sala. Si no la tienen, no son salas: son la misma sede escrita de dos formas
+(FICCI 65 tiene cuatro de esos duplicados: `AECID`/`aecid`,
+`Auditorio Nido`/`Auditorio nido`…) y hay que fusionarlas.
 
 ---
 
@@ -245,6 +338,34 @@ Usado cuando un film tiene múltiples funciones en días/horarios/venues distint
 ```
 
 `is_free` se absorbe en la explosión de screenings (whitelist en `loader.js`). Solo aplica a festivales con `ticketing_model: "mixed"`.
+
+#### El badge de precio marca la MINORÍA
+
+Marcar `is_free` no implica pintar un badge GRATIS. **La app decide sola de qué
+lado cae la minoría y marca ese lado**, una vez por festival:
+
+| Funciones gratuitas | Badge que se pinta | En |
+|---|---|---|
+| ≤ 50% | **GRATIS** | las gratuitas |
+| > 50% (y el empate) | **CON BOLETA** | las de pago |
+
+Dueño único: **`ticketBadgeTarget()`** en `src/view/helpers.js` — lo consultan
+las cards (`_metaBadges`) y la fila de AVISOS de la ficha. Guardián
+`[badge-precio-minoria]`. Nadie más lee `is_free` para decidir un badge.
+
+**Por qué:** hasta agosto de 2026 lo gratuito era la excepción en los diez
+festivales montados (0% en nueve, 6% en Tercer Tiempo) y marcar las gratuitas
+alcanzaba. FICDEH 2026 invirtió la premisa —313 de 384 funciones de entrada
+libre, el 81%— y el badge pasó a pintar 313 tarjetas sin decir nada, escondiendo
+las 71 que sí exigen sacar boleta. Un badge que marca la mayoría no informa.
+
+El umbral es 50% y no uno más alto a propósito: es "la minoría" literal, se
+explica en una frase y no deja zona gris marcando mayorías. **El empate resuelve
+a CON BOLETA**, que es lo accionable. Con el programa aún sin cargar no se decide
+nada (ni se memoiza).
+
+Para el onboarding esto no cambia nada: se sigue marcando `is_free` en cada
+función gratuita, sin importar cuántas sean.
 
 **Regla de explosión:** el sistema convierte `screenings[]` en objetos film planos usando:
 ```javascript

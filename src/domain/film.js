@@ -237,7 +237,10 @@ export function explodeScreenings(films){
           day:s.day||s.date,date:s.date||s.day,time:s.time,venue:s.venue||'',
           day_order:s.day_order!==undefined?s.day_order:i,
           sala:s.sala||'',
-          ...(s.is_free!=null?{is_free:s.is_free}:{}) // por-función (festivales mixed)
+          ...(s.is_free!=null?{is_free:s.is_free}:{}), // por-función (festivales mixed)
+          // El formulario es de ESA actividad, no del festival (la Master Class de
+          // FICDEH se titula con su propio nombre) → viaja por función, como is_free.
+          ...(s.registration_url?{registration_url:s.registration_url}:{})
         }));
       });
     } else {

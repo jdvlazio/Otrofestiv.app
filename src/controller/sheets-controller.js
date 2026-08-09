@@ -8,7 +8,7 @@
 
 import { FESTIVAL_CONFIG, MAX_REMEMBERED_SLOTS, TMDB_IMG, _DEFAULT_FEST_ID } from '../config.js';
 import { DAY_ABBR, DAY_NUM, ICONS, _secLabel, _sectionColor, escXML, isFullDayBlocked, makeProgramPoster, parseProgramTitle, renderRatingStarsHTML } from '../view/components.js';
-import { _getItemPoster, _mkCortoItemHtml, _posterStyle, dayLabel, emptyState, durFmt, flagFmt, getCortoItemPoster, getFilmPoster, getFilmPosterUntitled, getPosterSrc, itemPosterParts, posterAmbient, posterParts, sala, starsText, vcfg } from '../view/helpers.js';
+import { _getItemPoster, _mkCortoItemHtml, _posterStyle, dayLabel, emptyState, durFmt, flagFmt, getCortoItemPoster, getFilmPoster, getFilmPosterUntitled, getPosterSrc, itemPosterParts, posterAmbient, posterParts, sala, starsText, vcfg, venueCity, venueMatches, isCitySel, ticketBadgeTarget } from '../view/helpers.js';
 import { closeAvSheet, closePVRating, closePrioLimit } from '../view/sheets.js';
 import { showConflictModal, showToast } from '../view/feedback.js';
 import { renderAgenda, renderAvBlocks, renderDiaryHTML } from '../view/agenda.js';
@@ -61,9 +61,9 @@ const _COUNTRY_FLAGS={
   'Brasil':'🇧🇷','Bélgica':'🇧🇪','Canadá':'🇨🇦','Chile':'🇨🇱',
   'Colombia':'🇨🇴','Cuba':'🇨🇺','EEUU':'🇺🇸','Estados Unidos':'🇺🇸',
   'Ecuador':'🇪🇨','Eslovaquia':'🇸🇰','España':'🇪🇸','Estonia':'🇪🇪',
-  'Francia':'🇫🇷','Grecia':'🇬🇷','Inglaterra':'🇬🇧','Irán':'🇮🇷',
-  'Italia':'🇮🇹','México':'🇲🇽','Nicaragua':'🇳🇮','Palestina':'🇵🇸',
-  'Perú':'🇵🇪','Portugal':'🇵🇹','Reino Unido':'🇬🇧','Rep. Dominicana':'🇩🇴',
+  'Filipinas':'🇵🇭','Francia':'🇫🇷','Grecia':'🇬🇷','Inglaterra':'🇬🇧','Irán':'🇮🇷',
+  'Italia':'🇮🇹','Kenia':'🇰🇪','México':'🇲🇽','Nicaragua':'🇳🇮','Palestina':'🇵🇸',
+  'Perú':'🇵🇪','Portugal':'🇵🇹','Reino Unido':'🇬🇧','Rep. Dominicana':'🇩🇴','Rusia':'🇷🇺',
   'Suiza':'🇨🇭','Taiwán':'🇹🇼','Turquía':'🇹🇷','UK':'🇬🇧',
   'Venezuela':'🇻🇪','Vietnam':'🇻🇳',
   'United States':'🇺🇸','USA':'🇺🇸','US':'🇺🇸',
@@ -120,12 +120,13 @@ let _cortoParentHtml=null;
 // `pairs` = [{s, owner}] — `owner` es el film que manda sobre el Plan. Para un corto
 // es su PROGRAMA: agregar un corto agrega el programa completo (regla establecida) y
 // addSuggestion solo entiende títulos que existen en FILMS.
-function _screeningRows(pairs){
+function _screeningRows(pairs, opts){
   return pairs.map(({s,owner})=>{
     const dayAbb=dayLabel(s.day)||s.day;
     const vc=vcfg(s.venue),sl=sala(s.venue);
     const _festCity=(FESTIVAL_CONFIG[_activeFestId]||{}).city||'';
-    const _city=_festCity&&vc.city&&vc.city!==_festCity?vc.city:'';
+    // sinCiudad: la ficha ya filtró por ciudad y la nombra arriba — acá sobra.
+    const _city=(opts&&opts.sinCiudad)?'':(_festCity&&vc.city&&vc.city!==_festCity?vc.city:'');
     const isPast=screeningPassed(s)&&!festivalEnded();
     // Mitad B (pin-funcion): control "Añadir esta función al Plan" por fila.
     // Recurrentes: sin control (informativo). Si esta función ya está en el
@@ -141,8 +142,15 @@ function _screeningRows(pairs){
     let _addCtrl='', _planned=false;
     // Una función cancelada NO se puede sumar al Plan: dejarle el botón permitía
     // planificar algo que no va a ocurrir (lo tenía, era un bug funcional).
+    // El estado «en tu plan» se calcula SIEMPRE — antes vivía dentro del if de
+    // abajo, así que en un taller multi-día NUNCA se calculaba y sus filas no se
+    // marcaban aunque el bloque estuviera en el plan.
+    // No hace falta una rama especial para el bloque: como entra entero (o no
+    // entra), la comparación exacta marca sus N filas igual.
+    _planned=savedAgenda&&savedAgenda.schedule.some(e=>e._title===owner.title&&e.day===s.day&&e.time===s.time);
+    // El botón POR SESIÓN, en cambio, no existe para un recurrente: su control
+    // vive abajo, a nivel de bloque (ver _bloqueCtrl).
     if(!owner.is_recurring&&!s._cancelled){
-      _planned=savedAgenda&&savedAgenda.schedule.some(e=>e._title===owner.title&&e.day===s.day&&e.time===s.time);
       if(!_planned&&!festivalEnded()&&!screeningPassed(s)){
         _addCtrl=`<button class="suggestion-add" data-action="addSuggestion" data-title="${owner.title.replace(/"/g,'&quot;')}" data-day="${s.day}" data-time="${s.time}" data-stop="1">${ICONS.plus} ${t('misc_anadir')}</button>`;
       }
@@ -228,8 +236,63 @@ export function openPelSheet(title){
   const scheduled=screenings.filter(s=>s.day&&s.time&&s.venue);
   const future=scheduled.filter(s=>!screeningPassed(s)).sort((a,b)=>a.day_order-b.day_order||toMin(a.time)-toMin(b.time));
   const past=scheduled.filter(s=>screeningPassed(s));
-  const allScr=[...future,...past];
-  const rows=_screeningRows(allScr.map(s=>({s,owner:f})));
+  // ── La ficha HEREDA el contexto de ciudad (7 ago 2026) ────────────────────
+  // Con Medellín elegido, «One in a million» mostraba sus 2 funciones y un aviso
+  // de boletería que era de Bogotá: información sobre una ciudad a la que no vas,
+  // y encima engañosa —en Medellín esa función es gratis—.
+  // Doctrina (#504): la ciudad filtra lo que DESCUBRÍS, nunca lo que YA ELEGISTE.
+  // Por eso una función que está en tu plan se muestra SIEMPRE, aunque sea de otra
+  // ciudad: sin esa excepción la app te ofrecería «Agregar» algo que ya tenés.
+  const _ciudadSel=isCitySel(activeVenue)?activeVenue.slice(5):'';
+  const _yaElegida=sc=>savedAgenda&&savedAgenda.schedule.some(e=>e._title===f.title&&e.day===sc.day&&e.time===sc.time);
+  const _todas=[...future,...past];
+  const allScr=_ciudadSel?_todas.filter(sc=>venueMatches(sc.venue,activeVenue)||_yaElegida(sc)):_todas;
+  const _ocultas=_todas.length-allScr.length;
+  // La ciudad se dice UNA vez, en el banner de Funciones (Juan, 7 ago): repetirla
+  // bajo cada sede cuando ya filtraste por ella es decir dos veces lo mismo.
+  const rows=_screeningRows(allScr.map(s=>({s,owner:f})), {sinCiudad:!!_ciudadSel});
+  // ── TALLER MULTI-DÍA (is_recurring): el control es del BLOQUE ─────────────
+  // Un taller de varios días se toma entero: quien se inscribe va a todas las
+  // sesiones. Por eso las filas quedan informativas (sin botón propio, ver
+  // _screeningRows) y debajo aparece UN control que mete o saca las N de una.
+  // Misma semántica que el corto, donde añadir un corto añade su programa.
+  // Hasta ahora is_recurring solo APAGABA el botón por sesión y no ponía nada en
+  // su lugar: el único camino al Plan era Intereses + planificador.
+  let _bloqueCtrl='';
+  if(f.is_recurring&&!festivalEnded()){
+    const _enPlan=savedAgenda&&savedAgenda.schedule.filter(e=>e._title===f.title).length;
+    // Todas las sesiones del taller, no solo las futuras: el bloque se toma ENTERO.
+    const _todasSes=allScr.filter(sc=>!sc._cancelled);
+    const _empezado=_todasSes.some(sc=>screeningPassed(sc));
+    // El botón dice lo MISMO que una función suelta («Agregar»/«Quitar»): el texto
+    // largo compensaba una agrupación que no se veía, y ahora el corchete la muestra
+    // (Juan, 9 ago 2026). La cuenta viaja en el aria-label — quien no ve el corchete
+    // sigue oyendo «Añadir las 2 sesiones». Cero strings nuevas: las cuatro existían.
+    if(_enPlan)
+      _bloqueCtrl=`<button class="suggestion-add blk-quitar" data-action="removeRecurringBlock" data-title="${f.title.replace(/"/g,'&quot;')}" data-stop="1" aria-label="${t(_enPlan===1?'bloque_quitar_1':'bloque_quitar',{n:_enPlan})}">${ICONS.x} ${t('misc_quitar')}</button>`;
+    // Un taller que YA EMPEZÓ no se puede tomar entero, así que no se ofrece.
+    // Sin esto se ofrecían «las sesiones que quedan», y eso rompía dos cosas: el
+    // texto («Añadir las 1 sesiones», cazado con los talleres de FICMA) y el
+    // invariante — verifyPlan cuenta TODAS las del catálogo, así que un plan con
+    // 1 de 2 quedaba marcado como bloque-incompleto por el propio chokepoint.
+    else if(_todasSes.length&&!_empezado)
+      _bloqueCtrl=`<button class="suggestion-add blk-add" data-action="addRecurringBlock" data-title="${f.title.replace(/"/g,'&quot;')}" data-stop="1" aria-label="${t(_todasSes.length===1?'bloque_anadir_1':'bloque_anadir',{n:_todasSes.length})}">${ICONS.plus} ${t('misc_anadir')}</button>`;
+  }
+  // ── El GRUPO: corchete + eslabón + un solo control ────────────────────────
+  // Las sesiones van unidas por un corchete recto con eslabón, y el control queda
+  // a su derecha EN LÍNEA — la misma píldora de cualquier función suelta. Antes era
+  // un botón a lo ancho DEBAJO: no se parecía a nada más en la app y obligaba a
+  // explicar la agrupación con palabras. El corchete va del lado del BOTÓN (Juan,
+  // 9 ago): a la izquierda corría las filas ~24px y rompía la columna que comparten
+  // TODAS las filas de la app. Con una sola sesión no hay nada que unir.
+  const _esGrupo=f.is_recurring&&allScr.length>1;
+  const _cuerpoFn=f.is_recurring
+    ?`<div class="blq${_esGrupo?' blq-multi':''}">
+        <div class="blq-filas">${rows}</div>
+        ${_esGrupo?`<div class="blq-corchete" aria-hidden="true"><span class="blq-c-seg"></span><span class="blq-link">${ICONS.link}</span><span class="blq-c-seg"></span></div>`:''}
+        ${_bloqueCtrl?`<div class="blq-cta">${_bloqueCtrl}</div>`:''}
+      </div>`
+    :rows;
   // Lista de cortos si es programa
   let cortosHtml='';
   if(f.is_cortos&&f.film_list?.length){
@@ -271,8 +334,8 @@ export function openPelSheet(title){
         ${(!f.is_cortos&&!f.is_programa&&f.type!=='event')?lbLink(f.title,f):''}
       </div>
     </div>
-        ${allScr.length>0?`<div class="sec-hdr sm">${ICONS.clock} <span>${f.type==='event'?t('label_horario'):allScr.length===1?t('label_funcion'):t('label_funciones_pl')}</span>${totalFn>1&&f.type!=='event'?`<span class="count-badge cb-neutral">${totalFn}</span>`:''}</div>`:''}
-    ${allScr.length>0?`<div class="pel-sheet-screenings">${rows}</div>`:''}
+        ${allScr.length>0?`<div class="sec-hdr sm">${ICONS.clock} <span>${f.type==='event'?t('label_horario'):allScr.length===1?t('label_funcion'):t('label_funciones_pl')}</span>${totalFn>1&&f.type!=='event'?`<span class="count-badge cb-neutral">${allScr.length}</span>`:''}${_ciudadSel?`<span class="fn-ciudad">${_ciudadSel}</span>`:''}</div>`:''}
+    ${allScr.length>0?`<div class="pel-sheet-screenings">${_cuerpoFn}${_ocultas>0?`<div class="fn-otra-ciudad">${t(_ocultas===1?'fn_otra_ciudad':'fn_otras_ciudades',{n:_ocultas})}</div>`:''}</div>`:''}
     ${/* ORDEN: FUNCIÓN (solo día·hora·sede) → AVISOS → SINOPSIS. Todos los avisos
         viven en su banda, incluidos cancelada y reprogramada, que van PRIMERAS y
         en rojo: lo que invalida se lee antes de lo que matiza (DESIGN 8.4.6). La
@@ -297,6 +360,18 @@ export function openPelSheet(title){
         return `<div class="meta-banner"><div class="meta-banner-dot"></div><div><div class="meta-banner-text">${t('ticket_mixed_body')}</div><a class="pel-sheet-ticket-link" href="${_turl}" target="_blank" rel="noopener">${ICONS.ticket} ${t('ticket_mixed_link')}</a></div></div>`;
       }
       return '';
+    })()}
+    ${(()=>{
+      // INSCRIPCIÓN — mismo patrón que el enlace de compra, tres decisiones heredadas:
+      // por FUNCIÓN (no del festival: el formulario de la Master Class de FICDEH se
+      // titula con el nombre de ESA actividad), validado https:// antes de pintarlo,
+      // y oculto cuando el festival terminó.
+      // NO se reusó ticket_url a propósito: «ticket es solo para comprar» (Juan). Un
+      // formulario gratuito ahí haría que la ficha dijera «Comprá tu entrada» en una
+      // actividad de entrada libre — lo contrario de lo que arregló el badge de precio.
+      const _rurl=(f.registration_url&&/^https:\/\//.test(f.registration_url))?f.registration_url:'';
+      if(!_rurl||festivalEnded()) return '';
+      return `<a class="pel-sheet-ticket-link" href="${_rurl}" target="_blank" rel="noopener">${ICONS.clipboardList} ${t('inscripcion_link')}</a>`;
     })()}
     ${f.synopsis?`    <div class="sec-hdr sm">${ICONS.text} <span>${f.type==='event'?t('label_descripcion'):t('label_sinopsis')}</span></div>
     <div class="pel-sheet-synopsis">${locSynopsis(f).replace(/^⚠️\s*INGLÉS\s*[—-]\s*/,'')}</div>`:''}
@@ -1400,18 +1475,29 @@ export function _avisosBand(f, opts){
   const _src=(opts&&opts.scrs&&opts.scrs.length)?opts.scrs:(f?[f]:[]);
   const _con=k=>_src.filter(x=>x&&x[k]);
   // Si el rasgo está en ALGUNAS funciones y no en todas, el aviso nombra cuáles
-  // —si no, mentiría sobre las otras—. Hoy no ocurre en ningún festival cargado.
-  const _cual=h=>(h.length&&h.length<_src.length)?' · '+h.map(_coord).join(' / '):'';
+  // —si no, mentiría sobre las otras—. FICDEH 2026 lo ejerce en 43 obras, y ahí
+  // «sáb 15 · 19:00» no alcanza: lo que separa las dos funciones de «One in a
+  // million» (gratis en Medellín, con boleta en Bogotá) es la CIUDAD. Se agrega
+  // solo si ESTA obra recorre ≥2 ciudades; si no, sería ruido en cada línea.
+  const _ciudades=new Set(_src.map(x=>x&&venueCity(x.venue)).filter(Boolean));
+  const _conCiudad=_ciudades.size>1;
+  const _cual=h=>(h.length&&h.length<_src.length)?' · '+h.map(x=>_coord(x,_conCiudad)).join(' / '):'';
   const _qa=_con('has_qa');
   if(_qa.length) rows.push(['Q&A', t(_qa[0].qa_type==='guests'?'aviso_qa_ref':'aviso_qa_equipo')+_cual(_qa)]);
   if(opts&&opts.prog) rows.push([t('badge_programa'), t(opts.prog==='cortos'?'aviso_prog_cortos':'aviso_prog_obras')]);
   const _ins=_con('requires_registration');
   if(_ins.length) rows.push([t('badge_inscripcion'), t('aviso_inscripcion')+_cual(_ins)]);
-  // GRATIS solo en festival MIXTO: marca la excepción cuando casi todo se paga.
-  // Ya era badge en las cards del listado; faltaba en la ficha, que es donde el
-  // usuario decide. Mismo criterio que _metaBadges — un solo predicado.
-  const _gratis=((FESTIVAL_CONFIG[_activeFestId]||{}).ticketing_model==='mixed')?_con('is_free'):[];
-  if(_gratis.length) rows.push([t('badge_gratis'), t('aviso_gratis')+_cual(_gratis)]);
+  // Precio: la ficha dice lo MISMO que la card — ticketBadgeTarget es el dueño
+  // único de qué se marca (la minoría). Si la card de una función dice CON
+  // BOLETA y su ficha dijera GRATIS, se contradirían.
+  const _tb=ticketBadgeTarget();
+  if(_tb==='free'){
+    const _g=_con('is_free');
+    if(_g.length) rows.push([t('badge_gratis'), t('aviso_gratis')+_cual(_g)]);
+  } else if(_tb==='paid'){
+    const _p=_src.filter(x=>x&&x.is_free!==true);
+    if(_p.length) rows.push([t('badge_con_boleta'), t('aviso_con_boleta')+_cual(_p)]);
+  }
   if(!rows.length) return '';
   return `<div class="sec-hdr sm">${ICONS.alert} <span>${t('label_avisos')}</span></div>`
     +`<div class="avisos-body">`
@@ -1422,9 +1508,11 @@ export function _avisosBand(f, opts){
 // _coord — "jue 13 · 19:00": cómo la app nombra una función dentro de una FRASE.
 // dayLabel devuelve el día en mayúsculas porque en la fila es una etiqueta; dentro
 // de una oración, "JUE 13" grita. Se baja a minúsculas solo acá.
-function _coord(sc){
+function _coord(sc, conCiudad){
   const d=sc.day?(dayLabel(sc.day)||sc.day).toLocaleLowerCase():'';
-  return [d, sc.time||''].filter(Boolean).join(' · ');
+  // La ciudad va PRIMERO: es el dato más grueso. Solo cuando desambigua (ver _cual).
+  const c=conCiudad?venueCity(sc.venue):'';
+  return [c, d, sc.time||''].filter(Boolean).join(' · ');
 }
 
 export function _checkRecalcOpportunity(){

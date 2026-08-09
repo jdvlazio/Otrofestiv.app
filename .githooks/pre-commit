@@ -1,0 +1,51 @@
+#!/usr/bin/env bash
+# pre-commit — la barrera más barata: corre antes de crear el commit y aborta si
+# el estado no cero (githooks(5)). Solo mira lo que está POR ENTRAR (--cached),
+# así que es instantáneo aunque el repo sea grande.
+#
+# POR QUÉ EXISTE (8 ago 2026). Tres accidentes en una semana, todos de
+# manipulación del repo y ninguno de lógica:
+#   · `git add -A` versionó fuentes/ — 68 MB de PDF originales; al cambiar de rama
+#     git los borró del disco de Juan (se recuperaron del historial de milagro).
+#   · dos merges resueltos con `git checkout --theirs <archivo>` borraron código
+#     en silencio: el archivo entero, no el hunk (git-checkout(1) lo dice).
+# La velocidad que ayuda escribiendo código es peligrosa moviendo archivos; estas
+# barreras son mecánicas a propósito.
+#
+# Escape deliberado: `git commit --no-verify`. Que exista no lo vuelve rutina.
+set -uo pipefail
+TOPE_MB=3
+falla=0
+rojo() { printf '\033[31m✗ %s\033[0m\n' "$1" >&2; }
+
+# 1 · marcadores de conflicto sin resolver
+en_conflicto=$(git diff --cached --name-only --diff-filter=ACM |
+  while IFS= read -r f; do
+    git show ":$f" 2>/dev/null | grep -qE '^(<<<<<<< |>>>>>>> |=======$)' && echo "$f"
+  done)
+if [ -n "$en_conflicto" ]; then
+  rojo "marcadores de conflicto sin resolver:"; echo "$en_conflicto" | sed 's/^/    /' >&2
+  falla=1
+fi
+
+# 2 · material de trabajo: el original del festival va en fuentes/, no en el repo
+ofim=$(git diff --cached --name-only --diff-filter=ACM |
+  grep -iE '\.(pdf|xlsx|xls|docx|doc|numbers|pages|key|psd|ai)$' || true)
+if [ -n "$ofim" ]; then
+  rojo "documentos de trabajo (su sitio es fuentes/, que está gitignored):"
+  echo "$ofim" | sed 's/^/    /' >&2; falla=1
+fi
+
+# 3 · peso: el archivo legítimo más pesado del repo son 2,28 MB (un póster)
+pesados=$(git diff --cached --name-only --diff-filter=ACM |
+  while IFS= read -r f; do
+    [ -f "$f" ] || continue
+    mb=$(( $(wc -c < "$f") / 1048576 ))
+    [ "$mb" -ge "$TOPE_MB" ] && printf '%s (%s MB)\n' "$f" "$mb"
+  done)
+if [ -n "$pesados" ]; then
+  rojo "archivos sobre ${TOPE_MB} MB:"; echo "$pesados" | sed 's/^/    /' >&2; falla=1
+fi
+
+[ "$falla" = 1 ] && { echo "  (si de verdad va, `git commit --no-verify`)" >&2; exit 1; }
+exit 0

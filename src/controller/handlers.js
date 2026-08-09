@@ -7,10 +7,11 @@
 
 import { FESTIVAL_CONFIG, MAX_REMEMBERED_SLOTS } from '../config.js';
 import { ICONS, parseProgramTitle } from '../view/components.js';
-import { closeAuthSheet, closePrioLimit } from '../view/sheets.js';
+import { closeAuthSheet, closeCitySheet, closePrioLimit } from '../view/sheets.js';
 import { showActionModal, showToast } from '../view/feedback.js';
 import { _renderProgramaContent, lugarClose, render, renderNoticesBanner, _noticeKey } from '../view/programa.js';
 import { renderAgenda, updateCardState, updateHorarioPrioBtn } from '../view/agenda.js';
+import { keepCityOnly } from '../view/helpers.js';
 import { runCalc } from './calc.js';
 import { commitPlan, saveDelays, saveLastSlot, savePrio, saveSavedAgenda, saveState, saveWL, saveWatched } from './persistence.js';
 import { cloudReportDelay, cloudClearDelay, cloudScreeningKey } from './delays-cloud.js';
@@ -265,7 +266,12 @@ export function removeFromAgenda(title){
   const {savedAgenda} = state.snapshot();
   if(!savedAgenda) return;
   const _s=title.length>36?title.slice(0,34)+'…':title;
-  showActionModal(t('plan_quitar_plan'),`<div class="cm-subject">${_s}</div><div>${t('plan_restaurar_suger')}</div>`,t('misc_quitar'),()=>_dropFromPlan(title));
+  // Taller multi-día: el modal dice la CONSECUENCIA real —salen las N— y no la
+  // promesa vieja. «Lo podés encontrar de nuevo en Sugerencias» dejó de ser cierto
+  // para un taller: se quitaron de ahí justamente para que el bloque no se rompa.
+  const _rec=(FILMS||[]).filter(f=>f.title===title&&f.is_recurring&&f.day&&f.time).length;
+  const _cuerpo=_rec>1?t('bloque_quitar_aviso',{n:_rec}):t('plan_restaurar_suger');
+  showActionModal(t('plan_quitar_plan'),`<div class="cm-subject">${_s}</div><div>${_cuerpo}</div>`,t('misc_quitar'),()=>_dropFromPlan(title));
 }
 
 // _planFixNotice — la salida para una entrada del Plan cuya función cambió. El
@@ -287,6 +293,56 @@ export function _planFixNotice(title){
   if(moved){ addSuggestion(title, moved.day, moved.time); return; }
   _dropFromPlan(title);
   setTimeout(_scrollToSuggestions, 350);
+}
+
+// ── TALLER MULTI-DÍA: el bloque entra o sale ENTERO ──────────────────────────
+// addSuggestion NO sirve acá: antes de insertar hace filter(s._title!==title) para
+// resolver el swap de función, y con un bloque eso BORRA las sesiones ya añadidas
+// —al meter la segunda desaparecía la primera—. Por eso el conjunto entra en UN
+// solo commitPlan: el chokepoint valida un estado coherente, no un intermedio.
+//
+// REGLA DURA (Juan, 8 ago): si una sola sesión no cabe, no entra NINGUNA. Un plan
+// con «1 de 2» no es medio taller, es un plan que miente sobre un compromiso que
+// nadie tomó. Y no se desplaza nada sin permiso: un taller puede chocar con varias
+// cosas a la vez, y sacarlas de un toque es demasiado que decidir por el usuario.
+export function addRecurringBlock(title){
+  // TODAS las sesiones, no solo las futuras: el bloque es todo o nada, y verifyPlan
+  // cuenta las del catálogo. Filtrar por pasadas dejaba el plan en «1 de 2» y el
+  // propio chokepoint lo marcaba como bloque-incompleto. La ficha ya no ofrece un
+  // taller empezado; este filtro es el cinturón por si se llega por otro camino.
+  const ses=FILMS.filter(f=>f.title===title&&f.is_recurring&&f.day&&f.time&&!f._cancelled);
+  if(ses.some(sc=>screeningPassed(sc))) return;
+  if(!ses.length) return;
+  const sa=savedAgenda||{schedule:[]};
+  const otras=sa.schedule.filter(e=>e._title!==title);
+  // ¿alguna sesión choca con algo que YA está en el plan?
+  const choque=ses.map(sc=>({sc, con:otras.find(e=>e.day===sc.day&&screensConflict(e,sc))})).find(x=>x.con);
+  if(choque){
+    const{displayTitle:conDT}=parseProgramTitle(choque.con._title||'');
+    const _ds=(FESTIVAL_CONFIG[_activeFestId]||{}).dayShort||{};
+    showToast(`${ICONS.alert} ${t('bloque_no_cabe',{obra:conDT,cuando:(_ds[choque.con.day]||choque.con.day||'')+' · '+(choque.con.time||'')})}`,'warn',5000);
+    return;
+  }
+  commitPlan(a=>{const b=a||{schedule:[]};return {...b,
+    schedule: [...b.schedule.filter(e=>e._title!==title), ...ses.map(sc=>({...sc,_title:title}))]
+      .sort((x,y)=>x.day_order!==y.day_order?x.day_order-y.day_order:toMin(x.time)-toMin(y.time))
+  };});
+  saveSavedAgenda();
+  const{displayTitle:dt}=parseProgramTitle(title);
+  showToast(`${ICONS.calendar} ${dt.length>20?dt.slice(0,18)+'…':dt} · ${t('bloque_anadido',{n:ses.length})}`,'info');
+  renderAgenda();
+  if(document.getElementById('pel-sheet')?.classList.contains('open')) openPelSheet(title);
+}
+
+// Quitar SIEMPRE saca el bloque completo — desde la ficha o desde Mi Plan. Dejar
+// una sesión suelta reintroduciría el estado parcial que la regla prohíbe.
+export function removeRecurringBlock(title){
+  commitPlan(a=>{const b=a||{schedule:[]};return {...b, schedule:b.schedule.filter(e=>e._title!==title)};});
+  saveSavedAgenda();
+  const{displayTitle:dt}=parseProgramTitle(title);
+  showToast(`${ICONS.undo} ${dt.length>20?dt.slice(0,18)+'…':dt} · ${t('bloque_quitado')}`,'info');
+  renderAgenda();
+  if(document.getElementById('pel-sheet')?.classList.contains('open')) openPelSheet(title);
 }
 
 export function addSuggestion(title,day,time){
@@ -670,7 +726,7 @@ export function filterByVenue(venue){
 
 export function filterByDay(day){
   closePelSheet();
-  activeDay=day;activeVenue='all';selectedIdx=null;
+  activeDay=day;activeVenue=keepCityOnly(activeVenue);selectedIdx=null;
   cartelaMode='horario';
   document.querySelectorAll('.dtab').forEach(t=>t.classList.toggle('on',t.dataset.day===day));
   requestAnimationFrame(()=>{
@@ -685,7 +741,7 @@ export function filterByDay(day){
 export function filterBySection(section){
   // Navegar a Programa · Explorar con esa sección activa
   closePelSheet();
-  activeSec=section;activeVenue='all';selectedIdx=null;
+  activeSec=section;activeVenue=keepCityOnly(activeVenue);selectedIdx=null;
   programaSubMode='hoy';
   programaChip='all';
   _programaChipMatchFn=null;
@@ -719,7 +775,7 @@ export function setInteresesView(mode){
 export function setProgramaMode(mode){
   programaSubMode=mode;
   // Reset filtros al cambiar modo y cerrar dropdowns
-  activeSec='all';activeVenue='all';selectedIdx=null;
+  activeSec='all';activeVenue=keepCityOnly(activeVenue);selectedIdx=null;
   programaChip='all';_programaChipMatchFn=null;
   lugarClose();seccionClose();
   // Set active day for hoy/mañana modes
@@ -772,7 +828,7 @@ export function setProgramaChip(chipId){
 
 export function clearProgramaChip(){
   _programaChipMatchFn=null;
-  activeVenue='all';
+  activeVenue=keepCityOnly(activeVenue);
   lugarClose();
   setProgramaChip('all');
 }
@@ -782,8 +838,29 @@ export function _pafClearSec(){
   if(activeMNav==='mnav-cartelera')_renderProgramaContent(true);else render(); // limpiar filtro sección → scroll al tope
 }
 
+// citySheetPick / citySheetAll — respuestas del sheet de ciudad (multiciudad).
+// Ambas RECUERDAN la respuesta: elegir ciudad guarda 'city:X'; "ver todas"
+// guarda 'all', que no filtra pero marca la pregunta como hecha para que no
+// vuelva a aparecer. El '' (nunca preguntado) es el único estado que la dispara.
+export function citySheetPick(city){
+  activeVenue='city:'+city;
+  storage.setCityFilter(activeVenue);
+  closeCitySheet();
+  _updateProgramaActiveFilter();
+  _renderProgramaContent(true);
+}
+
+export function citySheetAll(){
+  activeVenue='all';
+  storage.setCityFilter('all');   // preguntado y respondido: ver todas
+  closeCitySheet();
+  _updateProgramaActiveFilter();
+  _renderProgramaContent(true);
+}
+
 export function _pafClearVenue(){
-  activeVenue='all';lugarClose();_updateProgramaActiveFilter();
+  // quitar el chip es la acción EXPLÍCITA de salir de la ciudad → también la olvida
+  activeVenue='all';storage.setCityFilter('');lugarClose();_updateProgramaActiveFilter();
   if(activeMNav==='mnav-cartelera')_renderProgramaContent(true);else render(); // limpiar filtro lugar → scroll al tope
 }
 

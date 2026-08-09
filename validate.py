@@ -415,9 +415,16 @@ else:
     # Extract festival IDs
     fest_ids = re.findall(r"'([a-z0-9]+)':\s*\{", fc_block)
     fc_errors = 0
+    # La entrada se lee ENTERA, hasta donde empieza el siguiente festival. Antes se
+    # tomaban 400 caracteres fijos: un comentario dentro de la entrada empujaba los
+    # campos fuera de la ventana y el guardián los reportaba como faltantes aunque
+    # estuvieran ahí (pasó al declarar `priority` en finca2026, 8 ago 2026).
+    _starts = {fid: fc_block.find(f"'{fid}':") for fid in fest_ids}
+    _orden = sorted(_starts.values())
     for fest_id in fest_ids:
-        entry_start = fc_block.find(f"'{fest_id}':")
-        entry       = fc_block[entry_start:entry_start+400]
+        entry_start = _starts[fest_id]
+        _sig = next((x for x in _orden if x > entry_start), len(fc_block))
+        entry       = fc_block[entry_start:_sig]
         missing = [k for k in REQUIRED_BOOTSTRAP_FIELDS
                    if k+':' not in entry and k+' :' not in entry]
         if missing:
@@ -2348,6 +2355,44 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar country-flags: {_e}')
 
+# ── [poster-radio-unico] toda superficie de póster usa var(--r-poster) ────────
+# El póster se ve IGUAL en toda la app. Hasta ago 2026 convivían TRES radios
+# —12px, 8px y 4px— sin razón de diseño detrás: deriva pura, 16 declaraciones
+# repartidas en 2000 líneas de CSS. Nadie las eligió; se fueron copiando.
+# El radio es proporcional (--r-poster, clamp elíptico) justamente porque el rango
+# de tamaños va de 32px a 96px: un valor fijo no puede servir a los dos extremos.
+# Un radio suelto no rompe nada y no da error — por eso hace falta el guardián.
+#
+# Se juzga por NOMBRE de selector (poster/thumb): un póster nuevo se va a llamar
+# así. Los overlays que van ENCIMA del póster —badges, checks— no son superficie
+# de imagen y llevan el radio de su propio componente; van en la excepción, con
+# nombre, para que agregar uno sea una decisión y no un descuido.
+check = 'poster-radio-unico'
+try:
+    _html = open('index.html', encoding='utf-8').read()
+    # Encima del póster, no el póster: conservan su radio propio.
+    _ENCIMA = {'.poster-now', '.poster-past-badge', '.pv-poster-check'}
+    _malos = []
+    for _m in re.finditer(r'^(\.[a-zA-Z0-9_.\-]*(?:poster|thumb)[a-zA-Z0-9_.\-]*)\{([^}]*)\}', _html, re.M):
+        _sel, _cuerpo = _m.group(1), _m.group(2)
+        if _sel in _ENCIMA:
+            continue
+        _br = re.search(r'border-radius:([^;}]+)', _cuerpo)
+        if not _br:
+            continue
+        _val = _br.group(1).strip()
+        if _val != 'var(--r-poster)':
+            _linea = _html[:_m.start()].count('\n') + 1
+            _malos.append(f'{_sel} (L{_linea}): {_val}')
+    if _malos:
+        fail(check, 'superficie(s) de póster con radio propio en vez de var(--r-poster): '
+                    + ' · '.join(_malos[:5]) + (f' +{len(_malos)-5} más' if len(_malos) > 5 else ''))
+    else:
+        _n = len(re.findall(r'border-radius:var\(--r-poster\)', _html))
+        ok(check, f'{_n} superficies de póster con el mismo radio proporcional')
+except Exception as _e:
+    warn(check, f'no se pudo verificar poster-radio-unico: {_e}')
+
 # ── [poster-single-owner] decisión y marco editorial SOLO en view/helpers.js ──
 # posterModel/posterParts (films) e itemPosterParts (obras) son los ÚNICOS dueños
 # de la decisión editorial-vs-imagen y del marco. Si _isEditorialPoster( o
@@ -2428,16 +2473,17 @@ except Exception as _e:
 # es el dueño único; quien emita la clase .pel-sheet-screening a mano la re-derivó.
 check = 'screening-row-single-owner'
 try:
-    import glob as _glob
+    import glob as _glob, re as _re
     _off = []
     for _sf in _glob.glob('src/**/*.js', recursive=True):
         _c = open(_sf, encoding='utf-8').read()
         for _i, _ln in enumerate(_c.splitlines(), 1):
             _t = _ln.strip()
-            if _t.startswith('//') or 'class="pel-sheet-screening' not in _ln:
-                continue
-            # el dueño único es la única línea autorizada a emitirla
-            if _sf.replace('\\', '/').endswith('controller/sheets-controller.js') and '_screeningRows' in _c[:_c.index(_ln)][-2000:]:
+            # OJO: `pel-sheet-screenings` (plural) es el CONTENEDOR, no la fila —
+            # el patrón antiguo, por prefijo, los confundía y solo pasaba por una
+            # heurística de proximidad que se rompía al mover código. Se exige que
+            # la clase termine ahí (comilla, espacio o interpolación).
+            if _t.startswith('//') or not _re.search(r'class="pel-sheet-screening(?![a-z-])', _ln):
                 continue
             _off.append(f"{_sf}:{_i}")
     if len(_off) > 1:
@@ -2531,6 +2577,236 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar fin-inline-ratchet: {_e}')
 
+# ── [hooks-activos] las barreras de git están enchufadas ────────────────────────
+# .githooks/ se versiona, pero core.hooksPath es config LOCAL de cada clon: un
+# clon nuevo trae los hooks y no los usa hasta que alguien lo configura. Aviso, no
+# error: en CI no aplica, y un clon de solo lectura no los necesita.
+check = 'hooks-activos'
+try:
+    import subprocess as _sp
+    _hp = _sp.run(['git', 'config', 'core.hooksPath'], capture_output=True, text=True).stdout.strip()
+    if not os.path.isdir('.githooks'):
+        warn(check, 'falta .githooks/ (pre-commit + pre-push)')
+    elif _hp != '.githooks':
+        warn(check, 'los hooks no están activos en este clon — enchufalos con: '
+                    'git config core.hooksPath .githooks')
+    else:
+        ok(check, 'pre-commit y pre-push activos (core.hooksPath)')
+except Exception as _e:
+    warn(check, f'no se pudo verificar hooks-activos: {_e}')
+
+# ── [peso-repo] el repo guarda el producto, no el material de trabajo ───────────
+# 68,7 MB entraron de un tirón (8 ago 2026): un `git add -A` se llevó fuentes/ con
+# los PDF y afiches originales de FICDEH y FICMA —uno de 35 MB, otro de 26—. La
+# regla que los ignoraba venía en el PR del festival, que aún no estaba mergeado,
+# así que en main no existía y nada los frenó.
+# Dos reglas, calibradas con lo que el repo tiene de verdad: el archivo legítimo
+# más pesado son 2,28 MB (un póster de Leviza) y hay CERO documentos ofimáticos.
+# Esta es la única capa que bloquea el MERGE; el .gitignore y la disciplina de
+# `git add` dependen de que alguien se acuerde.
+check = 'peso-repo'
+try:
+    import subprocess as _sp
+    TOPE_MB = 3.0
+    EXT_TRABAJO = ('.pdf', '.xlsx', '.xls', '.docx', '.doc', '.numbers', '.pages', '.key', '.psd', '.ai')
+    _out = _sp.run(['git', 'ls-files', '-s'], capture_output=True, text=True).stdout
+    _pesados, _ofim = [], []
+    for _ln in _out.splitlines():
+        _f = _ln.split('\t', 1)[-1].strip().strip('"')
+        if _f.lower().endswith(EXT_TRABAJO):
+            _ofim.append(_f)
+            continue
+        try:
+            _mb = os.path.getsize(_f) / 1024 / 1024
+        except OSError:
+            continue
+        if _mb > TOPE_MB:
+            _pesados.append(f'{_f} ({_mb:.1f} MB)')
+    _prob = []
+    if _ofim:
+        _prob.append('documentos de trabajo versionados: ' + ', '.join(_ofim[:4]))
+    if _pesados:
+        _prob.append(f'archivos sobre {TOPE_MB:g} MB: ' + ', '.join(_pesados[:4]))
+    if _prob:
+        fail(check, ' · '.join(_prob) + ' — el material original va en fuentes/ (gitignored), no en el repo')
+    else:
+        ok(check, f'sin material de trabajo versionado (tope {TOPE_MB:g} MB por archivo)')
+except Exception as _e:
+    warn(check, f'no se pudo verificar peso-repo: {_e}')
+
+# ── [sin-symlinks] ningún enlace simbólico versionado ──────────────────────────
+# El 8 ago 2026 un symlink `fuentes` → /Users/Juanda/Documents/Otrofestiv-dev/fuentes
+# entró al repo dentro del PR de FICMA. En el runner de Pages esa ruta absoluta no
+# existe; el empaquetador lo sigue y muere con exit 1. Resultado: FICMA quedó en
+# main sin llegar nunca a producción, y el log no decía «symlink» por ningún lado.
+#
+# Un symlink no sobrevive a salir de la máquina que lo creó, así que en un repo que
+# se despliega no hay caso legítimo. La regla es absoluta a propósito: cualquier
+# excepción futura tendría que discutirse, que es exactamente lo que no pasó acá.
+# git guarda los symlinks con el modo 120000 — eso es lo que se busca.
+check = 'sin-symlinks'
+try:
+    import subprocess as _sp
+    _out = _sp.run(['git', 'ls-files', '-s'], capture_output=True, text=True).stdout
+    _links = [_ln.split('\t', 1)[-1].strip().strip('"')
+              for _ln in _out.splitlines() if _ln.startswith('120000')]
+    if _links:
+        fail(check, 'enlaces simbólicos versionados: ' + ', '.join(_links[:5])
+                    + ' — no sobreviven al runner y tumban el deploy de Pages')
+    else:
+        ok(check, 'ningún symlink versionado')
+except Exception as _e:
+    warn(check, f'no se pudo verificar sin-symlinks: {_e}')
+
+# ── [merge-driver] el driver `bump` está registrado en este clon ────────────────
+# .gitattributes declara `merge=bump` para los archivos que llevan el número de
+# build, pero registrar el driver es config LOCAL: git no ejecuta comandos que
+# vengan del repo. Sin registrar, esos cuatro archivos vuelven a conflictuar en
+# cada PR —los cinco conflictos del 8 ago 2026 fueron exactamente eso—.
+# Aviso, no error: en CI no aplica y un clon de solo lectura no lo necesita.
+# ── [stash-compartido] el stash NO se aísla por worktree ───────────────────────
+# Los worktrees aíslan el árbol y el índice; la PILA DE STASH es una sola para todo
+# el repositorio. Con dos chats trabajando en worktrees distintos, un `git stash pop`
+# saca la entrada de arriba — que puede ser del OTRO. Pasó el 9 ago 2026: un pop en
+# el worktree de app trajo `ficmontanas-hold-5` del worktree de onboarding y dejó
+# CLAUDE.md, src/config.js y validate-festivals.js con marcadores de conflicto sin
+# resolver, en medio de una verificación que no tenía nada que ver.
+#
+# No hay hook de git para stash (no existe pre-stash), así que la barrera no puede
+# interceptar el comando: vigila el ESTADO, que es lo que hace daño. Una entrada de
+# stash viva en un repo con varios worktrees es una trampa esperando a que alguien
+# haga pop.
+#
+# En vez de stash: commiteá el WIP en tu rama y seguí. Un commit lleva tu nombre de
+# rama y no lo puede sacar otro por accidente. Si aun así usás stash, aplicalo SIEMPRE
+# por referencia exacta (`git stash apply stash@{N}`), nunca `pop`.
+#
+# Aviso y no error: la entrada puede ser legítima y del otro chat — no es nuestra
+# para borrarla, y bloquear el push por algo ajeno sería peor que el problema.
+check = 'stash-compartido'
+try:
+    import subprocess as _sp
+    _wt = _sp.run(['git', 'worktree', 'list'], capture_output=True, text=True).stdout.strip().splitlines()
+    _st = _sp.run(['git', 'stash', 'list'], capture_output=True, text=True).stdout.strip().splitlines()
+    if len(_wt) > 1 and _st:
+        _quien = ', '.join(s.split(':')[1].strip() if ':' in s else s for s in _st[:3])
+        warn(check, f'{len(_st)} stash vivo(s) con {len(_wt)} worktrees — la pila es COMPARTIDA y un `pop` '
+                    f'puede sacar el del otro chat ({_quien}). Usá un commit de WIP en tu rama; '
+                    f'si tenés que aplicar uno, `git stash apply stash@{{N}}` por referencia exacta.')
+    elif len(_wt) > 1:
+        ok(check, f'{len(_wt)} worktrees y la pila de stash vacía')
+    else:
+        ok(check, 'un solo worktree — la pila de stash no se comparte')
+except Exception as _e:
+    warn(check, f'no se pudo verificar stash-compartido: {_e}')
+
+check = 'merge-driver'
+try:
+    import subprocess as _sp
+    _drv = _sp.run(['git', 'config', 'merge.bump.driver'],
+                   capture_output=True, text=True).stdout.strip()
+    if not os.path.isfile('.gitattributes'):
+        warn(check, 'falta .gitattributes (declara merge=bump)')
+    elif not _drv:
+        warn(check, 'el driver `bump` no está registrado en este clon — enchufalo con: '
+                    'sh scripts/install-hooks.sh')
+    else:
+        ok(check, 'driver `bump` registrado (conflictos de build se resuelven solos)')
+except Exception as _e:
+    warn(check, f'no se pudo verificar merge-driver: {_e}')
+
+# ── [keyart-write-once] un afiche publicado nunca se sobreescribe ───────────────
+# El SW cachea /assets/ cache-first en un caché que sobrevive a TODOS los deploys
+# (ASSETS_CACHE, sw.js). Sobreescribir un keyArt in-place deja a los usuarios
+# recurrentes viendo el afiche viejo para siempre: la URL no cambió, así que el
+# SW nunca lo vuelve a pedir. Reinstalar la app tampoco alcanza — el caché del
+# WebView persiste.
+# La regla estaba escrita en config.js, compose-keyart.py y PIPELINE.md, y aun
+# así el afiche de FICDEH 2026 se sobreescribió CUATRO veces con el mismo nombre:
+# el aliado de comunicaciones en Medellín seguía viendo el anterior a 4 días de
+# que abriera el festival. Una regla que solo vive en la documentación no se
+# cumple; por eso ahora se verifica por huella.
+check = 'keyart-write-once'
+try:
+    import glob as _glob, hashlib as _hl, os as _os
+    _reg = 'assets/keyart/HUELLAS.txt'
+    if not _os.path.exists(_reg):
+        warn(check, 'falta assets/keyart/HUELLAS.txt (correr scripts/keyart-huellas.py)')
+    else:
+        _antes = {}
+        for _ln in open(_reg, encoding='utf-8'):
+            _ln = _ln.strip()
+            if _ln and not _ln.startswith('#'):
+                _h, _n = _ln.split(None, 1)
+                _antes[_n] = _h
+        _cambiados, _sinreg = [], []
+        for _f in sorted(_glob.glob('assets/keyart/*.jpg')):
+            _n = _os.path.basename(_f)
+            _h = _hl.sha1(open(_f, 'rb').read()).hexdigest()[:16]
+            if _n not in _antes:
+                _sinreg.append(_n)
+            elif _antes[_n] != _h:
+                _cambiados.append(_n)
+        if _cambiados:
+            fail(check, 'keyArt SOBREESCRITO (los usuarios recurrentes verían el viejo para '
+                        'siempre): ' + ', '.join(_cambiados) +
+                        ' — usar un nombre nuevo (-v2) y actualizar src/config.js')
+        elif _sinreg:
+            fail(check, 'keyArt sin huella registrada: ' + ', '.join(_sinreg) +
+                        ' — correr python3 scripts/keyart-huellas.py')
+        else:
+            ok(check, f'{len(_antes)} afiches con su huella intacta (write-once respetado)')
+except Exception as _e:
+    warn(check, f'no se pudo verificar keyart-write-once: {_e}')
+
+# ── [keyart-2-3] el afiche del splash entra entero en la card ───────────────────
+# La card del riel es 2:3 EXACTO con object-fit:cover, así que recorta todo
+# keyArt que no lo sea. Medido en ago 2026: 7 de 10 se recortaban, hasta +19,5%
+# (Tercer Tiempo perdía casi un quinto del afiche).
+# REGLA PERMANENTE (Juan, 6 ago 2026): el afiche se ESTIRA en un eje hasta
+# 400×600 — no se recorta, no se rellena con bandas, no se difumina. Se probaron
+# las tres opciones con afiches reales; el estirado no se percibe ni en el peor
+# caso (16,3% de compresión) y deja leer el afiche completo.
+# Se aplica con `python3 scripts/compose-keyart.py <archivo>` (write-once:
+# escribe a -v2, nunca sobreescribe, por el caché del SW).
+check = 'keyart-2-3'
+try:
+    import re as _re
+    _TOL = 0.02
+    _cfg = open('src/config.js', encoding='utf-8').read()
+    _paths = _re.findall(r"keyArt:\s*'(/assets/keyart/[^']+)'", _cfg)
+    _mal, _sin = [], []
+    for _p in _paths:
+        _f = _p.lstrip('/')
+        if not os.path.exists(_f):
+            _sin.append(_f); continue
+        # dimensiones del JPEG sin dependencias: SOF0..SOF15 del marcador
+        with open(_f, 'rb') as _fh:
+            _d = _fh.read()
+        _i, _w, _h = 2, None, None
+        while _i < len(_d) - 9:
+            if _d[_i] != 0xFF:
+                _i += 1; continue
+            _m = _d[_i + 1]
+            if 0xC0 <= _m <= 0xCF and _m not in (0xC4, 0xC8, 0xCC):
+                _h = int.from_bytes(_d[_i + 5:_i + 7], 'big')
+                _w = int.from_bytes(_d[_i + 7:_i + 9], 'big')
+                break
+            _i += 2 + int.from_bytes(_d[_i + 2:_i + 4], 'big')
+        if not (_w and _h):
+            continue
+        _ex = (_w - _h * 2 / 3) / (_h * 2 / 3)
+        if abs(_ex) > _TOL:
+            _mal.append(f"{os.path.basename(_f)} {_w}×{_h} ({_ex:+.1%})")
+    if _sin:
+        fail(check, 'keyArt referenciado que no existe: ' + '; '.join(_sin))
+    elif _mal:
+        fail(check, 'keyArt que la card va a recortar (correr scripts/compose-keyart.py): ' + '; '.join(_mal))
+    else:
+        ok(check, f'los {len(_paths)} keyArt entran enteros en la card 2:3 (tolerancia {_TOL:.0%})')
+except Exception as _e:
+    warn(check, f'no se pudo verificar keyart-2-3: {_e}')
+
 # ── [duracion-solo-dominio] aritmética de duración solo en el dominio ───────────
 # La clase de bug del 31 jul 2026: sitios que calculan un fin de función a mano
 # (parseInt(duration) en el ICS y en _gapSuggestion) ignoraban el anclaje y el
@@ -2556,6 +2832,78 @@ try:
         ok(check, 'toda aritmética de duración pasa por el dominio (única excepción: el sellador)')
 except Exception as _e:
     warn(check, f'no se pudo verificar duracion-solo-dominio: {_e}')
+
+# ── [badge-precio-minoria] el badge de precio marca la MINORÍA, nunca a mano ────
+# FICDEH 2026 invirtió una premisa que la app daba por sentada: 81% de sus
+# funciones son de entrada libre, así que el badge GRATIS pintaba 313 tarjetas y
+# escondía las 71 accionables. La regla vive en ticketBadgeTarget() (view/
+# helpers.js), que decide UNA vez por festival de qué lado cae la minoría.
+# Regla: nadie decide badge de precio leyendo `is_free` por su cuenta — quien lo
+# pinte consulta al dueño. Sin esto, cada superficie nueva reintroduce el sesgo
+# "gratis es la excepción" y los festivales de entrada libre vuelven a romperse.
+check = 'badge-precio-minoria'
+try:
+    import glob as _glob, re as _re
+    _src = open('src/view/helpers.js', encoding='utf-8').read()
+    if not _re.search(r'export function ticketBadgeTarget\(', _src):
+        fail(check, 'falta ticketBadgeTarget() en src/view/helpers.js — es el dueño de la regla')
+    else:
+        _off = []
+        for _sf in sorted(_glob.glob('src/**/*.js', recursive=True)):
+            _n = _sf.replace('\\', '/')
+            # el dueño, y el diccionario (que solo DECLARA las claves, no pinta)
+            if _n.endswith('view/helpers.js') or _n.endswith('i18n/i18n.js'):
+                continue
+            _txt = open(_sf, encoding='utf-8').read()
+            _consulta = 'ticketBadgeTarget' in _txt
+            for _i, _ln in enumerate(_txt.splitlines(), 1):
+                _code = _ln.split('//')[0]
+                # pintar un badge/aviso de precio decidiendo is_free por su cuenta
+                if _re.search(r'badge_gratis|badge_con_boleta|aviso_gratis|aviso_con_boleta', _code) \
+                        and not _consulta:
+                    _off.append(f"{_sf}:{_i}")
+        if _off:
+            fail(check, 'badge de precio sin consultar ticketBadgeTarget(): ' + '; '.join(_off[:6]))
+        else:
+            ok(check, 'el badge de precio lo decide ticketBadgeTarget() (marca la minoría)')
+except Exception as _e:
+    warn(check, f'no se pudo verificar badge-precio-minoria: {_e}')
+
+# ── [tests-puerto-propio] cada corrida de tests con su servidor ─────────────────
+# La causa raíz del "flaky" que llevábamos meses tapando con `retries`: Playwright
+# MATA el servidor que él levantó al terminar, y con `reuseExistingServer` una
+# segunda corrida reusa ese servidor en vez de levantar el suyo. Si la primera
+# termina antes, la segunda se queda sin servidor a mitad de camino →
+# ERR_CONNECTION_REFUSED y cascada de timeouts en specs sin relación entre sí.
+# Medido: la misma suite da 21/21 sola y 1/21 con otra corrida solapada; dos
+# suites completas solapadas daban 22 y 14 fallos, y 0 con puerto propio.
+# Regla: el puerto sale de PW_PORT (scripts/test.sh elige uno libre) y ningún
+# spec lo hardcodea — un solo `localhost:3000` incrustado ata esa corrida al
+# puerto compartido y reabre el agujero.
+check = 'tests-puerto-propio'
+try:
+    import glob as _glob, re as _re
+    _cfg = open('playwright.config.js', encoding='utf-8').read()
+    _prob = []
+    if 'process.env.PW_PORT' not in _cfg:
+        _prob.append('playwright.config.js no lee PW_PORT')
+    if not os.path.exists('scripts/test.sh'):
+        _prob.append('falta scripts/test.sh (elige el puerto libre)')
+    for _tf in sorted(_glob.glob('tests/**/*.js', recursive=True)):
+        for _i, _ln in enumerate(open(_tf, encoding='utf-8').read().splitlines(), 1):
+            # Ojo: acá NO se puede cortar por '//' como en los otros checks — el
+            # '//' de 'http://' se comía la línea entera y el guardián no veía
+            # nada (cazado por mutación). Se descartan solo las líneas que SON
+            # comentario.
+            _code = '' if _ln.lstrip().startswith('//') else _ln
+            if _re.search(r'localhost:\d+|127\.0\.0\.1:\d+', _code):
+                _prob.append(f"{_tf}:{_i} hardcodea el puerto (usar baseURL)")
+    if _prob:
+        fail(check, 'aislamiento de corridas roto: ' + '; '.join(_prob[:5]))
+    else:
+        ok(check, 'cada corrida toma su puerto (PW_PORT) — dos suites simultáneas no se pisan')
+except Exception as _e:
+    warn(check, f'no se pudo verificar tests-puerto-propio: {_e}')
 
 # ── [template-al-dia] la plantilla de onboarding no se queda atrás ──────────────
 # Causa raíz de la tarea #81: el onboarding de FINCA usó 10 campos de film que la
@@ -2733,6 +3081,47 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar festival-name-parity: {_e}')
 
+# ── [pais-conocido] todo `country` del config tiene nombre en COUNTRY_NAMES ────
+# La línea de ubicación del splash sale de festivalLocationLabel → countryName, y
+# countryName devuelve '' cuando el ISO no está en la tabla. El resultado no es un
+# error: es la ciudad sola. FINCA se publicó con country:'AR' sin su entrada y el
+# splash dijo «BUENOS AIRES» —sin Argentina— durante toda su vitrina, sin que nada
+# se quejara (lo vio Juan, 9 ago 2026).
+# La tabla crece una línea por país, y esa línea es justo la que se olvida cuando
+# el festival nuevo es del exterior. `country:''` es LEGÍTIMO y no se exige: es como
+# un festival nacional dice «no tengo una sede única» (FICDEH, 11 ciudades).
+check = 'pais-conocido'
+try:
+    _cfg = open('src/config.js', encoding='utf-8').read()
+    # Hasta el CIERRE DEL OBJETO (`\n};`), no hasta la primera `}` — esa cierra la
+    # primera entrada y dejaba la tabla en un solo país: el guardián acusaba de
+    # faltantes a US, BR y AR estando los tres. Un check con un parser flojo no
+    # avisa de menos: avisa mal, que es peor.
+    _tabla = _cfg[_cfg.index('COUNTRY_NAMES'):]
+    _tabla = _tabla[:_tabla.index('\n};')]
+    _conocidos = set(re.findall(r"^\s*([A-Z]{2}):\s*\{", _tabla, re.M))
+    _body = _cfg[_cfg.index('FESTIVAL_CONFIG'):]
+    _ids = re.findall(r"\n  '([a-z0-9]+)':\s*\{", _body)
+    _huerfanos = []
+    for _i, _fid in enumerate(_ids):
+        _ini = _body.index("'%s':" % _fid)
+        _fin = _body.index("'%s':" % _ids[_i + 1]) if _i + 1 < len(_ids) else _ini + 2500
+        _blk = _body[_ini:_fin]
+        if re.search(r"group\s*:\s*['\"]test['\"]", _blk):
+            continue
+        _m = re.search(r"country:'([A-Z]{2})'", _blk)
+        if _m and _m.group(1) not in _conocidos:
+            _huerfanos.append(f'{_fid} → {_m.group(1)}')
+    if not _conocidos:
+        warn(check, 'no se pudo leer COUNTRY_NAMES')
+    elif _huerfanos:
+        fail(check, 'festival(es) con país sin nombre en COUNTRY_NAMES: ' + ', '.join(_huerfanos)
+                    + ' — el splash mostraría solo la ciudad, sin error visible')
+    else:
+        ok(check, f'todo country del config tiene nombre ({len(_conocidos)} países en la tabla)')
+except Exception as _e:
+    warn(check, f'no se pudo verificar pais-conocido: {_e}')
+
 # ── [timezone-valid] todo festival tiene timezoneOffset válido (±HH:MM) ─────────
 # Toda la lógica de "ahora" (now-line, contador, en-curso, hoy, pasó/futuro) se ancla
 # a la zona del festival vía cfg.timezoneOffset (domain/time.js _festNow/_festDate).
@@ -2814,11 +3203,11 @@ try:
     #   agenda.js (render agenda+miplan) · main.js (composición/bootstrap) ·
     #   i18n.js (diccionarios es/en, es DATA) · sheets-controller.js · handlers.js
     _ALLOW = {
-        'src/view/agenda.js': 1672,
+        'src/view/agenda.js': 1705,  # +13: «Sesión 1 de 2» en Mi Plan + el taller no se sugiere (8 ago)  # +7: el taller multi-día no se sugiere (bloque a medias) (8 ago)  # +9: kind 'ciudad' en el detalle de conflicto (6 ago)
         'src/main.js': 1662,  # +46 total: _morphOpen a FLIP — clon de la card compuesta, radio contra-escalado, encuadre del destino (29 jul)
-        'src/i18n/i18n.js': 1433,  # +4 (net): anclaje (label+texto) y Q&A con referentes, ×3 locales (29 jul)
-        'src/controller/sheets-controller.js': 1524,  # +39: la ficha de corto hereda la función de su(s) programa(s) — _screeningRows (dueño único, antes inline en openPelSheet), _findParentPrograms, _cortoScreeningPairs y _noticeRows y _avisosBand (banda AVISOS: dueño único de lo que MATIZA la función, con la evidencia de vocabulario) (30 jul 2026)
-        'src/controller/handlers.js': 964,  # +20: anclaje de función en toggleWL, simétrico al quitar (29 jul)
+        'src/i18n/i18n.js': 1484,  # +12: sheet de ciudad + badge CON BOLETA ×3 locales (6 ago)
+        'src/controller/sheets-controller.js': 1610,  # +19: el bloque de sesiones se dibuja como GRUPO (corchete + eslabón) y su control pasa a ser la misma píldora inline que una función suelta (9 ago)  # +7: un taller empezado no se ofrece (bug cazado con FICMA) (8 ago)  # +23: control de BLOQUE para is_recurring (8 ago)  # +12: registration_url — enlace de inscripción por función, mismo patrón que ticket_url (8 ago)  # +14: la ficha hereda el contexto de ciudad — filtra funciones, la nombra una vez y avisa lo que quedó fuera (7 ago)  # +7: el aviso parcial nombra la CIUDAD cuando la obra recorre varias (FICDEH, 43 obras) (7 ago)  # +4: precio en AVISOS sigue a ticketBadgeTarget (6 ago)  # +39: la ficha de corto hereda la función de su(s) programa(s) — _screeningRows (dueño único, antes inline en openPelSheet), _findParentPrograms, _cortoScreeningPairs y _noticeRows y _avisosBand (banda AVISOS: dueño único de lo que MATIZA la función, con la evidencia de vocabulario) (30 jul 2026)
+        'src/controller/handlers.js': 1034,  # +45: taller multi-día — addRecurringBlock/removeRecurringBlock (bloque entero en un solo commitPlan) (8 ago)  # +15: acciones del sheet de ciudad (7 ago)  # +20: anclaje de función en toggleWL, simétrico al quitar (29 jul)
     }
     _over = []
     for _f in _glob.glob('src/**/*.js', recursive=True):
@@ -2881,6 +3270,163 @@ try:
         ok(check, 'dependencias apuntan hacia adentro (domain←state/storage←controller/view; view→controller solo allowlist)')
 except Exception as _e:
     warn(check, f'no se pudo verificar layer-direction: {_e}')
+
+
+# ── [staging-provenance] todo sidecar nuevo declara cuándo se capturó ─────────
+# El bug de las 48 salas de FICDEH vivió escondido porque nada decía de CUÁNDO
+# era cada sidecar. Regla: todo JSON nuevo en festivals/staging/ lleva
+# _provenance.capturado (lib.provenance() lo pone solo). Los que existían antes
+# de la regla quedan congelados en esta lista — NO añadir nombres nuevos aquí:
+# un sidecar nuevo sin fecha es un error, no un candidato a la lista.
+check = 'staging-provenance'
+try:
+    import json as _json, glob as _glob, os as _os
+    _LEGACY_SIN_FECHA = {
+        'ficdeh-2026-actividades.json', 'ficdeh-2026-boleteria-tuboleta.json',
+        'ficdeh-2026-build.json', 'ficdeh-2026-cinemateca-grid.json',
+        'ficdeh-2026-confirmaciones-externas.json', 'ficdeh-2026-funciones-barrido.json',
+        'ficdeh-2026-geo-auditoria.json', 'ficdeh-2026-posters-src.json',
+        'ficdeh-2026-programacion-oficial.json', 'ficdeh-2026-programacion-raw.json',
+        'ficdeh-2026-salas-medellin.json', 'ficdeh-2026-title-en-candidatos.json',
+        'ficdeh-2026-venues-geo.json', 'ficdeh-2026.json',
+        'ficma-2026-crudo.json', 'ficma-2026-franja-ocr.json',
+        'ficma-2026-letterboxd.json', 'ficma-2026-ocr.json',
+        'ficma-2026-title-en.json', 'ficma-2026-tmdb.json',
+        'ficma-2026-venues-geo.json',
+        'finca-2026-build.json', 'finca-2026-funciones.json',
+        'finca-2026-posters-src.json', 'finca-2026.json',
+    }
+    _sin = []
+    for _f in sorted(_glob.glob('festivals/staging/*.json')):
+        _b = _os.path.basename(_f)
+        if _b in _LEGACY_SIN_FECHA:
+            continue
+        try:
+            _d = _json.load(open(_f, encoding='utf-8'))
+        except Exception:
+            _sin.append(_b + ' (JSON inválido)'); continue
+        _pr = _d.get('_provenance') if isinstance(_d, dict) else None
+        if not (isinstance(_pr, dict) and (_pr.get('capturado') or _pr.get('recibido'))):
+            _sin.append(_b)
+    if _sin:
+        fail(check, 'sidecar sin _provenance.capturado (usar lib.provenance()): ' + ', '.join(_sin))
+    else:
+        ok(check, 'todo sidecar nuevo declara cuándo se capturó (legacy congelado: '
+                  f'{len(_LEGACY_SIN_FECHA)})')
+except Exception as _e:
+    warn(check, f'no se pudo verificar staging-provenance: {_e}')
+
+# ── [pipeline-circuito] el barrido que nadie consume ──────────────────────────
+# El bug real: el barrido escribía programacion-canonica.json y el ensamblador
+# leía programacion-oficial.json — dos nombres para lo mismo, y el nuevo quedó
+# sin consumidor. Este guardián busca ESE patrón: dentro de un mismo festival,
+# un sidecar que se escribe y nadie lee junto a otro del mismo propósito
+# (comparten un token largo del nombre) que se lee y nadie escribe.
+check = 'pipeline-circuito'
+try:
+    import re as _re, glob as _glob, os as _os
+    _escribe, _lee = {}, {}
+    for _sp in _glob.glob('pipeline/*.py'):
+        for _ln in open(_sp, encoding='utf-8'):
+            for _m in _re.findall(r"[a-z0-9\-{}]+\.json", _ln):
+                _b = _m.replace('{fid}', '*').lstrip('-')
+                _es_w = bool(_re.search(r"json\.dump|,\s*'w'", _ln))
+                (_escribe if _es_w else _lee).setdefault(_b, set()).add(_os.path.basename(_sp))
+    def _quien(_tabla, _b):
+        # nombre exacto o patrón de herramienta genérica ('*-crudo.json')
+        _hit = set(_tabla.get(_b, set()))
+        for _k, _v in _tabla.items():
+            if _k.startswith('*') and _b.endswith(_k[1:]):
+                _hit |= _v
+        return _hit
+    _pares = []
+    _files = [_os.path.basename(_f) for _f in _glob.glob('festivals/staging/*.json')]
+    for _a in _files:
+        if _quien(_escribe, _a) and not _quien(_lee, _a):          # se escribe, nadie lee
+            _fest = _a.split('-202')[0]
+            _tok = {t for t in _re.split(r'[-.]', _a) if len(t) >= 6} - {_fest}
+            for _b in _files:
+                if _b == _a or not _b.startswith(_fest):
+                    continue
+                if _quien(_lee, _b) and not _quien(_escribe, _b) and \
+                   _tok & {t for t in _re.split(r'[-.]', _b) if len(t) >= 6}:
+                    _pares.append(f'{_a} (se escribe, nadie lee) ↔ {_b} (se lee, nadie escribe)')
+    if _pares:
+        fail(check, 'circuito roto entre productor y consumidor: ' + '; '.join(sorted(set(_pares))))
+    else:
+        ok(check, 'ningún sidecar escrito-sin-lector convive con su gemelo leído-sin-escritor')
+except Exception as _e:
+    warn(check, f'no se pudo verificar pipeline-circuito: {_e}')
+
+# ── [sedes-apiladas] + [sala-en-sede] — los guardianes de datos de sede ───────
+# Aprobados tras FICDEH. (a) dos sedes del mismo festival a <60 m casi siempre
+# son la MISMA con dos nombres (63 de 120 apiladas en el geocoding v1); si es
+# real (dos secretarías en la Alcaldía) se declara con _nota en el venue.
+# (b) la sala dentro del nombre de la sede parte el filtro de lugar (la
+# Cinemateca aparecía 5 veces). Ambos como WARNING: los festivales archivados
+# violan (b) y no se van a reescribir.
+check = 'sedes-apiladas'
+try:
+    import json as _json, math as _math, glob as _glob, os as _os, itertools as _it
+    _avisos = []
+    _ACTIVOS_AP = {'ficdeh-2026.json', 'ficma-2026.json', 'finca-2026.json'}
+    for _f in sorted(_glob.glob('festivals/*.json')):
+        if _os.path.basename(_f) not in _ACTIVOS_AP:
+            continue          # los archivados no se reescriben
+        try:
+            _d = _json.load(open(_f, encoding='utf-8'))
+        except Exception:
+            continue
+        _vs = _d.get('venues')
+        if not isinstance(_vs, dict):
+            continue
+        _ub = {k: v for k, v in _vs.items()
+               if isinstance(v, dict) and v.get('lat') and not v.get('_nota')}
+        for _a, _b in _it.combinations(_ub, 2):
+            _dy = (_ub[_a]['lat'] - _ub[_b]['lat']) * 111320
+            _dx = (_ub[_a]['lng'] - _ub[_b]['lng']) * 111320 * \
+                  _math.cos(_math.radians(_ub[_a]['lat']))
+            if _math.hypot(_dx, _dy) < 60:
+                _avisos.append(f'{_os.path.basename(_f)}: «{_a}» y «{_b}» a '
+                               f'{round(_math.hypot(_dx, _dy))} m — ¿misma sede con dos '
+                               'nombres? (si es real, _nota en el venue)')
+    if _avisos:
+        for _w in _avisos[:8]:
+            warn(check, _w)
+        ok(check, f'{len(_avisos)} pares sospechosos (warnings)')
+    else:
+        ok(check, 'ningún par de sedes a <60 m sin _nota')
+except Exception as _e:
+    warn(check, f'no se pudo verificar sedes-apiladas: {_e}')
+
+check = 'sala-en-sede'
+try:
+    import json as _json, re as _re, glob as _glob, os as _os
+    _avisos = []
+    _ACTIVOS = {'ficdeh-2026.json', 'ficma-2026.json', 'finca-2026.json'}
+    for _f in sorted(_glob.glob('festivals/*.json')):
+        if _os.path.basename(_f) not in _ACTIVOS:
+            continue          # los archivados no se reescriben
+        try:
+            _d = _json.load(open(_f, encoding='utf-8'))
+        except Exception:
+            continue
+        _vs = _d.get('venues')
+        if not isinstance(_vs, dict):
+            continue
+        for _k, _v in _vs.items():
+            _n = (_v.get('short') or _k) if isinstance(_v, dict) else _k
+            if _re.search(r'\b[Ss]ala\s+\d|\bSALA\s+\d', _n):
+                _avisos.append(f'{_os.path.basename(_f)}: «{_n}» lleva la SALA en el '
+                               'nombre — va en el campo sala de la función')
+    if _avisos:
+        for _w in _avisos:
+            warn(check, _w)
+        ok(check, f'{len(_avisos)} sedes con sala en el nombre (warnings)')
+    else:
+        ok(check, 'ninguna sede activa lleva la sala en el nombre')
+except Exception as _e:
+    warn(check, f'no se pudo verificar sala-en-sede: {_e}')
 
 # ── Report ────────────────────────────────────────────────────────────────────
 print()

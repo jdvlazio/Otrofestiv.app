@@ -204,6 +204,18 @@ export const SECTION_EN = {
   '💬 Conversatorios & Masterclass':'Talks & Masterclasses',
   '📽️ Cortometrajes':'Short Films',
   '🎉 Eventos Especiales':'Special Events',
+  // ── FICDEH 2026 (11 ciudades, 12–19 AGO)
+  '🧳 Largometraje de Ficción': 'International Fiction Feature',
+  '🔍 Largometraje Documental Nacional': 'Colombian Documentary Feature',
+  '🌍 Largometraje Documental Internacional': 'International Documentary Feature',
+  '🪀 Cortometraje de Ficción Nacional': 'Colombian Fiction Short',
+  '🚲 Cortometraje de Ficción Internacional': 'International Fiction Short',
+  '🎙️ Cortometraje Documental Nacional': 'Colombian Documentary Short',
+  '🏘️ Cine Comunitario Nacional': 'Community Cinema',
+  '🕊️ Retrospectiva 10 Años del Acuerdo de Paz': '10 Years of the Peace Agreement',
+  '🎟️ Invitadas': 'Guest Films',
+  '💬 Charlas que Unen': 'Talks That Unite',
+  '🛠️ Formación': 'Workshops',
 };
 
 // ── NOTICES ──────────────────────────────────────────────────────────────────
@@ -243,7 +255,7 @@ export const FESTIVAL_CONFIG={
   'aff2026':{
     name:'AFF 2026',fullName:'Alternativa Film Festival',city:'Medellín',country:'CO',dates:'21–29 ABR',dates_en:'APR 21–29',year:2026,timezoneOffset:'-05:00',
     storageKey:'aff2026_',festivalStartStr:'2026-04-21T00:00:00',festivalEndStr:'2026-04-29T23:00:00',
-    keyArt:'/assets/keyart/aff2026.jpg',
+    keyArt:'/assets/keyart/aff2026-v2.jpg',
     films:null,posters:null,lbSlugs:{}
   },
   'tribeca2026':{
@@ -284,7 +296,7 @@ export const FESTIVAL_CONFIG={
     dayShort_en:{'2026-06-04':'THU 4','2026-06-05':'FRI 5','2026-06-06':'SAT 6','2026-06-07':'SUN 7','2026-06-08':'MON 8','2026-06-09':'TUE 9','2026-06-10':'WED 10','2026-06-11':'THU 11','2026-06-12':'FRI 12','2026-06-13':'SAT 13'},
     dayLong:{'2026-06-04':'Jueves 4 de junio','2026-06-05':'Viernes 5 de junio','2026-06-06':'Sábado 6 de junio','2026-06-07':'Domingo 7 de junio','2026-06-08':'Lunes 8 de junio','2026-06-09':'Martes 9 de junio','2026-06-10':'Miércoles 10 de junio','2026-06-11':'Jueves 11 de junio','2026-06-12':'Viernes 12 de junio','2026-06-13':'Sábado 13 de junio'},
     prioLimit:5,
-    keyArt:'/assets/keyart/olhar2026.jpg',
+    keyArt:'/assets/keyart/olhar2026-v2.jpg',
     films:null,posters:null,lbSlugs:{}
   },
   'tercertiempo2026': {
@@ -299,7 +311,7 @@ export const FESTIVAL_CONFIG={
     dayShort_en:{'2026-07-13':'MON 13','2026-07-14':'TUE 14','2026-07-15':'WED 15','2026-07-16':'THU 16','2026-07-17':'FRI 17','2026-07-18':'SAT 18','2026-07-19':'SUN 19'},
     dayLong:{'2026-07-13':'Lunes 13 de julio','2026-07-14':'Martes 14 de julio','2026-07-15':'Miércoles 15 de julio','2026-07-16':'Jueves 16 de julio','2026-07-17':'Viernes 17 de julio','2026-07-18':'Sábado 18 de julio','2026-07-19':'Domingo 19 de julio'},
     prioLimit:5,eventPosterLabel:['EVENTO',''],
-    keyArt:'/assets/keyart/tercertiempo2026.jpg',keyArtPos:'30%',
+    keyArt:'/assets/keyart/tercertiempo2026-v2.jpg',
     films:null,posters:null,lbSlugs:{}
   },
   'fantasofest2026': {
@@ -317,7 +329,52 @@ export const FESTIVAL_CONFIG={
     keyArt:'/assets/keyart/fantasofest2026.jpg',
     films:null,posters:null,lbSlugs:{}
   },
+  // FICDEH ocurre en 11 ciudades, así que `city` es el PAÍS. `country` va vacío
+  // a propósito: el splash pinta «CIUDAD, PAÍS» y con ambos daría «COLOMBIA,
+  // COLOMBIA». Además, al no coincidir con ninguna sede, el badge
+  // venue-municipio y el filtro por ciudad se activan en las 11.
+  'ficma2026': {
+    name:'FICMA',fullName:'FICMA — Feria Internacional de Cine de Manizales',shortName:'FICMA',
+    city:'Manizales',country:'CO',
+    dates:'10–17 AGO',dates_en:'AUG 10–17',year:2026,timezoneOffset:'-05:00',
+    keyArt:'/assets/keyart/ficma2026.jpg',
+    storageKey:'ficma2026_',festivalStartStr:'2026-08-10T00:00:00',festivalEndStr:'2026-08-17T23:59:00',
+    festivalDates:{'2026-08-10':'2026-08-10','2026-08-11':'2026-08-11','2026-08-12':'2026-08-12','2026-08-13':'2026-08-13','2026-08-14':'2026-08-14','2026-08-15':'2026-08-15','2026-08-16':'2026-08-16','2026-08-17':'2026-08-17'},
+    days:[{k:'2026-08-10',d:10,lbl:'LUN'},{k:'2026-08-11',d:11,lbl:'MAR'},{k:'2026-08-12',d:12,lbl:'MIÉ'},{k:'2026-08-13',d:13,lbl:'JUE'},{k:'2026-08-14',d:14,lbl:'VIE'},{k:'2026-08-15',d:15,lbl:'SÁB'},{k:'2026-08-16',d:16,lbl:'DOM'},{k:'2026-08-17',d:17,lbl:'LUN'}],
+    dayKeys:['2026-08-10','2026-08-11','2026-08-12','2026-08-13','2026-08-14','2026-08-15','2026-08-16','2026-08-17'],
+    dayShort:{'2026-08-10':'LUN 10','2026-08-11':'MAR 11','2026-08-12':'MIÉ 12','2026-08-13':'JUE 13','2026-08-14':'VIE 14','2026-08-15':'SÁB 15','2026-08-16':'DOM 16','2026-08-17':'LUN 17'},
+    dayShort_en:{'2026-08-10':'MON 10','2026-08-11':'TUE 11','2026-08-12':'WED 12','2026-08-13':'THU 13','2026-08-14':'FRI 14','2026-08-15':'SAT 15','2026-08-16':'SUN 16','2026-08-17':'MON 17'},
+    dayLong:{'2026-08-10':'Lunes 10 de agosto','2026-08-11':'Martes 11 de agosto','2026-08-12':'Miércoles 12 de agosto','2026-08-13':'Jueves 13 de agosto','2026-08-14':'Viernes 14 de agosto','2026-08-15':'Sábado 15 de agosto','2026-08-16':'Domingo 16 de agosto','2026-08-17':'Lunes 17 de agosto'},
+    prioLimit:4,
+    // El subtítulo expande la sigla, no repite el nombre: «FICMA» no le dice
+    // nada a quien llega de fuera. El lema de la edición —«El jardín de las
+    // cosas perdidas»— se lee en el afiche, que está justo encima; ponerlo aquí
+    // gastaba la única línea de contexto que tenemos. Mismo criterio que FICDEH.
+    tagline:'Feria Internacional de Cine de Manizales',
+    films:null,posters:null,lbSlugs:{}
+  },
+  'ficdeh2026': {
+    name:'FICDEH',fullName:'FICDEH — Festival Internacional de Cine por los Derechos Humanos',shortName:'FICDEH',
+    city:'Colombia',country:'',
+    dates:'12–19 AGO',dates_en:'AUG 12–19',year:2026,timezoneOffset:'-05:00',
+    keyArt:'/assets/keyart/ficdeh2026-v2.jpg',
+    storageKey:'ficdeh2026_',festivalStartStr:'2026-08-12T00:00:00',festivalEndStr:'2026-08-19T23:00:00',
+    festivalDates:{'2026-08-12':'2026-08-12','2026-08-13':'2026-08-13','2026-08-14':'2026-08-14','2026-08-15':'2026-08-15','2026-08-16':'2026-08-16','2026-08-17':'2026-08-17','2026-08-18':'2026-08-18','2026-08-19':'2026-08-19'},
+    days:[{k:'2026-08-12',d:12,lbl:'MIÉ'},{k:'2026-08-13',d:13,lbl:'JUE'},{k:'2026-08-14',d:14,lbl:'VIE'},{k:'2026-08-15',d:15,lbl:'SÁB'},{k:'2026-08-16',d:16,lbl:'DOM'},{k:'2026-08-17',d:17,lbl:'LUN'},{k:'2026-08-18',d:18,lbl:'MAR'},{k:'2026-08-19',d:19,lbl:'MIÉ'}],
+    dayKeys:['2026-08-12','2026-08-13','2026-08-14','2026-08-15','2026-08-16','2026-08-17','2026-08-18','2026-08-19'],
+    dayShort:{'2026-08-12':'MIÉ 12','2026-08-13':'JUE 13','2026-08-14':'VIE 14','2026-08-15':'SÁB 15','2026-08-16':'DOM 16','2026-08-17':'LUN 17','2026-08-18':'MAR 18','2026-08-19':'MIÉ 19'},
+    dayShort_en:{'2026-08-12':'WED 12','2026-08-13':'THU 13','2026-08-14':'FRI 14','2026-08-15':'SAT 15','2026-08-16':'SUN 16','2026-08-17':'MON 17','2026-08-18':'TUE 18','2026-08-19':'WED 19'},
+    dayLong:{'2026-08-12':'Miércoles 12 de agosto','2026-08-13':'Jueves 13 de agosto','2026-08-14':'Viernes 14 de agosto','2026-08-15':'Sábado 15 de agosto','2026-08-16':'Domingo 16 de agosto','2026-08-17':'Lunes 17 de agosto','2026-08-18':'Martes 18 de agosto','2026-08-19':'Miércoles 19 de agosto'},
+    prioLimit:4,eventPosterLabel:['EVENTO',''],
+    tagline:'Festival Internacional de Cine por los Derechos Humanos', // espacios duros: fuerzan el corte en «Cine / por los Derechos Humanos»
+    ticketing_model:'mixed', // entrada libre en casi todo + boletería en la Cinemateca (ticket_url por función). No va en el JSON: ahí el validador exigiría un ticket_url de raíz y FICDEH no tiene boletería única
+    films:null,posters:null,lbSlugs:{}
+  },
   'finca2026': {
+    // Sin `priority`. Lo llevó unos días para darle visibilidad ante una nota de
+    // prensa, y se retira: la REGLA MADRE del splash es la fecha —primero el que
+    // empieza antes— y una excepción editorial permanente la erosiona (Juan,
+    // 9 ago 2026). Para un empujón puntual, ponerlo y quitarlo; nunca dejarlo.
     name:'FINCA',fullName:'FINCA — Festival Internacional de Cine Ambiental',shortName:'FINCA',
     city:'Buenos Aires',country:'AR',
     dates:'12–19 AGO',dates_en:'AUG 12–19',year:2026,timezoneOffset:'-03:00',
@@ -344,7 +401,7 @@ export const FESTIVAL_CONFIG={
     dayShort_en:{'2026-06-30':'TUE 30','2026-07-01':'WED 1','2026-07-02':'THU 2','2026-07-03':'FRI 3','2026-07-04':'SAT 4','2026-07-05':'SUN 5'},
     dayLong:{'2026-06-30':'Martes 30 de junio','2026-07-01':'Miércoles 1 de julio','2026-07-02':'Jueves 2 de julio','2026-07-03':'Viernes 3 de julio','2026-07-04':'Sábado 4 de julio','2026-07-05':'Domingo 5 de julio'},
     prioLimit:3,
-    keyArt:'/assets/keyart/ficmontanas2026.jpg',
+    keyArt:'/assets/keyart/ficmontanas2026-v2.jpg',
     films:null,posters:null,lbSlugs:{}
   }
 };// Festival data loaded async from festivals/<id>.json via loadFestival()
@@ -495,7 +552,38 @@ export const SECTION_ARCHETYPES = {
   '📽️ Reunions & Retrospectives': 'Retrospectiva / Tributo',
   '🗣️ Talks': 'Charlas / Industria',
   '🥇 Awards Screenings': 'Especiales / Eventos',
-  '🪶 Cine Indígena': 'Muestra / País'
+  '🪶 Cine Indígena': 'Muestra / País',
+  // ── FICDEH 2026 (11 ciudades, 12–19 AGO)
+  '🧳 Largometraje de Ficción': 'Competencia',
+  '🔍 Largometraje Documental Nacional': 'Competencia',
+  '🌍 Largometraje Documental Internacional': 'Competencia',
+  '🪀 Cortometraje de Ficción Nacional': 'Cortos / Programas',
+  '🚲 Cortometraje de Ficción Internacional': 'Cortos / Programas',
+  '🎙️ Cortometraje Documental Nacional': 'Cortos / Programas',
+  '🏘️ Cine Comunitario Nacional': 'Perspectivas / Miradas',
+  '🕊️ Retrospectiva 10 Años del Acuerdo de Paz': 'Retrospectiva / Tributo',
+  '🎟️ Invitadas': 'Especiales / Eventos',
+  '💬 Charlas que Unen': 'Charlas / Industria',
+  '🛠️ Formación': 'Charlas / Industria',
+  // FICMA 17 — programa por TEMAS de coleccionismo y ciudad, no por competencias.
+  // Las dos de estrenos son la cabecera y llevan colores distintos entre sí; las
+  // temáticas comparten «Perspectivas», salvo antigüedades y numismática, que
+  // miran al pasado y toman el color de retrospectiva.
+  '🎬 Estrenos Nacionales': 'Competencia',
+  '🌍 Estrenos Internacionales': 'Muestra / País',
+  '🕊️ En alianza con el FICDEH': 'Especiales / Eventos',
+  '🎨 Arte': 'Perspectivas / Miradas',
+  '🥫 Arte Pop': 'Perspectivas / Miradas',
+  '💥 Cómic': 'Perspectivas / Miradas',
+  '🎵 Música': 'Perspectivas / Miradas',
+  '🏗️ Arquitectura': 'Perspectivas / Miradas',
+  '🕰️ Antigüedades': 'Retrospectiva / Tributo',
+  '🪙 Numismática': 'Retrospectiva / Tributo',
+  '🌱 Medio Ambiente': 'Perspectivas / Miradas',
+  '🏛️ Red de Museos': 'Especiales / Eventos',
+  // Franja Académica de FICMA — el festival la divide en talleres y charlas.
+  '🛠️ Talleres': 'Charlas / Industria',
+  '💬 Charlas': 'Charlas / Industria',
 };
 
 // mergeFestivalSections(sections) — DATA-DRIVEN (P2.2): un festival declara sus
@@ -514,15 +602,42 @@ export const SECTION_ARCHETYPES = {
 // splash. Set acotado a los países con festival (crece 1 línea por país nuevo). Se eligió
 // texto sobre bandera: 100% responsive y consistente en todo dispositivo (los emoji de
 // bandera no renderizan en Windows; ver deuda opcional de migrar a SVG por ISO).
+// Crece UNA línea por país nuevo, y esa línea es fácil de olvidar: FINCA entró con
+// country:'AR' sin su entrada acá y el splash mostró «BUENOS AIRES» a secas durante
+// toda su publicación — countryName devuelve '' con un ISO desconocido, así que
+// festivalLocationLabel se queda con la ciudad y no hay error en ningún lado.
+// Lo cazó Juan mirando el splash (9 ago 2026). El guardián [pais-conocido] de
+// validate.py exige ahora que todo `country` de FESTIVAL_CONFIG exista en esta tabla.
 export const COUNTRY_NAMES = {
   CO: { es:'Colombia',       en:'Colombia' },
   BR: { es:'Brasil',         en:'Brazil' },
   US: { es:'Estados Unidos', en:'United States' },
+  AR: { es:'Argentina',      en:'Argentina' },
 };
 // countryName(iso, lang) — nombre del país o '' si no hay dato / ISO desconocido. Puro.
 export function countryName(iso, lang='es'){
   const e = iso && COUNTRY_NAMES[iso];
   return e ? (e[lang] ?? e.es) : '';
+}
+
+// festivalLocationLabel — la línea de UBICACIÓN del splash (dueño único).
+// Regla: la ciudad NUNCA se repite con el país. Un festival NACIONAL declara el
+// país en `city` porque no tiene una sede única —FICDEH 2026 son 11 ciudades—, y
+// entonces la línea salía «COLOMBIA, COLOMBIA»: eso no es una ubicación, es un
+// error de lectura.
+// Se compara contra TODOS los nombres del país, no solo el del idioma activo:
+// con la interfaz en inglés, `city:'Brasil'` y país «Brazil» son el mismo lugar
+// escrito distinto, y la repetición volvería por la puerta de atrás. La
+// comparación ignora acentos y mayúsculas por el mismo motivo.
+export function festivalLocationLabel(cfg, lang='es'){
+  const ciudad = cfg && cfg.city ? String(cfg.city).trim() : '';
+  if(!ciudad) return '';                     // sin ciudad no se inventa el país
+  const iso = cfg && cfg.country;
+  const pais = countryName(iso, lang);
+  if(!pais) return ciudad;
+  const norm = s => String(s).normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().trim();
+  const esElPais = Object.values(COUNTRY_NAMES[iso]||{}).some(p=>norm(p)===norm(ciudad));
+  return esElPais ? ciudad : `${ciudad}, ${pais}`;
 }
 
 export function mergeFestivalSections(sections){

@@ -1,9 +1,11 @@
 # CLAUDE.md — Otrofestiv
 > Generado automáticamente por `scripts/generate-claude-md.js`.
-> No editar a mano — los cambios se sobreescriben en el próximo deploy.
+> No editar a mano — los cambios se sobreescriben al regenerar.
 > Para modificar secciones estáticas, editar el template en el script.
 >
-> Último commit: `6a6c739 fix(landing): funnel /get con rescate — el badge de Apple sobrevive al webview de IG (#498) (#498)`
+> El hash del último commit NO va acá a propósito: cambiaba en cada rama y hacía
+> de este archivo un conflicto garantizado por PR, sin aportar nada que `git log`
+> no diga mejor.
 
 ---
 
@@ -46,6 +48,23 @@ Juan es Product Owner, diseñador y developer. Claude ejecuta; Juan audita y apr
 4. **Validar antes de commitear.** Siempre correr `python3 validate.py` antes de proponer un commit.
 5. **bump-version antes de deploy.** `node scripts/bump-version.js` justo antes de cada push.
 6. **Sin regresiones.** Verificar qué cambió y por qué después de cada entrega.
+7. **Código de la app acá, datos del festival allá.** El trabajo está partido en dos
+   chats con worktrees separados. La pregunta que decide dónde va un cambio es una
+   sola: *¿esto es código o es un festival?*
+
+| | Dueño | Qué toca | Ramas |
+|---|---|---|---|
+| **Main** | código de la app | `src/`, `validate.py`, `tests/`, `scripts/` | `feat/*`, `fix/*` |
+| **Onboarding** | datos de festival | `festivals/`, `assets/`, `src/config.js` | `feat/<festival>-catalogo` |
+
+**Quien es dueño de la rama la lleva hasta el final: push _y_ merge.** El trabajo no
+se parte a la mitad entre dos chats — así nace la pregunta «¿y ahora quién mergea?».
+Juan autoriza en el chat dueño de la rama.
+
+Si un cambio necesita las dos cosas (un campo nuevo en el dato + soporte en la app),
+van **dos PR, primero el de app**: así el dato nunca llega a producción antes que el
+código que sabe leerlo. El workflow `frontera.yml` lo verifica; para la excepción
+deliberada existe la etiqueta `frontera-ok`.
 
 ---
 
@@ -63,8 +82,10 @@ Juan es Product Owner, diseñador y developer. Claude ejecuta; Juan audita y apr
 | `olhar2026` | Olhar de Cinema | Curitiba | JUN 4–13 | Archivado |
 | `tercertiempo2026` | Tercer Tiempo Fest | Bogotá | 13–19 JUL | Recién terminado |
 | `fantasofest2026` | FantasoFest | Bogotá | 13–19 JUL | Recién terminado |
+| `ficma2026` | FICMA | Manizales | 10–17 AGO | **Próximo / activo** |
+| `ficdeh2026` | FICDEH | Colombia | 12–19 AGO | **Próximo / activo** |
 | `finca2026` | FINCA | Buenos Aires | 12–19 AGO | **Próximo / activo** |
-| `ficmontanas2026` | Ficmontañas | Salento | JUL 1–5 | Recién terminado |
+| `ficmontanas2026` | Ficmontañas | Salento | JUL 1–5 | Archivado |
 
 ### Features activas (desde `.specify/features/`)
 
@@ -96,6 +117,8 @@ _Sin features activas en `.specify/features/`._
 - **Timezone:** Colombia (UTC-5). Nunca `toISOString()` para lógica de fechas.
 - **i18n:** la fuente de verdad es `src/i18n/i18n.js` (bloque `_I18N`, es+en). Toda string nueva va ahí — es lo que lee `t()` y lo que valida `validate.py [i18n-complete]`. Los `i18n/*.json` quedaron desincronizados y NO se consumen en runtime (legacy); no son la fuente. El `sync-i18n.py` fue retirado (apuntaba a un `_I18N` en `index.html` que la Fase 8 movió a `src/i18n/i18n.js`).
 - **Splash selector — carrusel de afiches (rediseño jul 2026):** el splash elige festival desde un **riel horizontal de pósters** (`#splash-rail`, cards `.splash-card[data-fest]` con `keyArt` de `FESTIVAL_CONFIG`), no un dropdown. Orden: vigentes primero (brillo pleno) → divisor `.splash-rail-div` "ANTERIORES" → pasados (atenuados). El bloque `#splash-info` muestra 4 líneas derivadas del festival centrado/elegido: nombre / tagline (`festivalTagline`, derivado de `fullName`) / CIUDAD (punto verde si en curso) / FECHAS·AÑO. **Regla de preselección (5 jul 2026, preservada):** con EXACTAMENTE 1 festival en curso (`_classifyFestival`==="ongoing") el riel lo **pre-selecciona** (card `.on`, "Entrar" habilitado). Con 0 o 2+ en curso → sin selección: el info muestra el primer festival como preview y "Entrar" queda `disabled` hasta que el usuario elija (scroll-snap centra → `_selectCenteredCard`, o tap → `selectSplashFest()` marca `.on`, llena el info y habilita "Entrar"). Riel + info viven dentro de `.splash-action` (uno de los 3 actores animados) → la animación del splash no cambia.
+- **Splash — REGLA MADRE del orden (9 ago 2026):** dentro de cada tier el riel ordena **por FECHA**: los próximos, el que **empieza antes primero**; los que están en curso, el que **termina antes**; los pasados, el más reciente. Existe un campo `priority` en `FESTIVAL_CONFIG` que desempata antes que la fecha — **es para un empujón puntual y se QUITA después**. Lo llevó FINCA unos días por una nota de prensa y se retiró: una excepción editorial permanente erosiona la regla. Ojo: cuando dos festivales arrancan a la MISMA hora (FICDEH y FINCA, ambos 12 AGO 00:00) el desempate lo decide el orden de declaración en el config, que es estable pero no es una decisión — si importa, hay que declararla.
+- **Splash — qué va en el tagline:** el subtítulo **expande la sigla**, no repite el nombre ni trae el lema de la edición. «FICMA» no le dice nada a quien llega de fuera → `Feria Internacional de Cine de Manizales`. El lema del año se lee en el afiche, que está justo encima; ponerlo ahí gasta la única línea de contexto disponible. Mismo criterio en FICDEH.
 
 ---
 
@@ -151,8 +174,10 @@ congelados en código viejo pese a los deploys web. Antes de CADA build:
 ## Herramientas del pipeline
 
 ```bash
+sh scripts/install-hooks.sh                # UNA VEZ por clon/worktree: hooks + driver de merge
 python3 validate.py                        # validar antes de commitear
-node scripts/bump-version.js               # actualizar sw.js + version.json + CLAUDE.md antes de deploy
+node scripts/bump-version.js               # actualizar index.html + main.js + sw.js + version.json antes de deploy
+node scripts/generate-claude-md.js         # regenerar este archivo cuando cambie el estado del proyecto
 node scripts/generate-config.js --help     # generar entrada FESTIVAL_CONFIG
 python3 scripts/enrich-festival.py --help  # enriquecer JSON con TMDB
 python3 scripts/geocode-venues.py --help   # geocodificar venues

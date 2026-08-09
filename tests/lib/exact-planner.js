@@ -15,9 +15,21 @@
 // Orden MRV (menos funciones primero) solo por velocidad — no afecta el
 // resultado: el DFS agota el espacio salvo poda por cota, que es exacta.
 
-function exactMaxEntries(titles, groupByTitle, screensConflict) {
+// PRIORIDADES (opts.required) — la segunda pregunta que sabe responder este solver.
+// computeScenarios reporta DOS máximos: `trueMax` (sin restricción) y
+// `maxWithPriorities` (todas las prioridades adentro). El segundo no tenía oráculo:
+// se creía. Con `required`, la rama «este título queda afuera» se prohíbe para los
+// exigidos, y el resultado es el máximo alcanzable respetándolos — o 0 si son
+// mutuamente imposibles, que es exactamente lo que reporta findMax(mustIncludeAll).
+//
+// Solo se exigen títulos que SOBREVIVEN al filtrado (tienen ≥1 función utilizable):
+// una prioridad sin funciones no entra a baseGroups en producción y, por tanto,
+// tampoco se exige acá. Exigirla haría fallar al oráculo por una regla que el
+// código de producción nunca prometió.
+function exactMaxEntries(titles, groupByTitle, screensConflict, opts) {
+  const required = (opts && opts.required) || new Set();
   const groups = titles
-    .map(t => groupByTitle(t))
+    .map(t => ({ title: t, ...groupByTitle(t) }))
     .filter(g => g && g.screens.length > 0)
     .sort((a, b) => a.screens.length - b.screens.length);
   // cota optimista por título: lo que aportaría si entrara completo
@@ -44,7 +56,11 @@ function exactMaxEntries(titles, groupByTitle, screensConflict) {
         }
       }
     }
-    dfs(idx + 1); // rama "este título queda afuera"
+    // Rama "este título queda afuera" — prohibida para los exigidos. Si un
+    // exigido no cabe en ninguna de sus funciones, el camino muere acá y ese
+    // subárbol no aporta ningún máximo: es la definición de prioridades
+    // incompatibles.
+    if (!required.has(g.title)) dfs(idx + 1);
   })(0);
   return best;
 }

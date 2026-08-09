@@ -1,37 +1,26 @@
 #!/bin/sh
-# Instala los git hooks de Otrofestiv.
-# Correr una vez después de clonar: sh scripts/install-hooks.sh
+# install-hooks.sh — enchufa en ESTE clon las barreras que el repo trae versionadas.
+# Correr una vez después de clonar (y en cada worktree nuevo):
+#     sh scripts/install-hooks.sh
+#
+# Dos cosas viven en el repo pero se activan localmente, porque git no ejecuta
+# comandos que vengan del repositorio —es una defensa suya, no un descuido—:
+#   1. .githooks/       (pre-commit, pre-push)  → core.hooksPath
+#   2. el driver `bump` (.gitattributes)        → merge.bump.driver
+#
+# Ambas tienen aviso propio en validate.py ([hooks-activos], [merge-driver]) por
+# si alguien clona y se olvida.
+#
+# NOTA HISTÓRICA: hasta ago 2026 este script escribía un pre-commit a mano en
+# .git/hooks/. Quedó muerto sin que nadie lo notara: al adoptar core.hooksPath,
+# git deja de mirar .git/hooks por completo. Los hooks de verdad son .githooks/*.
 
-HOOKS_DIR="$(git rev-parse --git-dir)/hooks"
+set -e
+cd "$(git rev-parse --show-toplevel)"
 
-cat > "$HOOKS_DIR/pre-commit" << 'HOOK'
-#!/bin/sh
-if git diff --cached --name-only | grep -q "index.html"; then
-  echo "→ Verificando sintaxis JS en index.html..."
-  node -e "
-    const h = require('fs').readFileSync('index.html', 'utf8');
-    const scripts = [...h.matchAll(/<script>([\s\S]*?)<\/script>/g)];
-    let failed = false;
-    scripts.forEach((m, i) => {
-      try { new Function(m[1]); }
-      catch(e) {
-        console.error('\n✗ ERROR DE SINTAXIS JS (script bloque ' + i + '): ' + e.message);
-        console.error('  Commit bloqueado.\n');
-        failed = true;
-      }
-    });
-    if (!failed) console.log('✓ Sintaxis JS OK');
-    process.exit(failed ? 1 : 0);
-  " 2>&1 || exit 1
-fi
-if git diff --cached --name-only | grep -q "festivals/.*\.json"; then
-  echo "→ Validando festivales..."
-  node scripts/validate-festivals.js 2>&1 | grep -E "ERROR|Festivales|fallida|exitosa"
-  node scripts/validate-festivals.js 2>&1 | grep -q "Errores: [^0]" && echo "\n✗ Validator falló.\n" && exit 1
-  echo "✓ Festivales OK"
-fi
-exit 0
-HOOK
+git config core.hooksPath .githooks
+echo "✓ hooks activos      → .githooks/ (pre-commit, pre-push)"
 
-chmod +x "$HOOKS_DIR/pre-commit"
-echo "✓ Hook pre-commit instalado en $HOOKS_DIR"
+git config merge.bump.name   "build number: se resuelve solo, el contenido no"
+git config merge.bump.driver "scripts/merge-bump.sh %O %A %B"
+echo "✓ driver de merge    → scripts/merge-bump.sh (index.html, src/main.js, sw.js, version.json)"

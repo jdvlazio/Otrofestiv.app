@@ -172,6 +172,21 @@ export function renderAgenda(){
 // completa) y mostraba el fin de cada obra por separado, así que un corto de 5 min
 // decía que salías 18:05 cuando la función terminaba 19:51. (Bug visto por Juan en
 // producción, 30 jul 2026.)
+// _sesionDeBloque — «Sesión 1 de 2» para un taller multi-día. Sin esto sus filas
+// se leían como funciones sueltas del mismo título —lectura falsa— y sorprendía
+// que quitar una las sacara todas. Se lee como una coordenada más, junto al día y
+// la hora. Vacío para todo lo que no sea un bloque. Lo usan las DOS listas donde
+// aparecen sesiones: .mplan-row (Mi Plan) y .saved-item (plan guardado/Planear).
+function _sesionDeBloque(s){
+  const _t=s&&(s._title||s.title);
+  if(!_t) return '';
+  const _ses=FILMS.filter(x=>x.title===_t&&x.is_recurring&&x.day&&x.time)
+    .sort((a,b)=>a.day_order-b.day_order||toMin(a.time)-toMin(b.time));
+  if(_ses.length<2) return '';
+  const _i=_ses.findIndex(x=>x.day===s.day&&x.time===s.time);
+  return _i<0?'':`<div class="saved-sesion">${t('bloque_sesion_n',{i:_i+1,n:_ses.length})}</div>`;
+}
+
 function _slotKeyOf(e){
   if(e&&e._slotKey) return e._slotKey;
   // Las entradas guardadas antes de que existiera _slotKey no lo traen: se resuelve
@@ -352,14 +367,18 @@ export function renderMiPlanCalendar(state){
   let listHtml=`<div class="mplan-list" id="mplan-detail"><div class="mplan-list-hdr"><span class="mplan-day-name">${dayLabelLong(activeKey)}</span>${dayFilms.length?`<span class="count-badge cb-neutral">${dayFilms.length}</span>`:''}</div>`;
   if(!dayFilms.length){
     if(!isPastDay){
-      // CTA C: día futuro sin películas — invita a explorar sugerencias o recalcular
+      // CTA C: día futuro sin películas — invita a explorar sugerencias o recalcular.
+      // SIN chevron (Juan, 3 ago 2026): chevron-abajo + caja se leía como acordeón
+      // ("viene expandido y no cierra") — promesa falsa. El tap sigue siendo el
+      // atajo (scroll a Sugerencias); el borde ámbar marca accionable y el copy
+      // dice a dónde ir. plan_empty_dia es UNA frase (la costura ". o" era la
+      // concatenación de dos claves vestigiales; plan_recalcular_suffix retirada).
       listHtml+=`<div class="cta-ctx cta-ctx-c" data-action="scrollToSuggestions">
         <div class="cta-ctx-ico">${ICONS.calendar}</div>
         <div class="cta-ctx-body">
           <div class="cta-ctx-title cta-ctx-title-c">${t('plan_dia_libre')}</div>
-          <div class="cta-ctx-sub">${t('plan_empty_dia')} ${t('plan_recalcular_suffix')}</div>
+          <div class="cta-ctx-sub">${t('plan_empty_dia')}</div>
         </div>
-        <div class="cta-ctx-arr cta-ctx-arr-c">${ICONS.chevronD}</div>
       </div>`;
     } else {
       listHtml+=emptyState(ICONS.calendar, t('plan_nada_dia'));
@@ -422,6 +441,7 @@ export function renderMiPlanCalendar(state){
           <div class="mplan-t2">${_voidBadge}${_void?`<span class="mp-void-t">${mplanEndStr(s.time,dur)}</span>`:mplanEndStr(s.time,dur)}${_voidFix}${prioritized.has(s._title)?` <span class="txt-amber60-xs">${ICONS.bookmarkFill}</span>`:''}${_rowStars?` <span class="txt-amber-sm">${_rowStars}</span>`:''}${isNow?` <span class="txt-green-semi">${t('label_en_curso_min')}</span>`:''}</div>
           <div>${(()=>{const{displayTitle:_dt,progSuffix:_ps}=parseProgramTitle(s._title||'');const _mfqa=FILMS.find(fi=>fi.title===s._title&&fi.day===s.day&&fi.time===s.time);const _qab=_mfqa?.has_qa?`<span class="meta-badge sm">Q&A</span>`:'';return`<div class="mplan-rtitle${_isEventRow?' mp-event-title':''}">${_dt}${_qab}</div>${_ps?`<div class="prog-suffix">${_ps}</div>`:''}`;})()} </div>
           <div class="mplan-rvenue${_isEventRow?' mp-event-venue':''}">${ICONS.pin} ${vcfg(s.venue).short}${sala(s.venue)?' \u00b7 '+sala(s.venue):''}</div>
+          ${_sesionDeBloque(s)}
           ${(()=>{const _mf=FILMS.find(fi=>fi.title===s._title&&fi.day===s.day&&fi.time===s.time);if(!_mf||!_mf.is_cortos||!_mf.film_list||!_mf.film_list.length) return'';return`<button class="row-xs mplan-prog-toggle" data-action="toggleMplanProg">${ICONS.chevronR} ${t('label_programa')}</button>`;})()}
         </div>
         <div class="col-end">
@@ -540,7 +560,7 @@ export function renderFilmAlternatives(state,title,day,time){
       <div class="checkin-opt-info">
         <div class="checkin-opt-time">${f.time} · ${durFmt(f.duration)}</div>
         <div class="checkin-opt-title">${short}</div>
-        <div class="checkin-opt-venue">${ICONS.pin} ${vc2.short}</div>
+        <div class="checkin-opt-venue">${ICONS.pin} ${vc2.short}${sala(f.venue)?' \u00b7 '+sala(f.venue):''}</div>
       </div>
       <div class="checkin-opt-add" data-action="confirmReplace" data-rmtitle="${safeT}" data-newtitle="${safeTNew}" data-day="${f.day}" data-time="${f.time}">${ICONS.plus}</div>
     </div>`;
@@ -777,7 +797,7 @@ export function renderContextualHeader(state, consensus){
             <div class="ctx-next-title">${dt}</div>
             ${badge}
           </div>
-          <div class="ctx-next-detail">${next.time} · ${vc.short}</div>
+          <div class="ctx-next-detail">${next.time} · ${vc.short}${sala(next.venue)?' \u00b7 '+sala(next.venue):''}</div>
         </div>
       </div>
       ${consensusHtml}${delayHtml}${warnHtml}
@@ -808,7 +828,7 @@ export function renderContextualHeader(state, consensus){
           <div class="ctx-suggest-badge">${gapSuggestion.time}</div>
           <div class="ctx-suggest-info">
             <div class="ctx-suggest-title">${dt.length>26?dt.slice(0,24)+'…':dt}</div>
-            <div class="ctx-suggest-venue">${vc2.short}</div>
+            <div class="ctx-suggest-venue">${vc2.short}${sala(gapSuggestion.venue)?' \u00b7 '+sala(gapSuggestion.venue):''}</div>
           </div>
         </div>`;
     })():'';
@@ -1354,11 +1374,20 @@ export function buildResultHTML(scenarios){
           // y mostramos los minutos, que el usuario juzgue). Antes ambos decían "Choca
           // con X" — mismo mensaje para dos problemas distintos, y no decía ninguno.
           const _k=conflictReason?conflictReason.kind:'solape';
-          const _ico=_k==='viaje'?ICONS.route:ICONS.clock;
-          const _msg=_k==='solape'
+          // 'ciudad' (multiciudad): pin, dice la CIUDAD y NO da minutos — nuestra
+          // estimación de traslado usa velocidad urbana y a escala intermunicipal
+          // se equivoca 3× (Bogotá→Ibagué: dice 13 h, son ~4). Decimos el dato
+          // (la ciudad) y que el usuario juzgue.
+          const _ico=_k==='ciudad'?ICONS.pin:_k==='viaje'?ICONS.route:ICONS.clock;
+          const _msg=_k==='ciudad'
+            ? t('conflict_ciudad',{city:conflictReason.city})
+            : _k==='solape'
             ? t('conflict_solapa',{title:conflictWith})
             : t(conflictReason.bFirst?'conflict_justo_desde':'conflict_justo_hasta',{title:conflictWith});
-          const _det=_k==='viaje'
+          // 'ciudad' sin detalle: "Es en Ibagué" ya lo dice todo (Juan, UX Writer)
+          const _det=_k==='ciudad'
+            ? ''
+            : _k==='viaje'
             ? t('conflict_viaje_det',{travel:_minFmt(conflictReason.travel), gap:_minFmt(conflictReason.gap)})
             : _k==='ajustado' ? t('conflict_hueco_det',{gap:_minFmt(conflictReason.gap)}) : '';
           reason=`<div class="excl-reason conflict">${_ico} ${_msg}${conflictWhen?' · '+conflictWhen:''}</div>`
@@ -1445,6 +1474,7 @@ export function mkAgendaRow(s, mode='saved'){
       ${mode==='scenario'?_timeHTML:''}
       <div class="saved-title">${displayTitle}</div>${progSuffix?`<div class="film-sub-label">${progSuffix}</div>`:''}
       <div class="saved-venue">${ICONS.pin} ${vc2.short}${sl?' · '+sl:''}${s.duration?' · '+durFmt(s.duration):''}</div>
+      ${_sesionDeBloque(s)}
       ${_progBtn}
     </div>
     ${mode==='saved'?`<button class="row-xs saved-check${isDone?' done':''}" data-title="${safeT}" data-day="${s.day||''}" data-time="${s.time||''}" data-venue="${(s.venue||'').replace(/"/g,'&quot;')}" data-dur="${s.duration||''}" data-action="${isDone?'toggleWatched':'markWatchedFromPlan'}">${ICONS.check+' '+t('cta_vista')}</button>`:''}
@@ -1548,6 +1578,12 @@ export function getSuggestions(){
     // Usa screensConflict — mismo criterio que el algoritmo, incluye travel time entre venues
     if(slots.length){
       FILMS.forEach(f=>{
+        // Un taller multi-día NO se sugiere: se toma entero, y el botón de la
+        // sugerencia añade UNA función (addSuggestion) — eso dejaría el bloque a
+        // medias, que es justo lo que el invariante prohíbe. Además sugerir «meté
+        // estas 9 horas en tu hueco» no es una sugerencia, es otro plan.
+        // Su camino es el control de bloque de la ficha.
+        if(f.is_recurring) return;
         if(seenDiscover.has(f.title)||screeningPassed(f)||f.day!==day||isScreeningBlocked(f)) return;
         const fStart=toMin(f.time),fEnd=fStart+blockDuration(f);
         // Verificar que hay un slot de tiempo (check rápido)
@@ -1569,7 +1605,8 @@ export function getSuggestions(){
     // Usa screensConflict (±10 min) — mismo criterio que el algoritmo de planificación
     // Solo aparece si genuinamente cabe sin conflicto en el plan actual
     [...watchlist].filter(wlTitle=>!seenRecovery.has(wlTitle)).forEach(wlTitle=>{
-      FILMS.filter(f=>f.title===wlTitle&&f.day===day&&!screeningPassed(f)&&!isScreeningBlocked(f)).forEach(f=>{
+      // mismo motivo que arriba: el bloque no entra por sugerencia
+      FILMS.filter(f=>f.title===wlTitle&&!f.is_recurring&&f.day===day&&!screeningPassed(f)&&!isScreeningBlocked(f)).forEach(f=>{
         if(seenRecovery.has(f.title)) return;
         const noConflict=!saved.some(s=>screensConflict(s,f));
         if(noConflict){

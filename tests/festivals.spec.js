@@ -34,6 +34,10 @@ test('T08 — selector-carrusel: vigentes encabezan, divisor separa grupos', asy
       tieringOk: firstPastIdx === -1 || lastCurrentIdx < firstPastIdx,
       firstIsCurrent: cls[0] !== 'past',
       dividerPresent: !!document.querySelector('#splash-rail .splash-rail-div'),
+      // Desde el divisor PRÓXIMOS puede haber DOS: se cuentan, no se asume uno.
+      divisores: [...document.querySelectorAll('#splash-rail .splash-rail-div')].map(d => d.textContent.trim()),
+      hasUpcoming: cls.some(c => c === 'upcoming'),
+      hasOngoing: cls.some(c => c === 'ongoing'),
       leviza: ids.some(id => id.includes('leviza')),
     };
   });
@@ -44,6 +48,11 @@ test('T08 — selector-carrusel: vigentes encabezan, divisor separa grupos', asy
   // El divisor "ANTERIORES" existe EXACTAMENTE cuando hay AMBOS grupos (si todos
   // los festivales ya pasaron, p.ej. tras el 19 JUL, no se emite → no falla el CI).
   expect(r.dividerPresent).toBe(r.hasCurrent && r.hasPast);
+  // Un divisor SEPARA dos grupos: se emite exactamente cuando hay algo de los dos
+  // lados. Colgar uno de primero descentraría el snap inicial, que es de lo que
+  // depende la preselección.
+  const esperados = (r.hasOngoing && r.hasUpcoming ? 1 : 0) + (r.hasCurrent && r.hasPast ? 1 : 0);
+  expect(r.divisores.length, `divisores: ${JSON.stringify(r.divisores)}`).toBe(esperados);
 });
 
 // T40 — El splash entra COMPLETO sin scroll vertical en una pantalla chica
@@ -226,3 +235,144 @@ for (const festId of MAIN_FESTIVALS) {
     expect(name?.trim().length).toBeGreaterThan(0);
   });
 }
+
+// ── P06 — el riel nombra a los PRÓXIMOS, y eso no mueve el arranque ────────────
+// En curso y por empezar viajaban en el MISMO grupo del riel, sin nada que los
+// distinga: con FICMA abierto y FICDEH/FINCA a dos días, las tres cards se leían
+// igual de disponibles (Juan, 9 ago 2026). El tier ya existía en _sortFestivals;
+// faltaba decirlo en pantalla.
+//
+// Se descartó mudar los próximos a la IZQUIERDA: haría correr el tiempo de derecha
+// a izquierda —al revés de como se lee una línea de tiempo— y obligaría a arrancar
+// el riel DESPLAZADO. Eso último es el riesgo real: la preselección con un solo
+// festival en curso depende de que la card correcta quede centrada al abrir, y hoy
+// eso se cumple porque el riel arranca en scrollLeft 0. Este test fija las dos
+// cosas: el orden de los grupos y que el arranque no se movió.
+//
+// RELOJ FIJO: _classifyFestival lee new Date() real (no _simTime), así que sin
+// congelarlo el test diría cosas distintas cada día. 11 AGO 2026 es una fecha con
+// al menos un festival en curso y uno por empezar; si el config cambia y deja de
+// haberlos, el test lo dice y se saltea en vez de fallar por una premisa vieja.
+test('P06 — el riel separa PRÓXIMOS sin mover el arranque del snap', async ({ page }) => {
+  await page.clock.install({ time: new Date('2026-08-11T10:00:00-05:00') });
+  await page.goto('/');
+  await page.waitForSelector('html[data-app-ready="1"]', { state: 'attached', timeout: 15000 });
+  await page.waitForSelector('#splash-rail .splash-card[data-fest]', { state: 'attached', timeout: 15000 });
+
+  const r = await page.evaluate(async () => {
+    const { _classifyFestival } = await import('/src/view/components.js');
+    const { FESTIVAL_CONFIG } = await import('/src/config.js');
+    const riel = document.getElementById('splash-rail');
+    // La tira TAL CUAL se lee: cards y divisores en orden de aparición.
+    const tira = [...riel.children].map(e => e.classList.contains('splash-rail-div')
+      ? { div: e.textContent.trim() }
+      : { cls: _classifyFestival(FESTIVAL_CONFIG[e.dataset.fest] || {}) });
+    const on = document.querySelector('#splash-rail .splash-card.on');
+    const btn = document.querySelector('.splash-enter-btn');
+    const cr = riel.getBoundingClientRect();
+    const oc = on ? on.getBoundingClientRect() : null;
+    return {
+      tira,
+      enCurso: tira.filter(x => x.cls === 'ongoing').length,
+      proximos: tira.filter(x => x.cls === 'upcoming').length,
+      preseleccionado: on ? on.dataset.fest : null,
+      entrarHabilitado: btn ? !btn.disabled : null,
+      scrollInicial: riel.scrollLeft,
+      centrado: oc ? Math.abs(((oc.left + oc.right) / 2) - ((cr.left + cr.right) / 2)) : null,
+    };
+  });
+
+  if (!r.enCurso || !r.proximos) {
+    console.log(`P06: al 11 AGO 2026 no hay en-curso + próximos (${r.enCurso}/${r.proximos}), skip`);
+    return;
+  }
+
+  // ORDEN: ningún próximo antes de un en-curso, y el divisor justo entre los grupos.
+  const idxDivProx = r.tira.findIndex(x => x.div);
+  const ultimoEnCurso = r.tira.reduce((mx, x, i) => (x.cls === 'ongoing' ? i : mx), -1);
+  const primerProximo = r.tira.findIndex(x => x.cls === 'upcoming');
+  expect(ultimoEnCurso, 'un próximo se coló antes de un festival en curso').toBeLessThan(primerProximo);
+  expect(idxDivProx, 'el divisor no está entre los dos grupos').toBeGreaterThan(ultimoEnCurso);
+  expect(idxDivProx, 'el divisor no está entre los dos grupos').toBeLessThan(primerProximo);
+
+  // SNAP: con UN solo festival en curso, sigue preseleccionado y centrado desde 0.
+  if (r.enCurso === 1) {
+    expect(r.preseleccionado, 'se perdió la preselección del único festival en curso').toBeTruthy();
+    expect(r.entrarHabilitado, '«Entrar» quedó deshabilitado con un festival preseleccionado').toBe(true);
+    expect(r.scrollInicial, 'el riel ya no arranca en 0 — el divisor movió el arranque').toBe(0);
+    expect(r.centrado, `la card preseleccionada quedó descentrada ${r.centrado}px`).toBeLessThanOrEqual(2);
+  }
+});
+
+// ── P07 — el selector ES el riel del splash, no una copia ─────────────────────
+// `_renderFestivalSelectorHTML` delega en `_renderSplashRailHTML` y solo cambia la
+// acción; el info de las dos superficies sale de `_fillFestInfo`. Por eso todo
+// ajuste del splash aparece en el selector sin tocarlo — el arreglo del país de
+// FINCA y el divisor PRÓXIMOS entraron en ambos sin una línea extra.
+//
+// Eso se sostiene mientras el selector DELEGUE. El día que alguien copie el render
+// «para tocar solo el selector», nada lo detiene: las dos superficies empiezan a
+// derivar y la divergencia se descubre meses después, en una captura. Ya pasó con
+// el marco editorial del póster (7 copias) y con los tres radios.
+//
+// Este test compara los DOS markups renderizados. La única diferencia legítima es
+// la acción —el splash selecciona y espera «Entrar», el selector carga directo—, y
+// es lo único que se normaliza. Se entra al festival EN CURSO a propósito: así la
+// card marcada `.on` es la misma en ambos (preselección en el splash, activo en el
+// selector) y no hay que aflojar la comparación para que pase.
+test('P07 — el markup del selector es el mismo del splash (una implementación)', async ({ page }) => {
+  // Reloj fijo: 11 AGO 2026 tiene un festival en curso y dos por empezar, así que
+  // la comparación ejerce las cards Y los dos divisores. Sin congelarlo, el test
+  // compararía rieles distintos según el día.
+  await page.clock.install({ time: new Date('2026-08-11T10:00:00-05:00') });
+  await page.goto('/');
+  await page.waitForSelector('html[data-app-ready="1"]', { state: 'attached', timeout: 15000 });
+  await page.waitForSelector('#splash-rail .splash-card[data-fest]', { state: 'attached', timeout: 15000 });
+
+  const enCurso = await page.evaluate(async () => {
+    const { _classifyFestival } = await import('/src/view/components.js');
+    const { FESTIVAL_CONFIG } = await import('/src/config.js');
+    return Object.entries(FESTIVAL_CONFIG)
+      .filter(([, c]) => c.name && c.group !== 'test' && _classifyFestival(c) === 'ongoing')
+      .map(([id]) => id);
+  });
+  if (enCurso.length !== 1) {
+    console.log(`P07: al 11 AGO 2026 hay ${enCurso.length} festivales en curso (se necesita 1), skip`);
+    return;
+  }
+  const fest = enCurso[0];
+
+  const splash = await page.evaluate(() => ({
+    riel: document.getElementById('splash-rail').innerHTML,
+    info: (document.querySelector('#splash-info')?.textContent || '').replace(/\s+/g, ' ').trim(),
+  }));
+
+  await page.evaluate((id) => {
+    const c = FESTIVAL_CONFIG[id];
+    selectSplashFest(c.name, `${c.city} · ${c.dates}`, id);
+  }, fest);
+  await page.locator('.splash-enter-btn').click();
+  await page.waitForSelector('.poster-card, .plist-item, .dtab', { timeout: 15000 });
+  await page.evaluate(() => { if (typeof openFestivalSheet === 'function') openFestivalSheet(); });
+  await page.waitForSelector('#fs-festival-list .splash-rail .splash-card', { timeout: 8000 });
+  await page.waitForTimeout(600);
+
+  const sel = await page.evaluate(() => ({
+    riel: document.querySelector('#fs-festival-list .splash-rail').innerHTML,
+    info: (document.getElementById('fs-info')?.textContent || '').replace(/\s+/g, ' ').trim(),
+  }));
+
+  // ÚNICA diferencia legítima: la acción de la card.
+  const norm = h => h.replace(/data-action="[^"]*"/g, 'data-action="·"').replace(/\s+/g, ' ').trim();
+  const a = norm(splash.riel), b = norm(sel.riel);
+  // Se afirma el PUNTO de divergencia, no la igualdad de los dos markups enteros:
+  // un `toBe` sobre 4 KB de HTML vuelca las dos cadenas completas y el fallo se
+  // vuelve ilegible. Así el mensaje trae la ventana donde empiezan a diferir.
+  let i = -1;
+  if (a !== b) { i = 0; while (i < a.length && i < b.length && a[i] === b[i]) i++; }
+  const ventana = i < 0 ? '' :
+    `\n  splash  …${a.slice(Math.max(0, i - 70), i + 70)}\n  selector…${b.slice(Math.max(0, i - 70), i + 70)}`;
+  expect(i, `el selector dejó de delegar en el riel del splash — hay dos implementaciones.${ventana}`).toBe(-1);
+  expect(sel.info, 'el info del selector dejó de salir de _fillFestInfo').toBe(splash.info);
+  expect(a).toContain('splash-rail-div'); // la comparación ejerció los divisores
+});

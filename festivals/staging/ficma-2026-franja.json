@@ -1,0 +1,279 @@
+{
+ "_provenance": {
+  "fuente": "FICMA 17 - FRANJA ACADÉMICA.pdf — 15 páginas de imagen (posts de Instagram), OCR con Vision (macOS)",
+  "recibido": "2026-08-08",
+  "que_aporta": "las 12 actividades de la franja: 6 talleres y 6 charlas, con sede, hora, duración real (los talleres publican rango), cupo e inscripción."
+ },
+ "actividades": [
+  {
+   "pagina": "fa-02.jpg",
+   "tipo": "taller",
+   "titulo": "De la realidad a la verdad",
+   "dias": [
+    "2026-08-10",
+    "2026-08-11"
+   ],
+   "hora": "08:00",
+   "duracion_min": 540,
+   "sede": "Casa En La Montaña",
+   "sala": "",
+   "_sede_cruda": "Casa En La Montaña",
+   "tallerista": "Franco Lolli",
+   "invitados": "",
+   "modera": "",
+   "cupos": 15,
+   "requires_registration": true,
+   "entrada_libre": false,
+   "is_recurring": true,
+   "registration_url": "https://docs.google.com/forms/d/1AS6rYYOERaPJz0nHi6pEamrpxn7aHza94goW0a6lU7c/viewform",
+   "synopsis": ""
+  },
+  {
+   "pagina": "fa-03.jpg",
+   "tipo": "taller",
+   "titulo": "Escribir con la cámara: Del guion a la puesta en escena",
+   "dias": [
+    "2026-08-13"
+   ],
+   "hora": "09:00",
+   "duracion_min": 180,
+   "sede": "Universidad de Caldas",
+   "sala": "Sede principal",
+   "_sede_cruda": "Universidad de Caldas - sede principal",
+   "tallerista": "",
+   "invitados": "Andrés Buitrago",
+   "modera": "",
+   "cupos": null,
+   "requires_registration": true,
+   "entrada_libre": true,
+   "is_recurring": false,
+   "registration_url": "https://docs.google.com/forms/d/e/1FAIpQLSd07hqBATf6G3_k06cDOulhXe3cSSgveOjwPj0iEuHDCfQVEg/viewform",
+   "synopsis": "Un espacio para reflexionar sobre la relación entre guion, dirección y lenguaje visual, y sobre cómo las decisiones de la puesta en escena pueden potenciar, transformar o incluso replantear aquello que estaba escrito.",
+   "_dias_pdf": [
+    "2026-08-12"
+   ],
+   "_cambio": "del miércoles 12 al jueves 13 — anunciado por el festival el 8 ago, después del PDF. Hora (9:00) y sede sin confirmar: el aviso solo mencionó el día."
+  },
+  {
+   "pagina": "fa-04.jpg",
+   "tipo": "taller",
+   "titulo": "Poniéndole voz a tu historia silenciada",
+   "dias": [
+    "2026-08-12"
+   ],
+   "hora": "14:00",
+   "duracion_min": 180,
+   "sede": "Secretaría de la Mujer y Equidad de Género",
+   "sala": "Hall Orquídeas",
+   "_sede_cruda": "Hall de la Secretaría de la Mujer y Equidad de Genero Orquídeas",
+   "tallerista": "",
+   "invitados": "",
+   "modera": "",
+   "cupos": 20,
+   "requires_registration": true,
+   "entrada_libre": false,
+   "is_recurring": false,
+   "registration_url": "",
+   "synopsis": ""
+  },
+  {
+   "pagina": "fa-05.jpg",
+   "tipo": "taller",
+   "titulo": "Un sueño se hace realidad en 1 minuto",
+   "dias": [
+    "2026-08-14"
+   ],
+   "hora": "15:00",
+   "duracion_min": 150,
+   "sede": "Expoferias",
+   "sala": "",
+   "_sede_cruda": "Expoferias",
+   "tallerista": "",
+   "invitados": "",
+   "modera": "",
+   "cupos": 30,
+   "requires_registration": true,
+   "entrada_libre": false,
+   "is_recurring": false,
+   "registration_url": "https://docs.google.com/forms/d/e/1FAIpQLScQwx4mCGbX-JGI9Y6Tranmsa1C-yet1ZDFwF8MjxcoPBUraQ/viewform",
+   "synopsis": ""
+  },
+  {
+   "pagina": "fa-06.jpg",
+   "tipo": "taller",
+   "titulo": "Cine en Movimiento: Taller Teórico-Práctico de Plano Secuencia",
+   "dias": [
+    "2026-08-14"
+   ],
+   "hora": "18:00",
+   "duracion_min": 150,
+   "sede": "Expoferias",
+   "sala": "",
+   "_sede_cruda": "Expoferias",
+   "tallerista": "Mauricio Casilimas",
+   "invitados": "",
+   "modera": "",
+   "cupos": 30,
+   "requires_registration": true,
+   "entrada_libre": false,
+   "is_recurring": false,
+   "registration_url": "https://docs.google.com/forms/d/e/1FAIpQLScQwx4mCGbX-JGI9Y6Tranmsa1C-yet1ZDFwF8MjxcoPBUraQ/viewform",
+   "synopsis": ""
+  },
+  {
+   "pagina": "fa-07.jpg",
+   "tipo": "taller",
+   "titulo": "Animación de imágenes fijas, de 0 a 100 para Dummies",
+   "dias": [
+    "2026-08-14",
+    "2026-08-15"
+   ],
+   "hora": "17:00",
+   "duracion_min": 120,
+   "sede": "Expoferias",
+   "sala": "",
+   "_sede_cruda": "Expoferias",
+   "tallerista": "",
+   "invitados": "Fabián Amador Salazar",
+   "modera": "",
+   "cupos": 30,
+   "requires_registration": true,
+   "entrada_libre": false,
+   "is_recurring": true,
+   "registration_url": "",
+   "synopsis": ""
+  },
+  {
+   "pagina": "fa-09.jpg",
+   "tipo": "charla",
+   "titulo": "Coleccionar para recordar. Museos, arte y la construcción de la memoria",
+   "dias": [
+    "2026-08-10"
+   ],
+   "hora": "11:00",
+   "duracion_min": null,
+   "sede": "Teatro los Fundadores",
+   "sala": "Sala Fundadores",
+   "_sede_cruda": "Sala Fundadores",
+   "tallerista": "",
+   "invitados": "Laura Buriticá Angélica Avila",
+   "modera": "Diana Castellanos",
+   "cupos": null,
+   "requires_registration": false,
+   "entrada_libre": true,
+   "is_recurring": false,
+   "registration_url": "",
+   "synopsis": ""
+  },
+  {
+   "pagina": "fa-10.jpg",
+   "tipo": "charla",
+   "titulo": "Museos de la intimidad. Objetos, memoria y representaciones de la nostalgia",
+   "dias": [
+    "2026-08-11"
+   ],
+   "hora": "11:00",
+   "duracion_min": null,
+   "sede": "Colombo",
+   "sala": "Auditorio",
+   "_sede_cruda": "Auditorio Colombo Americano",
+   "tallerista": "",
+   "invitados": "Pablo Cuartas",
+   "modera": "",
+   "cupos": null,
+   "requires_registration": false,
+   "entrada_libre": true,
+   "is_recurring": false,
+   "registration_url": "",
+   "synopsis": ""
+  },
+  {
+   "pagina": "fa-11.jpg",
+   "tipo": "charla",
+   "titulo": "Colombia a través de sus monedas y billetes: historia y desarrollo del coleccionismo",
+   "dias": [
+    "2026-08-12"
+   ],
+   "hora": "11:00",
+   "duracion_min": null,
+   "sede": "Colombo",
+   "sala": "Auditorio",
+   "_sede_cruda": "Auditorio Colombo Americano",
+   "tallerista": "",
+   "invitados": "Felipe Torres",
+   "modera": "",
+   "cupos": null,
+   "requires_registration": false,
+   "entrada_libre": true,
+   "is_recurring": false,
+   "registration_url": "",
+   "synopsis": ""
+  },
+  {
+   "pagina": "fa-12.jpg",
+   "tipo": "charla",
+   "titulo": "Coleccionismo, patrimonio y las distintas formas en que los objetos cuentan historias y construyen memoria",
+   "dias": [
+    "2026-08-13"
+   ],
+   "hora": "15:00",
+   "duracion_min": null,
+   "sede": "Batuta",
+   "sala": "",
+   "_sede_cruda": "Batuta",
+   "tallerista": "",
+   "invitados": "Felipe Rodriguez (Proyecto Kinder) Rafael Hernández (Codiscos) Juan José Charry (Codiscos) Felipe lorres (Numismatica Bogotá)",
+   "modera": "",
+   "cupos": null,
+   "requires_registration": false,
+   "entrada_libre": true,
+   "is_recurring": false,
+   "registration_url": "",
+   "synopsis": ""
+  },
+  {
+   "pagina": "fa-13.jpg",
+   "tipo": "charla",
+   "titulo": "Propiedad intelectual en el audiovisual",
+   "dias": [
+    "2026-08-14"
+   ],
+   "hora": "09:00",
+   "duracion_min": null,
+   "sede": "Casa de la Secretaría de Cultura",
+   "sala": "Auditorio",
+   "_sede_cruda": "Auditorio casa de Secretaria de Cultura",
+   "tallerista": "",
+   "invitados": "Patricia Rengifo",
+   "modera": "",
+   "cupos": null,
+   "requires_registration": false,
+   "entrada_libre": true,
+   "is_recurring": false,
+   "registration_url": "",
+   "synopsis": ""
+  },
+  {
+   "pagina": "fa-14.jpg",
+   "tipo": "charla",
+   "titulo": "Restaurar para conservar, el color como patrimonio cinematográfico",
+   "dias": [
+    "2026-08-14"
+   ],
+   "hora": "16:00",
+   "duracion_min": null,
+   "sede": "Universidad de Caldas",
+   "sala": "Sede principal",
+   "_sede_cruda": "Universidad de Caldas - sede principal",
+   "tallerista": "",
+   "invitados": "Diego Yhama",
+   "modera": "",
+   "cupos": null,
+   "requires_registration": false,
+   "entrada_libre": true,
+   "is_recurring": false,
+   "registration_url": "",
+   "synopsis": ""
+  }
+ ]
+}

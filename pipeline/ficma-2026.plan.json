@@ -1,0 +1,8 @@
+{
+ "_nota": "Los pasos re-ejecutables de FICMA desde sus OCR versionados. El enriquecimiento (TMDB/Letterboxd/title-en) fue pre-formato-intermedio y sus sidecars son históricos: no se re-corre.",
+ "pasos": [
+  {"cmd": "python3 pipeline/ficma-2026-parse.py",       "que": "OCR → crudo (87 págs, programación)"},
+  {"cmd": "python3 pipeline/ficma-2026-franja.py",      "que": "OCR → franja académica (12 actividades)"},
+  {"cmd": "python3 pipeline/ficma-2026-ensamblador.py", "que": "crudo + franja + enriquecido + geo → festival"}
+ ]
+}
