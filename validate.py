@@ -2664,6 +2664,42 @@ except Exception as _e:
 # vengan del repo. Sin registrar, esos cuatro archivos vuelven a conflictuar en
 # cada PR —los cinco conflictos del 8 ago 2026 fueron exactamente eso—.
 # Aviso, no error: en CI no aplica y un clon de solo lectura no lo necesita.
+# ── [stash-compartido] el stash NO se aísla por worktree ───────────────────────
+# Los worktrees aíslan el árbol y el índice; la PILA DE STASH es una sola para todo
+# el repositorio. Con dos chats trabajando en worktrees distintos, un `git stash pop`
+# saca la entrada de arriba — que puede ser del OTRO. Pasó el 9 ago 2026: un pop en
+# el worktree de app trajo `ficmontanas-hold-5` del worktree de onboarding y dejó
+# CLAUDE.md, src/config.js y validate-festivals.js con marcadores de conflicto sin
+# resolver, en medio de una verificación que no tenía nada que ver.
+#
+# No hay hook de git para stash (no existe pre-stash), así que la barrera no puede
+# interceptar el comando: vigila el ESTADO, que es lo que hace daño. Una entrada de
+# stash viva en un repo con varios worktrees es una trampa esperando a que alguien
+# haga pop.
+#
+# En vez de stash: commiteá el WIP en tu rama y seguí. Un commit lleva tu nombre de
+# rama y no lo puede sacar otro por accidente. Si aun así usás stash, aplicalo SIEMPRE
+# por referencia exacta (`git stash apply stash@{N}`), nunca `pop`.
+#
+# Aviso y no error: la entrada puede ser legítima y del otro chat — no es nuestra
+# para borrarla, y bloquear el push por algo ajeno sería peor que el problema.
+check = 'stash-compartido'
+try:
+    import subprocess as _sp
+    _wt = _sp.run(['git', 'worktree', 'list'], capture_output=True, text=True).stdout.strip().splitlines()
+    _st = _sp.run(['git', 'stash', 'list'], capture_output=True, text=True).stdout.strip().splitlines()
+    if len(_wt) > 1 and _st:
+        _quien = ', '.join(s.split(':')[1].strip() if ':' in s else s for s in _st[:3])
+        warn(check, f'{len(_st)} stash vivo(s) con {len(_wt)} worktrees — la pila es COMPARTIDA y un `pop` '
+                    f'puede sacar el del otro chat ({_quien}). Usá un commit de WIP en tu rama; '
+                    f'si tenés que aplicar uno, `git stash apply stash@{{N}}` por referencia exacta.')
+    elif len(_wt) > 1:
+        ok(check, f'{len(_wt)} worktrees y la pila de stash vacía')
+    else:
+        ok(check, 'un solo worktree — la pila de stash no se comparte')
+except Exception as _e:
+    warn(check, f'no se pudo verificar stash-compartido: {_e}')
+
 check = 'merge-driver'
 try:
     import subprocess as _sp
