@@ -293,3 +293,96 @@ test('T56 — el taller multi-día entra y sale entero, y no entra a medias', as
   expect(await page.evaluate(() => savedAgenda.schedule.some(e => e._title === 'Rival')),
     'y no se saca nada del plan sin permiso').toBe(true);
 });
+
+// T57 — un taller que YA EMPEZÓ no se ofrece. Cazado con los datos reales de
+// FICMA 17: su taller de 2 días mostraba «Añadir las 1 sesiones» —mal escrito y,
+// peor, incoherente—: se ofrecían «las sesiones que quedan», pero verifyPlan
+// cuenta TODAS las del catálogo, así que ese plan de 1 de 2 lo marcaba el propio
+// chokepoint como bloque-incompleto. Un taller se toma entero; si su primera
+// sesión pasó, ya no se puede.
+test('T57 — un taller ya empezado no se ofrece', async ({ page }) => {
+  // víspera: se ofrece completo
+  await enterFestival(page, 'leviza2026', '2026-05-13T09:00:00-05:00');
+  await page.evaluate(() => openPelSheet('Taller de Guion'));
+  await page.waitForTimeout(1100);
+  const antes = await page.evaluate(() =>
+    document.querySelector('#pel-sheet .pel-sheet-bloque .suggestion-add')?.textContent.trim() || '');
+  expect(antes).toMatch(/3 sesiones/);
+
+  // con la primera sesión ya pasada: sin control de añadir
+  await enterFestival(page, 'leviza2026', '2026-05-15T23:00:00-05:00');
+  await page.evaluate(() => openPelSheet('Taller de Guion'));
+  await page.waitForTimeout(1100);
+  const despues = await page.evaluate(() => ({
+    ctrl: document.querySelector('#pel-sheet .pel-sheet-bloque .suggestion-add')?.textContent.trim() || '',
+    filas: document.querySelectorAll('#pel-sheet .pel-sheet-screening').length,
+  }));
+  expect(despues.ctrl, 'no se ofrece un taller que ya empezó').toBe('');
+  expect(despues.filas, 'las sesiones siguen listándose, informativas').toBeGreaterThan(0);
+});
+
+// T58 — un taller multi-día no aparece en Sugerencias.
+// Era el único camino que quedaba para romper el bloque: el botón de la
+// sugerencia llama a addSuggestion, que añade UNA función — y eso deja el bloque
+// a medias, justo lo que prohíbe el invariante. (Quitar, en cambio, nunca lo
+// rompió: tanto Mi Plan como Planear filtran por TÍTULO, así que sacan las N.)
+test('T58 — el taller multi-día no se ofrece como sugerencia', async ({ page }) => {
+  await enterFestival(page, 'leviza2026', '2026-05-13T09:00:00-05:00');
+  const r = await page.evaluate(() => {
+    const rec = FILMS.filter(f => f.is_recurring && f.day && f.time);
+    const tallerTitulo = rec[0].title;
+    // plan mínimo para que el motor de sugerencias corra, + el taller en Intereses
+    const suelta = FILMS.find(f => !f.info && f.day && f.time && !f.is_recurring);
+    state.set('savedAgenda', { schedule: [{ _title: suelta.title, title: suelta.title, day: suelta.day,
+      time: suelta.time, venue: suelta.venue, duration: suelta.duration, day_order: suelta.day_order }] });
+    watchlist.clear(); watchlist.add(tallerTitulo);
+    switchMainNav('mnav-miplan'); showAgView();
+    return { tallerTitulo, sesiones: rec.length };
+  });
+  await page.waitForTimeout(1200);
+  const ofrecido = await page.evaluate((t) =>
+    [...document.querySelectorAll('[data-action="addSuggestion"]')].some(b => b.dataset.title === t),
+  r.tallerTitulo);
+  expect(ofrecido, 'una sesión suelta del bloque no puede ofrecerse: addSuggestion añade una sola').toBe(false);
+});
+
+// T59 — el copy del bloque: la fila dice cuál es, y el modal qué se va.
+// En Mi Plan las sesiones se leían como funciones sueltas del mismo título, y
+// sorprendía que quitar una las sacara todas. Además el modal prometía «lo podés
+// encontrar de nuevo en Sugerencias», que dejó de ser cierto para un taller: se
+// quitaron de ahí justamente para que el bloque no se rompa (T58).
+test('T59 — la fila dice «Sesión 1 de N» y el modal avisa que se van todas', async ({ page }) => {
+  await enterFestival(page, 'leviza2026', '2026-05-13T09:00:00-05:00');
+  await page.evaluate(() => openPelSheet('Taller de Guion'));
+  await page.waitForTimeout(1000);
+  await page.evaluate(() => { const b = document.querySelector('#pel-sheet .pel-sheet-bloque .suggestion-add'); if (b) b.click(); });
+  await page.waitForTimeout(1200);
+  await page.evaluate(() => { try { closePelSheet(); } catch (e) {} switchMainNav('mnav-miplan'); showAgView(); });
+  await page.waitForTimeout(1800);
+
+  const fila = await page.evaluate(() => [...document.querySelectorAll('.saved-sesion')].map(e => e.textContent.trim()));
+  expect(fila.length, 'la fila del taller lleva su coordenada').toBeGreaterThan(0);
+  expect(fila[0]).toMatch(/Sesión \d de 3/);
+
+  await page.evaluate(() => removeFromAgenda('Taller de Guion'));
+  await page.waitForTimeout(800);
+  const modal = await page.evaluate(() => {
+    const c = document.querySelector('.cm-subject');
+    return c ? c.parentElement.textContent.replace(/\s+/g, ' ').trim() : '';
+  });
+  expect(modal, 'el modal dice la consecuencia real').toMatch(/3 sesiones/);
+  expect(modal, 'y ya no promete Sugerencias, donde el taller no aparece').not.toMatch(/Sugerencias/);
+
+  // control: una película normal conserva el copy de siempre
+  await page.evaluate(() => { const b = [...document.querySelectorAll('button')].find(x => /cancelar/i.test(x.textContent)); if (b) b.click(); });
+  await page.waitForTimeout(400);
+  const normal = await page.evaluate(() => {
+    const f = FILMS.find(x => !x.info && x.day && x.time && !x.is_recurring);
+    state.set('savedAgenda', { schedule: [{ _title: f.title, title: f.title, day: f.day, time: f.time,
+      venue: f.venue, duration: f.duration, day_order: f.day_order }] });
+    removeFromAgenda(f.title);
+    const c = document.querySelector('.cm-subject');
+    return c ? c.parentElement.textContent : '';
+  });
+  expect(normal, 'lo que no es bloque no cambia').toMatch(/Sugerencias/);
+});
