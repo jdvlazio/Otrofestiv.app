@@ -465,6 +465,15 @@ test('AP01 — aplazado: distintivo + banda + sin AHORA + sin «hoy»', async ({
   expect(rail.badge).toBe(true);
   expect(rail.postponedClass).toBe(true);
   expect(rail.ficmaAntesDeAnteriores).toBe(true);
+  // NO REPETIR (regla de Juan): la card ya lleva el distintivo APLAZADO — la línea
+  // de fechas del info dice solo «FECHAS POR ANUNCIAR», sin repetir el estado.
+  const infoFechas = await page.evaluate(async () => {
+    const { FESTIVAL_CONFIG } = await import('/src/config.js');
+    const c = FESTIVAL_CONFIG['ficma2026'];
+    selectSplashFest(c.name, `${c.city} · ${c.dates}`, 'ficma2026');
+    return document.querySelector('#otrofestiv-splash .splash-info-dates')?.textContent || '';
+  });
+  expect(infoFechas).toBe('FECHAS POR ANUNCIAR');
   // Entrar al festival aplazado: banda con las palabras del festival, sin AHORA,
   // y la vista NO aterriza en «hoy» (se abre como festival futuro: grilla TODO).
   await page.evaluate(() => { const c = FESTIVAL_CONFIG['ficma2026']; selectSplashFest(c.name, `${c.city} · ${c.dates}`, 'ficma2026'); });
@@ -494,7 +503,7 @@ test('AP01 — aplazado: distintivo + banda + sin AHORA + sin «hoy»', async ({
   // Las fechas viejas NO se prometen en NINGUNA superficie (dueño único _langDates,
   // 10 ago): el header interno decía «· 10–17 AGO 2026» junto al selector.
   const hdrFechas = await page.evaluate(() => document.querySelector('.hdr-fest-dates')?.textContent || '');
-  expect(hdrFechas).toContain('NUEVAS FECHAS');
+  expect(hdrFechas).toContain('FECHAS POR ANUNCIAR');
   expect(hdrFechas).not.toContain('AGO');
   expect(hdrFechas).not.toContain('2026'); // el año sobra bajo status
   // EN: la banda se REHORNEA al cambiar idioma (setLang no pasa por loadFestival —
