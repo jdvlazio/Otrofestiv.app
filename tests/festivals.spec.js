@@ -491,6 +491,12 @@ test('AP01 — aplazado: distintivo + banda + sin AHORA + sin «hoy»', async ({
   expect(dentro.ahoraViva).toBe(false); // el dueño del AHORA obedece al estado
   expect(dentro.ahoraChips).toBe(0);    // y ningún chip llegó al DOM
   expect(dentro.activeDay).toBe('all'); // no aterriza en «hoy»
+  // Las fechas viejas NO se prometen en NINGUNA superficie (dueño único _langDates,
+  // 10 ago): el header interno decía «· 10–17 AGO 2026» junto al selector.
+  const hdrFechas = await page.evaluate(() => document.querySelector('.hdr-fest-dates')?.textContent || '');
+  expect(hdrFechas).toContain('NUEVAS FECHAS');
+  expect(hdrFechas).not.toContain('AGO');
+  expect(hdrFechas).not.toContain('2026'); // el año sobra bajo status
   // EN: la banda se REHORNEA al cambiar idioma (setLang no pasa por loadFestival —
   // el bug del idioma horneado, cazado en QA visual). Con note_en presente la cita
   // sale traducida; al volver a ES, el verbatim del festival.

@@ -8,8 +8,11 @@
 import { FESTIVAL_CONFIG, TMDB_IMG } from '../config.js';
 import {
   DAY_ABBR, DAY_NUM, ICONS, _buildPosterV16, _bandTextSVG, _secLabel, _sectionColor,
-  makeProgramPoster, makeEventPoster, makeSorpresaPoster, escXML,
+  makeProgramPoster, makeEventPoster, makeSorpresaPoster, escXML, _langDates,
 } from './components.js';
+// _langDates se REEXPORTA: el dueño vive en components.js (helpers importa
+// components — el ciclo decide dónde vive; ver el comentario del dueño).
+export { _langDates };
 import { toMin, minToStr, parseDur, simNow, simTodayStr, _festDate } from '../domain/time.js';
 import { effectiveDuration } from '../domain/film.js';
 import { _resolveVenue, travelMins } from '../domain/festival.js';
@@ -554,10 +557,6 @@ export const _minFmt   = m   => {
 };
 
 export const flagFmt   = fl  => fl||'';
-
-export function _langDates(cfg) {
-  return (_lang==='en' && cfg && cfg.dates_en) ? cfg.dates_en : (cfg && cfg.dates)||'';
-}
 
 export function _mkCortoItemHtml(item, n, {cls='mplan-prog-item', section='', ratingEl=''}={}){
   // Póster por la fuente única: en tamaño thumb el marco va SIN texto en la

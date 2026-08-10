@@ -97,10 +97,10 @@ function _fillFestInfo(festId, scope){
     const dates=_langDates(cfg);
     const _season=festivalSeasonYear();
     const _showYear=cfg.year && cfg.year!==_season;
-    // Aplazado: las fechas viejas serían una promesa falsa — la línea dice el
-    // estado y lo único cierto («nuevas fechas por anunciar», sus palabras).
+    // Aplazado: `dates` ya viene del dueño (_langDates → «NUEVAS FECHAS POR
+    // ANUNCIAR»); acá solo se antepone la etiqueta y se suprime el año.
     datesEl.textContent=cls==='postponed'
-      ? (t('fest_postponed_label')+' · '+t('fest_postponed_dates')).toUpperCase()
+      ? (t('fest_postponed_label')+' · '+dates).toUpperCase()
       : (dates+(_showYear?' · '+cfg.year:'')).toUpperCase();
   }
 }

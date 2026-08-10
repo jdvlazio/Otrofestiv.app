@@ -2,7 +2,7 @@
 // p8 Step 7e — Compartir plan (canvas/imagen) + export ICS.
 
 import { FESTIVAL_CONFIG } from '../config.js';
-import { DAYS, dayLabel, starsText, vcfg, venueLabel, getFilmPoster, getCortoItemPoster } from '../view/helpers.js';
+import { DAYS, _langDates, dayLabel, starsText, vcfg, venueLabel, getFilmPoster, getCortoItemPoster } from '../view/helpers.js';
 import { parseProgramTitle, _sectionColor } from '../view/components.js';
 import { showToast } from '../view/feedback.js';
 import { _festDate } from '../domain/time.js';
@@ -51,7 +51,10 @@ export async function shareDiary(){
   const _fn=(cfg.name||''); x.fillText(_fn.length>28?_fn.slice(0,26)+'…':_fn,PAD,148);
   x.fillStyle='#8A8A8A'; x.font='500 29px system-ui';
   const _n=`${rows.length} ${rows.length===1?t('label_vista'):t('label_vistas')}`;
-  x.fillText(cfg.dates?`${_n} · ${String(cfg.dates).toUpperCase()}`:_n,PAD,192);
+  // Por el dueño (_langDates): un festival aplazado NO hornea «10–17 AGO» en un
+  // PNG que viaja por WhatsApp — la imagen decía fechas que el festival desmintió.
+  const _dt=_langDates(cfg);
+  x.fillText(_dt?`${_n} · ${String(_dt).toUpperCase()}`:_n,PAD,192);
   // helpers
   const rr=(px,py,w,h,r)=>{ x.beginPath(); x.moveTo(px+r,py); x.arcTo(px+w,py,px+w,py+h,r); x.arcTo(px+w,py+h,px,py+h,r); x.arcTo(px,py+h,px,py,r); x.arcTo(px,py,px+w,py,r); x.closePath(); };
   const load=src=>new Promise(res=>{ if(!src){res(null);return;} const im=new Image(); im.crossOrigin='anonymous'; im.onload=()=>res(im); im.onerror=()=>res(null); im.src=src; });
