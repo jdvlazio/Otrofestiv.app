@@ -142,6 +142,41 @@ final. La jerarquía de fuentes va COMENTADA en su cabecera, y toda excepción
 (duración corregida, título del afiche, cambio anunciado después del PDF) en
 **tabla explícita con fecha**, nunca editando el crudo.
 
+#### La palabra la pone el festival — no se traduce en la salida
+
+**Si la fuente ya trae la palabra, se PASA.** El error no es capturar mal un
+dato: es capturarlo bien y traducirlo en la línea que lo escribe.
+
+```python
+e['event_kind'] = 'ponencia' if f['tipo'] == 'charla' else 'masterclass'   # ✗
+e['event_kind'] = f['tipo']                                                # ✓
+```
+
+Esa línea real de FICDEH traducía **las dos** palabras. El festival dice
+`charla` y `taller`; la app imprimía **PONENCIA** en 18 actividades y
+**MASTERCLASS** en 11 —«Producción y Animación 2D», «Actuación para cine»—,
+ninguna de las cuales lo era. FICMA tenía la misma línea con `charla`. Estuvo
+en producción hasta el 10 ago 2026 y no lo cazó ningún guardián: el dato era
+válido, solo que era **nuestra palabra**.
+
+Cómo se reconoce, en dos formas:
+
+- `X if fuente == 'A' else 'B'` con `B` literal en la línea de salida.
+- un mapa cuyos VALORES no aparecen en ningún sidecar.
+
+Y una prueba rápida: buscar la palabra de salida en `festivals/staging/`. Si no
+está en ninguna fuente, la pusimos nosotros.
+
+Ojo con el falso positivo: renombrar **no** siempre es traducir. FICDEH titula
+su sección «🛠️ Formación» aunque el `tipo` sea `taller`, y es correcto — sus
+propios pósters se llaman `formacion-actuacion-para-cine.jpg`. QAFF renombra
+sus 15 categorías porque el widget de calendario las publica en mayúsculas y
+con erratas («PRISMA FEMININO») mientras su web las escribe bien.
+
+**Cuando el festival se nombra de dos formas, se elige una y se DECLARA en el
+código**: qué superficie manda y por qué. Sin esa nota, el siguiente que pase
+lee el renombre como el bug de arriba y lo «arregla» al revés.
+
 La config va en `FESTIVAL_CONFIG` de **`src/config.js`** (registrarla ahí es
 parte legítima de un PR de datos). `node scripts/generate-config.js --help`
 genera el bloque; `lib.dias_config()` los objetos de días. **El JSON del
@@ -232,6 +267,9 @@ Primer festival montado enteramente con esto: SiembraFest.
 
 ## 5 · Convenciones que nunca cambian
 
+- **La palabra la pone el festival.** Si la fuente la trae, se pasa; no se
+  traduce en la línea de salida (Paso 5). `event_kind` lo vigila
+  `[event-kind-conocido]` en `scripts/validate-festivals.js`.
 - **Venue**: `"Nombre de la Sede - Ciudad"`, siempre. La sala aparte.
 - **Horas**: 24h con dos dígitos (`"09:30"`). **Duración**: `"90 min"`.
 - **Días**: `dayShort` ES (`"VIE 12"`) + `dayShort_en` (`"FRI 12"`).
