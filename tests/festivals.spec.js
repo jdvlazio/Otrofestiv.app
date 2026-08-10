@@ -449,7 +449,7 @@ test('AP01 — aplazado: distintivo + banda + sin AHORA + sin «hoy»', async ({
     const { FESTIVAL_CONFIG } = await import('/src/config.js');
     const cfg = FESTIVAL_CONFIG['ficma2026'];
     delete cfg.group;
-    cfg.status = { kind: 'postponed', since: '2026-08-10', note: 'Hoy, primero, la vida. Estaremos anunciando nuevas fechas y actividades.', url: 'https://www.instagram.com/p/Db35wc_zR5h/' };
+    cfg.status = { kind: 'postponed', since: '2026-08-10', note: 'Hoy, primero, la vida. Estaremos anunciando nuevas fechas y actividades.', note_en: 'Today, life comes first. We will be announcing new dates and activities.', url: 'https://www.instagram.com/p/Db35wc_zR5h/' };
     const { _classifyFestival, _renderSplashRailHTML } = await import('/src/view/components.js');
     const { state } = await import('/src/state/state.js');
     const html = _renderSplashRailHTML(state, null);
@@ -491,4 +491,21 @@ test('AP01 — aplazado: distintivo + banda + sin AHORA + sin «hoy»', async ({
   expect(dentro.ahoraViva).toBe(false); // el dueño del AHORA obedece al estado
   expect(dentro.ahoraChips).toBe(0);    // y ningún chip llegó al DOM
   expect(dentro.activeDay).toBe('all'); // no aterriza en «hoy»
+  // EN: la banda se REHORNEA al cambiar idioma (setLang no pasa por loadFestival —
+  // el bug del idioma horneado, cazado en QA visual). Con note_en presente la cita
+  // sale traducida; al volver a ES, el verbatim del festival.
+  await page.evaluate(async () => { const m = await import('/src/controller/pipeline.js'); m.setLang('en'); });
+  await page.waitForTimeout(500); // setLang difiere el render 200ms (fade)
+  const bandaEN = await page.evaluate(() => document.getElementById('fest-postponed-banner')?.textContent || '');
+  expect(bandaEN).toContain('POSTPONED');
+  expect(bandaEN).toContain('Today, life comes first.');
+  // Fallback: sin note_en, el EN muestra el ES INTACTO — nunca se traduce en runtime.
+  const bandaSinNoteEn = await page.evaluate(async () => {
+    const { FESTIVAL_CONFIG } = await import('/src/config.js');
+    delete FESTIVAL_CONFIG['ficma2026'].status.note_en;
+    const m = await import('/src/controller/festival.js');
+    m.renderPostponedBanner(FESTIVAL_CONFIG['ficma2026']);
+    return document.getElementById('fest-postponed-banner')?.textContent || '';
+  });
+  expect(bandaSinNoteEn).toContain('Hoy, primero, la vida.');
 });

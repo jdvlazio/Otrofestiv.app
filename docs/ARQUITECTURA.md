@@ -649,9 +649,10 @@ since, note, url}`** en `FESTIVAL_CONFIG`:
 - El festival **se ve** (card con distintivo APLAZADO, última de los vigentes,
   fuera de «Próximos» — un aplazado no tiene fecha) pero **no invita a ir**: sin
   AHORA (`isNowShowing` gana el estado), sin abrir en «hoy» (loader), y la banda
-  persistente del header dice las palabras del **propio festival** (`note`,
-  verbatim, en ES en todos los idiomas — no traducimos palabras ajenas; solo
-  etiqueta y enlace pasan por `t()`).
+  persistente del header dice las palabras del **propio festival**: `note`
+  verbatim, y `note_en` como traducción nuestra aprobada por Juan (opcional; sin
+  ella el EN muestra el ES intacto — nunca se traduce en runtime). Etiqueta y
+  enlace pasan por `t()`.
 - Reversión: fechas nuevas + borrar `status`. Los datos no se tocan.
 
 `[festival-aplazado]` (validate.py) exige el status COMPLETO: `note` (sin él la
