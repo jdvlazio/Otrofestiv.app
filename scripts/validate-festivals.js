@@ -31,6 +31,25 @@ try {
   if (_ma) for (const km of _ma[1].matchAll(/'([^']*)'\s*:/g)) SECTION_ARCHETYPE_KEYS.add(km[1]);
 } catch (e) { /* Sets vacíos → los checks informan 0 cobertura */ }
 
+// [event-kind-conocido]: claves de _kindMapES/_kindMapEN (src/view/components.js).
+// Un `event_kind` sin entrada NO falla: makeEventPoster cae al genérico «EVENTO»,
+// que es una card que se ve bien y miente. Así vivieron en producción los 8
+// talleres de FICMA (kind 'taller', nunca estuvo en el mapa) hasta el día que el
+// festival abrió. Los DOS idiomas se leen por separado a propósito: una clave solo
+// en ES pasa inadvertida hasta que alguien abre la app en inglés.
+// Parser con guardia RUIDOSA: si no encuentra los dos mapas o salen vacíos, el
+// check lo dice. Un parser flojo no avisa de menos — avisa mal.
+const KIND_KEYS = { es: new Set(), en: new Set() };
+let KIND_MAPS_OK = false;
+try {
+  const _cmp = fs.readFileSync(path.join(__dirname, '..', 'src', 'view', 'components.js'), 'utf8');
+  for (const lang of ['ES', 'EN']) {
+    const m = _cmp.match(new RegExp('const _kindMap' + lang + '\\s*=\\s*\\{([\\s\\S]*?)\\n  \\};'));
+    if (m) for (const km of m[1].matchAll(/'([^']+)'\s*:\s*\{\s*accent/g)) KIND_KEYS[lang.toLowerCase()].add(km[1]);
+  }
+  KIND_MAPS_OK = KIND_KEYS.es.size > 0 && KIND_KEYS.en.size > 0;
+} catch (e) { /* KIND_MAPS_OK queda false → el check se declara ciego */ }
+
 // ── Mapa de países → emoji bandera ───────────────────────────────────────────
 const FLAGS_MAP = {
   'Colombia':'🇨🇴','UK':'🇬🇧','Chile':'🇨🇱','Brasil':'🇧🇷','Bolivia':'🇧🇴',
@@ -621,6 +640,26 @@ function validateFestival(fname, data) {
   }
   if (_longSyn.length) {
     warnings.push(`[synopsis-length] ${_longSyn.length} sinopsis > ${_SYN_MAX} chars (revisar/condensar): ${_longSyn.slice(0, 4).join(', ')}${_longSyn.length > 4 ? ` +${_longSyn.length - 4} más` : ''}`);
+  }
+
+  // [event-kind-conocido] — todo event_kind del dato debe existir en LOS DOS mapas
+  // de makeEventPoster; si no, la card cae al genérico «EVENTO» sin fallar nada.
+  if (!KIND_MAPS_OK) {
+    errors.push('[event-kind-conocido] no pude leer _kindMapES/_kindMapEN de src/view/components.js '
+      + '— el check está CIEGO, no aprobando: revisar el parser antes de confiar en este resultado');
+  } else {
+    const _kindFalta = {};
+    (data.films || []).forEach(f => {
+      const k = f.event_kind;
+      if (!k) return;
+      const falta = ['es', 'en'].filter(l => !KIND_KEYS[l].has(k));
+      if (falta.length) (_kindFalta[k] = _kindFalta[k] || { n: 0, langs: falta }).n++;
+    });
+    Object.entries(_kindFalta).forEach(([k, v]) => {
+      errors.push(`[event-kind-conocido] event_kind "${k}" (${v.n} actividad(es)) no está en `
+        + `_kindMap${v.langs.map(l => l.toUpperCase()).join('/')} — esas cards muestran el genérico `
+        + `«EVENTO» en vez del nombre de la actividad. Agregar la clave en src/view/components.js`);
+    });
   }
 
   // [short-ambiguo] — mismo short en dos ciudades (ver RULE 1c).

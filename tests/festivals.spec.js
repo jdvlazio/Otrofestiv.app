@@ -119,14 +119,29 @@ test('T41 — splash: cabe en landscape (844×390) y "Entrar" es alcanzable', as
 // dos bugs: auto-selección con 0 vigentes (divisor descentra → snap dispara scroll)
 // y el override de la selección al navegar con teclado hacia "Entrar".
 test('T42b — el scroll sin gesto de usuario no auto-selecciona (gate)', async ({ page }) => {
+  // El reloj se congela: la premisa del test es "0 o 2+ festivales en curso", y eso
+  // depende del CALENDARIO. El 10 ago 2026 quedó EXACTAMENTE uno en curso (FICMA
+  // abrió; FICDEH y FINCA abrían el 12) → el riel pre-selecciona, "Entrar" se
+  // habilita y el test caía — sin que nada de la app estuviera roto. El 13 los tres
+  // corren a la vez, que es el escenario que este gate quiere vigilar.
+  await page.clock.install({ time: new Date('2026-08-13T10:00:00-05:00') });
   await page.goto('/');
   await page.waitForSelector('html[data-app-ready="1"]', { state: 'attached', timeout: 15000 });
   await page.waitForSelector('.splash-card[data-fest]', { state: 'attached', timeout: 15000 });
-  // Estado inicial en 2 festivales en curso: sin preselección, "Entrar" disabled.
-  const before = await page.evaluate(() => ({
-    on: document.querySelector('.splash-card.on')?.dataset.fest || null,
+  // Acotado a #splash-rail A PROPÓSITO: el sheet "cambiar festival" (#fs-festival-list)
+  // reusa las clases .splash-card/.on, y ahí .on significa "lo que estás mirando".
+  // Sin acotar, este test leía la card del SHEET y daba por buena una selección que
+  // el riel nunca hizo: verde midiendo el elemento equivocado.
+  const sel = () => ({
+    on: document.querySelector('#splash-rail .splash-card.on')?.dataset.fest || null,
     disabled: document.getElementById('splash-enter-btn').disabled,
-  }));
+  });
+  const before = await page.evaluate(sel);
+  // La premisa, explícita: con 0 o 2+ en curso no hay preselección. Si esto falla no
+  // es el gate — es que el calendario o FESTIVAL_CONFIG cambiaron y hay que mover la
+  // fecha congelada de arriba.
+  expect(before.on, 'premisa rota: se esperaba NINGUNA preselección (0 o 2+ en curso)').toBeNull();
+  expect(before.disabled, 'premisa rota: "Entrar" debería arrancar deshabilitado').toBe(true);
   // Scroll PROGRAMÁTICO (sin pointerdown/touchstart) → dispara 'scroll' pero el gate
   // no está armado → no debe seleccionar nada tras el debounce.
   const afterProgrammatic = await page.evaluate(async () => {
@@ -135,7 +150,7 @@ test('T42b — el scroll sin gesto de usuario no auto-selecciona (gate)', async 
     rail.dispatchEvent(new Event('scroll'));
     await new Promise(r => setTimeout(r, 200)); // > 90ms del debounce
     return {
-      on: document.querySelector('.splash-card.on')?.dataset.fest || null,
+      on: document.querySelector('#splash-rail .splash-card.on')?.dataset.fest || null,
       disabled: document.getElementById('splash-enter-btn').disabled,
     };
   });
@@ -147,7 +162,7 @@ test('T42b — el scroll sin gesto de usuario no auto-selecciona (gate)', async 
     rail.dispatchEvent(new Event('scroll'));
     await new Promise(r => setTimeout(r, 200));
     return {
-      on: document.querySelector('.splash-card.on')?.dataset.fest || null,
+      on: document.querySelector('#splash-rail .splash-card.on')?.dataset.fest || null,
       disabled: document.getElementById('splash-enter-btn').disabled,
     };
   });

@@ -306,8 +306,24 @@ export function _buildPosterV16({accent, headerLabel, title, num}){
 export function makeEventPoster(state,title,duration,eventKind,section,opts){
   const {_activeFestId, _lang} = state.snapshot();
   const festCfg=(FESTIVAL_CONFIG&&FESTIVAL_CONFIG[_activeFestId])||Object.values(FESTIVAL_CONFIG||{})[0]||{};
+  // 'charla' — la palabra que usan los festivales. FICDEH («💬 Charlas que Unen»,
+  // 18 actividades) y FICMA («💬 Charlas», 6) mostraban PONENCIA, que no aparece en
+  // ninguna de sus fuentes: la Franja Académica de FICMA dice TALLERES y CHARLAS.
+  // «Ponencia» la pusimos nosotros (Juan, 10 ago 2026 — con FICMA ya en curso).
+  // 'ponencia' SE QUEDA: es vocabulario válido para un festival que sí la use, y
+  // sacarla rompería el dato actual mientras se migra. Primero el mapa, después el
+  // dato: event_kind solo alimenta makeEventPoster, y agenda.js (×2) y programa.js
+  // lo llaman SIN sección, así que un 'charla' sin entrada caería al genérico
+  // EVENTO en Mi Plan y en la agenda — peor que el PONENCIA de hoy.
   const _kindMapES={
     'ponencia':     {accent:'#F59E0B', headerLabel:'PONENCIA'},
+    'charla':       {accent:'#F59E0B', headerLabel:'CHARLA'},
+    // 'taller' ya estaba EN EL DATO (FICMA, 8 actividades) sin entrada en el mapa:
+    // esas cards mostraban el genérico EVENTO. Es la otra mitad del vocabulario de
+    // la Franja Académica —«TALLERES y CHARLAS»— y no necesita migración.
+    // Accent ámbar como charla/ponencia: las tres son la franja académica. Si Juan
+    // prefiere distinguirlas, es cambiar este color y nada más.
+    'taller':       {accent:'#F59E0B', headerLabel:'TALLER'},
     'masterclass':  {accent:'#7F77DD', headerLabel:'MASTERCLASS'},
     'encuentro':    {accent:'#378ADD', headerLabel:'ENCUENTRO'},
     'cineconcierto':{accent:'#D85A30', headerLabel:'CINECONCIERTO'},
@@ -315,6 +331,8 @@ export function makeEventPoster(state,title,duration,eventKind,section,opts){
   };
   const _kindMapEN={
     'ponencia':     {accent:'#F59E0B', headerLabel:'TALK'},
+    'charla':       {accent:'#F59E0B', headerLabel:'TALK'},
+    'taller':       {accent:'#F59E0B', headerLabel:'WORKSHOP'},
     'masterclass':  {accent:'#7F77DD', headerLabel:'MASTERCLASS'},
     'encuentro':    {accent:'#378ADD', headerLabel:'MEETING'},
     'cineconcierto':{accent:'#D85A30', headerLabel:'FILM CONCERT'},

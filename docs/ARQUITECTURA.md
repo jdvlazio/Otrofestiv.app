@@ -607,6 +607,34 @@ resultado, no el camino — mismo patrón que el oráculo del planeador (§15.6)
 > dejan: **una derivación que puede fallar tiene que fallar fuerte o no fallar
 > nunca**; devolver un valor creíble es la peor de las tres opciones.
 
+#### El nombre de la actividad — `[event-kind-conocido]`
+
+`event_kind` es la palabra que la card le pone encima a una actividad: TALLER,
+CHARLA, MASTERCLASS. `makeEventPoster` la traduce con dos mapas (`_kindMapES` y
+`_kindMapEN` en `src/view/components.js`) y, si la clave no está, **cae al genérico
+«EVENTO»**. No falla, no avisa: produce una card correcta que no dice nada.
+
+Dos formas de romperse, cazadas el 10 ago 2026 con FICMA ya abierto:
+
+1. **La palabra que pusimos nosotros.** FICDEH («💬 Charlas que Unen», 18) y FICMA
+   («💬 Charlas», 6) mostraban PONENCIA — una palabra que no aparece en ninguna
+   fuente de ninguno de los dos; la Franja Académica de FICMA dice TALLERES y
+   CHARLAS. Ver también [nombre oficial / secciones tal cual]: **el vocabulario es
+   del festival, no nuestro**, y eso vale para el kind igual que para la sección.
+2. **La clave que nunca existió.** Los 8 talleres de FICMA traían `'taller'`, que
+   jamás estuvo en el mapa: llevaban meses mostrando «EVENTO» y nadie lo vio, porque
+   una card genérica no se distingue de una card correcta si no sabés qué esperabas.
+
+`[event-kind-conocido]` (validate-festivals) exige que todo `event_kind` del dato
+exista en **los dos** mapas — leídos por separado, porque una clave solo en ES
+sobrevive hasta que alguien abre la app en inglés. Si el parser no logra leer los
+mapas se declara **CIEGO y bloquea**, en vez de aprobar por no haber encontrado nada.
+
+Y una regla de orden que no se puede invertir: **primero el mapa, después el dato.**
+`event_kind` solo alimenta `makeEventPoster`, y `agenda.js` (×2) y `programa.js` lo
+llaman sin la sección — así que migrar el dato antes que el código no deja el
+nombre viejo: deja «EVENTO», que es peor.
+
 #### La cadena doc ↔ guardián
 
 Una regla escrita que nadie ejecuta es una opinión; un guardián que nadie documenta
