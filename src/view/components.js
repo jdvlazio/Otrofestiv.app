@@ -487,6 +487,13 @@ export function renderRatingStarsHTML(state, current){
 
 
 export function _classifyFestival(cfg){
+  // APLAZADO — estado DECLARADO (cfg.status), no derivado: le gana a la aritmética
+  // de fechas. Nace del terremoto de Manizales (FICMA 17, 10 ago 2026): sus fechas
+  // decían «en curso» mientras el festival anunciaba que no habría festival. Un
+  // aplazado jamás cuenta como ongoing (preselección, punto verde, rehidratación
+  // del plan) ni como past (sigue siendo noticia viva). Reversión: fechas nuevas
+  // + borrar `status` — sin re-onboarding. Guardián: [festival-aplazado].
+  if(cfg.status&&cfg.status.kind==='postponed') return 'postponed';
   const now=new Date();
   const start=cfg.festivalStartStr?new Date(cfg.festivalStartStr):null;
   const end=cfg.festivalEndStr?new Date(cfg.festivalEndStr):null;
@@ -502,7 +509,8 @@ export function _sortFestivals(entries, activeFestId){
     const cls=_classifyFestival(cfg);
     if(cls==='ongoing')  return 1;
     if(cls==='upcoming') return 2;
-    return 3; // past
+    if(cls==='postponed') return 3; // vigente pero sin invitación — último del grupo
+    return 4; // past
   };
   // PRIORIDAD EDITORIAL — desempata DENTRO del tier, antes que la fecha.
   // Nace de FINCA vs FICDEH (8 ago 2026): mismas fechas exactas, y quién salía
@@ -518,8 +526,8 @@ export function _sortFestivals(entries, activeFestId){
     if(pa!==pb) return pa-pb;
     // ongoing: termina antes primero
     if(ta===1) return new Date(a[1].festivalEndStr||0)-new Date(b[1].festivalEndStr||0);
-    // upcoming: empieza antes primero
-    if(ta===2) return new Date(a[1].festivalStartStr||'2099-01-01')-new Date(b[1].festivalStartStr||'2099-01-01');
+    // upcoming (y aplazados entre sí): empieza antes primero
+    if(ta===2||ta===3) return new Date(a[1].festivalStartStr||'2099-01-01')-new Date(b[1].festivalStartStr||'2099-01-01');
     // past: más reciente primero
     return new Date(b[1].festivalEndStr||0)-new Date(a[1].festivalEndStr||0);
   });
@@ -602,7 +610,11 @@ function _festivalCardHTML([id,cfg], {isPast, isActive, action, lang}){
   const art=cfg.keyArt
     ? `<img class="splash-card-art" src="${cfg.keyArt}" alt="" loading="lazy" onerror="this.remove()"${cfg.keyArtPos?` style="--kap:${cfg.keyArtPos}"`:''}>`
     : `<span class="splash-card-fb">${festivalShortName(cfg)}</span>`;
-  return`<button class="splash-card${isPast?' past':''}${isActive?' on':''}" data-fest="${id}" role="option" aria-selected="${isActive}" data-action="${action}" data-name="${label}" data-meta="${meta}"><span class="splash-card-tpl">${art}</span></button>`;
+  // Distintivo APLAZADO sobre el afiche — fuente única: sale en el riel del splash
+  // Y en el sheet «cambiar festival» sin tocar cada superficie.
+  const _postponed=_classifyFestival(cfg)==='postponed';
+  const badge=_postponed?`<span class="splash-card-badge">${t('fest_postponed_label')}</span>`:'';
+  return`<button class="splash-card${isPast?' past':''}${isActive?' on':''}${_postponed?' postponed':''}" data-fest="${id}" role="option" aria-selected="${isActive}" data-action="${action}" data-name="${label}" data-meta="${meta}"><span class="splash-card-tpl">${art}</span>${badge}</button>`;
 }
 
 // `action` parametriza la superficie (20 jul 2026): el splash SELECCIONA (confirma
@@ -635,9 +647,15 @@ export function _renderSplashRailHTML(state, activeFestId, action='selectSplashF
   // decirlo en pantalla. Misma tira y misma dirección: los próximos NO se mudan a la
   // izquierda —eso haría correr el tiempo de derecha a izquierda y obligaría a
   // arrancar el riel desplazado, que es de lo que depende la preselección—.
+  // Aplazados: dentro de los vigentes (siguen siendo noticia, no historia) pero
+  // FUERA del grupo «Próximos» — un aplazado no es un próximo: no tiene fecha. Van
+  // al final del grupo vigente, con su distintivo como única etiqueta.
+  const _upc=upcoming.filter(([,cfg])=>_classifyFestival(cfg)!=='postponed');
+  const _post=upcoming.filter(([,cfg])=>_classifyFestival(cfg)==='postponed');
   let html=ongoing.map(e=>mkCard(e,false)).join('');
-  if(ongoing.length && upcoming.length) html+=div(t('fs_proximos'));
-  html+=upcoming.map(e=>mkCard(e,false)).join('');
+  if(ongoing.length && _upc.length) html+=div(t('fs_proximos'));
+  html+=_upc.map(e=>mkCard(e,false)).join('');
+  html+=_post.map(e=>mkCard(e,false)).join('');
   if(current.length && past.length) html+=div(t('splash_anteriores'));
   html+=past.map(e=>mkCard(e,true)).join('');
   return html;

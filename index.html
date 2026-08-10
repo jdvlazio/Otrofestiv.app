@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202608101612">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202608101612">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202608101707">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202608101707">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -692,6 +692,15 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
    ~44px de área sin agrandar su caja visual. Solo aislados — los pares adyacentes
    no se expanden (robarían taps al vecino). Guardián [icon-touch]. */
 .notice-banner-close::after,.poster-wl-dot::after,.prio-chip-rm::after,.av-pill-rm::after{content:'';position:absolute;inset:-14px;border-radius:50%}
+/* Banda APLAZADO — persistente en el header del Programa. Misma anatomía que
+   .notice-banner (punto ámbar + etiqueta + texto): el estado del festival habla el
+   idioma que la app ya usa para canceladas/reprogramadas. SIN botón de cerrar: es
+   contexto, no notificación. Las palabras son del festival (cfg.status.note). */
+.fest-postponed-banner{display:flex;align-items:flex-start;gap:var(--sp-2);
+  padding:var(--sp-3) var(--sp-4);background:var(--surf-2);border-bottom:1px solid var(--bdr-l)}
+.fest-postponed-banner .notice-banner-label{color:var(--amber)}
+.fest-postponed-link{display:inline-block;margin-top:4px;font-size:var(--t-xs);
+  color:var(--amber);text-decoration:none;font-weight:var(--w-semi);letter-spacing:.3px}
 
 /* ── Poster ── */
 .lb-poster{width:var(--poster-xs-w);height:var(--poster-xs-h);object-fit:cover;border-radius:var(--r-poster);flex-shrink:0;display:block;background:var(--surf-2)}
@@ -2313,6 +2322,21 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 }
 .splash-card:not(.on){transform:scale(.9);opacity:.5}
 .splash-card.past:not(.on){opacity:.32;filter:grayscale(.6)}
+/* APLAZADO (10 ago 2026, terremoto de Manizales/FICMA 17): el afiche se apaga a
+   medias —ni vigente pleno ni pasado gris— y el distintivo lo nombra. Ámbar = el
+   color de los avisos en toda la app; glass = lámina sobre el afiche, como el
+   chrome. Fuente única: _festivalCardHTML (sale igual en splash y sheet). */
+.splash-card.postponed .splash-card-art{filter:saturate(.3) brightness(.72)}
+.splash-card.postponed{position:relative}
+.splash-card-badge{position:absolute;left:50%;bottom:9%;transform:translateX(-50%);
+  font-size:var(--t-badge);letter-spacing:.6px;font-weight:var(--w-display);color:var(--amber);
+  background:rgba(11,10,8,.74);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+  padding:4px 9px;border-radius:var(--r-sm);border:1px solid var(--amber-30);
+  text-transform:uppercase;white-space:nowrap;pointer-events:none}
+/* 3 clases a propósito: `.splash-info-city .live-dot` (línea del verde) empata a 2
+   y va DESPUÉS en el archivo — sin la tercera clase el punto salía VERDE en un
+   festival aplazado (cazado en QA visual, 10 ago). */
+.live-dot.postponed-dot,.splash-info-city .live-dot.postponed-dot{background:var(--amber)}
 /* divisor "ANTERIORES" — vertical, separa festivales en curso de pasados en el riel */
 .splash-rail-div{
   flex:none;display:flex;flex-direction:column;align-items:center;gap:var(--sp-2);align-self:center;
@@ -3196,7 +3220,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202608101612";
+    s.src="/src/main.js?v=202608101707";
     document.body.appendChild(s);
     // Watchdog de boot (P0 18 jul): si el grafo ESM murió en el import (caché
     // HTTP mixta tras deploys en ráfaga — main.js nuevo + módulo viejo sin el

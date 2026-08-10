@@ -231,6 +231,11 @@ export const NOTICES=[
 // Campos opcionales importantes:
 //   prioLimit  — máximo de funciones priorizadas (default: 5 si se omite)
 //   group:'test' — aparece en sección separada del selector; omitir para festivales regulares
+//   status:{kind:'postponed', since:'YYYY-MM-DD', note:'…', url:'…'} — festival
+//     APLAZADO (terremoto, paro, clima): se VE con distintivo y banda (palabras
+//     del festival, verbatim, en ES en todos los idiomas) pero no invita a ir:
+//     sin punto verde, sin preselección, sin AHORA, sin abrir en «hoy».
+//     Reversión: fechas nuevas + borrar status. Guardián [festival-aplazado].
 //   eventPosterLabel — ['LÍNEA1','LÍNEA2'] para el poster generativo de eventos
 //
 // Al agregar festival: también actualizar FESTIVALS en tools/enricher.html
