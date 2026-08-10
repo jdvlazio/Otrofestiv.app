@@ -164,6 +164,26 @@ RECURRENTES = {
     'Los frutos que dan vida: Siembra autosostenible casera',   # 16 y 17 AGO, Aguas Fieras
 }
 
+# El `tipo` de la web dice en cuál de las DOS páginas del festival está listada
+# la actividad (/charlas o /talleres): es un cajón, no la palabra de la
+# actividad. Por eso «Master Class: Cine documental autobiográfico» y
+# «Conversatorio Mujeres en el Audiovisual» aparecen ahí dentro con tipo=taller,
+# y está bien: el festival mismo las agrupa así.
+#
+# La guía en PDF de Medellín SÍ rotula cada actividad con su propia palabra, y
+# para Medellín el PDF manda (CIUDAD_CON_PDF). Barrido entero el 10 ago, solo
+# dos actividades llevan rótulo y solo una discrepa del cajón:
+#
+#     «Masterclass» → Filmar un país en guerra      (la web la mete en /talleres)
+#     «Taller»      → Los frutos que dan vida       (coincide, no hace falta entrada)
+#
+# Curiosidad que vale anotar: la traducción taller→masterclass que quitamos hoy
+# acertaba con esta por accidente, y al quitarla la rompimos. Ahora es explícita
+# y con su fuente, que es distinto de acertar de casualidad.
+KIND_PDF_MEDELLIN = {
+    '¿Cómo filmar un país en guerra?': 'masterclass',
+}
+
 SEC_ACT = {
   'charla': ('💬 Charlas que Unen', 'Talks That Unite', 'Charlas / Industria', 11),
   'taller': ('🛠️ Formación',        'Workshops',        'Charlas / Industria', 12),
@@ -232,7 +252,7 @@ for f in sorted(funcs, key=lambda x: (x['dia'], x['hora'], x['ciudad'])):
              # cine»— salían rotuladas MASTERCLASS. SEC_ACT ya demuestra que
              # `tipo` es la palabra del festival: de ahí salen los nombres de
              # sus dos secciones.
-             'event_kind': f['tipo']}                # 'charla' | 'taller'
+             'event_kind': KIND_PDF_MEDELLIN.get(f['titulo_programacion'], f['tipo'])}
         e.update(base)
         if a.get('requires_registration') or _d.get('requires_registration'):
             e['requires_registration'] = True
