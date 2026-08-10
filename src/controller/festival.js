@@ -181,20 +181,24 @@ export function _renderSplashRail(activeFestId){
 // renderPostponedBanner — banda APLAZADO en el header del Programa. DUEÑO ÚNICO:
 // la llaman loadFestival (al entrar) y setLang (la banda es persistente y el cambio
 // de idioma no pasa por loadFestival — sin esto la etiqueta quedaba horneada en el
-// idioma de entrada; cazado en QA visual EN, 10 ago). Las palabras son del FESTIVAL
-// (cfg.status.note, verbatim, en ES en todos los idiomas — decisión de Juan); solo
-// etiqueta y enlace pasan por t(). Sin botón de cerrar: contexto, no notificación.
+// idioma de entrada; cazado en QA visual EN, 10 ago). Las palabras son del FESTIVAL:
+// `note` verbatim del comunicado; `note_en` es traducción NUESTRA aprobada por Juan
+// (10 ago: «es corto, emotivo, sencillo» — dejarla opaca al usuario EN pesa más que
+// el escrúpulo de traducir). Sin note_en, el fallback es el ES intacto — nunca se
+// traduce en runtime. Etiqueta y enlace pasan por t(). Sin botón de cerrar.
 export function renderPostponedBanner(cfg){
   document.getElementById('fest-postponed-banner')?.remove();
   const _hdrP=document.getElementById('hdr-programa');
   if(!cfg||!cfg.status||cfg.status.kind!=='postponed'||!_hdrP) return;
   const _esc=s=>String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;');
+  const {_lang}=state.snapshot();
+  const _note=(_lang!=='es'&&cfg.status.note_en)||cfg.status.note;
   _hdrP.insertAdjacentHTML('beforeend',
     `<div class="fest-postponed-banner" id="fest-postponed-banner">
       <div class="notice-banner-dot"></div>
       <div class="notice-banner-body">
         <div class="notice-banner-label">${t('fest_postponed_label')}</div>
-        <div class="notice-banner-text">${_esc(cfg.status.note)}${cfg.status.url?`<br><a class="fest-postponed-link" href="${_esc(cfg.status.url)}" target="_blank" rel="noopener">${t('fest_postponed_link')}</a>`:''}</div>
+        <div class="notice-banner-text">${_esc(_note)}${cfg.status.url?`<br><a class="fest-postponed-link" href="${_esc(cfg.status.url)}" target="_blank" rel="noopener">${t('fest_postponed_link')}</a>`:''}</div>
       </div>
     </div>`);
 }
