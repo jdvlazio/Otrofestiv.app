@@ -225,7 +225,14 @@ for f in sorted(funcs, key=lambda x: (x['dia'], x['hora'], x['ciudad'])):
              'section': SEC_ACT[f['tipo']][0], 'duration': _dur,
              'synopsis': a.get('synopsis',''), 'synopsis_lang': 'es',
              'poster': _poster_local(a.get('poster','')), 'posterSource': 'custom' if a.get('poster') else '',
-             'event_kind': 'ponencia' if f['tipo']=='charla' else 'masterclass'}
+             # El tipo se PASA, no se traduce. Aquí se traducían LAS DOS
+             # palabras: «charla»→«ponencia» (que no usa ningún festival
+             # nuestro) y «taller»→«masterclass», con lo que 11 actividades de
+             # «🛠️ Formación» —«Producción y Animación 2D», «Actuación para
+             # cine»— salían rotuladas MASTERCLASS. SEC_ACT ya demuestra que
+             # `tipo` es la palabra del festival: de ahí salen los nombres de
+             # sus dos secciones.
+             'event_kind': f['tipo']}                # 'charla' | 'taller'
         e.update(base)
         if a.get('requires_registration') or _d.get('requires_registration'):
             e['requires_registration'] = True
