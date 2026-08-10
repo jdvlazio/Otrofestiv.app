@@ -635,6 +635,30 @@ Y una regla de orden que no se puede invertir: **primero el mapa, después el da
 llaman sin la sección — así que migrar el dato antes que el código no deja el
 nombre viejo: deja «EVENTO», que es peor.
 
+#### Festival aplazado — `status` y `[festival-aplazado]`
+
+El terremoto de Manizales (10 ago 2026) encontró a la app diciendo «FICMA EN
+CURSO» —punto verde, 90 funciones, chips AHORA— mientras el festival publicaba
+que no habría festival. El parche de urgencia (`group:'test'`) lo hizo
+desaparecer sin explicar; el estado de verdad es **`status:{kind:'postponed',
+since, note, url}`** en `FESTIVAL_CONFIG`:
+
+- `_classifyFestival` devuelve `'postponed'` **antes** de la aritmética de fechas
+  — un solo dueño, y de él caen en cascada la preselección del splash, el punto
+  verde, el orden del riel y la rehidratación del plan.
+- El festival **se ve** (card con distintivo APLAZADO, última de los vigentes,
+  fuera de «Próximos» — un aplazado no tiene fecha) pero **no invita a ir**: sin
+  AHORA (`isNowShowing` gana el estado), sin abrir en «hoy» (loader), y la banda
+  persistente del header dice las palabras del **propio festival** (`note`,
+  verbatim, en ES en todos los idiomas — no traducimos palabras ajenas; solo
+  etiqueta y enlace pasan por `t()`).
+- Reversión: fechas nuevas + borrar `status`. Los datos no se tocan.
+
+`[festival-aplazado]` (validate.py) exige el status COMPLETO: `note` (sin él la
+banda sale vacía), `url` (el comunicado), `since`, y `kind` exactamente
+`'postponed'` — un typo haría que `_classifyFestival` lo ignorara en silencio y
+el festival volvería a salir «en curso», que es el bug que este estado evita.
+
 #### La cadena doc ↔ guardián
 
 Una regla escrita que nadie ejecuta es una opinión; un guardián que nadie documenta

@@ -431,3 +431,64 @@ for (const festId of MAIN_FESTIVALS) {
     expect(r.cruces, `el filtro de sede cruzó ciudades:\n  ${r.cruces.join('\n  ')}`).toEqual([]);
   });
 }
+
+// AP01 — festival APLAZADO (status:{kind:'postponed'}): se VE pero no invita a ir.
+// Nace del terremoto de Manizales (FICMA 17, 10 ago 2026): las fechas decían «en
+// curso» mientras el festival anunciaba que no habría festival. El estado DECLARADO
+// le gana a la aritmética de fechas en _classifyFestival (dueño único) y de ahí caen
+// preselección, punto verde, AHORA y la apertura en «hoy». La banda lleva las
+// palabras del PROPIO festival (note, verbatim). Reloj congelado en pleno rango de
+// fechas del festival: el caso más hostil (sin status diría ongoing).
+test('AP01 — aplazado: distintivo + banda + sin AHORA + sin «hoy»', async ({ page }) => {
+  await page.clock.install({ time: new Date('2026-08-13T15:30:00-05:00') });
+  await page.goto('/');
+  await page.waitForSelector('html[data-app-ready="1"]', { state: 'attached', timeout: 15000 });
+  await page.waitForSelector('.splash-card[data-fest]', { state: 'attached', timeout: 15000 });
+  // Declarar el estado en runtime sobre FICMA (en el dato real hoy: group:'test').
+  const rail = await page.evaluate(async () => {
+    const { FESTIVAL_CONFIG } = await import('/src/config.js');
+    const cfg = FESTIVAL_CONFIG['ficma2026'];
+    delete cfg.group;
+    cfg.status = { kind: 'postponed', since: '2026-08-10', note: 'Hoy, primero, la vida. Estaremos anunciando nuevas fechas y actividades.', url: 'https://www.instagram.com/p/Db35wc_zR5h/' };
+    const { _classifyFestival, _renderSplashRailHTML } = await import('/src/view/components.js');
+    const { state } = await import('/src/state/state.js');
+    const html = _renderSplashRailHTML(state, null);
+    // Orden en el riel: la card aplazada va DESPUÉS de los próximos y ANTES de ANTERIORES.
+    const iFicma = html.indexOf('data-fest="ficma2026"');
+    const iAnteriores = html.indexOf('splash-rail-div');
+    return { cls: _classifyFestival(cfg), badge: html.includes('splash-card-badge'),
+             postponedClass: /splash-card[^"]*postponed/.test(html),
+             ficmaAntesDeAnteriores: iFicma >= 0 && iAnteriores > iFicma };
+  });
+  // Con fechas «en curso», el estado declarado gana.
+  expect(rail.cls).toBe('postponed');
+  expect(rail.badge).toBe(true);
+  expect(rail.postponedClass).toBe(true);
+  expect(rail.ficmaAntesDeAnteriores).toBe(true);
+  // Entrar al festival aplazado: banda con las palabras del festival, sin AHORA,
+  // y la vista NO aterriza en «hoy» (se abre como festival futuro: grilla TODO).
+  await page.evaluate(() => { const c = FESTIVAL_CONFIG['ficma2026']; selectSplashFest(c.name, `${c.city} · ${c.dates}`, 'ficma2026'); });
+  await page.locator('.splash-enter-btn').click();
+  await page.waitForSelector('#fest-postponed-banner', { timeout: 15000 });
+  const dentro = await page.evaluate(async () => {
+    // AHORA se mide DIRECTO en el dueño (isNowShowing), no contando chips en el
+    // DOM: a la hora congelada puede no haber ninguna función viva en la vista y
+    // el conteo daría 0 con o sin el gate — un assert que no discrimina. Se
+    // fabrica una función que SÍ estaría viva ahora (13 ago, 15:00, 120 min):
+    // sin el gate devolvería true; con el festival aplazado debe ser false.
+    const { isNowShowing } = await import('/src/view/helpers.js');
+    return {
+      banda: document.getElementById('fest-postponed-banner')?.textContent || '',
+      link: document.querySelector('.fest-postponed-link')?.href || '',
+      ahoraViva: isNowShowing({ day: '2026-08-13', time: '15:00', duration: '120 min' }),
+      ahoraChips: document.querySelectorAll('.poster-now, .film-check-badge').length,
+      activeDay: globalThis.activeDay,
+    };
+  });
+  expect(dentro.banda).toContain('Hoy, primero, la vida.');
+  expect(dentro.banda).toContain('APLAZADO');
+  expect(dentro.link).toContain('instagram.com');
+  expect(dentro.ahoraViva).toBe(false); // el dueño del AHORA obedece al estado
+  expect(dentro.ahoraChips).toBe(0);    // y ningún chip llegó al DOM
+  expect(dentro.activeDay).toBe('all'); // no aterriza en «hoy»
+});

@@ -317,6 +317,11 @@ export function editorialFrame({header, body, src, title, loading, accent}={}){
 }
 
 export function isNowShowing(f){
+  // Festival aplazado: NADA está «AHORA» — el chip verde es una invitación a ir,
+  // y un aplazado no invita. El reloj diría otra cosa (las fechas viejas siguen
+  // en el dato, a propósito); el estado declarado gana.
+  const _cfg=FESTIVAL_CONFIG[state.snapshot()._activeFestId];
+  if(_cfg&&_cfg.status&&_cfg.status.kind==='postponed') return false;
   const dateStr=FESTIVAL_DATES[f.day];if(!dateStr) return false;
   const now=simNow();
   const start=_festDate(dateStr,f.time);

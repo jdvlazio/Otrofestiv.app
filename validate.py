@@ -3196,6 +3196,45 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar pais-conocido: {_e}')
 
+# ── [festival-aplazado] un `status` declarado viene COMPLETO y consistente ──────
+# Nace del terremoto de Manizales (FICMA 17, 10 ago 2026). `status:{kind:'postponed'}`
+# saca al festival de «en curso» (_classifyFestival lo devuelve ANTES de la aritmética
+# de fechas) y pinta distintivo + banda con las palabras del propio festival. Un status
+# a medias es el peor de los mundos: sin `note` la banda sale vacía (el festival
+# desaparece de la explicación), sin `url` no hay comunicado que leer, sin `since` no
+# hay registro de cuándo. Los tres se exigen. `kind` solo admite 'postponed' (v1):
+# un typo ('postponned') haría que _classifyFestival lo ignorara EN SILENCIO y el
+# festival volvería a salir «en curso» — exactamente el bug que este estado evita.
+check = 'festival-aplazado'
+try:
+    _cfg = open('src/config.js', encoding='utf-8').read()
+    _body = _cfg[_cfg.index('FESTIVAL_CONFIG'):]
+    _ids = re.findall(r"\n  '([a-z0-9]+)':\s*\{", _body)
+    _malos = []
+    _con_status = 0
+    for _i, _fid in enumerate(_ids):
+        _ini = _body.index("'%s':" % _fid)
+        _fin = _body.index("'%s':" % _ids[_i + 1]) if _i + 1 < len(_ids) else len(_body)
+        _blk = _body[_ini:_fin]
+        _m = re.search(r"status\s*:\s*\{([^}]*)\}", _blk)
+        if not _m:
+            continue
+        _con_status += 1
+        _st = _m.group(1)
+        _k = re.search(r"kind\s*:\s*'([^']*)'", _st)
+        if not _k or _k.group(1) != 'postponed':
+            _malos.append(f"{_fid}: kind {_k.group(1)!r} desconocido (v1 solo 'postponed') — _classifyFestival lo IGNORARÍA y el festival saldría en curso" if _k else f'{_fid}: status sin kind')
+            continue
+        for _campo, _por in [('note', 'la banda saldría vacía'), ('url', 'no habría comunicado que leer'), ('since', 'sin registro de cuándo')]:
+            if not re.search(_campo + r"\s*:\s*'[^']+'", _st):
+                _malos.append(f'{_fid}: status sin {_campo} — {_por}')
+    if _malos:
+        fail(check, 'status incompleto/inválido: ' + ' · '.join(_malos))
+    else:
+        ok(check, f'{_con_status} festival(es) con status declarado, todos completos' if _con_status else 'ningún festival con status declarado')
+except Exception as _e:
+    warn(check, f'no se pudo verificar festival-aplazado: {_e}')
+
 # ── [timezone-valid] todo festival tiene timezoneOffset válido (±HH:MM) ─────────
 # Toda la lógica de "ahora" (now-line, contador, en-curso, hoy, pasó/futuro) se ancla
 # a la zona del festival vía cfg.timezoneOffset (domain/time.js _festNow/_festDate).
@@ -3279,7 +3318,7 @@ try:
     _ALLOW = {
         'src/view/agenda.js': 1705,  # +13: «Sesión 1 de 2» en Mi Plan + el taller no se sugiere (8 ago)  # +7: el taller multi-día no se sugiere (bloque a medias) (8 ago)  # +9: kind 'ciudad' en el detalle de conflicto (6 ago)
         'src/main.js': 1662,  # +46 total: _morphOpen a FLIP — clon de la card compuesta, radio contra-escalado, encuadre del destino (29 jul)
-        'src/i18n/i18n.js': 1484,  # +12: sheet de ciudad + badge CON BOLETA ×3 locales (6 ago)
+        'src/i18n/i18n.js': 1493,  # +9: estado APLAZADO ×3 locales (label/dates/link) (10 ago)  # +12: sheet de ciudad + badge CON BOLETA ×3 locales (6 ago)
         'src/controller/sheets-controller.js': 1610,  # +19: el bloque de sesiones se dibuja como GRUPO (corchete + eslabón) y su control pasa a ser la misma píldora inline que una función suelta (9 ago)  # +7: un taller empezado no se ofrece (bug cazado con FICMA) (8 ago)  # +23: control de BLOQUE para is_recurring (8 ago)  # +12: registration_url — enlace de inscripción por función, mismo patrón que ticket_url (8 ago)  # +14: la ficha hereda el contexto de ciudad — filtra funciones, la nombra una vez y avisa lo que quedó fuera (7 ago)  # +7: el aviso parcial nombra la CIUDAD cuando la obra recorre varias (FICDEH, 43 obras) (7 ago)  # +4: precio en AVISOS sigue a ticketBadgeTarget (6 ago)  # +39: la ficha de corto hereda la función de su(s) programa(s) — _screeningRows (dueño único, antes inline en openPelSheet), _findParentPrograms, _cortoScreeningPairs y _noticeRows y _avisosBand (banda AVISOS: dueño único de lo que MATIZA la función, con la evidencia de vocabulario) (30 jul 2026)
         'src/controller/handlers.js': 1034,  # +45: taller multi-día — addRecurringBlock/removeRecurringBlock (bloque entero en un solo commitPlan) (8 ago)  # +15: acciones del sheet de ciudad (7 ago)  # +20: anclaje de función en toggleWL, simétrico al quitar (29 jul)
     }

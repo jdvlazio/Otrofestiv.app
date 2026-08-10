@@ -27,7 +27,7 @@ import { state } from '../state/state.js';
 import { deriveClear } from '../state/festival-context.js';
 import { storage } from '../storage/storage.js';
 import { t } from '../i18n/i18n.js';
-import { _autoResolveFestivalPosters, _renderFestivalSelector } from './festival.js';
+import { _autoResolveFestivalPosters, _renderFestivalSelector, renderPostponedBanner } from './festival.js';
 
 // Fetch del JSON de festival con timeout + reintentos (AbortController).
 // GitHub Pages a veces entrega los headers (200) pero el cuerpo se cuelga → el
@@ -454,8 +454,13 @@ export async function loadFestival(id){
   }
 
   // Set active day to today
+  // Aplazado: NO aterrizar en «Hoy» aunque el calendario diga que el festival va —
+  // sus fechas viejas siguen en el dato a propósito. Se abre como un festival
+  // futuro: grilla completa, sin «hoy». (El mismo estado ya silencia AHORA y la
+  // rehidratación del plan vía _classifyFestival/isNowShowing.)
+  const _postponed=!!(cfg.status&&cfg.status.kind==='postponed');
   const _ts=simTodayStr();
-  const _ni=DAY_KEYS.findIndex(d=>FESTIVAL_DATES[d]===_ts);
+  const _ni=_postponed?-1:DAY_KEYS.findIndex(d=>FESTIVAL_DATES[d]===_ts);
   if(_ni>=0){
     activeDay=DAY_KEYS[_ni];
     programaSubMode='hoy'; // Durante el festival → ir directo a Hoy
@@ -467,6 +472,10 @@ export async function loadFestival(id){
   const _fd=document.querySelector('.hdr-fest-dates');
   if(_fn) _fn.textContent=festivalShortName(cfg);
   if(_fd) _fd.textContent=' · '+(_lang==='en'&&cfg.dates_en?cfg.dates_en:cfg.dates)+(cfg.year?' '+cfg.year:'');
+  // Banda APLAZADO — dueño único: renderPostponedBanner (festival.js). Se llama
+  // SIEMPRE (limpia sola si no aplica; cambio de festival la retira) y también
+  // desde setLang, porque la banda persiste y el cambio de idioma no pasa por acá.
+  renderPostponedBanner(cfg);
   // Re-render festival selector con el nuevo festival activo
   _renderFestivalSelector(id);
   // Persist choice
