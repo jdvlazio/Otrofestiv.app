@@ -344,24 +344,18 @@ export const FESTIVAL_CONFIG={
     city:'Manizales',country:'CO',
     dates:'10–17 AGO',dates_en:'AUG 10–17',year:2026,timezoneOffset:'-05:00',
     keyArt:'/assets/keyart/ficma2026.jpg',
-    // APLAZADO — terremoto en Manizales. Comunicado oficial del festival el 10
-    // ago 2026: «debido a la emergencia ocasionada por el terremoto que ha
-    // afectado nuestra ciudad, la realización de FICMA 17 queda aplazada hasta
-    // que las condiciones sean óptimas… Estaremos anunciando nuevas fechas».
-    // instagram.com/p/Db35wc_zR5h/
-    //
-    // Sale del riel del splash con group:'test' (components.js lo filtra en la
-    // tira y en la preselección). Es lo ÚNICO disponible hoy y es un parche: la
-    // app lo estaba mostrando EN CURSO, con punto verde y 90 funciones en 31
-    // sedes de Manizales, en una ciudad en emergencia. Ocultarlo sin explicar
-    // no es bueno —quien lo tenga en Mi Plan lo pierde de vista— pero es mucho
-    // menos malo que invitar a salir a un teatro hoy.
-    //
-    // Los DATOS NO SE TOCAN: las 90 funciones se quedan tal cual para cuando
-    // anuncien fechas nuevas. Pendiente en Main un estado «aplazado» de verdad,
-    // que muestre el festival con el mensaje del propio equipo en vez de
-    // hacerlo desaparecer.
-    group:'test',
+    // APLAZADO por el terremoto de Manizales. Comunicado oficial del festival
+    // el 10 ago 2026; la cita son dos párrafos VERBATIM suyos —el cierre y la
+    // única información accionable— elegidos por Juan. El EN es traducción
+    // nuestra, aprobada por él. Reversión: fechas nuevas + borrar este bloque;
+    // los datos del festival nunca se tocaron.
+    status:{
+      kind:'postponed',
+      since:'2026-08-10',
+      note:'«Hoy, primero, la vida.» Estaremos anunciando nuevas fechas y actividades.',
+      note_en:'«Today, life comes first.» We will be announcing new dates and activities.',
+      url:'https://www.instagram.com/p/Db35wc_zR5h/',
+    },
     storageKey:'ficma2026_',festivalStartStr:'2026-08-10T00:00:00',festivalEndStr:'2026-08-17T23:59:00',
     festivalDates:{'2026-08-10':'2026-08-10','2026-08-11':'2026-08-11','2026-08-12':'2026-08-12','2026-08-13':'2026-08-13','2026-08-14':'2026-08-14','2026-08-15':'2026-08-15','2026-08-16':'2026-08-16','2026-08-17':'2026-08-17'},
     days:[{k:'2026-08-10',d:10,lbl:'LUN'},{k:'2026-08-11',d:11,lbl:'MAR'},{k:'2026-08-12',d:12,lbl:'MIÉ'},{k:'2026-08-13',d:13,lbl:'JUE'},{k:'2026-08-14',d:14,lbl:'VIE'},{k:'2026-08-15',d:15,lbl:'SÁB'},{k:'2026-08-16',d:16,lbl:'DOM'},{k:'2026-08-17',d:17,lbl:'LUN'}],
