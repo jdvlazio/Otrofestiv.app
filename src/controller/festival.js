@@ -97,10 +97,12 @@ function _fillFestInfo(festId, scope){
     const dates=_langDates(cfg);
     const _season=festivalSeasonYear();
     const _showYear=cfg.year && cfg.year!==_season;
-    // Aplazado: las fechas viejas serían una promesa falsa — la línea dice el
-    // estado y lo único cierto («nuevas fechas por anunciar», sus palabras).
+    // Aplazado: `dates` ya viene del dueño («FECHAS POR ANUNCIAR») y NO se le
+    // antepone el estado — la card del riel ya dice APLAZADO justo encima.
+    // Regla de Juan (10 ago): no repetir lo que la superficie de al lado ya dijo.
+    // El año también sobra: no hay año que prometer.
     datesEl.textContent=cls==='postponed'
-      ? (t('fest_postponed_label')+' · '+t('fest_postponed_dates')).toUpperCase()
+      ? dates.toUpperCase()
       : (dates+(_showYear?' · '+cfg.year:'')).toUpperCase();
   }
 }

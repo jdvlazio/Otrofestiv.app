@@ -9,7 +9,7 @@ import { FESTIVAL_CONFIG, NOTICES, mergeFestivalSections } from '../config.js';
 import { parseDur } from '../domain/time.js';
 import { lruTouch } from '../lru.js';
 import { DAY_ABBR, DAY_NUM, _classifyFestival, festivalShortName } from '../view/components.js';
-import { DAYS, DAY_SHORT_EN, setCustomPosters, setDayShort, setDayShortEn, setPosters, keepCityOnly } from '../view/helpers.js';
+import { DAYS, DAY_SHORT_EN, _langDates, setCustomPosters, setDayShort, setDayShortEn, setPosters, keepCityOnly } from '../view/helpers.js';
 import { closeFestivalSheet, openCitySheet } from '../view/sheets.js';
 import { showToast } from '../view/feedback.js';
 import { _renderProgramaContent, lugarClose } from '../view/programa.js';
@@ -471,7 +471,7 @@ export async function loadFestival(id){
   const _fn=document.querySelector('.hdr-fest-name');
   const _fd=document.querySelector('.hdr-fest-dates');
   if(_fn) _fn.textContent=festivalShortName(cfg);
-  if(_fd) _fd.textContent=' · '+(_lang==='en'&&cfg.dates_en?cfg.dates_en:cfg.dates)+(cfg.year?' '+cfg.year:'');
+  if(_fd) _fd.textContent=' · '+_langDates(cfg)+(cfg.year&&!_postponed?' '+cfg.year:'');
   // Banda APLAZADO — dueño único: renderPostponedBanner (festival.js). Se llama
   // SIEMPRE (limpia sola si no aplica; cambio de festival la retira) y también
   // desde setLang, porque la banda persiste y el cambio de idioma no pasa por acá.

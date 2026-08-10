@@ -486,6 +486,23 @@ export function renderRatingStarsHTML(state, current){
 }
 
 
+// _langDates — DUEÑO ÚNICO de «las fechas del festival como texto». Vivía en
+// helpers.js con un solo consumidor mientras el header interno, la card del riel
+// y la imagen de «Compartir mi festival» repetían el ternario por su cuenta — y
+// cuando FICMA se aplazó, tres superficies siguieron prometiendo «10–17 AGO»
+// (la del share, HORNEADA en un PNG que la gente manda por WhatsApp y no se
+// corrige con un deploy; hallazgo de Onboarding, 10 ago 2026). Un festival
+// aplazado no tiene fechas: tiene un estado. Se muda ACÁ porque helpers importa
+// components (ciclo); helpers lo re-exporta para sus consumidores.
+// `lang` opcional: default al estado global, pero quien ya tiene el idioma en la
+// mano (la card del riel lo recibe de su render) lo pasa explícito — el unit test
+// del riel cazó que ignorarlo rompía el contrato de _renderSplashRailHTML(state).
+export function _langDates(cfg,lang){
+  if(cfg&&cfg.status&&cfg.status.kind==='postponed') return t('fest_postponed_dates');
+  const _l=lang||state.snapshot()._lang;
+  return (_l==='en'&&cfg&&cfg.dates_en)?cfg.dates_en:(cfg&&cfg.dates)||'';
+}
+
 export function _classifyFestival(cfg){
   // APLAZADO — estado DECLARADO (cfg.status), no derivado: le gana a la aritmética
   // de fechas. Nace del terremoto de Manizales (FICMA 17, 10 ago 2026): sus fechas
@@ -605,7 +622,7 @@ export function festivalTagline(cfg, lang='es'){
 // keyArtPos → custom property --kap (no inline style raw: ARQUITECTURA §10.3);
 // onerror=this.remove() degrada al template negro si el afiche 404ea (§10.2).
 function _festivalCardHTML([id,cfg], {isPast, isActive, action, lang}){
-  const meta=`${cfg.city} · ${lang==='en'&&cfg.dates_en?cfg.dates_en:cfg.dates}`;
+  const meta=`${cfg.city} · ${_langDates(cfg,lang)}`;
   const label=festivalLabel(cfg);
   const art=cfg.keyArt
     ? `<img class="splash-card-art" src="${cfg.keyArt}" alt="" loading="lazy" onerror="this.remove()"${cfg.keyArtPos?` style="--kap:${cfg.keyArtPos}"`:''}>`
