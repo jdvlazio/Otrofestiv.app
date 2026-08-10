@@ -153,6 +153,15 @@ ARCH={'PANORAMA AFRICANO':'Muestra / País','PANORAMA COLOMBIANO':'Muestra / Pa�
  'LANZAMIENTO QAFF':'Apertura / Gala','DIALOGO IMPROBABLE':'Charlas / Industria',
  'MASTER CLASS':'Charlas / Industria','NETWORKING':'Charlas / Industria',
  'MUESTRA ARTÍSTICA':'Especiales / Eventos'}
+# Categoría del CALENDARIO → nombre de sección del SITIO. Las dos son del
+# festival: el widget publica las categorías en mayúsculas y con erratas
+# («PRISMA FEMININO», «IMAGINARIOS AFRODISRUPTIVO» en singular, «FUERA DE
+# COMPETICION»), y el sitio en español las escribe bien. Esto NO es una
+# traducción nuestra —la lección de charla→ponencia, 10 ago— sino una jerarquía
+# de fuentes declarada: entre dos superficies del mismo festival manda la
+# editorial. Verificado el 10 ago contra quibdoafricafilmfestival.com/es, que
+# dice literalmente «Miradas Especiales», «Imaginarios Afrodisruptivos» y
+# «Prisma Femenino». Si algún día no coinciden, gana el sitio y se actualiza aquí.
 TITULO={'PANORAMA AFRICANO':'Panorama Africano','PANORAMA COLOMBIANO':'Panorama Colombiano',
  'PANORAMA DIASPORICA':'Panorama Diaspórica','FRONTERAS LATAM':'Fronteras Latam',
  'IMAGINARIOS AFRODISRUPTIVO':'Imaginarios Afrodisruptivos','OTRA MIRADA':'Otra Mirada',
