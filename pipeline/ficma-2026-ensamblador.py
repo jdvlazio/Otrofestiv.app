@@ -338,7 +338,11 @@ def main():
                     _txt += f' Modera {_fa["modera"]}.'
                 e['synopsis'] = _txt
                 e['synopsis_lang'] = 'es'
-            e['event_kind'] = 'taller' if _fa['tipo'] == 'taller' else 'ponencia'
+            # El tipo se PASA, no se traduce. La fuente ya dice la palabra buena
+            # —el PDF titula TALLERES y CHARLAS— y esta línea convertía «charla»
+            # en «ponencia», que no la usa ningún festival nuestro. No fue un
+            # dato mal capturado: fue una traducción nuestra en la salida.
+            e['event_kind'] = _fa['tipo']            # 'taller' | 'charla'
             for k in ('country', 'flags', 'year'):
                 e.pop(k, None)
             if _fa['requires_registration']:

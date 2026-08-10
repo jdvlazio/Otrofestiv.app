@@ -494,7 +494,7 @@
    "type": "event",
    "synopsis": "Charla con Laura Buriticá y Angélica Ávila. Modera Diana Castellanos.",
    "synopsis_lang": "es",
-   "event_kind": "ponencia",
+   "event_kind": "charla",
    "sala": "Sala Fundadores",
    "day_order": 0
   },
@@ -675,7 +675,7 @@
    "type": "event",
    "synopsis": "Charla con Pablo Cuartas.",
    "synopsis_lang": "es",
-   "event_kind": "ponencia",
+   "event_kind": "charla",
    "sala": "Auditorio",
    "day_order": 1
   },
@@ -975,7 +975,7 @@
    "type": "event",
    "synopsis": "Charla con Felipe Torres.",
    "synopsis_lang": "es",
-   "event_kind": "ponencia",
+   "event_kind": "charla",
    "sala": "Auditorio",
    "day_order": 2
   },
@@ -1414,7 +1414,7 @@
    "type": "event",
    "synopsis": "Charla con Felipe Rodríguez (Proyecto Kinder), Rafael Hernández y Juan José Charry (Codiscos), y Felipe Torres (Numismática Bogotá).",
    "synopsis_lang": "es",
-   "event_kind": "ponencia",
+   "event_kind": "charla",
    "day_order": 3
   },
   {
@@ -1626,7 +1626,7 @@
    "type": "event",
    "synopsis": "Charla con Patricia Rengifo.",
    "synopsis_lang": "es",
-   "event_kind": "ponencia",
+   "event_kind": "charla",
    "sala": "Auditorio",
    "day_order": 4
   },
@@ -1735,7 +1735,7 @@
    "type": "event",
    "synopsis": "Charla con Diego Yhama.",
    "synopsis_lang": "es",
-   "event_kind": "ponencia",
+   "event_kind": "charla",
    "sala": "Sede principal",
    "day_order": 4
   },
