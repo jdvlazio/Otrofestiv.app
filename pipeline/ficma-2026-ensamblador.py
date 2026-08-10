@@ -207,6 +207,30 @@ def slug(t):
     return ''.join(c if c.isalnum() else '-' for c in t.lower()).strip('-')[:60]
 
 
+# ── nombres de la Franja Académica ───────────────────────────────────────────
+# El OCR del afiche deja dos cosas: nombres PEGADOS sin separador («Laura
+# Buriticá Angélica Avila» son dos personas) y confusiones de letra. Las dos se
+# corrigen con una tabla EXPLÍCITA y no con heurística: partir por mayúsculas
+# rompería «Juan José» o «De la Hoz», y adivinar una letra es inventar un
+# nombre propio. Cada entrada se leyó contra el afiche.
+_OCR_NOMBRES = {
+    # «Felipe lorres» es Felipe Torres, el mismo que da la charla de monedas y
+    # billetes: T mayúscula leída como l minúscula.
+    'Felipe lorres': 'Felipe Torres',
+    'Laura Buriticá Angélica Avila': 'Laura Buriticá y Angélica Ávila',
+    'Felipe Rodriguez (Proyecto Kinder) Rafael Hernández (Codiscos) '
+    'Juan José Charry (Codiscos) Felipe lorres (Numismatica Bogotá)':
+        'Felipe Rodríguez (Proyecto Kinder), Rafael Hernández y Juan José Charry '
+        '(Codiscos), y Felipe Torres (Numismática Bogotá)',
+}
+
+
+def _nombres(v):
+    """Nombre(s) de quien dicta, con las erratas del OCR corregidas."""
+    v = ' '.join((v or '').split())
+    return _OCR_NOMBRES.get(v, v)
+
+
 def main():
     crudo = json.load(open(f'{ST}/ficma-2026-crudo.json', encoding='utf-8'))
     tmdb = json.load(open(f'{ST}/ficma-2026-tmdb.json', encoding='utf-8'))['verificadas']
@@ -222,6 +246,9 @@ def main():
     # con is_recurring (el plan las toma todas o ninguna).
     franja = json.load(open(f'{ST}/ficma-2026-franja.json', encoding='utf-8'))['actividades']
     for a in franja:
+        a['tallerista'] = _nombres(a['tallerista'])
+        a['invitados'] = _nombres(a['invitados'])
+        a['modera'] = _nombres(a['modera'])
         for dia in a['dias']:
             funcs.append({
                 'pagina': a['pagina'], 'dia': dia, 'hora': a['hora'],
@@ -297,6 +324,20 @@ def main():
         if _fa:
             # Actividad, no película: sin país ni año, con tipo de evento.
             e['type'] = 'event'
+            # DESCRIPCIÓN. El PDF de la Franja Académica NO trae sinopsis —cada
+            # página es un afiche con título, quién dicta, lugar, hora y cupos—
+            # así que la card salía vacía. Se compone con lo único que la fuente
+            # sí publica: quién la dicta y quién modera. Nada más; en particular
+            # NO los cupos (decisión de Juan, 10 ago 2026). Sin nombre no hay
+            # frase: no se rellena por rellenar.
+            _quien = _fa['tallerista'] or _fa['invitados']
+            if _quien and not e.get('synopsis'):
+                _cab = 'Taller' if _fa['tipo'] == 'taller' else 'Charla'
+                _txt = f'{_cab} con {_quien}.'
+                if _fa['modera']:
+                    _txt += f' Modera {_fa["modera"]}.'
+                e['synopsis'] = _txt
+                e['synopsis_lang'] = 'es'
             e['event_kind'] = 'taller' if _fa['tipo'] == 'taller' else 'ponencia'
             for k in ('country', 'flags', 'year'):
                 e.pop(k, None)

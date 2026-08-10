@@ -446,12 +446,13 @@
    "has_qa": false,
    "_src": "FICMA 17 - FRANJA ACADÉMICA.pdf (OCR) · fa-02.jpg",
    "type": "event",
+   "synopsis": "Taller con Franco Lolli.",
+   "synopsis_lang": "es",
    "event_kind": "taller",
    "requires_registration": true,
    "registration_url": "https://docs.google.com/forms/d/1AS6rYYOERaPJz0nHi6pEamrpxn7aHza94goW0a6lU7c/viewform",
    "is_recurring": true,
    "_cupos": 15,
-   "_pendiente": "sin sinopsis",
    "day_order": 0
   },
   {
@@ -482,7 +483,7 @@
   },
   {
    "title": "Coleccionar para recordar. Museos, arte y la construcción de la memoria",
-   "director": "Laura Buriticá Angélica Avila, modera Diana Castellanos",
+   "director": "Laura Buriticá y Angélica Ávila, modera Diana Castellanos",
    "duration": "90 min",
    "section": "💬 Charlas",
    "day": "2026-08-10",
@@ -491,9 +492,10 @@
    "has_qa": false,
    "_src": "FICMA 17 - FRANJA ACADÉMICA.pdf (OCR) · fa-09.jpg",
    "type": "event",
+   "synopsis": "Charla con Laura Buriticá y Angélica Ávila. Modera Diana Castellanos.",
+   "synopsis_lang": "es",
    "event_kind": "ponencia",
    "sala": "Sala Fundadores",
-   "_pendiente": "sin sinopsis",
    "day_order": 0
   },
   {
@@ -629,12 +631,13 @@
    "has_qa": false,
    "_src": "FICMA 17 - FRANJA ACADÉMICA.pdf (OCR) · fa-02.jpg",
    "type": "event",
+   "synopsis": "Taller con Franco Lolli.",
+   "synopsis_lang": "es",
    "event_kind": "taller",
    "requires_registration": true,
    "registration_url": "https://docs.google.com/forms/d/1AS6rYYOERaPJz0nHi6pEamrpxn7aHza94goW0a6lU7c/viewform",
    "is_recurring": true,
    "_cupos": 15,
-   "_pendiente": "sin sinopsis",
    "day_order": 1
   },
   {
@@ -670,9 +673,10 @@
    "has_qa": false,
    "_src": "FICMA 17 - FRANJA ACADÉMICA.pdf (OCR) · fa-10.jpg",
    "type": "event",
+   "synopsis": "Charla con Pablo Cuartas.",
+   "synopsis_lang": "es",
    "event_kind": "ponencia",
    "sala": "Auditorio",
-   "_pendiente": "sin sinopsis",
    "day_order": 1
   },
   {
@@ -969,9 +973,10 @@
    "has_qa": false,
    "_src": "FICMA 17 - FRANJA ACADÉMICA.pdf (OCR) · fa-11.jpg",
    "type": "event",
+   "synopsis": "Charla con Felipe Torres.",
+   "synopsis_lang": "es",
    "event_kind": "ponencia",
    "sala": "Auditorio",
-   "_pendiente": "sin sinopsis",
    "day_order": 2
   },
   {
@@ -1363,11 +1368,11 @@
    "has_qa": false,
    "_src": "FICMA 17 - FRANJA ACADÉMICA.pdf (OCR) · fa-03.jpg",
    "type": "event",
+   "synopsis": "Un espacio para reflexionar sobre la relación entre guion, dirección y lenguaje visual, y sobre cómo las decisiones de la puesta en escena pueden potenciar, transformar o incluso replantear aquello que estaba escrito.",
+   "synopsis_lang": "es",
    "event_kind": "taller",
    "requires_registration": true,
    "registration_url": "https://docs.google.com/forms/d/e/1FAIpQLSd07hqBATf6G3_k06cDOulhXe3cSSgveOjwPj0iEuHDCfQVEg/viewform",
-   "synopsis": "Un espacio para reflexionar sobre la relación entre guion, dirección y lenguaje visual, y sobre cómo las decisiones de la puesta en escena pueden potenciar, transformar o incluso replantear aquello que estaba escrito.",
-   "synopsis_lang": "es",
    "sala": "Sede principal",
    "day_order": 3
   },
@@ -1398,7 +1403,7 @@
   },
   {
    "title": "Coleccionismo, patrimonio y las distintas formas en que los objetos cuentan historias y construyen memoria",
-   "director": "Felipe Rodriguez (Proyecto Kinder) Rafael Hernández (Codiscos) Juan José Charry (Codiscos) Felipe lorres (Numismatica Bogotá)",
+   "director": "Felipe Rodríguez (Proyecto Kinder), Rafael Hernández y Juan José Charry (Codiscos), y Felipe Torres (Numismática Bogotá)",
    "duration": "90 min",
    "section": "💬 Charlas",
    "day": "2026-08-13",
@@ -1407,8 +1412,9 @@
    "has_qa": false,
    "_src": "FICMA 17 - FRANJA ACADÉMICA.pdf (OCR) · fa-12.jpg",
    "type": "event",
+   "synopsis": "Charla con Felipe Rodríguez (Proyecto Kinder), Rafael Hernández y Juan José Charry (Codiscos), y Felipe Torres (Numismática Bogotá).",
+   "synopsis_lang": "es",
    "event_kind": "ponencia",
-   "_pendiente": "sin sinopsis",
    "day_order": 3
   },
   {
@@ -1618,9 +1624,10 @@
    "has_qa": false,
    "_src": "FICMA 17 - FRANJA ACADÉMICA.pdf (OCR) · fa-13.jpg",
    "type": "event",
+   "synopsis": "Charla con Patricia Rengifo.",
+   "synopsis_lang": "es",
    "event_kind": "ponencia",
    "sala": "Auditorio",
-   "_pendiente": "sin sinopsis",
    "day_order": 4
   },
   {
@@ -1726,9 +1733,10 @@
    "has_qa": false,
    "_src": "FICMA 17 - FRANJA ACADÉMICA.pdf (OCR) · fa-14.jpg",
    "type": "event",
+   "synopsis": "Charla con Diego Yhama.",
+   "synopsis_lang": "es",
    "event_kind": "ponencia",
    "sala": "Sede principal",
-   "_pendiente": "sin sinopsis",
    "day_order": 4
   },
   {
@@ -1742,11 +1750,12 @@
    "has_qa": false,
    "_src": "FICMA 17 - FRANJA ACADÉMICA.pdf (OCR) · fa-07.jpg",
    "type": "event",
+   "synopsis": "Taller con Fabián Amador Salazar.",
+   "synopsis_lang": "es",
    "event_kind": "taller",
    "requires_registration": true,
    "is_recurring": true,
    "_cupos": 30,
-   "_pendiente": "sin sinopsis",
    "day_order": 4
   },
   {
@@ -1784,11 +1793,12 @@
    "has_qa": false,
    "_src": "FICMA 17 - FRANJA ACADÉMICA.pdf (OCR) · fa-06.jpg",
    "type": "event",
+   "synopsis": "Taller con Mauricio Casilimas.",
+   "synopsis_lang": "es",
    "event_kind": "taller",
    "requires_registration": true,
    "registration_url": "https://docs.google.com/forms/d/e/1FAIpQLScQwx4mCGbX-JGI9Y6Tranmsa1C-yet1ZDFwF8MjxcoPBUraQ/viewform",
    "_cupos": 30,
-   "_pendiente": "sin sinopsis",
    "day_order": 4
   },
   {
@@ -2066,11 +2076,12 @@
    "has_qa": false,
    "_src": "FICMA 17 - FRANJA ACADÉMICA.pdf (OCR) · fa-07.jpg",
    "type": "event",
+   "synopsis": "Taller con Fabián Amador Salazar.",
+   "synopsis_lang": "es",
    "event_kind": "taller",
    "requires_registration": true,
    "is_recurring": true,
    "_cupos": 30,
-   "_pendiente": "sin sinopsis",
    "day_order": 5
   },
   {
