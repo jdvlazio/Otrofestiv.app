@@ -497,6 +497,24 @@ export function renderRatingStarsHTML(state, current){
 // `lang` opcional: default al estado global, pero quien ya tiene el idioma en la
 // mano (la card del riel lo recibe de su render) lo pasa explícito — el unit test
 // del riel cazó que ignorarlo rompía el contrato de _renderSplashRailHTML(state).
+// postponedBannerHTML — markup ÚNICO del aviso de festival aplazado. Dos hosts lo
+// pintan: el header del Programa (renderPostponedBanner) y Mi Plan (renderAgenda).
+// Las palabras son del FESTIVAL (note verbatim; note_en traducción aprobada por
+// Juan). Sin botón de cerrar: es contexto, no notificación.
+export function postponedBannerHTML(cfg,{id=''}={}){
+  if(!cfg||!cfg.status||cfg.status.kind!=='postponed') return '';
+  const {_lang}=state.snapshot();
+  const _esc=s=>String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;');
+  const note=(_lang!=='es'&&cfg.status.note_en)||cfg.status.note;
+  return`<div class="fest-postponed-banner"${id?` id="${id}"`:''}>
+    <div class="notice-banner-dot"></div>
+    <div class="notice-banner-body">
+      <div class="notice-banner-label">${t('fest_postponed_label')}</div>
+      <div class="notice-banner-text">${_esc(note)}${cfg.status.url?`<br><a class="fest-postponed-link" href="${_esc(cfg.status.url)}" target="_blank" rel="noopener">${t('fest_postponed_link')}</a>`:''}</div>
+    </div>
+  </div>`;
+}
+
 export function _langDates(cfg,lang){
   if(cfg&&cfg.status&&cfg.status.kind==='postponed') return t('fest_postponed_dates');
   const _l=lang||state.snapshot()._lang;

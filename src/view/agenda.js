@@ -94,6 +94,11 @@ export function renderAgenda(){
   } else if(activeMNav==='mnav-miplan'){
     // ── Mi Plan: stepper de progreso + calendario + sugerencias ──
     const _progressHtmlPlan=(!festivalEnded()&&(!savedAgenda||!savedAgenda.schedule||!savedAgenda.schedule.length))?renderFlowProgress(state,'miplan'):'';
+    // Festival aplazado: Mi Plan NO pinta su propia banda. La del header
+    // (#hdr-programa) sigue visible en esta pestaña —medido navegando, no supuesto—,
+    // así que un segundo aviso idéntico sería repetir lo que ya está en pantalla.
+    // Lo que Mi Plan sí garantiza es lo de abajo: el plan RINDE (festivalEnded()
+    // respeta el estado, así que no cae en Modo Recuerdo) y no queda un hueco.
     view.innerHTML=_progressHtmlPlan+renderSavedAgendaHTML(state, getConsensusMap());
     _scrollMiPlanToNow();
     _updateMiPlanBadge();
@@ -1661,6 +1666,9 @@ export function _fixStickyOffset(){
 }
 
 export function _scrollMiPlanToNow(){
+  // Festival aplazado: no hay «ahora» al que anclar — el plan se muestra desde
+  // arriba, no centrado en una hora que no va a ocurrir.
+  if(globalThis.FESTIVAL_POSTPONED) return;
   requestAnimationFrame(()=>{
     const outer = document.querySelector('.mplan-wk-outer');
     if(!outer) return;

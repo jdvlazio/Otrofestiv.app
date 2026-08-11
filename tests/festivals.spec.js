@@ -524,3 +524,61 @@ test('AP01 — aplazado: distintivo + banda + sin AHORA + sin «hoy»', async ({
   });
   expect(bandaSinNoteEn).toContain('Hoy, primero, la vida.');
 });
+
+// AP02 — Mi Plan de un festival APLAZADO: el plan se ve, con el aviso, y NUNCA
+// entra en Modo Recuerdo. El reloj se congela DESPUÉS de las fechas viejas (18 ago,
+// FICMA cerraba el 17): sin el estado, festivalEnded() —pura aritmética contra
+// FESTIVAL_END— daba el festival por terminado y la app pedía «Marcá lo que viste y
+// calificálo» sobre ocho días que no ocurrieron. Nadie habría desplegado nada: el
+// bug llegaba solo, con el calendario.
+test('AP02 — aplazado: Mi Plan avisa y no entra en Modo Recuerdo', async ({ page }) => {
+  await page.clock.install({ time: new Date('2026-08-18T12:00:00-05:00') });
+  await page.goto('/');
+  await page.waitForSelector('html[data-app-ready="1"]', { state: 'attached', timeout: 15000 });
+  await page.waitForSelector('#splash-rail .splash-card[data-fest="ficma2026"]', { timeout: 15000 });
+  await page.evaluate(() => { const c = FESTIVAL_CONFIG['ficma2026']; selectSplashFest(c.name, `${c.city} · ${c.dates}`, 'ficma2026'); });
+  await page.locator('.splash-enter-btn').click();
+  await page.waitForSelector('.poster-card, .plist-item', { timeout: 15000 });
+  const r = await page.evaluate(async () => {
+    const { festivalEnded } = await import('/src/domain/time.js');
+    // Guardar un plan real: se toma una función del catálogo tal cual la arma la app.
+    const { state } = await import('/src/state/state.js');
+    const f = state.snapshot().FILMS.find(x => x.day && x.time && !x.info);
+    toggleWL(f.title);
+    // `_title` (no `title`): es la forma REAL de un ítem del plan — la que arma
+    // commitPlan en handlers.js. Con `title` el render de Mi Plan lanza y cae en su
+    // caja de error, que es exactamente lo que este test debe distinguir de un plan
+    // sano (me pasó al escribirlo).
+    state.set('savedAgenda', { schedule: [{ ...f, _title: f.title }] });
+    // showAgView (no solo switchMainNav): es lo que hace visible Mi Plan — con
+    // switchMainNav sola el usuario sigue viendo el Programa (me pasó en la captura).
+    switchMainNav('mnav-miplan');
+    showAgView();
+    await new Promise(res => requestAnimationFrame(res));
+    const v = document.getElementById('ag-view');
+    return {
+      ended: festivalEnded(),
+      // UNA sola banda visible en la pantalla: la del header sigue ahí en Mi Plan.
+      // Al escribir esto agregué una segunda dentro de #ag-view y quedaron dos
+      // avisos idénticos, uno encima del otro.
+      bandas: [...document.querySelectorAll('.fest-postponed-banner')]
+        .filter(el => el.getBoundingClientRect().height > 0).length,
+      aviso: !!document.querySelector('#hdr-programa .fest-postponed-banner'),
+      avisoTexto: document.querySelector('.fest-postponed-banner')?.textContent || '',
+      // Modo Recuerdo pide calificar lo vivido — no debe aparecer.
+      recuerdo: /Marcá lo que viste|Tu festival/i.test(v.innerText || ''),
+      // El plan sigue ahí: el dato no se toca. Se exige el título Y la ausencia de
+      // la caja de error del render (renderSavedAgendaHTML atrapa sus fallos y
+      // muestra .error-box en vez de reventar — un plan roto se vería «vacío»).
+      tituloEnPlan: (v.innerText || '').includes(f.title.slice(0, 18)),
+      errorBox: !!v.querySelector('.error-box'),
+    };
+  });
+  expect(r.ended).toBe(false);        // un aplazado NO terminó: no ocurrió
+  expect(r.recuerdo).toBe(false);     // nada que recordar
+  expect(r.aviso).toBe(true);         // pero sí una explicación
+  expect(r.bandas).toBe(1);           // UNA, no dos
+  expect(r.avisoTexto).toContain('APLAZADO');
+  expect(r.errorBox).toBe(false);     // el plan RINDE (no la caja de error)
+  expect(r.tituloEnPlan).toBe(true);  // y el plan intacto, no un hueco
+});

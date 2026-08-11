@@ -84,4 +84,17 @@ export function dayFullyPassed(day){
   return simNow()>lastScreen;
 }
 
-export function festivalEnded(){ return simNow()>FESTIVAL_END; }
+// Un festival APLAZADO no terminó: NO ocurrió. Sin esto, la aritmética contra
+// FESTIVAL_END lo daba por terminado al pasar sus fechas viejas (FICMA: 18 ago) y
+// toda la app entraba en Modo Recuerdo —«Tu festival», «Marcá lo que viste y
+// calificálo»— para ocho días que no existieron. Es el mismo patrón que
+// _classifyFestival: el estado DECLARADO le gana a la fecha. 27 call sites cuelgan
+// de esta función; corregir acá los corrige todos.
+// `typeof` y no la referencia directa: este global viaja por el STATE BRIDGE y hay
+// contextos que no lo declaran (el sandbox de los unit tests inyecta solo los
+// globals que cada test pide — sin el guard, 72 tests morían con ReferenceError).
+// Mismo motivo por el que simNow/festivalEnded están excluidas del worker.
+export function festivalEnded(){
+  const _post=typeof FESTIVAL_POSTPONED!=='undefined'&&FESTIVAL_POSTPONED;
+  return !_post && simNow()>FESTIVAL_END;
+}
