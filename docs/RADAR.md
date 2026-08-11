@@ -23,6 +23,15 @@ Medido el 11 ago 2026: **HTML estático** (sin JavaScript), pestaña «En Colomb
 por página ordenados de futuro a pasado. El detalle (`evento_interna.php?ntd=N`) trae
 **web oficial e Instagram**, que es lo que hace barato el pre-onboarding.
 
+**Proimágenes descubre y detecta cambios; NO corrige datos del festival.** Es la
+autoridad sobre *qué festivales existen* y sobre *que algo se movió* — nada más.
+Cuando su ficha discrepa de un dato que salió del propio festival, gana el
+festival. Caso real (11 ago 2026): Proimágenes lista QAFF como 14–18 SEP y
+nuestra rama tiene 14–20, porque el calendario oficial del festival programa 17
+funciones en Bogotá los días 19 y 20 que Proimágenes no recoge. Un listado de
+terceros no borra el calendario de la casa. Lo que sí hace ese desajuste es
+disparar una VERIFICACIÓN, que es exactamente para lo que sirve el radar.
+
 > ⚠ El dominio viejo `proimagenes.com.co` **no resuelve**. Si alguien lo ve escrito en
 > notas antiguas, es la razón por la que un fetch «no anda».
 
@@ -62,6 +71,14 @@ la mano. La automatización llega hasta donde es confiable, y ahí lo dice.
 
 Para recrearla desde el chat de Onboarding (así sus resúmenes llegan a quien hace el
 trabajo), crear una tarea programada `radar-festivales`, diaria, con este prompt:
+
+> ⚠ El `taskId` de una tarea programada es ÚNICO y GLOBAL: el almacén
+> (`~/.claude/scheduled-tasks/`) es compartido entre sesiones, así que dos chats
+> NO pueden tener a la vez una `radar-festivales`. El traspaso entre sesiones es
+> **borrar y recrear**, no «crear y después borrar». Antes de borrar, comparar el
+> `SKILL.md` existente contra el bloque de aquí abajo: si son idénticos no se
+> pierde nada, y el que recrea es quien recibe los resúmenes. Hecho así el 11 ago
+> 2026 al pasar el radar de Main a Onboarding, sin corridas perdidas.
 
 ```
 Sos el RADAR de festivales de Otrofestiv. Corrés a diario, pero cada corrida decide QUÉ toca hoy según estas reglas. Objetivo: que ningún festival colombiano se acerque sin que lo estemos mirando, gastando lo mínimo. Todo por lecturas de texto (WebFetch) y gh CLI — NUNCA abras navegador.
