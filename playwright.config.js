@@ -19,11 +19,16 @@ module.exports = defineConfig({
   testDir: './tests',
   testIgnore: ['**/unit/**'], // unit tests viven en tests/unit/ y corren con `node --test`
   timeout: 30000,
-  // retries: 2 — mitigación del flaky residual (bootstrap-incomplete: "X is not
-  // defined" / context destroyed) que workers=1 + gate appReady redujeron pero no
-  // eliminaron del todo en los runners de CI. Un 2º retry absorbe el caso raro
-  // sin enmascarar fallos reales (un fallo determinista falla los 3 intentos).
-  retries: 2,
+  // retries: 1 (era 2, bajado el 10 ago 2026). Con 2 reintentos la suite reportaba
+  // «13 flaky, 0 fallos» y eso se leía como verde; sin reintentos, esa MISMA suite
+  // fallaba 11 veces. Los reintentos no distinguían «la máquina estaba ocupada» de
+  // «la app falla una de cada tres veces» — tapaban las dos cosas por igual.
+  // Uno se conserva: absorbe el caso raro de bootstrap incompleto en los runners
+  // de 2 núcleos de CI, y un fallo determinista sigue fallando los dos intentos.
+  // La otra mitad del arreglo vive en scripts/test.sh: avisa cuando la máquina
+  // está cargada (la causa real del ruido) y nombra los flaky en vez de sumarlos
+  // al verde.
+  retries: 1,
   // CI = serial. El split a 13+ módulos ESM multiplicó los requests HTTP + el
   // parse/eval por carga de página; con workers paralelos en los runners de
   // 2 núcleos de GitHub Actions eso saturaba CPU/browser y las cargas excedían
