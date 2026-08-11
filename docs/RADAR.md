@@ -54,6 +54,27 @@ detección; los comentarios `ESTADO WEB:` llevan la historia. Un segundo registr
 derivado sería una fuente de verdad que se desincroniza — la deuda que ya pagamos
 con el roster duplicado en `[state-mirror]`.
 
+## El semáforo
+
+El color lo pone la FECHA; la acción, lo que el festival haya publicado.
+
+| | Faltan | Sonda | Qué significa |
+|---|---|---|---|
+| 🟢 VERDE | >45 días | lunes | Solo existe en el radar |
+| 🟡 AMARILLO | 45–15 días | lunes y jueves | **Ventana de pre-onboarding** |
+| 🔴 ROJO | ≤14 días | diaria | Publicable o publicado |
+| ⚫ EN CURSO | ya arrancó | diaria | Cambios y cancelaciones |
+
+**La alarma que importa: ROJO sin programación.** Un festival a 10 días sin
+programa publicado no es «sin novedades» — es el aviso de que hay que escribirle
+al festival, y va como PRIMERA línea del resumen. En FICMA y en Cinemancia lo
+que frenó el onboarding nunca fue nuestro trabajo: fue esperar el dato.
+
+**El AMARILLO es el disparador del pre-onboarding**, y es también cuando conviene
+abrir una tarea dedicada a ese festival —bajar programación, contar obras, mirar
+el formato del catálogo—, que se borra al onboardearlo. Serían 1–2 vivas a la vez.
+El radar liviano no hace profundidad; avisa de cuándo hace falta.
+
 ## La regla de ceguera
 
 Si la fuente no responde o el parseo da **cero** eventos, el radar **no** reporta
