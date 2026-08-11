@@ -321,6 +321,11 @@ export async function loadFestival(id){
   state.batchUpdate({
     FESTIVAL_STORAGE_KEY: cfg.storageKey,
     FESTIVAL_END: new Date(cfg.festivalEndStr+(cfg.timezoneOffset||'')),
+    // Viaja junto a FESTIVAL_END porque es su corrección: festivalEnded() es pura
+    // aritmética contra esa fecha, y un festival APLAZADO la cruza igual — FICMA
+    // habría entrado en Modo Recuerdo el 18 ago, pidiéndole a la gente calificar
+    // películas que nunca vio. Ver domain/time.js festivalEnded.
+    FESTIVAL_POSTPONED: !!(cfg.status&&cfg.status.kind==='postponed'),
     ...deriveClear(cfg),
   });
   // Rebuild day tabs DOM

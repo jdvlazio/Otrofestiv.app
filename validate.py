@@ -1014,20 +1014,23 @@ except Exception as _e:
 # que rutea cada bare-global del roster a state.get/set. Con el bridge, TODO
 # `watchlist = x` o `watchlist.has()` atraviesa state automáticamente — el
 # invariante "writes via state" es estructural. Este check (repurposed) verifica:
-#   1. El STATE BRIDGE expone exactamente los 19 keys del roster.
+#   1. El STATE BRIDGE expone exactamente los 20 keys del roster.
 #   2. NINGÚN roster key se redeclara (let/const/var) en main.js fuera del worker
 #      (una redeclaración shadowearía el bridge → el write NO llegaría a state).
 #   3. state.js no contiene mirror (_MIRROR_TARGETS/_MIRROR_READERS).
 check = 'state-mirror'
 try:
     import re as _re
-    _roster = [
-        '_activeFestId', 'FILMS', 'FESTIVAL_DATES', 'FESTIVAL_END',
-        'FESTIVAL_STORAGE_KEY', 'PRIO_LIMIT', 'TZ_OFFSET', 'FESTIVAL_TRANSPORT',
-        'watchlist', 'watched', 'prioritized', 'filmRatings', 'filmDelays',
-        'filmDelaysHistory', 'savedAgenda', 'availability', 'lastRemovedSlots',
-        '_lang', '_simTime',
-    ]
+    # El roster se LEE de state.js, no se copia. Tenía una copia hardcodeada acá y
+    # derivó en cuanto el roster creció (FESTIVAL_POSTPONED, 10 ago 2026): el
+    # guardián acusaba de «key NO-roster» a una key que SÍ estaba en el roster.
+    # Un guardián con su propia copia de la verdad no vigila: compite.
+    _st = open('src/state/state.js', encoding='utf-8').read()
+    _blk = _st[_st.index('const _ROSTER'):]
+    _blk = _blk[:_blk.index(']')]
+    _roster = _re.findall(r"'([^']+)'", _blk)
+    if len(_roster) < 15:
+        raise ValueError('no pude leer _ROSTER de state.js (leí %d keys)' % len(_roster))
     _lines = content.split('\n')
     _problems = []
 
@@ -3316,7 +3319,7 @@ try:
     #   agenda.js (render agenda+miplan) · main.js (composición/bootstrap) ·
     #   i18n.js (diccionarios es/en, es DATA) · sheets-controller.js · handlers.js
     _ALLOW = {
-        'src/view/agenda.js': 1705,  # +13: «Sesión 1 de 2» en Mi Plan + el taller no se sugiere (8 ago)  # +7: el taller multi-día no se sugiere (bloque a medias) (8 ago)  # +9: kind 'ciudad' en el detalle de conflicto (6 ago)
+        'src/view/agenda.js': 1713,  # +8: gate del scroll a «ahora» + por qué Mi Plan NO repite la banda (10 ago)  # +13: «Sesión 1 de 2» en Mi Plan + el taller no se sugiere (8 ago)  # +7: el taller multi-día no se sugiere (bloque a medias) (8 ago)  # +9: kind 'ciudad' en el detalle de conflicto (6 ago)
         'src/main.js': 1662,  # +46 total: _morphOpen a FLIP — clon de la card compuesta, radio contra-escalado, encuadre del destino (29 jul)
         'src/i18n/i18n.js': 1493,  # +9: estado APLAZADO ×3 locales (label/dates/link) (10 ago)  # +12: sheet de ciudad + badge CON BOLETA ×3 locales (6 ago)
         'src/controller/sheets-controller.js': 1610,  # +19: el bloque de sesiones se dibuja como GRUPO (corchete + eslabón) y su control pasa a ser la misma píldora inline que una función suelta (9 ago)  # +7: un taller empezado no se ofrece (bug cazado con FICMA) (8 ago)  # +23: control de BLOQUE para is_recurring (8 ago)  # +12: registration_url — enlace de inscripción por función, mismo patrón que ticket_url (8 ago)  # +14: la ficha hereda el contexto de ciudad — filtra funciones, la nombra una vez y avisa lo que quedó fuera (7 ago)  # +7: el aviso parcial nombra la CIUDAD cuando la obra recorre varias (FICDEH, 43 obras) (7 ago)  # +4: precio en AVISOS sigue a ticketBadgeTarget (6 ago)  # +39: la ficha de corto hereda la función de su(s) programa(s) — _screeningRows (dueño único, antes inline en openPelSheet), _findParentPrograms, _cortoScreeningPairs y _noticeRows y _avisosBand (banda AVISOS: dueño único de lo que MATIZA la función, con la evidencia de vocabulario) (30 jul 2026)

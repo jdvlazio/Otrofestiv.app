@@ -655,6 +655,14 @@ since, note, url}`** en `FESTIVAL_CONFIG`:
   enlace pasan por `t()`.
 - Reversión: fechas nuevas + borrar `status`. Los datos no se tocan.
 
+**Un aplazado tampoco TERMINÓ.** `festivalEnded()` era pura aritmética contra
+`FESTIVAL_END`, y las fechas viejas se cruzan igual: FICMA habría entrado en Modo
+Recuerdo el 18 ago —«Tu festival», «Marcá lo que viste y calificálo»— por ocho días
+que no ocurrieron, sin que nadie desplegara nada. El estado viaja por el bridge
+(`FESTIVAL_POSTPONED`, junto a `FESTIVAL_END`) y `festivalEnded()` lo respeta: 27
+call sites corregidos en un punto. En Mi Plan el plan guardado sigue rindiendo, y
+el aviso NO se repite: la banda del header ya está visible en esa pestaña.
+
 `[festival-aplazado]` (validate.py) exige el status COMPLETO: `note` (sin él la
 banda sale vacía), `url` (el comunicado), `since`, y `kind` exactamente
 `'postponed'` — un typo haría que `_classifyFestival` lo ignorara en silencio y

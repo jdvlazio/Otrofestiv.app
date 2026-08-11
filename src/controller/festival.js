@@ -2,7 +2,7 @@
 // p8 Step 7e — Lifecycle de splash/selector de festival + auto-resolve posters. POSTERS/CUSTOM_POSTERS vía bridge.
 
 import { FESTIVAL_CONFIG, TMDB_API_BASE, TMDB_API_KEY, TMDB_POSTER_BASE, _DEFAULT_FEST_ID, _POSTER_CACHE_PFX, festivalLocationLabel } from '../config.js';
-import { _renderFestivalSelectorHTML, _renderSplashRailHTML, _classifyFestival, festivalShortName, festivalTagline, festivalSeasonYear } from '../view/components.js';
+import { _renderFestivalSelectorHTML, _renderSplashRailHTML, _classifyFestival, festivalShortName, festivalTagline, festivalSeasonYear, postponedBannerHTML } from '../view/components.js';
 import { t } from '../i18n/i18n.js';
 import { _langDates, setPosters } from '../view/helpers.js';
 import { render } from '../view/programa.js';
@@ -192,17 +192,7 @@ export function renderPostponedBanner(cfg){
   document.getElementById('fest-postponed-banner')?.remove();
   const _hdrP=document.getElementById('hdr-programa');
   if(!cfg||!cfg.status||cfg.status.kind!=='postponed'||!_hdrP) return;
-  const _esc=s=>String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;');
-  const {_lang}=state.snapshot();
-  const _note=(_lang!=='es'&&cfg.status.note_en)||cfg.status.note;
-  _hdrP.insertAdjacentHTML('beforeend',
-    `<div class="fest-postponed-banner" id="fest-postponed-banner">
-      <div class="notice-banner-dot"></div>
-      <div class="notice-banner-body">
-        <div class="notice-banner-label">${t('fest_postponed_label')}</div>
-        <div class="notice-banner-text">${_esc(_note)}${cfg.status.url?`<br><a class="fest-postponed-link" href="${_esc(cfg.status.url)}" target="_blank" rel="noopener">${t('fest_postponed_link')}</a>`:''}</div>
-      </div>
-    </div>`);
+  _hdrP.insertAdjacentHTML('beforeend', postponedBannerHTML(cfg,{id:'fest-postponed-banner'}));
 }
 
 export function selectSplashFest(name,meta,festId){
