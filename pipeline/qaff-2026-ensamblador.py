@@ -80,7 +80,21 @@ def detect_lang(t):
     return 'es' if es>=en else 'en'
 
 # ── ventana y días ────────────────────────────────────────────────────────────
-DAYS=[f'2026-09-{d}' for d in range(14,21)]
+# VENTANA OFICIAL 14–18 SEP, que es la que declara el festival y la que aparece
+# en su ficha de Proimágenes. Coincide EXACTA con Quibdó: sus 47 funciones caben
+# dentro, ni una fuera.
+#
+# Bogotá es otra cosa. El festival programa 17 funciones en la Cinemateca y el
+# Museo Nacional, del 15 al 20: corren EN PARALELO a Quibdó y se estiran dos días
+# más allá del cierre. Decisión de Juan (11 ago 2026): manda la fecha oficial, y
+# la parte de Bogotá que cae dentro de la ventana SÍ entra —el propio festival la
+# programa en su calendario, no es una itinerancia posterior—. Lo que se sale de
+# la ventana queda fuera, con el mismo criterio con que ya se excluyó el
+# prelanzamiento del 5 SEP en el Museo Nacional.
+#
+# Se caen 3 funciones del 19 y 20, todas en la Cinemateca: Father's Day, The
+# Madmen Coach y Aisha Can't Fly Away. Quedan 61 funciones y 54 obras.
+DAYS=[f'2026-09-{d}' for d in range(14,19)]
 LBL={0:'LUN',1:'MAR',2:'MIÉ',3:'JUE',4:'VIE',5:'SÁB',6:'DOM'}
 LBL_EN={0:'MON',1:'TUE',2:'WED',3:'THU',4:'FRI',5:'SAT',6:'SUN'}
 import datetime

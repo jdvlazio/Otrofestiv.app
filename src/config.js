@@ -584,6 +584,17 @@ export const SECTION_ARCHETYPES = {
   // Franja Académica de FICMA — el festival la divide en talleres y charlas.
   '🛠️ Talleres': 'Charlas / Industria',
   '💬 Charlas': 'Charlas / Industria',
+  // QAFF 2026 (8ª edición, «NOIR»). Secciones curatoriales del propio festival,
+  // con los emoji aprobados por Juan el 2 ago; los nombres EN salen del nav de su sitio.
+  '🖼️ Muestra Artística': 'Especiales / Eventos',
+  '🌧️ Imaginarios Afrodisruptivos': 'Perspectivas / Miradas',
+  '🌊 Fronteras Latam': 'Muestra / País',
+  '🛶 Panorama Colombiano': 'Muestra / País',
+  '☕ Panorama Diaspórica': 'Muestra / País',
+  '🪞 Prisma Femenino': 'Perspectivas / Miradas',
+  '🌳 Panorama Africano': 'Muestra / País',
+  '🪕 Otra Mirada': 'Perspectivas / Miradas',
+  '🗄️ Diálogo Improbable': 'Charlas / Industria',
 };
 
 // mergeFestivalSections(sections) — DATA-DRIVEN (P2.2): un festival declara sus

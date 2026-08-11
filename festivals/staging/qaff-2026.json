@@ -7,27 +7,26 @@
   "registro": "Registrarse = RSVP nativo de Boom (addon registration: open, cupo 500/evento, page_url vacío — sin deep-link por evento). ticket_url → página del programa, donde vive el formulario. Confirmado en addons del published_calendar, 2 ago.",
   "keyart": "Cartel oficial \"NOIR\" 8ª edición (1414×2000) — Portada del sitio, static.wixstatic.com/media/736095_c1d5667c92ab40159d57379cdb7298f7~mv2.jpg, capturado 3 ago 2026. Dice \"8ª EDICIÓN 14-18 SEPTIEMBRE 2026\".",
   "capturado": "2026-08-02",
-  "nota": "ver pipeline/qaff-2026-ensamblador.py"
+  "nota": "ver pipeline/qaff-2026-ensamblador.py",
+  "ventana": "VENTANA OFICIAL 14–18 SEP (decisión de Juan, 11 ago 2026): manda la fecha que declara el festival. Quibdó cabe exacta. De Bogotá —que el festival programa en paralelo, del 15 al 20— entra lo que cae dentro de la ventana; se excluyen 3 funciones del 19 y 20 en la Cinemateca (Father's Day, The Madmen Coach, Aisha Can't Fly Away), con el mismo criterio con que ya se excluyó el prelanzamiento del 5 SEP."
  },
  "name": "QAFF 2026",
  "shortName": "QAFF",
  "city": "Quibdó y Bogotá",
  "country": "CO",
- "dates": "14–20 SEP",
- "dates_en": "SEP 14–20",
+ "dates": "14–18 SEP",
+ "dates_en": "SEP 14–18",
  "year": 2026,
  "timezoneOffset": "-05:00",
  "storageKey": "qaff2026_",
  "festivalStartStr": "2026-09-14T00:00:00",
- "festivalEndStr": "2026-09-20T23:59:00",
+ "festivalEndStr": "2026-09-18T23:59:00",
  "festivalDates": {
   "2026-09-14": "2026-09-14",
   "2026-09-15": "2026-09-15",
   "2026-09-16": "2026-09-16",
   "2026-09-17": "2026-09-17",
-  "2026-09-18": "2026-09-18",
-  "2026-09-19": "2026-09-19",
-  "2026-09-20": "2026-09-20"
+  "2026-09-18": "2026-09-18"
  },
  "days": [
   {
@@ -54,16 +53,6 @@
    "k": "2026-09-18",
    "d": 18,
    "lbl": "VIE"
-  },
-  {
-   "k": "2026-09-19",
-   "d": 19,
-   "lbl": "SÁB"
-  },
-  {
-   "k": "2026-09-20",
-   "d": 20,
-   "lbl": "DOM"
   }
  ],
  "dayKeys": [
@@ -71,38 +60,30 @@
   "2026-09-15",
   "2026-09-16",
   "2026-09-17",
-  "2026-09-18",
-  "2026-09-19",
-  "2026-09-20"
+  "2026-09-18"
  ],
  "dayShort": {
   "2026-09-14": "LUN 14",
   "2026-09-15": "MAR 15",
   "2026-09-16": "MIÉ 16",
   "2026-09-17": "JUE 17",
-  "2026-09-18": "VIE 18",
-  "2026-09-19": "SÁB 19",
-  "2026-09-20": "DOM 20"
+  "2026-09-18": "VIE 18"
  },
  "dayShort_en": {
   "2026-09-14": "MON 14",
   "2026-09-15": "TUE 15",
   "2026-09-16": "WED 16",
   "2026-09-17": "THU 17",
-  "2026-09-18": "FRI 18",
-  "2026-09-19": "SAT 19",
-  "2026-09-20": "SUN 20"
+  "2026-09-18": "FRI 18"
  },
  "dayLong": {
   "2026-09-14": "Lunes 14 de septiembre",
   "2026-09-15": "Martes 15 de septiembre",
   "2026-09-16": "Miércoles 16 de septiembre",
   "2026-09-17": "Jueves 17 de septiembre",
-  "2026-09-18": "Viernes 18 de septiembre",
-  "2026-09-19": "Sábado 19 de septiembre",
-  "2026-09-20": "Domingo 20 de septiembre"
+  "2026-09-18": "Viernes 18 de septiembre"
  },
- "prioLimit": 4,
+ "prioLimit": 3,
  "sharedSlotIsOneScreening": false,
  "sections": {
   "🖼️ Muestra Artística": {
@@ -2558,122 +2539,6 @@
     "tmdb_alta": "creada 2026-08-03 (jdvlazio) — póster subido 2026-08-03 (verificado en sesión)"
    },
    "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026"
-  },
-  {
-   "title": "Father's Day",
-   "director": "Ayana O'Shun",
-   "duration": "74 min",
-   "country": "Canadá",
-   "section": "☕ Panorama Diaspórica",
-   "genre": "Documental",
-   "synopsis": "Father's Day is an intimate and powerful documentary that explores the legacy of absent fathers in Black communities across North America and the Caribbean.",
-   "synopsis_lang": "en",
-   "poster": "/assets/qaff/father-s-day.jpg",
-   "posterSource": "custom",
-   "_src": {
-    "boom_event_id": 3946868,
-    "stills": [
-     "https://static.wixstatic.com/media/736095_f61acb85889c4d05a9226d35470c9d14~mv2.jpg",
-     "https://static.wixstatic.com/media/736095_74c48997fc3746f5aae8a4650e0ef39a~mv2.jpg",
-     "https://static.wixstatic.com/media/736095_d2d891979a0a484a887b5586c3fc0155~mv2.jpg"
-    ]
-   },
-   "year": "2025",
-   "_inherited": {
-    "year": "qaff-event-desc",
-    "synopsis": "qaff-event-desc"
-   },
-   "_programada": true,
-   "day": "2026-09-19",
-   "time": "17:00",
-   "venue": "Cinemateca de Bogotá - Bogotá",
-   "day_order": 5,
-   "has_qa": false,
-   "is_cortos": false,
-   "film_list": null,
-   "requires_registration": true,
-   "is_free": true,
-   "type": "film",
-   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026",
-   "lbSlug": "fathers-day-2025"
-  },
-  {
-   "title": "The Madmen Coach",
-   "director": "Carlo Liberatore",
-   "duration": "60 min",
-   "country": "Italia (Senegal)",
-   "section": "🪕 Otra Mirada",
-   "genre": "Documental",
-   "synopsis": "In Dakar, Malick Biteye forms a football team made up of players with mental disorders. In a context of absolute poverty, the stories and desires of these men, who fight against stigma, intertwine.",
-   "synopsis_lang": "en",
-   "poster": "/assets/qaff/the-madmen-coach.jpg",
-   "posterSource": "custom",
-   "lbSlug": "the-madmen-coach",
-   "_src": {
-    "boom_event_id": 3946869,
-    "stills": [
-     "https://static.wixstatic.com/media/736095_972733ccc81d497a9709b36dd720adea~mv2.jpg",
-     "https://static.wixstatic.com/media/736095_c688745153404272a6c8c87c46def124~mv2.jpg",
-     "https://static.wixstatic.com/media/736095_5ec26406a8d94f8e9c44202823d4cf4b~mv2.jpg"
-    ]
-   },
-   "day": "2026-09-20",
-   "time": "16:00",
-   "venue": "Cinemateca de Bogotá - Bogotá",
-   "day_order": 6,
-   "has_qa": false,
-   "is_cortos": false,
-   "film_list": null,
-   "requires_registration": true,
-   "is_free": true,
-   "type": "film",
-   "year": "2025",
-   "_inherited": {
-    "year": "qaff-event-desc",
-    "synopsis": "qaff-event-desc"
-   },
-   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026"
-  },
-  {
-   "title": "Aisha Can't Fly Away",
-   "director": "Morad Mostafa",
-   "duration": "90 min",
-   "country": "Egipto (Catar, Túnez, Alemania, Sudán, Francia, Arabia Saudita)",
-   "section": "🌳 Panorama Africano",
-   "genre": "",
-   "synopsis": "Aisha is a 26-year-old Sudanese caregiver living in a neighbourhood in the heart of Cairo, where she witnesses the tension between her fellow African migrants and local gangs.",
-   "synopsis_lang": "en",
-   "poster": "/assets/qaff/aisha-can-t-fly-away.jpg",
-   "posterSource": "custom",
-   "_src": {
-    "boom_event_id": 3946870,
-    "stills": [
-     "https://static.wixstatic.com/media/736095_5187f3510aa44698bd503f8390d6093b~mv2.jpg",
-     "https://static.wixstatic.com/media/736095_f916a2fc69134536bc56f4107391faea~mv2.jpg",
-     "https://static.wixstatic.com/media/736095_abe5059bd7bb4bfeaff6910db096670e~mv2.jpg"
-    ],
-    "tmdb_id": 1337148
-   },
-   "year": "2025",
-   "_inherited": {
-    "year": "qaff-event-desc",
-    "synopsis": "qaff-event-desc",
-    "lbSlug": "tmdb-1337148 (dir. Murad Mustafa = Morad Mostafa, translit)",
-    "country": "tmdb-1337148"
-   },
-   "_programada": true,
-   "day": "2026-09-20",
-   "time": "18:30",
-   "venue": "Cinemateca de Bogotá - Bogotá",
-   "day_order": 6,
-   "has_qa": false,
-   "is_cortos": false,
-   "film_list": null,
-   "requires_registration": true,
-   "is_free": true,
-   "type": "film",
-   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026",
-   "lbSlug": "aisha-cant-fly-away"
   }
  ],
  "_obras_sin_funcion": [
