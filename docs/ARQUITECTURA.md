@@ -668,6 +668,31 @@ banda sale vacía), `url` (el comunicado), `since`, y `kind` exactamente
 `'postponed'` — un typo haría que `_classifyFestival` lo ignorara en silencio y
 el festival volvería a salir «en curso», que es el bug que este estado evita.
 
+#### Cuándo la suite dice la verdad — `scripts/test.sh`
+
+Medido el 10 ago 2026, sin reintentos: con la máquina **libre**, la suite da 0
+fallos a 5 workers, dos corridas seguidas. Con **carga externa** —otra sesión de
+Claude corriendo sus tests en la misma máquina— la MISMA suite falló 11 veces, y
+5, y 6, con tests distintos cada vez. El puerto por corrida aisló el servidor;
+no aísla la CPU.
+
+Dos correcciones, ninguna de ellas «arreglar tests»:
+
+- **`test.sh` avisa antes de correr** cuando la carga supera el 70% de los núcleos
+  o hay otra corrida de Playwright viva. No bloquea: un rojo bajo carga no es un
+  rojo de la app, y decirlo vale más que esconderlo.
+- **`retries: 2` → `1`.** Con dos reintentos la suite reportaba «13 flaky, 0
+  fallos» y eso se leía como verde; sin reintentos, esa misma suite fallaba 11.
+  Los reintentos no distinguían «la máquina estaba ocupada» de «la app falla una
+  de cada tres veces». Y los flaky ahora se **nombran** al final de la corrida:
+  un flaky no es un test que pasa, es un test que no sabe si pasa.
+
+> Tres trampas de shell, las tres cazadas probando y no leyendo: `set -o pipefail`
+> mataba el script cuando `pgrep` no encontraba nada (cero salida, exit 1);
+> `${otras:+…}` se expandía con `otras=0` porque «0» no es cadena vacía; y el
+> `grep '^ *N flaky'` nunca casaba porque el reporter escribe secuencias de escape
+> del terminal antes del texto.
+
 #### La cadena doc ↔ guardián
 
 Una regla escrita que nadie ejecuta es una opinión; un guardián que nadie documenta
