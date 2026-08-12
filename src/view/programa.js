@@ -55,6 +55,13 @@ export function renderProgramaChipsHTML(state){
 export function _noticeKey(title){ return (_activeFestId||_DEFAULT_FEST_ID)+String.fromCharCode(0)+title; }
 export function noticeId(n){ return n.id||n.title||''; }
 
+// _noticeAfecta — ¿este aviso alcanza a ESTA función? Es el alcance del aviso, el
+// mismo que sella el loader: por CIUDADES, o por título (+fecha si la trae).
+function _noticeAfecta(n,f){
+  if(Array.isArray(n.cities)) return n.cities.includes(vcfg(f.venue).city||'');
+  return n.title===f.title&&(!n.date||n.date===f.day);
+}
+
 export function getActiveNotices(){
   const festId=(_activeFestId||_DEFAULT_FEST_ID);
   const today=new Date(); today.setHours(0,0,0,0);
@@ -66,6 +73,18 @@ export function getActiveNotices(){
       const funcDate=new Date(n.date+'T00:00:00');
       funcDate.setDate(funcDate.getDate()+1); // día siguiente
       if(today>=funcDate) return false;
+    }
+    // ── Un aviso se muestra si INTERSECTA con lo que hay en pantalla ──────────
+    // (regla de Juan, 12 ago 2026.) Filtrando BOGOTÁ —donde FICDEH no canceló
+    // nada— el banner seguía hablando de las 4 ciudades del sismo: no es ruido,
+    // se lee como que Bogotá está afectada. Es lo contrario de informar.
+    // El predicado se apoya en venueMatches, el dueño único del filtro de lugar,
+    // así que vale igual para 'all', para `city:` y para una SEDE concreta — y
+    // generaliza al aviso de una función suelta: si filtrás una sede donde esa
+    // función no va, el aviso no aparece.
+    if(activeVenue!=='all'){
+      const {FILMS}=state.snapshot();
+      if(!FILMS.some(f=>_noticeAfecta(n,f)&&venueMatches(f.venue,activeVenue))) return false;
     }
     return true;
   });
