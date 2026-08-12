@@ -251,3 +251,46 @@ test('G03 — ningún icono pierde su proporción por el flex del contenedor', a
 
   expect(rotos, `icono(s) deformado(s):\n  ${rotos.join('\n  ')}`).toEqual([]);
 });
+
+// G04 — el aviso de cancelada se ve, y en el MISMO sitio, en las DOS vistas.
+// Nace de un bug vivo en producción (12 ago 2026): #notices-banner estaba entre
+// #programa-list y #grid, así que su posición dependía de la vista activa. En
+// GRILLA salía arriba (173px, 3% del documento); en LISTA el día entero se
+// pintaba encima y el aviso caía al 97% —2988px de 3065—, DESPUÉS de todas las
+// funciones tachadas. AP03 no lo cazó porque comprueba que el banner EXISTE y
+// cuántos hay, no DÓNDE está. Este mide la posición y exige que sea la misma.
+test('G04 — el aviso está arriba y en la misma posición en grilla y en lista', async ({ page }) => {
+  await page.clock.install({ time: new Date('2026-08-14T10:00:00-05:00') });
+  await page.goto('/');
+  await page.waitForSelector('html[data-app-ready="1"]', { state: 'attached', timeout: 15000 });
+  await page.waitForSelector('.splash-card[data-fest="ficdeh2026"]', { timeout: 15000 });
+  await page.evaluate(() => { const c = FESTIVAL_CONFIG['ficdeh2026']; selectSplashFest(c.name, `${c.city} · ${c.dates}`, 'ficdeh2026'); });
+  await page.locator('.splash-enter-btn').click();
+  await page.waitForFunction(() => document.querySelectorAll('.poster-card, .plist-item').length > 0, null, { timeout: 20000 });
+  await page.waitForTimeout(600);
+  // El sheet de ciudad (FICDEH es multiciudad) tapa los tabs: se cierra sin elegir.
+  await page.evaluate(() => { document.querySelector('#city-sheet.open')?.classList.remove('open'); });
+  const posicion = async () => {
+    await page.waitForTimeout(900);
+    return page.evaluate(() => {
+      const bn = document.querySelector('#notices-banner .notice-banner');
+      if (!bn) return null;
+      const r = bn.getBoundingClientRect();
+      return { vista: globalThis.programaViewMode, top: Math.round(r.top + window.scrollY),
+               visible: r.top >= 0 && r.top < window.innerHeight };
+    });
+  };
+  await page.evaluate(() => { document.querySelector('#dtabs .dtab')?.click(); });   // TODO → grilla
+  const grid = await posicion();
+  await page.evaluate(() => { [...document.querySelectorAll('#dtabs .dtab')][1]?.click(); }); // día → lista
+  const list = await posicion();
+  expect(grid, 'sin banner en grilla').not.toBeNull();
+  expect(list, 'sin banner en lista').not.toBeNull();
+  expect(grid.vista).toBe('grid');
+  expect(list.vista).toBe('list');
+  // Visible SIN scrollear en las dos: un aviso al que hay que bajar no avisa.
+  expect(grid.visible, 'el aviso no se ve en la grilla sin scrollear').toBe(true);
+  expect(list.visible, 'el aviso no se ve en la lista sin scrollear').toBe(true);
+  // Y en el MISMO sitio: si difiere, el contenedor volvió a quedar entre las vistas.
+  expect(Math.abs(grid.top - list.top), 'el aviso cambia de sitio entre vistas').toBeLessThanOrEqual(4);
+});
