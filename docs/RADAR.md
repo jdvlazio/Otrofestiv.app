@@ -32,6 +32,40 @@ funciones en Bogotá los días 19 y 20 que Proimágenes no recoge. Un listado de
 terceros no borra el calendario de la casa. Lo que sí hace ese desajuste es
 disparar una VERIFICACIÓN, que es exactamente para lo que sirve el radar.
 
+### La web NO es la única fuente del festival
+
+**Regla (Juan, 12 ago 2026): nunca decidir sobre un festival mirando solo su web.
+Hay que consultar también sus redes.** Muchos festivales pequeños dejan la web
+congelada en la edición anterior y anuncian TODO por Instagram.
+
+Caso que la originó, el mismo día: **CineAutopsia**.
+
+| fuente | qué decía |
+|---|---|
+| web oficial | edición **2025** — congelada |
+| Proimágenes | 21–29 AGO 2026 |
+| **Instagram (bio)** | **«21 - 28 Agosto 2026»** + publicaciones hasta el 11 de agosto |
+
+Con la web sola, el veredicto habría sido «web abandonada → descartado», y
+habríamos perdido un festival que abre en 9 días. La bio de Instagram —una línea—
+lo resolvió.
+
+Corolarios que valen para cualquier festival:
+
+- **Una web vieja no prueba que no haya edición.** Prueba que la web está vieja.
+  Solo el silencio en TODOS los canales es evidencia de que no hay edición.
+- **Las fechas de la bio ganan a las de un tercero** (ver la regla de autoridad
+  arriba): IG dice 21–28, Proimágenes 21–29. Gana el festival — y la discrepancia
+  dispara verificación, no corrección automática.
+- **Un canal vivo es señal por sí mismo.** Publicaciones recientes dicen que el
+  equipo está activo aunque no hayan publicado programación.
+
+Lo que el bot SÍ puede hacer: leer la bio y los textos públicos del perfil. Lo que
+NO: dar por bueno un silencio de Instagram —a menudo es bloqueo, no ausencia—.
+Si el fetch de la red no devuelve nada legible, **eso no es «no hay nada»**: es un
+vistazo manual pendiente, y así debe reportarse (misma familia que la regla de
+ceguera).
+
 > ⚠ El dominio viejo `proimagenes.com.co` **no resuelve**. Si alguien lo ve escrito en
 > notas antiguas, es la razón por la que un fetch «no anda».
 
@@ -118,7 +152,9 @@ Listá los issues `label:radar` con estado radar:vigilando o radar:en-onboarding
 - Más de 60 días → revisalo solo los lunes.
 - 21–60 días → revisalo lunes y jueves.
 - 20 días o menos → revisalo TODOS los días.
-«Revisar» = WebFetch de su web oficial (URL en el cuerpo del issue) preguntando: ¿hay fechas de la edición actual? ¿hay programación/cartelera publicada (enlaces a programación, PDF, «ya está disponible»)? ¿hay venta de boletas o acreditación abierta? Compará contra el último comentario tuyo en el issue que empiece con «ESTADO WEB:». Si algo CAMBIÓ (apareció programación, cambiaron fechas, abrió boletería), comentá el issue con «ESTADO WEB: <fecha de hoy>» + qué cambió. Si nada cambió, NO comentes (cero ruido). Instagram NO se revisa por bot: si el festival está a ≤42 días y su web no dice nada, agregá UNA línea al resumen sugiriendo un vistazo manual a su IG (el enlace está en la ficha).
+«Revisar» = WebFetch de su web oficial Y de su Instagram (las dos URLs están en el cuerpo del issue), preguntando: ¿hay fechas de la edición actual? ¿hay programación/cartelera publicada? ¿hay boletería o acreditación abierta? En Instagram, leé además la BIO del perfil: muchos festivales pequeños dejan la web congelada en la edición anterior y anuncian las fechas ahí (CineAutopsia, 12 ago 2026: web en 2025, bio con «21 - 28 Agosto 2026»). NUNCA concluyas «no hay edición» mirando solo la web.
+Compará contra el último comentario tuyo en el issue que empiece con «ESTADO: ». Si algo CAMBIÓ (aparecieron fechas, programación, boletería), comentá «ESTADO: <fecha> · <fuente: web|IG>» + qué cambió. Si nada cambió, NO comentes (cero ruido).
+Si el fetch de la red social no devuelve contenido legible, eso NO es «no hay nada» —suele ser bloqueo, no ausencia—: anotalo como vistazo manual pendiente en el resumen, nunca como evidencia de que no hay edición. Discrepancia entre fuentes → gana el festival (bio/web oficial) sobre el tercero (Proimágenes), y se dispara verificación, nunca corrección automática.
 
 ── 3. REGLA DE CEGUERA (siempre) ──
 Si Proimágenes no responde, o el parse de la página da CERO eventos, o la web de un festival vigilado no carga en dos intentos: NO lo reportes como «sin novedades». Buscá el issue abierto con label radar:alerta titulado «RADAR CIEGO» (si no existe, crealo con labels radar + radar:alerta) y comentá qué fuente falló y desde cuándo. Un radar que calla cuando está roto es peor que no tener radar. Cuando la fuente vuelva a leer bien, comentá que se restableció y cerrá el issue de alerta.
