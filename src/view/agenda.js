@@ -64,16 +64,25 @@ export function renderAgenda(){
       }
       const _row=(title,seen)=>{
         const f=FILMS.find(x=>x.title===title);
+        // Obra CANCELADA (ninguna función viva): APARECE en el Diario —borrarla
+        // sería otra forma de mentir— pero marcada, y SIN el botón «Vista»:
+        // ofrecer calificar algo que no ocurrió es la misma mentira al revés.
+        // Aprobado por Juan (11 ago 2026) tras el sismo: 10 de las 116 obras de
+        // FICDEH solo se veían en las ciudades canceladas. La condición es sobre
+        // TODAS sus funciones — misma regla que la marca de la vista TODO.
+        const _fs=FILMS.filter(x=>x.title===title);
+        const _canc=_fs.length>0&&_fs.every(x=>x._cancelled);
         const stars=seen&&filmRatings&&filmRatings[title]?`<span class="txt-amber-sm">${starsText(filmRatings[title])}</span>`:'';
-        const meta=seen?(stars||t('cta_vista')):_secLabelFull((f&&f.section)||'');
+        const meta=_canc?`<span class="txt-amber-sm">${t('notice_cancelada')}</span>`
+          :seen?(stars||t('cta_vista')):_secLabelFull((f&&f.section)||'');
         const poster=f?`<div class="js-open-pel" data-title="${title.replace(/"/g,'&quot;')}" style="cursor:pointer">${_posterThumb(f,'lb-poster')}</div>`:'';
-        return`<div class="saved-item${seen?' done':''}"${seen?'':' style="opacity:.65"'}>
+        return`<div class="saved-item${seen&&!_canc?' done':''}"${seen&&!_canc?'':' style="opacity:.65"'}>
           ${poster}
           <div class="saved-info">
             <div class="saved-title">${title}</div>
             <div class="saved-venue">${meta}</div>
           </div>
-          <button class="saved-check${seen?' done':''}" data-title="${title.replace(/"/g,'&quot;')}" data-action="toggleWatched">${seen?ICONS.check+' '+t('cta_vista'):t('cta_vista')}</button>
+          ${_canc?'':`<button class="saved-check${seen?' done':''}" data-title="${title.replace(/"/g,'&quot;')}" data-action="toggleWatched">${seen?ICONS.check+' '+t('cta_vista'):t('cta_vista')}</button>`}
         </div>`;
       };
       const _vistas=_wl.filter(x=>watched.has(x));

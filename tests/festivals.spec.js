@@ -658,3 +658,62 @@ test('AP03 — cancelación por ciudad: sella, un solo banner, sin fecha prometi
   expect(servicios.conBadge).toBe(0);      // el dueño (_metaBadges) no los emite
   expect(servicios.enPantalla).toBe(0);    // y ninguna card los muestra
 });
+
+// AP04 — la marca de CANCELADA solo cuando es verdad para TODA la obra (regla de
+// Juan, 11 ago 2026). Tras el sismo, de las 116 obras de FICDEH: 10 quedaron sin
+// ninguna función viva, 39 son PARCIALES («La gran hazaña»: 4 canceladas, 12
+// activas). Marcar las 39 sería falso y empujaría a descartar películas que SÍ se
+// pueden ver. Y en Modo Recuerdo la cancelada aparece —borrarla sería otra forma
+// de mentir— pero sin ofrecer «Vista»: no se califica lo que no ocurrió.
+test('AP04 — cancelada por obra: marca solo las totales, y el Diario no ofrece Vista', async ({ page }) => {
+  await page.clock.install({ time: new Date('2026-08-14T10:00:00-05:00') });
+  await page.goto('/');
+  await page.waitForSelector('html[data-app-ready="1"]', { state: 'attached', timeout: 15000 });
+  await page.waitForSelector('.splash-card[data-fest="ficdeh2026"]', { timeout: 15000 });
+  await page.evaluate(() => { const c = FESTIVAL_CONFIG['ficdeh2026']; selectSplashFest(c.name, `${c.city} · ${c.dates}`, 'ficdeh2026'); });
+  await page.locator('.splash-enter-btn').click();
+  await page.waitForFunction(() => document.querySelectorAll('.poster-card, .plist-item').length > 0, null, { timeout: 20000 });
+  const g = await page.evaluate(() => {
+    const porObra = {};
+    FILMS.forEach(f => { (porObra[f.title] = porObra[f.title] || []).push(f); });
+    const obras = Object.entries(porObra);
+    const totales = obras.filter(([, fs]) => fs.every(x => x._cancelled));
+    const parciales = obras.filter(([, fs]) => fs.some(x => x._cancelled) && !fs.every(x => x._cancelled));
+    const marcadas = [...document.querySelectorAll('.poster-card')]
+      .filter(c => /CANCELADA/i.test(c.textContent)).map(c => c.dataset.title);
+    return {
+      obras: obras.length, totales: totales.map(([t]) => t), parciales: parciales.length,
+      marcadasEnTodo: marcadas.length,
+      // Ni una parcial puede aparecer marcada.
+      parcialMarcada: parciales.filter(([t]) => marcadas.includes(t)).length,
+      totalSinMarca: totales.filter(([t]) => !marcadas.includes(t)).length,
+    };
+  });
+  expect(g.totales.length).toBeGreaterThan(0);   // el caso real: 10
+  expect(g.parciales).toBeGreaterThan(20);       // el caso real: 39
+  expect(g.parcialMarcada).toBe(0);              // NINGUNA parcial marcada
+  expect(g.totalSinMarca).toBe(0);               // TODAS las totales, marcadas
+  // ── Modo Recuerdo: aparece, marcada, y SIN botón «Vista» ──
+  const d = await page.evaluate(async (titulo) => {
+    const { state } = await import('/src/state/state.js');
+    toggleWL(titulo);
+    const viva = state.snapshot().FILMS.find(f => !f._cancelled && f.day && f.time);
+    toggleWL(viva.title);
+    globalThis._simTime = '2026-08-21T12:00';   // festival TERMINADO → Modo Recuerdo
+    switchMainNav('mnav-seleccion'); showAgView();
+    await new Promise(r => requestAnimationFrame(r));
+    const v = document.getElementById('ag-view');
+    const fila = [...v.querySelectorAll('.saved-item')].find(e => e.textContent.includes(titulo.slice(0, 20)));
+    const filaViva = [...v.querySelectorAll('.saved-item')].find(e => e.textContent.includes(viva.title.slice(0, 20)));
+    return {
+      apareceCancelada: !!fila,
+      marcada: !!fila && /CANCELADA/i.test(fila.textContent),
+      ofreceVista: !!fila && !!fila.querySelector('[data-action="toggleWatched"]'),
+      vivaOfreceVista: !!filaViva && !!filaViva.querySelector('[data-action="toggleWatched"]'),
+    };
+  }, g.totales[0]);
+  expect(d.apareceCancelada).toBe(true);   // no se borra: sería otra forma de mentir
+  expect(d.marcada).toBe(true);
+  expect(d.ofreceVista).toBe(false);       // no se califica lo que no ocurrió
+  expect(d.vivaOfreceVista).toBe(true);    // y la que sí ocurrió, sigue calificable
+});
