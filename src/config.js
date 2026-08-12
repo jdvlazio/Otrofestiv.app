@@ -621,6 +621,18 @@ export const SECTION_ARCHETYPES = {
   // Franja Académica de FICMA — el festival la divide en talleres y charlas.
   '🛠️ Talleres': 'Charlas / Industria',
   '💬 Charlas': 'Charlas / Industria',
+  // SiembraFest 2026 (11°). Emoji alineado con la iconografia que el propio
+  // festival publico en su story del 12 ago 2026; los tres arquetipos tematicos
+  // se corrigieron (estaban como industria y apertura).
+  '🏺 Mujeres que sostienen la vida': 'Perspectivas / Miradas',
+  '❤️‍🩹 Amores & Desamores': 'Perspectivas / Miradas',
+  '👻 Cinema Patatús': 'Perspectivas / Miradas',
+  '💀 Muertos de Risa': 'Perspectivas / Miradas',
+  '🎞️ Buenos, Malos y Feos': 'Perspectivas / Miradas',
+  '👁️ Ojo Pelao': 'Cortos / Programas',
+  '🍲 Sabores en Escena': 'Perspectivas / Miradas',
+  '🪶 Estampas': 'Muestra / País',
+  '🗺️ Así es Cundinamarca': 'Muestra / País',
 };
 
 // mergeFestivalSections(sections) — DATA-DRIVEN (P2.2): un festival declara sus
