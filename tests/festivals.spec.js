@@ -582,3 +582,59 @@ test('AP02 — aplazado: Mi Plan avisa y no entra en Modo Recuerdo', async ({ pa
   expect(r.errorBox).toBe(false);     // el plan RINDE (no la caja de error)
   expect(r.tituloEnPlan).toBe(true);  // y el plan intacto, no un hueco
 });
+
+// AP03 — aviso con alcance por CIUDAD (sismo del 11 ago 2026: FICDEH canceló
+// Quibdó, Cali, Pereira y Manizales y siguió en las otras 7). Verifica las cuatro
+// piezas: el sellado alcanza SOLO esas ciudades, hay UN banner y no 88, el banner
+// habla con las palabras del festival + enlace, y la card NO promete «nueva fecha»
+// —copy escrito para REPROGRAMADA, que en una cancelación por tragedia miente—.
+test('AP03 — cancelación por ciudad: sella, un solo banner, sin fecha prometida', async ({ page }) => {
+  await page.clock.install({ time: new Date('2026-08-13T10:00:00-05:00') });
+  await page.goto('/');
+  await page.waitForSelector('html[data-app-ready="1"]', { state: 'attached', timeout: 15000 });
+  await page.waitForSelector('.splash-card[data-fest="ficdeh2026"]', { timeout: 15000 });
+  const CIUDADES = ['Quibdó', 'Cali', 'Pereira', 'Manizales'];
+  const r = await page.evaluate(async (CIUDADES) => {
+    const { NOTICES, FESTIVAL_CONFIG } = await import('/src/config.js');
+    NOTICES.push({
+      festival: 'ficdeh2026', type: 'cancelled', cities: CIUDADES,
+      id: 'ficdeh-sismo-ciudades',
+      note: 'FICDEH canceló su programación en <b>Quibdó, Cali, Pereira y Manizales</b> por el sismo. Sigue activa en las demás ciudades.',
+      note_en: 'FICDEH canceled its programming in Quibdó, Cali, Pereira and Manizales due to the earthquake. It remains active in all other cities.',
+      url: 'https://www.instagram.com/p/Db6xcU2FGb6/',
+    });
+    const c = FESTIVAL_CONFIG['ficdeh2026'];
+    selectSplashFest(c.name, `${c.city} · ${c.dates}`, 'ficdeh2026');
+    return true;
+  }, CIUDADES);
+  await page.locator('.splash-enter-btn').click();
+  await page.waitForSelector('.poster-card, .plist-item', { timeout: 20000 });
+  const m = await page.evaluate(async (CIUDADES) => {
+    const { state } = await import('/src/state/state.js');
+    const { FILMS } = state.snapshot();
+    const { vcfg } = await import('/src/view/helpers.js');
+    const city = f => (vcfg(f.venue) || {}).city || '';
+    const enCiudades = FILMS.filter(f => CIUDADES.includes(city(f)));
+    const fuera = FILMS.filter(f => f.day && f.time && !CIUDADES.includes(city(f)));
+    return {
+      selladasDentro: enCiudades.filter(f => f._cancelled).length,
+      totalDentro: enCiudades.length,
+      // Ni una sola función de las OTRAS ciudades puede quedar sellada.
+      selladasFuera: fuera.filter(f => f._cancelled).length,
+      explicadas: enCiudades.filter(f => f._cancelExplained).length,
+      banners: document.querySelectorAll('.notice-banner').length,
+      bannerTexto: document.querySelector('.notice-banner')?.textContent || '',
+      enlace: document.querySelector('.notice-banner a')?.href || '',
+      // La promesa falsa no puede aparecer en ninguna card.
+      promesaFecha: [...document.querySelectorAll('.notice-detail-amber')].filter(e => /Pendiente nueva fecha/i.test(e.textContent)).length,
+    };
+  }, CIUDADES);
+  expect(m.totalDentro).toBeGreaterThan(50);          // el caso real: 88 funciones
+  expect(m.selladasDentro).toBe(m.totalDentro);        // TODAS las de esas ciudades
+  expect(m.selladasFuera).toBe(0);                     // y NINGUNA de las otras
+  expect(m.explicadas).toBe(m.totalDentro);
+  expect(m.banners).toBe(1);                           // UN banner, no 88
+  expect(m.bannerTexto).toContain('por el sismo');
+  expect(m.enlace).toContain('instagram.com');
+  expect(m.promesaFecha).toBe(0);                      // no se promete fecha
+});

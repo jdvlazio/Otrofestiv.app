@@ -467,6 +467,7 @@ export const _I18N = {
     "error_calcular": "Error al calcular:",
     "error_cargar_lista": "Error al cargar la lista.",
     "plan_fecha_pendiente": "Pendiente nueva fecha.",
+    "notice_link": "Leer el comunicado →",
     "cartelera_hint_sfx": "en cualquier título para agregarlo a Intereses",
   },
   en: {
@@ -926,6 +927,7 @@ export const _I18N = {
     "error_calcular": "Error calculating:",
     "error_cargar_lista": "Error loading the list.",
     "plan_fecha_pendiente": "Date pending.",
+    "notice_link": "Read the festival's statement →",
     "cartelera_hint_sfx": "on any title to add it to Interests",
   },
   // pt-BR (Paso 2, editorial por lotes con sign-off de Content Designer). Las
@@ -1277,6 +1279,7 @@ export const _I18N = {
     "plan_no_alts_horario": "Não há alternativas neste horário — confira Sugestões.",
     "plan_no_incluidas": "Não incluídas",
     "plan_fecha_pendiente": "Nova data pendente.",
+    "notice_link": "Ler o comunicado →",
     // ── Lote 11: alertas del sistema — notice + warn + error ──
     "notice_funcion_canc": "Nova data pendente",
     "notice_fest_term": "O festival já terminou",

@@ -50,14 +50,17 @@ export function renderProgramaChipsHTML(state){
 // en otro (TT y FantasoFest la misma semana pueden compartir título de corto/programa).
 // El add (_dismissNotice) y el check (getActiveNotices) usan ESTE helper → no divergen.
 // Separador NUL (imposible en un festId [a-z0-9]) evita colisiones festId-titulo.
+// Un aviso por CIUDADES no tiene `title`: su clave estable es `id`. Sin esto, la
+// clave sería «…\0undefined» y descartar un aviso ocultaría cualquier otro sin título.
 export function _noticeKey(title){ return (_activeFestId||_DEFAULT_FEST_ID)+String.fromCharCode(0)+title; }
+export function noticeId(n){ return n.id||n.title||''; }
 
 export function getActiveNotices(){
   const festId=(_activeFestId||_DEFAULT_FEST_ID);
   const today=new Date(); today.setHours(0,0,0,0);
   return NOTICES.filter(n=>{
     if(n.festival!==festId) return false;
-    if(_dismissedNotices.has(_noticeKey(n.title))) return false;
+    if(_dismissedNotices.has(_noticeKey(noticeId(n)))) return false;
     // Banner desaparece al día siguiente de la función cancelada
     if(n.date){
       const funcDate=new Date(n.date+'T00:00:00');
@@ -71,8 +74,25 @@ export function getActiveNotices(){
 export function renderNoticesBannerHTML(state){
   const active=getActiveNotices();
   if(!active.length) return '';
+  const {_lang}=state.snapshot();
   return active.map(n=>{
     const label=n.type==='cancelled'?t('notice_cancelada'):t('notice_reprogramada');
+    // Aviso CON causa (note): habla el festival, con sus palabras y su enlace. Es
+    // el único sitio donde se explica el porqué — las cards solo marcan CANCELADA.
+    // `note` va en ES en todos los idiomas salvo que traiga note_en (mismo criterio
+    // que status.note: no traducimos palabras ajenas sin aprobación).
+    if(n.note){
+      const _esc=s=>String(s||'').replace(/&/g,'&amp;');
+      const _txt=(_lang!=='es'&&n.note_en)||n.note;
+      return`<div class="notice-banner">
+      <div class="notice-banner-dot"></div>
+      <div class="notice-banner-body">
+        <div class="notice-banner-label">${label}</div>
+        <div class="notice-banner-text">${_txt}${n.url?`<br><a class="fest-postponed-link" href="${_esc(n.url)}" target="_blank" rel="noopener">${t('notice_link')}</a>`:''}</div>
+      </div>
+      <button class="notice-banner-close" data-action="dismissNotice" aria-label="${t('misc_cerrar')}" data-title="${noticeId(n).replace(/"/g,'&quot;')}">✕</button>
+    </div>`;
+    }
     const msgCancelled=`<span>${t('plan_fecha_pendiente')}</span>`;
     const msgRescheduled=n.newDay&&n.newTime?`${t('notice_nueva_funcion')} <span class="txt-white60">${n.newDay} · ${n.newTime}${n.newVenue?' · '+n.newVenue:''}</span>`:'';
     const msg=n.type==='cancelled'?msgCancelled:msgRescheduled;
@@ -140,7 +160,8 @@ export function renderProgramaListHTML(state){
       // card ES la nueva — el detalle "pasa a…" quedó redundante y se retiró.
       const noticeBadge=f._cancelled?`<span class="notice-badge">${t('notice_cancelada')}</span>`
         :f._movedFrom?`<span class="notice-badge">${t('notice_reprog_short')}</span>`:'';
-      const noticeNote=f._cancelled?`<div class="notice-detail-amber">${t('plan_fecha_pendiente')}</div>`:'';
+      // «Pendiente nueva fecha» SOLO si el aviso no explicó la causa (ver loader).
+      const noticeNote=(f._cancelled&&!f._cancelExplained)?`<div class="notice-detail-amber">${t('plan_fecha_pendiente')}</div>`:'';
       const cancelStyle=f._cancelled?'opacity:.5':'';
       const pastStyle=passed&&!isNow&&!festivalEnded()?'opacity:.45':'';
       const itemStyle=[pastStyle,cancelStyle].filter(Boolean).join(';');
@@ -269,7 +290,7 @@ export function _renderExploreListaHTML(state){
     return`<div class="plist-item js-open-pel${allPast?' past-card':''}" data-title="${escXML(f.title)}">
       ${_stk2||_plistPosterHtml(f,src)}
       <div class="plist-info">
-        ${(()=>{const nb=f._cancelled?`<span class="notice-badge">${t('notice_cancelada')}</span>`:f._movedFrom?`<span class="notice-badge">${t('notice_reprog_short')}</span>`:'';const nn=f._cancelled?`<div class="notice-detail-amber">${t('plan_fecha_pendiente')}</div>`:'';const n=f._cancelled?{type:'cancelled'}:null;return`<div class="plist-title" style="${allPast?'opacity:.5':''}">${nb}${dt}</div><div class="plist-meta" style="${n&&n.type==='cancelled'?'text-decoration:line-through':''}${allPast?';opacity:.5':''}">${daysHtml?`${daysHtml} · `:''}${durFmt(f.duration)}${_metaBadges(f)?` · ${_metaBadges(f)}`:''}</div>${nn||`<div class="plist-sec">${_secLabelFull(f.section||'')}</div>`}`;})()}
+        ${(()=>{const nb=f._cancelled?`<span class="notice-badge">${t('notice_cancelada')}</span>`:f._movedFrom?`<span class="notice-badge">${t('notice_reprog_short')}</span>`:'';const nn=(f._cancelled&&!f._cancelExplained)?`<div class="notice-detail-amber">${t('plan_fecha_pendiente')}</div>`:'';const n=f._cancelled?{type:'cancelled'}:null;return`<div class="plist-title" style="${allPast?'opacity:.5':''}">${nb}${dt}</div><div class="plist-meta" style="${n&&n.type==='cancelled'?'text-decoration:line-through':''}${allPast?';opacity:.5':''}">${daysHtml?`${daysHtml} · `:''}${durFmt(f.duration)}${_metaBadges(f)?` · ${_metaBadges(f)}`:''}</div>${nn||`<div class="plist-sec">${_secLabelFull(f.section||'')}</div>`}`;})()}
       </div>
       <div class="plist-heart${inWL?'':' empty'}" data-title="${f.title.replace(/"/g,'&quot;')}" data-action="toggleWLFromList" data-stop="1">${inWL?ICONS.heartFill:ICONS.heart}</div>
     </div>`;

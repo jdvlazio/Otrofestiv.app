@@ -164,9 +164,29 @@ export async function loadFestival(id){
           if(f.info) return;
           // `date` (día de la función original) desambigua cuando una obra tiene
           // varias funciones y solo una cambió. Sin `date` → aplica a todas.
-          const n=_avisos.find(x=>x.title===f.title&&(!x.date||x.date===f.day));
+          // Tres alcances, de más ancho a más fino (modelo de tres niveles,
+          // docs/PROTOCOLO.md): CIUDADES → título+fecha → título.
+          // `cities` nace del sismo del 11 ago 2026: FICDEH canceló Quibdó, Cali,
+          // Pereira y Manizales —88 de 444 funciones, 27 sedes, 10 obras que solo
+          // se veían ahí— y siguió en las otras 7 ciudades. Por título habrían sido
+          // 88 entradas y 88 banners para UN solo hecho.
+          // La ciudad se lee del venue CRUDO (data.venues), no de venueCity():
+          // ese helper OCULTA la ciudad cuando coincide con la del festival — es
+          // para mostrar, no para identificar.
+          const _city=((data.venues||{})[f.venue]||{}).city||'';
+          const n=_avisos.find(x=>
+            Array.isArray(x.cities)
+              ? (!!_city && x.cities.includes(_city))
+              : (x.title===f.title&&(!x.date||x.date===f.day)));
           if(!n) return;
-          if(n.type==='cancelled'){ f._cancelled=true; return; }
+          if(n.type==='cancelled'){
+            f._cancelled=true;
+            // La causa ya vive UNA vez en el banner: la card no la repite. Sin
+            // esto arrastraba «Pendiente nueva fecha», que se escribió para
+            // REPROGRAMADA y en una cancelación por tragedia es una promesa falsa.
+            if(n.note) f._cancelExplained=true;
+            return;
+          }
           if(n.type==='rescheduled'&&(n.newDay||n.newTime||n.newVenue)){
             f._movedFrom={day:f.day,time:f.time,venue:f.venue};
             if(n.newDay){
