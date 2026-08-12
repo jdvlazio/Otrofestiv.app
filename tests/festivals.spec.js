@@ -596,7 +596,13 @@ test('AP03 — cancelación por ciudad: sella, un solo banner, sin fecha prometi
   const CIUDADES = ['Quibdó', 'Cali', 'Pereira', 'Manizales'];
   const r = await page.evaluate(async (CIUDADES) => {
     const { NOTICES, FESTIVAL_CONFIG } = await import('/src/config.js');
-    NOTICES.push({
+    // Solo si NO está ya: desde el 12 ago el aviso real vive en config.js, y
+    // empujar una copia daba DOS banners para un mismo hecho — el test se caía
+    // por su propio fixture. Así vigila el MECANISMO (alcance por ciudad, un
+    // banner, sin promesa de fecha) y no depende de que este festival concreto
+    // siga teniendo su aviso: cuando FICDEH termine y se retire, el test crea
+    // el suyo y sigue valiendo.
+    if (!NOTICES.some(n => n.id === 'ficdeh-sismo-ciudades')) NOTICES.push({
       festival: 'ficdeh2026', type: 'cancelled', cities: CIUDADES,
       id: 'ficdeh-sismo-ciudades',
       note: 'FICDEH canceló su programación en <b>Quibdó, Cali, Pereira y Manizales</b> por el sismo. Sigue activa en las demás ciudades.',

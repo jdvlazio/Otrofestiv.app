@@ -222,6 +222,25 @@ export const SECTION_EN = {
 // date: 'YYYY-MM-DD' de la función original — el banner desaparece al día siguiente
 // Para 'rescheduled': añadir newDay, newTime, newVenue
 export const NOTICES=[
+  // FICDEH 2026 — el sismo del 10 ago 2026 (Chocó, Valle del Cauca, Eje Cafetero).
+  // Comunicado oficial del festival el 11 ago: cancelan Quibdó, Cali, Pereira y
+  // Manizales «porque nuestros equipos locales están dedicados a labores de
+  // rescate y apoyo», y siguen en Armenia, Barranquilla, Bogotá, Cartagena,
+  // Medellín, Tunja, Ibagué y +30 municipios.
+  //
+  // Alcance CIUDAD y no 88 entradas por título: es UN hecho y un solo banner.
+  // El festival NO está aplazado —sigue en 7 ciudades—, así que no lleva
+  // `status`: eso es para el festival entero (docs/PROTOCOLO.md §2·bis).
+  // `note` son sus palabras; `note_en` es traducción nuestra.
+  {
+    festival:'ficdeh2026',
+    type:'cancelled',
+    cities:['Quibdó','Cali','Pereira','Manizales'],
+    id:'ficdeh-sismo-ciudades',
+    note:'FICDEH canceló su programación en <b>Quibdó, Cali, Pereira y Manizales</b> por el sismo. Sigue activa en las demás ciudades.',
+    note_en:'FICDEH canceled its programming in Quibdó, Cali, Pereira and Manizales due to the earthquake. It remains active in all other cities.',
+    url:'https://www.instagram.com/p/Db6xcU2FGb6/',
+  },
 ];
 
 // ── FESTIVAL_CONFIG ────────────────────────────────────────────────────────
