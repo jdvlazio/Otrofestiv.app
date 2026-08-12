@@ -351,6 +351,13 @@ export function renderPeliculaViewHTML(state){
     const inWL=watchlist.has(f.title);
     const inW=watched.has(f.title);
     const allPast=screenings.every(s=>screeningPassed(s));
+    // La marca aparece SOLO cuando es verdad para TODA la obra (regla de Juan,
+    // 11 ago 2026). En FICDEH tras el sismo: de 116 obras, 10 quedaron sin ninguna
+    // función viva y 39 son PARCIALES —«La gran hazaña» tiene 4 canceladas y 12
+    // activas—. Marcar las 39 sería falso y empujaría a descartar películas que sí
+    // se pueden ver; su cancelación se ve donde el usuario decide a qué ir: la
+    // ficha y la vista por día. Aquí la card es la OBRA, no la función.
+    const allCancelled=screenings.length>0&&screenings.every(s=>s._cancelled);
     const posterSrc=getFilmPoster(f);
     const safeT=f.title.replace(/"/g,'&quot;').replace(/'/g,"&#39;");
     const{displayTitle}=parseProgramTitle(f.title);
@@ -375,7 +382,7 @@ export function renderPeliculaViewHTML(state){
     } else {
       _cardBg='';
       _cardBg='';
-      const _opacity=allPast&&!_ended?';opacity:.45':'';
+      const _opacity=(allPast&&!_ended)||allCancelled?';opacity:.45':'';
       const _edSecLbl=_secLabel(f.section||'');
       const _edBodyTitle=(()=>{const pfx=_edSecLbl+' - ';if(displayTitle.startsWith(pfx))return displayTitle.slice(pfx.length);const sPfx='Storytellers - ';if(displayTitle.startsWith(sPfx))return displayTitle.slice(sPfx.length);return displayTitle;})();
       const _pp=posterParts(f,{header:true,body:_edBodyTitle}); // decisión única (posterModel)
@@ -389,8 +396,10 @@ export function renderPeliculaViewHTML(state){
       }
     }
     const _sep=activeDay==='all'&&f.section&&f.section!==_prevSec?`<div class="sec-hdr sm poster-grid-sep">${_secLabelFull(f.section||'')}</div>`:'';_prevSec=f.section||_prevSec;
+    const cancBadge=allCancelled?`<div class="badge-past poster-past-badge">${t('notice_cancelada')}</div>`:'';
     return _sep+`<div class="bg-surf-2 poster-card js-open-pel${inWL&&!inW?' in-wl':''}${inW&&!_ended?' in-watched':''}${_edAccent?' poster-ed':''}" data-title="${escXML(f.title)}"${_edAccent?` style="--ed-accent:${_edAccent}"`:(_isPrograma?'':_cardBg)}>
       ${posterImg}
+      ${cancBadge}
       ${progBadge}
       ${inWL?`<button class="poster-wl-dot wl-on" data-title="${f.title.replace(/"/g,'&quot;')}" data-action="toggleWL" data-stop="1" aria-label="${t('misc_interes_label')}">${ICONS.heartFill}</button>`:''}
     </div>`
