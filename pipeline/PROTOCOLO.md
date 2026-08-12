@@ -217,6 +217,51 @@ en producción con curl**, no asumirlo.
 
 ---
 
+## 2·bis · Cuando al festival le pasa algo
+
+Terremotos, paros, clima, duelo. Pasó dos veces en 24 horas —FICMA aplazado y
+FICDEH cancelando cuatro ciudades, ambos por el sismo del 10 ago 2026— así que
+esto es doctrina, no anécdota.
+
+**Lo primero, y decide todo lo demás: qué declaró el festival.** No se traduce
+ni se interpreta. Si dicen «aplazado» no escribimos «cancelado», y al revés. Es
+la misma regla del Paso 5 aplicada a la peor semana del festival.
+
+| El festival dice | Mecanismo | Precedente |
+|---|---|---|
+| «se aplaza todo» | `status:{kind:'postponed', since, note, note_en, url}` en FESTIVAL_CONFIG | FICMA 17 |
+| «cancelamos en estas ciudades» | `NOTICES` con alcance `cities:[…]` | FICDEH 2026 |
+| «esta función cambia o se cae» | `NOTICES` por `title` + `date` | ya existía |
+
+**Un solo elemento ruidoso: el banner, y descartable.** Todo lo demás es estado
+en su sitio — la card atenuada con su badge, el planificador que la esquiva, el
+«Buscar reemplazo» que solo ve quien la tenía en Mi Plan. La regla de Juan del
+29 jul 2026 sigue mandando: *el aviso es una NOTA al margen, no una tarjeta*.
+
+**Reglas que costaron caro:**
+
+- **Las palabras son del festival, con enlace al comunicado.** `note` verbatim;
+  `note_en` es traducción nuestra y se consulta antes — un comunicado de
+  tragedia no suele tener versión en inglés.
+- **No prometer lo que no se sabe.** «Pendiente nueva fecha» es de una función
+  REPROGRAMADA. En una cancelación no hay fecha pendiente, y prometerla es peor
+  que callar.
+- **El dato del festival NO se toca.** Aplazar o cancelar es una capa; las
+  funciones, sedes y secciones se quedan. Revertir = fechas nuevas y borrar la
+  capa, sin re-onboarding.
+- **Un festival que canceló parte NO terminó**, y uno aplazado tampoco. Modo
+  Recuerdo no puede inventar recuerdos de funciones que no ocurrieron.
+- **Ocultar es el último recurso.** `group:'test'` saca el festival del riel sin
+  explicar nada: sirve como parche de minutos mientras se monta el estado, no
+  como solución. Se usó así el 10 ago y se declaró parche en el propio código.
+- **Verificar en producción**, no asumirlo: el JSON servido y el config, con curl.
+
+**Y lo que dispara todo:** el comunicado suele salir primero en Instagram, no en
+la web. El [radar](../docs/RADAR.md) vigila la web y la ficha de Proimágenes;
+para el aviso urgente, la fuente sigue siendo el ojo humano.
+
+---
+
 ## 3 · Checklist de publicación
 
 - [ ] Fuentes en `fuentes/<id>/` · derivados en staging con `capturado`
