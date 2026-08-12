@@ -1,308 +1,326 @@
 # Otrofestiv · Protocolo de producción de festivales
 
-Este documento describe el proceso estándar para montar un festival en la app.
-Siempre el mismo proceso — solo cambian los datos.
+**Este documento es EL proceso** — de la fuente al festival en producción.
+La doctrina de enrichment (qué se acepta de TMDB/Letterboxd y por qué) y el
+historial de errores viven en **`docs/PIPELINE.md`**, que manda en su tema:
+ante cualquier conflicto sobre datos de terceros, PIPELINE prevalece.
 
-> ⚠️ **AUTORIDAD: para enrichment (TMDB / posters / synopsis_en / Letterboxd), `docs/PIPELINE.md` manda.**
-> Es el proceso endurecido tras los incidentes de Tribeca 2026 (134 posters falsos, 107 synopsis_en
-> de films distintos, slugs LB inferidos mal). Este PROTOCOLO describe el flujo general y los inputs;
-> ante cualquier conflicto sobre qué se acepta de TMDB/LB, **PIPELINE.md prevalece**. Los scripts
-> (`enrich-festival.py`, `tools/enricher.html`) **proponen** datos — no son verdad sin verificación humana.
-
----
-
-## Lo que necesito de ti para comenzar
-
-### Opción A — PDF del programa de mano
-Súbelo directamente en el chat. Necesito que tenga texto seleccionable (no imagen escaneada). Puedo leer grillas de horarios, listas de películas, cualquier formato.
-
-### Opción B — CSV del organizador
-Pide al organizador que llene el archivo `/pipeline/csv-template.csv`. Si no es posible, con un Google Sheet o Excel funciona igual — lo pasan a CSV o me lo compartes.
-
-### Información adicional que siempre necesito
-- Nombre oficial del festival y año
-- Fechas del festival (ej: 11–20 SEP 2025)
-- Ciudad / región
-- Modo de transporte predominante: `walking` (pueblo/campus) · `mixed` (ciudad con sedes concentradas) · `transit` (ciudad grande, Uber/Metro)
-- ID corto para el JSON (ej: `cinemancia-2025`, `aff-2026`)
+Reescrito el 9 ago 2026 tras montar FICDEH (443 funciones, 11 ciudades) y
+FICMA (90 funciones desde un PDF de imágenes). Todo lo que dice aquí se pagó.
 
 ---
 
-## Regla de arquitectura — Configuración de festival
+## 1 · Qué pedir para empezar
 
-La configuración de un festival (nombre, fechas, días, storageKey, etc.) vive en **un solo lugar**:
+Al festival u organizador, en el primer contacto:
 
-- **`FESTIVAL_CONFIG` en `src/config.js`** — generado por `generate-config.js`, pegado a mano.
+1. **La programación completa en PDF** — idealmente el archivo original con
+   texto seleccionable. Si es exportación en imagen (posts de Instagram a PDF,
+   como FICMA) también sirve: el OCR del sistema lo lee — solo cuesta más.
+2. **El Excel o la hoja con que la armaron**, si existe. Suele traer sinopsis,
+   países y duraciones que el impreso no alcanza a mostrar. ⚠ Preguntar si
+   algún FORMATO significa algo: en FICDEH las filas en rojo estaban dadas de
+   baja y eso constaba SOLO en el color.
+3. **El listado de sedes con dirección exacta** y el número de sala por función.
+4. **Los afiches** (del festival y de las obras) en una carpeta de Drive.
+5. **Los enlaces de inscripción o compra**, si los hay.
+6. Y el acuerdo: **si algo cambia, nos avisan** — trabajamos sobre la versión
+   que nos pasen y necesitamos saber cuál es la vigente.
 
-**El JSON del festival NO lleva bloque `config{}` — nunca.** `validate-festivals.js` lo bloquea como
-gate (config{} en el JSON = error). El engine ignora silenciosamente cualquier config dentro del JSON.
-(Corrige una versión vieja de este doc que decía "config{} en el JSON, sincronizado" — eso ya no aplica.)
+Además: nombre oficial, fechas, ciudad(es), y el `id` corto (`ficma2026`).
 
-## Ensamblado — del CSV al JSON
+**Jerarquía de fuentes** — se declara por festival y por escrito en el
+ensamblador. La de FICDEH: guía PDF > Excel oficial > web > tiquetera. La web
+corrige publicando de nuevo: el barrido se repite durante el festival.
+
+---
+
+## 2 · El proceso, paso a paso
+
+### Paso 0 · Fuentes a su carpeta
+
+Todo original va a **`fuentes/<fest-id>/`** (gitignored — decenas de MB, y el
+repo sirve GitHub Pages). El escritorio es de TRÁNSITO: nada de trabajo vive
+ahí, y macOS le pega a los archivos un `com.apple.macl` que puede impedir
+abrirlos después (`xattr -c` lo limpia). Los scripts leen con ruta relativa al
+repo (`f'{REPO}/fuentes/…'`), nunca rutas absolutas de una máquina.
+
+### Paso 1 · Parser propio → formato intermedio
+
+Cada fuente es única; **el parser es desechable** y no se generaliza. Lo que
+no es negociable es su SALIDA: `festivals/staging/<id>-crudo.json` en el
+formato intermedio (§4), con `_provenance.capturado` — `lib.provenance()` lo
+pone solo. Lo derivado se versiona (un OCR completo cabe en staging); el
+binario original no.
+
+### Paso 2 · Enriquecer — un comando
 
 ```bash
-node scripts/csv-to-festival.js <in.csv> festivals/<id>.json [--anclaje|--separadas]
+TMDB_API_KEY=… python3 pipeline/enriquecer.py <id> --posters
 ```
 
-El ensamblador **no emite el JSON** si encuentra proyecciones conjuntas sin modelo
-decidido: dos o más obras en el mismo día+hora+sede+sala exigen una decisión contra
-el programa oficial (doctrina completa en `docs/SCHEMA.md` § Proyecciones conjuntas).
+TMDB **verificado** (director + año ±1 o duración ±3 min — `ficha_verifica()`),
+`title_en` cuando difiere, `lbSlug` por el atajo `letterboxd.com/tmdb/<id>`,
+sinopsis ES/EN, géneros, pósters a `assets/<id>/`. Lo que no verifica **no
+entra**: los «sin ficha» se dan de alta en TMDB (PIPELINE.md Fase 3b) o quedan
+sin ficha, jamás se adivina un homónimo.
 
-| Situación | Qué hacer |
-|---|---|
-| El festival le puso **nombre** al conjunto | Modelarlo como **Programa**: fila `is_cortos` + `film_list` |
-| Obras independientes en **una** función | Re-correr con `--anclaje` → activa `sharedSlotIsOneScreening` |
-| Funciones de verdad **separadas** (multisala, paralelas) | Re-correr con `--separadas` y anotar el slot en `_SEPARATE` de `validate.py` |
-
-Es el mismo criterio que el guardián `[slots-sin-decidir]` de CI, pero atrapado en el
-minuto uno del onboarding en vez de al final. Cinemancia 2025 quedó en ese limbo —
-corto+largo de una misma función tratados como rivales— y nadie lo notó.
-
-Al terminar, el ensamblador imprime el comando de `generate-config.js` con los
-argumentos ya derivados del propio dato: un flujo, no dos pasos sueltos.
-
-> La plantilla se mantiene al día sola: el guardián `[template-al-dia]` falla si un
-> campo que usan los dos festivales más recientes no está en `festival-template.json`.
-> Es lo que evitó que FINCA volviera a dejarla atrás (usó 10 campos que no enseñaba).
-
-## El pipeline — siempre en este orden
-
-> ⚠️ **Regla global: ningún festival llega a producción sin completar los 5 pasos.**
-> El Paso 2 (Enrichment) es obligatorio sin excepción — no es opcional ni se pospone.
-
-### Paso 1 · Parseo
-**Yo produzco:** JSON de films con estructura canónica.
-- Cada film único con sus metadatos
-- Múltiples funciones en `screenings[]`
-- Programas combinados con `is_programa: true`
-- Eventos/talleres con `type: "event"`
-- Q&A marcado con `has_qa: true`
-- Inscripción previa con `requires_registration: true`
-
-**Tú revisas:** que los títulos, directores, horarios y venues sean correctos.
-
-### Paso 2 · Enrichment (TMDB + Letterboxd) — OBLIGATORIO
-
-**Dos opciones equivalentes — usar la que sea más cómoda:**
-
-**Opción A — Script (recomendado para festivales grandes):**
-```bash
-pip install requests
-export TMDB_API_KEY=tu_key_de_tmdb
-python3 scripts/enrich-festival.py festivals/<id>.json
-```
-El script **propone** datos de TMDB. Pero **no todo lo que propone es confiable** — regla de PIPELINE.md (Fase 3), tras los incidentes de Tribeca:
-
-| Campo | Regla (PIPELINE.md manda) |
-|---|---|
-| `genre`, `year` | Aceptables de TMDB **solo si vacíos** y tras verificar que el `year` del scraping es correcto (el match usa `year`; un año corrupto asigna datos de OTRO film). |
-| **`poster`** | ❌ **PROHIBIDO confiar en TMDB sin verificación visual humana.** 134 posters falsos en Tribeca. Fuente confiable: `og:image` del sitio oficial. El poster de TMDB que escriba el script **se verifica o se vacía**. |
-| **`synopsis_en`** | ❌ **PROHIBIDO de TMDB sin verificar que describe el film correcto.** 107 synopsis_en de Tribeca eran de otra película. |
-| `director`, `country`, `language` | Solo del scraping de primera fuente — **no** de TMDB. |
-
-> **`lbSlug`** — el script lo resuelve vía `letterboxd.com/tmdb/{id}/`, pero **cada slug se verifica individualmente** (visitar la URL, comparar director+año) antes de aceptarlo. Inferir slugs apunta a films distintos (ver PIPELINE.md Fase 3b). `⚠️ LB PENDIENTE` = buscar y verificar a mano.
-
-**Opción B — Enricher web:**
-Abrir `otrofestiv.app/tools/enricher.html`, cargar los films, correr TMDB, resolver slugs LB desde el browser. **Mismas reglas de verificación** — poster/synopsis_en no se confían sin revisión humana.
-
-**Tú produces:** JSON con `director`, `genre`, `year`, `synopsis` enriquecidos y **`poster`/`lbSlug` verificados** (los campos van en cada objeto film: `film.poster`, `film.lbSlug` — no en mapas `posters{}`/`lbSlugs{}` al nivel raíz).
-
-> Sin este paso: las cards de películas quedan sin director, año ni sinopsis. No deploy.
-
-### Paso 3 · Venues — OBLIGATORIO si el festival tiene más de una sede
-
-**Yo produzco:** bloque `venues{}` con coordenadas via Nominatim para cada sede.
-- Formato de nombre: `"Nombre Sede - Ciudad"` (canónico, siempre igual)
-- Coordenadas exactas de la dirección física, no del centro de la ciudad
-
-**Tú revisas:** que los nombres de las sedes coincidan exactamente con los del JSON de films.
-
-> Sin `venues{}`, el algoritmo de planificación calcula tiempo de traslado = 0 entre todas las sedes. Para festivales con sede única (o sedes en el mismo predio) esto es correcto. Para festivales con sedes en distintos barrios o ciudades, es imprescindible.
-
-> ⚠️ **Regla GPS — BLOQUEANTE:** cada venue debe tener `lat` **y** `lng`. Un venue con solo uno de los dos campos es equivalente a no tener coordenadas (el app usa el tiempo por defecto) y bloquea el CI. Verificar siempre con `node scripts/validate-festivals.js` antes de commit.
-
-### Paso 3.5 · Generar entrada FESTIVAL_CONFIG
+**Y el encuadre de pósters, obligatorio** (docs/POSTERS.md §3):
 
 ```bash
-node scripts/generate-config.js \
-  --id        mujeres2026             \
-  --name      "Mujeres Film Festival" \
-  --short     MUJERES                 \
-  --city      Circasia                \
-  --start     2026-08-05              \
-  --days      5                       \
-  --storage   mujeres2026_
+python3 pipeline/encuadrar-posters.py <id> --aplicar
 ```
 
-Salida: bloque JS completo con los 5 objetos de días calculados — listo para pegar en `FESTIVAL_CONFIG` en `index.html`. Sin errores manuales.
+REGLA (Juan, 9 ago 2026): **todo póster cubre exactamente la proporción y el
+tamaño del placeholder** — 780×1170, 2:3. Ni marco visible, ni hueco, ni recorte
+del afiche. Es un cálculo, no un ajuste a ojo.
 
-### Paso 4 · Validación — OBLIGATORIO antes de deploy
+Dos pasos en uno, siempre desde el archivo ORIGINAL (re-descargarlo si hace
+falta: encadenar recortes sobre recortes acumula deformación):
+
+1. **Caja de contenido** — se descarta el borde uniforme. Solo cuenta como marco
+   lo que aparece en los DOS lados opuestos: un marco rodea. Un borde claro de
+   un solo lado es arte —el cielo de «The Dig»— y recortarlo mutila el afiche.
+2. **Escala al lienzo con zoom mínimo** — la caja se lleva a 780×1170 estirando
+   el eje que falte, con un 4% de overscan que se recorta al centro. Ese zoom se
+   traga las 1–2 filas de transición que deja el antialias del borde, a cambio
+   de un 2% por lado que no se percibe. Afinar más el detector para ahorrarse
+   ese 2% arriesga comerse arte, que es peor.
+
+**Qué cuenta como marco, calibrado con píxeles reales:** una línea PLANA (poca
+varianza a lo ancho), sea blanca, negra o gris. En «El juego de la vida» el
+marco son dos filas —255 y 178— y exigir «casi blanco» dejaba fuera la segunda,
+que es justo la línea gris que se veía. El arte tiene varianza alta desde la
+primera fila (117 ahí mismo).
+
+El script **verifica su propio resultado**: al terminar mide de nuevo y reporta
+cuántos quedan con borde y cuántos fuera de lienzo. Objetivo 0 y 0; lo que
+quede es arte de un solo lado.
+
+Un `posterSource:editorial` (still 16:9) se respeta: su marco lo encuadra a 16/9.
+
+Correcciones en `festivals/staging/<id>-correcciones.json`:
+`titulo_oficial` (el OCR/programa escriben mal → se corrige contra el afiche)
+vs `alias` (el festival rebautizó → se busca por el nombre de distribución,
+se conserva el del festival).
+
+### Paso 3 · Sedes
+
+**Primero la tabla canónica, a mano.** La fuente nombra el mismo lugar de
+varias maneras y cada variante parte o duplica funciones — la lección más cara
+de FICDEH. La sala va FUERA del nombre (campo `sala` de la función); la tabla
+es explícita, nunca heurística sobre el guion.
 
 ```bash
+python3 pipeline/geocodificar.py <id> --centro LAT,LNG   # verificado por tipo
+python3 pipeline/sedes-html.py   <id> --centro LAT,LNG   # las pendientes, a mano
+```
+
+Lo verificado a mano lleva `_prec:"manual"` y es **intocable**. Dos sedes
+reales en el mismo predio se declaran con `_nota` (el guardián
+`[sedes-apiladas]` pregunta por todo par a <60 m).
+
+### Paso 4 · Decisiones de contenido — con Juan
+
+- **Secciones**: nombre VERBATIM del festival; nuestra capa es emoji + inglés
+  + arquetipo (los 9 canónicos de `ARCHETYPE_COLORS` — un gate lo exige).
+- **Proyecciones conjuntas**: ¿el festival le puso NOMBRE al conjunto? →
+  Programa (`is_cortos` + `film_list`). ¿Obras independientes en una función?
+  → anclaje (`sharedSlotIsOneScreening`). La duda se resuelve contra el
+  programa oficial, nunca por deducción.
+- **Talleres multi-día**: UN bloque — `is_recurring` en cada sesión; la app
+  ofrece «Añadir las N sesiones».
+- **Acceso**: `is_free` / `ticket_url` (solo compra) / `registration_url`
+  (va en la FUNCIÓN — cada actividad tiene su formulario).
+- **Copy**: toda string nueva pasa por Juan. El tagline del splash expande la
+  sigla; el lema del año vive en el afiche.
+
+### Paso 5 · Ensamblador propio → `festivals/<id>.json` + config
+
+El ensamblador del festival junta crudo + enriquecido + geo y escribe el JSON
+final. La jerarquía de fuentes va COMENTADA en su cabecera, y toda excepción
+(duración corregida, título del afiche, cambio anunciado después del PDF) en
+**tabla explícita con fecha**, nunca editando el crudo.
+
+#### La palabra la pone el festival — no se traduce en la salida
+
+**Si la fuente ya trae la palabra, se PASA.** El error no es capturar mal un
+dato: es capturarlo bien y traducirlo en la línea que lo escribe.
+
+```python
+e['event_kind'] = 'ponencia' if f['tipo'] == 'charla' else 'masterclass'   # ✗
+e['event_kind'] = f['tipo']                                                # ✓
+```
+
+Esa línea real de FICDEH traducía **las dos** palabras. El festival dice
+`charla` y `taller`; la app imprimía **PONENCIA** en 18 actividades y
+**MASTERCLASS** en 11 —«Producción y Animación 2D», «Actuación para cine»—,
+ninguna de las cuales lo era. FICMA tenía la misma línea con `charla`. Estuvo
+en producción hasta el 10 ago 2026 y no lo cazó ningún guardián: el dato era
+válido, solo que era **nuestra palabra**.
+
+Cómo se reconoce, en dos formas:
+
+- `X if fuente == 'A' else 'B'` con `B` literal en la línea de salida.
+- un mapa cuyos VALORES no aparecen en ningún sidecar.
+
+Y una prueba rápida: buscar la palabra de salida en `festivals/staging/`. Si no
+está en ninguna fuente, la pusimos nosotros.
+
+Ojo con el falso positivo: renombrar **no** siempre es traducir. FICDEH titula
+su sección «🛠️ Formación» aunque el `tipo` sea `taller`, y es correcto — sus
+propios pósters se llaman `formacion-actuacion-para-cine.jpg`. QAFF renombra
+sus 15 categorías porque el widget de calendario las publica en mayúsculas y
+con erratas («PRISMA FEMININO») mientras su web las escribe bien.
+
+**Cuando el festival se nombra de dos formas, se elige una y se DECLARA en el
+código**: qué superficie manda y por qué. Sin esa nota, el siguiente que pase
+lee el renombre como el bug de arriba y lo «arregla» al revés.
+
+La config va en `FESTIVAL_CONFIG` de **`src/config.js`** (registrarla ahí es
+parte legítima de un PR de datos). `node scripts/generate-config.js --help`
+genera el bloque; `lib.dias_config()` los objetos de días. **El JSON del
+festival NUNCA lleva bloque `config{}`** — `validate-festivals.js` lo bloquea.
+
+### Paso 6 · El plan del festival + runner
+
+Los pasos 1–5 se declaran en `pipeline/<id>.plan.json` y se corren con:
+
+```bash
+python3 pipeline/correr.py <id>          # en orden, aborta al primer fallo
+python3 pipeline/correr.py <id> --lista  # ver pasos e inventario con edades
+```
+
+El runner muestra la EDAD de cada sidecar (`capturado`): un sidecar viejo
+junto a uno recién escrito es la señal de circuito roto que faltó el 8 ago.
+
+### Paso 7 · Validar, QA visual, publicar
+
+```bash
+python3 validate.py                      # guardianes — incluye los del pipeline
 node scripts/validate-festivals.js <id>
-# Ejemplo: node scripts/validate-festivals.js mujeres-2026
+node --test tests/unit/*.test.js
 ```
 
-Verifica: campos requeridos, consistencia de días, secciones sin duplicados de emoji, `film_list` en programas de cortos. Exit 0 = listo. Exit 1 = corregir antes de continuar.
+**QA visual en móvil (390px), sin excepción**: splash (afiche entero, orden
+por fecha), grid por día (ningún día vacío, pósters sin romper), ficha
+(metaline, sinopsis, Letterboxd solo si hay slug, CTAs canon), planear (el
+worker genera escenarios), Mi Plan, cambio de festival limpia estado. Mirar la
+app encuentra lo que ninguna validación ve: el póster roto, el filtro
+desbordado y el badge invertido salieron los tres en pantalla.
 
-### Paso 5 · Ensamblaje
-
-**Yo produzco dos artefactos:**
-
-**A. `festivals/<id>.json`** — datos de películas completos y enriquecidos, listo para subir al repo.
-
-**B. Bloque FESTIVAL_CONFIG** — generado con el script en el Paso 3.5, listo para pegar en `index.html`.
-
-**Tú haces:**
-1. Subir `festivals/<id>.json` al repo (drag & drop en GitHub o push)
-2. Pegar el bloque en `FESTIVAL_CONFIG` en `index.html` (buscar el cierre `};` y pegar antes)
-
-### Paso 6 · QA Visual — OBLIGATORIO antes de deploy
-
-Abrir la app en mobile (390px) con el festival nuevo activo y verificar las 7 pantallas en orden. **Sin excepción — si alguna falla, no se hace deploy.**
-
-#### P1 · Splash y selector
-- [ ] Festival aparece en el dropdown del splash con nombre, ciudad y fechas correctas
-- [ ] Badge correcto: vacío si está activo, `PASADO` si terminó, `TEST` si `group:'test'`
-- [ ] Festival aparece en el selector interno (topbar → chevron)
-
-#### P2 · Explorar — grid de posters
-- [ ] Posters reales visibles (no todos generativos)
-- [ ] Ningún poster negro ni roto — fallback generativo si no hay poster real
-- [ ] Filtros Sección y Lugar funcionan y muestran las secciones del festival
-- [ ] Tab de días muestra todos los días del festival
-- [ ] **Cada tab de día muestra films de ese día** — tocar cada día y confirmar que el grid no queda vacío (valida que `film.day` coincide con `dayKeys` en FESTIVAL_CONFIG)
-
-#### P3 · Pel-sheet
-- [ ] Header: flags · duración en una línea
-- [ ] Metaline: director · género · año
-- [ ] Sección tappable en ámbar
-- [ ] FUNCIÓN: día y hora en ámbar, venue correcto (sin ciudad si el festival tiene `city` definido)
-- [ ] SINOPSIS visible
-- [ ] Letterboxd solo aparece si hay slug — sin enlace roto
-- [ ] CTAs: Intereses (ámbar), Priorizar (secundario), Vista (terciario)
-
-#### P4 · Planear — disponibilidad y algoritmo
-- [ ] Bloques de disponibilidad se pueden crear y guardar
-- [ ] "Ver opciones" genera escenarios (sin freeze — Web Worker activo)
-- [ ] Escenarios muestran películas del festival actual (no de otro festival)
-
-#### P5 · Mi Plan
-- [ ] Plan guardado muestra películas en orden cronológico
-- [ ] Días correctos del festival
-- [ ] CTA "Ver Mi Plan" / "Ir al Programa" según si hay plan
-
-#### P6 · Intereses — lista
-- [ ] Films agregados aparecen con poster, director, siguiente función
-- [ ] Films sin funciones futuras aparecen con `opacity:.35`
-- [ ] Botones Priorizar y Vista funcionan
-
-#### P7 · Cambio de festival
-- [ ] Cambiar a otro festival desde el selector limpia el estado correctamente
-- [ ] Volver al festival nuevo mantiene los datos
-
-**Si algo falla:** documentar en el chat antes de continuar. No hacer deploy parcial.
-
-### Paso 7 · Deploy
-```bash
-node scripts/bump-version.js   # sincroniza sw.js y version.json — obligatorio antes de push
-```
-**Yo hago:** push directo al repo `jdvlazio/Otrofestiv.app` via GitHub API.
-**Resultado:** festival disponible en `otrofestiv.app` en ~2 minutos.
+Publicar: `node scripts/bump-version.js` → commit (los 5 archivos del bump
+JUNTOS) → push → PR **de datos** (la frontera código/datos es un guardián de
+CI; mezcla deliberada = etiqueta `frontera-ok`) → CI verde → merge (el dueño
+de la rama la lleva hasta el final) → **verificar el deploy de Pages y el JSON
+en producción con curl**, no asumirlo.
 
 ---
 
-## Convenciones que nunca cambian
+## 2·bis · Cuando al festival le pasa algo
 
-### Objeto film — formato canónico (desde Jardín 2026)
+Terremotos, paros, clima, duelo. Pasó dos veces en 24 horas —FICMA aplazado y
+FICDEH cancelando cuatro ciudades, ambos por el sismo del 10 ago 2026— así que
+esto es doctrina, no anécdota.
 
-Poster y Letterboxd van **en el objeto film**, no en mapas separados:
+**Lo primero, y decide todo lo demás: qué declaró el festival.** No se traduce
+ni se interpreta. Si dicen «aplazado» no escribimos «cancelado», y al revés. Es
+la misma regla del Paso 5 aplicada a la peor semana del festival.
+
+| El festival dice | Mecanismo | Precedente |
+|---|---|---|
+| «se aplaza todo» | `status:{kind:'postponed', since, note, note_en, url}` en FESTIVAL_CONFIG | FICMA 17 |
+| «cancelamos en estas ciudades» | `NOTICES` con alcance `cities:[…]` | FICDEH 2026 |
+| «esta función cambia o se cae» | `NOTICES` por `title` + `date` | ya existía |
+
+**Un solo elemento ruidoso: el banner, y descartable.** Todo lo demás es estado
+en su sitio — la card atenuada con su badge, el planificador que la esquiva, el
+«Buscar reemplazo» que solo ve quien la tenía en Mi Plan. La regla de Juan del
+29 jul 2026 sigue mandando: *el aviso es una NOTA al margen, no una tarjeta*.
+
+**Reglas que costaron caro:**
+
+- **Las palabras son del festival, con enlace al comunicado.** `note` verbatim;
+  `note_en` es traducción nuestra y se consulta antes — un comunicado de
+  tragedia no suele tener versión en inglés.
+- **No prometer lo que no se sabe.** «Pendiente nueva fecha» es de una función
+  REPROGRAMADA. En una cancelación no hay fecha pendiente, y prometerla es peor
+  que callar.
+- **El dato del festival NO se toca.** Aplazar o cancelar es una capa; las
+  funciones, sedes y secciones se quedan. Revertir = fechas nuevas y borrar la
+  capa, sin re-onboarding.
+- **Un festival que canceló parte NO terminó**, y uno aplazado tampoco. Modo
+  Recuerdo no puede inventar recuerdos de funciones que no ocurrieron.
+- **Ocultar es el último recurso.** `group:'test'` saca el festival del riel sin
+  explicar nada: sirve como parche de minutos mientras se monta el estado, no
+  como solución. Se usó así el 10 ago y se declaró parche en el propio código.
+- **Verificar en producción**, no asumirlo: el JSON servido y el config, con curl.
+
+**Y lo que dispara todo:** el comunicado suele salir primero en Instagram, no en
+la web. El [radar](../docs/RADAR.md) vigila la web y la ficha de Proimágenes;
+para el aviso urgente, la fuente sigue siendo el ojo humano.
+
+---
+
+## 3 · Checklist de publicación
+
+- [ ] Fuentes en `fuentes/<id>/` · derivados en staging con `capturado`
+- [ ] Tabla de sedes canónica hecha · 0 salas dentro de nombres de sede
+- [ ] Slots compartidos DECIDIDOS (programa vs anclaje vs separadas)
+- [ ] Secciones verbatim + arquetipo de los 9 + inglés
+- [ ] Enriquecimiento verificado · sin-ficha resueltos o declarados
+- [ ] Sedes: verificadas o `_prec:"manual"`; pendientes DECLARADAS
+- [ ] `_etapa` dice la verdad (se actualiza al publicar)
+- [ ] validate.py + validate-festivals + tests + QA visual
+- [ ] Gate humano de Juan: revisión film-por-film (`tools/audit.html?fest=<id>`)
+
+---
+
+## 4 · El formato intermedio — un shape, N lectores, M herramientas
+
+Los PARSERS son desechables; las HERRAMIENTAS son permanentes. Lo que las une
+es UN formato. Todo parser, venga de donde venga, escribe:
 
 ```json
-{ "title": "...", "poster": "/path.jpg", "lbSlug": "titulo-2026", ... }
+{ "_provenance": { "fuente": "…", "capturado": "AAAA-MM-DD" },
+  "funciones": [ { "titulo": "…", "dia": "AAAA-MM-DD", "hora": "HH:MM",
+                   "sede": "…", "sala": "", "ciudad": "",
+                   "director": "…", "pais": "…", "anio": 2026,
+                   "duracion_min": 90, "has_qa": false,
+                   "acceso": "", "en_app": true } ] }
 ```
 
-El script `scripts/enrich-festival.py` produce este formato automáticamente.
-**No crear `posters{}` ni `lbSlugs{}` en festivales nuevos.**
+y las herramientas genéricas leen eso, nunca el JSON propio de un festival.
+`capturado` es obligatorio: sin fecha no se sabe si un sidecar está viejo —
+así se escondió el bug de las 48 salas de FICDEH.
 
+Las funciones comunes viven en **`pipeline/lib.py`** (antes reescritas por
+triplicado): `norm`, `hora24`, `rango_horario`, `curl_get`, `tmdb_get`,
+`director_coincide`, `ficha_verifica`, `sede_sala`, `dias_config`, `banderas`,
+`provenance`, `cargar_crudo`. `python3 pipeline/lib.py` corre su selftest —
+los casos reales que cada una resolvió, incluidos los que costaron un bug.
 
+Guardianes del pipeline en `validate.py`: `[staging-provenance]` (sidecar
+nuevo sin fecha = error), `[pipeline-circuito]` (escrito-sin-lector junto a su
+gemelo leído-sin-escritor = error), `[sedes-apiladas]` y `[sala-en-sede]`
+(warnings sobre festivales activos).
 
-Para agregar un festival nuevo, el único lugar que se edita es `FESTIVAL_CONFIG` en `index.html`. **Nunca** hardcodear IDs de festival en otro lugar del código.
-
-```js
-// index.html — FESTIVAL_CONFIG
-'jardin2026': {
-  name: 'Festival de Jardín',
-  city: 'Jardín',
-  dates: '10–14 SEP 2026',
-  // ...
-}
-```
-
-El festival queda disponible automáticamente en el selector y en `_DEFAULT_FEST_ID`.
-
-> **Seguridad:** La TMDB API key NO debe incluirse en el bundle de producción (`index.html`).
-> Solo pertenece en herramientas de enriquecimiento offline (`tools/enricher.html`, `scripts/enrich-festival.py`).
-> La key en producción debe ser `''` (string vacío) — los fallbacks la manejan silenciosamente.
-
-
-Siempre: `"Nombre de la Sede - Ciudad"`
-```
-"Cine MAMM - Medellín"
-"Teatro Caribe - Itagüí"
-"Teatro Otraparte - Envigado"
-"Plaza Bocagrande - Cartagena"
-```
-
-### Días
-Para festivales en español: `"VIE 12"`, `"SÁB 13"`, `"DOM 14"` (abreviatura en español + número).
-Para festivales en inglés (ej: Tribeca): `"TUE 3"`, `"WED 4"` — usar abreviaturas EN desde el inicio.
-`generate-config.js` produce los objetos `dayShort` y `dayLong` según el idioma configurado.
-
-### Horarios
-Siempre 24h con dos dígitos: `"17:00"`, `"09:30"`, `"21:00"`
-
-### Duración
-Siempre con `min`: `"147 min"`, `"90 min"`
-
-### Flags
-Siempre emoji de banderas: `"🇨🇴"`, `"🇦🇷🇫🇷"`
+Los pipelines de FICDEH y FICMA (pre-formato) no se migran: son históricos.
+Primer festival montado enteramente con esto: SiembraFest.
 
 ---
 
-## Festivales en producción
+## 5 · Convenciones que nunca cambian
 
-| Festival | ID | Archivo | Estado |
-|---|---|---|---|
-| FICCI 65 | `ficci65` | `festivals/ficci-65.json` | ✓ Archivado |
-| AFF 2026 | `aff2026` | `festivals/aff-2026.json` | ✓ Archivado |
-| Cinemancia 2025 | `cinemancia2025` | `festivals/cinemancia-2025.json` | 🧪 Test |
-| Tribeca 2026 | `tribeca2026` | `festivals/tribeca-2026.json` | 📋 Draft |
-
-## Agregar un festival nuevo — checklist
-
-1. Crear `festivals/<id>.json` con `films[]` (Paso 1 del pipeline)
-2. Correr enrichment: `python3 scripts/enrich-festival.py festivals/<id>.json` (Paso 2)
-3. Generar config: `node scripts/generate-config.js --id <id> ...` (Paso 3.5)
-4. Pegar el bloque generado en `FESTIVAL_CONFIG` en `index.html` — **solo esto, nada más**
-5. Validar: `node scripts/validate-festivals.js <id>` (Paso 4)
-6. QA visual P1-P7 (Paso 6)
-7. Push → deploy automático en ~2 minutos
-
----
-
-## Archivos de referencia en este repositorio
-
-```
-/pipeline/                ← DUEÑO ÚNICO de la plantilla de onboarding
-  PROTOCOLO.md            ← este archivo
-  festival-template.json  ← molde JSON comentado (los 4 tipos de entrada + doctrina)
-  csv-template.csv        ← template para organizadores (entrada del ensamblador)
-
-/festivals/
-  aff-2026.json          ← AFF 2026 (producción)
-  ficci-65.json          ← FICCI 65 (archivado)
-
-/docs/ARQUITECTURA.md         ← documentación técnica completa del sistema
-tools/enricher.html            ← enricher de películas (TMDB + Letterboxd)
-```
+- **La palabra la pone el festival.** Si la fuente la trae, se pasa; no se
+  traduce en la línea de salida (Paso 5). `event_kind` lo vigila
+  `[event-kind-conocido]` en `scripts/validate-festivals.js`.
+- **Venue**: `"Nombre de la Sede - Ciudad"`, siempre. La sala aparte.
+- **Horas**: 24h con dos dígitos (`"09:30"`). **Duración**: `"90 min"`.
+- **Días**: `dayShort` ES (`"VIE 12"`) + `dayShort_en` (`"FRI 12"`).
+- **Flags**: emoji de bandera (`"🇨🇴🇨🇦"`) — `lib.banderas()`.
+- **Objeto film canónico**: `poster` y `lbSlug` EN el film, no en mapas raíz.
+- **`poster: ""` prohibido**: imagen real o ausencia del campo.
+- **TMDB_API_KEY** jamás en el bundle: `''` en producción, env en scripts.
+- **keyArt** del splash: 2:3 por estirado (`scripts/compose-keyart.py`),
+  write-once (el SW cachea), huella registrada (`scripts/keyart-huellas.py`).

@@ -54,7 +54,10 @@ export function saveAV(){ storage.setAvailability(availability); _cloudSave('ava
 // (saveSavedAgenda) — algunos flujos agrupan varias mutaciones por transacción.
 export function commitPlan(mutate){
   const next=mutate(state.get('savedAgenda'));
-  const cert=verifyPlan((next&&next.schedule)||[]);
+  // El catálogo entra al certificado para que verifyPlan pueda exigir el invariante
+  // del taller multi-día: están TODAS sus sesiones o ninguna. Sin él ese chequeo no
+  // corre — el schedule por sí solo no sabe cuántas sesiones tiene el bloque.
+  const cert=verifyPlan((next&&next.schedule)||[], {catalog:(typeof FILMS!=='undefined'&&FILMS)||null});
   if(!cert.ok){
     const msg='commitPlan: plan inválido: '+cert.violations.map(v=>v.kind+':'+(v.title||'')).join(' · ');
     if(globalThis.__PLAN_STRICT__) throw new Error(msg);

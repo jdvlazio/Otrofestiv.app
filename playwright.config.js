@@ -1,15 +1,34 @@
 // @ts-check
 const { defineConfig, devices } = require('@playwright/test');
 
+// PUERTO POR CORRIDA (6 ago 2026) — la causa raíz del flaky que nos costó meses.
+// Playwright MATA el servidor que él levantó al terminar. En local
+// `reuseExistingServer` hace que una segunda corrida reuse ese servidor en vez de
+// levantar el suyo; si la primera termina antes, se lleva el servidor y la
+// segunda se queda hablando con un puerto muerto:
+//     net::ERR_CONNECTION_REFUSED → cascada de timeouts de 30s en todo lo que
+//     estuviera en vuelo, en specs sin relación entre sí.
+// Reproducido a voluntad: la misma suite da 21/21 sola y 1/21 con otra corrida
+// solapada. Explica por qué "fallaba distinto cada vez" y por qué los reintentos
+// lo tapaban (al 2º intento la otra corrida ya había terminado).
+// Con un puerto propio, cada corrida tiene su servidor y no existe la colisión.
+// `scripts/test.sh` elige uno libre y aísla también los artefactos.
+const PORT = Number(process.env.PW_PORT) || 3000;
+
 module.exports = defineConfig({
   testDir: './tests',
   testIgnore: ['**/unit/**'], // unit tests viven en tests/unit/ y corren con `node --test`
   timeout: 30000,
-  // retries: 2 — mitigación del flaky residual (bootstrap-incomplete: "X is not
-  // defined" / context destroyed) que workers=1 + gate appReady redujeron pero no
-  // eliminaron del todo en los runners de CI. Un 2º retry absorbe el caso raro
-  // sin enmascarar fallos reales (un fallo determinista falla los 3 intentos).
-  retries: 2,
+  // retries: 1 (era 2, bajado el 10 ago 2026). Con 2 reintentos la suite reportaba
+  // «13 flaky, 0 fallos» y eso se leía como verde; sin reintentos, esa MISMA suite
+  // fallaba 11 veces. Los reintentos no distinguían «la máquina estaba ocupada» de
+  // «la app falla una de cada tres veces» — tapaban las dos cosas por igual.
+  // Uno se conserva: absorbe el caso raro de bootstrap incompleto en los runners
+  // de 2 núcleos de CI, y un fallo determinista sigue fallando los dos intentos.
+  // La otra mitad del arreglo vive en scripts/test.sh: avisa cuando la máquina
+  // está cargada (la causa real del ruido) y nombra los flaky en vez de sumarlos
+  // al verde.
+  retries: 1,
   // CI = serial. El split a 13+ módulos ESM multiplicó los requests HTTP + el
   // parse/eval por carga de página; con workers paralelos en los runners de
   // 2 núcleos de GitHub Actions eso saturaba CPU/browser y las cargas excedían
@@ -20,10 +39,13 @@ module.exports = defineConfig({
     ['html', { open: 'never' }],
     ['list'],
     ['github'],  // expone fallos como anotaciones en GitHub Actions
-    ['json', { outputFile: 'test-results.json' }],
+    // outputFile por corrida: dos corridas simultáneas se pisaban este archivo
+    // (mi primer análisis de fallos salió en blanco por eso). scripts/test.sh lo
+    // fija por puerto; el default sirve para la invocación suelta.
+    ['json', { outputFile: process.env.PLAYWRIGHT_JSON_OUTPUT_NAME || 'test-results.json' }],
   ],
   use: {
-    baseURL: process.env.BASE_URL || 'http://localhost:3000',
+    baseURL: process.env.BASE_URL || `http://localhost:${PORT}`,
     headless: true,
     viewport: { width: 390, height: 844 }, // iPhone 14 — mobile first
     locale: 'es-CO',                              // idioma determinista — evita variaciones de CI runner
@@ -67,8 +89,8 @@ module.exports = defineConfig({
     // bajo los workers paralelos de Playwright eso saturaba el server y las
     // cargas superaban el timeout → flaky (#splash-dropdown y otros). Threading
     // sirve los módulos en paralelo y elimina la contención.
-    command: 'python3 -c "from http.server import ThreadingHTTPServer, SimpleHTTPRequestHandler; ThreadingHTTPServer((\'\', 3000), SimpleHTTPRequestHandler).serve_forever()"',
-    url: 'http://localhost:3000',
+    command: `python3 -c "from http.server import ThreadingHTTPServer, SimpleHTTPRequestHandler; ThreadingHTTPServer((\'\', ${PORT}), SimpleHTTPRequestHandler).serve_forever()"`,
+    url: `http://localhost:${PORT}`,
     reuseExistingServer: !process.env.CI,
     timeout: 10000,
   },

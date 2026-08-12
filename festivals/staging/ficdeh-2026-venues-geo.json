@@ -1,0 +1,1215 @@
+{
+ "Institución Educativa Bienestar Social - Cali": {
+  "lat": 3.4036133,
+  "lng": -76.5172273,
+  "_osm": "Mariano Ramos, Comuna 16, Cali ciudad, Cali, Sur, Valle del Cauca, RAP"
+ },
+ "Universidad de Caldas - Auditorio Roberto Vélez Correa - Manizales": {
+  "lat": 5.0549153,
+  "lng": -75.4940702,
+  "city": "Manizales",
+  "short": "Universidad de Caldas - Auditorio Roberto Vélez Correa",
+  "address": "Cl. 65 #26-10",
+  "_prec": "calle",
+  "_match": "Calle 65, Palogrande, Comuna Palogrande, Perímetro Urbano Manizales, M"
+ },
+ "Fundación Batuta Caldas - Manizales": {
+  "lat": 5.0508329,
+  "lng": -75.4828074,
+  "city": "Manizales",
+  "short": "Fundación Batuta Caldas",
+  "address": "Cra. 22 #70b-31, Manizales, Caldas",
+  "_prec": "manual",
+  "_match": "BATUTA CALDAS Sede Principal",
+  "_fuente": "Google Maps (verificado 2026-08-05)"
+ },
+ "Auditorio Centro Cultural Universitario Rogelio Salmona - Manizales": {
+  "lat": 5.0545465,
+  "lng": -75.4916559,
+  "city": "Manizales",
+  "short": "Auditorio Centro Cultural Universitario Rogelio Salmona",
+  "address": "Cra. 28D entre Cl. 66 #y 67",
+  "_prec": "poi",
+  "_match": "Centro Cultural Rogelio Salmona"
+ },
+ "Teatro Colón - Bogotá": {
+  "lat": 4.5966666,
+  "lng": -74.0744201,
+  "city": "Bogotá",
+  "short": "Teatro Colón",
+  "address": "Calle 10 # 5-32",
+  "_prec": "manual",
+  "_match": "Teatro Colón",
+  "_fuente": "Google Maps (verificado 2026-08-05)"
+ },
+ "Alianza Francesa - Barranquilla": {
+  "lat": 10.9934124,
+  "lng": -74.7890175,
+  "city": "Barranquilla",
+  "short": "Alianza Francesa",
+  "address": "Calle 52 # 54-75",
+  "_prec": "manual",
+  "_match": "Alianza Francesa de Barranquilla",
+  "_fuente": "Google Maps (verificado 2026-08-05)"
+ },
+ "Plazoleta del Samán - Cali": {
+  "lat": 3.4498201,
+  "lng": -76.5361556,
+  "city": "Cali",
+  "short": "Plazoleta del Samán",
+  "address": "Cra. 5 # 6-05, San Pedro",
+  "_prec": "manual",
+  "_match": "Plazoleta del Samán, en el Centro Cultural de Cali (Cra. 5 #6-05)",
+  "_fuente": "Google Maps (verificado 2026-08-05)",
+  "_nota": "Es el espacio al aire libre del «Centro Cultural de Cali»: misma dirección (Cra. 5 # 6-05) y por eso las mismas coordenadas. Espacios distintos."
+ },
+ "Centro de Formación de la Cooperación Española - Cartagena": {
+  "lat": 10.4244554,
+  "lng": -75.5521665,
+  "city": "Cartagena",
+  "short": "Centro de Formación de la Cooperación Española",
+  "address": "Calle 36 # 2-74, El Centro",
+  "_prec": "manual",
+  "_match": "Centro de Formación Cooperación Española — Cl. 36 #2-74 ✓dir",
+  "_fuente": "Google Maps (verificado 2026-08-05)"
+ },
+ "Servicio FORJAR Restaurativo Ciudad Bolívar - Bogotá": {
+  "lat": 4.6533817,
+  "lng": -74.0836331,
+  "_osm": "Bogotá, Bogotá, Distrito Capital, RAP (Especial) Central, Colombia"
+ },
+ "Institución Educativa José Joaquín Jaramillo - Cali": {
+  "lat": 3.4108435,
+  "lng": -76.5812127,
+  "_osm": "Cali, Sur, Valle del Cauca, RAP Pacífico, Colombia",
+  "_geo": "CENTROIDE de ciudad — sede no hallada en OSM, revisar antes de publicar"
+ },
+ "Casa de la Juventud Iwoka - Bogotá": {
+  "lat": 4.6222774,
+  "lng": -74.1571759,
+  "city": "Bogotá",
+  "short": "Casa de la Juventud Iwoka",
+  "address": "Cra. 78N BIS # 39-33",
+  "_prec": "calle",
+  "_match": "Carrera 78N Bis, Ciudad Kennedy Sur, UPZs de Bogotá, Localidad Kennedy"
+ },
+ "Biblioteca Pública CEFE Fontanar Del Río - Bogotá": {
+  "lat": 4.7561244,
+  "lng": -74.1110572,
+  "city": "Bogotá",
+  "short": "Biblioteca Pública CEFE Fontanar Del Río",
+  "address": "Calle 146 # 138A-99",
+  "_prec": "alias",
+  "_match": "hereda de «Cinemateca Fontanar del Río - Bogotá»",
+  "_nota": "Mismo edificio que «Cinemateca Fontanar del Río» (CEFE Fontanar del Río, Calle 146 # 138A-99). El festival publica los dos nombres, sin sala y en días que no se solapan (13 ago aquí, 14–16 en la Cinemateca); se conservan ambos verbatim."
+ },
+ "Teatro El Ensueño - Bogotá": {
+  "lat": 4.5859476,
+  "lng": -74.1585387,
+  "city": "Bogotá",
+  "short": "Teatro El Ensueño",
+  "address": "Transversal 70D # 60-90",
+  "_prec": "poi",
+  "_match": "Teatro El Ensueño"
+ },
+ "Universidad Americana - Barranquilla": {
+  "lat": 11.0101922,
+  "lng": -74.8231794,
+  "_osm": "Barranquilla, Atlántico, RAP Caribe, Colombia",
+  "_geo": "CENTROIDE de ciudad — sede no hallada en OSM, revisar antes de publicar"
+ },
+ "Biblioteca Pública La Victoria - Bogotá": {
+  "lat": 4.5537936,
+  "lng": -74.0947173,
+  "city": "Bogotá",
+  "short": "Biblioteca Pública La Victoria",
+  "address": "Calle 37 BIS B Sur # 2B",
+  "_prec": "poi",
+  "_match": "Biblioteca Pública Local La Victoria"
+ },
+ "Biblioteca Pública Las Ferias - Bogotá": {
+  "lat": 4.6716157,
+  "lng": -74.0982024,
+  "city": "Bogotá",
+  "short": "Biblioteca Pública Las Ferias",
+  "address": "Cra. 69J # 73-29",
+  "_prec": "calle",
+  "_match": "Carrera 69J, Bosque Popular, UPZs Localidad Engativá, Localidad Engati"
+ },
+ "Cinemateca de Bogotá - Bogotá": {
+  "lat": 4.6031614,
+  "lng": -74.0676717,
+  "city": "Bogotá",
+  "short": "Cinemateca de Bogotá",
+  "address": "Cra. 3 # 19-10",
+  "_prec": "manual",
+  "_match": "Cinemateca de Bogotá (Cra. 3 #19-10)",
+  "_fuente": "Google Maps (verificado 2026-08-05)"
+ },
+ "Centro Cultural Panóptico de Ibagué - Ibagué": {
+  "lat": 4.4483425,
+  "lng": -75.2400253,
+  "city": "Ibagué",
+  "short": "Centro Cultural Panóptico de Ibagué",
+  "address": "Calle 11 # 9-73ª, barrio Belén",
+  "_prec": "poi",
+  "_match": "Panóptico de Ibagué",
+  "_nota": "Mismo complejo que «Museo Panóptico de Ibagué» (a 20 m): el Panóptico alberga centro cultural y museo. Espacios distintos; nombres tal cual los publica el festival."
+ },
+ "Cineland - Quibdó": {
+  "lat": 5.6899285,
+  "lng": -76.6441132,
+  "city": "Quibdó",
+  "short": "Cineland",
+  "address": "Centro Comercial El Caraño Calle 30, Avenida Aeropuerto, Barrio Los Ángeles (frente al Aeropuerto El Caraño)",
+  "_prec": "manual",
+  "_match": "Cineland, CC El Caraño ✓",
+  "_fuente": "Google Maps (verificado 2026-08-05)"
+ },
+ "Cinemateca de Tunja - Tunja": {
+  "lat": 5.5327848,
+  "lng": -73.3709906,
+  "city": "Tunja",
+  "short": "Cinemateca de Tunja",
+  "address": "Calle 17 # 15-36",
+  "_prec": "calle",
+  "_match": "Calle 17, Porvenir, Tunja, Centro, Boyacá, RAP (Especial) Central, 057"
+ },
+ "Sala 2 - Cinemateca de Bogotá - Bogotá": {
+  "lat": 4.6031614,
+  "lng": -74.0676717,
+  "city": "Bogotá",
+  "short": "Sala 2 - Cinemateca de Bogotá",
+  "address": "",
+  "_prec": "alias",
+  "_match": "hereda de «Cinemateca de Bogotá - Bogotá»"
+ },
+ "Centro Cultural - Sala Audiovisual de Cali - Cali": {
+  "lat": 3.4682202,
+  "lng": -76.4825525,
+  "city": "Cali",
+  "short": "Centro Cultural - Sala Audiovisual de Cali",
+  "address": "Cra. 5 # 6-05, San Pedro",
+  "_prec": "calle",
+  "_match": "Carrera 5, Jorge Eliécer Gaitán, Comuna 6, Cali ciudad, Cali, Sur, Val"
+ },
+ "Cinemateca del Caribe - Barranquilla": {
+  "lat": 11.005653,
+  "lng": -74.8024986,
+  "city": "Barranquilla",
+  "short": "Cinemateca del Caribe",
+  "address": "Calle 76 # 57-61",
+  "_prec": "calle",
+  "_match": "Combarranquilla - Unidad Country, 57-61, Calle 76, Villa Country, Loca"
+ },
+ "Fundación Alianza Tecnologica y Desarrollo Educativo - ALITIC - Barranquilla": {
+  "lat": 10.9946547,
+  "lng": -74.7936587,
+  "city": "Barranquilla",
+  "short": "Fundación Alianza Tecnologica y Desarrollo Educativo - ALITIC",
+  "address": "Cra. 54 # 64-73",
+  "_prec": "calle",
+  "_match": "Carrera 54, El Prado, Localidad Norte - Centro Histórico, Perímetro Ur"
+ },
+ "Universidad Minuto de Dios - Bogotá": {
+  "lat": 4.699716,
+  "lng": -74.09075,
+  "city": "Bogotá",
+  "short": "Universidad Minuto de Dios",
+  "address": "Diagonal 81F # 72 C-1",
+  "_prec": "calle",
+  "_match": "Diagonal 81F, UPZs de Bogotá, Localidad Engativá, Bogotá, Bogotá, Dist"
+ },
+ "Universidad de Ibagué - Ibagué": {
+  "lat": 4.4491415,
+  "lng": -75.200056,
+  "city": "Ibagué",
+  "short": "Universidad de Ibagué",
+  "address": "Carrera 22 - Calle 67, barrio Ambalá",
+  "_prec": "manual",
+  "_match": "Universidad de Ibagué",
+  "_fuente": "Google Maps (verificado 2026-08-05)"
+ },
+ "Cine Bajo las Estrellas programa de exhibición y circulación - Armenia": {
+  "lat": 4.5360491,
+  "lng": -75.6691458,
+  "city": "Armenia",
+  "short": "Cine Bajo las Estrellas programa de exhibición y circulación",
+  "address": "Parque Sucre",
+  "_prec": "calle",
+  "_match": "Parque Antonio José de Sucre, Buenos Aires Alto, Comuna El Cafetero, P"
+ },
+ "Museo de Arte Moderno - MAMB - Barranquilla": {
+  "lat": 10.9869747,
+  "lng": -74.7780462,
+  "city": "Barranquilla",
+  "short": "Museo de Arte Moderno - MAMB",
+  "address": "Edificio World Trade Center (Calle 76 # 54-11, loc B3)",
+  "_prec": "poi",
+  "_match": "Museo de Arte Moderno"
+ },
+ "Universidad de Salamanca - Barranquilla": {
+  "lat": 11.0101922,
+  "lng": -74.8231794,
+  "_osm": "Barranquilla, Atlántico, RAP Caribe, Colombia"
+ },
+ "Cinema Local - Bogotá": {
+  "lat": 4.6627544,
+  "lng": -74.0630981,
+  "city": "Bogotá",
+  "short": "Cinema Local",
+  "address": "Calle 74 # 20 B -19",
+  "_prec": "manual",
+  "_match": "CINEMA LOCAL SAN FELIPE — Cl. 74 #20B-19 ✓dir",
+  "_fuente": "Google Maps (verificado 2026-08-05)"
+ },
+ "Cinema Local - Cali": {
+  "lat": 3.373295,
+  "lng": -76.5456344,
+  "city": "Cali",
+  "short": "Cinema Local",
+  "address": "Calle 4B # 38A-66",
+  "_prec": "calle",
+  "_match": "Calle 4B, Sector Meléndez, Comuna 18, Cali ciudad, Cali, Sur, Valle de",
+  "_dudoso": "OSM resolvió la Calle 4B en Meléndez; la placa 38A-66 cae en San Fernando. Vía correcta, tramo dudoso."
+ },
+ "Cinemateca del Museo La Tertulia - Cali": {
+  "lat": 3.45019,
+  "lng": -76.54538,
+  "city": "Cali",
+  "short": "Cinemateca del Museo La Tertulia",
+  "address": "Cra. 1 # 5-105, Oeste",
+  "_prec": "manual",
+  "_match": "Museo La Tertulia (Avenida 1 Norte) — verificado a mano"
+ },
+ "Cinefilo - UdeC San Agustín, Patio de Humanidades - Cartagena": {
+  "lat": 10.3566029,
+  "lng": -75.4924962,
+  "city": "Cartagena",
+  "short": "Cinefilo - UdeC San Agustín, Patio de Humanidades",
+  "address": "Cra. 6, Calle de la Universidad # 36-100",
+  "_prec": "calle",
+  "_match": "Carrera 6, Arroz Barato, Cartagena de Indias, Dique, Bolívar, RAP Cari"
+ },
+ "Colombo Americano - Medellín": {
+  "lat": 6.2497341,
+  "lng": -75.5627237,
+  "city": "Medellín",
+  "short": "Colombo Americano",
+  "address": "Cra. 45 #53 - 24. Centro",
+  "_prec": "poi",
+  "_match": "Colombo Americano"
+ },
+ "Cámara de Comercio de Pereira - Pereira": {
+  "lat": 4.814082,
+  "lng": -75.6977866,
+  "city": "Pereira",
+  "short": "Cámara de Comercio de Pereira",
+  "address": "Carrera 8a # 23-09, piso 3",
+  "_prec": "manual",
+  "_match": "Cámara De Comercio de Pereira, sede principal",
+  "_fuente": "Google Maps (verificado 2026-08-05)"
+ },
+ "Liceo Taller San Miguel - Pereira": {
+  "lat": 4.7854606,
+  "lng": -75.788322,
+  "_osm": "Pereira, Risaralda, RAP Eje Cafetero, Colombia",
+  "_geo": "CENTROIDE de ciudad — sede no hallada en OSM, revisar antes de publicar"
+ },
+ "Institución Educativa Isaac Rodríguez - Quibdó": {
+  "lat": 5.6912838,
+  "lng": -76.6531337,
+  "_osm": "Quibdó, Atrato, Chocó, RAP Pacífico, Colombia",
+  "_geo": "CENTROIDE de ciudad — sede no hallada en OSM, revisar antes de publicar"
+ },
+ "Sena Galán - Armenia": {
+  "lat": 4.5169258,
+  "lng": -75.6918669,
+  "city": "Armenia",
+  "short": "Sena Galán",
+  "address": "Cra. 18 # 7-58",
+  "_prec": "calle",
+  "_match": "Carrera 18, Urbanización Arrayanes, Centenario, Comuna Centenario, Per"
+ },
+ "Auditorio C202 - UNIMINUTO - Bogotá": {
+  "lat": 4.699716,
+  "lng": -74.09075,
+  "city": "Bogotá",
+  "short": "Auditorio C202 - UNIMINUTO",
+  "address": "",
+  "_prec": "alias",
+  "_match": "hereda de «Universidad Minuto de Dios - Bogotá»"
+ },
+ "Casa de la Juventud Diego Felipe Becerra - Bogotá": {
+  "lat": 4.7408869,
+  "lng": -74.1081235,
+  "city": "Bogotá",
+  "short": "Casa de la Juventud Diego Felipe Becerra",
+  "address": "Cra. 125 # 132C-82",
+  "_prec": "manual",
+  "_match": "Casa de Juventud Diego Felipe Becerra — Cra. 125 #132C-82, Suba ✓dir",
+  "_fuente": "Google Maps (verificado 2026-08-05)"
+ },
+ "Cinemateca Fontanar del Río - Bogotá": {
+  "lat": 4.7561244,
+  "lng": -74.1110572,
+  "city": "Bogotá",
+  "short": "Cinemateca Fontanar del Río",
+  "address": "Calle 146 # 138A-99",
+  "_prec": "manual",
+  "_match": "CEFE Fontanar del Río, Suba",
+  "_fuente": "Google Maps (verificado 2026-08-05)",
+  "_nota": "Mismo edificio que «Biblioteca Pública CEFE Fontanar Del Río» (CEFE Fontanar del Río, Calle 146 # 138A-99). El festival publica los dos nombres, sin sala y en días que no se solapan (14–16 ago aquí, 13 en la biblioteca); se conservan ambos verbatim."
+ },
+ "Fundación Gilberto Alzate Avendaño - Biblioteca - Bogotá": {
+  "lat": 4.5953608,
+  "lng": -74.0724134,
+  "city": "Bogotá",
+  "short": "Fundación Gilberto Alzate Avendaño - Biblioteca",
+  "address": "Calle 10 # 3-16",
+  "_prec": "poi",
+  "_match": "Fundación Gilberto Alzate Avendaño"
+ },
+ "Fundación Malabareando las Calles - Pereira": {
+  "lat": 4.8135729,
+  "lng": -75.6922049,
+  "city": "Pereira",
+  "short": "Fundación Malabareando las Calles",
+  "address": "Carrera 8 #15 - 09",
+  "_prec": "calle",
+  "_match": "Carrera 8, Sector Plaza de Bolivar, Sector Galeria Central, Centro, AM"
+ },
+ "Casa de la Juventud José Saramago - Bogotá": {
+  "lat": 4.6125355,
+  "lng": -74.1939132,
+  "city": "Bogotá",
+  "short": "Casa de la Juventud José Saramago",
+  "address": "Cra. 82J # 70A-52",
+  "_prec": "manual",
+  "_match": "Casa de Juventud Bosa José Saramago — Cra. 82j #70A-52 ✓dir",
+  "_fuente": "Google Maps (verificado 2026-08-05)"
+ },
+ "Casa LGBTIQ Sebastián Romero - Bogotá": {
+  "lat": 4.6538268,
+  "lng": -74.0999662,
+  "city": "Bogotá",
+  "short": "Casa LGBTIQ Sebastián Romero",
+  "address": "Calle 44 # 14-60",
+  "_prec": "calle",
+  "_match": "Calle 44, UPZs Localidad Teusaquillo, Localidad Teusaquillo, Bogotá, B"
+ },
+ "Cinemateca - Bogotá": {
+  "lat": 4.6032463,
+  "lng": -74.06758,
+  "city": "Bogotá",
+  "short": "Cinemateca",
+  "address": "Cinemateca del Museo La Tertulia - Cra. 1 # 5-105, Oeste",
+  "_prec": "poi",
+  "_match": "Cinemateca Distrital"
+ },
+ "Manzana del Cuidado Mochuelo - Bogotá": {
+  "lat": 4.5084612,
+  "lng": -74.1480765,
+  "city": "Bogotá",
+  "short": "Manzana del Cuidado Mochuelo",
+  "address": "Calle 91C Sur # 18H-14",
+  "_prec": "manual",
+  "_match": "Manzana del Cuidado Ciudad Bolívar Mochuelo — Cl. 91c Sur #18h-14 ✓dir",
+  "_fuente": "Google Maps (verificado 2026-08-05)"
+ },
+ "Escuela de Administración y Mercadotecnia del Quindío (EAM) - Armenia": {
+  "lat": 4.541757,
+  "lng": -75.6634798,
+  "city": "Armenia",
+  "short": "Escuela de Administración y Mercadotecnia del Quindío (EAM)",
+  "address": "Cra. 14 # 3-11 (Avenida Bolívar)",
+  "_prec": "manual",
+  "_match": "Institución Universitaria EAM — Cra. 14 #3-11 ✓dir",
+  "_fuente": "Google Maps (verificado 2026-08-05)"
+ },
+ "Casa de la Juventud Antonio Nariño - Bogotá": {
+  "lat": 4.5849866,
+  "lng": -74.1032411,
+  "city": "Bogotá",
+  "short": "Casa de la Juventud Antonio Nariño",
+  "address": "Cra. 20 # 19 Sur - 26",
+  "_prec": "manual",
+  "_match": "Casa de la Juventud Antonio Nariño — Cra 20 #19 Sur-26 ✓dir",
+  "_fuente": "Google Maps (verificado 2026-08-05)"
+ },
+ "Casa de la Juventud Ayelen - Bogotá": {
+  "lat": 4.5537767,
+  "lng": -74.1431784,
+  "city": "Bogotá",
+  "short": "Casa de la Juventud Ayelen",
+  "address": "Calle 65A Sur # 17C-30",
+  "_prec": "calle",
+  "_match": "Calle 65A Sur, Vista Hermosa, UPZs de Bogotá, Localidad Ciudad Bolivar"
+ },
+ "Laboratorio 1 y 2 - Bogotá": {
+  "lat": 4.6031614,
+  "lng": -74.0676717,
+  "city": "Bogotá",
+  "short": "Laboratorio 1 y 2",
+  "address": "Laboratorio 1 y 2",
+  "_prec": "alias",
+  "_match": "hereda de «Cinemateca de Bogotá - Bogotá»"
+ },
+ "COMFAMA - Cineclub Bello - Medellín": {
+  "lat": 6.2922203,
+  "lng": -75.5558029,
+  "city": "Medellín",
+  "short": "COMFAMA - Cineclub Bello",
+  "address": "Cra. 49 #46-57",
+  "_prec": "calle",
+  "_match": "Carrera 49, Moscú Numero1, Comuna 2 - Santa Cruz, Perímetro Urbano Med"
+ },
+ "La Pascasia - Medellín": {
+  "lat": 6.2449294,
+  "lng": -75.5648967,
+  "city": "Medellín",
+  "short": "La Pascasia",
+  "address": "Cl. 47 #43 88. Centro",
+  "_prec": "calle",
+  "_match": "Club De Tobi, 43-88, Calle 47, Bomboná Numero 1, Comuna 10 - La Candel"
+ },
+ "Casa de la Juventud Chapinero - Bogotá": {
+  "lat": 4.697615,
+  "lng": -74.1239484,
+  "city": "Bogotá",
+  "short": "Casa de la Juventud Chapinero",
+  "address": "Calle 65A # 1-40",
+  "_prec": "calle",
+  "_match": "Calle 65A, Los Ángeles, UPZs de Bogotá, Localidad Engativá, Bogotá, Bo"
+ },
+ "Ágora Casa Cultural (La Ceja) - Medellín": {
+  "lat": 6.2217344,
+  "lng": -75.5822126,
+  "city": "Medellín",
+  "short": "Ágora Casa Cultural (La Ceja)",
+  "address": "Cl. 19 # 23-15",
+  "_prec": "calle",
+  "_match": "Calle 19, Santa Fé, Comuna 15 - Guayabal, Perímetro Urbano Medellín, M"
+ },
+ "COMFAMA - Capilla del Claustro - Medellín": {
+  "lat": 6.2457531,
+  "lng": -75.5637191,
+  "city": "Medellín",
+  "short": "COMFAMA - Capilla del Claustro",
+  "address": "Carrera 44 # 48 - 18",
+  "_prec": "poi",
+  "_match": "Comfama Claustro San Ignacio"
+ },
+ "Universidad Nacional de Colombia - Auditorio Juan Hurtado - Manizales": {
+  "lat": 5.064816,
+  "lng": -75.5094002,
+  "city": "Manizales",
+  "short": "Universidad Nacional de Colombia - Auditorio Juan Hurtado",
+  "address": "Carrera 27 # 64-60",
+  "_prec": "calle",
+  "_match": "Carrera 27, Villanueva, Comuna La Fuente, Perímetro Urbano Manizales, "
+ },
+ "Cine a la Calle - Pereira": {
+  "lat": 4.8092321,
+  "lng": -75.6964031,
+  "city": "Pereira",
+  "short": "Cine a la Calle",
+  "address": "Parque Olaya Herrera",
+  "_prec": "manual",
+  "_match": "Parque Olaya Herrera",
+  "_fuente": "Google Maps (verificado 2026-08-05)"
+ },
+ "Colombo Americano de Pereira - Pereira": {
+  "lat": 4.8162251,
+  "lng": -75.6979463,
+  "city": "Pereira",
+  "short": "Colombo Americano de Pereira",
+  "address": "Carrera 6 Nº 23-58",
+  "_prec": "manual",
+  "_match": "Colombo Americano Pereira",
+  "_fuente": "Google Maps (verificado 2026-08-05)"
+ },
+ "Caas Morón - Barranquilla": {
+  "lat": 11.0063726,
+  "lng": -74.8137185,
+  "city": "Barranquilla",
+  "short": "Caas Morón",
+  "address": "Cra. 53 # 48-134",
+  "_prec": "calle",
+  "_match": "Carrera 53, Alto Prado, Localidad Norte - Centro Histórico, Perímetro "
+ },
+ "CasArte3962 - Barranquilla": {
+  "lat": 10.9900266,
+  "lng": -74.8098764,
+  "city": "Barranquilla",
+  "short": "CasArte3962",
+  "address": "Calle 73B # 39-62",
+  "_prec": "calle",
+  "_match": "Calle 73B, Las Delicias, Localidad Norte - Centro Histórico, Perímetro"
+ },
+ "Bulevar del Oriente - Cali": {
+  "lat": 3.4265621,
+  "lng": -76.4761659,
+  "city": "Cali",
+  "short": "Bulevar del Oriente",
+  "address": "Comuna 14, entre la transversal 103 con calle 96 y calle 73 con transversal 73, entre los barrios Alfonso Bonilla Aragón y Marroquín 2",
+  "_prec": "calle",
+  "_match": "Comuna 14, Cali ciudad, Cali, Sur, Valle del Cauca, RAP Pacífico, Colo"
+ },
+ "Lugar del Poema - Cartagena": {
+  "lat": 10.420315,
+  "lng": -75.5481268,
+  "city": "Cartagena",
+  "short": "Lugar del Poema",
+  "address": "Pasaje Leclerc, calle 24 # 8b-83 piso 2, Getsemaní",
+  "_prec": "calle",
+  "_match": "Pasaje Comercial Leclerc, Getsemaní, Cartagena de Indias, Dique, Bolív"
+ },
+ "Museo Casa de la Memoria - Medellín": {
+  "lat": 6.2459198,
+  "lng": -75.5565561,
+  "city": "Medellín",
+  "short": "Museo Casa de la Memoria",
+  "address": "Cl. 51 #36-66. Parque Bicentenario",
+  "_prec": "poi",
+  "_match": "Museo Casa de la Memoria"
+ },
+ "Parque de los Deseos - Medellín": {
+  "lat": 6.2684353,
+  "lng": -75.5660855,
+  "city": "Medellín",
+  "short": "Parque de los Deseos",
+  "address": "Carrera 52 # 71 - 11",
+  "_prec": "manual",
+  "_match": "Parque de los Deseos",
+  "_fuente": "Google Maps (verificado 2026-08-05)"
+ },
+ "Cine Club La Florida - Pereira": {
+  "lat": 4.7592804,
+  "lng": -75.6116548,
+  "city": "Pereira",
+  "short": "Cine Club La Florida",
+  "address": "Corregimiento La Florida",
+  "_prec": "poi",
+  "_match": "Cineclub la Florida"
+ },
+ "UNIVERSIDAD TECNOLÓGICA DE PEREIRA - BLOQUE 7A / 118 - Pereira": {
+  "lat": 4.7943151,
+  "lng": -75.6888918,
+  "city": "Pereira",
+  "short": "UNIVERSIDAD TECNOLÓGICA DE PEREIRA - BLOQUE 7A / 118",
+  "address": "UNIVERSIDAD TECNOLÓGICA DE PEREIRA - BLOQUE 7A / 118",
+  "_prec": "alias",
+  "_match": "hereda de «Universidad Tecnológica de Pereira -UTP - Pereira»"
+ },
+ "Colegio Carrasquilla (Cra. 7ma) - Quibdó": {
+  "lat": 5.69135,
+  "lng": -76.6568012,
+  "city": "Quibdó",
+  "short": "Colegio Carrasquilla (Cra. 7ma)",
+  "address": "Colegio Carrasquilla (Cra. 7ma)",
+  "_prec": "calle",
+  "_match": "Institución Educativa Integrado Carrasquilla Industrial, Calle 27, El "
+ },
+ "Contacto Escuela de Fotografía - Armenia": {
+  "lat": 4.5388271,
+  "lng": -75.6685075,
+  "city": "Armenia",
+  "short": "Contacto Escuela de Fotografía",
+  "address": "Cra. 16 # 9-54, piso 2",
+  "_prec": "calle",
+  "_match": "9-54, Carrera 16, Galán, Comuna El Cafetero, Perímetro Urbano Armenia,"
+ },
+ "Parque Arqueológico de Usme - Bogotá": {
+  "lat": 4.4774665,
+  "lng": -74.1186759,
+  "city": "Bogotá",
+  "short": "Parque Arqueológico de Usme",
+  "address": "Calle 136B Sur # 3A-48",
+  "_prec": "poi",
+  "_match": "Parque Arqueológico Hacienda El Carmen"
+ },
+ "Centro Cultural Banco de la República - Medellín": {
+  "lat": 6.249052,
+  "lng": -75.5684408,
+  "city": "Medellín",
+  "short": "Centro Cultural Banco de la República",
+  "address": "Cl. 50 #50-21 Piso 3",
+  "_prec": "poi",
+  "_match": "Banco de la República"
+ },
+ "CEFE Cometas - Bogotá": {
+  "lat": 4.7138599,
+  "lng": -74.0868349,
+  "city": "Bogotá",
+  "short": "CEFE Cometas",
+  "address": "Calle 127 A # 87",
+  "_prec": "manual",
+  "_match": "Centro de Felicidad Las Cometas, Suba",
+  "_fuente": "Google Maps (verificado 2026-08-05)"
+ },
+ "Casa de la Juventud Aldea De Pensadores - Bogotá": {
+  "lat": 4.7170723,
+  "lng": -74.1375702,
+  "city": "Bogotá",
+  "short": "Casa de la Juventud Aldea De Pensadores",
+  "address": "Calle 70 # 88A-7",
+  "_prec": "calle",
+  "_match": "Calle 70, La Faena, UPZs de Bogotá, Localidad Engativá, Bogotá, Bogotá"
+ },
+ "Casa de la Juventud Damawha - Bogotá": {
+  "lat": 4.5427513,
+  "lng": -74.1087731,
+  "city": "Bogotá",
+  "short": "Casa de la Juventud Damawha",
+  "address": "Cra. 1 Este # 10-48 Sur",
+  "_prec": "calle",
+  "_match": "Carrera 1 Este, Palermo Sur, UPZs de Bogotá, Localidad Rafael Uribe Ur"
+ },
+ "Centro Integral de Justicia Campo Verde - Bogotá": {
+  "lat": 4.624401,
+  "lng": -74.2120163,
+  "city": "Bogotá",
+  "short": "Centro Integral de Justicia Campo Verde",
+  "address": "Calle 85 Sur # 94-75",
+  "_prec": "manual",
+  "_match": "CIJ Campoverde — Cl. 85 Sur #94-75 ✓dir",
+  "_fuente": "Google Maps (verificado 2026-08-05)"
+ },
+ "Jardín Botánico de Medellín - Medellín": {
+  "lat": 6.2705481,
+  "lng": -75.5635288,
+  "city": "Medellín",
+  "short": "Jardín Botánico de Medellín",
+  "address": "Cl. 73 #51D-14",
+  "_prec": "poi",
+  "_match": "Jardín Botánico"
+ },
+ "Biblioteca Pública Usaquén Servitá - Bogotá": {
+  "lat": 4.74197,
+  "lng": -74.02381,
+  "city": "Bogotá",
+  "short": "Biblioteca Pública Usaquén Servitá",
+  "address": "Calle 165 # 7-52",
+  "_prec": "manual",
+  "_match": "Biblioteca Servitá, Calle 165 — verificado a mano"
+ },
+ "Casa Cultural y Comunitaria Casa Sin Raza - Bogotá": {
+  "lat": 4.6140704,
+  "lng": -74.1975551,
+  "city": "Bogotá",
+  "short": "Casa Cultural y Comunitaria Casa Sin Raza",
+  "address": "Diagonal 73B Sur # 82F-34",
+  "_prec": "manual",
+  "_match": "Centro Artístico Perros Sin Raza — Dg. 73b Sur #82f-34 ✓dir",
+  "_fuente": "Google Maps (verificado 2026-08-05)"
+ },
+ "Librería Bagatá - Quibdó": {
+  "lat": 5.6912842,
+  "lng": -76.6574025,
+  "city": "Quibdó",
+  "short": "Librería Bagatá",
+  "address": "Cra. 7 #27-3 (frente al Colegio Carrasquilla)",
+  "_prec": "calle",
+  "_match": "Carrera 7, Alameda Reyes, Anillo Central, Ciudad de Quibdó, Quibdó, At"
+ },
+ "Casa de la Juventud El Cacma - Bogotá": {
+  "lat": 4.6224979,
+  "lng": -74.0811927,
+  "city": "Bogotá",
+  "short": "Casa de la Juventud El Cacma",
+  "address": "Calle 24 # 27A-31",
+  "_prec": "manual",
+  "_match": "Casa de la Juventud de Los Mártires — Cl. 24 #27A-31 ✓dir",
+  "_fuente": "Google Maps (verificado 2026-08-05)"
+ },
+ "Casa de las Luciérnagas - Bogotá": {
+  "lat": 4.6067352,
+  "lng": -74.2038167,
+  "city": "Bogotá",
+  "short": "Casa de las Luciérnagas",
+  "address": "Diagonal 73H SUR # 78-38",
+  "_prec": "calle",
+  "_match": "Diagonal 73H Sur, Esperanza del Tibaníca, UPZs de Bogotá, Localidad Bo"
+ },
+ "Casa Cromo Casa Cultural - Armenia": {
+  "lat": 4.559016,
+  "lng": -75.6542441,
+  "city": "Armenia",
+  "short": "Casa Cromo Casa Cultural",
+  "address": "Calle 22 Norte # 12-39",
+  "_prec": "calle",
+  "_match": "Calle 22 Norte, Coinca, Comuna Quimbaya, Perímetro Urbano Armenia, Arm"
+ },
+ "Museo Panóptico de Ibagué - Ibagué": {
+  "lat": 4.4481695,
+  "lng": -75.2399655,
+  "city": "Ibagué",
+  "short": "Museo Panóptico de Ibagué",
+  "address": "",
+  "_prec": "poi",
+  "_match": "Museo Panoptico De ibagué",
+  "_nota": "Mismo complejo que «Centro Cultural Panóptico de Ibagué» (a 20 m). Una sola función, el 15 ago. Nombre tal cual lo publica el festival."
+ },
+ "La Trocha - Casa de la Paz - Bogotá": {
+  "lat": 4.6248165,
+  "lng": -74.0679005,
+  "city": "Bogotá",
+  "short": "La Trocha - Casa de la Paz",
+  "address": "",
+  "_prec": "manual",
+  "_match": "La Trocha, La Casa de la Paz — Kr 13 #36-37 ✓dir",
+  "_fuente": "Google Maps (verificado 2026-08-05)"
+ },
+ "La Trocha, La Casa de la Paz - Bogotá": {
+  "lat": 4.6248165,
+  "lng": -74.0679005,
+  "city": "Bogotá",
+  "short": "La Trocha, La Casa de la Paz",
+  "address": "Cra. 13 # 36-37",
+  "_prec": "manual",
+  "_match": "La Trocha, La Casa de la Paz — Kr 13 #36-37 ✓dir",
+  "_fuente": "Google Maps (verificado 2026-08-05)"
+ },
+ "Book Times - Barranquilla": {
+  "lat": 10.9790026,
+  "lng": -74.7960474,
+  "city": "Barranquilla",
+  "short": "Book Times",
+  "address": "Calle 54 # 53-76",
+  "_prec": "calle",
+  "_match": "Calle 54, El Recreo, Lucero, Localidad Suroccidente, Localidad Norte -"
+ },
+ "Casa B - Bogotá": {
+  "lat": 4.5533234,
+  "lng": -74.100257,
+  "city": "Bogotá",
+  "short": "Casa B",
+  "address": "Cra. 2 BIS # 6D-30",
+  "_prec": "calle",
+  "_match": "Carrera 2 Bis, UPZs de Bogotá, Localidad San Cristóbal, Bogotá, Bogotá"
+ },
+ "El Teatrino - Cartagena": {
+  "lat": 10.3917183,
+  "lng": -75.4959899,
+  "city": "Cartagena",
+  "short": "El Teatrino",
+  "address": "Los Almendros Mz E # Lote 11",
+  "_prec": "manual",
+  "_match": "EL TEATRINO CARTAGENA — Los Almendros Mz E lote 11 ✓dir",
+  "_fuente": "Google Maps (verificado 2026-08-05)"
+ },
+ "Lember Cinéma - Ibagué": {
+  "lat": 4.4346758,
+  "lng": -75.2128494,
+  "city": "Ibagué",
+  "short": "Lember Cinéma",
+  "address": "Calle 42 # 3-45",
+  "_prec": "calle",
+  "_match": "Calle 42, La Macarena, Casa Club, Comuna 10 - Estadio, Perímetro Urban"
+ },
+ "Cine Club Alef - Casa Hoja - Pereira": {
+  "lat": 4.8161526,
+  "lng": -75.6885385,
+  "city": "Pereira",
+  "short": "Cine Club Alef - Casa Hoja",
+  "address": "Calle 12 bis # 16-18, Av. Circunvalar",
+  "_prec": "calle",
+  "_match": "Calle 12 Bis, Sector Parque La Libertad, Centro, AMCO, Area Metropolit"
+ },
+ "Casa Aparte - Armenia": {
+  "lat": 4.5453739,
+  "lng": -75.6744517,
+  "city": "Armenia",
+  "short": "Casa Aparte",
+  "address": "Cra. 23d # 11-25",
+  "_prec": "calle",
+  "_match": "Carrera 23D, Granada, Fundadores, Comuna Fundadores, Perímetro Urbano "
+ },
+ "Laboratorio 1 y 2 - Cinemateca de Bogotá - Bogotá": {
+  "lat": 4.6031614,
+  "lng": -74.0676717,
+  "city": "Bogotá",
+  "short": "Laboratorio 1 y 2 - Cinemateca de Bogotá",
+  "address": "",
+  "_prec": "alias",
+  "_match": "hereda de «Cinemateca de Bogotá - Bogotá»"
+ },
+ "Centro Cultural del Socorro - Cartagena": {
+  "lat": 10.3842515,
+  "lng": -75.4805496,
+  "city": "Cartagena",
+  "short": "Centro Cultural del Socorro",
+  "address": "Cra. 71 # 26-210, sobre la Avenida Principal del barrio El Socorro",
+  "_prec": "poi",
+  "_match": "Centro cultural El Socorro"
+ },
+ "Función Aire Libre - Malecón - Quibdó": {
+  "lat": 5.6912238,
+  "lng": -76.6619724,
+  "city": "Quibdó",
+  "short": "Función Aire Libre - Malecón",
+  "address": "",
+  "_prec": "manual",
+  "_match": "Malecón del Río Atrato de Quibdó",
+  "_fuente": "Google Maps (verificado 2026-08-05)"
+ },
+ "Museo Intangible del Confinamiento. Casa de la Cultura Alfonso López - Pereira": {
+  "lat": 4.8111739,
+  "lng": -75.6769712,
+  "city": "Pereira",
+  "short": "Museo Intangible del Confinamiento. Casa de la Cultura Alfonso López",
+  "address": "Carrera 7b # 2e-05, barrio Alfonso López",
+  "_prec": "calle",
+  "_match": "Carrera 7B, Alfonso Lopez, Oriente, AMCO, Area Metropolitana Centro Oc"
+ },
+ "Biblioteca Pública Deptal Arnoldo de los Santos Palacios Mosquera - Quibdó": {
+  "lat": 5.6904134,
+  "lng": -76.6448593,
+  "city": "Quibdó",
+  "short": "Biblioteca Pública Deptal Arnoldo de los Santos Palacios Mosquera",
+  "address": "Calle 30, Avenida Aeropuerto, Barrio Los Ángeles (frente al Aeropuerto El Caraño)",
+  "_prec": "manual",
+  "_match": "Biblioteca Pública Arnoldo Palacios Mosquera",
+  "_fuente": "Google Maps (verificado 2026-08-05)"
+ },
+ "Centro Comunitario Nueva Colombia / Biblioteca Pa To Ma Suto - Barranquilla": {
+  "lat": 10.9676945,
+  "lng": -74.8215917,
+  "city": "Barranquilla",
+  "short": "Centro Comunitario Nueva Colombia / Biblioteca Pa To Ma Suto",
+  "address": "Diagonal 75A # 15D-67",
+  "_prec": "manual",
+  "_match": "Dg. 75a #15d-67, La Esmeralda ✓dir",
+  "_fuente": "Google Maps (verificado 2026-08-05)"
+ },
+ "Cineprox - Medellín": {
+  "lat": 6.2145832,
+  "lng": -75.5963458,
+  "city": "Medellín",
+  "short": "Cineprox",
+  "address": "Dg. 75B #2A-120Rotonda Comercial Las Américas",
+  "_prec": "manual",
+  "_match": "Procinal Las Américas — Dg. 75B #2A-120 ✓dir",
+  "_fuente": "Google Maps (verificado 2026-08-05)"
+ },
+ "Alianza Francesa - Cartagena": {
+  "lat": 10.4264842,
+  "lng": -75.5482642,
+  "city": "Cartagena",
+  "short": "Alianza Francesa",
+  "address": "Parque Fernández de Madrid, Cra. 8 # 37-34, San Diego",
+  "_prec": "calle",
+  "_match": "Parque Fernández de Madrid, San Diego, Cartagena de Indias, Dique, Bol"
+ },
+ "Cárcel La 40 Establecimiento Penitenciario y Carcelario de Pereira INPEC - Pereira": {
+  "lat": 4.8150804,
+  "lng": -75.7052052,
+  "_osm": "Carrera 8, Primero de Febrero, Centro, AMCO, Area Metropolitana Centro"
+ },
+ "Universidad Tecnológica del Chocó - Quibdó": {
+  "lat": 5.6816076,
+  "lng": -76.6467514,
+  "_osm": "Universidad Tecnológica del Chocó Diego Luis Córdoba, Carrera 22, Simó"
+ },
+ "Universidad del Quindío - Armenia": {
+  "lat": 4.5538677,
+  "lng": -75.6610022,
+  "city": "Armenia",
+  "short": "Universidad del Quindío",
+  "address": "Cra. 15 con calle 12 Norte",
+  "_prec": "poi",
+  "_match": "Universidad del Quindío"
+ },
+ "Colegio Cruzada Social - Barranquilla": {
+  "lat": 10.957462,
+  "lng": -74.80272,
+  "_osm": "IED Cruzada Social, Carrera 13C, La Sierra, Localidad Metropolitana, P"
+ },
+ "Casa de la Juventud Usaquén - Bogotá": {
+  "lat": 4.7302391,
+  "lng": -74.0258586,
+  "city": "Bogotá",
+  "short": "Casa de la Juventud Usaquén",
+  "address": "Calle 155 # 7-45",
+  "_prec": "calle",
+  "_match": "Calle 155, UPZs de Bogotá, Localidad Usaquén, Bogotá, Bogotá, Distrito"
+ },
+ "Universidad Tecnológica de Pereira -UTP - Pereira": {
+  "lat": 4.7943151,
+  "lng": -75.6888918,
+  "city": "Pereira",
+  "short": "Universidad Tecnológica de Pereira -UTP",
+  "address": "Bloque 13 Sala Magistral 1 (Carrera 27 #10-02, Barrio Álamos)",
+  "_prec": "poi",
+  "_match": "Universidad Tecnológica de Pereira"
+ },
+ "Biblioteca Pública Gabriel García Márquez - Bogotá": {
+  "lat": 4.5718289,
+  "lng": -74.1298209,
+  "city": "Bogotá",
+  "short": "Biblioteca Pública Gabriel García Márquez",
+  "address": "Calle 48B SUR # 21-13",
+  "_prec": "manual",
+  "_match": "Biblioteca El Tunal Gabriel García Márquez — Cl. 48b Sur #21-13 ✓dir",
+  "_fuente": "Google Maps (verificado 2026-08-05)"
+ },
+ "Biblioteca Pública Manuel Zapata Olivella - Bogotá": {
+  "lat": 4.6430663,
+  "lng": -74.1547667,
+  "city": "Bogotá",
+  "short": "Biblioteca Pública Manuel Zapata Olivella",
+  "address": "Av. Ciudad de Cali # 6C-09",
+  "_prec": "poi",
+  "_match": "Biblioteca el Tintal Manuel Zapata Olivella"
+ },
+ "Casa de la Juventud Nacho Sánchez - Bogotá": {
+  "lat": 4.5401056,
+  "lng": -74.0980355,
+  "city": "Bogotá",
+  "short": "Casa de la Juventud Nacho Sánchez",
+  "address": "Cra. 3 Este # 9-58",
+  "_prec": "calle",
+  "_match": "Carrera 3 Este, Villabel, UPZs de Bogotá, Localidad San Cristóbal, Bog"
+ },
+ "All Cine Cable Plaza - Manizales": {
+  "lat": 5.0562896,
+  "lng": -75.4854314,
+  "city": "Manizales",
+  "short": "All Cine Cable Plaza",
+  "address": "Av. Santander Cra. 23 # 65-11, Piso 3",
+  "_prec": "manual",
+  "_match": "All Cine — Av. Santander",
+  "_fuente": "Google Maps (verificado 2026-08-05)"
+ },
+ "Casa de la Juventud El Frailejón - Bogotá": {
+  "lat": 4.5121198,
+  "lng": -74.1145298,
+  "city": "Bogotá",
+  "short": "Casa de la Juventud El Frailejón",
+  "address": "Cra. 12 # 76A-28 Sur",
+  "_prec": "manual",
+  "_match": "Casa de Juventud «El Frailejón» de Usme — Cra. 12 #76A-28 sur ✓dir",
+  "_fuente": "Google Maps (verificado 2026-08-05)"
+ },
+ "Biblioteca Pública Francisco José de Caldas - Bogotá": {
+  "lat": 4.7411974,
+  "lng": -74.0847011,
+  "city": "Bogotá",
+  "short": "Biblioteca Pública Francisco José de Caldas",
+  "address": "Cra. 92 # 146 C - 24",
+  "_prec": "poi",
+  "_match": "Biblioteca Pública Francisco José de Caldas"
+ },
+ "Biblioteca Pública Julio Mario Santodomingo - Bogotá": {
+  "lat": 4.7566147,
+  "lng": -74.0626286,
+  "city": "Bogotá",
+  "short": "Biblioteca Pública Julio Mario Santodomingo",
+  "address": "Calle 170 # 67-51",
+  "_prec": "poi",
+  "_match": "Biblioteca Pública Julio Mario Santo Domingo"
+ },
+ "Biblioteca Pública La Marichuela - Bogotá": {
+  "lat": 4.5121758,
+  "lng": -74.1177298,
+  "city": "Bogotá",
+  "short": "Biblioteca Pública La Marichuela",
+  "address": "Diagonal 76B Sur # 1C-40",
+  "_prec": "poi",
+  "_match": "Biblioteca Pública La Marichuela"
+ },
+ "Universidad Tecnológica de Pereira - Bloque 13, Sala Magistral 1 - Pereira": {
+  "lat": 4.7943151,
+  "lng": -75.6888918,
+  "city": "Pereira",
+  "short": "Universidad Tecnológica de Pereira - Bloque 13, Sala Magistral 1",
+  "address": "",
+  "_prec": "alias",
+  "_match": "hereda de «Universidad Tecnológica de Pereira -UTP - Pereira»"
+ },
+ "Rueda Libre (La Ceja) - Medellín": {
+  "lat": 6.030433,
+  "lng": -75.4333412,
+  "city": "Medellín",
+  "short": "Rueda Libre (La Ceja)",
+  "address": "Teatro Municipal Juan de Dios Aranzazu: Cra. 22 #18-77",
+  "_prec": "manual",
+  "_match": "Teatro Municipal Juan de Dios Aranzazu — Cra. 22 #18-77, LA CEJA ✓dir",
+  "_fuente": "Google Maps (verificado 2026-08-05)"
+ },
+ "Shuffle live music - Pereira": {
+  "lat": 4.8150592,
+  "lng": -75.6983206,
+  "city": "Pereira",
+  "short": "Shuffle live music",
+  "address": "CC El Lago. Calle 24 #7-17, local 303",
+  "_prec": "manual",
+  "_match": "Shuffle Live Music — CC El Lago, Cl. 24 #7-17 local 303 ✓dir",
+  "_fuente": "Google Maps (verificado 2026-08-05)"
+ },
+ "Casa Cultural El Bordillo - Barranquilla": {
+  "lat": 10.9998767,
+  "lng": -74.8190555,
+  "city": "Barranquilla",
+  "short": "Casa Cultural El Bordillo",
+  "address": "Cra. 44 # 87-44",
+  "_prec": "calle",
+  "_match": "Carrera 44, Granadillo, Localidad Norte - Centro Histórico, Perímetro "
+ },
+ "Auditorio Principal - UNIAGRARIA - Bogotá": {
+  "lat": 4.7542802,
+  "lng": -74.0533574,
+  "city": "Bogotá",
+  "short": "Auditorio Principal - UNIAGRARIA",
+  "address": "",
+  "_prec": "manual",
+  "_match": "UNIAGRARIA — Cl. 170 #54a-10",
+  "_fuente": "Google Maps (verificado 2026-08-05)"
+ },
+ "Institución Educativa Jaime Salazar Robledo - Pereira": {
+  "lat": 4.7959136,
+  "lng": -75.6670807,
+  "_osm": "Villa Santana, Villasantana, Perimetro Urbano Pereira, Pereira, Risara"
+ },
+ "Centro de Conciliación y Arbitraje - Universidad del Norte - Barranquilla": {
+  "lat": 11.0060088,
+  "lng": -74.7953414,
+  "city": "Barranquilla",
+  "short": "Centro de Conciliación y Arbitraje - Universidad del Norte",
+  "address": "Calle 74 # 58-79",
+  "_prec": "calle",
+  "_match": "Calle 74, La Concepción, Localidad Norte - Centro Histórico, Perímetro"
+ },
+ "Universidad Jorge Tadeo Lozano Salón Oval - Bogotá": {
+  "lat": 4.607911,
+  "lng": -74.0673108,
+  "city": "Bogotá",
+  "short": "Universidad Jorge Tadeo Lozano Salón Oval",
+  "address": "Universidad Jorge Tadeo Lozano Salón Oval",
+  "_prec": "poi",
+  "_match": "Casa de los Deportes, Universidad de Bogota Jorge Tadeo Lozano"
+ },
+ "Auditorio Tulio Gómez Estrada, Facultad de Ciencias Jurídicas y Sociales - Manizales": {
+  "lat": 5.0637592,
+  "lng": -75.4959969,
+  "city": "Manizales",
+  "short": "Auditorio Tulio Gómez Estrada, Facultad de Ciencias Jurídicas y Sociales",
+  "address": "Av. Santander # 57-58",
+  "_prec": "calle",
+  "_match": "Avenida Santander, Belén, Comuna Palogrande, Perímetro Urbano Manizale"
+ },
+ "Casa de la Juventud Huitaca - Bogotá": {
+  "lat": 4.646258,
+  "lng": -74.1221864,
+  "city": "Bogotá",
+  "short": "Casa de la Juventud Huitaca",
+  "address": "Calle 17A # 118-25",
+  "_prec": "calle",
+  "_match": "Calle 17A, Franco, UPZs Localidad Fontibón, Localidad Fontibón, Bogotá"
+ },
+ "Casa de la Juventud Chiguazá - Bogotá": {
+  "lat": 4.5512974,
+  "lng": -74.1091675,
+  "city": "Bogotá",
+  "short": "Casa de la Juventud Chiguazá",
+  "address": "Calle 48P BIS D Sur # 5A-43",
+  "_prec": "calle",
+  "_match": "Calle 48P Bis D Sur, Los Molinos II, UPZs de Bogotá, Localidad Rafael "
+ },
+ "Sala 2 de la Cinemateca - Bogotá": {
+  "lat": 4.6031614,
+  "lng": -74.0676717,
+  "city": "Bogotá",
+  "short": "Sala 2 de la Cinemateca",
+  "address": "",
+  "_prec": "alias",
+  "_match": "hereda de «Cinemateca de Bogotá - Bogotá»"
+ },
+ "Universidad Alexander von Humboldt - Armenia": {
+  "lat": 4.5425151,
+  "lng": -75.6627651,
+  "city": "Armenia",
+  "short": "Universidad Alexander von Humboldt",
+  "address": "Avenida Bolívar # 1-189",
+  "_prec": "poi",
+  "_match": "CUE Alexander von Humboldt"
+ },
+ "Universidad del Atlántico - Centro de Convenciones - Barranquilla": {
+  "lat": 11.019602,
+  "lng": -74.8732855,
+  "city": "Barranquilla",
+  "short": "Universidad del Atlántico - Centro de Convenciones",
+  "address": "Universidad del Atlántico - Puerto Colombia - Cra. 30 # 8-49, Puerto Colombia",
+  "_prec": "manual",
+  "_match": "Centro de Convenciones Universidad del Atlántico",
+  "_fuente": "Google Maps (verificado 2026-08-05)"
+ },
+ "Biblioteca Pública Carlos E. Restrepo - Bogotá": {
+  "lat": 4.5843555,
+  "lng": -74.1032378,
+  "city": "Bogotá",
+  "short": "Biblioteca Pública Carlos E. Restrepo",
+  "address": "Diagonal 21A Sur # 19-54 sur",
+  "_prec": "poi",
+  "_match": "Biblioteca Pública Carlos E. Restrepo"
+ },
+ "Fundación Puerto Colombia - Barranquilla": {
+  "lat": 10.9881836,
+  "lng": -74.9591253,
+  "city": "Barranquilla",
+  "short": "Fundación Puerto Colombia",
+  "address": "Estación Ferrocarril de Bolívar, Cra. 4 # 2-45",
+  "_prec": "manual",
+  "_match": "Estación Ferrocarril de Bolívar — Cra. 4 #2-45, PUERTO COLOMBIA ✓dir",
+  "_fuente": "Google Maps (verificado 2026-08-05)"
+ },
+ "Maloka Cultural - Barranquilla": {
+  "lat": 10.9954675,
+  "lng": -74.8076454,
+  "city": "Barranquilla",
+  "short": "Maloka Cultural",
+  "address": "Cra. 46 # 79-18",
+  "_prec": "calle",
+  "_match": "Carrera 46, Barrio América, Localidad Norte - Centro Histórico, Períme"
+ },
+ "Teatro Los Fundadores - Manizales": {
+  "lat": 5.0684238,
+  "lng": -75.5103558,
+  "city": "Manizales",
+  "short": "Teatro Los Fundadores",
+  "address": "Carrera 22 Calle 33",
+  "_prec": "poi",
+  "_match": "Teatro Fundadores"
+ },
+ "Centro Cultural de Cali - Cali": {
+  "lat": 3.4498201,
+  "lng": -76.5361556,
+  "city": "Cali",
+  "short": "Centro Cultural de Cali",
+  "address": "Cra. 5 # 6-05, San Pedro",
+  "_prec": "manual",
+  "_match": "Centro Cultural De Cali",
+  "_fuente": "Google Maps (verificado 2026-08-05)",
+  "_nota": "Comparte dirección y coordenadas con «Plazoleta del Samán», que es su espacio al aire libre. Espacios distintos."
+ },
+ "Institución Educativa Los Arrieritos - Manizales": {
+  "lat": 5.0743694,
+  "lng": -75.5081209,
+  "city": "Manizales",
+  "short": "Institución Educativa Los Arrieritos",
+  "address": "",
+  "_prec": "ciudad",
+  "_geo": "CENTROIDE de Manizales — la fuente no da dirección y el único resultado en Maps cae a 42 km, probablemente en otro municipio de Caldas. Preguntar al festival."
+ },
+ "Aguas Fieras - Medellín": {
+  "lat": 6.2097776,
+  "lng": -75.5751323,
+  "city": "Medellín",
+  "short": "Aguas Fieras",
+  "address": "Cra. 45 #7-45, El Poblado",
+  "_prec": "manual",
+  "_match": "Aguas Fieras — Cra. 45 #7-45, El Poblado ✓dir",
+  "_fuente": "Google Maps (verificado 2026-08-08)"
+ }
+}

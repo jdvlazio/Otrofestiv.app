@@ -13,10 +13,10 @@
 // WORKER: las sched pure fns tienen COPIAS en el template del calc worker; el
 //   worker las consume vía eval(name).toString(). [worker-overlap] valida.
 
-import { FESTIVAL_BUFFER } from "../config.js";
+import { FESTIVAL_BUFFER, FESTIVAL_CONFIG } from "../config.js";
 import { toMin, parseDur } from "./time.js";
 import { effectiveDuration, blockDuration, durationForTravel, screeningPassed, shuffle, scoreFilm, _titleSeed, _mulberry32 } from "./film.js";
-import { travelMins } from "./festival.js";
+import { travelMins, _resolveVenue } from "./festival.js";
 export function screensConflict(a,b){
   // Eventos informativos (info:true) — drop-in / sin hora fija: nunca generan
   // conflicto (no se planifican). Ver docs/SCHEMA.md.
@@ -65,9 +65,24 @@ export function screensConflict(a,b){
 // ninguno — el usuario buscaba un solape inexistente (caso real TT: Contra Todo
 // 13:00–14:55 en Cinemateca → Raíces del juego 16:00 en Fontanar: 65 min de hueco,
 // 17,6 km de por medio).
+// _cityOf — ciudad declarada de la sede de una función ('' si no declara).
+// Local al dominio: no puede importar de view/. Lee la misma fuente que vcfg.
+function _cityOf(s){
+  const vs=(FESTIVAL_CONFIG[_activeFestId]||{}).venues||{};
+  return (s&&s.venue)?(_resolveVenue(s.venue,vs).city||''):'';
+}
+
 export function screensConflictReason(a,b){
   if(!screensConflict(a,b)) return null;
   // Mismos fines que screensConflict (Q&A solo cuenta si hay traslado).
+  // CIUDADES DISTINTAS (FICDEH 2026: 11 ciudades) — kind propio, antes que el de
+  // viaje. Motivo: travelMins aplica velocidad URBANA (10 km/h con overhead de
+  // transporte público) a distancias intermunicipales, así que Bogotá→Ibagué
+  // (130 km, ~4 h en bus) le sale 13 h. Ese número no es confiable y NO se
+  // muestra: la app dice la ciudad, que es un dato, y deja que el usuario juzgue.
+  // Mismo criterio que el Q&A: donde no sabemos, no afirmamos.
+  const _ca=_cityOf(a), _cb=_cityOf(b);
+  if(_ca&&_cb&&_ca!==_cb) return {kind:'ciudad', city:_cb, cityFrom:_ca};
   const _tv=(a.venue&&b.venue)?travelMins(a.venue,b.venue):0;
   const aS=toMin(a.time), aE=aS+durationForTravel(a,_tv);
   const bS=toMin(b.time), bE=bS+durationForTravel(b,_tv);
@@ -88,6 +103,32 @@ export function isScreeningBlocked(s){
   const sStart=toMin(s.time),sEnd=sStart+blockDuration(s);
   // Chequeo de solapamiento completo: excluye funciones que ocurran durante el bloque
   return av.blocks.some(b=>sStart<toMin(b.to)&&sEnd>toMin(b.from));
+}
+
+// ── plannableScreens — DUEÑO ÚNICO de «qué funciones de este título son
+// planificables AHORA MISMO, para vos» ───────────────────────────────────────
+// Junta los cuatro filtros que el planeador aplica antes de decidir: cancelada,
+// ya pasada, en una franja que vetaste, y la regla del taller multi-día.
+//
+// TALLER MULTI-DÍA: entero o nada — también frente a TU disponibilidad. La rama
+// todo-o-nada del backtracking mete el grupo completo, pero el grupo ya venía
+// FILTRADO: si vetaste la tarde de una de las sesiones, llegaba con 2 de 3 y el
+// plan proponía medio taller. Quien se inscribe va a todas; un plan con 2 de 3
+// no es medio taller, es un plan que miente — es lo que verifyPlan llama
+// 'bloque-incompleto'. Se compara contra el CATÁLOGO, no contra el filtro, para
+// que valga igual si la sesión falta por veto, por cancelación o porque pasó.
+//
+// Cazado por tests/recorrido-festival.spec.js en Leviza (9 ago 2026) al vetar un
+// día entero. Vive acá y no inline porque la regla la necesitan tres: el
+// planeador, el oráculo exacto y el recorrido por festival — y una regla con
+// tres copias es una regla que se desincroniza.
+export function plannableScreens(title){
+  const screens=FILMS.filter(f=>f.title===title&&!f._cancelled&&!isScreeningBlocked(f)&&!screeningPassed(f));
+  if(screens.length&&screens[0].is_recurring){
+    const total=FILMS.filter(f=>f.title===title&&f.is_recurring&&f.day&&f.time&&!f._cancelled).length;
+    if(total&&screens.length!==total) return [];
+  }
+  return screens;
 }
 
 export function sortScreensByStrategy(screens, allGroups){
@@ -117,7 +158,7 @@ export function computeScenarios(titles){
   const baseGroups=pending.map(t=>{
     // `_cancelled` lo sella el loader desde NOTICES. Sin este filtro el
     // optimizador armaba el día alrededor de una función que no va a ocurrir.
-    const screens=FILMS.filter(f=>f.title===t&&!f._cancelled&&!isScreeningBlocked(f)&&!screeningPassed(f));
+    const screens=plannableScreens(t);
     const isPrio=prioritized.has(t);
     const sc=scoreFilm(t,screens,isPrio,allPendingTitles);
     const isRec=screens.length>0&&!!screens[0].is_recurring;
@@ -376,6 +417,22 @@ export function verifyPlan(schedule, opts){
       if(a._squeezed||b._squeezed) continue;
       if(screensConflict(a,b)) v.push({kind:'conflicto', title:a._title||a.title, with:b._title||b.title});
     }
+  }
+  // BLOQUE INCOMPLETO — un taller multi-día se toma ENTERO: quien se inscribe va
+  // a todas las sesiones. Un plan con 1 de 2 no es medio taller, es un plan que
+  // miente. El chequeo de duplicado de arriba no puede cazarlo: para él las
+  // repeticiones del título son legítimas, y ese es justo el permiso que da
+  // is_recurring. Necesita el catálogo (opts.catalog) porque el schedule solo sabe
+  // lo que YA está; sin catálogo no se verifica (las llamadas viejas no cambian).
+  const cat=opts&&opts.catalog;
+  if(cat){
+    const enPlan={};
+    list.forEach(s=>{ const t=s._title||s.title||''; if(s.is_recurring) enPlan[t]=(enPlan[t]||0)+1; });
+    Object.keys(enPlan).forEach(t=>{
+      const total=cat.filter(f=>f&&f.is_recurring&&(f.title===t)&&f.day&&f.time).length;
+      if(total&&enPlan[t]!==total)
+        v.push({kind:'bloque-incompleto', title:t, tiene:enPlan[t], necesita:total});
+    });
   }
   return {ok:v.length===0, violations:v};
 }

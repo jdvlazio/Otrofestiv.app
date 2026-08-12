@@ -37,7 +37,7 @@ import { LANGS, t, _applyI18nDOM } from './i18n/i18n.js';
 //   las consume vía eval(name).toString(); sus copias worker-local se quedan. ──
 import { toMin, parseDur, minToStr, _festDate, simNow, simTodayStr, dayFullyPassed, festivalEnded } from './domain/time.js';
 import { _djb2, _titleSeed, _mulberry32, shuffle, scoreFilm, effectiveDuration, screeningPassed, _classifyTodayScreenings, _endedStats, normTitle } from './domain/film.js';
-import { screensConflict, isScreeningBlocked, sortScreensByStrategy, computeScenarios } from './domain/schedule.js';
+import { screensConflict, isScreeningBlocked, plannableScreens, sortScreensByStrategy, computeScenarios, verifyPlan } from './domain/schedule.js';
 import { _resolveVenue, _gapSuggestion, _getFestivalPhase, venueTravelMins, travelMins } from './domain/festival.js';
 
 // ── Step 6a: view/components.js — capa presentacional foundational de Wave 6
@@ -85,12 +85,13 @@ import {
 import {
   _posterStyle, getPosterSrc, getFilmPoster, getCortoItemPoster, _getItemPoster, _isEditorialPoster, _posterThumb, isNowShowing, isToday, vcfg, sala, travelWarn, mplanEndStr, mplanBlockType, dayChip, dayLabel, _lblLocalized, durFmt, flagFmt, _langDates, _mkCortoItemHtml, starsText, _dayChips, _metaBadges, _programaStack, _plistPosterHtml, DAY_SHORT_EN,
   setDayShort, setDayShortEn, setPosters, setCustomPosters,
-  emptyState, emptyStateHero, DAYS,
+  emptyState, emptyStateHero, DAYS, venueLabel, ticketBadgeTarget,
 } from './view/helpers.js';
 
 // ── Step 6f: view/agenda.js — render de agenda+miplan (18 fns). ───────────────
 import {
   renderAgenda, renderMiPlanCalendar, renderUnconfirmed, renderFilmAlternatives, renderContextualHeader, renderPrioStrip, renderFilmListHTML, renderSavedAgendaHTML, renderAvBlocks, updateCardState, updateHorarioPrioBtn, _fixStickyOffset, _scrollMiPlanToNow, _updateMiPlanBadge,
+  getSuggestions,
 } from './view/agenda.js';
 
 // ── Step 7a: controller/calc.js — orquestación del planner (worker). ─────────
@@ -119,7 +120,8 @@ import {
 
 // ── Step 7d-3: controller/handlers.js — mutators+filters+composites. ─────────
 import {
-  toggleWL, toggleWatched, togglePelPrio, togglePelWL, setDelay, undoDelay, clearDelay, removeFromAgenda, addSuggestion, _planFixNotice, checkinLaVi, checkinNoLaVi, forceInclude, togglePriority, swapPriority, markWatchedFromPlan, confirmReplace, removeFilmFromScenario, _dismissNotice, selectMiPlanDay, miPlanNav, toggleMplanProg, setActivePlanFilm, selectFromDetail, toggleFilmAlternatives, _toggleEveningFilms, filterByVenue, filterByDay, filterBySection, setInteresesView, setProgramaMode, toggleProgramaView, setProgramaView, setProgramaChip, clearProgramaChip, _pafClearSec, _pafClearVenue, _toggleWLFromList, saveCurrentScenario, _scrollToAgSection, _setExpandedFilm, _closePelAndRemove, _closePelAndRate, _navTo, _closeAuthAndReset, _toggleCtxOlder, _toggleWatchedAndClose, _toggleWLAndClose, _activatePlanFilm, _scrollToSuggestions, _removeConflictModal, _scrollToTop, _searchOpenFilm, _searchOpenCorto,
+  citySheetPick, citySheetAll,
+  toggleWL, toggleWatched, togglePelPrio, togglePelWL, setDelay, undoDelay, clearDelay, removeFromAgenda, addSuggestion, addRecurringBlock, removeRecurringBlock, _planFixNotice, checkinLaVi, checkinNoLaVi, forceInclude, togglePriority, swapPriority, markWatchedFromPlan, confirmReplace, removeFilmFromScenario, _dismissNotice, selectMiPlanDay, miPlanNav, toggleMplanProg, setActivePlanFilm, selectFromDetail, toggleFilmAlternatives, _toggleEveningFilms, filterByVenue, filterByDay, filterBySection, setInteresesView, setProgramaMode, toggleProgramaView, setProgramaView, setProgramaChip, clearProgramaChip, _pafClearSec, _pafClearVenue, _toggleWLFromList, saveCurrentScenario, _scrollToAgSection, _setExpandedFilm, _closePelAndRemove, _closePelAndRate, _navTo, _closeAuthAndReset, _toggleCtxOlder, _toggleWatchedAndClose, _toggleWLAndClose, _activatePlanFilm, _scrollToSuggestions, _removeConflictModal, _scrollToTop, _searchOpenFilm, _searchOpenCorto,
 } from './controller/handlers.js';
 import { setDelaysRerender } from './controller/delays-cloud.js';
 import { initWatchBridge } from './controller/watch-bridge.js';
@@ -258,6 +260,11 @@ const ACTION_REGISTRY = {
   toggleEveningFilms:  (el)    => _toggleEveningFilms(el),
   toggleWLFromList:    (el)    => _toggleWLFromList(el.dataset.title, el),
   addSuggestion:       (el)    => addSuggestion(el.dataset.title, el.dataset.day, el.dataset.time),
+  // taller multi-día: el bloque entra o sale entero (no hay acción por sesión)
+  addRecurringBlock:   (el)    => addRecurringBlock(el.dataset.title),
+  removeRecurringBlock:(el)    => removeRecurringBlock(el.dataset.title),
+  citySheetPick:       (el)    => citySheetPick(el.dataset.city),
+  citySheetAll:        ()      => citySheetAll(),
   clearProgramaChip:   ()      => clearProgramaChip(),
   runCalc:             ()      => runCalc(),
   openDiary:           ()      => openDiary(),
@@ -447,7 +454,7 @@ FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202608021618';
+const BUILD_VERSION='202608121033';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';
@@ -1308,7 +1315,7 @@ document.addEventListener('click', function(e){
   //      — corren en GLOBAL scope, no module scope → DEBEN estar en globalThis
   //      (correctness de producción, no solo tests; onerror no se migró en 7c).
   //  (b) page.evaluate de la suite Playwright.
-  Object.assign(globalThis, {
+  Object.assign(globalThis, { venueLabel, sala,
     // (a) inline on* handlers — producción
     //     en HTML generado (main.js innerHTML): onerror=_posterErr/_cortoSheetPosterErr
     //     en markup estático (index.html): oninput/onkeyup/onkeydown=searchQuery,
@@ -1329,12 +1336,30 @@ document.addEventListener('click', function(e){
     // commitPlan: el chokepoint de escritura del plan — expuesto para que la
     // suite pruebe strict-mode (__PLAN_STRICT__) sin montar un flujo entero.
     commitPlan,
+    // verifyPlan: el certificador del plan. Expuesto para que los tests puedan
+    // exigir invariantes sobre el resultado (p. ej. el bloque recurrente completo).
+    verifyPlan,
+    // ticketBadgeTarget: qué marca el badge de precio (la minoría) — expuesto
+    // para que la suite lo consulte sin recalcular la proporción a mano.
+    ticketBadgeTarget,
+    // screensConflict + isScreeningBlocked: los DUEÑOS de «estas dos no caben» y
+    // «esta franja está vetada». El recorrido por festival
+    // (tests/recorrido-festival.spec.js) audita con ellos el plan que la UI acaba
+    // de mostrar. Se exponen para que el test PREGUNTE en vez de reimplementar:
+    // un test que recalcula la regla es una segunda opinión, no un veredicto —
+    // y coincide con producción hasta el día en que la regla cambia.
+    // Solo lectura: ninguna muta estado.
+    screensConflict, isScreeningBlocked, screeningPassed, plannableScreens,
+    // getSuggestions: lo que la app OFRECE agregar al plan. Expuesto para que el
+    // recorrido verifique la promesa que nadie mira — que una sugerencia jamás
+    // choque con el plan que ya tenés.
+    getSuggestions,
     _renderProgramaContent, closeAuthSheet, closePelSheet, exportICS, loadFestival, normTitle,
     openAuthSheet, openPelSheet, openRatingSheet, openCortoSheet, renderAgenda,
     render, saveSavedAgenda, saveState, savePrio, saveWL, saveWatched, searchOpen,
     searchClose, selectSplashFest, dismissSplash, showAgView, showDayView,
     simNow, simTodayStr, switchMainNav, runCalc, _getFestivalPhase,
-    toggleWL, togglePriority, addBlock, addSuggestion,
+    toggleWL, togglePriority, addBlock, addSuggestion, removeFromAgenda,
     setProgramaView, openConflictSheet, deleteAccount,
   });
 })();

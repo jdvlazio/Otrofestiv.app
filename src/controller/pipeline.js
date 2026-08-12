@@ -6,10 +6,11 @@
 
 import { FESTIVAL_CONFIG } from '../config.js';
 import { ICONS, _secLabelFull } from '../view/components.js';
+import { venueSelLabel } from '../view/helpers.js';
 import { _renderProgramaContent, renderProgramaChips } from '../view/programa.js';
 import { _fixStickyOffset, renderAgenda, renderFilmListHTML } from '../view/agenda.js';
 import { runCalc } from './calc.js';
-import { _renderSplashRail, _renderFestivalSelector } from './festival.js';
+import { _renderSplashRail, _renderFestivalSelector, renderPostponedBanner } from './festival.js';
 import { dayFullyPassed, festivalEnded, simNow, simTodayStr } from '../domain/time.js';
 import { screeningPassed } from '../domain/film.js';
 import { state } from '../state/state.js';
@@ -172,7 +173,7 @@ export function _updateProgramaActiveFilter(){
     pills+='<div class="paf-pill" data-action="pafClearSec">'+lbl+'<span class="paf-pill-x">×</span></div>';
   }
   if(hasVenue){
-    pills+='<div class="paf-pill" data-action="pafClearVenue">'+ICONS.pin+' '+activeVenue+'<span class="paf-pill-x">×</span></div>';
+    pills+='<div class="paf-pill" data-action="pafClearVenue">'+ICONS.pin+' '+venueSelLabel(activeVenue)+'<span class="paf-pill-x">×</span></div>';
   }
   af.innerHTML=pills;
   af.classList.add('visible');
@@ -236,6 +237,9 @@ export function setLang(code){
     // fechas del info localizadas). Preserva la selección (_splashSelectedFestId).
     _renderSplashRail(_splashSelectedFestId);
     _renderFestivalSelector(_activeFestId);
+    // Banda APLAZADO: persistente → no pasa por loadFestival; se rehornea acá con
+    // la etiqueta/enlace del idioma nuevo (la cita del festival queda en ES).
+    renderPostponedBanner(FESTIVAL_CONFIG[_activeFestId]);
     requestAnimationFrame(()=>{
       _fadeEls.forEach(el=>el.classList.remove('lang-fade'));
     });

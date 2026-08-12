@@ -8,8 +8,11 @@
 import { FESTIVAL_CONFIG, TMDB_IMG } from '../config.js';
 import {
   DAY_ABBR, DAY_NUM, ICONS, _buildPosterV16, _bandTextSVG, _secLabel, _sectionColor,
-  makeProgramPoster, makeEventPoster, makeSorpresaPoster, escXML,
+  makeProgramPoster, makeEventPoster, makeSorpresaPoster, escXML, _langDates,
 } from './components.js';
+// _langDates se REEXPORTA: el dueño vive en components.js (helpers importa
+// components — el ciclo decide dónde vive; ver el comentario del dueño).
+export { _langDates };
 import { toMin, minToStr, parseDur, simNow, simTodayStr, _festDate } from '../domain/time.js';
 import { effectiveDuration } from '../domain/film.js';
 import { _resolveVenue, travelMins } from '../domain/festival.js';
@@ -317,6 +320,11 @@ export function editorialFrame({header, body, src, title, loading, accent}={}){
 }
 
 export function isNowShowing(f){
+  // Festival aplazado: NADA está «AHORA» — el chip verde es una invitación a ir,
+  // y un aplazado no invita. El reloj diría otra cosa (las fechas viejas siguen
+  // en el dato, a propósito); el estado declarado gana.
+  const _cfg=FESTIVAL_CONFIG[state.snapshot()._activeFestId];
+  if(_cfg&&_cfg.status&&_cfg.status.kind==='postponed') return false;
   const dateStr=FESTIVAL_DATES[f.day];if(!dateStr) return false;
   const now=simNow();
   const start=_festDate(dateStr,f.time);
@@ -337,7 +345,145 @@ export function vcfg(v){
   return _resolveVenue(v,festVenues);
 }
 
-export function sala(v){const m=v.match(/Sala\s*(\d+)/)||v.match(/Sal[oó]n\s*(\d+)/i);return m?'Sala '+m[1]:'';}
+// venueMatches — EL predicado del filtro de lugar (dueño único, 5 ago 2026).
+// `sel` es 'all', un short de sede, o el centinela 'city:<Ciudad>' (filtro de
+// ciudad entera — festivales multiciudad, FICDEH/Cinemancia). Antes cada
+// superficie comparaba `vcfg(v).short===activeVenue` a mano en 8 sitios; el
+// nivel de ciudad habría exigido tocarlos todos y en el tiempo habrían
+// divergido. Consumido por programa.js (grid/lista/horario) y overlays.js.
+// SEDE_SEP — separador del centinela 'sede:<ciudad><SEP><short>'. Se usa un
+// carácter de control (U+001F, unit separator) y no un '|' o un '·' porque el
+// delimitador NO puede aparecer nunca dentro de un nombre de ciudad o de sede.
+// Se escribe como ESCAPE, nunca como carácter literal: un control invisible en el
+// fuente se pierde en un copiar/pegar y no se ve al revisar un diff.
+export const SEDE_SEP='\u001F';
+
+// venueMatches — DUEÑO ÚNICO del predicado «esta función pasa el filtro de lugar».
+// Tres formas de selección:
+//   'all'                       → todo
+//   'city:<Ciudad>'             → la ciudad entera
+//   'sede:<Ciudad><SEP><short>' → una sede DE esa ciudad
+//   '<short>'                   → legado: sede por nombre corto, sin ciudad
+//
+// Por qué la sede lleva la ciudad adentro (9 ago 2026): el nombre corto NO es
+// único cuando el festival recorre varias ciudades. En FICDEH hay dos «Cinema
+// Local» (Bogotá y Cali) y dos «Alianza Francesa» (Barranquilla y Cartagena);
+// filtrando solo por short, elegir la de Bogotá traía también las 4 funciones de
+// Cali, el conteo de la ciudad no cuadraba (135 arriba, 139 adentro) y la sede
+// DESAPARECÍA de la lista de la segunda ciudad, absorbida por la primera.
+//
+// Y por qué la clave es (ciudad, short) y no la sede completa: dentro de UNA
+// ciudad, varias sedes comparten short a PROPÓSITO — son las salas de un mismo
+// edificio (Cinemateca Sala 2/3/Capital → «Cinemateca de Bogotá»; las 5 de Plaza
+// Bocagrande). Ahí agrupar es lo correcto: quien elige el edificio quiere todas
+// sus salas. La ciudad separa; el short agrupa.
+export function venueMatches(v, sel){
+  if(sel==='all') return true;
+  if(sel&&sel.startsWith('city:')) return (vcfg(v).city||'')===sel.slice(5);
+  if(sel&&sel.startsWith('sede:')){
+    const i=sel.indexOf(SEDE_SEP);
+    if(i<0) return vcfg(v).short===sel.slice(5);
+    const ciudad=sel.slice(5,i), short=sel.slice(i+1);
+    const c=vcfg(v);
+    return c.short===short && (c.city||'')===ciudad;
+  }
+  return vcfg(v).short===sel;
+}
+
+// venueSelLabel — cómo se MUESTRA la selección del filtro (pill de filtros
+// activos): la ciudad sin el centinela, o el short tal cual.
+export function venueSelLabel(sel){
+  if(sel&&sel.startsWith('city:')) return sel.slice(5);
+  if(sel&&sel.startsWith('sede:')){
+    // La pill muestra el NOMBRE de la sede; la ciudad viaja en el centinela para
+    // desambiguar, no para leerse (ya está dicha en el propio filtro de ciudad).
+    const i=sel.indexOf(SEDE_SEP);
+    return i<0?sel.slice(5):sel.slice(i+1);
+  }
+  return sel;
+}
+
+// isCitySel / keepCityOnly — la CIUDAD es contexto, la SEDE es un filtro momentáneo.
+// Al cambiar de día o de sección se limpia la sede (el viernes esa sala quizá no
+// proyecta) pero se CONSERVA la ciudad: seguís en la misma ciudad. Sin esto, en
+// FICDEH elegir Bogotá y tocar otro día te devolvía las 11 ciudades.
+export function isCitySel(sel){ return !!(sel&&sel.startsWith('city:')); }
+
+// venueCity(v) — la ciudad de una sede, SOLO cuando aporta (dueño único).
+// Devuelve '' si la sede no declara ciudad o si es la misma del festival: en un
+// festival de una ciudad, repetirla en cada card sería ruido. En FICDEH (11
+// ciudades, `city:'Colombia'` en config a propósito) ninguna coincide → todas la
+// muestran. Mismo criterio que ya usaban las fichas para el badge
+// `venue-municipio`; acá pasa a ser el dueño de esa decisión.
+// festivalCities(films) — DUEÑO ÚNICO de "las ciudades de este festival".
+// Devuelve [{name, count, days:[dayKeys...]}] ordenado por cantidad de funciones.
+// Lo consumen el nivel de ciudades del filtro de Lugar y el sheet de bienvenida
+// multiciudad: sin un dueño, dos listas de ciudades que pueden divergir.
+//
+// `days` sale de las FUNCIONES, no de la config: en un festival ITINERANTE
+// (Tercer Tiempo: DeKalb → Bogotá → CDMX en fechas distintas) cada ciudad tiene
+// su propia ventana, y derivarla del dato es lo que permite soportarlos sin
+// campos nuevos en el JSON. En uno simultáneo (FICDEH) todas coinciden.
+export function festivalCities(films){
+  const map={};
+  (films||[]).forEach(f=>{
+    if(f.info||!f.venue||!f.day) return;
+    const c=vcfg(f.venue).city;
+    if(!c) return;
+    (map[c] ||= {name:c,count:0,days:new Set()});
+    map[c].count++;
+    map[c].days.add(f.day);
+  });
+  return Object.values(map)
+    .map(c=>({...c, days:[...c.days].sort()}))
+    .sort((a,b)=>b.count-a.count);
+}
+
+export function venueCity(v){
+  const festCity=(FESTIVAL_CONFIG[_activeFestId]||{}).city||'';
+  const c=vcfg(v).city||'';
+  return (c&&c!==festCity)?c:'';
+}
+export function keepCityOnly(sel){ return isCitySel(sel)?sel:'all'; }
+
+// sala(v) — la sala dentro del edificio, DECLARADA o, en su defecto, deducida.
+//
+// El modelo de multisala es: cada sala es una SEDE con clave propia, mismo
+// `short` (el edificio) y las mismas coordenadas. Eso ya hace lo importante —dos
+// funciones simultáneas en salas distintas son funciones distintas y entran en
+// conflicto, encadenarlas no cuesta viaje, y el filtro las agrupa por edificio—.
+// Lo que faltaba era DECIRLE al asistente a qué sala entrar.
+//
+// Hasta ahora la sala se adivinaba con un regex sobre el nombre de la sede, y el
+// regex solo entiende NÚMEROS: «Cinemateca Sala Capital» (Tercer Tiempo y
+// FantasoFest, ambos publicados) se perdía — llegabas al edificio sin saber la
+// sala. Por eso el dato pasa a poder DECLARARSE: `room` en la entrada de venues.
+//
+// El regex se conserva como respaldo, no por nostalgia: los festivales ya
+// montados (FICCI 65 con 9 sedes-sala, Cinemancia, Tercer Tiempo) traen la sala
+// dentro del nombre y seguirían funcionando sin re-onboardearlos.
+export function sala(v){
+  const _room=(vcfg(v)||{}).room;
+  if(_room) return String(_room).trim();
+  const s=String(v||'');
+  const m=s.match(/Sala\s*(\d+)/)||s.match(/Sal[oó]n\s*(\d+)/i);
+  return m?'Sala '+(m[1]||m[2]):'';
+}
+
+// venueLabel(v) — el nombre COMPLETO de dónde ocurre una función: edificio + sala.
+// Dueño único de esa concatenación.
+//
+// Nació de una incoherencia real entre las dos vías de exportar al calendario: el
+// ICS mandaba `LOCATION` con la clave cruda de la sede —que lleva la sala— y el
+// puente nativo de iOS mandaba solo el `short` —que la pierde—. Mismo plan, mismo
+// usuario, y a qué sala entrar dependía del teléfono. Ahora ambas piden acá.
+// Frente a la clave cruda tiene además la ventaja de ser legible: «UNIBAC · Sala 1»
+// en vez de «Salón 1 ‒ Miguel Sebastián Guerrero, unibac».
+export function venueLabel(v){
+  const nombre=(vcfg(v)||{}).short||String(v||'');
+  const _sala=sala(v);
+  return _sala?`${nombre} · ${_sala}`:nombre;
+}
 
 export function travelWarn(s1,s2){
   if(s1.day!==s2.day) return null;
@@ -412,10 +558,6 @@ export const _minFmt   = m   => {
 
 export const flagFmt   = fl  => fl||'';
 
-export function _langDates(cfg) {
-  return (_lang==='en' && cfg && cfg.dates_en) ? cfg.dates_en : (cfg && cfg.dates)||'';
-}
-
 export function _mkCortoItemHtml(item, n, {cls='mplan-prog-item', section='', ratingEl=''}={}){
   // Póster por la fuente única: en tamaño thumb el marco va SIN texto en la
   // banda (solo color de sección + still), como los thumbs editoriales de films
@@ -463,13 +605,55 @@ export function _dayChips(screenings){
     .join('<span style="color:var(--gray2)"> · </span>');
 }
 
+// ticketBadgeTarget() — QUÉ marca el badge de precio en este festival (dueño único).
+//   'free' → badge GRATIS en las gratuitas · 'paid' → badge CON BOLETA en las de
+//   pago · null → el festival no es 'mixed', no hay badge.
+//
+// REGLA (Juan, 6 ago 2026): **el badge marca siempre la MINORÍA.** Un badge que
+// pinta la mayoría de las tarjetas no discrimina: informa cero y ensucia.
+// Hasta FICDEH lo gratuito era la excepción en todos los festivales (0% en
+// nueve, 6% en Tercer Tiempo) y marcar las gratis alcanzaba. FICDEH 2026
+// invierte la premisa: 81% gratis (313 de 384) — el badge pintaba 313 tarjetas y
+// escondía lo único accionable, las 71 que cuestan plata.
+// EMPATE EXACTO → 'paid': con 50/50 ninguna es minoría, y desempata lo
+// accionable (hay que sacar boleta) sobre lo que no exige nada.
+// Umbral 50% y no uno más alto: es "la minoría" literal, se explica en una línea
+// y no deja zona gris marcando mayorías.
+//
+// Memoizado por festival: la proporción se recorre UNA vez, no por card.
+let _tbCache={id:null,val:null};
+export function ticketBadgeTarget(){
+  const id=_activeFestId;
+  if(_tbCache.id===id) return _tbCache.val;
+  const cfg=FESTIVAL_CONFIG[id]||{};
+  let val=null;
+  if(cfg.ticketing_model==='mixed'){
+    const reales=(FILMS||[]).filter(f=>!f.info&&f.day&&f.time);
+    // Sin funciones cargadas no hay mayoría que leer: se devuelve null SIN
+    // memoizar, o una consulta anterior a la carga congelaría el festival
+    // entero sin badges.
+    if(!reales.length) return null;
+    const libres=reales.filter(f=>f.is_free===true).length;
+    val=(libres*2>=reales.length)?'paid':'free';
+  }
+  _tbCache={id,val};
+  return val;
+}
+
 export function _metaBadges(f){
+  // Una función CANCELADA no tiene Q&A, ni inscripción, ni boleta. Sin esto la
+  // card de Quibdó decía «CANCELADA» y al lado «CON BOLETA» el día que FICDEH
+  // abrió: le ofrecía comprar entrada a una función que el festival ya suspendió
+  // por el sismo (visto en producción, 11 ago 2026). El badge de estado manda
+  // sobre los de servicio: si no va a ocurrir, no hay nada que ofrecer.
+  if(f&&f._cancelled) return '';
   let b='';
   if(f.has_qa) b+=`<span class="meta-badge">Q&A</span>`;
   if(f.requires_registration) b+=`<span class="meta-badge">${t('badge_inscripcion')}</span>`;
-  // Festival mixto: marcar función gratuita (discrimina — solo las gratis, no todas).
-  if((FESTIVAL_CONFIG[_activeFestId]||{}).ticketing_model==='mixed'&&f.is_free===true)
-    b+=`<span class="meta-badge">${t('badge_gratis')}</span>`;
+  // Festival mixto: el badge marca la MINORÍA (ver ticketBadgeTarget).
+  const _tb=ticketBadgeTarget();
+  if(_tb==='free'&&f.is_free===true) b+=`<span class="meta-badge">${t('badge_gratis')}</span>`;
+  else if(_tb==='paid'&&f.is_free!==true) b+=`<span class="meta-badge">${t('badge_con_boleta')}</span>`;
   return b;
 }
 

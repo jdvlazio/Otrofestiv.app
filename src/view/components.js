@@ -306,8 +306,24 @@ export function _buildPosterV16({accent, headerLabel, title, num}){
 export function makeEventPoster(state,title,duration,eventKind,section,opts){
   const {_activeFestId, _lang} = state.snapshot();
   const festCfg=(FESTIVAL_CONFIG&&FESTIVAL_CONFIG[_activeFestId])||Object.values(FESTIVAL_CONFIG||{})[0]||{};
+  // 'charla' — la palabra que usan los festivales. FICDEH («💬 Charlas que Unen»,
+  // 18 actividades) y FICMA («💬 Charlas», 6) mostraban PONENCIA, que no aparece en
+  // ninguna de sus fuentes: la Franja Académica de FICMA dice TALLERES y CHARLAS.
+  // «Ponencia» la pusimos nosotros (Juan, 10 ago 2026 — con FICMA ya en curso).
+  // 'ponencia' SE QUEDA: es vocabulario válido para un festival que sí la use, y
+  // sacarla rompería el dato actual mientras se migra. Primero el mapa, después el
+  // dato: event_kind solo alimenta makeEventPoster, y agenda.js (×2) y programa.js
+  // lo llaman SIN sección, así que un 'charla' sin entrada caería al genérico
+  // EVENTO en Mi Plan y en la agenda — peor que el PONENCIA de hoy.
   const _kindMapES={
     'ponencia':     {accent:'#F59E0B', headerLabel:'PONENCIA'},
+    'charla':       {accent:'#F59E0B', headerLabel:'CHARLA'},
+    // 'taller' ya estaba EN EL DATO (FICMA, 8 actividades) sin entrada en el mapa:
+    // esas cards mostraban el genérico EVENTO. Es la otra mitad del vocabulario de
+    // la Franja Académica —«TALLERES y CHARLAS»— y no necesita migración.
+    // Accent ámbar como charla/ponencia: las tres son la franja académica. Si Juan
+    // prefiere distinguirlas, es cambiar este color y nada más.
+    'taller':       {accent:'#F59E0B', headerLabel:'TALLER'},
     'masterclass':  {accent:'#7F77DD', headerLabel:'MASTERCLASS'},
     'encuentro':    {accent:'#378ADD', headerLabel:'ENCUENTRO'},
     'cineconcierto':{accent:'#D85A30', headerLabel:'CINECONCIERTO'},
@@ -315,6 +331,8 @@ export function makeEventPoster(state,title,duration,eventKind,section,opts){
   };
   const _kindMapEN={
     'ponencia':     {accent:'#F59E0B', headerLabel:'TALK'},
+    'charla':       {accent:'#F59E0B', headerLabel:'TALK'},
+    'taller':       {accent:'#F59E0B', headerLabel:'WORKSHOP'},
     'masterclass':  {accent:'#7F77DD', headerLabel:'MASTERCLASS'},
     'encuentro':    {accent:'#378ADD', headerLabel:'MEETING'},
     'cineconcierto':{accent:'#D85A30', headerLabel:'FILM CONCERT'},
@@ -336,6 +354,17 @@ export function makeEventPoster(state,title,duration,eventKind,section,opts){
 
 export const ICONS={
   ticket:   `<svg aria-hidden="true" focusable="false" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/><path d="M13 5v14"/></svg>`,
+  // clipboard-list — el enlace de inscripción. Icono PROPIO y no uno prestado:
+  // los candidatos obvios ya significan otra cosa en la app (bookmark=Priorizar,
+  // calendar=Mi Plan, plus=«+ Agregar», check=visto) y reusarlos diría dos cosas
+  // con el mismo símbolo. Es literalmente a dónde lleva: un formulario.
+  clipboardList: `<svg aria-hidden="true" focusable="false" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M12 11h4"/><path d="M12 16h4"/><path d="M8 11h.01"/><path d="M8 16h.01"/></svg>`,
+  // link — Lucide «link-2»: dos eslabones unidos por una barra RECTA. Marca el
+  // corchete del taller multi-día («estas sesiones son una sola cosa»). Se eligió
+  // link-2 sobre link porque su barra horizontal continúa la línea del corchete;
+  // el link clásico es diagonal y pelea con la geometría. 12px: es una marca
+  // sobre una línea de 1.5px, no un icono de acción.
+  link: `<svg aria-hidden="true" focusable="false" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 17H7A5 5 0 0 1 7 7h2"/><path d="M15 7h2a5 5 0 1 1 0 10h-2"/><line x1="8" y1="12" x2="16" y2="12"/></svg>`,
   star:     `<svg aria-hidden="true" focusable="false" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>`,
   starFill: `<svg aria-hidden="true" focusable="false" width="13" height="13" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>`,
   heart:    `<svg aria-hidden="true" focusable="false" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"/></svg>`,
@@ -457,7 +486,49 @@ export function renderRatingStarsHTML(state, current){
 }
 
 
+// _langDates — DUEÑO ÚNICO de «las fechas del festival como texto». Vivía en
+// helpers.js con un solo consumidor mientras el header interno, la card del riel
+// y la imagen de «Compartir mi festival» repetían el ternario por su cuenta — y
+// cuando FICMA se aplazó, tres superficies siguieron prometiendo «10–17 AGO»
+// (la del share, HORNEADA en un PNG que la gente manda por WhatsApp y no se
+// corrige con un deploy; hallazgo de Onboarding, 10 ago 2026). Un festival
+// aplazado no tiene fechas: tiene un estado. Se muda ACÁ porque helpers importa
+// components (ciclo); helpers lo re-exporta para sus consumidores.
+// `lang` opcional: default al estado global, pero quien ya tiene el idioma en la
+// mano (la card del riel lo recibe de su render) lo pasa explícito — el unit test
+// del riel cazó que ignorarlo rompía el contrato de _renderSplashRailHTML(state).
+// postponedBannerHTML — markup ÚNICO del aviso de festival aplazado. Dos hosts lo
+// pintan: el header del Programa (renderPostponedBanner) y Mi Plan (renderAgenda).
+// Las palabras son del FESTIVAL (note verbatim; note_en traducción aprobada por
+// Juan). Sin botón de cerrar: es contexto, no notificación.
+export function postponedBannerHTML(cfg,{id=''}={}){
+  if(!cfg||!cfg.status||cfg.status.kind!=='postponed') return '';
+  const {_lang}=state.snapshot();
+  const _esc=s=>String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;');
+  const note=(_lang!=='es'&&cfg.status.note_en)||cfg.status.note;
+  return`<div class="fest-postponed-banner"${id?` id="${id}"`:''}>
+    <div class="notice-banner-dot"></div>
+    <div class="notice-banner-body">
+      <div class="notice-banner-label">${t('fest_postponed_label')}</div>
+      <div class="notice-banner-text">${_esc(note)}${cfg.status.url?`<br><a class="fest-postponed-link" href="${_esc(cfg.status.url)}" target="_blank" rel="noopener">${t('fest_postponed_link')}</a>`:''}</div>
+    </div>
+  </div>`;
+}
+
+export function _langDates(cfg,lang){
+  if(cfg&&cfg.status&&cfg.status.kind==='postponed') return t('fest_postponed_dates');
+  const _l=lang||state.snapshot()._lang;
+  return (_l==='en'&&cfg&&cfg.dates_en)?cfg.dates_en:(cfg&&cfg.dates)||'';
+}
+
 export function _classifyFestival(cfg){
+  // APLAZADO — estado DECLARADO (cfg.status), no derivado: le gana a la aritmética
+  // de fechas. Nace del terremoto de Manizales (FICMA 17, 10 ago 2026): sus fechas
+  // decían «en curso» mientras el festival anunciaba que no habría festival. Un
+  // aplazado jamás cuenta como ongoing (preselección, punto verde, rehidratación
+  // del plan) ni como past (sigue siendo noticia viva). Reversión: fechas nuevas
+  // + borrar `status` — sin re-onboarding. Guardián: [festival-aplazado].
+  if(cfg.status&&cfg.status.kind==='postponed') return 'postponed';
   const now=new Date();
   const start=cfg.festivalStartStr?new Date(cfg.festivalStartStr):null;
   const end=cfg.festivalEndStr?new Date(cfg.festivalEndStr):null;
@@ -473,15 +544,25 @@ export function _sortFestivals(entries, activeFestId){
     const cls=_classifyFestival(cfg);
     if(cls==='ongoing')  return 1;
     if(cls==='upcoming') return 2;
-    return 3; // past
+    if(cls==='postponed') return 3; // vigente pero sin invitación — último del grupo
+    return 4; // past
   };
+  // PRIORIDAD EDITORIAL — desempata DENTRO del tier, antes que la fecha.
+  // Nace de FINCA vs FICDEH (8 ago 2026): mismas fechas exactas, y quién salía
+  // primero lo decidía un accidente de datos —30 minutos de diferencia en
+  // festivalEndStr—. Con una alianza oficial y otra parcial, esa decisión es
+  // editorial y tiene que estar declarada, no emerger del ruido.
+  // Sin `priority` en el config, todo se comporta como antes.
+  const _prio=([,cfg])=>(cfg.priority??99);
   return entries.sort((a,b)=>{
     const ta=_tier(a),tb=_tier(b);
     if(ta!==tb) return ta-tb;
+    const pa=_prio(a),pb=_prio(b);
+    if(pa!==pb) return pa-pb;
     // ongoing: termina antes primero
     if(ta===1) return new Date(a[1].festivalEndStr||0)-new Date(b[1].festivalEndStr||0);
-    // upcoming: empieza antes primero
-    if(ta===2) return new Date(a[1].festivalStartStr||'2099-01-01')-new Date(b[1].festivalStartStr||'2099-01-01');
+    // upcoming (y aplazados entre sí): empieza antes primero
+    if(ta===2||ta===3) return new Date(a[1].festivalStartStr||'2099-01-01')-new Date(b[1].festivalStartStr||'2099-01-01');
     // past: más reciente primero
     return new Date(b[1].festivalEndStr||0)-new Date(a[1].festivalEndStr||0);
   });
@@ -559,12 +640,16 @@ export function festivalTagline(cfg, lang='es'){
 // keyArtPos → custom property --kap (no inline style raw: ARQUITECTURA §10.3);
 // onerror=this.remove() degrada al template negro si el afiche 404ea (§10.2).
 function _festivalCardHTML([id,cfg], {isPast, isActive, action, lang}){
-  const meta=`${cfg.city} · ${lang==='en'&&cfg.dates_en?cfg.dates_en:cfg.dates}`;
+  const meta=`${cfg.city} · ${_langDates(cfg,lang)}`;
   const label=festivalLabel(cfg);
   const art=cfg.keyArt
     ? `<img class="splash-card-art" src="${cfg.keyArt}" alt="" loading="lazy" onerror="this.remove()"${cfg.keyArtPos?` style="--kap:${cfg.keyArtPos}"`:''}>`
     : `<span class="splash-card-fb">${festivalShortName(cfg)}</span>`;
-  return`<button class="splash-card${isPast?' past':''}${isActive?' on':''}" data-fest="${id}" role="option" aria-selected="${isActive}" data-action="${action}" data-name="${label}" data-meta="${meta}"><span class="splash-card-tpl">${art}</span></button>`;
+  // Distintivo APLAZADO sobre el afiche — fuente única: sale en el riel del splash
+  // Y en el sheet «cambiar festival» sin tocar cada superficie.
+  const _postponed=_classifyFestival(cfg)==='postponed';
+  const badge=_postponed?`<span class="splash-card-badge">${t('fest_postponed_label')}</span>`:'';
+  return`<button class="splash-card${isPast?' past':''}${isActive?' on':''}${_postponed?' postponed':''}" data-fest="${id}" role="option" aria-selected="${isActive}" data-action="${action}" data-name="${label}" data-meta="${meta}"><span class="splash-card-tpl">${art}</span>${badge}</button>`;
 }
 
 // `action` parametriza la superficie (20 jul 2026): el splash SELECCIONA (confirma
@@ -586,10 +671,27 @@ export function _renderSplashRailHTML(state, activeFestId, action='selectSplashF
   // FECHA del info, y solo si el año de ESE festival DIFIERE de la temporada
   // (festivalSeasonYear) — ver _fillSplashInfo. A FUTURO, cuando el riel mezcle años,
   // acá cabría un divisor de año (mismo patrón que "ANTERIORES", agrupando por año).
-  let html=current.map(e=>mkCard(e,false)).join('');
-  // Divisor "ANTERIORES" solo separa DOS grupos: si no hay vigentes (todos pasados)
-  // no se emite (colgar de primero descentra el snap inicial → auto-selección).
-  if(current.length && past.length) html+=`<span class="splash-rail-div" aria-hidden="true"><span class="srd-bar"></span><span class="srd-lbl">${t('splash_anteriores')}</span><span class="srd-bar"></span></span>`;
+  // Un divisor SEPARA dos grupos: se emite solo si hay algo de los dos lados. Colgar
+  // uno de primero descentra el snap inicial y rompe la auto-selección.
+  const div=lbl=>`<span class="splash-rail-div" aria-hidden="true"><span class="srd-bar"></span><span class="srd-lbl">${lbl}</span><span class="srd-bar"></span></span>`;
+  const ongoing =current.filter(([,cfg])=>_classifyFestival(cfg)==='ongoing');
+  const upcoming=current.filter(([,cfg])=>_classifyFestival(cfg)!=='ongoing');
+  // "PRÓXIMOS" — en curso y por empezar viajaban en el MISMO grupo, sin nada que los
+  // distinga: con FICMA abierto y FICDEH/FINCA a dos días, las tres cards se leían
+  // igual de disponibles. El tier ya existía en _sortFestivals; lo que faltaba era
+  // decirlo en pantalla. Misma tira y misma dirección: los próximos NO se mudan a la
+  // izquierda —eso haría correr el tiempo de derecha a izquierda y obligaría a
+  // arrancar el riel desplazado, que es de lo que depende la preselección—.
+  // Aplazados: dentro de los vigentes (siguen siendo noticia, no historia) pero
+  // FUERA del grupo «Próximos» — un aplazado no es un próximo: no tiene fecha. Van
+  // al final del grupo vigente, con su distintivo como única etiqueta.
+  const _upc=upcoming.filter(([,cfg])=>_classifyFestival(cfg)!=='postponed');
+  const _post=upcoming.filter(([,cfg])=>_classifyFestival(cfg)==='postponed');
+  let html=ongoing.map(e=>mkCard(e,false)).join('');
+  if(ongoing.length && _upc.length) html+=div(t('fs_proximos'));
+  html+=_upc.map(e=>mkCard(e,false)).join('');
+  html+=_post.map(e=>mkCard(e,false)).join('');
+  if(current.length && past.length) html+=div(t('splash_anteriores'));
   html+=past.map(e=>mkCard(e,true)).join('');
   return html;
 }

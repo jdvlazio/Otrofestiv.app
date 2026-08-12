@@ -1,8 +1,9 @@
 // ── src/controller/festival.js ────────────────────────────────────────────────────
 // p8 Step 7e — Lifecycle de splash/selector de festival + auto-resolve posters. POSTERS/CUSTOM_POSTERS vía bridge.
 
-import { FESTIVAL_CONFIG, TMDB_API_BASE, TMDB_API_KEY, TMDB_POSTER_BASE, _DEFAULT_FEST_ID, _POSTER_CACHE_PFX, countryName } from '../config.js';
-import { _renderFestivalSelectorHTML, _renderSplashRailHTML, _classifyFestival, festivalShortName, festivalTagline, festivalSeasonYear } from '../view/components.js';
+import { FESTIVAL_CONFIG, TMDB_API_BASE, TMDB_API_KEY, TMDB_POSTER_BASE, _DEFAULT_FEST_ID, _POSTER_CACHE_PFX, festivalLocationLabel } from '../config.js';
+import { _renderFestivalSelectorHTML, _renderSplashRailHTML, _classifyFestival, festivalShortName, festivalTagline, festivalSeasonYear, postponedBannerHTML } from '../view/components.js';
+import { t } from '../i18n/i18n.js';
 import { _langDates, setPosters } from '../view/helpers.js';
 import { render } from '../view/programa.js';
 import { state } from '../state/state.js';
@@ -79,11 +80,15 @@ function _fillFestInfo(festId, scope){
   // idioma para los taglines localizados (Tribeca: ES descriptor / EN nombre original).
   if(tagEl) tagEl.textContent=festivalTagline(cfg, state.snapshot()._lang);
   if(cityEl){
-    // CIUDAD, PAÍS — el país se resuelve por ISO (config.countryName) y se localiza.
-    const _lang=state.snapshot()._lang;
-    const _pais=countryName(cfg.country,_lang);
-    const _loc=cfg.city ? (_pais ? `${cfg.city}, ${_pais}` : String(cfg.city)) : '';
-    cityEl.innerHTML=(cls==='ongoing'?'<span class="live-dot"></span>':'')+_loc.toUpperCase();
+    // CIUDAD, PAÍS — lo arma festivalLocationLabel (dueño único): resuelve el país
+    // por ISO, lo localiza, y NO lo repite cuando la ciudad ya ES el país (los
+    // festivales nacionales, como FICDEH, declaran «Colombia» en `city`).
+    const _loc=festivalLocationLabel(cfg, state.snapshot()._lang);
+    // Aplazado: punto ÁMBAR (el idioma de los avisos) donde iría el verde de «en
+    // curso» — mismo slot, otra verdad.
+    const _dot=cls==='ongoing'?'<span class="live-dot"></span>'
+      :cls==='postponed'?'<span class="live-dot postponed-dot"></span>':'';
+    cityEl.innerHTML=_dot+_loc.toUpperCase();
   }
   if(datesEl){
     // El año NO se repite en cada fecha: vive UNA vez como divisor de temporada en el
@@ -92,7 +97,13 @@ function _fillFestInfo(festId, scope){
     const dates=_langDates(cfg);
     const _season=festivalSeasonYear();
     const _showYear=cfg.year && cfg.year!==_season;
-    datesEl.textContent=(dates+(_showYear?' · '+cfg.year:'')).toUpperCase();
+    // Aplazado: `dates` ya viene del dueño («FECHAS POR ANUNCIAR») y NO se le
+    // antepone el estado — la card del riel ya dice APLAZADO justo encima.
+    // Regla de Juan (10 ago): no repetir lo que la superficie de al lado ya dijo.
+    // El año también sobra: no hay año que prometer.
+    datesEl.textContent=cls==='postponed'
+      ? dates.toUpperCase()
+      : (dates+(_showYear?' · '+cfg.year:'')).toUpperCase();
   }
 }
 
@@ -169,6 +180,21 @@ export function _renderSplashRail(activeFestId){
 // sin tener que recordarlo (si divergen, el próximo scroll pisaría la selección).
 // name/meta se conservan en la firma (dispatcher data-action + TEST BRIDGE + tests)
 // aunque el info se deriva del festId.
+// renderPostponedBanner — banda APLAZADO en el header del Programa. DUEÑO ÚNICO:
+// la llaman loadFestival (al entrar) y setLang (la banda es persistente y el cambio
+// de idioma no pasa por loadFestival — sin esto la etiqueta quedaba horneada en el
+// idioma de entrada; cazado en QA visual EN, 10 ago). Las palabras son del FESTIVAL:
+// `note` verbatim del comunicado; `note_en` es traducción NUESTRA aprobada por Juan
+// (10 ago: «es corto, emotivo, sencillo» — dejarla opaca al usuario EN pesa más que
+// el escrúpulo de traducir). Sin note_en, el fallback es el ES intacto — nunca se
+// traduce en runtime. Etiqueta y enlace pasan por t(). Sin botón de cerrar.
+export function renderPostponedBanner(cfg){
+  document.getElementById('fest-postponed-banner')?.remove();
+  const _hdrP=document.getElementById('hdr-programa');
+  if(!cfg||!cfg.status||cfg.status.kind!=='postponed'||!_hdrP) return;
+  _hdrP.insertAdjacentHTML('beforeend', postponedBannerHTML(cfg,{id:'fest-postponed-banner'}));
+}
+
 export function selectSplashFest(name,meta,festId){
   _splashSelectedFestId=festId||_DEFAULT_FEST_ID;
   // ACOTADO al riel del splash: desde el rediseño del chooser (20 jul 2026) hay DOS

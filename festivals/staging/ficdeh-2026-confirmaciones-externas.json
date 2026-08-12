@@ -1,0 +1,41 @@
+{
+ "_provenance": {
+  "que_es": "Confirmaciones de día/hora/sede que NO están en el sitio del festival, recogidas de fuentes externas verificables.",
+  "fuentes": [
+   "Instagram @ficdeh (afiches de inauguración, 4 ago 2026)",
+   "Agenda oficial Cinemateca de Bogotá (30 funciones, sidecar aparte)"
+  ],
+  "correccion_importante": "Los tags de fecha del sitio NO son 'fechas equivocadas': son un CONJUNTO incompleto y sin orden por película, que no mapea a funciones concretas. Ej: 'Semillas' tiene 14 funciones y solo 6 tags; 'Por una gota de leche' 6 funciones y 1 tag. Por eso no sirven para asignar día — no porque mientan, sino porque no alcanzan ni se corresponden."
+ },
+ "inauguraciones": [
+  {
+   "ciudad": "Bogotá",
+   "dia": "2026-08-12",
+   "dia_semana": "miércoles",
+   "sede": "Teatro Colón - Calle 10 # 5-32",
+   "hora_evento": "17:30",
+   "hora_funcion_segun_sitio": "18:00",
+   "_nota_hora": "El afiche anuncia 5:30 PM (inicio del evento); el sitio da 18:00 para la función. Probablemente 17:30 = ceremonia/coctel y 18:00 = proyección. Confirmar.",
+   "pelicula": "Bojayá, la verdad desde adentro",
+   "ingreso": "Entrada libre hasta completar aforo",
+   "has_qa": true,
+   "qa_detalle": "Modera Juan Manuel Santos · Director y guionista Ramón Alexander Valencia · Protagonistas María Pascuala Palacios, Heidy Palacios Conchave, Ever Murillo Rivas",
+   "extras": "Coctel · Coro Uniandes · Cantadora invitada Luz Marina Cañola",
+   "seccion": "Retrospectiva 10 años del Acuerdo de Paz"
+  },
+  {
+   "ciudad": "Pereira",
+   "dia": "2026-08-13",
+   "dia_semana": "jueves",
+   "sede": "Cámara de Comercio de Pereira - Carrera 8a # 23-09, piso 3",
+   "hora_evento": "19:00",
+   "hora_funcion_segun_sitio": "19:00",
+   "_nota_hora": "COINCIDE con el sitio (19:00).",
+   "pelicula": "Eva",
+   "director": "William Reyes",
+   "ingreso": "Entrada libre hasta completar aforo",
+   "has_qa": false
+  }
+ ],
+ "_validacion": "La inauguración de Pereira confirma el modelo: el sitio daba Eva con UN solo tag (13 AGO) y dos funciones; IG confirma que el 13 es la de Pereira y la Cinemateca confirma que la de Bogotá es el 15. Es decir: hora y sede del sitio = fiables; el día hay que traerlo de fuera."
+}

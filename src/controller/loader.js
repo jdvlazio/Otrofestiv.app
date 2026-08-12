@@ -9,8 +9,8 @@ import { FESTIVAL_CONFIG, NOTICES, mergeFestivalSections } from '../config.js';
 import { parseDur } from '../domain/time.js';
 import { lruTouch } from '../lru.js';
 import { DAY_ABBR, DAY_NUM, _classifyFestival, festivalShortName } from '../view/components.js';
-import { DAYS, DAY_SHORT_EN, setCustomPosters, setDayShort, setDayShortEn, setPosters } from '../view/helpers.js';
-import { closeFestivalSheet } from '../view/sheets.js';
+import { DAYS, DAY_SHORT_EN, _langDates, setCustomPosters, setDayShort, setDayShortEn, setPosters, keepCityOnly } from '../view/helpers.js';
+import { closeFestivalSheet, openCitySheet } from '../view/sheets.js';
 import { showToast } from '../view/feedback.js';
 import { _renderProgramaContent, lugarClose } from '../view/programa.js';
 import { _fixStickyOffset } from '../view/agenda.js';
@@ -27,7 +27,7 @@ import { state } from '../state/state.js';
 import { deriveClear } from '../state/festival-context.js';
 import { storage } from '../storage/storage.js';
 import { t } from '../i18n/i18n.js';
-import { _autoResolveFestivalPosters, _renderFestivalSelector } from './festival.js';
+import { _autoResolveFestivalPosters, _renderFestivalSelector, renderPostponedBanner } from './festival.js';
 
 // Fetch del JSON de festival con timeout + reintentos (AbortController).
 // GitHub Pages a veces entrega los headers (200) pero el cuerpo se cuelga → el
@@ -164,9 +164,29 @@ export async function loadFestival(id){
           if(f.info) return;
           // `date` (día de la función original) desambigua cuando una obra tiene
           // varias funciones y solo una cambió. Sin `date` → aplica a todas.
-          const n=_avisos.find(x=>x.title===f.title&&(!x.date||x.date===f.day));
+          // Tres alcances, de más ancho a más fino (modelo de tres niveles,
+          // docs/PROTOCOLO.md): CIUDADES → título+fecha → título.
+          // `cities` nace del sismo del 11 ago 2026: FICDEH canceló Quibdó, Cali,
+          // Pereira y Manizales —88 de 444 funciones, 27 sedes, 10 obras que solo
+          // se veían ahí— y siguió en las otras 7 ciudades. Por título habrían sido
+          // 88 entradas y 88 banners para UN solo hecho.
+          // La ciudad se lee del venue CRUDO (data.venues), no de venueCity():
+          // ese helper OCULTA la ciudad cuando coincide con la del festival — es
+          // para mostrar, no para identificar.
+          const _city=((data.venues||{})[f.venue]||{}).city||'';
+          const n=_avisos.find(x=>
+            Array.isArray(x.cities)
+              ? (!!_city && x.cities.includes(_city))
+              : (x.title===f.title&&(!x.date||x.date===f.day)));
           if(!n) return;
-          if(n.type==='cancelled'){ f._cancelled=true; return; }
+          if(n.type==='cancelled'){
+            f._cancelled=true;
+            // La causa ya vive UNA vez en el banner: la card no la repite. Sin
+            // esto arrastraba «Pendiente nueva fecha», que se escribió para
+            // REPROGRAMADA y en una cancelación por tragedia es una promesa falsa.
+            if(n.note) f._cancelExplained=true;
+            return;
+          }
           if(n.type==='rescheduled'&&(n.newDay||n.newTime||n.newVenue)){
             f._movedFrom={day:f.day,time:f.time,venue:f.venue};
             if(n.newDay){
@@ -321,6 +341,11 @@ export async function loadFestival(id){
   state.batchUpdate({
     FESTIVAL_STORAGE_KEY: cfg.storageKey,
     FESTIVAL_END: new Date(cfg.festivalEndStr+(cfg.timezoneOffset||'')),
+    // Viaja junto a FESTIVAL_END porque es su corrección: festivalEnded() es pura
+    // aritmética contra esa fecha, y un festival APLAZADO la cruza igual — FICMA
+    // habría entrado en Modo Recuerdo el 18 ago, pidiéndole a la gente calificar
+    // películas que nunca vio. Ver domain/time.js festivalEnded.
+    FESTIVAL_POSTPONED: !!(cfg.status&&cfg.status.kind==='postponed'),
     ...deriveClear(cfg),
   });
   // Rebuild day tabs DOM
@@ -334,7 +359,7 @@ export async function loadFestival(id){
       todoBtn.style.cssText='display:flex;align-items:center;justify-content:center;padding:0 14px';
       todoBtn.innerHTML='<span data-i18n="bar_todo" style="font-size:var(--t-sm);font-weight:700;letter-spacing:.08em;text-transform:uppercase">'+t('bar_todo')+'</span>';
       todoBtn.onclick=()=>{
-        activeDay='all';activeVenue='all';activeSec='all';selectedIdx=null;
+        activeDay='all';activeVenue=keepCityOnly(activeVenue);activeSec='all';selectedIdx=null;
         cartelaMode='horario';
         setProgramaView('grid'); // TODO → siempre Grid
         document.querySelectorAll('.dtab').forEach(t=>t.classList.toggle('on',t.dataset.day==='all'));
@@ -359,7 +384,7 @@ export async function loadFestival(id){
       btn.dataset.lblEn=_dtabLblEN;
       btn.innerHTML=`<span class="dtab-date">${_dtabLbl}</span><span class="dtab-name">${day.d}</span>`;
       btn.onclick=()=>{
-        activeDay=day.k;activeVenue='all';selectedIdx=null;
+        activeDay=day.k;activeVenue=keepCityOnly(activeVenue);selectedIdx=null;
         setProgramaView('list'); // día específico → siempre Lista (horarios/planificación)
         document.querySelectorAll('.dtab').forEach(t=>t.classList.toggle('on',t.dataset.day===day.k));
         _renderProgramaContent(true); // cambio de día específico → scroll al tope
@@ -431,9 +456,36 @@ export async function loadFestival(id){
     storage.setSavedAgenda(state.get('savedAgenda'));
   }
 
+  // ► CIUDAD RECORDADA (festivales multiciudad) ──────────────────────────────
+  // La ciudad es CONTEXTO, no un filtro más: quien está en Quibdó sigue en Quibdó
+  // la próxima vez que abre la app. Se restaura solo si (a) hay una guardada para
+  // ESTE festival y (b) sigue existiendo en sus sedes — si el festival cambió su
+  // programación y esa ciudad ya no está, se descarta en silencio en vez de dejar
+  // el programa vacío. Cambiarla o quitarla es un tap en el filtro de Lugar.
+  // Tres estados: '' = nunca preguntado (dispara el sheet) · 'all' = eligió ver
+  // todas (no filtra, pero no se vuelve a preguntar) · 'city:X' = su ciudad.
+  const _savedCity=storage.getCityFilter();
+  if(_savedCity&&_savedCity!=='all'){
+    const _c=_savedCity.slice(5);
+    const _existe=Object.values(cfg.venues||{}).some(v=>v&&v.city===_c);
+    if(_existe) activeVenue=_savedCity; else storage.setCityFilter('');
+  }
+  // El sheet se abre DESPUÉS del primer render del programa (rAF doble): si se
+  // abriera antes, el usuario ve el sheet sobre una pantalla vacía y no entiende
+  // de qué le están hablando. Ver openCitySheet: se auto-descarta si el festival
+  // no es multiciudad, así que acá no hace falta repetir la condición.
+  if(!storage.getCityFilter()){
+    requestAnimationFrame(()=>requestAnimationFrame(()=>openCitySheet()));
+  }
+
   // Set active day to today
+  // Aplazado: NO aterrizar en «Hoy» aunque el calendario diga que el festival va —
+  // sus fechas viejas siguen en el dato a propósito. Se abre como un festival
+  // futuro: grilla completa, sin «hoy». (El mismo estado ya silencia AHORA y la
+  // rehidratación del plan vía _classifyFestival/isNowShowing.)
+  const _postponed=!!(cfg.status&&cfg.status.kind==='postponed');
   const _ts=simTodayStr();
-  const _ni=DAY_KEYS.findIndex(d=>FESTIVAL_DATES[d]===_ts);
+  const _ni=_postponed?-1:DAY_KEYS.findIndex(d=>FESTIVAL_DATES[d]===_ts);
   if(_ni>=0){
     activeDay=DAY_KEYS[_ni];
     programaSubMode='hoy'; // Durante el festival → ir directo a Hoy
@@ -444,7 +496,11 @@ export async function loadFestival(id){
   const _fn=document.querySelector('.hdr-fest-name');
   const _fd=document.querySelector('.hdr-fest-dates');
   if(_fn) _fn.textContent=festivalShortName(cfg);
-  if(_fd) _fd.textContent=' · '+(_lang==='en'&&cfg.dates_en?cfg.dates_en:cfg.dates)+(cfg.year?' '+cfg.year:'');
+  if(_fd) _fd.textContent=' · '+_langDates(cfg)+(cfg.year&&!_postponed?' '+cfg.year:'');
+  // Banda APLAZADO — dueño único: renderPostponedBanner (festival.js). Se llama
+  // SIEMPRE (limpia sola si no aplica; cambio de festival la retira) y también
+  // desde setLang, porque la banda persiste y el cambio de idioma no pasa por acá.
+  renderPostponedBanner(cfg);
   // Re-render festival selector con el nuevo festival activo
   _renderFestivalSelector(id);
   // Persist choice

@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202608021618">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202608021618">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202608121033">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202608121033">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -225,7 +225,18 @@ window.sentryOnLoad = function() {
      El póster viaja entre ellas (FLIP), así que cambiaba de redondez a mitad de
      vuelo — visible y feo. Un póster es el MISMO objeto donde sea que aparezca:
      mismo radio. Guardián [poster-radius]. */
-  --r-poster: 12px;
+  /* --r-poster — DUEÑO ÚNICO del radio de toda superficie de póster 2:3.
+     Antes convivían TRES radios (12/8/4px) sin razón de diseño detrás: deriva.
+     Un valor fijo no puede unificarlos porque el rango va de 32px a 96px —3×—:
+     12px sobre 32px es el 37% del ancho, o sea una píldora.
+     La unificación es PROPORCIONAL, calibrada para preservar el look de las
+     superficies grandes (grid 14,4% y ficha 12,5% pasan a ~11 y 12,5px).
+     La notación elíptica `X / Y` NO es un typo: en un rectángulo 2:3 el 13% del
+     ancho y el 8,667% del alto son la MISMA medida en px, así que la esquina sale
+     circular y no ovalada (técnica de Letterboxd). Los topes del clamp evitan que
+     un thumb diminuto pierda la curva y que una superficie grande se redondee de
+     más. Guardián: [poster-radio-unico] en validate.py. */
+  --r-poster: clamp(4px, 13%, 14px) / clamp(4px, 8.667%, 14px);
   --r-sheet:28px; /* 20→28 (18 jul 2026): squircle generoso en los 9 sheets */
   --r-handle:2px;
   --r-pill: 999px;
@@ -670,6 +681,13 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .pel-sheet-ticket-link{display:inline-flex;align-items:center;gap:var(--sp-1);margin-top:var(--sp-3);font-size:var(--t-sm);color:var(--amber);text-decoration:none;opacity:.9;cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
 .pel-sheet-ticket-link:hover{opacity:1}
 .meta-banner .pel-sheet-ticket-link{margin-top:var(--sp-1)}
+/* FIJO mientras haya avisos activos (decisión de Juan, 12 ago 2026). Con 116
+   cards, un aviso que scrollea desaparece a dos dedos y vuelve el problema que
+   el reposicionamiento resolvió: enterarse de por qué hay funciones tachadas
+   DESPUÉS de pasarlas. Se ancla en el slot de .programa-chips —display:none
+   desde que el filtro pasó a dropdown— y por debajo de #hdr-programa (z-index
+   201) para no taparlo. Sigue descartable con la ✕. */
+#notices-banner:not(:empty){position:sticky;top:var(--sticky-top-chips);z-index:194}
 .notice-banner{display:flex;align-items:flex-start;gap:var(--sp-2);padding:var(--sp-2) var(--sp-4);background:var(--surf-2);border-bottom:1px solid var(--bdr-l)}
 .notice-banner-dot{width:6px;height:6px;border-radius:50%;background:var(--amber);flex-shrink:0;margin-top:5px}
 .notice-banner-body{flex:1;min-width:0}
@@ -681,9 +699,18 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
    ~44px de área sin agrandar su caja visual. Solo aislados — los pares adyacentes
    no se expanden (robarían taps al vecino). Guardián [icon-touch]. */
 .notice-banner-close::after,.poster-wl-dot::after,.prio-chip-rm::after,.av-pill-rm::after{content:'';position:absolute;inset:-14px;border-radius:50%}
+/* Banda APLAZADO — persistente en el header del Programa. Misma anatomía que
+   .notice-banner (punto ámbar + etiqueta + texto): el estado del festival habla el
+   idioma que la app ya usa para canceladas/reprogramadas. SIN botón de cerrar: es
+   contexto, no notificación. Las palabras son del festival (cfg.status.note). */
+.fest-postponed-banner{display:flex;align-items:flex-start;gap:var(--sp-2);
+  padding:var(--sp-3) var(--sp-4);background:var(--surf-2);border-bottom:1px solid var(--bdr-l)}
+.fest-postponed-banner .notice-banner-label{color:var(--amber)}
+.fest-postponed-link{display:inline-block;margin-top:4px;font-size:var(--t-xs);
+  color:var(--amber);text-decoration:none;font-weight:var(--w-semi);letter-spacing:.3px}
 
 /* ── Poster ── */
-.lb-poster{width:var(--poster-xs-w);height:var(--poster-xs-h);object-fit:cover;border-radius:var(--r-sm);flex-shrink:0;display:block;background:var(--surf-2)}
+.lb-poster{width:var(--poster-xs-w);height:var(--poster-xs-h);object-fit:cover;border-radius:var(--r-poster);flex-shrink:0;display:block;background:var(--surf-2)}
 
 /* Editorial en thumbs (_posterThumb): el contenedor lleva su clase de tamaño +
    `poster-ed` + `--ed-accent`; el marco lo pinta .poster-ed (ver editorialFrame).
@@ -775,7 +802,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 
 .prio-strip-row{display:flex;gap:var(--sp-2);overflow-x:auto;padding-bottom:var(--sp-1);-webkit-overflow-scrolling:touch;scrollbar-width:none;touch-action:pan-x}
 .prio-chip{flex-shrink:0;width:var(--poster-md-w);position:relative;cursor:pointer}
-.prio-chip-poster{width:var(--poster-md-w);height:var(--poster-md-h);object-fit:cover;border-radius:var(--r-md);display:block;background:var(--surf-2)}
+.prio-chip-poster{width:var(--poster-md-w);height:var(--poster-md-h);object-fit:cover;border-radius:var(--r-poster);display:block;background:var(--surf-2)}
 .prio-chip-ph{width:72px;height:108px;border-radius:var(--r-md);background:var(--surf-2);display:flex;align-items:center;justify-content:center;font-size:var(--t-lg);opacity:.3}
 .prio-chip-rm{position:absolute;top:4px;right:4px;background:var(--overlay-70);border:none;color:var(--white);border-radius:50%;width:18px;height:18px;font-size:var(--t-sm);cursor:pointer;display:flex;align-items:center;justify-content:center;line-height:1}
 .prio-chip.past{opacity:.35}
@@ -931,7 +958,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .plist-time-hdr{padding:var(--sp-2) var(--sp-4);font-size:var(--t-label);font-weight:var(--w-bold);color:var(--amber);letter-spacing:.1em;background:var(--surf-2);position:sticky;top:var(--sticky-top-lista,0px);z-index:2;flex-shrink:0}
 .plist-item{display:flex;align-items:flex-start;gap:var(--sp-3);padding:var(--sp-2) var(--sp-4);border-bottom:1px solid var(--bdr-l);cursor:pointer}
 .plist-item:active{background:var(--surf-2)}
-.plist-poster{width:56px;height:84px;border-radius:var(--r-sm);flex-shrink:0;object-fit:cover;background:var(--surf-2)}
+.plist-poster{width:56px;height:84px;border-radius:var(--r-poster);flex-shrink:0;object-fit:cover;background:var(--surf-2)}
 .plist-poster-stack{position:relative;width:56px;height:84px;flex-shrink:0}
 .plist-poster-stack .ps-back{position:absolute;top:0;right:0;width:46px;height:72px;border-radius:var(--r-sm);object-fit:cover;background:var(--surf-3);opacity:.6;border:1px solid var(--bdr)}
 .plist-poster-stack .ps-front{position:absolute;bottom:0;left:0;width:46px;height:72px;border-radius:var(--r-sm);object-fit:cover;background:var(--surf-3);box-shadow:2px -2px 0 rgba(0,0,0,.5)}
@@ -944,6 +971,12 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
    que center). line-height ajustado para 2 líneas legibles. */
 .plist-title-txt{flex:1;min-width:0;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;line-height:1.25}
 .plist-meta{font-size:var(--t-sm);font-weight:var(--w-thin);color:var(--gray);margin-bottom:var(--sp-1)}
+/* plist-city — la CIUDAD en la card del modo por días (festivales multiciudad).
+   FICDEH 2026: 11 ciudades y 387 funciones; sin esto había que abrir cada ficha
+   para saber si la función era alcanzable. Va en línea propia (como
+   .venue-municipio en las fichas) para no competir con sede·sala·duración, y en
+   ámbar tenue: es el dato que decide si vale la pena seguir leyendo la card. */
+.plist-city{display:block;font-size:var(--t-xs);color:var(--amber-70,var(--amber));margin-top:2px;letter-spacing:.04em;font-weight:var(--w-semi)}
 .plist-sec{font-size:var(--t-label);color:var(--white-60);font-weight:var(--w-semi);margin-top:2px;letter-spacing:.2px}
 .plist-heart{font-size:var(--t-icon);color:var(--amber);flex-shrink:0;cursor:pointer;padding:6px;border-radius:50%;transition:background var(--tr-base),transform 200ms cubic-bezier(.34,1.56,.64,1)/* bounce intencional */;display:flex;align-items:center;justify-content:center;align-self:center}
 /* Mi Plan — modo lista compacta */
@@ -1044,12 +1077,70 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .pelicula-venue{font-size:var(--t-caption);color:rgba(240,237,232,.6);flex:1;min-width:0;cursor:pointer;transition:color var(--tr-base);display:flex;align-items:flex-start;gap:var(--sp-1);position:relative}
 .pelicula-venue::after{content:'';position:absolute;inset:-6px 0}
 .pelicula-venue:active{color:var(--amber)}
-.pelicula-venue>svg{margin-top:3px}
+/* flex-shrink:0 — el pin NO cede ancho. `.pelicula-venue` es flex y el <svg> es un
+   item más: sin esto el navegador reparte el ahogo entre icono y texto, y como el
+   SVG no tiene ancho intrínseco, cede primero. El texto puede envolver; el icono
+   no, así que se estruja en horizontal conservando el alto — no se ve más chico,
+   se ve DEFORMADO. Medido en FICMA: «Secretaría de la Mujer y Equidad de Género»
+   dejaba el pin en 7,5×13 (42% de ancho perdido), y ya con «Teatro los Fundadores»
+   perdía un 8%. Afectaba SEIS superficies, no solo la ficha: Programa (día y
+   TODO), Mi Plan, Intereses y el sheet de sede comparten esta fila.
+   Reportado por Juan el 9 ago 2026. Guardián: G03 en tests/geometry.spec.js. */
+.pelicula-venue>svg{margin-top:3px;flex-shrink:0}
 .saved-venue svg,.mplan-rvenue svg,.mplan-wk-venue svg,.checkin-opt-venue svg{vertical-align:middle}
 .venue-text{line-height:1.4}
 
 /* municipio — subordinado al venue, solo ciudades distintas a la sede principal del festival */
 .venue-municipio{display:block;font-size:var(--t-xs);color:var(--white-45);margin-top:1px;letter-spacing:.02em}
+/* La ficha filtrada por ciudad (7 ago 2026). La ciudad se dice UNA vez, en el
+   banner de Funciones —mismo tratamiento de etiqueta que el resto de la banda—,
+   y desaparece de cada fila (.venue-municipio) porque ahí ya no aporta. */
+.fn-ciudad{margin-left:var(--sp-3);font-size:var(--t-xs);color:var(--white-45);letter-spacing:.06em;text-transform:uppercase}
+/* La nota de lo que quedó fuera INFORMA, no invita: sin acento, sin subrayado y
+   sin nombrar la ciudad —nombrarla reintroduce la repetición que se quiso quitar—. */
+.fn-otra-ciudad{padding:var(--sp-2) var(--sp-5) var(--sp-3);font-size:var(--t-xs);color:var(--gray2)}
+/* «Sesión 1 de 2» — la coordenada del taller multi-día en Mi Plan. Mismo tono
+   que la sede (gris de apoyo): informa, no compite con el título. */
+.saved-sesion{font-size:var(--t-xs);color:var(--gray2);margin-top:1px}
+/* Taller multi-día (is_recurring): el control es del BLOQUE, no de la sesión.
+   Va debajo del listado, ancho completo, porque la decisión es sobre el conjunto
+   —no cabe alineado a la derecha de una fila, como el «Agregar» por función—. */
+/* ── Taller multi-día: el corchete que dice «esto es una sola cosa» ──────────
+   Las N sesiones van unidas por un corchete recto con un eslabón, y el control
+   queda a su derecha EN LÍNEA — la misma píldora que cualquier función suelta.
+   El corchete va del lado del botón: las filas conservan la alineación
+   izquierda del resto de la app (a la izquierda las corría ~24px) y apunta a
+   lo que significa — estas N alimentan UNA acción. */
+/* --blq-arm: largo del brazo del corchete Y ancho del eslabón — es UN solo número
+   con un solo significado, y de él sale el desplazamiento que centra el icono
+   sobre la línea. Sin esto reaparecen los 12/-6 sueltos, que es como se pierde la
+   relación entre las dos medidas. */
+.blq{--blq-arm:var(--sp-2);display:flex;align-items:stretch;padding:var(--sp-1) 0}
+.blq-filas{flex:1;min-width:0}
+/* Las filas del grupo conservan EXACTAMENTE el alto de una fila suelta: el ritmo
+   vertical de la lista es el mismo en toda la app y agrupar no es motivo para
+   romperlo. Lo único que se les quita es la divisoria — una línea entre filas dice
+   «son ítems distintos», justo lo contrario de lo que el corchete afirma. */
+.blq-filas .pel-sheet-screening{border-bottom:none}
+/* El brazo del corchete YA es el aire entre la sede y la línea: sumarle padding
+   acá le robaba ancho a la sede sin separar más. Medido: con brazo 12 + padding 8
+   + 12 del CTA, la columna de sede quedaba en 129px contra los 151px de una fila
+   normal con botón — 22px que parten «Colombo Americano · Sala 2» en dos líneas.
+   Es el mismo bug que causó el badge «✓ En tu Plan» (20 jul). Ahora la diferencia
+   es de 6px. */
+.blq-multi .blq-filas{padding-right:0}
+/* El corchete son DOS tramos con un hueco al medio para el eslabón. La primera
+   versión pintaba el icono encima con un `background` que lo despejara, y se veía
+   una cajita: la ficha lleva color ambiental del póster, así que NINGÚN color fijo
+   coincide con su fondo. Un hueco real no depende del fondo. */
+.blq-corchete{display:flex;flex-direction:column;align-items:flex-end;width:var(--blq-arm);flex-shrink:0}
+.blq-c-seg{flex:1;width:100%;border-right:1.5px solid var(--bdr)}
+.blq-c-seg:first-child{border-top:1.5px solid var(--bdr)}
+.blq-c-seg:last-child{border-bottom:1.5px solid var(--bdr)}
+/* Medio brazo hacia afuera = el eslabón queda centrado SOBRE la línea vertical. */
+.blq-link{display:flex;color:var(--gray2);margin-right:calc(var(--blq-arm) / -2);padding:var(--sp-1) 0}
+.blq-cta{display:flex;align-items:center;flex-shrink:0;padding-left:var(--sp-2)}
+.blq-cta .blk-quitar{color:var(--gray2)}
 /* ── Bottom Sheet ── */
 /* El velo NO transiciona en CSS: lo conduce initVeil() por rAF (auditoría
    28 jul 2026, DESIGN.md §8.4.1 — la opacidad CSS funde el tinte pero no
@@ -1220,8 +1311,8 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .pv-rating-sheet.open{display:flex;flex-direction:column;transform:translateY(0);transition:var(--sheet-in)}
 .pv-handle{width:36px;height:4px;background:rgba(255,255,255,.1);border-radius:var(--r-handle);margin:12px auto 0}
 .pv-header{display:flex;gap:var(--sp-btn);align-items:flex-start;padding:20px 20px 16px}
-.pv-poster-wrap{width:44px;height:66px;border-radius:var(--r-md);flex-shrink:0;position:relative;overflow:visible}
-.pv-poster-img{width:44px;height:66px;border-radius:var(--r-md);object-fit:cover;background:var(--surf-3)}
+.pv-poster-wrap{width:44px;height:66px;border-radius:var(--r-poster);flex-shrink:0;position:relative;overflow:visible}
+.pv-poster-img{width:44px;height:66px;border-radius:var(--r-poster);object-fit:cover;background:var(--surf-3)}
 .pv-poster-check{position:absolute;bottom:-5px;right:-5px;width:18px;height:18px;background:var(--green);border-radius:50%;display:flex;align-items:center;justify-content:center;border:2px solid var(--surf-2)}
 .pv-film-title{font-size:var(--t-md);font-weight:var(--w-display);color:var(--white);letter-spacing:-.02em;line-height:1.2;margin-bottom:5px}
 .pv-context{font-size:var(--t-sm);color:var(--gray);line-height:1.6}
@@ -1248,7 +1339,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .conflict-card{display:flex;align-items:center;gap:var(--sp-3);padding:var(--sp-3) var(--sp-4);border-radius:var(--r);border:1px solid var(--bdr);background:var(--surf-3)}
 .conflict-card.incoming{border-color:var(--amber-30);background:var(--amber-10)}
 .conflict-card.existing{border-color:var(--bdr);background:var(--surf-3)}
-.conflict-poster{width:32px;height:48px;border-radius:var(--r-sm);flex-shrink:0;object-fit:cover;background:var(--white-05)}
+.conflict-poster{width:32px;height:48px;border-radius:var(--r-poster);flex-shrink:0;object-fit:cover;background:var(--white-05)}
 .conflict-card.incoming .conflict-poster{background:var(--amber-12)}
 .conflict-card.existing .conflict-poster{background:var(--white-05)}
 .conflict-role{font-size:var(--t-label);font-weight:var(--w-bold);letter-spacing:.8px;text-transform:uppercase;margin-bottom:3px}
@@ -1279,7 +1370,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .prio-limit-list{padding:6px 0}
 .prio-limit-item{display:flex;align-items:center;gap:var(--sp-3);padding:var(--sp-3) var(--sp-5);border-bottom:1px solid var(--bdr-l);cursor:pointer}
 .prio-limit-item:last-child{border-bottom:none}
-.prio-limit-thumb{width:32px;height:48px;border-radius:var(--r-sm);flex-shrink:0;object-fit:cover;background:var(--surf-3)}
+.prio-limit-thumb{width:32px;height:48px;border-radius:var(--r-poster);flex-shrink:0;object-fit:cover;background:var(--surf-3)}
 .prio-limit-info{flex:1;min-width:0}
 .prio-limit-name{font-size:var(--t-base);font-weight:var(--w-semi);color:var(--white);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .prio-limit-when{font-size:var(--t-sm);color:var(--gray);margin-top:2px}
@@ -1782,7 +1873,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .recap-chip.done{background:var(--green-12);color:var(--green);border:1px solid var(--green-20)}
 .recap-chip.pend{background:var(--amber-10);color:var(--amber);border:1px solid var(--amber-30)}
 .ctx-next-row{display:flex;align-items:center;gap:var(--sp-3);margin-top:8px}
-.ctx-next-poster{width:36px;height:54px;border-radius:var(--r-sm);flex-shrink:0;object-fit:cover;background:var(--surf-3)}
+.ctx-next-poster{width:36px;height:54px;border-radius:var(--r-poster);flex-shrink:0;object-fit:cover;background:var(--surf-3)}
 .ctx-next-title{font-size:var(--t-base);font-weight:var(--w-bold);color:var(--white);letter-spacing:-.1px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;flex:1;min-width:0}
 .ctx-next-title-row{display:flex;align-items:center;gap:var(--sp-2);margin-bottom:3px}
 .ctx-next-detail{font-size:var(--t-sm);color:var(--gray)}
@@ -2238,6 +2329,28 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 }
 .splash-card:not(.on){transform:scale(.9);opacity:.5}
 .splash-card.past:not(.on){opacity:.32;filter:grayscale(.6)}
+/* APLAZADO (10 ago 2026, terremoto de Manizales/FICMA 17): el afiche se apaga a
+   medias —ni vigente pleno ni pasado gris— y el distintivo lo nombra. Ámbar = el
+   color de los avisos en toda la app; glass = lámina sobre el afiche, como el
+   chrome. Fuente única: _festivalCardHTML (sale igual en splash y sheet). */
+.splash-card.postponed .splash-card-art{filter:saturate(.3) brightness(.72)}
+.splash-card.postponed{position:relative}
+/* Posición y ancho NO son decorativos: los afiches imprimen su NOMBRE y sus FECHAS
+   al pie (FICMA: «FICMA 17 / 10 AL 17 DE AGOSTO» entre el 85% y el 92% de la
+   altura). Con el distintivo más arriba y más angosto, la fecha —que el festival
+   ya desmintió— asomaba en blanco por debajo (Juan, 10 ago). Medido sobre el
+   afiche real: bottom 5.5% + min-width 62% lo cubre por completo, sin la banda
+   opaca que se comía un sexto del cartel. Verificado a 4x en el pie de la card. */
+.splash-card-badge{position:absolute;left:50%;bottom:5.5%;transform:translateX(-50%);
+  min-width:62%;text-align:center;
+  font-size:var(--t-badge);letter-spacing:.6px;font-weight:var(--w-display);color:var(--amber);
+  background:rgba(11,10,8,.74);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+  padding:4px 9px;border-radius:var(--r-sm);border:1px solid var(--amber-30);
+  text-transform:uppercase;white-space:nowrap;pointer-events:none}
+/* 3 clases a propósito: `.splash-info-city .live-dot` (línea del verde) empata a 2
+   y va DESPUÉS en el archivo — sin la tercera clase el punto salía VERDE en un
+   festival aplazado (cazado en QA visual, 10 ago). */
+.live-dot.postponed-dot,.splash-info-city .live-dot.postponed-dot{background:var(--amber)}
 /* divisor "ANTERIORES" — vertical, separa festivales en curso de pasados en el riel */
 .splash-rail-div{
   flex:none;display:flex;flex-direction:column;align-items:center;gap:var(--sp-2);align-self:center;
@@ -2433,8 +2546,33 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .lugar-opt:last-child{border-bottom:none}
 .lugar-opt:active,.lugar-opt:hover{background:var(--surf-2)}
 .lugar-opt.on{color:var(--white);font-weight:var(--w-semi)}
-.lugar-opt span{flex:1}
+/* El nombre ocupa el resto y CORTA con elipsis: las sedes de FICDEH llegan a
+   "Fundación Gilberto Alzate Avendaño - Biblioteca" y con nowrap sin overflow
+   empujaban el pin fuera de la caja y pegaban el conteo al borde. */
+.lugar-opt span{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis}
 .lugar-cnt{font-size:var(--t-sm);color:var(--gray2);flex:none!important}
+/* lugar-back — fila de regreso del drill-down de ciudad (festivales multiciudad).
+   Ámbar = navegación, no selección: no filtra, vuelve al nivel de ciudades. */
+.lugar-back{color:var(--amber);font-weight:var(--w-semi);font-size:var(--t-sm)}
+/* Sheet de ciudad (multiciudad) — gramática del SPLASH (aprobado 7 ago):
+   afiche → eyebrow (.splash-fest-label, MAYÚS con tracking) → lista. No repite
+   el nombre del festival: el afiche que el usuario acaba de tocar ya lo dice.
+   El póster reusa .splash-card-tpl/.splash-card-art con su propia escala —más
+   chico que en el splash porque acá es contexto, no la elección. */
+#city-sheet .auth-sheet-inner{--poster-h:150px;--poster-w:calc(var(--poster-h) * 2 / 3)}
+.city-sheet-art{margin:0 auto var(--sp-4)}
+#city-sheet .splash-fest-label{text-align:center;margin-bottom:var(--sp-4)}
+/* Sheet de ciudad (multiciudad): la fila es EXACTAMENTE .lugar-opt — sin fechas
+   ni conteos, la lista del sheet y el nivel de ciudades del filtro son la misma
+   cosa (Juan, 7 ago: "lo de las fechas sobra"). Cero clases nuevas.
+   El nombre toma peso de elección; la salida ("ver todas") es una fila más,
+   como "todos los lugares" en el filtro — no un cancelar.
+   El techo en vh deja entrar las 11 ciudades sin scroll en un teléfono normal y
+   recorta con scroll solo en pantallas cortas. */
+.lugar-opt.city{font-weight:var(--w-semi);color:var(--white)}
+.lugar-opt.escape{color:var(--gray2);font-size:var(--t-sm);justify-content:center}
+#city-sheet-list{max-height:66vh;overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;margin:0 calc(-1*var(--sp-5))}
+.lugar-back svg{color:var(--amber)}
 @keyframes lugarFadeIn{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:translateY(0)}}
 /* Dropdown de filtro ÚNICO (sección + lugar) — auditoría overlays 18 jul 2026.
    Antes: ~11 líneas de cssText inline DUPLICADAS que además divergieron
@@ -2532,7 +2670,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .search-item:active{background:var(--surf-2)}
 .search-item-poster{
   width:38px;height:57px;
-  object-fit:cover;border-radius:var(--r-sm);
+  object-fit:cover;border-radius:var(--r-poster);
   flex-shrink:0;background:var(--surf-2);
 }
 .search-item-info{flex:1;min-width:0}
@@ -2563,7 +2701,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .int-item-rating-empty{font-size:var(--t-xs);color:var(--gray2);cursor:pointer}
 .int-seen-btn.on{background:rgba(245,158,11,.1);color:var(--amber);border-color:rgba(245,158,11,.3)}
 .int-item:active{background:var(--surf-2)}
-.int-item-poster{width:56px;height:84px;border-radius:var(--r-sm);background:var(--surf-2);flex-shrink:0;overflow:hidden;object-fit:cover}
+.int-item-poster{width:56px;height:84px;border-radius:var(--r-poster);background:var(--surf-2);flex-shrink:0;overflow:hidden;object-fit:cover}
 
 .int-item-info{flex:1;min-width:0}
 .int-item-title{font-size:var(--t-base);font-weight:var(--w-bold);color:var(--white);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-bottom:2px}
@@ -2621,7 +2759,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .w-full-sm{width:100%;font-size:var(--t-sm)}
 
 .label-track-amber{font-size:var(--t-xs);color:var(--amber);letter-spacing:1px}
-.poster-sm{width:36px;height:54px;border-radius:var(--r-sm);flex-shrink:0}
+.poster-sm{width:36px;height:54px;border-radius:var(--r-poster);flex-shrink:0}
 .bg-surf-3{background:var(--surf-3)}
 .txt-gray-sm-mb1{font-size:var(--t-sm);color:var(--gray);margin-bottom:var(--sp-1)}
 .txt-caption-gray{font-size:var(--t-caption);color:var(--gray)}
@@ -3029,8 +3167,16 @@ setTimeout(function(){
 </div>
 
 
-<div class="programa-list" id="programa-list"></div>
+<!-- #notices-banner ARRIBA de las dos vistas, no entre ellas (12 ago 2026).
+     Estaba entre #programa-list y #grid, así que su posición dependía de qué
+     vista estuviera activa: en GRILLA la lista queda vacía y el aviso salía
+     arriba (3% del documento, visible); en LISTA el día entero se pinta encima y
+     el aviso caía al 97% —2988px de 3065—, o sea DESPUÉS de que ya recorriste
+     todas las funciones tachadas. Te enterabas de por qué están canceladas
+     cuando ya habías pasado de largo. Medido con FICDEH y sus 116 cards.
+     Va antes de ambas: una sola posición, no dos. -->
 <div id="notices-banner"></div>
+<div class="programa-list" id="programa-list"></div>
 <div id="filter-bars">
   <button id="agtab" style="display:none"><span id="ag-cnt">0</span></button>
 </div>
@@ -3096,7 +3242,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202608021618";
+    s.src="/src/main.js?v=202608121033";
     document.body.appendChild(s);
     // Watchdog de boot (P0 18 jul): si el grafo ESM murió en el import (caché
     // HTTP mixta tras deploys en ráfaga — main.js nuevo + módulo viejo sin el
@@ -3207,6 +3353,18 @@ setTimeout(function(){
 </script>
 
 <!-- Festival switcher bottom sheet -->
+<!-- Sheet de CIUDAD (festivales multiciudad) — se muestra UNA vez al entrar al
+     Programa, cuando el festival tiene ≥2 ciudades y el usuario no eligió aún.
+     Reusa la anatomía del bottom sheet canónico (.auth-sheet). La lista la pinta
+     _renderCitySheet() desde festivalCities(), el mismo dueño que el filtro. -->
+<div class="auth-sheet" id="city-sheet" data-close-bg="CitySheet">
+  <div class="auth-sheet-inner">
+    <div class="splash-card-tpl city-sheet-art" id="city-sheet-art"></div>
+    <div class="splash-fest-label" id="city-sheet-label"></div>
+    <div id="city-sheet-list"></div>
+  </div>
+</div>
+
 <div class="auth-sheet" id="auth-sheet" data-close-bg="AuthSheet">
   <div class="auth-sheet-inner">
     <div id="auth-sheet-step1">

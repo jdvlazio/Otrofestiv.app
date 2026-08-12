@@ -12,7 +12,7 @@
 
 import { NOTICES, SECTION_ORDER_LIST, _DEFAULT_FEST_ID } from '../config.js';
 import { ICONS, _secLabel, _secLabelFull, _sectionColor, escXML, makeEventPoster, makeProgramPoster, parseProgramTitle } from './components.js';
-import { _dayChips, _getItemPoster, _metaBadges, _plistPosterHtml, _programaStack, dayLabel, durFmt, emptyState, getFilmPoster, isNowShowing, posterParts, sala, vcfg } from './helpers.js';
+import { _dayChips, _getItemPoster, _metaBadges, _plistPosterHtml, _programaStack, dayLabel, durFmt, emptyState, getFilmPoster, isNowShowing, posterParts, sala, vcfg, venueMatches, venueCity } from './helpers.js';
 import { festivalEnded, toMin } from '../domain/time.js';
 import { screeningPassed } from '../domain/film.js';
 import { state } from '../state/state.js';
@@ -50,19 +50,41 @@ export function renderProgramaChipsHTML(state){
 // en otro (TT y FantasoFest la misma semana pueden compartir título de corto/programa).
 // El add (_dismissNotice) y el check (getActiveNotices) usan ESTE helper → no divergen.
 // Separador NUL (imposible en un festId [a-z0-9]) evita colisiones festId-titulo.
+// Un aviso por CIUDADES no tiene `title`: su clave estable es `id`. Sin esto, la
+// clave sería «…\0undefined» y descartar un aviso ocultaría cualquier otro sin título.
 export function _noticeKey(title){ return (_activeFestId||_DEFAULT_FEST_ID)+String.fromCharCode(0)+title; }
+export function noticeId(n){ return n.id||n.title||''; }
+
+// _noticeAfecta — ¿este aviso alcanza a ESTA función? Es el alcance del aviso, el
+// mismo que sella el loader: por CIUDADES, o por título (+fecha si la trae).
+function _noticeAfecta(n,f){
+  if(Array.isArray(n.cities)) return n.cities.includes(vcfg(f.venue).city||'');
+  return n.title===f.title&&(!n.date||n.date===f.day);
+}
 
 export function getActiveNotices(){
   const festId=(_activeFestId||_DEFAULT_FEST_ID);
   const today=new Date(); today.setHours(0,0,0,0);
   return NOTICES.filter(n=>{
     if(n.festival!==festId) return false;
-    if(_dismissedNotices.has(_noticeKey(n.title))) return false;
+    if(_dismissedNotices.has(_noticeKey(noticeId(n)))) return false;
     // Banner desaparece al día siguiente de la función cancelada
     if(n.date){
       const funcDate=new Date(n.date+'T00:00:00');
       funcDate.setDate(funcDate.getDate()+1); // día siguiente
       if(today>=funcDate) return false;
+    }
+    // ── Un aviso se muestra si INTERSECTA con lo que hay en pantalla ──────────
+    // (regla de Juan, 12 ago 2026.) Filtrando BOGOTÁ —donde FICDEH no canceló
+    // nada— el banner seguía hablando de las 4 ciudades del sismo: no es ruido,
+    // se lee como que Bogotá está afectada. Es lo contrario de informar.
+    // El predicado se apoya en venueMatches, el dueño único del filtro de lugar,
+    // así que vale igual para 'all', para `city:` y para una SEDE concreta — y
+    // generaliza al aviso de una función suelta: si filtrás una sede donde esa
+    // función no va, el aviso no aparece.
+    if(activeVenue!=='all'){
+      const {FILMS}=state.snapshot();
+      if(!FILMS.some(f=>_noticeAfecta(n,f)&&venueMatches(f.venue,activeVenue))) return false;
     }
     return true;
   });
@@ -71,8 +93,25 @@ export function getActiveNotices(){
 export function renderNoticesBannerHTML(state){
   const active=getActiveNotices();
   if(!active.length) return '';
+  const {_lang}=state.snapshot();
   return active.map(n=>{
     const label=n.type==='cancelled'?t('notice_cancelada'):t('notice_reprogramada');
+    // Aviso CON causa (note): habla el festival, con sus palabras y su enlace. Es
+    // el único sitio donde se explica el porqué — las cards solo marcan CANCELADA.
+    // `note` va en ES en todos los idiomas salvo que traiga note_en (mismo criterio
+    // que status.note: no traducimos palabras ajenas sin aprobación).
+    if(n.note){
+      const _esc=s=>String(s||'').replace(/&/g,'&amp;');
+      const _txt=(_lang!=='es'&&n.note_en)||n.note;
+      return`<div class="notice-banner">
+      <div class="notice-banner-dot"></div>
+      <div class="notice-banner-body">
+        <div class="notice-banner-label">${label}</div>
+        <div class="notice-banner-text">${_txt}${n.url?`<br><a class="fest-postponed-link" href="${_esc(n.url)}" target="_blank" rel="noopener">${t('notice_link')}</a>`:''}</div>
+      </div>
+      <button class="notice-banner-close" data-action="dismissNotice" aria-label="${t('misc_cerrar')}" data-title="${noticeId(n).replace(/"/g,'&quot;')}">✕</button>
+    </div>`;
+    }
     const msgCancelled=`<span>${t('plan_fecha_pendiente')}</span>`;
     const msgRescheduled=n.newDay&&n.newTime?`${t('notice_nueva_funcion')} <span class="txt-white60">${n.newDay} · ${n.newTime}${n.newVenue?' · '+n.newVenue:''}</span>`:'';
     const msg=n.type==='cancelled'?msgCancelled:msgRescheduled;
@@ -107,7 +146,7 @@ export function renderProgramaListHTML(state){
   try{
   const {FILMS, _activeFestId, watchlist} = state.snapshot();
   let films=FILMS.filter(f=>f.day===activeDay);
-  if(activeVenue!=='all') films=films.filter(f=>vcfg(f.venue).short===activeVenue);
+  if(activeVenue!=='all') films=films.filter(f=>venueMatches(f.venue,activeVenue));
   if(activeSec!=='all') films=films.filter(f=>f.section===activeSec);
   films.sort((a,b)=>{
     const td=toMin(a.time)-toMin(b.time);
@@ -140,7 +179,8 @@ export function renderProgramaListHTML(state){
       // card ES la nueva — el detalle "pasa a…" quedó redundante y se retiró.
       const noticeBadge=f._cancelled?`<span class="notice-badge">${t('notice_cancelada')}</span>`
         :f._movedFrom?`<span class="notice-badge">${t('notice_reprog_short')}</span>`:'';
-      const noticeNote=f._cancelled?`<div class="notice-detail-amber">${t('plan_fecha_pendiente')}</div>`:'';
+      // «Pendiente nueva fecha» SOLO si el aviso no explicó la causa (ver loader).
+      const noticeNote=(f._cancelled&&!f._cancelExplained)?`<div class="notice-detail-amber">${t('plan_fecha_pendiente')}</div>`:'';
       const cancelStyle=f._cancelled?'opacity:.5':'';
       const pastStyle=passed&&!isNow&&!festivalEnded()?'opacity:.45':'';
       const itemStyle=[pastStyle,cancelStyle].filter(Boolean).join(';');
@@ -150,7 +190,7 @@ export function renderProgramaListHTML(state){
         ${_stk||_plistPosterHtml(f,src)}
         <div class="plist-info">
           <div class="plist-title">${noticeBadge}<span class="plist-title-txt">${dt}</span>${_metaBadges(f)}${nowBadge}</div>
-          <div class="plist-meta" style="${f._cancelled?'text-decoration:line-through':''}">${vc.short}${sala(f.venue)?' · '+sala(f.venue):''}${f.duration?' · '+durFmt(f.duration):''}</div>
+          <div class="plist-meta" style="${f._cancelled?'text-decoration:line-through':''}">${vc.short}${sala(f.venue)?' · '+sala(f.venue):''}${venueCity(f.venue)?`<span class="plist-city">${venueCity(f.venue)}</span>`:''}${f.duration?' · '+durFmt(f.duration):''}</div>
           ${noticeNote||`<div class="plist-sec">${_secLabelFull(f.section||'')}</div>`}
         </div>
         <div class="plist-heart${inWL?'':' empty'}" data-title="${f.title.replace(/"/g,'&quot;')}" data-action="toggleWLFromList" data-stop="1">${inWL?ICONS.heartFill:ICONS.heart}</div>
@@ -234,8 +274,8 @@ export function _renderExploreListaHTML(state){
   }
   if(activeVenue!=='all'){
     entries=entries.filter(e=>e.screenings.some(s=>{
-      if(s.screenings&&s.screenings.length) return s.screenings.some(sc=>vcfg(sc.venue).short===activeVenue);
-      return vcfg(s.venue).short===activeVenue;
+      if(s.screenings&&s.screenings.length) return s.screenings.some(sc=>venueMatches(sc.venue,activeVenue));
+      return venueMatches(s.venue,activeVenue);
     }));
   }
   const _typeOrder=f=>f.type==='event'?2:f.is_cortos?1:0;
@@ -269,7 +309,7 @@ export function _renderExploreListaHTML(state){
     return`<div class="plist-item js-open-pel${allPast?' past-card':''}" data-title="${escXML(f.title)}">
       ${_stk2||_plistPosterHtml(f,src)}
       <div class="plist-info">
-        ${(()=>{const nb=f._cancelled?`<span class="notice-badge">${t('notice_cancelada')}</span>`:f._movedFrom?`<span class="notice-badge">${t('notice_reprog_short')}</span>`:'';const nn=f._cancelled?`<div class="notice-detail-amber">${t('plan_fecha_pendiente')}</div>`:'';const n=f._cancelled?{type:'cancelled'}:null;return`<div class="plist-title" style="${allPast?'opacity:.5':''}">${nb}${dt}</div><div class="plist-meta" style="${n&&n.type==='cancelled'?'text-decoration:line-through':''}${allPast?';opacity:.5':''}">${daysHtml?`${daysHtml} · `:''}${durFmt(f.duration)}${_metaBadges(f)?` · ${_metaBadges(f)}`:''}</div>${nn||`<div class="plist-sec">${_secLabelFull(f.section||'')}</div>`}`;})()}
+        ${(()=>{const nb=f._cancelled?`<span class="notice-badge">${t('notice_cancelada')}</span>`:f._movedFrom?`<span class="notice-badge">${t('notice_reprog_short')}</span>`:'';const nn=(f._cancelled&&!f._cancelExplained)?`<div class="notice-detail-amber">${t('plan_fecha_pendiente')}</div>`:'';const n=f._cancelled?{type:'cancelled'}:null;return`<div class="plist-title" style="${allPast?'opacity:.5':''}">${nb}${dt}</div><div class="plist-meta" style="${n&&n.type==='cancelled'?'text-decoration:line-through':''}${allPast?';opacity:.5':''}">${daysHtml?`${daysHtml} · `:''}${durFmt(f.duration)}${_metaBadges(f)?` · ${_metaBadges(f)}`:''}</div>${nn||`<div class="plist-sec">${_secLabelFull(f.section||'')}</div>`}`;})()}
       </div>
       <div class="plist-heart${inWL?'':' empty'}" data-title="${f.title.replace(/"/g,'&quot;')}" data-action="toggleWLFromList" data-stop="1">${inWL?ICONS.heartFill:ICONS.heart}</div>
     </div>`;
@@ -307,8 +347,8 @@ export function renderPeliculaViewHTML(state){
   }
   if(activeVenue!=='all'){
     entries=entries.filter(e=>e.screenings.some(s=>{
-      if(s.screenings&&s.screenings.length) return s.screenings.some(sc=>vcfg(sc.venue).short===activeVenue);
-      return vcfg(s.venue).short===activeVenue;
+      if(s.screenings&&s.screenings.length) return s.screenings.some(sc=>venueMatches(sc.venue,activeVenue));
+      return venueMatches(s.venue,activeVenue);
     }));
   }
   const _unknownSecMap=(()=>{const m={};let i=SECTION_ORDER_LIST.length;FILMS.forEach(f=>{if(f.section&&SECTION_ORDER_LIST.indexOf(f.section)<0&&!(f.section in m))m[f.section]=i++;});return m;})();
@@ -330,6 +370,13 @@ export function renderPeliculaViewHTML(state){
     const inWL=watchlist.has(f.title);
     const inW=watched.has(f.title);
     const allPast=screenings.every(s=>screeningPassed(s));
+    // La marca aparece SOLO cuando es verdad para TODA la obra (regla de Juan,
+    // 11 ago 2026). En FICDEH tras el sismo: de 116 obras, 10 quedaron sin ninguna
+    // función viva y 39 son PARCIALES —«La gran hazaña» tiene 4 canceladas y 12
+    // activas—. Marcar las 39 sería falso y empujaría a descartar películas que sí
+    // se pueden ver; su cancelación se ve donde el usuario decide a qué ir: la
+    // ficha y la vista por día. Aquí la card es la OBRA, no la función.
+    const allCancelled=screenings.length>0&&screenings.every(s=>s._cancelled);
     const posterSrc=getFilmPoster(f);
     const safeT=f.title.replace(/"/g,'&quot;').replace(/'/g,"&#39;");
     const{displayTitle}=parseProgramTitle(f.title);
@@ -354,7 +401,7 @@ export function renderPeliculaViewHTML(state){
     } else {
       _cardBg='';
       _cardBg='';
-      const _opacity=allPast&&!_ended?';opacity:.45':'';
+      const _opacity=(allPast&&!_ended)||allCancelled?';opacity:.45':'';
       const _edSecLbl=_secLabel(f.section||'');
       const _edBodyTitle=(()=>{const pfx=_edSecLbl+' - ';if(displayTitle.startsWith(pfx))return displayTitle.slice(pfx.length);const sPfx='Storytellers - ';if(displayTitle.startsWith(sPfx))return displayTitle.slice(sPfx.length);return displayTitle;})();
       const _pp=posterParts(f,{header:true,body:_edBodyTitle}); // decisión única (posterModel)
@@ -368,8 +415,10 @@ export function renderPeliculaViewHTML(state){
       }
     }
     const _sep=activeDay==='all'&&f.section&&f.section!==_prevSec?`<div class="sec-hdr sm poster-grid-sep">${_secLabelFull(f.section||'')}</div>`:'';_prevSec=f.section||_prevSec;
+    const cancBadge=allCancelled?`<div class="badge-past poster-past-badge">${t('notice_cancelada')}</div>`:'';
     return _sep+`<div class="bg-surf-2 poster-card js-open-pel${inWL&&!inW?' in-wl':''}${inW&&!_ended?' in-watched':''}${_edAccent?' poster-ed':''}" data-title="${escXML(f.title)}"${_edAccent?` style="--ed-accent:${_edAccent}"`:(_isPrograma?'':_cardBg)}>
       ${posterImg}
+      ${cancBadge}
       ${progBadge}
       ${inWL?`<button class="poster-wl-dot wl-on" data-title="${f.title.replace(/"/g,'&quot;')}" data-action="toggleWL" data-stop="1" aria-label="${t('misc_interes_label')}">${ICONS.heartFill}</button>`:''}
     </div>`
@@ -393,7 +442,7 @@ export function render(){
   if(cartelaMode==='pelicula'){renderSbar();renderPeliculaView();return;}
   lugarClose(); // refresh label if open
   let films=FILMS.filter(f=>f.day===activeDay);
-  if(activeVenue!=='all') films=films.filter(f=>vcfg(f.venue).short===activeVenue);
+  if(activeVenue!=='all') films=films.filter(f=>venueMatches(f.venue,activeVenue));
   if(activeSec!=='all') films=films.filter(f=>f.section===activeSec);
   films.sort((a,b)=>toMin(a.time)-toMin(b.time));
   const cntEl=document.getElementById('cnt');
@@ -448,7 +497,7 @@ export function renderSbar(){
   panel.innerHTML='';
   const isExplorar=activeDay==='all';
   let dayF=isExplorar?FILMS:FILMS.filter(f=>f.day===activeDay);
-  if(activeVenue!=='all') dayF=dayF.filter(f=>vcfg(f.venue).short===activeVenue);
+  if(activeVenue!=='all') dayF=dayF.filter(f=>venueMatches(f.venue,activeVenue));
   const secs=[...new Set(dayF.map(f=>f.section))].sort((a,b)=>{
     const ia=SECTION_ORDER_LIST.indexOf(a),ib=SECTION_ORDER_LIST.indexOf(b);
     if(ia>=0&&ib>=0) return ia-ib;
