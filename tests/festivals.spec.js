@@ -643,4 +643,18 @@ test('AP03 — cancelación por ciudad: sella, un solo banner, sin fecha prometi
   expect(m.bannerTexto).toContain('por el sismo');
   expect(m.enlace).toContain('instagram.com');
   expect(m.promesaFecha).toBe(0);                      // no se promete fecha
+  // Una cancelada no ofrece SERVICIOS: ni boleta, ni inscripción, ni Q&A. Visto en
+  // producción el día que FICDEH abrió: la card de Quibdó decía «CANCELADA» y al
+  // lado «CON BOLETA» — le ofrecía entrada a una función suspendida por el sismo.
+  const servicios = await page.evaluate(async () => {
+    const { state } = await import('/src/state/state.js');
+    const { _metaBadges } = await import('/src/view/helpers.js');
+    const canc = state.snapshot().FILMS.filter(f => f._cancelled);
+    return { total: canc.length, conBadge: canc.filter(f => _metaBadges(f) !== '').length,
+             enPantalla: [...document.querySelectorAll('.plist-item, .poster-card')]
+               .filter(el => /CANCELADA/i.test(el.textContent) && /CON BOLETA|INSCRIPCIÓN|Q&A/i.test(el.textContent)).length };
+  });
+  expect(servicios.total).toBeGreaterThan(50);
+  expect(servicios.conBadge).toBe(0);      // el dueño (_metaBadges) no los emite
+  expect(servicios.enPantalla).toBe(0);    // y ninguna card los muestra
 });

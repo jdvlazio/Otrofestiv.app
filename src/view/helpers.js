@@ -641,6 +641,12 @@ export function ticketBadgeTarget(){
 }
 
 export function _metaBadges(f){
+  // Una función CANCELADA no tiene Q&A, ni inscripción, ni boleta. Sin esto la
+  // card de Quibdó decía «CANCELADA» y al lado «CON BOLETA» el día que FICDEH
+  // abrió: le ofrecía comprar entrada a una función que el festival ya suspendió
+  // por el sismo (visto en producción, 11 ago 2026). El badge de estado manda
+  // sobre los de servicio: si no va a ocurrir, no hay nada que ofrecer.
+  if(f&&f._cancelled) return '';
   let b='';
   if(f.has_qa) b+=`<span class="meta-badge">Q&A</span>`;
   if(f.requires_registration) b+=`<span class="meta-badge">${t('badge_inscripcion')}</span>`;
