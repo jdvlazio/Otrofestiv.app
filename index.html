@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202608120622">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202608120622">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202608120649">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202608120649">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -681,6 +681,13 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .pel-sheet-ticket-link{display:inline-flex;align-items:center;gap:var(--sp-1);margin-top:var(--sp-3);font-size:var(--t-sm);color:var(--amber);text-decoration:none;opacity:.9;cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
 .pel-sheet-ticket-link:hover{opacity:1}
 .meta-banner .pel-sheet-ticket-link{margin-top:var(--sp-1)}
+/* FIJO mientras haya avisos activos (decisión de Juan, 12 ago 2026). Con 116
+   cards, un aviso que scrollea desaparece a dos dedos y volvemos al problema que
+   este arreglo resuelve: enterarse de por qué hay funciones tachadas DESPUÉS de
+   pasarlas. Se ancla bajo la cabecera —el slot de .programa-chips, que está
+   display:none desde que el filtro pasó a dropdown— y por debajo de #hdr-programa
+   (z-index 201) para no taparlo. Sigue descartable con la ✕. */
+#notices-banner:not(:empty){position:sticky;top:var(--sticky-top-chips);z-index:194}
 .notice-banner{display:flex;align-items:flex-start;gap:var(--sp-2);padding:var(--sp-2) var(--sp-4);background:var(--surf-2);border-bottom:1px solid var(--bdr-l)}
 .notice-banner-dot{width:6px;height:6px;border-radius:50%;background:var(--amber);flex-shrink:0;margin-top:5px}
 .notice-banner-body{flex:1;min-width:0}
@@ -3235,7 +3242,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202608120622";
+    s.src="/src/main.js?v=202608120649";
     document.body.appendChild(s);
     // Watchdog de boot (P0 18 jul): si el grafo ESM murió en el import (caché
     // HTTP mixta tras deploys en ráfaga — main.js nuevo + módulo viejo sin el
