@@ -77,7 +77,11 @@ SECCIONES = {
     'In Conversation With...': ('🎙️', 'Charlas / Industria'),
     'Special Events':          ('🎪', 'Especiales / Eventos'),
     'TIFF Next Wave Selects':  ('🌊', 'Perspectivas / Miradas'),
-    'Unhidden Gems presented by Redbreast': ('💎', 'Muestra / País'),
+    # TIFF la publica como «Unhidden Gems presented by Redbreast». La regla de
+    # secciones es verbatim, pero verbatim aquí mete una marca de whisky en la
+    # interfaz: Juan decidió el 13 ago quitar el patrocinador. Es la excepción
+    # a la regla, y por eso queda escrita aquí y no aplicada en silencio.
+    'Unhidden Gems presented by Redbreast': ('💎', 'Muestra / País', 'Unhidden Gems'),
 }
 
 # Las charlas no son proyecciones. Ver el vocabulario del proyecto:
@@ -106,14 +110,23 @@ def main():
                 'anio': t.get('anio_tmdb') or t.get('anio'),
                 'paises': t.get('paises')}
 
-    funciones, secciones_vistas = [], set()
+    funciones, secciones_vistas, multiseccion = [], set(), []
     saltadas = {'no_publica': 0, 'cancelada': 0}
 
     for o in ofi:
         es_programa = o['slug'] in cortos_de
         lb = {} if es_programa else datos_lb(o['slug'])
-        sec = (o['secciones'] or ['(sin sección)'])[0]
-        secciones_vistas.add(sec)
+        # TIFF cuelga 18 obras de DOS secciones. La app modela una sola, así
+        # que se toma la primera —que es la curatorial— y la segunda se
+        # conserva como etiqueta. Antes se descartaba sin decir nada, y un
+        # dato que desaparece callado es el peor de los dos errores posibles.
+        todas_sec = o['secciones'] or ['(sin sección)']
+        sec = todas_sec[0]
+        etiquetas = todas_sec[1:]
+        secciones_vistas.update(todas_sec)
+        if etiquetas:
+            multiseccion.append({'titulo': o['titulo'], 'seccion': sec,
+                                 'etiquetas': etiquetas})
 
         lista = None
         if es_programa:
@@ -158,6 +171,7 @@ def main():
                 'en_app': True,
                 # extras que el publicador consume
                 'seccion': sec,
+                'etiquetas_seccion': etiquetas or None,
                 'sinopsis': o.get('sinopsis') or None,
                 'sinopsis_lang': 'en',
                 'idiomas': o.get('idiomas'),
@@ -187,9 +201,9 @@ def main():
                '_festival': {'id': 'tiff2026', 'ciudad': 'Toronto', 'pais': 'Canadá',
                              'timezoneOffset': '-04:00', 'dias': dias},
                '_secciones_propuestas': {k: {'emoji': e, 'archetype': a, 'en': k}
-                                         for k, (e, a) in SECCIONES.items()
+                                         for k, (e, a, _n) in ((x, (v + (x,))[:3]) for x, v in SECCIONES.items())
                                          if k in secciones_vistas},
-               '_saltadas': saltadas,
+               '_saltadas': saltadas, '_multiseccion': multiseccion,
                'funciones': funciones},
               open(salida, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
 
@@ -198,6 +212,7 @@ def main():
           f'{saltadas["no_publica"]} prensa/privadas + {saltadas["cancelada"]} canceladas')
     print(f'   días {len(dias)} ({dias[0]} → {dias[-1]}) · sedes {len({f["sede"] for f in funciones})} '
           f'· salas {len({f["sala"] for f in funciones})}')
+    print(f'   obras en 2 secciones: {len(multiseccion)} (la 2ª queda como etiqueta)')
     print(f'   secciones {len(secciones_vistas)} · programas de cortos '
           f'{len({f["titulo"] for f in funciones if f["is_cortos"]})}')
     print(f'   con lbSlug {sum(1 for f in funciones if f["lbSlug"])}/{len(funciones)} · '
