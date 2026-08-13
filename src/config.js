@@ -426,6 +426,35 @@ export const FESTIVAL_CONFIG={
     keyArt:'/assets/keyart/finca2026.jpg',
     films:null,posters:null,lbSlugs:{}
   },
+  'tiff2026': {
+    name:'TIFF',fullName:'TIFF — Toronto International Film Festival',shortName:'TIFF',
+    city:'Toronto',country:'CA',
+    dates:'9–20 SEP',dates_en:'SEP 9–20',year:2026,timezoneOffset:'-04:00',
+    storageKey:'tiff2026_',festivalStartStr:'2026-09-09T00:00:00',festivalEndStr:'2026-09-20T23:59:00',
+    festivalDates:{'2026-09-09':'2026-09-09', '2026-09-10':'2026-09-10', '2026-09-11':'2026-09-11', '2026-09-12':'2026-09-12', '2026-09-13':'2026-09-13', '2026-09-14':'2026-09-14', '2026-09-15':'2026-09-15', '2026-09-16':'2026-09-16', '2026-09-17':'2026-09-17', '2026-09-18':'2026-09-18', '2026-09-19':'2026-09-19', '2026-09-20':'2026-09-20'},
+    days:[{k:'2026-09-09', d: 9, lbl:'MIÉ'}, {k:'2026-09-10', d: 10, lbl:'JUE'}, {k:'2026-09-11', d: 11, lbl:'VIE'}, {k:'2026-09-12', d: 12, lbl:'SÁB'}, {k:'2026-09-13', d: 13, lbl:'DOM'}, {k:'2026-09-14', d: 14, lbl:'LUN'}, {k:'2026-09-15', d: 15, lbl:'MAR'}, {k:'2026-09-16', d: 16, lbl:'MIÉ'}, {k:'2026-09-17', d: 17, lbl:'JUE'}, {k:'2026-09-18', d: 18, lbl:'VIE'}, {k:'2026-09-19', d: 19, lbl:'SÁB'}, {k:'2026-09-20', d: 20, lbl:'DOM'}],
+    dayKeys:['2026-09-09', '2026-09-10', '2026-09-11', '2026-09-12', '2026-09-13', '2026-09-14', '2026-09-15', '2026-09-16', '2026-09-17', '2026-09-18', '2026-09-19', '2026-09-20'],
+    dayShort:{'2026-09-09':'MIÉ 9', '2026-09-10':'JUE 10', '2026-09-11':'VIE 11', '2026-09-12':'SÁB 12', '2026-09-13':'DOM 13', '2026-09-14':'LUN 14', '2026-09-15':'MAR 15', '2026-09-16':'MIÉ 16', '2026-09-17':'JUE 17', '2026-09-18':'VIE 18', '2026-09-19':'SÁB 19', '2026-09-20':'DOM 20'},
+    dayShort_en:{'2026-09-09':'WED 9', '2026-09-10':'THU 10', '2026-09-11':'FRI 11', '2026-09-12':'SAT 12', '2026-09-13':'SUN 13', '2026-09-14':'MON 14', '2026-09-15':'TUE 15', '2026-09-16':'WED 16', '2026-09-17':'THU 17', '2026-09-18':'FRI 18', '2026-09-19':'SAT 19', '2026-09-20':'SUN 20'},
+    dayLong:{'2026-09-09':'Miércoles 9 de septiembre', '2026-09-10':'Jueves 10 de septiembre', '2026-09-11':'Viernes 11 de septiembre', '2026-09-12':'Sábado 12 de septiembre', '2026-09-13':'Domingo 13 de septiembre', '2026-09-14':'Lunes 14 de septiembre', '2026-09-15':'Martes 15 de septiembre', '2026-09-16':'Miércoles 16 de septiembre', '2026-09-17':'Jueves 17 de septiembre', '2026-09-18':'Viernes 18 de septiembre', '2026-09-19':'Sábado 19 de septiembre', '2026-09-20':'Domingo 20 de septiembre'},
+    prioLimit:6,
+    // group:'test' — TIFF NO se publica todavía. Juan lo montará cuando terminen
+    // FINCA y FICDEH, y faltan dos cosas suyas: el keyArt del carrusel (su web no
+    // publica afiche de festival, solo banners 2:1) y las decisiones abiertas
+    // (sinopsis en inglés, pases premium, obras de doble sección).
+    // Quitar esta línea ES el paso de publicación. Mientras esté, el festival
+    // vive en la sección aparte del selector y no compite con los vigentes.
+    // group:'test' — TIFF NO se publica todavía (Juan lo montará cuando terminen
+    // FINCA y FICDEH). Además ESCONDE el festival del riel y del selector, así que
+    // para verlo en local hay que comentar esta línea; verificado que así carga.
+    // Quitarla es el paso de publicación, y antes hace falta el keyArt: TIFF no
+    // tiene afiche de festival (su identidad es un wordmark), y el test
+    // splashTagline «cada img degrada» exige que todo festival visible lo tenga.
+    group:'test',
+    tagline:'Toronto International Film Festival',
+    ticketing_model:'ticketed', // todas las funciones públicas tienen enlace de Ticketmaster
+    films:null,posters:null,lbSlugs:{}
+  },
   'ficmontanas2026':{
     name:'Ficmontañas',fullName:'Festival Internacional de Cine en las Montañas',shortName:'FICMONTAÑAS',
     city:'Salento',country:'CO',
@@ -481,6 +510,22 @@ export const ARCHETYPE_COLORS = {
 // Cada sección de cada festival → su arquetipo. Generado por scripts/classify-posters
 // (arquetipos) + decisiones de diseño. Sección nueva sin entrada → gate lo caza.
 export const SECTION_ARCHETYPES = {
+  // ── TIFF 2026 · Toronto ────────────────────────────────────────────────
+  '🎩 Gala Presentations': 'Apertura / Gala',
+  '⭐ Special Presentations': 'Muestra / País',
+  '🎯 Centrepiece': 'Muestra / País',
+  '🔎 Discovery': 'Perspectivas / Miradas',
+  '🏆 Platform': 'Competencia',
+  '🎥 TIFF Docs': 'Perspectivas / Miradas',
+  '🌙 Midnight Madness': 'Especiales / Eventos',
+  '〰️ Wavelengths': 'Perspectivas / Miradas',
+  '✂️ Short Cuts': 'Cortos / Programas',
+  '🏛️ TIFF Classics': 'Retrospectiva / Tributo',
+  '📺 Primetime': 'Especiales / Eventos',
+  '🎙️ In Conversation With...': 'Charlas / Industria',
+  '🎪 Special Events': 'Especiales / Eventos',
+  '🌊 TIFF Next Wave Selects': 'Perspectivas / Miradas',
+  '💎 Unhidden Gems': 'Muestra / País',
   '🔮 Largometrajes': 'Muestra / País',
   '🌙 Cortometrajes': 'Cortos / Programas',
   '🌱 Raíces del Juego': 'Perspectivas / Miradas',
@@ -646,6 +691,7 @@ export const SECTION_ARCHETYPES = {
 // Lo cazó Juan mirando el splash (9 ago 2026). El guardián [pais-conocido] de
 // validate.py exige ahora que todo `country` de FESTIVAL_CONFIG exista en esta tabla.
 export const COUNTRY_NAMES = {
+  CA: { es:'Canadá',       en:'Canada' },
   CO: { es:'Colombia',       en:'Colombia' },
   BR: { es:'Brasil',         en:'Brazil' },
   US: { es:'Estados Unidos', en:'United States' },
