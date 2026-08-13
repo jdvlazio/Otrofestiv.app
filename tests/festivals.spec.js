@@ -717,3 +717,41 @@ test('AP04 — cancelada por obra: marca solo las totales, y el Diario no ofrece
   expect(d.ofreceVista).toBe(false);       // no se califica lo que no ocurrió
   expect(d.vivaOfreceVista).toBe(true);    // y la que sí ocurrió, sigue calificable
 });
+
+// AP05 — badge PREMIUM: la función cuesta más y hay que decirlo. TIFF marca 61 de
+// sus 638 funciones (galas del Roy Thomson, Princess of Wales, Royal Alexandra y
+// dos sedes más), y 55 OBRAS tienen funciones premium y normales a la vez: sin el
+// badge, alguien planea su día, va a comprar y se encuentra otro precio — y lo
+// habría llevado ahí la app. Se prueba en el DUEÑO (_metaBadges), que es donde
+// vive la regla, y con el caso de orden que importa: una cancelada no anuncia que
+// es cara. Hoy no hay ninguna premium cancelada en TIFF; el orden vale para
+// cuando la haya.
+test('AP05 — PREMIUM se anuncia, salvo si la función está cancelada', async ({ page }) => {
+  await page.goto('/');
+  await page.waitForSelector('html[data-app-ready="1"]', { state: 'attached', timeout: 15000 });
+  const r = await page.evaluate(async () => {
+    const { _metaBadges } = await import('/src/view/helpers.js');
+    const txt = o => _metaBadges(o).replace(/<[^>]*>/g, '·');
+    return {
+      premium:            txt({ premium: true }),
+      normal:             txt({ premium: false }),
+      sinCampo:           txt({}),
+      premiumCancelada:   txt({ premium: true, _cancelled: true }),
+      premiumConQA:       txt({ premium: true, has_qa: true }),
+      // `premium: 'true'` (string) NO cuenta: el dato es booleano y un truthy
+      // accidental no debe pintar un badge de precio.
+      premiumString:      txt({ premium: 'true' }),
+    };
+  });
+  expect(r.premium).toContain('PREMIUM');
+  expect(r.normal).not.toContain('PREMIUM');
+  expect(r.sinCampo).not.toContain('PREMIUM');
+  // El badge de ESTADO manda sobre los de SERVICIO: si no va a ocurrir, no hay
+  // nada que ofrecer — ni siquiera decir que era cara.
+  expect(r.premiumCancelada).toBe('');
+  // Convive con los demás, y va PRIMERO: es lo único que cambia el precio.
+  expect(r.premiumConQA).toContain('PREMIUM');
+  expect(r.premiumConQA).toContain('Q&A');
+  expect(r.premiumConQA.indexOf('PREMIUM')).toBeLessThan(r.premiumConQA.indexOf('Q&A'));
+  expect(r.premiumString).not.toContain('PREMIUM');
+});
