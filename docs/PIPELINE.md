@@ -281,6 +281,43 @@ hablan, solo de cómo se comporta un cruce sano.
 | `[sidecar-vacio]` | Un conteo `_algo: N > 0` tiene que estar respaldado por su lista: ni vacía ni toda nula. | El script de TMDB se pasó una hora reintentando un error de certificado SSL y terminó sin escribir nada, porque trataba un fallo de transporte como un tropiezo pasajero de la API. |
 | `[discrepancia-falsa]` | En una lista `_discrep*` o `_ambigu*`, ningún elemento puede tener dos valores iguales al normalizar. | La auditoría de directores reportó 22 discrepancias y las 22 eran falsas: comparaba «Sue Kim» con «Sue Kim» y «濱口竜介» con su nombre latino. Una lista de discrepancias con idénticos no es auditoría, es ruido que esconde las de verdad. |
 
+**Séptimo, hermano del anterior y del mismo día: `[valor-inventado]`.**
+`[campo-contrato]` caza el NOMBRE mal escrito; éste caza el VALOR inventado.
+
+Escribí `ticketing_model:'ticketed'` para TIFF. La app solo ramifica sobre
+`'paid'` y `'mixed'`; con cualquier otra cosa cae al `return ''`. **637 fichas
+con su enlace de Ticketmaster guardado y sin botón de compra.** El error de
+fondo no fue teclear mal: fue ver `'mixed'` en otro festival y **deducir** que
+existiría un valor para «todo de pago», en vez de leer qué acepta el código.
+
+Los valores manejados se leen **del código**, no de una lista escrita a mano:
+una lista aquí envejecería igual que el bug que persigue.
+
+**La regla de trabajo que se lleva de aquí, y que vale más que el guardián: un
+valor de enum no se deduce por analogía. Se lee en el código que lo consume,
+antes de escribirlo.**
+
+**Sexto guardián, el que tapa el hueco de verdad: `[campo-contrato]`.** Todos
+los demás revisan el dato POR DENTRO —que el campo exista, que sea booleano,
+que las cuentas cierren—. Ninguno miraba la **junta** entre el dato y la app.
+Un JSON impecable y una vista impecable pueden no encontrarse nunca, y nada se
+pone rojo.
+
+Pasó con TIFF: emití `ticketUrl` y `sheets-controller` lee `ticket_url`. Los 638
+enlaces de boletería estaban en el JSON y no llegaban a ninguna ficha. **No lo
+cazó ningún test —ni los del pipeline ni los de la app—: lo cazó Juan abriendo
+la app y preguntando dónde estaba el enlace.** Esa es la definición del hueco.
+
+La regla es estrecha a propósito, para no dar falsos positivos: si un campo NO
+lo lee la app pero SÍ existe su variante en el otro estilo de nombre
+(camelCase ↔ snake_case) y esa sí se lee, es un error seguro — es la misma cosa
+escrita de dos formas. Los campos que nadie lee y no tienen gemela salen como
+aviso, no como error: son dato muerto, no un fallo.
+
+**En su primera ejecución encontró un bug que llevaba meses en producción y no
+era de TIFF:** `aff-2026.json` emitía `lb_slug` en dos películas y la app lee
+`lbSlug`. Dos botones de Letterboxd que nunca aparecieron.
+
 **Quinto guardián, añadido el 13 ago 2026:** `[flag-booleano]`. La app compara
 los flags de servicio con `=== true`, no por truthy, y eso es deliberado —un
 badge de precio no se pinta por un valor accidental—. El precio de esa decisión

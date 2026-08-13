@@ -242,9 +242,13 @@ def main():
             'has_qa': f.get('has_qa', False),
             'flags': flags_de(f.get('pais')),
             'is_cortos': f['is_cortos'],
-            # is_programa activa la ficha enriquecida de programa (main.js):
-            # nuestro film_list trae director, país, duración y sinopsis por corto.
-            'is_programa': bool(f['is_cortos']),
+            # NO se emite `is_programa`. Ese flag activa la plantilla de DOS
+            # pósters apilados del film_list (sheets-controller), y para un
+            # programa de cortos es la decisión equivocada: dos afiches sueltos
+            # no dicen que es un programa. Lo que lo dice es el marco editorial
+            # —banda de sección arriba, título abajo—, que es a donde cae solo
+            # cuando este flag no está. Decisión de Juan, 13 ago 2026.
+            # `is_cortos` SÍ se emite: es el que marca la obra como programa.
             'film_list': [{
                 # El id viaja al publicado: es la clave del cruce de sinopsis
                 # (hay DOS cortos titulados «The End») y la única identidad

@@ -3443,6 +3443,121 @@ except Exception as _e:
 # hablan, solo de cómo se comporta un cruce sano.
 
 
+# ── [valor-inventado] un valor de config que la app no maneja ────────────────
+# HERMANO DE [campo-contrato], y del mismo día. Aquél caza el NOMBRE mal escrito;
+# éste caza el VALOR inventado. Los dos son la misma familia: el dato y la app
+# hablando idiomas distintos sin que nada se ponga rojo.
+#
+# El 13 ago 2026 escribí `ticketing_model:'ticketed'` para TIFF. La app solo
+# ramifica sobre 'paid' y 'mixed'; con cualquier otra cosa cae al return vacío.
+# Resultado: 637 fichas con su enlace de Ticketmaster guardado y SIN botón de
+# compra. No lo cazó nada — lo cazó Juan preguntando por qué no veía la
+# boletería. El error de fondo: vi 'mixed' en otro festival y DEDUJE que
+# existiría un valor para «todo de pago», en vez de leer qué acepta el código.
+#
+# Regla: para cada campo de FESTIVAL_CONFIG cuyo valor la app compara con ===,
+# el conjunto de valores usados tiene que estar contenido en el de valores
+# manejados. Los valores manejados se leen DEL CÓDIGO, no de una lista a mano:
+# una lista escrita aquí envejecería igual que el bug que persigue.
+check = 'valor-inventado'
+try:
+    import re as _re, glob as _glob
+    _cfg = open('src/config.js', encoding='utf-8').read()
+    _src = ' '.join(open(_x, encoding='utf-8').read()
+                    for _x in _glob.glob('src/**/*.js', recursive=True)
+                    if 'config.js' not in _x)
+    _CAMPOS = ('ticketing_model', 'posterSource', 'event_kind', 'type')
+    _viol = []
+    for _campo in _CAMPOS:
+        _maneja = set(_re.findall(_campo + r"\s*===?\s*'([^']+)'", _src))
+        _maneja |= set(_re.findall(r"'([^']+)'\s*===?\s*[\w.]*" + _campo, _src))
+        if not _maneja:
+            continue          # la app no ramifica sobre él: nada que validar
+        _usa = set(_re.findall(_campo + r":\s*'([^']+)'", _cfg))
+        _malos = sorted(_usa - _maneja)
+        if _malos:
+            _viol.append(f'{_campo}={_malos} — la app solo maneja '
+                         f'{sorted(_maneja)}')
+    if _viol:
+        fail(check, 'valor de config que la app NO maneja (cae al camino vacío): '
+                    + '; '.join(_viol))
+    else:
+        ok(check, 'todo valor de config cae en una rama que la app maneja')
+except Exception as _e:
+    warn(check, f'no se pudo verificar valor-inventado: {_e}')
+
+
+# ── [campo-contrato] el JSON y la app tienen que llamar igual a lo mismo ─────
+# EL HUECO QUE ESTE GUARDIÁN TAPA. Todos los demás revisan el dato POR DENTRO:
+# que el campo exista, que sea booleano, que las cuentas cierren. Ninguno miraba
+# la JUNTA entre el dato y la app. Un JSON impecable y una vista impecable
+# pueden no encontrarse nunca, y nada se pone rojo.
+#
+# Pasó con TIFF el 13 ago 2026: emití `ticketUrl` y sheets-controller lee
+# `ticket_url`. Los 638 enlaces de boletería estaban en el JSON y no llegaban a
+# ninguna ficha. No lo cazó ningún test —ni los nuestros ni los de la app—: lo
+# cazó Juan abriendo la app y preguntando «¿dónde está el enlace?». Lo mismo con
+# `tmdbId` contra `tmdb_id`.
+#
+# La regla es estrecha A PROPÓSITO, para no tener falsos positivos: si un campo
+# NO lo lee la app pero SÍ existe su variante en el otro estilo de nombre
+# (camelCase ↔ snake_case) y ESA sí se lee, es un error seguro. No es una
+# heurística: es la misma cosa escrita de dos formas.
+check = 'campo-contrato'
+try:
+    import json as _json, glob as _glob, os as _os, re as _re
+    _src = ' '.join(open(_x, encoding='utf-8').read()
+                    for _x in _glob.glob('src/**/*.js', recursive=True))
+
+    # Metadato NUESTRO, no de render: lo consumen el pipeline y los validadores,
+    # y que la app no lo lea es correcto. Se declara para que el aviso de «dato
+    # muerto» signifique algo — si todo es ruido, nadie lo mira.
+    _PIPELINE = {'synopsis_lang', 'tmdb_id', 'tmdbId', 'posterSource', 'day_order'}
+
+    def _lee(_k):
+        # Palabra suelta, no solo `.campo`: la app también desestructura y usa
+        # el nombre en literales. Buscar solo `.campo` daba huérfanos falsos
+        # («sessions» se lee en 4 sitios y salía como muerto).
+        return bool(_re.search(r'\b' + _re.escape(_k) + r'\b', _src))
+
+    def _variantes(_k):
+        _snake = _re.sub(r'(?<!^)(?=[A-Z])', '_', _k).lower()
+        _camel = _re.sub(r'_([a-z])', lambda m: m.group(1).upper(), _k)
+        return {_snake, _camel} - {_k}
+
+    _viol, _huerf = [], []
+    for _f in sorted(_glob.glob('festivals/*.json')):
+        try:
+            _d = _json.load(open(_f, encoding='utf-8'))
+        except Exception:
+            continue
+        _campos = set()
+        def _rec(_items):
+            for _it in _items or []:
+                if isinstance(_it, dict):
+                    _campos.update(k for k in _it if not k.startswith('_'))
+                    _rec(_it.get('film_list'))
+        _rec(_d.get('films'))
+        for _k in sorted(_campos):
+            if _lee(_k):
+                continue
+            _gemelas = [_v for _v in _variantes(_k) if _lee(_v)]
+            if _gemelas:
+                _viol.append(f'{_os.path.basename(_f)}: emite «{_k}» y la app lee '
+                             f'«{_gemelas[0]}» — el dato no llega')
+            elif _k not in _PIPELINE:
+                _huerf.append(f'{_os.path.basename(_f)}:{_k}')
+    if _viol:
+        fail(check, 'mismo dato con dos nombres distintos: ' + '; '.join(_viol[:4]))
+    elif _huerf:
+        warn(check, f'{len(_huerf)} campo(s) que nadie lee (dato muerto, no error): '
+                    + ', '.join(_huerf[:6]))
+    else:
+        ok(check, 'todo campo publicado tiene quien lo lea')
+except Exception as _e:
+    warn(check, f'no se pudo verificar campo-contrato: {_e}')
+
+
 # ── [flag-booleano] un flag de la app es booleano, no la palabra «true» ──────
 # La app compara los flags de servicio con `=== true`, no por truthy, y a
 # propósito: un badge de precio no se pinta por un valor accidental. El coste de
