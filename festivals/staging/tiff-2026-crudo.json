@@ -89,16 +89,14 @@
    "emoji": "🎪",
    "archetype": "Especiales / Eventos",
    "en": "Special Events"
+  }
+ },
+ "_sellos": {
+  "Unhidden Gems": {
+   "emoji": "💎"
   },
   "TIFF Next Wave Selects": {
-   "emoji": "🌊",
-   "archetype": "Perspectivas / Miradas",
-   "en": "TIFF Next Wave Selects"
-  },
-  "Unhidden Gems": {
-   "emoji": "💎",
-   "archetype": "Muestra / País",
-   "en": "Unhidden Gems"
+   "emoji": "🌊"
   }
  },
  "_saltadas": {
@@ -178,9 +176,9 @@
   },
   {
    "titulo": "REDEFINED | Short Film Showcase",
-   "seccion": "TIFF Next Wave Selects",
+   "seccion": "Special Events",
    "etiquetas": [
-    "Special Events"
+    "TIFF Next Wave Selects"
    ]
   },
   {
@@ -14023,9 +14021,9 @@
    "has_qa": false,
    "acceso": "regular",
    "en_app": true,
-   "seccion": "TIFF Next Wave Selects",
+   "seccion": "Special Events",
    "etiquetas_seccion": [
-    "Special Events"
+    "TIFF Next Wave Selects"
    ],
    "sinopsis": "Catch the premiere of REDEFINED at the Toronto International Film Festival and streaming worldwide on the NFB. Following the screening, join us for a Q&A with the filmmakers.",
    "sinopsis_lang": "en",

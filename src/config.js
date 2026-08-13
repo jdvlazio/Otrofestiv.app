@@ -524,8 +524,6 @@ export const SECTION_ARCHETYPES = {
   '📺 Primetime': 'Especiales / Eventos',
   '🎙️ In Conversation With...': 'Charlas / Industria',
   '🎪 Special Events': 'Especiales / Eventos',
-  '🌊 TIFF Next Wave Selects': 'Perspectivas / Miradas',
-  '💎 Unhidden Gems': 'Muestra / País',
   '🔮 Largometrajes': 'Muestra / País',
   '🌙 Cortometrajes': 'Cortos / Programas',
   '🌱 Raíces del Juego': 'Perspectivas / Miradas',

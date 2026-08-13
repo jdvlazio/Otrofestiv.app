@@ -77,16 +77,27 @@ SECCIONES = {
     'In Conversation With...': ('🎙️', 'Charlas / Industria'),
     'Special Events':          ('🎪', 'Especiales / Eventos'),
     'TIFF Next Wave Selects':  ('🌊', 'Perspectivas / Miradas'),
-    # TIFF la publica como «Unhidden Gems presented by Redbreast». La regla de
-    # secciones es verbatim, pero verbatim aquí mete una marca de whisky en la
-    # interfaz: Juan decidió el 13 ago quitar el patrocinador. Es la excepción
-    # a la regla, y por eso queda escrita aquí y no aplicada en silencio.
+    # TIFF la publica como «Unhidden Gems presented by Redbreast»; Juan quitó el
+    # patrocinador el 13 ago. Sigue aquí para conservar su emoji y su nombre,
+    # pero NO es una sección: ver SELLOS.
     'Unhidden Gems presented by Redbreast': ('💎', 'Muestra / País', 'Unhidden Gems'),
 }
 
 # Las charlas no son proyecciones. Ver el vocabulario del proyecto:
 # «actividad» es el paraguas, «función» es solo proyección.
 SECCIONES_DE_CHARLA = {'In Conversation With...'}
+
+# SELLOS: TIFF los publica como programmes, pero no se comportan como secciones.
+# El dato lo dice solo: «Unhidden Gems» encabeza CERO obras —sus seis viven en
+# Discovery, TIFF Docs, Centrepiece y Gala— y «Next Wave Selects» encabeza una
+# sola. Son selecciones que CRUZAN el programa: la del comité joven de TIFF y
+# una selección patrocinada. Una película no está EN Unhidden Gems como está en
+# Centrepiece; está en Centrepiece y ADEMÁS lleva el sello.
+#
+# Tratarlos como sección costaba dos cosas concretas: dos entradas casi vacías
+# en el filtro, y un arquetipo y un color que a esas 18 obras no les tocan.
+# Decisión de Juan, 13 ago 2026. El sello NO se pierde: viaja en etiquetas.
+SELLOS = {'Unhidden Gems presented by Redbreast', 'TIFF Next Wave Selects'}
 
 
 def publicado(clave):
@@ -134,8 +145,15 @@ def main():
         # conserva como etiqueta. Antes se descartaba sin decir nada, y un
         # dato que desaparece callado es el peor de los dos errores posibles.
         todas_sec = o['secciones'] or ['(sin sección)']
-        sec = publicado(todas_sec[0])
-        etiquetas = [publicado(x) for x in todas_sec[1:]]
+        # La sección es la primera que NO sea un sello. Sin esto, «REDEFINED |
+        # Short Film Showcase» —cuyo primer programme es Next Wave— quedaba
+        # colgado de un sello en vez de en Special Events, que es su sección real.
+        reales = [x for x in todas_sec if x not in SELLOS]
+        if not reales:
+            sys.exit(f'«{o["titulo"]}» solo tiene sellos y ninguna sección real: '
+                     f'{todas_sec}. Un sello no puede hacer de sección.')
+        sec = publicado(reales[0])
+        etiquetas = [publicado(x) for x in todas_sec if x != reales[0]]
         secciones_vistas.update(todas_sec)
         if etiquetas:
             multiseccion.append({'titulo': o['titulo'], 'seccion': sec,
@@ -218,7 +236,9 @@ def main():
                '_secciones_propuestas': {publicado(k): {'emoji': e, 'archetype': a,
                                                              'en': publicado(k)}
                                          for k, (e, a) in ((x, v[:2]) for x, v in SECCIONES.items())
-                                         if k in secciones_vistas},
+                                         if k in secciones_vistas and k not in SELLOS},
+               '_sellos': {publicado(k): {'emoji': SECCIONES[k][0]} for k in SELLOS
+                           if k in secciones_vistas},
                '_saltadas': saltadas, '_multiseccion': multiseccion,
                # Las cuentas las verifica [cuentas-cuadran]: entradas tiene que
                # ser exactamente publicadas + descartes. Si el ensamblador
