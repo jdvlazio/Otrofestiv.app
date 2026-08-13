@@ -648,6 +648,15 @@ export function _metaBadges(f){
   // sobre los de servicio: si no va a ocurrir, no hay nada que ofrecer.
   if(f&&f._cancelled) return '';
   let b='';
+  // PREMIUM — la función cuesta más que el resto. Va PRIMERO entre los de
+  // servicio porque es lo único que cambia el precio: los demás dicen qué te dan,
+  // éste dice cuánto te cuesta. En TIFF son 61 de 638 funciones (las galas del
+  // Roy Thomson, el Princess of Wales, el Royal Alexandra y dos sedes más), y lo
+  // crítico es que 55 obras tienen funciones premium y normales A LA VEZ: sin el
+  // badge, alguien planea su día, va a comprar y se encuentra otro precio — y lo
+  // habría llevado ahí la app. Palabra del propio festival, la misma que verá en
+  // Ticketmaster; no se traduce (mismo criterio que Q&A).
+  if(f.premium===true) b+=`<span class="meta-badge">${t('badge_premium')}</span>`;
   if(f.has_qa) b+=`<span class="meta-badge">Q&A</span>`;
   if(f.requires_registration) b+=`<span class="meta-badge">${t('badge_inscripcion')}</span>`;
   // Festival mixto: el badge marca la MINORÍA (ver ticketBadgeTarget).
