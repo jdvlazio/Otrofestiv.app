@@ -1,0 +1,36 @@
+{
+ "John Bassett Theatre": {
+  "n": 1,
+  "_prec": "sin verificar",
+  "_todo": "buscar a mano (sedes-html.py genera la página)"
+ },
+ "Roy Thomson Hall": {
+  "n": 26,
+  "_prec": "sin verificar",
+  "_todo": "buscar a mano (sedes-html.py genera la página)"
+ },
+ "Royal Alexandra Theatre": {
+  "n": 36,
+  "_prec": "sin verificar",
+  "_todo": "buscar a mano (sedes-html.py genera la página)"
+ },
+ "Scotiabank Theatre Toronto": {
+  "n": 393,
+  "_prec": "sin verificar",
+  "_todo": "buscar a mano (sedes-html.py genera la página)"
+ },
+ "TIFF Lightbox": {
+  "n": 148,
+  "_prec": "sin verificar",
+  "_todo": "buscar a mano (sedes-html.py genera la página)"
+ },
+ "VISA Screening Room at the Princess of Wales Theatre": {
+  "n": 34,
+  "_prec": "sin verificar",
+  "_todo": "buscar a mano (sedes-html.py genera la página)"
+ },
+ "_provenance": {
+  "fuente": "Nominatim con verificación: caja de ciudad + token distintivo + clase de lugar (una sede fija nunca es un barrio). _prec:manual intocable.",
+  "capturado": "2026-08-13"
+ }
+}
