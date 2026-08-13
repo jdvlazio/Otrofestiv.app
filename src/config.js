@@ -450,6 +450,7 @@ export const FESTIVAL_CONFIG={
     // Quitarla es el paso de publicación, y antes hace falta el keyArt: TIFF no
     // tiene afiche de festival (su identidad es un wordmark), y el test
     // splashTagline «cada img degrada» exige que todo festival visible lo tenga.
+    group:'test',
     tagline:'Toronto International Film Festival',
     ticketing_model:'paid', // todas las públicas tienen enlace de Ticketmaster.
     // OJO: el vocabulario de la app es SOLO 'paid' | 'mixed'. Puse 'ticketed',
