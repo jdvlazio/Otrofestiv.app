@@ -43,6 +43,38 @@ Orden canónico para montar un festival. Cada paso mapea a una fase de abajo.
 
 ## Fases en orden obligatorio
 
+### Fase 0 · El `robots.txt` va PRIMERO — retro TIFF 2026 (13 ago 2026)
+
+**Antes de escribir una línea de extractor, leer el `robots.txt` de la fuente.**
+No al final, no cuando algo falla: antes de la primera petición.
+
+Salió de TIFF y costó 262 páginas ya descargadas. Al ir a leer *tiffr* —un
+planificador de terceros— apareció esto, y lo mismo en Letterboxd:
+
+```
+User-agent: ClaudeBot
+Disallow: /
+Content-Signal: ai-train=no, use=reference
+```
+
+Las tres fuentes de aquel onboarding resultaron ser tres casos distintos, y la
+diferencia importa:
+
+| Fuente | Qué dice | Qué hacemos |
+|---|---|---|
+| **tiff.net** | no publica `robots.txt` (404) | sin restricción declarada → es la fuente |
+| **Letterboxd** | prohíbe ClaudeBot | decisión de Juan caso por caso; en TIFF quedó el uso mínimo del `lbSlug`, que además les devuelve tráfico |
+| **tiffr** | prohíbe ClaudeBot, y es un producto PAR | no se toca. Y no hacía falta: sus 244 obras eran las mismas 244 de TIFF |
+
+**Dos reglas que se llevan de aquí:**
+
+- **La web del propio festival es la fuente legítima por defecto.** Un tercero
+  que refleja al festival no aporta dato nuevo — se comprobó contando: tiffr y
+  tiff.net daban el mismo número exacto de obras.
+- **Un `robots.txt` que no existe (404) no es lo mismo que uno que calla sobre
+  nosotros, y ninguno de los dos es lo mismo que uno que nos nombra y nos
+  prohíbe.** Solo el tercero es un no.
+
 ### Fase 1 · Extracción `[Data Engineer]`
 
 **Objetivo:** JSON del festival con todos los campos poblados desde el origen.
