@@ -10,7 +10,6 @@
   "pais": "Canadá",
   "timezoneOffset": "-04:00",
   "dias": [
-   "2026-09-09",
    "2026-09-10",
    "2026-09-11",
    "2026-09-12",
@@ -101,7 +100,8 @@
  },
  "_saltadas": {
   "no_publica": 249,
-  "cancelada": 0
+  "cancelada": 0,
+  "fuera_de_ventana": 1
  },
  "_multiseccion": [
   {
@@ -233,10 +233,11 @@
  ],
  "_cuentas": {
   "entradas": 887,
-  "publicadas": 638,
+  "publicadas": 637,
   "descartadas": {
    "prensa_mercado_privadas": 249,
-   "canceladas": 0
+   "canceladas": 0,
+   "fuera_de_ventana_oficial": 1
   }
  },
  "funciones": [
@@ -8062,41 +8063,6 @@
    "boleta": "https://am.ticketmaster.com/tiff2/ism/NlMxOTIwU0Q=",
    "accesibilidad": [],
    "formato": "DCP"
-  },
-  {
-   "titulo": "Hope",
-   "dia": "2026-09-09",
-   "hora": "18:30",
-   "sede": "TIFF Lightbox",
-   "sala": "TLB 2",
-   "ciudad": "",
-   "director": "Na Hong-jin",
-   "pais": "South Korea",
-   "anio": "2026",
-   "duracion_min": 157,
-   "has_qa": false,
-   "acceso": "regular",
-   "en_app": true,
-   "seccion": "Special Events",
-   "etiquetas_seccion": null,
-   "sinopsis": "In this madcap marvel from Na Hong-jin (The Chaser, The Wailing), a police chief (Hwang Jung-min) and deputy (Hoyeon) investigate a monstrous incursion upon their remote village, as a headstrong local (Zo In-sung) musters a hunting party to root out the threat.",
-   "sinopsis_lang": "en",
-   "idiomas": "Korean",
-   "generos": [
-    "Mystery + Thriller",
-    "Science Fiction + Fantasy",
-    "Action + Adventure",
-    "Horror"
-   ],
-   "lbSlug": "hope-2026",
-   "tmdb_id": 1058424,
-   "poster_tmdb": "/ptqlN6mDIAqJjVA86J5eOoG82zc.jpg",
-   "is_cortos": false,
-   "film_list": null,
-   "tipo": "proyeccion",
-   "boleta": "https://am.ticketmaster.com/tiff2/ism/NlMwOTYzVDI=",
-   "accesibilidad": [],
-   "formato": null
   },
   {
    "titulo": "How We Stand",

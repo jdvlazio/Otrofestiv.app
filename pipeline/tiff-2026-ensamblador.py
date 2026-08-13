@@ -87,6 +87,18 @@ SECCIONES = {
 # «actividad» es el paraguas, «función» es solo proyección.
 SECCIONES_DE_CHARLA = {'In Conversation With...'}
 
+# La ventana OFICIAL que publica TIFF: 10–20 SEP. Su endpoint trae además una
+# función el 9 («Hope», TIFF Lightbox, marcada General Public), pero la propia
+# web del festival NO ofrece pestaña del día 9: sus días van del 10 al 20. El
+# dato existe en su backend y no está publicado.
+#
+# Regla de Juan (13 ago 2026): SIEMPRE las fechas oficiales. Un día 9 en la app
+# contradice todo lo que el usuario lee en tiff.net y en la prensa, y una
+# función que el festival no anuncia probablemente no sea de acceso público
+# pese a la etiqueta. Se descarta, y se CUENTA en _cuentas — no desaparece
+# en silencio.
+VENTANA = ('2026-09-10', '2026-09-20')
+
 # SELLOS: TIFF los publica como programmes, pero no se comportan como secciones.
 # El dato lo dice solo: «Unhidden Gems» encabeza CERO obras —sus seis viven en
 # Discovery, TIFF Docs, Centrepiece y Gala— y «Next Wave Selects» encabeza una
@@ -135,7 +147,7 @@ def main():
 
     entradas = sum(len(o['funciones']) for o in ofi)
     funciones, secciones_vistas, multiseccion = [], set(), []
-    saltadas = {'no_publica': 0, 'cancelada': 0}
+    saltadas = {'no_publica': 0, 'cancelada': 0, 'fuera_de_ventana': 0}
 
     for o in ofi:
         es_programa = o['slug'] in cortos_de
@@ -187,6 +199,9 @@ def main():
                 continue
             ini = f['ini']          # «2026-09-14 15:20:00», hora local de Toronto
             dia, hora = ini[:10], ini[11:16]
+            if not (VENTANA[0] <= dia <= VENTANA[1]):
+                saltadas['fuera_de_ventana'] += 1
+                continue
             funciones.append({
                 'titulo': o['titulo'],
                 'dia': dia, 'hora': hora,
@@ -246,7 +261,8 @@ def main():
                '_cuentas': {'entradas': entradas,
                             'publicadas': len(funciones),
                             'descartadas': {'prensa_mercado_privadas': saltadas['no_publica'],
-                                            'canceladas': saltadas['cancelada']}},
+                                            'canceladas': saltadas['cancelada'],
+                                            'fuera_de_ventana_oficial': saltadas['fuera_de_ventana']}},
                'funciones': funciones},
               open(salida, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
 

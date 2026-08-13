@@ -236,7 +236,7 @@ def main():
             'poster': poster,
             'posterSource': fuente,
             'lbSlug': f.get('lbSlug'),
-            'tmdbId': f.get('tmdb_id'),
+            'tmdb_id': f.get('tmdb_id'),
             'day': f['dia'], 'time': f['hora'], 'day_order': orden_dia[f['dia']],
             'venue': f['sede'], 'sala': f['sala'],
             'has_qa': f.get('has_qa', False),
@@ -272,7 +272,11 @@ def main():
             } for c in (f.get('film_list') or [])] if f['is_cortos'] else None,
             'is_free': False,
             'requires_registration': False,
-            'ticketUrl': f.get('boleta'),
+            # ticket_url en SNAKE_CASE: es el nombre que lee sheets-controller.
+            # Lo emití como `ticketUrl` y los 638 enlaces de boletería quedaron
+            # invisibles — lo cazó Juan mirando la pantalla, no el dato. Los
+            # otros tres festivales con boletería ya usaban ticket_url.
+            'ticket_url': f.get('boleta'),
             'accessibility': f.get('accesibilidad') or None,
             'format': f.get('formato'),
             'premium': f.get('acceso') == 'premiumScreening',
@@ -317,11 +321,9 @@ def main():
         'shortName': 'TIFF',
         'fullName': 'TIFF — Toronto International Film Festival',
         'city': 'Toronto', 'country': 'CA',
-        # OJO: TIFF comunica «Sep 10–20», pero hay UNA función pública el 9
-        # («Hope», Special Events, TIFF Lightbox). Se incluye el día —nunca se
-        # esconde una función real— y por eso el rótulo dice 9. Decisión
-        # pendiente de Juan: rótulo nuestro (9–20) vs. el del festival (10–20).
-        'dates': '9–20 SEP', 'dates_en': 'SEP 9–20', 'year': 2026,
+        # Fechas OFICIALES, sin excepción (regla de Juan, 13 ago). El día 9 lo
+        # descarta el ensamblador; ver VENTANA allí.
+        'dates': '10–20 SEP', 'dates_en': 'SEP 10–20', 'year': 2026,
         'timezoneOffset': '-04:00',
         'storageKey': 'tiff2026_',
         'festivalStartStr': f'{d0}T00:00:00', 'festivalEndStr': f'{d1}T23:59:00',
