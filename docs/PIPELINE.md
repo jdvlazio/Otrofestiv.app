@@ -281,6 +281,16 @@ hablan, solo de cómo se comporta un cruce sano.
 | `[sidecar-vacio]` | Un conteo `_algo: N > 0` tiene que estar respaldado por su lista: ni vacía ni toda nula. | El script de TMDB se pasó una hora reintentando un error de certificado SSL y terminó sin escribir nada, porque trataba un fallo de transporte como un tropiezo pasajero de la API. |
 | `[discrepancia-falsa]` | En una lista `_discrep*` o `_ambigu*`, ningún elemento puede tener dos valores iguales al normalizar. | La auditoría de directores reportó 22 discrepancias y las 22 eran falsas: comparaba «Sue Kim» con «Sue Kim» y «濱口竜介» con su nombre latino. Una lista de discrepancias con idénticos no es auditoría, es ruido que esconde las de verdad. |
 
+**Quinto guardián, añadido el 13 ago 2026:** `[flag-booleano]`. La app compara
+los flags de servicio con `=== true`, no por truthy, y eso es deliberado —un
+badge de precio no se pinta por un valor accidental—. El precio de esa decisión
+es que un `"true"` como **string** no rompe nada: el badge simplemente no
+aparece nunca, y nadie se entera. Lo levantó Main al implementar el badge
+PREMIUM de TIFF, y vale para todos los flags (`is_free`,
+`requires_registration`, `has_qa`, `is_cortos`, `premium`), en el film y dentro
+de `film_list`. Basta con que un ensamblador lea un CSV o un Excel para que un
+booleano llegue como texto.
+
 **Regla nueva para todo ensamblador:** emitir `_cuentas` con `entradas`,
 `publicadas` y `descartadas` desglosadas por motivo. Declarar los descartes
 obliga a mirarlos; que sumen impide inventarlos.

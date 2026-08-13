@@ -3443,6 +3443,48 @@ except Exception as _e:
 # hablan, solo de cómo se comporta un cruce sano.
 
 
+# ── [flag-booleano] un flag de la app es booleano, no la palabra «true» ──────
+# La app compara los flags de servicio con `=== true`, no por truthy, y a
+# propósito: un badge de precio no se pinta por un valor accidental. El coste de
+# esa decisión es que un `"true"` como STRING no rompe nada — simplemente el
+# badge no aparece nunca, y nadie se entera hasta que un usuario no ve algo que
+# debería estar.
+#
+# Lo levantó Main el 13 ago 2026 al implementar el badge PREMIUM de TIFF. El
+# dato estaba bien, pero el contrato entre el JSON y la vista no lo vigilaba
+# nadie. Vale para todos los flags, no solo para premium: basta con que un
+# ensamblador lea un CSV o un Excel para que un booleano llegue como texto.
+check = 'flag-booleano'
+try:
+    import json as _json, glob as _glob, os as _os
+    _FLAGS = ('premium', 'is_free', 'requires_registration', 'has_qa', 'is_cortos',
+              'is_programa', 'isCanadian', 'canadiense')
+    _viol = []
+    for _f in sorted(_glob.glob('festivals/*.json')):
+        try:
+            _d = _json.load(open(_f, encoding='utf-8'))
+        except Exception:
+            continue
+        def _mira(_items, _donde):
+            for _it in _items or []:
+                if not isinstance(_it, dict):
+                    continue
+                for _k in _FLAGS:
+                    if _k in _it and not isinstance(_it[_k], (bool, type(None))):
+                        _viol.append(f'{_os.path.basename(_f)} {_donde}'
+                                     f'«{str(_it.get("title", "?"))[:28]}»: {_k}='
+                                     f'{_it[_k]!r} ({type(_it[_k]).__name__}, no bool)')
+                _mira(_it.get('film_list'), _donde + 'film_list/')
+        _mira(_d.get('films'), '')
+    if _viol:
+        fail(check, 'flag que la app compara con === true y NO es booleano: '
+                    + '; '.join(_viol[:4]))
+    else:
+        ok(check, 'todos los flags de servicio son booleanos de verdad')
+except Exception as _e:
+    warn(check, f'no se pudo verificar flag-booleano: {_e}')
+
+
 # ── [cruce-inyectivo] un identificador externo, una sola obra ────────────────
 # «The Age of Goodbyes» le prestó su lbSlug a otras cuatro obras porque sus
 # títulos —«月宫», «咒语»— se normalizaban a cadena VACÍA y la vacía casaba con
