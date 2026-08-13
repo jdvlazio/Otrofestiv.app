@@ -233,6 +233,14 @@
    ]
   }
  ],
+ "_cuentas": {
+  "entradas": 887,
+  "publicadas": 638,
+  "descartadas": {
+   "prensa_mercado_privadas": 249,
+   "canceladas": 0
+  }
+ },
  "funciones": [
   {
    "titulo": "2.6 Seconds: Death in the Outback",

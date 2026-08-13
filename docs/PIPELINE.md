@@ -231,6 +231,35 @@ en TMDB (sin fecha/director/sinopsis) — sin criterio corroborante NO se atan.
 
 ---
 
+### Fase 1.6 · Guardianes de la LÓGICA DEL CRUCE — retro TIFF 2026 (13 ago 2026)
+
+Hasta TIFF, todos nuestros guardianes revisaban la **forma** del dato: que el
+campo exista, que el sidecar tenga fecha, que la sede no esté apilada. Ninguno
+sabía preguntar si el **cruce** que produjo ese dato era correcto.
+
+Montando TIFF se colaron cinco defectos de cruce y **ningún guardián cazó uno
+solo**: los cinco se cazaron mirando la salida a mano. De ahí salen estos
+cuatro, uno por clase de error. Son genéricos — no saben de qué festival
+hablan, solo de cómo se comporta un cruce sano.
+
+| Guardián | Qué exige | El error que lo parió |
+|---|---|---|
+| `[cruce-inyectivo]` | Un `lbSlug` o `tmdb_id` no puede quedar asignado a dos obras distintas. Se compara por OBRA, no por fila: una obra con doce funciones repite su slug doce veces y eso es sano. | «The Age of Goodbyes» le prestó su slug a otras cuatro obras cuyos títulos («月宫», «咒语») se normalizaban a cadena VACÍA, y la vacía casaba con cualquier cosa. Y los dos cortos llamados «The End» —Pelechian 1992 y Lindroth von Bahr 2026— colapsaron en uno al indexar por título. |
+| `[cuentas-cuadran]` | Si un sidecar declara `_cuentas`, sus números cierran: `entradas == publicadas + suma de descartadas`. | El ensamblador se quedaba con la PRIMERA sección de cada obra y tiraba la segunda sin decir nada: 18 obras perdieron una etiqueta y el JSON se veía perfecto. |
+| `[sidecar-vacio]` | Un conteo `_algo: N > 0` tiene que estar respaldado por su lista: ni vacía ni toda nula. | El script de TMDB se pasó una hora reintentando un error de certificado SSL y terminó sin escribir nada, porque trataba un fallo de transporte como un tropiezo pasajero de la API. |
+| `[discrepancia-falsa]` | En una lista `_discrep*` o `_ambigu*`, ningún elemento puede tener dos valores iguales al normalizar. | La auditoría de directores reportó 22 discrepancias y las 22 eran falsas: comparaba «Sue Kim» con «Sue Kim» y «濱口竜介» con su nombre latino. Una lista de discrepancias con idénticos no es auditoría, es ruido que esconde las de verdad. |
+
+**Regla nueva para todo ensamblador:** emitir `_cuentas` con `entradas`,
+`publicadas` y `descartadas` desglosadas por motivo. Declarar los descartes
+obliga a mirarlos; que sumen impide inventarlos.
+
+**Y la lección de método:** un guardián que nunca ha fallado no es de fiar.
+Los cuatro se probaron contra un sidecar roto a propósito antes de darlos por
+buenos, y ahí se cayó uno: `[sidecar-vacio]` usaba
+`_listas.get(a) or _listas.get(b)`, y **una lista vacía es falsa en Python**,
+así que el guardián de las listas vacías se dejaba vencer justo por una lista
+vacía. Se pregunta por PRESENCIA, no por verdad.
+
 ### Fase 2 · Configuración en FESTIVAL_CONFIG `[Senior Dev + PM]`
 
 **Objetivo:** El festival existe en la app con su configuración completa.

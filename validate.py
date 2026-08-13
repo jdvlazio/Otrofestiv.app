@@ -3432,6 +3432,203 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar staging-provenance: {_e}')
 
+# ══ GUARDIANES DE LA LÓGICA DEL CRUCE ════════════════════════════════════════
+# Los guardianes de arriba revisan la FORMA del dato: que el campo exista, que
+# el sidecar tenga fecha, que la sede no esté apilada. Ninguno sabe preguntar si
+# el CRUCE que produjo ese dato es correcto.
+#
+# El 13 ago 2026, montando TIFF, se colaron cinco defectos de cruce y ningún
+# guardián cazó uno solo: se cazaron mirando la salida. Los cuatro de abajo
+# nacen uno por cada clase, y todos son genéricos: no saben de qué festival
+# hablan, solo de cómo se comporta un cruce sano.
+
+
+# ── [cruce-inyectivo] un identificador externo, una sola obra ────────────────
+# «The Age of Goodbyes» le prestó su lbSlug a otras cuatro obras porque sus
+# títulos —«月宫», «咒语»— se normalizaban a cadena VACÍA y la vacía casaba con
+# cualquier cosa. Y los dos cortos llamados «The End» (Pelechian 1992, Lindroth
+# von Bahr 2026) colapsaron en uno solo al indexar por título.
+# Regla: un lbSlug o un tmdb_id no puede quedar asignado a dos obras DISTINTAS.
+# Se compara por obra, no por fila: una obra con doce funciones repite su slug
+# doce veces y eso es sano.
+check = 'cruce-inyectivo'
+try:
+    import json as _json, glob as _glob, os as _os
+    _IDS = ('lbSlug', 'tmdb_id')
+    _TIT = ('titulo', 'title', 'titulo_lb', 'nombre')
+    _viol = []
+
+    def _recorrer(nodo, ruta, archivo):
+        if isinstance(nodo, dict):
+            for k, v in nodo.items():
+                _recorrer(v, f'{ruta}.{k}', archivo)
+        elif isinstance(nodo, list) and nodo and isinstance(nodo[0], dict):
+            for idk in _IDS:
+                if not any(idk in r for r in nodo if isinstance(r, dict)):
+                    continue
+                titk = next((t for t in _TIT
+                             if any(t in r for r in nodo if isinstance(r, dict))), None)
+                if not titk:
+                    continue
+                porid = {}
+                for r in nodo:
+                    if not isinstance(r, dict):
+                        continue
+                    i, t = r.get(idk), r.get(titk)
+                    if i in (None, '', []) or not t:
+                        continue
+                    porid.setdefault(i, set()).add(t)
+                for i, ts in porid.items():
+                    if len(ts) > 1:
+                        _viol.append(f'{archivo}{ruta}: {idk}={i} en {len(ts)} obras '
+                                     f'({", ".join(sorted(ts)[:3])})')
+            for r in nodo:
+                _recorrer(r, ruta + '[]', archivo)
+
+    for _f in sorted(_glob.glob('festivals/staging/*.json')):
+        try:
+            _recorrer(_json.load(open(_f, encoding='utf-8')), '', _os.path.basename(_f))
+        except Exception:
+            continue
+    if _viol:
+        fail(check, 'identificador externo compartido por obras distintas: '
+                    + '; '.join(_viol[:4]))
+    else:
+        ok(check, 'ningún lbSlug/tmdb_id asignado a dos obras distintas')
+except Exception as _e:
+    warn(check, f'no se pudo verificar cruce-inyectivo: {_e}')
+
+
+# ── [cuentas-cuadran] nada se cae del cruce en silencio ──────────────────────
+# El ensamblador de TIFF se quedaba con la PRIMERA sección de cada obra y tiraba
+# la segunda sin decir nada: 18 obras perdieron una etiqueta y el JSON se veía
+# perfecto. Un dato que desaparece callado es peor que uno que falta a gritos.
+# Regla: si un sidecar declara `_cuentas`, sus números tienen que cerrar —
+# entradas = publicadas + suma de descartes—. Declarar los descartes obliga a
+# mirarlos; que sumen impide inventarlos.
+check = 'cuentas-cuadran'
+try:
+    import json as _json, glob as _glob, os as _os
+    _malas, _con = [], 0
+    for _f in sorted(_glob.glob('festivals/staging/*.json')):
+        try:
+            _d = _json.load(open(_f, encoding='utf-8'))
+        except Exception:
+            continue
+        _c = _d.get('_cuentas') if isinstance(_d, dict) else None
+        if not isinstance(_c, dict):
+            continue
+        _con += 1
+        _ent, _pub = _c.get('entradas'), _c.get('publicadas')
+        _des = _c.get('descartadas') or {}
+        if not isinstance(_ent, int) or not isinstance(_pub, int):
+            _malas.append(f'{_os.path.basename(_f)}: falta entradas/publicadas')
+            continue
+        _sum = sum(v for v in _des.values() if isinstance(v, int))
+        if _ent != _pub + _sum:
+            _malas.append(f'{_os.path.basename(_f)}: {_ent} entradas ≠ {_pub} publicadas '
+                          f'+ {_sum} descartadas ({_ent - _pub - _sum} sin explicar)')
+    if _malas:
+        fail(check, 'las cuentas del cruce no cierran: ' + '; '.join(_malas[:3]))
+    else:
+        ok(check, f'{_con} sidecar(s) con cuentas declaradas y cerradas')
+except Exception as _e:
+    warn(check, f'no se pudo verificar cuentas-cuadran: {_e}')
+
+
+# ── [sidecar-vacio] un enriquecimiento que no enriqueció es un fallo ─────────
+# El script de TMDB de TIFF se pasó una hora reintentando un error de
+# certificado SSL y terminó sin escribir nada, porque trataba un fallo de
+# transporte como si fuera un tropiezo pasajero de la API. Un script que corre
+# hasta el final y no produce dato TIENE que notarse.
+# Regla: si un sidecar declara un conteo mayor que cero, la lista que lo
+# acompaña no puede estar vacía ni ser toda nula.
+check = 'sidecar-vacio'
+try:
+    import json as _json, glob as _glob, os as _os, re as _re
+    _viol = []
+    for _f in sorted(_glob.glob('festivals/staging/*.json')):
+        try:
+            _d = _json.load(open(_f, encoding='utf-8'))
+        except Exception:
+            continue
+        if not isinstance(_d, dict):
+            continue
+        _listas = {k: v for k, v in _d.items() if isinstance(v, list)}
+        for _k, _v in _d.items():
+            if not (_k.startswith('_') and isinstance(_v, int) and _v > 0):
+                continue
+            _base = _k.lstrip('_')
+            # OJO con el `or`: una lista VACÍA es falsa, así que
+            # `_listas.get(a) or _listas.get(b)` se saltaba justo el caso que
+            # este guardián existe para cazar. Se pregunta por presencia, no
+            # por verdad — el mismo error que el guardián persigue.
+            if _base in _listas:
+                _cand = _listas[_base]
+            elif _base + 's' in _listas:
+                _cand = _listas[_base + 's']
+            else:
+                continue
+            if not _cand:
+                _viol.append(f'{_os.path.basename(_f)}: {_k}={_v} pero «{_base}» vacía')
+            elif all(x in (None, '', {}, []) for x in _cand):
+                _viol.append(f'{_os.path.basename(_f)}: «{_base}» tiene {len(_cand)} '
+                             'entradas y todas vacías')
+    if _viol:
+        fail(check, 'sidecar que declara dato y no lo tiene: ' + '; '.join(_viol[:3]))
+    else:
+        ok(check, 'ningún sidecar declara un conteo que su lista no respalda')
+except Exception as _e:
+    warn(check, f'no se pudo verificar sidecar-vacio: {_e}')
+
+
+# ── [discrepancia-falsa] no acusar de distinto lo que es idéntico ────────────
+# La auditoría de directores de TIFF reportó 22 discrepancias. Las 22 eran
+# falsas: comparaba «Sue Kim» con «Sue Kim» —tokens de tres letras, conjuntos
+# vacíos— y «濱口竜介» con su nombre latino. Una lista de discrepancias que
+# contiene idénticos no es una auditoría, es ruido que esconde las de verdad.
+# Regla: en cualquier lista de discrepancias o ambigüedades de un sidecar,
+# ningún elemento puede tener dos valores que sean iguales al normalizar.
+check = 'discrepancia-falsa'
+try:
+    import json as _json, glob as _glob, os as _os, unicodedata as _ud
+    def _n(x):
+        if isinstance(x, list):
+            x = ' '.join(str(i) for i in x)
+        x = _ud.normalize('NFKD', str(x or '').lower())
+        x = ''.join(c for c in x if not _ud.combining(c))
+        return re.sub(r'[^a-z0-9]+', '', x)
+    _viol = []
+    for _f in sorted(_glob.glob('festivals/staging/*.json')):
+        try:
+            _d = _json.load(open(_f, encoding='utf-8'))
+        except Exception:
+            continue
+        if not isinstance(_d, dict):
+            continue
+        for _k, _v in _d.items():
+            if not (_k.startswith('_') and ('discrep' in _k or 'ambigu' in _k)):
+                continue
+            for _it in (_v if isinstance(_v, list) else []):
+                if not isinstance(_it, dict):
+                    continue
+                _vals = [(kk, _n(vv)) for kk, vv in _it.items()
+                         if not kk.startswith('_') and isinstance(vv, (str, list)) and _n(vv)]
+                for _i in range(len(_vals)):
+                    for _j in range(_i + 1, len(_vals)):
+                        if _vals[_i][1] == _vals[_j][1]:
+                            _viol.append(f'{_os.path.basename(_f)} {_k}: '
+                                         f'«{_vals[_i][0]}» y «{_vals[_j][0]}» son iguales '
+                                         f'({_vals[_i][1][:24]})')
+    if _viol:
+        fail(check, 'discrepancia reportada entre valores idénticos: '
+                    + '; '.join(sorted(set(_viol))[:3]))
+    else:
+        ok(check, 'ninguna lista de discrepancias contiene valores idénticos')
+except Exception as _e:
+    warn(check, f'no se pudo verificar discrepancia-falsa: {_e}')
+
+
 # ── [pipeline-circuito] el barrido que nadie consume ──────────────────────────
 # El bug real: el barrido escribía programacion-canonica.json y el ensamblador
 # leía programacion-oficial.json — dos nombres para lo mismo, y el nuevo quedó

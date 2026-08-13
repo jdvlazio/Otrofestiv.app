@@ -122,6 +122,7 @@ def main():
                 'anio': t.get('anio_tmdb') or t.get('anio'),
                 'paises': t.get('paises')}
 
+    entradas = sum(len(o['funciones']) for o in ofi)
     funciones, secciones_vistas, multiseccion = [], set(), []
     saltadas = {'no_publica': 0, 'cancelada': 0}
 
@@ -217,6 +218,13 @@ def main():
                                          for k, (e, a) in ((x, v[:2]) for x, v in SECCIONES.items())
                                          if k in secciones_vistas},
                '_saltadas': saltadas, '_multiseccion': multiseccion,
+               # Las cuentas las verifica [cuentas-cuadran]: entradas tiene que
+               # ser exactamente publicadas + descartes. Si el ensamblador
+               # empieza a perder funciones por el camino, la suma lo delata.
+               '_cuentas': {'entradas': entradas,
+                            'publicadas': len(funciones),
+                            'descartadas': {'prensa_mercado_privadas': saltadas['no_publica'],
+                                            'canceladas': saltadas['cancelada']}},
                'funciones': funciones},
               open(salida, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
 
