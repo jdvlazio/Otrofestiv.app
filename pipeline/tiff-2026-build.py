@@ -135,6 +135,14 @@ def es_placeholder(url):
     return 'no_image_available' in (url or '')
 
 
+def limpiar_html(t):
+    """Quita etiquetas y normaliza espacios. TIFF sirve las sinopsis de los
+    cortos con <p> y <em> dentro; las de las obras vienen ya limpias."""
+    if not t:
+        return ''
+    return re.sub(r'\s+', ' ', re.sub(r'<[^>]+>', ' ', t)).strip()
+
+
 def absoluta(u):
     return ('https:' + u) if u and u.startswith('//') else u
 
@@ -188,6 +196,11 @@ def main():
         ES = json.load(open(f'{ST}/tiff-2026-sinopsis-es.json', encoding='utf-8'))['sinopsis']
     except FileNotFoundError:
         ES = {}
+    try:
+        ES_CORTOS = json.load(open(f'{ST}/tiff-2026-sinopsis-es.json',
+                                   encoding='utf-8')).get('sinopsis_cortos', {})
+    except FileNotFoundError:
+        ES_CORTOS = {}
 
     dias = sorted({f['dia'] for f in F})
     orden_dia = {d: i for i, d in enumerate(dias)}
@@ -233,6 +246,10 @@ def main():
             # nuestro film_list trae director, país, duración y sinopsis por corto.
             'is_programa': bool(f['is_cortos']),
             'film_list': [{
+                # El id viaja al publicado: es la clave del cruce de sinopsis
+                # (hay DOS cortos titulados «The End») y la única identidad
+                # estable de un corto dentro de su programa.
+                'id': c['id'],
                 'title': c['titulo'],
                 'title_orig': c.get('titulo_original'),
                 'director': c.get('director'),
@@ -241,7 +258,14 @@ def main():
                 'flags': flags_de(c.get('pais')),
                 'duration': f'{c["duracion_min"]} min' if c.get('duracion_min') else None,
                 'year': int(c['anio']) if str(c.get('anio') or '').isdigit() else None,
-                'synopsis': c.get('sinopsis'), 'synopsis_lang': 'en',
+                # Las sinopsis de los cortos llegan con HTML crudo del endpoint
+                # de programas (<p>, <em>): 9 de 52 lo traían y se colaba tal cual
+                # al JSON publicado. Se limpia AQUÍ, en el único sitio que las arma.
+                'synopsis': (ES_CORTOS.get(c['id'])
+                             or limpiar_html(c.get('sinopsis')) or None),
+                'synopsis_lang': ('es' if ES_CORTOS.get(c['id'])
+                                  else 'en' if limpiar_html(c.get('sinopsis')) else None),
+                'synopsis_en': limpiar_html(c.get('sinopsis')) or None,
                 'lbSlug': c.get('lbSlug'),
                 **dict(zip(('poster', 'posterSource'),
                            elegir_poster(None, c.get('imagen')))),

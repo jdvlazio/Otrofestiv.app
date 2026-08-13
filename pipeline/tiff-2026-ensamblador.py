@@ -147,6 +147,7 @@ def main():
             for c in cortos_de[o['slug']]:
                 clb = datos_lb(c['id'])
                 lista.append({
+                    'id': c['id'],
                     'titulo': c['titulo'],
                     'titulo_original': c.get('tituloAlt'),
                     'director': ', '.join(c.get('directores') or []) or None,
