@@ -121,8 +121,45 @@ def flags_de(txt):
 
 
 def es_afiche(url):
-    """Solo lo que DECLARA ser afiche. Un still no se asciende por conveniencia."""
+    """Portrait oficial del festival (regla 3): el archivo DECLARA ser afiche."""
     return bool(re.search(r'poster|key.?art|1sheet', (url or '').split('/')[-1], re.I))
+
+
+def es_placeholder(url):
+    """El «sin imagen» de TIFF es una imagen: hay que reconocerlo y rechazarlo.
+
+    Mismo candado que la regla 2 pone sobre el `empty-poster` de Letterboxd —
+    un placeholder colado como póster es peor que no tener póster, porque nadie
+    lo vuelve a mirar.
+    """
+    return 'no_image_available' in (url or '')
+
+
+def absoluta(u):
+    return ('https:' + u) if u and u.startswith('//') else u
+
+
+def elegir_poster(tmdb_path, img_festival):
+    """Árbol de adquisición de docs/POSTERS.md §2, parando en la primera.
+
+    1  TMDB poster_path — portrait 2:3, y aquí el id lo declaró Letterboxd
+    3  portrait oficial del festival — el archivo dice que es afiche
+    4  LANDSCAPE oficial 16:9 — NO se descarta: va en `poster` y la app lo
+       renderiza dentro del marco editorial. Es el póster propio.
+
+    El error de la primera versión fue tratar el paso 4 como «no hay póster»:
+    95 obras se quedaron sin imagen teniendo una identidad garantizada
+    disponible. Un still del festival es SIEMPRE la película correcta.
+    """
+    if tmdb_path:
+        return TMDB_IMG + tmdb_path, 'tmdb'
+    if es_placeholder(img_festival):
+        return None, None
+    if es_afiche(img_festival):
+        return absoluta(img_festival), 'custom'
+    if img_festival:
+        return absoluta(img_festival), 'editorial'
+    return None, None
 
 
 def pais_es(txt):
@@ -154,12 +191,7 @@ def main():
         pais, fuera = pais_es(f.get('pais')) if f.get('pais') else (None, [])
         sin_pais.update(fuera)
         img = (ofi.get(f['titulo']) or {}).get('poster')
-        if f.get('poster_tmdb'):
-            poster, fuente = TMDB_IMG + f['poster_tmdb'], 'tmdb'
-        elif es_afiche(img):
-            poster, fuente = ('https:' + img if img.startswith('//') else img), 'festival'
-        else:
-            poster, fuente = None, None
+        poster, fuente = elegir_poster(f.get('poster_tmdb'), img)
 
         films.append({
             'title': f['titulo'],
@@ -199,7 +231,8 @@ def main():
                 'year': int(c['anio']) if str(c.get('anio') or '').isdigit() else None,
                 'synopsis': c.get('sinopsis'), 'synopsis_lang': 'en',
                 'lbSlug': c.get('lbSlug'),
-                'poster': None, 'posterSource': None,
+                **dict(zip(('poster', 'posterSource'),
+                           elegir_poster(None, c.get('imagen')))),
             } for c in (f.get('film_list') or [])] if f['is_cortos'] else None,
             'is_free': False,
             'requires_registration': False,

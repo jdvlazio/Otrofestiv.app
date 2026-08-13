@@ -154,6 +154,7 @@ def main():
                     'duracion_min': int(c['duracion']) if str(c.get('duracion') or '').isdigit() else None,
                     'pais': ', '.join(c.get('paises') or []) or None,
                     'sinopsis': c.get('sinopsis') or None,
+                    'imagen': c.get('imagen'),
                     'lbSlug': clb.get('lbSlug'),
                 })
 
