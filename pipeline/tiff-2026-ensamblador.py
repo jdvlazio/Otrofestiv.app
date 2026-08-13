@@ -89,6 +89,18 @@ SECCIONES = {
 SECCIONES_DE_CHARLA = {'In Conversation With...'}
 
 
+def publicado(clave):
+    """Nombre con el que la sección sale a la app.
+
+    Por defecto es el que publica TIFF, verbatim. La tabla puede traer un
+    tercer elemento cuando hay una excepción aprobada —hoy solo «Unhidden
+    Gems», a la que Juan le quitó el patrocinador—. Dueño único: si este
+    nombre se calculara en dos sitios, uno de los dos se olvidaría.
+    """
+    v = SECCIONES.get(clave)
+    return v[2] if v and len(v) > 2 else clave
+
+
 def main():
     ofi = json.load(open(f'{ST}/tiff-2026-oficial.json', encoding='utf-8'))['obras']
     cor = json.load(open(f'{ST}/tiff-2026-cortos.json', encoding='utf-8'))['programas']
@@ -121,8 +133,8 @@ def main():
         # conserva como etiqueta. Antes se descartaba sin decir nada, y un
         # dato que desaparece callado es el peor de los dos errores posibles.
         todas_sec = o['secciones'] or ['(sin sección)']
-        sec = todas_sec[0]
-        etiquetas = todas_sec[1:]
+        sec = publicado(todas_sec[0])
+        etiquetas = [publicado(x) for x in todas_sec[1:]]
         secciones_vistas.update(todas_sec)
         if etiquetas:
             multiseccion.append({'titulo': o['titulo'], 'seccion': sec,
@@ -200,8 +212,9 @@ def main():
                    metodo='solo funciones «General Public»; programas como is_cortos+film_list'),
                '_festival': {'id': 'tiff2026', 'ciudad': 'Toronto', 'pais': 'Canadá',
                              'timezoneOffset': '-04:00', 'dias': dias},
-               '_secciones_propuestas': {k: {'emoji': e, 'archetype': a, 'en': k}
-                                         for k, (e, a, _n) in ((x, (v + (x,))[:3]) for x, v in SECCIONES.items())
+               '_secciones_propuestas': {publicado(k): {'emoji': e, 'archetype': a,
+                                                             'en': publicado(k)}
+                                         for k, (e, a) in ((x, v[:2]) for x, v in SECCIONES.items())
                                          if k in secciones_vistas},
                '_saltadas': saltadas, '_multiseccion': multiseccion,
                'funciones': funciones},
