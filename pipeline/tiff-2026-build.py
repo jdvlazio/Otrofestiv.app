@@ -297,8 +297,12 @@ def main():
     for i, (nom, meta) in enumerate(crudo['_secciones_propuestas'].items(), 1):
         secciones[f'{meta["emoji"]} {nom}'] = {'en': meta['en'],
                                                'archetype': meta['archetype'], 'order': i}
-    # La sección viaja en el film con emoji, como en el resto de festivales.
+    # La sección viaja en el film con emoji, como en el resto de festivales — y
+    # los SELLOS también. Sin esto las etiquetas salían peladas («Unhidden
+    # Gems») mientras la sección llevaba el suyo («🎯 Centrepiece»): el mismo
+    # tipo de cosa escrito de dos formas, que es justo lo que perseguimos.
     emoji_de = {n: f'{m["emoji"]} {n}' for n, m in crudo['_secciones_propuestas'].items()}
+    emoji_de.update({n: f'{m["emoji"]} {n}' for n, m in (crudo.get('_sellos') or {}).items()})
     for x in films:
         x['section'] = emoji_de.get(x['section'], x['section'])
         if x['section_tags']:
