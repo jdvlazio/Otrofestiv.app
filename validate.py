@@ -3512,7 +3512,13 @@ try:
     # Metadato NUESTRO, no de render: lo consumen el pipeline y los validadores,
     # y que la app no lo lea es correcto. Se declara para que el aviso de «dato
     # muerto» signifique algo — si todo es ruido, nadie lo mira.
-    _PIPELINE = {'synopsis_lang', 'tmdb_id', 'tmdbId', 'posterSource', 'day_order'}
+    _PIPELINE = {'synopsis_lang', 'tmdb_id', 'tmdbId', 'posterSource', 'day_order',
+                 # section_tags: los sellos de TIFF («💎 Unhidden Gems», «🌊 TIFF
+                 # Next Wave Selects»). Juan decidió el 13 ago NO mostrarlos. El
+                 # dato se conserva porque registra lo que el festival publica
+                 # —esas 18 obras llevan el sello de verdad— pero nadie lo pinta,
+                 # y eso es deliberado, no un cabo suelto.
+                 'section_tags'}
 
     def _lee(_k):
         # Palabra suelta, no solo `.campo`: la app también desestructura y usa
