@@ -1,0 +1,38 @@
+{
+ "_provenance": {
+  "fuente": "traduccion inline de Claude sobre las sinopsis oficiales de TIFF",
+  "capturado": "2026-08-13",
+  "metodo": "EN -> ES; pendiente del pase de Content Design de Juan"
+ },
+ "_metodo": "Traduccion inline de Claude (EN -> ES), pendiente del pase de Content Design de Juan. docs/PIPELINE.md fase 3: translate-synopsis.py esta DEPRECADO. Criterios fijados en el lote 1: titulos de pelicula SIEMPRE en su idioma original y sin cursiva; «Oscar winner/nominee» -> «ganador(a)/nominado(a) al Oscar»; «TIFF '16's Elle» -> «Elle, TIFF '16»; se rodea el genero cuando no esta confirmado.",
+ "_lotes": {
+  "1": "Gala Presentations (24 obras) - 13 ago 2026"
+ },
+ "sinopsis": {
+  "A Talent for Murder": "Este ardiente thriller de cámara de Anton Corbijn (Control) reúne a la ganadora del Óscar Helen Mirren y a Alden Ehrenreich (Fair Play) como adversarios en un extraño pulso entre una joven agente literaria y Patricia Highsmith, autora de El talento de Mr. Ripley.",
+  "All About Corinne": "Marc Fitoussi, guionista y director de Paris Follies, vuelve a trabajar con la inimitable Isabelle Huppert —nominada al Óscar, y Elle en TIFF '16— en esta comedia deliciosa sobre una veterana actriz de reparto que huele una oportunidad tardía de colarse en la caprichosa familia del cine francés.",
+  "Always Lalisa": "Lisa, ídolo del K-pop convertida en estrella global, protagoniza este documental íntimo y transformador que recorre su camino desde la ambición de la infancia y la fama con BLACKPINK hasta la artista que es hoy.",
+  "Atonement": "Boyd Holbrook (The Bikeriders), Hiam Abbass (Palestine 36, TIFF '25) y el ganador del Óscar Kenneth Branagh protagonizan esta historia abrasadora de trauma y perdón, escrita y dirigida por Reed Van Dyk —nominado al Óscar—, a raíz de un hecho atroz durante la guerra de Irak.",
+  "Babies": "Seth Rogen y Anna Kendrick, nominada al Óscar por Up in the Air (TIFF '09), protagonizan esta comedia de corazón grande de Lauren Miller Rogen sobre el dilema que tarde o temprano se cuela en toda relación larga: ¿tener hijos o no tenerlos?",
+  "Being Heumann": "Con una interpretación reveladora de Ruth Madeley y la presencia de Mark Ruffalo —nominado al Óscar por Spotlight, TIFF '15—, este drama histórico y estimulante de Siân Heder, ganadora del Óscar por CODA, celebra a Judy Heumann, la activista que cambió el paradigma y a quien llaman «la madre del movimiento por los derechos de las personas con discapacidad».",
+  "Bunker": "Los ganadores del Óscar Penélope Cruz y Javier Bardem interpretan a una pareja cuyo vínculo se pone a prueba cuando la propuesta de un misterioso millonario los deja ante un callejón sin salida ético. Lo último de Florian Zeller, guionista y director ganador del Óscar por The Father (TIFF '20').",
+  "Diary of a Mad Old Man": "Esta cautivadora adaptación de la novela de Jun'ichirō Tanizaki, dirigida por Wayne Wang (The Joy Luck Club, TIFF '93), sigue a un viudo que envejece y queda atrapado en una relación inquietantemente íntima con su nuera, que lo cuida.",
+  "Evil Genius": "Con David Harbour (Stranger Things) y la ganadora del Óscar Patricia Arquette (Boyhood), el segundo largometraje de Courteney Cox como directora dramatiza con audacia la trama escalofriante —y de un humor muy negro— que hubo detrás del célebre caso del «pizza bomber» de 2003.",
+  "Girl Group": "Rebel Wilson escribe, dirige y protagoniza esta historia de una estrella del pop que, tras caer en picada, encuentra un sentido nuevo al reunir a un puñado de jóvenes promesas para formar su propio grupo.",
+  "It's My Time": "Con Michelle Yeoh, ganadora del Óscar por Everything Everywhere All at Once, esta comedia inspirada sobre una mujer camino de dominar el cubo mágico es un relato de picardía competitiva y rebeldía sin edad.",
+  "Man in Motion: The Rick Hansen Story": "Este retrato galvanizante celebra a Rick Hansen, gran atleta y activista canadiense, y recorre los 26 meses de su Man In Motion World Tour: 40.000 kilómetros en silla de ruedas que recaudaron millones para eliminar barreras de accesibilidad y transformar la mirada pública sobre las personas con discapacidad.",
+  "Misty Green": "Con una interpretación que marca carrera de Rosalind Eleazar (Slow Horses) y el acompañamiento de Daniel Kaluuya, Adam Driver y Anna Kendrick, lo último de Chris Rock como guionista y director satiriza con brillantez el prejuicio y el arribismo que laten en el corazón de Hollywood.",
+  "Onwards and Sideways": "Lo último de John Madden —nominado al Óscar por Shakespeare in Love— reúne a Laura Linney, nominada al Óscar por The Savages (TIFF '08), y a Rhys Ifans (Mother Couch, TIFF '23) como dos desconocidos cuyas vidas se enredan cuando a ambos les diagnostican párkinson.",
+  "Pretenders": "Dura, elegante y de una frialdad sin esfuerzo, Chrissie Hynde, fundadora de los Pretenders, es la real cosa. Apoyado en largas entrevistas con ella y en material de archivo, Pretenders recorre la evolución de uno de los iconos más singulares del rock.",
+  "Prima Facie": "Cynthia Erivo, nominada al Óscar por Wicked, protagoniza esta adaptación de la aclamada obra de Suzie Miller, que examina qué ocurre cuando una abogada ambiciosa, dedicada sobre todo a defender a acusados de delitos sexuales, se convierte de pronto en la denunciante de una agresión sexual.",
+  "Run Terry Run": "Este retrato íntimo e inspirador de Sean Menard (The Carter Effect, TIFF '17) recurre a imágenes nunca vistas para mostrar el proceso arduo y el compromiso profundo detrás del Maratón de la Esperanza de Terry Fox, que buscaba concienciar y recaudar fondos para la investigación del cáncer.",
+  "Spirit Guardians: The Last Secret of the First Emperor": "La producción más grande de la historia del cine vietnamita. Esta epopeya de Nguyễn Phan Quang Bình (The Floating Lives) nos lleva a la dinastía Đinh, cuando un grupo de guerreros sin miedo emprende una misión secreta para proteger un misterio sagrado.",
+  "Tenzing": "Con Tom Hiddleston (The Life of Chuck, TIFF '24), el nominado al Óscar Willem Dafoe y Genden Phuntsok (Jinpa, TIFF '18), este biopic prodigioso cuenta la historia del sherpa nepalí-indio Tenzing Norgay, que junto a Edmund Hillary fue el primero en coronar el Everest en 1953.",
+  "The Assassin(s)": "Basada en el intento de asesinato del presidente surcoreano Park Chung-hee, lo último de Hur Jin-ho (A Normal Family, TIFF '23) es un procedimental de gran formato sobre policías y periodistas empeñados en destapar una conspiración en apariencia impenetrable.",
+  "The Life and Deaths of Wilson Shedd": "Con Amanda Seyfried, nominada al Óscar por The Testament of Ann Lee (TIFF '25), y Scoot McNairy (Nightbitch, TIFF '24), lo último de Tim Blake Nelson es una historia carcelaria de gran densidad psicológica sobre el crimen, el castigo y el amor.",
+  "The Only Living Pickpocket in New York": "Sostenido por la interpretación carismática de John Turturro, este drama criminal de tono bajo firmado por Noah Segan (Blood Relatives) mira hacia atrás, al cine de personajes del Nuevo Hollywood de los años setenta.",
+  "Up Against It": "El rencor posmatrimonial y la devoción por los hijos hacen mala pareja en esta comedia perversa de Trudie Styler, con Antonio Banderas —nominado al Óscar por Dolor y gloria, TIFF '19— y Eva Birthistle (Imagine Me & You, TIFF '05) como divorciados que crían juntos y reciben una propuesta indecente.",
+  "Villeneuve: The Rise of a Legend": "Un recorrido por la carrera vertiginosa de Gilles Villeneuve, uno de los grandes deportistas de Canadá. Este biopic dirigido por Yan Lanouette Turgeon tiene a Rémi Goulet como el chico de Quebec que cambió la Fórmula 1."
+ },
+ "_traducidas": 24
+}

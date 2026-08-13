@@ -182,6 +182,12 @@ def main():
     geo = json.load(open(f'{ST}/tiff-2026-venues-geo.json', encoding='utf-8'))
     ofi = {o['titulo']: o for o in
            json.load(open(f'{ST}/tiff-2026-oficial.json', encoding='utf-8'))['obras']}
+    # Las traducciones entran por lotes: lo que aún no está traducido se queda
+    # en inglés y lo DECLARA en synopsis_lang, en vez de fingir que está en es.
+    try:
+        ES = json.load(open(f'{ST}/tiff-2026-sinopsis-es.json', encoding='utf-8'))['sinopsis']
+    except FileNotFoundError:
+        ES = {}
 
     dias = sorted({f['dia'] for f in F})
     orden_dia = {d: i for i, d in enumerate(dias)}
@@ -204,9 +210,10 @@ def main():
             'genre': ', '.join(f.get('generos') or []) or None,
             'section': f['seccion'],
             'section_tags': f.get('etiquetas_seccion'),
-            # Decisión 3: el idioma de la sinopsis se DECLARA.
-            'synopsis': f.get('sinopsis'),
-            'synopsis_lang': 'en',
+            # El idioma de la sinopsis se DECLARA. Con traducción → es, y el
+            # original de TIFF se conserva intacto en synopsis_en.
+            'synopsis': ES.get(f['titulo']) or f.get('sinopsis'),
+            'synopsis_lang': 'es' if ES.get(f['titulo']) else 'en',
             'synopsis_en': f.get('sinopsis'),
             'poster': poster,
             'posterSource': fuente,
