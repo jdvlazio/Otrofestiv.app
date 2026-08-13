@@ -212,8 +212,13 @@ def main():
             'section_tags': f.get('etiquetas_seccion'),
             # El idioma de la sinopsis se DECLARA. Con traducción → es, y el
             # original de TIFF se conserva intacto en synopsis_en.
+            # Sin sinopsis no hay idioma que declarar. Poner 'en' sobre un
+            # campo vacío afirma que existe un texto inglés que no existe: son
+            # las 5 charlas «In Conversation With…» y los 7 programas de Short
+            # Cuts, para los que TIFF no publica descripción ninguna.
             'synopsis': ES.get(f['titulo']) or f.get('sinopsis'),
-            'synopsis_lang': 'es' if ES.get(f['titulo']) else 'en',
+            'synopsis_lang': ('es' if ES.get(f['titulo'])
+                              else 'en' if (f.get('sinopsis') or '').strip() else None),
             'synopsis_en': f.get('sinopsis'),
             'poster': poster,
             'posterSource': fuente,
