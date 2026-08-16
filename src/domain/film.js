@@ -10,6 +10,7 @@
 // WORKER: las sched pure fns tienen COPIAS en el template del calc worker; el
 //   worker las consume vía eval(name).toString(). [worker-overlap] valida.
 
+import { FESTIVAL_QA_MIN } from "../config.js";
 import { parseDur, _festDate, simNow, festivalEnded, toMin } from "./time.js";
 
 // p8 Step 8d-1: normTitle — normaliza comillas tipográficas en títulos (punto
@@ -148,7 +149,7 @@ export function blockDuration(f){
 
 export function effectiveDuration(f){
   if(f&&f._slotMin) return f._slotMin;
-  return parseDur(f&&f.duration)+(f&&f.has_qa?30:0);
+  return parseDur(f&&f.duration)+(f&&f.has_qa?FESTIVAL_QA_MIN:0);
 }
 
 // durationForTravel — LA DOCTRINA DEL Q&A en un solo dueño (30 jul 2026):
@@ -272,7 +273,7 @@ export function sealSharedSlots(films){
   Object.entries(_grupos).forEach(([k,g])=>{
     if(g.length<2) return;
     const base=g.reduce((a,f)=>a+parseDur(f.duration),0);
-    const total=base+(g.some(f=>f.has_qa)?30:0);
+    const total=base+(g.some(f=>f.has_qa)?FESTIVAL_QA_MIN:0);
     g.forEach(f=>{ f._slotKey=k; f._slotDur=base; f._slotMin=total; });
   });
   return films;

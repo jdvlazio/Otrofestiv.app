@@ -5,7 +5,7 @@
 // _POSTERS_N) + setters; main.js (loadFestival) los re-popula vía setters.
 // _lang se lee vía STATE BRIDGE (globalThis) igual que el resto de la capa view.
 
-import { FESTIVAL_BUFFER, FESTIVAL_CONFIG, TMDB_IMG } from '../config.js';
+import { FESTIVAL_BUFFER, FESTIVAL_QA_MIN, FESTIVAL_CONFIG, TMDB_IMG } from '../config.js';
 import {
   DAY_ABBR, DAY_NUM, ICONS, _buildPosterV16, _bandTextSVG, _secLabel, _sectionColor,
   makeProgramPoster, makeEventPoster, makeSorpresaPoster, escXML, _langDates, parseProgramTitle,
@@ -526,10 +526,10 @@ export function conflictAccount(a,b,r){
       arr:_b(minToStr(end+FESTIVAL_BUFFER)),t2:`<i>${t2}</i>`,start:_b(minToStr(start))});
   }
   // viaje: con traslado el Q&A sí cuenta (durationForTravel) — se muestra aparte
-  const qaEnd=end+(f1.has_qa?30:0);
+  const qaEnd=end+(f1.has_qa?FESTIVAL_QA_MIN:0);
   const arr=qaEnd+r.travel;                             // llegada: estimación
   const base=t(f1.has_qa?'cuenta_viaje_qa':'cuenta_viaje',
-    {t1:`<i>${t1}</i>`,end:_b(minToStr(end)),qaEnd:_b(minToStr(qaEnd)),
+    {t1:`<i>${t1}</i>`,end:_b(minToStr(end)),qa:FESTIVAL_QA_MIN,qaEnd:_b(minToStr(qaEnd)),
      travel:_b(_minFmt(r.travel)),arr:_b(minToStr(arr))});
   const verdict=arr>start
     ? t('cuenta_no_llegas',{start:_b(minToStr(start))})

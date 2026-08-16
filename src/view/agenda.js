@@ -7,7 +7,7 @@
 // runCalc NO es dep de este árbol (va a Wave 7 controller).
 
 import {
-  DEFAULT_DURATION_MIN, FESTIVAL_BUFFER, FESTIVAL_CONFIG,
+  DEFAULT_DURATION_MIN, FESTIVAL_BUFFER, FESTIVAL_QA_MIN, FESTIVAL_CONFIG,
 } from '../config.js';
 import {
   ICONS, _secLabel, _secLabelFull, _sectionColor, escXML, makeEventPoster, makeProgramPoster, parseProgramTitle, renderAvBlocksHTML, renderFlowProgress,
@@ -417,7 +417,11 @@ export function renderMiPlanCalendar(state){
           const _isCritical=gap<=5;
           listHtml+=`<div class="mplan-warn-row" style="${_isCritical?'color:var(--red)':''}">${ICONS.alert} ${_isCritical?t('warn_sin_tiempo'):`~${gap} ${t('warn_min_hasta_sig')}`}</div>`;
         }
-        if(_slotHasQa(prev)){const qaGap=gap-30;qaGap<0?listHtml+=`<div class="mplan-warn-row" style="color:var(--red)">${t('warn_qa_no_llega')}</div>`:listHtml+=`<div class="mplan-warn-row">${t('warn_qa_tiempo',{n:qaGap})}</div>`;}
+        // El Q&A se DECLARA: sus minutos son una estimación nuestra que hasta hoy
+        // no se mostraba, así que el «te quedan ~20 min» era irreconstruible desde
+        // la pantalla. Y el veredicto va en condicional — donde estimamos,
+        // sugerimos (regla de Juan, 15 ago).
+        if(_slotHasQa(prev)){const qaGap=gap-FESTIVAL_QA_MIN;qaGap<0?listHtml+=`<div class="mplan-warn-row" style="color:var(--red)">${t('warn_qa_no_llega',{qa:FESTIVAL_QA_MIN})}</div>`:listHtml+=`<div class="mplan-warn-row">${t('warn_qa_tiempo',{qa:FESTIVAL_QA_MIN,n:qaGap})}</div>`;}
         const tw=travelWarn(prev,s);
         if(tw) listHtml+=`<div class="mplan-warn-row">${tw}</div>`;
       }
