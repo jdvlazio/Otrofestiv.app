@@ -132,6 +132,18 @@ export function toggleWL(title,e){
   _hermanas.forEach(h=>updateCardState(h));
 }
 
+// _vueltaA — el destino REAL de una obra que dejás de marcar como vista.
+// Desmarcar la saca de `watched` y la devuelve a `watchlist`, pero NO toca la
+// prioridad: una obra priorizada reaparece bajo «Prioridades», no bajo
+// «Intereses». El toast decía «De vuelta en pendientes» —un conjunto que no
+// existe en ninguna pantalla— y su propio EN ya decía «Interests» (revisión de
+// UX Writer, 16 ago). Nombra la etiqueta de la SECCIÓN que el usuario va a ver,
+// tomada de la misma clave que dibuja ese encabezado: si el encabezado cambia,
+// el toast cambia con él.
+function _vueltaA(title){
+  return t(state.get('prioritized').has(title)?'lbl_prioridades':'lbl_intereses');
+}
+
 export function toggleWatched(title,e){
   title=normTitle(title);
   if(e) e.stopPropagation();
@@ -147,7 +159,7 @@ export function toggleWatched(title,e){
     saveState('wl','watched');
     updateCardState(title);
     _reRenderIntereses();
-    showToast(t('plan_vuelta_pendientes'),'info');
+    showToast(t('plan_vuelta_a',{donde:_vueltaA(title)}),'info');
     return;
   }
   // Branch B: marcar como vista — modal confirm (closure variant)
@@ -541,7 +553,7 @@ export function markWatchedFromPlan(title, day, time, venue, duration, e){
     // 4. PERSIST + surgical (render automático vía pipeline)
     saveState('wl','watched');
     updateCardState(title);
-    showToast(t('plan_vuelta_pendientes'),'info');
+    showToast(t('plan_vuelta_a',{donde:_vueltaA(title)}),'info');
     return;
   }
   // Branch B: marcar como vista + post-view rating modal
