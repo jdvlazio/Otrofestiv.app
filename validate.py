@@ -2349,8 +2349,29 @@ try:
         except FileNotFoundError:
             continue
         _walk_films(_d.get('films'), _af.split('/')[-1])
+    # SEGUNDA MITAD, la que faltaba. Lo de arriba comprueba que el país SE PUEDA
+    # mapear; no que la bandera EXISTA en el dato. FICDEH pasó en verde durante
+    # todo el festival con 415 films mostrando su país y ninguna bandera: sus
+    # países estaban perfectamente mapeados y el pipeline nunca emitió `flags`,
+    # que es lo único que la ficha pinta (`flagFmt(f.flags)`, sin derivar).
+    # Un guardián que verifica que algo SE PUEDE hacer no verifica que se haya
+    # hecho. Lo encontró Juan mirando la app, 13 ago 2026.
+    _mudos = []
+    for _af in _ACTIVE:
+        try:
+            _d = _json.load(open(_af, encoding='utf-8'))
+        except FileNotFoundError:
+            continue
+        _cc = [f for f in (_d.get('films') or []) if (f.get('country') or '').strip()]
+        _sin = [f for f in _cc if not f.get('flags')]
+        if _cc and len(_sin) == len(_cc):
+            _mudos.append(f'{_af.split("/")[-1]}: {len(_cc)} films con país y '
+                          f'NINGUNO con flags')
     if _bad:
         fail(check, 'país sin bandera en festival vivo (mapear en _COUNTRY_FLAGS o añadir flags): ' + '; '.join(_bad[:6]))
+    elif _mudos:
+        fail(check, 'festival vivo que muestra país sin una sola bandera: '
+                    + '; '.join(_mudos))
     else:
         ok(check, 'todo país de festivales vivos produce bandera (nunca globo)')
 except Exception as _e:
@@ -3553,6 +3574,438 @@ try:
                   f'{len(_LEGACY_SIN_FECHA)})')
 except Exception as _e:
     warn(check, f'no se pudo verificar staging-provenance: {_e}')
+
+# ══ GUARDIANES DE LA LÓGICA DEL CRUCE Y DEL CONTRATO CON LA APP ══════════════
+# Los guardianes anteriores revisan la FORMA del dato. Estos revisan el CRUCE
+# que lo produjo y la JUNTA con la app. Nacieron el 13 ago 2026 montando TIFF:
+# cinco defectos de cruce y dos de contrato pasaron por tres validadores y 420
+# tests sin que nada se pusiera rojo — los cazó Juan mirando la pantalla.
+# Documentados en docs/PIPELINE.md §1.6.
+
+
+# ── [valor-inventado] un valor de config que la app no maneja ────────────────
+# HERMANO DE [campo-contrato], y del mismo día. Aquél caza el NOMBRE mal escrito;
+# éste caza el VALOR inventado. Los dos son la misma familia: el dato y la app
+# hablando idiomas distintos sin que nada se ponga rojo.
+#
+# El 13 ago 2026 escribí `ticketing_model:'ticketed'` para TIFF. La app solo
+# ramifica sobre 'paid' y 'mixed'; con cualquier otra cosa cae al return vacío.
+# Resultado: 637 fichas con su enlace de Ticketmaster guardado y SIN botón de
+# compra. No lo cazó nada — lo cazó Juan preguntando por qué no veía la
+# boletería. El error de fondo: vi 'mixed' en otro festival y DEDUJE que
+# existiría un valor para «todo de pago», en vez de leer qué acepta el código.
+#
+# Regla: para cada campo de FESTIVAL_CONFIG cuyo valor la app compara con ===,
+# el conjunto de valores usados tiene que estar contenido en el de valores
+# manejados. Los valores manejados se leen DEL CÓDIGO, no de una lista a mano:
+# una lista escrita aquí envejecería igual que el bug que persigue.
+check = 'valor-inventado'
+try:
+    import re as _re, glob as _glob
+    _cfg = open('src/config.js', encoding='utf-8').read()
+    _src = ' '.join(open(_x, encoding='utf-8').read()
+                    for _x in _glob.glob('src/**/*.js', recursive=True)
+                    if 'config.js' not in _x)
+    _CAMPOS = ('ticketing_model', 'posterSource', 'event_kind', 'type')
+    _viol = []
+    for _campo in _CAMPOS:
+        _maneja = set(_re.findall(_campo + r"\s*===?\s*'([^']+)'", _src))
+        _maneja |= set(_re.findall(r"'([^']+)'\s*===?\s*[\w.]*" + _campo, _src))
+        if not _maneja:
+            continue          # la app no ramifica sobre él: nada que validar
+        _usa = set(_re.findall(_campo + r":\s*'([^']+)'", _cfg))
+        _malos = sorted(_usa - _maneja)
+        if _malos:
+            _viol.append(f'{_campo}={_malos} — la app solo maneja '
+                         f'{sorted(_maneja)}')
+    if _viol:
+        fail(check, 'valor de config que la app NO maneja (cae al camino vacío): '
+                    + '; '.join(_viol))
+    else:
+        ok(check, 'todo valor de config cae en una rama que la app maneja')
+except Exception as _e:
+    warn(check, f'no se pudo verificar valor-inventado: {_e}')
+
+
+# ── [paridad-derivados] un campo DERIVADO existe siempre que exista su fuente ─
+# EL HUECO QUE ESTE TAPA, y por qué costó tanto verlo.
+#
+# `flags` es un campo DERIVADO: no existe en ninguna fuente. Ningún PDF, ningún
+# Excel, ninguna web de festival trae banderas — las calculamos del país. Y ahí
+# está la trampa: UNA AUSENCIA QUE NUNCA FUE PRESENCIA NO SE NOTA. Si falta un
+# título salta a la vista, porque la fuente lo tenía y lo perdimos. Si falta
+# `flags` no hay nada río arriba de donde se haya caído.
+#
+# FICDEH corrió su festival entero con 415 films mostrando país y ninguna
+# bandera. Su ensamblador era a medida —PDF, Excel, web y tuboleta— y
+# sencillamente nunca escribió el campo; los otros doce festivales lo emiten
+# porque sus ensambladores salieron de la plantilla. Nadie lo vio en meses.
+#
+# La regla: para cada par (fuente → derivado), un film que tenga la fuente
+# tiene que tener el derivado. Los pares se declaran acá y se MIDIERON antes de
+# entrar: los cuatro primeros se cumplen hoy en los 12 festivales publicados,
+# 1.209 films sin una sola excepción. No es una aspiración, es un invariante
+# que ya se sostiene y que a partir de ahora no se puede romper en silencio.
+#
+# OJO con la regla ingenua «campo presente en N-1 festivales»: daría falsos
+# positivos con `is_cortos` y `film_list`, que faltan legítimamente donde el
+# festival no tiene programas de cortos. La dependencia, no la frecuencia, es
+# lo que distingue un hueco de una ausencia legítima.
+check = 'paridad-derivados'
+try:
+    import json as _json, glob as _glob, os as _os, re as _re
+    # (fuente, derivado, por qué)
+    _PARES = [
+        ('day', 'day_order', 'el orden del día lo calcula el ensamblador'),
+        ('day', 'time', 'una función con día y sin hora no se puede planear'),
+        ('poster', 'posterSource', 'sin fuente, getFilmPoster no sabe si es editorial'),
+        ('synopsis', 'synopsis_lang', 'sin idioma declarado, locSynopsis no elige bien'),
+    ]
+    # `country → flags` es aparte: solo es hueco si la bandera SE PODÍA derivar.
+    # Un país que no está en la tabla («Varios», o un idioma colado en el campo)
+    # es otro problema, y de ese ya se ocupa [country-flags].
+    _js = open('src/controller/sheets-controller.js', encoding='utf-8').read()
+    _m = _re.search(r'const _COUNTRY_FLAGS=\{(.*?)\};', _js, _re.S)
+    _TAB = dict(_re.findall(r"'([^']+)'\s*:\s*'([^']+)'", _m.group(1))) if _m else {}
+
+    def _vacio(v):
+        return v in (None, '', [], {})
+
+    _viol = []
+    for _f in sorted(_glob.glob('festivals/*.json')):
+        try:
+            _d = _json.load(open(_f, encoding='utf-8'))
+        except Exception:
+            continue
+        _n = _os.path.basename(_f)
+        for _src, _der, _por in _PARES:
+            _mal = [x.get('title', '?') for x in (_d.get('films') or [])
+                    if not _vacio(x.get(_src)) and _vacio(x.get(_der))]
+            if _mal:
+                _viol.append(f'{_n}: {len(_mal)} film(s) con «{_src}» y sin «{_der}» '
+                             f'({_por}) — p.ej. «{str(_mal[0])[:28]}»')
+        _sinf = []
+        for _x in (_d.get('films') or []):
+            _c = (_x.get('country') or '').strip()
+            if not _c or not _vacio(_x.get('flags')):
+                continue
+            if any(_p.strip() in _TAB for _p in _re.split(r'[,/()]', _c)):
+                _sinf.append(_x.get('title', '?'))
+        if _sinf:
+            _viol.append(f'{_n}: {len(_sinf)} film(s) con país mapeable y sin «flags» '
+                         f'— p.ej. «{str(_sinf[0])[:28]}»')
+    if _viol:
+        fail(check, 'campo derivado ausente donde su fuente existe: ' + '; '.join(_viol[:4]))
+    else:
+        ok(check, f'{len(_PARES)+1} pares fuente→derivado sin un solo hueco')
+except Exception as _e:
+    warn(check, f'no se pudo verificar paridad-derivados: {_e}')
+
+
+# ── [campo-contrato] el JSON y la app tienen que llamar igual a lo mismo ─────
+# EL HUECO QUE ESTE GUARDIÁN TAPA. Todos los demás revisan el dato POR DENTRO:
+# que el campo exista, que sea booleano, que las cuentas cierren. Ninguno miraba
+# la JUNTA entre el dato y la app. Un JSON impecable y una vista impecable
+# pueden no encontrarse nunca, y nada se pone rojo.
+#
+# Pasó con TIFF el 13 ago 2026: emití `ticketUrl` y sheets-controller lee
+# `ticket_url`. Los 638 enlaces de boletería estaban en el JSON y no llegaban a
+# ninguna ficha. No lo cazó ningún test —ni los nuestros ni los de la app—: lo
+# cazó Juan abriendo la app y preguntando «¿dónde está el enlace?». Lo mismo con
+# `tmdbId` contra `tmdb_id`.
+#
+# La regla es estrecha A PROPÓSITO, para no tener falsos positivos: si un campo
+# NO lo lee la app pero SÍ existe su variante en el otro estilo de nombre
+# (camelCase ↔ snake_case) y ESA sí se lee, es un error seguro. No es una
+# heurística: es la misma cosa escrita de dos formas.
+check = 'campo-contrato'
+try:
+    import json as _json, glob as _glob, os as _os, re as _re
+    _src = ' '.join(open(_x, encoding='utf-8').read()
+                    for _x in _glob.glob('src/**/*.js', recursive=True))
+
+    # Metadato NUESTRO, no de render: lo consumen el pipeline y los validadores,
+    # y que la app no lo lea es correcto. Se declara para que el aviso de «dato
+    # muerto» signifique algo — si todo es ruido, nadie lo mira.
+    _PIPELINE = {'synopsis_lang', 'tmdb_id', 'tmdbId', 'posterSource', 'day_order',
+                 # section_tags: los sellos de TIFF («💎 Unhidden Gems», «🌊 TIFF
+                 # Next Wave Selects»). Juan decidió el 13 ago NO mostrarlos. El
+                 # dato se conserva porque registra lo que el festival publica
+                 # —esas 18 obras llevan el sello de verdad— pero nadie lo pinta,
+                 # y eso es deliberado, no un cabo suelto.
+                 'section_tags'}
+
+    def _lee(_k):
+        # Palabra suelta, no solo `.campo`: la app también desestructura y usa
+        # el nombre en literales. Buscar solo `.campo` daba huérfanos falsos
+        # («sessions» se lee en 4 sitios y salía como muerto).
+        return bool(_re.search(r'\b' + _re.escape(_k) + r'\b', _src))
+
+    def _variantes(_k):
+        _snake = _re.sub(r'(?<!^)(?=[A-Z])', '_', _k).lower()
+        _camel = _re.sub(r'_([a-z])', lambda m: m.group(1).upper(), _k)
+        return {_snake, _camel} - {_k}
+
+    _viol, _huerf = [], []
+    for _f in sorted(_glob.glob('festivals/*.json')):
+        try:
+            _d = _json.load(open(_f, encoding='utf-8'))
+        except Exception:
+            continue
+        _campos = set()
+        def _rec(_items):
+            for _it in _items or []:
+                if isinstance(_it, dict):
+                    _campos.update(k for k in _it if not k.startswith('_'))
+                    _rec(_it.get('film_list'))
+        _rec(_d.get('films'))
+        for _k in sorted(_campos):
+            if _lee(_k):
+                continue
+            _gemelas = [_v for _v in _variantes(_k) if _lee(_v)]
+            if _gemelas:
+                _viol.append(f'{_os.path.basename(_f)}: emite «{_k}» y la app lee '
+                             f'«{_gemelas[0]}» — el dato no llega')
+            elif _k not in _PIPELINE:
+                _huerf.append(f'{_os.path.basename(_f)}:{_k}')
+    if _viol:
+        fail(check, 'mismo dato con dos nombres distintos: ' + '; '.join(_viol[:4]))
+    elif _huerf:
+        warn(check, f'{len(_huerf)} campo(s) que nadie lee (dato muerto, no error): '
+                    + ', '.join(_huerf[:6]))
+    else:
+        ok(check, 'todo campo publicado tiene quien lo lea')
+except Exception as _e:
+    warn(check, f'no se pudo verificar campo-contrato: {_e}')
+
+
+# ── [flag-booleano] un flag de la app es booleano, no la palabra «true» ──────
+# La app compara los flags de servicio con `=== true`, no por truthy, y a
+# propósito: un badge de precio no se pinta por un valor accidental. El coste de
+# esa decisión es que un `"true"` como STRING no rompe nada — simplemente el
+# badge no aparece nunca, y nadie se entera hasta que un usuario no ve algo que
+# debería estar.
+#
+# Lo levantó Main el 13 ago 2026 al implementar el badge PREMIUM de TIFF. El
+# dato estaba bien, pero el contrato entre el JSON y la vista no lo vigilaba
+# nadie. Vale para todos los flags, no solo para premium: basta con que un
+# ensamblador lea un CSV o un Excel para que un booleano llegue como texto.
+check = 'flag-booleano'
+try:
+    import json as _json, glob as _glob, os as _os
+    _FLAGS = ('premium', 'is_free', 'requires_registration', 'has_qa', 'is_cortos',
+              'is_programa', 'isCanadian', 'canadiense')
+    _viol = []
+    for _f in sorted(_glob.glob('festivals/*.json')):
+        try:
+            _d = _json.load(open(_f, encoding='utf-8'))
+        except Exception:
+            continue
+        def _mira(_items, _donde):
+            for _it in _items or []:
+                if not isinstance(_it, dict):
+                    continue
+                for _k in _FLAGS:
+                    if _k in _it and not isinstance(_it[_k], (bool, type(None))):
+                        _viol.append(f'{_os.path.basename(_f)} {_donde}'
+                                     f'«{str(_it.get("title", "?"))[:28]}»: {_k}='
+                                     f'{_it[_k]!r} ({type(_it[_k]).__name__}, no bool)')
+                _mira(_it.get('film_list'), _donde + 'film_list/')
+        _mira(_d.get('films'), '')
+    if _viol:
+        fail(check, 'flag que la app compara con === true y NO es booleano: '
+                    + '; '.join(_viol[:4]))
+    else:
+        ok(check, 'todos los flags de servicio son booleanos de verdad')
+except Exception as _e:
+    warn(check, f'no se pudo verificar flag-booleano: {_e}')
+
+
+# ── [cruce-inyectivo] un identificador externo, una sola obra ────────────────
+# «The Age of Goodbyes» le prestó su lbSlug a otras cuatro obras porque sus
+# títulos —«月宫», «咒语»— se normalizaban a cadena VACÍA y la vacía casaba con
+# cualquier cosa. Y los dos cortos llamados «The End» (Pelechian 1992, Lindroth
+# von Bahr 2026) colapsaron en uno solo al indexar por título.
+# Regla: un lbSlug o un tmdb_id no puede quedar asignado a dos obras DISTINTAS.
+# Se compara por obra, no por fila: una obra con doce funciones repite su slug
+# doce veces y eso es sano.
+check = 'cruce-inyectivo'
+try:
+    import json as _json, glob as _glob, os as _os
+    _IDS = ('lbSlug', 'tmdb_id')
+    _TIT = ('titulo', 'title', 'titulo_lb', 'nombre')
+    _viol = []
+
+    def _recorrer(nodo, ruta, archivo):
+        if isinstance(nodo, dict):
+            for k, v in nodo.items():
+                _recorrer(v, f'{ruta}.{k}', archivo)
+        elif isinstance(nodo, list) and nodo and isinstance(nodo[0], dict):
+            for idk in _IDS:
+                if not any(idk in r for r in nodo if isinstance(r, dict)):
+                    continue
+                titk = next((t for t in _TIT
+                             if any(t in r for r in nodo if isinstance(r, dict))), None)
+                if not titk:
+                    continue
+                porid = {}
+                for r in nodo:
+                    if not isinstance(r, dict):
+                        continue
+                    i, t = r.get(idk), r.get(titk)
+                    if i in (None, '', []) or not t:
+                        continue
+                    porid.setdefault(i, set()).add(t)
+                for i, ts in porid.items():
+                    if len(ts) > 1:
+                        _viol.append(f'{archivo}{ruta}: {idk}={i} en {len(ts)} obras '
+                                     f'({", ".join(sorted(ts)[:3])})')
+            for r in nodo:
+                _recorrer(r, ruta + '[]', archivo)
+
+    for _f in sorted(_glob.glob('festivals/staging/*.json')):
+        try:
+            _recorrer(_json.load(open(_f, encoding='utf-8')), '', _os.path.basename(_f))
+        except Exception:
+            continue
+    if _viol:
+        fail(check, 'identificador externo compartido por obras distintas: '
+                    + '; '.join(_viol[:4]))
+    else:
+        ok(check, 'ningún lbSlug/tmdb_id asignado a dos obras distintas')
+except Exception as _e:
+    warn(check, f'no se pudo verificar cruce-inyectivo: {_e}')
+
+
+# ── [cuentas-cuadran] nada se cae del cruce en silencio ──────────────────────
+# El ensamblador de TIFF se quedaba con la PRIMERA sección de cada obra y tiraba
+# la segunda sin decir nada: 18 obras perdieron una etiqueta y el JSON se veía
+# perfecto. Un dato que desaparece callado es peor que uno que falta a gritos.
+# Regla: si un sidecar declara `_cuentas`, sus números tienen que cerrar —
+# entradas = publicadas + suma de descartes—. Declarar los descartes obliga a
+# mirarlos; que sumen impide inventarlos.
+check = 'cuentas-cuadran'
+try:
+    import json as _json, glob as _glob, os as _os
+    _malas, _con = [], 0
+    for _f in sorted(_glob.glob('festivals/staging/*.json')):
+        try:
+            _d = _json.load(open(_f, encoding='utf-8'))
+        except Exception:
+            continue
+        _c = _d.get('_cuentas') if isinstance(_d, dict) else None
+        if not isinstance(_c, dict):
+            continue
+        _con += 1
+        _ent, _pub = _c.get('entradas'), _c.get('publicadas')
+        _des = _c.get('descartadas') or {}
+        if not isinstance(_ent, int) or not isinstance(_pub, int):
+            _malas.append(f'{_os.path.basename(_f)}: falta entradas/publicadas')
+            continue
+        _sum = sum(v for v in _des.values() if isinstance(v, int))
+        if _ent != _pub + _sum:
+            _malas.append(f'{_os.path.basename(_f)}: {_ent} entradas ≠ {_pub} publicadas '
+                          f'+ {_sum} descartadas ({_ent - _pub - _sum} sin explicar)')
+    if _malas:
+        fail(check, 'las cuentas del cruce no cierran: ' + '; '.join(_malas[:3]))
+    else:
+        ok(check, f'{_con} sidecar(s) con cuentas declaradas y cerradas')
+except Exception as _e:
+    warn(check, f'no se pudo verificar cuentas-cuadran: {_e}')
+
+
+# ── [sidecar-vacio] un enriquecimiento que no enriqueció es un fallo ─────────
+# El script de TMDB de TIFF se pasó una hora reintentando un error de
+# certificado SSL y terminó sin escribir nada, porque trataba un fallo de
+# transporte como si fuera un tropiezo pasajero de la API. Un script que corre
+# hasta el final y no produce dato TIENE que notarse.
+# Regla: si un sidecar declara un conteo mayor que cero, la lista que lo
+# acompaña no puede estar vacía ni ser toda nula.
+check = 'sidecar-vacio'
+try:
+    import json as _json, glob as _glob, os as _os, re as _re
+    _viol = []
+    for _f in sorted(_glob.glob('festivals/staging/*.json')):
+        try:
+            _d = _json.load(open(_f, encoding='utf-8'))
+        except Exception:
+            continue
+        if not isinstance(_d, dict):
+            continue
+        _listas = {k: v for k, v in _d.items() if isinstance(v, list)}
+        for _k, _v in _d.items():
+            if not (_k.startswith('_') and isinstance(_v, int) and _v > 0):
+                continue
+            _base = _k.lstrip('_')
+            # OJO con el `or`: una lista VACÍA es falsa, así que
+            # `_listas.get(a) or _listas.get(b)` se saltaba justo el caso que
+            # este guardián existe para cazar. Se pregunta por presencia, no
+            # por verdad — el mismo error que el guardián persigue.
+            if _base in _listas:
+                _cand = _listas[_base]
+            elif _base + 's' in _listas:
+                _cand = _listas[_base + 's']
+            else:
+                continue
+            if not _cand:
+                _viol.append(f'{_os.path.basename(_f)}: {_k}={_v} pero «{_base}» vacía')
+            elif all(x in (None, '', {}, []) for x in _cand):
+                _viol.append(f'{_os.path.basename(_f)}: «{_base}» tiene {len(_cand)} '
+                             'entradas y todas vacías')
+    if _viol:
+        fail(check, 'sidecar que declara dato y no lo tiene: ' + '; '.join(_viol[:3]))
+    else:
+        ok(check, 'ningún sidecar declara un conteo que su lista no respalda')
+except Exception as _e:
+    warn(check, f'no se pudo verificar sidecar-vacio: {_e}')
+
+
+# ── [discrepancia-falsa] no acusar de distinto lo que es idéntico ────────────
+# La auditoría de directores de TIFF reportó 22 discrepancias. Las 22 eran
+# falsas: comparaba «Sue Kim» con «Sue Kim» —tokens de tres letras, conjuntos
+# vacíos— y «濱口竜介» con su nombre latino. Una lista de discrepancias que
+# contiene idénticos no es una auditoría, es ruido que esconde las de verdad.
+# Regla: en cualquier lista de discrepancias o ambigüedades de un sidecar,
+# ningún elemento puede tener dos valores que sean iguales al normalizar.
+check = 'discrepancia-falsa'
+try:
+    import json as _json, glob as _glob, os as _os, unicodedata as _ud
+    def _n(x):
+        if isinstance(x, list):
+            x = ' '.join(str(i) for i in x)
+        x = _ud.normalize('NFKD', str(x or '').lower())
+        x = ''.join(c for c in x if not _ud.combining(c))
+        return re.sub(r'[^a-z0-9]+', '', x)
+    _viol = []
+    for _f in sorted(_glob.glob('festivals/staging/*.json')):
+        try:
+            _d = _json.load(open(_f, encoding='utf-8'))
+        except Exception:
+            continue
+        if not isinstance(_d, dict):
+            continue
+        for _k, _v in _d.items():
+            if not (_k.startswith('_') and ('discrep' in _k or 'ambigu' in _k)):
+                continue
+            for _it in (_v if isinstance(_v, list) else []):
+                if not isinstance(_it, dict):
+                    continue
+                _vals = [(kk, _n(vv)) for kk, vv in _it.items()
+                         if not kk.startswith('_') and isinstance(vv, (str, list)) and _n(vv)]
+                for _i in range(len(_vals)):
+                    for _j in range(_i + 1, len(_vals)):
+                        if _vals[_i][1] == _vals[_j][1]:
+                            _viol.append(f'{_os.path.basename(_f)} {_k}: '
+                                         f'«{_vals[_i][0]}» y «{_vals[_j][0]}» son iguales '
+                                         f'({_vals[_i][1][:24]})')
+    if _viol:
+        fail(check, 'discrepancia reportada entre valores idénticos: '
+                    + '; '.join(sorted(set(_viol))[:3]))
+    else:
+        ok(check, 'ninguna lista de discrepancias contiene valores idénticos')
+except Exception as _e:
+    warn(check, f'no se pudo verificar discrepancia-falsa: {_e}')
+
 
 # ── [pipeline-circuito] el barrido que nadie consume ──────────────────────────
 # El bug real: el barrido escribía programacion-canonica.json y el ensamblador

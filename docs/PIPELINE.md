@@ -231,6 +231,109 @@ en TMDB (sin fecha/director/sinopsis) — sin criterio corroborante NO se atan.
 
 ---
 
+### Fase 1.6 · Guardianes de la LÓGICA DEL CRUCE — retro TIFF 2026 (13 ago 2026)
+
+Hasta TIFF, todos nuestros guardianes revisaban la **forma** del dato: que el
+campo exista, que el sidecar tenga fecha, que la sede no esté apilada. Ninguno
+sabía preguntar si el **cruce** que produjo ese dato era correcto.
+
+Montando TIFF se colaron cinco defectos de cruce y **ningún guardián cazó uno
+solo**: los cinco se cazaron mirando la salida a mano. De ahí salen estos
+cuatro, uno por clase de error. Son genéricos — no saben de qué festival
+hablan, solo de cómo se comporta un cruce sano.
+
+| Guardián | Qué exige | El error que lo parió |
+|---|---|---|
+| `[cruce-inyectivo]` | Un `lbSlug` o `tmdb_id` no puede quedar asignado a dos obras distintas. Se compara por OBRA, no por fila: una obra con doce funciones repite su slug doce veces y eso es sano. | «The Age of Goodbyes» le prestó su slug a otras cuatro obras cuyos títulos («月宫», «咒语») se normalizaban a cadena VACÍA, y la vacía casaba con cualquier cosa. Y los dos cortos llamados «The End» —Pelechian 1992 y Lindroth von Bahr 2026— colapsaron en uno al indexar por título. |
+| `[cuentas-cuadran]` | Si un sidecar declara `_cuentas`, sus números cierran: `entradas == publicadas + suma de descartadas`. | El ensamblador se quedaba con la PRIMERA sección de cada obra y tiraba la segunda sin decir nada: 18 obras perdieron una etiqueta y el JSON se veía perfecto. |
+| `[sidecar-vacio]` | Un conteo `_algo: N > 0` tiene que estar respaldado por su lista: ni vacía ni toda nula. | El script de TMDB se pasó una hora reintentando un error de certificado SSL y terminó sin escribir nada, porque trataba un fallo de transporte como un tropiezo pasajero de la API. |
+| `[discrepancia-falsa]` | En una lista `_discrep*` o `_ambigu*`, ningún elemento puede tener dos valores iguales al normalizar. | La auditoría de directores reportó 22 discrepancias y las 22 eran falsas: comparaba «Sue Kim» con «Sue Kim» y «濱口竜介» con su nombre latino. Una lista de discrepancias con idénticos no es auditoría, es ruido que esconde las de verdad. |
+
+**Séptimo, hermano del anterior y del mismo día: `[valor-inventado]`.**
+`[campo-contrato]` caza el NOMBRE mal escrito; éste caza el VALOR inventado.
+
+Escribí `ticketing_model:'ticketed'` para TIFF. La app solo ramifica sobre
+`'paid'` y `'mixed'`; con cualquier otra cosa cae al `return ''`. **637 fichas
+con su enlace de Ticketmaster guardado y sin botón de compra.** El error de
+fondo no fue teclear mal: fue ver `'mixed'` en otro festival y **deducir** que
+existiría un valor para «todo de pago», en vez de leer qué acepta el código.
+
+Los valores manejados se leen **del código**, no de una lista escrita a mano:
+una lista aquí envejecería igual que el bug que persigue.
+
+**La regla de trabajo que se lleva de aquí, y que vale más que el guardián: un
+valor de enum no se deduce por analogía. Se lee en el código que lo consume,
+antes de escribirlo.**
+
+**Sexto guardián, el que tapa el hueco de verdad: `[campo-contrato]`.** Todos
+los demás revisan el dato POR DENTRO —que el campo exista, que sea booleano,
+que las cuentas cierren—. Ninguno miraba la **junta** entre el dato y la app.
+Un JSON impecable y una vista impecable pueden no encontrarse nunca, y nada se
+pone rojo.
+
+Pasó con TIFF: emití `ticketUrl` y `sheets-controller` lee `ticket_url`. Los 638
+enlaces de boletería estaban en el JSON y no llegaban a ninguna ficha. **No lo
+cazó ningún test —ni los del pipeline ni los de la app—: lo cazó Juan abriendo
+la app y preguntando dónde estaba el enlace.** Esa es la definición del hueco.
+
+La regla es estrecha a propósito, para no dar falsos positivos: si un campo NO
+lo lee la app pero SÍ existe su variante en el otro estilo de nombre
+(camelCase ↔ snake_case) y esa sí se lee, es un error seguro — es la misma cosa
+escrita de dos formas. Los campos que nadie lee y no tienen gemela salen como
+aviso, no como error: son dato muerto, no un fallo.
+
+**En su primera ejecución encontró un bug que llevaba meses en producción y no
+era de TIFF:** `aff-2026.json` emitía `lb_slug` en dos películas y la app lee
+`lbSlug`. Dos botones de Letterboxd que nunca aparecieron.
+
+**Quinto guardián, añadido el 13 ago 2026:** `[flag-booleano]`. La app compara
+los flags de servicio con `=== true`, no por truthy, y eso es deliberado —un
+badge de precio no se pinta por un valor accidental—. El precio de esa decisión
+es que un `"true"` como **string** no rompe nada: el badge simplemente no
+aparece nunca, y nadie se entera. Lo levantó Main al implementar el badge
+PREMIUM de TIFF, y vale para todos los flags (`is_free`,
+`requires_registration`, `has_qa`, `is_cortos`, `premium`), en el film y dentro
+de `film_list`. Basta con que un ensamblador lea un CSV o un Excel para que un
+booleano llegue como texto.
+
+**Octavo, y el que explica por qué lo de FICDEH costó meses:
+`[paridad-derivados]`.**
+
+`flags` es un campo **derivado**: no existe en ninguna fuente. Ningún PDF,
+ningún Excel, ninguna web de festival trae banderas — las calculamos del país.
+Y ahí está la trampa: **una ausencia que nunca fue presencia no se nota.** Si
+falta un título salta a la vista, porque la fuente lo tenía y lo perdimos. Si
+falta `flags`, no hay nada río arriba de donde se haya caído.
+
+FICDEH corrió su festival entero con 415 films mostrando país y ninguna
+bandera. Su ensamblador era a medida —PDF, Excel, web y tuboleta— y nunca
+escribió el campo; los otros doce lo emiten porque salieron de la plantilla.
+
+**La regla: para cada par (fuente → derivado), un film con la fuente tiene que
+tener el derivado.** Los pares se declaran en el guardián y se **midieron
+antes de entrar**: `day→day_order`, `day→time`, `poster→posterSource` y
+`synopsis→synopsis_lang` se cumplen hoy en los 12 festivales publicados, 1.209
+films sin una sola excepción. No es una aspiración: es un invariante que ya se
+sostenía y que ahora no se puede romper en silencio. `country→flags` va aparte
+y solo cuenta como hueco si la bandera **se podía** derivar — un país fuera de
+tabla («Varios», o un idioma colado en el campo) es otro problema, y de ese se
+ocupa `[country-flags]`.
+
+**Ojo con la regla ingenua «campo presente en N−1 festivales»:** daría falsos
+positivos con `is_cortos` y `film_list`, que faltan legítimamente donde el
+festival no tiene programas de cortos. **Lo que distingue un hueco de una
+ausencia legítima es la dependencia, no la frecuencia.**
+
+**Regla nueva para todo ensamblador:** emitir `_cuentas` con `entradas`,
+`publicadas` y `descartadas` desglosadas por motivo. Declarar los descartes
+obliga a mirarlos; que sumen impide inventarlos.
+
+**Y la lección de método:** un guardián que nunca ha fallado no es de fiar.
+Los cuatro se probaron contra un sidecar roto a propósito antes de darlos por
+buenos, y ahí se cayó uno: `[sidecar-vacio]` usaba
+`_listas.get(a) or _listas.get(b)`, y **una lista vacía es falsa en Python**,
+así que el guardián de las listas vacías se dejaba vencer justo por una lista
+vacía. Se pregunta por PRESENCIA, no por verdad.
 ### Fase 2 · Configuración en FESTIVAL_CONFIG `[Senior Dev + PM]`
 
 **Objetivo:** El festival existe en la app con su configuración completa.
