@@ -397,3 +397,85 @@ test('T59 — la fila dice «Sesión 1 de N» y el modal avisa que se van todas'
   });
   expect(normal, 'lo que no es bloque no cambia').toMatch(/Sugerencias/);
 });
+
+// T61 — el panel de alternativas respeta la ciudad y las cancelaciones
+// Re-corrida del QA de ojos frescos (16 ago 2026): con filtro Bogotá el panel
+// ofrecía funciones de otras ciudades (436 de 836) y canceladas por el sismo
+// (118) — al agente le ofreció Pereira, ciudad cancelada, y sin decir la ciudad.
+// El predicado por función ahora es screeningPlannable (dueño único).
+test('T61 — las alternativas son de TU ciudad y ninguna está cancelada', async ({ page }) => {
+  await enterFestival(page, 'ficdeh2026', '2026-08-16T09:00');
+  const caso = await page.evaluate(() => {
+    // elegir dinámicamente: una función de Bogotá cuyo tramo ±15 tenga vecinas
+    // de OTRA ciudad o canceladas — el caso que el panel filtraba mal
+    const toM = t => { const [h, m] = t.split(':'); return +h * 60 + +m; };
+    const bog = f => (f.venue || '').includes('Bogotá');
+    for (const base of FILMS.filter(f => f.day >= '2026-08-17' && f.time && bog(f) && !f._cancelled)) {
+      const vecinasMalas = FILMS.filter(f => f.day === base.day && f.title !== base.title
+        && Math.abs(toM(f.time) - toM(base.time)) <= 15 && (!bog(f) || f._cancelled));
+      if (vecinasMalas.length) return { t: base.title, d: base.day, h: base.time, malas: vecinasMalas.length };
+    }
+    return null;
+  });
+  expect(caso, 'FICDEH tiene el caso (vecinas de otra ciudad o canceladas)').not.toBeNull();
+
+  // ciudad Bogotá + la función en el plan, por los caminos reales
+  await page.evaluate((c) => {
+    activeVenue = 'city:Bogotá';
+    addSuggestion(c.t, c.d, c.h);
+  }, caso);
+  await page.waitForTimeout(600);
+  await page.evaluate(() => document.querySelector('[data-action="closePlanConfirm"]')?.click());
+  await page.evaluate((c) => {
+    switchMainNav('mnav-miplan'); showAgView();
+    activeMiPlanDay = DAY_KEYS.indexOf(c.d); renderAgenda();
+  }, caso);
+  await page.waitForSelector('.mplan-t1', { timeout: 8000 });
+  await page.evaluate(() => document.querySelector('.mplan-t1[data-action="toggleFilmAlternatives"]').click());
+  await page.waitForTimeout(600);
+
+  // Se afirma sobre la IDENTIDAD de lo ofrecido (data-attrs → catálogo), no
+  // sobre el texto: las filas muestran el `short` de la sede sin la ciudad, y
+  // una aserción por texto pasaba en vacío — lo destapó la mutación.
+  const ofertas = await page.evaluate(() => {
+    const filas = [...document.querySelectorAll('.film-alts [data-action="confirmReplace"]')];
+    return filas.map(b => {
+      const f = FILMS.find(x => x.title === b.dataset.newtitle && x.day === b.dataset.day && x.time === b.dataset.time
+        && (x.venue || '').includes('Bogotá'))
+        || FILMS.find(x => x.title === b.dataset.newtitle && x.day === b.dataset.day && x.time === b.dataset.time);
+      return { titulo: b.dataset.newtitle, venue: f && f.venue, cancelada: !!(f && f._cancelled) };
+    });
+  });
+  // puede quedar vacío (todo lo cercano era de otra ciudad) — correcto; lo que
+  // NO puede pasar es una oferta de otra ciudad o una cancelada
+  for (const o of ofertas) {
+    expect(o.venue, `«${o.titulo}» es de tu ciudad`).toContain('Bogotá');
+    expect(o.cancelada, `«${o.titulo}» no está cancelada`).toBe(false);
+  }
+});
+
+// T62 — agendar una tripleta ambigua elige la función de TU ciudad
+// La otra cabeza del bug de #612: aquel protegía el plan guardado del sync;
+// esta protege la PUERTA DE ENTRADA. addSuggestion resolvía (título,día,hora)
+// con .find() a secas y un usuario de Bogotá agendaba la de Barranquilla.
+test('T62 — con filtro de ciudad, la tripleta ambigua entra por TU sede', async ({ page }) => {
+  await enterFestival(page, 'ficdeh2026', '2026-08-15T09:00');
+  const caso = await page.evaluate(() => {
+    // tripleta real con dos sedes, una de ellas de Bogotá
+    const k = f => f.title + '|' + f.day + '|' + f.time;
+    const por = {};
+    FILMS.filter(f => f.day >= '2026-08-16' && f.time && f.venue).forEach(f => (por[k(f)] = por[k(f)] || []).push(f));
+    for (const grupo of Object.values(por)) {
+      if (grupo.length > 1 && grupo.some(f => f.venue.includes('Bogotá')) && grupo.some(f => !f.venue.includes('Bogotá'))
+          && grupo.findIndex(f => f.venue.includes('Bogotá')) > 0) // la de Bogotá NO es la primera: el caso que fallaba
+        return { t: grupo[0].title, d: grupo[0].day, h: grupo[0].time };
+    }
+    return null;
+  });
+  expect(caso, 'FICDEH tiene una tripleta ambigua con Bogotá en segundo lugar').not.toBeNull();
+  await page.evaluate((c) => { activeVenue = 'city:Bogotá'; addSuggestion(c.t, c.d, c.h); }, caso);
+  await page.waitForTimeout(600);
+  const venue = await page.evaluate((c) =>
+    (savedAgenda.schedule.find(e => e._title === c.t) || {}).venue, caso);
+  expect(venue, 'entró la función de tu ciudad, no la primera del catálogo').toContain('Bogotá');
+});

@@ -15,7 +15,7 @@ const FILMS = [
 
 function load(planVenues) {
   return loadDomain({
-    functions: ['plannableScreens'],
+    functions: ['plannableScreens', 'screeningPlannable'],
     globals: {
       FILMS,
       DEFAULT_DURATION_MIN: 90,
@@ -51,7 +51,7 @@ test('una función SIN venue nunca queda atrapada por el filtro', () => {
   const d = load(new Set(['Cinemateca BOG']));
   const films2 = FILMS.concat([{ title: 'Peli C', day: 'D1', time: '18:00', duration: '60 min' }]);
   const d2 = loadDomain({
-    functions: ['plannableScreens'],
+    functions: ['plannableScreens', 'screeningPlannable'],
     globals: { FILMS: films2, DEFAULT_DURATION_MIN: 90, DAY_KEYS: ['D1'], availability: {},
       FESTIVAL_DATES: { D1: '2099-01-01' }, TZ_OFFSET: '-05:00', _simTime: null,
       isScreeningBlocked: () => false, screeningPassed: () => false,

@@ -13,7 +13,7 @@ import {
   ICONS, _secLabel, _secLabelFull, _sectionColor, escXML, makeEventPoster, makeProgramPoster, parseProgramTitle, renderAvBlocksHTML, renderFlowProgress,
 } from './components.js';
 import {
-  DAYS, DAY_SHORT_EN, _dayChips, _lblLocalized, _minFmt, _mkCortoItemHtml, _posterThumb, getCortoItemPoster, itemPosterParts, posterParts, dayChip, dayLabel, dayLabelLong, durFmt, emptyState, emptyStateHero, flagFmt, getFilmPoster, isToday, keepCityOnly, mplanBlockType, mplanEndStr, sala, starsText, travelWarn, vcfg, venueCity, venueMatches, delayConsensusBadge, conflictAccount,
+  DAYS, DAY_SHORT_EN, _dayChips, _lblLocalized, _minFmt, _mkCortoItemHtml, _posterThumb, getCortoItemPoster, itemPosterParts, posterParts, dayChip, dayLabel, dayLabelLong, durFmt, emptyState, emptyStateHero, flagFmt, getFilmPoster, isToday, keepCityOnly, mplanBlockType, mplanEndStr, planCityVenues, sala, starsText, travelWarn, vcfg, venueCity, venueMatches, delayConsensusBadge, conflictAccount,
 } from './helpers.js';
 import {
   _festDate, _festNowMin, festivalEnded, minToStr, simNow, simTodayStr, toMin,
@@ -29,7 +29,7 @@ import {
   screeningPassed, screeningEnded, screeningNow, screeningEndDate, effectiveDuration, blockDuration, durationForTravel, delayedEndMin, _delayKey,
 } from '../domain/film.js';
 import {
-  isScreeningBlocked, screensConflict, screensConflictReason,
+  isScreeningBlocked, screeningPlannable, screensConflict, screensConflictReason,
 } from '../domain/schedule.js';
 import {
   _getFestivalPhase, travelMins,
@@ -571,12 +571,22 @@ export function renderFilmAlternatives(state,title,day,time){
   const plannedTitles=new Set(savedAgenda?savedAgenda.schedule.map(s=>s._title):[]);
   // ±15 min window — direct competition in the same slot
   const WINDOW=15;
+  // screeningPlannable = dueño único del predicado por función (cancelada ·
+  // pasada · franja vetada · ciudad). Este panel tenía su propia copia con 2 de
+  // los 4 chequeos y ofrecía funciones de otras ciudades (436 de 836 con filtro
+  // Bogotá) y canceladas por el sismo (118) — re-corrida del QA, 16 ago 2026.
+  // Acá queda solo lo que es PROPIO del panel: la ventana ±15, el mismo título,
+  // lo ya planificado y lo visto.
+  // Publicar la restricción de ciudad ANTES de filtrar: screeningPlannable la
+  // lee de PLAN_CITY_VENUES, y sin esto solo estaba fresca tras pasar por
+  // Calcular — quien armaba el plan a mano veía el panel sin filtro.
+  globalThis.PLAN_CITY_VENUES=planCityVenues();
   const opts=FILMS.filter(f=>{
     if(f.day!==day) return false;
     if(f.title===title) return false;
     if(plannedTitles.has(f.title)) return false;
     if(watched.has(f.title)) return false;
-    if(isScreeningBlocked(f)) return false;
+    if(!screeningPlannable(f)) return false;
     return Math.abs(toMin(f.time)-fStart)<=WINDOW;
   }).sort((a,b)=>toMin(a.time)-toMin(b.time));
 
@@ -1576,6 +1586,7 @@ export function getSuggestions(){
   // y «Día cubierto» se calculaba contra un universo que el usuario no pidió).
   const _citySel=keepCityOnly(activeVenue);
   const _cityOk=f=>_citySel==='all'||!f.venue||venueMatches(f.venue,_citySel);
+  globalThis.PLAN_CITY_VENUES=planCityVenues(); // screeningPlannable (Recuperación) lee de acá
   const saved=savedAgenda.schedule.filter(s=>!screeningPassed(s));
   // OJO: NO early-return si saved quedó vacío. "Todo mi plan ya pasó" ≠ "no tengo
   // plan": en el último día de festival, con el plan de días anteriores ya cumplido,
@@ -1670,7 +1681,10 @@ export function getSuggestions(){
     // Solo aparece si genuinamente cabe sin conflicto en el plan actual
     [...watchlist].filter(wlTitle=>!seenRecovery.has(wlTitle)).forEach(wlTitle=>{
       // mismo motivo que arriba: el bloque no entra por sugerencia
-      FILMS.filter(f=>_cityOk(f)&&f.title===wlTitle&&!f.is_recurring&&f.day===day&&!screeningPassed(f)&&!isScreeningBlocked(f)).forEach(f=>{
+      // screeningPlannable cubre ciudad+cancelada+pasada+bloqueada — la copia
+      // local se saltaba _cancelled y Sugerencias podía ofrecer una función
+      // que el festival canceló (lo cazó el guardián al perder su punto ciego).
+      FILMS.filter(f=>f.title===wlTitle&&!f.is_recurring&&f.day===day&&screeningPlannable(f)).forEach(f=>{
         if(seenRecovery.has(f.title)) return;
         const noConflict=!saved.some(s=>screensConflict(s,f));
         if(noConflict){
