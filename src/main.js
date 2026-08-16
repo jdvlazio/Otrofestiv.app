@@ -121,7 +121,7 @@ import {
 // ── Step 7d-3: controller/handlers.js — mutators+filters+composites. ─────────
 import {
   citySheetPick, citySheetAll,
-  toggleWL, toggleWatched, togglePelPrio, togglePelWL, setDelay, undoDelay, clearDelay, removeFromAgenda, addSuggestion, addRecurringBlock, removeRecurringBlock, _planFixNotice, checkinLaVi, checkinNoLaVi, forceInclude, togglePriority, swapPriority, markWatchedFromPlan, confirmReplace, removeFilmFromScenario, _dismissNotice, selectMiPlanDay, miPlanNav, toggleMplanProg, setActivePlanFilm, selectFromDetail, toggleFilmAlternatives, _toggleEveningFilms, filterByVenue, filterByDay, filterBySection, setInteresesView, setProgramaMode, toggleProgramaView, setProgramaView, setProgramaChip, clearProgramaChip, _pafClearSec, _pafClearVenue, _toggleWLFromList, saveCurrentScenario, _scrollToAgSection, _setExpandedFilm, _closePelAndRemove, _closePelAndRate, _navTo, _closeAuthAndReset, _toggleCtxOlder, _toggleWatchedAndClose, _toggleWLAndClose, _activatePlanFilm, _scrollToSuggestions, _removeConflictModal, _scrollToTop, _searchOpenFilm, _searchOpenCorto,
+  toggleWL, toggleWatched, togglePelPrio, togglePelWL, setDelay, undoDelay, clearDelay, removeFromAgenda, addSuggestion, addRecurringBlock, removeRecurringBlock, _planFixNotice, checkinLaVi, checkinNoLaVi, forceInclude, togglePriority, swapPriority, markWatchedFromPlan, confirmReplace, removeFilmFromScenario, _dismissNotice, selectMiPlanDay, miPlanNav, toggleMplanProg, setActivePlanFilm, selectFromDetail, toggleFilmAlternatives, _toggleEveningFilms, filterByVenue, filterByDay, filterBySection, setProgramaMode, toggleProgramaView, setProgramaView, setProgramaChip, clearProgramaChip, _pafClearSec, _pafClearVenue, _toggleWLFromList, saveCurrentScenario, _setExpandedFilm, _closePelAndRemove, _closePelAndRate, _navTo, _closeAuthAndReset, _toggleCtxOlder, _toggleWatchedAndClose, _toggleWLAndClose, _activatePlanFilm, _scrollToSuggestions, _removeConflictModal, _scrollToTop, _searchOpenFilm, _searchOpenCorto,
 } from './controller/handlers.js';
 import { setDelaysRerender } from './controller/delays-cloud.js';
 import { initWatchBridge } from './controller/watch-bridge.js';
@@ -241,7 +241,6 @@ const ACTION_REGISTRY = {
   setProgramaMode:     (el)    => setProgramaMode(el.dataset.mode),
   setProgramaChip:     (el)    => setProgramaChip(el.dataset.chip),
   setAvType:           (el)    => setAvType(el.dataset.type),
-  setInteresesView:    (el)    => setInteresesView(el.dataset.mode),
   toggleProgramaView:  ()      => toggleProgramaView(),
   lugarToggle:         ()      => lugarToggle(),
   seccionToggle:       ()      => seccionToggle(),
@@ -292,7 +291,6 @@ const ACTION_REGISTRY = {
   signOutAndClose:  ()    => signOutAndClose(),
 
   // ── G: Composite helpers (Patrones A-J multi-statement) (11) ──
-  scrollToAgSec:        (el)    => _scrollToAgSection(el.dataset.target),
   clearExpandedFilm:    ()      => _setExpandedFilm(''),
   setAvAddOpen:         (el)    => _setAvAddOpen(el.dataset.day, el.dataset.open === '1'),
   closePelAndRemove:    (el)    => _closePelAndRemove(el.dataset.title),
@@ -454,7 +452,7 @@ FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202608160959';
+const BUILD_VERSION='202608161031';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';
@@ -841,7 +839,7 @@ const _isoToFlag = c  => c&&c.length===2 ? String.fromCodePoint(0x1F1E6+c.toUppe
 
 // ── CALENDAR VIEW ──
 // p8 8b: view-state (activeView/activeDay/activeVenue/activeSec/selectedIdx/
-// activeMNav/cartelaMode/programaSubMode/interesesViewMode/miPlanViewMode/
+// activeMNav/cartelaMode/programaSubMode/miPlanViewMode/
 // programaViewMode/programaChip/_programaChipMatchFn/_currentChips) →
 // state/viewstate.js (bridge). main.js los lee/escribe vía globalThis.
 
