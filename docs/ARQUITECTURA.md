@@ -894,6 +894,23 @@ creó `plannableScreens` como **dueño único** de «qué funciones son planific
 para vos» (cancelada · pasada · franja vetada · taller entero-o-nada), consumido por
 el planeador, el oráculo y el recorrido.
 
+**La segunda vuelta del dueño único** (16 ago 2026, re-corrida del QA). El predicado
+POR FUNCIÓN se extrajo como `screeningPlannable(s)` (cancelada · pasada · franja
+vetada · ciudad): el panel de alternativas reimplementaba 2 de los 4 chequeos y
+ofrecía funciones de otras ciudades (436 de 836 con filtro Bogotá) y canceladas
+por el sismo (118), y la Recuperación de Sugerencias se saltaba `_cancelled`.
+Tres lecciones quedaron con guardián o test de mutación:
+- `[plannable-dueno-unico]` captura ahora el cuerpo del filtro por **balance de
+  paréntesis**, no por ventana de caracteres — la versión anterior leía 240 y el
+  filtro del panel medía 337: un guardián que depende del largo no vigila,
+  muestrea.
+- El SET de ciudad (`planCityVenues`, view/helpers) se **publica en cada sitio de
+  uso**, no solo al Calcular: quien armaba el plan a mano tenía el predicado sin
+  restricción — lo destapó un test de mutación que al principio pasaba en vacío.
+- `_pickScreen` (handlers): resolver (título, día, hora) **prefiere la función
+  elegible** — la otra cabeza del bug del sync (#612): aquel protegía el plan
+  guardado, esta protege la puerta de entrada.
+
 **Y un dueño único solo lo es si nadie más lo reimplementa** (16 ago 2026). Con la
 restricción de plan por ciudad recién puesta, el plan **volvió a cruzar ciudades**: no
 por la regla —`plannableScreens` filtraba bien— sino porque `squeezeExcluded`

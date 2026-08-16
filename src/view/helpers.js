@@ -485,6 +485,20 @@ export function venueLabel(v){
   return _sala?`${nombre} · ${_sala}`:nombre;
 }
 
+// planCityVenues — el SET de sedes que el plan puede usar, derivado del filtro
+// de lugar activo reducido a ciudad. Dueño único (16 ago 2026): vivía en
+// controller/calc.js y solo se publicaba al CALCULAR, así que quien armaba su
+// plan a mano (addSuggestion, sin pasar por Planear) tenía screeningPlannable
+// sin restricción de ciudad — lo destapó el test de mutación de T61. Vive en
+// helpers porque lo consumen la vista (alternativas, sugerencias) y el
+// controller (runCalc, squeeze), y controller→view ya es dirección permitida.
+export function planCityVenues(){
+  const _sel=keepCityOnly(typeof activeVenue!=='undefined'?activeVenue:'all');
+  if(_sel==='all') return null;
+  const _vs=(FESTIVAL_CONFIG[_activeFestId]||{}).venues||{};
+  return new Set(Object.keys(_vs).filter(v=>venueMatches(v,_sel)));
+}
+
 export function travelWarn(s1,s2){
   if(s1.day!==s2.day) return null;
   const travel=travelMins(s1.venue,s2.venue);

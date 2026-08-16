@@ -14,7 +14,7 @@ import { _resolveVenue } from '../domain/festival.js';
 import { blockDuration, effectiveDuration, durationForTravel, screeningPassed, _djb2, _titleSeed, _mulberry32, shuffle, scoreFilm } from '../domain/film.js';
 import { screensConflict, isScreeningBlocked, plannableScreens, sortScreensByStrategy, computeScenarios } from '../domain/schedule.js';
 import { renderAgenda } from '../view/agenda.js';
-import { keepCityOnly, venueMatches } from '../view/helpers.js';
+import { keepCityOnly, planCityVenues, venueMatches } from '../view/helpers.js';
 import { showToast } from '../view/feedback.js';
 import { t } from '../i18n/i18n.js';
 
@@ -27,7 +27,7 @@ import { t } from '../i18n/i18n.js';
 const _SCHED_PURE_FNS = [
   'toMin','minToStr','parseDur','_festDate','_resolveVenue',
   'blockDuration','effectiveDuration','durationForTravel','screensConflict','screeningPassed',
-  'isScreeningBlocked','plannableScreens','_djb2','_titleSeed','_mulberry32',
+  'isScreeningBlocked','screeningPlannable','plannableScreens','_djb2','_titleSeed','_mulberry32',
   'shuffle','scoreFilm','sortScreensByStrategy','computeScenarios'
 ];
 
@@ -120,12 +120,7 @@ document.addEventListener('visibilitychange',function(){
 // de lugar ACTIVO reducido a ciudad (keepCityOnly: una sede concreta no restringe
 // el plan; una ciudad sí). null = sin filtro. Un solo cálculo para los tres
 // caminos: worker, fallback síncrono y sugerencias.
-export function _planCityVenues(){
-  const _sel=keepCityOnly(typeof activeVenue!=='undefined'?activeVenue:'all');
-  if(_sel==='all') return null;
-  const _vs=(FESTIVAL_CONFIG[_activeFestId]||{}).venues||{};
-  return new Set(Object.keys(_vs).filter(v=>venueMatches(v,_sel)));
-}
+export function _planCityVenues(){ return planCityVenues(); } // dueño: view/helpers
 
 export function runCalc(){
   if(festivalEnded()){showToast(t('notice_fest_term'),'info');return;}

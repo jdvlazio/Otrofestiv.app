@@ -11,7 +11,7 @@ import { closeAuthSheet, closeCitySheet, closePrioLimit } from '../view/sheets.j
 import { showActionModal, showToast } from '../view/feedback.js';
 import { _renderProgramaContent, lugarClose, render, renderNoticesBanner, _noticeKey } from '../view/programa.js';
 import { renderAgenda, updateCardState, updateHorarioPrioBtn } from '../view/agenda.js';
-import { keepCityOnly } from '../view/helpers.js';
+import { keepCityOnly, planCityVenues } from '../view/helpers.js';
 import { runCalc, _planCityVenues } from './calc.js';
 import { commitPlan, saveDelays, saveLastSlot, savePrio, saveSavedAgenda, saveState, saveWL, saveWatched } from './persistence.js';
 import { cloudReportDelay, cloudClearDelay, cloudScreeningKey } from './delays-cloud.js';
@@ -19,7 +19,7 @@ import { _getProgramaPhase, _reRenderIntereses, _updateProgramaActiveFilter, ini
 import { searchClose, seccionClose } from './overlays.js';
 import { dayFullyPassed, festivalEnded, simTodayStr, toMin } from '../domain/time.js';
 import { scoreFilm, screeningPassed, isShortFilm } from '../domain/film.js';
-import { isScreeningBlocked, screensConflict, sortScreensByStrategy, plannableScreens } from '../domain/schedule.js';
+import { isScreeningBlocked, screensConflict, sortScreensByStrategy, plannableScreens, screeningPlannable } from '../domain/schedule.js';
 import { state } from '../state/state.js';
 import { storage } from '../storage/storage.js';
 import { t } from '../i18n/i18n.js';
@@ -372,6 +372,19 @@ export function removeRecurringBlock(title){
   if(document.getElementById('pel-sheet')?.classList.contains('open')) openPelSheet(title);
 }
 
+// _pickScreen — resolver (título, día, hora) → LA función, prefiriendo la
+// elegible. FICDEH programa la misma obra el mismo día a la misma hora en
+// ciudades distintas (13 tripletas): un .find() a secas devolvía la PRIMERA
+// del catálogo y un usuario de Bogotá agendaba la de Barranquilla (la otra
+// cabeza del bug de #612: aquel protegía el plan guardado, esta protege la
+// PUERTA DE ENTRADA). screeningPlannable = dueño único del predicado; el set
+// de ciudad se publica acá porque este camino no pasa por Calcular.
+function _pickScreen(title,day,time){
+  globalThis.PLAN_CITY_VENUES=planCityVenues();
+  const _cands=FILMS.filter(f=>f.title===title&&f.day===day&&f.time===time);
+  return _cands.find(f=>screeningPlannable(f))||_cands[0];
+}
+
 export function addSuggestion(title,day,time){
   title=normTitle(title);
   // 1. READ
@@ -392,7 +405,7 @@ export function addSuggestion(title,day,time){
     saveState('wl','watched');updateCardState(title);updateAgTab();
   }
   // 3. MUTATE (step 2): Add specific screening to saved agenda
-  const screen=FILMS.find(f=>f.title===title&&f.day===day&&f.time===time);
+  const screen=_pickScreen(title,day,time);
   if(screen){
     const sa=state.get('savedAgenda')||{schedule:[]};
     // Mitad B (pin-funcion): add / swap / no-op. El sheet de película usa esta
@@ -595,7 +608,7 @@ export function confirmReplace(removedTitle,newTitle,day,time,isScenario){
       // Handler real — fresh snapshot al ejecutarse (post user-click)
       const {FILMS, savedAgenda, watchlist} = state.snapshot();
       modal.remove();
-      const screen=FILMS.find(f=>f.title===newTitle&&f.day===day&&f.time===time);
+      const screen=_pickScreen(newTitle,day,time);
       if(!screen){
         _expandedFilm='';
         renderAgenda();

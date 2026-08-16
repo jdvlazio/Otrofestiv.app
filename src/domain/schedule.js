@@ -122,6 +122,24 @@ export function isScreeningBlocked(s){
 // día entero. Vive acá y no inline porque la regla la necesitan tres: el
 // planeador, el oráculo exacto y el recorrido por festival — y una regla con
 // tres copias es una regla que se desincroniza.
+// ── screeningPlannable — el predicado POR FUNCIÓN de «puede entrar a tu plan» ──
+// La mitad por-función de plannableScreens, extraída como dueño único (16 ago
+// 2026): el panel de alternativas reimplementaba 2 de los 4 chequeos y ofrecía
+// funciones de otras ciudades (436 de 836 con filtro Bogotá) y canceladas por
+// el sismo (118); el bloque de recuperación de Sugerencias se saltaba
+// `_cancelled`. Cancelada · pasada · franja vetada · ciudad. La regla del
+// taller entero-o-nada es GRUPAL y queda en plannableScreens, que es su casa.
+// WORKER: viaja serializada (_SCHED_PURE_FNS) — PLAN_CITY_VENUES con guard de
+// typeof, mismo patrón que en plannableScreens.
+export function screeningPlannable(s){
+  if(!s||s._cancelled) return false;
+  if(screeningPassed(s)) return false;
+  if(isScreeningBlocked(s)) return false;
+  const _pv=(typeof PLAN_CITY_VENUES!=='undefined')?PLAN_CITY_VENUES:null;
+  if(_pv&&s.venue&&!_pv.has(s.venue)) return false;
+  return true;
+}
+
 export function plannableScreens(title){
   // PLAN_CITY_VENUES — el planificador NO cruza ciudades (QA de ojos frescos,
   // 15 ago 2026): con filtro Bogotá, «Calcular mi Plan» armaba el domingo en
@@ -131,9 +149,9 @@ export function plannableScreens(title){
   // viaja al worker como payload. null = sin restricción.
   // `typeof` y no la referencia: este global no existe en el sandbox de los unit
   // tests ni en contextos que no calculan (la lección de FESTIVAL_POSTPONED).
-  const _pv=(typeof PLAN_CITY_VENUES!=='undefined')?PLAN_CITY_VENUES:null;
-  const screens=FILMS.filter(f=>f.title===title&&!f._cancelled&&!isScreeningBlocked(f)&&!screeningPassed(f)
-    &&(!_pv||!f.venue||_pv.has(f.venue)));
+  // La mitad por-función vive en screeningPlannable (dueño único); acá queda
+  // lo que es de TÍTULO: el match y la regla grupal del taller.
+  const screens=FILMS.filter(f=>f.title===title&&screeningPlannable(f));
   if(screens.length&&screens[0].is_recurring){
     const total=FILMS.filter(f=>f.title===title&&f.is_recurring&&f.day&&f.time&&!f._cancelled).length;
     if(total&&screens.length!==total) return [];
