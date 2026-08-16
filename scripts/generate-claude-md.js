@@ -214,14 +214,27 @@ ${featuresSection}
 
 ---
 
-## Android APK (Play Store)
+## Las apps en las tiendas
 
-- **Track:** Closed testing — Alpha
-- **versionCode actual:** 7 (subido JUN 4, 2026)
-- **Próximo versionCode:** **8** — nunca reutilizar un code ya publicado
+**Las DOS están PUBLICADAS y disponibles al público**, aprobadas y verificadas
+desde hace tiempo. No están en pruebas cerradas.
+
+- **iOS:** https://apps.apple.com/co/app/otrofestiv/id6769367002 — gratis.
+  \`IPHONEOS_DEPLOYMENT_TARGET = 26.0\` (proyecto nativo en iCloud \`10_iOS\`).
+- **Android:** https://play.google.com/store/apps/details?id=app.otrofestiv.mobile
+
+> ⚠️ Este bloque decía «Closed testing — Alpha» mucho después de que ambas apps
+> estuvieran publicadas, y el dato de versionCode se quedó en JUN 2026. Un
+> ayudante que lea este archivo como contexto —que es lo que este archivo ES—
+> concluye que la app no se puede instalar, y de ahí saca diagnósticos falsos
+> sobre por qué no hay usuarios. Pasó el 15 ago 2026.
+> **El estado de las tiendas se consulta en App Store Connect y Play Console,
+> no acá.** Lo que vive acá son los enlaces y el procedimiento; el ESTADO no,
+> porque este archivo no puede saberlo y mentir es peor que callar.
+
 - **server.url:** \`https://otrofestiv.app\` — la app carga desde producción, no desde bundle local
-- **Para compilar:** Android Studio → Build → Generate Signed Bundle → versionCode en \`android/app/build.gradle\`
-- **Para subir:** Play Console → Testing → Closed testing → Alpha → Create new release
+- **Para compilar (Android):** Android Studio → Build → Generate Signed Bundle → versionCode en \`android/app/build.gradle\`
+- **versionCode:** nunca reutilizar uno ya publicado — el actual se consulta en Play Console
 
 ### Checklist OBLIGATORIO antes de cada build de APK (lección del v6/v7 congelado)
 

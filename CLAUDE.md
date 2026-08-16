@@ -82,7 +82,7 @@ deliberada existe la etiqueta `frontera-ok`.
 | `olhar2026` | Olhar de Cinema | Curitiba | JUN 4–13 | Archivado |
 | `tercertiempo2026` | Tercer Tiempo Fest | Bogotá | 13–19 JUL | Recién terminado |
 | `fantasofest2026` | FantasoFest | Bogotá | 13–19 JUL | Recién terminado |
-| `ficma2026` | FICMA | Manizales | 10–17 AGO | **Próximo / activo** |
+| `ficma2026` | FICMA | Manizales | 10–17 AGO | desconocido |
 | `ficdeh2026` | FICDEH | Colombia | 12–19 AGO | **Próximo / activo** |
 | `finca2026` | FINCA | Buenos Aires | 12–19 AGO | **Próximo / activo** |
 | `ficmontanas2026` | Ficmontañas | Salento | JUL 1–5 | Archivado |
@@ -98,7 +98,8 @@ _Sin features activas en `.specify/features/`._
 | Archivo | Qué contiene |
 |---|---|
 | `docs/ARQUITECTURA.md` | Design system completo, reglas de diseño, mapa de funciones, patrones canónicos |
-| `docs/PIPELINE.md` | Proceso de onboarding de festivales nuevos (fases, gates, roles) |
+| `pipeline/PROTOCOLO.md` | EL proceso de onboarding: fuente → producción (pasos, formato intermedio, checklist) |
+| `docs/PIPELINE.md` | Doctrina de enrichment (TMDB/LB) + historial de errores — manda en su tema |
 | `docs/SCHEMA.md` | Schema normativo del JSON de festival |
 | `.specify/memory/constitution.md` | Rationale de decisiones de arquitectura clave |
 | `.specify/features/` | Specs y planes de features en desarrollo |
@@ -129,14 +130,27 @@ _Sin features activas en `.specify/features/`._
 
 ---
 
-## Android APK (Play Store)
+## Las apps en las tiendas
 
-- **Track:** Closed testing — Alpha
-- **versionCode actual:** 7 (subido JUN 4, 2026)
-- **Próximo versionCode:** **8** — nunca reutilizar un code ya publicado
+**Las DOS están PUBLICADAS y disponibles al público**, aprobadas y verificadas
+desde hace tiempo. No están en pruebas cerradas.
+
+- **iOS:** https://apps.apple.com/co/app/otrofestiv/id6769367002 — gratis.
+  `IPHONEOS_DEPLOYMENT_TARGET = 26.0` (proyecto nativo en iCloud `10_iOS`).
+- **Android:** https://play.google.com/store/apps/details?id=app.otrofestiv.mobile
+
+> ⚠️ Este bloque decía «Closed testing — Alpha» mucho después de que ambas apps
+> estuvieran publicadas, y el dato de versionCode se quedó en JUN 2026. Un
+> ayudante que lea este archivo como contexto —que es lo que este archivo ES—
+> concluye que la app no se puede instalar, y de ahí saca diagnósticos falsos
+> sobre por qué no hay usuarios. Pasó el 15 ago 2026.
+> **El estado de las tiendas se consulta en App Store Connect y Play Console,
+> no acá.** Lo que vive acá son los enlaces y el procedimiento; el ESTADO no,
+> porque este archivo no puede saberlo y mentir es peor que callar.
+
 - **server.url:** `https://otrofestiv.app` — la app carga desde producción, no desde bundle local
-- **Para compilar:** Android Studio → Build → Generate Signed Bundle → versionCode en `android/app/build.gradle`
-- **Para subir:** Play Console → Testing → Closed testing → Alpha → Create new release
+- **Para compilar (Android):** Android Studio → Build → Generate Signed Bundle → versionCode en `android/app/build.gradle`
+- **versionCode:** nunca reutilizar uno ya publicado — el actual se consulta en Play Console
 
 ### Checklist OBLIGATORIO antes de cada build de APK (lección del v6/v7 congelado)
 
