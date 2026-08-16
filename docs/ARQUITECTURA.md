@@ -577,6 +577,7 @@ Y lo que un hook no puede cortar, lo vigila `validate.py`:
 | `[sin-symlinks]` | ningún enlace simbólico versionado — tumban el deploy de Pages |
 | `[peso-repo]` | material de trabajo versionado (ofimáticos, > 3 MB) |
 | `[stash-compartido]` | stash vivo con varios worktrees — la pila es del repo, no del worktree |
+| `[plannable-dueno-unico]` | que nadie reimplemente «qué funciones son planificables» fuera de `plannableScreens` (exención explícita: `// plannable-ok:`) |
 | `[doc-cadena]` | que esta documentación y los guardianes se citen mutuamente |
 
 #### La identidad nunca sale de una etiqueta
@@ -891,6 +892,20 @@ miente, y FICDEH —que arrancaba tres días después— tiene taller multi-día
 creó `plannableScreens` como **dueño único** de «qué funciones son planificables
 para vos» (cancelada · pasada · franja vetada · taller entero-o-nada), consumido por
 el planeador, el oráculo y el recorrido.
+
+**Y un dueño único solo lo es si nadie más lo reimplementa** (16 ago 2026). Con la
+restricción de plan por ciudad recién puesta, el plan **volvió a cruzar ciudades**: no
+por la regla —`plannableScreens` filtraba bien— sino porque `squeezeExcluded`
+(`controller/handlers.js`) tenía su propia copia del predicado y reinsertaba las
+excluidas **al guardar**, después del motor, y exenta del chequeo de conflicto por
+`_squeezed`. La misma copia estaba en `forceInclude` («+ Incluir»). El fix tiene tres
+capas, porque una sola habría vuelto a fallar: los consumidores usan el dueño;
+`verifyPlan` gana la violación `ciudad-fuera` —la red que caza a **cualquiera** que
+inserte, no solo al camino feliz—; y `[plannable-dueno-unico]` en `validate.py` impide
+que la copia vuelva. Las preguntas sobre el **catálogo** (qué días existe una obra, por
+qué quedó fuera) son legítimamente otras y necesitan ver lo que el dueño ya filtró: se
+declaran con `// plannable-ok: <razón>`, que el guardián respeta. Declararlas, no
+asumirlas, es lo que separa una excepción de una fuga.
 
 > Y al extraerlo apareció la trampa que este mismo documento advierte: el worker del
 > planeador se arma con `.toString()` sobre `_SCHED_PURE_FNS` (`controller/calc.js`).

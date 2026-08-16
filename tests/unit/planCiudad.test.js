@@ -60,3 +60,43 @@ test('una función SIN venue nunca queda atrapada por el filtro', () => {
   assert.strictEqual(d2.plannableScreens('Peli C').length, 1, 'sin venue → no se filtra');
   void d;
 });
+
+// ── verifyPlan: la RED, no solo el camino feliz ─────────────────────────────
+// El 16 ago 2026 el plan volvió a cruzar ciudades pese a que plannableScreens
+// filtraba bien: `squeezeExcluded` reinsertaba las excluidas al GUARDAR, con su
+// propia copia del predicado, y verifyPlan no miraba la ciudad. Estos dos tests
+// cubren la red: quien sea que inserte, el verificador lo caza.
+function loadVerify(planVenues) {
+  return loadDomain({
+    functions: ['verifyPlan', 'screensConflict', 'screeningPassed', 'toMin', 'parseDur', 'blockDuration', 'effectiveDuration', 'durationForTravel'],
+    globals: {
+      FILMS, DEFAULT_DURATION_MIN: 90, DAY_KEYS: ['D1'],
+      FESTIVAL_DATES: { D1: '2099-01-01' }, TZ_OFFSET: '-05:00', _simTime: null,
+      FESTIVAL_BUFFER: 15, FESTIVAL_CONFIG: {}, _activeFestId: 'x',
+      availability: {}, travelMins: () => 0, festivalEnded: () => false,
+      PLAN_CITY_VENUES: planVenues,
+    },
+  });
+}
+
+test('verifyPlan: una función de otra ciudad es violación «ciudad-fuera»', () => {
+  const D = loadVerify(new Set(['Cinemateca BOG']));
+  const r = D.verifyPlan([
+    { _title: 'Peli A', day: 'D1', time: '10:00', venue: 'Cinemateca BOG', duration: '90 min' },
+    { _title: 'Peli B', day: 'D1', time: '16:00', venue: 'Colombo MED', duration: '90 min', _squeezed: true },
+  ]);
+  assert.equal(r.ok, false);
+  const ciudad = r.violations.filter(v => v.kind === 'ciudad-fuera');
+  assert.equal(ciudad.length, 1);                 // solo la de la otra ciudad
+  assert.equal(ciudad[0].title, 'Peli B');
+  assert.equal(ciudad[0].venue, 'Colombo MED');   // _squeezed NO la exime
+});
+
+test('verifyPlan: sin restricción de ciudad no inventa violaciones', () => {
+  const D = loadVerify(null);
+  const r = D.verifyPlan([
+    { _title: 'Peli A', day: 'D1', time: '10:00', venue: 'Cinemateca BOG', duration: '90 min' },
+    { _title: 'Peli B', day: 'D1', time: '16:00', venue: 'Colombo MED', duration: '90 min' },
+  ]);
+  assert.equal(r.violations.filter(v => v.kind === 'ciudad-fuera').length, 0);
+});

@@ -444,5 +444,14 @@ export function verifyPlan(schedule, opts){
         v.push({kind:'bloque-incompleto', title:t, tiene:enPlan[t], necesita:total});
     });
   }
+  // CIUDAD CRUZADA — la red del chokepoint para la restricción de plan por
+  // ciudad (#594). Va acá y no solo en plannableScreens porque el squeeze de
+  // excluidas inserta DESPUÉS de computeScenarios y queda exento del chequeo
+  // de conflicto (`_squeezed`): por esa puerta entraron Medellín y Barranquilla
+  // con filtro Bogotá. Un guardián que solo mira el camino feliz no es red.
+  const _pv=(typeof PLAN_CITY_VENUES!=='undefined')?PLAN_CITY_VENUES:null;
+  if(_pv) list.forEach(s=>{
+    if(s.venue&&!_pv.has(s.venue)) v.push({kind:'ciudad-fuera', title:s._title||s.title||'', venue:s.venue});
+  });
   return {ok:v.length===0, violations:v};
 }
