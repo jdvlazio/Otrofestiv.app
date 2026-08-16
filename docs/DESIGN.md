@@ -207,6 +207,16 @@ Valores **canónicos aprobados** por contexto:
 | `.plist-heart` | `font-size:var(--t-icon); color:var(--amber); padding:6px; border-radius:50%; align-self:center` |
 | `.plist-time-hdr` | **`font-size:var(--t-label); font-weight:var(--w-bold); color:var(--amber)`**; `padding:var(--sp-1) var(--sp-3) var(--sp-1); background:var(--surf); border-top:1px solid var(--bdr); letter-spacing:.5px; position:sticky` — **sin border-bottom**. `background:var(--surf)` **requerido por `position:sticky`** — sin él el texto flota sobre posters al scrollear |
 
+> **«Plan» es un nombre, no un sustantivo común** (16 ago 2026). «Mi Plan» es un
+> concepto de la app, así que la palabra va **en mayúscula siempre**, incluso en
+> posesivo: «en tu Plan», «Fuera de tu Plan», «armar tu Plan». Convivían 20
+> strings con mayúscula y 36 con minúscula —y la misma frase escrita de las dos
+> formas según el día (`plan_en_tu_plan` «En tu Plan» vs `toast_en_tu_plan` «en tu
+> plan»)—. Se eligió esta regla sobre la alternativa («mayúscula solo cuando
+> nombra el objeto») porque ésta **se puede verificar sola**: la vigila
+> `[plan-concepto]`, que cubre las 3 locales y el fallback estático de
+> `index.html`. No toca «Planear», «planner», «Planejar» ni los verbos.
+
 > **La ley de los dos gestos** (16 ago 2026, revisión de UX Writer). El **corazón
 > lleno** significa siempre «está en tus Intereses; tocá para sacarlo» — en la
 > grilla, en la lista, en la ficha, en Intereses y en Planear. La **✕** significa

@@ -2552,6 +2552,40 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar plan-write-chokepoint: {_e}')
 
+# ── [plan-concepto] «Plan» es un nombre, y los nombres van en mayúscula ────────
+# Decisión de Juan (16 ago 2026, opción B de la discusión de roles): «Mi Plan» es
+# UN concepto de la app, no un sustantivo común, así que la palabra va en
+# mayúscula siempre — incluso en posesivo («en tu Plan», «Fuera de tu Plan»).
+# Antes convivían 20 strings con mayúscula y 36 con minúscula, y la misma frase
+# se escribía de las dos formas según el día en que se agregó
+# (plan_en_tu_plan «En tu Plan» vs toast_en_tu_plan «en tu plan»).
+# Se eligió esta regla y no «depende del uso» justamente porque ESTA se puede
+# verificar sola; la otra depende del criterio de quien escribe, y ya vimos cómo
+# terminó. Cubre también el fallback estático de index.html: es lo que se ve en el
+# primer frame, antes de que corra i18n.
+# NO toca «Planear»/«planner»/«Planejar» ni los verbos (planeaste, planned,
+# planejou): la regla es sobre la palabra suelta.
+check = 'plan-concepto'
+try:
+    import re as _re
+    _off = []
+    _i18n = open('src/i18n/i18n.js', encoding='utf-8').read()
+    for _m in _re.finditer(r'"([a-z_0-9]+)":\s*"([^"]*)"', _i18n):
+        if _re.search(r'\b(plan|plano)\b', _m.group(2)):
+            _ln = _i18n[:_m.start()].count('\n') + 1
+            _off.append(f'i18n.js:{_ln} [{_m.group(1)}]')
+    _idx = open('index.html', encoding='utf-8').read()
+    for _m in _re.finditer(r'data-i18n="[a-z_0-9]+"[^>]*>([^<]*)', _idx):
+        if _re.search(r'\bplan\b', _m.group(1)):
+            _ln = _idx[:_m.start()].count('\n') + 1
+            _off.append(f'index.html:{_ln}')
+    if _off:
+        fail(check, '«Plan» en minúscula — es el nombre del concepto, va en mayúscula: ' + '; '.join(_off[:8]))
+    else:
+        ok(check, '«Plan» en mayúscula en las 3 locales y en el fallback estático')
+except Exception as _e:
+    warn(check, f'no se pudo verificar: {_e}')
+
 # ── [plannable-dueno-unico] nadie reimplementa «qué funciones son planificables» ─
 # El 16 ago 2026 el plan volvió a cruzar ciudades con el filtro puesto, y NO fue
 # por la regla: plannableScreens filtraba bien. Fue `squeezeExcluded` en

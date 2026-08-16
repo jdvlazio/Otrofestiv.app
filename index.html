@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202608160940">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202608160940">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202608160959">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202608160959">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -3093,7 +3093,7 @@ setTimeout(function(){
   <div class="conflict-hdr">
     <div class="ctx-eyebrow"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z"/></svg><span data-i18n="conflict_eyebrow">Conflicto de horario</span></div>
     <div class="conflict-title" id="conflict-title-el">Se solapan en el mismo tramo</div>
-    <div class="conflict-sub" data-i18n="conflict_cual">¿Cuál querés en tu plan?</div>
+    <div class="conflict-sub" data-i18n="conflict_cual">¿Cuál querés en tu Plan?</div>
   </div>
   <div class="conflict-arena">
     <div class="conflict-card incoming">
@@ -3108,7 +3108,7 @@ setTimeout(function(){
     <div class="conflict-card existing">
       <img class="conflict-poster" id="cs-existing-poster" src="" alt="" loading="lazy">
       <div style="flex:1;min-width:0">
-        <div class="conflict-role" data-i18n="conflict_ya_plan">Ya en tu plan</div>
+        <div class="conflict-role" data-i18n="conflict_ya_plan">Ya en tu Plan</div>
         <div class="conflict-name" id="cs-existing-name"></div>
         <div class="conflict-when" id="cs-existing-when"></div>
       </div>
@@ -3148,7 +3148,7 @@ setTimeout(function(){
       <svg aria-hidden="true" focusable="false" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
     </div>
     <div>
-      <div class="plan-confirm-title" id="plan-confirm-title" data-i18n="plan_listo">¡Tu plan está listo!</div>
+      <div class="plan-confirm-title" id="plan-confirm-title" data-i18n="plan_listo">¡Tu Plan está listo!</div>
       <div class="plan-confirm-sub" id="plan-confirm-sub"></div>
     </div>
   </div>
@@ -3263,7 +3263,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202608160940";
+    s.src="/src/main.js?v=202608160959";
     document.body.appendChild(s);
     // Watchdog de boot (P0 18 jul): si el grafo ESM murió en el import (caché
     // HTTP mixta tras deploys en ráfaga — main.js nuevo + módulo viejo sin el
@@ -3389,8 +3389,8 @@ setTimeout(function(){
 <div class="auth-sheet" id="auth-sheet" data-close-bg="AuthSheet">
   <div class="auth-sheet-inner">
     <div id="auth-sheet-step1">
-      <div class="auth-sheet-title" data-i18n="auth_titulo">Guardá tu plan</div>
-      <div class="auth-sheet-sub" data-i18n="auth_desc">Ingresa tu email y te enviamos un código de 6 dígitos. Sin contraseña. Tu plan se sincroniza entre todos tus dispositivos.</div>
+      <div class="auth-sheet-title" data-i18n="auth_titulo">Guardá tu Plan</div>
+      <div class="auth-sheet-sub" data-i18n="auth_desc">Ingresa tu email y te enviamos un código de 6 dígitos. Sin contraseña. Tu Plan se sincroniza entre todos tus dispositivos.</div>
       <input class="auth-email-inp" id="auth-email-inp" type="email" placeholder="tu@email.com" data-i18n-ph="auth_email" autocomplete="email" onkeydown="if(event.key==='Enter')submitAuthEmail()">
       <button class="auth-send-btn" id="auth-send-btn" data-action="submitAuthEmail" data-i18n="auth_enviar">Enviar código</button>
       <div class="auth-msg" id="auth-msg"></div>
@@ -3407,7 +3407,7 @@ setTimeout(function(){
     <div id="auth-sheet-step3" style="display:none">
       <div class="auth-sheet-title" data-i18n="auth_cuenta">Cuenta</div>
       <div class="auth-sheet-sub" id="auth-signed-email" style="color:var(--white)"></div>
-      <div class="mt-2 auth-sheet-sub"><span data-i18n="plan_sincroniza">Tu plan se sincroniza automáticamente entre todos tus dispositivos.</span></div>
+      <div class="mt-2 auth-sheet-sub"><span data-i18n="plan_sincroniza">Tu Plan se sincroniza automáticamente entre todos tus dispositivos.</span></div>
       <div class="mt-2 auth-sheet-sub" data-i18n="auth_eliminar_aviso" style="color:var(--gray2);font-size:var(--t-xs)"></div>
       <button class="auth-signout-btn" data-action="signOutAndClose" data-i18n="auth_cerrar">Cerrar sesión</button>
       <button class="auth-delete-btn" id="auth-delete-btn" data-action="deleteAccount" data-i18n="auth_eliminar">Eliminar cuenta</button>
