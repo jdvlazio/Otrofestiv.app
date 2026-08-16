@@ -102,6 +102,16 @@ async function addToWatchlist(page, title) {
   }, title);
 }
 
+// esperarCalculo — la compuerta correcta tras pulsar «Calcular mi Plan».
+// Los tests esperaban a que #ag-result-wrap se hiciera VISIBLE, y eso funcionaba
+// solo porque antes el área nacía oculta. Desde que entrar a Planear calcula solo
+// (T58, 16 ago 2026) el área YA está visible, así que ese wait vuelve al instante
+// y el test lee cachedResult a mitad del recálculo (runCalc lo nula al empezar).
+// La condición honesta es el resultado, no la visibilidad.
+async function esperarCalculo(page) {
+  await page.waitForFunction(() => !!cachedResult, null, { timeout: 20000 });
+}
+
 async function goToPlanear(page) {
   await page.evaluate(() => {
     cachedResult = null;
@@ -110,6 +120,10 @@ async function goToPlanear(page) {
     showAgView();
   });
   await page.waitForSelector('.av-calc-btn', { timeout: 8000 });
+  // Entrar a Planear YA calcula cuando hay intereses y no hay plan guardado
+  // (T58, 16 ago 2026). Esperar a que asiente evita que un click posterior
+  // compita con el cálculo en vuelo. Si no hay intereses no calcula: se tolera.
+  await page.waitForFunction(() => !!cachedResult, null, { timeout: 20000 }).catch(() => {});
 }
 
-module.exports = { LEVIZA_SIMTIME, festivalTestIds, selectFestival, enterFestival, freezeSimTime, addToWatchlist, goToPlanear };
+module.exports = { LEVIZA_SIMTIME, esperarCalculo, festivalTestIds, selectFestival, enterFestival, freezeSimTime, addToWatchlist, goToPlanear };

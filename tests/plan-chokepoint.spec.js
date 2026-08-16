@@ -8,7 +8,7 @@
 // inválido es un bug que el CI tiene que ver. El guardián
 // [plan-write-chokepoint] veta escritores nuevos fuera del chokepoint.
 const { test, expect } = require('@playwright/test');
-const { enterFestival, addToWatchlist, goToPlanear } = require('./helpers');
+const { enterFestival, addToWatchlist, goToPlanear, esperarCalculo } = require('./helpers');
 
 test('CH01 — strict: un plan con conflicto real NO puede commitearse', async ({ page }) => {
   await enterFestival(page, 'finca2026', '2026-08-12T10:00');
@@ -55,7 +55,7 @@ test('CH03 — strict: los flujos REALES de la app commitean limpio de punta a p
   await page.evaluate(() => { watchlist.add('Yurlu'); saveState('wl', 'watched'); });
   await goToPlanear(page);
   await page.locator('.av-calc-btn').click();
-  await page.waitForTimeout(3500);
+  await esperarCalculo(page);
   const ok = await page.evaluate(() => {
     const sc = cachedResult && cachedResult.scenarios && cachedResult.scenarios[0];
     if (!sc) return false;

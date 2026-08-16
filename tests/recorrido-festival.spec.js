@@ -27,7 +27,7 @@
 // usuario toca. Un motor perfecto mal cableado da el mismo plan malo.
 
 const { test, expect } = require('@playwright/test');
-const { enterFestival, festivalTestIds, goToPlanear } = require('./helpers');
+const { enterFestival, festivalTestIds, goToPlanear, esperarCalculo } = require('./helpers');
 
 const FESTIVALES = festivalTestIds();
 
@@ -144,7 +144,7 @@ for (const festId of FESTIVALES) {
     await goToPlanear(page);
     await expect(page.locator('.av-calc-btn')).toBeVisible({ timeout: 10000 });
     await page.locator('.av-calc-btn').click();
-    await page.locator('#ag-result-wrap').waitFor({ state: 'visible', timeout: 30000 });
+    await esperarCalculo(page);
 
     const plan = await page.evaluate(() => {
       const sc = cachedResult && cachedResult.scenarios;
