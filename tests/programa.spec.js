@@ -496,3 +496,39 @@ test('T55 — la ficha filtra por ciudad, pero nunca esconde lo que ya elegiste'
   expect(b.funciones, 'lo que ya elegiste se muestra aunque sea de otra ciudad').toBe(2);
   expect(b.nota, 'ya no queda nada fuera').toBe('');
 });
+
+// T60 — el corazón dice lo MISMO desde la ficha que desde la grilla
+// Re-corrida del QA de ojos frescos (16 ago 2026): agregar desde la ficha una
+// obra anclada sumaba 12 obras y anunciaba solo «En Intereses», mientras la
+// grilla decía «+11 cortos del mismo programa». La causa no era la mutación
+// —togglePelWL delega en toggleWL— sino que el envoltorio tiraba su PROPIO toast
+// DESPUÉS y pisaba el verdadero. El dueño del mensaje es toggleWL.
+test('T60 — el toast del corazón es el mismo desde la ficha y desde la grilla', async ({ page }) => {
+  await enterFestival(page, 'ficdeh2026', '2026-08-16T10:00');
+  const anclada = await page.evaluate(() => {
+    const conSlot = FILMS.filter(f => f._slotKey);
+    const cuenta = {};
+    conSlot.forEach(f => { cuenta[f._slotKey] = (cuenta[f._slotKey] || 0) + 1; });
+    const k = Object.keys(cuenta).find(x => cuenta[x] >= 3);
+    return conSlot.find(f => f._slotKey === k).title;
+  });
+  const leerToast = () => page.evaluate(() => {
+    const el = document.querySelector('.toast, [class*=toast]');
+    return el ? el.innerText.replace(/\n/g, ' ').trim() : '';
+  });
+
+  // desde la GRILLA
+  await page.evaluate((t) => { watchlist.clear(); toggleWL(t); }, anclada);
+  await page.waitForTimeout(500);
+  const grilla = await leerToast();
+
+  // desde la FICHA
+  await page.evaluate((t) => { watchlist.clear(); openPelSheet(t); }, anclada);
+  await page.waitForSelector('#pel-wl-btn', { timeout: 8000 });
+  await page.evaluate(() => document.getElementById('pel-wl-btn').click());
+  await page.waitForTimeout(700);
+  const ficha = await leerToast();
+
+  expect(grilla, 'la grilla nombra cuántas obras arrastró').toMatch(/\+\d+/);
+  expect(ficha, 'la ficha dice lo mismo que la grilla').toBe(grilla);
+});
