@@ -3199,6 +3199,57 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar pais-conocido: {_e}')
 
+# ── [claude-md-fresco] el archivo de CONTEXTO no puede estar desactualizado ─────
+# CLAUDE.md se genera con scripts/generate-claude-md.js leyendo el repo, pero el
+# script se corre A MANO y nadie lo verificaba. Resultado: el archivo que un
+# ayudante lee PRIMERO —y del que saca su idea del proyecto— envejecía en silencio.
+#
+# El 15 ago 2026 costó caro: decía «Android: Closed testing — Alpha» meses después
+# de que las dos apps estuvieran publicadas, y de ahí salió el diagnóstico falso de
+# que «nadie pudo instalar la app» durante tres festivales. Un dato caduco en la
+# doc de contexto no produce una duda: produce una conclusión falsa, con seguridad.
+#
+# Este check regenera el archivo en un temporal y compara SOLO lo que el script
+# DERIVA del repo (la tabla de festivales y el bloque de features). El resto del
+# documento es prosa del template y no caduca sola. Si difieren: correr el script.
+check = 'claude-md-fresco'
+try:
+    import subprocess as _sp, tempfile as _tf, shutil as _sh
+    _md = 'CLAUDE.md'
+    if not os.path.exists(_md):
+        warn(check, 'no hay CLAUDE.md')
+    else:
+        _viejo = open(_md, encoding='utf-8').read()
+        _bak = _tf.mktemp(suffix='.md')
+        _sh.copy(_md, _bak)
+        try:
+            _r = _sp.run(['node', 'scripts/generate-claude-md.js'],
+                         capture_output=True, text=True, timeout=60)
+            _nuevo = open(_md, encoding='utf-8').read()
+        finally:
+            _sh.copy(_bak, _md)   # el check NO deja el archivo tocado
+            os.remove(_bak)
+        if _r.returncode != 0:
+            warn(check, 'el generador falló: %s' % (_r.stderr or '')[:120])
+        else:
+            # Solo las secciones DERIVADAS. La línea del último commit cambia con
+            # cada commit por definición: compararla haría fallar el check siempre.
+            def _derivado(txt):
+                out = []
+                for _sec in ('### Festivales', '### Features activas'):
+                    if _sec in txt:
+                        _t = txt[txt.index(_sec):]
+                        _fin = _t.find('\n---')
+                        out.append(_t[:_fin if _fin > 0 else 1200])
+                return '\n'.join(out)
+            if _derivado(_viejo).strip() != _derivado(_nuevo).strip():
+                fail(check, 'CLAUDE.md desactualizado respecto al repo (festivales o features) '
+                            '— correr: node scripts/generate-claude-md.js')
+            else:
+                ok(check, 'CLAUDE.md al día con el estado derivado del repo')
+except Exception as _e:
+    warn(check, f'no se pudo verificar claude-md-fresco: {_e}')
+
 # ── [festival-aplazado] un `status` declarado viene COMPLETO y consistente ──────
 # Nace del terremoto de Manizales (FICMA 17, 10 ago 2026). `status:{kind:'postponed'}`
 # saca al festival de «en curso» (_classifyFestival lo devuelve ANTES de la aritmética

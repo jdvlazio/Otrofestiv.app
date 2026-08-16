@@ -693,6 +693,30 @@ Dos correcciones, ninguna de ellas «arreglar tests»:
 > `grep '^ *N flaky'` nunca casaba porque el reporter escribe secuencias de escape
 > del terminal antes del texto.
 
+#### La doc de contexto no puede envejecer — `[claude-md-fresco]`
+
+`CLAUDE.md` se genera leyendo el repo, pero el generador **se corre a mano** y
+nadie lo verificaba. El archivo que un ayudante lee PRIMERO envejecía en silencio.
+
+> **La cicatriz (15 ago 2026).** Decía «Android: Closed testing — Alpha» meses
+> después de que las dos apps estuvieran publicadas y verificadas. De ahí salió el
+> diagnóstico de que «nadie pudo instalar la app» durante FICMA, FICDEH y FINCA
+> —falso— y la petición a Juan de confirmar algo que el repo debía saber. **Un
+> dato caduco en la doc de contexto no produce una duda: produce una conclusión
+> falsa, con seguridad.** Es peor que un hueco: un hueco se pregunta.
+
+Dos correcciones, y la segunda es la que dura:
+
+- **El estado que el archivo no puede saber, sale del archivo.** El estado de las
+  tiendas vive en App Store Connect y Play Console; en `CLAUDE.md` quedan el
+  enlace y el procedimiento. Misma regla que el radar («si no lo mediste, no lo
+  afirmes») y que los guardianes que se declaran ciegos en vez de aprobar.
+- **El estado que sí deriva del repo, se verifica.** `[claude-md-fresco]`
+  regenera el archivo en un temporal y compara las secciones DERIVADAS —la tabla
+  de festivales y las features—; si difieren, bloquea y dice el comando. La línea
+  del último commit se excluye a propósito: cambia con cada commit y compararla
+  haría fallar el check siempre. El check restaura el archivo: no deja huella.
+
 #### La cadena doc ↔ guardián
 
 Una regla escrita que nadie ejecuta es una opinión; un guardián que nadie documenta
