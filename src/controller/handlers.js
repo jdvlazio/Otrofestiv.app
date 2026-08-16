@@ -362,8 +362,13 @@ export function addSuggestion(title,day,time){
   const {FILMS, _activeFestId, savedAgenda, watchlist, watched} = state.snapshot();
   // 2. GUARD
   if(festivalEnded()) return;
-  // 3. MUTATE (step 1): Add to watchlist if not already there
-  if(!watchlist.has(title)){
+  // 3. MUTATE (step 1): Add to watchlist if not already there.
+  // _sumoInt: si ESTA acción sumó a Intereses, el toast lo dice (revisión de UX
+  // Writer, 16 ago). Agendar tocaba DOS conjuntos y solo nombraba uno; el usuario
+  // se encontraba después con una lista que no armó. Solo cuando de verdad pasa:
+  // si ya estaba en Intereses, el toast queda como siempre.
+  const _sumoInt=!watchlist.has(title);
+  if(_sumoInt){
     state.batchUpdate({
       watchlist:state._addToSet(watchlist,title),
       watched:state._delFromSet(watched,title),
@@ -402,7 +407,7 @@ export function addSuggestion(title,day,time){
       const shortT=dt.length>20?dt.slice(0,18)+'…':dt;
       const _dayShortMap=(FESTIVAL_CONFIG[_activeFestId]||{}).dayShort||{};
       const dayShort=_dayShortMap[day]||day||'';
-      showToast(`${ICONS.calendar} ${shortT} · ${dayShort} · ${time}`,'info');
+      showToast(`${ICONS.calendar} ${shortT} · ${dayShort} · ${time}${_sumoInt?' · '+t('toast_tambien_int'):''}`,'info');
     }
   }
   // 3. MUTATE (step 3): Quitar de lista de restaurables
@@ -507,7 +512,7 @@ export function togglePriority(title,cost){
       if(_addWL) state.batchUpdate({watchlist:state._addToSet(watchlist,title), watched:state._delFromSet(watched,title)});
     });
     savePrio();if(_addWL){saveWL();saveWatched();}updateCardState(title);
-    showToast(`${ICONS.bookmarkFill} ${t('cta_priorizada')} · ${prioritized.size+1}/${PRIO_LIMIT}`,'info');
+    showToast(`${ICONS.bookmarkFill} ${t('cta_priorizada')} · ${prioritized.size+1}/${PRIO_LIMIT}${_addWL?' · '+t('toast_tambien_int'):''}`,'info');
   }
   if(activeView==='day') updateHorarioPrioBtn(title);   // surgical: botón prio del pel-sheet
 }
