@@ -1218,8 +1218,14 @@ export function _renderSavedAgendaHTML(state, consensus){
   const progressBar=currentDayNum?`<div class="row-sm festival-progress">
     <div style="flex:1">
       <div class="festival-progress-text"><span>${t('label_dia_prog')} <b>${currentDayNum}</b> ${t('label_de_dias')} ${totalDays}</span>${_diaryCount>0
-        ?`<button class="diary-chip" data-action="openDiary" data-stop="1">${_diaryCount} ${_diaryCount===1?t('label_vista'):t('label_vistas')} ${ICONS.check}${ICONS.chevronR}</button>`
-        :`<span style="color:var(--amber);display:flex;align-items:center;gap:4px">0 ${t('label_vistas')} ${ICONS.check}</span>`}</div>
+        // «obras vistas» y no «vistas»: el conteo suma las OBRAS de cada programa
+        // de cortos (y lo visto fuera del Plan), así que dos filas marcadas pueden
+        // dar 14 — el número era correcto y no decía de qué (revisión de UX
+        // Writer, 16 ago). A cero NO se muestra nada: era la única vez que la app
+        // se felicitaba con un ✓ por no haber hecho nada, y encima no era botón
+        // porque no hay Diario que abrir.
+        ?`<button class="diary-chip" data-action="openDiary" data-stop="1">${_diaryCount} ${_diaryCount===1?t('label_obra_vista'):t('label_obras_vistas')} ${ICONS.check}${ICONS.chevronR}</button>`
+        :''}</div>
     </div>
   </div>`:'';
 
