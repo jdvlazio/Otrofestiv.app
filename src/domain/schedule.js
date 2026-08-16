@@ -385,7 +385,17 @@ export function computeScenarios(titles){
 export function syncScheduleWithCatalog(schedule, films){
   if(!schedule||!schedule.length) return schedule;
   return schedule.map(e=>{
-    const live=(films||[]).find(f=>f.title===e._title&&f.day===e.day&&f.time===e.time);
+    // La identidad de una función incluye su SEDE. FICDEH programa el mismo
+    // título el mismo día a la misma hora en ciudades distintas (13 tripletas
+    // así, medido el 16 ago 2026), y matchear solo por título+día+hora hacía
+    // que .find() devolviera la PRIMERA del catálogo: el plan guardado con
+    // «Notas sobre un destierro · Cinemateca de Bogotá» amanecía en la
+    // Cinemateca del Caribe (Barranquilla) tras recargar — lo cazó la re-corrida
+    // del QA de ojos frescos. Si la entrada trae sede y esa sede ya no existe
+    // en el catálogo, la entrada queda INTACTA: es el camino reprogramada/
+    // cancelada que los avisos marcan con badge y salida — nunca un swap mudo.
+    const live=(films||[]).find(f=>f.title===e._title&&f.day===e.day&&f.time===e.time
+      &&(!e.venue||!f.venue||f.venue===e.venue));
     if(!live) return e;
     const out={...live,_title:e._title};
     if(e._squeezed) out._squeezed=e._squeezed;
