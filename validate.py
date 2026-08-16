@@ -3627,6 +3627,81 @@ except Exception as _e:
     warn(check, f'no se pudo verificar valor-inventado: {_e}')
 
 
+# ── [paridad-derivados] un campo DERIVADO existe siempre que exista su fuente ─
+# EL HUECO QUE ESTE TAPA, y por qué costó tanto verlo.
+#
+# `flags` es un campo DERIVADO: no existe en ninguna fuente. Ningún PDF, ningún
+# Excel, ninguna web de festival trae banderas — las calculamos del país. Y ahí
+# está la trampa: UNA AUSENCIA QUE NUNCA FUE PRESENCIA NO SE NOTA. Si falta un
+# título salta a la vista, porque la fuente lo tenía y lo perdimos. Si falta
+# `flags` no hay nada río arriba de donde se haya caído.
+#
+# FICDEH corrió su festival entero con 415 films mostrando país y ninguna
+# bandera. Su ensamblador era a medida —PDF, Excel, web y tuboleta— y
+# sencillamente nunca escribió el campo; los otros doce festivales lo emiten
+# porque sus ensambladores salieron de la plantilla. Nadie lo vio en meses.
+#
+# La regla: para cada par (fuente → derivado), un film que tenga la fuente
+# tiene que tener el derivado. Los pares se declaran acá y se MIDIERON antes de
+# entrar: los cuatro primeros se cumplen hoy en los 12 festivales publicados,
+# 1.209 films sin una sola excepción. No es una aspiración, es un invariante
+# que ya se sostiene y que a partir de ahora no se puede romper en silencio.
+#
+# OJO con la regla ingenua «campo presente en N-1 festivales»: daría falsos
+# positivos con `is_cortos` y `film_list`, que faltan legítimamente donde el
+# festival no tiene programas de cortos. La dependencia, no la frecuencia, es
+# lo que distingue un hueco de una ausencia legítima.
+check = 'paridad-derivados'
+try:
+    import json as _json, glob as _glob, os as _os, re as _re
+    # (fuente, derivado, por qué)
+    _PARES = [
+        ('day', 'day_order', 'el orden del día lo calcula el ensamblador'),
+        ('day', 'time', 'una función con día y sin hora no se puede planear'),
+        ('poster', 'posterSource', 'sin fuente, getFilmPoster no sabe si es editorial'),
+        ('synopsis', 'synopsis_lang', 'sin idioma declarado, locSynopsis no elige bien'),
+    ]
+    # `country → flags` es aparte: solo es hueco si la bandera SE PODÍA derivar.
+    # Un país que no está en la tabla («Varios», o un idioma colado en el campo)
+    # es otro problema, y de ese ya se ocupa [country-flags].
+    _js = open('src/controller/sheets-controller.js', encoding='utf-8').read()
+    _m = _re.search(r'const _COUNTRY_FLAGS=\{(.*?)\};', _js, _re.S)
+    _TAB = dict(_re.findall(r"'([^']+)'\s*:\s*'([^']+)'", _m.group(1))) if _m else {}
+
+    def _vacio(v):
+        return v in (None, '', [], {})
+
+    _viol = []
+    for _f in sorted(_glob.glob('festivals/*.json')):
+        try:
+            _d = _json.load(open(_f, encoding='utf-8'))
+        except Exception:
+            continue
+        _n = _os.path.basename(_f)
+        for _src, _der, _por in _PARES:
+            _mal = [x.get('title', '?') for x in (_d.get('films') or [])
+                    if not _vacio(x.get(_src)) and _vacio(x.get(_der))]
+            if _mal:
+                _viol.append(f'{_n}: {len(_mal)} film(s) con «{_src}» y sin «{_der}» '
+                             f'({_por}) — p.ej. «{str(_mal[0])[:28]}»')
+        _sinf = []
+        for _x in (_d.get('films') or []):
+            _c = (_x.get('country') or '').strip()
+            if not _c or not _vacio(_x.get('flags')):
+                continue
+            if any(_p.strip() in _TAB for _p in _re.split(r'[,/()]', _c)):
+                _sinf.append(_x.get('title', '?'))
+        if _sinf:
+            _viol.append(f'{_n}: {len(_sinf)} film(s) con país mapeable y sin «flags» '
+                         f'— p.ej. «{str(_sinf[0])[:28]}»')
+    if _viol:
+        fail(check, 'campo derivado ausente donde su fuente existe: ' + '; '.join(_viol[:4]))
+    else:
+        ok(check, f'{len(_PARES)+1} pares fuente→derivado sin un solo hueco')
+except Exception as _e:
+    warn(check, f'no se pudo verificar paridad-derivados: {_e}')
+
+
 # ── [campo-contrato] el JSON y la app tienen que llamar igual a lo mismo ─────
 # EL HUECO QUE ESTE GUARDIÁN TAPA. Todos los demás revisan el dato POR DENTRO:
 # que el campo exista, que sea booleano, que las cuentas cierren. Ninguno miraba

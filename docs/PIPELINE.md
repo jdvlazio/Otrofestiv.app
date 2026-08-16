@@ -296,6 +296,34 @@ PREMIUM de TIFF, y vale para todos los flags (`is_free`,
 de `film_list`. Basta con que un ensamblador lea un CSV o un Excel para que un
 booleano llegue como texto.
 
+**Octavo, y el que explica por qué lo de FICDEH costó meses:
+`[paridad-derivados]`.**
+
+`flags` es un campo **derivado**: no existe en ninguna fuente. Ningún PDF,
+ningún Excel, ninguna web de festival trae banderas — las calculamos del país.
+Y ahí está la trampa: **una ausencia que nunca fue presencia no se nota.** Si
+falta un título salta a la vista, porque la fuente lo tenía y lo perdimos. Si
+falta `flags`, no hay nada río arriba de donde se haya caído.
+
+FICDEH corrió su festival entero con 415 films mostrando país y ninguna
+bandera. Su ensamblador era a medida —PDF, Excel, web y tuboleta— y nunca
+escribió el campo; los otros doce lo emiten porque salieron de la plantilla.
+
+**La regla: para cada par (fuente → derivado), un film con la fuente tiene que
+tener el derivado.** Los pares se declaran en el guardián y se **midieron
+antes de entrar**: `day→day_order`, `day→time`, `poster→posterSource` y
+`synopsis→synopsis_lang` se cumplen hoy en los 12 festivales publicados, 1.209
+films sin una sola excepción. No es una aspiración: es un invariante que ya se
+sostenía y que ahora no se puede romper en silencio. `country→flags` va aparte
+y solo cuenta como hueco si la bandera **se podía** derivar — un país fuera de
+tabla («Varios», o un idioma colado en el campo) es otro problema, y de ese se
+ocupa `[country-flags]`.
+
+**Ojo con la regla ingenua «campo presente en N−1 festivales»:** daría falsos
+positivos con `is_cortos` y `film_list`, que faltan legítimamente donde el
+festival no tiene programas de cortos. **Lo que distingue un hueco de una
+ausencia legítima es la dependencia, no la frecuencia.**
+
 **Regla nueva para todo ensamblador:** emitir `_cuentas` con `entradas`,
 `publicadas` y `descartadas` desglosadas por motivo. Declarar los descartes
 obliga a mirarlos; que sumen impide inventarlos.
