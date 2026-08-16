@@ -123,7 +123,17 @@ export function isScreeningBlocked(s){
 // planeador, el oráculo exacto y el recorrido por festival — y una regla con
 // tres copias es una regla que se desincroniza.
 export function plannableScreens(title){
-  const screens=FILMS.filter(f=>f.title===title&&!f._cancelled&&!isScreeningBlocked(f)&&!screeningPassed(f));
+  // PLAN_CITY_VENUES — el planificador NO cruza ciudades (QA de ojos frescos,
+  // 15 ago 2026): con filtro Bogotá, «Calcular mi Plan» armaba el domingo en
+  // Medellín y el lunes en Ibagué sin avisar, y las filas del plan no muestran
+  // ciudad, así que era indetectable en pantalla. El set lo calcula calc.js
+  // desde el filtro activo (venueMatches, el dueño del predicado de lugar) y
+  // viaja al worker como payload. null = sin restricción.
+  // `typeof` y no la referencia: este global no existe en el sandbox de los unit
+  // tests ni en contextos que no calculan (la lección de FESTIVAL_POSTPONED).
+  const _pv=(typeof PLAN_CITY_VENUES!=='undefined')?PLAN_CITY_VENUES:null;
+  const screens=FILMS.filter(f=>f.title===title&&!f._cancelled&&!isScreeningBlocked(f)&&!screeningPassed(f)
+    &&(!_pv||!f.venue||_pv.has(f.venue)));
   if(screens.length&&screens[0].is_recurring){
     const total=FILMS.filter(f=>f.title===title&&f.is_recurring&&f.day&&f.time&&!f._cancelled).length;
     if(total&&screens.length!==total) return [];
