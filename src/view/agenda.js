@@ -452,7 +452,14 @@ export function renderMiPlanCalendar(state){
         ${_mph}
         <div class="mplan-ri">
           <div class="mplan-t1${isPast?' mp-past':''}${_void?' mp-void-t':''}" ${!isPast?`data-action="toggleFilmAlternatives" data-key="${(s._title||'')+(s.day||'')+(s.time||'')}" data-title="${safeT}" data-day="${s.day||''}" data-time="${s.time||''}" data-stop="1"`:''} title="${!isPast?t('tooltip_cambiar_horario'):''}">${s.time}</div>
-          <div class="mplan-t2">${_voidBadge}${_void?`<span class="mp-void-t">${mplanEndStr(s.time,dur)}</span>`:mplanEndStr(s.time,dur)}${_voidFix}${prioritized.has(s._title)?` <span class="txt-amber60-xs">${ICONS.bookmarkFill}</span>`:''}${_rowStars?` <span class="txt-amber-sm">${_rowStars}</span>`:''}${isNow?` <span class="txt-green-semi">${t('label_en_curso_min')}</span>`:''}</div>
+          <div class="mplan-t2">${_voidBadge}${(()=>{
+            // «hasta 16:00» y no un «16:00» suelto (revisión de UX Writer, 16 ago):
+            // la fila muestra dos horas y no decía cuál era cuál — y la duración,
+            // que es lo único que las conectaría, no está en la fila. No repite el
+            // inicio porque ya vive arriba, grande y en ámbar.
+            const _fin=t('plan_hasta',{h:mplanEndStr(s.time,dur)});
+            return _void?`<span class="mp-void-t">${_fin}</span>`:_fin;
+          })()}${_voidFix}${prioritized.has(s._title)?` <span class="txt-amber60-xs">${ICONS.bookmarkFill}</span>`:''}${_rowStars?` <span class="txt-amber-sm">${_rowStars}</span>`:''}${isNow?` <span class="txt-green-semi">${t('label_en_curso_min')}</span>`:''}</div>
           <div>${(()=>{const{displayTitle:_dt,progSuffix:_ps}=parseProgramTitle(s._title||'');const _mfqa=FILMS.find(fi=>fi.title===s._title&&fi.day===s.day&&fi.time===s.time);const _qab=_mfqa?.has_qa?`<span class="meta-badge sm">Q&A</span>`:'';return`<div class="mplan-rtitle${_isEventRow?' mp-event-title':''}">${_dt}${_qab}</div>${_ps?`<div class="prog-suffix">${_ps}</div>`:''}`;})()} </div>
           <div class="mplan-rvenue${_isEventRow?' mp-event-venue':''}">${ICONS.pin} ${vcfg(s.venue).short}${venueCity(s.venue)?` <span class="plist-city">${venueCity(s.venue)}</span>`:''}${sala(s.venue)?' \u00b7 '+sala(s.venue):''}</div>
           ${_sesionDeBloque(s)}
