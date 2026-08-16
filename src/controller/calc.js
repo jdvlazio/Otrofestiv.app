@@ -41,6 +41,7 @@ let PLAN_CITY_VENUES=null;
 let TZ_OFFSET='-05:00', FESTIVAL_END_TS=0, SIM_TIME=null;
 const DEFAULT_DURATION_MIN=90;
 const FESTIVAL_BUFFER=15;
+const FESTIVAL_QA_MIN=30;
 let _venueCoords={};
 let _transport='transit';
 `;

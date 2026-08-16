@@ -35,6 +35,12 @@ export const _POSTER_CACHE_PFX = 'orf_poster_v1_';
 
 // ── Constantes numéricas de scheduling ───────────────────────────────────────
 export const FESTIVAL_BUFFER = 15;        // min entre funciones: salida sala + intro siguiente
+// FESTIVAL_QA_MIN — los minutos ESTIMADOS de un Q&A. Estaba suelto en tres
+// lugares (effectiveDuration, el total del bloque anclado y el aviso de Mi Plan)
+// y desde el 16 ago 2026 además se MUESTRA («Q&A ~30 min»): un número que el
+// usuario lee no puede tener copias que puedan divergir. Como FESTIVAL_BUFFER,
+// el worker del planeador lleva su propia declaración (ver controller/calc.js).
+export const FESTIVAL_QA_MIN = 30;        // estimación — la UI la declara, nunca la afirma
 export const MAX_REMEMBERED_SLOTS = 5;
 export const DEFAULT_DURATION_MIN = 90;
 
