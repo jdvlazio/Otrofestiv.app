@@ -438,7 +438,7 @@ export const FESTIVAL_CONFIG={
     dayShort_en:{'2026-09-10': 'THU 10', '2026-09-11': 'FRI 11', '2026-09-12': 'SAT 12', '2026-09-13': 'SUN 13', '2026-09-14': 'MON 14', '2026-09-15': 'TUE 15', '2026-09-16': 'WED 16', '2026-09-17': 'THU 17', '2026-09-18': 'FRI 18', '2026-09-19': 'SAT 19', '2026-09-20': 'SUN 20'},
     dayLong:{'2026-09-10': 'Jueves 10 de septiembre', '2026-09-11': 'Viernes 11 de septiembre', '2026-09-12': 'Sábado 12 de septiembre', '2026-09-13': 'Domingo 13 de septiembre', '2026-09-14': 'Lunes 14 de septiembre', '2026-09-15': 'Martes 15 de septiembre', '2026-09-16': 'Miércoles 16 de septiembre', '2026-09-17': 'Jueves 17 de septiembre', '2026-09-18': 'Viernes 18 de septiembre', '2026-09-19': 'Sábado 19 de septiembre', '2026-09-20': 'Domingo 20 de septiembre'},
     prioLimit:6,
-    keyArt:'/assets/keyart/tiff2026.jpg',
+    keyArt:'/assets/keyart/tiff2026-v2.jpg',
     // group:'test' — TIFF NO se publica todavía. Juan lo montará cuando terminen
     // FINCA y FICDEH, y faltan dos cosas suyas: el keyArt del carrusel (su web no
     // publica afiche de festival, solo banners 2:1) y las decisiones abiertas
