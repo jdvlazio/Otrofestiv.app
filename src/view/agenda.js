@@ -1306,7 +1306,6 @@ export function buildResultHTML(scenarios){
   const sc=scenarios[currentIdx],n=scenarios.length;
   const pending=[...watchlist].filter(t=>!watched.has(t)&&FILMS.some(f=>f.title===t&&!screeningPassed(f)));
   const total=pending.length,ok=sc.schedule.length,bad=sc.excluded.length;
-  const isOptimo=currentIdx===0;
   // Stale banner (movido aquí desde pre-cálculo): se calcula a partir de cachedResult._prioSnapshot vs prioritized actual.
   const _snap=cachedResult._prioSnapshot;
   const _stale=Array.isArray(_snap)&&(_snap.length!==prioritized.size||!_snap.every(x=>prioritized.has(x)));
@@ -1320,7 +1319,15 @@ export function buildResultHTML(scenarios){
 
   // ── Header: Plan óptimo vs Variación ──
   const isCustom=sc._custom===true;
-  const planLabel=isOptimo?t('plan_optimo'):isCustom?t('av_opcion_pers'):t('plan_optimo');
+  // «Opción» y no «Tu Plan» (revisión de UX Writer, 16 ago): esto es una
+  // PROPUESTA — no existe como plan hasta tocar «Usar este Plan», y el tab que
+  // sí lo contiene se llama «Mi Plan». Dos objetos con el mismo nombre hacían
+  // creer que ya estaba hecho, y quien se iba sin confirmar perdía el cálculo.
+  // «Opción» es además la palabra que el glosario del proyecto (main.js) ya
+  // había elegido para los resultados del algoritmo.
+  // Sin «N de M»: el motor devuelve UNA opción en los casos reales (medido) y
+  // la UI no navega entre variaciones — un contador prometería lo que no hay.
+  const planLabel=isCustom?t('av_opcion_pers'):t('plan_opcion');
 
   // Modelo de "plan único": sin dots ni navegación entre variaciones.
   // Si existen escenarios custom (forceInclude), `cachedResult.currentIdx` puede
