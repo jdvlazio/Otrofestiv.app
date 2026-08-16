@@ -8,7 +8,7 @@
 
 import { FESTIVAL_CONFIG, MAX_REMEMBERED_SLOTS, TMDB_IMG, _DEFAULT_FEST_ID } from '../config.js';
 import { DAY_ABBR, DAY_NUM, ICONS, _secLabel, _sectionColor, escXML, isFullDayBlocked, makeProgramPoster, parseProgramTitle, renderRatingStarsHTML } from '../view/components.js';
-import { _getItemPoster, _mkCortoItemHtml, _posterStyle, dayLabel, emptyState, durFmt, flagFmt, getCortoItemPoster, getFilmPoster, getFilmPosterUntitled, getPosterSrc, itemPosterParts, posterAmbient, posterParts, sala, starsText, vcfg, venueCity, venueMatches, isCitySel, ticketBadgeTarget } from '../view/helpers.js';
+import { _getItemPoster, _mkCortoItemHtml, _posterStyle, dayLabel, emptyState, durFmt, flagFmt, getCortoItemPoster, getFilmPoster, getFilmPosterUntitled, getPosterSrc, itemPosterParts, posterAmbient, posterParts, sala, starsText, vcfg, venueCity, venueMatches, isCitySel, ticketBadgeTarget, conflictAccount } from '../view/helpers.js';
 import { closeAvSheet, closePVRating, closePrioLimit } from '../view/sheets.js';
 import { showConflictModal, showToast } from '../view/feedback.js';
 import { renderAgenda, renderAvBlocks, renderDiaryHTML } from '../view/agenda.js';
@@ -17,7 +17,7 @@ import { commitPlan, saveAV, saveLastSlot, saveRating, saveSavedAgenda } from '.
 import { _reRenderIntereses, showAgView, switchMainNav, updateAgTab } from './pipeline.js';
 import { dayFullyPassed, festivalEnded, parseDur, toMin } from '../domain/time.js';
 import { screeningPassed, effectiveDuration, blockDuration } from '../domain/film.js';
-import { isScreeningBlocked } from '../domain/schedule.js';
+import { isScreeningBlocked, screensConflictReason } from '../domain/schedule.js';
 // ── Velo del sheet: SIN driver JS (29 jul 2026 — DESIGN.md §8.4.1) ───────────
 // Vivía acá un driver rAF que pisaba radio+opacidad por frame. Medido en device
 // con el video de Juan (7 de 7 aperturas): progresaba hasta ~68%, se congelaba
@@ -781,6 +781,20 @@ export function openConflictSheet(incomingTitle, incomingScreen, existingEntry){
   setEl('cs-existing-name', exDT);
   const exWhen=existingEntry.day?`${(dayLabel(existingEntry.day)||'').split(' ')[0]} · ${existingEntry.time} · ${exF?.duration||''}`:'';
   setEl('cs-existing-when', exWhen);
+
+  // Título del sheet: si el conflicto es por margen (salas/viaje), el título
+  // ES la cuenta — «se solapan en el mismo tramo» era falso cuando las horas
+  // visibles no se pisaban y el agente del QA (15 ago 2026) descartó la función
+  // creyendo que la app se equivocaba. 'solape' (dato visible) y 'ciudad'
+  // conservan el título genérico. conflictAccount = dueño único de la frase.
+  const _titleEl=document.getElementById('conflict-title-el');
+  if(_titleEl){
+    const _r=screensConflictReason(incomingScreen,existingEntry);
+    const _cuenta=conflictAccount(incomingScreen,existingEntry,_r);
+    _titleEl.classList.toggle('cuenta',!!_cuenta);
+    if(_cuenta) _titleEl.innerHTML=_cuenta;
+    else _titleEl.textContent=t('conflict_titulo');
+  }
 
   // Botón de reemplazo con nombre exacto
   // Guardar pendiente para ejecutar al confirmar
