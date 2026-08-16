@@ -14,6 +14,7 @@ import { _resolveVenue } from '../domain/festival.js';
 import { blockDuration, effectiveDuration, durationForTravel, screeningPassed, _djb2, _titleSeed, _mulberry32, shuffle, scoreFilm } from '../domain/film.js';
 import { screensConflict, isScreeningBlocked, plannableScreens, sortScreensByStrategy, computeScenarios } from '../domain/schedule.js';
 import { renderAgenda } from '../view/agenda.js';
+import { keepCityOnly, venueMatches } from '../view/helpers.js';
 import { showToast } from '../view/feedback.js';
 import { t } from '../i18n/i18n.js';
 
@@ -36,6 +37,7 @@ function _mkCalcWorker(){
     const _workerGlobals=`
 let FILMS=[], FESTIVAL_DATES={}, availability={};
 let watched=new Set(), prioritized=new Set();
+let PLAN_CITY_VENUES=null;
 let TZ_OFFSET='-05:00', FESTIVAL_END_TS=0, SIM_TIME=null;
 const DEFAULT_DURATION_MIN=90;
 const FESTIVAL_BUFFER=15;
@@ -73,6 +75,7 @@ function travelMins(venueA,venueB){ return venueTravelMins(venueA,venueB); }
 self.onmessage=function(e){
   const d=e.data;
   FILMS=d.films;
+  PLAN_CITY_VENUES=d.planVenues?new Set(d.planVenues):null;
   watched=new Set(d.watched);
   prioritized=new Set(d.prioritized);
   availability=d.availability;
@@ -112,8 +115,22 @@ document.addEventListener('visibilitychange',function(){
   }
 });
 
+// _planCityVenues — el set de sedes que el plan puede usar, derivado del filtro
+// de lugar ACTIVO reducido a ciudad (keepCityOnly: una sede concreta no restringe
+// el plan; una ciudad sí). null = sin filtro. Un solo cálculo para los tres
+// caminos: worker, fallback síncrono y sugerencias.
+export function _planCityVenues(){
+  const _sel=keepCityOnly(typeof activeVenue!=='undefined'?activeVenue:'all');
+  if(_sel==='all') return null;
+  const _vs=(FESTIVAL_CONFIG[_activeFestId]||{}).venues||{};
+  return new Set(Object.keys(_vs).filter(v=>venueMatches(v,_sel)));
+}
+
 export function runCalc(){
   if(festivalEnded()){showToast(t('notice_fest_term'),'info');return;}
+  // Publicar la restricción de ciudad ANTES de calcular, para el camino síncrono
+  // (el worker la recibe por payload). Se recalcula en cada corrida.
+  globalThis.PLAN_CITY_VENUES=_planCityVenues();
   // Cancelar Worker previo si existe
   if(_activeCalcWorker){_activeCalcWorker.terminate();_activeCalcWorker=null;}
   cachedResult=null;
@@ -164,6 +181,7 @@ export function runCalc(){
     worker.postMessage({
       titles:[...watchlist],
       films:FILMS,
+      planVenues:globalThis.PLAN_CITY_VENUES?[...globalThis.PLAN_CITY_VENUES]:null,
       watched:[...watched],
       prioritized:[...prioritized],
       availability,

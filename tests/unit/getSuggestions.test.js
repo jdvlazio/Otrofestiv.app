@@ -45,6 +45,12 @@ function load(opts = {}) {
       DEFAULT_DURATION_MIN: 90,
       FESTIVAL_BUFFER: opts.buffer != null ? opts.buffer : 10,
       DAY_KEYS: opts.DAY_KEYS || ['D1', 'D2'],
+      // Restricción de ciudad (15 ago 2026): getSuggestions ganó tres deps.
+      // Default 'all' + stubs neutros = el comportamiento previo intacto; los
+      // tests de ciudad inyectan su propio venueMatches por opts.
+      activeVenue: opts.activeVenue || 'all',
+      keepCityOnly: opts.keepCityOnly || (sel => sel),
+      venueMatches: opts.venueMatches || (() => true),
       FILMS: opts.FILMS || [],
       savedAgenda: 'savedAgenda' in opts ? opts.savedAgenda : { schedule: [] },
       watchlist: opts.watchlist || new Set(),

@@ -13,7 +13,7 @@ import {
   ICONS, _secLabel, _secLabelFull, _sectionColor, escXML, makeEventPoster, makeProgramPoster, parseProgramTitle, renderAvBlocksHTML, renderFlowProgress,
 } from './components.js';
 import {
-  DAYS, DAY_SHORT_EN, _dayChips, _lblLocalized, _minFmt, _mkCortoItemHtml, _posterThumb, getCortoItemPoster, itemPosterParts, posterParts, dayChip, dayLabel, dayLabelLong, durFmt, emptyState, emptyStateHero, flagFmt, getFilmPoster, isToday, mplanBlockType, mplanEndStr, sala, starsText, travelWarn, vcfg, delayConsensusBadge,
+  DAYS, DAY_SHORT_EN, _dayChips, _lblLocalized, _minFmt, _mkCortoItemHtml, _posterThumb, getCortoItemPoster, itemPosterParts, posterParts, dayChip, dayLabel, dayLabelLong, durFmt, emptyState, emptyStateHero, flagFmt, getFilmPoster, isToday, keepCityOnly, mplanBlockType, mplanEndStr, sala, starsText, travelWarn, vcfg, venueCity, venueMatches, delayConsensusBadge,
 } from './helpers.js';
 import {
   _festDate, _festNowMin, festivalEnded, minToStr, simNow, simTodayStr, toMin,
@@ -454,7 +454,7 @@ export function renderMiPlanCalendar(state){
           <div class="mplan-t1${isPast?' mp-past':''}${_void?' mp-void-t':''}" ${!isPast?`data-action="toggleFilmAlternatives" data-key="${(s._title||'')+(s.day||'')+(s.time||'')}" data-title="${safeT}" data-day="${s.day||''}" data-time="${s.time||''}" data-stop="1"`:''} title="${!isPast?t('tooltip_cambiar_horario'):''}">${s.time}</div>
           <div class="mplan-t2">${_voidBadge}${_void?`<span class="mp-void-t">${mplanEndStr(s.time,dur)}</span>`:mplanEndStr(s.time,dur)}${_voidFix}${prioritized.has(s._title)?` <span class="txt-amber60-xs">${ICONS.bookmarkFill}</span>`:''}${_rowStars?` <span class="txt-amber-sm">${_rowStars}</span>`:''}${isNow?` <span class="txt-green-semi">${t('label_en_curso_min')}</span>`:''}</div>
           <div>${(()=>{const{displayTitle:_dt,progSuffix:_ps}=parseProgramTitle(s._title||'');const _mfqa=FILMS.find(fi=>fi.title===s._title&&fi.day===s.day&&fi.time===s.time);const _qab=_mfqa?.has_qa?`<span class="meta-badge sm">Q&A</span>`:'';return`<div class="mplan-rtitle${_isEventRow?' mp-event-title':''}">${_dt}${_qab}</div>${_ps?`<div class="prog-suffix">${_ps}</div>`:''}`;})()} </div>
-          <div class="mplan-rvenue${_isEventRow?' mp-event-venue':''}">${ICONS.pin} ${vcfg(s.venue).short}${sala(s.venue)?' \u00b7 '+sala(s.venue):''}</div>
+          <div class="mplan-rvenue${_isEventRow?' mp-event-venue':''}">${ICONS.pin} ${vcfg(s.venue).short}${venueCity(s.venue)?` <span class="plist-city">${venueCity(s.venue)}</span>`:''}${sala(s.venue)?' \u00b7 '+sala(s.venue):''}</div>
           ${_sesionDeBloque(s)}
           ${(()=>{const _mf=FILMS.find(fi=>fi.title===s._title&&fi.day===s.day&&fi.time===s.time);if(!_mf||!_mf.is_cortos||!_mf.film_list||!_mf.film_list.length) return'';return`<button class="row-xs mplan-prog-toggle" data-action="toggleMplanProg">${ICONS.chevronR} ${t('label_programa')}</button>`;})()}
         </div>
@@ -1487,7 +1487,7 @@ export function mkAgendaRow(s, mode='saved'){
     <div class="saved-info">
       ${mode==='scenario'?_timeHTML:''}
       <div class="saved-title">${displayTitle}</div>${progSuffix?`<div class="film-sub-label">${progSuffix}</div>`:''}
-      <div class="saved-venue">${ICONS.pin} ${vc2.short}${sl?' · '+sl:''}${s.duration?' · '+durFmt(s.duration):''}</div>
+      <div class="saved-venue">${ICONS.pin} ${vc2.short}${venueCity(s.venue)?` <span class="plist-city">${venueCity(s.venue)}</span>`:''}${sl?' · '+sl:''}${s.duration?' · '+durFmt(s.duration):''}</div>
       ${_sesionDeBloque(s)}
       ${_progBtn}
     </div>
@@ -1527,6 +1527,11 @@ export function updateHorarioPrioBtn(title){
 
 export function getSuggestions(){
   if(!savedAgenda||!savedAgenda.schedule.length) return{};
+  // Misma restricción de ciudad que el planificador (QA 15 ago: con filtro
+  // Bogotá, las sugerencias ofrecían Casa Aparte y el Socorro — otras ciudades —
+  // y «Día cubierto» se calculaba contra un universo que el usuario no pidió).
+  const _citySel=keepCityOnly(activeVenue);
+  const _cityOk=f=>_citySel==='all'||!f.venue||venueMatches(f.venue,_citySel);
   const saved=savedAgenda.schedule.filter(s=>!screeningPassed(s));
   // OJO: NO early-return si saved quedó vacío. "Todo mi plan ya pasó" ≠ "no tengo
   // plan": en el último día de festival, con el plan de días anteriores ya cumplido,
@@ -1592,6 +1597,7 @@ export function getSuggestions(){
     // Usa screensConflict — mismo criterio que el algoritmo, incluye travel time entre venues
     if(slots.length){
       FILMS.forEach(f=>{
+        if(!_cityOk(f)) return; // fuera de la ciudad filtrada: no se sugiere
         // Un taller multi-día NO se sugiere: se toma entero, y el botón de la
         // sugerencia añade UNA función (addSuggestion) — eso dejaría el bloque a
         // medias, que es justo lo que el invariante prohíbe. Además sugerir «meté
@@ -1620,7 +1626,7 @@ export function getSuggestions(){
     // Solo aparece si genuinamente cabe sin conflicto en el plan actual
     [...watchlist].filter(wlTitle=>!seenRecovery.has(wlTitle)).forEach(wlTitle=>{
       // mismo motivo que arriba: el bloque no entra por sugerencia
-      FILMS.filter(f=>f.title===wlTitle&&!f.is_recurring&&f.day===day&&!screeningPassed(f)&&!isScreeningBlocked(f)).forEach(f=>{
+      FILMS.filter(f=>_cityOk(f)&&f.title===wlTitle&&!f.is_recurring&&f.day===day&&!screeningPassed(f)&&!isScreeningBlocked(f)).forEach(f=>{
         if(seenRecovery.has(f.title)) return;
         const noConflict=!saved.some(s=>screensConflict(s,f));
         if(noConflict){
