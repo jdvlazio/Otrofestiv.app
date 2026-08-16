@@ -40,7 +40,6 @@ CRITICAL_DIVS = [
     'id="ag-view"',
     'id="hdr-programa"',
     'id="nav-row"',
-    'id="hdr-ag"',
     'id="main-nav"',
     'class="topbar"',
     'id="otrofestiv-splash"',
@@ -1124,7 +1123,7 @@ try:
     _vs_keys = [
         'DAY_KEYS', 'cachedResult', 'activeDay', 'activeView', 'activeVenue',
         'activeSec', 'selectedIdx', 'activeMNav', 'programaSubMode',
-        'programaViewMode', 'cartelaMode', 'interesesViewMode', 'miPlanViewMode',
+        'programaViewMode', 'cartelaMode', 'miPlanViewMode',
         '_sbUser', '_sb', 'LB_SLUGS', 'POSTERS', 'CUSTOM_POSTERS',
         '_splashSelectedFestId', 'programaChip', '_programaChipMatchFn',
         '_dismissedNotices', '_currentChips', '_activeMiPlanFilm', '_expandedFilm',
@@ -1814,7 +1813,6 @@ try:
     for _name, _pat in (('programa-mode-bar', r'\.programa-mode-bar\{[^}]*\}'),
                         ('nav-row', r'\.nav-row\{[^}]*\}'),
                         ('main-nav fixed', r'\.main-nav\{position:fixed[^}]*\}'),
-                        ('hdr-ag', r'#hdr-ag\{[^}]*\}'),
                         ('fs-header', r'\.fs-header\{[^}]*\}'),
                         ('pv-header', r'\.pv-header\{[^}]*\}'),
                         ('search-bar', r'\.search-bar\{[^}]*\}')):

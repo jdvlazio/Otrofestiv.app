@@ -54,7 +54,6 @@ export function renderAgenda(){
     // "Te quedaste con ganas" (abajo, atenuadas, con marca Vista retroactiva
     // reutilizando toggleWatched — el par Vista/Luego ya aprendido). ──
     if(festivalEnded()){
-      const _agHi=document.getElementById('hdr-ag');if(_agHi)_agHi.style.display='none';
       requestAnimationFrame(_fixStickyOffset);
       const {filmRatings}=state.snapshot();
       const _wl=[...watchlist];
@@ -116,7 +115,6 @@ export function renderAgenda(){
     if(festivalEnded()){
       // Post-festival: Planear no tiene función — redirigir a Mi Plan
       const _festNamePl=(FESTIVAL_CONFIG[_activeFestId]||{}).name||t('misc_festival_default');
-      const _agHpl=document.getElementById('hdr-ag');if(_agHpl)_agHpl.style.display='none';
       requestAnimationFrame(_fixStickyOffset);
       // Modo Recuerdo (RFC docs/RFC-modo-recuerdo.md): el planeador se retira
       // con gracia — copy de cierre con la voz del splash.
@@ -1694,7 +1692,7 @@ export function _fixStickyOffset(){
   const modeH=38;
   const r=document.documentElement.style;
   if(isMobile){
-    // Mobile: topbar is the single sticky container (contains hdr-programa + hdr-ag).
+    // Mobile: topbar is the single sticky container (contains hdr-programa).
     // tbH now includes the full chrome height — use it for --sticky-top-lista.
     r.setProperty('--sticky-top-carta',tbH+'px'); // kept for desktop-compat
     r.setProperty('--sticky-top-lista',tbH+'px');

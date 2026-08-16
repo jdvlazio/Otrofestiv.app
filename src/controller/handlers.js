@@ -797,15 +797,6 @@ export function filterBySection(section){
   },50);
 }
 
-export function setInteresesView(mode){
-  interesesViewMode=mode;
-  const _v = storage.getViewmodes(); _v.intereses = mode; storage.setViewmodes(_v);
-  document.getElementById('ibtn-grid')?.classList.toggle('on',mode==='grid');
-  document.getElementById('ibtn-list')?.classList.toggle('on',mode==='list');
-  const el=document.getElementById('ag-film-list');
-  _reRenderIntereses();
-}
-
 export function setProgramaMode(mode){
   programaSubMode=mode;
   // Reset filtros al cambiar modo y cerrar dropdowns
@@ -978,15 +969,6 @@ export function squeezeExcluded(schedule, excludedTitles){
     }
   });
   return result;
-}
-
-export function _scrollToAgSection(id) {
-  const el = document.getElementById(id);
-  if (!el) return;
-  const hdr = document.getElementById('hdr-ag');
-  const off = hdr ? hdr.getBoundingClientRect().bottom : 0;
-  const y = el.getBoundingClientRect().top + window.scrollY - off - 8;
-  window.scrollTo({top: y, behavior: 'smooth'});
 }
 
 export function _setExpandedFilm(val) {

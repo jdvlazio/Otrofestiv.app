@@ -58,7 +58,6 @@ export function showDayView(){
   activeView='day';
   switchMainNav('mnav-cartelera');
   // Mostrar buscador y mode bar
-  document.getElementById('hdr-ag')?.style.setProperty('display','none');
   const modeBar=document.getElementById('programa-mode-bar');
   if(modeBar){
     modeBar.style.removeProperty('display');// removeProperty is more reliable than =""
@@ -85,11 +84,6 @@ export function showAgView(){
   const _chips=document.getElementById('programa-chips');if(_chips) _chips.classList.add('hidden');
   const _paf=document.getElementById('programa-active-filter');if(_paf) _paf.classList.remove('visible');
   const _lista=document.getElementById('programa-list');if(_lista) _lista.classList.remove('visible');
-  const _agH=document.getElementById('hdr-ag');
-  if(_agH){
-    _agH.style.display='';
-    // ag-toggle-bar eliminado de Intereses (solo en Explorar)
-  }
   document.getElementById('filter-bars').style.display='none';
   ['hint','cnt','grid','cartelera-stepper'].forEach(id=>{const el=document.getElementById(id);if(el) el.style.display='none';});
   const _av=document.getElementById('ag-view');
@@ -122,20 +116,6 @@ export function _rerenderFilmList(){
   const lel=document.getElementById('ag-film-list');
   if(!lel) return;
   lel.innerHTML=renderFilmListHTML(state);
-  // Recompute pill counts — filter sobre Sets, O(n) trivial. Mismo cálculo
-  // que la pure half hace; se duplica para mantener purity de renderFilmListHTML.
-  const {prioritized, watched, watchlist, PRIO_LIMIT} = state.snapshot();
-  const prioList=[...prioritized].filter(titleStr=>!watched.has(titleStr));
-  const nonPrioList=[...watchlist].filter(titleStr=>!watched.has(titleStr)&&!prioritized.has(titleStr));
-  const watchedList=[...watched];
-  setTimeout(()=>{
-    const _pp=document.getElementById('pill-prio-cnt');if(_pp) _pp.textContent=prioList.length?`${prioList.length}/${PRIO_LIMIT}`:'—';
-    const _pi=document.getElementById('pill-int-cnt');if(_pi) _pi.textContent=nonPrioList.length?String(nonPrioList.length):'—';
-    const _py=document.getElementById('pill-yv-cnt');if(_py) _py.textContent=watchedList.length?String(watchedList.length):'—';
-    document.getElementById('pill-prio')?.style.setProperty('display',prioList.length?'inline-flex':'none');
-    document.getElementById('pill-int')?.style.setProperty('display',nonPrioList.length?'inline-flex':'none');
-    document.getElementById('pill-yv')?.style.setProperty('display',watchedList.length?'inline-flex':'none');
-  },0);
 }
 
 export function _getProgramaPhase(){

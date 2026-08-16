@@ -95,7 +95,7 @@ export function loadState(){
     // Heal: garantiza que todo lo que está en prioritized esté en watchlist
     state.update('watchlist', s => { let n=s; prioritized.forEach(t=>{ if(!n.has(t)) n=state._addToSet(n,t); }); return n; });
     saveWL();
-    const _v = storage.getViewmodes(); if(_v.miPlan) miPlanViewMode=_v.miPlan; if(_v.intereses) interesesViewMode=_v.intereses;
+    const _v = storage.getViewmodes(); if(_v.miPlan) miPlanViewMode=_v.miPlan; 
   }catch(e){report(e,'loadState');}
 }
 

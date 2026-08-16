@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202608160959">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202608160959">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202608161031">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202608161031">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -349,7 +349,7 @@ window.sentryOnLoad = function() {
      Capas sticky (header, nav): 100–200
        198  chrome-blur (frosted glass fijo)
        199  topbar sticky
-       200  main-nav sticky / hdr-ag sticky
+       200  main-nav sticky
      Capas flotantes bajas (nav móvil, festival selector): 1000–2001
        1000 main-nav fixed mobile
        2000 fs-overlay (festival selector)
@@ -568,13 +568,6 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
    ag-search-wrap:    solo margen inferior (ag-view provee márgenes laterales)
 ────────────────────────────────────────────────────────────────────────── */
 #hdr-programa{position:sticky;top:var(--sticky-top-carta);z-index:201;background:var(--surf)}
-#hdr-ag{position:sticky;top:var(--sticky-top-carta);z-index:121;background:var(--surf)}
-.ag-toggle-bar{display:none!important}
-.ag-toggle-bar::-webkit-scrollbar{display:none}
-.ag-sec-pill{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:3px;font-size:var(--t-sm);font-weight:var(--w-semi);color:var(--gray);background:none;border:none;border-bottom:2px solid transparent;padding:var(--sp-2) var(--sp-1);white-space:nowrap;cursor:pointer;font-family:var(--font);transition:color var(--tr-base),border-color var(--tr-base);min-height:38px}
-.ag-sec-pill:active{opacity:.6}
-.ag-sec-pill.prio,.ag-sec-pill.int,.ag-sec-pill.yv{background:none;border-radius:0;color:var(--gray)}
-.ag-toggle-spacer{flex:1}
 
 /* El pill: flex row que contiene ícono + input + clear */
 
@@ -926,8 +919,8 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .pmode-controls{display:flex;align-items:center;gap:var(--sp-3)}
 /* ── View switch — sistema unificado (Programa / Mi Plan / Intereses) ── */
 /* view toggle — icono único, sin contenedor, mismo peso visual que lupa */
-.pmode-view-switch,.intereses-view-switch{display:flex}
-.pmode-view-btn,.intereses-view-btn{display:none} /* ocultar botones legacy */
+.pmode-view-switch{display:flex}
+.pmode-view-btn{display:none} /* ocultar botones legacy */
 .view-toggle-btn{width:32px;min-height:34px;display:flex;align-items:center;justify-content:center;padding-right:4px;background:none;border:none;cursor:pointer;color:var(--gray);flex-shrink:0;-webkit-tap-highlight-color:transparent;font-family:var(--font);transition:color var(--tr-base);position:relative;touch-action:manipulation;position:relative}
 .view-toggle-btn::after{content:'';position:absolute;inset:-6px -4px}
 .view-toggle-btn::before{content:'';position:absolute;left:0;top:15%;bottom:15%;width:1px;background:var(--bdr)}
@@ -1832,7 +1825,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
   padding-bottom:0;
   border-top:1px solid var(--bdr-l);
   border-bottom:none;
-  /* Sticky: top con offset del topbar (mismo patrón que #hdr-programa/#hdr-ag). */
+  /* Sticky: top con offset del topbar (mismo patrón que #hdr-programa). */
   position:sticky;
   top:var(--sticky-top-carta);
   background:var(--bg);
@@ -1940,7 +1933,6 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
      .topbar es el ÚNICO position:sticky en mobile. Contiene dentro:
        .hdr  (wordmark + fest-bar)
        #hdr-programa  (cartelera: modo bar + nav-row day tabs)
-       #hdr-ag  (intereses/planear/mi plan: toggle bar)
      El ::before provee frosted glass sin interferir con sticky (iOS fix).
      Elimina permanentemente el gap entre dos stickies con --sticky-top-carta
      calculado erróneamente por timing de fuentes/datos. */
@@ -1957,7 +1949,6 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
   .hdr-fest-bar{background:transparent}
   #hdr-programa{position:relative;top:auto;padding-top:0;background:transparent}
   .programa-mode-bar{background:transparent}
-  #hdr-ag{position:relative;top:auto;background:transparent;border-bottom:none}
 }
 
 /* ── FESTIVAL BOTTOM SHEET ── */
@@ -2132,7 +2123,6 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
   .programa-mode-bar{position:sticky;top:var(--sticky-top-modebar);z-index:197;background:var(--surf)}
   .programa-active-filter{position:sticky;top:calc(var(--sticky-top-modebar) + 44px);z-index:196}
   #hdr-programa{padding:0;position:relative;top:auto}
-  #hdr-ag{position:relative;top:auto}
 
   /* ── Chips — scroll natural sin mask (el marco del body reemplaza el cue visual) ── */
   .programa-chips{
@@ -2993,29 +2983,6 @@ setTimeout(function(){
   <div class="nav-tabs" id="dtabs"></div>
 </div>
 </div>
-<div id="hdr-ag" style="display:none">
-
-  <div class="ag-toggle-bar" id="ag-toggle-bar">
-    <button class="ag-sec-pill prio" id="pill-prio" data-action="scrollToAgSec" data-target="sec-prio">
-      <span data-i18n="ag_pill_prioridad">Prioridad</span> <span class="txt-dim-xs" id="pill-prio-cnt">—</span>
-    </button>
-    <button class="ag-sec-pill int" id="pill-int" data-action="scrollToAgSec" data-target="sec-int">
-      <span data-i18n="ag_pill_intereses">Intereses</span> <span class="txt-dim-xs" id="pill-int-cnt">—</span>
-    </button>
-    <button class="ag-sec-pill yv" id="pill-yv" data-action="scrollToAgSec" data-target="sec-yv">
-      <span data-i18n="ag_pill_vistas">Vistas</span> <span class="txt-dim-xs" id="pill-yv-cnt">—</span>
-    </button>
-    <div class="ag-toggle-spacer"></div>
-    <div class="intereses-view-switch">
-      <button class="intereses-view-btn on" id="ibtn-grid" data-action="setInteresesView" data-mode="grid">
-        <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
-      </button>
-      <button class="intereses-view-btn" id="ibtn-list" data-action="setInteresesView" data-mode="list">
-        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg>
-      </button>
-    </div>
-  </div>
-</div>
 </div><!-- /topbar -->
 <div class="main-nav" id="main-nav" role="navigation" data-i18n-aria="aria_nav_ppal" aria-label="Navegación principal">
   <button class="main-nav-tab on" id="mnav-cartelera" data-action="navTo" data-tab="mnav-cartelera">
@@ -3263,7 +3230,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202608160959";
+    s.src="/src/main.js?v=202608161031";
     document.body.appendChild(s);
     // Watchdog de boot (P0 18 jul): si el grafo ESM murió en el import (caché
     // HTTP mixta tras deploys en ráfaga — main.js nuevo + módulo viejo sin el
