@@ -46,7 +46,10 @@ test('PS01 — el plan congelado pre-anclaje sale del hydrate con la verdad del 
   // la UI: fines de bloque correctos y el aviso de Q&A con el hueco REAL
   await page.waitForSelector('.mplan-row', { timeout: 8000 });
   const ui = await page.evaluate(() => ({
-    fines: [...document.querySelectorAll('.mplan-row .mplan-t2')].map(e => e.textContent.trim().slice(0, 5)),
+    // La línea dice «hasta HH:MM» (revisión de UX Writer, 16 ago): la fila
+    // mostraba dos horas sin decir cuál era cuál. Se extrae la HORA, que es lo
+    // que este test mide — que el fin sea el del BLOQUE, no el de la obra.
+    fines: [...document.querySelectorAll('.mplan-row .mplan-t2')].map(e => (e.textContent.match(/\d{1,2}:\d{2}/) || [''])[0]),
     avisos: [...document.querySelectorAll('.mplan-warn-row')].map(w => w.textContent.trim()),
   }));
   expect(ui.fines).toEqual(['19:51', '19:51', '22:01']);
