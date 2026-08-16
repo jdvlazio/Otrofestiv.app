@@ -497,7 +497,10 @@ export function renderMiPlanCalendar(state){
   ${listHtml}
   ${(()=>{
     const _hintSeen=localStorage.getItem('otrofestiv_hint_cambiar');
-    const _hasFuture=savedAgenda&&savedAgenda.schedule.some(s=>!screeningPassed(s));
+    // La hora que el hint manda a tocar está en la lista del DÍA ACTIVO. La
+    // condición miraba todo el plan, así que en un día libre aparecía «Tocá la
+    // hora…» sin una sola hora en pantalla (visto el 16 ago con FICDEH).
+    const _hasFuture=dayFilms.some(s=>!screeningPassed(s));
     if(_hintSeen||!_hasFuture) return '';
     // «de actividad» y no «la película» (revisión de UX Writer, 16 ago): el panel
     // EXCLUYE la obra actual y ofrece OTRAS del mismo tramo (±15 min), y entre
