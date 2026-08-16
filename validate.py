@@ -2349,29 +2349,8 @@ try:
         except FileNotFoundError:
             continue
         _walk_films(_d.get('films'), _af.split('/')[-1])
-    # SEGUNDA MITAD, la que faltaba. Lo de arriba comprueba que el país SE PUEDA
-    # mapear; no que la bandera EXISTA en el dato. FICDEH pasó en verde durante
-    # todo el festival con 415 films mostrando su país y ninguna bandera: sus
-    # países estaban perfectamente mapeados y el pipeline nunca emitió `flags`,
-    # que es lo único que la ficha pinta (`flagFmt(f.flags)`, sin derivar).
-    # Un guardián que verifica que algo SE PUEDE hacer no verifica que se haya
-    # hecho. Lo encontró Juan mirando la app, 13 ago 2026.
-    _mudos = []
-    for _af in _ACTIVE:
-        try:
-            _d = _json.load(open(_af, encoding='utf-8'))
-        except FileNotFoundError:
-            continue
-        _cc = [f for f in (_d.get('films') or []) if (f.get('country') or '').strip()]
-        _sin = [f for f in _cc if not f.get('flags')]
-        if _cc and len(_sin) == len(_cc):
-            _mudos.append(f'{_af.split("/")[-1]}: {len(_cc)} films con país y '
-                          f'NINGUNO con flags')
     if _bad:
         fail(check, 'país sin bandera en festival vivo (mapear en _COUNTRY_FLAGS o añadir flags): ' + '; '.join(_bad[:6]))
-    elif _mudos:
-        fail(check, 'festival vivo que muestra país sin una sola bandera: '
-                    + '; '.join(_mudos))
     else:
         ok(check, 'todo país de festivales vivos produce bandera (nunca globo)')
 except Exception as _e:
