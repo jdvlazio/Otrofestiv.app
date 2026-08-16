@@ -803,3 +803,37 @@ test('PC01 — con filtro Bogotá, el plan y las sugerencias no salen de Bogotá
   expect(r.ciudadesEnPlan).toEqual(['Bogotá']);   // NI UNA función de otra ciudad
   expect(r.ciudadesEnSugerencias.every(c => c === 'Bogotá')).toBe(true);
 });
+
+// Ronda 3 (FINCA): con 3 festivales en curso el splash pedía elegir CADA vez —
+// el auditor elegía FICDEH, recargaba y volvía al punto cero. La regla del 5 jul
+// (0 o 2+ en curso → el usuario elige) decide la PRIMERA visita; no dice nada
+// sobre recordar lo ya elegido. La memoria persiste en el dispositivo y caduca
+// sola: si el festival recordado terminó, se vuelve a preguntar.
+test('P09 — el splash recuerda el festival elegido, y lo olvida cuando terminó', async ({ page }) => {
+  const estado = () => page.evaluate(() => ({
+    on: document.querySelector('.splash-card.on')?.dataset.fest || null,
+    entrar: document.getElementById('splash-enter-btn')?.disabled ? 'disabled' : 'habilitado',
+    guardado: localStorage.getItem('otrofestiv_festival'),
+  }));
+
+  await enterFestival(page, 'ficdeh2026', '2026-08-16T09:00');
+  expect((await estado()).guardado, 'entrar guarda la elección').toBe('ficdeh2026');
+
+  // El splash SIGUE apareciendo — solo llega con la elección puesta.
+  await page.reload();
+  await page.waitForSelector('.splash-card');
+  await page.waitForTimeout(800);
+  const vuelta = await estado();
+  expect(await page.locator('#otrofestiv-splash').isVisible(), 'el splash no se salta').toBe(true);
+  expect(vuelta.on, 'preselecciona lo recordado').toBe('ficdeh2026');
+  expect(vuelta.entrar, 'y «Entrar» queda habilitado').toBe('habilitado');
+
+  // Caduca sola: un festival ya terminado no se preselecciona ni sobrevive.
+  await page.evaluate(() => localStorage.setItem('otrofestiv_festival', 'ficci65'));
+  await page.reload();
+  await page.waitForSelector('.splash-card');
+  await page.waitForTimeout(800);
+  const caducado = await estado();
+  expect(caducado.entrar, 'terminado → vuelve a preguntar').toBe('disabled');
+  expect(caducado.guardado, 'y la memoria se limpia sola').toBeNull();
+});
