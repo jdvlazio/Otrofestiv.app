@@ -585,3 +585,61 @@ test('T63 — la píldora Hoy espeja al día: se apaga en otro día, vuelve en h
     document.querySelector(`.dtab[data-day="${c.hoy}"]`).classList.contains('past'), claves);
   expect(chipPast, 'el chip de hoy también está opaco: píldora y chip coinciden').toBe(true);
 });
+
+// T64 — el aviso de función compartida nombra el vínculo, y el número solo si es cierto
+// Ronda 3 (FINCA): «Programa · Verás las otras obras» describía la SALA, no la
+// consecuencia de marcar, y el usuario se sorprendió al ver dos obras marcadas.
+// Ahora nombra el vínculo. El NÚMERO solo si todas las funciones VISIBLES
+// coinciden: «Madres de nacimiento» tiene funciones con 4, 5, 6 y 0 compañeras
+// —la unión da 11 y ninguna función tiene 11—, y afirmarlo sería falso.
+test('T64 — «Va con otras N obras» solo cuando todas sus funciones coinciden', async ({ page }) => {
+  await enterFestival(page, 'ficdeh2026', '2026-08-16T09:00');
+  const caso = await page.evaluate(() => {
+    const bog = f => (f.venue || '').includes('Bogotá');
+    // Ambos casos se buscan sobre las funciones VISIBLES (futuras + ciudad),
+    // que son exactamente las que mira la ficha. Buscar el caso variable sobre
+    // TODAS las funciones elegía una obra que en Bogotá sí es uniforme, y el
+    // test sobrevivía a la mutación.
+    const vis = {};
+    FILMS.filter(f => f._slotKey && f.day >= '2026-08-17' && bog(f))
+      .forEach(f => (vis[f.title] = vis[f.title] || []).push(f));
+    const cuentas = (scr, t) => { const c = new Set(scr.map(sc =>
+      new Set(FILMS.filter(o => o._slotKey === sc._slotKey && o.title !== t).map(o => o.title)).size));
+      c.delete(0); return c; };
+    let uniforme = null, n = 0, variable = null;
+    for (const [t, scr] of Object.entries(vis)) { const c = cuentas(scr, t);
+      if (c.size === 1 && [...c][0] > 1) { uniforme = t; n = [...c][0]; break; } }
+    for (const [t, scr] of Object.entries(vis)) { if (cuentas(scr, t).size > 1) { variable = t; break; } }
+    return { uniforme, n, variable };
+  });
+  expect(caso.uniforme, 'FICDEH tiene un caso uniforme').not.toBeNull();
+
+  // La ciudad se elige por la UI (el camino real): setear activeVenue a mano
+  // deja el sheet de ciudad abierto y la ficha no hereda el contexto igual.
+  await page.evaluate(() => {
+    const r = [...document.querySelectorAll('#city-sheet [data-action]')]
+      .find(x => x.textContent.includes('Bogotá'));
+    if (r) r.click();
+  });
+  await page.waitForTimeout(600);
+
+  const avisoDe = async (titulo) => {
+    await page.evaluate((t) => openPelSheet(t), titulo);
+    await page.waitForSelector('#pel-sheet.open', { timeout: 8000 });
+    await page.waitForTimeout(400);
+    return page.evaluate(() => [...document.querySelectorAll(
+      '#pel-sheet .meta-banner-text, #pel-sheet [class*=aviso] *')]
+      .map(e => e.textContent.replace(/\s+/g, ' ').trim())
+      .find(x => /(obras|cortos)/i.test(x) && x.length < 120) || '');
+  };
+
+  const conNumero = await avisoDe(caso.uniforme);
+  expect(conNumero, 'coinciden → dice el número').toContain(`otras ${caso.n} obras`);
+  expect(conNumero, 'y nombra el vínculo, no la sala').toContain('en la misma función');
+  expect(conNumero, 'ya no describe lo que verás').not.toMatch(/Verás/);
+
+  expect(caso.variable, 'FICDEH tiene un caso variable').not.toBeNull();
+  const sinNumero = await avisoDe(caso.variable);
+  expect(sinNumero, 'si varían, nombra el vínculo igual').toContain('en la misma función');
+  expect(sinNumero, 'si varían, NO inventa un número').not.toMatch(/otras \d+ obras/);
+});

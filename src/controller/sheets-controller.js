@@ -226,6 +226,7 @@ export function openPelSheet(title){
   // ANCLAJE: ¿esta obra comparte función con otra? (`_slotKey` lo marca el
   // loader en los festivales que declaran `sharedSlotIsOneScreening`).
   const _anclada=screenings.some(s=>s._slotKey&&FILMS.some(o=>o._slotKey===s._slotKey&&o.title!==f.title));
+  // cuántas COMPAÑERAS tiene: títulos distintos que comparten su slot.
   const totalFn=FILMS.filter(fi=>fi.title===f.title).length;
   const unica=totalFn===1;
   const DAY_ABB=['MAR','MIÉ','JUE','VIE','SÁB','DOM'];
@@ -247,6 +248,21 @@ export function openPelSheet(title){
   const _yaElegida=sc=>savedAgenda&&savedAgenda.schedule.some(e=>e._title===f.title&&e.day===sc.day&&e.time===sc.time);
   const _todas=[...future,...past];
   const allScr=_ciudadSel?_todas.filter(sc=>venueMatches(sc.venue,activeVenue)||_yaElegida(sc)):_todas;
+  // Cuántas compañeras anuncia el aviso: se cuenta sobre allScr —las funciones
+  // que la ficha MUESTRA (futuras, de tu ciudad)—, no sobre el histórico, y solo
+  // se afirma si TODAS coinciden. «Madres de nacimiento» tiene 10 funciones con
+  // 4, 5, 6 y hasta 0 compañeras: la unión da 11 y ninguna función tiene 11 —
+  // decirlo sería la misma afirmación falsa que venimos borrando (medido el
+  // 16 ago). Con cuentas distintas → 0 → el aviso da el vínculo sin número.
+  const _ancladaN=()=>{
+    const _cuentas=new Set();
+    allScr.forEach(sc=>{
+      if(!sc._slotKey) return;
+      _cuentas.add(new Set(FILMS.filter(o=>o._slotKey===sc._slotKey&&o.title!==f.title).map(o=>o.title)).size);
+    });
+    _cuentas.delete(0);              // una función suelta no define el vínculo
+    return _cuentas.size===1?[..._cuentas][0]:0;
+  };
   const _ocultas=_todas.length-allScr.length;
   // La ciudad se dice UNA vez, en el banner de Funciones (Juan, 7 ago): repetirla
   // bajo cada sede cuando ya filtraste por ella es decir dos veces lo mismo.
@@ -341,7 +357,7 @@ export function openPelSheet(title){
         en rojo: lo que invalida se lee antes de lo que matiza (DESIGN 8.4.6). La
         fila afectada lleva su propia marca (hora tachada / atenuada) — el aviso
         explica, la fila señala; ninguna de las dos hace el trabajo sola. */''}
-    ${_avisosBand(f, {prog:_anclada?'obras':null, scrs:allScr})}
+    ${_avisosBand(f, {prog:_anclada?'obras':null, progN:_ancladaN(), scrs:allScr})}
     ${(()=>{
       const _tk=FESTIVAL_CONFIG[_activeFestId]||{};
       // ticket_url por FILM pisa al global (Tercer Tiempo 2026: cada sesión tiene
@@ -642,6 +658,13 @@ export function openCortoSheet(title, country, duration, section, flags, directo
   // inscripción previa: mismo componente, punto ámbar y rótulo. El rótulo dice
   // "Compartida" a secas, sin repetir el sustantivo del bloque.
   const _cortoShared=_cortoPairs.length>0;
+  // las OTRAS obras de su(s) programa(s), sin contarse a sí mismo.
+  // Mismo criterio: si sus programas tienen distinto tamaño, no se afirma un número.
+  const _cortoSharedN=(()=>{
+    const _cuentas=new Set(_cortoPairs.map(p=>((p.owner&&p.owner.film_list)||[]).filter(it=>it.title!==title).length));
+    _cuentas.delete(0);
+    return _cuentas.size===1?[..._cuentas][0]:0;
+  })();
   const _cortoScrLbl=_cortoPairs.length>1?t('label_funciones_pl'):t('label_funcion');
   const _cortoScrHdr=`<div class="sec-hdr sm">${ICONS.clock} <span>${_cortoScrLbl}</span>${_cortoPairs.length>1?`<span class="count-badge cb-neutral">${_cortoPairs.length}</span>`:''}</div>`;
   const _cortoScrBody=_cortoPairs.length
@@ -659,7 +682,7 @@ export function openCortoSheet(title, country, duration, section, flags, directo
       </div>
     </div>
         ${_cortoScrHdr}${_cortoScrBody}
-        ${_avisosBand(null, {prog:_cortoShared?'cortos':null, scrs:_cortoPairs.map(p=>p.s)})}
+        ${_avisosBand(null, {prog:_cortoShared?'cortos':null, progN:_cortoSharedN, scrs:_cortoPairs.map(p=>p.s)})}
         ${syn?`<div class="sec-hdr sm">${ICONS.text} <span>${t('label_sinopsis')}</span></div><div class="pel-sheet-synopsis">${syn}</div>`:''}
     <div class="pel-sheet-ctas">
       <button id="corto-wl-btn" class="row-center-xs pel-sheet-action-btn${inWL?' act-on btn-primary':' btn-primary'}" data-title="${escXML(parentTitle||title)}" data-action="toggleWL">${inWL?ICONS.heartFill:ICONS.heart} ${inWL?t('cta_en_intereses'):t('cta_intereses')}</button>
@@ -1499,7 +1522,19 @@ export function _avisosBand(f, opts){
   const _cual=h=>(h.length&&h.length<_src.length)?' · '+h.map(x=>_coord(x,_conCiudad)).join(' / '):'';
   const _qa=_con('has_qa');
   if(_qa.length) rows.push(['Q&A', t(_qa[0].qa_type==='guests'?'aviso_qa_ref':'aviso_qa_equipo')+_cual(_qa)]);
-  if(opts&&opts.prog) rows.push([t('badge_programa'), t(opts.prog==='cortos'?'aviso_prog_cortos':'aviso_prog_obras')]);
+  // «Va con otras 4 obras» y no «Verás las otras obras» (ronda 3 del QA, 16 ago):
+  // el tiempo verbal describía la SALA —«cuando vayas verás más cosas»— y el
+  // usuario lo leyó como dato de la función; por eso marcar una y que quedaran
+  // dos marcadas lo tomó por sorpresa. Nombrar el VÍNCULO y su tamaño mantiene
+  // el aviso donde vive (la banda de rasgos de la función) y hace que el toast
+  // posterior confirme en vez de sorprender. El número es el mismo conjunto que
+  // el toast llama «hermanas».
+  if(opts&&opts.prog){
+    const _n=opts.progN||0;
+    const _k=opts.prog==='cortos'?'aviso_prog_cortos':'aviso_prog_obras';
+    // 0 = las funciones no coinciden en cuántas compañeras hay → sin número.
+    rows.push([t('badge_programa'), _n===0?t(_k+'_s'):_n===1?t(_k+'_1'):t(_k,{n:_n})]);
+  }
   const _ins=_con('requires_registration');
   if(_ins.length) rows.push([t('badge_inscripcion'), t('aviso_inscripcion')+_cual(_ins)]);
   // Precio: la ficha dice lo MISMO que la card — ticketBadgeTarget es el dueño
