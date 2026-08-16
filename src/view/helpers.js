@@ -5,16 +5,16 @@
 // _POSTERS_N) + setters; main.js (loadFestival) los re-popula vía setters.
 // _lang se lee vía STATE BRIDGE (globalThis) igual que el resto de la capa view.
 
-import { FESTIVAL_CONFIG, TMDB_IMG } from '../config.js';
+import { FESTIVAL_BUFFER, FESTIVAL_CONFIG, TMDB_IMG } from '../config.js';
 import {
   DAY_ABBR, DAY_NUM, ICONS, _buildPosterV16, _bandTextSVG, _secLabel, _sectionColor,
-  makeProgramPoster, makeEventPoster, makeSorpresaPoster, escXML, _langDates,
+  makeProgramPoster, makeEventPoster, makeSorpresaPoster, escXML, _langDates, parseProgramTitle,
 } from './components.js';
 // _langDates se REEXPORTA: el dueño vive en components.js (helpers importa
 // components — el ciclo decide dónde vive; ver el comentario del dueño).
 export { _langDates };
 import { toMin, minToStr, parseDur, simNow, simTodayStr, _festDate } from '../domain/time.js';
-import { effectiveDuration } from '../domain/film.js';
+import { effectiveDuration, screeningBlockEndMin } from '../domain/film.js';
 import { _resolveVenue, travelMins } from '../domain/festival.js';
 import { state } from '../state/state.js';
 import { t } from '../i18n/i18n.js';
@@ -496,6 +496,45 @@ export function travelWarn(s1,s2){
     return`${ICONS.alert} ~${travel} min${_modo?' '+_modo:''} ${t('warn_entre_sedes')}`;
   }
   return null;
+}
+
+
+// conflictAccount(a,b,r) — LA CUENTA del veredicto, en un solo dueño.
+// r = screensConflictReason(a,b). Solo arma frase para 'ajustado' y 'viaje':
+// son los veredictos cuyo número era irreconstruible en pantalla (QA de ojos
+// frescos, 15 ago 2026 — un agente descartó una función creyendo que la app
+// se equivocaba: los datos visibles no se solapaban; el margen de sala sí).
+// 'solape' es un dato visible y 'ciudad' tiene su propia frase (el sujeto es
+// el PLAN, no la película).
+// Doctrina (Juan, 15 ago): la cuenta se MUESTRA, el veredicto se SUGIERE.
+// Los fines de película son dato (indicativo); llegada y margen son estimación
+// (condicional: «llegarías», «no te daría el tiempo», «te quedarían N min»).
+// Mismos números que la regla (blockDuration / Q&A solo con traslado / buffer):
+// no recalcula la decisión, la explica.
+export function conflictAccount(a,b,r){
+  if(!r||(r.kind!=='viaje'&&r.kind!=='ajustado')) return '';
+  // f1 = la que termina primero; f2 = aquella a la que el tiempo no daría.
+  const [f1,f2]=r.bFirst?[b,a]:[a,b];
+  const t1=parseProgramTitle(f1._title||f1.title||'').displayTitle;
+  const t2=parseProgramTitle(f2._title||f2.title||'').displayTitle;
+  const end=screeningBlockEndMin(f1);                   // fin de película: dato
+  const start=toMin(f2.time);
+  const _b=x=>`<b>${x}</b>`;
+  if(r.kind==='ajustado'){
+    // misma sede: el Q&A no compromete (doctrina 30 jul) — cuenta con el buffer
+    return t('cuenta_salas',{t1:`<i>${t1}</i>`,end:_b(minToStr(end)),buffer:FESTIVAL_BUFFER,
+      arr:_b(minToStr(end+FESTIVAL_BUFFER)),t2:`<i>${t2}</i>`,start:_b(minToStr(start))});
+  }
+  // viaje: con traslado el Q&A sí cuenta (durationForTravel) — se muestra aparte
+  const qaEnd=end+(f1.has_qa?30:0);
+  const arr=qaEnd+r.travel;                             // llegada: estimación
+  const base=t(f1.has_qa?'cuenta_viaje_qa':'cuenta_viaje',
+    {t1:`<i>${t1}</i>`,end:_b(minToStr(end)),qaEnd:_b(minToStr(qaEnd)),
+     travel:_b(_minFmt(r.travel)),arr:_b(minToStr(arr))});
+  const verdict=arr>start
+    ? t('cuenta_no_llegas',{start:_b(minToStr(start))})
+    : t('cuenta_al_filo',{start:_b(minToStr(start)),m:start-arr});
+  return `${base} ${verdict}`;
 }
 
 // Retraso colaborativo (Fase B) — badge informativo desde el consenso derivado.

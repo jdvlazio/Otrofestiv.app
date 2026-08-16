@@ -177,6 +177,11 @@ export function screeningPassed(s){
 // screeningEndMin (effectiveDuration = parseDur + Q&A). NOTA: screeningPassed
 // (arriba) es OTRO concepto — "ya no llegás" (arranque+10 de gracia), no "terminó".
 export function screeningEndMin(s){ return toMin(s.time)+effectiveDuration(s); }
+// screeningBlockEndMin — el fin de las PELÍCULAS (sin Q&A): lo que la pantalla
+// imprime como hora de salida. Es el «termina 16:59» de la cuenta del veredicto
+// (conflictAccount, 15 ago 2026): el Q&A y el viaje se muestran como sumandos
+// aparte, así que la frase arranca del fin duro, no del efectivo.
+export function screeningBlockEndMin(s){ return toMin(s.time)+blockDuration(s); }
 // screeningEndDate — el MISMO fin canónico, como instante absoluto (cruza días).
 // Dueño único del filtro "esta entrada del plan ya terminó": renderUnconfirmed y
 // _updateMiPlanBadge lo reconstruían por separado, y el "terminó hace X min"
@@ -188,6 +193,10 @@ export function screeningEndDate(s){
   end.setMinutes(end.getMinutes()+effectiveDuration(s));
   return end;
 }
+// isShortFilm — «es un corto» como predicado de DOMINIO (≤40 min con duración
+// conocida). Nació del toast del programa (15 ago 2026): la vista decidía
+// cortos/obras parseando duraciones a mano, que es cómo divergen los criterios.
+export function isShortFilm(f){ const d=parseDur(f&&f.duration); return d>0&&d<=40; }
 export function screeningEnded(s,nowMin){ return screeningEndMin(s)<=nowMin; }
 export function screeningNow(s,nowMin){ return toMin(s.time)<=nowMin&&!screeningEnded(s,nowMin); }
 

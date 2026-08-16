@@ -13,7 +13,7 @@ import {
   ICONS, _secLabel, _secLabelFull, _sectionColor, escXML, makeEventPoster, makeProgramPoster, parseProgramTitle, renderAvBlocksHTML, renderFlowProgress,
 } from './components.js';
 import {
-  DAYS, DAY_SHORT_EN, _dayChips, _lblLocalized, _minFmt, _mkCortoItemHtml, _posterThumb, getCortoItemPoster, itemPosterParts, posterParts, dayChip, dayLabel, dayLabelLong, durFmt, emptyState, emptyStateHero, flagFmt, getFilmPoster, isToday, keepCityOnly, mplanBlockType, mplanEndStr, sala, starsText, travelWarn, vcfg, venueCity, venueMatches, delayConsensusBadge,
+  DAYS, DAY_SHORT_EN, _dayChips, _lblLocalized, _minFmt, _mkCortoItemHtml, _posterThumb, getCortoItemPoster, itemPosterParts, posterParts, dayChip, dayLabel, dayLabelLong, durFmt, emptyState, emptyStateHero, flagFmt, getFilmPoster, isToday, keepCityOnly, mplanBlockType, mplanEndStr, sala, starsText, travelWarn, vcfg, venueCity, venueMatches, delayConsensusBadge, conflictAccount,
 } from './helpers.js';
 import {
   _festDate, _festNowMin, festivalEnded, minToStr, simNow, simTodayStr, toMin,
@@ -1368,7 +1368,7 @@ export function buildResultHTML(scenarios){
       } else {
         // Buscar conflicto con el schedule actual
         let conflictWith=null,conflictWhen=null;
-        let conflictReason=null;
+        let conflictReason=null,conflictPair=null;
         for(const s of screens){
           for(const c of sc.schedule){
             const _r=screensConflictReason(s,c);
@@ -1376,8 +1376,11 @@ export function buildResultHTML(scenarios){
               const{displayTitle:ct}=parseProgramTitle(c._title||'');
               conflictWith=ct;
               conflictReason=_r;
+              conflictPair={s,c};
               const _ds=dayLabel(c.day)||c.day||'';
-              conflictWhen=_ds+(c.time?' '+c.time:'');
+              // 'solape' lleva día+hora; las frases con cuenta ya dicen las
+              // horas → solo el día, para no repetir.
+              conflictWhen=_r.kind==='solape'?_ds+(c.time?' '+c.time:''):_ds;
               break;
             }
           }
@@ -1393,19 +1396,17 @@ export function buildResultHTML(scenarios){
           // se equivoca 3× (Bogotá→Ibagué: dice 13 h, son ~4). Decimos el dato
           // (la ciudad) y que el usuario juzgue.
           const _ico=_k==='ciudad'?ICONS.pin:_k==='viaje'?ICONS.route:ICONS.clock;
+          // 'ciudad': el sujeto es TU PLAN, no la película — «Es en Medellín»
+          // nombraba la ciudad del plan como si fuera la de la obra y le hizo
+          // descartar al agente obras que sí estaban en su ciudad (QA 15 ago).
+          // 'viaje'/'ajustado': la cuenta completa (conflictAccount, dueño
+          // único) en vez de «muy justo» — donde estimamos, sugerimos.
           const _msg=_k==='ciudad'
-            ? t('conflict_ciudad',{city:conflictReason.city})
+            ? t('conflict_ciudad_plan',{cityPlan:conflictReason.city,time:conflictPair.c.time||'',cityFn:conflictReason.cityFrom,timeFn:conflictPair.s.time||''})
             : _k==='solape'
             ? t('conflict_solapa',{title:conflictWith})
-            : t(conflictReason.bFirst?'conflict_justo_desde':'conflict_justo_hasta',{title:conflictWith});
-          // 'ciudad' sin detalle: "Es en Ibagué" ya lo dice todo (Juan, UX Writer)
-          const _det=_k==='ciudad'
-            ? ''
-            : _k==='viaje'
-            ? t('conflict_viaje_det',{travel:_minFmt(conflictReason.travel), gap:_minFmt(conflictReason.gap)})
-            : _k==='ajustado' ? t('conflict_hueco_det',{gap:_minFmt(conflictReason.gap)}) : '';
-          reason=`<div class="excl-reason conflict">${_ico} ${_msg}${conflictWhen?' · '+conflictWhen:''}</div>`
-            +(_det?`<div class="excl-reason-det">${_det}</div>`:'');
+            : conflictAccount(conflictPair.s,conflictPair.c,conflictReason);
+          reason=`<div class="excl-reason conflict">${_ico} ${_msg}${conflictWhen?' · '+conflictWhen:''}</div>`;
           canInclude=true;
         } else if(screens.length){
           reason=`<div class="excl-reason">${t('plan_choca')}</div>`;

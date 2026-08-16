@@ -18,7 +18,7 @@ import { cloudReportDelay, cloudClearDelay, cloudScreeningKey } from './delays-c
 import { _getProgramaPhase, _reRenderIntereses, _updateProgramaActiveFilter, initProgramaModeBar, showAgView, showDayView, switchMainNav, updateAgTab, _markPreserveResult } from './pipeline.js';
 import { searchClose, seccionClose } from './overlays.js';
 import { dayFullyPassed, festivalEnded, simTodayStr, toMin } from '../domain/time.js';
-import { scoreFilm, screeningPassed } from '../domain/film.js';
+import { scoreFilm, screeningPassed, isShortFilm } from '../domain/film.js';
 import { isScreeningBlocked, screensConflict, sortScreensByStrategy } from '../domain/schedule.js';
 import { state } from '../state/state.js';
 import { storage } from '../storage/storage.js';
@@ -106,9 +106,17 @@ export function toggleWL(title,e){
       const _short=displayTitle.length>28?displayTitle.slice(0,26)+'…':displayTitle;
       setTimeout(()=>showToast(`"${_short}" ${t('plan_bloqueado_disp')}`,'warn',5000),300);
     } else if(_hermanas.length){
-      // Desde la grilla no se ve el banner de la ficha: si sumamos una obra que
-      // el usuario no eligió, hay que decirlo en el momento.
-      showToast(`${t('badge_programa')} · ${t('aviso_prog_obras')}`,'info',4000);
+      // Desde la grilla no se ve el banner de la ficha: si sumamos obras que
+      // el usuario no eligió, hay que decir CUÁNTAS y POR QUÉ (QA de ojos
+      // frescos, 15 ago 2026: tocó UN corazón y aparecieron 5 marcados —
+      // «Programa · Verás las otras obras» no explicaba ni el número ni la
+      // causa). Cortos si todas las compañeras lo son (≤40 min); obras si no.
+      const _n=_hermanas.length;
+      const _todosCortos=_hermanas.every(h=>isShortFilm(FILMS.find(f=>f.title===h)));
+      const _msg=_todosCortos
+        ?`${t(_n===1?'toast_prog_uno':'toast_prog_n',{n:_n})} · ${t('toast_prog_juntos')}`
+        :`${t(_n===1?'toast_prog_obra_uno':'toast_prog_obra_n',{n:_n})} · ${t('toast_prog_obra_juntas')}`;
+      showToast(_msg,'info',4000);
     } else if(activeMNav==='mnav-cartelera'||activeMNav==='mnav-seleccion'){
       showActionToast(`${ICONS.heartFill} ${t('cta_en_intereses')}`,`${ICONS.bookmark} ${t('cta_priorizar')}`,()=>togglePriority(title));
     } else {

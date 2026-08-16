@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202608152337">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202608152337">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202608160015">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202608160015">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -1334,6 +1334,11 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .conflict-handle{width:36px;height:4px;background:rgba(255,255,255,.1);border-radius:var(--r-handle);margin:12px auto 0}
 .conflict-hdr{padding:14px 20px 12px;border-bottom:1px solid var(--bdr-l)}
 .conflict-title{font-size:var(--t-md);font-weight:var(--w-display);letter-spacing:-.02em;color:var(--white)}
+/* .cuenta — cuando el título ES la aritmética del veredicto (conflictAccount):
+   frase de 2 líneas, tamaño de cuerpo; los <b> llevan el énfasis de los números. */
+.conflict-title.cuenta{font-size:var(--t-base);font-weight:var(--w-regular);letter-spacing:0;line-height:1.45;color:var(--gray)}
+.conflict-title.cuenta b{color:var(--white);font-weight:var(--w-semi)}
+.conflict-title.cuenta i{font-style:italic}
 .conflict-sub{font-size:var(--t-base);color:var(--gray);margin-top:var(--sp-1)}
 .conflict-arena{padding:var(--sp-4) var(--sp-5);display:flex;flex-direction:column;gap:var(--sp-3)}
 .conflict-card{display:flex;align-items:center;gap:var(--sp-3);padding:var(--sp-3) var(--sp-4);border-radius:var(--r);border:1px solid var(--bdr);background:var(--surf-3)}
@@ -2378,8 +2383,14 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
   position:relative;
 } /* anatomía: regla dueña BOTÓN PRIMARIO (spinner .loading abajo) */
 .splash-enter-btn:active{opacity:.75}
-.splash-enter-btn:disabled{opacity:.35;cursor:default}
-.splash-enter-btn:disabled:active{opacity:.35}
+.splash-enter-btn:disabled{opacity:.22;filter:saturate(.4);cursor:default}
+.splash-enter-btn:disabled:active{opacity:.22}
+/* Splash A (QA ojos frescos, 15 ago 2026): sin festival elegido el botón se ve
+   APAGADO de verdad y una línea dice qué hacer. visibility (no display): el
+   hint reserva su alto y el splash no salta al elegir. Cero JS: el estado ya
+   vive en el disabled del botón. */
+.splash-hint-pick{visibility:hidden;font-size:var(--t-sm);color:var(--gray);text-align:center;margin-top:var(--sp-2)}
+.splash-enter-btn:disabled+.splash-hint-pick{visibility:visible}
 .splash-enter-btn.loading{pointer-events:none;color:transparent}
 .splash-enter-btn.loading::after{
   content:'';position:absolute;inset:0;margin:auto;
@@ -2826,6 +2837,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
       <div class="splash-info-dates" id="splash-info-dates"></div>
     </div>
     <button class="splash-enter-btn" id="splash-enter-btn" data-i18n="auth_entrar" data-action="dismissSplash" disabled>Entrar</button>
+    <div class="splash-hint-pick" data-i18n="splash_hint_pick">Tocá un afiche para elegir</div>
   </div>
   <div class="splash-tagline">
     <div class="splash-tagline-line" data-i18n="splash_tagline">Más de lo que crees</div>
@@ -3071,7 +3083,7 @@ setTimeout(function(){
   <div class="conflict-handle"></div>
   <div class="conflict-hdr">
     <div class="ctx-eyebrow"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z"/></svg><span data-i18n="conflict_eyebrow">Conflicto de horario</span></div>
-    <div class="conflict-title" id="conflict-title-el" data-i18n="conflict_titulo">Se solapan en el mismo tramo</div>
+    <div class="conflict-title" id="conflict-title-el">Se solapan en el mismo tramo</div>
     <div class="conflict-sub" data-i18n="conflict_cual">¿Cuál querés en tu plan?</div>
   </div>
   <div class="conflict-arena">
@@ -3242,7 +3254,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202608152337";
+    s.src="/src/main.js?v=202608160015";
     document.body.appendChild(s);
     // Watchdog de boot (P0 18 jul): si el grafo ESM murió en el import (caché
     // HTTP mixta tras deploys en ráfaga — main.js nuevo + módulo viejo sin el
