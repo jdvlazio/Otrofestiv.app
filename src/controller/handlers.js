@@ -120,10 +120,11 @@ export function toggleWL(title,e){
         ?`${t(_n===1?'toast_prog_uno':'toast_prog_n',{n:_n})} · ${t('toast_prog_juntos')}`
         :`${t(_n===1?'toast_prog_obra_uno':'toast_prog_obra_n',{n:_n})} · ${t('toast_prog_obra_juntas')}`;
       showToast(_msg,'info',4000);
-    } else if(activeMNav==='mnav-cartelera'||activeMNav==='mnav-seleccion'){
-      showActionToast(`${ICONS.heartFill} ${t('cta_en_intereses')}`,`${ICONS.bookmark} ${t('cta_priorizar')}`,()=>togglePriority(title));
     } else {
-      showToast(`${ICONS.heartFill} ${t('cta_en_intereses')}`,'info');
+      // El atajo a Priorizar ya no depende de la pestaña (re-corrida del QA,
+      // 16 ago): la ficha se abre desde cualquiera de las cuatro y el usuario
+      // no tiene por qué recordar desde dónde venía para que se le ofrezca.
+      showActionToast(`${ICONS.heartFill} ${t('cta_en_intereses')}`,`${ICONS.bookmark} ${t('cta_priorizar')}`,()=>togglePriority(title));
     }
   }
   // 4. PERSIST + surgical patch (branch B y C). Render automático vía pipeline.
@@ -212,9 +213,12 @@ export function togglePelWL(title,e){
   btn.innerHTML=(inWL?ICONS.heartFill:ICONS.heart)+' '+(inWL?t('cta_en_intereses'):t('cta_intereses'));
   btn.className='pel-sheet-action-btn'+(inWL?' act-on btn-primary':' btn-primary');
   if(wasInWL&&!inWL) closePelSheet(); // quitar de intereses → cerrar sheet
-  if(!wasInWL&&inWL){
-    showActionToast(`${ICONS.heartFill} ${t('cta_en_intereses')}`,`${ICONS.bookmark} ${t('cta_priorizar')}`,()=>togglePriority(title));
-  }
+  // SIN toast propio: el dueño del mensaje es toggleWL, que ya distingue los
+  // cuatro casos. Este envoltorio tiraba el suyo DESPUÉS y pisaba el verdadero:
+  // agregar desde la ficha una obra que ancla a otras sumaba 12 y anunciaba solo
+  // «En Intereses», mientras la grilla decía «+11 cortos del mismo programa»
+  // (medido en la re-corrida del QA de ojos frescos, 16 ago 2026). Los otros dos
+  // envoltorios del corazón —lista de Programa y cerrar-y-quitar— ya se callaban.
 }
 
 export function setDelay(title,day,time,addMins,venue){
