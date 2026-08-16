@@ -152,7 +152,7 @@ function _screeningRows(pairs, opts){
     // vive abajo, a nivel de bloque (ver _bloqueCtrl).
     if(!owner.is_recurring&&!s._cancelled){
       if(!_planned&&!festivalEnded()&&!screeningPassed(s)){
-        _addCtrl=`<button class="suggestion-add" data-action="addSuggestion" data-title="${owner.title.replace(/"/g,'&quot;')}" data-day="${s.day}" data-time="${s.time}" data-stop="1">${ICONS.plus} ${t('misc_anadir')}</button>`;
+        _addCtrl=`<button class="suggestion-add" data-action="addSuggestion" data-title="${owner.title.replace(/"/g,'&quot;')}" data-day="${s.day}" data-time="${s.time}" data-stop="1">${ICONS.plus} ${t('plan_agendar')}</button>`;
       }
     }
     return`<div class="pel-sheet-screening${_planned?' in-plan':''}${s._cancelled?' scr-void':''}"${isPast?' style="opacity:.4"':''}>
@@ -269,14 +269,14 @@ export function openPelSheet(title){
     // (Juan, 9 ago 2026). La cuenta viaja en el aria-label — quien no ve el corchete
     // sigue oyendo «Añadir las 2 sesiones». Cero strings nuevas: las cuatro existían.
     if(_enPlan)
-      _bloqueCtrl=`<button class="suggestion-add blk-quitar" data-action="removeRecurringBlock" data-title="${f.title.replace(/"/g,'&quot;')}" data-stop="1" aria-label="${t(_enPlan===1?'bloque_quitar_1':'bloque_quitar',{n:_enPlan})}">${ICONS.x} ${t('misc_quitar')}</button>`;
+      _bloqueCtrl=`<button class="suggestion-add blk-quitar" data-action="removeRecurringBlock" data-title="${f.title.replace(/"/g,'&quot;')}" data-stop="1" aria-label="${t(_enPlan===1?'bloque_quitar_1':'bloque_quitar',{n:_enPlan})}">${ICONS.x} ${t('misc_sacar')}</button>`;
     // Un taller que YA EMPEZÓ no se puede tomar entero, así que no se ofrece.
     // Sin esto se ofrecían «las sesiones que quedan», y eso rompía dos cosas: el
     // texto («Añadir las 1 sesiones», cazado con los talleres de FICMA) y el
     // invariante — verifyPlan cuenta TODAS las del catálogo, así que un plan con
     // 1 de 2 quedaba marcado como bloque-incompleto por el propio chokepoint.
     else if(_todasSes.length&&!_empezado)
-      _bloqueCtrl=`<button class="suggestion-add blk-add" data-action="addRecurringBlock" data-title="${f.title.replace(/"/g,'&quot;')}" data-stop="1" aria-label="${t(_todasSes.length===1?'bloque_anadir_1':'bloque_anadir',{n:_todasSes.length})}">${ICONS.plus} ${t('misc_anadir')}</button>`;
+      _bloqueCtrl=`<button class="suggestion-add blk-add" data-action="addRecurringBlock" data-title="${f.title.replace(/"/g,'&quot;')}" data-stop="1" aria-label="${t(_todasSes.length===1?'bloque_anadir_1':'bloque_anadir',{n:_todasSes.length})}">${ICONS.plus} ${t('plan_agendar')}</button>`;
   }
   // ── El GRUPO: corchete + eslabón + un solo control ────────────────────────
   // Las sesiones van unidas por un corchete recto con eslabón, y el control queda
