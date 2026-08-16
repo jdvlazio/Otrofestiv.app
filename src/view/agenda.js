@@ -972,6 +972,8 @@ export function renderFilmListHTML(state){
 
   // ── Próxima función futura de un film ──────────────────────────────────
   function _nextScreening(title){
+    // plannable-ok: la próxima función del CATÁLOGO (dato de la obra), no del
+    // plan — filtrarla por ciudad escondería que la obra existe en otra parte.
     const future=FILMS.filter(f=>f.title===title&&!screeningPassed(f))
       .sort((a,b)=>{ const d=(a.day_order||0)-(b.day_order||0); return d||toMin(a.time)-toMin(b.time); });
     return future[0]||null;
@@ -1014,6 +1016,7 @@ export function renderFilmListHTML(state){
     const posterHtml=_posterThumb(f,'int-item-poster');
     // p8: jerarquía aprobada (mismo orden que Programa lista) — Título / Días
     // disponibles (ámbar) / Venue·Duración (gris) / Sección+flags (blanco 60%).
+    // plannable-ok: días del CATÁLOGO para los chips de la obra (informativo).
     const future=FILMS.filter(fi=>fi.title===title&&!screeningPassed(fi)); // días disponibles = futuras
     const daysHtml=_dayChips(future);                                       // ámbar "THU 4 · FRI 5"
     const venueStr=next?vcfg(next.venue).short:'';                          // venue de la próxima función
@@ -1361,6 +1364,9 @@ export function buildResultHTML(scenarios){
       const safeT=excTitle.replace(/"/g,'&quot;').replace(/'/g,"&#39;");
       const posterHtml=_posterThumb(f,'int-item-poster');
       // Detectar razón usando screensConflict contra el schedule activo
+      // plannable-ok: acá el catálogo completo es OBLIGATORIO — hay que ver la
+      // función de la otra ciudad para poder decir por qué quedó fuera. Con el
+      // dueño (que ya la filtró) diríamos «sin funciones», que es falso.
       const screens=FILMS.filter(fi=>fi.title===excTitle&&!screeningPassed(fi)&&!isScreeningBlocked(fi));
       let reason='',canInclude=false;
       if(!screens.length){
@@ -1407,7 +1413,10 @@ export function buildResultHTML(scenarios){
             ? t('conflict_solapa',{title:conflictWith})
             : conflictAccount(conflictPair.s,conflictPair.c,conflictReason);
           reason=`<div class="excl-reason conflict">${_ico} ${_msg}${conflictWhen?' · '+conflictWhen:''}</div>`;
-          canInclude=true;
+          // 'ciudad' NO ofrece «+ Incluir»: el plan por ciudad (#594) prohíbe
+          // exactamente eso, así que el botón prometía algo que el motor iba a
+          // rechazar. La fila igual explica el motivo — informar sí, ofrecer no.
+          canInclude=_k!=='ciudad';
         } else if(screens.length){
           reason=`<div class="excl-reason">${t('plan_choca')}</div>`;
         } else {

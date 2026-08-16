@@ -12,14 +12,14 @@ import { showActionModal, showToast } from '../view/feedback.js';
 import { _renderProgramaContent, lugarClose, render, renderNoticesBanner, _noticeKey } from '../view/programa.js';
 import { renderAgenda, updateCardState, updateHorarioPrioBtn } from '../view/agenda.js';
 import { keepCityOnly } from '../view/helpers.js';
-import { runCalc } from './calc.js';
+import { runCalc, _planCityVenues } from './calc.js';
 import { commitPlan, saveDelays, saveLastSlot, savePrio, saveSavedAgenda, saveState, saveWL, saveWatched } from './persistence.js';
 import { cloudReportDelay, cloudClearDelay, cloudScreeningKey } from './delays-cloud.js';
 import { _getProgramaPhase, _reRenderIntereses, _updateProgramaActiveFilter, initProgramaModeBar, showAgView, showDayView, switchMainNav, updateAgTab, _markPreserveResult } from './pipeline.js';
 import { searchClose, seccionClose } from './overlays.js';
 import { dayFullyPassed, festivalEnded, simTodayStr, toMin } from '../domain/time.js';
 import { scoreFilm, screeningPassed, isShortFilm } from '../domain/film.js';
-import { isScreeningBlocked, screensConflict, sortScreensByStrategy } from '../domain/schedule.js';
+import { isScreeningBlocked, screensConflict, sortScreensByStrategy, plannableScreens } from '../domain/schedule.js';
 import { state } from '../state/state.js';
 import { storage } from '../storage/storage.js';
 import { t } from '../i18n/i18n.js';
@@ -99,6 +99,9 @@ export function toggleWL(title,e){
       watchlist: _wl,
       watched: state._delFromSet(watched, title),
     });
+    // plannable-ok: la pregunta es POR QUÉ no se puede planear (todas bloqueadas
+    // por tu disponibilidad). plannableScreens ya las filtró y no podría distinguir
+    // «bloqueada» de «no existe».
     const _allScreens=FILMS.filter(f=>f.title===title&&!screeningPassed(f));
     const _allBlocked=_allScreens.length>0&&_allScreens.every(s=>isScreeningBlocked(s));
     if(_allBlocked){
@@ -457,7 +460,13 @@ export function forceInclude(title){
   if(festivalEnded()){showToast(t('notice_fest_term'),'info');return;}
   if(!cachedResult||!cachedResult.scenarios.length) return;
   const sc=cachedResult.scenarios[cachedResult.currentIdx||0];
-  const screens=FILMS.filter(f=>f.title===title&&!screeningPassed(f)&&!isScreeningBlocked(f));
+  // plannableScreens (el dueño) y no una copia: «+ Incluir» insertaba en el
+  // escenario una función de otra ciudad, justo lo que la regla de plan por
+  // ciudad prohíbe. La vista SÍ usa el catálogo completo —necesita la función
+  // de la otra ciudad para poder explicar el motivo— y por eso ya no ofrece el
+  // botón en ese caso; esto es el cinturón por si se llega por otro camino.
+  globalThis.PLAN_CITY_VENUES=_planCityVenues();
+  const screens=plannableScreens(title);
   if(!screens.length){showToast(t('plan_sin_horario'),'info');return;}
   // Buscar el primer (screening del excluido, conflicto en schedule) y delegar.
   for(const s of screens){
@@ -926,9 +935,18 @@ export function saveCurrentScenario(){
 
 export function squeezeExcluded(schedule, excludedTitles){
   const result=[...schedule];
+  // La restricción de ciudad se REPUBLICA acá: entre calcular y guardar el
+  // usuario pudo cambiar el filtro, y este camino corre fuera de runCalc.
+  globalThis.PLAN_CITY_VENUES=_planCityVenues();
   // Ordenar excluidas por score descendente — misma lógica que el algoritmo
   const scored=excludedTitles.map(t=>{
-    const screens=FILMS.filter(f=>f.title===t&&!screeningPassed(f)&&!isScreeningBlocked(f));
+    // plannableScreens = DUEÑO ÚNICO de «qué funciones son planificables».
+    // Acá vivía una segunda implementación (FILMS.filter con 2 de los 4
+    // filtros) y por esa puerta el plan volvía a cruzar ciudades: el motor
+    // excluía la función de Medellín y el squeeze la reinsertaba al guardar,
+    // con el filtro Bogotá puesto (medido el 16 ago 2026, FICDEH). También
+    // se saltaba `_cancelled` y la regla del taller entero.
+    const screens=plannableScreens(t);
     return{title:t,screens,score:scoreFilm(t,screens,prioritized.has(t),[...watchlist])};
   }).filter(g=>g.screens.length>0).sort((a,b)=>b.score-a.score);
 

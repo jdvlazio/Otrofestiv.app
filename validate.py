@@ -2552,6 +2552,45 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar plan-write-chokepoint: {_e}')
 
+# ── [plannable-dueno-unico] nadie reimplementa «qué funciones son planificables» ─
+# El 16 ago 2026 el plan volvió a cruzar ciudades con el filtro puesto, y NO fue
+# por la regla: plannableScreens filtraba bien. Fue `squeezeExcluded` en
+# handlers.js, que tenía su propia copia del predicado (FILMS.filter con 2 de los
+# 4 filtros) y reinsertaba las excluidas AL GUARDAR — después del motor, y exenta
+# del chequeo de conflicto por `_squeezed`. Una regla con dos implementaciones es
+# una regla que se desincroniza; y este chequeo mira el CRUCE (quién combina
+# título + pasada/bloqueada fuera del dueño), no la forma de una sola línea.
+check = 'plannable-dueno-unico'
+try:
+    import glob as _glob, re as _re
+    _off = []
+    for _sf in _glob.glob('src/**/*.js', recursive=True):
+        _p = _sf.replace('\\', '/')
+        if _p.endswith('src/domain/schedule.js'):
+            continue  # la casa del dueño
+        _src = open(_sf, encoding='utf-8').read()
+        # FILMS.filter(...) que combine match por título con los filtros temporales
+        for _m in _re.finditer(r'FILMS\.filter\(([^;]{0,240}?)\)', _src, _re.S):
+            _body = _m.group(1)
+            if '.title===' not in _body.replace(' ', ''):
+                continue
+            if 'screeningPassed' in _body or 'isScreeningBlocked' in _body:
+                _ln = _src[:_m.start()].count('\n') + 1
+                # Exención EXPLÍCITA: `// plannable-ok: <razón>` en las 4 líneas
+                # previas. Las preguntas sobre el CATÁLOGO (qué días existe la
+                # obra, por qué quedó fuera) son legítimamente otras y necesitan
+                # ver lo que el dueño ya filtró — pero se declaran, no se asumen.
+                _prev = '\n'.join(_src.splitlines()[max(0, _ln - 5):_ln - 1])
+                if 'plannable-ok:' in _prev:
+                    continue
+                _off.append(f'{_sf}:{_ln}')
+    if _off:
+        fail(check, 'predicado de «función planificable» reimplementado fuera de plannableScreens (usar el dueño): ' + '; '.join(_off))
+    else:
+        ok(check, 'plannableScreens es el dueño único del predicado de planificable')
+except Exception as _e:
+    warn(check, f'no se pudo verificar: {_e}')
+
 # ── [fin-inline-ratchet] la aritmética de fin fuera del dominio no puede CRECER ─
 # PR 3 del plan de confiabilidad (31 jul 2026). El tech lead descartó el rewrite
 # big-bang del intervalo canónico (generalidad especulativa); en su lugar, patrón
@@ -3370,11 +3409,11 @@ try:
     #   agenda.js (render agenda+miplan) · main.js (composición/bootstrap) ·
     #   i18n.js (diccionarios es/en, es DATA) · sheets-controller.js · handlers.js
     _ALLOW = {
-        'src/view/agenda.js': 1729,  # +1: motivo de exclusión con la cuenta y sujeto correcto (ciudad=el PLAN) (15 ago)  # +6: sugerencias y filas del plan respetan/muestran la ciudad (15 ago)  # +8: gate del scroll a «ahora» + por qué Mi Plan NO repite la banda (10 ago)  # +13: «Sesión 1 de 2» en Mi Plan + el taller no se sugiere (8 ago)  # +7: el taller multi-día no se sugiere (bloque a medias) (8 ago)  # +9: kind 'ciudad' en el detalle de conflicto (6 ago)
+        'src/view/agenda.js': 1739,  # +4: la fila de ciudad explica pero no ofrece «+ Incluir» (16 ago)  # +6: marcadores plannable-ok en los tres sitios de CATÁLOGO (16 ago)  # +1: motivo de exclusión con la cuenta y sujeto correcto (ciudad=el PLAN) (15 ago)  # +6: sugerencias y filas del plan respetan/muestran la ciudad (15 ago)  # +8: gate del scroll a «ahora» + por qué Mi Plan NO repite la banda (10 ago)  # +13: «Sesión 1 de 2» en Mi Plan + el taller no se sugiere (8 ago)  # +7: el taller multi-día no se sugiere (bloque a medias) (8 ago)  # +9: kind 'ciudad' en el detalle de conflicto (6 ago)
         'src/main.js': 1662,  # +46 total: _morphOpen a FLIP — clon de la card compuesta, radio contra-escalado, encuadre del destino (29 jul)
         'src/i18n/i18n.js': 1514,  # +15: la cuenta del veredicto (cuenta_*) + conflict_ciudad_plan + splash_hint_pick + toasts del programa ×2 locales (15 ago)  # +3: badge_premium ×3 locales — TIFF marca 61 funciones de gala (13 ago)  # +3: notice_link (aviso con comunicado) ×3 locales (11 ago)  # +9: estado APLAZADO ×3 locales (label/dates/link) (10 ago)  # +12: sheet de ciudad + badge CON BOLETA ×3 locales (6 ago)
-        'src/controller/sheets-controller.js': 1624,  # +14: el título del sheet de conflicto ES la cuenta cuando el conflicto es por margen (15 ago)  # +19: el bloque de sesiones se dibuja como GRUPO (corchete + eslabón) y su control pasa a ser la misma píldora inline que una función suelta (9 ago)  # +7: un taller empezado no se ofrece (bug cazado con FICMA) (8 ago)  # +23: control de BLOQUE para is_recurring (8 ago)  # +12: registration_url — enlace de inscripción por función, mismo patrón que ticket_url (8 ago)  # +14: la ficha hereda el contexto de ciudad — filtra funciones, la nombra una vez y avisa lo que quedó fuera (7 ago)  # +7: el aviso parcial nombra la CIUDAD cuando la obra recorre varias (FICDEH, 43 obras) (7 ago)  # +4: precio en AVISOS sigue a ticketBadgeTarget (6 ago)  # +39: la ficha de corto hereda la función de su(s) programa(s) — _screeningRows (dueño único, antes inline en openPelSheet), _findParentPrograms, _cortoScreeningPairs y _noticeRows y _avisosBand (banda AVISOS: dueño único de lo que MATIZA la función, con la evidencia de vocabulario) (30 jul 2026)
-        'src/controller/handlers.js': 1042,  # +8: el toast del programa dice cuántas obras y por qué (15 ago)  # +45: taller multi-día — addRecurringBlock/removeRecurringBlock (bloque entero en un solo commitPlan) (8 ago)  # +15: acciones del sheet de ciudad (7 ago)  # +20: anclaje de función en toggleWL, simétrico al quitar (29 jul)
+        'src/controller/sheets-controller.js': 1625,  # +1: el aviso de oportunidad respeta el filtro de ciudad (16 ago)  # +14: el título del sheet de conflicto ES la cuenta cuando el conflicto es por margen (15 ago)  # +19: el bloque de sesiones se dibuja como GRUPO (corchete + eslabón) y su control pasa a ser la misma píldora inline que una función suelta (9 ago)  # +7: un taller empezado no se ofrece (bug cazado con FICMA) (8 ago)  # +23: control de BLOQUE para is_recurring (8 ago)  # +12: registration_url — enlace de inscripción por función, mismo patrón que ticket_url (8 ago)  # +14: la ficha hereda el contexto de ciudad — filtra funciones, la nombra una vez y avisa lo que quedó fuera (7 ago)  # +7: el aviso parcial nombra la CIUDAD cuando la obra recorre varias (FICDEH, 43 obras) (7 ago)  # +4: precio en AVISOS sigue a ticketBadgeTarget (6 ago)  # +39: la ficha de corto hereda la función de su(s) programa(s) — _screeningRows (dueño único, antes inline en openPelSheet), _findParentPrograms, _cortoScreeningPairs y _noticeRows y _avisosBand (banda AVISOS: dueño único de lo que MATIZA la función, con la evidencia de vocabulario) (30 jul 2026)
+        'src/controller/handlers.js': 1060,  # +18: el squeeze y «+ Incluir» usan el dueño del predicado (el plan volvía a cruzar ciudades al GUARDAR) (16 ago)  # +8: el toast del programa dice cuántas obras y por qué (15 ago)  # +45: taller multi-día — addRecurringBlock/removeRecurringBlock (bloque entero en un solo commitPlan) (8 ago)  # +15: acciones del sheet de ciudad (7 ago)  # +20: anclaje de función en toggleWL, simétrico al quitar (29 jul)
     }
     _over = []
     for _f in _glob.glob('src/**/*.js', recursive=True):

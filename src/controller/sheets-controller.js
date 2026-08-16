@@ -17,7 +17,7 @@ import { commitPlan, saveAV, saveLastSlot, saveRating, saveSavedAgenda } from '.
 import { _reRenderIntereses, showAgView, switchMainNav, updateAgTab } from './pipeline.js';
 import { dayFullyPassed, festivalEnded, parseDur, toMin } from '../domain/time.js';
 import { screeningPassed, effectiveDuration, blockDuration } from '../domain/film.js';
-import { isScreeningBlocked, screensConflictReason } from '../domain/schedule.js';
+import { isScreeningBlocked, screensConflictReason, plannableScreens } from '../domain/schedule.js';
 // ── Velo del sheet: SIN driver JS (29 jul 2026 — DESIGN.md §8.4.1) ───────────
 // Vivía acá un driver rAF que pisaba radio+opacidad por frame. Medido en device
 // con el video de Juan (7 de 7 aperturas): progresaba hasta ~68%, se congelaba
@@ -1534,8 +1534,9 @@ export function _checkRecalcOpportunity(){
   const planTitles=new Set(savedAgenda.schedule.map(s=>s._title));
   const candidates=[...watchlist].filter(t=>!planTitles.has(t)&&!watched.has(t));
   const hasOpportunity=candidates.some(t=>{
-    const screens=FILMS.filter(f=>f.title===t&&!screeningPassed(f));
-    return screens.length&&screens.some(s=>!isScreeningBlocked(s));
+    // El aviso ofrece algo para AGREGAR AL PLAN → mismo predicado que el plan
+    // (si no, ofrece una oportunidad en una ciudad que el filtro descartó).
+    return plannableScreens(t).length>0;
   });
   if(hasOpportunity){
     showActionToast(t('toast_horario_lib'),'Recalcular',()=>{
