@@ -578,6 +578,7 @@ Y lo que un hook no puede cortar, lo vigila `validate.py`:
 | `[peso-repo]` | material de trabajo versionado (ofimáticos, > 3 MB) |
 | `[stash-compartido]` | stash vivo con varios worktrees — la pila es del repo, no del worktree |
 | `[plannable-dueno-unico]` | que nadie reimplemente «qué funciones son planificables» fuera de `plannableScreens` (exención explícita: `// plannable-ok:`) |
+| `[plan-concepto]` | que «Plan» vaya en mayúscula en las 3 locales y en el fallback estático — es el nombre de un concepto, y la regla se eligió por ser verificable |
 | `[doc-cadena]` | que esta documentación y los guardianes se citen mutuamente |
 
 #### La identidad nunca sale de una etiqueta
