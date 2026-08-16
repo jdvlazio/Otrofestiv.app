@@ -282,7 +282,7 @@ export function removeFromAgenda(title){
   // para un taller: se quitaron de ahí justamente para que el bloque no se rompa.
   const _rec=(FILMS||[]).filter(f=>f.title===title&&f.is_recurring&&f.day&&f.time).length;
   const _cuerpo=_rec>1?t('bloque_quitar_aviso',{n:_rec}):t('plan_restaurar_suger');
-  showActionModal(t('plan_quitar_plan'),`<div class="cm-subject">${_s}</div><div>${_cuerpo}</div>`,t('misc_quitar'),()=>_dropFromPlan(title));
+  showActionModal(t('plan_quitar_plan'),`<div class="cm-subject">${_s}</div><div>${_cuerpo}</div>`,t('misc_sacar'),()=>_dropFromPlan(title));
 }
 
 // _planFixNotice — la salida para una entrada del Plan cuya función cambió. El

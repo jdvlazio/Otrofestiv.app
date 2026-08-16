@@ -252,7 +252,7 @@ test('T56 — el taller multi-día entra y sale entero, y no entra a medias', as
   const leer = () => page.evaluate(() => ({
     enPlan: ((savedAgenda && savedAgenda.schedule) || []).filter(e => e._title === 'Taller de Guion').length,
     control: document.querySelector('#pel-sheet .blk-add, #pel-sheet .blk-quitar')?.textContent.trim() || '',
-    // El texto VISIBLE es corto («Agregar»/«Quitar») porque el corchete ya agrupa;
+    // El texto VISIBLE es corto («Agendar»/«Sacar») porque el corchete ya agrupa;
     // la cuenta vive en el aria-label, que es lo único que oye quien no ve el
     // corchete. Se afirman los dos: si alguien acorta el aria «para unificar», el
     // lector de pantalla pierde el dato y este test lo dice.
@@ -269,7 +269,7 @@ test('T56 — el taller multi-día entra y sale entero, y no entra a medias', as
   await page.waitForTimeout(1100);
 
   const a = await leer();
-  expect(a.control, 'el botón dice lo mismo que una función suelta').toBe('Agregar');
+  expect(a.control, 'el botón dice lo mismo que una función suelta').toBe('Agendar');
   expect(a.aria, 'la cuenta no se pierde: viaja en el aria-label').toMatch(/3 sesiones/);
   expect(a.corchetes, 'las 3 sesiones van unidas por un corchete').toBe(1);
   expect(a.porSesion, 'ninguna sesión tiene botón propio').toBe(0);
@@ -278,7 +278,7 @@ test('T56 — el taller multi-día entra y sale entero, y no entra a medias', as
   const b = await leer();
   expect(b.enPlan, 'entran las 3 de una').toBe(3);
   expect(b.marcadas, 'el estado «en tu plan» es del bloque: todas las filas marcadas').toBe(3);
-  expect(b.control).toMatch(/Quitar/);
+  expect(b.control).toMatch(/Sacar/);
   // el plan resultante es válido: 3 veces el mismo título NO es duplicado
   const cert = await page.evaluate(() => verifyPlan(savedAgenda.schedule, { catalog: FILMS }));
   expect(cert.ok, JSON.stringify(cert.violations)).toBe(true);
@@ -317,7 +317,7 @@ test('T57 — un taller ya empezado no se ofrece', async ({ page }) => {
     const b = document.querySelector('#pel-sheet .blk-add, #pel-sheet .blk-quitar');
     return { txt: b?.textContent.trim() || '', aria: b?.getAttribute('aria-label') || '' };
   });
-  expect(antes.txt).toBe('Agregar');
+  expect(antes.txt).toBe('Agendar');
   expect(antes.aria).toMatch(/3 sesiones/);
 
   // con la primera sesión ya pasada: sin control de añadir

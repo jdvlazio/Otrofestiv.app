@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202608160658">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202608160658">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202608160718">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202608160718">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -3093,7 +3093,7 @@ setTimeout(function(){
     <div class="conflict-card incoming">
       <img class="conflict-poster" id="cs-incoming-poster" src="" alt="" loading="lazy">
       <div style="flex:1;min-width:0">
-        <div class="conflict-role" data-i18n="conflict_anadir_verb">Querés añadir</div>
+        <div class="conflict-role" data-i18n="conflict_anadir_verb">Querés agendar</div>
         <div class="conflict-name" id="cs-incoming-name"></div>
         <div class="conflict-when" id="cs-incoming-when"></div>
       </div>
@@ -3109,7 +3109,7 @@ setTimeout(function(){
     </div>
   </div>
   <div class="conflict-actions">
-    <button class="conflict-btn-replace" id="cs-replace-btn" data-i18n="conflict_anadir_btn">Añadir</button>
+    <button class="conflict-btn-replace" id="cs-replace-btn" data-i18n="conflict_anadir_btn">Agendar</button>
     <button class="conflict-btn-keep" id="cs-keep-btn" data-i18n="misc_conservar">Conservar</button>
     <button class="conflict-btn-cancel" data-action="closeConflictSheet" data-i18n="misc_cancelar">Cancelar</button>
   </div>
@@ -3257,7 +3257,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202608160658";
+    s.src="/src/main.js?v=202608160718";
     document.body.appendChild(s);
     // Watchdog de boot (P0 18 jul): si el grafo ESM murió en el import (caché
     // HTTP mixta tras deploys en ráfaga — main.js nuevo + módulo viejo sin el
