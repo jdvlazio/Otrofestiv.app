@@ -499,7 +499,11 @@ export function renderMiPlanCalendar(state){
     const _hintSeen=localStorage.getItem('otrofestiv_hint_cambiar');
     const _hasFuture=savedAgenda&&savedAgenda.schedule.some(s=>!screeningPassed(s));
     if(_hintSeen||!_hasFuture) return '';
-    return`<div class="mplan-change-hint">${ICONS.clock} ${t('plan_hint_hora')} ${t('misc_pelicula')}</div>`;
+    // «de actividad» y no «la película» (revisión de UX Writer, 16 ago): el panel
+    // EXCLUYE la obra actual y ofrece OTRAS del mismo tramo (±15 min), y entre
+    // ellas puede haber charlas y talleres — 113 parejas así en FICDEH. La frase
+    // deja de concatenarse con misc_pelicula: prometía un tipo que no controla.
+    return`<div class="mplan-change-hint">${ICONS.clock} ${t('plan_hint_hora')}</div>`;
   })()}`
 }
 
