@@ -1038,6 +1038,7 @@ export function renderFilmListHTML(state){
       </div>
       <div class="int-item-actions">
         <button class="int-prio-btn${isPrio?' on':''}" data-title="${escXML(title)}" data-action="togglePriority" data-stop="1" aria-label="${t('aria_priorizar')}">${ICONS.bookmarkFill}</button>
+        <button class="int-wl-btn" data-title="${escXML(title)}" data-action="toggleWL" data-stop="1" aria-label="${t('plan_quitar_intereses')}">${ICONS.heartFill}</button>
       </div>
     </div>`;
   }
@@ -1481,14 +1482,18 @@ export function mkAgendaRow(s, mode='saved'){
   // (jerarquía vertical: hora → título → venue). En Mi Plan (saved) la hora sigue como
   // columna lateral (layout familiar para usuarios del plan guardado).
   const _timeHTML=`<div class="saved-time">${s.time}</div>`;
-  // Affordances Cambiar/Quitar — botones visibles al final del item en Planear
-  // (mode='scenario'). Mismo patrón que .mplan-row en Mi Plan: .col-end con
-  // .icon-btn-circle .ag-fi-btn (Cambiar, switch icon) + .ag-fi-btn.del (Quitar,
-  // x icon). Solo si el festival no terminó.
+  // Affordances de la fila de Planear: Cambiar (switch) + el CORAZÓN.
+  // El corazón y no una ✕ (revisión de UX Writer, 16 ago 2026): este control
+  // saca de Intereses, prioridades y vistas —no del plan—, y con la ✕ era
+  // idéntico al de Mi Plan, que solo saca del plan. Dos mutaciones muy
+  // distintas con el mismo icono, y la destructiva era la que menos avisaba.
+  // Ahora el gesto es el mismo de Programa y la ficha: corazón lleno = está en
+  // tus Intereses, tocá para sacarlo. La ✕ queda reservada para «sale de esta
+  // lista». Solo si el festival no terminó.
   const _scenarioActions=mode==='scenario'&&!festivalEnded()
     ?`<div class="col-end">
         <button class="icon-btn-circle ag-fi-btn" data-action="toggleFilmAlternatives" data-key="${filmKey}" data-title="${safeT}" data-day="${s.day||''}" data-time="${s.time||''}" data-stop="1" title="${t('misc_cambiar')}">${ICONS.switch}</button>
-        <button class="icon-btn-circle ag-fi-btn del" data-action="removeFilmFromScenario" data-title="${safeT}" data-day="${s.day||''}" data-time="${s.time||''}" data-stop="1" title="${t('misc_quitar')}">${ICONS.x}</button>
+        <button class="icon-btn-circle ag-fi-btn wl" data-action="removeFilmFromScenario" data-title="${safeT}" data-day="${s.day||''}" data-time="${s.time||''}" data-stop="1" title="${t('plan_quitar_intereses')}">${ICONS.heartFill}</button>
       </div>`
     :'';
   return`<div class="saved-item${isDone?' done':''}">

@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202608160718">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202608160718">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202608160742">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202608160742">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -1510,6 +1510,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 
 .ag-fi-btn.prio-on{color:var(--amber);border-color:var(--amber-40)}
 .ag-fi-btn.del:hover{border-color:transparent;color:var(--red);opacity:1}
+.ag-fi-btn.wl:hover{border-color:transparent;color:var(--amber);opacity:1}
 
 /* ── Intereses: metadatos de película ─────────────────────────────
    ag-fi-meta: sección + días disponibles en compact chips.
@@ -1851,6 +1852,9 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
    en Planear y Mi Plan. Cambiar = neutro (no-destructivo; evita colisión con el
    ámbar de la hora). La jerarquía/estado va por color sólido, nunca por opacity. */
 .ag-fi-btn.del{color:var(--red)}
+/* .wl — el control de Intereses en la fila de Planear: ámbar como el corazón de
+   Programa y la ficha, NO rojo: no destruye el plan, saca de tu lista. */
+.ag-fi-btn.wl{color:var(--amber)}
 
 /* Progress festival */
 .festival-progress{padding:var(--sp-2) 0;margin-bottom:var(--sp-1)}
@@ -2726,7 +2730,9 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .int-item-meta{font-size:var(--t-sm);font-weight:var(--w-thin);color:var(--gray);margin-bottom:var(--sp-1);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .int-item-gone{font-size:var(--t-xs);color:var(--gray2);font-style:italic}
 .int-item-conflict{display:inline-flex;align-items:center;gap:3px;font-size:var(--t-xs);font-weight:var(--w-semi);color:var(--red);background:var(--red-08);border:1px solid var(--red-20);border-radius:var(--r-pill);padding:1px 6px;margin-top:3px}
-.int-item-actions{display:flex;flex-direction:column;align-items:center;justify-content:center;flex-shrink:0;align-self:center}
+.int-item-actions{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:var(--sp-1);flex-shrink:0;align-self:center}
+.int-wl-btn{width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;border:none;cursor:pointer;transition:color var(--tr-base),transform var(--tr-base);font-size:var(--t-md);background:transparent;color:var(--amber);font-family:var(--font);-webkit-tap-highlight-color:transparent;padding:0}
+.int-wl-btn:active{opacity:.6;transform:scale(.96)}
 .int-prio-btn{width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;border:none;cursor:pointer;transition:color var(--tr-base),transform var(--tr-base);font-size:var(--t-md);background:transparent;color:var(--gray2);font-family:var(--font);-webkit-tap-highlight-color:transparent;padding:0}
 .int-prio-btn.on{color:var(--amber)}
 .int-seen-btn{width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;border:none;cursor:pointer;background:transparent;color:var(--gray2);transition:color var(--tr-base);font-size:var(--t-base);font-weight:var(--w-bold);font-family:var(--font);-webkit-tap-highlight-color:transparent;padding:0}
@@ -3257,7 +3263,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202608160718";
+    s.src="/src/main.js?v=202608160742";
     document.body.appendChild(s);
     // Watchdog de boot (P0 18 jul): si el grafo ESM murió en el import (caché
     // HTTP mixta tras deploys en ráfaga — main.js nuevo + módulo viejo sin el
