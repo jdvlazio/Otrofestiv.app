@@ -95,6 +95,23 @@ export function showAgView(){
   document.getElementById('agtab').classList.add('on');
   document.querySelectorAll('.dtab').forEach(t=>t.classList.remove('on'));
   renderAgenda();
+  // Al ENTRAR a Planear sin resultado en memoria, calcular solo.
+  //
+  // El escenario vive en memoria (viewstate) y muere al recargar: medido el
+  // 16 ago con FICDEH — 4 filas antes, 0 después, sin aviso, mientras los
+  // intereses seguían intactos. Lo que se perdía no era el trabajo del usuario
+  // sino una DERIVACIÓN de ese trabajo, y recalcularla cuesta 2–3 ms (medido con
+  // 8 y con 20 intereses). Por eso NO se persiste: guardar la derivación sería
+  // una segunda verdad que además se pone rancia sola (una función se cancela,
+  // cambia el filtro de ciudad) y te mostraría un plan que ya no es cierto.
+  //
+  // Con plan YA guardado no se toca nada: aparecer con una opción nueva sin
+  // pedirla invita a reemplazar lo que el usuario curó a mano. Ahí manda el botón.
+  if(activeMNav==='mnav-planner'&&!cachedResult&&!festivalEnded()){
+    const _sa=savedAgenda&&savedAgenda.schedule&&savedAgenda.schedule.length;
+    const _hayIntereses=[...watchlist].some(t=>!watched.has(t));
+    if(!_sa&&_hayIntereses) runCalc();
+  }
   requestAnimationFrame(_fixStickyOffset); // actualiza altura del chrome-blur
 }
 
