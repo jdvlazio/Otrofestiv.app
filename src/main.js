@@ -452,7 +452,7 @@ FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202608161806';
+const BUILD_VERSION='202608161842';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';
@@ -1227,7 +1227,26 @@ state.subscribeRender(
   // Se decide ANTES del reveal (splash aún invisible) → sin flash ni brinco.
   const _ongoingIds=Object.entries(FESTIVAL_CONFIG)
     .filter(([,c])=>_classifyFestival(c)==='ongoing').map(([id])=>id);
-  if(_ongoingIds.length===1){
+  // Memoria de la elección (decisión Juan, 16 ago 2026): la regla de arriba
+  // decide qué mostrar la PRIMERA vez; no dice nada sobre recordar lo que el
+  // usuario ya eligió. Con 3 festivales en curso, el auditor de FINCA elegía
+  // FICDEH, recargaba y volvía al punto cero. Si hay una elección previa
+  // VIGENTE, esa manda; si no, la regla del 5 jul se aplica intacta.
+  // No inventa estado: reusa la preselección que ya existe (card .on + info
+  // lleno + "Entrar" habilitado) y NO se narra en pantalla — preseleccionar sin
+  // anunciarlo dice «seguí o cambiá», no «sé lo que querés».
+  // Caduca sola: _storedFestEnded es el mismo veredicto que ya borró la clave de
+  // localStorage (L396-400), y hay que consultarlo acá porque _storedFestId es una
+  // const capturada ANTES del borrado. MEDIDO: sin esta condición el riel tampoco
+  // preselecciona un festival terminado (otro dueño río abajo lo rechaza) — se
+  // conserva porque hace explícita la intención en el punto donde se decide, no
+  // porque sea quien la hace cumplir.
+  const _recordado=(_storedFestId&&!_storedFestEnded&&FESTIVAL_CONFIG[_storedFestId])
+    ?_storedFestId:null;
+  if(_recordado){
+    _renderSplashRail(_recordado);
+    selectSplashFest(null,null,_recordado);
+  } else if(_ongoingIds.length===1){
     // Preselección automática: card .on + "Entrar" habilitado, cero interacción.
     _renderSplashRail(_ongoingIds[0]);
     selectSplashFest(null,null,_ongoingIds[0]);
