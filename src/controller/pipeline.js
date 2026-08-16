@@ -176,6 +176,37 @@ export function _updateProgramaActiveFilter(){
   af.classList.add('visible');
 }
 
+// _syncPmodeTabs — la píldora Hoy/Mañana ESPEJA a su chip de día (16 ago 2026,
+// hallazgo de la ronda 3 + observación de Juan). La píldora es doble: BOTÓN
+// (el atajo que salta al día) e INDICADOR — y la mitad de indicador mentía por
+// omisión: pintada desde programaSubMode, quedaba subrayada mostrando MAR 18,
+// y nunca se atenuaba cuando su día ya no tenía nada. Ahora las dos dimensiones
+// se derivan de lo mismo que el chip: activa si su día ES el día activo,
+// opaca si su día está agotado (dayFullyPassed, el mismo dueño del .past del
+// chip). El destino de cada píldora se calcula con las MISMAS fórmulas del
+// atajo (setProgramaMode) para que indicador y botón nunca diverjan.
+export function _syncPmodeTabs(){
+  const _pts=simTodayStr();
+  const _pti=DAY_KEYS.findIndex(d=>FESTIVAL_DATES[d]===_pts);
+  const _keys={
+    hoy: _pti>=0?DAY_KEYS[_pti]:DAY_KEYS[0],
+    manana: _pti>=0&&_pti<DAY_KEYS.length-1?DAY_KEYS[_pti+1]:DAY_KEYS[DAY_KEYS.length-1],
+  };
+  ['hoy','manana'].forEach(m=>{
+    const el=document.getElementById('pmode-'+m);
+    if(!el) return;
+    el.classList.toggle('on', activeDay===_keys[m]);
+    el.classList.toggle('past', dayFullyPassed(_keys[m]));
+  });
+  // Y los chips se refrescan con el MISMO cálculo: al cruzar la medianoche o
+  // agotarse el día, píldora y chip tienen que atenuarse JUNTOS (Juan, 16 ago).
+  // Sin esto la píldora quedaba opaca y su chip brillante — la discrepancia
+  // inversa a la que veníamos a arreglar, y la cazó el test.
+  document.querySelectorAll('.dtab').forEach(t=>{
+    if(t.dataset.day&&t.dataset.day!=='all') t.classList.toggle('past', dayFullyPassed(t.dataset.day));
+  });
+}
+
 export function initProgramaModeBar(){
   const phase=_getProgramaPhase();
   // Mostrar/ocultar tabs según fase
@@ -188,11 +219,8 @@ export function initProgramaModeBar(){
   if(!phase.tabs.includes(programaSubMode)){
     programaSubMode=phase.default;
   }
-  // Actualizar tab activo
-  ['hoy','manana'].forEach(m=>{
-    const el=document.getElementById('pmode-'+m);
-    if(el) el.classList.toggle('on',m===programaSubMode);
-  });
+  // Tab activo/atenuado: derivado del día, no de programaSubMode (el espejo).
+  _syncPmodeTabs();
   // Mostrar/ocultar chips
   const chipsEl=document.getElementById('programa-chips');
   if(chipsEl){

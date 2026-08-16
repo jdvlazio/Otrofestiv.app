@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202608161629">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202608161629">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202608161737">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202608161737">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -915,6 +915,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .programa-mode-bar{display:flex;align-items:center;padding:0 0 0 var(--sp-3);flex-shrink:0;background:var(--surf)}
 .pmode-tab{padding:var(--sp-2) var(--sp-3);font-size:var(--t-sm);font-weight:var(--w-semi);color:var(--gray);border-bottom:2px solid transparent;min-height:36px;cursor:pointer;background:none;border-top:none;border-left:none;border-right:none;font-family:var(--font);transition:color var(--tr-base),border-color var(--tr-base);white-space:nowrap;display:inline-flex;align-items:center}
 .pmode-tab.on{color:var(--white);border-bottom-color:var(--amber)}
+.pmode-tab.past{opacity:.35} /* espeja al .dtab.past: su día ya no tiene nada */
 .pmode-spacer{flex:1}
 .pmode-controls{display:flex;align-items:center;gap:var(--sp-3)}
 /* ── View switch — sistema unificado (Programa / Mi Plan / Intereses) ── */
@@ -3230,7 +3231,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202608161629";
+    s.src="/src/main.js?v=202608161737";
     document.body.appendChild(s);
     // Watchdog de boot (P0 18 jul): si el grafo ESM murió en el import (caché
     // HTTP mixta tras deploys en ráfaga — main.js nuevo + módulo viejo sin el

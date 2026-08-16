@@ -532,3 +532,56 @@ test('T60 — el toast del corazón es el mismo desde la ficha y desde la grilla
   expect(grilla, 'la grilla nombra cuántas obras arrastró').toMatch(/\+\d+/);
   expect(ficha, 'la ficha dice lo mismo que la grilla').toBe(grilla);
 });
+
+// T63 — la píldora Hoy/Mañana ESPEJA a su chip de día (ronda 3 + Juan, 16 ago)
+// La píldora es doble: botón (atajo al día) e indicador. La mitad de indicador
+// mentía: pintada desde programaSubMode quedaba subrayada mostrando MAR 18, y
+// nunca se atenuaba con su día agotado. Ahora deriva de activeDay (subrayado)
+// y dayFullyPassed (opacidad) — los mismos dueños del chip.
+test('T63 — la píldora Hoy espeja al día: se apaga en otro día, vuelve en hoy, se atenúa agotada', async ({ page }) => {
+  await enterFestival(page, 'ficdeh2026', '2026-08-16T10:00');
+  const claves = await page.evaluate(() => {
+    const hoy = DAY_KEYS.find(d => FESTIVAL_DATES[d] === simTodayStr());
+    const i = DAY_KEYS.indexOf(hoy);
+    // ni hoy ni MAÑANA: si tomás hoy+1, «Mañana» encendida es lo CORRECTO y el
+    // test se acusa solo (pasó en la primera corrida).
+    const otro = DAY_KEYS[i + 2];
+    return { hoy, otro };
+  });
+  const leer = () => page.evaluate(() => ({
+    hoyOn: document.getElementById('pmode-hoy')?.classList.contains('on'),
+    hoyPast: document.getElementById('pmode-hoy')?.classList.contains('past'),
+    mananaOn: document.getElementById('pmode-manana')?.classList.contains('on'),
+  }));
+
+  // Se opera por los BOTONES reales (dispatcher incluido): la píldora y los chips.
+  // (a) el atajo enciende su píldora
+  await page.evaluate(() => document.getElementById('pmode-hoy').click());
+  await page.waitForTimeout(300);
+  expect((await leer()).hoyOn, 'atajo Hoy → píldora encendida').toBe(true);
+
+  // (b) chip de OTRO día → ambas píldoras apagadas (el caso del agente)
+  await page.evaluate((c) => document.querySelector(`.dtab[data-day="${c.otro}"]`).click(), claves);
+  await page.waitForTimeout(300);
+  const b = await leer();
+  expect(b.hoyOn, 'viendo otro día, Hoy se apaga').toBe(false);
+  expect(b.mananaOn, 'y Mañana también').toBe(false);
+
+  // (c) chip del día de HOY → la píldora Hoy vuelve, aunque no viniste por el atajo
+  await page.evaluate((c) => document.querySelector(`.dtab[data-day="${c.hoy}"]`).click(), claves);
+  await page.waitForTimeout(300);
+  expect((await leer()).hoyOn, 'chip de hoy → Hoy encendida').toBe(true);
+
+  // (d) con el día de hoy AGOTADO, la píldora se atenúa igual que su chip
+  // (la mitad que vio Juan). Se llega por el camino real: mover el reloj y
+  // tocar un chip — el mismo gesto que dispara el espejo en producción.
+  await page.evaluate((c) => { _simTime = '2026-08-16T23:50:00-05:00';
+    document.querySelector(`.dtab[data-day="${c.otro}"]`).click(); }, claves);
+  await page.waitForTimeout(400);
+  const d = await leer();
+  expect(d.hoyPast, 'hoy agotado → píldora opaca').toBe(true);
+  expect(d.hoyOn, 'y sigue sin estar activa (estás en otro día)').toBe(false);
+  const chipPast = await page.evaluate((c) =>
+    document.querySelector(`.dtab[data-day="${c.hoy}"]`).classList.contains('past'), claves);
+  expect(chipPast, 'el chip de hoy también está opaco: píldora y chip coinciden').toBe(true);
+});

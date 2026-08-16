@@ -17,7 +17,7 @@ import { _fixStickyOffset } from '../view/agenda.js';
 import { loadState, _cloudLoad, _cloudSave, subscribePlanCloud, _flushCloudSave } from './persistence.js';
 import { report } from '../telemetry.js';
 import { subscribeDelaysCloud } from './delays-cloud.js';
-import { _updateProgramaActiveFilter, initProgramaModeBar, showAgView, showDayView, switchMainNav } from './pipeline.js';
+import { _updateProgramaActiveFilter, initProgramaModeBar, showAgView, showDayView, switchMainNav, _syncPmodeTabs } from './pipeline.js';
 import { seccionClose } from './overlays.js';
 import { setProgramaView } from './handlers.js';
 import { dayFullyPassed, simTodayStr } from '../domain/time.js';
@@ -363,6 +363,7 @@ export async function loadFestival(id){
         cartelaMode='horario';
         setProgramaView('grid'); // TODO → siempre Grid
         document.querySelectorAll('.dtab').forEach(t=>t.classList.toggle('on',t.dataset.day==='all'));
+        _syncPmodeTabs(); // la píldora Hoy/Mañana espeja al día activo (acá: ninguno)
         _renderProgramaContent(true); // cambio de día (TODO) → scroll al tope
         _updateProgramaActiveFilter();
         if(activeMNav!=='mnav-cartelera') switchMainNav('mnav-cartelera');
@@ -387,6 +388,7 @@ export async function loadFestival(id){
         activeDay=day.k;activeVenue=keepCityOnly(activeVenue);selectedIdx=null;
         setProgramaView('list'); // día específico → siempre Lista (horarios/planificación)
         document.querySelectorAll('.dtab').forEach(t=>t.classList.toggle('on',t.dataset.day===day.k));
+        _syncPmodeTabs(); // la píldora Hoy/Mañana espeja al día elegido
         _renderProgramaContent(true); // cambio de día específico → scroll al tope
         _updateProgramaActiveFilter();
         if(activeMNav!=='mnav-cartelera') switchMainNav('mnav-cartelera');
