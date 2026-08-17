@@ -445,9 +445,11 @@ export const FESTIVAL_CONFIG={
     dayLong:{'2026-09-03': 'Jueves 3 de septiembre', '2026-09-04': 'Viernes 4 de septiembre', '2026-09-05': 'Sábado 5 de septiembre', '2026-09-06': 'Domingo 6 de septiembre', '2026-09-07': 'Lunes 7 de septiembre', '2026-09-08': 'Martes 8 de septiembre', '2026-09-09': 'Miércoles 9 de septiembre', '2026-09-10': 'Jueves 10 de septiembre', '2026-09-11': 'Viernes 11 de septiembre', '2026-09-12': 'Sábado 12 de septiembre'},
     prioLimit:5,
     sharedSlotIsOneScreening:true,
-    // group:'test' — Cinemancia NO se publica todavía: falta el keyArt (el test
-    // del muro de afiches exige uno en todo festival visible) y la sala en 64 de
-    // las 89 funciones. Quitar esta línea es el paso de publicación.
+    keyArt:'/assets/keyart/cinemancia2026.jpg',
+    // group:'test' — Cinemancia NO se publica todavía. El keyArt ya está; falta
+    // la sala en 64 de las 89 funciones y el catálogo completo (el boletín
+    // oficial declara 108 obras y tenemos 56). Quitar esta línea es el paso de
+    // publicación.
     group:'test',
     tagline:'Festival de Cine del Valle de Aburrá',
     films:null,posters:null,lbSlugs:{}
