@@ -13,8 +13,8 @@ import {
 // _langDates se REEXPORTA: el dueño vive en components.js (helpers importa
 // components — el ciclo decide dónde vive; ver el comentario del dueño).
 export { _langDates };
-import { toMin, minToStr, parseDur, simNow, simTodayStr, _festDate } from '../domain/time.js';
-import { effectiveDuration, screeningBlockEndMin } from '../domain/film.js';
+import { toMin, minToStr, parseDur, simNow, simTodayStr, _festDate, _festNowMin } from '../domain/time.js';
+import { effectiveDuration, screeningBlockEndMin, screeningQaOnly } from '../domain/film.js';
 import { _resolveVenue, travelMins } from '../domain/festival.js';
 import { state } from '../state/state.js';
 import { t } from '../i18n/i18n.js';
@@ -333,6 +333,14 @@ export function isNowShowing(f){
   return now>=start&&now<=end;
 }
 
+// isQaOnlyNow — «la película ya terminó, queda el Q&A». Mismo encuadre que
+// isNowShowing (aplazado, fecha del festival, reloj simulado) pero delegando el
+// veredicto en el dominio: screeningQaOnly es el dueño único de la ventana.
+export function isQaOnlyNow(f){
+  if(!isNowShowing(f)) return false;
+  return screeningQaOnly(f,_festNowMin());
+}
+
 export function isToday(day){
   const dateStr=FESTIVAL_DATES[day];
   if(!dateStr) return false;
@@ -539,16 +547,28 @@ export function conflictAccount(a,b,r){
     return t('cuenta_salas',{t1:`<i>${t1}</i>`,end:_b(minToStr(end)),buffer:FESTIVAL_BUFFER,
       arr:_b(minToStr(end+FESTIVAL_BUFFER)),t2:`<i>${t2}</i>`,start:_b(minToStr(start))});
   }
-  // viaje: con traslado el Q&A sí cuenta (durationForTravel) — se muestra aparte
+  // viaje: con traslado el Q&A sí cuenta (durationForTravel) — se muestra aparte.
+  // La cadena SUMA el margen en vez de enunciarlo aparte: así el total es
+  // directamente comparable con la hora de inicio y la conclusión se lee sola
+  // (21:15 contra 21:00), sin una frase de veredicto que pueda contradecir a la
+  // decisión — que fue el bug original. Antes la cuenta omitía el margen que
+  // screensConflict exige, y una función EXCLUIDA se explicaba con la rama de
+  // «sí llegás»: 53 de los 275 choques de viaje de FICDEH (medido 17 ago).
+  // La `~` marca lo ESTIMADO (Q&A, viaje); el margen va sin tilde porque es una
+  // política nuestra, no una estimación.
   const qaEnd=end+(f1.has_qa?FESTIVAL_QA_MIN:0);
-  const arr=qaEnd+r.travel;                             // llegada: estimación
+  const total=qaEnd+r.travel+FESTIVAL_BUFFER;
   const base=t(f1.has_qa?'cuenta_viaje_qa':'cuenta_viaje',
-    {t1:`<i>${t1}</i>`,end:_b(minToStr(end)),qa:FESTIVAL_QA_MIN,qaEnd:_b(minToStr(qaEnd)),
-     travel:_b(_minFmt(r.travel)),arr:_b(minToStr(arr))});
-  const verdict=arr>start
-    ? t('cuenta_no_llegas',{start:_b(minToStr(start))})
-    : t('cuenta_al_filo',{start:_b(minToStr(start)),m:start-arr});
-  return `${base} ${verdict}`;
+    {t1:`<i>${t1}</i>`,end:_b(minToStr(end)),qa:FESTIVAL_QA_MIN,
+     // travel en minutos PELADOS: la cadena declara la unidad una sola vez, al
+     // final («margen 15 min»). Con _minFmt salía «viaje ~10 min + margen 15 min».
+     travel:r.travel,buffer:FESTIVAL_BUFFER,
+     total:_b(minToStr(total)),start:_b(minToStr(start))});
+  // Cuando el choque existe SOLO por el Q&A, la alternativa va en la MISMA
+  // moneda: la hora a la que llegarías saliendo al final de la película. Un
+  // número en vez de una recomendación — el usuario compara y decide.
+  const _qa=r.qaOnly?t('cuenta_qa_opcional',{sinQa:_b(minToStr(end+r.travel+FESTIVAL_BUFFER))}):'';
+  return `${base}${_qa}`;
 }
 
 // Retraso colaborativo (Fase B) — badge informativo desde el consenso derivado.

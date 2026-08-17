@@ -1,7 +1,7 @@
 // @ts-check
 // programa.spec.js — Tab Programa: lista, grid, filtros, posters, topbar.
 const { test, expect } = require('@playwright/test');
-const { LEVIZA_SIMTIME, enterFestival } = require('./helpers');
+const { LEVIZA_SIMTIME, enterFestival, goToPlanear } = require('./helpers');
 
 // T01 — Apóstrofe: corazón en lista agrega al watchlist
 test('T01 — apóstrofe: corazón en lista agrega al watchlist', async ({ page }) => {
@@ -891,4 +891,310 @@ test('T70 — el Diario y el Recuerdo cuentan lo mismo, incluidos los talleres',
   });
   expect(retro, 'el Recuerdo dice el MISMO número, con el paraguas correcto')
     .toBe('Viste 3 actividades');
+});
+
+// Ronda 3 (diseño, Juan): en Mi Plan el Diario iba a la derecha y «Día n de n» a
+// la izquierda —el destino detrás del dato— y el bloque «Sin confirmar» era la
+// única sección de la app dibujada como card, con una píldora de encabezado que
+// flotaba a 17px mientras sus filas arrancaban a 33. Regla contada sobre la app:
+// card = ítem, resumen, panel o menú; sección = lista con su banda a sangre.
+test('T71 — Mi Plan: el destino primero, y «Sin confirmar» es sección, no card', async ({ page }) => {
+  await enterFestival(page, 'ficdeh2026', '2026-08-17T20:00:00-05:00');
+  await page.evaluate(() => document.querySelector('[data-action="citySheetAll"]')?.click());
+  await page.waitForTimeout(400);
+  const g = await page.evaluate(async () => {
+    const pas = FILMS.filter(f => f.day <= '2026-08-17' && f.time <= '18:00').slice(0, 3);
+    const fut = FILMS.filter(f => f.day > '2026-08-17').slice(0, 2);
+    state.set('watched', new Set(FILMS.slice(20, 24).map(f => f.title)));
+    state.set('savedAgenda', { scenarioIdx: 0, schedule: [...pas, ...fut].map(f =>
+      Object.assign({}, f, { _title: f.title })) });
+    switchMainNav('mnav-miplan'); showAgView();
+    await new Promise(r => setTimeout(r, 1400));
+    const box = s => { const e = document.querySelector(s); if (!e) return null;
+      const b = e.getBoundingClientRect(); return { x: Math.round(b.x), r: Math.round(b.right) }; };
+    const wrap = document.querySelector('.checkin-wrap');
+    const cs = wrap && getComputedStyle(wrap);
+    return {
+      chip: box('.diary-chip'),
+      dia: box('.festival-progress-text > span:last-child'),
+      banda: box('.checkin-wrap .sec-hdr'),
+      fila: box('.checkin-title'),
+      vecino: box('.mplan-list-hdr'),
+      badge: document.querySelector('.checkin-wrap .count-badge')?.textContent,
+      pendientes: 3,
+      // sección, no card: sin fondo propio ni borde
+      fondo: cs && cs.backgroundColor,
+      borde: cs && cs.borderTopWidth,
+      pildoraVieja: !!document.querySelector('.checkin-hdr'),
+    };
+  });
+
+  // 1· el orden: el Diario (destino) a la izquierda, el día (dato) a la derecha
+  expect(g.chip.x, 'el Diario abre la fila').toBeLessThan(g.dia.x);
+  expect(g.dia.r, 'y el día cierra contra el margen derecho').toBeGreaterThan(g.chip.r);
+
+  // 2· la banda es canónica: a sangre, como cualquier sec-hdr
+  expect(g.banda.x, 'banda a sangre por izquierda').toBe(0);
+
+  // 3· las filas alinean con sus vecinas — el desajuste de 16px no puede volver
+  expect(g.fila.x, 'la fila alinea con el encabezado del día').toBe(g.vecino.x);
+
+  // 4· sección, no card
+  expect(g.pildoraVieja, 'la píldora inline ya no existe').toBe(false);
+  expect(g.fondo, 'sin fondo de card').toMatch(/rgba\(0, 0, 0, 0\)|transparent/);
+  expect(g.borde, 'sin borde de card').toBe('0px');
+
+  // 5· el badge dice cuántas quedan por confirmar
+  expect(g.badge, 'la cuenta está a la vista').toBe(String(g.pendientes));
+});
+
+// Ronda 4 (auditor de fin de festival): «AHORA» en verde sobre una película que
+// ya terminó. isNowShowing usa el fin EFECTIVO (con Q&A), correcto para el
+// planificador —la función te ocupa hasta el final— pero no para el que lee: el
+// fin de la película es DATO y el del Q&A es ESTIMACIÓN (FESTIVAL_QA_MIN, «la UI
+// la declara, nunca la afirma»). Medido en FINCA, 16 de 30 obras con Q&A.
+// Y Mi Plan estaba peor: el rótulo contaba con Q&A y la cuenta sin él, así que
+// decía «Termina en 0 min» durante media hora.
+test('T72 — en la ventana del Q&A el badge dice Q&A, no AHORA', async ({ page }) => {
+  await enterFestival(page, 'finca2026', '2026-08-17T12:00:00-03:00');
+  const leer = async (hora) => page.evaluate(async (hh) => {
+    const f = FILMS.find(x => x.title.startsWith('¿Cuán profundo'));
+    _simTime = `${f.day}T${hh}:00-03:00`;
+    state.set('savedAgenda', { scenarioIdx: 0, schedule: [Object.assign({}, f, { _title: f.title })] });
+    switchMainNav('mnav-cartelera');
+    if (typeof _renderProgramaContent === 'function') _renderProgramaContent();
+    await new Promise(r => setTimeout(r, 800));
+    const p = document.querySelector('.film-check-badge, .poster-now');
+    switchMainNav('mnav-miplan'); showAgView();
+    await new Promise(r => setTimeout(r, 1000));
+    const b = document.querySelector('.ctx-next-badge');
+    return { prog: p && { txt: p.textContent.trim(), qa: p.classList.contains('qa-only') },
+      plan: b && { txt: b.textContent.trim(), qa: b.classList.contains('qa-only') } };
+  }, hora);
+
+  // La obra: 19:00, película hasta 20:41, función (con Q&A) hasta 21:11
+  const conPeli = await leer('20:00');
+  expect(conPeli.prog.txt, 'con la película en curso, AHORA').toBe('AHORA');
+  expect(conPeli.prog.qa, 'y no es el estado de Q&A').toBe(false);
+  expect(conPeli.plan.txt, 'Mi Plan cuenta lo que falta de película').toBe('Termina en 41 min');
+
+  const enQa = await leer('20:50');
+  expect(enQa.prog.txt, 'terminada la película, el badge dice Q&A').toBe('Q&A');
+  expect(enQa.prog.qa, 'con su acento ámbar').toBe(true);
+  expect(enQa.plan.txt, 'y Mi Plan deja de contar cero durante media hora').toBe('Q&A');
+  expect(enQa.plan.qa, 'también en ámbar').toBe(true);
+});
+
+// Ronda 4 (auditor): «te quedarían 0 min» explicaba una función EXCLUIDA con la
+// rama de «sí llegás» — el mensaje contradecía a la lista donde aparecía. Causa:
+// screensConflict exige hueco >= viaje + BUFFER y la cuenta sumaba solo el viaje,
+// mientras la rama de misma sede sí nombraba el margen. Una regla, dos cuentas;
+// 53 de los 275 choques de viaje de FICDEH se explicaban así. El margen pasó a ser
+// un SUMANDO de la cadena (no una regla aparte): el total queda comparable con la
+// hora de inicio y desaparece la frase de veredicto que podía contradecirla.
+// Y el segundo tramo: cuando el choque existe SOLO por el Q&A —opcional y
+// estimado— no es una imposibilidad sino una decisión, así que se nombra y la
+// función se puede agendar marcándola _squeezed (verifyPlan la respeta).
+test('T73 — la cuenta del veredicto usa la misma aritmética que la decisión', async ({ page }) => {
+  await enterFestival(page, 'finca2026', '2026-08-13T09:00:00-05:00');
+  const r = await page.evaluate(async () => {
+    const S = await import('/src/domain/schedule.js');
+    const H = await import('/src/view/helpers.js');
+    const a = FILMS.find(f => f.title === 'Yintah');
+    const b = FILMS.find(f => f.title.startsWith('El amor duerme'));
+    const rr = S.screensConflictReason(a, b);
+    const txt = H.conflictAccount(a, b, rr).replace(/<[^>]*>/g, '');
+    // el plan con las dos, la segunda tomada a sabiendas
+    const plan = [Object.assign({}, a, { _title: a.title }),
+                  Object.assign({}, b, { _title: b.title, _squeezed: true })];
+    const v = S.verifyPlan(plan, {});
+    // y sin la marca deliberada, el mismo plan SÍ es una violación
+    const planSinMarca = plan.map(s => { const c = Object.assign({}, s); delete c._squeezed; return c; });
+    const v2 = S.verifyPlan(planSinMarca, {});
+    return { kind: rr && rr.kind, qaOnly: rr && rr.qaOnly, txt,
+      okConMarca: v.ok, okSinMarca: v2.ok };
+  });
+
+  expect(r.kind, 'el choque es por viaje').toBe('viaje');
+  expect(r.qaOnly, 'y existe SOLO por el Q&A').toBe(true);
+  // 1· el margen es un SUMANDO de la cadena, no una regla enunciada aparte: así
+  //    el total se compara solo contra la hora de inicio (21:15 vs 21:00).
+  expect(r.txt, 'el margen entra en la suma').toContain('margen 15 min');
+  expect(r.txt, 'y el total sale de sumarlo').toContain('21:15');
+  expect(r.txt, 'contra la hora de inicio').toContain('empieza 21:00');
+  // 2· la salida va en la MISMA moneda: la hora a la que llegarías sin el Q&A
+  expect(r.txt, 'nombra la alternativa con su hora').toContain('sin el Q&A, 20:45');
+  // y ya no hace falta un veredicto en palabras
+  expect(r.txt, 'sin frase de veredicto').not.toMatch(/no te daría el tiempo|te quedarían/);
+  // 3· tomarla a sabiendas produce un plan VÁLIDO; sin la marca, no
+  expect(r.okConMarca, 'con _squeezed el plan es válido').toBe(true);
+  expect(r.okSinMarca, 'sin la marca sigue siendo una violación').toBe(false);
+});
+
+// Ronda 4 (auditor de fin de festival): «No incluidas» mezclaba dos poblaciones.
+// Medido en FINCA (17 AGO 21:00, intereses mixtos): 9 excluidas — 7 cuyas
+// funciones YA PASARON y solo 2 que compitieron de verdad —, y las 7 salían
+// PRIMERO, enterrando las dos decisiones de la noche. Encima el banner general
+// decía «se solapan con otros en tu Plan», falso para 7 de las 9.
+// «No incluida» describe a la que compitió y perdió; a la que se llevó el
+// festival, llamarla así es un reproche sin sujeto. Su lugar es el Diario y el
+// Modo Recuerdo, y en Intereses ya aparece con «Ya pasó».
+test('T74 — «No incluidas» solo lista lo que compitió', async ({ page }) => {
+  await enterFestival(page, 'finca2026', '2026-08-17T21:00:00-03:00');
+  const caso = await page.evaluate(() => {
+    const muertas = [...new Set(FILMS.filter(f => screeningPassed(f)).map(f => f.title))]
+      .filter(t => !FILMS.some(f => f.title === t && !screeningPassed(f)));
+    const vivas = [...new Set(FILMS.filter(f => !screeningPassed(f)).map(f => f.title))];
+    state.set('watchlist', new Set([...muertas.slice(0, 7), ...vivas.slice(0, 7)]));
+    return { muertas: muertas.slice(0, 7).length };
+  });
+  expect(caso.muertas, 'el escenario tiene obras que ya pasaron').toBe(7);
+
+  await goToPlanear(page);
+  await page.evaluate(() => { document.querySelector('.av-calc-btn')?.click(); });
+  await page.waitForTimeout(3500);
+
+  const r = await page.evaluate(() => {
+    const sc = cachedResult && cachedResult.scenarios[cachedResult.currentIdx || 0];
+    const bloque = document.querySelector('.ag-excl-block');
+    return {
+      excluidasDominio: sc.excluded.length,
+      filas: bloque ? bloque.querySelectorAll('.int-item-title').length : 0,
+      badge: bloque?.querySelector('.count-badge')?.textContent,
+      diceYaPaso: (bloque?.innerText || '').includes('Ya pasó'),
+      banner: document.body.innerText.includes('se solapan con otros en tu Plan'),
+    };
+  });
+
+  expect(r.excluidasDominio, 'el motor sigue reportando todas').toBe(9);
+  expect(r.filas, 'pero la pantalla solo lista las que compitieron').toBe(2);
+  expect(r.badge, 'y el badge cuenta lo accionable, no lo perdido').toBe('2');
+  expect(r.diceYaPaso, 'ninguna lápida en Planear').toBe(false);
+  expect(r.banner, 'sin el banner que generalizaba una causa falsa').toBe(false);
+});
+
+// Ronda 4 (auditor): la última noche, con 12 obras en el plan y CERO funciones
+// restantes en todo el catálogo, Planear mostraba el vacío de primer uso — «Tu
+// Plan aparece aquí · Agregá lo que no querés perderte · Ir a Intereses». Tres
+// promesas falsas. `pending` vacío tenía UNA pantalla; detrás hay tres
+// situaciones. Y el vacío de combinaciones culpaba a la disponibilidad sin
+// saber si había bloqueos, con un punto en medio por la costura de dos claves.
+test('T75 — Planear distingue por qué no hay nada que planear', async ({ page }) => {
+  await enterFestival(page, 'finca2026', '2026-08-17T12:00:00-03:00');
+
+  // A.1 · no queda NADA en el festival → despedida, aunque el calendario siga
+  const a1 = await page.evaluate(async () => {
+    const tits = [...new Set(FILMS.map(f => f.title))].slice(0, 12);
+    state.set('watchlist', new Set(tits));
+    state.set('savedAgenda', { scenarioIdx: 0, schedule: tits.map(t => {
+      const f = FILMS.find(x => x.title === t); return Object.assign({}, f, { _title: t }); }) });
+    _simTime = '2026-08-19T23:00:00-03:00';
+    // La espera va ANTES de entrar a Planear: el boot tiene un setTimeout que
+    // salta solo a Mi Plan cuando hay agenda activa (main.js), y si cae después
+    // del switch pisa la pantalla que este test mide.
+    await new Promise(r => setTimeout(r, 1300));
+    switchMainNav('mnav-planner'); showAgView();
+    await new Promise(r => setTimeout(r, 400));
+    return (document.getElementById('ag-view')?.innerText || '').replace(/\s+/g, ' ');
+  });
+  expect(a1, 'se despide en vez de invitar').toContain('ha terminado');
+  expect(a1, 'y manda a lo vivido').toContain('Ver Mi Plan');
+  expect(a1, 'sin la pantalla de primer uso').not.toContain('Tu Plan aparece aquí');
+
+  // A.2 · el festival sigue, tus intereses se agotaron → al Programa
+  const a2 = await page.evaluate(async () => {
+    const D = await import('/src/domain/film.js');
+    _simTime = '2026-08-18T23:30:00-03:00';
+    const pasadas = [...new Set(FILMS.filter(f => D.screeningPassed(f)).map(f => f.title))]
+      .filter(t => !FILMS.some(f => f.title === t && !D.screeningPassed(f)));
+    state.set('watchlist', new Set(pasadas.slice(0, 5)));
+    state.set('savedAgenda', { scenarioIdx: 0, schedule: [] });
+    await new Promise(r => setTimeout(r, 600));
+    cachedResult = null;
+    switchMainNav('mnav-planner'); showAgView();
+    await new Promise(r => setTimeout(r, 400));
+    return { quedan: FILMS.filter(f => !D.screeningPassed(f)).length,
+      txt: (document.getElementById('ag-view')?.innerText || '').replace(/\s+/g, ' ') };
+  });
+  expect(a2.quedan, 'el festival aún tiene funciones').toBeGreaterThan(0);
+  expect(a2.txt, 'nombra el hecho en siete palabras').toContain('Nada por planear');
+  expect(a2.txt, 'y manda a donde queda material').toContain('Ir al Programa');
+  expect(a2.txt, 'no a la lista agotada').not.toContain('Ir a Intereses');
+
+  // A.3 · primer uso de verdad → la pantalla original
+  const a3 = await page.evaluate(async () => {
+    state.set('watchlist', new Set());
+    cachedResult = null;
+    switchMainNav('mnav-planner'); showAgView();
+    await new Promise(r => setTimeout(r, 1000));
+    return (document.getElementById('ag-view')?.innerText || '').replace(/\s+/g, ' ');
+  });
+  expect(a3, 'el primer uso conserva su invitación').toContain('Tu Plan aparece aquí');
+
+  // Combos vacíos · sin bloqueos NO se culpa a la disponibilidad
+  const combos = await page.evaluate(async () => {
+    const V = await import('/src/view/agenda.js');
+    const sinBloqueos = V.buildResultHTML([]).replace(/<[^>]*>/g, '');
+    availability['2026-08-18'] = { blocks: [{ from: '10:00', to: '22:00' }] };
+    const conBloqueos = V.buildResultHTML([]).replace(/<[^>]*>/g, '');
+    delete availability['2026-08-18'];
+    return { sinBloqueos, conBloqueos };
+  });
+  expect(combos.sinBloqueos, 'sin bloqueos: no culpa a la disponibilidad')
+    .toBe('Sin combinaciones. Sumá más títulos.');
+  expect(combos.conBloqueos, 'con bloqueos: la nombra')
+    .toBe('Sin combinaciones. Liberá disponibilidad o sumá títulos.');
+  expect(combos.sinBloqueos, 'sin punto en medio de frase').not.toMatch(/\.\s+[a-z]/);
+});
+
+// Ronda 4 (cierre): una prioridad cuyas funciones ya pasaron retenía su cupo —
+// «Prioridades 2/4» con una muerta, y con 4/4 muertas el usuario chocaba contra
+// la sheet del límite sin aviso. El cupo ahora se mide sobre las VIVAS
+// (prioLiveCount, dominio); la muerta sigue en la lista, atenuada, pero no
+// bloquea. Y el badge del tab MI PLAN queda atado por test a la banda «Sin
+// confirmar»: cuentan lo mismo con el mismo predicado, y no pueden divergir.
+test('T76 — el cupo de prioridades es de las vivas, y el badge de MI PLAN dice lo que la banda', async ({ page }) => {
+  await enterFestival(page, 'finca2026', '2026-08-18T10:00:00-03:00');
+  await page.evaluate(() => document.querySelector('[data-action="citySheetAll"]')?.click());
+  await page.waitForTimeout(400);
+
+  // ── 1 · cupo: 3 muertas + 1 viva = lleno según el tamaño, 1/4 según las vivas
+  const cupo = await page.evaluate(async () => {
+    const D = await import('/src/domain/film.js');
+    const muertas = [...new Set(FILMS.filter(f => D.screeningPassed(f)).map(f => f.title))]
+      .filter(t => !FILMS.some(f => f.title === t && !D.screeningPassed(f))).slice(0, 3);
+    const viva = [...new Set(FILMS.filter(f => !D.screeningPassed(f)).map(f => f.title))][0];
+    const otraViva = [...new Set(FILMS.filter(f => !D.screeningPassed(f)).map(f => f.title))][1];
+    state.set('watchlist', new Set([...muertas, viva, otraViva]));
+    state.set('prioritized', new Set([...muertas, viva]));
+    switchMainNav('mnav-seleccion'); showAgView();
+    await new Promise(r => setTimeout(r, 1000));
+    const badge = [...document.querySelectorAll('.sec-hdr .count-badge')]
+      .map(e => e.textContent.trim()).find(x => /\/\d/.test(x));
+    // y priorizar otra VIVA no choca contra el límite pese a size=4
+    togglePriority(otraViva);
+    await new Promise(r => setTimeout(r, 600));
+    return { size: prioritized.size, badge,
+      sheetLimite: !!document.querySelector('#prio-limit-sheet.open, .prio-limit-sheet.open'),
+      otraEntro: prioritized.has(otraViva) };
+  });
+  expect(cupo.badge, 'el badge cuenta las vivas, no el tamaño').toBe('1/4');
+  expect(cupo.otraEntro, 'priorizar otra viva no choca contra el límite').toBe(true);
+  expect(cupo.sheetLimite, 'sin sheet de límite').toBe(false);
+
+  // ── 2 · badge del tab = banda «Sin confirmar», mismo número siempre
+  const badgeBanda = await page.evaluate(async () => {
+    const pas = FILMS.filter(f => f.day <= '2026-08-17').slice(0, 3);
+    state.set('watched', new Set());
+    state.set('savedAgenda', { scenarioIdx: 0, schedule: pas.map(f =>
+      Object.assign({}, f, { _title: f.title })) });
+    switchMainNav('mnav-miplan'); showAgView();
+    await new Promise(r => setTimeout(r, 1200));
+    return {
+      tab: document.getElementById('miplan-badge')?.textContent,
+      banda: document.querySelector('.checkin-wrap .count-badge')?.textContent,
+    };
+  });
+  expect(badgeBanda.tab, 'el tab y la banda dicen el mismo número').toBe(badgeBanda.banda);
+  expect(Number(badgeBanda.tab), 'y es la cuenta real de pendientes').toBe(3);
 });

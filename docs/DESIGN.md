@@ -312,6 +312,34 @@ Aprobadas por el PO. Ya reflejadas en §2 y aplicadas en `index.html`.
 | 9 | `.mplan-wk-venue` | **EXCEPCIÓN** — contexto calendario denso, valores propios (`t-xs`) |
 | 10 | `.mplan-wk-time` | **EXCEPCIÓN** — `gray` sobre fondo amber-tinted |
 
+### Card o sección — la regla del contenedor (17 ago 2026)
+
+Contada sobre la app entera: **solo 5 componentes usan fondo de card**
+(`card-a`/`card-b`), y ninguno es una sección de contenido.
+
+| Componente | Qué es |
+|---|---|
+| `.ag-film-item` | un ÍTEM (una fila de película) |
+| `.ag-summary` | un RESUMEN (una unidad de datos) |
+| `.film-alts` | un PANEL que se abre encima |
+| `.lang-dropdown` | un MENÚ |
+
+Las secciones de contenido —Prioridades, Intereses, Sugerencias, Diario, el día
+de Mi Plan— son **todas planas**: solo margen y su banda `sec-hdr` a sangre
+(x=0, ancho completo). Sus filas (`.suggestion-item`, `.int-item`) usan
+**padding horizontal cero**, así que el contenido arranca en el margen de la app
+(16px) y todas las listas quedan alineadas entre sí.
+
+> **Regla:** card = una cosa individual o una superficie que aparece encima.
+> Sección = una lista de cosas, con su banda. La urgencia de una sección se
+> comunica con el LENGUAJE de advertencia (icono `alert` + badge ámbar), no con
+> un borde.
+
+`.checkin-wrap` («Sin confirmar») era la única violación: card entre dos
+secciones planas, con una píldora inline de encabezado que flotaba a 17px
+mientras sus filas arrancaban a 33 — 16px de desajuste y un tercer estilo de
+encabezado inexistente en el resto de la app. Migrada a sección plana el 17 ago.
+
 **Rationale del color secundario (`gray` #888 sobre `gray2` #555):** `#555` da
 ~2.7:1 de contraste sobre `--bg` → **falla WCAG AA** (mín. 4.5:1 para texto pequeño).
 `#888` da ~5.6:1 → **pasa AA**. A 11px + peso 400, la legibilidad pesa más que el

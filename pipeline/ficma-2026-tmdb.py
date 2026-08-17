@@ -32,17 +32,22 @@ def get(path, **params):
     return {}
 
 
-def norm(s):
+# [lib-unica] renombrada desde `norm` el 17 ago 2026.
+# Devuelve una LISTA de tokens, no un string. Ver la nota de lib-unica.
+def tokens_lista(s):
     s = ''.join(c for c in unicodedata.normalize('NFD', (s or '').lower())
                 if unicodedata.category(c) != 'Mn')
     return re.sub(r'[^a-z0-9 ]', ' ', s).split()
 
 
-def director_coincide(esperado, obtenido):
+# [lib-unica] renombrada desde `director_coincide` el 17 ago 2026.
+# Compara dos STRINGS por apellidos; `lib.director_coincide(esperado, nombres)`
+# recibe la lista de nombres de TMDB. Firmas distintas, no es la misma función.
+def director_coincide_apellidos(esperado, obtenido):
     """Compara por APELLIDOS. El PDF escribe «Michaël Dudok de Wit» y TMDB
     «Michael Dudok de Wit»; y con varios directores basta que uno cruce."""
-    a = set(norm(esperado)) - {'de', 'la', 'del', 'y', 'van', 'der'}
-    b = set(norm(obtenido)) - {'de', 'la', 'del', 'y', 'van', 'der'}
+    a = set(tokens_lista(esperado)) - {'de', 'la', 'del', 'y', 'van', 'der'}
+    b = set(tokens_lista(obtenido)) - {'de', 'la', 'del', 'y', 'van', 'der'}
     return bool(a & b) and len(a & b) >= min(2, len(a), len(b)) or bool(
         {x for x in a if len(x) > 4} & {x for x in b if len(x) > 4})
 
@@ -67,7 +72,7 @@ def main():
             dirs = [p['name'] for p in det.get('credits', {}).get('crew', []) if p.get('job') == 'Director']
             anio_t = int((det.get('release_date') or '0000')[:4] or 0)
             dur_t = det.get('runtime') or 0
-            d_ok = any(director_coincide(f['director'], n) for n in dirs)
+            d_ok = any(director_coincide_apellidos(f['director'], n) for n in dirs)
             a_ok = f['anio'] and abs(anio_t - f['anio']) <= 1
             r_ok = f['duracion_min'] and dur_t and abs(dur_t - f['duracion_min']) <= 3
             if d_ok and (a_ok or r_ok):

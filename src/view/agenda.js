@@ -26,7 +26,7 @@ import { cloudScreeningKey } from '../domain/delays.js';
 // Es la ÚNICA dependencia view→controller permitida (fijada en validate.py [view-purity]).
 import { getConsensusMap } from '../controller/delays-cloud.js';
 import {
-  screeningPassed, screeningEnded, screeningNow, screeningEndDate, effectiveDuration, blockDuration, durationForTravel, delayedEndMin, _delayKey, _endedStats,
+  screeningPassed, screeningEnded, screeningNow, screeningQaOnly, screeningEndDate, effectiveDuration, blockDuration, durationForTravel, delayedEndMin, _delayKey, _endedStats, prioLiveCount,
 } from '../domain/film.js';
 import {
   isScreeningBlocked, screeningPlannable, screensConflict, screensConflictReason,
@@ -124,8 +124,38 @@ export function renderAgenda(){
     const _progressHtml=(!savedAgenda||!savedAgenda.schedule||!savedAgenda.schedule.length)?renderFlowProgress(state,'planner'):'';
     const pending=[...watchlist].filter(titleStr=>!watched.has(titleStr)&&FILMS.some(f=>f.title===titleStr&&!screeningPassed(f)));
 
-    // ── Estado A: sin Intereses — pantalla simple, no mostrar herramienta ──
+    // ── Estado A: nada que planear ────────────────────────────────────────
+    // `pending` vacío tenía UNA sola pantalla: la de primer uso («Tu Plan
+    // aparece aquí · Agregá lo que no querés perderte»). Pero hay tres
+    // situaciones distintas detrás de ese cero, y dos de ellas la vuelven
+    // mentira. Medido en FINCA la última noche (19 AGO 23:00): 12 obras en el
+    // plan, 0 funciones futuras EN TODO EL CATÁLOGO, y la app invitando a
+    // «agregar lo que no querés perderte» para armar un plan imposible.
+    // A.1 — no queda NADA por ver en el festival. El calendario todavía dice que
+    // va (FINCA termina el 19), pero el dato manda sobre la fecha: se despide
+    // igual que cuando el festival terminó y manda a Mi Plan, donde está lo
+    // vivido. Va ANTES del gate de cachedResult y sin él: si no queda una sola
+    // función, ningún plan calculado es accionable — mostrarlo sería ofrecer
+    // opciones sobre un festival que ya no tiene ninguna.
+    if(!pending.length&&!FILMS.some(f=>!screeningPassed(f))){
+      const _fName=(FESTIVAL_CONFIG[_activeFestId]||{}).name||t('misc_festival_default');
+      requestAnimationFrame(_fixStickyOffset);
+      view.innerHTML=emptyStateHero(ICONS.sparkles,`${_fName} ${t('plan_fest_terminado')}`,
+        t('planear_descansa'),t('cta_mi_plan'),'mnav-miplan');
+      return;
+    }
     if(!pending.length&&!cachedResult){
+      // A.2 — el festival sigue, pero TUS intereses se acabaron (los viste o se
+      // te pasaron). Mandar a Intereses sería mandarte a una lista agotada; lo
+      // que queda por hacer está en el Programa.
+      if(watchlist.size){
+        view.innerHTML=`${_progressHtml}
+          <div class="ag-section">
+            ${emptyStateHero(ICONS.calendar,t('plan_nada_por_planear'),t('plan_nada_por_planear_sub'),t('plan_ir_programa'),'mnav-cartelera')}
+          </div>`;
+        return;
+      }
+      // A.3 — primer uso de verdad: nunca hubo intereses.
       view.innerHTML=`${_progressHtml}
         <div class="ag-section">
           ${emptyStateHero(ICONS.calendar,t('plan_tu_plan_empty'),t('empty_intereses_3'),t('cta_ir_intereses'),'mnav-seleccion')}
@@ -561,7 +591,11 @@ export function renderUnconfirmed(state,schedule){
       </button>
     </div>`:'';
   return`<div class="checkin-wrap">
-    <div class="checkin-hdr">${t('label_funciones')} ${t('label_sin_confirmar')}</div>
+    <!-- El icono es ICONS.alert, el mismo de AVISOS y de los avisos de conflicto,
+         retraso y traslado (8 usos): la app tiene UN símbolo para «esto requiere
+         tu atención» y este bloque es eso. check-circle decía la ACCIÓN
+         (confirmar), no el estado, y habría inventado un noveno significado. -->
+    <div class="sec-hdr sm">${ICONS.alert} <span>${t('label_sin_confirmar_hdr')}</span> <span class="count-badge cb-amber">${past.length}</span></div>
     <div class="checkin-item">
       <div class="checkin-info"><div class="checkin-title">${short}</div><div class="checkin-time">${timeDesc}</div></div>
       <div class="checkin-btns">
@@ -789,8 +823,16 @@ export function renderContextualHeader(state, consensus){
     // Horas + minutos cuando pasa de 59 min ("En 5 h 35"), minutos pelados por debajo
     // ("En 45 min") — pedir "335 min" obliga a calcular (regla de Juan, 17 jul).
     // _minFmt es el formateador único (mismo del detalle de conflictos).
+    // «Termina en 0 min» durante media hora: el rótulo EN CURSO contaba con Q&A
+    // (fin efectivo) y la cuenta sin él (fin de bloque) — dos relojes en una
+    // frase. Medido en FINCA con «¿Cuán profundo es tu amor?» (19:00, película
+    // hasta 20:41, función hasta 21:11): a las 20:50 y a las 21:05 decía cero.
+    // En esa ventana el badge dice Q&A, que es lo único cierto que queda.
+    const _qaAhora=isNow&&screeningQaOnly(next,_nowMin);
     const badge=isNow
-      ?`<span class="ctx-next-badge ending">${t('plan_termina_en')} ${_minFmt(_leftMin)}</span>`
+      ?(_qaAhora
+        ?`<span class="ctx-next-badge qa-only">${t('label_qa_ahora')}</span>`
+        :`<span class="ctx-next-badge ending">${t('plan_termina_en')} ${_minFmt(_leftMin)}</span>`)
       :`<span class="ctx-next-badge">${t('plan_en_min')} ${_minFmt(minsUntil)}</span>`;
     const _filmObj=FILMS.find(f=>f.title===next._title);
     const _isEvent=_filmObj&&_filmObj.type==='event';
@@ -1009,7 +1051,7 @@ export function renderPrioStrip(state, opts={}){
   // ── Estado 1 / 3: intención (chips con botón quitar) ──
   const chips=[...prioritized].map(x=>_chip(x,{rm:true})).join('');
   return`<div class="prio-strip">
-    <div class="sec-hdr">${ICONS.bookmark} ${t('lbl_prioridades')} <span class="count-badge cb-amber">${prioritized.size}/${PRIO_LIMIT}</span></div>
+    <div class="sec-hdr">${ICONS.bookmark} ${t('lbl_prioridades')} <span class="count-badge cb-amber">${prioLiveCount()}/${PRIO_LIMIT}</span></div>
     <div class="prio-strip-row">${chips}</div>
   </div>`;
 }
@@ -1182,7 +1224,7 @@ export function renderFilmListHTML(state){
 
   if(prioList.length){
     html+=`<div class="sec-hdr">${ICONS.bookmark} <span>${t('lbl_prioridades')}</span>
-      <span class="count-badge cb-amber">${prioList.length}/${PRIO_LIMIT}</span>
+      <span class="count-badge cb-amber">${prioLiveCount()}/${PRIO_LIMIT}</span>
     </div>
     <div>${_chronoSort(prioList).map(_mkItem).join('')}</div>`;
   }
@@ -1282,10 +1324,9 @@ export function _renderSavedAgendaHTML(state, consensus){
   // esta no. Medido con FICDEH: 2 contra 3 con un taller marcado — dos números
   // para lo mismo, a dos centímetros uno del otro.
   const _diaryCount=_endedStats().totalWatched;
-  const progressPct=dayIdx>=0?Math.round((dayIdx/(totalDays-1))*100):0;
   const progressBar=currentDayNum?`<div class="row-sm festival-progress">
     <div style="flex:1">
-      <div class="festival-progress-text"><span>${t('label_dia_prog')} <b>${currentDayNum}</b> ${t('label_de_dias')} ${totalDays}</span>${_diaryCount>0
+      <div class="festival-progress-text">${_diaryCount>0
         // «obras vistas» y no «vistas»: el conteo suma las OBRAS de cada programa
         // de cortos (y lo visto fuera del Plan), así que dos filas marcadas pueden
         // dar 14 — el número era correcto y no decía de qué (revisión de UX
@@ -1304,7 +1345,7 @@ export function _renderSavedAgendaHTML(state, consensus){
         // símbolo de restaurar — reusar cualquiera diría dos cosas con el mismo
         // dibujo.
         ?`<button class="diary-chip" data-action="openDiary" data-stop="1">${ICONS.bookOpen} <span>${t('diary_eyebrow')}</span> <span class="count-badge cb-neutral">${_diaryCount}</span>${ICONS.chevronR}</button>`
-        :''}</div>
+        :'<span></span>'}<span>${t('label_dia_prog')} <b>${currentDayNum}</b> ${t('label_de_dias')} ${totalDays}</span></div>
     </div>
   </div>`:'';
 
@@ -1395,12 +1436,21 @@ export function renderAvBlocks(){
 // p8 (fix urgente): buildResultHTML reubicado desde view/components.js — usa
 // mkAgendaRow (local) + helpers + domain, todos ya importados aquí; cero ciclos.
 export function buildResultHTML(scenarios){
-  if(!scenarios||!scenarios.length)
-    return`<div class="ag-calc-prompt">${t('plan_sin_combos')} ${t('plan_anadir_titulos')}</div>`;
+  if(!scenarios||!scenarios.length){
+    // Solo se culpa a la disponibilidad si HAY bloqueos puestos: sin ellos no es
+    // la causa. La costura de dos claves («…disponibilidad. o agregá…») dejaba
+    // un punto en medio de la frase — mismo patrón del «revisá Sugerencias..».
+    const _conBloqueos=!!(availability&&DAY_KEYS.some(d=>availability[d]&&availability[d].blocks&&availability[d].blocks.length));
+    return`<div class="ag-calc-prompt">${t(_conBloqueos?'plan_sin_combos_av':'plan_sin_combos')}</div>`;
+  }
   const{currentIdx}=cachedResult;
   const sc=scenarios[currentIdx],n=scenarios.length;
   const pending=[...watchlist].filter(t=>!watched.has(t)&&FILMS.some(f=>f.title===t&&!screeningPassed(f)));
-  const total=pending.length,ok=sc.schedule.length,bad=sc.excluded.length;
+  // `total` y `bad` alimentaban el banner «Los títulos no incluidos se solapan
+  // con otros en tu Plan», retirado el 17 ago: solo podía ser cierto cuando TODAS
+  // las filas compartían causa, y se mostraba con 7 de 9 que ni siquiera habían
+  // competido. Cada fila ya dice su razón.
+  const ok=sc.schedule.length;
   // Stale banner (movido aquí desde pre-cálculo): se calcula a partir de cachedResult._prioSnapshot vs prioritized actual.
   const _snap=cachedResult._prioSnapshot;
   const _stale=Array.isArray(_snap)&&(_snap.length!==prioritized.size||!_snap.every(x=>prioritized.has(x)));
@@ -1436,7 +1486,6 @@ export function buildResultHTML(scenarios){
     <div class="sec-hdr">${ICONS.calendar} <span>${planLabel}</span>
       <span class="count-badge cb-neutral">${ok}</span>
     </div>
-    ${bad>0&&bad>=total?`<div class="meta-banner"><div class="meta-banner-dot"></div><div class="meta-banner-text">${t('plan_contexto_max')}</div></div>`:''}
     ${sc.incompatiblePriorities?(()=>{
       const pairs=sc.conflictingPriorityPairs||[];
       const pairMsg=pairs.length
@@ -1467,9 +1516,21 @@ export function buildResultHTML(scenarios){
     });
   });
 
-  // ── Películas no incluidas — lista con razón + botón Incluir ────────
-  if(sc.excluded.length){
-    const _excItems=sc.excluded.map(excTitle=>{
+  // ── No incluidas — lista con razón + botón Incluir ──────────────────
+  // «No incluida» describe a la que COMPITIÓ y perdió. Una obra cuyas funciones
+  // ya pasaron nunca fue candidata —el festival se la llevó, no el motor— y
+  // llamarla así es un reproche sin sujeto. Medido con el auditor de fin de
+  // festival (FINCA, 17 AGO 21:00): 9 excluidas, 7 ya pasadas y solo 2 reales,
+  // y las 7 salían PRIMERO, enterrando las dos decisiones de la noche detrás de
+  // una pantalla de lápidas. Su lugar es el Diario y el Modo Recuerdo, y en
+  // Intereses ya aparecen con «Ya pasó»: repetirlas en Planear es ruido en la
+  // pantalla donde el usuario decide el futuro (decisión de Juan, 17 ago).
+  // plannable-ok: acá NO se usa el dueño (plannableScreens) a propósito — solo
+  // interesa si el festival ya se las llevó, no si tu filtro de ciudad o tu
+  // franja vetada las descartan; esas SÍ se siguen mostrando con su razón.
+  const _excVivas=sc.excluded.filter(_t=>FILMS.some(fi=>fi.title===_t&&!screeningPassed(fi)));
+  if(_excVivas.length){
+    const _excItems=_excVivas.map(excTitle=>{
       const t_=excTitle; // alias para no pisar t() i18n
       const{displayTitle:dt}=parseProgramTitle(excTitle);
       const f=FILMS.find(fi=>fi.title===excTitle);
@@ -1484,6 +1545,7 @@ export function buildResultHTML(scenarios){
       const screens=FILMS.filter(fi=>fi.title===excTitle&&!screeningPassed(fi)&&!isScreeningBlocked(fi));
       // Distinguir «ya pasó» de «nunca tuvo función»: screens ya filtró las
       // pasadas, así que la lista vacía no dice por sí sola cuál de las dos es.
+      let _qaOnlySlot=null;
       const _tuvoAlguna=FILMS.some(fi=>fi.title===excTitle);
       const _yaPaso=_tuvoAlguna?'ya_paso':'empty_sin_funciones';
       let reason='',canInclude=false;
@@ -1535,6 +1597,13 @@ export function buildResultHTML(scenarios){
           // exactamente eso, así que el botón prometía algo que el motor iba a
           // rechazar. La fila igual explica el motivo — informar sí, ofrecer no.
           canInclude=_k!=='ciudad';
+          // Choque SOLO por el Q&A: no hay nada que reemplazar —las dos caben si
+          // salís al final de la película—, así que el botón AGREGA en vez de
+          // abrir el modal de sustituir. Va marcada `_squeezed`, el mecanismo que
+          // ya existe para «violación DELIBERADA que el usuario aceptó»
+          // (verifyPlan la respeta). El planificador automático sigue siendo
+          // conservador: no arma tu plan alrededor de una charla estimada.
+          if(conflictReason.qaOnly){ _qaOnlySlot=conflictPair.s; }
         } else if(screens.length){
           reason=`<div class="excl-reason">${t('plan_choca')}</div>`;
         } else {
@@ -1542,7 +1611,9 @@ export function buildResultHTML(scenarios){
         }
       }
       const includeBtn=canInclude
-        ?`<button class="excl-include-btn" data-action="forceInclude" data-title="${safeT}" data-stop="1">${ICONS.plus} ${t('plan_agendar')}</button>`
+        ?(_qaOnlySlot
+          ?`<button class="excl-include-btn" data-action="includeAnyway" data-title="${safeT}" data-day="${_qaOnlySlot.day}" data-time="${_qaOnlySlot.time}" data-stop="1">${ICONS.plus} ${t('plan_agendar')}</button>`
+          :`<button class="excl-include-btn" data-action="forceInclude" data-title="${safeT}" data-stop="1">${ICONS.plus} ${t('plan_agendar')}</button>`)
         :'';
       const opacity=!screens.length?'opacity:.45;':'';
       return`<div class="int-item js-open-pel" style="${opacity}" data-title="${escXML(f.title)}">
@@ -1558,7 +1629,7 @@ export function buildResultHTML(scenarios){
     html+=`<div class="ag-excl-block">
       <div class="sec-hdr sm">
         ${ICONS.x} <span>${t('plan_no_incluidas')}</span>
-        <span class="count-badge cb-neutral">${sc.excluded.length}</span>
+        <span class="count-badge cb-neutral">${_excVivas.length}</span>
       </div>
       ${_excItems}
     </div>`;

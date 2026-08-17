@@ -90,7 +90,21 @@ export function screensConflictReason(a,b){
   const bFirst = bE<=aS;
   const gap = bFirst ? (aS-bE) : (bS-aE);
   const travel = (a.venue&&b.venue) ? travelMins(a.venue,b.venue) : 0;
-  return travel>0 ? {kind:'viaje', travel, gap, bFirst} : {kind:'ajustado', gap, bFirst};
+  if(!travel) return {kind:'ajustado', gap, bFirst};
+  // ¿El choque existe SOLO por el Q&A? Con traslado el Q&A cuenta (doctrina 30
+  // jul), pero es OPCIONAL y sus 30 min son ESTIMADOS: si saliendo al final de
+  // la película la función entra, eso no es una imposibilidad sino una decisión
+  // que el usuario puede tomar. Medido en FINCA: 4 de 27 choques con Q&A son de
+  // este tipo — «Tierra que habla» → «El amor duerme en la calle» deja 38 min de
+  // hueco sin la charla y hacen falta 25.
+  // La cuenta se repite acá con blockDuration en vez de durationForTravel; no se
+  // delega en screensConflict porque ésa es, por definición, la que cuenta el Q&A.
+  const _minGap=Math.max(FESTIVAL_BUFFER, travel+FESTIVAL_BUFFER);
+  const _aE=toMin(a.time)+blockDuration(a), _bE=toMin(b.time)+blockDuration(b);
+  const _chocaSinQa=(_aE<=toMin(b.time))?(toMin(b.time)-_aE)<_minGap
+    :(_bE<=toMin(a.time))?(toMin(a.time)-_bE)<_minGap:true;
+  const qaOnly=(a.has_qa||b.has_qa)&&!_chocaSinQa;
+  return {kind:'viaje', travel, gap, bFirst, qaOnly};
 }
 
 export function isScreeningBlocked(s){

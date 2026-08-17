@@ -192,18 +192,24 @@ SINOPSIS_PRIMERA_FUENTE = {
 }
 
 
-def sinacento(s):
+# [lib-unica] renombrada desde `sinacento` el 17 ago 2026.
+# Sube a MAYÚSCULAS además de quitar acentos; `lib.sinacento` respeta la caja.
+def mayus_sin_acento(s):
     return ''.join(c for c in unicodedata.normalize('NFD', (s or '').lower())
                    if unicodedata.category(c) != 'Mn').strip()
 
 
-def banderas(pais):
+# [lib-unica] renombrada desde `banderas` el 17 ago 2026.
+# Usa la tabla de países propia de FICMA, no la de lib.
+def banderas_ficma(pais):
     out = [BANDERAS[k] for p in re.split(r'[,/]| y ', pais or '')
-           if (k := sinacento(p)) in BANDERAS]
+           if (k := mayus_sin_acento(p)) in BANDERAS]
     return ''.join(dict.fromkeys(out))
 
 
-def slug(t):
+# [lib-unica] renombrada desde `slug` el 17 ago 2026.
+# CONSERVA los acentos («rebelión»); `lib.slug` los quita («rebelion»).
+def slug_con_acentos(t):
     return ''.join(c if c.isalnum() else '-' for c in t.lower()).strip('-')[:60]
 
 
@@ -308,12 +314,12 @@ def main():
         e = {
             'title': TITULO_OFICIAL.get(f['titulo'], f['titulo']),
             'director': f['director'],
-            'year': str(f['anio']),
+            'year': int(f['anio']) if str(f['anio']).isdigit() else f['anio'],  # contrato: number
             # La duración es la del PDF, SIEMPRE: es la que el festival programó.
             # TMDB difiere hasta en 3 min y mover eso corre el fin de la función.
             'duration': f'{DURACION_OFICIAL.get(f["titulo"], f["duracion_min"])} min',
             'country': f['pais'],
-            'flags': banderas(f['pais']),
+            'flags': banderas_ficma(f['pais']),
             'section': sec[0],
             'day': f['dia'],
             'time': f['hora'],
@@ -358,9 +364,11 @@ def main():
             e['_src'] = 'FICMA 17 - FRANJA ACADÉMICA.pdf (OCR) · ' + _fa['pagina']
         if f.get('sala'):
             e['sala'] = f['sala']
-        if f.get('ciclo'):
-            # El ciclo es la marca del festival («Cine al barrio»), no la sede.
-            e['cycle'] = f['ciclo']
+        # El ciclo («Cine al barrio», «Cine bajo la niebla») es la marca del
+        # festival, no la sede, y es información real que `section` no dice.
+        # Aun así NO se emite desde el 17 ago 2026: la ficha nunca lo pintó y la
+        # decisión fue no pintarlo. `ciclo` sigue en el crudo — si algún día se
+        # muestra, el dato está y no hay que volver a extraerlo.
         if t:
             e['tmdb_id'] = t['tmdb_id']
             if (g := (t.get('generos') or [''])[0]):
@@ -368,7 +376,7 @@ def main():
             # Nunca poster:'' — el gate [poster-empty-film] lo bloquea y con razón:
             # un string vacío es un póster roto, la ausencia es un dato honesto.
             if t.get('poster_path'):
-                e['poster'] = f'/assets/ficma/{slug(f["titulo"])}.jpg'
+                e['poster'] = f'/assets/ficma/{slug_con_acentos(f["titulo"])}.jpg'
                 e['posterSource'] = 'tmdb'
             if t.get('synopsis_es'):
                 e['synopsis'], e['synopsis_lang'] = t['synopsis_es'], 'es'
@@ -376,8 +384,10 @@ def main():
                 e['synopsis'], e['synopsis_lang'] = t['synopsis_en'], 'en'
             if t.get('synopsis_en'):
                 e['synopsis_en'] = t['synopsis_en']
-            if t.get('titulo_original') and t['titulo_original'] != f['titulo']:
-                e['original_title'] = t['titulo_original']
+            # `original_title` NO se emite (17 ago 2026): la ficha nunca lo
+            # pintó y un campo que nadie lee es peso muerto. El
+            # `titulo_original` del sidecar SÍ se conserva — enriquecer.py lo
+            # usa para decidir el title_en.
         # title_en: el título con que la obra se distribuye en inglés, traído de
         # TMDB sobre un tmdb_id ya verificado (pipeline/ficma-2026-title-en.py).
         # Las que ya se llaman igual en inglés no lo llevan.
