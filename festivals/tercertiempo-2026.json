@@ -1,912 +1,899 @@
 {
-  "_provenance": true,
-  "ticket_url": "https://cinematecadebogota.gov.co",
-  "ticketing_model": "mixed",
-  "venues": {
-    "Cinemateca Sala 2": {
-      "short": "Cinemateca de Bogotá",
-      "city": "Bogotá",
-      "address": "Carrera 3 No. 19-10",
-      "lat": 4.6032463,
-      "lng": -74.06758
-    },
-    "Cinemateca Sala 3": {
-      "short": "Cinemateca de Bogotá",
-      "city": "Bogotá",
-      "address": "Carrera 3 No. 19-10",
-      "lat": 4.6032463,
-      "lng": -74.06758
-    },
-    "Cinemateca Sala Capital": {
-      "short": "Cinemateca de Bogotá",
-      "city": "Bogotá",
-      "address": "Carrera 3 No. 19-10",
-      "lat": 4.6032463,
-      "lng": -74.06758,
-      "room": "Sala Capital"
-    },
-    "CEFE Fontanar del Río": {
-      "short": "CEFE Fontanar del Río",
-      "city": "Bogotá",
-      "lat": 4.754983,
-      "lng": -74.1126869
-    },
-    "CEFE El Tunal": {
-      "short": "CEFE El Tunal",
-      "city": "Bogotá",
-      "lat": 4.5718773,
-      "lng": -74.1341131
-    }
+ "_provenance": true,
+ "ticket_url": "https://cinematecadebogota.gov.co",
+ "ticketing_model": "mixed",
+ "venues": {
+  "Cinemateca Sala 2": {
+   "short": "Cinemateca de Bogotá",
+   "city": "Bogotá",
+   "address": "Carrera 3 No. 19-10",
+   "lat": 4.6032463,
+   "lng": -74.06758
   },
-  "films": [
-    {
-      "title": "Raíces del Juego",
-      "is_cortos": true,
-      "poster": "/assets/tercertiempo/sesion-raices-del-juego.jpg",
-      "duration": "105 min",
-      "film_list": [
-        {
-          "title": "Buscalavida y Milikua",
-          "director": "Idoia Errexil, Joseba Gorordo",
-          "year": 2025,
-          "country": "España",
-          "duration": "54 min",
-          "synopsis": "Dos comunidades unidas por el fútbol enfrentan desafíos sociales y culturales mientras encuentran en el deporte una herramienta para fortalecer la identidad colectiva, la convivencia y la esperanza.",
-          "synopsis_lang": "es",
-          "poster": "/assets/tercertiempo/buscalavida-y-milikua.jpg",
-          "posterSource": "custom",
-          "flags": "🇪🇸",
-          "synopsis_en": "Two communities united by football face social and cultural challenges while finding in sport a tool to strengthen collective identity, coexistence and hope."
-        },
-        {
-          "title": "La fiesta del fútbol popular",
-          "director": "Diego Armando Izquierdo",
-          "year": 2025,
-          "country": "Colombia",
-          "duration": "31 min",
-          "synopsis": "Un recorrido por las expresiones populares del fútbol colombiano donde la pasión, la fiesta y la apropiación comunitaria convierten el juego en un fenómeno cultural que trasciende las canchas.",
-          "synopsis_lang": "es",
-          "poster": "/assets/tercertiempo/la-fiesta-del-futbol-popular.jpg",
-          "posterSource": "custom",
-          "flags": "🇨🇴",
-          "synopsis_en": "A journey through the popular expressions of Colombian football, where passion, celebration and community ownership turn the game into a cultural phenomenon that transcends the pitch."
-        },
-        {
-          "title": "El fin de los tiempos",
-          "director": "Diego Guareño",
-          "year": 2025,
-          "country": "México",
-          "duration": "20 min",
-          "synopsis": "En una comunidad marcada por la incertidumbre, el fútbol se convierte en un refugio emocional y una forma de resistencia frente a los cambios que amenazan la vida cotidiana.",
-          "synopsis_lang": "es",
-          "poster": "/assets/tercertiempo/el-fin-de-los-tiempos.jpg",
-          "posterSource": "custom",
-          "flags": "🇲🇽",
-          "synopsis_en": "In a community marked by uncertainty, football becomes an emotional refuge and a form of resistance against the changes threatening everyday life.",
-          "genre": "Drama",
-          "lbSlug": "the-end-of-times"
-        }
-      ],
-      "day": "2026-07-13",
-      "time": "13:00",
-      "venue": "Cinemateca Sala 2",
-      "section": "🌱 Raíces del Juego",
-      "_src": {
-        "url": "https://cinematecadebogota.gov.co/node/peliculas/2562?sede=11",
-        "date": "2026-07-10"
-      },
-      "trailer": "https://youtu.be/MGaepqGbrVI",
-      "ticket_url": "https://idartes.checkout.tuboleta.com/selection/event/date?productId=10230505466234",
-      "flags": "🇪🇸🇨🇴🇲🇽",
-      "country": "España, Colombia, México",
-      "day_order": 1,
-      "posterSource": "custom"
-    },
-    {
-      "title": "Juego Mental",
-      "is_cortos": true,
-      "poster": "/assets/tercertiempo/sesion-juego-mental.jpg",
-      "duration": "81 min",
-      "film_list": [
-        {
-          "title": "Master Bruno and the Perfidious Macumbas of the Ball",
-          "director": "André Azevedo",
-          "year": 2025,
-          "country": "Portugal",
-          "duration": "10 min",
-          "synopsis": "Master Bruno vive inmerso en un universo fantástico donde el fútbol, la magia y la imaginación se entrelazan. A través de una aventura llena de humor y situaciones inesperadas, deberá enfrentarse a las misteriosas Macumbas of the Ball, descubriendo que el verdadero poder se encuentra en la amistad, la valentía y la pasión por el juego.",
-          "synopsis_lang": "es",
-          "poster": "/assets/tercertiempo/master-bruno.jpg",
-          "posterSource": "custom",
-          "flags": "🇵🇹",
-          "synopsis_en": "Master Bruno lives immersed in a fantastic universe where football, magic and imagination intertwine. Through an adventure full of humor and unexpected situations, he must face the mysterious Macumbas of the Ball, discovering that true power lies in friendship, courage and passion for the game.",
-          "genre": "Comedia",
-          "lbSlug": "master-bruno-and-the-perfidious-macumbas"
-        },
-        {
-          "title": "Entrenador de locos",
-          "director": "Carlo Liberatore",
-          "year": 2025,
-          "country": "Italia",
-          "duration": "57 min",
-          "synopsis": "En Dakar, un entrenador reúne a un equipo de fútbol conformado por personas con trastornos mentales. Entre la pobreza, la exclusión y el estigma social, los jugadores encuentran en el deporte una oportunidad para construir comunidad y perseguir un sueño que los llevará hasta Italia.",
-          "synopsis_lang": "es",
-          "poster": "/assets/tercertiempo/entrenador-de-locos.jpg",
-          "posterSource": "custom",
-          "flags": "🇮🇹",
-          "synopsis_en": "In Dakar, a coach brings together a football team made up of people with mental disorders. Amid poverty, exclusion and social stigma, the players find in sport a chance to build community and chase a dream that will take them all the way to Italy.",
-          "title_en": "The Madmen Coach",
-          "genre": "Documental",
-          "lbSlug": "the-madmen-coach"
-        },
-        {
-          "title": "Polígono X",
-          "director": "Néstor López",
-          "year": 2025,
-          "country": "España",
-          "duration": "14 min",
-          "synopsis": "Tras años de derrotas frente al equipo brasileño del barrio vecino, Rana y sus amigos están decididos a ganar a cualquier precio. Lo que comienza como un partido de fútbol revela tensiones, prejuicios y conflictos de convivencia dentro de una comunidad diversa.",
-          "synopsis_lang": "es",
-          "poster": "/assets/tercertiempo/poligono-x.jpg",
-          "posterSource": "custom",
-          "flags": "🇪🇸",
-          "synopsis_en": "After years of defeats against the Brazilian team from the neighboring barrio, Rana and his friends are determined to win at any cost. What begins as a football match reveals tensions, prejudice and conflicts of coexistence within a diverse community.",
-          "lbSlug": "poligono-x"
-        }
-      ],
-      "day": "2026-07-13",
-      "time": "17:00",
-      "venue": "Cinemateca Sala 3",
-      "section": "🧠 Juego Mental",
-      "_src": {
-        "url": "https://cinematecadebogota.gov.co/node/peliculas/2563?sede=11",
-        "date": "2026-07-10"
-      },
-      "trailer": "https://youtu.be/d6Cly5MuWAU",
-      "ticket_url": "https://idartes.checkout.tuboleta.com/selection/event/date?productId=10230505466235",
-      "flags": "🇵🇹🇮🇹🇪🇸",
-      "country": "Portugal, Italia, España",
-      "day_order": 2,
-      "posterSource": "custom"
-    },
-    {
-      "title": "El Rey Puma",
-      "director": "Fernando Ureña",
-      "year": 2025,
-      "country": "España",
-      "duration": "91 min",
-      "synopsis": "La historia de Rudolf Dassler y el nacimiento de Puma, una de las marcas deportivas más influyentes del mundo, y su impacto en la evolución del fútbol moderno.",
-      "synopsis_lang": "es",
-      "day": "2026-07-13",
-      "time": "19:00",
-      "venue": "Cinemateca Sala Capital",
-      "section": "👟 El Rey Puma",
-      "_src": {
-        "url": "https://cinematecadebogota.gov.co/node/peliculas/2564?sede=11",
-        "date": "2026-07-10"
-      },
-      "trailer": "https://youtu.be/c3JRb633zb0",
-      "ticket_url": "https://idartes.checkout.tuboleta.com/selection/event/date?productId=10230505466236",
-      "poster": "/assets/tercertiempo/el-rey-puma.jpg",
-      "posterSource": "custom",
-      "flags": "🇪🇸",
-      "day_order": 3,
-      "synopsis_en": "The story of Rudolf Dassler and the birth of Puma, one of the most influential sports brands in the world, and its impact on the evolution of modern football.",
-      "genre": "Documental",
-      "lbSlug": "el-rey-puma"
-    },
-    {
-      "title": "Más allá del Fútbol",
-      "is_cortos": true,
-      "poster": "/assets/tercertiempo/sesion-mas-alla-del-futbol.jpg",
-      "duration": "50 min",
-      "film_list": [
-        {
-          "title": "Grand slam",
-          "director": "Galar Egüén",
-          "year": 2023,
-          "country": "España",
-          "duration": "11 min",
-          "synopsis": "Una reflexión sobre la perseverancia y la pasión deportiva a través de una historia donde la competencia se convierte en una experiencia profundamente humana.",
-          "synopsis_lang": "es",
-          "poster": "/assets/tercertiempo/grand-slam.jpg",
-          "posterSource": "custom",
-          "flags": "🇪🇸",
-          "synopsis_en": "A reflection on perseverance and sporting passion through a story where competition becomes a profoundly human experience."
-        },
-        {
-          "title": "El juego de su vida",
-          "director": "Alejandro Miñarro",
-          "year": 2024,
-          "country": "España",
-          "duration": "14 min",
-          "synopsis": "El deporte aparece como una oportunidad única para transformar el destino de quienes encuentran en el juego una razón para seguir adelante.",
-          "synopsis_lang": "es",
-          "poster": "/assets/tercertiempo/el-juego-de-su-vida.jpg",
-          "posterSource": "custom",
-          "flags": "🇪🇸",
-          "synopsis_en": "Sport emerges as a unique opportunity to transform the fate of those who find in the game a reason to keep going.",
-          "genre": "Comedia",
-          "lbSlug": "el-juego-de-su-vida"
-        },
-        {
-          "title": "Pambelé",
-          "director": "Augusto Pinilla",
-          "year": 2024,
-          "country": "España, Colombia",
-          "duration": "3 min",
-          "synopsis": "Homenaje audiovisual a Antonio Cervantes \"Kid Pambelé\", una de las figuras más importantes de la historia del deporte colombiano.",
-          "synopsis_lang": "es",
-          "poster": "/assets/tercertiempo/pambele.jpg",
-          "posterSource": "custom",
-          "flags": "🇪🇸🇨🇴",
-          "synopsis_en": "An audiovisual tribute to Antonio Cervantes \"Kid Pambelé\", one of the most important figures in the history of Colombian sport."
-        },
-        {
-          "title": "Break",
-          "director": "Juan Carlos Quindós, Liam Darg",
-          "year": 2025,
-          "country": "España",
-          "duration": "7 min",
-          "synopsis": "Michael vive una ruptura amorosa como si fuera una final de tenis. Entre humor, emociones y puntos decisivos, la película convierte el amor y el desamor en un partido donde nadie quiere perder.",
-          "synopsis_lang": "es",
-          "poster": "/assets/tercertiempo/break.jpg",
-          "posterSource": "custom",
-          "flags": "🇪🇸",
-          "synopsis_en": "Michael goes through a breakup as if it were a tennis final. Between humor, emotions and decisive points, the film turns love and heartbreak into a match nobody wants to lose."
-        },
-        {
-          "title": "Desde abajo",
-          "director": "Felipe Muñoz Grez",
-          "year": 2025,
-          "country": "Chile",
-          "duration": "15 min",
-          "synopsis": "Una mirada a las historias que nacen lejos de los reflectores y encuentran en el deporte una oportunidad para transformar realidades.",
-          "synopsis_lang": "es",
-          "poster": "/assets/tercertiempo/desde-abajo.jpg",
-          "posterSource": "custom",
-          "flags": "🇨🇱",
-          "synopsis_en": "A look at the stories born far from the spotlight that find in sport an opportunity to transform realities."
-        }
-      ],
-      "day": "2026-07-15",
-      "time": "13:00",
-      "venue": "Cinemateca Sala 2",
-      "section": "🏅 Más allá del Fútbol",
-      "_src": {
-        "url": "https://cinematecadebogota.gov.co/node/peliculas/2565?sede=11",
-        "date": "2026-07-10"
-      },
-      "trailer": "https://youtu.be/EjKdCpFPW3k",
-      "ticket_url": "https://idartes.checkout.tuboleta.com/selection/event/date?productId=10230505466237",
-      "flags": "🇪🇸🇨🇴🇨🇱",
-      "country": "España, Colombia, Chile",
-      "day_order": 1,
-      "posterSource": "custom"
-    },
-    {
-      "title": "Barrio Caliente",
-      "is_cortos": true,
-      "poster": "/assets/tercertiempo/sesion-barrio-caliente.jpg",
-      "duration": "118 min",
-      "film_list": [
-        {
-          "title": "Al son que me toquen bailo",
-          "director": "Deyaneira González",
-          "year": 2024,
-          "country": "Puerto Rico",
-          "duration": "16 min",
-          "synopsis": "Brian, un joven futbolista, debe decidir entre perseguir sus sueños o permanecer junto a la comunidad que lo vio crecer. En una noche que cambiará su vida para siempre, enfrentará una decisión que pondrá a prueba su identidad, sus afectos y su futuro.",
-          "synopsis_lang": "es",
-          "poster": "/assets/tercertiempo/al-son-que-me-toquen-bailo.jpg",
-          "posterSource": "custom",
-          "flags": "🇵🇷",
-          "synopsis_en": "Brian, a young footballer, must decide between chasing his dreams or staying with the community that raised him. In a night that will change his life forever, he faces a decision that will test his identity, his bonds and his future."
-        },
-        {
-          "title": "Ángeles FC",
-          "director": "Roberto Ortíz",
-          "year": 2025,
-          "country": "México",
-          "duration": "102 min",
-          "synopsis": "La historia de un equipo que desafía barreras sociales y culturales para demostrar que el fútbol puede convertirse en una herramienta de transformación colectiva.",
-          "synopsis_lang": "es",
-          "poster": "/assets/tercertiempo/angeles-fc.jpg",
-          "posterSource": "custom",
-          "flags": "🇲🇽",
-          "synopsis_en": "The story of a team that defies social and cultural barriers to prove that football can become a tool for collective transformation.",
-          "genre": "Documental, Drama",
-          "lbSlug": "angeles-fc"
-        }
-      ],
-      "day": "2026-07-15",
-      "time": "16:30",
-      "venue": "Cinemateca Sala 3",
-      "section": "🔥 Barrio Caliente",
-      "_src": {
-        "url": "https://cinematecadebogota.gov.co/node/peliculas/2566?sede=11",
-        "date": "2026-07-10"
-      },
-      "trailer": "https://youtu.be/IiPUfoD1rwc",
-      "ticket_url": "https://idartes.checkout.tuboleta.com/selection/event/date?productId=10230505466238",
-      "flags": "🇵🇷🇲🇽",
-      "country": "Puerto Rico, México",
-      "day_order": 2,
-      "posterSource": "custom"
-    },
-    {
-      "title": "Pedal y Resistencia",
-      "is_cortos": true,
-      "poster": "/assets/tercertiempo/sesion-pedal-y-resistencia.jpg",
-      "duration": "71 min",
-      "film_list": [
-        {
-          "title": "Bejaranos",
-          "director": "Andrés García, Manu Cid",
-          "year": 2024,
-          "country": "España",
-          "duration": "53 min",
-          "synopsis": "Existe un lugar en España llamado Béjar donde los niños no soñaban con ser futbolistas, sino ciclistas. Algunos alcanzaron la gloria, como Laudelino Cubino y Roberto Heras. Otros conocieron la cara más dura del deporte. Un retrato emocionante sobre una comunidad marcada por la bicicleta y sus héroes.",
-          "synopsis_lang": "es",
-          "poster": "/assets/tercertiempo/bejaranos.jpg",
-          "posterSource": "custom",
-          "flags": "🇪🇸",
-          "synopsis_en": "There is a place in Spain called Béjar where children didn't dream of being footballers, but cyclists. Some reached glory, like Laudelino Cubino and Roberto Heras. Others met the harshest side of the sport. A moving portrait of a community shaped by the bicycle and its heroes."
-        },
-        {
-          "title": "El gran giro",
-          "director": "Gabriela Espinoza",
-          "year": 2025,
-          "country": "México",
-          "duration": "18 min",
-          "synopsis": "Después de más de treinta años como ciclista profesional, Ismael dedica su vida a entrenar nuevos corredores y dirigir un taller que se ha convertido en punto de encuentro para la comunidad ciclista de su región. Una historia sobre legado, pasión y resistencia.",
-          "synopsis_lang": "es",
-          "poster": "/assets/tercertiempo/el-gran-giro.jpg",
-          "posterSource": "custom",
-          "flags": "🇲🇽",
-          "synopsis_en": "After more than thirty years as a professional cyclist, Ismael devotes his life to training new riders and running a workshop that has become a gathering point for his region's cycling community. A story about legacy, passion and endurance.",
-          "lbSlug": "el-gran-giro"
-        }
-      ],
-      "day": "2026-07-15",
-      "time": "19:30",
-      "venue": "Cinemateca Sala 3",
-      "section": "🚴 Pedal y Resistencia",
-      "_src": {
-        "url": "https://cinematecadebogota.gov.co/node/peliculas/2567?sede=11",
-        "date": "2026-07-10"
-      },
-      "trailer": "https://youtu.be/lNaZGMaqy64",
-      "ticket_url": "https://idartes.checkout.tuboleta.com/selection/event/date?productId=10230505466239",
-      "flags": "🇪🇸🇲🇽",
-      "country": "España, México",
-      "day_order": 3,
-      "posterSource": "custom"
-    },
-    {
-      "title": "Fútbol Poético",
-      "is_cortos": true,
-      "poster": "/assets/tercertiempo/sesion-futbol-poetico.jpg",
-      "duration": "81 min",
-      "film_list": [
-        {
-          "title": "Cantos al juego de \"Bolar\"",
-          "director": "Iván Sierra",
-          "lbSlug": "cantos-al-juego-de-bolar",
-          "year": 2025,
-          "genre": "Animación",
-          "country": "Colombia",
-          "duration": "8 min",
-          "synopsis": "Un ensayo audiovisual y poético sobre la infancia, el balón y la esencia del juego. Una reflexión sobre el fútbol como libertad, imaginación y encuentro colectivo.",
-          "synopsis_lang": "es",
-          "poster": "/assets/tercertiempo/cantos-al-juego-de-bolar.jpg",
-          "posterSource": "custom",
-          "flags": "🇨🇴",
-          "synopsis_en": "A poetic audiovisual essay on childhood, the ball and the essence of play. A reflection on football as freedom, imagination and collective encounter."
-        },
-        {
-          "title": "El equipo del pueblo. Un sueño, Atlante",
-          "director": "Rafael Aparicio",
-          "lbSlug": "el-equipo-del-pueblo-un-sueno-atlante",
-          "year": 2025,
-          "genre": "Documental",
-          "country": "México",
-          "duration": "73 min",
-          "synopsis": "La historia de uno de los clubes más queridos del fútbol mexicano y el vínculo emocional que mantiene con generaciones de aficionados.",
-          "synopsis_lang": "es",
-          "poster": "/assets/tercertiempo/el-equipo-del-pueblo.jpg",
-          "posterSource": "custom",
-          "flags": "🇲🇽",
-          "synopsis_en": "The story of one of Mexican football's most beloved clubs and the emotional bond it keeps with generations of fans."
-        }
-      ],
-      "day": "2026-07-16",
-      "time": "13:00",
-      "venue": "Cinemateca Sala 2",
-      "section": "✍️ Fútbol Poético",
-      "_src": {
-        "url": "https://cinematecadebogota.gov.co/node/peliculas/2568?sede=11",
-        "date": "2026-07-10"
-      },
-      "trailer": "https://youtu.be/r7kcq8fbZaQ",
-      "ticket_url": "https://idartes.checkout.tuboleta.com/selection/event/date?productId=10230505466240",
-      "flags": "🇨🇴🇲🇽",
-      "country": "Colombia, México",
-      "day_order": 1,
-      "posterSource": "custom"
-    },
-    {
-      "title": "Refugio en la Cancha",
-      "is_cortos": true,
-      "poster": "/assets/tercertiempo/sesion-refugio-en-la-cancha.jpg",
-      "duration": "131 min",
-      "film_list": [
-        {
-          "title": "Mounir",
-          "director": "Xabier Rúa, Xosé Dopazo",
-          "lbSlug": "mounir",
-          "year": 2024,
-          "country": "España",
-          "duration": "14 min",
-          "synopsis": "Mientras lucha por obtener un permiso de residencia, Mounir intenta construir una vida estable en España sin renunciar a sus raíces ni a los lazos familiares que lo unen a Marruecos.",
-          "synopsis_lang": "es",
-          "poster": "/assets/tercertiempo/mounir.jpg",
-          "posterSource": "custom",
-          "flags": "🇪🇸",
-          "synopsis_en": "While fighting to obtain a residence permit, Mounir tries to build a stable life in Spain without giving up his roots or the family ties that bind him to Morocco.",
-          "genre": "Drama"
-        },
-        {
-          "title": "Más que Imparables",
-          "director": "Korstiaan Vandiver",
-          "lbSlug": "beyond-unstoppable",
-          "year": 2025,
-          "country": "Estados Unidos",
-          "duration": "21 min",
-          "synopsis": "Un joven refugiado somalí encuentra esperanza a través del fútbol al integrarse a un equipo liderado por otra adolescente inmigrante. El deporte se convierte en una herramienta de resiliencia y transformación.",
-          "synopsis_lang": "es",
-          "poster": "/assets/tercertiempo/mas-que-imparables.jpg",
-          "posterSource": "custom",
-          "flags": "🇺🇸",
-          "synopsis_en": "A young Somali refugee finds hope through football by joining a team led by another immigrant teenager. Sport becomes a tool of resilience and transformation.",
-          "title_en": "Beyond Unstoppable"
-        },
-        {
-          "title": "Internacional. Un equipo diferente",
-          "director": "Jaime Cobo",
-          "lbSlug": "internacional-un-equipo-diferente",
-          "year": 2026,
-          "genre": "Documental",
-          "country": "España",
-          "duration": "96 min",
-          "synopsis": "La historia de un equipo de fútbol creado para integrar personas de distintas nacionalidades en España. Frente a prejuicios, racismo y barreras culturales, el proyecto demuestra cómo el deporte puede construir convivencia, inclusión y sentido de pertenencia.",
-          "synopsis_lang": "es",
-          "poster": "/assets/tercertiempo/internacional.jpg",
-          "posterSource": "custom",
-          "flags": "🇪🇸🇸🇳",
-          "synopsis_en": "The story of a football team created to bring together people of different nationalities in Spain. In the face of prejudice, racism and cultural barriers, the project shows how sport can build coexistence, inclusion and a sense of belonging."
-        }
-      ],
-      "day": "2026-07-16",
-      "time": "19:00",
-      "venue": "Cinemateca Sala 2",
-      "section": "🏟️ Refugio en la Cancha",
-      "_src": {
-        "url": "https://cinematecadebogota.gov.co/node/peliculas/2569?sede=11",
-        "date": "2026-07-10"
-      },
-      "trailer": "https://youtu.be/QI7duQ4yk7w",
-      "ticket_url": "https://idartes.checkout.tuboleta.com/selection/event/date?productId=10230505466241",
-      "flags": "🇪🇸🇺🇸🇸🇳",
-      "country": "España, Estados Unidos, Senegal",
-      "day_order": 2,
-      "posterSource": "custom"
-    },
-    {
-      "title": "Contra Todo",
-      "is_cortos": true,
-      "poster": "/assets/tercertiempo/sesion-contra-todo.jpg",
-      "duration": "115 min",
-      "film_list": [
-        {
-          "title": "El Remate",
-          "director": "Mengshi Hu",
-          "year": 2025,
-          "country": "Estados Unidos",
-          "duration": "6 min",
-          "synopsis": "Un relato animado que explora los sueños, desafíos y emociones que rodean el acto más simple y universal del fútbol: patear un balón.",
-          "synopsis_lang": "es",
-          "poster": "/assets/tercertiempo/el-remate.jpg",
-          "posterSource": "custom",
-          "flags": "🇺🇸",
-          "synopsis_en": "An animated tale exploring the dreams, challenges and emotions surrounding football's simplest and most universal act: kicking a ball.",
-          "title_en": "The Kick",
-          "lbSlug": "the-kick-1"
-        },
-        {
-          "title": "Con un pie en la gloria",
-          "director": "Eduardo Esparza",
-          "year": 2025,
-          "country": "México",
-          "duration": "109 min",
-          "synopsis": "La inspiradora historia de futbolistas amputados que desafían los límites físicos y sociales para competir al más alto nivel.",
-          "synopsis_lang": "es",
-          "poster": "/assets/tercertiempo/con-un-pie-en-la-gloria.jpg",
-          "posterSource": "custom",
-          "flags": "🇲🇽",
-          "synopsis_en": "The inspiring story of amputee footballers who defy physical and social limits to compete at the highest level.",
-          "lbSlug": "con-un-pie-en-la-gloria"
-        }
-      ],
-      "day": "2026-07-17",
-      "time": "13:00",
-      "venue": "Cinemateca Sala 2",
-      "section": "💪 Contra Todo",
-      "_src": {
-        "url": "https://cinematecadebogota.gov.co/node/peliculas/2570?sede=11",
-        "date": "2026-07-10"
-      },
-      "trailer": "https://youtu.be/P-ZxiRaKwYg",
-      "ticket_url": "https://idartes.checkout.tuboleta.com/selection/event/date?productId=10230505466242",
-      "flags": "🇺🇸🇲🇽",
-      "country": "Estados Unidos, México",
-      "day_order": 1,
-      "posterSource": "custom"
-    },
-    {
-      "title": "El Diego",
-      "is_cortos": true,
-      "poster": "/assets/tercertiempo/sesion-el-diego.jpg",
-      "duration": "110 min",
-      "film_list": [
-        {
-          "title": "V1CT0R",
-          "director": "Luis Gagnolo, Facundo Martínez",
-          "year": 2025,
-          "country": "Argentina",
-          "duration": "6 min",
-          "synopsis": "Retrato íntimo de Víctor Tujschnaider y su relación con la memoria futbolera argentina.",
-          "synopsis_lang": "es",
-          "poster": "/assets/tercertiempo/v1ctor.jpg",
-          "posterSource": "custom",
-          "flags": "🇦🇷",
-          "synopsis_en": "An intimate portrait of Víctor Tujschnaider and his relationship with Argentina's football memory.",
-          "lbSlug": "v1ct0r"
-        },
-        {
-          "title": "Los murales del campeón",
-          "director": "Massimiliano Pacifico",
-          "year": 2025,
-          "country": "Italia",
-          "duration": "12 min",
-          "synopsis": "Un recorrido por los murales dedicados a Diego Maradona y el legado cultural que sigue vivo en las calles.",
-          "synopsis_lang": "es",
-          "poster": "/assets/tercertiempo/los-murales-del-campeon.jpg",
-          "posterSource": "custom",
-          "flags": "🇮🇹",
-          "synopsis_en": "A journey through the murals dedicated to Diego Maradona and the cultural legacy still alive in the streets.",
-          "title_en": "Il murales del campione",
-          "lbSlug": "il-murales-del-campione"
-        },
-        {
-          "title": "El documental del 10",
-          "director": "Lucas Costa, Damián Originario",
-          "year": 2025,
-          "country": "Argentina",
-          "duration": "92 min",
-          "synopsis": "Una mirada cultural y profundamente humana sobre la vida de Diego Maradona contada a través de la música, la literatura, la poesía y las artes. Más de cuarenta artistas reflexionan sobre la huella que dejó el Diez en sus obras y en sus vidas.",
-          "synopsis_lang": "es",
-          "poster": "/assets/tercertiempo/el-documental-del-10.jpg",
-          "posterSource": "custom",
-          "flags": "🇦🇷",
-          "synopsis_en": "A cultural and deeply human look at the life of Diego Maradona, told through music, literature, poetry and the arts. More than forty artists reflect on the mark El Diez left on their work and their lives.",
-          "lbSlug": "el-documental-del-10"
-        }
-      ],
-      "day": "2026-07-17",
-      "time": "20:00",
-      "venue": "Cinemateca Sala Capital",
-      "section": "🔟 El Diego",
-      "_src": {
-        "url": "https://cinematecadebogota.gov.co/node/peliculas/2571?sede=11",
-        "date": "2026-07-10"
-      },
-      "trailer": "https://youtu.be/b3ynEK4p7JY",
-      "is_free": true,
-      "flags": "🇦🇷🇮🇹",
-      "country": "Argentina, Italia",
-      "day_order": 3,
-      "posterSource": "custom"
-    },
-    {
-      "title": "Juegan como niñas",
-      "director": "David Carlier, Mario Mantilla, Cata Serrano",
-      "year": 2025,
-      "country": "Colombia",
-      "duration": "81 min",
-      "synopsis": "Ximena, una adolescente venezolana recién llegada a Colombia, desafía prejuicios y barreras sociales para formar un equipo femenino de fútbol y competir en la liga interbarrios.",
-      "synopsis_lang": "es",
-      "day": "2026-07-18",
-      "time": "13:00",
-      "venue": "Cinemateca Sala 2",
-      "section": "⚽ Juegan como Niñas",
-      "_src": {
-        "url": "https://cinematecadebogota.gov.co/node/peliculas/2572?sede=11",
-        "date": "2026-07-10"
-      },
-      "trailer": "https://youtu.be/Hew3kDfH4VA",
-      "ticket_url": "https://idartes.checkout.tuboleta.com/selection/event/date?productId=10230505466243",
-      "poster": "/assets/tercertiempo/juegan-como-ninas.jpg",
-      "posterSource": "custom",
-      "flags": "🇨🇴",
-      "day_order": 1,
-      "synopsis_en": "Ximena, a Venezuelan teenager newly arrived in Colombia, defies prejudice and social barriers to form a women's football team and compete in the inter-neighborhood league."
-    },
-    {
-      "title": "Territorios en Juego",
-      "is_cortos": true,
-      "poster": "/assets/tercertiempo/sesion-territorios-en-juego.jpg",
-      "duration": "57 min",
-      "film_list": [
-        {
-          "title": "Patada Inicial",
-          "director": "Rita Marujo",
-          "year": 2025,
-          "country": "Portugal",
-          "duration": "15 min",
-          "synopsis": "Una historia sobre identidad, comunidad y pertenencia donde el fútbol funciona como punto de encuentro entre distintas generaciones.",
-          "synopsis_lang": "es",
-          "poster": "/assets/tercertiempo/patada-inicial.jpg",
-          "posterSource": "custom",
-          "flags": "🇵🇹",
-          "synopsis_en": "A story about identity, community and belonging, where football works as a meeting point between generations.",
-          "title_en": "Kickoff"
-        },
-        {
-          "title": "Voces del territorio: Cuerpos en camino",
-          "director": "Carme Salleras",
-          "year": 2025,
-          "country": "España, Costa Rica, Francia",
-          "duration": "42 min",
-          "synopsis": "Un viaje por comunidades y territorios donde el movimiento, el deporte y la memoria colectiva se convierten en herramientas de transformación social.",
-          "synopsis_lang": "es",
-          "poster": "/assets/tercertiempo/voces-del-territorio.jpg",
-          "posterSource": "custom",
-          "flags": "🇪🇸🇨🇷🇫🇷",
-          "synopsis_en": "A journey through communities and territories where movement, sport and collective memory become tools for social transformation."
-        }
-      ],
-      "day": "2026-07-18",
-      "time": "17:00",
-      "venue": "Cinemateca Sala 3",
-      "section": "🗺️ Territorios en Juego",
-      "_src": {
-        "url": "https://cinematecadebogota.gov.co/node/peliculas/2573?sede=11",
-        "date": "2026-07-10"
-      },
-      "trailer": "https://youtu.be/MDurzeXdOXg",
-      "ticket_url": "https://idartes.checkout.tuboleta.com/selection/event/date?productId=10230505466244",
-      "flags": "🇵🇹🇪🇸🇨🇷🇫🇷",
-      "country": "Portugal, España, Costa Rica, Francia",
-      "day_order": 3,
-      "posterSource": "custom"
-    },
-    {
-      "title": "Brasil: Juego, memoria y pasión",
-      "is_cortos": true,
-      "poster": "/assets/tercertiempo/sesion-brasil.jpg",
-      "duration": "108 min",
-      "film_list": [
-        {
-          "title": "Doval el loco",
-          "director": "Sérgio Rossini, Federico Bardini",
-          "year": 2024,
-          "country": "Brasil",
-          "duration": "80 min",
-          "synopsis": "La vida de uno de los personajes más singulares del fútbol brasileño y el legado que dejó dentro y fuera de las canchas.",
-          "synopsis_lang": "es",
-          "poster": "/assets/tercertiempo/doval-el-loco.jpg",
-          "posterSource": "custom",
-          "lbSlug": "doval-o-gringo-mais-carioca-do-futebol",
-          "flags": "🇧🇷",
-          "synopsis_en": "The life of one of Brazilian football's most singular characters and the legacy he left on and off the pitch."
-        },
-        {
-          "title": "Memorias de infancia",
-          "director": "Pedro Santi",
-          "year": 2025,
-          "country": "Brasil",
-          "duration": "15 min",
-          "synopsis": "Una mirada nostálgica a la infancia, los barrios y las experiencias que construyen la relación entre fútbol, identidad y memoria.",
-          "synopsis_lang": "es",
-          "poster": "/assets/tercertiempo/memorias-de-infancia.jpg",
-          "posterSource": "custom",
-          "flags": "🇧🇷",
-          "synopsis_en": "A nostalgic look at childhood, the neighborhoods and the experiences that build the relationship between football, identity and memory.",
-          "title_en": "Memória de Pivete",
-          "lbSlug": "memoria-de-pivete"
-        },
-        {
-          "title": "La herencia de Chico",
-          "director": "Jefferson Rodrigues",
-          "year": 2025,
-          "country": "Brasil",
-          "duration": "13 min",
-          "synopsis": "Un relato sobre tradición familiar, pasión futbolera y el legado que atraviesa generaciones en una comunidad brasileña.",
-          "synopsis_lang": "es",
-          "poster": "/assets/tercertiempo/la-herencia-de-chico.jpg",
-          "posterSource": "custom",
-          "flags": "🇧🇷",
-          "synopsis_en": "A tale of family tradition, football passion and a legacy that runs through generations in a Brazilian community.",
-          "title_en": "A Herança de Chico",
-          "lbSlug": "a-heranca-de-chico"
-        }
-      ],
-      "day": "2026-07-18",
-      "time": "19:00",
-      "venue": "Cinemateca Sala 2",
-      "section": "🇧🇷 Brasil: Juego, memoria y pasión",
-      "_src": {
-        "url": "https://cinematecadebogota.gov.co/node/peliculas/2574?sede=11",
-        "date": "2026-07-10"
-      },
-      "trailer": "https://youtu.be/xaZYbnlv8Vw",
-      "ticket_url": "https://idartes.checkout.tuboleta.com/selection/event/date?productId=10230505466245",
-      "flags": "🇧🇷",
-      "country": "Brasil",
-      "day_order": 4,
-      "posterSource": "custom"
-    },
-    {
-      "title": "Programa de cortos: Raíces del juego",
-      "is_cortos": true,
-      "poster": "/assets/tercertiempo/sesion-raices-locales.jpg",
-      "duration": "105 min",
-      "film_list": [
-        {
-          "title": "Buscalavida y Milikua",
-          "director": "Idoia Errexil, Joseba Gorordo",
-          "year": 2025,
-          "country": "España",
-          "duration": "54 min",
-          "synopsis": "Dos comunidades unidas por el fútbol enfrentan desafíos sociales y culturales mientras encuentran en el deporte una herramienta para fortalecer la identidad colectiva, la convivencia y la esperanza.",
-          "synopsis_lang": "es",
-          "poster": "/assets/tercertiempo/buscalavida-y-milikua.jpg",
-          "posterSource": "custom",
-          "flags": "🇪🇸",
-          "synopsis_en": "Two communities united by football face social and cultural challenges while finding in sport a tool to strengthen collective identity, coexistence and hope."
-        },
-        {
-          "title": "La fiesta del fútbol popular",
-          "director": "Diego Armando Izquierdo",
-          "year": 2025,
-          "country": "Colombia",
-          "duration": "31 min",
-          "synopsis": "Un recorrido por las expresiones populares del fútbol colombiano donde la pasión, la fiesta y la apropiación comunitaria convierten el juego en un fenómeno cultural que trasciende las canchas.",
-          "synopsis_lang": "es",
-          "poster": "/assets/tercertiempo/la-fiesta-del-futbol-popular.jpg",
-          "posterSource": "custom",
-          "flags": "🇨🇴",
-          "synopsis_en": "A journey through the popular expressions of Colombian football, where passion, celebration and community ownership turn the game into a cultural phenomenon that transcends the pitch."
-        },
-        {
-          "title": "El fin de los tiempos",
-          "director": "Diego Guareño",
-          "year": 2025,
-          "country": "México",
-          "duration": "20 min",
-          "synopsis": "En una comunidad marcada por la incertidumbre, el fútbol se convierte en un refugio emocional y una forma de resistencia frente a los cambios que amenazan la vida cotidiana.",
-          "synopsis_lang": "es",
-          "poster": "/assets/tercertiempo/el-fin-de-los-tiempos.jpg",
-          "posterSource": "custom",
-          "flags": "🇲🇽",
-          "synopsis_en": "In a community marked by uncertainty, football becomes an emotional refuge and a form of resistance against the changes threatening everyday life.",
-          "genre": "Drama",
-          "lbSlug": "the-end-of-times"
-        }
-      ],
-      "day": "2026-07-17",
-      "time": "16:00",
-      "venue": "CEFE Fontanar del Río",
-      "section": "🏘️ Cinematecas Locales",
-      "_src": {
-        "url": "https://cinematecadebogota.gov.co/node/peliculas/2681",
-        "date": "2026-07-10"
-      },
-      "_pendiente": "PROVISIONAL: PDF dice ambas CEFEs 17-18; ficha Cinemateca solo existe en Fontanar → El Tunal pendiente de confirmación",
-      "flags": "🇪🇸🇨🇴🇲🇽",
-      "country": "España, Colombia, México",
-      "day_order": 2,
-      "posterSource": "custom"
-    },
-    {
-      "title": "Juegan como niñas",
-      "director": "David Carlier, Mario Mantilla, Cata Serrano",
-      "year": 2025,
-      "country": "Colombia",
-      "duration": "81 min",
-      "synopsis": "Ximena, una adolescente venezolana recién llegada a Colombia, desafía prejuicios y barreras sociales para formar un equipo femenino de fútbol y competir en la liga interbarrios.",
-      "synopsis_lang": "es",
-      "day": "2026-07-18",
-      "time": "16:00",
-      "venue": "CEFE Fontanar del Río",
-      "section": "🏘️ Cinematecas Locales",
-      "_src": {
-        "url": "https://cinematecadebogota.gov.co/node/peliculas/2687",
-        "date": "2026-07-10"
-      },
-      "_pendiente": "PROVISIONAL: PDF dice ambas CEFEs 17-18; ficha Cinemateca solo existe en Fontanar → El Tunal pendiente de confirmación",
-      "poster": "/assets/tercertiempo/juegan-como-ninas.jpg",
-      "posterSource": "custom",
-      "flags": "🇨🇴",
-      "day_order": 2,
-      "synopsis_en": "Ximena, a Venezuelan teenager newly arrived in Colombia, defies prejudice and social barriers to form a women's football team and compete in the inter-neighborhood league."
-    }
-  ],
-  "name": "Tercer Tiempo Fest",
-  "shortName": "TTF",
-  "city": "Bogotá",
-  "country": "CO",
-  "dates": "13–19 JUL",
-  "dates_en": "JUL 13–19",
-  "year": 2026,
-  "timezoneOffset": "-05:00",
-  "storageKey": "tercertiempo2026_",
-  "festivalEndStr": "2026-07-19T23:00:00",
-  "festivalDates": {
-    "2026-07-13": "2026-07-13",
-    "2026-07-14": "2026-07-14",
-    "2026-07-15": "2026-07-15",
-    "2026-07-16": "2026-07-16",
-    "2026-07-17": "2026-07-17",
-    "2026-07-18": "2026-07-18",
-    "2026-07-19": "2026-07-19"
+  "Cinemateca Sala 3": {
+   "short": "Cinemateca de Bogotá",
+   "city": "Bogotá",
+   "address": "Carrera 3 No. 19-10",
+   "lat": 4.6032463,
+   "lng": -74.06758
   },
-  "days": [
+  "Cinemateca Sala Capital": {
+   "short": "Cinemateca de Bogotá",
+   "city": "Bogotá",
+   "address": "Carrera 3 No. 19-10",
+   "lat": 4.6032463,
+   "lng": -74.06758,
+   "room": "Sala Capital"
+  },
+  "CEFE Fontanar del Río": {
+   "short": "CEFE Fontanar del Río",
+   "city": "Bogotá",
+   "lat": 4.754983,
+   "lng": -74.1126869
+  },
+  "CEFE El Tunal": {
+   "short": "CEFE El Tunal",
+   "city": "Bogotá",
+   "lat": 4.5718773,
+   "lng": -74.1341131
+  }
+ },
+ "films": [
+  {
+   "title": "Raíces del Juego",
+   "is_cortos": true,
+   "poster": "/assets/tercertiempo/sesion-raices-del-juego.jpg",
+   "duration": "105 min",
+   "film_list": [
     {
-      "k": "2026-07-13",
-      "d": 13,
-      "lbl": "LUN"
+     "title": "Buscalavida y Milikua",
+     "director": "Idoia Errexil, Joseba Gorordo",
+     "year": 2025,
+     "country": "España",
+     "duration": "54 min",
+     "synopsis": "Dos comunidades unidas por el fútbol enfrentan desafíos sociales y culturales mientras encuentran en el deporte una herramienta para fortalecer la identidad colectiva, la convivencia y la esperanza.",
+     "synopsis_lang": "es",
+     "poster": "/assets/tercertiempo/buscalavida-y-milikua.jpg",
+     "posterSource": "custom",
+     "flags": "🇪🇸",
+     "synopsis_en": "Two communities united by football face social and cultural challenges while finding in sport a tool to strengthen collective identity, coexistence and hope."
     },
     {
-      "k": "2026-07-14",
-      "d": 14,
-      "lbl": "MAR"
+     "title": "La fiesta del fútbol popular",
+     "director": "Diego Armando Izquierdo",
+     "year": 2025,
+     "country": "Colombia",
+     "duration": "31 min",
+     "synopsis": "Un recorrido por las expresiones populares del fútbol colombiano donde la pasión, la fiesta y la apropiación comunitaria convierten el juego en un fenómeno cultural que trasciende las canchas.",
+     "synopsis_lang": "es",
+     "poster": "/assets/tercertiempo/la-fiesta-del-futbol-popular.jpg",
+     "posterSource": "custom",
+     "flags": "🇨🇴",
+     "synopsis_en": "A journey through the popular expressions of Colombian football, where passion, celebration and community ownership turn the game into a cultural phenomenon that transcends the pitch."
     },
     {
-      "k": "2026-07-15",
-      "d": 15,
-      "lbl": "MIÉ"
-    },
-    {
-      "k": "2026-07-16",
-      "d": 16,
-      "lbl": "JUE"
-    },
-    {
-      "k": "2026-07-17",
-      "d": 17,
-      "lbl": "VIE"
-    },
-    {
-      "k": "2026-07-18",
-      "d": 18,
-      "lbl": "SÁB"
-    },
-    {
-      "k": "2026-07-19",
-      "d": 19,
-      "lbl": "DOM"
+     "title": "El fin de los tiempos",
+     "director": "Diego Guareño",
+     "year": 2025,
+     "country": "México",
+     "duration": "20 min",
+     "synopsis": "En una comunidad marcada por la incertidumbre, el fútbol se convierte en un refugio emocional y una forma de resistencia frente a los cambios que amenazan la vida cotidiana.",
+     "synopsis_lang": "es",
+     "poster": "/assets/tercertiempo/el-fin-de-los-tiempos.jpg",
+     "posterSource": "custom",
+     "flags": "🇲🇽",
+     "synopsis_en": "In a community marked by uncertainty, football becomes an emotional refuge and a form of resistance against the changes threatening everyday life.",
+     "genre": "Drama",
+     "lbSlug": "the-end-of-times"
     }
-  ],
-  "dayKeys": [
-    "2026-07-13",
-    "2026-07-14",
-    "2026-07-15",
-    "2026-07-16",
-    "2026-07-17",
-    "2026-07-18",
-    "2026-07-19"
-  ],
-  "prioLimit": 4
+   ],
+   "day": "2026-07-13",
+   "time": "13:00",
+   "venue": "Cinemateca Sala 2",
+   "section": "🌱 Raíces del Juego",
+   "_src": {
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/2562?sede=11",
+    "date": "2026-07-10"
+   },
+   "ticket_url": "https://idartes.checkout.tuboleta.com/selection/event/date?productId=10230505466234",
+   "flags": "🇪🇸🇨🇴🇲🇽",
+   "country": "España, Colombia, México",
+   "day_order": 1,
+   "posterSource": "custom"
+  },
+  {
+   "title": "Juego Mental",
+   "is_cortos": true,
+   "poster": "/assets/tercertiempo/sesion-juego-mental.jpg",
+   "duration": "81 min",
+   "film_list": [
+    {
+     "title": "Master Bruno and the Perfidious Macumbas of the Ball",
+     "director": "André Azevedo",
+     "year": 2025,
+     "country": "Portugal",
+     "duration": "10 min",
+     "synopsis": "Master Bruno vive inmerso en un universo fantástico donde el fútbol, la magia y la imaginación se entrelazan. A través de una aventura llena de humor y situaciones inesperadas, deberá enfrentarse a las misteriosas Macumbas of the Ball, descubriendo que el verdadero poder se encuentra en la amistad, la valentía y la pasión por el juego.",
+     "synopsis_lang": "es",
+     "poster": "/assets/tercertiempo/master-bruno.jpg",
+     "posterSource": "custom",
+     "flags": "🇵🇹",
+     "synopsis_en": "Master Bruno lives immersed in a fantastic universe where football, magic and imagination intertwine. Through an adventure full of humor and unexpected situations, he must face the mysterious Macumbas of the Ball, discovering that true power lies in friendship, courage and passion for the game.",
+     "genre": "Comedia",
+     "lbSlug": "master-bruno-and-the-perfidious-macumbas"
+    },
+    {
+     "title": "Entrenador de locos",
+     "director": "Carlo Liberatore",
+     "year": 2025,
+     "country": "Italia",
+     "duration": "57 min",
+     "synopsis": "En Dakar, un entrenador reúne a un equipo de fútbol conformado por personas con trastornos mentales. Entre la pobreza, la exclusión y el estigma social, los jugadores encuentran en el deporte una oportunidad para construir comunidad y perseguir un sueño que los llevará hasta Italia.",
+     "synopsis_lang": "es",
+     "poster": "/assets/tercertiempo/entrenador-de-locos.jpg",
+     "posterSource": "custom",
+     "flags": "🇮🇹",
+     "synopsis_en": "In Dakar, a coach brings together a football team made up of people with mental disorders. Amid poverty, exclusion and social stigma, the players find in sport a chance to build community and chase a dream that will take them all the way to Italy.",
+     "title_en": "The Madmen Coach",
+     "genre": "Documental",
+     "lbSlug": "the-madmen-coach"
+    },
+    {
+     "title": "Polígono X",
+     "director": "Néstor López",
+     "year": 2025,
+     "country": "España",
+     "duration": "14 min",
+     "synopsis": "Tras años de derrotas frente al equipo brasileño del barrio vecino, Rana y sus amigos están decididos a ganar a cualquier precio. Lo que comienza como un partido de fútbol revela tensiones, prejuicios y conflictos de convivencia dentro de una comunidad diversa.",
+     "synopsis_lang": "es",
+     "poster": "/assets/tercertiempo/poligono-x.jpg",
+     "posterSource": "custom",
+     "flags": "🇪🇸",
+     "synopsis_en": "After years of defeats against the Brazilian team from the neighboring barrio, Rana and his friends are determined to win at any cost. What begins as a football match reveals tensions, prejudice and conflicts of coexistence within a diverse community.",
+     "lbSlug": "poligono-x"
+    }
+   ],
+   "day": "2026-07-13",
+   "time": "17:00",
+   "venue": "Cinemateca Sala 3",
+   "section": "🧠 Juego Mental",
+   "_src": {
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/2563?sede=11",
+    "date": "2026-07-10"
+   },
+   "ticket_url": "https://idartes.checkout.tuboleta.com/selection/event/date?productId=10230505466235",
+   "flags": "🇵🇹🇮🇹🇪🇸",
+   "country": "Portugal, Italia, España",
+   "day_order": 2,
+   "posterSource": "custom"
+  },
+  {
+   "title": "El Rey Puma",
+   "director": "Fernando Ureña",
+   "year": 2025,
+   "country": "España",
+   "duration": "91 min",
+   "synopsis": "La historia de Rudolf Dassler y el nacimiento de Puma, una de las marcas deportivas más influyentes del mundo, y su impacto en la evolución del fútbol moderno.",
+   "synopsis_lang": "es",
+   "day": "2026-07-13",
+   "time": "19:00",
+   "venue": "Cinemateca Sala Capital",
+   "section": "👟 El Rey Puma",
+   "_src": {
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/2564?sede=11",
+    "date": "2026-07-10"
+   },
+   "ticket_url": "https://idartes.checkout.tuboleta.com/selection/event/date?productId=10230505466236",
+   "poster": "/assets/tercertiempo/el-rey-puma.jpg",
+   "posterSource": "custom",
+   "flags": "🇪🇸",
+   "day_order": 3,
+   "synopsis_en": "The story of Rudolf Dassler and the birth of Puma, one of the most influential sports brands in the world, and its impact on the evolution of modern football.",
+   "genre": "Documental",
+   "lbSlug": "el-rey-puma"
+  },
+  {
+   "title": "Más allá del Fútbol",
+   "is_cortos": true,
+   "poster": "/assets/tercertiempo/sesion-mas-alla-del-futbol.jpg",
+   "duration": "50 min",
+   "film_list": [
+    {
+     "title": "Grand slam",
+     "director": "Galar Egüén",
+     "year": 2023,
+     "country": "España",
+     "duration": "11 min",
+     "synopsis": "Una reflexión sobre la perseverancia y la pasión deportiva a través de una historia donde la competencia se convierte en una experiencia profundamente humana.",
+     "synopsis_lang": "es",
+     "poster": "/assets/tercertiempo/grand-slam.jpg",
+     "posterSource": "custom",
+     "flags": "🇪🇸",
+     "synopsis_en": "A reflection on perseverance and sporting passion through a story where competition becomes a profoundly human experience."
+    },
+    {
+     "title": "El juego de su vida",
+     "director": "Alejandro Miñarro",
+     "year": 2024,
+     "country": "España",
+     "duration": "14 min",
+     "synopsis": "El deporte aparece como una oportunidad única para transformar el destino de quienes encuentran en el juego una razón para seguir adelante.",
+     "synopsis_lang": "es",
+     "poster": "/assets/tercertiempo/el-juego-de-su-vida.jpg",
+     "posterSource": "custom",
+     "flags": "🇪🇸",
+     "synopsis_en": "Sport emerges as a unique opportunity to transform the fate of those who find in the game a reason to keep going.",
+     "genre": "Comedia",
+     "lbSlug": "el-juego-de-su-vida"
+    },
+    {
+     "title": "Pambelé",
+     "director": "Augusto Pinilla",
+     "year": 2024,
+     "country": "España, Colombia",
+     "duration": "3 min",
+     "synopsis": "Homenaje audiovisual a Antonio Cervantes \"Kid Pambelé\", una de las figuras más importantes de la historia del deporte colombiano.",
+     "synopsis_lang": "es",
+     "poster": "/assets/tercertiempo/pambele.jpg",
+     "posterSource": "custom",
+     "flags": "🇪🇸🇨🇴",
+     "synopsis_en": "An audiovisual tribute to Antonio Cervantes \"Kid Pambelé\", one of the most important figures in the history of Colombian sport."
+    },
+    {
+     "title": "Break",
+     "director": "Juan Carlos Quindós, Liam Darg",
+     "year": 2025,
+     "country": "España",
+     "duration": "7 min",
+     "synopsis": "Michael vive una ruptura amorosa como si fuera una final de tenis. Entre humor, emociones y puntos decisivos, la película convierte el amor y el desamor en un partido donde nadie quiere perder.",
+     "synopsis_lang": "es",
+     "poster": "/assets/tercertiempo/break.jpg",
+     "posterSource": "custom",
+     "flags": "🇪🇸",
+     "synopsis_en": "Michael goes through a breakup as if it were a tennis final. Between humor, emotions and decisive points, the film turns love and heartbreak into a match nobody wants to lose."
+    },
+    {
+     "title": "Desde abajo",
+     "director": "Felipe Muñoz Grez",
+     "year": 2025,
+     "country": "Chile",
+     "duration": "15 min",
+     "synopsis": "Una mirada a las historias que nacen lejos de los reflectores y encuentran en el deporte una oportunidad para transformar realidades.",
+     "synopsis_lang": "es",
+     "poster": "/assets/tercertiempo/desde-abajo.jpg",
+     "posterSource": "custom",
+     "flags": "🇨🇱",
+     "synopsis_en": "A look at the stories born far from the spotlight that find in sport an opportunity to transform realities."
+    }
+   ],
+   "day": "2026-07-15",
+   "time": "13:00",
+   "venue": "Cinemateca Sala 2",
+   "section": "🏅 Más allá del Fútbol",
+   "_src": {
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/2565?sede=11",
+    "date": "2026-07-10"
+   },
+   "ticket_url": "https://idartes.checkout.tuboleta.com/selection/event/date?productId=10230505466237",
+   "flags": "🇪🇸🇨🇴🇨🇱",
+   "country": "España, Colombia, Chile",
+   "day_order": 1,
+   "posterSource": "custom"
+  },
+  {
+   "title": "Barrio Caliente",
+   "is_cortos": true,
+   "poster": "/assets/tercertiempo/sesion-barrio-caliente.jpg",
+   "duration": "118 min",
+   "film_list": [
+    {
+     "title": "Al son que me toquen bailo",
+     "director": "Deyaneira González",
+     "year": 2024,
+     "country": "Puerto Rico",
+     "duration": "16 min",
+     "synopsis": "Brian, un joven futbolista, debe decidir entre perseguir sus sueños o permanecer junto a la comunidad que lo vio crecer. En una noche que cambiará su vida para siempre, enfrentará una decisión que pondrá a prueba su identidad, sus afectos y su futuro.",
+     "synopsis_lang": "es",
+     "poster": "/assets/tercertiempo/al-son-que-me-toquen-bailo.jpg",
+     "posterSource": "custom",
+     "flags": "🇵🇷",
+     "synopsis_en": "Brian, a young footballer, must decide between chasing his dreams or staying with the community that raised him. In a night that will change his life forever, he faces a decision that will test his identity, his bonds and his future."
+    },
+    {
+     "title": "Ángeles FC",
+     "director": "Roberto Ortíz",
+     "year": 2025,
+     "country": "México",
+     "duration": "102 min",
+     "synopsis": "La historia de un equipo que desafía barreras sociales y culturales para demostrar que el fútbol puede convertirse en una herramienta de transformación colectiva.",
+     "synopsis_lang": "es",
+     "poster": "/assets/tercertiempo/angeles-fc.jpg",
+     "posterSource": "custom",
+     "flags": "🇲🇽",
+     "synopsis_en": "The story of a team that defies social and cultural barriers to prove that football can become a tool for collective transformation.",
+     "genre": "Documental, Drama",
+     "lbSlug": "angeles-fc"
+    }
+   ],
+   "day": "2026-07-15",
+   "time": "16:30",
+   "venue": "Cinemateca Sala 3",
+   "section": "🔥 Barrio Caliente",
+   "_src": {
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/2566?sede=11",
+    "date": "2026-07-10"
+   },
+   "ticket_url": "https://idartes.checkout.tuboleta.com/selection/event/date?productId=10230505466238",
+   "flags": "🇵🇷🇲🇽",
+   "country": "Puerto Rico, México",
+   "day_order": 2,
+   "posterSource": "custom"
+  },
+  {
+   "title": "Pedal y Resistencia",
+   "is_cortos": true,
+   "poster": "/assets/tercertiempo/sesion-pedal-y-resistencia.jpg",
+   "duration": "71 min",
+   "film_list": [
+    {
+     "title": "Bejaranos",
+     "director": "Andrés García, Manu Cid",
+     "year": 2024,
+     "country": "España",
+     "duration": "53 min",
+     "synopsis": "Existe un lugar en España llamado Béjar donde los niños no soñaban con ser futbolistas, sino ciclistas. Algunos alcanzaron la gloria, como Laudelino Cubino y Roberto Heras. Otros conocieron la cara más dura del deporte. Un retrato emocionante sobre una comunidad marcada por la bicicleta y sus héroes.",
+     "synopsis_lang": "es",
+     "poster": "/assets/tercertiempo/bejaranos.jpg",
+     "posterSource": "custom",
+     "flags": "🇪🇸",
+     "synopsis_en": "There is a place in Spain called Béjar where children didn't dream of being footballers, but cyclists. Some reached glory, like Laudelino Cubino and Roberto Heras. Others met the harshest side of the sport. A moving portrait of a community shaped by the bicycle and its heroes."
+    },
+    {
+     "title": "El gran giro",
+     "director": "Gabriela Espinoza",
+     "year": 2025,
+     "country": "México",
+     "duration": "18 min",
+     "synopsis": "Después de más de treinta años como ciclista profesional, Ismael dedica su vida a entrenar nuevos corredores y dirigir un taller que se ha convertido en punto de encuentro para la comunidad ciclista de su región. Una historia sobre legado, pasión y resistencia.",
+     "synopsis_lang": "es",
+     "poster": "/assets/tercertiempo/el-gran-giro.jpg",
+     "posterSource": "custom",
+     "flags": "🇲🇽",
+     "synopsis_en": "After more than thirty years as a professional cyclist, Ismael devotes his life to training new riders and running a workshop that has become a gathering point for his region's cycling community. A story about legacy, passion and endurance.",
+     "lbSlug": "el-gran-giro"
+    }
+   ],
+   "day": "2026-07-15",
+   "time": "19:30",
+   "venue": "Cinemateca Sala 3",
+   "section": "🚴 Pedal y Resistencia",
+   "_src": {
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/2567?sede=11",
+    "date": "2026-07-10"
+   },
+   "ticket_url": "https://idartes.checkout.tuboleta.com/selection/event/date?productId=10230505466239",
+   "flags": "🇪🇸🇲🇽",
+   "country": "España, México",
+   "day_order": 3,
+   "posterSource": "custom"
+  },
+  {
+   "title": "Fútbol Poético",
+   "is_cortos": true,
+   "poster": "/assets/tercertiempo/sesion-futbol-poetico.jpg",
+   "duration": "81 min",
+   "film_list": [
+    {
+     "title": "Cantos al juego de \"Bolar\"",
+     "director": "Iván Sierra",
+     "lbSlug": "cantos-al-juego-de-bolar",
+     "year": 2025,
+     "genre": "Animación",
+     "country": "Colombia",
+     "duration": "8 min",
+     "synopsis": "Un ensayo audiovisual y poético sobre la infancia, el balón y la esencia del juego. Una reflexión sobre el fútbol como libertad, imaginación y encuentro colectivo.",
+     "synopsis_lang": "es",
+     "poster": "/assets/tercertiempo/cantos-al-juego-de-bolar.jpg",
+     "posterSource": "custom",
+     "flags": "🇨🇴",
+     "synopsis_en": "A poetic audiovisual essay on childhood, the ball and the essence of play. A reflection on football as freedom, imagination and collective encounter."
+    },
+    {
+     "title": "El equipo del pueblo. Un sueño, Atlante",
+     "director": "Rafael Aparicio",
+     "lbSlug": "el-equipo-del-pueblo-un-sueno-atlante",
+     "year": 2025,
+     "genre": "Documental",
+     "country": "México",
+     "duration": "73 min",
+     "synopsis": "La historia de uno de los clubes más queridos del fútbol mexicano y el vínculo emocional que mantiene con generaciones de aficionados.",
+     "synopsis_lang": "es",
+     "poster": "/assets/tercertiempo/el-equipo-del-pueblo.jpg",
+     "posterSource": "custom",
+     "flags": "🇲🇽",
+     "synopsis_en": "The story of one of Mexican football's most beloved clubs and the emotional bond it keeps with generations of fans."
+    }
+   ],
+   "day": "2026-07-16",
+   "time": "13:00",
+   "venue": "Cinemateca Sala 2",
+   "section": "✍️ Fútbol Poético",
+   "_src": {
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/2568?sede=11",
+    "date": "2026-07-10"
+   },
+   "ticket_url": "https://idartes.checkout.tuboleta.com/selection/event/date?productId=10230505466240",
+   "flags": "🇨🇴🇲🇽",
+   "country": "Colombia, México",
+   "day_order": 1,
+   "posterSource": "custom"
+  },
+  {
+   "title": "Refugio en la Cancha",
+   "is_cortos": true,
+   "poster": "/assets/tercertiempo/sesion-refugio-en-la-cancha.jpg",
+   "duration": "131 min",
+   "film_list": [
+    {
+     "title": "Mounir",
+     "director": "Xabier Rúa, Xosé Dopazo",
+     "lbSlug": "mounir",
+     "year": 2024,
+     "country": "España",
+     "duration": "14 min",
+     "synopsis": "Mientras lucha por obtener un permiso de residencia, Mounir intenta construir una vida estable en España sin renunciar a sus raíces ni a los lazos familiares que lo unen a Marruecos.",
+     "synopsis_lang": "es",
+     "poster": "/assets/tercertiempo/mounir.jpg",
+     "posterSource": "custom",
+     "flags": "🇪🇸",
+     "synopsis_en": "While fighting to obtain a residence permit, Mounir tries to build a stable life in Spain without giving up his roots or the family ties that bind him to Morocco.",
+     "genre": "Drama"
+    },
+    {
+     "title": "Más que Imparables",
+     "director": "Korstiaan Vandiver",
+     "lbSlug": "beyond-unstoppable",
+     "year": 2025,
+     "country": "Estados Unidos",
+     "duration": "21 min",
+     "synopsis": "Un joven refugiado somalí encuentra esperanza a través del fútbol al integrarse a un equipo liderado por otra adolescente inmigrante. El deporte se convierte en una herramienta de resiliencia y transformación.",
+     "synopsis_lang": "es",
+     "poster": "/assets/tercertiempo/mas-que-imparables.jpg",
+     "posterSource": "custom",
+     "flags": "🇺🇸",
+     "synopsis_en": "A young Somali refugee finds hope through football by joining a team led by another immigrant teenager. Sport becomes a tool of resilience and transformation.",
+     "title_en": "Beyond Unstoppable"
+    },
+    {
+     "title": "Internacional. Un equipo diferente",
+     "director": "Jaime Cobo",
+     "lbSlug": "internacional-un-equipo-diferente",
+     "year": 2026,
+     "genre": "Documental",
+     "country": "España",
+     "duration": "96 min",
+     "synopsis": "La historia de un equipo de fútbol creado para integrar personas de distintas nacionalidades en España. Frente a prejuicios, racismo y barreras culturales, el proyecto demuestra cómo el deporte puede construir convivencia, inclusión y sentido de pertenencia.",
+     "synopsis_lang": "es",
+     "poster": "/assets/tercertiempo/internacional.jpg",
+     "posterSource": "custom",
+     "flags": "🇪🇸🇸🇳",
+     "synopsis_en": "The story of a football team created to bring together people of different nationalities in Spain. In the face of prejudice, racism and cultural barriers, the project shows how sport can build coexistence, inclusion and a sense of belonging."
+    }
+   ],
+   "day": "2026-07-16",
+   "time": "19:00",
+   "venue": "Cinemateca Sala 2",
+   "section": "🏟️ Refugio en la Cancha",
+   "_src": {
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/2569?sede=11",
+    "date": "2026-07-10"
+   },
+   "ticket_url": "https://idartes.checkout.tuboleta.com/selection/event/date?productId=10230505466241",
+   "flags": "🇪🇸🇺🇸🇸🇳",
+   "country": "España, Estados Unidos, Senegal",
+   "day_order": 2,
+   "posterSource": "custom"
+  },
+  {
+   "title": "Contra Todo",
+   "is_cortos": true,
+   "poster": "/assets/tercertiempo/sesion-contra-todo.jpg",
+   "duration": "115 min",
+   "film_list": [
+    {
+     "title": "El Remate",
+     "director": "Mengshi Hu",
+     "year": 2025,
+     "country": "Estados Unidos",
+     "duration": "6 min",
+     "synopsis": "Un relato animado que explora los sueños, desafíos y emociones que rodean el acto más simple y universal del fútbol: patear un balón.",
+     "synopsis_lang": "es",
+     "poster": "/assets/tercertiempo/el-remate.jpg",
+     "posterSource": "custom",
+     "flags": "🇺🇸",
+     "synopsis_en": "An animated tale exploring the dreams, challenges and emotions surrounding football's simplest and most universal act: kicking a ball.",
+     "title_en": "The Kick",
+     "lbSlug": "the-kick-1"
+    },
+    {
+     "title": "Con un pie en la gloria",
+     "director": "Eduardo Esparza",
+     "year": 2025,
+     "country": "México",
+     "duration": "109 min",
+     "synopsis": "La inspiradora historia de futbolistas amputados que desafían los límites físicos y sociales para competir al más alto nivel.",
+     "synopsis_lang": "es",
+     "poster": "/assets/tercertiempo/con-un-pie-en-la-gloria.jpg",
+     "posterSource": "custom",
+     "flags": "🇲🇽",
+     "synopsis_en": "The inspiring story of amputee footballers who defy physical and social limits to compete at the highest level.",
+     "lbSlug": "con-un-pie-en-la-gloria"
+    }
+   ],
+   "day": "2026-07-17",
+   "time": "13:00",
+   "venue": "Cinemateca Sala 2",
+   "section": "💪 Contra Todo",
+   "_src": {
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/2570?sede=11",
+    "date": "2026-07-10"
+   },
+   "ticket_url": "https://idartes.checkout.tuboleta.com/selection/event/date?productId=10230505466242",
+   "flags": "🇺🇸🇲🇽",
+   "country": "Estados Unidos, México",
+   "day_order": 1,
+   "posterSource": "custom"
+  },
+  {
+   "title": "El Diego",
+   "is_cortos": true,
+   "poster": "/assets/tercertiempo/sesion-el-diego.jpg",
+   "duration": "110 min",
+   "film_list": [
+    {
+     "title": "V1CT0R",
+     "director": "Luis Gagnolo, Facundo Martínez",
+     "year": 2025,
+     "country": "Argentina",
+     "duration": "6 min",
+     "synopsis": "Retrato íntimo de Víctor Tujschnaider y su relación con la memoria futbolera argentina.",
+     "synopsis_lang": "es",
+     "poster": "/assets/tercertiempo/v1ctor.jpg",
+     "posterSource": "custom",
+     "flags": "🇦🇷",
+     "synopsis_en": "An intimate portrait of Víctor Tujschnaider and his relationship with Argentina's football memory.",
+     "lbSlug": "v1ct0r"
+    },
+    {
+     "title": "Los murales del campeón",
+     "director": "Massimiliano Pacifico",
+     "year": 2025,
+     "country": "Italia",
+     "duration": "12 min",
+     "synopsis": "Un recorrido por los murales dedicados a Diego Maradona y el legado cultural que sigue vivo en las calles.",
+     "synopsis_lang": "es",
+     "poster": "/assets/tercertiempo/los-murales-del-campeon.jpg",
+     "posterSource": "custom",
+     "flags": "🇮🇹",
+     "synopsis_en": "A journey through the murals dedicated to Diego Maradona and the cultural legacy still alive in the streets.",
+     "title_en": "Il murales del campione",
+     "lbSlug": "il-murales-del-campione"
+    },
+    {
+     "title": "El documental del 10",
+     "director": "Lucas Costa, Damián Originario",
+     "year": 2025,
+     "country": "Argentina",
+     "duration": "92 min",
+     "synopsis": "Una mirada cultural y profundamente humana sobre la vida de Diego Maradona contada a través de la música, la literatura, la poesía y las artes. Más de cuarenta artistas reflexionan sobre la huella que dejó el Diez en sus obras y en sus vidas.",
+     "synopsis_lang": "es",
+     "poster": "/assets/tercertiempo/el-documental-del-10.jpg",
+     "posterSource": "custom",
+     "flags": "🇦🇷",
+     "synopsis_en": "A cultural and deeply human look at the life of Diego Maradona, told through music, literature, poetry and the arts. More than forty artists reflect on the mark El Diez left on their work and their lives.",
+     "lbSlug": "el-documental-del-10"
+    }
+   ],
+   "day": "2026-07-17",
+   "time": "20:00",
+   "venue": "Cinemateca Sala Capital",
+   "section": "🔟 El Diego",
+   "_src": {
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/2571?sede=11",
+    "date": "2026-07-10"
+   },
+   "is_free": true,
+   "flags": "🇦🇷🇮🇹",
+   "country": "Argentina, Italia",
+   "day_order": 3,
+   "posterSource": "custom"
+  },
+  {
+   "title": "Juegan como niñas",
+   "director": "David Carlier, Mario Mantilla, Cata Serrano",
+   "year": 2025,
+   "country": "Colombia",
+   "duration": "81 min",
+   "synopsis": "Ximena, una adolescente venezolana recién llegada a Colombia, desafía prejuicios y barreras sociales para formar un equipo femenino de fútbol y competir en la liga interbarrios.",
+   "synopsis_lang": "es",
+   "day": "2026-07-18",
+   "time": "13:00",
+   "venue": "Cinemateca Sala 2",
+   "section": "⚽ Juegan como Niñas",
+   "_src": {
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/2572?sede=11",
+    "date": "2026-07-10"
+   },
+   "ticket_url": "https://idartes.checkout.tuboleta.com/selection/event/date?productId=10230505466243",
+   "poster": "/assets/tercertiempo/juegan-como-ninas.jpg",
+   "posterSource": "custom",
+   "flags": "🇨🇴",
+   "day_order": 1,
+   "synopsis_en": "Ximena, a Venezuelan teenager newly arrived in Colombia, defies prejudice and social barriers to form a women's football team and compete in the inter-neighborhood league."
+  },
+  {
+   "title": "Territorios en Juego",
+   "is_cortos": true,
+   "poster": "/assets/tercertiempo/sesion-territorios-en-juego.jpg",
+   "duration": "57 min",
+   "film_list": [
+    {
+     "title": "Patada Inicial",
+     "director": "Rita Marujo",
+     "year": 2025,
+     "country": "Portugal",
+     "duration": "15 min",
+     "synopsis": "Una historia sobre identidad, comunidad y pertenencia donde el fútbol funciona como punto de encuentro entre distintas generaciones.",
+     "synopsis_lang": "es",
+     "poster": "/assets/tercertiempo/patada-inicial.jpg",
+     "posterSource": "custom",
+     "flags": "🇵🇹",
+     "synopsis_en": "A story about identity, community and belonging, where football works as a meeting point between generations.",
+     "title_en": "Kickoff"
+    },
+    {
+     "title": "Voces del territorio: Cuerpos en camino",
+     "director": "Carme Salleras",
+     "year": 2025,
+     "country": "España, Costa Rica, Francia",
+     "duration": "42 min",
+     "synopsis": "Un viaje por comunidades y territorios donde el movimiento, el deporte y la memoria colectiva se convierten en herramientas de transformación social.",
+     "synopsis_lang": "es",
+     "poster": "/assets/tercertiempo/voces-del-territorio.jpg",
+     "posterSource": "custom",
+     "flags": "🇪🇸🇨🇷🇫🇷",
+     "synopsis_en": "A journey through communities and territories where movement, sport and collective memory become tools for social transformation."
+    }
+   ],
+   "day": "2026-07-18",
+   "time": "17:00",
+   "venue": "Cinemateca Sala 3",
+   "section": "🗺️ Territorios en Juego",
+   "_src": {
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/2573?sede=11",
+    "date": "2026-07-10"
+   },
+   "ticket_url": "https://idartes.checkout.tuboleta.com/selection/event/date?productId=10230505466244",
+   "flags": "🇵🇹🇪🇸🇨🇷🇫🇷",
+   "country": "Portugal, España, Costa Rica, Francia",
+   "day_order": 3,
+   "posterSource": "custom"
+  },
+  {
+   "title": "Brasil: Juego, memoria y pasión",
+   "is_cortos": true,
+   "poster": "/assets/tercertiempo/sesion-brasil.jpg",
+   "duration": "108 min",
+   "film_list": [
+    {
+     "title": "Doval el loco",
+     "director": "Sérgio Rossini, Federico Bardini",
+     "year": 2024,
+     "country": "Brasil",
+     "duration": "80 min",
+     "synopsis": "La vida de uno de los personajes más singulares del fútbol brasileño y el legado que dejó dentro y fuera de las canchas.",
+     "synopsis_lang": "es",
+     "poster": "/assets/tercertiempo/doval-el-loco.jpg",
+     "posterSource": "custom",
+     "lbSlug": "doval-o-gringo-mais-carioca-do-futebol",
+     "flags": "🇧🇷",
+     "synopsis_en": "The life of one of Brazilian football's most singular characters and the legacy he left on and off the pitch."
+    },
+    {
+     "title": "Memorias de infancia",
+     "director": "Pedro Santi",
+     "year": 2025,
+     "country": "Brasil",
+     "duration": "15 min",
+     "synopsis": "Una mirada nostálgica a la infancia, los barrios y las experiencias que construyen la relación entre fútbol, identidad y memoria.",
+     "synopsis_lang": "es",
+     "poster": "/assets/tercertiempo/memorias-de-infancia.jpg",
+     "posterSource": "custom",
+     "flags": "🇧🇷",
+     "synopsis_en": "A nostalgic look at childhood, the neighborhoods and the experiences that build the relationship between football, identity and memory.",
+     "title_en": "Memória de Pivete",
+     "lbSlug": "memoria-de-pivete"
+    },
+    {
+     "title": "La herencia de Chico",
+     "director": "Jefferson Rodrigues",
+     "year": 2025,
+     "country": "Brasil",
+     "duration": "13 min",
+     "synopsis": "Un relato sobre tradición familiar, pasión futbolera y el legado que atraviesa generaciones en una comunidad brasileña.",
+     "synopsis_lang": "es",
+     "poster": "/assets/tercertiempo/la-herencia-de-chico.jpg",
+     "posterSource": "custom",
+     "flags": "🇧🇷",
+     "synopsis_en": "A tale of family tradition, football passion and a legacy that runs through generations in a Brazilian community.",
+     "title_en": "A Herança de Chico",
+     "lbSlug": "a-heranca-de-chico"
+    }
+   ],
+   "day": "2026-07-18",
+   "time": "19:00",
+   "venue": "Cinemateca Sala 2",
+   "section": "🇧🇷 Brasil: Juego, memoria y pasión",
+   "_src": {
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/2574?sede=11",
+    "date": "2026-07-10"
+   },
+   "ticket_url": "https://idartes.checkout.tuboleta.com/selection/event/date?productId=10230505466245",
+   "flags": "🇧🇷",
+   "country": "Brasil",
+   "day_order": 4,
+   "posterSource": "custom"
+  },
+  {
+   "title": "Programa de cortos: Raíces del juego",
+   "is_cortos": true,
+   "poster": "/assets/tercertiempo/sesion-raices-locales.jpg",
+   "duration": "105 min",
+   "film_list": [
+    {
+     "title": "Buscalavida y Milikua",
+     "director": "Idoia Errexil, Joseba Gorordo",
+     "year": 2025,
+     "country": "España",
+     "duration": "54 min",
+     "synopsis": "Dos comunidades unidas por el fútbol enfrentan desafíos sociales y culturales mientras encuentran en el deporte una herramienta para fortalecer la identidad colectiva, la convivencia y la esperanza.",
+     "synopsis_lang": "es",
+     "poster": "/assets/tercertiempo/buscalavida-y-milikua.jpg",
+     "posterSource": "custom",
+     "flags": "🇪🇸",
+     "synopsis_en": "Two communities united by football face social and cultural challenges while finding in sport a tool to strengthen collective identity, coexistence and hope."
+    },
+    {
+     "title": "La fiesta del fútbol popular",
+     "director": "Diego Armando Izquierdo",
+     "year": 2025,
+     "country": "Colombia",
+     "duration": "31 min",
+     "synopsis": "Un recorrido por las expresiones populares del fútbol colombiano donde la pasión, la fiesta y la apropiación comunitaria convierten el juego en un fenómeno cultural que trasciende las canchas.",
+     "synopsis_lang": "es",
+     "poster": "/assets/tercertiempo/la-fiesta-del-futbol-popular.jpg",
+     "posterSource": "custom",
+     "flags": "🇨🇴",
+     "synopsis_en": "A journey through the popular expressions of Colombian football, where passion, celebration and community ownership turn the game into a cultural phenomenon that transcends the pitch."
+    },
+    {
+     "title": "El fin de los tiempos",
+     "director": "Diego Guareño",
+     "year": 2025,
+     "country": "México",
+     "duration": "20 min",
+     "synopsis": "En una comunidad marcada por la incertidumbre, el fútbol se convierte en un refugio emocional y una forma de resistencia frente a los cambios que amenazan la vida cotidiana.",
+     "synopsis_lang": "es",
+     "poster": "/assets/tercertiempo/el-fin-de-los-tiempos.jpg",
+     "posterSource": "custom",
+     "flags": "🇲🇽",
+     "synopsis_en": "In a community marked by uncertainty, football becomes an emotional refuge and a form of resistance against the changes threatening everyday life.",
+     "genre": "Drama",
+     "lbSlug": "the-end-of-times"
+    }
+   ],
+   "day": "2026-07-17",
+   "time": "16:00",
+   "venue": "CEFE Fontanar del Río",
+   "section": "🏘️ Cinematecas Locales",
+   "_src": {
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/2681",
+    "date": "2026-07-10"
+   },
+   "_pendiente": "PROVISIONAL: PDF dice ambas CEFEs 17-18; ficha Cinemateca solo existe en Fontanar → El Tunal pendiente de confirmación",
+   "flags": "🇪🇸🇨🇴🇲🇽",
+   "country": "España, Colombia, México",
+   "day_order": 2,
+   "posterSource": "custom"
+  },
+  {
+   "title": "Juegan como niñas",
+   "director": "David Carlier, Mario Mantilla, Cata Serrano",
+   "year": 2025,
+   "country": "Colombia",
+   "duration": "81 min",
+   "synopsis": "Ximena, una adolescente venezolana recién llegada a Colombia, desafía prejuicios y barreras sociales para formar un equipo femenino de fútbol y competir en la liga interbarrios.",
+   "synopsis_lang": "es",
+   "day": "2026-07-18",
+   "time": "16:00",
+   "venue": "CEFE Fontanar del Río",
+   "section": "🏘️ Cinematecas Locales",
+   "_src": {
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/2687",
+    "date": "2026-07-10"
+   },
+   "_pendiente": "PROVISIONAL: PDF dice ambas CEFEs 17-18; ficha Cinemateca solo existe en Fontanar → El Tunal pendiente de confirmación",
+   "poster": "/assets/tercertiempo/juegan-como-ninas.jpg",
+   "posterSource": "custom",
+   "flags": "🇨🇴",
+   "day_order": 2,
+   "synopsis_en": "Ximena, a Venezuelan teenager newly arrived in Colombia, defies prejudice and social barriers to form a women's football team and compete in the inter-neighborhood league."
+  }
+ ],
+ "name": "Tercer Tiempo Fest",
+ "shortName": "TTF",
+ "city": "Bogotá",
+ "country": "CO",
+ "dates": "13–19 JUL",
+ "dates_en": "JUL 13–19",
+ "year": 2026,
+ "timezoneOffset": "-05:00",
+ "storageKey": "tercertiempo2026_",
+ "festivalEndStr": "2026-07-19T23:00:00",
+ "festivalDates": {
+  "2026-07-13": "2026-07-13",
+  "2026-07-14": "2026-07-14",
+  "2026-07-15": "2026-07-15",
+  "2026-07-16": "2026-07-16",
+  "2026-07-17": "2026-07-17",
+  "2026-07-18": "2026-07-18",
+  "2026-07-19": "2026-07-19"
+ },
+ "days": [
+  {
+   "k": "2026-07-13",
+   "d": 13,
+   "lbl": "LUN"
+  },
+  {
+   "k": "2026-07-14",
+   "d": 14,
+   "lbl": "MAR"
+  },
+  {
+   "k": "2026-07-15",
+   "d": 15,
+   "lbl": "MIÉ"
+  },
+  {
+   "k": "2026-07-16",
+   "d": 16,
+   "lbl": "JUE"
+  },
+  {
+   "k": "2026-07-17",
+   "d": 17,
+   "lbl": "VIE"
+  },
+  {
+   "k": "2026-07-18",
+   "d": 18,
+   "lbl": "SÁB"
+  },
+  {
+   "k": "2026-07-19",
+   "d": 19,
+   "lbl": "DOM"
+  }
+ ],
+ "dayKeys": [
+  "2026-07-13",
+  "2026-07-14",
+  "2026-07-15",
+  "2026-07-16",
+  "2026-07-17",
+  "2026-07-18",
+  "2026-07-19"
+ ],
+ "prioLimit": 4
 }
