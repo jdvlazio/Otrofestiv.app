@@ -1411,7 +1411,11 @@ export function buildResultHTML(scenarios){
   const{currentIdx}=cachedResult;
   const sc=scenarios[currentIdx],n=scenarios.length;
   const pending=[...watchlist].filter(t=>!watched.has(t)&&FILMS.some(f=>f.title===t&&!screeningPassed(f)));
-  const total=pending.length,ok=sc.schedule.length,bad=sc.excluded.length;
+  // `total` y `bad` alimentaban el banner «Los títulos no incluidos se solapan
+  // con otros en tu Plan», retirado el 17 ago: solo podía ser cierto cuando TODAS
+  // las filas compartían causa, y se mostraba con 7 de 9 que ni siquiera habían
+  // competido. Cada fila ya dice su razón.
+  const ok=sc.schedule.length;
   // Stale banner (movido aquí desde pre-cálculo): se calcula a partir de cachedResult._prioSnapshot vs prioritized actual.
   const _snap=cachedResult._prioSnapshot;
   const _stale=Array.isArray(_snap)&&(_snap.length!==prioritized.size||!_snap.every(x=>prioritized.has(x)));
@@ -1447,7 +1451,6 @@ export function buildResultHTML(scenarios){
     <div class="sec-hdr">${ICONS.calendar} <span>${planLabel}</span>
       <span class="count-badge cb-neutral">${ok}</span>
     </div>
-    ${bad>0&&bad>=total?`<div class="meta-banner"><div class="meta-banner-dot"></div><div class="meta-banner-text">${t('plan_contexto_max')}</div></div>`:''}
     ${sc.incompatiblePriorities?(()=>{
       const pairs=sc.conflictingPriorityPairs||[];
       const pairMsg=pairs.length
@@ -1478,9 +1481,21 @@ export function buildResultHTML(scenarios){
     });
   });
 
-  // ── Películas no incluidas — lista con razón + botón Incluir ────────
-  if(sc.excluded.length){
-    const _excItems=sc.excluded.map(excTitle=>{
+  // ── No incluidas — lista con razón + botón Incluir ──────────────────
+  // «No incluida» describe a la que COMPITIÓ y perdió. Una obra cuyas funciones
+  // ya pasaron nunca fue candidata —el festival se la llevó, no el motor— y
+  // llamarla así es un reproche sin sujeto. Medido con el auditor de fin de
+  // festival (FINCA, 17 AGO 21:00): 9 excluidas, 7 ya pasadas y solo 2 reales,
+  // y las 7 salían PRIMERO, enterrando las dos decisiones de la noche detrás de
+  // una pantalla de lápidas. Su lugar es el Diario y el Modo Recuerdo, y en
+  // Intereses ya aparecen con «Ya pasó»: repetirlas en Planear es ruido en la
+  // pantalla donde el usuario decide el futuro (decisión de Juan, 17 ago).
+  // plannable-ok: acá NO se usa el dueño (plannableScreens) a propósito — solo
+  // interesa si el festival ya se las llevó, no si tu filtro de ciudad o tu
+  // franja vetada las descartan; esas SÍ se siguen mostrando con su razón.
+  const _excVivas=sc.excluded.filter(_t=>FILMS.some(fi=>fi.title===_t&&!screeningPassed(fi)));
+  if(_excVivas.length){
+    const _excItems=_excVivas.map(excTitle=>{
       const t_=excTitle; // alias para no pisar t() i18n
       const{displayTitle:dt}=parseProgramTitle(excTitle);
       const f=FILMS.find(fi=>fi.title===excTitle);
@@ -1579,7 +1594,7 @@ export function buildResultHTML(scenarios){
     html+=`<div class="ag-excl-block">
       <div class="sec-hdr sm">
         ${ICONS.x} <span>${t('plan_no_incluidas')}</span>
-        <span class="count-badge cb-neutral">${sc.excluded.length}</span>
+        <span class="count-badge cb-neutral">${_excVivas.length}</span>
       </div>
       ${_excItems}
     </div>`;
