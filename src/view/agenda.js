@@ -26,7 +26,7 @@ import { cloudScreeningKey } from '../domain/delays.js';
 // Es la ÚNICA dependencia view→controller permitida (fijada en validate.py [view-purity]).
 import { getConsensusMap } from '../controller/delays-cloud.js';
 import {
-  screeningPassed, screeningEnded, screeningNow, screeningEndDate, effectiveDuration, blockDuration, durationForTravel, delayedEndMin, _delayKey,
+  screeningPassed, screeningEnded, screeningNow, screeningEndDate, effectiveDuration, blockDuration, durationForTravel, delayedEndMin, _delayKey, _endedStats,
 } from '../domain/film.js';
 import {
   isScreeningBlocked, screeningPlannable, screensConflict, screensConflictReason,
@@ -745,7 +745,10 @@ export function renderContextualHeader(state, consensus){
     const{totalWatched,pendingRatings}=ph;
     const mainTitle=totalWatched===0
       ?((FESTIVAL_CONFIG[_activeFestId]||{}).name||t('misc_festival_default'))+` ${t('plan_fest_terminado')}`
-      :`${t('plan_viste_n')} ${totalWatched} ${totalWatched!==1?t('misc_peliculas'):t('misc_pelicula')}`;
+      // ACTIVIDADES y no «obras»: la cuenta incluye los talleres y charlas que
+      // marcaste (son lo que el Diario muestra, y el chip ya los contaba). Un
+      // taller no es una obra, pero sí es una actividad — el paraguas correcto.
+      :`${t('plan_viste_n')} ${totalWatched} ${totalWatched!==1?t('misc_actividades'):t('misc_actividad')}`;
     // Header del Recuerdo (rediseño 21 jul 2026): título + el estado de calificación
     // como CHIP semántico en la MISMA línea, no un subtítulo suelto debajo. Verde
     // "Todo calificado" (logrado) / ámbar "N sin calificar" (pendiente) — mismos tokens
@@ -1274,12 +1277,11 @@ export function _renderSavedAgendaHTML(state, consensus){
   const viewedCount=all.filter(s=>watched.has(s._title)).length;
   // Total del Diario en PELÍCULAS vistas: un programa cuenta por sus obras (lo que
   // el usuario vio), un film suelto por sí mismo. Plan + fuera del plan, títulos únicos.
-  const _diaryCount=(()=>{
-    const _uniq=new Set([...all.filter(s=>watched.has(s._title)).map(s=>s._title),...watchedOutsidePlan.map(f=>f.title)]);
-    let n=0;
-    _uniq.forEach(tt=>{ const f=FILMS.find(fi=>fi.title===tt); n+=(f&&f.is_cortos&&f.film_list&&f.film_list.length)?f.film_list.length:1; });
-    return n;
-  })();
+  // La cuenta la da _endedStats (dominio, dueño único). Tenía su propia suma
+  // acá y divergía del titular del Recuerdo: aquella descartaba los eventos y
+  // esta no. Medido con FICDEH: 2 contra 3 con un taller marcado — dos números
+  // para lo mismo, a dos centímetros uno del otro.
+  const _diaryCount=_endedStats().totalWatched;
   const progressPct=dayIdx>=0?Math.round((dayIdx/(totalDays-1))*100):0;
   const progressBar=currentDayNum?`<div class="row-sm festival-progress">
     <div style="flex:1">

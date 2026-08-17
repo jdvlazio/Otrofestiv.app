@@ -859,3 +859,36 @@ test('T69 — Intereses avisa cuántas obras quedan fuera por la ciudad', async 
     .toBe('OTRA CIUDAD 3 intereses no entran en tu Plan');
   expect(conCiudad.filas, 'y no esconde ninguna obra').toBe(caso.fuera + caso.dentro);
 });
+
+// Ronda 3 (cierre): el chip del Diario y el titular del Recuerdo contaban lo
+// mismo con reglas distintas — aquel incluía los eventos, este los descartaba.
+// Medido con FICDEH (29 eventos en catálogo): 3 contra 2 con un taller marcado,
+// dos números a dos centímetros. Ahora los dos leen _endedStats (dominio).
+test('T70 — el Diario y el Recuerdo cuentan lo mismo, incluidos los talleres', async ({ page }) => {
+  await enterFestival(page, 'ficdeh2026', '2026-08-17T20:00:00-05:00');
+  await page.evaluate(() => document.querySelector('[data-action="citySheetAll"]')?.click());
+  await page.waitForTimeout(400);
+  const caso = await page.evaluate(async () => {
+    const ev = FILMS.filter(f => f.type === 'event').slice(0, 1);
+    const pel = FILMS.filter(f => f.type !== 'event').slice(0, 2);
+    const marcar = [...pel.map(f => f.title), ...ev.map(f => f.title)];
+    state.set('watched', new Set(marcar));
+    state.set('savedAgenda', { scenarioIdx: 0, schedule: marcar.map(t => {
+      const f = FILMS.find(x => x.title === t); return Object.assign({}, f, { _title: t }); }) });
+    switchMainNav('mnav-miplan'); showAgView();
+    await new Promise(r => setTimeout(r, 1200));
+    const c = document.querySelector('.diary-chip');
+    return { conEvento: marcar.length, eventos: ev.length,
+      chip: c && c.innerText.replace(/\s+/g, ' ').trim() };
+  });
+  expect(caso.eventos, 'FICDEH tiene eventos en catálogo').toBe(1);
+  expect(caso.chip, 'el chip cuenta las 3, taller incluido').toBe('Diario 3');
+
+  const retro = await page.evaluate(async () => {
+    _simTime = '2026-08-21T12:00:00-05:00'; showAgView();
+    await new Promise(r => setTimeout(r, 1200));
+    return (document.body.innerText.match(/Viste [^\n]*/) || [null])[0];
+  });
+  expect(retro, 'el Recuerdo dice el MISMO número, con el paraguas correcto')
+    .toBe('Viste 3 actividades');
+});
