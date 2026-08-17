@@ -643,3 +643,43 @@ test('T64 — «Va con otras N obras» solo cuando todas sus funciones coinciden
   expect(sinNumero, 'si varían, nombra el vínculo igual').toContain('en la misma función');
   expect(sinNumero, 'si varían, NO inventa un número').not.toMatch(/otras \d+ obras/);
 });
+
+// Ronda 3 (FINCA): «Sin actividades disponibles» hablaba del INVENTARIO —sonaba
+// a que el festival nunca programó la obra— cuando el hecho era temporal. Medido
+// en los 3 festivales activos (564 entradas): CERO obras sin función, así que esa
+// frase SOLO se leía sobre obras cuyas funciones ya pasaron.
+test('T65 — una obra cuyas funciones pasaron dice «Ya pasó», no que no exista', async ({ page }) => {
+  await enterFestival(page, 'ficdeh2026', '2026-08-18T20:00');
+  await page.evaluate(() => document.querySelector('[data-action="citySheetAll"]')?.click());
+  await page.waitForTimeout(500);
+
+  // Sembrar intereses con una obra cuyas funciones quedaron TODAS atrás.
+  // Se siembran VARIAS: no toda entrada del catálogo tiene fila propia en
+  // Intereses (un corto vive dentro de su programa), y con una sola el test
+  // dependía de cuál saliera primero.
+  const pasadas = await page.evaluate(() => {
+    const ts = [...new Set(FILMS.map(f => f.title))]
+      .filter(ti => FILMS.every(f => f.title !== ti || screeningPassed(f))).slice(0, 6);
+    const k = localStorage.getItem('otrofestiv_festival') + '_';
+    localStorage.setItem(k + 'wl', JSON.stringify(ts));
+    localStorage.setItem(k + 'prio', JSON.stringify(ts.slice(0, 1)));
+    return ts;
+  });
+  expect(pasadas.length, 'FICDEH tiene obras con todas sus funciones pasadas').toBeGreaterThan(0);
+
+  await page.reload();
+  await page.waitForSelector('.splash-card');
+  await page.click('#splash-enter-btn');
+  await page.waitForTimeout(2500);
+  await page.evaluate(() => document.querySelector('[data-action="citySheetAll"]')?.click());
+  await page.waitForTimeout(400);
+  await page.click('#mnav-seleccion');
+  await page.waitForTimeout(1200);
+
+  const etiquetas = await page.evaluate(() =>
+    [...document.querySelectorAll('.int-item-gone, .prio-chip-past-lbl')].map(e => e.textContent.trim()));
+  expect(etiquetas.length, 'la obra pasada se marca').toBeGreaterThan(0);
+  expect(etiquetas.join(' | '), 'dice el hecho temporal').toContain('Ya pasó');
+  expect(etiquetas.join(' | '), 'y ya no habla del inventario')
+    .not.toContain('Sin actividades disponibles');
+});

@@ -958,7 +958,13 @@ export function renderPrioStrip(state, opts={}){
     const allPast=!festivalEnded()&&!FILMS.some(f=>f.title===title&&!screeningPassed(f));
     const safeT=title.replace(/"/g,'&quot;');
     const rmBtn=(rm&&!allPast)?`<button class="prio-chip-rm" data-title="${safeT}" data-action="togglePriority" data-stop="1" title="${t('aria_quitar_prio')}">${ICONS.x}</button>`:'';
-    const pastLbl=allPast?`<div class="prio-chip-past-lbl">${t('prio_past')}</div>`:'';
+    // «Sin actividades disponibles» hablaba del INVENTARIO —sonaba a que el
+    // festival nunca la programó— cuando el hecho era temporal. Medido en los 3
+    // festivales activos (564 entradas): CERO obras sin función, así que esa
+    // frase solo se leía sobre obras que ya pasaron. La rama «nunca tuvo función»
+    // se conserva muda (ver excluidas) para no afirmar «ya pasó» sobre algo que
+    // nunca ocurrió el día que un festival mande una obra sin programar.
+    const pastLbl=allPast?`<div class="prio-chip-past-lbl">${t('ya_paso')}</div>`:'';
     const titleStyle=grayTitle?' style="color:var(--gray)"':'';
     return`<div class="prio-chip${allPast?' past':''}"${dim?' style="opacity:.4"':''}>
       ${img}${rmBtn}${pastLbl}
@@ -1057,7 +1063,7 @@ export function renderFilmListHTML(state){
       ${posterHtml}
       <div class="int-item-info">
         <div class="int-item-title">${displayTitle}${progSuffix?` <span class="txt-amber-xs">${progSuffix}</span>`:''}</div>
-        ${next?`<div class="int-item-days">${daysHtml}</div>`:`<div class="int-item-gone">${t('empty_sin_funciones')}</div>`}
+        ${next?`<div class="int-item-days">${daysHtml}</div>`:`<div class="int-item-gone">${t(FILMS.some(fi=>fi.title===title)?'ya_paso':'empty_sin_funciones')}</div>`}
         <div class="int-item-meta">${venueStr}${venueStr&&durStr?' · ':''}${durStr}</div>
         <div class="int-item-sec">${_secLabelFull(f?.section||'')}</div>
         ${conflictHtml}
@@ -1408,9 +1414,13 @@ export function buildResultHTML(scenarios){
       // función de la otra ciudad para poder decir por qué quedó fuera. Con el
       // dueño (que ya la filtró) diríamos «sin funciones», que es falso.
       const screens=FILMS.filter(fi=>fi.title===excTitle&&!screeningPassed(fi)&&!isScreeningBlocked(fi));
+      // Distinguir «ya pasó» de «nunca tuvo función»: screens ya filtró las
+      // pasadas, así que la lista vacía no dice por sí sola cuál de las dos es.
+      const _tuvoAlguna=FILMS.some(fi=>fi.title===excTitle);
+      const _yaPaso=_tuvoAlguna?'ya_paso':'empty_sin_funciones';
       let reason='',canInclude=false;
       if(!screens.length){
-        reason=`<div class="excl-reason">${t('empty_sin_funciones')}</div>`;
+        reason=`<div class="excl-reason">${t(_yaPaso)}</div>`;
       } else {
         // Buscar conflicto con el schedule actual
         let conflictWith=null,conflictWhen=null;
@@ -1460,7 +1470,7 @@ export function buildResultHTML(scenarios){
         } else if(screens.length){
           reason=`<div class="excl-reason">${t('plan_choca')}</div>`;
         } else {
-          reason=`<div class="excl-reason">${t('empty_sin_funciones')}</div>`;
+          reason=`<div class="excl-reason">${t(_yaPaso)}</div>`;
         }
       }
       const includeBtn=canInclude
