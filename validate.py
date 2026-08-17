@@ -4241,8 +4241,9 @@ except Exception as _e:
 check = 'pipeline-generico'
 try:
     import glob as _g5, os as _os5
-    _HEREDADOS = {'ficdeh-2026-publicar.py',    # pre-genérico; su build está atrasado
-                  'cineautopsia-2026-publicar.py'}  # pre-genérico; migra al publicar
+    # CineAutopsia salió de esta lista el 17 ago 2026: se montó entero con el
+    # camino genérico y su publicador propio se borró. La lista solo encoge.
+    _HEREDADOS = {'ficdeh-2026-publicar.py'}   # pre-genérico; su build está atrasado
     _propios = {_os5.path.basename(_p) for _p in _g5.glob('pipeline/*-publicar.py')}
     _nuevos = sorted(_propios - _HEREDADOS)
     _faltan = [_f for _f in ('pipeline/ensamblar.py', 'pipeline/publicar.py')

@@ -1,0 +1,69 @@
+{
+ "_nota": "CineAutopsia 2026 — primer festival montado ENTERO con el pipeline genérico. Este archivo es lo ÚNICO propio del festival: identidad, sedes y secciones. El resto lo pone pipeline/ensamblar.py igual que a todos.",
+ "pasos": [
+  {
+   "cmd": "python3 pipeline/cineautopsia-2026-cinemateca.py",
+   "que": "fichas de la Cinemateca → crudo (formato intermedio)"
+  },
+  {
+   "cmd": "TMDB_API_KEY=… python3 pipeline/cineautopsia-2026-tmdb.py",
+   "que": "enriquecimiento verificado por director"
+  },
+  {
+   "cmd": "python3 pipeline/ensamblar.py cineautopsia-2026",
+   "que": "crudo + plan → build"
+  },
+  {
+   "cmd": "python3 pipeline/publicar.py cineautopsia-2026",
+   "que": "build → festivals/ (valida el contrato al escribir)"
+  }
+ ],
+ "festival": {
+  "crudo": "festivals/staging/cineautopsia-2026-cinemateca.json",
+  "enriquecido": "festivals/staging/cineautopsia-2026-tmdb.json",
+  "sedes": {
+   "Cinemateca de Bogotá Centro": [
+    "Cinemateca de Bogotá - Bogotá",
+    ""
+   ]
+  },
+  "secciones": {
+   "Destacados": {
+    "emoji": "🔬",
+    "en": "Destacados",
+    "archetype": "Competencia"
+   },
+   "Panorama": {
+    "emoji": "🌀",
+    "en": "Panorama",
+    "archetype": "Muestra / País"
+   },
+   "Clausura": {
+    "emoji": "🎬",
+    "en": "Clausura",
+    "archetype": "Clausura"
+   }
+  },
+  "name": "CineAutopsia",
+  "fullName": "CineAutopsia — Festival de Cine Experimental de Bogotá",
+  "city": "Bogotá",
+  "country": "CO",
+  "dates": "22–29 AGO",
+  "dates_en": "AUG 22–29",
+  "year": 2026,
+  "timezoneOffset": "-05:00",
+  "storageKey": "cineautopsia2026_",
+  "festivalStartStr": "2026-08-22T00:00:00",
+  "festivalEndStr": "2026-08-29T23:59:00",
+  "prioLimit": 3,
+  "sharedSlotIsOneScreening": false,
+  "ticketing_model": "mixed",
+  "mes_es": "agosto",
+  "seccion_por_titulo": {
+   "destacados": "Destacados",
+   "panorama": "Panorama",
+   "Clausura": "Clausura"
+  },
+  "geo": "festivals/staging/cineautopsia-2026-geo.json"
+ }
+}
