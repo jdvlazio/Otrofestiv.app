@@ -792,3 +792,29 @@ test('T67 — el chip nombra el Diario, y el Recuerdo lo presenta', async ({ pag
     [...document.querySelectorAll('.sec-hdr')].map(e => e.textContent.trim()));
   expect(retro.join(' | '), 'el Diario retro lleva encabezado').toContain('Diario');
 });
+
+// Ronda 3 (FICDEH): «Cambiar de actividad» ofrecía las HERMANAS del mismo bloque
+// —misma sala, misma hora, la misma función— así que el cambio no cambiaba nada
+// real, pero el plan sí lo registraba y después Sugerencias ofrecía «Restaurar»
+// lo recién sacado. Medido con «Sukua»: 5 alternativas, 4 eran compañeras.
+test('T68 — el panel de alternativas no ofrece compañeras de la misma función', async ({ page }) => {
+  await enterFestival(page, 'ficdeh2026', '2026-08-13T09:00:00-05:00');
+  await page.evaluate(() => document.querySelector('[data-action="citySheetAll"]')?.click());
+  await page.waitForTimeout(400);
+  const r = await page.evaluate(async () => {
+    const V = await import('/src/view/agenda.js');
+    // una obra anclada con el bloque más poblado, para que el caso sea el peor
+    const porSlot = {};
+    FILMS.forEach(f => { if (f._slotKey) (porSlot[f._slotKey] = porSlot[f._slotKey] || []).push(f); });
+    const [k, g] = Object.entries(porSlot).sort((a, b) => b[1].length - a[1].length)[0];
+    const f = g[0];
+    const div = document.createElement('div');
+    div.innerHTML = V.renderFilmAlternatives(state, f.title, f.day, f.time);
+    const ofrecidas = [...div.querySelectorAll('.checkin-opt-add')].map(e => e.dataset.newtitle);
+    const hermanas = new Set(FILMS.filter(x => x._slotKey === k && x.title !== f.title).map(x => x.title));
+    return { obra: f.title, hermanas: hermanas.size, ofrecidas: ofrecidas.length,
+      hermanasOfrecidas: ofrecidas.filter(t => hermanas.has(t)).length };
+  });
+  expect(r.hermanas, 'el caso tiene compañeras de bloque').toBeGreaterThan(1);
+  expect(r.hermanasOfrecidas, 'ninguna compañera se ofrece como alternativa').toBe(0);
+});

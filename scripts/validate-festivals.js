@@ -481,6 +481,62 @@ function validateFestival(fname, data) {
       }
     }
   }
+  // [sala-mixta] ERROR — en un mismo (day,time,venue), unas entradas traen `sala`
+  // y otras no, y TODAS son de formato corto. Esa es la firma de un programa de
+  // cortos partido en dos: el anclaje agrupa por día|hora|sede|SALA, así que la
+  // que trae sala queda fuera del bloque y la duración se cuenta de menos.
+  // Cazado el 17 ago 2026 con FICDEH (17 AGO 17:30, Cinemateca de Bogotá): cinco
+  // cortos que suman 86 min, «La independencia» con sala «Sala Capital» y las
+  // otras cuatro sin sala → el bloque valía 66. Y no era solo el número: esa obra
+  // no contaba como conflicto con sus compañeras, el planificador podía agendar
+  // dos de la misma función, y el aviso de la ficha decía «va con otras 3 obras»
+  // cuando eran cuatro.
+  // NO se marca cuando hay largos o eventos en la mezcla: ahí dos salas distintas
+  // a la misma hora en la misma sede son reales (una peli en Sala 2 y un taller en
+  // Laboratorio 1 y 2), y dividir es lo correcto.
+  {
+    const CORTO_MAX = 45; // min — mismo umbral de formato corto que usa el catálogo
+    // DEUDA AL INTRODUCIR LA REGLA (17 ago 2026). Estas cuatro funciones de FICDEH
+    // ya estaban mal cuando se escribió el guardián, y el dato es del festival:
+    // arreglarlas exige la guía oficial, no una corazonada. Se degradan a WARNING
+    // para no bloquear a los demás chats con una deuda ajena; cualquier caso NUEVO
+    // falla en duro. Se saca de acá en cuanto Onboarding confirme las salas.
+    const DEUDA_SALA = new Set([
+      '2026-08-13|19:30|Cinemateca de Bogotá - Bogotá',
+      '2026-08-14|18:00|Universidad de Ibagué - Ibagué',
+      '2026-08-17|16:00|Cinemateca de Bogotá - Bogotá',
+      '2026-08-17|17:30|Cinemateca de Bogotá - Bogotá',
+    ]);
+    const _mins = (d) => parseInt(String(d || '').trim(), 10) || 0;
+    const salaMap = {};
+    for (const f of films) {
+      const scr = (Array.isArray(f.screenings) && f.screenings.length)
+        ? f.screenings : [{ day: f.day, time: f.time, venue: f.venue, sala: f.sala }];
+      for (const s of scr) {
+        const key = `${s.day||''}|${s.time||''}|${s.venue||''}`;
+        if (key === '||') continue;
+        (salaMap[key] = salaMap[key] || []).push({
+          t: f.title || '?', sala: (s.sala || f.sala || '').trim(), min: _mins(f.duration) });
+      }
+    }
+    for (const [key, list] of Object.entries(salaMap)) {
+      if (list.length < 2) continue;
+      // Se mira SOLO el subconjunto de formato corto. Exigir que TODA la función
+      // fuera corta dejaba escapar el caso que originó el guardián: en la misma
+      // sede y hora había además un taller de 180 min en otra sala —legítimo— y
+      // eso bastaba para callar la mezcla entre los cinco cortos.
+      const cortos = list.filter(x => x.min > 0 && x.min <= CORTO_MAX);
+      if (cortos.length < 2) continue;
+      const conSala = cortos.filter(x => x.sala);
+      const sinSala = cortos.filter(x => !x.sala);
+      if (!conSala.length || !sinSala.length) continue;
+      const _msg = `[sala-mixta] en ${key} hay ${cortos.length} obras de formato corto y solo ${conSala.length} trae(n) sala `
+        + `(${conSala.map(x => `${x.t.slice(0,20)}→"${x.sala}"`).join(', ')}) — el bloque se parte y la duración se cuenta de menos. `
+        + `O la sala va en todas, o en ninguna.`;
+      if (DEUDA_SALA.has(key)) warnings.push(_msg + ' [DEUDA conocida — pendiente de verificar contra la guía oficial]');
+      else errors.push('GATE BLOQUEANTE ' + _msg);
+    }
+  }
   // [sinopsis-truncada] WARNING — exactamente 200 chars (huella de og:description truncada — trampa A2)
   for (const f of films) {
     for (const fld of ['synopsis', 'synopsis_en']) {

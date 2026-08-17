@@ -609,6 +609,27 @@ resultado, no el camino — mismo patrón que el oráculo del planeador (§15.6)
 > dejan: **una derivación que puede fallar tiene que fallar fuerte o no fallar
 > nunca**; devolver un valor creíble es la peor de las tres opciones.
 
+#### La sala que parte un programa — `[sala-mixta]`
+
+El anclaje de función (`sealSharedSlots`) agrupa por `día|hora|sede|sala`. Si en
+un programa de cortos una entrada trae `sala` y las demás no, esa obra **queda
+fuera del bloque**: la duración se cuenta de menos, no cuenta como conflicto con
+sus compañeras, el planificador puede agendar dos obras de la misma función, y el
+aviso de la ficha dice «va con otras N obras» con N corta.
+
+Cazado el 17 ago 2026 en FICDEH (17 AGO 17:30, Cinemateca de Bogotá): cinco cortos
+que suman **86 min**, «La independencia» con `sala: "Sala Capital"` y las otras
+cuatro sin sala → el bloque valía **66**.
+
+`[sala-mixta]` (validate-festivals) mira **solo el subconjunto de formato corto**
+(≤45 min) de cada `día|hora|sede`: si entre esos unos traen sala y otros no, falla.
+Exigir que TODA la función fuera corta dejaba escapar el caso original, porque a esa
+hora y en esa sede había además un taller de 180 min en otra sala — eso es legítimo
+y por eso no se marca cuando hay largos o eventos en la mezcla. Las cuatro funciones
+de FICDEH que ya estaban mal al escribir la regla quedan en `DEUDA_SALA` como
+WARNING (el dato es del festival y arreglarlo exige la guía oficial); cualquier caso
+nuevo falla en duro.
+
 #### El paraguas no promete formato — `[vocab-obra]`
 
 «No siempre son películas. Esto es regla» (Juan, 17 ago 2026). El catálogo lleva
