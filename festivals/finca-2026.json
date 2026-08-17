@@ -206,7 +206,6 @@
  "films": [
   {
    "title": "Nunca más una historia sin nosotros",
-   "title_orig": "Não Haverá mais história sem nós",
    "title_en": "No More History Without Us",
    "director": "Priscilla Brasil",
    "year": 2024,
@@ -227,7 +226,8 @@
    "synopsis_lang": "es",
    "lbSlug": "no-more-history-without-us",
    "competencia": "Competencia Oficial de Largometrajes Internacionales",
-   "is_free": true
+   "is_free": true,
+   "original_title": "Não Haverá mais história sem nós"
   },
   {
    "title": "Toroboro: el nombre de las plantas",
@@ -363,7 +363,6 @@
   },
   {
    "title": "Pailako. Cosmovisión en resistencia",
-   "title_orig": "Pailako - Cosmovisión en resistencia",
    "title_en": "Pailako. Worldview in Resistance",
    "director": "Tatiana Conde y Ezequiel Menevichian",
    "year": 2025,
@@ -467,7 +466,6 @@
   },
   {
    "title": "El árbol de la autenticidad",
-   "title_orig": "L´Arbre de l´Authenticité",
    "title_en": "The Tree of Authenticity",
    "director": "Sammy Baloji",
    "year": 2025,
@@ -491,7 +489,8 @@
    "lbSlug": "the-tree-of-authenticity",
    "competencia": "Competencia Oficial de Largometrajes Internacionales",
    "qa_type": "guests",
-   "is_free": true
+   "is_free": true,
+   "original_title": "L´Arbre de l´Authenticité"
   },
   {
    "title": "De la guerra fría a la guerra verde",
@@ -598,7 +597,6 @@
   },
   {
    "title": "Mora",
-   "title_orig": "Amora",
    "title_en": "My Backyard",
    "director": "Ana Petta",
    "year": 2025,
@@ -622,11 +620,11 @@
    "day_order": 5,
    "synopsis_lang": "es",
    "competencia": "Competencia Oficial de Documentales Latinoamericanos",
-   "qa_type": "team"
+   "qa_type": "team",
+   "original_title": "Amora"
   },
   {
    "title": "¿Cuán profundo es tu amor?",
-   "title_orig": "How deep is your love",
    "title_en": "How deep is your love",
    "director": "Eleanor Mortimer",
    "year": 2025,
@@ -649,7 +647,8 @@
    "synopsis_lang": "es",
    "lbSlug": "how-deep-is-your-love-2025",
    "competencia": "Competencia Oficial de Largometrajes Internacionales",
-   "qa_type": "guests"
+   "qa_type": "guests",
+   "original_title": "How deep is your love"
   },
   {
    "title": "Tierra que habla",
@@ -784,7 +783,6 @@
   },
   {
    "title": "El costo del crecimiento",
-   "title_orig": "The Cost of Growth",
    "title_en": "The Cost of Growth",
    "director": "Thomas Maddens",
    "year": 2026,
@@ -806,7 +804,8 @@
    "day_order": 7,
    "synopsis_lang": "es",
    "lbSlug": "the-cost-of-growth",
-   "qa_type": "guests"
+   "qa_type": "guests",
+   "original_title": "The Cost of Growth"
   },
   {
    "title": "Cortometrajes en Competencia Oficial — Programa 1",
@@ -814,7 +813,6 @@
    "film_list": [
     {
      "title": "Ciudad ácida",
-     "title_orig": "Acid City",
      "title_en": "Acid City",
      "director": "Jack Wedge & Will Freudenheim",
      "year": 2026,
@@ -830,11 +828,11 @@
      "poster": "/assets/finca/acid-city.jpg",
      "flags": "🇫🇷",
      "posterSource": "custom",
-     "competencia": "Competencia Oficial de Corto y Mediometrajes Internacionales"
+     "competencia": "Competencia Oficial de Corto y Mediometrajes Internacionales",
+     "original_title": "Acid City"
     },
     {
      "title": "Saludos desde Rodas",
-     "title_orig": "Pozdravy z Rodosu",
      "title_en": "Greetings from Rhodes",
      "director": "Viera Čákanyová",
      "genre": "Documental",
@@ -850,7 +848,8 @@
      "year": 2026,
      "duration": "25 min",
      "flags": "🇸🇰🇨🇿",
-     "competencia": "Competencia Oficial de Corto y Mediometrajes Internacionales"
+     "competencia": "Competencia Oficial de Corto y Mediometrajes Internacionales",
+     "original_title": "Pozdravy z Rodosu"
     },
     {
      "title": "Tuktuit: Caribou",
@@ -893,7 +892,6 @@
     },
     {
      "title": "Sobre todo",
-     "title_orig": "Above all",
      "title_en": "Above all",
      "director": "Enar de Dios Rodríguez",
      "year": 2025,
@@ -910,7 +908,8 @@
      "posterSource": "custom",
      "lbSlug": "above-all-2025",
      "competencia": "Competencia Oficial de Corto y Mediometrajes Internacionales",
-     "qa_type": "team"
+     "qa_type": "team",
+     "original_title": "Above all"
     }
    ],
    "duration": "79 min",
@@ -928,7 +927,6 @@
    "film_list": [
     {
      "title": "Sobre todo",
-     "title_orig": "Above all",
      "title_en": "Above all",
      "director": "Enar de Dios Rodríguez",
      "year": 2025,
@@ -945,11 +943,11 @@
      "posterSource": "custom",
      "lbSlug": "above-all-2025",
      "competencia": "Competencia Oficial de Corto y Mediometrajes Internacionales",
-     "qa_type": "team"
+     "qa_type": "team",
+     "original_title": "Above all"
     },
     {
      "title": "Sobre Ruinas",
-     "title_orig": "Sobre Ruínas",
      "title_en": "On Ruins",
      "director": "Carol Benjamin",
      "year": 2025,
@@ -969,7 +967,6 @@
     },
     {
      "title": "Dígale no a los poalets",
-     "title_orig": "No als poalets",
      "title_en": "No to mini-bins",
      "director": "Laura García Andreu",
      "year": 2026,
@@ -985,11 +982,11 @@
      "poster": "/assets/finca/no-als-poalets.jpg",
      "flags": "🇪🇸",
      "posterSource": "custom",
-     "competencia": "Competencia Oficial de Corto y Mediometrajes Internacionales"
+     "competencia": "Competencia Oficial de Corto y Mediometrajes Internacionales",
+     "original_title": "No als poalets"
     },
     {
      "title": "Nuestra isla",
-     "title_orig": "La nostra isola",
      "title_en": "Our island",
      "director": "Julien Sallé",
      "synopsis": "Los últimos habitantes de Ginostra, una veintena de ancianos aislados del mundo en este pequeño pueblo aferrado a las laderas del volcán Stromboli, viven al ritmo de una naturaleza tan generosa como destructiva. Toda su vida se ha forjado en una relación personalizada con esta naturaleza y con el volcán.",
@@ -1003,7 +1000,8 @@
      "duration": "45 min",
      "genre": "Documental",
      "flags": "🇫🇷",
-     "lbSlug": "la-nostra-isola"
+     "lbSlug": "la-nostra-isola",
+     "original_title": "La nostra isola"
     }
    ],
    "duration": "109 min",
@@ -1059,7 +1057,6 @@
     },
     {
      "title": "El viaje de Luz",
-     "title_orig": "El Viaje de Luz",
      "title_en": "Luz's Trip",
      "director": "Jorge Ortino",
      "year": 2026,
@@ -1094,7 +1091,6 @@
     },
     {
      "title": "Soy agua",
-     "title_orig": "Soc Aigua",
      "title_en": "I Am Water",
      "director": "Roser Cussó",
      "synopsis": "Una gota de agua se precipita desde una nube y cae sobre una niña que sufre las consecuencias de la sequía. Las dos se embarcan en un viaje para llegar hasta el mar, durante el cual la gota ve los problemas de la falta de agua que ponen en peligro la vida de la niña y del resto de la comunidad.",
@@ -1106,7 +1102,8 @@
      "year": 2025,
      "duration": "6 min",
      "genre": "Animación",
-     "flags": "🇪🇸"
+     "flags": "🇪🇸",
+     "original_title": "Soc Aigua"
     }
    ],
    "duration": "32 min",

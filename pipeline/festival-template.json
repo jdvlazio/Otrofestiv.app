@@ -126,7 +126,7 @@
   {
    "_tipo": "Tipo 1 — Largometraje (una función). Misma obra con 2 funciones = 2 entradas, mismo title.",
    "title": "Título con el que se exhibe",
-   "title_orig": "Título original (si difiere — p.ej. obra catalana exhibida en español)",
+   "original_title": "Título original de la OBRA, si difiere del que publica el festival. Se omite si es el mismo con otras mayúsculas o tildes",
    "title_en": "English title (si difiere)",
    "type": "film",
    "director": "Nombre Director",
@@ -232,7 +232,7 @@
    "film_list": [
     {
      "title": "Corto 1",
-     "title_orig": "",
+     "original_title": "",
      "title_en": "",
      "director": "Dir",
      "year": 2025,
