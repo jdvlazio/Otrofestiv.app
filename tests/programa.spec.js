@@ -1198,3 +1198,32 @@ test('T76 — el cupo de prioridades es de las vivas, y el badge de MI PLAN dice
   expect(badgeBanda.tab, 'el tab y la banda dicen el mismo número').toBe(badgeBanda.banda);
   expect(Number(badgeBanda.tab), 'y es la cuenta real de pendientes').toBe(3);
 });
+
+// Falsa alarma que dejó un seguro: creí ver días vencidos en los chips de
+// Intereses, pero la sonda del mockup usaba ?simTime= en la URL — el parámetro
+// que NO existe (la app corría al reloj real y esos días eran futuros de
+// verdad). El filtro de agenda.js siempre estuvo bien… y sin test: nada cazaba
+// una regresión. Este lo cubre.
+test('T77 — los chips de días en Intereses solo muestran días con función futura', async ({ page }) => {
+  await enterFestival(page, 'ficdeh2026', '2026-08-18T20:00:00-05:00');
+  await page.evaluate(() => document.querySelector('[data-action="citySheetAll"]')?.click());
+  await page.waitForTimeout(400);
+  const r = await page.evaluate(async () => {
+    const D = await import('/src/domain/film.js');
+    // mezcla: dos con función futura el 19, dos con todo pasado
+    state.set('watchlist', new Set(['Semillas', 'Por una gota de leche', 'Madres de nacimiento', 'Sukua']));
+    document.getElementById('mnav-seleccion').click();
+    await new Promise(r => setTimeout(r, 1400));
+    const filas = [...document.querySelectorAll('.int-item')].map(it => ({
+      titulo: it.querySelector('.int-item-title')?.textContent.trim(),
+      chips: [...it.querySelectorAll('.pelicula-day')].map(e => e.dataset.day),
+    }));
+    const futurasDe = t => new Set(FILMS.filter(f => f.title === t && !D.screeningPassed(f)).map(f => f.day));
+    return filas.map(f => ({ ...f, fueraDeLugar: f.chips.filter(d => !futurasDe(f.titulo).has(d)) }));
+  });
+  const conChips = r.filter(f => f.chips.length);
+  expect(conChips.length, 'hay filas con chips para medir').toBeGreaterThan(0);
+  r.forEach(f => expect(f.fueraDeLugar, `«${f.titulo}» no muestra días sin función futura`).toEqual([]));
+  const muertas = r.filter(f => !f.chips.length);
+  expect(muertas.length, 'las agotadas no muestran ningún chip').toBeGreaterThan(0);
+});
