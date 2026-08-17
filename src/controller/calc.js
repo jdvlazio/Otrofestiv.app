@@ -12,7 +12,12 @@ import { FESTIVAL_CONFIG } from '../config.js';
 import { toMin, minToStr, parseDur, _festDate, festivalEnded } from '../domain/time.js';
 import { _resolveVenue } from '../domain/festival.js';
 import { blockDuration, effectiveDuration, durationForTravel, screeningPassed, _djb2, _titleSeed, _mulberry32, shuffle, scoreFilm } from '../domain/film.js';
-import { screensConflict, isScreeningBlocked, plannableScreens, sortScreensByStrategy, computeScenarios } from '../domain/schedule.js';
+// screeningPlannable: NO lo usa este módulo directamente — lo consume el eval de
+// _mkCalcWorker (_SCHED_PURE_FNS). Sin este import el build del worker moría con
+// ReferenceError y TODO cálculo caía al fallback síncrono en el main thread —
+// silenciosamente, desde que la fn se extrajo al dominio (16 ago). Lo destapó el
+// traspaso de Onboarding del 17: dos siembras distintas parecían dos motores.
+import { screensConflict, isScreeningBlocked, screeningPlannable, plannableScreens, sortScreensByStrategy, computeScenarios } from '../domain/schedule.js';
 import { renderAgenda } from '../view/agenda.js';
 import { keepCityOnly, planCityVenues, venueMatches } from '../view/helpers.js';
 import { showToast } from '../view/feedback.js';
