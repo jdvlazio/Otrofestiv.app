@@ -217,6 +217,53 @@ def provenance(fuente, **extra):
             'capturado': datetime.date.today().isoformat(), **extra}
 
 
+# ── acceso: la casilla que no se puede dejar en blanco ───────────────────────
+# EL ESLABÓN QUE FALTABA. El formato intermedio ya tenía `acceso`, FICDEH lo
+# capturaba de su web y FICMA lo declaraba en prosa — y aun así NINGÚN festival
+# convertía eso en los campos que la app lee. CineAutopsia lo dejó vacío y nadie
+# se enteró: 6 enlaces de TuBoleta estaban en la fuente y no llegaron al JSON.
+# Aquí vive la traducción, una sola vez, con las frases reales que la escriben.
+#
+# Y una distinción que importa: NO SABER no es lo mismo que NO MIRAR. Un
+# festival que aún no publicó precios se declara `desconocido` a propósito; lo
+# que queda prohibido es el silencio.
+DESCONOCIDO = 'desconocido'
+
+_LIBRE = ('entrada libre', 'entrada gratuita', 'gratuita', 'gratuito', 'gratis',
+          'ingreso libre', 'acceso libre', 'free admission', 'entrada franca')
+_INSCRIPCION = ('inscripcion', 'inscribir', 'registro previo', 'cupo limitado',
+                'previa inscripcion', 'formulario')
+
+
+def acceso_campos(texto, url=''):
+    """De la palabra del festival a los 4 campos que la app lee.
+
+    Devuelve solo lo que la fuente AFIRMA — nunca rellena el hueco con una
+    suposición. `ticketing_model` es del festival, no de la función, y se
+    decide arriba: solo 'paid' | 'mixed' ([valor-inventado]).
+
+    >>> acceso_campos('Entrada libre')            # Cinemateca de Bogotá
+    {'is_free': True}
+    >>> acceso_campos('', 'https://...tuboleta...')
+    {'ticket_url': 'https://...tuboleta...'}
+    """
+    t = norm(texto or '')
+    out = {}
+    if url and url.startswith('http'):
+        out['ticket_url'] = url
+    if any(x in t for x in _LIBRE):
+        out['is_free'] = True
+    if any(x in t for x in _INSCRIPCION):
+        out['requires_registration'] = True
+    return out
+
+
+def acceso_declarado(f):
+    """¿Esta función del formato intermedio dice cómo se entra? El string vacío
+    NO cuenta: es exactamente el hueco por el que se coló CineAutopsia."""
+    return bool((f.get('acceso') or '').strip()) or bool(f.get('ticket_url'))
+
+
 # ── el formato intermedio: cargar validando ──────────────────────────────────
 def cargar_crudo(path):
     """Carga un sidecar del formato intermedio y FALLA si no lo cumple. Las
@@ -231,6 +278,15 @@ def cargar_crudo(path):
     for i, f in enumerate(fs):
         faltan = OBLIG - set(f)
         assert not faltan, f'{path}: funciones[{i}] sin {sorted(faltan)}'
+    # La casilla de acceso no puede quedar MUDA. Basta con que el festival lo
+    # diga una vez para todas sus funciones (FICMA: «entrada libre a todo el
+    # festival»), pero alguien tiene que decirlo. Si de verdad no se sabe, se
+    # escribe lib.DESCONOCIDO — la ignorancia se declara, el silencio no vale.
+    if not any(acceso_declarado(f) for f in fs):
+        raise AssertionError(
+            f'{path}: ninguna función dice cómo se entra. Llená `acceso` (o '
+            f'`ticket_url`) al menos en una; si el festival no lo ha publicado, '
+            f'poné lib.DESCONOCIDO a propósito.')
     return d
 
 
@@ -254,6 +310,17 @@ def _selftest():
     t('director romanizado', director_coincide('Gorõ Miyazaki', ['宮崎吾朗', 'Goro Miyazaki']), True)
     t('director distinto', director_coincide('Lina Rodríguez', ['Maider Oleaga']), False)
     t('director tokens cortos', director_coincide('Gala del Sol', ['Gala del Sol']), True)
+    # acceso — las frases REALES que escriben los festivales
+    t('acceso libre (Cinemateca)', acceso_campos('Entrada libre'), {'is_free': True})
+    t('acceso gratuito (FINCA)', acceso_campos('Entrada gratuita. Por orden de llegada.'), {'is_free': True})
+    t('acceso libre todo el fest (FICMA)', acceso_campos('Entrada libre a todo el festival'), {'is_free': True})
+    t('acceso con inscripcion (FICDEH)', acceso_campos('Previa inscripción'), {'requires_registration': True})
+    t('acceso con enlace', acceso_campos('', 'https://cinemateca.checkout.tuboleta.com/x'),
+      {'ticket_url': 'https://cinemateca.checkout.tuboleta.com/x'})
+    t('acceso desconocido no inventa', acceso_campos(DESCONOCIDO), {})
+    t('reserva no es gratis', acceso_campos('Reserva por boletería online o presencial.'), {})
+    t('declarado: vacío no cuenta', acceso_declarado({'acceso': '  '}), False)
+    t('declarado: desconocido SÍ cuenta', acceso_declarado({'acceso': DESCONOCIDO}), True)
     t('ficha ok', ficha_verifica(
         {'director': 'Kogonada', 'anio': 2017, 'duracion_min': 104},
         {'credits': {'crew': [{'job': 'Director', 'name': 'Kogonada'}]},
@@ -274,7 +341,8 @@ def _selftest():
     import tempfile, os as _os
     tf = tempfile.NamedTemporaryFile('w', suffix='.json', delete=False, encoding='utf-8')
     json.dump({'_provenance': provenance('test'),
-               'funciones': [{'titulo': 'X', 'dia': '2026-09-09', 'hora': '10:00', 'sede': 'Y'}]}, tf)
+               'funciones': [{'titulo': 'X', 'dia': '2026-09-09', 'hora': '10:00',
+                              'sede': 'Y', 'acceso': 'Entrada libre'}]}, tf)
     tf.close()
     t('cargar_crudo ok', len(cargar_crudo(tf.name)['funciones']), 1)
     json.dump({'funciones': [{'titulo': 'X'}]}, open(tf.name, 'w'))
@@ -282,6 +350,14 @@ def _selftest():
         cargar_crudo(tf.name); assert False, 'debió fallar sin capturado'
     except AssertionError as e:
         assert 'capturado' in str(e); ok[0] += 1
+    # el crudo MUDO: cumple todo lo demás y no dice cómo se entra
+    json.dump({'_provenance': provenance('test'),
+               'funciones': [{'titulo': 'X', 'dia': '2026-09-09', 'hora': '10:00',
+                              'sede': 'Y', 'acceso': ''}]}, open(tf.name, 'w'))
+    try:
+        cargar_crudo(tf.name); assert False, 'debió fallar mudo sobre el acceso'
+    except AssertionError as e:
+        assert 'cómo se entra' in str(e); ok[0] += 1
     _os.unlink(tf.name)
     print(f'✓ selftest: {ok[0]} casos')
 
