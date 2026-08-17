@@ -1146,3 +1146,55 @@ test('T75 — Planear distingue por qué no hay nada que planear', async ({ page
     .toBe('Sin combinaciones. Liberá disponibilidad o sumá títulos.');
   expect(combos.sinBloqueos, 'sin punto en medio de frase').not.toMatch(/\.\s+[a-z]/);
 });
+
+// Ronda 4 (cierre): una prioridad cuyas funciones ya pasaron retenía su cupo —
+// «Prioridades 2/4» con una muerta, y con 4/4 muertas el usuario chocaba contra
+// la sheet del límite sin aviso. El cupo ahora se mide sobre las VIVAS
+// (prioLiveCount, dominio); la muerta sigue en la lista, atenuada, pero no
+// bloquea. Y el badge del tab MI PLAN queda atado por test a la banda «Sin
+// confirmar»: cuentan lo mismo con el mismo predicado, y no pueden divergir.
+test('T76 — el cupo de prioridades es de las vivas, y el badge de MI PLAN dice lo que la banda', async ({ page }) => {
+  await enterFestival(page, 'finca2026', '2026-08-18T10:00:00-03:00');
+  await page.evaluate(() => document.querySelector('[data-action="citySheetAll"]')?.click());
+  await page.waitForTimeout(400);
+
+  // ── 1 · cupo: 3 muertas + 1 viva = lleno según el tamaño, 1/4 según las vivas
+  const cupo = await page.evaluate(async () => {
+    const D = await import('/src/domain/film.js');
+    const muertas = [...new Set(FILMS.filter(f => D.screeningPassed(f)).map(f => f.title))]
+      .filter(t => !FILMS.some(f => f.title === t && !D.screeningPassed(f))).slice(0, 3);
+    const viva = [...new Set(FILMS.filter(f => !D.screeningPassed(f)).map(f => f.title))][0];
+    const otraViva = [...new Set(FILMS.filter(f => !D.screeningPassed(f)).map(f => f.title))][1];
+    state.set('watchlist', new Set([...muertas, viva, otraViva]));
+    state.set('prioritized', new Set([...muertas, viva]));
+    switchMainNav('mnav-seleccion'); showAgView();
+    await new Promise(r => setTimeout(r, 1000));
+    const badge = [...document.querySelectorAll('.sec-hdr .count-badge')]
+      .map(e => e.textContent.trim()).find(x => /\/\d/.test(x));
+    // y priorizar otra VIVA no choca contra el límite pese a size=4
+    togglePriority(otraViva);
+    await new Promise(r => setTimeout(r, 600));
+    return { size: prioritized.size, badge,
+      sheetLimite: !!document.querySelector('#prio-limit-sheet.open, .prio-limit-sheet.open'),
+      otraEntro: prioritized.has(otraViva) };
+  });
+  expect(cupo.badge, 'el badge cuenta las vivas, no el tamaño').toBe('1/4');
+  expect(cupo.otraEntro, 'priorizar otra viva no choca contra el límite').toBe(true);
+  expect(cupo.sheetLimite, 'sin sheet de límite').toBe(false);
+
+  // ── 2 · badge del tab = banda «Sin confirmar», mismo número siempre
+  const badgeBanda = await page.evaluate(async () => {
+    const pas = FILMS.filter(f => f.day <= '2026-08-17').slice(0, 3);
+    state.set('watched', new Set());
+    state.set('savedAgenda', { scenarioIdx: 0, schedule: pas.map(f =>
+      Object.assign({}, f, { _title: f.title })) });
+    switchMainNav('mnav-miplan'); showAgView();
+    await new Promise(r => setTimeout(r, 1200));
+    return {
+      tab: document.getElementById('miplan-badge')?.textContent,
+      banda: document.querySelector('.checkin-wrap .count-badge')?.textContent,
+    };
+  });
+  expect(badgeBanda.tab, 'el tab y la banda dicen el mismo número').toBe(badgeBanda.banda);
+  expect(Number(badgeBanda.tab), 'y es la cuenta real de pendientes').toBe(3);
+});
