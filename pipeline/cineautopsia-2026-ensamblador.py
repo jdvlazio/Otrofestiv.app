@@ -100,7 +100,11 @@ def main():
             'venue': SEDE, 'sala': '',
             'rating': p.get('clasificacion'), 'language': p.get('idioma'),
             'is_cortos': bool(lista), 'film_list': lista or None,
-            'is_free': False, 'requires_registration': False,
+            # La Cinemateca vende por TuBoleta y lo publica en la ficha. La
+            # función libre lo dice con todas sus letras («Entrada libre»); no
+            # se asume ni se hereda: cada programa trae su propio dato.
+            'ticket_url': p.get('ticket_url'),
+            'is_free': bool(p.get('entrada_libre')), 'requires_registration': False,
             'has_qa': False,
             '_src': {'url': p['_src'], 'fuente': 'agenda de la Cinemateca de Bogotá'},
         }.items() if v not in (None, '', [], {})})
@@ -124,6 +128,9 @@ def main():
                      for i, s in enumerate(['Destacados', 'Panorama', 'Clausura'], 1)
                      if s in secs_vistas},
         'venues': {SEDE: geo},
+        # 6 funciones por TuBoleta + la clausura libre → 'mixed' (el vocabulario
+        # de la app es solo 'paid' | 'mixed'; ver [valor-inventado]).
+        'ticketing_model': 'mixed',
         'films': films,
     }
     p = f'{ST}/cineautopsia-2026-build.json'

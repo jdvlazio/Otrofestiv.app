@@ -95,6 +95,7 @@
    "address": "Cra. 3 # 19-10"
   }
  },
+ "ticketing_model": "mixed",
  "films": [
   {
    "title": "Mediometrajes destacados de Latinoamérica",
@@ -156,6 +157,7 @@
      "flags": "🇲🇽"
     }
    ],
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230522900349",
    "is_free": false,
    "requires_registration": false,
    "has_qa": false,
@@ -258,6 +260,7 @@
      "flags": "🇲🇽"
     }
    ],
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230522900351",
    "is_free": false,
    "requires_registration": false,
    "has_qa": false,
@@ -376,6 +379,7 @@
      "posterSource": "tmdb"
     }
    ],
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230522900352",
    "is_free": false,
    "requires_registration": false,
    "has_qa": false,
@@ -500,6 +504,7 @@
      "flags": "🇮🇹"
     }
    ],
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230522900354",
    "is_free": false,
    "requires_registration": false,
    "has_qa": false,
@@ -608,6 +613,7 @@
      "posterSource": "tmdb"
     }
    ],
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230522900355",
    "is_free": false,
    "requires_registration": false,
    "has_qa": false,
@@ -728,6 +734,7 @@
      "flags": "🇨🇴"
     }
    ],
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230522900356",
    "is_free": false,
    "requires_registration": false,
    "has_qa": false,
@@ -752,7 +759,7 @@
    "rating": "Apta para mayores de 18 años",
    "language": "Español",
    "is_cortos": false,
-   "is_free": false,
+   "is_free": true,
    "requires_registration": false,
    "has_qa": false,
    "_src": {
