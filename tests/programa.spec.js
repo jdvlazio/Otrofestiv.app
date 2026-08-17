@@ -818,3 +818,44 @@ test('T68 — el panel de alternativas no ofrece compañeras de la misma funció
   expect(r.hermanas, 'el caso tiene compañeras de bloque').toBeGreaterThan(1);
   expect(r.hermanasOfrecidas, 'ninguna compañera se ofrece como alternativa').toBe(0);
 });
+
+// Ronda 3 (FICDEH): con filtro de ciudad, Intereses mostraba las obras de OTRAS
+// ciudades exactamente iguales que las demás. El planificador no las agenda
+// (#594) y eso solo se sabía DESPUÉS de calcular, en la lista de excluidas —
+// cuando el usuario ya se había hecho la expectativa. No se esconden (tus
+// intereses son tuyos): se nombra la consecuencia, una vez y con el número.
+test('T69 — Intereses avisa cuántas obras quedan fuera por la ciudad', async ({ page }) => {
+  await enterFestival(page, 'ficdeh2026', '2026-08-13T09:00:00-05:00');
+  const irAIntereses = async () => {
+    await page.evaluate(async () => {
+      document.getElementById('mnav-seleccion').click();
+      await new Promise(r => setTimeout(r, 1200));
+    });
+    return page.evaluate(() => ({
+      hint: (() => { const b = document.querySelector('.avisos-body');
+        return b ? b.innerText.replace(/\s+/g, ' ').trim() : null; })(),
+      filas: document.querySelectorAll('.int-item').length,
+    }));
+  };
+  // Sembrar: 3 obras que SOLO existen fuera de Bogotá + 2 de Bogotá
+  const caso = await page.evaluate(() => {
+    const bog = f => (f.venue || '').includes('Bogotá');
+    const fuera = [...new Set(FILMS.filter(f => f.venue && !bog(f)).map(f => f.title))]
+      .filter(t => !FILMS.some(f => f.title === t && bog(f))).slice(0, 3);
+    const dentro = [...new Set(FILMS.filter(bog).map(f => f.title))].slice(0, 2);
+    state.set('watchlist', new Set([...fuera, ...dentro]));
+    return { fuera: fuera.length, dentro: dentro.length };
+  });
+  expect(caso.fuera, 'FICDEH tiene obras exclusivas de otra ciudad').toBe(3);
+
+  // Sin filtro de ciudad no hay nada que avisar
+  const todas = await irAIntereses();
+  expect(todas.hint, 'sin filtro, sin aviso').toBeNull();
+
+  // Con Bogotá: avisa el número y NO esconde ninguna fila
+  await page.evaluate(() => { activeVenue = 'city:Bogotá'; });
+  const conCiudad = await irAIntereses();
+  expect(conCiudad.hint, 'usa el diseño de AVISOS: píldora de contexto + consecuencia')
+    .toBe('OTRA CIUDAD 3 intereses no entran en tu Plan');
+  expect(conCiudad.filas, 'y no esconde ninguna obra').toBe(caso.fuera + caso.dentro);
+});
