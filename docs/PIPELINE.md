@@ -303,6 +303,30 @@ la app con disfraz. `_tmdbId` vivió en 16 funciones de FINCA a salvo de
 repo usaba `tmdb_id`. Ahora, si al quitarle el guion el nombre coincide con un
 campo real, el guardián lo llama por su nombre: contrabando.
 
+**Decimotercero: `[lib-unica]` — una función, un dueño.** `pipeline/lib.py`
+existe para escribir la lógica común una sola vez. El 17 ago 2026 se midió
+cuánto de eso era verdad: **7 de sus 17 funciones tenían copias sueltas**,
+`norm()` estaba reescrita en SEIS scripts, y solo 5 de 28 scripts importaban
+lib.
+
+Al comparar comportamiento con entradas reales apareció algo peor que un
+duplicado: **el mismo nombre significaba cosas distintas.** `norm()` devuelve un
+string en lib, un `set` en ficma-repesca y una `list` en ficma-tmdb. `slug()`
+quita acentos en lib y los conserva en ficma —«rebelion» contra «rebelión»—.
+`hora24()` devuelve la hora en lib y «» en ficma-parse cuando ya venía en 24h.
+`sede_sala()` y `director_coincide()` ni siquiera tenían la misma firma. Leer un
+script y suponer la semántica del otro era un bug esperando fecha.
+
+La regla tiene dos ramas: **si la copia hace lo mismo, se borra y se importa**
+(6 casos, verificados idénticos con entradas reales de los 12 festivales); **si
+hace otra cosa, se renombra para que lo diga** (8 casos, cada uno con su razón
+escrita sobre el `def`). Lo que no se permite es que dos cosas distintas
+compartan nombre.
+
+**El método importa tanto como el resultado**: la paridad se MIDIÓ ejecutando
+las dos versiones sobre 525 títulos, 523 horas y 440 países reales. Sustituir
+por una versión «equivalente» que no lo sea habría sido peor que el duplicado.
+
 **Duodécimo, y el que cambia el modelo: `[contrato-vivo]`.** Los once anteriores
 vigilan errores concretos que ya cometimos, uno por uno. Éste vigila que exista
 **un canon ejecutable**: `pipeline/contrato.json` declara los 49 campos de una

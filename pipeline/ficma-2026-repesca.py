@@ -49,16 +49,19 @@ def get(path, **params):
     return {}
 
 
-def norm(s):
+# [lib-unica] renombrada desde `norm` el 17 ago 2026.
+# Devuelve un SET de tokens, no un string: `lib.norm` normaliza, ésta TOKENIZA.
+# Compartían nombre y no compartían ni el tipo de retorno.
+def tokens_titulo(s):
     s = ''.join(c for c in unicodedata.normalize('NFD', (s or '').lower())
                 if unicodedata.category(c) != 'Mn')
     return set(re.sub(r'[^a-z0-9 ]', ' ', s).split()) - {'de', 'la', 'del', 'y', 'van', 'der', 'le'}
 
 
 def dir_ok(esperado, nombres):
-    a = norm(esperado)
+    a = tokens_titulo(esperado)
     for n in nombres:
-        b = norm(n)
+        b = tokens_titulo(n)
         if {x for x in a if len(x) > 4} & {x for x in b if len(x) > 4}:
             return True
     return False
