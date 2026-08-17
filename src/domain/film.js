@@ -228,6 +228,17 @@ export function _classifyTodayScreenings(screenings,nowMin){
   return{done,active,future};
 }
 
+// prioLiveCount — cuántas prioridades siguen VIVAS (alguna función futura).
+// El CUPO se mide sobre estas: una prioridad cuyas funciones ya pasaron no
+// puede materializarse en ningún plan, y retenía el cupo igual — el auditor de
+// fin de festival vio «Prioridades 2/4» con una muerta, y con 4/4 muertas el
+// usuario chocaba contra la sheet del límite sin que nada le avisara antes.
+// La prioridad muerta NO se borra sola (es del usuario y su lugar es la lista,
+// atenuada con «Ya pasó»): solo deja de contar.
+export function prioLiveCount(){
+  return [...prioritized].filter(t=>FILMS.some(f=>f.title===t&&!screeningPassed(f))).length;
+}
+
 export function _endedStats(){
   // DUEÑO ÚNICO de «cuántas marcaste». Un programa visto cuenta por sus obras —
   // es lo que el usuario realmente vio. Antes excluía is_cortos por completo →
