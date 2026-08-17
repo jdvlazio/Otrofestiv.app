@@ -1,7 +1,7 @@
 // @ts-check
 // programa.spec.js — Tab Programa: lista, grid, filtros, posters, topbar.
 const { test, expect } = require('@playwright/test');
-const { LEVIZA_SIMTIME, enterFestival } = require('./helpers');
+const { LEVIZA_SIMTIME, enterFestival, goToPlanear } = require('./helpers');
 
 // T01 — Apóstrofe: corazón en lista agrega al watchlist
 test('T01 — apóstrofe: corazón en lista agrega al watchlist', async ({ page }) => {
@@ -1029,4 +1029,46 @@ test('T73 — la cuenta del veredicto usa la misma aritmética que la decisión'
   // 3· tomarla a sabiendas produce un plan VÁLIDO; sin la marca, no
   expect(r.okConMarca, 'con _squeezed el plan es válido').toBe(true);
   expect(r.okSinMarca, 'sin la marca sigue siendo una violación').toBe(false);
+});
+
+// Ronda 4 (auditor de fin de festival): «No incluidas» mezclaba dos poblaciones.
+// Medido en FINCA (17 AGO 21:00, intereses mixtos): 9 excluidas — 7 cuyas
+// funciones YA PASARON y solo 2 que compitieron de verdad —, y las 7 salían
+// PRIMERO, enterrando las dos decisiones de la noche. Encima el banner general
+// decía «se solapan con otros en tu Plan», falso para 7 de las 9.
+// «No incluida» describe a la que compitió y perdió; a la que se llevó el
+// festival, llamarla así es un reproche sin sujeto. Su lugar es el Diario y el
+// Modo Recuerdo, y en Intereses ya aparece con «Ya pasó».
+test('T74 — «No incluidas» solo lista lo que compitió', async ({ page }) => {
+  await enterFestival(page, 'finca2026', '2026-08-17T21:00:00-03:00');
+  const caso = await page.evaluate(() => {
+    const muertas = [...new Set(FILMS.filter(f => screeningPassed(f)).map(f => f.title))]
+      .filter(t => !FILMS.some(f => f.title === t && !screeningPassed(f)));
+    const vivas = [...new Set(FILMS.filter(f => !screeningPassed(f)).map(f => f.title))];
+    state.set('watchlist', new Set([...muertas.slice(0, 7), ...vivas.slice(0, 7)]));
+    return { muertas: muertas.slice(0, 7).length };
+  });
+  expect(caso.muertas, 'el escenario tiene obras que ya pasaron').toBe(7);
+
+  await goToPlanear(page);
+  await page.evaluate(() => { document.querySelector('.av-calc-btn')?.click(); });
+  await page.waitForTimeout(3500);
+
+  const r = await page.evaluate(() => {
+    const sc = cachedResult && cachedResult.scenarios[cachedResult.currentIdx || 0];
+    const bloque = document.querySelector('.ag-excl-block');
+    return {
+      excluidasDominio: sc.excluded.length,
+      filas: bloque ? bloque.querySelectorAll('.int-item-title').length : 0,
+      badge: bloque?.querySelector('.count-badge')?.textContent,
+      diceYaPaso: (bloque?.innerText || '').includes('Ya pasó'),
+      banner: document.body.innerText.includes('se solapan con otros en tu Plan'),
+    };
+  });
+
+  expect(r.excluidasDominio, 'el motor sigue reportando todas').toBe(9);
+  expect(r.filas, 'pero la pantalla solo lista las que compitieron').toBe(2);
+  expect(r.badge, 'y el badge cuenta lo accionable, no lo perdido').toBe('2');
+  expect(r.diceYaPaso, 'ninguna lápida en Planear').toBe(false);
+  expect(r.banner, 'sin el banner que generalizaba una causa falsa').toBe(false);
 });
