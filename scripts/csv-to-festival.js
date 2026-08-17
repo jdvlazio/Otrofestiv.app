@@ -164,7 +164,6 @@ function main() {
       is_free: truthy(get(r, 'is_free')),
       title_orig: normTitle(get(r, 'title_orig')),
       rating: clean(get(r, 'rating')),
-      trailer: clean(get(r, 'trailer')),
       competencia: clean(get(r, 'competencia')),
     };
   }).filter(Boolean);
@@ -217,7 +216,6 @@ function main() {
     if (base.is_free) film.is_free = true;
     if (base.title_orig && base.title_orig !== title) film.title_orig = base.title_orig;
     if (base.rating) film.rating = base.rating;
-    if (base.trailer) film.trailer = base.trailer;
     if (base.competencia) film.competencia = base.competencia;
     if (base.sala) film.sala = base.sala;
     if (fns.length > 1) {

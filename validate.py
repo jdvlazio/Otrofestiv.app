@@ -4178,6 +4178,68 @@ except Exception as _e:
 # es una omisión. Gratis se DECLARA (`is_free: true`), no se deja en blanco.
 # Solo aplica a festivales vigentes: los archivados quedaron como quedaron y
 # reescribir su pasado no le sirve a nadie.
+# ── [campo-huerfano] un campo que nadie lee no es un dato: es peso muerto ────
+# EL HUECO QUE TAPA. `[campo-contrato]` caza el campo mal ESCRITO (`ticketUrl`
+# contra `ticket_url`): el dato quiere llegar a la app y se pierde por el
+# nombre. Éste caza el campo que no tiene a dónde llegar — nadie lo lee, y
+# nunca lo leyó.
+#
+# El 17 ago 2026 había NUEVE. Entre ellos 36 `trailer` que alguien buscó uno
+# por uno, 23 `tematica` y 16 `qa_detail` que además duplicaba —peor y en un
+# solo idioma— lo que `qa_type` ya pintaba en tres. Se emitían, se validaban,
+# se versionaban, y no se veían en ninguna pantalla.
+#
+# Es el espejo exacto de `[boleteria-muda]`: allá el dato estaba en la fuente y
+# no lo emitimos; aquí lo emitimos y nadie lo pinta. Las dos formas de que el
+# trabajo se pierda entre la fuente y el ojo.
+#
+# LA REGLA. Todo campo de función que `src/` no mencione tiene que estar en una
+# de las dos listas de abajo, con su dueño escrito. Antes de añadir un campo, la
+# pregunta es QUIÉN LO VA A LEER; si la respuesta es «alguien algún día», no se
+# emite.
+check = 'campo-huerfano'
+try:
+    import json as _j, glob as _g, re as _r3
+    # Legítimos: no los lee la vista, pero tienen dueño y se nombra cuál.
+    _CON_DUENO = {
+        'synopsis_lang': 'lo consumen los guardianes ([paridad-derivados])',
+        'tmdb_id': 'lo usa el pipeline para reenriquecer sin volver a buscar',
+    }
+    # DEUDA DECLARADA (17 ago 2026). No crece: cada uno se cablea o se borra.
+    # Los dos primeros pares son EL MISMO DATO CON DOS NOMBRES — ahí no sobra el
+    # dato, sobra el nombre, y unificarlos exige decidir cuál gana.
+    _DEUDA = {
+        'filmType': 'Tribeca (196) — lo dice ya `genre`',
+        'cycle': 'FICMA (24) — es una sección disfrazada de campo',
+        'original_title': 'FICMA (32) — duplicado de `title_orig` de FINCA',
+        'title_orig': 'FINCA (6) — duplicado de `original_title` de FICMA',
+    }
+    _src_all = ''.join(open(_p, encoding='utf-8').read()
+                       for _p in _g.glob('src/**/*.js', recursive=True))
+    _vistos = {}
+    for _f in sorted(_g.glob('festivals/*.json')):
+        for _x in (_j.load(open(_f, encoding='utf-8')).get('films') or []):
+            for _k in _x:
+                _vistos.setdefault(_k, set()).add(_f.split('/')[-1])
+            for _it in (_x.get('film_list') or []):
+                if isinstance(_it, dict):
+                    for _k in _it:
+                        _vistos.setdefault(_k, set()).add(_f.split('/')[-1])
+    _nuevos = [(_k, sorted(_v)) for _k, _v in _vistos.items()
+               if not _k.startswith('_')
+               and _k not in _CON_DUENO and _k not in _DEUDA
+               and not _r3.search(r'\b' + _r3.escape(_k) + r'\b', _src_all)]
+    if _nuevos:
+        fail(check, 'campo(s) que ningún archivo de src/ lee y que no están '
+                    'declarados: ' + '; '.join(f'{_k} ({", ".join(_v[:2])})'
+                                               for _k, _v in sorted(_nuevos)))
+    else:
+        _viva = [_k for _k in _DEUDA if _k in _vistos]
+        ok(check, f'ningún campo huérfano nuevo (deuda declarada: {len(_viva)})')
+except Exception as _e:
+    warn(check, f'no se pudo verificar campo-huerfano: {_e}')
+
+
 check = 'boleteria-muda'
 try:
     import json as _j, glob as _g
