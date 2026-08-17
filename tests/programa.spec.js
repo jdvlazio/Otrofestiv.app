@@ -683,3 +683,67 @@ test('T65 — una obra cuyas funciones pasaron dice «Ya pasó», no que no exis
   expect(etiquetas.join(' | '), 'y ya no habla del inventario')
     .not.toContain('Sin actividades disponibles');
 });
+
+// Ronda 3 (FINCA): Mi Plan mostraba «Día cubierto · No hay más actividades que
+// quepan hoy» en días que YA PASARON (medido: los cinco días previos), y la caja
+// «Día libre → mirá abajo» mandaba a un Sugerencias vacío. Dos raíces: el copy
+// hablaba de «hoy» aunque la sección se calcula sobre el día SELECCIONADO, y la
+// promesa no se verificaba antes de hacerse.
+test('T66 — Sugerencias habla del día que mirás, y no promete lo que no tiene', async ({ page }) => {
+  const sembrar = async (simTime, diaPlan) => {
+    await enterFestival(page, 'ficdeh2026', simTime);
+    await page.evaluate(() => document.querySelector('[data-action="citySheetAll"]')?.click());
+    await page.waitForTimeout(400);
+    await page.evaluate((d) => {
+      const fut = FILMS.filter(f => f.day >= d);
+      state.set('watchlist', new Set([...new Set(fut.map(f => f.title))].slice(0, 12)));
+      const f = FILMS.find(x => x.day === d);
+      state.set('savedAgenda', { scenarioIdx: 0, schedule: [Object.assign({}, f, { _title: f.title })] });
+      switchMainNav('mnav-miplan'); showAgView();
+    }, diaPlan);
+    await page.waitForTimeout(1200);
+  };
+  const mirarDia = async (dia) => {
+    await page.evaluate((d) => {
+      const i = DAY_KEYS.indexOf(d);
+      [...document.querySelectorAll('[data-action="selectMiPlanDay"]')]
+        .filter(x => x.dataset.index === String(i))[0]?.click();
+    }, dia);
+    await page.waitForTimeout(700);
+    return page.evaluate(() => ({
+      bloqueSugs: !!document.querySelector('.suggestion-wrap'),
+      sugs: document.querySelectorAll('.suggestion-item').length,
+      ctaConDestino: !!document.querySelector('[data-action="scrollToSuggestions"]'),
+      txt: document.body.innerText.replace(/\s+/g, ' '),
+    }));
+  };
+
+  // 1· Un día que ya pasó no tiene nada que sugerir: la sección no se dibuja.
+  await sembrar('2026-08-17T09:00', '2026-08-17');
+  const pasado = await mirarDia('2026-08-14');
+  expect(pasado.bloqueSugs, 'día pasado: sin bloque de Sugerencias').toBe(false);
+  expect(pasado.txt, 'y sin «hoy» sobre un día que no es hoy').not.toContain('quepan hoy');
+  expect(pasado.txt, 'ni «cubierto» sobre un día vacío').not.toContain('Día cubierto');
+
+  // 2· Un día futuro CON sugerencias sigue ofreciendo el atajo.
+  const conSugs = await mirarDia('2026-08-19');
+  expect(conSugs.sugs, 'el 19 tiene sugerencias').toBeGreaterThan(0);
+  expect(conSugs.ctaConDestino, 'con material, la caja sí lleva abajo').toBe(true);
+
+  // 2b· Un día futuro CON bloque pero SIN material (Tunja no programa el 19):
+  //     el vacío de la sección nombra el día en vez de decir «hoy».
+  await page.evaluate(() => { activeVenue = 'city:Tunja'; showAgView(); });
+  await page.waitForTimeout(900);
+  const seco19 = await mirarDia('2026-08-19');
+  expect(seco19.bloqueSugs, 'el 19 no pasó: la sección sigue ahí').toBe(true);
+  expect(seco19.sugs, 'pero Tunja no programa ese día').toBe(0);
+  expect(await page.evaluate(() => document.querySelector('.suggestion-wrap')?.innerText || ''),
+    'el vacío de la sección nombra el día').toContain('Sin más opciones para el MIÉ 19');
+
+  // 3· El día en curso ya sin nada: nombra el día y NO ofrece destino.
+  await sembrar('2026-08-19T22:30', '2026-08-17');
+  const seco = await mirarDia('2026-08-19');
+  expect(seco.sugs, 'a las 22:30 del último día no queda nada').toBe(0);
+  expect(seco.ctaConDestino, 'sin material, no manda a ningún lado').toBe(false);
+  expect(seco.txt, 'y nombra el día en vez de decir «hoy»').toContain('Sin más opciones para el MIÉ 19');
+});
