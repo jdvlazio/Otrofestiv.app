@@ -296,6 +296,24 @@ PREMIUM de TIFF, y vale para todos los flags (`is_free`,
 de `film_list`. Basta con que un ensamblador lea un CSV o un Excel para que un
 booleano llegue como texto.
 
+**Décimo, el espejo del noveno: `[campo-huerfano]`.** `[campo-contrato]` caza
+el campo mal ESCRITO —el dato quiere llegar a la app y se pierde por el
+nombre—. Éste caza el campo que **no tiene a dónde llegar**: nadie lo lee, y
+nunca lo leyó.
+
+El 17 ago 2026 había nueve. Entre ellos 36 `trailer` que alguien buscó uno por
+uno, 23 `tematica`, y 16 `qa_detail` que además duplicaba —peor, y en un solo
+idioma— lo que `qa_type` ya pintaba en tres. Se emitían, se validaban, se
+versionaban, y no se veían en ninguna pantalla.
+
+Son las dos formas de que el trabajo se pierda entre la fuente y el ojo: allá el
+dato estaba en la fuente y no lo emitimos; aquí lo emitimos y nadie lo pinta.
+
+Todo campo que `src/` no mencione tiene que estar declarado con su dueño —
+`synopsis_lang` y `tmdb_id` lo tienen (guardianes y pipeline)— o figurar en la
+deuda, que no crece. **Antes de añadir un campo, la pregunta es quién lo va a
+leer.** Si la respuesta es «alguien algún día», no se emite.
+
 **Noveno, el del silencio: `[boleteria-muda]`.** Los guardianes de boletería
 que ya teníamos vigilan la COHERENCIA de lo que se emite —que el badge lo
 decida `ticketBadgeTarget()`, que `ticketing_model` use el vocabulario real,
