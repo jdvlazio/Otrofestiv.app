@@ -4226,6 +4226,38 @@ except Exception as _e:
 # LA REGLA, en dos ramas: si la copia hace LO MISMO, se borra y se importa de
 # lib. Si hace otra cosa, se RENOMBRA para que lo diga. Lo que no se permite es
 # que dos cosas distintas compartan nombre.
+# ── [pipeline-generico] el camino nuevo es UNO, no uno por festival ─────────
+# Cada festival escribía su propio ensamblador y su propio publicador, y ahí es
+# donde se perdían las cosas: los 6 enlaces de TuBoleta de CineAutopsia, las 415
+# banderas de FICDEH, el `is_free:false` a mano en una función que era libre. No
+# eran doce errores distintos — era el mismo error doce veces, porque las reglas
+# vivían en la cabeza de quien escribía el ensamblador de turno.
+#
+# Desde el 17 ago 2026 hay UN ensamblador (pipeline/ensamblar.py) y UN publicador
+# (pipeline/publicar.py). Lo propio del festival cabe en su `<id>.plan.json`.
+# Este guardián vigila que la excepción no vuelva a ser la norma: los dos
+# publicadores por-festival que quedan son deuda DECLARADA y la lista solo puede
+# encoger. Un festival nuevo con publicador propio es una regla que se escapó.
+check = 'pipeline-generico'
+try:
+    import glob as _g5, os as _os5
+    _HEREDADOS = {'ficdeh-2026-publicar.py',    # pre-genérico; su build está atrasado
+                  'cineautopsia-2026-publicar.py'}  # pre-genérico; migra al publicar
+    _propios = {_os5.path.basename(_p) for _p in _g5.glob('pipeline/*-publicar.py')}
+    _nuevos = sorted(_propios - _HEREDADOS)
+    _faltan = [_f for _f in ('pipeline/ensamblar.py', 'pipeline/publicar.py')
+               if not _os5.path.exists(_f)]
+    if _faltan:
+        fail(check, 'falta el camino genérico: ' + ', '.join(_faltan))
+    elif _nuevos:
+        fail(check, 'publicador propio de un festival (usá pipeline/publicar.py y '
+                    'declará lo del festival en su plan.json): ' + ', '.join(_nuevos))
+    else:
+        ok(check, f'un solo ensamblador y un solo publicador ({len(_HEREDADOS)} heredados declarados)')
+except Exception as _e:
+    warn(check, f'no se pudo verificar pipeline-generico: {_e}')
+
+
 check = 'lib-unica'
 try:
     import ast as _ast, glob as _g4, os as _os4

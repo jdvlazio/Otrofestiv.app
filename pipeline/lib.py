@@ -200,11 +200,81 @@ BANDERAS = {
     'suiza': '🇨🇭', 'austria': '🇦🇹', 'grecia': '🇬🇷', 'turquia': '🇹🇷', 'kenia': '🇰🇪',
     'filipinas': '🇵🇭', 'macedonia del norte': '🇲🇰', 'nueva zelanda': '🇳🇿',
     'australia': '🇦🇺', 'luxemburgo': '🇱🇺', 'sudafrica': '🇿🇦', 'senegal': '🇸🇳',
+    # ── medidos contra los 13 festivales del repo el 17 ago 2026 ──────────────
+    # La tabla se escribía a mano y a demanda, así que le faltaba lo que ningún
+    # festival anterior había traído: «Hungría» apareció con CineAutopsia y se
+    # quedó sin bandera. En vez de añadir una, se midió TODO el repo y se cerró
+    # el hueco entero. Los nombres en inglés entran porque los festivales
+    # internacionales publican así (TIFF, Tribeca) y traducirlos en la línea de
+    # salida sería inventar la palabra del festival.
+    'hungria': '🇭🇺', 'palestina': '🇵🇸', 'honduras': '🇭🇳', 'taiwan': '🇹🇼',
+    'qatar': '🇶🇦', 'bangladesh': '🇧🇩', 'corea del sur': '🇰🇷', 'corea': '🇰🇷',
+    'sri lanka': '🇱🇰', 'malasia': '🇲🇾', 'eslovaquia': '🇸🇰', 'vietnam': '🇻🇳',
+    'nigeria': '🇳🇬', 'puerto rico': '🇵🇷', 'rumania': '🇷🇴', 'rumania (romania)': '🇷🇴',
+    'estonia': '🇪🇪', 'republica dominicana': '🇩🇴', 'rep. dominicana': '🇩🇴',
+    'israel': '🇮🇱', 'tailandia': '🇹🇭', 'kosovo': '🇽🇰', 'bulgaria': '🇧🇬',
+    'costa rica': '🇨🇷', 'georgia': '🇬🇪', 'guatemala': '🇬🇹', 'nicaragua': '🇳🇮',
+    'el salvador': '🇸🇻', 'haiti': '🇭🇹', 'jamaica': '🇯🇲', 'marruecos': '🇲🇦',
+    'egipto': '🇪🇬', 'tunez': '🇹🇳', 'argelia': '🇩🇿', 'libano': '🇱🇧',
+    'siria': '🇸🇾', 'irak': '🇮🇶', 'afganistan': '🇦🇫', 'pakistan': '🇵🇰',
+    'indonesia': '🇮🇩', 'singapur': '🇸🇬', 'camboya': '🇰🇭', 'nepal': '🇳🇵',
+    'mongolia': '🇲🇳', 'ucrania': '🇺🇦', 'republica checa': '🇨🇿', 'chequia': '🇨🇿',
+    'hungria (magyarorszag)': '🇭🇺', 'serbia': '🇷🇸', 'croacia': '🇭🇷',
+    'eslovenia': '🇸🇮', 'bosnia y herzegovina': '🇧🇦', 'albania': '🇦🇱',
+    'letonia': '🇱🇻', 'lituania': '🇱🇹', 'finlandia': '🇫🇮', 'islandia': '🇮🇸',
+    'etiopia': '🇪🇹', 'ghana': '🇬🇭', 'mali': '🇲🇱', 'burkina faso': '🇧🇫',
+    'ruanda': '🇷🇼', 'tanzania': '🇹🇿', 'uganda': '🇺🇬', 'mozambique': '🇲🇿',
+    'angola': '🇦🇴', 'congo': '🇨🇬', 'republica democratica del congo': '🇨🇩',
+    'costa de marfil': '🇨🇮', 'camerun': '🇨🇲', 'zimbabue': '🇿🇼', 'namibia': '🇳🇦',
+    'botsuana': '🇧🇼', 'sudan': '🇸🇩', 'somalia': '🇸🇴', 'yemen': '🇾🇪',
+    'arabia saudita': '🇸🇦', 'saudi arabia': '🇸🇦', 'turkiye': '🇹🇷', 'emiratos arabes unidos': '🇦🇪', 'jordania': '🇯🇴',
+    # nombres en inglés, tal como los publican los festivales internacionales
+    'united states': '🇺🇸', 'usa': '🇺🇸', 'eeuu': '🇺🇸', 'ee.uu.': '🇺🇸',
+    'united kingdom': '🇬🇧', 'uk': '🇬🇧', 'inglaterra': '🇬🇧', 'england': '🇬🇧',
+    'scotland': '🏴󠁧󠁢󠁳󠁣󠁴󠁿', 'france': '🇫🇷', 'spain': '🇪🇸', 'germany': '🇩🇪',
+    'italy': '🇮🇹', 'norway': '🇳🇴', 'sweden': '🇸🇪', 'denmark': '🇩🇰',
+    'ireland': '🇮🇪', 'netherlands': '🇳🇱', 'belgium': '🇧🇪', 'switzerland': '🇨🇭',
+    'austria': '🇦🇹', 'poland': '🇵🇱', 'portugal': '🇵🇹', 'greece': '🇬🇷',
+    'japan': '🇯🇵', 'south korea': '🇰🇷', 'korea': '🇰🇷', 'india': '🇮🇳',
+    'brazil': '🇧🇷', 'mexico': '🇲🇽', 'chile': '🇨🇱', 'colombia': '🇨🇴',
+    'argentina': '🇦🇷', 'peru': '🇵🇪', 'canada': '🇨🇦', 'australia': '🇦🇺',
+    'new zealand': '🇳🇿', 'south africa': '🇿🇦', 'israel': '🇮🇱', 'turkey': '🇹🇷',
+    'china': '🇨🇳', 'taiwan': '🇹🇼', 'hong kong': '🇭🇰', 'philippines': '🇵🇭',
+    'thailand': '🇹🇭', 'vietnam': '🇻🇳', 'indonesia': '🇮🇩', 'malaysia': '🇲🇾',
+    'ukraine': '🇺🇦', 'russia': '🇷🇺', 'czech republic': '🇨🇿', 'czechia': '🇨🇿',
+    'hungary': '🇭🇺', 'romania': '🇷🇴', 'bulgaria': '🇧🇬', 'serbia': '🇷🇸',
+    'croatia': '🇭🇷', 'slovenia': '🇸🇮', 'slovakia': '🇸🇰', 'estonia': '🇪🇪',
+    'latvia': '🇱🇻', 'lithuania': '🇱🇹', 'finland': '🇫🇮', 'iceland': '🇮🇸',
+    'egypt': '🇪🇬', 'morocco': '🇲🇦', 'tunisia': '🇹🇳', 'algeria': '🇩🇿',
+    'nigeria': '🇳🇬', 'kenya': '🇰🇪', 'senegal': '🇸🇳', 'ethiopia': '🇪🇹',
 }
 
+# ISO2, porque los catálogos y TMDB los publican así y un país escrito «CO» es
+# el mismo país. Solo los que aparecen de verdad en el repo.
+ISO2 = {'co': '🇨🇴', 'ar': '🇦🇷', 'br': '🇧🇷', 'cl': '🇨🇱', 'mx': '🇲🇽', 'pe': '🇵🇪',
+        'us': '🇺🇸', 'gb': '🇬🇧', 'fr': '🇫🇷', 'es': '🇪🇸', 'de': '🇩🇪', 'it': '🇮🇹',
+        'ca': '🇨🇦', 'pt': '🇵🇹', 'jp': '🇯🇵', 'cn': '🇨🇳', 'kr': '🇰🇷', 'in': '🇮🇳'}
+
+# Abreviaturas y nombres a medias que los festivales publican tal cual.
+ALIAS = {'rep dominicana': '🇩🇴', 'rd congo': '🇨🇩', 'guinea bissau': '🇬🇼',
+         'republica democratica del congo': '🇨🇩'}
+
+
 def banderas(pais):
-    out = [BANDERAS[k] for p in re.split(r'[,/]| y ', pais or '')
-           if (k := norm(p)) in BANDERAS]
+    """País(es) → banderas, deduplicadas y en orden de aparición.
+
+    Separa por coma, barra, « y » Y POR PARÉNTESIS: «España (Austria)» es una
+    coproducción de dos países, y quedarse con uno pierde el otro — 84 casos
+    medidos en el repo el 17 ago 2026. Un país que no se reconoce no inventa
+    bandera: se omite, y el guardián [country-flags] lo cuenta."""
+    out = []
+    for p in re.split(r'[,/()]| y | - |—', pais or ''):
+        k = norm(p)
+        if not k:
+            continue
+        b = BANDERAS.get(k) or ALIAS.get(k) or (ISO2.get(k) if len(k) == 2 else None)
+        if b:
+            out.append(b)
     return ''.join(dict.fromkeys(out))
 
 
@@ -272,8 +342,12 @@ def cargar_crudo(path):
     d = json.load(open(path, encoding='utf-8'))
     pr = d.get('_provenance') or {}
     assert pr.get('capturado'), f'{path}: _provenance.capturado es OBLIGATORIO'
-    fs = d.get('funciones')
-    assert isinstance(fs, list) and fs, f'{path}: falta la lista funciones[]'
+    # `programas` es alias legítimo de `funciones`: un programa de cortos ES una
+    # función —se entra una vez, se sienta una vez— y obligar a renombrarlo solo
+    # para pasar por aquí sería una ceremonia sin dato detrás.
+    fs = d.get('funciones') or d.get('programas')
+    d['funciones'] = fs   # el resto del pipeline lee UNA clave, no dos
+    assert isinstance(fs, list) and fs, f'{path}: falta la lista funciones[] (o programas[])'
     OBLIG = {'titulo', 'dia', 'hora', 'sede'}
     for i, f in enumerate(fs):
         faltan = OBLIG - set(f)
@@ -359,6 +433,12 @@ def _selftest():
     t('director romanizado', director_coincide('Gorõ Miyazaki', ['宮崎吾朗', 'Goro Miyazaki']), True)
     t('director distinto', director_coincide('Lina Rodríguez', ['Maider Oleaga']), False)
     t('director tokens cortos', director_coincide('Gala del Sol', ['Gala del Sol']), True)
+    t('banderas coproducción con paréntesis', banderas('España (Austria)'), '🇪🇸🇦🇹')
+    t('banderas ISO2', banderas('CO'), '🇨🇴')
+    t('banderas con guion', banderas('Colombia - España'), '🇨🇴🇪🇸')
+    t('banderas Hungría (la que faltaba)', banderas('Hungría'), '🇭🇺')
+    t('banderas no inventa', banderas('Varios'), '')
+    t('banderas no duplica', banderas('Colombia, Colombia'), '🇨🇴')
     # acceso — las frases REALES que escriben los festivales
     _rep = collections.Counter()
     t('normaliza year string→int', normaliza({'year': '1998'}, _rep)['year'], 1998)
