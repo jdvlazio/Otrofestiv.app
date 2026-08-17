@@ -1,0 +1,2926 @@
+{
+ "_provenance": {
+  "fuente": "TMDB por id verificado (cadena festival → Letterboxd → TMDB, sin búsqueda por título)",
+  "capturado": "2026-08-09",
+  "nota": "No se traduce nada: sin overview en español el campo va vacío y queda como pendiente del festival (incidente Tribeca)."
+ },
+ "obras": [
+  {
+   "title": "Todas las canciones del mundo",
+   "section": "Función inaugural",
+   "year": 2026,
+   "director": "Santiago Flórez Rincón",
+   "lbSlug": "todas-las-canciones-del-mundo",
+   "title_en": "Todas las canciones del mundo",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "Santiago Flórez Rincón"
+   ],
+   "lb_year": null,
+   "tmdbId": 1744092,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/todas-las-canciones-del-mundo/ — director y año de la ficha",
+   "synopsis": "La película sigue un viaje narrativo o documental que indaga en la memoria colectiva y afectiva que construyen las canciones en la vida de las personas. La trama teje diversas historias alrededor de la creación, la pérdida o la preservación musical, retratando cómo las melodías definen momentos históricos, geográficos y personales en Colombia.",
+   "synopsis_en": "",
+   "poster_tmdb": "",
+   "runtime_tmdb": 83,
+   "tmdb_director": [
+    "Santiago Flórez Rincón"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/1744092 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "Lamentos de un balcón",
+   "section": "Función inaugural",
+   "year": 2026,
+   "director": "Hans Chispas",
+   "lbSlug": "lamentos-de-un-balcon",
+   "title_en": "Lamentos de un balcón",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "Hans Chispas"
+   ],
+   "lb_year": null,
+   "tmdbId": 1744098,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/lamentos-de-un-balcon/ — director y año de la ficha",
+   "synopsis": "Lamentos de un balcón es un cortometraje experimental colombiano dirigido por el realizador Hans Chispas. La producción vio la luz en el año 2026 y posee una duración exacta de 4 minutos.",
+   "synopsis_en": "",
+   "poster_tmdb": "",
+   "runtime_tmdb": 4,
+   "tmdb_director": [
+    "Hans Chispas"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/1744098 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "Iluminaciones",
+   "section": "Función de clausura",
+   "year": 2025,
+   "director": "Pablo Llorca",
+   "lbSlug": "iluminaciones",
+   "title_en": "Iluminaciones",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "Pablo Llorca"
+   ],
+   "lb_year": 2025,
+   "tmdbId": 1478518,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/iluminaciones/ — director y año de la ficha",
+   "synopsis": "Cinco chicas y chicos publican periódicamente una revista cultural, una especie de guía del ocio de la ciudad. Cada uno se encarga de un área, desde literatura hasta cine. Y viven historias variadas, tanto entre ellos como con otras personas ajenas al grupo.",
+   "synopsis_en": "",
+   "poster_tmdb": "/xyGe2E9cKCPhkxQ2lx5rzhxxfIb.jpg",
+   "runtime_tmdb": 61,
+   "tmdb_director": [
+    "Pablo Llorca"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/1478518 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "Así llegó la noche",
+   "section": "Competencia central",
+   "year": 2025,
+   "director": "Ángel Santos",
+   "lbSlug": "and-so-the-night-fell",
+   "title_en": "And So the Night Fell",
+   "_conf": 0.43,
+   "_verificar": true,
+   "lb_director": [
+    "Ángel Santos"
+   ],
+   "lb_year": 2025,
+   "tmdbId": 1574164,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/and-so-the-night-fell/ — director y año de la ficha",
+   "synopsis": "Un escultor establece su taller en una apartada zona rural de la costa gallega. Poco a poco irá aislándose de su entorno, cortando todo contacto con amigos y familiares. Cuando una antigua amante acuda a su encuentro provocará la reflexión del escultor sobre su deseo de aislamiento y la necesidad de una nueva huida.",
+   "synopsis_en": "A sculptor sets up his studio in a remote rural area on the Galician coast. He gradually isolates himself, cutting contact with friends and family. A former lover's visit prompts him to reflect on his isolation and need to flee again.",
+   "poster_tmdb": "/9899dxEkeprkzCl460ehg7h3cII.jpg",
+   "runtime_tmdb": 122,
+   "tmdb_director": [
+    "Ángel Santos"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/1574164 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "Auslandsreise / Viaje al extranjero",
+   "section": "Competencia central",
+   "year": 2026,
+   "director": "Ted Fendt",
+   "lbSlug": "foreign-travel",
+   "title_en": "Foreign Travel",
+   "_conf": 0.48,
+   "_verificar": true,
+   "lb_director": [
+    "Ted Fendt"
+   ],
+   "lb_year": 2026,
+   "tmdbId": 1616882,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/foreign-travel/ — director y año de la ficha",
+   "synopsis": "",
+   "synopsis_en": "A year in Berlin: Leonie wanders through the city and the texts of Anna Maria Ortese. Speaking with friends and translator Sigrid Vagt, she is also looking for the narrative threads of her own life. A film of reading shot in glowing, matter-of-fact 16mm.",
+   "poster_tmdb": "/cCWN7cipEZAxLvwCPVbnH9LvZrs.jpg",
+   "runtime_tmdb": 63,
+   "tmdb_director": [
+    "Ted Fendt"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/1616882 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "Beaucoup parler / Mucho hablar",
+   "section": "Competencia central",
+   "year": 2026,
+   "director": "Pascale Bodet",
+   "lbSlug": "a-lot-talk",
+   "title_en": "A Lot Talk",
+   "_conf": 0.52,
+   "_verificar": false,
+   "lb_director": [
+    "Pascale Bodet"
+   ],
+   "lb_year": 2026,
+   "tmdbId": 1614696,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/a-lot-talk/ — director y año de la ficha",
+   "synopsis": "",
+   "synopsis_en": "Pascale accompanies her Egyptian friend Amr on his rocky path to a residency permit. The system, authorities, lawyer, papers, paperwork, a language course. A refreshingly honest film full of solidarity about “the state of migration” and “se comprendre”.",
+   "poster_tmdb": "/vP6O6ugQITgfbOBSWCOZeJzAAjp.jpg",
+   "runtime_tmdb": 78,
+   "tmdb_director": [
+    "Pascale Bodet"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/1614696 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "Cairo Streets / Las calles de El Cairo",
+   "section": "Competencia central",
+   "year": 2025,
+   "director": "Abdellah Taïa",
+   "lbSlug": "cairo-streets",
+   "title_en": "Cairo Streets",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "Abdellah Taïa"
+   ],
+   "lb_year": 2025,
+   "tmdbId": 1506824,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/cairo-streets/ — director y año de la ficha",
+   "synopsis": "",
+   "synopsis_en": "January, 2007: I am back in Cairo. For work. You have changed your phone number, Omar. I must find you... I love you. Abdellah.",
+   "poster_tmdb": "/4QXDMHcpG3rKvJ7sLP1Fac4lmfn.jpg",
+   "runtime_tmdb": 19,
+   "tmdb_director": [
+    "Abdellah Taïa"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/1506824 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "Futuros luminosos",
+   "section": "Competencia central",
+   "year": 2026,
+   "director": "Ismael García",
+   "lbSlug": "a-brighter-future",
+   "title_en": "A Brighter Future",
+   "_conf": 0.41,
+   "_verificar": true,
+   "lb_director": [
+    "Ismael García Ramírez"
+   ],
+   "lb_year": 2026,
+   "tmdbId": 1603950,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/a-brighter-future/ — director y año de la ficha",
+   "synopsis": "",
+   "synopsis_en": "In a strange, dark place, a colourful group of young people project their future.",
+   "poster_tmdb": "/dcrtvU52NOn6HTHJHC8ZyX8ySsJ.jpg",
+   "runtime_tmdb": 25,
+   "tmdb_director": [
+    "Ismael García Ramírez"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/1603950 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "Hold My Hand",
+   "section": "Competencia central",
+   "year": 2025,
+   "director": "Sophie Sherman",
+   "lbSlug": "hold-my-hand-2",
+   "title_en": "Hold My Hand",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "Sophie Sherman"
+   ],
+   "lb_year": null,
+   "tmdbId": 1635753,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/hold-my-hand-2/ — director y año de la ficha",
+   "synopsis": "",
+   "synopsis_en": "During the COVID-19 pandemic, Sophie Sherman films her relatives confined between France, Belgium, and England. Marked by a birth and a death, she focuses on acts of care, human contact, and the grace and fragility of shared moments.",
+   "poster_tmdb": "",
+   "runtime_tmdb": 17,
+   "tmdb_director": [
+    "Sophie Sherman"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/1635753 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "La corazonada",
+   "section": "Competencia central",
+   "year": 2025,
+   "director": "Diego Soto",
+   "lbSlug": "a-heart-as-willing",
+   "title_en": "A Heart as Willing",
+   "_conf": 0.44,
+   "_verificar": true,
+   "lb_director": [
+    "Diego Soto"
+   ],
+   "lb_year": 2025,
+   "tmdbId": 1466153,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/a-heart-as-willing/ — director y año de la ficha",
+   "synopsis": "",
+   "synopsis_en": "Nieves runs a swimming pool with her son Martin. One summer, a biker falls for her. Things between them don’t seem to work out, until a filming crew arrives at the pool while scouting for locations and the director decides to put Natacha and the biker in her film.",
+   "poster_tmdb": "/fvNadz6pkAhjlNQOsC20akHBgoU.jpg",
+   "runtime_tmdb": 78,
+   "tmdb_director": [
+    "Diego Soto"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/1466153 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "Las almas ni los ojos",
+   "section": "Competencia central",
+   "year": 2026,
+   "director": "Canela Reyes y César Jaimes",
+   "lbSlug": "las-almas-ni-los-ojos",
+   "title_en": "Las almas ni los ojos",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "María Canela Reyes",
+    "César Alejandro Jaimes"
+   ],
+   "lb_year": 2026,
+   "tmdbId": 1665538,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/las-almas-ni-los-ojos/ — director y año de la ficha",
+   "synopsis": "Tras huir de la violencia a los 15 años, Pacho pasa cuatro décadas lejos de Anserma. Ahora una fotografía activa el deseo de regresar y, en su retorno, imaginado como viaje interestelar, busca aquello que dejó atrás. Las huellas persistentes de la muerte se entrelazan con un paisaje de expresionismo rural, memoria e historia.",
+   "synopsis_en": "After fleeing violence at age 15, Pacho spends four decades away from Anserma. Now a photograph sparks a desire to return, and on his journey home —imagined as an interstellar voyage— he searches for what he left behind. The lingering traces of death intertwine with a landscape of rural expressionism, memory, and history",
+   "poster_tmdb": "/1qEi6ZaKPyVOEilZYdRdMK4MVJj.jpg",
+   "runtime_tmdb": 75,
+   "tmdb_director": [
+    "María Canela Reyes",
+    "César Alejandro Jaimes"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/1665538 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "Oublie pas le gruau",
+   "section": "Competencia central",
+   "year": 2026,
+   "director": "Olivier Godin",
+   "lbSlug": "dont-forget-the-oatmeal",
+   "title_en": "Don't Forget the Oatmeal",
+   "_conf": 0.35,
+   "_verificar": true,
+   "lb_director": [
+    "Olivier Godin"
+   ],
+   "lb_year": 2026,
+   "tmdbId": 1596917,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/dont-forget-the-oatmeal/ — director y año de la ficha",
+   "synopsis": "",
+   "synopsis_en": "The Barbarian believes he has only a few erections left before death. Cursed to a life in a thrift shop and haunted by family tragedy, he sets his sights on Marie, an alcoholic special-ed teacher. If he must go, he figures, he might as well go out in good company.",
+   "poster_tmdb": "/ycGFcrpmiCXtidvyom94aDyMqB1.jpg",
+   "runtime_tmdb": 75,
+   "tmdb_director": [
+    "Olivier Godin"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/1596917 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "Procès d’un jeune poète / Juicio a un joven poeta",
+   "section": "Competencia central",
+   "year": 2025,
+   "director": "Philippe Van Cutsem",
+   "lbSlug": "proces-dun-jeune-poete",
+   "title_en": "Procès d’un jeune poète",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "Philippe Van Cutsem"
+   ],
+   "lb_year": 2025,
+   "tmdbId": 1563010,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/proces-dun-jeune-poete/ — director y año de la ficha",
+   "synopsis": "",
+   "synopsis_en": "",
+   "poster_tmdb": "",
+   "runtime_tmdb": null,
+   "tmdb_director": [
+    "Philippe Van Cutsem"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/1563010 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "Sol menor",
+   "section": "Competencia central",
+   "year": 2025,
+   "director": "André Silva Santos",
+   "lbSlug": "april-tune",
+   "title_en": "April Tune",
+   "_conf": 0.44,
+   "_verificar": true,
+   "lb_director": [
+    "André Silva Santos"
+   ],
+   "lb_year": 2025,
+   "tmdbId": 1500856,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/april-tune/ — director y año de la ficha",
+   "synopsis": "",
+   "synopsis_en": "Early Spring. A sonata, a train, a letter. Between his work as a flute teacher and the rituals of mourning the early death of his wife, Samuel faces a dilemma after a visit from his brother.",
+   "poster_tmdb": "/dyDNNgnVIaI4MR83kPpoVNCWoVV.jpg",
+   "runtime_tmdb": 27,
+   "tmdb_director": [
+    "André Silva Santos"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/1500856 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "Solitudes / Soledades",
+   "section": "Competencia central",
+   "year": 2025,
+   "director": "Ryan McKenna",
+   "lbSlug": "solitudes-2025",
+   "title_en": "Solitudes",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "Ryan McKenna"
+   ],
+   "lb_year": 2025,
+   "tmdbId": 1507792,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/solitudes-2025/ — director y año de la ficha",
+   "synopsis": "",
+   "synopsis_en": "A docu-fiction hybrid, exploring a burgeoning friendship and blending familial with public memory.",
+   "poster_tmdb": "/6qANUv4ELQgaOPmcjtSsNoYazbu.jpg",
+   "runtime_tmdb": 38,
+   "tmdb_director": [
+    "Ryan McKenna"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/1507792 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "Un techo sin cielo",
+   "section": "Competencia central",
+   "year": 2025,
+   "director": "Diego Hernández",
+   "lbSlug": "a-skyless-roof",
+   "title_en": "A Skyless Roof",
+   "_conf": 0.37,
+   "_verificar": true,
+   "lb_director": [
+    "Diego Hernández"
+   ],
+   "lb_year": 2025,
+   "tmdbId": 1373119,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/a-skyless-roof/ — director y año de la ficha",
+   "synopsis": "Después de abrir una caja de zapatos, Diego comienza a sentir un severo cansancio que le impide realizar actividades cotidianas y lo deja en cama. Al mismo tiempo, su amiga Liz padece de un insomnio misterioso mientras desarrolla una puesta en escena.",
+   "synopsis_en": "After opening a shoebox, Diego begins to feel severe fatigue that prevents him from performing everyday activities and leaves him bedridden. At the same time, his friend Liz suffers from a mysterious insomnia while working on a stage production.",
+   "poster_tmdb": "/4YeCy0Bus5bxqV12CKDaXI51caj.jpg",
+   "runtime_tmdb": 90,
+   "tmdb_director": [
+    "Diego Hernández"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/1373119 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "Una Dança Non Sancta",
+   "section": "Competencia central",
+   "year": 2026,
+   "director": "Tiago Almança",
+   "lbSlug": "an-unholy-dance",
+   "title_en": "An Unholy Dance",
+   "_conf": 0.52,
+   "_verificar": false,
+   "lb_director": [
+    "Tiago Almança"
+   ],
+   "lb_year": 2026,
+   "tmdbId": 1595543,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/an-unholy-dance/ — director y año de la ficha",
+   "synopsis": "Cada invierno, en Luzón, un pequeño pueblo de Castilla-La Mancha, renace un antiguo ritual. Los vecinos, cubiertos de hollín y adornados con cuernos y campanas, se internan en la oscuridad para transformarse en diablos. Una experiencia hipnótica, un viaje en blanco y negro que se deja llevar por el pulso vibrante de un trance pagano suspendido en el tiempo.",
+   "synopsis_en": "Every winter, a small town in Castilla-La Mancha called Luzón transforms into a little hell. Its inhabitants, dressed as devils, venture into the darkness and roam its streets with horns, bells, and smeared with soot. Una dança non sancta could have been just an anthropological documentary. Instead, it delves into the inferno with the town’s residents to participate in and immortalize this unholy ritual.",
+   "poster_tmdb": "/gNxUkRMpHjb7MyU6EPNaJCdWjUf.jpg",
+   "runtime_tmdb": 7,
+   "tmdb_director": [
+    "Tiago Almança"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/1595543 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "Bright Summer Days",
+   "section": "Competencia de cortometrajes",
+   "year": 2025,
+   "director": "Nevena Desivojevic",
+   "lbSlug": "bright-summer-days",
+   "title_en": "Bright Summer Days",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "Nevena Desivojević"
+   ],
+   "lb_year": 2025,
+   "tmdbId": 1485440,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/bright-summer-days/ — director y año de la ficha",
+   "synopsis": "",
+   "synopsis_en": "Two sisters meet after a few years of being apart. The past becomes the only thing that binds them now.",
+   "poster_tmdb": "/aTwLabtZ5BU2DpqvlSVEOu2tTqe.jpg",
+   "runtime_tmdb": 14,
+   "tmdb_director": [
+    "Nevena Desivojević"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/1485440 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "Certas formas",
+   "section": "Competencia de cortometrajes",
+   "year": 2026,
+   "director": "Luiz Afonso Morêda",
+   "lbSlug": "certas-formas",
+   "title_en": "Certas Formas",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "Luiz Afonso Morêda"
+   ],
+   "lb_year": 2026,
+   "tmdbId": 1660730,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/certas-formas/ — director y año de la ficha",
+   "synopsis": "",
+   "synopsis_en": "",
+   "poster_tmdb": "/teLkpQSkMBPGiaBMQwxuV3nF1wf.jpg",
+   "runtime_tmdb": null,
+   "tmdb_director": [
+    "Luiz Afonso Morêda"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/1660730 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "Chuura",
+   "section": "Competencia de cortometrajes",
+   "year": 2026,
+   "director": "Evgenia Arbugaeva",
+   "lbSlug": "chuuraa",
+   "title_en": "Chuuraa",
+   "_conf": 1.04,
+   "_verificar": false,
+   "lb_director": [
+    "Evgenia Arbugaeva"
+   ],
+   "lb_year": 2026,
+   "tmdbId": 1614693,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/chuuraa/ — director y año de la ficha",
+   "synopsis": "",
+   "synopsis_en": "In the remote Siberian Arctic, an Indigenous Sakha scientist descends into the depths of the melting permafrost. Searching for an ancient creature, he makes his way through the dangerous, claustrophobic caves to the mythical realm of the Underworld.",
+   "poster_tmdb": "/u3ZxWARL2C2VooiHKsGrRyHiEU7.jpg",
+   "runtime_tmdb": 17,
+   "tmdb_director": [
+    "Evgenia Arbugaeva"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/1614693 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "Crash",
+   "section": "Competencia de cortometrajes",
+   "year": 2026,
+   "director": "Gabriela Mureb",
+   "lbSlug": "crash-2026-1",
+   "title_en": "Crash",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "Gabriela Mureb"
+   ],
+   "lb_year": 2026,
+   "tmdbId": 1620642,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/crash-2026-1/ — director y año de la ficha",
+   "synopsis": "",
+   "synopsis_en": "The film follows a day's work at the BMW Recycling and Dismantling Center in Munich, documenting step-by-step the final stage of a car's dismantling process.",
+   "poster_tmdb": "/xt9Dfhbzwxuo2MQvsRox9Ca2IsN.jpg",
+   "runtime_tmdb": 18,
+   "tmdb_director": [
+    "Gabriela Mureb"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/1620642 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "El oído absoluto",
+   "section": "Competencia de cortometrajes",
+   "year": 2026,
+   "director": "Rafael Federman",
+   "lbSlug": "the-inner-ear",
+   "title_en": "The Inner Ear",
+   "_conf": 0.46,
+   "_verificar": true,
+   "lb_director": [
+    "Rafael Federman"
+   ],
+   "lb_year": 2026,
+   "tmdbId": 1722127,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/the-inner-ear/ — director y año de la ficha",
+   "synopsis": "",
+   "synopsis_en": "After an accident, Lorenzo begins to hear a persistent ringing that profoundly alters his relationship with the world.",
+   "poster_tmdb": "/vhfvAky2EGTa9rmyQJ7yICWncFq.jpg",
+   "runtime_tmdb": 18,
+   "tmdb_director": [
+    "Rafael Federman"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/1722127 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "Henry Is a Girl Who Likes to Sleep",
+   "section": "Competencia de cortometrajes",
+   "year": 2026,
+   "director": "Marthe Peters",
+   "lbSlug": "henry-is-a-girl-who-likes-to-sleep",
+   "title_en": "Henry Is a Girl Who Likes to Sleep",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "Marthe Peters"
+   ],
+   "lb_year": 2026,
+   "tmdbId": 1614674,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/henry-is-a-girl-who-likes-to-sleep/ — director y año de la ficha",
+   "synopsis": "",
+   "synopsis_en": "The filmmaker writes a letter to her cat, Henry. She is looking for a soft and tender place to inhabit – a quiet refuge of warmth to retreat into when the world becomes too loud. An ode to our captive pets and the intimate worlds we build together.",
+   "poster_tmdb": "/hLX85aV7xgT7AfkyLTnTgxKEnDl.jpg",
+   "runtime_tmdb": 14,
+   "tmdb_director": [
+    "Marthe Peters"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/1614674 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "Koki, Ciao",
+   "section": "Competencia de cortometrajes",
+   "year": 2025,
+   "director": "Quenton Miller",
+   "lbSlug": "koki-ciao",
+   "title_en": "Koki, Ciao",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "Quenton Miller"
+   ],
+   "lb_year": 2025,
+   "tmdbId": 1416378,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/koki-ciao/ — director y año de la ficha",
+   "synopsis": "La autobiografía de Koki, un loro inmortal, que retrata la vida de este animal único, fiel compañero del mariscal Tito, líder de Yugoslavia durante 35 años. Un rico archivo fotográfico revive los recuerdos enjaulados de esta cacatúa, que tuvo el honor de conocer a estrellas de Hollywood y a dictadores sedientos de sangre. (GIFF)",
+   "synopsis_en": "The autobiography of Koki, an immortal parrot. Artist Quenton Miller portrays the life of this unique animal, a loyal comrade of Marshal Tito, leader of Yugoslavia for 35 years. A rich photographic archive relives the caged memories of this cockatoo, who had the honour of meeting Hollywood stars, and bloodthirsty dictators. A funny portrait, non-aligned with the documentary orthodoxy, that deals with the false constructions of history.",
+   "poster_tmdb": "/7ab2HCntF491JzIX6EcNASORKb.jpg",
+   "runtime_tmdb": 11,
+   "tmdb_director": [
+    "Quenton Miller"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/1416378 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "loose sleep",
+   "section": "Competencia de cortometrajes",
+   "year": 2026,
+   "director": "Rodrigo Soares Teixeira",
+   "lbSlug": "sono-solto",
+   "title_en": "Sono Solto",
+   "_conf": 0.6,
+   "_verificar": false,
+   "lb_director": [
+    "Rodrigo Soares Teixeira"
+   ],
+   "lb_year": 2026,
+   "tmdbId": 1655940,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/sono-solto/ — director y año de la ficha",
+   "synopsis": "",
+   "synopsis_en": "Sometimes, the hardest step in a day is the first one. In Sono Solto, our hero fights a battle against himself: is it worth it to leave the confort of the duvet and live life outside? By means of a fragmentary narrative, built on dreams and association, this short film follows the protagonist's speculation on activity and passivity, the passage of time and the (dis)advantages of being awake.",
+   "poster_tmdb": "/noJJeBURcdtVMGOhsluPPIiHNDN.jpg",
+   "runtime_tmdb": 7,
+   "tmdb_director": [
+    "Rodrigo Soares Teixeira"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/1655940 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "Mi amigo, el arquitecto",
+   "section": "Competencia de cortometrajes",
+   "year": 2026,
+   "director": "Óscar Garzón",
+   "lbSlug": "my-friend-the-architect",
+   "title_en": "My Friend, The Architect",
+   "_conf": 0.65,
+   "_verificar": false,
+   "lb_director": [
+    "Oscar Garzón"
+   ],
+   "lb_year": 2026,
+   "tmdbId": 1655621,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/my-friend-the-architect/ — director y año de la ficha",
+   "synopsis": "",
+   "synopsis_en": "A woman invents a story to evoke a lost friendship. Along with her friends, they imagine a fable: the story of two birds that one day became human — an Ornithologist and his friend, The Architect.",
+   "poster_tmdb": "/sMB00Njgb5QlOHPoD16Am79twm5.jpg",
+   "runtime_tmdb": 16,
+   "tmdb_director": [
+    "Oscar Garzón"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/1655621 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "Mirando al sur",
+   "section": "Competencia de cortometrajes",
+   "year": 2026,
+   "director": "Felipe López Gómez",
+   "lbSlug": "facing-south",
+   "title_en": "Facing South",
+   "_conf": 0.5,
+   "_verificar": false,
+   "lb_director": [
+    "Felipe López Gómez"
+   ],
+   "lb_year": 2026,
+   "tmdbId": 1657831,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/facing-south/ — director y año de la ficha",
+   "synopsis": "",
+   "synopsis_en": "The voice we hear comes from far off-screen, thousands of kilometres away from the vistas of Toronto unfolding before us. These are countless voicemails from Colombia left by the director’s loving grandmother.",
+   "poster_tmdb": "/iVHZ1lC2Ste5289HAOkk5ft6c6e.jpg",
+   "runtime_tmdb": 34,
+   "tmdb_director": [
+    "Felipe López Gómez"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/1657831 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "O",
+   "section": "Competencia de cortometrajes",
+   "year": 2026,
+   "director": "Francisca Alarcão",
+   "lbSlug": "o-2026",
+   "title_en": "o",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "Francisca Alarcão"
+   ],
+   "lb_year": 2026,
+   "tmdbId": 1599922,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/o-2026/ — director y año de la ficha",
+   "synopsis": "",
+   "synopsis_en": "For as long as she remembers, Francisca lives with an inexplicable and uncontrollable aversion to belly buttons. Nothing makes her more anxious than this simple part of the body and the shapes in the world that resemble it. When therapy isn't enough to solve her cherished phobia , Francisca turns to other types of methods - without any scientific basis and not recommended for anyone who suffers from the same condition.",
+   "poster_tmdb": "/nqiifO5BF1gEplXiTzofpR03Dlt.jpg",
+   "runtime_tmdb": 14,
+   "tmdb_director": [
+    "Francisca Alarcão"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/1599922 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "Only Making Out",
+   "section": "Competencia de cortometrajes",
+   "year": 2025,
+   "director": "Marlon Weber",
+   "lbSlug": "only-making-out",
+   "title_en": "Only Making Out",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "Marlon Weber"
+   ],
+   "lb_year": null,
+   "tmdbId": 1537273,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/only-making-out/ — director y año de la ficha",
+   "synopsis": "",
+   "synopsis_en": "Two figures at sunset. The next day they meet a third.",
+   "poster_tmdb": "/rx4q8WfoW1w80K8QYB9heQsBaK9.jpg",
+   "runtime_tmdb": 15,
+   "tmdb_director": [
+    "Marlon Weber"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/1537273 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "Our Homes Do Not Exist",
+   "section": "Competencia de cortometrajes",
+   "year": 2025,
+   "director": "Anna Lamour",
+   "lbSlug": "nos-maisons-nexistent-pas",
+   "title_en": "Nos maisons n'existent pas",
+   "_conf": 0.62,
+   "_verificar": false,
+   "lb_director": [
+    "Anna Lamour"
+   ],
+   "lb_year": 2025,
+   "tmdbId": 1645704,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/nos-maisons-nexistent-pas/ — director y año de la ficha",
+   "synopsis": "",
+   "synopsis_en": "",
+   "poster_tmdb": "/A6X3xnhhq4RuCb2Fsg45AnnWpdP.jpg",
+   "runtime_tmdb": null,
+   "tmdb_director": [
+    "Anna Lamour"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/1645704 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "Pies al revés",
+   "section": "Competencia de cortometrajes",
+   "year": 2025,
+   "director": "Elodie Arpa",
+   "lbSlug": "feet-the-other-way-around",
+   "title_en": "Feet The Other Way Around",
+   "_conf": 0.33,
+   "_verificar": true,
+   "lb_director": [
+    "Elodie Arpa"
+   ],
+   "lb_year": 2026,
+   "tmdbId": 1645136,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/feet-the-other-way-around/ — director y año de la ficha",
+   "synopsis": "",
+   "synopsis_en": "In the Colombian Amazon, a gaze drifts between the murky waters of the rivers and the forest, a silent witness to the coexistence between the elements and the inhabitants of Puerto Nariño.",
+   "poster_tmdb": "/fE00OvtKSrqGC7sjpYZLxffBKGz.jpg",
+   "runtime_tmdb": 18,
+   "tmdb_director": [
+    "Elodie Arpa"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/1645136 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "Prueba de cámara",
+   "section": "Competencia de cortometrajes",
+   "year": 2026,
+   "director": "David Correa",
+   "lbSlug": "prueba-de-camara",
+   "title_en": "Prueba de cámara",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "David Correa"
+   ],
+   "lb_year": null,
+   "tmdbId": 1743099,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/prueba-de-camara/ — director y año de la ficha",
+   "synopsis": "Toda carta es un recuerdo, dedicado a películas en donde el archivo familiar aparece como una forma de correspondencia íntima: cartas a hijos, a padres, a abuelos, a quienes estuvieron y también a quienes fuimos. Entre fotografías, archivos domésticos, voces, objetos y gestos heredados, este programa reúne formas de mirar hacia atrás para decir algo en el presente: reconstruir un vínculo, nombrar una ausencia, acompañar una pérdida o afirmar una identidad.",
+   "synopsis_en": "",
+   "poster_tmdb": "/iYSrgk7v0pSWbAA4YFF5CP8mi0j.jpg",
+   "runtime_tmdb": 10,
+   "tmdb_director": [
+    "David Correa"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/1743099 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "Sombras en la niebla",
+   "section": "Programa 1. El espesor de las formas",
+   "year": 2026,
+   "director": "Pedro Pablo Vega",
+   "lbSlug": "into-the-fog-2026",
+   "title_en": "Into the fog",
+   "_conf": 0.37,
+   "_verificar": true,
+   "lb_director": [
+    "Pedro Pablo Vega"
+   ],
+   "lb_year": 2026,
+   "tmdbId": 1668876,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/into-the-fog-2026/ — director y año de la ficha",
+   "synopsis": "En el páramo de Chiscas, don Vicente Molina y su familia cuidan un enorme rebaño de ovejas. La cotidianidad de la familia transcurre entre montañas cubiertas de niebla y la cocina, cuyo fogón de leña los reúne en torno a la comida y el juego. Entre el grupo se encuentra Will, el niño de la familia, quien se debate entre jugar y acompañar a los mayores en las labores de pastoreo.",
+   "synopsis_en": "High in a páramo in Colombia, the sheep that Edualdo and Ana have tended for decades graze across the land. Amid the fog and the demands of herding, their youngest son, Will, grows up between childhood play and the rhythms of rural life.",
+   "poster_tmdb": "/36fgDq5bvxmVXUlGHpFZLnogB5K.jpg",
+   "runtime_tmdb": 25,
+   "tmdb_director": [
+    "Pedro Pablo Vega"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/1668876 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "Un aparato para detectar fantasmas",
+   "section": "Programa 1. El espesor de las formas",
+   "year": 2025,
+   "director": "Mauricio Maldonado",
+   "lbSlug": "a-ghost-detecting-device",
+   "title_en": "A Ghost-Detecting Device",
+   "_conf": 0.46,
+   "_verificar": true,
+   "lb_director": [
+    "Mauricio Maldonado"
+   ],
+   "lb_year": 2025,
+   "tmdbId": 1593571,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/a-ghost-detecting-device/ — director y año de la ficha",
+   "synopsis": "",
+   "synopsis_en": "A casting director reunites with a young non-professional actor with the mission of re-recording some dialogues to complete the post-production of a film. Surrounded by a forest, in the sway of flickering lights, fantasy, imagination, and play collide in an exercise of repetition and hypnosis, where ghosts wander, complicit in the fiction.",
+   "poster_tmdb": "",
+   "runtime_tmdb": 18,
+   "tmdb_director": [
+    "Mauricio Maldonado"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/1593571 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "Ya se ven los tigres en la lluvia",
+   "section": "Programa 1. El espesor de las formas",
+   "year": 2025,
+   "director": "Óscar Ruiz Navia",
+   "lbSlug": "tigers-can-be-seen-in-the-rain",
+   "title_en": "Tigers Can Be Seen In The Rain",
+   "_conf": 0.47,
+   "_verificar": true,
+   "lb_director": [
+    "Oscar Ruiz Navia"
+   ],
+   "lb_year": 2025,
+   "tmdbId": 1526866,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/tigers-can-be-seen-in-the-rain/ — director y año de la ficha",
+   "synopsis": "",
+   "synopsis_en": "Drifting between moving-image formats and collaging local textures and bygone voices, Oscar Ruiz Navia’s film reflects on loss and mourning as experiences of temporal dislocation.",
+   "poster_tmdb": "/sB4dBAGzUomRRZ0CcJdcIqqeCCf.jpg",
+   "runtime_tmdb": 15,
+   "tmdb_director": [
+    "Oscar Ruiz Navia"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/1526866 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "El cazador",
+   "section": "Programa 1. El espesor de las formas",
+   "year": 2026,
+   "director": "Luciana Riso Soto y Manuel Villa",
+   "lbSlug": "the-hunter-2026-1",
+   "title_en": "The Hunter",
+   "_conf": 0.42,
+   "_verificar": true,
+   "lb_director": [
+    "Luciana Riso Soto",
+    "Manuel Villa"
+   ],
+   "lb_year": 2026,
+   "tmdbId": 1668874,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/the-hunter-2026-1/ — director y año de la ficha",
+   "synopsis": "En un paisaje ondulante, la tierra es escrita y reescrita por El Cazador. La relación entre él y el territorio revelan la esencia de una geografía. Su obsesión por el oro lo lleva a una búsqueda incesante de tesoros. El poder está en el significado que otorga a lo que encuentra. En las profundidades de la tierra y de sí mismo, descubre la verdad que le permite perpetuar su búsqueda.",
+   "synopsis_en": "Metal detector in hand, the Hunter roams through forest and city in search of treasure. It is his way of life, his calling: the summons of Lord Gold.",
+   "poster_tmdb": "/wg0kTL0ztRoFzEZsNfdGVVFf9FF.jpg",
+   "runtime_tmdb": 13,
+   "tmdb_director": [
+    "Luciana Riso Soto",
+    "Manuel Villa"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/1668874 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "Las formas de la magia",
+   "section": "Programa 1. El espesor de las formas",
+   "year": 2026,
+   "director": "María Paula Lorgia Garnica",
+   "lbSlug": "las-formas-de-la-magia",
+   "title_en": "Las Formas de la Magia",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "María Paula Lorgia"
+   ],
+   "lb_year": 2026,
+   "tmdbId": 1668889,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/las-formas-de-la-magia/ — director y año de la ficha",
+   "synopsis": "Un año después de la muerte de su padre, el reconocido mago colombiano Gustavo Lorgia, la directora realiza una exploración por sus archivos de video que revelan su trayectoria como artista, su rol como padre y la estética televisiva de una época. Una película que acude al archivo como medio para atravesar el duelo y a la memoria como forma de resistir a la desaparición.",
+   "synopsis_en": "",
+   "poster_tmdb": "/lEWolBB40mm3KON8u2dWnPk0cVJ.jpg",
+   "runtime_tmdb": 17,
+   "tmdb_director": [
+    "María Paula Lorgia"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/1668889 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "Memorias Encontradas Numa Banheira",
+   "section": "Programa 2. Teoremas sobre la mirada",
+   "year": 2026,
+   "director": "Leonardo Pirondi",
+   "lbSlug": "memoirs-found-in-a-bathtub",
+   "title_en": "Memoirs Found in a Bathtub",
+   "_conf": 0.62,
+   "_verificar": false,
+   "lb_director": [
+    "Leonardo Pirondi"
+   ],
+   "lb_year": 2026,
+   "tmdbId": 1504896,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/memoirs-found-in-a-bathtub/ — director y año de la ficha",
+   "synopsis": "",
+   "synopsis_en": "In Stanislaw Lem's book of the same title, a paper-destroying blight obliterated much of Earth's written history—except for what's in the book. In this film, we look at a similar but unmarked future, perhaps one less distant than Lem's 3140s. Amid the rubble of an uncertain setting, the narrated soundtrack reads from the last surviving parts of some bound pages, perhaps a reporter's notebook, a dream diary, or a book manuscript.",
+   "poster_tmdb": "/52agtC0zM0ndKGGnBO4NpRjg6mF.jpg",
+   "runtime_tmdb": 4,
+   "tmdb_director": [
+    "Leonardo Pirondi"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/1504896 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "Parece el mundo",
+   "section": "Programa 2. Teoremas sobre la mirada",
+   "year": 2026,
+   "director": "Santiago Quirama",
+   "lbSlug": "it-seems-the-world",
+   "title_en": "It Seems The World",
+   "_conf": 0.42,
+   "_verificar": true,
+   "lb_director": [
+    "Santiago Quirama M."
+   ],
+   "lb_year": 2026,
+   "tmdbId": 1661938,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/it-seems-the-world/ — director y año de la ficha",
+   "synopsis": "Al anochecer, la casa de Héctor se convierte en un lugar de excesos. Allí ocurre la rutina de descanso donde las historias y misterios que abundan en su comunidad se comparten sin afán ni orden, delineando una silueta íntima del territorio. Esta es una película ociosa y derrochona.",
+   "synopsis_en": "At sundown, Hector’s home becomes a place of excess. There, the day dissolves into a ritual of rest where the community’s stories and mysteries are shared freely, without order, tracing an intimate silhouette of the whole territory. This film is about this necessary waste of gossip.",
+   "poster_tmdb": "/dGRVXgQEv0mncpyLI5nqu9KsMVF.jpg",
+   "runtime_tmdb": 38,
+   "tmdb_director": [
+    "Santiago Quirama M."
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/1661938 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "Borrachos mientras escuchamos las gotas caer",
+   "section": "Competencia Nuevas voces",
+   "year": 2026,
+   "director": "Santiago Gómez Ramírez",
+   "lbSlug": "borrachos-escuchando-las-gotas-de-lluvia",
+   "title_en": "Borrachos escuchando las gotas de lluvia caer",
+   "_conf": 0.86,
+   "_verificar": false,
+   "lb_director": [
+    "Santiago Gomez Ramirez"
+   ],
+   "lb_year": null,
+   "tmdbId": 1743109,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/borrachos-escuchando-las-gotas-de-lluvia/ — director y año de la ficha",
+   "synopsis": "Retrata la historia de León Ramírez e Isabel Velásquez, dos ancianos de casi 90 años que atienden una tienda de barrio para sobrevivir. El cortometraje aborda de forma íntima y crítica temas como la resignación de la vejez, el abandono a la tercera edad, el desarraigo territorial y los impactos colaterales del conflicto armado en Colombia (abusos del Estado, ELN y AUC).",
+   "synopsis_en": "",
+   "poster_tmdb": "/3R73xUlBIBGXY5q8i9HZYLEidLy.jpg",
+   "runtime_tmdb": 22,
+   "tmdb_director": [
+    "Santiago Gomez Ramirez"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/1743109 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "El salto",
+   "section": "Competencia Nuevas voces",
+   "year": 2026,
+   "director": "Jerónimo Rincón",
+   "lbSlug": "el-salto-1",
+   "title_en": "El Salto",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "Jerónimo Rincón"
+   ],
+   "lb_year": null,
+   "tmdbId": 1686065,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/el-salto-1/ — director y año de la ficha",
+   "synopsis": "",
+   "synopsis_en": "",
+   "poster_tmdb": "/3xkU5BM4aLULnvBZu0mVntXbHrA.jpg",
+   "runtime_tmdb": null,
+   "tmdb_director": [
+    "Jerónimo Rincón"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/1686065 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "Gramática práctica italiana",
+   "section": "Competencia Nuevas voces",
+   "year": 2025,
+   "director": "Daniel Cortés",
+   "lbSlug": "practical-italian-grammar",
+   "title_en": "Practical Italian Grammar",
+   "_conf": 0.77,
+   "_verificar": false,
+   "lb_director": [
+    "Daniel Cortés"
+   ],
+   "lb_year": 2025,
+   "tmdbId": 1577564,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/practical-italian-grammar/ — director y año de la ficha",
+   "synopsis": "",
+   "synopsis_en": "Miguel and his family are preparing to emigrate from Cuba to Italy where his mother already lives. While they wait, they begin to take the first step in the life of every migrant: learning the language of the country they want to go to.",
+   "poster_tmdb": "/gtnKGTLEnXIx1WzqWdfmXqdzfkq.jpg",
+   "runtime_tmdb": 12,
+   "tmdb_director": [
+    "Daniel Cortés"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/1577564 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "Liminal",
+   "section": "Competencia Nuevas voces",
+   "year": 2026,
+   "director": "Gabriella Castelblanco",
+   "lbSlug": "liminal-6",
+   "title_en": "Liminal",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "Gabriella Castelblanco"
+   ],
+   "lb_year": null,
+   "tmdbId": 1743116,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/liminal-6/ — director y año de la ficha",
+   "synopsis": "¿Qué permanece en un lugar cuando nos vamos? En una travesía por diversos espacios liminales, entendidos como lugares de tránsito, ambigüedad y espera silenciosa, se explora la relación de los seres humanos con los lugares que han habitado y habitan, así como las sensaciones, los recuerdos y las emociones que estos espacios despiertan en los distintos momentos de sus vidas.",
+   "synopsis_en": "",
+   "poster_tmdb": "/hV8eL8v9isrSLOXoxtAdH8N9t0P.jpg",
+   "runtime_tmdb": 16,
+   "tmdb_director": [
+    "Gabriella Castelblanco"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/1743116 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "Madres de nacimiento",
+   "section": "Competencia Nuevas voces",
+   "year": 2026,
+   "director": "Gloria Isabel Gómez",
+   "lbSlug": "madres-de-nacimiento",
+   "title_en": "Madres de Nacimiento",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "Gloria Isabel Gómez Ceballos"
+   ],
+   "lb_year": null,
+   "tmdbId": 1668902,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/madres-de-nacimiento/ — director y año de la ficha",
+   "synopsis": "Del olvido y la oscuridad hay imágenes y sonidos que resurgen para controlar los cuerpos de las mujeres latinoamericanas, quienes desde niñas han sido consideradas madres de nacimiento. Pero en estos archivos emerge una interferencia que proviene del pasado para evocar un mensaje de lucha, memoria y libertad.",
+   "synopsis_en": "",
+   "poster_tmdb": "/kJreh6iEXQZ3NHaROQb7WJNle7l.jpg",
+   "runtime_tmdb": 8,
+   "tmdb_director": [
+    "Gloria Isabel Gómez Ceballos"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/1668902 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "Medellín yo te saludo",
+   "section": "Competencia Nuevas voces",
+   "year": 2026,
+   "director": "Lucas Muñoz",
+   "lbSlug": "medellin-yo-te-saludo",
+   "title_en": "Medellín, yo te saludo",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "Lucas Muñoz Cataño"
+   ],
+   "lb_year": null,
+   "tmdbId": 1740554,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/medellin-yo-te-saludo/ — director y año de la ficha",
+   "synopsis": "A través del montaje con archivos historicos de prensa y reportaje - Yo te saludo Medellín - propone un encuentro entre imágenes que nunca compartieron un mismo tiempo ni un mismo territorio. En ese diálogo, la película revela ecos inesperados entre guerras, rostros y ruinas, mientras pone en tensión nuevas formas de mirar el pasado, explora cómo el cine y la fotografía pueden interrogar la memoria, preguntándose si la violencia realmente cambia de forma o si son las imágenes las que, una y otra vez, vuelven a encontrarse a través del tiempo.",
+   "synopsis_en": "",
+   "poster_tmdb": "/8uFN3cAwlxc5DhLlgXsFtxaBYiT.jpg",
+   "runtime_tmdb": 4,
+   "tmdb_director": [
+    "Lucas Muñoz Cataño"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/1740554 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "Para no volver",
+   "section": "Competencia Nuevas voces",
+   "year": 2025,
+   "director": "Tania Galvis",
+   "lbSlug": "para-no-volver",
+   "title_en": "Para no volver",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "Tania Galvis"
+   ],
+   "lb_year": null,
+   "tmdbId": 1743118,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/para-no-volver/ — director y año de la ficha",
+   "synopsis": "Cuando Karina se entera de que está embarazada del bebé de Charlie, ella y su mejor amiga Eli se disponen a encontrarlo por las calles nocturnas de Santa Marta. En el camino, se enfrentan al deseo, la maternidad y su vínculo cambiante. Al amanecer, el mar las abraza, y vuelven a jugar como niñas.",
+   "synopsis_en": "",
+   "poster_tmdb": "/k2RvfqR0QSL4D5PzFkkomzRZJ8q.jpg",
+   "runtime_tmdb": 11,
+   "tmdb_director": [
+    "Tania Galvis"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/1743118 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "Pausas activas",
+   "section": "Competencia Nuevas voces",
+   "year": 2026,
+   "director": "Juan Pablo Castro",
+   "lbSlug": "pausas-activas",
+   "title_en": "Pausas activas",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "Juan Pablo Castro"
+   ],
+   "lb_year": null,
+   "tmdbId": 1743120,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/pausas-activas/ — director y año de la ficha",
+   "synopsis": "Una reunión laboral regular se convierte en una discusión sobre los deberes y derechos de los trabajadores.",
+   "synopsis_en": "",
+   "poster_tmdb": "/kIQJPs5yxOYrkz9A19yxgR5BFBz.jpg",
+   "runtime_tmdb": 12,
+   "tmdb_director": [
+    "Juan Pablo Castro"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/1743120 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "Preguntas frecuentes",
+   "section": "Competencia Nuevas voces",
+   "year": 2025,
+   "director": "Sofía Salinas Barrera",
+   "lbSlug": "frequently-asked-questions",
+   "title_en": "Frequently asked questions",
+   "_conf": 0.51,
+   "_verificar": false,
+   "lb_director": [
+    "Sofía Salinas Barrera"
+   ],
+   "lb_year": 2025,
+   "tmdbId": 1592609,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/frequently-asked-questions/ — director y año de la ficha",
+   "synopsis": "",
+   "synopsis_en": "S. writes to Juan, who is deeply asleep. She reflects on images and cinema, and a piece of advice from a director she admires challenges her and all her previous work. Determined to find an idea behind the images she has recorded so far, S. wanders among materials, her own archive of images and sounds, internet browser tabs, western films and Japanese short stories. S. compiles all these thoughts and findings into a letter, hoping to deliver it to Juan when he wakes up.",
+   "poster_tmdb": "/gY6k1B2FGXBsMvTDr7ltZRSe7OF.jpg",
+   "runtime_tmdb": 15,
+   "tmdb_director": [
+    "Sofía Salinas Barrera"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/1592609 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "Refracción",
+   "section": "Competencia Nuevas voces",
+   "year": 2025,
+   "director": "Isabella Palacio",
+   "lbSlug": "refraccion",
+   "title_en": "Refracción",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "Isabella Palacio Mesa"
+   ],
+   "lb_year": 2025,
+   "tmdbId": 1584776,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/refraccion/ — director y año de la ficha",
+   "synopsis": "Eloísa, una chica de 20 años, está en dos relaciones al mismo tiempo. Una noche, después de haber estado con ambas chicas, se siente agobiada por estar en esa situación de engaño y en medio de su confusión sale a recorrer las calles de Medellín en bicicleta, donde se dará cuenta de que no quiere reconocerse pero deberá encontrarse consigo misma.",
+   "synopsis_en": "Eloísa, a 20-year-old girl, is in two relationships at the same time. One night, after having been with both girls, she feels overwhelmed by living in this situation of deceit, and in the middle of her confusion she goes out to ride her bike through the streets of Medellín, where she will realize that she does not want to acknowledge who she is — but will ultimately have to come face-to-face with herself.",
+   "poster_tmdb": "/bzKNobO0N8Oqj6YU6eA2R28UgPI.jpg",
+   "runtime_tmdb": 11,
+   "tmdb_director": [
+    "Isabella Palacio Mesa"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/1584776 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "A Árvore do Conhecimento / El árbol del conocimiento",
+   "section": "Proyecciones especiales",
+   "year": 2025,
+   "director": "Eugène Green",
+   "lbSlug": "the-tree-of-knowledge-2025",
+   "title_en": "The Tree of Knowledge",
+   "_conf": 0.47,
+   "_verificar": true,
+   "lb_director": [
+    "Eugène Green"
+   ],
+   "lb_year": 2025,
+   "tmdbId": 1523438,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/the-tree-of-knowledge-2025/ — director y año de la ficha",
+   "synopsis": "",
+   "synopsis_en": "Gaspard, a teenager from the suburbs of Lisbon, falls into the hands of the Ogre, a man who has made a pact with the Devil. The Ogre uses the boy to attract tourists, whom he transforms into animals and then kills. Gaspard escapes with a donkey and a dog that he has grown fond of, and in an enchanted manor, he meets the spirit of Queen D. Maria I.",
+   "poster_tmdb": "/yjNjdYCSogOhQAMKShhk0nuGYNn.jpg",
+   "runtime_tmdb": 100,
+   "tmdb_director": [
+    "Eugène Green"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/1523438 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "Decaer",
+   "section": "Proyecciones especiales",
+   "year": 2026,
+   "director": "Juan Camilo González",
+   "lbSlug": "decay-2026",
+   "title_en": "decay",
+   "_conf": 0.85,
+   "_verificar": false,
+   "lb_director": [
+    "Juan Camilo González"
+   ],
+   "lb_year": 2026,
+   "tmdbId": 1668881,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/decay-2026/ — director y año de la ficha",
+   "synopsis": "Gracias a los chinos por la pólvora, parece que la hubieran hecho para mí. Su invención sucede como un accidente, pensada inicialmente para espantar los espíritus malos. Esta película inicia en China, luego un evento en Cartagena y se acaba siglos después en Bogotá.",
+   "synopsis_en": "I am grateful to the Chinese for the invention of gunpowder — it feels as if they made it for me. Its discovery happened by accident, originally conceived as a way to ward off evil spirits. This film begins in China, then moves to an event in Cartagena, and ends centuries later in Bogotá.",
+   "poster_tmdb": "/vG4HQdPsjfVOBuAN3L2Yea7HdQ4.jpg",
+   "runtime_tmdb": 7,
+   "tmdb_director": [
+    "Juan Camilo González"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/1668881 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "Disciplina",
+   "section": "Proyecciones especiales",
+   "year": 2026,
+   "director": "Affonso Uchôa",
+   "lbSlug": "disciplina-1",
+   "title_en": "Disciplina",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "Affonso Uchôa"
+   ],
+   "lb_year": null,
+   "tmdbId": 1639721,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/disciplina-1/ — director y año de la ficha",
+   "synopsis": "",
+   "synopsis_en": "Kelly, a young teacher, starts working at a public school on the outskirts of Contagem. Idealistic, she tries to push for a change, but ends up going too far. During a lesson, she gets into an argument with Nicolas, a young student. The quarrel brings some learning: Kelly learns that, on the outskirts of Brazil, the exception is the rule; and Nicolas learns that only by tearing down the present can the future be seen.",
+   "poster_tmdb": "/8AC30I8Rg8necCjyy035O9eLZsp.jpg",
+   "runtime_tmdb": 45,
+   "tmdb_director": [
+    "Affonso Uchôa"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/1639721 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "Dry Leaf",
+   "section": "Proyecciones especiales",
+   "year": 2025,
+   "director": "Alexandre Koberidze",
+   "lbSlug": "dry-leaf",
+   "title_en": "Dry Leaf",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "Alexandre Koberidze"
+   ],
+   "lb_year": 2025,
+   "tmdbId": 1057888,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/dry-leaf/ — director y año de la ficha",
+   "synopsis": "Lisa, fotógrafa de profesión, ha desaparecido. Lo último que se sabe es que estaba fotografiando estadios de fútbol rurales en pueblos de Georgia. Su padre, Irakli, emprende su búsqueda, viajando de un lugar a otro. Levani, la mejor amiga de Lisa —y una persona invisible— también se une a la búsqueda.",
+   "synopsis_en": "Lisa, a photographer, has gone missing. The last known detail is that she had been photographing rural football stadiums in villages across Georgia. Her father, Irakli, sets out to search for her, traveling from place to place. Levani, Lisa's best friend – and an invisible person – also sets off to help.",
+   "poster_tmdb": "/h23FAkOuqgxkvfaQ7kp0HB4WzJw.jpg",
+   "runtime_tmdb": 186,
+   "tmdb_director": [
+    "Alexandre Koberidze"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/1057888 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "El hogar fue sepultado en esa tierra que nunca pudimos encontrar",
+   "section": "Proyecciones especiales",
+   "year": 2026,
+   "director": "Deimer Quintero Vertel",
+   "lbSlug": "our-home-was-buried-in-a-land-we-could-never",
+   "title_en": "Our Home Was Buried in a Land We Could Never Find",
+   "_conf": 0.26,
+   "_verificar": true,
+   "lb_director": [
+    "Deimer Quintero Vertel"
+   ],
+   "lb_year": 2026,
+   "tmdbId": 1663181,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/our-home-was-buried-in-a-land-we-could-never/ — director y año de la ficha",
+   "synopsis": "“Esos diablos me quitaron todo, esos diablos me quitaron todo, esos diablos me quitaron todo”: este mantra de despojo se transfigura cada tanto en la familia, como una sentencia. Ellos anhelan reencontrarse con sus seres queridos desaparecidos, jugar de nuevo entre plataneras y seres fantásticos y… la casa… la casa quiere volver a ser hogar. Entre filmaciones caseras, archivos colectivos, imágenes familiares y una presencia espectral y mística, esta película habita los sueños y las pesadillas creadas por las huellas de la desaparición de lo amado. El ruido de las balas parece haber cesado; ahora la guerra parece distante, pero a su paso dejó un profundo dolor y la promesa de volver. Los amigos, la familia, el hogar y el territorio vuelven, invocados por este relato coral. El pasado es un fantasma y este filme especula sobre un paraíso y un infierno que ya no se pueden tocar, con la ilusión de habitar este nuevo lugar para conjurar en él un abrazo.",
+   "synopsis_en": "",
+   "poster_tmdb": "/sek5YZDIguocEvkRAaCcPb5wKW2.jpg",
+   "runtime_tmdb": 92,
+   "tmdb_director": [
+    "Deimer Quintero Vertel"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/1663181 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "Lolita en Honda",
+   "section": "Proyecciones especiales",
+   "year": 2026,
+   "director": "Daniel Torres",
+   "lbSlug": "lolita-en-honda",
+   "title_en": "Lolita en Honda",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "Daniel Torres"
+   ],
+   "lb_year": null,
+   "tmdbId": 1665546,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/lolita-en-honda/ — director y año de la ficha",
+   "synopsis": "Detrás de los ojos de Lolita hay un velo que ciega sus palabras. Es el recuerdo de una infancia que, aún en la vejez, le oscurece la vista y no le permite escapar. Cuando habla me parece intuir, por el eco de las historias que repite, un mundo espectral de hambre, abandono, el estigma social de una madre soltera, la magia del Río Magdalena y todas las ilusiones y demonios de esa niñez.",
+   "synopsis_en": "",
+   "poster_tmdb": "/sKIm7ZwfuBnKuGeHJAUOYhg8DlV.jpg",
+   "runtime_tmdb": null,
+   "tmdb_director": [
+    "Daniel Torres"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/1665546 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "Para hacer una película solo se necesita un arma",
+   "section": "Proyecciones especiales",
+   "year": 2026,
+   "director": "Santiago Sein",
+   "lbSlug": "all-you-need-to-make-a-movie-is-a-gun",
+   "title_en": "All You Need to Make a Movie Is a Gun",
+   "_conf": 0.4,
+   "_verificar": true,
+   "lb_director": [
+    "Santiago Sein"
+   ],
+   "lb_year": 2026,
+   "tmdbId": 1196863,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/all-you-need-to-make-a-movie-is-a-gun/ — director y año de la ficha",
+   "synopsis": "A fines de 2019, son halladas en la Universidad de Córdoba decenas de latas con películas realizadas por estudiantes de cine en los años 60 y 70. Hasta entonces se creía que habían sido destruidas durante la última dictadura militar. Cincuenta años después, aquellas imágenes vuelven a proyectarse, trasladándonos a un periodo casi desconocido del cine cordobés y a una época de efervescencia política, social y cultural sin precedentes. Cada fotograma excede su intención original, para hablarnos de un grupo de jóvenes apasionados por el cine y los intereses que los movilizaban: la psicología, la militancia, la música, la libertad sexual. Pero la aparición de un extraño personaje ligado al destino de las latas nos recuerda el final abrupto y violento de los sueños de aquella generación.",
+   "synopsis_en": "At the end of 2019, dozens of cans with films made by film students in the 60s and 70s were found at the University of Córdoba. Until then, it was believed that they had been destroyed during the last military dictatorship. Fifty years later, those images are projected again, taking us to an almost unknown period of Córdoba cinema and a time of unprecedented political, social and cultural effervescence. Each frame exceeds its original intention, to tell us about a group of young people passionate about cinema and the interests that mobilized them: psychology, militancy, music, sexual freedom. But the appearance of a strange character linked to the fate of the cans reminds us of the abrupt and violent end of the dreams of that generation.",
+   "poster_tmdb": "/yUCtz2Daw4pmDSWc0A0jjmHf3f4.jpg",
+   "runtime_tmdb": 159,
+   "tmdb_director": [
+    "Santiago Sein"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/1196863 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "The Souffleur",
+   "section": "Proyecciones especiales",
+   "year": 2026,
+   "director": "Gastón Solnicki",
+   "lbSlug": "the-souffleur",
+   "title_en": "The Souffleur",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "Gastón Solnicki"
+   ],
+   "lb_year": 2025,
+   "tmdbId": 1418361,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/the-souffleur/ — director y año de la ficha",
+   "synopsis": "Lucius Glantz, un veterano director de hotel en Viena, lucha por salvar su querido establecimiento del plan de un intrigante agente inmobiliario para demolerlo, lo que lleva a un choque de voluntades que afecta incluso a la famosa receta del soufflé del hotel.",
+   "synopsis_en": "Lucius Glantz, a veteran hotel manager in Vienna, fights to save his beloved establishment from a scheming realtor's plan to demolish it, leading to a clash of wills that even affects the hotel's renowned soufflé recipe.",
+   "poster_tmdb": "/71AUsPBhp0sirQI8sC8pmVcdno0.jpg",
+   "runtime_tmdb": 78,
+   "tmdb_director": [
+    "Gastón Solnicki"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/1418361 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "Une vie manifeste",
+   "section": "Proyecciones especiales",
+   "year": 2026,
+   "director": "Jean-Gabriel Périot",
+   "lbSlug": "a-life-a-manifesto",
+   "title_en": "A Life, A Manifesto",
+   "_conf": 0.75,
+   "_verificar": false,
+   "lb_director": [
+    "Jean-Gabriel Périot"
+   ],
+   "lb_year": 2026,
+   "tmdbId": 1483908,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/a-life-a-manifesto/ — director y año de la ficha",
+   "synopsis": "",
+   "synopsis_en": "The life of Michèle Firk — a trailblazing French journalist, film critic, aspiring director and communist activist involved in various liberation struggles in the second half of the 20th century — as told by narrator Alice Diop, modern day French director.",
+   "poster_tmdb": "/qO2Kir2yyz2sr8j4UxXXhrsuLS.jpg",
+   "runtime_tmdb": 86,
+   "tmdb_director": [
+    "Jean-Gabriel Périot"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/1483908 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "La tempestá",
+   "section": "Iluminaciones",
+   "year": 2003,
+   "director": "Pere Portabella",
+   "lbSlug": "the-tempest-2003",
+   "title_en": "The Tempest",
+   "_conf": 0.85,
+   "_verificar": false,
+   "lb_director": [
+    "Pere Portabella"
+   ],
+   "lb_year": 2003,
+   "tmdbId": 257770,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/the-tempest-2003/ — director y año de la ficha",
+   "synopsis": "",
+   "synopsis_en": "Naked bodies are buffeted by water accompanied by the music Il Temporale from the opera La Cenerentola and the overture to Il Barbiere di Siviglia both by Gioacchino Rossini.",
+   "poster_tmdb": "/loK8dBOpWOD5WEnCPQM35ryGRhm.jpg",
+   "runtime_tmdb": 6,
+   "tmdb_director": [
+    "Pere Portabella"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/257770 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "Los golfos",
+   "section": "Iluminaciones",
+   "year": 1960,
+   "director": "Carlos Saura",
+   "lbSlug": "the-delinquents-1960",
+   "title_en": "The Delinquents",
+   "_conf": 0.28,
+   "_verificar": true,
+   "lb_director": [
+    "Carlos Saura"
+   ],
+   "lb_year": 1960,
+   "tmdbId": 198915,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/the-delinquents-1960/ — director y año de la ficha",
+   "synopsis": "Un grupo de amigos que sobreviven penosamente en los arrabales de Madrid cometen pequeños delitos con el propósito de financiar el debut como torero de uno de ellos.",
+   "synopsis_en": "A group of friends who are struggling to survive in the slums of Madrid commit petty crime in order to finance the debut as a bullfighter of one of them.",
+   "poster_tmdb": "/j5r2H4KqokTowdqR2hF2NC6pSEO.jpg",
+   "runtime_tmdb": 83,
+   "tmdb_director": [
+    "Carlos Saura"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/198915 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "Macho Dancer",
+   "section": "Iluminaciones",
+   "year": 1988,
+   "director": "Lino Brocka",
+   "lbSlug": "macho-dancer",
+   "title_en": "Macho Dancer",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "Lino Brocka"
+   ],
+   "lb_year": 1988,
+   "tmdbId": 170924,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/macho-dancer/ — director y año de la ficha",
+   "synopsis": "",
+   "synopsis_en": "Pol moves to Manila for better opportunities after his American lover leaves. However, he gets drawn into the gritty world of gay prostitution and sexual slavery.",
+   "poster_tmdb": "/oDKyJP9gxYPUximMLN4VP59tZ4p.jpg",
+   "runtime_tmdb": 136,
+   "tmdb_director": [
+    "Lino Brocka"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/170924 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "Ich denke oft an Hawaii / Muchas veces pienso en Hawái",
+   "section": "Iluminaciones",
+   "year": 1978,
+   "director": "Elfi Mikesch",
+   "lbSlug": "i-often-think-of-hawaii",
+   "title_en": "I Often Think of Hawaii",
+   "_conf": 0.73,
+   "_verificar": false,
+   "lb_director": [
+    "Elfi Mikesch"
+   ],
+   "lb_year": 1978,
+   "tmdbId": 512475,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/i-often-think-of-hawaii/ — director y año de la ficha",
+   "synopsis": "",
+   "synopsis_en": "Semi-documentary film about the everyday life of a 16-year-old schoolgirl in Berlin who lives with her single mother on the outskirts of West Berlin. Her father, a soldier from Puerto Rico, has left the family. With the help of the Hawaiian postcards and records he left behind, the young woman repeatedly dreams herself into an idyllic fantasy world while performing her monotonous household chores. Director Elfie Mikesch visualizes these dream states using stylistic devices reminiscent of advertising films.",
+   "poster_tmdb": "/zb4dfHHVs4FLadYV9ixD3VsnJhc.jpg",
+   "runtime_tmdb": 82,
+   "tmdb_director": [
+    "Elfi Mikesch"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/512475 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "No contéis con los dedos",
+   "section": "Iluminaciones",
+   "year": 1967,
+   "director": "Pere Portabella",
+   "lbSlug": "dont-count-on-your-fingers",
+   "title_en": "Don't Count On Your Fingers",
+   "_conf": 0.59,
+   "_verificar": false,
+   "lb_director": [
+    "Pere Portabella"
+   ],
+   "lb_year": 1967,
+   "tmdbId": 137631,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/dont-count-on-your-fingers/ — director y año de la ficha",
+   "synopsis": "",
+   "synopsis_en": "Pere Portabella’s first work as a director starts with the following phrase: “defeated…but not conquered”. This may or should be taken as an allusion to the technical K.O. taken by Portabella from Franco’s regime during the sixties as regards his work as a producer. Through the extremely raging playthings of the words of Catalan poet Joan Brossa, Portabella attempts to dismantle the forms of advertising discourse of that time.",
+   "poster_tmdb": "/p4nrdnrNxbgDxiQokBpFMdmlbSH.jpg",
+   "runtime_tmdb": 26,
+   "tmdb_director": [
+    "Pere Portabella"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/137631 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "Sunshine Singapur",
+   "section": "Iluminaciones",
+   "year": 1972,
+   "director": "Rajendra Gour",
+   "lbSlug": "sunshine-singapore",
+   "title_en": "Sunshine Singapore",
+   "_conf": 1.03,
+   "_verificar": false,
+   "lb_director": [
+    "Rajendra Gour"
+   ],
+   "lb_year": 1972,
+   "tmdbId": 701268,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/sunshine-singapore/ — director y año de la ficha",
+   "synopsis": "",
+   "synopsis_en": "\"Sunshine Singapore pairs lurid, dream-like visuals of 1970s Singapore with music which leads the viewer through a variety of moods – oscillating between the languid and exotic, to the unfailingly upbeat – embodying the contradictions facing a nation on the cusp of modernity.  In a departure from the detached quality of black-and-white archival footage, Gour offers a hopeful imagination of Singapore then and showcases his playful infatuation with its urban environment.  A 4K restoration of Sunshine Singapore was made possible using the surviving 16mm film print preserved by the Asian Film Archive and restored by Cineric Inc. in 2018.\"  (Asian Film Archive)",
+   "poster_tmdb": "/rnAfEaeVpYXLjVouHCxA9cxUzbW.jpg",
+   "runtime_tmdb": 7,
+   "tmdb_director": [
+    "Rajendra Gour"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/701268 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "Eyes",
+   "section": "Iluminaciones",
+   "year": 1967,
+   "director": "Rajendra Gour",
+   "lbSlug": "eyes-1967",
+   "title_en": "Eyes",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "Rajendra Gour"
+   ],
+   "lb_year": 1967,
+   "tmdbId": 912349,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/eyes-1967/ — director y año de la ficha",
+   "synopsis": "",
+   "synopsis_en": "This is an experimental film that explores the pain and suffering in the world caused by a lack of understanding amongst mankind. All of this is viewed through the \"eyes\" of the people of the world.",
+   "poster_tmdb": "/4LkplijLlt9si9OYjAqXjBvxGKB.jpg",
+   "runtime_tmdb": 5,
+   "tmdb_director": [
+    "Rajendra Gour"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/912349 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "Labour of Love: The Housewife",
+   "section": "Iluminaciones",
+   "year": 1978,
+   "director": "Rajendra Gour",
+   "lbSlug": "labour-of-love-the-housewife",
+   "title_en": "Labour of Love: The Housewife",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "Rajendra Gour"
+   ],
+   "lb_year": 1978,
+   "tmdbId": 1004085,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/labour-of-love-the-housewife/ — director y año de la ficha",
+   "synopsis": "",
+   "synopsis_en": "Labour of Love: The Housewife examines the role of the Asian woman within the realm of the home and the family. It features the boundless work that a housewife must accomplish in a day to run a household and to care for her family. The film is an early feminist take on the perception regarding the economic value of the stay-at-home mother and wife, whose contribution to society is underrated.  A 2K restoration was made possible using a sole-surviving 16mm colour reversal (with scenes of black & white) print from the Asian Film Archive Collection (AFA) in 2022.",
+   "poster_tmdb": "/9z2o8eYpRHttKX8ZDhYgyReXXZY.jpg",
+   "runtime_tmdb": 19,
+   "tmdb_director": [
+    "Rajendra Gour"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/1004085 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "My Child, My Child",
+   "section": "Iluminaciones",
+   "year": 1978,
+   "director": "Rajendra Gour",
+   "lbSlug": "my-child-my-child",
+   "title_en": "My Child, My Child",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "Rajendra Gour"
+   ],
+   "lb_year": 1979,
+   "tmdbId": 912351,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/my-child-my-child/ — director y año de la ficha",
+   "synopsis": "",
+   "synopsis_en": "The film begins with a woman reflecting about her role as a person and as a mother. Her love and the sacrifices she has made for her children are evident and she has many happy memories of her time spent with them.",
+   "poster_tmdb": "/e3lSvyAjbBh2uTLIWjxsdI9KBXZ.jpg",
+   "runtime_tmdb": 12,
+   "tmdb_director": [
+    "Rajendra Gour"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/912351 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "Sight and Desire",
+   "section": "Iluminaciones",
+   "year": 1968,
+   "director": "Rajendra Gour",
+   "lbSlug": "sight-and-desire",
+   "title_en": "Sight and Desire",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "Rajendra Gour"
+   ],
+   "lb_year": 1968,
+   "tmdbId": 1004090,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/sight-and-desire/ — director y año de la ficha",
+   "synopsis": "",
+   "synopsis_en": "An experimental film that investigates the act of perception and the limits and possibilities through vision. Accompanied by an omniscient narrator and the conjuring of striking imagery, the film examines various conceptual underpinnings of what it means to \"see\" and what our eyes can truly do.  A 2K restoration was made possible using a sole-surviving 16mm colour positive print from the Asian Film Archive Collection (AFA) in 2021.",
+   "poster_tmdb": "/1k65lhMLIibhiTKXwricC9peNyb.jpg",
+   "runtime_tmdb": 23,
+   "tmdb_director": [
+    "Rajendra Gour"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/1004090 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "Vampir Cuadecuc",
+   "section": "Iluminaciones",
+   "year": 1971,
+   "director": "Pere Portabella",
+   "lbSlug": "vampir-cuadecuc",
+   "title_en": "Vampir Cuadecuc",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "Pere Portabella"
+   ],
+   "lb_year": 1971,
+   "tmdbId": 126278,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/vampir-cuadecuc/ — director y año de la ficha",
+   "synopsis": "Un ensayo atmosférico, que viene a ser una versión alternativa de «El conde Drácula», película dirigida por Jesús Franco en 1970; una narración fantasmal entre la ficción y la realidad.",
+   "synopsis_en": "An atmospheric essay, which is an alternative version of Count Dracula, a film directed by Jess Franco in 1970; a ghostly narration between fiction and reality.",
+   "poster_tmdb": "/6Ktgs4F6wfphozsi0KOgZzHeKCq.jpg",
+   "runtime_tmdb": 67,
+   "tmdb_director": [
+    "Pere Portabella"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/126278 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "Was soll'n wir denn machen ohne den Tod / ¿Qué haremos sin la muerte?",
+   "section": "Iluminaciones",
+   "year": 1980,
+   "director": "Elfi Mikesch",
+   "lbSlug": "what-shall-we-do-without-death",
+   "title_en": "What Shall We Do Without Death",
+   "_conf": 0.55,
+   "_verificar": false,
+   "lb_director": [
+    "Elfi Mikesch"
+   ],
+   "lb_year": 1980,
+   "tmdbId": 544319,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/what-shall-we-do-without-death/ — director y año de la ficha",
+   "synopsis": "",
+   "synopsis_en": "A documentary film showing life in one of Hamburg’s homes for seniors. Over the course of six months, Elfi Mikesch interviewed and filmed the inhabitants, concentrating on a female couple who are spending the rest of their lives together in a close and intimate relationship.",
+   "poster_tmdb": "/lOBASl74QYuMPKpzkJOIZpZkT9E.jpg",
+   "runtime_tmdb": 101,
+   "tmdb_director": [
+    "Elfi Mikesch"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/544319 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "Larama",
+   "section": "Alquimia de la luz. El cine de Luciana Decker",
+   "year": 2020,
+   "director": "Luciana Decker",
+   "lbSlug": "larama",
+   "title_en": "Larama",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "Luciana Decker Orozco"
+   ],
+   "lb_year": 2020,
+   "tmdbId": 848611,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/larama/ — director y año de la ficha",
+   "synopsis": "",
+   "synopsis_en": "From my window I see how the day ends, when the last daylight hiddens and dogs start barking.",
+   "poster_tmdb": "/f2cr1upXqrflDx5r0zkiyD8GUCl.jpg",
+   "runtime_tmdb": 8,
+   "tmdb_director": [
+    "Luciana Decker Orozco"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/848611 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "Lo que los humanos ven como sangre los jaguares ven como chicha",
+   "section": "Alquimia de la luz. El cine de Luciana Decker",
+   "year": 2023,
+   "director": "Luciana Decker",
+   "lbSlug": "what-humans-see-as-blood-jaguars-see-as-chicha",
+   "title_en": "What Humans See as Blood, Jaguars See as Chicha",
+   "_conf": 0.69,
+   "_verificar": false,
+   "lb_director": [
+    "Luciana Decker Orozco"
+   ],
+   "lb_year": 2023,
+   "tmdbId": 1197126,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/what-humans-see-as-blood-jaguars-see-as-chicha/ — director y año de la ficha",
+   "synopsis": "En el desierto rural de Bolivia, donde la presencia más importante es el viento moviéndose entre flores de papa y los animales, las personas que cosechan la tierra, aquellas que construyeron los artefactos antiguos y objetos sagrados y los músicos que tocan moseñada –canciones ligadas a los primeros productos de la cosecha– en las calles de la ciudad tienen un punto en común: la labor manual. Con una acertada inclusión de historias de lagos encantados, leyendas que pasan de boca a boca –o de la oralidad al audiovisual, en este caso– y les imprimen un aura fantástica a esas tierras, Luciana Decker Orozco no solo logra capturar sin oscilaciones la vida de campo, sino que recurre al movimiento incesante de las imágenes y al acompañamiento sonoro para definir una experiencia sensorial y trascendental para el espectador.",
+   "synopsis_en": "In the rural desert of Bolivia, where the most important presence is the wind moving between papa flowers and animals, the people who harvest the land, those who built the ancient artifacts and sacred objects and the musicians who play moseñada – songs linked to the first products of the harvest – on the streets of the city have one point in common: labor. With a successful inclusion of stories of enchanted lakes, legends that pass from mouth to mouth – or from orality to audiovisual, in this case – and give a fantastic aura to those lands, Luciana Decker Orozco not only manages to capture life without oscillations . field, but resorts to the incessant movement of images and sound accompaniment to define a sensory and transcendental experience for the viewer.",
+   "poster_tmdb": "/cJ6mrpRJu7LiYxDoGbWuccB5Wvn.jpg",
+   "runtime_tmdb": 30,
+   "tmdb_director": [
+    "Luciana Decker Orozco"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/1197126 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "Objetos parlantes",
+   "section": "Alquimia de la luz. El cine de Luciana Decker",
+   "year": 2021,
+   "director": "Luciana Decker",
+   "lbSlug": "objetos-parlantes",
+   "title_en": "Objetos parlantes",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "Luciana Decker Orozco"
+   ],
+   "lb_year": 2021,
+   "tmdbId": 1398659,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/objetos-parlantes/ — director y año de la ficha",
+   "synopsis": "Contrapunto de imágenes filmadas durante el encierro y el audio de comentarios y estática de la radio local grabada en vivo.",
+   "synopsis_en": "Counterpoint of images filmed during the confinement and the audio of comments and static from the local radio recorded live.",
+   "poster_tmdb": "/hccZpiZ4LcdPr26CIcRfJMK4PBf.jpg",
+   "runtime_tmdb": 10,
+   "tmdb_director": [
+    "Luciana Decker Orozco"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/1398659 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "Puro andar",
+   "section": "Alquimia de la luz. El cine de Luciana Decker",
+   "year": 2025,
+   "director": "Luciana Decker",
+   "lbSlug": "language-of-the-entrails",
+   "title_en": "Language of the Entrails",
+   "_conf": 0.36,
+   "_verificar": true,
+   "lb_director": [
+    "Luciana Decker Orozco"
+   ],
+   "lb_year": 2025,
+   "tmdbId": 1419775,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/language-of-the-entrails/ — director y año de la ficha",
+   "synopsis": "La artista y cineasta boliviana Luciana Decker Orozco indaga en actos ancestrales y esenciales: comer, masticar y digerir. Su sugerente celuloide se cuela por bocas, intestinos y entrañas, así como por experimentos en las catacumbas del ser humano y la Tierra. (Miquel Martí Freixas)",
+   "synopsis_en": "Bolivian artist and filmmaker Luciana Decker Orozco delves into ancient and essential acts: eating, masticating and digesting. Her suggestive celluloid slips through mouths, intestines and entrails, as well as experiments in the catacombs of the human being and the Earth. Inspired by the avant-gardist and indigenist Peruvian writer Gamaliel Chumata, the surface and the underground, the real and the extraordinary, mysteriously merge together.",
+   "poster_tmdb": "/m12YlFzvHMciYQCnIz0ChnFC4Se.jpg",
+   "runtime_tmdb": 12,
+   "tmdb_director": [
+    "Luciana Decker Orozco"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/1419775 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "Spoils",
+   "section": "Alquimia de la luz. El cine de Luciana Decker",
+   "year": 2023,
+   "director": "Luciana Decker",
+   "lbSlug": "spoils",
+   "title_en": "Spoils",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "Luciana Decker Orozco"
+   ],
+   "lb_year": 2023,
+   "tmdbId": 1123071,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/spoils/ — director y año de la ficha",
+   "synopsis": "Colección de flores salvajes y botines de guerra. Trofeos de caza, ojos falsos. Desperdicio de comida y fósiles.",
+   "synopsis_en": "A collection of spring colours, food spoils, spoils of war, emptied creatures, and fossils. In-camera edit, a diary-like rhythm of first impressions of the US without wanting to waste film.",
+   "poster_tmdb": "/2qyZWNWI14eCi6ESYO0R7oe2stz.jpg",
+   "runtime_tmdb": 7,
+   "tmdb_director": [
+    "Luciana Decker Orozco"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/1123071 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "Trizas",
+   "section": "Alquimia de la luz. El cine de Luciana Decker",
+   "year": 2026,
+   "director": "Luciana Decker",
+   "lbSlug": "shards-2026",
+   "title_en": "Shards",
+   "_conf": 0.45,
+   "_verificar": true,
+   "lb_director": [
+    "Luciana Decker Orozco"
+   ],
+   "lb_year": 2026,
+   "tmdbId": 1604094,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/shards-2026/ — director y año de la ficha",
+   "synopsis": "",
+   "synopsis_en": "Fragments of pottery. Gold, silver, jewellery. Contemporary art. Luciana Decker Orozco visits various museums and collections in London, tracing a homegrown past present on another continent. Each piece are windows that open and close, briefly revealing what they hide, a mystery that she encapsulates in her celluloid and magical editing.",
+   "poster_tmdb": "/6561nDr66xGl3MFVSMsVqGEKtn.jpg",
+   "runtime_tmdb": 15,
+   "tmdb_director": [
+    "Luciana Decker Orozco"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/1604094 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "Jakawisa",
+   "section": "Carta blanca",
+   "year": 2020,
+   "director": "Delia Yujra Chura",
+   "lbSlug": "jakawisa",
+   "title_en": "Jakawisa",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [],
+   "lb_year": null,
+   "tmdbId": 873182,
+   "title_original_lb": null,
+   "_verificacion": "DISCREPA",
+   "_src": "letterboxd.com/film/jakawisa/ — director y año de la ficha",
+   "synopsis": "Tres generaciones de mujeres aimaras, habitantes del lago Titicaca en Bolivia, trabajan la tierra siguiendo una larga tradición familiar. La textura de manos y pies, así como la del material fílmico, protagonizan esta propuesta, reflejando la mirada personal e íntima de la directora hacia su familia y cultura.",
+   "synopsis_en": "",
+   "poster_tmdb": "/jHW7MMORHTccJ3UgiHJSaNQtPMl.jpg",
+   "runtime_tmdb": 5,
+   "tmdb_director": [],
+   "_director_coincide": false,
+   "_src_tmdb": "TMDB /movie/873182 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "Hiding / Esquivo",
+   "section": "Carta blanca",
+   "year": 2024,
+   "director": "Fatmeh Villalba",
+   "lbSlug": "hiding-esquivo",
+   "title_en": "Hiding / Esquivo",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "Lilian Fatmeh Villalba"
+   ],
+   "lb_year": null,
+   "tmdbId": 1744060,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/hiding-esquivo/ — director y año de la ficha",
+   "synopsis": "Esquivo es una performance audiovisual que concibe el paisaje no como un escenario estático, sino como un organismo vivo en violenta metamorfosis y un territorio de resistencia política. A través de imágenes intervenidas de quebradas, cañones y cascadas que desbordan sus propios límites, la obra altera las referencias habituales de escala y orientación. El ímpetu del agua actúa como una fuerza corrosiva y vital, sumergiendo al espectador en un espacio donde la materia, el tiempo y la percepción se vuelven profundamente inestables.",
+   "synopsis_en": "",
+   "poster_tmdb": "",
+   "runtime_tmdb": 30,
+   "tmdb_director": [
+    "Lilian Fatmeh Villalba"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/1744060 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "Derroteros, Derroteros, Derroteros, Derroteros, Derroteros, Derroteros, Derroteros",
+   "section": "Carta blanca",
+   "year": 2026,
+   "director": "Esteban Prudencia",
+   "lbSlug": "derroteros-derroteros-derroteros-derroteros",
+   "title_en": "Derroteros, Derroteros, Derroteros, Derroteros, Derroteros, Derroteros, Derroteros",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "Esteban Prudencio"
+   ],
+   "lb_year": null,
+   "tmdbId": 1744062,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/derroteros-derroteros-derroteros-derroteros/ — director y año de la ficha",
+   "synopsis": "Derroteros es un cortometraje documental o experimental de 19 minutos dirigido por Esteban Prudencia en coproducción entre Bolivia y Cuba para el año 2026. La obra aborda cruces poéticos, geográficos o memorias en común entre ambas naciones latinoamericanas.",
+   "synopsis_en": "",
+   "poster_tmdb": "",
+   "runtime_tmdb": 19,
+   "tmdb_director": [
+    "Esteban Prudencio"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/1744062 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "¿Qué historia es ésta y cuál es su final?",
+   "section": "La primavera llega para los que esperan. El cine de José Luis Torres Leiva",
+   "year": 2013,
+   "director": "José Luis Torres Leiva",
+   "lbSlug": "what-is-this-story-and-how-does-it-end",
+   "title_en": "What Is This Story and How Does It End?",
+   "_conf": 0.54,
+   "_verificar": false,
+   "lb_director": [
+    "José Luis Torres Leiva"
+   ],
+   "lb_year": 2013,
+   "tmdbId": 512555,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/what-is-this-story-and-how-does-it-end/ — director y año de la ficha",
+   "synopsis": "",
+   "synopsis_en": "A prominent Chilean documentary director shares his family album with the film editor of his late works. A review of one hundred photographs and a quiet conversation will rise to memories of the films of one of the most personal filmmakers.",
+   "poster_tmdb": "/3vBg5czvNlm7h01Gra86Zmq16tT.jpg",
+   "runtime_tmdb": 53,
+   "tmdb_director": [
+    "José Luis Torres Leiva"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/512555 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "Alicia soñó con un faro",
+   "section": "La primavera llega para los que esperan. El cine de José Luis Torres Leiva",
+   "year": 2021,
+   "director": "José Luis Torres Leiva",
+   "lbSlug": "alicia-dreams-of-a-lighthouse",
+   "title_en": "Alicia Dreams of a Lighthouse",
+   "_conf": 0.54,
+   "_verificar": false,
+   "lb_director": [
+    "José Luis Torres Leiva"
+   ],
+   "lb_year": 2021,
+   "tmdbId": 860514,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/alicia-dreams-of-a-lighthouse/ — director y año de la ficha",
+   "synopsis": "",
+   "synopsis_en": "Part of the project for the new feature film that José Luis Torres Leiva is currently preparing. The short film describes the creative process and the images that come to a writer as she reflects on the figure of lighthouses as insular guides and as a source of existential support and anchorage.",
+   "poster_tmdb": "/lzAnnb5MvA370hNynnw8IJmPrUI.jpg",
+   "runtime_tmdb": 8,
+   "tmdb_director": [
+    "José Luis Torres Leiva"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/860514 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "Cuando las nubes esconden la sombra",
+   "section": "La primavera llega para los que esperan. El cine de José Luis Torres Leiva",
+   "year": 2024,
+   "director": "José Luis Torres Leiva",
+   "lbSlug": "when-clouds-hide-the-shadow",
+   "title_en": "When Clouds Hide the Shadow",
+   "_conf": 0.35,
+   "_verificar": true,
+   "lb_director": [
+    "José Luis Torres Leiva"
+   ],
+   "lb_year": 2024,
+   "tmdbId": 1268743,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/when-clouds-hide-the-shadow/ — director y año de la ficha",
+   "synopsis": "María viaja a Puerto Williams para protagonizar una película. Sin embargo, el equipo de filmación no podrá llegar debido a una fuerte tormenta. Sola, buscará ayuda para un intenso dolor de espalda, lo que la llevará a descubrir la vida en la ciudad más austral del mundo y una historia pendiente en su vida.",
+   "synopsis_en": "Maria travels to Puerto Williams to star in a movie. But the film crew won't be able to arrive due to a strong storm. Alone, she'll seek help for severe back pain, which will lead her to discover life in the southernmost city in the world and a pending story in her life.",
+   "poster_tmdb": "/h3sq9eoMY23lLZoVkPLQ7TEM2kD.jpg",
+   "runtime_tmdb": 71,
+   "tmdb_director": [
+    "José Luis Torres Leiva"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/1268743 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "El cielo, la tierra y la lluvia",
+   "section": "La primavera llega para los que esperan. El cine de José Luis Torres Leiva",
+   "year": 2008,
+   "director": "José Luis Torres Leiva",
+   "lbSlug": "the-sky-the-earth-and-the-rain",
+   "title_en": "The Sky, the Earth and the Rain",
+   "_conf": 0.42,
+   "_verificar": true,
+   "lb_director": [
+    "José Luis Torres Leiva"
+   ],
+   "lb_year": 2008,
+   "tmdbId": 102339,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/the-sky-the-earth-and-the-rain/ — director y año de la ficha",
+   "synopsis": "",
+   "synopsis_en": "Ana, Verónica, Marta, and Toro are four lonely people who live an unadventurous and quiet existence in southern Chile. They are with each other without the need of using words, trying to save themselves in a stealthy and extreme way. In order not only of getting away of the loneliness that constitutes their innermost core, but also of finding themselves, they reach for each other to get brotherly and sexual love, affection, and a space and time of their own.",
+   "poster_tmdb": "/xunivOZ0KL9vGlF4Ar3RcnREZaN.jpg",
+   "runtime_tmdb": 110,
+   "tmdb_director": [
+    "José Luis Torres Leiva"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/102339 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "El sueño de Ana",
+   "section": "La primavera llega para los que esperan. El cine de José Luis Torres Leiva",
+   "year": 2017,
+   "director": "José Luis Torres Leiva",
+   "lbSlug": "anas-dream",
+   "title_en": "Ana's Dream",
+   "_conf": 0.35,
+   "_verificar": true,
+   "lb_director": [
+    "José Luis Torres Leiva"
+   ],
+   "lb_year": 2017,
+   "tmdbId": 478536,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/anas-dream/ — director y año de la ficha",
+   "synopsis": "",
+   "synopsis_en": "Stark formal choices counterbalance profound emotions and vulnerability in this poignant lover’s goodbye.",
+   "poster_tmdb": "",
+   "runtime_tmdb": 9,
+   "tmdb_director": [
+    "José Luis Torres Leiva"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/478536 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "El viento sabe que vuelvo a casa",
+   "section": "La primavera llega para los que esperan. El cine de José Luis Torres Leiva",
+   "year": 2016,
+   "director": "José Luis Torres Leiva",
+   "lbSlug": "the-winds-know-that-im-coming-back-home",
+   "title_en": "The Winds Know That I'm Coming Back Home",
+   "_conf": 0.4,
+   "_verificar": true,
+   "lb_director": [
+    "José Luis Torres Leiva"
+   ],
+   "lb_year": 2016,
+   "tmdbId": 381639,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/the-winds-know-that-im-coming-back-home/ — director y año de la ficha",
+   "synopsis": "",
+   "synopsis_en": "Looking for extras and locations, a filmmaker settles on Chiloé, the second largest island off the coast of Chile. He does auditions, but mainly listens patiently to the stories of young and old people. As an outsider, he cautiously searches for the soul of the community and its underlying tensions.",
+   "poster_tmdb": "/rWHuSbXAJQl6fItQZAfuOp6ujbN.jpg",
+   "runtime_tmdb": 102,
+   "tmdb_director": [
+    "José Luis Torres Leiva"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/381639 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "Obreras saliendo de la fábrica",
+   "section": "La primavera llega para los que esperan. El cine de José Luis Torres Leiva",
+   "year": 2005,
+   "director": "José Luis Torres Leiva",
+   "lbSlug": "women-workers-leaving-the-factory",
+   "title_en": "Women Workers Leaving the Factory",
+   "_conf": 0.53,
+   "_verificar": false,
+   "lb_director": [
+    "José Luis Torres Leiva"
+   ],
+   "lb_year": 2005,
+   "tmdbId": 182746,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/women-workers-leaving-the-factory/ — director y año de la ficha",
+   "synopsis": "",
+   "synopsis_en": "An atmospheric portrait of four women who leave the factory where they work to go to the beach.",
+   "poster_tmdb": "",
+   "runtime_tmdb": 21,
+   "tmdb_director": [
+    "José Luis Torres Leiva"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/182746 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "Sobre cosas que me han pasado",
+   "section": "La primavera llega para los que esperan. El cine de José Luis Torres Leiva",
+   "year": 2018,
+   "director": "José Luis Torres Leiva",
+   "lbSlug": "about-things-that-happened-to-me",
+   "title_en": "About Things That Happened to Me",
+   "_conf": 0.38,
+   "_verificar": true,
+   "lb_director": [
+    "José Luis Torres Leiva"
+   ],
+   "lb_year": 2018,
+   "tmdbId": 573814,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/about-things-that-happened-to-me/ — director y año de la ficha",
+   "synopsis": "",
+   "synopsis_en": "Based on the book by author Marcelo Matthey, this short film narrates his own life in a style reminiscent of school compositions. His constant strolls through streets, houses and beaches are recorded in notes of what he saw, felt or thought during these wanderings or moments, but almost only recalling the processes, the timeline in which things occur and come to mind, the trail of associations coming one after the other, like the steps of a person walking along a street. Immediate impressions, fleeting moments normally lost in time and which are captured in the images and sounds of this film.",
+   "poster_tmdb": "/r9YimsSrZeMtkRg1HNAHWovaV3H.jpg",
+   "runtime_tmdb": 15,
+   "tmdb_director": [
+    "José Luis Torres Leiva"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/573814 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "Vendrá la muerte y tendrá tus ojos",
+   "section": "La primavera llega para los que esperan. El cine de José Luis Torres Leiva",
+   "year": 2019,
+   "director": "José Luis Torres Leiva",
+   "lbSlug": "death-will-come-and-shall-have-your-eyes",
+   "title_en": "Death Will Come and Shall Have Your Eyes",
+   "_conf": 0.44,
+   "_verificar": true,
+   "lb_director": [
+    "José Luis Torres Leiva"
+   ],
+   "lb_year": 2019,
+   "tmdbId": 614456,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/death-will-come-and-shall-have-your-eyes/ — director y año de la ficha",
+   "synopsis": "Dos mujeres que han pasado toda su vida juntas deben lidiar con la enfermedad que afecta a una de ellas. La mujer enferma decide no recibir tratamiento y se mudan a una cabaña en el bosque para esperar el día en que la muerte llegue a sus vidas. La situación ve resurgir el amor que el tiempo había enterrado bajo la rutina. Poco a poco, su relación se fortalecerá a medida que la muerte pase su tiempo fuera de la cabaña.",
+   "synopsis_en": "Two women who have spent their whole lives together must deal with the illness affecting one of them. The sick woman decides not to have treatment and they move into a cabin in the woods to wait for the day that death will come into their lives. The situation sees the resurfacing of the love that time had buried under the routine. Gradually their relationship will strengthen as death bides its time outside the cabin.",
+   "poster_tmdb": "/4JGrPKDZAPK3LFCrdY8zEnTjMeX.jpg",
+   "runtime_tmdb": 86,
+   "tmdb_director": [
+    "José Luis Torres Leiva"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/614456 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "Ver y escuchar",
+   "section": "La primavera llega para los que esperan. El cine de José Luis Torres Leiva",
+   "year": 2013,
+   "director": "José Luis Torres Leiva",
+   "lbSlug": "see-and-listen",
+   "title_en": "See and Listen",
+   "_conf": 0.41,
+   "_verificar": true,
+   "lb_director": [
+    "José Luis Torres Leiva"
+   ],
+   "lb_year": 2013,
+   "tmdbId": 407151,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/see-and-listen/ — director y año de la ficha",
+   "synopsis": "Narra tres encuentros en donde personas ciegas y sordas intercambian y comparten experiencias, recuerdos y sensaciones sobre la luz, la oscuridad, el silencio y el sonido del mundo que los rodea.",
+   "synopsis_en": "Blind and deaf people converse, question, surprise and educate each others. Fingers move about quickly, translation follows promptly, both visible and audible, hands get touched and squeezed, and out of their tactfulness, sentences, stories, reserve and emotions arise",
+   "poster_tmdb": "",
+   "runtime_tmdb": 90,
+   "tmdb_director": [
+    "José Luis Torres Leiva"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/407151 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "Verano",
+   "section": "La primavera llega para los que esperan. El cine de José Luis Torres Leiva",
+   "year": 2011,
+   "director": "José Luis Torres Leiva",
+   "lbSlug": "verano",
+   "title_en": "Verano",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "José Luis Torres Leiva"
+   ],
+   "lb_year": 2011,
+   "tmdbId": 111106,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/verano/ — director y año de la ficha",
+   "synopsis": "Durante un caluroso día de verano, cosas pequeñas ocurren a los visitantes y trabajadores de un antiguo balneario en el sur de Chile. Julieta, Francisco, Isa, Rodrigo, Ignacio, Mariana, Muriel, Gabriela, Eliseo, Norma, Alejandra y Claudio experimentarán las largas horas de vacaciones en la naturaleza, durmiendo al sol, aprendiendo a conducir, limpiando la casa, besándose por primera vez, nadando en la noche o simplemente caminando y hablando, mientras que el día irá desvelando pequeños fragmentos de felicidad y descubrimiento.",
+   "synopsis_en": "During one hot summer day, little things happen to the visitors and workers of an old thermal resort in southern Chile. Julieta, Francisco, Isa, Rodrigo, Ignacio, Mariana, Muriel, Gabriela, Eliseo, Norma, Alejandra and Claudio experience the long vacation hours in nature, sleeping in the sun, learning how to drive, cleaning the house, kissing for the first time, swimming at night or just walking and talking, while the day slowly unravels into small fragments of happiness and discovery.",
+   "poster_tmdb": "/y9OuSTMn0PH1bw7BCMLW2TBXKCa.jpg",
+   "runtime_tmdb": 95,
+   "tmdb_director": [
+    "José Luis Torres Leiva"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/111106 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "Cleaning & Cleansing",
+   "section": "Febril incisión. El cine de Thomas Fürhapter",
+   "year": 2024,
+   "director": "Thomas Fürhapter",
+   "lbSlug": "cleaning-cleansing",
+   "title_en": "Cleaning & Cleansing",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "Thomas Fürhapter"
+   ],
+   "lb_year": 2024,
+   "tmdbId": 1361665,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/cleaning-cleansing/ — director y año de la ficha",
+   "synopsis": "",
+   "synopsis_en": "CLEANING AND CLEANSING tells of the glamor and misery of hygiene. Without resorting to interviews or explanatory off-camera commentary, it stages its subject in a way that can be experienced by the senses. In doing so, it follows an analytical approach that thematizes hygiene as an order of the „healthy“ and the „harmful“, which is reflected in institutions, architectures and production processes and regulates human behavior. The filmthus raises a topic that has been central to our society since the beginning of modernity: the optimization and improvement of life, which – if pursued with too much commitment and carelessly – can quickly turn against itself.",
+   "poster_tmdb": "/7jlgyCfVs4AGmgw7guo4EZsATQ8.jpg",
+   "runtime_tmdb": 92,
+   "tmdb_director": [
+    "Thomas Fürhapter"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/1361665 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "La tercera opción / Die dritte Option / The Third Option",
+   "section": "Febril incisión. El cine de Thomas Fürhapter",
+   "year": 2017,
+   "director": "Thomas Fürhapter",
+   "lbSlug": "the-third-option",
+   "title_en": "The Third Option",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "Thomas Fürhapter"
+   ],
+   "lb_year": 2017,
+   "tmdbId": 476369,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/the-third-option/ — director y año de la ficha",
+   "synopsis": "",
+   "synopsis_en": "„It used to be down to fate whether you gave birth to a disabled child. Today you can choose if you want to keep it or not.“ The results of prenatal screening can present would-be parents with a very difficult dilemma. Should a physically or mentally disabled child be allowed to live – or not be brought into the world at all? Who gets to decide what is normal and worthy of life? The filmic essay DIE DRITTE OPTION puts a new perspective on a highly controversial topic: while we listen to the statements of doctors, those who carry out prenatal screenings and the disturbing experiences of the couples affected, the visual level places the topic in a much wider socio-political context. Director Thomas Fürhapter’s debut film offers fascinating visual and acoustic impressions that tackle the core questions of birth, death, ethics and questions how far we should go when it comes to optimising our lives.",
+   "poster_tmdb": "/Apn8OLc0byo0Lht1oFyFysgntwj.jpg",
+   "runtime_tmdb": 78,
+   "tmdb_director": [
+    "Thomas Fürhapter"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/476369 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "Viviendo juntos / Zusammenleben",
+   "section": "Febril incisión. El cine de Thomas Fürhapter",
+   "year": 2022,
+   "director": "Thomas Fürhapter",
+   "lbSlug": "zusammenleben",
+   "title_en": "Zusammenleben",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "Thomas Fürhapter"
+   ],
+   "lb_year": 2022,
+   "tmdbId": 1041158,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/zusammenleben/ — director y año de la ficha",
+   "synopsis": "",
+   "synopsis_en": "A documentary following immigrants attending voluntary integration courses in Vienna.",
+   "poster_tmdb": "/cWzTw5fHetqFEqh8qLkpTQKQV5H.jpg",
+   "runtime_tmdb": 90,
+   "tmdb_director": [
+    "Thomas Fürhapter"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/1041158 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "Vive L’Amour",
+   "section": "Sick and Dirty. Curaduría de Michael Koresky",
+   "year": 1994,
+   "director": "Tsai Ming-liang",
+   "lbSlug": "vive-lamour",
+   "title_en": "Vive L'Amour",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "Tsai Ming-liang"
+   ],
+   "lb_year": 1994,
+   "tmdbId": 11985,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/vive-lamour/ — director y año de la ficha",
+   "synopsis": "Una joven pareja, May y Ah-jong, utiliza un apartamento para sus relaciones. Sin embargo, una tercera persona, un tímido homosexual escondido en el mismo apartamento les espía creando un triangulo bizarro de amor.",
+   "synopsis_en": "Three lonely young denizens of Taipei unknowingly share an apartment: May, a real estate agent who uses it for her sexual affairs; Ah-jung, her current lover; and Hsiao-kang, who's stolen the key and uses the apartment as a retreat.",
+   "poster_tmdb": "/nGko7dIzGVAxp1OedhZltpSvBM1.jpg",
+   "runtime_tmdb": 118,
+   "tmdb_director": [
+    "Tsai Ming-liang"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/11985 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "The Children’s Hour",
+   "section": "Sick and Dirty. Curaduría de Michael Koresky",
+   "year": 1961,
+   "director": "William Wyler",
+   "lbSlug": "the-childrens-hour",
+   "title_en": "The Children's Hour",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "William Wyler"
+   ],
+   "lb_year": 1961,
+   "tmdbId": 20139,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/the-childrens-hour/ — director y año de la ficha",
+   "synopsis": "Karen y Martha son dos buenas amigas y socias que dirigen una exclusiva escuela privada para niñas, la Escuela Dobie-Wright. Karen está prometida con el doctor Joe Cardin, con el que pretende casarse pronto, aunque Martha le insiste en retrasar la boda, para no acabar sola al frente de la escuela. Una alumna maliciosa y vengativa, despechada por un castigo que ha recibido, oye por casualidad un comentario y lo utiliza, distorsionándolo ante su abuela, para acusar a las profesoras de ser amantes.",
+   "synopsis_en": "An unruly student at a private all-girls boarding school scandalously accuses the two women who run it of having a romantic relationship.",
+   "poster_tmdb": "/dfsUNwOBKvSWyjpg8TyR6nEr5k8.jpg",
+   "runtime_tmdb": 107,
+   "tmdb_director": [
+    "William Wyler"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/20139 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "Buddies",
+   "section": "Sick and Dirty. Curaduría de Michael Koresky",
+   "year": 1985,
+   "director": "Arthur J. Bressan",
+   "lbSlug": "buddies-1985",
+   "title_en": "Buddies",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "Arthur J. Bressan, Jr."
+   ],
+   "lb_year": 1985,
+   "tmdbId": 259433,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/buddies-1985/ — director y año de la ficha",
+   "synopsis": "",
+   "synopsis_en": "David, a naive graduate student, has volunteered to work as a 'buddy' for people dying of AIDS. Assigned to the intensely political Robert, a lifelong activist whose friends and family have abandoned him following his diagnosis, the two men, each with notably different world views, soon discover common bonds, as David's inner activist awakens and Robert's need for emotional release is fulfilled.",
+   "poster_tmdb": "/xk0bhsQumoeCfsFK08pufMYkIKP.jpg",
+   "runtime_tmdb": 81,
+   "tmdb_director": [
+    "Arthur J. Bressan, Jr."
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/259433 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "Caminito al Cielo",
+   "section": "La sutil materia. Sergio Navarro",
+   "year": 1989,
+   "director": "Sergio Navarro",
+   "lbSlug": "caminito-al-cielo",
+   "title_en": "Caminito al cielo",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "Sergio Navarro"
+   ],
+   "lb_year": 1989,
+   "tmdbId": 615840,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/caminito-al-cielo/ — director y año de la ficha",
+   "synopsis": "La vida de un grupo de jóvenes en la población La Pincoya, durante fines de los años ochenta",
+   "synopsis_en": "The life of young people in the Villa Wolf sector in the town of La Pincoya at the end of the eighties.\r Work carried out thanks to the Soinde health program, Conchalí office and the La Ventana cultural center.",
+   "poster_tmdb": "",
+   "runtime_tmdb": 37,
+   "tmdb_director": [
+    "Sergio Navarro"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/615840 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "Cuartito rosa",
+   "section": "La sutil materia. Sergio Navarro",
+   "year": 1991,
+   "director": "Sergio Navarro",
+   "lbSlug": "cuartito-rosa",
+   "title_en": "Cuartito Rosa",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "Sergio Navarro"
+   ],
+   "lb_year": 1991,
+   "tmdbId": 873367,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/cuartito-rosa/ — director y año de la ficha",
+   "synopsis": "Un grupo de adolescentes de una población marginal relata las diferentes aristas del ser mujer y su relación con el embarazo a temprana edad. Esta obra trata de ser un fiel retrato de ser mujer y adolescente en un estrato socioeconómico marginal de nuestro país. El documental está construido, íntegramente, por los relatos de las mujeres que forman el grupo seleccionado, cuyas edades van desde los 15 a 20 años, aproximadamente. Forman parte de un grupo donde se les ayuda a acercarse a las labores que deberán realizar al convertirse en madres, permitiéndoles intercambiar experiencias en torno al proceso previo y posterior al parto.",
+   "synopsis_en": "The reality of pregnant teenagers from popular sectors, the absence of information about how to prevent pregnancy and the lack of knowledge of how their own sexuality works. Their dreams, hopes and the strength they display to assume a radical change for which neither they nor their environment are prepared.",
+   "poster_tmdb": "/nyY00FzUlUdP5PzRyBIdOUeA7Ht.jpg",
+   "runtime_tmdb": 30,
+   "tmdb_director": [
+    "Sergio Navarro"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/873367 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "La libertad remonta el estadio",
+   "section": "La sutil materia. Sergio Navarro",
+   "year": 1897,
+   "director": "Sergio Navarro",
+   "lbSlug": "la-libertad-remonta-el-estadio",
+   "title_en": "La libertad remonta el estadio",
+   "_conf": 1.0,
+   "_verificar": false,
+   "lb_director": [
+    "Sergio Navarro"
+   ],
+   "lb_year": 1987,
+   "tmdbId": 1185345,
+   "title_original_lb": null,
+   "_verificacion": "DISCREPA",
+   "_src": "letterboxd.com/film/la-libertad-remonta-el-estadio/ — director y año de la ficha",
+   "synopsis": "El jueves 2 de abril de 1987, miles de jóvenes llegaron hasta el Estadio Nacional de Santiago de Chile para encontraron con el Papa Juan Pablo II. Después de muchos años, los jóvenes podrían reunirse libremente y hacer oír su voz. (Texto introductorio al comienzo de este documental).",
+   "synopsis_en": "On Thursday, April 2, 1987, thousands of young people came to the National Stadium in Santiago de Chile to meet Pope John Paul II. After many years, young people would be able to meet freely and make their voices heard. (Introductory text at the beginning of this documentary).",
+   "poster_tmdb": "/6w7duyK9aZFN5LiidxWFZDBqEaE.jpg",
+   "runtime_tmdb": 22,
+   "tmdb_director": [
+    "Sergio Navarro"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/1185345 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "Chico eléctrico",
+   "section": "Historia(s) del cine: Argentina. Curaduría de José Miccio",
+   "year": 2021,
+   "director": "Ingrid Pokropek",
+   "lbSlug": "chico-electrico",
+   "title_en": "Chico eléctrico",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "Ingrid Pokropek"
+   ],
+   "lb_year": 2021,
+   "tmdbId": 809738,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/chico-electrico/ — director y año de la ficha",
+   "synopsis": "Joaquín tiene el poder de cargar celulares o suministrar electricidad a cualquier dispositivo con la energía de su propio cuerpo, así que lo aprovecha para ganarse unos pesos en una ciudad resignada a los apagones programados. Una comedia lacónica y refinada, con la gracia de lo extraordinario.",
+   "synopsis_en": "Joaquín has the power to charge cell phones or supply electricity to any device with the energy of his own body, so he takes advantage of it to make a few pesos in a city resigned to scheduled power outages. A laconic and refined comedy, touched by the grace of the extraordinary.",
+   "poster_tmdb": "/aiMK2LxtOzRsAxiUTpMCFz9qpOW.jpg",
+   "runtime_tmdb": 28,
+   "tmdb_director": [
+    "Ingrid Pokropek"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/809738 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "Dice que…",
+   "section": "Historia(s) del cine: Argentina. Curaduría de José Miccio",
+   "year": 2025,
+   "director": "Alejandro Fernández Mouján",
+   "lbSlug": "dice-que",
+   "title_en": "Dice que…",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "Alejandro Fernández Mouján"
+   ],
+   "lb_year": 2025,
+   "tmdbId": 1564971,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/dice-que/ — director y año de la ficha",
+   "synopsis": "Esta es la historia de una muerte, la de José Luis Alvarenga. Según la sección policiales de un diario provincial fue informada como producto de un “singular duelo criollo”. En vísperas de una navidad. Un pueblo rural del interior chaqueño, una provocación, la reacción, un desigual enfrentamiento que termina con José Luis muerto. Varios vecinos son testigos del hecho, uno de ellos dice que: “mataron a Lorenzo Lamas”. Así comienza esta historia, simple, desconocida, a la que busca dar vida esta película.",
+   "synopsis_en": "This is the story of a death, that of José Luis Alvarenga. According to the police section of a provincial newspaper, it was reported as the result of a \"unique Creole duel.\" On Christmas Eve. A rural town in the interior of Chaco, a provocation, a reaction, an unequal confrontation that ends with José Luis dead. Several neighbors witness the incident, one of whom says, \"They killed Lorenzo Lamas.\" Thus begins this simple, unknown story, which this film seeks to bring to life.",
+   "poster_tmdb": "/2org5wSI7ke454OGGQHW33kAidz.jpg",
+   "runtime_tmdb": 68,
+   "tmdb_director": [
+    "Alejandro Fernández Mouján"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/1564971 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "Homenaje a la obra de Philip Henry Gosse",
+   "section": "Historia(s) del cine: Argentina. Curaduría de José Miccio",
+   "year": 2020,
+   "director": "Pablo Martín Weber",
+   "lbSlug": "homage-to-the-work-of-philip-henry-gosse",
+   "title_en": "Homage to the Work of Philip Henry Gosse",
+   "_conf": 0.82,
+   "_verificar": false,
+   "lb_director": [
+    "Pablo Martín Weber"
+   ],
+   "lb_year": 2020,
+   "tmdbId": 764439,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/homage-to-the-work-of-philip-henry-gosse/ — director y año de la ficha",
+   "synopsis": "Sentado en su computadora, un director argentino reflexiona sobre los postulados metafísicos del historiador natural británico Philip Henry Gosse mientras experimenta con imágenes y sonidos guardados en su base de datos personal.",
+   "synopsis_en": "Sitting at his computer, an Argentine director reflects on the metaphysical postulates of British natural historian Philip Henry Gosse, while he experiments with images and sounds saved in his personal database.",
+   "poster_tmdb": "/3TitWtQ1TYwy6XxYas0xSwvxfZk.jpg",
+   "runtime_tmdb": 22,
+   "tmdb_director": [
+    "Pablo Martín Weber"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/764439 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "Las picapedreras",
+   "section": "Historia(s) del cine: Argentina. Curaduría de José Miccio",
+   "year": 2021,
+   "director": "Azul Aizenberg",
+   "lbSlug": "the-stonebreakers",
+   "title_en": "The Stonebreakers",
+   "_conf": 0.48,
+   "_verificar": true,
+   "lb_director": [
+    "Azul Aizenberg"
+   ],
+   "lb_year": 2021,
+   "tmdbId": 877043,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/the-stonebreakers/ — director y año de la ficha",
+   "synopsis": "No hay imágenes de la Huelga Grande de Tandil, llevada a cabo en 1908 por los obreros picapedreros durante casi un año. Las mujeres, todas venidas del otro lado del océano a título de esposas, sabotearon los intentos de los patrones por torcer la rebelión. Las herramientas del trabajo doméstico fueron sus armas para la lucha de clases, en un gesto inédito que reunió sin proponérselo, género y condición obrera. A un siglo de distancia, este documental recupera sus testimonios orales para reconstruir su historia con imágenes de películas ajenas, buscando en los gestos de otras mujeres las imágenes ausentes de las picapedreras.",
+   "synopsis_en": "A history book, a film saved from the dictatorship, an exiled film director, and a collection of pirated films. The filmmaker traces the images of the women who led to the triumph of the longest strike in Argentine history.",
+   "poster_tmdb": "/8c80lOeLRfsC25rBoheC9nU1bh5.jpg",
+   "runtime_tmdb": 17,
+   "tmdb_director": [
+    "Azul Aizenberg"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/877043 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "Rancho",
+   "section": "Historia(s) del cine: Argentina. Curaduría de José Miccio",
+   "year": 2021,
+   "director": "Pedro Speroni",
+   "lbSlug": "rancho",
+   "title_en": "Rancho",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "Pedro Speroni"
+   ],
+   "lb_year": 2021,
+   "tmdbId": 805169,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/rancho/ — director y año de la ficha",
+   "synopsis": "En una cárcel de máxima seguridad, un boxeador busca su libertad y recibe consejos del líder del pabellón, junto a un grupo de jóvenes que sueñan con ser millonarios y otro que ingresa condenado por asesinato. El director de la película convive con ellos y obtiene un retrato al borde del abismo.",
+   "synopsis_en": "At a maximum security prison, a boxer searches for his freedom and receives advice from the leader of the cell block , along with a group of young men who want to be millionaires and another one who has just been imprisoned for murder. The director of the films coexists with them and obtains a portrait from the edge.",
+   "poster_tmdb": "/aO20tXiacW4SnZ3Ih7S2g3jNCr7.jpg",
+   "runtime_tmdb": 72,
+   "tmdb_director": [
+    "Pedro Speroni"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/805169 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "Solo qu3r3mos un poco de amor",
+   "section": "Historia(s) del cine: Argentina. Curaduría de José Miccio",
+   "year": 2024,
+   "director": "Raúl Perrone",
+   "lbSlug": "solo-qu3r3mos-un-poco-de-amor",
+   "title_en": "Solo qu3r3mos un poco de amor",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "Raúl Perrone"
+   ],
+   "lb_year": 2024,
+   "tmdbId": 1388911,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/solo-qu3r3mos-un-poco-de-amor/ — director y año de la ficha",
+   "synopsis": "hace tiempo que decidí no hacer mas sinopsis  De mis películas  Quiero que la gente llegue sin saber  que va A mirar.  Tampoco habrá un tráiler – son mentirosos  Y nunca reflejan realmente  El espíritu de la película.  Gracias por comprender.",
+   "synopsis_en": "I decided a long time ago not to do any more synopses of my films. I want people to arrive without knowing what they are going to watch.  There won't be a trailer either – they're liars AND they never really reflect the spirit of the film.  Thanks for understanding.",
+   "poster_tmdb": "/LedAbAkK7Q6CXmKawrRK4Fcsu0.jpg",
+   "runtime_tmdb": 75,
+   "tmdb_director": [
+    "Raúl Perrone"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/1388911 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "Spot Fuera de campo 1",
+   "section": "Historia(s) del cine: Argentina. Curaduría de José Miccio",
+   "year": 2025,
+   "director": "Pablo Martín Weber",
+   "lbSlug": "spot-fuera-de-campo-1",
+   "title_en": "Spot Fuera de campo 1",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "Pablo Martín Weber"
+   ],
+   "lb_year": null,
+   "tmdbId": 1744140,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/spot-fuera-de-campo-1/ — director y año de la ficha",
+   "synopsis": "Pablo Martín Weber nació en 1994. Dirigió Fragmentos desde el exilio (2018) y actualmente se encuentra desarrollando Ecos de Xinjiang, el cual será su primer largometraje. Escribe regularmente para la revista La vida útil.",
+   "synopsis_en": "",
+   "poster_tmdb": "",
+   "runtime_tmdb": 3,
+   "tmdb_director": [
+    "Pablo Martín Weber"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/1744140 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "Spot Fuera de campo 2",
+   "section": "Historia(s) del cine: Argentina. Curaduría de José Miccio",
+   "year": 2024,
+   "director": "María Aparicio",
+   "lbSlug": "spot-fuera-de-campo-2",
+   "title_en": "Spot Fuera de campo 2",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "María Aparicio"
+   ],
+   "lb_year": null,
+   "tmdbId": 1744147,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/spot-fuera-de-campo-2/ — director y año de la ficha",
+   "synopsis": "El proyecto indaga en el concepto de off-screen (\"fuera de campo\"), un recurso fundamental del lenguaje cinematográfico donde lo no mostrado cobra la misma o mayor fuerza que el encuadre visible",
+   "synopsis_en": "",
+   "poster_tmdb": "",
+   "runtime_tmdb": 4,
+   "tmdb_director": [
+    "María Aparicio"
+   ],
+   "_director_coincide": true,
+   "_src_tmdb": "TMDB /movie/1744147 (id vía Letterboxd, no por búsqueda)"
+  },
+  {
+   "title": "El santo y el milagro",
+   "section": "La sutil materia. Sergio Navarro",
+   "year": 1993,
+   "director": "Sergio Navarro",
+   "lbSlug": null,
+   "title_en": null,
+   "_conf": 0.0,
+   "_verificar": false,
+   "_verificacion": "sin letterboxd",
+   "synopsis": "",
+   "synopsis_en": "",
+   "poster_tmdb": ""
+  },
+  {
+   "title": "Valparaíso eterno",
+   "section": "La sutil materia. Sergio Navarro",
+   "year": 1991,
+   "director": "Sergio Navarro",
+   "lbSlug": null,
+   "title_en": null,
+   "_conf": 0.0,
+   "_verificar": false,
+   "_verificacion": "sin letterboxd",
+   "synopsis": "",
+   "synopsis_en": "",
+   "poster_tmdb": ""
+  }
+ ]
+}

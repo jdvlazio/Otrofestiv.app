@@ -487,6 +487,20 @@ export const ARCHETYPE_COLORS = {
 // Cada sección de cada festival → su arquetipo. Generado por scripts/classify-posters
 // (arquetipos) + decisiones de diseño. Sección nueva sin entrada → gate lo caza.
 export const SECTION_ARCHETYPES = {
+  // ── Cinemancia 2026 · Valle de Aburrá ─────────────────────────────────
+  '⭐ Función inaugural': 'Apertura / Gala',
+  '🎬 Función de clausura': 'Clausura',
+  '🏆 Competencia Central': 'Competencia',
+  '🎞️ Competencia de Cortometrajes': 'Competencia',
+  '🔺 Programa 1. El espesor de las formas': 'Cortos / Programas',
+  '👁️ Programa 2. Teoremas sobre la mirada': 'Cortos / Programas',
+  '⚗️ Alquimia de la luz. El cine de Luciana Decker': 'Retrospectiva / Tributo',
+  '🃏 Carta blanca': 'Perspectivas / Miradas',
+  '🌷 La primavera llega para los que esperan. El cine de José Luis Torres Leiva': 'Retrospectiva / Tributo',
+  '🌡️ Febril incisión. El cine de Thomas Fürhapter': 'Retrospectiva / Tributo',
+  '🖤 Sick and Dirty. Curaduría de Michael Koresky': 'Perspectivas / Miradas',
+  '📼 La sutil materia. Sergio Navarro': 'Retrospectiva / Tributo',
+  '🇦🇷 Historia(s) del cine: Argentina. Curaduría de José Miccio': 'Muestra / País',
   '🔮 Largometrajes': 'Muestra / País',
   '🌙 Cortometrajes': 'Cortos / Programas',
   '🌱 Raíces del Juego': 'Perspectivas / Miradas',
