@@ -142,7 +142,36 @@ reales en el mismo predio se declaran con `_nota` (el guardián
 - **Copy**: toda string nueva pasa por Juan. El tagline del splash expande la
   sigla; el lema del año vive en el afiche.
 
-### Paso 5 · Ensamblador propio → `festivals/<id>.json` + config
+### Paso 5 · El camino genérico — un ensamblador, un publicador
+
+**Desde el 17 ago 2026 el festival NO escribe su ensamblador.** Escribe su
+`pipeline/<id>.plan.json` —identidad, tabla de sedes, mapa de secciones— y
+corre:
+
+```bash
+python3 pipeline/ensamblar.py <id>    # crudo + plan → staging/<id>-build.json
+python3 pipeline/publicar.py <id>     # build → festivals/<id>.json, validando
+```
+
+Lo que pone el genérico, igual para todos: `day_order`, banderas desde el país,
+«N min», «Sede - Ciudad», la casilla de acceso vía `lib.acceso_campos()`, los
+cortos como `is_cortos` + `film_list`, el país de un programa derivado de sus
+obras, y el enriquecimiento por obra —también dentro de un bloque de cortos—.
+
+**Si un festival necesita una regla nueva, se añade AL GENÉRICO.** Escribir un
+ensamblador aparte es cómo se perdieron los 6 enlaces de TuBoleta de
+CineAutopsia y las 415 banderas de FICDEH: no eran doce errores distintos, era
+el mismo error doce veces. Lo vigila `[pipeline-generico]`.
+
+**`publicar.py` se niega a borrar lo que ya está en producción.** Compara la
+cobertura campo a campo con el JSON publicado y **aborta** si el build trae
+menos: es exactamente lo que pasó con FICDEH, cuyo build estaba atrasado y
+habría borrado 415 banderas y 13 salas en silencio. Con `--forzar` se publica
+igual, pero hay que escribirlo a mano.
+
+**Plantilla del plan:** `pipeline/festival.plan.example.json`.
+
+### Paso 5·bis · El ensamblador propio (legado)
 
 El ensamblador del festival junta crudo + enriquecido + geo y escribe el JSON
 final. La jerarquía de fuentes va COMENTADA en su cabecera, y toda excepción

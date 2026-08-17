@@ -303,6 +303,34 @@ la app con disfraz. `_tmdbId` vivió en 16 funciones de FINCA a salvo de
 repo usaba `tmdb_id`. Ahora, si al quitarle el guion el nombre coincide con un
 campo real, el guardián lo llama por su nombre: contrabando.
 
+**Decimocuarto, y el que cierra el círculo: `[pipeline-generico]`.** Los trece
+anteriores vigilan que el dato salga bien de un camino que cada festival
+reescribía. Éste vigila que **el camino sea uno**: `pipeline/ensamblar.py` y
+`pipeline/publicar.py`, con lo propio del festival declarado en su `plan.json`.
+
+Por qué: los 6 enlaces de TuBoleta de CineAutopsia, las 415 banderas de FICDEH y
+el `is_free:false` escrito a mano en una función que era libre no fueron tres
+errores distintos — fueron **el mismo error tres veces**, porque las reglas
+vivían en la cabeza de quien escribía el ensamblador de turno.
+
+Y el publicador **se niega a borrar lo que ya está en producción**: compara la
+cobertura campo a campo con el JSON publicado y aborta si el build trae menos.
+Es literalmente el accidente de FICDEH del 17 ago, convertido en una guarda.
+
+**La prueba de que el genérico sirve fue reproducir CineAutopsia entero con él**
+—7 programas, 45 obras, 4 días— contra el JSON que había hecho el ensamblador a
+mano: mismas funciones, mismas obras, **mismos 23 pósters y 27 slugs de
+Letterboxd**. Las diferencias que quedaron fueron todas mejoras del genérico, y
+una fue un bug MÍO que la comparación cazó: deduplicaba banderas por carácter y
+partía los emoji en dos («🇺🇸🇪🇸🇵🇱» salía «🇺🇸🇪🇵🇱»), porque una bandera son dos
+puntos de código.
+
+**Y de paso se midió la tabla de países entera**: `banderas()` se escribía a
+mano y a demanda, así que le faltaba lo que ningún festival anterior había
+traído. «Hungría» apareció con CineAutopsia y se quedó sin bandera. Medido
+contra los 13 festivales: **de 191 apariciones sin bandera a 27**, y las 27 que
+quedan no son países («Varios», «Iberoamérica»).
+
 **Decimotercero: `[lib-unica]` — una función, un dueño.** `pipeline/lib.py`
 existe para escribir la lógica común una sola vez. El 17 ago 2026 se midió
 cuánto de eso era verdad: **7 de sus 17 funciones tenían copias sueltas**,

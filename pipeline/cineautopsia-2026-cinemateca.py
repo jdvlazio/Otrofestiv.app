@@ -10,6 +10,8 @@ obras en pares de líneas —título, y luego «(Dir. Nombre, año) País. NN mi
 y al final la sede con «Mes DD H:MM AM/PM».
 """
 import json, re, io, os, subprocess, sys, time
+import sys, os as _os; sys.path.insert(0, _os.path.dirname(_os.path.abspath(__file__)))
+import lib
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from lib import provenance, UA
@@ -34,7 +36,10 @@ def parse(nodo, html):
     L = texto(html)
     d = {'nodo': nodo, '_src': f'https://cinematecadebogota.gov.co/node/peliculas/{nodo}'}
     # El título del programa es la primera línea que se repite en <title>
-    d['programa'] = re.sub(r'\s*\|\s*Cinemateca\s*$', '', L[0])
+    # `titulo`, no `programa`: el formato intermedio tiene UN nombre para el
+    # nombre (PROTOCOLO §4). Un parser que inventa su propia clave obliga al
+    # ensamblador genérico a conocer al parser, que es justo lo que evitamos.
+    d['titulo'] = re.sub(r'\s*\|\s*Cinemateca\s*$', '', L[0])
     # El festival viene justo después de «Festivales y Muestras»
     for i, x in enumerate(L):
         if x == 'Festivales y Muestras' and i + 1 < len(L):
@@ -71,6 +76,13 @@ def parse(nodo, html):
     # póster del programa
     m = re.search(r'(?:src|data-src)="(/sites/default/files/\d{4}-\d{2}/[^"]+\.(?:png|jpg|jpeg|webp))"', html, re.I)
     if m: d['poster'] = 'https://cinematecadebogota.gov.co' + m.group(1)
+    # LA CASILLA DE ACCESO, que esta ficha SÍ publica y que en el primer montaje
+    # se me pasó: los seis programas de pago traen su enlace de TuBoleta y la
+    # clausura dice «Entrada libre» con todas sus letras (17 ago 2026).
+    m = re.search(r'href="(https://[^"]*tuboleta[^"]*)"', html)
+    if m: d['ticket_url'] = m.group(1)
+    d['acceso'] = 'Entrada libre' if re.search(r'Entrada libre', html) else (
+        'Boletería en taquilla' if d.get('ticket_url') else lib.DESCONOCIDO)
     return d
 
 
@@ -102,7 +114,7 @@ json.dump({'_provenance': provenance(
 print(f'── {salida}\n')
 
 for d in out:
-    print(f"══ [{d['nodo']}] {d['programa']}")
+    print(f"══ [{d['nodo']}] {d['titulo']}")
     print(f"   {d.get('festival','?')}")
     print(f"   {d.get('dia','?')} {d.get('hora','?')} · {d.get('sede','?')} · {d.get('duracion_min','?')} min · {d.get('clasificacion','?')}")
     print(f"   obras: {len(d['obras'])} · póster: {'sí' if d.get('poster') else '—'}")
