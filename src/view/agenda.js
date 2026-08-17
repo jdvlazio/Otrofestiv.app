@@ -16,7 +16,7 @@ import {
   DAYS, DAY_SHORT_EN, _dayChips, _lblLocalized, _minFmt, _mkCortoItemHtml, _posterThumb, getCortoItemPoster, itemPosterParts, posterParts, dayChip, dayLabel, dayLabelLong, durFmt, emptyState, emptyStateHero, flagFmt, getFilmPoster, isToday, keepCityOnly, mplanBlockType, mplanEndStr, planCityVenues, sala, starsText, travelWarn, vcfg, venueCity, venueMatches, delayConsensusBadge, conflictAccount,
 } from './helpers.js';
 import {
-  _festDate, _festNowMin, festivalEnded, minToStr, simNow, simTodayStr, toMin,
+  _festDate, _festNowMin, dayFullyPassed, festivalEnded, minToStr, simNow, simTodayStr, toMin,
 } from '../domain/time.js';
 // Consenso colaborativo de retraso (Fase B): renderAgenda (impura/exenta) lo lee
 // del controller y lo pasa como dato a las funciones puras del view.
@@ -378,7 +378,10 @@ export function renderMiPlanCalendar(state){
   // Día landmark en formato largo (mismo patrón que Planear/buildResultHTML).
   let listHtml=`<div class="mplan-list" id="mplan-detail"><div class="mplan-list-hdr"><span class="mplan-day-name">${dayLabelLong(activeKey)}</span>${dayFilms.length?`<span class="count-badge cb-neutral">${dayFilms.length}</span>`:''}</div>`;
   if(!dayFilms.length){
-    if(!isPastDay){
+    // La promesa se verifica antes de hacerse: la caja mandaba «mirá abajo» sin
+    // mirar si abajo había algo, y el usuario aterrizaba en un Sugerencias vacío.
+    const _haySugs=!dayFullyPassed(activeKey)&&(getSuggestions()[activeKey]||[]).length>0;
+    if(!isPastDay&&_haySugs){
       // CTA C: día futuro sin películas — invita a explorar sugerencias o recalcular.
       // SIN chevron (Juan, 3 ago 2026): chevron-abajo + caja se leía como acordeón
       // ("viene expandido y no cierra") — promesa falsa. El tap sigue siendo el
@@ -392,6 +395,11 @@ export function renderMiPlanCalendar(state){
           <div class="cta-ctx-sub">${t('plan_empty_dia')}</div>
         </div>
       </div>`;
+    } else if(!isPastDay){
+      // Sin nada que ofrecer: se dice el hecho y no se ofrece un destino vacío.
+      // Nota, no CTA — sin borde ámbar ni tap, para no prometer con la forma lo
+      // que el texto ya no promete.
+      listHtml+=emptyState(ICONS.calendar, t('plan_dia_libre'), t('plan_sin_opciones_dia',{day:dayLabel(activeKey)}));
     } else {
       listHtml+=emptyState(ICONS.calendar, t('plan_nada_dia'));
     }
@@ -607,7 +615,8 @@ export function renderFilmAlternatives(state,title,day,time){
   }).join('');
 
   return`<div class="film-alts">
-    ${optsHtml||`<div class="scenario-label">${t('plan_no_alts_horario')}.</div>`}
+    ${optsHtml||`<div class="scenario-label">${(getSuggestions()[day]||[]).length
+      ?t('plan_no_alts_horario'):t('plan_no_alts_solo')}</div>`}
     <div class="scenario-footer">
       <button class="w-full-sm checkin-result-btn secondary" data-action="clearExpandedFilm">${t('misc_cerrar')}</button>
     </div>
@@ -1278,11 +1287,15 @@ export function _renderSavedAgendaHTML(state, consensus){
   if(_unconfirmed) html+=_unconfirmed;
 
   // Sugerencias solo durante el festival
-  if(!festivalEnded()){
-  const suggsByDay=getSuggestions();
   // Sugerencias SOLO del día donde el usuario está parado (activeMiPlanDay), no de la
   // semana entera: menos ruido y se lee como "más para este día", no como otro plan.
   const _selKey=DAY_KEYS[activeMiPlanDay];
+  // Un día que ya terminó no tiene nada que sugerir: el bloque NO se dibuja.
+  // Medido (FICDEH, 17 AGO 09:00): los cinco días pasados mostraban «Día
+  // cubierto · No hay más actividades que quepan hoy» — tres afirmaciones falsas
+  // en dos líneas (no era hoy, no estaba cubierto, y no había nada que ofrecer).
+  if(!festivalEnded()&&!dayFullyPassed(_selKey)){
+  const suggsByDay=getSuggestions();
   const suggDays=(_selKey&&suggsByDay[_selKey]&&suggsByDay[_selKey].length>0)?[_selKey]:[];
   html+=`<div class="suggestion-wrap">
     <div class="mb-2 sec-hdr">${ICONS.sparkles} ${t('misc_sugerencias')}</div>`;
@@ -1309,7 +1322,11 @@ export function _renderSavedAgendaHTML(state, consensus){
     });
     html+='</div>'; // close suggestion-wrap content
   } else {
-    html+=emptyState(ICONS.search,t('plan_cubierto'),t('plan_cubierto_sub'));
+    // El vacío NOMBRA el día: la sección se calcula sobre el día seleccionado,
+    // así que decir «hoy» era falso en cualquier día que no fuera hoy. Y no dice
+    // «cubierto»: muchas veces el día está vacío porque no había con qué, no
+    // porque el usuario lo llenara.
+    html+=emptyState(ICONS.search,t('plan_sin_opciones_dia',{day:dayLabel(_selKey)}));
   }
   html+='</div>'; // close suggestion-wrap
   } // end !festivalEnded
