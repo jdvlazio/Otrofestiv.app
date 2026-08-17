@@ -20,8 +20,11 @@ const DOC = path.join(RAIZ, 'docs', 'SCHEMA.md');
 const INI = '<!-- CONTRATO:INICIO — generado por scripts/generate-schema-md.js, no editar a mano -->';
 const FIN = '<!-- CONTRATO:FIN -->';
 
-// Las cuentas se MIDEN de los JSON reales: un campo documentado que ya no usa
-// nadie es la otra mitad del problema.
+// El uso se MIDE de los JSON reales: un campo documentado que ya no usa nadie es
+// la otra mitad del problema. Se cuenta por FESTIVALES, no por funciones: el
+// número de funciones cambia cada vez que un festival publica un cambio de
+// programación, y eso convertía este documento en una fuente de conflictos de
+// merge y de rojos en CI por una cifra que a nadie le importa.
 const uso = {};
 for (const f of fs.readdirSync(path.join(RAIZ, 'festivals')).filter(x => x.endsWith('.json'))) {
   const d = JSON.parse(fs.readFileSync(path.join(RAIZ, 'festivals', f), 'utf8'));
@@ -51,7 +54,7 @@ for (const [titulo, filtro] of GRUPOS) {
   const campos = Object.entries(C.campos).filter(e => !vistos.has(e[0]) && filtro(e));
   campos.forEach(e => vistos.add(e[0]));
   if (!campos.length) continue;
-  out.push(`### ${titulo}`, '', '| campo | tipo | formato / valores | en uso | notas |', '|---|---|---|---|---|');
+  out.push(`### ${titulo}`, '', '| campo | tipo | formato / valores | lo usan | notas |', '|---|---|---|---|---|');
   for (const [k, s] of campos) {
     const u = uso[k];
     const forma = s.enum ? s.enum.map(v => `\`${v}\``).join(' · ') : (s.formato ? `\`${esc(s.formato)}\`` : '—');
@@ -60,7 +63,7 @@ for (const [titulo, filtro] of GRUPOS) {
     if (s.lector) notas.push(`no lo lee la vista: ${s.lector}`);
     if (s.exige) notas.push(`exige \`${s.exige}\``);
     if (s.nota) notas.push(s.nota);
-    out.push(`| \`${k}\` | ${s.tipo || '—'} | ${forma} | ${u ? `${u.n} · ${u.fest.size} fest` : '—'} | ${esc(notas.join(' ')) || ''} |`);
+    out.push(`| \`${k}\` | ${s.tipo || '—'} | ${forma} | ${u ? `${u.fest.size} fest` : '—'} | ${esc(notas.join(' ')) || ''} |`);
   }
   out.push('');
 }
