@@ -1151,6 +1151,32 @@ export function renderFilmListHTML(state){
   // ── Render secciones ───────────────────────────────────────────────────
   let html='';
 
+  // Las obras de OTRA ciudad no se esconden —tus intereses son tuyos, no de la
+  // ciudad donde estás parado hoy— pero tampoco pueden parecer iguales a las
+  // demás: con filtro de ciudad el planificador no las agenda (#594), y hasta
+  // ahora eso solo se sabía DESPUÉS de calcular, en la lista de excluidas. El
+  // aviso llega antes, una vez y con el número: dice la consecuencia, no la
+  // ciudad (la sede ya está en cada fila). Pasivo a propósito: el selector de
+  // ciudad está a un toque arriba, y convertir un aviso en botón ya nos costó
+  // caro («mirá abajo» apuntando a un Sugerencias vacío).
+  const _cityInt=keepCityOnly(activeVenue);
+  if(_cityInt!=='all'){
+    const _fuera=[...prioList,...nonPrioList].filter(tt=>{
+      const _scr=FILMS.filter(f=>f.title===tt&&f.venue);
+      return _scr.length&&!_scr.some(f=>venueMatches(f.venue,_cityInt));
+    }).length;
+    // Vive en el diseño de AVISOS (píldora + texto), el mismo que ya advierte en
+    // las fichas: esto ES un aviso —un estado que dejó una elección anterior—. La
+    // píldora carga el contexto («OTRA CIUDAD») y el texto solo la consecuencia,
+    // así la línea entra sin cortarse. Medido: con Bogotá puesto el Programa
+    // muestra 141 tarjetas y NINGUNA de otra ciudad, o sea que estas obras solo
+    // pudieron entrar antes de elegir ciudad o al cambiarla.
+    if(_fuera) html+=`<div class="avisos-body">`
+      +`<span class="aviso-pill">${t('badge_otra_ciudad')}</span>`
+      +`<span class="aviso-txt">${_fuera===1?t('int_fuera_ciudad_1'):t('int_fuera_ciudad',{n:_fuera})}</span>`
+      +`</div>`;
+  }
+
   if(prioList.length){
     html+=`<div class="sec-hdr">${ICONS.bookmark} <span>${t('lbl_prioridades')}</span>
       <span class="count-badge cb-amber">${prioList.length}/${PRIO_LIMIT}</span>
