@@ -609,6 +609,28 @@ resultado, no el camino — mismo patrón que el oráculo del planeador (§15.6)
 > dejan: **una derivación que puede fallar tiene que fallar fuerte o no fallar
 > nunca**; devolver un valor creíble es la peor de las tres opciones.
 
+#### El paraguas no promete formato — `[vocab-obra]`
+
+«No siempre son películas. Esto es regla» (Juan, 17 ago 2026). El catálogo lleva
+talleres, charlas y eventos; llamarlos «película» en un texto que los abarca a
+todos promete un formato que la app no controla. El vocabulario tiene dos
+paraguas y ninguno es un formato: **ACTIVIDAD** para lo que ocurre (incluye
+talleres y eventos), **OBRA** para lo que se programa. *Función* sigue siendo solo
+la proyección.
+
+El hallazgo que lo destapó: el encabezado del Recuerdo decía «Viste 4 películas»
+mientras el chip contiguo decía «obras vistas» — dos vocabularios para lo mismo,
+en pantallas vecinas. Se barrieron 13 strings ES (más sus pares EN/PT); en inglés
+el paraguas es **title**, que es de uso corriente en festivales y no promete
+formato.
+
+`[vocab-obra]` (validate.py) mira el VALOR de cada clave de `src/i18n/i18n.js` —
+lo que el usuario lee— y no el nombre de la clave: hay claves históricas
+(`misc_pelicula`, `plan_pelicula_hoy`) cuyo texto ya dice «obra», y renombrarlas
+sería un cambio sin lector. Quedan EXENTOS los nombres de FORMATO
+(`label_cortometraje`, `label_cortos`), donde «cortometraje» es el dato correcto y
+no un paraguas.
+
 #### El nombre de la actividad — `[event-kind-conocido]`
 
 `event_kind` es la palabra que la card le pone encima a una actividad: TALLER,

@@ -750,3 +750,45 @@ test('T66 — Sugerencias habla del día que mirás, y no promete lo que no tien
   expect(seco.ctaConDestino, 'sin material, no manda a ningún lado').toBe(false);
   expect(seco.txt, 'y nombra el día en vez de decir «hoy»').toContain('Sin más opciones para el MIÉ 19');
 });
+
+// Ronda 3 (FINCA): el Diario tenía UNA puerta —el chip del progreso— y no decía
+// a dónde iba: «14 obras vistas ✓ ›» describe un contador. La palabra «Diario»
+// solo existía DENTRO del Diario y en la imagen que se comparte, o sea después
+// de llegar. Misma regla que los toasts: un control nombra su destino.
+test('T67 — el chip nombra el Diario, y el Recuerdo lo presenta', async ({ page }) => {
+  await enterFestival(page, 'ficdeh2026', '2026-08-17T20:00:00-05:00');
+  await page.evaluate(() => document.querySelector('[data-action="citySheetAll"]')?.click());
+  await page.waitForTimeout(400);
+  const pintar = async () => {
+    await page.evaluate(() => {
+      const tits = [...new Set(FILMS.filter(f => f.day <= '2026-08-17').map(f => f.title))];
+      state.set('watched', new Set(tits.slice(0, 14)));
+      const f = FILMS.find(x => x.day === '2026-08-17');
+      state.set('savedAgenda', { scenarioIdx: 0, schedule: [Object.assign({}, f, { _title: f.title })] });
+      switchMainNav('mnav-miplan'); showAgView();
+    });
+    await page.waitForTimeout(900);
+  };
+  await pintar();
+  const chip = await page.evaluate(() => {
+    const c = document.querySelector('.diary-chip');
+    return c && { txt: c.innerText.replace(/\s+/g, ' ').trim(),
+      ancho: Math.round(c.getBoundingClientRect().width),
+      icono: !!c.querySelector('svg'),
+      badge: !!c.querySelector('.count-badge'),
+      desborda: c.getBoundingClientRect().right > 390 };
+  });
+  expect(chip, 'con obras vistas hay chip').toBeTruthy();
+  expect(chip.txt, 'el chip nombra su destino').toContain('Diario');
+  expect(chip.icono, 'con icono, como todo encabezado').toBe(true);
+  expect(chip.badge, 'y la cuenta como badge, no en palabras').toBe(true);
+  expect(chip.txt, 'la cuenta no se repite en palabras').not.toMatch(/obras? vistas?/);
+  expect(chip.desborda, 'sin desbordar los 390 px').toBe(false);
+
+  // Y después del festival, el bloque del Recuerdo se presenta con su nombre.
+  await page.evaluate(() => { _simTime = '2026-08-21T12:00:00-05:00'; showAgView(); });
+  await page.waitForTimeout(1000);
+  const retro = await page.evaluate(() =>
+    [...document.querySelectorAll('.sec-hdr')].map(e => e.textContent.trim()));
+  expect(retro.join(' | '), 'el Diario retro lleva encabezado').toContain('Diario');
+});

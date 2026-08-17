@@ -1207,7 +1207,9 @@ export function _renderSavedAgendaHTML(state, consensus){
     // Cuerpo: el DIARIO en modo retro — grid de pósters con calificación (los
     // vistos, por obra) + los del plan sin marcar (atenuados, ✓ Vista). El póster
     // prima: mismo modelo del share del Diario.
-    const _vivido=(_plan.length||watched.size)?`<div class="ag-section">${renderDiaryHTML(state,{retro:true})}</div>`:'';
+    const _vivido=(_plan.length||watched.size)?`<div class="ag-section">
+      <div class="mb-2 sec-hdr">${ICONS.bookOpen} <span>${t('diary_eyebrow')}</span></div>
+      ${renderDiaryHTML(state,{retro:true})}</div>`:'';
     // Compartir mi festival (RFC F2): reutiliza el export del Diario.
     const _shareBtn=watched.size>0?`<button class="ag-save-btn" data-action="shareDiary">${ICONS.share} ${t('recap_compartir')}</button>`:'';
     if(_recap||_vivido) return`<div class="saved-agenda">${_recap}${_hero}${_vivido}${_shareBtn}</div>`;
@@ -1252,7 +1254,18 @@ export function _renderSavedAgendaHTML(state, consensus){
         // Writer, 16 ago). A cero NO se muestra nada: era la única vez que la app
         // se felicitaba con un ✓ por no haber hecho nada, y encima no era botón
         // porque no hay Diario que abrir.
-        ?`<button class="diary-chip" data-action="openDiary" data-stop="1">${_diaryCount} ${_diaryCount===1?t('label_obra_vista'):t('label_obras_vistas')} ${ICONS.check}${ICONS.chevronR}</button>`
+        // El chip NOMBRA su destino (misma regla que los toasts): «14 obras
+        // vistas ›» describía un contador y el chevron prometía que algo se
+        // abría, sin decir qué. La palabra «Diario» solo existía DENTRO del
+        // Diario y en la imagen que se comparte — se veía después de llegar, no
+        // antes de decidir ir. Sale el ✓ para hacerle sitio: «vistas» ya lo dice.
+        // Forma canónica de encabezado: icono + nombre + count-badge. El chip
+        // era el único rótulo de la app que decía su cuenta en palabras.
+        // El icono es book-open: un cuaderno. check/film/star ya significan
+        // visto/programa/calificación, y `history` (reloj con flecha) es el
+        // símbolo de restaurar — reusar cualquiera diría dos cosas con el mismo
+        // dibujo.
+        ?`<button class="diary-chip" data-action="openDiary" data-stop="1">${ICONS.bookOpen} <span>${t('diary_eyebrow')}</span> <span class="count-badge cb-neutral">${_diaryCount}</span>${ICONS.chevronR}</button>`
         :''}</div>
     </div>
   </div>`:'';
