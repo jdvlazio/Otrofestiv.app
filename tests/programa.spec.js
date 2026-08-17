@@ -984,3 +984,49 @@ test('T72 — en la ventana del Q&A el badge dice Q&A, no AHORA', async ({ page 
   expect(enQa.plan.txt, 'y Mi Plan deja de contar cero durante media hora').toBe('Q&A');
   expect(enQa.plan.qa, 'también en ámbar').toBe(true);
 });
+
+// Ronda 4 (auditor): «te quedarían 0 min» explicaba una función EXCLUIDA con la
+// rama de «sí llegás» — el mensaje contradecía a la lista donde aparecía. Causa:
+// screensConflict exige hueco >= viaje + BUFFER y la cuenta sumaba solo el viaje,
+// mientras la rama de misma sede sí nombraba el margen. Una regla, dos cuentas;
+// 53 de los 275 choques de viaje de FICDEH se explicaban así. El margen pasó a ser
+// un SUMANDO de la cadena (no una regla aparte): el total queda comparable con la
+// hora de inicio y desaparece la frase de veredicto que podía contradecirla.
+// Y el segundo tramo: cuando el choque existe SOLO por el Q&A —opcional y
+// estimado— no es una imposibilidad sino una decisión, así que se nombra y la
+// función se puede agendar marcándola _squeezed (verifyPlan la respeta).
+test('T73 — la cuenta del veredicto usa la misma aritmética que la decisión', async ({ page }) => {
+  await enterFestival(page, 'finca2026', '2026-08-13T09:00:00-05:00');
+  const r = await page.evaluate(async () => {
+    const S = await import('/src/domain/schedule.js');
+    const H = await import('/src/view/helpers.js');
+    const a = FILMS.find(f => f.title === 'Yintah');
+    const b = FILMS.find(f => f.title.startsWith('El amor duerme'));
+    const rr = S.screensConflictReason(a, b);
+    const txt = H.conflictAccount(a, b, rr).replace(/<[^>]*>/g, '');
+    // el plan con las dos, la segunda tomada a sabiendas
+    const plan = [Object.assign({}, a, { _title: a.title }),
+                  Object.assign({}, b, { _title: b.title, _squeezed: true })];
+    const v = S.verifyPlan(plan, {});
+    // y sin la marca deliberada, el mismo plan SÍ es una violación
+    const planSinMarca = plan.map(s => { const c = Object.assign({}, s); delete c._squeezed; return c; });
+    const v2 = S.verifyPlan(planSinMarca, {});
+    return { kind: rr && rr.kind, qaOnly: rr && rr.qaOnly, txt,
+      okConMarca: v.ok, okSinMarca: v2.ok };
+  });
+
+  expect(r.kind, 'el choque es por viaje').toBe('viaje');
+  expect(r.qaOnly, 'y existe SOLO por el Q&A').toBe(true);
+  // 1· el margen es un SUMANDO de la cadena, no una regla enunciada aparte: así
+  //    el total se compara solo contra la hora de inicio (21:15 vs 21:00).
+  expect(r.txt, 'el margen entra en la suma').toContain('margen 15 min');
+  expect(r.txt, 'y el total sale de sumarlo').toContain('21:15');
+  expect(r.txt, 'contra la hora de inicio').toContain('empieza 21:00');
+  // 2· la salida va en la MISMA moneda: la hora a la que llegarías sin el Q&A
+  expect(r.txt, 'nombra la alternativa con su hora').toContain('sin el Q&A, 20:45');
+  // y ya no hace falta un veredicto en palabras
+  expect(r.txt, 'sin frase de veredicto').not.toMatch(/no te daría el tiempo|te quedarían/);
+  // 3· tomarla a sabiendas produce un plan VÁLIDO; sin la marca, no
+  expect(r.okConMarca, 'con _squeezed el plan es válido').toBe(true);
+  expect(r.okSinMarca, 'sin la marca sigue siendo una violación').toBe(false);
+});

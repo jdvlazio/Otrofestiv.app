@@ -1495,6 +1495,7 @@ export function buildResultHTML(scenarios){
       const screens=FILMS.filter(fi=>fi.title===excTitle&&!screeningPassed(fi)&&!isScreeningBlocked(fi));
       // Distinguir «ya pasó» de «nunca tuvo función»: screens ya filtró las
       // pasadas, así que la lista vacía no dice por sí sola cuál de las dos es.
+      let _qaOnlySlot=null;
       const _tuvoAlguna=FILMS.some(fi=>fi.title===excTitle);
       const _yaPaso=_tuvoAlguna?'ya_paso':'empty_sin_funciones';
       let reason='',canInclude=false;
@@ -1546,6 +1547,13 @@ export function buildResultHTML(scenarios){
           // exactamente eso, así que el botón prometía algo que el motor iba a
           // rechazar. La fila igual explica el motivo — informar sí, ofrecer no.
           canInclude=_k!=='ciudad';
+          // Choque SOLO por el Q&A: no hay nada que reemplazar —las dos caben si
+          // salís al final de la película—, así que el botón AGREGA en vez de
+          // abrir el modal de sustituir. Va marcada `_squeezed`, el mecanismo que
+          // ya existe para «violación DELIBERADA que el usuario aceptó»
+          // (verifyPlan la respeta). El planificador automático sigue siendo
+          // conservador: no arma tu plan alrededor de una charla estimada.
+          if(conflictReason.qaOnly){ _qaOnlySlot=conflictPair.s; }
         } else if(screens.length){
           reason=`<div class="excl-reason">${t('plan_choca')}</div>`;
         } else {
@@ -1553,7 +1561,9 @@ export function buildResultHTML(scenarios){
         }
       }
       const includeBtn=canInclude
-        ?`<button class="excl-include-btn" data-action="forceInclude" data-title="${safeT}" data-stop="1">${ICONS.plus} ${t('plan_agendar')}</button>`
+        ?(_qaOnlySlot
+          ?`<button class="excl-include-btn" data-action="includeAnyway" data-title="${safeT}" data-day="${_qaOnlySlot.day}" data-time="${_qaOnlySlot.time}" data-stop="1">${ICONS.plus} ${t('plan_agendar')}</button>`
+          :`<button class="excl-include-btn" data-action="forceInclude" data-title="${safeT}" data-stop="1">${ICONS.plus} ${t('plan_agendar')}</button>`)
         :'';
       const opacity=!screens.length?'opacity:.45;':'';
       return`<div class="int-item js-open-pel" style="${opacity}" data-title="${escXML(f.title)}">
