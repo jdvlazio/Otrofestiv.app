@@ -199,8 +199,22 @@ else:
     if missing_fns:
         for f in missing_fns:
             fail(check, f"'{f}' en _SCHED_PURE_FNS pero no definida en main thread ni domain")
-    else:
-        ok(check, f'todas las {len(fn_names)} funciones de _SCHED_PURE_FNS existen (main + domain)')
+    # El hueco que este check NO veía (17 ago 2026): la fn existía en el dominio
+    # pero calc.js no la IMPORTABA. eval(name) del build del worker resuelve en el
+    # scope del módulo → ReferenceError → el worker moría y TODO cálculo caía al
+    # fallback síncrono, en silencio, con este guardián en verde. screeningPlannable
+    # vivió así desde su extracción (16 ago) hasta el traspaso de Onboarding (17).
+    # Cada nombre de la lista debe aparecer en un import de calc.js — salvo los
+    # definidos worker-local (_venueFns) o dentro del propio calc.js.
+    _calc_imports = ' '.join(re.findall(r'import\s*\{([^}]*)\}', _calc_src))
+    _calc_local = set(re.findall(r'function (\w+)\(', _calc_src))
+    _sin_import = [f for f in fn_names
+                   if f not in _calc_imports and f not in _calc_local]
+    if _sin_import:
+        fail(check, 'en _SCHED_PURE_FNS pero SIN import en calc.js (el worker muere al construirse y nadie lo ve): '
+                    + ', '.join(_sin_import))
+    elif not missing_fns:
+        ok(check, f'las {len(fn_names)} funciones de _SCHED_PURE_FNS existen Y están importadas en calc.js')
 
 # ── CHECK 3: Worker-local no duplica _SCHED_PURE_FNS ─────────────────────────
 # Si una función está en ambos lados, el worker-local gana y el main thread
