@@ -296,6 +296,13 @@ PREMIUM de TIFF, y vale para todos los flags (`is_free`,
 de `film_list`. Basta con que un ensamblador lea un CSV o un Excel para que un
 booleano llegue como texto.
 
+**El guion bajo no es un escondite (17 ago 2026).** Un campo `_` es una NOTA
+para nosotros —de dónde salió el dato, qué falta, qué se heredó—, no un dato de
+la app con disfraz. `_tmdbId` vivió en 16 funciones de FINCA a salvo de
+`[campo-huerfano]` **solo por llamarse con guion bajo**, mientras el resto del
+repo usaba `tmdb_id`. Ahora, si al quitarle el guion el nombre coincide con un
+campo real, el guardián lo llama por su nombre: contrabando.
+
 **Undécimo, el de la utilidad: `[titulo-original-util]`.** Nació al unificar
 `title_orig` en `original_title` (17 ago 2026). De los 38 que había, **17 eran
 la misma palabra con otras mayúsculas o tildes** — «POR CIELO Y TIERRA» junto a

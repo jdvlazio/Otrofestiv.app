@@ -4259,6 +4259,22 @@ try:
                 if isinstance(_it, dict):
                     for _k in _it:
                         _vistos.setdefault(_k, set()).add(_f.split('/')[-1])
+    # EL GUION BAJO NO ES UN ESCONDITE. Un campo `_` es una nota para nosotros
+    # —de dónde salió el dato, qué falta, qué se heredó—, no un dato de la app
+    # con disfraz. `_tmdbId` vivió 16 funciones de FINCA a salvo de este mismo
+    # guardián solo por llamarse con guion bajo, mientras el resto del repo
+    # usaba `tmdb_id` (17 ago 2026). Si al quitarle el guion y normalizar el
+    # nombre coincide con un campo real, es el mismo dato de contrabando.
+    def _desnudo(_k):
+        return _r3.sub(r'[^a-z0-9]', '', _k.lower())
+    _reales = {_desnudo(_k) for _k in _vistos if not _k.startswith('_')}
+    _reales |= {_desnudo(_k) for _k in _CON_DUENO} | {_desnudo(_k) for _k in _DEUDA}
+    _contrabando = [f'{_k} → {", ".join(sorted(_vistos[_k]))[:40]}'
+                    for _k in _vistos
+                    if _k.startswith('_') and _desnudo(_k[1:]) in _reales]
+    if _contrabando:
+        fail(check, 'campo `_` que es en realidad un campo de datos con otro '
+                    'nombre: ' + '; '.join(sorted(_contrabando)[:4]))
     _nuevos = [(_k, sorted(_v)) for _k, _v in _vistos.items()
                if not _k.startswith('_')
                and _k not in _CON_DUENO and _k not in _DEUDA

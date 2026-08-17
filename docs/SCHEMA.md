@@ -342,8 +342,8 @@ emitimos; aquí lo buscamos, lo guardamos y no se pinta nunca.
 El 17 ago 2026 se borraron `trailer` (37), `tematica` (37) y `qa_detail` (21),
 y `title_orig` se unificó en `original_title`.
 
-Queda un **mismo dato con dos nombres**: `tmdb_id`/`_tmdbId` — eso es deuda, no
-diseño. El otro par (`original_title`/`title_orig`) se unificó el 17 ago 2026 en
+Los dos pares de **mismo dato con dos nombres** quedaron cerrados el 17 ago
+2026: `_tmdbId` se fusionó en `tmdb_id` (24 ocurrencias). El par (`original_title`/`title_orig`) se unificó el 17 ago 2026 en
 `original_title`, y con él se fueron 17 valores que solo repetían el título. `synopsis_lang`
 no está en esta lista aunque la vista no lo lea: lo consumen los guardianes, y
 es deliberado.
@@ -365,8 +365,10 @@ canon: **si un onboarding nuevo los copia, es que le faltaba un campo real**.
 Los que empiezan por `_` son **notas de procedencia para nosotros**, no datos de
 la app: `_src_synopsis` (5) de dónde salió la sinopsis · `_pendiente` (5) qué le
 falta a esta obra · `_cupos` (7) aforo declarado · `_inherited` (1) qué se
-heredó de otro festival y por qué · `_tmdbId` (16), que debería llamarse
-`tmdb_id`.
+heredó de otro festival y por qué.
+
+`_tmdbId` estuvo aquí hasta el 17 ago 2026: eran los 16 `tmdb_id` de FINCA
+escritos con guion bajo, a salvo de `[campo-huerfano]` por el disfraz.
 
 Un campo `_` es una promesa a nuestro yo futuro: **explica una decisión**, no
 guarda un dato que la app deba pintar.
