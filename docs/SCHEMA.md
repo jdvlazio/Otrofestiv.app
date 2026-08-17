@@ -1,7 +1,7 @@
 # Otrofestiv — Festival Data Schema
 
 Documento normativo. Toda discrepancia entre este archivo y el código es un bug.
-Última actualización: 2026-05-07 — commit 1f6f290
+Última actualización: 2026-08-17 — inventario de campos MEDIDO contra los 12 festivales en producción (commit 91fbe4b)
 
 ---
 
@@ -234,33 +234,144 @@ sala. Si no la tienen, no son salas: son la misma sede escrita de dos formas
 
 ---
 
-## Films
+## Films — los 60 campos que existen de verdad
 
-```json
-{
-  "title": "string — requerido",
-  "slug": "string — requerido para Tribeca/festivales con URL propia",
-  "section": "string — requerido",
-  "type": "string — 'film' | 'event' | 'short'",
-  "filmType": "string — descripción textual del tipo (de la fuente)",
-  "director": "string",
-  "duration": "number — minutos",
-  "country": "string",
-  "language": "string",
-  "premiere": "string — 'World Premiere' | 'International Premiere' | ...",
-  "synopsis": "string",
-  "poster": "string — URL completa (https://...), path de assets (/assets/<id>/x.png) o path TMDB (/x.jpg). Prioridad, cobertura y reglas: docs/POSTERS.md",
-  "posterPosition": "string — 'center' | 'top' | 'bottom' (default: 'center')",
-  "genre": "string",
-  "year": "number",
-  "flags": "string — emojis de banderas de países",
-  "day": "string — KEY del dayKeys del festival (REQUERIDO para filtrado)",
-  "date": "string — ISO date '2026-06-03' (requerido si screenings[] existe)",
-  "time": "string — '10:30 AM' formato 12h",
-  "venue": "string — debe ser clave exacta de venues{}",
-  "info": "boolean — opcional, SOLO type:event — evento informativo (ver abajo)",
-  "screenings": [ ... ]
-}
+**Este inventario está MEDIDO, no recordado**: 1.214 funciones de 12 festivales
+en producción, cruzadas contra lo que lee `src/` y contra lo que exige
+`validate-festivals.js`. Hasta el 17 ago 2026 esta sección describía 24 campos
+y en los JSON había 60 — y esa distancia es la que deja pasar los huecos: cada
+onboarding se guiaba por lo que hizo el anterior, no por el schema. La regla de
+arriba se aplica también aquí: **toda discrepancia entre este archivo y los
+datos es un bug**, y se corrige midiendo.
+
+Columnas: **n** = funciones que lo llevan · **fest** = festivales · **app** = lo
+lee `src/` · **val** = lo revisa `validate-festivals.js`.
+
+### Identidad de la obra
+
+| campo | n | fest | app | val | qué es |
+|---|---|---|---|---|---|
+| `title` | 1214 | 12 | ✅ | ✅ | **requerido.** Nombre oficial, verbatim |
+| `title_en` | 558 | 8 | ✅ | ✅ | título en inglés (o el original si el festival es hispano) |
+| `original_title` / `title_orig` | 32 / 6 | 1 / 1 | ❌ | ❌ | **dos nombres para lo mismo** — deuda, ver § Campos huérfanos |
+| `director` | 1051 | 12 | ✅ | ✅ | tal como lo publica el festival |
+| `year` | 968 | 12 | ✅ | ✅ | ⚠️ **tipo mixto**: 474 `number`, 491 `string`, 3 `null` |
+| `country` | 1108 | 12 | ✅ | ✅ | texto libre; multi-país con `/` o `,` |
+| `flags` | 1124 | 12 | ✅ | ✅ | **derivado de `country`** — nunca de la fuente. Guardián `[country-flags]` |
+| `duration` | 1194 | 12 | ✅ | ✅ | ⚠️ **string `"108 min"`**, no número. La doc decía «number» y era falso |
+| `language` | 284 | 5 | ✅ | ❌ | idioma hablado |
+| `genre` | 816 | 12 | ✅ | ✅ | género principal |
+| `synopsis` | 1114 | 12 | ✅ | ✅ | **siempre en español** — la traducción no es opcional |
+| `synopsis_en` | 996 | 12 | ✅ | ✅ | inglés; lo consume `i18n` |
+| `synopsis_lang` | 1105 | 12 | ❌ | ✅ | idioma de `synopsis`. **No lo lee la vista**: existe para los guardianes |
+| `rating` | 23 | 1 | ✅ | ❌ | clasificación por edades |
+| `premiere` | 272 | 4 | ✅ | ❌ | «World Premiere», «Película de Apertura»… |
+
+### Cuándo y dónde
+
+| campo | n | fest | app | val | qué es |
+|---|---|---|---|---|---|
+| `day` | 1209 | 12 | ✅ | ✅ | **requerido.** Clave exacta de `dayKeys` — ver § regla crítica |
+| `time` | 1209 | 12 | ✅ | ✅ | **requerido.** Hora de inicio |
+| `day_order` | 1209 | 12 | ✅ | ✅ | **derivado de `day`** — orden del día en la grilla |
+| `venue` | 1209 | 12 | ✅ | ✅ | **requerido.** Clave exacta de `venues{}` |
+| `sala` | 166 | 2 | ✅ | ✅ | sala DENTRO de la sede. Nunca en el nombre de la sede (`[sala-en-sede]`) |
+| `date` | 587 | 6 | ✅ | ✅ | ⚠️ **tipo mixto**: 287 `number`, 300 `string` |
+| `screenings` | 264 | 3 | ✅ | ✅ | varias funciones de la misma obra — ver § Screenings |
+| `unscheduled` | 5 | 1 | ✅ | ✅ | en el catálogo, sin jornada asignada todavía |
+
+### Cómo se entra — LA CASILLA OBLIGATORIA
+
+**Ninguna función puede callar sobre esto.** Un festival vigente donde ninguna
+función diga cómo se entra queda ROJO en `validate.py` (`[boleteria-muda]`,
+17 ago 2026). **Gratis se DECLARA; no se deja en blanco**, porque el silencio no
+es un dato: es una omisión, y en la app se ve igual que no haber montado nada.
+
+| campo | n | fest | app | val | qué es |
+|---|---|---|---|---|---|
+| `ticket_url` | 63 | 3 | ✅ | ✅ | URL de compra de **esta** función. ⚠️ `ticketUrl` en camelCase NO se lee |
+| `is_free` | 463 | 3 | ✅ | ❌ | entrada libre. Booleano de verdad — `"true"` como string no pinta nada |
+| `requires_registration` | 510 | 3 | ✅ | ❌ | hay que inscribirse |
+| `registration_url` | 12 | 2 | ✅ | ❌ | formulario de inscripción |
+
+En la raíz del JSON, `ticketing_model` acepta **solo** `'paid'` o `'mixed'`
+(guardián `[valor-inventado]`). Un tercer valor no falla: simplemente no pinta
+el badge, y nadie se entera.
+
+### Qué clase de cosa es
+
+| campo | n | fest | app | val | qué es |
+|---|---|---|---|---|---|
+| `type` | 798 | 9 | ✅ | ✅ | `'film'` \| `'event'` \| `'short'` |
+| `event_kind` | 54 | 4 | ✅ | ✅ | taller, ponencia, conversatorio… |
+| `is_cortos` + `film_list` | 834 / 845 | 11 | ✅ | ✅ | **modelo A · PROGRAMA** — ver arriba |
+| `is_programa` | 19 | 3 | ✅ | ✅ | contenedor con nombre propio |
+| `is_recurring` | 18 | 3 | ✅ | ❌ | se repite en varias jornadas (control de BLOQUE) |
+| `info` | 12 | 1 | ✅ | ✅ | drop-in sin hora fija — NO entra al plan. Ver abajo |
+| `is_awards_screening` | 8 | 1 | ✅ | ❌ | función de premiación |
+
+### Lo que la matiza
+
+| campo | n | fest | app | val | qué es |
+|---|---|---|---|---|---|
+| `has_qa` | 629 | 6 | ✅ | ❌ | hay Q&A — **afecta conflictos** (`durationForTravel`) |
+| `qa_type` | 16 | 1 | ✅ | ❌ | `'guests'`… |
+| `competencia` | 13 | 1 | ✅ | ❌ | competencia oficial a la que pertenece |
+| `premium` | 0 | 0 | ✅ | ❌ | gama alta. **Aún en ninguna rama publicada** — lo estrena TIFF. Solo `=== true` |
+
+### Enlaces y procedencia
+
+| campo | n | fest | app | val | qué es |
+|---|---|---|---|---|---|
+| `poster` | 1025 | 12 | ✅ | ✅ | URL, `/assets/…` o path TMDB. Reglas: `docs/POSTERS.md` |
+| `posterSource` | 1013 | 12 | ✅ | ✅ | `'tmdb'` \| `'letterboxd'` \| `'oficial'` \| `'editorial'` |
+| `posterPosition` | 90 | 1 | ✅ | ❌ | `'center'` (default) \| `'top'` \| `'bottom'` |
+| `lbSlug` | 565 | 8 | ✅ | ❌ | slug de Letterboxd. ⚠️ `lb_slug` NO se lee (`[campo-contrato]`) |
+| `slug` | 204 | 1 | ✅ | ❌ | slug propio del festival (URL de su web) |
+| `_src` | 560 | 4 | ✅ | ✅ | **de dónde salió el dato.** Toda obra nueva lo lleva |
+
+### Campos huérfanos — se emiten y nadie los lee
+
+Nueve campos viajan en los JSON y **ningún archivo de `src/` los menciona**. Es
+el espejo del bug de boletería: allá el dato existía en la fuente y no lo
+emitimos; aquí lo buscamos, lo guardamos y no se pinta nunca.
+
+`filmType` (196) · `tmdb_id` (83, más `_tmdbId` en otro festival) · `trailer`
+(36) · `original_title` (32) · `cycle` (24) · `tematica` (23) · `qa_detail`
+(16) · `title_orig` (6).
+
+Tres de ellos son **el mismo dato con dos nombres** (`original_title`/
+`title_orig`, `tmdb_id`/`_tmdbId`) — eso es deuda, no diseño. `synopsis_lang`
+no está en esta lista aunque la vista no lo lea: lo consumen los guardianes, y
+es deliberado.
+
+**Antes de añadir un campo nuevo, la pregunta es quién lo va a leer.** Si la
+respuesta es «alguien algún día», no se emite.
+
+### Campos de un solo festival, y los internos
+
+Sobreviven porque su festival los necesitaba y nadie los generalizó. No son
+canon: **si un onboarding nuevo los copia, es que le faltaba un campo real**.
+
+| campo | n | fest | app | qué es |
+|---|---|---|---|---|
+| `synopsis_es` | 241 | 2 | ✅ | sinopsis en español cuando `synopsis` está en otro idioma |
+| `filmCategory` | 204 | 1 | ✅ | categoría propia de Tribeca (`Films`, …) |
+| `sessions` | 1 | 1 | ✅ | taller de varias sesiones (FICDEH) |
+
+Los que empiezan por `_` son **notas de procedencia para nosotros**, no datos de
+la app: `_src_synopsis` (5) de dónde salió la sinopsis · `_pendiente` (5) qué le
+falta a esta obra · `_cupos` (7) aforo declarado · `_inherited` (1) qué se
+heredó de otro festival y por qué · `_tmdbId` (16), que debería llamarse
+`tmdb_id`.
+
+Un campo `_` es una promesa a nuestro yo futuro: **explica una decisión**, no
+guarda un dato que la app deba pintar.
+
+### Cómo se vuelve a medir esto
+
+```bash
+python3 -c "import json,glob,collections;C=collections.Counter([k for f in glob.glob('festivals/*.json') for x in (json.load(open(f)).get('films') or []) for k in x]);print(C.most_common())"
 ```
 
 ### Campo `info` — eventos informativos (no planificables)
