@@ -959,6 +959,32 @@ export function saveCurrentScenario(){
   }
 }
 
+// includeAnyway — agrega una excluida cuyo ÚNICO choque es el Q&A estimado.
+// No abre el modal de reemplazo (forceInclude) porque no hay nada que sacar: sin
+// quedarse a la charla las dos funciones caben. Se marca `_squeezed`, que es el
+// mecanismo ya existente para una violación DELIBERADA que el usuario aceptó —
+// verifyPlan la respeta y por eso el plan resultante es válido.
+// Muta cachedResult (el escenario en pantalla), no savedAgenda: el commit sigue
+// ocurriendo solo con «Usar este Plan», igual que forceInclude.
+export function includeAnyway(title, day, time){
+  if(festivalEnded()){showToast(t('notice_fest_term'),'info');return;}
+  if(!cachedResult||!cachedResult.scenarios.length) return;
+  const sc=cachedResult.scenarios[cachedResult.currentIdx||0];
+  globalThis.PLAN_CITY_VENUES=_planCityVenues();
+  // plannableScreens (dueño único) y no una copia: mismo cinturón que forceInclude
+  // contra reinsertar una función de otra ciudad, cancelada o ya pasada.
+  const s=plannableScreens(title).find(x=>x.day===day&&x.time===time);
+  if(!s){showToast(t('plan_sin_horario'),'info');return;}
+  if(sc.schedule.some(c=>(c._title||c.title)===title)) return;
+  sc.schedule.push({...s,_title:title,_squeezed:true});
+  sc.schedule.sort((a,b)=>(a.day_order||0)-(b.day_order||0)||toMin(a.time)-toMin(b.time));
+  sc.excluded=(sc.excluded||[]).filter(t2=>t2!==title);
+  // Sin toast: la fila desaparece de «No incluidas» y la función aparece en el
+  // escenario — el cambio de pantalla ES la confirmación. Un toast acá sería una
+  // string nueva para decir lo que ya se ve.
+  renderAgenda();
+}
+
 export function squeezeExcluded(schedule, excludedTitles){
   const result=[...schedule];
   // La restricción de ciudad se REPUBLICA acá: entre calcular y guardar el
