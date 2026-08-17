@@ -432,6 +432,26 @@ export const FESTIVAL_CONFIG={
     keyArt:'/assets/keyart/finca2026.jpg',
     films:null,posters:null,lbSlugs:{}
   },
+  'cinemancia2026': {
+    name:'Cinemancia',fullName:'Cinemancia — Festival de Cine del Valle de Aburrá',shortName:'CINEMANCIA',
+    city:'Valle de Aburrá',country:'CO',
+    dates:'3–12 SEP',dates_en:'SEP 3–12',year:2026,timezoneOffset:'-05:00',
+    storageKey:'cinemancia2026_',festivalStartStr:'2026-09-03T00:00:00',festivalEndStr:'2026-09-12T23:59:00',
+    festivalDates:{'2026-09-03': '2026-09-03', '2026-09-04': '2026-09-04', '2026-09-05': '2026-09-05', '2026-09-06': '2026-09-06', '2026-09-07': '2026-09-07', '2026-09-08': '2026-09-08', '2026-09-09': '2026-09-09', '2026-09-10': '2026-09-10', '2026-09-11': '2026-09-11', '2026-09-12': '2026-09-12'},
+    days:[{k: '2026-09-03', d: 3, lbl: 'JUE'}, {k: '2026-09-04', d: 4, lbl: 'VIE'}, {k: '2026-09-05', d: 5, lbl: 'SÁB'}, {k: '2026-09-06', d: 6, lbl: 'DOM'}, {k: '2026-09-07', d: 7, lbl: 'LUN'}, {k: '2026-09-08', d: 8, lbl: 'MAR'}, {k: '2026-09-09', d: 9, lbl: 'MIÉ'}, {k: '2026-09-10', d: 10, lbl: 'JUE'}, {k: '2026-09-11', d: 11, lbl: 'VIE'}, {k: '2026-09-12', d: 12, lbl: 'SÁB'}],
+    dayKeys:['2026-09-03', '2026-09-04', '2026-09-05', '2026-09-06', '2026-09-07', '2026-09-08', '2026-09-09', '2026-09-10', '2026-09-11', '2026-09-12'],
+    dayShort:{'2026-09-03': 'JUE 3', '2026-09-04': 'VIE 4', '2026-09-05': 'SÁB 5', '2026-09-06': 'DOM 6', '2026-09-07': 'LUN 7', '2026-09-08': 'MAR 8', '2026-09-09': 'MIÉ 9', '2026-09-10': 'JUE 10', '2026-09-11': 'VIE 11', '2026-09-12': 'SÁB 12'},
+    dayShort_en:{'2026-09-03': 'THU 3', '2026-09-04': 'FRI 4', '2026-09-05': 'SAT 5', '2026-09-06': 'SUN 6', '2026-09-07': 'MON 7', '2026-09-08': 'TUE 8', '2026-09-09': 'WED 9', '2026-09-10': 'THU 10', '2026-09-11': 'FRI 11', '2026-09-12': 'SAT 12'},
+    dayLong:{'2026-09-03': 'Jueves 3 de septiembre', '2026-09-04': 'Viernes 4 de septiembre', '2026-09-05': 'Sábado 5 de septiembre', '2026-09-06': 'Domingo 6 de septiembre', '2026-09-07': 'Lunes 7 de septiembre', '2026-09-08': 'Martes 8 de septiembre', '2026-09-09': 'Miércoles 9 de septiembre', '2026-09-10': 'Jueves 10 de septiembre', '2026-09-11': 'Viernes 11 de septiembre', '2026-09-12': 'Sábado 12 de septiembre'},
+    prioLimit:5,
+    sharedSlotIsOneScreening:true,
+    // group:'test' — Cinemancia NO se publica todavía: falta el keyArt (el test
+    // del muro de afiches exige uno en todo festival visible) y la sala en 64 de
+    // las 89 funciones. Quitar esta línea es el paso de publicación.
+    group:'test',
+    tagline:'Festival de Cine del Valle de Aburrá',
+    films:null,posters:null,lbSlugs:{}
+  },
   'ficmontanas2026':{
     name:'Ficmontañas',fullName:'Festival Internacional de Cine en las Montañas',shortName:'FICMONTAÑAS',
     city:'Salento',country:'CO',
