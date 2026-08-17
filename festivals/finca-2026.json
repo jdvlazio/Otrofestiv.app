@@ -228,7 +228,8 @@
    "day_order": 0,
    "synopsis_lang": "es",
    "lbSlug": "no-more-history-without-us",
-   "competencia": "Competencia Oficial de Largometrajes Internacionales"
+   "competencia": "Competencia Oficial de Largometrajes Internacionales",
+   "is_free": true
   },
   {
    "title": "Toroboro: el nombre de las plantas",
@@ -258,7 +259,8 @@
    "day_order": 1,
    "synopsis_lang": "es",
    "competencia": "Competencia Oficial de Documentales Latinoamericanos",
-   "qa_type": "guests"
+   "qa_type": "guests",
+   "is_free": true
   },
   {
    "title": "Propiedad privada prohibido pasar",
@@ -287,7 +289,8 @@
    "synopsis_lang": "es",
    "qa_type": "team",
    "lbSlug": "propiedad-privada-prohibido-pasar",
-   "_tmdbId": 1740128
+   "_tmdbId": 1740128,
+   "is_free": true
   },
   {
    "title": "Mi casa es su casa",
@@ -313,7 +316,8 @@
    "day_order": 1,
    "synopsis_lang": "es",
    "lbSlug": "mi-casa-es-su-casa",
-   "_tmdbId": 1740149
+   "_tmdbId": 1740149,
+   "is_free": true
   },
   {
    "title": "Ziki",
@@ -339,7 +343,8 @@
    "posterSource": "custom",
    "day_order": 1,
    "synopsis_lang": "es",
-   "competencia": "Competencia Oficial de Corto y Mediometrajes Internacionales"
+   "competencia": "Competencia Oficial de Corto y Mediometrajes Internacionales",
+   "is_free": true
   },
   {
    "title": "Yurlu",
@@ -368,7 +373,8 @@
    "synopsis_lang": "es",
    "lbSlug": "yurlu-country",
    "competencia": "Competencia Oficial de Largometrajes Internacionales",
-   "qa_type": "guests"
+   "qa_type": "guests",
+   "is_free": true
   },
   {
    "title": "Pailako. Cosmovisión en resistencia",
@@ -453,7 +459,8 @@
    "synopsis_lang": "es",
    "qa_type": "team",
    "lbSlug": "tigre-es-yaguarete",
-   "_tmdbId": 1740146
+   "_tmdbId": 1740146,
+   "is_free": true
   },
   {
    "title": "Pau d´Arco",
@@ -480,7 +487,8 @@
    "posterSource": "custom",
    "day_order": 2,
    "synopsis_lang": "es",
-   "competencia": "Competencia Oficial de Documentales Latinoamericanos"
+   "competencia": "Competencia Oficial de Documentales Latinoamericanos",
+   "is_free": true
   },
   {
    "title": "El árbol de la autenticidad",
@@ -510,7 +518,8 @@
    "synopsis_lang": "es",
    "lbSlug": "the-tree-of-authenticity",
    "competencia": "Competencia Oficial de Largometrajes Internacionales",
-   "qa_type": "guests"
+   "qa_type": "guests",
+   "is_free": true
   },
   {
    "title": "De la guerra fría a la guerra verde",
@@ -565,7 +574,8 @@
    "year": 2024,
    "duration": "77 min",
    "flags": "🇵🇪🇨🇦",
-   "competencia": "Competencia Oficial de Documentales Latinoamericanos"
+   "competencia": "Competencia Oficial de Documentales Latinoamericanos",
+   "is_free": true
   },
   {
    "title": "Colorado",
@@ -591,7 +601,8 @@
    "day_order": 3,
    "synopsis_lang": "es",
    "lbSlug": "colorado-1",
-   "_tmdbId": 1740148
+   "_tmdbId": 1740148,
+   "is_free": true
   },
   {
    "title": "La vida fracturada",
@@ -741,7 +752,8 @@
    "flags": "🇨🇦",
    "lbSlug": "yintah",
    "competencia": "Competencia Oficial de Largometrajes Internacionales",
-   "qa_type": "guests"
+   "qa_type": "guests",
+   "is_free": true
   },
   {
    "title": "Qué perforado está mi valle",
@@ -1084,7 +1096,8 @@
    "venue": "Alianza Francesa de Buenos Aires",
    "country": "España, Austria, Brasil, Francia",
    "flags": "🇪🇸🇦🇹🇧🇷🇫🇷",
-   "day_order": 2
+   "day_order": 2,
+   "is_free": true
   },
   {
    "title": "FINQUITA - Cine para infancias",
@@ -1198,7 +1211,8 @@
    "venue": "Cine York",
    "country": "Argentina, Venezuela, España",
    "flags": "🇦🇷🇻🇪🇪🇸",
-   "day_order": 3
+   "day_order": 3,
+   "is_free": true
   },
   {
    "title": "Ceremonia de apertura",
@@ -1211,7 +1225,8 @@
    "type": "event",
    "day_order": 0,
    "synopsis_lang": "es",
-   "synopsis_en": "Opening night of the 8th FINCA."
+   "synopsis_en": "Opening night of the 8th FINCA.",
+   "is_free": true
   },
   {
    "title": "Sabotear el futuro — charla con Enar de Dios Rodríguez",
@@ -1224,7 +1239,8 @@
    "type": "event",
    "day_order": 1,
    "synopsis_lang": "es",
-   "synopsis_en": "Part of Semillas Lab: Spanish visual artist Enar de Dios Rodríguez walks through her creative process — video, photography and installation from a political, territorial and environmental standpoint."
+   "synopsis_en": "Part of Semillas Lab: Spanish visual artist Enar de Dios Rodríguez walks through her creative process — video, photography and installation from a political, territorial and environmental standpoint.",
+   "is_free": true
   },
   {
    "title": "Pitch público — Semillas Lab",
@@ -1237,7 +1253,8 @@
    "type": "event",
    "day_order": 7,
    "synopsis_lang": "es",
-   "synopsis_en": "Semillas Lab wraps up: the nine selected projects present their progress to the jury. The winning projects come out of this session."
+   "synopsis_en": "Semillas Lab wraps up: the nine selected projects present their progress to the jury. The winning projects come out of this session.",
+   "is_free": true
   },
   {
    "title": "Ceremonia de premiación",
@@ -1250,7 +1267,8 @@
    "type": "event",
    "day_order": 7,
    "synopsis_lang": "es",
-   "synopsis_en": "Awards for the three official competitions, the RAFMA Prize and the Semillas Lab prizes."
+   "synopsis_en": "Awards for the three official competitions, the RAFMA Prize and the Semillas Lab prizes.",
+   "is_free": true
   }
  ]
 }
