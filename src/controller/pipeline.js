@@ -40,7 +40,16 @@ export function renderActiveView(){
     if(!pelOpen) _renderProgramaContent(); // re-render por estado → resetScroll=false preserva scroll
     return;
   }
-  if(activeMNav==='mnav-planner'){ runCalc(); return; }  // recompute scenarios + render
+  if(activeMNav==='mnav-planner'){
+    // MISMO gate que el auto-cálculo de showAgView: si no queda nada
+    // planificable, runCalc solo produce una cáscara de cero escenarios que
+    // pisa la pantalla «Nada por planear» con un «Sin combinaciones» que culpa
+    // al armado cuando la verdad es temporal. Sin material, se re-rutea a
+    // showAgView, que ya distingue las tres situaciones del vacío.
+    const _p=[...watchlist].some(t=>!watched.has(t)&&FILMS.some(f=>f.title===t&&!screeningPassed(f)));
+    if(_p) runCalc(); else showAgView();
+    return;
+  }
   renderAgenda();                             // rutea internamente seleccion/miplan
 }
 
@@ -109,7 +118,12 @@ export function showAgView(){
   // pedirla invita a reemplazar lo que el usuario curó a mano. Ahí manda el botón.
   if(activeMNav==='mnav-planner'&&!cachedResult&&!festivalEnded()){
     const _sa=savedAgenda&&savedAgenda.schedule&&savedAgenda.schedule.length;
-    const _hayIntereses=[...watchlist].some(t=>!watched.has(t));
+    // MISMO criterio que `pending` en la vista (agenda.js): interés sin ver Y
+    // con alguna función futura. Contar solo «sin ver» calculaba con una lista
+    // agotada, dejaba un cachedResult de cero escenarios y esa cáscara pisaba
+    // la pantalla «Nada por planear» — el usuario veía «Sin combinaciones»
+    // culpando al armado cuando la verdad era temporal (todo lo suyo ya pasó).
+    const _hayIntereses=[...watchlist].some(t=>!watched.has(t)&&FILMS.some(f=>f.title===t&&!screeningPassed(f)));
     if(!_sa&&_hayIntereses) runCalc();
   }
   requestAnimationFrame(_fixStickyOffset); // actualiza altura del chrome-blur
