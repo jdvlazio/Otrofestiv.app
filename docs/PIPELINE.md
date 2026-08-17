@@ -303,6 +303,32 @@ la app con disfraz. `_tmdbId` vivió en 16 funciones de FINCA a salvo de
 repo usaba `tmdb_id`. Ahora, si al quitarle el guion el nombre coincide con un
 campo real, el guardián lo llama por su nombre: contrabando.
 
+**Duodécimo, y el que cambia el modelo: `[contrato-vivo]`.** Los once anteriores
+vigilan errores concretos que ya cometimos, uno por uno. Éste vigila que exista
+**un canon ejecutable**: `pipeline/contrato.json` declara los 49 campos de una
+función —tipo, formato, obligatoriedad, enum— y `validate-festivals.js` lo
+EXIGE. La sección Films de `docs/SCHEMA.md` ya no se escribe: se **genera** del
+contrato (`node scripts/generate-schema-md.js`).
+
+Por qué importa: una doc escrita a mano al lado de un canon ejecutable es una
+SEGUNDA FUENTE, y dos fuentes divergen siempre. Divergieron — el schema
+documentaba 24 campos de 60 y juraba que `duration` era un número cuando las
+1.194 son el string «90 min». La única defensa no es revisar la doc: es que no
+haya dos.
+
+Vigila tres cosas: que la doc esté regenerada, que **ningún campo viva en los
+datos sin estar declarado** (así el contrato no envejece callando, que es como
+envejeció la doc), y que **ninguna excepción con fecha se venza sin que nadie
+mire**.
+
+**Y las excepciones llevan fecha.** Los archivados quedan congelados —reescribir
+su historia es riesgo sin beneficio— pero un festival VIGENTE que aún no cumple
+entra en `_pendientes` con el día en que deja de perdonársele. Una excepción sin
+fecha se vuelve permanente sola; ésta se vence sola. La primera fue FINCA: sus
+30 sedes sin ciudad esperan al 20 AGO porque el festival cierra el 19 y renombrar
+una sede toca `_slotKey`, que es la ancla de los planes YA GUARDADOS de usuarios
+reales.
+
 **Y la deuda quedó en CERO el mismo día.** Los nueve huérfanos salieron:
 `trailer`, `tematica` y `qa_detail` primero; después `original_title` (con
 `title_orig` ya unificado dentro), `filmType` y `cycle`; `_tmdbId` se fusionó en

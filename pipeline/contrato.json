@@ -1,0 +1,323 @@
+{
+ "_doc": [
+  "EL CONTRATO DE DATOS DE UNA FUNCIÓN. Éste es el canon ejecutable: no describe",
+  "los campos, los EXIGE. Nació el 17 ago 2026, después de un día entero cerrando",
+  "huecos que un contrato habría hecho imposibles — 638 enlaces de boletería",
+  "perdidos por escribir `ticketUrl`, 415 banderas que nunca se derivaron, 6",
+  "enlaces de TuBoleta que estaban en la fuente y no se emitieron, y 9 campos que",
+  "nadie leía nunca.",
+  "",
+  "DUEÑO ÚNICO: lo lee `scripts/validate-festivals.js` (validación) y",
+  "`scripts/generate-schema-md.js` (la sección Films de docs/SCHEMA.md se GENERA",
+  "de aquí). La doc ya no se desincroniza porque ya no es una segunda fuente.",
+  "",
+  "LA VIGENCIA MANDA, NO LA LISTA. `nivel` dice a quién se le exige: los",
+  "festivales vigentes (festivalEndStr >= hoy) cumplen TODO. Los archivados",
+  "quedaron como quedaron —reescribir su pasado es riesgo sin beneficio— y viven",
+  "en `_excepciones`, que SOLO PUEDE ENCOGER."
+ ],
+ "_version": "1.0.0",
+ "campos": {
+  "title": {
+   "tipo": "string",
+   "obligatorio": true,
+   "nota": "Nombre oficial, verbatim del festival. La palabra la pone el festival."
+  },
+  "section": {
+   "tipo": "string",
+   "obligatorio": true,
+   "nota": "Nombre VERBATIM del festival + nuestro emoji. Arquetipo de los 9 canónicos."
+  },
+  "day": {
+   "tipo": "string",
+   "obligatorio": true,
+   "formato": "^\\d{4}-\\d{2}-\\d{2}$",
+   "nota": "Clave exacta de dayKeys, en ISO. Los 5 festivales legacy usan «MAR 21» y quedan exentos."
+  },
+  "time": {
+   "tipo": "string",
+   "obligatorio": true,
+   "formato": "^\\d{2}:\\d{2}$",
+   "nota": "24h con dos dígitos. Nunca 12h con AM/PM."
+  },
+  "venue": {
+   "tipo": "string",
+   "obligatorio": true,
+   "formato": " - .+$",
+   "nota": "«Nombre de la Sede - Ciudad», SIEMPRE. La sala va en `sala`, nunca en el nombre."
+  },
+  "day_order": {
+   "tipo": "number",
+   "obligatorio": true,
+   "derivado_de": "day",
+   "nota": "Orden del día en la grilla."
+  },
+  "ticket_url": {
+   "tipo": "string",
+   "formato": "^https://",
+   "grupo": "acceso",
+   "nota": "URL de compra de ESTA función. En snake_case: `ticketUrl` no lo lee nadie."
+  },
+  "is_free": {
+   "tipo": "boolean",
+   "grupo": "acceso",
+   "nota": "Entrada libre. Booleano de verdad — la app compara con === true."
+  },
+  "requires_registration": {
+   "tipo": "boolean",
+   "grupo": "acceso"
+  },
+  "registration_url": {
+   "tipo": "string",
+   "formato": "^https://",
+   "grupo": "acceso"
+  },
+  "title_en": {
+   "tipo": "string"
+  },
+  "director": {
+   "tipo": "string"
+  },
+  "year": {
+   "tipo": "number",
+   "nota": "Entero. Dos festivales legacy lo tienen como string."
+  },
+  "country": {
+   "tipo": "string"
+  },
+  "flags": {
+   "tipo": "string",
+   "derivado_de": "country",
+   "nota": "Emoji de bandera. NUNCA viene de la fuente: se calcula del país."
+  },
+  "duration": {
+   "tipo": "string",
+   "formato": "^\\d+ min$",
+   "nota": "«90 min». No es un número, y la doc dijo lo contrario durante meses."
+  },
+  "language": {
+   "tipo": "string"
+  },
+  "genre": {
+   "tipo": "string"
+  },
+  "synopsis": {
+   "tipo": "string",
+   "nota": "SIEMPRE en español. La traducción no es opcional."
+  },
+  "synopsis_en": {
+   "tipo": "string"
+  },
+  "synopsis_es": {
+   "tipo": "string"
+  },
+  "synopsis_lang": {
+   "tipo": "string",
+   "enum": [
+    "es",
+    "en",
+    "pt"
+   ],
+   "lector": "guardianes",
+   "nota": "No lo lee la vista: lo consumen los guardianes ([paridad-derivados])."
+  },
+  "rating": {
+   "tipo": "string"
+  },
+  "premiere": {
+   "tipo": "string",
+   "nota": "Texto libre del festival («World Premiere», «Estreno argentino»)."
+  },
+  "type": {
+   "tipo": "string",
+   "enum": [
+    "film",
+    "event",
+    "short"
+   ]
+  },
+  "event_kind": {
+   "tipo": "string",
+   "nota": "Palabra del festival, verbatim (charla, taller, masterclass). Enum en validate-festivals."
+  },
+  "is_cortos": {
+   "tipo": "boolean",
+   "exige": "film_list",
+   "nota": "Programa curado: exige film_list no vacío."
+  },
+  "film_list": {
+   "tipo": "array"
+  },
+  "is_programa": {
+   "tipo": "boolean"
+  },
+  "is_recurring": {
+   "tipo": "boolean"
+  },
+  "is_awards_screening": {
+   "tipo": "boolean"
+  },
+  "info": {
+   "tipo": "boolean",
+   "nota": "Drop-in sin hora fija: NO entra al plan ni a conflictos."
+  },
+  "unscheduled": {
+   "tipo": "boolean",
+   "nota": "En catálogo sin jornada. Única exención de day/time/venue."
+  },
+  "sessions": {
+   "tipo": "array"
+  },
+  "has_qa": {
+   "tipo": "boolean",
+   "nota": "Afecta conflictos vía durationForTravel."
+  },
+  "qa_type": {
+   "tipo": "string",
+   "enum": [
+    "team",
+    "guests"
+   ],
+   "nota": "La variante del Q&A. Se pinta traducida; NO se escribe la frase en el dato."
+  },
+  "competencia": {
+   "tipo": "string"
+  },
+  "premium": {
+   "tipo": "boolean"
+  },
+  "sala": {
+   "tipo": "string",
+   "nota": "Sala DENTRO de la sede. Que no aparezca en el nombre de la sede ([sala-en-sede])."
+  },
+  "date": {
+   "tipo": "string",
+   "formato": "^\\d{4}-\\d{2}-\\d{2}$",
+   "nota": "Requerido si hay screenings[]. Tres festivales legacy lo tienen como número de día."
+  },
+  "screenings": {
+   "tipo": "array"
+  },
+  "poster": {
+   "tipo": "string",
+   "nota": "URL, /assets/… o path TMDB. poster:\"\" está PROHIBIDO. Reglas: docs/POSTERS.md"
+  },
+  "posterSource": {
+   "tipo": "string",
+   "enum": [
+    "tmdb",
+    "custom",
+    "editorial",
+    "letterboxd",
+    "oficial"
+   ],
+   "derivado_de": "poster"
+  },
+  "posterPosition": {
+   "tipo": "string",
+   "enum": [
+    "center",
+    "top",
+    "bottom"
+   ]
+  },
+  "lbSlug": {
+   "tipo": "string",
+   "nota": "Slug de Letterboxd. En camelCase: `lb_slug` no lo lee nadie."
+  },
+  "slug": {
+   "tipo": "string"
+  },
+  "filmCategory": {
+   "tipo": "string"
+  },
+  "tmdb_id": {
+   "tipo": "number",
+   "lector": "pipeline",
+   "nota": "No lo lee la vista: lo usa el pipeline para reenriquecer sin volver a buscar."
+  },
+  "_src": {
+   "nota": "De dónde salió el dato. Toda obra nueva lo lleva."
+  }
+ },
+ "raiz": {
+  "ticketing_model": {
+   "tipo": "string",
+   "enum": [
+    "paid",
+    "mixed"
+   ],
+   "nota": "Solo estos dos valores. Un tercero no falla: simplemente no pinta el badge, y nadie se entera."
+  }
+ },
+ "_excepciones": {
+  "_doc": [
+   "Festivales ARCHIVADOS que no cumplen un formato del contrato. Cada línea",
+   "es deuda congelada a propósito: su edición ya pasó y reescribir su",
+   "historia es riesgo sin beneficio. Esta lista SOLO PUEDE ENCOGER —",
+   "ningún festival nuevo entra aquí, y el guardián lo impide."
+  ],
+  "day": {
+   "ficci-65": 168,
+   "cinemancia-2025": 87,
+   "aff-2026": 32,
+   "leviza-2026": 24,
+   "tribeca-2026": 1
+  },
+  "time": {
+   "tribeca-2026": 204
+  },
+  "duration": {
+   "ficci-65": 19,
+   "tribeca-2026": 8,
+   "aff-2026": 1,
+   "cinemancia-2025": 1
+  },
+  "venue": {
+   "tribeca-2026": 204,
+   "ficci-65": 168,
+   "cinemancia-2025": 87,
+   "aff-2026": 32,
+   "olhar-2026": 39,
+   "ficmontanas-2026": 31,
+   "fantasofest-2026": 11,
+   "tercertiempo-2026": 15
+  },
+  "year": {
+   "ficci-65": null,
+   "tribeca-2026": null
+  },
+  "date": {
+   "ficci-65": null,
+   "tribeca-2026": null,
+   "aff-2026": null,
+   "cinemancia-2025": null
+  }
+ },
+ "_pendientes": {
+  "_doc": [
+   "Excepciones CON FECHA DE CADUCIDAD, para festivales VIGENTES. A partir de",
+   "`migrar_el`, el guardián deja de perdonar y se pone rojo. Una excepción sin",
+   "fecha se vuelve permanente sola; ésta se vence sola, que es lo contrario."
+  ],
+  "venue": {
+   "finca-2026": {
+    "incumple": 30,
+    "migrar_el": "2026-08-20",
+    "motivo": "FINCA cierra el 19 AGO y renombrar sus 6 sedes toca `_slotKey` (día|hora|sede|sala), que es la ancla de los planes YA GUARDADOS de usuarios reales. Dos días de espera contra romper un plan en curso: se espera."
+   }
+  },
+  "year": {
+   "ficdeh-2026": {
+    "incumple": 411,
+    "migrar_el": "2026-08-20",
+    "motivo": "year llega como string. La app siempre hace String(f.year), por eso nunca se vio. Migra en el PR 2 — es seguro, no toca _slotKey."
+   },
+   "ficma-2026": {
+    "incumple": 76,
+    "migrar_el": "2026-08-20",
+    "motivo": "ídem FICDEH."
+   }
+  }
+ }
+}
