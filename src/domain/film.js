@@ -200,6 +200,26 @@ export function screeningEndDate(s){
 export function isShortFilm(f){ const d=parseDur(f&&f.duration); return d>0&&d<=40; }
 export function screeningEnded(s,nowMin){ return screeningEndMin(s)<=nowMin; }
 export function screeningNow(s,nowMin){ return toMin(s.time)<=nowMin&&!screeningEnded(s,nowMin); }
+// screeningQaOnly — la ventana en la que la PELÍCULA ya terminó pero la función
+// sigue: los ~30 min estimados del Q&A. Dueño único de la distinción, porque la
+// pantalla la necesita en dos lugares y con la misma respuesta.
+//
+// Por qué existe: «AHORA» y «EN CURSO» se apoyaban en el fin EFECTIVO (con Q&A),
+// que es correcto para el planificador —la función te ocupa hasta el final— pero
+// no para el que lee. Medido en FINCA (16 de 30 obras con Q&A): «¿Cuán profundo
+// es tu amor?» empieza 19:00, la película termina 20:41 y la función 21:11; a
+// las 21:00 la app decía AHORA en verde sobre una película terminada, y Mi Plan
+// mostraba «Termina en 0 min» durante media hora —el rótulo contando con Q&A y
+// la cuenta sin él, dos relojes en una frase—.
+//
+// Y hay una regla del proyecto que lo zanja: el fin de la película es DATO
+// (empieza + dura); el del Q&A es ESTIMACIÓN (FESTIVAL_QA_MIN, «la UI la
+// declara, nunca la afirma»). El badge más afirmativo de la app no puede
+// apoyarse 30 minutos en un número estimado.
+export function screeningQaOnly(s,nowMin){
+  if(!s||!s.has_qa) return false;
+  return screeningBlockEndMin(s)<=nowMin&&!screeningEnded(s,nowMin);
+}
 
 export function _classifyTodayScreenings(screenings,nowMin){
   const done=screenings.filter(s=>screeningEnded(s,nowMin));
