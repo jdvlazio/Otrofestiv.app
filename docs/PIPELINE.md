@@ -296,6 +296,26 @@ PREMIUM de TIFF, y vale para todos los flags (`is_free`,
 de `film_list`. Basta con que un ensamblador lea un CSV o un Excel para que un
 booleano llegue como texto.
 
+**Noveno, el del silencio: `[boleteria-muda]`.** Los guardianes de boletería
+que ya teníamos vigilan la COHERENCIA de lo que se emite —que el badge lo
+decida `ticketBadgeTarget()`, que `ticketing_model` use el vocabulario real,
+que no se escriba `ticketUrl` en camelCase—. Ninguno vigilaba la AUSENCIA: un
+festival vigente podía salir sin **una sola** función que dijera cómo se entra,
+y todo quedaba verde.
+
+Lo destapó CineAutopsia el 17 ago 2026. La agenda de la Cinemateca publicaba el
+enlace de TuBoleta de los seis programas de pago y decía «Entrada libre» en la
+clausura; mi ensamblador no miró el campo y encima escribió `is_free: false` en
+los siete, también en el libre. El dato estaba en la misma página de la que
+saqué todo lo demás. Lo cazó Juan preguntando —igual que los 638 enlaces de
+TIFF y las 415 banderas de FICDEH—.
+
+La regla: **gratis se declara, no se deja en blanco.** Un festival vigente cuyas
+funciones no dicen nada —ni `ticket_url`, ni `is_free`, ni
+`registration_url`— está mudo, y el silencio no es un dato, es una omisión.
+Solo aplica a los vigentes: reescribir el pasado de un festival archivado no le
+sirve a nadie.
+
 **Octavo, y el que explica por qué lo de FICDEH costó meses:
 `[paridad-derivados]`.**
 
