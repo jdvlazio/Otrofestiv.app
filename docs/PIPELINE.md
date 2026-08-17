@@ -296,6 +296,23 @@ PREMIUM de TIFF, y vale para todos los flags (`is_free`,
 de `film_list`. Basta con que un ensamblador lea un CSV o un Excel para que un
 booleano llegue como texto.
 
+**Undécimo, el de la utilidad: `[titulo-original-util]`.** Nació al unificar
+`title_orig` en `original_title` (17 ago 2026). De los 38 que había, **17 eran
+la misma palabra con otras mayúsculas o tildes** — «POR CIELO Y TIERRA» junto a
+«Por cielo y tierra». TMDB los devuelve así y los scripts los guardaban sin
+preguntar.
+
+No es un error de dato: el valor es correcto. Es un error de **utilidad** — un
+campo que repite lo que ya está al lado ocupa sitio, invita a pintarse y no dice
+nada. La comparación va por clave normalizada, nunca literal: comparar crudo es
+justo lo que dejaba pasar los 17.
+
+**Los dos nombres tenían dos tuberías.** `original_title` lo escribía el
+enriquecimiento (es el campo de TMDB); `title_orig`, el camino del CSV (es lo
+que el festival escribió en su hoja). Ninguna sabía de la otra: el pipeline
+creció por dos lados y el mismo dato aterrizó con dos nombres. Por eso la
+unificación toca productores y plantillas, no solo los JSON.
+
 **Décimo, el espejo del noveno: `[campo-huerfano]`.** `[campo-contrato]` caza
 el campo mal ESCRITO —el dato quiere llegar a la app y se pierde por el
 nombre—. Éste caza el campo que **no tiene a dónde llegar**: nadie lo lee, y

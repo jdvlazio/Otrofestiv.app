@@ -4197,6 +4197,39 @@ except Exception as _e:
 # de las dos listas de abajo, con su dueño escrito. Antes de añadir un campo, la
 # pregunta es QUIÉN LO VA A LEER; si la respuesta es «alguien algún día», no se
 # emite.
+# ── [titulo-original-util] un título original que repite el título no informa ─
+# Nació con la unificación de `title_orig` en `original_title` (17 ago 2026).
+# De los 38 que había, DIECISIETE eran la misma palabra con otras mayúsculas o
+# tildes: «POR CIELO Y TIERRA» junto a «Por cielo y tierra», «El Juego de la
+# Vida» junto a «El juego de la vida». TMDB los devuelve así y los scripts los
+# guardaban sin preguntar.
+#
+# No es un error de dato —el valor es correcto— sino de UTILIDAD: un campo que
+# repite lo que ya está al lado ocupa sitio, invita a pintarse y no dice nada.
+# La comparación es por clave normalizada, nunca literal: comparar crudo es lo
+# que dejaba pasar los 17.
+check = 'titulo-original-util'
+try:
+    import json as _j, glob as _g, re as _r4, unicodedata as _ud
+    def _clave(_s):
+        _s = _ud.normalize('NFD', (_s or '').lower())
+        return _r4.sub(r'[^a-z0-9]', '',
+                       ''.join(_c for _c in _s if _ud.category(_c) != 'Mn'))
+    _rep = []
+    for _f in sorted(_g.glob('festivals/*.json')):
+        for _x in (_j.load(open(_f, encoding='utf-8')).get('films') or []):
+            _ot = _x.get('original_title')
+            if _ot and _clave(_ot) == _clave(_x.get('title')):
+                _rep.append(f'{_f.split("/")[-1]}: {_x.get("title")!r}')
+    if _rep:
+        fail(check, 'original_title que repite el title (misma palabra, otras '
+                    'mayúsculas o tildes): ' + '; '.join(_rep[:5]))
+    else:
+        ok(check, 'todo original_title dice algo que el title no dice')
+except Exception as _e:
+    warn(check, f'no se pudo verificar titulo-original-util: {_e}')
+
+
 check = 'campo-huerfano'
 try:
     import json as _j, glob as _g, re as _r3
@@ -4211,8 +4244,9 @@ try:
     _DEUDA = {
         'filmType': 'Tribeca (196) — lo dice ya `genre`',
         'cycle': 'FICMA (24) — es una sección disfrazada de campo',
-        'original_title': 'FICMA (32) — duplicado de `title_orig` de FINCA',
-        'title_orig': 'FINCA (6) — duplicado de `original_title` de FICMA',
+        # 17 ago 2026: `title_orig` desaparece —unificado en `original_title`—
+        # y el ruido se limpia. Queda huérfano hasta que la ficha lo pinte.
+        'original_title': 'FICMA+FINCA (23) — nombre unificado; falta cablearlo en la ficha',
     }
     _src_all = ''.join(open(_p, encoding='utf-8').read()
                        for _p in _g.glob('src/**/*.js', recursive=True))

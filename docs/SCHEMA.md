@@ -253,7 +253,7 @@ lee `src/` · **val** = lo revisa `validate-festivals.js`.
 |---|---|---|---|---|---|
 | `title` | 1214 | 12 | ✅ | ✅ | **requerido.** Nombre oficial, verbatim |
 | `title_en` | 558 | 8 | ✅ | ✅ | título en inglés (o el original si el festival es hispano) |
-| `original_title` / `title_orig` | 32 / 6 | 1 / 1 | ❌ | ❌ | **dos nombres para lo mismo** — deuda, ver § Campos huérfanos |
+| `original_title` | 23 | 2 | ❌ | ❌ | título de la OBRA cuando difiere del que publica el festival. Se omite si es el mismo con otras mayúsculas o tildes (`[titulo-original-util]`). Aún sin cablear en la ficha |
 | `director` | 1051 | 12 | ✅ | ✅ | tal como lo publica el festival |
 | `year` | 968 | 12 | ✅ | ✅ | ⚠️ **tipo mixto**: 474 `number`, 491 `string`, 3 `null` |
 | `country` | 1108 | 12 | ✅ | ✅ | texto libre; multi-país con `/` o `,` |
@@ -336,12 +336,15 @@ Nueve campos viajan en los JSON y **ningún archivo de `src/` los menciona**. Es
 el espejo del bug de boletería: allá el dato existía en la fuente y no lo
 emitimos; aquí lo buscamos, lo guardamos y no se pinta nunca.
 
-`filmType` (196) · `tmdb_id` (83, más `_tmdbId` en otro festival) · `trailer`
-(36) · `original_title` (32) · `cycle` (24) · `tematica` (23) · `qa_detail`
-(16) · `title_orig` (6).
+`filmType` (196) · `tmdb_id` (83, más `_tmdbId` en otro festival) ·
+`original_title` (23) · `cycle` (24).
 
-Tres de ellos son **el mismo dato con dos nombres** (`original_title`/
-`title_orig`, `tmdb_id`/`_tmdbId`) — eso es deuda, no diseño. `synopsis_lang`
+El 17 ago 2026 se borraron `trailer` (37), `tematica` (37) y `qa_detail` (21),
+y `title_orig` se unificó en `original_title`.
+
+Queda un **mismo dato con dos nombres**: `tmdb_id`/`_tmdbId` — eso es deuda, no
+diseño. El otro par (`original_title`/`title_orig`) se unificó el 17 ago 2026 en
+`original_title`, y con él se fueron 17 valores que solo repetían el título. `synopsis_lang`
 no está en esta lista aunque la vista no lo lea: lo consumen los guardianes, y
 es deliberado.
 
