@@ -1072,3 +1072,77 @@ test('T74 — «No incluidas» solo lista lo que compitió', async ({ page }) =>
   expect(r.diceYaPaso, 'ninguna lápida en Planear').toBe(false);
   expect(r.banner, 'sin el banner que generalizaba una causa falsa').toBe(false);
 });
+
+// Ronda 4 (auditor): la última noche, con 12 obras en el plan y CERO funciones
+// restantes en todo el catálogo, Planear mostraba el vacío de primer uso — «Tu
+// Plan aparece aquí · Agregá lo que no querés perderte · Ir a Intereses». Tres
+// promesas falsas. `pending` vacío tenía UNA pantalla; detrás hay tres
+// situaciones. Y el vacío de combinaciones culpaba a la disponibilidad sin
+// saber si había bloqueos, con un punto en medio por la costura de dos claves.
+test('T75 — Planear distingue por qué no hay nada que planear', async ({ page }) => {
+  await enterFestival(page, 'finca2026', '2026-08-17T12:00:00-03:00');
+
+  // A.1 · no queda NADA en el festival → despedida, aunque el calendario siga
+  const a1 = await page.evaluate(async () => {
+    const tits = [...new Set(FILMS.map(f => f.title))].slice(0, 12);
+    state.set('watchlist', new Set(tits));
+    state.set('savedAgenda', { scenarioIdx: 0, schedule: tits.map(t => {
+      const f = FILMS.find(x => x.title === t); return Object.assign({}, f, { _title: t }); }) });
+    _simTime = '2026-08-19T23:00:00-03:00';
+    // La espera va ANTES de entrar a Planear: el boot tiene un setTimeout que
+    // salta solo a Mi Plan cuando hay agenda activa (main.js), y si cae después
+    // del switch pisa la pantalla que este test mide.
+    await new Promise(r => setTimeout(r, 1300));
+    switchMainNav('mnav-planner'); showAgView();
+    await new Promise(r => setTimeout(r, 400));
+    return (document.getElementById('ag-view')?.innerText || '').replace(/\s+/g, ' ');
+  });
+  expect(a1, 'se despide en vez de invitar').toContain('ha terminado');
+  expect(a1, 'y manda a lo vivido').toContain('Ver Mi Plan');
+  expect(a1, 'sin la pantalla de primer uso').not.toContain('Tu Plan aparece aquí');
+
+  // A.2 · el festival sigue, tus intereses se agotaron → al Programa
+  const a2 = await page.evaluate(async () => {
+    const D = await import('/src/domain/film.js');
+    _simTime = '2026-08-18T23:30:00-03:00';
+    const pasadas = [...new Set(FILMS.filter(f => D.screeningPassed(f)).map(f => f.title))]
+      .filter(t => !FILMS.some(f => f.title === t && !D.screeningPassed(f)));
+    state.set('watchlist', new Set(pasadas.slice(0, 5)));
+    state.set('savedAgenda', { scenarioIdx: 0, schedule: [] });
+    await new Promise(r => setTimeout(r, 600));
+    cachedResult = null;
+    switchMainNav('mnav-planner'); showAgView();
+    await new Promise(r => setTimeout(r, 400));
+    return { quedan: FILMS.filter(f => !D.screeningPassed(f)).length,
+      txt: (document.getElementById('ag-view')?.innerText || '').replace(/\s+/g, ' ') };
+  });
+  expect(a2.quedan, 'el festival aún tiene funciones').toBeGreaterThan(0);
+  expect(a2.txt, 'nombra el hecho en siete palabras').toContain('Nada por planear');
+  expect(a2.txt, 'y manda a donde queda material').toContain('Ir al Programa');
+  expect(a2.txt, 'no a la lista agotada').not.toContain('Ir a Intereses');
+
+  // A.3 · primer uso de verdad → la pantalla original
+  const a3 = await page.evaluate(async () => {
+    state.set('watchlist', new Set());
+    cachedResult = null;
+    switchMainNav('mnav-planner'); showAgView();
+    await new Promise(r => setTimeout(r, 1000));
+    return (document.getElementById('ag-view')?.innerText || '').replace(/\s+/g, ' ');
+  });
+  expect(a3, 'el primer uso conserva su invitación').toContain('Tu Plan aparece aquí');
+
+  // Combos vacíos · sin bloqueos NO se culpa a la disponibilidad
+  const combos = await page.evaluate(async () => {
+    const V = await import('/src/view/agenda.js');
+    const sinBloqueos = V.buildResultHTML([]).replace(/<[^>]*>/g, '');
+    availability['2026-08-18'] = { blocks: [{ from: '10:00', to: '22:00' }] };
+    const conBloqueos = V.buildResultHTML([]).replace(/<[^>]*>/g, '');
+    delete availability['2026-08-18'];
+    return { sinBloqueos, conBloqueos };
+  });
+  expect(combos.sinBloqueos, 'sin bloqueos: no culpa a la disponibilidad')
+    .toBe('Sin combinaciones. Sumá más títulos.');
+  expect(combos.conBloqueos, 'con bloqueos: la nombra')
+    .toBe('Sin combinaciones. Liberá disponibilidad o sumá títulos.');
+  expect(combos.sinBloqueos, 'sin punto en medio de frase').not.toMatch(/\.\s+[a-z]/);
+});

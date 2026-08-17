@@ -124,8 +124,38 @@ export function renderAgenda(){
     const _progressHtml=(!savedAgenda||!savedAgenda.schedule||!savedAgenda.schedule.length)?renderFlowProgress(state,'planner'):'';
     const pending=[...watchlist].filter(titleStr=>!watched.has(titleStr)&&FILMS.some(f=>f.title===titleStr&&!screeningPassed(f)));
 
-    // ── Estado A: sin Intereses — pantalla simple, no mostrar herramienta ──
+    // ── Estado A: nada que planear ────────────────────────────────────────
+    // `pending` vacío tenía UNA sola pantalla: la de primer uso («Tu Plan
+    // aparece aquí · Agregá lo que no querés perderte»). Pero hay tres
+    // situaciones distintas detrás de ese cero, y dos de ellas la vuelven
+    // mentira. Medido en FINCA la última noche (19 AGO 23:00): 12 obras en el
+    // plan, 0 funciones futuras EN TODO EL CATÁLOGO, y la app invitando a
+    // «agregar lo que no querés perderte» para armar un plan imposible.
+    // A.1 — no queda NADA por ver en el festival. El calendario todavía dice que
+    // va (FINCA termina el 19), pero el dato manda sobre la fecha: se despide
+    // igual que cuando el festival terminó y manda a Mi Plan, donde está lo
+    // vivido. Va ANTES del gate de cachedResult y sin él: si no queda una sola
+    // función, ningún plan calculado es accionable — mostrarlo sería ofrecer
+    // opciones sobre un festival que ya no tiene ninguna.
+    if(!pending.length&&!FILMS.some(f=>!screeningPassed(f))){
+      const _fName=(FESTIVAL_CONFIG[_activeFestId]||{}).name||t('misc_festival_default');
+      requestAnimationFrame(_fixStickyOffset);
+      view.innerHTML=emptyStateHero(ICONS.sparkles,`${_fName} ${t('plan_fest_terminado')}`,
+        t('planear_descansa'),t('cta_mi_plan'),'mnav-miplan');
+      return;
+    }
     if(!pending.length&&!cachedResult){
+      // A.2 — el festival sigue, pero TUS intereses se acabaron (los viste o se
+      // te pasaron). Mandar a Intereses sería mandarte a una lista agotada; lo
+      // que queda por hacer está en el Programa.
+      if(watchlist.size){
+        view.innerHTML=`${_progressHtml}
+          <div class="ag-section">
+            ${emptyStateHero(ICONS.calendar,t('plan_nada_por_planear'),t('plan_nada_por_planear_sub'),t('plan_ir_programa'),'mnav-cartelera')}
+          </div>`;
+        return;
+      }
+      // A.3 — primer uso de verdad: nunca hubo intereses.
       view.innerHTML=`${_progressHtml}
         <div class="ag-section">
           ${emptyStateHero(ICONS.calendar,t('plan_tu_plan_empty'),t('empty_intereses_3'),t('cta_ir_intereses'),'mnav-seleccion')}
@@ -1406,8 +1436,13 @@ export function renderAvBlocks(){
 // p8 (fix urgente): buildResultHTML reubicado desde view/components.js — usa
 // mkAgendaRow (local) + helpers + domain, todos ya importados aquí; cero ciclos.
 export function buildResultHTML(scenarios){
-  if(!scenarios||!scenarios.length)
-    return`<div class="ag-calc-prompt">${t('plan_sin_combos')} ${t('plan_anadir_titulos')}</div>`;
+  if(!scenarios||!scenarios.length){
+    // Solo se culpa a la disponibilidad si HAY bloqueos puestos: sin ellos no es
+    // la causa. La costura de dos claves («…disponibilidad. o agregá…») dejaba
+    // un punto en medio de la frase — mismo patrón del «revisá Sugerencias..».
+    const _conBloqueos=!!(availability&&DAY_KEYS.some(d=>availability[d]&&availability[d].blocks&&availability[d].blocks.length));
+    return`<div class="ag-calc-prompt">${t(_conBloqueos?'plan_sin_combos_av':'plan_sin_combos')}</div>`;
+  }
   const{currentIdx}=cachedResult;
   const sc=scenarios[currentIdx],n=scenarios.length;
   const pending=[...watchlist].filter(t=>!watched.has(t)&&FILMS.some(f=>f.title===t&&!screeningPassed(f)));
