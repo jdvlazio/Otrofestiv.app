@@ -226,8 +226,7 @@
    "synopsis_lang": "es",
    "lbSlug": "no-more-history-without-us",
    "competencia": "Competencia Oficial de Largometrajes Internacionales",
-   "is_free": true,
-   "original_title": "Não Haverá mais história sem nós"
+   "is_free": true
   },
   {
    "title": "Toroboro: el nombre de las plantas",
@@ -489,8 +488,7 @@
    "lbSlug": "the-tree-of-authenticity",
    "competencia": "Competencia Oficial de Largometrajes Internacionales",
    "qa_type": "guests",
-   "is_free": true,
-   "original_title": "L´Arbre de l´Authenticité"
+   "is_free": true
   },
   {
    "title": "De la guerra fría a la guerra verde",
@@ -620,7 +618,6 @@
    "synopsis_lang": "es",
    "competencia": "Competencia Oficial de Documentales Latinoamericanos",
    "qa_type": "team",
-   "original_title": "Amora",
    "tmdb_id": 1557668
   },
   {
@@ -647,8 +644,7 @@
    "synopsis_lang": "es",
    "lbSlug": "how-deep-is-your-love-2025",
    "competencia": "Competencia Oficial de Largometrajes Internacionales",
-   "qa_type": "guests",
-   "original_title": "How deep is your love"
+   "qa_type": "guests"
   },
   {
    "title": "Tierra que habla",
@@ -804,8 +800,7 @@
    "day_order": 7,
    "synopsis_lang": "es",
    "lbSlug": "the-cost-of-growth",
-   "qa_type": "guests",
-   "original_title": "The Cost of Growth"
+   "qa_type": "guests"
   },
   {
    "title": "Cortometrajes en Competencia Oficial — Programa 1",
@@ -828,7 +823,6 @@
      "flags": "🇫🇷",
      "posterSource": "custom",
      "competencia": "Competencia Oficial de Corto y Mediometrajes Internacionales",
-     "original_title": "Acid City",
      "tmdb_id": 1599926
     },
     {
@@ -848,7 +842,6 @@
      "duration": "25 min",
      "flags": "🇸🇰🇨🇿",
      "competencia": "Competencia Oficial de Corto y Mediometrajes Internacionales",
-     "original_title": "Pozdravy z Rodosu",
      "tmdb_id": 1603941
     },
     {
@@ -908,8 +901,7 @@
      "posterSource": "custom",
      "lbSlug": "above-all-2025",
      "competencia": "Competencia Oficial de Corto y Mediometrajes Internacionales",
-     "qa_type": "team",
-     "original_title": "Above all"
+     "qa_type": "team"
     }
    ],
    "duration": "79 min",
@@ -943,8 +935,7 @@
      "posterSource": "custom",
      "lbSlug": "above-all-2025",
      "competencia": "Competencia Oficial de Corto y Mediometrajes Internacionales",
-     "qa_type": "team",
-     "original_title": "Above all"
+     "qa_type": "team"
     },
     {
      "title": "Sobre Ruinas",
@@ -982,7 +973,6 @@
      "flags": "🇪🇸",
      "posterSource": "custom",
      "competencia": "Competencia Oficial de Corto y Mediometrajes Internacionales",
-     "original_title": "No als poalets",
      "tmdb_id": 1631620
     },
     {
@@ -1000,8 +990,7 @@
      "duration": "45 min",
      "genre": "Documental",
      "flags": "🇫🇷",
-     "lbSlug": "la-nostra-isola",
-     "original_title": "La nostra isola"
+     "lbSlug": "la-nostra-isola"
     }
    ],
    "duration": "109 min",
@@ -1102,8 +1091,7 @@
      "year": 2025,
      "duration": "6 min",
      "genre": "Animación",
-     "flags": "🇪🇸",
-     "original_title": "Soc Aigua"
+     "flags": "🇪🇸"
     }
    ],
    "duration": "32 min",

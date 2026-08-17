@@ -376,8 +376,10 @@ def main():
                 e['synopsis'], e['synopsis_lang'] = t['synopsis_en'], 'en'
             if t.get('synopsis_en'):
                 e['synopsis_en'] = t['synopsis_en']
-            if t.get('titulo_original') and t['titulo_original'] != f['titulo']:
-                e['original_title'] = t['titulo_original']
+            # `original_title` NO se emite (17 ago 2026): la ficha nunca lo
+            # pintó y un campo que nadie lee es peso muerto. El
+            # `titulo_original` del sidecar SÍ se conserva — enriquecer.py lo
+            # usa para decidir el title_en.
         # title_en: el título con que la obra se distribuye en inglés, traído de
         # TMDB sobre un tmdb_id ya verificado (pipeline/ficma-2026-title-en.py).
         # Las que ya se llaman igual en inglés no lo llevan.

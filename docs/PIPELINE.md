@@ -303,40 +303,14 @@ la app con disfraz. `_tmdbId` vivió en 16 funciones de FINCA a salvo de
 repo usaba `tmdb_id`. Ahora, si al quitarle el guion el nombre coincide con un
 campo real, el guardián lo llama por su nombre: contrabando.
 
-**Undécimo, el de la utilidad: `[titulo-original-util]`.** Nació al unificar
-`title_orig` en `original_title` (17 ago 2026). De los 38 que había, **17 eran
-la misma palabra con otras mayúsculas o tildes** — «POR CIELO Y TIERRA» junto a
-«Por cielo y tierra». TMDB los devuelve así y los scripts los guardaban sin
-preguntar.
-
-No es un error de dato: el valor es correcto. Es un error de **utilidad** — un
-campo que repite lo que ya está al lado ocupa sitio, invita a pintarse y no dice
-nada. La comparación va por clave normalizada, nunca literal: comparar crudo es
-justo lo que dejaba pasar los 17.
-
-**Los dos nombres tenían dos tuberías.** `original_title` lo escribía el
-enriquecimiento (es el campo de TMDB); `title_orig`, el camino del CSV (es lo
-que el festival escribió en su hoja). Ninguna sabía de la otra: el pipeline
-creció por dos lados y el mismo dato aterrizó con dos nombres. Por eso la
-unificación toca productores y plantillas, no solo los JSON.
-
-**Décimo, el espejo del noveno: `[campo-huerfano]`.** `[campo-contrato]` caza
-el campo mal ESCRITO —el dato quiere llegar a la app y se pierde por el
-nombre—. Éste caza el campo que **no tiene a dónde llegar**: nadie lo lee, y
-nunca lo leyó.
-
-El 17 ago 2026 había nueve. Entre ellos 36 `trailer` que alguien buscó uno por
-uno, 23 `tematica`, y 16 `qa_detail` que además duplicaba —peor, y en un solo
-idioma— lo que `qa_type` ya pintaba en tres. Se emitían, se validaban, se
-versionaban, y no se veían en ninguna pantalla.
-
-Son las dos formas de que el trabajo se pierda entre la fuente y el ojo: allá el
-dato estaba en la fuente y no lo emitimos; aquí lo emitimos y nadie lo pinta.
-
-Todo campo que `src/` no mencione tiene que estar declarado con su dueño —
-`synopsis_lang` y `tmdb_id` lo tienen (guardianes y pipeline)— o figurar en la
-deuda, que no crece. **Antes de añadir un campo, la pregunta es quién lo va a
-leer.** Si la respuesta es «alguien algún día», no se emite.
+**Y el epílogo (17 ago 2026).** Hubo un guardián —`titulo-original-util`, sin
+corchetes porque ya no existe— que exigía que `original_title` dijera algo que
+el `title` no dijera. Duró unas horas: al preguntarnos si íbamos a pintarlo alguna
+vez, la respuesta fue no, y entonces el campo entero salió del repo —dato,
+productores y plantillas—. **Un campo limpio que nadie lee sigue siendo peso
+muerto**, y un guardián que cuida un campo que ya no existe es peso muerto al
+cuadrado. El `titulo_original` de los sidecars SÍ se queda: `enriquecer.py` lo
+usa para decidir el `title_en`, que eso sí se ve.
 
 **Noveno, el del silencio: `[boleteria-muda]`.** Los guardianes de boletería
 que ya teníamos vigilan la COHERENCIA de lo que se emite —que el badge lo
