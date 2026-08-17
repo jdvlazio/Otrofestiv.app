@@ -57,30 +57,19 @@ def get(path, **params):
     return None
 
 
-<<<<<<< HEAD
-def norm(s):
-=======
 # [lib-unica] renombrada desde `norm` el 17 ago 2026.
 # Conserva el ordinal («12ª» → «12a»); `lib.norm` lo colapsa a «12».
 def norm_ordinales(s):
->>>>>>> origin/main
     s = unicodedata.normalize('NFKD', (s or '').lower())
     s = ''.join(c for c in s if not unicodedata.combining(c))
     return re.sub(r'[^a-z0-9]+', ' ', s).strip()
 
 
 def mismo_director(a, b):
-<<<<<<< HEAD
-    ta = {t for t in norm(a).split() if len(t) > 3}
-    tb = {t for t in norm(b).split() if len(t) > 3}
-    if not ta or not tb:
-        return norm(a) == norm(b)      # nombres cortos: comparación completa
-=======
     ta = {t for t in norm_ordinales(a).split() if len(t) > 3}
     tb = {t for t in norm_ordinales(b).split() if len(t) > 3}
     if not ta or not tb:
         return norm_ordinales(a) == norm_ordinales(b)      # nombres cortos: comparación completa
->>>>>>> origin/main
     return bool(ta & tb)
 
 
