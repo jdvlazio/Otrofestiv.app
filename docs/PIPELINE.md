@@ -303,6 +303,15 @@ la app con disfraz. `_tmdbId` vivió en 16 funciones de FINCA a salvo de
 repo usaba `tmdb_id`. Ahora, si al quitarle el guion el nombre coincide con un
 campo real, el guardián lo llama por su nombre: contrabando.
 
+**Y la deuda quedó en CERO el mismo día.** Los nueve huérfanos salieron:
+`trailer`, `tematica` y `qa_detail` primero; después `original_title` (con
+`title_orig` ya unificado dentro), `filmType` y `cycle`; `_tmdbId` se fusionó en
+`tmdb_id`. `cycle` merece una nota: las franjas de FICMA —«Cine al barrio»,
+«Cine bajo la niebla»— **sí eran palabra del festival e información que
+`section` no da**. Salió igual, porque no se iba a pintar, y sigue viva en el
+crudo: si algún día se muestra, no hay que volver a extraerla. **Borrar del JSON
+final no es perder el dato** — el crudo es el archivo, el JSON es la vitrina.
+
 **Y el epílogo (17 ago 2026).** Hubo un guardián —`titulo-original-util`, sin
 corchetes porque ya no existe— que exigía que `original_title` dijera algo que
 el `title` no dijera. Duró unas horas: al preguntarnos si íbamos a pintarlo alguna

@@ -358,9 +358,11 @@ def main():
             e['_src'] = 'FICMA 17 - FRANJA ACADÉMICA.pdf (OCR) · ' + _fa['pagina']
         if f.get('sala'):
             e['sala'] = f['sala']
-        if f.get('ciclo'):
-            # El ciclo es la marca del festival («Cine al barrio»), no la sede.
-            e['cycle'] = f['ciclo']
+        # El ciclo («Cine al barrio», «Cine bajo la niebla») es la marca del
+        # festival, no la sede, y es información real que `section` no dice.
+        # Aun así NO se emite desde el 17 ago 2026: la ficha nunca lo pintó y la
+        # decisión fue no pintarlo. `ciclo` sigue en el crudo — si algún día se
+        # muestra, el dato está y no hay que volver a extraerlo.
         if t:
             e['tmdb_id'] = t['tmdb_id']
             if (g := (t.get('generos') or [''])[0]):
