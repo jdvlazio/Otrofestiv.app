@@ -234,163 +234,104 @@ sala. Si no la tienen, no son salas: son la misma sede escrita de dos formas
 
 ---
 
-## Films — los 60 campos que existen de verdad
+<!-- CONTRATO:INICIO — generado por scripts/generate-schema-md.js, no editar a mano -->
 
-**Este inventario está MEDIDO, no recordado**: 1.214 funciones de 12 festivales
-en producción, cruzadas contra lo que lee `src/` y contra lo que exige
-`validate-festivals.js`. Hasta el 17 ago 2026 esta sección describía 24 campos
-y en los JSON había 60 — y esa distancia es la que deja pasar los huecos: cada
-onboarding se guiaba por lo que hizo el anterior, no por el schema. La regla de
-arriba se aplica también aquí: **toda discrepancia entre este archivo y los
-datos es un bug**, y se corrige midiendo.
+## Films — el contrato
 
-Columnas: **n** = funciones que lo llevan · **fest** = festivales · **app** = lo
-lee `src/` · **val** = lo revisa `validate-festivals.js`.
+Esta sección se **genera** de `pipeline/contrato.json`. No se edita a mano: se
+edita el contrato y se corre `node scripts/generate-schema-md.js`. El contrato
+es lo que `validate-festivals.js` EXIGE, así que lo que leas aquí es lo que
+está pasando de verdad — no lo que alguien recordaba al escribirlo.
 
-### Identidad de la obra
+### Obligatorios — sin esto no hay función
 
-| campo | n | fest | app | val | qué es |
-|---|---|---|---|---|---|
-| `title` | 1214 | 12 | ✅ | ✅ | **requerido.** Nombre oficial, verbatim |
-| `title_en` | 558 | 8 | ✅ | ✅ | título en inglés (o el original si el festival es hispano) |
-| `director` | 1051 | 12 | ✅ | ✅ | tal como lo publica el festival |
-| `year` | 968 | 12 | ✅ | ✅ | ⚠️ **tipo mixto**: 474 `number`, 491 `string`, 3 `null` |
-| `country` | 1108 | 12 | ✅ | ✅ | texto libre; multi-país con `/` o `,` |
-| `flags` | 1124 | 12 | ✅ | ✅ | **derivado de `country`** — nunca de la fuente. Guardián `[country-flags]` |
-| `duration` | 1194 | 12 | ✅ | ✅ | ⚠️ **string `"108 min"`**, no número. La doc decía «number» y era falso |
-| `language` | 284 | 5 | ✅ | ❌ | idioma hablado |
-| `genre` | 816 | 12 | ✅ | ✅ | género principal |
-| `synopsis` | 1114 | 12 | ✅ | ✅ | **siempre en español** — la traducción no es opcional |
-| `synopsis_en` | 996 | 12 | ✅ | ✅ | inglés; lo consume `i18n` |
-| `synopsis_lang` | 1105 | 12 | ❌ | ✅ | idioma de `synopsis`. **No lo lee la vista**: existe para los guardianes |
-| `rating` | 23 | 1 | ✅ | ❌ | clasificación por edades |
-| `premiere` | 272 | 4 | ✅ | ❌ | «World Premiere», «Película de Apertura»… |
-
-### Cuándo y dónde
-
-| campo | n | fest | app | val | qué es |
-|---|---|---|---|---|---|
-| `day` | 1209 | 12 | ✅ | ✅ | **requerido.** Clave exacta de `dayKeys` — ver § regla crítica |
-| `time` | 1209 | 12 | ✅ | ✅ | **requerido.** Hora de inicio |
-| `day_order` | 1209 | 12 | ✅ | ✅ | **derivado de `day`** — orden del día en la grilla |
-| `venue` | 1209 | 12 | ✅ | ✅ | **requerido.** Clave exacta de `venues{}` |
-| `sala` | 166 | 2 | ✅ | ✅ | sala DENTRO de la sede. Nunca en el nombre de la sede (`[sala-en-sede]`) |
-| `date` | 587 | 6 | ✅ | ✅ | ⚠️ **tipo mixto**: 287 `number`, 300 `string` |
-| `screenings` | 264 | 3 | ✅ | ✅ | varias funciones de la misma obra — ver § Screenings |
-| `unscheduled` | 5 | 1 | ✅ | ✅ | en el catálogo, sin jornada asignada todavía |
-
-### Cómo se entra — LA CASILLA OBLIGATORIA
-
-**Ninguna función puede callar sobre esto.** Un festival vigente donde ninguna
-función diga cómo se entra queda ROJO en `validate.py` (`[boleteria-muda]`,
-17 ago 2026). **Gratis se DECLARA; no se deja en blanco**, porque el silencio no
-es un dato: es una omisión, y en la app se ve igual que no haber montado nada.
-
-| campo | n | fest | app | val | qué es |
-|---|---|---|---|---|---|
-| `ticket_url` | 63 | 3 | ✅ | ✅ | URL de compra de **esta** función. ⚠️ `ticketUrl` en camelCase NO se lee |
-| `is_free` | 463 | 3 | ✅ | ❌ | entrada libre. Booleano de verdad — `"true"` como string no pinta nada |
-| `requires_registration` | 510 | 3 | ✅ | ❌ | hay que inscribirse |
-| `registration_url` | 12 | 2 | ✅ | ❌ | formulario de inscripción |
-
-En la raíz del JSON, `ticketing_model` acepta **solo** `'paid'` o `'mixed'`
-(guardián `[valor-inventado]`). Un tercer valor no falla: simplemente no pinta
-el badge, y nadie se entera.
-
-### Qué clase de cosa es
-
-| campo | n | fest | app | val | qué es |
-|---|---|---|---|---|---|
-| `type` | 798 | 9 | ✅ | ✅ | `'film'` \| `'event'` \| `'short'` |
-| `event_kind` | 54 | 4 | ✅ | ✅ | taller, ponencia, conversatorio… |
-| `is_cortos` + `film_list` | 834 / 845 | 11 | ✅ | ✅ | **modelo A · PROGRAMA** — ver arriba |
-| `is_programa` | 19 | 3 | ✅ | ✅ | contenedor con nombre propio |
-| `is_recurring` | 18 | 3 | ✅ | ❌ | se repite en varias jornadas (control de BLOQUE) |
-| `info` | 12 | 1 | ✅ | ✅ | drop-in sin hora fija — NO entra al plan. Ver abajo |
-| `is_awards_screening` | 8 | 1 | ✅ | ❌ | función de premiación |
-
-### Lo que la matiza
-
-| campo | n | fest | app | val | qué es |
-|---|---|---|---|---|---|
-| `has_qa` | 629 | 6 | ✅ | ❌ | hay Q&A — **afecta conflictos** (`durationForTravel`) |
-| `qa_type` | 16 | 1 | ✅ | ❌ | `'guests'`… |
-| `competencia` | 13 | 1 | ✅ | ❌ | competencia oficial a la que pertenece |
-| `premium` | 0 | 0 | ✅ | ❌ | gama alta. **Aún en ninguna rama publicada** — lo estrena TIFF. Solo `=== true` |
-
-### Enlaces y procedencia
-
-| campo | n | fest | app | val | qué es |
-|---|---|---|---|---|---|
-| `poster` | 1025 | 12 | ✅ | ✅ | URL, `/assets/…` o path TMDB. Reglas: `docs/POSTERS.md` |
-| `posterSource` | 1013 | 12 | ✅ | ✅ | `'tmdb'` \| `'letterboxd'` \| `'oficial'` \| `'editorial'` |
-| `posterPosition` | 90 | 1 | ✅ | ❌ | `'center'` (default) \| `'top'` \| `'bottom'` |
-| `lbSlug` | 565 | 8 | ✅ | ❌ | slug de Letterboxd. ⚠️ `lb_slug` NO se lee (`[campo-contrato]`) |
-| `slug` | 204 | 1 | ✅ | ❌ | slug propio del festival (URL de su web) |
-| `_src` | 560 | 4 | ✅ | ✅ | **de dónde salió el dato.** Toda obra nueva lo lleva |
-
-### Campos huérfanos — cero, y ese es el estado normal
-
-**El 17 ago 2026 había nueve y hoy no queda ninguno.** Viajaban en los JSON sin
-que ningún archivo de `src/` los mencionara: era el espejo del bug de boletería
-—allá el dato existía en la fuente y no lo emitimos; aquí lo buscábamos, lo
-guardábamos y no se pintaba nunca—.
-
-Salieron todos con la misma pregunta: **¿lo vamos a pintar?** Si la respuesta es
-no, es peso muerto, por limpio que esté el dato.
-
-| campo | eran | qué pasó |
-|---|---|---|
-| `trailer` | 37 | borrado — 36 tráilers que no había forma de ver |
-| `tematica` | 37 | borrado |
-| `qa_detail` | 21 | borrado — `qa_type` ya pinta la variante, y en tres idiomas |
-| `original_title` + `title_orig` | 38 | unificados, limpiados de 17 de ruido, y borrados |
-| `filmType` | 196 | borrado — lo dice ya `genre` |
-| `cycle` | 24 | borrado — era palabra real del festival; sigue en el crudo de FICMA |
-| `_tmdbId` | 24 | fusionado en `tmdb_id` |
-
-Los únicos que quedan sin lector en `src/` son `synopsis_lang` y `tmdb_id`, y los
-dos tienen dueño escrito: los guardianes y el pipeline. `[campo-huerfano]`
-bloquea cualquiera nuevo, y el guion bajo ya no sirve de escondite.
-
-
-
-Los dos pares de **mismo dato con dos nombres** quedaron cerrados el 17 ago
-2026: `_tmdbId` se fusionó en `tmdb_id` (24 ocurrencias). El par (`original_title`/`title_orig`) se unificó el 17 ago 2026 en
-`original_title`, y con él se fueron 17 valores que solo repetían el título. `synopsis_lang`
-no está en esta lista aunque la vista no lo lea: lo consumen los guardianes, y
-es deliberado.
-
-**Antes de añadir un campo nuevo, la pregunta es quién lo va a leer.** Si la
-respuesta es «alguien algún día», no se emite.
-
-### Campos de un solo festival, y los internos
-
-Sobreviven porque su festival los necesitaba y nadie los generalizó. No son
-canon: **si un onboarding nuevo los copia, es que le faltaba un campo real**.
-
-| campo | n | fest | app | qué es |
+| campo | tipo | formato / valores | en uso | notas |
 |---|---|---|---|---|
-| `synopsis_es` | 241 | 2 | ✅ | sinopsis en español cuando `synopsis` está en otro idioma |
-| `filmCategory` | 204 | 1 | ✅ | categoría propia de Tribeca (`Films`, …) |
-| `sessions` | 1 | 1 | ✅ | taller de varias sesiones (FICDEH) |
+| `title` | string | — | 1214 · 12 fest | Nombre oficial, verbatim del festival. La palabra la pone el festival. |
+| `section` | string | — | 1214 · 12 fest | Nombre VERBATIM del festival + nuestro emoji. Arquetipo de los 9 canónicos. |
+| `day` | string | `^\d{4}-\d{2}-\d{2}$` | 1209 · 12 fest | Clave exacta de dayKeys, en ISO. Los 5 festivales legacy usan «MAR 21» y quedan exentos. |
+| `time` | string | `^\d{2}:\d{2}$` | 1209 · 12 fest | 24h con dos dígitos. Nunca 12h con AM/PM. |
+| `venue` | string | ` - .+$` | 1209 · 12 fest | «Nombre de la Sede - Ciudad», SIEMPRE. La sala va en `sala`, nunca en el nombre. |
+| `day_order` | number | — | 1209 · 12 fest | **derivado de `day`** — no viene de ninguna fuente Orden del día en la grilla. |
 
-Los que empiezan por `_` son **notas de procedencia para nosotros**, no datos de
-la app: `_src_synopsis` (5) de dónde salió la sinopsis · `_pendiente` (5) qué le
-falta a esta obra · `_cupos` (7) aforo declarado · `_inherited` (1) qué se
-heredó de otro festival y por qué.
+### Cómo se entra — la casilla que no se deja en blanco
 
-`_tmdbId` estuvo aquí hasta el 17 ago 2026: eran los 16 `tmdb_id` de FINCA
-escritos con guion bajo, a salvo de `[campo-huerfano]` por el disfraz.
+| campo | tipo | formato / valores | en uso | notas |
+|---|---|---|---|---|
+| `ticket_url` | string | `^https://` | 63 · 3 fest | URL de compra de ESTA función. En snake_case: `ticketUrl` no lo lee nadie. |
+| `is_free` | boolean | — | 463 · 3 fest | Entrada libre. Booleano de verdad — la app compara con === true. |
+| `requires_registration` | boolean | — | 510 · 3 fest |  |
+| `registration_url` | string | `^https://` | 12 · 2 fest |  |
 
-Un campo `_` es una promesa a nuestro yo futuro: **explica una decisión**, no
-guarda un dato que la app deba pintar.
+### Todo lo demás
 
-### Cómo se vuelve a medir esto
+| campo | tipo | formato / valores | en uso | notas |
+|---|---|---|---|---|
+| `title_en` | string | — | 558 · 8 fest |  |
+| `director` | string | — | 1051 · 12 fest |  |
+| `year` | number | — | 968 · 12 fest | Entero. Dos festivales legacy lo tienen como string. |
+| `country` | string | — | 1108 · 12 fest |  |
+| `flags` | string | — | 1124 · 12 fest | **derivado de `country`** — no viene de ninguna fuente Emoji de bandera. NUNCA viene de la fuente: se calcula del país. |
+| `duration` | string | `^\d+ min$` | 1194 · 12 fest | «90 min». No es un número, y la doc dijo lo contrario durante meses. |
+| `language` | string | — | 284 · 5 fest |  |
+| `genre` | string | — | 816 · 12 fest |  |
+| `synopsis` | string | — | 1114 · 12 fest | SIEMPRE en español. La traducción no es opcional. |
+| `synopsis_en` | string | — | 996 · 12 fest |  |
+| `synopsis_es` | string | — | 241 · 2 fest |  |
+| `synopsis_lang` | string | `es` · `en` · `pt` | 1105 · 12 fest | no lo lee la vista: guardianes No lo lee la vista: lo consumen los guardianes ([paridad-derivados]). |
+| `rating` | string | — | 23 · 1 fest |  |
+| `premiere` | string | — | 272 · 4 fest | Texto libre del festival («World Premiere», «Estreno argentino»). |
+| `type` | string | `film` · `event` · `short` | 798 · 9 fest |  |
+| `event_kind` | string | — | 54 · 4 fest | Palabra del festival, verbatim (charla, taller, masterclass). Enum en validate-festivals. |
+| `is_cortos` | boolean | — | 834 · 11 fest | exige `film_list` Programa curado: exige film_list no vacío. |
+| `film_list` | array | — | 845 · 11 fest |  |
+| `is_programa` | boolean | — | 19 · 3 fest |  |
+| `is_recurring` | boolean | — | 18 · 3 fest |  |
+| `is_awards_screening` | boolean | — | 8 · 1 fest |  |
+| `info` | boolean | — | 12 · 1 fest | Drop-in sin hora fija: NO entra al plan ni a conflictos. |
+| `unscheduled` | boolean | — | 5 · 1 fest | En catálogo sin jornada. Única exención de day/time/venue. |
+| `sessions` | array | — | 1 · 1 fest |  |
+| `has_qa` | boolean | — | 629 · 6 fest | Afecta conflictos vía durationForTravel. |
+| `qa_type` | string | `team` · `guests` | 16 · 1 fest | La variante del Q&A. Se pinta traducida; NO se escribe la frase en el dato. |
+| `competencia` | string | — | 13 · 1 fest |  |
+| `premium` | boolean | — | — |  |
+| `sala` | string | — | 166 · 2 fest | Sala DENTRO de la sede. Que no aparezca en el nombre de la sede ([sala-en-sede]). |
+| `date` | string | `^\d{4}-\d{2}-\d{2}$` | 587 · 6 fest | Requerido si hay screenings[]. Tres festivales legacy lo tienen como número de día. |
+| `screenings` | array | — | 264 · 3 fest |  |
+| `poster` | string | — | 1025 · 12 fest | URL, /assets/… o path TMDB. poster:"" está PROHIBIDO. Reglas: docs/POSTERS.md |
+| `posterSource` | string | `tmdb` · `custom` · `editorial` · `letterboxd` · `oficial` | 1013 · 12 fest | **derivado de `poster`** — no viene de ninguna fuente |
+| `posterPosition` | string | `center` · `top` · `bottom` | 90 · 1 fest |  |
+| `lbSlug` | string | — | 565 · 8 fest | Slug de Letterboxd. En camelCase: `lb_slug` no lo lee nadie. |
+| `slug` | string | — | 204 · 1 fest |  |
+| `filmCategory` | string | — | 204 · 1 fest |  |
+| `tmdb_id` | number | — | 99 · 4 fest | no lo lee la vista: pipeline No lo lee la vista: lo usa el pipeline para reenriquecer sin volver a buscar. |
+| `_src` | — | — | 560 · 4 fest | De dónde salió el dato. Toda obra nueva lo lleva. |
 
-```bash
-python3 -c "import json,glob,collections;C=collections.Counter([k for f in glob.glob('festivals/*.json') for x in (json.load(open(f)).get('films') or []) for k in x]);print(C.most_common())"
-```
+### Excepciones con fecha de caducidad
+
+Festivales **vigentes** que aún no cumplen. A partir de la fecha, el validador
+deja de perdonar y se pone rojo: **una excepción sin fecha se vuelve permanente
+sola; ésta se vence sola.**
+
+| campo | festival | incumple | migra el | por qué espera |
+|---|---|---|---|---|
+| `venue` | finca-2026 | 30 | **2026-08-20** | FINCA cierra el 19 AGO y renombrar sus 6 sedes toca `_slotKey` (día\|hora\|sede\|sala), que es la ancla de los planes YA GUARDADOS de usuarios reales. Dos días de espera contra romper un plan en curso: se espera. |
+| `year` | ficdeh-2026 | 411 | **2026-08-20** | year llega como string. La app siempre hace String(f.year), por eso nunca se vio. Migra en el PR 2 — es seguro, no toca _slotKey. |
+| `year` | ficma-2026 | 76 | **2026-08-20** | ídem FICDEH. |
+
+### Excepciones congeladas (festivales archivados)
+
+Su edición ya pasó y reescribir su historia es riesgo sin beneficio. **Esta
+lista solo puede encoger**: ningún festival nuevo entra aquí.
+
+- `day` — ficci-65, cinemancia-2025, aff-2026, leviza-2026, tribeca-2026
+- `time` — tribeca-2026
+- `duration` — ficci-65, tribeca-2026, aff-2026, cinemancia-2025
+- `venue` — tribeca-2026, ficci-65, cinemancia-2025, aff-2026, olhar-2026, ficmontanas-2026, fantasofest-2026, tercertiempo-2026
+- `year` — ficci-65, tribeca-2026
+- `date` — ficci-65, tribeca-2026, aff-2026, cinemancia-2025
+
+<!-- CONTRATO:FIN -->
 
 ### Campo `info` — eventos informativos (no planificables)
 

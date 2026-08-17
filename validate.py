@@ -4197,6 +4197,52 @@ except Exception as _e:
 # de las dos listas de abajo, con su dueño escrito. Antes de añadir un campo, la
 # pregunta es QUIÉN LO VA A LEER; si la respuesta es «alguien algún día», no se
 # emite.
+# ── [contrato-vivo] el canon manda, y la doc se genera de él ────────────────
+# `pipeline/contrato.json` es el canon EJECUTABLE de una función. Este guardián
+# vigila las tres formas de que deje de serlo:
+#
+#   1. La doc se escribe a mano y diverge. Pasó: SCHEMA.md documentaba 24 campos
+#      de 60 y juraba que `duration` era un número. Ahora se GENERA del contrato
+#      y aquí se comprueba que esté regenerada.
+#   2. Un campo aparece en los datos y NO está en el contrato. Sin esto, el
+#      contrato envejece igual que envejeció la doc: callando.
+#   3. Una excepción con fecha se vence y nadie la mira. Una excepción sin fecha
+#      se vuelve permanente sola; la de aquí se vence sola, pero alguien tiene
+#      que enterarse el día que pasa.
+check = 'contrato-vivo'
+try:
+    import json as _j, glob as _g, subprocess as _sp, datetime as _dt
+    _C = _j.load(open('pipeline/contrato.json', encoding='utf-8'))
+    _prob = []
+    _r = _sp.run(['node', 'scripts/generate-schema-md.js', '--check'],
+                 capture_output=True, text=True)
+    if _r.returncode != 0:
+        _prob.append('SCHEMA.md desactualizado — correr: node scripts/generate-schema-md.js')
+    _en_datos = set()
+    for _f in _g.glob('festivals/*.json'):
+        for _x in (_j.load(open(_f, encoding='utf-8')).get('films') or []):
+            _en_datos |= set(_x)
+    _sin = sorted(_en_datos - set(_C['campos']) - {'_provenance'})
+    _sin = [_k for _k in _sin if not _k.startswith('_')]
+    if _sin:
+        _prob.append('campo(s) en los datos que el contrato no declara: ' + ', '.join(_sin[:6]))
+    _hoy = _dt.date.today().isoformat()
+    for _campo, _fests in (_C.get('_pendientes') or {}).items():
+        if _campo == '_doc':
+            continue
+        for _fest, _info in _fests.items():
+            if _info['migrar_el'] <= _hoy:
+                _prob.append(f'excepción VENCIDA: {_campo}@{_fest} debía migrar el {_info["migrar_el"]}')
+    if _prob:
+        fail(check, ' · '.join(_prob))
+    else:
+        _np = sum(len(_v) for _k, _v in (_C.get('_pendientes') or {}).items() if _k != '_doc')
+        ok(check, f'contrato al día: {len(_C["campos"])} campos, doc generada, '
+                  f'{_np} excepción(es) con fecha por vencer')
+except Exception as _e:
+    warn(check, f'no se pudo verificar contrato-vivo: {_e}')
+
+
 check = 'campo-huerfano'
 try:
     import json as _j, glob as _g, re as _r3
