@@ -169,7 +169,6 @@ function main() {
       qa_type: clean(get(r, 'qa_type')).toLowerCase(),
       requires_registration: truthy(get(r, 'requires_registration')),
       is_free: truthy(get(r, 'is_free')),
-      original_title: normTitle(get(r, 'original_title')),
       rating: clean(get(r, 'rating')),
       competencia: clean(get(r, 'competencia')),
     };
@@ -221,11 +220,6 @@ function main() {
     if (base.has_qa) { film.has_qa = true; if (base.qa_type) film.qa_type = base.qa_type; }
     if (base.requires_registration) film.requires_registration = true;
     if (base.is_free) film.is_free = true;
-    // El título original solo entra si DICE algo. Comparar crudo dejaba pasar
-    // «POR CIELO Y TIERRA» junto a «Por cielo y tierra»: 17 de los 38 que había
-    // el 17 ago 2026 eran la misma palabra con otras mayúsculas o tildes.
-    if (base.original_title && normKey(base.original_title) !== normKey(title))
-      film.original_title = base.original_title;
     if (base.rating) film.rating = base.rating;
     if (base.competencia) film.competencia = base.competencia;
     if (base.sala) film.sala = base.sala;

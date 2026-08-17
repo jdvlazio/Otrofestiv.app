@@ -253,7 +253,6 @@ lee `src/` · **val** = lo revisa `validate-festivals.js`.
 |---|---|---|---|---|---|
 | `title` | 1214 | 12 | ✅ | ✅ | **requerido.** Nombre oficial, verbatim |
 | `title_en` | 558 | 8 | ✅ | ✅ | título en inglés (o el original si el festival es hispano) |
-| `original_title` | 23 | 2 | ❌ | ❌ | título de la OBRA cuando difiere del que publica el festival. Se omite si es el mismo con otras mayúsculas o tildes (`[titulo-original-util]`). Aún sin cablear en la ficha |
 | `director` | 1051 | 12 | ✅ | ✅ | tal como lo publica el festival |
 | `year` | 968 | 12 | ✅ | ✅ | ⚠️ **tipo mixto**: 474 `number`, 491 `string`, 3 `null` |
 | `country` | 1108 | 12 | ✅ | ✅ | texto libre; multi-país con `/` o `,` |
@@ -337,10 +336,11 @@ el espejo del bug de boletería: allá el dato existía en la fuente y no lo
 emitimos; aquí lo buscamos, lo guardamos y no se pinta nunca.
 
 `filmType` (196) · `tmdb_id` (83, más `_tmdbId` en otro festival) ·
-`original_title` (23) · `cycle` (24).
+`cycle` (24).
 
-El 17 ago 2026 se borraron `trailer` (37), `tematica` (37) y `qa_detail` (21),
-y `title_orig` se unificó en `original_title`.
+El 17 ago 2026 se borraron `trailer` (37), `tematica` (37), `qa_detail` (21) y
+`original_title` (30, con `title_orig` ya unificado dentro): ninguno se pintaba
+en la ficha y la decisión fue no pintarlos.
 
 Los dos pares de **mismo dato con dos nombres** quedaron cerrados el 17 ago
 2026: `_tmdbId` se fusionó en `tmdb_id` (24 ocurrencias). El par (`original_title`/`title_orig`) se unificó el 17 ago 2026 en
