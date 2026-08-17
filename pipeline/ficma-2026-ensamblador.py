@@ -308,7 +308,7 @@ def main():
         e = {
             'title': TITULO_OFICIAL.get(f['titulo'], f['titulo']),
             'director': f['director'],
-            'year': str(f['anio']),
+            'year': int(f['anio']) if str(f['anio']).isdigit() else f['anio'],  # contrato: number
             # La duración es la del PDF, SIEMPRE: es la que el festival programó.
             # TMDB difiere hasta en 3 min y mover eso corre el fin de la función.
             'duration': f'{DURACION_OFICIAL.get(f["titulo"], f["duracion_min"])} min',

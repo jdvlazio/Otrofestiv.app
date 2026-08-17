@@ -31,7 +31,7 @@ fuente, escribe
 y las herramientas genéricas leen ESO, no el JSON de cada festival. N lectores
 → 1 formato → M herramientas. Documentado en pipeline/PROTOCOLO.md.
 """
-import json, re, subprocess, time, unicodedata, datetime
+import json, os, re, collections, subprocess, time, unicodedata, datetime
 
 # User-Agent de navegador: ficdeh.com (Vercel) y varios CDN bloquean curl pelado.
 UA = ('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 '
@@ -290,6 +290,55 @@ def cargar_crudo(path):
     return d
 
 
+# ── el contrato, aplicado al escribir ────────────────────────────────────────
+# `pipeline/contrato.json` declara el tipo de cada campo. Esta función lo APLICA
+# en el último paso antes de publicar: es el sitio por donde pasa todo festival,
+# y por tanto el único donde una corrección llega a todos.
+#
+# Por qué existe: FICDEH y FICMA —los dos festivales MÁS RECIENTES— emitían
+# `year` como string mientras los otros diez lo emitían como número. Nadie lo
+# vio nunca porque la app hace `String(f.year)` en las cuatro superficies donde
+# lo pinta. Un dato puede estar mal tipado durante meses si la app es amable con
+# él; el contrato no lo es, y ese es el punto.
+#
+# NO INVENTA: lo que no puede convertir lo deja como está y lo reporta, para que
+# la decisión la tome una persona. Un `year: ''` no se vuelve 0 — se omite, que
+# es lo que significa.
+_CONTRATO = None
+
+
+def contrato():
+    global _CONTRATO
+    if _CONTRATO is None:
+        _CONTRATO = json.load(open(f'{os.path.dirname(os.path.abspath(__file__))}'
+                                   '/contrato.json', encoding='utf-8'))
+    return _CONTRATO
+
+
+def normaliza(film, reporte=None):
+    """Coacciona los tipos del contrato en UN film. Devuelve el film."""
+    for k, spec in contrato()['campos'].items():
+        if k not in film:
+            continue
+        v = film[k]
+        if v is None or v == '':
+            del film[k]                      # el campo vacío se OMITE, no se emite
+            continue
+        if spec.get('tipo') == 'number' and not isinstance(v, bool) and isinstance(v, str):
+            if v.strip().isdigit():
+                film[k] = int(v)
+                if reporte is not None:
+                    reporte[k] += 1
+            elif reporte is not None:
+                reporte[f'{k}!NO-CONVERTIBLE'] += 1
+        if spec.get('tipo') == 'boolean' and isinstance(v, str):
+            if v.lower() in ('true', 'false'):
+                film[k] = (v.lower() == 'true')
+                if reporte is not None:
+                    reporte[k] += 1
+    return film
+
+
 # ── selftest ─────────────────────────────────────────────────────────────────
 def _selftest():
     ok = [0]
@@ -311,6 +360,12 @@ def _selftest():
     t('director distinto', director_coincide('Lina Rodríguez', ['Maider Oleaga']), False)
     t('director tokens cortos', director_coincide('Gala del Sol', ['Gala del Sol']), True)
     # acceso — las frases REALES que escriben los festivales
+    _rep = collections.Counter()
+    t('normaliza year string→int', normaliza({'year': '1998'}, _rep)['year'], 1998)
+    t('normaliza year vacío se OMITE', 'year' in normaliza({'year': ''}), False)
+    t('normaliza year no numérico se respeta', normaliza({'year': 'circa 1970'}, _rep)['year'], 'circa 1970')
+    t('normaliza is_free "true"→True', normaliza({'is_free': 'true'})['is_free'], True)
+    t('normaliza no toca lo que ya está bien', normaliza({'year': 2026})['year'], 2026)
     t('acceso libre (Cinemateca)', acceso_campos('Entrada libre'), {'is_free': True})
     t('acceso gratuito (FINCA)', acceso_campos('Entrada gratuita. Por orden de llegada.'), {'is_free': True})
     t('acceso libre todo el fest (FICMA)', acceso_campos('Entrada libre a todo el festival'), {'is_free': True})

@@ -306,18 +306,6 @@
     "migrar_el": "2026-08-20",
     "motivo": "FINCA cierra el 19 AGO y renombrar sus 6 sedes toca `_slotKey` (día|hora|sede|sala), que es la ancla de los planes YA GUARDADOS de usuarios reales. Dos días de espera contra romper un plan en curso: se espera."
    }
-  },
-  "year": {
-   "ficdeh-2026": {
-    "incumple": 411,
-    "migrar_el": "2026-08-20",
-    "motivo": "year llega como string. La app siempre hace String(f.year), por eso nunca se vio. Migra en el PR 2 — es seguro, no toca _slotKey."
-   },
-   "ficma-2026": {
-    "incumple": 76,
-    "migrar_el": "2026-08-20",
-    "motivo": "ídem FICDEH."
-   }
   }
  }
 }

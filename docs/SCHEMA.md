@@ -268,8 +268,8 @@ está pasando de verdad — no lo que alguien recordaba al escribirlo.
 | campo | tipo | formato / valores | en uso | notas |
 |---|---|---|---|---|
 | `title_en` | string | — | 558 · 8 fest |  |
-| `director` | string | — | 1051 · 12 fest |  |
-| `year` | number | — | 968 · 12 fest | Entero. Dos festivales legacy lo tienen como string. |
+| `director` | string | — | 1049 · 12 fest |  |
+| `year` | number | — | 964 · 12 fest | Entero. Dos festivales legacy lo tienen como string. |
 | `country` | string | — | 1108 · 12 fest |  |
 | `flags` | string | — | 1124 · 12 fest | **derivado de `country`** — no viene de ninguna fuente Emoji de bandera. NUNCA viene de la fuente: se calcula del país. |
 | `duration` | string | `^\d+ min$` | 1194 · 12 fest | «90 min». No es un número, y la doc dijo lo contrario durante meses. |
@@ -284,7 +284,7 @@ está pasando de verdad — no lo que alguien recordaba al escribirlo.
 | `type` | string | `film` · `event` · `short` | 798 · 9 fest |  |
 | `event_kind` | string | — | 54 · 4 fest | Palabra del festival, verbatim (charla, taller, masterclass). Enum en validate-festivals. |
 | `is_cortos` | boolean | — | 834 · 11 fest | exige `film_list` Programa curado: exige film_list no vacío. |
-| `film_list` | array | — | 845 · 11 fest |  |
+| `film_list` | array | — | 401 · 10 fest |  |
 | `is_programa` | boolean | — | 19 · 3 fest |  |
 | `is_recurring` | boolean | — | 18 · 3 fest |  |
 | `is_awards_screening` | boolean | — | 8 · 1 fest |  |
@@ -316,8 +316,6 @@ sola; ésta se vence sola.**
 | campo | festival | incumple | migra el | por qué espera |
 |---|---|---|---|---|
 | `venue` | finca-2026 | 30 | **2026-08-20** | FINCA cierra el 19 AGO y renombrar sus 6 sedes toca `_slotKey` (día\|hora\|sede\|sala), que es la ancla de los planes YA GUARDADOS de usuarios reales. Dos días de espera contra romper un plan en curso: se espera. |
-| `year` | ficdeh-2026 | 411 | **2026-08-20** | year llega como string. La app siempre hace String(f.year), por eso nunca se vio. Migra en el PR 2 — es seguro, no toca _slotKey. |
-| `year` | ficma-2026 | 76 | **2026-08-20** | ídem FICDEH. |
 
 ### Excepciones congeladas (festivales archivados)
 
