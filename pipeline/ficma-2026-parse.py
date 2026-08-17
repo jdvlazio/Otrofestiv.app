@@ -10,6 +10,8 @@ Cada etiqueta —DIRECCIÓN:, PAÍS:, DURACIÓN:, AÑO:, LUGAR:, HORA:— toma c
 valor la línea siguiente de SU columna, no la siguiente del documento.
 """
 import json, re, os, unicodedata, collections
+import sys, os as _os; sys.path.insert(0, _os.path.dirname(_os.path.abspath(__file__)))
+import lib  # dueño único de norm/hora24/sinacento — [lib-unica]
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ST = f'{REPO}/festivals/staging'
@@ -58,12 +60,10 @@ ETIQUETAS = {'DIRECCIÓN':'director','DIRECCION':'director','PAÍS':'pais','PAIS
              'LUGAR':'sede','HORA':'hora'}
 
 
-def sinacento(s):
-    return ''.join(c for c in unicodedata.normalize('NFD', s.upper())
-                   if unicodedata.category(c) != 'Mn')
-
-
-def hora24(s):
+# [lib-unica] renombrada desde `hora24` el 17 ago 2026.
+# Devuelve «» cuando la hora YA viene en 24h — es un parser de la franja del
+# PDF, no un conversor. `lib.hora24` devuelve la hora tal cual.
+def hora24_pdf(s):
     m = re.search(r'(\d{1,2})[:.](\d{2})\s*([ap])', s.strip(), re.I)
     if not m:
         return ''
@@ -93,20 +93,20 @@ def main():
         # como sección, otras junto a la columna y se lee como país. Se guarda
         # como has_qa (arriba, sobre el texto completo) y se saca del flujo.
         SELLO = re.compile(r'^(PRESENCIA|DEL DIRECTOR|DE LA DIRECTOR)', re.I)
-        ls = [l for l in ls if not SELLO.match(sinacento(l['t']).strip())]
+        ls = [l for l in ls if not SELLO.match(lib.sinacento(l['t']).strip())]
 
         # ── portada de día: «PROGRAMACIÓN / LUNES 10 DE AGOSTO DE 2026» ──
         mp = re.search(rf'({DIAS})\s+(\d{{1,2}})\s+DE\s+([A-ZÁÉÍÓÚ]+)\s+DE\s+(\d{{4}})',
-                       sinacento(texto).replace('  ', ' '), re.I)
-        if mp and 'PROGRAMACION' in sinacento(texto):
-            mes = MES.get(sinacento(mp.group(3)), 0)
+                       lib.sinacento(texto).replace('  ', ' '), re.I)
+        if mp and 'PROGRAMACION' in lib.sinacento(texto):
+            mes = MES.get(lib.sinacento(mp.group(3)), 0)
             dia_actual = f'{mp.group(4)}-{mes:02d}-{int(mp.group(2)):02d}'
             portadas.append({'pagina': pag, 'dia': dia_actual, 'rotulo': mp.group(0)})
             continue
 
         # ── página de función ──
         col = [l for l in ls if COL_X <= l['x'] <= COL_X_MAX]
-        es_etiqueta = lambda t: ETIQUETAS.get(sinacento((re.match(r'^([A-ZÁÉÍÓÚÑ]+)\s*:', t.strip()) or [None, ''])[1]))
+        es_etiqueta = lambda t: ETIQUETAS.get(lib.sinacento((re.match(r'^([A-ZÁÉÍÓÚÑ]+)\s*:', t.strip()) or [None, ''])[1]))
         campos = {}
         for i, l in enumerate(col):
             k = es_etiqueta(l['t'])
@@ -157,9 +157,9 @@ def main():
         titulo = re.sub(r'\s+', ' ', mt.group(1) if mt else resto).strip()
         # «PRESENCIA DEL DIRECTOR», sello en la esquina: es un Q&A. Solo lo trae
         # esta fuente; ninguna otra lo publica.
-        has_qa = 'PRESENCIA' in sinacento(texto) and 'DIRECTOR' in sinacento(texto)
+        has_qa = 'PRESENCIA' in lib.sinacento(texto) and 'DIRECTOR' in lib.sinacento(texto)
         # badge superior derecho: «JUEVES 13» y «3:00 PM»
-        badge_dia = next((l['t'] for l in ls if l['y'] < 0.08 and re.match(rf'({DIAS})\s+\d', sinacento(l['t']))), '')
+        badge_dia = next((l['t'] for l in ls if l['y'] < 0.08 and re.match(rf'({DIAS})\s+\d', lib.sinacento(l['t']))), '')
         badge_hora = next((l['t'] for l in ls if l['y'] < 0.08 and re.search(r'\d{1,2}:\d{2}\s*[AP]', l['t'], re.I)), '')
 
         dur = re.search(r'(\d+)', campos.get('duracion', ''))
@@ -168,7 +168,7 @@ def main():
             'pagina': pag,
             'dia': dia_actual,
             'dia_badge': badge_dia,
-            'hora': hora24(campos.get('hora', '')) or hora24(badge_hora),
+            'hora': hora24_pdf(campos.get('hora', '')) or hora24_pdf(badge_hora),
             'sede': campos.get('sede', ''),
             'seccion': seccion,
             'titulo': titulo,

@@ -21,6 +21,8 @@ Dos cosas que solo trae esta fuente y que el resto del onboarding necesita:
     cambio, llevan ENTRADA LIBRE impreso.
 """
 import json, os, re, unicodedata, datetime
+import sys, os as _os; sys.path.insert(0, _os.path.dirname(_os.path.abspath(__file__)))
+import lib  # dueño único de norm/hora24/sinacento — [lib-unica]
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ST = f'{REPO}/festivals/staging'
@@ -108,11 +110,6 @@ CAMBIOS = {
 }
 
 
-def sinacento(s):
-    return ''.join(c for c in unicodedata.normalize('NFD', (s or '').upper())
-                   if unicodedata.category(c) != 'Mn')
-
-
 def a24(h, m, ampm):
     h = int(h)
     if ampm == 'pm' and h != 12:
@@ -149,12 +146,12 @@ def main():
     for pag in sorted(d, key=lambda k: int(re.search(r'(\d+)', k).group(1))):
         ls = sorted([l for l in d[pag] if l['w'] > l['h']], key=lambda l: l['y'])
         texto = ' '.join(l['t'] for l in ls)
-        tipo = ('taller' if re.search(r'\bTALLERES\b', sinacento(texto)) else
-                'charla' if re.search(r'\bCHARLAS\b', sinacento(texto)) else '')
+        tipo = ('taller' if re.search(r'\bTALLERES\b', lib.sinacento(texto)) else
+                'charla' if re.search(r'\bCHARLAS\b', lib.sinacento(texto)) else '')
         # Los días viven en el badge superior; «LUNES 10 Y MARTES 11» = dos sesiones.
         badge = ' '.join(l['t'] for l in ls if l['y'] < 0.09)
         dias = [f'{ANIO}-{MES:02d}-{int(x):02d}'
-                for x in re.findall(rf'(?:{DIAS})\s+(\d{{1,2}})', sinacento(badge))]
+                for x in re.findall(rf'(?:{DIAS})\s+(\d{{1,2}})', lib.sinacento(badge))]
         if not tipo or not dias:
             continue                          # portadas y contraportada
 
@@ -166,7 +163,7 @@ def main():
         # Columna de datos: IZQUIERDA. Cada etiqueta toma las líneas hasta la
         # siguiente etiqueta de su columna.
         col = [l for l in ls if l['x'] < 0.45 and l['y'] > 0.30]
-        es_etq = lambda t: ETIQUETAS.get(sinacento((re.match(r'^([A-ZÁÉÍÓÚÑ]+)\s*:', t.strip()) or [None, ''])[1]))
+        es_etq = lambda t: ETIQUETAS.get(lib.sinacento((re.match(r'^([A-ZÁÉÍÓÚÑ]+)\s*:', t.strip()) or [None, ''])[1]))
         campos = {}
         for i, l in enumerate(col):
             k = es_etq(l['t'])
@@ -196,7 +193,7 @@ def main():
             'modera': campos.get('modera', ''),
             'cupos': int(mc.group(1)) if mc else None,
             'requires_registration': 'inscrip' in cupos.lower(),
-            'entrada_libre': 'ENTRADA LIBRE' in sinacento(texto),
+            'entrada_libre': 'ENTRADA LIBRE' in lib.sinacento(texto),
             'is_recurring': len(dias) > 1,
             'registration_url': REGISTRO.get(titulo, ''),
             'synopsis': SINOPSIS.get(titulo, ''),

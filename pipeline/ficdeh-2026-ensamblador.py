@@ -11,15 +11,12 @@ Decisiones aplicadas (Juan): entran 18 charlas + 9 talleres abiertos; fuera
 industria y sedes en el extranjero. Multi-ciudad: cada venue lleva `city`.
 """
 import json, re, unicodedata, collections, datetime, os
+import sys, os as _os; sys.path.insert(0, _os.path.dirname(_os.path.abspath(__file__)))
+import lib  # dueño único de norm/hora24/sinacento — [lib-unica]
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CAT  = json.load(open(f'{REPO}/festivals/staging/ficdeh-2026.json', encoding='utf-8'))
 PROG = json.load(open(f'{REPO}/festivals/staging/ficdeh-2026-programacion-oficial.json', encoding='utf-8'))
-
-def norm(s):
-    s = unicodedata.normalize('NFD', (s or '').lower())
-    s = ''.join(c for c in s if unicodedata.category(c) != 'Mn')
-    return re.sub(r'[^a-z0-9]+', ' ', s).strip()
 
 # ── catálogo indexado ────────────────────────────────────────────────────────
 by_title = {f['title']: f for f in CAT['films']}
@@ -126,7 +123,10 @@ def _norm(s):
     return re.sub(r'[^a-z0-9]+', ' ', s).strip()
 
 
-def sede_sala(f):
+# [lib-unica] renombrada desde `sede_sala` el 17 ago 2026.
+# Recibe la FUNCIÓN entera y arbitra tres fuentes (guía PDF > sala explícita >
+# nombre de la sede). `lib.sede_sala(nombre, tabla)` solo aplica la tabla.
+def sede_sala_de_funcion(f):
     """→ (sede, sala). Manda la guía en PDF; luego la sala explícita de la
     programación; por último la que venía metida en el nombre de la sede."""
     sede, sala = SEDE_SALA.get(f['sede'], (f['sede'], ''))
@@ -136,7 +136,7 @@ def sede_sala(f):
 
 venues = {}
 def venue_key(f):
-    sede, _ = sede_sala(f)
+    sede, _ = sede_sala_de_funcion(f)
     key = f'{sede} - {f["ciudad"]}'
     if key not in venues:
         g = GEO.get(key, {})
@@ -201,7 +201,7 @@ for f in sorted(funcs, key=lambda x: (x['dia'], x['hora'], x['ciudad'])):
     base = {'day': f['dia'], 'time': f['hora'], 'venue': venue_key(f),
             'day_order': dias.index(f['dia']),
             'has_qa': False, 'is_cortos': False, 'film_list': None,
-            **({'sala': sede_sala(f)[1]} if sede_sala(f)[1] else {}),
+            **({'sala': sede_sala_de_funcion(f)[1]} if sede_sala_de_funcion(f)[1] else {}),
             # is_free/requires_registration salen del 'tipo de ingreso' que
             # publica cada función en la programación oficial.
             'is_free': f.get('ingreso','').strip().lower().startswith('entrada libre') or not f.get('ingreso'),

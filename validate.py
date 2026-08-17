@@ -4209,6 +4209,49 @@ except Exception as _e:
 #   3. Una excepción con fecha se vence y nadie la mira. Una excepción sin fecha
 #      se vuelve permanente sola; la de aquí se vence sola, pero alguien tiene
 #      que enterarse el día que pasa.
+# ── [lib-unica] una función, un dueño ───────────────────────────────────────
+# `pipeline/lib.py` existe para que la lógica común se escriba UNA vez. El 17
+# ago 2026 se midió cuánto de eso era verdad: 7 de sus 17 funciones tenían
+# copias sueltas, `norm()` estaba reescrita en SEIS scripts y solo 5 de 28
+# scripts importaban lib.
+#
+# Y al comparar comportamiento con entradas reales apareció algo peor que un
+# duplicado: **el mismo nombre significaba cosas distintas**. `norm()` devuelve
+# un string en lib, un `set` en ficma-repesca y una `list` en ficma-tmdb;
+# `slug()` quita acentos en lib y los conserva en ficma («rebelion» vs
+# «rebelión»); `hora24()` devuelve la hora en lib y «» en ficma-parse cuando ya
+# venía en 24h. Leer un script y suponer la semántica del otro era un bug
+# esperando fecha.
+#
+# LA REGLA, en dos ramas: si la copia hace LO MISMO, se borra y se importa de
+# lib. Si hace otra cosa, se RENOMBRA para que lo diga. Lo que no se permite es
+# que dos cosas distintas compartan nombre.
+check = 'lib-unica'
+try:
+    import ast as _ast, glob as _g4, os as _os4
+    _libf = {_n.name for _n in _ast.parse(open('pipeline/lib.py', encoding='utf-8').read()).body
+             if isinstance(_n, _ast.FunctionDef) and not _n.name.startswith('_')}
+    _col = []
+    for _p in sorted(_g4.glob('pipeline/*.py')):
+        if _os4.path.basename(_p) == 'lib.py':
+            continue
+        try:
+            _t = _ast.parse(open(_p, encoding='utf-8').read())
+        except SyntaxError:
+            continue
+        for _n in _t.body:
+            if isinstance(_n, _ast.FunctionDef) and _n.name in _libf:
+                _col.append(f'{_os4.path.basename(_p)}::{_n.name}()')
+    if _col:
+        fail(check, 'función de pipeline/ que se llama igual que una de lib.py — '
+                    'o hace lo mismo (importala) o hace otra cosa (renombrala): '
+                    + '; '.join(_col[:6]))
+    else:
+        ok(check, f'ninguna de las {len(_libf)} funciones de lib.py tiene copia con su nombre')
+except Exception as _e:
+    warn(check, f'no se pudo verificar lib-unica: {_e}')
+
+
 check = 'contrato-vivo'
 try:
     import json as _j, glob as _g, subprocess as _sp, datetime as _dt
