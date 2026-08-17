@@ -589,9 +589,19 @@ export function renderFilmAlternatives(state,title,day,time){
   // lee de PLAN_CITY_VENUES, y sin esto solo estaba fresca tras pasar por
   // Calcular — quien armaba el plan a mano veía el panel sin filtro.
   globalThis.PLAN_CITY_VENUES=planCityVenues();
+  // Las hermanas de BLOQUE no son alternativas: son la misma función. Cambiar
+  // una por otra no cambia nada real —misma sala, misma hora, seguís sentado en
+  // el mismo sitio— y el plan igual registraba el cambio, así que después
+  // Sugerencias ofrecía «Restaurar» lo recién sacado. Medido con «Sukua» (FICDEH,
+  // 13 AGO 11:00): 5 alternativas ofrecidas, 4 eran sus propias compañeras.
+  // El concepto ya tiene dueño: screensConflict devuelve false entre hermanas de
+  // _slotKey por esta misma razón; este panel no lo estaba consultando.
+  const _base=FILMS.find(f=>f.title===title&&f.day===day&&f.time===time);
+  const _baseSlot=_base&&_base._slotKey;
   const opts=FILMS.filter(f=>{
     if(f.day!==day) return false;
     if(f.title===title) return false;
+    if(_baseSlot&&f._slotKey===_baseSlot) return false;
     if(plannedTitles.has(f.title)) return false;
     if(watched.has(f.title)) return false;
     if(!screeningPlannable(f)) return false;
