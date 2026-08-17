@@ -26,7 +26,7 @@ import { cloudScreeningKey } from '../domain/delays.js';
 // Es la ÚNICA dependencia view→controller permitida (fijada en validate.py [view-purity]).
 import { getConsensusMap } from '../controller/delays-cloud.js';
 import {
-  screeningPassed, screeningEnded, screeningNow, screeningEndDate, effectiveDuration, blockDuration, durationForTravel, delayedEndMin, _delayKey, _endedStats,
+  screeningPassed, screeningEnded, screeningNow, screeningQaOnly, screeningEndDate, effectiveDuration, blockDuration, durationForTravel, delayedEndMin, _delayKey, _endedStats,
 } from '../domain/film.js';
 import {
   isScreeningBlocked, screeningPlannable, screensConflict, screensConflictReason,
@@ -793,8 +793,16 @@ export function renderContextualHeader(state, consensus){
     // Horas + minutos cuando pasa de 59 min ("En 5 h 35"), minutos pelados por debajo
     // ("En 45 min") — pedir "335 min" obliga a calcular (regla de Juan, 17 jul).
     // _minFmt es el formateador único (mismo del detalle de conflictos).
+    // «Termina en 0 min» durante media hora: el rótulo EN CURSO contaba con Q&A
+    // (fin efectivo) y la cuenta sin él (fin de bloque) — dos relojes en una
+    // frase. Medido en FINCA con «¿Cuán profundo es tu amor?» (19:00, película
+    // hasta 20:41, función hasta 21:11): a las 20:50 y a las 21:05 decía cero.
+    // En esa ventana el badge dice Q&A, que es lo único cierto que queda.
+    const _qaAhora=isNow&&screeningQaOnly(next,_nowMin);
     const badge=isNow
-      ?`<span class="ctx-next-badge ending">${t('plan_termina_en')} ${_minFmt(_leftMin)}</span>`
+      ?(_qaAhora
+        ?`<span class="ctx-next-badge qa-only">${t('label_qa_ahora')}</span>`
+        :`<span class="ctx-next-badge ending">${t('plan_termina_en')} ${_minFmt(_leftMin)}</span>`)
       :`<span class="ctx-next-badge">${t('plan_en_min')} ${_minFmt(minsUntil)}</span>`;
     const _filmObj=FILMS.find(f=>f.title===next._title);
     const _isEvent=_filmObj&&_filmObj.type==='event';

@@ -12,7 +12,7 @@
 
 import { NOTICES, SECTION_ORDER_LIST, _DEFAULT_FEST_ID } from '../config.js';
 import { ICONS, _secLabel, _secLabelFull, _sectionColor, escXML, makeEventPoster, makeProgramPoster, parseProgramTitle } from './components.js';
-import { _dayChips, _getItemPoster, _metaBadges, _plistPosterHtml, _programaStack, dayLabel, durFmt, emptyState, getFilmPoster, isNowShowing, posterParts, sala, vcfg, venueMatches, venueCity } from './helpers.js';
+import { _dayChips, _getItemPoster, _metaBadges, _plistPosterHtml, _programaStack, dayLabel, durFmt, emptyState, getFilmPoster, isNowShowing, isQaOnlyNow, posterParts, sala, vcfg, venueMatches, venueCity } from './helpers.js';
 import { festivalEnded, toMin } from '../domain/time.js';
 import { screeningPassed } from '../domain/film.js';
 import { state } from '../state/state.js';
@@ -165,6 +165,7 @@ export function renderProgramaListHTML(state){
       const inWL=watchlist.has(f.title);
       const passed=screeningPassed(f);
       const isNow=isNowShowing(f);
+      const isQa=isNow&&isQaOnlyNow(f);
 
       const _isPrograma=f.is_programa&&f.film_list&&f.film_list.length>=2;
       const{displayTitle:_rawDt}=parseProgramTitle(f.title);
@@ -173,7 +174,12 @@ export function renderProgramaListHTML(state){
         :_rawDt;
       const vc=vcfg(f.venue);
       const src=getFilmPoster(f)||'';
-      const nowBadge=isNow?`<span class="film-check-badge">${t('misc_ahora')}</span>`:'';
+      // En la ventana del Q&A el badge dice Q&A (ámbar), no AHORA (verde): la
+      // película ya terminó y lo que sigue son los ~30 min ESTIMADOS de la
+      // charla. Ver screeningQaOnly (dominio) para la medición que lo motivó.
+      const nowBadge=isNow
+        ?`<span class="film-check-badge${isQa?' qa-only':''}">${isQa?t('label_qa_ahora'):t('misc_ahora')}</span>`
+        :'';
       // El dato viene SELLADO en la función por el loader (_cancelled/_movedFrom):
       // el listado ya no busca en NOTICES. Y para una movida, la hora que muestra la
       // card ES la nueva — el detalle "pasa a…" quedó redundante y se retiró.
@@ -456,6 +462,7 @@ export function render(){
     const passed=screeningPassed(f);
     const inWL=watchlist.has(f.title),inW=watched.has(f.title);
     const isNow=isNowShowing(f);
+    const isQa=isNow&&isQaOnlyNow(f);
     const safeT=f.title.replace(/"/g,'&quot;').replace(/'/g,"&#39;");
     const posterSrc=getFilmPoster(f);
     const _cardBg2='';
@@ -463,7 +470,9 @@ export function render(){
       ?`<img class="img-cover" src="${posterSrc}" loading="lazy" data-title="${f.title.replace(/"/g,'&quot;')}" onerror="_posterErr(this)" alt="">`
       :``;
     const progBadge='';//REMOVED
-    const nowBadge=isNow?`<div class="poster-now">${t('misc_ahora')}</div>`:'';
+    const nowBadge=isNow
+      ?`<div class="poster-now${isQa?' qa-only':''}">${isQa?t('label_qa_ahora'):t('misc_ahora')}</div>`
+      :'';
     const pastBadge=f._cancelled?`<div class="badge-past poster-past-badge">${t('notice_cancelada')}</div>`
       :f._movedFrom?`<div class="badge-past poster-past-badge">${t('notice_reprog_short')}</div>`:'';
 

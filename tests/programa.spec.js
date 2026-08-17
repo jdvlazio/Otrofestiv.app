@@ -947,3 +947,40 @@ test('T71 — Mi Plan: el destino primero, y «Sin confirmar» es sección, no c
   // 5· el badge dice cuántas quedan por confirmar
   expect(g.badge, 'la cuenta está a la vista').toBe(String(g.pendientes));
 });
+
+// Ronda 4 (auditor de fin de festival): «AHORA» en verde sobre una película que
+// ya terminó. isNowShowing usa el fin EFECTIVO (con Q&A), correcto para el
+// planificador —la función te ocupa hasta el final— pero no para el que lee: el
+// fin de la película es DATO y el del Q&A es ESTIMACIÓN (FESTIVAL_QA_MIN, «la UI
+// la declara, nunca la afirma»). Medido en FINCA, 16 de 30 obras con Q&A.
+// Y Mi Plan estaba peor: el rótulo contaba con Q&A y la cuenta sin él, así que
+// decía «Termina en 0 min» durante media hora.
+test('T72 — en la ventana del Q&A el badge dice Q&A, no AHORA', async ({ page }) => {
+  await enterFestival(page, 'finca2026', '2026-08-17T12:00:00-03:00');
+  const leer = async (hora) => page.evaluate(async (hh) => {
+    const f = FILMS.find(x => x.title.startsWith('¿Cuán profundo'));
+    _simTime = `${f.day}T${hh}:00-03:00`;
+    state.set('savedAgenda', { scenarioIdx: 0, schedule: [Object.assign({}, f, { _title: f.title })] });
+    switchMainNav('mnav-cartelera');
+    if (typeof _renderProgramaContent === 'function') _renderProgramaContent();
+    await new Promise(r => setTimeout(r, 800));
+    const p = document.querySelector('.film-check-badge, .poster-now');
+    switchMainNav('mnav-miplan'); showAgView();
+    await new Promise(r => setTimeout(r, 1000));
+    const b = document.querySelector('.ctx-next-badge');
+    return { prog: p && { txt: p.textContent.trim(), qa: p.classList.contains('qa-only') },
+      plan: b && { txt: b.textContent.trim(), qa: b.classList.contains('qa-only') } };
+  }, hora);
+
+  // La obra: 19:00, película hasta 20:41, función (con Q&A) hasta 21:11
+  const conPeli = await leer('20:00');
+  expect(conPeli.prog.txt, 'con la película en curso, AHORA').toBe('AHORA');
+  expect(conPeli.prog.qa, 'y no es el estado de Q&A').toBe(false);
+  expect(conPeli.plan.txt, 'Mi Plan cuenta lo que falta de película').toBe('Termina en 41 min');
+
+  const enQa = await leer('20:50');
+  expect(enQa.prog.txt, 'terminada la película, el badge dice Q&A').toBe('Q&A');
+  expect(enQa.prog.qa, 'con su acento ámbar').toBe(true);
+  expect(enQa.plan.txt, 'y Mi Plan deja de contar cero durante media hora').toBe('Q&A');
+  expect(enQa.plan.qa, 'también en ámbar').toBe(true);
+});

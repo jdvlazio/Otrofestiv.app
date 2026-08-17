@@ -13,8 +13,8 @@ import {
 // _langDates se REEXPORTA: el dueño vive en components.js (helpers importa
 // components — el ciclo decide dónde vive; ver el comentario del dueño).
 export { _langDates };
-import { toMin, minToStr, parseDur, simNow, simTodayStr, _festDate } from '../domain/time.js';
-import { effectiveDuration, screeningBlockEndMin } from '../domain/film.js';
+import { toMin, minToStr, parseDur, simNow, simTodayStr, _festDate, _festNowMin } from '../domain/time.js';
+import { effectiveDuration, screeningBlockEndMin, screeningQaOnly } from '../domain/film.js';
 import { _resolveVenue, travelMins } from '../domain/festival.js';
 import { state } from '../state/state.js';
 import { t } from '../i18n/i18n.js';
@@ -331,6 +331,14 @@ export function isNowShowing(f){
   // effectiveDuration (Q&A incluido) — mismo fin de función que el planificador.
   const end=new Date(start.getTime()+effectiveDuration(f)*60000);
   return now>=start&&now<=end;
+}
+
+// isQaOnlyNow — «la película ya terminó, queda el Q&A». Mismo encuadre que
+// isNowShowing (aplazado, fecha del festival, reloj simulado) pero delegando el
+// veredicto en el dominio: screeningQaOnly es el dueño único de la ventana.
+export function isQaOnlyNow(f){
+  if(!isNowShowing(f)) return false;
+  return screeningQaOnly(f,_festNowMin());
 }
 
 export function isToday(day){
