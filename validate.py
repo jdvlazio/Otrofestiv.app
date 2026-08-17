@@ -4159,6 +4159,54 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar sala-en-sede: {_e}')
 
+# ── [boleteria-muda] un festival entero sin una palabra sobre cómo se entra ──
+# EL HUECO QUE TAPA. Los guardianes de boletería que ya teníamos vigilan la
+# COHERENCIA de lo emitido: que el badge lo decida ticketBadgeTarget(), que
+# `ticketing_model` use el vocabulario real, que `ticketUrl` no se escriba en
+# camelCase. Ninguno vigilaba la AUSENCIA. Un festival puede salir a producción
+# sin una sola función que diga cómo se entra, y todo queda verde.
+#
+# Pasó con CineAutopsia el 17 ago 2026: la agenda de la Cinemateca publicaba el
+# enlace de TuBoleta de los 6 programas de pago y decía «Entrada libre» en la
+# clausura. Mi ensamblador no miró el campo y encima escribió `is_free: False`
+# en los 7 —también en el libre—. El dato estaba en la fuente, en la misma
+# página de la que saqué todo lo demás. Lo cazó Juan preguntando, igual que los
+# 638 enlaces de TIFF y las 415 banderas de FICDEH.
+#
+# LA REGLA. Un festival vigente cuyas funciones NO dicen NADA —ni `ticket_url`,
+# ni `is_free`, ni `registration_url`— está mudo, y el silencio no es un dato:
+# es una omisión. Gratis se DECLARA (`is_free: true`), no se deja en blanco.
+# Solo aplica a festivales vigentes: los archivados quedaron como quedaron y
+# reescribir su pasado no le sirve a nadie.
+check = 'boleteria-muda'
+try:
+    import json as _j, glob as _g
+    from datetime import date as _date
+    _hoy = _date.today().isoformat()
+    _mudos = []
+    for _f in sorted(_g.glob('festivals/*.json')):
+        _d = _j.load(open(_f, encoding='utf-8'))
+        _F = _d.get('films') or []
+        # La vigencia NO está en un flag: está en la fecha de cierre. El primer
+        # intento de este guardián buscaba `archived:true` en config.js y no
+        # casaba con NINGÚN festival — verde por no mirar a nadie, que es peor
+        # que rojo. Si un festival no declara cuándo termina, se revisa igual.
+        _fin = (_d.get('festivalEndStr') or '')[:10]
+        if not _F or (_fin and _fin < _hoy):
+            continue
+        _habla = sum(1 for _x in _F
+                     if _x.get('ticket_url') or _x.get('is_free') or _x.get('registration_url'))
+        if _habla == 0:
+            _mudos.append(f'{_f.split("/")[-1]} ({len(_F)} funciones)')
+    if _mudos:
+        fail(check, 'festival vigente sin una sola función que diga cómo se entra '
+                    '(ni ticket_url, ni is_free, ni registration_url): ' + '; '.join(_mudos))
+    else:
+        ok(check, 'todo festival vigente declara cómo se entra a sus funciones')
+except Exception as _e:
+    warn(check, f'no se pudo verificar boleteria-muda: {_e}')
+
+
 # ── Report ────────────────────────────────────────────────────────────────────
 print()
 print('═' * 60)
