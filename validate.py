@@ -4208,13 +4208,12 @@ try:
     # DEUDA DECLARADA (17 ago 2026). No crece: cada uno se cablea o se borra.
     # Los dos primeros pares son EL MISMO DATO CON DOS NOMBRES — ahí no sobra el
     # dato, sobra el nombre, y unificarlos exige decidir cuál gana.
-    _DEUDA = {
-        'filmType': 'Tribeca (196) — lo dice ya `genre`',
-        'cycle': 'FICMA (24) — es una sección disfrazada de campo',
-        # `original_title` y `title_orig` salieron del repo el 17 ago 2026: la
-        # ficha nunca los pintó y la decisión fue no pintarlos. Un campo limpio
-        # que nadie lee sigue siendo peso muerto.
-    }
+    # VACÍA desde el 17 ago 2026, y ese es el estado normal. Ese día salieron
+    # los nueve: trailer, tematica y qa_detail primero; después original_title
+    # (con title_orig ya unificado dentro), filmType y cycle; _tmdbId se fusionó
+    # en tmdb_id. La pregunta que los resolvió todos fue la misma: ¿lo vamos a
+    # pintar? Si no, es peso muerto — por limpio que esté el dato.
+    _DEUDA = {}
     _src_all = ''.join(open(_p, encoding='utf-8').read()
                        for _p in _g.glob('src/**/*.js', recursive=True))
     _vistos = {}

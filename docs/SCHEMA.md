@@ -329,18 +329,31 @@ el badge, y nadie se entera.
 | `slug` | 204 | 1 | ✅ | ❌ | slug propio del festival (URL de su web) |
 | `_src` | 560 | 4 | ✅ | ✅ | **de dónde salió el dato.** Toda obra nueva lo lleva |
 
-### Campos huérfanos — se emiten y nadie los lee
+### Campos huérfanos — cero, y ese es el estado normal
 
-Nueve campos viajan en los JSON y **ningún archivo de `src/` los menciona**. Es
-el espejo del bug de boletería: allá el dato existía en la fuente y no lo
-emitimos; aquí lo buscamos, lo guardamos y no se pinta nunca.
+**El 17 ago 2026 había nueve y hoy no queda ninguno.** Viajaban en los JSON sin
+que ningún archivo de `src/` los mencionara: era el espejo del bug de boletería
+—allá el dato existía en la fuente y no lo emitimos; aquí lo buscábamos, lo
+guardábamos y no se pintaba nunca—.
 
-`filmType` (196) · `tmdb_id` (83, más `_tmdbId` en otro festival) ·
-`cycle` (24).
+Salieron todos con la misma pregunta: **¿lo vamos a pintar?** Si la respuesta es
+no, es peso muerto, por limpio que esté el dato.
 
-El 17 ago 2026 se borraron `trailer` (37), `tematica` (37), `qa_detail` (21) y
-`original_title` (30, con `title_orig` ya unificado dentro): ninguno se pintaba
-en la ficha y la decisión fue no pintarlos.
+| campo | eran | qué pasó |
+|---|---|---|
+| `trailer` | 37 | borrado — 36 tráilers que no había forma de ver |
+| `tematica` | 37 | borrado |
+| `qa_detail` | 21 | borrado — `qa_type` ya pinta la variante, y en tres idiomas |
+| `original_title` + `title_orig` | 38 | unificados, limpiados de 17 de ruido, y borrados |
+| `filmType` | 196 | borrado — lo dice ya `genre` |
+| `cycle` | 24 | borrado — era palabra real del festival; sigue en el crudo de FICMA |
+| `_tmdbId` | 24 | fusionado en `tmdb_id` |
+
+Los únicos que quedan sin lector en `src/` son `synopsis_lang` y `tmdb_id`, y los
+dos tienen dueño escrito: los guardianes y el pipeline. `[campo-huerfano]`
+bloquea cualquiera nuevo, y el guion bajo ya no sirve de escondite.
+
+
 
 Los dos pares de **mismo dato con dos nombres** quedaron cerrados el 17 ago
 2026: `_tmdbId` se fusionó en `tmdb_id` (24 ocurrencias). El par (`original_title`/`title_orig`) se unificó el 17 ago 2026 en
