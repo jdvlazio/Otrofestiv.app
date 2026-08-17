@@ -501,12 +501,11 @@ function validateFestival(fname, data) {
     // arreglarlas exige la guía oficial, no una corazonada. Se degradan a WARNING
     // para no bloquear a los demás chats con una deuda ajena; cualquier caso NUEVO
     // falla en duro. Se saca de acá en cuanto Onboarding confirme las salas.
-    const DEUDA_SALA = new Set([
-      '2026-08-13|19:30|Cinemateca de Bogotá - Bogotá',
-      '2026-08-14|18:00|Universidad de Ibagué - Ibagué',
-      '2026-08-17|16:00|Cinemateca de Bogotá - Bogotá',
-      '2026-08-17|17:30|Cinemateca de Bogotá - Bogotá',
-    ]);
+    // VACÍO desde el 17 ago 2026: las cuatro funciones de FICDEH que nacieron
+    // con este guardián quedaron resueltas contra la agenda oficial de la
+    // Cinemateca de Bogotá, que publica la SALA que el sitio de FICDEH no da.
+    // Cualquier caso nuevo falla en duro, que es como debe ser.
+    const DEUDA_SALA = new Set([]);
     const _mins = (d) => parseInt(String(d || '').trim(), 10) || 0;
     const salaMap = {};
     for (const f of films) {
