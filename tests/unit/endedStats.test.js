@@ -48,7 +48,11 @@ test('savedAgenda with 3 screenings → totalPlanned=3', () => {
   );
 });
 
-test('programa cuenta por sus OBRAS; eventos excluidos (modelo Diario)', () => {
+// Los eventos SÍ cuentan desde el 17 ago 2026: son lo que el Diario muestra, y
+// el chip del Diario ya los contaba mientras esta cuenta los descartaba — dos
+// números para lo mismo (medido con FICDEH: 2 contra 3). Calificar sigue siendo
+// solo de lo calificable: un taller no tiene estrellas.
+test('programa cuenta por sus OBRAS; el evento suma pero no se califica', () => {
   const { _endedStats } = load({
     FILMS: [
       { title: 'Regular', is_cortos: false, type: 'film' },
@@ -60,9 +64,10 @@ test('programa cuenta por sus OBRAS; eventos excluidos (modelo Diario)', () => {
     watched: new Set(['Regular', 'Cortos Program', 'Workshop']),
     filmRatings: { 'Obra A': 5 },
   });
-  // Regular (sin calificar) = 1/1 · programa = 3 obras, 1 calificada → 3/2 · evento = 0
+  // Regular (sin calificar) = 1/1 · programa = 3 obras, 1 calificada → 3/2 ·
+  // evento = 1 visto, 0 pendientes de calificar
   assert.deepStrictEqual(
     _endedStats(),
-    { totalWatched: 4, totalPlanned: 0, pendingRatings: 3 }
+    { totalWatched: 5, totalPlanned: 0, pendingRatings: 3 }
   );
 });

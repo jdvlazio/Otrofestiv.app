@@ -209,13 +209,24 @@ export function _classifyTodayScreenings(screenings,nowMin){
 }
 
 export function _endedStats(){
-  // Conteo POR OBRA (modelo del Diario): un programa visto cuenta por sus
-  // películas — es lo que el usuario realmente vio. Antes excluía is_cortos
-  // por completo → "Viste 0" con dos programas vistos. Eventos no cuentan.
+  // DUEÑO ÚNICO de «cuántas marcaste». Un programa visto cuenta por sus obras —
+  // es lo que el usuario realmente vio. Antes excluía is_cortos por completo →
+  // "Viste 0" con dos programas vistos.
+  //
+  // Los EVENTOS (talleres, charlas) SÍ cuentan: son lo que el Diario muestra, y
+  // el chip del Diario los contaba mientras esta cuenta los descartaba — medido
+  // con FICDEH (29 eventos en catálogo): 2 marcadas acá contra 3 en el chip, dos
+  // números para lo mismo a dos centímetros. Por eso el titular usa el paraguas
+  // ACTIVIDADES: un taller no es una obra, pero sí es una actividad ([vocab]).
+  //
+  // pendingRatings NO los incluye: un taller no se califica, y prometerle al
+  // usuario que le falta calificar algo que no tiene estrellas sería un pendiente
+  // imposible de cerrar.
   let totalWatched=0, pendingRatings=0;
   [...watched].forEach(t=>{
     const f=FILMS.find(fi=>fi.title===t);
-    if(!f||f.type==='event') return;
+    if(!f) return;
+    if(f.type==='event'){ totalWatched+=1; return; }
     if(f.is_cortos&&f.film_list&&f.film_list.length){
       totalWatched+=f.film_list.length;
       pendingRatings+=f.film_list.filter(it=>!filmRatings[it.title]).length;
