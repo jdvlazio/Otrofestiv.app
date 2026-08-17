@@ -29,6 +29,7 @@ export const _I18N = {
     "cta_anadir": "Agregar a Intereses",
     "label_funciones": "Actividades",
     "label_sin_confirmar": "sin confirmar",
+    "label_sin_confirmar_hdr": "Sin confirmar",
     "misc_luego": "Luego",
     "label_anterior": "anterior",
     "label_anteriores": "anteriores",
@@ -509,6 +510,7 @@ export const _I18N = {
     "cta_anadir": "Add to Interests",
     "label_funciones": "Screenings",
     "label_sin_confirmar": "unconfirmed",
+    "label_sin_confirmar_hdr": "Unconfirmed",
     "misc_luego": "Later",
     "label_anterior": "earlier",
     "label_anteriores": "earlier",
@@ -1345,6 +1347,7 @@ export const _I18N = {
     // ── Lote 12: labels UI + CTAs + lbl + bar (las 4 label_* muertas se saltean
     //    a propósito — se borran en el PR de limpieza de keys muertas) ──
     "label_sin_confirmar": "a confirmar",
+    "label_sin_confirmar_hdr": "Sem confirmar",
     "label_anterior": "anterior",
     "label_anteriores": "anteriores",
     "label_min": "min",

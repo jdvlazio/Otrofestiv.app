@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202608170913">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202608170913">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202608171031">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202608171031">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -710,9 +710,23 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
    Ya no hay reglas .X-ed ni estilos inline — todo el layout es .poster-ed. */
 
 /* ── Check-in ── */
-.checkin-wrap{background:var(--card-a);border:1px solid var(--bdr);border-radius:var(--r);margin-bottom:var(--sp-3);overflow:hidden}
-.checkin-hdr{font-size:var(--t-label);font-weight:var(--w-bold);color:var(--amber-60);letter-spacing:.8px;text-transform:uppercase;background:var(--amber-08);padding:var(--sp-1) var(--sp-3);border-radius:var(--r-sm);display:inline-block}
-.checkin-item{display:flex;align-items:center;gap:var(--sp-3);padding:var(--sp-3) var(--sp-4);border-bottom:1px solid var(--bdr-l)}
+/* SECCIÓN, no card. Regla medida el 17 ago 2026: en toda la app solo 5
+   componentes usan fondo de card (ag-film-item, ag-summary, film-alts,
+   lang-dropdown y este) y ninguno de los otros cuatro es una sección de
+   contenido — son un ítem, un resumen, un panel que se abre y un menú. Las
+   secciones (Prioridades, Intereses, Sugerencias, Diario, el día de Mi Plan)
+   son TODAS planas con su banda sec-hdr. Este bloque es una lista de funciones
+   con acción por fila: su hermano es Sugerencias, que hace lo mismo mirando al
+   futuro. La card lo dejaba como cuerpo extraño entre dos secciones planas, y
+   su encabezado era una píldora inline que flotaba a 17px mientras las filas
+   arrancaban a 33 — 16px de desajuste y un tercer estilo de encabezado. La
+   urgencia ahora la carga el LENGUAJE de advertencia (triángulo + badge ámbar),
+   no un borde. */
+.checkin-wrap{margin-top:var(--sp-5);margin-bottom:var(--sp-3)}
+/* Padding horizontal CERO, igual que .suggestion-item y .int-item: sus filas
+   arrancan en el borde del contenedor. Los 16px de lado eran herencia de la
+   card; sin card, dejaban esta lista indentada respecto de sus vecinas. */
+.checkin-item{display:flex;align-items:center;gap:var(--sp-3);padding:var(--sp-3) 0;border-bottom:1px solid var(--bdr-l)}
 .checkin-item:last-child{border-bottom:none}
 .checkin-info{flex:1;min-width:0}
 .checkin-title{font-size:var(--t-base);font-weight:var(--w-semi);color:var(--white);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
@@ -3231,7 +3245,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202608170913";
+    s.src="/src/main.js?v=202608171031";
     document.body.appendChild(s);
     // Watchdog de boot (P0 18 jul): si el grafo ESM murió en el import (caché
     // HTTP mixta tras deploys en ráfaga — main.js nuevo + módulo viejo sin el

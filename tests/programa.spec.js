@@ -892,3 +892,58 @@ test('T70 — el Diario y el Recuerdo cuentan lo mismo, incluidos los talleres',
   expect(retro, 'el Recuerdo dice el MISMO número, con el paraguas correcto')
     .toBe('Viste 3 actividades');
 });
+
+// Ronda 3 (diseño, Juan): en Mi Plan el Diario iba a la derecha y «Día n de n» a
+// la izquierda —el destino detrás del dato— y el bloque «Sin confirmar» era la
+// única sección de la app dibujada como card, con una píldora de encabezado que
+// flotaba a 17px mientras sus filas arrancaban a 33. Regla contada sobre la app:
+// card = ítem, resumen, panel o menú; sección = lista con su banda a sangre.
+test('T71 — Mi Plan: el destino primero, y «Sin confirmar» es sección, no card', async ({ page }) => {
+  await enterFestival(page, 'ficdeh2026', '2026-08-17T20:00:00-05:00');
+  await page.evaluate(() => document.querySelector('[data-action="citySheetAll"]')?.click());
+  await page.waitForTimeout(400);
+  const g = await page.evaluate(async () => {
+    const pas = FILMS.filter(f => f.day <= '2026-08-17' && f.time <= '18:00').slice(0, 3);
+    const fut = FILMS.filter(f => f.day > '2026-08-17').slice(0, 2);
+    state.set('watched', new Set(FILMS.slice(20, 24).map(f => f.title)));
+    state.set('savedAgenda', { scenarioIdx: 0, schedule: [...pas, ...fut].map(f =>
+      Object.assign({}, f, { _title: f.title })) });
+    switchMainNav('mnav-miplan'); showAgView();
+    await new Promise(r => setTimeout(r, 1400));
+    const box = s => { const e = document.querySelector(s); if (!e) return null;
+      const b = e.getBoundingClientRect(); return { x: Math.round(b.x), r: Math.round(b.right) }; };
+    const wrap = document.querySelector('.checkin-wrap');
+    const cs = wrap && getComputedStyle(wrap);
+    return {
+      chip: box('.diary-chip'),
+      dia: box('.festival-progress-text > span:last-child'),
+      banda: box('.checkin-wrap .sec-hdr'),
+      fila: box('.checkin-title'),
+      vecino: box('.mplan-list-hdr'),
+      badge: document.querySelector('.checkin-wrap .count-badge')?.textContent,
+      pendientes: 3,
+      // sección, no card: sin fondo propio ni borde
+      fondo: cs && cs.backgroundColor,
+      borde: cs && cs.borderTopWidth,
+      pildoraVieja: !!document.querySelector('.checkin-hdr'),
+    };
+  });
+
+  // 1· el orden: el Diario (destino) a la izquierda, el día (dato) a la derecha
+  expect(g.chip.x, 'el Diario abre la fila').toBeLessThan(g.dia.x);
+  expect(g.dia.r, 'y el día cierra contra el margen derecho').toBeGreaterThan(g.chip.r);
+
+  // 2· la banda es canónica: a sangre, como cualquier sec-hdr
+  expect(g.banda.x, 'banda a sangre por izquierda').toBe(0);
+
+  // 3· las filas alinean con sus vecinas — el desajuste de 16px no puede volver
+  expect(g.fila.x, 'la fila alinea con el encabezado del día').toBe(g.vecino.x);
+
+  // 4· sección, no card
+  expect(g.pildoraVieja, 'la píldora inline ya no existe').toBe(false);
+  expect(g.fondo, 'sin fondo de card').toMatch(/rgba\(0, 0, 0, 0\)|transparent/);
+  expect(g.borde, 'sin borde de card').toBe('0px');
+
+  // 5· el badge dice cuántas quedan por confirmar
+  expect(g.badge, 'la cuenta está a la vista').toBe(String(g.pendientes));
+});

@@ -561,7 +561,11 @@ export function renderUnconfirmed(state,schedule){
       </button>
     </div>`:'';
   return`<div class="checkin-wrap">
-    <div class="checkin-hdr">${t('label_funciones')} ${t('label_sin_confirmar')}</div>
+    <!-- El icono es ICONS.alert, el mismo de AVISOS y de los avisos de conflicto,
+         retraso y traslado (8 usos): la app tiene UN símbolo para «esto requiere
+         tu atención» y este bloque es eso. check-circle decía la ACCIÓN
+         (confirmar), no el estado, y habría inventado un noveno significado. -->
+    <div class="sec-hdr sm">${ICONS.alert} <span>${t('label_sin_confirmar_hdr')}</span> <span class="count-badge cb-amber">${past.length}</span></div>
     <div class="checkin-item">
       <div class="checkin-info"><div class="checkin-title">${short}</div><div class="checkin-time">${timeDesc}</div></div>
       <div class="checkin-btns">
@@ -1282,10 +1286,9 @@ export function _renderSavedAgendaHTML(state, consensus){
   // esta no. Medido con FICDEH: 2 contra 3 con un taller marcado — dos números
   // para lo mismo, a dos centímetros uno del otro.
   const _diaryCount=_endedStats().totalWatched;
-  const progressPct=dayIdx>=0?Math.round((dayIdx/(totalDays-1))*100):0;
   const progressBar=currentDayNum?`<div class="row-sm festival-progress">
     <div style="flex:1">
-      <div class="festival-progress-text"><span>${t('label_dia_prog')} <b>${currentDayNum}</b> ${t('label_de_dias')} ${totalDays}</span>${_diaryCount>0
+      <div class="festival-progress-text">${_diaryCount>0
         // «obras vistas» y no «vistas»: el conteo suma las OBRAS de cada programa
         // de cortos (y lo visto fuera del Plan), así que dos filas marcadas pueden
         // dar 14 — el número era correcto y no decía de qué (revisión de UX
@@ -1304,7 +1307,7 @@ export function _renderSavedAgendaHTML(state, consensus){
         // símbolo de restaurar — reusar cualquiera diría dos cosas con el mismo
         // dibujo.
         ?`<button class="diary-chip" data-action="openDiary" data-stop="1">${ICONS.bookOpen} <span>${t('diary_eyebrow')}</span> <span class="count-badge cb-neutral">${_diaryCount}</span>${ICONS.chevronR}</button>`
-        :''}</div>
+        :'<span></span>'}<span>${t('label_dia_prog')} <b>${currentDayNum}</b> ${t('label_de_dias')} ${totalDays}</span></div>
     </div>
   </div>`:'';
 
