@@ -26,7 +26,7 @@ import { cloudScreeningKey } from '../domain/delays.js';
 // Es la ÚNICA dependencia view→controller permitida (fijada en validate.py [view-purity]).
 import { getConsensusMap } from '../controller/delays-cloud.js';
 import {
-  screeningPassed, screeningEnded, screeningNow, screeningQaOnly, screeningEndDate, effectiveDuration, blockDuration, durationForTravel, delayedEndMin, _delayKey, _endedStats,
+  screeningPassed, screeningEnded, screeningNow, screeningQaOnly, screeningEndDate, effectiveDuration, blockDuration, durationForTravel, delayedEndMin, _delayKey, _endedStats, prioLiveCount,
 } from '../domain/film.js';
 import {
   isScreeningBlocked, screeningPlannable, screensConflict, screensConflictReason,
@@ -1051,7 +1051,7 @@ export function renderPrioStrip(state, opts={}){
   // ── Estado 1 / 3: intención (chips con botón quitar) ──
   const chips=[...prioritized].map(x=>_chip(x,{rm:true})).join('');
   return`<div class="prio-strip">
-    <div class="sec-hdr">${ICONS.bookmark} ${t('lbl_prioridades')} <span class="count-badge cb-amber">${prioritized.size}/${PRIO_LIMIT}</span></div>
+    <div class="sec-hdr">${ICONS.bookmark} ${t('lbl_prioridades')} <span class="count-badge cb-amber">${prioLiveCount()}/${PRIO_LIMIT}</span></div>
     <div class="prio-strip-row">${chips}</div>
   </div>`;
 }
@@ -1224,7 +1224,7 @@ export function renderFilmListHTML(state){
 
   if(prioList.length){
     html+=`<div class="sec-hdr">${ICONS.bookmark} <span>${t('lbl_prioridades')}</span>
-      <span class="count-badge cb-amber">${prioList.length}/${PRIO_LIMIT}</span>
+      <span class="count-badge cb-amber">${prioLiveCount()}/${PRIO_LIMIT}</span>
     </div>
     <div>${_chronoSort(prioList).map(_mkItem).join('')}</div>`;
   }

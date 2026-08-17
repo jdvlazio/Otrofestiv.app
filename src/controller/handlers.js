@@ -18,7 +18,7 @@ import { cloudReportDelay, cloudClearDelay, cloudScreeningKey } from './delays-c
 import { _getProgramaPhase, _reRenderIntereses, _updateProgramaActiveFilter, initProgramaModeBar, showAgView, showDayView, switchMainNav, updateAgTab, _markPreserveResult, _syncPmodeTabs } from './pipeline.js';
 import { searchClose, seccionClose } from './overlays.js';
 import { dayFullyPassed, festivalEnded, simTodayStr, toMin } from '../domain/time.js';
-import { scoreFilm, screeningPassed, isShortFilm } from '../domain/film.js';
+import { scoreFilm, screeningPassed, isShortFilm, prioLiveCount } from '../domain/film.js';
 import { isScreeningBlocked, screensConflict, sortScreensByStrategy, plannableScreens, screeningPlannable } from '../domain/schedule.js';
 import { state } from '../state/state.js';
 import { storage } from '../storage/storage.js';
@@ -531,7 +531,9 @@ export function togglePriority(title,cost){
     showToast(`${ICONS.bookmark} ${t('toast_prioridad_quitada')}`,'info');
   } else {
     // Branch B: prioritize (con limit check)
-    if(prioritized.size>=PRIO_LIMIT){
+    // El cupo se mide sobre las VIVAS (prioLiveCount, dominio): una prioridad
+    // cuyas funciones ya pasaron no puede materializarse y no debe bloquear.
+    if(prioLiveCount()>=PRIO_LIMIT){
       openPrioLimit(title);return;
     }
     _markPreserveResult();
@@ -541,7 +543,7 @@ export function togglePriority(title,cost){
       if(_addWL) state.batchUpdate({watchlist:state._addToSet(watchlist,title), watched:state._delFromSet(watched,title)});
     });
     savePrio();if(_addWL){saveWL();saveWatched();}updateCardState(title);
-    showToast(`${ICONS.bookmarkFill} ${t('cta_priorizada')} · ${prioritized.size+1}/${PRIO_LIMIT}${_addWL?' · '+t('toast_tambien_int'):''}`,'info');
+    showToast(`${ICONS.bookmarkFill} ${t('cta_priorizada')} · ${prioLiveCount()}/${PRIO_LIMIT}${_addWL?' · '+t('toast_tambien_int'):''}`,'info');
   }
   if(activeView==='day') updateHorarioPrioBtn(title);   // surgical: botón prio del pel-sheet
 }
