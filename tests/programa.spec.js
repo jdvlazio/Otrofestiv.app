@@ -718,8 +718,11 @@ test('T66 — Sugerencias habla del día que mirás, y no promete lo que no tien
     }));
   };
 
+  // El instante lleva offset explícito (-05:00, Colombia): sin él, `new Date()`
+  // lo lee en la zona del navegador y en CI (UTC) las 22:30 del caso 3 eran las
+  // 17:30 locales — todavía con funciones por delante.
   // 1· Un día que ya pasó no tiene nada que sugerir: la sección no se dibuja.
-  await sembrar('2026-08-17T09:00', '2026-08-17');
+  await sembrar('2026-08-17T09:00:00-05:00', '2026-08-17');
   const pasado = await mirarDia('2026-08-14');
   expect(pasado.bloqueSugs, 'día pasado: sin bloque de Sugerencias').toBe(false);
   expect(pasado.txt, 'y sin «hoy» sobre un día que no es hoy').not.toContain('quepan hoy');
@@ -741,7 +744,7 @@ test('T66 — Sugerencias habla del día que mirás, y no promete lo que no tien
     'el vacío de la sección nombra el día').toContain('Sin más opciones para el MIÉ 19');
 
   // 3· El día en curso ya sin nada: nombra el día y NO ofrece destino.
-  await sembrar('2026-08-19T22:30', '2026-08-17');
+  await sembrar('2026-08-19T22:30:00-05:00', '2026-08-17');
   const seco = await mirarDia('2026-08-19');
   expect(seco.sugs, 'a las 22:30 del último día no queda nada').toBe(0);
   expect(seco.ctaConDestino, 'sin material, no manda a ningún lado').toBe(false);
