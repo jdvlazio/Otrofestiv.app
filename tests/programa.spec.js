@@ -1665,3 +1665,27 @@ test('T87 — la card ofrece VISTA con el ojo, y calificar viene después', asyn
     expect(r.vistos[0].ojo, 'y con el ojo, no con el check').toBe(true);
   }
 });
+
+// 18 ago (Juan): el vacío de Sugerencias gastaba 114px y una lupa de 20 para
+// una frase de 31 caracteres — el vacío pesaba más que el contenido. Y la lupa
+// decía «búsqueda fallida» cuando lo que pasa es que el catálogo se agotó.
+test('T88 — el vacío de Sugerencias es una línea, no una pantalla', async ({ page }) => {
+  await enterFestival(page, 'ficdeh2026', '2026-08-18T19:30:00-05:00');
+  await page.evaluate(() => document.querySelector('[data-action="citySheetAll"]')?.click());
+  await page.waitForTimeout(400);
+  const r = await page.evaluate(async () => {
+    const f = FILMS.filter(x => x.day === '2026-08-18' && x.time >= '19:00').slice(0, 3);
+    state.set('savedAgenda', { scenarioIdx: 0, schedule: f.map(x => Object.assign({}, x, { _title: x.title })) });
+    switchMainNav('mnav-miplan'); showAgView();
+    await new Promise(r => setTimeout(r, 1400));
+    const w = document.querySelector('.suggestion-wrap');
+    const linea = w?.querySelector('.sug-vacio');
+    return { hay: !!linea, alto: linea && Math.round(linea.getBoundingClientRect().height),
+      pantallaVieja: !!w?.querySelector('.empty-state'),
+      txt: linea?.textContent.trim() };
+  });
+  expect(r.hay, 'el vacío existe y nombra el día').toBe(true);
+  expect(r.txt, 'con el día, no un «hoy» falso').toMatch(/MAR 18/);
+  expect(r.alto, 'y cabe en una línea').toBeLessThanOrEqual(30);
+  expect(r.pantallaVieja, 'sin la pantalla vacía con lupa').toBe(false);
+});
