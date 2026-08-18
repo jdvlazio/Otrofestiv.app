@@ -195,7 +195,15 @@ export function renderAgenda(){
           // con la fórmula «texto · texto» del resultado. Gana ~21px verticales
           // y las dos mitades se leen como un solo dato con su matiz.
           const _obras=`${_nP===1?t('pre_obra'):t('pre_obras',{n:_nP})}${_prio?t('pre_con_prio',{m:_prio}):''}`;
-          const _aviso=_cr?`<span class="dato-alerta">${ICONS.alert} ${_cr===1?t('pre_cruce'):t('pre_cruces',{n:_cr})}</span>`:'';
+          // La alerta vive SOLO antes de calcular (auditoría 18 ago): es un
+          // PRE-diagnóstico —«esto va a costar»— y sobrevivía al cálculo, en
+          // ámbar y con ícono, justo encima del resultado. Ahí se leía como «tu
+          // Plan tiene N cruces», que es lo contrario de lo que acababa de
+          // pasar. Peor: su N (pares) y el del resultado (obras) coincidían de
+          // casualidad e invitaban a una causalidad 1:1 que no existe. Con el
+          // resultado en pantalla la explicación ya no es agregada: cada fila de
+          // «No incluidas» dice la suya.
+          const _aviso=(_cr&&!cachedResult)?`<span class="dato-alerta">${ICONS.alert} ${_cr===1?t('pre_cruce'):t('pre_cruces',{n:_cr})}</span>`:'';
           return`<div class="pre-resumen">
             <div class="dato-linea">${_obras}${_aviso?` · ${_aviso}`:''}</div>
           </div>`;
@@ -1660,7 +1668,7 @@ export function buildResultHTML(scenarios){
       const pairMsg=pairs.length
         ?pairs.map(([a,b])=>{const{displayTitle:da}=parseProgramTitle(a);const{displayTitle:db}=parseProgramTitle(b);return`<span class="txt-white60">${da}</span> ${t('misc_y')} <span class="txt-white60">${db}</span>`;}).join(', ')
         :t('plan_incompat_generico');
-      return`<div class="meta-banner" style="margin-top:var(--sp-2)"><div class="meta-banner-dot"></div><div class="meta-banner-text">${pairMsg} ${t('plan_solapan')} — ${t('plan_incompat_cta')}</div></div>`;
+      return`<div class="meta-banner" style="margin-top:var(--sp-2)"><div class="meta-banner-dot"></div><div class="meta-banner-text">${pairMsg} ${t('plan_solapan')} ${t('plan_incompat_cta')}</div></div>`;
     })():''}
   </div>
 `;
