@@ -784,7 +784,14 @@ export function renderContextualHeader(state, consensus){
     const _chip = totalWatched===0 ? '' : (pendingRatings>0
       ? `<span class="recap-chip pend">${pendingRatings} ${t('plan_sin_calificar')}</span>`
       : `<span class="recap-chip done">${ICONS.check} ${t('empty_todo_calif')}</span>`);
-    return`<div class="recap-hdr">
+    // El aviso también corona el cierre (decisión de Juan, 18 ago): el hero
+    // no pierde su identidad justo cuando el festival la merece. Reloj: el
+    // aviso del hero habla en familia de tiempo (clock/moon).
+    return`<div class="ctx-aviso">
+      ${ICONS.clock}
+      <span>${t('aviso_fest_terminado')}</span>
+    </div>
+    <div class="recap-hdr">
       <span class="ctx-main-title">${mainTitle}</span>
       ${_chip}
     </div>`;
@@ -878,7 +885,7 @@ export function renderContextualHeader(state, consensus){
     }
 
     return`<div class="ctx-header">
-      <div class="sec-hdr sm ctx-eyebrow-band">
+      <div class="ctx-aviso ${isNow?'grn':'amb'}">
         ${ICONS.clock}
         <span>${eyebrowLabel}</span>
         ${isNow?`<span class="live-dot row-dot" role="img" aria-label="${t('aria_en_curso')}"></span>`:''}
@@ -930,9 +937,9 @@ export function renderContextualHeader(state, consensus){
         </div>`;
     })():'';
     return`<div class="ctx-header">
-      <div class="txt-green70 ctx-eyebrow">
+      <div class="ctx-aviso grn">
         ${ICONS.clock}
-        ${t('misc_tiempo_libre')}
+        <span>${t('misc_tiempo_libre')}</span>
       </div>
       <div class="ctx-main-title">${gapLabel} ${t('misc_hasta_sig')}</div>
       <div class="txt-gray-sm-vm">${next.time} · ${(()=>{const{displayTitle:dt}=parseProgramTitle(next._title||'');return dt.length>28?dt.slice(0,26)+'…':dt;})()}</div>
@@ -983,11 +990,15 @@ export function renderContextualHeader(state, consensus){
     const verTodas=allWatched.length>MAX_VISIBLE
       ?`<div class="sim-hdr-pad"><button class="link-gray-xs" data-action="toggleEveningFilms">${t('misc_ver_todo')} (${allWatched.length})</button></div>`
       :'';
-    const dayName=(dayLabel(todayScreenings[0]?.day)||'').split(' ')[0]||t('bar_hoy');
+    // Día COMPLETO: la abreviatura en minúscula decía «tu mar en FICDEH» — el
+    // MAR de martes leído como océano (cazado en el inventario del 18 ago).
+    // ES/PT escriben los días en minúscula; EN los capitaliza.
+    const _dayWord=(dayLabelLong(todayScreenings[0]?.day)||'').split(' ')[0]||t('bar_hoy');
+    const dayName=_lang==='en'?_dayWord:_dayWord.toLowerCase();
     return`<div class="ctx-header">
-      <div class="sec-hdr sm ctx-eyebrow-band">
+      <div class="ctx-aviso">
         ${ICONS.moon}
-        <span>${t('plan_tu_dia_en',{dia:dayName.toLowerCase()})} ${(FESTIVAL_CONFIG[_activeFestId]||{}).name||''}</span>
+        <span>${t('plan_tu_dia_en',{dia:dayName})} ${(FESTIVAL_CONFIG[_activeFestId]||{}).name||''}</span>
       </div>
       <div class="ctx-main-title">${total} ${total!==1?t('misc_peliculas'):t('misc_pelicula')} ${total===1?t('plan_vista_hoy'):t('plan_vistas_hoy')}</div>
       ${pendingRating.length?`<div class="mb-3 ctx-sub">${pendingRating.length===1?t('plan_una_pendiente'):t('empty_calificar')}</div>`:`<div class="mb-3"></div>`}

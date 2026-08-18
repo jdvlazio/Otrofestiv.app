@@ -1288,20 +1288,20 @@ test('T79 — Mi Plan: eyebrow pariente, hero que respira, botones anclados', as
     const g = (a, b) => { const A = typeof a === 'string' ? document.querySelector(a) : a,
       B = typeof b === 'string' ? document.querySelector(b) : b;
       return A && B ? Math.round(B.getBoundingClientRect().top - A.getBoundingClientRect().bottom) : null; };
-    const ey = document.querySelector('.ctx-eyebrow-band');
-    // El patrón es sec-hdr.SM: se compara contra el TOKEN resuelto.
+    const ey = document.querySelector('#ag-view .ctx-aviso');
+    // El aviso habla los tokens del sistema: t-sm y w-semi, sin caps ni tracking.
     const probe = document.createElement('span');
-    probe.style.fontSize = 'var(--t-xs)'; document.body.appendChild(probe);
-    const tXs = getComputedStyle(probe).fontSize; probe.remove();
+    probe.style.fontSize = 'var(--t-sm)'; document.body.appendChild(probe);
+    const tSm = getComputedStyle(probe).fontSize; probe.remove();
     return { heroBanda: g('.ctx-header', bandaPlan),
       footDentro: !!document.querySelector('.mplan-wrap .mplan-foot'),
       eyebrowPx: ey && getComputedStyle(ey).fontSize,
-      eyebrowTracking: ey && getComputedStyle(ey).letterSpacing, tXs };
+      eyebrowCaps: ey && getComputedStyle(ey).textTransform, tSm };
   });
   expect(r.heroBanda, 'el hero respira sp-5 antes de la banda').toBe(24);
   expect(r.footDentro, 'las acciones son el footer DE la pieza, no flotan bajo ella').toBe(true);
-  expect(r.eyebrowPx, 'el eyebrow habla el token t-xs de sec-hdr.sm').toBe(r.tXs);
-  expect(r.eyebrowTracking, 'con el tracking de la banda (.1em de 9px ≈ 0.9px)').toMatch(/^0\.9/);
+  expect(r.eyebrowPx, 'el aviso habla el token t-sm del sistema').toBe(r.tSm);
+  expect(r.eyebrowCaps, 'sin mayúsculas: es aviso, no separador').toBe('none');
 });
 
 // 18 ago, cazado por Juan en producción: al abrir Mi Plan se metía la barra de
@@ -1331,43 +1331,61 @@ test('T81 — la barra de días no se cuela en Mi Plan (re-run diferido del iOS 
   expect(nav2, 'en Programa la barra vive').toBe(false);
 });
 
-// 18 ago, pedido de Juan al ver los puntos 3–5: «pensé que Próxima función
-// también iba a tener su encabezado». El hero era la última zona de Mi Plan sin
-// banda — su eyebrow leía como lo único sin migrar. Ahora es sec-hdr canónica a
-// sangre, y la urgencia que cargaba el ámbar la dice el sistema: EN CURSO lleva
-// el punto verde (regla #652 — el punto dice cuándo).
-test('T80 — el hero abre con banda, y EN CURSO lleva el punto', async ({ page }) => {
-  const medir = async (hora) => {
-    await page.evaluate(async (hh) => {
-      _simTime = `2026-08-18T${hh}:00-05:00`;
+// 18 ago, opción A de Juan: el hero habla UN solo aviso en sus cinco estados —
+// texto con color semántico (ámbar próximo · verde ahora, punto solo si corre ·
+// gris informativo), sin banda ni caps. El nocturno dice el día COMPLETO («tu
+// martes», no «tu mar»), y el cierre vuelve al sistema con su propio aviso.
+test('T80 — el aviso del hero: un solo vestuario en sus cinco estados', async ({ page }) => {
+  test.setTimeout(60000);
+  const medir = async (hora, watch) => {
+    await page.evaluate(async ({ hh, watch }) => {
+      _simTime = hh;
       const bog = f => (f.venue || '').includes('Bogotá');
-      const hoy = FILMS.filter(f => bog(f) && f.day === '2026-08-18' && f.time >= '17:00').slice(0, 2);
-      state.set('savedAgenda', { scenarioIdx: 0, schedule: hoy.map(f =>
+      const pick = (day, pred, n) => FILMS.filter(f => bog(f) && f.day === day && pred(f)).slice(0, n);
+      const sched = [...pick('2026-08-18', f => f.time < '14:00', 1), ...pick('2026-08-18', f => f.time >= '17:00', 2)];
+      state.set('savedAgenda', { scenarioIdx: 0, schedule: sched.map(f =>
         Object.assign({}, f, { _title: f.title })) });
+      state.set('watched', watch ? new Set(sched.map(x => x.title)) : new Set());
       switchMainNav('mnav-miplan'); showAgView();
       await new Promise(r => setTimeout(r, 1200));
-    }, hora);
+    }, { hh: hora, watch: !!watch });
     return page.evaluate(() => {
-      const b = document.querySelector('.ctx-eyebrow-band');
-      const r = b && b.getBoundingClientRect();
-      return { txt: b?.textContent.replace(/\s+/g, ' ').trim(),
-        aSangre: r && Math.round(r.x) === 0 && Math.round(r.width) === 390,
-        dot: !!b?.querySelector('.row-dot') };
+      const a = document.querySelector('#ag-view .ctx-aviso');
+      return { txt: a?.textContent.replace(/\s+/g, ' ').trim(),
+        color: a && getComputedStyle(a).color,
+        dot: !!a?.querySelector('.row-dot'),
+        banda: !!document.querySelector('.ctx-eyebrow-band') };
     });
   };
   await enterFestival(page, 'ficdeh2026', '2026-08-18T15:00:00-05:00');
   await page.evaluate(() => [...document.querySelectorAll('#city-sheet [data-action]')]
     .find(x => x.textContent.includes('Bogotá'))?.click());
   await page.waitForTimeout(600);
+  const AMBER = 'rgb(245, 158, 11)';
 
-  const prox = await medir('15:00');
-  expect(prox.txt, 'la banda nombra el estado').toBe('Próxima función');
-  expect(prox.aSangre, 'a sangre como toda banda').toBe(true);
+  const prox = await medir('2026-08-18T16:45:00-05:00');
+  expect(prox.txt, 'el aviso nombra el estado').toBe('Próxima función');
+  expect(prox.color, 'próximo = ámbar').toBe(AMBER);
   expect(prox.dot, 'sin punto: nada corre aún').toBe(false);
+  expect(prox.banda, 'la banda del hero no existe más').toBe(false);
 
-  const curso = await medir('17:30');
-  expect(curso.txt, 'en curso').toBe('En curso');
-  expect(curso.dot, 'y el punto verde dice que es AHORA').toBe(true);
+  const curso = await medir('2026-08-18T17:30:00-05:00');
+  expect(curso.txt).toBe('En curso');
+  expect(curso.color, 'ahora = verde').not.toBe(AMBER);
+  expect(curso.dot, 'y el punto dice que corre').toBe(true);
+
+  const libre = await medir('2026-08-18T14:30:00-05:00');
+  expect(libre.txt, 'tiempo libre habla el mismo componente').toMatch(/Tiempo libre/);
+  expect(libre.color, 'verde, sin punto').toBe(curso.color);
+  expect(libre.dot).toBe(false);
+
+  const noct = await medir('2026-08-18T22:45:00-05:00', true);
+  expect(noct.txt, 'el día COMPLETO: «tu martes», no «tu mar»').toMatch(/martes/);
+  expect(noct.dot).toBe(false);
+
+  const fin = await medir('2026-08-20T11:00:00-05:00', true);
+  expect(fin.txt, 'el cierre vuelve al sistema').toMatch(/Festival terminado/);
+  expect(fin.color, 'informativo = gris, no ámbar').not.toBe(AMBER);
 });
 
 // 18 ago, auditoría de Mi Plan con Juan: el calendario es UNA pieza — grilla,
