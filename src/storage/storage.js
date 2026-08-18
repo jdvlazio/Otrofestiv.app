@@ -40,6 +40,8 @@ export const storage = {
 
   getWatched() { try { const r=localStorage.getItem(FESTIVAL_STORAGE_KEY+'watched'); return r?new Set(JSON.parse(r)):new Set(); } catch(e) { return new Set(); } },
   setWatched(s) { try { localStorage.setItem(FESTIVAL_STORAGE_KEY+'watched', JSON.stringify([...s])); } catch(e) {} },
+  getNotWatched() { try { const r=localStorage.getItem(FESTIVAL_STORAGE_KEY+'notWatched'); return r?new Set(JSON.parse(r)):new Set(); } catch(e) { return new Set(); } },
+  setNotWatched(s) { try { localStorage.setItem(FESTIVAL_STORAGE_KEY+'notWatched', JSON.stringify([...s])); } catch(e) {} },
 
   getPrioritized() { try { const r=localStorage.getItem(FESTIVAL_STORAGE_KEY+'prio'); return r?new Set(JSON.parse(r)):new Set(); } catch(e) { return new Set(); } },
   setPrioritized(s) { try { localStorage.setItem(FESTIVAL_STORAGE_KEY+'prio', JSON.stringify([...s])); } catch(e) {} },

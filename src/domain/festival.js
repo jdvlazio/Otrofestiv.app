@@ -21,7 +21,7 @@
 import { FESTIVAL_CONFIG, DEFAULT_DURATION_MIN, FESTIVAL_BUFFER } from "../config.js";
 import { toMin, simNow, simTodayStr, festivalEnded, _festNowMin } from "./time.js";
 import { blockDuration } from "./film.js";
-import { screeningPassed, _classifyTodayScreenings, _endedStats } from "./film.js";
+import { screeningPassed, _classifyTodayScreenings, _endedStats, effectiveWatched } from "./film.js";
 export function _resolveVenue(name,venues){
   if(!name) return{short:''};
   if(!venues) return{short:name};
@@ -103,7 +103,10 @@ export function _getFestivalPhase(){
 
   // EVENING: todas las funciones del día terminaron
   if(!active.length&&!future.length){
-    const todayWatched=todayScreenings.filter(s=>watched.has(s._title)||screeningPassed(s));
+    // effectiveWatched (dueño único): igual que antes en la práctica —
+    // pasada = asumida vista — pero ahora respeta el «no la vi» (notWatched).
+    const _eff=effectiveWatched();
+    const todayWatched=todayScreenings.filter(s=>_eff.has(s._title));
     return{phase:'evening',todayScreenings,todayWatched};
   }
 

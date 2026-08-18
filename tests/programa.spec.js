@@ -770,20 +770,23 @@ test('T67 — el chip nombra el Diario, y el Recuerdo lo presenta', async ({ pag
     await page.waitForTimeout(900);
   };
   await pintar();
-  const chip = await page.evaluate(() => {
-    const c = document.querySelector('.diary-chip');
-    return c && { txt: c.innerText.replace(/\s+/g, ' ').trim(),
-      ancho: Math.round(c.getBoundingClientRect().width),
-      icono: !!c.querySelector('svg'),
-      badge: !!c.querySelector('.count-badge'),
-      desborda: c.getBoundingClientRect().right > 390 };
+  // El chip murió (18 ago): lo reemplaza la SECCIÓN Diario al final del tab —
+  // banda canónica con icono, cuenta como badge y «Ver todo» hacia el overlay.
+  const sec = await page.evaluate(() => {
+    const w = document.querySelector('.diario-wrap');
+    const b = w?.querySelector('.sec-hdr');
+    return w && { txt: b.textContent.replace(/\s+/g, ' ').trim(),
+      icono: !!b.querySelector('svg'),
+      badge: !!b.querySelector('.count-badge'),
+      verTodo: !!b.querySelector('[data-action="openDiary"]'),
+      chipViejo: !!document.querySelector('.diary-chip') };
   });
-  expect(chip, 'con obras vistas hay chip').toBeTruthy();
-  expect(chip.txt, 'el chip nombra su destino').toContain('Diario');
-  expect(chip.icono, 'con icono, como todo encabezado').toBe(true);
-  expect(chip.badge, 'y la cuenta como badge, no en palabras').toBe(true);
-  expect(chip.txt, 'la cuenta no se repite en palabras').not.toMatch(/obras? vistas?/);
-  expect(chip.desborda, 'sin desbordar los 390 px').toBe(false);
+  expect(sec, 'con obras vistas hay sección Diario').toBeTruthy();
+  expect(sec.txt, 'la banda nombra su destino').toContain('Diario');
+  expect(sec.icono, 'con icono, como toda banda').toBe(true);
+  expect(sec.badge, 'y la cuenta como badge, no en palabras').toBe(true);
+  expect(sec.verTodo, '«Ver todo» lleva al Diario completo').toBe(true);
+  expect(sec.chipViejo, 'el chip de la banda del Plan no existe más').toBe(false);
 
   // Y después del festival, el bloque del Recuerdo se presenta con su nombre.
   await page.evaluate(() => { _simTime = '2026-08-21T12:00:00-05:00'; showAgView(); });
@@ -877,12 +880,12 @@ test('T70 — el Diario y el Recuerdo cuentan lo mismo, incluidos los talleres',
       const f = FILMS.find(x => x.title === t); return Object.assign({}, f, { _title: t }); }) });
     switchMainNav('mnav-miplan'); showAgView();
     await new Promise(r => setTimeout(r, 1200));
-    const c = document.querySelector('.diary-chip');
+    const c = document.querySelector('.diario-wrap .count-badge');
     return { conEvento: marcar.length, eventos: ev.length,
-      chip: c && c.innerText.replace(/\s+/g, ' ').trim() };
+      cuenta: c && c.textContent.trim() };
   });
   expect(caso.eventos, 'FICDEH tiene eventos en catálogo').toBe(1);
-  expect(caso.chip, 'el chip cuenta las 3, taller incluido').toBe('Diario 3');
+  expect(caso.cuenta, 'la banda del Diario cuenta las 3, taller incluido').toBe('3');
 
   const retro = await page.evaluate(async () => {
     _simTime = '2026-08-21T12:00:00-05:00'; showAgView();
@@ -893,12 +896,10 @@ test('T70 — el Diario y el Recuerdo cuentan lo mismo, incluidos los talleres',
     .toBe('Viste 3 actividades');
 });
 
-// Ronda 3 (diseño, Juan): en Mi Plan el Diario iba a la derecha y «Día n de n» a
-// la izquierda —el destino detrás del dato— y el bloque «Sin confirmar» era la
-// única sección de la app dibujada como card, con una píldora de encabezado que
-// flotaba a 17px mientras sus filas arrancaban a 33. Regla contada sobre la app:
-// card = ítem, resumen, panel o menú; sección = lista con su banda a sangre.
-test('T71 — Mi Plan: la banda del Plan con Diario y día, y «Sin confirmar» es sección', async ({ page }) => {
+// 18 ago (vista asumida): la banda del Plan quedó solo con su cuenta y el día —
+// el chip del Diario se mudó a su sección y «Sin confirmar» murió con la
+// asunción. La banda sigue siendo canónica (a sangre, nombre + badge).
+test('T71 — la banda del Plan: canónica, sin chip, y sin resucitar «Sin confirmar»', async ({ page }) => {
   await enterFestival(page, 'ficdeh2026', '2026-08-17T20:00:00-05:00');
   await page.evaluate(() => document.querySelector('[data-action="citySheetAll"]')?.click());
   await page.waitForTimeout(400);
@@ -910,53 +911,22 @@ test('T71 — Mi Plan: la banda del Plan con Diario y día, y «Sin confirmar» 
       Object.assign({}, f, { _title: f.title })) });
     switchMainNav('mnav-miplan'); showAgView();
     await new Promise(r => setTimeout(r, 1400));
-    const box = s => { const e = document.querySelector(s); if (!e) return null;
-      const b = e.getBoundingClientRect(); return { x: Math.round(b.x), r: Math.round(b.right) }; };
-    const wrap = document.querySelector('.checkin-wrap');
-    const cs = wrap && getComputedStyle(wrap);
+    const banda = [...document.querySelectorAll('#ag-view .sec-hdr')]
+      .find(e => /Mi Plan|My Plan|Meu Plano/.test(e.textContent));
+    const b = banda.getBoundingClientRect();
     return {
-      chip: box('.diary-chip'),
-      dia: box('.sec-hdr .sec-hdr-opt'),
-      bandaPlan: box('#ag-view .sec-hdr'),
-      bandaPlanTxt: document.querySelector('#ag-view .sec-hdr')?.textContent.replace(/\s+/g, ' ').trim(),
-      banda: box('.checkin-wrap .sec-hdr'),
-      fila: box('.checkin-title'),
-      // El encabezado del día se mudó ADENTRO de la pieza calendario con su
-      // inset propio (T82); el vecino de página de la fila es el inset de
-      // contenido del tab: el borde interno de .saved-agenda.
-      vecino: (() => { const e = document.querySelector('.saved-agenda'); if (!e) return null;
-        const b = e.getBoundingClientRect(), cs = getComputedStyle(e);
-        return { x: Math.round(b.x + parseFloat(cs.paddingLeft)) }; })(),
-      badge: document.querySelector('.checkin-wrap .count-badge')?.textContent,
-      pendientes: 3,
-      // sección, no card: sin fondo propio ni borde
-      fondo: cs && cs.backgroundColor,
-      borde: cs && cs.borderTopWidth,
-      pildoraVieja: !!document.querySelector('.checkin-hdr'),
+      x: Math.round(b.x), w: Math.round(b.width),
+      txt: banda.textContent.replace(/\s+/g, ' ').trim(),
+      chip: !!banda.querySelector('.diary-chip'),
+      dia: !!banda.querySelector('.sec-hdr-opt'),
+      checkin: !!document.querySelector('.checkin-wrap'),
     };
   });
-
-  // 1· la banda del Plan (18 ago): sec-hdr canónica con nombre + cuenta, el chip
-  //    del Diario DENTRO (ámbar, tocable) y el día como dato gris al final.
-  expect(g.bandaPlan.x, 'la banda del Plan va a sangre').toBe(0);
-  expect(g.bandaPlanTxt, 'nombra la sección con su cuenta').toMatch(/Mi Plan\s*5/);
-  expect(g.chip.x, 'el Diario vive dentro de la banda').toBeGreaterThan(g.bandaPlan.x);
-  expect(g.chip.r, 'antes del día').toBeLessThanOrEqual(g.dia.x + 1);
-  expect(g.dia.r, 'y el día cierra la banda').toBeGreaterThan(g.chip.r);
-
-  // 2· la banda es canónica: a sangre, como cualquier sec-hdr
-  expect(g.banda.x, 'banda a sangre por izquierda').toBe(0);
-
-  // 3· las filas alinean con sus vecinas — el desajuste de 16px no puede volver
-  expect(g.fila.x, 'la fila alinea con el inset de contenido del tab').toBe(g.vecino.x);
-
-  // 4· sección, no card
-  expect(g.pildoraVieja, 'la píldora inline ya no existe').toBe(false);
-  expect(g.fondo, 'sin fondo de card').toMatch(/rgba\(0, 0, 0, 0\)|transparent/);
-  expect(g.borde, 'sin borde de card').toBe('0px');
-
-  // 5· el badge dice cuántas quedan por confirmar
-  expect(g.badge, 'la cuenta está a la vista').toBe(String(g.pendientes));
+  expect(g.x, 'la banda del Plan va a sangre').toBe(0);
+  expect(g.txt, 'nombra la sección con su cuenta').toMatch(/Mi Plan\s*5/);
+  expect(g.chip, 'el chip del Diario no vive más en la banda').toBe(false);
+  expect(g.dia, 'el día cierra la banda como dato').toBe(true);
+  expect(g.checkin, '«Sin confirmar» no resucita').toBe(false);
 });
 
 // Ronda 4 (auditor de fin de festival): «AHORA» en verde sobre una película que
@@ -1218,8 +1188,9 @@ test('T76 — el cupo de prioridades es de las vivas, y el badge de MI PLAN dice
   expect(cupo.otraEntro, 'priorizar otra viva no choca contra el límite').toBe(true);
   expect(cupo.sheetLimite, 'sin sheet de límite').toBe(false);
 
-  // ── 2 · badge del tab = banda «Sin confirmar», mismo número siempre
-  const badgeBanda = await page.evaluate(async () => {
+  // ── 2 · la tarea de confirmar murió con la vista asumida (18 ago): ni badge
+  //        en el tab ni bloque «Sin confirmar» — las pasadas van directo al Diario.
+  const asumido = await page.evaluate(async () => {
     const pas = FILMS.filter(f => f.day <= '2026-08-17').slice(0, 3);
     state.set('watched', new Set());
     state.set('savedAgenda', { scenarioIdx: 0, schedule: pas.map(f =>
@@ -1227,12 +1198,14 @@ test('T76 — el cupo de prioridades es de las vivas, y el badge de MI PLAN dice
     switchMainNav('mnav-miplan'); showAgView();
     await new Promise(r => setTimeout(r, 1200));
     return {
-      tab: document.getElementById('miplan-badge')?.textContent,
-      banda: document.querySelector('.checkin-wrap .count-badge')?.textContent,
+      badge: !!document.getElementById('miplan-badge'),
+      checkin: !!document.querySelector('.checkin-wrap'),
+      diario: document.querySelector('.diario-wrap .count-badge')?.textContent,
     };
   });
-  expect(badgeBanda.tab, 'el tab y la banda dicen el mismo número').toBe(badgeBanda.banda);
-  expect(Number(badgeBanda.tab), 'y es la cuenta real de pendientes').toBe(3);
+  expect(asumido.badge, 'el badge del tab murió con su tarea').toBe(false);
+  expect(asumido.checkin, 'el bloque de confirmación no existe').toBe(false);
+  expect(Number(asumido.diario), 'las 3 pasadas están ASUMIDAS en el Diario').toBe(3);
 });
 
 // Falsa alarma que dejó un seguro: creí ver días vencidos en los chips de
@@ -1448,4 +1421,49 @@ test('T82 — el calendario es una pieza: lista adentro, footer con nombre propi
   expect(r.chevronFuturas, 'toda hora tocable lleva chevron').toBe(true);
   expect(r.nPasadas).toBeGreaterThan(0);
   expect(r.chevronPasadas, 'una hora pasada no promete cambio').toBe(false);
+});
+
+// 18 ago — Diario LUZ (elección de Juan sobre 3 propuestas premium): el muro de
+// pósters LIMPIOS es el diario. La vista asumida no lleva NI UN pixel de estado;
+// el estado solo aparece al desviarse: calificaste → estrellas FUERA del afiche
+// (patrón Letterboxd); «no la vi» → póster apagado con el ojo tachado.
+test('T83 — Diario Luz: muro limpio, estrellas afuera, y la negación se apaga', async ({ page }) => {
+  await enterFestival(page, 'ficdeh2026', '2026-08-18T15:00:00-05:00');
+  await page.evaluate(() => [...document.querySelectorAll('#city-sheet [data-action]')]
+    .find(x => x.textContent.includes('Bogotá'))?.click());
+  await page.waitForTimeout(600);
+  const r = await page.evaluate(async () => {
+    const bog = f => (f.venue || '').includes('Bogotá');
+    const pick = (day, n) => FILMS.filter(f => bog(f) && f.day === day && f.poster && !f.is_cortos).slice(0, n);
+    const [rated, assumed, negada] = [...pick('2026-08-15', 2), ...pick('2026-08-16', 1)];
+    const sched = [rated, assumed, negada,
+      ...FILMS.filter(f => bog(f) && f.day === '2026-08-18' && f.time > '16:00').slice(0, 1)];
+    state.set('savedAgenda', { scenarioIdx: 0, schedule: sched.map(f => Object.assign({}, f, { _title: f.title })) });
+    state.set('watched', new Set());
+    state.set('notWatched', new Set([negada.title]));
+    state.set('filmRatings', { [rated.title]: 4 });
+    switchMainNav('mnav-miplan'); showAgView();
+    await new Promise(r => setTimeout(r, 1400));
+    const wrap = document.querySelector('.diario-wrap');
+    const sug = document.querySelector('.suggestion-wrap');
+    const card = t => [...wrap.querySelectorAll('.dw-card')].find(c => c.dataset.title === t);
+    const cR = card(rated.title), cA = card(assumed.title), cN = card(negada.title);
+    return {
+      alFinal: !!wrap && !!sug && wrap.getBoundingClientRect().top > sug.getBoundingClientRect().top,
+      cuenta: wrap.querySelector('.count-badge')?.textContent,
+      // calificada: estrellas FUERA del póster (la fila no es descendiente de .dw-poster)
+      ratedStars: cR?.querySelectorAll('.dw-stars .dw-star.on').length,
+      starsFuera: cR ? !cR.querySelector('.dw-poster .dw-stars') : null,
+      // asumida: ni un pixel de estado sobre el afiche
+      assumedLimpia: cA ? !cA.querySelector('.dw-off-badge') && cA.querySelectorAll('.dw-star.on').length === 0 : null,
+      // negada: apagada con ojo tachado, y NO cuenta en la banda
+      negadaOff: cN ? !!cN.querySelector('.dw-off-badge') && !!cN.querySelector('.dw-poster.dw-off') : null,
+    };
+  });
+  expect(r.alFinal, 'el Diario cierra el tab, después de Sugerencias').toBe(true);
+  expect(Number(r.cuenta), 'la banda cuenta 2: la calificada y la ASUMIDA — la negada no').toBe(2);
+  expect(r.ratedStars, 'la calificada lleva sus 4 estrellas').toBe(4);
+  expect(r.starsFuera, 'las estrellas viven FUERA del afiche (Letterboxd)').toBe(true);
+  expect(r.assumedLimpia, 'la asumida no lleva ni un pixel de estado').toBe(true);
+  expect(r.negadaOff, 'la negada se apaga con el ojo tachado').toBe(true);
 });

@@ -26,7 +26,7 @@ import { cloudScreeningKey } from '../domain/delays.js';
 // Es la ÚNICA dependencia view→controller permitida (fijada en validate.py [view-purity]).
 import { getConsensusMap } from '../controller/delays-cloud.js';
 import {
-  screeningPassed, screeningEnded, screeningNow, screeningQaOnly, screeningEndDate, effectiveDuration, blockDuration, durationForTravel, delayedEndMin, _delayKey, _endedStats, prioLiveCount,
+  screeningPassed, screeningEnded, screeningNow, screeningQaOnly, screeningEndDate, effectiveDuration, blockDuration, durationForTravel, delayedEndMin, _delayKey, _endedStats, prioLiveCount, effectiveWatched,
 } from '../domain/film.js';
 import {
   isScreeningBlocked, screeningPlannable, screensConflict, screensConflictReason,
@@ -43,7 +43,7 @@ import {
 
 export function renderAgenda(){
   // Group II Tier 3 (p6c): 3 branches (seleccion/miplan/planner) con follow-ups
-  // branch-específicos (_scrollMiPlanToNow, _updateMiPlanBadge, renderAvBlocks,
+  // branch-específicos (_scrollMiPlanToNow, renderAvBlocks,
   // _agHi.style.display, requestAnimationFrame(_fixStickyOffset)). Split impráctico
   // — body se queda monolítico con state.snapshot() destructure al top.
   const {savedAgenda, FILMS, _activeFestId, watched, watchlist, prioritized, availability} = state.snapshot();
@@ -87,7 +87,7 @@ export function renderAgenda(){
       const _vistas=_wl.filter(x=>watched.has(x));
       const _ganas=_wl.filter(x=>!watched.has(x));
       view.innerHTML=`<div class="ag-section">
-        ${_vistas.length?`<div class="sec-hdr sm">${ICONS.check} <span>${t('int_vistas_hdr')}</span></div>${_vistas.map(x=>_row(x,true)).join('')}`:''}
+        ${_vistas.length?`<div class="sec-hdr sm">${ICONS.eye} <span>${t('int_vistas_hdr')}</span></div>${_vistas.map(x=>_row(x,true)).join('')}`:''}
         ${_ganas.length?`<div class="sec-hdr sm">${ICONS.heart} <span>${t('int_ganas')}</span></div>${_ganas.map(x=>_row(x,false)).join('')}`:''}
       </div>`;
       return;
@@ -109,7 +109,6 @@ export function renderAgenda(){
     // respeta el estado, así que no cae en Modo Recuerdo) y no queda un hueco.
     view.innerHTML=_progressHtmlPlan+renderSavedAgendaHTML(state, getConsensusMap());
     _scrollMiPlanToNow();
-    _updateMiPlanBadge();
   } else {
     // ── Planear: stepper de progreso + prio strip + disponibilidad + opciones ──
     if(festivalEnded()){
@@ -540,63 +539,6 @@ export function renderMiPlanCalendar(state){
   </div>`
 }
 
-export function renderUnconfirmed(state,schedule){
-  const {watched, FESTIVAL_DATES} = state.snapshot();
-  const now=simNow();
-  const past=schedule.filter(s=>{
-    if(watched.has(s._title)) return false;
-    const end=screeningEndDate(s); // fin canónico único (Q&A incluido)
-    return end&&end<now;
-  }).sort((a,b)=>{
-    const da=_festDate(FESTIVAL_DATES[a.day],a.time);
-    const db=_festDate(FESTIVAL_DATES[b.day],b.time);
-    return db-da;
-  });
-  if(!past.length) return'';
-  const nowMin=_festNowMin();
-  const todayStr=simTodayStr();
-  const todayKey=DAY_KEYS.find(d=>FESTIVAL_DATES[d]===todayStr);
-  const latest=past[0];const older=past.slice(1);
-  const{displayTitle}=parseProgramTitle(latest._title||'');
-  const short=displayTitle.length>28?displayTitle.slice(0,26)+'…':displayTitle;
-  // MISMO fin que el filtro de arriba: antes "terminó hace X" medía desde
-  // blockDuration mientras el filtro usaba effective — dos relojes en una frase.
-  const minsAgo=Math.round((now.getTime()-screeningEndDate(latest).getTime())/60000);
-  const timeDesc=minsAgo<120?`${t('plan_termino_hace')} ${minsAgo} min`:`${dayLabel(latest.day)} · ${latest.time}`;
-  const safeLast=latest._title.replace(/"/g,'&quot;').replace(/'/g,"&#39;");
-  const olderHtml=older.length?`
-    <div id="ctx-older" style="display:none">
-      ${older.map(s=>{
-        const{displayTitle:dt}=parseProgramTitle(s._title||'');
-        const sh=dt.length>26?dt.slice(0,24)+'…':dt;
-        const st=s._title.replace(/"/g,'&quot;').replace(/'/g,"&#39;");
-        return`<div class="checkin-item">
-          <div class="checkin-info"><div class="checkin-title">${sh}</div><div class="checkin-time">${dayLabel(s.day)} · ${s.time}</div></div>
-          <div class="checkin-btns"><button class="row-xs checkin-btn yes" data-action="checkinLaVi" data-title="${st}">${ICONS.check} ${t('cta_vista')}</button><button class="checkin-btn no" data-action="checkinNoLaVi" data-title="${st}">${t('misc_luego')}</button></div>
-        </div>`;
-      }).join('')}
-    </div>
-    <div class="sim-hdr-pad">
-      <button class="link-gray-xs"
-        data-action="toggleCtxOlder">
-        + ${older.length} ${older.length>1?t('label_anteriores'):t('label_anterior')} ${t('label_sin_confirmar')}
-      </button>
-    </div>`:'';
-  return`<div class="checkin-wrap">
-    <!-- El icono es ICONS.alert, el mismo de AVISOS y de los avisos de conflicto,
-         retraso y traslado (8 usos): la app tiene UN símbolo para «esto requiere
-         tu atención» y este bloque es eso. check-circle decía la ACCIÓN
-         (confirmar), no el estado, y habría inventado un noveno significado. -->
-    <div class="sec-hdr sm">${ICONS.alert} <span>${t('label_sin_confirmar_hdr')}</span> <span class="count-badge cb-amber">${past.length}</span></div>
-    <div class="checkin-item">
-      <div class="checkin-info"><div class="checkin-title">${short}</div><div class="checkin-time">${timeDesc}</div></div>
-      <div class="checkin-btns">
-        <button class="row-xs checkin-btn yes" data-action="checkinLaVi" data-title="${safeLast}">${ICONS.check} ${t('cta_vista')}</button>
-        <button class="checkin-btn no" data-action="checkinNoLaVi" data-title="${safeLast}">${t('misc_luego')}</button>
-      </div>
-    </div>${olderHtml}
-  </div>`;
-}
 
 export function renderFilmAlternatives(state,title,day,time){
   const {FILMS, watched, savedAgenda} = state.snapshot();
@@ -671,12 +613,12 @@ function _recapPosterCard(state,title,{retro=false}={}){
   const r=filmRatings[title];
   // Modo retro (Modo Recuerdo): ítem del plan SIN marcar — póster atenuado con
   // ✓ para marcar Vista (toggleWatched: en programas dispara la cola por obra).
-  if(retro&&!watched.has(title)){
+  if(retro&&!effectiveWatched().has(title)){
     const _rpp=posterParts(f,{header:true,body:''});
     return`<div class="poster-card ended-poster js-open-pel${_rpp.ed?' poster-ed':''}" style="opacity:.6" data-title="${escXML(f.title)}"${_rpp.ed?` style="--ed-accent:${_rpp.accent};opacity:.6"`:''}>
       ${_rpp.ed?_rpp.inner:_rpp.src?`<img class="img-cover" src="${_rpp.src}" loading="lazy" onerror="this.remove()" alt="">`:``}
       <div class="ended-poster-footer">
-        <button class="ended-rate-btn" data-action="toggleWatched" data-title="${escXML(title)}" data-stop="1" aria-label="${t('aria_marcar_vista')}">${ICONS.check}</button>
+        <button class="ended-rate-btn" data-action="toggleWatched" data-title="${escXML(title)}" data-stop="1" aria-label="${t('aria_marcar_vista')}">${ICONS.eye}</button>
       </div>
     </div>`;
   }
@@ -725,6 +667,8 @@ function _obraPosterCard(state,item,section){
 // sub-etiqueta del grupo. Cronológico por día + "fuera del plan".
 export function renderDiaryHTML(state,{retro=false}={}){
   const {savedAgenda, watched, FILMS} = state.snapshot();
+  // Vista ASUMIDA (dueño único): el overlay muestra lo efectivo, no solo lo marcado.
+  const _effD=effectiveWatched();
   const all=(savedAgenda&&savedAgenda.schedule)||[];
   const planTitles=new Set(all.map(s=>s._title));
   const _seen=new Set();
@@ -744,18 +688,18 @@ export function renderDiaryHTML(state,{retro=false}={}){
   let html='';
   DAY_KEYS.forEach(day=>{
     const dayTitles=[];
-    all.forEach(sc=>{ if(sc.day===day&&(retro||watched.has(sc._title))&&!_seen.has(sc._title)){ _seen.add(sc._title); dayTitles.push(sc._title); } });
+    all.forEach(sc=>{ if(sc.day===day&&(retro||_effD.has(sc._title))&&!_seen.has(sc._title)){ _seen.add(sc._title); dayTitles.push(sc._title); } });
     if(!dayTitles.length) return;
     // retro: los ítems del plan SIN marcar van juntos en UN grid del día
     // (atenuados, ✓ Vista) — no una card por fila con huecos.
-    const _watchedT=dayTitles.filter(tt=>watched.has(tt));
+    const _watchedT=dayTitles.filter(tt=>_effD.has(tt));
     const _retroT=retro?dayTitles.filter(tt=>!watched.has(tt)):[];
     const _retroGrid=_retroT.length?`<div class="poster-grid pg-miplan">${_retroT.map(tt=>_recapPosterCard(state,tt,{retro:true})).join('')}</div>`:'';
     html+=`<div class="saved-day-lbl">${dayLabelLong(day)}</div>${_watchedT.map(_entry).join('')}${_retroGrid}`;
   });
-  const outside=[...watched].filter(tt=>!planTitles.has(tt)&&FILMS.some(f=>f.title===tt));
+  const outside=[..._effD].filter(tt=>!planTitles.has(tt)&&FILMS.some(f=>f.title===tt));
   if(outside.length){
-    html+=`<div class="sec-hdr sm">${ICONS.check} <span>${t('plan_vistas_fuera')}</span></div>${outside.map(_entry).join('')}`;
+    html+=`<div class="sec-hdr sm">${ICONS.eye} <span>${t('plan_vistas_fuera')}</span></div>${outside.map(_entry).join('')}`;
   }
   return html||emptyState(ICONS.check, t('diary_vacio'));
 }
@@ -1251,7 +1195,7 @@ export function renderFilmListHTML(state){
       const dayDiff=(fA.day_order||0)-(fB.day_order||0);
       return dayDiff||toMin(fA.time)-toMin(fB.time);
     });
-    html+=`<div class="sec-hdr">${ICONS.check} <span>${t('misc_ya_vistas')}</span>
+    html+=`<div class="sec-hdr">${ICONS.eye} <span>${t('misc_ya_vistas')}</span>
       <span class="count-badge cb-neutral">${watchedList.length}</span>
     </div>
     <div>${_sortedW.map(_mkItemWatched).join('')}</div>`;
@@ -1342,14 +1286,12 @@ export function _renderSavedAgendaHTML(state, consensus){
   // minimalista y compacta — el calendario arranca una fila antes). La
   // distinción tocable/legible la carga el ACENTO, no la posición: el chip va
   // en ámbar con chevron, «Día 7 de 8» en gris — solo uno invita al tacto.
-  const _chipHdr=_diaryCount>0
-    ?`<button class="diary-chip" data-action="openDiary" data-stop="1">${ICONS.bookOpen} <span>${t('diary_eyebrow')}</span> <span class="count-badge cb-neutral">${_diaryCount}</span>${ICONS.chevronR}</button>`
-    :'';
-  const progressBar=`<div class="sec-hdr">${ICONS.calendar} <span>${t('label_mi_plan_hdr')}</span> <span class="count-badge cb-neutral">${all.length}</span><span class="hdr-end">${_chipHdr}${currentDayNum?`<span class="sec-hdr-opt">${t('label_dia_prog')} <b>${currentDayNum}</b> ${t('label_de_dias')} ${totalDays}</span>`:''}</span></div>`;
+  // El chip del Diario murió (18 ago): la sección DIARIO al final del tab lo
+  // reemplaza — la banda del Plan queda solo con su cuenta y el día.
+  const progressBar=`<div class="sec-hdr">${ICONS.calendar} <span>${t('label_mi_plan_hdr')}</span> <span class="count-badge cb-neutral">${all.length}</span><span class="hdr-end">${currentDayNum?`<span class="sec-hdr-opt">${t('label_dia_prog')} <b>${currentDayNum}</b> ${t('label_de_dias')} ${totalDays}</span>`:''}</span></div>`;
 
   const _ctxHeader=renderContextualHeader(state, consensus);
   const _nextStrip=''; // delay controls integrated into ctx-header
-  const _unconfirmed=renderUnconfirmed(state,all);
   let html=`<div class="saved-agenda">
     ${_ctxHeader}
     ${progressBar}
@@ -1373,8 +1315,6 @@ export function _renderSavedAgendaHTML(state, consensus){
   // Retirado 17 jul — lo reemplaza el DIARIO (renderDiaryHTML/openDiary), patrón
   // Letterboxd/Things: destino propio desde el chip "N vistas" del progreso.)
 
-  // Funciones sin confirmar — después del calendario (tarea diferible)
-  if(_unconfirmed) html+=_unconfirmed;
 
   // Sugerencias solo durante el festival
   // Sugerencias SOLO del día donde el usuario está parado (activeMiPlanDay), no de la
@@ -1421,8 +1361,63 @@ export function _renderSavedAgendaHTML(state, consensus){
   html+='</div>'; // close suggestion-wrap
   } // end !festivalEnded
 
+  html+=renderDiarioSection(state);
+
   html+='</div>';
   return html;
+}
+
+// ── DIARIO (Luz) — la sección coleccionista que cierra Mi Plan (Juan, 18 ago).
+// Concepto LUZ con estrellas afuera (patrón Letterboxd, aprendido por la
+// cinefilia): el muro de pósters LIMPIOS es el diario — la vista asumida no
+// tiene ni un pixel de estado; el estado solo aparece cuando se desvía de la
+// asunción: calificaste → micro-fila de estrellas BAJO el afiche; «no la vi»
+// (notWatched) → el póster se apaga con el ojo tachado. Tap = ficha (js-open-pel).
+export function renderDiarioSection(state){
+  const {FILMS, savedAgenda, filmRatings} = state.snapshot();
+  const eff=effectiveWatched();
+  if(!eff.size) return '';
+  const all=(savedAgenda&&savedAgenda.schedule)||[];
+  const {notWatched}=state.snapshot();
+  const _seen=new Set();
+  const _stars=n=>`<div class="dw-stars">${[1,2,3,4,5].map(i=>`<span class="dw-star${i<=n?' on':''}">${ICONS.starFill}</span>`).join('')}</div>`;
+  const _card=(title)=>{
+    const f=FILMS.find(fi=>fi.title===title);
+    if(!f) return '';
+    const off=notWatched.has(title);
+    const r=(!f.is_cortos&&filmRatings[title])||0;
+    const _pp=posterParts(f,{header:true,body:''});
+    return`<div class="dw-card js-open-pel" data-title="${escXML(title)}">
+      <div class="dw-poster${off?' dw-off':''}${_pp.ed?' poster-ed':''}"${_pp.ed?` style="--ed-accent:${_pp.accent}"`:''}>
+        ${_pp.ed?_pp.inner:_pp.src?`<img class="img-cover" src="${_pp.src}" loading="lazy" onerror="this.remove()" alt="">`:''}
+        ${off?`<div class="dw-off-badge" role="img" aria-label="${t('aria_no_la_vi')}">${ICONS.eyeOff}</div>`:''}
+      </div>
+      ${r?_stars(r):`<div class="dw-stars"></div>`}
+    </div>`;
+  };
+  let walls='';
+  DAY_KEYS.forEach(day=>{
+    const dayTitles=[];
+    all.forEach(sc=>{
+      if(sc.day===day&&(eff.has(sc._title)||notWatched.has(sc._title))&&!_seen.has(sc._title)){
+        _seen.add(sc._title); dayTitles.push(sc._title);
+      }
+    });
+    if(!dayTitles.length) return;
+    walls+=`<div class="dw-day-lbl">${dayLabelLong(day)}</div>
+      <div class="dw-grid">${dayTitles.map(_card).join('')}</div>`;
+  });
+  // vistas por fuera del plan también son colección
+  const outside=[...eff].filter(tt=>!_seen.has(tt)&&FILMS.some(f=>f.title===tt));
+  if(outside.length){
+    walls+=`<div class="dw-day-lbl">${t('plan_vistas_fuera')}</div>
+      <div class="dw-grid">${outside.map(_card).join('')}</div>`;
+  }
+  if(!walls) return '';
+  return`<div class="diario-wrap">
+    <div class="sec-hdr">${ICONS.bookOpen} <span>${t('diary_eyebrow')}</span> <span class="count-badge cb-neutral">${_endedStats().totalWatched}</span><span class="hdr-end"><button class="link-gray-xs" data-action="openDiary" data-stop="1">${t('misc_ver_todo')} ${ICONS.chevronR}</button></span></div>
+    ${walls}
+  </div>`;
 }
 
 export function renderAvBlocks(){
@@ -1914,20 +1909,3 @@ export function _scrollMiPlanToNow(){
   });
 }
 
-export function _updateMiPlanBadge(){
-  const badge=document.getElementById('miplan-badge');
-  if(!badge) return;
-  if(!savedAgenda||!savedAgenda.schedule) { badge.classList.remove('visible'); return; }
-  const now=simNow();
-  const count=savedAgenda.schedule.filter(s=>{
-    if(watched.has(s._title)) return false;
-    const end=screeningEndDate(s); // fin canónico único — mismo filtro que renderUnconfirmed
-    return end&&end<now;
-  }).length;
-  if(count>0){
-    badge.textContent=count>9?'9+':String(count);
-    badge.classList.add('visible');
-  } else {
-    badge.classList.remove('visible');
-  }
-}
