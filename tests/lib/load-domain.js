@@ -185,7 +185,7 @@ const DEFAULT_FNS = [
   '_resolveVenue', 'venueTravelMins', 'travelMins',
   'screensConflict', 'verifyPlan', '_cityOf', // helper local de schedule.js (kind 'ciudad')
   // Fase 2 — festival phase helpers
-  '_endedStats', '_classifyTodayScreenings', '_gapSuggestion', '_getFestivalPhase',
+  '_endedStats', 'effectiveWatched', '_classifyTodayScreenings', '_gapSuggestion', '_getFestivalPhase',
   // Fase 3 — temporal subsystem
   '_festDate', 'simNow', '_tzOffsetMin', '_festNow', '_festNowMin', 'simTodayStr', 'festivalEnded', 'screeningPassed', 'dayFullyPassed',
   // Fase 4 — schedule planning

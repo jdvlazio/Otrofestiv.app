@@ -32,6 +32,7 @@ let _planChannel=null, _planChannelKey=null, _planRerenderCb=null, _planLive=fal
 export function saveWL(){ storage.setWatchlist(watchlist); _cloudSave('watchlist'); }
 
 export function saveWatched(){ storage.setWatched(watched); _cloudSave('watched'); }
+export function saveNotWatched(){ storage.setNotWatched(notWatched); _cloudSave('notWatched'); }
 
 export function saveRating(title,rating){
   state.update('filmRatings', o => rating>0 ? {...o, [title]: rating} : state._omit(o, title));
@@ -79,6 +80,7 @@ export function saveState(...keys){
   const all=!keys.length;
   if(all||keys.includes('wl'))      saveWL();
   if(all||keys.includes('watched')) saveWatched();
+  if(all||keys.includes('notWatched')) saveNotWatched();
   if(all||keys.includes('prio'))    savePrio();
   if(all||keys.includes('agenda'))  saveSavedAgenda();
   if(all||keys.includes('av'))      saveAV();
