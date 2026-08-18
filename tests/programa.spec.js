@@ -2050,3 +2050,46 @@ test('T94 — lo que nunca compitió no cuenta como costo del Plan, y no se pier
   expect(r.sub, 'la explicación se dice una vez, con la ciudad del Plan').toMatch(/Bogotá/);
   expect(r.ciudadEnFila, 'cada fila aporta su ciudad').toBe(true);
 });
+
+test('T95 — la alerta de cruces es un pre-diagnóstico: no sobrevive al resultado', async ({ page }) => {
+  test.setTimeout(90000);
+  await enterFestival(page, 'ficdeh2026', '2026-08-18T08:00:00-05:00');
+  await page.evaluate(() => [...document.querySelectorAll('#city-sheet [data-action]')]
+    .find(x => x.textContent.includes('Bogotá'))?.click());
+  await page.waitForTimeout(500);
+  const r = await page.evaluate(async () => {
+    const D = await import('/src/domain/film.js');
+    const bog = f => (f.venue || '').includes('Bogotá');
+    const fut = [...new Set(FILMS.filter(f => bog(f) && !D.screeningPassed(f)).map(f => f.title))];
+    state.set('watchlist', new Set(fut.slice(0, 14)));
+    state.set('prioritized', new Set(fut.slice(0, 2)));
+    // showAgView() calcula solo si no hay Plan guardado (pipeline.js): para ver
+    // el estado PREVIO se le da uno, así el pre-diagnóstico queda a la vista.
+    const base = FILMS.find(f => bog(f) && !D.screeningPassed(f));
+    state.set('savedAgenda', { scenarioIdx: 0, schedule: [Object.assign({}, base, { _title: base.title })] });
+    cachedResult = null;
+    switchMainNav('mnav-planner'); showAgView();
+    await new Promise(r => setTimeout(r, 1500));
+    const antes = {
+      alerta: !!document.querySelector('.pre-resumen .dato-alerta'),
+      linea: document.querySelector('.pre-resumen .dato-linea')?.textContent.replace(/\s+/g, ' ').trim(),
+    };
+    document.querySelector('.av-calc-btn').click();
+    for (let i = 0; i < 40 && !document.querySelector('.ag-day-band'); i++) await new Promise(r => setTimeout(r, 250));
+    await new Promise(r => setTimeout(r, 400));
+    const banner = document.querySelector('.meta-banner-text');
+    return {
+      antes,
+      despuesAlerta: !!document.querySelector('.pre-resumen .dato-alerta'),
+      despuesLinea: document.querySelector('.pre-resumen .dato-linea')?.textContent.replace(/\s+/g, ' ').trim(),
+      banner: banner ? banner.textContent.replace(/\s+/g, ' ').trim() : null,
+    };
+  });
+  expect(r.antes.alerta, 'antes de calcular la alerta SÍ está (si no, el test no prueba nada)').toBe(true);
+  expect(r.despuesAlerta, 'con el resultado en pantalla la alerta se retira').toBe(false);
+  expect(r.despuesLinea, 'el insumo se conserva: se va la alerta, no el dato').toMatch(/\d+ obras/);
+  if (r.banner) {
+    expect(r.banner, 'punto seguido de raya no es puntuación española').not.toMatch(/\.\s*—/);
+    expect(r.banner, 'la segunda oración arranca en mayúscula').toMatch(/\.\s+[A-ZÁÉÍÓÚÑ]/);
+  }
+});

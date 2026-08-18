@@ -3613,7 +3613,7 @@ try:
     #   agenda.js (render agenda+miplan) · main.js (composición/bootstrap) ·
     #   i18n.js (diccionarios es/en, es DATA) · sheets-controller.js · handlers.js
     _ALLOW = {
-        'src/view/agenda.js': 1975,  # +40: «En otra ciudad» replegada (el motor no cruza ciudades) — 18 ago
+        'src/view/agenda.js': 1983,  # +8: la alerta de cruces no sobrevive al cálculo (comentario del porqué) — 18 ago
         'src/main.js': 1670,  # +1: dispatcher de includeAnyway (17 ago)  # +7: el splash recuerda el festival elegido (memoria que caduca sola) (16 ago)  # +46 total: _morphOpen a FLIP — clon de la card compuesta, radio contra-escalado, encuadre del destino (29 jul)
         'src/i18n/i18n.js': 1580,  # +6: plan_otra_ciudad + _sub en es/en/pt — 18 ago
         'src/controller/sheets-controller.js': 1682,  # +4: el nombre completo del festival en la tapa, vía festivalTagline (18 ago)
