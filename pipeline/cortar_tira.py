@@ -89,6 +89,26 @@ def cortar(ruta, n, y0=0, alto_min=140, paso=8, V=40, lam=0.9):
     return im, [(bs[i], bs[i+1]) for i in range(len(bs)-1)]
 
 
+def parte_vertical(im, a, b, umbral=0.30):
+    """¿Esta banda son DOS stills lado a lado en vez de uno ancho?
+
+    El PDF no siempre pone un still por fila: la página 13 tiene cuatro en
+    rejilla 2×2, media anchura cada uno. Con el modelo de «una fila = un still»
+    faltaban dos obras y el detector se inventaba cortes en otro sitio para
+    cuadrar el número.
+
+    Se compara el histograma de la mitad izquierda con el de la derecha: dos
+    fotogramas distintos no comparten paleta; una foto ancha sí consigo misma.
+    """
+    w = im.size[0]
+    xs_i = list(range(0, w // 2, 8))
+    xs_d = list(range(w // 2, w, 8))
+    pc = im.load()
+    hi = _hist(im, xs_i, a, b, pc)
+    hd = _hist(im, xs_d, a, b, pc)
+    return _d(hi, hd) > umbral
+
+
 if __name__ == '__main__':
     im, bs = cortar(sys.argv[1], int(sys.argv[2]), int(sys.argv[3]) if len(sys.argv) > 3 else 0)
     print(f'{sys.argv[1]}: {len(bs)} bandas')
