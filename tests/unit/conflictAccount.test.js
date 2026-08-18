@@ -21,7 +21,7 @@ const B = { title: 'Three black men', time: '17:00', duration: '80 min' };
 // que desaparecieron): sugerimos, no predecimos.
 test("'ajustado' → la causa (cambio de sala) y la llegada estimada", () => {
   const h = H.conflictAccount(A, B, { kind: 'ajustado', gap: 1, bFirst: false });
-  assert.match(h, /[Cc]ambiando de sala/); // la causa, nombrada
+  assert.match(h, /Después de.*cambiando de sala/s); // ancla temporal + causa
   assert.match(h, /~<b>17:14<\/b>/);           // 16:59 + 15, marcado como estimado
   assert.doesNotMatch(h, /15 min entre salas|→/); // sin sumandos ni flecha
   assert.doesNotMatch(h, /no te daría el tiempo|no llegás/); // sin veredicto en palabras
@@ -37,7 +37,7 @@ test("'ajustado' → la causa (cambio de sala) y la llegada estimada", () => {
 test("'viaje' sin Q&A → la causa y el total, con el margen ya adentro", () => {
   const h = H.conflictAccount({ ...A, time: '16:00' }, { ...B, time: '19:00' },
     { kind: 'viaje', travel: 95, gap: 91, bFirst: false });
-  assert.match(h, /[Cc]on el viaje/);  // la causa, nombrada
+  assert.match(h, /Después de.*con el viaje/s); // ancla temporal + causa
   assert.match(h, /~<b>19:19<\/b>/);           // 17:29 + 95 + 15, todo el margen adentro
   assert.doesNotMatch(h, /viaje ~95|margen 15 min|→|empieza/); // sin sumandos
   assert.doesNotMatch(h, /no te daría el tiempo|te quedarían/); // sin veredicto
@@ -46,7 +46,7 @@ test("'viaje' sin Q&A → la causa y el total, con el margen ya adentro", () => 
 test("'viaje' con Q&A → el Q&A se NOMBRA como causa y ya está sumado", () => {
   const h = H.conflictAccount({ ...A, time: '16:00', has_qa: true }, { ...B, time: '19:00' },
     { kind: 'viaje', travel: 65, gap: 91, bFirst: false });
-  assert.match(h, /Q&A y viaje/);          // las dos causas, nombradas
+  assert.match(h, /Después de.*Q&A y viaje/s); // ancla temporal + las dos causas
   assert.match(h, /~<b>19:19<\/b>/);       // 17:29 + 30 + 65 + 15, ya adentro
   assert.doesNotMatch(h, /Q&A ~30|\+ viaje/); // sin enumerar los sumandos
 });
@@ -72,7 +72,7 @@ test("qaOnly → la cadena cierra con la hora sin el Q&A", () => {
 test("bFirst → la frase se ordena por quién termina primero", () => {
   const h = H.conflictAccount(A, { ...B, time: '13:00' },
     { kind: 'ajustado', gap: 1, bFirst: true });
-  assert.match(h, /desde.*Three black men/); // b termina primero → es el origen
+  assert.match(h, /Después de.*Three black men/s); // b termina primero → abre la frase
 });
 
 test("'solape' y 'ciudad' → sin frase (título/copy propios)", () => {
