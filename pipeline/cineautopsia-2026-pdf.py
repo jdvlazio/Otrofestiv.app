@@ -47,7 +47,7 @@ RE_HORA = re.compile(r'(\d{1,2}):(\d{2})\s*([ap])\.?\s*m', re.I)
 # el año se separa del final. Cortar en la coma perdía 4 obras, todas de dos
 # directores, y el error era invisible porque las otras 47 entraban bien.
 RE_OBRA = re.compile(
-    r'[•*]?\s*(?P<titulo>[^•*]{2,90}?)\s*\((?:Dir[.:]?\s*)(?P<dir>[^)]*?)(?:[,.]\s*(?P<anio>\d{4}))?\)\s*'
+    r'[•*]?\s*(?P<titulo>[^\n]{2,90}?)\s*\((?:Dir[.:]?\s*)(?P<dir>[^)]*?)(?:[,.]\s*(?P<anio>\d{4}))?\)\s*'
     r'(?P<pais>[^.•]+?)\.?\s*(?P<min>\d{1,3})\s*min', re.I)
 
 
@@ -166,7 +166,15 @@ def main():
             # título cuando el título venía apilado en tres líneas.
             etapa, titulo = 'sede', []
             for x in unidas:
-                obras_en_linea = list(RE_OBRA.finditer(x))
+                # Se parte la línea ANTES de cada «(Dir.», no por la viñeta: el
+                # título «Abjad Hawaz (i÷@-•g)» lleva su transliteración árabe y
+                # el OCR mete un «•» DENTRO del paréntesis. Cortando por viñeta,
+                # ese corto se llamaba «g)».
+                # Una viñeta de verdad va tras espacio y antes de MAYÚSCULA. El
+                # «•» de «(i÷@-•g)» va tras un guion y antes de minúscula, así
+                # que deja de partir el título de esa obra.
+                trozos = re.split(r'(?<=[\s.])•(?=\s*[A-ZÁÉÍÓÚÑ¿«"\d])', x)
+                obras_en_linea = [m for t in trozos for m in RE_OBRA.finditer(t)]
                 obra = obras_en_linea[0] if obras_en_linea else None
                 # «Gratuit» exacto no vale: el OCR devolvió «-vento Gratulte».
                 # Se busca la raíz que sobrevive al ruido.
@@ -177,8 +185,12 @@ def main():
                 if obra and len(obra.group('titulo')) > 1:
                     etapa = 'obras'
                     for o in obras_en_linea:
+                        # El OCR no sabe leer alfabetos no latinos y devuelve
+                        # basura entre paréntesis («Abjad Hawaz (i÷@-•g)»). Se
+                        # quita: un título con ruido es peor que un título corto.
+                        _t = re.sub(r'\s*\([^)]*[÷@|=~][^)]*\)', '', o.group('titulo'))
                         f['obras'].append({
-                            'titulo': o.group('titulo').strip(' •*.'),
+                            'titulo': _t.strip(' •*.'),
                             'director': o.group('dir').strip(),
                             'anio': int(o.group('anio')) if o.group('anio') else None,
                             'pais': o.group('pais').strip(' .'),
