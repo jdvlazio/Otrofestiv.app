@@ -1537,3 +1537,41 @@ test('T84 — el Diario es UN muro: misma anatomía en sección y overlay', asyn
   expect(r.ojoDisco, 'sobre un disco de 32px').toBe(32);
   expect(r.starsFueraOverlay, 'estrellas bajo el afiche también en el overlay').toBe(true);
 });
+
+// 18 ago, regla de Juan: al ABRIR Programa, la barra de días muestra hoy Y
+// mañana sin navegar — «el día siguiente no puede estar escondido». Medido
+// antes del fix: AFF (10 días) mostraba hoy y cortaba mañana; Tribeca (12) no
+// mostraba ninguno de los dos. La fórmula vieja vivía copiada en 3 sitios y
+// solo corría al CARGAR el festival, no al volver desde otra pestaña.
+test('T85 — al abrir Programa, hoy y mañana caben sin navegar', async ({ page }) => {
+  test.setTimeout(90000);
+  const casos = [
+    ['aff2026', '2026-04-26T11:00:00-05:00'],
+    ['tribeca2026', '2026-06-10T11:00:00-05:00'],
+  ];
+  for (const [fest, tm] of casos) {
+    await enterFestival(page, fest, tm);
+    await page.evaluate(() => document.querySelector('[data-action="citySheetAll"]')?.click());
+    await page.waitForTimeout(500);
+    // salir a otra pestaña y VOLVER — el caso que reportó Juan
+    await page.evaluate(async () => {
+      switchMainNav('mnav-miplan'); showAgView();
+      await new Promise(r => setTimeout(r, 400));
+      showDayView();
+      await new Promise(r => setTimeout(r, 500));
+    });
+    const r = await page.evaluate(() => {
+      const dt = document.getElementById('dtabs');
+      const tabs = [...dt.querySelectorAll('.dtab')];
+      const dr = dt.getBoundingClientRect();
+      const on = dt.querySelector('.dtab.on');
+      const next = tabs[tabs.indexOf(on) + 1] || null;
+      const vis = t => { const b = t.getBoundingClientRect();
+        return Math.round(b.left) >= Math.round(dr.left) - 1 && Math.round(b.right) <= Math.round(dr.right) + 1; };
+      return { hoy: vis(on), manana: next ? vis(next) : null, dias: tabs.length };
+    });
+    expect(r.dias, `${fest} tiene barra con varios días`).toBeGreaterThan(6);
+    expect(r.hoy, `${fest}: hoy a la vista al abrir Programa`).toBe(true);
+    expect(r.manana, `${fest}: y mañana también, sin navegar`).toBe(true);
+  }
+});
