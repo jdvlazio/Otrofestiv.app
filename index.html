@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202608172038">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202608172038">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202608172054">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202608172054">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -1881,12 +1881,12 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 /* margin-bottom sp-5: el gap ENTRE secciones es UN token (auditoría 18 ago,
    punto 5 — convivían 0/8/16/55/24). El hero estaba PEGADO a la banda del Plan. */
 .ctx-header{padding:var(--sp-3) var(--sp-4) var(--sp-3);margin-bottom:var(--sp-5)}
-/* Tokens de sec-hdr.sm (t-xs + tracking .1em + svg 11px): el hero es el único
-   bloque de Mi Plan sin banda —a propósito, es el «ahora»— pero su eyebrow debe
-   ser PARIENTE de los encabezados, no extranjero (auditoría 18 ago, punto 3).
-   Conserva el ámbar: es la señal de urgencia que una banda no tiene. */
-.ctx-eyebrow{font-size:var(--t-xs);font-weight:var(--w-bold);letter-spacing:.1em;text-transform:uppercase;display:flex;align-items:center;gap:var(--sp-1);margin-bottom:var(--sp-2);color:var(--amber-60)}
-.ctx-eyebrow>svg{width:11px;height:11px}
+/* El eyebrow del hero es BANDA canónica desde el 18 ago (pedido de Juan: la
+   última zona sin encabezado). El sangrado negativo de sec-hdr (-sp-4) empata
+   el padding sp-4 de .ctx-header → banda a sangre. La urgencia que cargaba el
+   ámbar la dice ahora el sistema: EN CURSO lleva el punto verde (regla #652,
+   el punto dice cuándo). */
+.ctx-eyebrow-band{margin-top:calc(-1*var(--sp-3));margin-left:calc(-2*var(--sp-4));margin-right:calc(-2*var(--sp-4));padding-left:var(--sp-4);padding-right:var(--sp-4)}
 /* Escala de iconos ≈ tamaño del texto vecino (auditoría iconos 18 jul): los
    iconos de ICONS traen 13px de base; en familias de texto pequeño (t-label/
    t-xs) se bajan a 11 para no quedar desproporcionados (antes 1.3–1.44× el
@@ -3272,7 +3272,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202608172038";
+    s.src="/src/main.js?v=202608172054";
     document.body.appendChild(s);
     // Watchdog de boot (P0 18 jul): si el grafo ESM murió en el import (caché
     // HTTP mixta tras deploys en ráfaga — main.js nuevo + módulo viejo sin el

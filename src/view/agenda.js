@@ -886,9 +886,10 @@ export function renderContextualHeader(state, consensus){
     }
 
     return`<div class="ctx-header">
-      <div class="ctx-eyebrow">
+      <div class="sec-hdr sm ctx-eyebrow-band">
         ${ICONS.clock}
-        ${eyebrowLabel}
+        <span>${eyebrowLabel}</span>
+        ${isNow?`<span class="live-dot row-dot" role="img" aria-label="${t('aria_en_curso')}"></span>`:''}
       </div>
       <div class="ctx-next-row js-open-pel" data-title="${escXML(next._title||'')}" style="cursor:pointer">
         ${src
@@ -992,9 +993,9 @@ export function renderContextualHeader(state, consensus){
       :'';
     const dayName=(dayLabel(todayScreenings[0]?.day)||'').split(' ')[0]||t('bar_hoy');
     return`<div class="ctx-header">
-      <div class="ctx-eyebrow" style="color:var(--gray)">
+      <div class="sec-hdr sm ctx-eyebrow-band">
         ${ICONS.moon}
-        ${t('plan_tu_dia_en',{dia:dayName.toLowerCase()})} ${(FESTIVAL_CONFIG[_activeFestId]||{}).name||''}
+        <span>${t('plan_tu_dia_en',{dia:dayName.toLowerCase()})} ${(FESTIVAL_CONFIG[_activeFestId]||{}).name||''}</span>
       </div>
       <div class="ctx-main-title">${total} ${total!==1?t('misc_peliculas'):t('misc_pelicula')} ${total===1?t('plan_vista_hoy'):t('plan_vistas_hoy')}</div>
       ${pendingRating.length?`<div class="mb-3 ctx-sub">${pendingRating.length===1?t('plan_una_pendiente'):t('empty_calificar')}</div>`:`<div class="mb-3"></div>`}
