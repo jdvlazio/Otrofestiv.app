@@ -255,7 +255,8 @@ Valores **canónicos aprobados** por contexto:
 | `.saved-venue` | **`font-size:var(--t-sm); font-weight:var(--w-thin); color:var(--gray)`**; `margin-top:2px` |
 | `.lb-poster`/`-ph` | `56×84; border-radius:var(--r-sm)` |
 | `.col-end` acciones | Cambiar (`.ag-fi-btn`, switch, gris) + **Intereses** (`.ag-fi-btn.wl`, corazón lleno, `color:var(--amber)`) |
-| `.ag-day-label` (day landmark) | `border-top:1px solid var(--bdr-l)` (separa días); `.first` sin border; nombre `t-md`/`w-semi`/`white` + `count-badge` |
+| `.ag-day-band` (day landmark) | Banda sólida `surf-2` a sangre, igual que el separador de horas de Programa (`.plist-time-hdr`): día en `t-label`/`w-bold`/ámbar con tracking `.1em`, `count-badge` a la derecha, y **`position:sticky`** — sin el sticky no ancla nada. `.first` con `margin-top:sp-3`. |
+| ~~`.ag-day-label`~~ | **Retirada el 18 ago 2026.** La reemplazó `.ag-day-band`; sus reglas quedaron huérfanas en el CSS (cero usos en `src/`) y esta tabla siguió documentándolas medio día — el doc describía una pantalla que ya no existía. |
 
 ### 2.5 · `.mplan-row` — **Mi Plan** (lista del día, variante `--plan-saved`)
 

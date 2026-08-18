@@ -533,7 +533,7 @@ export function renderMiPlanCalendar(state){
             return _void?`<span class="mp-void-t">${_fin}</span>`:_fin;
           })()}${_voidFix}${prioritized.has(s._title)?` <span class="txt-amber60-xs">${ICONS.bookmarkFill}</span>`:''}${_rowStars?` <span class="txt-amber-sm">${_rowStars}</span>`:''}${isNow?` <span class="txt-green-semi">${t('label_en_curso_min')}</span>`:''}</div>
           <div>${(()=>{const{displayTitle:_dt,progSuffix:_ps}=parseProgramTitle(s._title||'');const _mfqa=FILMS.find(fi=>fi.title===s._title&&fi.day===s.day&&fi.time===s.time);const _qab=_mfqa?.has_qa?`<span class="meta-badge sm">Q&A</span>`:'';return`<div class="mplan-rtitle${_isEventRow?' mp-event-title':''}">${_dt}${_qab}</div>${_ps?`<div class="prog-suffix">${_ps}</div>`:''}`;})()} </div>
-          <div class="mplan-rvenue${_isEventRow?' mp-event-venue':''}">${ICONS.pin} ${vcfg(s.venue).short}${venueCity(s.venue)?` <span class="plist-city">${venueCity(s.venue)}</span>`:''}${sala(s.venue)?' \u00b7 '+sala(s.venue):''}</div>
+          <div class="mplan-rvenue${_isEventRow?' mp-event-venue':''}">${ICONS.pin} ${vcfg(s.venue).short}${venueCity(s.venue)?` · <span class="plist-city">${venueCity(s.venue)}</span>`:''}${sala(s.venue)?' \u00b7 '+sala(s.venue):''}</div>
           ${_sesionDeBloque(s)}
           ${(()=>{const _mf=FILMS.find(fi=>fi.title===s._title&&fi.day===s.day&&fi.time===s.time);if(!_mf||!_mf.is_cortos||!_mf.film_list||!_mf.film_list.length) return'';return`<button class="row-xs mplan-prog-toggle" data-action="toggleMplanProg">${ICONS.chevronR} ${t('label_programa')}</button>`;})()}
         </div>
@@ -1477,11 +1477,15 @@ export function buildResultHTML(scenarios){
   // del MISMO _excVivas que alimenta el badge de «No incluidas», no de otro
   // conteo. Las obras que el festival ya se llevó no cuentan — nunca compitieron.
   const _excVivas=sc.excluded.filter(_t=>FILMS.some(fi=>fi.title===_t&&!screeningPassed(fi)));
-  const _sinCupo=_excVivas.length
-    ?` <span class="dato-linea">· ${t('res_sin_cupo',{n:_excVivas.length})}</span>`
+  // «sin cupo» murió (auditoría de traducción, 18 ago): en un festival «cupo»
+  // es AFORO, y la línea le atribuía al mundo real —entradas agotadas— una
+  // consecuencia que produjo nuestro algoritmo. «Quedó fuera» dice lo que pasó
+  // sin inventar una causa. El inglés ya estaba bien («didn't fit»).
+  const _fuera=_excVivas.length
+    ?` <span class="dato-linea">· ${_excVivas.length===1?t('res_fuera_1'):t('res_fuera',{n:_excVivas.length})}</span>`
     :'';
   let html=`${_staleBanner}<div class="ag-summary ag-summary-res">
-    <div class="dato-resultado">${t(ok===1?'pre_obra':'pre_obras',{n:ok})} · ${_nDias===1?t('res_dia'):t('res_dias',{n:_nDias})}${_sinCupo}</div>
+    <div class="dato-resultado">${t(ok===1?'pre_obra':'pre_obras',{n:ok})} · ${_nDias===1?t('res_dia'):t('res_dias',{n:_nDias})}${_fuera}</div>
     ${sc.incompatiblePriorities?(()=>{
       const pairs=sc.conflictingPriorityPairs||[];
       const pairMsg=pairs.length
@@ -1703,7 +1707,7 @@ export function mkAgendaRow(s, mode='saved'){
     <div class="saved-info">
       ${mode==='scenario'?_timeHTML:''}
       <div class="saved-title">${displayTitle}</div>${progSuffix?`<div class="film-sub-label">${progSuffix}</div>`:''}
-      <div class="saved-venue">${ICONS.pin} ${vc2.short}${venueCity(s.venue)?` <span class="plist-city">${venueCity(s.venue)}</span>`:''}${sl?' · '+sl:''}${s.duration?' · '+durFmt(s.duration):''}</div>
+      <div class="saved-venue">${ICONS.pin} ${vc2.short}${venueCity(s.venue)?` · <span class="plist-city">${venueCity(s.venue)}</span>`:''}${sl?' · '+sl:''}${s.duration?' · '+durFmt(s.duration):''}</div>
       ${_sesionDeBloque(s)}
       ${_progBtn}
     </div>
