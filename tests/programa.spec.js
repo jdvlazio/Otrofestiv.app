@@ -1276,15 +1276,19 @@ test('T79 — Mi Plan: eyebrow pariente, hero que respira, botones anclados', as
       Object.assign({}, f, { _title: f.title })) });
     switchMainNav('mnav-miplan'); showAgView();
     await new Promise(r => setTimeout(r, 1400));
-    const g = (a, b) => { const A = document.querySelector(a), B = document.querySelector(b);
+    // La banda del PLAN se ubica por contenido, no por posición: desde que el
+    // hero abre con su propia banda (T80), «la primera sec-hdr» ya no es esta.
+    const bandaPlan = [...document.querySelectorAll('#ag-view .sec-hdr')]
+      .find(e => /Mi Plan|My Plan|Meu Plano/.test(e.textContent));
+    const g = (a, b) => { const A = typeof a === 'string' ? document.querySelector(a) : a,
+      B = typeof b === 'string' ? document.querySelector(b) : b;
       return A && B ? Math.round(B.getBoundingClientRect().top - A.getBoundingClientRect().bottom) : null; };
-    const ey = document.querySelector('.ctx-eyebrow');
-    // El patrón es sec-hdr.SM (la variante chica), no la banda base: se compara
-    // contra el TOKEN resuelto, no contra un elemento circunstancial.
+    const ey = document.querySelector('.ctx-eyebrow-band');
+    // El patrón es sec-hdr.SM: se compara contra el TOKEN resuelto.
     const probe = document.createElement('span');
     probe.style.fontSize = 'var(--t-xs)'; document.body.appendChild(probe);
     const tXs = getComputedStyle(probe).fontSize; probe.remove();
-    return { heroBanda: g('.ctx-header', '#ag-view .sec-hdr'),
+    return { heroBanda: g('.ctx-header', bandaPlan),
       calBotones: g('.mplan-wk-outer', '.mplan-bottom-actions'),
       eyebrowPx: ey && getComputedStyle(ey).fontSize,
       eyebrowTracking: ey && getComputedStyle(ey).letterSpacing, tXs };
@@ -1320,4 +1324,43 @@ test('T81 — la barra de días no se cuela en Mi Plan (re-run diferido del iOS 
   await page.waitForTimeout(700);
   const nav2 = await page.evaluate(() => document.getElementById('nav-row').classList.contains('hidden'));
   expect(nav2, 'en Programa la barra vive').toBe(false);
+});
+
+// 18 ago, pedido de Juan al ver los puntos 3–5: «pensé que Próxima función
+// también iba a tener su encabezado». El hero era la última zona de Mi Plan sin
+// banda — su eyebrow leía como lo único sin migrar. Ahora es sec-hdr canónica a
+// sangre, y la urgencia que cargaba el ámbar la dice el sistema: EN CURSO lleva
+// el punto verde (regla #652 — el punto dice cuándo).
+test('T80 — el hero abre con banda, y EN CURSO lleva el punto', async ({ page }) => {
+  const medir = async (hora) => {
+    await page.evaluate(async (hh) => {
+      _simTime = `2026-08-18T${hh}:00-05:00`;
+      const bog = f => (f.venue || '').includes('Bogotá');
+      const hoy = FILMS.filter(f => bog(f) && f.day === '2026-08-18' && f.time >= '17:00').slice(0, 2);
+      state.set('savedAgenda', { scenarioIdx: 0, schedule: hoy.map(f =>
+        Object.assign({}, f, { _title: f.title })) });
+      switchMainNav('mnav-miplan'); showAgView();
+      await new Promise(r => setTimeout(r, 1200));
+    }, hora);
+    return page.evaluate(() => {
+      const b = document.querySelector('.ctx-eyebrow-band');
+      const r = b && b.getBoundingClientRect();
+      return { txt: b?.textContent.replace(/\s+/g, ' ').trim(),
+        aSangre: r && Math.round(r.x) === 0 && Math.round(r.width) === 390,
+        dot: !!b?.querySelector('.row-dot') };
+    });
+  };
+  await enterFestival(page, 'ficdeh2026', '2026-08-18T15:00:00-05:00');
+  await page.evaluate(() => [...document.querySelectorAll('#city-sheet [data-action]')]
+    .find(x => x.textContent.includes('Bogotá'))?.click());
+  await page.waitForTimeout(600);
+
+  const prox = await medir('15:00');
+  expect(prox.txt, 'la banda nombra el estado').toBe('Próxima función');
+  expect(prox.aSangre, 'a sangre como toda banda').toBe(true);
+  expect(prox.dot, 'sin punto: nada corre aún').toBe(false);
+
+  const curso = await medir('17:30');
+  expect(curso.txt, 'en curso').toBe('En curso');
+  expect(curso.dot, 'y el punto verde dice que es AHORA').toBe(true);
 });
