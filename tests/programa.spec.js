@@ -1027,11 +1027,15 @@ test('T73 — la cuenta del veredicto usa la misma aritmética que la decisión'
   expect(r.qaOnly, 'y existe SOLO por el Q&A').toBe(true);
   // 1· el margen es un SUMANDO de la cadena, no una regla enunciada aparte: así
   //    el total se compara solo contra la hora de inicio (21:15 vs 21:00).
-  expect(r.txt, 'el margen entra en la suma').toContain('margen 15 min');
-  expect(r.txt, 'y el total sale de sumarlo').toContain('21:15');
-  expect(r.txt, 'contra la hora de inicio').toContain('empieza 21:00');
+  // 18 ago: la SUMA se retiró (Juan) — «21:15 se entiende cuando la función
+  // dice 21:00», y esa hora vive ahora arriba, en la línea de la función. La
+  // cuenta conserva la CAUSA (Q&A, viaje) y el veredicto, con la tilde de
+  // estimado mudada al total: sugerimos, no predecimos.
+  expect(r.txt, 'nombra la causa: el Q&A y el viaje').toMatch(/Q&A y viaje/);
+  expect(r.txt, 'y el veredicto es el total, marcado como estimado').toContain('~21:15');
+  expect(r.txt, 'sin enumerar los sumandos').not.toMatch(/margen 15 min|\+ viaje/);
   // 2· la salida va en la MISMA moneda: la hora a la que llegarías sin el Q&A
-  expect(r.txt, 'nombra la alternativa con su hora').toContain('sin el Q&A, 20:45');
+  expect(r.txt, 'nombra la alternativa con su hora').toContain('sin el Q&A, ~20:45');
   // y ya no hace falta un veredicto en palabras
   expect(r.txt, 'sin frase de veredicto').not.toMatch(/no te daría el tiempo|te quedarían/);
   // 3· tomarla a sabiendas produce un plan VÁLIDO; sin la marca, no
@@ -1451,7 +1455,8 @@ test('T83 — Diario Luz: muro limpio, estrellas afuera, y la negación se apaga
     await new Promise(r => setTimeout(r, 1400));
     const wrap = document.querySelector('.diario-wrap');
     const sug = document.querySelector('.suggestion-wrap');
-    const card = t => [...wrap.querySelectorAll('.dw-card')].find(c => c.dataset.title === t);
+    // el data-title vive en el AFICHE (su tap abre la ficha), no en la card
+    const card = t => [...wrap.querySelectorAll('.dw-card')].find(c => c.querySelector(`[data-title="${CSS.escape(t)}"]`));
     const cR = card(rated.title), cA = card(assumed.title), cN = card(negada.title);
     return {
       alFinal: !!wrap && !!sug && wrap.getBoundingClientRect().top > sug.getBoundingClientRect().top,
@@ -1459,16 +1464,18 @@ test('T83 — Diario Luz: muro limpio, estrellas afuera, y la negación se apaga
       // calificada: estrellas FUERA del póster (la fila no es descendiente de .dw-poster)
       ratedStars: cR?.querySelectorAll('.dw-stars .dw-star.on').length,
       starsFuera: cR ? !cR.querySelector('.dw-poster .dw-stars') : null,
-      // asumida: ni un pixel de estado sobre el afiche
-      assumedLimpia: cA ? !cA.querySelector('.dw-off-badge') && cA.querySelectorAll('.dw-star.on').length === 0 : null,
-      // negada: apagada con ojo tachado, y NO cuenta en la banda
-      negadaOff: cN ? !!cN.querySelector('.dw-off-badge') && !!cN.querySelector('.dw-poster.dw-off') : null,
+      // asumida: ni un pixel de estado sobre el afiche (su control es la
+      // estrella opaca de la fila, no una marca encima del póster)
+      assumedLimpia: cA ? !cA.querySelector('.dw-poster > :not(img)') && cA.querySelectorAll('.dw-star.on').length === 0 : null,
+      // negada: apagada, con el ojo tachado en su FILA, y NO cuenta en la banda
+      negadaOff: cN ? !!cN.querySelector('.dw-row .dw-ctrl[data-action="toggleWatched"]') && !!cN.querySelector('.dw-poster.dw-off') : null,
     };
   });
   expect(r.alFinal, 'el Diario cierra el tab, después de Sugerencias').toBe(true);
   expect(Number(r.cuenta), 'la banda cuenta 2: la calificada y la ASUMIDA — la negada no').toBe(2);
   expect(r.ratedStars, 'la calificada lleva sus 4 estrellas').toBe(4);
   expect(r.starsFuera, 'las estrellas viven FUERA del afiche (Letterboxd)').toBe(true);
+  // (el detalle fino de la fila de control lo fija T86)
   expect(r.assumedLimpia, 'la asumida no lleva ni un pixel de estado').toBe(true);
   expect(r.negadaOff, 'la negada se apaga con el ojo tachado').toBe(true);
 });

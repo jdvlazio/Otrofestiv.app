@@ -1479,6 +1479,11 @@ export function buildResultHTML(scenarios){
       // Distinguir «ya pasó» de «nunca tuvo función»: screens ya filtró las
       // pasadas, así que la lista vacía no dice por sí sola cuál de las dos es.
       let _qaOnlySlot=null;
+      // La función PROPIA con su fecha y hora, en el sitio de siempre (Juan,
+      // 18 ago): la fila del póster ya la lleva, así que la razón de abajo no
+      // la repite. Antes la única hora visible era la de la función AJENA con
+      // la que choca — el usuario leía una cuenta sin saber a qué hora era ESTA.
+      let _cuando='';
       const _tuvoAlguna=FILMS.some(fi=>fi.title===excTitle);
       const _yaPaso=_tuvoAlguna?'ya_paso':'empty_sin_funciones';
       let reason='',canInclude=false;
@@ -1496,6 +1501,7 @@ export function buildResultHTML(scenarios){
               conflictWith=ct;
               conflictReason=_r;
               conflictPair={s,c};
+              _cuando=`${dayLabel(s.day)||s.day||''}${s.time?' '+s.time:''}`;
               const _ds=dayLabel(c.day)||c.day||'';
               // 'solape' lleva día+hora; las frases con cuenta ya dicen las
               // horas → solo el día, para no repetir.
@@ -1525,7 +1531,12 @@ export function buildResultHTML(scenarios){
             : _k==='solape'
             ? t('conflict_solapa',{title:conflictWith})
             : conflictAccount(conflictPair.s,conflictPair.c,conflictReason);
-          reason=`<div class="excl-reason conflict">${_ico} ${_msg}${conflictWhen?' · '+conflictWhen:''}</div>`;
+          // La cola con el día ajeno muere: el día propio ya vive arriba, en la
+          // línea de la función. 'solape' conserva la hora del choque DENTRO de
+          // su frase («Se solapa con Yintah · MAR 18 18:30» → esa hora es de
+          // Yintah y es el dato que explica el solape).
+          const _cola=_k==='solape'&&conflictWhen?' · '+conflictWhen:'';
+          reason=`<div class="excl-reason conflict">${_ico} ${_msg}${_cola}</div>`;
           // 'ciudad' NO ofrece «+ Incluir»: el plan por ciudad (#594) prohíbe
           // exactamente eso, así que el botón prometía algo que el motor iba a
           // rechazar. La fila igual explica el motivo — informar sí, ofrecer no.
@@ -1554,6 +1565,7 @@ export function buildResultHTML(scenarios){
         <div class="int-item-info">
           <div class="int-item-title">${dt}</div>
           <div class="int-item-sec">${flagFmt(f?.flags)||''}${flagFmt(f?.flags)?' ':''} ${secLabel}</div>
+          ${_cuando?`<div class="int-item-when">${_cuando}</div>`:''}
           ${reason}
         </div>
         ${includeBtn}
