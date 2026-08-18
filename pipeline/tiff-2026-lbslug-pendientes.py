@@ -21,18 +21,24 @@ REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CLAVE = os.environ.get('TMDB_API_KEY')
 # título → director, para VERIFICAR. La lección Tribeca (134 pósters falsos) no
 # se repite: sin director que coincida, no se acepta la ficha.
+# Al 17 ago 2026 quedan DOS. Los otros tres se resolvieron esa noche:
+#   London → london-2026 (director coincide)
+#   Turtle Island Rap → turtle-island-rap (director coincide)
+#   Re/Pair → re-pair (TMDB sin crew; verificado por duración + país + sinopsis)
+#
+# TRAMPA QUE COSTÓ LA PRIMERA PASADA: buscar con `&year=2026` los escondía. Una
+# ficha recién creada en TMDB no tiene `release_date`, así que filtrar por año
+# descarta justo los estrenos que estamos buscando. Se busca SIN año y se
+# verifica después.
 PENDIENTES = {
-    'London': 'Sam Petersen',
     'Pretenders': None,
-    'Re/Pair': None,
     'The Hummingbird Paints Fragrant Songs': None,
-    'Turtle Island Rap': None,
 }
 
 
 def buscar(titulo):
     u = ('https://api.themoviedb.org/3/search/movie?api_key=' + CLAVE +
-         '&query=' + urllib.parse.quote(titulo) + '&year=2026')
+         '&query=' + urllib.parse.quote(titulo))   # SIN año: ver la nota de arriba
     r = subprocess.run(['curl', '-s', '--max-time', '25', u], capture_output=True)
     try:
         return (json.loads(r.stdout.decode()).get('results') or [])
