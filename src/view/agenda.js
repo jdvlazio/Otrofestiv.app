@@ -1477,48 +1477,7 @@ export function buildResultHTML(scenarios){
   // del MISMO _excVivas que alimenta el badge de «No incluidas», no de otro
   // conteo. Las obras que el festival ya se llevó no cuentan — nunca compitieron.
   const _excVivas=sc.excluded.filter(_t=>FILMS.some(fi=>fi.title===_t&&!screeningPassed(fi)));
-  // «sin cupo» murió (auditoría de traducción, 18 ago): en un festival «cupo»
-  // es AFORO, y la línea le atribuía al mundo real —entradas agotadas— una
-  // consecuencia que produjo nuestro algoritmo. «Quedó fuera» dice lo que pasó
-  // sin inventar una causa. El inglés ya estaba bien («didn't fit»).
-  const _fuera=_excVivas.length
-    ?` <span class="dato-linea">· ${_excVivas.length===1?t('res_fuera_1'):t('res_fuera',{n:_excVivas.length})}</span>`
-    :'';
-  let html=`${_staleBanner}<div class="ag-summary ag-summary-res">
-    <div class="dato-resultado">${t(ok===1?'pre_obra':'pre_obras',{n:ok})} · ${_nDias===1?t('res_dia'):t('res_dias',{n:_nDias})}${_fuera}</div>
-    ${sc.incompatiblePriorities?(()=>{
-      const pairs=sc.conflictingPriorityPairs||[];
-      const pairMsg=pairs.length
-        ?pairs.map(([a,b])=>{const{displayTitle:da}=parseProgramTitle(a);const{displayTitle:db}=parseProgramTitle(b);return`<span class="txt-white60">${da}</span> ${t('misc_y')} <span class="txt-white60">${db}</span>`;}).join(', ')
-        :t('plan_incompat_generico');
-      return`<div class="meta-banner" style="margin-top:var(--sp-2)"><div class="meta-banner-dot"></div><div class="meta-banner-text">${pairMsg} ${t('plan_solapan')} — ${t('plan_incompat_cta')}</div></div>`;
-    })():''}
-  </div>
-`;
-
-  // ── Film list by day ──
-  // Day landmark: nombre completo lang-aware + badge con cantidad de films.
-  // Mismo patrón que Mi Plan (.mplan-list-hdr): nombre del día + count-badge
-  // cb-neutral. Sin total de horas — info no relevante y potencialmente abrumadora.
-  const byDay={};
-  sc.schedule.forEach(s=>{if(!byDay[s.day])byDay[s.day]=[];byDay[s.day].push(s);});
-  let _firstDay=true;
-  DAY_KEYS.forEach(day=>{
-    const films=byDay[day];if(!films||!films.length) return;
-    // dayLabelLong = formateador ÚNICO del nombre largo de día (mismo de Mi Plan);
-    // antes esto reimplementaba el mismo array + new Date inline.
-    // El divisor (border-top) separa días: el primero no lo lleva.
-    // Anatomía del separador de HORAS de Programa (.plist-time-hdr): banda a
-    // sangre, ámbar, mayúsculas con tracking — el día ancla la lista igual que
-    // «18:30» ancla las funciones. Muere el «Día N» en blanco (Juan, 18 ago).
-    html+=`<div class="ag-day-band${_firstDay?' first':''}"><span>${dayLabelLong(day).toUpperCase()}</span><span class="count-badge cb-neutral">${films.length}</span></div>`;
-    _firstDay=false;
-    films.forEach((s,i)=>{
-      if(i>0){const warn=travelWarn(films[i-1],s);if(warn) html+=`<div class="mplan-warn-row">${warn}</div>`;}
-      html+=mkAgendaRow(s,'scenario');
-    });
-  });
-
+  let _htmlNoIncl='',_htmlCiudad='',_nFuera=0;
   // ── No incluidas — lista con razón + botón Incluir ──────────────────
   // «No incluida» describe a la que COMPITIÓ y perdió. Una obra cuyas funciones
   // ya pasaron nunca fue candidata —el festival se la llevó, no el motor— y
@@ -1537,6 +1496,9 @@ export function buildResultHTML(scenarios){
   if(_excVivas.length){
     const _excItems=_excVivas.map(excTitle=>{
       const t_=excTitle; // alias para no pisar t() i18n
+      // El motivo sale del MISMO lugar que la razón que se muestra (abajo), no
+      // de un segundo cálculo: es lo que decide en qué sección cae la fila.
+      let _kind='otro', _ciudadFn='', _ciudadPlan='';
       const{displayTitle:dt}=parseProgramTitle(excTitle);
       const f=FILMS.find(fi=>fi.title===excTitle);
       const poster=f?getFilmPoster(f):null;
@@ -1588,6 +1550,8 @@ export function buildResultHTML(scenarios){
           // y mostramos los minutos, que el usuario juzgue). Antes ambos decían "Choca
           // con X" — mismo mensaje para dos problemas distintos, y no decía ninguno.
           const _k=conflictReason?conflictReason.kind:'solape';
+          _kind=_k;
+          if(_k==='ciudad'){ _ciudadFn=conflictReason.cityFrom||''; _ciudadPlan=conflictReason.city||''; }
           // 'ciudad' (multiciudad): pin, dice la CIUDAD y NO da minutos — nuestra
           // estimación de traslado usa velocidad urbana y a escala intermunicipal
           // se equivoca 3× (Bogotá→Ibagué: dice 13 h, son ~4). Decimos el dato
@@ -1632,25 +1596,101 @@ export function buildResultHTML(scenarios){
           :`<button class="excl-include-btn" data-action="forceInclude" data-title="${safeT}" data-stop="1">${ICONS.plus} ${t('plan_agendar')}</button>`)
         :'';
       const opacity=!screens.length?'opacity:.45;':'';
-      return`<div class="int-item js-open-pel" style="${opacity}" data-title="${escXML(f.title)}">
+      // En «En otra ciudad» la razón se dice UNA vez, en el encabezado de la
+      // sección: repetirla en cada fila era la misma frase cuatro veces, con una
+      // hora que además era de OTRA función. Acá la fila solo aporta su ciudad.
+      const _esCiudad=_kind==='ciudad';
+      const _when=_esCiudad
+        ?(_cuando?`${_cuando} · ${_ciudadFn}`:_ciudadFn)
+        :_cuando;
+      return{k:_kind,ciudad:_ciudadPlan,html:`<div class="int-item js-open-pel" style="${opacity}" data-title="${escXML(f.title)}">
         ${posterHtml}
         <div class="int-item-info">
           <div class="int-item-title">${dt}</div>
           <div class="int-item-sec">${flagFmt(f?.flags)||''}${flagFmt(f?.flags)?' ':''} ${secLabel}</div>
-          ${_cuando?`<div class="int-item-when">${_cuando}</div>`:''}
-          ${reason}
+          ${_when?`<div class="int-item-when">${_when}</div>`:''}
+          ${_esCiudad?'':reason}
         </div>
         ${includeBtn}
-      </div>`;
-    }).join('');
-    html+=`<div class="ag-excl-block">
+      </div>`};
+    });
+    const _ciudad=_excItems.filter(i=>i.k==='ciudad');
+    const _compiten=_excItems.filter(i=>i.k!=='ciudad');
+    _nFuera=_compiten.length;
+    if(_compiten.length) _htmlNoIncl=`<div class="ag-excl-block">
       <div class="sec-hdr sm">
         ${ICONS.x} <span>${t('plan_no_incluidas')}</span>
-        <span class="count-badge cb-neutral">${_excVivas.length}</span>
+        <span class="count-badge cb-neutral">${_compiten.length}</span>
       </div>
-      ${_excItems}
+      ${_compiten.map(i=>i.html).join('')}
     </div>`;
+    // Replegada por defecto (Juan, 18 ago): acá no hay NADA que hacer —el motor
+    // no cruza ciudades (#594), así que ni siquiera hay botón— y una sección sin
+    // acciones no puede costar medio viewport en la pantalla donde se decide.
+    // <details> nativo: sin estado propio que sincronizar ni acción que registrar.
+    if(_ciudad.length){
+      const _cp=_ciudad.find(i=>i.ciudad)?.ciudad||'';
+      _htmlCiudad=`<details class="ag-excl-city">
+        <summary class="sec-hdr sm">
+          ${ICONS.pin} <span>${t('plan_otra_ciudad')}</span>
+          <span class="count-badge cb-neutral">${_ciudad.length}</span>
+          <span class="excl-city-chev">${ICONS.chevronR}</span>
+        </summary>
+        ${_cp?`<div class="dato-linea excl-city-sub">${t('plan_otra_ciudad_sub',{city:_cp})}</div>`:''}
+        ${_ciudad.map(i=>i.html).join('')}
+      </details>`;
+    }
   }
+
+  // «sin cupo» murió (auditoría de traducción, 18 ago): en un festival «cupo»
+  // es AFORO, y la línea le atribuía al mundo real —entradas agotadas— una
+  // consecuencia que produjo nuestro algoritmo. «Quedó fuera» dice lo que pasó
+  // sin inventar una causa. El inglés ya estaba bien («didn't fit»).
+  // El titular cuenta solo las que COMPITIERON (Juan, 18 ago): el planificador
+  // no cruza ciudades (#594), así que una obra de otra ciudad nunca fue
+  // candidata — contarla como costo del Plan inflaba el número al doble. Mismo
+  // argumento que ya sacó del conteo a las que el festival se llevó.
+  const _fuera=_nFuera
+    ?` <span class="dato-linea">· ${_nFuera===1?t('res_fuera_1'):t('res_fuera',{n:_nFuera})}</span>`
+    :'';
+  let html=`${_staleBanner}<div class="ag-summary ag-summary-res">
+    <div class="dato-resultado">${t(ok===1?'pre_obra':'pre_obras',{n:ok})} · ${_nDias===1?t('res_dia'):t('res_dias',{n:_nDias})}${_fuera}</div>
+    ${sc.incompatiblePriorities?(()=>{
+      const pairs=sc.conflictingPriorityPairs||[];
+      const pairMsg=pairs.length
+        ?pairs.map(([a,b])=>{const{displayTitle:da}=parseProgramTitle(a);const{displayTitle:db}=parseProgramTitle(b);return`<span class="txt-white60">${da}</span> ${t('misc_y')} <span class="txt-white60">${db}</span>`;}).join(', ')
+        :t('plan_incompat_generico');
+      return`<div class="meta-banner" style="margin-top:var(--sp-2)"><div class="meta-banner-dot"></div><div class="meta-banner-text">${pairMsg} ${t('plan_solapan')} — ${t('plan_incompat_cta')}</div></div>`;
+    })():''}
+  </div>
+`;
+
+  // ── Film list by day ──
+  // Day landmark: nombre completo lang-aware + badge con cantidad de films.
+  // Mismo patrón que Mi Plan (.mplan-list-hdr): nombre del día + count-badge
+  // cb-neutral. Sin total de horas — info no relevante y potencialmente abrumadora.
+  const byDay={};
+  sc.schedule.forEach(s=>{if(!byDay[s.day])byDay[s.day]=[];byDay[s.day].push(s);});
+  let _firstDay=true;
+  DAY_KEYS.forEach(day=>{
+    const films=byDay[day];if(!films||!films.length) return;
+    // dayLabelLong = formateador ÚNICO del nombre largo de día (mismo de Mi Plan);
+    // antes esto reimplementaba el mismo array + new Date inline.
+    // El divisor (border-top) separa días: el primero no lo lleva.
+    // Anatomía del separador de HORAS de Programa (.plist-time-hdr): banda a
+    // sangre, ámbar, mayúsculas con tracking — el día ancla la lista igual que
+    // «18:30» ancla las funciones. Muere el «Día N» en blanco (Juan, 18 ago).
+    html+=`<div class="ag-day-band${_firstDay?' first':''}"><span>${dayLabelLong(day).toUpperCase()}</span><span class="count-badge cb-neutral">${films.length}</span></div>`;
+    _firstDay=false;
+    films.forEach((s,i)=>{
+      if(i>0){const warn=travelWarn(films[i-1],s);if(warn) html+=`<div class="mplan-warn-row">${warn}</div>`;}
+      html+=mkAgendaRow(s,'scenario');
+    });
+  });
+
+  // Las dos secciones de excluidas se ARMAN arriba (necesitan el conteo para
+  // el resumen) y se emiten acá, en su lugar de siempre.
+  html+=_htmlNoIncl+_htmlCiudad;
 
   // ── CTA al pie — patrón UX formulario largo ──
   html+=`<div class="mt-4 ag-summary">

@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202608181622">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202608181622">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202608181649">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202608181649">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -96,6 +96,17 @@ window.sentryOnLoad = function() {
    x=16 — 17px de desalineación en la misma pantalla, y 32px robados que
    truncaban títulos que arriba entran completos. Mismo caso que .checkin-wrap. */
 .ag-excl-block{margin-bottom:var(--sp-4)}
+/* «En otra ciudad» — replegada (Juan, 18 ago). Sección sin ninguna acción posible
+   (el motor no cruza ciudades, #594): informa, no compite por la pantalla donde
+   se decide. <details> nativo — sin estado propio ni acción que registrar. */
+.ag-excl-city{margin-bottom:var(--sp-4)}
+.ag-excl-city>summary{cursor:pointer;list-style:none;-webkit-tap-highlight-color:transparent}
+.ag-excl-city>summary::-webkit-details-marker{display:none}
+.excl-city-chev{margin-left:var(--sp-2);display:inline-flex;color:var(--gray);transition:transform var(--tr-base)}
+.ag-excl-city[open] .excl-city-chev{transform:rotate(90deg)}
+.excl-city-sub{padding:var(--sp-2) 0 var(--sp-1)}
+/* Lo que no se puede agendar no grita: las filas van atenuadas. */
+.ag-excl-city .int-item{opacity:.7}
 
 
 </style>
@@ -3350,7 +3361,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202608181622";
+    s.src="/src/main.js?v=202608181649";
     document.body.appendChild(s);
     // Watchdog de boot (P0 18 jul): si el grafo ESM murió en el import (caché
     // HTTP mixta tras deploys en ráfaga — main.js nuevo + módulo viejo sin el
