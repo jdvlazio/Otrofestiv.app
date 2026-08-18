@@ -2287,6 +2287,49 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar button-canon: {_e}')
 
+# ── [icono-texto] un botón con icono Y texto se alinea, o el icono flota ──────
+# Juan, 18 ago 2026: el «+» de «Agendar» iba 3px más alto que la palabra. La
+# causa: .excl-include-btn no tenía display:inline-flex ni align-items:center,
+# así que el SVG se apoyaba en la línea BASE del texto en vez de centrarse con
+# él. [button-canon] no lo vio porque mira color, fondo y peso — nunca miró
+# geometría interna. Este chequeo cierra ese hueco: si el markup pone un ICONS.x
+# SEGUIDO DE TEXTO dentro de un botón, su regla CSS debe alinearlos. Los
+# contenedores de icono SOLO (chevrons, cierres) no entran: no hay nada que
+# alinear con nada.
+check = 'icono-texto'
+try:
+    import re as _re, glob as _glob
+    _html = open('index.html', encoding='utf-8').read()
+    _src = ''
+    for _f in _glob.glob('src/**/*.js', recursive=True):
+        _src += open(_f, encoding='utf-8').read()
+    # markup: class="… X …" … > ${ICONS.algo} <algo que NO cierra el tag>
+    _con_texto = set()
+    # SOLO elementos <button>: una fila de texto con icono se alinea por su
+    # cuenta (line-height, vertical-align) y no es lo que rompe aquí.
+    for _m in _re.finditer(r'<button[^>]*class="([^"]*)"[^>]*>\s*\$\{ICONS\.\w+\}\s*([^<]{2,40})', _src):
+        _resto = _m.group(2).strip()
+        if not _resto or _resto.startswith('</'):
+            continue  # icono solo
+        for _c in _m.group(1).split():
+            if '${' in _c:
+                continue
+            _con_texto.add(_c)
+    _errs = []
+    for _c in sorted(_con_texto):
+        _r = _re.search(r'^\.' + _re.escape(_c) + r'\{([^}]*)\}', _html, _re.M)
+        if not _r:
+            continue
+        _b = _r.group(1)
+        if 'flex' not in _b or 'align-items:center' not in _b:
+            _errs.append(f'.{_c} lleva icono+texto sin alinear (falta inline-flex + align-items:center)')
+    if _errs:
+        fail(check, '; '.join(_errs[:5]))
+    else:
+        ok(check, f'{len(_con_texto)} botones con icono+texto, todos alineados')
+except Exception as _e:
+    warn(check, f'no se pudo verificar icono-texto: {_e}')
+
 # ── [dato-linea] la línea de dato tiene UN dueño; la familia no crece ─────────
 # Auditoría 18 ago 2026: la app tenía 89 clases distintas de «texto pequeño gris»
 # (.hint, .cnt-line, .excl-reason, .plist-meta, .suggestion-meta…) — ninguna era
