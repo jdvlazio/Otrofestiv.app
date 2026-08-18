@@ -1294,3 +1294,30 @@ test('T79 — Mi Plan: eyebrow pariente, hero que respira, botones anclados', as
   expect(r.eyebrowPx, 'el eyebrow habla el token t-xs de sec-hdr.sm').toBe(r.tXs);
   expect(r.eyebrowTracking, 'con el tracking de la banda (.1em de 9px ≈ 0.9px)').toMatch(/^0\.9/);
 });
+
+// 18 ago, cazado por Juan en producción: al abrir Mi Plan se metía la barra de
+// días de Programa. El fix del compositor de iOS (loader.js) re-ejecuta
+// initProgramaModeBar ~830ms después de entrar al festival, y su
+// remove('hidden') incondicional asumía correr solo en Programa — si para
+// entonces estabas en Mi Plan (salto automático del boot, o un toque rápido),
+// la barra se colaba. Ahora usa la MISMA condición que switchMainNav.
+test('T81 — la barra de días no se cuela en Mi Plan (re-run diferido del iOS fix)', async ({ page }) => {
+  await enterFestival(page, 'ficdeh2026', '2026-08-18T15:00:00-05:00');
+  await page.evaluate(() => [...document.querySelectorAll('#city-sheet [data-action]')]
+    .find(x => x.textContent.includes('Bogotá'))?.click());
+  // entrar a Mi Plan INMEDIATAMENTE (dentro de la ventana de ~830ms del re-run)
+  await page.click('#mnav-miplan');
+  // esperar a que el re-run diferido dispare con Mi Plan activo
+  await page.waitForTimeout(1400);
+  const nav = await page.evaluate(() => {
+    const n = document.getElementById('nav-row');
+    return { hidden: n.classList.contains('hidden'),
+      alto: Math.round(n.getBoundingClientRect().height) };
+  });
+  expect(nav.hidden, 'la barra de días queda oculta en Mi Plan').toBe(true);
+  // y en Programa sigue visible — la condición no puede sobre-ocultar
+  await page.click('#mnav-cartelera');
+  await page.waitForTimeout(700);
+  const nav2 = await page.evaluate(() => document.getElementById('nav-row').classList.contains('hidden'));
+  expect(nav2, 'en Programa la barra vive').toBe(false);
+});
