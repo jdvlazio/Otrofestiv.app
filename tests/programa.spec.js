@@ -2005,3 +2005,48 @@ test('T93 — el resultado se distingue del insumo, y «sin cupo» no se inventa
   }
   expect(r.huecoAbajo, 'el resultado queda pegado a la banda que describe').toBeLessThanOrEqual(16);
 });
+
+test('T94 — lo que nunca compitió no cuenta como costo del Plan, y no se pierde', async ({ page }) => {
+  test.setTimeout(90000);
+  await enterFestival(page, 'ficdeh2026', '2026-08-18T08:00:00-05:00');
+  await page.evaluate(() => [...document.querySelectorAll('#city-sheet [data-action]')]
+    .find(x => x.textContent.includes('Bogotá'))?.click());
+  await page.waitForTimeout(500);
+  const r = await page.evaluate(async () => {
+    const D = await import('/src/domain/film.js');
+    const bog = f => (f.venue || '').includes('Bogotá');
+    const fut = [...new Set(FILMS.filter(f => bog(f) && !D.screeningPassed(f)).map(f => f.title))];
+    state.set('watchlist', new Set(fut.slice(0, 14)));
+    cachedResult = null; savedAgenda = null;
+    switchMainNav('mnav-planner'); showAgView();
+    for (let i = 0; i < 40 && !document.querySelector('.ag-day-band'); i++) await new Promise(r => setTimeout(r, 250));
+    await new Promise(r => setTimeout(r, 400));
+    const sc = cachedResult.scenarios[cachedResult.currentIdx || 0];
+    const city = document.querySelector('.ag-excl-city');
+    const filasCiudad = [...document.querySelectorAll('.ag-excl-city .int-item')];
+    return {
+      titular: document.querySelector('.dato-resultado')?.textContent.replace(/\s+/g, ' ').trim(),
+      nCompiten: document.querySelectorAll('.ag-excl-block .int-item').length,
+      nCiudad: filasCiudad.length,
+      // oráculo independiente: el total de excluidas VIVAS del escenario
+      nVivas: (sc.excluded || []).filter(t => FILMS.some(f => f.title === t && !D.screeningPassed(f))).length,
+      abierta: !!city?.open,
+      // en «otra ciudad» no se repite la razón ni se ofrece lo que el motor rechaza
+      razones: filasCiudad.filter(x => x.querySelector('.excl-reason')).length,
+      botones: filasCiudad.filter(x => x.querySelector('.excl-include-btn')).length,
+      // la explicación se dice UNA vez, con la ciudad del Plan
+      sub: document.querySelector('.excl-city-sub')?.textContent.trim() || '',
+      // y cada fila aporta la suya
+      ciudadEnFila: filasCiudad.every(x => /·/.test(x.querySelector('.int-item-when')?.textContent || '')),
+    };
+  });
+  expect(r.nCiudad, 'el escenario tiene obras de otra ciudad (si no, el test no prueba nada)').toBeGreaterThan(0);
+  expect(r.nCompiten + r.nCiudad, 'ninguna excluida se pierde entre las dos secciones').toBe(r.nVivas);
+  expect(r.titular, 'el titular cuenta SOLO las que compitieron').toContain(String(r.nCompiten));
+  expect(r.nCompiten, 'y el escenario distingue: no todas compitieron').toBeLessThan(r.nVivas);
+  expect(r.abierta, 'la sección sin acciones arranca replegada').toBe(false);
+  expect(r.razones, 'la razón no se repite fila por fila').toBe(0);
+  expect(r.botones, 'no se ofrece un botón que el motor va a rechazar').toBe(0);
+  expect(r.sub, 'la explicación se dice una vez, con la ciudad del Plan').toMatch(/Bogotá/);
+  expect(r.ciudadEnFila, 'cada fila aporta su ciudad').toBe(true);
+});
