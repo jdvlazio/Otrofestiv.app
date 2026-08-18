@@ -17,24 +17,13 @@ import { state } from '../state/state.js';
 import { storage } from '../storage/storage.js';
 import { t, LANGS, _applyI18nDOM } from '../i18n/i18n.js';
 
-// Sentinel: toggles de prioridad NO deben nular cachedResult ni auto-recalcular
-// — el resultado se preserva para detectar "stale" (prio strip Estado 3).
-let _preserveResult=false;
-export function _markPreserveResult(){ _preserveResult=true; }
-
 export function renderActiveView(){
-  if(_preserveResult){
-    _preserveResult=false;                    // consumir flag
-    // No nular cachedResult, no auto-runCalc: preservar para detección stale.
-    if(activeView==='day' && activeMNav==='mnav-cartelera'){
-      const pelOpen = document.getElementById('pel-sheet')?.classList.contains('open');
-      if(!pelOpen) _renderProgramaContent();
-      return;
-    }
-    renderAgenda();                           // planner → Estado 1/3; seleccion/miplan
-    return;
-  }
-  cachedResult = null;                        // state cambió → cache de schedule stale
+  // El resultado ya NO se anula en cada cambio (Juan, 18 ago): «que el Plan que
+  // estás mirando nunca cambie solo». Antes, cambiar un interés lo destruía y
+  // recalculaba en silencio, mientras cambiar una prioridad lo conservaba y
+  // avisaba — dos gestos vecinos, leyes opuestas. Ahora se conserva siempre y la
+  // vista compara la firma de insumos (planInputSignature) para decir si quedó
+  // desactualizado. Recalcular es del usuario.
   if(activeView==='day' && activeMNav==='mnav-cartelera'){
     const pelOpen = document.getElementById('pel-sheet')?.classList.contains('open');
     if(!pelOpen) _renderProgramaContent(); // re-render por estado → resetScroll=false preserva scroll
@@ -47,7 +36,10 @@ export function renderActiveView(){
     // al armado cuando la verdad es temporal. Sin material, se re-rutea a
     // showAgView, que ya distingue las tres situaciones del vacío.
     const _p=[...watchlist].some(t=>!watched.has(t)&&FILMS.some(f=>f.title===t&&!screeningPassed(f)));
-    if(_p) runCalc(); else showAgView();
+    // Con un resultado en pantalla NO se recalcula solo: se re-renderiza y la
+    // firma de insumos lo marcará desactualizado si algo cambió. Sin resultado,
+    // el primer cálculo sí es automático: no hay ningún Plan que arruinar.
+    if(_p&&!cachedResult) runCalc(); else showAgView();
     return;
   }
   renderAgenda();                             // rutea internamente seleccion/miplan

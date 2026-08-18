@@ -15,7 +15,7 @@ import { keepCityOnly, planCityVenues } from '../view/helpers.js';
 import { runCalc, _planCityVenues } from './calc.js';
 import { commitPlan, saveDelays, saveLastSlot, savePrio, saveSavedAgenda, saveState, saveWL, saveWatched, saveNotWatched } from './persistence.js';
 import { cloudReportDelay, cloudClearDelay, cloudScreeningKey } from './delays-cloud.js';
-import { _getProgramaPhase, _reRenderIntereses, _updateProgramaActiveFilter, initProgramaModeBar, showAgView, showDayView, switchMainNav, updateAgTab, _markPreserveResult, _syncPmodeTabs } from './pipeline.js';
+import { _getProgramaPhase, _reRenderIntereses, _updateProgramaActiveFilter, initProgramaModeBar, showAgView, showDayView, switchMainNav, updateAgTab, _syncPmodeTabs } from './pipeline.js';
 import { searchClose, seccionClose } from './overlays.js';
 import { dayFullyPassed, festivalEnded, simNow, simTodayStr, toMin } from '../domain/time.js';
 import { scoreFilm, screeningPassed, isShortFilm, prioLiveCount, effectiveWatched, screeningEndDate } from '../domain/film.js';
@@ -507,8 +507,8 @@ export function togglePriority(title,cost){
   // 2. GUARD + 3. MUTATE — branch A: unprioritize
   if(prioritized.has(title)){
     // D3: quitar in-strip se queda en el tab actual (sin modal ni navegación) — el
-    // toast alcanza. Preservar el resultado del Planear → detección de estado stale.
-    _markPreserveResult();
+    // toast alcanza. (El resultado del Planear se conserva SIEMPRE desde el 18 ago:
+    // ya no hace falta pedirlo — ver planInputSignature.)
     state.update('prioritized', s=>state._delFromSet(s,title));
     // 4. PERSIST + surgical (render automático vía pipeline)
     savePrio();updateCardState(title);
@@ -520,7 +520,6 @@ export function togglePriority(title,cost){
     if(prioLiveCount()>=PRIO_LIMIT){
       openPrioLimit(title);return;
     }
-    _markPreserveResult();
     const _addWL=!watchlist.has(title);
     state.transaction(() => {
       state.update('prioritized', s=>state._addToSet(s,title));

@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202608181724">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202608181724">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202608181823">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202608181823">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -816,8 +816,10 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .group-label.fail{color:var(--gray2)}
 .prio-chip-past-lbl{font-size:var(--t-badge);color:var(--gray2);text-align:center;line-height:1.2;margin-top:2px}
 /* prio-stale = aviso FUERTE (canon notice-banner-row): sin caja, igual que el resto */
-.prio-stale{display:flex;align-items:center;gap:var(--sp-2);margin-bottom:var(--sp-3);font-size:var(--t-sm);color:var(--white);line-height:1.4}
-.prio-stale-cta{margin-left:auto;flex-shrink:0;background:none;border:none;color:var(--amber);font-family:var(--font);font-size:var(--t-sm);font-weight:var(--w-bold);cursor:pointer;white-space:nowrap}
+/* Ámbar + alerta: en esta app el ámbar de aviso significa «esto pide tu
+   atención ahora» (.dato-alerta en la línea de insumo, .ctx-aviso.amb en la
+   próxima función). Un Plan desactualizado lo pide — hasta bloquea confirmar. */
+.prio-stale{display:flex;align-items:center;gap:var(--sp-2);margin-bottom:var(--sp-3);font-size:var(--t-sm);color:var(--amber);line-height:1.4}
 
 #ag-result-wrap.stale{opacity:.5}
 
@@ -1622,7 +1624,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
   cursor:pointer;transition:opacity var(--tr-base);
 }
 .auth-send-btn:hover,.empty-state-cta:hover,.venue-sheet-dir:hover,.pv-btn-save:hover,.conflict-btn-replace:hover,.plan-confirm-cta:hover,.av-calc-btn:hover,.ag-save-btn:hover,.splash-enter-btn:hover,.conflict-modal-btn.confirm:hover{opacity:.88}
-.auth-send-btn:disabled,.pv-btn-save:disabled,.av-calc-btn:disabled,.splash-enter-btn:disabled{opacity:.35;cursor:default}
+.auth-send-btn:disabled,.pv-btn-save:disabled,.av-calc-btn:disabled,.splash-enter-btn:disabled,.ag-save-btn:disabled{opacity:.35;cursor:default}
 .av-calc-btn{width:100%} /* anatomía: regla dueña */
 /* Recalcular = secundario: con resultado en pantalla el primario es «Usar este
    Plan». Superficie de CTA apagada, sin ámbar, texto atenuado (auditoría 18 ago). */
@@ -3364,7 +3366,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202608181724";
+    s.src="/src/main.js?v=202608181823";
     document.body.appendChild(s);
     // Watchdog de boot (P0 18 jul): si el grafo ESM murió en el import (caché
     // HTTP mixta tras deploys en ráfaga — main.js nuevo + módulo viejo sin el

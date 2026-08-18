@@ -13,7 +13,7 @@ import {
   ICONS, _secLabel, _secLabelFull, _sectionColor, escXML, makeEventPoster, makeProgramPoster, parseProgramTitle, renderAvBlocksHTML, renderFlowProgress,
 } from './components.js';
 import {
-  DAYS, DAY_SHORT_EN, _dayChips, _lblLocalized, _minFmt, _mkCortoItemHtml, _posterThumb, getCortoItemPoster, itemPosterParts, posterParts, dayChip, dayLabel, dayLabelLong, durFmt, emptyState, emptyStateHero, flagFmt, getFilmPoster, isToday, keepCityOnly, mplanBlockType, mplanEndStr, planCityVenues, sala, starsText, travelWarn, vcfg, venueCity, venueMatches, delayConsensusBadge, conflictAccount,
+  DAYS, DAY_SHORT_EN, _dayChips, _lblLocalized, _minFmt, _mkCortoItemHtml, _posterThumb, getCortoItemPoster, itemPosterParts, posterParts, dayChip, dayLabel, dayLabelLong, durFmt, emptyState, emptyStateHero, flagFmt, getFilmPoster, isToday, keepCityOnly, mplanBlockType, mplanEndStr, planCityVenues, planInputSignature, sala, starsText, travelWarn, vcfg, venueCity, venueMatches, delayConsensusBadge, conflictAccount,
 } from './helpers.js';
 import {
   _festDate, _festNowMin, dayFullyPassed, festivalEnded, minToStr, simNow, simTodayStr, toMin,
@@ -165,8 +165,7 @@ export function renderAgenda(){
     // ── Estado B: con Intereses — herramienta completa ──
     // Pre-cálculo limpio: solo stepper + Disponibilidad + botón Calcular.
     // Stale + resumen post-cálculo viven en buildResultHTML.
-    const _snap=cachedResult&&cachedResult._prioSnapshot;
-    const _stale=!!cachedResult&&Array.isArray(_snap)&&(_snap.length!==prioritized.size||!_snap.every(x=>prioritized.has(x)));
+    const _stale=!!cachedResult&&cachedResult._inputSnapshot!==planInputSignature();
     const resultContent=cachedResult
       ?buildResultHTML(cachedResult.scenarios)
       :'';
@@ -1450,10 +1449,15 @@ export function buildResultHTML(scenarios){
   // competido. Cada fila ya dice su razón.
   const ok=sc.schedule.length;
   // Stale banner (movido aquí desde pre-cálculo): se calcula a partir de cachedResult._prioSnapshot vs prioritized actual.
-  const _snap=cachedResult._prioSnapshot;
-  const _stale=Array.isArray(_snap)&&(_snap.length!==prioritized.size||!_snap.every(x=>prioritized.has(x)));
+  // Desactualizado = cambió CUALQUIER insumo desde el cálculo, no solo las
+  // prioridades (Juan, 18 ago). El Plan en pantalla no se reemplaza solo: se
+  // marca, y el usuario decide cuándo recalcular.
+  const _stale=cachedResult._inputSnapshot!==planInputSignature();
   const _staleBanner=_stale
-    ?`<div class="prio-stale">${ICONS.bookmark} ${t('prio_stale_banner')}<button class="prio-stale-cta" data-action="runCalc">${t('prio_stale_cta')}</button></div>`
+    // Sin enlace propio (Juan, 18 ago): «Recalculá →» duplicaba, 40px más abajo,
+    // el botón que ya dice «Recalcular». Una acción, un solo lugar. Y el aviso
+    // en 2 palabras, la escala de la familia («Festival terminado»).
+    ?`<div class="prio-stale">${ICONS.alert} ${t('prio_stale_banner')}</div>`
     :'';
   // Fila "Prioridades N/N" RETIRADA del resumen (decisión Juan, 17 jul 2026):
   // el dato confundía — el usuario no sabe qué significa "1/1" junto al plan.
@@ -1474,7 +1478,10 @@ export function buildResultHTML(scenarios){
   // Si existen escenarios custom (forceInclude), `cachedResult.currentIdx` puede
   // apuntar a uno; rendereamos ese. La navegación entre múltiples scenarios la
   // sacamos junto con la Phase 3 del motor.
-  const saveBtnHtml=`<button class="ag-save-btn" data-action="saveCurrentScenario">${ICONS.calendar} ${t('plan_usar_plan')}</button>`;
+  // Con el Plan desactualizado el CTA no confirma: comprometería un resultado
+  // calculado con insumos que el usuario ya cambió (p. ej. quitó un interés y la
+  // obra entraría igual a Mi Plan). El camino queda uno solo: recalcular.
+  const saveBtnHtml=`<button class="ag-save-btn" data-action="saveCurrentScenario"${_stale?' disabled':''}>${ICONS.calendar} ${t('plan_usar_plan')}</button>`;
   // Summary como filas-header (patrón Intereses): icono + label + count-badge.
   // El conteo de films y el estado de prioridades viven en badges, no en prosa.
   // "X no incluidas" se omite — ya vive en el header de la sección No Incluidas.
