@@ -303,6 +303,26 @@ la app con disfraz. `_tmdbId` vivió en 16 funciones de FINCA a salvo de
 repo usaba `tmdb_id`. Ahora, si al quitarle el guion el nombre coincide con un
 campo real, el guardián lo llama por su nombre: contrabando.
 
+**Decimoquinto: `[cosecha-tmdb]` — tener la ficha y volver con las manos
+vacías.** Los catorce anteriores miran la FORMA del dato: el tipo, el enum, el
+campo que nadie lee, el camino por el que llegó. Ninguno preguntaba lo obvio:
+si fuimos hasta TMDB y anotamos el `tmdb_id`, ¿por qué la obra no tiene
+sinopsis? En CineAutopsia 32 obras tenían ficha y ni una línea de texto. Dos
+fallos encadenados, los dos invisibles:
+
+1. La consulta pedía `es-CO`. TMDB **no cae a `es-ES`**: devuelve vacío. El
+   enriquecedor genérico (`pipeline/enriquecer.py`) siempre pidió `es-ES` +
+   `en-US`; el que se equivocó fue un script a la medida del festival, escrito
+   por fuera del pipeline. Cuarta reincidencia del mismo pecado.
+2. `ensamblar.py` construía cada obra de `film_list` con una lista de campos
+   **escrita a mano** (título, director, país, año, duración). Todo lo demás
+   que el crudo trajera sobre la obra —póster, `tmdb_id`, sinopsis— se caía en
+   silencio. Ahora la lista la manda el contrato: lo que la fuente trae, viaja.
+
+Regla: **si hay `tmdb_id` y no hay `synopsis`, el guardián se pone rojo.** Un
+identificador de ficha es la prueba de que estuvimos ahí; volver sin el texto
+no es un dato que falta, es una cosecha que no hicimos.
+
 **Decimocuarto, y el que cierra el círculo: `[pipeline-generico]`.** Los trece
 anteriores vigilan que el dato salga bien de un camino que cada festival
 reescribía. Éste vigila que **el camino sea uno**: `pipeline/ensamblar.py` y

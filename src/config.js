@@ -653,8 +653,8 @@ export const SECTION_ARCHETYPES = {
   // Franja Académica de FICMA — el festival la divide en talleres y charlas.
   '🛠️ Talleres': 'Charlas / Industria',
   '💬 Charlas': 'Charlas / Industria',
-  '🛰️ Apertura': 'Apertura',
-  '🤝 Encuentro': 'Industria / Formación',
+  '🛰️ Apertura': 'Apertura / Gala',
+  '🤝 Encuentro': 'Charlas / Industria',
 };
 
 // mergeFestivalSections(sections) — DATA-DRIVEN (P2.2): un festival declara sus

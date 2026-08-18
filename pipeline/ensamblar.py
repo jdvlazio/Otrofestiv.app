@@ -174,6 +174,20 @@ def ensamblar(fid, escribir=True):
                 'year': o.get('anio') or o.get('year'),
                 'duration': f"{o['duracion_min']} min" if o.get('duracion_min') else None,
             }.items() if v not in (None, '', [], {})} for o in obras]
+            # Lo que la FUENTE ya trae sobre la obra viaja tal cual. Qué campos
+            # puede llevar una obra lo decide el contrato, no una lista escrita
+            # a mano aquí: la lista fija de arriba (título/director/país/año/
+            # duración) se comió los tmdb_id, los pósters y las 37 sinopsis de
+            # CineAutopsia — el dato estaba en el crudo y el ensamblador,
+            # calladito, lo tiraba. Primero verbatim, después los alias
+            # (sinopsis→synopsis), y solo al final el enriquecido: la fuente
+            # del festival manda sobre nuestra tabla.
+            _campos = lib.contrato()['campos']
+            for item, _o in zip(e['film_list'], obras):
+                for _c in _campos:
+                    if _o.get(_c) and not item.get(_c):
+                        item[_c] = _o[_c]
+                _enriquece(item, _o)
             # Cada obra DENTRO del programa se enriquece por su cuenta: en un
             # bloque de cortos, el póster que importa es el de cada corto.
             for item in e['film_list']:
@@ -215,11 +229,16 @@ def ensamblar(fid, escribir=True):
             _u = e['film_list'][0]
             e['title'] = _u.get('title', e['title'])
             for _c in ('director', 'year', 'poster', 'posterSource', 'lbSlug',
-                       'tmdb_id', 'synopsis', 'synopsis_en', 'country', 'flags'):
+                       'tmdb_id', 'synopsis', 'synopsis_lang', 'synopsis_en',
+                       'country', 'flags'):
                 if _u.get(_c):
                     e[_c] = _u[_c]
             if _u.get('duration'):
                 e['duration'] = _u['duration']
+            # La sinopsis promovida se lleva su idioma: sin `synopsis_lang`
+            # la vista no sabe cuál texto mostrar ([paridad-derivados]).
+            if e.get('synopsis') and not e.get('synopsis_lang'):
+                e['synopsis_lang'] = 'es'
             e.pop('is_cortos', None); e.pop('film_list', None)
             e['_programa_original'] = f.get('titulo')
 
