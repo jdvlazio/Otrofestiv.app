@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202608180121">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202608180121">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202608180131">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202608180131">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -1652,7 +1652,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
    arriba los ata a la grilla; el aire va después. */
 .mplan-div{height:1px;background:var(--bdr)}
 .mplan-foot{display:flex;border-top:1px solid var(--bdr);margin-top:var(--sp-3)}
-.mplan-foot-btn{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:5px;height:44px;background:none;border:none;color:var(--gray);font-size:var(--t-sm);font-weight:var(--w-semi);font-family:var(--font);cursor:pointer;transition:color var(--tr-base);white-space:nowrap;letter-spacing:.2px}
+.mplan-foot-btn{flex:1;min-width:0;display:inline-flex;align-items:center;justify-content:center;gap:5px;height:44px;background:none;border:none;color:var(--gray);font-size:var(--t-caption);font-weight:var(--w-semi);font-family:var(--font);cursor:pointer;transition:color var(--tr-base);white-space:nowrap;letter-spacing:.2px}
 .mplan-foot-btn+.mplan-foot-btn{border-left:1px solid var(--bdr)}
 .mplan-bottom-btn:active{opacity:.6}
 .mplan-wk-hline{position:absolute;left:0;right:0;height:0.5px;background:var(--bdr-l);pointer-events:none}
@@ -3281,7 +3281,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202608180121";
+    s.src="/src/main.js?v=202608180131";
     document.body.appendChild(s);
     // Watchdog de boot (P0 18 jul): si el grafo ESM murió en el import (caché
     // HTTP mixta tras deploys en ráfaga — main.js nuevo + módulo viejo sin el

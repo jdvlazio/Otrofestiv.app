@@ -1411,6 +1411,24 @@ test('T82 — el calendario es una pieza: lista adentro, footer con nombre propi
       captionDentro: !!wrap?.querySelector('.mplan-list-hdr'),
       footAlFinal: wrap && wrap.lastElementChild?.classList.contains('mplan-foot'),
       labels: btns,
+      // Un solo cuerpo para ambos botones, dictado por el label más largo
+      // (pedido de Juan, 18 ago): mismas fuentes computadas y CERO desborde
+      // en el peor idioma (PT trae el label más ancho).
+      footSizes: [...document.querySelectorAll('.mplan-foot-btn')].map(b => getComputedStyle(b).fontSize),
+      footOverflow: await (async () => {
+        let worst = 0;
+        for (const lang of ['es', 'pt']) {
+          state.set('_lang', lang); switchMainNav('mnav-miplan'); showAgView();
+          await new Promise(r => setTimeout(r, 700));
+          const bs = [...document.querySelectorAll('.mplan-foot-btn')];
+          bs.forEach(b => { worst = Math.max(worst, b.scrollWidth - b.clientWidth); });
+          // y el 50/50 es real: ningún label le roba ancho al vecino
+          worst = Math.max(worst, Math.abs(bs[0].clientWidth - bs[1].clientWidth) > 2 ? 99 : 0);
+        }
+        state.set('_lang', 'es'); switchMainNav('mnav-miplan'); showAgView();
+        await new Promise(r => setTimeout(r, 700));
+        return worst;
+      })(),
       hint: !!document.querySelector('.mplan-change-hint'),
       chevronFuturas: [...document.querySelectorAll('.mplan-t1:not(.mp-past)')].every(e => !!e.querySelector('svg')),
       chevronPasadas: [...document.querySelectorAll('.mplan-t1.mp-past')].some(e => e.querySelector('svg')),
@@ -1423,6 +1441,8 @@ test('T82 — el calendario es una pieza: lista adentro, footer con nombre propi
   expect(r.footAlFinal, 'el footer cierra la pieza').toBe(true);
   expect(r.labels.join('|'), 'los labels dicen la acción, no el sustantivo').toMatch(/Compartir Plan|Share Plan/);
   expect(r.labels.join('|')).toMatch(/Pasar a tu calendario|Add to your calendar/);
+  expect(new Set(r.footSizes).size, 'un solo cuerpo tipográfico en el footer').toBe(1);
+  expect(r.footOverflow, 'el label más largo cabe: cero desborde (ES y PT)').toBe(0);
   expect(r.hint, 'el hint murió: lo reemplaza la affordance').toBe(false);
   expect(r.nFuturas, 'la escena tiene horas futuras que medir').toBeGreaterThan(0);
   expect(r.chevronFuturas, 'toda hora tocable lleva chevron').toBe(true);

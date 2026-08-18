@@ -1199,7 +1199,7 @@ export const _I18N = {
     "plan_borrar_titulo": "Apagar Plano",
     "plan_compartir": "Compartilhar",
     "plan_compartir_plan": "Compartilhar Plano",
-    "plan_pasar_calendario": "Adicionar ao seu calendário",
+    "plan_pasar_calendario": "Adicionar ao calendário",
     "plan_opcion": "Opção",
     "plan_sin_plan": "Você não tem um Plano salvo",
     "plan_dia_libre": "Dia livre no seu Plano",
