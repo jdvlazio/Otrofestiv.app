@@ -10,6 +10,7 @@
 // WORKER: las sched pure fns tienen COPIAS en el template del calc worker; el
 //   worker las consume vía eval(name).toString(). [worker-overlap] valida.
 
+import { FESTIVAL_QA_MIN } from "../config.js";
 import { parseDur, _festDate, simNow, festivalEnded, toMin } from "./time.js";
 
 // p8 Step 8d-1: normTitle — normaliza comillas tipográficas en títulos (punto
@@ -148,7 +149,7 @@ export function blockDuration(f){
 
 export function effectiveDuration(f){
   if(f&&f._slotMin) return f._slotMin;
-  return parseDur(f&&f.duration)+(f&&f.has_qa?30:0);
+  return parseDur(f&&f.duration)+(f&&f.has_qa?FESTIVAL_QA_MIN:0);
 }
 
 // durationForTravel — LA DOCTRINA DEL Q&A en un solo dueño (30 jul 2026):
@@ -177,6 +178,11 @@ export function screeningPassed(s){
 // screeningEndMin (effectiveDuration = parseDur + Q&A). NOTA: screeningPassed
 // (arriba) es OTRO concepto — "ya no llegás" (arranque+10 de gracia), no "terminó".
 export function screeningEndMin(s){ return toMin(s.time)+effectiveDuration(s); }
+// screeningBlockEndMin — el fin de las PELÍCULAS (sin Q&A): lo que la pantalla
+// imprime como hora de salida. Es el «termina 16:59» de la cuenta del veredicto
+// (conflictAccount, 15 ago 2026): el Q&A y el viaje se muestran como sumandos
+// aparte, así que la frase arranca del fin duro, no del efectivo.
+export function screeningBlockEndMin(s){ return toMin(s.time)+blockDuration(s); }
 // screeningEndDate — el MISMO fin canónico, como instante absoluto (cruza días).
 // Dueño único del filtro "esta entrada del plan ya terminó": renderUnconfirmed y
 // _updateMiPlanBadge lo reconstruían por separado, y el "terminó hace X min"
@@ -188,8 +194,32 @@ export function screeningEndDate(s){
   end.setMinutes(end.getMinutes()+effectiveDuration(s));
   return end;
 }
+// isShortFilm — «es un corto» como predicado de DOMINIO (≤40 min con duración
+// conocida). Nació del toast del programa (15 ago 2026): la vista decidía
+// cortos/obras parseando duraciones a mano, que es cómo divergen los criterios.
+export function isShortFilm(f){ const d=parseDur(f&&f.duration); return d>0&&d<=40; }
 export function screeningEnded(s,nowMin){ return screeningEndMin(s)<=nowMin; }
 export function screeningNow(s,nowMin){ return toMin(s.time)<=nowMin&&!screeningEnded(s,nowMin); }
+// screeningQaOnly — la ventana en la que la PELÍCULA ya terminó pero la función
+// sigue: los ~30 min estimados del Q&A. Dueño único de la distinción, porque la
+// pantalla la necesita en dos lugares y con la misma respuesta.
+//
+// Por qué existe: «AHORA» y «EN CURSO» se apoyaban en el fin EFECTIVO (con Q&A),
+// que es correcto para el planificador —la función te ocupa hasta el final— pero
+// no para el que lee. Medido en FINCA (16 de 30 obras con Q&A): «¿Cuán profundo
+// es tu amor?» empieza 19:00, la película termina 20:41 y la función 21:11; a
+// las 21:00 la app decía AHORA en verde sobre una película terminada, y Mi Plan
+// mostraba «Termina en 0 min» durante media hora —el rótulo contando con Q&A y
+// la cuenta sin él, dos relojes en una frase—.
+//
+// Y hay una regla del proyecto que lo zanja: el fin de la película es DATO
+// (empieza + dura); el del Q&A es ESTIMACIÓN (FESTIVAL_QA_MIN, «la UI la
+// declara, nunca la afirma»). El badge más afirmativo de la app no puede
+// apoyarse 30 minutos en un número estimado.
+export function screeningQaOnly(s,nowMin){
+  if(!s||!s.has_qa) return false;
+  return screeningBlockEndMin(s)<=nowMin&&!screeningEnded(s,nowMin);
+}
 
 export function _classifyTodayScreenings(screenings,nowMin){
   const done=screenings.filter(s=>screeningEnded(s,nowMin));
@@ -198,14 +228,36 @@ export function _classifyTodayScreenings(screenings,nowMin){
   return{done,active,future};
 }
 
+// prioLiveCount — cuántas prioridades siguen VIVAS (alguna función futura).
+// El CUPO se mide sobre estas: una prioridad cuyas funciones ya pasaron no
+// puede materializarse en ningún plan, y retenía el cupo igual — el auditor de
+// fin de festival vio «Prioridades 2/4» con una muerta, y con 4/4 muertas el
+// usuario chocaba contra la sheet del límite sin que nada le avisara antes.
+// La prioridad muerta NO se borra sola (es del usuario y su lugar es la lista,
+// atenuada con «Ya pasó»): solo deja de contar.
+export function prioLiveCount(){
+  return [...prioritized].filter(t=>FILMS.some(f=>f.title===t&&!screeningPassed(f))).length;
+}
+
 export function _endedStats(){
-  // Conteo POR OBRA (modelo del Diario): un programa visto cuenta por sus
-  // películas — es lo que el usuario realmente vio. Antes excluía is_cortos
-  // por completo → "Viste 0" con dos programas vistos. Eventos no cuentan.
+  // DUEÑO ÚNICO de «cuántas marcaste». Un programa visto cuenta por sus obras —
+  // es lo que el usuario realmente vio. Antes excluía is_cortos por completo →
+  // "Viste 0" con dos programas vistos.
+  //
+  // Los EVENTOS (talleres, charlas) SÍ cuentan: son lo que el Diario muestra, y
+  // el chip del Diario los contaba mientras esta cuenta los descartaba — medido
+  // con FICDEH (29 eventos en catálogo): 2 marcadas acá contra 3 en el chip, dos
+  // números para lo mismo a dos centímetros. Por eso el titular usa el paraguas
+  // ACTIVIDADES: un taller no es una obra, pero sí es una actividad ([vocab]).
+  //
+  // pendingRatings NO los incluye: un taller no se califica, y prometerle al
+  // usuario que le falta calificar algo que no tiene estrellas sería un pendiente
+  // imposible de cerrar.
   let totalWatched=0, pendingRatings=0;
   [...watched].forEach(t=>{
     const f=FILMS.find(fi=>fi.title===t);
-    if(!f||f.type==='event') return;
+    if(!f) return;
+    if(f.type==='event'){ totalWatched+=1; return; }
     if(f.is_cortos&&f.film_list&&f.film_list.length){
       totalWatched+=f.film_list.length;
       pendingRatings+=f.film_list.filter(it=>!filmRatings[it.title]).length;
@@ -263,7 +315,7 @@ export function sealSharedSlots(films){
   Object.entries(_grupos).forEach(([k,g])=>{
     if(g.length<2) return;
     const base=g.reduce((a,f)=>a+parseDur(f.duration),0);
-    const total=base+(g.some(f=>f.has_qa)?30:0);
+    const total=base+(g.some(f=>f.has_qa)?FESTIVAL_QA_MIN:0);
     g.forEach(f=>{ f._slotKey=k; f._slotDur=base; f._slotMin=total; });
   });
   return films;

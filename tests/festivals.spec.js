@@ -755,3 +755,85 @@ test('AP05 — PREMIUM se anuncia, salvo si la función está cancelada', async 
   expect(r.premiumConQA.indexOf('PREMIUM')).toBeLessThan(r.premiumConQA.indexOf('Q&A'));
   expect(r.premiumString).not.toContain('PREMIUM');
 });
+
+// PC01 — el plan NO cruza ciudades (QA de ojos frescos, 15 ago 2026). El caso
+// real: filtro Bogotá en FICDEH, watchlist con obras que existen en Bogotá Y en
+// otras ciudades, «Calcular mi Plan» → el plan ponía al usuario en Medellín el
+// domingo y en Ibagué el lunes, sin ciudad visible en las filas. Ahora: con
+// filtro de ciudad, CADA función del plan y CADA sugerencia es de esa ciudad.
+test('PC01 — con filtro Bogotá, el plan y las sugerencias no salen de Bogotá', async ({ page }) => {
+  test.setTimeout(90000);
+  await page.clock.install({ time: new Date('2026-08-15T09:00:00-05:00') });
+  await page.goto('/');
+  await page.waitForSelector('html[data-app-ready="1"]', { state: 'attached', timeout: 15000 });
+  await page.waitForSelector('.splash-card[data-fest="ficdeh2026"]', { timeout: 15000 });
+  await page.evaluate(() => { const c = FESTIVAL_CONFIG['ficdeh2026']; selectSplashFest(c.name, `${c.city} · ${c.dates}`, 'ficdeh2026'); });
+  await page.locator('.splash-enter-btn').click();
+  await page.waitForFunction(() => document.querySelectorAll('.poster-card, .plist-item').length > 0, null, { timeout: 20000 });
+  await page.waitForTimeout(600);
+  const r = await page.evaluate(async () => {
+    const { state } = await import('/src/state/state.js');
+    const { vcfg } = await import('/src/view/helpers.js');
+    const { computeScenarios } = await import('/src/domain/schedule.js');
+    const { _planCityVenues } = await import('/src/controller/calc.js');
+    const { getSuggestions } = await import('/src/view/agenda.js');
+    const city = f => (vcfg(f.venue) || {}).city || '';
+    const { FILMS } = state.snapshot();
+    // Watchlist como la del agente: obras con función en Bogotá Y en otras ciudades.
+    const mixtas = [...new Set(FILMS.filter(f => city(f) === 'Bogotá' && f.day >= '2026-08-16')
+      .map(f => f.title))].filter(t => FILMS.some(f => f.title === t && city(f) && city(f) !== 'Bogotá')).slice(0, 6);
+    mixtas.forEach(t => toggleWL(t));
+    // Filtro de ciudad ACTIVO — el camino real lo setea el dropdown; acá el estado.
+    globalThis.activeVenue = 'city:Bogotá';
+    globalThis.PLAN_CITY_VENUES = _planCityVenues();
+    const scenarios = computeScenarios([...state.snapshot().watchlist]);
+    const funciones = scenarios.flatMap(sc => sc.schedule || sc.items || sc);
+    const ciudades = [...new Set(funciones.map(f => city(f.venue ? f : f)).filter(Boolean))];
+    // Y las sugerencias sobre un plan guardado en Bogotá:
+    const bog = FILMS.find(f => city(f) === 'Bogotá' && f.day === '2026-08-16' && f.time);
+    state.set('savedAgenda', { schedule: [{ ...bog, _title: bog.title }] });
+    const sug = getSuggestions();
+    const sugCiudades = [...new Set(Object.values(sug).flat().map(s => city(s)).filter(Boolean))];
+    return { mixtas: mixtas.length, escenarios: scenarios.length, funciones: funciones.length,
+             ciudadesEnPlan: ciudades, ciudadesEnSugerencias: sugCiudades };
+  });
+  expect(r.mixtas).toBeGreaterThan(2);            // el caso existe de verdad
+  expect(r.escenarios).toBeGreaterThan(0);        // el plan se calcula
+  expect(r.funciones).toBeGreaterThan(0);
+  expect(r.ciudadesEnPlan).toEqual(['Bogotá']);   // NI UNA función de otra ciudad
+  expect(r.ciudadesEnSugerencias.every(c => c === 'Bogotá')).toBe(true);
+});
+
+// Ronda 3 (FINCA): con 3 festivales en curso el splash pedía elegir CADA vez —
+// el auditor elegía FICDEH, recargaba y volvía al punto cero. La regla del 5 jul
+// (0 o 2+ en curso → el usuario elige) decide la PRIMERA visita; no dice nada
+// sobre recordar lo ya elegido. La memoria persiste en el dispositivo y caduca
+// sola: si el festival recordado terminó, se vuelve a preguntar.
+test('P09 — el splash recuerda el festival elegido, y lo olvida cuando terminó', async ({ page }) => {
+  const estado = () => page.evaluate(() => ({
+    on: document.querySelector('.splash-card.on')?.dataset.fest || null,
+    entrar: document.getElementById('splash-enter-btn')?.disabled ? 'disabled' : 'habilitado',
+    guardado: localStorage.getItem('otrofestiv_festival'),
+  }));
+
+  await enterFestival(page, 'ficdeh2026', '2026-08-16T09:00');
+  expect((await estado()).guardado, 'entrar guarda la elección').toBe('ficdeh2026');
+
+  // El splash SIGUE apareciendo — solo llega con la elección puesta.
+  await page.reload();
+  await page.waitForSelector('.splash-card');
+  await page.waitForTimeout(800);
+  const vuelta = await estado();
+  expect(await page.locator('#otrofestiv-splash').isVisible(), 'el splash no se salta').toBe(true);
+  expect(vuelta.on, 'preselecciona lo recordado').toBe('ficdeh2026');
+  expect(vuelta.entrar, 'y «Entrar» queda habilitado').toBe('habilitado');
+
+  // Caduca sola: un festival ya terminado no se preselecciona ni sobrevive.
+  await page.evaluate(() => localStorage.setItem('otrofestiv_festival', 'ficci65'));
+  await page.reload();
+  await page.waitForSelector('.splash-card');
+  await page.waitForTimeout(800);
+  const caducado = await estado();
+  expect(caducado.entrar, 'terminado → vuelve a preguntar').toBe('disabled');
+  expect(caducado.guardado, 'y la memoria se limpia sola').toBeNull();
+});

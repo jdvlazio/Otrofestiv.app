@@ -46,7 +46,9 @@ PROTEGIDAS = {
 }
 
 
-def norm(s):
+# [lib-unica] renombrada desde `norm` el 17 ago 2026.
+# Corta el título en el guion largo («… — Jueves» → «…»). `lib.norm` no corta.
+def norm_hasta_guion(s):
     s = ''.join(c for c in unicodedata.normalize('NFD', (s or '').lower())
                 if unicodedata.category(c) != 'Mn')
     return ' '.join(re.sub(r'[^a-z0-9]', ' ', s).split()[:5])
@@ -58,13 +60,13 @@ def main():
     can = can.get('funciones') or can
     F = ofi['funciones']
 
-    k_o = lambda x: (x['ciudad'], x['dia'], x['hora'], norm(x['titulo_programacion']))
-    k_c = lambda x: (x['ciudad'], x['dia'], x['hora'], norm(x['titulo']))
+    k_o = lambda x: (x['ciudad'], x['dia'], x['hora'], norm_hasta_guion(x['titulo_programacion']))
+    k_c = lambda x: (x['ciudad'], x['dia'], x['hora'], norm_hasta_guion(x['titulo']))
     O = {k_o(x): x for x in F}
     C = {k_c(x): x for x in can if x.get('en_app', True)}
     # El catálogo dice qué títulos son OBRAS. Lo que la web trae y no está en él
     # es actividad de industria y se queda fuera: no hubo confirmación oficial.
-    catalogo = {norm(x['titulo_programacion']) for x in F}
+    catalogo = {norm_hasta_guion(x['titulo_programacion']) for x in F}
 
     salas = quitadas = nuevas = 0
 
@@ -92,7 +94,7 @@ def main():
     for k, c in C.items():
         if k in O or k[3] not in catalogo or k[0] in CIUDAD_CON_PDF:
             continue
-        base = next(x for x in F if norm(x['titulo_programacion']) == k[3])
+        base = next(x for x in F if norm_hasta_guion(x['titulo_programacion']) == k[3])
         F.append({**{campo: base.get(campo, '') for campo in
                      ('titulo_programacion', 'director_programacion', 'obra_catalogo',
                       'tipo', 'poster_url')},

@@ -178,7 +178,7 @@ controladas por contexto**.
 | Variante | Hora | Acciones | Divisor |
 |---|---|---|---|
 | **`--program`** (`.plist-item`) | header sticky agrupador (`.plist-time-hdr`, `t-label`/`w-bold`/`amber`) — agrupa funciones del mismo slot | ♥ corazón (toggle watchlist) | `border-bottom` por item |
-| **`--interests`** (`.int-item`) | — (no aplica; muestra días/próxima) | ★ priorizar + ✓ vista | `border-bottom` por item |
+| **`--interests`** (`.int-item`) | — (no aplica; muestra días/próxima) | 🔖 priorizar + ♥ Intereses | `border-bottom` por item |
 | **`--plan-edit`** (`#ag-result .saved-item`, Planear) | **protagonista en info**: `t-md`/`w-bold`/`amber`, dentro de `.saved-info` arriba del título | Cambiar (switch, gris) + Quitar (X, rojo) | **sin divisor por item** — agrupa por día (border-top en day landmark) |
 | **`--plan-saved`** (`.mplan-row`, Mi Plan) | **protagonista en info**: `t-md`/`w-bold`/`amber`, dentro de `.mplan-ri` arriba del título (tappable, sin subrayado) | Quitar (X, rojo) | **sin divisor por item** — agrupa por día |
 | **`--plan-saved`** (`.suggestion-item`, Sugerencias en Mi Plan) | **protagonista en info**: `t-md`/`w-bold`/`amber`, dentro de `.suggestion-info` arriba del título | + Añadir / ↩ Restaurar (`.suggestion-add`, pill) | `border-bottom` por item (sub-lista corta, no agrupa por día) |
@@ -207,6 +207,26 @@ Valores **canónicos aprobados** por contexto:
 | `.plist-heart` | `font-size:var(--t-icon); color:var(--amber); padding:6px; border-radius:50%; align-self:center` |
 | `.plist-time-hdr` | **`font-size:var(--t-label); font-weight:var(--w-bold); color:var(--amber)`**; `padding:var(--sp-1) var(--sp-3) var(--sp-1); background:var(--surf); border-top:1px solid var(--bdr); letter-spacing:.5px; position:sticky` — **sin border-bottom**. `background:var(--surf)` **requerido por `position:sticky`** — sin él el texto flota sobre posters al scrollear |
 
+> **«Plan» es un nombre, no un sustantivo común** (16 ago 2026). «Mi Plan» es un
+> concepto de la app, así que la palabra va **en mayúscula siempre**, incluso en
+> posesivo: «en tu Plan», «Fuera de tu Plan», «armar tu Plan». Convivían 20
+> strings con mayúscula y 36 con minúscula —y la misma frase escrita de las dos
+> formas según el día (`plan_en_tu_plan` «En tu Plan» vs `toast_en_tu_plan` «en tu
+> plan»)—. Se eligió esta regla sobre la alternativa («mayúscula solo cuando
+> nombra el objeto») porque ésta **se puede verificar sola**: la vigila
+> `[plan-concepto]`, que cubre las 3 locales y el fallback estático de
+> `index.html`. No toca «Planear», «planner», «Planejar» ni los verbos.
+
+> **La ley de los dos gestos** (16 ago 2026, revisión de UX Writer). El **corazón
+> lleno** significa siempre «está en tus Intereses; tocá para sacarlo» — en la
+> grilla, en la lista, en la ficha, en Intereses y en Planear. La **✕** significa
+> siempre «sale de esta lista» y nunca borra más que la lista donde estás parado
+> (Mi Plan, disponibilidad). Nacieron de un choque real: la ✕ de Planear borraba
+> interés, prioridad y vista con el mismo icono que en Mi Plan solo saca del plan
+> — dos mutaciones muy distintas, y la destructiva era la que menos avisaba. En el
+> mismo movimiento, la fila de Intereses ganó el corazón que le faltaba: era la
+> única lista de la app que no se podía podar desde donde se lee.
+
 ### 2.2 · `.int-item` — Intereses
 
 | Clase | Propiedades canónicas |
@@ -218,7 +238,7 @@ Valores **canónicos aprobados** por contexto:
 | `.int-item-days` | `margin-bottom:2px; line-height:1.3` |
 | `.int-item-meta` | **`font-size:var(--t-sm); font-weight:var(--w-thin); color:var(--gray)`**; `margin-bottom:var(--sp-1)` |
 | `.int-item-sec` | **`font-size:var(--t-label); font-weight:var(--w-semi); color:var(--white-60)`**; `margin-bottom:var(--sp-1)` |
-| `.int-item-actions` | `display:flex; flex-direction:column; align-items:center; align-self:center` |
+| `.int-item-actions` | `display:flex; flex-direction:column; align-items:center; gap:var(--sp-1); align-self:center` — **dos** controles: prioridad (`.int-prio-btn`) + Intereses (`.int-wl-btn`, corazón lleno ámbar) |
 
 ### 2.3 · `#ag-result .saved-item` — **Planear** (plan calculado, variante `--plan-edit`)
 
@@ -234,7 +254,7 @@ Valores **canónicos aprobados** por contexto:
 | `.saved-title` | **`font-size:var(--t-base); font-weight:var(--w-bold); color:var(--white)`** |
 | `.saved-venue` | **`font-size:var(--t-sm); font-weight:var(--w-thin); color:var(--gray)`**; `margin-top:2px` |
 | `.lb-poster`/`-ph` | `56×84; border-radius:var(--r-sm)` |
-| `.col-end` acciones | Cambiar (`.ag-fi-btn`, switch, gris) + Quitar (`.ag-fi-btn.del`, X, `color:var(--red); opacity:.7`) |
+| `.col-end` acciones | Cambiar (`.ag-fi-btn`, switch, gris) + **Intereses** (`.ag-fi-btn.wl`, corazón lleno, `color:var(--amber)`) |
 | `.ag-day-label` (day landmark) | `border-top:1px solid var(--bdr-l)` (separa días); `.first` sin border; nombre `t-md`/`w-semi`/`white` + `count-badge` |
 
 ### 2.5 · `.mplan-row` — **Mi Plan** (lista del día, variante `--plan-saved`)
@@ -291,6 +311,34 @@ Aprobadas por el PO. Ya reflejadas en §2 y aplicadas en `index.html`.
 | 8 | `.plist-time-hdr` | `background:var(--surf)` (requerido por `position:sticky`), sin `border-bottom`, `border-top:1px solid var(--bdr)`, `font-weight:var(--w-bold)` (700, antes 800) |
 | 9 | `.mplan-wk-venue` | **EXCEPCIÓN** — contexto calendario denso, valores propios (`t-xs`) |
 | 10 | `.mplan-wk-time` | **EXCEPCIÓN** — `gray` sobre fondo amber-tinted |
+
+### Card o sección — la regla del contenedor (17 ago 2026)
+
+Contada sobre la app entera: **solo 5 componentes usan fondo de card**
+(`card-a`/`card-b`), y ninguno es una sección de contenido.
+
+| Componente | Qué es |
+|---|---|
+| `.ag-film-item` | un ÍTEM (una fila de película) |
+| `.ag-summary` | un RESUMEN (una unidad de datos) |
+| `.film-alts` | un PANEL que se abre encima |
+| `.lang-dropdown` | un MENÚ |
+
+Las secciones de contenido —Prioridades, Intereses, Sugerencias, Diario, el día
+de Mi Plan— son **todas planas**: solo margen y su banda `sec-hdr` a sangre
+(x=0, ancho completo). Sus filas (`.suggestion-item`, `.int-item`) usan
+**padding horizontal cero**, así que el contenido arranca en el margen de la app
+(16px) y todas las listas quedan alineadas entre sí.
+
+> **Regla:** card = una cosa individual o una superficie que aparece encima.
+> Sección = una lista de cosas, con su banda. La urgencia de una sección se
+> comunica con el LENGUAJE de advertencia (icono `alert` + badge ámbar), no con
+> un borde.
+
+`.checkin-wrap` («Sin confirmar») era la única violación: card entre dos
+secciones planas, con una píldora inline de encabezado que flotaba a 17px
+mientras sus filas arrancaban a 33 — 16px de desajuste y un tercer estilo de
+encabezado inexistente en el resto de la app. Migrada a sección plana el 17 ago.
 
 **Rationale del color secundario (`gray` #888 sobre `gray2` #555):** `#555` da
 ~2.7:1 de contraste sobre `--bg` → **falla WCAG AA** (mín. 4.5:1 para texto pequeño).

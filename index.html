@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202608131459">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202608131459">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202608171957">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202608171957">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -349,7 +349,7 @@ window.sentryOnLoad = function() {
      Capas sticky (header, nav): 100–200
        198  chrome-blur (frosted glass fijo)
        199  topbar sticky
-       200  main-nav sticky / hdr-ag sticky
+       200  main-nav sticky
      Capas flotantes bajas (nav móvil, festival selector): 1000–2001
        1000 main-nav fixed mobile
        2000 fs-overlay (festival selector)
@@ -568,13 +568,6 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
    ag-search-wrap:    solo margen inferior (ag-view provee márgenes laterales)
 ────────────────────────────────────────────────────────────────────────── */
 #hdr-programa{position:sticky;top:var(--sticky-top-carta);z-index:201;background:var(--surf)}
-#hdr-ag{position:sticky;top:var(--sticky-top-carta);z-index:121;background:var(--surf)}
-.ag-toggle-bar{display:none!important}
-.ag-toggle-bar::-webkit-scrollbar{display:none}
-.ag-sec-pill{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:3px;font-size:var(--t-sm);font-weight:var(--w-semi);color:var(--gray);background:none;border:none;border-bottom:2px solid transparent;padding:var(--sp-2) var(--sp-1);white-space:nowrap;cursor:pointer;font-family:var(--font);transition:color var(--tr-base),border-color var(--tr-base);min-height:38px}
-.ag-sec-pill:active{opacity:.6}
-.ag-sec-pill.prio,.ag-sec-pill.int,.ag-sec-pill.yv{background:none;border-radius:0;color:var(--gray)}
-.ag-toggle-spacer{flex:1}
 
 /* El pill: flex row que contiene ícono + input + clear */
 
@@ -717,9 +710,23 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
    Ya no hay reglas .X-ed ni estilos inline — todo el layout es .poster-ed. */
 
 /* ── Check-in ── */
-.checkin-wrap{background:var(--card-a);border:1px solid var(--bdr);border-radius:var(--r);margin-bottom:var(--sp-3);overflow:hidden}
-.checkin-hdr{font-size:var(--t-label);font-weight:var(--w-bold);color:var(--amber-60);letter-spacing:.8px;text-transform:uppercase;background:var(--amber-08);padding:var(--sp-1) var(--sp-3);border-radius:var(--r-sm);display:inline-block}
-.checkin-item{display:flex;align-items:center;gap:var(--sp-3);padding:var(--sp-3) var(--sp-4);border-bottom:1px solid var(--bdr-l)}
+/* SECCIÓN, no card. Regla medida el 17 ago 2026: en toda la app solo 5
+   componentes usan fondo de card (ag-film-item, ag-summary, film-alts,
+   lang-dropdown y este) y ninguno de los otros cuatro es una sección de
+   contenido — son un ítem, un resumen, un panel que se abre y un menú. Las
+   secciones (Prioridades, Intereses, Sugerencias, Diario, el día de Mi Plan)
+   son TODAS planas con su banda sec-hdr. Este bloque es una lista de funciones
+   con acción por fila: su hermano es Sugerencias, que hace lo mismo mirando al
+   futuro. La card lo dejaba como cuerpo extraño entre dos secciones planas, y
+   su encabezado era una píldora inline que flotaba a 17px mientras las filas
+   arrancaban a 33 — 16px de desajuste y un tercer estilo de encabezado. La
+   urgencia ahora la carga el LENGUAJE de advertencia (triángulo + badge ámbar),
+   no un borde. */
+.checkin-wrap{margin-top:var(--sp-5);margin-bottom:var(--sp-3)}
+/* Padding horizontal CERO, igual que .suggestion-item y .int-item: sus filas
+   arrancan en el borde del contenedor. Los 16px de lado eran herencia de la
+   card; sin card, dejaban esta lista indentada respecto de sus vecinas. */
+.checkin-item{display:flex;align-items:center;gap:var(--sp-3);padding:var(--sp-3) 0;border-bottom:1px solid var(--bdr-l)}
 .checkin-item:last-child{border-bottom:none}
 .checkin-info{flex:1;min-width:0}
 .checkin-title{font-size:var(--t-base);font-weight:var(--w-semi);color:var(--white);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
@@ -922,12 +929,13 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .programa-mode-bar{display:flex;align-items:center;padding:0 0 0 var(--sp-3);flex-shrink:0;background:var(--surf)}
 .pmode-tab{padding:var(--sp-2) var(--sp-3);font-size:var(--t-sm);font-weight:var(--w-semi);color:var(--gray);border-bottom:2px solid transparent;min-height:36px;cursor:pointer;background:none;border-top:none;border-left:none;border-right:none;font-family:var(--font);transition:color var(--tr-base),border-color var(--tr-base);white-space:nowrap;display:inline-flex;align-items:center}
 .pmode-tab.on{color:var(--white);border-bottom-color:var(--amber)}
+.pmode-tab.past{opacity:.35} /* espeja al .dtab.past: su día ya no tiene nada */
 .pmode-spacer{flex:1}
 .pmode-controls{display:flex;align-items:center;gap:var(--sp-3)}
 /* ── View switch — sistema unificado (Programa / Mi Plan / Intereses) ── */
 /* view toggle — icono único, sin contenedor, mismo peso visual que lupa */
-.pmode-view-switch,.intereses-view-switch{display:flex}
-.pmode-view-btn,.intereses-view-btn{display:none} /* ocultar botones legacy */
+.pmode-view-switch{display:flex}
+.pmode-view-btn{display:none} /* ocultar botones legacy */
 .view-toggle-btn{width:32px;min-height:34px;display:flex;align-items:center;justify-content:center;padding-right:4px;background:none;border:none;cursor:pointer;color:var(--gray);flex-shrink:0;-webkit-tap-highlight-color:transparent;font-family:var(--font);transition:color var(--tr-base);position:relative;touch-action:manipulation;position:relative}
 .view-toggle-btn::after{content:'';position:absolute;inset:-6px -4px}
 .view-toggle-btn::before{content:'';position:absolute;left:0;top:15%;bottom:15%;width:1px;background:var(--bdr)}
@@ -1065,6 +1073,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 
 /* Badge AHORA / Ya pasó */
 .poster-now{position:absolute;top:5px;left:5px;background:var(--green);color:var(--black);font-size:var(--t-badge);font-weight:var(--w-display);letter-spacing:.5px;padding:2px 5px;border-radius:var(--r-sm);line-height:1.4}
+.poster-now.qa-only{background:var(--amber)}
 .poster-past-badge{position:absolute;top:5px;left:5px;background:var(--overlay-60);color:var(--gray2);font-size:var(--t-badge);font-weight:var(--w-bold);padding:2px 4px;border-radius:var(--r-sm);line-height:1.4}
 /* ── Vista horario compacta — grid 2 columnas ── */
 
@@ -1334,6 +1343,11 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .conflict-handle{width:36px;height:4px;background:rgba(255,255,255,.1);border-radius:var(--r-handle);margin:12px auto 0}
 .conflict-hdr{padding:14px 20px 12px;border-bottom:1px solid var(--bdr-l)}
 .conflict-title{font-size:var(--t-md);font-weight:var(--w-display);letter-spacing:-.02em;color:var(--white)}
+/* .cuenta — cuando el título ES la aritmética del veredicto (conflictAccount):
+   frase de 2 líneas, tamaño de cuerpo; los <b> llevan el énfasis de los números. */
+.conflict-title.cuenta{font-size:var(--t-base);font-weight:var(--w-regular);letter-spacing:0;line-height:1.45;color:var(--gray)}
+.conflict-title.cuenta b{color:var(--white);font-weight:var(--w-semi)}
+.conflict-title.cuenta i{font-style:italic}
 .conflict-sub{font-size:var(--t-base);color:var(--gray);margin-top:var(--sp-1)}
 .conflict-arena{padding:var(--sp-4) var(--sp-5);display:flex;flex-direction:column;gap:var(--sp-3)}
 .conflict-card{display:flex;align-items:center;gap:var(--sp-3);padding:var(--sp-3) var(--sp-4);border-radius:var(--r);border:1px solid var(--bdr);background:var(--surf-3)}
@@ -1505,6 +1519,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 
 .ag-fi-btn.prio-on{color:var(--amber);border-color:var(--amber-40)}
 .ag-fi-btn.del:hover{border-color:transparent;color:var(--red);opacity:1}
+.ag-fi-btn.wl:hover{border-color:transparent;color:var(--amber);opacity:1}
 
 /* ── Intereses: metadatos de película ─────────────────────────────
    ag-fi-meta: sección + días disponibles en compact chips.
@@ -1589,7 +1604,10 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .saved-agenda{padding:0;margin-bottom:var(--sp-5)}
 
 /* Calendario semanal */
-.mplan-wrap{border:1px solid var(--bdr-l);border-radius:var(--r);overflow:hidden;margin-bottom:var(--sp-4)}
+/* margin-bottom sp-1: los botones Compartir/Calendario van ANCLADOS al pie de
+   esta card (auditoría 18 ago, punto 4) — el dueño del gap de 17px era este
+   margen, no el padding de los botones. El aire grande va después de ellos. */
+.mplan-wrap{border:1px solid var(--bdr-l);border-radius:var(--r);overflow:hidden;margin-bottom:var(--sp-1)}
 .mplan-wk-outer{overflow:auto;-webkit-overflow-scrolling:touch;touch-action:pan-x pan-y}
 .mplan-wk-outer::-webkit-scrollbar{width:3px;height:3px}
 .mplan-wk-outer::-webkit-scrollbar-thumb{background:var(--bdr)}
@@ -1629,7 +1647,10 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 
 .mplan-wk-col-dot{width:4px;height:4px;border-radius:50%;background:var(--amber);opacity:.7}
 .mplan-wk-col-arrow{display:flex;align-items:center;justify-content:center;color:var(--amber-60);height:6px;line-height:1}
-.mplan-bottom-actions{display:flex;gap:var(--sp-2);padding:var(--sp-2) var(--sp-3);justify-content:flex-end}
+/* Anclados al PIE del calendario (auditoría 18 ago, punto 4): antes flotaban
+   equidistantes (16px arriba y abajo) entre la grilla y la lista del día. 4px
+   arriba los ata a la grilla; el aire va después. */
+.mplan-bottom-actions{display:flex;gap:var(--sp-2);padding:0 var(--sp-3) var(--sp-2);justify-content:flex-end}
 .mplan-bottom-btn{display:inline-flex;align-items:center;gap:5px;background:none;border:1px solid var(--bdr);border-radius:var(--r-pill);color:var(--gray);font-size:var(--t-xs);font-weight:var(--w-semi);font-family:var(--font);padding:4px 10px;cursor:pointer;transition:color var(--tr-base),border-color var(--tr-base);white-space:nowrap;letter-spacing:.2px}
 .mplan-bottom-btn:active{opacity:.6}
 .mplan-wk-hline{position:absolute;left:0;right:0;height:0.5px;background:var(--bdr-l);pointer-events:none}
@@ -1826,7 +1847,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
   padding-bottom:0;
   border-top:1px solid var(--bdr-l);
   border-bottom:none;
-  /* Sticky: top con offset del topbar (mismo patrón que #hdr-programa/#hdr-ag). */
+  /* Sticky: top con offset del topbar (mismo patrón que #hdr-programa). */
   position:sticky;
   top:var(--sticky-top-carta);
   background:var(--bg);
@@ -1846,13 +1867,26 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
    en Planear y Mi Plan. Cambiar = neutro (no-destructivo; evita colisión con el
    ámbar de la hora). La jerarquía/estado va por color sólido, nunca por opacity. */
 .ag-fi-btn.del{color:var(--red)}
+/* .wl — el control de Intereses en la fila de Planear: ámbar como el corazón de
+   Programa y la ficha, NO rojo: no destruye el plan, saca de tu lista. */
+.ag-fi-btn.wl{color:var(--amber)}
 
 /* Progress festival */
-.festival-progress{padding:var(--sp-2) 0;margin-bottom:var(--sp-1)}
+/* .festival-progress retirado (18 ago 2026): la fila con subrayado ámbar de 3px
+   era el único de la app y no era una barra de progreso. La reemplaza la banda
+   canónica del Plan (sec-hdr) con «Día n de n» como hdr-end, y el chip del
+   Diario dentro de la banda (hdr-end), en ámbar con chevron. */
 /* ── Header contextual de Mi Plan ── */
 /* ctx-header FLUSH (decisión Juan, 17 jul): sin panel surf ni border-bottom — el color del chrome es solo para el chrome; el contenido jerarquiza con eyebrow+título (como el héroe del Recuerdo). Cero divisores sueltos. */
-.ctx-header{padding:var(--sp-3) var(--sp-4) var(--sp-3)}
-.ctx-eyebrow{font-size:var(--t-label);font-weight:var(--w-bold);letter-spacing:.8px;text-transform:uppercase;display:flex;align-items:center;gap:var(--sp-1);margin-bottom:6px;color:var(--amber-60)}
+/* margin-bottom sp-5: el gap ENTRE secciones es UN token (auditoría 18 ago,
+   punto 5 — convivían 0/8/16/55/24). El hero estaba PEGADO a la banda del Plan. */
+.ctx-header{padding:var(--sp-3) var(--sp-4) var(--sp-3);margin-bottom:var(--sp-5)}
+/* Tokens de sec-hdr.sm (t-xs + tracking .1em + svg 11px): el hero es el único
+   bloque de Mi Plan sin banda —a propósito, es el «ahora»— pero su eyebrow debe
+   ser PARIENTE de los encabezados, no extranjero (auditoría 18 ago, punto 3).
+   Conserva el ámbar: es la señal de urgencia que una banda no tiene. */
+.ctx-eyebrow{font-size:var(--t-xs);font-weight:var(--w-bold);letter-spacing:.1em;text-transform:uppercase;display:flex;align-items:center;gap:var(--sp-1);margin-bottom:var(--sp-2);color:var(--amber-60)}
+.ctx-eyebrow>svg{width:11px;height:11px}
 /* Escala de iconos ≈ tamaño del texto vecino (auditoría iconos 18 jul): los
    iconos de ICONS traen 13px de base; en familias de texto pequeño (t-label/
    t-xs) se bajan a 11 para no quedar desproporcionados (antes 1.3–1.44× el
@@ -1879,6 +1913,10 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .ctx-next-detail{font-size:var(--t-sm);color:var(--gray)}
 .ctx-next-badge{display:inline-flex;align-items:center;gap:var(--sp-1);background:var(--amber);color:var(--black);border-radius:var(--r-pill);padding:3px 10px;font-size:var(--t-sm);font-weight:var(--w-bold)}
 .ctx-next-badge.ending{background:var(--surf);color:var(--white-60);border:1px solid var(--bdr)}
+/* Ventana del Q&A: borde propio (la base no tiene border, así que border-color
+   solo no pinta nada) y va DESPUÉS de .ending para no depender del orden de
+   clases en el markup. */
+.ctx-next-badge.qa-only{background:var(--amber-10);color:var(--amber);border:1px solid var(--amber-30)}
 
 .ctx-suggest-card{display:flex;align-items:center;gap:var(--sp-3);background:var(--surf-2);border:1px solid var(--green-30);border-radius:var(--r);padding:var(--sp-3)}
 .ctx-suggest-badge{background:var(--green-10);border:1px solid var(--green-30);border-radius:var(--r-md);padding:var(--sp-1) var(--sp-2);font-size:var(--t-sm);font-weight:var(--w-display);color:var(--green);flex-shrink:0;text-align:center;line-height:1.3;min-width:46px}
@@ -1886,7 +1924,6 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .ctx-suggest-venue{font-size:var(--t-sm);color:var(--gray)}
 .ctx-suggest-info{flex:1;min-width:0}
 
-.festival-progress-text{font-size:var(--t-sm);color:var(--gray2);display:flex;justify-content:space-between;align-items:center;padding-bottom:var(--sp-2);border-bottom:3px solid var(--amber)}
 
 /* ════════════════════════════════════════════════════════
    6 · RESPONSIVE
@@ -1931,7 +1968,6 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
      .topbar es el ÚNICO position:sticky en mobile. Contiene dentro:
        .hdr  (wordmark + fest-bar)
        #hdr-programa  (cartelera: modo bar + nav-row day tabs)
-       #hdr-ag  (intereses/planear/mi plan: toggle bar)
      El ::before provee frosted glass sin interferir con sticky (iOS fix).
      Elimina permanentemente el gap entre dos stickies con --sticky-top-carta
      calculado erróneamente por timing de fuentes/datos. */
@@ -1948,7 +1984,6 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
   .hdr-fest-bar{background:transparent}
   #hdr-programa{position:relative;top:auto;padding-top:0;background:transparent}
   .programa-mode-bar{background:transparent}
-  #hdr-ag{position:relative;top:auto;background:transparent;border-bottom:none}
 }
 
 /* ── FESTIVAL BOTTOM SHEET ── */
@@ -2123,7 +2158,6 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
   .programa-mode-bar{position:sticky;top:var(--sticky-top-modebar);z-index:197;background:var(--surf)}
   .programa-active-filter{position:sticky;top:calc(var(--sticky-top-modebar) + 44px);z-index:196}
   #hdr-programa{padding:0;position:relative;top:auto}
-  #hdr-ag{position:relative;top:auto}
 
   /* ── Chips — scroll natural sin mask (el marco del body reemplaza el cue visual) ── */
   .programa-chips{
@@ -2371,6 +2405,9 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .splash-info-tag{font-size:var(--t-sm);color:var(--gray);margin-top:var(--sp-2);line-height:1.4;min-height:calc(var(--t-sm) * 1.4)}
 .splash-info-city{font-size:var(--t-sm);color:var(--gray2);text-transform:uppercase;letter-spacing:.4px;margin-top:var(--sp-3)}
 .splash-info-city .live-dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--green);margin-right:5px;vertical-align:1px}
+/* El punto de «ahora» en las FILAS (18 ago 2026): el badge dice QUÉ, el punto
+   dice CUÁNDO. Mismo token verde del splash; siempre FUERA del badge. */
+.row-dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--green);margin-left:var(--sp-1);vertical-align:1px;flex-shrink:0}
 .splash-info-dates{font-size:var(--t-sm);color:var(--gray2);text-transform:uppercase;letter-spacing:.4px;margin-top:var(--sp-1)}
 .splash-enter-btn{
   width:100%;max-width:300px;
@@ -2378,8 +2415,17 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
   position:relative;
 } /* anatomía: regla dueña BOTÓN PRIMARIO (spinner .loading abajo) */
 .splash-enter-btn:active{opacity:.75}
-.splash-enter-btn:disabled{opacity:.35;cursor:default}
-.splash-enter-btn:disabled:active{opacity:.35}
+.splash-enter-btn:disabled{opacity:.22;filter:saturate(.4);cursor:default}
+.splash-enter-btn:disabled:active{opacity:.22}
+/* Splash A (QA ojos frescos, 15 ago 2026): sin festival elegido el botón se ve
+   APAGADO de verdad y una línea dice qué hacer. visibility (no display): el
+   hint reserva su alto y el splash no salta al elegir. Cero JS: el estado ya
+   vive en el disabled del botón. */
+.splash-hint-pick{visibility:hidden;font-size:var(--t-sm);color:var(--gray);text-align:center;margin-top:var(--sp-2)}
+.splash-enter-btn:disabled+.splash-hint-pick{visibility:visible}
+/* Landscape (T41): el splash cabe sin scroll — el hint es mejora progresiva y
+   ahí se omite; el botón apagado sigue contando el estado. */
+@media (orientation:landscape){.splash-hint-pick{display:none}}
 .splash-enter-btn.loading{pointer-events:none;color:transparent}
 .splash-enter-btn.loading::after{
   content:'';position:absolute;inset:0;margin:auto;
@@ -2712,7 +2758,9 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .int-item-meta{font-size:var(--t-sm);font-weight:var(--w-thin);color:var(--gray);margin-bottom:var(--sp-1);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .int-item-gone{font-size:var(--t-xs);color:var(--gray2);font-style:italic}
 .int-item-conflict{display:inline-flex;align-items:center;gap:3px;font-size:var(--t-xs);font-weight:var(--w-semi);color:var(--red);background:var(--red-08);border:1px solid var(--red-20);border-radius:var(--r-pill);padding:1px 6px;margin-top:3px}
-.int-item-actions{display:flex;flex-direction:column;align-items:center;justify-content:center;flex-shrink:0;align-self:center}
+.int-item-actions{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:var(--sp-1);flex-shrink:0;align-self:center}
+.int-wl-btn{width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;border:none;cursor:pointer;transition:color var(--tr-base),transform var(--tr-base);font-size:var(--t-md);background:transparent;color:var(--amber);font-family:var(--font);-webkit-tap-highlight-color:transparent;padding:0}
+.int-wl-btn:active{opacity:.6;transform:scale(.96)}
 .int-prio-btn{width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;border:none;cursor:pointer;transition:color var(--tr-base),transform var(--tr-base);font-size:var(--t-md);background:transparent;color:var(--gray2);font-family:var(--font);-webkit-tap-highlight-color:transparent;padding:0}
 .int-prio-btn.on{color:var(--amber)}
 .int-seen-btn{width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;border:none;cursor:pointer;background:transparent;color:var(--gray2);transition:color var(--tr-base);font-size:var(--t-base);font-weight:var(--w-bold);font-family:var(--font);-webkit-tap-highlight-color:transparent;padding:0}
@@ -2799,6 +2847,10 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .txt-white60-semi{color:var(--white-60);font-weight:var(--w-semi)}
 .film-count-badge{font-size:var(--t-xs);background:var(--surf-3);color:var(--amber);border-radius:var(--r);padding:1px 5px;margin-left:5px;font-weight:var(--w-bold)}
 .film-check-badge{font-size:var(--t-xs);font-weight:var(--w-display);color:var(--green);background:var(--green-10);border:1px solid var(--green-30);border-radius:var(--r);padding:2px 6px;margin-left:var(--sp-1);flex-shrink:0}
+/* Ventana del Q&A: la película terminó y quedan los ~30 min ESTIMADOS de la
+   charla. Ámbar en vez de verde — el verde dice «esto está pasando, vení», y lo
+   que está pasando ya no es la película. Mismo par de tokens, otro acento. */
+.film-check-badge.qa-only{color:var(--amber);background:var(--amber-10);border-color:var(--amber-30)}
 .bg-surf-2{background:var(--surf-2)}
 .badge-past{background:var(--amber-60);color:var(--black)}
 .txt-amber-sm{color:var(--amber);font-size:var(--t-sm)}
@@ -2826,6 +2878,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
       <div class="splash-info-dates" id="splash-info-dates"></div>
     </div>
     <button class="splash-enter-btn" id="splash-enter-btn" data-i18n="auth_entrar" data-action="dismissSplash" disabled>Entrar</button>
+    <div class="splash-hint-pick" data-i18n="splash_hint_pick">Tocá un afiche para elegir</div>
   </div>
   <div class="splash-tagline">
     <div class="splash-tagline-line" data-i18n="splash_tagline">Más de lo que crees</div>
@@ -2972,29 +3025,6 @@ setTimeout(function(){
   <div class="nav-tabs" id="dtabs"></div>
 </div>
 </div>
-<div id="hdr-ag" style="display:none">
-
-  <div class="ag-toggle-bar" id="ag-toggle-bar">
-    <button class="ag-sec-pill prio" id="pill-prio" data-action="scrollToAgSec" data-target="sec-prio">
-      <span data-i18n="ag_pill_prioridad">Prioridad</span> <span class="txt-dim-xs" id="pill-prio-cnt">—</span>
-    </button>
-    <button class="ag-sec-pill int" id="pill-int" data-action="scrollToAgSec" data-target="sec-int">
-      <span data-i18n="ag_pill_intereses">Intereses</span> <span class="txt-dim-xs" id="pill-int-cnt">—</span>
-    </button>
-    <button class="ag-sec-pill yv" id="pill-yv" data-action="scrollToAgSec" data-target="sec-yv">
-      <span data-i18n="ag_pill_vistas">Vistas</span> <span class="txt-dim-xs" id="pill-yv-cnt">—</span>
-    </button>
-    <div class="ag-toggle-spacer"></div>
-    <div class="intereses-view-switch">
-      <button class="intereses-view-btn on" id="ibtn-grid" data-action="setInteresesView" data-mode="grid">
-        <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
-      </button>
-      <button class="intereses-view-btn" id="ibtn-list" data-action="setInteresesView" data-mode="list">
-        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg>
-      </button>
-    </div>
-  </div>
-</div>
 </div><!-- /topbar -->
 <div class="main-nav" id="main-nav" role="navigation" data-i18n-aria="aria_nav_ppal" aria-label="Navegación principal">
   <button class="main-nav-tab on" id="mnav-cartelera" data-action="navTo" data-tab="mnav-cartelera">
@@ -3071,14 +3101,14 @@ setTimeout(function(){
   <div class="conflict-handle"></div>
   <div class="conflict-hdr">
     <div class="ctx-eyebrow"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z"/></svg><span data-i18n="conflict_eyebrow">Conflicto de horario</span></div>
-    <div class="conflict-title" id="conflict-title-el" data-i18n="conflict_titulo">Se solapan en el mismo tramo</div>
-    <div class="conflict-sub" data-i18n="conflict_cual">¿Cuál querés en tu plan?</div>
+    <div class="conflict-title" id="conflict-title-el">Se solapan en el mismo tramo</div>
+    <div class="conflict-sub" data-i18n="conflict_cual">¿Cuál querés en tu Plan?</div>
   </div>
   <div class="conflict-arena">
     <div class="conflict-card incoming">
       <img class="conflict-poster" id="cs-incoming-poster" src="" alt="" loading="lazy">
       <div style="flex:1;min-width:0">
-        <div class="conflict-role" data-i18n="conflict_anadir_verb">Querés añadir</div>
+        <div class="conflict-role" data-i18n="conflict_anadir_verb">Querés agendar</div>
         <div class="conflict-name" id="cs-incoming-name"></div>
         <div class="conflict-when" id="cs-incoming-when"></div>
       </div>
@@ -3087,14 +3117,14 @@ setTimeout(function(){
     <div class="conflict-card existing">
       <img class="conflict-poster" id="cs-existing-poster" src="" alt="" loading="lazy">
       <div style="flex:1;min-width:0">
-        <div class="conflict-role" data-i18n="conflict_ya_plan">Ya en tu plan</div>
+        <div class="conflict-role" data-i18n="conflict_ya_plan">Ya en tu Plan</div>
         <div class="conflict-name" id="cs-existing-name"></div>
         <div class="conflict-when" id="cs-existing-when"></div>
       </div>
     </div>
   </div>
   <div class="conflict-actions">
-    <button class="conflict-btn-replace" id="cs-replace-btn" data-i18n="conflict_anadir_btn">Añadir</button>
+    <button class="conflict-btn-replace" id="cs-replace-btn" data-i18n="conflict_anadir_btn">Agendar</button>
     <button class="conflict-btn-keep" id="cs-keep-btn" data-i18n="misc_conservar">Conservar</button>
     <button class="conflict-btn-cancel" data-action="closeConflictSheet" data-i18n="misc_cancelar">Cancelar</button>
   </div>
@@ -3127,7 +3157,7 @@ setTimeout(function(){
       <svg aria-hidden="true" focusable="false" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
     </div>
     <div>
-      <div class="plan-confirm-title" id="plan-confirm-title" data-i18n="plan_listo">¡Tu plan está listo!</div>
+      <div class="plan-confirm-title" id="plan-confirm-title" data-i18n="plan_listo">¡Tu Plan está listo!</div>
       <div class="plan-confirm-sub" id="plan-confirm-sub"></div>
     </div>
   </div>
@@ -3242,7 +3272,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202608131459";
+    s.src="/src/main.js?v=202608171957";
     document.body.appendChild(s);
     // Watchdog de boot (P0 18 jul): si el grafo ESM murió en el import (caché
     // HTTP mixta tras deploys en ráfaga — main.js nuevo + módulo viejo sin el
@@ -3368,8 +3398,8 @@ setTimeout(function(){
 <div class="auth-sheet" id="auth-sheet" data-close-bg="AuthSheet">
   <div class="auth-sheet-inner">
     <div id="auth-sheet-step1">
-      <div class="auth-sheet-title" data-i18n="auth_titulo">Guardá tu plan</div>
-      <div class="auth-sheet-sub" data-i18n="auth_desc">Ingresa tu email y te enviamos un código de 6 dígitos. Sin contraseña. Tu plan se sincroniza entre todos tus dispositivos.</div>
+      <div class="auth-sheet-title" data-i18n="auth_titulo">Guardá tu Plan</div>
+      <div class="auth-sheet-sub" data-i18n="auth_desc">Ingresa tu email y te enviamos un código de 6 dígitos. Sin contraseña. Tu Plan se sincroniza entre todos tus dispositivos.</div>
       <input class="auth-email-inp" id="auth-email-inp" type="email" placeholder="tu@email.com" data-i18n-ph="auth_email" autocomplete="email" onkeydown="if(event.key==='Enter')submitAuthEmail()">
       <button class="auth-send-btn" id="auth-send-btn" data-action="submitAuthEmail" data-i18n="auth_enviar">Enviar código</button>
       <div class="auth-msg" id="auth-msg"></div>
@@ -3386,7 +3416,7 @@ setTimeout(function(){
     <div id="auth-sheet-step3" style="display:none">
       <div class="auth-sheet-title" data-i18n="auth_cuenta">Cuenta</div>
       <div class="auth-sheet-sub" id="auth-signed-email" style="color:var(--white)"></div>
-      <div class="mt-2 auth-sheet-sub"><span data-i18n="plan_sincroniza">Tu plan se sincroniza automáticamente entre todos tus dispositivos.</span></div>
+      <div class="mt-2 auth-sheet-sub"><span data-i18n="plan_sincroniza">Tu Plan se sincroniza automáticamente entre todos tus dispositivos.</span></div>
       <div class="mt-2 auth-sheet-sub" data-i18n="auth_eliminar_aviso" style="color:var(--gray2);font-size:var(--t-xs)"></div>
       <button class="auth-signout-btn" data-action="signOutAndClose" data-i18n="auth_cerrar">Cerrar sesión</button>
       <button class="auth-delete-btn" id="auth-delete-btn" data-action="deleteAccount" data-i18n="auth_eliminar">Eliminar cuenta</button>

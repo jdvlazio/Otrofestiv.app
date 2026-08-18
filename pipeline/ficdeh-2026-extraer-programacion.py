@@ -26,6 +26,8 @@ distinguirlas.
 curl necesita User-Agent de navegador; sin él, Vercel responde con su checkpoint.
 """
 import json, re, html, subprocess, time, os, collections
+import sys, os as _os; sys.path.insert(0, _os.path.dirname(_os.path.abspath(__file__)))
+import lib  # dueño único de norm/hora24/sinacento — [lib-unica]
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = f'{REPO}/festivals/staging/ficdeh-2026-programacion-canonica.json'
@@ -55,18 +57,6 @@ def limpio(s):
     return re.sub(r'\s+', ' ', html.unescape(re.sub(r'<[^>]+>', ' ', s or ''))).strip()
 
 
-def hora24(h):
-    m = re.match(r'(\d{1,2}):(\d{2})\s*([ap])\.?\s*m', h.strip(), re.I)
-    if not m:
-        return h.strip()
-    hh, mm, ap = int(m.group(1)), m.group(2), m.group(3).lower()
-    if ap == 'p' and hh != 12:
-        hh += 12
-    if ap == 'a' and hh == 12:
-        hh = 0
-    return f'{hh:02d}:{mm}'
-
-
 def parse(page, ciudad, fecha):
     out = []
     for sec in re.split(r'<section', page)[1:]:
@@ -94,7 +84,7 @@ def parse(page, ciudad, fecha):
             di = next((i for i, p in enumerate(partes) if re.fullmatch(r'\d+\s*min', p, re.I)), -1)
             out.append({
                 'ciudad': CIUDAD_NOMBRE[ciudad], 'dia': fecha,
-                'hora': hora24(hora), 'sede': sede, 'acceso': acceso,
+                'hora': lib.hora24(hora), 'sede': sede, 'acceso': acceso,
                 'en_app': 'privada' not in acceso.lower(),
                 'direccion': direccion, 'titulo': titulo,
                 'director': ' · '.join(partes[:di]) if di > 0 else '',

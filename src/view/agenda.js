@@ -7,16 +7,16 @@
 // runCalc NO es dep de este árbol (va a Wave 7 controller).
 
 import {
-  DEFAULT_DURATION_MIN, FESTIVAL_BUFFER, FESTIVAL_CONFIG,
+  DEFAULT_DURATION_MIN, FESTIVAL_BUFFER, FESTIVAL_QA_MIN, FESTIVAL_CONFIG,
 } from '../config.js';
 import {
   ICONS, _secLabel, _secLabelFull, _sectionColor, escXML, makeEventPoster, makeProgramPoster, parseProgramTitle, renderAvBlocksHTML, renderFlowProgress,
 } from './components.js';
 import {
-  DAYS, DAY_SHORT_EN, _dayChips, _lblLocalized, _minFmt, _mkCortoItemHtml, _posterThumb, getCortoItemPoster, itemPosterParts, posterParts, dayChip, dayLabel, dayLabelLong, durFmt, emptyState, emptyStateHero, flagFmt, getFilmPoster, isToday, mplanBlockType, mplanEndStr, sala, starsText, travelWarn, vcfg, delayConsensusBadge,
+  DAYS, DAY_SHORT_EN, _dayChips, _lblLocalized, _minFmt, _mkCortoItemHtml, _posterThumb, getCortoItemPoster, itemPosterParts, posterParts, dayChip, dayLabel, dayLabelLong, durFmt, emptyState, emptyStateHero, flagFmt, getFilmPoster, isToday, keepCityOnly, mplanBlockType, mplanEndStr, planCityVenues, sala, starsText, travelWarn, vcfg, venueCity, venueMatches, delayConsensusBadge, conflictAccount,
 } from './helpers.js';
 import {
-  _festDate, _festNowMin, festivalEnded, minToStr, simNow, simTodayStr, toMin,
+  _festDate, _festNowMin, dayFullyPassed, festivalEnded, minToStr, simNow, simTodayStr, toMin,
 } from '../domain/time.js';
 // Consenso colaborativo de retraso (Fase B): renderAgenda (impura/exenta) lo lee
 // del controller y lo pasa como dato a las funciones puras del view.
@@ -26,10 +26,10 @@ import { cloudScreeningKey } from '../domain/delays.js';
 // Es la ÚNICA dependencia view→controller permitida (fijada en validate.py [view-purity]).
 import { getConsensusMap } from '../controller/delays-cloud.js';
 import {
-  screeningPassed, screeningEnded, screeningNow, screeningEndDate, effectiveDuration, blockDuration, durationForTravel, delayedEndMin, _delayKey,
+  screeningPassed, screeningEnded, screeningNow, screeningQaOnly, screeningEndDate, effectiveDuration, blockDuration, durationForTravel, delayedEndMin, _delayKey, _endedStats, prioLiveCount,
 } from '../domain/film.js';
 import {
-  isScreeningBlocked, screensConflict, screensConflictReason,
+  isScreeningBlocked, screeningPlannable, screensConflict, screensConflictReason,
 } from '../domain/schedule.js';
 import {
   _getFestivalPhase, travelMins,
@@ -54,7 +54,6 @@ export function renderAgenda(){
     // "Te quedaste con ganas" (abajo, atenuadas, con marca Vista retroactiva
     // reutilizando toggleWatched — el par Vista/Luego ya aprendido). ──
     if(festivalEnded()){
-      const _agHi=document.getElementById('hdr-ag');if(_agHi)_agHi.style.display='none';
       requestAnimationFrame(_fixStickyOffset);
       const {filmRatings}=state.snapshot();
       const _wl=[...watchlist];
@@ -116,7 +115,6 @@ export function renderAgenda(){
     if(festivalEnded()){
       // Post-festival: Planear no tiene función — redirigir a Mi Plan
       const _festNamePl=(FESTIVAL_CONFIG[_activeFestId]||{}).name||t('misc_festival_default');
-      const _agHpl=document.getElementById('hdr-ag');if(_agHpl)_agHpl.style.display='none';
       requestAnimationFrame(_fixStickyOffset);
       // Modo Recuerdo (RFC docs/RFC-modo-recuerdo.md): el planeador se retira
       // con gracia — copy de cierre con la voz del splash.
@@ -126,8 +124,38 @@ export function renderAgenda(){
     const _progressHtml=(!savedAgenda||!savedAgenda.schedule||!savedAgenda.schedule.length)?renderFlowProgress(state,'planner'):'';
     const pending=[...watchlist].filter(titleStr=>!watched.has(titleStr)&&FILMS.some(f=>f.title===titleStr&&!screeningPassed(f)));
 
-    // ── Estado A: sin Intereses — pantalla simple, no mostrar herramienta ──
+    // ── Estado A: nada que planear ────────────────────────────────────────
+    // `pending` vacío tenía UNA sola pantalla: la de primer uso («Tu Plan
+    // aparece aquí · Agregá lo que no querés perderte»). Pero hay tres
+    // situaciones distintas detrás de ese cero, y dos de ellas la vuelven
+    // mentira. Medido en FINCA la última noche (19 AGO 23:00): 12 obras en el
+    // plan, 0 funciones futuras EN TODO EL CATÁLOGO, y la app invitando a
+    // «agregar lo que no querés perderte» para armar un plan imposible.
+    // A.1 — no queda NADA por ver en el festival. El calendario todavía dice que
+    // va (FINCA termina el 19), pero el dato manda sobre la fecha: se despide
+    // igual que cuando el festival terminó y manda a Mi Plan, donde está lo
+    // vivido. Va ANTES del gate de cachedResult y sin él: si no queda una sola
+    // función, ningún plan calculado es accionable — mostrarlo sería ofrecer
+    // opciones sobre un festival que ya no tiene ninguna.
+    if(!pending.length&&!FILMS.some(f=>!screeningPassed(f))){
+      const _fName=(FESTIVAL_CONFIG[_activeFestId]||{}).name||t('misc_festival_default');
+      requestAnimationFrame(_fixStickyOffset);
+      view.innerHTML=emptyStateHero(ICONS.sparkles,`${_fName} ${t('plan_fest_terminado')}`,
+        t('planear_descansa'),t('cta_mi_plan'),'mnav-miplan');
+      return;
+    }
     if(!pending.length&&!cachedResult){
+      // A.2 — el festival sigue, pero TUS intereses se acabaron (los viste o se
+      // te pasaron). Mandar a Intereses sería mandarte a una lista agotada; lo
+      // que queda por hacer está en el Programa.
+      if(watchlist.size){
+        view.innerHTML=`${_progressHtml}
+          <div class="ag-section">
+            ${emptyStateHero(ICONS.calendar,t('plan_nada_por_planear'),t('plan_nada_por_planear_sub'),t('plan_ir_programa'),'mnav-cartelera')}
+          </div>`;
+        return;
+      }
+      // A.3 — primer uso de verdad: nunca hubo intereses.
       view.innerHTML=`${_progressHtml}
         <div class="ag-section">
           ${emptyStateHero(ICONS.calendar,t('plan_tu_plan_empty'),t('empty_intereses_3'),t('cta_ir_intereses'),'mnav-seleccion')}
@@ -380,7 +408,10 @@ export function renderMiPlanCalendar(state){
   // Día landmark en formato largo (mismo patrón que Planear/buildResultHTML).
   let listHtml=`<div class="mplan-list" id="mplan-detail"><div class="mplan-list-hdr"><span class="mplan-day-name">${dayLabelLong(activeKey)}</span>${dayFilms.length?`<span class="count-badge cb-neutral">${dayFilms.length}</span>`:''}</div>`;
   if(!dayFilms.length){
-    if(!isPastDay){
+    // La promesa se verifica antes de hacerse: la caja mandaba «mirá abajo» sin
+    // mirar si abajo había algo, y el usuario aterrizaba en un Sugerencias vacío.
+    const _haySugs=!dayFullyPassed(activeKey)&&(getSuggestions()[activeKey]||[]).length>0;
+    if(!isPastDay&&_haySugs){
       // CTA C: día futuro sin películas — invita a explorar sugerencias o recalcular.
       // SIN chevron (Juan, 3 ago 2026): chevron-abajo + caja se leía como acordeón
       // ("viene expandido y no cierra") — promesa falsa. El tap sigue siendo el
@@ -394,6 +425,11 @@ export function renderMiPlanCalendar(state){
           <div class="cta-ctx-sub">${t('plan_empty_dia')}</div>
         </div>
       </div>`;
+    } else if(!isPastDay){
+      // Sin nada que ofrecer: se dice el hecho y no se ofrece un destino vacío.
+      // Nota, no CTA — sin borde ámbar ni tap, para no prometer con la forma lo
+      // que el texto ya no promete.
+      listHtml+=emptyState(ICONS.calendar, t('plan_dia_libre'), t('plan_sin_opciones_dia',{day:dayLabel(activeKey)}));
     } else {
       listHtml+=emptyState(ICONS.calendar, t('plan_nada_dia'));
     }
@@ -417,7 +453,11 @@ export function renderMiPlanCalendar(state){
           const _isCritical=gap<=5;
           listHtml+=`<div class="mplan-warn-row" style="${_isCritical?'color:var(--red)':''}">${ICONS.alert} ${_isCritical?t('warn_sin_tiempo'):`~${gap} ${t('warn_min_hasta_sig')}`}</div>`;
         }
-        if(_slotHasQa(prev)){const qaGap=gap-30;qaGap<0?listHtml+=`<div class="mplan-warn-row" style="color:var(--red)">${t('warn_qa_no_llega')}</div>`:listHtml+=`<div class="mplan-warn-row">${t('warn_qa_tiempo',{n:qaGap})}</div>`;}
+        // El Q&A se DECLARA: sus minutos son una estimación nuestra que hasta hoy
+        // no se mostraba, así que el «te quedan ~20 min» era irreconstruible desde
+        // la pantalla. Y el veredicto va en condicional — donde estimamos,
+        // sugerimos (regla de Juan, 15 ago).
+        if(_slotHasQa(prev)){const qaGap=gap-FESTIVAL_QA_MIN;qaGap<0?listHtml+=`<div class="mplan-warn-row" style="color:var(--red)">${t('warn_qa_no_llega',{qa:FESTIVAL_QA_MIN})}</div>`:listHtml+=`<div class="mplan-warn-row">${t('warn_qa_tiempo',{qa:FESTIVAL_QA_MIN,n:qaGap})}</div>`;}
         const tw=travelWarn(prev,s);
         if(tw) listHtml+=`<div class="mplan-warn-row">${tw}</div>`;
       }
@@ -452,16 +492,23 @@ export function renderMiPlanCalendar(state){
         ${_mph}
         <div class="mplan-ri">
           <div class="mplan-t1${isPast?' mp-past':''}${_void?' mp-void-t':''}" ${!isPast?`data-action="toggleFilmAlternatives" data-key="${(s._title||'')+(s.day||'')+(s.time||'')}" data-title="${safeT}" data-day="${s.day||''}" data-time="${s.time||''}" data-stop="1"`:''} title="${!isPast?t('tooltip_cambiar_horario'):''}">${s.time}</div>
-          <div class="mplan-t2">${_voidBadge}${_void?`<span class="mp-void-t">${mplanEndStr(s.time,dur)}</span>`:mplanEndStr(s.time,dur)}${_voidFix}${prioritized.has(s._title)?` <span class="txt-amber60-xs">${ICONS.bookmarkFill}</span>`:''}${_rowStars?` <span class="txt-amber-sm">${_rowStars}</span>`:''}${isNow?` <span class="txt-green-semi">${t('label_en_curso_min')}</span>`:''}</div>
+          <div class="mplan-t2">${_voidBadge}${(()=>{
+            // «hasta 16:00» y no un «16:00» suelto (revisión de UX Writer, 16 ago):
+            // la fila muestra dos horas y no decía cuál era cuál — y la duración,
+            // que es lo único que las conectaría, no está en la fila. No repite el
+            // inicio porque ya vive arriba, grande y en ámbar.
+            const _fin=t('plan_hasta',{h:mplanEndStr(s.time,dur)});
+            return _void?`<span class="mp-void-t">${_fin}</span>`:_fin;
+          })()}${_voidFix}${prioritized.has(s._title)?` <span class="txt-amber60-xs">${ICONS.bookmarkFill}</span>`:''}${_rowStars?` <span class="txt-amber-sm">${_rowStars}</span>`:''}${isNow?` <span class="txt-green-semi">${t('label_en_curso_min')}</span>`:''}</div>
           <div>${(()=>{const{displayTitle:_dt,progSuffix:_ps}=parseProgramTitle(s._title||'');const _mfqa=FILMS.find(fi=>fi.title===s._title&&fi.day===s.day&&fi.time===s.time);const _qab=_mfqa?.has_qa?`<span class="meta-badge sm">Q&A</span>`:'';return`<div class="mplan-rtitle${_isEventRow?' mp-event-title':''}">${_dt}${_qab}</div>${_ps?`<div class="prog-suffix">${_ps}</div>`:''}`;})()} </div>
-          <div class="mplan-rvenue${_isEventRow?' mp-event-venue':''}">${ICONS.pin} ${vcfg(s.venue).short}${sala(s.venue)?' \u00b7 '+sala(s.venue):''}</div>
+          <div class="mplan-rvenue${_isEventRow?' mp-event-venue':''}">${ICONS.pin} ${vcfg(s.venue).short}${venueCity(s.venue)?` <span class="plist-city">${venueCity(s.venue)}</span>`:''}${sala(s.venue)?' \u00b7 '+sala(s.venue):''}</div>
           ${_sesionDeBloque(s)}
           ${(()=>{const _mf=FILMS.find(fi=>fi.title===s._title&&fi.day===s.day&&fi.time===s.time);if(!_mf||!_mf.is_cortos||!_mf.film_list||!_mf.film_list.length) return'';return`<button class="row-xs mplan-prog-toggle" data-action="toggleMplanProg">${ICONS.chevronR} ${t('label_programa')}</button>`;})()}
         </div>
         <div class="col-end">
           ${isSeen
             ?`<button class="icon-btn-circle ag-fi-btn seen" data-title="${safeT}" data-day="${s.day||''}" data-time="${s.time||''}" data-venue="${(s.venue||'').replace(/"/g,'&quot;')}" data-dur="${s.duration||''}" data-action="markWatchedFromPlan" data-stop="1" aria-label="${t('aria_quitar_vista')}">${ICONS.check}</button>`
-            :`<button class="icon-btn-circle ag-fi-btn del" data-title="${safeT}" data-action="removeFromAgenda" data-stop="1" aria-label="${t('misc_quitar')}">${ICONS.x}</button>`}
+            :`<button class="icon-btn-circle ag-fi-btn del" data-title="${safeT}" data-action="removeFromAgenda" data-stop="1" aria-label="${t('plan_sacar')}">${ICONS.x}</button>`}
         </div>
       </div>${_expandedFilm===(s._title||'')+(s.day||'')+(s.time||'')?`<div class="film-alts">${renderFilmAlternatives(state,s._title,s.day,s.time)}</div>`:''}${(()=>{const _mf=FILMS.find(fi=>fi.title===s._title&&fi.day===s.day&&fi.time===s.time);if(!_mf||!_mf.is_cortos||!_mf.film_list||!_mf.film_list.length) return'';return`<div class="mplan-prog-list">${_mf.film_list.map((item,n)=>_mkCortoItemHtml(item,n,{section:_mf.section||'',ratingEl:filmRatings[item.title]?`<span class="corto-rating-stars">${starsText(filmRatings[item.title])}</span>`:''})).join('')}</div>`;})()}`;
     });
@@ -488,9 +535,16 @@ export function renderMiPlanCalendar(state){
   ${listHtml}
   ${(()=>{
     const _hintSeen=localStorage.getItem('otrofestiv_hint_cambiar');
-    const _hasFuture=savedAgenda&&savedAgenda.schedule.some(s=>!screeningPassed(s));
+    // La hora que el hint manda a tocar está en la lista del DÍA ACTIVO. La
+    // condición miraba todo el plan, así que en un día libre aparecía «Tocá la
+    // hora…» sin una sola hora en pantalla (visto el 16 ago con FICDEH).
+    const _hasFuture=dayFilms.some(s=>!screeningPassed(s));
     if(_hintSeen||!_hasFuture) return '';
-    return`<div class="mplan-change-hint">${ICONS.clock} ${t('plan_hint_hora')} ${t('misc_pelicula')}</div>`;
+    // «de actividad» y no «la película» (revisión de UX Writer, 16 ago): el panel
+    // EXCLUYE la obra actual y ofrece OTRAS del mismo tramo (±15 min), y entre
+    // ellas puede haber charlas y talleres — 113 parejas así en FICDEH. La frase
+    // deja de concatenarse con misc_pelicula: prometía un tipo que no controla.
+    return`<div class="mplan-change-hint">${ICONS.clock} ${t('plan_hint_hora')}</div>`;
   })()}`
 }
 
@@ -537,7 +591,11 @@ export function renderUnconfirmed(state,schedule){
       </button>
     </div>`:'';
   return`<div class="checkin-wrap">
-    <div class="checkin-hdr">${t('label_funciones')} ${t('label_sin_confirmar')}</div>
+    <!-- El icono es ICONS.alert, el mismo de AVISOS y de los avisos de conflicto,
+         retraso y traslado (8 usos): la app tiene UN símbolo para «esto requiere
+         tu atención» y este bloque es eso. check-circle decía la ACCIÓN
+         (confirmar), no el estado, y habría inventado un noveno significado. -->
+    <div class="sec-hdr sm">${ICONS.alert} <span>${t('label_sin_confirmar_hdr')}</span> <span class="count-badge cb-amber">${past.length}</span></div>
     <div class="checkin-item">
       <div class="checkin-info"><div class="checkin-title">${short}</div><div class="checkin-time">${timeDesc}</div></div>
       <div class="checkin-btns">
@@ -555,12 +613,32 @@ export function renderFilmAlternatives(state,title,day,time){
   const plannedTitles=new Set(savedAgenda?savedAgenda.schedule.map(s=>s._title):[]);
   // ±15 min window — direct competition in the same slot
   const WINDOW=15;
+  // screeningPlannable = dueño único del predicado por función (cancelada ·
+  // pasada · franja vetada · ciudad). Este panel tenía su propia copia con 2 de
+  // los 4 chequeos y ofrecía funciones de otras ciudades (436 de 836 con filtro
+  // Bogotá) y canceladas por el sismo (118) — re-corrida del QA, 16 ago 2026.
+  // Acá queda solo lo que es PROPIO del panel: la ventana ±15, el mismo título,
+  // lo ya planificado y lo visto.
+  // Publicar la restricción de ciudad ANTES de filtrar: screeningPlannable la
+  // lee de PLAN_CITY_VENUES, y sin esto solo estaba fresca tras pasar por
+  // Calcular — quien armaba el plan a mano veía el panel sin filtro.
+  globalThis.PLAN_CITY_VENUES=planCityVenues();
+  // Las hermanas de BLOQUE no son alternativas: son la misma función. Cambiar
+  // una por otra no cambia nada real —misma sala, misma hora, seguís sentado en
+  // el mismo sitio— y el plan igual registraba el cambio, así que después
+  // Sugerencias ofrecía «Restaurar» lo recién sacado. Medido con «Sukua» (FICDEH,
+  // 13 AGO 11:00): 5 alternativas ofrecidas, 4 eran sus propias compañeras.
+  // El concepto ya tiene dueño: screensConflict devuelve false entre hermanas de
+  // _slotKey por esta misma razón; este panel no lo estaba consultando.
+  const _base=FILMS.find(f=>f.title===title&&f.day===day&&f.time===time);
+  const _baseSlot=_base&&_base._slotKey;
   const opts=FILMS.filter(f=>{
     if(f.day!==day) return false;
     if(f.title===title) return false;
+    if(_baseSlot&&f._slotKey===_baseSlot) return false;
     if(plannedTitles.has(f.title)) return false;
     if(watched.has(f.title)) return false;
-    if(isScreeningBlocked(f)) return false;
+    if(!screeningPlannable(f)) return false;
     return Math.abs(toMin(f.time)-fStart)<=WINDOW;
   }).sort((a,b)=>toMin(a.time)-toMin(b.time));
 
@@ -581,7 +659,8 @@ export function renderFilmAlternatives(state,title,day,time){
   }).join('');
 
   return`<div class="film-alts">
-    ${optsHtml||`<div class="scenario-label">${t('plan_no_alts_horario')}.</div>`}
+    ${optsHtml||`<div class="scenario-label">${(getSuggestions()[day]||[]).length
+      ?t('plan_no_alts_horario'):t('plan_no_alts_solo')}</div>`}
     <div class="scenario-footer">
       <button class="w-full-sm checkin-result-btn secondary" data-action="clearExpandedFilm">${t('misc_cerrar')}</button>
     </div>
@@ -700,7 +779,10 @@ export function renderContextualHeader(state, consensus){
     const{totalWatched,pendingRatings}=ph;
     const mainTitle=totalWatched===0
       ?((FESTIVAL_CONFIG[_activeFestId]||{}).name||t('misc_festival_default'))+` ${t('plan_fest_terminado')}`
-      :`${t('plan_viste_n')} ${totalWatched} ${totalWatched!==1?t('misc_peliculas'):t('misc_pelicula')}`;
+      // ACTIVIDADES y no «obras»: la cuenta incluye los talleres y charlas que
+      // marcaste (son lo que el Diario muestra, y el chip ya los contaba). Un
+      // taller no es una obra, pero sí es una actividad — el paraguas correcto.
+      :`${t('plan_viste_n')} ${totalWatched} ${totalWatched!==1?t('misc_actividades'):t('misc_actividad')}`;
     // Header del Recuerdo (rediseño 21 jul 2026): título + el estado de calificación
     // como CHIP semántico en la MISMA línea, no un subtítulo suelto debajo. Verde
     // "Todo calificado" (logrado) / ámbar "N sin calificar" (pendiente) — mismos tokens
@@ -741,8 +823,16 @@ export function renderContextualHeader(state, consensus){
     // Horas + minutos cuando pasa de 59 min ("En 5 h 35"), minutos pelados por debajo
     // ("En 45 min") — pedir "335 min" obliga a calcular (regla de Juan, 17 jul).
     // _minFmt es el formateador único (mismo del detalle de conflictos).
+    // «Termina en 0 min» durante media hora: el rótulo EN CURSO contaba con Q&A
+    // (fin efectivo) y la cuenta sin él (fin de bloque) — dos relojes en una
+    // frase. Medido en FINCA con «¿Cuán profundo es tu amor?» (19:00, película
+    // hasta 20:41, función hasta 21:11): a las 20:50 y a las 21:05 decía cero.
+    // En esa ventana el badge dice Q&A, que es lo único cierto que queda.
+    const _qaAhora=isNow&&screeningQaOnly(next,_nowMin);
     const badge=isNow
-      ?`<span class="ctx-next-badge ending">${t('plan_termina_en')} ${_minFmt(_leftMin)}</span>`
+      ?(_qaAhora
+        ?`<span class="ctx-next-badge qa-only">${t('label_qa_ahora')}</span>`
+        :`<span class="ctx-next-badge ending">${t('plan_termina_en')} ${_minFmt(_leftMin)}</span>`)
       :`<span class="ctx-next-badge">${t('plan_en_min')} ${_minFmt(minsUntil)}</span>`;
     const _filmObj=FILMS.find(f=>f.title===next._title);
     const _isEvent=_filmObj&&_filmObj.type==='event';
@@ -932,7 +1022,13 @@ export function renderPrioStrip(state, opts={}){
     const allPast=!festivalEnded()&&!FILMS.some(f=>f.title===title&&!screeningPassed(f));
     const safeT=title.replace(/"/g,'&quot;');
     const rmBtn=(rm&&!allPast)?`<button class="prio-chip-rm" data-title="${safeT}" data-action="togglePriority" data-stop="1" title="${t('aria_quitar_prio')}">${ICONS.x}</button>`:'';
-    const pastLbl=allPast?`<div class="prio-chip-past-lbl">${t('prio_past')}</div>`:'';
+    // «Sin actividades disponibles» hablaba del INVENTARIO —sonaba a que el
+    // festival nunca la programó— cuando el hecho era temporal. Medido en los 3
+    // festivales activos (564 entradas): CERO obras sin función, así que esa
+    // frase solo se leía sobre obras que ya pasaron. La rama «nunca tuvo función»
+    // se conserva muda (ver excluidas) para no afirmar «ya pasó» sobre algo que
+    // nunca ocurrió el día que un festival mande una obra sin programar.
+    const pastLbl=allPast?`<div class="prio-chip-past-lbl">${t('ya_paso')}</div>`:'';
     const titleStyle=grayTitle?' style="color:var(--gray)"':'';
     return`<div class="prio-chip${allPast?' past':''}"${dim?' style="opacity:.4"':''}>
       ${img}${rmBtn}${pastLbl}
@@ -955,7 +1051,7 @@ export function renderPrioStrip(state, opts={}){
   // ── Estado 1 / 3: intención (chips con botón quitar) ──
   const chips=[...prioritized].map(x=>_chip(x,{rm:true})).join('');
   return`<div class="prio-strip">
-    <div class="sec-hdr">${ICONS.bookmark} ${t('lbl_prioridades')} <span class="count-badge cb-amber">${prioritized.size}/${PRIO_LIMIT}</span></div>
+    <div class="sec-hdr">${ICONS.bookmark} ${t('lbl_prioridades')} <span class="count-badge cb-amber">${prioLiveCount()}/${PRIO_LIMIT}</span></div>
     <div class="prio-strip-row">${chips}</div>
   </div>`;
 }
@@ -972,6 +1068,8 @@ export function renderFilmListHTML(state){
 
   // ── Próxima función futura de un film ──────────────────────────────────
   function _nextScreening(title){
+    // plannable-ok: la próxima función del CATÁLOGO (dato de la obra), no del
+    // plan — filtrarla por ciudad escondería que la obra existe en otra parte.
     const future=FILMS.filter(f=>f.title===title&&!screeningPassed(f))
       .sort((a,b)=>{ const d=(a.day_order||0)-(b.day_order||0); return d||toMin(a.time)-toMin(b.time); });
     return future[0]||null;
@@ -1014,6 +1112,7 @@ export function renderFilmListHTML(state){
     const posterHtml=_posterThumb(f,'int-item-poster');
     // p8: jerarquía aprobada (mismo orden que Programa lista) — Título / Días
     // disponibles (ámbar) / Venue·Duración (gris) / Sección+flags (blanco 60%).
+    // plannable-ok: días del CATÁLOGO para los chips de la obra (informativo).
     const future=FILMS.filter(fi=>fi.title===title&&!screeningPassed(fi)); // días disponibles = futuras
     const daysHtml=_dayChips(future);                                       // ámbar "THU 4 · FRI 5"
     const venueStr=next?vcfg(next.venue).short:'';                          // venue de la próxima función
@@ -1028,13 +1127,14 @@ export function renderFilmListHTML(state){
       ${posterHtml}
       <div class="int-item-info">
         <div class="int-item-title">${displayTitle}${progSuffix?` <span class="txt-amber-xs">${progSuffix}</span>`:''}</div>
-        ${next?`<div class="int-item-days">${daysHtml}</div>`:`<div class="int-item-gone">${t('empty_sin_funciones')}</div>`}
+        ${next?`<div class="int-item-days">${daysHtml}</div>`:`<div class="int-item-gone">${t(FILMS.some(fi=>fi.title===title)?'ya_paso':'empty_sin_funciones')}</div>`}
         <div class="int-item-meta">${venueStr}${venueStr&&durStr?' · ':''}${durStr}</div>
         <div class="int-item-sec">${_secLabelFull(f?.section||'')}</div>
         ${conflictHtml}
       </div>
       <div class="int-item-actions">
         <button class="int-prio-btn${isPrio?' on':''}" data-title="${escXML(title)}" data-action="togglePriority" data-stop="1" aria-label="${t('aria_priorizar')}">${ICONS.bookmarkFill}</button>
+        <button class="int-wl-btn" data-title="${escXML(title)}" data-action="toggleWL" data-stop="1" aria-label="${t('plan_quitar_intereses')}">${ICONS.heartFill}</button>
       </div>
     </div>`;
   }
@@ -1096,9 +1196,35 @@ export function renderFilmListHTML(state){
   // ── Render secciones ───────────────────────────────────────────────────
   let html='';
 
+  // Las obras de OTRA ciudad no se esconden —tus intereses son tuyos, no de la
+  // ciudad donde estás parado hoy— pero tampoco pueden parecer iguales a las
+  // demás: con filtro de ciudad el planificador no las agenda (#594), y hasta
+  // ahora eso solo se sabía DESPUÉS de calcular, en la lista de excluidas. El
+  // aviso llega antes, una vez y con el número: dice la consecuencia, no la
+  // ciudad (la sede ya está en cada fila). Pasivo a propósito: el selector de
+  // ciudad está a un toque arriba, y convertir un aviso en botón ya nos costó
+  // caro («mirá abajo» apuntando a un Sugerencias vacío).
+  const _cityInt=keepCityOnly(activeVenue);
+  if(_cityInt!=='all'){
+    const _fuera=[...prioList,...nonPrioList].filter(tt=>{
+      const _scr=FILMS.filter(f=>f.title===tt&&f.venue);
+      return _scr.length&&!_scr.some(f=>venueMatches(f.venue,_cityInt));
+    }).length;
+    // Vive en el diseño de AVISOS (píldora + texto), el mismo que ya advierte en
+    // las fichas: esto ES un aviso —un estado que dejó una elección anterior—. La
+    // píldora carga el contexto («OTRA CIUDAD») y el texto solo la consecuencia,
+    // así la línea entra sin cortarse. Medido: con Bogotá puesto el Programa
+    // muestra 141 tarjetas y NINGUNA de otra ciudad, o sea que estas obras solo
+    // pudieron entrar antes de elegir ciudad o al cambiarla.
+    if(_fuera) html+=`<div class="avisos-body">`
+      +`<span class="aviso-pill">${t('badge_otra_ciudad')}</span>`
+      +`<span class="aviso-txt">${_fuera===1?t('int_fuera_ciudad_1'):t('int_fuera_ciudad',{n:_fuera})}</span>`
+      +`</div>`;
+  }
+
   if(prioList.length){
     html+=`<div class="sec-hdr">${ICONS.bookmark} <span>${t('lbl_prioridades')}</span>
-      <span class="count-badge cb-amber">${prioList.length}/${PRIO_LIMIT}</span>
+      <span class="count-badge cb-amber">${prioLiveCount()}/${PRIO_LIMIT}</span>
     </div>
     <div>${_chronoSort(prioList).map(_mkItem).join('')}</div>`;
   }
@@ -1162,7 +1288,9 @@ export function _renderSavedAgendaHTML(state, consensus){
     // Cuerpo: el DIARIO en modo retro — grid de pósters con calificación (los
     // vistos, por obra) + los del plan sin marcar (atenuados, ✓ Vista). El póster
     // prima: mismo modelo del share del Diario.
-    const _vivido=(_plan.length||watched.size)?`<div class="ag-section">${renderDiaryHTML(state,{retro:true})}</div>`:'';
+    const _vivido=(_plan.length||watched.size)?`<div class="ag-section">
+      <div class="mb-2 sec-hdr">${ICONS.bookOpen} <span>${t('diary_eyebrow')}</span></div>
+      ${renderDiaryHTML(state,{retro:true})}</div>`:'';
     // Compartir mi festival (RFC F2): reutiliza el export del Diario.
     const _shareBtn=watched.size>0?`<button class="ag-save-btn" data-action="shareDiary">${ICONS.share} ${t('recap_compartir')}</button>`:'';
     if(_recap||_vivido) return`<div class="saved-agenda">${_recap}${_hero}${_vivido}${_shareBtn}</div>`;
@@ -1191,20 +1319,29 @@ export function _renderSavedAgendaHTML(state, consensus){
   const viewedCount=all.filter(s=>watched.has(s._title)).length;
   // Total del Diario en PELÍCULAS vistas: un programa cuenta por sus obras (lo que
   // el usuario vio), un film suelto por sí mismo. Plan + fuera del plan, títulos únicos.
-  const _diaryCount=(()=>{
-    const _uniq=new Set([...all.filter(s=>watched.has(s._title)).map(s=>s._title),...watchedOutsidePlan.map(f=>f.title)]);
-    let n=0;
-    _uniq.forEach(tt=>{ const f=FILMS.find(fi=>fi.title===tt); n+=(f&&f.is_cortos&&f.film_list&&f.film_list.length)?f.film_list.length:1; });
-    return n;
-  })();
-  const progressPct=dayIdx>=0?Math.round((dayIdx/(totalDays-1))*100):0;
-  const progressBar=currentDayNum?`<div class="row-sm festival-progress">
-    <div style="flex:1">
-      <div class="festival-progress-text"><span>${t('label_dia_prog')} <b>${currentDayNum}</b> ${t('label_de_dias')} ${totalDays}</span>${_diaryCount>0
-        ?`<button class="diary-chip" data-action="openDiary" data-stop="1">${_diaryCount} ${_diaryCount===1?t('label_vista'):t('label_vistas')} ${ICONS.check}${ICONS.chevronR}</button>`
-        :`<span style="color:var(--amber);display:flex;align-items:center;gap:4px">0 ${t('label_vistas')} ${ICONS.check}</span>`}</div>
-    </div>
-  </div>`:'';
+  // La cuenta la da _endedStats (dominio, dueño único). Tenía su propia suma
+  // acá y divergía del titular del Recuerdo: aquella descartaba los eventos y
+  // esta no. Medido con FICDEH: 2 contra 3 con un taller marcado — dos números
+  // para lo mismo, a dos centímetros uno del otro.
+  const _diaryCount=_endedStats().totalWatched;
+  // ── Banda del Plan (auditoría de jerarquía, 18 ago 2026) ────────────────────
+  // El calendario era la única zona funcional de la app sin identidad de
+  // sección: hero, fila de progreso, grilla y botones sin un solo separador,
+  // mientras la mitad de abajo (Sin confirmar, Sugerencias) ya hablaba el
+  // idioma de Intereses. La banda reusa el patrón del resultado de Planear
+  // (sec-hdr + calendar + count-badge). «Día 7 de 8» viaja como elemento
+  // derecho (hdr-end, el patrón de «opcional» en Disponibilidad): es un dato,
+  // no un destino. Con esto muere .festival-progress y su subrayado ámbar de
+  // 3px — el único de la app, y no era una barra de progreso (progressPct se
+  // calculaba y nadie lo leía; retirado el 17 ago).
+  // El chip del Diario vive DENTRO de la banda (decisión de Juan, 18 ago:
+  // minimalista y compacta — el calendario arranca una fila antes). La
+  // distinción tocable/legible la carga el ACENTO, no la posición: el chip va
+  // en ámbar con chevron, «Día 7 de 8» en gris — solo uno invita al tacto.
+  const _chipHdr=_diaryCount>0
+    ?`<button class="diary-chip" data-action="openDiary" data-stop="1">${ICONS.bookOpen} <span>${t('diary_eyebrow')}</span> <span class="count-badge cb-neutral">${_diaryCount}</span>${ICONS.chevronR}</button>`
+    :'';
+  const progressBar=`<div class="sec-hdr">${ICONS.calendar} <span>${t('label_mi_plan_hdr')}</span> <span class="count-badge cb-neutral">${all.length}</span><span class="hdr-end">${_chipHdr}${currentDayNum?`<span class="sec-hdr-opt">${t('label_dia_prog')} <b>${currentDayNum}</b> ${t('label_de_dias')} ${totalDays}</span>`:''}</span></div>`;
 
   const _ctxHeader=renderContextualHeader(state, consensus);
   const _nextStrip=''; // delay controls integrated into ctx-header
@@ -1236,11 +1373,15 @@ export function _renderSavedAgendaHTML(state, consensus){
   if(_unconfirmed) html+=_unconfirmed;
 
   // Sugerencias solo durante el festival
-  if(!festivalEnded()){
-  const suggsByDay=getSuggestions();
   // Sugerencias SOLO del día donde el usuario está parado (activeMiPlanDay), no de la
   // semana entera: menos ruido y se lee como "más para este día", no como otro plan.
   const _selKey=DAY_KEYS[activeMiPlanDay];
+  // Un día que ya terminó no tiene nada que sugerir: el bloque NO se dibuja.
+  // Medido (FICDEH, 17 AGO 09:00): los cinco días pasados mostraban «Día
+  // cubierto · No hay más actividades que quepan hoy» — tres afirmaciones falsas
+  // en dos líneas (no era hoy, no estaba cubierto, y no había nada que ofrecer).
+  if(!festivalEnded()&&!dayFullyPassed(_selKey)){
+  const suggsByDay=getSuggestions();
   const suggDays=(_selKey&&suggsByDay[_selKey]&&suggsByDay[_selKey].length>0)?[_selKey]:[];
   html+=`<div class="suggestion-wrap">
     <div class="mb-2 sec-hdr">${ICONS.sparkles} ${t('misc_sugerencias')}</div>`;
@@ -1260,14 +1401,18 @@ export function _renderSavedAgendaHTML(state, consensus){
             <div class="suggestion-meta">${durFmt(f.duration)}${vc2.short?' · '+vc2.short+(sl?' · '+sl:''):''}</div>
           </div>
           <button class="suggestion-add" data-action="addSuggestion" data-title="${f.title.replace(/"/g,'&quot;')}" data-day="${f.day}" data-time="${f.time}" data-stop="1" style="${f._isRestored?'border-color:var(--amber);color:var(--amber);background:var(--amber-10)':''}">
-            ${f._isRestored?`${ICONS.undo} ${t('misc_restaurar')}`:`${ICONS.plus} ${t('misc_anadir')}`}
+            ${f._isRestored?`${ICONS.undo} ${t('misc_restaurar')}`:`${ICONS.plus} ${t('plan_agendar')}`}
           </button>
         </div>`;
       }).join('');
     });
     html+='</div>'; // close suggestion-wrap content
   } else {
-    html+=emptyState(ICONS.search,t('plan_cubierto'),t('plan_cubierto_sub'));
+    // El vacío NOMBRA el día: la sección se calcula sobre el día seleccionado,
+    // así que decir «hoy» era falso en cualquier día que no fuera hoy. Y no dice
+    // «cubierto»: muchas veces el día está vacío porque no había con qué, no
+    // porque el usuario lo llenara.
+    html+=emptyState(ICONS.search,t('plan_sin_opciones_dia',{day:dayLabel(_selKey)}));
   }
   html+='</div>'; // close suggestion-wrap
   } // end !festivalEnded
@@ -1285,13 +1430,21 @@ export function renderAvBlocks(){
 // p8 (fix urgente): buildResultHTML reubicado desde view/components.js — usa
 // mkAgendaRow (local) + helpers + domain, todos ya importados aquí; cero ciclos.
 export function buildResultHTML(scenarios){
-  if(!scenarios||!scenarios.length)
-    return`<div class="ag-calc-prompt">${t('plan_sin_combos')} ${t('plan_anadir_titulos')}</div>`;
+  if(!scenarios||!scenarios.length){
+    // Solo se culpa a la disponibilidad si HAY bloqueos puestos: sin ellos no es
+    // la causa. La costura de dos claves («…disponibilidad. o agregá…») dejaba
+    // un punto en medio de la frase — mismo patrón del «revisá Sugerencias..».
+    const _conBloqueos=!!(availability&&DAY_KEYS.some(d=>availability[d]&&availability[d].blocks&&availability[d].blocks.length));
+    return`<div class="ag-calc-prompt">${t(_conBloqueos?'plan_sin_combos_av':'plan_sin_combos')}</div>`;
+  }
   const{currentIdx}=cachedResult;
   const sc=scenarios[currentIdx],n=scenarios.length;
   const pending=[...watchlist].filter(t=>!watched.has(t)&&FILMS.some(f=>f.title===t&&!screeningPassed(f)));
-  const total=pending.length,ok=sc.schedule.length,bad=sc.excluded.length;
-  const isOptimo=currentIdx===0;
+  // `total` y `bad` alimentaban el banner «Los títulos no incluidos se solapan
+  // con otros en tu Plan», retirado el 17 ago: solo podía ser cierto cuando TODAS
+  // las filas compartían causa, y se mostraba con 7 de 9 que ni siquiera habían
+  // competido. Cada fila ya dice su razón.
+  const ok=sc.schedule.length;
   // Stale banner (movido aquí desde pre-cálculo): se calcula a partir de cachedResult._prioSnapshot vs prioritized actual.
   const _snap=cachedResult._prioSnapshot;
   const _stale=Array.isArray(_snap)&&(_snap.length!==prioritized.size||!_snap.every(x=>prioritized.has(x)));
@@ -1305,7 +1458,15 @@ export function buildResultHTML(scenarios){
 
   // ── Header: Plan óptimo vs Variación ──
   const isCustom=sc._custom===true;
-  const planLabel=isOptimo?t('plan_optimo'):isCustom?t('av_opcion_pers'):t('plan_optimo');
+  // «Opción» y no «Tu Plan» (revisión de UX Writer, 16 ago): esto es una
+  // PROPUESTA — no existe como plan hasta tocar «Usar este Plan», y el tab que
+  // sí lo contiene se llama «Mi Plan». Dos objetos con el mismo nombre hacían
+  // creer que ya estaba hecho, y quien se iba sin confirmar perdía el cálculo.
+  // «Opción» es además la palabra que el glosario del proyecto (main.js) ya
+  // había elegido para los resultados del algoritmo.
+  // Sin «N de M»: el motor devuelve UNA opción en los casos reales (medido) y
+  // la UI no navega entre variaciones — un contador prometería lo que no hay.
+  const planLabel=isCustom?t('av_opcion_pers'):t('plan_opcion');
 
   // Modelo de "plan único": sin dots ni navegación entre variaciones.
   // Si existen escenarios custom (forceInclude), `cachedResult.currentIdx` puede
@@ -1319,7 +1480,6 @@ export function buildResultHTML(scenarios){
     <div class="sec-hdr">${ICONS.calendar} <span>${planLabel}</span>
       <span class="count-badge cb-neutral">${ok}</span>
     </div>
-    ${bad>0&&bad>=total?`<div class="meta-banner"><div class="meta-banner-dot"></div><div class="meta-banner-text">${t('plan_contexto_max')}</div></div>`:''}
     ${sc.incompatiblePriorities?(()=>{
       const pairs=sc.conflictingPriorityPairs||[];
       const pairMsg=pairs.length
@@ -1350,9 +1510,21 @@ export function buildResultHTML(scenarios){
     });
   });
 
-  // ── Películas no incluidas — lista con razón + botón Incluir ────────
-  if(sc.excluded.length){
-    const _excItems=sc.excluded.map(excTitle=>{
+  // ── No incluidas — lista con razón + botón Incluir ──────────────────
+  // «No incluida» describe a la que COMPITIÓ y perdió. Una obra cuyas funciones
+  // ya pasaron nunca fue candidata —el festival se la llevó, no el motor— y
+  // llamarla así es un reproche sin sujeto. Medido con el auditor de fin de
+  // festival (FINCA, 17 AGO 21:00): 9 excluidas, 7 ya pasadas y solo 2 reales,
+  // y las 7 salían PRIMERO, enterrando las dos decisiones de la noche detrás de
+  // una pantalla de lápidas. Su lugar es el Diario y el Modo Recuerdo, y en
+  // Intereses ya aparecen con «Ya pasó»: repetirlas en Planear es ruido en la
+  // pantalla donde el usuario decide el futuro (decisión de Juan, 17 ago).
+  // plannable-ok: acá NO se usa el dueño (plannableScreens) a propósito — solo
+  // interesa si el festival ya se las llevó, no si tu filtro de ciudad o tu
+  // franja vetada las descartan; esas SÍ se siguen mostrando con su razón.
+  const _excVivas=sc.excluded.filter(_t=>FILMS.some(fi=>fi.title===_t&&!screeningPassed(fi)));
+  if(_excVivas.length){
+    const _excItems=_excVivas.map(excTitle=>{
       const t_=excTitle; // alias para no pisar t() i18n
       const{displayTitle:dt}=parseProgramTitle(excTitle);
       const f=FILMS.find(fi=>fi.title===excTitle);
@@ -1361,14 +1533,22 @@ export function buildResultHTML(scenarios){
       const safeT=excTitle.replace(/"/g,'&quot;').replace(/'/g,"&#39;");
       const posterHtml=_posterThumb(f,'int-item-poster');
       // Detectar razón usando screensConflict contra el schedule activo
+      // plannable-ok: acá el catálogo completo es OBLIGATORIO — hay que ver la
+      // función de la otra ciudad para poder decir por qué quedó fuera. Con el
+      // dueño (que ya la filtró) diríamos «sin funciones», que es falso.
       const screens=FILMS.filter(fi=>fi.title===excTitle&&!screeningPassed(fi)&&!isScreeningBlocked(fi));
+      // Distinguir «ya pasó» de «nunca tuvo función»: screens ya filtró las
+      // pasadas, así que la lista vacía no dice por sí sola cuál de las dos es.
+      let _qaOnlySlot=null;
+      const _tuvoAlguna=FILMS.some(fi=>fi.title===excTitle);
+      const _yaPaso=_tuvoAlguna?'ya_paso':'empty_sin_funciones';
       let reason='',canInclude=false;
       if(!screens.length){
-        reason=`<div class="excl-reason">${t('empty_sin_funciones')}</div>`;
+        reason=`<div class="excl-reason">${t(_yaPaso)}</div>`;
       } else {
         // Buscar conflicto con el schedule actual
         let conflictWith=null,conflictWhen=null;
-        let conflictReason=null;
+        let conflictReason=null,conflictPair=null;
         for(const s of screens){
           for(const c of sc.schedule){
             const _r=screensConflictReason(s,c);
@@ -1376,8 +1556,11 @@ export function buildResultHTML(scenarios){
               const{displayTitle:ct}=parseProgramTitle(c._title||'');
               conflictWith=ct;
               conflictReason=_r;
+              conflictPair={s,c};
               const _ds=dayLabel(c.day)||c.day||'';
-              conflictWhen=_ds+(c.time?' '+c.time:'');
+              // 'solape' lleva día+hora; las frases con cuenta ya dicen las
+              // horas → solo el día, para no repetir.
+              conflictWhen=_r.kind==='solape'?_ds+(c.time?' '+c.time:''):_ds;
               break;
             }
           }
@@ -1393,28 +1576,38 @@ export function buildResultHTML(scenarios){
           // se equivoca 3× (Bogotá→Ibagué: dice 13 h, son ~4). Decimos el dato
           // (la ciudad) y que el usuario juzgue.
           const _ico=_k==='ciudad'?ICONS.pin:_k==='viaje'?ICONS.route:ICONS.clock;
+          // 'ciudad': el sujeto es TU PLAN, no la película — «Es en Medellín»
+          // nombraba la ciudad del plan como si fuera la de la obra y le hizo
+          // descartar al agente obras que sí estaban en su ciudad (QA 15 ago).
+          // 'viaje'/'ajustado': la cuenta completa (conflictAccount, dueño
+          // único) en vez de «muy justo» — donde estimamos, sugerimos.
           const _msg=_k==='ciudad'
-            ? t('conflict_ciudad',{city:conflictReason.city})
+            ? t('conflict_ciudad_plan',{cityPlan:conflictReason.city,time:conflictPair.c.time||'',cityFn:conflictReason.cityFrom,timeFn:conflictPair.s.time||''})
             : _k==='solape'
             ? t('conflict_solapa',{title:conflictWith})
-            : t(conflictReason.bFirst?'conflict_justo_desde':'conflict_justo_hasta',{title:conflictWith});
-          // 'ciudad' sin detalle: "Es en Ibagué" ya lo dice todo (Juan, UX Writer)
-          const _det=_k==='ciudad'
-            ? ''
-            : _k==='viaje'
-            ? t('conflict_viaje_det',{travel:_minFmt(conflictReason.travel), gap:_minFmt(conflictReason.gap)})
-            : _k==='ajustado' ? t('conflict_hueco_det',{gap:_minFmt(conflictReason.gap)}) : '';
-          reason=`<div class="excl-reason conflict">${_ico} ${_msg}${conflictWhen?' · '+conflictWhen:''}</div>`
-            +(_det?`<div class="excl-reason-det">${_det}</div>`:'');
-          canInclude=true;
+            : conflictAccount(conflictPair.s,conflictPair.c,conflictReason);
+          reason=`<div class="excl-reason conflict">${_ico} ${_msg}${conflictWhen?' · '+conflictWhen:''}</div>`;
+          // 'ciudad' NO ofrece «+ Incluir»: el plan por ciudad (#594) prohíbe
+          // exactamente eso, así que el botón prometía algo que el motor iba a
+          // rechazar. La fila igual explica el motivo — informar sí, ofrecer no.
+          canInclude=_k!=='ciudad';
+          // Choque SOLO por el Q&A: no hay nada que reemplazar —las dos caben si
+          // salís al final de la película—, así que el botón AGREGA en vez de
+          // abrir el modal de sustituir. Va marcada `_squeezed`, el mecanismo que
+          // ya existe para «violación DELIBERADA que el usuario aceptó»
+          // (verifyPlan la respeta). El planificador automático sigue siendo
+          // conservador: no arma tu plan alrededor de una charla estimada.
+          if(conflictReason.qaOnly){ _qaOnlySlot=conflictPair.s; }
         } else if(screens.length){
           reason=`<div class="excl-reason">${t('plan_choca')}</div>`;
         } else {
-          reason=`<div class="excl-reason">${t('empty_sin_funciones')}</div>`;
+          reason=`<div class="excl-reason">${t(_yaPaso)}</div>`;
         }
       }
       const includeBtn=canInclude
-        ?`<button class="excl-include-btn" data-action="forceInclude" data-title="${safeT}" data-stop="1">+ ${t('plan_incluir')}</button>`
+        ?(_qaOnlySlot
+          ?`<button class="excl-include-btn" data-action="includeAnyway" data-title="${safeT}" data-day="${_qaOnlySlot.day}" data-time="${_qaOnlySlot.time}" data-stop="1">${ICONS.plus} ${t('plan_agendar')}</button>`
+          :`<button class="excl-include-btn" data-action="forceInclude" data-title="${safeT}" data-stop="1">${ICONS.plus} ${t('plan_agendar')}</button>`)
         :'';
       const opacity=!screens.length?'opacity:.45;':'';
       return`<div class="int-item js-open-pel" style="${opacity}" data-title="${escXML(f.title)}">
@@ -1430,7 +1623,7 @@ export function buildResultHTML(scenarios){
     html+=`<div class="ag-excl-block">
       <div class="sec-hdr sm">
         ${ICONS.x} <span>${t('plan_no_incluidas')}</span>
-        <span class="count-badge cb-neutral">${sc.excluded.length}</span>
+        <span class="count-badge cb-neutral">${_excVivas.length}</span>
       </div>
       ${_excItems}
     </div>`;
@@ -1471,14 +1664,18 @@ export function mkAgendaRow(s, mode='saved'){
   // (jerarquía vertical: hora → título → venue). En Mi Plan (saved) la hora sigue como
   // columna lateral (layout familiar para usuarios del plan guardado).
   const _timeHTML=`<div class="saved-time">${s.time}</div>`;
-  // Affordances Cambiar/Quitar — botones visibles al final del item en Planear
-  // (mode='scenario'). Mismo patrón que .mplan-row en Mi Plan: .col-end con
-  // .icon-btn-circle .ag-fi-btn (Cambiar, switch icon) + .ag-fi-btn.del (Quitar,
-  // x icon). Solo si el festival no terminó.
+  // Affordances de la fila de Planear: Cambiar (switch) + el CORAZÓN.
+  // El corazón y no una ✕ (revisión de UX Writer, 16 ago 2026): este control
+  // saca de Intereses, prioridades y vistas —no del plan—, y con la ✕ era
+  // idéntico al de Mi Plan, que solo saca del plan. Dos mutaciones muy
+  // distintas con el mismo icono, y la destructiva era la que menos avisaba.
+  // Ahora el gesto es el mismo de Programa y la ficha: corazón lleno = está en
+  // tus Intereses, tocá para sacarlo. La ✕ queda reservada para «sale de esta
+  // lista». Solo si el festival no terminó.
   const _scenarioActions=mode==='scenario'&&!festivalEnded()
     ?`<div class="col-end">
         <button class="icon-btn-circle ag-fi-btn" data-action="toggleFilmAlternatives" data-key="${filmKey}" data-title="${safeT}" data-day="${s.day||''}" data-time="${s.time||''}" data-stop="1" title="${t('misc_cambiar')}">${ICONS.switch}</button>
-        <button class="icon-btn-circle ag-fi-btn del" data-action="removeFilmFromScenario" data-title="${safeT}" data-day="${s.day||''}" data-time="${s.time||''}" data-stop="1" title="${t('misc_quitar')}">${ICONS.x}</button>
+        <button class="icon-btn-circle ag-fi-btn wl" data-action="removeFilmFromScenario" data-title="${safeT}" data-day="${s.day||''}" data-time="${s.time||''}" data-stop="1" title="${t('plan_quitar_intereses')}">${ICONS.heartFill}</button>
       </div>`
     :'';
   return`<div class="saved-item${isDone?' done':''}">
@@ -1487,7 +1684,7 @@ export function mkAgendaRow(s, mode='saved'){
     <div class="saved-info">
       ${mode==='scenario'?_timeHTML:''}
       <div class="saved-title">${displayTitle}</div>${progSuffix?`<div class="film-sub-label">${progSuffix}</div>`:''}
-      <div class="saved-venue">${ICONS.pin} ${vc2.short}${sl?' · '+sl:''}${s.duration?' · '+durFmt(s.duration):''}</div>
+      <div class="saved-venue">${ICONS.pin} ${vc2.short}${venueCity(s.venue)?` <span class="plist-city">${venueCity(s.venue)}</span>`:''}${sl?' · '+sl:''}${s.duration?' · '+durFmt(s.duration):''}</div>
       ${_sesionDeBloque(s)}
       ${_progBtn}
     </div>
@@ -1527,6 +1724,12 @@ export function updateHorarioPrioBtn(title){
 
 export function getSuggestions(){
   if(!savedAgenda||!savedAgenda.schedule.length) return{};
+  // Misma restricción de ciudad que el planificador (QA 15 ago: con filtro
+  // Bogotá, las sugerencias ofrecían Casa Aparte y el Socorro — otras ciudades —
+  // y «Día cubierto» se calculaba contra un universo que el usuario no pidió).
+  const _citySel=keepCityOnly(activeVenue);
+  const _cityOk=f=>_citySel==='all'||!f.venue||venueMatches(f.venue,_citySel);
+  globalThis.PLAN_CITY_VENUES=planCityVenues(); // screeningPlannable (Recuperación) lee de acá
   const saved=savedAgenda.schedule.filter(s=>!screeningPassed(s));
   // OJO: NO early-return si saved quedó vacío. "Todo mi plan ya pasó" ≠ "no tengo
   // plan": en el último día de festival, con el plan de días anteriores ya cumplido,
@@ -1592,6 +1795,7 @@ export function getSuggestions(){
     // Usa screensConflict — mismo criterio que el algoritmo, incluye travel time entre venues
     if(slots.length){
       FILMS.forEach(f=>{
+        if(!_cityOk(f)) return; // fuera de la ciudad filtrada: no se sugiere
         // Un taller multi-día NO se sugiere: se toma entero, y el botón de la
         // sugerencia añade UNA función (addSuggestion) — eso dejaría el bloque a
         // medias, que es justo lo que el invariante prohíbe. Además sugerir «meté
@@ -1620,7 +1824,10 @@ export function getSuggestions(){
     // Solo aparece si genuinamente cabe sin conflicto en el plan actual
     [...watchlist].filter(wlTitle=>!seenRecovery.has(wlTitle)).forEach(wlTitle=>{
       // mismo motivo que arriba: el bloque no entra por sugerencia
-      FILMS.filter(f=>f.title===wlTitle&&!f.is_recurring&&f.day===day&&!screeningPassed(f)&&!isScreeningBlocked(f)).forEach(f=>{
+      // screeningPlannable cubre ciudad+cancelada+pasada+bloqueada — la copia
+      // local se saltaba _cancelled y Sugerencias podía ofrecer una función
+      // que el festival canceló (lo cazó el guardián al perder su punto ciego).
+      FILMS.filter(f=>f.title===wlTitle&&!f.is_recurring&&f.day===day&&screeningPlannable(f)).forEach(f=>{
         if(seenRecovery.has(f.title)) return;
         const noConflict=!saved.some(s=>screensConflict(s,f));
         if(noConflict){
@@ -1655,7 +1862,7 @@ export function _fixStickyOffset(){
   const modeH=38;
   const r=document.documentElement.style;
   if(isMobile){
-    // Mobile: topbar is the single sticky container (contains hdr-programa + hdr-ag).
+    // Mobile: topbar is the single sticky container (contains hdr-programa).
     // tbH now includes the full chrome height — use it for --sticky-top-lista.
     r.setProperty('--sticky-top-carta',tbH+'px'); // kept for desktop-compat
     r.setProperty('--sticky-top-lista',tbH+'px');

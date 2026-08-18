@@ -5,16 +5,16 @@
 // _POSTERS_N) + setters; main.js (loadFestival) los re-popula vía setters.
 // _lang se lee vía STATE BRIDGE (globalThis) igual que el resto de la capa view.
 
-import { FESTIVAL_CONFIG, TMDB_IMG } from '../config.js';
+import { FESTIVAL_BUFFER, FESTIVAL_QA_MIN, FESTIVAL_CONFIG, TMDB_IMG } from '../config.js';
 import {
   DAY_ABBR, DAY_NUM, ICONS, _buildPosterV16, _bandTextSVG, _secLabel, _sectionColor,
-  makeProgramPoster, makeEventPoster, makeSorpresaPoster, escXML, _langDates,
+  makeProgramPoster, makeEventPoster, makeSorpresaPoster, escXML, _langDates, parseProgramTitle,
 } from './components.js';
 // _langDates se REEXPORTA: el dueño vive en components.js (helpers importa
 // components — el ciclo decide dónde vive; ver el comentario del dueño).
 export { _langDates };
-import { toMin, minToStr, parseDur, simNow, simTodayStr, _festDate } from '../domain/time.js';
-import { effectiveDuration } from '../domain/film.js';
+import { toMin, minToStr, parseDur, simNow, simTodayStr, _festDate, _festNowMin } from '../domain/time.js';
+import { effectiveDuration, screeningBlockEndMin, screeningQaOnly } from '../domain/film.js';
 import { _resolveVenue, travelMins } from '../domain/festival.js';
 import { state } from '../state/state.js';
 import { t } from '../i18n/i18n.js';
@@ -333,6 +333,14 @@ export function isNowShowing(f){
   return now>=start&&now<=end;
 }
 
+// isQaOnlyNow — «la película ya terminó, queda el Q&A». Mismo encuadre que
+// isNowShowing (aplazado, fecha del festival, reloj simulado) pero delegando el
+// veredicto en el dominio: screeningQaOnly es el dueño único de la ventana.
+export function isQaOnlyNow(f){
+  if(!isNowShowing(f)) return false;
+  return screeningQaOnly(f,_festNowMin());
+}
+
 export function isToday(day){
   const dateStr=FESTIVAL_DATES[day];
   if(!dateStr) return false;
@@ -485,6 +493,20 @@ export function venueLabel(v){
   return _sala?`${nombre} · ${_sala}`:nombre;
 }
 
+// planCityVenues — el SET de sedes que el plan puede usar, derivado del filtro
+// de lugar activo reducido a ciudad. Dueño único (16 ago 2026): vivía en
+// controller/calc.js y solo se publicaba al CALCULAR, así que quien armaba su
+// plan a mano (addSuggestion, sin pasar por Planear) tenía screeningPlannable
+// sin restricción de ciudad — lo destapó el test de mutación de T61. Vive en
+// helpers porque lo consumen la vista (alternativas, sugerencias) y el
+// controller (runCalc, squeeze), y controller→view ya es dirección permitida.
+export function planCityVenues(){
+  const _sel=keepCityOnly(typeof activeVenue!=='undefined'?activeVenue:'all');
+  if(_sel==='all') return null;
+  const _vs=(FESTIVAL_CONFIG[_activeFestId]||{}).venues||{};
+  return new Set(Object.keys(_vs).filter(v=>venueMatches(v,_sel)));
+}
+
 export function travelWarn(s1,s2){
   if(s1.day!==s2.day) return null;
   const travel=travelMins(s1.venue,s2.venue);
@@ -496,6 +518,57 @@ export function travelWarn(s1,s2){
     return`${ICONS.alert} ~${travel} min${_modo?' '+_modo:''} ${t('warn_entre_sedes')}`;
   }
   return null;
+}
+
+
+// conflictAccount(a,b,r) — LA CUENTA del veredicto, en un solo dueño.
+// r = screensConflictReason(a,b). Solo arma frase para 'ajustado' y 'viaje':
+// son los veredictos cuyo número era irreconstruible en pantalla (QA de ojos
+// frescos, 15 ago 2026 — un agente descartó una función creyendo que la app
+// se equivocaba: los datos visibles no se solapaban; el margen de sala sí).
+// 'solape' es un dato visible y 'ciudad' tiene su propia frase (el sujeto es
+// el PLAN, no la película).
+// Doctrina (Juan, 15 ago): la cuenta se MUESTRA, el veredicto se SUGIERE.
+// Los fines de película son dato (indicativo); llegada y margen son estimación
+// (condicional: «llegarías», «no te daría el tiempo», «te quedarían N min»).
+// Mismos números que la regla (blockDuration / Q&A solo con traslado / buffer):
+// no recalcula la decisión, la explica.
+export function conflictAccount(a,b,r){
+  if(!r||(r.kind!=='viaje'&&r.kind!=='ajustado')) return '';
+  // f1 = la que termina primero; f2 = aquella a la que el tiempo no daría.
+  const [f1,f2]=r.bFirst?[b,a]:[a,b];
+  const t1=parseProgramTitle(f1._title||f1.title||'').displayTitle;
+  const t2=parseProgramTitle(f2._title||f2.title||'').displayTitle;
+  const end=screeningBlockEndMin(f1);                   // fin de película: dato
+  const start=toMin(f2.time);
+  const _b=x=>`<b>${x}</b>`;
+  if(r.kind==='ajustado'){
+    // misma sede: el Q&A no compromete (doctrina 30 jul) — cuenta con el buffer
+    return t('cuenta_salas',{t1:`<i>${t1}</i>`,end:_b(minToStr(end)),buffer:FESTIVAL_BUFFER,
+      arr:_b(minToStr(end+FESTIVAL_BUFFER)),t2:`<i>${t2}</i>`,start:_b(minToStr(start))});
+  }
+  // viaje: con traslado el Q&A sí cuenta (durationForTravel) — se muestra aparte.
+  // La cadena SUMA el margen en vez de enunciarlo aparte: así el total es
+  // directamente comparable con la hora de inicio y la conclusión se lee sola
+  // (21:15 contra 21:00), sin una frase de veredicto que pueda contradecir a la
+  // decisión — que fue el bug original. Antes la cuenta omitía el margen que
+  // screensConflict exige, y una función EXCLUIDA se explicaba con la rama de
+  // «sí llegás»: 53 de los 275 choques de viaje de FICDEH (medido 17 ago).
+  // La `~` marca lo ESTIMADO (Q&A, viaje); el margen va sin tilde porque es una
+  // política nuestra, no una estimación.
+  const qaEnd=end+(f1.has_qa?FESTIVAL_QA_MIN:0);
+  const total=qaEnd+r.travel+FESTIVAL_BUFFER;
+  const base=t(f1.has_qa?'cuenta_viaje_qa':'cuenta_viaje',
+    {t1:`<i>${t1}</i>`,end:_b(minToStr(end)),qa:FESTIVAL_QA_MIN,
+     // travel en minutos PELADOS: la cadena declara la unidad una sola vez, al
+     // final («margen 15 min»). Con _minFmt salía «viaje ~10 min + margen 15 min».
+     travel:r.travel,buffer:FESTIVAL_BUFFER,
+     total:_b(minToStr(total)),start:_b(minToStr(start))});
+  // Cuando el choque existe SOLO por el Q&A, la alternativa va en la MISMA
+  // moneda: la hora a la que llegarías saliendo al final de la película. Un
+  // número en vez de una recomendación — el usuario compara y decide.
+  const _qa=r.qaOnly?t('cuenta_qa_opcional',{sinQa:_b(minToStr(end+r.travel+FESTIVAL_BUFFER))}):'';
+  return `${base}${_qa}`;
 }
 
 // Retraso colaborativo (Fase B) — badge informativo desde el consenso derivado.

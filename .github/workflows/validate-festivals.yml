@@ -5,10 +5,12 @@ on:
     paths:
       - 'festivals/**.json'
       - 'scripts/validate-festivals.js'
+      - 'pipeline/contrato.json'
   pull_request:
     paths:
       - 'festivals/**.json'
       - 'scripts/validate-festivals.js'
+      - 'pipeline/contrato.json'
 
 jobs:
   validate:

@@ -12,7 +12,7 @@
 
 import { NOTICES, SECTION_ORDER_LIST, _DEFAULT_FEST_ID } from '../config.js';
 import { ICONS, _secLabel, _secLabelFull, _sectionColor, escXML, makeEventPoster, makeProgramPoster, parseProgramTitle } from './components.js';
-import { _dayChips, _getItemPoster, _metaBadges, _plistPosterHtml, _programaStack, dayLabel, durFmt, emptyState, getFilmPoster, isNowShowing, posterParts, sala, vcfg, venueMatches, venueCity } from './helpers.js';
+import { _dayChips, _getItemPoster, _metaBadges, _plistPosterHtml, _programaStack, dayLabel, durFmt, emptyState, getFilmPoster, isNowShowing, isQaOnlyNow, posterParts, sala, vcfg, venueMatches, venueCity } from './helpers.js';
 import { festivalEnded, toMin } from '../domain/time.js';
 import { screeningPassed } from '../domain/film.js';
 import { state } from '../state/state.js';
@@ -165,6 +165,7 @@ export function renderProgramaListHTML(state){
       const inWL=watchlist.has(f.title);
       const passed=screeningPassed(f);
       const isNow=isNowShowing(f);
+      const isQa=isNow&&isQaOnlyNow(f);
 
       const _isPrograma=f.is_programa&&f.film_list&&f.film_list.length>=2;
       const{displayTitle:_rawDt}=parseProgramTitle(f.title);
@@ -173,7 +174,20 @@ export function renderProgramaListHTML(state){
         :_rawDt;
       const vc=vcfg(f.venue);
       const src=getFilmPoster(f)||'';
-      const nowBadge=isNow?`<span class="film-check-badge">${t('misc_ahora')}</span>`:'';
+      // EL PUNTO DICE CUÁNDO, EL BADGE DICE QUÉ (decisión de Juan, 18 ago, vía
+      // Onboarding: el badge de estado «Q&A» quedaba pegado al informativo «Q&A»
+      // de _metaBadges — la fila decía lo mismo dos veces). El punto verde
+      // .live-dot —el mismo que marca «en curso» en el splash— es el marcador de
+      // ahora en las FILAS: tras el título si corre la película, tras el badge
+      // Q&A si corre la charla. Siempre FUERA del badge. La píldora AHORA
+      // sobrevive solo sobre el PÓSTER (abajo), donde un punto de 7px se pierde
+      // contra el afiche. El aria-label sostiene lo que el color no comunica.
+      const nowDot=isNow&&!isQa
+        ?`<span class="live-dot row-dot" role="img" aria-label="${t('aria_en_curso')}"></span>`
+        :'';
+      const qaDot=isQa
+        ?`<span class="live-dot row-dot" role="img" aria-label="${t('aria_qa_en_curso')}"></span>`
+        :'';
       // El dato viene SELLADO en la función por el loader (_cancelled/_movedFrom):
       // el listado ya no busca en NOTICES. Y para una movida, la hora que muestra la
       // card ES la nueva — el detalle "pasa a…" quedó redundante y se retiró.
@@ -189,7 +203,7 @@ export function renderProgramaListHTML(state){
       return`<div class="plist-item js-open-pel" style="${itemStyle}" data-title="${escXML(f.title)}">
         ${_stk||_plistPosterHtml(f,src)}
         <div class="plist-info">
-          <div class="plist-title">${noticeBadge}<span class="plist-title-txt">${dt}</span>${_metaBadges(f)}${nowBadge}</div>
+          <div class="plist-title">${noticeBadge}<span class="plist-title-txt">${dt}</span>${nowDot}${_metaBadges(f)}${qaDot}</div>
           <div class="plist-meta" style="${f._cancelled?'text-decoration:line-through':''}">${vc.short}${sala(f.venue)?' · '+sala(f.venue):''}${venueCity(f.venue)?`<span class="plist-city">${venueCity(f.venue)}</span>`:''}${f.duration?' · '+durFmt(f.duration):''}</div>
           ${noticeNote||`<div class="plist-sec">${_secLabelFull(f.section||'')}</div>`}
         </div>
@@ -456,6 +470,7 @@ export function render(){
     const passed=screeningPassed(f);
     const inWL=watchlist.has(f.title),inW=watched.has(f.title);
     const isNow=isNowShowing(f);
+    const isQa=isNow&&isQaOnlyNow(f);
     const safeT=f.title.replace(/"/g,'&quot;').replace(/'/g,"&#39;");
     const posterSrc=getFilmPoster(f);
     const _cardBg2='';
@@ -463,7 +478,9 @@ export function render(){
       ?`<img class="img-cover" src="${posterSrc}" loading="lazy" data-title="${f.title.replace(/"/g,'&quot;')}" onerror="_posterErr(this)" alt="">`
       :``;
     const progBadge='';//REMOVED
-    const nowBadge=isNow?`<div class="poster-now">${t('misc_ahora')}</div>`:'';
+    const nowBadge=isNow
+      ?`<div class="poster-now${isQa?' qa-only':''}">${isQa?t('label_qa_ahora'):t('misc_ahora')}</div>`
+      :'';
     const pastBadge=f._cancelled?`<div class="badge-past poster-past-badge">${t('notice_cancelada')}</div>`
       :f._movedFrom?`<div class="badge-past poster-past-badge">${t('notice_reprog_short')}</div>`:'';
 

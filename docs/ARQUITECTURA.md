@@ -577,6 +577,8 @@ Y lo que un hook no puede cortar, lo vigila `validate.py`:
 | `[sin-symlinks]` | ningún enlace simbólico versionado — tumban el deploy de Pages |
 | `[peso-repo]` | material de trabajo versionado (ofimáticos, > 3 MB) |
 | `[stash-compartido]` | stash vivo con varios worktrees — la pila es del repo, no del worktree |
+| `[plannable-dueno-unico]` | que nadie reimplemente «qué funciones son planificables» fuera de `plannableScreens` (exención explícita: `// plannable-ok:`) |
+| `[plan-concepto]` | que «Plan» vaya en mayúscula en las 3 locales y en el fallback estático — es el nombre de un concepto, y la regla se eligió por ser verificable |
 | `[doc-cadena]` | que esta documentación y los guardianes se citen mutuamente |
 
 #### La identidad nunca sale de una etiqueta
@@ -606,6 +608,49 @@ resultado, no el camino — mismo patrón que el oráculo del planeador (§15.6)
 > orden, una línea más corta, un conteo— y por eso sobrevivieron meses. La regla que
 > dejan: **una derivación que puede fallar tiene que fallar fuerte o no fallar
 > nunca**; devolver un valor creíble es la peor de las tres opciones.
+
+#### La sala que parte un programa — `[sala-mixta]`
+
+El anclaje de función (`sealSharedSlots`) agrupa por `día|hora|sede|sala`. Si en
+un programa de cortos una entrada trae `sala` y las demás no, esa obra **queda
+fuera del bloque**: la duración se cuenta de menos, no cuenta como conflicto con
+sus compañeras, el planificador puede agendar dos obras de la misma función, y el
+aviso de la ficha dice «va con otras N obras» con N corta.
+
+Cazado el 17 ago 2026 en FICDEH (17 AGO 17:30, Cinemateca de Bogotá): cinco cortos
+que suman **86 min**, «La independencia» con `sala: "Sala Capital"` y las otras
+cuatro sin sala → el bloque valía **66**.
+
+`[sala-mixta]` (validate-festivals) mira **solo el subconjunto de formato corto**
+(≤45 min) de cada `día|hora|sede`: si entre esos unos traen sala y otros no, falla.
+Exigir que TODA la función fuera corta dejaba escapar el caso original, porque a esa
+hora y en esa sede había además un taller de 180 min en otra sala — eso es legítimo
+y por eso no se marca cuando hay largos o eventos en la mezcla. Las cuatro funciones
+de FICDEH que ya estaban mal al escribir la regla quedan en `DEUDA_SALA` como
+WARNING (el dato es del festival y arreglarlo exige la guía oficial); cualquier caso
+nuevo falla en duro.
+
+#### El paraguas no promete formato — `[vocab-obra]`
+
+«No siempre son películas. Esto es regla» (Juan, 17 ago 2026). El catálogo lleva
+talleres, charlas y eventos; llamarlos «película» en un texto que los abarca a
+todos promete un formato que la app no controla. El vocabulario tiene dos
+paraguas y ninguno es un formato: **ACTIVIDAD** para lo que ocurre (incluye
+talleres y eventos), **OBRA** para lo que se programa. *Función* sigue siendo solo
+la proyección.
+
+El hallazgo que lo destapó: el encabezado del Recuerdo decía «Viste 4 películas»
+mientras el chip contiguo decía «obras vistas» — dos vocabularios para lo mismo,
+en pantallas vecinas. Se barrieron 13 strings ES (más sus pares EN/PT); en inglés
+el paraguas es **title**, que es de uso corriente en festivales y no promete
+formato.
+
+`[vocab-obra]` (validate.py) mira el VALOR de cada clave de `src/i18n/i18n.js` —
+lo que el usuario lee— y no el nombre de la clave: hay claves históricas
+(`misc_pelicula`, `plan_pelicula_hoy`) cuyo texto ya dice «obra», y renombrarlas
+sería un cambio sin lector. Quedan EXENTOS los nombres de FORMATO
+(`label_cortometraje`, `label_cortos`), donde «cortometraje» es el dato correcto y
+no un paraguas.
 
 #### El nombre de la actividad — `[event-kind-conocido]`
 
@@ -692,6 +737,30 @@ Dos correcciones, ninguna de ellas «arreglar tests»:
 > `${otras:+…}` se expandía con `otras=0` porque «0» no es cadena vacía; y el
 > `grep '^ *N flaky'` nunca casaba porque el reporter escribe secuencias de escape
 > del terminal antes del texto.
+
+#### La doc de contexto no puede envejecer — `[claude-md-fresco]`
+
+`CLAUDE.md` se genera leyendo el repo, pero el generador **se corre a mano** y
+nadie lo verificaba. El archivo que un ayudante lee PRIMERO envejecía en silencio.
+
+> **La cicatriz (15 ago 2026).** Decía «Android: Closed testing — Alpha» meses
+> después de que las dos apps estuvieran publicadas y verificadas. De ahí salió el
+> diagnóstico de que «nadie pudo instalar la app» durante FICMA, FICDEH y FINCA
+> —falso— y la petición a Juan de confirmar algo que el repo debía saber. **Un
+> dato caduco en la doc de contexto no produce una duda: produce una conclusión
+> falsa, con seguridad.** Es peor que un hueco: un hueco se pregunta.
+
+Dos correcciones, y la segunda es la que dura:
+
+- **El estado que el archivo no puede saber, sale del archivo.** El estado de las
+  tiendas vive en App Store Connect y Play Console; en `CLAUDE.md` quedan el
+  enlace y el procedimiento. Misma regla que el radar («si no lo mediste, no lo
+  afirmes») y que los guardianes que se declaran ciegos en vez de aprobar.
+- **El estado que sí deriva del repo, se verifica.** `[claude-md-fresco]`
+  regenera el archivo en un temporal y compara las secciones DERIVADAS —la tabla
+  de festivales y las features—; si difieren, bloquea y dice el comando. La línea
+  del último commit se excluye a propósito: cambia con cada commit y compararla
+  haría fallar el check siempre. El check restaura el archivo: no deja huella.
 
 #### La cadena doc ↔ guardián
 
@@ -867,6 +936,37 @@ miente, y FICDEH —que arrancaba tres días después— tiene taller multi-día
 creó `plannableScreens` como **dueño único** de «qué funciones son planificables
 para vos» (cancelada · pasada · franja vetada · taller entero-o-nada), consumido por
 el planeador, el oráculo y el recorrido.
+
+**La segunda vuelta del dueño único** (16 ago 2026, re-corrida del QA). El predicado
+POR FUNCIÓN se extrajo como `screeningPlannable(s)` (cancelada · pasada · franja
+vetada · ciudad): el panel de alternativas reimplementaba 2 de los 4 chequeos y
+ofrecía funciones de otras ciudades (436 de 836 con filtro Bogotá) y canceladas
+por el sismo (118), y la Recuperación de Sugerencias se saltaba `_cancelled`.
+Tres lecciones quedaron con guardián o test de mutación:
+- `[plannable-dueno-unico]` captura ahora el cuerpo del filtro por **balance de
+  paréntesis**, no por ventana de caracteres — la versión anterior leía 240 y el
+  filtro del panel medía 337: un guardián que depende del largo no vigila,
+  muestrea.
+- El SET de ciudad (`planCityVenues`, view/helpers) se **publica en cada sitio de
+  uso**, no solo al Calcular: quien armaba el plan a mano tenía el predicado sin
+  restricción — lo destapó un test de mutación que al principio pasaba en vacío.
+- `_pickScreen` (handlers): resolver (título, día, hora) **prefiere la función
+  elegible** — la otra cabeza del bug del sync (#612): aquel protegía el plan
+  guardado, esta protege la puerta de entrada.
+
+**Y un dueño único solo lo es si nadie más lo reimplementa** (16 ago 2026). Con la
+restricción de plan por ciudad recién puesta, el plan **volvió a cruzar ciudades**: no
+por la regla —`plannableScreens` filtraba bien— sino porque `squeezeExcluded`
+(`controller/handlers.js`) tenía su propia copia del predicado y reinsertaba las
+excluidas **al guardar**, después del motor, y exenta del chequeo de conflicto por
+`_squeezed`. La misma copia estaba en `forceInclude` («+ Incluir»). El fix tiene tres
+capas, porque una sola habría vuelto a fallar: los consumidores usan el dueño;
+`verifyPlan` gana la violación `ciudad-fuera` —la red que caza a **cualquiera** que
+inserte, no solo al camino feliz—; y `[plannable-dueno-unico]` en `validate.py` impide
+que la copia vuelva. Las preguntas sobre el **catálogo** (qué días existe una obra, por
+qué quedó fuera) son legítimamente otras y necesitan ver lo que el dueño ya filtró: se
+declaran con `// plannable-ok: <razón>`, que el guardián respeta. Declararlas, no
+asumirlas, es lo que separa una excepción de una fuga.
 
 > Y al extraerlo apareció la trampa que este mismo documento advierte: el worker del
 > planeador se arma con `.toString()` sobre `_SCHED_PURE_FNS` (`controller/calc.js`).

@@ -18,6 +18,34 @@ const path = require('path');
 // las CLAVES (strings ES con emoji) del bloque `export const SECTION_EN = {…}`
 // para que el check de cobertura [i18n-content-coverage] reconozca qué secciones
 // ya tienen traducción de display. Guardado: si falla, el Set queda vacío.
+// ── EL CONTRATO DE DATOS ─────────────────────────────────────────────────────
+// `pipeline/contrato.json` es el canon EJECUTABLE de una función: tipos,
+// formatos, obligatorios y enums. Antes esto vivía repartido entre una lista
+// hardcodeada aquí abajo (RULE 5) y la prosa de docs/SCHEMA.md — dos fuentes que
+// se desincronizaban en silencio (la doc decía que `duration` era un número
+// cuando las 1.194 son el string «90 min»). Ahora hay una sola, y de ella se
+// GENERA la doc. Ver scripts/generate-schema-md.js.
+const CONTRATO = JSON.parse(
+  fs.readFileSync(path.join(__dirname, '..', 'pipeline', 'contrato.json'), 'utf8'));
+const HOY = new Date().toISOString().slice(0, 10);
+
+// ¿A este festival se le exige el contrato entero? La vigencia la dice la FECHA
+// DE CIERRE, no una lista de nombres: un guardián que decide por lista deja de
+// mirar en cuanto la lista envejece.
+function _exentoDe(campo, fest, finStr) {
+  const _fin = String(finStr || '').slice(0, 10);
+  const _archivado = _fin && _fin < HOY;
+  const _exc = (CONTRATO._excepciones || {})[campo] || {};
+  if (_archivado && fest in _exc) return { exento: true };
+  const _pend = ((CONTRATO._pendientes || {})[campo] || {})[fest];
+  if (_pend) {
+    // La excepción con fecha se VENCE SOLA. Una sin fecha se vuelve permanente.
+    if (HOY < _pend.migrar_el) return { exento: true, aviso: _pend };
+    return { exento: false, vencida: _pend };
+  }
+  return { exento: false };
+}
+
 const SECTION_EN_KEYS = new Set();
 // [seccion-sin-arquetipo]: claves de SECTION_ARCHETYPES (src/config.js). Toda
 // sección DEBE tener arquetipo o _sectionColor cae a gris ilegible #2C2C2A (el
@@ -330,13 +358,38 @@ function validateFestival(fname, data) {
     // film_list vive en buscador/Explorar SIN día/hora — la jornada se asigna
     // cuando el festival publique la programación. No exige day/time/venue/day_order.
     const isUnscheduledCatalog = isCortos && film.unscheduled && film.film_list && film.film_list.length > 0;
-    if (!isUnscheduledCatalog) {
-      if (!film.day) errors.push(`"${title}": campo 'day' requerido`);
-      if (!film.time) errors.push(`"${title}": campo 'time' requerido`);
-      if (!film.venue) warnings.push(`"${title}": campo 'venue' vacío`);
-      if (film.day_order === undefined) warnings.push(`"${title}": falta 'day_order'`);
+    // Los obligatorios y sus formatos salen del CONTRATO, no de una lista escrita
+    // aquí: si el canon cambia, cambia en un solo archivo y la doc se regenera.
+    const _fest = fname.replace(/\.json$/, '');
+    const _fin = (data.festivalEndStr || '');
+    for (const [_k, _spec] of Object.entries(CONTRATO.campos)) {
+      const _v = film[_k];
+      const _ex = _exentoDe(_k, _fest, _fin);
+      if (_spec.obligatorio && !isUnscheduledCatalog && (_v === undefined || _v === '')) {
+        if (!_ex.exento) errors.push(`"${title}": campo '${_k}' requerido (contrato)`);
+        continue;
+      }
+      if (_v === undefined || _v === null || _v === '') continue;
+      if (_spec.formato && !new RegExp(_spec.formato).test(String(_v))) {
+        const _msg = `"${title}": '${_k}' = ${JSON.stringify(String(_v).slice(0, 28))} no cumple el formato del contrato (${_spec.formato})`;
+        if (_ex.vencida) errors.push(`${_msg} — la excepción venció el ${_ex.vencida.migrar_el}`);
+        else if (!_ex.exento) errors.push(_msg);
+      }
+      if (_spec.enum && !_spec.enum.includes(_v)) {
+        errors.push(`"${title}": '${_k}' = ${JSON.stringify(_v)} fuera del contrato (${_spec.enum.join(' | ')})`);
+      }
+      if (_spec.tipo === 'boolean' && typeof _v !== 'boolean') {
+        errors.push(`"${title}": '${_k}' debe ser booleano de verdad, llegó ${typeof _v} — la app compara con === true`);
+      }
+      if (_spec.tipo === 'number' && typeof _v !== 'number') {
+        const _m = `"${title}": '${_k}' debe ser número, llegó ${typeof _v}`;
+        if (_ex.vencida) errors.push(`${_m} — la excepción venció el ${_ex.vencida.migrar_el}`);
+        else if (!_ex.exento) errors.push(_m);
+      }
+      if (_spec.exige && _v && !(Array.isArray(film[_spec.exige]) ? film[_spec.exige].length : film[_spec.exige])) {
+        errors.push(`"${title}": '${_k}' exige '${_spec.exige}' no vacío (contrato)`);
+      }
     }
-    if (!film.section) warnings.push(`"${title}": campo 'section' vacío`);
 
     // ── RULE 5a: duplicado real (mismo título+día+hora+SEDE) ─────────────
     // La sede entra en la clave: en un festival multiciudad la misma obra se
@@ -479,6 +532,61 @@ function validateFestival(fname, data) {
       if (uniq.length >= 2 && !list.some(x => x.isProg)) {
         warnings.push(`[slot-sin-agrupar] ${uniq.length} films comparten slot (${key}) sin is_cortos/is_programa: ${uniq.slice(0,4).map(t=>t.slice(0,22)).join(', ')} — posible programa sin modelar`);
       }
+    }
+  }
+  // [sala-mixta] ERROR — en un mismo (day,time,venue), unas entradas traen `sala`
+  // y otras no, y TODAS son de formato corto. Esa es la firma de un programa de
+  // cortos partido en dos: el anclaje agrupa por día|hora|sede|SALA, así que la
+  // que trae sala queda fuera del bloque y la duración se cuenta de menos.
+  // Cazado el 17 ago 2026 con FICDEH (17 AGO 17:30, Cinemateca de Bogotá): cinco
+  // cortos que suman 86 min, «La independencia» con sala «Sala Capital» y las
+  // otras cuatro sin sala → el bloque valía 66. Y no era solo el número: esa obra
+  // no contaba como conflicto con sus compañeras, el planificador podía agendar
+  // dos de la misma función, y el aviso de la ficha decía «va con otras 3 obras»
+  // cuando eran cuatro.
+  // NO se marca cuando hay largos o eventos en la mezcla: ahí dos salas distintas
+  // a la misma hora en la misma sede son reales (una peli en Sala 2 y un taller en
+  // Laboratorio 1 y 2), y dividir es lo correcto.
+  {
+    const CORTO_MAX = 45; // min — mismo umbral de formato corto que usa el catálogo
+    // DEUDA AL INTRODUCIR LA REGLA (17 ago 2026). Estas cuatro funciones de FICDEH
+    // ya estaban mal cuando se escribió el guardián, y el dato es del festival:
+    // arreglarlas exige la guía oficial, no una corazonada. Se degradan a WARNING
+    // para no bloquear a los demás chats con una deuda ajena; cualquier caso NUEVO
+    // falla en duro. Se saca de acá en cuanto Onboarding confirme las salas.
+    // VACÍO desde el 17 ago 2026: las cuatro funciones de FICDEH que nacieron
+    // con este guardián quedaron resueltas contra la agenda oficial de la
+    // Cinemateca de Bogotá, que publica la SALA que el sitio de FICDEH no da.
+    // Cualquier caso nuevo falla en duro, que es como debe ser.
+    const DEUDA_SALA = new Set([]);
+    const _mins = (d) => parseInt(String(d || '').trim(), 10) || 0;
+    const salaMap = {};
+    for (const f of films) {
+      const scr = (Array.isArray(f.screenings) && f.screenings.length)
+        ? f.screenings : [{ day: f.day, time: f.time, venue: f.venue, sala: f.sala }];
+      for (const s of scr) {
+        const key = `${s.day||''}|${s.time||''}|${s.venue||''}`;
+        if (key === '||') continue;
+        (salaMap[key] = salaMap[key] || []).push({
+          t: f.title || '?', sala: (s.sala || f.sala || '').trim(), min: _mins(f.duration) });
+      }
+    }
+    for (const [key, list] of Object.entries(salaMap)) {
+      if (list.length < 2) continue;
+      // Se mira SOLO el subconjunto de formato corto. Exigir que TODA la función
+      // fuera corta dejaba escapar el caso que originó el guardián: en la misma
+      // sede y hora había además un taller de 180 min en otra sala —legítimo— y
+      // eso bastaba para callar la mezcla entre los cinco cortos.
+      const cortos = list.filter(x => x.min > 0 && x.min <= CORTO_MAX);
+      if (cortos.length < 2) continue;
+      const conSala = cortos.filter(x => x.sala);
+      const sinSala = cortos.filter(x => !x.sala);
+      if (!conSala.length || !sinSala.length) continue;
+      const _msg = `[sala-mixta] en ${key} hay ${cortos.length} obras de formato corto y solo ${conSala.length} trae(n) sala `
+        + `(${conSala.map(x => `${x.t.slice(0,20)}→"${x.sala}"`).join(', ')}) — el bloque se parte y la duración se cuenta de menos. `
+        + `O la sala va en todas, o en ninguna.`;
+      if (DEUDA_SALA.has(key)) warnings.push(_msg + ' [DEUDA conocida — pendiente de verificar contra la guía oficial]');
+      else errors.push('GATE BLOQUEANTE ' + _msg);
     }
   }
   // [sinopsis-truncada] WARNING — exactamente 200 chars (huella de og:description truncada — trampa A2)

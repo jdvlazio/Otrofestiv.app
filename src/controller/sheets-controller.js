@@ -8,7 +8,7 @@
 
 import { FESTIVAL_CONFIG, MAX_REMEMBERED_SLOTS, TMDB_IMG, _DEFAULT_FEST_ID } from '../config.js';
 import { DAY_ABBR, DAY_NUM, ICONS, _secLabel, _sectionColor, escXML, isFullDayBlocked, makeProgramPoster, parseProgramTitle, renderRatingStarsHTML } from '../view/components.js';
-import { _getItemPoster, _mkCortoItemHtml, _posterStyle, dayLabel, emptyState, durFmt, flagFmt, getCortoItemPoster, getFilmPoster, getFilmPosterUntitled, getPosterSrc, itemPosterParts, posterAmbient, posterParts, sala, starsText, vcfg, venueCity, venueMatches, isCitySel, ticketBadgeTarget } from '../view/helpers.js';
+import { _getItemPoster, _mkCortoItemHtml, _posterStyle, dayLabel, emptyState, durFmt, flagFmt, getCortoItemPoster, getFilmPoster, getFilmPosterUntitled, getPosterSrc, itemPosterParts, posterAmbient, posterParts, sala, starsText, vcfg, venueCity, venueMatches, isCitySel, ticketBadgeTarget, conflictAccount } from '../view/helpers.js';
 import { closeAvSheet, closePVRating, closePrioLimit } from '../view/sheets.js';
 import { showConflictModal, showToast } from '../view/feedback.js';
 import { renderAgenda, renderAvBlocks, renderDiaryHTML } from '../view/agenda.js';
@@ -17,7 +17,7 @@ import { commitPlan, saveAV, saveLastSlot, saveRating, saveSavedAgenda } from '.
 import { _reRenderIntereses, showAgView, switchMainNav, updateAgTab } from './pipeline.js';
 import { dayFullyPassed, festivalEnded, parseDur, toMin } from '../domain/time.js';
 import { screeningPassed, effectiveDuration, blockDuration } from '../domain/film.js';
-import { isScreeningBlocked } from '../domain/schedule.js';
+import { isScreeningBlocked, screensConflictReason, plannableScreens } from '../domain/schedule.js';
 // ── Velo del sheet: SIN driver JS (29 jul 2026 — DESIGN.md §8.4.1) ───────────
 // Vivía acá un driver rAF que pisaba radio+opacidad por frame. Medido en device
 // con el video de Juan (7 de 7 aperturas): progresaba hasta ~68%, se congelaba
@@ -152,7 +152,7 @@ function _screeningRows(pairs, opts){
     // vive abajo, a nivel de bloque (ver _bloqueCtrl).
     if(!owner.is_recurring&&!s._cancelled){
       if(!_planned&&!festivalEnded()&&!screeningPassed(s)){
-        _addCtrl=`<button class="suggestion-add" data-action="addSuggestion" data-title="${owner.title.replace(/"/g,'&quot;')}" data-day="${s.day}" data-time="${s.time}" data-stop="1">${ICONS.plus} ${t('misc_anadir')}</button>`;
+        _addCtrl=`<button class="suggestion-add" data-action="addSuggestion" data-title="${owner.title.replace(/"/g,'&quot;')}" data-day="${s.day}" data-time="${s.time}" data-stop="1">${ICONS.plus} ${t('plan_agendar')}</button>`;
       }
     }
     return`<div class="pel-sheet-screening${_planned?' in-plan':''}${s._cancelled?' scr-void':''}"${isPast?' style="opacity:.4"':''}>
@@ -226,6 +226,7 @@ export function openPelSheet(title){
   // ANCLAJE: ¿esta obra comparte función con otra? (`_slotKey` lo marca el
   // loader en los festivales que declaran `sharedSlotIsOneScreening`).
   const _anclada=screenings.some(s=>s._slotKey&&FILMS.some(o=>o._slotKey===s._slotKey&&o.title!==f.title));
+  // cuántas COMPAÑERAS tiene: títulos distintos que comparten su slot.
   const totalFn=FILMS.filter(fi=>fi.title===f.title).length;
   const unica=totalFn===1;
   const DAY_ABB=['MAR','MIÉ','JUE','VIE','SÁB','DOM'];
@@ -247,6 +248,21 @@ export function openPelSheet(title){
   const _yaElegida=sc=>savedAgenda&&savedAgenda.schedule.some(e=>e._title===f.title&&e.day===sc.day&&e.time===sc.time);
   const _todas=[...future,...past];
   const allScr=_ciudadSel?_todas.filter(sc=>venueMatches(sc.venue,activeVenue)||_yaElegida(sc)):_todas;
+  // Cuántas compañeras anuncia el aviso: se cuenta sobre allScr —las funciones
+  // que la ficha MUESTRA (futuras, de tu ciudad)—, no sobre el histórico, y solo
+  // se afirma si TODAS coinciden. «Madres de nacimiento» tiene 10 funciones con
+  // 4, 5, 6 y hasta 0 compañeras: la unión da 11 y ninguna función tiene 11 —
+  // decirlo sería la misma afirmación falsa que venimos borrando (medido el
+  // 16 ago). Con cuentas distintas → 0 → el aviso da el vínculo sin número.
+  const _ancladaN=()=>{
+    const _cuentas=new Set();
+    allScr.forEach(sc=>{
+      if(!sc._slotKey) return;
+      _cuentas.add(new Set(FILMS.filter(o=>o._slotKey===sc._slotKey&&o.title!==f.title).map(o=>o.title)).size);
+    });
+    _cuentas.delete(0);              // una función suelta no define el vínculo
+    return _cuentas.size===1?[..._cuentas][0]:0;
+  };
   const _ocultas=_todas.length-allScr.length;
   // La ciudad se dice UNA vez, en el banner de Funciones (Juan, 7 ago): repetirla
   // bajo cada sede cuando ya filtraste por ella es decir dos veces lo mismo.
@@ -269,14 +285,14 @@ export function openPelSheet(title){
     // (Juan, 9 ago 2026). La cuenta viaja en el aria-label — quien no ve el corchete
     // sigue oyendo «Añadir las 2 sesiones». Cero strings nuevas: las cuatro existían.
     if(_enPlan)
-      _bloqueCtrl=`<button class="suggestion-add blk-quitar" data-action="removeRecurringBlock" data-title="${f.title.replace(/"/g,'&quot;')}" data-stop="1" aria-label="${t(_enPlan===1?'bloque_quitar_1':'bloque_quitar',{n:_enPlan})}">${ICONS.x} ${t('misc_quitar')}</button>`;
+      _bloqueCtrl=`<button class="suggestion-add blk-quitar" data-action="removeRecurringBlock" data-title="${f.title.replace(/"/g,'&quot;')}" data-stop="1" aria-label="${t(_enPlan===1?'bloque_quitar_1':'bloque_quitar',{n:_enPlan})}">${ICONS.x} ${t('misc_sacar')}</button>`;
     // Un taller que YA EMPEZÓ no se puede tomar entero, así que no se ofrece.
     // Sin esto se ofrecían «las sesiones que quedan», y eso rompía dos cosas: el
     // texto («Añadir las 1 sesiones», cazado con los talleres de FICMA) y el
     // invariante — verifyPlan cuenta TODAS las del catálogo, así que un plan con
     // 1 de 2 quedaba marcado como bloque-incompleto por el propio chokepoint.
     else if(_todasSes.length&&!_empezado)
-      _bloqueCtrl=`<button class="suggestion-add blk-add" data-action="addRecurringBlock" data-title="${f.title.replace(/"/g,'&quot;')}" data-stop="1" aria-label="${t(_todasSes.length===1?'bloque_anadir_1':'bloque_anadir',{n:_todasSes.length})}">${ICONS.plus} ${t('misc_anadir')}</button>`;
+      _bloqueCtrl=`<button class="suggestion-add blk-add" data-action="addRecurringBlock" data-title="${f.title.replace(/"/g,'&quot;')}" data-stop="1" aria-label="${t(_todasSes.length===1?'bloque_anadir_1':'bloque_anadir',{n:_todasSes.length})}">${ICONS.plus} ${t('plan_agendar')}</button>`;
   }
   // ── El GRUPO: corchete + eslabón + un solo control ────────────────────────
   // Las sesiones van unidas por un corchete recto con eslabón, y el control queda
@@ -341,7 +357,7 @@ export function openPelSheet(title){
         en rojo: lo que invalida se lee antes de lo que matiza (DESIGN 8.4.6). La
         fila afectada lleva su propia marca (hora tachada / atenuada) — el aviso
         explica, la fila señala; ninguna de las dos hace el trabajo sola. */''}
-    ${_avisosBand(f, {prog:_anclada?'obras':null, scrs:allScr})}
+    ${_avisosBand(f, {prog:_anclada?'obras':null, progN:_ancladaN(), scrs:allScr})}
     ${(()=>{
       const _tk=FESTIVAL_CONFIG[_activeFestId]||{};
       // ticket_url por FILM pisa al global (Tercer Tiempo 2026: cada sesión tiene
@@ -540,8 +556,9 @@ export function openDiary(){
   if(titleEl) titleEl.textContent=cfg.name||'';
   const countEl=document.getElementById('diary-count');
   if(countEl){
+    // Cuenta pósters del Diario = OBRAS, la misma unidad que el chip que lo abre.
     const n=(body?body.querySelectorAll('.ended-poster').length:0);
-    countEl.textContent=n?`${n} ${n===1?t('label_vista'):t('label_vistas')}`:'';
+    countEl.textContent=n?`${n} ${n===1?t('label_obra_vista'):t('label_obras_vistas')}`:'';
   }
   _pushSheetState();
   document.getElementById('diary-overlay')?.classList.add('open');
@@ -641,6 +658,13 @@ export function openCortoSheet(title, country, duration, section, flags, directo
   // inscripción previa: mismo componente, punto ámbar y rótulo. El rótulo dice
   // "Compartida" a secas, sin repetir el sustantivo del bloque.
   const _cortoShared=_cortoPairs.length>0;
+  // las OTRAS obras de su(s) programa(s), sin contarse a sí mismo.
+  // Mismo criterio: si sus programas tienen distinto tamaño, no se afirma un número.
+  const _cortoSharedN=(()=>{
+    const _cuentas=new Set(_cortoPairs.map(p=>((p.owner&&p.owner.film_list)||[]).filter(it=>it.title!==title).length));
+    _cuentas.delete(0);
+    return _cuentas.size===1?[..._cuentas][0]:0;
+  })();
   const _cortoScrLbl=_cortoPairs.length>1?t('label_funciones_pl'):t('label_funcion');
   const _cortoScrHdr=`<div class="sec-hdr sm">${ICONS.clock} <span>${_cortoScrLbl}</span>${_cortoPairs.length>1?`<span class="count-badge cb-neutral">${_cortoPairs.length}</span>`:''}</div>`;
   const _cortoScrBody=_cortoPairs.length
@@ -658,7 +682,7 @@ export function openCortoSheet(title, country, duration, section, flags, directo
       </div>
     </div>
         ${_cortoScrHdr}${_cortoScrBody}
-        ${_avisosBand(null, {prog:_cortoShared?'cortos':null, scrs:_cortoPairs.map(p=>p.s)})}
+        ${_avisosBand(null, {prog:_cortoShared?'cortos':null, progN:_cortoSharedN, scrs:_cortoPairs.map(p=>p.s)})}
         ${syn?`<div class="sec-hdr sm">${ICONS.text} <span>${t('label_sinopsis')}</span></div><div class="pel-sheet-synopsis">${syn}</div>`:''}
     <div class="pel-sheet-ctas">
       <button id="corto-wl-btn" class="row-center-xs pel-sheet-action-btn${inWL?' act-on btn-primary':' btn-primary'}" data-title="${escXML(parentTitle||title)}" data-action="toggleWL">${inWL?ICONS.heartFill:ICONS.heart} ${inWL?t('cta_en_intereses'):t('cta_intereses')}</button>
@@ -781,6 +805,20 @@ export function openConflictSheet(incomingTitle, incomingScreen, existingEntry){
   setEl('cs-existing-name', exDT);
   const exWhen=existingEntry.day?`${(dayLabel(existingEntry.day)||'').split(' ')[0]} · ${existingEntry.time} · ${exF?.duration||''}`:'';
   setEl('cs-existing-when', exWhen);
+
+  // Título del sheet: si el conflicto es por margen (salas/viaje), el título
+  // ES la cuenta — «se solapan en el mismo tramo» era falso cuando las horas
+  // visibles no se pisaban y el agente del QA (15 ago 2026) descartó la función
+  // creyendo que la app se equivocaba. 'solape' (dato visible) y 'ciudad'
+  // conservan el título genérico. conflictAccount = dueño único de la frase.
+  const _titleEl=document.getElementById('conflict-title-el');
+  if(_titleEl){
+    const _r=screensConflictReason(incomingScreen,existingEntry);
+    const _cuenta=conflictAccount(incomingScreen,existingEntry,_r);
+    _titleEl.classList.toggle('cuenta',!!_cuenta);
+    if(_cuenta) _titleEl.innerHTML=_cuenta;
+    else _titleEl.textContent=t('conflict_titulo');
+  }
 
   // Botón de reemplazo con nombre exacto
   // Guardar pendiente para ejecutar al confirmar
@@ -1484,7 +1522,19 @@ export function _avisosBand(f, opts){
   const _cual=h=>(h.length&&h.length<_src.length)?' · '+h.map(x=>_coord(x,_conCiudad)).join(' / '):'';
   const _qa=_con('has_qa');
   if(_qa.length) rows.push(['Q&A', t(_qa[0].qa_type==='guests'?'aviso_qa_ref':'aviso_qa_equipo')+_cual(_qa)]);
-  if(opts&&opts.prog) rows.push([t('badge_programa'), t(opts.prog==='cortos'?'aviso_prog_cortos':'aviso_prog_obras')]);
+  // «Va con otras 4 obras» y no «Verás las otras obras» (ronda 3 del QA, 16 ago):
+  // el tiempo verbal describía la SALA —«cuando vayas verás más cosas»— y el
+  // usuario lo leyó como dato de la función; por eso marcar una y que quedaran
+  // dos marcadas lo tomó por sorpresa. Nombrar el VÍNCULO y su tamaño mantiene
+  // el aviso donde vive (la banda de rasgos de la función) y hace que el toast
+  // posterior confirme en vez de sorprender. El número es el mismo conjunto que
+  // el toast llama «hermanas».
+  if(opts&&opts.prog){
+    const _n=opts.progN||0;
+    const _k=opts.prog==='cortos'?'aviso_prog_cortos':'aviso_prog_obras';
+    // 0 = las funciones no coinciden en cuántas compañeras hay → sin número.
+    rows.push([t('badge_programa'), _n===0?t(_k+'_s'):_n===1?t(_k+'_1'):t(_k,{n:_n})]);
+  }
   const _ins=_con('requires_registration');
   if(_ins.length) rows.push([t('badge_inscripcion'), t('aviso_inscripcion')+_cual(_ins)]);
   // Precio: la ficha dice lo MISMO que la card — ticketBadgeTarget es el dueño
@@ -1520,8 +1570,9 @@ export function _checkRecalcOpportunity(){
   const planTitles=new Set(savedAgenda.schedule.map(s=>s._title));
   const candidates=[...watchlist].filter(t=>!planTitles.has(t)&&!watched.has(t));
   const hasOpportunity=candidates.some(t=>{
-    const screens=FILMS.filter(f=>f.title===t&&!screeningPassed(f));
-    return screens.length&&screens.some(s=>!isScreeningBlocked(s));
+    // El aviso ofrece algo para AGREGAR AL PLAN → mismo predicado que el plan
+    // (si no, ofrece una oportunidad en una ciudad que el filtro descartó).
+    return plannableScreens(t).length>0;
   });
   if(hasOpportunity){
     showActionToast(t('toast_horario_lib'),'Recalcular',()=>{

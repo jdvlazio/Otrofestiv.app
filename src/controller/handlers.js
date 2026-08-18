@@ -11,15 +11,15 @@ import { closeAuthSheet, closeCitySheet, closePrioLimit } from '../view/sheets.j
 import { showActionModal, showToast } from '../view/feedback.js';
 import { _renderProgramaContent, lugarClose, render, renderNoticesBanner, _noticeKey } from '../view/programa.js';
 import { renderAgenda, updateCardState, updateHorarioPrioBtn } from '../view/agenda.js';
-import { keepCityOnly } from '../view/helpers.js';
-import { runCalc } from './calc.js';
+import { keepCityOnly, planCityVenues } from '../view/helpers.js';
+import { runCalc, _planCityVenues } from './calc.js';
 import { commitPlan, saveDelays, saveLastSlot, savePrio, saveSavedAgenda, saveState, saveWL, saveWatched } from './persistence.js';
 import { cloudReportDelay, cloudClearDelay, cloudScreeningKey } from './delays-cloud.js';
-import { _getProgramaPhase, _reRenderIntereses, _updateProgramaActiveFilter, initProgramaModeBar, showAgView, showDayView, switchMainNav, updateAgTab, _markPreserveResult } from './pipeline.js';
+import { _getProgramaPhase, _reRenderIntereses, _updateProgramaActiveFilter, initProgramaModeBar, showAgView, showDayView, switchMainNav, updateAgTab, _markPreserveResult, _syncPmodeTabs } from './pipeline.js';
 import { searchClose, seccionClose } from './overlays.js';
 import { dayFullyPassed, festivalEnded, simTodayStr, toMin } from '../domain/time.js';
-import { scoreFilm, screeningPassed } from '../domain/film.js';
-import { isScreeningBlocked, screensConflict, sortScreensByStrategy } from '../domain/schedule.js';
+import { scoreFilm, screeningPassed, isShortFilm, prioLiveCount } from '../domain/film.js';
+import { isScreeningBlocked, screensConflict, sortScreensByStrategy, plannableScreens, screeningPlannable } from '../domain/schedule.js';
 import { state } from '../state/state.js';
 import { storage } from '../storage/storage.js';
 import { t } from '../i18n/i18n.js';
@@ -99,6 +99,9 @@ export function toggleWL(title,e){
       watchlist: _wl,
       watched: state._delFromSet(watched, title),
     });
+    // plannable-ok: la pregunta es POR QUÉ no se puede planear (todas bloqueadas
+    // por tu disponibilidad). plannableScreens ya las filtró y no podría distinguir
+    // «bloqueada» de «no existe».
     const _allScreens=FILMS.filter(f=>f.title===title&&!screeningPassed(f));
     const _allBlocked=_allScreens.length>0&&_allScreens.every(s=>isScreeningBlocked(s));
     if(_allBlocked){
@@ -106,19 +109,40 @@ export function toggleWL(title,e){
       const _short=displayTitle.length>28?displayTitle.slice(0,26)+'…':displayTitle;
       setTimeout(()=>showToast(`"${_short}" ${t('plan_bloqueado_disp')}`,'warn',5000),300);
     } else if(_hermanas.length){
-      // Desde la grilla no se ve el banner de la ficha: si sumamos una obra que
-      // el usuario no eligió, hay que decirlo en el momento.
-      showToast(`${t('badge_programa')} · ${t('aviso_prog_obras')}`,'info',4000);
-    } else if(activeMNav==='mnav-cartelera'||activeMNav==='mnav-seleccion'){
-      showActionToast(`${ICONS.heartFill} ${t('cta_en_intereses')}`,`${ICONS.bookmark} ${t('cta_priorizar')}`,()=>togglePriority(title));
+      // Desde la grilla no se ve el banner de la ficha: si sumamos obras que
+      // el usuario no eligió, hay que decir CUÁNTAS y POR QUÉ (QA de ojos
+      // frescos, 15 ago 2026: tocó UN corazón y aparecieron 5 marcados —
+      // «Programa · Verás las otras obras» no explicaba ni el número ni la
+      // causa). Cortos si todas las compañeras lo son (≤40 min); obras si no.
+      const _n=_hermanas.length;
+      const _todosCortos=_hermanas.every(h=>isShortFilm(FILMS.find(f=>f.title===h)));
+      const _msg=_todosCortos
+        ?`${t(_n===1?'toast_prog_uno':'toast_prog_n',{n:_n})} · ${t('toast_prog_juntos')}`
+        :`${t(_n===1?'toast_prog_obra_uno':'toast_prog_obra_n',{n:_n})} · ${t('toast_prog_obra_juntas')}`;
+      showToast(_msg,'info',4000);
     } else {
-      showToast(`${ICONS.heartFill} ${t('cta_en_intereses')}`,'info');
+      // El atajo a Priorizar ya no depende de la pestaña (re-corrida del QA,
+      // 16 ago): la ficha se abre desde cualquiera de las cuatro y el usuario
+      // no tiene por qué recordar desde dónde venía para que se le ofrezca.
+      showActionToast(`${ICONS.heartFill} ${t('cta_en_intereses')}`,`${ICONS.bookmark} ${t('cta_priorizar')}`,()=>togglePriority(title));
     }
   }
   // 4. PERSIST + surgical patch (branch B y C). Render automático vía pipeline.
   saveState('wl','watched');updateCardState(title);
   // Las compañeras de función también cambiaron de estado → repintar su card.
   _hermanas.forEach(h=>updateCardState(h));
+}
+
+// _vueltaA — el destino REAL de una obra que dejás de marcar como vista.
+// Desmarcar la saca de `watched` y la devuelve a `watchlist`, pero NO toca la
+// prioridad: una obra priorizada reaparece bajo «Prioridades», no bajo
+// «Intereses». El toast decía «De vuelta en pendientes» —un conjunto que no
+// existe en ninguna pantalla— y su propio EN ya decía «Interests» (revisión de
+// UX Writer, 16 ago). Nombra la etiqueta de la SECCIÓN que el usuario va a ver,
+// tomada de la misma clave que dibuja ese encabezado: si el encabezado cambia,
+// el toast cambia con él.
+function _vueltaA(title){
+  return t(state.get('prioritized').has(title)?'lbl_prioridades':'lbl_intereses');
 }
 
 export function toggleWatched(title,e){
@@ -136,7 +160,7 @@ export function toggleWatched(title,e){
     saveState('wl','watched');
     updateCardState(title);
     _reRenderIntereses();
-    showToast(t('plan_vuelta_pendientes'),'info');
+    showToast(t('plan_vuelta_a',{donde:_vueltaA(title)}),'info');
     return;
   }
   // Branch B: marcar como vista — modal confirm (closure variant)
@@ -189,9 +213,12 @@ export function togglePelWL(title,e){
   btn.innerHTML=(inWL?ICONS.heartFill:ICONS.heart)+' '+(inWL?t('cta_en_intereses'):t('cta_intereses'));
   btn.className='pel-sheet-action-btn'+(inWL?' act-on btn-primary':' btn-primary');
   if(wasInWL&&!inWL) closePelSheet(); // quitar de intereses → cerrar sheet
-  if(!wasInWL&&inWL){
-    showActionToast(`${ICONS.heartFill} ${t('cta_en_intereses')}`,`${ICONS.bookmark} ${t('cta_priorizar')}`,()=>togglePriority(title));
-  }
+  // SIN toast propio: el dueño del mensaje es toggleWL, que ya distingue los
+  // cuatro casos. Este envoltorio tiraba el suyo DESPUÉS y pisaba el verdadero:
+  // agregar desde la ficha una obra que ancla a otras sumaba 12 y anunciaba solo
+  // «En Intereses», mientras la grilla decía «+11 cortos del mismo programa»
+  // (medido en la re-corrida del QA de ojos frescos, 16 ago 2026). Los otros dos
+  // envoltorios del corazón —lista de Programa y cerrar-y-quitar— ya se callaban.
 }
 
 export function setDelay(title,day,time,addMins,venue){
@@ -271,7 +298,7 @@ export function removeFromAgenda(title){
   // para un taller: se quitaron de ahí justamente para que el bloque no se rompa.
   const _rec=(FILMS||[]).filter(f=>f.title===title&&f.is_recurring&&f.day&&f.time).length;
   const _cuerpo=_rec>1?t('bloque_quitar_aviso',{n:_rec}):t('plan_restaurar_suger');
-  showActionModal(t('plan_quitar_plan'),`<div class="cm-subject">${_s}</div><div>${_cuerpo}</div>`,t('misc_quitar'),()=>_dropFromPlan(title));
+  showActionModal(t('plan_quitar_plan'),`<div class="cm-subject">${_s}</div><div>${_cuerpo}</div>`,t('misc_sacar'),()=>_dropFromPlan(title));
 }
 
 // _planFixNotice — la salida para una entrada del Plan cuya función cambió. El
@@ -345,14 +372,32 @@ export function removeRecurringBlock(title){
   if(document.getElementById('pel-sheet')?.classList.contains('open')) openPelSheet(title);
 }
 
+// _pickScreen — resolver (título, día, hora) → LA función, prefiriendo la
+// elegible. FICDEH programa la misma obra el mismo día a la misma hora en
+// ciudades distintas (13 tripletas): un .find() a secas devolvía la PRIMERA
+// del catálogo y un usuario de Bogotá agendaba la de Barranquilla (la otra
+// cabeza del bug de #612: aquel protegía el plan guardado, esta protege la
+// PUERTA DE ENTRADA). screeningPlannable = dueño único del predicado; el set
+// de ciudad se publica acá porque este camino no pasa por Calcular.
+function _pickScreen(title,day,time){
+  globalThis.PLAN_CITY_VENUES=planCityVenues();
+  const _cands=FILMS.filter(f=>f.title===title&&f.day===day&&f.time===time);
+  return _cands.find(f=>screeningPlannable(f))||_cands[0];
+}
+
 export function addSuggestion(title,day,time){
   title=normTitle(title);
   // 1. READ
   const {FILMS, _activeFestId, savedAgenda, watchlist, watched} = state.snapshot();
   // 2. GUARD
   if(festivalEnded()) return;
-  // 3. MUTATE (step 1): Add to watchlist if not already there
-  if(!watchlist.has(title)){
+  // 3. MUTATE (step 1): Add to watchlist if not already there.
+  // _sumoInt: si ESTA acción sumó a Intereses, el toast lo dice (revisión de UX
+  // Writer, 16 ago). Agendar tocaba DOS conjuntos y solo nombraba uno; el usuario
+  // se encontraba después con una lista que no armó. Solo cuando de verdad pasa:
+  // si ya estaba en Intereses, el toast queda como siempre.
+  const _sumoInt=!watchlist.has(title);
+  if(_sumoInt){
     state.batchUpdate({
       watchlist:state._addToSet(watchlist,title),
       watched:state._delFromSet(watched,title),
@@ -360,7 +405,7 @@ export function addSuggestion(title,day,time){
     saveState('wl','watched');updateCardState(title);updateAgTab();
   }
   // 3. MUTATE (step 2): Add specific screening to saved agenda
-  const screen=FILMS.find(f=>f.title===title&&f.day===day&&f.time===time);
+  const screen=_pickScreen(title,day,time);
   if(screen){
     const sa=state.get('savedAgenda')||{schedule:[]};
     // Mitad B (pin-funcion): add / swap / no-op. El sheet de película usa esta
@@ -391,7 +436,7 @@ export function addSuggestion(title,day,time){
       const shortT=dt.length>20?dt.slice(0,18)+'…':dt;
       const _dayShortMap=(FESTIVAL_CONFIG[_activeFestId]||{}).dayShort||{};
       const dayShort=_dayShortMap[day]||day||'';
-      showToast(`${ICONS.calendar} ${shortT} · ${dayShort} · ${time}`,'info');
+      showToast(`${ICONS.calendar} ${shortT} · ${dayShort} · ${time}${_sumoInt?' · '+t('toast_tambien_int'):''}`,'info');
     }
   }
   // 3. MUTATE (step 3): Quitar de lista de restaurables
@@ -449,7 +494,13 @@ export function forceInclude(title){
   if(festivalEnded()){showToast(t('notice_fest_term'),'info');return;}
   if(!cachedResult||!cachedResult.scenarios.length) return;
   const sc=cachedResult.scenarios[cachedResult.currentIdx||0];
-  const screens=FILMS.filter(f=>f.title===title&&!screeningPassed(f)&&!isScreeningBlocked(f));
+  // plannableScreens (el dueño) y no una copia: «+ Incluir» insertaba en el
+  // escenario una función de otra ciudad, justo lo que la regla de plan por
+  // ciudad prohíbe. La vista SÍ usa el catálogo completo —necesita la función
+  // de la otra ciudad para poder explicar el motivo— y por eso ya no ofrece el
+  // botón en ese caso; esto es el cinturón por si se llega por otro camino.
+  globalThis.PLAN_CITY_VENUES=_planCityVenues();
+  const screens=plannableScreens(title);
   if(!screens.length){showToast(t('plan_sin_horario'),'info');return;}
   // Buscar el primer (screening del excluido, conflicto en schedule) y delegar.
   for(const s of screens){
@@ -480,7 +531,9 @@ export function togglePriority(title,cost){
     showToast(`${ICONS.bookmark} ${t('toast_prioridad_quitada')}`,'info');
   } else {
     // Branch B: prioritize (con limit check)
-    if(prioritized.size>=PRIO_LIMIT){
+    // El cupo se mide sobre las VIVAS (prioLiveCount, dominio): una prioridad
+    // cuyas funciones ya pasaron no puede materializarse y no debe bloquear.
+    if(prioLiveCount()>=PRIO_LIMIT){
       openPrioLimit(title);return;
     }
     _markPreserveResult();
@@ -490,7 +543,7 @@ export function togglePriority(title,cost){
       if(_addWL) state.batchUpdate({watchlist:state._addToSet(watchlist,title), watched:state._delFromSet(watched,title)});
     });
     savePrio();if(_addWL){saveWL();saveWatched();}updateCardState(title);
-    showToast(`${ICONS.bookmarkFill} ${t('cta_priorizada')} · ${prioritized.size+1}/${PRIO_LIMIT}`,'info');
+    showToast(`${ICONS.bookmarkFill} ${t('cta_priorizada')} · ${prioLiveCount()}/${PRIO_LIMIT}${_addWL?' · '+t('toast_tambien_int'):''}`,'info');
   }
   if(activeView==='day') updateHorarioPrioBtn(title);   // surgical: botón prio del pel-sheet
 }
@@ -519,7 +572,7 @@ export function markWatchedFromPlan(title, day, time, venue, duration, e){
     // 4. PERSIST + surgical (render automático vía pipeline)
     saveState('wl','watched');
     updateCardState(title);
-    showToast(t('plan_vuelta_pendientes'),'info');
+    showToast(t('plan_vuelta_a',{donde:_vueltaA(title)}),'info');
     return;
   }
   // Branch B: marcar como vista + post-view rating modal
@@ -557,7 +610,7 @@ export function confirmReplace(removedTitle,newTitle,day,time,isScenario){
       // Handler real — fresh snapshot al ejecutarse (post user-click)
       const {FILMS, savedAgenda, watchlist} = state.snapshot();
       modal.remove();
-      const screen=FILMS.find(f=>f.title===newTitle&&f.day===day&&f.time===time);
+      const screen=_pickScreen(newTitle,day,time);
       if(!screen){
         _expandedFilm='';
         renderAgenda();
@@ -729,6 +782,7 @@ export function filterByDay(day){
   activeDay=day;activeVenue=keepCityOnly(activeVenue);selectedIdx=null;
   cartelaMode='horario';
   document.querySelectorAll('.dtab').forEach(t=>t.classList.toggle('on',t.dataset.day===day));
+  _syncPmodeTabs(); // la píldora Hoy/Mañana espeja al día elegido (y se apaga si no es ninguno)
   requestAnimationFrame(()=>{
     const activeBtn=document.querySelector('.dtab.on');
     if(activeBtn){const dt=document.getElementById('dtabs');if(dt)dt.scrollLeft=activeBtn.offsetLeft-dt.offsetLeft;}
@@ -761,15 +815,6 @@ export function filterBySection(section){
     });
     _updateProgramaActiveFilter();
   },50);
-}
-
-export function setInteresesView(mode){
-  interesesViewMode=mode;
-  const _v = storage.getViewmodes(); _v.intereses = mode; storage.setViewmodes(_v);
-  document.getElementById('ibtn-grid')?.classList.toggle('on',mode==='grid');
-  document.getElementById('ibtn-list')?.classList.toggle('on',mode==='list');
-  const el=document.getElementById('ag-film-list');
-  _reRenderIntereses();
 }
 
 export function setProgramaMode(mode){
@@ -916,11 +961,46 @@ export function saveCurrentScenario(){
   }
 }
 
+// includeAnyway — agrega una excluida cuyo ÚNICO choque es el Q&A estimado.
+// No abre el modal de reemplazo (forceInclude) porque no hay nada que sacar: sin
+// quedarse a la charla las dos funciones caben. Se marca `_squeezed`, que es el
+// mecanismo ya existente para una violación DELIBERADA que el usuario aceptó —
+// verifyPlan la respeta y por eso el plan resultante es válido.
+// Muta cachedResult (el escenario en pantalla), no savedAgenda: el commit sigue
+// ocurriendo solo con «Usar este Plan», igual que forceInclude.
+export function includeAnyway(title, day, time){
+  if(festivalEnded()){showToast(t('notice_fest_term'),'info');return;}
+  if(!cachedResult||!cachedResult.scenarios.length) return;
+  const sc=cachedResult.scenarios[cachedResult.currentIdx||0];
+  globalThis.PLAN_CITY_VENUES=_planCityVenues();
+  // plannableScreens (dueño único) y no una copia: mismo cinturón que forceInclude
+  // contra reinsertar una función de otra ciudad, cancelada o ya pasada.
+  const s=plannableScreens(title).find(x=>x.day===day&&x.time===time);
+  if(!s){showToast(t('plan_sin_horario'),'info');return;}
+  if(sc.schedule.some(c=>(c._title||c.title)===title)) return;
+  sc.schedule.push({...s,_title:title,_squeezed:true});
+  sc.schedule.sort((a,b)=>(a.day_order||0)-(b.day_order||0)||toMin(a.time)-toMin(b.time));
+  sc.excluded=(sc.excluded||[]).filter(t2=>t2!==title);
+  // Sin toast: la fila desaparece de «No incluidas» y la función aparece en el
+  // escenario — el cambio de pantalla ES la confirmación. Un toast acá sería una
+  // string nueva para decir lo que ya se ve.
+  renderAgenda();
+}
+
 export function squeezeExcluded(schedule, excludedTitles){
   const result=[...schedule];
+  // La restricción de ciudad se REPUBLICA acá: entre calcular y guardar el
+  // usuario pudo cambiar el filtro, y este camino corre fuera de runCalc.
+  globalThis.PLAN_CITY_VENUES=_planCityVenues();
   // Ordenar excluidas por score descendente — misma lógica que el algoritmo
   const scored=excludedTitles.map(t=>{
-    const screens=FILMS.filter(f=>f.title===t&&!screeningPassed(f)&&!isScreeningBlocked(f));
+    // plannableScreens = DUEÑO ÚNICO de «qué funciones son planificables».
+    // Acá vivía una segunda implementación (FILMS.filter con 2 de los 4
+    // filtros) y por esa puerta el plan volvía a cruzar ciudades: el motor
+    // excluía la función de Medellín y el squeeze la reinsertaba al guardar,
+    // con el filtro Bogotá puesto (medido el 16 ago 2026, FICDEH). También
+    // se saltaba `_cancelled` y la regla del taller entero.
+    const screens=plannableScreens(t);
     return{title:t,screens,score:scoreFilm(t,screens,prioritized.has(t),[...watchlist])};
   }).filter(g=>g.screens.length>0).sort((a,b)=>b.score-a.score);
 
@@ -935,15 +1015,6 @@ export function squeezeExcluded(schedule, excludedTitles){
     }
   });
   return result;
-}
-
-export function _scrollToAgSection(id) {
-  const el = document.getElementById(id);
-  if (!el) return;
-  const hdr = document.getElementById('hdr-ag');
-  const off = hdr ? hdr.getBoundingClientRect().bottom : 0;
-  const y = el.getBoundingClientRect().top + window.scrollY - off - 8;
-  window.scrollTo({top: y, behavior: 'smooth'});
 }
 
 export function _setExpandedFilm(val) {
