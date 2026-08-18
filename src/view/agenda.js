@@ -608,9 +608,11 @@ export function renderFilmAlternatives(state,title,day,time){
 // VIO. Un programa no es una card: se disuelve en sus obras (cada una con su póster y
 // sus estrellas, como dentro de la card de programa) y su nombre queda como
 // sub-etiqueta del grupo. Cronológico por día + "fuera del plan".
-export function renderDiaryHTML(state,{retro=false}={}){
+export function renderDiaryHTML(state){
   // El cuerpo del overlay ES el muro (anatomía única) — completo, sin cap.
-  return renderDiaryWall(state,{retro})||emptyState(ICONS.eye, t('diary_vacio'));
+  // Sin modo «retro»: con la vista ASUMIDA, todo lo que el plan ya pasó es
+  // vista salvo negación explícita — el Recuerdo ve exactamente el mismo muro.
+  return renderDiaryWall(state)||emptyState(ICONS.eye, t('diary_vacio'));
 }
 
 export function renderContextualHeader(state, consensus){
@@ -1142,12 +1144,12 @@ export function _renderSavedAgendaHTML(state, consensus){
       <div class="mb-2 sec-hdr">${ICONS.sparkles} ${t('recap_tu_festival')}</div>
       <div class="hint">${t('recap_marca_sub')}</div>
     </div>`:'';
-    // Cuerpo: el DIARIO en modo retro — grid de pósters con calificación (los
+    // Cuerpo: el DIARIO — el mismo muro que la sección (anatomía única; los
     // vistos, por obra) + los del plan sin marcar (atenuados, ✓ Vista). El póster
     // prima: mismo modelo del share del Diario.
     const _vivido=(_plan.length||watched.size)?`<div class="ag-section">
       <div class="mb-2 sec-hdr">${ICONS.bookOpen} <span>${t('diary_eyebrow')}</span></div>
-      ${renderDiaryHTML(state,{retro:true})}</div>`:'';
+      ${renderDiaryHTML(state)}</div>`:'';
     // Compartir mi festival (RFC F2): reutiliza el export del Diario.
     const _shareBtn=watched.size>0?`<button class="ag-save-btn" data-action="shareDiary">${ICONS.share} ${t('recap_compartir')}</button>`:'';
     if(_recap||_vivido) return`<div class="saved-agenda">${_recap}${_hero}${_vivido}${_shareBtn}</div>`;
@@ -1282,26 +1284,29 @@ export function _renderSavedAgendaHTML(state, consensus){
 // de app. Un solo tamaño de póster (4 col), un solo label de día, estrellas
 // SIEMPRE bajo el afiche (Letterboxd), un solo ojo. Las 13 violaciones del
 // muro doble murieron aquí de raíz.
-function _dwCard(state,{title,poster,rating,off,retro}){
+function _dwCard(state,{title,poster,rating,off}){
   const safe=escXML(title||'');
-  const stars=rating?`<div class="dw-stars">${[1,2,3,4,5].map(i=>`<span class="dw-star${i<=rating?' on':''}">${ICONS.starFill}</span>`).join('')}</div>`:`<div class="dw-stars"></div>`;
-  // retro (Recuerdo): la negada invita a revertir — el ojo es BOTÓN (la vi).
-  const badge=off
-    ?(retro
-      ?`<button class="dw-off-badge" data-action="toggleWatched" data-title="${safe}" data-stop="1" aria-label="${t('aria_marcar_vista')}"><span>${ICONS.eye}</span></button>`
-      :`<div class="dw-off-badge" role="img" aria-label="${t('aria_no_la_vi')}"><span>${ICONS.eyeOff}</span></div>`)
-    :'';
-  return`<div class="dw-card js-open-pel" data-title="${safe}">
-    <div class="dw-poster${off?' dw-off':''}">
+  // El AFICHE es solo afiche (Juan, 18 ago): nada encima, y su tap abre la
+  // ficha como en toda la app. Estado y acciones viven en la fila de control,
+  // centrada bajo el póster, a la altura de las estrellas: la negada ofrece
+  // el ojo tachado (devolverla a vista) y la no calificada, la estrella
+  // opaca. Ambos son INVITACIONES (misma opacidad), no estados afirmados.
+  // La fila reserva su alto siempre → los pósters de una fila no bailan.
+  const ctrl=off
+    ?`<button class="dw-ctrl" data-action="toggleWatched" data-title="${safe}" data-stop="1" aria-label="${t('aria_marcar_vista')}">${ICONS.eyeOff}</button>`
+    :rating
+      ?`<div class="dw-stars">${[1,2,3,4,5].map(i=>`<span class="dw-star${i<=rating?' on':''}">${ICONS.starFill}</span>`).join('')}</div>`
+      :`<button class="dw-ctrl dw-ctrl-star" data-action="openRatingSheet" data-title="${safe}" data-stop="1" aria-label="${t('aria_calificar')}">${ICONS.starFill}</button>`;
+  return`<div class="dw-card">
+    <div class="dw-poster${off?' dw-off':''} js-open-pel" data-title="${safe}">
       ${poster?`<img class="img-cover" src="${poster}" loading="lazy" onerror="this.remove()" alt="">`:''}
-      ${badge}
     </div>
-    ${stars}
+    <div class="dw-row">${ctrl}</div>
   </div>`;
 }
 
 // renderDiaryWall — el muro por días. cap acota las CARDS (preview de sección).
-export function renderDiaryWall(state,{cap=Infinity,retro=false}={}){
+export function renderDiaryWall(state,{cap=Infinity}={}){
   const {FILMS, savedAgenda, filmRatings, notWatched} = state.snapshot();
   const eff=effectiveWatched();
   const all=(savedAgenda&&savedAgenda.schedule)||[];
@@ -1331,14 +1336,14 @@ export function renderDiaryWall(state,{cap=Infinity,retro=false}={}){
     n+=visibles.length;
     if(!visibles.length) return;
     html+=`<div class="dw-day-lbl">${dayLabelLong(day)}</div>
-      <div class="dw-grid">${visibles.map(c=>_dwCard(state,{...c,retro})).join('')}</div>`;
+      <div class="dw-grid">${visibles.map(c=>_dwCard(state,c)).join('')}</div>`;
   });
   if(n<cap){
     const outside=[...eff].filter(tt=>!_seen.has(tt)&&FILMS.some(f=>f.title===tt));
     if(outside.length){
       const cards=outside.flatMap(_cards).slice(0,Math.max(0,cap-n));
       if(cards.length) html+=`<div class="dw-day-lbl">${t('plan_vistas_fuera')}</div>
-        <div class="dw-grid">${cards.map(c=>_dwCard(state,{...c,retro})).join('')}</div>`;
+        <div class="dw-grid">${cards.map(c=>_dwCard(state,c)).join('')}</div>`;
     }
   }
   return html;
