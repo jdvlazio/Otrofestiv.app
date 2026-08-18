@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202608180832">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202608180832">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202608180952">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202608180952">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -826,6 +826,17 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 /* Vacío de UNA línea: para secciones donde la ausencia es un dato menor
    (Sugerencias sin más opciones), no una pantalla vacía que explicar. */
 .sug-vacio{font-size:var(--t-sm);color:var(--gray);padding:var(--sp-2) 0 var(--sp-1)}
+/* Pre-resumen de Planear: el insumo y el pre-diagnóstico, en texto quieto.
+   El cruce va en ámbar — es el aviso, no un veredicto. */
+.pre-resumen{padding:var(--sp-2) 0 var(--sp-1)}
+.pre-linea{display:flex;align-items:center;gap:5px;font-size:var(--t-sm);color:var(--gray);padding:2px 0}
+.pre-linea.cruces{color:var(--amber)}
+.pre-linea svg{width:11px;height:11px;flex-shrink:0}
+.av-fila{display:flex;align-items:center;justify-content:space-between;padding:var(--sp-2) 0}
+.av-fila-valor{display:flex;align-items:center;gap:5px;font-size:var(--t-sm);font-weight:var(--w-semi);color:var(--gray)}
+.av-fila-valor svg{width:11px;height:11px}
+.av-editar{display:inline-flex;align-items:center;gap:2px;background:none;border:none;padding:var(--sp-1) 0 var(--sp-1) var(--sp-3);color:var(--gray);font-size:var(--t-sm);font-weight:var(--w-semi);font-family:var(--font);cursor:pointer}
+.av-editar svg{width:11px;height:11px}
 /* min-height: llena la banda visible (100dvh − chrome ~128px − nav ~72px) para que
    justify-content:center centre el contenido verticalmente en vistas 100%-vacías
    (Intereses/Planear/Mi Plan) en vez de pegarlo arriba con la mitad inferior muerta.
@@ -2587,8 +2598,6 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .av-block-time{font-size:var(--t-sm);color:var(--gray);flex:1}
 .av-block-rm{background:none;border:none;color:var(--gray2);cursor:pointer;padding:4px;display:flex;align-items:center;font-size:var(--t-base);transition:color var(--tr-base);flex-shrink:0}
 .av-block-rm:hover{color:var(--white)}
-.av-add-unavail{display:inline-flex;align-items:center;gap:var(--sp-1);background:none;border:1px solid var(--bdr);border-radius:var(--r-pill);color:var(--gray);font-size:var(--t-sm);font-weight:var(--w-semi);font-family:var(--font);padding:var(--sp-2) var(--sp-3);cursor:pointer;transition:color var(--tr-base),border-color var(--tr-base)}
-.av-add-unavail:hover{color:var(--white);border-color:var(--gray)}
 .sec-hdr-opt{font-size:var(--t-xs);color:var(--gray);font-weight:var(--w-regular);letter-spacing:0;text-transform:none;margin-left:var(--sp-1)}
 .av-sheet-overlay{position:fixed;inset:0;background:var(--overlay-70);z-index:9100;display:none;align-items:flex-end;justify-content:center}
 .av-sheet-overlay.open{display:flex}
@@ -3302,7 +3311,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202608180832";
+    s.src="/src/main.js?v=202608180952";
     document.body.appendChild(s);
     // Watchdog de boot (P0 18 jul): si el grafo ESM murió en el import (caché
     // HTTP mixta tras deploys en ráfaga — main.js nuevo + módulo viejo sin el

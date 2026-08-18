@@ -170,27 +170,32 @@ export function renderAgenda(){
     const resultContent=cachedResult
       ?buildResultHTML(cachedResult.scenarios)
       :'';
-    // Disponibilidad colapsable — colapsada por defecto, abierta si hay bloques.
-    const _hasAvBlocks=!!(availability&&DAY_KEYS.some(d=>availability[d]&&availability[d].blocks&&availability[d].blocks.length));
-    const _avOpenAttr=_hasAvBlocks?' open':'';
     view.innerHTML=`${_progressHtml}
-      <style>
-        .ag-av-details{padding:0 0 var(--sp-3)} /* FLUSH: la banda pega al chrome (G01) */
-        .ag-av-details>summary{cursor:pointer;list-style:none;display:flex;align-items:center;margin-bottom:0;-webkit-tap-highlight-color:transparent}
-        .ag-av-details>summary::-webkit-details-marker,
-        .ag-av-details>summary::marker{display:none}
-        .ag-av-details>summary .ag-av-chevron{transition:transform 200ms ease;color:var(--gray2);display:inline-flex;align-items:center}
-        .ag-av-details[open]>summary .ag-av-chevron{transform:rotate(180deg)}
-        .ag-av-details>summary .sec-hdr-opt{margin-left:4px}
-        .ag-av-details>.txt-gray2-sm-lh{margin-top:var(--sp-2)}
-      </style>
       <div class="ag-section">
-        <details class="ag-av-details"${_avOpenAttr}>
-          <summary class="sec-hdr">${ICONS.clock} <span>${t('av_disponibilidad')}</span> <span class="hdr-end"><span class="sec-hdr-opt">${t('misc_opcional')}</span><span class="ag-av-chevron">${ICONS.chevronD}</span></span></summary>
-          <div class="txt-gray2-sm-lh">${t('av_no_incluir')}</div>
-          <div id="av-blocks-list"></div>
-          <button class="av-add-unavail" data-action="openAvSheet">${ICONS.plus} ${t('misc_no_disponible')}</button>
-        </details>
+        <!-- El acordeón murió (Juan, 18 ago): informaba el estado con la puerta
+             cerrada. La fila del VALOR queda siempre visible, «Editar» hereda el
+             objeto de la fila (misma regla que «Exportar»), y los bloques
+             configurados se ven — con su × — en vez de esconderse. El estado no
+             se dice en palabras: los bloques visibles SON el estado (Juan:
+             el «Sin restricciones» confundía). -->
+        <div class="av-fila">
+          <span class="av-fila-valor">${ICONS.clock} ${t('av_disponibilidad')}</span>
+          <button class="av-editar" data-action="openAvSheet">${t('av_editar')} ${ICONS.chevronR}</button>
+        </div>
+        <div id="av-blocks-list"></div>
+        ${(()=>{
+          // Las líneas que faltaban (auditoría 18 ago): la pantalla pedía
+          // calcular sin decir QUÉ iba a procesar. Insumo y pre-diagnóstico,
+          // en texto — comunicar mejor sin agregar un solo control.
+          const _nP=pending.length;
+          if(!_nP) return '';
+          const _prio=prioLiveCount();
+          const _cr=_crucesEntrePendientes(pending);
+          return`<div class="pre-resumen">
+            <div class="pre-linea">${_nP===1?t('pre_obra'):t('pre_obras',{n:_nP})}${_prio?t('pre_con_prio',{m:_prio}):''}</div>
+            ${_cr?`<div class="pre-linea cruces">${ICONS.alert} ${_cr===1?t('pre_cruce'):t('pre_cruces',{n:_cr})}</div>`:''}
+          </div>`;
+        })()}
         <div class="av-calc-wrap">
           <button class="av-calc-btn" data-action="runCalc">
             ${t('av_ver_opciones')}
@@ -202,6 +207,21 @@ export function renderAgenda(){
       </div>`;
     renderAvBlocks();
   }
+}
+
+// _crucesEntrePendientes — cuántas PAREJAS de la selección chocan en TODAS sus
+// combinaciones de funciones: el cruce que ninguna alternativa salva y que el
+// motor va a tener que desempatar. Usa el dueño (screensConflict) sobre
+// funciones futuras no bloqueadas. Es el pre-diagnóstico de Planear (18 ago):
+// saber DÓNDE va a decidir el algoritmo cambia cómo priorizás antes de calcular.
+function _crucesEntrePendientes(pending){
+  const por={};
+  FILMS.forEach(f=>{ if(pending.includes(f.title)&&!screeningPassed(f)&&!isScreeningBlocked(f)) (por[f.title]=por[f.title]||[]).push(f); });
+  const ts=Object.keys(por); let n=0;
+  for(let i=0;i<ts.length;i++)for(let j=i+1;j<ts.length;j++){
+    if(por[ts[i]].every(a=>por[ts[j]].every(b=>screensConflict(a,b)))) n++;
+  }
+  return n;
 }
 
 // ── ANCLAJE en Mi Plan ────────────────────────────────────────────────────────
