@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202608171900">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202608171900">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202608171923">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202608171923">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -2392,6 +2392,9 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .splash-info-tag{font-size:var(--t-sm);color:var(--gray);margin-top:var(--sp-2);line-height:1.4;min-height:calc(var(--t-sm) * 1.4)}
 .splash-info-city{font-size:var(--t-sm);color:var(--gray2);text-transform:uppercase;letter-spacing:.4px;margin-top:var(--sp-3)}
 .splash-info-city .live-dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--green);margin-right:5px;vertical-align:1px}
+/* El punto de «ahora» en las FILAS (18 ago 2026): el badge dice QUÉ, el punto
+   dice CUÁNDO. Mismo token verde del splash; siempre FUERA del badge. */
+.row-dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--green);margin-left:var(--sp-1);vertical-align:1px;flex-shrink:0}
 .splash-info-dates{font-size:var(--t-sm);color:var(--gray2);text-transform:uppercase;letter-spacing:.4px;margin-top:var(--sp-1)}
 .splash-enter-btn{
   width:100%;max-width:300px;
@@ -3256,7 +3259,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202608171900";
+    s.src="/src/main.js?v=202608171923";
     document.body.appendChild(s);
     // Watchdog de boot (P0 18 jul): si el grafo ESM murió en el import (caché
     // HTTP mixta tras deploys en ráfaga — main.js nuevo + módulo viejo sin el

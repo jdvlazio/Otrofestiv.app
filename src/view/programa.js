@@ -174,11 +174,19 @@ export function renderProgramaListHTML(state){
         :_rawDt;
       const vc=vcfg(f.venue);
       const src=getFilmPoster(f)||'';
-      // En la ventana del Q&A el badge dice Q&A (ámbar), no AHORA (verde): la
-      // película ya terminó y lo que sigue son los ~30 min ESTIMADOS de la
-      // charla. Ver screeningQaOnly (dominio) para la medición que lo motivó.
-      const nowBadge=isNow
-        ?`<span class="film-check-badge${isQa?' qa-only':''}">${isQa?t('label_qa_ahora'):t('misc_ahora')}</span>`
+      // EL PUNTO DICE CUÁNDO, EL BADGE DICE QUÉ (decisión de Juan, 18 ago, vía
+      // Onboarding: el badge de estado «Q&A» quedaba pegado al informativo «Q&A»
+      // de _metaBadges — la fila decía lo mismo dos veces). El punto verde
+      // .live-dot —el mismo que marca «en curso» en el splash— es el marcador de
+      // ahora en las FILAS: tras el título si corre la película, tras el badge
+      // Q&A si corre la charla. Siempre FUERA del badge. La píldora AHORA
+      // sobrevive solo sobre el PÓSTER (abajo), donde un punto de 7px se pierde
+      // contra el afiche. El aria-label sostiene lo que el color no comunica.
+      const nowDot=isNow&&!isQa
+        ?`<span class="live-dot row-dot" role="img" aria-label="${t('aria_en_curso')}"></span>`
+        :'';
+      const qaDot=isQa
+        ?`<span class="live-dot row-dot" role="img" aria-label="${t('aria_qa_en_curso')}"></span>`
         :'';
       // El dato viene SELLADO en la función por el loader (_cancelled/_movedFrom):
       // el listado ya no busca en NOTICES. Y para una movida, la hora que muestra la
@@ -195,7 +203,7 @@ export function renderProgramaListHTML(state){
       return`<div class="plist-item js-open-pel" style="${itemStyle}" data-title="${escXML(f.title)}">
         ${_stk||_plistPosterHtml(f,src)}
         <div class="plist-info">
-          <div class="plist-title">${noticeBadge}<span class="plist-title-txt">${dt}</span>${_metaBadges(f)}${nowBadge}</div>
+          <div class="plist-title">${noticeBadge}<span class="plist-title-txt">${dt}</span>${nowDot}${_metaBadges(f)}${qaDot}</div>
           <div class="plist-meta" style="${f._cancelled?'text-decoration:line-through':''}">${vc.short}${sala(f.venue)?' · '+sala(f.venue):''}${venueCity(f.venue)?`<span class="plist-city">${venueCity(f.venue)}</span>`:''}${f.duration?' · '+durFmt(f.duration):''}</div>
           ${noticeNote||`<div class="plist-sec">${_secLabelFull(f.section||'')}</div>`}
         </div>

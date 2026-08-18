@@ -961,34 +961,59 @@ test('T71 — Mi Plan: la banda del Plan con Diario y día, y «Sin confirmar» 
 // la declara, nunca la afirma»). Medido en FINCA, 16 de 30 obras con Q&A.
 // Y Mi Plan estaba peor: el rótulo contaba con Q&A y la cuenta sin él, así que
 // decía «Termina en 0 min» durante media hora.
-test('T72 — en la ventana del Q&A el badge dice Q&A, no AHORA', async ({ page }) => {
+// 18 ago: el badge de estado de la FILA («Q&A» ámbar) quedaba pegado al
+// informativo «Q&A» de _metaBadges — la fila lo decía dos veces (traspaso de
+// Onboarding, decisión de Juan). El punto verde .row-dot es ahora el marcador
+// de «ahora» en las filas: el badge dice QUÉ, el punto dice CUÁNDO. La píldora
+// sobrevive solo sobre el PÓSTER, donde un punto se pierde contra el afiche.
+test('T72 — el punto dice cuándo, el badge dice qué (y el póster conserva su píldora)', async ({ page }) => {
   await enterFestival(page, 'finca2026', '2026-08-17T12:00:00-03:00');
   const leer = async (hora) => page.evaluate(async (hh) => {
     const f = FILMS.find(x => x.title.startsWith('¿Cuán profundo'));
     _simTime = `${f.day}T${hh}:00-03:00`;
     state.set('savedAgenda', { scenarioIdx: 0, schedule: [Object.assign({}, f, { _title: f.title })] });
     switchMainNav('mnav-cartelera');
-    if (typeof _renderProgramaContent === 'function') _renderProgramaContent();
-    await new Promise(r => setTimeout(r, 800));
-    const p = document.querySelector('.film-check-badge, .poster-now');
+    activeDay = f.day; programaViewMode = 'list'; _renderProgramaContent();
+    await new Promise(r => setTimeout(r, 700));
+    const fila = [...document.querySelectorAll('.plist-item')].find(e => e.textContent.includes('Cuán profundo'));
+    const filaInfo = fila && {
+      qas: [...fila.querySelectorAll('.meta-badge, .film-check-badge')].filter(e => /Q&A/.test(e.textContent)).length,
+      pildoraEstado: !!fila.querySelector('.film-check-badge'),
+      dots: fila.querySelectorAll('.row-dot').length,
+      dotTras: fila.querySelector('.row-dot')?.previousElementSibling?.textContent.trim() || null,
+      aria: fila.querySelector('.row-dot')?.getAttribute('aria-label') || null,
+    };
+    programaViewMode = 'grid'; setProgramaView ? setProgramaView('grid') : _renderProgramaContent();
+    await new Promise(r => setTimeout(r, 700));
+    const poster = document.querySelector('.poster-now');
     switchMainNav('mnav-miplan'); showAgView();
     await new Promise(r => setTimeout(r, 1000));
     const b = document.querySelector('.ctx-next-badge');
-    return { prog: p && { txt: p.textContent.trim(), qa: p.classList.contains('qa-only') },
+    return { fila: filaInfo,
+      poster: poster && { txt: poster.textContent.trim(), qa: poster.classList.contains('qa-only') },
       plan: b && { txt: b.textContent.trim(), qa: b.classList.contains('qa-only') } };
   }, hora);
 
   // La obra: 19:00, película hasta 20:41, función (con Q&A) hasta 21:11
   const conPeli = await leer('20:00');
-  expect(conPeli.prog.txt, 'con la película en curso, AHORA').toBe('AHORA');
-  expect(conPeli.prog.qa, 'y no es el estado de Q&A').toBe(false);
+  expect(conPeli.fila.pildoraEstado, 'la fila ya no lleva píldora de estado').toBe(false);
+  expect(conPeli.fila.dots, 'un punto').toBe(1);
+  expect(conPeli.fila.dotTras, 'tras el TÍTULO cuando corre la película').toContain('Cuán profundo');
+  expect(conPeli.fila.aria, 'el aria sostiene lo que el color no dice').toBeTruthy();
   expect(conPeli.plan.txt, 'Mi Plan cuenta lo que falta de película').toBe('Termina en 41 min');
 
   const enQa = await leer('20:50');
-  expect(enQa.prog.txt, 'terminada la película, el badge dice Q&A').toBe('Q&A');
-  expect(enQa.prog.qa, 'con su acento ámbar').toBe(true);
-  expect(enQa.plan.txt, 'y Mi Plan deja de contar cero durante media hora').toBe('Q&A');
-  expect(enQa.plan.qa, 'también en ámbar').toBe(true);
+  expect(enQa.fila.qas, 'UN solo «Q&A» en la fila — el duplicado murió').toBe(1);
+  expect(enQa.fila.dots, 'un punto').toBe(1);
+  expect(enQa.fila.dotTras, 'tras el badge Q&A cuando corre la charla').toBe('Q&A');
+  if (enQa.poster) {
+    expect(enQa.poster.txt, 'el póster conserva su píldora').toBe('Q&A');
+    expect(enQa.poster.qa, 'ámbar').toBe(true);
+  }
+  expect(enQa.plan.txt, 'Mi Plan sigue diciendo Q&A').toBe('Q&A');
+
+  const despues = await leer('21:30');
+  expect(despues.fila.dots, 'sin nada corriendo, sin punto').toBe(0);
 });
 
 // Ronda 4 (auditor): «te quedarían 0 min» explicaba una función EXCLUIDA con la
