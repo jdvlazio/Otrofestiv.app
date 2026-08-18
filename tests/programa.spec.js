@@ -1258,3 +1258,39 @@ test('T77 — los chips de días en Intereses solo muestran días con función f
   const muertas = r.filter(f => !f.chips.length);
   expect(muertas.length, 'las agotadas no muestran ningún chip').toBeGreaterThan(0);
 });
+
+// Auditoría de Mi Plan, puntos 3–5 (18 ago): el eyebrow del hero era extranjero
+// (10px, tracking propio), el hero estaba PEGADO a la banda del Plan (0px), y
+// los botones Compartir/Calendario flotaban equidistantes (17/16) entre la
+// grilla y la lista — el dueño del gap era el margin de .mplan-wrap, no el
+// padding de los botones. Regla: entre secciones, UN token (sp-5).
+test('T79 — Mi Plan: eyebrow pariente, hero que respira, botones anclados', async ({ page }) => {
+  await enterFestival(page, 'ficdeh2026', '2026-08-18T15:00:00-05:00');
+  await page.evaluate(() => [...document.querySelectorAll('#city-sheet [data-action]')]
+    .find(x => x.textContent.includes('Bogotá'))?.click());
+  await page.waitForTimeout(600);
+  const r = await page.evaluate(async () => {
+    const bog = f => (f.venue || '').includes('Bogotá');
+    const hoy = FILMS.filter(f => bog(f) && f.day === '2026-08-18' && f.time > '16:00').slice(0, 2);
+    state.set('savedAgenda', { scenarioIdx: 0, schedule: hoy.map(f =>
+      Object.assign({}, f, { _title: f.title })) });
+    switchMainNav('mnav-miplan'); showAgView();
+    await new Promise(r => setTimeout(r, 1400));
+    const g = (a, b) => { const A = document.querySelector(a), B = document.querySelector(b);
+      return A && B ? Math.round(B.getBoundingClientRect().top - A.getBoundingClientRect().bottom) : null; };
+    const ey = document.querySelector('.ctx-eyebrow');
+    // El patrón es sec-hdr.SM (la variante chica), no la banda base: se compara
+    // contra el TOKEN resuelto, no contra un elemento circunstancial.
+    const probe = document.createElement('span');
+    probe.style.fontSize = 'var(--t-xs)'; document.body.appendChild(probe);
+    const tXs = getComputedStyle(probe).fontSize; probe.remove();
+    return { heroBanda: g('.ctx-header', '#ag-view .sec-hdr'),
+      calBotones: g('.mplan-wk-outer', '.mplan-bottom-actions'),
+      eyebrowPx: ey && getComputedStyle(ey).fontSize,
+      eyebrowTracking: ey && getComputedStyle(ey).letterSpacing, tXs };
+  });
+  expect(r.heroBanda, 'el hero respira sp-5 antes de la banda').toBe(24);
+  expect(r.calBotones, 'los botones anclados al pie del calendario').toBeLessThanOrEqual(8);
+  expect(r.eyebrowPx, 'el eyebrow habla el token t-xs de sec-hdr.sm').toBe(r.tXs);
+  expect(r.eyebrowTracking, 'con el tracking de la banda (.1em de 9px ≈ 0.9px)').toMatch(/^0\.9/);
+});
