@@ -1630,3 +1630,38 @@ test('T86 — Diario: el afiche es solo afiche; los controles viven debajo', asy
   expect(r.centrados, 'y centrados en su fila').toBe(true);
   expect(r.mismaBase, 'la fila reserva su alto: los pósters no bailan').toBe(true);
 });
+
+// 18 ago (Juan): «al abrir la Card debe aparecer Vista, con el ojito; siempre
+// primero la opción de Vista». Lo que había era una mentira de interfaz: el
+// botón decía «Calificar» con estrella y su acción era toggleWatched — marcaba
+// vista. Ahora el ojo y el label dicen lo que el botón hace, en los dos estados.
+test('T87 — la card ofrece VISTA con el ojo, y calificar viene después', async ({ page }) => {
+  await enterFestival(page, 'ficdeh2026', '2026-08-18T15:00:00-05:00');
+  await page.evaluate(() => document.querySelector('[data-action="citySheetAll"]')?.click());
+  await page.waitForTimeout(400);
+  const r = await page.evaluate(async () => {
+    const f = FILMS.find(x => !x.is_cortos && x.poster);
+    openPelSheet(f.title);
+    await new Promise(r => setTimeout(r, 700));
+    const btn = document.getElementById('pel-vista-btn');
+    const antes = { txt: btn?.textContent.trim(), accion: btn?.dataset.action,
+      // el icono del ojo trae su círculo (pupila); la estrella, un polígono
+      ojo: !!btn?.querySelector('circle'), estrella: !!btn?.querySelector('polygon') };
+    // marcarla vista → la card pasa al estado ya-vista
+    btn.click();
+    await new Promise(r => setTimeout(r, 500));
+    const modal = [...document.querySelectorAll('button')].find(b => /Sí|Marcar|Confirmar/i.test(b.textContent));
+    if (modal) { modal.click(); await new Promise(r => setTimeout(r, 700)); }
+    const vistos = [...document.querySelectorAll('.pel-sheet-ctas-watched .pel-sheet-action-btn')]
+      .map(b => ({ txt: b.textContent.trim(), ojo: !!b.querySelector('circle'), estrella: !!b.querySelector('polygon') }));
+    return { antes, vistos };
+  });
+  expect(r.antes.accion, 'el botón marca vista…').toBe('toggleWatched');
+  expect(r.antes.txt, '…y lo dice: Vista, no Calificar').toMatch(/Vista|Seen|Watched/);
+  expect(r.antes.ojo, 'con el ojo, el icono de watched').toBe(true);
+  expect(r.antes.estrella, 'sin estrella: calificar es otra cosa').toBe(false);
+  if (r.vistos.length) {
+    expect(r.vistos[0].txt, 'ya vista: Vista sigue primero').toMatch(/Vista|Seen|Watched/);
+    expect(r.vistos[0].ojo, 'y con el ojo, no con el check').toBe(true);
+  }
+});
