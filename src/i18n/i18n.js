@@ -1191,7 +1191,7 @@ export const _I18N = {
     "pre_obras": "{n} obras",
     "pre_obra": "1 obra",
     "pre_con_prio": " · {m} com prioridade",
-    "res_sin_cupo": "{n} sem vaga",
+    "res_sin_cupo": "{n} sem espaço",
     "pre_cruces": "{n} cruzamentos de horário",
     "pre_cruce": "1 cruzamento de horário",
     "av_editar": "Editar",
