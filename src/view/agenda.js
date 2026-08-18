@@ -186,11 +186,31 @@ export function renderAgenda(){
       </style>
       <div class="ag-section">
         <details class="ag-av-details"${_avOpenAttr}>
-          <summary class="sec-hdr">${ICONS.clock} <span>${t('av_disponibilidad')}</span> <span class="hdr-end"><span class="sec-hdr-opt">${t('misc_opcional')}</span><span class="ag-av-chevron">${ICONS.chevronD}</span></span></summary>
+          <summary class="sec-hdr">${ICONS.clock} <span>${t('av_disponibilidad')}</span> <span class="hdr-end"><span class="sec-hdr-opt">${(()=>{
+            // El VALOR, no «opcional» (Juan, 18 ago): rotular la palanca como
+            // opcional le enseñaba al usuario que su restricción no importa —
+            // y el plan salía asumiendo el día entero libre. Ahora la banda
+            // dice el supuesto sobre el que se va a calcular.
+            const _n=DAY_KEYS.filter(d=>availability[d]&&availability[d].blocks&&availability[d].blocks.length).length;
+            return _n?(_n===1?t('av_restr_dia'):t('av_restr_dias',{n:_n})):t('av_sin_restricciones');
+          })()}</span><span class="ag-av-chevron">${ICONS.chevronD}</span></span></summary>
           <div class="txt-gray2-sm-lh">${t('av_no_incluir')}</div>
           <div id="av-blocks-list"></div>
           <button class="av-add-unavail" data-action="openAvSheet">${ICONS.plus} ${t('misc_no_disponible')}</button>
         </details>
+        ${(()=>{
+          // Las líneas que faltaban (auditoría 18 ago): la pantalla pedía
+          // calcular sin decir QUÉ iba a procesar. Insumo y pre-diagnóstico,
+          // en texto — comunicar mejor sin agregar un solo control.
+          const _nP=pending.length;
+          if(!_nP) return '';
+          const _prio=prioLiveCount();
+          const _cr=_crucesEntrePendientes(pending);
+          return`<div class="pre-resumen">
+            <div class="pre-linea">${_nP===1?t('pre_obra'):t('pre_obras',{n:_nP})}${_prio?t('pre_con_prio',{m:_prio}):''}</div>
+            ${_cr?`<div class="pre-linea cruces">${ICONS.alert} ${_cr===1?t('pre_cruce'):t('pre_cruces',{n:_cr})}</div>`:''}
+          </div>`;
+        })()}
         <div class="av-calc-wrap">
           <button class="av-calc-btn" data-action="runCalc">
             ${t('av_ver_opciones')}
@@ -202,6 +222,21 @@ export function renderAgenda(){
       </div>`;
     renderAvBlocks();
   }
+}
+
+// _crucesEntrePendientes — cuántas PAREJAS de la selección chocan en TODAS sus
+// combinaciones de funciones: el cruce que ninguna alternativa salva y que el
+// motor va a tener que desempatar. Usa el dueño (screensConflict) sobre
+// funciones futuras no bloqueadas. Es el pre-diagnóstico de Planear (18 ago):
+// saber DÓNDE va a decidir el algoritmo cambia cómo priorizás antes de calcular.
+function _crucesEntrePendientes(pending){
+  const por={};
+  FILMS.forEach(f=>{ if(pending.includes(f.title)&&!screeningPassed(f)&&!isScreeningBlocked(f)) (por[f.title]=por[f.title]||[]).push(f); });
+  const ts=Object.keys(por); let n=0;
+  for(let i=0;i<ts.length;i++)for(let j=i+1;j<ts.length;j++){
+    if(por[ts[i]].every(a=>por[ts[j]].every(b=>screensConflict(a,b)))) n++;
+  }
+  return n;
 }
 
 // ── ANCLAJE en Mi Plan ────────────────────────────────────────────────────────

@@ -1727,3 +1727,58 @@ test('T89 — la línea del Q&A cuenta el reloj, no predice tu suerte', async ({
   if (r.cabe) expect(r.cabe, 'cuando cabe: cuánto queda hasta la siguiente').toMatch(/quedan ~\d+ min hasta la siguiente/);
   if (r.cruza) expect(r.cruza, 'cuando no: cuánto se cruza, con su número').toMatch(/se cruza ~\d+ min con la siguiente/);
 });
+
+// 18 ago, discusión de Planear (Juan: «mantener la simplicidad pero comunicar
+// mejor»): la pantalla pedía calcular sin decir qué iba a procesar. Ahora dice
+// el INSUMO («8 obras · 3 con prioridad»), el SUPUESTO (la banda de
+// Disponibilidad muestra su valor, no «opcional») y el PRE-DIAGNÓSTICO (los
+// cruces sin salida, en ámbar, con oráculo independiente en este test).
+test('T90 — Planear dice qué va a procesar antes de que lo pidas', async ({ page }) => {
+  test.setTimeout(60000);
+  await enterFestival(page, 'ficdeh2026', '2026-08-18T08:21:00-05:00');
+  await page.evaluate(() => document.querySelector('[data-action="citySheetAll"]')?.click());
+  await page.waitForTimeout(400);
+  const r = await page.evaluate(async () => {
+    const D = await import('/src/domain/film.js');
+    const S = await import('/src/domain/schedule.js');
+    // La selección INCLUYE obras con ≥2 funciones: ahí un predicado débil
+    // (some en vez de every) infla la cuenta — el cruce con salida no es cruce.
+    const porT = {};
+    FILMS.forEach(f => { if (!D.screeningPassed(f)) (porT[f.title] = porT[f.title] || []).push(f); });
+    const multi = Object.keys(porT).filter(t => porT[t].length >= 2);
+    const mono = Object.keys(porT).filter(t => porT[t].length === 1);
+    const sel = [...multi.slice(0, 4), ...mono.slice(0, 5)];
+    state.set('watchlist', new Set(sel));
+    state.set('prioritized', new Set(sel.slice(0, 3)));
+    const base = FILMS.find(f => f.day === '2026-08-19' && !sel.includes(f.title));
+    state.set('savedAgenda', { scenarioIdx: 0, schedule: [Object.assign({}, base, { _title: base.title })] });
+    cachedResult = null;
+    switchMainNav('mnav-planner'); showAgView();
+    await new Promise(r => setTimeout(r, 1500));
+    // oráculo independiente: parejas cuyas funciones chocan en TODAS las combinaciones
+    const por = {};
+    FILMS.forEach(f => { if (sel.includes(f.title) && !D.screeningPassed(f)) (por[f.title] = por[f.title] || []).push(f); });
+    const ts = Object.keys(por); let esperados = 0, debiles = 0;
+    for (let i = 0; i < ts.length; i++) for (let j = i + 1; j < ts.length; j++) {
+      if (por[ts[i]].every(a => por[ts[j]].every(b => S.screensConflict(a, b)))) esperados++;
+      if (por[ts[i]].some(a => por[ts[j]].some(b => S.screensConflict(a, b)))) debiles++;
+    }
+    const lineas = [...document.querySelectorAll('.pre-linea')];
+    const banda = document.querySelector('.ag-av-details summary')?.textContent.replace(/\s+/g, ' ') || '';
+    return {
+      esperados, debiles, pendientes: ts.length,
+      insumo: lineas[0]?.textContent.trim(),
+      cruces: lineas.find(l => l.classList.contains('cruces'))?.textContent.trim() || null,
+      crucesColor: (() => { const e = lineas.find(l => l.classList.contains('cruces')); return e && getComputedStyle(e).color; })(),
+      banda,
+    };
+  });
+  expect(r.insumo, 'el insumo: obras y prioridad').toBe(`${r.pendientes} obras · 3 con prioridad`);
+  expect(r.esperados, 'la escena tiene cruces que diagnosticar').toBeGreaterThan(0);
+  expect(r.debiles, 'y distingue el predicado: un cruce con salida no es cruce').toBeGreaterThan(r.esperados);
+  expect(r.cruces, 'el pre-diagnóstico dice el número del oráculo')
+    .toBe(r.esperados === 1 ? '1 cruce por resolver' : `${r.esperados} cruces por resolver`);
+  expect(r.crucesColor, 'en ámbar: aviso, no veredicto').toBe('rgb(245, 158, 11)');
+  expect(r.banda, 'la banda dice el supuesto, no «opcional»').toContain('Sin restricciones');
+  expect(r.banda).not.toMatch(/opcional/i);
+});
