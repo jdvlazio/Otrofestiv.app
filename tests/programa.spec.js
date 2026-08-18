@@ -1540,6 +1540,10 @@ test('T84 — el Diario: replegado de alto fijo en Mi Plan, tapa y muro continuo
       grids: sheet.querySelectorAll('.dw-grid').length,
       dias: sheet.querySelectorAll('.dw-day-lbl').length,
       estrellas: sheet.querySelectorAll('.dw-stars .dw-star.on').length,
+      sheetIzq: Math.round(sheet.getBoundingClientRect().left),
+      bandaIzq: Math.round(sheet.querySelector('.diary-band').getBoundingClientRect().left),
+      ojoIzq: Math.round(sheet.querySelector('.diary-band svg').getBoundingClientRect().left),
+      nombreCompleto: sheet.querySelector('#diary-full')?.textContent.trim(),
     };
   });
   expect(abierto.wordmark, 'la tapa lleva nuestro wordmark').toBe(true);
@@ -1548,6 +1552,12 @@ test('T84 — el Diario: replegado de alto fijo en Mi Plan, tapa y muro continuo
   expect(abierto.titulo, 'con el nombre del festival').toBe('FICDEH');
   expect(abierto.fechas, 'y sus fechas').toMatch(/AGO|AUG/);
   expect(abierto.banda, 'la banda separa la tapa del muro y lleva la cuenta').toMatch(/Lo que viste|What you saw/);
+  // La banda no puede sangrar MÁS que la sheet: con el bleed de .sec-hdr
+  // (pensado para un contenedor con padding) el icono caía en x=0, cortado
+  // contra el borde (Juan, 18 ago).
+  expect(abierto.bandaIzq, 'la banda arranca en el borde de la sheet, no antes').toBe(abierto.sheetIzq);
+  expect(abierto.ojoIzq, 'y el ojo respeta su inset, entero').toBeGreaterThanOrEqual(12);
+  expect(abierto.nombreCompleto, 'bajo la sigla, el nombre completo sin repetirla').toMatch(/Festival Internacional/);
   expect(abierto.grids, 'el muro es UNO solo, continuo').toBe(1);
   expect(abierto.dias, 'sin días partiendo la retícula').toBe(0);
   expect(abierto.estrellas, 'y las calificaciones se ven').toBeGreaterThan(0);
@@ -1748,7 +1758,10 @@ test('T89 — la línea del Q&A cuenta el reloj, no predice tu suerte', async ({
 test('T90 — Planear dice qué va a procesar antes de que lo pidas', async ({ page }) => {
   test.setTimeout(60000);
   await enterFestival(page, 'ficdeh2026', '2026-08-18T08:21:00-05:00');
-  await page.evaluate(() => document.querySelector('[data-action="citySheetAll"]')?.click());
+  // con filtro de CIUDAD: en un festival multiciudad casi todo choque es de
+  // ciudad, y el pre-diagnóstico solo afirma solapes de reloj.
+  await page.evaluate(() => [...document.querySelectorAll('#city-sheet [data-action]')]
+    .find(x => x.textContent.includes('Bogotá'))?.click());
   await page.waitForTimeout(400);
   const r = await page.evaluate(async () => {
     const D = await import('/src/domain/film.js');
@@ -1757,9 +1770,18 @@ test('T90 — Planear dice qué va a procesar antes de que lo pidas', async ({ p
     // (some en vez de every) infla la cuenta — el cruce con salida no es cruce.
     const porT = {};
     FILMS.forEach(f => { if (!D.screeningPassed(f)) (porT[f.title] = porT[f.title] || []).push(f); });
-    const multi = Object.keys(porT).filter(t => porT[t].length >= 2);
-    const mono = Object.keys(porT).filter(t => porT[t].length === 1);
-    const sel = [...multi.slice(0, 4), ...mono.slice(0, 5)];
+    // la selección INCLUYE pares que se pisan de verdad, y obras con ≥2
+    // funciones (ahí un predicado débil inflaría la cuenta: el cruce con salida
+    // no es cruce).
+    const pisanTodo = (a, b) => porT[a].every(x => porT[b].every(y => {
+      const r = S.screensConflictReason(x, y); return !!r && r.kind === 'solape'; }));
+    const ts0 = Object.keys(porT);
+    const conSolape = new Set();
+    for (let i = 0; i < ts0.length && conSolape.size < 6; i++)
+      for (let j = i + 1; j < ts0.length && conSolape.size < 6; j++)
+        if (pisanTodo(ts0[i], ts0[j])) { conSolape.add(ts0[i]); conSolape.add(ts0[j]); }
+    const multi = ts0.filter(t => porT[t].length >= 2 && !conSolape.has(t));
+    const sel = [...conSolape, ...multi.slice(0, 3)];
     state.set('watchlist', new Set(sel));
     state.set('prioritized', new Set(sel.slice(0, 3)));
     const base = FILMS.find(f => f.day === '2026-08-19' && !sel.includes(f.title));
@@ -1772,15 +1794,21 @@ test('T90 — Planear dice qué va a procesar antes de que lo pidas', async ({ p
     FILMS.forEach(f => { if (sel.includes(f.title) && !D.screeningPassed(f)) (por[f.title] = por[f.title] || []).push(f); });
     const ts = Object.keys(por); let esperados = 0, debiles = 0;
     for (let i = 0; i < ts.length; i++) for (let j = i + 1; j < ts.length; j++) {
-      if (por[ts[i]].every(a => por[ts[j]].every(b => S.screensConflict(a, b)))) esperados++;
-      if (por[ts[i]].some(a => por[ts[j]].some(b => S.screensConflict(a, b)))) debiles++;
+      const pisan = (x, y) => { const r = S.screensConflictReason(x, y); return !!r && r.kind === 'solape'; };
+      if (por[ts[i]].every(x => por[ts[j]].every(y => pisan(x, y)))) esperados++;
+      if (por[ts[i]].some(x => por[ts[j]].some(y => pisan(x, y)))) debiles++;
     }
     // materializar ANTES del re-render (los nodos quedan huérfanos después)
-    const lineas = [...document.querySelectorAll('.pre-linea')];
-    const _insumo = lineas[0]?.textContent.trim();
-    const _cr = lineas.find(l => l.classList.contains('cruces'));
+    const linea = document.querySelector('.dato-linea');
+    const _insumo = linea?.textContent.replace(/\s+/g, ' ').trim();
+    const _cr = linea?.querySelector('.dato-alerta');
     const _crTxt = _cr?.textContent.trim() || null;
     const _crColor = _cr && getComputedStyle(_cr).color;
+    const _fs = linea && getComputedStyle(linea).fontSize;
+    // ritmo 1:2 — el hueco al CTA no puede ser el de «entre secciones»
+    const _cta = document.querySelector('.av-calc-btn');
+    const _gapCta = (_cta && linea) ? Math.round(_cta.getBoundingClientRect().top - linea.getBoundingClientRect().bottom) : null;
+    const _filas = document.querySelectorAll('.dato-linea').length;
     const fila = document.querySelector('.av-fila');
     const _filaTxt = fila?.textContent.replace(/\s+/g, ' ').trim();
     const _editar = fila?.querySelector('.av-editar')?.textContent.trim() || null;
@@ -1794,17 +1822,23 @@ test('T90 — Planear dice qué va a procesar antes de que lo pidas', async ({ p
       return !!b && b.children.length > 0 && b.offsetParent !== null; })();
     return {
       esperados, debiles, pendientes: ts.length,
-      insumo: _insumo, cruces: _crTxt, crucesColor: _crColor,
+      insumo: _insumo, cruces: _crTxt, crucesColor: _crColor, fs: _fs, gapCta: _gapCta, filas: _filas,
       filaTxt: _filaTxt, editar: _editar,
       acordeon: !!document.querySelector('.ag-av-details'),
       bloqueVisible,
     };
   });
-  expect(r.insumo, 'el insumo: obras y prioridad').toBe(`${r.pendientes} obras · 3 con prioridad`);
+  // UNA sola línea con la fórmula «texto · texto»: insumo y aviso conviven
+  expect(r.filas, 'una sola línea, no dos').toBe(1);
+  expect(r.insumo, 'el insumo abre la línea').toMatch(new RegExp(`^${r.pendientes} obras · \\d+ con prioridad`));
+  expect(r.fs, 'con el cuerpo del canon (t-base), no t-sm').toBe('13px');
+  expect(r.gapCta, 'y el salto al CTA es sp-4, no «entre secciones»').toBeLessThanOrEqual(20);
   expect(r.esperados, 'la escena tiene cruces que diagnosticar').toBeGreaterThan(0);
   expect(r.debiles, 'y distingue el predicado: un cruce con salida no es cruce').toBeGreaterThan(r.esperados);
-  expect(r.cruces, 'el pre-diagnóstico dice el número del oráculo')
-    .toBe(r.esperados === 1 ? '1 cruce por resolver' : `${r.esperados} cruces por resolver`);
+  // solapes puros: dato del programa, afirmable. Los cruces por viaje son
+  // estimación nuestra y no se anuncian como hecho antes de calcular.
+  expect(r.cruces, 'el pre-diagnóstico dice el número del oráculo de SOLAPES')
+    .toBe(r.esperados === 1 ? '1 cruce de horario' : `${r.esperados} cruces de horario`);
   expect(r.crucesColor, 'en ámbar: aviso, no veredicto').toBe('rgb(245, 158, 11)');
   // La fila de Disponibilidad: sin acordeón, sin valor verbal (Juan: confundía)
   // — el estado lo dicen los BLOQUES visibles. «Editar» hereda el objeto.
