@@ -292,7 +292,7 @@ está pasando de verdad — no lo que alguien recordaba al escribirlo.
 | `unscheduled` | boolean | — | 1 fest | En catálogo sin jornada. Única exención de day/time/venue. |
 | `sessions` | array | — | 1 fest |  |
 | `has_qa` | boolean | — | 7 fest | Afecta conflictos vía durationForTravel. |
-| `qa_type` | string | `team` · `guests` | 1 fest | La variante del Q&A. Se pinta traducida; NO se escribe la frase en el dato. |
+| `qa_type` | string | `team` · `guests` | 2 fest | La variante del Q&A. Se pinta traducida; NO se escribe la frase en el dato. |
 | `competencia` | string | — | 1 fest |  |
 | `premium` | boolean | — | — |  |
 | `sala` | string | — | 3 fest | Sala DENTRO de la sede. Que no aparezca en el nombre de la sede ([sala-en-sede]). |

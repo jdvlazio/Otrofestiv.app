@@ -145,6 +145,7 @@ def ensamblar(fid, escribir=True):
             # `info`: drop-in sin hora de fin — se muestra y NO se planifica.
             'info': True if f.get('info') else None,
             'has_qa': bool(f.get('has_qa')),
+            'qa_type': f.get('qa_type') or None,
             'synopsis': f.get('sinopsis') or None,
             'synopsis_lang': 'es' if f.get('sinopsis') else None,
             'poster': f.get('poster') or None,

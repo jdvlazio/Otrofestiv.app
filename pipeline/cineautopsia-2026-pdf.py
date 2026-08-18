@@ -197,6 +197,21 @@ def main():
                             'duracion_min': int(o.group('min')),
                         })
                     continue
+                # EL Q&A ESTABA AQUÍ Y LO ESTABA TIRANDO. Estas líneas parecen
+                # pie de página de diseño —«Esta muestra tendrá un breve
+                # conversatorio posterior…»— y son un DATO: la función tiene
+                # Q&A. Ocho funciones lo decían y el JSON salía con has_qa en
+                # cero. Lo cazó Juan preguntando, igual que la boletería.
+                # «onversat» y no «conversatorio»: el OCR devolvió
+                # «conversatono» en una página y esa función se quedaba sin Q&A.
+                if re.search(r'onversat', x, re.I):
+                    f['has_qa'] = True
+                    # Solo se declara CON QUIÉN cuando el festival lo dice. El
+                    # texto genérico no nombra a nadie, así que no se inventa.
+                    if re.search(r'director|artista|productor', x, re.I):
+                        f['qa_type'] = 'team'
+                    f.setdefault('_qa_src', x[:90])
+                    continue
                 if x.lower().startswith('esta muestra') or re.match(r'^[\d°ºSIsi\W]{0,4}$', x):
                     continue
                 if etapa == 'sede':
