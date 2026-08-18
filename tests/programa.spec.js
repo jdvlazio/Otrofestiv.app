@@ -2093,3 +2093,48 @@ test('T95 — la alerta de cruces es un pre-diagnóstico: no sobrevive al result
     expect(r.banner, 'la segunda oración arranca en mayúscula').toMatch(/\.\s+[A-ZÁÉÍÓÚÑ]/);
   }
 });
+
+test('T96 — el botón admite que ya calculó, y no compite con el que confirma', async ({ page }) => {
+  test.setTimeout(90000);
+  await enterFestival(page, 'ficdeh2026', '2026-08-18T08:00:00-05:00');
+  await page.evaluate(() => [...document.querySelectorAll('#city-sheet [data-action]')]
+    .find(x => x.textContent.includes('Bogotá'))?.click());
+  await page.waitForTimeout(500);
+  const r = await page.evaluate(async () => {
+    const D = await import('/src/domain/film.js');
+    const bog = f => (f.venue || '').includes('Bogotá');
+    const fut = [...new Set(FILMS.filter(f => bog(f) && !D.screeningPassed(f)).map(f => f.title))];
+    state.set('watchlist', new Set(fut.slice(0, 12)));
+    // con Plan guardado NO hay auto-cálculo (pipeline.js): se ve el estado previo
+    const base = FILMS.find(f => bog(f) && !D.screeningPassed(f));
+    state.set('savedAgenda', { scenarioIdx: 0, schedule: [Object.assign({}, base, { _title: base.title })] });
+    cachedResult = null;
+    switchMainNav('mnav-planner'); showAgView();
+    await new Promise(r => setTimeout(r, 1500));
+    // ámbar del canon primario: el primer stop del degradado
+    const AMBAR = '251, 191, 36';
+    const primarios = () => [...document.querySelectorAll('button')]
+      .filter(b => b.offsetParent !== null)
+      .filter(b => (getComputedStyle(b).backgroundImage || '').includes(AMBAR))
+      .map(b => b.textContent.replace(/\s+/g, ' ').trim());
+    const btn = () => document.querySelector('.av-calc-btn');
+    const esAmbar = el => (getComputedStyle(el).backgroundImage || '').includes(AMBAR);
+    const antes = { txt: btn().textContent.trim(), recalc: btn().classList.contains('recalc'), ambar: esAmbar(btn()) };
+    btn().click();
+    for (let i = 0; i < 40 && !document.querySelector('.ag-day-band'); i++) await new Promise(r => setTimeout(r, 250));
+    await new Promise(r => setTimeout(r, 400));
+    return { antes, despues: { txt: btn().textContent.trim(), recalc: btn().classList.contains('recalc'),
+      ambar: esAmbar(btn()), primarios: primarios() } };
+  });
+  expect(r.antes.txt, 'sin resultado, el botón ofrece calcular').toMatch(/Calcular/);
+  expect(r.antes.recalc, 'y es el primario').toBe(false);
+  expect(r.antes.ambar, 'sin resultado, calcular ES el CTA ámbar').toBe(true);
+  expect(r.despues.txt, 'con resultado, nombra lo que de verdad haría').toMatch(/Recalcular/);
+  expect(r.despues.recalc, 'y baja a secundario').toBe(true);
+  expect(r.despues.ambar, 'y deja de vestirse de CTA primario').toBe(false);
+  // El paso siguiente pasa a ser confirmar: «Usar este Plan» queda como el único
+  // ámbar de PÁGINA. (Las acciones de fila del bloque de conflictos también son
+  // ámbar por el canon; se cuentan aparte y no son parte de este cambio.)
+  expect(r.despues.primarios.some(txt => /Plan/.test(txt)), 'el CTA que confirma sigue en ámbar').toBe(true);
+  expect(r.despues.primarios.some(txt => /Calcular|Recalcular/.test(txt)), 'y el de calcular ya no compite').toBe(false);
+});
