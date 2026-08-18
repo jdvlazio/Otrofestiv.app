@@ -1027,11 +1027,15 @@ test('T73 — la cuenta del veredicto usa la misma aritmética que la decisión'
   expect(r.qaOnly, 'y existe SOLO por el Q&A').toBe(true);
   // 1· el margen es un SUMANDO de la cadena, no una regla enunciada aparte: así
   //    el total se compara solo contra la hora de inicio (21:15 vs 21:00).
-  expect(r.txt, 'el margen entra en la suma').toContain('margen 15 min');
-  expect(r.txt, 'y el total sale de sumarlo').toContain('21:15');
-  expect(r.txt, 'contra la hora de inicio').toContain('empieza 21:00');
+  // 18 ago: la SUMA se retiró (Juan) — «21:15 se entiende cuando la función
+  // dice 21:00», y esa hora vive ahora arriba, en la línea de la función. La
+  // cuenta conserva la CAUSA (Q&A, viaje) y el veredicto, con la tilde de
+  // estimado mudada al total: sugerimos, no predecimos.
+  expect(r.txt, 'nombra la causa: el Q&A y el viaje').toMatch(/Q&A y viaje/);
+  expect(r.txt, 'y el veredicto es el total, marcado como estimado').toContain('~21:15');
+  expect(r.txt, 'sin enumerar los sumandos').not.toMatch(/margen 15 min|\+ viaje/);
   // 2· la salida va en la MISMA moneda: la hora a la que llegarías sin el Q&A
-  expect(r.txt, 'nombra la alternativa con su hora').toContain('sin el Q&A, 20:45');
+  expect(r.txt, 'nombra la alternativa con su hora').toContain('sin el Q&A, ~20:45');
   // y ya no hace falta un veredicto en palabras
   expect(r.txt, 'sin frase de veredicto').not.toMatch(/no te daría el tiempo|te quedarían/);
   // 3· tomarla a sabiendas produce un plan VÁLIDO; sin la marca, no
@@ -1451,7 +1455,8 @@ test('T83 — Diario Luz: muro limpio, estrellas afuera, y la negación se apaga
     await new Promise(r => setTimeout(r, 1400));
     const wrap = document.querySelector('.diario-wrap');
     const sug = document.querySelector('.suggestion-wrap');
-    const card = t => [...wrap.querySelectorAll('.dw-card')].find(c => c.dataset.title === t);
+    // el data-title vive en el AFICHE (su tap abre la ficha), no en la card
+    const card = t => [...wrap.querySelectorAll('.dw-card')].find(c => c.querySelector(`[data-title="${CSS.escape(t)}"]`));
     const cR = card(rated.title), cA = card(assumed.title), cN = card(negada.title);
     return {
       alFinal: !!wrap && !!sug && wrap.getBoundingClientRect().top > sug.getBoundingClientRect().top,
@@ -1459,16 +1464,18 @@ test('T83 — Diario Luz: muro limpio, estrellas afuera, y la negación se apaga
       // calificada: estrellas FUERA del póster (la fila no es descendiente de .dw-poster)
       ratedStars: cR?.querySelectorAll('.dw-stars .dw-star.on').length,
       starsFuera: cR ? !cR.querySelector('.dw-poster .dw-stars') : null,
-      // asumida: ni un pixel de estado sobre el afiche
-      assumedLimpia: cA ? !cA.querySelector('.dw-off-badge') && cA.querySelectorAll('.dw-star.on').length === 0 : null,
-      // negada: apagada con ojo tachado, y NO cuenta en la banda
-      negadaOff: cN ? !!cN.querySelector('.dw-off-badge') && !!cN.querySelector('.dw-poster.dw-off') : null,
+      // asumida: ni un pixel de estado sobre el afiche (su control es la
+      // estrella opaca de la fila, no una marca encima del póster)
+      assumedLimpia: cA ? !cA.querySelector('.dw-poster > :not(img)') && cA.querySelectorAll('.dw-star.on').length === 0 : null,
+      // negada: apagada, con el ojo tachado en su FILA, y NO cuenta en la banda
+      negadaOff: cN ? !!cN.querySelector('.dw-row .dw-ctrl[data-action="toggleWatched"]') && !!cN.querySelector('.dw-poster.dw-off') : null,
     };
   });
   expect(r.alFinal, 'el Diario cierra el tab, después de Sugerencias').toBe(true);
   expect(Number(r.cuenta), 'la banda cuenta 2: la calificada y la ASUMIDA — la negada no').toBe(2);
   expect(r.ratedStars, 'la calificada lleva sus 4 estrellas').toBe(4);
   expect(r.starsFuera, 'las estrellas viven FUERA del afiche (Letterboxd)').toBe(true);
+  // (el detalle fino de la fila de control lo fija T86)
   expect(r.assumedLimpia, 'la asumida no lleva ni un pixel de estado').toBe(true);
   expect(r.negadaOff, 'la negada se apaga con el ojo tachado').toBe(true);
 });
@@ -1515,10 +1522,9 @@ test('T84 — el Diario es UN muro: misma anatomía en sección y overlay', asyn
       // el ojo se mide por lo que DIBUJA en pantalla (rect del trazo), no por
       // la caja del svg: con box-sizing:border-box el padding lo redujo a un
       // punto negro de 4px mientras la caja seguía diciendo 18 (18 ago).
-      ojoPx: off && Math.round([...off.querySelectorAll('path,circle')]
-        .reduce((max, p) => Math.max(max, p.getBoundingClientRect().width), 0)),
-      ojoCaja: off && Math.round(off.getBoundingClientRect().width),
-      ojoDisco: off && Math.round(off.parentElement.getBoundingClientRect().width),
+      ojoFuera: !!document.querySelector('.dw-row .dw-ctrl svg') && !document.querySelector('.dw-poster .dw-ctrl'),
+      ojoPx: (() => { const s = document.querySelector('.dw-row .dw-ctrl svg'); return s && Math.round(s.getBoundingClientRect().width); })(),
+      posterLimpio: !document.querySelector('.dw-poster > :not(img)'),
       starsFueraOverlay: !document.querySelector('.diary-sheet .dw-poster .dw-stars') };
   });
   expect(r.secGrid.cols, 'el muro es de 4 columnas en la sección').toBe(4);
@@ -1532,9 +1538,9 @@ test('T84 — el Diario es UN muro: misma anatomía en sección y overlay', asyn
   expect(r.hdrColor, 'y «Diario» en blanco pleno, no ámbar').toBe('rgb(240, 237, 232)');
   expect(r.hdrBadge, 'la cuenta es badge…').toBe(true);
   expect(r.hdrTxt, '…numérica, nunca en palabras').toMatch(/^\d+$/);
-  expect(r.ojoCaja, 'el icono mide 18px de caja').toBe(18);
-  expect(r.ojoPx, 'y DIBUJA al menos 14px — no un punto').toBeGreaterThanOrEqual(14);
-  expect(r.ojoDisco, 'sobre un disco de 32px').toBe(32);
+  expect(r.ojoFuera, 'el control vive FUERA del afiche, en su fila').toBe(true);
+  expect(r.ojoPx, 'y dibuja de verdad — no un punto').toBeGreaterThanOrEqual(12);
+  expect(r.posterLimpio, 'el afiche es solo afiche: nada encima').toBe(true);
   expect(r.starsFueraOverlay, 'estrellas bajo el afiche también en el overlay').toBe(true);
 });
 
@@ -1573,5 +1579,89 @@ test('T85 — al abrir Programa, hoy y mañana caben sin navegar', async ({ page
     expect(r.dias, `${fest} tiene barra con varios días`).toBeGreaterThan(6);
     expect(r.hoy, `${fest}: hoy a la vista al abrir Programa`).toBe(true);
     expect(r.manana, `${fest}: y mañana también, sin navegar`).toBe(true);
+  }
+});
+
+// 18 ago (Juan, tras ver el ojo sobre el afiche): «el tap del póster abre la
+// card — ese comportamiento no se cambia». Los controles salen del afiche a
+// una fila centrada debajo: ojo tachado (devolver a vista) y estrella opaca
+// (calificar), a la altura de las estrellas de las calificadas.
+test('T86 — Diario: el afiche es solo afiche; los controles viven debajo', async ({ page }) => {
+  await enterFestival(page, 'ficdeh2026', '2026-08-18T15:00:00-05:00');
+  await page.evaluate(() => document.querySelector('[data-action="citySheetAll"]')?.click());
+  await page.waitForTimeout(400);
+  const r = await page.evaluate(async () => {
+    const pick = (day, n) => FILMS.filter(f => f.day === day && f.poster && !f.is_cortos).slice(0, n);
+    const s = pick('2026-08-13', 3);
+    state.set('savedAgenda', { scenarioIdx: 0, schedule: s.map(f => Object.assign({}, f, { _title: f.title })) });
+    state.set('watched', new Set()); state.set('notWatched', new Set([s[2].title]));
+    state.set('filmRatings', { [s[0].title]: 4 });
+    switchMainNav('mnav-miplan'); showAgView();
+    await new Promise(r => setTimeout(r, 1400));
+    const cards = [...document.querySelectorAll('.diario-wrap .dw-card')];
+    const byTitle = t => cards.find(c => c.querySelector(`[data-title="${CSS.escape(t)}"]`));
+    const cal = byTitle(s[0].title), sinCal = byTitle(s[1].title), negada = byTitle(s[2].title);
+    const bajoElAfiche = c => { const p = c.querySelector('.dw-poster'), row = c.querySelector('.dw-row');
+      return !!p && !!row && row.getBoundingClientRect().top >= p.getBoundingClientRect().bottom - 1; };
+    const centrado = c => { const row = c.querySelector('.dw-row'), el = row.firstElementChild;
+      const rr = row.getBoundingClientRect(), er = el.getBoundingClientRect();
+      return Math.abs((er.left + er.right) / 2 - (rr.left + rr.right) / 2) <= 2; };
+    return {
+      nadaEncima: cards.every(c => !c.querySelector('.dw-poster > :not(img)')),
+      posterAbreFicha: cards.every(c => c.querySelector('.dw-poster')?.classList.contains('js-open-pel')),
+      // la negada ofrece el ojo; la no calificada, la estrella; la calificada, sus estrellas
+      negadaOjo: !!negada?.querySelector('.dw-ctrl[data-action="toggleWatched"]'),
+      sinCalEstrella: !!sinCal?.querySelector('.dw-ctrl-star[data-action="openRatingSheet"]'),
+      calEstrellas: cal?.querySelectorAll('.dw-stars .dw-star.on').length,
+      negadaSinEstrella: !negada?.querySelector('.dw-ctrl-star'),
+      bajo: [cal, sinCal, negada].every(bajoElAfiche),
+      centrados: [sinCal, negada].every(centrado),
+      // la fila reserva su alto aunque el control sea el mismo → misma línea base
+      mismaBase: new Set([cal, sinCal, negada].map(c => Math.round(c.querySelector('.dw-row').getBoundingClientRect().top))).size === 1,
+    };
+  });
+  expect(r.nadaEncima, 'el afiche no lleva nada encima').toBe(true);
+  expect(r.posterAbreFicha, 'y su tap abre la ficha, como en toda la app').toBe(true);
+  expect(r.negadaOjo, 'la negada ofrece el ojo tachado para volver a vista').toBe(true);
+  expect(r.sinCalEstrella, 'la no calificada ofrece la estrella opaca').toBe(true);
+  expect(r.calEstrellas, 'la calificada muestra su calificación').toBe(4);
+  expect(r.negadaSinEstrella, 'a la negada no se le pide calificar').toBe(true);
+  expect(r.bajo, 'los controles viven DEBAJO del afiche').toBe(true);
+  expect(r.centrados, 'y centrados en su fila').toBe(true);
+  expect(r.mismaBase, 'la fila reserva su alto: los pósters no bailan').toBe(true);
+});
+
+// 18 ago (Juan): «al abrir la Card debe aparecer Vista, con el ojito; siempre
+// primero la opción de Vista». Lo que había era una mentira de interfaz: el
+// botón decía «Calificar» con estrella y su acción era toggleWatched — marcaba
+// vista. Ahora el ojo y el label dicen lo que el botón hace, en los dos estados.
+test('T87 — la card ofrece VISTA con el ojo, y calificar viene después', async ({ page }) => {
+  await enterFestival(page, 'ficdeh2026', '2026-08-18T15:00:00-05:00');
+  await page.evaluate(() => document.querySelector('[data-action="citySheetAll"]')?.click());
+  await page.waitForTimeout(400);
+  const r = await page.evaluate(async () => {
+    const f = FILMS.find(x => !x.is_cortos && x.poster);
+    openPelSheet(f.title);
+    await new Promise(r => setTimeout(r, 700));
+    const btn = document.getElementById('pel-vista-btn');
+    const antes = { txt: btn?.textContent.trim(), accion: btn?.dataset.action,
+      // el icono del ojo trae su círculo (pupila); la estrella, un polígono
+      ojo: !!btn?.querySelector('circle'), estrella: !!btn?.querySelector('polygon') };
+    // marcarla vista → la card pasa al estado ya-vista
+    btn.click();
+    await new Promise(r => setTimeout(r, 500));
+    const modal = [...document.querySelectorAll('button')].find(b => /Sí|Marcar|Confirmar/i.test(b.textContent));
+    if (modal) { modal.click(); await new Promise(r => setTimeout(r, 700)); }
+    const vistos = [...document.querySelectorAll('.pel-sheet-ctas-watched .pel-sheet-action-btn')]
+      .map(b => ({ txt: b.textContent.trim(), ojo: !!b.querySelector('circle'), estrella: !!b.querySelector('polygon') }));
+    return { antes, vistos };
+  });
+  expect(r.antes.accion, 'el botón marca vista…').toBe('toggleWatched');
+  expect(r.antes.txt, '…y lo dice: Vista, no Calificar').toMatch(/Vista|Seen|Watched/);
+  expect(r.antes.ojo, 'con el ojo, el icono de watched').toBe(true);
+  expect(r.antes.estrella, 'sin estrella: calificar es otra cosa').toBe(false);
+  if (r.vistos.length) {
+    expect(r.vistos[0].txt, 'ya vista: Vista sigue primero').toMatch(/Vista|Seen|Watched/);
+    expect(r.vistos[0].ojo, 'y con el ojo, no con el check').toBe(true);
   }
 });

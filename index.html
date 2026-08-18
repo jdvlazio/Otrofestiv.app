@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202608180701">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202608180701">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202608180733">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202608180733">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -1648,10 +1648,13 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 /* El disco es del CONTENEDOR, no del svg: con box-sizing:border-box el
    padding se comía el icono desde adentro (18px totales − 14 de padding = 4px
    de dibujo — el «punto negro» que vio Juan el 18 ago). */
-.dw-off-badge{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:none;border:none;cursor:pointer;padding:0}
-.dw-off-badge>span{display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:var(--surf-2);border:1px solid var(--bdr);color:var(--white)}
-.dw-off-badge svg{width:18px;height:18px}
-.dw-stars{display:flex;gap:2px;margin-top:var(--sp-1);min-height:10px}
+/* Fila de control: fuera del afiche, centrada. Reserva su alto siempre para
+   que los pósters de una misma fila conserven su línea base. */
+.dw-row{display:flex;align-items:center;justify-content:center;min-height:16px;margin-top:var(--sp-1)}
+.dw-ctrl{display:flex;align-items:center;justify-content:center;background:none;border:none;padding:2px;cursor:pointer;line-height:0;color:var(--white-30,rgba(240,237,232,.32))}
+.dw-ctrl svg{width:14px;height:14px}
+.dw-ctrl-star svg{width:12px;height:12px;fill:currentColor;stroke:none}
+.dw-stars{display:flex;gap:2px;min-height:10px}
 .dw-star{display:flex;color:var(--white-20,rgba(240,237,232,.2))}
 .dw-star.on{color:var(--amber)}
 .dw-star svg{width:10px;height:10px}
@@ -2774,6 +2777,9 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .int-item-info{flex:1;min-width:0}
 .int-item-title{font-size:var(--t-base);font-weight:var(--w-bold);color:var(--white);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-bottom:2px}
 .int-item-sec{font-size:var(--t-label);font-weight:var(--w-semi);color:var(--white-60);margin-bottom:var(--sp-1);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+/* La función propia de una obra excluida: fecha y hora en el sitio de siempre
+   (la razón de abajo ya no las repite). */
+.int-item-when{font-size:var(--t-sm);font-weight:var(--w-semi);color:var(--amber);margin-bottom:var(--sp-1);letter-spacing:.2px}
 
 .int-item-days{margin-bottom:2px;line-height:1.3}
 .int-item-days .pelicula-day{width:auto}
@@ -3293,7 +3299,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202608180701";
+    s.src="/src/main.js?v=202608180733";
     document.body.appendChild(s);
     // Watchdog de boot (P0 18 jul): si el grafo ESM murió en el import (caché
     // HTTP mixta tras deploys en ráfaga — main.js nuevo + módulo viejo sin el
