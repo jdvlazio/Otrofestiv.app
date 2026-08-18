@@ -394,6 +394,17 @@ helpers.js o `--amb` a mano = build roto. Safari iOS: muestrear con URL propia
   de golpe, pero impide sumar la 90 sin decidirlo, y verifica que el canon siga
   vivo con su `t-base` y su ritmo.
 
+### 8.5 · Botones con icono — alineación (`[icono-texto]`)
+- Un `<button>` cuyo markup pone `${ICONS.x}` **seguido de texto** DEBE llevar
+  `display:inline-flex` + `align-items:center` (+ `gap`). Sin eso el SVG se
+  apoya en la línea BASE del texto y flota: medido 3px de desfase en el «+» de
+  «Agendar» (`.excl-include-btn`, cazado por Juan el 18 ago 2026 en producción).
+- El guardián mira SOLO elementos `<button>` con icono **y** texto: los
+  contenedores de icono solo (chevrons, cierres) no tienen nada que alinear.
+- Por qué no lo vio `[button-canon]`: ese guardián audita color, fondo, radio y
+  peso — la anatomía declarada en julio. Nunca miró la geometría INTERNA. Dos
+  guardianes, dos preguntas distintas sobre el mismo componente.
+
 ### 8.4 · Botones — regla dueña única (`[button-canon]`)
 - **PRIMARIO**: UNA regla CSS dueña (`--amber-cta` / negro / `--r-pill` / `--sp-btn`
   / `t-base` / `w-bold` / hover .88). 10 clases suscritas; un primario nuevo se

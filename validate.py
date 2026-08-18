@@ -2287,6 +2287,49 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar button-canon: {_e}')
 
+# ── [icono-texto] un botón con icono Y texto se alinea, o el icono flota ──────
+# Juan, 18 ago 2026: el «+» de «Agendar» iba 3px más alto que la palabra. La
+# causa: .excl-include-btn no tenía display:inline-flex ni align-items:center,
+# así que el SVG se apoyaba en la línea BASE del texto en vez de centrarse con
+# él. [button-canon] no lo vio porque mira color, fondo y peso — nunca miró
+# geometría interna. Este chequeo cierra ese hueco: si el markup pone un ICONS.x
+# SEGUIDO DE TEXTO dentro de un botón, su regla CSS debe alinearlos. Los
+# contenedores de icono SOLO (chevrons, cierres) no entran: no hay nada que
+# alinear con nada.
+check = 'icono-texto'
+try:
+    import re as _re, glob as _glob
+    _html = open('index.html', encoding='utf-8').read()
+    _src = ''
+    for _f in _glob.glob('src/**/*.js', recursive=True):
+        _src += open(_f, encoding='utf-8').read()
+    # markup: class="… X …" … > ${ICONS.algo} <algo que NO cierra el tag>
+    _con_texto = set()
+    # SOLO elementos <button>: una fila de texto con icono se alinea por su
+    # cuenta (line-height, vertical-align) y no es lo que rompe aquí.
+    for _m in _re.finditer(r'<button[^>]*class="([^"]*)"[^>]*>\s*\$\{ICONS\.\w+\}\s*([^<]{2,40})', _src):
+        _resto = _m.group(2).strip()
+        if not _resto or _resto.startswith('</'):
+            continue  # icono solo
+        for _c in _m.group(1).split():
+            if '${' in _c:
+                continue
+            _con_texto.add(_c)
+    _errs = []
+    for _c in sorted(_con_texto):
+        _r = _re.search(r'^\.' + _re.escape(_c) + r'\{([^}]*)\}', _html, _re.M)
+        if not _r:
+            continue
+        _b = _r.group(1)
+        if 'flex' not in _b or 'align-items:center' not in _b:
+            _errs.append(f'.{_c} lleva icono+texto sin alinear (falta inline-flex + align-items:center)')
+    if _errs:
+        fail(check, '; '.join(_errs[:5]))
+    else:
+        ok(check, f'{len(_con_texto)} botones con icono+texto, todos alineados')
+except Exception as _e:
+    warn(check, f'no se pudo verificar icono-texto: {_e}')
+
 # ── [dato-linea] la línea de dato tiene UN dueño; la familia no crece ─────────
 # Auditoría 18 ago 2026: la app tenía 89 clases distintas de «texto pequeño gris»
 # (.hint, .cnt-line, .excl-reason, .plist-meta, .suggestion-meta…) — ninguna era
@@ -3566,7 +3609,7 @@ try:
     _ALLOW = {
         'src/view/agenda.js': 1935,  # +35: Planear distingue las tres situaciones del vacío (nada en el festival / intereses agotados / primer uso) y el vacío de combos solo culpa a la disponibilidad si hay bloqueos (17 ago)  # +15: «No incluidas» solo lista lo que compitió; fuera el banner que generalizaba una causa falsa (17 ago)  # +10: la fila de excluidas distingue el choque que es solo por el Q&A (17 ago)  # +8: el badge de Mi Plan dice Q&A en vez de contar cero durante la charla (17 ago)  # +3 netas: banda canónica en «Sin confirmar» y orden de la fila de progreso, menos progressPct muerto (17 ago)  # +2: el chip del Diario lee la cuenta del dominio (dueño único) (17 ago)  # +9: el aviso de ciudad en Intereses usa la banda de AVISOS (17 ago)  # +17: Intereses avisa cuántas obras quedan fuera por la ciudad (17 ago)  # +10: el panel de alternativas no ofrece hermanas del mismo bloque (17 ago)  # +6: el chip del Diario toma la forma canónica (icono + nombre + count-badge) (17 ago)  # +7: el chip nombra su destino (Diario) y el bloque del Recuerdo lleva su encabezado (17 ago)  # +17: Sugerencias no se dibuja en días pasados y su vacío nombra el día; la caja «Día libre» verifica antes de prometer (17 ago)  # +10: «Ya pasó» distingue el hecho temporal del inventario en las 4 superficies (16 ago)  # +5: la vista publica el SET de ciudad antes de filtrar (alternativas y sugerencias) (16 ago)  # +9: alternativas y recuperación consumen screeningPlannable (el panel ofrecía otras ciudades y canceladas) (16 ago)  # +3: el hint mira el DÍA ACTIVO — aparecía en un día libre, sin horas que tocar (16 ago)  # +6: el chip dice «obras vistas» y desaparece a cero (16 ago)  # +2: el hint dice «cambiar de actividad» — el panel puede ofrecer charlas y talleres (16 ago)  # +7: el resultado se llama «Opción» y no «Tu Plan» (dos objetos, un nombre) (16 ago)  # +4: el aviso del Q&A declara sus 30 min y el veredicto va en condicional (16 ago)  # +7: la segunda hora de la fila dice «hasta HH:MM» (16 ago)  # +4: el corazón único — la fila de Intereses gana el control que le faltaba y la ✕ destructiva de Planear pasa a ser el mismo corazón (16 ago)  # +4: la fila de ciudad explica pero no ofrece «+ Incluir» (16 ago)  # +6: marcadores plannable-ok en los tres sitios de CATÁLOGO (16 ago)  # +1: motivo de exclusión con la cuenta y sujeto correcto (ciudad=el PLAN) (15 ago)  # +6: sugerencias y filas del plan respetan/muestran la ciudad (15 ago)  # +8: gate del scroll a «ahora» + por qué Mi Plan NO repite la banda (10 ago)  # +13: «Sesión 1 de 2» en Mi Plan + el taller no se sugiere (8 ago)  # +7: el taller multi-día no se sugiere (bloque a medias) (8 ago)  # +9: kind 'ciudad' en el detalle de conflicto (6 ago)
         'src/main.js': 1670,  # +1: dispatcher de includeAnyway (17 ago)  # +7: el splash recuerda el festival elegido (memoria que caduca sola) (16 ago)  # +46 total: _morphOpen a FLIP — clon de la card compuesta, radio contra-escalado, encuadre del destino (29 jul)
-        'src/i18n/i18n.js': 1564,  # +3: diary_lo_que_viste ×3 — la banda que separa la tapa del muro (18 ago)
+        'src/i18n/i18n.js': 1568,  # +4: res_dias/res_dia (el resumen del resultado dice días) — 18 ago
         'src/controller/sheets-controller.js': 1682,  # +4: el nombre completo del festival en la tapa, vía festivalTagline (18 ago)
         'src/controller/handlers.js': 1105,  # +2: el límite de prioridades mide las vivas (prioLiveCount) (17 ago)  # +26: includeAnyway — agendar la que solo choca por el Q&A, marcada como decisión deliberada (17 ago)  # +12: _vueltaA — el toast nombra la sección REAL donde reaparece (la prioridad sobrevive al desmarcar) (16 ago)  # +6: los dos toasts dicen «también en Intereses», solo cuando de verdad sumaron (16 ago)  # +18: el squeeze y «+ Incluir» usan el dueño del predicado (el plan volvía a cruzar ciudades al GUARDAR) (16 ago)  # +8: el toast del programa dice cuántas obras y por qué (15 ago)  # +45: taller multi-día — addRecurringBlock/removeRecurringBlock (bloque entero en un solo commitPlan) (8 ago)  # +15: acciones del sheet de ciudad (7 ago)  # +20: anclaje de función en toggleWL, simétrico al quitar (29 jul)
     }

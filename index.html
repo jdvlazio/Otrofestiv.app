@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202608181256">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202608181256">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202608181407">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202608181407">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -1062,7 +1062,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 /* Detalle del conflicto por desplazamiento: los minutos (viaje vs hueco) que
    convierten la advertencia en algo verificable. Secundario al mensaje. */
 .excl-reason-det{font-size:var(--t-xs);color:var(--gray2);margin-top:1px}
-.excl-include-btn{flex-shrink:0;height:28px;padding:0 10px;border-radius:var(--r-pill);border:1px solid var(--bdr);background:none;color:var(--gray);font-size:var(--t-xs);font-weight:var(--w-bold);font-family:var(--font);cursor:pointer;white-space:nowrap;transition:border-color var(--tr-base),color var(--tr-base);-webkit-tap-highlight-color:transparent}
+.excl-include-btn{flex-shrink:0;height:28px;padding:0 10px;display:inline-flex;align-items:center;justify-content:center;gap:4px;border-radius:var(--r-pill);border:1px solid var(--bdr);background:none;color:var(--gray);font-size:var(--t-xs);font-weight:var(--w-bold);font-family:var(--font);cursor:pointer;white-space:nowrap;transition:border-color var(--tr-base),color var(--tr-base);-webkit-tap-highlight-color:transparent}
 .poster-card:active{opacity:.85}
 /* Overlay de hora (Por Horario) */
 .poster-time{position:absolute;bottom:0;left:0;right:0;padding:20px 7px 6px;background:linear-gradient(to top,rgba(0,0,0,.85) 0%,rgba(0,0,0,0) 100%);font-size:var(--t-icon);font-weight:var(--w-display);color:var(--amber);line-height:1;letter-spacing:-.3px}
@@ -1560,7 +1560,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .av-sep{font-size:var(--t-sm);color:var(--gray2)}
 .av-add-btn{background:var(--amber-10);border:1px solid var(--amber-30);border-radius:var(--r-pill);color:var(--amber);font-size:var(--t-sm);font-weight:var(--w-semi);padding:var(--sp-2) var(--sp-3);cursor:pointer;font-family:var(--font);transition:background var(--tr-base)}
 .av-add-btn:hover{background:var(--amber-20)}
-.av-plus-btn{background:none;border:1px solid var(--bdr);border-radius:var(--r-pill);color:var(--gray);font-size:var(--t-sm);padding:var(--sp-2) var(--sp-3);cursor:pointer;font-family:var(--font);transition:color var(--tr-base),border-color var(--tr-base);white-space:nowrap}
+.av-plus-btn{display:inline-flex;align-items:center;justify-content:center;gap:4px;background:none;border:1px solid var(--bdr);border-radius:var(--r-pill);color:var(--gray);font-size:var(--t-sm);padding:var(--sp-2) var(--sp-3);cursor:pointer;font-family:var(--font);transition:color var(--tr-base),border-color var(--tr-base);white-space:nowrap}
 .av-plus-btn:hover{border-color:var(--amber);color:var(--amber)}
 .av-full-btn{background:none;border:1px solid var(--red-12);border-radius:var(--r-pill);color:var(--gray);font-size:var(--t-sm);padding:var(--sp-2) var(--sp-3);cursor:pointer;font-family:var(--font);transition:color var(--tr-base),border-color var(--tr-base);white-space:nowrap}
 .av-full-btn:not(.on)::first-letter{color:var(--red);opacity:.6}
@@ -1602,8 +1602,13 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .ag-calc-prompt strong{color:var(--amber);font-size:var(--t-sm);font-weight:var(--w-bold)}
 .ag-summary{background:var(--card-a);border:1px solid var(--bdr);border-radius:var(--r);padding:var(--sp-4);margin-bottom:var(--sp-4)}
 
-.ag-save-btn{width:100%;margin-top:var(--sp-3)} /* anatomía: regla dueña */
+.ag-save-btn{display:inline-flex;align-items:center;justify-content:center;gap:5px;width:100%;margin-top:var(--sp-3)} /* anatomía: regla dueña */
 
+/* Día del resultado = misma anatomía que el separador de HORAS de Programa
+   (.plist-time-hdr): banda a sangre, ámbar, mayúsculas con tracking. Ancla la
+   lista igual que «18:30» ancla las funciones (Juan, 18 ago). */
+.ag-day-band{display:flex;align-items:center;justify-content:space-between;gap:var(--sp-2);font-size:var(--t-label);font-weight:var(--w-bold);color:var(--amber);letter-spacing:.1em;background:var(--surf-2);margin:var(--sp-4) calc(-1*var(--sp-4)) var(--sp-2);padding:var(--sp-2) var(--sp-4)}
+.ag-day-band.first{margin-top:var(--sp-3)}
 .ag-day-label{font-family:var(--font);display:flex;align-items:flex-end;gap:var(--sp-2);margin:var(--sp-5) 0 var(--sp-2);padding-bottom:var(--sp-2);border-bottom:1px solid var(--bdr-l)}
 .ag-day-name{font-size:var(--t-md);font-weight:var(--w-semi);color:var(--white);display:flex;flex-direction:column;align-items:flex-start;gap:1px}
 
@@ -3349,7 +3354,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202608181256";
+    s.src="/src/main.js?v=202608181407";
     document.body.appendChild(s);
     // Watchdog de boot (P0 18 jul): si el grafo ESM murió en el import (caché
     // HTTP mixta tras deploys en ráfaga — main.js nuevo + módulo viejo sin el
