@@ -47,12 +47,12 @@
   },
   "Cartel Urbano (San Felipe) - Bogotá": {
    "short": "Cartel Urbano",
-   "lat": 4.660132,
-   "lng": -74.0627586,
+   "lat": 4.6641455,
+   "lng": -74.0630397,
    "city": "Bogotá",
-   "address": "San Felipe, Bogotá",
-   "_prec": "barrio",
-   "_nota": "PROYECCIÓN AL AIRE LIBRE: el festival publica «Cartel Urbano, San Felipe, Bogotá» sin dirección exacta, y «Cartel Urbano» geocodifica a Santa Marta (otra ciudad). Se usa el centro del barrio San Felipe y queda declarado: preguntar al festival la dirección."
+   "address": "Calle 75 # 20C-89, San Felipe",
+   "_prec": "cruce de vías",
+   "_nota": "Dirección dada por Juan (18 ago 2026); el festival solo publica «Cartel Urbano, San Felipe». Nominatim no tiene ese número y «Cartel Urbano» a secas geocodifica a Santa Marta, otra ciudad. Se ubicó por el CRUCE Calle 75 × Carrera 20C con Overpass y se verificó por geocodificación inversa: «Calle 75, Localidad Barrios Unidos». Precisión: la esquina, no el número 89 — quedan unos 40 m de margen."
   }
  }
 }
