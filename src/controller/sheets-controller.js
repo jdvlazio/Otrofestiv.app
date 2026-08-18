@@ -556,9 +556,11 @@ export function openDiary(){
   if(titleEl) titleEl.textContent=cfg.name||'';
   const countEl=document.getElementById('diary-count');
   if(countEl){
-    // Cuenta pósters del Diario = OBRAS, la misma unidad que el chip que lo abre.
-    const n=(body?body.querySelectorAll('.ended-poster').length:0);
-    countEl.textContent=n?`${n} ${n===1?t('label_obra_vista'):t('label_obras_vistas')}`:'';
+    // La cuenta viaja como count-badge (canon: nunca en palabras) — misma
+    // unidad que la banda que lo abre: OBRAS (cards del muro único).
+    const n=(body?body.querySelectorAll('.dw-card').length:0);
+    countEl.textContent=n?String(n):'';
+    countEl.style.display=n?'':'none';
   }
   _pushSheetState();
   document.getElementById('diary-overlay')?.classList.add('open');

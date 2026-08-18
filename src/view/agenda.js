@@ -534,7 +534,7 @@ export function renderMiPlanCalendar(state){
     ${listHtml}
     <div class="mplan-foot">
       <button class="mplan-foot-btn" data-action="sharePlan">${ICONS.share} ${t('plan_compartir_plan')}</button>
-      <button class="mplan-foot-btn" data-action="exportICS">${ICONS.calendarPlus} ${t('plan_pasar_calendario')}</button>
+      <button class="mplan-foot-btn" data-action="exportICS">${ICONS.calendarPlus} ${t('plan_exportar_cal')}</button>
     </div>
   </div>`
 }
@@ -601,64 +601,7 @@ export function renderFilmAlternatives(state,title,day,time){
   </div>`;
 }
 
-// _recapPosterCard — card de póster grande con estado de calificación (estrellas, o ★
-// que abre el post-vista: film suelto → rating directo; programa → cola obra por obra).
-// FUENTE ÚNICA del Diario (durante el festival) y del recap de Modo Recuerdo (después):
-// la misma card en los dos momentos — un componente, cero divergencia. Pensada para
-// screenshot: pósters grandes, plena opacidad.
-function _recapPosterCard(state,title,{retro=false}={}){
-  const {FILMS, filmRatings, watched} = state.snapshot();
-  const f=FILMS.find(fi=>fi.title===title);
-  if(!f) return '';
-  const r=filmRatings[title];
-  // Modo retro (Modo Recuerdo): ítem del plan SIN marcar — póster atenuado con
-  // ✓ para marcar Vista (toggleWatched: en programas dispara la cola por obra).
-  if(retro&&!effectiveWatched().has(title)){
-    const _rpp=posterParts(f,{header:true,body:''});
-    return`<div class="poster-card ended-poster js-open-pel${_rpp.ed?' poster-ed':''}" style="opacity:.6" data-title="${escXML(f.title)}"${_rpp.ed?` style="--ed-accent:${_rpp.accent};opacity:.6"`:''}>
-      ${_rpp.ed?_rpp.inner:_rpp.src?`<img class="img-cover" src="${_rpp.src}" loading="lazy" onerror="this.remove()" alt="">`:``}
-      <div class="ended-poster-footer">
-        <button class="ended-rate-btn" data-action="toggleWatched" data-title="${escXML(title)}" data-stop="1" aria-label="${t('aria_marcar_vista')}">${ICONS.eye}</button>
-      </div>
-    </div>`;
-  }
-  const _pp=posterParts(f,{header:true,body:''}); // decisión única (posterModel)
-  const src=_pp.src||'';
-  const safeT=title.replace(/"/g,'&quot;').replace(/'/g,"&#39;");
-  // Diario = grid de PÓSTERS con calificación (decisión Juan): sin título dentro
-  // del póster (el afiche identifica; tap abre la ficha); scrim más marcado para
-  // que las estrellas ámbar resalten. El título vive en la fila del programa.
-  return`<div class="poster-card ended-poster js-open-pel${_pp.ed?' poster-ed':''}" data-title="${escXML(f.title)}"${_pp.ed?` style="--ed-accent:${_pp.accent}"`:''}>
-    ${_pp.ed
-      ?_pp.inner
-      :src?`<img class="img-cover" src="${src}" loading="lazy" onerror="this.remove()" alt="">`:``}
-    <div class="ended-poster-footer">
-      ${r?`<div class="label-track-amber">${starsText(r)}</div>`
-         :`<button class="ended-rate-btn" data-action="openPostViewRating" data-title="${safeT}" data-stop="1" aria-label="${t('cta_calificar')}">★</button>`}
-    </div>
-  </div>`;
-}
 
-// _obraPosterCard — card de una OBRA (película dentro de un programa) para el Diario:
-// su póster real (o el generativo del programa), sus estrellas o el ★ que abre SU
-// calificación directa, y tap → su propio sheet (mismos data-attrs que _mkCortoItemHtml).
-function _obraPosterCard(state,item,section){
-  const {filmRatings} = state.snapshot();
-  const r=filmRatings[item.title];
-  const _pp=itemPosterParts(item, section, 'img-cover', {header:true});
-  const src=_pp.src;
-  const _dt=encodeURIComponent(item.title||''),_dc=encodeURIComponent(item.country||'');
-  const _dd=encodeURIComponent(item.duration||''),_dir=encodeURIComponent(item.director||'');
-  const _dg=encodeURIComponent(item.genre||''),_ds=encodeURIComponent((item.synopsis||'').slice(0,200));
-  const _dp=encodeURIComponent(src||'');
-  return`<div class="poster-card ended-poster${_pp.ed?' poster-ed':''}" data-ct="${_dt}" data-cc="${_dc}" data-cd="${_dd}" data-cdir="${_dir}" data-cg="${_dg}" data-cs="${_ds}" data-cp="${_dp}" data-action="openCortoSheetFromEl"${_pp.ed?` style="--ed-accent:${_pp.accent}"`:''}>
-    ${_pp.inner}
-    <div class="ended-poster-footer">
-      ${r?`<div class="label-track-amber">${starsText(r)}</div>`
-         :`<button class="ended-rate-btn" data-action="openRatingSheet" data-title="${escXML(item.title||'')}" data-stop="1" aria-label="${t('cta_calificar')}">★</button>`}
-    </div>
-  </div>`;
-}
 
 // renderDiaryHTML — el DIARIO del festival (patrón Letterboxd/Things; rediseño 17 jul
 // por crítica de Juan): la vista es de PELÍCULAS y calificaciones — lo que el usuario
@@ -666,42 +609,8 @@ function _obraPosterCard(state,item,section){
 // sus estrellas, como dentro de la card de programa) y su nombre queda como
 // sub-etiqueta del grupo. Cronológico por día + "fuera del plan".
 export function renderDiaryHTML(state,{retro=false}={}){
-  const {savedAgenda, watched, FILMS} = state.snapshot();
-  // Vista ASUMIDA (dueño único): el overlay muestra lo efectivo, no solo lo marcado.
-  const _effD=effectiveWatched();
-  const all=(savedAgenda&&savedAgenda.schedule)||[];
-  const planTitles=new Set(all.map(s=>s._title));
-  const _seen=new Set();
-  const _entry=(title)=>{
-    // film suelto → [card]; programa → sub-etiqueta + cards de sus obras.
-    // retro: ítem del plan sin marcar → card atenuada con ✓ (no se disuelve:
-    // el usuario aún no dijo qué vio — marcar Vista dispara la cola por obra).
-    const f=FILMS.find(fi=>fi.title===title);
-    if(!f) return '';
-    if(f.is_cortos&&f.film_list&&f.film_list.length){
-      const{displayTitle:_pdt}=parseProgramTitle(title);
-      return`<div class="sec-hdr sm">${ICONS.film} <span>${_pdt}</span></div>
-      <div class="poster-grid pg-miplan">${f.film_list.map(it=>_obraPosterCard(state,it,f.section||'')).join('')}</div>`;
-    }
-    return`<div class="poster-grid pg-miplan">${_recapPosterCard(state,title)}</div>`;
-  };
-  let html='';
-  DAY_KEYS.forEach(day=>{
-    const dayTitles=[];
-    all.forEach(sc=>{ if(sc.day===day&&(retro||_effD.has(sc._title))&&!_seen.has(sc._title)){ _seen.add(sc._title); dayTitles.push(sc._title); } });
-    if(!dayTitles.length) return;
-    // retro: los ítems del plan SIN marcar van juntos en UN grid del día
-    // (atenuados, ✓ Vista) — no una card por fila con huecos.
-    const _watchedT=dayTitles.filter(tt=>_effD.has(tt));
-    const _retroT=retro?dayTitles.filter(tt=>!watched.has(tt)):[];
-    const _retroGrid=_retroT.length?`<div class="poster-grid pg-miplan">${_retroT.map(tt=>_recapPosterCard(state,tt,{retro:true})).join('')}</div>`:'';
-    html+=`<div class="saved-day-lbl">${dayLabelLong(day)}</div>${_watchedT.map(_entry).join('')}${_retroGrid}`;
-  });
-  const outside=[..._effD].filter(tt=>!planTitles.has(tt)&&FILMS.some(f=>f.title===tt));
-  if(outside.length){
-    html+=`<div class="sec-hdr sm">${ICONS.eye} <span>${t('plan_vistas_fuera')}</span></div>${outside.map(_entry).join('')}`;
-  }
-  return html||emptyState(ICONS.check, t('diary_vacio'));
+  // El cuerpo del overlay ES el muro (anatomía única) — completo, sin cap.
+  return renderDiaryWall(state,{retro})||emptyState(ICONS.eye, t('diary_vacio'));
 }
 
 export function renderContextualHeader(state, consensus){
@@ -1367,56 +1276,82 @@ export function _renderSavedAgendaHTML(state, consensus){
   return html;
 }
 
-// ── DIARIO (Luz) — la sección coleccionista que cierra Mi Plan (Juan, 18 ago).
-// Concepto LUZ con estrellas afuera (patrón Letterboxd, aprendido por la
-// cinefilia): el muro de pósters LIMPIOS es el diario — la vista asumida no
-// tiene ni un pixel de estado; el estado solo aparece cuando se desvía de la
-// asunción: calificaste → micro-fila de estrellas BAJO el afiche; «no la vi»
-// (notWatched) → el póster se apaga con el ojo tachado. Tap = ficha (js-open-pel).
-export function renderDiarioSection(state){
-  const {FILMS, savedAgenda, filmRatings} = state.snapshot();
+// ── DIARIO — anatomía ÚNICA del muro (revisión del depto. de diseño, 18 ago).
+// Sección y overlay son EL MISMO objeto a distinta profundidad: la sección lo
+// recorta (2 filas) y el overlay lo completa — abrir es EXPANSIÓN, no cambio
+// de app. Un solo tamaño de póster (4 col), un solo label de día, estrellas
+// SIEMPRE bajo el afiche (Letterboxd), un solo ojo. Las 13 violaciones del
+// muro doble murieron aquí de raíz.
+function _dwCard(state,{title,poster,rating,off,retro}){
+  const safe=escXML(title||'');
+  const stars=rating?`<div class="dw-stars">${[1,2,3,4,5].map(i=>`<span class="dw-star${i<=rating?' on':''}">${ICONS.starFill}</span>`).join('')}</div>`:`<div class="dw-stars"></div>`;
+  // retro (Recuerdo): la negada invita a revertir — el ojo es BOTÓN (la vi).
+  const badge=off
+    ?(retro
+      ?`<button class="dw-off-badge" data-action="toggleWatched" data-title="${safe}" data-stop="1" aria-label="${t('aria_marcar_vista')}">${ICONS.eye}</button>`
+      :`<div class="dw-off-badge" role="img" aria-label="${t('aria_no_la_vi')}">${ICONS.eyeOff}</div>`)
+    :'';
+  return`<div class="dw-card js-open-pel" data-title="${safe}">
+    <div class="dw-poster${off?' dw-off':''}">
+      ${poster?`<img class="img-cover" src="${poster}" loading="lazy" onerror="this.remove()" alt="">`:''}
+      ${badge}
+    </div>
+    ${stars}
+  </div>`;
+}
+
+// renderDiaryWall — el muro por días. cap acota las CARDS (preview de sección).
+export function renderDiaryWall(state,{cap=Infinity,retro=false}={}){
+  const {FILMS, savedAgenda, filmRatings, notWatched} = state.snapshot();
   const eff=effectiveWatched();
-  if(!eff.size) return '';
   const all=(savedAgenda&&savedAgenda.schedule)||[];
-  const {notWatched}=state.snapshot();
   const _seen=new Set();
-  const _stars=n=>`<div class="dw-stars">${[1,2,3,4,5].map(i=>`<span class="dw-star${i<=n?' on':''}">${ICONS.starFill}</span>`).join('')}</div>`;
-  const _card=(title)=>{
+  let n=0, html='';
+  const _cards=(title)=>{
     const f=FILMS.find(fi=>fi.title===title);
-    if(!f) return '';
+    if(!f) return [];
     const off=notWatched.has(title);
-    const r=(!f.is_cortos&&filmRatings[title])||0;
-    const _pp=posterParts(f,{header:true,body:''});
-    return`<div class="dw-card js-open-pel" data-title="${escXML(title)}">
-      <div class="dw-poster${off?' dw-off':''}${_pp.ed?' poster-ed':''}"${_pp.ed?` style="--ed-accent:${_pp.accent}"`:''}>
-        ${_pp.ed?_pp.inner:_pp.src?`<img class="img-cover" src="${_pp.src}" loading="lazy" onerror="this.remove()" alt="">`:''}
-        ${off?`<div class="dw-off-badge" role="img" aria-label="${t('aria_no_la_vi')}">${ICONS.eyeOff}</div>`:''}
-      </div>
-      ${r?_stars(r):`<div class="dw-stars"></div>`}
-    </div>`;
+    if(f.is_cortos&&f.film_list&&f.film_list.length){
+      // el Diario cuenta por OBRAS: el programa se explota en sus películas
+      return f.film_list.map(it=>({title:it.title,poster:getCortoItemPoster(it),rating:filmRatings[it.title]||0,off}));
+    }
+    return [{title,poster:getFilmPoster(f),rating:filmRatings[title]||0,off}];
   };
-  let walls='';
   DAY_KEYS.forEach(day=>{
-    const dayTitles=[];
+    if(n>=cap) return;
+    const dayCards=[];
     all.forEach(sc=>{
-      if(sc.day===day&&(eff.has(sc._title)||notWatched.has(sc._title))&&!_seen.has(sc._title)){
-        _seen.add(sc._title); dayTitles.push(sc._title);
-      }
+      if(sc.day!==day||_seen.has(sc._title)) return;
+      if(!(eff.has(sc._title)||notWatched.has(sc._title))) return;
+      _seen.add(sc._title);
+      dayCards.push(..._cards(sc._title));
     });
-    if(!dayTitles.length) return;
-    walls+=`<div class="dw-day-lbl">${dayLabelLong(day)}</div>
-      <div class="dw-grid">${dayTitles.map(_card).join('')}</div>`;
+    if(!dayCards.length) return;
+    const visibles=dayCards.slice(0,Math.max(0,cap-n));
+    n+=visibles.length;
+    if(!visibles.length) return;
+    html+=`<div class="dw-day-lbl">${dayLabelLong(day)}</div>
+      <div class="dw-grid">${visibles.map(c=>_dwCard(state,{...c,retro})).join('')}</div>`;
   });
-  // vistas por fuera del plan también son colección
-  const outside=[...eff].filter(tt=>!_seen.has(tt)&&FILMS.some(f=>f.title===tt));
-  if(outside.length){
-    walls+=`<div class="dw-day-lbl">${t('plan_vistas_fuera')}</div>
-      <div class="dw-grid">${outside.map(_card).join('')}</div>`;
+  if(n<cap){
+    const outside=[...eff].filter(tt=>!_seen.has(tt)&&FILMS.some(f=>f.title===tt));
+    if(outside.length){
+      const cards=outside.flatMap(_cards).slice(0,Math.max(0,cap-n));
+      if(cards.length) html+=`<div class="dw-day-lbl">${t('plan_vistas_fuera')}</div>
+        <div class="dw-grid">${cards.map(c=>_dwCard(state,{...c,retro})).join('')}</div>`;
+    }
   }
-  if(!walls) return '';
+  return html;
+}
+
+export function renderDiarioSection(state){
+  const wall=renderDiaryWall(state,{cap:8});
+  if(!wall) return '';
+  // La banda ENTERA abre el Diario (muere «Ver todo»: affordance duplicada,
+  // 9px, hit-area 52×16 — bajo el mínimo táctil). El chevron dice que hay más.
   return`<div class="diario-wrap">
-    <div class="sec-hdr">${ICONS.bookOpen} <span>${t('diary_eyebrow')}</span> <span class="count-badge cb-neutral">${_endedStats().totalWatched}</span><span class="hdr-end"><button class="link-gray-xs" data-action="openDiary" data-stop="1">${t('misc_ver_todo')} ${ICONS.chevronR}</button></span></div>
-    ${walls}
+    <div class="sec-hdr dw-band" data-action="openDiary">${ICONS.bookOpen} <span>${t('diary_eyebrow')}</span> <span class="count-badge cb-neutral">${_endedStats().totalWatched}</span><span class="hdr-end">${ICONS.chevronR}</span></div>
+    ${wall}
   </div>`;
 }
 
