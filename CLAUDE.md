@@ -85,6 +85,7 @@ deliberada existe la etiqueta `frontera-ok`.
 | `ficma2026` | FICMA | Manizales | 10–17 AGO | desconocido |
 | `ficdeh2026` | FICDEH | Colombia | 12–19 AGO | **Próximo / activo** |
 | `finca2026` | FINCA | Buenos Aires | 12–19 AGO | **Próximo / activo** |
+| `tiff2026` | TIFF | Toronto | 10–20 SEP | **Próximo / activo** |
 | `ficmontanas2026` | Ficmontañas | Salento | JUL 1–5 | Archivado |
 
 ### Features activas (desde `.specify/features/`)

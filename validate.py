@@ -4348,7 +4348,15 @@ try:
     # (con title_orig ya unificado dentro), filmType y cycle; _tmdbId se fusionó
     # en tmdb_id. La pregunta que los resolvió todos fue la misma: ¿lo vamos a
     # pintar? Si no, es peso muerto — por limpio que esté el dato.
-    _DEUDA = {}
+    _DEUDA = {
+        # TIFF, y los dos esperan una decisión de Juan, no un borrado mío:
+        # `section_tags` son los 47 SELLOS que él decidió sacar de las secciones
+        # y dejar como etiqueta — la decisión se tomó y el cableado en la vista
+        # nunca se hizo. `accessibility` son 34 funciones con subtítulos
+        # descriptivos ('oc'), dato real que hoy no se pinta en ningún lado.
+        'section_tags': 'TIFF (47) — sellos decididos por Juan, sin cablear en la vista',
+        'accessibility': 'TIFF (34) — accesibilidad de la función, sin superficie que la muestre',
+    }
     _src_all = ''.join(open(_p, encoding='utf-8').read()
                        for _p in _g.glob('src/**/*.js', recursive=True))
     _vistos = {}

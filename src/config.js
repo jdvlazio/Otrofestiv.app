@@ -445,18 +445,12 @@ export const FESTIVAL_CONFIG={
     dayLong:{'2026-09-10': 'Jueves 10 de septiembre', '2026-09-11': 'Viernes 11 de septiembre', '2026-09-12': 'Sábado 12 de septiembre', '2026-09-13': 'Domingo 13 de septiembre', '2026-09-14': 'Lunes 14 de septiembre', '2026-09-15': 'Martes 15 de septiembre', '2026-09-16': 'Miércoles 16 de septiembre', '2026-09-17': 'Jueves 17 de septiembre', '2026-09-18': 'Viernes 18 de septiembre', '2026-09-19': 'Sábado 19 de septiembre', '2026-09-20': 'Domingo 20 de septiembre'},
     prioLimit:6,
     keyArt:'/assets/keyart/tiff2026-v2.jpg',
-    // group:'test' — TIFF NO se publica todavía. Juan lo montará cuando terminen
-    // FINCA y FICDEH, y faltan dos cosas suyas: el keyArt del carrusel (su web no
-    // publica afiche de festival, solo banners 2:1) y las decisiones abiertas
-    // (sinopsis en inglés, pases premium, obras de doble sección).
-    // Quitar esta línea ES el paso de publicación. Mientras esté, el festival
-    // vive en la sección aparte del selector y no compite con los vigentes.
-    // group:'test' — TIFF NO se publica todavía (Juan lo montará cuando terminen
-    // FINCA y FICDEH). Además ESCONDE el festival del riel y del selector, así que
-    // para verlo en local hay que comentar esta línea; verificado que así carga.
-    // Quitarla es el paso de publicación, y antes hace falta el keyArt: TIFF no
-    // tiene afiche de festival (su identidad es un wordmark), y el test
-    // splashTagline «cada img degrada» exige que todo festival visible lo tenga.
+    // FRENO DE PUBLICACIÓN. Estuvo quitado desde el 16 ago con el razonamiento
+    // «ya hay keyArt, group:'test' deja de tener sentido» — pero el keyArt era
+    // solo UNO de los requisitos, y sin esta línea la rama PUBLICA TIFF en el
+    // momento en que se mergea. Restaurado el 17 ago: quitarla ES el paso de
+    // publicación, y no antes del pase de Juan sobre las 284 sinopsis.
+    group:'test',
     tagline:'Toronto International Film Festival',
     ticketing_model:'paid', // todas las públicas tienen enlace de Ticketmaster.
     // OJO: el vocabulario de la app es SOLO 'paid' | 'mixed'. Puse 'ticketed',

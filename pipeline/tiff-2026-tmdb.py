@@ -82,13 +82,18 @@ def get(path, **params):
     return '__falla__'
 
 
-def norm(s):
+# [lib-unica] renombrada desde `norm` el 17 ago 2026.
+# Conserva el ordinal («12ª» → «12a»); `lib.norm` lo colapsa a «12».
+def norm_ordinales(s):
     s = unicodedata.normalize('NFKD', (s or '').lower())
     s = ''.join(c for c in s if not unicodedata.combining(c))
     return re.sub(r'[^a-z0-9]+', ' ', s).strip()
 
 
-def director_coincide(a, b):
+# [lib-unica] renombrada desde `director_coincide` el 17 ago 2026.
+# Compara dos STRINGS por apellidos; `lib.director_coincide(esperado, nombres)`
+# recibe la lista de TMDB. Firmas distintas, no es la misma función.
+def director_coincide_apellidos(a, b):
     """Comparación por token largo, con dos salvavidas que costaron una corrida.
 
     La versión ingenua —intersecar tokens de más de 3 letras tras pasar el
@@ -104,7 +109,7 @@ def director_coincide(a, b):
     vacío —donde no hay nada que intersecar y comparar cadenas es lo honesto—
     y solo al final la intersección de tokens.
     """
-    na, nb = norm(a), norm(b)
+    na, nb = norm_ordinales(a), norm_ordinales(b)
     if na and na == nb:
         return True
     ta = {t for t in na.split() if len(t) > 3}
@@ -144,7 +149,7 @@ def main():
             """→ True/False/None. None = la comparación no puede decidir."""
             if not lb_dirs or not cands:
                 return True          # hueco en una fuente: nada que auditar
-            vs = [director_coincide(a, b) for a in lb_dirs for b in cands]
+            vs = [director_coincide_apellidos(a, b) for a in lb_dirs for b in cands]
             if any(v is True for v in vs):
                 return True
             return False if any(v is False for v in vs) else None

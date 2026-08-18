@@ -58,7 +58,10 @@ ALIAS = {
 
 
 
-def norm(s):
+# [lib-unica] renombrada desde `norm` el 17 ago 2026.
+# Quita los artículos iniciales («La Suprema» → «suprema») para casar con
+# Letterboxd; `lib.norm` los conserva. Difieren en 511 de 585 títulos reales.
+def norm_sin_articulos(s):
     s = unicodedata.normalize('NFKD', (s or '').lower())
     s = ''.join(c for c in s if not unicodedata.combining(c))
     s = re.sub(r'^(the|a|an|le|la|les|el|los|un|une)\s+', '', s)
@@ -67,7 +70,7 @@ def norm(s):
 
 def mismo_director(a, b):
     """Comparación por token largo. Vacío en cualquier lado → None (no decide)."""
-    ta = {t for n in (a or []) for t in norm(n and re.sub(r'(?<=.)(?=[A-Z])', ' ', n)).split() if len(t) > 3}
+    ta = {t for n in (a or []) for t in norm_sin_articulos(n and re.sub(r'(?<=.)(?=[A-Z])', ' ', n)).split() if len(t) > 3}
     ta = {t for n in (a or []) for t in re.split(r'[^a-z0-9]+', unicodedata.normalize('NFKD', n.lower())) if len(t) > 3}
     tb = {t for n in (b or []) for t in re.split(r'[^a-z0-9]+', unicodedata.normalize('NFKD', n.lower())) if len(t) > 3}
     if not ta or not tb:
@@ -98,7 +101,7 @@ def main():
     idx = {}
     for x in lb:
         for t in (x.get('titulo_lb'), x.get('titulo'), x.get('titulo_original')):
-            k = norm(t)
+            k = norm_sin_articulos(t)
             if not k:          # trampa 1: una clave vacía no identifica nada
                 continue
             idx.setdefault(k, [])
@@ -122,12 +125,12 @@ def main():
             res.append(dict(u, lbSlug=x['lbSlug'], tmdb_id=x.get('tmdb_id'),
                             _match='alias/verificado por director'))
             continue
-        cands = idx.get(norm(u['titulo'])) or (idx.get(norm(u['alt'])) if u['alt'] else None)
+        cands = idx.get(norm_sin_articulos(u['titulo'])) or (idx.get(norm_sin_articulos(u['alt'])) if u['alt'] else None)
         modo = 'exacto'
         if not cands:
             mejor, punt = None, 0.0
             for k, xs in idx.items():
-                p = SequenceMatcher(None, norm(u['titulo']), k).ratio()
+                p = SequenceMatcher(None, norm_sin_articulos(u['titulo']), k).ratio()
                 if p > punt:
                     mejor, punt = xs, p
             if punt >= UMBRAL:
