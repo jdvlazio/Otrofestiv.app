@@ -214,7 +214,9 @@
      "country": "Uruguay",
      "flags": "🇺🇾",
      "year": 2026,
-     "duration": "6 min"
+     "duration": "6 min",
+     "poster": "/assets/cineautopsia/perdidos-en-la-nube.jpg",
+     "posterSource": "editorial"
     },
     {
      "title": "La methode des moments",
@@ -222,7 +224,11 @@
      "country": "Canadá",
      "flags": "🇨🇦",
      "year": 2025,
-     "duration": "10 min"
+     "duration": "10 min",
+     "poster": "/assets/cineautopsia/la-methode-des-moments.jpg",
+     "posterSource": "editorial",
+     "tmdb_id": 1628397,
+     "lbSlug": "la-methode-des-moments"
     },
     {
      "title": "Eternal Habitat",
@@ -230,7 +236,11 @@
      "country": "Alemania",
      "flags": "🇩🇪",
      "year": 2025,
-     "duration": "6 min"
+     "duration": "6 min",
+     "poster": "/assets/cineautopsia/eternal-habitat.jpg",
+     "posterSource": "editorial",
+     "tmdb_id": 1628350,
+     "lbSlug": "eternal-habitat"
     },
     {
      "title": "Are We Gazing at the Same Moon?",
@@ -238,7 +248,9 @@
      "country": "Estados Unidos",
      "flags": "🇺🇸",
      "year": 2024,
-     "duration": "3 min"
+     "duration": "3 min",
+     "poster": "/assets/cineautopsia/are-we-gazing-at-the-same-moon.jpg",
+     "posterSource": "editorial"
     },
     {
      "title": "Event Horizon",
@@ -246,7 +258,9 @@
      "country": "China",
      "flags": "🇨🇳",
      "year": 2023,
-     "duration": "5 min"
+     "duration": "5 min",
+     "poster": "/assets/cineautopsia/event-horizon.jpg",
+     "posterSource": "editorial"
     },
     {
      "title": "Exo cortex 3.0",
@@ -254,7 +268,9 @@
      "country": "Francia",
      "flags": "🇫🇷",
      "year": 2023,
-     "duration": "7 min"
+     "duration": "7 min",
+     "poster": "/assets/cineautopsia/exo-cortex-3-0.jpg",
+     "posterSource": "editorial"
     },
     {
      "title": "Este no es tu jardín",
@@ -262,9 +278,15 @@
      "country": "Colombia",
      "flags": "🇨🇴",
      "year": 2025,
-     "duration": "13 min"
+     "duration": "13 min",
+     "poster": "https://image.tmdb.org/t/p/w500/4lvIAjisaG8A35jPyvGDcCH49gq.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1417902,
+     "lbSlug": "this-is-not-your-garden"
     }
-   ]
+   ],
+   "poster": "/assets/cineautopsia/programa-acto-oficial-de-apertura-muestra-expanded-fulldome-internaci.jpg",
+   "posterSource": "editorial"
   },
   {
    "title": "Mediometrajes Destacados de Latinoamérica",
@@ -319,7 +341,9 @@
      "country": "Colombia",
      "flags": "🇨🇴",
      "year": 2025,
-     "duration": "20 min"
+     "duration": "20 min",
+     "poster": "/assets/cineautopsia/evil-evol-love.jpg",
+     "posterSource": "editorial"
     },
     {
      "title": "De Tragedia Haré Gloria",
@@ -327,7 +351,9 @@
      "country": "México",
      "flags": "🇲🇽",
      "year": 2025,
-     "duration": "30 min"
+     "duration": "30 min",
+     "poster": "/assets/cineautopsia/de-tragedia-hare-gloria.jpg",
+     "posterSource": "editorial"
     }
    ]
   },
@@ -362,7 +388,9 @@
      "year": 2026,
      "duration": "14 min",
      "lbSlug": "when-the-second-sun-arrives-a-comet-in-your",
-     "tmdb_id": 1694277
+     "tmdb_id": 1694277,
+     "poster": "/assets/cineautopsia/when-the-second-sun-arrives-a-comet-in-your-eyes.jpg",
+     "posterSource": "editorial"
     },
     {
      "title": "Toda la vida para siempre",
@@ -382,7 +410,9 @@
      "country": "Chile",
      "flags": "🇨🇱",
      "year": 2025,
-     "duration": "16 min"
+     "duration": "16 min",
+     "poster": "/assets/cineautopsia/flujos-rectificados.jpg",
+     "posterSource": "editorial"
     },
     {
      "title": "AGULHA",
@@ -426,7 +456,9 @@
      "country": "México",
      "flags": "🇲🇽",
      "year": 2025,
-     "duration": "15 min"
+     "duration": "15 min",
+     "poster": "/assets/cineautopsia/si-yo-fuese-fuego-if-i-were-fire.jpg",
+     "posterSource": "editorial"
     }
    ]
   },
@@ -520,7 +552,10 @@
      "country": "Canadá",
      "flags": "🇨🇦",
      "year": 2024,
-     "duration": "6 min"
+     "duration": "6 min",
+     "poster": "/assets/cineautopsia/fort-garry-lions-pool.jpg",
+     "posterSource": "editorial",
+     "_src": "still del PDF oficial · compatible con ryansteelwpg.ca («hazy», piscina nocturna)"
     },
     {
      "title": "La descrizione delle stelle fisse",
@@ -528,7 +563,9 @@
      "country": "Italia",
      "flags": "🇮🇹",
      "year": 2025,
-     "duration": "19 min"
+     "duration": "19 min",
+     "poster": "/assets/cineautopsia/la-descrizione-delle-stelle-fisse.jpg",
+     "posterSource": "editorial"
     },
     {
      "title": "Tamashi",
@@ -599,7 +636,10 @@
      "year": 2026,
      "duration": "15 min",
      "lbSlug": "objectionable-fruit",
-     "tmdb_id": 1674041
+     "tmdb_id": 1674041,
+     "poster": "/assets/cineautopsia/objectionable-fruit.jpg",
+     "posterSource": "editorial",
+     "_src": "still del PDF oficial · VERIFICADO por Juan: la obra es de pantalla partida en 4"
     },
     {
      "title": "From Dusk to Dawn",
@@ -607,7 +647,10 @@
      "country": "Estados Unidos",
      "flags": "🇺🇸",
      "year": 2024,
-     "duration": "19 min"
+     "duration": "19 min",
+     "poster": "/assets/cineautopsia/from-dusk-to-dawn.jpg",
+     "posterSource": "editorial",
+     "_src": "still del PDF oficial · VERIFICADO contra splitfilmfestival.hr (18 ago 2026)"
     },
     {
      "title": "The Everlasting Pea",
@@ -617,7 +660,10 @@
      "year": 2024,
      "duration": "16 min",
      "lbSlug": "the-everlasting-pea",
-     "tmdb_id": 1266364
+     "tmdb_id": 1266364,
+     "poster": "/assets/cineautopsia/the-everlasting-pea.jpg",
+     "posterSource": "editorial",
+     "_src": "still del PDF oficial · VERIFICADO contra surynard.com por Juan (18 ago 2026)"
     },
     {
      "title": "Squander",
@@ -661,7 +707,10 @@
      "country": "Italia",
      "flags": "🇮🇹",
      "year": 2025,
-     "duration": "6 min"
+     "duration": "6 min",
+     "poster": "/assets/cineautopsia/ocno.jpg",
+     "posterSource": "oficial",
+     "_src": "miniatura del YouTube de la obra (facilitado por Juan, 18 ago 2026)"
     }
    ]
   },
@@ -688,7 +737,11 @@
      "country": "Alemania, India",
      "flags": "🇩🇪🇮🇳",
      "year": 2025,
-     "duration": "25 min"
+     "duration": "25 min",
+     "poster": "https://image.tmdb.org/t/p/w500/yCk5K3YWb0gViFJEaGhxlPpU9Sz.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1543512,
+     "lbSlug": "analogue-natives"
     },
     {
      "title": "The Night Before the Shipwreck",
@@ -696,7 +749,11 @@
      "country": "Federación Rusa",
      "flags": "🇷🇺",
      "year": 2026,
-     "duration": "48 min"
+     "duration": "48 min",
+     "poster": "/assets/cineautopsia/the-night-before-the-shipwreck.jpg",
+     "posterSource": "editorial",
+     "tmdb_id": 1740495,
+     "lbSlug": "the-night-before-the-shipwreck"
     },
     {
      "title": "This Light Is Not Ours",
@@ -704,9 +761,13 @@
      "country": "Tailandia",
      "flags": "🇹🇭",
      "year": 2025,
-     "duration": "29 min"
+     "duration": "29 min",
+     "poster": "/assets/cineautopsia/this-light-is-not-ours.jpg",
+     "posterSource": "editorial"
     }
-   ]
+   ],
+   "poster": "/assets/cineautopsia/programa-mediometrajes-destacados-del-mundo-entero-1.jpg",
+   "posterSource": "editorial"
   },
   {
    "title": "Mediometrajes Destacados del Mundo Entero 2",
@@ -731,14 +792,22 @@
      "country": "Austria",
      "flags": "🇦🇹",
      "year": 2025,
-     "duration": "29 min"
+     "duration": "29 min",
+     "poster": "https://image.tmdb.org/t/p/w500/dFS8tFlXVEDOOYbWy7Y6uKORwaK.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1560838,
+     "lbSlug": "brute-force-2025"
     },
     {
      "title": "The Walnut of Knowledge",
      "director": "Niyaz Saghari",
      "country": "Irán, Reino Unido",
      "flags": "🇮🇷🇬🇧",
-     "duration": "27 min"
+     "duration": "27 min",
+     "poster": "https://image.tmdb.org/t/p/w500/wyBKxQ3L4Gm1XDFIw9iOnxwtz71.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1575936,
+     "lbSlug": "the-walnut-of-knowledge"
     },
     {
      "title": "Ghosts after Noon",
@@ -746,14 +815,19 @@
      "country": "Austria, Suiza",
      "flags": "🇦🇹🇨🇭",
      "year": 2026,
-     "duration": "36 min"
+     "duration": "36 min",
+     "poster": "/assets/cineautopsia/ghosts-after-noon.jpg",
+     "posterSource": "editorial"
     }
-   ]
+   ],
+   "poster": "/assets/cineautopsia/programa-mediometrajes-destacados-del-mundo-entero-2.jpg",
+   "posterSource": "editorial"
   },
   {
-   "title": "Largometraje Panorama Colombia",
+   "title": "Paristopia",
    "type": "film",
    "section": "🌀 Panorama",
+   "director": "Emanuel Rojas Gutierrez",
    "country": "Colombia",
    "flags": "🇨🇴",
    "duration": "88 min",
@@ -765,17 +839,12 @@
    "has_qa": false,
    "_src": "PDF oficial de programación · bogotaexperimental.com/bogotaexp2026 (descargado 18 ago 2026) · OCR Vision sobre 25 páginas sin capa de texto",
    "is_free": true,
-   "is_cortos": true,
-   "film_list": [
-    {
-     "title": "Paristopia",
-     "director": "Emanuel Rojas Gutierrez",
-     "country": "Colombia",
-     "flags": "🇨🇴",
-     "year": 2025,
-     "duration": "88 min"
-    }
-   ]
+   "year": 2025,
+   "_programa_original": "Largometraje Panorama Colombia",
+   "poster": "https://image.tmdb.org/t/p/w500/rRq5wQI10w1xShAzlbGOcDjrGNI.jpg",
+   "posterSource": "tmdb",
+   "tmdb_id": 1561131,
+   "lbSlug": "paristopia"
   },
   {
    "title": "Encuentro Colombia Experimental Contemporánea",
@@ -787,7 +856,9 @@
    "venue": "Cartel Urbano (San Felipe) - Bogotá",
    "info": true,
    "has_qa": false,
-   "_src": "PDF oficial de programación · bogotaexperimental.com/bogotaexp2026 (descargado 18 ago 2026) · OCR Vision sobre 25 páginas sin capa de texto"
+   "_src": "PDF oficial de programación · bogotaexperimental.com/bogotaexp2026 (descargado 18 ago 2026) · OCR Vision sobre 25 páginas sin capa de texto",
+   "poster": "/assets/cineautopsia/programa-encuentro-colombia-experimental-contemporanea.jpg",
+   "posterSource": "editorial"
   },
   {
    "title": "Cortometrajes Panorama Colombia",
@@ -818,7 +889,9 @@
      "country": "Colombia",
      "flags": "🇨🇴",
      "year": 2024,
-     "duration": "12 min"
+     "duration": "12 min",
+     "poster": "/assets/cineautopsia/atmosphaira.jpg",
+     "posterSource": "editorial"
     },
     {
      "title": "Yo Manifiesta",
@@ -826,7 +899,9 @@
      "country": "Colombia",
      "flags": "🇨🇴",
      "year": 2025,
-     "duration": "6 min"
+     "duration": "6 min",
+     "poster": "/assets/cineautopsia/yo-manifiesta.jpg",
+     "posterSource": "editorial"
     },
     {
      "title": "Los Años del Conejo",
@@ -848,7 +923,9 @@
      "country": "Colombia",
      "flags": "🇨🇴",
      "year": 2026,
-     "duration": "11 min"
+     "duration": "11 min",
+     "poster": "/assets/cineautopsia/somnolitico.jpg",
+     "posterSource": "editorial"
     },
     {
      "title": "Lamentos de un balcón",
@@ -860,7 +937,9 @@
      "lbSlug": "lamentos-de-un-balcon",
      "tmdb_id": 1744098,
      "synopsis": "Lamentos de un balcón es un cortometraje experimental colombiano dirigido por el realizador Hans Chispas. La producción vio la luz en el año 2026 y posee una duración exacta de 4 minutos.",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "poster": "/assets/cineautopsia/lamentos-de-un-balcon.jpg",
+     "posterSource": "editorial"
     },
     {
      "title": "Ensoñaciones cósmicas de la materia",
@@ -868,7 +947,9 @@
      "country": "Colombia",
      "flags": "🇨🇴",
      "year": 2026,
-     "duration": "15 min"
+     "duration": "15 min",
+     "poster": "/assets/cineautopsia/ensonaciones-cosmicas-de-la-materia.jpg",
+     "posterSource": "editorial"
     },
     {
      "title": "Pierna Pernil",
@@ -876,7 +957,9 @@
      "country": "Colombia",
      "flags": "🇨🇴",
      "year": 2026,
-     "duration": "8 min"
+     "duration": "8 min",
+     "poster": "/assets/cineautopsia/pierna-pernil.jpg",
+     "posterSource": "editorial"
     },
     {
      "title": "Entrelazadas (The Hardest Shapes)",
@@ -937,7 +1020,9 @@
      "country": "Colombia",
      "flags": "🇨🇴",
      "year": 2025,
-     "duration": "17 min"
+     "duration": "17 min",
+     "poster": "/assets/cineautopsia/posdata-para-el-fin-del-mundo.jpg",
+     "posterSource": "editorial"
     },
     {
      "title": "Anoche a media noche",
@@ -945,7 +1030,9 @@
      "country": "Colombia",
      "flags": "🇨🇴",
      "year": 2026,
-     "duration": "15 min"
+     "duration": "15 min",
+     "poster": "/assets/cineautopsia/anoche-a-media-noche.jpg",
+     "posterSource": "editorial"
     },
     {
      "title": "Decaer",
@@ -967,7 +1054,9 @@
      "country": "Colombia",
      "flags": "🇨🇴",
      "year": 2025,
-     "duration": "10 min"
+     "duration": "10 min",
+     "poster": "/assets/cineautopsia/mal-de-tierra.jpg",
+     "posterSource": "editorial"
     },
     {
      "title": "DESBORDES",
@@ -975,7 +1064,9 @@
      "country": "Colombia",
      "flags": "🇨🇴",
      "year": 2025,
-     "duration": "6 min"
+     "duration": "6 min",
+     "poster": "/assets/cineautopsia/desbordes.jpg",
+     "posterSource": "editorial"
     },
     {
      "title": "Filme Pin",
@@ -1007,7 +1098,9 @@
      "country": "Colombia",
      "flags": "🇨🇴",
      "year": 2025,
-     "duration": "3 min"
+     "duration": "3 min",
+     "poster": "/assets/cineautopsia/inmarcesbile.jpg",
+     "posterSource": "editorial"
     }
    ]
   },
@@ -1032,58 +1125,85 @@
      "director": "Weipeng Huang, Yajing Wang",
      "country": "China",
      "flags": "🇨🇳",
-     "duration": "8 min"
+     "duration": "8 min",
+     "poster": "https://image.tmdb.org/t/p/w500/y5e7C4l7Fatlyfgl5C3QM0a4VOr.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1572828,
+     "lbSlug": "allegory-of-the-cave"
     },
     {
      "title": "Natal Kick, Cosmo Ground",
      "director": "Jaeik Kim",
      "country": "Corea del Sur",
      "flags": "🇰🇷",
-     "duration": "13 min"
+     "duration": "13 min",
+     "poster": "/assets/cineautopsia/natal-kick-cosmo-ground.jpg",
+     "posterSource": "editorial"
     },
     {
      "title": "The Othered Scene",
      "director": "Wang-Yun Yen",
      "country": "Países Bajos, Taiwán",
      "flags": "🇳🇱🇹🇼",
-     "duration": "13 min"
+     "duration": "13 min",
+     "poster": "/assets/cineautopsia/the-othered-scene.jpg",
+     "posterSource": "editorial",
+     "tmdb_id": 1659194,
+     "lbSlug": "the-othered-scene",
+     "_src": "still del PDF oficial · orden de la página 20 VERIFICADO por Juan (18 ago 2026)"
     },
     {
      "title": "Veil's End",
      "director": "Tianyang Hou",
      "country": "China",
      "flags": "🇨🇳",
-     "duration": "15 min"
+     "duration": "15 min",
+     "poster": "/assets/cineautopsia/veil-s-end.jpg",
+     "posterSource": "editorial"
     },
     {
      "title": "Abjad Hawaz",
      "director": "Hadi Moussally",
      "country": "Líbano",
      "flags": "🇱🇧",
-     "duration": "5 min"
+     "duration": "5 min",
+     "poster": "https://image.tmdb.org/t/p/w500/7P8IZAYdqnZOUPMMsbMMgQYX7aa.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1586176,
+     "lbSlug": "abjad-hawaz"
     },
     {
      "title": "Circles and Squares",
      "director": "Michael Lyons",
      "country": "Japón",
      "flags": "🇯🇵",
-     "duration": "4 min"
+     "duration": "4 min",
+     "poster": "https://image.tmdb.org/t/p/w500/2z0voFLyRJXwMSCCFfuJr8evGkl.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1692469,
+     "lbSlug": "circles-and-squares"
     },
     {
      "title": "Lost Fragments of a Seizure",
      "director": "Michael Martinez",
      "country": "Colombia, Emiratos Árabes Unidos",
      "flags": "🇨🇴🇦🇪",
-     "duration": "11 min"
+     "duration": "11 min",
+     "poster": "/assets/cineautopsia/lost-fragments-of-a-seizure.jpg",
+     "posterSource": "editorial"
     },
     {
      "title": "Notes from Silences",
      "director": "Alexandra Kumala",
      "country": "Indonesia, Puerto Rico",
      "flags": "🇮🇩🇵🇷",
-     "duration": "14 min"
+     "duration": "14 min",
+     "poster": "/assets/cineautopsia/notes-from-silences.jpg",
+     "posterSource": "editorial"
     }
-   ]
+   ],
+   "poster": "/assets/cineautopsia/programa-cortometrajes-destacados-del-resto-del-mundo.jpg",
+   "posterSource": "editorial"
   },
   {
    "title": "Premiación & Clausura",

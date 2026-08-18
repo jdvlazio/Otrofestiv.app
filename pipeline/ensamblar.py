@@ -205,6 +205,24 @@ def ensamblar(fid, escribir=True):
         it = enr.get(lib.norm(f['titulo']))
         if it:
             _enriquece(e, it)
+        # UN PROGRAMA DE UNA SOLA OBRA NO ES UN PROGRAMA. La doctrina dice que
+        # hay contenedor cuando el festival le puso NOMBRE A UN CONJUNTO
+        # (docs/SCHEMA.md, modelo A). Con una sola obra no hay conjunto: lo que
+        # el festival nombró es la CATEGORÍA, y la función es esa obra. Se
+        # promueve: el usuario busca «Paristopia», no «Largometraje Panorama
+        # Colombia», y la ficha del programa mostraba una lista de un elemento.
+        if len(e.get('film_list') or []) == 1:
+            _u = e['film_list'][0]
+            e['title'] = _u.get('title', e['title'])
+            for _c in ('director', 'year', 'poster', 'posterSource', 'lbSlug',
+                       'tmdb_id', 'synopsis', 'synopsis_en', 'country', 'flags'):
+                if _u.get(_c):
+                    e[_c] = _u[_c]
+            if _u.get('duration'):
+                e['duration'] = _u['duration']
+            e.pop('is_cortos', None); e.pop('film_list', None)
+            e['_programa_original'] = f.get('titulo')
+
         films.append(lib.normaliza({k: v for k, v in e.items() if v not in (None, '', [], {})}, rep))
         venues[sede] = geo.get(sede, {'short': sede.split(' - ')[0], 'city': sede.split(' - ')[-1]})
 

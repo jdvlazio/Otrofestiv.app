@@ -268,8 +268,8 @@ está pasando de verdad — no lo que alguien recordaba al escribirlo.
 | campo | tipo | formato / valores | lo usan | notas |
 |---|---|---|---|---|
 | `title_en` | string | — | 8 fest |  |
-| `director` | string | — | 12 fest |  |
-| `year` | number | — | 12 fest | Entero. Dos festivales legacy lo tienen como string. |
+| `director` | string | — | 13 fest |  |
+| `year` | number | — | 13 fest | Entero. Dos festivales legacy lo tienen como string. |
 | `country` | string | — | 13 fest |  |
 | `flags` | string | — | 13 fest | **derivado de `country`** — no viene de ninguna fuente Emoji de bandera. NUNCA viene de la fuente: se calcula del país. |
 | `duration` | string | `^\d+ min$` | 13 fest | «90 min». No es un número, y la doc dijo lo contrario durante meses. |
@@ -301,10 +301,10 @@ está pasando de verdad — no lo que alguien recordaba al escribirlo.
 | `poster` | string | — | 13 fest | URL, /assets/… o path TMDB. poster:"" está PROHIBIDO. Reglas: docs/POSTERS.md |
 | `posterSource` | string | `tmdb` · `custom` · `editorial` · `letterboxd` · `oficial` | 13 fest | **derivado de `poster`** — no viene de ninguna fuente |
 | `posterPosition` | string | `center` · `top` · `bottom` | 1 fest |  |
-| `lbSlug` | string | — | 8 fest | Slug de Letterboxd. En camelCase: `lb_slug` no lo lee nadie. |
+| `lbSlug` | string | — | 9 fest | Slug de Letterboxd. En camelCase: `lb_slug` no lo lee nadie. |
 | `slug` | string | — | 1 fest |  |
 | `filmCategory` | string | — | 1 fest |  |
-| `tmdb_id` | number | — | 4 fest | no lo lee la vista: pipeline No lo lee la vista: lo usa el pipeline para reenriquecer sin volver a buscar. |
+| `tmdb_id` | number | — | 5 fest | no lo lee la vista: pipeline No lo lee la vista: lo usa el pipeline para reenriquecer sin volver a buscar. |
 | `_src` | — | — | 5 fest | De dónde salió el dato. Toda obra nueva lo lleva. |
 
 ### Excepciones con fecha de caducidad
