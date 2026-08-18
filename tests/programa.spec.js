@@ -1512,7 +1512,13 @@ test('T84 — el Diario es UN muro: misma anatomía en sección y overlay', asyn
       hdrColor: name && getComputedStyle(name).color,
       hdrBadge: count?.classList.contains('count-badge'),
       hdrTxt: count?.textContent.trim(),
-      ojoPx: off && Math.round(off.getBoundingClientRect().width),
+      // el ojo se mide por lo que DIBUJA en pantalla (rect del trazo), no por
+      // la caja del svg: con box-sizing:border-box el padding lo redujo a un
+      // punto negro de 4px mientras la caja seguía diciendo 18 (18 ago).
+      ojoPx: off && Math.round([...off.querySelectorAll('path,circle')]
+        .reduce((max, p) => Math.max(max, p.getBoundingClientRect().width), 0)),
+      ojoCaja: off && Math.round(off.getBoundingClientRect().width),
+      ojoDisco: off && Math.round(off.parentElement.getBoundingClientRect().width),
       starsFueraOverlay: !document.querySelector('.diary-sheet .dw-poster .dw-stars') };
   });
   expect(r.secGrid.cols, 'el muro es de 4 columnas en la sección').toBe(4);
@@ -1526,6 +1532,8 @@ test('T84 — el Diario es UN muro: misma anatomía en sección y overlay', asyn
   expect(r.hdrColor, 'y «Diario» en blanco pleno, no ámbar').toBe('rgb(240, 237, 232)');
   expect(r.hdrBadge, 'la cuenta es badge…').toBe(true);
   expect(r.hdrTxt, '…numérica, nunca en palabras').toMatch(/^\d+$/);
-  expect(r.ojoPx, 'el ojo se ve: 18px sobre disco sólido').toBeGreaterThanOrEqual(17);
+  expect(r.ojoCaja, 'el icono mide 18px de caja').toBe(18);
+  expect(r.ojoPx, 'y DIBUJA al menos 14px — no un punto').toBeGreaterThanOrEqual(14);
+  expect(r.ojoDisco, 'sobre un disco de 32px').toBe(32);
   expect(r.starsFueraOverlay, 'estrellas bajo el afiche también en el overlay').toBe(true);
 });
