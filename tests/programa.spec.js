@@ -1801,3 +1801,44 @@ test('T90 — Planear dice qué va a procesar antes de que lo pidas', async ({ p
   expect(r.filaTxt, 'sin «opcional» ni valor verbal').not.toMatch(/opcional|restriccion/i);
   expect(r.bloqueVisible, 'con restricción configurada, el bloque SE VE').toBe(true);
 });
+
+// 18 ago (Juan): «quiero que se vean siempre claros los botones inferiores,
+// sin navegar la card». Medido antes: con 352 caracteres de sinopsis la ficha
+// topaba en 88dvh y los CTAs caían 96px BAJO el borde visible. El alto ya era
+// responsive (411px en un evento sin sinopsis); lo que faltaba era anclar el pie.
+test('T91 — la ficha: alto según su contenido y los CTAs siempre a la vista', async ({ page }) => {
+  test.setTimeout(60000);
+  await enterFestival(page, 'ficdeh2026', '2026-08-18T09:00:00-05:00');
+  await page.evaluate(() => document.querySelector('[data-action="citySheetAll"]')?.click());
+  await page.waitForTimeout(400);
+  const r = await page.evaluate(async () => {
+    const largo = f => (f.synopsis || '').length + (f.film_list?.length || 0) * 200;
+    const orden = [...FILMS].sort((a, b) => largo(b) - largo(a));
+    const casos = [orden[orden.length - 1], orden[0]]; // la más corta y la más larga
+    const out = [];
+    for (const f of casos) {
+      openPelSheet(f.title);
+      await new Promise(r => setTimeout(r, 700));
+      const sh = document.getElementById('pel-sheet');
+      const cta = sh.querySelector('.pel-sheet-ctas, .pel-sheet-ctas-watched');
+      const shr = sh.getBoundingClientRect(), ctr = cta.getBoundingClientRect();
+      out.push({
+        alto: Math.round(shr.height),
+        scrollea: sh.scrollHeight > sh.clientHeight + 2,
+        // el CTA cabe DENTRO del rectángulo visible de la sheet
+        dentro: Math.round(ctr.bottom) <= Math.round(shr.bottom) + 1 && Math.round(ctr.top) >= Math.round(shr.top),
+        piePegado: getComputedStyle(sh.querySelector('.pel-sheet-foot')).position,
+      });
+      closePelSheet(); await new Promise(r => setTimeout(r, 300));
+    }
+    return { corta: out[0], larga: out[1], vp: innerHeight };
+  });
+  // alto según contenido: la corta NO llega al tope y no scrollea
+  expect(r.corta.scrollea, 'la ficha corta cabe entera').toBe(false);
+  expect(r.corta.alto, 'y mide bastante menos que el tope').toBeLessThan(r.vp * 0.7);
+  expect(r.larga.scrollea, 'la larga sí scrollea su cuerpo').toBe(true);
+  // y en AMBAS los botones están a la vista sin navegar
+  expect(r.corta.dentro, 'CTAs a la vista en la corta').toBe(true);
+  expect(r.larga.dentro, 'CTAs a la vista en la larga, sin scrollear').toBe(true);
+  expect(r.larga.piePegado, 'el pie va anclado').toBe('sticky');
+});
