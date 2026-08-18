@@ -209,9 +209,19 @@ export function renderAgenda(){
           </div>`;
         })()}
         <div class="av-calc-wrap">
-          <button class="av-calc-btn" data-action="runCalc">
-            ${t('av_ver_opciones')}
-          </button>
+          ${(()=>{
+            // Con un resultado en pantalla este botón deja de ser el paso
+            // siguiente: el paso siguiente es confirmarlo («Usar este Plan»), y
+            // dos primarios ámbar en la misma pantalla no dicen cuál es cuál.
+            // Además el cálculo puede haber ocurrido SOLO (pipeline.js: al
+            // entrar con intereses y sin Plan guardado), así que un botón que
+            // ofrece «Calcular» sobre un plan ya calculado describe mal lo que
+            // pasó. «Recalcular» nombra el estado real y baja a secundario.
+            const _ya=!!cachedResult;
+            return`<button class="av-calc-btn${_ya?' recalc':''}" data-action="runCalc">
+              ${_ya?t('av_recalcular'):t('av_ver_opciones')}
+            </button>`;
+          })()}
         </div>
       </div>
       <div class="ag-section${_stale?' stale':''}" id="ag-result-wrap"${cachedResult?'':' style="display:none"'}>
