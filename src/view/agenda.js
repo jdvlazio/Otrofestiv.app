@@ -1288,8 +1288,8 @@ function _dwCard(state,{title,poster,rating,off,retro}){
   // retro (Recuerdo): la negada invita a revertir — el ojo es BOTÓN (la vi).
   const badge=off
     ?(retro
-      ?`<button class="dw-off-badge" data-action="toggleWatched" data-title="${safe}" data-stop="1" aria-label="${t('aria_marcar_vista')}">${ICONS.eye}</button>`
-      :`<div class="dw-off-badge" role="img" aria-label="${t('aria_no_la_vi')}">${ICONS.eyeOff}</div>`)
+      ?`<button class="dw-off-badge" data-action="toggleWatched" data-title="${safe}" data-stop="1" aria-label="${t('aria_marcar_vista')}"><span>${ICONS.eye}</span></button>`
+      :`<div class="dw-off-badge" role="img" aria-label="${t('aria_no_la_vi')}"><span>${ICONS.eyeOff}</span></div>`)
     :'';
   return`<div class="dw-card js-open-pel" data-title="${safe}">
     <div class="dw-poster${off?' dw-off':''}">
