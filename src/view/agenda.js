@@ -1334,58 +1334,67 @@ function _dwCard(state,{title,poster,rating,off}){
   </div>`;
 }
 
-// renderDiaryWall — el muro por días. cap acota las CARDS (preview de sección).
-export function renderDiaryWall(state,{cap=Infinity}={}){
+// renderDiaryWall — el muro CONTINUO de lo visto (Juan, 18 ago: los días
+// «limitan la visual y generan muchos espacios»). Una sola retícula en orden
+// cronológico, sin separadores: la tapa manda y los afiches casi se tocan.
+export function renderDiaryWall(state){
   const {FILMS, savedAgenda, filmRatings, notWatched} = state.snapshot();
   const eff=effectiveWatched();
   const all=(savedAgenda&&savedAgenda.schedule)||[];
   const _seen=new Set();
-  let n=0, html='';
-  const _cards=(title)=>{
+  const cards=[];
+  const _push=(title)=>{
     const f=FILMS.find(fi=>fi.title===title);
-    if(!f) return [];
+    if(!f) return;
     const off=notWatched.has(title);
+    // el Diario cuenta por OBRAS: el programa se explota en sus películas
     if(f.is_cortos&&f.film_list&&f.film_list.length){
-      // el Diario cuenta por OBRAS: el programa se explota en sus películas
-      return f.film_list.map(it=>({title:it.title,poster:getCortoItemPoster(it),rating:filmRatings[it.title]||0,off}));
+      f.film_list.forEach(it=>cards.push({title:it.title,poster:getCortoItemPoster(it),rating:filmRatings[it.title]||0,off}));
+    } else {
+      cards.push({title,poster:getFilmPoster(f),rating:filmRatings[title]||0,off});
     }
-    return [{title,poster:getFilmPoster(f),rating:filmRatings[title]||0,off}];
   };
   DAY_KEYS.forEach(day=>{
-    if(n>=cap) return;
-    const dayCards=[];
     all.forEach(sc=>{
       if(sc.day!==day||_seen.has(sc._title)) return;
       if(!(eff.has(sc._title)||notWatched.has(sc._title))) return;
-      _seen.add(sc._title);
-      dayCards.push(..._cards(sc._title));
+      _seen.add(sc._title); _push(sc._title);
     });
-    if(!dayCards.length) return;
-    const visibles=dayCards.slice(0,Math.max(0,cap-n));
-    n+=visibles.length;
-    if(!visibles.length) return;
-    html+=`<div class="dw-day-lbl">${dayLabelLong(day)}</div>
-      <div class="dw-grid">${visibles.map(c=>_dwCard(state,c)).join('')}</div>`;
   });
-  if(n<cap){
-    const outside=[...eff].filter(tt=>!_seen.has(tt)&&FILMS.some(f=>f.title===tt));
-    if(outside.length){
-      const cards=outside.flatMap(_cards).slice(0,Math.max(0,cap-n));
-      if(cards.length) html+=`<div class="dw-day-lbl">${t('plan_vistas_fuera')}</div>
-        <div class="dw-grid">${cards.map(c=>_dwCard(state,c)).join('')}</div>`;
-    }
-  }
-  return html;
+  [...eff].filter(tt=>!_seen.has(tt)&&FILMS.some(f=>f.title===tt)).forEach(_push);
+  if(!cards.length) return '';
+  return`<div class="dw-grid">${cards.map(c=>_dwCard(state,c)).join('')}</div>`;
 }
 
 export function renderDiarioSection(state){
-  const wall=renderDiaryWall(state,{cap:8});
-  if(!wall) return '';
-  // La banda ENTERA abre el Diario (muere «Ver todo»: affordance duplicada,
-  // 9px, hit-area 52×16 — bajo el mínimo táctil). El chevron dice que hay más.
+  // Estado REPLEGADO dentro de Mi Plan (Juan, 18 ago): alto FIJO — no crece con
+  // lo visto, así no le come el scroll al calendario ni a Sugerencias, que son
+  // lo único accionable. La tira insinúa la colección; el Diario vive detrás.
+  const {FILMS, savedAgenda, notWatched} = state.snapshot();
+  const eff=effectiveWatched();
+  if(!eff.size) return '';
+  const all=(savedAgenda&&savedAgenda.schedule)||[];
+  const _seen=new Set(); const posters=[];
+  DAY_KEYS.forEach(day=>{
+    all.forEach(sc=>{
+      if(sc.day!==day||_seen.has(sc._title)||!eff.has(sc._title)) return;
+      _seen.add(sc._title);
+      const f=FILMS.find(fi=>fi.title===sc._title);
+      if(f) posters.push(getFilmPoster(f)||'');
+    });
+  });
+  [...eff].filter(tt=>!_seen.has(tt)).forEach(tt=>{
+    const f=FILMS.find(fi=>fi.title===tt); if(f) posters.push(getFilmPoster(f)||'');
+  });
+  if(!posters.length) return '';
+  const MAX=6;
+  const tira=posters.slice(0,MAX).map((p,i)=>p
+    ?`<img class="dw-strip-p" src="${p}" loading="lazy" onerror="this.remove()" alt="" style="${i?'margin-left:-20px;':''}z-index:${MAX-i}">`
+    :'').join('');
+  const resto=posters.length>MAX?`<span class="dw-strip-mas">+${posters.length-MAX}</span>`:'';
   return`<div class="diario-wrap">
     <div class="sec-hdr dw-band" data-action="openDiary">${ICONS.bookOpen} <span>${t('diary_eyebrow')}</span> <span class="count-badge cb-neutral">${_endedStats().totalWatched}</span><span class="hdr-end">${ICONS.chevronR}</span></div>
-    ${wall}
+    <div class="dw-strip" data-action="openDiary">${tira}${resto}</div>
   </div>`;
 }
 
