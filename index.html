@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202608181534">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202608181534">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202608181622">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202608181622">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -91,7 +91,11 @@ window.sentryOnLoad = function() {
 
 /* ── No incluidas — posters en scroll horizontal ── */
 
-.ag-excl-block{background:var(--surf);border:1px solid var(--bdr);border-radius:var(--r);padding:var(--sp-3) var(--sp-4) var(--sp-4);margin-bottom:var(--sp-4);overflow:hidden}
+/* Card→sección (auditoría 18 ago): una LISTA de cosas no es una card (§3), y el
+   padding-x de 16 empujaba sus pósters a x=33 mientras los del Plan arrancan en
+   x=16 — 17px de desalineación en la misma pantalla, y 32px robados que
+   truncaban títulos que arriba entran completos. Mismo caso que .checkin-wrap. */
+.ag-excl-block{margin-bottom:var(--sp-4)}
 
 
 </style>
@@ -975,8 +979,8 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .plist-item:active{background:var(--surf-2)}
 .plist-poster{width:56px;height:84px;border-radius:var(--r-poster);flex-shrink:0;object-fit:cover;background:var(--surf-2)}
 .plist-poster-stack{position:relative;width:56px;height:84px;flex-shrink:0}
-.plist-poster-stack .ps-back{position:absolute;top:0;right:0;width:46px;height:72px;border-radius:var(--r-sm);object-fit:cover;background:var(--surf-3);opacity:.6;border:1px solid var(--bdr)}
-.plist-poster-stack .ps-front{position:absolute;bottom:0;left:0;width:46px;height:72px;border-radius:var(--r-sm);object-fit:cover;background:var(--surf-3);box-shadow:2px -2px 0 rgba(0,0,0,.5)}
+.plist-poster-stack .ps-back{position:absolute;top:0;right:0;width:46px;height:72px;border-radius:var(--r-poster);object-fit:cover;background:var(--surf-3);opacity:.6;border:1px solid var(--bdr)}
+.plist-poster-stack .ps-front{position:absolute;bottom:0;left:0;width:46px;height:72px;border-radius:var(--r-poster);object-fit:cover;background:var(--surf-3);box-shadow:2px -2px 0 rgba(0,0,0,.5)}
 .plist-info{flex:1;min-width:0}
 .plist-title{font-size:var(--t-base);font-weight:var(--w-bold);color:var(--white);margin-bottom:2px;display:flex;align-items:flex-start;gap:var(--sp-1);min-width:0}
 /* Título de card a 2 líneas: los títulos de evento son largos y descriptivos
@@ -991,7 +995,11 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
    para saber si la función era alcanzable. Va en línea propia (como
    .venue-municipio en las fichas) para no competir con sede·sala·duración, y en
    ámbar tenue: es el dato que decide si vale la pena seguir leyendo la card. */
-.plist-city{display:block;font-size:var(--t-xs);color:var(--amber-70,var(--amber));margin-top:2px;letter-spacing:.04em;font-weight:var(--w-semi)}
+/* La ciudad vive DENTRO de la frase de sede (auditoría 18 ago): con display:block
+   partía «Sede / Ciudad / · 180 min» en tres renglones y dejaba el punto medio
+   huérfano abriendo línea. Y en ámbar era un segundo acento peleando con la hora,
+   que es el acento real de la fila. */
+.plist-city{font-size:inherit;color:var(--gray)}
 .plist-sec{font-size:var(--t-label);color:var(--white-60);font-weight:var(--w-semi);margin-top:2px;letter-spacing:.2px}
 .plist-heart{font-size:var(--t-icon);color:var(--amber);flex-shrink:0;cursor:pointer;padding:6px;border-radius:50%;transition:background var(--tr-base),transform 200ms cubic-bezier(.34,1.56,.64,1)/* bounce intencional */;display:flex;align-items:center;justify-content:center;align-self:center}
 /* Mi Plan — modo lista compacta */
@@ -1064,7 +1072,11 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .poster-card.in-watched{opacity:.45}
 .poster-card.past-card{opacity:.35}
 
-.excl-reason{font-size:var(--t-xs);color:var(--gray2)}
+/* 9px era el tipo más chico de la app para la línea que decide si re-priorizás.
+   Sube a t-sm (Juan, 18 ago): a 13px la mayoría de las razones se iban a dos
+   renglones y cada fila crecía ~20px — en una sección de 8, eso es scroll. 11px
+   es el salto que se lee sin pagar la densidad. */
+.excl-reason{font-size:var(--t-sm);color:var(--gray)}
 .excl-reason.conflict{color:var(--amber-60);font-weight:var(--w-semi)}
 /* Detalle del conflicto por desplazamiento: los minutos (viaje vs hueco) que
    convierten la advertencia en algo verificable. Secundario al mensaje. */
@@ -1614,10 +1626,8 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 /* Día del resultado = misma anatomía que el separador de HORAS de Programa
    (.plist-time-hdr): banda a sangre, ámbar, mayúsculas con tracking. Ancla la
    lista igual que «18:30» ancla las funciones (Juan, 18 ago). */
-.ag-day-band{display:flex;align-items:center;justify-content:space-between;gap:var(--sp-2);font-size:var(--t-label);font-weight:var(--w-bold);color:var(--amber);letter-spacing:.1em;background:var(--surf-2);margin:var(--sp-4) calc(-1*var(--sp-4)) var(--sp-2);padding:var(--sp-2) var(--sp-4)}
+.ag-day-band{position:sticky;top:var(--sticky-top-carta);z-index:1;display:flex;align-items:center;justify-content:space-between;gap:var(--sp-2);font-size:var(--t-label);font-weight:var(--w-bold);color:var(--amber);letter-spacing:.1em;background:var(--surf-2);margin:var(--sp-4) calc(-1*var(--sp-4)) var(--sp-2);padding:var(--sp-2) var(--sp-4)}
 .ag-day-band.first{margin-top:var(--sp-3)}
-.ag-day-label{font-family:var(--font);display:flex;align-items:flex-end;gap:var(--sp-2);margin:var(--sp-5) 0 var(--sp-2);padding-bottom:var(--sp-2);border-bottom:1px solid var(--bdr-l)}
-.ag-day-name{font-size:var(--t-md);font-weight:var(--w-semi);color:var(--white);display:flex;flex-direction:column;align-items:flex-start;gap:1px}
 
 
 /* ── MI PLAN ── */
@@ -1760,7 +1770,8 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 
 :focus-visible{outline:2px solid var(--amber);outline-offset:2px}
 
-/* Day landmark de Mi Plan — mismo patrón que Planear (.ag-day-label): nombre
+/* Day landmark de Mi Plan — mismo patrón que la banda de días de Planear
+   (.ag-day-band): nombre
    + badge a los lados, flush horizontal, sin border-bottom (no separa header
    de sus funciones). Mi Plan muestra un solo día, así que no lleva border-top. */
 .mplan-list-hdr{display:flex;flex-direction:row;align-items:baseline;justify-content:space-between;gap:var(--sp-2);padding:var(--sp-3) var(--sp-2) 0}
@@ -1874,8 +1885,8 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
    Override scoped al contexto del plan calculado, sin afectar Mi Plan.
    Anclado al sistema de diseño real (tokens existentes + plist-item del
    Programa como referencia de jerarquía). El separador entre días vive en
-   el ag-day-label; los items dentro de un día respiran solo con padding. */
-#ag-result .lb-poster{width:56px;height:84px;border-radius:var(--r-sm)}
+   la banda del día; los items dentro de un día respiran solo con padding. */
+#ag-result .lb-poster{width:56px;height:84px;border-radius:var(--r-poster)}
 #ag-result .ag-summary{
   background:none;
   border:none;
@@ -1914,33 +1925,6 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
   font-weight:var(--w-thin);
   color:var(--gray);
   margin-top:2px;
-}
-#ag-result .ag-day-label{
-  display:flex;
-  align-items:baseline;
-  justify-content:space-between;
-  /* El divisor separa días: vive ARRIBA del header del día (entre las
-     funciones del día anterior y el header del siguiente). Reseteamos el
-     border-bottom de la regla base .ag-day-label (no separa día↔función). */
-  margin:0 0 var(--sp-2);
-  padding-top:var(--sp-4);
-  padding-bottom:0;
-  border-top:1px solid var(--bdr-l);
-  border-bottom:none;
-  /* Sticky: top con offset del topbar (mismo patrón que #hdr-programa). */
-  position:sticky;
-  top:var(--sticky-top-carta);
-  background:var(--bg);
-  z-index:1;
-}
-#ag-result .ag-day-label.first{
-  border-top:none;
-  padding-top:0;
-}
-#ag-result .ag-day-name{
-  font-size:var(--t-md);
-  font-weight:var(--w-semi);
-  color:var(--white);
 }
 /* Botones de acción por fila (mobile-only): sin hover, la semántica de color
    vive en reposo. Quitar = rojo (destructivo, legible sin interacción) — igual
@@ -3366,7 +3350,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202608181534";
+    s.src="/src/main.js?v=202608181622";
     document.body.appendChild(s);
     // Watchdog de boot (P0 18 jul): si el grafo ESM murió en el import (caché
     // HTTP mixta tras deploys en ráfaga — main.js nuevo + módulo viejo sin el
