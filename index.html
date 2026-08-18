@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202608180206">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202608180206">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202608180225">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202608180225">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -1075,7 +1075,8 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
    TODO), Mi Plan, Intereses y el sheet de sede comparten esta fila.
    Reportado por Juan el 9 ago 2026. Guardián: G03 en tests/geometry.spec.js. */
 .pelicula-venue>svg{margin-top:3px;flex-shrink:0}
-.saved-venue svg,.mplan-rvenue svg,.mplan-wk-venue svg,.venue-text{line-height:1.4}
+.saved-venue svg,.mplan-rvenue svg,.mplan-wk-venue svg,.checkin-opt-venue svg{vertical-align:middle}
+.venue-text{line-height:1.4}
 
 /* municipio — subordinado al venue, solo ciudades distintas a la sede principal del festival */
 .venue-municipio{display:block;font-size:var(--t-xs);color:var(--white-45);margin-top:1px;letter-spacing:.02em}
@@ -1422,7 +1423,8 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .conflict-btn-replace:active,.conflict-modal-btn:active{opacity:.6;transform:scale(.96)}
 
 /* Sheet extras */
-.pel-sheet-remove-plan:active,.corto-rate-btn:active,.rating-action-btn:active,.ended-rate-btn:active,
+.pel-sheet-remove-plan:active,.corto-rate-btn:active,.rating-action-btn:active,.ended-rate-btn:active,.checkin-btn:active,.checkin-result-btn:active{opacity:.6;transform:scale(.96)}
+
 /* Miscelánea */
 .toast-action-btn:active,.prio-limit-item:active,.excl-include-btn:active,.notice-banner-close:active,.link-gray-xs:active{opacity:.6}
 
@@ -1430,7 +1432,10 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .auth-cancel:active,.auth-signout-btn:active,.auth-send-btn:active{opacity:.6}
 
 /* touch-action:manipulation — elimina delay 300ms iOS en elementos de alta frecuencia */
-.lugar-opt,.fdr-opt,.pchip,.prio-chip,.av-day-chip,.av-type-btn,.dtab,.ag-fi-btn,.int-prio-btn,.int-seen-btn,.conflict-btn-cancel,.conflict-btn-keep,.conflict-btn-replace,.conflict-modal-btn,.pmode-tab,.av-add-btn,.av-plus-btn,.corto-rate-btn,.rating-action-btn,.toast-action-btn,.pel-sheet-action-btn.act-on{background:rgba(39,174,96,.08);border-color:rgba(39,174,96,.25);color:var(--green)}
+.lugar-opt,.fdr-opt,.pchip,.prio-chip,.av-day-chip,.av-type-btn,.dtab,.ag-fi-btn,.int-prio-btn,.int-seen-btn,.conflict-btn-cancel,.conflict-btn-keep,.conflict-btn-replace,.conflict-modal-btn,.pmode-tab,.av-add-btn,.av-plus-btn,.corto-rate-btn,.rating-action-btn,.toast-action-btn,.checkin-btn,.checkin-result-btn{
+  touch-action:manipulation
+}
+.pel-sheet-action-btn.act-on{background:rgba(39,174,96,.08);border-color:rgba(39,174,96,.25);color:var(--green)}
 /* ` border-box` en el ATAJO: el borde de 1px es transparente (secundario) o
    translúcido (act-prio), así que esa franja muestra el fondo. Con el origen por
    defecto (padding-box) el gradiente se calcula sobre la caja de padding y se REPITE
@@ -1539,7 +1544,25 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
    PRIMARIO   regla dueña única (abajo): amber sólido, negro, pill,
               --sp-btn, t-base w-bold, hover .88 — 9 clases suscritas
    SECUNDARIO outline pill 1px --bdr, texto --gray w-semi
-              (.auth-send-btn:hover,.empty-state-cta:hover,.venue-sheet-dir:hover,.pv-btn-save:hover,.conflict-btn-replace:hover,.plan-confirm-cta:hover,.av-calc-btn:hover,.ag-save-btn:hover,.splash-enter-btn:hover,.conflict-modal-btn.confirm:hover{opacity:.88}
+              (.checkin-btn, .pv-btn-later, .conflict-btn-keep…)
+              variante amber-soft: --amber-10 + --amber-30 (.av-add-btn)
+   TERCIARIO  outline pill compacto, --gray, t-sm/t-xs
+              (.suggestion-add, .mplan-bottom-btn, .av-plus-btn…)
+   CANCEL     regla dueña única: texto --gray t-sm w-semi, sin caja
+   ESTADO     activo = clase .on ÚNICA (nunca .active/.selected)
+   Guardián [button-canon] en validate.py.
+══════════════════════════════════════════════════════ */
+/* ── BOTÓN PRIMARIO — UNA regla dueña (auditoría 18 jul 2026) ─────────────────
+   Antes: 9 anatomías para el mismo rol (radios --r/--r-md/--r-pill mezclados,
+   pesos w-bold/w-display, 4 paddings, hover a veces). Ahora la anatomía vive
+   AQUÍ; cada clase conserva solo su layout (width/margin/flex). Un botón
+   primario nuevo se SUMA a este selector — guardián [button-canon]. */
+.auth-send-btn,.empty-state-cta,.venue-sheet-dir,.pv-btn-save,.conflict-btn-replace,.plan-confirm-cta,.av-calc-btn,.ag-save-btn,.splash-enter-btn,.conflict-modal-btn.confirm{
+  background:var(--amber-cta);color:var(--black);border:none;border-radius:var(--r-pill);
+  padding:var(--sp-btn);font-family:var(--font);font-size:var(--t-base);font-weight:var(--w-bold);
+  cursor:pointer;transition:opacity var(--tr-base);
+}
+.auth-send-btn:hover,.empty-state-cta:hover,.venue-sheet-dir:hover,.pv-btn-save:hover,.conflict-btn-replace:hover,.plan-confirm-cta:hover,.av-calc-btn:hover,.ag-save-btn:hover,.splash-enter-btn:hover,.conflict-modal-btn.confirm:hover{opacity:.88}
 .auth-send-btn:disabled,.pv-btn-save:disabled,.av-calc-btn:disabled,.splash-enter-btn:disabled{opacity:.35;cursor:default}
 .av-calc-btn{width:100%} /* anatomía: regla dueña */
 .empty-state-cta{padding-left:var(--sp-6);padding-right:var(--sp-6)} /* pill inline: ancho por padding-x (post-dueña por cascada) */
@@ -3262,7 +3285,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202608180206";
+    s.src="/src/main.js?v=202608180225";
     document.body.appendChild(s);
     // Watchdog de boot (P0 18 jul): si el grafo ESM murió en el import (caché
     // HTTP mixta tras deploys en ráfaga — main.js nuevo + módulo viejo sin el
