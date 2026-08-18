@@ -1440,7 +1440,10 @@ test('T82 — el calendario es una pieza: lista adentro, footer con nombre propi
   expect(r.captionDentro, 'el día es caption dentro de la pieza').toBe(true);
   expect(r.footAlFinal, 'el footer cierra la pieza').toBe(true);
   expect(r.labels.join('|'), 'los labels dicen la acción, no el sustantivo').toMatch(/Compartir Plan|Share Plan/);
-  expect(r.labels.join('|')).toMatch(/Pasar a tu calendario|Add to your calendar/);
+  // «Exportar» (Juan, 18 ago): dentro del calendario, «Pasar a tu calendario»
+  // obligaba a preguntar cuál; y «Sincronizar» prometía un vínculo vivo que el
+  // .ics no cumple. El verbo dice la acción; el icono carga el destino.
+  expect(r.labels.join('|')).toMatch(/Exportar|Export/);
   expect(new Set(r.footSizes).size, 'un solo cuerpo tipográfico en el footer').toBe(1);
   expect(r.footOverflow, 'el label más largo cabe: cero desborde (ES y PT)').toBe(0);
   expect(r.hint, 'el hint murió: lo reemplaza la affordance').toBe(false);
