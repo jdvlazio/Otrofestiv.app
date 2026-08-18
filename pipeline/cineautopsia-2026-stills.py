@@ -112,8 +112,13 @@ def main():
         if obras:
             _, bandas = cortar(img, len(obras) + 1, y0)
             bandas = bandas[1:]                  # la primera es la sobra del texto
-        # el programa sin póster de la sede se queda con un trozo de su página
+        # El programa sin póster se queda con un trozo de su página SOLO si esa
+        # página no lleva stills de obras. Si los lleva, el recorte no es «la
+        # imagen del programa»: son dos obras suyas pegadas, y encima con la
+        # franja gris del encabezado. Lo vio Juan en el acto de apertura.
         for f in por_pag[pag]:
+            if obras:
+                continue
             if not f.get('poster'):
                 pc = poster_de_pagina(full, y0)
                 if pc:

@@ -381,6 +381,44 @@ fecha se vuelve permanente sola; ésta se vence sola. La primera fue FINCA: sus
 una sede toca `_slotKey`, que es la ancla de los planes YA GUARDADOS de usuarios
 reales.
 
+**Decimosexto: `[poster-mirado]` — alguien tiene que ABRIR el archivo.**
+
+*«¿Cómo es posible crear un póster sin pasar por un guardián?»* preguntó Juan al
+ver en pantalla un póster que era la franja gris del encabezado del PDF con dos
+stills ajenos debajo. La respuesta incómoda: **todos los guardianes de póster
+miran el CAMPO y ninguno el ARCHIVO.** `[poster-single-owner]` vigila quién lo
+escribe, `[posters-duplicados]` que dos obras no compartan URL,
+`[paridad-derivados]` que `posterSource` acompañe a `poster`. Un JPG con un
+tercio de banda plana los pasa todos, porque ninguno lo abre.
+
+Éste lo abre y mide tres cosas sin opinar: que el archivo EXISTA, que tenga
+resolución de póster y no de miniatura, y que no arrastre una BANDA PLANA en un
+borde —el recorte que se comió el encabezado—.
+
+**Calibrarlo costó dos vueltas, y las dos por falsos positivos:** el mínimo iba
+por el ancho y marcaba 52 pósters verticales legítimos (300×427 es un póster,
+no una miniatura) → ahora va por el lado corto; y perseguía bandas planas en
+afiches ajenos, donde una franja de color sólido es una decisión de diseño →
+ahora solo en los EDITORIALES, que son los que recortamos nosotros.
+
+**Decimoquinto: `[arquetipo-existe]` — el color que no existe se pinta gris.**
+`[seccion-sin-arquetipo]` comprueba que la sección ESTÉ en `SECTION_ARCHETYPES`.
+Nadie comprobaba que el arquetipo asignado sea uno de los NUEVE que tienen
+color. Con CineAutopsia escribí «Apertura» e «Industria / Formación» —que suenan
+bien y no existen: son «Apertura / Gala» y «Charlas / Industria»— y las dos
+secciones cayeron al gris por defecto, con el texto encima ilegible.
+
+Los dos validadores en verde y la pantalla rota. Lo vio Juan mirando la app, que
+es donde se ven estas cosas: *«el gris está bien pero la letra no se lee
+absolutamente nada»*.
+
+**Y una regla de la misma tanda, sin guardián porque es de criterio:** el póster
+de un PROGRAMA no puede ser un recorte de la página donde están los stills de
+sus obras. Eso no es «la imagen del programa», son dos obras suyas pegadas —y
+encima con la franja del encabezado—. Solo vale recortar la página cuando ésta
+NO lleva stills de obras: el Encuentro, cuya página es un mosaico de retratos de
+los artistas, sí es la imagen del evento.
+
 **Y la deuda quedó en CERO el mismo día.** Los nueve huérfanos salieron:
 `trailer`, `tematica` y `qa_detail` primero; después `original_title` (con
 `title_orig` ya unificado dentro), `filmType` y `cycle`; `_tmdbId` se fusionó en

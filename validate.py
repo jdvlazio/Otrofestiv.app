@@ -4238,6 +4238,124 @@ except Exception as _e:
 # Este guardián vigila que la excepción no vuelva a ser la norma: los dos
 # publicadores por-festival que quedan son deuda DECLARADA y la lista solo puede
 # encoger. Un festival nuevo con publicador propio es una regla que se escapó.
+# ── [arquetipo-existe] un arquetipo inventado se pinta gris y nadie avisa ────
+# `[seccion-sin-arquetipo]` (validate-festivals) comprueba que la sección ESTÉ
+# en SECTION_ARCHETYPES. Nadie comprobaba que el arquetipo asignado sea uno de
+# los NUEVE que tienen color. Escribí «Apertura» e «Industria / Formación» —que
+# suenan bien y no existen: son «Apertura / Gala» y «Charlas / Industria»— y las
+# dos secciones de CineAutopsia cayeron al gris por defecto, con el texto encima
+# ilegible. Verde en los dos validadores, roto en la pantalla; lo vio Juan.
+# ── [poster-mirado] alguien tiene que ABRIR el archivo ──────────────────────
+# «¿Cómo es posible crear un póster sin pasar por un guardián?» — Juan, 18 ago
+# 2026, después de encontrar en pantalla un póster que era la franja gris del
+# encabezado del PDF con dos stills ajenos debajo.
+#
+# La respuesta incómoda: TODOS los guardianes de póster miran el CAMPO y ninguno
+# el ARCHIVO. `[poster-single-owner]` vigila quién lo escribe, `[posters-
+# duplicados]` que dos obras no compartan URL, `[paridad-derivados]` que
+# `posterSource` acompañe a `poster`. Un JPG con una banda plana ocupando un
+# tercio de la imagen los pasa todos, porque ninguno lo abre.
+#
+# Éste lo abre. Tres cosas que se pueden medir sin opinar:
+#   · que el archivo EXISTA (una ruta rota no se ve hasta que se ve),
+#   · que tenga resolución de póster y no de miniatura,
+#   · que no lleve una BANDA PLANA en un borde — el recorte que se comió el
+#     encabezado del PDF, que es exactamente el error de hoy.
+check = 'poster-mirado'
+try:
+    import json as _j8, glob as _g8, os as _os8
+    try:
+        from PIL import Image as _Img
+    except ImportError:
+        _Img = None
+    if _Img is None:
+        warn(check, 'sin Pillow: no se pueden abrir los pósters')
+    else:
+        # DEUDA DECLARADA (18 ago 2026), y solo puede encoger. Son festivales ya
+        # montados, no errores nuevos: Leviza y Tercer Tiempo trajeron pósters
+        # diminutos de su fuente, y el still de «Mutante» viene letterboxed de
+        # origen. Un guardián que nace rojo por el pasado no lo mira nadie; uno
+        # que nombra su deuda obliga a que no crezca.
+        _DEUDA_POSTER = {'leviza-2026', 'tercertiempo-2026', 'fantasofest-2026'}
+        _rotos, _chicos, _bandas = [], [], []
+        for _f in sorted(_g8.glob('festivals/*.json')):
+            _d = _j8.load(open(_f, encoding='utf-8'))
+            _fest = _f.split('/')[-1]
+            _viejo = _f.split('/')[-1][:-5] in _DEUDA_POSTER
+            for _x in (_d.get('films') or []):
+                for _o in [_x] + list(_x.get('film_list') or []):
+                    _p = str(_o.get('poster') or '')
+                    if not _p.startswith('/assets/'):
+                        continue
+                    _ruta = '.' + _p
+                    if not _os8.path.exists(_ruta):
+                        _rotos.append(f'{_fest}: {_p}')
+                        continue
+                    try:
+                        _im = _Img.open(_ruta).convert('RGB')
+                    except Exception:
+                        _rotos.append(f'{_fest}: {_p} (ilegible)')
+                        continue
+                    _w, _h = _im.size
+                    # El mínimo va por el LADO CORTO, no por el ancho: un póster
+                    # vertical de 300×427 es legítimo y mi primera versión lo
+                    # marcaba junto a 51 más. Lo que no vale es una miniatura.
+                    if min(_w, _h) < 280 and not _viejo:
+                        _chicos.append(f'{_o.get("title","?")[:28]} {_w}×{_h}')
+                    # La banda plana solo se persigue en pósters EDITORIALES —los
+                    # que recortamos nosotros—: en un afiche diseñado, una franja
+                    # de color sólido es una decisión, no un descuido. Sin este
+                    # matiz salían 41 avisos, casi todos de afiches ajenos.
+                    if _o.get('posterSource') != 'editorial' or _viejo:
+                        continue
+                    _px = _im.load()
+                    for _borde, _rango in (('arriba', range(0, _h // 5, 2)),
+                                           ('abajo', range(_h - 1, _h - _h // 5, -2))):
+                        _n = 0
+                        for _y in _rango:
+                            _fila = [_px[_x2, _y] for _x2 in range(0, _w, max(1, _w // 40))]
+                            _prom = [sum(c[_i] for c in _fila) / len(_fila) for _i in range(3)]
+                            _plano = all(max(abs(c[_i] - _prom[_i]) for c in _fila) < 12 for _i in range(3))
+                            if _plano:
+                                _n += 2
+                            else:
+                                break
+                        if _n > _h * 0.10:
+                            _bandas.append(f'{_o.get("title","?")[:26]} ({_borde}, {100*_n//_h}%)')
+        _prob = []
+        if _rotos:
+            _prob.append(f'{len(_rotos)} póster(s) que apuntan a un archivo que no existe: ' + '; '.join(_rotos[:3]))
+        if _chicos:
+            _prob.append(f'{len(_chicos)} por debajo de 400×220: ' + '; '.join(_chicos[:3]))
+        if _bandas:
+            _prob.append(f'{len(_bandas)} con banda plana en un borde (¿se coló el encabezado?): '
+                         + '; '.join(_bandas[:3]))
+        if _prob:
+            fail(check, ' · '.join(_prob))
+        else:
+            ok(check, 'todo póster local abre, mide como póster y no arrastra bandas planas')
+except Exception as _e:
+    warn(check, f'no se pudo verificar poster-mirado: {_e}')
+
+
+check = 'arquetipo-existe'
+try:
+    import re as _r7
+    _cfg = open('src/config.js', encoding='utf-8').read()
+    _i = _cfg.index('export const ARCHETYPE_COLORS'); _j = _cfg.index('\n};', _i)
+    _validos = set(_r7.findall(r"'([^']+)':\s*'#", _cfg[_i:_j]))
+    _k = _cfg.index('export const SECTION_ARCHETYPES'); _l = _cfg.index('\n};', _k)
+    _malos = [f'{_a} → {_b!r}' for _a, _b in _r7.findall(r"'([^']+)':\s*'([^']+)'", _cfg[_k:_l])
+              if _b not in _validos]
+    if _malos:
+        fail(check, f'sección con arquetipo que NO existe en ARCHETYPE_COLORS '
+                    f'(cae a gris con texto ilegible): ' + '; '.join(_malos[:5]))
+    else:
+        ok(check, f'los {len(_validos)} arquetipos con color son los únicos usados')
+except Exception as _e:
+    warn(check, f'no se pudo verificar arquetipo-existe: {_e}')
+
+
 check = 'pipeline-generico'
 try:
     import glob as _g5, os as _os5
