@@ -556,11 +556,22 @@ export function openDiary(){
   const cfg=FESTIVAL_CONFIG[_activeFestId]||{};
   const titleEl=document.getElementById('diary-title');
   if(titleEl) titleEl.textContent=cfg.name||'';
+  // La TAPA (18 ago): el afiche del festival como objeto + sus fechas. El
+  // keyArt es el mismo del splash — write-once en /assets/, ya cacheado.
+  const artEl=document.getElementById('diary-keyart');
+  if(artEl){
+    if(cfg.keyArt){ artEl.src=cfg.keyArt; artEl.style.visibility=''; }
+    else artEl.style.visibility='hidden';
+  }
+  const datesEl=document.getElementById('diary-dates');
+  if(datesEl) datesEl.textContent=[(_lang==='en'&&cfg.dates_en)?cfg.dates_en:cfg.dates,cfg.year].filter(Boolean).join(' ');
   const countEl=document.getElementById('diary-count');
   if(countEl){
     // La cuenta viaja como count-badge (canon: nunca en palabras) — misma
     // unidad que la banda que lo abre: OBRAS (cards del muro único).
-    const n=(body?body.querySelectorAll('.dw-card').length:0);
+    // «Lo que viste» NO cuenta las negadas: el muro las muestra apagadas
+    // (para poder revertirlas) pero no son parte de la colección.
+    const n=(body?body.querySelectorAll('.dw-poster:not(.dw-off)').length:0);
     countEl.textContent=n?String(n):'';
     countEl.style.display=n?'':'none';
   }

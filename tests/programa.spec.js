@@ -1453,13 +1453,17 @@ test('T83 — Diario Luz: muro limpio, estrellas afuera, y la negación se apaga
     state.set('filmRatings', { [rated.title]: 4 });
     switchMainNav('mnav-miplan'); showAgView();
     await new Promise(r => setTimeout(r, 1400));
-    const wrap = document.querySelector('.diario-wrap');
+    // el muro vive detrás del tap (18 ago): la sección es una tira replegada
+    document.querySelector('.dw-band')?.click();
+    await new Promise(r => setTimeout(r, 900));
+    const wrap = document.querySelector('.diary-sheet');
     const sug = document.querySelector('.suggestion-wrap');
+    const seccion = document.querySelector('.diario-wrap');
     // el data-title vive en el AFICHE (su tap abre la ficha), no en la card
     const card = t => [...wrap.querySelectorAll('.dw-card')].find(c => c.querySelector(`[data-title="${CSS.escape(t)}"]`));
     const cR = card(rated.title), cA = card(assumed.title), cN = card(negada.title);
     return {
-      alFinal: !!wrap && !!sug && wrap.getBoundingClientRect().top > sug.getBoundingClientRect().top,
+      alFinal: !!seccion && !!sug && seccion.getBoundingClientRect().top > sug.getBoundingClientRect().top,
       cuenta: wrap.querySelector('.count-badge')?.textContent,
       // calificada: estrellas FUERA del póster (la fila no es descendiente de .dw-poster)
       ratedStars: cR?.querySelectorAll('.dw-stars .dw-star.on').length,
@@ -1480,68 +1484,73 @@ test('T83 — Diario Luz: muro limpio, estrellas afuera, y la negación se apaga
   expect(r.negadaOff, 'la negada se apaga con el ojo tachado').toBe(true);
 });
 
-// 18 ago, revisión del depto. de diseño (13 violaciones): sección y overlay del
-// Diario son EL MISMO muro a distinta profundidad — mismo póster (4 col), mismo
-// label de día, estrellas bajo el afiche en ambos, conteo en badge (nunca en
-// palabras) y el header del overlay con el mismo letrero que la banda.
-test('T84 — el Diario es UN muro: misma anatomía en sección y overlay', async ({ page }) => {
+// 18 ago (Juan, tras ver Letterboxd): el Diario se parte en dos estados. En Mi
+// Plan vive REPLEGADO —banda + tira solapada de alto FIJO, que no crece con lo
+// visto para no comerle el scroll al calendario— y al tocarlo abre su TAPA:
+// nuestro wordmark, el afiche del festival como objeto (completo, no recortado),
+// nombre y fechas, la banda «Lo que viste» y el muro CONTINUO (los días, fuera:
+// «limitan la visual y generan muchos espacios»).
+test('T84 — el Diario: replegado de alto fijo en Mi Plan, tapa y muro continuo al abrir', async ({ page }) => {
   test.setTimeout(60000);
   await enterFestival(page, 'ficdeh2026', '2026-08-18T15:00:00-05:00');
   await page.evaluate(() => document.querySelector('[data-action="citySheetAll"]')?.click());
   await page.waitForTimeout(400);
-  const r = await page.evaluate(async () => {
-    const pick = (day, n) => FILMS.filter(f => f.day === day && f.poster && !f.is_cortos).slice(0, n);
-    const pasadas = [...pick('2026-08-13', 3), ...pick('2026-08-14', 3), ...pick('2026-08-15', 3), ...pick('2026-08-16', 2)];
-    state.set('savedAgenda', { scenarioIdx: 0, schedule: pasadas.map(f => Object.assign({}, f, { _title: f.title })) });
-    state.set('watched', new Set()); state.set('notWatched', new Set([pasadas[0].title]));
-    state.set('filmRatings', { [pasadas[1].title]: 4 });
+  const medir = async (n) => page.evaluate(async (n) => {
+    const pick = (day, k) => FILMS.filter(f => f.day === day && f.poster && !f.is_cortos).slice(0, k);
+    const sched = [...pick('2026-08-13', 4), ...pick('2026-08-14', 4), ...pick('2026-08-15', 4)].slice(0, n);
+    state.set('savedAgenda', { scenarioIdx: 0, schedule: sched.map(f => Object.assign({}, f, { _title: f.title })) });
+    state.set('watched', new Set()); state.set('notWatched', new Set());
+    state.set('filmRatings', { [sched[0].title]: 4 });
     switchMainNav('mnav-miplan'); showAgView();
-    await new Promise(r => setTimeout(r, 1400));
-    const gInfo = sel => { const e = document.querySelector(sel); if (!e) return null;
-      const cs = getComputedStyle(e); const r = e.getBoundingClientRect();
-      return { w: Math.round(r.width), cols: cs.gridTemplateColumns?.split(' ').length, fs: cs.fontSize, color: cs.color }; };
-    const secPoster = gInfo('.diario-wrap .dw-poster');
-    const secGrid = gInfo('.diario-wrap .dw-grid');
-    const secDay = gInfo('.diario-wrap .dw-day-lbl');
-    const secCards = document.querySelectorAll('.diario-wrap .dw-card').length;
-    // abrir el overlay desde la banda
-    document.querySelector('.dw-band')?.click();
-    await new Promise(r => setTimeout(r, 800));
-    const ovPoster = gInfo('.diary-sheet .dw-poster');
-    const ovGrid = gInfo('.diary-sheet .dw-grid');
-    const ovDay = gInfo('.diary-sheet .dw-day-lbl');
-    const ovCards = document.querySelectorAll('.diary-sheet .dw-card').length;
-    const name = document.querySelector('.diary-name');
-    const count = document.getElementById('diary-count');
-    const off = document.querySelector('.dw-off-badge svg');
-    return { secPoster, secGrid, secDay, secCards, ovPoster, ovGrid, ovDay, ovCards,
-      hdrIcono: !!name?.querySelector('svg'),
-      hdrColor: name && getComputedStyle(name).color,
-      hdrBadge: count?.classList.contains('count-badge'),
-      hdrTxt: count?.textContent.trim(),
-      // el ojo se mide por lo que DIBUJA en pantalla (rect del trazo), no por
-      // la caja del svg: con box-sizing:border-box el padding lo redujo a un
-      // punto negro de 4px mientras la caja seguía diciendo 18 (18 ago).
-      ojoFuera: !!document.querySelector('.dw-row .dw-ctrl svg') && !document.querySelector('.dw-poster .dw-ctrl'),
-      ojoPx: (() => { const s = document.querySelector('.dw-row .dw-ctrl svg'); return s && Math.round(s.getBoundingClientRect().width); })(),
-      posterLimpio: !document.querySelector('.dw-poster > :not(img)'),
-      starsFueraOverlay: !document.querySelector('.diary-sheet .dw-poster .dw-stars') };
+    await new Promise(r => setTimeout(r, 1300));
+    const wrap = document.querySelector('.diario-wrap');
+    const strip = wrap?.querySelector('.dw-strip');
+    return { alto: wrap ? Math.round(wrap.getBoundingClientRect().height) : 0,
+      posters: strip ? strip.querySelectorAll('.dw-strip-p').length : 0,
+      mas: strip?.querySelector('.dw-strip-mas')?.textContent || null,
+      muroEnSeccion: !!wrap?.querySelector('.dw-grid'),
+      abre: wrap?.querySelector('.sec-hdr')?.matches('[data-action="openDiary"]') };
+  }, n);
+
+  // ── replegado: el alto NO crece con lo visto ──
+  const pocas = await medir(4);
+  const muchas = await medir(12);
+  expect(pocas.posters, 'con 4 obras, 4 pósters en la tira').toBe(4);
+  expect(muchas.posters, 'con 12, la tira se acota a 6').toBe(6);
+  expect(muchas.mas, 'y el resto se cuenta').toMatch(/\+\d+/);
+  expect(Math.abs(muchas.alto - pocas.alto), 'el alto no crece con lo visto').toBeLessThanOrEqual(2);
+  expect(muchas.muroEnSeccion, 'el muro NO vive en Mi Plan: está detrás del tap').toBe(false);
+  expect(muchas.abre, 'la banda abre el Diario').toBe(true);
+
+  // ── abierto: tapa + banda + muro continuo ──
+  const abierto = await page.evaluate(async () => {
+    document.querySelector('.dw-band').click();
+    await new Promise(r => setTimeout(r, 900));
+    const sheet = document.querySelector('.diary-sheet');
+    const art = sheet.querySelector('.diary-keyart');
+    const cs = art && getComputedStyle(art);
+    return {
+      wordmark: !!sheet.querySelector('.diary-wordmark'),
+      afiche: !!art && !!art.getAttribute('src'),
+      // el afiche es OBJETO: se ve completo (contain/cover en caja 2:3), no banda recortada
+      afichePropor: art ? +(art.getBoundingClientRect().height / art.getBoundingClientRect().width).toFixed(2) : 0,
+      titulo: sheet.querySelector('#diary-title')?.textContent.trim(),
+      fechas: sheet.querySelector('#diary-dates')?.textContent.trim(),
+      banda: sheet.querySelector('.diary-band')?.textContent.replace(/\s+/g, ' ').trim(),
+      grids: sheet.querySelectorAll('.dw-grid').length,
+      dias: sheet.querySelectorAll('.dw-day-lbl').length,
+      estrellas: sheet.querySelectorAll('.dw-stars .dw-star.on').length,
+    };
   });
-  expect(r.secGrid.cols, 'el muro es de 4 columnas en la sección').toBe(4);
-  expect(r.ovGrid.cols, 'y de 4 en el overlay').toBe(4);
-  expect(Math.abs(r.secPoster.w - r.ovPoster.w), 'MISMO tamaño de póster en ambos').toBeLessThanOrEqual(1);
-  expect(r.secDay.fs, 'mismo label de día afuera…').toBe(r.ovDay.fs);
-  expect(r.secDay.color, '…y del mismo color').toBe(r.ovDay.color);
-  expect(r.secCards, 'la sección recorta a 2 filas (8)').toBeLessThanOrEqual(8);
-  expect(r.ovCards, 'el overlay completa el muro').toBeGreaterThan(r.secCards);
-  expect(r.hdrIcono, 'el letrero del overlay lleva su icono').toBe(true);
-  expect(r.hdrColor, 'y «Diario» en blanco pleno, no ámbar').toBe('rgb(240, 237, 232)');
-  expect(r.hdrBadge, 'la cuenta es badge…').toBe(true);
-  expect(r.hdrTxt, '…numérica, nunca en palabras').toMatch(/^\d+$/);
-  expect(r.ojoFuera, 'el control vive FUERA del afiche, en su fila').toBe(true);
-  expect(r.ojoPx, 'y dibuja de verdad — no un punto').toBeGreaterThanOrEqual(12);
-  expect(r.posterLimpio, 'el afiche es solo afiche: nada encima').toBe(true);
-  expect(r.starsFueraOverlay, 'estrellas bajo el afiche también en el overlay').toBe(true);
+  expect(abierto.wordmark, 'la tapa lleva nuestro wordmark').toBe(true);
+  expect(abierto.afiche, 'y el afiche del festival').toBe(true);
+  expect(abierto.afichePropor, 'el afiche va completo en 2:3, no recortado a banda').toBeCloseTo(1.5, 1);
+  expect(abierto.titulo, 'con el nombre del festival').toBe('FICDEH');
+  expect(abierto.fechas, 'y sus fechas').toMatch(/AGO|AUG/);
+  expect(abierto.banda, 'la banda separa la tapa del muro y lleva la cuenta').toMatch(/Lo que viste|What you saw/);
+  expect(abierto.grids, 'el muro es UNO solo, continuo').toBe(1);
+  expect(abierto.dias, 'sin días partiendo la retícula').toBe(0);
+  expect(abierto.estrellas, 'y las calificaciones se ven').toBeGreaterThan(0);
 });
 
 // 18 ago, regla de Juan: al ABRIR Programa, la barra de días muestra hoy Y
@@ -1598,7 +1607,10 @@ test('T86 — Diario: el afiche es solo afiche; los controles viven debajo', asy
     state.set('filmRatings', { [s[0].title]: 4 });
     switchMainNav('mnav-miplan'); showAgView();
     await new Promise(r => setTimeout(r, 1400));
-    const cards = [...document.querySelectorAll('.diario-wrap .dw-card')];
+    // el muro vive detrás del tap (18 ago): la sección es una tira replegada
+    document.querySelector('.dw-band')?.click();
+    await new Promise(r => setTimeout(r, 900));
+    const cards = [...document.querySelectorAll('.diary-sheet .dw-card')];
     const byTitle = t => cards.find(c => c.querySelector(`[data-title="${CSS.escape(t)}"]`));
     const cal = byTitle(s[0].title), sinCal = byTitle(s[1].title), negada = byTitle(s[2].title);
     const bajoElAfiche = c => { const p = c.querySelector('.dw-poster'), row = c.querySelector('.dw-row');
