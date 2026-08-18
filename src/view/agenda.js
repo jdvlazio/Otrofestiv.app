@@ -1443,7 +1443,6 @@ export function buildResultHTML(scenarios){
   // las incompatibilidades (abajo) cuando algo NO entró.
 
   // ── Header: Plan óptimo vs Variación ──
-  const isCustom=sc._custom===true;
   // «Opción» y no «Tu Plan» (revisión de UX Writer, 16 ago): esto es una
   // PROPUESTA — no existe como plan hasta tocar «Usar este Plan», y el tab que
   // sí lo contiene se llama «Mi Plan». Dos objetos con el mismo nombre hacían
@@ -1452,7 +1451,6 @@ export function buildResultHTML(scenarios){
   // había elegido para los resultados del algoritmo.
   // Sin «N de M»: el motor devuelve UNA opción en los casos reales (medido) y
   // la UI no navega entre variaciones — un contador prometería lo que no hay.
-  const planLabel=isCustom?t('av_opcion_pers'):t('plan_opcion');
 
   // Modelo de "plan único": sin dots ni navegación entre variaciones.
   // Si existen escenarios custom (forceInclude), `cachedResult.currentIdx` puede
@@ -1462,10 +1460,17 @@ export function buildResultHTML(scenarios){
   // Summary como filas-header (patrón Intereses): icono + label + count-badge.
   // El conteo de films y el estado de prioridades viven en badges, no en prosa.
   // "X no incluidas" se omite — ya vive en el header de la sección No Incluidas.
+  // La banda «Opción N» murió (Juan, 18 ago): un badge junto a un sustantivo
+  // CONTABLE se lee como su índice — «Opción 5» parecía la quinta opción cuando
+  // el 5 eran las obras del plan. Ya pasamos por «Plan Óptimo» y volvimos: el
+  // problema no era la palabra, era el badge. En su lugar, la misma línea de
+  // dato que la pantalla usa antes de calcular: «6 obras · 2 días» — sin badge,
+  // sin sustantivo enumerable, y el usuario ya sabe qué está mirando porque
+  // acaba de pulsar Calcular. El nombre del objeto sigue distinguiéndose de
+  // «Mi Plan» por el CTA que lo confirma («Usar este Plan»).
+  const _nDias=new Set((sc.schedule||[]).map(s=>s.day)).size;
   let html=`${_staleBanner}<div class="ag-summary">
-    <div class="sec-hdr">${ICONS.calendar} <span>${planLabel}</span>
-      <span class="count-badge cb-neutral">${ok}</span>
-    </div>
+    <div class="dato-linea">${t(ok===1?'pre_obra':'pre_obras',{n:ok})} · ${_nDias===1?t('res_dia'):t('res_dias',{n:_nDias})}</div>
     ${sc.incompatiblePriorities?(()=>{
       const pairs=sc.conflictingPriorityPairs||[];
       const pairMsg=pairs.length
@@ -1488,7 +1493,10 @@ export function buildResultHTML(scenarios){
     // dayLabelLong = formateador ÚNICO del nombre largo de día (mismo de Mi Plan);
     // antes esto reimplementaba el mismo array + new Date inline.
     // El divisor (border-top) separa días: el primero no lo lleva.
-    html+=`<div class="ag-day-label${_firstDay?' first':''}"><span class="ag-day-name">${dayLabelLong(day)}</span><span class="count-badge cb-neutral">${films.length}</span></div>`;
+    // Anatomía del separador de HORAS de Programa (.plist-time-hdr): banda a
+    // sangre, ámbar, mayúsculas con tracking — el día ancla la lista igual que
+    // «18:30» ancla las funciones. Muere el «Día N» en blanco (Juan, 18 ago).
+    html+=`<div class="ag-day-band${_firstDay?' first':''}"><span>${dayLabelLong(day).toUpperCase()}</span><span class="count-badge cb-neutral">${films.length}</span></div>`;
     _firstDay=false;
     films.forEach((s,i)=>{
       if(i>0){const warn=travelWarn(films[i-1],s);if(warn) html+=`<div class="mplan-warn-row">${warn}</div>`;}

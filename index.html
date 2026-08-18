@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202608181256">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202608181256">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202608181354">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202608181354">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -1604,6 +1604,11 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 
 .ag-save-btn{width:100%;margin-top:var(--sp-3)} /* anatomía: regla dueña */
 
+/* Día del resultado = misma anatomía que el separador de HORAS de Programa
+   (.plist-time-hdr): banda a sangre, ámbar, mayúsculas con tracking. Ancla la
+   lista igual que «18:30» ancla las funciones (Juan, 18 ago). */
+.ag-day-band{display:flex;align-items:center;justify-content:space-between;gap:var(--sp-2);font-size:var(--t-label);font-weight:var(--w-bold);color:var(--amber);letter-spacing:.1em;background:var(--surf-2);margin:var(--sp-4) calc(-1*var(--sp-4)) var(--sp-2);padding:var(--sp-2) var(--sp-4)}
+.ag-day-band.first{margin-top:var(--sp-3)}
 .ag-day-label{font-family:var(--font);display:flex;align-items:flex-end;gap:var(--sp-2);margin:var(--sp-5) 0 var(--sp-2);padding-bottom:var(--sp-2);border-bottom:1px solid var(--bdr-l)}
 .ag-day-name{font-size:var(--t-md);font-weight:var(--w-semi);color:var(--white);display:flex;flex-direction:column;align-items:flex-start;gap:1px}
 
@@ -3349,7 +3354,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202608181256";
+    s.src="/src/main.js?v=202608181354";
     document.body.appendChild(s);
     // Watchdog de boot (P0 18 jul): si el grafo ESM murió en el import (caché
     // HTTP mixta tras deploys en ráfaga — main.js nuevo + módulo viejo sin el

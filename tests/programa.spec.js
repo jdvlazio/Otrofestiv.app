@@ -1888,3 +1888,53 @@ test('T91 — la ficha: alto según su contenido y los CTAs siempre a la vista',
   expect(r.larga.dentro, 'CTAs a la vista en la larga, sin scrollear').toBe(true);
   expect(r.larga.piePegado, 'el pie va anclado').toBe('sticky');
 });
+
+// 18 ago (Juan): «el separador dice Opción y tiene badge, se entiende como el
+// número de Opción». Un badge junto a un sustantivo CONTABLE se lee como su
+// índice — y el 5 eran las obras. Ya pasamos por «Plan Óptimo»: el problema no
+// era la palabra, era el badge. Muere la banda; el resumen usa la línea de dato
+// («6 obras · 2 días») y los días adoptan la banda ámbar del separador de horas
+// de Programa, con su conteo.
+test('T92 — el resultado: sin banda «Opción», resumen en línea y días como Programa', async ({ page }) => {
+  test.setTimeout(90000);
+  await enterFestival(page, 'ficdeh2026', '2026-08-18T08:00:00-05:00');
+  await page.evaluate(() => [...document.querySelectorAll('#city-sheet [data-action]')]
+    .find(x => x.textContent.includes('Bogotá'))?.click());
+  await page.waitForTimeout(500);
+  const r = await page.evaluate(async () => {
+    const D = await import('/src/domain/film.js');
+    const bog = f => (f.venue || '').includes('Bogotá');
+    const fut = [...new Set(FILMS.filter(f => bog(f) && !D.screeningPassed(f)).map(f => f.title))];
+    state.set('watchlist', new Set(fut.slice(0, 10)));
+    cachedResult = null; savedAgenda = null;
+    switchMainNav('mnav-planner'); showAgView();
+    await new Promise(r => setTimeout(r, 800));
+    document.querySelector('.av-calc-btn').click();
+    for (let i = 0; i < 40 && !document.querySelector('.ag-day-band'); i++) await new Promise(r => setTimeout(r, 250));
+    const sum = document.querySelector('.ag-summary');
+    const bandas = [...document.querySelectorAll('.ag-day-band')];
+    const b0 = bandas[0];
+    return {
+      bandaOpcion: !!sum?.querySelector('.sec-hdr'),
+      resumen: sum?.querySelector('.dato-linea')?.textContent.trim(),
+      // el resumen NO lleva badge: un número en píldora se leía como índice
+      resumenBadge: !!sum?.querySelector('.count-badge'),
+      nBandas: bandas.length,
+      // los días heredan la anatomía del separador de horas de Programa
+      color: b0 && getComputedStyle(b0).color,
+      caps: b0 && getComputedStyle(b0).letterSpacing,
+      conteoDia: !!b0?.querySelector('.count-badge'),
+      txt: b0?.textContent.replace(/\s+/g, ' ').trim(),
+      // y el conteo del día coincide con las filas que lo siguen
+      dias: new Set((cachedResult.scenarios[cachedResult.currentIdx || 0].schedule || []).map(s => s.day)).size,
+    };
+  });
+  expect(r.bandaOpcion, 'la banda «Opción» murió').toBe(false);
+  expect(r.resumen, 'el resumen es una línea de dato: obras · días').toMatch(/\d+ obras? · \d+ días?/);
+  expect(r.resumenBadge, 'sin badge — el número no puede leerse como índice').toBe(false);
+  expect(r.nBandas, 'hay una banda por día del plan').toBe(r.dias);
+  expect(r.color, 'los días van en ámbar, como las horas de Programa').toBe('rgb(245, 158, 11)');
+  expect(parseFloat(r.caps), 'con el tracking del separador de horas').toBeGreaterThan(0.5);
+  expect(r.conteoDia, 'y conservan su conteo').toBe(true);
+  expect(r.txt, 'el día va en mayúsculas').toMatch(/^[A-ZÁÉÍÓÚÑ]/);
+});
