@@ -241,9 +241,14 @@ export function initProgramaModeBar(){
     chipsEl.classList.toggle('hidden',activeDay!=='all');
     if(activeDay==='all') renderProgramaChips();
   }
-  // nav-row siempre visible en Programa — dtabs son la navegación temporal
+  // nav-row visible SOLO en Programa — misma condición que switchMainNav. El
+  // remove('hidden') incondicional asumía que esta función solo corre en
+  // Programa, pero el fix del compositor de iOS (loader.js) la re-ejecuta
+  // ~830ms después de entrar al festival, y si para entonces estás en Mi Plan
+  // (el salto automático del boot, o un toque rápido) la barra de días se
+  // colaba en el tab equivocado. Cazado por Juan en producción, 18 ago 2026.
   const navRow=document.getElementById('nav-row');
-  if(navRow) navRow.classList.remove('hidden');
+  if(navRow) navRow.classList.toggle('hidden', activeMNav!=='mnav-cartelera');
   document.querySelectorAll('.dtab').forEach(t=>{
     t.classList.toggle('on', activeDay==='all' ? t.dataset.day==='all' : t.dataset.day===activeDay);
     t.classList.toggle('past', t.dataset.day!=='all' && dayFullyPassed(t.dataset.day));
