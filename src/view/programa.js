@@ -214,6 +214,28 @@ export function renderProgramaListHTML(state){
   }catch(e){return `<div class="pad-muted">${t('error_funciones')}</div>`;}
 }
 
+// scrollDtabsToActive — DUEÑO ÚNICO del scroll de la barra de días. Regla de
+// Juan (18 ago): al abrir Programa, HOY y MAÑANA se ven sin navegar — el día
+// siguiente no puede vivir escondido en la navegación. La fórmula vieja
+// (activo pegado al borde izquierdo) vivía copiada en 3 sitios y con festivales
+// largos dejaba mañana fuera de cuadro: medido en AFF (10 días) — hoy visible,
+// mañana cortado; en Tribeca (12 días) ninguno de los dos.
+export function scrollDtabsToActive(){
+  const dt=document.getElementById('dtabs');
+  if(!dt) return;
+  const on=dt.querySelector('.dtab.on');
+  if(!on) return;
+  const tabs=[...dt.querySelectorAll('.dtab')];
+  const next=tabs[tabs.indexOf(on)+1]||null;
+  // El objetivo es el PAR (hoy + mañana); sin mañana (último día), solo hoy.
+  const left=on.offsetLeft-dt.offsetLeft;
+  const right=((next||on).offsetLeft-dt.offsetLeft)+(next||on).offsetWidth;
+  const max=Math.max(0,dt.scrollWidth-dt.clientWidth);
+  // Si el par no cabe entero, manda HOY (el día siguiente asoma lo que pueda).
+  const target=(right-left>dt.clientWidth)?left:Math.min(left,Math.max(0,right-dt.clientWidth));
+  dt.scrollLeft=Math.max(0,Math.min(max,target));
+}
+
 export function _renderProgramaContent(resetScroll=false){
   // resetScroll: true solo en navegación (cambio de día/filtro/vista). En re-renders
   // por estado (toggle WL/prio, sync nube) queda false → preserva el scroll del usuario.

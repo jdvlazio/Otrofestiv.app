@@ -1029,7 +1029,7 @@ export function renderFilmListHTML(state){
         ${ratingHtml}
       </div>
       <div class="int-item-actions">
-        <button class="int-seen-btn on" data-title="${escXML(title)}" data-action="toggleWatched" aria-label="${t('aria_quitar_vista')}">✓</button>
+        <button class="int-seen-btn on" data-title="${escXML(title)}" data-action="toggleWatched" aria-label="${t('aria_quitar_vista')}">${ICONS.eyeOff}</button>
       </div>
     </div>`;
   }

@@ -71,7 +71,7 @@ import {
 
 // ── Step 6h: programa.js cartelera render (render, lugar overlay). ────────────
 import {
-  render, lugarClose, lugarOutside,
+  render, lugarClose, lugarOutside, scrollDtabsToActive,
 } from './view/programa.js';
 
 // ── Step 6g: programa.js render dispatchers (8 fns). ─────────────────────────
@@ -451,7 +451,7 @@ FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202608180648';
+const BUILD_VERSION='202608180701';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';
@@ -860,10 +860,7 @@ const dtabs=document.getElementById('dtabs');
     activeDay=firstFuture;
     dtabs.querySelectorAll('.dtab').forEach(t=>t.classList.toggle('on',t.dataset.day===firstFuture));
   }
-  requestAnimationFrame(()=>{
-    const activeBtn=dtabs.querySelector('.dtab.on');
-    if(activeBtn) dtabs.scrollLeft=activeBtn.offsetLeft-dtabs.offsetLeft;
-  });
+  requestAnimationFrame(scrollDtabsToActive);
 })();
 
 /* ── RENDER — CARTELERA: filtros, grid horario, grid película ────────── */

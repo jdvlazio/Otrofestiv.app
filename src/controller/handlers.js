@@ -9,7 +9,7 @@ import { FESTIVAL_CONFIG, MAX_REMEMBERED_SLOTS } from '../config.js';
 import { ICONS, parseProgramTitle } from '../view/components.js';
 import { closeAuthSheet, closeCitySheet, closePrioLimit } from '../view/sheets.js';
 import { showActionModal, showToast } from '../view/feedback.js';
-import { _renderProgramaContent, lugarClose, render, renderNoticesBanner, _noticeKey } from '../view/programa.js';
+import { _renderProgramaContent, lugarClose, render, renderNoticesBanner, _noticeKey, scrollDtabsToActive } from '../view/programa.js';
 import { renderAgenda, updateCardState, updateHorarioPrioBtn } from '../view/agenda.js';
 import { keepCityOnly, planCityVenues } from '../view/helpers.js';
 import { runCalc, _planCityVenues } from './calc.js';
@@ -764,10 +764,7 @@ export function filterByDay(day){
   cartelaMode='horario';
   document.querySelectorAll('.dtab').forEach(t=>t.classList.toggle('on',t.dataset.day===day));
   _syncPmodeTabs(); // la píldora Hoy/Mañana espeja al día elegido (y se apaga si no es ninguno)
-  requestAnimationFrame(()=>{
-    const activeBtn=document.querySelector('.dtab.on');
-    if(activeBtn){const dt=document.getElementById('dtabs');if(dt)dt.scrollLeft=activeBtn.offsetLeft-dt.offsetLeft;}
-  });
+  requestAnimationFrame(scrollDtabsToActive);
   switchMainNav('mnav-cartelera');
   _renderProgramaContent(true); // cambio de día → scroll al tope
   _updateProgramaActiveFilter();

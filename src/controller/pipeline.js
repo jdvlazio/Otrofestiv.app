@@ -7,7 +7,7 @@
 import { FESTIVAL_CONFIG } from '../config.js';
 import { ICONS, _secLabelFull } from '../view/components.js';
 import { venueSelLabel } from '../view/helpers.js';
-import { _renderProgramaContent, renderProgramaChips } from '../view/programa.js';
+import { _renderProgramaContent, renderProgramaChips, scrollDtabsToActive } from '../view/programa.js';
 import { _fixStickyOffset, renderAgenda, renderFilmListHTML } from '../view/agenda.js';
 import { runCalc } from './calc.js';
 import { _renderSplashRail, _renderFestivalSelector, renderPostponedBanner } from './festival.js';
@@ -83,7 +83,13 @@ export function showDayView(){
   // Inicializar el sistema de modos
   initProgramaModeBar();
   _renderProgramaContent(true); // entrar a vista día → scroll al tope
-  requestAnimationFrame(_fixStickyOffset); // actualiza altura del chrome-blur
+  requestAnimationFrame(()=>{
+    _fixStickyOffset(); // actualiza altura del chrome-blur
+    // ENTRAR a Programa reposiciona la barra de días: hoy y mañana a la vista
+    // (Juan, 18 ago). Antes solo corría al CARGAR el festival, así que volver
+    // desde otra pestaña dejaba la barra donde el usuario la hubiera empujado.
+    scrollDtabsToActive();
+  });
 }
 
 export function showAgView(){
