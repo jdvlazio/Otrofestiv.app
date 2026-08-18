@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202608180225">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202608180225">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202608180254">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202608180254">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -1633,21 +1633,26 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .mplan-foot{display:flex;border-top:1px solid var(--bdr);margin-top:var(--sp-3)}
 .mplan-foot-btn{flex:1;min-width:0;display:inline-flex;align-items:center;justify-content:center;gap:5px;height:44px;background:none;border:none;color:var(--gray);font-size:var(--t-caption);font-weight:var(--w-semi);font-family:var(--font);cursor:pointer;transition:color var(--tr-base);white-space:nowrap;letter-spacing:.2px}
 .mplan-foot-btn+.mplan-foot-btn{border-left:1px solid var(--bdr)}
-/* Diario (Luz) — muro coleccionista: pósters limpios; el estado solo aparece
-   cuando se desvía de la asunción (estrellas afuera · apagada con ojo). */
+/* Diario — anatomía ÚNICA del muro (revisión depto. de diseño, 18 ago):
+   sección y overlay comparten póster (4 col), label de día, estrellas bajo el
+   afiche y el ojo. La sección recorta (cap 8); el overlay completa. */
 .diario-wrap{margin-top:var(--sp-5)}
-.dw-day-lbl{font-size:var(--t-sm);font-weight:var(--w-semi);color:var(--gray);letter-spacing:.2px;margin:var(--sp-4) 0 var(--sp-2)}
-.dw-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--sp-2)}
-.dw-card{cursor:pointer}
+.dw-band{cursor:pointer}
+.dw-band .hdr-end svg{color:var(--gray)}
+.dw-day-lbl{font-size:var(--t-caption);font-weight:var(--w-semi);color:var(--white);letter-spacing:.2px;margin:var(--sp-4) 0 var(--sp-2)}
+.dw-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--sp-2);margin-bottom:var(--sp-2)}
+.dw-card{cursor:pointer;min-width:0}
 .dw-poster{position:relative;aspect-ratio:2/3;border-radius:var(--r-poster);overflow:hidden;background:var(--surf-3)}
 .dw-poster .img-cover{width:100%;height:100%;object-fit:cover;display:block}
 .dw-off .img-cover{opacity:.4;filter:saturate(0)}
-.dw-off-badge{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:var(--white-60)}
-.dw-off-badge svg{width:16px;height:16px;padding:6px;border-radius:50%;background:var(--overlay-70,rgba(0,0,0,.5))}
-.dw-stars{display:flex;gap:2px;margin-top:var(--sp-1);min-height:9px}
+.dw-off-badge{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:var(--white);background:none;border:none;cursor:pointer;padding:0}
+.dw-off-badge svg{width:18px;height:18px;padding:7px;border-radius:50%;background:var(--surf-2);border:1px solid var(--bdr)}
+.dw-stars{display:flex;gap:2px;margin-top:var(--sp-1);min-height:10px}
 .dw-star{display:flex;color:var(--white-20,rgba(240,237,232,.2))}
 .dw-star.on{color:var(--amber)}
-.dw-star svg{width:9px;height:9px}
+.dw-star svg{width:10px;height:10px}
+.diary-name{display:flex;align-items:center;gap:5px;font-size:var(--t-base);font-weight:var(--w-bold);color:var(--white)}
+.diary-name svg{color:var(--amber);flex-shrink:0}
 /* checkin-opt / checkin-result — el panel de ALTERNATIVAS y su acción (vivos:
    comparten prefijo con el checkin de confirmación, que sí murió el 18 ago). */
 .checkin-result-btn{flex:1;padding:var(--sp-2);border-radius:var(--r-md);border:none;font-family:var(--font);font-size:var(--t-sm);font-weight:var(--w-semi);cursor:pointer;touch-action:manipulation;transition:opacity var(--tr-base)}
@@ -1734,7 +1739,6 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .diary-sheet.open{transform:translateY(0);transition:var(--sheet-in)}
 .diary-hdr{display:flex;align-items:flex-start;justify-content:space-between;gap:var(--sp-3);padding:var(--sp-1) var(--sp-4) var(--sp-3)}
 .diary-title{font-size:var(--t-md);font-weight:var(--w-display);color:var(--white);letter-spacing:-.02em;margin-top:2px}
-.diary-count{font-size:var(--t-sm);color:var(--gray);margin-top:2px}
 .diary-body{overflow-y:auto;padding:0 var(--sp-4) calc(env(safe-area-inset-bottom) + var(--sp-6));-webkit-overflow-scrolling:touch}
 /* Los grids del Diario anulan el padding-bottom de .poster-grid (~100px, pensado para
    scrollear bajo el nav en la grilla principal) — acá era el hueco entre grupos. */
@@ -3069,9 +3073,8 @@ setTimeout(function(){
   <div class="pv-handle"></div>
   <div class="diary-hdr">
     <div style="min-width:0">
-      <div class="ctx-eyebrow" style="color:var(--amber)"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg> <span data-i18n="diary_eyebrow">Diario</span></div>
+      <div class="diary-name"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 7v14"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg><span data-i18n="diary_eyebrow">Diario</span><span class="count-badge cb-neutral" id="diary-count"></span></div>
       <div class="diary-title" id="diary-title"></div>
-      <div class="diary-count" id="diary-count"></div>
     </div>
     <div class="row-sm">
       <button class="icon-btn-circle" data-action="shareDiary" data-stop="1" data-i18n-aria="plan_compartir" aria-label="Compartir"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5"/></svg></button>
@@ -3285,7 +3288,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202608180225";
+    s.src="/src/main.js?v=202608180254";
     document.body.appendChild(s);
     // Watchdog de boot (P0 18 jul): si el grafo ESM murió en el import (caché
     // HTTP mixta tras deploys en ráfaga — main.js nuevo + módulo viejo sin el

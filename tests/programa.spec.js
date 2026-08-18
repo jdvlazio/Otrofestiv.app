@@ -778,14 +778,16 @@ test('T67 — el chip nombra el Diario, y el Recuerdo lo presenta', async ({ pag
     return w && { txt: b.textContent.replace(/\s+/g, ' ').trim(),
       icono: !!b.querySelector('svg'),
       badge: !!b.querySelector('.count-badge'),
-      verTodo: !!b.querySelector('[data-action="openDiary"]'),
+      bandaAbre: b.matches('[data-action="openDiary"]'),
+      verTodoViejo: !!b.querySelector('button'),
       chipViejo: !!document.querySelector('.diary-chip') };
   });
   expect(sec, 'con obras vistas hay sección Diario').toBeTruthy();
   expect(sec.txt, 'la banda nombra su destino').toContain('Diario');
   expect(sec.icono, 'con icono, como toda banda').toBe(true);
   expect(sec.badge, 'y la cuenta como badge, no en palabras').toBe(true);
-  expect(sec.verTodo, '«Ver todo» lleva al Diario completo').toBe(true);
+  expect(sec.bandaAbre, 'la banda ENTERA abre el Diario').toBe(true);
+  expect(sec.verTodoViejo, 'sin «Ver todo»: la affordance no se duplica').toBe(false);
   expect(sec.chipViejo, 'el chip de la banda del Plan no existe más').toBe(false);
 
   // Y después del festival, el bloque del Recuerdo se presenta con su nombre.
@@ -1413,7 +1415,10 @@ test('T82 — el calendario es una pieza: lista adentro, footer con nombre propi
   expect(r.captionDentro, 'el día es caption dentro de la pieza').toBe(true);
   expect(r.footAlFinal, 'el footer cierra la pieza').toBe(true);
   expect(r.labels.join('|'), 'los labels dicen la acción, no el sustantivo').toMatch(/Compartir Plan|Share Plan/);
-  expect(r.labels.join('|')).toMatch(/Pasar a tu calendario|Add to your calendar/);
+  // «Exportar» (Juan, 18 ago): dentro del calendario, «Pasar a tu calendario»
+  // obligaba a preguntar cuál; y «Sincronizar» prometía un vínculo vivo que el
+  // .ics no cumple. El verbo dice la acción; el icono carga el destino.
+  expect(r.labels.join('|')).toMatch(/Exportar|Export/);
   expect(new Set(r.footSizes).size, 'un solo cuerpo tipográfico en el footer').toBe(1);
   expect(r.footOverflow, 'el label más largo cabe: cero desborde (ES y PT)').toBe(0);
   expect(r.hint, 'el hint murió: lo reemplaza la affordance').toBe(false);
@@ -1466,4 +1471,61 @@ test('T83 — Diario Luz: muro limpio, estrellas afuera, y la negación se apaga
   expect(r.starsFuera, 'las estrellas viven FUERA del afiche (Letterboxd)').toBe(true);
   expect(r.assumedLimpia, 'la asumida no lleva ni un pixel de estado').toBe(true);
   expect(r.negadaOff, 'la negada se apaga con el ojo tachado').toBe(true);
+});
+
+// 18 ago, revisión del depto. de diseño (13 violaciones): sección y overlay del
+// Diario son EL MISMO muro a distinta profundidad — mismo póster (4 col), mismo
+// label de día, estrellas bajo el afiche en ambos, conteo en badge (nunca en
+// palabras) y el header del overlay con el mismo letrero que la banda.
+test('T84 — el Diario es UN muro: misma anatomía en sección y overlay', async ({ page }) => {
+  test.setTimeout(60000);
+  await enterFestival(page, 'ficdeh2026', '2026-08-18T15:00:00-05:00');
+  await page.evaluate(() => document.querySelector('[data-action="citySheetAll"]')?.click());
+  await page.waitForTimeout(400);
+  const r = await page.evaluate(async () => {
+    const pick = (day, n) => FILMS.filter(f => f.day === day && f.poster && !f.is_cortos).slice(0, n);
+    const pasadas = [...pick('2026-08-13', 3), ...pick('2026-08-14', 3), ...pick('2026-08-15', 3), ...pick('2026-08-16', 2)];
+    state.set('savedAgenda', { scenarioIdx: 0, schedule: pasadas.map(f => Object.assign({}, f, { _title: f.title })) });
+    state.set('watched', new Set()); state.set('notWatched', new Set([pasadas[0].title]));
+    state.set('filmRatings', { [pasadas[1].title]: 4 });
+    switchMainNav('mnav-miplan'); showAgView();
+    await new Promise(r => setTimeout(r, 1400));
+    const gInfo = sel => { const e = document.querySelector(sel); if (!e) return null;
+      const cs = getComputedStyle(e); const r = e.getBoundingClientRect();
+      return { w: Math.round(r.width), cols: cs.gridTemplateColumns?.split(' ').length, fs: cs.fontSize, color: cs.color }; };
+    const secPoster = gInfo('.diario-wrap .dw-poster');
+    const secGrid = gInfo('.diario-wrap .dw-grid');
+    const secDay = gInfo('.diario-wrap .dw-day-lbl');
+    const secCards = document.querySelectorAll('.diario-wrap .dw-card').length;
+    // abrir el overlay desde la banda
+    document.querySelector('.dw-band')?.click();
+    await new Promise(r => setTimeout(r, 800));
+    const ovPoster = gInfo('.diary-sheet .dw-poster');
+    const ovGrid = gInfo('.diary-sheet .dw-grid');
+    const ovDay = gInfo('.diary-sheet .dw-day-lbl');
+    const ovCards = document.querySelectorAll('.diary-sheet .dw-card').length;
+    const name = document.querySelector('.diary-name');
+    const count = document.getElementById('diary-count');
+    const off = document.querySelector('.dw-off-badge svg');
+    return { secPoster, secGrid, secDay, secCards, ovPoster, ovGrid, ovDay, ovCards,
+      hdrIcono: !!name?.querySelector('svg'),
+      hdrColor: name && getComputedStyle(name).color,
+      hdrBadge: count?.classList.contains('count-badge'),
+      hdrTxt: count?.textContent.trim(),
+      ojoPx: off && Math.round(off.getBoundingClientRect().width),
+      starsFueraOverlay: !document.querySelector('.diary-sheet .dw-poster .dw-stars') };
+  });
+  expect(r.secGrid.cols, 'el muro es de 4 columnas en la sección').toBe(4);
+  expect(r.ovGrid.cols, 'y de 4 en el overlay').toBe(4);
+  expect(Math.abs(r.secPoster.w - r.ovPoster.w), 'MISMO tamaño de póster en ambos').toBeLessThanOrEqual(1);
+  expect(r.secDay.fs, 'mismo label de día afuera…').toBe(r.ovDay.fs);
+  expect(r.secDay.color, '…y del mismo color').toBe(r.ovDay.color);
+  expect(r.secCards, 'la sección recorta a 2 filas (8)').toBeLessThanOrEqual(8);
+  expect(r.ovCards, 'el overlay completa el muro').toBeGreaterThan(r.secCards);
+  expect(r.hdrIcono, 'el letrero del overlay lleva su icono').toBe(true);
+  expect(r.hdrColor, 'y «Diario» en blanco pleno, no ámbar').toBe('rgb(240, 237, 232)');
+  expect(r.hdrBadge, 'la cuenta es badge…').toBe(true);
+  expect(r.hdrTxt, '…numérica, nunca en palabras').toMatch(/^\d+$/);
+  expect(r.ojoPx, 'el ojo se ve: 18px sobre disco sólido').toBeGreaterThanOrEqual(17);
+  expect(r.starsFueraOverlay, 'estrellas bajo el afiche también en el overlay').toBe(true);
 });
