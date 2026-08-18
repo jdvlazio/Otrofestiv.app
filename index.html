@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202608172054">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202608172054">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202608180052">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202608180052">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -1650,8 +1650,10 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 /* Anclados al PIE del calendario (auditoría 18 ago, punto 4): antes flotaban
    equidistantes (16px arriba y abajo) entre la grilla y la lista del día. 4px
    arriba los ata a la grilla; el aire va después. */
-.mplan-bottom-actions{display:flex;gap:var(--sp-2);padding:0 var(--sp-3) var(--sp-2);justify-content:flex-end}
-.mplan-bottom-btn{display:inline-flex;align-items:center;gap:5px;background:none;border:1px solid var(--bdr);border-radius:var(--r-pill);color:var(--gray);font-size:var(--t-xs);font-weight:var(--w-semi);font-family:var(--font);padding:4px 10px;cursor:pointer;transition:color var(--tr-base),border-color var(--tr-base);white-space:nowrap;letter-spacing:.2px}
+.mplan-div{height:1px;background:var(--bdr)}
+.mplan-foot{display:flex;border-top:1px solid var(--bdr);margin-top:var(--sp-3)}
+.mplan-foot-btn{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:5px;height:44px;background:none;border:none;color:var(--gray);font-size:var(--t-sm);font-weight:var(--w-semi);font-family:var(--font);cursor:pointer;transition:color var(--tr-base);white-space:nowrap;letter-spacing:.2px}
+.mplan-foot-btn+.mplan-foot-btn{border-left:1px solid var(--bdr)}
 .mplan-bottom-btn:active{opacity:.6}
 .mplan-wk-hline{position:absolute;left:0;right:0;height:0.5px;background:var(--bdr-l);pointer-events:none}
 .mplan-wk-hline.mp-major{background:var(--bdr)}
@@ -1680,15 +1682,15 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .mplan-wk-venue{font-size:var(--t-xs);color:var(--gray);margin-top:3px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 
 /* Lista de detalle */
-.mplan-list{margin-top:var(--sp-4)}
+.mplan-list{padding:0 var(--sp-2)}
 
 :focus-visible{outline:2px solid var(--amber);outline-offset:2px}
 
 /* Day landmark de Mi Plan — mismo patrón que Planear (.ag-day-label): nombre
    + badge a los lados, flush horizontal, sin border-bottom (no separa header
    de sus funciones). Mi Plan muestra un solo día, así que no lleva border-top. */
-.mplan-list-hdr{display:flex;flex-direction:row;align-items:baseline;justify-content:space-between;gap:var(--sp-2);padding:var(--sp-2) 0}
-.mplan-day-name{font-size:var(--t-md);font-weight:var(--w-semi);color:var(--white);line-height:1}
+.mplan-list-hdr{display:flex;flex-direction:row;align-items:baseline;justify-content:space-between;gap:var(--sp-2);padding:var(--sp-3) var(--sp-2) 0}
+.mplan-day-name{font-size:var(--t-sm);font-weight:var(--w-semi);color:var(--gray);line-height:1}
 /* film-list-item: flush horizontal (16px vía .ag-view), flex-start, sin
    divisor por item (agrupa por día, igual que Planear). */
 .mplan-row{display:flex;align-items:flex-start;gap:var(--sp-3);padding:var(--sp-3) 0;transition:background var(--tr-smooth);cursor:pointer}
@@ -1706,9 +1708,9 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
    t-md / w-bold / amber, sin subrayado. Sigue tappable (toggleFilmAlternatives)
    pero el affordance visual lo da el contexto, no el subrayado. */
 .mplan-t1{font-family:var(--font);font-size:var(--t-md);font-weight:var(--w-bold);color:var(--amber);line-height:1;cursor:pointer;padding:2px 0;margin-bottom:2px;transition:opacity var(--tr-base);letter-spacing:normal}
+.mplan-t1 svg{vertical-align:-1px;margin-left:1px;opacity:.7}
 .mplan-t1:active{opacity:.6}
 .mplan-t1.mp-past{color:var(--gray2);cursor:default}
-.mplan-change-hint{font-size:var(--t-sm);color:var(--gray);padding:6px 0 10px;text-align:center;letter-spacing:.2px}
 .mplan-t2{font-size:var(--t-xs);color:var(--gray2);margin-top:2px;display:flex;align-items:center;gap:3px}
 .mplan-ri{flex:1;min-width:0}
 .mplan-rtitle{font-size:var(--t-base);font-weight:var(--w-bold);color:var(--white);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
@@ -3272,7 +3274,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202608172054";
+    s.src="/src/main.js?v=202608180052";
     document.body.appendChild(s);
     // Watchdog de boot (P0 18 jul): si el grafo ESM murió en el import (caché
     // HTTP mixta tras deploys en ráfaga — main.js nuevo + módulo viejo sin el

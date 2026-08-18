@@ -491,7 +491,7 @@ export function renderMiPlanCalendar(state){
       listHtml+=`<div class="mplan-row${_rowKey===_activeMiPlanFilm?' active':''}${isSeen?' mp-seen':''}" style="cursor:pointer" data-rkey="${_safeRowKey}" data-action="selectFromDetail">
         ${_mph}
         <div class="mplan-ri">
-          <div class="mplan-t1${isPast?' mp-past':''}${_void?' mp-void-t':''}" ${!isPast?`data-action="toggleFilmAlternatives" data-key="${(s._title||'')+(s.day||'')+(s.time||'')}" data-title="${safeT}" data-day="${s.day||''}" data-time="${s.time||''}" data-stop="1"`:''} title="${!isPast?t('tooltip_cambiar_horario'):''}">${s.time}</div>
+          <div class="mplan-t1${isPast?' mp-past':''}${_void?' mp-void-t':''}" ${!isPast?`data-action="toggleFilmAlternatives" data-key="${(s._title||'')+(s.day||'')+(s.time||'')}" data-title="${safeT}" data-day="${s.day||''}" data-time="${s.time||''}" data-stop="1"`:''} title="${!isPast?t('tooltip_cambiar_horario'):''}">${s.time}${!isPast?ICONS.chevronD:''}</div>
           <div class="mplan-t2">${_voidBadge}${(()=>{
             // «hasta 16:00» y no un «16:00» suelto (revisión de UX Writer, 16 ago):
             // la fila muestra dos horas y no decía cuál era cuál — y la duración,
@@ -515,10 +515,14 @@ export function renderMiPlanCalendar(state){
   }
   listHtml+='</div>';
 
-  // El calendario semanal queda en su card (.mplan-wrap). La lista del día
-  // detalle sale del card → lista plana alineada con los otros tabs (poster 16px).
-  // Orden: calendario (card) → acciones (Compartir/Calendario, cierran el
-  // calendario) → lista del día → hint. El divisor solo vive antes de Sugerencias.
+  // El calendario es UNA pieza (auditoría de Juan, 18 ago): grilla, día y lista
+  // comparten el perímetro bordeado (.mplan-wrap), unidas por hairline — el
+  // principio de Fantastical/Apple Calendar: la selección vive UNA vez (el
+  // ticker), el día de abajo es caption, no separador. Las acciones son el
+  // FOOTER de la pieza (patrón Wallet/Things): el footer declara el alcance —
+  // «esto actúa sobre este plan» — en vez de flotar bajo la tarjeta.
+  // El hint «Tocá la hora…» murió con la affordance: la hora lleva chevron y
+  // lee como control sin necesitar una frase que lo confiese.
   return `<div class="mplan-wrap">
     ${navHtml}
     <div class="mplan-wk-outer" style="height:${PHDR+TOTAL}px">
@@ -527,25 +531,13 @@ export function renderMiPlanCalendar(state){
         <div class="mplan-wk-cols">${colsHtml}</div>
       </div>
     </div>
-  </div>
-  <div class="mplan-bottom-actions">
-    <button class="mplan-bottom-btn" data-action="sharePlan">${ICONS.share} ${t('plan_compartir')}</button>
-    <button class="mplan-bottom-btn" data-action="exportICS">${ICONS.calendar} ${t('misc_calendario')}</button>
-  </div>
-  ${listHtml}
-  ${(()=>{
-    const _hintSeen=localStorage.getItem('otrofestiv_hint_cambiar');
-    // La hora que el hint manda a tocar está en la lista del DÍA ACTIVO. La
-    // condición miraba todo el plan, así que en un día libre aparecía «Tocá la
-    // hora…» sin una sola hora en pantalla (visto el 16 ago con FICDEH).
-    const _hasFuture=dayFilms.some(s=>!screeningPassed(s));
-    if(_hintSeen||!_hasFuture) return '';
-    // «de actividad» y no «la película» (revisión de UX Writer, 16 ago): el panel
-    // EXCLUYE la obra actual y ofrece OTRAS del mismo tramo (±15 min), y entre
-    // ellas puede haber charlas y talleres — 113 parejas así en FICDEH. La frase
-    // deja de concatenarse con misc_pelicula: prometía un tipo que no controla.
-    return`<div class="mplan-change-hint">${ICONS.clock} ${t('plan_hint_hora')}</div>`;
-  })()}`
+    <div class="mplan-div"></div>
+    ${listHtml}
+    <div class="mplan-foot">
+      <button class="mplan-foot-btn" data-action="sharePlan">${ICONS.share} ${t('plan_compartir_plan')}</button>
+      <button class="mplan-foot-btn" data-action="exportICS">${ICONS.calendarPlus} ${t('plan_pasar_calendario')}</button>
+    </div>
+  </div>`
 }
 
 export function renderUnconfirmed(state,schedule){
