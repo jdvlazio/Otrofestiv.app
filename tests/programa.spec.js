@@ -1916,7 +1916,7 @@ test('T92 — el resultado: sin banda «Opción», resumen en línea y días com
     const b0 = bandas[0];
     return {
       bandaOpcion: !!sum?.querySelector('.sec-hdr'),
-      resumen: sum?.querySelector('.dato-linea')?.textContent.trim(),
+      resumen: sum?.querySelector('.dato-resultado')?.textContent.trim(),
       // el resumen NO lleva badge: un número en píldora se leía como índice
       resumenBadge: !!sum?.querySelector('.count-badge'),
       nBandas: bandas.length,
@@ -1937,4 +1937,71 @@ test('T92 — el resultado: sin banda «Opción», resumen en línea y días com
   expect(parseFloat(r.caps), 'con el tracking del separador de horas').toBeGreaterThan(0.5);
   expect(r.conteoDia, 'y conservan su conteo').toBe(true);
   expect(r.txt, 'el día va en mayúsculas').toMatch(/^[A-ZÁÉÍÓÚÑ]/);
+});
+
+test('T93 — el resultado se distingue del insumo, y «sin cupo» no se inventa el número', async ({ page }) => {
+  test.setTimeout(90000);
+  await enterFestival(page, 'ficdeh2026', '2026-08-18T08:00:00-05:00');
+  await page.evaluate(() => [...document.querySelectorAll('#city-sheet [data-action]')]
+    .find(x => x.textContent.includes('Bogotá'))?.click());
+  await page.waitForTimeout(500);
+  const r = await page.evaluate(async () => {
+    const D = await import('/src/domain/film.js');
+    const bog = f => (f.venue || '').includes('Bogotá');
+    const fut = [...new Set(FILMS.filter(f => bog(f) && !D.screeningPassed(f)).map(f => f.title))];
+    // 14 obras para forzar que alguna se quede fuera y exista el matiz, MÁS
+    // obras que el festival ya se llevó: sin ellas sc.excluded y _excVivas dan
+    // el mismo número y el oráculo no distingue nada (la mutación pasaba).
+    // «ya se la llevó el festival» = TODAS sus funciones pasaron. Con «alguna»
+    // entran obras que aún tienen función futura y el motor sí puede planear.
+    const porT = {};
+    FILMS.filter(bog).forEach(f => (porT[f.title] = porT[f.title] || []).push(f));
+    const idas = Object.keys(porT).filter(t => porT[t].every(f => D.screeningPassed(f))).slice(0, 3);
+    state.set('watchlist', new Set([...fut.slice(0, 14), ...idas]));
+    cachedResult = null; savedAgenda = null;
+    switchMainNav('mnav-planner'); showAgView();
+    await new Promise(r => setTimeout(r, 1500));
+    // el insumo vive ARRIBA del botón; se mide antes de calcular
+    const insumo = document.querySelector('.pre-resumen .dato-linea');
+    // se leen los NÚMEROS ya: getComputedStyle devuelve un objeto vivo y el
+    // cálculo re-renderiza — guardar la referencia daba '' (y NaN al medir).
+    const insumoPx = insumo ? parseFloat(getComputedStyle(insumo).fontSize) : null;
+    const insumoPeso = insumo ? parseInt(getComputedStyle(insumo).fontWeight) : null;
+    document.querySelector('.av-calc-btn').click();
+    for (let i = 0; i < 40 && !document.querySelector('.ag-day-band'); i++) await new Promise(r => setTimeout(r, 250));
+    const res = document.querySelector('.dato-resultado');
+    const cs = res && getComputedStyle(res);
+    const cupo = res?.querySelector('.dato-linea');
+    const band = document.querySelector('.ag-day-band');
+    return {
+      insumoPx, insumoPeso,
+      resPx: cs && parseFloat(cs.fontSize),
+      resPeso: cs && parseInt(cs.fontWeight),
+      resColor: cs && cs.color,
+      // el matiz sigue siendo gris y más chico que la afirmación que acompaña
+      cupoTxt: cupo?.textContent.trim() || '',
+      cupoPx: cupo && parseFloat(getComputedStyle(cupo).fontSize),
+      cupoColor: cupo && getComputedStyle(cupo).color,
+      // el N de «sin cupo» tiene que ser el de la lista que se ve, no otro
+      nFilas: document.querySelectorAll('.ag-excl-block .int-item').length,
+      // control de que el oráculo NO es vacuo: si estos dos números fueran
+      // iguales, «sin cupo» podría salir de cualquiera de los dos conteos.
+      nExcluidasCrudas: (cachedResult.scenarios[cachedResult.currentIdx || 0].excluded || []).length,
+      // y la línea pertenece a la banda de abajo, no al botón de arriba
+      huecoAbajo: band && res ? Math.round(band.getBoundingClientRect().top - res.getBoundingClientRect().bottom) : null,
+    };
+  });
+  expect(r.resPx, 'el resultado es más grande que el insumo').toBeGreaterThan(r.insumoPx);
+  expect(r.resPeso, 'y más pesado').toBeGreaterThan(r.insumoPeso);
+  expect(r.resColor, 'el resultado va en blanco — es la respuesta').toBe('rgb(240, 237, 232)');
+  if (r.nFilas > 0) {
+    expect(r.nExcluidasCrudas, 'el escenario distingue: hay excluidas que el festival ya se llevó')
+      .toBeGreaterThan(r.nFilas);
+    expect(r.cupoTxt, 'con obras fuera, el resultado dice cuántas').toMatch(/\d+/);
+    expect(parseInt(r.cupoTxt.match(/\d+/)[0]), 'y ese número es el de la lista que se ve')
+      .toBe(r.nFilas);
+    expect(r.cupoPx, 'el matiz es más chico que la afirmación').toBeLessThan(r.resPx);
+    expect(r.cupoColor, 'y sigue siendo gris').toBe('rgb(136, 136, 136)');
+  }
+  expect(r.huecoAbajo, 'el resultado queda pegado a la banda que describe').toBeLessThanOrEqual(16);
 });

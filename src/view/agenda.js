@@ -1469,8 +1469,19 @@ export function buildResultHTML(scenarios){
   // acaba de pulsar Calcular. El nombre del objeto sigue distinguiéndose de
   // «Mi Plan» por el CTA que lo confirma («Usar este Plan»).
   const _nDias=new Set((sc.schedule||[]).map(s=>s.day)).size;
-  let html=`${_staleBanner}<div class="ag-summary">
-    <div class="dato-linea">${t(ok===1?'pre_obra':'pre_obras',{n:ok})} · ${_nDias===1?t('res_dia'):t('res_dias',{n:_nDias})}</div>
+  // Auditoría 18 ago (Juan): insumo y resultado eran la MISMA línea gris con la
+  // misma fórmula, separadas solo por el botón — el desenlace del cálculo pesaba
+  // menos que la advertencia de arriba. El resultado sube a blanco; el matiz se
+  // queda en el canon gris (.dato-linea reusada, no una variante nueva).
+  // «N sin cupo» dice el salto 7→3 en el momento en que aparece: el número sale
+  // del MISMO _excVivas que alimenta el badge de «No incluidas», no de otro
+  // conteo. Las obras que el festival ya se llevó no cuentan — nunca compitieron.
+  const _excVivas=sc.excluded.filter(_t=>FILMS.some(fi=>fi.title===_t&&!screeningPassed(fi)));
+  const _sinCupo=_excVivas.length
+    ?` <span class="dato-linea">· ${t('res_sin_cupo',{n:_excVivas.length})}</span>`
+    :'';
+  let html=`${_staleBanner}<div class="ag-summary ag-summary-res">
+    <div class="dato-resultado">${t(ok===1?'pre_obra':'pre_obras',{n:ok})} · ${_nDias===1?t('res_dia'):t('res_dias',{n:_nDias})}${_sinCupo}</div>
     ${sc.incompatiblePriorities?(()=>{
       const pairs=sc.conflictingPriorityPairs||[];
       const pairMsg=pairs.length
@@ -1516,7 +1527,9 @@ export function buildResultHTML(scenarios){
   // plannable-ok: acá NO se usa el dueño (plannableScreens) a propósito — solo
   // interesa si el festival ya se las llevó, no si tu filtro de ciudad o tu
   // franja vetada las descartan; esas SÍ se siguen mostrando con su razón.
-  const _excVivas=sc.excluded.filter(_t=>FILMS.some(fi=>fi.title===_t&&!screeningPassed(fi)));
+  // _excVivas se calcula ARRIBA, junto al resumen: la línea de resultado dice
+  // «N sin cupo» y ese N tiene que ser el MISMO que el badge de esta sección.
+  // Un segundo filtro acá sería un camino duplicado esperando divergir.
   if(_excVivas.length){
     const _excItems=_excVivas.map(excTitle=>{
       const t_=excTitle; // alias para no pisar t() i18n

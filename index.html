@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202608181407">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202608181407">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202608181517">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202608181517">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -836,6 +836,13 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
    de la ley de proximidad. Guardián [dato-linea]. */
 .dato-linea{display:flex;align-items:center;flex-wrap:wrap;gap:5px;font-size:var(--t-base);line-height:1.4;color:var(--gray)}
 .dato-linea+.dato-linea{margin-top:var(--sp-1)}
+/* Línea de RESULTADO: el desenlace del cálculo, no una nota al pie. Gemela de
+   .dato-linea en fórmula («texto · texto») pero en blanco y t-md, para que el
+   ojo distinga de un vistazo lo que ENTRA (gris, arriba del CTA) de lo que
+   SALIÓ (blanco, abajo). El matiz secundario reusa .dato-linea tal cual — es
+   una línea de dato, no la variante 90 de gris. */
+.dato-resultado{display:flex;align-items:baseline;flex-wrap:wrap;gap:6px;font-size:var(--t-md);line-height:1.3;font-weight:var(--w-semi);color:var(--white)}
+.dato-resultado .dato-linea{font-weight:var(--w-thin)}
 .dato-linea svg{width:12px;height:12px;flex-shrink:0}
 .dato-alerta{display:inline-flex;align-items:center;gap:4px;color:var(--amber)}
 .pre-resumen{padding:var(--sp-2) 0 0}
@@ -1595,7 +1602,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .auth-send-btn:disabled,.pv-btn-save:disabled,.av-calc-btn:disabled,.splash-enter-btn:disabled{opacity:.35;cursor:default}
 .av-calc-btn{width:100%} /* anatomía: regla dueña */
 .empty-state-cta{padding-left:var(--sp-6);padding-right:var(--sp-6)} /* pill inline: ancho por padding-x (post-dueña por cascada) */
-.av-calc-wrap{position:sticky;bottom:0;background:var(--bg);padding:var(--sp-4) 0;margin-top:0}
+.av-calc-wrap{position:sticky;bottom:0;background:var(--bg);padding:var(--sp-3) 0 var(--sp-2);margin-top:0}
 
 /* Resultados / Opciones */
 .ag-calc-prompt{text-align:center;padding:var(--sp-3) var(--sp-4);color:var(--gray);font-size:var(--t-sm);line-height:1.5}
@@ -1876,6 +1883,11 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
   padding:var(--sp-2) 0 var(--sp-4);
   margin-bottom:0;
 }
+/* La línea de resultado flotaba en tierra de nadie: 8px arriba, 24 abajo — más
+   pegada al botón que a la banda del día que describe. Ahora el aire de abajo
+   lo pone SOLO el margen de la banda (12px) y el de arriba suma 20 con el
+   colchón del CTA: proximidad 12/20, la línea pertenece a lo que va debajo. */
+#ag-result .ag-summary-res{padding:var(--sp-3) 0 0}
 /* Summary del plan = filas-header (mismo componente que Intereses), pero flush
    horizontalmente para alinear con los items del plan (que no tienen padding-x). */
 #ag-result .saved-item{
@@ -3354,7 +3366,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202608181407";
+    s.src="/src/main.js?v=202608181517";
     document.body.appendChild(s);
     // Watchdog de boot (P0 18 jul): si el grafo ESM murió en el import (caché
     // HTTP mixta tras deploys en ráfaga — main.js nuevo + módulo viejo sin el

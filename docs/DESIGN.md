@@ -376,6 +376,23 @@ negado o data-URI → fallback al acento de sección. `getImageData` fuera de
 helpers.js o `--amb` a mano = build roto. Safari iOS: muestrear con URL propia
 (TMDB→w92) para no heredar la entrada de caché sin-CORS del `<img>`.
 
+### 8.3c · Línea de resultado — lo que salió (`.dato-resultado`)
+- **`.dato-resultado`** es la gemela en blanco de `.dato-linea`: misma fórmula
+  `texto · texto`, pero `t-md` (16px), `--w-semi` y `--white`. Se usa UNA vez por
+  pantalla, para el desenlace de una operación que el usuario pidió.
+- **Por qué** (auditoría 18 ago 2026, Juan): en Planear el insumo («16 obras · 1
+  con prioridad · ⚠ 8 cruces») y el resultado («8 obras · 2 días») eran la misma
+  línea gris con la misma fórmula, separadas solo por el botón. El lector tenía
+  que deducir por posición cuál era cuál, y la advertencia —lo único en ámbar—
+  pesaba más que la respuesta. Ahora el color separa lo que ENTRA de lo que SALIÓ.
+- **El matiz reusa el canon gris**: `<span class="dato-linea">· 8 sin cupo</span>`
+  DENTRO de la línea blanca. Es una línea de dato, no la variante 90 de gris.
+- **Proximidad**: el resultado pertenece a la banda del día que va debajo, no al
+  CTA de arriba. Medido: 12px abajo (margen de la banda) contra 20 arriba.
+- **El número no se recalcula**: «N sin cupo» sale del mismo `_excVivas` que
+  alimenta el badge de «No incluidas». Guardián vivo: **T93** compara ese N con
+  las filas realmente pintadas, y falla si alguien lo saca de otro conteo.
+
 ### 8.3b · Línea de dato — el canon (`[dato-linea]`)
 - **`.dato-linea`** es la línea que informa sin ser sección ni banda: el insumo
   de Planear, un vacío colapsado, una cifra al pie de un bloque. Anatomía única:
