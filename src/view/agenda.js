@@ -456,7 +456,11 @@ export function renderMiPlanCalendar(state){
         // no se mostraba, así que el «te quedan ~20 min» era irreconstruible desde
         // la pantalla. Y el veredicto va en condicional — donde estimamos,
         // sugerimos (regla de Juan, 15 ago).
-        if(_slotHasQa(prev)){const qaGap=gap-FESTIVAL_QA_MIN;qaGap<0?listHtml+=`<div class="mplan-warn-row" style="color:var(--red)">${t('warn_qa_no_llega',{qa:FESTIVAL_QA_MIN})}</div>`:listHtml+=`<div class="mplan-warn-row">${t('warn_qa_tiempo',{qa:FESTIVAL_QA_MIN,n:qaGap})}</div>`;}
+        // El caso «no cabe» dice CUÁNTO se cruza (Juan, 18 ago): «no te daría
+        // el tiempo» era un veredicto sobre tu futuro. La línea describe la
+        // aritmética de la estimación —la charla contra el reloj— y el usuario
+        // decide. Nunca afirmamos: sugerimos, presupuestamos.
+        if(_slotHasQa(prev)){const qaGap=gap-FESTIVAL_QA_MIN;qaGap<0?listHtml+=`<div class="mplan-warn-row" style="color:var(--red)">${t('warn_qa_cruza',{qa:FESTIVAL_QA_MIN,n:Math.abs(qaGap)})}</div>`:listHtml+=`<div class="mplan-warn-row">${t('warn_qa_tiempo',{qa:FESTIVAL_QA_MIN,n:qaGap})}</div>`;}
         const tw=travelWarn(prev,s);
         if(tw) listHtml+=`<div class="mplan-warn-row">${tw}</div>`;
       }

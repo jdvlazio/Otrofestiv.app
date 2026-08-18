@@ -1689,3 +1689,41 @@ test('T88 — el vacío de Sugerencias es una línea, no una pantalla', async ({
   expect(r.alto, 'y cabe en una línea').toBeLessThanOrEqual(30);
   expect(r.pantallaVieja, 'sin la pantalla vacía con lupa').toBe(false);
 });
+
+// 18 ago (Juan, UX Writer): «no te daría» es una afirmación sobre tu futuro —
+// nunca afirmamos, sugerimos. La línea del Q&A pasa a describir la aritmética
+// de la estimación: cuánto queda, o cuánto se cruza. El sujeto es la charla y
+// el reloj, no el usuario («si te quedás te quedarían» se fue con su redundancia).
+test('T89 — la línea del Q&A cuenta el reloj, no predice tu suerte', async ({ page }) => {
+  test.setTimeout(60000);
+  await enterFestival(page, 'finca2026', '2026-08-18T09:00:00-03:00');
+  await page.evaluate(() => document.querySelector('[data-action="citySheetAll"]')?.click());
+  await page.waitForTimeout(400);
+  const r = await page.evaluate(async () => {
+    const dur = f => parseInt(String(f.duration).match(/\d+/)?.[0] || 90, 10);
+    const mins = t => { const [h, m] = t.split(':').map(Number); return h * 60 + m; };
+    const out = { cabe: null, cruza: null };
+    for (const prev of FILMS.filter(f => f.has_qa)) {
+      const fin = mins(prev.time) + dur(prev);
+      for (const next of FILMS.filter(f => f.day === prev.day && f.venue === prev.venue && mins(f.time) > fin)) {
+        const qaGap = mins(next.time) - fin - 30;
+        const target = qaGap >= 0 && qaGap < 25 ? 'cabe' : (qaGap < 0 && qaGap > -40 ? 'cruza' : null);
+        if (!target || out[target]) continue;
+        _simTime = prev.day + 'T08:00:00-03:00';
+        state.set('savedAgenda', { scenarioIdx: 0, schedule: [prev, next].map(f => Object.assign({}, f, { _title: f.title })) });
+        switchMainNav('mnav-miplan'); showAgView();
+        await new Promise(r => setTimeout(r, 900));
+        const w = [...document.querySelectorAll('.mplan-warn-row')].find(e => /Q&A/.test(e.textContent));
+        if (w) out[target] = w.textContent.replace(/\s+/g, ' ').trim();
+      }
+      if (out.cabe && out.cruza) break;
+    }
+    return out;
+  });
+  const todo = [r.cabe, r.cruza].filter(Boolean).join(' | ');
+  expect(todo, 'la escena produjo al menos una línea de Q&A').toBeTruthy();
+  expect(todo, 'sin veredicto sobre tu futuro').not.toMatch(/no te daría|wouldn.t make it/);
+  expect(todo, 'y sin decirte qué harías').not.toMatch(/si te quedás|te quedarían/);
+  if (r.cabe) expect(r.cabe, 'cuando cabe: cuánto queda hasta la siguiente').toMatch(/quedan ~\d+ min hasta la siguiente/);
+  if (r.cruza) expect(r.cruza, 'cuando no: cuánto se cruza, con su número').toMatch(/se cruza ~\d+ min con la siguiente/);
+});
