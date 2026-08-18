@@ -75,6 +75,28 @@ diferencia importa:
   nosotros, y ninguno de los dos es lo mismo que uno que nos nombra y nos
   prohíbe.** Solo el tercero es un no.
 
+### Fase 0·bis · Qué obras PUEDEN tener `lbSlug` — retro TIFF (17 ago 2026)
+
+Una cobertura de Letterboxd que parece un hueco y no lo es. TIFF tenía «62
+funciones sin `lbSlug`», y al desglosarlas quedó así:
+
+| | | |
+|---|---|---|
+| programas de cortos | 20 funciones | **Letterboxd no tiene página de programa.** Sus cortos sí, uno por uno, y ahí es donde va el slug |
+| charlas y conversatorios | 5 | no son obras |
+| **series de TV** (Primetime) | 22 | **Letterboxd es SOLO cine.** Una serie no existe ahí, y buscarla es perder la noche |
+| obras que sí podrían tenerlo | 15 | estrenos 2026 aún sin ficha en TMDB |
+
+**El hueco real eran 5 títulos, no 62.** Antes de salir a buscar slugs, hay que
+restar lo que por definición no puede tenerlos: si el festival programa series,
+el 100% de cobertura es imposible y perseguirlo es trabajo inventado.
+
+**Y el `lbSlug` se saca por el atajo `letterboxd.com/tmdb/<id>`**, que necesita
+`tmdb_id`: sin ficha en TMDB no hay slug, y la ruta entonces es darla de alta
+(Fase 3b), no rastrear Letterboxd — que además nos prohíbe por `robots.txt`
+(Fase 0). Para estrenos del año en curso suele bastar con repetir el pase de
+TMDB unas semanas antes del festival: las fichas aparecen solas.
+
 ### Fase 1 · Extracción `[Data Engineer]`
 
 **Objetivo:** JSON del festival con todos los campos poblados desde el origen.
@@ -328,8 +350,6 @@ PREMIUM de TIFF, y vale para todos los flags (`is_free`,
 de `film_list`. Basta con que un ensamblador lea un CSV o un Excel para que un
 booleano llegue como texto.
 
-<<<<<<< HEAD
-=======
 **El guion bajo no es un escondite (17 ago 2026).** Un campo `_` es una NOTA
 para nosotros —de dónde salió el dato, qué falta, qué se heredó—, no un dato de
 la app con disfraz. `_tmdbId` vivió en 16 funciones de FINCA a salvo de
@@ -481,7 +501,6 @@ positivos con `is_cortos` y `film_list`, que faltan legítimamente donde el
 festival no tiene programas de cortos. **Lo que distingue un hueco de una
 ausencia legítima es la dependencia, no la frecuencia.**
 
->>>>>>> origin/main
 **Regla nueva para todo ensamblador:** emitir `_cuentas` con `entradas`,
 `publicadas` y `descartadas` desglosadas por motivo. Declarar los descartes
 obliga a mirarlos; que sumen impide inventarlos.
@@ -492,10 +511,7 @@ buenos, y ahí se cayó uno: `[sidecar-vacio]` usaba
 `_listas.get(a) or _listas.get(b)`, y **una lista vacía es falsa en Python**,
 así que el guardián de las listas vacías se dejaba vencer justo por una lista
 vacía. Se pregunta por PRESENCIA, no por verdad.
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
 ### Fase 2 · Configuración en FESTIVAL_CONFIG `[Senior Dev + PM]`
 
 **Objetivo:** El festival existe en la app con su configuración completa.
