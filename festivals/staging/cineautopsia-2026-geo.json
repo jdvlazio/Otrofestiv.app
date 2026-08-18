@@ -1,8 +1,7 @@
 {
  "_provenance": {
-  "fuente": "heredada de FICDEH 2026 — misma sede, ya verificada a mano",
-  "capturado": "2026-08-17",
-  "nota": "no se re-geocodifica: sería una segunda verdad del mismo lugar"
+  "fuente": "Cinemateca heredada de FICDEH + 5 sedes geocodificadas con Nominatim (18 ago 2026)",
+  "capturado": "2026-08-18"
  },
  "venues": {
   "Cinemateca de Bogotá - Bogotá": {
@@ -11,6 +10,49 @@
    "lng": -74.0676717,
    "city": "Bogotá",
    "address": "Cra. 3 # 19-10"
+  },
+  "Museo Interactivo Maloka - Bogotá": {
+   "short": "Maloka",
+   "lat": 4.6554318,
+   "lng": -74.1094912,
+   "city": "Bogotá",
+   "address": "Cra. 68d # 24A-51",
+   "_prec": "nominatim"
+  },
+  "Universidad Distrital ASAB - Bogotá": {
+   "short": "ASAB",
+   "lat": 4.6044072,
+   "lng": -74.0781634,
+   "city": "Bogotá",
+   "address": "Cra. 13 #14-69 · Auditorio Samuel Bedoya",
+   "_prec": "nominatim",
+   "_match": "Facultad de Artes ASAB, Carrera 13 14-69"
+  },
+  "Universidad Nacional - Bogotá": {
+   "short": "U. Nacional",
+   "lat": 4.6387426,
+   "lng": -74.0852375,
+   "city": "Bogotá",
+   "address": "Auditorio 422, edificio 303C",
+   "_prec": "nominatim",
+   "_nota": "la sede la comparte la Cinemateca con su Sala Alterna: el PDF la nombra «Cinemateca Sala Alterna, Universidad Nacional»"
+  },
+  "Fundación Gilberto Álzate Avendaño - Bogotá": {
+   "short": "FUGA",
+   "lat": 4.5953608,
+   "lng": -74.0724134,
+   "city": "Bogotá",
+   "address": "Cl. 10 #3-16",
+   "_prec": "nominatim"
+  },
+  "Cartel Urbano (San Felipe) - Bogotá": {
+   "short": "Cartel Urbano",
+   "lat": 4.660132,
+   "lng": -74.0627586,
+   "city": "Bogotá",
+   "address": "San Felipe, Bogotá",
+   "_prec": "barrio",
+   "_nota": "PROYECCIÓN AL AIRE LIBRE: el festival publica «Cartel Urbano, San Felipe, Bogotá» sin dirección exacta, y «Cartel Urbano» geocodifica a Santa Marta (otra ciudad). Se usa el centro del barrio San Felipe y queda declarado: preguntar al festival la dirección."
   }
  }
 }

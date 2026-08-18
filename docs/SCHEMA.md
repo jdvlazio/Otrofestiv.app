@@ -269,7 +269,7 @@ está pasando de verdad — no lo que alguien recordaba al escribirlo.
 |---|---|---|---|---|
 | `title_en` | string | — | 8 fest |  |
 | `director` | string | — | 12 fest |  |
-| `year` | number | — | 13 fest | Entero. Dos festivales legacy lo tienen como string. |
+| `year` | number | — | 12 fest | Entero. Dos festivales legacy lo tienen como string. |
 | `country` | string | — | 13 fest |  |
 | `flags` | string | — | 13 fest | **derivado de `country`** — no viene de ninguna fuente Emoji de bandera. NUNCA viene de la fuente: se calcula del país. |
 | `duration` | string | `^\d+ min$` | 13 fest | «90 min». No es un número, y la doc dijo lo contrario durante meses. |
@@ -288,14 +288,14 @@ está pasando de verdad — no lo que alguien recordaba al escribirlo.
 | `is_programa` | boolean | — | 3 fest |  |
 | `is_recurring` | boolean | — | 3 fest |  |
 | `is_awards_screening` | boolean | — | 1 fest |  |
-| `info` | boolean | — | 1 fest | Drop-in sin hora fija: NO entra al plan ni a conflictos. |
+| `info` | boolean | — | 2 fest | Drop-in sin hora fija: NO entra al plan ni a conflictos. |
 | `unscheduled` | boolean | — | 1 fest | En catálogo sin jornada. Única exención de day/time/venue. |
 | `sessions` | array | — | 1 fest |  |
 | `has_qa` | boolean | — | 7 fest | Afecta conflictos vía durationForTravel. |
 | `qa_type` | string | `team` · `guests` | 1 fest | La variante del Q&A. Se pinta traducida; NO se escribe la frase en el dato. |
 | `competencia` | string | — | 1 fest |  |
 | `premium` | boolean | — | — |  |
-| `sala` | string | — | 2 fest | Sala DENTRO de la sede. Que no aparezca en el nombre de la sede ([sala-en-sede]). |
+| `sala` | string | — | 3 fest | Sala DENTRO de la sede. Que no aparezca en el nombre de la sede ([sala-en-sede]). |
 | `date` | string | `^\d{4}-\d{2}-\d{2}$` | 6 fest | Requerido si hay screenings[]. Tres festivales legacy lo tienen como número de día. |
 | `screenings` | array | — | 3 fest |  |
 | `poster` | string | — | 13 fest | URL, /assets/… o path TMDB. poster:"" está PROHIBIDO. Reglas: docs/POSTERS.md |

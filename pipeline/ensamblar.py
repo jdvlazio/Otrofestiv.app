@@ -142,6 +142,8 @@ def ensamblar(fid, escribir=True):
             'day': f.get('dia'), 'time': f.get('hora'), 'day_order': orden.get(f.get('dia')),
             'venue': sede, 'sala': sala or None,
             'event_kind': f.get('event_kind') or None,
+            # `info`: drop-in sin hora de fin — se muestra y NO se planifica.
+            'info': True if f.get('info') else None,
             'has_qa': bool(f.get('has_qa')),
             'synopsis': f.get('sinopsis') or None,
             'synopsis_lang': 'es' if f.get('sinopsis') else None,
@@ -181,6 +183,15 @@ def ensamblar(fid, escribir=True):
             # existe «el país» de una sesión de siete cortos de cinco lugares.
             # Y su `year` tampoco: el año lo tiene cada obra, y poner el de la
             # sesión pinta «2025» al lado de un programa de 2026.
+            # La duración de un PROGRAMA es la suma de sus obras. Lo hice a mano
+            # para los 20 bloques de TIFF; vive aquí para que no haya que
+            # volver a hacerlo en ningún festival. Solo si la fuente no la trae:
+            # su número manda, porque incluye presentaciones y pausas.
+            if not e.get('duration'):
+                _mins = sum(int(_m.group(1)) for o in e['film_list']
+                            if (_m := __import__('re').match(r'(\d+)', str(o.get('duration') or ''))))
+                if _mins:
+                    e['duration'] = f'{_mins} min'
             _paises = [p for o in e['film_list'] if (p := o.get('country'))]
             if _paises and not e.get('country'):
                 # Se deduplica por PAÍS, nunca por carácter: una bandera son DOS

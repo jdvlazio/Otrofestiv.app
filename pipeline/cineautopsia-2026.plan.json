@@ -19,18 +19,46 @@
   }
  ],
  "festival": {
-  "crudo": "festivals/staging/cineautopsia-2026-cinemateca.json",
+  "crudo": "festivals/staging/cineautopsia-2026-crudo.json",
   "enriquecido": "festivals/staging/cineautopsia-2026-tmdb.json",
   "sedes": {
-   "Cinemateca de Bogotá Centro": [
+   "Sala 2, Cinemateca de Bogotá (Cra. 3 # 19-10)": [
     "Cinemateca de Bogotá - Bogotá",
+    "Sala 2"
+   ],
+   "Sala Capital, Cinemateca de Bogotá (Cra. 3 # 19-10)": [
+    "Cinemateca de Bogotá - Bogotá",
+    "Sala Capital"
+   ],
+   "Museo Interactivo Maloka, Bogotá, Cra. 68d # 24A - 51.": [
+    "Museo Interactivo Maloka - Bogotá",
+    ""
+   ],
+   "Auditorio Samuel Bedoya. Universidad Francisco José de Caldas (Distrital). Facultad de Arte ASAB. Cra 13#14-69": [
+    "Universidad Distrital ASAB - Bogotá",
+    "Auditorio Samuel Bedoya"
+   ],
+   "Auditorio Samuel Bedoya. Universidad Francisco José de Caldas (Distrital). Facultad de Arte ASAB. Cra 13 #14-69": [
+    "Universidad Distrital ASAB - Bogotá",
+    "Auditorio Samuel Bedoya"
+   ],
+   "Cinemateca Sala Alterna, Universidad Nacional de Colombia, Auditorio 422. Edficio 303C. NEA.": [
+    "Universidad Nacional - Bogotá",
+    "Auditorio 422"
+   ],
+   "Cartel Urbano, San Felipe, Bogotá": [
+    "Cartel Urbano (San Felipe) - Bogotá",
+    ""
+   ],
+   "Fundación Gilberto Alzate Avendaño FUGA (Cl. 10 #3-16, Bogotá)": [
+    "Fundación Gilberto Álzate Avendaño - Bogotá",
     ""
    ]
   },
   "secciones": {
    "Destacados": {
     "emoji": "🔬",
-    "en": "Destacados",
+    "en": "Featured",
     "archetype": "Competencia"
    },
    "Panorama": {
@@ -40,29 +68,43 @@
    },
    "Clausura": {
     "emoji": "🎬",
-    "en": "Clausura",
+    "en": "Closing",
     "archetype": "Clausura"
+   },
+   "Apertura": {
+    "emoji": "🛰️",
+    "en": "Opening · Expanded FullDome",
+    "archetype": "Apertura"
+   },
+   "Encuentro": {
+    "emoji": "🤝",
+    "en": "Gathering",
+    "archetype": "Industria / Formación"
    }
   },
   "name": "CineAutopsia",
   "fullName": "CineAutopsia — Festival de Cine Experimental de Bogotá",
   "city": "Bogotá",
   "country": "CO",
-  "dates": "22–29 AGO",
-  "dates_en": "AUG 22–29",
+  "dates": "21–29 AGO",
+  "dates_en": "AUG 21–29",
   "year": 2026,
   "timezoneOffset": "-05:00",
   "storageKey": "cineautopsia2026_",
-  "festivalStartStr": "2026-08-22T00:00:00",
+  "festivalStartStr": "2026-08-21T00:00:00",
   "festivalEndStr": "2026-08-29T23:59:00",
-  "prioLimit": 3,
+  "prioLimit": 4,
   "sharedSlotIsOneScreening": false,
   "ticketing_model": "mixed",
   "mes_es": "agosto",
   "seccion_por_titulo": {
+   "apertura": "Apertura",
+   "fulldome": "Apertura",
+   "encuentro": "Encuentro",
+   "clausura": "Clausura",
+   "premiacion": "Clausura",
    "destacados": "Destacados",
-   "panorama": "Panorama",
-   "Clausura": "Clausura"
+   "panorama": "Panorama"
   },
   "geo": "festivals/staging/cineautopsia-2026-geo.json"
  }

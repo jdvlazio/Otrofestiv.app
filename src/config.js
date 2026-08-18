@@ -222,6 +222,8 @@ export const SECTION_EN = {
   '🎟️ Invitadas': 'Guest Films',
   '💬 Charlas que Unen': 'Talks That Unite',
   '🛠️ Formación': 'Workshops',
+  '🛰️ Apertura': 'Opening · Expanded FullDome',
+  '🤝 Encuentro': 'Gathering',
 };
 
 // ── NOTICES ──────────────────────────────────────────────────────────────────
@@ -435,8 +437,8 @@ export const FESTIVAL_CONFIG={
   'cineautopsia2026': {
     name:'CineAutopsia',fullName:'CineAutopsia — Festival de Cine Experimental de Bogotá',shortName:'CINEAUTOPSIA',
     city:'Bogotá',country:'CO',
-    dates:'22–29 AGO',dates_en:'AUG 22–29',year:2026,timezoneOffset:'-05:00',
-    storageKey:'cineautopsia2026_',festivalStartStr:'2026-08-22T00:00:00',festivalEndStr:'2026-08-29T23:59:00',
+    dates:'21–29 AGO',dates_en:'AUG 21–29',year:2026,timezoneOffset:'-05:00',
+    storageKey:'cineautopsia2026_',festivalStartStr:'2026-08-21T00:00:00',festivalEndStr:'2026-08-29T23:59:00',
     festivalDates:{'2026-08-22': '2026-08-22', '2026-08-23': '2026-08-23', '2026-08-28': '2026-08-28', '2026-08-29': '2026-08-29'},
     days:[{k: '2026-08-22', d: 22, lbl: 'SÁB'}, {k: '2026-08-23', d: 23, lbl: 'DOM'}, {k: '2026-08-28', d: 28, lbl: 'VIE'}, {k: '2026-08-29', d: 29, lbl: 'SÁB'}],
     dayKeys:['2026-08-22', '2026-08-23', '2026-08-28', '2026-08-29'],
@@ -649,6 +651,8 @@ export const SECTION_ARCHETYPES = {
   // Franja Académica de FICMA — el festival la divide en talleres y charlas.
   '🛠️ Talleres': 'Charlas / Industria',
   '💬 Charlas': 'Charlas / Industria',
+  '🛰️ Apertura': 'Apertura',
+  '🤝 Encuentro': 'Industria / Formación',
 };
 
 // mergeFestivalSections(sections) — DATA-DRIVEN (P2.2): un festival declara sus
