@@ -898,7 +898,7 @@ test('T70 — el Diario y el Recuerdo cuentan lo mismo, incluidos los talleres',
 // única sección de la app dibujada como card, con una píldora de encabezado que
 // flotaba a 17px mientras sus filas arrancaban a 33. Regla contada sobre la app:
 // card = ítem, resumen, panel o menú; sección = lista con su banda a sangre.
-test('T71 — Mi Plan: el destino primero, y «Sin confirmar» es sección, no card', async ({ page }) => {
+test('T71 — Mi Plan: la banda del Plan con Diario y día, y «Sin confirmar» es sección', async ({ page }) => {
   await enterFestival(page, 'ficdeh2026', '2026-08-17T20:00:00-05:00');
   await page.evaluate(() => document.querySelector('[data-action="citySheetAll"]')?.click());
   await page.waitForTimeout(400);
@@ -916,7 +916,9 @@ test('T71 — Mi Plan: el destino primero, y «Sin confirmar» es sección, no c
     const cs = wrap && getComputedStyle(wrap);
     return {
       chip: box('.diary-chip'),
-      dia: box('.festival-progress-text > span:last-child'),
+      dia: box('.sec-hdr .sec-hdr-opt'),
+      bandaPlan: box('#ag-view .sec-hdr'),
+      bandaPlanTxt: document.querySelector('#ag-view .sec-hdr')?.textContent.replace(/\s+/g, ' ').trim(),
       banda: box('.checkin-wrap .sec-hdr'),
       fila: box('.checkin-title'),
       vecino: box('.mplan-list-hdr'),
@@ -929,9 +931,13 @@ test('T71 — Mi Plan: el destino primero, y «Sin confirmar» es sección, no c
     };
   });
 
-  // 1· el orden: el Diario (destino) a la izquierda, el día (dato) a la derecha
-  expect(g.chip.x, 'el Diario abre la fila').toBeLessThan(g.dia.x);
-  expect(g.dia.r, 'y el día cierra contra el margen derecho').toBeGreaterThan(g.chip.r);
+  // 1· la banda del Plan (18 ago): sec-hdr canónica con nombre + cuenta, el chip
+  //    del Diario DENTRO (ámbar, tocable) y el día como dato gris al final.
+  expect(g.bandaPlan.x, 'la banda del Plan va a sangre').toBe(0);
+  expect(g.bandaPlanTxt, 'nombra la sección con su cuenta').toMatch(/Mi Plan\s*5/);
+  expect(g.chip.x, 'el Diario vive dentro de la banda').toBeGreaterThan(g.bandaPlan.x);
+  expect(g.chip.r, 'antes del día').toBeLessThanOrEqual(g.dia.x + 1);
+  expect(g.dia.r, 'y el día cierra la banda').toBeGreaterThan(g.chip.r);
 
   // 2· la banda es canónica: a sangre, como cualquier sec-hdr
   expect(g.banda.x, 'banda a sangre por izquierda').toBe(0);

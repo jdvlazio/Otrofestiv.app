@@ -1324,30 +1324,24 @@ export function _renderSavedAgendaHTML(state, consensus){
   // esta no. Medido con FICDEH: 2 contra 3 con un taller marcado — dos números
   // para lo mismo, a dos centímetros uno del otro.
   const _diaryCount=_endedStats().totalWatched;
-  const progressBar=currentDayNum?`<div class="row-sm festival-progress">
-    <div style="flex:1">
-      <div class="festival-progress-text">${_diaryCount>0
-        // «obras vistas» y no «vistas»: el conteo suma las OBRAS de cada programa
-        // de cortos (y lo visto fuera del Plan), así que dos filas marcadas pueden
-        // dar 14 — el número era correcto y no decía de qué (revisión de UX
-        // Writer, 16 ago). A cero NO se muestra nada: era la única vez que la app
-        // se felicitaba con un ✓ por no haber hecho nada, y encima no era botón
-        // porque no hay Diario que abrir.
-        // El chip NOMBRA su destino (misma regla que los toasts): «14 obras
-        // vistas ›» describía un contador y el chevron prometía que algo se
-        // abría, sin decir qué. La palabra «Diario» solo existía DENTRO del
-        // Diario y en la imagen que se comparte — se veía después de llegar, no
-        // antes de decidir ir. Sale el ✓ para hacerle sitio: «vistas» ya lo dice.
-        // Forma canónica de encabezado: icono + nombre + count-badge. El chip
-        // era el único rótulo de la app que decía su cuenta en palabras.
-        // El icono es book-open: un cuaderno. check/film/star ya significan
-        // visto/programa/calificación, y `history` (reloj con flecha) es el
-        // símbolo de restaurar — reusar cualquiera diría dos cosas con el mismo
-        // dibujo.
-        ?`<button class="diary-chip" data-action="openDiary" data-stop="1">${ICONS.bookOpen} <span>${t('diary_eyebrow')}</span> <span class="count-badge cb-neutral">${_diaryCount}</span>${ICONS.chevronR}</button>`
-        :'<span></span>'}<span>${t('label_dia_prog')} <b>${currentDayNum}</b> ${t('label_de_dias')} ${totalDays}</span></div>
-    </div>
-  </div>`:'';
+  // ── Banda del Plan (auditoría de jerarquía, 18 ago 2026) ────────────────────
+  // El calendario era la única zona funcional de la app sin identidad de
+  // sección: hero, fila de progreso, grilla y botones sin un solo separador,
+  // mientras la mitad de abajo (Sin confirmar, Sugerencias) ya hablaba el
+  // idioma de Intereses. La banda reusa el patrón del resultado de Planear
+  // (sec-hdr + calendar + count-badge). «Día 7 de 8» viaja como elemento
+  // derecho (hdr-end, el patrón de «opcional» en Disponibilidad): es un dato,
+  // no un destino. Con esto muere .festival-progress y su subrayado ámbar de
+  // 3px — el único de la app, y no era una barra de progreso (progressPct se
+  // calculaba y nadie lo leía; retirado el 17 ago).
+  // El chip del Diario vive DENTRO de la banda (decisión de Juan, 18 ago:
+  // minimalista y compacta — el calendario arranca una fila antes). La
+  // distinción tocable/legible la carga el ACENTO, no la posición: el chip va
+  // en ámbar con chevron, «Día 7 de 8» en gris — solo uno invita al tacto.
+  const _chipHdr=_diaryCount>0
+    ?`<button class="diary-chip" data-action="openDiary" data-stop="1">${ICONS.bookOpen} <span>${t('diary_eyebrow')}</span> <span class="count-badge cb-neutral">${_diaryCount}</span>${ICONS.chevronR}</button>`
+    :'';
+  const progressBar=`<div class="sec-hdr">${ICONS.calendar} <span>${t('label_mi_plan_hdr')}</span> <span class="count-badge cb-neutral">${all.length}</span><span class="hdr-end">${_chipHdr}${currentDayNum?`<span class="sec-hdr-opt">${t('label_dia_prog')} <b>${currentDayNum}</b> ${t('label_de_dias')} ${totalDays}</span>`:''}</span></div>`;
 
   const _ctxHeader=renderContextualHeader(state, consensus);
   const _nextStrip=''; // delay controls integrated into ctx-header

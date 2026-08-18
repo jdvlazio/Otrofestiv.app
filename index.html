@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202608171835">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202608171835">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202608171900">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202608171900">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -1866,7 +1866,10 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .ag-fi-btn.wl{color:var(--amber)}
 
 /* Progress festival */
-.festival-progress{padding:var(--sp-2) 0;margin-bottom:var(--sp-1)}
+/* .festival-progress retirado (18 ago 2026): la fila con subrayado ámbar de 3px
+   era el único de la app y no era una barra de progreso. La reemplaza la banda
+   canónica del Plan (sec-hdr) con «Día n de n» como hdr-end, y el chip del
+   Diario dentro de la banda (hdr-end), en ámbar con chevron. */
 /* ── Header contextual de Mi Plan ── */
 /* ctx-header FLUSH (decisión Juan, 17 jul): sin panel surf ni border-bottom — el color del chrome es solo para el chrome; el contenido jerarquiza con eyebrow+título (como el héroe del Recuerdo). Cero divisores sueltos. */
 .ctx-header{padding:var(--sp-3) var(--sp-4) var(--sp-3)}
@@ -1908,7 +1911,6 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .ctx-suggest-venue{font-size:var(--t-sm);color:var(--gray)}
 .ctx-suggest-info{flex:1;min-width:0}
 
-.festival-progress-text{font-size:var(--t-sm);color:var(--gray2);display:flex;justify-content:space-between;align-items:center;padding-bottom:var(--sp-2);border-bottom:3px solid var(--amber)}
 
 /* ════════════════════════════════════════════════════════
    6 · RESPONSIVE
@@ -3254,7 +3256,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202608171835";
+    s.src="/src/main.js?v=202608171900";
     document.body.appendChild(s);
     // Watchdog de boot (P0 18 jul): si el grafo ESM murió en el import (caché
     // HTTP mixta tras deploys en ráfaga — main.js nuevo + módulo viejo sin el
