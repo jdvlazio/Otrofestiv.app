@@ -181,6 +181,73 @@ en cada superficie + `28.89%` en 4 sitios + escape XML local frágil.
 Cuando no hay imagen, el sistema genera un póster tipográfico (SVG data-URI).
 Dos zonas: **header** = sección (color de acento) y **body** = texto.
 
+### 6.0 Anatomía sin imagen — APROBADA (18 ago 2026, Juan)
+
+> Aprobado el **nivel de solo texto**. La composición **con** imagen sigue en
+> exploración — ver `.specify/design-system/posters-c2-reticula.md`. Mientras
+> tanto, con imagen manda la anatomía vigente (§5b, marco editorial).
+
+**El problema que corrige.** El tamaño de la sección estaba atado a una
+constante del ancho (`_BAND_FS = 0.0542`) y la banda a un alto fijo (28,89%).
+En la tarjeta real de 84 px eso da **una losa de 36 px con letra de 4,55 px**:
+la banda nunca se llena, y da igual que el nombre sea corto o largo. Fuera de
+los festivales con stills, *casi todos* nuestros pósters son de solo texto —
+24 funciones en FICDEH, 7 en FINCA— así que ahí la tipografía no decora: es el
+póster entero.
+
+**Retícula.** El póster es 2:3, así que la unidad cuadra sin residuo:
+
+```
+u = ancho / 8        →  el póster es 8u × 12u (módulos cuadrados)
+línea base           =  media unidad (24 líneas)
+margen               =  0,75u  →  caja de contenido 6,5u
+filete de sección    =  0,25u de alto, a sangre, en color de arquetipo
+```
+
+**Anatomía.** Sobre fondo `#0A0A0A` (el negro de la marca — el mismo de los
+slides de social media, **no** `#141414`):
+
+| elemento | posición | tamaño |
+|---|---|---|
+| filete de sección | `y = 0` | `0,25u`, a sangre |
+| sección | `y = 1u` | la mayor que quepa en `6,5u × 3,4u`, máx. 3 líneas |
+| título | anclado abajo, sobre `11,25u` | la mayor que quepa en `6,5u × 2,4u`, máx. 4 líneas |
+| dato | bajo el título | `5% del ancho`, gris `#888` |
+| luz | esquina inferior **derecha** | glow radial ámbar `#F59E0B` |
+
+**La regla que lo hace funcionar: la tipografía se ajusta al ESPACIO, no a una
+constante.** El corte de línea se decide por **ancho medido**, nunca por número
+de caracteres (partir por caracteres dejaba el título en una sola línea
+minúscula). En producción el ajuste se calcula en el `viewBox` del SVG —
+determinista, sin medir el DOM.
+
+Resultado medido en la tarjeta de 84 px:
+
+```
+                   hoy       aprobado
+CineAutopsia      4,5 px     11,4 px
+FICDEH            4,5 px     15,0 px
+FINCA             4,5 px      8,5 px
+esfuerzo (43 car) 4,5 px      9,2 px  ← «Retrospectiva 10 Años del Acuerdo de Paz»
+```
+
+La prueba de esfuerzo entra legible en tres líneas **sin tocar el nombre que
+puso el festival**: la regla de que las secciones no se renombran (§ vocabulario)
+queda intacta.
+
+**El color de sección deja de ser una losa** y pasa a ser el filete superior más
+el color de la propia tipografía de la sección. Se conserva porque es la señal
+que se lee de un vistazo al hacer scroll.
+
+**La luz va abajo a la derecha**, no abajo a la izquierda como en los slides de
+Instagram: en el póster esa esquina la ocupa el título.
+
+**Sin chevron.** A 84 px se leía como suciedad y competía con la luz por la
+misma esquina.
+
+El corte de línea sigue siendo `_bandWrap` (ninguna línea, salvo la última,
+termina en conjunción, preposición, artículo o separador).
+
 ### 6.1 Escape XML — fuente única `escXML`
 
 Todo texto de usuario que entra a un `<text>` SVG **debe** pasar por
