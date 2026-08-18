@@ -7,7 +7,7 @@
 // (lo escribe loadFestival). Roster/viewstate vía bridge.
 
 import { FESTIVAL_CONFIG, MAX_REMEMBERED_SLOTS, TMDB_IMG, _DEFAULT_FEST_ID } from '../config.js';
-import { DAY_ABBR, DAY_NUM, ICONS, _secLabel, _sectionColor, escXML, isFullDayBlocked, makeProgramPoster, parseProgramTitle, renderRatingStarsHTML } from '../view/components.js';
+import { DAY_ABBR, DAY_NUM, ICONS, _secLabel, _sectionColor, escXML, festivalTagline, isFullDayBlocked, makeProgramPoster, parseProgramTitle, renderRatingStarsHTML } from '../view/components.js';
 import { _getItemPoster, _mkCortoItemHtml, _posterStyle, dayLabel, emptyState, durFmt, flagFmt, getCortoItemPoster, getFilmPoster, getFilmPosterUntitled, getPosterSrc, itemPosterParts, posterAmbient, posterParts, sala, starsText, vcfg, venueCity, venueMatches, isCitySel, ticketBadgeTarget, conflictAccount } from '../view/helpers.js';
 import { closeAvSheet, closePVRating, closePrioLimit } from '../view/sheets.js';
 import { showConflictModal, showToast } from '../view/feedback.js';
@@ -563,6 +563,10 @@ export function openDiary(){
     if(cfg.keyArt){ artEl.src=cfg.keyArt; artEl.style.visibility=''; }
     else artEl.style.visibility='hidden';
   }
+  // El nombre completo bajo la sigla (Juan, 18 ago) — vía festivalTagline, que
+  // ya es el dueño de derivarlo SIN repetir la sigla ([no-repetir-nombre]).
+  const fullEl=document.getElementById('diary-full');
+  if(fullEl) fullEl.textContent=festivalTagline(cfg, _lang)||'';
   const datesEl=document.getElementById('diary-dates');
   if(datesEl) datesEl.textContent=[(_lang==='en'&&cfg.dates_en)?cfg.dates_en:cfg.dates,cfg.year].filter(Boolean).join(' ');
   const countEl=document.getElementById('diary-count');

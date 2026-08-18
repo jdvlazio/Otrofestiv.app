@@ -2287,6 +2287,54 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar button-canon: {_e}')
 
+# ── [dato-linea] la línea de dato tiene UN dueño; la familia no crece ─────────
+# Auditoría 18 ago 2026: la app tenía 89 clases distintas de «texto pequeño gris»
+# (.hint, .cnt-line, .excl-reason, .plist-meta, .suggestion-meta…) — ninguna era
+# dueña, así que cada pantalla inventaba su tamaño y su ritmo, y las líneas se
+# veían sueltas. Nace .dato-linea (t-base, ritmo sp-1) como canon. Este guardián
+# NO exige migrar las 89 de golpe: congela el número para que nadie sume la 90
+# sin decidirlo, y verifica que el canon siga existiendo con su anatomía.
+check = 'dato-linea'
+try:
+    import re as _re
+    _html = open('index.html', encoding='utf-8').read()
+    _errs = []
+    # 1) el canon existe y conserva su anatomía (t-base + ritmo entre hermanas)
+    _canon = _re.search(r'^\.dato-linea\{([^}]*)\}', _html, _re.M)
+    if not _canon:
+        _errs.append('.dato-linea no existe — el canon de línea de dato desapareció')
+    else:
+        _body = _canon.group(1)
+        if 'font-size:var(--t-base)' not in _body:
+            _errs.append('.dato-linea sin t-base (a 11px las líneas se leen «pequeñas»)')
+        if not _re.search(r'^\.dato-linea\+\.dato-linea\{[^}]*margin-top:var\(--sp-1\)', _html, _re.M):
+            _errs.append('.dato-linea perdió su ritmo sp-1 entre hermanas')
+    # 2) la familia de líneas grises sueltas no crece
+    _fam = 0
+    for _m in _re.finditer(r'^(\.[a-z0-9-]+)\{([^}]*)\}', _html, _re.M):
+        _b = _m.group(2)
+        # el canon NO es una variante de sí mismo (se contaba y disparaba solo)
+        if _m.group(1) == '.dato-linea':
+            continue
+        if 'font-size' not in _b or 'background' in _b:
+            continue
+        if _re.search(r'font-size:var\(--t-(xs|sm|label|caption|base)\)', _b) and \
+           _re.search(r'color:var\(--(gray|gray2|white-60|white-40)\)', _b):
+            _fam += 1
+    # 88 heredadas + .diary-full (nombre completo bajo la sigla en la TAPA del
+    # Diario: tipografía de bloque de título, no una línea de dato). Baja cuando
+    # se migren las heredadas.
+    _TECHO = 89
+    if _fam > _TECHO:
+        _errs.append(f'familia de líneas de texto gris: {_fam} > techo {_TECHO} — '
+                     f'usá .dato-linea en vez de crear otra variante (o bajá el techo si migraste)')
+    if _errs:
+        fail(check, '; '.join(_errs))
+    else:
+        ok(check, f'canon vivo (t-base + ritmo sp-1) y familia en {_fam} (techo {_TECHO})')
+except Exception as _e:
+    warn(check, f'no se pudo verificar dato-linea: {_e}')
+
 # ── [star-semantics] la estrella es CALIFICACIÓN; prioridad = bookmark ─────────
 # Decisión Juan 18 jul 2026: ★/ICONS.star SOLO para rating (convención cine);
 # prioridad usa ICONS.bookmark. Una línea de PRIORIDAD (togglePriority/
@@ -3519,7 +3567,7 @@ try:
         'src/view/agenda.js': 1935,  # +35: Planear distingue las tres situaciones del vacío (nada en el festival / intereses agotados / primer uso) y el vacío de combos solo culpa a la disponibilidad si hay bloqueos (17 ago)  # +15: «No incluidas» solo lista lo que compitió; fuera el banner que generalizaba una causa falsa (17 ago)  # +10: la fila de excluidas distingue el choque que es solo por el Q&A (17 ago)  # +8: el badge de Mi Plan dice Q&A en vez de contar cero durante la charla (17 ago)  # +3 netas: banda canónica en «Sin confirmar» y orden de la fila de progreso, menos progressPct muerto (17 ago)  # +2: el chip del Diario lee la cuenta del dominio (dueño único) (17 ago)  # +9: el aviso de ciudad en Intereses usa la banda de AVISOS (17 ago)  # +17: Intereses avisa cuántas obras quedan fuera por la ciudad (17 ago)  # +10: el panel de alternativas no ofrece hermanas del mismo bloque (17 ago)  # +6: el chip del Diario toma la forma canónica (icono + nombre + count-badge) (17 ago)  # +7: el chip nombra su destino (Diario) y el bloque del Recuerdo lleva su encabezado (17 ago)  # +17: Sugerencias no se dibuja en días pasados y su vacío nombra el día; la caja «Día libre» verifica antes de prometer (17 ago)  # +10: «Ya pasó» distingue el hecho temporal del inventario en las 4 superficies (16 ago)  # +5: la vista publica el SET de ciudad antes de filtrar (alternativas y sugerencias) (16 ago)  # +9: alternativas y recuperación consumen screeningPlannable (el panel ofrecía otras ciudades y canceladas) (16 ago)  # +3: el hint mira el DÍA ACTIVO — aparecía en un día libre, sin horas que tocar (16 ago)  # +6: el chip dice «obras vistas» y desaparece a cero (16 ago)  # +2: el hint dice «cambiar de actividad» — el panel puede ofrecer charlas y talleres (16 ago)  # +7: el resultado se llama «Opción» y no «Tu Plan» (dos objetos, un nombre) (16 ago)  # +4: el aviso del Q&A declara sus 30 min y el veredicto va en condicional (16 ago)  # +7: la segunda hora de la fila dice «hasta HH:MM» (16 ago)  # +4: el corazón único — la fila de Intereses gana el control que le faltaba y la ✕ destructiva de Planear pasa a ser el mismo corazón (16 ago)  # +4: la fila de ciudad explica pero no ofrece «+ Incluir» (16 ago)  # +6: marcadores plannable-ok en los tres sitios de CATÁLOGO (16 ago)  # +1: motivo de exclusión con la cuenta y sujeto correcto (ciudad=el PLAN) (15 ago)  # +6: sugerencias y filas del plan respetan/muestran la ciudad (15 ago)  # +8: gate del scroll a «ahora» + por qué Mi Plan NO repite la banda (10 ago)  # +13: «Sesión 1 de 2» en Mi Plan + el taller no se sugiere (8 ago)  # +7: el taller multi-día no se sugiere (bloque a medias) (8 ago)  # +9: kind 'ciudad' en el detalle de conflicto (6 ago)
         'src/main.js': 1670,  # +1: dispatcher de includeAnyway (17 ago)  # +7: el splash recuerda el festival elegido (memoria que caduca sola) (16 ago)  # +46 total: _morphOpen a FLIP — clon de la card compuesta, radio contra-escalado, encuadre del destino (29 jul)
         'src/i18n/i18n.js': 1564,  # +3: diary_lo_que_viste ×3 — la banda que separa la tapa del muro (18 ago)
-        'src/controller/sheets-controller.js': 1678,  # +2: «Lo que viste» no cuenta las negadas (18 ago)
+        'src/controller/sheets-controller.js': 1682,  # +4: el nombre completo del festival en la tapa, vía festivalTagline (18 ago)
         'src/controller/handlers.js': 1105,  # +2: el límite de prioridades mide las vivas (prioLiveCount) (17 ago)  # +26: includeAnyway — agendar la que solo choca por el Q&A, marcada como decisión deliberada (17 ago)  # +12: _vueltaA — el toast nombra la sección REAL donde reaparece (la prioridad sobrevive al desmarcar) (16 ago)  # +6: los dos toasts dicen «también en Intereses», solo cuando de verdad sumaron (16 ago)  # +18: el squeeze y «+ Incluir» usan el dueño del predicado (el plan volvía a cruzar ciudades al GUARDAR) (16 ago)  # +8: el toast del programa dice cuántas obras y por qué (15 ago)  # +45: taller multi-día — addRecurringBlock/removeRecurringBlock (bloque entero en un solo commitPlan) (8 ago)  # +15: acciones del sheet de ciudad (7 ago)  # +20: anclaje de función en toggleWL, simétrico al quitar (29 jul)
     }
     _over = []

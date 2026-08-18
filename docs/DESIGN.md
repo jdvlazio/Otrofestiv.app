@@ -376,6 +376,24 @@ negado o data-URI → fallback al acento de sección. `getImageData` fuera de
 helpers.js o `--amb` a mano = build roto. Safari iOS: muestrear con URL propia
 (TMDB→w92) para no heredar la entrada de caché sin-CORS del `<img>`.
 
+### 8.3b · Línea de dato — el canon (`[dato-linea]`)
+- **`.dato-linea`** es la línea que informa sin ser sección ni banda: el insumo
+  de Planear, un vacío colapsado, una cifra al pie de un bloque. Anatomía única:
+  `t-base` (13px), `line-height 1.4`, `--gray`, y `sp-1` de ritmo entre hermanas.
+  El matiz semántico va en un `<span class="dato-alerta">` (ámbar) DENTRO de la
+  misma línea — la fórmula es `texto · texto`, nunca dos filas.
+- **Por qué existe** (auditoría 18 ago 2026): la app tenía **89 clases** distintas
+  de «texto pequeño gris» (`.hint`, `.cnt-line`, `.excl-reason`, `.plist-meta`,
+  `.suggestion-meta`…). Ninguna era dueña, así que cada pantalla elegía tamaño y
+  ritmo propios y las líneas nuevas se veían sueltas y pequeñas.
+- **Espaciado — la ley de proximidad, medida**: el hueco DENTRO de un grupo debe
+  ser como mucho la mitad del hueco ENTRE grupos (1:2). Medido en Planear antes
+  del arreglo: 0px dentro del grupo y **44px** hacia el CTA — más que `sp-6`, el
+  token de «entre secciones». Ahora: `sp-1` entre líneas, `sp-4` al CTA.
+- El guardián congela la familia en su tamaño actual: no obliga a migrar las 89
+  de golpe, pero impide sumar la 90 sin decidirlo, y verifica que el canon siga
+  vivo con su `t-base` y su ritmo.
+
 ### 8.4 · Botones — regla dueña única (`[button-canon]`)
 - **PRIMARIO**: UNA regla CSS dueña (`--amber-cta` / negro / `--r-pill` / `--sp-btn`
   / `t-base` / `w-bold` / hover .88). 10 clases suscritas; un primario nuevo se

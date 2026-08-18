@@ -191,9 +191,13 @@ export function renderAgenda(){
           if(!_nP) return '';
           const _prio=prioLiveCount();
           const _cr=_crucesEntrePendientes(pending);
+          // Una sola línea (Juan, 18 ago): la advertencia sube a la misma fila
+          // con la fórmula «texto · texto» del resultado. Gana ~21px verticales
+          // y las dos mitades se leen como un solo dato con su matiz.
+          const _obras=`${_nP===1?t('pre_obra'):t('pre_obras',{n:_nP})}${_prio?t('pre_con_prio',{m:_prio}):''}`;
+          const _aviso=_cr?`<span class="dato-alerta">${ICONS.alert} ${_cr===1?t('pre_cruce'):t('pre_cruces',{n:_cr})}</span>`:'';
           return`<div class="pre-resumen">
-            <div class="pre-linea">${_nP===1?t('pre_obra'):t('pre_obras',{n:_nP})}${_prio?t('pre_con_prio',{m:_prio}):''}</div>
-            ${_cr?`<div class="pre-linea cruces">${ICONS.alert} ${_cr===1?t('pre_cruce'):t('pre_cruces',{n:_cr})}</div>`:''}
+            <div class="dato-linea">${_obras}${_aviso?` · ${_aviso}`:''}</div>
           </div>`;
         })()}
         <div class="av-calc-wrap">
@@ -218,8 +222,13 @@ function _crucesEntrePendientes(pending){
   const por={};
   FILMS.forEach(f=>{ if(pending.includes(f.title)&&!screeningPassed(f)&&!isScreeningBlocked(f)) (por[f.title]=por[f.title]||[]).push(f); });
   const ts=Object.keys(por); let n=0;
+  // SOLO solapes de reloj (kind 'solape'): dos funciones que se pisan es un
+  // DATO del programa, afirmable sin tilde. Los cruces por viaje salen de
+  // nuestra estimación (traslado + margen) y no se anuncian como hecho aquí —
+  // ya tienen su cadena honesta después del cálculo («llegarías ~21:15»).
+  const _pisan=(x,y)=>{const r=screensConflictReason(x,y);return !!r&&r.kind==='solape';};
   for(let i=0;i<ts.length;i++)for(let j=i+1;j<ts.length;j++){
-    if(por[ts[i]].every(a=>por[ts[j]].every(b=>screensConflict(a,b)))) n++;
+    if(por[ts[i]].every(x=>por[ts[j]].every(y=>_pisan(x,y)))) n++;
   }
   return n;
 }
