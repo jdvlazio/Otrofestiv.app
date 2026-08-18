@@ -87,6 +87,11 @@ def main():
     for f in crudo:
         por_pag[f['_pagina']].append(f)
     os.makedirs(DEST, exist_ok=True)
+    # qué obras ya tienen imagen de una fuente que MANDA sobre el still
+    pub = json.load(open(f'{REPO}/festivals/cineautopsia-2026.json', encoding='utf-8'))
+    ya_tienen = {lib.norm(x.get('title', '')): x.get('posterSource')
+                 for f in pub['films'] for x in (f.get('film_list') or [])
+                 if x.get('posterSource') in ('tmdb', 'letterboxd', 'oficial')}
     hechos, flojos, progs = {}, [], {}
     for pag in sorted(por_pag):
         obras = [o for f in por_pag[pag] for o in f['obras']]
@@ -118,6 +123,11 @@ def main():
                     progs[lib.norm(f['titulo'])] = f'/assets/cineautopsia/{nom}'
                     print(f'  {pag}  PROGRAMA {f["titulo"][:34]:36} {pc.size[0]}×{pc.size[1]}')
         for (a, b), o in zip(bandas, obras):
+            # NO se recorta lo que ya tiene póster de TMDB o Letterboxd: ese
+            # archivo no lo leería nadie. Generé 30 así —2,2 MB— antes de que
+            # Juan preguntara «¿para qué necesitas Allegory, si ya tiene póster?».
+            if ya_tienen.get(lib.norm(o['titulo'])):
+                continue
             crop = ventana_16_9(full.crop((0, a, full.size[0], b)))
             w, h = crop.size
             if w < ANCHO_MIN:
