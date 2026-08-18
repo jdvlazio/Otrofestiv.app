@@ -745,9 +745,6 @@ export function toggleFilmAlternatives(key,title,day,time){
   if(_expandedFilm===key){_expandedFilm='';renderAgenda();return;}
   _expandedFilm=key;
   // Marcar hint como visto la primera vez que se usa
-  if(!localStorage.getItem('otrofestiv_hint_cambiar')){
-    localStorage.setItem('otrofestiv_hint_cambiar','1');
-  }
   renderAgenda();
 }
 

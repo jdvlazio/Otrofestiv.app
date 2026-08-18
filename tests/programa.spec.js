@@ -921,7 +921,12 @@ test('T71 — Mi Plan: la banda del Plan con Diario y día, y «Sin confirmar» 
       bandaPlanTxt: document.querySelector('#ag-view .sec-hdr')?.textContent.replace(/\s+/g, ' ').trim(),
       banda: box('.checkin-wrap .sec-hdr'),
       fila: box('.checkin-title'),
-      vecino: box('.mplan-list-hdr'),
+      // El encabezado del día se mudó ADENTRO de la pieza calendario con su
+      // inset propio (T82); el vecino de página de la fila es el inset de
+      // contenido del tab: el borde interno de .saved-agenda.
+      vecino: (() => { const e = document.querySelector('.saved-agenda'); if (!e) return null;
+        const b = e.getBoundingClientRect(), cs = getComputedStyle(e);
+        return { x: Math.round(b.x + parseFloat(cs.paddingLeft)) }; })(),
       badge: document.querySelector('.checkin-wrap .count-badge')?.textContent,
       pendientes: 3,
       // sección, no card: sin fondo propio ni borde
@@ -943,7 +948,7 @@ test('T71 — Mi Plan: la banda del Plan con Diario y día, y «Sin confirmar» 
   expect(g.banda.x, 'banda a sangre por izquierda').toBe(0);
 
   // 3· las filas alinean con sus vecinas — el desajuste de 16px no puede volver
-  expect(g.fila.x, 'la fila alinea con el encabezado del día').toBe(g.vecino.x);
+  expect(g.fila.x, 'la fila alinea con el inset de contenido del tab').toBe(g.vecino.x);
 
   // 4· sección, no card
   expect(g.pildoraVieja, 'la píldora inline ya no existe').toBe(false);
@@ -1289,12 +1294,12 @@ test('T79 — Mi Plan: eyebrow pariente, hero que respira, botones anclados', as
     probe.style.fontSize = 'var(--t-xs)'; document.body.appendChild(probe);
     const tXs = getComputedStyle(probe).fontSize; probe.remove();
     return { heroBanda: g('.ctx-header', bandaPlan),
-      calBotones: g('.mplan-wk-outer', '.mplan-bottom-actions'),
+      footDentro: !!document.querySelector('.mplan-wrap .mplan-foot'),
       eyebrowPx: ey && getComputedStyle(ey).fontSize,
       eyebrowTracking: ey && getComputedStyle(ey).letterSpacing, tXs };
   });
   expect(r.heroBanda, 'el hero respira sp-5 antes de la banda').toBe(24);
-  expect(r.calBotones, 'los botones anclados al pie del calendario').toBeLessThanOrEqual(8);
+  expect(r.footDentro, 'las acciones son el footer DE la pieza, no flotan bajo ella').toBe(true);
   expect(r.eyebrowPx, 'el eyebrow habla el token t-xs de sec-hdr.sm').toBe(r.tXs);
   expect(r.eyebrowTracking, 'con el tracking de la banda (.1em de 9px ≈ 0.9px)').toMatch(/^0\.9/);
 });
@@ -1363,4 +1368,46 @@ test('T80 — el hero abre con banda, y EN CURSO lleva el punto', async ({ page 
   const curso = await medir('17:30');
   expect(curso.txt, 'en curso').toBe('En curso');
   expect(curso.dot, 'y el punto verde dice que es AHORA').toBe(true);
+});
+
+// 18 ago, auditoría de Mi Plan con Juan: el calendario es UNA pieza — grilla,
+// día y lista comparten el perímetro bordeado, el día es caption (no banda),
+// las acciones son footer con labels que dicen la acción, y la hora tocable
+// lleva chevron en vez del hint que lo confesaba.
+test('T82 — el calendario es una pieza: lista adentro, footer con nombre propio, chevron sin hint', async ({ page }) => {
+  await enterFestival(page, 'ficdeh2026', '2026-08-18T15:00:00-05:00');
+  await page.evaluate(() => [...document.querySelectorAll('#city-sheet [data-action]')]
+    .find(x => x.textContent.includes('Bogotá'))?.click());
+  await page.waitForTimeout(600);
+  const r = await page.evaluate(async () => {
+    const bog = f => (f.venue || '').includes('Bogotá');
+    const pick = (day, pred, n) => FILMS.filter(f => bog(f) && f.day === day && pred(f)).slice(0, n);
+    const sched = [...pick('2026-08-18', f => f.time < '14:00', 1), ...pick('2026-08-18', f => f.time > '16:00', 2)];
+    state.set('savedAgenda', { scenarioIdx: 0, schedule: sched.map(f => Object.assign({}, f, { _title: f.title })) });
+    switchMainNav('mnav-miplan'); showAgView();
+    await new Promise(r => setTimeout(r, 1400));
+    const wrap = document.querySelector('.mplan-wrap');
+    const btns = [...document.querySelectorAll('.mplan-foot-btn')].map(b => b.textContent.trim());
+    return {
+      listaDentro: !!wrap?.querySelector('.mplan-list'),
+      captionDentro: !!wrap?.querySelector('.mplan-list-hdr'),
+      footAlFinal: wrap && wrap.lastElementChild?.classList.contains('mplan-foot'),
+      labels: btns,
+      hint: !!document.querySelector('.mplan-change-hint'),
+      chevronFuturas: [...document.querySelectorAll('.mplan-t1:not(.mp-past)')].every(e => !!e.querySelector('svg')),
+      chevronPasadas: [...document.querySelectorAll('.mplan-t1.mp-past')].some(e => e.querySelector('svg')),
+      nFuturas: document.querySelectorAll('.mplan-t1:not(.mp-past)').length,
+      nPasadas: document.querySelectorAll('.mplan-t1.mp-past').length,
+    };
+  });
+  expect(r.listaDentro, 'la lista vive dentro del perímetro de la pieza').toBe(true);
+  expect(r.captionDentro, 'el día es caption dentro de la pieza').toBe(true);
+  expect(r.footAlFinal, 'el footer cierra la pieza').toBe(true);
+  expect(r.labels.join('|'), 'los labels dicen la acción, no el sustantivo').toMatch(/Compartir Plan|Share Plan/);
+  expect(r.labels.join('|')).toMatch(/Pasar a tu calendario|Add to your calendar/);
+  expect(r.hint, 'el hint murió: lo reemplaza la affordance').toBe(false);
+  expect(r.nFuturas, 'la escena tiene horas futuras que medir').toBeGreaterThan(0);
+  expect(r.chevronFuturas, 'toda hora tocable lleva chevron').toBe(true);
+  expect(r.nPasadas).toBeGreaterThan(0);
+  expect(r.chevronPasadas, 'una hora pasada no promete cambio').toBe(false);
 });
