@@ -170,34 +170,19 @@ export function renderAgenda(){
     const resultContent=cachedResult
       ?buildResultHTML(cachedResult.scenarios)
       :'';
-    // Disponibilidad colapsable — colapsada por defecto, abierta si hay bloques.
-    const _hasAvBlocks=!!(availability&&DAY_KEYS.some(d=>availability[d]&&availability[d].blocks&&availability[d].blocks.length));
-    const _avOpenAttr=_hasAvBlocks?' open':'';
     view.innerHTML=`${_progressHtml}
-      <style>
-        .ag-av-details{padding:0 0 var(--sp-3)} /* FLUSH: la banda pega al chrome (G01) */
-        .ag-av-details>summary{cursor:pointer;list-style:none;display:flex;align-items:center;margin-bottom:0;-webkit-tap-highlight-color:transparent}
-        .ag-av-details>summary::-webkit-details-marker,
-        .ag-av-details>summary::marker{display:none}
-        .ag-av-details>summary .ag-av-chevron{transition:transform 200ms ease;color:var(--gray2);display:inline-flex;align-items:center}
-        .ag-av-details[open]>summary .ag-av-chevron{transform:rotate(180deg)}
-        .ag-av-details>summary .sec-hdr-opt{margin-left:4px}
-        .ag-av-details>.txt-gray2-sm-lh{margin-top:var(--sp-2)}
-      </style>
       <div class="ag-section">
-        <details class="ag-av-details"${_avOpenAttr}>
-          <summary class="sec-hdr">${ICONS.clock} <span>${t('av_disponibilidad')}</span> <span class="hdr-end"><span class="sec-hdr-opt">${(()=>{
-            // El VALOR, no «opcional» (Juan, 18 ago): rotular la palanca como
-            // opcional le enseñaba al usuario que su restricción no importa —
-            // y el plan salía asumiendo el día entero libre. Ahora la banda
-            // dice el supuesto sobre el que se va a calcular.
-            const _n=DAY_KEYS.filter(d=>availability[d]&&availability[d].blocks&&availability[d].blocks.length).length;
-            return _n?(_n===1?t('av_restr_dia'):t('av_restr_dias',{n:_n})):t('av_sin_restricciones');
-          })()}</span><span class="ag-av-chevron">${ICONS.chevronD}</span></span></summary>
-          <div class="txt-gray2-sm-lh">${t('av_no_incluir')}</div>
-          <div id="av-blocks-list"></div>
-          <button class="av-add-unavail" data-action="openAvSheet">${ICONS.plus} ${t('misc_no_disponible')}</button>
-        </details>
+        <!-- El acordeón murió (Juan, 18 ago): informaba el estado con la puerta
+             cerrada. La fila del VALOR queda siempre visible, «Editar» hereda el
+             objeto de la fila (misma regla que «Exportar»), y los bloques
+             configurados se ven — con su × — en vez de esconderse. El estado no
+             se dice en palabras: los bloques visibles SON el estado (Juan:
+             el «Sin restricciones» confundía). -->
+        <div class="av-fila">
+          <span class="av-fila-valor">${ICONS.clock} ${t('av_disponibilidad')}</span>
+          <button class="av-editar" data-action="openAvSheet">${t('av_editar')} ${ICONS.chevronR}</button>
+        </div>
+        <div id="av-blocks-list"></div>
         ${(()=>{
           // Las líneas que faltaban (auditoría 18 ago): la pantalla pedía
           // calcular sin decir QUÉ iba a procesar. Insumo y pre-diagnóstico,
