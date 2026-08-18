@@ -1267,7 +1267,12 @@ export function _renderSavedAgendaHTML(state, consensus){
     // así que decir «hoy» era falso en cualquier día que no fuera hoy. Y no dice
     // «cubierto»: muchas veces el día está vacío porque no había con qué, no
     // porque el usuario lo llenara.
-    html+=emptyState(ICONS.search,t('plan_sin_opciones_dia',{day:dayLabel(_selKey)}));
+    // El vacío de Sugerencias colapsa a UNA línea (Juan, 18 ago): gastaba 114px
+    // y una lupa de 20 para una frase de 31 caracteres — el vacío pesaba más
+    // que el contenido real. Y la lupa era la metáfora equivocada: sugiere
+    // búsqueda fallida, no catálogo agotado; el icono de la sección (sparkles)
+    // ya está en la banda, así que la línea va sola.
+    html+=`<div class="sug-vacio">${t('plan_sin_opciones_dia',{day:dayLabel(_selKey)})}</div>`;
   }
   html+='</div>'; // close suggestion-wrap
   } // end !festivalEnded
