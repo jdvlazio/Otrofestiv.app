@@ -447,11 +447,6 @@ export const FESTIVAL_CONFIG={
     dayLong:{'2026-08-22': 'Sábado 22 de agosto', '2026-08-23': 'Domingo 23 de agosto', '2026-08-28': 'Viernes 28 de agosto', '2026-08-29': 'Sábado 29 de agosto'},
     prioLimit:3,
     keyArt:'/assets/keyart/cineautopsia2026-v2.jpg',
-    // FRENO DE PUBLICACIÓN. Ya NO falta nada del dato: la programación oficial
-    // está entera (13 funciones, 6 sedes, 8 jornadas, 67 obras con imagen) y el
-    // keyArt es la portada de su PDF sin la franja del encabezado. Quitar esta
-    // línea ES publicar, y eso lo decide Juan.
-    group:'test',
     tagline:'Festival de Cine Experimental de Bogotá',
     films:null,posters:null,lbSlugs:{}
   },

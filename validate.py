@@ -199,8 +199,22 @@ else:
     if missing_fns:
         for f in missing_fns:
             fail(check, f"'{f}' en _SCHED_PURE_FNS pero no definida en main thread ni domain")
-    else:
-        ok(check, f'todas las {len(fn_names)} funciones de _SCHED_PURE_FNS existen (main + domain)')
+    # El hueco que este check NO veía (17 ago 2026): la fn existía en el dominio
+    # pero calc.js no la IMPORTABA. eval(name) del build del worker resuelve en el
+    # scope del módulo → ReferenceError → el worker moría y TODO cálculo caía al
+    # fallback síncrono, en silencio, con este guardián en verde. screeningPlannable
+    # vivió así desde su extracción (16 ago) hasta el traspaso de Onboarding (17).
+    # Cada nombre de la lista debe aparecer en un import de calc.js — salvo los
+    # definidos worker-local (_venueFns) o dentro del propio calc.js.
+    _calc_imports = ' '.join(re.findall(r'import\s*\{([^}]*)\}', _calc_src))
+    _calc_local = set(re.findall(r'function (\w+)\(', _calc_src))
+    _sin_import = [f for f in fn_names
+                   if f not in _calc_imports and f not in _calc_local]
+    if _sin_import:
+        fail(check, 'en _SCHED_PURE_FNS pero SIN import en calc.js (el worker muere al construirse y nadie lo ve): '
+                    + ', '.join(_sin_import))
+    elif not missing_fns:
+        ok(check, f'las {len(fn_names)} funciones de _SCHED_PURE_FNS existen Y están importadas en calc.js')
 
 # ── CHECK 3: Worker-local no duplica _SCHED_PURE_FNS ─────────────────────────
 # Si una función está en ambos lados, el worker-local gana y el main thread
@@ -2273,6 +2287,149 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar button-canon: {_e}')
 
+# ── [aviso-color] el color de un aviso significa algo, y está decidido ────────
+# Juan, 18 ago 2026: «Plan desactualizado» salió en blanco por inercia (herencia
+# del banner de prioridades) y él preguntó lo obvio — ¿no debería ser ámbar, como
+# los otros avisos? La app YA tenía el precedente (.dato-alerta, .ctx-aviso.amb)
+# pero nadie lo había escrito: DESIGN.md define el ámbar como «acento, hora, CTA,
+# estado activo», nunca como advertencia. Resultado: 13 clases de aviso con 6
+# tokens de color repartidos a ojo. La regla (§8.6) y este guardián cierran eso:
+# cada aviso declara a qué familia semántica pertenece, y una clase nueva no
+# entra sin decidirlo.
+check = 'aviso-color'
+try:
+    import re as _re
+    _html = open('index.html', encoding='utf-8').read()
+    # familia semántica → token permitido
+    _ROSTER = {
+        # ATENCIÓN — «esto te pide algo ahora»
+        '.dato-alerta': 'amber', '.ctx-aviso.amb': 'amber', '.prio-stale': 'amber',
+        '.delay-warn.warn-amber': 'amber', '.mplan-warn-row': 'amber-60',
+        # CONTEXTO — informa, no exige
+        '.ctx-aviso': 'gray',
+        # ESTADO del festival/función — verde en curso, rojo lo grave
+        '.ctx-aviso.grn': 'green', '.delay-warn': 'red', '.aviso-pill.sev-red': 'red',
+        # SUPERFICIE — el color ES el componente (pastilla/toast), no un texto teñido
+        '.aviso-pill': 'amber', '.prio-toast.warn': 'yellow-12',
+        # MATIZ de ficha
+        '.aviso-txt': 'white',
+    }
+    _errs = []
+    _vistos = set()
+    for _m in _re.finditer(r'^(\.[a-zA-Z0-9_.\-]+)\{([^}]*)\}', _html, _re.M):
+        _sel, _cuerpo = _m.group(1), _m.group(2)
+        if not _re.search(r'(aviso|alerta|stale|warn)', _sel):
+            continue
+        _c = _re.search(r'color:var\(--([a-z0-9-]+)\)', _cuerpo)
+        if not _c:
+            continue
+        _vistos.add(_sel)
+        if _sel not in _ROSTER:
+            _errs.append(f'{_sel} es un aviso nuevo sin familia semántica declarada '
+                         f'(§8.6: ámbar pide atención · gris informa · verde/rojo estado)')
+        elif _c.group(1) != _ROSTER[_sel]:
+            _errs.append(f'{_sel}: color --{_c.group(1)} pero su familia manda --{_ROSTER[_sel]}')
+    _muertas = [k for k in _ROSTER if k not in _vistos]
+    if _muertas:
+        _errs.append('en el roster pero ya no existe(n) en el CSS: ' + ', '.join(sorted(_muertas)))
+    if _errs:
+        fail(check, '; '.join(_errs[:4]))
+    else:
+        ok(check, f'{len(_vistos)} avisos, cada uno con su familia de color declarada')
+except Exception as _e:
+    warn(check, f'no se pudo verificar aviso-color: {_e}')
+
+# ── [icono-texto] un botón con icono Y texto se alinea, o el icono flota ──────
+# Juan, 18 ago 2026: el «+» de «Agendar» iba 3px más alto que la palabra. La
+# causa: .excl-include-btn no tenía display:inline-flex ni align-items:center,
+# así que el SVG se apoyaba en la línea BASE del texto en vez de centrarse con
+# él. [button-canon] no lo vio porque mira color, fondo y peso — nunca miró
+# geometría interna. Este chequeo cierra ese hueco: si el markup pone un ICONS.x
+# SEGUIDO DE TEXTO dentro de un botón, su regla CSS debe alinearlos. Los
+# contenedores de icono SOLO (chevrons, cierres) no entran: no hay nada que
+# alinear con nada.
+check = 'icono-texto'
+try:
+    import re as _re, glob as _glob
+    _html = open('index.html', encoding='utf-8').read()
+    _src = ''
+    for _f in _glob.glob('src/**/*.js', recursive=True):
+        _src += open(_f, encoding='utf-8').read()
+    # markup: class="… X …" … > ${ICONS.algo} <algo que NO cierra el tag>
+    _con_texto = set()
+    # SOLO elementos <button>: una fila de texto con icono se alinea por su
+    # cuenta (line-height, vertical-align) y no es lo que rompe aquí.
+    for _m in _re.finditer(r'<button[^>]*class="([^"]*)"[^>]*>\s*\$\{ICONS\.\w+\}\s*([^<]{2,40})', _src):
+        _resto = _m.group(2).strip()
+        if not _resto or _resto.startswith('</'):
+            continue  # icono solo
+        for _c in _m.group(1).split():
+            if '${' in _c:
+                continue
+            _con_texto.add(_c)
+    _errs = []
+    for _c in sorted(_con_texto):
+        _r = _re.search(r'^\.' + _re.escape(_c) + r'\{([^}]*)\}', _html, _re.M)
+        if not _r:
+            continue
+        _b = _r.group(1)
+        if 'flex' not in _b or 'align-items:center' not in _b:
+            _errs.append(f'.{_c} lleva icono+texto sin alinear (falta inline-flex + align-items:center)')
+    if _errs:
+        fail(check, '; '.join(_errs[:5]))
+    else:
+        ok(check, f'{len(_con_texto)} botones con icono+texto, todos alineados')
+except Exception as _e:
+    warn(check, f'no se pudo verificar icono-texto: {_e}')
+
+# ── [dato-linea] la línea de dato tiene UN dueño; la familia no crece ─────────
+# Auditoría 18 ago 2026: la app tenía 89 clases distintas de «texto pequeño gris»
+# (.hint, .cnt-line, .excl-reason, .plist-meta, .suggestion-meta…) — ninguna era
+# dueña, así que cada pantalla inventaba su tamaño y su ritmo, y las líneas se
+# veían sueltas. Nace .dato-linea (t-base, ritmo sp-1) como canon. Este guardián
+# NO exige migrar las 89 de golpe: congela el número para que nadie sume la 90
+# sin decidirlo, y verifica que el canon siga existiendo con su anatomía.
+check = 'dato-linea'
+try:
+    import re as _re
+    _html = open('index.html', encoding='utf-8').read()
+    _errs = []
+    # 1) el canon existe y conserva su anatomía (t-base + ritmo entre hermanas)
+    _canon = _re.search(r'^\.dato-linea\{([^}]*)\}', _html, _re.M)
+    if not _canon:
+        _errs.append('.dato-linea no existe — el canon de línea de dato desapareció')
+    else:
+        _body = _canon.group(1)
+        if 'font-size:var(--t-base)' not in _body:
+            _errs.append('.dato-linea sin t-base (a 11px las líneas se leen «pequeñas»)')
+        if not _re.search(r'^\.dato-linea\+\.dato-linea\{[^}]*margin-top:var\(--sp-1\)', _html, _re.M):
+            _errs.append('.dato-linea perdió su ritmo sp-1 entre hermanas')
+    # 2) la familia de líneas grises sueltas no crece
+    _fam = 0
+    for _m in _re.finditer(r'^(\.[a-z0-9-]+)\{([^}]*)\}', _html, _re.M):
+        _b = _m.group(2)
+        # el canon NO es una variante de sí mismo (se contaba y disparaba solo)
+        if _m.group(1) == '.dato-linea':
+            continue
+        if 'font-size' not in _b or 'background' in _b:
+            continue
+        if _re.search(r'font-size:var\(--t-(xs|sm|label|caption|base)\)', _b) and \
+           _re.search(r'color:var\(--(gray|gray2|white-60|white-40)\)', _b):
+            _fam += 1
+    # 88 heredadas + .diary-full (nombre completo bajo la sigla en la TAPA del
+    # Diario: tipografía de bloque de título, no una línea de dato). Baja cuando
+    # se migren las heredadas.
+    _TECHO = 89
+    if _fam > _TECHO:
+        _errs.append(f'familia de líneas de texto gris: {_fam} > techo {_TECHO} — '
+                     f'usá .dato-linea en vez de crear otra variante (o bajá el techo si migraste)')
+    if _errs:
+        fail(check, '; '.join(_errs))
+    else:
+        ok(check, f'canon vivo (t-base + ritmo sp-1) y familia en {_fam} (techo {_TECHO})')
+except Exception as _e:
+    warn(check, f'no se pudo verificar dato-linea: {_e}')
+
 # ── [star-semantics] la estrella es CALIFICACIÓN; prioridad = bookmark ─────────
 # Decisión Juan 18 jul 2026: ★/ICONS.star SOLO para rating (convención cine);
 # prioridad usa ICONS.bookmark. Una línea de PRIORIDAD (togglePriority/
@@ -2424,7 +2581,13 @@ try:
     # Encima del póster, no el póster: conservan su radio propio.
     _ENCIMA = {'.poster-now', '.poster-past-badge', '.pv-poster-check'}
     _malos = []
-    for _m in re.finditer(r'^(\.[a-zA-Z0-9_.\-]*(?:poster|thumb)[a-zA-Z0-9_.\-]*)\{([^}]*)\}', _html, re.M):
+    # Hueco cazado el 18 ago: la regex exigía que el selector EMPEZARA con
+    # punto, así que «#ag-result .lb-poster{border-radius:var(--r-sm)}» pasaba
+    # en verde con 4px mientras el resto de la app usaba el radio proporcional.
+    # Un guardián que solo mira la puerta de adelante no es un guardián.
+    for _m in re.finditer(r'^([#.][a-zA-Z0-9_.\-]+(?: +[.#][a-zA-Z0-9_.\-]+)*)\{([^}]*)\}', _html, re.M):
+        if not re.search(r'(poster|thumb)', _m.group(1)):
+            continue
         _sel, _cuerpo = _m.group(1), _m.group(2)
         if _sel in _ENCIMA:
             continue
@@ -3366,13 +3529,25 @@ try:
         else:
             # Solo las secciones DERIVADAS. La línea del último commit cambia con
             # cada commit por definición: compararla haría fallar el check siempre.
+            # La columna «Estado» sale del RELOJ (festivalStatus: próximo/recién
+            # terminado/archivado), no del repo: entre el commit y el CI un
+            # festival cruza un umbral y CLAUDE.md queda «desactualizado» sin que
+            # nadie tocara nada, bloqueando PRs ajenos (pasó en el #682, 18 ago).
+            # Se compara la lista de festivales y features — que sí es del repo —
+            # ignorando esa última celda.
+            def _sin_estado(_linea):
+                if not _linea.startswith('|'):
+                    return _linea
+                _cells = _linea.rstrip().rstrip('|').split('|')
+                return '|'.join(_cells[:-1]) + '|' if len(_cells) > 2 else _linea
             def _derivado(txt):
                 out = []
                 for _sec in ('### Festivales', '### Features activas'):
                     if _sec in txt:
                         _t = txt[txt.index(_sec):]
                         _fin = _t.find('\n---')
-                        out.append(_t[:_fin if _fin > 0 else 1200])
+                        _t = _t[:_fin if _fin > 0 else 1200]
+                        out.append('\n'.join(_sin_estado(_l) for _l in _t.split('\n')))
                 return '\n'.join(out)
             if _derivado(_viejo).strip() != _derivado(_nuevo).strip():
                 fail(check, 'CLAUDE.md desactualizado respecto al repo (festivales o features) '
@@ -3502,10 +3677,10 @@ try:
     #   agenda.js (render agenda+miplan) · main.js (composición/bootstrap) ·
     #   i18n.js (diccionarios es/en, es DATA) · sheets-controller.js · handlers.js
     _ALLOW = {
-        'src/view/agenda.js': 1935,  # +35: Planear distingue las tres situaciones del vacío (nada en el festival / intereses agotados / primer uso) y el vacío de combos solo culpa a la disponibilidad si hay bloqueos (17 ago)  # +15: «No incluidas» solo lista lo que compitió; fuera el banner que generalizaba una causa falsa (17 ago)  # +10: la fila de excluidas distingue el choque que es solo por el Q&A (17 ago)  # +8: el badge de Mi Plan dice Q&A en vez de contar cero durante la charla (17 ago)  # +3 netas: banda canónica en «Sin confirmar» y orden de la fila de progreso, menos progressPct muerto (17 ago)  # +2: el chip del Diario lee la cuenta del dominio (dueño único) (17 ago)  # +9: el aviso de ciudad en Intereses usa la banda de AVISOS (17 ago)  # +17: Intereses avisa cuántas obras quedan fuera por la ciudad (17 ago)  # +10: el panel de alternativas no ofrece hermanas del mismo bloque (17 ago)  # +6: el chip del Diario toma la forma canónica (icono + nombre + count-badge) (17 ago)  # +7: el chip nombra su destino (Diario) y el bloque del Recuerdo lleva su encabezado (17 ago)  # +17: Sugerencias no se dibuja en días pasados y su vacío nombra el día; la caja «Día libre» verifica antes de prometer (17 ago)  # +10: «Ya pasó» distingue el hecho temporal del inventario en las 4 superficies (16 ago)  # +5: la vista publica el SET de ciudad antes de filtrar (alternativas y sugerencias) (16 ago)  # +9: alternativas y recuperación consumen screeningPlannable (el panel ofrecía otras ciudades y canceladas) (16 ago)  # +3: el hint mira el DÍA ACTIVO — aparecía en un día libre, sin horas que tocar (16 ago)  # +6: el chip dice «obras vistas» y desaparece a cero (16 ago)  # +2: el hint dice «cambiar de actividad» — el panel puede ofrecer charlas y talleres (16 ago)  # +7: el resultado se llama «Opción» y no «Tu Plan» (dos objetos, un nombre) (16 ago)  # +4: el aviso del Q&A declara sus 30 min y el veredicto va en condicional (16 ago)  # +7: la segunda hora de la fila dice «hasta HH:MM» (16 ago)  # +4: el corazón único — la fila de Intereses gana el control que le faltaba y la ✕ destructiva de Planear pasa a ser el mismo corazón (16 ago)  # +4: la fila de ciudad explica pero no ofrece «+ Incluir» (16 ago)  # +6: marcadores plannable-ok en los tres sitios de CATÁLOGO (16 ago)  # +1: motivo de exclusión con la cuenta y sujeto correcto (ciudad=el PLAN) (15 ago)  # +6: sugerencias y filas del plan respetan/muestran la ciudad (15 ago)  # +8: gate del scroll a «ahora» + por qué Mi Plan NO repite la banda (10 ago)  # +13: «Sesión 1 de 2» en Mi Plan + el taller no se sugiere (8 ago)  # +7: el taller multi-día no se sugiere (bloque a medias) (8 ago)  # +9: kind 'ciudad' en el detalle de conflicto (6 ago)
+        'src/view/agenda.js': 2000,  # +3: el Plan no se reemplaza solo + aviso «Plan desactualizado» sin enlace — 18 ago
         'src/main.js': 1670,  # +1: dispatcher de includeAnyway (17 ago)  # +7: el splash recuerda el festival elegido (memoria que caduca sola) (16 ago)  # +46 total: _morphOpen a FLIP — clon de la card compuesta, radio contra-escalado, encuadre del destino (29 jul)
-        'src/i18n/i18n.js': 1558,  # +2: cuenta_qa_opcional ES/EN (17 ago)  # +3: label_qa_ahora ×3 locales (17 ago)  # +3: label_sin_confirmar_hdr ×3 locales (17 ago)  # +6: misc_actividad/misc_actividades ×3 locales — el paraguas del titular del Recuerdo (17 ago)  # +3: badge_otra_ciudad ×3 locales (17 ago)  # +6: int_fuera_ciudad + variante singular ×3 locales (17 ago)  # +3: ya_paso ×3 locales (16 ago)  # +9: aviso_prog_obras/cortos con sus variantes _1 y _s ×3 locales — el número solo si es cierto (16 ago)  # +3: toast_tambien_int ×3 locales — agendar y priorizar sumaban a Intereses en silencio (16 ago)  # +3: plan_hasta ×3 locales — la fila mostraba dos horas sin decir cuál era cuál (16 ago)  # +3 netas: la ley del verbo — plan_agendar/plan_sacar/misc_sacar ×3 locales, menos misc_anadir y plan_incluir que quedaron sin dueño (16 ago)  # +15: la cuenta del veredicto (cuenta_*) + conflict_ciudad_plan + splash_hint_pick + toasts del programa ×2 locales (15 ago)  # +3: badge_premium ×3 locales — TIFF marca 61 funciones de gala (13 ago)  # +3: notice_link (aviso con comunicado) ×3 locales (11 ago)  # +9: estado APLAZADO ×3 locales (label/dates/link) (10 ago)  # +12: sheet de ciudad + badge CON BOLETA ×3 locales (6 ago)
-        'src/controller/sheets-controller.js': 1661,  # +35: el aviso de la ficha nombra el vínculo y solo dice el número cuando TODAS sus funciones visibles coinciden (_ancladaN / _cortoSharedN) (16 ago)  # +1: el encabezado del Diario usa la misma unidad que el chip (16 ago)  # +1: el aviso de oportunidad respeta el filtro de ciudad (16 ago)  # +14: el título del sheet de conflicto ES la cuenta cuando el conflicto es por margen (15 ago)  # +19: el bloque de sesiones se dibuja como GRUPO (corchete + eslabón) y su control pasa a ser la misma píldora inline que una función suelta (9 ago)  # +7: un taller empezado no se ofrece (bug cazado con FICMA) (8 ago)  # +23: control de BLOQUE para is_recurring (8 ago)  # +12: registration_url — enlace de inscripción por función, mismo patrón que ticket_url (8 ago)  # +14: la ficha hereda el contexto de ciudad — filtra funciones, la nombra una vez y avisa lo que quedó fuera (7 ago)  # +7: el aviso parcial nombra la CIUDAD cuando la obra recorre varias (FICDEH, 43 obras) (7 ago)  # +4: precio en AVISOS sigue a ticketBadgeTarget (6 ago)  # +39: la ficha de corto hereda la función de su(s) programa(s) — _screeningRows (dueño único, antes inline en openPelSheet), _findParentPrograms, _cortoScreeningPairs y _noticeRows y _avisosBand (banda AVISOS: dueño único de lo que MATIZA la función, con la evidencia de vocabulario) (30 jul 2026)
+        'src/i18n/i18n.js': 1583,  # +3: av_recalcular en es/en/pt — 18 ago
+        'src/controller/sheets-controller.js': 1682,  # +4: el nombre completo del festival en la tapa, vía festivalTagline (18 ago)
         'src/controller/handlers.js': 1105,  # +2: el límite de prioridades mide las vivas (prioLiveCount) (17 ago)  # +26: includeAnyway — agendar la que solo choca por el Q&A, marcada como decisión deliberada (17 ago)  # +12: _vueltaA — el toast nombra la sección REAL donde reaparece (la prioridad sobrevive al desmarcar) (16 ago)  # +6: los dos toasts dicen «también en Intereses», solo cuando de verdad sumaron (16 ago)  # +18: el squeeze y «+ Incluir» usan el dueño del predicado (el plan volvía a cruzar ciudades al GUARDAR) (16 ago)  # +8: el toast del programa dice cuántas obras y por qué (15 ago)  # +45: taller multi-día — addRecurringBlock/removeRecurringBlock (bloque entero en un solo commitPlan) (8 ago)  # +15: acciones del sheet de ciudad (7 ago)  # +20: anclaje de función en toggleWL, simétrico al quitar (29 jul)
     }
     _over = []
@@ -4238,6 +4413,86 @@ except Exception as _e:
 # Este guardián vigila que la excepción no vuelva a ser la norma: los dos
 # publicadores por-festival que quedan son deuda DECLARADA y la lista solo puede
 # encoger. Un festival nuevo con publicador propio es una regla que se escapó.
+
+# ── [boleteria-muda] un festival entero sin una palabra sobre cómo se entra ──
+# EL HUECO QUE TAPA. Los guardianes de boletería que ya teníamos vigilan la
+# COHERENCIA de lo emitido: que el badge lo decida ticketBadgeTarget(), que
+# `ticketing_model` use el vocabulario real, que `ticketUrl` no se escriba en
+# camelCase. Ninguno vigilaba la AUSENCIA. Un festival puede salir a producción
+# sin una sola función que diga cómo se entra, y todo queda verde.
+#
+# Pasó con CineAutopsia el 17 ago 2026: la agenda de la Cinemateca publicaba el
+# enlace de TuBoleta de los 6 programas de pago y decía «Entrada libre» en la
+# clausura. Mi ensamblador no miró el campo y encima escribió `is_free: False`
+# en los 7 —también en el libre—. El dato estaba en la fuente, en la misma
+# página de la que saqué todo lo demás. Lo cazó Juan preguntando, igual que los
+# 638 enlaces de TIFF y las 415 banderas de FICDEH.
+#
+# LA REGLA. Un festival vigente cuyas funciones NO dicen NADA —ni `ticket_url`,
+# ni `is_free`, ni `registration_url`— está mudo, y el silencio no es un dato:
+# es una omisión. Gratis se DECLARA (`is_free: true`), no se deja en blanco.
+# Solo aplica a festivales vigentes: los archivados quedaron como quedaron y
+# reescribir su pasado no le sirve a nadie.
+# ── [campo-huerfano] un campo que nadie lee no es un dato: es peso muerto ────
+# EL HUECO QUE TAPA. `[campo-contrato]` caza el campo mal ESCRITO (`ticketUrl`
+# contra `ticket_url`): el dato quiere llegar a la app y se pierde por el
+# nombre. Éste caza el campo que no tiene a dónde llegar — nadie lo lee, y
+# nunca lo leyó.
+#
+# El 17 ago 2026 había NUEVE. Entre ellos 36 `trailer` que alguien buscó uno
+# por uno, 23 `tematica` y 16 `qa_detail` que además duplicaba —peor y en un
+# solo idioma— lo que `qa_type` ya pintaba en tres. Se emitían, se validaban,
+# se versionaban, y no se veían en ninguna pantalla.
+#
+# Es el espejo exacto de `[boleteria-muda]`: allá el dato estaba en la fuente y
+# no lo emitimos; aquí lo emitimos y nadie lo pinta. Las dos formas de que el
+# trabajo se pierda entre la fuente y el ojo.
+#
+# LA REGLA. Todo campo de función que `src/` no mencione tiene que estar en una
+# de las dos listas de abajo, con su dueño escrito. Antes de añadir un campo, la
+# pregunta es QUIÉN LO VA A LEER; si la respuesta es «alguien algún día», no se
+# emite.
+# ── [contrato-vivo] el canon manda, y la doc se genera de él ────────────────
+# `pipeline/contrato.json` es el canon EJECUTABLE de una función. Este guardián
+# vigila las tres formas de que deje de serlo:
+#
+#   1. La doc se escribe a mano y diverge. Pasó: SCHEMA.md documentaba 24 campos
+#      de 60 y juraba que `duration` era un número. Ahora se GENERA del contrato
+#      y aquí se comprueba que esté regenerada.
+#   2. Un campo aparece en los datos y NO está en el contrato. Sin esto, el
+#      contrato envejece igual que envejeció la doc: callando.
+#   3. Una excepción con fecha se vence y nadie la mira. Una excepción sin fecha
+#      se vuelve permanente sola; la de aquí se vence sola, pero alguien tiene
+#      que enterarse el día que pasa.
+# ── [lib-unica] una función, un dueño ───────────────────────────────────────
+# `pipeline/lib.py` existe para que la lógica común se escriba UNA vez. El 17
+# ago 2026 se midió cuánto de eso era verdad: 7 de sus 17 funciones tenían
+# copias sueltas, `norm()` estaba reescrita en SEIS scripts y solo 5 de 28
+# scripts importaban lib.
+#
+# Y al comparar comportamiento con entradas reales apareció algo peor que un
+# duplicado: **el mismo nombre significaba cosas distintas**. `norm()` devuelve
+# un string en lib, un `set` en ficma-repesca y una `list` en ficma-tmdb;
+# `slug()` quita acentos en lib y los conserva en ficma («rebelion» vs
+# «rebelión»); `hora24()` devuelve la hora en lib y «» en ficma-parse cuando ya
+# venía en 24h. Leer un script y suponer la semántica del otro era un bug
+# esperando fecha.
+#
+# LA REGLA, en dos ramas: si la copia hace LO MISMO, se borra y se importa de
+# lib. Si hace otra cosa, se RENOMBRA para que lo diga. Lo que no se permite es
+# que dos cosas distintas compartan nombre.
+# ── [pipeline-generico] el camino nuevo es UNO, no uno por festival ─────────
+# Cada festival escribía su propio ensamblador y su propio publicador, y ahí es
+# donde se perdían las cosas: los 6 enlaces de TuBoleta de CineAutopsia, las 415
+# banderas de FICDEH, el `is_free:false` a mano en una función que era libre. No
+# eran doce errores distintos — era el mismo error doce veces, porque las reglas
+# vivían en la cabeza de quien escribía el ensamblador de turno.
+#
+# Desde el 17 ago 2026 hay UN ensamblador (pipeline/ensamblar.py) y UN publicador
+# (pipeline/publicar.py). Lo propio del festival cabe en su `<id>.plan.json`.
+# Este guardián vigila que la excepción no vuelva a ser la norma: los dos
+# publicadores por-festival que quedan son deuda DECLARADA y la lista solo puede
+# encoger. Un festival nuevo con publicador propio es una regla que se escapó.
 # ── [arquetipo-existe] un arquetipo inventado se pinta gris y nadie avisa ────
 # `[seccion-sin-arquetipo]` (validate-festivals) comprueba que la sección ESTÉ
 # en SECTION_ARCHETYPES. Nadie comprobaba que el arquetipo asignado sea uno de
@@ -4356,11 +4611,51 @@ except Exception as _e:
     warn(check, f'no se pudo verificar arquetipo-existe: {_e}')
 
 
+
+# ── [cosecha-tmdb] tener la ficha y no traerse la sinopsis ──────────────────
+# Los guardianes de este repo miraban la FORMA del dato (tipo, enum, campo
+# huérfano) y ninguno preguntaba lo obvio: si fuimos hasta TMDB y anotamos el
+# `tmdb_id`, ¿por qué volvimos con las manos vacías? En CineAutopsia 32 obras
+# tenían ficha y ninguna sinopsis: la consulta pedía `es-CO` (TMDB devuelve
+# vacío en vez de caer a `es-ES`) y el ensamblador tiraba el campo. Dos capas
+# verdes, la pantalla sin un solo texto. Este guardián mira la COSECHA.
+check = 'cosecha-tmdb'
+try:
+    import glob as _g, json as _j, os as _os
+    # Festivales ya publicados cuya deuda es histórica: solo puede ENCOGER.
+    _DEUDA_SIN = {'ficci65': 0, 'aff2026': 0}
+    _malos = []
+    for _f in sorted(_g.glob('festivals/*.json')):
+        _fid = _os.path.basename(_f)[:-5]
+        if _fid.endswith('-build') or '/staging/' in _f:
+            continue
+        try:
+            _d = _j.load(open(_f, encoding='utf-8'))
+        except Exception:
+            continue
+        _fichas = []
+        for _x in _d.get('films') or []:
+            _fichas.append(_x)
+            _fichas += _x.get('film_list') or []
+        _huecos = [_x.get('title', '?') for _x in _fichas
+                   if _x.get('tmdb_id') and not _x.get('synopsis')]
+        if _huecos:
+            _malos.append((_fid, _huecos))
+    if _malos:
+        fail(check, 'obra con ficha TMDB y sin sinopsis — el dato estaba en la '
+                    'fuente y no lo cosechamos: ' +
+                    '; '.join(f'{_i} ({len(_h)}: {", ".join(_h[:3])})'
+                              for _i, _h in _malos))
+    else:
+        ok(check, 'toda ficha con tmdb_id trae su sinopsis')
+except Exception as _e:
+    warn(check, f'no se pudo verificar cosecha-tmdb: {_e}')
+
 check = 'pipeline-generico'
 try:
     import glob as _g5, os as _os5
-    # CineAutopsia salió de esta lista el 17 ago 2026: se montó entero con el
-    # camino genérico y su publicador propio se borró. La lista solo encoge.
+    # CineAutopsia salió de esta lista: se montó entero con el camino genérico
+    # y su publicador propio se borró. La lista solo encoge.
     _HEREDADOS = {'ficdeh-2026-publicar.py'}   # pre-genérico; su build está atrasado
     _propios = {_os5.path.basename(_p) for _p in _g5.glob('pipeline/*-publicar.py')}
     _nuevos = sorted(_propios - _HEREDADOS)
@@ -4494,46 +4789,6 @@ try:
         ok(check, f'ningún campo huérfano nuevo (deuda declarada: {len(_viva)})')
 except Exception as _e:
     warn(check, f'no se pudo verificar campo-huerfano: {_e}')
-
-
-# ── [cosecha-tmdb] tener la ficha y no traerse la sinopsis ──────────────────
-# Los guardianes de este repo miraban la FORMA del dato (tipo, enum, campo
-# huérfano) y ninguno preguntaba lo obvio: si fuimos hasta TMDB y anotamos el
-# `tmdb_id`, ¿por qué volvimos con las manos vacías? En CineAutopsia 32 obras
-# tenían ficha y ninguna sinopsis: la consulta pedía `es-CO` (TMDB devuelve
-# vacío en vez de caer a `es-ES`) y el ensamblador tiraba el campo. Dos capas
-# verdes, la pantalla sin un solo texto. Este guardián mira la COSECHA.
-check = 'cosecha-tmdb'
-try:
-    import glob as _g, json as _j, os as _os
-    # Festivales ya publicados cuya deuda es histórica: solo puede ENCOGER.
-    _DEUDA_SIN = {'ficci65': 0, 'aff2026': 0}
-    _malos = []
-    for _f in sorted(_g.glob('festivals/*.json')):
-        _fid = _os.path.basename(_f)[:-5]
-        if _fid.endswith('-build') or '/staging/' in _f:
-            continue
-        try:
-            _d = _j.load(open(_f, encoding='utf-8'))
-        except Exception:
-            continue
-        _fichas = []
-        for _x in _d.get('films') or []:
-            _fichas.append(_x)
-            _fichas += _x.get('film_list') or []
-        _huecos = [_x.get('title', '?') for _x in _fichas
-                   if _x.get('tmdb_id') and not _x.get('synopsis')]
-        if _huecos:
-            _malos.append((_fid, _huecos))
-    if _malos:
-        fail(check, 'obra con ficha TMDB y sin sinopsis — el dato estaba en la '
-                    'fuente y no lo cosechamos: ' +
-                    '; '.join(f'{_i} ({len(_h)}: {", ".join(_h[:3])})'
-                              for _i, _h in _malos))
-    else:
-        ok(check, 'toda ficha con tmdb_id trae su sinopsis')
-except Exception as _e:
-    warn(check, f'no se pudo verificar cosecha-tmdb: {_e}')
 
 
 check = 'boleteria-muda'
