@@ -151,7 +151,12 @@ def ensamblar(fid, escribir=True):
             'poster': f.get('poster') or None,
             # El póster que publica el festival es EDITORIAL: es la pieza del
             # programa, no el afiche de una obra (docs/POSTERS.md §2).
-            'posterSource': (cfg.get('posterSource_fuente', 'editorial')
+            # Si la FUENTE declara de dónde salió el póster, manda ella. El
+            # default del plan es solo para cuando no lo dice: forzarlo tapaba
+            # los afiches OFICIALES de los programas de CineAutopsia, que
+            # quedaban marcados como still 16:9 y la vista los recortaba.
+            'posterSource': (f.get('posterSource')
+                             or cfg.get('posterSource_fuente', 'editorial')
                              if f.get('poster') else None),
             '_src': ({'url': f['_src'], 'fuente': crudo['_provenance'].get('fuente', '')}
                      if isinstance(f.get('_src'), str) and f['_src'].startswith('http')
