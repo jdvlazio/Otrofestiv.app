@@ -195,7 +195,7 @@ BANDERAS = {
     'uruguay': '🇺🇾', 'paraguay': '🇵🇾', 'cuba': '🇨🇺', 'espana': '🇪🇸', 'francia': '🇫🇷',
     'italia': '🇮🇹', 'alemania': '🇩🇪', 'reino unido': '🇬🇧', 'estados unidos': '🇺🇸',
     'canada': '🇨🇦', 'japon': '🇯🇵', 'china': '🇨🇳', 'iran': '🇮🇷', 'india': '🇮🇳',
-    'rusia': '🇷🇺', 'polonia': '🇵🇱', 'dinamarca': '🇩🇰', 'suecia': '🇸🇪', 'noruega': '🇳🇴',
+    'rusia': '🇷🇺', 'federacion rusa': '🇷🇺',  # así lo escribe CineAutopsia 'polonia': '🇵🇱', 'dinamarca': '🇩🇰', 'suecia': '🇸🇪', 'noruega': '🇳🇴',
     'irlanda': '🇮🇪', 'belgica': '🇧🇪', 'paises bajos': '🇳🇱', 'portugal': '🇵🇹',
     'suiza': '🇨🇭', 'austria': '🇦🇹', 'grecia': '🇬🇷', 'turquia': '🇹🇷', 'kenia': '🇰🇪',
     'filipinas': '🇵🇭', 'macedonia del norte': '🇲🇰', 'nueva zelanda': '🇳🇿',

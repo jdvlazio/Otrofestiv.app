@@ -1,0 +1,123 @@
+{
+ "_nota": "CineAutopsia 2026 — montado ENTERO con el pipeline genérico. Este archivo es lo ÚNICO propio del festival: identidad, tabla de sedes y mapa de secciones. El resto lo pone ensamblar.py igual que a todos. La fuente MANDANTE es el PDF oficial del festival; la agenda de la Cinemateca solo completa lo que el PDF no trae (enlace de compra, póster y sinopsis de sus 7 programas).",
+ "pasos": [
+  {
+   "cmd": "python3 pipeline/cineautopsia-2026-cinemateca.py",
+   "que": "agenda de la Cinemateca → sidecar de la SEDE (boletería, póster, sinopsis)"
+  },
+  {
+   "cmd": "pdftoppm -r 110 -png fuentes/cineautopsia-2026/programacion-oficial-2026.pdf pg && swiftc -O -o /tmp/ocr pipeline/ficma-2026-ocr.swift && /tmp/ocr pg-*.png > festivals/staging/cineautopsia-2026-ocr.json",
+   "que": "el PDF no tiene capa de texto: se rasteriza y se lee con Vision"
+  },
+  {
+   "cmd": "python3 pipeline/cineautopsia-2026-pdf.py",
+   "que": "OCR → crudo (13 funciones, 67 obras) + cruce con la sede"
+  },
+  {
+   "cmd": "TMDB_API_KEY=… python3 pipeline/cineautopsia-2026-tmdb.py",
+   "que": "enriquecimiento verificado por director"
+  },
+  {
+   "cmd": "python3 pipeline/ensamblar.py cineautopsia-2026",
+   "que": "crudo + plan → build"
+  },
+  {
+   "cmd": "python3 pipeline/cineautopsia-2026-stills.py --aplicar",
+   "que": "un still 16:9 por obra desde el PDF, solo donde no hay póster mejor"
+  },
+  {
+   "cmd": "python3 pipeline/publicar.py cineautopsia-2026",
+   "que": "build → festivals/ (valida el contrato al escribir)"
+  }
+ ],
+ "festival": {
+  "crudo": "festivals/staging/cineautopsia-2026-crudo.json",
+  "enriquecido": "festivals/staging/cineautopsia-2026-tmdb.json",
+  "sedes": {
+   "Sala 2, Cinemateca de Bogotá (Cra. 3 # 19-10)": [
+    "Cinemateca de Bogotá - Bogotá",
+    "Sala 2"
+   ],
+   "Sala Capital, Cinemateca de Bogotá (Cra. 3 # 19-10)": [
+    "Cinemateca de Bogotá - Bogotá",
+    "Sala Capital"
+   ],
+   "Museo Interactivo Maloka, Bogotá, Cra. 68d # 24A - 51.": [
+    "Museo Interactivo Maloka - Bogotá",
+    ""
+   ],
+   "Auditorio Samuel Bedoya. Universidad Francisco José de Caldas (Distrital). Facultad de Arte ASAB. Cra 13#14-69": [
+    "Universidad Distrital ASAB - Bogotá",
+    "Auditorio Samuel Bedoya"
+   ],
+   "Auditorio Samuel Bedoya. Universidad Francisco José de Caldas (Distrital). Facultad de Arte ASAB. Cra 13 #14-69": [
+    "Universidad Distrital ASAB - Bogotá",
+    "Auditorio Samuel Bedoya"
+   ],
+   "Cinemateca Sala Alterna, Universidad Nacional de Colombia, Auditorio 422. Edficio 303C. NEA.": [
+    "Universidad Nacional - Bogotá",
+    "Auditorio 422"
+   ],
+   "Cartel Urbano, San Felipe, Bogotá": [
+    "Cartel Urbano (San Felipe) - Bogotá",
+    ""
+   ],
+   "Fundación Gilberto Alzate Avendaño FUGA (Cl. 10 #3-16, Bogotá)": [
+    "Fundación Gilberto Álzate Avendaño - Bogotá",
+    ""
+   ]
+  },
+  "secciones": {
+   "Destacados": {
+    "emoji": "🔬",
+    "en": "Featured",
+    "archetype": "Competencia"
+   },
+   "Panorama": {
+    "emoji": "🌀",
+    "en": "Panorama",
+    "archetype": "Muestra / País"
+   },
+   "Clausura": {
+    "emoji": "🎬",
+    "en": "Closing",
+    "archetype": "Clausura"
+   },
+   "Apertura": {
+    "emoji": "🛰️",
+    "en": "Opening · Expanded FullDome",
+    "archetype": "Apertura"
+   },
+   "Encuentro": {
+    "emoji": "🤝",
+    "en": "Gathering",
+    "archetype": "Industria / Formación"
+   }
+  },
+  "name": "CineAutopsia",
+  "fullName": "CineAutopsia — Festival de Cine Experimental de Bogotá",
+  "city": "Bogotá",
+  "country": "CO",
+  "dates": "21–29 AGO",
+  "dates_en": "AUG 21–29",
+  "year": 2026,
+  "timezoneOffset": "-05:00",
+  "storageKey": "cineautopsia2026_",
+  "festivalStartStr": "2026-08-21T00:00:00",
+  "festivalEndStr": "2026-08-29T23:59:00",
+  "prioLimit": 4,
+  "sharedSlotIsOneScreening": false,
+  "ticketing_model": "mixed",
+  "mes_es": "agosto",
+  "seccion_por_titulo": {
+   "apertura": "Apertura",
+   "fulldome": "Apertura",
+   "encuentro": "Encuentro",
+   "clausura": "Clausura",
+   "premiacion": "Clausura",
+   "destacados": "Destacados",
+   "panorama": "Panorama"
+  },
+  "geo": "festivals/staging/cineautopsia-2026-geo.json"
+ }
+}

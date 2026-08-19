@@ -233,7 +233,16 @@ function validateFestival(fname, data) {
     if (typeof data.ticket_url !== 'string' || !data.ticket_url.startsWith('https://'))
       errors.push(`ticket_url debe empezar con https:// (valor: ${JSON.stringify(data.ticket_url)})`);
   } else if (data.ticketing_model != null) {
-    errors.push(`ticketing_model presente sin ticket_url — eliminar ticketing_model o agregar ticket_url`);
+    // La boletería es POR FUNCIÓN desde FICDEH: un festival puede tener
+    // `ticketing_model` en la raíz y el enlace en cada función, que es el caso
+    // normal cuando cada sesión se vende aparte (CineAutopsia: 6 enlaces de
+    // TuBoleta distintos y una clausura libre). Exigir un ticket_url de raíz
+    // obligaba a inventar «el enlace del festival», que no existe.
+    const _conEnlace = (data.films || []).filter(f => f.ticket_url).length;
+    const _libres = (data.films || []).filter(f => f.is_free === true).length;
+    if (!_conEnlace && !_libres)
+      errors.push(`ticketing_model presente y NINGUNA función dice cómo se entra `
+        + `(ni ticket_url ni is_free) — eliminar ticketing_model o llenar la casilla`);
   }
 
   // dayKeys must match festivalDates (solo si el JSON define config)

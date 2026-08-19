@@ -1,0 +1,472 @@
+{
+ "_provenance": {
+  "fuente": "cinematecadebogota.gov.co/node/peliculas/<nodo>?sede=11",
+  "capturado": "2026-08-17",
+  "metodo": "fichas server-rendered de la agenda de la Cinemateca",
+  "nota": "la sede publica obras, dia, hora y sala que el festival no publica"
+ },
+ "_programas": 7,
+ "_obras": 45,
+ "programas": [
+  {
+   "nodo": "2823",
+   "_src": "https://cinematecadebogota.gov.co/node/peliculas/2823",
+   "titulo": "Mediometrajes destacados de Latinoamérica",
+   "festival": "Festival de Cine Experimental de Bogotá - Cineautopsia",
+   "anio": 2025,
+   "duracion_min": 96,
+   "clasificacion": "Apta para mayores de 18 años",
+   "idioma": "Español",
+   "subtitulos": "N/A",
+   "formato": "2D",
+   "obras": [
+    {
+     "titulo": "Primera carta",
+     "director": "Nicolás Andrés Corral Sánchez",
+     "anio": 2024,
+     "pais": "Colombia",
+     "duracion_min": 27
+    },
+    {
+     "titulo": "Miren Felder",
+     "director": "Malen Otaño",
+     "anio": 2024,
+     "pais": "Argentina",
+     "duracion_min": 19
+    },
+    {
+     "titulo": "Evil Evol Love",
+     "director": "Stella Bastart",
+     "anio": 2025,
+     "pais": "Colombia",
+     "duracion_min": 20
+    },
+    {
+     "titulo": "De tragedia haré gloria",
+     "director": "Giselle Hauscarriaga",
+     "anio": 2025,
+     "pais": "México",
+     "duracion_min": 30
+    }
+   ],
+   "sede": "Cinemateca de Bogotá Centro",
+   "dia": "2026-08-22",
+   "hora": "16:30",
+   "sinopsis": "Esta sesión reúne obras de formato medio que desafían las narrativas convencionales para explorar la memoria, el territorio y la identidad desde el Cono Sur hasta el Caribe. A través de un viaje que transita entre lo onírico, los rituales colectivos frente a la violencia y el cine sin cámara tallado directamente en la película, estas piezas tejen un panorama donde el lenguaje audiovisual se convierte en un acto físico de persistencia y resistencia política.",
+   "poster": "https://cinematecadebogota.gov.co/sites/default/files/2026-07/MEDIOMETRAJES.png",
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230522900349",
+   "acceso": "Boletería en taquilla"
+  },
+  {
+   "nodo": "2841",
+   "_src": "https://cinematecadebogota.gov.co/node/peliculas/2841",
+   "titulo": "Cortometrajes destacados Latinoamérica",
+   "festival": "Festival de Cine Experimental de Bogotá - Cineautopsia",
+   "anio": 2025,
+   "duracion_min": 88,
+   "clasificacion": "Apta para mayores de 18 años",
+   "idioma": "Varios",
+   "subtitulos": "Español",
+   "formato": "2D",
+   "obras": [
+    {
+     "titulo": "When the second sun arrives / A comet in your eyes",
+     "director": "Janaina Wagner",
+     "anio": 2026,
+     "pais": "Brasil",
+     "duracion_min": 14
+    },
+    {
+     "titulo": "Toda la vida para siempre",
+     "director": "Miguel Sebastian Molina Ruiz",
+     "anio": 2025,
+     "pais": "México",
+     "duracion_min": 19
+    },
+    {
+     "titulo": "Flujos rectificados",
+     "director": "Sebastian Arriagada",
+     "anio": 2025,
+     "pais": "Chile",
+     "duracion_min": 16
+    },
+    {
+     "titulo": "Agulha",
+     "director": "Luisa Maciel",
+     "anio": 2025,
+     "pais": "Brasil",
+     "duracion_min": 8
+    },
+    {
+     "titulo": "Extravío 6 a.k.a. facialidad",
+     "director": "Jean Jaubert",
+     "anio": 2025,
+     "pais": "México",
+     "duracion_min": 5
+    },
+    {
+     "titulo": "Ñuuyii",
+     "director": "Itandehui Jansen",
+     "anio": 2025,
+     "pais": "México, Reino Unido",
+     "duracion_min": 11
+    },
+    {
+     "titulo": "Si yo fuese fuego (If I Were Fire)",
+     "director": "Bruno Aroesty",
+     "anio": 2025,
+     "pais": "México",
+     "duracion_min": 15
+    }
+   ],
+   "sede": "Cinemateca de Bogotá Centro",
+   "dia": "2026-08-22",
+   "hora": "19:00",
+   "sinopsis": "Una poderosa selección de cortometrajes que confronta la inmensidad del tiempo cósmico con las cicatrices cotidianas de la historia latinoamericana. A través de videoensayos sobre imágenes astronómicas, antologías oníricas del exilio en Europa y fábulas de ciencia ficción ancestral, estos trabajos liberan a la imagen técnica de su función instrumental para indagar en la búsqueda del hogar, el desarraigo y los fantasmas que habitan nuestras carreteras.",
+   "poster": "https://cinematecadebogota.gov.co/sites/default/files/2026-07/Plantilla%20Poster%20imag%20secundaria%20%284%29.png",
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230522900351",
+   "acceso": "Boletería en taquilla"
+  },
+  {
+   "nodo": "2845",
+   "_src": "https://cinematecadebogota.gov.co/node/peliculas/2845",
+   "titulo": "Cortometrajes destacados Europa y Norteamérica",
+   "festival": "Festival de Cine Experimental de Bogotá - Cineautopsia",
+   "anio": 2025,
+   "duracion_min": 86,
+   "clasificacion": "Apta para mayores de 18 años",
+   "idioma": "Varios",
+   "subtitulos": "Español",
+   "formato": "2D",
+   "obras": [
+    {
+     "titulo": "Hurricane season",
+     "director": "Michelle Trujillo",
+     "anio": 2026,
+     "pais": "Estados Unidos",
+     "duracion_min": 6
+    },
+    {
+     "titulo": "Etorriko da (eta zure begiak izango ditu)",
+     "director": "Izibene Oñederra",
+     "anio": 2024,
+     "pais": "España",
+     "duracion_min": 12
+    },
+    {
+     "titulo": "I was there",
+     "director": "Kamila Kuc",
+     "anio": 2025,
+     "pais": "Polonia",
+     "duracion_min": 12
+    },
+    {
+     "titulo": "Noli me tangere",
+     "director": "Mahda Purmehdi",
+     "anio": 2025,
+     "pais": "Estados Unidos",
+     "duracion_min": 4
+    },
+    {
+     "titulo": "Katabasis",
+     "director": "Martin Moolhuijsen",
+     "anio": 2026,
+     "pais": "Alemania, Italia",
+     "duracion_min": 15
+    },
+    {
+     "titulo": "Fort Garry lions pool",
+     "director": "Ryan Steel",
+     "anio": 2024,
+     "pais": "Canadá",
+     "duracion_min": 6
+    },
+    {
+     "titulo": "La descrizione delle stelle fisse",
+     "director": "Fabio Scacchioli, Vincenzo Core",
+     "anio": 2025,
+     "pais": "Italia",
+     "duracion_min": 19
+    },
+    {
+     "titulo": "Tamashi",
+     "director": "Ashima Shiraishi, Jess X. Snow",
+     "anio": 2026,
+     "pais": "China, Francia, Japón, Estados Unidos",
+     "duracion_min": 12
+    }
+   ],
+   "sede": "Cinemateca de Bogotá Centro",
+   "dia": "2026-08-23",
+   "hora": "16:00",
+   "sinopsis": "Un recorrido de vanguardia por propuestas del norte global que funden la experimentación analógica con el control algorítmico. Desde películas abstractas reveladas con plantas o expuestas a bobinas de Tesla, hasta exploraciones sobre el duelo médico, los lazos familiares intergeneracionales y la crisis ambiental, esta sesión activa la vulnerabilidad y la memoria como formas de resistencia frente a lo perdido.",
+   "poster": "https://cinematecadebogota.gov.co/sites/default/files/2026-07/Plantilla%20Poster%20imag%20secundaria%20%285%29.png",
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230522900352",
+   "acceso": "Boletería en taquilla"
+  },
+  {
+   "nodo": "2846",
+   "_src": "https://cinematecadebogota.gov.co/node/peliculas/2846",
+   "titulo": "Cortometrajes panorama Europa y Norteamérica",
+   "festival": "Festival de Cine Experimental de Bogotá - Cineautopsia",
+   "anio": 2025,
+   "duracion_min": 88,
+   "clasificacion": "Apta para mayores de 18 años",
+   "idioma": "Varios",
+   "subtitulos": "Español",
+   "formato": "2D",
+   "obras": [
+    {
+     "titulo": "XYZ",
+     "director": "Alexandre Alagôa",
+     "anio": 2026,
+     "pais": "Portugal",
+     "duracion_min": 11
+    },
+    {
+     "titulo": "Ce que je vois | That which I see",
+     "director": "Maï Calon",
+     "anio": 2025,
+     "pais": "Bélgica",
+     "duracion_min": 7
+    },
+    {
+     "titulo": "Objectionable fruit",
+     "director": "Hogan Seidel, Gabby Follett",
+     "anio": 2026,
+     "pais": "Estados Unidos",
+     "duracion_min": 15
+    },
+    {
+     "titulo": "From dusk to dawn",
+     "director": "Nechama Winston",
+     "anio": 2024,
+     "pais": "Estados Unidos",
+     "duracion_min": 19
+    },
+    {
+     "titulo": "The everlasting pea",
+     "director": "Su Rynard",
+     "anio": 2024,
+     "pais": "Canadá",
+     "duracion_min": 16
+    },
+    {
+     "titulo": "Squander",
+     "director": "Jacob Swafford",
+     "anio": 2025,
+     "pais": "Estados Unidos",
+     "duracion_min": 5
+    },
+    {
+     "titulo": "Ahol a kék találkozik a pirossal",
+     "director": "Tamás Patrovits",
+     "anio": 2024,
+     "pais": "Hungría",
+     "duracion_min": 4
+    },
+    {
+     "titulo": "softer, softest",
+     "director": "Olivia Norquay",
+     "anio": 2025,
+     "pais": "Canadá",
+     "duracion_min": 5
+    },
+    {
+     "titulo": "Ocno",
+     "director": "Fabio D'Agnano",
+     "anio": 2025,
+     "pais": "Italia",
+     "duracion_min": 6
+    }
+   ],
+   "sede": "Cinemateca de Bogotá Centro",
+   "dia": "2026-08-23",
+   "hora": "19:00",
+   "sinopsis": "Esta muestra ofrece una inmersión sensorial y reflexiva en torno al deterioro mental, la identidad trans a través del ginkgo biloba y la futilidad del esfuerzo humano inspirada en mitos antiguos. Combinando la animación stop-motion en risografía y película de 35 mm con exploraciones geométricas sobre la cuarta dimensión y la conciencia vegetal, los cortometrajes plantean preguntas fundamentales sobre los límites de nuestra propia percepción.",
+   "poster": "https://cinematecadebogota.gov.co/sites/default/files/2026-07/Plantilla%20Poster%20imag%20secundaria%20%286%29.png",
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230522900354",
+   "acceso": "Boletería en taquilla"
+  },
+  {
+   "nodo": "2848",
+   "_src": "https://cinematecadebogota.gov.co/node/peliculas/2848",
+   "titulo": "Cortometrajes panorama Colombia",
+   "festival": "Festival de Cine Experimental de Bogotá - Cineautopsia",
+   "anio": 2025,
+   "duracion_min": 80,
+   "clasificacion": "Apta para mayores de 18 años",
+   "idioma": "Español",
+   "subtitulos": "N/A",
+   "formato": "2D",
+   "obras": [
+    {
+     "titulo": "AtmoSphaira",
+     "director": "Sandra Rengifo",
+     "anio": 2024,
+     "pais": "Colombia",
+     "duracion_min": 12
+    },
+    {
+     "titulo": "Yo manifiesta",
+     "director": "Felipe Peñuela, Juan Diego Quintero",
+     "anio": 2025,
+     "pais": "Colombia",
+     "duracion_min": 6
+    },
+    {
+     "titulo": "Los años del conejo",
+     "director": "Raquel Tamayo Gutiérrez",
+     "anio": 2025,
+     "pais": "Colombia",
+     "duracion_min": 9
+    },
+    {
+     "titulo": "Somnolítico",
+     "director": "Abril Natalia Velásquez Mateus",
+     "anio": 2026,
+     "pais": "Colombia",
+     "duracion_min": 11
+    },
+    {
+     "titulo": "Lamentos de un balcón",
+     "director": "Hans Chispas",
+     "anio": 2026,
+     "pais": "Colombia",
+     "duracion_min": 4
+    },
+    {
+     "titulo": "Ensoñaciones cósmicas de la materia",
+     "director": "Joaquin Pinero Gomez",
+     "anio": 2026,
+     "pais": "Colombia",
+     "duracion_min": 15
+    },
+    {
+     "titulo": "Pierna pernil",
+     "director": "Santiago Aguilar",
+     "anio": 2026,
+     "pais": "Colombia",
+     "duracion_min": 8
+    },
+    {
+     "titulo": "Entrelazadas (The hardest shapes)",
+     "director": "Alejandra Morales García",
+     "anio": 2024,
+     "pais": "Colombia",
+     "duracion_min": 15
+    }
+   ],
+   "sede": "Cinemateca de Bogotá Centro",
+   "dia": "2026-08-28",
+   "hora": "16:00",
+   "sinopsis": "Un viaje poético y trémulo por las múltiples realidades colombianas, donde lo cotidiano se funde con el absurdo urbano y la inmensidad de la naturaleza. Desde la nostalgia andina y amazónica hasta el caos de los autobuses de Bogotá que se transforman en visiones psicodélicas y reflexiones sobre el egoísmo de las palomas, este conjunto de cortometrajes nos invita a recorrer un paisaje de impurezas tangibles, confirmando que errar y crear es profundamente humano.",
+   "poster": "https://cinematecadebogota.gov.co/sites/default/files/2026-07/Plantilla%20Poster%20imag%20secundaria%20%287%29.png",
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230522900355",
+   "acceso": "Boletería en taquilla"
+  },
+  {
+   "nodo": "2849",
+   "_src": "https://cinematecadebogota.gov.co/node/peliculas/2849",
+   "titulo": "Cortometrajes destacados Colombia",
+   "festival": "Festival de Cine Experimental de Bogotá - Cineautopsia",
+   "anio": 2025,
+   "duracion_min": 87,
+   "clasificacion": "Apta para mayores de 18 años",
+   "idioma": "Español",
+   "subtitulos": "N/A",
+   "formato": "2D",
+   "obras": [
+    {
+     "titulo": "Chaika",
+     "director": "Ingrid Paola Bonilla Rodriguez",
+     "anio": 2025,
+     "pais": "Colombia",
+     "duracion_min": 14
+    },
+    {
+     "titulo": "Posdata para el fin del mundo",
+     "director": "John Melo",
+     "anio": 2025,
+     "pais": "Colombia",
+     "duracion_min": 17
+    },
+    {
+     "titulo": "Anoche a media noche",
+     "director": "Ricardo Muñoz Izquierdo",
+     "anio": 2026,
+     "pais": "Colombia",
+     "duracion_min": 15
+    },
+    {
+     "titulo": "Decaer",
+     "director": "Juan Camilo González",
+     "anio": 2025,
+     "pais": "Colombia",
+     "duracion_min": 7
+    },
+    {
+     "titulo": "Mal de tierra",
+     "director": "Laura Camila Caballero, Sara Idárraga",
+     "anio": 2025,
+     "pais": "Colombia",
+     "duracion_min": 10
+    },
+    {
+     "titulo": "Desbordes",
+     "director": "Vanessa Stefani Morales",
+     "anio": 2025,
+     "pais": "Colombia",
+     "duracion_min": 6
+    },
+    {
+     "titulo": "Filme Pin",
+     "director": "María Rojas Arias, Andrés Jurado",
+     "anio": 2026,
+     "pais": "Colombia, Portugal",
+     "duracion_min": 7
+    },
+    {
+     "titulo": "Pudor ante el asalto de los ojos furtivos",
+     "director": "Laura María Rodríguez",
+     "anio": 2025,
+     "pais": "Colombia",
+     "duracion_min": 8
+    },
+    {
+     "titulo": "Inmarcesbile",
+     "director": "Juan Sebastián Parra posso",
+     "anio": 2025,
+     "pais": "Colombia",
+     "duracion_min": 3
+    }
+   ],
+   "sede": "Cinemateca de Bogotá Centro",
+   "dia": "2026-08-28",
+   "hora": "19:30",
+   "sinopsis": "Una mirada visceral al territorio nacional que desmantela la historia oficial y las promesas incumplidas a través de máquinas visuales delirantes. Entre la nostalgia de un Caribe ucrónico, poemas expandidos interactivos con códigos QR y la recontextualización de archivos políticos contra el fascismo, estas obras colombianas exploran las dinámicas del deseo y el escrutinio del cuerpo femenino en el espacio público, trazando un mapa de lo que no se marchita: la resistencia y la ternura.",
+   "poster": "https://cinematecadebogota.gov.co/sites/default/files/2026-07/Plantilla%20Poster%20imag%20secundaria%20%288%29.png",
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230522900356",
+   "acceso": "Boletería en taquilla"
+  },
+  {
+   "nodo": "2850",
+   "_src": "https://cinematecadebogota.gov.co/node/peliculas/2850",
+   "titulo": "Clausura y premiación",
+   "festival": "Festival de Cine Experimental de Bogotá - Cineautopsia",
+   "anio": 2026,
+   "duracion_min": 80,
+   "clasificacion": "Apta para mayores de 18 años",
+   "idioma": "Español",
+   "subtitulos": "N/A",
+   "formato": "2D",
+   "obras": [],
+   "sede": "Cinemateca de Bogotá Centro",
+   "dia": "2026-08-29",
+   "hora": "20:00",
+   "sinopsis": "Ceremonia oficial de premiación técnica y artística de las diferentes categorías competitivas, acompañada por una sesión de preguntas y respuestas (Q&A) con el comité curatorial tras la proyección de la obra cortometraje destacada colombiana que resulte ganadora.",
+   "poster": "https://cinematecadebogota.gov.co/sites/default/files/2026-07/Plantilla%20Poster%20imag%20secundaria.jpg",
+   "acceso": "Entrada libre"
+  }
+ ]
+}
