@@ -455,17 +455,63 @@ function validateFestival(fname, data) {
     }
   }
   // ════════ CHECKS DE CORRUPCIÓN (revisión crítica Olhar — detectan dato MALO, no solo ausente) ════════
+  // DEUDA DECLARADA de duplicados (19 ago 2026), y solo puede encoger. Al bajar
+  // estos dos checks a film_list —hasta hoy solo miraban el nivel de función—
+  // salieron a la luz duplicados VIEJOS en dos festivales ya publicados. No son
+  // el error que buscamos; son deuda con nombre:
+  //   · tercertiempo-2026 — «Raíces del Juego» y «Programa de cortos: Raíces
+  //     del juego» son la MISMA sesión anotada dos veces, con dos archivos de
+  //     afiche idénticos y títulos que difieren. Comparten pieza con razón.
+  //   · tribeca-2026 — siete cortos llevan el mismo texto de relleno («Un
+  //     cortometraje en competencia en Tribeca 2026»). Es un stub que nunca se
+  //     completó, no una sinopsis robada. Se arregla cosechando sus sinopsis.
+  // Un festival nuevo NO entra acá: si duplica, se corrige antes de publicar.
+  const _DEUDA_DUP = new Set(['tercertiempo-2026', 'tribeca-2026']);
+  const dup = [];
   // [posters-duplicados] ERROR — dos films con TÍTULO DISTINTO y misma URL de poster.
   // (El mismo título repetido = misma película en formato 1-entrada-por-función, legítimo.
   //  La comparación de título es case-insensitive: difiere solo en mayúsculas = mismo film.)
+  // Recorre los DOS niveles: la función y cada obra de su film_list. Mirar solo
+  // el nivel de arriba era el punto ciego — en CineAutopsia dos CORTOS llevaban
+  // el mismo afiche y este check pasó en verde, porque los cortos viven dentro
+  // de film_list. Lo vio Juan a ojo en una hoja de contactos, no el guardián.
+  //
+  // Y compara el CONTENIDO, no solo la ruta: los dos archivos se llamaban
+  // distinto —squander.jpg y ahol-a-kek-...jpg— y eran byte a byte el mismo
+  // JPEG. Comparar la cadena decía que estaba todo bien.
   {
     const norm = t => (t || '?').trim().toLowerCase();
-    const seen = new Map();
+    const todos = [];
     for (const f of films) {
+      todos.push(f);
+      if (Array.isArray(f.film_list)) for (const o of f.film_list) if (o && typeof o === 'object') todos.push(o);
+    }
+    const crypto = require('crypto');
+    const huella = new Map();          // ruta local → hash del archivo
+    const clave = p => {
+      if (!p.startsWith('/assets/')) return p;
+      if (huella.has(p)) return huella.get(p);
+      let k = p;
+      try { k = 'sha1:' + crypto.createHash('sha1').update(fs.readFileSync('.' + p)).digest('hex'); }
+      catch (e) { /* si no abre, lo dice [poster-mirado]; acá vale la ruta */ }
+      huella.set(p, k);
+      return k;
+    };
+    // Una función de UNA sola obra comparte su afiche con ella: eso no es dato
+    // corrupto, es la misma pieza. Se exime solo el par padre↔hija directa.
+    const propio = new Set();
+    for (const f of films) {
+      const pf = (f.poster || '').trim();
+      if (!pf) continue;
+      for (const o of (f.film_list || [])) if (o && (o.poster || '').trim() === pf) propio.add(o);
+    }
+    const seen = new Map();
+    for (const f of todos) {
       const p = (f.poster || '').trim();
-      if (!p) continue;
-      if (seen.has(p) && seen.get(p).n !== norm(f.title)) errors.push(`[posters-duplicados] "${(f.title||'?').slice(0,40)}" comparte poster con "${seen.get(p).t.slice(0,40)}" (título distinto) — dato corrupto`);
-      else if (!seen.has(p)) seen.set(p, { n: norm(f.title), t: f.title || '?' });
+      if (!p || propio.has(f)) continue;
+      const k = clave(p);
+      if (seen.has(k) && seen.get(k).n !== norm(f.title)) dup.push(`[posters-duplicados] "${(f.title||'?').slice(0,40)}" comparte poster con "${seen.get(k).t.slice(0,40)}" (título distinto) — dato corrupto`);
+      else if (!seen.has(k)) seen.set(k, { n: norm(f.title), t: f.title || '?' });
     }
   }
   // ── Gates de posters (estrategia editorial, POSTERS.md §5/§8) ─────────────
@@ -503,15 +549,30 @@ function validateFestival(fname, data) {
   }
 
   // [sinopsis-duplicada] ERROR — dos films con TÍTULO DISTINTO y misma synopsis o synopsis_en.
+  // Mismo punto ciego que en [posters-duplicados]: hay que bajar a film_list.
+  // En CineAutopsia dos PARES de cortos compartían sinopsis —la web del
+  // festival publica el cuerpo de una obra bajo la ficha de otra— y este check
+  // pasó en verde las tres veces que corrió.
   for (const fld of ['synopsis', 'synopsis_en']) {
     const norm = t => (t || '?').trim().toLowerCase();
-    const seen = new Map();
+    const todos = [];
     for (const f of films) {
+      todos.push(f);
+      if (Array.isArray(f.film_list)) for (const o of f.film_list) if (o && typeof o === 'object') todos.push(o);
+    }
+    const seen = new Map();
+    for (const f of todos) {
       const s = (f[fld] || '').trim();
       if (!s) continue;
-      if (seen.has(s) && seen.get(s).n !== norm(f.title)) errors.push(`[sinopsis-duplicada] "${(f.title||'?').slice(0,40)}" comparte ${fld} con "${seen.get(s).t.slice(0,40)}" (título distinto) — cross-contaminación`);
+      if (seen.has(s) && seen.get(s).n !== norm(f.title)) dup.push(`[sinopsis-duplicada] "${(f.title||'?').slice(0,40)}" comparte ${fld} con "${seen.get(s).t.slice(0,40)}" (título distinto) — cross-contaminación`);
       else if (!seen.has(s)) seen.set(s, { n: norm(f.title), t: f.title || '?' });
     }
+  }
+  // Los duplicados son ERROR salvo en los festivales con deuda declarada, donde
+  // quedan como WARNING para que sigan a la vista sin bloquear a los demás.
+  if (dup.length) {
+    if (_DEUDA_DUP.has(String(fname).replace(/\.json$/, ''))) warnings.push(...dup.map(d => d + ' [deuda declarada]'));
+    else errors.push(...dup);
   }
   // [year-sospechoso] WARNING — year > festival_year+1 y el film no es clásico/retro declarado
   {
