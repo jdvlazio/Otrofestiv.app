@@ -3,7 +3,8 @@
   "fuente": "PDF oficial de programación · bogotaexperimental.com/bogotaexp2026 (descargado 18 ago 2026) · OCR Vision sobre 25 páginas sin capa de texto",
   "capturado": "2026-08-18",
   "erratas": [
-   "el PDF dice «JUEVES.28» y el jueves más cercano es 27 — se usa 2026-08-27"
+   "el PDF dice «JUEVES.28» y el jueves más cercano es 27 — se usa 2026-08-27",
+   "la web del festival publica en /squander/ la ficha completa de «Where Blue Meets Red» — director, país, duración, sinopsis y póster. El póster de Squander se tomó de la mediateca (Squander-poster.webp); su sinopsis se dejó como estaba."
   ],
   "discrepancias": [
    "«Cortometrajes Destacados Colombia» 2026-08-28: el PDF dice 19:00 y la Cinemateca 19:30 — se usa la de la sede"
@@ -510,7 +511,8 @@
      "lbSlug": "squander",
      "sinopsis": "Hecha enteramente de fotografías fijas, una película sobre el aislamiento y el deterioro mental de una persona.",
      "synopsis_en": "Comprised of all still photographs, a film exploring a persons isolation and mental deterioration.",
-     "_poster_src": "https://bogotaexperimental.com/bogotaexp2026/wp-content/uploads/2026/08/WhenBlueMeetsRed-poster.jpg"
+     "_poster_src": "https://bogotaexperimental.com/bogotaexp2026/wp-content/uploads/2026/08/Squander-poster.webp",
+     "_poster_nota": "la ficha web del festival para «Squander» publica por error el contenido de «Where Blue Meets Red» (Tamás Patrovits); el póster se toma directo de la mediateca"
     },
     {
      "titulo": "Ahol a kék találkozik a pirossal",
