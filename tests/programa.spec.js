@@ -2235,3 +2235,36 @@ test('T98 — ningún texto del póster cruza la línea de margen de la retícul
     expect(c.abajo, `«${c.sec}» no cruza el margen inferior`).toBeLessThanOrEqual(c.ABAJO + 0.1);
   }
 });
+
+test('T99 — el texto del póster no se monta sobre la imagen, y la sección tiene color', async ({ page }) => {
+  test.setTimeout(90000);
+  await enterFestival(page, 'cineautopsia2026', '2026-08-25T10:00:00-05:00');
+  await page.waitForTimeout(1000);
+  await page.evaluate(() => { try { setProgramaView('grid'); } catch (e) {} });
+  await page.waitForTimeout(800);
+  const r = await page.evaluate(() => {
+    return [...document.querySelectorAll('.poster-ed')].filter(e => e.offsetParent).map(ed => {
+      const R = ed.getBoundingClientRect();
+      const img = ed.querySelector('.ed-img')?.getBoundingClientRect();
+      const ttl = ed.querySelector('.ed-title')?.getBoundingClientRect();
+      const txt = ed.querySelector('.ed-hdr svg text');
+      return {
+        titulo: (ed.querySelector('.ed-title')?.textContent || '').slice(0, 24),
+        // «montado sobre la imagen» = el título empieza ANTES de que el campo termine
+        invade: !!(img && ttl && ttl.top < img.bottom - 0.5),
+        // el pie tampoco puede desbordar la tarjeta por abajo
+        seSale: !!(ttl && ttl.bottom > R.bottom + 0.5),
+        fill: txt ? txt.getAttribute('fill') : null,
+      };
+    });
+  });
+  expect(r.length, 'hay tarjetas con marco editorial (si no, el test no prueba nada)').toBeGreaterThan(0);
+  for (const c of r) {
+    expect(c.invade, `«${c.titulo}» no se monta sobre la imagen`).toBe(false);
+    expect(c.seSale, `«${c.titulo}» no se sale de la tarjeta`).toBe(false);
+    if (c.fill !== null) {
+      // fill="undefined" pintaba la sección de NEGRO sobre fondo oscuro: invisible
+      expect(c.fill, 'la sección se pinta con un color de verdad').toMatch(/^(#[0-9A-Fa-f]{3,8}|var\(--[a-z-]+\))$/);
+    }
+  }
+});

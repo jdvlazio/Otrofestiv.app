@@ -205,7 +205,7 @@ export function posterParts(f,{header=false,body='',loading}={}){
   const m=posterModel(f);
   if(m.kind!=='editorial') return m;                       // {kind,src,...} decidido
   return {...m, ed:true,
-    inner:editorialFrame({header:header?m.header:undefined, body, src:m.src, title:m.title, loading})};
+    inner:editorialFrame({header:header?m.header:undefined, body, src:m.src, title:m.title, loading, accent:m.accent})};
 }
 
 export function _getItemPoster(item){
@@ -247,6 +247,11 @@ export function _isEditorialPoster(f){
 // sin regresión, y robusto donde el piso de font-size rompía el HTML.
 export function _edHdrSVG(label, accent){
   if(!String(label||'').trim()) return '';
+  // Sin accent el <text> salía con fill="undefined" y el navegador lo pintaba
+  // NEGRO: la sección quedaba invisible sobre el fondo oscuro (lo vio Juan en la
+  // tarjeta de ENCUENTRO). El filete no lo delataba porque toma su color del CSS
+  // (--ed-accent), no de este argumento. Ahora el color siempre existe.
+  const _fill=String(accent||'').trim()||'var(--amber)';
   // Mismo motor que la forma A (_fitLines), vw=100. Con imagen la sección baja a
   // 2 líneas: la imagen carga el peso (§6.0). Caja = 8u menos margen de 0,75u.
   const U=100/8, M=0.75*U, CW=100-2*M;
@@ -255,7 +260,7 @@ export function _edHdrSVG(label, accent){
   const round=n=>+n.toFixed(2);
   const VH=+(fit.lines.length*fit.lh+fit.fs*0.3).toFixed(2);
   const text=fit.lines.map((l,i)=>
-    `<text x="${round(M)}" y="${round(fit.fs+i*fit.lh)}" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="${round(fit.fs)}" font-weight="800" letter-spacing="${round(fit.fs*0.02)}" fill="${accent}">${escXML(l)}</text>`
+    `<text x="${round(M)}" y="${round(fit.fs+i*fit.lh)}" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="${round(fit.fs)}" font-weight="800" letter-spacing="${round(fit.fs*0.02)}" fill="${_fill}">${escXML(l)}</text>`
   ).join('');
   return `<svg class="ed-hdr-svg" viewBox="0 0 100 ${VH}" preserveAspectRatio="xMinYMin meet">${text}</svg>`;
 }

@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202608190948">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202608190948">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202608191031">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202608191031">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -1086,7 +1086,13 @@ background:radial-gradient(circle at 100% 100%,rgba(245,158,11,.16),rgba(245,158
 filter:blur(10px) saturate(1.15);opacity:.55;
 -webkit-mask-image:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.35) 70%,transparent 100%);
 mask-image:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.35) 70%,transparent 100%)}
-.poster-ed .ed-foot{position:absolute;left:0;right:0;bottom:6.25%;padding:0 9.4%}
+/* El pie vive DEBAJO del campo de imagen y no puede invadirlo (Juan, 19 ago: «el
+   texto está montado sobre la imagen»). Antes solo estaba anclado abajo y crecía
+   hacia arriba: con un título de 4 líneas se metía 3px dentro del still, y con
+   uno más largo, más. Ahora su techo es la línea de retícula que cierra el campo
+   (3,5u + 4,5u = 8u → 66,67%) más media unidad de aire, y lo que no entra se
+   corta: el título cede, la imagen no. */
+.poster-ed .ed-foot{position:absolute;left:0;right:0;top:70.83%;bottom:6.25%;padding:0 9.4%;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end}
 .poster-ed .ed-title{font-family:-apple-system,BlinkMacSystemFont,sans-serif;font-size:9.2cqi;font-weight:var(--w-display);letter-spacing:-.02em;color:var(--white);line-height:1.2;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
 .poster-ed .ed-dato{font-family:-apple-system,BlinkMacSystemFont,sans-serif;font-size:5cqi;font-weight:var(--w-semi);color:var(--gray);margin-top:2%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 /* Anatomía A3 (Fase C): blur-fill de fondo + still 16:9 al ras del banner (sin
@@ -3389,7 +3395,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202608190948";
+    s.src="/src/main.js?v=202608191031";
     document.body.appendChild(s);
     // Watchdog de boot (P0 18 jul): si el grafo ESM murió en el import (caché
     // HTTP mixta tras deploys en ráfaga — main.js nuevo + módulo viejo sin el
