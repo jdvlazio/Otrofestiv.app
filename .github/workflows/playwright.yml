@@ -46,11 +46,34 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      # Cache de los BINARIOS de navegador (19 ago 2026). La descarga de chromium
+      # + webkit son ~350 MB y el paso se colgó tres veces seguidas —19, 31 y otra
+      # vez— bloqueando un merge con el resto del CI en verde. La clave lleva la
+      # versión de Playwright del lock: si sube, se descarga de nuevo; si no, se
+      # restaura. Los tests son EXACTAMENTE los mismos: esto no relaja el blindaje,
+      # solo deja de bajar dos veces lo mismo.
+      - name: Versión de Playwright (clave del cache)
+        id: pw
+        run: echo "v=$(node -p "require('./package-lock.json').packages['node_modules/@playwright/test'].version")" >> $GITHUB_OUTPUT
+
+      - name: Cache de navegadores
+        id: pwcache
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: pw-${{ runner.os }}-${{ steps.pw.outputs.v }}
+
       - name: Install Playwright browsers
         # webkit = motor de iOS para el spec responsive cross-engine (proyecto
         # ios-mobile). chromium cubre la suite de comportamiento + el proyecto
         # android-small (Blink@360).
-        run: npx playwright install --with-deps chromium webkit
+        # Con cache: solo las dependencias del sistema (apt), que NO se cachean.
+        run: |
+          if [ "${{ steps.pwcache.outputs.cache-hit }}" = "true" ]; then
+            npx playwright install-deps chromium webkit
+          else
+            npx playwright install --with-deps chromium webkit
+          fi
 
       # scripts/test.sh en vez de `npx playwright test` directo: cada paso toma un
       # puerto LIBRE para su servidor. Antes los cinco pasos usaban el 3000 y cada
