@@ -53,10 +53,12 @@ export function makeProgramPoster(state, title, duration, section, opts){
   const _di=_dayMatch?_dayIdx[_dayMatch[1].toLowerCase()]:undefined;
   const dayAbbr=_di!=null?(_DOW_ABBR[_lang]||_DOW_ABBR.es)[_di]:null;
 
-  // Body: siempre vacío cuando hay número (el header + número son suficientes)
-  // Sin número: extraer solo la parte distintiva
+  // Body: la parte distintiva del título. Antes se vaciaba cuando había número
+  // —el número era protagonista de 32px—; con §6.0 bajó a dato al pie y esa regla
+  // dejaba la tarjeta MUDA: sección y un «1» chiquito (vista previa CineAutopsia,
+  // 19 ago). El número ya no vacía el cuerpo: viaja al pie como lo que es.
   let bodyTitle='';
-  if(!num){
+  {
     // ── REGLA INAMOVIBLE: el body = identificador único del programa ──────
     // Para programas con código "PGM N" el código ES el identificador → body.
     // Se extrae del TÍTULO (no se matchea contra la sección): idioma-agnóstico
@@ -94,7 +96,12 @@ export function makeProgramPoster(state, title, duration, section, opts){
 
   // opts.untitled (regla anti-repetición del sheet): cuerpo vacío — el título ya
   // está en la cabecera del sheet. El num/día SE CONSERVA (identidad visual).
-  return _buildPosterV16({accent, headerLabel, title:(opts&&opts.untitled)?'':bodyTitle, num:num||dayAbbr||null});
+  // El número solo va al pie si el cuerpo NO lo dice ya: «Mediometrajes del Mundo
+  // Entero 1» + «1 · 102 min» repetía el dato que el título acababa de dar.
+  const _numRedundante=num&&new RegExp('\\b'+num+'\\s*$').test(bodyTitle||'');
+  const _dato=[(num&&!_numRedundante)?`${num}`:null, String(duration||'').trim()||null]
+    .filter(Boolean).join(' · ')||dayAbbr||null;
+  return _buildPosterV16({accent, headerLabel, title:(opts&&opts.untitled)?'':bodyTitle, num:null, dato:_dato});
 }
 
 export function makeSorpresaPoster(){
@@ -241,11 +248,10 @@ function _emWidth(str, upper){
 // línea lo sigue decidiendo _bandWrap (regla de Juan: ninguna línea, salvo la
 // última, termina en palabra débil) — acá solo se le dice cuántos caracteres
 // caben a ese tamaño, y después se verifica el ancho REAL de cada línea.
-// _lineaSVG — emite una línea que NO puede cruzar la línea de margen. Cuando el
-// corte no logra evitarlo —la regla de Juan prohíbe dejar «de/y/la» al final, así
-// que «DE CORTOMETRAJES» viaja pegado y no hay dónde partir— se fija el ancho con
-// textLength: el navegador condensa unos puntos y la retícula se respeta. Solo se
-// activa en ese caso; el resto de las líneas se dibujan sin tocar.
+// _lineaSVG — una línea que NO puede cruzar la línea de margen. Cuando el corte
+// no logra evitarlo —la regla de Juan prohíbe dejar «de» al final, así que «DE
+// CORTOMETRAJES» viaja pegado— se fija el ancho con textLength y el navegador
+// condensa unos puntos. Solo se activa ahí; el resto se dibuja sin tocar.
 export function _lineaSVG(txt, {x, y, fs, ls, fill, boxW, upper}){
   const est=(_emWidth(txt,upper)*fs+txt.length*ls)*1.12;
   const tope=boxW*0.98;
@@ -314,7 +320,12 @@ export function _buildPosterV16({accent, headerLabel, title, num, dato}){
 
   // Dato al pie (5% del ancho, gris). El `num` de los programas —«PGM 05», «MAR
   // 18»— ES un dato: deja de ser un número de 32px en el centro.
-  const datoStr=String(dato||num||'').trim();
+  //
+  // Y si no hay título, el dato PASA AL LUGAR DEL TÍTULO: sin eso, los programas
+  // con `untitled` quedaban con la sección y nada más.
+  const _tituloVacio=!String(title||'').trim();
+  const _datoCrudo=String(dato||num||'').trim();
+  const datoStr=_tituloVacio?'':_datoCrudo;
   const datoFS=VW*0.05;
   // La línea base va ARRIBA del margen por el descendente (~0,22em): apoyarla
   // justo en 11,25u metía las colas de la «g» y la «p» fuera de la retícula.
@@ -325,13 +336,11 @@ export function _buildPosterV16({accent, headerLabel, title, num, dato}){
 
   // Título — anclado abajo, sobre el dato: 6,5u × 2,4u, máx 4 líneas
   const tTop=datoStr?datoY-datoFS*1.6:datoY;
-  const ttl=_fitLines(String(title||'').trim(),
+  const ttl=_fitLines(_tituloVacio?_datoCrudo:String(title||'').trim(),
     {boxW:CW, boxH:2.4*U, maxLines:4, fsMax:2.4*U/1.2, fsMin:12, lhRatio:1.2, lsEm:-0.02, upper:false});
-  // fsMin=12 (≈8,4px en la tarjeta) es SUELO DE LEGIBILIDAD, no un capricho: por
-  // debajo, _fitLines recorta con elipsis en vez de encoger hasta lo ilegible —
-  // la convención que ya teníamos para títulos larguísimos. La sección usa un
-  // suelo más bajo a propósito: recortar el nombre que puso el festival está
-  // prohibido (§ vocabulario), así que ahí preferimos letra chica antes que «…».
+  // fsMin=12 (≈8,4px en tarjeta) es SUELO DE LEGIBILIDAD: por debajo se recorta
+  // con elipsis en vez de encoger hasta lo ilegible. La sección usa un suelo más
+  // bajo a propósito — recortar el nombre del festival está prohibido.
   const tBottom=tTop;                        // el bloque CRECE hacia arriba
   const tStartY=tBottom-(ttl.lines.length-1)*ttl.lh;
   const ttlText=ttl.lines.map((l,i)=>_lineaSVG(l,
