@@ -2138,3 +2138,64 @@ test('T96 — el botón admite que ya calculó, y no compite con el que confirma
   expect(r.despues.primarios.some(txt => /Plan/.test(txt)), 'el CTA que confirma sigue en ámbar').toBe(true);
   expect(r.despues.primarios.some(txt => /Calcular|Recalcular/.test(txt)), 'y el de calcular ya no compite').toBe(false);
 });
+
+test('T97 — el Plan que estás mirando no cambia solo: se marca y vos recalculás', async ({ page }) => {
+  test.setTimeout(120000);
+  await enterFestival(page, 'ficdeh2026', '2026-08-18T08:00:00-05:00');
+  await page.evaluate(() => [...document.querySelectorAll('#city-sheet [data-action]')]
+    .find(x => x.textContent.includes('Bogotá'))?.click());
+  await page.waitForTimeout(500);
+  const r = await page.evaluate(async () => {
+    const D = await import('/src/domain/film.js');
+    const bog = f => (f.venue || '').includes('Bogotá');
+    const fut = [...new Set(FILMS.filter(f => bog(f) && !D.screeningPassed(f)).map(f => f.title))];
+    state.set('watchlist', new Set(fut.slice(0, 12)));
+    cachedResult = null; savedAgenda = null;
+    switchMainNav('mnav-planner'); showAgView();
+    for (let i = 0; i < 40 && !document.querySelector('.ag-day-band'); i++) await new Promise(r => setTimeout(r, 250));
+    await new Promise(r => setTimeout(r, 300));
+    const firma = () => cachedResult && cachedResult._inputSnapshot;
+    const foto = () => ({
+      titulos: [...document.querySelectorAll('#ag-result .saved-item')].length,
+      stale: !!document.querySelector('.prio-stale'),
+      confirmar: !!document.querySelector('.ag-save-btn'),
+      confirmarOff: !!document.querySelector('.ag-save-btn[disabled]'),
+      confirmarOpacidad: (() => { const b = document.querySelector('.ag-save-btn');
+        return b ? parseFloat(getComputedStyle(b).opacity) : 1; })(),
+      firma: firma(),
+    });
+    const inicial = foto();
+    // gesto 1 — CORAZÓN: antes destruía el resultado y recalculaba en silencio
+    const enPlan = [...document.querySelectorAll('#ag-result .saved-item')][0]?.dataset.title;
+    const fuera = fut.slice(12, 13)[0];
+    toggleWL(fuera);
+    await new Promise(r => setTimeout(r, 600));
+    const trasCorazon = foto();
+    // gesto 2 — MARCADOR: el que ya conservaba (misma ley ahora)
+    togglePriority(enPlan || fut[0]);
+    await new Promise(r => setTimeout(r, 600));
+    const trasMarcador = foto();
+    // recalcular: el usuario decide cuándo
+    document.querySelector('.av-calc-btn').click();
+    for (let i = 0; i < 60 && document.querySelector('.prio-stale'); i++) await new Promise(r => setTimeout(r, 250));
+    await new Promise(r => setTimeout(r, 300));
+    return { inicial, trasCorazon, trasMarcador, tras: foto() };
+  });
+  expect(r.inicial.titulos, 'hay un Plan en pantalla').toBeGreaterThan(0);
+  expect(r.inicial.stale, 'y arranca al día').toBe(false);
+  expect(r.inicial.confirmarOff, 'con el Plan al día se puede confirmar').toBe(false);
+  // el corazón ya no destruye ni recalcula: conserva y avisa
+  expect(r.trasCorazon.titulos, 'el Plan sigue en pantalla tras tocar un interés').toBe(r.inicial.titulos);
+  expect(r.trasCorazon.firma, 'y sigue siendo el MISMO cálculo (no recalculó solo)').toBe(r.inicial.firma);
+  expect(r.trasCorazon.stale, 'pero queda marcado como desactualizado').toBe(true);
+  expect(r.trasCorazon.confirmarOff, 'y no se puede confirmar un Plan que ya no corresponde').toBe(true);
+  expect(r.trasCorazon.confirmarOpacidad, 'y se NOTA que no se puede (un botón muerto no puede verse vivo)')
+    .toBeLessThan(0.5);
+  // el marcador se comporta IGUAL que el corazón: una sola ley
+  expect(r.trasMarcador.stale, 'la prioridad sigue la misma ley').toBe(true);
+  expect(r.trasMarcador.firma, 'tampoco recalcula sola').toBe(r.inicial.firma);
+  // y al pedirlo, se pone al día
+  expect(r.tras.stale, 'al recalcular se va la marca').toBe(false);
+  expect(r.tras.firma, 'y el cálculo es otro').not.toBe(r.inicial.firma);
+  expect(r.tras.confirmarOff, 'y vuelve a poder confirmarse').toBe(false);
+});

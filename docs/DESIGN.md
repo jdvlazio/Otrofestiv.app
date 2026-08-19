@@ -412,6 +412,28 @@ helpers.js o `--amb` a mano = build roto. Safari iOS: muestrear con URL propia
   de golpe, pero impide sumar la 90 sin decidirlo, y verifica que el canon siga
   vivo con su `t-base` y su ritmo.
 
+### 8.6 · Color de un aviso — qué significa (`[aviso-color]`)
+- **Ámbar = te pide algo ahora.** El cruce de horarios en la línea de insumo
+  (`.dato-alerta`), la próxima función (`.ctx-aviso.amb`), el Plan desactualizado
+  (`.prio-stale`). Si el usuario tiene que hacer algo o decidir algo, va ámbar,
+  con el triángulo de alerta o el reloj según el caso.
+- **Gris = te informa, no te exige.** La razón por la que una obra no entró
+  (`.excl-reason`), el encabezado neutro de contexto (`.ctx-aviso`).
+- **Verde / rojo = estado, no pedido.** Verde: en curso (`.ctx-aviso.grn`). Rojo:
+  lo grave — retraso confirmado, severidad alta (`.delay-warn`, `.aviso-pill.sev-red`).
+- **Blanco = matiz dentro de una ficha** (`.aviso-txt`).
+- **La pastilla y el toast son superficie**, no texto teñido: ahí el fondo ES el
+  componente (`.aviso-pill`, `.prio-toast.warn`).
+- **Por qué existe la regla** (Juan, 18 ago 2026): «Plan desactualizado» salió en
+  blanco por inercia —herencia del banner de prioridades— y él preguntó si no
+  debía ser ámbar. El precedente ya existía en la app; lo que faltaba era estar
+  escrito: §1 define el ámbar como «acento, hora, CTA, estado activo», nunca como
+  advertencia, y la familia había quedado con 6 tokens repartidos a ojo. El
+  guardián congela la clasificación: un aviso nuevo no entra sin decidir a qué
+  familia pertenece.
+- **Tamaño**: todos los avisos son `--t-sm` (11px) y ninguno lleva caja (§ regla
+  del 29 jul, guardián `[aviso-sin-caja]`). El color es lo único que varía.
+
 ### 8.5 · Botones con icono — alineación (`[icono-texto]`)
 - Un `<button>` cuyo markup pone `${ICONS.x}` **seguido de texto** DEBE llevar
   `display:inline-flex` + `align-items:center` (+ `gap`). Sin eso el SVG se

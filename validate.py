@@ -2287,6 +2287,58 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar button-canon: {_e}')
 
+# ── [aviso-color] el color de un aviso significa algo, y está decidido ────────
+# Juan, 18 ago 2026: «Plan desactualizado» salió en blanco por inercia (herencia
+# del banner de prioridades) y él preguntó lo obvio — ¿no debería ser ámbar, como
+# los otros avisos? La app YA tenía el precedente (.dato-alerta, .ctx-aviso.amb)
+# pero nadie lo había escrito: DESIGN.md define el ámbar como «acento, hora, CTA,
+# estado activo», nunca como advertencia. Resultado: 13 clases de aviso con 6
+# tokens de color repartidos a ojo. La regla (§8.6) y este guardián cierran eso:
+# cada aviso declara a qué familia semántica pertenece, y una clase nueva no
+# entra sin decidirlo.
+check = 'aviso-color'
+try:
+    import re as _re
+    _html = open('index.html', encoding='utf-8').read()
+    # familia semántica → token permitido
+    _ROSTER = {
+        # ATENCIÓN — «esto te pide algo ahora»
+        '.dato-alerta': 'amber', '.ctx-aviso.amb': 'amber', '.prio-stale': 'amber',
+        '.delay-warn.warn-amber': 'amber', '.mplan-warn-row': 'amber-60',
+        # CONTEXTO — informa, no exige
+        '.ctx-aviso': 'gray',
+        # ESTADO del festival/función — verde en curso, rojo lo grave
+        '.ctx-aviso.grn': 'green', '.delay-warn': 'red', '.aviso-pill.sev-red': 'red',
+        # SUPERFICIE — el color ES el componente (pastilla/toast), no un texto teñido
+        '.aviso-pill': 'amber', '.prio-toast.warn': 'yellow-12',
+        # MATIZ de ficha
+        '.aviso-txt': 'white',
+    }
+    _errs = []
+    _vistos = set()
+    for _m in _re.finditer(r'^(\.[a-zA-Z0-9_.\-]+)\{([^}]*)\}', _html, _re.M):
+        _sel, _cuerpo = _m.group(1), _m.group(2)
+        if not _re.search(r'(aviso|alerta|stale|warn)', _sel):
+            continue
+        _c = _re.search(r'color:var\(--([a-z0-9-]+)\)', _cuerpo)
+        if not _c:
+            continue
+        _vistos.add(_sel)
+        if _sel not in _ROSTER:
+            _errs.append(f'{_sel} es un aviso nuevo sin familia semántica declarada '
+                         f'(§8.6: ámbar pide atención · gris informa · verde/rojo estado)')
+        elif _c.group(1) != _ROSTER[_sel]:
+            _errs.append(f'{_sel}: color --{_c.group(1)} pero su familia manda --{_ROSTER[_sel]}')
+    _muertas = [k for k in _ROSTER if k not in _vistos]
+    if _muertas:
+        _errs.append('en el roster pero ya no existe(n) en el CSS: ' + ', '.join(sorted(_muertas)))
+    if _errs:
+        fail(check, '; '.join(_errs[:4]))
+    else:
+        ok(check, f'{len(_vistos)} avisos, cada uno con su familia de color declarada')
+except Exception as _e:
+    warn(check, f'no se pudo verificar aviso-color: {_e}')
+
 # ── [icono-texto] un botón con icono Y texto se alinea, o el icono flota ──────
 # Juan, 18 ago 2026: el «+» de «Agendar» iba 3px más alto que la palabra. La
 # causa: .excl-include-btn no tenía display:inline-flex ni align-items:center,
@@ -3477,13 +3529,25 @@ try:
         else:
             # Solo las secciones DERIVADAS. La línea del último commit cambia con
             # cada commit por definición: compararla haría fallar el check siempre.
+            # La columna «Estado» sale del RELOJ (festivalStatus: próximo/recién
+            # terminado/archivado), no del repo: entre el commit y el CI un
+            # festival cruza un umbral y CLAUDE.md queda «desactualizado» sin que
+            # nadie tocara nada, bloqueando PRs ajenos (pasó en el #682, 18 ago).
+            # Se compara la lista de festivales y features — que sí es del repo —
+            # ignorando esa última celda.
+            def _sin_estado(_linea):
+                if not _linea.startswith('|'):
+                    return _linea
+                _cells = _linea.rstrip().rstrip('|').split('|')
+                return '|'.join(_cells[:-1]) + '|' if len(_cells) > 2 else _linea
             def _derivado(txt):
                 out = []
                 for _sec in ('### Festivales', '### Features activas'):
                     if _sec in txt:
                         _t = txt[txt.index(_sec):]
                         _fin = _t.find('\n---')
-                        out.append(_t[:_fin if _fin > 0 else 1200])
+                        _t = _t[:_fin if _fin > 0 else 1200]
+                        out.append('\n'.join(_sin_estado(_l) for _l in _t.split('\n')))
                 return '\n'.join(out)
             if _derivado(_viejo).strip() != _derivado(_nuevo).strip():
                 fail(check, 'CLAUDE.md desactualizado respecto al repo (festivales o features) '
@@ -3613,7 +3677,7 @@ try:
     #   agenda.js (render agenda+miplan) · main.js (composición/bootstrap) ·
     #   i18n.js (diccionarios es/en, es DATA) · sheets-controller.js · handlers.js
     _ALLOW = {
-        'src/view/agenda.js': 1993,  # +10: el botón admite que ya calculó (Recalcular secundario) — 18 ago
+        'src/view/agenda.js': 2000,  # +3: el Plan no se reemplaza solo + aviso «Plan desactualizado» sin enlace — 18 ago
         'src/main.js': 1670,  # +1: dispatcher de includeAnyway (17 ago)  # +7: el splash recuerda el festival elegido (memoria que caduca sola) (16 ago)  # +46 total: _morphOpen a FLIP — clon de la card compuesta, radio contra-escalado, encuadre del destino (29 jul)
         'src/i18n/i18n.js': 1583,  # +3: av_recalcular en es/en/pt — 18 ago
         'src/controller/sheets-controller.js': 1682,  # +4: el nombre completo del festival en la tapa, vía festivalTagline (18 ago)
