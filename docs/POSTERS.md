@@ -181,11 +181,29 @@ en cada superficie + `28.89%` en 4 sitios + escape XML local frágil.
 Cuando no hay imagen, el sistema genera un póster tipográfico (SVG data-URI).
 Dos zonas: **header** = sección (color de acento) y **body** = texto.
 
-### 6.0 Anatomía sin imagen — APROBADA (18 ago 2026, Juan)
+### 6.0 Anatomía del póster nuestro — APROBADA (18 ago 2026, Juan)
 
-> Aprobado el **nivel de solo texto**. La composición **con** imagen sigue en
-> exploración — ver `.specify/design-system/posters-c2-reticula.md`. Mientras
-> tanto, con imagen manda la anatomía vigente (§5b, marco editorial).
+> Aprobadas **las dos formas**: solo texto, y **una sola imagen 16:9**.
+> Rationale y descartes en `.specify/design-system/posters-c2-reticula.md`.
+
+**Solo hay dos formas. La regla que decide es una:**
+
+```
+¿la función tiene UNA imagen 16:9 propia?
+   sí  → forma B (una imagen)
+   no  → forma A (solo texto)
+```
+
+**«Propia» significa de la obra misma.** Un programa de cortos **no** toma
+prestada la imagen de una de sus obras: elegir un fotograma de las nueve para
+representar a las nueve es curaduría nuestra sobre curaduría ajena. Un programa
+sin still propio es **forma A**.
+
+**Nunca varias imágenes** (decisión de Juan, 18 ago 2026). Mosaicos, escalonados
+y tiras de índice quedan descartados: a 84 px son ruido, no información.
+
+**Nunca una imagen que no sea 16:9.** Un póster vertical 2:3 de una obra no se
+mete en el campo — eso sería recortarlo. Esa función es **forma A**.
 
 **El problema que corrige.** El tamaño de la sección estaba atado a una
 constante del ancho (`_BAND_FS = 0.0542`) y la banda a un alto fijo (28,89%).
@@ -247,6 +265,30 @@ misma esquina.
 
 El corte de línea sigue siendo `_bandWrap` (ninguna línea, salvo la última,
 termina en conjunción, preposición, artículo o separador).
+
+#### Forma B — una sola imagen 16:9
+
+Idéntica a la forma A **más un campo de imagen**, y nada más:
+
+| elemento | posición | tamaño |
+|---|---|---|
+| campo de imagen | `y = 3,5u`, a sangre | `8u × 4,5u` — el 16:9 exacto |
+
+**El campo es constante**: siempre el mismo rectángulo, en la misma posición.
+Es lo que hace que las tarjetas se sientan familia al hacer scroll; cuando el
+bloque de imagen cambiaba de alto según el caso, la silueta saltaba.
+
+`8u` de ancho da `4,50u` de alto, que cae **en línea de media unidad**: el 16:9
+entra entero, sin recorte, sin sobrante y sin salirse de la retícula. Es el
+único ancho a sangre que lo consigue (`5u` → 2,81u y `6u` → 3,37u se salen).
+
+**Sin blur.** El relleno borroso bajo el still queda **descartado**: ensuciaba
+el negro de marca y competía con la imagen. Bajo el campo va el fondo limpio,
+igual que en la forma A.
+
+La sección baja a un máximo de 2 líneas (en forma A son 3): con imagen, la
+imagen es la que carga el peso.
+
 
 ### 6.1 Escape XML — fuente única `escXML`
 

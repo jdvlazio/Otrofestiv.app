@@ -1,10 +1,12 @@
 # Pósters nuestros · «C2 sobre retícula»
 
-> **ESTADO: PROPUESTA — 18 ago 2026.** Nada de esto está en producción ni en
-> `docs/POSTERS.md`. La ley vigente sigue siendo `docs/POSTERS.md`; este archivo
-> es el sistema que Juan y Claude construyeron en la sesión de Onboarding, para
-> que no se pierda. Cuando se apruebe e implemente, las reglas se mudan a
-> `docs/POSTERS.md` (fuente única) y este archivo queda como rationale.
+> **ESTADO: APROBADO EL DISEÑO — 18 ago 2026. Sin implementar.** Las dos formas
+> aprobadas (solo texto, y una sola imagen 16:9) ya viven en `docs/POSTERS.md`
+> §6.0, que es la fuente única. Este archivo queda como **rationale y registro
+> de descartes**: por qué se decidió así y qué se probó y se tiró.
+>
+> Lo aprobado se decidió mirando, no leyendo: cuatro rondas de mockups sobre
+> funciones reales de CineAutopsia, FICDEH y FINCA.
 
 Aplica **solo a los pósters nuestros** (editorial y generativo). El **póster
 original nunca se toca** — sigue la regla de vocabulario de `docs/POSTERS.md`.
@@ -64,7 +66,26 @@ Composiciones exactas dentro de la caja de 6,5u:
 
 ---
 
-## 3. Los niveles (del referente de Adidas)
+## 3. DESCARTADO — los niveles con varias imágenes
+
+> **Juan, 18 ago 2026: «Las que son con varias imágenes, terribles. No me gustan
+> para nada.»** Queda descartado todo lo de esta sección. Se conserva escrito
+> porque costó cuatro rondas descubrir por qué no funciona, y para que nadie lo
+> vuelva a proponer sin saber qué ya se probó.
+
+**Qué se probó:** stills escalonados media unidad · mosaico 2×2 que llena el
+campo exacto · mosaico con el hueco convertido en bloque de color con el conteo
+· mosaico con una gradación de color única para unificar las cuatro imágenes ·
+héroe a 8u con tira de índice de 2u · tres pósters verticales en fila.
+
+**Por qué no funciona, en una línea:** a 84 px de ancho, cuatro imágenes miden
+5 px de alto cada una. No informan de las obras — solo hacen ruido. Y el ruido
+no se arregla componiéndolo mejor.
+
+**Qué queda en su lugar:** esas funciones (programas de cortos y demás) usan la
+forma A, solo texto.
+
+### 3b. Los niveles originales (referente de Adidas) — histórico
 
 El nivel **no se configura: se deduce** de cuántas obras con imagen tiene la
 función. Un largometraje entra siempre en calma; un programa de nueve cortos
@@ -106,7 +127,15 @@ conserva porque es la señal que se lee de un vistazo al hacer scroll.
 
 ---
 
-## 5. El blur, con otro oficio
+## 5. DESCARTADO — el blur
+
+> **Juan, 18 ago 2026: «tocaría dejar a un lado el blur».** El blur queda fuera
+> de las dos formas aprobadas. Ensuciaba el negro de marca y competía con la
+> imagen en vez de servirla. Se conserva el rationale porque la idea de
+> convertirlo en tejido conectivo fue correcta *dado* el mosaico — y el mosaico
+> es lo que se cayó.
+
+### 5b. Lo que se había planteado — histórico
 
 El blur **no se descarta** (decisión de Juan): cambia de trabajo.
 
@@ -154,14 +183,17 @@ salvo la última, termina en conjunción, preposición, artículo o separador).
 
 ## 8. Abierto
 
-1. El tercer still del nivel 3 va **centrado** (x=2), lo que rompe la
-   alineación a la izquierda del resto. Alineado sería más disciplinado.
-2. A tamaño real los stills del nivel 3 miden ~5 px de alto: **señalan** que es
-   un programa, no **informan** de las obras. Si tienen que informar, el nivel 3
-   baja a dos stills.
-3. El nivel 0 no tiene luz de obra (no hay obra). Queda negro con el glow.
-   ¿Tinte bajo del color de sección? Sería inventar color.
-4. Falta regla de prioridad para el pie cuando no cabe (hoy se corta con `…`).
+Los tres primeros puntos que estaban abiertos **murieron con el descarte del
+mosaico** (eran todos sobre cómo componer varias imágenes). Queda:
+
+1. **Regla de prioridad del pie cuando no cabe.** Hoy se corta con `…`
+   («Ramón A. Valencia · Colombia · 1…»). Falta decidir qué se sacrifica
+   primero: ¿el país? ¿el director? ¿la duración nunca?
+2. **La grafía de los títulos que vienen sucios de la fuente.** Ej.
+   «cortometrajes panorama Europa y Norteamerica» (minúscula inicial, sin
+   tilde). ¿Se respeta la grafía del festival o se normaliza? Es decisión de
+   Content Design, no de pósters, pero se ve aquí primero porque el título es
+   tipografía grande.
 
 ## 9. Implementación (cuando se apruebe)
 
