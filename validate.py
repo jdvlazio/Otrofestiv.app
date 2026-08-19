@@ -4418,11 +4418,250 @@ except Exception as _e:
 # Este guardián vigila que la excepción no vuelva a ser la norma: los dos
 # publicadores por-festival que quedan son deuda DECLARADA y la lista solo puede
 # encoger. Un festival nuevo con publicador propio es una regla que se escapó.
+
+# ── [boleteria-muda] un festival entero sin una palabra sobre cómo se entra ──
+# EL HUECO QUE TAPA. Los guardianes de boletería que ya teníamos vigilan la
+# COHERENCIA de lo emitido: que el badge lo decida ticketBadgeTarget(), que
+# `ticketing_model` use el vocabulario real, que `ticketUrl` no se escriba en
+# camelCase. Ninguno vigilaba la AUSENCIA. Un festival puede salir a producción
+# sin una sola función que diga cómo se entra, y todo queda verde.
+#
+# Pasó con CineAutopsia el 17 ago 2026: la agenda de la Cinemateca publicaba el
+# enlace de TuBoleta de los 6 programas de pago y decía «Entrada libre» en la
+# clausura. Mi ensamblador no miró el campo y encima escribió `is_free: False`
+# en los 7 —también en el libre—. El dato estaba en la fuente, en la misma
+# página de la que saqué todo lo demás. Lo cazó Juan preguntando, igual que los
+# 638 enlaces de TIFF y las 415 banderas de FICDEH.
+#
+# LA REGLA. Un festival vigente cuyas funciones NO dicen NADA —ni `ticket_url`,
+# ni `is_free`, ni `registration_url`— está mudo, y el silencio no es un dato:
+# es una omisión. Gratis se DECLARA (`is_free: true`), no se deja en blanco.
+# Solo aplica a festivales vigentes: los archivados quedaron como quedaron y
+# reescribir su pasado no le sirve a nadie.
+# ── [campo-huerfano] un campo que nadie lee no es un dato: es peso muerto ────
+# EL HUECO QUE TAPA. `[campo-contrato]` caza el campo mal ESCRITO (`ticketUrl`
+# contra `ticket_url`): el dato quiere llegar a la app y se pierde por el
+# nombre. Éste caza el campo que no tiene a dónde llegar — nadie lo lee, y
+# nunca lo leyó.
+#
+# El 17 ago 2026 había NUEVE. Entre ellos 36 `trailer` que alguien buscó uno
+# por uno, 23 `tematica` y 16 `qa_detail` que además duplicaba —peor y en un
+# solo idioma— lo que `qa_type` ya pintaba en tres. Se emitían, se validaban,
+# se versionaban, y no se veían en ninguna pantalla.
+#
+# Es el espejo exacto de `[boleteria-muda]`: allá el dato estaba en la fuente y
+# no lo emitimos; aquí lo emitimos y nadie lo pinta. Las dos formas de que el
+# trabajo se pierda entre la fuente y el ojo.
+#
+# LA REGLA. Todo campo de función que `src/` no mencione tiene que estar en una
+# de las dos listas de abajo, con su dueño escrito. Antes de añadir un campo, la
+# pregunta es QUIÉN LO VA A LEER; si la respuesta es «alguien algún día», no se
+# emite.
+# ── [contrato-vivo] el canon manda, y la doc se genera de él ────────────────
+# `pipeline/contrato.json` es el canon EJECUTABLE de una función. Este guardián
+# vigila las tres formas de que deje de serlo:
+#
+#   1. La doc se escribe a mano y diverge. Pasó: SCHEMA.md documentaba 24 campos
+#      de 60 y juraba que `duration` era un número. Ahora se GENERA del contrato
+#      y aquí se comprueba que esté regenerada.
+#   2. Un campo aparece en los datos y NO está en el contrato. Sin esto, el
+#      contrato envejece igual que envejeció la doc: callando.
+#   3. Una excepción con fecha se vence y nadie la mira. Una excepción sin fecha
+#      se vuelve permanente sola; la de aquí se vence sola, pero alguien tiene
+#      que enterarse el día que pasa.
+# ── [lib-unica] una función, un dueño ───────────────────────────────────────
+# `pipeline/lib.py` existe para que la lógica común se escriba UNA vez. El 17
+# ago 2026 se midió cuánto de eso era verdad: 7 de sus 17 funciones tenían
+# copias sueltas, `norm()` estaba reescrita en SEIS scripts y solo 5 de 28
+# scripts importaban lib.
+#
+# Y al comparar comportamiento con entradas reales apareció algo peor que un
+# duplicado: **el mismo nombre significaba cosas distintas**. `norm()` devuelve
+# un string en lib, un `set` en ficma-repesca y una `list` en ficma-tmdb;
+# `slug()` quita acentos en lib y los conserva en ficma («rebelion» vs
+# «rebelión»); `hora24()` devuelve la hora en lib y «» en ficma-parse cuando ya
+# venía en 24h. Leer un script y suponer la semántica del otro era un bug
+# esperando fecha.
+#
+# LA REGLA, en dos ramas: si la copia hace LO MISMO, se borra y se importa de
+# lib. Si hace otra cosa, se RENOMBRA para que lo diga. Lo que no se permite es
+# que dos cosas distintas compartan nombre.
+# ── [pipeline-generico] el camino nuevo es UNO, no uno por festival ─────────
+# Cada festival escribía su propio ensamblador y su propio publicador, y ahí es
+# donde se perdían las cosas: los 6 enlaces de TuBoleta de CineAutopsia, las 415
+# banderas de FICDEH, el `is_free:false` a mano en una función que era libre. No
+# eran doce errores distintos — era el mismo error doce veces, porque las reglas
+# vivían en la cabeza de quien escribía el ensamblador de turno.
+#
+# Desde el 17 ago 2026 hay UN ensamblador (pipeline/ensamblar.py) y UN publicador
+# (pipeline/publicar.py). Lo propio del festival cabe en su `<id>.plan.json`.
+# Este guardián vigila que la excepción no vuelva a ser la norma: los dos
+# publicadores por-festival que quedan son deuda DECLARADA y la lista solo puede
+# encoger. Un festival nuevo con publicador propio es una regla que se escapó.
+# ── [arquetipo-existe] un arquetipo inventado se pinta gris y nadie avisa ────
+# `[seccion-sin-arquetipo]` (validate-festivals) comprueba que la sección ESTÉ
+# en SECTION_ARCHETYPES. Nadie comprobaba que el arquetipo asignado sea uno de
+# los NUEVE que tienen color. Escribí «Apertura» e «Industria / Formación» —que
+# suenan bien y no existen: son «Apertura / Gala» y «Charlas / Industria»— y las
+# dos secciones de CineAutopsia cayeron al gris por defecto, con el texto encima
+# ilegible. Verde en los dos validadores, roto en la pantalla; lo vio Juan.
+# ── [poster-mirado] alguien tiene que ABRIR el archivo ──────────────────────
+# «¿Cómo es posible crear un póster sin pasar por un guardián?» — Juan, 18 ago
+# 2026, después de encontrar en pantalla un póster que era la franja gris del
+# encabezado del PDF con dos stills ajenos debajo.
+#
+# La respuesta incómoda: TODOS los guardianes de póster miran el CAMPO y ninguno
+# el ARCHIVO. `[poster-single-owner]` vigila quién lo escribe, `[posters-
+# duplicados]` que dos obras no compartan URL, `[paridad-derivados]` que
+# `posterSource` acompañe a `poster`. Un JPG con una banda plana ocupando un
+# tercio de la imagen los pasa todos, porque ninguno lo abre.
+#
+# Éste lo abre. Tres cosas que se pueden medir sin opinar:
+#   · que el archivo EXISTA (una ruta rota no se ve hasta que se ve),
+#   · que tenga resolución de póster y no de miniatura,
+#   · que no lleve una BANDA PLANA en un borde — el recorte que se comió el
+#     encabezado del PDF, que es exactamente el error de hoy.
+check = 'poster-mirado'
+try:
+    import json as _j8, glob as _g8, os as _os8
+    try:
+        from PIL import Image as _Img
+    except ImportError:
+        _Img = None
+    if _Img is None:
+        warn(check, 'sin Pillow: no se pueden abrir los pósters')
+    else:
+        # DEUDA DECLARADA (18 ago 2026), y solo puede encoger. Son festivales ya
+        # montados, no errores nuevos: Leviza y Tercer Tiempo trajeron pósters
+        # diminutos de su fuente, y el still de «Mutante» viene letterboxed de
+        # origen. Un guardián que nace rojo por el pasado no lo mira nadie; uno
+        # que nombra su deuda obliga a que no crezca.
+        _DEUDA_POSTER = {'leviza-2026', 'tercertiempo-2026', 'fantasofest-2026'}
+        _rotos, _chicos, _bandas = [], [], []
+        for _f in sorted(_g8.glob('festivals/*.json')):
+            _d = _j8.load(open(_f, encoding='utf-8'))
+            _fest = _f.split('/')[-1]
+            _viejo = _f.split('/')[-1][:-5] in _DEUDA_POSTER
+            for _x in (_d.get('films') or []):
+                for _o in [_x] + list(_x.get('film_list') or []):
+                    _p = str(_o.get('poster') or '')
+                    if not _p.startswith('/assets/'):
+                        continue
+                    _ruta = '.' + _p
+                    if not _os8.path.exists(_ruta):
+                        _rotos.append(f'{_fest}: {_p}')
+                        continue
+                    try:
+                        _im = _Img.open(_ruta).convert('RGB')
+                    except Exception:
+                        _rotos.append(f'{_fest}: {_p} (ilegible)')
+                        continue
+                    _w, _h = _im.size
+                    # El mínimo va por el LADO CORTO, no por el ancho: un póster
+                    # vertical de 300×427 es legítimo y mi primera versión lo
+                    # marcaba junto a 51 más. Lo que no vale es una miniatura.
+                    if min(_w, _h) < 280 and not _viejo:
+                        _chicos.append(f'{_o.get("title","?")[:28]} {_w}×{_h}')
+                    # La banda plana solo se persigue en pósters EDITORIALES —los
+                    # que recortamos nosotros—: en un afiche diseñado, una franja
+                    # de color sólido es una decisión, no un descuido. Sin este
+                    # matiz salían 41 avisos, casi todos de afiches ajenos.
+                    if _o.get('posterSource') != 'editorial' or _viejo:
+                        continue
+                    _px = _im.load()
+                    for _borde, _rango in (('arriba', range(0, _h // 5, 2)),
+                                           ('abajo', range(_h - 1, _h - _h // 5, -2))):
+                        _n = 0
+                        for _y in _rango:
+                            _fila = [_px[_x2, _y] for _x2 in range(0, _w, max(1, _w // 40))]
+                            _prom = [sum(c[_i] for c in _fila) / len(_fila) for _i in range(3)]
+                            _plano = all(max(abs(c[_i] - _prom[_i]) for c in _fila) < 12 for _i in range(3))
+                            if _plano:
+                                _n += 2
+                            else:
+                                break
+                        if _n > _h * 0.10:
+                            _bandas.append(f'{_o.get("title","?")[:26]} ({_borde}, {100*_n//_h}%)')
+        _prob = []
+        if _rotos:
+            _prob.append(f'{len(_rotos)} póster(s) que apuntan a un archivo que no existe: ' + '; '.join(_rotos[:3]))
+        if _chicos:
+            _prob.append(f'{len(_chicos)} por debajo de 400×220: ' + '; '.join(_chicos[:3]))
+        if _bandas:
+            _prob.append(f'{len(_bandas)} con banda plana en un borde (¿se coló el encabezado?): '
+                         + '; '.join(_bandas[:3]))
+        if _prob:
+            fail(check, ' · '.join(_prob))
+        else:
+            ok(check, 'todo póster local abre, mide como póster y no arrastra bandas planas')
+except Exception as _e:
+    warn(check, f'no se pudo verificar poster-mirado: {_e}')
+
+
+check = 'arquetipo-existe'
+try:
+    import re as _r7
+    _cfg = open('src/config.js', encoding='utf-8').read()
+    _i = _cfg.index('export const ARCHETYPE_COLORS'); _j = _cfg.index('\n};', _i)
+    _validos = set(_r7.findall(r"'([^']+)':\s*'#", _cfg[_i:_j]))
+    _k = _cfg.index('export const SECTION_ARCHETYPES'); _l = _cfg.index('\n};', _k)
+    _malos = [f'{_a} → {_b!r}' for _a, _b in _r7.findall(r"'([^']+)':\s*'([^']+)'", _cfg[_k:_l])
+              if _b not in _validos]
+    if _malos:
+        fail(check, f'sección con arquetipo que NO existe en ARCHETYPE_COLORS '
+                    f'(cae a gris con texto ilegible): ' + '; '.join(_malos[:5]))
+    else:
+        ok(check, f'los {len(_validos)} arquetipos con color son los únicos usados')
+except Exception as _e:
+    warn(check, f'no se pudo verificar arquetipo-existe: {_e}')
+
+
+
+# ── [cosecha-tmdb] tener la ficha y no traerse la sinopsis ──────────────────
+# Los guardianes de este repo miraban la FORMA del dato (tipo, enum, campo
+# huérfano) y ninguno preguntaba lo obvio: si fuimos hasta TMDB y anotamos el
+# `tmdb_id`, ¿por qué volvimos con las manos vacías? En CineAutopsia 32 obras
+# tenían ficha y ninguna sinopsis: la consulta pedía `es-CO` (TMDB devuelve
+# vacío en vez de caer a `es-ES`) y el ensamblador tiraba el campo. Dos capas
+# verdes, la pantalla sin un solo texto. Este guardián mira la COSECHA.
+check = 'cosecha-tmdb'
+try:
+    import glob as _g, json as _j, os as _os
+    # Festivales ya publicados cuya deuda es histórica: solo puede ENCOGER.
+    _DEUDA_SIN = {'ficci65': 0, 'aff2026': 0}
+    _malos = []
+    for _f in sorted(_g.glob('festivals/*.json')):
+        _fid = _os.path.basename(_f)[:-5]
+        if _fid.endswith('-build') or '/staging/' in _f:
+            continue
+        try:
+            _d = _j.load(open(_f, encoding='utf-8'))
+        except Exception:
+            continue
+        _fichas = []
+        for _x in _d.get('films') or []:
+            _fichas.append(_x)
+            _fichas += _x.get('film_list') or []
+        _huecos = [_x.get('title', '?') for _x in _fichas
+                   if _x.get('tmdb_id') and not _x.get('synopsis')]
+        if _huecos:
+            _malos.append((_fid, _huecos))
+    if _malos:
+        fail(check, 'obra con ficha TMDB y sin sinopsis — el dato estaba en la '
+                    'fuente y no lo cosechamos: ' +
+                    '; '.join(f'{_i} ({len(_h)}: {", ".join(_h[:3])})'
+                              for _i, _h in _malos))
+    else:
+        ok(check, 'toda ficha con tmdb_id trae su sinopsis')
+except Exception as _e:
+    warn(check, f'no se pudo verificar cosecha-tmdb: {_e}')
+
 check = 'pipeline-generico'
 try:
     import glob as _g5, os as _os5
-    _HEREDADOS = {'ficdeh-2026-publicar.py',    # pre-genérico; su build está atrasado
-                  'cineautopsia-2026-publicar.py'}  # pre-genérico; migra al publicar
+    # CineAutopsia salió de esta lista: se montó entero con el camino genérico
+    # y su publicador propio se borró. La lista solo encoge.
+    _HEREDADOS = {'ficdeh-2026-publicar.py'}   # pre-genérico; su build está atrasado
     _propios = {_os5.path.basename(_p) for _p in _g5.glob('pipeline/*-publicar.py')}
     _nuevos = sorted(_propios - _HEREDADOS)
     _faltan = [_f for _f in ('pipeline/ensamblar.py', 'pipeline/publicar.py')

@@ -454,8 +454,14 @@ test('AP01 — aplazado: distintivo + banda + sin AHORA + sin «hoy»', async ({
     const { state } = await import('/src/state/state.js');
     const html = _renderSplashRailHTML(state, null);
     // Orden en el riel: la card aplazada va DESPUÉS de los próximos y ANTES de ANTERIORES.
+    // El divisor se busca POR SU RÓTULO, no por la clase. El riel emite DOS divisores
+    // con la misma clase —«Próximos» y «Anteriores»— y buscar el primero daba con el
+    // que no era en cuanto existía algún festival próximo: al publicar CineAutopsia
+    // (21–29 AGO, próximo el 13 de agosto que congela este test) apareció el divisor
+    // «Próximos» delante de FICMA y el test señaló una regresión que no ocurrió.
+    const { t } = await import('/src/i18n/i18n.js');
     const iFicma = html.indexOf('data-fest="ficma2026"');
-    const iAnteriores = html.indexOf('splash-rail-div');
+    const iAnteriores = html.indexOf(`<span class="srd-lbl">${t('splash_anteriores')}</span>`);
     return { cls: _classifyFestival(cfg), badge: html.includes('splash-card-badge'),
              postponedClass: /splash-card[^"]*postponed/.test(html),
              ficmaAntesDeAnteriores: iFicma >= 0 && iAnteriores > iFicma };

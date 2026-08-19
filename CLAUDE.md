@@ -80,11 +80,12 @@ deliberada existe la etiqueta `frontera-ok`.
 | `cinemancia2025` | Cinemancia 2025 | Valle de Aburrá | 11–20 SEP | Archivado |
 | `leviza2026` | Leviza - Festival de Cine y Audiovisuales | Zapatoca | 14–17 MAY | Archivado |
 | `olhar2026` | Olhar de Cinema | Curitiba | JUN 4–13 | Archivado |
-| `tercertiempo2026` | Tercer Tiempo Fest | Bogotá | 13–19 JUL | Recién terminado |
-| `fantasofest2026` | FantasoFest | Bogotá | 13–19 JUL | Recién terminado |
+| `tercertiempo2026` | Tercer Tiempo Fest | Bogotá | 13–19 JUL | Archivado |
+| `fantasofest2026` | FantasoFest | Bogotá | 13–19 JUL | Archivado |
 | `ficma2026` | FICMA | Manizales | 10–17 AGO | desconocido |
 | `ficdeh2026` | FICDEH | Colombia | 12–19 AGO | **Próximo / activo** |
 | `finca2026` | FINCA | Buenos Aires | 12–19 AGO | **Próximo / activo** |
+| `cineautopsia2026` | CineAutopsia | Bogotá | 21–29 AGO | **Próximo / activo** |
 | `ficmontanas2026` | Ficmontañas | Salento | JUL 1–5 | Archivado |
 
 ### Features activas (desde `.specify/features/`)
