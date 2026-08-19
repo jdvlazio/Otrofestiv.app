@@ -53,10 +53,12 @@ export function makeProgramPoster(state, title, duration, section, opts){
   const _di=_dayMatch?_dayIdx[_dayMatch[1].toLowerCase()]:undefined;
   const dayAbbr=_di!=null?(_DOW_ABBR[_lang]||_DOW_ABBR.es)[_di]:null;
 
-  // Body: siempre vacío cuando hay número (el header + número son suficientes)
-  // Sin número: extraer solo la parte distintiva
+  // Body: la parte distintiva del título. Antes se vaciaba cuando había número
+  // —el número era protagonista de 32px—; con §6.0 bajó a dato al pie y esa regla
+  // dejaba la tarjeta MUDA: sección y un «1» chiquito (vista previa CineAutopsia,
+  // 19 ago). El número ya no vacía el cuerpo: viaja al pie como lo que es.
   let bodyTitle='';
-  if(!num){
+  {
     // ── REGLA INAMOVIBLE: el body = identificador único del programa ──────
     // Para programas con código "PGM N" el código ES el identificador → body.
     // Se extrae del TÍTULO (no se matchea contra la sección): idioma-agnóstico
@@ -94,7 +96,12 @@ export function makeProgramPoster(state, title, duration, section, opts){
 
   // opts.untitled (regla anti-repetición del sheet): cuerpo vacío — el título ya
   // está en la cabecera del sheet. El num/día SE CONSERVA (identidad visual).
-  return _buildPosterV16({accent, headerLabel, title:(opts&&opts.untitled)?'':bodyTitle, num:num||dayAbbr||null});
+  // El número solo va al pie si el cuerpo NO lo dice ya: «Mediometrajes del Mundo
+  // Entero 1» + «1 · 102 min» repetía el dato que el título acababa de dar.
+  const _numRedundante=num&&new RegExp('\\b'+num+'\\s*$').test(bodyTitle||'');
+  const _dato=[(num&&!_numRedundante)?`${num}`:null, String(duration||'').trim()||null]
+    .filter(Boolean).join(' · ')||dayAbbr||null;
+  return _buildPosterV16({accent, headerLabel, title:(opts&&opts.untitled)?'':bodyTitle, num:null, dato:_dato});
 }
 
 export function makeSorpresaPoster(){
@@ -175,7 +182,9 @@ export function escXML(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&
 //   mode 'top'    → anclado arriba, para el <svg> propio del editorial.
 // wrap a 15ch mantiene la línea más ancha ≤15; secciones que superan 2 líneas
 // exigen `sectionShort` (gate [seccion-larga]).
-const _BAND_FS=0.0542, _BAND_LH=0.075, _BAND_PADX=0.0667, _BAND_LS=0.00583, _BAND_MAXCH=16;
+// _BAND_FS/_LH/_PADX/_LS murieron con la banda-losa (§6.0): el tamaño ya no es
+// un ratio fijo del ancho. _BAND_MAXCH sigue vivo como default de _bandWrap.
+const _BAND_MAXCH=16;
 
 // ── Regla de lecturabilidad del corte de línea (regla de Juan) ────────────────
 // Cada línea debe tener sentido por sí sola y NINGUNA línea (salvo la última)
@@ -218,87 +227,136 @@ export function _bandWrap(s, maxCh=_BAND_MAXCH){
   return best.texts;
 }
 
-export function _bandTextSVG(label, accent, vw, {mode='center', bandH=0}={}){
-  const s=String(label||'').trim().toUpperCase();
-  const fs=vw*_BAND_FS, lh=vw*_BAND_LH, padX=vw*_BAND_PADX, ls=vw*_BAND_LS;
-  if(!s) return {text:'', lines:0, lh, fs};
-  const L=_bandWrap(s, _BAND_MAXCH);
-  const fill=_contrastText(accent);  // auto-contraste sobre la banda de sección
-  const y0 = mode==='center' ? (bandH-L.length*lh)/2+fs : fs+vw*0.02;
-  const round=n=>+n.toFixed(2);
-  const text=L.map((l,i)=>
-    `<text x="${round(padX)}" y="${round(y0+i*lh)}" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="${round(fs)}" font-weight="800" letter-spacing="${round(ls)}" fill="${fill}">${escXML(l)}</text>`
-  ).join('');
-  return {text, lines:L.length, lh, fs};
+// ── Motor de ajuste tipográfico (POSTERS.md §6.0) ────────────────────────────
+// La tipografía se ajusta AL ESPACIO, no a una constante: antes _BAND_FS daba
+// 4,55px en la tarjeta real, igual para «FICCIÓN» que para un nombre de 43
+// caracteres. Se calcula en el viewBox (determinista, sin tocar el DOM) con un
+// estimador de ancho por carácter; como es aproximado, el test mide el tamaño
+// REAL en la tarjeta de 84px — ahí se ve si el estimador miente.
+const _CHW_UPPER={'I':.30,'J':.45,'L':.55,'M':.92,'W':.92,'1':.42,' ':.26,'·':.32,'-':.35,'–':.5,'.':.28,',':.28,':':.28,'&':.75,'Í':.30,'Ó':.7,'Á':.68,'É':.62,'Ú':.7,'Ñ':.72};
+const _CHW_LOWER={'i':.28,'j':.28,'l':.28,'t':.35,'f':.34,'r':.4,'m':.86,'w':.72,' ':.26,'·':.32,'-':.35,'.':.26,',':.26,'I':.3,'M':.9,'W':.9};
+function _emWidth(str, upper){
+  // 0.66 medido con getBBox sobre el <text> YA RENDERIZADO (no con canvas: ahí
+  // el bold sintetizado mide de menos y el primer intento subestimaba hasta un
+  // 19% — «CHARLA» real da 0.739 em/char y se salía de la tarjeta).
+  const T=upper?_CHW_UPPER:_CHW_LOWER, def=upper?.66:.55;
+  let w=0;
+  for(const ch of String(str)) w += T[ch] !== undefined ? T[ch] : (upper ? def : (ch===ch.toUpperCase()&&ch!==ch.toLowerCase() ? .68 : def));
+  return w;
+}
+// Devuelve {lines, fs, lh} con el MAYOR tamaño que entra en la caja. El corte de
+// línea lo sigue decidiendo _bandWrap (regla de Juan: ninguna línea, salvo la
+// última, termina en palabra débil) — acá solo se le dice cuántos caracteres
+// caben a ese tamaño, y después se verifica el ancho REAL de cada línea.
+// _lineaSVG — una línea que NO puede cruzar la línea de margen. Cuando el corte
+// no logra evitarlo —la regla de Juan prohíbe dejar «de» al final, así que «DE
+// CORTOMETRAJES» viaja pegado— se fija el ancho con textLength y el navegador
+// condensa unos puntos. Solo se activa ahí; el resto se dibuja sin tocar.
+export function _lineaSVG(txt, {x, y, fs, ls, fill, boxW, upper}){
+  const est=(_emWidth(txt,upper)*fs+txt.length*ls)*1.12;
+  const tope=boxW*0.98;
+  const ajuste=est>tope?` textLength="${(+tope).toFixed(2)}" lengthAdjust="spacingAndGlyphs"`:'';
+  return `<text x="${+x.toFixed(2)}" y="${+y.toFixed(2)}" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="${+fs.toFixed(2)}" font-weight="800" letter-spacing="${+ls.toFixed(2)}" fill="${fill}"${ajuste}>${escXML(txt)}</text>`;
 }
 
-export function _buildPosterV16({accent, headerLabel, title, num}){
-  // ── Motor de poster tipográfico v16 ──────────────────────────
-  // Sistema único para eventos, programas, sorpresa.
-  // Header sólido en accent (~52/180px) + body surf-2.
-  // Variante A (num!=null): título arriba + número en accent abajo.
-  // Variante B (num===null): título expande desde abajo.
-  // ─────────────────────────────────────────────────────────────
-  const VW=120,VH=180,HDR=52,PAD=8;
-  const esc=escXML;  // ver escXML (arriba) — fuente única de escape XML
-
-  // El cuerpo usa el MISMO cortador que la banda (_bandWrap): cada línea con
-  // sentido propio, ninguna termina en palabra débil ni separador (·/–). Una
-  // sola regla de corte para TODO texto dentro de pósters no-originales.
-  const wrap=(str,maxCh)=>str?_bandWrap(str,maxCh):[''];
-  // Clamp de líneas + elipsis (estilo Netflix/Spotify): los títulos larguísimos
-  // (ej. "Tribeca at 25: A Conversation With…", 80 chars = 9 líneas minúsculas)
-  // se truncan a N líneas con "…" en vez de llenar el póster. Los cortos no cambian.
-  function clamp(lines,maxLines){
-    if(lines.length<=maxLines) return lines;
-    const k=lines.slice(0,maxLines);
-    k[maxLines-1]=k[maxLines-1].replace(/[\s.,;:–—-]+$/,'')+'…';
-    return k;
+export function _fitLines(str, {boxW, boxH, maxLines, fsMax, fsMin, lhRatio=1.16, lsEm=0, upper=false}){
+  const s=String(str||'').trim();
+  if(!s) return {lines:[], fs:0, lh:0};
+  for(let fs=fsMax; fs>=fsMin; fs-=0.25){
+    const perChar=fs*lsEm;
+    const maxCh=Math.max(4, Math.floor(boxW/(fs*(upper?.66:.55)+perChar)));
+    const L=_bandWrap(s, maxCh);
+    if(L.length>maxLines) continue;
+    const lh=fs*lhRatio;
+    if(L.length*lh>boxH) continue;
+    // 8% de resguardo (Juan, 19 ago: «los textos llegan demasiado al borde»). El
+    // estimador es aproximado y el margen de 0,75u es una regla de retícula, no
+    // una sugerencia: el test mide el bbox REAL de cada línea y exige que ninguna
+    // cruce la línea de margen. Pasarse se VE; quedarse corto, no.
+    // El estimador es aproximado y su error NO es simétrico: quedarse corto se ve
+    // (texto tocando el borde), sobrar no. Por eso se mide con un factor de
+    // seguridad —el peor caso observado, «CHARLA», mide 1,12× el promedio— y la
+    // caja se respeta al 98%. El test mide el bbox REAL contra la línea de margen.
+    if(L.some(l=>(_emWidth(l,upper)*fs+l.length*perChar)*1.12>boxW*0.98)) continue;
+    return {lines:L, fs:+fs.toFixed(2), lh:+lh.toFixed(2)};
   }
+  // Suelo: no cabe ni al mínimo → se recorta a maxLines con elipsis. El ancho no
+  // se re-verifica acá A PROPÓSITO: quien garantiza el margen es _lineaSVG (una
+  // sola vez, para todas las líneas). Un segundo cinturón acá era redundante —
+  // ninguna mutación podía matarlo, que es la señal de que no defendía nada.
+  const lh=fsMin*lhRatio;
+  const L=_bandWrap(s, Math.max(4, Math.floor(boxW/(fsMin*(upper?.66:.55)))));
+  const K=L.slice(0,maxLines);
+  if(L.length>maxLines) K[maxLines-1]=K[maxLines-1].replace(/[\s.,;:–—-]+$/,'')+'…';
+  return {lines:K, fs:fsMin, lh:+lh.toFixed(2)};
+}
 
-  // Header label — banda única (misma fuente que el editorial). Ver _bandTextSVG.
-  const headerText=_bandTextSVG(headerLabel||'', accent, VW, {mode:'center', bandH:HDR}).text;
+export function _buildPosterV16({accent, headerLabel, title, num, dato}){
+  // ── Póster nuestro — anatomía aprobada (POSTERS.md §6.0, Juan 18 ago 2026) ──
+  // Retícula: u = ancho/8 → 8u × 12u. Margen 0,75u. Filete de sección de 0,25u a
+  // sangre. Sección arriba, título anclado abajo, dato al pie, luz abajo a la
+  // derecha. La tipografía se ajusta al espacio (_fitLines), no a una constante.
+  //
+  // Lo que murió acá: la banda de color como losa (el color de sección pasó al
+  // filete y a la propia tipografía), el chevron (a 84px era suciedad) y el
+  // número gigante — que era un DATO y ahora vive como tal, en el pie.
+  const VW=120, VH=180, U=VW/8;              // 15
+  const M=0.75*U, CW=VW-2*M;                 // margen 11.25 · caja de contenido 97.5
+  const esc=escXML;
+  const round=n=>+n.toFixed(2);
+  const FONT='-apple-system,BlinkMacSystemFont,sans-serif';
 
-  // Body
-  let bodyContent='';
-  // El strip de número final solo aplica en Variante A (num se muestra aparte,
-  // evita duplicarlo). En Variante B el título se muestra tal cual — si no, un
-  // body como "PGM 05" perdería el "05" y dejaría dos programas indistinguibles.
-  const cleanTitle=(num!==null&&num!==undefined)
-    ? (title||'').replace(/\s+\d+\s*$/,'').trim()
-    : (title||'').trim();
+  // Sección — la mayor que quepa en 6,5u × 3,4u, máx 3 líneas
+  // Tope de 15px en la tarjeta de 84 (decisión de Juan, 18 ago) = 21,43 en el
+  // viewBox: «la mayor que quepa» sin techo llevaba «CHARLA» a 17,9px, más grande
+  // que el título de la obra. El techo mantiene la jerarquía: la sección orienta,
+  // el título es el protagonista.
+  const SEC_FS_MAX=15*VW/84;
+  const sec=_fitLines(String(headerLabel||'').toUpperCase(),
+    {boxW:CW, boxH:3.4*U, maxLines:4, fsMax:Math.min(SEC_FS_MAX, 3.4*U/1.16), fsMin:9, lhRatio:1.16, lsEm:0.02, upper:true});
+  const secY=1*U+sec.fs;                     // primera línea base a 1u
+  const secText=sec.lines.map((l,i)=>_lineaSVG(l,
+    {x:M, y:secY+i*sec.lh, fs:sec.fs, ls:sec.fs*0.02, fill:accent, boxW:CW, upper:true})).join('');
 
-  if(num!==null&&num!==undefined){
-    // Variante A — número como elemento principal
-    const bodyH=VH-HDR;
-    const numFS=32;
-    const numY=HDR+(bodyH/2)+(numFS/3); // centrado vertical en el body
-    const titleText=cleanTitle
-      ? (()=>{
-          const tLines=clamp(wrap(cleanTitle,12),3); // variante A: título comparte espacio con el número
-          const tFS=11,tLD=14;
-          return tLines.map((l,i)=>
-            `<text x="${PAD}" y="${HDR+PAD+tFS+i*tLD}" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="${tFS}" font-weight="800" letter-spacing="-0.3" fill="#F0EDE8">${esc(l)}</text>`
-          ).join('');
-        })()
-      : '';
-    bodyContent=titleText+`<text x="${VW/2}" y="${numY}" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="${numFS}" font-weight="800" letter-spacing="-1" fill="${accent}" text-anchor="middle">${esc(num)}</text>`;
-  } else {
-    // Variante B — título anclado abajo, clampeado a 4 líneas + elipsis
-    const tLines=clamp(wrap(cleanTitle,12),4);
-    const tFS=11,tLD=14;
-    const totalH=tLines.length*tLD;
-    const startY=VH-PAD-totalH+tLD;
-    bodyContent=tLines.map((l,i)=>
-      `<text x="${PAD}" y="${startY+i*tLD}" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="${tFS}" font-weight="800" letter-spacing="-0.3" fill="#F0EDE8">${esc(l)}</text>`
-    ).join('');
-  }
+  // Dato al pie (5% del ancho, gris). El `num` de los programas —«PGM 05», «MAR
+  // 18»— ES un dato: deja de ser un número de 32px en el centro.
+  //
+  // Y si no hay título, el dato PASA AL LUGAR DEL TÍTULO: sin eso, los programas
+  // con `untitled` quedaban con la sección y nada más.
+  const _tituloVacio=!String(title||'').trim();
+  const _datoCrudo=String(dato||num||'').trim();
+  const datoStr=_tituloVacio?'':_datoCrudo;
+  const datoFS=VW*0.05;
+  // La línea base va ARRIBA del margen por el descendente (~0,22em): apoyarla
+  // justo en 11,25u metía las colas de la «g» y la «p» fuera de la retícula.
+  const datoY=VH-M-datoFS*0.30;
+  const datoText=datoStr
+    ? _lineaSVG(datoStr, {x:M, y:datoY, fs:datoFS, ls:datoFS*0.02, fill:'#888', boxW:CW, upper:false})
+    : '';
+
+  // Título — anclado abajo, sobre el dato: 6,5u × 2,4u, máx 4 líneas
+  const tTop=datoStr?datoY-datoFS*1.6:datoY;
+  const ttl=_fitLines(_tituloVacio?_datoCrudo:String(title||'').trim(),
+    {boxW:CW, boxH:2.4*U, maxLines:4, fsMax:2.4*U/1.2, fsMin:12, lhRatio:1.2, lsEm:-0.02, upper:false});
+  // fsMin=12 (≈8,4px en tarjeta) es SUELO DE LEGIBILIDAD: por debajo se recorta
+  // con elipsis en vez de encoger hasta lo ilegible. La sección usa un suelo más
+  // bajo a propósito — recortar el nombre del festival está prohibido.
+  const tBottom=tTop;                        // el bloque CRECE hacia arriba
+  const tStartY=tBottom-(ttl.lines.length-1)*ttl.lh;
+  const ttlText=ttl.lines.map((l,i)=>_lineaSVG(l,
+    {x:M, y:tStartY+i*ttl.lh, fs:ttl.fs, ls:ttl.fs*-0.02, fill:'#F0EDE8', boxW:CW, upper:false})).join('');
 
   const svg=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${VW} ${VH}">
-    <rect width="${VW}" height="${VH}" fill="#1B1917"/>
-    <rect width="${VW}" height="${HDR}" fill="${accent}"/>
-    ${headerText}
-    ${bodyContent}
+    <defs><radialGradient id="lz" cx="1" cy="1" r="1">
+      <stop offset="0" stop-color="#F59E0B" stop-opacity=".28"/>
+      <stop offset="1" stop-color="#F59E0B" stop-opacity="0"/>
+    </radialGradient></defs>
+    <rect width="${VW}" height="${VH}" fill="#0B0A08"/>
+    <rect x="${round(VW*0.45)}" y="${round(VH*0.55)}" width="${round(VW*0.55)}" height="${round(VH*0.45)}" fill="url(#lz)"/>
+    <rect width="${VW}" height="${round(0.25*U)}" fill="${accent}"/>
+    ${secText}
+    ${ttlText}
+    ${datoText}
   </svg>`;
   return `data:image/svg+xml,${encodeURIComponent(svg)}`;
 }

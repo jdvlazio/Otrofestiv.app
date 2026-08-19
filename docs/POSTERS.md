@@ -181,6 +181,150 @@ en cada superficie + `28.89%` en 4 sitios + escape XML local frágil.
 Cuando no hay imagen, el sistema genera un póster tipográfico (SVG data-URI).
 Dos zonas: **header** = sección (color de acento) y **body** = texto.
 
+### 6.0 Anatomía del póster nuestro — APROBADA (18 ago 2026, Juan)
+
+> Aprobadas **las dos formas**: solo texto, y **una sola imagen 16:9**.
+> Rationale y descartes en `.specify/design-system/posters-c2-reticula.md`.
+
+**Solo hay dos formas. La regla que decide es una:**
+
+```
+¿la función tiene UNA imagen 16:9 propia?
+   sí  → forma B (una imagen)
+   no  → forma A (solo texto)
+```
+
+**«Propia» significa de la obra misma.** Un programa de cortos **no** toma
+prestada la imagen de una de sus obras: elegir un fotograma de las nueve para
+representar a las nueve es curaduría nuestra sobre curaduría ajena. Un programa
+sin still propio es **forma A**.
+
+**Nunca varias imágenes** (decisión de Juan, 18 ago 2026). Mosaicos, escalonados
+y tiras de índice quedan descartados: a 84 px son ruido, no información.
+
+**Nunca una imagen que no sea 16:9.** Un póster vertical 2:3 de una obra no se
+mete en el campo — eso sería recortarlo. Esa función es **forma A**.
+
+**El problema que corrige.** El tamaño de la sección estaba atado a una
+constante del ancho (`_BAND_FS = 0.0542`) y la banda a un alto fijo (28,89%).
+En la tarjeta real de 84 px eso da **una losa de 36 px con letra de 4,55 px**:
+la banda nunca se llena, y da igual que el nombre sea corto o largo. Fuera de
+los festivales con stills, *casi todos* nuestros pósters son de solo texto —
+24 funciones en FICDEH, 7 en FINCA— así que ahí la tipografía no decora: es el
+póster entero.
+
+**Retícula.** El póster es 2:3, así que la unidad cuadra sin residuo:
+
+```
+u = ancho / 8        →  el póster es 8u × 12u (módulos cuadrados)
+línea base           =  media unidad (24 líneas)
+margen               =  0,75u  →  caja de contenido 6,5u
+filete de sección    =  0,25u de alto, a sangre, en color de arquetipo
+```
+
+**Anatomía.** Sobre fondo `#0A0A0A` (el negro de la marca — el mismo de los
+slides de social media, **no** `#141414`):
+
+| elemento | posición | tamaño |
+|---|---|---|
+| filete de sección | `y = 0` | `0,25u`, a sangre |
+| sección | `y = 1u` | la mayor que quepa en `6,5u × 3,4u`, máx. 3 líneas |
+| título | anclado abajo, sobre `11,25u` | la mayor que quepa en `6,5u × 2,4u`, máx. 4 líneas |
+| dato | bajo el título | `5% del ancho`, gris `#888` |
+| luz | esquina inferior **derecha** | glow radial ámbar `#F59E0B` |
+
+**La regla que lo hace funcionar: la tipografía se ajusta al ESPACIO, no a una
+constante.** El corte de línea se decide por **ancho medido**, nunca por número
+de caracteres (partir por caracteres dejaba el título en una sola línea
+minúscula). En producción el ajuste se calcula en el `viewBox` del SVG —
+determinista, sin medir el DOM.
+
+Resultado medido en la tarjeta de 84 px:
+
+```
+                   hoy       aprobado
+CineAutopsia      4,5 px     11,4 px
+FICDEH            4,5 px     15,0 px
+FINCA             4,5 px      8,5 px
+esfuerzo (43 car) 4,5 px      9,2 px  ← «Retrospectiva 10 Años del Acuerdo de Paz»
+```
+
+La prueba de esfuerzo entra legible en tres líneas **sin tocar el nombre que
+puso el festival**: la regla de que las secciones no se renombran (§ vocabulario)
+queda intacta.
+
+**El color de sección deja de ser una losa** y pasa a ser el filete superior más
+el color de la propia tipografía de la sección. Se conserva porque es la señal
+que se lee de un vistazo al hacer scroll.
+
+**La luz va abajo a la derecha**, no abajo a la izquierda como en los slides de
+Instagram: en el póster esa esquina la ocupa el título.
+
+**Sin chevron.** A 84 px se leía como suciedad y competía con la luz por la
+misma esquina.
+
+El corte de línea sigue siendo `_bandWrap` (ninguna línea, salvo la última,
+termina en conjunción, preposición, artículo o separador).
+
+#### Lo que cambió al implementar (19 ago 2026) — la spec se corrige con lo medido
+
+La anatomía se implementó tal cual, con cuatro ajustes que salieron de MEDIR el
+texto ya renderizado (`getBBox`) en la tarjeta real. Se documentan acá porque
+esta sección es la fuente única y las cifras de arriba salían de un mockup:
+
+- **El negro es `#0B0A08`, no `#0A0A0A`.** El guardián `[warm-neutrals]` marca
+  `#0A0A0A` como paleta fría vieja: la app migró a negros cálidos. A la vista son
+  el mismo negro; la regla del design system manda.
+- **La sección admite 4 líneas, no 3** (decisión de Juan). Con 3 líneas, el caso
+  de esfuerzo daba **6,4 px**; con 4 da **7,7 px**, un 20% más.
+- **Los 9,2 px del caso de esfuerzo NO son alcanzables.** «Retrospectiva 10 Años
+  del Acuerdo de Paz» son 39 caracteres; para dar 9,2 px en una tarjeta de 84 px
+  cada línea podría tener 12 caracteres y 3×12 = 36 < 39. El techo aritmético con
+  el margen de 0,75u es 7,7 px. Ensanchar la caja a 7,5u tampoco alcanza (7,5 px)
+  y además desbordaba. El número del mockup no medía el texto renderizado.
+- **Tope de 15 px para la sección** (decisión de Juan). «La mayor que quepa» sin
+  techo llevaba «CHARLA» a 17,9 px — más grande que el título de la obra.
+
+**Las dos reglas de margen son duras y están verificadas** (T98): ningún texto
+cruza `x = 108,75` ni `y = 168,75` del viewBox (0,75u). Dos hallazgos:
+
+- El dato apoyaba su línea base EN el margen y las colas de «g»/«p» se salían:
+  la base sube 0,30 em.
+- «Competencia Nacional de Cortometrajes» no tiene arreglo por tamaño: la regla
+  de corte prohíbe dejar «de» al final de línea, así que «DE CORTOMETRAJES»
+  viaja pegado y son 16 caracteres donde caben 14. Se resuelve con `textLength` +
+  `lengthAdjust="spacingAndGlyphs"`, que condensa ESA línea unos puntos hasta el
+  ancho exacto. Solo se activa cuando el corte no puede evitar el desborde.
+
+**El estimador de ancho se calibra con `getBBox`, no con `canvas.measureText`**:
+ahí el bold sintetizado mide de menos y el primer intento subestimaba hasta un
+19% («CHARLA» real da 0,739 em/carácter). Se usa 0,66 de promedio con factor de
+seguridad 1,12 — el error del estimador no es simétrico: pasarse se VE.
+
+#### Forma B — una sola imagen 16:9
+
+Idéntica a la forma A **más un campo de imagen**, y nada más:
+
+| elemento | posición | tamaño |
+|---|---|---|
+| campo de imagen | `y = 3,5u`, a sangre | `8u × 4,5u` — el 16:9 exacto |
+
+**El campo es constante**: siempre el mismo rectángulo, en la misma posición.
+Es lo que hace que las tarjetas se sientan familia al hacer scroll; cuando el
+bloque de imagen cambiaba de alto según el caso, la silueta saltaba.
+
+`8u` de ancho da `4,50u` de alto, que cae **en línea de media unidad**: el 16:9
+entra entero, sin recorte, sin sobrante y sin salirse de la retícula. Es el
+único ancho a sangre que lo consigue (`5u` → 2,81u y `6u` → 3,37u se salen).
+
+**Sin blur.** El relleno borroso bajo el still queda **descartado**: ensuciaba
+el negro de marca y competía con la imagen. Bajo el campo va el fondo limpio,
+igual que en la forma A.
+
+La sección baja a un máximo de 2 líneas (en forma A son 3): con imagen, la
+imagen es la que carga el peso.
+
+
 ### 6.1 Escape XML — fuente única `escXML`
 
 Todo texto de usuario que entra a un `<text>` SVG **debe** pasar por

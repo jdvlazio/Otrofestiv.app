@@ -2199,3 +2199,39 @@ test('T97 — el Plan que estás mirando no cambia solo: se marca y vos recalcul
   expect(r.tras.firma, 'y el cálculo es otro').not.toBe(r.inicial.firma);
   expect(r.tras.confirmarOff, 'y vuelve a poder confirmarse').toBe(false);
 });
+
+test('T98 — ningún texto del póster cruza la línea de margen de la retícula', async ({ page }) => {
+  test.setTimeout(90000);
+  await enterFestival(page, 'ficdeh2026', '2026-08-18T08:00:00-05:00');
+  const r = await page.evaluate(async () => {
+    const C = await import('/src/view/components.js');
+    // Retícula §6.0: u = ancho/8 = 15, margen 0,75u = 11,25. Las «reglas» son
+    // x ≤ 108,75 y y ≤ 168,75 — Juan las pidió tras ver textos tocando el borde.
+    const M = 11.25, DER = 120 - M, ABAJO = 180 - M;
+    const casos = [
+      ['Retrospectiva 10 Años del Acuerdo de Paz', 'Con la paz entre las manos'],
+      ['Competencia Nacional de Cortometrajes', 'Una obra con título bastante largo de prueba'],
+      ['Charla', 'El arte de moldear la IA'],
+      ['Muestra', 'Ñandú y el poema gigante que baja'],
+      ['Retrospectiva', 'Wwwwwwwwwwww Mmmmmmmmmm'],   // extremo sintético: palabra sin dónde partir
+      ['Cortos', 'A'],
+    ];
+    return casos.map(([sec, tit]) => {
+      const svg = decodeURIComponent(C._buildPosterV16({ accent:'#F59E0B', headerLabel:sec, title:tit, num:null, dato:'Charla · Bogotá' })
+        .replace('data:image/svg+xml,', ''));
+      const div = document.createElement('div'); div.innerHTML = svg;
+      const el = div.querySelector('svg');
+      el.style.cssText = 'position:absolute;width:120px'; document.body.appendChild(el);
+      let der = 0, abajo = 0, n = 0;
+      el.querySelectorAll('text').forEach(t => { const b = t.getBBox();
+        der = Math.max(der, b.x + b.width); abajo = Math.max(abajo, b.y + b.height); n++; });
+      el.remove();
+      return { sec, der:+der.toFixed(1), abajo:+abajo.toFixed(1), n, DER, ABAJO };
+    });
+  });
+  for (const c of r) {
+    expect(c.n, `«${c.sec}» dibuja texto (si no, el test no probaría nada)`).toBeGreaterThan(1);
+    expect(c.der, `«${c.sec}» no cruza el margen derecho`).toBeLessThanOrEqual(c.DER + 0.1);
+    expect(c.abajo, `«${c.sec}» no cruza el margen inferior`).toBeLessThanOrEqual(c.ABAJO + 0.1);
+  }
+});
