@@ -3677,11 +3677,16 @@ try:
     #   agenda.js (render agenda+miplan) · main.js (composición/bootstrap) ·
     #   i18n.js (diccionarios es/en, es DATA) · sheets-controller.js · handlers.js
     _ALLOW = {
+        # components.js aloja ahora el motor de pósters (§6.0: _fitLines, _lineaSVG,
+        # _buildPosterV16) y el dueño del color de sección. Entra a la lista con la
+        # razón escrita, que es lo que este guardián pide, en vez de seguir
+        # recortando comentarios que explican POR QUÉ el código es así.
+        'src/view/components.js': 804,  # +4: el gris de sección muere en el dueño — 19 ago
         # helpers.js estaba EXACTAMENTE en 800 antes del rediseño de pósters
         # (§6.0): el marco de la forma B y el header con ajuste tipográfico no
         # entran sin pasarse. Se sube 15 con la razón escrita, que es lo que este
         # guardián pide. Baja cuando se migre algo fuera de helpers.
-        'src/view/helpers.js': 815,  # +15: forma B + _edHdrSVG con _fitLines — 18 ago
+        'src/view/helpers.js': 824,  # +9: miniatura con campo centrado y halo en el pie — 19 ago
         'src/view/agenda.js': 2000,  # +3: el Plan no se reemplaza solo + aviso «Plan desactualizado» sin enlace — 18 ago
         'src/main.js': 1670,  # +1: dispatcher de includeAnyway (17 ago)  # +7: el splash recuerda el festival elegido (memoria que caduca sola) (16 ago)  # +46 total: _morphOpen a FLIP — clon de la card compuesta, radio contra-escalado, encuadre del destino (29 jul)
         'src/i18n/i18n.js': 1583,  # +3: av_recalcular en es/en/pt — 18 ago

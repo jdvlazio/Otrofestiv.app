@@ -126,7 +126,11 @@ export function itemPosterParts(item, section, imgClass, {header=false}={}){
   if(_isEditorialPoster(item)){
     // thumb pequeño → still enmarcado SIN banda de texto (precedente _posterThumb);
     // card grande (Diario) → con banda de sección, como _recapPosterCard.
-    return {ed:true, accent:_sectionColor(section||''), src,
+    // Filete de la MINIATURA en ámbar de marca, no en color de sección (Juan, 19
+    // ago): los cortos de un programa comparten sección, así que ese color no
+    // informa —y sin arquetipo cae al gris #2C2C2A, la barra gris repetida que
+    // él vio—. En la TAPA (header) se conserva: ahí sí orienta al scrollear.
+    return {ed:true, accent:header?_sectionColor(section||''):'var(--amber)', src,
       inner:editorialFrame(header?{header:_secLabel(section||''), src, title:item.title}:{src, title:item.title})};
   }
   return {ed:false, accent:'', src,
@@ -321,9 +325,18 @@ export function editorialFrame({header, body, src, title, loading, accent, dato}
   const img=src
     ? `<img class="ed-still" src="${src}"${_dt} loading="${_l}" onload="this.style.opacity='1'" onerror="_edPosterErr(this)" alt="">`
     : '';
+  // MINIATURA = sin sección ni título (el corto dentro de un programa). Ahí el
+  // campo se centra y el pie se llena con la propia obra desenfocada (Juan, 19
+  // ago: «se ven muy vacías»). No es el blur que mató §6.0 —aquel iba DETRÁS del
+  // still, a sangre, y ensuciaba el negro—: este está contenido bajo el campo y
+  // se apaga con máscara antes del borde. En el póster grande no aplica: ahí el
+  // vacío no existe, lo llenan el título y el dato.
+  const _mini=!header&&!_ttl;
+  const halo=(_mini&&src)?`<div class="ed-halo"><img src="${src}" loading="${_l}" aria-hidden="true" onerror="this.remove()" alt=""></div>`:'';
   return `<div class="ed-fil"></div>`
     + `<div class="ed-hdr">${header?_edHdrSVG(header, accent):''}</div>`
-    + `<div class="ed-img">${img}</div>`
+    + halo
+    + `<div class="ed-img${_mini?' ed-img-mid':''}">${img}</div>`
     + `<div class="ed-foot">`
       + (_ttl?`<div class="ed-title">${escXML(_ttl)}</div>`:'')
       + (_dato?`<div class="ed-dato">${escXML(_dato)}</div>`:'')

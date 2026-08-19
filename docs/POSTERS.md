@@ -266,6 +266,33 @@ misma esquina.
 El corte de línea sigue siendo `_bandWrap` (ninguna línea, salvo la última,
 termina en conjunción, preposición, artículo o separador).
 
+#### La MINIATURA es su propia forma (19 ago 2026, Juan)
+
+Un corto dentro de un programa se dibuja con el marco editorial pero **sin
+sección ni título** — los dice la fila de al lado. Con la anatomía de arriba tal
+cual, esa miniatura queda hueca: el hueco que en el póster grande llenan título
+y dato, acá no lo llena nadie. Reglas propias, y solo para ella:
+
+- **El campo se centra** (`y = 3,75u` en vez de `3,5u`): el vacío se reparte.
+- **Halo en el pie**: la propia obra desenfocada bajo el campo (`blur 10px`,
+  `opacity .55`), apagada con máscara antes del borde. Se lee como calor, no
+  como imagen. El primer valor probado —`.38`— se veía en el mockup y **no en
+  la app**: a 56×84 el pie seguía leyéndose negro. Se mide en la superficie
+  real, no en el banco de pruebas.
+- **El filete va en ámbar de marca**, no en color de sección: los cortos de un
+  programa comparten sección, así que ese color no informa nada — y sin
+  arquetipo caía al gris `#2C2C2A`, que fue lo que se veía: una barra gris
+  repetida siete veces.
+
+**Esto NO revive el blur que §6.0 mató.** Aquel iba *detrás* del still, a
+sangre, y ensuciaba el negro de marca compitiendo con la imagen. Este está
+contenido bajo el campo, con máscara, y solo donde hay vacío: en la tapa
+—con sección y título— no se emite. La diferencia está fijada por test.
+
+Costo medido: **un `<img>` extra por miniatura, con el MISMO src** — el
+navegador lo reusa de su cache, así que son 7 elementos más en la ficha de un
+programa de 7 cortos y **cero descargas nuevas**.
+
 #### Lo que cambió al implementar (19 ago 2026) — la spec se corrige con lo medido
 
 La anatomía se implementó tal cual, con cuatro ajustes que salieron de MEDIR el

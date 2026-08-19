@@ -26,10 +26,8 @@ export function makeProgramPoster(state, title, duration, section, opts){
   // (generativo) de la MISMA sección salían de dos colores distintos —el bug de
   // "Peephole ámbar entre verdes". Fallback a la paleta por hash solo cuando la
   // sección no tiene color propio definido (evita gris para secciones nuevas).
-  const ACCENT_PALETTE=['#F59E0B','#3AAA6E','#E5A020','#E05252','#378ADD','#3A8E8E'];
-  const _hash=s=>[...s].reduce((h,c)=>(Math.imul(31,h)+c.charCodeAt(0))|0,0);
-  const _secAccent=_sectionColor(filmSec);
-  const accent=(_secAccent&&_secAccent!=='#2C2C2A')?_secAccent:ACCENT_PALETTE[Math.abs(_hash(sec))%ACCENT_PALETTE.length];
+  // El fallback por hash vivía acá y curaba solo al generativo: ahora es del dueño.
+  const accent=_sectionColor(filmSec);
 
   // Header: sección localizada vía _secLabel (lang-aware: EN→SECTION_EN,
   // ES→original sin emoji), uppercase. Así el poster editorial coincide con el
@@ -115,11 +113,17 @@ export function makeSorpresaPoster(){
 
 // Sección → color por ARQUETIPO (paleta unificada, POSTERS.md). El arquetipo gana;
 // fallback al mapa viejo, y a gris solo si no hay nada (lo caza el gate).
+// El gris #2C2C2A murió como color de sección (Juan, 19 ago): una sección sin
+// arquetipo caía a un gris apagado y, como el TEXTO se pinta con ese color,
+// quedaba gris sobre gris. La cura existía pero solo en el generativo; el marco
+// editorial usaba _sectionColor crudo. Ahora vive en el DUEÑO, para todos.
+const ACCENT_PALETTE=['#F59E0B','#3AAA6E','#E5A020','#E05252','#378ADD','#3A8E8E'];
+const _secHash=s=>[...String(s)].reduce((h,c)=>(Math.imul(31,h)+c.charCodeAt(0))|0,0);
 export function _sectionColor(sec){
-  if(!sec) return '#2C2C2A';
+  if(!sec) return '#F59E0B';                       // sin sección: ámbar de marca
   const arch = SECTION_ARCHETYPES[sec];
   if(arch && ARCHETYPE_COLORS[arch]) return ARCHETYPE_COLORS[arch];
-  return SECTION_COLORS[sec] || '#2C2C2A';
+  return SECTION_COLORS[sec] || ACCENT_PALETTE[Math.abs(_secHash(sec))%ACCENT_PALETTE.length];
 }
 // Texto legible sobre un color: negro o blanco por MÁXIMO contraste real (WCAG),
 // no por umbral. Garantiza banda legible sobre cualquier color de sección.

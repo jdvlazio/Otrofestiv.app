@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202608190809">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202608190809">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202608190948">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202608190948">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -1060,6 +1060,12 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
    psp-editorial, plist-poster…); el alto del header es var(--ed-hdr-ratio).
    Lo construye editorialFrame() (helpers.js). Sustituye a las 7 copias bespoke. */
 .poster-ed{position:relative;overflow:hidden;background:var(--bg);container-type:inline-size}
+/* Luz de marca en la esquina inferior derecha — la misma firma que el póster
+   generativo (§6.0), pero DISCRETA: a 64px de ancho una luz como la del póster
+   grande es un manchón que compite con la imagen, que es lo único que informa
+   (Juan, 19 ago). Se dimensiona en % del contenedor, así escala con la tarjeta. */
+.poster-ed::after{content:'';position:absolute;right:0;bottom:0;width:55%;height:32%;pointer-events:none;
+background:radial-gradient(circle at 100% 100%,rgba(245,158,11,.16),rgba(245,158,11,0) 70%)}
 /* ── Forma B (POSTERS.md §6.0): la forma A más UN campo de imagen ───────────
    Retícula del póster 2:3 en %: 1u = 12,5% del ancho = 8,33% del alto. Filete
    0,25u · sección a 1u · campo de imagen 8u×4,5u en y=3,5u (29,17% / 37,5%) ·
@@ -1070,6 +1076,16 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .poster-ed .ed-hdr{position:absolute;top:8.33%;left:0;right:0;padding:0 9.4%}
 .poster-ed .ed-img{position:absolute;top:29.17%;left:0;right:0;height:37.5%;overflow:hidden;background:var(--bg)}
 .poster-ed .ed-still{width:100%;height:100%;object-fit:cover;display:block;opacity:0;transition:opacity 250ms ease}
+/* Miniatura (corto dentro de un programa): campo CENTRADO y halo desenfocado en
+   el pie. Sin esto la tarjeta se leía hueca —el hueco del póster grande, donde
+   van título y dato, acá no lo llena nadie—. El halo se apaga con máscara antes
+   del borde: a 52px no se lee como imagen, se lee como calor. */
+.poster-ed .ed-img-mid{top:31.25%;z-index:2}
+.poster-ed .ed-halo{position:absolute;left:0;right:0;top:68.75%;bottom:0;overflow:hidden;z-index:1;pointer-events:none}
+.poster-ed .ed-halo img{position:absolute;left:0;bottom:0;width:100%;height:260%;object-fit:cover;
+filter:blur(10px) saturate(1.15);opacity:.55;
+-webkit-mask-image:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.35) 70%,transparent 100%);
+mask-image:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.35) 70%,transparent 100%)}
 .poster-ed .ed-foot{position:absolute;left:0;right:0;bottom:6.25%;padding:0 9.4%}
 .poster-ed .ed-title{font-family:-apple-system,BlinkMacSystemFont,sans-serif;font-size:9.2cqi;font-weight:var(--w-display);letter-spacing:-.02em;color:var(--white);line-height:1.2;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
 .poster-ed .ed-dato{font-family:-apple-system,BlinkMacSystemFont,sans-serif;font-size:5cqi;font-weight:var(--w-semi);color:var(--gray);margin-top:2%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
@@ -3373,7 +3389,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202608190809";
+    s.src="/src/main.js?v=202608190948";
     document.body.appendChild(s);
     // Watchdog de boot (P0 18 jul): si el grafo ESM murió en el import (caché
     // HTTP mixta tras deploys en ráfaga — main.js nuevo + módulo viejo sin el
