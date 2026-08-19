@@ -266,6 +266,41 @@ misma esquina.
 El corte de línea sigue siendo `_bandWrap` (ninguna línea, salvo la última,
 termina en conjunción, preposición, artículo o separador).
 
+#### Lo que cambió al implementar (19 ago 2026) — la spec se corrige con lo medido
+
+La anatomía se implementó tal cual, con cuatro ajustes que salieron de MEDIR el
+texto ya renderizado (`getBBox`) en la tarjeta real. Se documentan acá porque
+esta sección es la fuente única y las cifras de arriba salían de un mockup:
+
+- **El negro es `#0B0A08`, no `#0A0A0A`.** El guardián `[warm-neutrals]` marca
+  `#0A0A0A` como paleta fría vieja: la app migró a negros cálidos. A la vista son
+  el mismo negro; la regla del design system manda.
+- **La sección admite 4 líneas, no 3** (decisión de Juan). Con 3 líneas, el caso
+  de esfuerzo daba **6,4 px**; con 4 da **7,7 px**, un 20% más.
+- **Los 9,2 px del caso de esfuerzo NO son alcanzables.** «Retrospectiva 10 Años
+  del Acuerdo de Paz» son 39 caracteres; para dar 9,2 px en una tarjeta de 84 px
+  cada línea podría tener 12 caracteres y 3×12 = 36 < 39. El techo aritmético con
+  el margen de 0,75u es 7,7 px. Ensanchar la caja a 7,5u tampoco alcanza (7,5 px)
+  y además desbordaba. El número del mockup no medía el texto renderizado.
+- **Tope de 15 px para la sección** (decisión de Juan). «La mayor que quepa» sin
+  techo llevaba «CHARLA» a 17,9 px — más grande que el título de la obra.
+
+**Las dos reglas de margen son duras y están verificadas** (T98): ningún texto
+cruza `x = 108,75` ni `y = 168,75` del viewBox (0,75u). Dos hallazgos:
+
+- El dato apoyaba su línea base EN el margen y las colas de «g»/«p» se salían:
+  la base sube 0,30 em.
+- «Competencia Nacional de Cortometrajes» no tiene arreglo por tamaño: la regla
+  de corte prohíbe dejar «de» al final de línea, así que «DE CORTOMETRAJES»
+  viaja pegado y son 16 caracteres donde caben 14. Se resuelve con `textLength` +
+  `lengthAdjust="spacingAndGlyphs"`, que condensa ESA línea unos puntos hasta el
+  ancho exacto. Solo se activa cuando el corte no puede evitar el desborde.
+
+**El estimador de ancho se calibra con `getBBox`, no con `canvas.measureText`**:
+ahí el bold sintetizado mide de menos y el primer intento subestimaba hasta un
+19% («CHARLA» real da 0,739 em/carácter). Se usa 0,66 de promedio con factor de
+seguridad 1,12 — el error del estimador no es simétrico: pasarse se VE.
+
 #### Forma B — una sola imagen 16:9
 
 Idéntica a la forma A **más un campo de imagen**, y nada más:

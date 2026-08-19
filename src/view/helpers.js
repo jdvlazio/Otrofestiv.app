@@ -7,7 +7,7 @@
 
 import { FESTIVAL_BUFFER, FESTIVAL_QA_MIN, FESTIVAL_CONFIG, TMDB_IMG } from '../config.js';
 import {
-  DAY_ABBR, DAY_NUM, ICONS, _buildPosterV16, _bandTextSVG, _secLabel, _sectionColor,
+  DAY_ABBR, DAY_NUM, ICONS, _buildPosterV16, _fitLines, _secLabel, _sectionColor,
   makeProgramPoster, makeEventPoster, makeSorpresaPoster, escXML, _langDates, parseProgramTitle,
 } from './components.js';
 // _langDates se REEXPORTA: el dueño vive en components.js (helpers importa
@@ -243,11 +243,17 @@ export function _isEditorialPoster(f){
 // sin regresión, y robusto donde el piso de font-size rompía el HTML.
 export function _edHdrSVG(label, accent){
   if(!String(label||'').trim()) return '';
-  // Banda única (misma fuente que el generativo): vw=100, anclado arriba, y el
-  // <svg> propio del editorial escala vía CSS (.ed-hdr-svg / --ed-hdr-ratio).
-  const {text, lines, lh}=_bandTextSVG(label, accent, 100, {mode:'top'});
-  const VH=+(lines*lh+4).toFixed(2);
-  return `<svg class="ed-hdr-svg" viewBox="0 0 100 ${VH}" preserveAspectRatio="xMidYMid meet">${text}</svg>`;
+  // Mismo motor que la forma A (_fitLines), vw=100. Con imagen la sección baja a
+  // 2 líneas: la imagen carga el peso (§6.0). Caja = 8u menos margen de 0,75u.
+  const U=100/8, M=0.75*U, CW=100-2*M;
+  const fit=_fitLines(String(label).toUpperCase(),
+    {boxW:CW, boxH:2.4*U, maxLines:2, fsMax:2.4*U/1.16, fsMin:5, lhRatio:1.16, lsEm:0.02, upper:true});
+  const round=n=>+n.toFixed(2);
+  const VH=+(fit.lines.length*fit.lh+fit.fs*0.3).toFixed(2);
+  const text=fit.lines.map((l,i)=>
+    `<text x="${round(M)}" y="${round(fit.fs+i*fit.lh)}" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="${round(fit.fs)}" font-weight="800" letter-spacing="${round(fit.fs*0.02)}" fill="${accent}">${escXML(l)}</text>`
+  ).join('');
+  return `<svg class="ed-hdr-svg" viewBox="0 0 100 ${VH}" preserveAspectRatio="xMinYMin meet">${text}</svg>`;
 }
 
 export function _posterThumb(f, cssClass, loading){
@@ -304,19 +310,24 @@ export function posterModel(f){
 // blur es decorativo (aria-hidden); el still lleva data-title y el onerror que
 // cae a generativo. `body` con texto → scrim con título (grid); undefined/''  →
 // sin scrim (thumb/lista/sheet y ended-poster, que trae su propio footer).
-export function editorialFrame({header, body, src, title, loading, accent}={}){
+
+export function editorialFrame({header, body, src, title, loading, accent, dato}={}){
+  // Forma B (§6.0) = forma A + UN campo 16:9 constante (8u×4,5u en y=3,5u). Sin
+  // blur ni banda de color; la geometría vive en el CSS de .poster-ed, en %.
   const _l=loading||'lazy';
   const _dt=title?` data-title="${escXML(title)}"`:'';
-  const hdr=`<div class="ed-hdr">${header?_edHdrSVG(header, accent):''}</div>`;
   const _ttl=(body!=null && String(body).trim()) ? String(body) : '';
+  const _dato=(dato!=null && String(dato).trim()) ? String(dato) : '';
   const img=src
-    ? `<div class="ed-img">`
-      + `<img class="ed-blur" src="${src}" loading="${_l}" aria-hidden="true" onerror="this.remove()" alt="">`
-      + `<img class="ed-still" src="${src}"${_dt} loading="${_l}" onload="this.style.opacity='1'" onerror="_edPosterErr(this)" alt="">`
-      + (_ttl?`<div class="ed-scrim"><div class="ed-title">${escXML(_ttl)}</div></div>`:'')
-      + `</div>`
-    : `<div class="ed-img"></div>`;
-  return `${hdr}${img}`;
+    ? `<img class="ed-still" src="${src}"${_dt} loading="${_l}" onload="this.style.opacity='1'" onerror="_edPosterErr(this)" alt="">`
+    : '';
+  return `<div class="ed-fil"></div>`
+    + `<div class="ed-hdr">${header?_edHdrSVG(header, accent):''}</div>`
+    + `<div class="ed-img">${img}</div>`
+    + `<div class="ed-foot">`
+      + (_ttl?`<div class="ed-title">${escXML(_ttl)}</div>`:'')
+      + (_dato?`<div class="ed-dato">${escXML(_dato)}</div>`:'')
+    + `</div>`;
 }
 
 export function isNowShowing(f){
