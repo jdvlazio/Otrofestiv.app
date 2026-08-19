@@ -381,7 +381,9 @@
      "year": 2025,
      "duration": "30 min",
      "poster": "/assets/cineautopsia/de-tragedia-hare-gloria.jpg",
-     "posterSource": "editorial"
+     "posterSource": "editorial",
+     "synopsis": "Retoma y pervierte la obra NACIONEL para convertirla en un ritual audiovisual donde la danza popular invoca antídotos frente a la violencia sobre nuestros territorios.",
+     "synopsis_lang": "es"
     }
    ]
   },
@@ -446,7 +448,9 @@
      "year": 2025,
      "duration": "16 min",
      "poster": "/assets/cineautopsia/flujos-rectificados.jpg",
-     "posterSource": "editorial"
+     "posterSource": "editorial",
+     "synopsis": "Una videoinstalación construida con imágenes técnicas de los observatorios astronómicos del desierto chileno: imágenes que no fueron generadas para ser contempladas, sino como infraestructura de análisis. La obra propone un acercamiento sensible a ellas y pregunta cuánta intervención humana hay en la imagen que finalmente sale al mundo.",
+     "synopsis_lang": "es"
     },
     {
      "title": "AGULHA",
@@ -500,7 +504,9 @@
      "year": 2025,
      "duration": "15 min",
      "poster": "/assets/cineautopsia/si-yo-fuese-fuego-if-i-were-fire.jpg",
-     "posterSource": "editorial"
+     "posterSource": "editorial",
+     "synopsis": "Dos mujeres viven un amor prohibido en un lugar donde no se las comprende. El acoso de un jinete convierte el idilio en persecución: un western breve sobre la violencia de género, rodado en Ihuatzio, en la zona lacustre de Michoacán.",
+     "synopsis_lang": "es"
     }
    ]
   },
@@ -1243,8 +1249,11 @@
      "country": "Corea del Sur",
      "flags": "🇰🇷",
      "duration": "13 min",
+     "synopsis_en": "Under the occupied shadows, floating cosmo ground, xenoliths, and the breaths perceived from all beings are increasingly coarsened by humanity's collective experiments. It considers all existing entities as pioneers of a sentient cosmos, thinking not only from Earth but from the universe at large, and positions both human and non-human elements as agents jointly adventuring through this unknown space, while exploring the ecological emergencies of the present.",
      "poster": "/assets/cineautopsia/natal-kick-cosmo-ground.jpg",
-     "posterSource": "editorial"
+     "posterSource": "editorial",
+     "synopsis": "Bajo las sombras ocupadas, el suelo cósmico flotante, los xenolitos y los alientos que se perciben en todos los seres se vuelven cada vez más ásperos por los experimentos colectivos de la humanidad. La obra considera a todas las entidades existentes como pioneras de un cosmos sintiente: piensa no solo desde la Tierra sino desde el universo entero, y sitúa lo humano y lo no humano como agentes que se aventuran juntos por ese espacio desconocido, mientras explora las emergencias ecológicas del presente.",
+     "synopsis_lang": "es"
     },
     {
      "title": "The Othered Scene",
