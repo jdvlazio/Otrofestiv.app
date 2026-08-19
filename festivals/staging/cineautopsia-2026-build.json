@@ -217,7 +217,9 @@
      "duration": "6 min",
      "poster": "/assets/cineautopsia/perdidos-en-la-nube.jpg",
      "posterSource": "editorial",
-     "_src": "Instagram del festival (issue #565)"
+     "_src": "Instagram del festival (issue #565)",
+     "synopsis": "Una obra inmersiva sobre el drama de la hiperconexión digital y el aislamiento físico: el encierro, las barreras, la violencia y la soledad, a partir de piezas digitales creadas a diario.",
+     "synopsis_lang": "es"
     },
     {
      "title": "La methode des moments",
@@ -258,9 +260,12 @@
      "flags": "🇺🇸",
      "year": 2024,
      "duration": "3 min",
+     "synopsis_en": "A ritual of moon-gazing: a massive image of the moon composed of stitched-together fragments. As the camera zooms out, the spaces beyond each fragment are revealed not as part of the same origin but as different imaginary moons, and the world fractures into concurrent timelines that scatter and reunite endlessly. The work asks how much of our experience of the moon is truly shared.",
      "poster": "/assets/cineautopsia/are-we-gazing-at-the-same-moon.jpg",
      "posterSource": "editorial",
-     "_src": "Instagram del festival (issue #565)"
+     "_src": "Instagram del festival (issue #565)",
+     "synopsis": "Un ritual de contemplación lunar: una imagen enorme de la luna, hecha de fragmentos cosidos entre sí. A medida que la cámara se aleja, lo que hay más allá de cada fragmento se revela como lunas imaginarias distintas, y el mundo se fractura en líneas de tiempo simultáneas que se dispersan y se reúnen sin fin. La obra pregunta cuánto de nuestra experiencia de la luna es de verdad compartida.",
+     "synopsis_lang": "es"
     },
     {
      "title": "Event Horizon",
@@ -280,9 +285,12 @@
      "flags": "🇫🇷",
      "year": 2023,
      "duration": "7 min",
+     "synopsis_en": "An invitation to feel free, guided by a voice that plunges viewers into a dreamlike and hypnotic introspection. Each stage transforms the venue into complex digital formations that become new 360° moving objects of contemplation — a reflection on the extension of our consciousness through digital tools, and on the boundary between the biological and the digital self.",
      "poster": "/assets/cineautopsia/exo-cortex-3-0.jpg",
      "posterSource": "editorial",
-     "_src": "Instagram del festival (issue #565)"
+     "_src": "Instagram del festival (issue #565)",
+     "synopsis": "Una invitación a sentirse libre, guiada por una voz que sumerge al espectador en una introspección onírica e hipnótica. Cada etapa convierte la sala en formaciones digitales complejas, objetos de contemplación en 360°. Debajo late una reflexión sobre cómo las herramientas digitales extienden nuestra conciencia, y sobre el límite entre el yo biológico y el yo digital.",
+     "synopsis_lang": "es"
     },
     {
      "title": "Este no es tu jardín",
@@ -612,8 +620,11 @@
      "flags": "🇮🇹",
      "year": 2025,
      "duration": "19 min",
+     "synopsis_en": "An exploration of the limits of vision based on images collected during the Cassini-Huygens mission: research electronics and experimental cinema in a single audio/video set.",
      "poster": "/assets/cineautopsia/la-descrizione-delle-stelle-fisse.jpg",
-     "posterSource": "editorial"
+     "posterSource": "editorial",
+     "synopsis": "Una exploración de los límites de la visión a partir de las imágenes que recogió la misión Cassini-Huygens: electrónica de investigación y cine experimental en un mismo gesto audiovisual.",
+     "synopsis_lang": "es"
     },
     {
      "title": "Tamashi",
@@ -707,8 +718,11 @@
      "flags": "🇺🇸",
      "year": 2024,
      "duration": "19 min",
+     "synopsis_en": "Embodied descriptions of lightness and darkness, experienced by someone undergoing various medical procedures. As she tries to process grief, the central character questions how her total attentiveness to the real might be slightly hallucinatory. The dialogue weaves between her internal conversation and consultations with an overbearing doctor, around how memory is recorded, stored and altered through perception and recall. Drawn largely from Bruno Schulz's «Sanatorium Under the Sign of the Hourglass».",
      "poster": "/assets/cineautopsia/from-dusk-to-dawn.jpg",
-     "posterSource": "editorial"
+     "posterSource": "editorial",
+     "synopsis": "Descripciones encarnadas de la luz y la oscuridad, vividas por alguien que atraviesa una sucesión de procedimientos médicos. Mientras intenta elaborar un duelo, la protagonista se pregunta si su atención total a lo real no será algo alucinatoria. El diálogo oscila entre su conversación interna y las consultas con un médico invasivo, alrededor de cómo la memoria se registra, se guarda y se altera al percibir y recordar. Inspirada sobre todo en «Sanatorio bajo la clepsidra», de Bruno Schulz.",
+     "synopsis_lang": "es"
     },
     {
      "title": "The Everlasting Pea",
@@ -1296,8 +1310,11 @@
      "country": "Indonesia, Puerto Rico",
      "flags": "🇮🇩🇵🇷",
      "duration": "14 min",
+     "synopsis_en": "An experimental documentary gathering fractured memories from Vieques and Bali, two islands on opposite ends of the world that look like paradise fantasy and conceal a common buried history. Unplanned footage, photographs and snippets of voice recordings intertwine with the sounds of nonhuman kin that bore witness when humans choose to forget. Beneath the banalities of everyday life lies the loudest echo of violence: the silences people keep.",
      "poster": "/assets/cineautopsia/notes-from-silences.jpg",
-     "posterSource": "editorial"
+     "posterSource": "editorial",
+     "synopsis": "Documental experimental que reúne memorias fracturadas de Vieques y Bali, dos islas en extremos opuestos del mundo que parecen una fantasía de paraíso y esconden una historia enterrada en común. Metraje no planeado, fotografías y retazos de grabaciones de voz se entrelazan con los sonidos de la parentela no humana que atestiguó lo que los humanos eligen olvidar. Bajo la banalidad de lo cotidiano late el eco más fuerte de la violencia: los silencios que la gente sigue guardando.",
+     "synopsis_lang": "es"
     }
    ]
   },
