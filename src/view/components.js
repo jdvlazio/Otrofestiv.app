@@ -53,10 +53,14 @@ export function makeProgramPoster(state, title, duration, section, opts){
   const _di=_dayMatch?_dayIdx[_dayMatch[1].toLowerCase()]:undefined;
   const dayAbbr=_di!=null?(_DOW_ABBR[_lang]||_DOW_ABBR.es)[_di]:null;
 
-  // Body: siempre vacío cuando hay número (el header + número son suficientes)
-  // Sin número: extraer solo la parte distintiva
+  // Body: la parte distintiva del título. Antes se vaciaba CUANDO HABÍA NÚMERO
+  // —«el header + número son suficientes»— porque el número era un protagonista
+  // de 32px. Con la anatomía §6.0 el número bajó a dato al pie, así que esa
+  // regla dejaba la tarjeta muda: «DESTACADOS» y un «1» chiquito, nada más
+  // (visto en la vista previa de CineAutopsia, 19 ago). El número ya no vacía
+  // el cuerpo; viaja al pie como lo que es.
   let bodyTitle='';
-  if(!num){
+  {
     // ── REGLA INAMOVIBLE: el body = identificador único del programa ──────
     // Para programas con código "PGM N" el código ES el identificador → body.
     // Se extrae del TÍTULO (no se matchea contra la sección): idioma-agnóstico
@@ -94,7 +98,12 @@ export function makeProgramPoster(state, title, duration, section, opts){
 
   // opts.untitled (regla anti-repetición del sheet): cuerpo vacío — el título ya
   // está en la cabecera del sheet. El num/día SE CONSERVA (identidad visual).
-  return _buildPosterV16({accent, headerLabel, title:(opts&&opts.untitled)?'':bodyTitle, num:num||dayAbbr||null});
+  // El número solo va al pie si el cuerpo NO lo dice ya: «Mediometrajes del Mundo
+  // Entero 1» + «1 · 102 min» repetía el dato que el título acababa de dar.
+  const _numRedundante=num&&new RegExp('\\b'+num+'\\s*$').test(bodyTitle||'');
+  const _dato=[(num&&!_numRedundante)?`${num}`:null, String(duration||'').trim()||null]
+    .filter(Boolean).join(' · ')||dayAbbr||null;
+  return _buildPosterV16({accent, headerLabel, title:(opts&&opts.untitled)?'':bodyTitle, num:null, dato:_dato});
 }
 
 export function makeSorpresaPoster(){
@@ -314,7 +323,14 @@ export function _buildPosterV16({accent, headerLabel, title, num, dato}){
 
   // Dato al pie (5% del ancho, gris). El `num` de los programas —«PGM 05», «MAR
   // 18»— ES un dato: deja de ser un número de 32px en el centro.
-  const datoStr=String(dato||num||'').trim();
+  //
+  // PERO si no hay título, el dato PASA AL LUGAR DEL TÍTULO. Sin esto la tarjeta
+  // queda muda: los programas con `untitled` (regla anti-repetición del sheet)
+  // se apoyaban en el número gigante y, al degradarlo a dato, quedaron con la
+  // sección y nada más — se vio en la vista previa de CineAutopsia (19 ago).
+  const _tituloVacio=!String(title||'').trim();
+  const _datoCrudo=String(dato||num||'').trim();
+  const datoStr=_tituloVacio?'':_datoCrudo;
   const datoFS=VW*0.05;
   // La línea base va ARRIBA del margen por el descendente (~0,22em): apoyarla
   // justo en 11,25u metía las colas de la «g» y la «p» fuera de la retícula.
@@ -325,7 +341,7 @@ export function _buildPosterV16({accent, headerLabel, title, num, dato}){
 
   // Título — anclado abajo, sobre el dato: 6,5u × 2,4u, máx 4 líneas
   const tTop=datoStr?datoY-datoFS*1.6:datoY;
-  const ttl=_fitLines(String(title||'').trim(),
+  const ttl=_fitLines(_tituloVacio?_datoCrudo:String(title||'').trim(),
     {boxW:CW, boxH:2.4*U, maxLines:4, fsMax:2.4*U/1.2, fsMin:12, lhRatio:1.2, lsEm:-0.02, upper:false});
   // fsMin=12 (≈8,4px en la tarjeta) es SUELO DE LEGIBILIDAD, no un capricho: por
   // debajo, _fitLines recorta con elipsis en vez de encoger hasta lo ilegible —
