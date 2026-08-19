@@ -257,3 +257,17 @@ test('editorialFrame: miniatura lleva halo + campo centrado; la tapa no', () => 
   const sinSrc = H.editorialFrame({});
   assert.ok(!sinSrc.includes('ed-halo'), 'sin imagen no hay halo que dibujar');
 });
+
+// ── La sección nunca se pinta con un color inexistente ───────────────────────
+// Regresión real (19 ago): posterParts llamaba a editorialFrame SIN accent, el
+// <text> salía con fill="undefined" y el navegador lo pintaba NEGRO sobre fondo
+// oscuro. El filete no lo delataba: toma su color del CSS, no de ese argumento.
+// El llamador ya pasa el accent; esto cubre el cinturón, por si aparece otro.
+test('_edHdrSVG: sin accent cae a un color válido, nunca a "undefined"', () => {
+  for (const acc of [undefined, null, '', '   ']) {
+    const svg = H._edHdrSVG('Encuentro', acc);
+    assert.ok(!/fill="(undefined|null|)"/.test(svg), `accent=${JSON.stringify(acc)} no puede dar fill vacío`);
+    assert.ok(/fill="(#[0-9A-Fa-f]{3,8}|var\(--[a-z-]+\))"/.test(svg), 'el fill es un color de verdad');
+  }
+  assert.ok(H._edHdrSVG('Encuentro', '#3AAA6E').includes('fill="#3AAA6E"'), 'con accent, lo respeta');
+});
