@@ -451,7 +451,8 @@ export const FESTIVAL_CONFIG={
     // está entera (13 funciones, 6 sedes, 8 jornadas, 67 obras con imagen) y el
     // keyArt es la portada de su PDF sin la franja del encabezado. Quitar esta
     // línea ES publicar, y eso lo decide Juan.
-    group:'test',
+    // VISTA PREVIA LOCAL (rama preview/*, jamás pusheada): el freno sigue en la
+    // rama de Onboarding y lo levanta Juan cuando decida publicar.
     tagline:'Festival de Cine Experimental de Bogotá',
     films:null,posters:null,lbSlugs:{}
   },
