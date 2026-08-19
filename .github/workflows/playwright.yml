@@ -32,6 +32,15 @@ jobs:
   test:
     runs-on: ubuntu-latest
     name: Regression tests
+    # Imagen oficial de Playwright: trae chromium y webkit YA INSTALADOS. El paso
+    # de descarga se colgó CUATRO veces seguidas (19, 31, 11 y 18 min contra los
+    # 2-4 normales) bloqueando un merge con el resto del CI en verde. Cachear no
+    # alcanzaba: la primera corrida igual tiene que bajar los ~350 MB. Acá no se
+    # baja nada — los binarios vienen en la imagen, y la versión del tag es la
+    # MISMA que la del package-lock, así que no hay deriva silenciosa.
+    container:
+      image: mcr.microsoft.com/playwright:v1.60.0-noble
+      options: --user 1001
 
     steps:
       - name: Checkout
@@ -46,11 +55,14 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Install Playwright browsers
-        # webkit = motor de iOS para el spec responsive cross-engine (proyecto
-        # ios-mobile). chromium cubre la suite de comportamiento + el proyecto
-        # android-small (Blink@360).
-        run: npx playwright install --with-deps chromium webkit
+      # Los navegadores vienen en la imagen. Este paso NO descarga: verifica que
+      # estén y falla ruidosamente si algún día el tag deja de traerlos —mejor
+      # eso que una suite que corre contra un navegador que no es el que creemos.
+      - name: Verificar navegadores de la imagen
+        run: |
+          npx playwright --version
+          test -d "${PLAYWRIGHT_BROWSERS_PATH:-/ms-playwright}" || { echo "::error::la imagen no trae los navegadores"; exit 1; }
+          ls "${PLAYWRIGHT_BROWSERS_PATH:-/ms-playwright}" | head
 
       # scripts/test.sh en vez de `npx playwright test` directo: cada paso toma un
       # puerto LIBRE para su servidor. Antes los cinco pasos usaban el 3000 y cada
