@@ -22,6 +22,11 @@ X_SEDE = 100          # a la izquierda de esto vive el rótulo de sede
 # otra cosa escrita en el margen: el sábado 12 la parrilla ocupa la mitad de
 # arriba y debajo empieza otra sección («Conversaciones»), cuyo encabezado caía
 # en la misma columna y se leía como una sede más.
+# Encabezados de las secciones de DETALLE que van debajo de la parrilla en
+# algunas páginas. La parrilla termina donde empieza la primera de ellas: sin
+# ese corte, el sábado 12 producía una función fantasma cuyo «título» era el
+# rótulo de sede que la sección de detalle repite en su cuerpo.
+SECCION = re.compile(r'^(Conversaciones|Debate|Encuentro|Seminario|Foro)\b', re.I)
 MUNICIPIOS = re.compile(r'^(Medell[íi]n|Itag[üu][íi]|Envigado|Bello|Caldas|Copacabana|'
                         r'Sabaneta|La Estrella|Girardota|Barbosa)\.?$', re.I)
 ANCHO_CELDA = 72      # ancho útil de una celda, medido en la página
@@ -75,6 +80,9 @@ def sede_de(y, sedes):
 def parsea_pagina(page):
     items = fragmentos(page)
     if not items: return None, []
+    corte = min([y for x, y, t in items if x < X_SEDE and SECCION.match(t)] or [-1e9])
+    if corte > -1e9:
+        items = [(x, y, t) for x, y, t in items if y > corte]
     sedes = bloques_sede(items)
     dia = next((t for x, y, t in items if DIA.match(t)), None)
     num = next((t for x, y, t in items if x < 25 and t.isdigit()), None)

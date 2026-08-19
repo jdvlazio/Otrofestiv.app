@@ -6,10 +6,11 @@
   "robots": "drive.google.com robots.txt leído antes de la descarga: /file permitido",
   "notas": [
    "las páginas 6, 8 y 10 son de DESCRIPCIÓN (Conversaciones, Debate, Encuentro), no parrilla; su texto sirve para sinopsis, no para horarios",
-   "dos celdas escriben la hora sin a.m./p.m. y van marcadas con _hora_inferida"
+   "dos celdas escriben la hora sin a.m./p.m. y van marcadas con _hora_inferida",
+   "la parrilla termina donde empieza la primera sección de detalle de la página; sin ese corte el sábado 12 daba una función fantasma"
   ]
  },
- "_funciones": 86,
+ "_funciones": 85,
  "funciones": [
   {
    "dia_semana": "jueves",
@@ -763,7 +764,7 @@
   {
    "dia_semana": "sábado",
    "hora": "17:00",
-   "titulo_crudo": "¿Qué haremos sin la muerte? / Was soll’n wir denn machen ohne den Tod Elfi Mikesch Viaje al extranjero Leonie Rodrian",
+   "titulo_crudo": "¿Qué haremos sin la muerte? / Was soll’n wir denn machen ohne den Tod Elfi Mikesch",
    "duracion_min": 101,
    "_pagina": 14,
    "sede": "Centro Colombo Americano Sede centro sala 2 Medellín",
@@ -776,15 +777,6 @@
    "duracion_min": 61,
    "_pagina": 14,
    "sede": "Centro Colombo Americano Sede centro sala 1 Medellín",
-   "dia": "2026-09-12"
-  },
-  {
-   "dia_semana": "sábado",
-   "hora": "19:00",
-   "titulo_crudo": "Centro Colombo Americano Sede centro - sala 1 Medellín",
-   "duracion_min": null,
-   "_pagina": 14,
-   "sede": "Centro Colombo Americano Sede centro sala 2 Medellín",
    "dia": "2026-09-12"
   }
  ]
