@@ -240,3 +240,20 @@ test('editorialFrame: escapa body, header y data-title (sin & crudo)', () => {
   assert.ok(html.includes('data-title="A &amp; B"'), 'data-title escapado');
   assert.ok(html.includes('A &lt; B &amp; &quot;C&quot;'), 'el body escapa <, & y "');
 });
+
+// ── Miniatura vs tapa: el halo y el campo centrado son SOLO de la miniatura ───
+// Juan, 19 ago: los cortos dentro de un programa se veían huecos. El pie se
+// llena con la obra desenfocada, pero solo donde hay hueco — en la tapa (con
+// sección y título) ese espacio ya está ocupado y el halo sería decoración.
+test('editorialFrame: miniatura lleva halo + campo centrado; la tapa no', () => {
+  const mini = H.editorialFrame({ src: 'https://x/y.jpg', title: 'T' });        // sin header ni body
+  assert.ok(mini.includes('class="ed-halo"'), 'la miniatura lleva halo en el pie');
+  assert.ok(mini.includes('ed-img ed-img-mid'), 'y el campo centrado');
+
+  const tapa = H.editorialFrame({ header: 'Sec', body: 'Una obra', src: 'https://x/y.jpg', title: 'T' });
+  assert.ok(!tapa.includes('ed-halo'), 'la tapa NO lleva halo: el hueco lo llenan título y dato');
+  assert.ok(!tapa.includes('ed-img-mid'), 'ni centra el campo');
+
+  const sinSrc = H.editorialFrame({});
+  assert.ok(!sinSrc.includes('ed-halo'), 'sin imagen no hay halo que dibujar');
+});
