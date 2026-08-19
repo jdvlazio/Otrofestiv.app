@@ -127,11 +127,12 @@
      "pais": "Colombia",
      "duracion_min": 27,
      "tmdb_id": 1585286,
-     "poster": "https://image.tmdb.org/t/p/w500/4A1rNCK452N1CoM9OaD1PRwAdv1.jpg",
-     "posterSource": "tmdb",
+     "poster": "/assets/cineautopsia/primera-carta.jpg",
+     "posterSource": "oficial",
      "lbSlug": "first-chart",
      "sinopsis": "Una carta es un documento que registra las características visibles e invisibles de los lugares y las personas: cartografía o misiva. A partir de la primera carta que un cineasta envía a su amada, la película emprende un viaje guiado por los sueños y el azar entre cartas reales, imaginarias y extintas, y explora su relación ineludible y escurridiza con el amor.",
-     "synopsis_en": "A chart refers to a document that records the visible and invisible characteristics of places and people; cartography or missive. Through the first letter sent by a filmmaker to his beloved, this film embarks on a journey guided by dreams and chance among real, imaginary and extinct charts, exploring their inescapable and elusive relationship with love."
+     "synopsis_en": "A chart refers to a document that records the visible and invisible characteristics of places and people; cartography or missive. Through the first letter sent by a filmmaker to his beloved, this film embarks on a journey guided by dreams and chance among real, imaginary and extinct charts, exploring their inescapable and elusive relationship with love.",
+     "_poster_src": "https://bogotaexperimental.com/bogotaexp2026/wp-content/uploads/2026/08/PrimeraCarta-poster.webp"
     },
     {
      "titulo": "Miren Felder",
@@ -140,11 +141,12 @@
      "pais": "Argentina",
      "duracion_min": 19,
      "tmdb_id": 1380245,
-     "poster": "https://image.tmdb.org/t/p/w500/or5gaijOutPmFmk5ag2XQpt15ys.jpg",
-     "posterSource": "tmdb",
+     "poster": "/assets/cineautopsia/miren-felder.jpg",
+     "posterSource": "oficial",
      "lbSlug": "miren-felder",
      "sinopsis": "Miren Felder murió en la cima de una montaña nevada tras un accidente aéreo en 1977. La directora descubre mensajes secretos de su abuela en las fotografías que tomó su abuelo militar y se ofrece como médium en un ritual para comunicarse con ella.",
-     "synopsis_en": "Miren Felder died on top of a snowy mountain after a plane crash in 1977. The director discovers secret messages from her grandmother in photographs taken by her military grandfather and offers herself as a medium in a ritual to communicate with her."
+     "synopsis_en": "Miren Felder died on top of a snowy mountain after a plane crash in 1977. The director discovers secret messages from her grandmother in photographs taken by her military grandfather and offers herself as a medium in a ritual to communicate with her.",
+     "_poster_src": "https://bogotaexperimental.com/bogotaexp2026/wp-content/uploads/2026/08/MirenFelder-poster.webp"
     },
     {
      "titulo": "Evil Evol Love",
@@ -153,7 +155,10 @@
      "pais": "Colombia",
      "duracion_min": 20,
      "poster": "/assets/cineautopsia/evil-evol-love.jpg",
-     "posterSource": "editorial"
+     "posterSource": "oficial",
+     "sinopsis": "EVIL EVOL LOVE es un filme en 16 mm realizado sin cámara, creado raspando, tallando y marcando directamente sobre la tira de película. Nacida a raíz de un trauma, la obra transforma el lenguaje en un acto físico, donde las palabras no se escriben, sino que se hieren sobre la superficie. Construida a través de la repetición, bucles y frases fragmentadas, la película erige un paisaje emocional no lineal donde coexisten el amor, la violencia y la supervivencia. El texto se convierte en ritmo. El gesto se convierte en voz. El cuerpo se hace presente mediante la mano que corta, inscribe e insiste. Surgida de un periodo marcado por la devastación personal y la enfermedad de un ser querido, EVIL EVOL LOVE se resiste al silencio convirtiendo la destrucción en una forma de expresión. No es una narrativa de resolución, sino de persistencia, donde crear se convierte en una manera de permanecer.",
+     "_sinopsis_src": "https://bogotaexperimental.com/bogotaexp2026/evil-evol-love/ (ficha oficial del festival)",
+     "_poster_src": "https://bogotaexperimental.com/bogotaexp2026/wp-content/uploads/2026/08/EvilEvolLove-poster.webp"
     },
     {
      "titulo": "De Tragedia Haré Gloria",
@@ -162,9 +167,10 @@
      "pais": "México",
      "duracion_min": 30,
      "poster": "/assets/cineautopsia/de-tragedia-hare-gloria.jpg",
-     "posterSource": "editorial",
+     "posterSource": "oficial",
      "sinopsis": "Retoma y pervierte la obra NACIONEL para convertirla en un ritual audiovisual donde la danza popular invoca antídotos frente a la violencia sobre nuestros territorios.",
-     "_sinopsis_src": "https://www.filmoteca.unam.mx/exhibiciones/dia-internacional-de-la-danza-2026/de-tragedia-hare-gloria/ (sinopsis oficial, Filmoteca UNAM)"
+     "_sinopsis_src": "https://www.filmoteca.unam.mx/exhibiciones/dia-internacional-de-la-danza-2026/de-tragedia-hare-gloria/ (sinopsis oficial, Filmoteca UNAM)",
+     "_poster_src": "https://bogotaexperimental.com/bogotaexp2026/wp-content/uploads/2026/08/DeTragediaHareGloria-poster.webp"
     }
    ],
    "sede": "Sala 2, Cinemateca de Bogotá (Cra. 3 # 19-10)",
@@ -193,10 +199,11 @@
      "duracion_min": 14,
      "tmdb_id": 1694277,
      "poster": "/assets/cineautopsia/when-the-second-sun-arrives-a-comet-in-your-eyes.jpg",
-     "posterSource": "editorial",
+     "posterSource": "oficial",
      "lbSlug": "when-the-second-sun-arrives-a-comet-in-your",
      "sinopsis": "Cierre de la trilogía de Janaina Wagner sobre la fantasmagoría de la carretera Transamazónica BR-230. La película recorre un día en que las piedras de la vía —restos de cometas y meteoros caídos— emprenderían el regreso al cielo, y contrapone el tiempo cósmico a la vida cotidiana al borde de la carretera.",
-     "synopsis_en": "Closing Janaina Wagner’s trilogy on the BR-230 Transamazonica Road phantasmagoria, When the second sun arrives / A comet in your eyes unfolds traversing a day when the Road stones, the remains of fallen comets and meteors, would depart back to the sky, countering cosmic time with everyday life along the highway."
+     "synopsis_en": "Closing Janaina Wagner’s trilogy on the BR-230 Transamazonica Road phantasmagoria, When the second sun arrives / A comet in your eyes unfolds traversing a day when the Road stones, the remains of fallen comets and meteors, would depart back to the sky, countering cosmic time with everyday life along the highway.",
+     "_poster_src": "https://bogotaexperimental.com/bogotaexp2026/wp-content/uploads/2026/08/WhenTheSeconSolArrives-poster.webp"
     },
     {
      "titulo": "Toda la vida para siempre",
@@ -205,11 +212,12 @@
      "pais": "México",
      "duracion_min": 19,
      "tmdb_id": 1477366,
-     "poster": "https://image.tmdb.org/t/p/w500/o2rCWLuUTZTa8BEKkMdP8HcSr4G.jpg",
-     "posterSource": "tmdb",
+     "poster": "/assets/cineautopsia/toda-la-vida-para-siempre.jpg",
+     "posterSource": "oficial",
      "lbSlug": "total-life-forever-2025",
      "sinopsis": "Antología de los sueños de personas que tuvieron que dejar su casa y encontraron en Europa una torre de Babel donde nadie habla la misma lengua y nadie se entiende. Aquí la gente camina como perdida, se encuentra en los sueños y busca la manera de volver a casa.",
-     "synopsis_en": "Anthology of dreams of people who had to leave their homes. And who found in Europe a Tower of Babel where no one speaks the same language and no one understands each other. Here, people walk as if lost, meeting in dreams and searching for ways to return home."
+     "synopsis_en": "Anthology of dreams of people who had to leave their homes. And who found in Europe a Tower of Babel where no one speaks the same language and no one understands each other. Here, people walk as if lost, meeting in dreams and searching for ways to return home.",
+     "_poster_src": "https://bogotaexperimental.com/bogotaexp2026/wp-content/uploads/2026/08/TodaLaVidaParaSiemmpre-poster.webp"
     },
     {
      "titulo": "Flujos rectificados",
@@ -218,9 +226,10 @@
      "pais": "Chile",
      "duracion_min": 16,
      "poster": "/assets/cineautopsia/flujos-rectificados.jpg",
-     "posterSource": "editorial",
+     "posterSource": "oficial",
      "sinopsis": "Una videoinstalación construida con imágenes técnicas de los observatorios astronómicos del desierto chileno: imágenes que no fueron generadas para ser contempladas, sino como infraestructura de análisis. La obra propone un acercamiento sensible a ellas y pregunta cuánta intervención humana hay en la imagen que finalmente sale al mundo.",
-     "_sinopsis_src": "https://www.mediales.art/articulos/sebastian-arriagada (entrevista al director, Mediales)"
+     "_sinopsis_src": "https://www.mediales.art/articulos/sebastian-arriagada (entrevista al director, Mediales)",
+     "_poster_src": "https://bogotaexperimental.com/bogotaexp2026/wp-content/uploads/2026/08/RectifiedFlows-poster.webp"
     },
     {
      "titulo": "AGULHA",
@@ -241,11 +250,12 @@
      "pais": "México",
      "duracion_min": 5,
      "tmdb_id": 1643353,
-     "poster": "https://image.tmdb.org/t/p/w500/2Ux8sGDyZ5sDw8AHGiCUM4HoNOe.jpg",
-     "posterSource": "tmdb",
+     "poster": "/assets/cineautopsia/extravio-6-a-k-a-facialidad.jpg",
+     "posterSource": "oficial",
      "lbSlug": "loss-6-aka-faciality",
      "sinopsis": "¡El rostro, qué horror!",
-     "synopsis_en": "The face, what a horror!"
+     "synopsis_en": "The face, what a horror!",
+     "_poster_src": "https://bogotaexperimental.com/bogotaexp2026/wp-content/uploads/2026/08/extravio6-poster.webp"
     },
     {
      "titulo": "Ñuuyii",
@@ -254,11 +264,12 @@
      "pais": "México, Reino Unido",
      "duracion_min": 11,
      "tmdb_id": 1654056,
-     "poster": "https://image.tmdb.org/t/p/w500/hDjOVusHBYk2uAJVJqgJW3JyZ6A.jpg",
-     "posterSource": "tmdb",
+     "poster": "/assets/cineautopsia/nuuyii.jpg",
+     "posterSource": "oficial",
      "lbSlug": "earth-2026",
      "sinopsis": "Un joven nacido y criado en la inmensidad de la galaxia aterriza en un planeta desconocido. Al recorrer el paisaje reconoce fragmentos de relatos antiguos. Movido por una urgencia callada, le pide a la nave las grabaciones de archivo de los últimos humanos que abandonaron la Tierra. Poco a poco comprende que ha vuelto a la casa de sus ancestros.",
-     "synopsis_en": "A young man, born and raised in the vastness of the galaxy, lands on an unknown planet. As he surveys the landscape, he recognises fragments from ancient stories. Driven by a quiet urgency, he contacts his ship’s command to retrieve archival recordings of the last humans to abandon earth. Slowly, it dawns on him that he has returned to his ancestral home."
+     "synopsis_en": "A young man, born and raised in the vastness of the galaxy, lands on an unknown planet. As he surveys the landscape, he recognises fragments from ancient stories. Driven by a quiet urgency, he contacts his ship’s command to retrieve archival recordings of the last humans to abandon earth. Slowly, it dawns on him that he has returned to his ancestral home.",
+     "_poster_src": "https://bogotaexperimental.com/bogotaexp2026/wp-content/uploads/2026/08/Nuuyi-poster.webp"
     },
     {
      "titulo": "Si yo fuese fuego (If I Were Fire)",
@@ -267,9 +278,10 @@
      "pais": "México",
      "duracion_min": 15,
      "poster": "/assets/cineautopsia/si-yo-fuese-fuego-if-i-were-fire.jpg",
-     "posterSource": "editorial",
+     "posterSource": "oficial",
      "sinopsis": "Dos mujeres viven un amor prohibido en un lugar donde no se las comprende. El acoso de un jinete convierte el idilio en persecución: un western breve sobre la violencia de género, rodado en Ihuatzio, en la zona lacustre de Michoacán.",
-     "_sinopsis_src": "Extractos de buscador de La Voz de Michoacán (lavozdemichoacan.com.mx/cultura/si-yo-fuese-fuego-el-cortometraje-que-transforma-el-dolor-en-poesia-visual-y-sonora/) y El Sol de Morelia (oem.com.mx/elsoldemorelia/cultura/si-yo-fuese-fuego-entre-el-western-los-amores-prohibidos-y-la-violencia-de-genero-25923172); ambas notas por FICM 2025, Sección Michoacana"
+     "_sinopsis_src": "Extractos de buscador de La Voz de Michoacán (lavozdemichoacan.com.mx/cultura/si-yo-fuese-fuego-el-cortometraje-que-transforma-el-dolor-en-poesia-visual-y-sonora/) y El Sol de Morelia (oem.com.mx/elsoldemorelia/cultura/si-yo-fuese-fuego-entre-el-western-los-amores-prohibidos-y-la-violencia-de-genero-25923172); ambas notas por FICM 2025, Sección Michoacana",
+     "_poster_src": "https://bogotaexperimental.com/bogotaexp2026/wp-content/uploads/2026/08/2-poster_Si-yo-fuese-fuego.webp"
     }
    ],
    "sede": "Sala 2, Cinemateca de Bogotá (Cra. 3 # 19-10)",
@@ -297,11 +309,12 @@
      "pais": "Estados Unidos",
      "duracion_min": 6,
      "tmdb_id": 1699451,
-     "poster": "https://image.tmdb.org/t/p/w500/hdevEblTFITex5Czkq1lHfM49h6.jpg",
-     "posterSource": "tmdb",
+     "poster": "/assets/cineautopsia/hurricane-season.jpg",
+     "posterSource": "oficial",
      "lbSlug": "hurricane-season-2026",
      "sinopsis": "La ansiedad del huracán toma forma visceral mientras la imagen busca una ruta de escape. Inspirada en hechos reales. Filmada en 16 mm y revelada con consuelda, menta, yerba mate y hojas de sauce.",
-     "synopsis_en": "Hurricane anxiety takes a visceral form as the image searches for an escape route. Inspired by true events. Created on 16mm film and developed with comfrey, mint, yerba mate and willow leaves."
+     "synopsis_en": "Hurricane anxiety takes a visceral form as the image searches for an escape route. Inspired by true events. Created on 16mm film and developed with comfrey, mint, yerba mate and willow leaves.",
+     "_poster_src": "https://bogotaexperimental.com/bogotaexp2026/wp-content/uploads/2026/08/HurricanSeason-poster.webp"
     },
     {
      "titulo": "Etorriko da (eta zure begiak izango ditu)",
@@ -310,10 +323,11 @@
      "pais": "España",
      "duracion_min": 12,
      "tmdb_id": 1282832,
-     "poster": "https://image.tmdb.org/t/p/w500/67YQcHIgSZaLWMlooAFNkGDFYwT.jpg",
-     "posterSource": "tmdb",
+     "poster": "/assets/cineautopsia/etorriko-da-eta-zure-begiak-izango-ditu.jpg",
+     "posterSource": "oficial",
      "lbSlug": "when-it-comes-it-will-have-your-eyes",
-     "sinopsis": "Una pequeña comunidad que ha entrado en estado de colapso a causa de una crisis ambiental se adapta como puede a la nueva realidad. Los habitantes privilegiados viven una vida hedonista basada en el carpe diem, los otros, sin ninguna otra alternativa, tratan de sobrevivir. ¿Qué es lo que está por llegar? Si no hay nada más, ¿hay algo que nos pueda salvar?"
+     "sinopsis": "Una pequeña comunidad que ha entrado en estado de colapso a causa de una crisis ambiental se adapta como puede a la nueva realidad. Los habitantes privilegiados viven una vida hedonista basada en el carpe diem, los otros, sin ninguna otra alternativa, tratan de sobrevivir. ¿Qué es lo que está por llegar? Si no hay nada más, ¿hay algo que nos pueda salvar?",
+     "_poster_src": "https://bogotaexperimental.com/bogotaexp2026/wp-content/uploads/2026/08/EtorrikoDa_WhenItComes-poster.webp"
     },
     {
      "titulo": "I Was There",
@@ -322,11 +336,12 @@
      "pais": "Polonia",
      "duracion_min": 12,
      "tmdb_id": 1523016,
-     "poster": "https://image.tmdb.org/t/p/w500/46U3VfELlv7d5F09i7KFRiXFzFs.jpg",
-     "posterSource": "tmdb",
+     "poster": "/assets/cineautopsia/i-was-there.jpg",
+     "posterSource": "oficial",
      "lbSlug": "i-was-there-2025",
      "sinopsis": "Una exploración inquietante de los lazos familiares, la memoria intergeneracional y la huella duradera de los relatos compartidos. La cineasta Kamila Kuc entra en el caudal emocional de una historia familiar heredada, donde se borran los límites entre documento, testimonio y ficción. Da fe no solo por sí misma, sino también en nombre de su abuela: juntas atestiguan lo que vivieron y las repercusiones que esos relatos tienen con el tiempo. I Was There es un palimpsesto, un tejido de capas donde pasado y presente se entrelazan en el proceso íntimo de activar la memoria y la vulnerabilidad como formas de resistencia. Honra el objeto testimonial heredado de los ancestros y el vínculo vivo que une a las generaciones en la búsqueda compartida de justicia y sanación.",
-     "synopsis_en": "A haunting exploration of familial bonds, intergenerational memory, and the enduring impact of shared narratives. Filmmaker Kamila Kuc steps into the emotional stream of inherited family history as the lines between documentary, testimony, and fiction blur. She performs acts of bearing witness not just for herself but also on behalf of her grandmother. Together, they testify to their experiences and the reverberations these stories have over time. I Was There is a palimpsest - a layered tapestry where past and present intertwine in the intimate process of activating memory and vulnerability as forms of resistance. It honors the testimonial object inherited from ancestors and the living connection that binds generations in the shared pursuit of justice and healing."
+     "synopsis_en": "A haunting exploration of familial bonds, intergenerational memory, and the enduring impact of shared narratives. Filmmaker Kamila Kuc steps into the emotional stream of inherited family history as the lines between documentary, testimony, and fiction blur. She performs acts of bearing witness not just for herself but also on behalf of her grandmother. Together, they testify to their experiences and the reverberations these stories have over time. I Was There is a palimpsest - a layered tapestry where past and present intertwine in the intimate process of activating memory and vulnerability as forms of resistance. It honors the testimonial object inherited from ancestors and the living connection that binds generations in the shared pursuit of justice and healing.",
+     "_poster_src": "https://bogotaexperimental.com/bogotaexp2026/wp-content/uploads/2026/08/IWasThere-poster.webp"
     },
     {
      "titulo": "Noli me tangere",
@@ -335,11 +350,12 @@
      "pais": "Estados Unidos",
      "duracion_min": 4,
      "tmdb_id": 1481923,
-     "poster": "https://image.tmdb.org/t/p/w500/zL9yALnX1vDGL07cc5V3lRT3Nbi.jpg",
-     "posterSource": "tmdb",
+     "poster": "/assets/cineautopsia/noli-me-tangere.jpg",
+     "posterSource": "oficial",
      "lbSlug": "noli-me-tangere-2025",
      "sinopsis": "Una indagación hecha excavación —fotografías, tacto, miradas a tiempos y lugares lejos de este aquí y este ahora— que anima y conjura un vínculo entre pasado y presente.",
-     "synopsis_en": "An excavational inquiry through photographs, touch, and looking at times and places far from here and now, animating and conjuring a link between past and present."
+     "synopsis_en": "An excavational inquiry through photographs, touch, and looking at times and places far from here and now, animating and conjuring a link between past and present.",
+     "_poster_src": "https://bogotaexperimental.com/bogotaexp2026/wp-content/uploads/2026/08/NoliMeTangere-poster.webp"
     },
     {
      "titulo": "Katabasis",
@@ -348,11 +364,12 @@
      "pais": "Alemania, Italia",
      "duracion_min": 15,
      "tmdb_id": 1616825,
-     "poster": "https://image.tmdb.org/t/p/w500/qncVQYmv5JsTWOnym0EBp79rQTG.jpg",
-     "posterSource": "tmdb",
+     "poster": "/assets/cineautopsia/katabasis.jpg",
+     "posterSource": "oficial",
      "lbSlug": "katabasis-2026",
      "sinopsis": "En una cueva situada entre los surcos de una huella dactilar humana ocurre un encuentro primordial con la materia, la luz y el sonido.",
-     "synopsis_en": "In a cave situated between the ridges of a human fingerprint, a primordial encounter with matter, light and sound unfolds."
+     "synopsis_en": "In a cave situated between the ridges of a human fingerprint, a primordial encounter with matter, light and sound unfolds.",
+     "_poster_src": "https://bogotaexperimental.com/bogotaexp2026/wp-content/uploads/2026/08/Katabasis-poster.webp"
     },
     {
      "titulo": "Fort Garry Lions Pool",
@@ -361,10 +378,11 @@
      "pais": "Canadá",
      "duracion_min": 6,
      "poster": "/assets/cineautopsia/fort-garry-lions-pool.jpg",
-     "posterSource": "editorial",
+     "posterSource": "oficial",
      "sinopsis": "Dos mujeres se cuelan de noche en una piscina pública fantasmal: saltan la reja, nadan, ríen, esquivan al celador. Con una textura analógica brumosa, la película indaga qué nos dice la intuición sobre el cuerpo, los actos y los sentidos, y cómo la amistad se manifiesta sin palabras.",
      "synopsis_en": "Two women's nocturnal sojourn to a ghostly public pool — scaling a chain link fence, swimming, laughing, dodging its custodian. A hazy experimental style explores what probing our intuition tells us about our bodies, actions and senses, and how friendship wordlessly presents itself.",
-     "_sinopsis_src": "https://iffr.com/en/iffr/2025/films/fort-garry-lions-pool"
+     "_sinopsis_src": "https://iffr.com/en/iffr/2025/films/fort-garry-lions-pool",
+     "_poster_src": "https://bogotaexperimental.com/bogotaexp2026/wp-content/uploads/2026/08/ForGarryLions-poster.webp"
     },
     {
      "titulo": "La descrizione delle stelle fisse",
@@ -373,10 +391,11 @@
      "pais": "Italia",
      "duracion_min": 19,
      "poster": "/assets/cineautopsia/la-descrizione-delle-stelle-fisse.jpg",
-     "posterSource": "editorial",
+     "posterSource": "oficial",
      "sinopsis": "Una exploración de los límites de la visión a partir de las imágenes que recogió la misión Cassini-Huygens: electrónica de investigación y cine experimental en un mismo gesto audiovisual.",
      "synopsis_en": "An exploration of the limits of vision based on images collected during the Cassini-Huygens mission: research electronics and experimental cinema in a single audio/video set.",
-     "_sinopsis_src": "https://zero.eu/en/eventi/226095-vincenzo-core-fabio-scacchioli,roma/"
+     "_sinopsis_src": "https://zero.eu/en/eventi/226095-vincenzo-core-fabio-scacchioli,roma/",
+     "_poster_src": "https://bogotaexperimental.com/bogotaexp2026/wp-content/uploads/2026/08/DescriptionFromTheFixedStars-poster.webp"
     },
     {
      "titulo": "Tamashi",
@@ -385,11 +404,12 @@
      "pais": "China, Francia, Japón, Estados Unidos",
      "duracion_min": 12,
      "tmdb_id": 1604241,
-     "poster": "https://image.tmdb.org/t/p/w500/oM6qNHuKyi92pEcGAgigyHQreOV.jpg",
-     "posterSource": "tmdb",
+     "poster": "/assets/cineautopsia/tamashi.jpg",
+     "posterSource": "oficial",
      "lbSlug": "tamashi",
      "sinopsis": "En el desierto del valle de Payahuunadü («tierra de agua que fluye»), en California, un padre baila butoh por primera vez frente a su hije, antigua promesa de la escalada en roca. Se hablan a través del cuerpo para encontrar la manera de sanar su relación y la tierra.",
-     "synopsis_en": "In the desert of the Payahuunadü valley (the name means “land of flowing water”) of California, a father performs butoh for the first time in front of his former prodigy rock climber child. They speak to each other through their bodies to find a way to heal their relationship and the land."
+     "synopsis_en": "In the desert of the Payahuunadü valley (the name means “land of flowing water”) of California, a father performs butoh for the first time in front of his former prodigy rock climber child. They speak to each other through their bodies to find a way to heal their relationship and the land.",
+     "_poster_src": "https://bogotaexperimental.com/bogotaexp2026/wp-content/uploads/2026/08/Tamashi-poster.webp"
     }
    ],
    "sede": "Sala 2, Cinemateca de Bogotá (Cra. 3 # 19-10)",
@@ -417,11 +437,12 @@
      "pais": "Portugal",
      "duracion_min": 11,
      "tmdb_id": 1680596,
-     "poster": "https://image.tmdb.org/t/p/w500/txhBuh1YXnwsSkXLFVvXzw3vEdL.jpg",
-     "posterSource": "tmdb",
+     "poster": "/assets/cineautopsia/xyz.jpg",
+     "posterSource": "oficial",
      "lbSlug": "xyz-2026",
      "sinopsis": "Una exploración obsesiva de las tres dimensiones geométricas con la esperanza de alcanzar una cuarta.",
-     "synopsis_en": "An obsessive exploration of the three geometric dimensions in hopes of reaching a fourth."
+     "synopsis_en": "An obsessive exploration of the three geometric dimensions in hopes of reaching a fourth.",
+     "_poster_src": "https://bogotaexperimental.com/bogotaexp2026/wp-content/uploads/2026/08/XYZ-poster.webp"
     },
     {
      "titulo": "Ce Que Je Vois | That Which I See",
@@ -430,11 +451,12 @@
      "pais": "Bélgica",
      "duracion_min": 7,
      "tmdb_id": 1591031,
-     "poster": "https://image.tmdb.org/t/p/w500/hILtuYTvKErCGUs6krIrS72ZEPA.jpg",
-     "posterSource": "tmdb",
+     "poster": "/assets/cineautopsia/ce-que-je-vois-that-which-i-see.jpg",
+     "posterSource": "oficial",
      "lbSlug": "that-which-i-see",
      "sinopsis": "¿Y si de verdad miraras un árbol? No por encima, como quien pasa de largo. ¿Qué se siente al tomarse el tiempo de penetrar la esencia del árbol y volverse uno con la naturaleza?",
-     "synopsis_en": "What if you really look at a tree? Not superficially, like an outsider passing by. How does it feel to really take the time to penetrate the essence of the tree and become one with nature?"
+     "synopsis_en": "What if you really look at a tree? Not superficially, like an outsider passing by. How does it feel to really take the time to penetrate the essence of the tree and become one with nature?",
+     "_poster_src": "https://bogotaexperimental.com/bogotaexp2026/wp-content/uploads/2026/08/CeQueJeVois-poster.webp"
     },
     {
      "titulo": "Objectionable Fruit",
@@ -444,10 +466,11 @@
      "duracion_min": 15,
      "tmdb_id": 1674041,
      "poster": "/assets/cineautopsia/objectionable-fruit.jpg",
-     "posterSource": "editorial",
+     "posterSource": "oficial",
      "lbSlug": "objectionable-fruit",
      "sinopsis": "Documental experimental sobre el ginkgo, fósil viviente celebrado por su resistencia y por su capacidad única de cambiar de sexo, que desafía los binarios impuestos por el ser humano. Con el ginkgo como metáfora de la fluidez y la permanencia, la película entrelaza la identidad de género, la interconexión ecológica y las complejidades de la existencia trans.",
-     "synopsis_en": "Objectionable Fruit is an experimental documentary examining the Ginkgo tree—a living fossil celebrated for its resilience and unique capacity to change sexes, defying human- imposed binaries. Using the Ginkgo as a metaphor for fluidity and endurance, the film weaves together themes of gender identity, ecological interconnectedness, and the nuanced complexities of trans existence."
+     "synopsis_en": "Objectionable Fruit is an experimental documentary examining the Ginkgo tree—a living fossil celebrated for its resilience and unique capacity to change sexes, defying human- imposed binaries. Using the Ginkgo as a metaphor for fluidity and endurance, the film weaves together themes of gender identity, ecological interconnectedness, and the nuanced complexities of trans existence.",
+     "_poster_src": "https://bogotaexperimental.com/bogotaexp2026/wp-content/uploads/2026/08/ObjectionaleFruit-poster.webp"
     },
     {
      "titulo": "From Dusk to Dawn",
@@ -456,10 +479,11 @@
      "pais": "Estados Unidos",
      "duracion_min": 19,
      "poster": "/assets/cineautopsia/from-dusk-to-dawn.jpg",
-     "posterSource": "editorial",
+     "posterSource": "oficial",
      "sinopsis": "Descripciones encarnadas de la luz y la oscuridad, vividas por alguien que atraviesa una sucesión de procedimientos médicos. Mientras intenta elaborar un duelo, la protagonista se pregunta si su atención total a lo real no será algo alucinatoria. El diálogo oscila entre su conversación interna y las consultas con un médico invasivo, alrededor de cómo la memoria se registra, se guarda y se altera al percibir y recordar. Inspirada sobre todo en «Sanatorio bajo la clepsidra», de Bruno Schulz.",
      "synopsis_en": "Embodied descriptions of lightness and darkness, experienced by someone undergoing various medical procedures. As she tries to process grief, the central character questions how her total attentiveness to the real might be slightly hallucinatory. The dialogue weaves between her internal conversation and consultations with an overbearing doctor, around how memory is recorded, stored and altered through perception and recall. Drawn largely from Bruno Schulz's «Sanatorium Under the Sign of the Hourglass».",
-     "_sinopsis_src": "https://film-makerscoop.com/catalogue/winston-nechama-from-dusk-to-dawn"
+     "_sinopsis_src": "https://film-makerscoop.com/catalogue/winston-nechama-from-dusk-to-dawn",
+     "_poster_src": "https://bogotaexperimental.com/bogotaexp2026/wp-content/uploads/2026/08/FromDuskToDawn-poster.webp"
     },
     {
      "titulo": "The Everlasting Pea",
@@ -481,11 +505,12 @@
      "pais": "Estados Unidos",
      "duracion_min": 5,
      "tmdb_id": 1377607,
-     "poster": "https://image.tmdb.org/t/p/w500/zvpUHqoSOXwYYP5p9dJok3e2Zgm.jpg",
-     "posterSource": "tmdb",
+     "poster": "/assets/cineautopsia/squander.jpg",
+     "posterSource": "oficial",
      "lbSlug": "squander",
      "sinopsis": "Hecha enteramente de fotografías fijas, una película sobre el aislamiento y el deterioro mental de una persona.",
-     "synopsis_en": "Comprised of all still photographs, a film exploring a persons isolation and mental deterioration."
+     "synopsis_en": "Comprised of all still photographs, a film exploring a persons isolation and mental deterioration.",
+     "_poster_src": "https://bogotaexperimental.com/bogotaexp2026/wp-content/uploads/2026/08/WhenBlueMeetsRed-poster.jpg"
     },
     {
      "titulo": "Ahol a kék találkozik a pirossal",
@@ -494,11 +519,12 @@
      "pais": "Hungría",
      "duracion_min": 4,
      "tmdb_id": 1475907,
-     "poster": "https://image.tmdb.org/t/p/w500/1eX9alBt8L0foeg6flfSYUVYgj0.jpg",
-     "posterSource": "tmdb",
+     "poster": "/assets/cineautopsia/ahol-a-kek-talalkozik-a-pirossal.jpg",
+     "posterSource": "oficial",
      "lbSlug": "where-blue-meets-red",
      "sinopsis": "Compuesta por numerosas impresiones risográficas, la película es una improvisación en stop-motion sobre la música del trompetista de jazz Lőrinc Barabás. Obra conceptual consecuente, la animación evita cualquier modificación digital y consiste únicamente en una serie de impresiones registradas ante la cámara.",
-     "synopsis_en": "The film, consisting of numerous risographic prints, is an improvisation made with stop-motion technique to the music of jazz trumpeter Lőrinc Barabás. As a consistent conceptual work, the animation avoids any digital modification and consists solely of a series of prints recorded on camera."
+     "synopsis_en": "The film, consisting of numerous risographic prints, is an improvisation made with stop-motion technique to the music of jazz trumpeter Lőrinc Barabás. As a consistent conceptual work, the animation avoids any digital modification and consists solely of a series of prints recorded on camera.",
+     "_poster_src": "https://bogotaexperimental.com/bogotaexp2026/wp-content/uploads/2026/08/WhenBlueMeetsRed-poster.jpg"
     },
     {
      "titulo": "softer, softest",
@@ -520,7 +546,8 @@
      "pais": "Italia",
      "duracion_min": 6,
      "poster": "/assets/cineautopsia/ocno.jpg",
-     "posterSource": "oficial"
+     "posterSource": "oficial",
+     "_poster_src": "https://bogotaexperimental.com/bogotaexp2026/wp-content/uploads/2026/08/11-poster_Ocno.webp"
     }
    ],
    "sede": "Sala 2, Cinemateca de Bogotá (Cra. 3 # 19-10)",
@@ -548,11 +575,12 @@
      "pais": "Alemania, India",
      "duracion_min": 25,
      "tmdb_id": 1543512,
-     "poster": "https://image.tmdb.org/t/p/w500/yCk5K3YWb0gViFJEaGhxlPpU9Sz.jpg",
-     "posterSource": "tmdb",
+     "poster": "/assets/cineautopsia/analogue-natives.jpg",
+     "posterSource": "oficial",
      "lbSlug": "analogue-natives",
      "sinopsis": "Documental experimental que gira alrededor de entrevistas con cuatro veteranos que trabajaron toda su vida en laboratorios de cine analógico y estudios de animación de Bombay, y que perdieron sus negocios y sus empleos entre 2012 y 2014, cuando la industria del cine hindi viró drásticamente hacia la producción digital. Reflexionan sobre la pérdida de su oficio, pero también sobre la filosofía de un cine hecho a mano frente a las soluciones digitales prefabricadas. Mientras la película deriva por escenarios afines y ajenos filmados en las calles de Bombay, aprendemos sobre el arte de vivir y trabajar en condiciones precarias en la India y sobre las estrategias de supervivencia en una de las ciudades más pobladas y comerciales del mundo. Todo desemboca en un collage inútil de nostalgia y recuerdos, revuelto con la estética absurda de la basura generada por IA. Un documental expandido y de varios géneros dentro de los límites de la llamada fórmula masala, popular en el cine indio.",
-     "synopsis_en": "This experimental documentary circulates around interviews with four veterans who worked all their lives in analogue (=celluloid) film laboratories and animation studios in Mumbai, and who all lost their businesses and jobs around 2012–14, when the Hindi film industry went through a drastic shift to digital production. They reflect on the loss of their craftsmanship, but also on the philosophies of their handmade film practice versus readymade digital solutions. While the film drifts into various related and unrelated scenarios, shot on the streets of Mumbai, we learn about the art of living and working under precarious conditions in India and survival strategies in one of the most crowded and commercial cities in the world. Finally everything results in a futile collage of nostalgia and memories, mashed up with the absurd aesthetics of AI slop.  An expanded multi-genre documentary within the constraints of the so-called Masala Formula, popularly known from Indian cinema."
+     "synopsis_en": "This experimental documentary circulates around interviews with four veterans who worked all their lives in analogue (=celluloid) film laboratories and animation studios in Mumbai, and who all lost their businesses and jobs around 2012–14, when the Hindi film industry went through a drastic shift to digital production. They reflect on the loss of their craftsmanship, but also on the philosophies of their handmade film practice versus readymade digital solutions. While the film drifts into various related and unrelated scenarios, shot on the streets of Mumbai, we learn about the art of living and working under precarious conditions in India and survival strategies in one of the most crowded and commercial cities in the world. Finally everything results in a futile collage of nostalgia and memories, mashed up with the absurd aesthetics of AI slop.  An expanded multi-genre documentary within the constraints of the so-called Masala Formula, popularly known from Indian cinema.",
+     "_poster_src": "https://bogotaexperimental.com/bogotaexp2026/wp-content/uploads/2026/08/AnalogueNatives-poster.jpg"
     },
     {
      "titulo": "The Night Before the Shipwreck",
@@ -562,10 +590,11 @@
      "duracion_min": 48,
      "tmdb_id": 1740495,
      "poster": "/assets/cineautopsia/the-night-before-the-shipwreck.jpg",
-     "posterSource": "editorial",
+     "posterSource": "oficial",
      "lbSlug": "the-night-before-the-shipwreck",
      "sinopsis": "Dos fugitivos pasan juntos sus últimos días, errando por fronteras indefinidas entre desiertos y mareas, ruinas y refugios improvisados. En un mundo donde ya no existe la idea de hogar, su viaje inquietante empieza a parecerse, todo a la vez, a un desplazamiento forzado, a una vida guerrillera, a una fuga de la realidad y a un cortejo fúnebre. La película contrapone las funciones expresivas convencionales de la puesta en escena y el montaje a una cámara lenta radical y a la doble exposición. Con técnicas surgidas en los albores del cine, corre el foco de la historia de los personajes hacia el tejido mismo de su presencia fantasmal: los gestos, los roces, el juego de la luz, los paisajes, el sonido del oleaje y el ruido digital.",
-     "synopsis_en": "Two fugitives spend their final days together, wandering along indeterminate borders amidst deserts and tides, ruins and makeshift shelters. In a world where the concept of home no longer exists, their unsettling journey begins to resemble—all at once—a forced displacement, a guerrilla-like existence, an escape from reality, and a funeral procession.  The film counters the conventional expressive functions of mise-en-scène and editing with radical slow motion and double exposure. Drawing on techniques that emerged at the dawn of cinema, it shifts the focus from the characters' story to the very fabric of their ghostly presence: gestures, touches, the play of light, landscapes, the sound of the surf, and digital noise."
+     "synopsis_en": "Two fugitives spend their final days together, wandering along indeterminate borders amidst deserts and tides, ruins and makeshift shelters. In a world where the concept of home no longer exists, their unsettling journey begins to resemble—all at once—a forced displacement, a guerrilla-like existence, an escape from reality, and a funeral procession.  The film counters the conventional expressive functions of mise-en-scène and editing with radical slow motion and double exposure. Drawing on techniques that emerged at the dawn of cinema, it shifts the focus from the characters' story to the very fabric of their ghostly presence: gestures, touches, the play of light, landscapes, the sound of the surf, and digital noise.",
+     "_poster_src": "https://bogotaexperimental.com/bogotaexp2026/wp-content/uploads/2026/08/TjeNightBeforeTheShipwreck-poster.webp"
     },
     {
      "titulo": "This Light Is Not Ours",
@@ -574,10 +603,11 @@
      "pais": "Tailandia",
      "duracion_min": 29,
      "poster": "/assets/cineautopsia/this-light-is-not-ours.jpg",
-     "posterSource": "editorial",
+     "posterSource": "oficial",
      "sinopsis": "Un retrato del ritual y del propio medio cinematográfico: las últimas proyecciones en 35 mm antes del paso a lo digital. Anclada en la observación documental, la película intercala secuencias animadas.",
      "synopsis_en": "A portrait of both the ritual and the cinematic medium itself, capturing the final 35mm film projections before the shift to digital. Grounded in documentary observation, the film also incorporates animated sequences.",
-     "_sinopsis_src": "https://smaff.org/this-light-is-not-ours-by-cedric-arnold/"
+     "_sinopsis_src": "https://smaff.org/this-light-is-not-ours-by-cedric-arnold/",
+     "_poster_src": "https://bogotaexperimental.com/bogotaexp2026/wp-content/uploads/2026/08/ThisLightInNotOurs-poster.webp"
     }
    ],
    "sede": "Auditorio Samuel Bedoya. Universidad Francisco José de Caldas (Distrital). Facultad de Arte ASAB. Cra 13#14-69",
@@ -598,11 +628,12 @@
      "pais": "Austria",
      "duracion_min": 29,
      "tmdb_id": 1560838,
-     "poster": "https://image.tmdb.org/t/p/w500/dFS8tFlXVEDOOYbWy7Y6uKORwaK.jpg",
-     "posterSource": "tmdb",
+     "poster": "/assets/cineautopsia/brute-force.jpg",
+     "posterSource": "oficial",
      "lbSlug": "brute-force-2025",
      "sinopsis": "Brute Force explora cómo nuestras maneras de producir conocimiento afectan al mundo. A partir de la teoría cuántica y la geología, la película expone las omisiones, las distorsiones y los impactos ecológicos propios de la producción de imágenes y la extracción de datos. De los patrones de interferencia de los neutrones a los centros de datos y los salares, registra cómo la complejidad del mundo choca con las racionalidades simplificadas de la era digital.",
-     "synopsis_en": "Brute Force explores how our knowledge-making practices affect the world. Drawing on quantum theory and geology, the film exposes the intrinsic omissions, distortions, and ecological impacts of image production and data extraction. From the interference patterns of neutrons to data centres and salt lakes, the film captures how our world's complexity collides with the simplified rationalities of the digital age."
+     "synopsis_en": "Brute Force explores how our knowledge-making practices affect the world. Drawing on quantum theory and geology, the film exposes the intrinsic omissions, distortions, and ecological impacts of image production and data extraction. From the interference patterns of neutrons to data centres and salt lakes, the film captures how our world's complexity collides with the simplified rationalities of the digital age.",
+     "_poster_src": "https://bogotaexperimental.com/bogotaexp2026/wp-content/uploads/2026/08/BruteForce-poster.webp"
     },
     {
      "titulo": "The Walnut of Knowledge",
@@ -611,11 +642,12 @@
      "pais": "Irán, Reino Unido",
      "duracion_min": 27,
      "tmdb_id": 1575936,
-     "poster": "https://image.tmdb.org/t/p/w500/wyBKxQ3L4Gm1XDFIw9iOnxwtz71.jpg",
-     "posterSource": "tmdb",
+     "poster": "/assets/cineautopsia/the-walnut-of-knowledge.jpg",
+     "posterSource": "oficial",
      "lbSlug": "the-walnut-of-knowledge",
      "sinopsis": "A la sombra de un nogal, un niño explora las historias y las culturas de la tierra de su madre. Una exploración de la pertenencia a dos tierras, y del sentirse y no sentirse de ninguna.",
-     "synopsis_en": "Under the shadow of a walnut tree, a boy explores the histories and cultures of his mother’s land. An exploration of belonging to two lands; feelings of belonging and not belonging"
+     "synopsis_en": "Under the shadow of a walnut tree, a boy explores the histories and cultures of his mother’s land. An exploration of belonging to two lands; feelings of belonging and not belonging",
+     "_poster_src": "https://bogotaexperimental.com/bogotaexp2026/wp-content/uploads/2026/08/TheWalnutOfKnowledge-poster.webp"
     },
     {
      "titulo": "Ghosts after Noon",
@@ -624,7 +656,10 @@
      "pais": "Austria, Suiza",
      "duracion_min": 36,
      "poster": "/assets/cineautopsia/ghosts-after-noon.jpg",
-     "posterSource": "editorial"
+     "posterSource": "oficial",
+     "sinopsis": "Este documental experimental gira en torno a entrevistas con cuatro veteranos que trabajaron toda su vida en estudios de animación y laboratorios de cine analógico (celuloide) en Bombay, y que perdieron sus negocios y empleos entre 2012 y 2014, cuando la industria cinematográfica en hindi sufrió una drástica transición hacia la producción digital. Ellos reflexionan sobre la pérdida de su oficio, pero también sobre las filosofías detrás de su práctica cinematográfica artesanal frente a las soluciones digitales prefabricadas. Mientras el filme deriva hacia diversos escenarios conexos y ajenos, rodados en las calles de Bombay, nos adentramos en el arte de vivir y trabajar bajo condiciones precarias en la India, así como en las estrategias de supervivencia en una de las ciudades más masificadas y comerciales del mundo. Finalmente, todo deriva en un fútil collage de nostalgia y recuerdos, mezclado con la estética absurda de la basura (slop) generada por inteligencia artificial. Un documental expandido de múltiples géneros concebido bajo las limitaciones de la llamada Fórmula Masala, popularmente conocida dentro del cine indio.",
+     "_sinopsis_src": "https://bogotaexperimental.com/bogotaexp2026/ghosts-after-noon/ (ficha oficial del festival)",
+     "_poster_src": "https://bogotaexperimental.com/bogotaexp2026/wp-content/uploads/2026/08/GhostsAfterNoon-poster.webp"
     }
    ],
    "sede": "Cinemateca Sala Alterna, Universidad Nacional de Colombia, Auditorio 422. Edficio 303C. NEA.",
@@ -645,10 +680,11 @@
      "pais": "Colombia",
      "duracion_min": 88,
      "tmdb_id": 1561131,
-     "poster": "https://image.tmdb.org/t/p/w500/rRq5wQI10w1xShAzlbGOcDjrGNI.jpg",
-     "posterSource": "tmdb",
+     "poster": "/assets/cineautopsia/paristopia.jpg",
+     "posterSource": "oficial",
      "lbSlug": "paristopia",
-     "sinopsis": "Una despedida tejida en imágenes, recogidas como vestigios de una vida en París. Voces y miradas llegadas desde los confines del mundo se entrelazan en busca de pertenencia. Entre calles que prometen refugio pero murmuran lejanía, emergen escenas espontáneas en busca de libertad, sin papeles ni fronteras. Un poema visual que reflexiona sobre el arraigo y la levedad de ser extranjero."
+     "sinopsis": "Una despedida tejida en imágenes, recogidas como vestigios de una vida en París. Voces y miradas llegadas desde los confines del mundo se entrelazan en busca de pertenencia. Entre calles que prometen refugio pero murmuran lejanía, emergen escenas espontáneas en busca de libertad, sin papeles ni fronteras. Un poema visual que reflexiona sobre el arraigo y la levedad de ser extranjero.",
+     "_poster_src": "https://bogotaexperimental.com/bogotaexp2026/wp-content/uploads/2026/08/ea511a2c69-poster.webp"
     }
    ],
    "sede": "Auditorio Samuel Bedoya. Universidad Francisco José de Caldas (Distrital). Facultad de Arte ASAB. Cra 13 #14-69",
@@ -682,7 +718,10 @@
      "pais": "Colombia",
      "duracion_min": 12,
      "poster": "/assets/cineautopsia/atmosphaira.jpg",
-     "posterSource": "editorial"
+     "posterSource": "oficial",
+     "sinopsis": "Sin la protección de una atmósfera, la vida cesa. Este fino barniz gaseoso, un compuesto de ἀτμός (vapor o aire) y σφαῖρα (esfera), nos permite existir mientras flotamos en el infinito. De ahí parte esta película, con el canto grabado del último pájaro hawaiano Kauaʻi ʻōʻō superviviente —y ahora extinto—. AtmoSphaira se subdivide en capítulos epistolares, en bitácoras de viaje o cartas de confrontación con la naturaleza humana y no humana. Cada segmento teje la urdimbre sonora y visual de dos cíclopes que, desde su punto de vista esférico, nos conceden —a veces de forma abstracta, otras de forma frontal y muy a menudo en silueta— una mirada a sus mundos. Desde los páramos andinos hasta el mar Mediterráneo, esta película nos guía con texturas fotosensibles y capas superpuestas a través de un multiverso que evoca la nostalgia de días mejores, la extinción de y dentro de los cuerpos, la ampliación de nuestra concepción de los acontecimientos en el espacio y el tiempo, así como la memoria física e inmaterial. Los sujetos de esta pieza son controladores insignificantes que se enfrentan a un flujo finito en sus cuerpos caducos, excretando imágenes crujientes y perfectas… megapíxeles que no muestran nada. AtmoSphaira nos invita a recorrer este paisaje, enfrentándonos a nuestra miopía vital: somos cíclopes de pantalla. Invoca la contradicción en nuestros cuerpos —efímeros y en el límite entre lo analógico y lo digital—, superando lo visible y envolviéndonos en lo sensible. Aquí nos convertimos en una nebulosa, un destello de luz que fertiliza la experiencia de una realidad trémula, revelando la sacralidad de la impureza tangible y confirmando que errar es verdaderamente humano.",
+     "_sinopsis_src": "https://bogotaexperimental.com/bogotaexp2026/atmosphaira/ (ficha oficial del festival)",
+     "_poster_src": "https://bogotaexperimental.com/bogotaexp2026/wp-content/uploads/2026/08/Atmosphaira-poster.webp"
     },
     {
      "titulo": "Yo Manifiesta",
@@ -691,7 +730,10 @@
      "pais": "Colombia",
      "duracion_min": 6,
      "poster": "/assets/cineautopsia/yo-manifiesta.jpg",
-     "posterSource": "editorial"
+     "posterSource": "oficial",
+     "sinopsis": "A través de un poema performativo, me manifiesto.",
+     "_sinopsis_src": "https://bogotaexperimental.com/bogotaexp2026/yo-manifiesta/ (ficha oficial del festival)",
+     "_poster_src": "https://bogotaexperimental.com/bogotaexp2026/wp-content/uploads/2026/08/YoManifiesta-poster.jpg"
     },
     {
      "titulo": "Los Años del Conejo",
@@ -700,10 +742,11 @@
      "pais": "Colombia",
      "duracion_min": 9,
      "tmdb_id": 1617929,
-     "poster": "https://image.tmdb.org/t/p/w500/nFyKmHbihS1DwJeGG8NthSP9WwZ.jpg",
-     "posterSource": "tmdb",
+     "poster": "/assets/cineautopsia/los-anos-del-conejo.jpg",
+     "posterSource": "oficial",
      "lbSlug": "the-years-of-the-rabbit",
-     "sinopsis": "Me acuerdo muy poco de esos años: los años del conejo. Mi animal favorito, mi color favorito, la montaña al frente de mi casa, la cara de mis amigas, los juegos con mis hermanas. Dejar mi vida en México así me borró la memoria. Coloreo estos recuerdos como un intento de recolectarlos. Para siempre."
+     "sinopsis": "Me acuerdo muy poco de esos años: los años del conejo. Mi animal favorito, mi color favorito, la montaña al frente de mi casa, la cara de mis amigas, los juegos con mis hermanas. Dejar mi vida en México así me borró la memoria. Coloreo estos recuerdos como un intento de recolectarlos. Para siempre.",
+     "_poster_src": "https://bogotaexperimental.com/bogotaexp2026/wp-content/uploads/2026/08/LosAnosDelConejo-poster.webp"
     },
     {
      "titulo": "Somnolítico",
@@ -712,7 +755,10 @@
      "pais": "Colombia",
      "duracion_min": 11,
      "poster": "/assets/cineautopsia/somnolitico.jpg",
-     "posterSource": "editorial"
+     "posterSource": "oficial",
+     "sinopsis": "Un ser extraño pierde su rumbo en el caos del sistema de transporte, desplazándose de un lugar a otro sin encontrar una salida. Los trayectos se ven desbordados por flujos acelerados que van y vienen como cascadas humanas. Los transeúntes, desdibujados y sin rostro, se mueven de manera automática, creando un laberinto en el que las rutas parecen infinitas. Personas adormiladas se funden con el entorno y, mientras el autobús sigue su marcha, el ser finalmente se descubre a sí mismo.",
+     "_sinopsis_src": "https://bogotaexperimental.com/bogotaexp2026/somnolitico/ (ficha oficial del festival)",
+     "_poster_src": "https://bogotaexperimental.com/bogotaexp2026/wp-content/uploads/2026/08/Somnolitico-poster.webp"
     },
     {
      "titulo": "Lamentos de un balcón",
@@ -722,9 +768,10 @@
      "duracion_min": 4,
      "tmdb_id": 1744098,
      "poster": "/assets/cineautopsia/lamentos-de-un-balcon.jpg",
-     "posterSource": "editorial",
+     "posterSource": "oficial",
      "lbSlug": "lamentos-de-un-balcon",
-     "sinopsis": "Lamentos de un balcón es un cortometraje experimental colombiano dirigido por el realizador Hans Chispas. La producción vio la luz en el año 2026 y posee una duración exacta de 4 minutos."
+     "sinopsis": "Lamentos de un balcón es un cortometraje experimental colombiano dirigido por el realizador Hans Chispas. La producción vio la luz en el año 2026 y posee una duración exacta de 4 minutos.",
+     "_poster_src": "https://bogotaexperimental.com/bogotaexp2026/wp-content/uploads/2026/08/LamentosDeUnBalcon-poster.webp"
     },
     {
      "titulo": "Ensoñaciones cósmicas de la materia",
@@ -733,7 +780,10 @@
      "pais": "Colombia",
      "duracion_min": 15,
      "poster": "/assets/cineautopsia/ensonaciones-cosmicas-de-la-materia.jpg",
-     "posterSource": "editorial"
+     "posterSource": "oficial",
+     "sinopsis": "Nuestro mayor afán es realizar una pieza que constituya un viaje, una invitación a un viaje preñado de visiones que estimulen, que inspiren a nivel visual y auditivo. Construir un poema audiovisual que transite los evocadores territorios de la selva amazónica, y penetrar en una constelación de prístinas imágenes arraigadas hondamente en el inconsciente humano (y, en definitiva, en el Alma del hombre).",
+     "_sinopsis_src": "https://bogotaexperimental.com/bogotaexp2026/ensonaciones-cosmicas-de-la-materia/ (ficha oficial del festival)",
+     "_poster_src": "https://bogotaexperimental.com/bogotaexp2026/wp-content/uploads/2026/08/EnsonacionesCosmicas-poster.webp"
     },
     {
      "titulo": "Pierna Pernil",
@@ -742,7 +792,8 @@
      "pais": "Colombia",
      "duracion_min": 8,
      "poster": "/assets/cineautopsia/pierna-pernil.jpg",
-     "posterSource": "editorial"
+     "posterSource": "oficial",
+     "_poster_src": "https://bogotaexperimental.com/bogotaexp2026/wp-content/uploads/2026/08/31-poster_pierna-pernill.webp"
     },
     {
      "titulo": "Entrelazadas (The Hardest Shapes)",
@@ -751,10 +802,11 @@
      "pais": "Colombia",
      "duracion_min": 15,
      "tmdb_id": 1406490,
-     "poster": "https://image.tmdb.org/t/p/w500/pb6B1l5ukw06JZxIOrYB2bW0MFj.jpg",
-     "posterSource": "tmdb",
+     "poster": "/assets/cineautopsia/entrelazadas-the-hardest-shapes.jpg",
+     "posterSource": "oficial",
      "lbSlug": "entrelazadas",
-     "sinopsis": "Entre las líneas del afecto y el dolor se traza una disputa generacional sobre el deber ser mujer. Una hija se enfrenta al reto de escuchar a su madre y su abuela con el propósito de desdibujar las formas que cimientan su identidad."
+     "sinopsis": "Entre las líneas del afecto y el dolor se traza una disputa generacional sobre el deber ser mujer. Una hija se enfrenta al reto de escuchar a su madre y su abuela con el propósito de desdibujar las formas que cimientan su identidad.",
+     "_poster_src": "https://bogotaexperimental.com/bogotaexp2026/wp-content/uploads/2026/08/1-poster_Entrelazadas.webp"
     }
    ],
    "sede": "Sala 2, Cinemateca de Bogotá (Cra. 3 # 19-10)",
@@ -782,10 +834,11 @@
      "pais": "Colombia",
      "duracion_min": 14,
      "tmdb_id": 1689999,
-     "poster": "https://image.tmdb.org/t/p/w500/fhvA2plccJRbTQgL6HRAAUPhPic.jpg",
-     "posterSource": "tmdb",
+     "poster": "/assets/cineautopsia/chaika.jpg",
+     "posterSource": "oficial",
      "lbSlug": "chaika-2025",
-     "sinopsis": "Valentina, una cosmonauta rusa de 76 años, llega a una Cuba ucrónica y nebulosa tras recibir, con treinta años de retraso, una invitación para una expedición agrícola a Marte. Entre paisajes difusos y promesas del pasado, busca las ruinas de un futuro que nunca llegó."
+     "sinopsis": "Valentina, una cosmonauta rusa de 76 años, llega a una Cuba ucrónica y nebulosa tras recibir, con treinta años de retraso, una invitación para una expedición agrícola a Marte. Entre paisajes difusos y promesas del pasado, busca las ruinas de un futuro que nunca llegó.",
+     "_poster_src": "https://bogotaexperimental.com/bogotaexp2026/wp-content/uploads/2026/08/Chaika-poster.webp"
     },
     {
      "titulo": "Posdata para el fin del mundo",
@@ -794,7 +847,10 @@
      "pais": "Colombia",
      "duracion_min": 17,
      "poster": "/assets/cineautopsia/posdata-para-el-fin-del-mundo.jpg",
-     "posterSource": "editorial"
+     "posterSource": "oficial",
+     "sinopsis": "Se ha enviado un extraño mensaje desde la Tierra hacia una estrella situada a más de 1.111 años luz de distancia. Este mensaje de contacto hacia la estrella lejana se convierte, al mismo tiempo, en un viaje hacia el interior más profundo del ser humano, estableciendo comunicación con un yo encarnado, material y cósmico. Este yo revela también la forma de vida en un planeta que dejó de existir hace mucho tiempo: la Tierra. P.S. for the End of the World (P.D. para el fin del mundo) es un cortometraje experimental que explora diversos medios mixtos, incluyendo animación stop-motion, grafismos en movimiento (motion graphics), código audiovisual, modelado de partículas, fallos (glitches) naturales a través del trabajo de datos, errores de herramientas tecnológicas y capturas intervenidas. Se basa en una escritura poética expandida que funciona también como guion. Es, a su vez, material audiovisual y un poema expandido que utiliza códigos QR para intervenir la pantalla, ofreciendo al espectador la posibilidad de acceder a los escritos e interactuar con ellos a través de un sitio web.",
+     "_sinopsis_src": "https://bogotaexperimental.com/bogotaexp2026/posdata-para-el-fin-del-mundo/ (ficha oficial del festival)",
+     "_poster_src": "https://bogotaexperimental.com/bogotaexp2026/wp-content/uploads/2026/08/PosdataParaFin-poster.webp"
     },
     {
      "titulo": "Anoche a media noche",
@@ -803,7 +859,10 @@
      "pais": "Colombia",
      "duracion_min": 15,
      "poster": "/assets/cineautopsia/anoche-a-media-noche.jpg",
-     "posterSource": "editorial"
+     "posterSource": "oficial",
+     "sinopsis": "Last Night at Midnight (Anoche a medianoche) es un cortometraje experimental basado en un poema octosílabo escrito por Gualberto Gutiérrez en 1819, en una época en la que el terror dominaba el Virreinato de la Nueva Granada. El poema relata, con ironía y crueldad, la noche en que el virrey Juan Sámano huyó de Santafé hacia Cartagena tras la derrota de las tropas realistas en la Batalla de Boyacá. Lejos de una reconstrucción histórica convencional, la película fragmenta el poema y lo transforma en una delirante máquina visual: selvas, rituales, oraciones, cuerpos grotescos y presagios ominosos acompañan la huida de un poder que ya no gobierna. Personajes que emergen de la escultura, la danza y el teatro encarnan una dramaturgia siniestra en la que la historia oficial es desmantelada y puesta a sangrar. Estableciendo resonancias intemporales entre la huida del virrey y la del rey Juan Carlos I de España, el cortometraje entreteje humor negro, escatología simbólica y una estética del pánico, transformando un mito fundacional en un relato corrosivo sobre la persistencia de la dominación, la memoria y la imaginación histórica.",
+     "_sinopsis_src": "https://bogotaexperimental.com/bogotaexp2026/last-night-at-midnight/ (ficha oficial del festival)",
+     "_poster_src": "https://bogotaexperimental.com/bogotaexp2026/wp-content/uploads/2026/08/AnocheALaMediaNoche-poster.webp"
     },
     {
      "titulo": "Decaer",
@@ -824,7 +883,10 @@
      "pais": "Colombia",
      "duracion_min": 10,
      "poster": "/assets/cineautopsia/mal-de-tierra.jpg",
-     "posterSource": "editorial"
+     "posterSource": "oficial",
+     "sinopsis": "«Stories that shape the paths along which the water flows Voices that travel between the sky and the mountains The wind and its whistling frighten the water The earth chokes A storm of tears trickles down the skin It is the salt that cultivates the streams to wander Voices that travel between the sky and the mountains»",
+     "_sinopsis_src": "https://bogotaexperimental.com/bogotaexp2026/mal-de-tierra/ (ficha oficial del festival)",
+     "_poster_src": "https://bogotaexperimental.com/bogotaexp2026/wp-content/uploads/2026/08/MalDeTierra-poster.webp"
     },
     {
      "titulo": "DESBORDES",
@@ -833,7 +895,10 @@
      "pais": "Colombia",
      "duracion_min": 6,
      "poster": "/assets/cineautopsia/desbordes.jpg",
-     "posterSource": "editorial"
+     "posterSource": "oficial",
+     "sinopsis": "En medio del flujo anónimo de un aeropuerto, Gabi descubre una mancha en su zapato blanco. Ese pequeño accidente, casi invisible para cualquier otra persona, comienza a agitar algo en su interior: una inquietud que nubla el día y abre ventanas a recuerdos que creía dormidos desde hace tiempo. Desbordes es un viaje sensorial a través de las grietas de la memoria y los fragmentos que nos mantienen unidos. Un tránsito entre luces frías, silencios y símbolos que insisten en reaparecer. Lo que le ocurre a Gabi no se puede explicar del todo: se siente, se intuye, se respira. La verdadera transformación comienza cuando la mancha deja de ser solo una mancha.",
+     "_sinopsis_src": "https://bogotaexperimental.com/bogotaexp2026/desbordes/ (ficha oficial del festival)",
+     "_poster_src": "https://bogotaexperimental.com/bogotaexp2026/wp-content/uploads/2026/08/Desbordes-poster.webp"
     },
     {
      "titulo": "Filme Pin",
@@ -842,11 +907,12 @@
      "pais": "Colombia - Portugal",
      "duracion_min": 7,
      "tmdb_id": 1616856,
-     "poster": "https://image.tmdb.org/t/p/w500/4nXy9clHHvJYkpdmuEQytHRKFqG.jpg",
-     "posterSource": "tmdb",
+     "poster": "/assets/cineautopsia/filme-pin.jpg",
+     "posterSource": "oficial",
      "lbSlug": "filme-pin",
      "sinopsis": "Entre la luz, el metal y la plata, una colección de pines solidarios se vuelve un archivo de otra escala: espectros del exilio y de la lucha internacional contra el régimen fascista y colonial de Portugal.",
-     "synopsis_en": "Between light, metal and silver, a collection of solidarity pins turns into an archive of another scale: spectres of exile and international struggle against Portugal’s fascist and colonial regime."
+     "synopsis_en": "Between light, metal and silver, a collection of solidarity pins turns into an archive of another scale: spectres of exile and international struggle against Portugal’s fascist and colonial regime.",
+     "_poster_src": "https://bogotaexperimental.com/bogotaexp2026/wp-content/uploads/2026/08/FilmePain-poster.webp"
     },
     {
      "titulo": "Pudor ante el asalto de los ojos furtivos",
@@ -855,11 +921,12 @@
      "pais": "Colombia",
      "duracion_min": 8,
      "tmdb_id": 1592968,
-     "poster": "https://image.tmdb.org/t/p/w500/9elraxytkfPvx8jsoLsWtDeF3pV.jpg",
-     "posterSource": "tmdb",
+     "poster": "/assets/cineautopsia/pudor-ante-el-asalto-de-los-ojos-furtivos.jpg",
+     "posterSource": "oficial",
      "lbSlug": "shame-in-the-face-of-furtive-eyes",
      "sinopsis": "La ciudad como escenario del deseo, donde la mirada masculina provoca la vigilancia y el escrutinio del cuerpo femenino. Esa relación de poder convierte al cuerpo en campo de disputa en el espacio público.",
-     "synopsis_en": "The city as a stage of desire, where the male gaze provokes surveillance and scrutiny of the female body. This power relationship turns the body into a field of contestation in public space."
+     "synopsis_en": "The city as a stage of desire, where the male gaze provokes surveillance and scrutiny of the female body. This power relationship turns the body into a field of contestation in public space.",
+     "_poster_src": "https://bogotaexperimental.com/bogotaexp2026/wp-content/uploads/2026/08/OjosFurtivos-poster.webp"
     },
     {
      "titulo": "Inmarcesbile",
@@ -897,11 +964,12 @@
      "pais": "China",
      "duracion_min": 8,
      "tmdb_id": 1572828,
-     "poster": "https://image.tmdb.org/t/p/w500/y5e7C4l7Fatlyfgl5C3QM0a4VOr.jpg",
-     "posterSource": "tmdb",
+     "poster": "/assets/cineautopsia/allegory-of-the-cave.jpg",
+     "posterSource": "oficial",
      "lbSlug": "allegory-of-the-cave",
      "sinopsis": "El mundo y yo estamos perdidos.",
-     "synopsis_en": "The world and I are lost."
+     "synopsis_en": "The world and I are lost.",
+     "_poster_src": "https://bogotaexperimental.com/bogotaexp2026/wp-content/uploads/2026/08/AllegoryOfTheCave-poster.webp"
     },
     {
      "titulo": "Natal Kick, Cosmo Ground",
@@ -910,10 +978,11 @@
      "pais": "Corea del Sur",
      "duracion_min": 13,
      "poster": "/assets/cineautopsia/natal-kick-cosmo-ground.jpg",
-     "posterSource": "editorial",
+     "posterSource": "oficial",
      "sinopsis": "Bajo las sombras ocupadas, el suelo cósmico flotante, los xenolitos y los alientos que se perciben en todos los seres se vuelven cada vez más ásperos por los experimentos colectivos de la humanidad. La obra considera a todas las entidades existentes como pioneras de un cosmos sintiente: piensa no solo desde la Tierra sino desde el universo entero, y sitúa lo humano y lo no humano como agentes que se aventuran juntos por ese espacio desconocido, mientras explora las emergencias ecológicas del presente.",
      "synopsis_en": "Under the occupied shadows, floating cosmo ground, xenoliths, and the breaths perceived from all beings are increasingly coarsened by humanity's collective experiments. It considers all existing entities as pioneers of a sentient cosmos, thinking not only from Earth but from the universe at large, and positions both human and non-human elements as agents jointly adventuring through this unknown space, while exploring the ecological emergencies of the present.",
-     "_sinopsis_src": "https://www.torontofilmweek.com/streaming-online (Toronto Film Week 2026, sinopsis del catálogo)"
+     "_sinopsis_src": "https://www.torontofilmweek.com/streaming-online (Toronto Film Week 2026, sinopsis del catálogo)",
+     "_poster_src": "https://bogotaexperimental.com/bogotaexp2026/wp-content/uploads/2026/08/NatalKickCosmoGround-poster.webp"
     },
     {
      "titulo": "The Othered Scene",
@@ -923,10 +992,11 @@
      "duracion_min": 13,
      "tmdb_id": 1659194,
      "poster": "/assets/cineautopsia/the-othered-scene.jpg",
-     "posterSource": "editorial",
+     "posterSource": "oficial",
      "lbSlug": "the-othered-scene",
      "sinopsis": "Cuando las palabras pasan de una persona a otra, ¿de quién son? Al volver sobre una plaga de posguerra en Quemoy, la memoria de una sobreviviente reúne fragmentos a la deriva: un diario de viaje en 16 mm, dibujos al carbón, sonido electrónico y testimonio hablado, que forman una meditación en capas sobre la transmisión y la propiedad inestable de los relatos.",
-     "synopsis_en": "When words pass from one person to another, whose do they become? Revisiting a post-war plague on Quemoy, memories of a survivor gather drifting fragments: a 16mm travelogue, charcoal drawings, electronic sound, and spoken testimony, forming a layered meditation on transmission and the unstable ownership of stories."
+     "synopsis_en": "When words pass from one person to another, whose do they become? Revisiting a post-war plague on Quemoy, memories of a survivor gather drifting fragments: a 16mm travelogue, charcoal drawings, electronic sound, and spoken testimony, forming a layered meditation on transmission and the unstable ownership of stories.",
+     "_poster_src": "https://bogotaexperimental.com/bogotaexp2026/wp-content/uploads/2026/08/TheOtheredScene-poster.webp"
     },
     {
      "titulo": "Veil's End",
@@ -935,7 +1005,10 @@
      "pais": "China",
      "duracion_min": 15,
      "poster": "/assets/cineautopsia/veil-s-end.jpg",
-     "posterSource": "editorial"
+     "posterSource": "oficial",
+     "sinopsis": "Chuan es fotógrafo. Tras la pandemia, perdió su trabajo y se quedó en casa estudiando budismo. A través de antiguas visiones de animales enjaulados, historias de guerra sepultadas y profundos sutras, Chuan recordó muchos momentos del pasado, mientras su alma busca liberarse de su jaula.",
+     "_sinopsis_src": "https://bogotaexperimental.com/bogotaexp2026/veils-end/ (ficha oficial del festival)",
+     "_poster_src": "https://bogotaexperimental.com/bogotaexp2026/wp-content/uploads/2026/08/VejlsEnd-poster.webp"
     },
     {
      "titulo": "Abjad Hawaz",
@@ -944,11 +1017,12 @@
      "pais": "Líbano",
      "duracion_min": 5,
      "tmdb_id": 1586176,
-     "poster": "https://image.tmdb.org/t/p/w500/7P8IZAYdqnZOUPMMsbMMgQYX7aa.jpg",
-     "posterSource": "tmdb",
+     "poster": "/assets/cineautopsia/abjad-hawaz.jpg",
+     "posterSource": "oficial",
      "lbSlug": "abjad-hawaz",
      "sinopsis": "Abjad Ḥawaz toma su nombre del antiguo ordenamiento del alfabeto árabe. A través del cuerpo de Salma Zahore, cada letra se baila y se encarna en las ruinas de Barcelona. Entre moda, música, poesía y performance, la película reivindica una lengua a menudo temida e incomprendida y la convierte en una celebración de la identidad, la resistencia y la libertad artística.",
-     "synopsis_en": "Abjad Ḥawaz takes its name from the ancient ordering of the Arabic alphabet. Through the body of Salma Zahore, each letter is danced and embodied in the ruins of Barcelona. Blending fashion, music, poetry, and performance, the film reclaims a language often feared and misunderstood, turning it into a celebration of identity, resilience, and artistic freedom."
+     "synopsis_en": "Abjad Ḥawaz takes its name from the ancient ordering of the Arabic alphabet. Through the body of Salma Zahore, each letter is danced and embodied in the ruins of Barcelona. Blending fashion, music, poetry, and performance, the film reclaims a language often feared and misunderstood, turning it into a celebration of identity, resilience, and artistic freedom.",
+     "_poster_src": "https://bogotaexperimental.com/bogotaexp2026/wp-content/uploads/2026/08/AbjadHawaz-poster-1.webp"
     },
     {
      "titulo": "Circles and Squares",
@@ -957,11 +1031,12 @@
      "pais": "Japón",
      "duracion_min": 4,
      "tmdb_id": 1692469,
-     "poster": "https://image.tmdb.org/t/p/w500/2z0voFLyRJXwMSCCFfuJr8evGkl.jpg",
-     "posterSource": "tmdb",
+     "poster": "/assets/cineautopsia/circles-and-squares.jpg",
+     "posterSource": "oficial",
      "lbSlug": "circles-and-squares",
      "sinopsis": "Circles & Squares es una meditación sobre el movimiento y la relación. Los círculos aparecen y se retiran, y forman armonías pasajeras, mientras la animación funciona como una partitura visual que guía los tonos de onda cuadrada de la banda sonora. Sin narración, la película invita a una atención sostenida al equilibrio, la repetición y la resonancia entre sonido y forma.",
-     "synopsis_en": "Circles & Squares is a meditation on motion and relation. Circles emerge and recede, forming transient harmonies, while the animation operates as a visual score guiding the square-wave tones of the soundtrack. Free of narrative, the film invites sustained attention to balance, repetition, and the resonance between sound and form."
+     "synopsis_en": "Circles & Squares is a meditation on motion and relation. Circles emerge and recede, forming transient harmonies, while the animation operates as a visual score guiding the square-wave tones of the soundtrack. Free of narrative, the film invites sustained attention to balance, repetition, and the resonance between sound and form.",
+     "_poster_src": "https://bogotaexperimental.com/bogotaexp2026/wp-content/uploads/2026/08/CirclesAndSquares-poster.webp"
     },
     {
      "titulo": "Lost Fragments of a Seizure",
@@ -970,7 +1045,10 @@
      "pais": "Colombia, Emiratos Árabes Unidos",
      "duracion_min": 11,
      "poster": "/assets/cineautopsia/lost-fragments-of-a-seizure.jpg",
-     "posterSource": "editorial"
+     "posterSource": "oficial",
+     "sinopsis": "Una serie de preguntas y reflexiones se despliega en torno a la experiencia y la revelación de vivir con epilepsia. A través de un collage de material de archivo e imágenes fragmentadas, Reem busca recuperar el recuerdo que perdió durante su primera convulsión. La película entrelaza fragmentos que evocan los símbolos poéticos y frágiles que rodean una crisis epiléptica: el antes, el después y el entretiempo. La infancia y la memoria acompañan este recorrido, donde el acto de recordar se convierte en una forma de resistir al olvido y de enfrentar la naturaleza fugaz de una convulsión.",
+     "_sinopsis_src": "https://bogotaexperimental.com/bogotaexp2026/lost-fragments-of-a-seizure/ (ficha oficial del festival)",
+     "_poster_src": "https://bogotaexperimental.com/bogotaexp2026/wp-content/uploads/2026/08/LostFragmentsOfASeisure-poster.webp"
     },
     {
      "titulo": "Notes from Silences",
@@ -979,10 +1057,11 @@
      "pais": "Indonesia, Puerto Rico",
      "duracion_min": 14,
      "poster": "/assets/cineautopsia/notes-from-silences.jpg",
-     "posterSource": "editorial",
+     "posterSource": "oficial",
      "sinopsis": "Documental experimental que reúne memorias fracturadas de Vieques y Bali, dos islas en extremos opuestos del mundo que parecen una fantasía de paraíso y esconden una historia enterrada en común. Metraje no planeado, fotografías y retazos de grabaciones de voz se entrelazan con los sonidos de la parentela no humana que atestiguó lo que los humanos eligen olvidar. Bajo la banalidad de lo cotidiano late el eco más fuerte de la violencia: los silencios que la gente sigue guardando.",
      "synopsis_en": "An experimental documentary gathering fractured memories from Vieques and Bali, two islands on opposite ends of the world that look like paradise fantasy and conceal a common buried history. Unplanned footage, photographs and snippets of voice recordings intertwine with the sounds of nonhuman kin that bore witness when humans choose to forget. Beneath the banalities of everyday life lies the loudest echo of violence: the silences people keep.",
-     "_sinopsis_src": "https://alexandrakumala.com/film/"
+     "_sinopsis_src": "https://alexandrakumala.com/film/",
+     "_poster_src": "https://bogotaexperimental.com/bogotaexp2026/wp-content/uploads/2026/08/NotesFromSilences-poster.webp"
     }
    ],
    "sede": "Fundación Gilberto Alzate Avendaño FUGA (Cl. 10 #3-16, Bogotá)",
