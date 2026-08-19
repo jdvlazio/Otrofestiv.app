@@ -159,3 +159,28 @@ test('T58 — Planear recalcula al entrar, salvo si ya hay plan guardado', async
   const conPlan = await page.evaluate(() => cachedResult);
   expect(conPlan, 'con plan guardado no se autocalcula').toBeNull();
 });
+
+// 17 ago 2026 — el worker llevaba DÍAS muerto y nadie lo vio: screeningPlannable
+// entró a _SCHED_PURE_FNS sin su import en calc.js, eval(name) tiraba
+// ReferenceError, y TODO cálculo caía al fallback síncrono en el main thread.
+// El guardián estático y el test de paridad estaban verdes (el primero solo
+// miraba que la fn existiera; el segundo ensambla desde las fuentes del dominio,
+// sin pasar por el eval de calc.js). Este test cierra el hueco de RUNTIME: el
+// build real del worker no puede fallar, y el cálculo tiene que venir de él.
+test('T78 — el worker del planeador construye y calcula (sin fallback silencioso)', async ({ page }) => {
+  const fallos = [];
+  page.on('console', m => { if (/\[Worker\]/.test(m.text())) fallos.push(m.text().slice(0, 140)); });
+  await enterFestival(page, 'ficdeh2026', '2026-08-11T12:00:00-05:00');
+  await page.evaluate(() => document.querySelector('[data-action="citySheetAll"]')?.click());
+  await page.waitForTimeout(400);
+  const r = await page.evaluate(async () => {
+    const vivas = [...new Set(FILMS.filter(f => f.day && f.time && !f.info && !f._cancelled).map(f => f.title))];
+    state.set('watchlist', new Set(vivas.slice(0, 8)));
+    cachedResult = null;
+    runCalc();
+    await new Promise(r => setTimeout(r, 4000));
+    return { calculo: !!(cachedResult && cachedResult.scenarios && cachedResult.scenarios.length) };
+  });
+  expect(r.calculo, 'el cálculo llegó').toBe(true);
+  expect(fallos, 'ningún «[Worker] build failed» ni error de worker').toEqual([]);
+});

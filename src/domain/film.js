@@ -173,7 +173,7 @@ export function screeningPassed(s){
 
 // ── Predicados CANÓNICOS de fase de una función (fuente única) ────────────────
 // "terminó" y "en curso" estaban reimplementados inline en 5 sitios (aquí,
-// isNowShowing, agenda.js ×2, _updateMiPlanBadge), cada uno con parseInt y SIN
+// isNowShowing, agenda.js ×2), cada uno con parseInt y SIN
 // el Q&A (+30) que el planificador sí cuenta. Todo fin de función sale de
 // screeningEndMin (effectiveDuration = parseDur + Q&A). NOTA: screeningPassed
 // (arriba) es OTRO concepto — "ya no llegás" (arranque+10 de gracia), no "terminó".
@@ -184,7 +184,7 @@ export function screeningEndMin(s){ return toMin(s.time)+effectiveDuration(s); }
 // aparte, así que la frase arranca del fin duro, no del efectivo.
 export function screeningBlockEndMin(s){ return toMin(s.time)+blockDuration(s); }
 // screeningEndDate — el MISMO fin canónico, como instante absoluto (cruza días).
-// Dueño único del filtro "esta entrada del plan ya terminó": renderUnconfirmed y
+// Dueño único del filtro "esta entrada del plan ya terminó": effectiveWatched y
 // _updateMiPlanBadge lo reconstruían por separado, y el "terminó hace X min"
 // usaba OTRO fin (blockDuration) en la misma frase que el filtro (effective).
 export function screeningEndDate(s){
@@ -239,6 +239,25 @@ export function prioLiveCount(){
   return [...prioritized].filter(t=>FILMS.some(f=>f.title===t&&!screeningPassed(f))).length;
 }
 
+// effectiveWatched — DUEÑO ÚNICO de «qué se vio». Decisión de Juan (18 ago,
+// rediseño Diario Luz): una función del Plan que ya terminó SE ASUME vista —
+// el usuario no confirma; solo puede negarla («no la vi» → notWatched).
+// efectivo = watched explícito ∪ asumidas del plan − notWatched.
+// El precedente ya vivía en el dominio: todayWatched (festival.js) contaba
+// screeningPassed como vista desde antes de esta decisión.
+export function effectiveWatched(){
+  const out=new Set(watched);
+  if(savedAgenda&&savedAgenda.schedule){
+    const now=simNow();
+    savedAgenda.schedule.forEach(s=>{
+      const end=screeningEndDate(s);
+      if(end&&end<now&&s._title) out.add(s._title);
+    });
+  }
+  notWatched.forEach(t=>out.delete(t));
+  return out;
+}
+
 export function _endedStats(){
   // DUEÑO ÚNICO de «cuántas marcaste». Un programa visto cuenta por sus obras —
   // es lo que el usuario realmente vio. Antes excluía is_cortos por completo →
@@ -254,7 +273,7 @@ export function _endedStats(){
   // usuario que le falta calificar algo que no tiene estrellas sería un pendiente
   // imposible de cerrar.
   let totalWatched=0, pendingRatings=0;
-  [...watched].forEach(t=>{
+  [...effectiveWatched()].forEach(t=>{
     const f=FILMS.find(fi=>fi.title===t);
     if(!f) return;
     if(f.type==='event'){ totalWatched+=1; return; }

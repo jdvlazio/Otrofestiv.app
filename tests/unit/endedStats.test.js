@@ -14,6 +14,10 @@ function load(opts) {
       watched: opts.watched || new Set(),
       savedAgenda: opts.savedAgenda ?? null,
       filmRatings: opts.filmRatings || {},
+      notWatched: opts.notWatched || new Set(),
+      _simTime: opts._simTime ?? null,
+      FESTIVAL_DATES: opts.FESTIVAL_DATES || {},
+      TZ_OFFSET: opts.TZ_OFFSET ?? '-05:00',
     },
   });
 }
@@ -71,3 +75,35 @@ test('programa cuenta por sus OBRAS; el evento suma pero no se califica', () => 
     { totalWatched: 5, totalPlanned: 0, pendingRatings: 3 }
   );
 });
+
+// ── Vista ASUMIDA (Diario Luz, 18 ago): una función del plan que YA terminó
+// cuenta como vista sin marcarla; notWatched la excluye; una futura no cuenta. ──
+const _FILMS_ASUM = [
+  { title: 'Pasada', duration: '60 min' },
+  { title: 'Futura', duration: '60 min' },
+];
+const _AGENDA_ASUM = { schedule: [
+  { _title: 'Pasada', day: 'VIE 15', time: '10:00', duration: '60 min' },
+  { _title: 'Futura', day: 'VIE 15', time: '20:00', duration: '60 min' },
+] };
+const _ASUM_OPTS = {
+  FILMS: _FILMS_ASUM, savedAgenda: _AGENDA_ASUM,
+  FESTIVAL_DATES: { 'VIE 15': '2026-08-15' },
+  _simTime: '2026-08-15T15:00:00-05:00',
+};
+
+test('vista asumida: la pasada del plan cuenta sin marcarla; la futura no', () => {
+  const { _endedStats } = load(_ASUM_OPTS);
+  assert.strictEqual(_endedStats().totalWatched, 1);
+});
+
+test('notWatched niega la asunción: «no la vi» no cuenta', () => {
+  const { _endedStats } = load({ ..._ASUM_OPTS, notWatched: new Set(['Pasada']) });
+  assert.strictEqual(_endedStats().totalWatched, 0);
+});
+
+test('effectiveWatched = explícito ∪ asumido − negado', () => {
+  const { effectiveWatched } = load({ ..._ASUM_OPTS, watched: new Set(['Futura']) });
+  assert.deepStrictEqual([...effectiveWatched()].sort(), ['Futura', 'Pasada']);
+});
+

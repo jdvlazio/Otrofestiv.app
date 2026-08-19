@@ -150,7 +150,17 @@ for (const festId of FESTIVALES) {
       const sc = cachedResult && cachedResult.scenarios;
       if (!sc || !sc.length) return { vacio: true };
       const elegido = sc[0];
+      // EXIGIBLES, revisados en el MISMO contexto que el cálculo. El Bloque E los
+      // computó ANTES de elegir ciudad (Bloque F), y la regla del plan por ciudad
+      // cambia la respuesta: «Honorablé» (FICDEH) tiene su única función viva en
+      // Barranquilla — exigible sin filtro, imposible con Bogotá elegida. El
+      // oráculo y el motor corrían en contextos distintos y el assert exigía lo
+      // que la regla prohíbe (rojo del 17 ago, destapado por el PR #647 de datos:
+      // el motor tenía razón). runCalc ya publicó PLAN_CITY_VENUES, así que
+      // plannableScreens responde acá con el contexto real del cálculo.
+      const exigiblesAhora = [...prioritized].filter(t => plannableScreens(t).length > 0);
       return {
+        exigiblesAhora,
         vacio: false,
         n: elegido.schedule.length,
         trueMax: elegido.trueMax,
@@ -189,7 +199,7 @@ for (const festId of FESTIVALES) {
       expect(enDiaVetado, `${festId}: el día ${estado.diaVetado} está vetado entero y el plan pone ${enDiaVetado.length} función(es) ahí`).toEqual([]);
     }
     if (!plan.incompatibles && plan.maxWithPriorities > 0) {
-      for (const p of estado.exigibles) {
+      for (const p of plan.exigiblesAhora) {
         expect(plan.titulos, `${festId}: la prioridad «${p}» quedó afuera de un plan que podía incluirla`).toContain(p);
       }
     }

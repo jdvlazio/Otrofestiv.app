@@ -48,6 +48,7 @@ if (configBlock) {
       city:         get('city'),
       dates:        get('dates'),
       festivalEndStr: get('festivalEndStr'),
+      timezoneOffset: get('timezoneOffset'),
     });
   }
 }
@@ -56,7 +57,14 @@ if (configBlock) {
 const now = new Date();
 function festivalStatus(f) {
   if (!f.festivalEndStr) return 'desconocido';
-  const end = new Date(f.festivalEndStr);
+  // festivalEndStr es hora local del festival SIN zona ('2026-08-19T23:00:00'), y
+  // `new Date` de un string así lo interpreta en la zona de QUIEN CORRE: en un Mac
+  // colombiano son las 23:00 de Bogotá, en el runner de CI las 23:00 UTC — cinco
+  // horas de diferencia. Cuando un festival cruzaba ese hueco, mi máquina y CI
+  // derivaban estados distintos y CLAUDE.md quedaba «desactualizado» sin que nadie
+  // tocara nada, bloqueando PRs ajenos (PR #682, 18 ago 2026). Se le ancla la zona
+  // del propio festival — la misma regla que el resto de la app (timezoneOffset).
+  const end = new Date(f.festivalEndStr + (f.timezoneOffset || '-05:00'));
   const diffDays = (end - now) / (1000 * 60 * 60 * 24);
   if (diffDays < -30)  return 'Archivado';
   if (diffDays < 0)    return 'Recién terminado';

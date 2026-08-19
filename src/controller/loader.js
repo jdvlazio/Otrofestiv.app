@@ -12,7 +12,7 @@ import { DAY_ABBR, DAY_NUM, _classifyFestival, festivalShortName } from '../view
 import { DAYS, DAY_SHORT_EN, _langDates, setCustomPosters, setDayShort, setDayShortEn, setPosters, keepCityOnly } from '../view/helpers.js';
 import { closeFestivalSheet, openCitySheet } from '../view/sheets.js';
 import { showToast } from '../view/feedback.js';
-import { _renderProgramaContent, lugarClose } from '../view/programa.js';
+import { _renderProgramaContent, lugarClose, scrollDtabsToActive } from '../view/programa.js';
 import { _fixStickyOffset } from '../view/agenda.js';
 import { loadState, _cloudLoad, _cloudSave, subscribePlanCloud, _flushCloudSave } from './persistence.js';
 import { report } from '../telemetry.js';
@@ -523,9 +523,7 @@ export async function loadFestival(id){
   // El render fija activeDay + la clase .on, pero no scrollea #dtabs → sin esto
   // la barra arranca en el día 1 con el día de hoy fuera de pantalla. Corre tras
   // el doble-rAF (barra ya pintada y medible). Mismo patrón que filterByDay.
-  const _dtabs=document.getElementById('dtabs');
-  const _onDtab=_dtabs&&_dtabs.querySelector('.dtab.on');
-  if(_dtabs&&_onDtab) _dtabs.scrollLeft=_onDtab.offsetLeft-_dtabs.offsetLeft;
+  scrollDtabsToActive();
   // Tab de aterrizaje contextual (regla de Juan, 17 jul): DURANTE el festival, si el
   // usuario YA tiene plan, su pantalla de trabajo es Mi Plan — aterrizar ahí. Sin plan
   // (o festival futuro/pasado) → Programa, como siempre: un Mi Plan vacío no invita a

@@ -7,7 +7,7 @@
 // (lo escribe loadFestival). Roster/viewstate vía bridge.
 
 import { FESTIVAL_CONFIG, MAX_REMEMBERED_SLOTS, TMDB_IMG, _DEFAULT_FEST_ID } from '../config.js';
-import { DAY_ABBR, DAY_NUM, ICONS, _secLabel, _sectionColor, escXML, isFullDayBlocked, makeProgramPoster, parseProgramTitle, renderRatingStarsHTML } from '../view/components.js';
+import { DAY_ABBR, DAY_NUM, ICONS, _secLabel, _sectionColor, escXML, festivalTagline, isFullDayBlocked, makeProgramPoster, parseProgramTitle, renderRatingStarsHTML } from '../view/components.js';
 import { _getItemPoster, _mkCortoItemHtml, _posterStyle, dayLabel, emptyState, durFmt, flagFmt, getCortoItemPoster, getFilmPoster, getFilmPosterUntitled, getPosterSrc, itemPosterParts, posterAmbient, posterParts, sala, starsText, vcfg, venueCity, venueMatches, isCitySel, ticketBadgeTarget, conflictAccount } from '../view/helpers.js';
 import { closeAvSheet, closePVRating, closePrioLimit } from '../view/sheets.js';
 import { showConflictModal, showToast } from '../view/feedback.js';
@@ -392,16 +392,18 @@ export function openPelSheet(title){
     ${f.synopsis?`    <div class="sec-hdr sm">${ICONS.text} <span>${f.type==='event'?t('label_descripcion'):t('label_sinopsis')}</span></div>
     <div class="pel-sheet-synopsis">${locSynopsis(f).replace(/^⚠️\s*INGLÉS\s*[—-]\s*/,'')}</div>`:''}
     ${cortosHtml}
+        <div class="pel-sheet-foot">
         ${inW?`<div class="pel-sheet-ctas-watched">
-        <button data-title="${escXML(f.title)}" data-action="toggleWatchedAndClose" class="pel-sheet-action-btn act-on">${ICONS.check} ${t('cta_vista')}</button>
+        <button data-title="${escXML(f.title)}" data-action="toggleWatchedAndClose" class="pel-sheet-action-btn act-on">${ICONS.eye} ${t('cta_vista')}</button>
         ${!f.is_cortos?`<button data-title="${escXML(f.title)}" data-action="closePelAndRate" class="pel-sheet-action-btn btn-secondary">${ICONS.star} ${filmRatings[f.title]?t('misc_cambiar'):t('cta_calificar')}</button>`:``}
       </div>`
     :`<div class="pel-sheet-ctas">
         <button id="pel-wl-btn" class="row-center-xs pel-sheet-action-btn${inWL?' act-on btn-primary':' btn-primary'}" data-title="${escXML(f.title)}" data-action="togglePelWL">${inWL?ICONS.heartFill:ICONS.heart} ${inWL?t('cta_en_intereses'):t('cta_intereses')}</button>
         <button id="pel-prio-btn" class="row-center-xs pel-sheet-action-btn${inPrio?' act-prio':' btn-secondary'}" data-title="${escXML(f.title)}" data-action="togglePelPrio">${inPrio?ICONS.bookmarkFill:ICONS.bookmark} ${inPrio?t('cta_priorizada'):t('cta_priorizar')}</button>
-        <button id="pel-vista-btn" class="row-center-xs pel-sheet-action-btn btn-secondary" data-title="${escXML(f.title)}" data-action="toggleWatched">${ICONS.star} ${t('cta_calificar')}</button>
+        <button id="pel-vista-btn" class="row-center-xs pel-sheet-action-btn btn-secondary" data-title="${escXML(f.title)}" data-action="toggleWatched">${ICONS.eye} ${t('cta_vista')}</button>
       </div>`}
     ${_inPlan&&activeView==='agenda'?`<button data-title="${escXML(f.title)}" data-action="closePelAndRemove" class="pel-sheet-remove-plan">${ICONS.x} ${t('plan_quitar_plan')}</button>`:''}
+        </div>
   `;
   document.getElementById('pel-overlay').classList.add('open');
   _ps.classList.add('open');
@@ -554,11 +556,28 @@ export function openDiary(){
   const cfg=FESTIVAL_CONFIG[_activeFestId]||{};
   const titleEl=document.getElementById('diary-title');
   if(titleEl) titleEl.textContent=cfg.name||'';
+  // La TAPA (18 ago): el afiche del festival como objeto + sus fechas. El
+  // keyArt es el mismo del splash — write-once en /assets/, ya cacheado.
+  const artEl=document.getElementById('diary-keyart');
+  if(artEl){
+    if(cfg.keyArt){ artEl.src=cfg.keyArt; artEl.style.visibility=''; }
+    else artEl.style.visibility='hidden';
+  }
+  // El nombre completo bajo la sigla (Juan, 18 ago) — vía festivalTagline, que
+  // ya es el dueño de derivarlo SIN repetir la sigla ([no-repetir-nombre]).
+  const fullEl=document.getElementById('diary-full');
+  if(fullEl) fullEl.textContent=festivalTagline(cfg, _lang)||'';
+  const datesEl=document.getElementById('diary-dates');
+  if(datesEl) datesEl.textContent=[(_lang==='en'&&cfg.dates_en)?cfg.dates_en:cfg.dates,cfg.year].filter(Boolean).join(' ');
   const countEl=document.getElementById('diary-count');
   if(countEl){
-    // Cuenta pósters del Diario = OBRAS, la misma unidad que el chip que lo abre.
-    const n=(body?body.querySelectorAll('.ended-poster').length:0);
-    countEl.textContent=n?`${n} ${n===1?t('label_obra_vista'):t('label_obras_vistas')}`:'';
+    // La cuenta viaja como count-badge (canon: nunca en palabras) — misma
+    // unidad que la banda que lo abre: OBRAS (cards del muro único).
+    // «Lo que viste» NO cuenta las negadas: el muro las muestra apagadas
+    // (para poder revertirlas) pero no son parte de la colección.
+    const n=(body?body.querySelectorAll('.dw-poster:not(.dw-off)').length:0);
+    countEl.textContent=n?String(n):'';
+    countEl.style.display=n?'':'none';
   }
   _pushSheetState();
   document.getElementById('diary-overlay')?.classList.add('open');
@@ -684,10 +703,12 @@ export function openCortoSheet(title, country, duration, section, flags, directo
         ${_cortoScrHdr}${_cortoScrBody}
         ${_avisosBand(null, {prog:_cortoShared?'cortos':null, progN:_cortoSharedN, scrs:_cortoPairs.map(p=>p.s)})}
         ${syn?`<div class="sec-hdr sm">${ICONS.text} <span>${t('label_sinopsis')}</span></div><div class="pel-sheet-synopsis">${syn}</div>`:''}
+    <div class="pel-sheet-foot">
     <div class="pel-sheet-ctas">
       <button id="corto-wl-btn" class="row-center-xs pel-sheet-action-btn${inWL?' act-on btn-primary':' btn-primary'}" data-title="${escXML(parentTitle||title)}" data-action="toggleWL">${inWL?ICONS.heartFill:ICONS.heart} ${inWL?t('cta_en_intereses'):t('cta_intereses')}</button>
       <button id="corto-prio-btn" class="row-center-xs pel-sheet-action-btn${inPrio?' act-prio':' btn-secondary'}" data-title="${escXML(parentTitle||title)}" data-action="togglePelPrio">${inPrio?ICONS.bookmarkFill:ICONS.bookmark} ${inPrio?t('cta_priorizada'):t('cta_priorizar')}</button>
       <button class="row-center-xs pel-sheet-action-btn${filmRatings[title]?' act-on':' btn-secondary'}" data-title="${escXML(title)}" data-action="closePelAndRate">${ICONS.star} ${filmRatings[title]?t('misc_cambiar'):t('cta_calificar')}</button>
+    </div>
     </div>
   `;
   const _psReset2=document.getElementById('pel-sheet');

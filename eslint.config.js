@@ -12,7 +12,7 @@ const globals = require('globals');
 const BRIDGE = {};
 [
   // STATE BRIDGE (19)
-  'watchlist','watched','prioritized','filmRatings','filmDelays','filmDelaysHistory',
+  'watchlist','watched','notWatched','prioritized','filmRatings','filmDelays','filmDelaysHistory',
   'savedAgenda','availability','lastRemovedSlots','_lang','_simTime','FILMS',
   'FESTIVAL_DATES','FESTIVAL_END','FESTIVAL_POSTPONED','PLAN_CITY_VENUES','PRIO_LIMIT','TZ_OFFSET','FESTIVAL_TRANSPORT',
   '_activeFestId','FESTIVAL_STORAGE_KEY',

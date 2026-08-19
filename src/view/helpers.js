@@ -507,6 +507,21 @@ export function planCityVenues(){
   return new Set(Object.keys(_vs).filter(v=>venueMatches(v,_sel)));
 }
 
+// planInputSignature — DUEÑO ÚNICO de «con qué se calculó este Plan» (Juan, 18
+// ago: el Plan que estás mirando nunca cambia solo). Cubre todo lo que consume el
+// planificador; la ciudad va reducida con keepCityOnly — una sede concreta no
+// restringe el plan y marcarla desactualizada sería una falsa alarma.
+export function planInputSignature(){
+  const _int=[...watchlist].filter(t=>!watched.has(t)).sort().join('|');
+  const _pri=[...prioritized].sort().join('|');
+  const _av=Object.keys(availability||{}).sort()
+    .map(d=>`${d}:${(availability[d]&&availability[d].blocks||[]).map(b=>`${b.from}-${b.to}`).sort().join(',')}`)
+    .filter(x=>!x.endsWith(':'))
+    .join(';');
+  const _ciudad=keepCityOnly(typeof activeVenue!=='undefined'?activeVenue:'all');
+  return `${_int}#${_pri}#${_av}#${_ciudad}`;
+}
+
 export function travelWarn(s1,s2){
   if(s1.day!==s2.day) return null;
   const travel=travelMins(s1.venue,s2.venue);
