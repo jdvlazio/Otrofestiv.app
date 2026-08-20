@@ -822,8 +822,22 @@ test('P09 — el splash recuerda el festival elegido, y lo olvida cuando termin�
     guardado: localStorage.getItem('otrofestiv_festival'),
   }));
 
-  await enterFestival(page, 'ficdeh2026', '2026-08-16T09:00');
-  expect((await estado()).guardado, 'entrar guarda la elección').toBe('ficdeh2026');
+  // El festival se elige EN TIEMPO DE EJECUCIÓN, no a mano. Antes era
+  // 'ficdeh2026' fijo, y el test caducó solo cuando FICDEH terminó (19 AGO
+  // 2026): la app olvida a propósito los festivales terminados —es justo lo
+  // que la segunda mitad de este test comprueba— así que el propio caso se
+  // contradecía. Se necesita uno VIGENTE, y cuál sea depende del día.
+  await page.goto('/');
+  await page.waitForSelector('html[data-app-ready="1"]', { state: 'attached', timeout: 15000 });
+  const elegido = await page.evaluate(() => {
+    const vivos = Object.entries(FESTIVAL_CONFIG).filter(([, c]) =>
+      c.name && c.group !== 'test' && c.festivalEndStr && new Date(c.festivalEndStr) > new Date());
+    return vivos.length ? vivos[0][0] : null;
+  });
+  expect(elegido, 'hace falta al menos un festival vigente para este caso').not.toBeNull();
+
+  await enterFestival(page, elegido);
+  expect((await estado()).guardado, 'entrar guarda la elección').toBe(elegido);
 
   // El splash SIGUE apareciendo — solo llega con la elección puesta.
   await page.reload();
@@ -831,7 +845,7 @@ test('P09 — el splash recuerda el festival elegido, y lo olvida cuando termin�
   await page.waitForTimeout(800);
   const vuelta = await estado();
   expect(await page.locator('#otrofestiv-splash').isVisible(), 'el splash no se salta').toBe(true);
-  expect(vuelta.on, 'preselecciona lo recordado').toBe('ficdeh2026');
+  expect(vuelta.on, 'preselecciona lo recordado').toBe(elegido);
   expect(vuelta.entrar, 'y «Entrar» queda habilitado').toBe('habilitado');
 
   // Caduca sola: un festival ya terminado no se preselecciona ni sobrevive.
@@ -840,6 +854,12 @@ test('P09 — el splash recuerda el festival elegido, y lo olvida cuando termin�
   await page.waitForSelector('.splash-card');
   await page.waitForTimeout(800);
   const caducado = await estado();
-  expect(caducado.entrar, 'terminado → vuelve a preguntar').toBe('disabled');
+  // Lo invariante es que el terminado NO sobrevive: ni queda seleccionado ni
+  // queda en memoria. Antes se comprobaba «Entrar» disabled, y eso solo vale
+  // cuando NO hay exactamente un festival en curso: si lo hay, al olvidar el
+  // viejo entra la OTRA regla —preselección automática del único vigente— y
+  // «Entrar» queda habilitado con razón. Son dos reglas distintas y cada una
+  // tiene su caso; mezclarlas hacía que este fallara según el día.
+  expect(caducado.on, 'el terminado no queda seleccionado').not.toBe('ficci65');
   expect(caducado.guardado, 'y la memoria se limpia sola').toBeNull();
 });
