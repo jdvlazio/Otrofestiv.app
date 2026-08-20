@@ -122,16 +122,66 @@ def acceso_de(sede, titulo):
     return 'Entrada libre'
 
 
+def obras_en(crudo, cat):
+    """TODAS las obras del catálogo que aparecen en un título de parrilla.
+
+    Una celda de la parrilla junta varias películas con «+» y les intercala el
+    director: «La tempestá + No contéis con los dedos + Vampir Cuadecuc Pere
+    Portabella» son TRES. Quedarse con la coincidencia más larga —que era lo
+    que hacía— perdía las otras dos, y eso pasaba en 28 funciones.
+
+    Se buscan todas por posición y se descartan las que se solapan: si «Verano»
+    cae dentro de un título más largo ya encontrado, no es una obra aparte.
+    """
+    c = clave(crudo)
+    hits = []
+    for k, o in cat.items():
+        if len(k) < 6:
+            continue
+        i = c.find(k)
+        if i >= 0:
+            hits.append((i, i + len(k), k, o))
+    hits.sort(key=lambda h: (h[0], -(h[1] - h[0])))
+    out, ocupado = [], []
+    for ini, fin, k, o in hits:
+        if any(ini < f2 and fin > i2 for i2, f2 in ocupado):
+            continue
+        if any(o is x for x in out):
+            continue
+        ocupado.append((ini, fin))
+        out.append(o)
+    return out
+
+
 def main():
     par = json.load(open(f'{S}/cinemancia-2026-programacion-oficial.json', encoding='utf-8'))['funciones']
     of = json.load(open(f'{S}/cinemancia-2026-programas-oficial.json', encoding='utf-8'))
     cat = catalogo()
 
-    # índice de pases: (día, hora) → programa, y (día, hora) → charla
+    # El índice lleva SEDE, no solo día y hora. Dos funciones distintas pueden
+    # coincidir en horario en sedes distintas: el sábado 5 a las 18:00 corren a
+    # la vez la Retrospectiva Navarro y el pase de Pere Portabella, y sin la
+    # sede la charla de Portabella se pegaba a las dos.
+    # Se agrupa por día y hora, y la sede desempata por CONTENCIÓN de prefijo:
+    # la hoja escribe «Teatro Caribe» y la parrilla «Teatro Caribe Itagüí», así
+    # que un corte fijo de N caracteres los separaba. Con una sola candidata en
+    # ese horario no hace falta desempatar.
+    def mete(d, k, v): d.setdefault((k['dia'], k['hora']), []).append((clave(k['sede']), v))
     pases, charlas = {}, {}
     for p in of['programas']:
-        for x in p['pases']: pases[(x['dia'], x['hora'])] = p
-    for c in of['charlas']: charlas[(c['dia'], c['hora'])] = c
+        for x in p['pases']: mete(pases, x, p)
+    for c in of['charlas']: mete(charlas, c, c)
+
+    def busca(idx, f):
+        cand = idx.get((f['dia'], f['hora']))
+        if not cand: return None
+        # La sede SIEMPRE tiene que coincidir. El atajo «si solo hay una
+        # candidata, dásela» pegaba la misma charla a las dos funciones que
+        # corren a esa hora en sedes distintas.
+        cs = clave(f['sede'])
+        for sede, v in cand:
+            if cs.startswith(sede[:12]) or sede.startswith(cs[:12]): return v
+        return None
 
     programas, sin_obra = [], []
     for f in par:
@@ -141,7 +191,8 @@ def main():
         if f.get('_hora_inferida'): e['_hora_inferida'] = True
         e['acceso'] = acceso_de(f['sede'], f['titulo_crudo'])
 
-        p = pases.get((f['dia'], f['hora']))
+        p = busca(pases, f)
+        ch = busca(charlas, f)          # un programa TAMBIÉN puede llevar debate
         if p:
             # PROGRAMA: las obras las manda la hoja del festival, en su orden.
             e['titulo'] = p['programa']
@@ -152,16 +203,15 @@ def main():
                 d.update({k: v for k, v in o.items() if v not in (None, '')})
                 e['obras'].append(d)
             e['_src'] = 'hoja oficial del festival (orden de programas)'
+            if ch:
+                e['_charla'] = {'descripcion': ch['descripcion'], 'invitados': ch['invitados']}
         else:
-            ch = charlas.get((f['dia'], f['hora']))
             # Función simple: la obra sale del catálogo por el título crudo.
-            hallada = None
-            for k, o in cat.items():
-                if len(k) > 5 and k in clave(f['titulo_crudo']):
-                    if hallada is None or len(k) > len(clave(hallada['title'])): hallada = o
+            halladas = obras_en(f['titulo_crudo'], cat)
+            hallada = halladas[0] if halladas else None
             e['titulo'] = (ch['titulo'] if ch else
                            (hallada['title'] if hallada else f['titulo_crudo']))
-            e['obras'] = [obra_de(hallada)] if hallada else []
+            e['obras'] = [obra_de(o) for o in halladas]
             if not hallada: sin_obra.append(f)
             if ch:
                 e['_charla'] = {'descripcion': ch['descripcion'], 'invitados': ch['invitados']}
@@ -174,6 +224,30 @@ def main():
             e['seccion'] = max(set(secs), key=secs.count)
         for o in e['obras']: o.pop('seccion', None)
         programas.append(e)
+
+    # Un programa que se repite se anuncia dos veces, y la parrilla solo lista
+    # su contenido en UNO de los pases: «Retrospectiva Sergio Navarro Programa
+    # 2» sale vacío el sábado 5 y con sus dos títulos el jueves 10, ambos con
+    # 87'. Mismo nombre de programa y misma duración = mismo programa, y las
+    # obras del pase que sí las trae valen para el otro.
+    porprog = {}
+    for e, f in zip(programas, par):
+        nom = re.sub(r'\s+', ' ', f['titulo_crudo']).strip()
+        m = re.match(r'^(.*?\bPrograma\s*\d)\b', nom, re.I)
+        if not m or not e['obras']: continue
+        porprog.setdefault((clave(m.group(1)), e.get('duracion_min')), e['obras'])
+    heredadas = 0
+    for e, f in zip(programas, par):
+        if e['obras']: continue
+        nom = re.sub(r'\s+', ' ', f['titulo_crudo']).strip()
+        m = re.match(r'^(.*?\bPrograma\s*\d)\b', nom, re.I)
+        if not m: continue
+        src = porprog.get((clave(m.group(1)), e.get('duracion_min')))
+        if src:
+            e['obras'] = [dict(o) for o in src]
+            e['_obras_src'] = 'contenido tomado del otro pase del MISMO programa (mismo nombre y misma duración)'
+            heredadas += 1
+    print(f'programas que heredan su contenido del otro pase: {heredadas}')
 
     out = {'_provenance': {
         'fuente': 'PDF oficial de programación + hoja de programas y charlas enviada por el festival',

@@ -25,6 +25,16 @@
      "tmdb_id": 1744092,
      "lbSlug": "todas-las-canciones-del-mundo",
      "duracion_min": 83
+    },
+    {
+     "titulo": "Lamentos de un balcón",
+     "director": "Hans Chispas",
+     "anio": 2026,
+     "sinopsis": "Lamentos de un balcón es un cortometraje experimental colombiano dirigido por el realizador Hans Chispas. La producción vio la luz en el año 2026 y posee una duración exacta de 4 minutos.",
+     "title_en": "Lamentos de un balcón",
+     "tmdb_id": 1744098,
+     "lbSlug": "lamentos-de-un-balcon",
+     "duracion_min": 4
     }
    ],
    "seccion": "Función inaugural"
@@ -100,6 +110,18 @@
      "tmdb_id": 1596917,
      "lbSlug": "dont-forget-the-oatmeal",
      "duracion_min": 75
+    },
+    {
+     "titulo": "Sol menor",
+     "director": "André Silva Santos",
+     "anio": 2025,
+     "synopsis_en": "Early Spring. A sonata, a train, a letter. Between his work as a flute teacher and the rituals of mourning the early death of his wife, Samuel faces a dilemma after a visit from his brother.",
+     "title_en": "April Tune",
+     "poster": "/dyDNNgnVIaI4MR83kPpoVNCWoVV.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1500856,
+     "lbSlug": "april-tune",
+     "duracion_min": 27
     }
    ],
    "seccion": "Competencia central"
@@ -167,8 +189,20 @@
    "_src": "PDF oficial de programación del festival",
    "duracion_min": 97,
    "acceso": "Entrada libre",
-   "titulo": "Cairo Streets / Las calles de El Cairo",
+   "titulo": "La corazonada",
    "obras": [
+    {
+     "titulo": "La corazonada",
+     "director": "Diego Soto",
+     "anio": 2025,
+     "synopsis_en": "Nieves runs a swimming pool with her son Martin. One summer, a biker falls for her. Things between them don’t seem to work out, until a filming crew arrives at the pool while scouting for locations and the director decides to put Natacha and the biker in her film.",
+     "title_en": "A Heart as Willing",
+     "poster": "/fvNadz6pkAhjlNQOsC20akHBgoU.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1466153,
+     "lbSlug": "a-heart-as-willing",
+     "duracion_min": 78
+    },
     {
      "titulo": "Cairo Streets / Las calles de El Cairo",
      "director": "Abdellah Taïa",
@@ -192,8 +226,20 @@
    "_src": "PDF oficial de programación del festival",
    "duracion_min": 99,
    "acceso": "Entrada libre",
-   "titulo": "No contéis con los dedos",
+   "titulo": "La tempestá",
    "obras": [
+    {
+     "titulo": "La tempestá",
+     "director": "Pere Portabella",
+     "anio": 2003,
+     "synopsis_en": "Naked bodies are buffeted by water accompanied by the music Il Temporale from the opera La Cenerentola and the overture to Il Barbiere di Siviglia both by Gioacchino Rossini.",
+     "title_en": "The Tempest",
+     "poster": "/loK8dBOpWOD5WEnCPQM35ryGRhm.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 257770,
+     "lbSlug": "the-tempest-2003",
+     "duracion_min": 6
+    },
     {
      "titulo": "No contéis con los dedos",
      "director": "Pere Portabella",
@@ -206,6 +252,19 @@
      "tmdb_id": 137631,
      "lbSlug": "dont-count-on-your-fingers",
      "duracion_min": 26
+    },
+    {
+     "titulo": "Vampir Cuadecuc",
+     "director": "Pere Portabella",
+     "anio": 1971,
+     "sinopsis": "Un ensayo atmosférico, que viene a ser una versión alternativa de «El conde Drácula», película dirigida por Jesús Franco en 1970; una narración fantasmal entre la ficción y la realidad.",
+     "synopsis_en": "An atmospheric essay, which is an alternative version of Count Dracula, a film directed by Jess Franco in 1970; a ghostly narration between fiction and reality.",
+     "title_en": "Vampir Cuadecuc",
+     "poster": "/6Ktgs4F6wfphozsi0KOgZzHeKCq.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 126278,
+     "lbSlug": "vampir-cuadecuc",
+     "duracion_min": 67
     }
    ],
    "seccion": "Iluminaciones"
@@ -603,15 +662,38 @@
    "dia": "2026-09-05",
    "hora": "18:00",
    "sede": "Centro Colombo Americano Sede centro sala 2 Medellín",
-   "_src": "hoja oficial del festival (conversatorios y charlas)",
+   "_src": "PDF oficial de programación del festival",
    "duracion_min": 87,
    "acceso": "Entrada libre",
-   "titulo": "Pere Portabella: legado inmarcesible",
-   "obras": [],
-   "_charla": {
-    "descripcion": "Proyección de L*a tempestá*, No contéis con los dedos y Vampir Cuadecuc y diálogo posterior.",
-    "invitados": "Julio Lamaña, Juan Pablo Franky"
-   }
+   "titulo": "Retrospectiva Sergio Navarro Programa 2",
+   "obras": [
+    {
+     "titulo": "El santo y el milagro",
+     "director": "Sergio Navarro",
+     "anio": 1993,
+     "sinopsis": "A través de testimonios de personas contemporáneas a él, la película se centra en la figura del padre Alberto Hurtado explorando su legado y dimensión humana y espiritual en la sociedad chilena."
+    },
+    {
+     "titulo": "La libertad remonta el estadio",
+     "director": "Sergio Navarro",
+     "anio": 1897,
+     "sinopsis": "El jueves 2 de abril de 1987, miles de jóvenes llegaron hasta el Estadio Nacional de Santiago de Chile para encontraron con el Papa Juan Pablo II. Después de muchos años, los jóvenes podrían reunirse libremente y hacer oír su voz. (Texto introductorio al comienzo de este documental).",
+     "synopsis_en": "On Thursday, April 2, 1987, thousands of young people came to the National Stadium in Santiago de Chile to meet Pope John Paul II. After many years, young people would be able to meet freely and make their voices heard. (Introductory text at the beginning of this documentary).",
+     "title_en": "La libertad remonta el estadio",
+     "poster": "/6w7duyK9aZFN5LiidxWFZDBqEaE.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1185345,
+     "lbSlug": "la-libertad-remonta-el-estadio",
+     "duracion_min": 22
+    },
+    {
+     "titulo": "Valparaíso eterno",
+     "director": "Sergio Navarro",
+     "anio": 1991,
+     "sinopsis": "Cortometraje documental dirigido por Sergio Navarro que explora la vida, bohemia y cultura del puerto principal de Chile."
+    }
+   ],
+   "_obras_src": "contenido tomado del otro pase del MISMO programa (mismo nombre y misma duración)"
   },
   {
    "dia": "2026-09-05",
@@ -622,6 +704,18 @@
    "acceso": "Entrada libre",
    "titulo": "Pere Portabella: legado inmarcesible",
    "obras": [
+    {
+     "titulo": "La tempestá",
+     "director": "Pere Portabella",
+     "anio": 2003,
+     "synopsis_en": "Naked bodies are buffeted by water accompanied by the music Il Temporale from the opera La Cenerentola and the overture to Il Barbiere di Siviglia both by Gioacchino Rossini.",
+     "title_en": "The Tempest",
+     "poster": "/loK8dBOpWOD5WEnCPQM35ryGRhm.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 257770,
+     "lbSlug": "the-tempest-2003",
+     "duracion_min": 6
+    },
     {
      "titulo": "No contéis con los dedos",
      "director": "Pere Portabella",
@@ -664,6 +758,17 @@
      "tmdb_id": 512555,
      "lbSlug": "what-is-this-story-and-how-does-it-end",
      "duracion_min": 53
+    },
+    {
+     "titulo": "Obreras saliendo de la fábrica",
+     "director": "José Luis Torres Leiva",
+     "anio": 2005,
+     "sinopsis": "Es un día arduo en el trabajo. Un grupo de mujeres termina la jornada, sin embargo, la salida no es solo el fin de la jornada, es el inicio a un viaje, un día de vacaciones.",
+     "synopsis_en": "An atmospheric portrait of four women who leave the factory where they work to go to the beach.",
+     "title_en": "Women Workers Leaving the Factory",
+     "tmdb_id": 182746,
+     "lbSlug": "women-workers-leaving-the-factory",
+     "duracion_min": 21
     }
    ],
    "seccion": "La primavera llega para los que esperan. El cine de José Luis Torres Leiva"
@@ -688,6 +793,19 @@
      "tmdb_id": 1663181,
      "lbSlug": "our-home-was-buried-in-a-land-we-could-never",
      "duracion_min": 92
+    },
+    {
+     "titulo": "Decaer",
+     "director": "Juan Camilo González",
+     "anio": 2026,
+     "sinopsis": "Gracias a los chinos por la pólvora, parece que la hubieran hecho para mí. Su invención sucede como un accidente, pensada inicialmente para espantar los espíritus malos. Esta película inicia en China, luego un evento en Cartagena y se acaba siglos después en Bogotá.",
+     "synopsis_en": "I am grateful to the Chinese for the invention of gunpowder — it feels as if they made it for me. Its discovery happened by accident, originally conceived as a way to ward off evil spirits. This film begins in China, then moves to an event in Cartagena, and ends centuries later in Bogotá.",
+     "title_en": "decay",
+     "poster": "/vG4HQdPsjfVOBuAN3L2Yea7HdQ4.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1668881,
+     "lbSlug": "decay-2026",
+     "duracion_min": 7
     }
    ],
    "seccion": "Proyecciones especiales"
@@ -714,6 +832,17 @@
      "tmdb_id": 512555,
      "lbSlug": "what-is-this-story-and-how-does-it-end",
      "duracion_min": 53
+    },
+    {
+     "titulo": "Obreras saliendo de la fábrica",
+     "director": "José Luis Torres Leiva",
+     "anio": 2005,
+     "sinopsis": "Es un día arduo en el trabajo. Un grupo de mujeres termina la jornada, sin embargo, la salida no es solo el fin de la jornada, es el inicio a un viaje, un día de vacaciones.",
+     "synopsis_en": "An atmospheric portrait of four women who leave the factory where they work to go to the beach.",
+     "title_en": "Women Workers Leaving the Factory",
+     "tmdb_id": 182746,
+     "lbSlug": "women-workers-leaving-the-factory",
+     "duracion_min": 21
     }
    ],
    "_charla": {
@@ -726,10 +855,10 @@
    "dia": "2026-09-06",
    "hora": "14:00",
    "sede": "La Capilla del Claustro Comfama Medellín",
-   "_src": "hoja oficial del festival (conversatorios y charlas)",
+   "_src": "PDF oficial de programación del festival",
    "duracion_min": 122,
    "acceso": "Entrada libre",
-   "titulo": "José Luis Torres Leiva: la primavera llega para los que esperan",
+   "titulo": "Así llegó la noche",
    "obras": [
     {
      "titulo": "Así llegó la noche",
@@ -745,10 +874,6 @@
      "duracion_min": 122
     }
    ],
-   "_charla": {
-    "descripcion": "Proyección de las películas ¿Qué historia es ésta y cuál es su final? y Obreras saliendo de la fábrica, posterior charla.",
-    "invitados": "José Luis Torres Leiva, Andrés Múnera"
-   },
    "seccion": "Competencia central"
   },
   {
@@ -772,6 +897,19 @@
      "tmdb_id": 573814,
      "lbSlug": "about-things-that-happened-to-me",
      "duracion_min": 15
+    },
+    {
+     "titulo": "Verano",
+     "director": "José Luis Torres Leiva",
+     "anio": 2011,
+     "sinopsis": "Durante un caluroso día de verano, cosas pequeñas ocurren a los visitantes y trabajadores de un antiguo balneario en el sur de Chile. Julieta, Francisco, Isa, Rodrigo, Ignacio, Mariana, Muriel, Gabriela, Eliseo, Norma, Alejandra y Claudio experimentarán las largas horas de vacaciones en la naturaleza, durmiendo al sol, aprendiendo a conducir, limpiando la casa, besándose por primera vez, nadando en la noche o simplemente caminando y hablando, mientras que el día irá desvelando pequeños fragmentos de felicidad y descubrimiento.",
+     "synopsis_en": "During one hot summer day, little things happen to the visitors and workers of an old thermal resort in southern Chile. Julieta, Francisco, Isa, Rodrigo, Ignacio, Mariana, Muriel, Gabriela, Eliseo, Norma, Alejandra and Claudio experience the long vacation hours in nature, sleeping in the sun, learning how to drive, cleaning the house, kissing for the first time, swimming at night or just walking and talking, while the day slowly unravels into small fragments of happiness and discovery.",
+     "title_en": "Verano",
+     "poster": "/y9OuSTMn0PH1bw7BCMLW2TBXKCa.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 111106,
+     "lbSlug": "verano",
+     "duracion_min": 95
     }
    ],
    "seccion": "La primavera llega para los que esperan. El cine de José Luis Torres Leiva"
@@ -797,6 +935,18 @@
      "tmdb_id": 1614696,
      "lbSlug": "a-lot-talk",
      "duracion_min": 78
+    },
+    {
+     "titulo": "Futuros luminosos",
+     "director": "Ismael García",
+     "anio": 2026,
+     "synopsis_en": "In a strange, dark place, a colourful group of young people project their future.",
+     "title_en": "A Brighter Future",
+     "poster": "/dcrtvU52NOn6HTHJHC8ZyX8ySsJ.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1603950,
+     "lbSlug": "a-brighter-future",
+     "duracion_min": 25
     }
    ],
    "seccion": "Competencia central"
@@ -940,8 +1090,21 @@
    "_src": "PDF oficial de programación del festival",
    "duracion_min": 103,
    "acceso": "Entrada libre",
-   "titulo": "Solo qu3r3mos un poco de amor",
+   "titulo": "Chico eléctrico",
    "obras": [
+    {
+     "titulo": "Chico eléctrico",
+     "director": "Ingrid Pokropek",
+     "anio": 2021,
+     "sinopsis": "Joaquín tiene el poder de cargar celulares o suministrar electricidad a cualquier dispositivo con la energía de su propio cuerpo, así que lo aprovecha para ganarse unos pesos en una ciudad resignada a los apagones programados. Una comedia lacónica y refinada, con la gracia de lo extraordinario.",
+     "synopsis_en": "Joaquín has the power to charge cell phones or supply electricity to any device with the energy of his own body, so he takes advantage of it to make a few pesos in a city resigned to scheduled power outages. A laconic and refined comedy, touched by the grace of the extraordinary.",
+     "title_en": "Chico eléctrico",
+     "poster": "/aiMK2LxtOzRsAxiUTpMCFz9qpOW.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 809738,
+     "lbSlug": "chico-electrico",
+     "duracion_min": 28
+    },
     {
      "titulo": "Solo qu3r3mos un poco de amor",
      "director": "Raúl Perrone",
@@ -1043,6 +1206,17 @@
      "tmdb_id": 1268743,
      "lbSlug": "when-clouds-hide-the-shadow",
      "duracion_min": 71
+    },
+    {
+     "titulo": "El sueño de Ana",
+     "director": "José Luis Torres Leiva",
+     "anio": 2017,
+     "sinopsis": "No sabemos muy bien cómo pero, de manera inesperada, ha fallecido la pareja de Ana. Así de intempestivo como el momento de su muerte, Ana tiene un sueño con y sobre su pareja, finalmente, después de tanta ausencia.",
+     "synopsis_en": "Stark formal choices counterbalance profound emotions and vulnerability in this poignant lover’s goodbye.",
+     "title_en": "Ana's Dream",
+     "tmdb_id": 478536,
+     "lbSlug": "anas-dream",
+     "duracion_min": 9
     }
    ],
    "seccion": "La primavera llega para los que esperan. El cine de José Luis Torres Leiva"
@@ -1235,6 +1409,19 @@
      "tmdb_id": 614456,
      "lbSlug": "death-will-come-and-shall-have-your-eyes",
      "duracion_min": 86
+    },
+    {
+     "titulo": "Alicia soñó con un faro",
+     "director": "José Luis Torres Leiva",
+     "anio": 2021,
+     "sinopsis": "Alicia tiene un nuevo día frente a ella. Es escritora pero le está costando terminar incluso un solo párrafo. Quiere escribir sobre los faros, los barcos, los marineros, sobre el mar, las olas y los precipicios de piedras. Los barcos y sus navegantes usan los faros para llegar a tierra. Ella, en tierra pero aparentemente perdida, tiene que encontrar una mejor forma de enfrentar su destino. Parece que ha perdido su arraigo existencial.",
+     "synopsis_en": "Part of the project for the new feature film that José Luis Torres Leiva is currently preparing. The short film describes the creative process and the images that come to a writer as she reflects on the figure of lighthouses as insular guides and as a source of existential support and anchorage.",
+     "title_en": "Alicia Dreams of a Lighthouse",
+     "poster": "/lzAnnb5MvA370hNynnw8IJmPrUI.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 860514,
+     "lbSlug": "alicia-dreams-of-a-lighthouse",
+     "duracion_min": 8
     }
    ],
    "seccion": "La primavera llega para los que esperan. El cine de José Luis Torres Leiva"
@@ -1260,6 +1447,19 @@
      "tmdb_id": 1665538,
      "lbSlug": "las-almas-ni-los-ojos",
      "duracion_min": 75
+    },
+    {
+     "titulo": "Una Dança Non Sancta",
+     "director": "Tiago Almança",
+     "anio": 2026,
+     "sinopsis": "Cada invierno, en Luzón, un pequeño pueblo de Castilla-La Mancha, renace un antiguo ritual. Los vecinos, cubiertos de hollín y adornados con cuernos y campanas, se internan en la oscuridad para transformarse en diablos. Una experiencia hipnótica, un viaje en blanco y negro que se deja llevar por el pulso vibrante de un trance pagano suspendido en el tiempo.",
+     "synopsis_en": "Every winter, a small town in Castilla-La Mancha called Luzón transforms into a little hell. Its inhabitants, dressed as devils, venture into the darkness and roam its streets with horns, bells, and smeared with soot. Una dança non sancta could have been just an anthropological documentary. Instead, it delves into the inferno with the town’s residents to participate in and immortalize this unholy ritual.",
+     "title_en": "An Unholy Dance",
+     "poster": "/gNxUkRMpHjb7MyU6EPNaJCdWjUf.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1595543,
+     "lbSlug": "an-unholy-dance",
+     "duracion_min": 7
     }
    ],
    "seccion": "Competencia central"
@@ -1268,80 +1468,26 @@
    "dia": "2026-09-08",
    "hora": "18:00",
    "sede": "Centro Colombo Americano Sede centro sala 1 Medellín",
-   "_src": "hoja oficial del festival (orden de programas)",
+   "_src": "PDF oficial de programación del festival",
    "duracion_min": 186,
    "acceso": "Entrada libre",
-   "titulo": "Competencia Nuevas Voces Programa 1",
+   "titulo": "Dry Leaf",
    "obras": [
     {
-     "titulo": "Preguntas Frecuentes",
-     "director": "Sofía Salinas",
-     "pais": "Colombia",
+     "titulo": "Dry Leaf",
+     "director": "Alexandre Koberidze",
      "anio": 2025,
-     "sinopsis": "S. escribe a Juan, que está profundamente dormido. S. reflexiona sobre imágenes y cine, y un consejo de un director que admira la desafía a ella y a todo su trabajo anterior. Decidida a encontrar una idea detrás de las imágenes que ha grabado hasta ahora, S. deambula entre los materiales, su propio archivo de imágenes y sonidos, pestañas de navegador de Internet, películas occidentales y cuentos japoneses. S. recopila todos estos pensamientos y hallazgos en una carta, con la esperanza de entregárselo a Juan cuando se despierte.",
-     "synopsis_en": "S. writes to Juan, who is deeply asleep. She reflects on images and cinema, and a piece of advice from a director she admires challenges her and all her previous work. Determined to find an idea behind the images she has recorded so far, S. wanders among materials, her own archive of images and sounds, internet browser tabs, western films and Japanese short stories. S. compiles all these thoughts and findings into a letter, hoping to deliver it to Juan when he wakes up.",
-     "title_en": "Frequently asked questions",
-     "poster": "https://image.tmdb.org/t/p/w500/gY6k1B2FGXBsMvTDr7ltZRSe7OF.jpg",
+     "sinopsis": "Lisa, fotógrafa de profesión, ha desaparecido. Lo último que se sabe es que estaba fotografiando estadios de fútbol rurales en pueblos de Georgia. Su padre, Irakli, emprende su búsqueda, viajando de un lugar a otro. Levani, la mejor amiga de Lisa —y una persona invisible— también se une a la búsqueda.",
+     "synopsis_en": "Lisa, a photographer, has gone missing. The last known detail is that she had been photographing rural football stadiums in villages across Georgia. Her father, Irakli, sets out to search for her, traveling from place to place. Levani, Lisa's best friend – and an invisible person – also sets off to help.",
+     "title_en": "Dry Leaf",
+     "poster": "/h23FAkOuqgxkvfaQ7kp0HB4WzJw.jpg",
      "posterSource": "tmdb",
-     "tmdb_id": 1592609,
-     "lbSlug": "frequently-asked-questions",
-     "duracion_min": 16
-    },
-    {
-     "titulo": "Medellín, yo te saludo",
-     "director": "Lucas Muñoz",
-     "pais": "Colombia",
-     "anio": 2026,
-     "sinopsis": "A través del montaje con archivos historicos de prensa y reportaje - Yo te saludo Medellín - propone un encuentro entre imágenes que nunca compartieron un mismo tiempo ni un mismo territorio. En ese diálogo, la película revela ecos inesperados entre guerras, rostros y ruinas, mientras pone en tensión nuevas formas de mirar el pasado, explora cómo el cine y la fotografía pueden interrogar la memoria, preguntándose si la violencia realmente cambia de forma o si son las imágenes las que, una y otra vez, vuelven a encontrarse a través del tiempo.",
-     "title_en": "Medellín, yo te saludo",
-     "poster": "https://image.tmdb.org/t/p/w500/8uFN3cAwlxc5DhLlgXsFtxaBYiT.jpg",
-     "posterSource": "tmdb",
-     "tmdb_id": 1740554,
-     "lbSlug": "medellin-yo-te-saludo",
-     "duracion_min": 3
-    },
-    {
-     "titulo": "Liminal",
-     "director": "Gabriela Castelblanco",
-     "pais": "Colombia",
-     "anio": 2026,
-     "sinopsis": "¿Qué permanece en un lugar cuando nos vamos? En una travesía por diversos espacios liminales, entendidos como lugares de tránsito, ambigüedad y espera silenciosa, se explora la relación de los seres humanos con los lugares que han habitado y habitan, así como las sensaciones, los recuerdos y las emociones que estos espacios despiertan en los distintos momentos de sus vidas.",
-     "title_en": "Liminal",
-     "poster": "https://image.tmdb.org/t/p/w500/hV8eL8v9isrSLOXoxtAdH8N9t0P.jpg",
-     "posterSource": "tmdb",
-     "tmdb_id": 1743116,
-     "lbSlug": "liminal-6",
-     "duracion_min": 16
-    },
-    {
-     "titulo": "Pausas activas",
-     "director": "Juan Pablo Castro",
-     "pais": "Colombia",
-     "anio": 2026,
-     "sinopsis": "Una reunión laboral regular se convierte en una discusión sobre los deberes y derechos de los trabajadores.",
-     "title_en": "Pausas activas",
-     "poster": "https://image.tmdb.org/t/p/w500/kIQJPs5yxOYrkz9A19yxgR5BFBz.jpg",
-     "posterSource": "tmdb",
-     "tmdb_id": 1743120,
-     "lbSlug": "pausas-activas",
-     "duracion_min": 12
-    },
-    {
-     "titulo": "Refracción",
-     "director": "Isabella Palacio",
-     "pais": "Colombia",
-     "anio": 2025,
-     "sinopsis": "Eloísa, una chica de 20 años, está en dos relaciones al mismo tiempo. Una noche, después de haber estado con ambas chicas, se siente agobiada por estar en esa situación de engaño y en medio de su confusión sale a recorrer las calles de Medellín en bicicleta, donde se dará cuenta de que no quiere reconocerse pero deberá encontrarse consigo misma.",
-     "synopsis_en": "Eloísa, a 20-year-old girl, is in two relationships at the same time. One night, after having been with both girls, she feels overwhelmed by living in this situation of deceit, and in the middle of her confusion she goes out to ride her bike through the streets of Medellín, where she will realize that she does not want to acknowledge who she is — but will ultimately have to come face-to-face with herself.",
-     "title_en": "Refracción",
-     "poster": "https://image.tmdb.org/t/p/w500/bzKNobO0N8Oqj6YU6eA2R28UgPI.jpg",
-     "posterSource": "tmdb",
-     "tmdb_id": 1584776,
-     "lbSlug": "refraccion",
-     "duracion_min": 11
+     "tmdb_id": 1057888,
+     "lbSlug": "dry-leaf",
+     "duracion_min": 186
     }
    ],
-   "seccion": "Competencia Nuevas voces"
+   "seccion": "Proyecciones especiales"
   },
   {
    "dia": "2026-09-08",
@@ -1426,80 +1572,26 @@
    "dia": "2026-09-08",
    "hora": "18:00",
    "sede": "Teatro Otraparte Biblioteca y Edificio Cultural Otraparte Envigado",
-   "_src": "hoja oficial del festival (orden de programas)",
+   "_src": "PDF oficial de programación del festival",
    "duracion_min": 63,
    "acceso": "Entrada libre",
-   "titulo": "Competencia Nuevas Voces Programa 1",
+   "titulo": "Auslandsreise / Viaje al extranjero",
    "obras": [
     {
-     "titulo": "Preguntas Frecuentes",
-     "director": "Sofía Salinas",
-     "pais": "Colombia",
-     "anio": 2025,
-     "sinopsis": "S. escribe a Juan, que está profundamente dormido. S. reflexiona sobre imágenes y cine, y un consejo de un director que admira la desafía a ella y a todo su trabajo anterior. Decidida a encontrar una idea detrás de las imágenes que ha grabado hasta ahora, S. deambula entre los materiales, su propio archivo de imágenes y sonidos, pestañas de navegador de Internet, películas occidentales y cuentos japoneses. S. recopila todos estos pensamientos y hallazgos en una carta, con la esperanza de entregárselo a Juan cuando se despierte.",
-     "synopsis_en": "S. writes to Juan, who is deeply asleep. She reflects on images and cinema, and a piece of advice from a director she admires challenges her and all her previous work. Determined to find an idea behind the images she has recorded so far, S. wanders among materials, her own archive of images and sounds, internet browser tabs, western films and Japanese short stories. S. compiles all these thoughts and findings into a letter, hoping to deliver it to Juan when he wakes up.",
-     "title_en": "Frequently asked questions",
-     "poster": "https://image.tmdb.org/t/p/w500/gY6k1B2FGXBsMvTDr7ltZRSe7OF.jpg",
-     "posterSource": "tmdb",
-     "tmdb_id": 1592609,
-     "lbSlug": "frequently-asked-questions",
-     "duracion_min": 16
-    },
-    {
-     "titulo": "Medellín, yo te saludo",
-     "director": "Lucas Muñoz",
-     "pais": "Colombia",
+     "titulo": "Auslandsreise / Viaje al extranjero",
+     "director": "Ted Fendt",
      "anio": 2026,
-     "sinopsis": "A través del montaje con archivos historicos de prensa y reportaje - Yo te saludo Medellín - propone un encuentro entre imágenes que nunca compartieron un mismo tiempo ni un mismo territorio. En ese diálogo, la película revela ecos inesperados entre guerras, rostros y ruinas, mientras pone en tensión nuevas formas de mirar el pasado, explora cómo el cine y la fotografía pueden interrogar la memoria, preguntándose si la violencia realmente cambia de forma o si son las imágenes las que, una y otra vez, vuelven a encontrarse a través del tiempo.",
-     "title_en": "Medellín, yo te saludo",
-     "poster": "https://image.tmdb.org/t/p/w500/8uFN3cAwlxc5DhLlgXsFtxaBYiT.jpg",
+     "sinopsis": "Un año en Berlín: Leonie deambula por la ciudad y por los textos de Anna Maria Ortese. Conversando con amigos y con la traductora Sigrid Vagt, busca también los hilos narrativos de su propia vida. Una película de lectura, rodada en un 16 mm luminoso y sin artificio.",
+     "synopsis_en": "A year in Berlin: Leonie wanders through the city and the texts of Anna Maria Ortese. Speaking with friends and translator Sigrid Vagt, she is also looking for the narrative threads of her own life. A film of reading shot in glowing, matter-of-fact 16mm.",
+     "title_en": "Foreign Travel",
+     "poster": "https://image.tmdb.org/t/p/w500/cCWN7cipEZAxLvwCPVbnH9LvZrs.jpg",
      "posterSource": "tmdb",
-     "tmdb_id": 1740554,
-     "lbSlug": "medellin-yo-te-saludo",
-     "duracion_min": 3
-    },
-    {
-     "titulo": "Liminal",
-     "director": "Gabriela Castelblanco",
-     "pais": "Colombia",
-     "anio": 2026,
-     "sinopsis": "¿Qué permanece en un lugar cuando nos vamos? En una travesía por diversos espacios liminales, entendidos como lugares de tránsito, ambigüedad y espera silenciosa, se explora la relación de los seres humanos con los lugares que han habitado y habitan, así como las sensaciones, los recuerdos y las emociones que estos espacios despiertan en los distintos momentos de sus vidas.",
-     "title_en": "Liminal",
-     "poster": "https://image.tmdb.org/t/p/w500/hV8eL8v9isrSLOXoxtAdH8N9t0P.jpg",
-     "posterSource": "tmdb",
-     "tmdb_id": 1743116,
-     "lbSlug": "liminal-6",
-     "duracion_min": 16
-    },
-    {
-     "titulo": "Pausas activas",
-     "director": "Juan Pablo Castro",
-     "pais": "Colombia",
-     "anio": 2026,
-     "sinopsis": "Una reunión laboral regular se convierte en una discusión sobre los deberes y derechos de los trabajadores.",
-     "title_en": "Pausas activas",
-     "poster": "https://image.tmdb.org/t/p/w500/kIQJPs5yxOYrkz9A19yxgR5BFBz.jpg",
-     "posterSource": "tmdb",
-     "tmdb_id": 1743120,
-     "lbSlug": "pausas-activas",
-     "duracion_min": 12
-    },
-    {
-     "titulo": "Refracción",
-     "director": "Isabella Palacio",
-     "pais": "Colombia",
-     "anio": 2025,
-     "sinopsis": "Eloísa, una chica de 20 años, está en dos relaciones al mismo tiempo. Una noche, después de haber estado con ambas chicas, se siente agobiada por estar en esa situación de engaño y en medio de su confusión sale a recorrer las calles de Medellín en bicicleta, donde se dará cuenta de que no quiere reconocerse pero deberá encontrarse consigo misma.",
-     "synopsis_en": "Eloísa, a 20-year-old girl, is in two relationships at the same time. One night, after having been with both girls, she feels overwhelmed by living in this situation of deceit, and in the middle of her confusion she goes out to ride her bike through the streets of Medellín, where she will realize that she does not want to acknowledge who she is — but will ultimately have to come face-to-face with herself.",
-     "title_en": "Refracción",
-     "poster": "https://image.tmdb.org/t/p/w500/bzKNobO0N8Oqj6YU6eA2R28UgPI.jpg",
-     "posterSource": "tmdb",
-     "tmdb_id": 1584776,
-     "lbSlug": "refraccion",
-     "duracion_min": 11
+     "tmdb_id": 1616882,
+     "lbSlug": "foreign-travel",
+     "duracion_min": 63
     }
    ],
-   "seccion": "Competencia Nuevas voces"
+   "seccion": "Competencia central"
   },
   {
    "dia": "2026-09-08",
@@ -1620,6 +1712,19 @@
      "tmdb_id": 1665538,
      "lbSlug": "las-almas-ni-los-ojos",
      "duracion_min": 75
+    },
+    {
+     "titulo": "Una Dança Non Sancta",
+     "director": "Tiago Almança",
+     "anio": 2026,
+     "sinopsis": "Cada invierno, en Luzón, un pequeño pueblo de Castilla-La Mancha, renace un antiguo ritual. Los vecinos, cubiertos de hollín y adornados con cuernos y campanas, se internan en la oscuridad para transformarse en diablos. Una experiencia hipnótica, un viaje en blanco y negro que se deja llevar por el pulso vibrante de un trance pagano suspendido en el tiempo.",
+     "synopsis_en": "Every winter, a small town in Castilla-La Mancha called Luzón transforms into a little hell. Its inhabitants, dressed as devils, venture into the darkness and roam its streets with horns, bells, and smeared with soot. Una dança non sancta could have been just an anthropological documentary. Instead, it delves into the inferno with the town’s residents to participate in and immortalize this unholy ritual.",
+     "title_en": "An Unholy Dance",
+     "poster": "/gNxUkRMpHjb7MyU6EPNaJCdWjUf.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1595543,
+     "lbSlug": "an-unholy-dance",
+     "duracion_min": 7
     }
    ],
    "seccion": "Competencia central"
@@ -1682,8 +1787,20 @@
    "_src": "PDF oficial de programación del festival",
    "duracion_min": 106,
    "acceso": "Entrada libre",
-   "titulo": "Lolita en Honda",
+   "titulo": "Disciplina",
    "obras": [
+    {
+     "titulo": "Disciplina",
+     "director": "Affonso Uchôa",
+     "anio": 2026,
+     "synopsis_en": "Kelly, a young teacher, starts working at a public school on the outskirts of Contagem. Idealistic, she tries to push for a change, but ends up going too far. During a lesson, she gets into an argument with Nicolas, a young student. The quarrel brings some learning: Kelly learns that, on the outskirts of Brazil, the exception is the rule; and Nicolas learns that only by tearing down the present can the future be seen.",
+     "title_en": "Disciplina",
+     "poster": "/8AC30I8Rg8necCjyy035O9eLZsp.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1639721,
+     "lbSlug": "disciplina-1",
+     "duracion_min": 45
+    },
     {
      "titulo": "Lolita en Honda",
      "director": "Daniel Torres",
@@ -1720,6 +1837,18 @@
      "tmdb_id": 1614696,
      "lbSlug": "a-lot-talk",
      "duracion_min": 78
+    },
+    {
+     "titulo": "Futuros luminosos",
+     "director": "Ismael García",
+     "anio": 2026,
+     "synopsis_en": "In a strange, dark place, a colourful group of young people project their future.",
+     "title_en": "A Brighter Future",
+     "poster": "/dcrtvU52NOn6HTHJHC8ZyX8ySsJ.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1603950,
+     "lbSlug": "a-brighter-future",
+     "duracion_min": 25
     }
    ],
    "seccion": "Competencia central"
@@ -1753,83 +1882,45 @@
    "dia": "2026-09-09",
    "hora": "19:00",
    "sede": "Antimateria Libros y Café Medellín",
-   "_src": "hoja oficial del festival (orden de programas)",
+   "_src": "PDF oficial de programación del festival",
    "duracion_min": 115,
    "acceso": "Entrada libre",
-   "titulo": "Competencia de cortometrajes Programa 1",
+   "titulo": "Procès d'un jeune poète / Juicio a un joven poeta",
    "obras": [
     {
-     "titulo": "Only Making Out",
-     "director": "Marlon Weber",
-     "pais": "Alemania",
+     "titulo": "Procès d'un jeune poète / Juicio a un joven poeta",
+     "director": "Philippe Van Cutsem",
      "anio": 2025,
-     "sinopsis": "Dos figuras al atardecer. Al día siguiente se encuentran con una tercera.",
-     "synopsis_en": "Two figures at sunset. The next day they meet a third.",
-     "title_en": "Only Making Out",
-     "poster": "https://image.tmdb.org/t/p/w500/rx4q8WfoW1w80K8QYB9heQsBaK9.jpg",
-     "posterSource": "tmdb",
-     "tmdb_id": 1537273,
-     "lbSlug": "only-making-out",
-     "duracion_min": 15
+     "sinopsis": "En 1964, el poeta Joseph Brodsky, de veinticuatro años, fue juzgado por lo que el régimen soviético llamaba «parasitismo social» y condenado a cinco años de trabajos forzados en el extremo norte de Rusia. La periodista Frida Vigdórova asistió al juicio y tomó notas a escondidas, pese a la prohibición del juez. Su relato circuló por la URSS y por Occidente, y movilizó a la intelectualidad hasta lograr la liberación de Brodsky tras dieciocho meses. A partir de ese documento, la película vuelve sobre un episodio histórico que resuena con fuerza en el presente.",
+     "title_en": "Procès d'un jeune poète",
+     "tmdb_id": 1563010,
+     "lbSlug": "proces-dun-jeune-poete",
+     "duracion_min": 115
     },
     {
-     "titulo": "El oído absoluto",
-     "director": "Rafael Federman",
-     "pais": "Argentina",
-     "anio": 2026,
-     "sinopsis": "Tras un accidente, Lorenzo empieza a oír un zumbido persistente que altera de raíz su relación con el mundo.",
-     "synopsis_en": "After an accident, Lorenzo begins to hear a persistent ringing that profoundly alters his relationship with the world.",
-     "title_en": "The Inner Ear",
-     "poster": "https://image.tmdb.org/t/p/w500/vhfvAky2EGTa9rmyQJ7yICWncFq.jpg",
+     "titulo": "Solitudes / Soledades",
+     "director": "Ryan McKenna",
+     "anio": 2025,
+     "synopsis_en": "A docu-fiction hybrid, exploring a burgeoning friendship and blending familial with public memory.",
+     "title_en": "Solitudes",
+     "poster": "/6qANUv4ELQgaOPmcjtSsNoYazbu.jpg",
      "posterSource": "tmdb",
-     "tmdb_id": 1722127,
-     "lbSlug": "the-inner-ear",
-     "duracion_min": 18
+     "tmdb_id": 1507792,
+     "lbSlug": "solitudes-2025",
+     "duracion_min": 38
     },
     {
-     "titulo": "loose sleep",
-     "director": "Rodrigo Soares Teixeira",
-     "pais": "Portugal",
-     "anio": 2026,
-     "sinopsis": "A veces el paso más difícil del día es el primero. El protagonista libra una batalla contra sí mismo: ¿vale la pena dejar la comodidad del edredón y salir a vivir? Con una narración fragmentaria, hecha de sueños y asociaciones, el corto sigue sus cavilaciones sobre la actividad y la pasividad, el paso del tiempo y las (des)ventajas de estar despierto.",
-     "synopsis_en": "Sometimes, the hardest step in a day is the first one. In Sono Solto, our hero fights a battle against himself: is it worth it to leave the confort of the duvet and live life outside? By means of a fragmentary narrative, built on dreams and association, this short film follows the protagonist's speculation on activity and passivity, the passage of time and the (dis)advantages of being awake.",
-     "title_en": "Sono Solto",
-     "poster": "https://image.tmdb.org/t/p/w500/noJJeBURcdtVMGOhsluPPIiHNDN.jpg",
-     "posterSource": "tmdb",
-     "tmdb_id": 1655940,
-     "lbSlug": "sono-solto",
-     "duracion_min": 8
-    },
-    {
-     "titulo": "Henry Is a Girl Who Likes to Sleep",
-     "director": "Marthe Peters",
-     "pais": "Bélgica",
-     "anio": 2026,
-     "sinopsis": "La cineasta le escribe una carta a su gato, Henry. Busca un lugar blando y tierno donde habitar, un refugio callado y cálido al que retirarse cuando el mundo se vuelve demasiado ruidoso. Una oda a los animales que tenemos en cautiverio y a los mundos íntimos que construimos con ellos.",
-     "synopsis_en": "The filmmaker writes a letter to her cat, Henry. She is looking for a soft and tender place to inhabit – a quiet refuge of warmth to retreat into when the world becomes too loud. An ode to our captive pets and the intimate worlds we build together.",
-     "title_en": "Henry Is a Girl Who Likes to Sleep",
-     "poster": "https://image.tmdb.org/t/p/w500/hLX85aV7xgT7AfkyLTnTgxKEnDl.jpg",
-     "posterSource": "tmdb",
-     "tmdb_id": 1614674,
-     "lbSlug": "henry-is-a-girl-who-likes-to-sleep",
-     "duracion_min": 14
-    },
-    {
-     "titulo": "Mi amigo, el arquitecto",
-     "director": "Óscar Garzón",
-     "pais": "Colombia",
-     "anio": 2026,
-     "sinopsis": "Una mujer inventa un relato para evocar una amistad perdida. Junto a sus amigos imagina una fábula: la historia de dos pájaros que un día se hicieron humanos, un Ornitólogo y su amigo, El Arquitecto.",
-     "synopsis_en": "A woman invents a story to evoke a lost friendship. Along with her friends, they imagine a fable: the story of two birds that one day became human — an Ornithologist and his friend, The Architect.",
-     "title_en": "My Friend, The Architect",
-     "poster": "https://image.tmdb.org/t/p/w500/sMB00Njgb5QlOHPoD16Am79twm5.jpg",
-     "posterSource": "tmdb",
-     "tmdb_id": 1655621,
-     "lbSlug": "my-friend-the-architect",
-     "duracion_min": 16
+     "titulo": "Hold My Hand",
+     "director": "Sophie Sherman",
+     "anio": 2025,
+     "synopsis_en": "During the COVID-19 pandemic, Sophie Sherman films her relatives confined between France, Belgium, and England. Marked by a birth and a death, she focuses on acts of care, human contact, and the grace and fragility of shared moments.",
+     "title_en": "Hold My Hand",
+     "tmdb_id": 1635753,
+     "lbSlug": "hold-my-hand-2",
+     "duracion_min": 17
     }
    ],
-   "seccion": "Competencia de cortometrajes"
+   "seccion": "Competencia central"
   },
   {
    "dia": "2026-09-09",
@@ -1917,83 +2008,24 @@
    "dia": "2026-09-09",
    "hora": "19:00",
    "sede": "La Capilla del Claustro Comfama Medellín",
-   "_src": "hoja oficial del festival (orden de programas)",
+   "_src": "PDF oficial de programación del festival",
    "duracion_min": 90,
    "acceso": "Entrada libre",
-   "titulo": "Competencia de cortometrajes Programa 1",
+   "titulo": "Ver y escuchar",
    "obras": [
     {
-     "titulo": "Only Making Out",
-     "director": "Marlon Weber",
-     "pais": "Alemania",
-     "anio": 2025,
-     "sinopsis": "Dos figuras al atardecer. Al día siguiente se encuentran con una tercera.",
-     "synopsis_en": "Two figures at sunset. The next day they meet a third.",
-     "title_en": "Only Making Out",
-     "poster": "https://image.tmdb.org/t/p/w500/rx4q8WfoW1w80K8QYB9heQsBaK9.jpg",
-     "posterSource": "tmdb",
-     "tmdb_id": 1537273,
-     "lbSlug": "only-making-out",
-     "duracion_min": 15
-    },
-    {
-     "titulo": "El oído absoluto",
-     "director": "Rafael Federman",
-     "pais": "Argentina",
-     "anio": 2026,
-     "sinopsis": "Tras un accidente, Lorenzo empieza a oír un zumbido persistente que altera de raíz su relación con el mundo.",
-     "synopsis_en": "After an accident, Lorenzo begins to hear a persistent ringing that profoundly alters his relationship with the world.",
-     "title_en": "The Inner Ear",
-     "poster": "https://image.tmdb.org/t/p/w500/vhfvAky2EGTa9rmyQJ7yICWncFq.jpg",
-     "posterSource": "tmdb",
-     "tmdb_id": 1722127,
-     "lbSlug": "the-inner-ear",
-     "duracion_min": 18
-    },
-    {
-     "titulo": "loose sleep",
-     "director": "Rodrigo Soares Teixeira",
-     "pais": "Portugal",
-     "anio": 2026,
-     "sinopsis": "A veces el paso más difícil del día es el primero. El protagonista libra una batalla contra sí mismo: ¿vale la pena dejar la comodidad del edredón y salir a vivir? Con una narración fragmentaria, hecha de sueños y asociaciones, el corto sigue sus cavilaciones sobre la actividad y la pasividad, el paso del tiempo y las (des)ventajas de estar despierto.",
-     "synopsis_en": "Sometimes, the hardest step in a day is the first one. In Sono Solto, our hero fights a battle against himself: is it worth it to leave the confort of the duvet and live life outside? By means of a fragmentary narrative, built on dreams and association, this short film follows the protagonist's speculation on activity and passivity, the passage of time and the (dis)advantages of being awake.",
-     "title_en": "Sono Solto",
-     "poster": "https://image.tmdb.org/t/p/w500/noJJeBURcdtVMGOhsluPPIiHNDN.jpg",
-     "posterSource": "tmdb",
-     "tmdb_id": 1655940,
-     "lbSlug": "sono-solto",
-     "duracion_min": 8
-    },
-    {
-     "titulo": "Henry Is a Girl Who Likes to Sleep",
-     "director": "Marthe Peters",
-     "pais": "Bélgica",
-     "anio": 2026,
-     "sinopsis": "La cineasta le escribe una carta a su gato, Henry. Busca un lugar blando y tierno donde habitar, un refugio callado y cálido al que retirarse cuando el mundo se vuelve demasiado ruidoso. Una oda a los animales que tenemos en cautiverio y a los mundos íntimos que construimos con ellos.",
-     "synopsis_en": "The filmmaker writes a letter to her cat, Henry. She is looking for a soft and tender place to inhabit – a quiet refuge of warmth to retreat into when the world becomes too loud. An ode to our captive pets and the intimate worlds we build together.",
-     "title_en": "Henry Is a Girl Who Likes to Sleep",
-     "poster": "https://image.tmdb.org/t/p/w500/hLX85aV7xgT7AfkyLTnTgxKEnDl.jpg",
-     "posterSource": "tmdb",
-     "tmdb_id": 1614674,
-     "lbSlug": "henry-is-a-girl-who-likes-to-sleep",
-     "duracion_min": 14
-    },
-    {
-     "titulo": "Mi amigo, el arquitecto",
-     "director": "Óscar Garzón",
-     "pais": "Colombia",
-     "anio": 2026,
-     "sinopsis": "Una mujer inventa un relato para evocar una amistad perdida. Junto a sus amigos imagina una fábula: la historia de dos pájaros que un día se hicieron humanos, un Ornitólogo y su amigo, El Arquitecto.",
-     "synopsis_en": "A woman invents a story to evoke a lost friendship. Along with her friends, they imagine a fable: the story of two birds that one day became human — an Ornithologist and his friend, The Architect.",
-     "title_en": "My Friend, The Architect",
-     "poster": "https://image.tmdb.org/t/p/w500/sMB00Njgb5QlOHPoD16Am79twm5.jpg",
-     "posterSource": "tmdb",
-     "tmdb_id": 1655621,
-     "lbSlug": "my-friend-the-architect",
-     "duracion_min": 16
+     "titulo": "Ver y escuchar",
+     "director": "José Luis Torres Leiva",
+     "anio": 2013,
+     "sinopsis": "Narra tres encuentros en donde personas ciegas y sordas intercambian y comparten experiencias, recuerdos y sensaciones sobre la luz, la oscuridad, el silencio y el sonido del mundo que los rodea.",
+     "synopsis_en": "Blind and deaf people converse, question, surprise and educate each others. Fingers move about quickly, translation follows promptly, both visible and audible, hands get touched and squeezed, and out of their tactfulness, sentences, stories, reserve and emotions arise",
+     "title_en": "See and Listen",
+     "tmdb_id": 407151,
+     "lbSlug": "see-and-listen",
+     "duracion_min": 90
     }
    ],
-   "seccion": "Competencia de cortometrajes"
+   "seccion": "La primavera llega para los que esperan. El cine de José Luis Torres Leiva"
   },
   {
    "dia": "2026-09-10",
@@ -2022,66 +2054,38 @@
    "dia": "2026-09-10",
    "hora": "16:00",
    "sede": "Casa Museo Otraparte Envigado",
-   "_src": "hoja oficial del festival (orden de programas)",
+   "_src": "PDF oficial de programación del festival",
    "duracion_min": 87,
    "acceso": "Entrada libre",
-   "titulo": "Fuera de competencia programa 1",
+   "titulo": "El santo y el milagro",
    "obras": [
     {
-     "titulo": "Sombras en la niebla",
-     "director": "Pedro Pablo Vega",
-     "pais": "Colombia",
-     "anio": 2026,
-     "sinopsis": "En el páramo de Chiscas, don Vicente Molina y su familia cuidan un enorme rebaño de ovejas. La cotidianidad de la familia transcurre entre montañas cubiertas de niebla y la cocina, cuyo fogón de leña los reúne en torno a la comida y el juego. Entre el grupo se encuentra Will, el niño de la familia, quien se debate entre jugar y acompañar a los mayores en las labores de pastoreo.",
-     "synopsis_en": "High in a páramo in Colombia, the sheep that Edualdo and Ana have tended for decades graze across the land. Amid the fog and the demands of herding, their youngest son, Will, grows up between childhood play and the rhythms of rural life.",
-     "title_en": "Into the fog",
-     "poster": "https://image.tmdb.org/t/p/w500/36fgDq5bvxmVXUlGHpFZLnogB5K.jpg",
-     "posterSource": "tmdb",
-     "tmdb_id": 1668876,
-     "lbSlug": "into-the-fog-2026",
-     "duracion_min": 25
+     "titulo": "El santo y el milagro",
+     "director": "Sergio Navarro",
+     "anio": 1993,
+     "sinopsis": "A través de testimonios de personas contemporáneas a él, la película se centra en la figura del padre Alberto Hurtado explorando su legado y dimensión humana y espiritual en la sociedad chilena."
     },
     {
-     "titulo": "El cazador",
-     "director": "Manuel Villa, Luciana Riso",
-     "pais": "Colombia",
-     "anio": 2026,
-     "sinopsis": "En un paisaje ondulante, la tierra es escrita y reescrita por El Cazador. La relación entre él y el territorio revelan la esencia de una geografía. Su obsesión por el oro lo lleva a una búsqueda incesante de tesoros. El poder está en el significado que otorga a lo que encuentra. En las profundidades de la tierra y de sí mismo, descubre la verdad que le permite perpetuar su búsqueda.",
-     "synopsis_en": "Metal detector in hand, the Hunter roams through forest and city in search of treasure. It is his way of life, his calling: the summons of Lord Gold.",
-     "title_en": "The Hunter",
-     "poster": "https://image.tmdb.org/t/p/w500/wg0kTL0ztRoFzEZsNfdGVVFf9FF.jpg",
+     "titulo": "La libertad remonta el estadio",
+     "director": "Sergio Navarro",
+     "anio": 1897,
+     "sinopsis": "El jueves 2 de abril de 1987, miles de jóvenes llegaron hasta el Estadio Nacional de Santiago de Chile para encontraron con el Papa Juan Pablo II. Después de muchos años, los jóvenes podrían reunirse libremente y hacer oír su voz. (Texto introductorio al comienzo de este documental).",
+     "synopsis_en": "On Thursday, April 2, 1987, thousands of young people came to the National Stadium in Santiago de Chile to meet Pope John Paul II. After many years, young people would be able to meet freely and make their voices heard. (Introductory text at the beginning of this documentary).",
+     "title_en": "La libertad remonta el estadio",
+     "poster": "/6w7duyK9aZFN5LiidxWFZDBqEaE.jpg",
      "posterSource": "tmdb",
-     "tmdb_id": 1668874,
-     "lbSlug": "the-hunter-2026-1",
-     "duracion_min": 14
+     "tmdb_id": 1185345,
+     "lbSlug": "la-libertad-remonta-el-estadio",
+     "duracion_min": 22
     },
     {
-     "titulo": "Las formas de la magia",
-     "director": "Maria Paula Lorgia",
-     "pais": "Colombia",
-     "anio": 2026,
-     "sinopsis": "Un año después de la muerte de su padre, el reconocido mago colombiano Gustavo Lorgia, la directora realiza una exploración por sus archivos de video que revelan su trayectoria como artista, su rol como padre y la estética televisiva de una época. Una película que acude al archivo como medio para atravesar el duelo y a la memoria como forma de resistir a la desaparición.",
-     "title_en": "Las Formas de la Magia",
-     "poster": "https://image.tmdb.org/t/p/w500/lEWolBB40mm3KON8u2dWnPk0cVJ.jpg",
-     "posterSource": "tmdb",
-     "tmdb_id": 1668889,
-     "lbSlug": "las-formas-de-la-magia",
-     "duracion_min": 17
-    },
-    {
-     "titulo": "Un aparato para detectar fantasmas",
-     "director": "Mauricio Maldonado",
-     "pais": "Colombia",
-     "anio": 2025,
-     "sinopsis": "Un director de casting regresa a la ladera de la ciudad para reunirse con un actor no profesional y volver a grabar voces para terminar la posproducción de una película. La fantasía y la imaginación chocan bajo la sombra del bosque, donde el juego y la repetición convocan a fantasmas cómplices de la ficción. El encuentro de trabajo con el actor rápidamente se vuelve otra cosa: una experiencia casi de trance, una búsqueda de presencias, un ejercicio de observación y fe.",
-     "synopsis_en": "A casting director reunites with a young non-professional actor with the mission of re-recording some dialogues to complete the post-production of a film. Surrounded by a forest, in the sway of flickering lights, fantasy, imagination, and play collide in an exercise of repetition and hypnosis, where ghosts wander, complicit in the fiction.",
-     "title_en": "A Ghost-Detecting Device",
-     "tmdb_id": 1593571,
-     "lbSlug": "a-ghost-detecting-device",
-     "duracion_min": 18
+     "titulo": "Valparaíso eterno",
+     "director": "Sergio Navarro",
+     "anio": 1991,
+     "sinopsis": "Cortometraje documental dirigido por Sergio Navarro que explora la vida, bohemia y cultura del puerto principal de Chile."
     }
    ],
-   "seccion": "Programa 1. El espesor de las formas"
+   "seccion": "La sutil materia. Sergio Navarro"
   },
   {
    "dia": "2026-09-10",
@@ -2197,6 +2201,19 @@
      "tmdb_id": 573814,
      "lbSlug": "about-things-that-happened-to-me",
      "duracion_min": 15
+    },
+    {
+     "titulo": "Verano",
+     "director": "José Luis Torres Leiva",
+     "anio": 2011,
+     "sinopsis": "Durante un caluroso día de verano, cosas pequeñas ocurren a los visitantes y trabajadores de un antiguo balneario en el sur de Chile. Julieta, Francisco, Isa, Rodrigo, Ignacio, Mariana, Muriel, Gabriela, Eliseo, Norma, Alejandra y Claudio experimentarán las largas horas de vacaciones en la naturaleza, durmiendo al sol, aprendiendo a conducir, limpiando la casa, besándose por primera vez, nadando en la noche o simplemente caminando y hablando, mientras que el día irá desvelando pequeños fragmentos de felicidad y descubrimiento.",
+     "synopsis_en": "During one hot summer day, little things happen to the visitors and workers of an old thermal resort in southern Chile. Julieta, Francisco, Isa, Rodrigo, Ignacio, Mariana, Muriel, Gabriela, Eliseo, Norma, Alejandra and Claudio experience the long vacation hours in nature, sleeping in the sun, learning how to drive, cleaning the house, kissing for the first time, swimming at night or just walking and talking, while the day slowly unravels into small fragments of happiness and discovery.",
+     "title_en": "Verano",
+     "poster": "/y9OuSTMn0PH1bw7BCMLW2TBXKCa.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 111106,
+     "lbSlug": "verano",
+     "duracion_min": 95
     }
    ],
    "seccion": "La primavera llega para los que esperan. El cine de José Luis Torres Leiva"
@@ -2208,8 +2225,21 @@
    "_src": "PDF oficial de programación del festival",
    "duracion_min": 98,
    "acceso": "Entrada libre",
-   "titulo": "Homenaje a la obra de Philip Henry Gosse",
+   "titulo": "Rancho",
    "obras": [
+    {
+     "titulo": "Rancho",
+     "director": "Pedro Speroni",
+     "anio": 2021,
+     "sinopsis": "En una cárcel de máxima seguridad, un boxeador busca su libertad y recibe consejos del líder del pabellón, junto a un grupo de jóvenes que sueñan con ser millonarios y otro que ingresa condenado por asesinato. El director de la película convive con ellos y obtiene un retrato al borde del abismo.",
+     "synopsis_en": "At a maximum security prison, a boxer searches for his freedom and receives advice from the leader of the cell block , along with a group of young men who want to be millionaires and another one who has just been imprisoned for murder. The director of the films coexists with them and obtains a portrait from the edge.",
+     "title_en": "Rancho",
+     "poster": "/aO20tXiacW4SnZ3Ih7S2g3jNCr7.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 805169,
+     "lbSlug": "rancho",
+     "duracion_min": 72
+    },
     {
      "titulo": "Homenaje a la obra de Philip Henry Gosse",
      "director": "Pablo Martín Weber",
@@ -2223,6 +2253,26 @@
      "tmdb_id": 764439,
      "lbSlug": "homage-to-the-work-of-philip-henry-gosse",
      "duracion_min": 22
+    },
+    {
+     "titulo": "Spot Fuera de campo 1",
+     "director": "Pablo Martín Weber",
+     "anio": 2025,
+     "sinopsis": "Pablo Martín Weber nació en 1994. Dirigió Fragmentos desde el exilio (2018) y actualmente se encuentra desarrollando Ecos de Xinjiang, el cual será su primer largometraje. Escribe regularmente para la revista La vida útil.",
+     "title_en": "Spot Fuera de campo 1",
+     "tmdb_id": 1744140,
+     "lbSlug": "spot-fuera-de-campo-1",
+     "duracion_min": 3
+    },
+    {
+     "titulo": "Spot Fuera de campo 2",
+     "director": "María Aparicio",
+     "anio": 2024,
+     "sinopsis": "El proyecto indaga en el concepto de off-screen (\"fuera de campo\"), un recurso fundamental del lenguaje cinematográfico donde lo no mostrado cobra la misma o mayor fuerza que el encuadre visible",
+     "title_en": "Spot Fuera de campo 2",
+     "tmdb_id": 1744147,
+     "lbSlug": "spot-fuera-de-campo-2",
+     "duracion_min": 4
     }
    ],
    "seccion": "Historia(s) del cine: Argentina. Curaduría de José Miccio"
@@ -2309,79 +2359,38 @@
    "dia": "2026-09-10",
    "hora": "18:00",
    "sede": "Teatro Otraparte Biblioteca y Edificio Cultural Otraparte Envigado",
-   "_src": "hoja oficial del festival (orden de programas)",
+   "_src": "PDF oficial de programación del festival",
    "duracion_min": 102,
    "acceso": "Entrada libre",
-   "titulo": "Competencia Nuevas Voces Programa 2",
+   "titulo": "Oublie pas le gruau",
    "obras": [
     {
-     "titulo": "Para no volver",
-     "director": "Tania Galvis",
-     "pais": "Colombia",
+     "titulo": "Oublie pas le gruau",
+     "director": "Olivier Godin",
      "anio": 2026,
-     "sinopsis": "Cuando Karina se entera de que está embarazada del bebé de Charlie, ella y su mejor amiga Eli se disponen a encontrarlo por las calles nocturnas de Santa Marta. En el camino, se enfrentan al deseo, la maternidad y su vínculo cambiante. Al amanecer, el mar las abraza, y vuelven a jugar como niñas.",
-     "title_en": "Para no volver",
-     "poster": "https://image.tmdb.org/t/p/w500/k2RvfqR0QSL4D5PzFkkomzRZJ8q.jpg",
+     "sinopsis": "El Bárbaro cree que le quedan pocas erecciones antes de morir. Condenado a vivir en una tienda de segunda mano y perseguido por una tragedia familiar, pone la mira en Marie, una maestra de educación especial alcohólica. Si ha de irse, calcula, mejor irse bien acompañado.",
+     "synopsis_en": "The Barbarian believes he has only a few erections left before death. Cursed to a life in a thrift shop and haunted by family tragedy, he sets his sights on Marie, an alcoholic special-ed teacher. If he must go, he figures, he might as well go out in good company.",
+     "title_en": "Don't Forget the Oatmeal",
+     "poster": "https://image.tmdb.org/t/p/w500/ycGFcrpmiCXtidvyom94aDyMqB1.jpg",
      "posterSource": "tmdb",
-     "tmdb_id": 1743118,
-     "lbSlug": "para-no-volver",
-     "duracion_min": 9
+     "tmdb_id": 1596917,
+     "lbSlug": "dont-forget-the-oatmeal",
+     "duracion_min": 75
     },
     {
-     "titulo": "El Salto",
-     "director": "Jerónimo Rincón",
-     "pais": "Colombia",
-     "anio": 2026,
-     "sinopsis": "Según el mito indígena Muisca, la llanura de Bogotá alguna vez fue inundada por arroyos que amenazaban con arrasarlo todo. Apareció entonces el dios Bochica, quien con su bastón hirió la serranía y abrió paso a sus aguas represadas, formando así el Salto del Tequendama. En la orilla del precipicio, el río Bogotá se lanza sobre un banco de piedras. Allí se estrella y se arroja en forma de espumas y vapores hacia el abismo que lo espera.",
-     "title_en": "El Salto",
-     "poster": "https://image.tmdb.org/t/p/w500/3xkU5BM4aLULnvBZu0mVntXbHrA.jpg",
+     "titulo": "Sol menor",
+     "director": "André Silva Santos",
+     "anio": 2025,
+     "synopsis_en": "Early Spring. A sonata, a train, a letter. Between his work as a flute teacher and the rituals of mourning the early death of his wife, Samuel faces a dilemma after a visit from his brother.",
+     "title_en": "April Tune",
+     "poster": "/dyDNNgnVIaI4MR83kPpoVNCWoVV.jpg",
      "posterSource": "tmdb",
-     "tmdb_id": 1686065,
-     "lbSlug": "el-salto-1",
-     "duracion_min": 12
-    },
-    {
-     "titulo": "Gramática Práctica Italiana",
-     "director": "Daniel Cortés",
-     "pais": "Colombia",
-     "anio": 2026,
-     "sinopsis": "Miguel y su familia se preparan para emigrar de Cuba a Italia, donde ya vive su madre. Mientras esperan, comienzan a dar el primer paso en el viaje de todo migrante: aprender el idioma del país al que quieren mudarse.",
-     "synopsis_en": "Miguel and his family are preparing to emigrate from Cuba to Italy where his mother already lives. While they wait, they begin to take the first step in the life of every migrant: learning the language of the country they want to go to.",
-     "title_en": "Practical Italian Grammar",
-     "poster": "https://image.tmdb.org/t/p/w500/gtnKGTLEnXIx1WzqWdfmXqdzfkq.jpg",
-     "posterSource": "tmdb",
-     "tmdb_id": 1577564,
-     "lbSlug": "practical-italian-grammar",
-     "duracion_min": 13
-    },
-    {
-     "titulo": "Madres de Nacimiento",
-     "director": "Gloria Isabel Gómez",
-     "pais": "Colombia",
-     "anio": 2026,
-     "sinopsis": "Del olvido y la oscuridad hay imágenes y sonidos que resurgen para controlar los cuerpos de las mujeres latinoamericanas, quienes desde niñas han sido consideradas madres de nacimiento. Pero en estos archivos emerge una interferencia que proviene del pasado para evocar un mensaje de lucha, memoria y libertad.",
-     "title_en": "Madres de Nacimiento",
-     "poster": "https://image.tmdb.org/t/p/w500/kJreh6iEXQZ3NHaROQb7WJNle7l.jpg",
-     "posterSource": "tmdb",
-     "tmdb_id": 1668902,
-     "lbSlug": "madres-de-nacimiento",
-     "duracion_min": 8
-    },
-    {
-     "titulo": "Borrachos mientras escuchamos las gotas caer",
-     "director": "Santiago Gómez",
-     "pais": "Colombia",
-     "anio": 2026,
-     "sinopsis": "Retrata la historia de León Ramírez e Isabel Velásquez, dos ancianos de casi 90 años que atienden una tienda de barrio para sobrevivir. El cortometraje aborda de forma íntima y crítica temas como la resignación de la vejez, el abandono a la tercera edad, el desarraigo territorial y los impactos colaterales del conflicto armado en Colombia (abusos del Estado, ELN y AUC).",
-     "title_en": "Borrachos escuchando las gotas de lluvia caer",
-     "poster": "https://image.tmdb.org/t/p/w500/3R73xUlBIBGXY5q8i9HZYLEidLy.jpg",
-     "posterSource": "tmdb",
-     "tmdb_id": 1743109,
-     "lbSlug": "borrachos-escuchando-las-gotas-de-lluvia",
-     "duracion_min": 22
+     "tmdb_id": 1500856,
+     "lbSlug": "april-tune",
+     "duracion_min": 27
     }
    ],
-   "seccion": "Competencia Nuevas voces"
+   "seccion": "Competencia central"
   },
   {
    "dia": "2026-09-10",
@@ -2416,10 +2425,10 @@
    "dia": "2026-09-10",
    "hora": "19:00",
    "sede": "La Capilla del Claustro Comfama Medellín",
-   "_src": "hoja oficial del festival (conversatorios y charlas)",
+   "_src": "PDF oficial de programación del festival",
    "duracion_min": 82,
    "acceso": "Entrada libre",
-   "titulo": "Leonie Rodrian: Contra la falsa intensidad",
+   "titulo": "Ich denke oft an Hawaii / Muchas veces pienso en Hawái",
    "obras": [
     {
      "titulo": "Ich denke oft an Hawaii / Muchas veces pienso en Hawái",
@@ -2435,20 +2444,16 @@
      "duracion_min": 82
     }
    ],
-   "_charla": {
-    "descripcion": "Proyección de la película Viaje al extranjero y diálogo posterior.",
-    "invitados": "Leonie Rodrian, Pablo Roldán"
-   },
    "seccion": "Iluminaciones"
   },
   {
    "dia": "2026-09-10",
    "hora": "19:00",
    "sede": "Terko Copacabana",
-   "_src": "hoja oficial del festival (conversatorios y charlas)",
+   "_src": "PDF oficial de programación del festival",
    "duracion_min": 110,
    "acceso": "Entrada libre",
-   "titulo": "Leonie Rodrian: Contra la falsa intensidad",
+   "titulo": "El cielo, la tierra y la lluvia",
    "obras": [
     {
      "titulo": "El cielo, la tierra y la lluvia",
@@ -2465,10 +2470,6 @@
      "duracion_min": 110
     }
    ],
-   "_charla": {
-    "descripcion": "Proyección de la película Viaje al extranjero y diálogo posterior.",
-    "invitados": "Leonie Rodrian, Pablo Roldán"
-   },
    "seccion": "La primavera llega para los que esperan. El cine de José Luis Torres Leiva"
   },
   {
@@ -2509,6 +2510,10 @@
      "duracion_min": 4
     }
    ],
+   "_charla": {
+    "descripcion": "Conversación sobre la libertad artística en el cine, los riesgos y la posibilidad de empujar fronteras.",
+    "invitados": "Santiago Quirama, Luciana Decker Orozco, Mauricio Carmona. Modera Andrés Carmona"
+   },
    "seccion": "Programa 2. Teoremas sobre la mirada"
   },
   {
@@ -2569,6 +2574,19 @@
      "tmdb_id": 614456,
      "lbSlug": "death-will-come-and-shall-have-your-eyes",
      "duracion_min": 86
+    },
+    {
+     "titulo": "Alicia soñó con un faro",
+     "director": "José Luis Torres Leiva",
+     "anio": 2021,
+     "sinopsis": "Alicia tiene un nuevo día frente a ella. Es escritora pero le está costando terminar incluso un solo párrafo. Quiere escribir sobre los faros, los barcos, los marineros, sobre el mar, las olas y los precipicios de piedras. Los barcos y sus navegantes usan los faros para llegar a tierra. Ella, en tierra pero aparentemente perdida, tiene que encontrar una mejor forma de enfrentar su destino. Parece que ha perdido su arraigo existencial.",
+     "synopsis_en": "Part of the project for the new feature film that José Luis Torres Leiva is currently preparing. The short film describes the creative process and the images that come to a writer as she reflects on the figure of lighthouses as insular guides and as a source of existential support and anchorage.",
+     "title_en": "Alicia Dreams of a Lighthouse",
+     "poster": "/lzAnnb5MvA370hNynnw8IJmPrUI.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 860514,
+     "lbSlug": "alicia-dreams-of-a-lighthouse",
+     "duracion_min": 8
     }
    ],
    "seccion": "La primavera llega para los que esperan. El cine de José Luis Torres Leiva"
@@ -2606,8 +2624,20 @@
    "_src": "PDF oficial de programación del festival",
    "duracion_min": 97,
    "acceso": "Boleta en taquilla — sillas numeradas",
-   "titulo": "Cairo Streets / Las calles de El Cairo",
+   "titulo": "La corazonada",
    "obras": [
+    {
+     "titulo": "La corazonada",
+     "director": "Diego Soto",
+     "anio": 2025,
+     "synopsis_en": "Nieves runs a swimming pool with her son Martin. One summer, a biker falls for her. Things between them don’t seem to work out, until a filming crew arrives at the pool while scouting for locations and the director decides to put Natacha and the biker in her film.",
+     "title_en": "A Heart as Willing",
+     "poster": "/fvNadz6pkAhjlNQOsC20akHBgoU.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1466153,
+     "lbSlug": "a-heart-as-willing",
+     "duracion_min": 78
+    },
     {
      "titulo": "Cairo Streets / Las calles de El Cairo",
      "director": "Abdellah Taïa",
@@ -2733,6 +2763,28 @@
      "tmdb_id": 1563010,
      "lbSlug": "proces-dun-jeune-poete",
      "duracion_min": 115
+    },
+    {
+     "titulo": "Solitudes / Soledades",
+     "director": "Ryan McKenna",
+     "anio": 2025,
+     "synopsis_en": "A docu-fiction hybrid, exploring a burgeoning friendship and blending familial with public memory.",
+     "title_en": "Solitudes",
+     "poster": "/6qANUv4ELQgaOPmcjtSsNoYazbu.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1507792,
+     "lbSlug": "solitudes-2025",
+     "duracion_min": 38
+    },
+    {
+     "titulo": "Hold My Hand",
+     "director": "Sophie Sherman",
+     "anio": 2025,
+     "synopsis_en": "During the COVID-19 pandemic, Sophie Sherman films her relatives confined between France, Belgium, and England. Marked by a birth and a death, she focuses on acts of care, human contact, and the grace and fragility of shared moments.",
+     "title_en": "Hold My Hand",
+     "tmdb_id": 1635753,
+     "lbSlug": "hold-my-hand-2",
+     "duracion_min": 17
     }
    ],
    "seccion": "Competencia central"
@@ -2741,81 +2793,31 @@
    "dia": "2026-09-11",
    "hora": "19:00",
    "sede": "Centro Colombo Americano Sede centro sala 2 Medellín",
-   "_src": "hoja oficial del festival (orden de programas)",
+   "_src": "hoja oficial del festival (conversatorios y charlas)",
    "duracion_min": 92,
    "acceso": "Entrada libre",
-   "titulo": "Competencia de cortometrajes Programa 2",
+   "titulo": "Ciencia, cuerpos, trabajos y las políticas de la pureza",
    "obras": [
     {
-     "titulo": "Our Homes Do Not Exist",
-     "director": "Anna Lamour",
-     "pais": "Grecia",
-     "anio": 2025,
-     "sinopsis": "Rodada en un Super 8 granulado, sigue la historia de una casa familiar. Mientras la cineasta recorre barrios que alguna vez le fueron familiares, la historia íntima de una familia se abre hacia una meditación más amplia sobre la ausencia, el exilio y los fantasmas de la memoria. En el espacio difuso entre las casas habitadas y las abandonadas, entre lo cuir y la nostalgia del hogar, empieza a asomar una pertenencia nueva, frágil y colectiva.",
-     "title_en": "Nos maisons n'existent pas",
-     "poster": "https://image.tmdb.org/t/p/w500/A6X3xnhhq4RuCb2Fsg45AnnWpdP.jpg",
+     "titulo": "Cleaning & Cleansing",
+     "director": "Thomas Fürhapter",
+     "pais": "Austria",
+     "anio": 2024,
+     "sinopsis": "¿Qué significa exactamente limpiar, estar limpios y purificar? Esa pregunta motiva la realización de este documental observacional de minuciosa hondura. El director trabaja sobre las diferentes formas en que la cultura humana se deshace de la suciedad y otros residuos. Desde el lavado de manos en el ámbito de la salud, pasando por diversas manifestaciones de higiene mental y rituales sagrados. Son la necesidad y la naturaleza evidente de las acciones que acompañan a la limpieza las que las convierten en una fuerza social de importancia fundamental. Dispuesta en grandes secuencias asociativas, la película nos permite reflexionar sobre los significados simbólicos y pragmáticos de los rituales cotidianos, sin los cuales nuestra civilización se derrumbaría.",
+     "synopsis_en": "CLEANING AND CLEANSING tells of the glamor and misery of hygiene. Without resorting to interviews or explanatory off-camera commentary, it stages its subject in a way that can be experienced by the senses. In doing so, it follows an analytical approach that thematizes hygiene as an order of the „healthy“ and the „harmful“, which is reflected in institutions, architectures and production processes and regulates human behavior. The filmthus raises a topic that has been central to our society since the beginning of modernity: the optimization and improvement of life, which – if pursued with too much commitment and carelessly – can quickly turn against itself.",
+     "title_en": "Cleaning & Cleansing",
+     "poster": "https://image.tmdb.org/t/p/w500/7jlgyCfVs4AGmgw7guo4EZsATQ8.jpg",
      "posterSource": "tmdb",
-     "tmdb_id": 1645704,
-     "lbSlug": "nos-maisons-nexistent-pas",
-     "duracion_min": 15
-    },
-    {
-     "titulo": "Koki, Ciao",
-     "director": "Quenton Miller",
-     "pais": "Países bajos",
-     "anio": 2025,
-     "sinopsis": "La autobiografía de Koki, un loro inmortal, que retrata la vida de este animal único, fiel compañero del mariscal Tito, líder de Yugoslavia durante 35 años. Un rico archivo fotográfico revive los recuerdos enjaulados de esta cacatúa, que tuvo el honor de conocer a estrellas de Hollywood y a dictadores sedientos de sangre. (GIFF)",
-     "synopsis_en": "The autobiography of Koki, an immortal parrot. Artist Quenton Miller portrays the life of this unique animal, a loyal comrade of Marshal Tito, leader of Yugoslavia for 35 years. A rich photographic archive relives the caged memories of this cockatoo, who had the honour of meeting Hollywood stars, and bloodthirsty dictators. A funny portrait, non-aligned with the documentary orthodoxy, that deals with the false constructions of history.",
-     "title_en": "Koki, Ciao",
-     "poster": "https://image.tmdb.org/t/p/w500/7ab2HCntF491JzIX6EcNASORKb.jpg",
-     "posterSource": "tmdb",
-     "tmdb_id": 1416378,
-     "lbSlug": "koki-ciao",
-     "duracion_min": 12
-    },
-    {
-     "titulo": "Mirando al sur",
-     "director": "Felipe López Gómez",
-     "pais": "Colombia",
-     "anio": 2026,
-     "sinopsis": "La voz que oímos viene de muy lejos del encuadre, a miles de kilómetros de las vistas de Toronto que se despliegan ante nosotros. Son incontables mensajes de voz dejados desde Colombia por la abuela del director.",
-     "synopsis_en": "The voice we hear comes from far off-screen, thousands of kilometres away from the vistas of Toronto unfolding before us. These are countless voicemails from Colombia left by the director’s loving grandmother.",
-     "title_en": "Facing South",
-     "poster": "https://image.tmdb.org/t/p/w500/iVHZ1lC2Ste5289HAOkk5ft6c6e.jpg",
-     "posterSource": "tmdb",
-     "tmdb_id": 1657831,
-     "lbSlug": "facing-south",
-     "duracion_min": 34
-    },
-    {
-     "titulo": "Bright Summer Days",
-     "director": "Nevena Desivojevic",
-     "pais": "Serbia",
-     "anio": 2025,
-     "sinopsis": "Dos hermanas se reencuentran tras años separadas. El pasado se ha vuelto lo único que todavía las une.",
-     "synopsis_en": "Two sisters meet after a few years of being apart. The past becomes the only thing that binds them now.",
-     "title_en": "Bright Summer Days",
-     "poster": "https://image.tmdb.org/t/p/w500/aTwLabtZ5BU2DpqvlSVEOu2tTqe.jpg",
-     "posterSource": "tmdb",
-     "tmdb_id": 1485440,
-     "lbSlug": "bright-summer-days",
-     "duracion_min": 15
-    },
-    {
-     "titulo": "Prueba de cámara",
-     "director": "David Correa",
-     "pais": "Colombia",
-     "anio": 2026,
-     "sinopsis": "Toda carta es un recuerdo, dedicado a películas en donde el archivo familiar aparece como una forma de correspondencia íntima: cartas a hijos, a padres, a abuelos, a quienes estuvieron y también a quienes fuimos. Entre fotografías, archivos domésticos, voces, objetos y gestos heredados, este programa reúne formas de mirar hacia atrás para decir algo en el presente: reconstruir un vínculo, nombrar una ausencia, acompañar una pérdida o afirmar una identidad.",
-     "title_en": "Prueba de cámara",
-     "poster": "https://image.tmdb.org/t/p/w500/iYSrgk7v0pSWbAA4YFF5CP8mi0j.jpg",
-     "posterSource": "tmdb",
-     "tmdb_id": 1743099,
-     "lbSlug": "prueba-de-camara",
-     "duracion_min": 10
+     "tmdb_id": 1361665,
+     "lbSlug": "cleaning-cleansing",
+     "duracion_min": 92
     }
    ],
-   "seccion": "Competencia de cortometrajes"
+   "_charla": {
+    "descripcion": "Proyección de la película Cleaning & Cleansing y diálogo posterior.",
+    "invitados": "Thomas Fürhapter, Sara Lugo"
+   },
+   "seccion": "Febril incisión. El cine de Thomas Fürhapter"
   },
   {
    "dia": "2026-09-11",
