@@ -111,7 +111,10 @@
    "short": "Instituto de Bellas Artes",
    "address": "Calle 52 # 42–08, Medellín, Antioquia",
    "_src": "Juan, 20 ago 2026: de las cuatro sedes de Bellas Artes en Medellín, el Laboratorio es en el INSTITUTO (Palacio de Bellas Artes), Calle 52 # 42–08. El afiche decía solo «Bellas Artes».",
-   "_verificar": "falta lat/lng — Nominatim tiene Disallow:/search y no se consulta"
+   "lat": 6.248511,
+   "lng": -75.5614556,
+   "_prec": "nominatim",
+   "_match": "Palacio de Bellas Artes, Carrera 42 con Calle 52, Boston — coincide con la dirección confirmada por Juan. OJO: buscar «Fundación Universitaria Bellas Artes» devuelve la sede AYACUCHO (Cra. 42A # 48-86), que es otro edificio a diez cuadras."
   }
  },
  "films": [
@@ -329,7 +332,7 @@
    "venue": "Fundación Universitaria Bellas Artes - Medellín",
    "event_kind": "taller",
    "has_qa": false,
-   "synopsis": "El taller propone una aproximación al fashion film como lenguaje artístico y narrativo, alejándose de la publicidad tradicional. Durante una jornada intensiva los participantes conocen algunos referentes, hacen ejercicios creativos y producen un fashion film experimental con recursos sencillos y equipos disponibles: cámaras, celulares o cámaras híbridas, luces, fondos. El énfasis está en construir atmósferas más que historias convencionales. Se arman varios equipos con enfoques distintos —joyería, prendas, cuerpo y movimiento— y cada uno desarrolla un fashion film de entre 30 segundos y un minuto.",
+   "synopsis": "La moda también se puede contar desde la emoción, el movimiento, la luz y la experimentación. En este taller descubrirás el fashion film como un lenguaje artístico, explorarás referentes, realizarás ejercicios creativos y trabajarás en equipo para construir una atmósfera visual única. Al finalizar, tendrás un fashion film experimental de 30 a 60 segundos utilizando recursos accesibles como celulares, cámaras y luces.",
    "synopsis_lang": "es",
    "poster": "/assets/vartex/laboratorio.jpg",
    "posterSource": "editorial",
