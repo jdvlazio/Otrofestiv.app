@@ -13,9 +13,9 @@
  },
  "Fundación Universitaria Bellas Artes - Medellín": {
   "city": "Medellín",
-  "short": "Bellas Artes",
-  "address": "",
-  "_nota": "faltan coordenadas y dirección",
-  "_verificar": "el afiche dice solo «Bellas Artes» y la institución tiene CUATRO sedes en Medellín, en direcciones distintas: Palacio de Bellas Artes (Calle 52 # 42–08), Ayacucho (Cra. 42A # 48–86), Bloque 3 (Cra. 42 # 49–95) y Guayabal (Cra. 52 # 20–63). No se elige una: mandar a alguien a la equivocada le cuesta un taller de 9 horas que ya pagó. Preguntar al festival."
+  "short": "Instituto de Bellas Artes",
+  "address": "Calle 52 # 42–08, Medellín, Antioquia",
+  "_src": "Juan, 20 ago 2026: de las cuatro sedes de Bellas Artes en Medellín, el Laboratorio es en el INSTITUTO (Palacio de Bellas Artes), Calle 52 # 42–08. El afiche decía solo «Bellas Artes».",
+  "_verificar": "falta lat/lng — Nominatim tiene Disallow:/search y no se consulta"
  }
 }

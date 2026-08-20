@@ -1,6 +1,6 @@
 {
  "_provenance": {
-  "fuente": "afiche oficial de programación (dos carruseles de Instagram: la parrilla de 4 láminas y el post de la Muestra Internacional) + hoja «Seleccionados» de la convocatoria + vartexmedellin.co + los cuatro artes por programa de vartexmedellin.co",
+  "fuente": "afiche oficial de programación (dos carruseles de Instagram: la parrilla de 4 láminas y el post de la Muestra Internacional) + hoja «Seleccionados» de la convocatoria + vartexmedellin.co + los cuatro artes por programa de vartexmedellin.co + agenda por salas del Centro Colombo Americano",
   "capturado": "2026-08-20",
   "metodo": "el afiche da día, hora y sede; la hoja da la ficha de la Muestra Local; el sitio aportó las duraciones que la hoja trae en texto libre",
   "erratas": [
@@ -10,9 +10,12 @@
    "«El tiempo como un abismo» es la grafía de la hoja del festival y del sitio; el afiche escribe «El tiempo del abismo»",
    "«Polanima» figura con año 2005 en una hoja y 2026 en la otra; se publica 2026 (decisión de Juan: toda la selección es de 2025–2026)",
    "las dos hojas de selección dan duraciones distintas (5:09 vs 5:10, 3:39 vs 3:40, 11:06 vs 11:12); al minuto redondeado coinciden",
-   "la sede del Laboratorio se anuncia como «Bellas Artes» a secas; la institución tiene cuatro sedes en Medellín y el afiche no dice cuál"
+   "el afiche anuncia el Laboratorio en «Bellas Artes» y la institución tiene cuatro sedes en Medellín; Juan confirmó que es el INSTITUTO (Calle 52 # 42–08)"
   ],
-  "privacidad": "los datos de contacto y los enlaces privados de visionado de la convocatoria NO se copian: son material de jurado"
+  "privacidad": "los datos de contacto y los enlaces privados de visionado de la convocatoria NO se copian: son material de jurado",
+  "discrepancias": [
+   "«Selección Oficial · Muestra Local», sábado 22: el afiche dice 4:30 p.m. y la agenda del Colombo 6:30 p.m. — se usa la de la sede (18:30)"
+  ]
  },
  "_funciones": 6,
  "programas": [
@@ -238,7 +241,7 @@
   {
    "titulo": "Selección Oficial · Muestra Local",
    "dia": "2026-08-22",
-   "hora": "16:30",
+   "hora": "18:30",
    "sede": "Centro Colombo Americano - Medellín · Sala 2",
    "sala": "Sala 2",
    "acceso": "Entrada libre",
@@ -370,7 +373,8 @@
    "poster": "/assets/vartex/muestra-local.jpg",
    "posterSource": "editorial",
    "_poster_src": "vartexmedellin.co — arte y texto oficiales del festival",
-   "_poster_nota": "el arte del festival es una FOTOGRAFÍA, no un afiche: en modo `oficial` la card sale a sangre y sin rótulo ni título, y una actividad sin nombre no se reconoce al bajar rápido. Como editorial gana su nombre y su sección."
+   "_poster_nota": "el arte del festival es una FOTOGRAFÍA, no un afiche: en modo `oficial` la card sale a sangre y sin rótulo ni título, y una actividad sin nombre no se reconoce al bajar rápido. Como editorial gana su nombre y su sección.",
+   "_hora_src": "la SEDE manda: el afiche del festival dice 4:30 p.m. y la agenda del Centro Colombo Americano —quien abre la sala— dice 6:30 p.m. Mismo criterio que en Cinemancia, donde el PDF decía 19:00 y la Cinemateca 19:30."
   }
  ]
 }
