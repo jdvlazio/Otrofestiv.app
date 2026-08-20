@@ -373,6 +373,8 @@
    "venue": "Centro Colombo Americano - Sede centro - Medellín",
    "sala": "Sala 1",
    "has_qa": false,
+   "synopsis": "El Bárbaro cree que le quedan pocas erecciones antes de morir. Condenado a vivir en una tienda de segunda mano y perseguido por una tragedia familiar, pone la mira en Marie, una maestra de educación especial alcohólica. Si ha de irse, calcula, mejor irse bien acompañado.",
+   "synopsis_lang": "es",
    "poster": "https://image.tmdb.org/t/p/w500/ycGFcrpmiCXtidvyom94aDyMqB1.jpg",
    "posterSource": "tmdb",
    "_src": "PDF oficial de programación del festival",
@@ -444,6 +446,8 @@
    "day_order": 1,
    "venue": "Teatro Caribe - Itagüí",
    "has_qa": false,
+   "synopsis": "Enero de 2007: he vuelto a El Cairo. Por trabajo. Has cambiado de número, Omar. Tengo que encontrarte… Te quiero. Abdellah.",
+   "synopsis_lang": "es",
    "poster": "https://image.tmdb.org/t/p/w500/4QXDMHcpG3rKvJ7sLP1Fac4lmfn.jpg",
    "posterSource": "tmdb",
    "_src": "PDF oficial de programación del festival",
@@ -466,6 +470,8 @@
    "day_order": 1,
    "venue": "Casa Municipal de la Cultura - Caldas",
    "has_qa": false,
+   "synopsis": "La primera obra de Pere Portabella como director arranca con una frase: «derrotados… pero no vencidos». Puede leerse como alusión al K.O. técnico que el régimen de Franco le propinó en los sesenta a su trabajo como productor. A través de los juegos verbales, extremadamente rabiosos, del poeta catalán Joan Brossa, Portabella intenta desmontar las formas del discurso publicitario de la época.",
+   "synopsis_lang": "es",
    "poster": "https://image.tmdb.org/t/p/w500/p4nrdnrNxbgDxiQokBpFMdmlbSH.jpg",
    "posterSource": "tmdb",
    "_src": "PDF oficial de programación del festival",
@@ -528,6 +534,8 @@
    "venue": "Centro Colombo Americano - Sede centro - Medellín",
    "sala": "Sala 1",
    "has_qa": false,
+   "synopsis": "Cuando su amante estadounidense se marcha, Pol se muda a Manila buscando mejores oportunidades. Termina arrastrado al mundo áspero de la prostitución masculina y la esclavitud sexual.",
+   "synopsis_lang": "es",
    "poster": "https://image.tmdb.org/t/p/w500/oDKyJP9gxYPUximMLN4VP59tZ4p.jpg",
    "posterSource": "tmdb",
    "_src": "PDF oficial de programación del festival",
@@ -568,7 +576,9 @@
      "poster": "https://image.tmdb.org/t/p/w500/rx4q8WfoW1w80K8QYB9heQsBaK9.jpg",
      "posterSource": "tmdb",
      "lbSlug": "only-making-out",
-     "tmdb_id": 1537273
+     "tmdb_id": 1537273,
+     "synopsis": "Dos figuras al atardecer. Al día siguiente se encuentran con una tercera.",
+     "synopsis_lang": "es"
     },
     {
      "title": "El oído absoluto",
@@ -582,7 +592,9 @@
      "poster": "https://image.tmdb.org/t/p/w500/vhfvAky2EGTa9rmyQJ7yICWncFq.jpg",
      "posterSource": "tmdb",
      "lbSlug": "the-inner-ear",
-     "tmdb_id": 1722127
+     "tmdb_id": 1722127,
+     "synopsis": "Tras un accidente, Lorenzo empieza a oír un zumbido persistente que altera de raíz su relación con el mundo.",
+     "synopsis_lang": "es"
     },
     {
      "title": "loose sleep",
@@ -596,7 +608,9 @@
      "poster": "https://image.tmdb.org/t/p/w500/noJJeBURcdtVMGOhsluPPIiHNDN.jpg",
      "posterSource": "tmdb",
      "lbSlug": "sono-solto",
-     "tmdb_id": 1655940
+     "tmdb_id": 1655940,
+     "synopsis": "A veces el paso más difícil del día es el primero. El protagonista libra una batalla contra sí mismo: ¿vale la pena dejar la comodidad del edredón y salir a vivir? Con una narración fragmentaria, hecha de sueños y asociaciones, el corto sigue sus cavilaciones sobre la actividad y la pasividad, el paso del tiempo y las (des)ventajas de estar despierto.",
+     "synopsis_lang": "es"
     },
     {
      "title": "Henry Is a Girl Who Likes to Sleep",
@@ -610,7 +624,9 @@
      "poster": "https://image.tmdb.org/t/p/w500/hLX85aV7xgT7AfkyLTnTgxKEnDl.jpg",
      "posterSource": "tmdb",
      "lbSlug": "henry-is-a-girl-who-likes-to-sleep",
-     "tmdb_id": 1614674
+     "tmdb_id": 1614674,
+     "synopsis": "La cineasta le escribe una carta a su gato, Henry. Busca un lugar blando y tierno donde habitar, un refugio callado y cálido al que retirarse cuando el mundo se vuelve demasiado ruidoso. Una oda a los animales que tenemos en cautiverio y a los mundos íntimos que construimos con ellos.",
+     "synopsis_lang": "es"
     },
     {
      "title": "Mi amigo, el arquitecto",
@@ -624,7 +640,9 @@
      "poster": "https://image.tmdb.org/t/p/w500/sMB00Njgb5QlOHPoD16Am79twm5.jpg",
      "posterSource": "tmdb",
      "lbSlug": "my-friend-the-architect",
-     "tmdb_id": 1655621
+     "tmdb_id": 1655621,
+     "synopsis": "Una mujer inventa un relato para evocar una amistad perdida. Junto a sus amigos imagina una fábula: la historia de dos pájaros que un día se hicieron humanos, un Ornitólogo y su amigo, El Arquitecto.",
+     "synopsis_lang": "es"
     }
    ]
   },
@@ -722,7 +740,9 @@
      "poster": "https://image.tmdb.org/t/p/w500/A6X3xnhhq4RuCb2Fsg45AnnWpdP.jpg",
      "posterSource": "tmdb",
      "lbSlug": "nos-maisons-nexistent-pas",
-     "tmdb_id": 1645704
+     "tmdb_id": 1645704,
+     "synopsis": "Rodada en un Super 8 granulado, sigue la historia de una casa familiar. Mientras la cineasta recorre barrios que alguna vez le fueron familiares, la historia íntima de una familia se abre hacia una meditación más amplia sobre la ausencia, el exilio y los fantasmas de la memoria. En el espacio difuso entre las casas habitadas y las abandonadas, entre lo cuir y la nostalgia del hogar, empieza a asomar una pertenencia nueva, frágil y colectiva.",
+     "synopsis_lang": "es"
     },
     {
      "title": "Koki, Ciao",
@@ -752,7 +772,9 @@
      "poster": "https://image.tmdb.org/t/p/w500/iVHZ1lC2Ste5289HAOkk5ft6c6e.jpg",
      "posterSource": "tmdb",
      "lbSlug": "facing-south",
-     "tmdb_id": 1657831
+     "tmdb_id": 1657831,
+     "synopsis": "La voz que oímos viene de muy lejos del encuadre, a miles de kilómetros de las vistas de Toronto que se despliegan ante nosotros. Son incontables mensajes de voz dejados desde Colombia por la abuela del director.",
+     "synopsis_lang": "es"
     },
     {
      "title": "Bright Summer Days",
@@ -766,7 +788,9 @@
      "poster": "https://image.tmdb.org/t/p/w500/aTwLabtZ5BU2DpqvlSVEOu2tTqe.jpg",
      "posterSource": "tmdb",
      "lbSlug": "bright-summer-days",
-     "tmdb_id": 1485440
+     "tmdb_id": 1485440,
+     "synopsis": "Dos hermanas se reencuentran tras años separadas. El pasado se ha vuelto lo único que todavía las une.",
+     "synopsis_lang": "es"
     },
     {
      "title": "Prueba de cámara",
@@ -930,6 +954,8 @@
    "day_order": 2,
    "venue": "Teatro Caribe - Itagüí",
    "has_qa": false,
+   "synopsis": "La primera obra de Pere Portabella como director arranca con una frase: «derrotados… pero no vencidos». Puede leerse como alusión al K.O. técnico que el régimen de Franco le propinó en los sesenta a su trabajo como productor. A través de los juegos verbales, extremadamente rabiosos, del poeta catalán Joan Brossa, Portabella intenta desmontar las formas del discurso publicitario de la época.",
+   "synopsis_lang": "es",
    "poster": "https://image.tmdb.org/t/p/w500/p4nrdnrNxbgDxiQokBpFMdmlbSH.jpg",
    "posterSource": "tmdb",
    "_src": "hoja oficial del festival (conversatorios y charlas)",
@@ -1076,6 +1102,8 @@
    "venue": "Centro Colombo Americano - Sede centro - Medellín",
    "sala": "Sala 1",
    "has_qa": false,
+   "synopsis": "Pascale acompaña a su amigo egipcio Amr por el camino escarpado hacia un permiso de residencia. El sistema, las autoridades, el abogado, los papeles, los trámites, un curso de idioma. Una película honesta y solidaria sobre «el estado de la migración» y sobre entenderse.",
+   "synopsis_lang": "es",
    "poster": "https://image.tmdb.org/t/p/w500/vP6O6ugQITgfbOBSWCOZeJzAAjp.jpg",
    "posterSource": "tmdb",
    "_src": "PDF oficial de programación del festival",
@@ -1139,7 +1167,9 @@
      "poster": "https://image.tmdb.org/t/p/w500/xt9Dfhbzwxuo2MQvsRox9Ca2IsN.jpg",
      "posterSource": "tmdb",
      "lbSlug": "crash-2026-1",
-     "tmdb_id": 1620642
+     "tmdb_id": 1620642,
+     "synopsis": "La película sigue una jornada de trabajo en el centro de reciclaje y desguace de BMW en Múnich, y documenta paso a paso la etapa final del desmontaje de un automóvil.",
+     "synopsis_lang": "es"
     },
     {
      "title": "Chuura",
@@ -1153,7 +1183,9 @@
      "poster": "https://image.tmdb.org/t/p/w500/u3ZxWARL2C2VooiHKsGrRyHiEU7.jpg",
      "posterSource": "tmdb",
      "lbSlug": "chuuraa",
-     "tmdb_id": 1614693
+     "tmdb_id": 1614693,
+     "synopsis": "En el remoto Ártico siberiano, un científico indígena sakha desciende a las profundidades del permafrost que se derrite. En busca de una criatura antigua, se abre paso por cuevas peligrosas y claustrofóbicas hasta el reino mítico del inframundo.",
+     "synopsis_lang": "es"
     },
     {
      "title": "Pies al revés",
@@ -1167,7 +1199,9 @@
      "poster": "https://image.tmdb.org/t/p/w500/fE00OvtKSrqGC7sjpYZLxffBKGz.jpg",
      "posterSource": "tmdb",
      "lbSlug": "feet-the-other-way-around",
-     "tmdb_id": 1645136
+     "tmdb_id": 1645136,
+     "synopsis": "En la Amazonía colombiana, una mirada deriva entre las aguas turbias de los ríos y la selva, testigo callado de la convivencia entre los elementos y los habitantes de Puerto Nariño.",
+     "synopsis_lang": "es"
     },
     {
      "title": "Certas formas",
@@ -1180,7 +1214,9 @@
      "poster": "https://image.tmdb.org/t/p/w500/teLkpQSkMBPGiaBMQwxuV3nF1wf.jpg",
      "posterSource": "tmdb",
      "lbSlug": "certas-formas",
-     "tmdb_id": 1660730
+     "tmdb_id": 1660730,
+     "synopsis": "La pérdida toma a menudo la silueta lenta de la apatía. Como si la mirada se fuera lejos, como si caminar doliera y hablar fuera una montaña, Miguel y Laura se arrastran por el dolor en busca de un abrazo. La juventud es una condena que no se dice.",
+     "synopsis_lang": "es"
     },
     {
      "title": "O",
@@ -1194,7 +1230,9 @@
      "poster": "https://image.tmdb.org/t/p/w500/nqiifO5BF1gEplXiTzofpR03Dlt.jpg",
      "posterSource": "tmdb",
      "lbSlug": "o-2026",
-     "tmdb_id": 1599922
+     "tmdb_id": 1599922,
+     "synopsis": "Desde que tiene memoria, Francisca vive con una aversión inexplicable e incontrolable a los ombligos. Nada le produce más angustia que esa simple parte del cuerpo y las formas del mundo que se le parecen. Cuando la terapia no alcanza para resolver su querida fobia, Francisca recurre a otros métodos: sin ninguna base científica y nada recomendables para quien padezca lo mismo.",
+     "synopsis_lang": "es"
     }
    ]
   },
@@ -1292,7 +1330,7 @@
    "_programa_original": "Cleaning & Cleansing"
   },
   {
-   "title": "The Children’s Hour",
+   "title": "The Children's Hour",
    "type": "film",
    "section": "🖤 Sick and Dirty. Curaduría de Michael Koresky",
    "director": "William Wyler",
@@ -1316,7 +1354,7 @@
    "title_en": "The Children's Hour",
    "year": 1961,
    "tmdb_id": 20139,
-   "_programa_original": "The Children’s Hour"
+   "_programa_original": "The Children's Hour"
   },
   {
    "title": "Cuando las nubes esconden la sombra",
@@ -1479,6 +1517,8 @@
    "venue": "Centro Colombo Americano - Sede centro - Medellín",
    "sala": "Sala 1",
    "has_qa": false,
+   "synopsis": "La vida de Michèle Firk —periodista, crítica de cine, aspirante a directora y militante comunista francesa, pionera, implicada en varias luchas de liberación de la segunda mitad del siglo XX— contada por la voz de Alice Diop.",
+   "synopsis_lang": "es",
    "poster": "https://image.tmdb.org/t/p/w500/qO2Kir2yyz2sr8j4UxXXhrsuLS.jpg",
    "posterSource": "tmdb",
    "_src": "PDF oficial de programación del festival",
@@ -1865,7 +1905,7 @@
    ]
   },
   {
-   "title": "Vive L’Amour",
+   "title": "Vive L'Amour",
    "type": "film",
    "section": "🖤 Sick and Dirty. Curaduría de Michael Koresky",
    "director": "Tsai Ming-liang",
@@ -1889,7 +1929,7 @@
    "title_en": "Vive L'Amour",
    "year": 1994,
    "tmdb_id": 11985,
-   "_programa_original": "Vive L’Amour"
+   "_programa_original": "Vive L'Amour"
   },
   {
    "title": "Cuartito rosa",
@@ -2081,6 +2121,8 @@
    "day_order": 6,
    "venue": "Teatro Caribe - Itagüí",
    "has_qa": false,
+   "synopsis": "Pascale acompaña a su amigo egipcio Amr por el camino escarpado hacia un permiso de residencia. El sistema, las autoridades, el abogado, los papeles, los trámites, un curso de idioma. Una película honesta y solidaria sobre «el estado de la migración» y sobre entenderse.",
+   "synopsis_lang": "es",
    "poster": "https://image.tmdb.org/t/p/w500/vP6O6ugQITgfbOBSWCOZeJzAAjp.jpg",
    "posterSource": "tmdb",
    "_src": "PDF oficial de programación del festival",
@@ -2145,7 +2187,9 @@
      "poster": "https://image.tmdb.org/t/p/w500/rx4q8WfoW1w80K8QYB9heQsBaK9.jpg",
      "posterSource": "tmdb",
      "lbSlug": "only-making-out",
-     "tmdb_id": 1537273
+     "tmdb_id": 1537273,
+     "synopsis": "Dos figuras al atardecer. Al día siguiente se encuentran con una tercera.",
+     "synopsis_lang": "es"
     },
     {
      "title": "El oído absoluto",
@@ -2159,7 +2203,9 @@
      "poster": "https://image.tmdb.org/t/p/w500/vhfvAky2EGTa9rmyQJ7yICWncFq.jpg",
      "posterSource": "tmdb",
      "lbSlug": "the-inner-ear",
-     "tmdb_id": 1722127
+     "tmdb_id": 1722127,
+     "synopsis": "Tras un accidente, Lorenzo empieza a oír un zumbido persistente que altera de raíz su relación con el mundo.",
+     "synopsis_lang": "es"
     },
     {
      "title": "loose sleep",
@@ -2173,7 +2219,9 @@
      "poster": "https://image.tmdb.org/t/p/w500/noJJeBURcdtVMGOhsluPPIiHNDN.jpg",
      "posterSource": "tmdb",
      "lbSlug": "sono-solto",
-     "tmdb_id": 1655940
+     "tmdb_id": 1655940,
+     "synopsis": "A veces el paso más difícil del día es el primero. El protagonista libra una batalla contra sí mismo: ¿vale la pena dejar la comodidad del edredón y salir a vivir? Con una narración fragmentaria, hecha de sueños y asociaciones, el corto sigue sus cavilaciones sobre la actividad y la pasividad, el paso del tiempo y las (des)ventajas de estar despierto.",
+     "synopsis_lang": "es"
     },
     {
      "title": "Henry Is a Girl Who Likes to Sleep",
@@ -2187,7 +2235,9 @@
      "poster": "https://image.tmdb.org/t/p/w500/hLX85aV7xgT7AfkyLTnTgxKEnDl.jpg",
      "posterSource": "tmdb",
      "lbSlug": "henry-is-a-girl-who-likes-to-sleep",
-     "tmdb_id": 1614674
+     "tmdb_id": 1614674,
+     "synopsis": "La cineasta le escribe una carta a su gato, Henry. Busca un lugar blando y tierno donde habitar, un refugio callado y cálido al que retirarse cuando el mundo se vuelve demasiado ruidoso. Una oda a los animales que tenemos en cautiverio y a los mundos íntimos que construimos con ellos.",
+     "synopsis_lang": "es"
     },
     {
      "title": "Mi amigo, el arquitecto",
@@ -2201,7 +2251,9 @@
      "poster": "https://image.tmdb.org/t/p/w500/sMB00Njgb5QlOHPoD16Am79twm5.jpg",
      "posterSource": "tmdb",
      "lbSlug": "my-friend-the-architect",
-     "tmdb_id": 1655621
+     "tmdb_id": 1655621,
+     "synopsis": "Una mujer inventa un relato para evocar una amistad perdida. Junto a sus amigos imagina una fábula: la historia de dos pájaros que un día se hicieron humanos, un Ornitólogo y su amigo, El Arquitecto.",
+     "synopsis_lang": "es"
     }
    ]
   },
@@ -2233,7 +2285,9 @@
      "poster": "https://image.tmdb.org/t/p/w500/rx4q8WfoW1w80K8QYB9heQsBaK9.jpg",
      "posterSource": "tmdb",
      "lbSlug": "only-making-out",
-     "tmdb_id": 1537273
+     "tmdb_id": 1537273,
+     "synopsis": "Dos figuras al atardecer. Al día siguiente se encuentran con una tercera.",
+     "synopsis_lang": "es"
     },
     {
      "title": "El oído absoluto",
@@ -2247,7 +2301,9 @@
      "poster": "https://image.tmdb.org/t/p/w500/vhfvAky2EGTa9rmyQJ7yICWncFq.jpg",
      "posterSource": "tmdb",
      "lbSlug": "the-inner-ear",
-     "tmdb_id": 1722127
+     "tmdb_id": 1722127,
+     "synopsis": "Tras un accidente, Lorenzo empieza a oír un zumbido persistente que altera de raíz su relación con el mundo.",
+     "synopsis_lang": "es"
     },
     {
      "title": "loose sleep",
@@ -2261,7 +2317,9 @@
      "poster": "https://image.tmdb.org/t/p/w500/noJJeBURcdtVMGOhsluPPIiHNDN.jpg",
      "posterSource": "tmdb",
      "lbSlug": "sono-solto",
-     "tmdb_id": 1655940
+     "tmdb_id": 1655940,
+     "synopsis": "A veces el paso más difícil del día es el primero. El protagonista libra una batalla contra sí mismo: ¿vale la pena dejar la comodidad del edredón y salir a vivir? Con una narración fragmentaria, hecha de sueños y asociaciones, el corto sigue sus cavilaciones sobre la actividad y la pasividad, el paso del tiempo y las (des)ventajas de estar despierto.",
+     "synopsis_lang": "es"
     },
     {
      "title": "Henry Is a Girl Who Likes to Sleep",
@@ -2275,7 +2333,9 @@
      "poster": "https://image.tmdb.org/t/p/w500/hLX85aV7xgT7AfkyLTnTgxKEnDl.jpg",
      "posterSource": "tmdb",
      "lbSlug": "henry-is-a-girl-who-likes-to-sleep",
-     "tmdb_id": 1614674
+     "tmdb_id": 1614674,
+     "synopsis": "La cineasta le escribe una carta a su gato, Henry. Busca un lugar blando y tierno donde habitar, un refugio callado y cálido al que retirarse cuando el mundo se vuelve demasiado ruidoso. Una oda a los animales que tenemos en cautiverio y a los mundos íntimos que construimos con ellos.",
+     "synopsis_lang": "es"
     },
     {
      "title": "Mi amigo, el arquitecto",
@@ -2289,7 +2349,9 @@
      "poster": "https://image.tmdb.org/t/p/w500/sMB00Njgb5QlOHPoD16Am79twm5.jpg",
      "posterSource": "tmdb",
      "lbSlug": "my-friend-the-architect",
-     "tmdb_id": 1655621
+     "tmdb_id": 1655621,
+     "synopsis": "Una mujer inventa un relato para evocar una amistad perdida. Junto a sus amigos imagina una fábula: la historia de dos pájaros que un día se hicieron humanos, un Ornitólogo y su amigo, El Arquitecto.",
+     "synopsis_lang": "es"
     }
    ]
   },
@@ -2321,7 +2383,9 @@
      "poster": "https://image.tmdb.org/t/p/w500/rx4q8WfoW1w80K8QYB9heQsBaK9.jpg",
      "posterSource": "tmdb",
      "lbSlug": "only-making-out",
-     "tmdb_id": 1537273
+     "tmdb_id": 1537273,
+     "synopsis": "Dos figuras al atardecer. Al día siguiente se encuentran con una tercera.",
+     "synopsis_lang": "es"
     },
     {
      "title": "El oído absoluto",
@@ -2335,7 +2399,9 @@
      "poster": "https://image.tmdb.org/t/p/w500/vhfvAky2EGTa9rmyQJ7yICWncFq.jpg",
      "posterSource": "tmdb",
      "lbSlug": "the-inner-ear",
-     "tmdb_id": 1722127
+     "tmdb_id": 1722127,
+     "synopsis": "Tras un accidente, Lorenzo empieza a oír un zumbido persistente que altera de raíz su relación con el mundo.",
+     "synopsis_lang": "es"
     },
     {
      "title": "loose sleep",
@@ -2349,7 +2415,9 @@
      "poster": "https://image.tmdb.org/t/p/w500/noJJeBURcdtVMGOhsluPPIiHNDN.jpg",
      "posterSource": "tmdb",
      "lbSlug": "sono-solto",
-     "tmdb_id": 1655940
+     "tmdb_id": 1655940,
+     "synopsis": "A veces el paso más difícil del día es el primero. El protagonista libra una batalla contra sí mismo: ¿vale la pena dejar la comodidad del edredón y salir a vivir? Con una narración fragmentaria, hecha de sueños y asociaciones, el corto sigue sus cavilaciones sobre la actividad y la pasividad, el paso del tiempo y las (des)ventajas de estar despierto.",
+     "synopsis_lang": "es"
     },
     {
      "title": "Henry Is a Girl Who Likes to Sleep",
@@ -2363,7 +2431,9 @@
      "poster": "https://image.tmdb.org/t/p/w500/hLX85aV7xgT7AfkyLTnTgxKEnDl.jpg",
      "posterSource": "tmdb",
      "lbSlug": "henry-is-a-girl-who-likes-to-sleep",
-     "tmdb_id": 1614674
+     "tmdb_id": 1614674,
+     "synopsis": "La cineasta le escribe una carta a su gato, Henry. Busca un lugar blando y tierno donde habitar, un refugio callado y cálido al que retirarse cuando el mundo se vuelve demasiado ruidoso. Una oda a los animales que tenemos en cautiverio y a los mundos íntimos que construimos con ellos.",
+     "synopsis_lang": "es"
     },
     {
      "title": "Mi amigo, el arquitecto",
@@ -2377,7 +2447,9 @@
      "poster": "https://image.tmdb.org/t/p/w500/sMB00Njgb5QlOHPoD16Am79twm5.jpg",
      "posterSource": "tmdb",
      "lbSlug": "my-friend-the-architect",
-     "tmdb_id": 1655621
+     "tmdb_id": 1655621,
+     "synopsis": "Una mujer inventa un relato para evocar una amistad perdida. Junto a sus amigos imagina una fábula: la historia de dos pájaros que un día se hicieron humanos, un Ornitólogo y su amigo, El Arquitecto.",
+     "synopsis_lang": "es"
     }
    ]
   },
@@ -2846,6 +2918,8 @@
    "venue": "Centro Colombo Americano - Sede centro - Medellín",
    "sala": "Sala 1",
    "has_qa": false,
+   "synopsis": "Un año en Berlín: Leonie deambula por la ciudad y por los textos de Anna Maria Ortese. Conversando con amigos y con la traductora Sigrid Vagt, busca también los hilos narrativos de su propia vida. Una película de lectura, rodada en un 16 mm luminoso y sin artificio.",
+   "synopsis_lang": "es",
    "poster": "https://image.tmdb.org/t/p/w500/cCWN7cipEZAxLvwCPVbnH9LvZrs.jpg",
    "posterSource": "tmdb",
    "_src": "hoja oficial del festival (conversatorios y charlas)",
@@ -2867,6 +2941,8 @@
    "day_order": 7,
    "venue": "La Capilla del Claustro Comfama - Medellín",
    "has_qa": false,
+   "synopsis": "Película semidocumental sobre la vida cotidiana de una colegiala de dieciséis años que vive con su madre soltera en las afueras de Berlín Occidental. Su padre, un soldado puertorriqueño, abandonó a la familia. Con las postales y los discos hawaianos que él dejó atrás, la joven se sueña una y otra vez en un mundo idílico mientras cumple con las tareas monótonas de la casa. Mikesch da forma a esos estados de ensoñación con recursos que evocan el cine publicitario.",
+   "synopsis_lang": "es",
    "poster": "https://image.tmdb.org/t/p/w500/zb4dfHHVs4FLadYV9ixD3VsnJhc.jpg",
    "posterSource": "tmdb",
    "_src": "hoja oficial del festival (conversatorios y charlas)",
@@ -3058,6 +3134,8 @@
    "day_order": 8,
    "venue": "Cineprox Las Américas - Medellín",
    "has_qa": false,
+   "synopsis": "Enero de 2007: he vuelto a El Cairo. Por trabajo. Has cambiado de número, Omar. Tengo que encontrarte… Te quiero. Abdellah.",
+   "synopsis_lang": "es",
    "poster": "https://image.tmdb.org/t/p/w500/4QXDMHcpG3rKvJ7sLP1Fac4lmfn.jpg",
    "posterSource": "tmdb",
    "_src": "PDF oficial de programación del festival",
@@ -3110,7 +3188,9 @@
      "poster": "https://image.tmdb.org/t/p/w500/xt9Dfhbzwxuo2MQvsRox9Ca2IsN.jpg",
      "posterSource": "tmdb",
      "lbSlug": "crash-2026-1",
-     "tmdb_id": 1620642
+     "tmdb_id": 1620642,
+     "synopsis": "La película sigue una jornada de trabajo en el centro de reciclaje y desguace de BMW en Múnich, y documenta paso a paso la etapa final del desmontaje de un automóvil.",
+     "synopsis_lang": "es"
     },
     {
      "title": "Chuura",
@@ -3124,7 +3204,9 @@
      "poster": "https://image.tmdb.org/t/p/w500/u3ZxWARL2C2VooiHKsGrRyHiEU7.jpg",
      "posterSource": "tmdb",
      "lbSlug": "chuuraa",
-     "tmdb_id": 1614693
+     "tmdb_id": 1614693,
+     "synopsis": "En el remoto Ártico siberiano, un científico indígena sakha desciende a las profundidades del permafrost que se derrite. En busca de una criatura antigua, se abre paso por cuevas peligrosas y claustrofóbicas hasta el reino mítico del inframundo.",
+     "synopsis_lang": "es"
     },
     {
      "title": "Pies al revés",
@@ -3138,7 +3220,9 @@
      "poster": "https://image.tmdb.org/t/p/w500/fE00OvtKSrqGC7sjpYZLxffBKGz.jpg",
      "posterSource": "tmdb",
      "lbSlug": "feet-the-other-way-around",
-     "tmdb_id": 1645136
+     "tmdb_id": 1645136,
+     "synopsis": "En la Amazonía colombiana, una mirada deriva entre las aguas turbias de los ríos y la selva, testigo callado de la convivencia entre los elementos y los habitantes de Puerto Nariño.",
+     "synopsis_lang": "es"
     },
     {
      "title": "Certas formas",
@@ -3151,7 +3235,9 @@
      "poster": "https://image.tmdb.org/t/p/w500/teLkpQSkMBPGiaBMQwxuV3nF1wf.jpg",
      "posterSource": "tmdb",
      "lbSlug": "certas-formas",
-     "tmdb_id": 1660730
+     "tmdb_id": 1660730,
+     "synopsis": "La pérdida toma a menudo la silueta lenta de la apatía. Como si la mirada se fuera lejos, como si caminar doliera y hablar fuera una montaña, Miguel y Laura se arrastran por el dolor en busca de un abrazo. La juventud es una condena que no se dice.",
+     "synopsis_lang": "es"
     },
     {
      "title": "O",
@@ -3165,12 +3251,14 @@
      "poster": "https://image.tmdb.org/t/p/w500/nqiifO5BF1gEplXiTzofpR03Dlt.jpg",
      "posterSource": "tmdb",
      "lbSlug": "o-2026",
-     "tmdb_id": 1599922
+     "tmdb_id": 1599922,
+     "synopsis": "Desde que tiene memoria, Francisca vive con una aversión inexplicable e incontrolable a los ombligos. Nada le produce más angustia que esa simple parte del cuerpo y las formas del mundo que se le parecen. Cuando la terapia no alcanza para resolver su querida fobia, Francisca recurre a otros métodos: sin ninguna base científica y nada recomendables para quien padezca lo mismo.",
+     "synopsis_lang": "es"
     }
    ]
   },
   {
-   "title": "Procès d’un jeune poète / Juicio a un joven poeta",
+   "title": "Procès d'un jeune poète / Juicio a un joven poeta",
    "type": "film",
    "section": "🏆 Competencia central",
    "director": "Philippe Van Cutsem",
@@ -3180,12 +3268,14 @@
    "day_order": 8,
    "venue": "Cine MAMM - Medellín",
    "has_qa": false,
+   "synopsis": "En 1964, el poeta Joseph Brodsky, de veinticuatro años, fue juzgado por lo que el régimen soviético llamaba «parasitismo social» y condenado a cinco años de trabajos forzados en el extremo norte de Rusia. La periodista Frida Vigdórova asistió al juicio y tomó notas a escondidas, pese a la prohibición del juez. Su relato circuló por la URSS y por Occidente, y movilizó a la intelectualidad hasta lograr la liberación de Brodsky tras dieciocho meses. A partir de ese documento, la película vuelve sobre un episodio histórico que resuena con fuerza en el presente.",
+   "synopsis_lang": "es",
    "_src": "PDF oficial de programación del festival",
    "lbSlug": "proces-dun-jeune-poete",
-   "title_en": "Procès d’un jeune poète",
+   "title_en": "Procès d'un jeune poète",
    "year": 2025,
    "tmdb_id": 1563010,
-   "_programa_original": "Procès d’un jeune poète / Juicio a un joven poeta"
+   "_programa_original": "Procès d'un jeune poète / Juicio a un joven poeta"
   },
   {
    "title": "Competencia de cortometrajes Programa 2",
@@ -3215,7 +3305,9 @@
      "poster": "https://image.tmdb.org/t/p/w500/A6X3xnhhq4RuCb2Fsg45AnnWpdP.jpg",
      "posterSource": "tmdb",
      "lbSlug": "nos-maisons-nexistent-pas",
-     "tmdb_id": 1645704
+     "tmdb_id": 1645704,
+     "synopsis": "Rodada en un Super 8 granulado, sigue la historia de una casa familiar. Mientras la cineasta recorre barrios que alguna vez le fueron familiares, la historia íntima de una familia se abre hacia una meditación más amplia sobre la ausencia, el exilio y los fantasmas de la memoria. En el espacio difuso entre las casas habitadas y las abandonadas, entre lo cuir y la nostalgia del hogar, empieza a asomar una pertenencia nueva, frágil y colectiva.",
+     "synopsis_lang": "es"
     },
     {
      "title": "Koki, Ciao",
@@ -3245,7 +3337,9 @@
      "poster": "https://image.tmdb.org/t/p/w500/iVHZ1lC2Ste5289HAOkk5ft6c6e.jpg",
      "posterSource": "tmdb",
      "lbSlug": "facing-south",
-     "tmdb_id": 1657831
+     "tmdb_id": 1657831,
+     "synopsis": "La voz que oímos viene de muy lejos del encuadre, a miles de kilómetros de las vistas de Toronto que se despliegan ante nosotros. Son incontables mensajes de voz dejados desde Colombia por la abuela del director.",
+     "synopsis_lang": "es"
     },
     {
      "title": "Bright Summer Days",
@@ -3259,7 +3353,9 @@
      "poster": "https://image.tmdb.org/t/p/w500/aTwLabtZ5BU2DpqvlSVEOu2tTqe.jpg",
      "posterSource": "tmdb",
      "lbSlug": "bright-summer-days",
-     "tmdb_id": 1485440
+     "tmdb_id": 1485440,
+     "synopsis": "Dos hermanas se reencuentran tras años separadas. El pasado se ha vuelto lo único que todavía las une.",
+     "synopsis_lang": "es"
     },
     {
      "title": "Prueba de cámara",
@@ -3305,7 +3401,9 @@
      "poster": "https://image.tmdb.org/t/p/w500/A6X3xnhhq4RuCb2Fsg45AnnWpdP.jpg",
      "posterSource": "tmdb",
      "lbSlug": "nos-maisons-nexistent-pas",
-     "tmdb_id": 1645704
+     "tmdb_id": 1645704,
+     "synopsis": "Rodada en un Super 8 granulado, sigue la historia de una casa familiar. Mientras la cineasta recorre barrios que alguna vez le fueron familiares, la historia íntima de una familia se abre hacia una meditación más amplia sobre la ausencia, el exilio y los fantasmas de la memoria. En el espacio difuso entre las casas habitadas y las abandonadas, entre lo cuir y la nostalgia del hogar, empieza a asomar una pertenencia nueva, frágil y colectiva.",
+     "synopsis_lang": "es"
     },
     {
      "title": "Koki, Ciao",
@@ -3335,7 +3433,9 @@
      "poster": "https://image.tmdb.org/t/p/w500/iVHZ1lC2Ste5289HAOkk5ft6c6e.jpg",
      "posterSource": "tmdb",
      "lbSlug": "facing-south",
-     "tmdb_id": 1657831
+     "tmdb_id": 1657831,
+     "synopsis": "La voz que oímos viene de muy lejos del encuadre, a miles de kilómetros de las vistas de Toronto que se despliegan ante nosotros. Son incontables mensajes de voz dejados desde Colombia por la abuela del director.",
+     "synopsis_lang": "es"
     },
     {
      "title": "Bright Summer Days",
@@ -3349,7 +3449,9 @@
      "poster": "https://image.tmdb.org/t/p/w500/aTwLabtZ5BU2DpqvlSVEOu2tTqe.jpg",
      "posterSource": "tmdb",
      "lbSlug": "bright-summer-days",
-     "tmdb_id": 1485440
+     "tmdb_id": 1485440,
+     "synopsis": "Dos hermanas se reencuentran tras años separadas. El pasado se ha vuelto lo único que todavía las une.",
+     "synopsis_lang": "es"
     },
     {
      "title": "Prueba de cámara",
@@ -3380,6 +3482,8 @@
    "venue": "Centro Colombo Americano - Sede centro - Medellín",
    "sala": "Sala 1",
    "has_qa": false,
+   "synopsis": "Gaspard, un adolescente de las afueras de Lisboa, cae en manos del Ogro, un hombre que ha hecho un pacto con el Diablo. El Ogro se sirve del muchacho para atraer turistas, a los que transforma en animales y luego mata. Gaspard escapa con un burro y un perro a los que ha tomado cariño y, en una casona encantada, se encuentra con el espíritu de la reina María I.",
+   "synopsis_lang": "es",
    "poster": "https://image.tmdb.org/t/p/w500/yjNjdYCSogOhQAMKShhk0nuGYNn.jpg",
    "posterSource": "tmdb",
    "_src": "PDF oficial de programación del festival",
@@ -3403,6 +3507,8 @@
    "venue": "Centro Colombo Americano - Sede centro - Medellín",
    "sala": "Sala 2",
    "has_qa": false,
+   "synopsis": "Documental sobre la vida en una residencia de mayores de Hamburgo. Durante seis meses, Elfi Mikesch entrevistó y filmó a sus habitantes, y se detuvo en una pareja de mujeres que pasa junto el resto de su vida, en una relación estrecha e íntima.",
+   "synopsis_lang": "es",
    "poster": "https://image.tmdb.org/t/p/w500/lOBASl74QYuMPKpzkJOIZpZkT9E.jpg",
    "posterSource": "tmdb",
    "_src": "PDF oficial de programación del festival",
