@@ -447,6 +447,12 @@ export const FESTIVAL_CONFIG={
     dayLong:{'2026-09-03': 'Jueves 3 de septiembre', '2026-09-04': 'Viernes 4 de septiembre', '2026-09-05': 'Sábado 5 de septiembre', '2026-09-06': 'Domingo 6 de septiembre', '2026-09-07': 'Lunes 7 de septiembre', '2026-09-08': 'Martes 8 de septiembre', '2026-09-09': 'Miércoles 9 de septiembre', '2026-09-10': 'Jueves 10 de septiembre', '2026-09-11': 'Viernes 11 de septiembre', '2026-09-12': 'Sábado 12 de septiembre'},
     prioLimit:5,
     sharedSlotIsOneScreening:true,
+    // Mixto, y lo dice el PDF oficial con todas las letras: «a excepción de las
+    // funciones en Cineprox Las Américas y Cine MAMM, las funciones del festival
+    // son de entrada libre». En Cineprox las sillas son numeradas y la boleta se
+    // compra en taquilla; en Cine MAMM, en el primer piso del museo. El build
+    // anterior marcaba las 89 funciones como gratis por igual.
+    ticketing_model:'mixed',
     keyArt:'/assets/keyart/cinemancia2026.jpg',
     // group:'test' — Cinemancia NO se publica todavía. El keyArt ya está; falta
     // la sala en 64 de las 89 funciones y el catálogo completo (el boletín

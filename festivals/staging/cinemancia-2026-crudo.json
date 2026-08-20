@@ -1,721 +1,2922 @@
 {
  "_provenance": {
-  "fuente": "derivado de cinemancia-2026-build.json para las herramientas genéricas del pipeline",
-  "capturado": "2026-08-09",
-  "nota": "sede ya canónica (tabla SEDES del ensamblador); una sede = una clave"
+  "fuente": "PDF oficial de programación + hoja de programas y charlas enviada por el festival",
+  "capturado": "2026-08-20",
+  "metodo": "la parrilla da cuándo y dónde; la hoja da qué obras van en cada programa",
+  "nota": "el barrido anterior sacaba el horario de la ficha de cada película: salían 89 funciones sueltas en vez de programas, sin la inauguración ni la clausura"
  },
- "funciones": [
+ "_funciones": 86,
+ "programas": [
   {
-   "titulo": "Sombras en la niebla",
-   "dia": "2026-09-10",
-   "hora": "16:00",
-   "sede": "Centro Colombo Americano - Sede centro",
-   "ciudad": "Medellín",
-   "sala": "Sala 1"
-  },
-  {
-   "titulo": "Un aparato para detectar fantasmas",
-   "dia": "2026-09-10",
-   "hora": "16:00",
-   "sede": "Centro Colombo Americano - Sede centro",
-   "ciudad": "Medellín",
-   "sala": "Sala 1"
-  },
-  {
-   "titulo": "Ya se ven los tigres en la lluvia",
-   "dia": "2026-09-10",
-   "hora": "16:00",
-   "sede": "Centro Colombo Americano - Sede centro",
-   "ciudad": "Medellín",
-   "sala": "Sala 1"
-  },
-  {
-   "titulo": "El cazador",
-   "dia": "2026-09-10",
-   "hora": "16:00",
-   "sede": "Centro Colombo Americano - Sede centro",
-   "ciudad": "Medellín",
-   "sala": "Sala 1"
-  },
-  {
-   "titulo": "Las formas de la magia",
-   "dia": "2026-09-10",
-   "hora": "16:00",
-   "sede": "Centro Colombo Americano - Sede centro",
-   "ciudad": "Medellín",
-   "sala": "Sala 1"
-  },
-  {
-   "titulo": "Memorias Encontradas Numa Banheira",
-   "dia": "2026-09-10",
-   "hora": "19:30",
-   "sede": "Centro Colombo Americano - Sede centro",
-   "ciudad": "Medellín",
-   "sala": "Sala 2"
-  },
-  {
-   "titulo": "Parece el mundo",
-   "dia": "2026-09-10",
-   "hora": "19:30",
-   "sede": "Centro Colombo Americano - Sede centro",
-   "ciudad": "Medellín",
-   "sala": "Sala 2"
-  },
-  {
-   "titulo": "Borrachos mientras escuchamos las gotas caer",
-   "dia": "2026-09-07",
+   "dia": "2026-09-03",
    "hora": "19:00",
-   "sede": "La Capilla del Claustro Comfama",
-   "ciudad": "Medellín",
-   "sala": ""
+   "sede": "Teatro Comfama Alfonso Restrepo Moreno Medellín",
+   "_src": "PDF oficial de programación del festival",
+   "duracion_min": 88,
+   "acceso": "Entrada libre",
+   "titulo": "Todas las canciones del mundo",
+   "obras": [
+    {
+     "titulo": "Todas las canciones del mundo",
+     "director": "Santiago Flórez Rincón",
+     "anio": 2026,
+     "sinopsis": "La película sigue un viaje narrativo o documental que indaga en la memoria colectiva y afectiva que construyen las canciones en la vida de las personas. La trama teje diversas historias alrededor de la creación, la pérdida o la preservación musical, retratando cómo las melodías definen momentos históricos, geográficos y personales en Colombia.",
+     "title_en": "Todas las canciones del mundo",
+     "tmdb_id": 1744092,
+     "lbSlug": "todas-las-canciones-del-mundo",
+     "duracion_min": 83
+    }
+   ],
+   "seccion": "Función inaugural"
   },
   {
-   "titulo": "Borrachos mientras escuchamos las gotas caer",
-   "dia": "2026-09-10",
-   "hora": "18:00",
-   "sede": "Teatro Caribe",
-   "ciudad": "Itagüí",
-   "sala": ""
-  },
-  {
-   "titulo": "El salto",
-   "dia": "2026-09-07",
-   "hora": "19:00",
-   "sede": "La Capilla del Claustro Comfama",
-   "ciudad": "Medellín",
-   "sala": ""
-  },
-  {
-   "titulo": "El salto",
-   "dia": "2026-09-10",
-   "hora": "18:00",
-   "sede": "Teatro Caribe",
-   "ciudad": "Itagüí",
-   "sala": ""
-  },
-  {
-   "titulo": "Gramática práctica italiana",
-   "dia": "2026-09-07",
-   "hora": "19:00",
-   "sede": "La Capilla del Claustro Comfama",
-   "ciudad": "Medellín",
-   "sala": ""
-  },
-  {
-   "titulo": "Gramática práctica italiana",
-   "dia": "2026-09-10",
-   "hora": "18:00",
-   "sede": "Teatro Caribe",
-   "ciudad": "Itagüí",
-   "sala": ""
-  },
-  {
-   "titulo": "Liminal",
-   "dia": "2026-09-05",
-   "hora": "17:00",
-   "sede": "La Capilla del Claustro Comfama",
-   "ciudad": "Medellín",
-   "sala": ""
-  },
-  {
-   "titulo": "Liminal",
-   "dia": "2026-09-08",
-   "hora": "18:00",
-   "sede": "Teatro Caribe",
-   "ciudad": "Itagüí",
-   "sala": ""
-  },
-  {
-   "titulo": "Madres de nacimiento",
-   "dia": "2026-09-07",
-   "hora": "19:00",
-   "sede": "La Capilla del Claustro Comfama",
-   "ciudad": "Medellín",
-   "sala": ""
-  },
-  {
-   "titulo": "Madres de nacimiento",
-   "dia": "2026-09-10",
-   "hora": "18:00",
-   "sede": "Teatro Caribe",
-   "ciudad": "Itagüí",
-   "sala": ""
-  },
-  {
-   "titulo": "Medellín yo te saludo",
-   "dia": "2026-09-05",
-   "hora": "17:00",
-   "sede": "La Capilla del Claustro Comfama",
-   "ciudad": "Medellín",
-   "sala": ""
-  },
-  {
-   "titulo": "Medellín yo te saludo",
-   "dia": "2026-09-08",
-   "hora": "18:00",
-   "sede": "Teatro Caribe",
-   "ciudad": "Itagüí",
-   "sala": ""
-  },
-  {
-   "titulo": "Para no volver",
-   "dia": "2026-09-07",
-   "hora": "19:00",
-   "sede": "La Capilla del Claustro Comfama",
-   "ciudad": "Medellín",
-   "sala": ""
-  },
-  {
-   "titulo": "Para no volver",
-   "dia": "2026-09-10",
-   "hora": "18:00",
-   "sede": "Teatro Caribe",
-   "ciudad": "Itagüí",
-   "sala": ""
-  },
-  {
-   "titulo": "Pausas activas",
-   "dia": "2026-09-05",
-   "hora": "17:00",
-   "sede": "La Capilla del Claustro Comfama",
-   "ciudad": "Medellín",
-   "sala": ""
-  },
-  {
-   "titulo": "Pausas activas",
-   "dia": "2026-09-08",
-   "hora": "18:00",
-   "sede": "Teatro Caribe",
-   "ciudad": "Itagüí",
-   "sala": ""
-  },
-  {
-   "titulo": "Preguntas frecuentes",
-   "dia": "2026-09-05",
-   "hora": "17:00",
-   "sede": "La Capilla del Claustro Comfama",
-   "ciudad": "Medellín",
-   "sala": ""
-  },
-  {
-   "titulo": "Preguntas frecuentes",
-   "dia": "2026-09-08",
-   "hora": "18:00",
-   "sede": "Teatro Caribe",
-   "ciudad": "Itagüí",
-   "sala": ""
-  },
-  {
-   "titulo": "Refracción",
-   "dia": "2026-09-05",
-   "hora": "17:00",
-   "sede": "La Capilla del Claustro Comfama",
-   "ciudad": "Medellín",
-   "sala": ""
-  },
-  {
-   "titulo": "Refracción",
-   "dia": "2026-09-08",
-   "hora": "18:00",
-   "sede": "Teatro Caribe",
-   "ciudad": "Itagüí",
-   "sala": ""
-  },
-  {
-   "titulo": "Larama",
    "dia": "2026-09-04",
-   "hora": "19:00",
-   "sede": "Antimateria Libros y Café",
-   "ciudad": "Medellín",
-   "sala": ""
+   "hora": "10:00",
+   "sede": "Centro Colombo Americano Sede centro sala 1 Medellín",
+   "_src": "PDF oficial de programación del festival",
+   "duracion_min": 120,
+   "acceso": "Entrada libre con inscripción previa",
+   "titulo": "Foro de la Crítica Sesión 1 Inscripción previa*",
+   "obras": []
   },
   {
-   "titulo": "Larama",
-   "dia": "2026-09-08",
-   "hora": "15:00",
-   "sede": "La Capilla del Claustro Comfama",
-   "ciudad": "Medellín",
-   "sala": ""
-  },
-  {
-   "titulo": "Lo que los humanos ven como sangre los jaguares ven como chicha",
    "dia": "2026-09-04",
-   "hora": "19:00",
-   "sede": "Antimateria Libros y Café",
-   "ciudad": "Medellín",
-   "sala": ""
+   "hora": "14:30",
+   "sede": "Centro Colombo Americano Sede centro sala 2 Medellín",
+   "_src": "hoja oficial del festival (conversatorios y charlas)",
+   "duracion_min": 60,
+   "acceso": "Entrada libre",
+   "titulo": "Todos los planos del mundo — Debate: ¿Qué cine colombiano queremos?",
+   "obras": [],
+   "_charla": {
+    "descripcion": "A partir de la experiencia al filmar Todos los planos del mundo, se toma como ejemplo para pensar el cine nacional, sus tradiciones y su futuro.",
+    "invitados": "Santiago Flórez, Federico Atehortúa, Tatiana Parra. Modera Pablo Roldán"
+   }
   },
   {
-   "titulo": "Lo que los humanos ven como sangre los jaguares ven como chicha",
-   "dia": "2026-09-08",
-   "hora": "15:00",
-   "sede": "La Capilla del Claustro Comfama",
-   "ciudad": "Medellín",
-   "sala": ""
-  },
-  {
-   "titulo": "Objetos parlantes",
-   "dia": "2026-09-04",
-   "hora": "19:00",
-   "sede": "Antimateria Libros y Café",
-   "ciudad": "Medellín",
-   "sala": ""
-  },
-  {
-   "titulo": "Objetos parlantes",
-   "dia": "2026-09-08",
-   "hora": "15:00",
-   "sede": "La Capilla del Claustro Comfama",
-   "ciudad": "Medellín",
-   "sala": ""
-  },
-  {
-   "titulo": "Puro andar",
-   "dia": "2026-09-04",
-   "hora": "19:00",
-   "sede": "Antimateria Libros y Café",
-   "ciudad": "Medellín",
-   "sala": ""
-  },
-  {
-   "titulo": "Puro andar",
-   "dia": "2026-09-08",
-   "hora": "15:00",
-   "sede": "La Capilla del Claustro Comfama",
-   "ciudad": "Medellín",
-   "sala": ""
-  },
-  {
-   "titulo": "Spoils",
-   "dia": "2026-09-04",
-   "hora": "19:00",
-   "sede": "Antimateria Libros y Café",
-   "ciudad": "Medellín",
-   "sala": ""
-  },
-  {
-   "titulo": "Spoils",
-   "dia": "2026-09-08",
-   "hora": "15:00",
-   "sede": "La Capilla del Claustro Comfama",
-   "ciudad": "Medellín",
-   "sala": ""
-  },
-  {
-   "titulo": "Trizas",
-   "dia": "2026-09-04",
-   "hora": "19:00",
-   "sede": "Antimateria Libros y Café",
-   "ciudad": "Medellín",
-   "sala": ""
-  },
-  {
-   "titulo": "Trizas",
-   "dia": "2026-09-08",
-   "hora": "15:00",
-   "sede": "La Capilla del Claustro Comfama",
-   "ciudad": "Medellín",
-   "sala": ""
-  },
-  {
-   "titulo": "Jakawisa",
-   "dia": "2026-09-09",
-   "hora": "16:00",
-   "sede": "Centro Colombo Americano - Sede centro",
-   "ciudad": "Medellín",
-   "sala": "Sala 2"
-  },
-  {
-   "titulo": "Hiding / Esquivo",
-   "dia": "2026-09-09",
-   "hora": "16:00",
-   "sede": "Centro Colombo Americano - Sede centro",
-   "ciudad": "Medellín",
-   "sala": "Sala 2"
-  },
-  {
-   "titulo": "Derroteros, Derroteros, Derroteros, Derroteros, Derroteros, Derroteros, Derroteros",
-   "dia": "2026-09-09",
-   "hora": "16:00",
-   "sede": "Centro Colombo Americano - Sede centro",
-   "ciudad": "Medellín",
-   "sala": "Sala 2"
-  },
-  {
-   "titulo": "¿Qué historia es ésta y cuál es su final?",
-   "dia": "2026-09-05",
-   "hora": "18:30",
-   "sede": "Casa Municipal de la Cultura",
-   "ciudad": "Caldas",
-   "sala": ""
-  },
-  {
-   "titulo": "¿Qué historia es ésta y cuál es su final?",
-   "dia": "2026-09-06",
-   "hora": "14:00",
-   "sede": "Centro Colombo Americano - Sede centro",
-   "ciudad": "Medellín",
-   "sala": "Sala 1"
-  },
-  {
-   "titulo": "Alicia soñó con un faro",
-   "dia": "2026-09-08",
-   "hora": "16:00",
-   "sede": "Cineprox Las Américas",
-   "ciudad": "Medellín",
-   "sala": ""
-  },
-  {
-   "titulo": "Alicia soñó con un faro",
-   "dia": "2026-09-11",
-   "hora": "16:30",
-   "sede": "Biblioteca Comfama Bello Centro",
-   "ciudad": "Bello",
-   "sala": ""
-  },
-  {
-   "titulo": "Cuando las nubes esconden la sombra",
-   "dia": "2026-09-07",
-   "hora": "18:00",
-   "sede": "Teatro Caribe",
-   "ciudad": "Itagüí",
-   "sala": ""
-  },
-  {
-   "titulo": "El cielo, la tierra y la lluvia",
-   "dia": "2026-09-10",
-   "hora": "18:30",
-   "sede": "Terko",
-   "ciudad": "Copacabana",
-   "sala": ""
-  },
-  {
-   "titulo": "El cielo, la tierra y la lluvia",
-   "dia": "2026-09-11",
-   "hora": "16:00",
-   "sede": "Centro Colombo Americano - Sede centro",
-   "ciudad": "Medellín",
-   "sala": "Sala 1"
-  },
-  {
-   "titulo": "El sueño de Ana",
-   "dia": "2026-09-07",
-   "hora": "18:00",
-   "sede": "Teatro Caribe",
-   "ciudad": "Itagüí",
-   "sala": ""
-  },
-  {
-   "titulo": "El viento sabe que vuelvo a casa",
-   "dia": "2026-09-05",
-   "hora": "16:30",
-   "sede": "Cineprox Las Américas",
-   "ciudad": "Medellín",
-   "sala": ""
-  },
-  {
-   "titulo": "El viento sabe que vuelvo a casa",
-   "dia": "2026-09-09",
-   "hora": "14:00",
-   "sede": "Centro Colombo Americano - Sede centro",
-   "ciudad": "Medellín",
-   "sala": "Sala 1"
-  },
-  {
-   "titulo": "Obreras saliendo de la fábrica",
-   "dia": "2026-09-05",
-   "hora": "18:30",
-   "sede": "Casa Municipal de la Cultura",
-   "ciudad": "Caldas",
-   "sala": ""
-  },
-  {
-   "titulo": "Obreras saliendo de la fábrica",
-   "dia": "2026-09-06",
-   "hora": "14:00",
-   "sede": "Centro Colombo Americano - Sede centro",
-   "ciudad": "Medellín",
-   "sala": "Sala 1"
-  },
-  {
-   "titulo": "Sobre cosas que me han pasado",
-   "dia": "2026-09-06",
-   "hora": "15:00",
-   "sede": "Cine MAMM",
-   "ciudad": "Medellín",
-   "sala": ""
-  },
-  {
-   "titulo": "Sobre cosas que me han pasado",
-   "dia": "2026-09-10",
-   "hora": "17:30",
-   "sede": "Centro Colombo Americano - Sede centro",
-   "ciudad": "Medellín",
-   "sala": "Sala 2"
-  },
-  {
-   "titulo": "Vendrá la muerte y tendrá tus ojos",
-   "dia": "2026-09-08",
-   "hora": "16:30",
-   "sede": "Cineprox Las Américas",
-   "ciudad": "Medellín",
-   "sala": ""
-  },
-  {
-   "titulo": "Vendrá la muerte y tendrá tus ojos",
-   "dia": "2026-09-11",
-   "hora": "16:00",
-   "sede": "Biblioteca Comfama Bello Centro",
-   "ciudad": "Bello",
-   "sala": ""
-  },
-  {
-   "titulo": "Ver y escuchar",
-   "dia": "2026-09-09",
-   "hora": "19:00",
-   "sede": "La Capilla del Claustro Comfama",
-   "ciudad": "Medellín",
-   "sala": ""
-  },
-  {
-   "titulo": "Verano",
-   "dia": "2026-09-06",
-   "hora": "15:00",
-   "sede": "Cine MAMM",
-   "ciudad": "Medellín",
-   "sala": ""
-  },
-  {
-   "titulo": "Verano",
-   "dia": "2026-09-10",
-   "hora": "17:30",
-   "sede": "Centro Colombo Americano - Sede centro",
-   "ciudad": "Medellín",
-   "sala": "Sala 2"
-  },
-  {
-   "titulo": "Cleaning & Cleansing",
-   "dia": "2026-09-07",
-   "hora": "16:30",
-   "sede": "Cineprox Las Américas",
-   "ciudad": "Medellín",
-   "sala": ""
-  },
-  {
-   "titulo": "Cleaning & Cleansing",
-   "dia": "2026-09-11",
-   "hora": "19:00",
-   "sede": "Centro Colombo Americano - Sede centro",
-   "ciudad": "Medellín",
-   "sala": "Sala 2"
-  },
-  {
-   "titulo": "La tercera opción / Die dritte Option / The Third Option",
-   "dia": "2026-09-09",
-   "hora": "17:00",
-   "sede": "La Capilla del Claustro Comfama",
-   "ciudad": "Medellín",
-   "sala": ""
-  },
-  {
-   "titulo": "La tercera opción / Die dritte Option / The Third Option",
-   "dia": "2026-09-10",
-   "hora": "16:30",
-   "sede": "Cineprox Las Américas",
-   "ciudad": "Medellín",
-   "sala": ""
-  },
-  {
-   "titulo": "La tercera opción / Die dritte Option / The Third Option",
-   "dia": "2026-09-11",
-   "hora": "14:00",
-   "sede": "Centro Colombo Americano - Sede centro",
-   "ciudad": "Medellín",
-   "sala": "Sala 1"
-  },
-  {
-   "titulo": "Viviendo juntos / Zusammenleben",
-   "dia": "2026-09-04",
-   "hora": "17:00",
-   "sede": "Centro Colombo Americano - Sede centro",
-   "ciudad": "Medellín",
-   "sala": "Sala 2"
-  },
-  {
-   "titulo": "Viviendo juntos / Zusammenleben",
-   "dia": "2026-09-06",
-   "hora": "18:00",
-   "sede": "Teatro Caribe",
-   "ciudad": "Itagüí",
-   "sala": ""
-  },
-  {
-   "titulo": "Vive L’Amour",
-   "dia": "2026-09-08",
-   "hora": "19:00",
-   "sede": "Centro Colombo Americano - Sede centro",
-   "ciudad": "Medellín",
-   "sala": "Sala 2"
-  },
-  {
-   "titulo": "The Children’s Hour",
-   "dia": "2026-09-07",
-   "hora": "17:30",
-   "sede": "ITM - Facultad de Artes y Humanidades",
-   "ciudad": "Medellín",
-   "sala": ""
-  },
-  {
-   "titulo": "Buddies",
-   "dia": "2026-09-05",
-   "hora": "14:00",
-   "sede": "Centro Colombo Americano - Sede centro",
-   "ciudad": "Medellín",
-   "sala": "Sala 1"
-  },
-  {
-   "titulo": "Caminito al Cielo",
    "dia": "2026-09-04",
    "hora": "16:00",
-   "sede": "Biblioteca Comfama Bello Centro",
-   "ciudad": "Bello",
-   "sala": ""
-  },
-  {
-   "titulo": "Caminito al Cielo",
-   "dia": "2026-09-08",
-   "hora": "20:00",
-   "sede": "Antimateria Libros y Café",
-   "ciudad": "Medellín",
-   "sala": ""
-  },
-  {
+   "sede": "Biblioteca Comfama Bello Centro Bello",
+   "_src": "PDF oficial de programación del festival",
+   "duracion_min": 67,
+   "acceso": "Entrada libre",
    "titulo": "Cuartito rosa",
+   "obras": [
+    {
+     "titulo": "Cuartito rosa",
+     "director": "Sergio Navarro",
+     "pais": "Chile",
+     "anio": 1991,
+     "sinopsis": "Un grupo de adolescentes de una población marginal relata las diferentes aristas del ser mujer y su relación con el embarazo a temprana edad. Esta obra trata de ser un fiel retrato de ser mujer y adolescente en un estrato socioeconómico marginal de nuestro país. El documental está construido, íntegramente, por los relatos de las mujeres que forman el grupo seleccionado, cuyas edades van desde los 15 a 20 años, aproximadamente. Forman parte de un grupo donde se les ayuda a acercarse a las labores que deberán realizar al convertirse en madres, permitiéndoles intercambiar experiencias en torno al proceso previo y posterior al parto.",
+     "synopsis_en": "The reality of pregnant teenagers from popular sectors, the absence of information about how to prevent pregnancy and the lack of knowledge of how their own sexuality works. Their dreams, hopes and the strength they display to assume a radical change for which neither they nor their environment are prepared.",
+     "title_en": "Cuartito Rosa",
+     "poster": "https://image.tmdb.org/t/p/w500/nyY00FzUlUdP5PzRyBIdOUeA7Ht.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 873367,
+     "lbSlug": "cuartito-rosa",
+     "duracion_min": 30
+    }
+   ],
+   "seccion": "La sutil materia. Sergio Navarro"
+  },
+  {
    "dia": "2026-09-04",
-   "hora": "16:00",
-   "sede": "Biblioteca Comfama Bello Centro",
-   "ciudad": "Bello",
-   "sala": ""
+   "hora": "16:30",
+   "sede": "Centro Colombo Americano Sede centro sala 1 Medellín",
+   "_src": "PDF oficial de programación del festival",
+   "duracion_min": 102,
+   "acceso": "Entrada libre",
+   "titulo": "Oublie pas le gruau",
+   "obras": [
+    {
+     "titulo": "Oublie pas le gruau",
+     "director": "Olivier Godin",
+     "anio": 2026,
+     "synopsis_en": "The Barbarian believes he has only a few erections left before death. Cursed to a life in a thrift shop and haunted by family tragedy, he sets his sights on Marie, an alcoholic special-ed teacher. If he must go, he figures, he might as well go out in good company.",
+     "title_en": "Don't Forget the Oatmeal",
+     "poster": "https://image.tmdb.org/t/p/w500/ycGFcrpmiCXtidvyom94aDyMqB1.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1596917,
+     "lbSlug": "dont-forget-the-oatmeal",
+     "duracion_min": 75
+    }
+   ],
+   "seccion": "Competencia central"
   },
   {
-   "titulo": "Cuartito rosa",
-   "dia": "2026-09-08",
-   "hora": "20:00",
-   "sede": "Antimateria Libros y Café",
-   "ciudad": "Medellín",
-   "sala": ""
+   "dia": "2026-09-04",
+   "hora": "16:30",
+   "sede": "Cineprox Las Américas Medellín",
+   "_src": "PDF oficial de programación del festival",
+   "duracion_min": 122,
+   "_hora_inferida": true,
+   "acceso": "Boleta en taquilla — sillas numeradas",
+   "titulo": "Así llegó la noche",
+   "obras": [
+    {
+     "titulo": "Así llegó la noche",
+     "director": "Ángel Santos",
+     "anio": 2025,
+     "sinopsis": "Un escultor establece su taller en una apartada zona rural de la costa gallega. Poco a poco irá aislándose de su entorno, cortando todo contacto con amigos y familiares. Cuando una antigua amante acuda a su encuentro provocará la reflexión del escultor sobre su deseo de aislamiento y la necesidad de una nueva huida.",
+     "synopsis_en": "A sculptor sets up his studio in a remote rural area on the Galician coast. He gradually isolates himself, cutting contact with friends and family. A former lover's visit prompts him to reflect on his isolation and need to flee again.",
+     "title_en": "And So the Night Fell",
+     "poster": "https://image.tmdb.org/t/p/w500/9899dxEkeprkzCl460ehg7h3cII.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1574164,
+     "lbSlug": "and-so-the-night-fell",
+     "duracion_min": 122
+    }
+   ],
+   "seccion": "Competencia central"
   },
   {
-   "titulo": "El santo y el milagro",
-   "dia": "2026-09-05",
+   "dia": "2026-09-04",
+   "hora": "17:00",
+   "sede": "Centro Colombo Americano Sede centro sala 2 Medellín",
+   "_src": "hoja oficial del festival (conversatorios y charlas)",
+   "duracion_min": 90,
+   "acceso": "Entrada libre",
+   "titulo": "Thomas Fülhapter: Febril incisión",
+   "obras": [
+    {
+     "titulo": "Viviendo juntos / Zusammenleben",
+     "director": "Thomas Fürhapter",
+     "pais": "Austria",
+     "anio": 2022,
+     "sinopsis": "Hubo un tiempo en el que existía un lugar en Viena donde la gente podía estudiar y aprender a convivir. Bajo los auspicios del gobierno de Viena, se desarrollaron una serie de procesos en el marco de un proyecto conjunto financiado por la UE con el fin de facilitar a los refugiados —pero también a los recién llegados en general— la orientación en la ciudad. La financiación de la UE se ha agotado. Lo que queda es un documental de Thomas Fürhapter, que recorre el variado programa de cursos y procesos, escucha a las personas que buscan posibles soluciones y, sobre todo, observa los rostros con auténtica devoción.",
+     "synopsis_en": "A documentary following immigrants attending voluntary integration courses in Vienna.",
+     "title_en": "Zusammenleben",
+     "poster": "https://image.tmdb.org/t/p/w500/cWzTw5fHetqFEqh8qLkpTQKQV5H.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1041158,
+     "lbSlug": "zusammenleben",
+     "duracion_min": 90
+    }
+   ],
+   "_charla": {
+    "descripcion": "Proyección del largometraje Viviendo juntos y charla posterior con el director Thomas Fülhapter.",
+    "invitados": "Thomas Fülhapter, Juan Pablo Franky"
+   },
+   "seccion": "Febril incisión. El cine de Thomas Fürhapter"
+  },
+  {
+   "dia": "2026-09-04",
    "hora": "18:00",
-   "sede": "Biblioteca Comfama Bello Centro",
-   "ciudad": "Bello",
-   "sala": ""
+   "sede": "Teatro Caribe Itagüí",
+   "_src": "PDF oficial de programación del festival",
+   "duracion_min": 97,
+   "acceso": "Entrada libre",
+   "titulo": "Cairo Streets / Las calles de El Cairo",
+   "obras": [
+    {
+     "titulo": "Cairo Streets / Las calles de El Cairo",
+     "director": "Abdellah Taïa",
+     "anio": 2025,
+     "synopsis_en": "January, 2007: I am back in Cairo. For work. You have changed your phone number, Omar. I must find you... I love you. Abdellah.",
+     "title_en": "Cairo Streets",
+     "poster": "https://image.tmdb.org/t/p/w500/4QXDMHcpG3rKvJ7sLP1Fac4lmfn.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1506824,
+     "lbSlug": "cairo-streets",
+     "duracion_min": 19
+    }
+   ],
+   "seccion": "Competencia central"
   },
   {
-   "titulo": "El santo y el milagro",
-   "dia": "2026-09-10",
-   "hora": "16:00",
-   "sede": "Casa Museo Otraparte",
-   "ciudad": "Envigado",
-   "sala": ""
+   "dia": "2026-09-04",
+   "hora": "18:30",
+   "sede": "Casa Municipal de la Cultura de Caldas Caldas",
+   "_src": "PDF oficial de programación del festival",
+   "duracion_min": 99,
+   "acceso": "Entrada libre",
+   "titulo": "No contéis con los dedos",
+   "obras": [
+    {
+     "titulo": "No contéis con los dedos",
+     "director": "Pere Portabella",
+     "anio": 1967,
+     "synopsis_en": "Pere Portabella’s first work as a director starts with the following phrase: “defeated…but not conquered”. This may or should be taken as an allusion to the technical K.O. taken by Portabella from Franco’s regime during the sixties as regards his work as a producer. Through the extremely raging playthings of the words of Catalan poet Joan Brossa, Portabella attempts to dismantle the forms of advertising discourse of that time.",
+     "title_en": "Don't Count On Your Fingers",
+     "poster": "https://image.tmdb.org/t/p/w500/p4nrdnrNxbgDxiQokBpFMdmlbSH.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 137631,
+     "lbSlug": "dont-count-on-your-fingers",
+     "duracion_min": 26
+    }
+   ],
+   "seccion": "Iluminaciones"
   },
   {
-   "titulo": "La libertad remonta el estadio",
-   "dia": "2026-09-05",
-   "hora": "18:00",
-   "sede": "Centro Colombo Americano - Sede centro",
-   "ciudad": "Medellín",
-   "sala": "Sala 2"
-  },
-  {
-   "titulo": "La libertad remonta el estadio",
-   "dia": "2026-09-10",
-   "hora": "16:00",
-   "sede": "Casa Museo Otraparte",
-   "ciudad": "Envigado",
-   "sala": ""
-  },
-  {
-   "titulo": "Valparaíso eterno",
-   "dia": "2026-09-05",
-   "hora": "18:00",
-   "sede": "Centro Colombo Americano - Sede centro",
-   "ciudad": "Medellín",
-   "sala": "Sala 2"
-  },
-  {
-   "titulo": "Valparaíso eterno",
-   "dia": "2026-09-10",
-   "hora": "16:00",
-   "sede": "Casa Museo Otraparte",
-   "ciudad": "Envigado",
-   "sala": ""
-  },
-  {
-   "titulo": "Chico eléctrico",
-   "dia": "2026-09-06",
+   "dia": "2026-09-04",
    "hora": "19:00",
-   "sede": "Centro Colombo Americano - Sede centro",
-   "ciudad": "Medellín",
-   "sala": "Sala 2"
+   "sede": "Antimateria Libros y Café Medellín",
+   "_src": "PDF oficial de programación del festival",
+   "duracion_min": 82,
+   "acceso": "Entrada libre",
+   "titulo": "Foco Alquimia de la luz: Luciana Decker",
+   "obras": []
   },
   {
+   "dia": "2026-09-04",
+   "hora": "19:00",
+   "sede": "Casa Museo Otraparte Envigado",
+   "_src": "PDF oficial de programación del festival",
+   "duracion_min": 84,
+   "acceso": "Entrada libre",
    "titulo": "Dice que…",
+   "obras": [
+    {
+     "titulo": "Dice que…",
+     "director": "Alejandro Fernández Mouján",
+     "pais": "Argentina",
+     "anio": 2025,
+     "sinopsis": "Esta es la historia de una muerte, la de José Luis Alvarenga. Según la sección policiales de un diario provincial fue informada como producto de un “singular duelo criollo”. En vísperas de una navidad. Un pueblo rural del interior chaqueño, una provocación, la reacción, un desigual enfrentamiento que termina con José Luis muerto. Varios vecinos son testigos del hecho, uno de ellos dice que: “mataron a Lorenzo Lamas”. Así comienza esta historia, simple, desconocida, a la que busca dar vida esta película.",
+     "synopsis_en": "This is the story of a death, that of José Luis Alvarenga. According to the police section of a provincial newspaper, it was reported as the result of a \"unique Creole duel.\" On Christmas Eve. A rural town in the interior of Chaco, a provocation, a reaction, an unequal confrontation that ends with José Luis dead. Several neighbors witness the incident, one of whom says, \"They killed Lorenzo Lamas.\" Thus begins this simple, unknown story, which this film seeks to bring to life.",
+     "title_en": "Dice que…",
+     "poster": "https://image.tmdb.org/t/p/w500/2org5wSI7ke454OGGQHW33kAidz.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1564971,
+     "lbSlug": "dice-que",
+     "duracion_min": 68
+    }
+   ],
+   "seccion": "Historia(s) del cine: Argentina. Curaduría de José Miccio"
+  },
+  {
    "dia": "2026-09-04",
    "hora": "19:00",
-   "sede": "Casa Museo Otraparte",
-   "ciudad": "Envigado",
-   "sala": ""
+   "sede": "Centro Colombo Americano Sede centro sala 1 Medellín",
+   "_src": "PDF oficial de programación del festival",
+   "duracion_min": 136,
+   "acceso": "Entrada libre",
+   "titulo": "Macho Dancer",
+   "obras": [
+    {
+     "titulo": "Macho Dancer",
+     "director": "Lino Brocka",
+     "anio": 1988,
+     "synopsis_en": "Pol moves to Manila for better opportunities after his American lover leaves. However, he gets drawn into the gritty world of gay prostitution and sexual slavery.",
+     "title_en": "Macho Dancer",
+     "poster": "https://image.tmdb.org/t/p/w500/oDKyJP9gxYPUximMLN4VP59tZ4p.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 170924,
+     "lbSlug": "macho-dancer",
+     "duracion_min": 136
+    }
+   ],
+   "seccion": "Iluminaciones"
   },
   {
-   "titulo": "Homenaje a la obra de Philip Henry Gosse",
-   "dia": "2026-09-10",
-   "hora": "17:30",
-   "sede": "ITM - Facultad de Artes y Humanidades",
-   "ciudad": "Medellín",
-   "sala": ""
-  },
-  {
-   "titulo": "Las picapedreras",
    "dia": "2026-09-04",
-   "hora": "19:00",
-   "sede": "Casa Museo Otraparte",
-   "ciudad": "Envigado",
-   "sala": ""
+   "hora": "19:30",
+   "sede": "Centro Colombo Americano Sede centro sala 2 Medellín",
+   "_src": "hoja oficial del festival (orden de programas)",
+   "duracion_min": 71,
+   "acceso": "Entrada libre",
+   "titulo": "Competencia de cortometrajes Programa 1",
+   "obras": [
+    {
+     "titulo": "Only Making Out",
+     "director": "Marlon Weber",
+     "pais": "Alemania",
+     "anio": 2025,
+     "synopsis_en": "Two figures at sunset. The next day they meet a third.",
+     "title_en": "Only Making Out",
+     "poster": "https://image.tmdb.org/t/p/w500/rx4q8WfoW1w80K8QYB9heQsBaK9.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1537273,
+     "lbSlug": "only-making-out",
+     "duracion_min": 15
+    },
+    {
+     "titulo": "El oído absoluto",
+     "director": "Rafael Federman",
+     "pais": "Argentina",
+     "anio": 2026,
+     "synopsis_en": "After an accident, Lorenzo begins to hear a persistent ringing that profoundly alters his relationship with the world.",
+     "title_en": "The Inner Ear",
+     "poster": "https://image.tmdb.org/t/p/w500/vhfvAky2EGTa9rmyQJ7yICWncFq.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1722127,
+     "lbSlug": "the-inner-ear",
+     "duracion_min": 18
+    },
+    {
+     "titulo": "loose sleep",
+     "director": "Rodrigo Soares Teixeira",
+     "pais": "Portugal",
+     "anio": 2026,
+     "synopsis_en": "Sometimes, the hardest step in a day is the first one. In Sono Solto, our hero fights a battle against himself: is it worth it to leave the confort of the duvet and live life outside? By means of a fragmentary narrative, built on dreams and association, this short film follows the protagonist's speculation on activity and passivity, the passage of time and the (dis)advantages of being awake.",
+     "title_en": "Sono Solto",
+     "poster": "https://image.tmdb.org/t/p/w500/noJJeBURcdtVMGOhsluPPIiHNDN.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1655940,
+     "lbSlug": "sono-solto",
+     "duracion_min": 8
+    },
+    {
+     "titulo": "Henry Is a Girl Who Likes to Sleep",
+     "director": "Marthe Peters",
+     "pais": "Bélgica",
+     "anio": 2026,
+     "synopsis_en": "The filmmaker writes a letter to her cat, Henry. She is looking for a soft and tender place to inhabit – a quiet refuge of warmth to retreat into when the world becomes too loud. An ode to our captive pets and the intimate worlds we build together.",
+     "title_en": "Henry Is a Girl Who Likes to Sleep",
+     "poster": "https://image.tmdb.org/t/p/w500/hLX85aV7xgT7AfkyLTnTgxKEnDl.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1614674,
+     "lbSlug": "henry-is-a-girl-who-likes-to-sleep",
+     "duracion_min": 14
+    },
+    {
+     "titulo": "Mi amigo, el arquitecto",
+     "director": "Óscar Garzón",
+     "pais": "Colombia",
+     "anio": 2026,
+     "synopsis_en": "A woman invents a story to evoke a lost friendship. Along with her friends, they imagine a fable: the story of two birds that one day became human — an Ornithologist and his friend, The Architect.",
+     "title_en": "My Friend, The Architect",
+     "poster": "https://image.tmdb.org/t/p/w500/sMB00Njgb5QlOHPoD16Am79twm5.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1655621,
+     "lbSlug": "my-friend-the-architect",
+     "duracion_min": 16
+    }
+   ],
+   "seccion": "Competencia de cortometrajes"
   },
   {
-   "titulo": "Rancho",
-   "dia": "2026-09-10",
-   "hora": "17:30",
-   "sede": "ITM - Facultad de Artes y Humanidades",
-   "ciudad": "Medellín",
-   "sala": ""
+   "dia": "2026-09-05",
+   "hora": "10:00",
+   "sede": "Centro Colombo Americano Sede centro sala 1 Medellín",
+   "_src": "PDF oficial de programación del festival",
+   "duracion_min": 120,
+   "acceso": "Entrada libre con inscripción previa",
+   "titulo": "Foro de la Crítica Sesión 2 Inscripción previa*",
+   "obras": []
   },
   {
-   "titulo": "Solo qu3r3mos un poco de amor",
+   "dia": "2026-09-05",
+   "hora": "14:00",
+   "sede": "Centro Colombo Americano Sede centro sala 1 Medellín",
+   "_src": "PDF oficial de programación del festival",
+   "duracion_min": 81,
+   "acceso": "Entrada libre",
+   "titulo": "Buddies",
+   "obras": [
+    {
+     "titulo": "Buddies",
+     "director": "Arthur J. Bressan",
+     "pais": "Estados Unidos",
+     "anio": 1985,
+     "sinopsis": "David, un ingenuo estudiante de posgrado, se ha ofrecido como voluntario para trabajar como “acompañante” de personas que están muriendo de SIDA. Le asignan a Robert, un activista con fuertes convicciones políticas cuyos amigos y familiares lo han abandonado tras su diagnóstico; los dos hombres, cada uno con visiones del mundo notablemente diferentes, pronto descubren vínculos en común.",
+     "synopsis_en": "David, a naive graduate student, has volunteered to work as a 'buddy' for people dying of AIDS. Assigned to the intensely political Robert, a lifelong activist whose friends and family have abandoned him following his diagnosis, the two men, each with notably different world views, soon discover common bonds, as David's inner activist awakens and Robert's need for emotional release is fulfilled.",
+     "title_en": "Buddies",
+     "poster": "https://image.tmdb.org/t/p/w500/xk0bhsQumoeCfsFK08pufMYkIKP.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 259433,
+     "lbSlug": "buddies-1985",
+     "duracion_min": 81
+    }
+   ],
+   "seccion": "Sick and Dirty. Curaduría de Michael Koresky"
+  },
+  {
+   "dia": "2026-09-05",
+   "hora": "15:00",
+   "sede": "La Capilla del Claustro Comfama Medellín",
+   "_src": "PDF oficial de programación del festival",
+   "duracion_min": 90,
+   "acceso": "Entrada libre",
+   "titulo": "Un techo sin cielo",
+   "obras": [
+    {
+     "titulo": "Un techo sin cielo",
+     "director": "Diego Hernández",
+     "anio": 2025,
+     "sinopsis": "Después de abrir una caja de zapatos, Diego comienza a sentir un severo cansancio que le impide realizar actividades cotidianas y lo deja en cama. Al mismo tiempo, su amiga Liz padece de un insomnio misterioso mientras desarrolla una puesta en escena.",
+     "synopsis_en": "After opening a shoebox, Diego begins to feel severe fatigue that prevents him from performing everyday activities and leaves him bedridden. At the same time, his friend Liz suffers from a mysterious insomnia while working on a stage production.",
+     "title_en": "A Skyless Roof",
+     "poster": "https://image.tmdb.org/t/p/w500/4YeCy0Bus5bxqV12CKDaXI51caj.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1373119,
+     "lbSlug": "a-skyless-roof",
+     "duracion_min": 90
+    }
+   ],
+   "seccion": "Competencia central"
+  },
+  {
+   "dia": "2026-09-05",
+   "hora": "16:00",
+   "sede": "Centro Colombo Americano Sede centro sala 2 Medellín",
+   "_src": "hoja oficial del festival (orden de programas)",
+   "duracion_min": 86,
+   "acceso": "Entrada libre",
+   "titulo": "Competencia de cortometrajes Programa 2",
+   "obras": [
+    {
+     "titulo": "Our Homes Do Not Exist",
+     "director": "Anna Lamour",
+     "pais": "Grecia",
+     "anio": 2025,
+     "title_en": "Nos maisons n'existent pas",
+     "poster": "https://image.tmdb.org/t/p/w500/A6X3xnhhq4RuCb2Fsg45AnnWpdP.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1645704,
+     "lbSlug": "nos-maisons-nexistent-pas",
+     "duracion_min": 15
+    },
+    {
+     "titulo": "Koki, Ciao",
+     "director": "Quenton Miller",
+     "pais": "Países bajos",
+     "anio": 2025,
+     "sinopsis": "La autobiografía de Koki, un loro inmortal, que retrata la vida de este animal único, fiel compañero del mariscal Tito, líder de Yugoslavia durante 35 años. Un rico archivo fotográfico revive los recuerdos enjaulados de esta cacatúa, que tuvo el honor de conocer a estrellas de Hollywood y a dictadores sedientos de sangre. (GIFF)",
+     "synopsis_en": "The autobiography of Koki, an immortal parrot. Artist Quenton Miller portrays the life of this unique animal, a loyal comrade of Marshal Tito, leader of Yugoslavia for 35 years. A rich photographic archive relives the caged memories of this cockatoo, who had the honour of meeting Hollywood stars, and bloodthirsty dictators. A funny portrait, non-aligned with the documentary orthodoxy, that deals with the false constructions of history.",
+     "title_en": "Koki, Ciao",
+     "poster": "https://image.tmdb.org/t/p/w500/7ab2HCntF491JzIX6EcNASORKb.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1416378,
+     "lbSlug": "koki-ciao",
+     "duracion_min": 12
+    },
+    {
+     "titulo": "Mirando al sur",
+     "director": "Felipe López Gómez",
+     "pais": "Colombia",
+     "anio": 2026,
+     "synopsis_en": "The voice we hear comes from far off-screen, thousands of kilometres away from the vistas of Toronto unfolding before us. These are countless voicemails from Colombia left by the director’s loving grandmother.",
+     "title_en": "Facing South",
+     "poster": "https://image.tmdb.org/t/p/w500/iVHZ1lC2Ste5289HAOkk5ft6c6e.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1657831,
+     "lbSlug": "facing-south",
+     "duracion_min": 34
+    },
+    {
+     "titulo": "Bright Summer Days",
+     "director": "Nevena Desivojevic",
+     "pais": "Serbia",
+     "anio": 2025,
+     "synopsis_en": "Two sisters meet after a few years of being apart. The past becomes the only thing that binds them now.",
+     "title_en": "Bright Summer Days",
+     "poster": "https://image.tmdb.org/t/p/w500/aTwLabtZ5BU2DpqvlSVEOu2tTqe.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1485440,
+     "lbSlug": "bright-summer-days",
+     "duracion_min": 15
+    },
+    {
+     "titulo": "Prueba de cámara",
+     "director": "David Correa",
+     "pais": "Colombia",
+     "anio": 2026,
+     "sinopsis": "Toda carta es un recuerdo, dedicado a películas en donde el archivo familiar aparece como una forma de correspondencia íntima: cartas a hijos, a padres, a abuelos, a quienes estuvieron y también a quienes fuimos. Entre fotografías, archivos domésticos, voces, objetos y gestos heredados, este programa reúne formas de mirar hacia atrás para decir algo en el presente: reconstruir un vínculo, nombrar una ausencia, acompañar una pérdida o afirmar una identidad.",
+     "title_en": "Prueba de cámara",
+     "poster": "https://image.tmdb.org/t/p/w500/iYSrgk7v0pSWbAA4YFF5CP8mi0j.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1743099,
+     "lbSlug": "prueba-de-camara",
+     "duracion_min": 10
+    }
+   ],
+   "seccion": "Competencia de cortometrajes"
+  },
+  {
+   "dia": "2026-09-05",
+   "hora": "16:30",
+   "sede": "Cineprox Las Américas Medellín",
+   "_src": "PDF oficial de programación del festival",
+   "duracion_min": 102,
+   "acceso": "Boleta en taquilla — sillas numeradas",
+   "titulo": "El viento sabe que vuelvo a casa",
+   "obras": [
+    {
+     "titulo": "El viento sabe que vuelvo a casa",
+     "director": "José Luis Torres Leiva",
+     "pais": "Chile",
+     "anio": 2016,
+     "sinopsis": "A principios de la década de 1980, una pareja desapareció sin dejar rastro en los bosques de la isla de Meulín. El director Ignacio Agüero tenía la intención de rodar un documental sobre este extraño suceso, pero finalmente abandonó el proyecto. Ahora, viaja a la zona para rodar su primera película de ficción basada en los hechos y José Luis Torre Leiva, entre la búsqueda de locaciones y las audiciones de actores no profesionales, acompaña a Agüero mientras él habla con los lugareños sobre las leyendas que han surgido en torno a este misterioso suceso, quienes a menudo aportan un toque de tierno humor. La película es también una reflexión sobre el aislamiento de quienes viven en el archipiélago de Chiloé, en Chile, y una captura sus paisajes únicos y solitarios.",
+     "synopsis_en": "Looking for extras and locations, a filmmaker settles on Chiloé, the second largest island off the coast of Chile. He does auditions, but mainly listens patiently to the stories of young and old people. As an outsider, he cautiously searches for the soul of the community and its underlying tensions.",
+     "title_en": "The Winds Know That I'm Coming Back Home",
+     "poster": "https://image.tmdb.org/t/p/w500/rWHuSbXAJQl6fItQZAfuOp6ujbN.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 381639,
+     "lbSlug": "the-winds-know-that-im-coming-back-home",
+     "duracion_min": 102
+    }
+   ],
+   "seccion": "La primavera llega para los que esperan. El cine de José Luis Torres Leiva"
+  },
+  {
+   "dia": "2026-09-05",
+   "hora": "17:00",
+   "sede": "La Capilla del Claustro Comfama Medellín",
+   "_src": "hoja oficial del festival (orden de programas)",
+   "duracion_min": 59,
+   "acceso": "Entrada libre",
+   "titulo": "Competencia Nuevas Voces Programa 1",
+   "obras": [
+    {
+     "titulo": "Preguntas Frecuentes",
+     "director": "Sofía Salinas",
+     "pais": "Colombia",
+     "anio": 2025,
+     "sinopsis": "S. escribe a Juan, que está profundamente dormido. S. reflexiona sobre imágenes y cine, y un consejo de un director que admira la desafía a ella y a todo su trabajo anterior. Decidida a encontrar una idea detrás de las imágenes que ha grabado hasta ahora, S. deambula entre los materiales, su propio archivo de imágenes y sonidos, pestañas de navegador de Internet, películas occidentales y cuentos japoneses. S. recopila todos estos pensamientos y hallazgos en una carta, con la esperanza de entregárselo a Juan cuando se despierte.",
+     "synopsis_en": "S. writes to Juan, who is deeply asleep. She reflects on images and cinema, and a piece of advice from a director she admires challenges her and all her previous work. Determined to find an idea behind the images she has recorded so far, S. wanders among materials, her own archive of images and sounds, internet browser tabs, western films and Japanese short stories. S. compiles all these thoughts and findings into a letter, hoping to deliver it to Juan when he wakes up.",
+     "title_en": "Frequently asked questions",
+     "poster": "https://image.tmdb.org/t/p/w500/gY6k1B2FGXBsMvTDr7ltZRSe7OF.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1592609,
+     "lbSlug": "frequently-asked-questions",
+     "duracion_min": 16
+    },
+    {
+     "titulo": "Medellín, yo te saludo",
+     "director": "Lucas Muñoz",
+     "pais": "Colombia",
+     "anio": 2026,
+     "sinopsis": "A través del montaje con archivos historicos de prensa y reportaje - Yo te saludo Medellín - propone un encuentro entre imágenes que nunca compartieron un mismo tiempo ni un mismo territorio. En ese diálogo, la película revela ecos inesperados entre guerras, rostros y ruinas, mientras pone en tensión nuevas formas de mirar el pasado, explora cómo el cine y la fotografía pueden interrogar la memoria, preguntándose si la violencia realmente cambia de forma o si son las imágenes las que, una y otra vez, vuelven a encontrarse a través del tiempo.",
+     "title_en": "Medellín, yo te saludo",
+     "poster": "https://image.tmdb.org/t/p/w500/8uFN3cAwlxc5DhLlgXsFtxaBYiT.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1740554,
+     "lbSlug": "medellin-yo-te-saludo",
+     "duracion_min": 3
+    },
+    {
+     "titulo": "Liminal",
+     "director": "Gabriela Castelblanco",
+     "pais": "Colombia",
+     "anio": 2026,
+     "sinopsis": "¿Qué permanece en un lugar cuando nos vamos? En una travesía por diversos espacios liminales, entendidos como lugares de tránsito, ambigüedad y espera silenciosa, se explora la relación de los seres humanos con los lugares que han habitado y habitan, así como las sensaciones, los recuerdos y las emociones que estos espacios despiertan en los distintos momentos de sus vidas.",
+     "title_en": "Liminal",
+     "poster": "https://image.tmdb.org/t/p/w500/hV8eL8v9isrSLOXoxtAdH8N9t0P.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1743116,
+     "lbSlug": "liminal-6",
+     "duracion_min": 16
+    },
+    {
+     "titulo": "Pausas activas",
+     "director": "Juan Pablo Castro",
+     "pais": "Colombia",
+     "anio": 2026,
+     "sinopsis": "Una reunión laboral regular se convierte en una discusión sobre los deberes y derechos de los trabajadores.",
+     "title_en": "Pausas activas",
+     "poster": "https://image.tmdb.org/t/p/w500/kIQJPs5yxOYrkz9A19yxgR5BFBz.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1743120,
+     "lbSlug": "pausas-activas",
+     "duracion_min": 12
+    },
+    {
+     "titulo": "Refracción",
+     "director": "Isabella Palacio",
+     "pais": "Colombia",
+     "anio": 2025,
+     "sinopsis": "Eloísa, una chica de 20 años, está en dos relaciones al mismo tiempo. Una noche, después de haber estado con ambas chicas, se siente agobiada por estar en esa situación de engaño y en medio de su confusión sale a recorrer las calles de Medellín en bicicleta, donde se dará cuenta de que no quiere reconocerse pero deberá encontrarse consigo misma.",
+     "synopsis_en": "Eloísa, a 20-year-old girl, is in two relationships at the same time. One night, after having been with both girls, she feels overwhelmed by living in this situation of deceit, and in the middle of her confusion she goes out to ride her bike through the streets of Medellín, where she will realize that she does not want to acknowledge who she is — but will ultimately have to come face-to-face with herself.",
+     "title_en": "Refracción",
+     "poster": "https://image.tmdb.org/t/p/w500/bzKNobO0N8Oqj6YU6eA2R28UgPI.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1584776,
+     "lbSlug": "refraccion",
+     "duracion_min": 11
+    }
+   ],
+   "seccion": "Competencia Nuevas voces"
+  },
+  {
+   "dia": "2026-09-05",
+   "hora": "18:00",
+   "sede": "Centro Colombo Americano Sede centro sala 2 Medellín",
+   "_src": "hoja oficial del festival (conversatorios y charlas)",
+   "duracion_min": 87,
+   "acceso": "Entrada libre",
+   "titulo": "Pere Portabella: legado inmarcesible",
+   "obras": [],
+   "_charla": {
+    "descripcion": "Proyección de L*a tempestá*, No contéis con los dedos y Vampir Cuadecuc y diálogo posterior.",
+    "invitados": "Julio Lamaña, Juan Pablo Franky"
+   }
+  },
+  {
+   "dia": "2026-09-05",
+   "hora": "18:00",
+   "sede": "Teatro Caribe Itagüí",
+   "_src": "hoja oficial del festival (conversatorios y charlas)",
+   "duracion_min": 80,
+   "acceso": "Entrada libre",
+   "titulo": "Pere Portabella: legado inmarcesible",
+   "obras": [
+    {
+     "titulo": "No contéis con los dedos",
+     "director": "Pere Portabella",
+     "anio": 1967,
+     "synopsis_en": "Pere Portabella’s first work as a director starts with the following phrase: “defeated…but not conquered”. This may or should be taken as an allusion to the technical K.O. taken by Portabella from Franco’s regime during the sixties as regards his work as a producer. Through the extremely raging playthings of the words of Catalan poet Joan Brossa, Portabella attempts to dismantle the forms of advertising discourse of that time.",
+     "title_en": "Don't Count On Your Fingers",
+     "poster": "https://image.tmdb.org/t/p/w500/p4nrdnrNxbgDxiQokBpFMdmlbSH.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 137631,
+     "lbSlug": "dont-count-on-your-fingers",
+     "duracion_min": 26
+    }
+   ],
+   "_charla": {
+    "descripcion": "Proyección de L*a tempestá*, No contéis con los dedos y Vampir Cuadecuc y diálogo posterior.",
+    "invitados": "Julio Lamaña, Juan Pablo Franky"
+   },
+   "seccion": "Iluminaciones"
+  },
+  {
+   "dia": "2026-09-05",
+   "hora": "18:30",
+   "sede": "Casa Municipal de la Cultura de Caldas Caldas",
+   "_src": "PDF oficial de programación del festival",
+   "duracion_min": 74,
+   "acceso": "Entrada libre",
+   "titulo": "¿Qué historia es ésta y cuál es su final?",
+   "obras": [
+    {
+     "titulo": "¿Qué historia es ésta y cuál es su final?",
+     "director": "José Luis Torres Leiva",
+     "pais": "Chile",
+     "anio": 2013,
+     "sinopsis": "Un álbum de fotografías, además de atesorar una historia personal, esconde una serie de contextos que le permite a la memoria evocar con aún más desahogo e intimidad. Ignacio Agüero comparte su colección familiar junto a la montajista de sus últimos trabajos, Sophie França. A partir de recuerdos domésticos, el cineasta reconstruye las obras más importantes de su carrera y sus motivaciones “Un documental es la lectura de un espacio central”.",
+     "synopsis_en": "A prominent Chilean documentary director shares his family album with the film editor of his late works. A review of one hundred photographs and a quiet conversation will rise to memories of the films of one of the most personal filmmakers.",
+     "title_en": "What Is This Story and How Does It End?",
+     "poster": "https://image.tmdb.org/t/p/w500/3vBg5czvNlm7h01Gra86Zmq16tT.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 512555,
+     "lbSlug": "what-is-this-story-and-how-does-it-end",
+     "duracion_min": 53
+    }
+   ],
+   "seccion": "La primavera llega para los que esperan. El cine de José Luis Torres Leiva"
+  },
+  {
+   "dia": "2026-09-05",
+   "hora": "19:30",
+   "sede": "Centro Colombo Americano Sede centro sala 1 Medellín",
+   "_src": "PDF oficial de programación del festival",
+   "duracion_min": 101,
+   "acceso": "Entrada libre",
+   "titulo": "El hogar fue sepultado en esa tierra que nunca pudimos encontrar",
+   "obras": [
+    {
+     "titulo": "El hogar fue sepultado en esa tierra que nunca pudimos encontrar",
+     "director": "Deimer Quintero Vertel",
+     "anio": 2026,
+     "sinopsis": "“Esos diablos me quitaron todo, esos diablos me quitaron todo, esos diablos me quitaron todo”: este mantra de despojo se transfigura cada tanto en la familia, como una sentencia. Ellos anhelan reencontrarse con sus seres queridos desaparecidos, jugar de nuevo entre plataneras y seres fantásticos y… la casa… la casa quiere volver a ser hogar. Entre filmaciones caseras, archivos colectivos, imágenes familiares y una presencia espectral y mística, esta película habita los sueños y las pesadillas creadas por las huellas de la desaparición de lo amado. El ruido de las balas parece haber cesado; ahora la guerra parece distante, pero a su paso dejó un profundo dolor y la promesa de volver. Los amigos, la familia, el hogar y el territorio vuelven, invocados por este relato coral. El pasado es un fantasma y este filme especula sobre un paraíso y un infierno que ya no se pueden tocar, con la ilusión de habitar este nuevo lugar para conjurar en él un abrazo.",
+     "title_en": "Our Home Was Buried in a Land We Could Never Find",
+     "poster": "https://image.tmdb.org/t/p/w500/sek5YZDIguocEvkRAaCcPb5wKW2.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1663181,
+     "lbSlug": "our-home-was-buried-in-a-land-we-could-never",
+     "duracion_min": 92
+    }
+   ],
+   "seccion": "Proyecciones especiales"
+  },
+  {
+   "dia": "2026-09-06",
+   "hora": "14:00",
+   "sede": "Centro Colombo Americano Sede centro sala 1 Medellín",
+   "_src": "hoja oficial del festival (conversatorios y charlas)",
+   "duracion_min": 74,
+   "acceso": "Entrada libre",
+   "titulo": "José Luis Torres Leiva: la primavera llega para los que esperan",
+   "obras": [
+    {
+     "titulo": "¿Qué historia es ésta y cuál es su final?",
+     "director": "José Luis Torres Leiva",
+     "pais": "Chile",
+     "anio": 2013,
+     "sinopsis": "Un álbum de fotografías, además de atesorar una historia personal, esconde una serie de contextos que le permite a la memoria evocar con aún más desahogo e intimidad. Ignacio Agüero comparte su colección familiar junto a la montajista de sus últimos trabajos, Sophie França. A partir de recuerdos domésticos, el cineasta reconstruye las obras más importantes de su carrera y sus motivaciones “Un documental es la lectura de un espacio central”.",
+     "synopsis_en": "A prominent Chilean documentary director shares his family album with the film editor of his late works. A review of one hundred photographs and a quiet conversation will rise to memories of the films of one of the most personal filmmakers.",
+     "title_en": "What Is This Story and How Does It End?",
+     "poster": "https://image.tmdb.org/t/p/w500/3vBg5czvNlm7h01Gra86Zmq16tT.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 512555,
+     "lbSlug": "what-is-this-story-and-how-does-it-end",
+     "duracion_min": 53
+    }
+   ],
+   "_charla": {
+    "descripcion": "Proyección de las películas ¿Qué historia es ésta y cuál es su final? y Obreras saliendo de la fábrica, posterior charla.",
+    "invitados": "José Luis Torres Leiva, Andrés Múnera"
+   },
+   "seccion": "La primavera llega para los que esperan. El cine de José Luis Torres Leiva"
+  },
+  {
+   "dia": "2026-09-06",
+   "hora": "14:00",
+   "sede": "La Capilla del Claustro Comfama Medellín",
+   "_src": "hoja oficial del festival (conversatorios y charlas)",
+   "duracion_min": 122,
+   "acceso": "Entrada libre",
+   "titulo": "José Luis Torres Leiva: la primavera llega para los que esperan",
+   "obras": [
+    {
+     "titulo": "Así llegó la noche",
+     "director": "Ángel Santos",
+     "anio": 2025,
+     "sinopsis": "Un escultor establece su taller en una apartada zona rural de la costa gallega. Poco a poco irá aislándose de su entorno, cortando todo contacto con amigos y familiares. Cuando una antigua amante acuda a su encuentro provocará la reflexión del escultor sobre su deseo de aislamiento y la necesidad de una nueva huida.",
+     "synopsis_en": "A sculptor sets up his studio in a remote rural area on the Galician coast. He gradually isolates himself, cutting contact with friends and family. A former lover's visit prompts him to reflect on his isolation and need to flee again.",
+     "title_en": "And So the Night Fell",
+     "poster": "https://image.tmdb.org/t/p/w500/9899dxEkeprkzCl460ehg7h3cII.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1574164,
+     "lbSlug": "and-so-the-night-fell",
+     "duracion_min": 122
+    }
+   ],
+   "_charla": {
+    "descripcion": "Proyección de las películas ¿Qué historia es ésta y cuál es su final? y Obreras saliendo de la fábrica, posterior charla.",
+    "invitados": "José Luis Torres Leiva, Andrés Múnera"
+   },
+   "seccion": "Competencia central"
+  },
+  {
+   "dia": "2026-09-06",
+   "hora": "15:00",
+   "sede": "Cine MAMM Medellín",
+   "_src": "PDF oficial de programación del festival",
+   "acceso": "Boleta en el primer piso del museo",
+   "titulo": "Sobre cosas que me han pasado",
+   "obras": [
+    {
+     "titulo": "Sobre cosas que me han pasado",
+     "director": "José Luis Torres Leiva",
+     "pais": "Chile",
+     "anio": 2018,
+     "sinopsis": "Sobre cosas que me han pasado está basado en el libro del escritor Marcelo Matthey, en el que narra su propia vida. Sus constantes paseos por calles, casas y playas son volcados en anotaciones de lo que vio, sintió o pensó durante esos desplazamientos o momentos, pero rescatando casi solo los procesos, la línea de tiempo en que las cosas ocurren y pasan por la cabeza, el rastro de las asociaciones que se suceden, así como se suceden los pasos de alguien que camina en una calle. Impresiones inmediatas, momentos fugaces que normalmente se pierden en el tiempo y que quedan captados en imágenes y sonidos.",
+     "synopsis_en": "Based on the book by author Marcelo Matthey, this short film narrates his own life in a style reminiscent of school compositions. His constant strolls through streets, houses and beaches are recorded in notes of what he saw, felt or thought during these wanderings or moments, but almost only recalling the processes, the timeline in which things occur and come to mind, the trail of associations coming one after the other, like the steps of a person walking along a street. Immediate impressions, fleeting moments normally lost in time and which are captured in the images and sounds of this film.",
+     "title_en": "About Things That Happened to Me",
+     "poster": "https://image.tmdb.org/t/p/w500/r9YimsSrZeMtkRg1HNAHWovaV3H.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 573814,
+     "lbSlug": "about-things-that-happened-to-me",
+     "duracion_min": 15
+    }
+   ],
+   "seccion": "La primavera llega para los que esperan. El cine de José Luis Torres Leiva"
+  },
+  {
+   "dia": "2026-09-06",
+   "hora": "16:30",
+   "sede": "Centro Colombo Americano Sede centro sala 1 Medellín",
+   "_src": "PDF oficial de programación del festival",
+   "duracion_min": 103,
+   "acceso": "Entrada libre",
+   "titulo": "Beaucoup parler / Mucho hablar",
+   "obras": [
+    {
+     "titulo": "Beaucoup parler / Mucho hablar",
+     "director": "Pascale Bodet",
+     "anio": 2026,
+     "synopsis_en": "Pascale accompanies her Egyptian friend Amr on his rocky path to a residency permit. The system, authorities, lawyer, papers, paperwork, a language course. A refreshingly honest film full of solidarity about “the state of migration” and “se comprendre”.",
+     "title_en": "A Lot Talk",
+     "poster": "https://image.tmdb.org/t/p/w500/vP6O6ugQITgfbOBSWCOZeJzAAjp.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1614696,
+     "lbSlug": "a-lot-talk",
+     "duracion_min": 78
+    }
+   ],
+   "seccion": "Competencia central"
+  },
+  {
+   "dia": "2026-09-06",
+   "hora": "16:30",
+   "sede": "Cineprox Las Américas Medellín",
+   "_src": "PDF oficial de programación del festival",
+   "duracion_min": 83,
+   "acceso": "Boleta en taquilla — sillas numeradas",
+   "titulo": "Los golfos",
+   "obras": [
+    {
+     "titulo": "Los golfos",
+     "director": "Carlos Saura",
+     "anio": 1960,
+     "sinopsis": "Un grupo de amigos que sobreviven penosamente en los arrabales de Madrid cometen pequeños delitos con el propósito de financiar el debut como torero de uno de ellos.",
+     "synopsis_en": "A group of friends who are struggling to survive in the slums of Madrid commit petty crime in order to finance the debut as a bullfighter of one of them.",
+     "title_en": "The Delinquents",
+     "poster": "https://image.tmdb.org/t/p/w500/j5r2H4KqokTowdqR2hF2NC6pSEO.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 198915,
+     "lbSlug": "the-delinquents-1960",
+     "duracion_min": 83
+    }
+   ],
+   "seccion": "Iluminaciones"
+  },
+  {
+   "dia": "2026-09-06",
+   "hora": "17:00",
+   "sede": "Centro Colombo Americano Sede centro sala 2 Medellín",
+   "_src": "hoja oficial del festival (orden de programas)",
+   "duracion_min": 85,
+   "acceso": "Entrada libre",
+   "titulo": "Competencia de cortometrajes Programa 3",
+   "obras": [
+    {
+     "titulo": "Crash",
+     "director": "Gabriela Mureb",
+     "pais": "Alemania, Brasil",
+     "anio": 2026,
+     "synopsis_en": "The film follows a day's work at the BMW Recycling and Dismantling Center in Munich, documenting step-by-step the final stage of a car's dismantling process.",
+     "title_en": "Crash",
+     "poster": "https://image.tmdb.org/t/p/w500/xt9Dfhbzwxuo2MQvsRox9Ca2IsN.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1620642,
+     "lbSlug": "crash-2026-1",
+     "duracion_min": 19
+    },
+    {
+     "titulo": "Chuura",
+     "director": "Chuuraa",
+     "pais": "Rusia, Reino Unido",
+     "anio": 2026,
+     "synopsis_en": "In the remote Siberian Arctic, an Indigenous Sakha scientist descends into the depths of the melting permafrost. Searching for an ancient creature, he makes his way through the dangerous, claustrophobic caves to the mythical realm of the Underworld.",
+     "title_en": "Chuuraa",
+     "poster": "https://image.tmdb.org/t/p/w500/u3ZxWARL2C2VooiHKsGrRyHiEU7.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1614693,
+     "lbSlug": "chuuraa",
+     "duracion_min": 17
+    },
+    {
+     "titulo": "Pies al revés",
+     "director": "Elodie Arpa",
+     "pais": "Colombia",
+     "anio": 2025,
+     "synopsis_en": "In the Colombian Amazon, a gaze drifts between the murky waters of the rivers and the forest, a silent witness to the coexistence between the elements and the inhabitants of Puerto Nariño.",
+     "title_en": "Feet The Other Way Around",
+     "poster": "https://image.tmdb.org/t/p/w500/fE00OvtKSrqGC7sjpYZLxffBKGz.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1645136,
+     "lbSlug": "feet-the-other-way-around",
+     "duracion_min": 18
+    },
+    {
+     "titulo": "Certas formas",
+     "director": "Luiz Afonso Morêda",
+     "pais": "Brasil",
+     "anio": 2026,
+     "title_en": "Certas Formas",
+     "poster": "https://image.tmdb.org/t/p/w500/teLkpQSkMBPGiaBMQwxuV3nF1wf.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1660730,
+     "lbSlug": "certas-formas",
+     "duracion_min": 17
+    },
+    {
+     "titulo": "O",
+     "director": "Francisca Alarcão",
+     "pais": "España, Portugal",
+     "anio": 2026,
+     "synopsis_en": "For as long as she remembers, Francisca lives with an inexplicable and uncontrollable aversion to belly buttons. Nothing makes her more anxious than this simple part of the body and the shapes in the world that resemble it. When therapy isn't enough to solve her cherished phobia , Francisca turns to other types of methods - without any scientific basis and not recommended for anyone who suffers from the same condition.",
+     "title_en": "o",
+     "poster": "https://image.tmdb.org/t/p/w500/nqiifO5BF1gEplXiTzofpR03Dlt.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1599922,
+     "lbSlug": "o-2026",
+     "duracion_min": 14
+    }
+   ],
+   "seccion": "Competencia de cortometrajes"
+  },
+  {
+   "dia": "2026-09-06",
+   "hora": "18:00",
+   "sede": "Teatro Caribe Itagüí",
+   "_src": "PDF oficial de programación del festival",
+   "duracion_min": 90,
+   "acceso": "Entrada libre",
+   "titulo": "Viviendo juntos / Zusammenleben",
+   "obras": [
+    {
+     "titulo": "Viviendo juntos / Zusammenleben",
+     "director": "Thomas Fürhapter",
+     "pais": "Austria",
+     "anio": 2022,
+     "sinopsis": "Hubo un tiempo en el que existía un lugar en Viena donde la gente podía estudiar y aprender a convivir. Bajo los auspicios del gobierno de Viena, se desarrollaron una serie de procesos en el marco de un proyecto conjunto financiado por la UE con el fin de facilitar a los refugiados —pero también a los recién llegados en general— la orientación en la ciudad. La financiación de la UE se ha agotado. Lo que queda es un documental de Thomas Fürhapter, que recorre el variado programa de cursos y procesos, escucha a las personas que buscan posibles soluciones y, sobre todo, observa los rostros con auténtica devoción.",
+     "synopsis_en": "A documentary following immigrants attending voluntary integration courses in Vienna.",
+     "title_en": "Zusammenleben",
+     "poster": "https://image.tmdb.org/t/p/w500/cWzTw5fHetqFEqh8qLkpTQKQV5H.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1041158,
+     "lbSlug": "zusammenleben",
+     "duracion_min": 90
+    }
+   ],
+   "seccion": "Febril incisión. El cine de Thomas Fürhapter"
+  },
+  {
    "dia": "2026-09-06",
    "hora": "19:00",
-   "sede": "Centro Colombo Americano - Sede centro",
-   "ciudad": "Medellín",
-   "sala": "Sala 2"
+   "sede": "Centro Colombo Americano Sede centro sala 2 Medellín",
+   "_src": "PDF oficial de programación del festival",
+   "duracion_min": 103,
+   "acceso": "Entrada libre",
+   "titulo": "Solo qu3r3mos un poco de amor",
+   "obras": [
+    {
+     "titulo": "Solo qu3r3mos un poco de amor",
+     "director": "Raúl Perrone",
+     "pais": "Argentina",
+     "anio": 2024,
+     "sinopsis": "hace tiempo que decidí no hacer mas sinopsis  De mis películas  Quiero que la gente llegue sin saber  que va A mirar.  Tampoco habrá un tráiler – son mentirosos  Y nunca reflejan realmente  El espíritu de la película.  Gracias por comprender.",
+     "synopsis_en": "I decided a long time ago not to do any more synopses of my films. I want people to arrive without knowing what they are going to watch.  There won't be a trailer either – they're liars AND they never really reflect the spirit of the film.  Thanks for understanding.",
+     "title_en": "Solo qu3r3mos un poco de amor",
+     "poster": "https://image.tmdb.org/t/p/w500/LedAbAkK7Q6CXmKawrRK4Fcsu0.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1388911,
+     "lbSlug": "solo-qu3r3mos-un-poco-de-amor",
+     "duracion_min": 75
+    }
+   ],
+   "seccion": "Historia(s) del cine: Argentina. Curaduría de José Miccio"
   },
   {
-   "titulo": "Spot Fuera de campo 1",
-   "dia": "2026-09-10",
-   "hora": "17:30",
-   "sede": "ITM - Facultad de Artes y Humanidades",
-   "ciudad": "Medellín",
-   "sala": ""
+   "dia": "2026-09-07",
+   "hora": "10:00",
+   "sede": "Centro Colombo Americano Sede centro sala 1 Medellín",
+   "_src": "PDF oficial de programación del festival",
+   "duracion_min": 120,
+   "acceso": "Entrada libre con inscripción previa",
+   "titulo": "Foro de la Crítica Sesión 3 Inscripción previa*",
+   "obras": []
   },
   {
-   "titulo": "Spot Fuera de campo 2",
+   "dia": "2026-09-07",
+   "hora": "16:30",
+   "sede": "Cineprox Las Américas Medellín",
+   "_src": "PDF oficial de programación del festival",
+   "duracion_min": 92,
+   "acceso": "Boleta en taquilla — sillas numeradas",
+   "titulo": "Cleaning & Cleansing",
+   "obras": [
+    {
+     "titulo": "Cleaning & Cleansing",
+     "director": "Thomas Fürhapter",
+     "pais": "Austria",
+     "anio": 2024,
+     "sinopsis": "¿Qué significa exactamente limpiar, estar limpios y purificar? Esa pregunta motiva la realización de este documental observacional de minuciosa hondura. El director trabaja sobre las diferentes formas en que la cultura humana se deshace de la suciedad y otros residuos. Desde el lavado de manos en el ámbito de la salud, pasando por diversas manifestaciones de higiene mental y rituales sagrados. Son la necesidad y la naturaleza evidente de las acciones que acompañan a la limpieza las que las convierten en una fuerza social de importancia fundamental. Dispuesta en grandes secuencias asociativas, la película nos permite reflexionar sobre los significados simbólicos y pragmáticos de los rituales cotidianos, sin los cuales nuestra civilización se derrumbaría.",
+     "synopsis_en": "CLEANING AND CLEANSING tells of the glamor and misery of hygiene. Without resorting to interviews or explanatory off-camera commentary, it stages its subject in a way that can be experienced by the senses. In doing so, it follows an analytical approach that thematizes hygiene as an order of the „healthy“ and the „harmful“, which is reflected in institutions, architectures and production processes and regulates human behavior. The filmthus raises a topic that has been central to our society since the beginning of modernity: the optimization and improvement of life, which – if pursued with too much commitment and carelessly – can quickly turn against itself.",
+     "title_en": "Cleaning & Cleansing",
+     "poster": "https://image.tmdb.org/t/p/w500/7jlgyCfVs4AGmgw7guo4EZsATQ8.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1361665,
+     "lbSlug": "cleaning-cleansing",
+     "duracion_min": 92
+    }
+   ],
+   "seccion": "Febril incisión. El cine de Thomas Fürhapter"
+  },
+  {
+   "dia": "2026-09-07",
+   "hora": "17:30",
+   "sede": "ITM – Facultad de Artes y Humanidades Sede La Floresta Medellín",
+   "_src": "PDF oficial de programación del festival",
+   "duracion_min": 108,
+   "acceso": "Entrada libre",
+   "titulo": "The Children’s Hour",
+   "obras": [
+    {
+     "titulo": "The Children’s Hour",
+     "director": "William Wyler",
+     "pais": "Estados Unidos",
+     "anio": 1961,
+     "sinopsis": "Karen y Martha son dos buenas amigas y socias que dirigen una exclusiva escuela privada para niñas, la Escuela Dobie-Wright. Karen está prometida con el doctor Joe Cardin, con el que pretende casarse pronto, aunque Martha le insiste en retrasar la boda, para no acabar sola al frente de la escuela. Una alumna maliciosa y vengativa, despechada por un castigo que ha recibido, oye por casualidad un comentario y lo utiliza, distorsionándolo ante su abuela, para acusar a las profesoras de ser amantes.",
+     "synopsis_en": "An unruly student at a private all-girls boarding school scandalously accuses the two women who run it of having a romantic relationship.",
+     "title_en": "The Children's Hour",
+     "poster": "https://image.tmdb.org/t/p/w500/dfsUNwOBKvSWyjpg8TyR6nEr5k8.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 20139,
+     "lbSlug": "the-childrens-hour",
+     "duracion_min": 108
+    }
+   ],
+   "seccion": "Sick and Dirty. Curaduría de Michael Koresky"
+  },
+  {
+   "dia": "2026-09-07",
+   "hora": "18:00",
+   "sede": "Teatro Caribe Itagüí",
+   "_src": "PDF oficial de programación del festival",
+   "duracion_min": 80,
+   "acceso": "Entrada libre",
+   "titulo": "Cuando las nubes esconden la sombra",
+   "obras": [
+    {
+     "titulo": "Cuando las nubes esconden la sombra",
+     "director": "José Luis Torres Leiva",
+     "pais": "Chile",
+     "anio": 2024,
+     "sinopsis": "María viaja a Puerto Williams para protagonizar una película. Sin embargo, el equipo de filmación no podrá llegar debido a una fuerte tormenta. Sola, buscará ayuda para un intenso dolor de espalda, lo que la llevará a descubrir la vida en la ciudad más austral del mundo y una historia pendiente en su vida.",
+     "synopsis_en": "Maria travels to Puerto Williams to star in a movie. But the film crew won't be able to arrive due to a strong storm. Alone, she'll seek help for severe back pain, which will lead her to discover life in the southernmost city in the world and a pending story in her life.",
+     "title_en": "When Clouds Hide the Shadow",
+     "poster": "https://image.tmdb.org/t/p/w500/h3sq9eoMY23lLZoVkPLQ7TEM2kD.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1268743,
+     "lbSlug": "when-clouds-hide-the-shadow",
+     "duracion_min": 71
+    }
+   ],
+   "seccion": "La primavera llega para los que esperan. El cine de José Luis Torres Leiva"
+  },
+  {
+   "dia": "2026-09-07",
+   "hora": "19:00",
+   "sede": "La Capilla del Claustro Comfama Medellín",
+   "_src": "hoja oficial del festival (orden de programas)",
+   "duracion_min": 64,
+   "acceso": "Entrada libre",
+   "titulo": "Competencia Nuevas Voces Programa 2",
+   "obras": [
+    {
+     "titulo": "Para no volver",
+     "director": "Tania Galvis",
+     "pais": "Colombia",
+     "anio": 2026,
+     "sinopsis": "Cuando Karina se entera de que está embarazada del bebé de Charlie, ella y su mejor amiga Eli se disponen a encontrarlo por las calles nocturnas de Santa Marta. En el camino, se enfrentan al deseo, la maternidad y su vínculo cambiante. Al amanecer, el mar las abraza, y vuelven a jugar como niñas.",
+     "title_en": "Para no volver",
+     "poster": "https://image.tmdb.org/t/p/w500/k2RvfqR0QSL4D5PzFkkomzRZJ8q.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1743118,
+     "lbSlug": "para-no-volver",
+     "duracion_min": 9
+    },
+    {
+     "titulo": "El Salto",
+     "director": "Jerónimo Rincón",
+     "pais": "Colombia",
+     "anio": 2026,
+     "sinopsis": "Según el mito indígena Muisca, la llanura de Bogotá alguna vez fue inundada por arroyos que amenazaban con arrasarlo todo. Apareció entonces el dios Bochica, quien con su bastón hirió la serranía y abrió paso a sus aguas represadas, formando así el Salto del Tequendama. En la orilla del precipicio, el río Bogotá se lanza sobre un banco de piedras. Allí se estrella y se arroja en forma de espumas y vapores hacia el abismo que lo espera.",
+     "title_en": "El Salto",
+     "poster": "https://image.tmdb.org/t/p/w500/3xkU5BM4aLULnvBZu0mVntXbHrA.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1686065,
+     "lbSlug": "el-salto-1",
+     "duracion_min": 12
+    },
+    {
+     "titulo": "Gramática Práctica Italiana",
+     "director": "Daniel Cortés",
+     "pais": "Colombia",
+     "anio": 2026,
+     "sinopsis": "Miguel y su familia se preparan para emigrar de Cuba a Italia, donde ya vive su madre. Mientras esperan, comienzan a dar el primer paso en el viaje de todo migrante: aprender el idioma del país al que quieren mudarse.",
+     "synopsis_en": "Miguel and his family are preparing to emigrate from Cuba to Italy where his mother already lives. While they wait, they begin to take the first step in the life of every migrant: learning the language of the country they want to go to.",
+     "title_en": "Practical Italian Grammar",
+     "poster": "https://image.tmdb.org/t/p/w500/gtnKGTLEnXIx1WzqWdfmXqdzfkq.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1577564,
+     "lbSlug": "practical-italian-grammar",
+     "duracion_min": 13
+    },
+    {
+     "titulo": "Madres de Nacimiento",
+     "director": "Gloria Isabel Gómez",
+     "pais": "Colombia",
+     "anio": 2026,
+     "sinopsis": "Del olvido y la oscuridad hay imágenes y sonidos que resurgen para controlar los cuerpos de las mujeres latinoamericanas, quienes desde niñas han sido consideradas madres de nacimiento. Pero en estos archivos emerge una interferencia que proviene del pasado para evocar un mensaje de lucha, memoria y libertad.",
+     "title_en": "Madres de Nacimiento",
+     "poster": "https://image.tmdb.org/t/p/w500/kJreh6iEXQZ3NHaROQb7WJNle7l.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1668902,
+     "lbSlug": "madres-de-nacimiento",
+     "duracion_min": 8
+    },
+    {
+     "titulo": "Borrachos mientras escuchamos las gotas caer",
+     "director": "Santiago Gómez",
+     "pais": "Colombia",
+     "anio": 2026,
+     "sinopsis": "Retrata la historia de León Ramírez e Isabel Velásquez, dos ancianos de casi 90 años que atienden una tienda de barrio para sobrevivir. El cortometraje aborda de forma íntima y crítica temas como la resignación de la vejez, el abandono a la tercera edad, el desarraigo territorial y los impactos colaterales del conflicto armado en Colombia (abusos del Estado, ELN y AUC).",
+     "title_en": "Borrachos escuchando las gotas de lluvia caer",
+     "poster": "https://image.tmdb.org/t/p/w500/3R73xUlBIBGXY5q8i9HZYLEidLy.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1743109,
+     "lbSlug": "borrachos-escuchando-las-gotas-de-lluvia",
+     "duracion_min": 22
+    }
+   ],
+   "seccion": "Competencia Nuevas voces"
+  },
+  {
+   "dia": "2026-09-07",
+   "hora": "19:30",
+   "sede": "ITM – Facultad de Artes y Humanidades Sede La Floresta Medellín",
+   "_src": "hoja oficial del festival (conversatorios y charlas)",
+   "duracion_min": 60,
+   "acceso": "Entrada libre",
+   "titulo": "Michael Koresky y José Miccio: Itinerarios de una tradición",
+   "obras": [],
+   "_charla": {
+    "descripcion": "Proyección de la película The Children’s Hour y diálogo sobre cinematografías nacionales, la conformación del canon y la crítica como herramienta que configura nuevas miradas en el legado cinematográfico.",
+    "invitados": "Michael Koresky, José Miccio"
+   }
+  },
+  {
+   "dia": "2026-09-08",
+   "hora": "10:00",
+   "sede": "Centro Colombo Americano Sede centro sala 1 Medellín",
+   "_src": "PDF oficial de programación del festival",
+   "duracion_min": 120,
+   "acceso": "Entrada libre con inscripción previa",
+   "titulo": "Foro de la Crítica Sesión 4 Inscripción previa*",
+   "obras": []
+  },
+  {
+   "dia": "2026-09-08",
+   "hora": "14:00",
+   "sede": "Centro Colombo Americano Sede centro sala 1 Medellín",
+   "_src": "PDF oficial de programación del festival",
+   "duracion_min": 86,
+   "acceso": "Entrada libre",
+   "titulo": "Une vie manifeste",
+   "obras": [
+    {
+     "titulo": "Une vie manifeste",
+     "director": "Jean-Gabriel Périot",
+     "anio": 2026,
+     "synopsis_en": "The life of Michèle Firk — a trailblazing French journalist, film critic, aspiring director and communist activist involved in various liberation struggles in the second half of the 20th century — as told by narrator Alice Diop, modern day French director.",
+     "title_en": "A Life, A Manifesto",
+     "poster": "https://image.tmdb.org/t/p/w500/qO2Kir2yyz2sr8j4UxXXhrsuLS.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1483908,
+     "lbSlug": "a-life-a-manifesto",
+     "duracion_min": 86
+    }
+   ],
+   "seccion": "Proyecciones especiales"
+  },
+  {
+   "dia": "2026-09-08",
+   "hora": "15:00",
+   "sede": "La Capilla del Claustro Comfama Medellín",
+   "_src": "hoja oficial del festival (conversatorios y charlas)",
+   "duracion_min": 82,
+   "acceso": "Entrada libre",
+   "titulo": "Luciana Decker Orozco: Alquimia de la luz",
+   "obras": [],
+   "_charla": {
+    "descripcion": "Proyección de cortometrajes de Luciana Decker Orozco y charla posterior.",
+    "invitados": "Luciana Decker Orozco, Elena Acosta. Modera Paula Díaz"
+   }
+  },
+  {
+   "dia": "2026-09-08",
+   "hora": "16:00",
+   "sede": "Centro Colombo Americano Sede centro sala 2 Medellín",
+   "_src": "PDF oficial de programación del festival",
+   "duracion_min": 90,
+   "acceso": "Entrada libre",
+   "titulo": "Un techo sin cielo",
+   "obras": [
+    {
+     "titulo": "Un techo sin cielo",
+     "director": "Diego Hernández",
+     "anio": 2025,
+     "sinopsis": "Después de abrir una caja de zapatos, Diego comienza a sentir un severo cansancio que le impide realizar actividades cotidianas y lo deja en cama. Al mismo tiempo, su amiga Liz padece de un insomnio misterioso mientras desarrolla una puesta en escena.",
+     "synopsis_en": "After opening a shoebox, Diego begins to feel severe fatigue that prevents him from performing everyday activities and leaves him bedridden. At the same time, his friend Liz suffers from a mysterious insomnia while working on a stage production.",
+     "title_en": "A Skyless Roof",
+     "poster": "https://image.tmdb.org/t/p/w500/4YeCy0Bus5bxqV12CKDaXI51caj.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1373119,
+     "lbSlug": "a-skyless-roof",
+     "duracion_min": 90
+    }
+   ],
+   "seccion": "Competencia central"
+  },
+  {
+   "dia": "2026-09-08",
+   "hora": "16:30",
+   "sede": "Cineprox Las Américas Medellín",
+   "_src": "PDF oficial de programación del festival",
+   "duracion_min": 94,
+   "acceso": "Boleta en taquilla — sillas numeradas",
+   "titulo": "Vendrá la muerte y tendrá tus ojos",
+   "obras": [
+    {
+     "titulo": "Vendrá la muerte y tendrá tus ojos",
+     "director": "José Luis Torres Leiva",
+     "pais": "Chile",
+     "anio": 2019,
+     "sinopsis": "Dos mujeres que han pasado toda su vida juntas deben lidiar con la enfermedad que afecta a una de ellas. La mujer enferma decide no recibir tratamiento y se mudan a una cabaña en el bosque para esperar el día en que la muerte llegue a sus vidas. La situación ve resurgir el amor que el tiempo había enterrado bajo la rutina. Poco a poco, su relación se fortalecerá a medida que la muerte pase su tiempo fuera de la cabaña.",
+     "synopsis_en": "Two women who have spent their whole lives together must deal with the illness affecting one of them. The sick woman decides not to have treatment and they move into a cabin in the woods to wait for the day that death will come into their lives. The situation sees the resurfacing of the love that time had buried under the routine. Gradually their relationship will strengthen as death bides its time outside the cabin.",
+     "title_en": "Death Will Come and Shall Have Your Eyes",
+     "poster": "https://image.tmdb.org/t/p/w500/4JGrPKDZAPK3LFCrdY8zEnTjMeX.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 614456,
+     "lbSlug": "death-will-come-and-shall-have-your-eyes",
+     "duracion_min": 86
+    }
+   ],
+   "seccion": "La primavera llega para los que esperan. El cine de José Luis Torres Leiva"
+  },
+  {
+   "dia": "2026-09-08",
+   "hora": "17:30",
+   "sede": "ITM – Facultad de Artes y Humanidades Sede La Floresta Medellín",
+   "_src": "PDF oficial de programación del festival",
+   "duracion_min": 82,
+   "acceso": "Entrada libre",
+   "titulo": "Las almas ni los ojos",
+   "obras": [
+    {
+     "titulo": "Las almas ni los ojos",
+     "director": "Canela Reyes y César Jaimes",
+     "anio": 2026,
+     "sinopsis": "Tras huir de la violencia a los 15 años, Pacho pasa cuatro décadas lejos de Anserma. Ahora una fotografía activa el deseo de regresar y, en su retorno, imaginado como viaje interestelar, busca aquello que dejó atrás. Las huellas persistentes de la muerte se entrelazan con un paisaje de expresionismo rural, memoria e historia.",
+     "synopsis_en": "After fleeing violence at age 15, Pacho spends four decades away from Anserma. Now a photograph sparks a desire to return, and on his journey home —imagined as an interstellar voyage— he searches for what he left behind. The lingering traces of death intertwine with a landscape of rural expressionism, memory, and history",
+     "title_en": "Las almas ni los ojos",
+     "poster": "https://image.tmdb.org/t/p/w500/1qEi6ZaKPyVOEilZYdRdMK4MVJj.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1665538,
+     "lbSlug": "las-almas-ni-los-ojos",
+     "duracion_min": 75
+    }
+   ],
+   "seccion": "Competencia central"
+  },
+  {
+   "dia": "2026-09-08",
+   "hora": "18:00",
+   "sede": "Centro Colombo Americano Sede centro sala 1 Medellín",
+   "_src": "hoja oficial del festival (orden de programas)",
+   "duracion_min": 186,
+   "acceso": "Entrada libre",
+   "titulo": "Competencia Nuevas Voces Programa 1",
+   "obras": [
+    {
+     "titulo": "Preguntas Frecuentes",
+     "director": "Sofía Salinas",
+     "pais": "Colombia",
+     "anio": 2025,
+     "sinopsis": "S. escribe a Juan, que está profundamente dormido. S. reflexiona sobre imágenes y cine, y un consejo de un director que admira la desafía a ella y a todo su trabajo anterior. Decidida a encontrar una idea detrás de las imágenes que ha grabado hasta ahora, S. deambula entre los materiales, su propio archivo de imágenes y sonidos, pestañas de navegador de Internet, películas occidentales y cuentos japoneses. S. recopila todos estos pensamientos y hallazgos en una carta, con la esperanza de entregárselo a Juan cuando se despierte.",
+     "synopsis_en": "S. writes to Juan, who is deeply asleep. She reflects on images and cinema, and a piece of advice from a director she admires challenges her and all her previous work. Determined to find an idea behind the images she has recorded so far, S. wanders among materials, her own archive of images and sounds, internet browser tabs, western films and Japanese short stories. S. compiles all these thoughts and findings into a letter, hoping to deliver it to Juan when he wakes up.",
+     "title_en": "Frequently asked questions",
+     "poster": "https://image.tmdb.org/t/p/w500/gY6k1B2FGXBsMvTDr7ltZRSe7OF.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1592609,
+     "lbSlug": "frequently-asked-questions",
+     "duracion_min": 16
+    },
+    {
+     "titulo": "Medellín, yo te saludo",
+     "director": "Lucas Muñoz",
+     "pais": "Colombia",
+     "anio": 2026,
+     "sinopsis": "A través del montaje con archivos historicos de prensa y reportaje - Yo te saludo Medellín - propone un encuentro entre imágenes que nunca compartieron un mismo tiempo ni un mismo territorio. En ese diálogo, la película revela ecos inesperados entre guerras, rostros y ruinas, mientras pone en tensión nuevas formas de mirar el pasado, explora cómo el cine y la fotografía pueden interrogar la memoria, preguntándose si la violencia realmente cambia de forma o si son las imágenes las que, una y otra vez, vuelven a encontrarse a través del tiempo.",
+     "title_en": "Medellín, yo te saludo",
+     "poster": "https://image.tmdb.org/t/p/w500/8uFN3cAwlxc5DhLlgXsFtxaBYiT.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1740554,
+     "lbSlug": "medellin-yo-te-saludo",
+     "duracion_min": 3
+    },
+    {
+     "titulo": "Liminal",
+     "director": "Gabriela Castelblanco",
+     "pais": "Colombia",
+     "anio": 2026,
+     "sinopsis": "¿Qué permanece en un lugar cuando nos vamos? En una travesía por diversos espacios liminales, entendidos como lugares de tránsito, ambigüedad y espera silenciosa, se explora la relación de los seres humanos con los lugares que han habitado y habitan, así como las sensaciones, los recuerdos y las emociones que estos espacios despiertan en los distintos momentos de sus vidas.",
+     "title_en": "Liminal",
+     "poster": "https://image.tmdb.org/t/p/w500/hV8eL8v9isrSLOXoxtAdH8N9t0P.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1743116,
+     "lbSlug": "liminal-6",
+     "duracion_min": 16
+    },
+    {
+     "titulo": "Pausas activas",
+     "director": "Juan Pablo Castro",
+     "pais": "Colombia",
+     "anio": 2026,
+     "sinopsis": "Una reunión laboral regular se convierte en una discusión sobre los deberes y derechos de los trabajadores.",
+     "title_en": "Pausas activas",
+     "poster": "https://image.tmdb.org/t/p/w500/kIQJPs5yxOYrkz9A19yxgR5BFBz.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1743120,
+     "lbSlug": "pausas-activas",
+     "duracion_min": 12
+    },
+    {
+     "titulo": "Refracción",
+     "director": "Isabella Palacio",
+     "pais": "Colombia",
+     "anio": 2025,
+     "sinopsis": "Eloísa, una chica de 20 años, está en dos relaciones al mismo tiempo. Una noche, después de haber estado con ambas chicas, se siente agobiada por estar en esa situación de engaño y en medio de su confusión sale a recorrer las calles de Medellín en bicicleta, donde se dará cuenta de que no quiere reconocerse pero deberá encontrarse consigo misma.",
+     "synopsis_en": "Eloísa, a 20-year-old girl, is in two relationships at the same time. One night, after having been with both girls, she feels overwhelmed by living in this situation of deceit, and in the middle of her confusion she goes out to ride her bike through the streets of Medellín, where she will realize that she does not want to acknowledge who she is — but will ultimately have to come face-to-face with herself.",
+     "title_en": "Refracción",
+     "poster": "https://image.tmdb.org/t/p/w500/bzKNobO0N8Oqj6YU6eA2R28UgPI.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1584776,
+     "lbSlug": "refraccion",
+     "duracion_min": 11
+    }
+   ],
+   "seccion": "Competencia Nuevas voces"
+  },
+  {
+   "dia": "2026-09-08",
+   "hora": "18:00",
+   "sede": "Teatro Caribe Itagüí",
+   "_src": "hoja oficial del festival (orden de programas)",
+   "duracion_min": 58,
+   "acceso": "Entrada libre",
+   "titulo": "Competencia Nuevas Voces Programa 1",
+   "obras": [
+    {
+     "titulo": "Preguntas Frecuentes",
+     "director": "Sofía Salinas",
+     "pais": "Colombia",
+     "anio": 2025,
+     "sinopsis": "S. escribe a Juan, que está profundamente dormido. S. reflexiona sobre imágenes y cine, y un consejo de un director que admira la desafía a ella y a todo su trabajo anterior. Decidida a encontrar una idea detrás de las imágenes que ha grabado hasta ahora, S. deambula entre los materiales, su propio archivo de imágenes y sonidos, pestañas de navegador de Internet, películas occidentales y cuentos japoneses. S. recopila todos estos pensamientos y hallazgos en una carta, con la esperanza de entregárselo a Juan cuando se despierte.",
+     "synopsis_en": "S. writes to Juan, who is deeply asleep. She reflects on images and cinema, and a piece of advice from a director she admires challenges her and all her previous work. Determined to find an idea behind the images she has recorded so far, S. wanders among materials, her own archive of images and sounds, internet browser tabs, western films and Japanese short stories. S. compiles all these thoughts and findings into a letter, hoping to deliver it to Juan when he wakes up.",
+     "title_en": "Frequently asked questions",
+     "poster": "https://image.tmdb.org/t/p/w500/gY6k1B2FGXBsMvTDr7ltZRSe7OF.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1592609,
+     "lbSlug": "frequently-asked-questions",
+     "duracion_min": 16
+    },
+    {
+     "titulo": "Medellín, yo te saludo",
+     "director": "Lucas Muñoz",
+     "pais": "Colombia",
+     "anio": 2026,
+     "sinopsis": "A través del montaje con archivos historicos de prensa y reportaje - Yo te saludo Medellín - propone un encuentro entre imágenes que nunca compartieron un mismo tiempo ni un mismo territorio. En ese diálogo, la película revela ecos inesperados entre guerras, rostros y ruinas, mientras pone en tensión nuevas formas de mirar el pasado, explora cómo el cine y la fotografía pueden interrogar la memoria, preguntándose si la violencia realmente cambia de forma o si son las imágenes las que, una y otra vez, vuelven a encontrarse a través del tiempo.",
+     "title_en": "Medellín, yo te saludo",
+     "poster": "https://image.tmdb.org/t/p/w500/8uFN3cAwlxc5DhLlgXsFtxaBYiT.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1740554,
+     "lbSlug": "medellin-yo-te-saludo",
+     "duracion_min": 3
+    },
+    {
+     "titulo": "Liminal",
+     "director": "Gabriela Castelblanco",
+     "pais": "Colombia",
+     "anio": 2026,
+     "sinopsis": "¿Qué permanece en un lugar cuando nos vamos? En una travesía por diversos espacios liminales, entendidos como lugares de tránsito, ambigüedad y espera silenciosa, se explora la relación de los seres humanos con los lugares que han habitado y habitan, así como las sensaciones, los recuerdos y las emociones que estos espacios despiertan en los distintos momentos de sus vidas.",
+     "title_en": "Liminal",
+     "poster": "https://image.tmdb.org/t/p/w500/hV8eL8v9isrSLOXoxtAdH8N9t0P.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1743116,
+     "lbSlug": "liminal-6",
+     "duracion_min": 16
+    },
+    {
+     "titulo": "Pausas activas",
+     "director": "Juan Pablo Castro",
+     "pais": "Colombia",
+     "anio": 2026,
+     "sinopsis": "Una reunión laboral regular se convierte en una discusión sobre los deberes y derechos de los trabajadores.",
+     "title_en": "Pausas activas",
+     "poster": "https://image.tmdb.org/t/p/w500/kIQJPs5yxOYrkz9A19yxgR5BFBz.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1743120,
+     "lbSlug": "pausas-activas",
+     "duracion_min": 12
+    },
+    {
+     "titulo": "Refracción",
+     "director": "Isabella Palacio",
+     "pais": "Colombia",
+     "anio": 2025,
+     "sinopsis": "Eloísa, una chica de 20 años, está en dos relaciones al mismo tiempo. Una noche, después de haber estado con ambas chicas, se siente agobiada por estar en esa situación de engaño y en medio de su confusión sale a recorrer las calles de Medellín en bicicleta, donde se dará cuenta de que no quiere reconocerse pero deberá encontrarse consigo misma.",
+     "synopsis_en": "Eloísa, a 20-year-old girl, is in two relationships at the same time. One night, after having been with both girls, she feels overwhelmed by living in this situation of deceit, and in the middle of her confusion she goes out to ride her bike through the streets of Medellín, where she will realize that she does not want to acknowledge who she is — but will ultimately have to come face-to-face with herself.",
+     "title_en": "Refracción",
+     "poster": "https://image.tmdb.org/t/p/w500/bzKNobO0N8Oqj6YU6eA2R28UgPI.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1584776,
+     "lbSlug": "refraccion",
+     "duracion_min": 11
+    }
+   ],
+   "seccion": "Competencia Nuevas voces"
+  },
+  {
+   "dia": "2026-09-08",
+   "hora": "18:00",
+   "sede": "Teatro Otraparte Biblioteca y Edificio Cultural Otraparte Envigado",
+   "_src": "hoja oficial del festival (orden de programas)",
+   "duracion_min": 63,
+   "acceso": "Entrada libre",
+   "titulo": "Competencia Nuevas Voces Programa 1",
+   "obras": [
+    {
+     "titulo": "Preguntas Frecuentes",
+     "director": "Sofía Salinas",
+     "pais": "Colombia",
+     "anio": 2025,
+     "sinopsis": "S. escribe a Juan, que está profundamente dormido. S. reflexiona sobre imágenes y cine, y un consejo de un director que admira la desafía a ella y a todo su trabajo anterior. Decidida a encontrar una idea detrás de las imágenes que ha grabado hasta ahora, S. deambula entre los materiales, su propio archivo de imágenes y sonidos, pestañas de navegador de Internet, películas occidentales y cuentos japoneses. S. recopila todos estos pensamientos y hallazgos en una carta, con la esperanza de entregárselo a Juan cuando se despierte.",
+     "synopsis_en": "S. writes to Juan, who is deeply asleep. She reflects on images and cinema, and a piece of advice from a director she admires challenges her and all her previous work. Determined to find an idea behind the images she has recorded so far, S. wanders among materials, her own archive of images and sounds, internet browser tabs, western films and Japanese short stories. S. compiles all these thoughts and findings into a letter, hoping to deliver it to Juan when he wakes up.",
+     "title_en": "Frequently asked questions",
+     "poster": "https://image.tmdb.org/t/p/w500/gY6k1B2FGXBsMvTDr7ltZRSe7OF.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1592609,
+     "lbSlug": "frequently-asked-questions",
+     "duracion_min": 16
+    },
+    {
+     "titulo": "Medellín, yo te saludo",
+     "director": "Lucas Muñoz",
+     "pais": "Colombia",
+     "anio": 2026,
+     "sinopsis": "A través del montaje con archivos historicos de prensa y reportaje - Yo te saludo Medellín - propone un encuentro entre imágenes que nunca compartieron un mismo tiempo ni un mismo territorio. En ese diálogo, la película revela ecos inesperados entre guerras, rostros y ruinas, mientras pone en tensión nuevas formas de mirar el pasado, explora cómo el cine y la fotografía pueden interrogar la memoria, preguntándose si la violencia realmente cambia de forma o si son las imágenes las que, una y otra vez, vuelven a encontrarse a través del tiempo.",
+     "title_en": "Medellín, yo te saludo",
+     "poster": "https://image.tmdb.org/t/p/w500/8uFN3cAwlxc5DhLlgXsFtxaBYiT.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1740554,
+     "lbSlug": "medellin-yo-te-saludo",
+     "duracion_min": 3
+    },
+    {
+     "titulo": "Liminal",
+     "director": "Gabriela Castelblanco",
+     "pais": "Colombia",
+     "anio": 2026,
+     "sinopsis": "¿Qué permanece en un lugar cuando nos vamos? En una travesía por diversos espacios liminales, entendidos como lugares de tránsito, ambigüedad y espera silenciosa, se explora la relación de los seres humanos con los lugares que han habitado y habitan, así como las sensaciones, los recuerdos y las emociones que estos espacios despiertan en los distintos momentos de sus vidas.",
+     "title_en": "Liminal",
+     "poster": "https://image.tmdb.org/t/p/w500/hV8eL8v9isrSLOXoxtAdH8N9t0P.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1743116,
+     "lbSlug": "liminal-6",
+     "duracion_min": 16
+    },
+    {
+     "titulo": "Pausas activas",
+     "director": "Juan Pablo Castro",
+     "pais": "Colombia",
+     "anio": 2026,
+     "sinopsis": "Una reunión laboral regular se convierte en una discusión sobre los deberes y derechos de los trabajadores.",
+     "title_en": "Pausas activas",
+     "poster": "https://image.tmdb.org/t/p/w500/kIQJPs5yxOYrkz9A19yxgR5BFBz.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1743120,
+     "lbSlug": "pausas-activas",
+     "duracion_min": 12
+    },
+    {
+     "titulo": "Refracción",
+     "director": "Isabella Palacio",
+     "pais": "Colombia",
+     "anio": 2025,
+     "sinopsis": "Eloísa, una chica de 20 años, está en dos relaciones al mismo tiempo. Una noche, después de haber estado con ambas chicas, se siente agobiada por estar en esa situación de engaño y en medio de su confusión sale a recorrer las calles de Medellín en bicicleta, donde se dará cuenta de que no quiere reconocerse pero deberá encontrarse consigo misma.",
+     "synopsis_en": "Eloísa, a 20-year-old girl, is in two relationships at the same time. One night, after having been with both girls, she feels overwhelmed by living in this situation of deceit, and in the middle of her confusion she goes out to ride her bike through the streets of Medellín, where she will realize that she does not want to acknowledge who she is — but will ultimately have to come face-to-face with herself.",
+     "title_en": "Refracción",
+     "poster": "https://image.tmdb.org/t/p/w500/bzKNobO0N8Oqj6YU6eA2R28UgPI.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1584776,
+     "lbSlug": "refraccion",
+     "duracion_min": 11
+    }
+   ],
+   "seccion": "Competencia Nuevas voces"
+  },
+  {
+   "dia": "2026-09-08",
+   "hora": "19:00",
+   "sede": "Centro Colombo Americano Sede centro sala 2 Medellín",
+   "_src": "PDF oficial de programación del festival",
+   "duracion_min": 118,
+   "acceso": "Entrada libre",
+   "titulo": "Vive L’Amour",
+   "obras": [
+    {
+     "titulo": "Vive L’Amour",
+     "director": "Tsai Ming-liang",
+     "pais": "Taiwán",
+     "anio": 1994,
+     "sinopsis": "Una joven pareja, May y Ah-jong, utiliza un apartamento para sus relaciones. Sin embargo, una tercera persona, un tímido homosexual escondido en el mismo apartamento les espía creando un triangulo bizarro de amor.",
+     "synopsis_en": "Three lonely young denizens of Taipei unknowingly share an apartment: May, a real estate agent who uses it for her sexual affairs; Ah-jung, her current lover; and Hsiao-kang, who's stolen the key and uses the apartment as a retreat.",
+     "title_en": "Vive L'Amour",
+     "poster": "https://image.tmdb.org/t/p/w500/nGko7dIzGVAxp1OedhZltpSvBM1.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 11985,
+     "lbSlug": "vive-lamour",
+     "duracion_min": 118
+    }
+   ],
+   "seccion": "Sick and Dirty. Curaduría de Michael Koresky"
+  },
+  {
+   "dia": "2026-09-08",
+   "hora": "20:00",
+   "sede": "Antimateria Libros y Café Medellín",
+   "_src": "PDF oficial de programación del festival",
+   "duracion_min": 67,
+   "acceso": "Entrada libre",
+   "titulo": "Cuartito rosa",
+   "obras": [
+    {
+     "titulo": "Cuartito rosa",
+     "director": "Sergio Navarro",
+     "pais": "Chile",
+     "anio": 1991,
+     "sinopsis": "Un grupo de adolescentes de una población marginal relata las diferentes aristas del ser mujer y su relación con el embarazo a temprana edad. Esta obra trata de ser un fiel retrato de ser mujer y adolescente en un estrato socioeconómico marginal de nuestro país. El documental está construido, íntegramente, por los relatos de las mujeres que forman el grupo seleccionado, cuyas edades van desde los 15 a 20 años, aproximadamente. Forman parte de un grupo donde se les ayuda a acercarse a las labores que deberán realizar al convertirse en madres, permitiéndoles intercambiar experiencias en torno al proceso previo y posterior al parto.",
+     "synopsis_en": "The reality of pregnant teenagers from popular sectors, the absence of information about how to prevent pregnancy and the lack of knowledge of how their own sexuality works. Their dreams, hopes and the strength they display to assume a radical change for which neither they nor their environment are prepared.",
+     "title_en": "Cuartito Rosa",
+     "poster": "https://image.tmdb.org/t/p/w500/nyY00FzUlUdP5PzRyBIdOUeA7Ht.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 873367,
+     "lbSlug": "cuartito-rosa",
+     "duracion_min": 30
+    }
+   ],
+   "seccion": "La sutil materia. Sergio Navarro"
+  },
+  {
+   "dia": "2026-09-09",
+   "hora": "09:00",
+   "sede": "Centro Cultural y Educativo Fundación Diego Echavarría Misas Itagüí",
+   "_src": "PDF oficial de programación del festival",
+   "duracion_min": 120,
+   "acceso": "Entrada libre con inscripción previa",
+   "titulo": "Seminario de la imagen con Luciana Decker",
+   "obras": []
+  },
+  {
+   "dia": "2026-09-09",
+   "hora": "14:00",
+   "sede": "Centro Colombo Americano Sede centro sala 1 Medellín",
+   "_src": "PDF oficial de programación del festival",
+   "duracion_min": 102,
+   "acceso": "Entrada libre",
+   "titulo": "El viento sabe que vuelvo a casa",
+   "obras": [
+    {
+     "titulo": "El viento sabe que vuelvo a casa",
+     "director": "José Luis Torres Leiva",
+     "pais": "Chile",
+     "anio": 2016,
+     "sinopsis": "A principios de la década de 1980, una pareja desapareció sin dejar rastro en los bosques de la isla de Meulín. El director Ignacio Agüero tenía la intención de rodar un documental sobre este extraño suceso, pero finalmente abandonó el proyecto. Ahora, viaja a la zona para rodar su primera película de ficción basada en los hechos y José Luis Torre Leiva, entre la búsqueda de locaciones y las audiciones de actores no profesionales, acompaña a Agüero mientras él habla con los lugareños sobre las leyendas que han surgido en torno a este misterioso suceso, quienes a menudo aportan un toque de tierno humor. La película es también una reflexión sobre el aislamiento de quienes viven en el archipiélago de Chiloé, en Chile, y una captura sus paisajes únicos y solitarios.",
+     "synopsis_en": "Looking for extras and locations, a filmmaker settles on Chiloé, the second largest island off the coast of Chile. He does auditions, but mainly listens patiently to the stories of young and old people. As an outsider, he cautiously searches for the soul of the community and its underlying tensions.",
+     "title_en": "The Winds Know That I'm Coming Back Home",
+     "poster": "https://image.tmdb.org/t/p/w500/rWHuSbXAJQl6fItQZAfuOp6ujbN.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 381639,
+     "lbSlug": "the-winds-know-that-im-coming-back-home",
+     "duracion_min": 102
+    }
+   ],
+   "seccion": "La primavera llega para los que esperan. El cine de José Luis Torres Leiva"
+  },
+  {
+   "dia": "2026-09-09",
+   "hora": "16:00",
+   "sede": "Centro Colombo Americano Sede centro sala 2 Medellín",
+   "_src": "PDF oficial de programación del festival",
+   "duracion_min": 55,
+   "acceso": "Entrada libre",
+   "titulo": "Foco Alquimia de la luz: Luciana Decker",
+   "obras": []
+  },
+  {
+   "dia": "2026-09-09",
+   "hora": "16:30",
+   "sede": "Centro Colombo Americano Sede centro sala 1 Medellín",
+   "_src": "PDF oficial de programación del festival",
+   "duracion_min": 82,
+   "acceso": "Entrada libre",
+   "titulo": "Las almas ni los ojos",
+   "obras": [
+    {
+     "titulo": "Las almas ni los ojos",
+     "director": "Canela Reyes y César Jaimes",
+     "anio": 2026,
+     "sinopsis": "Tras huir de la violencia a los 15 años, Pacho pasa cuatro décadas lejos de Anserma. Ahora una fotografía activa el deseo de regresar y, en su retorno, imaginado como viaje interestelar, busca aquello que dejó atrás. Las huellas persistentes de la muerte se entrelazan con un paisaje de expresionismo rural, memoria e historia.",
+     "synopsis_en": "After fleeing violence at age 15, Pacho spends four decades away from Anserma. Now a photograph sparks a desire to return, and on his journey home —imagined as an interstellar voyage— he searches for what he left behind. The lingering traces of death intertwine with a landscape of rural expressionism, memory, and history",
+     "title_en": "Las almas ni los ojos",
+     "poster": "https://image.tmdb.org/t/p/w500/1qEi6ZaKPyVOEilZYdRdMK4MVJj.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1665538,
+     "lbSlug": "las-almas-ni-los-ojos",
+     "duracion_min": 75
+    }
+   ],
+   "seccion": "Competencia central"
+  },
+  {
+   "dia": "2026-09-09",
+   "hora": "16:30",
+   "sede": "Cineprox Las Américas Medellín",
+   "_src": "PDF oficial de programación del festival",
+   "duracion_min": 78,
+   "acceso": "Boleta en taquilla — sillas numeradas",
+   "titulo": "The Souffleur",
+   "obras": [
+    {
+     "titulo": "The Souffleur",
+     "director": "Gastón Solnicki",
+     "anio": 2026,
+     "sinopsis": "Lucius Glantz, un veterano director de hotel en Viena, lucha por salvar su querido establecimiento del plan de un intrigante agente inmobiliario para demolerlo, lo que lleva a un choque de voluntades que afecta incluso a la famosa receta del soufflé del hotel.",
+     "synopsis_en": "Lucius Glantz, a veteran hotel manager in Vienna, fights to save his beloved establishment from a scheming realtor's plan to demolish it, leading to a clash of wills that even affects the hotel's renowned soufflé recipe.",
+     "title_en": "The Souffleur",
+     "poster": "https://image.tmdb.org/t/p/w500/71AUsPBhp0sirQI8sC8pmVcdno0.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1418361,
+     "lbSlug": "the-souffleur",
+     "duracion_min": 78
+    }
+   ],
+   "seccion": "Proyecciones especiales"
+  },
+  {
+   "dia": "2026-09-09",
+   "hora": "17:00",
+   "sede": "La Capilla del Claustro Comfama Medellín",
+   "_src": "PDF oficial de programación del festival",
+   "duracion_min": 78,
+   "acceso": "Entrada libre",
+   "titulo": "La tercera opción / Die dritte Option / The Third Option",
+   "obras": [
+    {
+     "titulo": "La tercera opción / Die dritte Option / The Third Option",
+     "director": "Thomas Fürhapter",
+     "pais": "Austria",
+     "anio": 2017,
+     "sinopsis": "Los resultados de las pruebas prenatales pueden plantear a los futuros padres un dilema muy difícil. ¿Debería permitirse el nacimiento de un niño que se sabe tendrá una discapacidad física o mental? La película presenta una nueva perspectiva sobre un tema sumamente controvertido, donde feticidio y aborto empiezan a presentar complejas diferencias. Mientras escuchamos las declaraciones de los médicos, de quienes realizan las pruebas prenatales y las experiencias de las parejas cuyos hijos son diagnosticados con alguna discapacidad, el plano visual sitúa el tema en un contexto mucho más amplio. Esta ópera prima en forma de debate ofrece fascinantes impresiones visuales y sonoras que abordan las cuestiones fundamentales del nacimiento, la muerte, la ética y hasta dónde es posible llegar para “optimizar” las vidas humanas.",
+     "synopsis_en": "„It used to be down to fate whether you gave birth to a disabled child. Today you can choose if you want to keep it or not.“ The results of prenatal screening can present would-be parents with a very difficult dilemma. Should a physically or mentally disabled child be allowed to live – or not be brought into the world at all? Who gets to decide what is normal and worthy of life? The filmic essay DIE DRITTE OPTION puts a new perspective on a highly controversial topic: while we listen to the statements of doctors, those who carry out prenatal screenings and the disturbing experiences of the couples affected, the visual level places the topic in a much wider socio-political context. Director Thomas Fürhapter’s debut film offers fascinating visual and acoustic impressions that tackle the core questions of birth, death, ethics and questions how far we should go when it comes to optimising our lives.",
+     "title_en": "The Third Option",
+     "poster": "https://image.tmdb.org/t/p/w500/Apn8OLc0byo0Lht1oFyFysgntwj.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 476369,
+     "lbSlug": "the-third-option",
+     "duracion_min": 78
+    }
+   ],
+   "seccion": "Febril incisión. El cine de Thomas Fürhapter"
+  },
+  {
+   "dia": "2026-09-09",
+   "hora": "17:30",
+   "sede": "ITM – Facultad de Artes y Humanidades Sede La Floresta Medellín",
+   "_src": "PDF oficial de programación del festival",
+   "duracion_min": 106,
+   "acceso": "Entrada libre",
+   "titulo": "Lolita en Honda",
+   "obras": [
+    {
+     "titulo": "Lolita en Honda",
+     "director": "Daniel Torres",
+     "anio": 2026,
+     "sinopsis": "Detrás de los ojos de Lolita hay un velo que ciega sus palabras. Es el recuerdo de una infancia que, aún en la vejez, le oscurece la vista y no le permite escapar. Cuando habla me parece intuir, por el eco de las historias que repite, un mundo espectral de hambre, abandono, el estigma social de una madre soltera, la magia del Río Magdalena y todas las ilusiones y demonios de esa niñez.",
+     "title_en": "Lolita en Honda",
+     "poster": "https://image.tmdb.org/t/p/w500/sKIm7ZwfuBnKuGeHJAUOYhg8DlV.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1665546,
+     "lbSlug": "lolita-en-honda",
+     "duracion_min": 106
+    }
+   ],
+   "seccion": "Proyecciones especiales"
+  },
+  {
+   "dia": "2026-09-09",
+   "hora": "18:00",
+   "sede": "Teatro Caribe Itagüí",
+   "_src": "PDF oficial de programación del festival",
+   "duracion_min": 103,
+   "acceso": "Entrada libre",
+   "titulo": "Beaucoup parler / Mucho hablar",
+   "obras": [
+    {
+     "titulo": "Beaucoup parler / Mucho hablar",
+     "director": "Pascale Bodet",
+     "anio": 2026,
+     "synopsis_en": "Pascale accompanies her Egyptian friend Amr on his rocky path to a residency permit. The system, authorities, lawyer, papers, paperwork, a language course. A refreshingly honest film full of solidarity about “the state of migration” and “se comprendre”.",
+     "title_en": "A Lot Talk",
+     "poster": "https://image.tmdb.org/t/p/w500/vP6O6ugQITgfbOBSWCOZeJzAAjp.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1614696,
+     "lbSlug": "a-lot-talk",
+     "duracion_min": 78
+    }
+   ],
+   "seccion": "Competencia central"
+  },
+  {
+   "dia": "2026-09-09",
+   "hora": "18:30",
+   "sede": "Centro Colombo Americano Sede centro sala 2 Medellín",
+   "_src": "PDF oficial de programación del festival",
+   "duracion_min": 146,
+   "acceso": "Entrada libre",
+   "titulo": "Para hacer una película solo se necesita un arma",
+   "obras": [
+    {
+     "titulo": "Para hacer una película solo se necesita un arma",
+     "director": "Santiago Sein",
+     "anio": 2026,
+     "sinopsis": "A fines de 2019, son halladas en la Universidad de Córdoba decenas de latas con películas realizadas por estudiantes de cine en los años 60 y 70. Hasta entonces se creía que habían sido destruidas durante la última dictadura militar. Cincuenta años después, aquellas imágenes vuelven a proyectarse, trasladándonos a un periodo casi desconocido del cine cordobés y a una época de efervescencia política, social y cultural sin precedentes. Cada fotograma excede su intención original, para hablarnos de un grupo de jóvenes apasionados por el cine y los intereses que los movilizaban: la psicología, la militancia, la música, la libertad sexual. Pero la aparición de un extraño personaje ligado al destino de las latas nos recuerda el final abrupto y violento de los sueños de aquella generación.",
+     "synopsis_en": "At the end of 2019, dozens of cans with films made by film students in the 60s and 70s were found at the University of Córdoba. Until then, it was believed that they had been destroyed during the last military dictatorship. Fifty years later, those images are projected again, taking us to an almost unknown period of Córdoba cinema and a time of unprecedented political, social and cultural effervescence. Each frame exceeds its original intention, to tell us about a group of young people passionate about cinema and the interests that mobilized them: psychology, militancy, music, sexual freedom. But the appearance of a strange character linked to the fate of the cans reminds us of the abrupt and violent end of the dreams of that generation.",
+     "title_en": "All You Need to Make a Movie Is a Gun",
+     "poster": "https://image.tmdb.org/t/p/w500/yUCtz2Daw4pmDSWc0A0jjmHf3f4.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1196863,
+     "lbSlug": "all-you-need-to-make-a-movie-is-a-gun",
+     "duracion_min": 159
+    }
+   ],
+   "seccion": "Proyecciones especiales"
+  },
+  {
+   "dia": "2026-09-09",
+   "hora": "19:00",
+   "sede": "Antimateria Libros y Café Medellín",
+   "_src": "hoja oficial del festival (orden de programas)",
+   "duracion_min": 115,
+   "acceso": "Entrada libre",
+   "titulo": "Competencia de cortometrajes Programa 1",
+   "obras": [
+    {
+     "titulo": "Only Making Out",
+     "director": "Marlon Weber",
+     "pais": "Alemania",
+     "anio": 2025,
+     "synopsis_en": "Two figures at sunset. The next day they meet a third.",
+     "title_en": "Only Making Out",
+     "poster": "https://image.tmdb.org/t/p/w500/rx4q8WfoW1w80K8QYB9heQsBaK9.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1537273,
+     "lbSlug": "only-making-out",
+     "duracion_min": 15
+    },
+    {
+     "titulo": "El oído absoluto",
+     "director": "Rafael Federman",
+     "pais": "Argentina",
+     "anio": 2026,
+     "synopsis_en": "After an accident, Lorenzo begins to hear a persistent ringing that profoundly alters his relationship with the world.",
+     "title_en": "The Inner Ear",
+     "poster": "https://image.tmdb.org/t/p/w500/vhfvAky2EGTa9rmyQJ7yICWncFq.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1722127,
+     "lbSlug": "the-inner-ear",
+     "duracion_min": 18
+    },
+    {
+     "titulo": "loose sleep",
+     "director": "Rodrigo Soares Teixeira",
+     "pais": "Portugal",
+     "anio": 2026,
+     "synopsis_en": "Sometimes, the hardest step in a day is the first one. In Sono Solto, our hero fights a battle against himself: is it worth it to leave the confort of the duvet and live life outside? By means of a fragmentary narrative, built on dreams and association, this short film follows the protagonist's speculation on activity and passivity, the passage of time and the (dis)advantages of being awake.",
+     "title_en": "Sono Solto",
+     "poster": "https://image.tmdb.org/t/p/w500/noJJeBURcdtVMGOhsluPPIiHNDN.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1655940,
+     "lbSlug": "sono-solto",
+     "duracion_min": 8
+    },
+    {
+     "titulo": "Henry Is a Girl Who Likes to Sleep",
+     "director": "Marthe Peters",
+     "pais": "Bélgica",
+     "anio": 2026,
+     "synopsis_en": "The filmmaker writes a letter to her cat, Henry. She is looking for a soft and tender place to inhabit – a quiet refuge of warmth to retreat into when the world becomes too loud. An ode to our captive pets and the intimate worlds we build together.",
+     "title_en": "Henry Is a Girl Who Likes to Sleep",
+     "poster": "https://image.tmdb.org/t/p/w500/hLX85aV7xgT7AfkyLTnTgxKEnDl.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1614674,
+     "lbSlug": "henry-is-a-girl-who-likes-to-sleep",
+     "duracion_min": 14
+    },
+    {
+     "titulo": "Mi amigo, el arquitecto",
+     "director": "Óscar Garzón",
+     "pais": "Colombia",
+     "anio": 2026,
+     "synopsis_en": "A woman invents a story to evoke a lost friendship. Along with her friends, they imagine a fable: the story of two birds that one day became human — an Ornithologist and his friend, The Architect.",
+     "title_en": "My Friend, The Architect",
+     "poster": "https://image.tmdb.org/t/p/w500/sMB00Njgb5QlOHPoD16Am79twm5.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1655621,
+     "lbSlug": "my-friend-the-architect",
+     "duracion_min": 16
+    }
+   ],
+   "seccion": "Competencia de cortometrajes"
+  },
+  {
+   "dia": "2026-09-09",
+   "hora": "19:00",
+   "sede": "Casa Museo Otraparte Envigado",
+   "_src": "hoja oficial del festival (orden de programas)",
+   "duracion_min": 71,
+   "acceso": "Entrada libre",
+   "titulo": "Competencia de cortometrajes Programa 1",
+   "obras": [
+    {
+     "titulo": "Only Making Out",
+     "director": "Marlon Weber",
+     "pais": "Alemania",
+     "anio": 2025,
+     "synopsis_en": "Two figures at sunset. The next day they meet a third.",
+     "title_en": "Only Making Out",
+     "poster": "https://image.tmdb.org/t/p/w500/rx4q8WfoW1w80K8QYB9heQsBaK9.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1537273,
+     "lbSlug": "only-making-out",
+     "duracion_min": 15
+    },
+    {
+     "titulo": "El oído absoluto",
+     "director": "Rafael Federman",
+     "pais": "Argentina",
+     "anio": 2026,
+     "synopsis_en": "After an accident, Lorenzo begins to hear a persistent ringing that profoundly alters his relationship with the world.",
+     "title_en": "The Inner Ear",
+     "poster": "https://image.tmdb.org/t/p/w500/vhfvAky2EGTa9rmyQJ7yICWncFq.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1722127,
+     "lbSlug": "the-inner-ear",
+     "duracion_min": 18
+    },
+    {
+     "titulo": "loose sleep",
+     "director": "Rodrigo Soares Teixeira",
+     "pais": "Portugal",
+     "anio": 2026,
+     "synopsis_en": "Sometimes, the hardest step in a day is the first one. In Sono Solto, our hero fights a battle against himself: is it worth it to leave the confort of the duvet and live life outside? By means of a fragmentary narrative, built on dreams and association, this short film follows the protagonist's speculation on activity and passivity, the passage of time and the (dis)advantages of being awake.",
+     "title_en": "Sono Solto",
+     "poster": "https://image.tmdb.org/t/p/w500/noJJeBURcdtVMGOhsluPPIiHNDN.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1655940,
+     "lbSlug": "sono-solto",
+     "duracion_min": 8
+    },
+    {
+     "titulo": "Henry Is a Girl Who Likes to Sleep",
+     "director": "Marthe Peters",
+     "pais": "Bélgica",
+     "anio": 2026,
+     "synopsis_en": "The filmmaker writes a letter to her cat, Henry. She is looking for a soft and tender place to inhabit – a quiet refuge of warmth to retreat into when the world becomes too loud. An ode to our captive pets and the intimate worlds we build together.",
+     "title_en": "Henry Is a Girl Who Likes to Sleep",
+     "poster": "https://image.tmdb.org/t/p/w500/hLX85aV7xgT7AfkyLTnTgxKEnDl.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1614674,
+     "lbSlug": "henry-is-a-girl-who-likes-to-sleep",
+     "duracion_min": 14
+    },
+    {
+     "titulo": "Mi amigo, el arquitecto",
+     "director": "Óscar Garzón",
+     "pais": "Colombia",
+     "anio": 2026,
+     "synopsis_en": "A woman invents a story to evoke a lost friendship. Along with her friends, they imagine a fable: the story of two birds that one day became human — an Ornithologist and his friend, The Architect.",
+     "title_en": "My Friend, The Architect",
+     "poster": "https://image.tmdb.org/t/p/w500/sMB00Njgb5QlOHPoD16Am79twm5.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1655621,
+     "lbSlug": "my-friend-the-architect",
+     "duracion_min": 16
+    }
+   ],
+   "seccion": "Competencia de cortometrajes"
+  },
+  {
+   "dia": "2026-09-09",
+   "hora": "19:00",
+   "sede": "La Capilla del Claustro Comfama Medellín",
+   "_src": "hoja oficial del festival (orden de programas)",
+   "duracion_min": 90,
+   "acceso": "Entrada libre",
+   "titulo": "Competencia de cortometrajes Programa 1",
+   "obras": [
+    {
+     "titulo": "Only Making Out",
+     "director": "Marlon Weber",
+     "pais": "Alemania",
+     "anio": 2025,
+     "synopsis_en": "Two figures at sunset. The next day they meet a third.",
+     "title_en": "Only Making Out",
+     "poster": "https://image.tmdb.org/t/p/w500/rx4q8WfoW1w80K8QYB9heQsBaK9.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1537273,
+     "lbSlug": "only-making-out",
+     "duracion_min": 15
+    },
+    {
+     "titulo": "El oído absoluto",
+     "director": "Rafael Federman",
+     "pais": "Argentina",
+     "anio": 2026,
+     "synopsis_en": "After an accident, Lorenzo begins to hear a persistent ringing that profoundly alters his relationship with the world.",
+     "title_en": "The Inner Ear",
+     "poster": "https://image.tmdb.org/t/p/w500/vhfvAky2EGTa9rmyQJ7yICWncFq.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1722127,
+     "lbSlug": "the-inner-ear",
+     "duracion_min": 18
+    },
+    {
+     "titulo": "loose sleep",
+     "director": "Rodrigo Soares Teixeira",
+     "pais": "Portugal",
+     "anio": 2026,
+     "synopsis_en": "Sometimes, the hardest step in a day is the first one. In Sono Solto, our hero fights a battle against himself: is it worth it to leave the confort of the duvet and live life outside? By means of a fragmentary narrative, built on dreams and association, this short film follows the protagonist's speculation on activity and passivity, the passage of time and the (dis)advantages of being awake.",
+     "title_en": "Sono Solto",
+     "poster": "https://image.tmdb.org/t/p/w500/noJJeBURcdtVMGOhsluPPIiHNDN.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1655940,
+     "lbSlug": "sono-solto",
+     "duracion_min": 8
+    },
+    {
+     "titulo": "Henry Is a Girl Who Likes to Sleep",
+     "director": "Marthe Peters",
+     "pais": "Bélgica",
+     "anio": 2026,
+     "synopsis_en": "The filmmaker writes a letter to her cat, Henry. She is looking for a soft and tender place to inhabit – a quiet refuge of warmth to retreat into when the world becomes too loud. An ode to our captive pets and the intimate worlds we build together.",
+     "title_en": "Henry Is a Girl Who Likes to Sleep",
+     "poster": "https://image.tmdb.org/t/p/w500/hLX85aV7xgT7AfkyLTnTgxKEnDl.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1614674,
+     "lbSlug": "henry-is-a-girl-who-likes-to-sleep",
+     "duracion_min": 14
+    },
+    {
+     "titulo": "Mi amigo, el arquitecto",
+     "director": "Óscar Garzón",
+     "pais": "Colombia",
+     "anio": 2026,
+     "synopsis_en": "A woman invents a story to evoke a lost friendship. Along with her friends, they imagine a fable: the story of two birds that one day became human — an Ornithologist and his friend, The Architect.",
+     "title_en": "My Friend, The Architect",
+     "poster": "https://image.tmdb.org/t/p/w500/sMB00Njgb5QlOHPoD16Am79twm5.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1655621,
+     "lbSlug": "my-friend-the-architect",
+     "duracion_min": 16
+    }
+   ],
+   "seccion": "Competencia de cortometrajes"
+  },
+  {
+   "dia": "2026-09-10",
+   "hora": "09:00",
+   "sede": "Centro Cultural y Educativo Fundación Diego Echavarría Misas Itagüí",
+   "_src": "PDF oficial de programación del festival",
+   "duracion_min": 100,
+   "acceso": "Entrada libre con inscripción previa",
+   "titulo": "Seminario de la imagen con Luciana Decker *Inscripción previa",
+   "obras": []
+  },
+  {
+   "dia": "2026-09-10",
+   "hora": "14:00",
+   "sede": "ITM – Facultad de Artes y Humanidades Sede La Floresta Medellín",
+   "_src": "hoja oficial del festival (conversatorios y charlas)",
+   "acceso": "Entrada libre",
+   "titulo": "Encuentro Internacional de Investigación-Creación en Música y Sonido Cinematográfico",
+   "obras": [],
+   "_charla": {
+    "descripcion": "Ponencias seleccionadas",
+    "invitados": ""
+   }
+  },
+  {
+   "dia": "2026-09-10",
+   "hora": "16:00",
+   "sede": "Casa Museo Otraparte Envigado",
+   "_src": "hoja oficial del festival (orden de programas)",
+   "duracion_min": 87,
+   "acceso": "Entrada libre",
+   "titulo": "Fuera de competencia programa 1",
+   "obras": [
+    {
+     "titulo": "Sombras en la niebla",
+     "director": "Pedro Pablo Vega",
+     "pais": "Colombia",
+     "anio": 2026,
+     "sinopsis": "En el páramo de Chiscas, don Vicente Molina y su familia cuidan un enorme rebaño de ovejas. La cotidianidad de la familia transcurre entre montañas cubiertas de niebla y la cocina, cuyo fogón de leña los reúne en torno a la comida y el juego. Entre el grupo se encuentra Will, el niño de la familia, quien se debate entre jugar y acompañar a los mayores en las labores de pastoreo.",
+     "synopsis_en": "High in a páramo in Colombia, the sheep that Edualdo and Ana have tended for decades graze across the land. Amid the fog and the demands of herding, their youngest son, Will, grows up between childhood play and the rhythms of rural life.",
+     "title_en": "Into the fog",
+     "poster": "https://image.tmdb.org/t/p/w500/36fgDq5bvxmVXUlGHpFZLnogB5K.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1668876,
+     "lbSlug": "into-the-fog-2026",
+     "duracion_min": 25
+    },
+    {
+     "titulo": "El cazador",
+     "director": "Manuel Villa, Luciana Riso",
+     "pais": "Colombia",
+     "anio": 2026,
+     "sinopsis": "En un paisaje ondulante, la tierra es escrita y reescrita por El Cazador. La relación entre él y el territorio revelan la esencia de una geografía. Su obsesión por el oro lo lleva a una búsqueda incesante de tesoros. El poder está en el significado que otorga a lo que encuentra. En las profundidades de la tierra y de sí mismo, descubre la verdad que le permite perpetuar su búsqueda.",
+     "synopsis_en": "Metal detector in hand, the Hunter roams through forest and city in search of treasure. It is his way of life, his calling: the summons of Lord Gold.",
+     "title_en": "The Hunter",
+     "poster": "https://image.tmdb.org/t/p/w500/wg0kTL0ztRoFzEZsNfdGVVFf9FF.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1668874,
+     "lbSlug": "the-hunter-2026-1",
+     "duracion_min": 14
+    },
+    {
+     "titulo": "Las formas de la magia",
+     "director": "Maria Paula Lorgia",
+     "pais": "Colombia",
+     "anio": 2026,
+     "sinopsis": "Un año después de la muerte de su padre, el reconocido mago colombiano Gustavo Lorgia, la directora realiza una exploración por sus archivos de video que revelan su trayectoria como artista, su rol como padre y la estética televisiva de una época. Una película que acude al archivo como medio para atravesar el duelo y a la memoria como forma de resistir a la desaparición.",
+     "title_en": "Las Formas de la Magia",
+     "poster": "https://image.tmdb.org/t/p/w500/lEWolBB40mm3KON8u2dWnPk0cVJ.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1668889,
+     "lbSlug": "las-formas-de-la-magia",
+     "duracion_min": 17
+    },
+    {
+     "titulo": "Un aparato para detectar fantasmas",
+     "director": "Mauricio Maldonado",
+     "pais": "Colombia",
+     "anio": 2025,
+     "sinopsis": "Un director de casting regresa a la ladera de la ciudad para reunirse con un actor no profesional y volver a grabar voces para terminar la posproducción de una película. La fantasía y la imaginación chocan bajo la sombra del bosque, donde el juego y la repetición convocan a fantasmas cómplices de la ficción. El encuentro de trabajo con el actor rápidamente se vuelve otra cosa: una experiencia casi de trance, una búsqueda de presencias, un ejercicio de observación y fe.",
+     "synopsis_en": "A casting director reunites with a young non-professional actor with the mission of re-recording some dialogues to complete the post-production of a film. Surrounded by a forest, in the sway of flickering lights, fantasy, imagination, and play collide in an exercise of repetition and hypnosis, where ghosts wander, complicit in the fiction.",
+     "title_en": "A Ghost-Detecting Device",
+     "tmdb_id": 1593571,
+     "lbSlug": "a-ghost-detecting-device",
+     "duracion_min": 18
+    }
+   ],
+   "seccion": "Programa 1. El espesor de las formas"
+  },
+  {
+   "dia": "2026-09-10",
+   "hora": "16:00",
+   "sede": "Centro Colombo Americano Sede centro sala 1 Medellín",
+   "_src": "hoja oficial del festival (orden de programas)",
+   "duracion_min": 88,
+   "acceso": "Entrada libre",
+   "titulo": "Fuera de competencia programa 1",
+   "obras": [
+    {
+     "titulo": "Sombras en la niebla",
+     "director": "Pedro Pablo Vega",
+     "pais": "Colombia",
+     "anio": 2026,
+     "sinopsis": "En el páramo de Chiscas, don Vicente Molina y su familia cuidan un enorme rebaño de ovejas. La cotidianidad de la familia transcurre entre montañas cubiertas de niebla y la cocina, cuyo fogón de leña los reúne en torno a la comida y el juego. Entre el grupo se encuentra Will, el niño de la familia, quien se debate entre jugar y acompañar a los mayores en las labores de pastoreo.",
+     "synopsis_en": "High in a páramo in Colombia, the sheep that Edualdo and Ana have tended for decades graze across the land. Amid the fog and the demands of herding, their youngest son, Will, grows up between childhood play and the rhythms of rural life.",
+     "title_en": "Into the fog",
+     "poster": "https://image.tmdb.org/t/p/w500/36fgDq5bvxmVXUlGHpFZLnogB5K.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1668876,
+     "lbSlug": "into-the-fog-2026",
+     "duracion_min": 25
+    },
+    {
+     "titulo": "El cazador",
+     "director": "Manuel Villa, Luciana Riso",
+     "pais": "Colombia",
+     "anio": 2026,
+     "sinopsis": "En un paisaje ondulante, la tierra es escrita y reescrita por El Cazador. La relación entre él y el territorio revelan la esencia de una geografía. Su obsesión por el oro lo lleva a una búsqueda incesante de tesoros. El poder está en el significado que otorga a lo que encuentra. En las profundidades de la tierra y de sí mismo, descubre la verdad que le permite perpetuar su búsqueda.",
+     "synopsis_en": "Metal detector in hand, the Hunter roams through forest and city in search of treasure. It is his way of life, his calling: the summons of Lord Gold.",
+     "title_en": "The Hunter",
+     "poster": "https://image.tmdb.org/t/p/w500/wg0kTL0ztRoFzEZsNfdGVVFf9FF.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1668874,
+     "lbSlug": "the-hunter-2026-1",
+     "duracion_min": 14
+    },
+    {
+     "titulo": "Las formas de la magia",
+     "director": "Maria Paula Lorgia",
+     "pais": "Colombia",
+     "anio": 2026,
+     "sinopsis": "Un año después de la muerte de su padre, el reconocido mago colombiano Gustavo Lorgia, la directora realiza una exploración por sus archivos de video que revelan su trayectoria como artista, su rol como padre y la estética televisiva de una época. Una película que acude al archivo como medio para atravesar el duelo y a la memoria como forma de resistir a la desaparición.",
+     "title_en": "Las Formas de la Magia",
+     "poster": "https://image.tmdb.org/t/p/w500/lEWolBB40mm3KON8u2dWnPk0cVJ.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1668889,
+     "lbSlug": "las-formas-de-la-magia",
+     "duracion_min": 17
+    },
+    {
+     "titulo": "Un aparato para detectar fantasmas",
+     "director": "Mauricio Maldonado",
+     "pais": "Colombia",
+     "anio": 2025,
+     "sinopsis": "Un director de casting regresa a la ladera de la ciudad para reunirse con un actor no profesional y volver a grabar voces para terminar la posproducción de una película. La fantasía y la imaginación chocan bajo la sombra del bosque, donde el juego y la repetición convocan a fantasmas cómplices de la ficción. El encuentro de trabajo con el actor rápidamente se vuelve otra cosa: una experiencia casi de trance, una búsqueda de presencias, un ejercicio de observación y fe.",
+     "synopsis_en": "A casting director reunites with a young non-professional actor with the mission of re-recording some dialogues to complete the post-production of a film. Surrounded by a forest, in the sway of flickering lights, fantasy, imagination, and play collide in an exercise of repetition and hypnosis, where ghosts wander, complicit in the fiction.",
+     "title_en": "A Ghost-Detecting Device",
+     "tmdb_id": 1593571,
+     "lbSlug": "a-ghost-detecting-device",
+     "duracion_min": 18
+    }
+   ],
+   "seccion": "Programa 1. El espesor de las formas"
+  },
+  {
+   "dia": "2026-09-10",
+   "hora": "16:30",
+   "sede": "Cineprox Las Américas Medellín",
+   "_src": "PDF oficial de programación del festival",
+   "duracion_min": 78,
+   "_hora_inferida": true,
+   "acceso": "Boleta en taquilla — sillas numeradas",
+   "titulo": "La tercera opción / Die dritte Option / The Third Option",
+   "obras": [
+    {
+     "titulo": "La tercera opción / Die dritte Option / The Third Option",
+     "director": "Thomas Fürhapter",
+     "pais": "Austria",
+     "anio": 2017,
+     "sinopsis": "Los resultados de las pruebas prenatales pueden plantear a los futuros padres un dilema muy difícil. ¿Debería permitirse el nacimiento de un niño que se sabe tendrá una discapacidad física o mental? La película presenta una nueva perspectiva sobre un tema sumamente controvertido, donde feticidio y aborto empiezan a presentar complejas diferencias. Mientras escuchamos las declaraciones de los médicos, de quienes realizan las pruebas prenatales y las experiencias de las parejas cuyos hijos son diagnosticados con alguna discapacidad, el plano visual sitúa el tema en un contexto mucho más amplio. Esta ópera prima en forma de debate ofrece fascinantes impresiones visuales y sonoras que abordan las cuestiones fundamentales del nacimiento, la muerte, la ética y hasta dónde es posible llegar para “optimizar” las vidas humanas.",
+     "synopsis_en": "„It used to be down to fate whether you gave birth to a disabled child. Today you can choose if you want to keep it or not.“ The results of prenatal screening can present would-be parents with a very difficult dilemma. Should a physically or mentally disabled child be allowed to live – or not be brought into the world at all? Who gets to decide what is normal and worthy of life? The filmic essay DIE DRITTE OPTION puts a new perspective on a highly controversial topic: while we listen to the statements of doctors, those who carry out prenatal screenings and the disturbing experiences of the couples affected, the visual level places the topic in a much wider socio-political context. Director Thomas Fürhapter’s debut film offers fascinating visual and acoustic impressions that tackle the core questions of birth, death, ethics and questions how far we should go when it comes to optimising our lives.",
+     "title_en": "The Third Option",
+     "poster": "https://image.tmdb.org/t/p/w500/Apn8OLc0byo0Lht1oFyFysgntwj.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 476369,
+     "lbSlug": "the-third-option",
+     "duracion_min": 78
+    }
+   ],
+   "seccion": "Febril incisión. El cine de Thomas Fürhapter"
+  },
+  {
    "dia": "2026-09-10",
    "hora": "17:30",
-   "sede": "ITM - Facultad de Artes y Humanidades",
-   "ciudad": "Medellín",
-   "sala": ""
+   "sede": "Centro Colombo Americano Sede centro sala 2 Medellín",
+   "_src": "PDF oficial de programación del festival",
+   "duracion_min": 110,
+   "acceso": "Entrada libre",
+   "titulo": "Sobre cosas que me han pasado",
+   "obras": [
+    {
+     "titulo": "Sobre cosas que me han pasado",
+     "director": "José Luis Torres Leiva",
+     "pais": "Chile",
+     "anio": 2018,
+     "sinopsis": "Sobre cosas que me han pasado está basado en el libro del escritor Marcelo Matthey, en el que narra su propia vida. Sus constantes paseos por calles, casas y playas son volcados en anotaciones de lo que vio, sintió o pensó durante esos desplazamientos o momentos, pero rescatando casi solo los procesos, la línea de tiempo en que las cosas ocurren y pasan por la cabeza, el rastro de las asociaciones que se suceden, así como se suceden los pasos de alguien que camina en una calle. Impresiones inmediatas, momentos fugaces que normalmente se pierden en el tiempo y que quedan captados en imágenes y sonidos.",
+     "synopsis_en": "Based on the book by author Marcelo Matthey, this short film narrates his own life in a style reminiscent of school compositions. His constant strolls through streets, houses and beaches are recorded in notes of what he saw, felt or thought during these wanderings or moments, but almost only recalling the processes, the timeline in which things occur and come to mind, the trail of associations coming one after the other, like the steps of a person walking along a street. Immediate impressions, fleeting moments normally lost in time and which are captured in the images and sounds of this film.",
+     "title_en": "About Things That Happened to Me",
+     "poster": "https://image.tmdb.org/t/p/w500/r9YimsSrZeMtkRg1HNAHWovaV3H.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 573814,
+     "lbSlug": "about-things-that-happened-to-me",
+     "duracion_min": 15
+    }
+   ],
+   "seccion": "La primavera llega para los que esperan. El cine de José Luis Torres Leiva"
+  },
+  {
+   "dia": "2026-09-10",
+   "hora": "17:30",
+   "sede": "ITM – Facultad de Artes y Humanidades Sede La Floresta Medellín",
+   "_src": "PDF oficial de programación del festival",
+   "duracion_min": 98,
+   "acceso": "Entrada libre",
+   "titulo": "Homenaje a la obra de Philip Henry Gosse",
+   "obras": [
+    {
+     "titulo": "Homenaje a la obra de Philip Henry Gosse",
+     "director": "Pablo Martín Weber",
+     "pais": "Argentina",
+     "anio": 2020,
+     "sinopsis": "Sentado en su computadora, un director argentino reflexiona sobre los postulados metafísicos del historiador natural británico Philip Henry Gosse mientras experimenta con imágenes y sonidos guardados en su base de datos personal.",
+     "synopsis_en": "Sitting at his computer, an Argentine director reflects on the metaphysical postulates of British natural historian Philip Henry Gosse, while he experiments with images and sounds saved in his personal database.",
+     "title_en": "Homage to the Work of Philip Henry Gosse",
+     "poster": "https://image.tmdb.org/t/p/w500/3TitWtQ1TYwy6XxYas0xSwvxfZk.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 764439,
+     "lbSlug": "homage-to-the-work-of-philip-henry-gosse",
+     "duracion_min": 22
+    }
+   ],
+   "seccion": "Historia(s) del cine: Argentina. Curaduría de José Miccio"
+  },
+  {
+   "dia": "2026-09-10",
+   "hora": "18:00",
+   "sede": "Teatro Caribe Itagüí",
+   "_src": "hoja oficial del festival (orden de programas)",
+   "duracion_min": 64,
+   "acceso": "Entrada libre",
+   "titulo": "Competencia Nuevas Voces Programa 2",
+   "obras": [
+    {
+     "titulo": "Para no volver",
+     "director": "Tania Galvis",
+     "pais": "Colombia",
+     "anio": 2026,
+     "sinopsis": "Cuando Karina se entera de que está embarazada del bebé de Charlie, ella y su mejor amiga Eli se disponen a encontrarlo por las calles nocturnas de Santa Marta. En el camino, se enfrentan al deseo, la maternidad y su vínculo cambiante. Al amanecer, el mar las abraza, y vuelven a jugar como niñas.",
+     "title_en": "Para no volver",
+     "poster": "https://image.tmdb.org/t/p/w500/k2RvfqR0QSL4D5PzFkkomzRZJ8q.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1743118,
+     "lbSlug": "para-no-volver",
+     "duracion_min": 9
+    },
+    {
+     "titulo": "El Salto",
+     "director": "Jerónimo Rincón",
+     "pais": "Colombia",
+     "anio": 2026,
+     "sinopsis": "Según el mito indígena Muisca, la llanura de Bogotá alguna vez fue inundada por arroyos que amenazaban con arrasarlo todo. Apareció entonces el dios Bochica, quien con su bastón hirió la serranía y abrió paso a sus aguas represadas, formando así el Salto del Tequendama. En la orilla del precipicio, el río Bogotá se lanza sobre un banco de piedras. Allí se estrella y se arroja en forma de espumas y vapores hacia el abismo que lo espera.",
+     "title_en": "El Salto",
+     "poster": "https://image.tmdb.org/t/p/w500/3xkU5BM4aLULnvBZu0mVntXbHrA.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1686065,
+     "lbSlug": "el-salto-1",
+     "duracion_min": 12
+    },
+    {
+     "titulo": "Gramática Práctica Italiana",
+     "director": "Daniel Cortés",
+     "pais": "Colombia",
+     "anio": 2026,
+     "sinopsis": "Miguel y su familia se preparan para emigrar de Cuba a Italia, donde ya vive su madre. Mientras esperan, comienzan a dar el primer paso en el viaje de todo migrante: aprender el idioma del país al que quieren mudarse.",
+     "synopsis_en": "Miguel and his family are preparing to emigrate from Cuba to Italy where his mother already lives. While they wait, they begin to take the first step in the life of every migrant: learning the language of the country they want to go to.",
+     "title_en": "Practical Italian Grammar",
+     "poster": "https://image.tmdb.org/t/p/w500/gtnKGTLEnXIx1WzqWdfmXqdzfkq.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1577564,
+     "lbSlug": "practical-italian-grammar",
+     "duracion_min": 13
+    },
+    {
+     "titulo": "Madres de Nacimiento",
+     "director": "Gloria Isabel Gómez",
+     "pais": "Colombia",
+     "anio": 2026,
+     "sinopsis": "Del olvido y la oscuridad hay imágenes y sonidos que resurgen para controlar los cuerpos de las mujeres latinoamericanas, quienes desde niñas han sido consideradas madres de nacimiento. Pero en estos archivos emerge una interferencia que proviene del pasado para evocar un mensaje de lucha, memoria y libertad.",
+     "title_en": "Madres de Nacimiento",
+     "poster": "https://image.tmdb.org/t/p/w500/kJreh6iEXQZ3NHaROQb7WJNle7l.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1668902,
+     "lbSlug": "madres-de-nacimiento",
+     "duracion_min": 8
+    },
+    {
+     "titulo": "Borrachos mientras escuchamos las gotas caer",
+     "director": "Santiago Gómez",
+     "pais": "Colombia",
+     "anio": 2026,
+     "sinopsis": "Retrata la historia de León Ramírez e Isabel Velásquez, dos ancianos de casi 90 años que atienden una tienda de barrio para sobrevivir. El cortometraje aborda de forma íntima y crítica temas como la resignación de la vejez, el abandono a la tercera edad, el desarraigo territorial y los impactos colaterales del conflicto armado en Colombia (abusos del Estado, ELN y AUC).",
+     "title_en": "Borrachos escuchando las gotas de lluvia caer",
+     "poster": "https://image.tmdb.org/t/p/w500/3R73xUlBIBGXY5q8i9HZYLEidLy.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1743109,
+     "lbSlug": "borrachos-escuchando-las-gotas-de-lluvia",
+     "duracion_min": 22
+    }
+   ],
+   "seccion": "Competencia Nuevas voces"
+  },
+  {
+   "dia": "2026-09-10",
+   "hora": "18:00",
+   "sede": "Teatro Otraparte Biblioteca y Edificio Cultural Otraparte Envigado",
+   "_src": "hoja oficial del festival (orden de programas)",
+   "duracion_min": 102,
+   "acceso": "Entrada libre",
+   "titulo": "Competencia Nuevas Voces Programa 2",
+   "obras": [
+    {
+     "titulo": "Para no volver",
+     "director": "Tania Galvis",
+     "pais": "Colombia",
+     "anio": 2026,
+     "sinopsis": "Cuando Karina se entera de que está embarazada del bebé de Charlie, ella y su mejor amiga Eli se disponen a encontrarlo por las calles nocturnas de Santa Marta. En el camino, se enfrentan al deseo, la maternidad y su vínculo cambiante. Al amanecer, el mar las abraza, y vuelven a jugar como niñas.",
+     "title_en": "Para no volver",
+     "poster": "https://image.tmdb.org/t/p/w500/k2RvfqR0QSL4D5PzFkkomzRZJ8q.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1743118,
+     "lbSlug": "para-no-volver",
+     "duracion_min": 9
+    },
+    {
+     "titulo": "El Salto",
+     "director": "Jerónimo Rincón",
+     "pais": "Colombia",
+     "anio": 2026,
+     "sinopsis": "Según el mito indígena Muisca, la llanura de Bogotá alguna vez fue inundada por arroyos que amenazaban con arrasarlo todo. Apareció entonces el dios Bochica, quien con su bastón hirió la serranía y abrió paso a sus aguas represadas, formando así el Salto del Tequendama. En la orilla del precipicio, el río Bogotá se lanza sobre un banco de piedras. Allí se estrella y se arroja en forma de espumas y vapores hacia el abismo que lo espera.",
+     "title_en": "El Salto",
+     "poster": "https://image.tmdb.org/t/p/w500/3xkU5BM4aLULnvBZu0mVntXbHrA.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1686065,
+     "lbSlug": "el-salto-1",
+     "duracion_min": 12
+    },
+    {
+     "titulo": "Gramática Práctica Italiana",
+     "director": "Daniel Cortés",
+     "pais": "Colombia",
+     "anio": 2026,
+     "sinopsis": "Miguel y su familia se preparan para emigrar de Cuba a Italia, donde ya vive su madre. Mientras esperan, comienzan a dar el primer paso en el viaje de todo migrante: aprender el idioma del país al que quieren mudarse.",
+     "synopsis_en": "Miguel and his family are preparing to emigrate from Cuba to Italy where his mother already lives. While they wait, they begin to take the first step in the life of every migrant: learning the language of the country they want to go to.",
+     "title_en": "Practical Italian Grammar",
+     "poster": "https://image.tmdb.org/t/p/w500/gtnKGTLEnXIx1WzqWdfmXqdzfkq.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1577564,
+     "lbSlug": "practical-italian-grammar",
+     "duracion_min": 13
+    },
+    {
+     "titulo": "Madres de Nacimiento",
+     "director": "Gloria Isabel Gómez",
+     "pais": "Colombia",
+     "anio": 2026,
+     "sinopsis": "Del olvido y la oscuridad hay imágenes y sonidos que resurgen para controlar los cuerpos de las mujeres latinoamericanas, quienes desde niñas han sido consideradas madres de nacimiento. Pero en estos archivos emerge una interferencia que proviene del pasado para evocar un mensaje de lucha, memoria y libertad.",
+     "title_en": "Madres de Nacimiento",
+     "poster": "https://image.tmdb.org/t/p/w500/kJreh6iEXQZ3NHaROQb7WJNle7l.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1668902,
+     "lbSlug": "madres-de-nacimiento",
+     "duracion_min": 8
+    },
+    {
+     "titulo": "Borrachos mientras escuchamos las gotas caer",
+     "director": "Santiago Gómez",
+     "pais": "Colombia",
+     "anio": 2026,
+     "sinopsis": "Retrata la historia de León Ramírez e Isabel Velásquez, dos ancianos de casi 90 años que atienden una tienda de barrio para sobrevivir. El cortometraje aborda de forma íntima y crítica temas como la resignación de la vejez, el abandono a la tercera edad, el desarraigo territorial y los impactos colaterales del conflicto armado en Colombia (abusos del Estado, ELN y AUC).",
+     "title_en": "Borrachos escuchando las gotas de lluvia caer",
+     "poster": "https://image.tmdb.org/t/p/w500/3R73xUlBIBGXY5q8i9HZYLEidLy.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1743109,
+     "lbSlug": "borrachos-escuchando-las-gotas-de-lluvia",
+     "duracion_min": 22
+    }
+   ],
+   "seccion": "Competencia Nuevas voces"
+  },
+  {
+   "dia": "2026-09-10",
+   "hora": "19:00",
+   "sede": "Centro Colombo Americano Sede centro sala 1 Medellín",
+   "_src": "hoja oficial del festival (conversatorios y charlas)",
+   "duracion_min": 63,
+   "acceso": "Entrada libre",
+   "titulo": "Leonie Rodrian: Contra la falsa intensidad",
+   "obras": [
+    {
+     "titulo": "Auslandsreise / Viaje al extranjero",
+     "director": "Ted Fendt",
+     "anio": 2026,
+     "synopsis_en": "A year in Berlin: Leonie wanders through the city and the texts of Anna Maria Ortese. Speaking with friends and translator Sigrid Vagt, she is also looking for the narrative threads of her own life. A film of reading shot in glowing, matter-of-fact 16mm.",
+     "title_en": "Foreign Travel",
+     "poster": "https://image.tmdb.org/t/p/w500/cCWN7cipEZAxLvwCPVbnH9LvZrs.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1616882,
+     "lbSlug": "foreign-travel",
+     "duracion_min": 63
+    }
+   ],
+   "_charla": {
+    "descripcion": "Proyección de la película Viaje al extranjero y diálogo posterior.",
+    "invitados": "Leonie Rodrian, Pablo Roldán"
+   },
+   "seccion": "Competencia central"
+  },
+  {
+   "dia": "2026-09-10",
+   "hora": "19:00",
+   "sede": "La Capilla del Claustro Comfama Medellín",
+   "_src": "hoja oficial del festival (conversatorios y charlas)",
+   "duracion_min": 82,
+   "acceso": "Entrada libre",
+   "titulo": "Leonie Rodrian: Contra la falsa intensidad",
+   "obras": [
+    {
+     "titulo": "Ich denke oft an Hawaii / Muchas veces pienso en Hawái",
+     "director": "Elfi Mikesch",
+     "anio": 1978,
+     "synopsis_en": "Semi-documentary film about the everyday life of a 16-year-old schoolgirl in Berlin who lives with her single mother on the outskirts of West Berlin. Her father, a soldier from Puerto Rico, has left the family. With the help of the Hawaiian postcards and records he left behind, the young woman repeatedly dreams herself into an idyllic fantasy world while performing her monotonous household chores. Director Elfie Mikesch visualizes these dream states using stylistic devices reminiscent of advertising films.",
+     "title_en": "I Often Think of Hawaii",
+     "poster": "https://image.tmdb.org/t/p/w500/zb4dfHHVs4FLadYV9ixD3VsnJhc.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 512475,
+     "lbSlug": "i-often-think-of-hawaii",
+     "duracion_min": 82
+    }
+   ],
+   "_charla": {
+    "descripcion": "Proyección de la película Viaje al extranjero y diálogo posterior.",
+    "invitados": "Leonie Rodrian, Pablo Roldán"
+   },
+   "seccion": "Iluminaciones"
+  },
+  {
+   "dia": "2026-09-10",
+   "hora": "19:00",
+   "sede": "Terko Copacabana",
+   "_src": "hoja oficial del festival (conversatorios y charlas)",
+   "duracion_min": 110,
+   "acceso": "Entrada libre",
+   "titulo": "Leonie Rodrian: Contra la falsa intensidad",
+   "obras": [
+    {
+     "titulo": "El cielo, la tierra y la lluvia",
+     "director": "José Luis Torres Leiva",
+     "pais": "Chile",
+     "anio": 2008,
+     "sinopsis": "En el sur de Chile, un paisaje rural frio y lluvioso parece ganar terreno hasta borrar definitivamente cualquier horizonte de escape. Ana, Verónica, Marta y Toro son cuatro personas solitarias que viven en la rutina y el silencio, aún así, se acompañan sin necesidad de decir nada. Buscan amor, sexo, afectos familiares y espacios y tiempos propios no sólo para desprenderse de la soledad sino también, para, finalmente, encontrarse ellos mismos.",
+     "synopsis_en": "Ana, Verónica, Marta, and Toro are four lonely people who live an unadventurous and quiet existence in southern Chile. They are with each other without the need of using words, trying to save themselves in a stealthy and extreme way. In order not only of getting away of the loneliness that constitutes their innermost core, but also of finding themselves, they reach for each other to get brotherly and sexual love, affection, and a space and time of their own.",
+     "title_en": "The Sky, the Earth and the Rain",
+     "poster": "https://image.tmdb.org/t/p/w500/xunivOZ0KL9vGlF4Ar3RcnREZaN.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 102339,
+     "lbSlug": "the-sky-the-earth-and-the-rain",
+     "duracion_min": 110
+    }
+   ],
+   "_charla": {
+    "descripcion": "Proyección de la película Viaje al extranjero y diálogo posterior.",
+    "invitados": "Leonie Rodrian, Pablo Roldán"
+   },
+   "seccion": "La primavera llega para los que esperan. El cine de José Luis Torres Leiva"
+  },
+  {
+   "dia": "2026-09-10",
+   "hora": "19:30",
+   "sede": "Centro Colombo Americano Sede centro sala 2 Medellín",
+   "_src": "hoja oficial del festival (orden de programas)",
+   "duracion_min": 43,
+   "acceso": "Entrada libre",
+   "titulo": "Fuera de competencia programa 2",
+   "obras": [
+    {
+     "titulo": "Parece el mundo",
+     "director": "Santiago Quirama",
+     "pais": "Colombia",
+     "anio": 2026,
+     "sinopsis": "Al anochecer, la casa de Héctor se convierte en un lugar de excesos. Allí ocurre la rutina de descanso donde las historias y misterios que abundan en su comunidad se comparten sin afán ni orden, delineando una silueta íntima del territorio. Esta es una película ociosa y derrochona.",
+     "synopsis_en": "At sundown, Hector’s home becomes a place of excess. There, the day dissolves into a ritual of rest where the community’s stories and mysteries are shared freely, without order, tracing an intimate silhouette of the whole territory. This film is about this necessary waste of gossip.",
+     "title_en": "It Seems The World",
+     "poster": "https://image.tmdb.org/t/p/w500/dGRVXgQEv0mncpyLI5nqu9KsMVF.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1661938,
+     "lbSlug": "it-seems-the-world",
+     "duracion_min": 38
+    },
+    {
+     "titulo": "Memorias Encontradas Numa Banheira",
+     "director": "Leonardo Pirondi",
+     "pais": "Colombia",
+     "anio": 2025,
+     "sinopsis": "Esta película se proyecta junto a: Parece el mundo (Santiago Quirama)",
+     "synopsis_en": "In Stanislaw Lem's book of the same title, a paper-destroying blight obliterated much of Earth's written history—except for what's in the book. In this film, we look at a similar but unmarked future, perhaps one less distant than Lem's 3140s. Amid the rubble of an uncertain setting, the narrated soundtrack reads from the last surviving parts of some bound pages, perhaps a reporter's notebook, a dream diary, or a book manuscript.",
+     "title_en": "Memoirs Found in a Bathtub",
+     "poster": "https://image.tmdb.org/t/p/w500/52agtC0zM0ndKGGnBO4NpRjg6mF.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1504896,
+     "lbSlug": "memoirs-found-in-a-bathtub",
+     "duracion_min": 4
+    }
+   ],
+   "seccion": "Programa 2. Teoremas sobre la mirada"
+  },
+  {
+   "dia": "2026-09-11",
+   "hora": "09:00",
+   "sede": "Centro Cultural y Educativo Fundación Diego Echavarría Misas Itagüí",
+   "_src": "PDF oficial de programación del festival",
+   "duracion_min": 120,
+   "acceso": "Entrada libre con inscripción previa",
+   "titulo": "Seminario de la imagen con Luciana Decker",
+   "obras": []
+  },
+  {
+   "dia": "2026-09-11",
+   "hora": "14:00",
+   "sede": "Centro Colombo Americano Sede centro sala 1 Medellín",
+   "_src": "PDF oficial de programación del festival",
+   "duracion_min": 78,
+   "acceso": "Entrada libre",
+   "titulo": "La tercera opción / Die dritte Option / The Third Option",
+   "obras": [
+    {
+     "titulo": "La tercera opción / Die dritte Option / The Third Option",
+     "director": "Thomas Fürhapter",
+     "pais": "Austria",
+     "anio": 2017,
+     "sinopsis": "Los resultados de las pruebas prenatales pueden plantear a los futuros padres un dilema muy difícil. ¿Debería permitirse el nacimiento de un niño que se sabe tendrá una discapacidad física o mental? La película presenta una nueva perspectiva sobre un tema sumamente controvertido, donde feticidio y aborto empiezan a presentar complejas diferencias. Mientras escuchamos las declaraciones de los médicos, de quienes realizan las pruebas prenatales y las experiencias de las parejas cuyos hijos son diagnosticados con alguna discapacidad, el plano visual sitúa el tema en un contexto mucho más amplio. Esta ópera prima en forma de debate ofrece fascinantes impresiones visuales y sonoras que abordan las cuestiones fundamentales del nacimiento, la muerte, la ética y hasta dónde es posible llegar para “optimizar” las vidas humanas.",
+     "synopsis_en": "„It used to be down to fate whether you gave birth to a disabled child. Today you can choose if you want to keep it or not.“ The results of prenatal screening can present would-be parents with a very difficult dilemma. Should a physically or mentally disabled child be allowed to live – or not be brought into the world at all? Who gets to decide what is normal and worthy of life? The filmic essay DIE DRITTE OPTION puts a new perspective on a highly controversial topic: while we listen to the statements of doctors, those who carry out prenatal screenings and the disturbing experiences of the couples affected, the visual level places the topic in a much wider socio-political context. Director Thomas Fürhapter’s debut film offers fascinating visual and acoustic impressions that tackle the core questions of birth, death, ethics and questions how far we should go when it comes to optimising our lives.",
+     "title_en": "The Third Option",
+     "poster": "https://image.tmdb.org/t/p/w500/Apn8OLc0byo0Lht1oFyFysgntwj.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 476369,
+     "lbSlug": "the-third-option",
+     "duracion_min": 78
+    }
+   ],
+   "seccion": "Febril incisión. El cine de Thomas Fürhapter"
+  },
+  {
+   "dia": "2026-09-11",
+   "hora": "16:00",
+   "sede": "Biblioteca Comfama Bello Centro Bello",
+   "_src": "PDF oficial de programación del festival",
+   "duracion_min": 94,
+   "acceso": "Entrada libre",
+   "titulo": "Vendrá la muerte y tendrá tus ojos",
+   "obras": [
+    {
+     "titulo": "Vendrá la muerte y tendrá tus ojos",
+     "director": "José Luis Torres Leiva",
+     "pais": "Chile",
+     "anio": 2019,
+     "sinopsis": "Dos mujeres que han pasado toda su vida juntas deben lidiar con la enfermedad que afecta a una de ellas. La mujer enferma decide no recibir tratamiento y se mudan a una cabaña en el bosque para esperar el día en que la muerte llegue a sus vidas. La situación ve resurgir el amor que el tiempo había enterrado bajo la rutina. Poco a poco, su relación se fortalecerá a medida que la muerte pase su tiempo fuera de la cabaña.",
+     "synopsis_en": "Two women who have spent their whole lives together must deal with the illness affecting one of them. The sick woman decides not to have treatment and they move into a cabin in the woods to wait for the day that death will come into their lives. The situation sees the resurfacing of the love that time had buried under the routine. Gradually their relationship will strengthen as death bides its time outside the cabin.",
+     "title_en": "Death Will Come and Shall Have Your Eyes",
+     "poster": "https://image.tmdb.org/t/p/w500/4JGrPKDZAPK3LFCrdY8zEnTjMeX.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 614456,
+     "lbSlug": "death-will-come-and-shall-have-your-eyes",
+     "duracion_min": 86
+    }
+   ],
+   "seccion": "La primavera llega para los que esperan. El cine de José Luis Torres Leiva"
+  },
+  {
+   "dia": "2026-09-11",
+   "hora": "16:00",
+   "sede": "Centro Colombo Americano Sede centro sala 1 Medellín",
+   "_src": "PDF oficial de programación del festival",
+   "duracion_min": 110,
+   "acceso": "Entrada libre",
+   "titulo": "El cielo, la tierra y la lluvia",
+   "obras": [
+    {
+     "titulo": "El cielo, la tierra y la lluvia",
+     "director": "José Luis Torres Leiva",
+     "pais": "Chile",
+     "anio": 2008,
+     "sinopsis": "En el sur de Chile, un paisaje rural frio y lluvioso parece ganar terreno hasta borrar definitivamente cualquier horizonte de escape. Ana, Verónica, Marta y Toro son cuatro personas solitarias que viven en la rutina y el silencio, aún así, se acompañan sin necesidad de decir nada. Buscan amor, sexo, afectos familiares y espacios y tiempos propios no sólo para desprenderse de la soledad sino también, para, finalmente, encontrarse ellos mismos.",
+     "synopsis_en": "Ana, Verónica, Marta, and Toro are four lonely people who live an unadventurous and quiet existence in southern Chile. They are with each other without the need of using words, trying to save themselves in a stealthy and extreme way. In order not only of getting away of the loneliness that constitutes their innermost core, but also of finding themselves, they reach for each other to get brotherly and sexual love, affection, and a space and time of their own.",
+     "title_en": "The Sky, the Earth and the Rain",
+     "poster": "https://image.tmdb.org/t/p/w500/xunivOZ0KL9vGlF4Ar3RcnREZaN.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 102339,
+     "lbSlug": "the-sky-the-earth-and-the-rain",
+     "duracion_min": 110
+    }
+   ],
+   "seccion": "La primavera llega para los que esperan. El cine de José Luis Torres Leiva"
+  },
+  {
+   "dia": "2026-09-11",
+   "hora": "16:30",
+   "sede": "Cineprox Las Américas Medellín",
+   "_src": "PDF oficial de programación del festival",
+   "duracion_min": 97,
+   "acceso": "Boleta en taquilla — sillas numeradas",
+   "titulo": "Cairo Streets / Las calles de El Cairo",
+   "obras": [
+    {
+     "titulo": "Cairo Streets / Las calles de El Cairo",
+     "director": "Abdellah Taïa",
+     "anio": 2025,
+     "synopsis_en": "January, 2007: I am back in Cairo. For work. You have changed your phone number, Omar. I must find you... I love you. Abdellah.",
+     "title_en": "Cairo Streets",
+     "poster": "https://image.tmdb.org/t/p/w500/4QXDMHcpG3rKvJ7sLP1Fac4lmfn.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1506824,
+     "lbSlug": "cairo-streets",
+     "duracion_min": 19
+    }
+   ],
+   "seccion": "Competencia central"
+  },
+  {
+   "dia": "2026-09-11",
+   "hora": "17:00",
+   "sede": "Centro Colombo Americano Sede centro sala 2 Medellín",
+   "_src": "PDF oficial de programación del festival",
+   "duracion_min": 71,
+   "acceso": "Entrada libre",
+   "titulo": "Programa de cortometrajes Rajenda Gour",
+   "obras": []
+  },
+  {
+   "dia": "2026-09-11",
+   "hora": "18:00",
+   "sede": "Teatro Caribe Itagüí",
+   "_src": "hoja oficial del festival (orden de programas)",
+   "duracion_min": 67,
+   "acceso": "Entrada libre",
+   "titulo": "Competencia de cortometrajes Programa 3",
+   "obras": [
+    {
+     "titulo": "Crash",
+     "director": "Gabriela Mureb",
+     "pais": "Alemania, Brasil",
+     "anio": 2026,
+     "synopsis_en": "The film follows a day's work at the BMW Recycling and Dismantling Center in Munich, documenting step-by-step the final stage of a car's dismantling process.",
+     "title_en": "Crash",
+     "poster": "https://image.tmdb.org/t/p/w500/xt9Dfhbzwxuo2MQvsRox9Ca2IsN.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1620642,
+     "lbSlug": "crash-2026-1",
+     "duracion_min": 19
+    },
+    {
+     "titulo": "Chuura",
+     "director": "Chuuraa",
+     "pais": "Rusia, Reino Unido",
+     "anio": 2026,
+     "synopsis_en": "In the remote Siberian Arctic, an Indigenous Sakha scientist descends into the depths of the melting permafrost. Searching for an ancient creature, he makes his way through the dangerous, claustrophobic caves to the mythical realm of the Underworld.",
+     "title_en": "Chuuraa",
+     "poster": "https://image.tmdb.org/t/p/w500/u3ZxWARL2C2VooiHKsGrRyHiEU7.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1614693,
+     "lbSlug": "chuuraa",
+     "duracion_min": 17
+    },
+    {
+     "titulo": "Pies al revés",
+     "director": "Elodie Arpa",
+     "pais": "Colombia",
+     "anio": 2025,
+     "synopsis_en": "In the Colombian Amazon, a gaze drifts between the murky waters of the rivers and the forest, a silent witness to the coexistence between the elements and the inhabitants of Puerto Nariño.",
+     "title_en": "Feet The Other Way Around",
+     "poster": "https://image.tmdb.org/t/p/w500/fE00OvtKSrqGC7sjpYZLxffBKGz.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1645136,
+     "lbSlug": "feet-the-other-way-around",
+     "duracion_min": 18
+    },
+    {
+     "titulo": "Certas formas",
+     "director": "Luiz Afonso Morêda",
+     "pais": "Brasil",
+     "anio": 2026,
+     "title_en": "Certas Formas",
+     "poster": "https://image.tmdb.org/t/p/w500/teLkpQSkMBPGiaBMQwxuV3nF1wf.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1660730,
+     "lbSlug": "certas-formas",
+     "duracion_min": 17
+    },
+    {
+     "titulo": "O",
+     "director": "Francisca Alarcão",
+     "pais": "España, Portugal",
+     "anio": 2026,
+     "synopsis_en": "For as long as she remembers, Francisca lives with an inexplicable and uncontrollable aversion to belly buttons. Nothing makes her more anxious than this simple part of the body and the shapes in the world that resemble it. When therapy isn't enough to solve her cherished phobia , Francisca turns to other types of methods - without any scientific basis and not recommended for anyone who suffers from the same condition.",
+     "title_en": "o",
+     "poster": "https://image.tmdb.org/t/p/w500/nqiifO5BF1gEplXiTzofpR03Dlt.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1599922,
+     "lbSlug": "o-2026",
+     "duracion_min": 14
+    }
+   ],
+   "seccion": "Competencia de cortometrajes"
+  },
+  {
+   "dia": "2026-09-11",
+   "hora": "18:30",
+   "sede": "Cine MAMM Medellín",
+   "_src": "PDF oficial de programación del festival",
+   "duracion_min": 115,
+   "acceso": "Boleta en el primer piso del museo",
+   "titulo": "Procès d’un jeune poète / Juicio a un joven poeta",
+   "obras": [
+    {
+     "titulo": "Procès d’un jeune poète / Juicio a un joven poeta",
+     "director": "Philippe Van Cutsem",
+     "anio": 2025,
+     "title_en": "Procès d’un jeune poète",
+     "tmdb_id": 1563010,
+     "lbSlug": "proces-dun-jeune-poete",
+     "duracion_min": 115
+    }
+   ],
+   "seccion": "Competencia central"
+  },
+  {
+   "dia": "2026-09-11",
+   "hora": "19:00",
+   "sede": "Centro Colombo Americano Sede centro sala 2 Medellín",
+   "_src": "hoja oficial del festival (orden de programas)",
+   "duracion_min": 92,
+   "acceso": "Entrada libre",
+   "titulo": "Competencia de cortometrajes Programa 2",
+   "obras": [
+    {
+     "titulo": "Our Homes Do Not Exist",
+     "director": "Anna Lamour",
+     "pais": "Grecia",
+     "anio": 2025,
+     "title_en": "Nos maisons n'existent pas",
+     "poster": "https://image.tmdb.org/t/p/w500/A6X3xnhhq4RuCb2Fsg45AnnWpdP.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1645704,
+     "lbSlug": "nos-maisons-nexistent-pas",
+     "duracion_min": 15
+    },
+    {
+     "titulo": "Koki, Ciao",
+     "director": "Quenton Miller",
+     "pais": "Países bajos",
+     "anio": 2025,
+     "sinopsis": "La autobiografía de Koki, un loro inmortal, que retrata la vida de este animal único, fiel compañero del mariscal Tito, líder de Yugoslavia durante 35 años. Un rico archivo fotográfico revive los recuerdos enjaulados de esta cacatúa, que tuvo el honor de conocer a estrellas de Hollywood y a dictadores sedientos de sangre. (GIFF)",
+     "synopsis_en": "The autobiography of Koki, an immortal parrot. Artist Quenton Miller portrays the life of this unique animal, a loyal comrade of Marshal Tito, leader of Yugoslavia for 35 years. A rich photographic archive relives the caged memories of this cockatoo, who had the honour of meeting Hollywood stars, and bloodthirsty dictators. A funny portrait, non-aligned with the documentary orthodoxy, that deals with the false constructions of history.",
+     "title_en": "Koki, Ciao",
+     "poster": "https://image.tmdb.org/t/p/w500/7ab2HCntF491JzIX6EcNASORKb.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1416378,
+     "lbSlug": "koki-ciao",
+     "duracion_min": 12
+    },
+    {
+     "titulo": "Mirando al sur",
+     "director": "Felipe López Gómez",
+     "pais": "Colombia",
+     "anio": 2026,
+     "synopsis_en": "The voice we hear comes from far off-screen, thousands of kilometres away from the vistas of Toronto unfolding before us. These are countless voicemails from Colombia left by the director’s loving grandmother.",
+     "title_en": "Facing South",
+     "poster": "https://image.tmdb.org/t/p/w500/iVHZ1lC2Ste5289HAOkk5ft6c6e.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1657831,
+     "lbSlug": "facing-south",
+     "duracion_min": 34
+    },
+    {
+     "titulo": "Bright Summer Days",
+     "director": "Nevena Desivojevic",
+     "pais": "Serbia",
+     "anio": 2025,
+     "synopsis_en": "Two sisters meet after a few years of being apart. The past becomes the only thing that binds them now.",
+     "title_en": "Bright Summer Days",
+     "poster": "https://image.tmdb.org/t/p/w500/aTwLabtZ5BU2DpqvlSVEOu2tTqe.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1485440,
+     "lbSlug": "bright-summer-days",
+     "duracion_min": 15
+    },
+    {
+     "titulo": "Prueba de cámara",
+     "director": "David Correa",
+     "pais": "Colombia",
+     "anio": 2026,
+     "sinopsis": "Toda carta es un recuerdo, dedicado a películas en donde el archivo familiar aparece como una forma de correspondencia íntima: cartas a hijos, a padres, a abuelos, a quienes estuvieron y también a quienes fuimos. Entre fotografías, archivos domésticos, voces, objetos y gestos heredados, este programa reúne formas de mirar hacia atrás para decir algo en el presente: reconstruir un vínculo, nombrar una ausencia, acompañar una pérdida o afirmar una identidad.",
+     "title_en": "Prueba de cámara",
+     "poster": "https://image.tmdb.org/t/p/w500/iYSrgk7v0pSWbAA4YFF5CP8mi0j.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1743099,
+     "lbSlug": "prueba-de-camara",
+     "duracion_min": 10
+    }
+   ],
+   "seccion": "Competencia de cortometrajes"
+  },
+  {
+   "dia": "2026-09-11",
+   "hora": "19:00",
+   "sede": "Terko Copacabana",
+   "_src": "hoja oficial del festival (orden de programas)",
+   "duracion_min": 86,
+   "acceso": "Entrada libre",
+   "titulo": "Competencia de cortometrajes Programa 2",
+   "obras": [
+    {
+     "titulo": "Our Homes Do Not Exist",
+     "director": "Anna Lamour",
+     "pais": "Grecia",
+     "anio": 2025,
+     "title_en": "Nos maisons n'existent pas",
+     "poster": "https://image.tmdb.org/t/p/w500/A6X3xnhhq4RuCb2Fsg45AnnWpdP.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1645704,
+     "lbSlug": "nos-maisons-nexistent-pas",
+     "duracion_min": 15
+    },
+    {
+     "titulo": "Koki, Ciao",
+     "director": "Quenton Miller",
+     "pais": "Países bajos",
+     "anio": 2025,
+     "sinopsis": "La autobiografía de Koki, un loro inmortal, que retrata la vida de este animal único, fiel compañero del mariscal Tito, líder de Yugoslavia durante 35 años. Un rico archivo fotográfico revive los recuerdos enjaulados de esta cacatúa, que tuvo el honor de conocer a estrellas de Hollywood y a dictadores sedientos de sangre. (GIFF)",
+     "synopsis_en": "The autobiography of Koki, an immortal parrot. Artist Quenton Miller portrays the life of this unique animal, a loyal comrade of Marshal Tito, leader of Yugoslavia for 35 years. A rich photographic archive relives the caged memories of this cockatoo, who had the honour of meeting Hollywood stars, and bloodthirsty dictators. A funny portrait, non-aligned with the documentary orthodoxy, that deals with the false constructions of history.",
+     "title_en": "Koki, Ciao",
+     "poster": "https://image.tmdb.org/t/p/w500/7ab2HCntF491JzIX6EcNASORKb.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1416378,
+     "lbSlug": "koki-ciao",
+     "duracion_min": 12
+    },
+    {
+     "titulo": "Mirando al sur",
+     "director": "Felipe López Gómez",
+     "pais": "Colombia",
+     "anio": 2026,
+     "synopsis_en": "The voice we hear comes from far off-screen, thousands of kilometres away from the vistas of Toronto unfolding before us. These are countless voicemails from Colombia left by the director’s loving grandmother.",
+     "title_en": "Facing South",
+     "poster": "https://image.tmdb.org/t/p/w500/iVHZ1lC2Ste5289HAOkk5ft6c6e.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1657831,
+     "lbSlug": "facing-south",
+     "duracion_min": 34
+    },
+    {
+     "titulo": "Bright Summer Days",
+     "director": "Nevena Desivojevic",
+     "pais": "Serbia",
+     "anio": 2025,
+     "synopsis_en": "Two sisters meet after a few years of being apart. The past becomes the only thing that binds them now.",
+     "title_en": "Bright Summer Days",
+     "poster": "https://image.tmdb.org/t/p/w500/aTwLabtZ5BU2DpqvlSVEOu2tTqe.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1485440,
+     "lbSlug": "bright-summer-days",
+     "duracion_min": 15
+    },
+    {
+     "titulo": "Prueba de cámara",
+     "director": "David Correa",
+     "pais": "Colombia",
+     "anio": 2026,
+     "sinopsis": "Toda carta es un recuerdo, dedicado a películas en donde el archivo familiar aparece como una forma de correspondencia íntima: cartas a hijos, a padres, a abuelos, a quienes estuvieron y también a quienes fuimos. Entre fotografías, archivos domésticos, voces, objetos y gestos heredados, este programa reúne formas de mirar hacia atrás para decir algo en el presente: reconstruir un vínculo, nombrar una ausencia, acompañar una pérdida o afirmar una identidad.",
+     "title_en": "Prueba de cámara",
+     "poster": "https://image.tmdb.org/t/p/w500/iYSrgk7v0pSWbAA4YFF5CP8mi0j.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1743099,
+     "lbSlug": "prueba-de-camara",
+     "duracion_min": 10
+    }
+   ],
+   "seccion": "Competencia de cortometrajes"
+  },
+  {
+   "dia": "2026-09-12",
+   "hora": "14:30",
+   "sede": "Centro Colombo Americano Sede centro sala 1 Medellín",
+   "_src": "PDF oficial de programación del festival",
+   "duracion_min": 100,
+   "acceso": "Entrada libre",
+   "titulo": "A Árvore do Conhecimento / El árbol del conocimiento",
+   "obras": [
+    {
+     "titulo": "A Árvore do Conhecimento / El árbol del conocimiento",
+     "director": "Eugène Green",
+     "anio": 2025,
+     "synopsis_en": "Gaspard, a teenager from the suburbs of Lisbon, falls into the hands of the Ogre, a man who has made a pact with the Devil. The Ogre uses the boy to attract tourists, whom he transforms into animals and then kills. Gaspard escapes with a donkey and a dog that he has grown fond of, and in an enchanted manor, he meets the spirit of Queen D. Maria I.",
+     "title_en": "The Tree of Knowledge",
+     "poster": "https://image.tmdb.org/t/p/w500/yjNjdYCSogOhQAMKShhk0nuGYNn.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1523438,
+     "lbSlug": "the-tree-of-knowledge-2025",
+     "duracion_min": 100
+    }
+   ],
+   "seccion": "Proyecciones especiales"
+  },
+  {
+   "dia": "2026-09-12",
+   "hora": "17:00",
+   "sede": "Centro Colombo Americano Sede centro sala 2 Medellín",
+   "_src": "PDF oficial de programación del festival",
+   "duracion_min": 101,
+   "acceso": "Entrada libre",
+   "titulo": "Was soll'n wir denn machen ohne den Tod / ¿Qué haremos sin la muerte?",
+   "obras": [
+    {
+     "titulo": "Was soll'n wir denn machen ohne den Tod / ¿Qué haremos sin la muerte?",
+     "director": "Elfi Mikesch",
+     "anio": 1980,
+     "synopsis_en": "A documentary film showing life in one of Hamburg’s homes for seniors. Over the course of six months, Elfi Mikesch interviewed and filmed the inhabitants, concentrating on a female couple who are spending the rest of their lives together in a close and intimate relationship.",
+     "title_en": "What Shall We Do Without Death",
+     "poster": "https://image.tmdb.org/t/p/w500/lOBASl74QYuMPKpzkJOIZpZkT9E.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 544319,
+     "lbSlug": "what-shall-we-do-without-death",
+     "duracion_min": 101
+    }
+   ],
+   "seccion": "Iluminaciones"
+  },
+  {
+   "dia": "2026-09-12",
+   "hora": "19:00",
+   "sede": "Centro Colombo Americano Sede centro sala 1 Medellín",
+   "_src": "PDF oficial de programación del festival",
+   "duracion_min": 61,
+   "acceso": "Entrada libre",
+   "titulo": "Iluminaciones",
+   "obras": [
+    {
+     "titulo": "Iluminaciones",
+     "director": "Pablo Llorca",
+     "anio": 2025,
+     "sinopsis": "Cinco chicas y chicos publican periódicamente una revista cultural, una especie de guía del ocio de la ciudad. Cada uno se encarga de un área, desde literatura hasta cine. Y viven historias variadas, tanto entre ellos como con otras personas ajenas al grupo.",
+     "title_en": "Iluminaciones",
+     "poster": "https://image.tmdb.org/t/p/w500/xyGe2E9cKCPhkxQ2lx5rzhxxfIb.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1478518,
+     "lbSlug": "iluminaciones",
+     "duracion_min": 61
+    }
+   ],
+   "seccion": "Función de clausura"
   }
  ]
 }

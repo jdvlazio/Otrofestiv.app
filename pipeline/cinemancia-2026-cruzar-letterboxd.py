@@ -38,10 +38,9 @@ GAP = -0.55           # penalización por hueco: calibrada para que las 2 obras
 UMBRAL = 0.5          # por debajo → a verificar por director
 
 
-def norm(s):
-    s = ''.join(c for c in unicodedata.normalize('NFD', (s or '').lower())
-                if unicodedata.category(c) != 'Mn')
-    return re.sub(r'[^a-z0-9]+', ' ', s).strip()
+# Era una copia literal de lib.norm(). Se importa: una sola definición.
+import lib                                     # noqa: E402
+norm = lib.norm
 
 
 def bajar_lista():
