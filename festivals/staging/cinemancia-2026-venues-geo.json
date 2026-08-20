@@ -85,11 +85,16 @@
  },
  "Centro Cultural y Educativo Fundación Diego Echavarría Misas - Itagüí": {
   "address": "Calle 48 # 51–34, Itagüí, Antioquia",
-  "_nota": "dirección del PDF oficial (pág. 8, «Salas de proyección»); faltan coordenadas"
+  "_nota": "dirección del PDF oficial (pág. 8, «Salas de proyección»); faltan coordenadas",
+  "lat": 6.1724038,
+  "lng": -75.6115791,
+  "_prec": "nominatim",
+  "_match": "Biblioteca Diego Echavarría Misas, Calle 48 # 51-34, Santa María, Itagüí — coincide con la dirección de la pág. 8 del PDF"
  },
  "Teatro Comfama Alfonso Restrepo Moreno - Medellín": {
   "address": "Calle 48 # 43–87, Medellín, Antioquia",
-  "_nota": "dirección del PDF oficial (pág. 8, «Salas de proyección»); faltan coordenadas"
+  "_nota": "dirección del PDF oficial (pág. 8, «Salas de proyección»); faltan coordenadas",
+  "_verificar": "sin coordenadas. Nominatim solo devuelve el Auditorio Comfama de la Calle 90 (Bermejal), que es OTRO edificio. La dirección del PDF es Calle 48 # 43–87; hace falta ubicarla a mano."
  },
  "Teatro Otraparte - Envigado": {
   "address": "Carrera 43A # 27A Sur–11, Envigado, Antioquia",
