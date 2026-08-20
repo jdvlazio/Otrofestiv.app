@@ -83,9 +83,10 @@ deliberada existe la etiqueta `frontera-ok`.
 | `tercertiempo2026` | Tercer Tiempo Fest | Bogotá | 13–19 JUL | Archivado |
 | `fantasofest2026` | FantasoFest | Bogotá | 13–19 JUL | Archivado |
 | `ficma2026` | FICMA | Manizales | 10–17 AGO | desconocido |
-| `ficdeh2026` | FICDEH | Colombia | 12–19 AGO | **Próximo / activo** |
-| `finca2026` | FINCA | Buenos Aires | 12–19 AGO | **Próximo / activo** |
+| `ficdeh2026` | FICDEH | Colombia | 12–19 AGO | Recién terminado |
+| `finca2026` | FINCA | Buenos Aires | 12–19 AGO | Recién terminado |
 | `cineautopsia2026` | CineAutopsia | Bogotá | 21–29 AGO | **Próximo / activo** |
+| `vartex2026` | Vartex | Medellín | 19–22 AGO | **Próximo / activo** |
 | `ficmontanas2026` | Ficmontañas | Salento | JUL 1–5 | Archivado |
 
 ### Features activas (desde `.specify/features/`)

@@ -54,7 +54,10 @@
      "_nota": "el afiche no declara el título de la pieza"
     }
    ],
-   "_src": "afiche oficial de programación (Instagram del festival, lámina 2)"
+   "_src": "afiche oficial de programación (Instagram del festival, lámina 2)",
+   "poster": "/assets/vartex/muestra-internacional.jpg",
+   "posterSource": "editorial",
+   "_poster_src": "fotografía que el festival eligió para este programa, recortada de su lámina de Instagram (post del día 2)"
   },
   {
    "titulo": "Muestra Fashion Film Nacional",
@@ -204,11 +207,12 @@
    "_talleristas": "Andrés Montaño, Carlos Gutiérrez",
    "event_kind": "taller",
    "poster": "/assets/vartex/laboratorio.jpg",
-   "posterSource": "oficial",
+   "posterSource": "editorial",
    "_poster_src": "vartexmedellin.co — arte y texto oficiales del festival",
    "sinopsis": "El taller propone una aproximación al fashion film como lenguaje artístico y narrativo, alejándose de la publicidad tradicional. Durante una jornada intensiva los participantes conocen algunos referentes, hacen ejercicios creativos y producen un fashion film experimental con recursos sencillos y equipos disponibles: cámaras, celulares o cámaras híbridas, luces, fondos. El énfasis está en construir atmósferas más que historias convencionales. Se arman varios equipos con enfoques distintos —joyería, prendas, cuerpo y movimiento— y cada uno desarrolla un fashion film de entre 30 segundos y un minuto.",
    "_sinopsis_src": "vartexmedellin.co — arte y texto oficiales del festival",
-   "tallerista": "Andrés Montaño, Carlos Gutiérrez"
+   "tallerista": "Andrés Montaño, Carlos Gutiérrez",
+   "_poster_nota": "el arte del festival es una FOTOGRAFÍA, no un afiche: en modo `oficial` la card sale a sangre y sin rótulo ni título, y una actividad sin nombre no se reconoce al bajar rápido. Como editorial gana su nombre y su sección."
   },
   {
    "titulo": "Seminario · Apreciación del experimental: nombrar lo inasible",
@@ -363,8 +367,9 @@
    ],
    "_src": "afiche oficial de programación (Instagram del festival, lámina 2)",
    "poster": "/assets/vartex/muestra-local.jpg",
-   "posterSource": "oficial",
-   "_poster_src": "vartexmedellin.co — arte y texto oficiales del festival"
+   "posterSource": "editorial",
+   "_poster_src": "vartexmedellin.co — arte y texto oficiales del festival",
+   "_poster_nota": "el arte del festival es una FOTOGRAFÍA, no un afiche: en modo `oficial` la card sale a sangre y sin rótulo ni título, y una actividad sin nombre no se reconoce al bajar rápido. Como editorial gana su nombre y su sección."
   }
  ]
 }

@@ -139,6 +139,10 @@ export const SECTION_COLORS = {
 //  · Tribeca se omite entero: sus secciones ya están en inglés.
 //  · "Impact Hits"/"Industry Days" (AFF) ya están en inglés → se omiten.
 export const SECTION_EN = {
+  '🌍 Muestra Internacional': 'International Showcase',
+  '🇨🇴 Muestra Nacional':     'National Showcase',
+  '🏆 Muestra Local':         'Official Selection · Local',
+  '🎓 Formación':             'Workshops & Seminar',
   '🔮 Largometrajes': 'Feature Films',
   '🌙 Cortometrajes': 'Short Films',
   '🌱 Raíces del Juego': 'Roots of the Game',
@@ -462,12 +466,13 @@ export const FESTIVAL_CONFIG={
     dayShort_en:{'2026-08-19': 'WED 19', '2026-08-20': 'THU 20', '2026-08-21': 'FRI 21', '2026-08-22': 'SAT 22'},
     dayLong:{'2026-08-19': 'Miércoles 19 de agosto', '2026-08-20': 'Jueves 20 de agosto', '2026-08-21': 'Viernes 21 de agosto', '2026-08-22': 'Sábado 22 de agosto'},
     prioLimit:3,
-    keyArt:'/assets/keyart/vartex2026.jpg',
+    keyArt:'/assets/keyart/vartex2026-v2.jpg',
     // (nota histórica) Sin keyArt al principio: el afiche del festival está en la lámina 1 de su
     // carrusel y las imágenes de su sitio son apaisadas (1200x630). Estirarlas
     // a 2:3 las aplastaría un 65%, muy lejos de lo que tolera la regla. La card
     // cae al respaldo tipográfico hasta que llegue el afiche en vertical.
-    // [FRENO QUITADO SOLO EN LOCAL PARA LA VISTA PREVIA — NO COMMITEAR]
+    // group:'test' — VARTEX 14 NO se publica todavía. Quitar esta línea ES publicar.
+    group:'test',
     tagline:'Muestra de Video y Experimental',
     films:null,posters:null,lbSlugs:{}
   },
@@ -526,6 +531,11 @@ export const ARCHETYPE_COLORS = {
 // Cada sección de cada festival → su arquetipo. Generado por scripts/classify-posters
 // (arquetipos) + decisiones de diseño. Sección nueva sin entrada → gate lo caza.
 export const SECTION_ARCHETYPES = {
+  // VARTEX 14 — muestra de video y experimental, Medellín.
+  '🌍 Muestra Internacional': 'Muestra / País',
+  '🇨🇴 Muestra Nacional':     'Muestra / País',
+  '🏆 Muestra Local':         'Competencia',
+  '🎓 Formación':             'Charlas / Industria',
   // ── CineAutopsia 2026 · Bogotá ────────────────────────────────────────
   '🔬 Destacados': 'Competencia',
   '🌀 Panorama': 'Muestra / País',
