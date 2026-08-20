@@ -209,8 +209,18 @@ def main():
             # Función simple: la obra sale del catálogo por el título crudo.
             halladas = obras_en(f['titulo_crudo'], cat)
             hallada = halladas[0] if halladas else None
-            e['titulo'] = (ch['titulo'] if ch else
-                           (hallada['title'] if hallada else f['titulo_crudo']))
+            # Un PROGRAMA DOBLE se titula con las dos, unidas por «+», que es
+            # como lo escribe el festival en su parrilla. Ponerle el nombre de
+            # la primera escondía la segunda: quien leía «La corazonada» no
+            # tenía manera de saber que también se proyecta «Cairo Streets».
+            if ch:
+                e['titulo'] = ch['titulo']
+            elif len(halladas) > 1:
+                e['titulo'] = ' + '.join(o['title'] for o in halladas)
+            elif hallada:
+                e['titulo'] = hallada['title']
+            else:
+                e['titulo'] = f['titulo_crudo']
             e['obras'] = [obra_de(o) for o in halladas]
             if not hallada: sin_obra.append(f)
             if ch:

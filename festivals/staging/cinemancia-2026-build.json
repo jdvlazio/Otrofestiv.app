@@ -300,7 +300,7 @@
  },
  "films": [
   {
-   "title": "Todas las canciones del mundo",
+   "title": "Todas las canciones del mundo + Lamentos de un balcón",
    "type": "film",
    "section": "⭐ Función inaugural",
    "duration": "88 min",
@@ -335,9 +335,7 @@
      "synopsis": "Lamentos de un balcón es un cortometraje experimental colombiano dirigido por el realizador Hans Chispas. La producción vio la luz en el año 2026 y posee una duración exacta de 4 minutos.",
      "synopsis_lang": "es"
     }
-   ],
-   "lbSlug": "todas-las-canciones-del-mundo",
-   "title_en": "Todas las canciones del mundo"
+   ]
   },
   {
    "title": "Foro de la Crítica Sesión 1 Inscripción previa*",
@@ -395,7 +393,7 @@
    "_programa_original": "Cuartito rosa"
   },
   {
-   "title": "Oublie pas le gruau",
+   "title": "Oublie pas le gruau + Sol menor",
    "type": "film",
    "section": "🏆 Competencia central",
    "duration": "102 min",
@@ -405,8 +403,6 @@
    "venue": "Centro Colombo Americano - Sede centro - Medellín",
    "sala": "Sala 1",
    "has_qa": false,
-   "poster": "https://image.tmdb.org/t/p/w500/ycGFcrpmiCXtidvyom94aDyMqB1.jpg",
-   "posterSource": "tmdb",
    "_src": "PDF oficial de programación del festival",
    "is_free": true,
    "is_cortos": true,
@@ -439,10 +435,7 @@
      "synopsis": "Comienzos de primavera. Una sonata, un tren, una carta. Entre su trabajo como profesor de flauta y los rituales del duelo por la muerte temprana de su mujer, Samuel enfrenta un dilema tras la visita de su hermano.",
      "synopsis_lang": "es"
     }
-   ],
-   "lbSlug": "dont-forget-the-oatmeal",
-   "synopsis_en": "The Barbarian believes he has only a few erections left before death. Cursed to a life in a thrift shop and haunted by family tragedy, he sets his sights on Marie, an alcoholic special-ed teacher. If he must go, he figures, he might as well go out in good company.",
-   "title_en": "Don't Forget the Oatmeal"
+   ]
   },
   {
    "title": "Así llegó la noche",
@@ -494,7 +487,7 @@
    "_programa_original": "Thomas Fülhapter: Febril incisión"
   },
   {
-   "title": "La corazonada",
+   "title": "La corazonada + Cairo Streets / Las calles de El Cairo",
    "type": "film",
    "section": "🏆 Competencia central",
    "duration": "97 min",
@@ -503,8 +496,6 @@
    "day_order": 1,
    "venue": "Teatro Caribe - Itagüí",
    "has_qa": false,
-   "poster": "https://image.tmdb.org/t/p/w500/fvNadz6pkAhjlNQOsC20akHBgoU.jpg",
-   "posterSource": "tmdb",
    "_src": "PDF oficial de programación del festival",
    "is_free": true,
    "is_cortos": true,
@@ -537,13 +528,10 @@
      "synopsis": "Enero de 2007: he vuelto a El Cairo. Por trabajo. Has cambiado de número, Omar. Tengo que encontrarte… Te quiero. Abdellah.",
      "synopsis_lang": "es"
     }
-   ],
-   "lbSlug": "a-heart-as-willing",
-   "synopsis_en": "Nieves runs a swimming pool with her son Martin. One summer, a biker falls for her. Things between them don’t seem to work out, until a filming crew arrives at the pool while scouting for locations and the director decides to put Natacha and the biker in her film.",
-   "title_en": "A Heart as Willing"
+   ]
   },
   {
-   "title": "La tempestá",
+   "title": "La tempestá + No contéis con los dedos + Vampir Cuadecuc",
    "type": "film",
    "section": "💡 Iluminaciones",
    "duration": "99 min",
@@ -552,8 +540,6 @@
    "day_order": 1,
    "venue": "Casa Municipal de la Cultura - Caldas",
    "has_qa": false,
-   "poster": "https://image.tmdb.org/t/p/w500/loK8dBOpWOD5WEnCPQM35ryGRhm.jpg",
-   "posterSource": "tmdb",
    "_src": "PDF oficial de programación del festival",
    "is_free": true,
    "is_cortos": true,
@@ -600,10 +586,7 @@
      "synopsis": "Un ensayo atmosférico, que viene a ser una versión alternativa de «El conde Drácula», película dirigida por Jesús Franco en 1970; una narración fantasmal entre la ficción y la realidad.",
      "synopsis_lang": "es"
     }
-   ],
-   "lbSlug": "the-tempest-2003",
-   "synopsis_en": "Naked bodies are buffeted by water accompanied by the music Il Temporale from the opera La Cenerentola and the overture to Il Barbiere di Siviglia both by Gioacchino Rossini.",
-   "title_en": "The Tempest"
+   ]
   },
   {
    "title": "Foco Alquimia de la luz: Luciana Decker",
@@ -1141,7 +1124,7 @@
    ]
   },
   {
-   "title": "¿Qué historia es ésta y cuál es su final?",
+   "title": "¿Qué historia es ésta y cuál es su final? + Obreras saliendo de la fábrica",
    "type": "film",
    "section": "🌷 La primavera llega para los que esperan. El cine de José Luis Torres Leiva",
    "country": "Chile",
@@ -1152,8 +1135,6 @@
    "day_order": 2,
    "venue": "Casa Municipal de la Cultura - Caldas",
    "has_qa": false,
-   "poster": "https://image.tmdb.org/t/p/w500/3vBg5czvNlm7h01Gra86Zmq16tT.jpg",
-   "posterSource": "tmdb",
    "_src": "PDF oficial de programación del festival",
    "is_free": true,
    "is_cortos": true,
@@ -1186,13 +1167,10 @@
      "synopsis": "Es un día arduo en el trabajo. Un grupo de mujeres termina la jornada, sin embargo, la salida no es solo el fin de la jornada, es el inicio a un viaje, un día de vacaciones.",
      "synopsis_lang": "es"
     }
-   ],
-   "lbSlug": "what-is-this-story-and-how-does-it-end",
-   "synopsis_en": "A prominent Chilean documentary director shares his family album with the film editor of his late works. A review of one hundred photographs and a quiet conversation will rise to memories of the films of one of the most personal filmmakers.",
-   "title_en": "What Is This Story and How Does It End?"
+   ]
   },
   {
-   "title": "El hogar fue sepultado en esa tierra que nunca pudimos encontrar",
+   "title": "El hogar fue sepultado en esa tierra que nunca pudimos encontrar + Decaer",
    "type": "film",
    "section": "✨ Proyecciones especiales",
    "duration": "101 min",
@@ -1202,8 +1180,6 @@
    "venue": "Centro Colombo Americano - Sede centro - Medellín",
    "sala": "Sala 1",
    "has_qa": false,
-   "poster": "https://image.tmdb.org/t/p/w500/sek5YZDIguocEvkRAaCcPb5wKW2.jpg",
-   "posterSource": "tmdb",
    "_src": "PDF oficial de programación del festival",
    "is_free": true,
    "is_cortos": true,
@@ -1235,9 +1211,7 @@
      "synopsis": "Gracias a los chinos por la pólvora, parece que la hubieran hecho para mí. Su invención sucede como un accidente, pensada inicialmente para espantar los espíritus malos. Esta película inicia en China, luego un evento en Cartagena y se acaba siglos después en Bogotá.",
      "synopsis_lang": "es"
     }
-   ],
-   "lbSlug": "our-home-was-buried-in-a-land-we-could-never",
-   "title_en": "Our Home Was Buried in a Land We Could Never Find"
+   ]
   },
   {
    "title": "José Luis Torres Leiva: la primavera llega para los que esperan",
@@ -1311,19 +1285,17 @@
    "_programa_original": "Así llegó la noche"
   },
   {
-   "title": "Sobre cosas que me han pasado",
+   "title": "Sobre cosas que me han pasado + Verano",
    "type": "film",
    "section": "🌷 La primavera llega para los que esperan. El cine de José Luis Torres Leiva",
    "country": "Chile",
    "flags": "🇨🇱",
-   "duration": "205 min",
+   "duration": "300 min",
    "day": "2026-09-06",
    "time": "15:00",
    "day_order": 3,
    "venue": "Cine MAMM - Medellín",
    "has_qa": false,
-   "poster": "https://image.tmdb.org/t/p/w500/r9YimsSrZeMtkRg1HNAHWovaV3H.jpg",
-   "posterSource": "tmdb",
    "_src": "PDF oficial de programación del festival",
    "is_cortos": true,
    "film_list": [
@@ -1333,7 +1305,7 @@
      "country": "Chile",
      "flags": "🇨🇱",
      "year": 2018,
-     "duration": "110 min",
+     "duration": "205 min",
      "title_en": "About Things That Happened to Me",
      "synopsis_en": "Based on the book by author Marcelo Matthey, this short film narrates his own life in a style reminiscent of school compositions. His constant strolls through streets, houses and beaches are recorded in notes of what he saw, felt or thought during these wanderings or moments, but almost only recalling the processes, the timeline in which things occur and come to mind, the trail of associations coming one after the other, like the steps of a person walking along a street. Immediate impressions, fleeting moments normally lost in time and which are captured in the images and sounds of this film.",
      "poster": "https://image.tmdb.org/t/p/w500/r9YimsSrZeMtkRg1HNAHWovaV3H.jpg",
@@ -1357,13 +1329,10 @@
      "synopsis": "Durante un caluroso día de verano, cosas pequeñas ocurren a los visitantes y trabajadores de un antiguo balneario en el sur de Chile. Julieta, Francisco, Isa, Rodrigo, Ignacio, Mariana, Muriel, Gabriela, Eliseo, Norma, Alejandra y Claudio experimentarán las largas horas de vacaciones en la naturaleza, durmiendo al sol, aprendiendo a conducir, limpiando la casa, besándose por primera vez, nadando en la noche o simplemente caminando y hablando, mientras que el día irá desvelando pequeños fragmentos de felicidad y descubrimiento.",
      "synopsis_lang": "es"
     }
-   ],
-   "lbSlug": "about-things-that-happened-to-me",
-   "synopsis_en": "Based on the book by author Marcelo Matthey, this short film narrates his own life in a style reminiscent of school compositions. His constant strolls through streets, houses and beaches are recorded in notes of what he saw, felt or thought during these wanderings or moments, but almost only recalling the processes, the timeline in which things occur and come to mind, the trail of associations coming one after the other, like the steps of a person walking along a street. Immediate impressions, fleeting moments normally lost in time and which are captured in the images and sounds of this film.",
-   "title_en": "About Things That Happened to Me"
+   ]
   },
   {
-   "title": "Beaucoup parler / Mucho hablar",
+   "title": "Beaucoup parler / Mucho hablar + Futuros luminosos",
    "type": "film",
    "section": "🏆 Competencia central",
    "duration": "103 min",
@@ -1373,8 +1342,6 @@
    "venue": "Centro Colombo Americano - Sede centro - Medellín",
    "sala": "Sala 1",
    "has_qa": false,
-   "poster": "https://image.tmdb.org/t/p/w500/vP6O6ugQITgfbOBSWCOZeJzAAjp.jpg",
-   "posterSource": "tmdb",
    "_src": "PDF oficial de programación del festival",
    "is_free": true,
    "is_cortos": true,
@@ -1407,10 +1374,7 @@
      "synopsis": "En un lugar extraño y oscuro, un grupo de jóvenes de colores proyecta su futuro.",
      "synopsis_lang": "es"
     }
-   ],
-   "lbSlug": "a-lot-talk",
-   "synopsis_en": "Pascale accompanies her Egyptian friend Amr on his rocky path to a residency permit. The system, authorities, lawyer, papers, paperwork, a language course. A refreshingly honest film full of solidarity about “the state of migration” and “se comprendre”.",
-   "title_en": "A Lot Talk"
+   ]
   },
   {
    "title": "Los golfos",
@@ -1560,7 +1524,7 @@
    "_programa_original": "Viviendo juntos / Zusammenleben"
   },
   {
-   "title": "Chico eléctrico",
+   "title": "Chico eléctrico + Solo qu3r3mos un poco de amor",
    "type": "film",
    "section": "🇦🇷 Historia(s) del cine: Argentina. Curaduría de José Miccio",
    "country": "Argentina",
@@ -1572,8 +1536,6 @@
    "venue": "Centro Colombo Americano - Sede centro - Medellín",
    "sala": "Sala 2",
    "has_qa": false,
-   "poster": "https://image.tmdb.org/t/p/w500/aiMK2LxtOzRsAxiUTpMCFz9qpOW.jpg",
-   "posterSource": "tmdb",
    "_src": "PDF oficial de programación del festival",
    "is_free": true,
    "is_cortos": true,
@@ -1610,10 +1572,7 @@
      "synopsis": "hace tiempo que decidí no hacer mas sinopsis  De mis películas  Quiero que la gente llegue sin saber  que va A mirar.  Tampoco habrá un tráiler – son mentirosos  Y nunca reflejan realmente  El espíritu de la película.  Gracias por comprender.",
      "synopsis_lang": "es"
     }
-   ],
-   "lbSlug": "chico-electrico",
-   "synopsis_en": "Joaquín has the power to charge cell phones or supply electricity to any device with the energy of his own body, so he takes advantage of it to make a few pesos in a city resigned to scheduled power outages. A laconic and refined comedy, touched by the grace of the extraordinary.",
-   "title_en": "Chico eléctrico"
+   ]
   },
   {
    "title": "Foro de la Crítica Sesión 3 Inscripción previa*",
@@ -1683,7 +1642,7 @@
    "_programa_original": "The Children's Hour"
   },
   {
-   "title": "Cuando las nubes esconden la sombra",
+   "title": "Cuando las nubes esconden la sombra + El sueño de Ana",
    "type": "film",
    "section": "🌷 La primavera llega para los que esperan. El cine de José Luis Torres Leiva",
    "country": "Chile",
@@ -1694,8 +1653,6 @@
    "day_order": 4,
    "venue": "Teatro Caribe - Itagüí",
    "has_qa": false,
-   "poster": "https://image.tmdb.org/t/p/w500/h3sq9eoMY23lLZoVkPLQ7TEM2kD.jpg",
-   "posterSource": "tmdb",
    "_src": "PDF oficial de programación del festival",
    "is_free": true,
    "is_cortos": true,
@@ -1728,10 +1685,7 @@
      "synopsis": "No sabemos muy bien cómo pero, de manera inesperada, ha fallecido la pareja de Ana. Así de intempestivo como el momento de su muerte, Ana tiene un sueño con y sobre su pareja, finalmente, después de tanta ausencia.",
      "synopsis_lang": "es"
     }
-   ],
-   "lbSlug": "when-clouds-hide-the-shadow",
-   "synopsis_en": "Maria travels to Puerto Williams to star in a movie. But the film crew won't be able to arrive due to a strong storm. Alone, she'll seek help for severe back pain, which will lead her to discover life in the southernmost city in the world and a pending story in her life.",
-   "title_en": "When Clouds Hide the Shadow"
+   ]
   },
   {
    "title": "Competencia Nuevas Voces Programa 2",
@@ -1920,7 +1874,7 @@
    "_programa_original": "Un techo sin cielo"
   },
   {
-   "title": "Vendrá la muerte y tendrá tus ojos",
+   "title": "Vendrá la muerte y tendrá tus ojos + Alicia soñó con un faro",
    "type": "film",
    "section": "🌷 La primavera llega para los que esperan. El cine de José Luis Torres Leiva",
    "country": "Chile",
@@ -1931,8 +1885,6 @@
    "day_order": 5,
    "venue": "Cineprox Las Américas - Medellín",
    "has_qa": false,
-   "poster": "https://image.tmdb.org/t/p/w500/4JGrPKDZAPK3LFCrdY8zEnTjMeX.jpg",
-   "posterSource": "tmdb",
    "_src": "PDF oficial de programación del festival",
    "is_cortos": true,
    "film_list": [
@@ -1966,13 +1918,10 @@
      "synopsis": "Alicia tiene un nuevo día frente a ella. Es escritora pero le está costando terminar incluso un solo párrafo. Quiere escribir sobre los faros, los barcos, los marineros, sobre el mar, las olas y los precipicios de piedras. Los barcos y sus navegantes usan los faros para llegar a tierra. Ella, en tierra pero aparentemente perdida, tiene que encontrar una mejor forma de enfrentar su destino. Parece que ha perdido su arraigo existencial.",
      "synopsis_lang": "es"
     }
-   ],
-   "lbSlug": "death-will-come-and-shall-have-your-eyes",
-   "synopsis_en": "Two women who have spent their whole lives together must deal with the illness affecting one of them. The sick woman decides not to have treatment and they move into a cabin in the woods to wait for the day that death will come into their lives. The situation sees the resurfacing of the love that time had buried under the routine. Gradually their relationship will strengthen as death bides its time outside the cabin.",
-   "title_en": "Death Will Come and Shall Have Your Eyes"
+   ]
   },
   {
-   "title": "Las almas ni los ojos",
+   "title": "Las almas ni los ojos + Una Dança Non Sancta",
    "type": "film",
    "section": "🏆 Competencia central",
    "duration": "82 min",
@@ -1982,8 +1931,6 @@
    "venue": "ITM - Facultad de Artes y Humanidades - Medellín",
    "sala": "Sede La Floresta",
    "has_qa": false,
-   "poster": "https://image.tmdb.org/t/p/w500/1qEi6ZaKPyVOEilZYdRdMK4MVJj.jpg",
-   "posterSource": "tmdb",
    "_src": "PDF oficial de programación del festival",
    "is_free": true,
    "is_cortos": true,
@@ -2016,10 +1963,7 @@
      "synopsis": "Cada invierno, en Luzón, un pequeño pueblo de Castilla-La Mancha, renace un antiguo ritual. Los vecinos, cubiertos de hollín y adornados con cuernos y campanas, se internan en la oscuridad para transformarse en diablos. Una experiencia hipnótica, un viaje en blanco y negro que se deja llevar por el pulso vibrante de un trance pagano suspendido en el tiempo.",
      "synopsis_lang": "es"
     }
-   ],
-   "lbSlug": "las-almas-ni-los-ojos",
-   "synopsis_en": "After fleeing violence at age 15, Pacho spends four decades away from Anserma. Now a photograph sparks a desire to return, and on his journey home —imagined as an interstellar voyage— he searches for what he left behind. The lingering traces of death intertwine with a landscape of rural expressionism, memory, and history",
-   "title_en": "Las almas ni los ojos"
+   ]
   },
   {
    "title": "Dry Leaf",
@@ -2274,7 +2218,7 @@
    "is_free": true
   },
   {
-   "title": "Las almas ni los ojos",
+   "title": "Las almas ni los ojos + Una Dança Non Sancta",
    "type": "film",
    "section": "🏆 Competencia central",
    "duration": "82 min",
@@ -2284,8 +2228,6 @@
    "venue": "Centro Colombo Americano - Sede centro - Medellín",
    "sala": "Sala 1",
    "has_qa": false,
-   "poster": "https://image.tmdb.org/t/p/w500/1qEi6ZaKPyVOEilZYdRdMK4MVJj.jpg",
-   "posterSource": "tmdb",
    "_src": "PDF oficial de programación del festival",
    "is_free": true,
    "is_cortos": true,
@@ -2318,10 +2260,7 @@
      "synopsis": "Cada invierno, en Luzón, un pequeño pueblo de Castilla-La Mancha, renace un antiguo ritual. Los vecinos, cubiertos de hollín y adornados con cuernos y campanas, se internan en la oscuridad para transformarse en diablos. Una experiencia hipnótica, un viaje en blanco y negro que se deja llevar por el pulso vibrante de un trance pagano suspendido en el tiempo.",
      "synopsis_lang": "es"
     }
-   ],
-   "lbSlug": "las-almas-ni-los-ojos",
-   "synopsis_en": "After fleeing violence at age 15, Pacho spends four decades away from Anserma. Now a photograph sparks a desire to return, and on his journey home —imagined as an interstellar voyage— he searches for what he left behind. The lingering traces of death intertwine with a landscape of rural expressionism, memory, and history",
-   "title_en": "Las almas ni los ojos"
+   ]
   },
   {
    "title": "The Souffleur",
@@ -2373,7 +2312,7 @@
    "_programa_original": "La tercera opción / Die dritte Option / The Third Option"
   },
   {
-   "title": "Disciplina",
+   "title": "Disciplina + Lolita en Honda",
    "type": "film",
    "section": "✨ Proyecciones especiales",
    "duration": "106 min",
@@ -2383,8 +2322,6 @@
    "venue": "ITM - Facultad de Artes y Humanidades - Medellín",
    "sala": "Sede La Floresta",
    "has_qa": false,
-   "poster": "https://image.tmdb.org/t/p/w500/8AC30I8Rg8necCjyy035O9eLZsp.jpg",
-   "posterSource": "tmdb",
    "_src": "PDF oficial de programación del festival",
    "is_free": true,
    "is_cortos": true,
@@ -2416,13 +2353,10 @@
      "synopsis": "Detrás de los ojos de Lolita hay un velo que ciega sus palabras. Es el recuerdo de una infancia que, aún en la vejez, le oscurece la vista y no le permite escapar. Cuando habla me parece intuir, por el eco de las historias que repite, un mundo espectral de hambre, abandono, el estigma social de una madre soltera, la magia del Río Magdalena y todas las ilusiones y demonios de esa niñez.",
      "synopsis_lang": "es"
     }
-   ],
-   "lbSlug": "disciplina-1",
-   "synopsis_en": "Kelly, a young teacher, starts working at a public school on the outskirts of Contagem. Idealistic, she tries to push for a change, but ends up going too far. During a lesson, she gets into an argument with Nicolas, a young student. The quarrel brings some learning: Kelly learns that, on the outskirts of Brazil, the exception is the rule; and Nicolas learns that only by tearing down the present can the future be seen.",
-   "title_en": "Disciplina"
+   ]
   },
   {
-   "title": "Beaucoup parler / Mucho hablar",
+   "title": "Beaucoup parler / Mucho hablar + Futuros luminosos",
    "type": "film",
    "section": "🏆 Competencia central",
    "duration": "103 min",
@@ -2431,8 +2365,6 @@
    "day_order": 6,
    "venue": "Teatro Caribe - Itagüí",
    "has_qa": false,
-   "poster": "https://image.tmdb.org/t/p/w500/vP6O6ugQITgfbOBSWCOZeJzAAjp.jpg",
-   "posterSource": "tmdb",
    "_src": "PDF oficial de programación del festival",
    "is_free": true,
    "is_cortos": true,
@@ -2465,10 +2397,7 @@
      "synopsis": "En un lugar extraño y oscuro, un grupo de jóvenes de colores proyecta su futuro.",
      "synopsis_lang": "es"
     }
-   ],
-   "lbSlug": "a-lot-talk",
-   "synopsis_en": "Pascale accompanies her Egyptian friend Amr on his rocky path to a residency permit. The system, authorities, lawyer, papers, paperwork, a language course. A refreshingly honest film full of solidarity about “the state of migration” and “se comprendre”.",
-   "title_en": "A Lot Talk"
+   ]
   },
   {
    "title": "Para hacer una película solo se necesita un arma",
@@ -2496,7 +2425,7 @@
    "_programa_original": "Para hacer una película solo se necesita un arma"
   },
   {
-   "title": "Procès d'un jeune poète / Juicio a un joven poeta",
+   "title": "Procès d'un jeune poète / Juicio a un joven poeta + Solitudes / Soledades + Hold My Hand",
    "type": "film",
    "section": "🏆 Competencia central",
    "duration": "115 min",
@@ -2546,9 +2475,7 @@
      "synopsis": "Durante la pandemia de covid-19, Sophie Sherman filma a sus parientes confinados entre Francia, Bélgica e Inglaterra. Marcada por un nacimiento y una muerte, se detiene en los gestos de cuidado, en el contacto humano y en la gracia y la fragilidad de los momentos compartidos.",
      "synopsis_lang": "es"
     }
-   ],
-   "lbSlug": "proces-dun-jeune-poete",
-   "title_en": "Procès d'un jeune poète"
+   ]
   },
   {
    "title": "Competencia de cortometrajes Programa 1",
@@ -2698,7 +2625,7 @@
    "is_free": true
   },
   {
-   "title": "El santo y el milagro",
+   "title": "El santo y el milagro + La libertad remonta el estadio + Valparaíso eterno",
    "type": "film",
    "section": "📼 La sutil materia. Sergio Navarro",
    "duration": "87 min",
@@ -2847,7 +2774,7 @@
    "_programa_original": "La tercera opción / Die dritte Option / The Third Option"
   },
   {
-   "title": "Sobre cosas que me han pasado",
+   "title": "Sobre cosas que me han pasado + Verano",
    "type": "film",
    "section": "🌷 La primavera llega para los que esperan. El cine de José Luis Torres Leiva",
    "country": "Chile",
@@ -2859,8 +2786,6 @@
    "venue": "Centro Colombo Americano - Sede centro - Medellín",
    "sala": "Sala 2",
    "has_qa": false,
-   "poster": "https://image.tmdb.org/t/p/w500/r9YimsSrZeMtkRg1HNAHWovaV3H.jpg",
-   "posterSource": "tmdb",
    "_src": "PDF oficial de programación del festival",
    "is_free": true,
    "is_cortos": true,
@@ -2871,7 +2796,7 @@
      "country": "Chile",
      "flags": "🇨🇱",
      "year": 2018,
-     "duration": "110 min",
+     "duration": "205 min",
      "title_en": "About Things That Happened to Me",
      "synopsis_en": "Based on the book by author Marcelo Matthey, this short film narrates his own life in a style reminiscent of school compositions. His constant strolls through streets, houses and beaches are recorded in notes of what he saw, felt or thought during these wanderings or moments, but almost only recalling the processes, the timeline in which things occur and come to mind, the trail of associations coming one after the other, like the steps of a person walking along a street. Immediate impressions, fleeting moments normally lost in time and which are captured in the images and sounds of this film.",
      "poster": "https://image.tmdb.org/t/p/w500/r9YimsSrZeMtkRg1HNAHWovaV3H.jpg",
@@ -2895,13 +2820,10 @@
      "synopsis": "Durante un caluroso día de verano, cosas pequeñas ocurren a los visitantes y trabajadores de un antiguo balneario en el sur de Chile. Julieta, Francisco, Isa, Rodrigo, Ignacio, Mariana, Muriel, Gabriela, Eliseo, Norma, Alejandra y Claudio experimentarán las largas horas de vacaciones en la naturaleza, durmiendo al sol, aprendiendo a conducir, limpiando la casa, besándose por primera vez, nadando en la noche o simplemente caminando y hablando, mientras que el día irá desvelando pequeños fragmentos de felicidad y descubrimiento.",
      "synopsis_lang": "es"
     }
-   ],
-   "lbSlug": "about-things-that-happened-to-me",
-   "synopsis_en": "Based on the book by author Marcelo Matthey, this short film narrates his own life in a style reminiscent of school compositions. His constant strolls through streets, houses and beaches are recorded in notes of what he saw, felt or thought during these wanderings or moments, but almost only recalling the processes, the timeline in which things occur and come to mind, the trail of associations coming one after the other, like the steps of a person walking along a street. Immediate impressions, fleeting moments normally lost in time and which are captured in the images and sounds of this film.",
-   "title_en": "About Things That Happened to Me"
+   ]
   },
   {
-   "title": "Rancho",
+   "title": "Rancho + Homenaje a la obra de Philip Henry Gosse + Spot Fuera de campo 1 + Spot Fuera de campo 2",
    "type": "film",
    "section": "🇦🇷 Historia(s) del cine: Argentina. Curaduría de José Miccio",
    "country": "Argentina",
@@ -2913,8 +2835,6 @@
    "venue": "ITM - Facultad de Artes y Humanidades - Medellín",
    "sala": "Sede La Floresta",
    "has_qa": false,
-   "poster": "https://image.tmdb.org/t/p/w500/aO20tXiacW4SnZ3Ih7S2g3jNCr7.jpg",
-   "posterSource": "tmdb",
    "_src": "PDF oficial de programación del festival",
    "is_free": true,
    "is_cortos": true,
@@ -2973,10 +2893,7 @@
      "synopsis": "El proyecto indaga en el concepto de off-screen (\"fuera de campo\"), un recurso fundamental del lenguaje cinematográfico donde lo no mostrado cobra la misma o mayor fuerza que el encuadre visible",
      "synopsis_lang": "es"
     }
-   ],
-   "lbSlug": "rancho",
-   "synopsis_en": "At a maximum security prison, a boxer searches for his freedom and receives advice from the leader of the cell block , along with a group of young men who want to be millionaires and another one who has just been imprisoned for murder. The director of the films coexists with them and obtains a portrait from the edge.",
-   "title_en": "Rancho"
+   ]
   },
   {
    "title": "Competencia Nuevas Voces Programa 2",
@@ -3073,7 +2990,7 @@
    ]
   },
   {
-   "title": "Oublie pas le gruau",
+   "title": "Oublie pas le gruau + Sol menor",
    "type": "film",
    "section": "🏆 Competencia central",
    "duration": "102 min",
@@ -3082,8 +2999,6 @@
    "day_order": 7,
    "venue": "Teatro Otraparte - Envigado",
    "has_qa": false,
-   "poster": "https://image.tmdb.org/t/p/w500/ycGFcrpmiCXtidvyom94aDyMqB1.jpg",
-   "posterSource": "tmdb",
    "_src": "PDF oficial de programación del festival",
    "is_free": true,
    "is_cortos": true,
@@ -3116,10 +3031,7 @@
      "synopsis": "Comienzos de primavera. Una sonata, un tren, una carta. Entre su trabajo como profesor de flauta y los rituales del duelo por la muerte temprana de su mujer, Samuel enfrenta un dilema tras la visita de su hermano.",
      "synopsis_lang": "es"
     }
-   ],
-   "lbSlug": "dont-forget-the-oatmeal",
-   "synopsis_en": "The Barbarian believes he has only a few erections left before death. Cursed to a life in a thrift shop and haunted by family tragedy, he sets his sights on Marie, an alcoholic special-ed teacher. If he must go, he figures, he might as well go out in good company.",
-   "title_en": "Don't Forget the Oatmeal"
+   ]
   },
   {
    "title": "Auslandsreise / Viaje al extranjero",
@@ -3288,7 +3200,7 @@
    "_programa_original": "La tercera opción / Die dritte Option / The Third Option"
   },
   {
-   "title": "Vendrá la muerte y tendrá tus ojos",
+   "title": "Vendrá la muerte y tendrá tus ojos + Alicia soñó con un faro",
    "type": "film",
    "section": "🌷 La primavera llega para los que esperan. El cine de José Luis Torres Leiva",
    "country": "Chile",
@@ -3299,8 +3211,6 @@
    "day_order": 8,
    "venue": "Biblioteca Comfama Bello Centro - Bello",
    "has_qa": false,
-   "poster": "https://image.tmdb.org/t/p/w500/4JGrPKDZAPK3LFCrdY8zEnTjMeX.jpg",
-   "posterSource": "tmdb",
    "_src": "PDF oficial de programación del festival",
    "is_free": true,
    "is_cortos": true,
@@ -3335,10 +3245,7 @@
      "synopsis": "Alicia tiene un nuevo día frente a ella. Es escritora pero le está costando terminar incluso un solo párrafo. Quiere escribir sobre los faros, los barcos, los marineros, sobre el mar, las olas y los precipicios de piedras. Los barcos y sus navegantes usan los faros para llegar a tierra. Ella, en tierra pero aparentemente perdida, tiene que encontrar una mejor forma de enfrentar su destino. Parece que ha perdido su arraigo existencial.",
      "synopsis_lang": "es"
     }
-   ],
-   "lbSlug": "death-will-come-and-shall-have-your-eyes",
-   "synopsis_en": "Two women who have spent their whole lives together must deal with the illness affecting one of them. The sick woman decides not to have treatment and they move into a cabin in the woods to wait for the day that death will come into their lives. The situation sees the resurfacing of the love that time had buried under the routine. Gradually their relationship will strengthen as death bides its time outside the cabin.",
-   "title_en": "Death Will Come and Shall Have Your Eyes"
+   ]
   },
   {
    "title": "El cielo, la tierra y la lluvia",
@@ -3368,7 +3275,7 @@
    "_programa_original": "El cielo, la tierra y la lluvia"
   },
   {
-   "title": "La corazonada",
+   "title": "La corazonada + Cairo Streets / Las calles de El Cairo",
    "type": "film",
    "section": "🏆 Competencia central",
    "duration": "97 min",
@@ -3377,8 +3284,6 @@
    "day_order": 8,
    "venue": "Cineprox Las Américas - Medellín",
    "has_qa": false,
-   "poster": "https://image.tmdb.org/t/p/w500/fvNadz6pkAhjlNQOsC20akHBgoU.jpg",
-   "posterSource": "tmdb",
    "_src": "PDF oficial de programación del festival",
    "is_cortos": true,
    "film_list": [
@@ -3410,10 +3315,7 @@
      "synopsis": "Enero de 2007: he vuelto a El Cairo. Por trabajo. Has cambiado de número, Omar. Tengo que encontrarte… Te quiero. Abdellah.",
      "synopsis_lang": "es"
     }
-   ],
-   "lbSlug": "a-heart-as-willing",
-   "synopsis_en": "Nieves runs a swimming pool with her son Martin. One summer, a biker falls for her. Things between them don’t seem to work out, until a filming crew arrives at the pool while scouting for locations and the director decides to put Natacha and the biker in her film.",
-   "title_en": "A Heart as Willing"
+   ]
   },
   {
    "title": "Programa de cortometrajes Rajenda Gour",
@@ -3527,7 +3429,7 @@
    ]
   },
   {
-   "title": "Procès d'un jeune poète / Juicio a un joven poeta",
+   "title": "Procès d'un jeune poète / Juicio a un joven poeta + Solitudes / Soledades + Hold My Hand",
    "type": "film",
    "section": "🏆 Competencia central",
    "duration": "115 min",
@@ -3576,9 +3478,7 @@
      "synopsis": "Durante la pandemia de covid-19, Sophie Sherman filma a sus parientes confinados entre Francia, Bélgica e Inglaterra. Marcada por un nacimiento y una muerte, se detiene en los gestos de cuidado, en el contacto humano y en la gracia y la fragilidad de los momentos compartidos.",
      "synopsis_lang": "es"
     }
-   ],
-   "lbSlug": "proces-dun-jeune-poete",
-   "title_en": "Procès d'un jeune poète"
+   ]
   },
   {
    "title": "Cleaning & Cleansing",
