@@ -450,6 +450,27 @@ export const FESTIVAL_CONFIG={
     tagline:'Festival de Cine Experimental de Bogotá',
     films:null,posters:null,lbSlugs:{}
   },
+  'vartex2026': {
+    name:'Vartex',fullName:'Vartex 14 — Muestra de Video y Experimental de Medellín',shortName:'VARTEX',
+    city:'Medellín',country:'CO',
+    dates:'19–22 AGO',dates_en:'AUG 19–22',year:2026,timezoneOffset:'-05:00',
+    storageKey:'vartex2026_',festivalStartStr:'2026-08-19T00:00:00',festivalEndStr:'2026-08-22T23:59:00',
+    festivalDates:{'2026-08-19': '2026-08-19', '2026-08-20': '2026-08-20', '2026-08-21': '2026-08-21', '2026-08-22': '2026-08-22'},
+    days:[{k: '2026-08-19', d: 19, lbl: 'MIÉ'}, {k: '2026-08-20', d: 20, lbl: 'JUE'}, {k: '2026-08-21', d: 21, lbl: 'VIE'}, {k: '2026-08-22', d: 22, lbl: 'SÁB'}],
+    dayKeys:['2026-08-19', '2026-08-20', '2026-08-21', '2026-08-22'],
+    dayShort:{'2026-08-19': 'MIÉ 19', '2026-08-20': 'JUE 20', '2026-08-21': 'VIE 21', '2026-08-22': 'SÁB 22'},
+    dayShort_en:{'2026-08-19': 'WED 19', '2026-08-20': 'THU 20', '2026-08-21': 'FRI 21', '2026-08-22': 'SAT 22'},
+    dayLong:{'2026-08-19': 'Miércoles 19 de agosto', '2026-08-20': 'Jueves 20 de agosto', '2026-08-21': 'Viernes 21 de agosto', '2026-08-22': 'Sábado 22 de agosto'},
+    prioLimit:3,
+    keyArt:'/assets/keyart/vartex2026.jpg',
+    // (nota histórica) Sin keyArt al principio: el afiche del festival está en la lámina 1 de su
+    // carrusel y las imágenes de su sitio son apaisadas (1200x630). Estirarlas
+    // a 2:3 las aplastaría un 65%, muy lejos de lo que tolera la regla. La card
+    // cae al respaldo tipográfico hasta que llegue el afiche en vertical.
+    // [FRENO QUITADO SOLO EN LOCAL PARA LA VISTA PREVIA — NO COMMITEAR]
+    tagline:'Muestra de Video y Experimental',
+    films:null,posters:null,lbSlugs:{}
+  },
   'ficmontanas2026':{
     name:'Ficmontañas',fullName:'Festival Internacional de Cine en las Montañas',shortName:'FICMONTAÑAS',
     city:'Salento',country:'CO',

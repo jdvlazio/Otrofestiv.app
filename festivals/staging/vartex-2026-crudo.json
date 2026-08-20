@@ -1,12 +1,12 @@
 {
  "_provenance": {
-  "fuente": "afiche oficial de programación (carrusel de Instagram, 4 láminas) + hoja «Seleccionados» de la convocatoria + vartexmedellin.co",
+  "fuente": "afiche oficial de programación (dos carruseles de Instagram: la parrilla de 4 láminas y el post de la Muestra Internacional) + hoja «Seleccionados» de la convocatoria + vartexmedellin.co + los cuatro artes por programa de vartexmedellin.co",
   "capturado": "2026-08-20",
   "metodo": "el afiche da día, hora y sede; la hoja da la ficha de la Muestra Local; el sitio aportó las duraciones que la hoja trae en texto libre",
   "erratas": [
    "el sitio lista 14 obras en la Muestra Nacional y el afiche 20 — manda el afiche, que es superconjunto",
    "las secciones «Muestra Internacional» y «Muestra Video Performance» del SITIO son plantilla comentada dentro del HTML, con obras inventadas de Madrid, São Paulo y Berlín — NO se usaron",
-   "el afiche escribe «Knick Knight» y se publica como Nick Knight (ver _titulo_src de esa obra)",
+   "el primer afiche escribe «Knick Knight»; el segundo post del festival lo escribe correctamente «Nick Knight» — se publica así, confirmado por la fuente",
    "«El tiempo como un abismo» es la grafía de la hoja del festival y del sitio; el afiche escribe «El tiempo del abismo»",
    "«Polanima» figura con año 2005 en una hoja y 2026 en la otra; se publica 2026 (decisión de Juan: toda la selección es de 2025–2026)",
    "las dos hojas de selección dan duraciones distintas (5:09 vs 5:10, 3:39 vs 3:40, 11:06 vs 11:12); al minuto redondeado coinciden"
@@ -46,7 +46,7 @@
     {
      "titulo": "Fashion film de Nick Knight",
      "_src": "afiche oficial (lámina 3)",
-     "_titulo_src": "el afiche escribe «Knick Knight». Es Nick Knight: en 2002 el Estate de Guy Bourdin le entregó sus rollos de cine inéditos y SHOWstudio, que él fundó, los editó como once fashion films («Compulsive Viewing: The Films of Guy Bourdin»). Los dos nombres juntos en un programa de fashion film SON ese proyecto. «Knick Knight» no corresponde a nadie."
+     "_titulo_src": "el primer afiche escribe «Knick Knight»; el SEGUNDO post del festival lo escribe bien, «Nick Knight». Confirmado por la propia fuente, no inferido."
     },
     {
      "titulo": "Fashion film de Guy Bourdin",
@@ -186,7 +186,10 @@
      "_src": "afiche oficial de programación (Instagram del festival, lámina 4)"
     }
    ],
-   "_src": "afiche oficial de programación (Instagram del festival, lámina 2)"
+   "_src": "afiche oficial de programación (Instagram del festival, lámina 2)",
+   "poster": "/assets/vartex/muestra-nacional.jpg",
+   "posterSource": "editorial",
+   "_poster_src": "vartexmedellin.co — arte y texto oficiales del festival"
   },
   {
    "titulo": "Laboratorio · Fashion film experimental",
@@ -198,7 +201,14 @@
    "obras": [],
    "seccion": "Formación",
    "_src": "afiche oficial de programación (Instagram del festival, lámina 2)",
-   "_talleristas": "Andrés Montaño, Carlos Gutiérrez"
+   "_talleristas": "Andrés Montaño, Carlos Gutiérrez",
+   "event_kind": "taller",
+   "poster": "/assets/vartex/laboratorio.jpg",
+   "posterSource": "oficial",
+   "_poster_src": "vartexmedellin.co — arte y texto oficiales del festival",
+   "sinopsis": "El taller propone una aproximación al fashion film como lenguaje artístico y narrativo, alejándose de la publicidad tradicional. Durante una jornada intensiva los participantes conocen algunos referentes, hacen ejercicios creativos y producen un fashion film experimental con recursos sencillos y equipos disponibles: cámaras, celulares o cámaras híbridas, luces, fondos. El énfasis está en construir atmósferas más que historias convencionales. Se arman varios equipos con enfoques distintos —joyería, prendas, cuerpo y movimiento— y cada uno desarrolla un fashion film de entre 30 segundos y un minuto.",
+   "_sinopsis_src": "vartexmedellin.co — arte y texto oficiales del festival",
+   "tallerista": "Andrés Montaño, Carlos Gutiérrez"
   },
   {
    "titulo": "Seminario · Apreciación del experimental: nombrar lo inasible",
@@ -211,7 +221,14 @@
    "obras": [],
    "seccion": "Formación",
    "_src": "afiche oficial de programación (Instagram del festival, lámina 2)",
-   "_ponente": "Oswaldo Osorio"
+   "_ponente": "Oswaldo Osorio",
+   "event_kind": "seminario",
+   "poster": "/assets/vartex/seminario.jpg",
+   "posterSource": "editorial",
+   "_poster_src": "vartexmedellin.co — arte y texto oficiales del festival",
+   "sinopsis": "Este seminario da los conceptos, las metodologías y los referentes para acercarse a la apreciación y la interpretación de un discurso, el experimental, que suele ser complejo e incluso parecer inasequible al momento de conectar con sus formas y sus particularidades narrativas. Es un curso de iniciación pensado para hacer legible una forma de expresión que siempre tiene mucho por decir, pero que a menudo requiere herramientas y una guía para acceder a sus mensajes.",
+   "_sinopsis_src": "vartexmedellin.co — arte y texto oficiales del festival",
+   "ponente": "Oswaldo Osorio"
   },
   {
    "titulo": "Selección Oficial · Muestra Local",
@@ -344,7 +361,10 @@
      "_src": "hoja «Seleccionados» de la convocatoria del festival"
     }
    ],
-   "_src": "afiche oficial de programación (Instagram del festival, lámina 2)"
+   "_src": "afiche oficial de programación (Instagram del festival, lámina 2)",
+   "poster": "/assets/vartex/muestra-local.jpg",
+   "posterSource": "oficial",
+   "_poster_src": "vartexmedellin.co — arte y texto oficiales del festival"
   }
  ]
 }
