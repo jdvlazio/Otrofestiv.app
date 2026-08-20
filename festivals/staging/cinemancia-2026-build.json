@@ -205,83 +205,97 @@
  },
  "venues": {
   "Teatro Comfama Alfonso Restrepo Moreno - Medellín": {
-   "short": "Teatro Comfama Alfonso Restrepo Moreno",
-   "city": "Medellín"
+   "address": "Calle 48 # 43–87, Medellín, Antioquia",
+   "_nota": "dirección del PDF oficial (pág. 8, «Salas de proyección»); faltan coordenadas"
   },
   "Centro Colombo Americano - Sede centro - Medellín": {
    "lat": 6.2497341,
    "lng": -75.5627237,
    "_prec": "heredada 2025",
-   "_match": "cinemancia-2025.json → «Centro Colombo Americano Sede centro. Sala 2»"
+   "_match": "cinemancia-2025.json → «Centro Colombo Americano Sede centro. Sala 2»",
+   "address": "Calle 43 # 54–139, Medellín, Antioquia"
   },
   "Biblioteca Comfama Bello Centro - Bello": {
    "lat": 6.3361,
    "lng": -75.56653,
    "_prec": "heredada 2025",
-   "_match": "cinemancia-2025.json → «Biblioteca Comfama Bello»"
+   "_match": "cinemancia-2025.json → «Biblioteca Comfama Bello»",
+   "address": "Carrera 49 # 46–57, Bello, Antioquia"
   },
   "Cineprox Las Américas - Medellín": {
    "lat": 6.2145832,
    "lng": -75.5963458,
    "_prec": "manual",
-   "_match": "confirmado por Juan (9 ago 2026): Procinal se renombró Cineprox, es el mismo cine. Coordenada de «Procinal Las Américas» en Cinemancia 2025."
+   "_match": "confirmado por Juan (9 ago 2026): Procinal se renombró Cineprox, es el mismo cine. Coordenada de «Procinal Las Américas» en Cinemancia 2025.",
+   "address": "Diagonal 75B # 2A–120, Medellín, Antioquia"
   },
   "Teatro Caribe - Itagüí": {
    "lat": 6.1728219,
    "lng": -75.6076087,
    "_prec": "heredada 2025",
-   "_match": "cinemancia-2025.json → «Teatro Caribe»"
+   "_match": "cinemancia-2025.json → «Teatro Caribe»",
+   "address": "Carrera 50 # 52–77, Itagüí, Antioquia"
   },
   "Casa Municipal de la Cultura - Caldas": {
    "lat": 6.0924079,
    "lng": -75.6351796,
    "_prec": "nominatim",
    "_match": "Casa de la Cultura, 128 Sur-44, Carrera 49, Cabecera Municipal de Caldas, Caldas, Valle de",
-   "n": 2
+   "n": 2,
+   "address": "Carrera 49 # 128 Sur–40, Caldas, Antioquia"
   },
   "Antimateria Libros y Café - Medellín": {
    "lat": 6.20062,
    "lng": -75.56368,
    "_prec": "heredada 2025",
-   "_match": "cinemancia-2025.json → «Antimateria Libros y Café»"
+   "_match": "cinemancia-2025.json → «Antimateria Libros y Café»",
+   "address": "Calle 45E # 72–09, Medellín, Antioquia"
   },
   "Casa Museo Otraparte - Envigado": {
    "lat": 6.17918,
    "lng": -75.58388,
    "_prec": "nominatim",
-   "_match": "Casa Museo Otraparte (tourism/museum), Envigado — la heredada de 2025 era el Teatro Otraparte, a 47 m"
+   "_match": "Casa Museo Otraparte (tourism/museum), Envigado — la heredada de 2025 era el Teatro Otraparte, a 47 m",
+   "address": "Carrera 43A # 27A Sur–11, Envigado, Antioquia"
   },
   "La Capilla del Claustro Comfama - Medellín": {
    "lat": 6.24575,
    "lng": -75.56372,
    "_prec": "heredada 2025",
-   "_match": "cinemancia-2025.json → «Claustro Comfama»"
+   "_match": "cinemancia-2025.json → «Claustro Comfama»",
+   "address": "Carrera 44 # 48–18, Medellín, Antioquia"
   },
   "Cine MAMM - Medellín": {
    "lat": 6.2237,
    "lng": -75.57407,
    "_prec": "nominatim",
-   "_match": "Museo de Arte Moderno de Medellín (tourism/museum) — «Cine MAMM» es su sala"
+   "_match": "Museo de Arte Moderno de Medellín (tourism/museum) — «Cine MAMM» es su sala",
+   "address": "Carrera 44 # 19A–100, Ciudad del Río, Medellín, Antioquia"
   },
   "ITM - Facultad de Artes y Humanidades - Medellín": {
    "lat": 6.2575625,
    "lng": -75.6019375,
    "_prec": "manual",
-   "_match": "verificada a mano por Juan (9 ago 2026) — sede La Floresta, la que usa el festival"
+   "_match": "verificada a mano por Juan (9 ago 2026) — sede La Floresta, la que usa el festival",
+   "address": "Calle 47A # 85–20, Medellín, Antioquia"
   },
   "Teatro Otraparte - Envigado": {
-   "short": "Teatro Otraparte",
-   "city": "Envigado"
+   "address": "Carrera 43A # 27A Sur–11, Envigado, Antioquia",
+   "_nota": "Misma dirección EXACTA que Casa Museo Otraparte (Carrera 43A # 27A Sur–11) según la página 8 del PDF: es el mismo complejo cultural. Espacios distintos, nombres tal cual los publica el festival — igual que el Panóptico de Ibagué en FICDEH.",
+   "lat": 6.17918,
+   "lng": -75.58388,
+   "_prec": "heredada de Casa Museo Otraparte"
   },
   "Centro Cultural y Educativo Fundación Diego Echavarría Misas - Itagüí": {
-   "short": "Centro Cultural y Educativo Fundación Diego Echavarría Misas",
-   "city": "Itagüí"
+   "address": "Calle 48 # 51–34, Itagüí, Antioquia",
+   "_nota": "dirección del PDF oficial (pág. 8, «Salas de proyección»); faltan coordenadas"
   },
   "Terko - Copacabana": {
    "lat": 6.34726,
    "lng": -75.506,
    "_prec": "heredada 2025",
-   "_match": "cinemancia-2025.json → «Terko Bar»"
+   "_match": "cinemancia-2025.json → «Terko Bar»",
+   "address": "Calle 50 # 47–21, Copacabana, Antioquia"
   }
  },
  "films": [
